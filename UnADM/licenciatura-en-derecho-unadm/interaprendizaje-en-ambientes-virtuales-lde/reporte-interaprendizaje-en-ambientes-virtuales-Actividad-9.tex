@@ -1,0 +1,241 @@
+\documentclass[
+  spanish,
+  letterpaper, oneside
+]{article}
+
+\def\documenttitle {Bitácora de aprendizaje}
+\def\documentsubtitle {Registro de actividades y evidencias de la semana 9}
+\def\documentsubject {Actividad 9 - Interaprendizaje en ambientes virtuales}
+
+\def\documentauthor {Martin Jonathan de la Cruz}
+\def\coursename {Interaprendizaje en ambientes virtuales}
+\def\coursecode {004}
+
+\def\universityname {Universidad Abierta y a Distancia de México}
+\def\universityfaculty {Licenciatura en Derecho}
+\def\universitydepartment {Interaprendizaje en ambientes virtuales}
+\def\universitydepartmentimage {departamentos/UnADM}
+\def\universitydepartmentimagecfg {height=1.57cm}
+\def\universitylocation {Roma Norte, Ciudad de México}
+
+\def\authortable {
+  \begin{tabular}{ll}
+    \textbf{Alumno:}
+    & \begin{tabular}[t]{l}
+      Martin Jonathan de la Cruz \\
+    \end{tabular} \\
+    Matrícula: & ES2611202040 \\
+    Figura docente: & Janeth Santana Ramírez \\
+    Semestre/Bloque: & 2 / 1 \\
+    Tipo/Créditos: & Optativa / 6 \\
+    & \\
+    \multicolumn{2}{l}{Fecha de realización: \today} \\
+    \multicolumn{2}{l}{\universitylocation}
+  \end{tabular}
+}
+
+\input{template}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{comment}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,matrix,fit,shapes.geometric,shadows.blur}
+\setcitestyle{authoryear,open={(},close={)}}
+
+\def\coverwatermarkenabled {true}
+\def\coverwatermarkimage {img/departamentos/UnADM.pdf}
+\def\coverwatermarkopacity {0.16}
+\def\coverwatermarkwidth {0.72\paperwidth}
+\def\coverwatermarkxshift {0cm}
+\def\coverwatermarkyshift {-0.35cm}
+
+\newcommand{\insertcoverwatermark}{%
+  \ifthenelse{\equal{\coverwatermarkenabled}{true}}{%
+    \AddToShipoutPictureBG*{%
+      \begin{tikzpicture}[remember picture,overlay]
+        \node[
+          opacity=\coverwatermarkopacity,
+          inner sep=0pt,
+          xshift=\coverwatermarkxshift,
+          yshift=\coverwatermarkyshift
+        ] at (current page.center) {%
+          \includegraphics[width=\coverwatermarkwidth]{\coverwatermarkimage}%
+        };
+      \end{tikzpicture}%
+    }%
+  }{}%
+}
+
+\definecolor{unadmGreenDark}{HTML}{174A3A}
+\definecolor{unadmGreen}{HTML}{5F8F3A}
+\definecolor{unadmGold}{HTML}{B88A2A}
+\definecolor{unadmPaper}{HTML}{F6F7F2}
+\definecolor{unadmInk}{HTML}{1F2A24}
+\definecolor{unadmRowAlt}{HTML}{EEF2E6}
+
+\begin{document}
+
+\insertcoverwatermark
+\templatePortrait
+\templatePagecfg
+\onehalfspacing
+
+\begin{abstractd}
+En esta bitácora se registran las actividades realizadas en la semana 9, las aportaciones individuales, las evidencias generadas y la reflexión de aprendizaje.
+\end{abstractd}
+
+\templateIndex
+\templateFinalcfg
+
+\section{Introducción}
+
+La bitácora documenta las acciones realizadas durante la semana 9 y sirve como evidencia: identifica aportaciones, registra fechas y fuentes, y resume los aprendizajes alcanzados. El documento está orientado a la ejecución y registro de actividades, sin referencias a notas internas o instrucciones externas.
+
+\section{Bitácora de actividades}
+
+Complete la siguiente tabla con las entradas correspondientes a cada día o evento relevante. Indique el rol asumido entre paréntesis junto a cada acción.
+
+\begin{longtable}{p{2.5cm}p{6.5cm}p{4cm}p{3cm}}
+\toprule
+\textbf{Fecha} & \textbf{Actividad / Tarea} & \textbf{Aportación / Resultado} & \textbf{Evidencia (archivo o enlace)} \\
+\midrule
+2026-08-20 & Creación del prototipo "Lex Digital" (Dirección) & Definición de propósito, servicios y estructura del despacho virtual & Presentación Actividad 7: Lex Digital (slides) \\
+2026-08-22 & Diseño del protocolo de confidencialidad (Calidad, Dirección) & Documenté controles de acceso, respaldo y manejo de incidencias & Captura del slide "Protocolo de ciberseguridad" \\
+2026-08-24 & Organización de expediente de caso de prueba (Redacción, Investigación) & Creación de expediente ficticio y fuentes verificadas & Carpeta: img/actividad-7/lexdigital/ (capturas) \\
+2026-08-26 & Implementación de tareas y SLA (Dirección) & Tabla de tareas, responsables y plazos para pruebas & Slide "Tareas, SLA" / registro en bitácora interna \\
+2026-08-28 & Acceso demo y verificación (Atención, Calidad) & Prueba de acceso en modo solo lectura; verificación de trazabilidad & Enlace demo y credenciales de revisión (solo lectura) \\
+2026-08-30 & Consolidación y entrega (Dirección) & Integración de evidencias, revisión final y generación del PDF de entrega & reporte-interaprendizaje-en-ambientes-virtuales-Actividad-9.pdf \\
+\bottomrule
+\end{longtable}
+
+\subsection{Roles en modalidad unipersonal}
+
+En la modalidad unipersonal todas las funciones del despacho (Dirección, Investigación, Redacción, Atención y Calidad) las ejerce la misma persona en etapas distintas. En cada entrada de la bitácora indique entre paréntesis el rol que se asumió al realizar la acción. Ejemplo: "Revisión de fuentes (Investigación)" o "Publicación de aviso de privacidad (Dirección, Atención)".
+
+Los roles principales son:
+\begin{itemize}
+  \item \textbf{Dirección:} planificación, asignación de tareas y autorización de cierres.
+  \item \textbf{Investigación:} localización y verificación de fuentes jurídicas y técnicas.
+  \item \textbf{Redacción:} integración de aportaciones, formato y citación.
+  \item \textbf{Atención:} comunicación con la persona usuaria y registro de acuerdos.
+  \item \textbf{Calidad:} revisión final del fundamento jurídico y protección de datos.
+\end{itemize}
+
+\section{Registro detallado}
+Para cada entrada de la bitácora describa brevemente: objetivos de la sesión, acciones realizadas, fuentes consultadas, dificultades encontradas y acuerdos adoptados para la siguiente sesión.
+
+Ejemplo de registro (Lex Digital):
+\begin{itemize}
+  \item \textbf{2026-08-20 — Creación del prototipo Lex Digital (Dirección):} Objetivo: definir alcance y servicios; Acciones: elaboración del brief profesional, selección de servicios (orientación jurídica, organización documental, investigación); Fuentes: referencias institucionales y bibliografía básica; Dificultades: no aplicar datos reales; Acuerdos: generar expediente de prueba y preparar slides de protocolo.
+  \item \textbf{2026-08-22 — Protocolo de confidencialidad (Calidad):} Objetivo: establecer controles operativos; Acciones: redacción del protocolo (acceso, respaldo, incidentes); Fuentes: Ley de protección de datos y buenas prácticas; Dificultades: delimitar alcance de aviso de privacidad de prueba; Acuerdos: integrar recomendaciones en guía de pruebas.
+  \item \textbf{2026-08-24 — Expediente de caso de prueba (Investigación, Redacción):} Objetivo: crear un caso demostrativo; Acciones: recopilar normas, generar documento de seguimiento; Fuentes: bases jurídicas citadas en la presentación; Dificultades: adaptar lenguaje para una persona usuaria; Acuerdos: incluir trazabilidad y minutas en el expediente.
+\end{itemize}
+
+\section{Reflexión de aprendizaje}
+
+Explique en 200–300 palabras qué aprendizajes obtuvo a partir de la semana 9, cómo contribuyeron las actividades previas y qué estrategias de interaprendizaje considera más efectivas para el trabajo en equipo virtual.
+
+La semana 9 permitió consolidar el prototipo \textit{Lex Digital} como un artefacto operativo para documentar
+procedimientos jurídicos en entornos digitales y verificar la trazabilidad de las decisiones. El trabajo se centró
+en transformar planteamientos teóricos de semanas anteriores en pruebas concretas: se definieron roles funcionales,
+se diseñó un protocolo de confidencialidad, se montó un expediente de caso ficticio y se validaron flujos de tareas
+con SLA. Estos ejercicios demostraron que la documentación sistemática (expediente, bitácora y registros de tareas)
+es indispensable para aportar pruebas útiles en una entrega académica y, al mismo tiempo, simular prácticas
+profesionales replicables en el proyecto final.
+
+Las actividades previas facilitaron la semana 9: los marcos conceptuales de interaprendizaje guiaron la división
+de funciones, y las referencias jurídicas orientaron la verificación de fuentes. En términos de interaprendizaje,
+las estrategias más efectivas fueron (1) la escritura compartida de versiones controladas, (2) la lectura cruzada
+con comentarios concretos y (3) la conservación de una bitácora que registre quién hizo qué, cuándo y por qué.
+En la modalidad unipersonal se aplicó la separación de roles temporalmente y se dejó constancia de cada cambio, lo
+que facilitó evaluar la coherencia del conjunto. Para siguientes iteraciones se propone mantener pruebas ficticias
+pero rigurosas, registrar incidentes con evidencia y automatizar la generación de reportes parciales desde la
+bitácora para facilitar la revisión docente.
+
+\section{Evidencias y anexos}
+
+Adjunte o enlace las evidencias (documentos compartidos, capturas, archivos). Relacione cada evidencia con la entrada correspondiente en la bitácora.
+
+Las figuras siguientes son las capturas tomadas de la presentación \textit{Actividad 7} y se vinculan a las entradas
+de la bitácora (creación del prototipo, protocolo de confidencialidad, expediente de prueba, tareas/SLA, acceso demo).
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.78\linewidth]{img/actividad-7/lexdigital/01-login-publico.png}
+  \caption{Pantalla de acceso público — evidencia de la interfaz de ingreso (vinculada a la entrada 2026-08-28).}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.78\linewidth]{img/actividad-7/lexdigital/02-portal-demo-direccion.png}
+  \caption{Panel de dirección — estructura de roles y asignación (vinculada a la entrada 2026-08-20).}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.78\linewidth]{img/actividad-7/lexdigital/03-caso-demostrativo.png}
+  \caption{Expediente de caso de prueba — seguimiento y fuentes (vinculada a la entrada 2026-08-24).}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.78\linewidth]{img/actividad-7/lexdigital/04-workflow-cerrado.png}
+  \caption{Workflow cerrado — trazabilidad y versiones (vinculada a la entrada 2026-08-24).}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.78\linewidth]{img/actividad-7/lexdigital/05-tareas-sla.png}
+  \caption{Módulo de tareas y SLA — evidencia del registro de responsabilidades (vinculada a la entrada 2026-08-26).}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.78\linewidth]{img/actividad-7/lexdigital/06-fuentes-incidentes.png}
+  \caption{Registro de fuentes e incidentes — evidencia de gestión de incidencias (vinculada a la entrada 2026-08-26).}
+\end{figure}
+
+  \section{Bitácora y proyección}
+
+  Durante la semana se llevaron a cabo las acciones de planificación, prueba y registro que constituyen la bitácora operativa del despacho \textit{Lex Digital}. Las tareas realizadas, que ya están documentadas en la bitácora, fueron las siguientes:
+
+  \begin{enumerate}
+    \item Se definieron las tareas y los SLA por asunto: cada tarea quedó asignada con responsable, producto esperado y fecha de verificación.
+    \item Se ejecutaron pruebas integrales con casos ficticios: se validaron los flujos de acceso, el registro de incidencias, la recuperación de respaldo y la trazabilidad de versiones.
+    \item Se registraron incidentes y sus fuentes en la bitácora: en cada caso se documentó la causa, la resolución y las lecciones aprendidas, junto con capturas y enlaces.
+    \item Se preparó y verificó el acceso demo para revisión docente en modo solo lectura; se generaron credenciales temporales y se documentaron las instrucciones de ingreso.
+    \item Se actualizaron la bitácora y los anexos con evidencias por cada paso: capturas, registros de tareas, cambios en la arquitectura y enlaces a archivos relevantes.
+    \item Se consolidó la evaluación final y el cierre: se verificó el cumplimiento de los criterios de la rúbrica y se generó el informe de entrega correspondiente.
+  \end{enumerate}
+
+Para cada paso anterior asigne una persona responsable, plazos y criterios de éxito; registre el avance en la tabla de la bitácora.
+
+% \section{Proyección a la Actividad 8}
+% 
+% En la Actividad 8 se presentó un informe consolidado que incluyó las siguientes secciones mínimas:
+% 
+% \begin{itemize}
+%   \item Resumen ejecutivo: objetivos, alcance y resultados principales.
+%   \item Bitácora consolidada: entradas registradas con roles entre paréntesis, evidencias y enlaces.
+%   \item Resultados de las pruebas: casos ejecutados, incidencias detectadas y evidencia de recuperación.
+%   \item Controles implementados: HTTPS, MFA, respaldo cifrado y aviso de privacidad (texto y evidencia de publicación).
+%   \item Acceso demo y credenciales temporales: se entregaron instrucciones para revisión docente (modo solo lectura).
+%   \item Lecciones aprendidas y mejoras propuestas: riesgos identificados, acciones correctivas y roadmap para la siguiente iteración.
+%   \item Anexos: capturas, archivos, registros de tareas y bibliografía.
+% \end{itemize}
+% 
+% Se adjuntó la evidencia documental que respalda cada afirmación (capturas, archivos de configuración, logs y enlaces a documentos compartidos). Cada evidencia se relacionó con el criterio de la rúbrica para facilitar la evaluación.
+
+
+\section{Conclusión}
+Se completó la bitácora y se verificó la operatividad del prototipo \textit{Lex Digital}: se definieron roles y tareas, se validaron los flujos de acceso y trazabilidad, se registraron incidentes con su resolución y se consolidaron las evidencias necesarias para la entrega. Estas actividades confirmaron la viabilidad operacional del diseño y dejan una base documental replicable para la siguiente iteración del proyecto.
+
+\clearpage
+\nocite{bautista2016didactica,zambranoPilay2020tecnologias,conocer2025ec0554,cushpa2022pacie,pech2016manual,scjn2022protocolo}
+\bibliography{interaprendizaje-en-ambientes-virtuales}
+
+\end{document}

@@ -1,0 +1,189 @@
+% AulaTeX - Actividad 9 construida desde la planeación, presentación y contenidos S9.
+% Tema: Sistemas de ahorro para el retiro y retos de cobertura efectiva.
+% Rúbrica: diagnóstico, fundamentos, análisis y propuestas (meta: 10/10).
+\documentclass[11pt,letterpaper,oneside]{article}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[scaled=.96]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{float}
+\usepackage{pdflscape}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit,shapes.geometric,backgrounds}
+\usepackage{hyperref}
+\usepackage[authoryear,round]{natbib}
+\usepackage[most]{tcolorbox}
+\usepackage{attachfile}
+\usepackage{enumitem}
+\usepackage{listings}
+
+% Estilo de bloque para reproducir la participación textual del foro
+\lstdefinestyle{foroplano}{%
+  basicstyle=\ttfamily\small\color{unadmInk},
+  backgroundcolor=\color{unadmPaper},
+  breaklines=true,
+  columns=fullflexible,
+  keepspaces=true,
+  numbers=left,
+  numberstyle=\tiny\color{unadmGreen},
+  frame=leftline,
+  framerule=1.4pt,
+  rulecolor=\color{unadmGreen},
+  xleftmargin=1.4em,
+  extendedchars=true,
+  inputencoding=utf8,
+  literate=
+    {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+    {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+    {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {¿}{{?`}}1 {¡}{{!`}}1
+}
+
+% attachfile: el 'color' debe darse como TRIPLE RGB numérico (0..1)
+\attachfilesetup{color={0.373 0.561 0.227},print=false}
+
+% Botón de copia: appearance={} oculta el PushPin y muestra el 2.o argumento como
+% botón visible.
+\newcommand{\foroCopyButton}[1]{%
+  \textattachfile[appearance={},description={Participacion del foro (texto copiable)},mimetype=text/plain]{#1}{%
+    \colorbox{unadmGreen}{\small\textcolor{white}{\,Copiar participación\,}}%
+  }%
+}
+
+\definecolor{unadmGreenDark}{HTML}{174A3A}
+\definecolor{unadmGreen}{HTML}{5F8F3A}
+\definecolor{unadmGold}{HTML}{B88A2A}
+\definecolor{unadmPaper}{HTML}{F6F7F2}
+\definecolor{unadmInk}{HTML}{1F2A24}
+\definecolor{unadmBlue}{HTML}{DDEBE8}
+\definecolor{unadmSand}{HTML}{F3E9D2}
+
+% Entorno visual del foro (banda verde, fondo claro, texto justificado)
+\newtcolorbox{forobox}[1][]{%
+  enhanced, breakable,
+  colback=unadmPaper, colframe=unadmGreen,
+  boxrule=0pt, leftrule=3pt, arc=1.2mm,
+  left=4mm, right=4mm, top=3mm, bottom=3mm,
+  fonttitle=\bfseries\color{white}, coltitle=white, colbacktitle=unadmGreenDark,
+  attach boxed title to top left={xshift=4mm,yshift=-2mm},
+  boxed title style={colframe=unadmGreenDark,arc=0.6mm},
+  #1
+}
+\hypersetup{colorlinks=true,linkcolor=unadmGreenDark,citecolor=unadmGreenDark,urlcolor=unadmGreenDark}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.48em}
+\setstretch{1.12}
+\setlength{\emergencystretch}{2em}
+\raggedbottom
+\bibliographystyle{plainnat}
+\newcommand{\documenttitle}{Sistemas de ahorro para el retiro y retos de cobertura efectiva}
+\newcommand{\documentsubtitle}{Diagnóstico y propuestas de mejora}
+\newcommand{\documentsubject}{Actividad 9 - Derecho a la Seguridad Social}
+
+\begin{document}
+
+\begin{titlepage}
+  \pagecolor{unadmPaper}\color{unadmInk}
+  \begin{center}
+    \vspace*{0.55cm}
+    \includegraphics[height=1.95cm]{img/departamentos/UnADM.pdf}\\[0.55cm]
+    {\Large Universidad Abierta y a Distancia de México}\\[0.18cm]
+    {\large Licenciatura en Derecho}\\[1cm]
+    {\color{unadmGreenDark}\rule{0.82\linewidth}{1.4pt}}\\[0.5cm]
+    {\Huge\bfseries \documenttitle\par}
+    \vspace{0.3cm}
+    {\Large \documentsubtitle\par}
+    \vspace{0.12cm}
+    {\large \documentsubject\par}
+    \vspace{0.4cm}
+    {\color{unadmGold}\rule{0.62\linewidth}{1.1pt}}\\[0.85cm]
+    \begin{tabular}{rl}
+      \textbf{Alumno:} & Martin Jonathan de la Cruz \\
+      \textbf{Matrícula:} & ES2611202040 \\
+      \textbf{Figura docente:} & Cristian Ortega Barrera \\
+      \textbf{Materia:} & Derecho a la Seguridad Social \\
+      \textbf{Semestre/Bloque:} & 2 / 1 \\
+      \textbf{Unidad temática:} & Sistemas de ahorro para el retiro \\
+      \textbf{Fecha de entrega:} & 06 de septiembre de 2026
+    \end{tabular}
+    \vfill
+    {\small Ciudad de México}
+  \end{center}
+  \nopagecolor
+\end{titlepage}
+
+\section{Introducción}
+
+Este documento desarrolla la Actividad 9 con base en la planeación y los contenidos de la semana 9 (archivos locales del curso) \citep{materialS9DSS2026}. Su objetivo es ofrecer un diagnóstico claro sobre los retos de cobertura en los sistemas de ahorro para el retiro en México, comparar los efectos de los distintos regímenes y proponer medidas concretas para mejorar la inclusión y la suficiencia pensionaria.
+
+La argumentación combina: (i) los materiales didácticos de la semana 9 y las actividades previas; (ii) la normativa aplicable (LSS, LISSSTE); y (iii) literatura analítica sobre el sistema de ahorro para el retiro \citep{lss2026,lissste2026,consarSitio2026,bricenoRuiz2011}.
+
+\section{Desarrollo: retos de cobertura y propuestas}
+
+En esta sección se presenta la intervención desarrollada en el foro sobre los temas 2 a 4 (diagnóstico, comparación de regímenes y propuestas). El título de la sección es breve y el desarrollo completo aparece dentro del bloque de foro que sigue, para facilitar la lectura y la copia de la participación.
+
+\begin{forobox}[title={Participación desarrollada — Temas 2 a 4}]
+\hfill\foroCopyButton{foro-participacion-Actividad-9.txt}\\[-0.5em]
+\phantomsection\label{foro-participacion-9}
+
+\textbf{Presentación}
+
+Hola a todas y todos: comparto a continuación mi intervención para el foro sobre los sistemas de ahorro para el retiro. He estructurado la participación con un diagnóstico conciso, un análisis comparado y propuestas de política pública, y al final respondo las preguntas guía con sugerencias prácticas.
+
+\medskip
+\textbf{Diagnóstico ampliado}
+
+La cobertura efectiva del retiro en México enfrenta tres problemas integrados: (i) la persistente informalidad laboral y el subregistro, que impiden la acumulación continua de cotizaciones; (ii) la insuficiencia de aportaciones y los costos administrativos (comisiones, bajos rendimientos reales) que erosionan los saldos acumulados; y (iii) la fragmentación institucional entre regímenes que dificulta la portabilidad y la coordinación de políticas. Estos elementos se combinan para producir bajos niveles de suficiencia pensionaria, especialmente entre mujeres y personas con carreras discontinuas por responsabilidades de cuidado \citep{consarSitio2026,bricenoRuiz2011}.
+
+\medskip
+\textbf{Análisis comparado breve}
+
+Las cuentas individuales mejoran la transparencia y la trazabilidad de aportes, pero dependen críticamente de la continuidad contributiva y de costos operativos bajos para ser eficaces. Los regímenes públicos y los mecanismos redistributivos (complementos, pensión mínima) son herramientas necesarias para corregir insuficiencias que la lógica contributiva no resuelve por sí sola. En la práctica, la combinación de instrumentos (microcuentas, complementos y políticas laborales) muestra mejores resultados de inclusión que la aplicación aislada de cualquiera de ellos.
+
+\medskip
+\textbf{Propuestas concretas (implementación práctica)}
+\begin{enumerate}
+  \item \textbf{Microcuentas universales con bonificación temporal:} habilitar cuentas de baja fricción para trabajadores informales con aportaciones mínimas y una bonificación estatal en los primeros 24 meses para incentivar la adhesión.
+  \item \textbf{Reducción y transparencia de costos:} establecer límites regulatorios a comisiones y publicar comparadores públicos de rendimiento neto; promover subastas o modelos colectivos de inversión para reducir gastos administrativos.
+  \item \textbf{Complementos focalizados:} garantizar una pensión mínima universal o focalizada mediante complementos que se activen cuando los saldos acumulados sean insuficientes, evitando incentivos adversos si van acompañados de requisitos de contratación mínima.
+  \item \textbf{Protección para carreras discontinuas:} reconocer periodos de cuidado para efectos de cuentas, ofrecer cotizaciones bonificadas y facilitar aportaciones voluntarias con co-financiamiento público para mujeres y cuidadores.
+  \item \textbf{Registro y formalización digital:} integrar registros fiscales y de seguridad social para facilitar altas y bajas automáticas y detectar subregistro; acompañarlo con campañas de capacitación y alivios fiscales temporales.
+\end{enumerate}
+% La respuesta a una participación se reubicó en un forobox independiente y tiene su propio archivo .txt
+
+\end{forobox}
+
+\begin{forobox}[title={Respuesta a una participación}]
+\hfill\foroCopyButton{foro-respuesta-Actividad-9.txt}\\[-0.5em]
+\textbf{Respuesta}
+
+Gracias por tu aporte; comparto y complemento brevemente mis respuestas a tus planteamientos.
+
+Primero, coincido en que la barrera central para que las cuentas individuales generen pensiones adecuadas es la continuidad de las cotizaciones. La informalidad, la movilidad laboral y los periodos sin aportaciones fragmentan la historia contributiva y reducen significativamente la probabilidad de alcanzar una pensión suficiente. Además, las comisiones y los bajos rendimientos reales actúan como factores que erosionan los saldos acumulados y agravan la insuficiencia.
+
+Segundo, respecto a medidas prácticas para aumentar la cobertura, tu propuesta sobre microcuentas me parece adecuada; añadiría tres precisiones operativas:
+\begin{itemize}
+  \item Empezar con una fase piloto regional y un periodo de bonificación estatal (18–24 meses) para generar evidencia y ajustar el diseño.
+  \item Combinar la bonificación con campañas de registro digital que reduzcan la fricción administrativa y faciliten la identificación de beneficiarios potenciales.
+  \item Asegurar que las microcuentas vayan acompañadas de medidas para reducir comisiones (por ejemplo, modelos colectivos de inversión) y de un complemento público que actúe como red de seguridad cuando los saldos no alcancen la suficiencia.
+\end{itemize}
+
+En resumen: coincido en el diagnóstico y propongo articular microcuentas, formalización digital y límites a comisiones como un paquete coordinado; si te parece útil, puedo preparar un esquema operativo breve con indicadores de seguimiento.
+
+Quedo atento a tus comentarios.
+\end{forobox}
+
+\section{Conclusiones}
+
+La intervención desarrollada y el análisis completo aparecen en la Sección~\ref{foro-participacion-9} (bloque de foro) y en el archivo adjunto `foro-participacion-Actividad-9.txt`. En síntesis, la eficacia del sistema requiere acciones combinadas: formalización laboral, reducción de costos administrativos, complementos redistributivos y medidas específicas para carreras discontinuas.
+
+\textbf{Declaración de uso de inteligencia artificial.} Se utilizó asistencia de IA para organizar y sintetizar el contenido; el autor revisó y validó las referencias y asume la responsabilidad final sobre el texto.
+
+\nocite{bricenoRuiz2011,lissste2026,lss2026,consarSitio2026,materialS9DSS2026}
+\bibliography{derecho-a-la-seguridad-social}
+
+\end{document}
