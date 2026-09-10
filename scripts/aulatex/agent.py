@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import json
 import re
-import time
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -165,20 +164,35 @@ class AulaTeXAgent:
         engines = self._normalize_engines(request.engines)
         stage_results: list[LLMCallResult] = []
         extractor_result: ExtractorRunResult | None = None
+        materialization_result: MaterializationResult | None = None
+        applied_tex: dict[str, object] = {}
+        compile_results: list[dict[str, object]] = []
+        artifacts_prepared = False
 
         for index, task in enumerate(selected_tasks, start=1):
+            base_stage = self._base_stage(task.stage)
+            if base_stage in {"validar", "criticar"} and not artifacts_prepared:
+                materialization_result, applied_tex, compile_results = self._prepare_artifacts(
+                    request, target_ctx, selected_tasks[:index - 1], stage_results, workflow, run_dir
+                )
+                artifacts_prepared = True
+            prompt = self._build_stage_prompt(
+                task, selected_tasks[:index - 1], stage_results, memory,
+                target_ctx, request.activity_number, applied_tex, compile_results,
+            )
             engine = engines[(index - 1) % len(engines)]
             workflow.record("llm-start", "ok", f"{task.stage}: {task.role} via {engine}")
-            result = self.llm.call(engine, task.prompt, max_tokens=request.max_tokens)
+            result = self.llm.call(engine, prompt, max_tokens=request.max_tokens)
             stage_results.append(result)
             if result.ok:
-                memory.remember("proposal" if task.stage in {"planificar", "generar"} else "risk", result.text[:900])
+                memory.remember("proposal" if base_stage in {"planificar", "generar"} else "risk", result.text[:900])
                 workflow.record("llm-end", "ok", f"{task.stage}: {len(result.text)} chars")
             else:
                 memory.remember("risk", f"{task.stage} fallo con {result.engine}: {result.error}")
                 workflow.record("llm-end", "error", f"{task.stage}: {result.error}")
-            base_stage = self._base_stage(task.stage)
             self._record_stage_transition(workflow, base_stage)
+            if base_stage == "generar":
+                artifacts_prepared = False
             if base_stage == "investigar" and extractor_result is None and self._should_run_extractor(request, target_ctx):
                 extractor_result = self._run_extractor_tool(request, target_ctx, workflow, memory)
 
@@ -189,52 +203,10 @@ class AulaTeXAgent:
             stage_path = run_dir / f"stage-{index:02d}-{task.stage}.md"
             stage_path.write_text(self._format_stage(result, task), encoding="utf-8")
 
-        materialization_result: MaterializationResult | None = None
-        if self._should_materialize_template(request, target_ctx):
-            workflow.record("materialize-start", "ok", f"{request.action} materializara los archivos faltantes de la actividad")
-            materialization_result = self.template_materializer.materialize_subject(
-                target_ctx.target_path,
-                activity_number=request.activity_number,
-                force=request.action.strip().lower() == "generar-plantilla",
+        if not artifacts_prepared:
+            materialization_result, applied_tex, compile_results = self._prepare_artifacts(
+                request, target_ctx, selected_tasks, stage_results, workflow, run_dir
             )
-            workflow.record(
-                "materialize-end",
-                "ok" if materialization_result.ok else "error",
-                f"{len(materialization_result.artifacts)} artefactos procesados",
-            )
-
-        applied_tex = self._apply_generated_tex(request, target_ctx, selected_tasks, stage_results, workflow)
-
-        compile_results = []
-        if request.compile_tex:
-            workflow.record("tool-select", "ok", "latexmk-build.ps1 seleccionado para compilar objetivos canonicos")
-            for tex in self._select_compile_targets(target_ctx, request.activity_number):
-                invocation = safe_invoke(self.workspace.compile_tex, tex, clean_mode="safe")
-                if invocation.ok:
-                    build = invocation.result
-                    ok = bool(build.ok)
-                    returncode = int(build.returncode)
-                    stdout = build.stdout
-                    stderr = build.stderr
-                else:
-                    ok = False
-                    returncode = 1
-                    stdout = ""
-                    stderr = invocation.error
-                compile_results.append(
-                    {
-                        "tex": self.workspace.relative(tex),
-                        "ok": ok,
-                        "returncode": returncode,
-                        "stdout_tail": stdout[-3000:],
-                        "stderr_tail": stderr[-3000:],
-                    }
-                )
-                log_path = run_dir / f"compile-{tex.stem}.log.txt"
-                log_path.write_text(stdout + "\n" + stderr, encoding="utf-8")
-                workflow.record("tool-result", "ok" if ok else "error", f"{self.workspace.relative(tex)} rc={returncode}")
-            if workflow.state == "generated":
-                workflow.transition("compiled", "compilacion latexmk ejecutada")
 
         consensus = EditorialConsensusEngine().evaluate(selected_tasks, stage_results)
         workflow.record("consensus", "ok" if consensus.passed else "warn", f"score={consensus.consensus_score:.2f}")
@@ -377,6 +349,83 @@ class AulaTeXAgent:
             semantic_audit_available=semantic_audit_available,
             optimize_plan_summary=optimize_plan_summary,
         )
+
+    def _build_stage_prompt(
+        self,
+        task: AgentTask,
+        previous_tasks: list[AgentTask],
+        results: list[LLMCallResult],
+        memory: SharedMemory,
+        target_ctx: AgentTargetContext,
+        activity_number: int,
+        applied_tex: dict[str, object],
+        compile_results: list[dict[str, object]],
+    ) -> str:
+        sections = [task.prompt, "\n## Memoria actualizada\n" + memory.summary(max_chars=12000)]
+        for previous, result in list(zip(previous_tasks, results))[-5:]:
+            text = result.text if result.ok else result.error
+            excerpt = text[:24000]
+            if len(text) > len(excerpt):
+                excerpt += "\n[Resultado truncado; no asumir cobertura completa.]"
+            sections.append(f"\n## Resultado {previous.stage} ({'OK' if result.ok else 'ERROR'})\n{excerpt}")
+        if self._base_stage(task.stage) in {"validar", "criticar"}:
+            sections.append("\n## Aplicacion de la propuesta\n" + json.dumps(applied_tex, ensure_ascii=False))
+            sections.append("\n## Compilacion observada\n" + json.dumps(compile_results, ensure_ascii=False))
+            for tex in self._select_compile_targets(target_ctx, activity_number):
+                text = tex.read_text(encoding="utf-8", errors="replace")
+                excerpt = text[:60000]
+                if len(text) > len(excerpt):
+                    excerpt += "\n[Documento truncado; no asumir revision completa.]"
+                sections.append(f"\n## TEX actual: {self.workspace.relative(tex)}\n```tex\n{excerpt}\n```")
+            sections.append(
+                "Evalua el TEX actual y la evidencia de compilacion, no solo la propuesta. "
+                "Una compilacion ausente o fallida no demuestra que el documento sea compilable."
+            )
+        return "\n\n".join(sections)
+
+    def _prepare_artifacts(
+        self,
+        request: AgentRequest,
+        target_ctx: AgentTargetContext,
+        tasks: list[AgentTask],
+        results: list[LLMCallResult],
+        workflow: AgenticStateMachine,
+        run_dir: Path,
+    ) -> tuple[MaterializationResult | None, dict[str, object], list[dict[str, object]]]:
+        materialization: MaterializationResult | None = None
+        if self._should_materialize_template(request, target_ctx):
+            workflow.record("materialize-start", "ok", f"{request.action} materializara los archivos faltantes de la actividad")
+            materialization = self.template_materializer.materialize_subject(
+                target_ctx.target_path,
+                activity_number=request.activity_number,
+                force=request.action.strip().lower() == "generar-plantilla",
+            )
+            workflow.record(
+                "materialize-end", "ok" if materialization.ok else "error",
+                f"{len(materialization.artifacts)} artefactos procesados",
+            )
+        applied_tex = self._apply_generated_tex(request, target_ctx, tasks, results, workflow)
+        compile_results: list[dict[str, object]] = []
+        if request.compile_tex:
+            workflow.record("tool-select", "ok", "latexmk-build.ps1 seleccionado para compilar objetivos canonicos")
+            for tex in self._select_compile_targets(target_ctx, request.activity_number):
+                invocation = safe_invoke(self.workspace.compile_tex, tex, clean_mode="safe")
+                if invocation.ok:
+                    build = invocation.result
+                    ok = bool(build.ok) and build.returncode == 0
+                    returncode = int(build.returncode)
+                    stdout, stderr = build.stdout or "", build.stderr or ""
+                else:
+                    ok, returncode, stdout, stderr = False, 1, "", invocation.error
+                compile_results.append({
+                    "tex": self.workspace.relative(tex), "ok": ok, "returncode": returncode,
+                    "stdout_tail": stdout[-3000:], "stderr_tail": stderr[-3000:],
+                })
+                (run_dir / f"compile-{tex.stem}.log.txt").write_text(stdout + "\n" + stderr, encoding="utf-8")
+                workflow.record("tool-result", "ok" if ok else "error", f"{self.workspace.relative(tex)} rc={returncode}")
+            if workflow.state == "generated":
+                workflow.transition("compiled", "compilacion latexmk ejecutada")
+        return materialization, applied_tex, compile_results
 
     def _postprocess_activity(
         self,
@@ -523,30 +572,22 @@ class AulaTeXAgent:
             if mapa_note:
                 report_lines.append(mapa_note)
 
-        # 3) Compilación FINAL con latexmk: el monitor y el optimizador modifican
-        #    el .tex; recompilamos su estado definitivo para dejar el PDF al día.
-        #    latexmk-build.ps1 puede devolver rc=1 por advertencias NO fatales
-        #    (p. ej. .toc ausente) aunque el PDF sí se genere; por eso el éxito se
-        #    determina como "rc==0" O "el PDF existe y quedó actualizado".
         if request.run_final_compile:
             final_targets = self._select_compile_targets(target_ctx, request.activity_number)
-            compiled_any = False
-            all_ok = True
+            all_ok = bool(final_targets)
             for tex in final_targets:
-                started_at = time.time()
                 invocation = safe_invoke(self.workspace.compile_tex, tex, clean_mode="safe")
-                compiled_any = True
                 pdf_path = tex.with_suffix(".pdf")
-                pdf_fresh = pdf_path.exists() and pdf_path.stat().st_mtime >= started_at - 1
+                pdf_fresh = pdf_path.is_file() and pdf_path.stat().st_mtime_ns >= tex.stat().st_mtime_ns
                 if invocation.ok:
                     build = invocation.result
-                    ok = bool(build.ok) or pdf_fresh
+                    ok = bool(build.ok) and build.returncode == 0 and pdf_fresh
                     log_path = run_dir / f"final-compile-{tex.stem}.log.txt"
                     log_path.write_text(
                         (build.stdout or "") + "\n" + (build.stderr or ""), encoding="utf-8"
                     )
                 else:
-                    ok = pdf_fresh
+                    ok = False
                     (run_dir / f"final-compile-{tex.stem}.log.txt").write_text(
                         invocation.error or "", encoding="utf-8"
                     )
@@ -556,8 +597,9 @@ class AulaTeXAgent:
                     f"{'OK' if ok else 'ERROR'}"
                     + ("" if ok else " (revisar log final-compile-*.log.txt)")
                 )
-            if compiled_any:
-                final_compile_ok = all_ok
+            final_compile_ok = all_ok
+            if not final_targets:
+                report_lines.append("- Compilación final: ERROR (sin objetivos TEX).")
 
         if report_lines:
             report_path.write_text(
@@ -868,12 +910,9 @@ class AulaTeXAgent:
             return summary
 
         current = destination.read_text(encoding="utf-8", errors="replace")
-        is_placeholder = bool(re.search(r"\\pendiente\{", current))
-        is_scaffold = (
-            "en construcción" in current.lower()
-            or current.count(r"\begin{frame}") <= 2
-            or len(current.strip()) < 1800
-        )
+        active_text = re.sub(r"(?<!\\)%[^\n]*", "", current)
+        is_placeholder = bool(re.search(r"\\pendiente\{", active_text))
+        is_scaffold = not active_text.strip() or "en construcción" in active_text.lower()
         if not is_placeholder and not is_scaffold:
             summary["reason"] = "destino-ya-redactado"
             return summary

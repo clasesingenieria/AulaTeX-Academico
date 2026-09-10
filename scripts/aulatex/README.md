@@ -147,9 +147,29 @@ El ciclo base es:
 1. planificar con memoria compartida;
 2. investigar el estado editorial del objetivo;
 3. generar plantilla, actividad o propuesta;
-4. validar criterios, riesgos y siguiente iteracion;
-5. criticar adversarialmente antes de aplicar cambios;
-6. compilar hasta dos `.tex` canonicos del objetivo cuando se solicita.
+4. materializar la propuesta cuando corresponde y compilar hasta dos `.tex` canonicos cuando se solicita;
+5. validar el TEX actual, los resultados previos y la evidencia de compilacion;
+6. criticar adversarialmente con la validacion anterior disponible.
+
+Cada rol recibe memoria actualizada y los ultimos cinco resultados de etapas.
+Los resultados extensos y los documentos que superan el limite de contexto se
+marcan como truncados: no constituyen una revision completa.
+
+### Garantias de realizar-actividad
+
+- La generacion inicial no sustituye documentos ya redactados por ser breves o
+  no contener diapositivas. Solo reemplaza contenido vacio o con marcas explicitas
+  de construccion; monitor y optimizador pueden aplicar correcciones posteriores.
+- La compilacion final exige exito del compilador y un PDF no anterior al TEX.
+  Un PDF reciente no oculta errores; la ausencia de objetivos TEX es un fallo.
+- La optimizacion solo informa exito si alcanza la calidad solicitada, no degrada
+  el contrato y supera la auditoria semantica requerida. Agotar ciclos o estancarse
+  por debajo del objetivo conserva el mejor estado, pero no devuelve exito.
+- CLI y monitor visual usan un ciclo de monitor y optimizacion por convergencia
+  de forma predeterminada. Esta conserva sus limites de 40 ciclos y 6 intentos
+  consecutivos sin mejora. Los valores explicitos de ciclos siguen respetandose.
+- La puntuacion de calidad y el consenso son indicadores internos; no sustituyen
+  la revision academica de fuentes ni la inspeccion visual del PDF final.
 
 El agente soporta dos modos de iteracion:
 

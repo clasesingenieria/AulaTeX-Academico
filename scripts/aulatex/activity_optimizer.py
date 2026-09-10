@@ -375,12 +375,18 @@ class ActivityOptimizer:
         applied = sum(1 for c in cycles if c.accepted)
         ok = (
             quality_end >= quality_start
+            and quality_end >= target_quality
             and contract_current >= contract_before
             and self._semantic_gate_passed(request, semantic_current)
         )
+        note = (
+            f"Calidad objetivo no alcanzada: {quality_end}/{target_quality}; "
+            "se conserva el mejor estado aceptado."
+            if quality_end < target_quality else ""
+        )
 
         return self._finalize(request, run_id, run_dir, cycles, quality_start, quality_end, tex_path,
-                              ok=ok, note="", contract_before=contract_before, contract_after=contract_current,
+                              ok=ok, note=note, contract_before=contract_before, contract_after=contract_current,
                               applied=applied, initial_text=original_text, final_text=current_text,
                               semantic_before=semantic_initial,
                               semantic_after=semantic_current)

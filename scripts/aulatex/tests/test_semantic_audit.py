@@ -19,6 +19,19 @@ class FakeLLM:
             return LLMCallResult(engine, False, "", self.error)
         return LLMCallResult(engine, True, json.dumps(self.payload or {}, ensure_ascii=False))
 
+    def call_with_safety_net(self, prompt: str, *, engine: str, **kwargs: object) -> LLMCallResult:
+        return self.call(engine, prompt, **kwargs)
+
+
+def test_audit_reports_unavailable_when_llm_fails(tmp_path) -> None:
+    result = SemanticAuditor(FakeLLM(error="Sin servicio")).audit(
+        "Una afirmacion pendiente de verificar.", tmp_path, engine="fake",
+    )
+
+    assert result.ok is False
+    assert result.audit_available is False
+    assert result.error == "Sin servicio"
+
 
 def test_audit_grounds_blocking_finding_in_local_passages(tmp_path) -> None:
     extractor = tmp_path / "extractor-aulatex"
