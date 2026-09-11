@@ -1,69 +1,63 @@
-% Adapta el documento para usar la plantilla estándar del curso (igual que los reportes de Cálculo)
-\documentclass[spanish,letterpaper,oneside]{article}
-
-\def\documenttitle {Cuadro comparativo de patrones de producci\'on y consumo}
-\def\documentsubtitle {Actividad 1}
-\def\documentsubject {Responsabilidad Social y Desarrollo Sustentable}
-\def\documentauthor {Por registrar}
-\def\coursename {Responsabilidad Social y Desarrollo Sustentable}
-\def\coursecode {Clave por registrar}
-\def\universityname {Universidad Aut\'onoma de Nuevo Le\'on}
-\def\universityfaculty {Facultad de Agronom\'ia}
-\def\universitydepartment {Ingeniero Agr\'onomo}
-\def\universitydepartmentimage {UANL/assets-uanl/logo-uanl.png}
-\def\universitydepartmentimagecfg {width=3.2cm}
-\def\universitylocation {General Escobedo, Nuevo Le\'on, M\'exico}
-% Color institucional (se puede ajustar)
-\usepackage{xcolor}
-\definecolor{uanlblue}{RGB}{0,55,108}
-\def\authortable {
-  \begin{tabular}{ll}
-    \textbf{Alumno:} & Nombre Apellido \\
-    \textbf{Matr\'icula:} & 00000000 \\
-    \textbf{Grupo:} & X \\
-    \textbf{Docente:} & Nombre del Docente \\
-    \textbf{Fecha:} & \today \\
-    \multicolumn{2}{l}{\universitylocation}
-  \end{tabular}
+% !TeX program = xelatex
+\documentclass[12pt,spanish,letterpaper,oneside]{article}
+\PassOptionsToPackage{es-noshorthands}{babel}
+\def\documenttitle{Cuadro comparativo de los patrones de producción y consumo entre México y otros países}
+\def\documentsubtitle{Agua de riego, electricidad y envases}
+\def\documentsubject{Actividad 1 - Responsabilidad Social y Desarrollo Sustentable}
+\def\documentauthor{}
+\def\coursename{Responsabilidad Social y Desarrollo Sustentable}
+\def\coursecode{}
+\def\universityname{Universidad Autónoma de Nuevo León}
+\def\universityfaculty{Facultad de Agronomía}
+\def\universitydepartment{Ingeniero Agrónomo}
+\def\universitydepartmentimage{departamentos/logos-institucionales.pdf}
+\def\universitydepartmentimagecfg{height=2.1cm}
+\def\universitylocation{General Escobedo, Nuevo León, México}
+\def\authortable{%
+	\begin{Form}
+	\begin{tabular}{@{}ll@{}}
+		\textbf{Estudiante:} & \TextField[name=estudiante,width=8cm,height=0.65cm,charsize=14pt,bordercolor={0.4 0.4 0.4}]{}\\[0.35cm]
+		\textbf{Matrícula:} & \TextField[name=matricula,width=8cm,height=0.65cm,charsize=14pt,bordercolor={0.4 0.4 0.4}]{}\\[0.35cm]
+		\textbf{Grupo:} & \TextField[name=grupo,width=8cm,height=0.65cm,charsize=14pt,bordercolor={0.4 0.4 0.4}]{}\\[0.35cm]
+		\textbf{Docente:} & \TextField[name=docente,width=8cm,height=0.65cm,charsize=14pt,bordercolor={0.4 0.4 0.4}]{}\\[0.5cm]
+		\multicolumn{2}{l}{Fecha de realización: 11 de septiembre de 2026}\\
+		\multicolumn{2}{l}{\universitylocation}
+	\end{tabular}
+	\end{Form}
 }
 
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
 \input{template}
-% paquetes específicos del informe
-\usepackage{newtxtext,newtxmath}
-\usepackage{booktabs}
 \usepackage{tabularx}
-\usepackage{setspace}
+\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
+\definecolor{uanlblue}{RGB}{0,55,108}
+\definecolor{tableblue}{RGB}{233,240,247}
+\def\portraittitlecolor{uanlblue}
+\def\sectioncolor{uanlblue}
+\def\ssectioncolor{uanlblue}
+\def\documenttitlehf{Cuadro comparativo}
+\hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={},pdftitle={Cuadro comparativo de patrones de producción y consumo},pdfsubject={Actividad 1 - Responsabilidad Social y Desarrollo Sustentable}}
+\addbibresource{UANL/ingeniero-agronomo/responsabilidad-social-y-desarrollo-sustentable/responsabilidad-social-y-desarrollo-sustentable.bib}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\setlength{\emergencystretch}{2em}
 
 \begin{document}
-\begin{titlepage}
-  \thispagestyle{empty}
-  \begin{center}
-    \includegraphics[width=3.2cm]{\universitydepartmentimage}\par
-    \vspace{0.5cm}
-    {\Large\bfseries \universityname\par}
-    \vspace{0.2cm}
-    {\large \universityfaculty\par}
-    \vspace{0.8cm}\color{uanlblue}\rule{\textwidth}{1.2pt}\color{black}
-    \vfill
-    {\Large \universitydepartment\par}
-    \vspace{0.7cm}
-    {\Huge\bfseries \documenttitle\par}
-    \vspace{0.45cm}
-    {\LARGE \documentsubtitle\par}
-    \vspace{0.3cm}
-    {\large Curso: \coursename\par}
-    \vfill
-    \begin{tabular}{>{\bfseries}p{3.5cm}p{8cm}}
-      \authortable
-    \end{tabular}
-    \vfill
-    {\universitylocation\par}
-  \end{center}
-\end{titlepage}
-
+\hypersetup{pageanchor=false}
+\begingroup
+\fontsize{14}{17}\selectfont
+\renewcommand{\Huge}{\fontsize{14}{17}\selectfont\bfseries}
+\renewcommand{\large}{\fontsize{14}{17}\selectfont}
+\templatePortrait
+\clearpage
+\endgroup
+\hypersetup{pageanchor=true}
 \templatePagecfg
-% El contenido principal queda en un archivo separado
-\onehalfspacing
-\input{UANL/ingeniero-agronomo/responsabilidad-social-y-desarrollo-sustentable/contenido-actividad-1}
-\templateFinalcfg
+\singlespacing
+\setlength{\tabcolsep}{9pt}
+\renewcommand{\arraystretch}{1.18}
+\input{UANL/ingeniero-agronomo/responsabilidad-social-y-desarrollo-sustentable/contenido-actividad-1.tex}
+\clearpage
+\printbibliography[title={Referencias}]
 \end{document}
