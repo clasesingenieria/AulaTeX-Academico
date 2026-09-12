@@ -1,6 +1,17 @@
 {
+  "terminal.integrated.defaultProfile.linux": "AulaTeX Linux",
+  "terminal.integrated.profiles.linux": {
+    "AulaTeX Linux": {
+      "path": "/bin/bash",
+      "args": ["--norc"],
+      "env": {
+        "VIRTUAL_ENV": "${workspaceFolder}/.venv-linux",
+        "PATH": "${workspaceFolder}/.venv-linux/bin:${env:PATH}"
+      }
+    }
+  },
   "latex-workshop.latex.cwd": "%WORKSPACE_FOLDER%",
-  "latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/.build/latex",
+  "latex-workshop.latex.outDir": "%DIR%",
   "latex-workshop.synctex.afterBuild.enabled": false,
   "latex-workshop.intellisense.package.dirs": [
     "%WORKSPACE_FOLDER%/base/latex/cwl"
@@ -23,28 +34,19 @@
   "latex-workshop.latex.tools": [
     {
       "name": "aulatex-latexmk",
-      "command": "powershell",
+      "command": "python",
       "args": [
-        "-NoProfile",
-        "-ExecutionPolicy",
-        "Bypass",
-        "-File",
-        "%WORKSPACE_FOLDER%/scripts/latexmk-build.ps1",
+        "%WORKSPACE_FOLDER%/scripts/latexmk_build.py",
         "%DOC%"
       ]
     },
     {
       "name": "aulatex-tikz",
-      "command": "powershell",
+      "command": "python",
       "args": [
-        "-NoProfile",
-        "-ExecutionPolicy",
-        "Bypass",
-        "-File",
-        "%WORKSPACE_FOLDER%/scripts/tikz-export.ps1",
+        "%WORKSPACE_FOLDER%/scripts/latexmk_build.py",
         "%DOC%",
-        "-Format",
-        "all"
+        "--tikz"
       ]
     }
   ],
