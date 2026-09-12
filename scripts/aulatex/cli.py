@@ -20,7 +20,6 @@ from .config import credential_status, load_aulatex_env
 from .construction import ConstructionBuilder, ConstructionRequest
 from .editorial_memory import EDITORIAL_LEVELS, EditorialMemoryBuilder, EditorialMemoryRequest
 from .extractor_adapter import EXTRACTOR_MOTORS, ExtractorAdapter, ExtractorRequest
-from .gui import main as gui_main
 from .incremental_detail_planner import DetailPlannerRequest, IncrementalDetailPlanner
 from .intelligent_engine import IntelligentEngine, IntelligentEngineRequest
 from .investigation import InvestigationBuilder, InvestigationRequest
@@ -409,6 +408,11 @@ def main(argv: list[str] | None = None) -> None:
         os.environ["AULATEX_ENABLE_DIAGNOSTIC_METRICS"] = "1"
 
     if args.command in (None, "gui"):
+        if args.command is None and os.name != "nt":
+            parser.print_help()
+            return
+        from .gui import main as gui_main
+
         gui_main(diagnostics_enabled=bool(getattr(args, "diagnostics", False)))
         return
 

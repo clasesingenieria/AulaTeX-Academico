@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import json
+import os
 import re
+import signal
 import subprocess
 import time
 from dataclasses import dataclass
@@ -13,6 +15,7 @@ GENERATION_MARKER_FILENAME = ".aulatex-node.json"
 SKIP_DIR_NAMES = {
     ".git",
     ".venv",
+    ".venv-linux",
     "__pycache__",
     "node_modules",
     ".build",
@@ -481,6 +484,12 @@ class AulaTeXWorkspace:
         return "\n\n".join(chunks)
 
     def _terminate_process_tree(self, proc: subprocess.Popen[str]) -> None:
+        if os.name != "nt":
+            try:
+                os.killpg(proc.pid, signal.SIGKILL)
+            except ProcessLookupError:
+                pass
+            return
         if proc.poll() is not None:
             return
         try:
@@ -515,15 +524,24 @@ class AulaTeXWorkspace:
             "-CleanMode",
             clean_mode,
         ]
-        proc = subprocess.Popen(
-            cmd,
-            cwd=str(self.repo_root),
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True,
-            encoding="utf-8",
-            errors="replace",
-        )
+        process_options = {}
+        if os.name != "nt":
+            script = self.scripts_dir / "latexmk-build.sh"
+            cmd = ["bash", str(script), str(tex), "--clean-mode", clean_mode]
+            process_options["start_new_session"] = True
+        try:
+            proc = subprocess.Popen(
+                cmd,
+                cwd=str(self.repo_root),
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True,
+                encoding="utf-8",
+                errors="replace",
+                **process_options,
+            )
+        except OSError as exc:
+            return CommandResult(False, 127, "", f"No se pudo iniciar {script.name}: {exc}")
         try:
             stdout, stderr = proc.communicate(timeout=timeout_seconds)
         except subprocess.TimeoutExpired:
@@ -534,7 +552,7 @@ class AulaTeXWorkspace:
                 stdout, stderr = "", ""
             message = (
                 f"Tiempo de espera agotado tras {timeout_seconds}s al compilar "
-                f"{self.relative(tex)} con latexmk-build.ps1."
+                f"{self.relative(tex)} con {script.name}."
             )
             return CommandResult(False, 124, (stdout or "") + "\n" + message + "\n", stderr or "")
         return CommandResult(proc.returncode == 0, proc.returncode, stdout, stderr)
