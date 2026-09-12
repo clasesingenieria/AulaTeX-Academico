@@ -4,6 +4,15 @@ Entorno academico en LaTeX organizado por institucion, con una base comun de
 plantillas Pizarror y puntos de entrada canonicos para reportes, actividades,
 presentaciones y bibliografias.
 
+## Ubuntu y VS Code Remote SSH
+
+El entorno Linux se instala con `bash setup.sh --no-shell --skip-llm` e incluye
+TeX Live completo de Ubuntu 24.04 y un entorno Python independiente de Windows.
+`bash setup.sh --all --no-shell` añade extracción documental, multimedia,
+bibliotecas IA, entrenamiento CPU y notebooks, sin descargar modelos ni configurar secretos.
+Consulta [README-LINUX.md](README-LINUX.md) para instalación, compilación,
+perfiles opcionales y uso de [AulaTeX-Linux.code-workspace](AulaTeX-Linux.code-workspace).
+
 ## Entrenamiento del motor inteligente
 
 La ruta progresiva está en `notebooks/`, desde la verificación de la GPU hasta
