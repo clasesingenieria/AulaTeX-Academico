@@ -203,8 +203,19 @@ class ActivityObserver:
             target_root = target_root.parent
         direct = sorted(path for path in target_root.glob("*.bib") if path.is_file() and "clean" not in path.stem.lower())
         if direct:
-            preferred = [path for path in direct if path.stem == target_root.name.removesuffix("-lde")]
-            return preferred[0] if preferred else direct[0]
+            # MGA, como LDE, conserva el sufijo del programa en la carpeta,
+            # pero no en la bibliografía disciplinar. No elegir una auxiliar
+            # por orden alfabético cuando existe el nombre canónico.
+            preferred_stems = (
+                target_root.name,
+                target_root.name.removesuffix("-lde"),
+                target_root.name.removesuffix("-mga"),
+            )
+            for stem in preferred_stems:
+                preferred = next((path for path in direct if path.stem == stem), None)
+                if preferred is not None:
+                    return preferred
+            return direct[0]
         return None
 
     def _extractor_activity_candidates(self, target_root: Path, activity_number: int) -> list[Path]:
