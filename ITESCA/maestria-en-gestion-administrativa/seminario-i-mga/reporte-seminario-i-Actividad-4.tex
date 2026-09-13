@@ -44,7 +44,7 @@
 \newcommand{\errorcard}[8]{%
   \begin{scope}[shift={(#2,#3)}]
     \filldraw[fill=white,draw=linegray,rounded corners=2mm]
-      (0,0) rectangle (90,43);
+      (0,0) rectangle (90,44);
     \fill[#4,rounded corners=1mm] (3,3) rectangle (11,11);
     \node[text=white,font=\bfseries\fontsize{11}{12}\selectfont]
       at (7,7) {#1};
@@ -52,11 +52,12 @@
       text=#4,font=\bfseries\fontsize{10.3}{11.3}\selectfont]
       at (14,3) {#5};
     \node[anchor=north west,text width=83mm,inner sep=0pt,
-      align=left,font=\fontsize{9.1}{10.6}\selectfont]
+      align=left,font=\fontsize{9.6}{11.2}\selectfont]
       at (3.5,13) {%
+      \raggedright\hyphenpenalty=10000\exhyphenpenalty=10000
       \textbf{Falla:} #6\par\vspace{0.8mm}
       \textbf{Ejemplo:} #7\par\vspace{0.8mm}
-      \textcolor{teal}{\textbf{Evita:}} #8};
+      \textcolor{teal}{\textbf{Corrige:}} #8\par};
   \end{scope}}
 
 \begin{document}
@@ -94,7 +95,8 @@
       \textbf{Semestre} & \studentsemester \\
       \textbf{Número de control} & \studentcontrol \\
       \textbf{Docente} & Dra. Carla Olimpya Zapuche Moreno \\
-      \textbf{Fecha de entrega} & \scheduleddate\ (según calendario local) \\
+      \textbf{Fecha de entrega} & Por confirmar \\
+      \textbf{Cierre registrado} & \scheduleddate\ (calendario local) \\
       \textbf{Periodo} & Agosto--noviembre de 2026
     \end{tabular}};
   \node[anchor=north west,text width=178mm,text=amber,inner sep=0pt,
@@ -103,15 +105,15 @@
     confirmar la fecha vigente antes de entregar.};
   \node[anchor=north west,text width=177mm,text=muted,inner sep=0pt,
     font=\fontsize{9}{12}\selectfont] at (104,187)
-    {Elaboración: 12 de septiembre de 2026.\\
+    {Elaboración: 12 de septiembre de 2026. Revisión: 13 de septiembre de 2026.\\
     Estructura: portada + una página de infografía.};
 \end{canvas}
 \newpage
 \null
 \begin{canvas}
   \fill[paper] (0,0) rectangle (297,210);
-  \fill[navy] (0,0) rectangle (297,31);
-  \fill[wine] (0,31) rectangle (297,32.2);
+  \fill[navy] (0,0) rectangle (297,27);
+  \fill[wine] (0,27) rectangle (297,28.2);
   \node[anchor=north west,text=white,inner sep=0pt,
     font=\bfseries\fontsize{20}{23}\selectfont] at (8,5)
     {8 errores que rompen la coherencia};
@@ -122,75 +124,79 @@
     font=\bfseries\fontsize{9}{12}\selectfont] at (289,6)
     {SEMINARIO I\\MGA / TAREA 4};
   \node[anchor=north west,text width=281mm,inner sep=0pt,
-    font=\fontsize{9.2}{11}\selectfont] at (8,35)
-    {\textbf{Ruta de consistencia:} problema $\rightarrow$ pregunta $\rightarrow$ objetivos
-    $\rightarrow$ hipótesis, si procede $\rightarrow$ variables/categorías $\rightarrow$ método $\rightarrow$ evidencia.};
+    font=\fontsize{9.3}{11.2}\selectfont] at (8,31)
+    {\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000
+    \textbf{Caso hipotético:} comercios de Cajeme, enero--junio de 2026.
+    \textbf{Indicadores por comercio: X} = promedio de días/semana con ventas digitales;
+    \textbf{Y} = porcentaje de clientes con dos o más compras, respecto del total de clientes compradores del semestre.\par};
 
-  \errorcard{1}{8}{46}{wine}{Confundir tema con problema}
-    {Nombrar un campo no identifica un vacío de conocimiento.}
-    {«Digitalización» es tema; falta saber cómo se relaciona con la recompra.}
-    {Expón la brecha y susténtala con antecedentes.}
-  \errorcard{2}{103}{46}{wine}{Problemas demasiado generales}
-    {Sin límites, no se sabe a quién ni qué estudiar.}
-    {«¿Cómo mejorar todas las empresas?» es inabarcable.}
-    {Acota fenómeno, población, lugar y periodo: uso digital y recompra; comercios de Cajeme, 2026.}
-  \errorcard{3}{198}{46}{wine}{Objetivos vagos o no medibles}
-    {«Conocer mejor» no precisa el resultado observable.}
-    {«Conocer la digitalización» no indica qué analizar.}
-    {Usa verbo + variables + límites: analizar la asociación entre uso digital y tasa de recompra en esos comercios.}
+  \errorcard{1}{8}{43}{wine}{Confundir tema con problema\textsuperscript{[M]}}
+    {Presentar el tema como si fuera un problema.}
+    {«Ventas digitales» no expresa qué se desconoce.}
+    {Sustenta con antecedentes la brecha: se desconoce la relación entre X e Y en el caso delimitado.}
+  \errorcard{2}{103}{43}{wine}{Problemas demasiado generales\textsuperscript{[M]}}
+    {Omitir población, lugar o periodo impide delimitar.}
+    {«¿Cómo mejorar todas las empresas?».}
+    {Pregunta: ¿qué relación existe entre X e Y en los comercios del caso? Conserva sus límites.}
+  \errorcard{3}{198}{43}{wine}{Objetivos vagos o no medibles\textsuperscript{[M]}}
+    {Un objetivo ambiguo no permite verificar su logro.}
+    {«Conocer mejor la venta digital».}
+    {«Analizar la asociación entre X e Y en los comercios del caso». Define datos e indicadores.}
 
-  \errorcard{4}{8}{93}{wine}{Hipótesis desconectadas}
-    {La respuesta tentativa cambia las variables de la pregunta.}
-    {Se pregunta por uso digital y recompra, pero se plantea una hipótesis sobre motivación laboral.}
-    {Propón una relación contrastable entre las mismas variables, población y periodo.}
-  \errorcard{5}{103}{93}{wine}{Método incongruente}
-    {Una encuesta transversal no basta para atribuir causalidad.}
-    {«Demostrar que digitalizar causa más recompra».}
-    {Ajusta el objetivo a asociación o justifica un diseño causal; define muestra, medición y análisis acordes.}
-  \errorcard{6}{198}{93}{teal}{Variables mal ubicadas en Covey}
-    {Clasificar por importancia confunde preocupación con influencia.}
-    {Ubicar la inflación como algo que el tesista puede controlar.}
-    {Ubica factores según tu capacidad real de actuar. No confundas influencia con variable independiente.}
+  \errorcard{4}{8}{90}{wine}{Hipótesis desconectadas\textsuperscript{[M]}}
+    {La hipótesis responde otra pregunta.}
+    {Preguntar por X e Y y proponer que el salario eleva la motivación.}
+    {Si procede: «X se asocia con Y». Conserva población y periodo, y contrástala con datos.}
+  \errorcard{5}{103}{90}{wine}{Método incongruente\textsuperscript{[M]}}
+    {El diseño no respalda lo que promete el objetivo.}
+    {Afirmar «X causa Y» con una encuesta transversal de autopercepción.}
+    {Para analizar asociación, usa registros de X e Y, una muestra y un análisis acordes.}
+  \errorcard{6}{198}{90}{teal}{Variables mal ubicadas en Covey\textsuperscript{[C]}}
+    {Clasificar por importancia, no por capacidad de actuar.}
+    {«La inflación es clave; puedo modificarla».}
+    {Ubícala en preocupación, fuera de tu influencia. Covey no define variables independientes o dependientes.}
 
-  \errorcard{7}{8}{140}{wine}{Repetir ideas entre apartados}
+  \errorcard{7}{8}{137}{wine}{Repetir ideas entre apartados\textsuperscript{[M]}}
     {Copiar la misma frase oculta la función de cada apartado.}
-    {«Mejorar ventas» en problema, objetivo y método.}
-    {Diferencia: brecha, acción y procedimiento. Mantén los mismos conceptos, no párrafos duplicados.}
-  \errorcard{8}{103}{140}{teal}{Confundir influencia con control}
+    {«Aumentar la recompra» en problema, objetivo y método.}
+    {Diferencia brecha, acción y procedimiento. Conserva los conceptos, no párrafos duplicados.}
+  \errorcard{8}{103}{137}{teal}{Confundir influencia con control\textsuperscript{[C]}}
     {Poder solicitar apoyo no garantiza la conducta ajena.}
     {«El gerente entregará todos los datos» no depende solo del tesista.}
-    {Controla tu solicitud; negocia el acceso, respeta la confidencialidad y prevé una alternativa.}
+    {Prepara la solicitud; negocia el acceso, respeta la confidencialidad y prevé una alternativa.}
 
   % Los dos círculos de Covey son anidados, no conjuntos disjuntos.
   \filldraw[fill=white,draw=linegray,rounded corners=2mm]
-    (198,140) rectangle (288,183);
+    (198,137) rectangle (288,181);
   \node[anchor=north west,text=teal,inner sep=0pt,
-    font=\bfseries\fontsize{10}{12}\selectfont] at (201.5,143)
-    {Covey: enfoca tu siguiente acción};
-  \filldraw[fill=paper,draw=muted] (219,166) circle[radius=14mm];
-  \node[font=\bfseries\fontsize{7.3}{8}\selectfont] at (219,155.5)
+    font=\bfseries\fontsize{10}{12}\selectfont] at (201.5,140)
+    {De la preocupación a la acción\textsuperscript{[C]}};
+  \filldraw[fill=paper,draw=muted] (219,164) circle[radius=14mm];
+  \node[font=\bfseries\fontsize{8.3}{9.3}\selectfont] at (219,153.5)
     {Preocupación};
   \filldraw[fill=teal!12,draw=teal,line width=0.7pt]
-    (219,170) circle[radius=8mm];
-  \node[align=center,text=teal,font=\bfseries\fontsize{7.2}{8}\selectfont]
-    at (219,169) {Influencia\\Actuar};
+    (219,168) circle[radius=8mm];
+  \node[align=center,text=teal,font=\bfseries\fontsize{8.3}{9.3}\selectfont]
+    at (219,168) {Influencia\\Actuar};
   \node[anchor=north west,text width=48mm,inner sep=0pt,
-    font=\fontsize{8.6}{10.1}\selectfont] at (237,152)
+    font=\fontsize{9.2}{11.2}\selectfont] at (237,151)
     {\textbf{Directo:} revisar objetivos.\\[1mm]
      \textbf{Indirecto:} negociar acceso.\\[1mm]
-     \textbf{Sin control:} inflación; prever escenarios.};
+     \textbf{Externo:} inflación.\\[1mm]
+     \textbf{Respuesta:} prever escenarios.};
 
   \node[anchor=north west,text width=281mm,inner sep=0pt,
-    font=\fontsize{8.7}{10.4}\selectfont] at (8,186)
-    {\textbf{Antes de entregar:} cada objetivo debe tener evidencia y método.
-    Las hipótesis dependen del enfoque y alcance; Covey prioriza acciones, no sustituye el diseño científico.
-    \textbf{Ejemplos hipotéticos:} no son resultados de una investigación.};
-  \draw[linegray] (8,195) -- (289,195);
+    font=\fontsize{9.2}{11.2}\selectfont] at (8,184)
+    {\textbf{Comprobación [M]:} pregunta $\rightarrow$ objetivo $\rightarrow$ hipótesis (si procede)
+    $\rightarrow$ indicadores/categorías $\rightarrow$ método $\rightarrow$ evidencia.\\
+    \textbf{Covey [C]} prioriza acciones; no sustituye el método científico.
+    \textbf{Ejemplos hipotéticos:} no son hallazgos de una investigación.};
+  \draw[linegray] (8,193.5) -- (289,193.5);
   \node[anchor=north west,text width=281mm,text=muted,inner sep=0pt,
-    font=\fontsize{7.4}{8.8}\selectfont] at (8,197)
-    {\textbf{Fuentes:} Hernández Sampieri, R., Fernández Collado, C. y Baptista Lucio, P. (2014).
+    font=\fontsize{8.2}{10}\selectfont] at (8,196)
+    {\textbf{[M]} Hernández Sampieri, R., Fernández Collado, C. y Baptista Lucio, P. (2014).
     \textit{Metodología de la investigación} (6.ª ed.). McGraw-Hill; pp. 37--39, 104--109 y 152--153.\\
-    Covey, S. R. (2003). \textit{Los 7 hábitos de la gente altamente efectiva}. Paidós; primer hábito, pp. 50--52 del PDF consultado.
-    \hfill Elaboración: \studentname.};
+    \textbf{[C]} Covey, S. R. (2003). \textit{Los 7 hábitos de la gente altamente efectiva}.
+    Paidós; primer hábito, pp. 50--52 del PDF consultado.};
 \end{canvas}
 \end{document}

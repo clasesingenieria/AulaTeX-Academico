@@ -31,20 +31,44 @@ Antes de esta revisión solo existía una plantilla con marcadores por completar
 | Tres respuestas fundamentadas | Redactadas; requieren revisión personal del estudiante | [Texto copiable](../foro-participacion-Actividad-9.txt) y [fuente del reporte](../reporte-fundamentos-de-gestion-administrativa-Actividad-9.tex) |
 | Consulta de Raona | Realizada | Autora y fecha visibles: Meritxell Sánchez, 16 de mayo de 2023 |
 | Revisión completa del video | No acreditada | Se verificaron título, canal, fecha, capítulos y enlace al artículo complementario, pero no se obtuvo transcripción ni reproducción completa utilizable |
-| Dos réplicas | Modelos preparados, no personalizadas ni publicadas | Dos escenarios expresamente condicionales en el reporte; faltan intervenciones reales |
+| Dos réplicas | Redactadas a partir de dos aportaciones reales; no publicadas | Hilos 757 y 727, consultados el 13 de septiembre; contextos sin nombres y argumentos diferenciados |
 | Publicación del aporte | Bloqueada por cierre; no enviada | El 13 de septiembre la sesión autenticada mostró el aviso de fecha límite alcanzada |
 | Participación con dos compañeros | No acreditada | Sin enlaces, fechas ni identificadores de respuestas reales |
 | Calificación o finalización | No comprobadas | Solo pueden confirmarse en el aula |
 
-**Estado global: borrador fundamentado preparado; publicación bloqueada por cierre confirmado en Moodle. No debe marcarse como actividad realizada o entregada.** La preparación final sigue condicionada a revisar el video completo, validar la postura y personalizar las dos respuestas; su publicación requiere reapertura o una vía alternativa autorizada.
+**Estado global: reporte y producto foro elaborados conforme al patrón contractual; publicación bloqueada por cierre confirmado en Moodle. No debe marcarse como participación realizada o entregada.** Las tres intervenciones están redactadas y las dos réplicas se basan en aportaciones reales. Sigue sin acreditarse la revisión completa del video; el estudiante debe revisar y asumir el contenido. La publicación requiere reapertura o una vía alternativa autorizada.
+
+## Adecuación al contrato de realizar-actividad — 13 de septiembre
+
+Se contrastaron `DIDACTIC_TECHNIQUE_CONTRACTS["foro_diagnostico"]` y el patrón maduro `ForoProductoTransformer` del motor AulaTeX. Se aplicó el patrón editorial al reporte existente, conservando la identidad ITESCA y sin regenerar su contenido mediante el transformador automático.
+
+| Componente contractual | Materialización en el reporte |
+|---|---|
+| Tres actos y núcleo temático | Introducción; Dirigir con propósito, participación y adaptación; Conclusiones |
+| Encuadre, preguntas y respuestas | Encuadre breve seguido de la aportación con las tres preguntas y respuestas justificadas |
+| Producto seleccionable y copiable | Tres cajas `forobox`, cada una con botón `foroCopyButton` y un TXT propio incrustado |
+| Cita textual académica | Jimenez-Lopez et al. (2020, p. 82), contrastada con el PDF local; incorporada a la primera respuesta |
+| Referencias dentro de cada intervención | Cinco entradas en el aporte y una en cada réplica, orden alfabético y sangría francesa |
+| Retroalimentación contextualizada | Dos respuestas específicas, con contexto previo sin nombres, fundamento, consecuencia y pregunta dirigida |
+| Cierre | Firma en cada caja; conclusión en página nueva con síntesis, posición, razón y consecuencia; declaración de IA como nota al pie |
+| Preparación frente a publicación | Estado explícito en encabezado y nota final; no se atribuye envío al contenido preparado |
+
+Los botones extraen o abren los adjuntos: **no ejecutan copia automática al portapapeles**. La verificación APA del motor se ejecutó directamente, sin activar la transformación con `--apply`. Esa comprobación es estructural; la literalidad de la cita y la pertinencia de las réplicas se revisaron por separado. No se afirma haber ejecutado un ciclo completo del agente generador ni haber cumplido la publicación que el contrato presupone para una entrega final en plataforma.
+
+### Trazabilidad de las dos respuestas
+
+- **Réplica 1:** [hilo 757, «LIDERAZGO»](https://cursos3.e-itesca.edu.mx/mod/forum/discuss.php?d=757), aportación inicial del 7 de septiembre de 2026, 22:43 según Moodle. Propone combinar transformación y transacción, con empatía, flexibilidad y aprendizaje. La respuesta añade coherencia entre incentivos, calidad e innovación.
+- **Réplica 2:** [hilo 727, «Estilos de liderazgo»](https://cursos3.e-itesca.edu.mx/mod/forum/discuss.php?d=727), aportación inicial del 6 de septiembre de 2026, 16:55 según Moodle. Vincula escucha, iniciativa, inteligencia emocional y adaptación tecnológica y generacional. La respuesta propone diagnóstico individual, mentoría recíproca y consecuencias observables de la escucha.
+- Se leyeron ambas aportaciones con acceso autenticado. No se reproducen nombres de compañeros ni se inventan respuestas posteriores. Los enlaces son destinos de referencia, no comprobantes de envío propio.
 
 ## Validación del material local
 
-- [PDF del reporte](../reporte-fundamentos-de-gestion-administrativa-Actividad-9.pdf): 4 páginas, compiladas con `latexmk`, `pdflatex` y BibTeX.
-- Registro final de compilación sin errores, advertencias, citas indefinidas ni desbordamientos; inspección visual de las cuatro páginas realizada.
-- Texto de la aportación incorporado como adjunto del PDF; verificado con `pdfdetach -list`.
-- Bibliografía visible limitada a cinco entradas efectivamente citadas; las dos entradas de OpenStax pertenecen a una misma obra.
-- Comprobación de diferencias sin errores de espacios (`git diff --check`). Esta validación técnica no acredita participación en Moodle.
+- [PDF del reporte](../reporte-fundamentos-de-gestion-administrativa-Actividad-9.pdf): **7 páginas**, compiladas con `latexmk`, `pdflatex` y BibTeX; reemplaza la versión anterior de cuatro páginas.
+- Registro final de compilación sin errores, advertencias, citas indefinidas ni desbordamientos; revisión visual del contenido y corrección de una página residual de referencias.
+- Tres adjuntos TXT verificados con `pdfdetach -list`: [aportación](../foro-participacion-Actividad-9.txt), [réplica 1](../foro-replica-1-Actividad-9.txt) y [réplica 2](../foro-replica-2-Actividad-9.txt).
+- Verificador `_check_forum_apa_citation`: **sin avisos**. Comprobados tres actos, tres cajas, tres rutas de adjuntos existentes, cierre en página nueva y PDF posterior al fuente.
+- Bibliografía general limitada a seis entradas efectivamente citadas; las dos entradas de OpenStax pertenecen a una misma obra. La bibliografía general no sustituye las referencias incluidas en cada caja.
+- Esta validación técnica y editorial no acredita participación en Moodle ni revisión completa del video.
 
 ## Verificación de fuentes y límites
 
@@ -54,6 +78,7 @@ Antes de esta revisión solo existía una plantilla con marcadores por completar
 4. **Raona (Sánchez, 2023):** consulta de comunicación, formación, flexibilidad y colaboración intergeneracional. Las etiquetas generacionales no se usan para determinar atributos de personas concretas.
 5. **[World Economic Forum (2025)](https://www.weforum.org/publications/the-future-of-jobs-report-2025/digest/):** consultado para megatendencias tecnológicas, demográficas, ambientales y económicas; sus proyecciones son expectativas agregadas de empleadores, no certezas ni diagnósticos de una empresa específica.
 6. **Corpus local:** se consultaron las convenciones, la bibliografía y las memorias editoriales locales y ascendentes. La extracción de las primeras páginas del PDF local de Yukl no devolvió contenido académico legible; no se inventaron páginas ni se utilizó como fuente revisada. Tampoco se citaron las entradas editoriales provisionales de la bibliografía.
+7. **Jimenez-Lopez y colaboradores (2020):** [artículo local de la Unidad IV](unidad-4-liderazgo/jimenez-lopez-y-colaboradores-2020-liderazgo-estilos-modelos-medicion.pdf), *Revista Humanismo y Sociedad, 8*(1), 81–98, DOI 10.22209/rhs.v8n1a06. Se verificaron autores, revista, año, rango y cita en la página impresa 82 (segunda página del PDF). Se conserva una cita breve y se distingue prevalencia bibliográfica de superioridad universal de un estilo.
 
 El caso de digitalización, las acciones e indicadores son propuestas hipotéticas; no describen experiencia laboral ni resultados obtenidos por el estudiante. No se incluyó como fuente verificada la atribución a Rebecca Hourston (2013), cuyo origen primario no se comprobó.
 
@@ -62,6 +87,6 @@ El caso de digitalización, las acciones e indicadores son propuestas hipotétic
 1. Solicitar al docente reapertura del foro o una vía alternativa de entrega. El acceso autenticado ya se verificó y no admite publicación extemporánea. Si se reabre, comprobar las intervenciones existentes antes de duplicarlas.
 2. Revisar el video completo y contrastar el borrador. Corregir cualquier diferencia relevante y confirmar que la postura expresa el criterio propio.
 3. Publicar o actualizar la aportación con sus referencias, cuando el foro lo permita.
-4. Leer dos aportaciones de compañeros diferentes. En cada réplica, recuperar una idea real, fundamentar acuerdo o contraste, aportar una consecuencia y formular una pregunta pertinente. Los modelos no sustituyen esta lectura.
+4. Revisar las dos réplicas preparadas a partir de los hilos 757 y 727. Si se habilita la publicación, comprobar que el contexto siga vigente y responder a las aportaciones correspondientes, no crear dos temas nuevos.
 5. Comprobar que el aporte y ambas respuestas sean visibles. Conservar enlaces, fecha y hora de cada publicación sin inventar acuses ni calificaciones.
 6. Solo después registrar el estado de participación realizada; diferenciarlo de calificación o finalización automática. Si se requiere síntesis, redactarla con base en el intercambio real.

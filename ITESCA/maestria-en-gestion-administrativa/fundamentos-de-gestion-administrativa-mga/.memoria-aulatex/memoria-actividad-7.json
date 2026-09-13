@@ -1,0 +1,101 @@
+{
+  "schema_version": 3,
+  "variant": "curacion_manual_aislada_sin_ejecucion_del_motor",
+  "fecha": "2026-09-13",
+  "artifact_name": "reporte-fundamentos-de-gestion-administrativa-Actividad-7",
+  "artifact_types": ["reporte"],
+  "supported_artifact_types": ["reporte"],
+  "producto": "foro",
+  "estado": "integridad_documental_verificada_no_publicada",
+  "node_metadata": {
+    "level": "actividad",
+    "label": "Actividad 7",
+    "scope_key": "ITESCA/maestria-en-gestion-administrativa/fundamentos-de-gestion-administrativa-mga/actividad-7",
+    "parent_key": "ITESCA/maestria-en-gestion-administrativa/fundamentos-de-gestion-administrativa-mga",
+    "relative_path": "ITESCA/maestria-en-gestion-administrativa/fundamentos-de-gestion-administrativa-mga",
+    "institution": "ITESCA",
+    "career": "maestria-en-gestion-administrativa",
+    "subject": "fundamentos-de-gestion-administrativa-mga",
+    "activity": "Actividad 7",
+    "editing_details": {
+      "heading_contract": {"title": "Decidir con evidencia y aprender de los resultados", "subtitle": "3.2 Foro Toma de Decisiones · Unidad III · 5 %", "subject_rule": "Actividad 7 - Fundamentos de Gestión Administrativa", "scope_label": "Actividad 7"},
+      "didactic_contract": {"detected_id": "foro_diagnostico", "producto": "foro", "procedencia": "Asignación manual desde consigna local y contrato, no detección del motor", "patron_real": "patrones.foro", "numero_cajas_requeridas": 3, "txt_por_caja": true},
+      "institutional_identity": {"institution": "ITESCA", "career": "maestria-en-gestion-administrativa", "subject": "fundamentos-de-gestion-administrativa-mga", "activity": "Actividad 7", "clave_curso": "GGFG02"},
+      "structure_contract": {"contenedor": "reporte", "actos": ["Introducción", "Del diagnóstico a la revisión de las decisiones", "Conclusiones"], "desarrollo": "Preparación conceptual -> tres cajas de foro -> interpretación", "cierre": "Síntesis, postura, razón y consecuencia; declaración de apoyo de IA en nota al pie, sin afirmar revisión personal concluida."}
+    }
+  },
+  "summary": [
+    "Extracción CURADA MANUAL de las fuentes de Actividad 7: fichas, conceptos, ideas, trazabilidad y resumen de planeación.",
+    "Reporte ajustado al contrato, compilado con APA/Biber y verificado: seis páginas y tres TXT adjuntos idénticos a los originales.",
+    "Moodle 7794, autor propuesto Martín Jonathan de la Cruz Muñoz; d615 Mariel y d619 Laura son mensajes fuente consultados en sesión12sep, no publicaciones propias.",
+    "Publicación NO realizada. Preparación local y lectura de intervenciones previas no acreditan un diálogo posterior ni una entrega.",
+    "Manifiesto y memoria aislados; no se actualizan nodos ascendentes ni se declara un ciclo automático completado."
+  ],
+  "identity_rules": ["Conservar ITESCA, MGA, GGFG02, unidad III, Actividad 7 local y foro 3.2.", "No propagar Actividad 4, UnADM, claves antiguas del curso ni identidad jurídica de plantillas históricas."],
+  "structure_rules": ["Tres actos del reporte y tres cajas independientes dentro del desarrollo temático.", "Un TXT UTF-8 por caja; equivalencia normalizada TEX/TXT y adjuntos idénticos byte a byte verificados.", "La caja es el producto y no sustituye la publicación en Moodle."],
+  "activity_rules": ["Responder las preguntas sobre fase vulnerable y fase importante, justificar y recomendar.", "Responder con argumentos y preguntas a Mariel d615 y Laura d619; no inventar interlocutoras ni una respuesta posterior.", "No importar el cierre constatado para Actividad 9/foro 7800 al foro 7794."],
+  "bibliography_rules": [
+    "act7CanosSF: conservar s. f.; cita literal 'podemos obtener una respuesta adecuada para un problema equivocado', con (Canós Darós et al., s. f., p. 5). Localizador: página 5 PDF, SIN foliación impresa.",
+    "act7Lopez2020: López, Guamán y Castro, Revista Espacios 41(22), artículo 27, 2020; datos tomados del PDF local.",
+    "act7Solano2003: preferir Ana Isabel Solano de la firma PDF; Tecnología en Marcha 16(3), 44–51. Año 2003 contrastado por el asistente con Dialnet; la ficha etiqueta Isolano, discrepancia registrada sin alterar la firma primaria.",
+    "Dialnet: https://dialnet.unirioja.es/servlet/articulo?codigo=4835719, consultado durante la preparación contractual.",
+    "Cobertura revisada: cada caja tiene todas sus fuentes citadas; tres fuentes distintas citadas en el contenedor y bibliografía APA/Biber.",
+    "Los ejemplos y metas de puntualidad del TEX son hipotéticos, no mediciones de empresa ni resultados de las fuentes."
+  ],
+  "latex_rules": ["Compilar mediante scripts/latexmk-build.sh desde la raíz; no modificar el motor para producir el documento.", "Después de cambiar TEX/TXT/BIB, recompilar y repetir verificar-integridad-actividad-7.pl y la inspección visual.", "Conclusión en página propia; no admitir una página casi vacía causada por dos líneas de interpretación."],
+  "quality_gates": [
+    {"gate": "compilacion", "estado": "verificada_sin_avisos"},
+    {"gate": "cajas", "estado": "tres_verificadas"},
+    {"gate": "txt_por_caja", "estado": "equivalencia_normalizada_verificada"},
+    {"gate": "adjuntos_pdf", "estado": "tres_identicos_byte_a_byte"},
+    {"gate": "citas_y_bibliografia", "estado": "verificadas"},
+    {"gate": "revision_personal", "estado": "pendiente_usuario"},
+    {"gate": "publicacion", "estado": "no_realizada"},
+    {"gate": "acta_final", "estado": "auditoria-integridad-Actividad-7.md"},
+    {"gate": "ciclo_integral_motor", "estado": "no_ejecutado"}
+  ],
+  "citations": ["act7CanosSF", "act7Lopez2020", "act7Solano2003"],
+  "section_titles": ["Introducción", "Del diagnóstico a la revisión de las decisiones", "Conclusiones"],
+  "sources": [
+    "scripts/aulatex/activity_contract.py",
+    "scripts/aulatex/extractor_adapter.py",
+    "base/latex/adaptadas/materias/tecnicas-didacticas-aprendizaje/100tecnicas-patrones-reales.json",
+    "ITESCA/maestria-en-gestion-administrativa/fundamentos-de-gestion-administrativa-mga/reporte-fundamentos-de-gestion-administrativa-Actividad-7.tex",
+    "ITESCA/maestria-en-gestion-administrativa/fundamentos-de-gestion-administrativa-mga/foro-participacion-Actividad-7.md",
+    "ITESCA/maestria-en-gestion-administrativa/fundamentos-de-gestion-administrativa-mga/extractor-aulatex/conceptos-fundamentos-de-gestion-administrativa-actividad-7/fichas_conceptos.json"
+  ],
+  "memorias_consultadas": [
+    {"ambito": "local", "ruta": "ITESCA/maestria-en-gestion-administrativa/fundamentos-de-gestion-administrativa-mga/.memoria-aulatex/memoria-ciclo-a-refuerzo.json", "retener": "Trazabilidad entre evidencia, análisis y transferencia profesional.", "descartar": "EMS, distancias y estados históricos; no son mediciones de Actividad 7."},
+    {"ambito": "local_historica", "ruta": "ITESCA/maestria-en-gestion-administrativa/fundamentos-de-gestion-administrativa-mga/.memoria-aulatex/memoria-actividad-ITESCA__maestria-en-gestion-administrati--a435fd9e038a.json", "retener": "Solo convenciones de memoria JSON.", "descartar": "Actividad 4, estudio de caso detectado, ACF-0901, plantilla y campos ajenos; no pertenecen a este foro."},
+    {"ambito": "relacionada_foro_inicial", "ruta": "ITESCA/maestria-en-gestion-administrativa/fundamentos-de-gestion-administrativa-mga/.memoria-aulatex/memoria-actividad-ITESCA__maestria-en-gestion-administrati--eb48d1dd7727.json", "retener": "Tres actos y esquema node_metadata.", "descartar": "Contiene subject_rule de Actividad 4 y seed_scope_key actividad-4 pese a ser memoria de Actividad 1; no copiar esos valores."},
+    {"ambito": "ascendente_materia", "ruta": "ITESCA/maestria-en-gestion-administrativa/.memoria-aulatex/memoria-materia-ITESCA__maestria-en-gestion-administrati--91f0a8a059e1.json", "retener": "Identidad ITESCA/MGA, evidencia verificable y separación bibliográfica.", "descartar": "Estado antiguo sin fuentes académicas y supuestos técnicos no comprobados para esta versión."},
+    {"ambito": "ascendente_carrera", "ruta": "ITESCA/.memoria-aulatex/memoria-carrera-ITESCA__maestria-en-gestion-administrati--f379ecceff04.json", "retener": "Tono formal, diagnóstico, evidencia, decisión y consecuencia.", "descartar": "Historial de motores y ejecuciones ajenas; no atribuirlo a esta curación."},
+    {"ambito": "ascendente_institucion", "ruta": ".memoria-aulatex/memoria-institucion-ITESCA--cd9d67c3070d.json", "retener": "Identidad institucional, fuentes no inventadas y JSON parseable.", "descartar": "Validaciones históricas de compilación y propagación automática."},
+    {"ambito": "memoria_repositorio_asistente", "ruta": "/memories/repo/fundamentos-gestion.md", "retener": "Correspondencia local 7/Moodle 3.2, fuentes reorganizadas y no publicación.", "descartar": "La compilación y las cinco páginas descritas para el 12 de septiembre no validan el TEX actual."},
+    {"ambito": "memoria_repositorio_relacionada", "ruta": "/memories/repo/foros-itesca.md", "retener": "Preparación no equivale a publicación; hacen falta enlaces y fechas propios.", "descartar": "Estado de Actividad 9/foro 7800; no extrapolar su cierre a Actividad 7."}
+  ],
+  "convenciones_consultadas": [
+    {"ruta": "ITESCA/maestria-en-gestion-administrativa/fundamentos-de-gestion-administrativa-mga/estructura-aulatex.json", "uso": "Claves node, slug, title, activity_number, files, folders y memory_summary; se crea manifiesto separado sin modificar el ascendente."},
+    {"ruta": "ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/tarea6/construccion/manifiesto.json", "uso": "Separación entre fuentes, estado de aula y advertencias; no se copian sus verificaciones ni resultados."},
+    {"ruta": "ITESCA/maestria-en-gestion-administrativa/fundamentos-de-gestion-administrativa-mga/extractor-aulatex/conceptos-fundamentos-de-gestion-administrativa-actividad-2", "uso": "Formas de listas de conceptos, fichas, ideas y trazas; objeto de planeación. Se excluyen similitud, textos de plantilla y contexto UnADM."},
+    {"ruta": "ITESCA/maestria-en-gestion-administrativa/fundamentos-de-gestion-administrativa-mga/extractor-aulatex/conceptos-fundamentos-de-gestion-administrativa-actividad-4/resumen_planeacion.json", "uso": "Solo nombres de campos; no se heredan su tabla cronológica, clave antigua ni objetivos."}
+  ],
+  "decisiones": [
+    "Respetar formas JSON cercanas sin simular TF-IDF, calidad automática, run_id, consenso ni resultados de motor.",
+    "Preferir el TEX actual para el contenido; usar el MD del 12sep para consigna y mensajes, no como versión literal definitiva de las cajas.",
+    "Resolver las contradicciones históricas por identidad de Actividad 7 y evidencia actual; no propagar datos obsoletos de Actividad 4 UnADM.",
+    "Usar forobox del patrón real y tres cajas por la consigna, sin marcar como publicado lo que solo es propuesta.",
+    "Las tres claves constan en la BIB y se citan visiblemente; el verificador local comprueba su unicidad y presencia.",
+    "La validación jq de estos artefactos no certifica ingestión del motor, calidad del reporte ni entrega académica."
+  ],
+  "open_questions": [
+    "Revisión y aprobación de fuentes, postura y mensajes por el estudiante.",
+    "Confirmar aceptación extemporánea del foro 7794 sin inferirla del vencimiento ni de otro foro.",
+    "Publicar y conservar enlaces y fechas reales; el paquete local no acredita entrega.",
+    "La integración de memoria en SQLite y el ciclo integral del motor no se han ejecutado."
+  ],
+  "propagation_hints": ["NO propagar ni modificar manifiestos o memorias ascendentes; memoria aislada de Actividad 7."],
+  "ejecucion": {"metodo": "curacion_manual_con_validacion_documental", "motor_ejecutado": false, "llm_externo_invocado": false, "compilacion_ejecutada": true, "verificador_local_superado": true, "publicacion_realizada": false},
+  "tex_sha256_al_cierre": "fc873b39a75a40f4c1c3386c8d58649d723c1b83d5647a0332da043b438be3c3",
+  "pdf_sha256_al_cierre": "348cadb31e1298e90cfb0fa0c97798e9ab08644bdb664adda4fba078889c235a"
+}

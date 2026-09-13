@@ -1,33 +1,147 @@
-% Unidad IV — Investigación sobre liderazgo (10 %)
-\newcommand{\actividadnumero}{8}
-\newcommand{\unidadnumero}{IV}
-\newcommand{\actividadtitulo}{Investigación sobre perspectivas de liderazgo}
-\newcommand{\actividadproducto}{Informe de investigación}
-\newcommand{\actividadponderacion}{10\%}
-\newcommand{\actividadcompetencia}{Identificar las diferentes perspectivas del liderazgo en los procesos de dirección en las organizaciones.}
-\newcommand{\actividadproposito}{Comparar perspectivas de liderazgo y evaluar su pertinencia para un proceso de dirección concreto.}
-\newcommand{\actividadcontenido}{%
-  \subsection{Diseño de la investigación}
-  \pendiente{Formular pregunta, objetivo, alcance, criterios de selección y estrategia de búsqueda de fuentes.}
-
-  \subsection{Perspectivas analizadas}
-  \pendiente{Examinar al menos tres perspectivas de liderazgo, sus supuestos, mecanismos, fortalezas y límites.}
-
-  \subsection{Cuadro comparativo}
-  \begin{center}
-  \begin{longtable}{p{0.18\textwidth}p{0.2\textwidth}p{0.2\textwidth}p{0.2\textwidth}}
-    \toprule
-    \textbf{Perspectiva} & \textbf{Supuesto central} & \textbf{Aportes} & \textbf{Límites y contexto} \\
-    \midrule
-    \endhead
-    \campo{Perspectiva 1} & \campo{Supuesto} & \campo{Aporte} & \campo{Límite} \\
-    \campo{Perspectiva 2} & \campo{Supuesto} & \campo{Aporte} & \campo{Límite} \\
-    \campo{Perspectiva 3} & \campo{Supuesto} & \campo{Aporte} & \campo{Límite} \\
-    \bottomrule
-  \end{longtable}
-  \end{center}
-
-  \subsection{Caso de aplicación}
-  \pendiente{Aplicar los criterios comparados a una situación de dirección, equipos, delegación o empowerment.}
+% !TeX program = xelatex
+% Moodle 4.1, Unidad IV, 10 %; numeración interna: Actividad 8.
+% Compilación reproducible: compilar-actividad-8.sh (XeLaTeX + Biber).
+\RequirePackage{fix-cm}
+\documentclass[12pt,letterpaper,oneside]{article}
+\usepackage[margin=2.54cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{ragged2e}
+\usepackage{titlesec}
+\usepackage[backend=biber,style=apa,sorting=nyt,doi=true,url=true,isbn=false]{biblatex}
+\addbibresource{referencias-actividad-8-liderazgo.bib}
+\usepackage[hidelinks,hypertexnames=false]{hyperref}
+\hypersetup{
+  pdftitle={Nueva Perspectiva del Liderazgo en las Organizaciones},
+  pdfauthor={Martín Jonathan de la Cruz Muñoz},
+  pdfsubject={Fundamentos de Gestión Administrativa. Unidad IV. Actividad 4.1},
+  pdfkeywords={liderazgo, brechas generacionales, dirección, toma de decisiones}
 }
-\input{reporte-fundamentos-de-gestion-administrativa-plantilla-actividad}
+% 12 puntos PDF y distancia entre líneas de 18 puntos: interlineado 1.5 exacto.
+\renewcommand{\normalsize}{\fontsize{12bp}{18bp}\selectfont}
+\AtBeginDocument{\normalsize}
+\titleformat{\section}{\normalfont\normalsize\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{12bp}{6bp}
+\setlength{\parindent}{1.27cm}
+\setlength{\parskip}{0pt}
+\setlength{\bibhang}{1.27cm}
+\setlength{\bibitemsep}{6bp}
+\AtBeginBibliography{\normalsize\raggedright}
+\emergencystretch=2em
+\clubpenalty=10000
+\widowpenalty=10000
+\raggedbottom
+
+\begin{document}
+\begin{titlepage}
+  \thispagestyle{empty}
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north west,inner sep=0pt] at (current page.north west)
+      {\includegraphics[width=\paperwidth,height=\paperheight]{assets-fundamentos-de-gestion-administrativa/actividad-8/portada-oficial.png}};
+    \node[anchor=north west,fill=white,fill opacity=.95,text opacity=1,
+      inner sep=12bp,text width=16.2cm,align=left]
+      at ([xshift=2cm,yshift=-10.5cm]current page.north west) {
+        \textbf{Maestría en Gestión Administrativa}\\[5bp]
+        \textbf{Asignatura:} Fundamentos de Gestión Administrativa\\
+        \textbf{Curso:} GGFG02 · Unidad IV: Dinámica de liderazgo\\
+        \textbf{Estudiante:} Martín Jonathan de la Cruz Muñoz\\
+        \textbf{Docente:} Celia Velazquez Reyna\\
+        \textbf{Fecha de elaboración:} 12 de septiembre de 2026
+      };
+    \node[anchor=north west,text=white,text width=10.7cm,align=left,inner sep=0pt]
+      at ([xshift=9.3cm,yshift=-19.5cm]current page.north west) {
+        \textbf{Nueva Perspectiva del Liderazgo\\en las Organizaciones}\\[10bp]
+        4.1 Reporte de Investigación · 10\%\\
+        Ensayo individual\\[5bp]
+        Liderazgo, brechas generacionales\\y toma de decisiones
+      };
+  \end{tikzpicture}
+  \null
+\end{titlepage}
+
+\pagenumbering{arabic}
+\justifying
+\section*{Introducción}
+
+La transformación digital y la expansión del trabajo remoto han hecho más visible una tensión central de la administración: las organizaciones necesitan coordinar resultados comunes sin suponer que todas las personas trabajan, aprenden o se comunican de la misma manera. Una jefatura puede disponer de plataformas, indicadores y autoridad formal, pero esos recursos no garantizan cooperación ni decisiones acertadas. La revisión de \textcite{cortellazzo2019} muestra que liderar en entornos digitalizados requiere articular competencias técnicas, relaciones de confianza y responsabilidad ética. Por ello, la pregunta relevante no es solamente qué estilo de liderazgo resulta más moderno, sino cómo se construye una dirección capaz de integrar conocimientos diversos y revisar sus decisiones ante condiciones cambiantes.
+
+La tesis de este ensayo es que una nueva perspectiva del liderazgo organizacional debe combinar orientación transformacional, responsabilidad compartida y prácticas inclusivas sustentadas en evidencia; su eficacia depende de adaptar el trabajo a las personas y las tareas, no de administrar estereotipos generacionales. El argumento se desarrolla mediante una revisión narrativa de investigaciones sobre liderazgo, virtualidad y diversidad de edades, con especial atención a publicaciones de 2019 a 2024 y antecedentes conceptuales pertinentes. No se presenta una revisión sistemática exhaustiva ni una investigación de campo propia. Primero se contrastan aportes y límites de distintos enfoques; después se examinan investigaciones recientes y las implicaciones de las brechas generacionales; finalmente se propone una aplicación hipotética a la dirección y la toma de decisiones. Esta delimitación permite distinguir resultados publicados, interpretación crítica y propuestas administrativas.
+
+\section*{Del liderazgo centrado en la figura del jefe a la construcción de capacidades}
+
+La autoridad administrativa y el liderazgo se relacionan, pero no son equivalentes. La primera asigna facultades y obligaciones; el segundo supone influir en la orientación del esfuerzo colectivo. Esta diferencia importa porque una organización puede conseguir obediencia sin generar aprendizaje, o contar con personas influyentes que carecen de atribuciones para comprometer recursos. La revisión de \textcite{jimenez2020} identifica diversos estilos y métodos de medición, y documenta la presencia destacada del liderazgo transformacional en la literatura examinada. Sin embargo, la frecuencia con que se estudia un enfoque no demuestra que sea superior en todas las organizaciones: popularidad académica y eficacia contextual son cuestiones diferentes.
+
+El liderazgo transformacional ofrece una respuesta a la necesidad de construir propósito y desarrollar capacidades. La motivación inspiradora vincula las tareas con objetivos significativos; la estimulación intelectual permite cuestionar procedimientos; la consideración individualizada reconoce necesidades de aprendizaje; y la influencia idealizada remite al ejemplo del líder. Estos componentes, discutidos en la literatura revisada por \textcite{jimenez2020}, tienen una aplicación concreta cuando una dirección explica por qué cambia un proceso, escucha objeciones y proporciona formación para realizarlo. La transformación no reside en pronunciar un discurso entusiasta, sino en lograr que las personas comprendan el cambio y dispongan de condiciones para participar en él.
+
+No obstante, este enfoque tiene límites. Si la visión del dirigente se vuelve incuestionable, la inspiración puede favorecer dependencia personal o silenciar información incómoda. Por otra parte, una meta ambiciosa sin recursos suficientes puede convertirse en presión, no en desarrollo. Frente a ello, los elementos transaccionales conservan utilidad: expectativas claras, compromisos verificables y reconocimiento del cumplimiento reducen ambigüedades. El problema aparece cuando toda relación laboral se interpreta como intercambio de premios y sanciones. La perspectiva propuesta no sustituye reglas por carisma ni contrapone motivación a control; combina un propósito compartido con responsabilidades explícitas y mecanismos para cuestionar decisiones que no estén funcionando.
+
+La comparación conduce a un criterio contingente: la conducta adecuada depende de la tarea, del riesgo y de las competencias disponibles, antes que de una etiqueta fija de líder. Ante una emergencia operativa puede ser necesario concentrar temporalmente la decisión, mientras que la mejora de un servicio suele beneficiarse de deliberación y experimentación. \textcite{cortellazzo2019} advierten que la digitalización se ha estudiado desde marcos diversos y no dispone de una teoría unificadora consolidada. Por tanto, presentar un estilo como receta universal ocultaría precisamente la complejidad que la dirección debe comprender.
+
+\section*{Liderazgo compartido, confianza y responsabilidad en entornos digitales}
+
+Cuando el conocimiento se distribuye entre áreas y especialistas, concentrar todas las decisiones en una sola persona crea un cuello de botella. El liderazgo compartido permite que distintos integrantes orienten al equipo según su experiencia y la naturaleza del problema. No significa que todos decidan todo, ni que desaparezca la autoridad formal. Exige delimitar quién propone, quién consulta, quién autoriza y quién responde por los resultados. En una organización digitalizada, un especialista puede dirigir la evaluación técnica de una herramienta, mientras la gerencia conserva la decisión presupuestaria y la responsabilidad por sus consecuencias laborales.
+
+La investigación de \textcite{hoch2014}, realizada con 101 equipos virtuales, ayuda a precisar esta idea. Sus resultados muestran que la mayor virtualidad debilitaba la relación entre liderazgo jerárquico y desempeño, mientras fortalecía la relación entre apoyos estructurales y desempeño. El liderazgo compartido se relacionaba significativamente con el desempeño con independencia del grado de virtualidad. No se trata de una demostración de que cualquier jerarquía deba eliminarse: es un estudio de campo con relaciones estadísticas. Su aporte consiste en mostrar que las condiciones de coordinación y la distribución de la influencia merecen atención, además de las características del jefe.
+
+El liderazgo digital debe ocuparse, entonces, de la arquitectura cotidiana de la colaboración. Elegir canales accesibles, registrar acuerdos, distribuir información y fijar tiempos de respuesta evita que la coordinación dependa exclusivamente de conversaciones informales. \textcite{cortellazzo2019} subrayan la importancia de las competencias comunicativas y de la confianza en equipos virtuales. La implicación administrativa es que una plataforma no produce colaboración por sí misma: también puede multiplicar interrupciones, excluir a quienes no dominan sus funciones o convertir la visibilidad en línea en un sustituto engañoso del desempeño.
+
+La confianza necesita, además, seguridad para expresar dudas y reconocer errores. \textcite{edmondson1999} estudió 51 equipos de una empresa manufacturera y encontró una asociación entre seguridad psicológica y conductas de aprendizaje. Este antecedente no equivale a permisividad ni elimina la evaluación; sugiere que las personas deben poder advertir problemas sin asumir que serán humilladas por hacerlo. En equipos de edades diversas, esa condición facilita que quien tiene menos antigüedad cuestione un procedimiento y que quien posee más experiencia solicite apoyo tecnológico. Un liderazgo inclusivo protege ambas posibilidades y juzga las contribuciones por su fundamento, no por la posición o la edad de quien interviene.
+
+\section*{Investigaciones recientes: del control de presencia al diseño del trabajo}
+
+Los cambios de los últimos años permiten observar aplicaciones concretas de estos principios. \textcite{wang2021} investigaron el trabajo remoto durante la pandemia mediante un diseño mixto: entrevistas y una encuesta a 522 personas. Identificaron dificultades de interferencia entre trabajo y hogar, comunicación ineficaz, procrastinación y soledad. El apoyo social se relacionó con menores niveles de esas dificultades, mientras la carga de trabajo y la supervisión se vincularon con mayor interferencia entre ámbitos laborales y domésticos. Los hallazgos cuestionan la idea de que vigilar más siempre mejora la coordinación. También muestran que la autonomía necesita apoyos, recursos y claridad, en lugar de confundirse con dejar a cada persona resolver sola sus dificultades.
+
+Es importante no sobredimensionar esa evidencia. Las relaciones de una encuesta no prueban por sí mismas causalidad, y el trabajo desde casa durante una emergencia sanitaria no representa todas las modalidades remotas. Aun así, el estudio ofrece variables útiles para el diagnóstico directivo: calidad del apoyo, autonomía, carga y supervisión. Antes de atribuir un problema de desempeño a falta de compromiso, la dirección debería examinar si existen instrucciones contradictorias, aislamiento o exigencias incompatibles. Este cambio de pregunta constituye una diferencia sustantiva entre un liderazgo que etiqueta a las personas y otro que identifica condiciones modificables.
+
+Una evidencia experimental más reciente proviene de \textcite{bloom2024}. Durante seis meses asignaron aleatoriamente modalidades de trabajo a 1\,612 empleados de una empresa tecnológica china, con un esquema híbrido que permitía trabajar desde casa dos días a la semana. Encontraron mayor satisfacción y una reducción de un tercio en la tasa de renuncias; las pruebas de equivalencia no mostraron deterioro en las evaluaciones de desempeño. Tampoco encontraron evidencia de diferencias en promociones en los dos años posteriores. Además, los directivos participantes revisaron favorablemente sus expectativas sobre la productividad. La lección para el liderazgo consiste en someter sus creencias a pruebas, no en preservar una regla de presencia porque expresa una preferencia personal.
+
+El experimento tampoco autoriza a afirmar que el trabajo híbrido es adecuado para cualquier puesto. Sus resultados corresponden a una empresa, a determinados trabajadores y a una distribución concreta de días. No representan automáticamente la manufactura presencial, el comercio o los servicios que requieren atención física. En esas actividades, la aplicación del principio puede consistir en mejorar turnos, dar mayor previsibilidad o distribuir mejor las decisiones, no en trasladar el trabajo al hogar. La nueva perspectiva del liderazgo no es una modalidad laboral única: es la disposición a comparar alternativas, escuchar necesidades y evaluar consecuencias antes de generalizar una política.
+
+\section*{Brechas generacionales sin determinismo: edad, trayectoria y contexto}
+
+La convivencia de personas identificadas como \textit{baby boomers}, generación X, \textit{millennials} o generación Z suele utilizarse para explicar conflictos laborales. Estas categorías pueden servir para describir discursos sociales, pero se vuelven problemáticas cuando se convierten en diagnósticos individuales. Suponer que la juventud implica dominio tecnológico, que la experiencia produce resistencia al cambio o que una cohorte comparte necesariamente determinada ética de trabajo confunde una clasificación demográfica con capacidades y motivaciones que deben comprobarse. La inclusión exige reconocer diferencias reales sin transformarlas en destinos personales.
+
+\textcite{rudolph2021} cuestionan la solidez de las explicaciones generacionales y proponen atender al desarrollo a lo largo de la vida y a la construcción social de las etiquetas. Una dificultad central consiste en separar edad, periodo histórico y cohorte de nacimiento. Las diferencias observadas entre trabajadores de edades distintas pueden reflejar experiencia, etapa profesional, condiciones económicas compartidas o acceso desigual a oportunidades, y no una característica estable de su generación. Esto no significa negar que existan diferencias entre personas; significa que no es válido atribuirlas automáticamente al año de nacimiento ni diseñar toda la gestión de personal sobre esa atribución.
+
+En la dirección, esta precaución cambia el diagnóstico. Un desacuerdo sobre horarios puede vincularse con responsabilidades de cuidado, distancias de traslado o necesidad de ingresos, sin que una etiqueta generacional lo explique adecuadamente. De igual manera, una dificultad con una plataforma puede proceder de falta de capacitación, diseño poco accesible o escasa exposición previa. La respuesta pertinente sería identificar barreras y ofrecer apoyos, no reducir las oportunidades de quien aprende a otro ritmo. La edad puede ser una variable descriptiva del análisis, pero debe interpretarse junto con trayectoria, puesto y condiciones efectivas de trabajo.
+
+En el ejercicio del liderazgo, el reto consiste en construir legitimidad entre trayectorias distintas. Una persona joven que coordina colaboradores experimentados no necesita desvalorizar su conocimiento para afirmar autoridad; debe explicar criterios, reconocer aportaciones y sostener reglas consistentes. A la inversa, la antigüedad de una jefatura no sustituye la obligación de escuchar propuestas recientes o aprender nuevas herramientas. A partir de \textcite{rudolph2021}, puede sostenerse que el desarrollo profesional debe organizarse alrededor de capacidades y necesidades observables. La consideración individualizada resulta más coherente con esa evidencia que asignar un estilo de motivación a cada generación.
+
+Una práctica compatible con este enfoque es la mentoría recíproca basada en competencias. En lugar de fijar que los mayores siempre enseñan experiencia y los jóvenes siempre tecnología, conviene identificar qué sabe cada participante y qué requiere aprender. La transmisión de conocimiento operativo puede alternarse con apoyo digital, comunicación con clientes o análisis de datos, según las capacidades reales. Esta es una propuesta de aplicación, no un resultado probado por los estudios citados. Para evaluarla habría que observar aprendizaje, calidad de colaboración y acceso equitativo, evitando convertirla en trabajo adicional no reconocido para quienes enseñan.
+
+\section*{Implicaciones para la toma de decisiones y la gestión administrativa}
+
+La diversidad de edades y trayectorias amplía la información potencialmente disponible, pero no garantiza mejores decisiones. Si la organización escucha únicamente a quienes ocupan cargos superiores o manejan con mayor soltura una plataforma, parte del conocimiento permanece invisible. La seguridad psicológica estudiada por \textcite{edmondson1999} y la coordinación examinada por \textcite{hoch2014} permiten fundamentar una propuesta: distribuir las oportunidades de aportar información, conservar criterios explícitos y mantener una responsabilidad final identificable. Consultar no obliga a aceptar todas las propuestas; obliga a examinarlas y explicar las razones de la resolución.
+
+Una decisión sobre digitalización, por ejemplo, debería distinguir el problema que se quiere resolver, las alternativas, los costos, los riesgos y las personas afectadas. Los criterios se establecerían antes de comparar opciones para reducir la tentación de justificar una preferencia ya tomada. La consulta combinaría entrevistas, demostraciones y comentarios escritos, de modo que hablar con rapidez en una reunión no fuera la única vía para influir. Posteriormente se registraría la decisión, el responsable, las condiciones de implementación y el momento de revisión. Esta secuencia convierte la participación en un insumo verificable, en lugar de una invitación simbólica sin efectos.
+
+El mismo principio debe aplicarse al uso de inteligencia artificial y analítica. Un sistema puede ordenar información o sugerir patrones, pero la dirección conserva la responsabilidad de comprobar su pertinencia y sus efectos. Como advierten \textcite{cortellazzo2019}, la digitalización plantea problemas éticos de privacidad, vigilancia y uso de datos. De ese marco se deriva la necesidad de evitar que la edad, o variables que la representen indirectamente, se utilicen sin justificación para restringir capacitación o promoción. La supuesta objetividad de una herramienta no reemplaza la revisión humana, la explicación de los criterios ni la posibilidad de corregir una decisión.
+
+Podría objetarse que estas prácticas ralentizan la administración. La objeción es válida cuando se intenta deliberar indefinidamente sobre todas las tareas; por eso, conviene graduar la participación según impacto, reversibilidad y urgencia. Una decisión rutinaria puede delegarse con límites conocidos, mientras una transformación que modifica puestos requiere consulta y evaluación más amplias. Ante una emergencia, la concentración temporal de autoridad debe acompañarse de comunicación y revisión posterior. Así se evita tanto la centralización permanente como una participación sin responsables: el objetivo no es maximizar reuniones, sino mejorar la calidad y legitimidad de las decisiones.
+
+\section*{Aplicación hipotética: una organización de servicios en Sonora}
+
+Considérese, como ejercicio analítico y no como caso investigado, una organización de servicios en Sonora que desea implantar un sistema digital de atención. Su personal tiene diferentes edades, antigüedades y experiencias con clientes. La gerencia interpreta inicialmente los desacuerdos como una resistencia de los colaboradores mayores, mientras algunos trabajadores atribuyen los errores a la falta de experiencia de los recién incorporados. Ambas explicaciones cierran prematuramente el diagnóstico. El enfoque aquí defendido comenzaría por examinar funciones, recorridos del proceso y necesidades de capacitación, sin asumir que una cohorte concentra el problema.
+
+La dimensión transformacional consistiría en explicar un propósito verificable: mejorar la continuidad del servicio y reducir retrabajos, no simplemente modernizar la imagen institucional. La dimensión compartida se expresaría en un equipo de prueba integrado por competencias pertinentes, con representación de las funciones afectadas y una persona responsable de coordinarlo. Los acuerdos operativos precisarían tiempos, tareas, mecanismos de apoyo y condiciones para detener o corregir la prueba. De este modo, la visión compartida se traduce en decisiones administrativas, mientras la responsabilidad distribuida no se convierte en ambigüedad sobre quién debe resolver una incidencia.
+
+La capacitación ofrecería demostraciones, guías accesibles y práctica acompañada. La mentoría se asignaría por capacidades observadas, y cualquier integrante podría advertir fallas sin que hacerlo se interpretara como deslealtad al proyecto. Se compararía una línea base con los resultados de un piloto: tiempo de resolución, retrabajos, incidencias, autonomía en el uso del sistema y percepción de apoyo. Si el tamaño del personal y la privacidad lo permiten, se examinarían diferencias por función, antigüedad y edad para detectar barreras; no se publicarían comparaciones individuales ni se explicarían automáticamente los resultados como efectos generacionales.
+
+Finalmente, la decisión de ampliar el sistema dependería de los resultados y de los costos de corregir sus problemas. Una mejora aparente podría deberse a cambios de demanda, mayor dotación o aprendizaje acumulado, por lo que sería necesario registrar esas condiciones antes de atribuirla al liderazgo. Tampoco bastaría una encuesta de satisfacción si aumentan los errores de atención. Esta aplicación reúne propósito, participación, límites éticos y evaluación, pero no promete beneficios medidos que no existen. Su valor es mostrar cómo las investigaciones pueden orientar preguntas y decisiones prudentes en un contexto local, sin presentar como equivalentes organizaciones que operan bajo condiciones distintas.
+
+\section*{Conclusión}
+
+La nueva perspectiva del liderazgo en las organizaciones no consiste en reemplazar cada modelo anterior por una denominación novedosa. Consiste en reconsiderar cómo se ejerce la influencia cuando el conocimiento está distribuido, el trabajo se apoya en tecnologías y las trayectorias laborales son heterogéneas. El liderazgo transformacional aporta propósito y desarrollo; el compartido reconoce capacidades fuera de la jefatura; y la dimensión inclusiva y ética establece condiciones para participar sin desventajas arbitrarias. Ninguno resulta suficiente si faltan responsabilidades, recursos o evaluación. Las investigaciones examinadas respaldan la atención al diseño del trabajo, la confianza y los apoyos de coordinación, aunque sus alcances deben interpretarse según métodos y contextos.
+
+Las brechas generacionales requieren especial cuidado: reconocer diversidad no autoriza a suponer que la edad determina compromiso, aprendizaje o capacidad de decidir. Para la dirección, la alternativa es diagnosticar necesidades; para el liderazgo, construir legitimidad y aprendizaje recíproco; para la toma de decisiones, integrar información diversa mediante criterios transparentes. La postura central es, por tanto, que liderar mejor implica sustituir explicaciones cómodas por evidencia revisable y transformar la participación en capacidad organizacional efectiva. Una organización avanza cuando puede aprender de sus diferencias y corregir sus decisiones, no cuando consigue que todas las personas respondan a un mismo estereotipo.
+
+\label{fin-del-ensayo}
+\clearpage
+\printbibliography[title={Referencias}]
+\end{document}

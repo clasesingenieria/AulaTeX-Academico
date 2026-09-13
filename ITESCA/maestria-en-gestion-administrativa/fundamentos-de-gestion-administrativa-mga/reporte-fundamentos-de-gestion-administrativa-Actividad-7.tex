@@ -1,5 +1,8 @@
-% Actividad local 7 = foro 3.2. Documento autónomo: no modifica las actividades 6, 8, 9 y 10.
-\documentclass[12pt,letterpaper,oneside]{article}
+% Contrato realizar-actividad: reporte contenedor + producto foro (local 7 / Moodle 3.2).
+% Tres actos; preparación conceptual -> tres forobox -> interpretación.
+% Consigna y trazabilidad: foro-participacion-Actividad-7.md y extractor-aulatex/actividad 7.
+% Estado: propuesta no publicada. No convertir las cajas en constancias de entrega.
+\documentclass[11pt,letterpaper,oneside]{article}
 \usepackage[margin=2.35cm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -10,11 +13,32 @@
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{enumitem}
+\usepackage{microtype}
+\usepackage[most]{tcolorbox}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=apa,natbib=true]{biblatex}
+\DeclareLanguageMapping{spanish}{spanish-apa}
+\addbibresource{fundamentos-de-gestion-administrativa.bib}
+\usepackage{xurl}
 \usepackage{hyperref}
+\usepackage{attachfile}
 \definecolor{itescaRedDark}{HTML}{8F1117}
 \definecolor{itescaInk}{HTML}{181818}
-\hypersetup{colorlinks=true,linkcolor=itescaRedDark,urlcolor=itescaRedDark,
-  pdftitle={3.2 Foro Toma de Decisiones},pdfauthor={Martín Jonathan de la Cruz Muñoz}}
+\definecolor{itescaPaper}{HTML}{F7F7F7}
+\newcommand{\documenttitle}{Decidir con evidencia y aprender de los resultados}
+\newcommand{\documentsubtitle}{3.2 Foro Toma de Decisiones · Unidad III · 5\%}
+\newcommand{\documentsubject}{Actividad 7 - Fundamentos de Gestión Administrativa}
+\hypersetup{colorlinks=true,linkcolor=itescaRedDark,citecolor=itescaRedDark,urlcolor=itescaRedDark,
+  pdftitle={\documenttitle},pdfsubject={\documentsubject},pdfauthor={Martín Jonathan de la Cruz Muñoz}}
+\newtcolorbox{forobox}[1]{enhanced,breakable,colback=itescaPaper,
+  colframe=itescaRedDark,boxrule=.5pt,arc=1mm,
+  title={#1},fonttitle=\bfseries,before upper={\setstretch{1.15}},
+  left=3mm,right=3mm,top=2mm,bottom=2mm}
+\newcommand{\forodir}{ITESCA/maestria-en-gestion-administrativa/fundamentos-de-gestion-administrativa-mga}
+\newcommand{\foroCopyButton}[2][Copiar participación]{%
+  \textattachfile[color={0.56 0.07 0.09},mimetype=text/plain,
+  description={Texto UTF-8 para abrir, extraer y copiar}]{\forodir/#2}{\textbf{#1}}}
+\newcommand{\fororef}[1]{\par\begingroup\small\hangindent=1.25em\hangafter=1 #1\par\endgroup}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0.65em}
 \setlength{\emergencystretch}{2em}
@@ -26,41 +50,64 @@
   \includegraphics[width=4.2cm]{ITESCA/assets-itesca/web/logo-itesca-contorno.png}\\[0.3cm]
   {\large Instituto Tecnológico Superior de Cajeme\\
   Maestría en Gestión Administrativa}\\[0.3cm]
-  {\LARGE\bfseries\color{itescaRedDark} 3.2 Foro Toma de Decisiones}\\[0.2cm]
-  {\large Fundamentos de Gestión Administrativa · GGFG02\\
-  Unidad III · Ponderación: 5\% · Actividad local 7}
+  {\LARGE\bfseries\color{itescaRedDark}\documenttitle}\\[0.2cm]
+  {\large\documentsubtitle}\\[0.2cm]
+  Fundamentos de Gestión Administrativa · GGFG02
 \end{center}
 
 \textbf{Estudiante:} Martín Jonathan de la Cruz Muñoz.\\
-\textbf{Fecha de preparación:} 12 de septiembre de 2026.\\
-\textbf{Vencimiento indicado:} 31 de agosto de 2026, 23:59.
+\textbf{Fecha:} 13 de septiembre de 2026.\\
+{\small Versión para revisión: los tres mensajes no han sido publicados durante esta preparación.}
 
-\textbf{Estado:} participación inicial y dos respuestas personalizadas preparadas
-para revisión. No publicadas durante esta preparación. Moodle muestra un aviso
-de plazo vencido; debe comprobarse la aceptación de participaciones extemporáneas.
-Este documento no constituye un comprobante de entrega.
+\section{Introducción}
+Las decisiones administrativas convierten información incompleta en acciones que
+comprometen recursos y afectan a personas. Una dificultad central consiste en
+atender el problema correcto y comprobar después si la intervención produjo los
+resultados esperados. La rapidez pierde valor cuando se actúa sobre un síntoma,
+mientras que reunir información sin delimitar una pregunta puede paralizar la
+respuesta. La pertinencia, oportunidad y comprensibilidad de la información son
+condiciones relevantes para reducir esa incertidumbre \citep{act7Lopez2020}.
 
-\section*{Consigna y alcance}
-Identificar la fase del proceso más propensa a errores y una de las fases
-consideradas más importantes, justificar la postura y ofrecer recomendaciones
-para mejorar la toma de decisiones gerenciales. Responder a dos compañeros.
-La consigna y las aportaciones de referencia se consultaron en el
-\href{https://cursos3.e-itesca.edu.mx/mod/forum/view.php?id=7794}{foro 3.2 de Moodle}
-el 12 de septiembre de 2026. Los apartados siguientes contienen los textos propuestos.
+El objetivo es argumentar por qué el diagnóstico merece especial cuidado y por qué
+la revisión de resultados debe acompañar la ejecución. Se sostiene que ambas fases
+son complementarias: la primera orienta la decisión y la segunda permite corregir
+sus supuestos. Esta relación corresponde al circuito de decisión y retroalimentación
+descrito por \citet{act7Solano2003}, sin suponer que un procedimiento elimine todo riesgo.
 
-\section{Participación inicial}
+\section{Del diagnóstico a la revisión de las decisiones}
+\subsection{Fases y criterios para decidir}
+\citet{act7CanosSF} distinguen cinco fases: \textbf{inteligencia}, que identifica y
+define el problema; \textbf{diseño}, que genera alternativas; \textbf{selección},
+que las evalúa y elige una opción; \textbf{implantación}, que desarrolla las acciones;
+y \textbf{revisión}, que contrasta resultados y permite reiniciar el proceso.
+La información atraviesa esas fases, por lo que su recolección no debe entenderse
+como un trámite aislado del diagnóstico.
+
+La calidad de una decisión no depende solamente de elegir una alternativa, sino
+de justificarla frente a objetivos, recursos y consecuencias. Un \textbf{síntoma}
+es la manifestación observada; una \textbf{causa} es una explicación que debe ponerse
+a prueba. Asimismo, la \textbf{eficacia} de la intervención debe contrastarse con una
+línea base y con posibles efectos adversos. La retroalimentación permite confrontar
+la decisión con el curso real de los acontecimientos \citep[p.~45]{act7Solano2003}.
+
+\subsection{Diagnóstico y seguimiento: intervención inicial}
+\foroCopyButton{foro-participacion-Actividad-7.txt}
+\begin{forobox}{Intervención propuesta sobre toma de decisiones}
 \textbf{Asunto: Diagnosticar con evidencia y revisar resultados para decidir mejor}
 
 Buenas tardes, compañeras, compañeros y docente:
 
-\textbf{Fase que considero más propensa a errores: la inteligencia o identificación
-y análisis del problema.} Mi elección se debe a que, en esta etapa, se decide qué
+\begin{enumerate}[leftmargin=1.5em,label=\textbf{\arabic*.},itemsep=.6em]
+\item \textbf{Fase del proceso que puede presentar mayormente errores en la toma de decisiones.}
+
+Considero especialmente vulnerable la inteligencia o identificación y análisis
+del problema. Mi elección se debe a que, en esta etapa, se decide qué
 situación necesita atención y cómo se interpreta la información. Confundir un
 síntoma con su causa puede conducir a una solución bien ejecutada, pero dirigida
 al problema equivocado. También existe el riesgo de buscar solamente datos que
 confirmen una explicación previa o de atribuir una falla a una persona sin revisar
-el proceso. Canós Darós y colaboradores (s.\,f., sección 4) señalan precisamente
-el riesgo de responder adecuadamente a un problema mal formulado. No afirmo que
+el proceso. Como advierten los autores, «podemos obtener una respuesta adecuada
+para un problema equivocado» (Canós Darós et al., s.\,f., p.~5). No afirmo que
 esta fase concentre siempre más errores; la considero especialmente vulnerable
 por sus efectos sobre las etapas posteriores.
 
@@ -71,10 +118,12 @@ en autorizaciones internas. Antes de decidir, convendría revisar tiempos por
 etapa, pedidos afectados y observaciones de quienes realizan el trabajo. Así se
 distingue el problema observado de las posibles causas, que todavía deben verificarse.
 
-\textbf{Una de las fases más importantes: la revisión o evaluación de resultados.}
-Aunque un diagnóstico adecuado es indispensable, destaco la revisión porque permite
+\item \textbf{Fase del proceso que considero una de las más importantes.}
+
+Destaco la revisión o evaluación de resultados. Aunque un diagnóstico adecuado
+es indispensable, la revisión permite
 comprobar si la decisión resolvió el problema y detectar efectos no previstos. En
-el modelo de Canós Darós y colaboradores (s.\,f.), esta fase evalúa lo realizado y
+el modelo de Canós Darós et al. (s.\,f.), esta fase evalúa lo realizado y
 permite reiniciar el proceso cuando los resultados no son adecuados. Ejecutar una
 decisión no equivale a demostrar su eficacia.
 
@@ -85,40 +134,43 @@ puntualidad en cuatro semanas. Estas cifras son una propuesta, no datos de una
 empresa real. También habría que revisar cambios en la demanda para no atribuir
 toda mejora a la decisión tomada.
 
-\textbf{Recomendaciones:} formular el problema sin anticipar la solución;
+\item \textbf{Justificación de la aportación y recomendaciones.}
+
+Mi postura vincula prevención y aprendizaje: diagnosticar evita orientar recursos
+hacia una causa no comprobada y revisar permite reconocer cuándo es necesario
+corregir la decisión. Recomiendo formular el problema sin anticipar la solución;
 contrastar registros con la experiencia del personal; comparar alternativas por
 costo, viabilidad, riesgos e impacto en las personas; asignar un responsable y un
-plazo; y definir desde el inicio cómo se evaluarán los resultados. López, Guamán
-y Castro (2020) destacan la relevancia de la información confiable y oportuna para
+plazo; y definir desde el inicio cómo se evaluarán los resultados. López et al.
+(2020) destacan la relevancia de la información confiable y oportuna para
 reducir la incertidumbre gerencial. Esto no significa esperar información perfecta,
 sino explicitar lo que se sabe, lo que se supone y lo que falta comprobar.
+\end{enumerate}
 
 En conclusión, considero que decidir mejor exige cuidar tanto el diagnóstico como
 la revisión: el primero orienta la acción y la segunda permite corregirla y aprender
 de sus resultados. ¿Qué indicador elegirían para comprobar que una decisión
 solucionó la causa del problema y no solamente su manifestación?
 
-\subsection*{Referencias de la participación}
-  Canós Darós, L., Pons Morera, C., Valero Herrera, M., y Maheut, J. P. (s.\,f.).
+Martín Jonathan de la Cruz Muñoz
+
+\textbf{Referencias}
+\fororef{Canós Darós, L., Pons Morera, C., Valero Herrera, M., y Maheut, J. P. (s.\,f.).
   \textit{Toma de decisiones en la empresa: proceso y clasificación}.
-  Universidad Politécnica de Valencia. Sección 4, «Etapas en el proceso de toma
-  de decisiones». Lectura disponible en los materiales locales de la unidad III.
-
-  López, D. A., Guamán, M. D., y Castro, J. C. (2020).
+  Universidad Politécnica de Valencia.}
+\fororef{López, D. A., Guamán, M. D., y Castro, J. C. (2020).
   La toma de decisiones y la eficacia organizativa en las PyMEs comerciales de la
-  ciudad de Ambato (Ecuador). \textit{Revista Espacios, 41}(22), artículo 27.
-  Secciones 1 y 1.1. Lectura disponible en los materiales locales de la unidad III.
+  ciudad de Ambato (Ecuador). \textit{Revista Espacios, 41}(22), artículo 27.}
+\end{forobox}
 
-\section{Respuesta a Mariel Nava Ortiz}
-\textbf{Destino:}
-\href{https://cursos3.e-itesca.edu.mx/mod/forum/discuss.php?d=615}{TOMA DE DECISIONES},
-publicación inicial del 31 de agosto de 2026, 20:06.
-
-\textit{Contexto verificado, no forma parte del mensaje:} Mariel considera central
-la definición del problema y ubica el mayor riesgo de error en la recolección de
-información por su duración, exigencias de análisis y costos.
-
-\subsection*{Texto de la respuesta}
+\subsection{Información suficiente sin perder oportunidad}
+Una aportación del grupo sitúa la definición del problema como fase central y
+advierte sobre los tiempos y costos de recopilar información. La respuesta amplía
+esa idea mediante criterios de pertinencia y verificación, sin equiparar cantidad
+de datos con calidad del diagnóstico.
+% Destino verificado: Mariel Nava Ortiz, discuss.php?d=615, 31-08-2026 20:06.
+\foroCopyButton[Copiar respuesta 1]{foro-respuesta-1-Actividad-7.txt}
+\begin{forobox}{Retroalimentación propuesta sobre la información}
 Hola, Mariel:
 
 Me parece relevante que relaciones la recolección de información con el tiempo y
@@ -126,6 +178,8 @@ el costo de decidir. Coincido en que recopilar datos sin un objetivo claro puede
 retrasar la solución. Añadiría que el riesgo no depende únicamente de la cantidad
 de información, sino de su pertinencia y de cómo se interpreta. Incluso una base
 amplia puede inducir a errores si solo incluye datos que respaldan lo que ya se pensaba.
+La precisión, oportunidad y relevancia de la información son criterios destacados
+por López et al. (2020), que ayudan a distinguir reunir datos de comprender el problema.
 
 Para complementar tu propuesta, establecería desde el inicio qué pregunta debe
 responder cada dato, quién puede verificarlo y cuándo se necesita. En un problema
@@ -138,17 +192,21 @@ explícito orienta qué información resulta útil. ¿Qué criterio utilizarías
 decidir que ya se cuenta con información suficiente para actuar, sin prolongar
 el análisis ni asumir riesgos innecesarios?
 
-\section{Respuesta a Laura América González Valenzuela}
-\textbf{Destino:}
-\href{https://cursos3.e-itesca.edu.mx/mod/forum/discuss.php?d=619}{Toma de decisiones},
-publicación inicial del 31 de agosto de 2026, 22:58.
+Martín Jonathan de la Cruz Muñoz
 
-\textit{Contexto verificado, no forma parte del mensaje:} Laura identifica errores
-en el diagnóstico, distingue causas de efectos y destaca la evaluación de alternativas
-según recursos, riesgos, beneficios y consecuencias. Recomienda escuchar al personal
-y revisar resultados.
+\textbf{Referencia}
+\fororef{López, D. A., Guamán, M. D., y Castro, J. C. (2020).
+La toma de decisiones y la eficacia organizativa en las PyMEs comerciales de la
+ciudad de Ambato (Ecuador). \textit{Revista Espacios, 41}(22), artículo 27.}
+\end{forobox}
 
-\subsection*{Texto de la respuesta}
+\subsection{Comparar alternativas y comprobar consecuencias}
+Otra aportación distingue causas de efectos y resalta la evaluación de opciones
+según recursos, riesgos y beneficios. La respuesta propone acordar criterios antes
+de comparar alternativas e incorporar sus consecuencias sobre las personas.
+% Destino verificado: Laura América González Valenzuela, discuss.php?d=619, 31-08-2026 22:58.
+\foroCopyButton[Copiar respuesta 2]{foro-respuesta-2-Actividad-7.txt}
+\begin{forobox}{Retroalimentación propuesta sobre las alternativas}
 Hola, Laura:
 
 Coincido con tu distinción entre causas y efectos y con la necesidad de no elegir
@@ -156,6 +214,9 @@ automáticamente la primera alternativa. Tu propuesta de valorar recursos, riesg
 y consecuencias podría concretarse mediante una matriz de comparación cuyos criterios
 se acuerden antes de calificar las opciones. Esto ayudaría a evitar que los criterios
 se acomoden a una solución preferida de antemano.
+Solano (2003, p.~45) vincula el análisis de las alternativas con sus consecuencias
+y con la retroalimentación posterior, lo que respalda evaluar tanto la elección
+como sus resultados.
 
 Añadiría que una alternativa con el menor costo inmediato no necesariamente es la
 más conveniente. Por ejemplo, ante entregas tardías, recurrir permanentemente a horas
@@ -168,17 +229,49 @@ revisión: la comparación anticipada necesita contrastarse con resultados reale
 ¿Cómo priorizarías dos alternativas si una ofrece resultados rápidos y la otra
 reduce mejor el riesgo de que el problema se repita?
 
-\section*{Control de preparación y publicación}
-\begin{itemize}[leftmargin=*]
-  \item \textbf{Preparado:} postura justificada sobre ambas fases, recomendaciones,
-  ejemplo hipotético, referencias consultadas y dos respuestas a mensajes reales.
-  \item \textbf{Por realizar:} revisión y aprobación del estudiante, comprobación
-  de aceptación de participación extemporánea y publicación de los tres mensajes.
-  \item \textbf{Evidencia de entrega:} conservar los enlaces y fechas reales de
-  las tres publicaciones una vez enviadas. No se han generado durante esta preparación.
-\end{itemize}
-El PDF es un respaldo; no sustituye las intervenciones en Moodle. No se ha pulsado
-«Marcar como hecha» ni se afirma que haya ocurrido un intercambio posterior con
-las compañeras. La versión editable para copiar cada mensaje se conserva en el
-documento Markdown de participación de la Actividad 7.
+Martín Jonathan de la Cruz Muñoz
+
+\textbf{Referencia}
+\fororef{Solano, A. I. (2003). Toma de decisiones gerenciales.
+\textit{Tecnología en Marcha, 16}(3), 44--51.}
+\end{forobox}
+
+\subsection{Criterios que articulan las tres intervenciones}
+Las tres intervenciones vinculan evidencia y decisión: el diagnóstico orienta
+la búsqueda de información y la revisión permite corregir sus supuestos. Comparar
+alternativas exige anticipar consecuencias y comprobarlas con indicadores de
+resultado, costo y carga de trabajo. Destacar una fase no anula a las demás.
+Esta lectura interpreta aportaciones consultadas, no un diálogo posterior.
+
+\clearpage
+\section{Conclusiones}
+Considero que la identificación y el análisis del problema requieren especial
+cuidado porque una explicación equivocada condiciona todas las alternativas
+posteriores. A la vez, sostengo que la revisión de resultados es una fase decisiva:
+sin ella, ejecutar una acción puede confundirse con resolver el problema. Esta
+postura no establece una jerarquía universal de errores, sino un criterio de
+precaución ante decisiones que comprometen recursos y bienestar.
+
+La consecuencia práctica es unir diagnóstico, elección y seguimiento mediante
+criterios verificables. En una organización con entregas tardías, primero
+contrastaría registros de inventario, autorizaciones y distribución; después
+compararía alternativas por viabilidad, costo, riesgo e impacto en el personal.
+Asignaría un responsable del seguimiento y un plazo de revisión, utilizando la
+puntualidad junto con costo por pedido y horas extra. Si mejora la velocidad a
+costa de sobrecarga o errores, no consideraría suficiente el resultado.
+
+La transferencia profesional consiste en decidir con información pertinente,
+documentar los supuestos y conservar la disposición a rectificar. La revisión
+no corrige por sí sola un diagnóstico deficiente, pero hace posible descubrirlo
+y reabrirlo; la comparación de alternativas tampoco garantiza resultados, pero
+permite explicar por qué una opción era razonable con la evidencia disponible.
+Así, la responsabilidad gerencial incluye tanto justificar la elección como
+responder por sus consecuencias.\footnote{Se utilizó GitHub Copilot para apoyar la
+organización, redacción y comprobación documental de esta propuesta. Este apoyo
+no sustituye el análisis propio que corresponde al estudiante; la revisión de
+las fuentes y la adopción o modificación de la postura permanecen a su cargo
+antes de publicar. No se afirma que esa revisión personal ya haya ocurrido.}
+
+\clearpage
+\printbibliography[title={Referencias}]
 \end{document}

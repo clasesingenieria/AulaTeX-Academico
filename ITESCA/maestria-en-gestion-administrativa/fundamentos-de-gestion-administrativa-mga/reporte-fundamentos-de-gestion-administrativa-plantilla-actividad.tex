@@ -1,116 +1,74 @@
-% Base compartida para las actividades pendientes de Fundamentos de Gestión Administrativa.
-% Este archivo se carga desde cada reporte de actividad; no se compila directamente.
+% Base reutilizable. Los productos actuales 6--10 son autónomos.
+% Cargar desde un documento que defina metadatos y actividadcontenido.
+% Requiere XeLaTeX y Biber: Arial real, 12 puntos, interlineado 1.5 y APA 7.
 \documentclass[12pt,letterpaper,oneside]{article}
-\usepackage[margin=2.35cm]{geometry}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[spanish,es-tabla]{babel}
-\usepackage[scaled=.96]{helvet}
-\renewcommand{\familydefault}{\sfdefault}
-\usepackage{setspace}
+\usepackage[margin=2.54cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\usepackage[spanish,es-tabla,es-nodecimaldot]{babel}
+\usepackage{csquotes,setspace,ragged2e}
 \usepackage{graphicx}
 \usepackage[table]{xcolor}
-\usepackage{booktabs}
-\usepackage{array}
-\usepackage{longtable}
-\usepackage{enumitem}
-\usepackage{hyperref}
-\usepackage[authoryear,round]{natbib}
-
+\usepackage{booktabs,array,longtable,tabularx}
+\usepackage{enumitem,amsmath,amssymb}
+\usepackage{titlesec}
+\usepackage[backend=biber,style=apa,sortcites=true]{biblatex}
+\DeclareLanguageMapping{spanish}{spanish-apa}
+\addbibresource{fundamentos-de-gestion-administrativa.bib}
+\usepackage{xurl}
+\usepackage[hidelinks,hypertexnames=false]{hyperref}
 \definecolor{itescaRedDark}{HTML}{8F1117}
-\definecolor{itescaRed}{HTML}{D70F18}
-\definecolor{itescaCharcoal}{HTML}{141414}
-\definecolor{itescaSilver}{HTML}{D9D9D9}
-\definecolor{itescaPaper}{HTML}{F7F7F7}
-\definecolor{itescaInk}{HTML}{181818}
-\hypersetup{colorlinks=true,linkcolor=itescaRedDark,citecolor=itescaRedDark,urlcolor=itescaRedDark}
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{0.72em}
+\hypersetup{pdftitle={\actividadtitulo},pdfauthor={Martín Jonathan de la Cruz Muñoz},
+  pdfsubject={Fundamentos de Gestión Administrativa · GGFG02}}
 \onehalfspacing
-\bibliographystyle{plainnat}
-
-\newcommand{\pendiente}[1]{\textcolor{itescaRedDark}{\textbf{[PENDIENTE:} #1\textbf{]}}}
-\newcommand{\campo}[1]{\textcolor{itescaRedDark}{\textbf{#1}}}
-
+\AtBeginDocument{\justifying}
+\setlength{\parindent}{1.27cm}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\setlength{\bibhang}{1.27cm}
+\setlength{\bibitemsep}{8pt}
+\titleformat{\section}{\normalfont\normalsize\bfseries}{\thesection.}{.5em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection.}{.5em}{}
+\setlist{leftmargin=*,itemsep=3pt,parsep=0pt}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\providecommand{\actividadcodigo}{Actividad \actividadnumero}
+\providecommand{\actividadindice}{}
+\providecommand{\actividadnota}{}
 \begin{document}
-
 \begin{titlepage}
-  \pagecolor{itescaPaper}
-  \color{itescaInk}
+  \noindent\begin{minipage}[t]{.62\textwidth}
+    \vspace{0pt}Instituto Tecnológico Superior de Cajeme\\
+    Maestría en Gestión Administrativa\\Posgrado e Investigación
+  \end{minipage}\hfill
+  \begin{minipage}[t]{.34\textwidth}
+    \vspace{0pt}\raggedleft
+    \includegraphics[width=\linewidth]{ITESCA/assets-itesca/web/logo-itesca-contorno.png}
+  \end{minipage}
+  \vfill
   \begin{center}
-    \vspace*{0.7cm}
-    \includegraphics[width=5.2cm]{ITESCA/assets-itesca/web/logo-itesca-contorno.png}\\[0.7cm]
-    {\Large Instituto Tecnológico Superior de Cajeme}\\[0.2cm]
-    {\large Maestría en Gestión Administrativa}\\[0.9cm]
-    {\color{itescaRedDark}\rule{0.84\linewidth}{1.5pt}}\\[0.5cm]
-    {\Huge\bfseries Actividad \actividadnumero\par}
-    \vspace{0.3cm}
-    {\LARGE\bfseries \actividadtitulo\par}
-    \vspace{0.35cm}
-    {\Large Unidad \unidadnumero\ · \actividadponderacion\par}
-    \vspace{0.4cm}
-    {\color{itescaRed}\rule{0.62\linewidth}{1.1pt}}\\[0.9cm]
-    \begin{tabular}{rl}
-      \textbf{Alumno:} & Martin Jonathan de la Cruz \\
-      \textbf{Matrícula:} & ITESCA-MGA \\
-      \textbf{Docente:} & Por definir \\
-      \textbf{Asignatura:} & Fundamentos de Gestión Administrativa \\
-      \textbf{Clave:} & ACF--0901 \\
-      \textbf{Créditos:} & 6 \\
-      \textbf{Evidencia:} & \actividadproducto \\
-      \textbf{Fecha:} & \today
-    \end{tabular}
-    \vfill
-    {\small Cajeme, Sonora}
+    {\LARGE\bfseries\color{itescaRedDark}\actividadtitulo\par}
+    \vspace{.6cm}
+    \actividadcodigo\ · \actividadproducto\\
+    Fundamentos de Gestión Administrativa\\
+    Unidad \unidadnumero\ · Ponderación: \actividadponderacion
   \end{center}
-  \nopagecolor
+  \vfill
+  \noindent\begin{tabularx}{\linewidth}{@{}lY@{}}
+    Alumno: & Martín Jonathan de la Cruz Muñoz\\
+    Docente: & Celia Velázquez Reyna\\
+    Programa: & Maestría en Gestión Administrativa\\
+    Curso: & GGFG02\\
+    Periodo: & Agosto--noviembre de 2026\\
+    Modalidad: & En línea\\
+    Fecha de preparación: & 12 de septiembre de 2026\\
+    Lugar: & Cajeme, Sonora
+  \end{tabularx}
+  \par\medskip\noindent\actividadnota
 \end{titlepage}
-
-\tableofcontents
-\clearpage
-
-\section*{Ficha de la actividad}
-\addcontentsline{toc}{section}{Ficha de la actividad}
-\begin{tabular}{>{\bfseries}p{0.27\textwidth}p{0.66\textwidth}}
-Unidad & \unidadnumero \\
-Competencia & \actividadcompetencia \\
-Evidencia & \actividadproducto \\
-Ponderación & \actividadponderacion \\
-Propósito & \actividadproposito
-\end{tabular}
-
-\section{Introducción}
-\pendiente{Plantear el problema organizacional que atiende la actividad, justificar su relevancia y anticipar el criterio central del trabajo.}
-
-\section{Marco conceptual}
-\pendiente{Definir y relacionar los conceptos indispensables mediante fuentes académicas verificables. Evitar una sucesión de definiciones aisladas.}
-
-\section{Desarrollo de la evidencia}
+\actividadindice
 \actividadcontenido
-
-\section{Análisis y criterio propio}
-\pendiente{Interpretar los resultados, valorar límites y riesgos, y justificar la decisión o postura administrativa asumida.}
-
-\section{Aplicación profesional}
-\pendiente{Explicar cómo se transferiría la evidencia a una organización real, indicando responsables, recursos, restricciones e indicadores de seguimiento.}
-
-\section{Conclusiones}
-\pendiente{Responder al propósito de la actividad, sintetizar el aprendizaje y formular una conclusión argumentada que no repita el desarrollo.}
-
-\section*{Lista de verificación}
-\addcontentsline{toc}{section}{Lista de verificación}
-\begin{itemize}[label=$\square$]
-  \item El producto solicitado aparece completo y con la ponderación correcta.
-  \item La competencia de la unidad se demuestra mediante análisis, no solo descripción.
-  \item Las afirmaciones centrales tienen citas autor--año verificables.
-  \item La evidencia distingue datos, interpretación y postura personal.
-  \item La conclusión responde al problema planteado.
-  \item La bibliografía coincide con las fuentes efectivamente utilizadas.
-  \item Se eliminaron todos los marcadores \texttt{PENDIENTE} antes de entregar.
-\end{itemize}
-
 \clearpage
-\nocite{itescaProgramaFundamentosGestion,robbinsCoulter2018Administracion}
-\bibliography{fundamentos-de-gestion-administrativa}
-
+\printbibliography[title={Fuentes de consulta}]
 \end{document}

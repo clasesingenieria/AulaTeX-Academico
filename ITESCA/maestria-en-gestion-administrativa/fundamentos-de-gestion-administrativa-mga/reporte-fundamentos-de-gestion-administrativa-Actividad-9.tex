@@ -2,6 +2,9 @@
 % Técnica: foro. Nivel: analizar, fundamentar y dialogar.
 % Organización: problema -> postura y tres respuestas -> interacción -> conclusión.
 % Estado: preparación local; no acredita publicación ni interacción en Moodle.
+% Contrato: activity_contract.py, foro_diagnostico; patrón maduro de foro_producto.py.
+% Preguntas guía y tres intervenciones íntegras, con referencias APA 7 por caja.
+% Adaptación editorial manual: no ejecutar el transformador con --apply sobre este documento.
 \documentclass[11pt,letterpaper,oneside]{article}
 \usepackage[margin=2.35cm]{geometry}
 \usepackage[utf8]{inputenc}
@@ -28,11 +31,18 @@
 \newcommand{\itescadocumentsubtitle}{4.2 Foro · Unidad IV · 5\%}
 \newcommand{\itescadocumentsubject}{Actividad 9 - Fundamentos de Gestión Administrativa}
 \hypersetup{pdftitle={\itescadocumenttitle},pdfsubject={\itescadocumentsubject},
-  pdfauthor={Martin Jonathan de la Cruz},colorlinks=true,
+  pdfauthor={Martín Jonathan de la Cruz Muñoz},colorlinks=true,
   linkcolor=itescaRedDark,citecolor=itescaRedDark,urlcolor=itescaRedDark}
+\attachfilesetup{color={0.843 0.059 0.094},print=false}
+\newcommand{\foroCopyButton}[1]{%
+  \textattachfile[appearance={},description={Intervención íntegra en texto copiable},mimetype=text/plain]{#1}{%
+    \colorbox{itescaRedDark}{\small\textcolor{white}{\,Copiar participación\,}}%
+  }%
+}
 \newtcolorbox{forobox}[1]{enhanced,breakable,colback=itescaPaper,
   colframe=itescaRedDark,boxrule=.5pt,arc=1mm,
-  title={#1},fonttitle=\bfseries,left=3mm,right=3mm,top=2mm,bottom=2mm}
+  title={#1},fonttitle=\bfseries,fontupper=\small,left=3mm,right=3mm,top=2mm,bottom=2mm,
+  before upper={\setlength{\parskip}{.4em}}}
 \bibliographystyle{plainnat}
 
 \begin{document}
@@ -42,23 +52,32 @@
   {\LARGE\bfseries\color{itescaRedDark}\itescadocumenttitle}\\[.3em]
   {\large\itescadocumentsubtitle}\\[.5em]
   Fundamentos de Gestión Administrativa · Curso GGFG02\\
-  Martin Jonathan de la Cruz\\[.4em]
-  {\small Preparación: 12 de septiembre de 2026 · Vencimiento indicado: 7 de septiembre de 2026, 23:59}
+  Martín Jonathan de la Cruz Muñoz\\[.4em]
+  {\small Actualización: 13 de septiembre de 2026 · Vencimiento: 7 de septiembre de 2026, 23:59}
 \end{center}
+{\small\textbf{Estado documental:} tres intervenciones preparadas, no publicadas. El foro está cerrado. Los botones abren adjuntos de texto; no copian automáticamente al portapapeles.}
 
 \section{Introducción}
 Dirigir un equipo diverso exige combinar resultados, aprendizaje y trato justo. La autoridad formal permite asignar tareas, pero no garantiza compromiso ni buenas decisiones. El problema consiste en elegir conductas de liderazgo acordes con la tarea, el riesgo y las capacidades de las personas, sin convertir la adaptación en arbitrariedad. La clasificación divulgativa de Conduce Tu Empresa distingue estilos como el democrático, transformacional y transaccional; conviene contrastarla con la literatura y no tratar sus etiquetas como categorías excluyentes \citep{conduceEstilosLiderazgo,openstaxContingencia2019}.
 
 \section{Dirigir con propósito, participación y adaptación}
+\subsection{Criterios para elegir y evaluar el liderazgo}
+El liderazgo transformacional orienta el cambio; la participación incorpora conocimientos del equipo, y los acuerdos transaccionales hacen explícitas las expectativas. No son soluciones intercambiables ni garantías automáticas: la conducta adecuada depende de la tarea, las capacidades y el riesgo. La teoría trayectoria--meta permite vincular estas condiciones con apoyo, orientación y consulta \citep{openstaxContingencia2019,openstaxTransformacional2019}. Las preguntas centrales son qué estilos combinar en mandos medios o altos, qué cualidades convertir en prácticas y qué modificar ante las brechas generacionales y las megatendencias. Las respuestas siguientes sostienen un criterio común: autonomía con recursos, responsabilidad y evaluación.
+
+\clearpage
 \subsection{Aportación inicial}
-\textattachfile[description={Aportación inicial en texto copiable},mimetype=text/plain]{ITESCA/maestria-en-gestion-administrativa/fundamentos-de-gestion-administrativa-mga/foro-participacion-Actividad-9.txt}{\textcolor{itescaRedDark}{\textbf{Abrir aportación en texto copiable}}}
 
 \begin{forobox}{Liderar con flexibilidad, sin renunciar a la responsabilidad}
+\hfill\foroCopyButton{ITESCA/maestria-en-gestion-administrativa/fundamentos-de-gestion-administrativa-mga/foro-participacion-Actividad-9.txt}\par
+\textbf{Asunto:} Liderar con flexibilidad, sin renunciar a la responsabilidad
+
 Hola, compañeras y compañeros. Considero que un liderazgo eficaz no consiste en imponer siempre el mismo estilo, sino en combinar propósito, participación y acompañamiento según la situación, manteniendo criterios éticos constantes.
 
 \textbf{1. En un puesto de nivel medio o alto, ¿qué estilo o estilos de liderazgo utilizaría y por qué?}
 
 Utilizaría principalmente un liderazgo \textbf{transformacional y democrático o participativo}, con adaptación a la tarea y a las capacidades del equipo. El primero permite comunicar un propósito compartido, estimular mejoras y desarrollar a las personas; el segundo incorpora el conocimiento de quienes realizan el trabajo antes de decidir. Participar no significa someter toda decisión a votación ni diluir la responsabilidad del directivo \citep{openstaxTransformacional2019,openstaxContingencia2019}.
+
+Esta combinación busca aprendizaje, no solo obediencia: ``el liderazgo contribuye a la generación de estrategias que permitan motivar al personal e incorporar nuevas formas de pensar y actuar'' (Jimenez-Lopez et al., 2020, p.~82). Por ello, valoraría la capacidad de proponer mejoras junto con el cumplimiento de metas.
 
 En un supuesto de digitalización del área administrativa, explicaría qué problema se busca resolver, consultaría a quienes conocen el proceso y delegaría decisiones operativas a quienes demuestren competencia. A una persona que aprende una tarea nueva le ofrecería instrucciones y acompañamiento, sin asumir su capacidad por la edad. Esto coincide con la teoría trayectoria--meta: aclarar objetivos, retirar obstáculos y ajustar la conducta directiva a las necesidades de la situación \citep{openstaxContingencia2019}.
 
@@ -90,22 +109,79 @@ Además, el Foro Económico Mundial identifica cambio tecnológico, transición 
 En el supuesto de digitalización, la gerencia asignaría recursos y límites; cada responsable de área acordaría metas y formación con su equipo. Compararía mensualmente errores, tiempos de atención y aprendizaje aplicado con una línea base. Si mejora la velocidad, pero aumentan errores o sobrecarga, corregiría el proceso antes de ampliarlo.
 
 En síntesis, dirigir exitosamente es desarrollar autonomía con responsabilidad. ¿Cómo equilibrarían ustedes la participación del equipo con una decisión urgente que no puede esperar al consenso?
-\end{forobox}
 
-\subsection{Dos réplicas modelo para adaptar}
-\textbf{No son respuestas publicadas ni acreditan interacción.} Antes de utilizarlas, seleccionar dos aportaciones reales, mencionar con fidelidad una idea de cada una y ajustar el argumento. No se atribuyen opiniones a compañeros inexistentes.
+Saludos,\par
+Martín Jonathan de la Cruz Muñoz.
 
-\begin{forobox}{Modelo 1 · Si una aportación defiende la participación}
-El liderazgo participativo puede mejorar la decisión cuando aprovecha la experiencia del equipo, aunque consultar no elimina la responsabilidad de quien dirige. Añadiría un criterio: ajustar el alcance de la consulta al riesgo, al tiempo disponible y al conocimiento de los participantes, como permite razonar la teoría trayectoria--meta \citep{openstaxContingencia2019}. En una urgencia propondría escuchar a las personas clave, decidir y explicar después los criterios. ¿Qué decisiones reservarías al responsable y cuáles delegarías para evitar que la participación retrase innecesariamente el trabajo?
-\end{forobox}
-
-\begin{forobox}{Modelo 2 · Si una aportación aborda generaciones o tecnología}
-La colaboración entre edades puede enriquecer el equipo, pero conviene evitar que las etiquetas generacionales sustituyan la evaluación individual. La formación personalizada y la colaboración intergeneracional recomendadas por Sánchez permiten plantear mentoría recíproca basada en conocimientos reales \citep{sanchezRaona2023}. Propondría parejas que intercambien experiencia de procesos y habilidades digitales, con una mejora concreta como resultado. ¿Cómo comprobarías que ambas personas aprenden y que el programa no refuerza estereotipos ni asigna siempre los mismos papeles?
+\textbf{Referencias}\par
+\begingroup\small
+\hangindent=1.27cm\hangafter=1 Jimenez-Lopez, A. F., Gómez Aguirre, D., Rendón Otálvaro, J., \& Peláez Arcila, S. P. (2020). Revisión del liderazgo, sus estilos y modelos de medición en la última década. \textit{Revista Humanismo y Sociedad, 8}(1), 81--98. \url{https://doi.org/10.22209/rhs.v8n1a06}\par
+\hangindent=1.27cm\hangafter=1 OpenStax. (2019a). 13.6 Situational (contingency) approaches to leadership. En \textit{Principles of management}. Rice University. \url{https://openstax.org/books/principles-management/pages/13-6-situational-contingency-approaches-to-leadership}\par
+\hangindent=1.27cm\hangafter=1 OpenStax. (2019b). 13.8 Transformational, visionary, and charismatic leadership. En \textit{Principles of management}. Rice University. \url{https://openstax.org/books/principles-management/pages/13-8-transformational-visionary-and-charismatic-leadership}\par
+\hangindent=1.27cm\hangafter=1 Sánchez, M. (2023, 16 de mayo). \textit{La brecha generacional: La clave para determinar el impacto de la nueva cultura corporativa}. Raona. \url{https://raona.com/la-brecha-generacional-la-clave-para-determinar-el-impacto-de-la-nueva-cultura-corporativa/}\par
+\hangindent=1.27cm\hangafter=1 World Economic Forum. (2025). \textit{The future of jobs report 2025}. \url{https://www.weforum.org/publications/the-future-of-jobs-report-2025/digest/}\par
+\endgroup
 \end{forobox}
 
 \clearpage
-\section{Conclusiones}
-El criterio de dirección más sólido combina propósito transformacional, participación y adaptación de las conductas de apoyo y supervisión. Su límite es ético: ni la urgencia justifica el trato arbitrario ni la flexibilidad permite abandonar la responsabilidad. Las diferencias entre personas y los cambios tecnológicos demandan aprendizaje, comunicación accesible y evaluación conjunta de resultados y bienestar. Mi postura es delegar con recursos, criterios y seguimiento, y ajustar la intervención según evidencia, no según estereotipos. Esta conclusión expresa una posición previa al intercambio; no una síntesis de conversaciones que aún no se han verificado.\footnote{Se utilizó inteligencia artificial como apoyo para organizar y redactar el borrador. Corresponde al estudiante revisar las fuentes, contrastar el video completo, asumir o modificar la postura y adaptar las réplicas antes de publicar.}
+\subsection{Retroalimentación sobre innovación y cumplimiento}
+Una \href{https://cursos3.e-itesca.edu.mx/mod/forum/discuss.php?d=757}{aportación consultada} propone combinar liderazgo transformacional y transaccional para impulsar innovación y asegurar orden, y destaca empatía, flexibilidad y aprendizaje continuo. La respuesta preparada contrasta esa combinación con el riesgo de premiar únicamente resultados de corto plazo. Se omite el nombre por privacidad académica; no se afirma que la respuesta haya sido publicada.
 
+\begin{forobox}{Innovar sin reducir el liderazgo al cumplimiento}
+\hfill\foroCopyButton{ITESCA/maestria-en-gestion-administrativa/fundamentos-de-gestion-administrativa-mga/foro-replica-1-Actividad-9.txt}\par
+\textbf{Asunto:} Innovar sin reducir el liderazgo al cumplimiento
+
+Hola, compañera:
+
+Tu propuesta de combinar liderazgo transformacional y transaccional relaciona dos necesidades importantes: innovar y sostener el orden operativo. Coincido con esa complementariedad, pero añadiría una condición: que los incentivos y las metas no contradigan el aprendizaje que se busca impulsar. OpenStax distingue entre el intercambio asociado al cumplimiento y la motivación mediante visión, desarrollo individual y cuestionamiento de supuestos \citep{openstaxTransformacional2019}.
+
+Por ejemplo, si durante una digitalización solo se premia el número de trámites procesados, el equipo podría evitar reportar errores o probar mejoras por temor a reducir su productividad inmediata. Propondría valorar simultáneamente calidad, tiempos y mejoras verificadas. Así, la empatía y la flexibilidad que destacas tendrían una expresión concreta: tiempo para aprender, apoyo ante dificultades y reglas transparentes de reconocimiento.
+
+La combinación no consiste únicamente en alternar estilos, sino en alinear el propósito con aquello que realmente se reconoce. ¿Qué indicador incorporarías para comprobar que el cumplimiento de metas no está frenando la innovación ni deteriorando el bienestar del equipo?
+
+Saludos,\par
+Martín Jonathan de la Cruz Muñoz.
+
+\textbf{Referencias}\par
+\begingroup\small
+\hangindent=1.27cm\hangafter=1 OpenStax. (2019b). 13.8 Transformational, visionary, and charismatic leadership. En \textit{Principles of management}. Rice University. \url{https://openstax.org/books/principles-management/pages/13-8-transformational-visionary-and-charismatic-leadership}\par
+\endgroup
+\end{forobox}
+
+\clearpage
+\subsection{Retroalimentación sobre escucha y adaptación}
+Otra \href{https://cursos3.e-itesca.edu.mx/mod/forum/discuss.php?d=727}{aportación consultada} vincula liderazgo transformador, iniciativa, escucha e inteligencia emocional, y cuestiona los modelos rígidos ante los cambios tecnológicos y generacionales. La respuesta preparada propone convertir esa escucha en formación individualizada y decisiones observables, sin identificar públicamente a la participante ni atribuirle una respuesta posterior.
+
+\begin{forobox}{Escuchar para adaptar sin encasillar por edad}
+\hfill\foroCopyButton{ITESCA/maestria-en-gestion-administrativa/fundamentos-de-gestion-administrativa-mga/foro-replica-2-Actividad-9.txt}\par
+\textbf{Asunto:} Escuchar para adaptar sin encasillar por edad
+
+Hola, compañera:
+
+Me parece relevante que relaciones sentirse escuchado y respaldado con el ambiente laboral, y que propongas iniciativa del equipo frente a una dirección rígida. Complementaría tu planteamiento sobre adaptación tecnológica y generacional con un diagnóstico individual: la edad no permite deducir por sí sola quién domina una herramienta ni qué apoyo necesita.
+
+Sánchez recomienda formación personalizada, comunicación abierta y colaboración intergeneracional \citep{sanchezRaona2023}. Para llevar esas ideas a la práctica, propondría conversaciones breves sobre dificultades, parejas de mentoría según conocimientos comprobados y una prueba de mejora del proceso. Cualquiera podría enseñar o aprender, sin asignar automáticamente la tecnología a las personas jóvenes y la experiencia a las mayores.
+
+Además, escuchar debe tener consecuencias visibles: explicar qué propuestas se adoptan, cuáles no y por qué, y revisar si el apoyo recibido mejora la autonomía. ¿Cómo comprobarías que la participación del equipo modifica realmente las decisiones y no se queda únicamente en una invitación a opinar?
+
+Saludos,\par
+Martín Jonathan de la Cruz Muñoz.
+
+\textbf{Referencias}\par
+\begingroup\small
+\hangindent=1.27cm\hangafter=1 Sánchez, M. (2023, 16 de mayo). \textit{La brecha generacional: La clave para determinar el impacto de la nueva cultura corporativa}. Raona. \url{https://raona.com/la-brecha-generacional-la-clave-para-determinar-el-impacto-de-la-nueva-cultura-corporativa/}\par
+\endgroup
+\end{forobox}
+
+\subsection{Lectura conjunta de las posturas}
+Las dos aportaciones permiten precisar la postura inicial: combinar estilos exige coherencia entre incentivos y aprendizaje, y escuchar exige incorporar información a las decisiones. La revisión de Jimenez-Lopez y colaboradores aborda distintos estilos y formas de medición \citep{jimenezForo2020}; su presencia en la literatura no demuestra que uno sea universalmente superior. En una organización concreta, el criterio debe contrastarse con resultados, condiciones de trabajo y capacidad de adaptación, no con una etiqueta de liderazgo.
+
+\clearpage
+\section{Conclusiones}
+El criterio de dirección más sólido combina propósito transformacional, participación y adaptación de las conductas de apoyo y supervisión. Su límite es ético: ni la urgencia justifica el trato arbitrario ni la flexibilidad permite abandonar la responsabilidad. Las diferencias entre personas y los cambios tecnológicos demandan aprendizaje, comunicación accesible y evaluación conjunta de resultados y bienestar.
+
+Mi postura es delegar con recursos, criterios y seguimiento, y ajustar la intervención según evidencia, no según estereotipos. La lectura de las aportaciones permitió precisar dos condiciones: reconocer la innovación sin sacrificar calidad y convertir la escucha en cambios observables. La consecuencia práctica es evaluar simultáneamente cumplimiento, aprendizaje y trato justo. Así se evita que los incentivos reduzcan el propósito a una cifra o que la participación sea solamente simbólica.\footnote{Se utilizó inteligencia artificial como apoyo para organizar, redactar y revisar el reporte. Se contrastaron una cita textual con una fuente académica local y las réplicas con dos aportaciones reales. La revisión completa del video sigue sin acreditarse. Las tres intervenciones son textos preparados, no mensajes publicados; corresponde al estudiante revisar y asumir su contenido antes de una entrega autorizada.}
+
+\clearpage
 \bibliography{fundamentos-de-gestion-administrativa}
 \end{document}

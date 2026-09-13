@@ -1,0 +1,120 @@
+% Plantilla base para reportes de foro UAS con productos ForoBox.
+\documentclass[11pt,letterpaper,oneside]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[scaled=.96]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{attachfile}
+\usepackage{enumitem}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage[authoryear,round]{natbib}
+
+\setstretch{1.5}
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0.25em}
+\definecolor{uasBlueDark}{HTML}{0B294C}
+\definecolor{uasBlue}{HTML}{123B6D}
+\definecolor{uasBlueLight}{HTML}{E9F0F8}
+\definecolor{uasGold}{HTML}{C79A2B}
+\definecolor{uasPaper}{HTML}{F7F8FA}
+
+\attachfilesetup{color={0.071 0.231 0.427},print=false}
+\newcommand{\foroCopyButton}[1]{%
+  \textattachfile[appearance={},description={Participación del foro (texto copiable)},mimetype=text/plain]{#1}{%
+    \colorbox{uasBlueDark}{\small\textcolor{white}{\,Copiar participación\,}}%
+  }%
+}
+
+\newtcolorbox{forobox}[1][]{%
+  enhanced,breakable,
+  colback=uasPaper,colframe=uasBlueDark,
+  boxrule=.6pt,arc=1mm,
+  left=3mm,right=3mm,top=2mm,bottom=2mm,
+  fonttitle=\bfseries\color{white},coltitle=white,colbacktitle=uasBlueDark,
+  attach boxed title to top left={xshift=3mm,yshift=-2mm},
+  boxed title style={colframe=uasBlueDark,arc=.6mm},
+  #1
+}
+
+\newcommand{\UASDocente}{Nadia Aileen Valdez Acosta}
+\newcommand{\UASEstudiante}{Martín Jonathan de la Cruz Muñoz}
+\newcommand{\UASGrupo}{GRUPO 103 LCP}
+\newcommand{\UASCurso}{2026_I_Investigación aplicada a la contaduría_LCP}
+\newcommand{\UASTitulo}{Reporte de foro}
+\newcommand{\UASSubtitulo}{Subproductos — actividad pendiente}
+\newcommand{\UASFecha}{13 de septiembre de 2026}
+
+\begin{document}
+\begin{center}
+  {\bfseries\Large Universidad Autónoma de Sinaloa}\par
+  {\bfseries Facultad de Contaduría y Administración}\par
+  {\bfseries Licenciatura en Contaduría Pública — Modalidad Virtual}\par
+  \vspace{.8cm}
+  {\Large\bfseries \UASTitulo}\par
+  {\large\UASSubtitulo}\par
+  \vspace{.8cm}
+  \UASCurso\par
+  \UASEstudiante\par
+  \UASDocente\par
+  \UASGrupo\par
+  \UASFecha
+\end{center}
+
+\section{Introducción}
+\textbf{Completar aquí} una síntesis del problema del foro, la postura inicial y la relación con las lecturas de la semana.
+
+\section{Participación principal}
+\begin{forobox}[title={Participación desarrollada}]
+\hfill\foroCopyButton{foro-principal.txt}\par
+\textbf{Asunto:} \textit{Completar título del foro}
+
+\textbf{1. Pregunta guía.} Completar respuesta breve y argumentada.
+
+\textbf{2. Desarrollo.} Completar con análisis, evidencia y cita a las lecturas asignadas.
+
+\textbf{3. Cierre.} Completar con postura final y pregunta al grupo.
+
+\textbf{Referencias}
+\begin{itemize}[leftmargin=1.3cm]
+  \item Completar referencia 1.
+  \item Completar referencia 2.
+\end{itemize}
+\end{forobox}
+
+\section{Retroalimentación 1}
+\begin{forobox}[title={Respuesta a compañero 1}]
+\hfill\foroCopyButton{foro-respuesta-1.txt}\par
+\textbf{Asunto:} Respuesta a la aportación de \textit{compañero/a 1}
+\textbf{Comentario.} Completar con acuerdo, matiz o contraste.
+\textbf{Pregunta.} Completar pregunta para continuar el diálogo.
+\textbf{Referencias}
+\begin{itemize}[leftmargin=1.3cm]
+  \item Completar referencia usada.
+\end{itemize}
+\end{forobox}
+
+\section{Retroalimentación 2}
+\begin{forobox}[title={Respuesta a compañero 2}]
+\hfill\foroCopyButton{foro-respuesta-2.txt}\par
+\textbf{Asunto:} Respuesta a la aportación de \textit{compañero/a 2}
+\textbf{Comentario.} Completar con un aporte distinto al de la primera retroalimentación.
+\textbf{Pregunta.} Completar pregunta de seguimiento.
+\textbf{Referencias}
+\begin{itemize}[leftmargin=1.3cm]
+  \item Completar referencia usada.
+\end{itemize}
+\end{forobox}
+
+\section{Conclusiones}
+Completar con síntesis del aprendizaje y una nota sobre lo que se publicaría en Moodle.
+
+\bibliographystyle{plainnat}
+\bibliography{investigacion-aplicada-a-la-contaduria}
+\end{document}

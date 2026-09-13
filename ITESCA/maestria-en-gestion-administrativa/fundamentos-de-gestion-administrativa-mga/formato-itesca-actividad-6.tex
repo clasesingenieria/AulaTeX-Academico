@@ -1,0 +1,66 @@
+% Adaptación local del núcleo AulaTeX y de la maestra ITESCA.
+% No modifica template.tex, src/config.tex ni las otras actividades.
+\usepackage{fontspec}
+\newcommand{\configurarITESCAseis}{%
+  \def\stylecitereferences{custom}% biblatex-apa se carga después del núcleo.
+  \def\fontdocument{custom}% fontspec gestiona Arial y símbolos Unicode.
+  \def\documentfontsize{12}
+  \def\documentparindent{36}
+  \def\pagemarginleft{2.54}\def\pagemarginright{2.54}
+  \def\pagemargintop{3}\def\pagemarginbottom{2.7}
+  \def\firstpagemargintop{3.8}
+  \def\sectionfontsize{\normalsize}\def\ssectionfontsize{\normalsize}
+  \def\sssectionfontsize{\normalsize}
+  \def\sectionspacingtop{12}\def\sectionspacingbottom{6}
+  \def\ssectionspacingtop{8}\def\ssectionspacingbottom{4}
+  \def\indexdepth{2}\def\indexstyle{}
+  \def\hfwidthwrap{true}\def\hfwidthtitle{0.44}\def\hfwidthcourse{0.52}
+}
+\AddToHook{file/src/config.tex/after}[itesca-actividad-seis]{\configurarITESCAseis}
+\AddToHook{file/config.tex/after}[itesca-actividad-seis]{\configurarITESCAseis}
+\input{template}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=apa,natbib=true,sortcites=true]{biblatex}
+\DeclareLanguageMapping{spanish}{spanish-apa}
+\addbibresource{fundamentos-de-gestion-administrativa.bib}
+\addbibresource{bibliografia-itesca-mga.bib}
+\usepackage{enumitem,tabularx,tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc}
+\setlist[enumerate]{leftmargin=*,itemsep=4pt,parsep=0pt,topsep=4pt}
+\setlist[itemize]{leftmargin=*,itemsep=3pt,parsep=0pt,topsep=4pt}
+\setlength{\emergencystretch}{2em}
+\setlength{\bibhang}{1.27cm}
+\setlength{\bibitemsep}{8pt}
+\newcolumntype{Z}{>{\raggedright\arraybackslash}X}
+\definecolor{itescaRedDark}{HTML}{8F1117}
+\definecolor{itescaRed}{HTML}{D70F18}
+\definecolor{itescaCharcoal}{HTML}{141414}
+\definecolor{itescaSilver}{HTML}{D9D9D9}
+\definecolor{itescaPaper}{HTML}{F7F7F7}
+\def\portraittitlecolor{itescaRedDark}
+\hypersetup{pdftitle={\documenttitle},pdfsubject={\documentsubject},
+  pdfauthor={\documentauthor},hypertexnames=false,
+  colorlinks=true,linkcolor=itescaRedDark,citecolor=itescaRedDark,urlcolor=itescaRedDark}
+
+% Marca de agua y franja institucional heredadas de la maestra ITESCA.
+\newcommand{\insertcoverwatermark}{%
+  \AddToShipoutPictureBG*{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[opacity=0.10,inner sep=0pt,yshift=-0.1cm] at (current page.center)
+        {\includegraphics[width=0.58\paperwidth]{\itescaasset}};
+    \end{tikzpicture}}}
+\newcommand{\insertcoverinstitutionalfooter}{%
+  \AddToShipoutPictureFG*{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \fill[itescaCharcoal] (current page.south west) rectangle ([yshift=1.35cm]current page.south east);
+      \fill[itescaRed] ([yshift=1.35cm]current page.south west) rectangle ([yshift=1.47cm]current page.south east);
+      \node[anchor=south west] at ([xshift=0.95cm,yshift=0.16cm]current page.south west)
+        {\includegraphics[height=0.88cm]{\itescaasset}};
+      \node[anchor=south east,text=white,align=right,font=\sffamily\bfseries\small]
+        at ([xshift=-0.95cm,yshift=0.28cm]current page.south east)
+        {Instituto Tecnológico Superior de Cajeme\\
+         \textcolor{itescaSilver}{Cajeme, Sonora · itesca.edu.mx}};
+    \end{tikzpicture}}}

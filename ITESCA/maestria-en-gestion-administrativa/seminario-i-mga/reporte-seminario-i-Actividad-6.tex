@@ -1,0 +1,138 @@
+% Versión LaTeX complementaria. La consigna de Moodle exige el DOCX conservado en entregas/.
+% Compilar desde la raíz con scripts/latexmk-build.sh.
+\providecommand{\itescastudentname}{Martín Jonathan de la Cruz Muñoz}
+\providecommand{\itescafaculty}{Maestría en Gestión Administrativa}
+\providecommand{\itescacoursename}{Seminario I}
+\providecommand{\itescacoursecode}{MGA-SEMINARIO-I}
+\providecommand{\itescadepartment}{Posgrado e Investigación}
+\providecommand{\itescateachingfigure}{Dra. Carla Olimpya Zapuche Moreno}
+\providecommand{\itescaprogramperiod}{Agosto--noviembre de 2026}
+\providecommand{\itescamodality}{En línea}
+\providecommand{\itescalocation}{Cajeme, Sonora}
+\providecommand{\itescaasset}{ITESCA/assets-itesca/itesca-monograma.png}
+\providecommand{\itescaofficialasset}{ITESCA/assets-itesca/web/logo-itesca-contorno.png}
+\providecommand{\itescasecondaryasset}{ITESCA/assets-itesca/itesca-monograma.png}
+
+\def\itescadocumenttitle {Aplicación de formato APA e índice automatizado}
+\def\itescadocumentsubtitle {Actividad 6}
+\def\itescadocumentsubject {Actividad 6. Estructura de un trabajo de investigación}
+\def\itescaactivityname {Actividad 6. Formato institucional}
+\def\itescasessionname {Unidad 2}
+\def\itescablockname {Seminario I}
+\def\itescamainproduct {Práctica de formato, tablas, figuras y referencias}
+
+\documentclass[11pt,spanish,letterpaper,oneside]{article}
+\def\documenttitle {\itescadocumenttitle}
+\def\documentsubtitle {\itescadocumentsubtitle}
+\def\documentsubject {\itescadocumentsubject}
+\def\documentauthor {\itescastudentname}
+\def\coursename {\itescacoursename}
+\def\coursecode {\itescacoursecode}
+\def\universityname {Instituto Tecnológico Superior de Cajeme}
+\def\universityfaculty {\itescafaculty}
+\def\universitydepartment {\itescadepartment}
+\def\universitydepartmentimage {\itescaofficialasset}
+\def\universitydepartmentimagecfg {width=5.2cm}
+\def\universitylocation {\itescalocation}
+
+\def\authortable {%
+  \begin{tabular}{@{}ll@{}}
+    \textbf{Alumno:} & \itescastudentname \\
+    Programa: & \itescafaculty \\
+    Periodo: & \itescaprogramperiod \\
+    Asignatura: & \itescacoursename \\
+    Docente: & \itescateachingfigure \\
+    Directora de tesis: & \itescateachingfigure \\
+    & \textit{Designación solo para este ejemplo académico} \\
+    Modalidad: & \itescamodality \\
+    Fecha de elaboración: & 13 de septiembre de 2026 \\
+    Lugar: & \universitylocation
+  \end{tabular}%
+}
+
+\input{template}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+% Ajustes locales: no se modifica la plantilla compartida ni otras actividades.
+\def\documenttitlehf {APA e índice automatizado}
+\def\pagemarginleft {2.54}
+\def\pagemarginright {2.54}
+\def\pagemargintop {2.54}
+\def\pagemarginbottom {2.54}
+\def\indexdepth {3}
+\def\predocpageromannumber {false}
+\setlength{\emergencystretch}{2em}
+\newcolumntype{Z}{>{\RaggedRight\arraybackslash}X}
+\newenvironment{apareferences}{%
+  \begin{list}{}{\setlength{\leftmargin}{1.27cm}%
+    \setlength{\itemindent}{-1.27cm}%
+    \setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}}%
+}{\end{list}}
+\newcommand{\apanota}[1]{\par\medskip\noindent{\small\RaggedRight #1\par}}
+
+\definecolor{itescaRedDark}{HTML}{8F1117}
+\definecolor{itescaRed}{HTML}{D70F18}
+\definecolor{itescaCharcoal}{HTML}{141414}
+\definecolor{itescaSilver}{HTML}{D9D9D9}
+\def\portraittitlecolor {itescaRedDark}
+\newcommand{\insertcoverwatermark}{%
+  \AddToShipoutPictureBG*{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[opacity=0.13,inner sep=0pt,yshift=-0.10cm] at (current page.center)
+        {\includegraphics[width=0.58\paperwidth]{\itescaasset}};
+    \end{tikzpicture}%
+  }%
+}
+\newcommand{\insertcoverinstitutionalfooter}{%
+  \AddToShipoutPictureFG*{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \fill[itescaCharcoal] (current page.south west) rectangle ([yshift=1.35cm]current page.south east);
+      \fill[itescaRed] ([yshift=1.35cm]current page.south west) rectangle ([yshift=1.47cm]current page.south east);
+      \node[anchor=south west] at ([xshift=0.95cm,yshift=0.16cm]current page.south west)
+        {\includegraphics[height=0.88cm]{\itescasecondaryasset}};
+      \node[anchor=south east,text=white,align=right,font=\sffamily\bfseries\small]
+        at ([xshift=-0.95cm,yshift=0.28cm]current page.south east)
+        {Instituto Tecnológico Superior de Cajeme\\\textcolor{itescaSilver}{\itescalocation\ \textperiodcentered\ itesca.edu.mx}};
+    \end{tikzpicture}%
+  }%
+}
+
+\begin{document}
+\insertcoverwatermark
+\insertcoverinstitutionalfooter
+\templatePortrait
+\templatePagecfg
+
+\begin{abstractd}
+\textbf{Objetivo:} Aplicar los criterios de APA 7 a la organización de una guía de trabajo de titulación, integrando niveles de títulos, índice automatizado, dos tablas y dos figuras con fuentes identificables.
+
+\textbf{Producto:} Versión LaTeX de la Actividad 6 con la plantilla institucional ITESCA utilizada en las otras actividades de Seminario I. Conserva el material, las adaptaciones y las referencias del documento Word preparado para el curso.
+
+\textbf{Alcance:} El índice de esta versión se genera con LaTeX. La consigna del aula exige un archivo Word con índice automatizado en Word; el DOCX original se conserva por separado y no se sustituye por este PDF.
+\end{abstractd}
+
+\setcounter{tocdepth}{3}
+\templateIndex
+\templateFinalcfg
+\fontsize{11}{13.2}\selectfont
+\doublespacing
+\RaggedRight
+\setlength{\RaggedRightParindent}{1.27cm}
+\setlength{\parindent}{1.27cm}
+\setlength{\parskip}{0pt}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\captionsetup{font=normalsize,labelfont=bf,textfont=it,labelsep=newline,
+  justification=raggedright,singlelinecheck=false,margin=0pt}
+\floatsetup[figure]{capposition=top}
+\hypersetup{hidelinks}
+
+\input{tarea6/contenido-actividad-6}
+\end{document}

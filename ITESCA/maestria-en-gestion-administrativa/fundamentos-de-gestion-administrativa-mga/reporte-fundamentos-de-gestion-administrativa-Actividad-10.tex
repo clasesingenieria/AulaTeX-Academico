@@ -1,39 +1,394 @@
-% Unidad V — Proyecto de intervención (25 %)
-\newcommand{\actividadnumero}{10}
-\newcommand{\unidadnumero}{V}
-\newcommand{\actividadtitulo}{Proyecto de intervención en diversidad organizacional}
-\newcommand{\actividadproducto}{Proyecto de intervención}
-\newcommand{\actividadponderacion}{25\%}
-\newcommand{\actividadcompetencia}{Identificar la implicación de la gestión de la diversidad en los procesos de desarrollo organizacional.}
-\newcommand{\actividadproposito}{Diseñar una intervención viable, ética y evaluable para mejorar la gestión de la diversidad en una organización.}
-\newcommand{\actividadcontenido}{%
-  \subsection{Caracterización de la organización}
-  \pendiente{Describir contexto, población, estructura, cultura, actores y alcance del proyecto sin exponer datos sensibles.}
+% !TeX program = xelatex
+% Moodle 5.1, Unidad V, 25 %. Numeración local: Actividad 10.
+% Propuesta documental preventiva; no representa intervención ejecutada.
+% Compilación independiente: bash compilar-actividad-10.sh
+\RequirePackage{fix-cm}
+\documentclass[12pt,letterpaper,oneside]{article}
+\usepackage[margin=2.54cm]{geometry}
+\usepackage{lmodern}
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\usepackage[spanish,es-tabla,es-nodecimaldot,es-lcroman]{babel}
+\usepackage{csquotes,graphicx,xcolor,tikz,ragged2e}
+\usepackage{booktabs,array,longtable,tabularx,enumitem,amsmath,titlesec}
+\usepackage[backend=biber,style=apa,sorting=nyt,doi=true,url=true,isbn=false]{biblatex}
+\DeclareLanguageMapping{spanish}{spanish-apa}
+\addbibresource{referencias-actividad-10-intervencion.bib}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Programa PUENTES: intervención preventiva en gestión de la diversidad en ITESCA},
+  pdfauthor={Martín Jonathan de la Cruz Muñoz},
+  pdfsubject={Fundamentos de Gestión Administrativa. Unidad V. Actividad 5.1}}
+\renewcommand{\normalsize}{\fontsize{12bp}{18bp}\selectfont}
+\AtBeginDocument{\normalsize\justifying}
+\titleformat{\section}{\normalfont\normalsize\bfseries}{\thesection.}{.5em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection.}{.5em}{}
+\titlespacing*{\section}{0pt}{12bp}{6bp}
+\titlespacing*{\subsection}{0pt}{9bp}{3bp}
+\setlength{\parindent}{1.27cm}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\setlength{\bibhang}{1.27cm}
+\setlength{\bibitemsep}{6bp}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTpre}{8pt}
+\setlength{\LTpost}{8pt}
+\setlist{leftmargin=*,itemsep=3pt,parsep=0pt}
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\AtBeginBibliography{\normalsize\raggedright}
+\clubpenalty=10000
+\widowpenalty=10000
+\raggedbottom
 
-  \subsection{Diagnóstico de diversidad}
-  \pendiente{Identificar brechas relacionadas con diversidad cultural, equidad de género, discriminación, multiculturalidad o interculturalidad y respaldarlas con evidencia.}
+\begin{document}
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+  \node[anchor=north west,inner sep=0pt] at (current page.north west)
+    {\includegraphics[width=\paperwidth,height=\paperheight]{assets-fundamentos-de-gestion-administrativa/actividad-10/portada-oficial.png}};
+  \node[anchor=north west,fill=white,fill opacity=.96,text opacity=1,
+    inner sep=12bp,text width=16.2cm,align=left]
+    at ([xshift=2cm,yshift=-10.4cm]current page.north west) {
+    \textbf{Maestría en Gestión Administrativa}\\[5bp]
+    \textbf{Asignatura:} Fundamentos de Gestión Administrativa\\
+    \textbf{Curso:} GGFG02 · Unidad V\\
+    \textbf{Estudiante:} Martín Jonathan de la Cruz Muñoz\\
+    \textbf{Docente:} Celia Velázquez Reyna\\
+    \textbf{Fecha:} 13 de septiembre de 2026\\
+    \textbf{Lugar:} Cajeme, Sonora
+  };
+  \node[anchor=north west,text=white,text width=10.6cm,align=left,inner sep=0pt]
+    at ([xshift=9.3cm,yshift=-19.5cm]current page.north west) {
+    \textbf{Programa PUENTES}\\[5bp]
+    Intervención preventiva en gestión\\de la diversidad en ITESCA\\[8bp]
+    5.1 Proyecto de Intervención · 25\%\\
+    Propuesta documental · Entrega individual
+  };
+\end{tikzpicture}
+\null
+\end{titlepage}
 
-  \subsection{Objetivos de intervención}
-  \pendiente{Formular un objetivo general y objetivos específicos medibles, alcanzables, pertinentes y temporales.}
+\pagenumbering{roman}
+\hypersetup{pageanchor=true}
+\section*{Alcance del documento}
+\addcontentsline{toc}{section}{Alcance del documento}
+Este trabajo desarrolla una propuesta preventiva sobre una organización real, el Instituto Tecnológico Superior de Cajeme (ITESCA), mediante fuentes públicas. La selección del caso es una decisión de diseño de este documento; no presupone autorización institucional ni un acuerdo previo del equipo. El diagnóstico es documental y prospectivo: no se realizaron encuestas, entrevistas ni auditorías internas. Las metas, valoraciones de prioridad, calendario y costos son propuestas para validación, no resultados observados.
 
-  \subsection{Plan de intervención}
-  \begin{center}
-  \begin{longtable}{p{0.19\textwidth}p{0.2\textwidth}p{0.14\textwidth}p{0.14\textwidth}p{0.18\textwidth}}
-    \toprule
-    \textbf{Acción} & \textbf{Responsable} & \textbf{Plazo} & \textbf{Recurso} & \textbf{Indicador} \\
-    \midrule
-    \endhead
-    \campo{Acción 1} & \campo{Responsable} & \campo{Fecha} & \campo{Recurso} & \campo{Indicador/meta} \\
-    \campo{Acción 2} & \campo{Responsable} & \campo{Fecha} & \campo{Recurso} & \campo{Indicador/meta} \\
-    \campo{Acción 3} & \campo{Responsable} & \campo{Fecha} & \campo{Recurso} & \campo{Indicador/meta} \\
-    \bottomrule
-  \end{longtable}
-  \end{center}
+La actividad se elabora en equipo y se entrega individualmente. Esta versión individual deberá cotejarse con los acuerdos del equipo antes de su envío; no se atribuyen aportaciones a integrantes no identificados. La consigna autenticada solicita PDF con portada oficial y señala el cierre del 14 de septiembre de 2026 a las 23:59. El cronograma de implementación del programa es posterior a su autorización y no se confunde con esa fecha de entrega.
 
-  \subsection{Gestión de riesgos y ética}
-  \pendiente{Valorar resistencias, sesgos, confidencialidad, participación, no discriminación y medidas de mitigación.}
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
 
-  \subsection{Evaluación y sostenibilidad}
-  \pendiente{Definir línea base, metas, instrumentos, periodicidad, responsables y mecanismo de mejora continua.}
-}
-\input{reporte-fundamentos-de-gestion-administrativa-plantilla-actividad}
+\section{Introducción}
+La diversidad organizacional implica diferencias de experiencias, lenguas, edades, condiciones de acceso, responsabilidades y trayectorias que influyen en la participación laboral y en la relación con las personas usuarias. Gestionarla no equivale a clasificar a la plantilla por atributos personales ni a realizar una actividad aislada de sensibilización. Supone examinar si los procesos permiten comprender la información, acceder a oportunidades, solicitar apoyos y contribuir a las decisiones bajo criterios transparentes. La revisión de \textcite{fga10sanchez} vincula diversidad e innovación desde una perspectiva teórica; ese vínculo exige prácticas inclusivas y no permite prometer automáticamente una mejora de desempeño en cualquier organización.
+
+En una institución de educación superior, la coherencia entre lo que se enseña y la forma cotidiana de atender y colaborar tiene especial importancia. Un enfoque intercultural no se agota en reconocer que las personas son diferentes: requiere evitar que una instrucción poco clara, un único formato de comunicación o una interpretación estereotipada de las necesidades se conviertan en barreras. Estas situaciones se formulan aquí como riesgos posibles que deben examinarse, no como hechos acreditados en ITESCA. La gestión de recursos humanos y el diseño de servicios educativos se relacionan porque el personal necesita condiciones de participación para ofrecer atención respetuosa y comprensible.
+
+ITESCA resulta pertinente para el estudio por dos evidencias: su misión incorpora expresamente una perspectiva humanista e intercultural y su portal identifica un Sistema de Igualdad Laboral y No Discriminación (SILNOD). Además, las publicaciones institucionales de septiembre de 2026 describen acciones sobre cultura de paz y derechos de las mujeres \parencite{fga10filosofia,fga10igualdad,fga10paz,fga10derechos}. Por ello, no sería correcto iniciar el proyecto suponiendo que la organización carece de iniciativas de inclusión. La propuesta busca articularse con esas capacidades y ofrecer un mecanismo piloto de verificación de sus resultados en procesos concretos.
+
+Se plantea el programa \textbf{PUENTES: participación, comunicación accesible y seguimiento inclusivo}, dirigido inicialmente al personal que interviene en la atención académica y administrativa de posgrado. La unidad piloto es una delimitación propuesta, no una nueva dependencia atribuida a la estructura oficial. El programa prioriza el acceso comprensible a la información y la trazabilidad de las solicitudes de apoyo; contempla también cómo esos procesos afectan a estudiantes y a organizaciones colaboradoras. No reemplaza los canales institucionales de integridad ni pretende resolver todos los factores de desigualdad mediante una capacitación.
+
+El propósito del documento es justificar una intervención viable, medible y éticamente responsable. Para ello se analizan misión y visión, se distinguen evidencias de necesidades por validar, se aplica una matriz de decisión y se especifican objetivos, actividades, recursos e indicadores. La planeación propone ocho semanas de implementación y revisiones posteriores. El levantamiento de la línea base es una actividad inicial indispensable: no se asigna valor cero a un dato desconocido ni se presentan porcentajes simulados como resultados. Esta delimitación permite formular una propuesta completa sin exceder lo que las fuentes realmente permiten sostener.
+
+\section{Datos generales de la organización}
+\begin{longtable}{@{}L{.25\textwidth}L{.70\textwidth}@{}}
+\toprule \textbf{Elemento} & \textbf{Caracterización documentada o alcance propuesto} \\
+\midrule\endhead
+Organización & Instituto Tecnológico Superior de Cajeme (ITESCA), institución de educación superior ubicada en Ciudad Obregón, Sonora, México. \\
+Antecedentes & La historia institucional registra el decreto de creación en 1996 y el inicio de operaciones en 1997. Los datos de matrícula de esa cronología son históricos, no cifras actuales del piloto. \\
+Ubicación & Carretera Internacional a Nogales km 2, s/n, C. P. 85024, Ciudad Obregón, Sonora. \\
+Servicios & Formación de educación superior, investigación y vinculación. El proyecto se delimita a procesos de atención y colaboración relacionados con posgrado, no al conjunto de sedes. \\
+Capacidad existente & SILNOD con coordinación identificada en el Departamento de Calidad; portal de integridad con orientación y mecanismo de denuncia. Se reconoce su existencia, no se audita su eficacia. \\
+Población directa & Personal académico y administrativo que participe en los procesos seleccionados. El número real se determinará mediante un registro funcional autorizado en la semana 1. \\
+Población indirecta & Estudiantes y personas de organizaciones colaboradoras que reciban información o atención en esos procesos. No se presume su composición cultural ni demográfica. \\
+Capacidad presupuestada & Hasta 24 participantes directos como escenario de planeación, no como número real de empleados. Si el universo excede esa capacidad, se ampliará el presupuesto o se seleccionará una unidad funcional completa con criterio transparente. \\
+\bottomrule
+\end{longtable}
+Los antecedentes y la ubicación se recuperan de \textcite{fga10historia}; las capacidades de igualdad e integridad, de sus portales institucionales \parencite{fga10igualdad,fga10integridad}. No se reproducen nombres de empleados ni expedientes. La gobernanza operativa propuesta comprenderá patrocinio directivo, coordinación del piloto, enlace con SILNOD, responsables de proceso y representación voluntaria del personal. Estas funciones deberán asignarse formalmente antes de iniciar; no se presentan como un organigrama aprobado.
+
+\section{Análisis de los propósitos organizacionales}
+\subsection{Misión: razón de ser y resultados esperados}
+La misión publicada señala: \enquote{Formar profesionistas de excelencia, a través del estudio de la ciencia y la tecnología, con enfoque humanista e intercultural, líderes con visión global, personas íntegras, comprometidas con la sociedad y el desarrollo de México} \parencite[sección Misión]{fga10filosofia}.
+
+Sus entregables son la formación profesional, la capacidad científico-tecnológica y el ejercicio íntegro y socialmente comprometido de la profesión. La perspectiva humanista e intercultural introduce un criterio para examinar \emph{cómo} se obtienen esos resultados: la atención y la colaboración deben reconocer necesidades diferentes sin asignar capacidades por estereotipo. En el piloto esto se traduce en información comprensible, oportunidades de participación y ajustes de acceso. Son criterios derivados para el programa, no una modificación de la misión ni una afirmación de incumplimiento institucional.
+
+\subsection{Visión: dirección del desarrollo institucional}
+La visión establece: \enquote{Ser una institución de educación superior de vanguardia, reconocida por el alto desempeño de sus egresados y egresadas, su sentido ético, capacidad de innovar y de transformar los problemas complejos en oportunidades de desarrollo} \parencite[sección Visión]{fga10filosofia}.
+
+La vanguardia exige capacidad de aprender de los procesos, no únicamente digitalizarlos. El sentido ético impide sacrificar la equidad para simplificar la operación; la innovación demanda incorporar observaciones de quienes experimentan barreras. PUENTES contribuye de forma indirecta: mejora la comunicación y la respuesta organizacional que sostienen la experiencia educativa. No se atribuye al piloto un efecto causal sobre el desempeño de egresados, resultado de largo plazo que depende de múltiples factores.
+
+\begin{longtable}{@{}L{.23\textwidth}L{.35\textwidth}L{.35\textwidth}@{}}
+\toprule \textbf{Compromiso} & \textbf{Resultado organizacional deseable} & \textbf{Traducción al piloto} \\
+\midrule\endhead
+Humanismo e interculturalidad & Trato digno y acceso sin barreras injustificadas. & Revisar lenguaje, formatos y alternativas de comunicación; consultar necesidades sin etiquetar personas. \\
+Integridad y sentido ético & Procedimientos comprensibles y decisiones explicables. & Publicar criterios y rutas de apoyo; dar seguimiento sin exponer datos personales. \\
+Innovación y vanguardia & Aprendizaje a partir de problemas reales. & Probar mejoras, contrastar evidencias y conservar las que funcionen. \\
+Compromiso social & Servicios pertinentes para distintos usuarios y colaboradores. & Validar comunicaciones con personas usuarias y atender retroalimentación autorizada. \\
+\bottomrule
+\end{longtable}
+
+\section{Marco referencial y normativo}
+La diversidad describe diferencias presentes en la organización; la inclusión se refiere a las condiciones para participar y ser tratado con respeto. La presencia de diversidad no asegura que las voces sean escuchadas ni que las reglas sean accesibles. \textcite{fga10sanchez} fundamentan su dimensión estratégica, mientras que \textcite{fga10accion} proponen articular gobernanza, diagnóstico, plan de acción y seguimiento. Esta secuencia justifica evaluar procesos antes de elegir una capacitación como respuesta universal.
+
+El enfoque de \textcite{fga10red} relaciona el plan de diversidad con compromiso directivo, misión, visión, diagnóstico y evaluación. Se utiliza como antecedente metodológico, reconociendo su fecha de 2011 y su contexto español: sus referencias jurídicas no se trasladan a México. \textcite{fga10peine} aportan un marco universitario de diseño e intervención organizacional. La propuesta adopta de estos materiales la coherencia entre problema, objetivos y acciones; no atribuye a los autores las metas o los costos específicos aquí calculados. La síntesis de fases de \textcite{fga10terapify}, recurso divulgativo de la consigna, coincide en la necesidad de planificar y evaluar, pero no reemplaza las fuentes académicas.
+
+La detección de necesidades sigue el principio de discrepancia entre resultados actuales y deseables expuesto por \textcite{fga10kaufman}, fuente secundaria del modelo de Roger Kaufman. Su consecuencia práctica es distinguir fines de medios: \emph{acceder a una información comprensible} es un resultado; traducir, simplificar o habilitar otro canal son alternativas para conseguirlo. Si el nivel actual es desconocido, la brecha cuantitativa no se puede calcular. El proyecto debe entonces declarar esa limitación y establecer cómo medirá, antes de afirmar que existe una carencia específica.
+
+En el marco mexicano, la Ley Federal para Prevenir y Eliminar la Discriminación, en su versión con última reforma del 14 de noviembre de 2025, define la discriminación y los ajustes razonables; también reconoce formas de discriminación indirecta e interseccional \parencite[art. 1]{fga10lfped}. Esto orienta la revisión de procedimientos aparentemente neutrales que pudieran generar desventajas. La valoración jurídica de casos y competencias corresponde a las instancias pertinentes; el proyecto no declara responsabilidad legal ni considera sus metas operativas como plazos legales. SILNOD e integridad constituyen puntos institucionales de articulación, por lo que se evitará crear un canal paralelo sin atribuciones \parencite{fga10igualdad,fga10integridad}.
+
+\section{Diagnóstico documental y detección de necesidades}
+\subsection{Evidencia disponible y límites}
+La revisión se realizó con fuentes públicas consultadas el 13 de septiembre de 2026. Se identificaron compromisos estratégicos, mecanismos de igualdad e integridad y acciones comunicadas en septiembre. No se accedió a bases de personal, resultados de clima, expedientes, registros de solicitudes o presupuestos internos. La falta de esos datos en el corpus consultado no demuestra que la institución carezca de ellos.
+
+\begin{longtable}{@{}L{.12\textwidth}L{.40\textwidth}L{.41\textwidth}@{}}
+\toprule \textbf{Evidencia} & \textbf{Qué permite sostener} & \textbf{Qué no permite concluir} \\
+\midrule\endhead
+E1: filosofía & Existe un compromiso explícito con humanismo, interculturalidad, integridad e innovación. & No demuestra por sí mismo el nivel de inclusión vivido por personal o usuarios. \\
+E2: SILNOD & Hay un sistema identificado y una coordinación institucional de igualdad. & No verifica cobertura, resultados actuales o vigencia de una certificación mostrada en imagen. \\
+E3: integridad & Existe una vía pública para denunciar conductas contrarias a ética e integridad. & No informa tiempos de respuesta, resolución o confianza de usuarios. \\
+E4: acciones 2026 & Se reportan actividades de paz, sensibilización y difusión de derechos. & No acredita cambios de conducta ni permite calcular eficacia o impacto. \\
+\bottomrule
+\end{longtable}
+Las fuentes E1--E4 corresponden a \textcite{fga10filosofia,fga10igualdad,fga10integridad,fga10paz,fga10derechos}. La situación de partida incluye capacidades existentes. El problema de diseño es \textbf{cómo verificar y sostener, en un proceso acotado, que esos compromisos se traducen en acceso, participación y atención trazable}. Se trata de un riesgo preventivo por examinar, no de un diagnóstico probado de discriminación.
+
+\subsection{Discrepancias y necesidades de intervención}
+\begin{longtable}{@{}L{.13\textwidth}L{.38\textwidth}L{.42\textwidth}@{}}
+\toprule \textbf{Necesidad} & \textbf{Resultado deseado y fundamento} & \textbf{Estado actual, contraste y evidencia por obtener} \\
+\midrule\endhead
+N1. Acceso a información comprensible & Comunicaciones utilizables por personal y usuarios con diferentes condiciones de acceso. Deriva del enfoque humanista e intercultural (E1). & Se conoce el compromiso; no se midió la usabilidad de comunicaciones del piloto. Revisar tres piezas y probar comprensión. La brecha numérica se calculará en semana 2. \\
+N2. Participación equitativa & Personal con posibilidad de expresar necesidades y acceder a oportunidades bajo criterios claros. Se relaciona con SILNOD y la agenda de igualdad (E2, E4). & No se cuenta con resultados internos de participación o acceso a oportunidades. Consultar percepciones voluntarias y reglas; no inferir exclusión por composición demográfica. \\
+N3. Atención trazable de apoyos & Solicitudes con recepción, orientación y seguimiento verificables, articuladas con las vías existentes (E2, E3). & Se identifican canales, pero no se conocen sus resultados para el piloto. Revisar el flujo y los datos agregados autorizados; no afirmar que existan retrasos. \\
+\bottomrule
+\end{longtable}
+Las tres necesidades expresan resultados a asegurar. Su magnitud e incidencia no se inventan: el diseño se selecciona por pertinencia estratégica y viabilidad preliminar. Para cualquier porcentaje cuyo aumento sea deseable, la discrepancia será meta menos línea base, expresada en puntos porcentuales. Cuando la línea base ya supere la meta, se buscará sostener el resultado, no reportar una mejora ficticia.
+
+\subsection{Herramienta de decisión y prioridad elegida}
+Se aplica una matriz multicriterio de \emph{prioridad de diseño}. Sus puntajes son juicios argumentados de esta propuesta, no respuestas de empleados ni mediciones del problema. Se excluye el criterio de magnitud porque no existe línea base. Los criterios son alineación estratégica (A, 35\%), alcance transversal potencial (T, 25\%), factibilidad preliminar (F, 25\%) y complementariedad con capacidades existentes (C, 15\%).
+
+La escala es 1--5: 1 indica relación indirecta, alcance restringido, alta dependencia de recursos nuevos o escasa articulación; 3, relación parcial y ajustes moderados; 5, vínculo directo, alcance sobre personal y usuarios, uso predominante de recursos existentes o integración clara. Los valores intermedios representan combinaciones razonadas. El puntaje se calcula como $P=0.35A+0.25T+0.25F+0.15C$.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{@{}Yccccc@{}}
+\toprule \textbf{Necesidad} & \textbf{A} & \textbf{T} & \textbf{F} & \textbf{C} & \textbf{P} \\
+\midrule
+N1. Información comprensible & 5 & 5 & 4 & 5 & 4.75 \\
+N2. Participación equitativa & 4 & 4 & 4 & 4 & 4.00 \\
+N3. Atención trazable & 4 & 4 & 5 & 5 & 4.40 \\
+\bottomrule
+\end{tabularx}
+\end{center}
+N1 recibe A=5 por la mención explícita de interculturalidad en la misión y T=5 porque las comunicaciones conectan personal, estudiantes y colaboradores. F=4 reconoce que adaptar formatos y probarlos requiere trabajo adicional; C=5 expresa su posibilidad de integrarse a la agenda existente. N3 obtiene F=5 y C=5 por la existencia de vías institucionales, bajo el supuesto de que acepten el mecanismo de trazabilidad; no implica acceso ya concedido a sus registros. N2 obtiene 4 en cada criterio: es pertinente, pero intervenir el conjunto de oportunidades de desarrollo excedería un piloto de ocho semanas.
+
+Se elige \textbf{N1 como eje y N3 como soporte operativo}. Se incluye la voz del personal, pero no se pretende rediseñar integralmente la promoción o la carrera laboral (N2). Al trasladar cinco puntos de ponderación de factibilidad a complementariedad, los resultados son N1=4.80, N3=4.40 y N2=4.00; el orden se mantiene. Esta estabilidad aritmética no valida los supuestos. Si el diagnóstico o la autorización contradicen las valoraciones, se recalculará la matriz. Una obligación legal o un riesgo grave se atenderán por la vía competente, aunque no obtengan el mayor puntaje.
+
+\section{Justificación y tipo de intervención}
+La intervención se justifica porque una filosofía intercultural necesita mecanismos cotidianos que permitan comprobar el acceso y aprender de las dificultades. Aprovechar SILNOD y las acciones ya comunicadas evita duplicar esfuerzos y reconoce trabajo institucional existente. Se propone intervenir para reducir el riesgo de que una comunicación no comprendida o una solicitud sin seguimiento limite la participación. Los beneficios esperados son claridad, confianza y coordinación; no se ofrecen porcentajes de productividad, rentabilidad o reducción de conflictos sin evidencia.
+
+El tipo es \textbf{preventivo, de procesos humanos y de gestión de recursos humanos, con alcance piloto}. Es preventivo porque no hay evidencia interna que permita sostener una situación correctiva específica. Opera mediante rediseño de comunicaciones, formación aplicada y seguimiento de apoyos; su nivel es el equipo de atención y sus interfaces, no una transformación completa del instituto. Si se detecta una barrera concreta durante el diagnóstico, su corrección se incorporará mediante acuerdo documentado, sin sustituir responsabilidades legales o disciplinarias.
+
+\section{Objetivos de la intervención}
+\subsection{Objetivo general}
+Fortalecer el acceso comprensible a la información y la atención inclusiva en un piloto de procesos de posgrado de ITESCA durante ocho semanas posteriores a su autorización, con tres comunicaciones verificadas, al menos 90\% del personal participante con comprensión satisfactoria del procedimiento y al menos 90\% de atención inicial oportuna de las solicitudes evaluables.
+
+\subsection{Objetivos específicos}
+\begin{enumerate}
+\item Caracterizar, al concluir la semana 2, el universo funcional del piloto, las condiciones de acceso a tres comunicaciones y la línea base de comprensión y seguimiento, mediante revisión autorizada e instrumentos voluntarios.
+\item Diseñar, antes de finalizar la semana 4, tres comunicaciones accesibles y un flujo de orientación y seguimiento articulado con los canales existentes, con responsables y evidencias de aprobación.
+\item Desarrollar, durante las semanas 5 y 6, dos sesiones prácticas de dos horas para que al menos 90\% del personal participante resuelva satisfactoriamente una prueba de comprensión del procedimiento al cierre de la semana 8.
+\item Alcanzar, al cierre del piloto, atención inicial dentro de cinco días hábiles en al menos 90\% de las solicitudes cuya fecha de vencimiento caiga en el periodo evaluado, sin confundir orientación con resolución del caso.
+\item Evaluar los indicadores y las barreras reportadas en la semana 8 y a 30 y 90 días del cierre, con decisiones de continuidad y acciones correctivas registradas.
+\end{enumerate}
+Las metas son estándares propuestos de operación. El plazo de cinco días hábiles no es un plazo legal ni sustituye atención inmediata de situaciones urgentes; requiere aprobación institucional. Si la línea base supera una meta, se mantendrá al menos ese nivel. No se reducirá una meta después de medir para aparentar cumplimiento.
+
+\section{Descripción del programa PUENTES}
+\subsection{Componente 1: gobernanza y diagnóstico inicial}
+La dirección o autoridad competente autorizará el área, designará una coordinación y acordará la articulación con SILNOD. Se identificará a las personas participantes por funciones, sin construir perfiles sensibles. La coordinación revisará con los responsables tres comunicaciones tipo: convocatoria de participación, instrucciones de un trámite y orientación para solicitar apoyo. El equipo conservará versiones fechadas y definirá qué evidencia puede incorporarse al reporte de resultados.
+
+Se invitará a todo el personal de la unidad delimitada y se ofrecerán alternativas accesibles para participar. Una consulta breve explorará claridad, participación y conocimiento de canales; se complementará con una prueba de comprensión de cinco situaciones. De manera opcional, hasta seis personas usuarias voluntarias podrán revisar lenguaje e instrucciones en sesiones de diez minutos. Esa selección por disponibilidad sirve para detectar problemas de uso, no para estimar porcentajes de toda la población ni representar culturas específicas.
+
+\subsection{Componente 2: comunicación intercultural y accesible}
+Se revisarán términos técnicos innecesarios, secuencia de pasos, responsables, fechas y formas de contacto. Cada pieza incluirá una alternativa para solicitar el contenido en otro formato. La revisión funcional comprobará cinco elementos: texto seleccionable y orden de lectura, encabezados identificables, contraste y legibilidad, lenguaje claro con instrucciones completas y un contacto para apoyo o formato alternativo. El resultado es un control de uso del piloto, no una certificación integral de accesibilidad digital.
+
+No se presumirá que toda persona de una edad determinada necesita el mismo apoyo ni que una pertenencia cultural implica desconocimiento. Si se solicita apoyo lingüístico o una adaptación específica, se valorará con la persona interesada y la instancia competente. Los apoyos que excedan el presupuesto no se rechazarán automáticamente: requerirán ampliación o canalización responsable.
+
+\subsection{Componente 3: formación aplicada y participación}
+La primera sesión, de dos horas, trabajará trato digno, interculturalidad, discriminación indirecta y uso de comunicaciones claras mediante casos ficticios sin datos personales. La segunda, también de dos horas, practicará recepción, orientación, seguimiento y pruebas de lectura de las tres piezas. Se priorizará resolver tareas y explicar decisiones, no memorizar definiciones. Las personas podrán formular observaciones por escrito o verbalmente sin exponer experiencias personales sensibles.
+
+La capacitación es un medio subordinado al diagnóstico: si el problema es de formato, responsabilidades o tiempo de respuesta, esos procesos deberán modificarse. Se distinguirá falta de conocimiento de falta de condiciones organizacionales. Los responsables devolverán al equipo las mejoras aceptadas y las no aceptadas con su justificación para evitar una participación meramente simbólica.
+
+\subsection{Componente 4: orientación y trazabilidad de apoyos}
+Se propone un registro mínimo con folio, fecha de recepción, proceso, responsable de orientación, fecha de primera respuesta, estado y fecha de seguimiento. No se copiarán relatos de discriminación ni expedientes a una hoja de trabajo académico. Las denuncias se dirigirán a las vías competentes; la bitácora solo registrará la canalización cuando sea adecuado y autorizado. El portal institucional de integridad ya tiene un propósito de denuncia y no debe confundirse con un buzón informal del equipo \parencite{fga10integridad}.
+
+La persona solicitante recibirá información comprensible sobre el siguiente paso y el responsable. El cierre de una solicitud de apoyo exigirá evidencia de atención y, cuando proceda, confirmación de la persona interesada. La falta de respuesta de esta no se interpretará automáticamente como satisfacción. Los informes presentarán agregados, sin datos que permitan identificar situaciones individuales.
+
+\section{Planeación, duración y mecanismos de control}
+\subsection{Etapas, actividades y entregables}
+\begin{longtable}{@{}L{.13\textwidth}L{.39\textwidth}L{.41\textwidth}@{}}
+\toprule \textbf{Periodo} & \textbf{Actividad y responsable propuesto} & \textbf{Control y evidencia de salida} \\
+\midrule\endhead
+Semana 1 & Autorizar alcance y privacidad. Autoridad competente, coordinación y enlace SILNOD. & Acta de inicio, asignación de funciones y recursos; sin autorización no hay recopilación de datos. \\
+Semanas 1--2 & Revisar documentos, consultar al personal y levantar línea base. Analista y responsables del proceso. & Informe de cobertura, límites y resultados; datos desconocidos como no medidos, nunca como cero. \\
+Semana 3 & Priorizar barreras y diseñar tres comunicaciones y flujo. Coordinación, comunicación y personal participante. & Matriz actualizada y versiones de trabajo con criterios de aceptación. \\
+Semana 4 & Probar legibilidad, accesibilidad y canalización. Responsable de proceso y enlace institucional. & Aprobación del procedimiento, metas y presupuesto; ninguna prueba implica una certificación general. \\
+Semanas 5--6 & Desarrollar dos sesiones y operar el piloto. Facilitación y responsables de atención. & Registro de actividades, prueba de comprensión y bitácora restringida; revisión semanal. \\
+Semana 7 & Verificar uso, corregir barreras y medir atención. Analista y coordinación. & Tablero preliminar; acción, responsable y plazo para cada desviación. \\
+Semana 8 & Evaluar, devolver resultados agregados y decidir continuidad. Coordinación y autoridad competente. & Informe de resultados y límites; acta de continuidad, ajuste o suspensión. \\
+30 y 90 días & Revisar permanencia de prácticas. Responsable institucional designado. & Nuevo corte de indicadores y comprobación de cierre de acuerdos. \\
+\bottomrule
+\end{longtable}
+
+\subsection{Cronograma resumido}
+\begin{center}
+\begin{tabularx}{\linewidth}{@{}Ycccccccc@{}}
+\toprule \textbf{Etapa / semana} & 1&2&3&4&5&6&7&8\\\midrule
+Autorización y diagnóstico & X&X&&&&&&\\
+Diseño y validación &&&X&X&&&&\\
+Formación y piloto &&&&&X&X&&\\
+Medición y ajustes &&&&&X&X&X&X\\
+Cierre y continuidad &&&&&&&&X\\\bottomrule
+\end{tabularx}
+\end{center}
+El calendario se cuenta desde el inicio autorizado. Hay tres condiciones de paso: autorización antes del levantamiento; línea base y diseño aprobados antes del piloto; evidencia evaluable antes de declarar logro. Un retraso deberá registrarse con impacto en entregables y recursos. No se mantendrán fechas ficticias para presentar cumplimiento.
+
+\section{Recursos humanos, económicos, materiales y equipo}
+\subsection{Criterios de estimación}
+El presupuesto se expresa en pesos mexicanos y es un escenario de diseño para hasta 24 participantes, no una cotización ni gasto realizado por ITESCA. Se separa el valor del tiempo interno del desembolso adicional. Las tarifas son supuestos de costeo para comparar viabilidad; deberán sustituirse por tarifas autorizadas o cotizaciones. Las funciones pueden recaer en una misma persona, pero las horas no se contarán dos veces.
+
+\begin{longtable}{@{}L{.43\textwidth}L{.30\textwidth}r@{}}
+\toprule \textbf{Recurso humano interno} & \textbf{Cálculo estimado} & \textbf{MXN} \\
+\midrule\endhead
+Coordinación del piloto & 20 h $\times$ 250 & 5,000 \\
+Diagnóstico y evaluación & 24 h $\times$ 200 & 4,800 \\
+Enlace institucional y validación & 12 h $\times$ 250 & 3,000 \\
+Adaptación de comunicaciones & 16 h $\times$ 200 & 3,200 \\
+Participación en dos sesiones & 24 personas $\times$ 4 h $\times$ 150 & 14,400 \\
+\midrule \textbf{Costo de tiempo interno} & & \textbf{30,400} \\
+\bottomrule
+\end{longtable}
+
+\begin{longtable}{@{}L{.43\textwidth}L{.30\textwidth}r@{}}
+\toprule \textbf{Desembolso adicional} & \textbf{Cálculo estimado} & \textbf{MXN} \\
+\midrule\endhead
+Facilitación especializada & 6 h $\times$ 500: preparación y sesiones & 3,000 \\
+Materiales de trabajo & Lote & 600 \\
+Apoyos de accesibilidad & Reserva inicial de servicios & 1,600 \\
+Materiales de seguimiento & Lote & 800 \\
+\midrule Subtotal directo & & 6,000 \\
+Contingencia & 10\% del subtotal directo & 600 \\
+\textbf{Desembolso propuesto} & & \textbf{6,600} \\
+\bottomrule
+\end{longtable}
+El costo económico estimado es $30{,}400+6{,}600=\textbf{37,000 MXN}$. La contingencia se aplica solo al desembolso directo. Las horas de participación corresponden a las sesiones; las funciones de coordinación y análisis cubren tareas distintas. Para $n$ participantes, el escenario de tiempo interno será $16{,}000+600n$, siempre que las demás cargas se mantengan. Si el piloto cambia de alcance, también se revisarán esas cargas fijas.
+
+\subsection{Materiales y equipo}
+Se prevé utilizar dos computadoras de trabajo, una sala accesible durante cuatro horas, conexión institucional y herramientas de edición y formularios ya autorizadas. El desembolso incremental por esos bienes se estima en cero bajo el supuesto de disponibilidad, sin afirmar que estén reservados. No se compra equipo nuevo ni se contabiliza depreciación en este presupuesto simplificado; si se requiere alquiler, deberá añadirse con cotización. Las consultas breves a personas usuarias serán voluntarias y no implican pagos supuestos.
+
+La dirección o instancia competente autorizará recursos y disponibilidad de tiempo; la coordinación vigilará el uso; el enlace con SILNOD revisará pertinencia y articulación. La reserva de accesibilidad no constituye un límite a derechos: un apoyo requerido que la exceda obligará a revisar recursos o alcance antes de operar. El seguimiento de 30 y 90 días se integrará a funciones ordinarias; si demanda servicios adicionales, requerirá presupuesto complementario explícito.
+
+\section{Impactos esperados e indicadores de desempeño}
+\subsection{Lógica de resultados}
+Los productos serán tres comunicaciones verificadas, un procedimiento de orientación y personal preparado para aplicarlo. Los resultados esperados son comprensión y atención oportuna; el impacto buscado es una participación sostenida con menor exposición a barreras. No se garantiza causalidad por una sola comparación antes/después. Cambios de personas, volumen de trabajo o reglas deberán registrarse como explicaciones alternativas.
+
+\textbf{Línea base común:} no levantada al 13 de septiembre de 2026. Su ausencia no equivale a un desempeño de cero. Se obtendrá en semanas 1--2 antes de introducir cambios. Las metas siguientes corresponden al programa propuesto y se someterán a aprobación; su cumplimiento se determinará únicamente con datos posteriores.
+
+\subsection{I1. Comunicaciones verificadas: producto}
+\textbf{Fórmula:} $100\times V/3$, donde $V$ es el número de las tres comunicaciones tipo que cumple los cinco controles funcionales de accesibilidad y claridad y tiene validación del responsable. \textbf{Meta:} 100\% en semana 4, conservado en semana 8. \textbf{Fuente:} lista de cotejo y versiones fechadas. \textbf{Responsable y corte:} comunicación y responsable del proceso, semanas 2, 4 y 8. Una pieza con algún control no satisfecho se registra como no verificada hasta corregirse. No se afirma cumplimiento integral de estándares técnicos de accesibilidad a partir de este indicador.
+
+\subsection{I2. Comprensión del procedimiento: resultado}
+\textbf{Fórmula:} $100\times C/N$, donde $N$ es el personal incluido en el piloto y $C$ el número de personas que resuelve correctamente al menos cuatro de cinco situaciones de la prueba del anexo B. \textbf{Meta:} al menos 90\% al cierre. La participación es voluntaria: quien no realice la prueba no tiene logro acreditado, pero no se le considera incompetente ni se le sanciona. Se reportará además la cobertura de evaluación para evitar ocultar la no respuesta.
+
+\textbf{Fuente y periodicidad:} pruebas breves de dificultad equivalente en semana 2 y semana 8. \textbf{Responsable:} analista designado. Si $N=0$, el piloto no está constituido y el indicador no es evaluable. Si cambia el universo, se informarán por separado las cohortes; no se atribuirá una mejora a la intervención cuando provenga solo de composición distinta. Para un escenario de 24 participantes, 90\% requiere al menos 22 logros; esto es una regla de cálculo, no un resultado obtenido.
+
+\subsection{I3. Primera respuesta oportuna: resultado de proceso}
+\textbf{Fórmula:} $100\times O/D$, donde $D$ son las solicitudes cuyo plazo de primera respuesta vence dentro del corte y $O$ las solicitudes \emph{de esa misma cohorte} respondidas en un máximo de cinco días hábiles desde su recepción. \textbf{Meta:} al menos 90\% al cierre; \textbf{corte:} quincenal desde el piloto. \textbf{Fuente:} registro autorizado agregado; \textbf{responsable:} enlace del proceso.
+
+Se incluyen solicitudes recibidas antes del corte si vencen durante él y se excluyen las que aún no vencen. Si no hay solicitudes evaluables, se informa \enquote{no evaluable}, no 100\%. Primera respuesta significa orientación efectiva sobre el siguiente paso, no un mensaje automático ni resolución del caso. Las urgencias se canalizan inmediatamente según los protocolos aplicables. No se fijan ni sustituyen plazos jurídicos con este indicador.
+
+\subsection{I4. Percepción de inclusión: resultado exploratorio}
+Para cada ítem $j$ del anexo A se calculará $P_j=100\times F_j/R_j$, donde $F_j$ son respuestas 4--5 y $R_j$ respuestas válidas 1--5. \textbf{Meta de diseño:} al menos 80\% favorable en los ítems de claridad y conocimiento de canales (2 y 5), o mantener el nivel inicial si es mayor. El resto de ítems se utilizará para explorar efectos no deseados, sin resumir toda la inclusión en un solo puntaje.
+
+\textbf{Fuente y responsable:} consulta voluntaria gestionada por analista, en semanas 2 y 8 y a 90 días. Para interpretar el cumplimiento se propone una cobertura mínima de 70\% del universo por ítem, fijada antes del levantamiento. No alcanzar esa cobertura se informa como evidencia insuficiente; aun alcanzándola puede existir sesgo de no respuesta. No se promedian ítems con distintas coberturas para ocultar un resultado desfavorable. Un denominador cero impide el cálculo.
+
+\subsection{I5. Barreras atendidas y sostenibilidad: evidencia mixta}
+\textbf{Componente cuantitativo:} $100\times A_c/A_v$, acciones correctivas vencidas cerradas con evidencia ($A_c$) entre total de acciones vencidas ($A_v$). \textbf{Meta:} 100\% a 30 días del cierre, salvo cambios de alcance aprobados y trazables. Sin acciones vencidas se reporta no aplica. \textbf{Responsable:} coordinación y responsable institucional de continuidad.
+
+\textbf{Componente cualitativo:} síntesis de barreras de claridad, acceso y canalización, contrastada con versiones de documentos, observación autorizada y valoración voluntaria de usuarios. La mejora se considerará respaldada cuando exista evidencia de retiro de la barrera priorizada y no haya contradicciones relevantes sin atender; de lo contrario se informará resultado inconcluso o barrera persistente. No se interpretará ausencia de quejas como ausencia de discriminación. Se revisará en semana 8, a 30 y a 90 días.
+
+\section{Acciones de seguimiento y aseguramiento}
+\begin{enumerate}
+\item \textbf{Revisión semanal durante el piloto.} La coordinación contrastará actividades vencidas, solicitudes próximas a vencimiento y barreras nuevas. Cada desviación tendrá causa por analizar, acción, responsable y plazo.
+\item \textbf{Cortes quincenales.} El analista entregará un tablero con numeradores, denominadores, cobertura y evidencia. No se publicarán cifras agregadas que permitan identificar situaciones personales.
+\item \textbf{Cierre de semana 8.} Se revisará si el procedimiento funciona sin depender exclusivamente del facilitador. Si falta evidencia, se extenderá la medición o se reformulará el piloto; no se declarará éxito por haber impartido las sesiones.
+\item \textbf{Revisión a 30 días.} Se verificarán las correcciones, la responsabilidad permanente y la conservación de las comunicaciones vigentes. Un cambio de responsable deberá incluir entrega documentada.
+\item \textbf{Revisión a 90 días.} Se compararán indicadores con el cierre y se resolverá continuar, ampliar o rediseñar. La ampliación requerirá evidencia de utilidad, recursos y condiciones de privacidad, no solo satisfacción anecdótica.
+\end{enumerate}
+El control combina metas y salvaguardas: si un valor queda bajo la meta, se corrige; si no hay datos suficientes, se registra como no evaluable; si surge daño o riesgo de represalia, se activa la vía competente sin esperar una reunión. Los apoyos institucionales existentes se mantienen durante cualquier ajuste del programa. Asegurar el seguimiento significa establecer responsabilidades y evidencias, no garantizar anticipadamente resultados.
+
+\section{Riesgos, ética, alcances y limitaciones}
+\begin{longtable}{@{}L{.27\textwidth}L{.66\textwidth}@{}}
+\toprule \textbf{Riesgo} & \textbf{Prevención y respuesta propuestas} \\
+\midrule\endhead
+Baja participación o temor & Consulta voluntaria, devolución agregada, tiempo de participación autorizado y canal alternativo. No presionar para alcanzar la cobertura. \\
+Reidentificación & No recabar atributos sensibles innecesarios; separar la gestión institucional de casos del reporte académico; suprimir celdas menores de cinco personas y revisar también combinaciones identificables. \\
+Duplicar SILNOD o integridad & Validar el flujo con las instancias existentes. El piloto orienta y mejora procesos, no resuelve denuncias ni crea competencias nuevas. \\
+Falta de recursos & Autorizar presupuesto antes del piloto y registrar cambios. No iniciar actividades sin condiciones de acceso por conservar una fecha. \\
+Estereotipos o exclusión involuntaria & Consultar necesidades de acceso sin asumirlas por edad, género, lengua u origen; probar formatos con consentimiento. \\
+Resultados aparentes & Conservar denominadores y periodos, informar no respuesta y no reprogramar acciones retroactivamente para mejorar indicadores. \\
+\bottomrule
+\end{longtable}
+La consulta no es un instrumento clínico ni una escala psicométrica validada. No se exigirán diagnósticos, religión, origen étnico u orientación sexual para participar. Antes de levantar información se acordarán finalidad, acceso, conservación y eliminación; el repositorio académico contendrá instrumentos vacíos y resultados no identificables, nunca expedientes. No se prometerá anonimato si la plataforma registra cuentas; se configurarán y comunicarán sus límites.
+
+El alcance comprende procesos de comunicación y apoyo en una unidad piloto. Quedan fuera la evaluación del desempeño de personas, auditorías legales, determinación de responsabilidades, reforma integral de contratación o promoción y generalizaciones a todas las sedes. Las necesidades de estudiantes y colaboradores se consideran como interfaces del servicio; sus pruebas de uso no sustituyen un diagnóstico representativo de toda la comunidad. El paso a un caso de implementación real requiere autorización y acceso a evidencia que este estudio documental no tuvo.
+
+\section{Conclusiones}
+El análisis de ITESCA permite formular una intervención pertinente sin partir de un juicio negativo sobre la institución. Su misión reconoce el enfoque humanista e intercultural; su visión incorpora ética, innovación y transformación de problemas. La existencia de SILNOD, de un portal de integridad y de actividades de cultura de paz y derechos de las mujeres constituye una base de trabajo que debe reconocerse. La propuesta no consiste en introducir la inclusión donde supuestamente no existe, sino en comprobar cómo se concreta en comunicaciones, orientación y participación dentro de un proceso delimitado.
+
+La principal decisión metodológica fue separar la evidencia documental de la información interna todavía no medida. El modelo de discrepancia obliga a definir resultados deseables y conocer la situación actual antes de calcular una brecha. Por esa razón, la matriz seleccionó prioridades de diseño mediante alineación, alcance, factibilidad y complementariedad, sin inventar magnitudes de discriminación. El acceso a información comprensible resultó prioritario y la atención trazable se integró como soporte. Esa elección es argumentada y revisable: deberá modificarse si la evidencia del diagnóstico inicial muestra un problema diferente o condiciones que impidan la implementación.
+
+PUENTES aporta una secuencia de ocho semanas con decisiones de paso, tres comunicaciones verificadas, formación aplicada y un flujo de seguimiento articulado con las instancias existentes. El presupuesto diferencia desembolso y tiempo interno; los indicadores distinguen productos, comprensión, oportunidad de atención y percepción exploratoria. Esta separación evita confundir asistencia a un taller con transformación cultural. También permite reconocer resultados insuficientes sin ocultarlos: ausencia de solicitudes, baja cobertura o falta de datos no se convierten en porcentajes de éxito.
+
+El impacto esperado es una mejora sostenible de las condiciones de participación y atención, especialmente cuando las personas requieren distintas formas de comunicación o apoyo. No se promete demostrarlo antes de ejecutar el programa, ni se atribuyen mejoras a encuestas inexistentes. La sostenibilidad dependerá de responsables identificados, recursos autorizados, protección de datos y revisiones a 30 y 90 días. En términos de gestión administrativa, el valor del proyecto reside en conectar filosofía, evidencia, decisión y control bajo un criterio ético. Su aplicación real comienza con la validación institucional y del equipo; este documento ofrece el diseño y los instrumentos necesarios para esa siguiente etapa.
+
+\clearpage
+\printbibliography[heading=bibintoc,title={Fuentes de información}]
+\clearpage
+\appendix
+\section{Consulta exploratoria de inclusión}
+\textbf{Instrumento propuesto, no aplicado.} Invitación: esta consulta voluntaria busca mejorar acceso, comunicación y orientación del piloto. Se pueden omitir respuestas o retirarse sin consecuencias. No deben incluirse nombres, datos sensibles ni relatos identificables. No es un canal de denuncia; los asuntos que requieren atención individual se dirigirán a las vías institucionales confirmadas.
+
+Periodo de referencia: últimas cuatro semanas. Escala: 1 totalmente en desacuerdo; 2 en desacuerdo; 3 neutral; 4 de acuerdo; 5 totalmente de acuerdo; no aplica o prefiero no responder, excluidos del denominador.
+\begin{enumerate}
+\item Puedo expresar ideas sin recibir trato despectivo por mis diferencias personales o culturales.
+\item Las instrucciones y los materiales de trabajo que necesito son comprensibles y accesibles para mí.
+\item Los criterios para participar en actividades y oportunidades se comunican con claridad.
+\item Dispongo de oportunidades para expresar necesidades relacionadas con el trabajo.
+\item Conozco a quién acudir y qué pasos seguir para solicitar apoyo ante una barrera.
+\item Las decisiones que afectan mis tareas se explican de manera respetuosa.
+\end{enumerate}
+Pregunta abierta opcional: ¿qué cambio concreto en una comunicación o proceso facilitaría participar o recibir atención? No incluir nombres ni información que identifique a terceros. Se registrarán cobertura por ítem, periodo y método de invitación. El instrumento requiere prueba de comprensión antes de su uso y no acredita validez psicométrica.
+
+\section{Prueba de comprensión y revisión de comunicaciones}
+\textbf{Cinco situaciones de aplicación.} Un punto por respuesta que satisfaga el criterio; logro con cuatro o cinco puntos. Utilizar versiones equivalentes antes y después, sin publicar respuestas antes de la medición inicial.
+\begin{longtable}{@{}L{.43\textwidth}L{.50\textwidth}@{}}
+\toprule \textbf{Situación} & \textbf{Criterio de respuesta correcta} \\
+\midrule\endhead
+Una persona no puede utilizar el formato de una convocatoria. ¿Cómo se procede? & Ofrecer o tramitar una alternativa accesible sin exigir información sensible innecesaria. \\
+Se recibe una solicitud de apoyo. ¿Qué se registra? & Folio, fechas, proceso, responsable y seguimiento; no trasladar relatos sensibles al reporte académico. \\
+Llega una denuncia de posible discriminación. ¿La resuelve el equipo del piloto? & No; orientar a la vía competente y proteger la información conforme al procedimiento autorizado. \\
+No hay solicitudes vencidas en el corte. ¿Se reporta 100\% de oportunidad? & No; se informa no evaluable por denominador cero. \\
+Un apoyo supera la reserva económica. ¿Se rechaza automáticamente? & No; revisar recursos y canalización con la instancia competente sin convertir el presupuesto en una restricción automática de derechos. \\
+\bottomrule
+\end{longtable}
+\textbf{Lista de cotejo por comunicación:} texto seleccionable y lectura ordenada; encabezados identificables; contraste y legibilidad; lenguaje claro con pasos, fechas y responsables; contacto y alternativa de formato. Registrar versión, fecha, evidencia de cada control y responsable de validación. Los cinco controles son necesarios para contar la pieza en I1.
+
+\section{Registro de control y criterios de decisión}
+El registro restringido de solicitudes contendrá: folio, fecha de recepción, vencimiento de primera respuesta, fecha de orientación efectiva, responsable funcional, estado y próxima revisión. El registro público de mejora contendrá únicamente: proceso, barrera resumida sin identificación, acción, responsable por función, fecha compromiso y evidencia de cierre.
+
+Para cada corte del tablero se conservarán nombre del indicador, periodo, numerador, denominador, valor o estado no evaluable, cobertura, fuente, responsable, explicación de desviaciones y decisión. No se adjuntan registros llenos porque no se aplicó el programa. Los resultados verificables, cuando existan, deberán incorporarse en un informe posterior con autorización.
+
+\textbf{Decisión al cierre:} continuar cuando las metas evaluables se cumplan y existan condiciones de acceso, privacidad y responsabilidad; ajustar cuando haya brechas corregibles con recursos disponibles; suspender o rediseñar actividades del piloto que generen riesgo o carezcan de condiciones de atención, conservando los servicios institucionales. La extensión a otras áreas requiere una decisión separada, evidencia y presupuesto.
+\end{document}

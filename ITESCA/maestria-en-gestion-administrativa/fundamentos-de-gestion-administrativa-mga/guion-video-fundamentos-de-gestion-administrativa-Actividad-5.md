@@ -1,6 +1,7 @@
 # Guion de video — Actividad 5
 
-**Duración objetivo:** 5:30–6:15 minutos.  
+**Duración planificada:** 7:00 minutos (suma de los doce segmentos). Cronometrar un ensayo: el tiempo real debe permanecer entre 4:00 y 8:00 minutos.
+
 **Requisito:** mantener visible al estudiante en cámara, al menos en una ventana superpuesta durante toda la exposición.  
 **Ritmo:** 120–135 palabras por minuto; no leer las diapositivas literalmente.
 

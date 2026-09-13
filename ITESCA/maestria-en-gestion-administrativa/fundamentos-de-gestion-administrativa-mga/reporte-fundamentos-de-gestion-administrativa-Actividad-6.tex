@@ -1,35 +1,375 @@
-% Unidad III — Propuesta de modelo (20 %)
-\newcommand{\actividadnumero}{6}
-\newcommand{\unidadnumero}{III}
-\newcommand{\actividadtitulo}{Propuesta de modelo para la toma de decisiones}
-\newcommand{\actividadproducto}{Propuesta de modelo}
-\newcommand{\actividadponderacion}{20\%}
-\newcommand{\actividadcompetencia}{Aplicar el proceso de toma de decisiones en cada uno de los niveles de operación de las organizaciones.}
-\newcommand{\actividadproposito}{Diseñar y justificar un modelo de decisión aplicable a un problema organizacional delimitado.}
-\newcommand{\actividadcontenido}{%
-  \subsection{Diagnóstico del problema}
-  \pendiente{Describir la organización, el nivel de decisión, los actores, las causas, los efectos y la evidencia disponible.}
+% !TeX program = xelatex
+% Actividad 3.1 en Moodle; Actividad 6 en la secuencia local.
+% Contrato: propuesta de modelo, NO foro. Tres actos, núcleo visual, APA.
+% Organización: problema -> sustento -> diagrama -> aplicación -> postura.
+% Nivel cognitivo: evaluar y crear. Trazabilidad en planeación y mapa de soporte.
+\documentclass[12pt,spanish,letterpaper,oneside]{article}
+\providecommand{\itescastudentname}{Martín Jonathan de la Cruz Muñoz}
+\providecommand{\itescafaculty}{Maestría en Gestión Administrativa}
+\providecommand{\itescacoursename}{Fundamentos de Gestión Administrativa}
+\providecommand{\itescacoursecode}{GGFG02}
+\providecommand{\itescateachingfigure}{Celia Velázquez Reyna}
+\providecommand{\itescaasset}{ITESCA/assets-itesca/itesca-monograma.png}
+\providecommand{\itescaofficialasset}{ITESCA/assets-itesca/web/logo-itesca-contorno.png}
+\providecommand{\itescabibliography}{bibliografia-itesca-mga,fundamentos-de-gestion-administrativa}
+\def\documenttitle{Modelo DECIDE para la toma de decisiones}
+\def\documentsubtitle{Evidencia, participación y seguimiento}
+\def\documentsubject{Actividad 6 - Fundamentos de Gestión Administrativa}
+\def\documentauthor{\itescastudentname}
+\def\coursename{\itescacoursename}
+\def\coursecode{\itescacoursecode}
+\def\universityname{Instituto Tecnológico Superior de Cajeme}
+\def\universityfaculty{\itescafaculty}
+\def\universitydepartment{Posgrado e Investigación}
+\def\universitydepartmentimage{\itescaofficialasset}
+\def\universitydepartmentimagecfg{width=5.2cm}
+\def\universitylocation{Cajeme, Sonora}
+\def\authortable{%
+	\begin{tabular}{ll}
+		\textbf{Alumno:} & \itescastudentname\\
+		Docente: & \itescateachingfigure\\
+		Asignatura: & \itescacoursename\\
+		Curso: & GGFG02\\
+		Unidad: & III. Toma de decisiones\\
+		Evidencia en Moodle: & 3.1 Propuesta de Modelo · 20\%\\
+		Periodo: & Agosto--noviembre de 2026\\
+		Modalidad: & En línea\\
+		Fecha de revisión: & 13 de septiembre de 2026\\
+		Lugar: & \universitylocation
+	\end{tabular}}
+\input{formato-itesca-actividad-6}
 
-  \subsection{Criterios y alternativas}
-  \pendiente{Definir criterios ponderados y presentar al menos tres alternativas viables, con riesgos, costos y beneficios.}
+\begin{document}
+\insertcoverwatermark
+\insertcoverinstitutionalfooter
+\templatePortrait
+\templatePagecfg
+\onehalfspacing
+\justifying
 
-  \subsection{Modelo propuesto}
-  \pendiente{Representar las etapas: identificación del problema, información, generación de alternativas, evaluación, selección, implementación y control.}
+\begin{abstractd}
+Las decisiones de reposición pueden mejorar el servicio y, simultáneamente,
+inmovilizar recursos si el diagnóstico se limita a evitar faltantes. El modelo
+DECIDE integra seis etapas para vincular información, elección, ejecución y
+aprendizaje. Su aportación operativa consiste en combinar un filtro de viabilidad,
+una comparación ponderada, sensibilidad y un piloto reversible con reglas de
+control. Una distribuidora hipotética permite examinar tres alternativas sin
+confundir estimaciones con resultados observados. La alternativa de control de
+mínimos y máximos obtiene la mayor puntuación inicial, pero pierde esa preferencia
+cuando cambian ciertos supuestos. La recomendación es, por tanto, autorizar una
+prueba limitada y no una adopción definitiva. El seguimiento del servicio, los
+costos y el inventario determina si la decisión merece estandarizarse.
+\end{abstractd}
+\templateIndex
+\templateFinalcfg
+\onehalfspacing
+\justifying
 
-  \subsection{Matriz de decisión}
-  \begin{center}
-  \begin{tabular}{p{0.25\textwidth}ccc p{0.22\textwidth}}
-    \toprule
-    \textbf{Criterio} & \textbf{Peso} & \textbf{Alternativa A} & \textbf{Alternativa B} & \textbf{Justificación} \\
-    \midrule
-    \campo{Criterio 1} & \campo{\%} & \campo{1--5} & \campo{1--5} & \campo{Evidencia} \\
-    \campo{Criterio 2} & \campo{\%} & \campo{1--5} & \campo{1--5} & \campo{Evidencia} \\
-    \campo{Criterio 3} & \campo{\%} & \campo{1--5} & \campo{1--5} & \campo{Evidencia} \\
-    \bottomrule
-  \end{tabular}
-  \end{center}
+\section{Introducción}
+Un faltante de inventario no demuestra por sí mismo que una empresa necesite
+comprar más mercancía. También puede revelar registros incorrectos, variaciones
+de demanda o entregas incumplidas. Elegir una solución sin distinguir esas causas
+puede mejorar momentáneamente el servicio y deteriorar la liquidez. Para una
+pequeña organización comercial, el problema administrativo consiste en reducir
+faltantes sin trasladar costos y riesgos a otras áreas.
 
-  \subsection{Implementación y control}
-  \pendiente{Definir responsables, calendario, recursos, indicadores, umbrales y acciones correctivas.}
-}
-\input{reporte-fundamentos-de-gestion-administrativa-plantilla-actividad}
+La decisión requiere convertir información en acción y recuperar información de
+sus consecuencias. \citet{canos} organizan ese recorrido en inteligencia, diseño,
+selección, implantación y revisión; \citet{solano2003} subraya que el esfuerzo de
+análisis debe guardar proporción con la importancia de la decisión. La comparación
+de opciones solo resulta útil si conduce a responsabilidades, recursos y controles
+observables, en lugar de terminar en una clasificación numérica.
+
+El objetivo es diseñar y justificar un modelo para decisiones tácticas de
+reposición que combine evidencia, participación y seguimiento. DECIDE reúne
+delimitar, examinar, comparar, implantar, dar seguimiento y estandarizar. Su
+propósito es elegir una opción satisfactoria y revisable, no prometer una solución
+óptima bajo información incompleta. La tesis es que una decisión justificable
+necesita tanto razones para adoptarse como condiciones explícitas para corregirse.
+
+La aplicación corresponde a una distribuidora hipotética de insumos de oficina.
+El caso, las ponderaciones, las calificaciones, el presupuesto y las metas son
+supuestos didácticos, no datos de una empresa observada. El alcance comprende
+una familia de productos y un horizonte inicial de ocho semanas. En la formación
+de Maestría en Gestión Administrativa, esta delimitación permite vincular
+diagnóstico, evidencia y decisión sin presentar expectativas como logros.
+
+\clearpage
+\section{DECIDE: de la evidencia a la decisión organizacional}
+\subsection{Sustento del modelo propuesto}
+\citet{canos} describen las fases de inteligencia, diseño, selección,
+implantación y revisión, así como el ciclo información--decisión--acción.
+DECIDE conserva esa lógica: delimitar y examinar corresponden a inteligencia;
+comparar integra diseño y selección; implantar ejecuta la decisión; dar seguimiento
+y estandarizar desarrollan la revisión. La \textbf{racionalidad limitada} exige
+reconocer restricciones de información y capacidad de análisis; una solución
+satisfactoria no equivale a conocer todas las alternativas posibles.
+
+El \textbf{circuito de decisión} de \citet{solano2003} vincula reconocimiento del
+problema, alternativas, elección y retroalimentación. También relaciona el costo
+de obtener información con su utilidad. Por ello, el diagnóstico se limita en
+tiempo y recursos, mientras la autorización se asigna a quien puede asumir sus
+consecuencias. Una compra irreversible requiere más evidencia que una prueba
+acotada y reversible.
+
+\citet{lopez2020} aportan un antecedente sobre uso de información y eficacia
+organizativa en pymes de Ambato. Sus hallazgos contextualizados no se convierten
+en porcentajes de éxito para la distribuidora hipotética. Por su parte,
+\citet{soto2020} destacan la comunicación organizacional: compras, almacén y
+ventas deben participar en el diagnóstico sin diluir la responsabilidad final
+de la gerencia. La participación permite contrastar perspectivas, pero no
+sustituye la verificación de los datos.
+
+\subsubsection{Aportaciones y diferencias}
+La propuesta integra cuatro controles operativos: un \textbf{filtro de viabilidad}
+antes de puntuar; una \textbf{matriz ponderada} con pesos acordados previamente;
+un \textbf{análisis de sensibilidad}; y un \textbf{piloto reversible} con reglas
+de suspensión. Cada etapa deja evidencia: ficha del problema, línea base, matriz,
+autorización, bitácora y procedimiento aprobado o cierre sin adopción.
+
+La aportación no es una teoría inédita ni una eficacia ya demostrada. Frente a
+una secuencia genérica de elección, DECIDE explicita quién responde, qué
+restricciones no pueden compensarse y cuándo debe regresar el análisis. Su
+utilidad esperada está en la trazabilidad y la posibilidad de corregir. El
+diagrama sintetiza estas relaciones; sus retornos evitan interpretar las fases
+como una secuencia que siempre termina en aprobación.
+
+\clearpage
+\subsection{Diagrama del proceso propuesto}
+\noindent\textbf{Figura 1}\par
+\noindent\textit{Flujo del modelo DECIDE y puntos de retorno}\par
+\begin{center}
+\begin{tikzpicture}[
+	node distance=4mm,
+	etapa/.style={rectangle,rounded corners=2pt,draw=itescaRedDark,
+		fill=itescaPaper,align=center,text width=9.2cm,minimum height=9mm,
+		inner sep=4pt,font=\normalsize},
+	prueba/.style={diamond,draw=itescaRedDark,aspect=3.8,align=center,
+		inner sep=1pt,text width=5.5cm,font=\normalsize},
+	flecha/.style={-{Stealth[length=2.3mm]},semithick,itescaCharcoal},
+	etiqueta/.style={font=\normalsize,fill=white,inner sep=1pt}]
+\node[etapa] (d1) {1. Delimitar el problema y la meta};
+\node[etapa,below=of d1] (e1) {2. Examinar evidencia y restricciones};
+\node[etapa,below=of e1] (c) {3. Comparar alternativas:\\filtrar, ponderar y revisar sensibilidad};
+\node[prueba,below=of c] (v) {¿Hay una opción viable\\con sustento suficiente?};
+\node[etapa,below=7mm of v] (i) {4. Implantar un piloto autorizado};
+\node[etapa,below=of i] (d2) {5. Dar seguimiento;\\suspender ante un riesgo crítico};
+\node[prueba,below=of d2] (m) {¿Cumple metas\\y restricciones?};
+\node[etapa,below=7mm of m] (e2) {6. Estandarizar si cumple;\\si no, cerrar documentando el aprendizaje};
+\draw[flecha] (d1)--(e1);
+\draw[flecha] (e1)--(c);
+\draw[flecha] (c)--(v);
+\draw[flecha] (v)--node[etiqueta,right]{Sí}(i);
+\draw[flecha] (i)--(d2);
+\draw[flecha] (d2)--(m);
+\draw[flecha] (m)--node[etiqueta,right]{Sí}(e2);
+\draw[flecha] (v.west)--++(-1.3,0) node[etiqueta,above]{No} |- (e1.west);
+\draw[flecha] (m.west)--++(-1.3,0)
+	node[etiqueta,above,align=center]{No:\\revisar} |- (e1.west);
+\draw[flecha] (m.east)--++(1.4,0)
+	node[etiqueta,above,align=center]{No:\\cerrar} |- (e2.east);
+\end{tikzpicture}
+\end{center}
+\noindent\textit{Nota.} Elaboración asistida basada en \citet{canos} y
+\citet{solano2003}. Ante incumplimiento, la gerencia autoriza revisar o cerrar
+sin adopción. Un riesgo crítico obliga a suspender antes de decidir; nunca se
+estandariza una prueba fallida. Un cambio del entorno inicia otro ciclo.
+
+\clearpage
+\subsection{Descripción práctica de las etapas}
+\begin{enumerate}
+\item \textbf{Delimitar.} Gerencia, compras y almacén distinguen síntomas y
+causas posibles: registros incorrectos, demanda variable o fallas del proveedor.
+Definen problema, meta, plazo y responsable. El producto es una ficha de decisión
+para una familia de productos y ocho semanas, sin dar por probada una causa.
+\item \textbf{Examinar.} Almacén y ventas reúnen pedidos, existencias, plazos
+y compras urgentes; identifican origen, fecha y calidad de los datos. Finanzas
+fija el presupuesto y la gerencia las restricciones legales y operativas. El
+producto es una línea base verificable. Si faltan datos críticos, se amplía
+el diagnóstico o se reduce el alcance; no se inventan observaciones.
+\item \textbf{Comparar.} El equipo formula al menos tres opciones, descarta
+incumplimientos obligatorios y acuerda criterios, pesos y escala antes de
+calificar. Documenta evidencia, diferencias de opinión y sensibilidad. La
+gerencia elige o solicita información adicional. El producto es una matriz
+y un acta razonada; la mayor puntuación no obliga a autorizar.
+\item \textbf{Implantar.} La gerencia autoriza un piloto limitado. Compras
+programa pedidos, almacén actualiza registros y ventas comunica cambios del
+servicio. Se asignan recursos, capacitación y una vía para regresar al
+procedimiento anterior. El producto es un plan de ejecución reversible;
+una opción bien puntuada todavía no constituye un éxito operativo.
+\item \textbf{Dar seguimiento.} Se comparan resultados semanales con la línea
+base y se revisan efectos sobre costos, inventario y carga de trabajo.
+Finanzas valida importes y la gerencia decide continuar, corregir o suspender.
+La bitácora conserva indicadores, incidencias y decisiones. Un incumplimiento
+devuelve el análisis a examinar, después de controlar cualquier riesgo crítico.
+\item \textbf{Estandarizar.} Si se cumplen los criterios de aceptación, se
+formalizan reglas de pedido, responsables y controles. En caso contrario,
+se conserva el aprendizaje y se diseña otra intervención. El producto es un
+procedimiento aprobado o un cierre sin adopción; una revisión mensual evita
+mantener decisiones que dejaron de ser útiles.
+\end{enumerate}
+
+\clearpage
+\subsection{Aplicación ilustrativa y análisis de sensibilidad}
+Se comparan \textbf{A}, mínimos y máximos en una hoja compartida con capacitación;
+\textbf{B}, software con alertas; y \textbf{C}, entregas más frecuentes del
+proveedor. El filtro exige costo total del piloto no mayor a 30\,000 MXN,
+trazabilidad y cumplimiento legal. Se supone que las tres opciones son viables;
+una aplicación real necesita cotizaciones y revisión de capacidad operativa.
+Las opciones son paquetes alternativos para el primer piloto: pueden combinarse
+después de otra evaluación. El procedimiento vigente sirve como línea base.
+
+\noindent\textbf{Tabla 1}\par
+\noindent\textit{Matriz ilustrativa de evaluación ponderada}\par
+\noindent\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}p{0.52\linewidth}rrrr@{}}
+\toprule
+\textbf{Criterio} & \textbf{Peso} & \textbf{A} & \textbf{B} & \textbf{C}\\
+\midrule
+Reducción esperada de faltantes & 0.35 & 4 & 5 & 3\\
+Economía del costo total & 0.25 & 5 & 2 & 3\\
+Rapidez de puesta en marcha & 0.15 & 4 & 2 & 5\\
+Facilidad de adopción & 0.15 & 4 & 3 & 3\\
+Trazabilidad y control & 0.10 & 3 & 4 & 2\\
+\midrule
+\textbf{Total ponderado} & \textbf{1.00} & \textbf{4.15} & \textbf{3.40} & \textbf{3.20}\\
+\bottomrule
+\end{tabular*}
+\par\noindent\textit{Nota.} Pesos y valores simulados. Una calificación mayor
+significa una condición más favorable; en economía representa menor costo total.
+
+La escala va de 1 (desfavorable) a 5 (muy favorable), con 3 aceptable:
+impacto bajo/alto; costo cercano al tope/muy inferior; preparación lenta/rápida;
+capacitación difícil/sencilla; registros poco/muy auditables. Los rangos numéricos
+requieren pruebas y cotizaciones previas; no deben ajustarse para favorecer una opción.
+
+Los pesos priorizan faltantes y liquidez. Rapidez y adopción pesan igual;
+la trazabilidad básica ya es obligatoria. Son prioridades propuestas, no medidas.
+
+Se suman los productos de peso por calificación. Para A:
+0.35(4) + 0.25(5) + 0.15(4) + 0.15(4) + 0.10(3) = 4.15.
+La suma presupone criterios distintos y compensables; no compensa
+incumplimientos legales ni demuestra eficacia.
+
+Si el peso de impacto sube a 0.45 y el de economía baja a 0.15, los resultados
+son A = 4.05, B = 3.70 y C = 3.20. A conserva la preferencia; pero si además
+su impacto baja de 4 a 3, obtiene 3.60 y B pasa al primer lugar. Esta fragilidad
+justifica validar el impacto en un piloto antes de comprometer una adopción.
+
+\clearpage
+\subsection{Puesta en marcha: responsables, recursos y precauciones}
+La gerencia autoriza y responde por la decisión; compras coordina; almacén
+registra movimientos; ventas verifica servicio; y finanzas controla costos.
+Una reunión semanal permite documentar discrepancias y escuchar a quienes
+ejecutan el cambio, sin confundir consenso con calidad de evidencia \citep{soto2020}.
+
+El calendario inicial comprende ocho semanas a partir de la autorización:
+\begin{itemize}
+\item \textbf{Semanas 1 y 2:} depurar registros, revisar causas y medir la
+línea base. Si la demanda no es representativa, extender la observación y reprogramar.
+\item \textbf{Semanas 3 a 6:} ejecutar A, capacitar y revisar indicadores.
+Los mínimos y máximos se calculan con demanda y plazos reales, no con puntajes.
+\item \textbf{Semanas 7 y 8:} comparar con la línea base, reconocer limitaciones
+y decidir adopción, ajuste o cierre sin adopción.
+\end{itemize}
+
+Se requiere una hoja con control de versiones, acceso a pedidos y existencias,
+tiempo del personal y capacitación. Los 30\,000 MXN incluyen trabajo, herramientas
+y costos extraordinarios del piloto; son un techo propuesto, no una cotización.
+Finanzas aprueba el desglose y controla por separado el capital en inventario.
+
+\begin{itemize}
+\item \textbf{Evidencia antes de precisión.} Vincular cada calificación a una
+fuente, reconocer incertidumbre y evitar contar dos veces el mismo beneficio.
+\item \textbf{Prevención de sesgos.} Recabar valoraciones individuales,
+declarar intereses con proveedores y justificar pesos, descartes y cambios.
+\item \textbf{Continuidad y privacidad.} Restringir accesos, respaldar registros,
+prever operación alternativa y excluir datos personales innecesarios.
+\item \textbf{Esfuerzo proporcional.} No prolongar indefinidamente el análisis;
+una decisión irreversible o de seguridad exige mayor evidencia y autoridad
+que un piloto reversible \citep{solano2003}.
+\end{itemize}
+
+Estas recomendaciones buscan evitar que una herramienta sencilla genere una
+carga administrativa mayor que el beneficio esperado. La utilidad del modelo
+depende de datos mantenibles y responsabilidades claras, no de acumular formatos.
+
+\clearpage
+\subsection{Puesta en marcha: indicadores y reglas de decisión}
+Las metas se negocian antes del piloto; no son logros observados. La bitácora
+registra numerador, denominador, periodo, fuente y resultado:
+\begin{enumerate}
+\item \textbf{Servicio completo y oportuno.} Pedidos completos entregados a
+tiempo entre pedidos cuya entrega vencía en el periodo, por 100. Ventas verifica
+semanalmente una meta mínima de 95\%; incluye pedidos vencidos no entregados.
+\item \textbf{Faltantes.} Líneas no surtidas por falta de inventario en la
+fecha comprometida entre líneas que debían surtirse, por 100. Almacén busca
+un máximo de 5\% y conserva pedidos cancelados por falta de existencias para
+no ocultar demanda perdida.
+\item \textbf{Costo de urgencias por pedido.} Sobrecostos de compras y fletes
+urgentes entre pedidos que debían atenderse. Finanzas busca una reducción de
+al menos 20\% frente a la línea base. Si la base es cero, exige mantenerla
+en cero, sin calcular una reducción porcentual indefinida.
+\item \textbf{Inventario medio.} Promedio del valor diario del inventario al
+costo. Finanzas y almacén limitan su aumento a 10\%. Si la base es nula,
+finanzas propone y gerencia aprueba un tope absoluto antes de autorizar el piloto.
+\end{enumerate}
+
+Sin pedidos o líneas exigibles, el indicador respectivo se registra como
+no evaluable, nunca como cero ni como cumplimiento. Se amplía la observación.
+
+La adopción requiere que las semanas 5 y 6 de ejecución cumplan las metas
+de servicio, faltantes y urgencias y los límites presupuestales y de inventario.
+Un incumplimiento legal, pérdida de trazabilidad o exceso presupuestal suspende
+la prueba; la gerencia autoriza la contingencia. Las fallas de desempeño obligan
+a investigar y revisar la alternativa antes de ampliarla.
+
+En semanas 7 y 8 se auditan esos registros; no se amplía el piloto hasta
+la autorización de adopción. Cualquier continuidad queda limitada al alcance aprobado.
+
+La comparación mantiene productos y periodos equivalentes, registrando promociones
+y fallas del proveedor. Conviene contrastar con una familia similar no intervenida:
+una mejora antes--después no prueba causalidad. El volumen insuficiente o la
+estacionalidad exigen ampliar la observación con autorización.
+
+La transferencia profesional consiste en conservar un expediente de decisión
+revisable: problema, evidencia, opciones, motivos, autorización y efectos.
+Ese expediente permite justificar ajustes sin ocultar decisiones fallidas ni
+atribuir al modelo resultados que dependen de otras condiciones.
+
+\clearpage
+\section{Conclusiones}
+DECIDE relaciona diagnóstico, comparación y acción con una condición central:
+la elección debe poder revisarse. Los procesos de \citet{canos} y
+\citet{solano2003} permiten comprender la decisión como un circuito; la propuesta
+los traduce en responsabilidades, evidencia y puntos de retorno. La matriz
+resulta útil cuando aclara supuestos, no cuando reemplaza el juicio directivo.
+
+Sostengo que A merece un piloto limitado, pero no una aprobación definitiva,
+porque su ventaja depende de estimaciones aún no contrastadas. El cambio de
+prioridades y de impacto esperado puede hacer preferible B. Esa sensibilidad
+no invalida el modelo: muestra qué información es decisiva y dónde conviene
+concentrar la observación. Adoptar sin probar convertiría una puntuación
+orientativa en una certeza injustificada.
+
+También considero indispensable evaluar efectos entre áreas. Reducir faltantes
+mediante exceso de inventario trasladaría el problema a finanzas; imponer una
+hoja sin capacitación lo trasladaría al personal. La comunicación y la
+participación favorecen la implementación \citep{soto2020}, pero deben coexistir
+con autoridad definida y verificación de resultados. Por eso los controles
+económicos y operativos tienen el mismo valor que la meta de servicio.
+
+En la gestión administrativa, el aprendizaje más transferible es justificar
+qué se decide, con qué evidencia y bajo qué condiciones se cambiará de rumbo.
+DECIDE ofrece esa disciplina para una decisión táctica acotada; su alcance no
+incluye demostrar causalidad ni garantizar éxito en cualquier organización.
+La revisión crítica del caso y su adaptación con datos reales siguen siendo
+responsabilidad de quien autoriza y ejecuta la decisión.\footnote{Se utilizó
+GitHub Copilot, herramienta de inteligencia artificial, como apoyo en la
+organización, redacción, revisión de fuentes y maquetación. La propuesta y sus
+datos ilustrativos son una elaboración asistida. Este apoyo no sustituye el
+análisis propio ni la responsabilidad del autor de revisar y asumir el contenido
+antes de su entrega.}
+
+\clearpage
+\printbibliography[heading=bibintoc,title={Fuentes de consulta}]
+\end{document}
