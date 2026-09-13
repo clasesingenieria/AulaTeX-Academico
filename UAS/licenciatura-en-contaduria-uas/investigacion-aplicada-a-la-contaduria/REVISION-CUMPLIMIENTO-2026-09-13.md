@@ -8,9 +8,9 @@
 
 No se acredita que todos los productos estén completos. Se localizó un producto desarrollado: **el mapa conceptual S1, entregado y calificado con 2.00/2.00**. El PDF local es idéntico al entregado en Moodle. Tiene observaciones formales y visuales descritas más abajo; estas no modifican la calificación oficial.
 
-Los productos **S2, S3, S4 y el integrador** figuran sin entrega en Moodle y no se localizaron versiones propias terminadas en la carpeta UAS del proyecto. Las plantillas y los documentos de ejemplo no sustituyen esos entregables.
+Los productos **S2, S3, S4 y el integrador** siguen sin entrega en Moodle. Tras esta revisión se prepararon y compilaron sus cuatro PDF y los **cuatro reportes de foro con ocho TXT adjuntos**. S3 integra ambas lecturas enlazadas en el aula; S4 permanece como borrador porque no fue posible consultar su lección. S2 requiere confirmar recepción tardía y cotejar la lección completa; la ponencia requiere confirmación del equipo. Véase el índice de productos de la sección 9.
 
-La revisión fue de consulta: no se publicaron respuestas, no se iniciaron intentos de evaluación ni se añadieron, retiraron o sustituyeron entregas. Abrir recursos puede registrar automáticamente su visualización en Moodle. No se modificó el PDF ya calificado ni su fuente.
+La consulta y preparación documental no incluyeron publicaciones, respuestas a preguntas de evaluación ni altas, bajas o sustituciones de entregas. Abrir recursos puede registrar automáticamente su visualización en Moodle. No se modificó el PDF S1 ya calificado ni su fuente. El grupo **103 LCP** se confirmó en los cuatro foros y se utiliza en los nuevos documentos.
 
 ## 1. Actividades y fechas verificadas
 
@@ -19,10 +19,10 @@ Las fechas y horas siguientes son las mostradas por la plataforma; no se convirt
 | Producto | Apertura | Cierre | Estado de Moodle | Documento local |
 |---|---|---|---|---|
 | [S1: mapa conceptual](https://virtual.uas.edu.mx/fca/mod/assign/view.php?id=50034) | 24/08/2026, 01:00 | 30/08/2026, 23:59 | Enviado para calificar; **calificado 2.00/2.00**. Envío: 30/08/2026, 21:05. Calificación: 10/09/2026. | [PDF desarrollado](reporte-investigacion-aplicada-a-la-contaduria-Actividad-1.pdf), idéntico al envío. |
-| [S2: cuadro comparativo y ejemplos](https://virtual.uas.edu.mx/fca/mod/assign/view.php?id=50044) | 31/08/2026, 01:00 | 06/09/2026, 23:59 | Sin entrega; no calificado; vencido. Aparece «Añadir envío». | No localizado. |
-| [S3: mapa conceptual](https://virtual.uas.edu.mx/fca/mod/assign/view.php?id=50055) | 07/09/2026, 01:00 | **13/09/2026, 23:59** | Sin entrega; no calificado. Aparece «Añadir envío». | No localizado. |
-| [S4: mapa conceptual](https://virtual.uas.edu.mx/fca/mod/assign/view.php?id=50066) | 14/09/2026, 01:00 | 20/09/2026, 23:59 | Sin entrega; no calificado; apertura futura al momento de consulta. | No localizado. |
-| [Producto integrador: ponencia](https://virtual.uas.edu.mx/fca/mod/assign/view.php?id=50067) | 14/09/2026, 01:00 | 20/09/2026, 23:59 | Sin entrega; no calificado; apertura futura al momento de consulta. | No se localizó una ponencia propia terminada. |
+| [S2: cuadro comparativo y ejemplos](https://virtual.uas.edu.mx/fca/mod/assign/view.php?id=50044) | 31/08/2026, 01:00 | 06/09/2026, 23:59 | Sin entrega; no calificado; vencido. Aparece «Añadir envío». | [PDF preparado](TI_S2_MartinDelaCruz.pdf); pendiente cotejo de lección y autorización tardía. |
+| [S3: mapa conceptual](https://virtual.uas.edu.mx/fca/mod/assign/view.php?id=50055) | 07/09/2026, 01:00 | **13/09/2026, 23:59** | Sin entrega; no calificado. Aparece «Añadir envío». | [PDF preparado y verificado](TI_S3_MartinDelaCruz.pdf), no enviado. |
+| [S4: mapa conceptual](https://virtual.uas.edu.mx/fca/mod/assign/view.php?id=50066) | 14/09/2026, 01:00 | 20/09/2026, 23:59 | Sin entrega; no calificado; apertura futura al momento de consulta. | [Borrador PDF](TI_S4_MartinDelaCruz.pdf); pendiente cotejo con lección S4. |
+| [Producto integrador: ponencia](https://virtual.uas.edu.mx/fca/mod/assign/view.php?id=50067) | 14/09/2026, 01:00 | 20/09/2026, 23:59 | Sin entrega; no calificado; apertura futura al momento de consulta. | [Ponencia PDF](PI_MOD_MartinDelaCruz.pdf); cinco nombres tomados del reporte local, pendientes de ratificación. |
 
 **Importante:** la presencia de «Añadir envío» en S2 no acredita que una entrega tardía vaya a ser aceptada o calificada. Debe confirmarse con la asesora.
 
@@ -84,7 +84,7 @@ Las consignas de cada tarea solicitan:
 - Añadir la portada común.
 - **Arial 12 puntos e interlineado 1.5**.
 - Nomenclatura: **TI_S2_NombreApellido.pdf**; máximo 2 MB.
-- Pendiente real: no hay cuadro propio localizado ni envío registrado. Fecha vencida; confirmar recepción tardía.
+- Estado local: cuadro con diferencias, similitudes, ejemplos continuos, discontinuos y mixtos; Arial 12 e interlineado 1.5. El fundamento de Gracida está verificado. La lección S2 mostró su entrada, pero no se recorrieron sus preguntas para completar el contenido: falta ese cotejo y confirmar recepción tardía.
 
 ### S3 — Mapa sobre búsqueda y confiabilidad
 
@@ -92,14 +92,14 @@ Las consignas de cada tarea solicitan:
 - Basarse en las lecturas de la semana, sin sustituirlas únicamente por fuentes genéricas.
 - La [página de lecturas S3](https://virtual.uas.edu.mx/fca/mod/page/view.php?id=50051) identifica el material de B. Castillo sobre fuentes confiables y una liga sobre revistas arbitradas e indexadas.
 - Portada común; nomenclatura **TI_S3_NombreApellido.pdf**; máximo 2 MB.
-- Pendiente real: no hay mapa S3 localizado ni envío registrado. **Prioridad inmediata: cierre 13/09/2026 a las 23:59.**
+- Estado local: mapa, explicación y aplicación contable preparados; se leyeron Castillo y las tres páginas del recurso sobre revistas enlazado en el aula, contrastado con Latindex 2025. PDF verificado, sin envío registrado. **Prioridad inmediata: cierre 13/09/2026 a las 23:59.**
 
 ### S4 — Mapa sobre el artículo de divulgación
 
 - Representar la **estructura de un artículo de divulgación**, tomando como base la lección de la semana 4.
 - No confundir este mapa con el producto integrador ni sustituirlo por una ponencia completa.
 - Portada común; nomenclatura **TI_S4_NombreApellido.pdf**; máximo 2 MB.
-- Pendiente real: no hay mapa S4 localizado ni envío registrado.
+- Estado local: borrador con mapa, funciones de cada parte y ejemplo contable, apoyado en la guía APA del aula y una guía editorial de UNAM. La página de la lección no mostró su contenido y la liga alternativa al libro del dominio antiguo no fue consultable. **No certificar correspondencia con la lección ni presentar este borrador como finalizado.**
 
 ### Producto integrador — Ponencia administrativa
 
@@ -112,11 +112,13 @@ Las consignas de cada tarea solicitan:
 - **Arial 12 puntos** y lista de referencias **en formato APA**.
 - Nomenclatura ejemplificada por el aula: **PI_MOD_NombreApellido.pdf**; máximo 2 MB.
 - La rúbrica muestra cuatro criterios de hasta 10 puntos cada uno: cantidad de información, presentación, redacción y estilo, y formato. Para el nivel excelente exige argumentación, citas pertinentes, conclusiones fundamentadas, referencias en orden alfabético y corrección lingüística.
-- Pendiente real: no se localizó una ponencia propia terminada ni información confirmada del equipo.
+- Estado local: ponencia de diez páginas, con tema administrativo, objetivos, tesis, antecedentes, análisis, discusión, conclusiones numeradas y ocho fuentes en lista APA alfabética. Los cinco nombres proceden del reporte local previo, no de una confirmación nueva del equipo. Falta ratificar integrantes y aprobación colectiva, y cotejar el recurso de lección S4 cuando esté disponible.
 
 ## 5. Foros incluidos en Subproductos
 
 Los cuatro foros muestran **«Por hacer: Hacer publicaciones en foro: 1»**. No se certificó su cumplimiento. La consigna exige además responder al menos a un compañero; el indicador de una publicación no basta para demostrar ambas acciones.
+
+En la consulta autenticada del 13/09/2026, las cuatro discusiones aparecen con estatus **«Bloqueado»**. No se deduce de esa etiqueta la causa ni una fecha de cierre. Se prepararon los cuatro reportes con una aportación principal y una réplica condicional cada uno; no son publicaciones ni respuestas a compañeros reales. Los foros advierten que solo se evalúan aportaciones dentro de su periodo.
 
 | Foro | Pregunta central |
 |---|---|
@@ -146,8 +148,30 @@ Son foros de pregunta y respuesta; otras aportaciones pueden estar ocultas hasta
 
 ## 8. Orden recomendado de atención
 
-1. Elaborar y comprobar S3, y atender su foro con fuentes y retroalimentación, verificando el plazo específico del foro.
-2. Consultar a la asesora si admite S2 fuera de plazo y preparar su cuadro comparativo con ejemplos.
-3. Preparar S4 y confirmar los cinco integrantes del producto integrador antes de su fecha de cierre.
-4. Confirmar grupo y recursos gráficos institucionales. Conservar intacta la evidencia de S1; aplicar correcciones a una nueva versión solo si se solicita.
-5. Antes de cualquier envío: validar portada, contenido, fuentes, legibilidad del PDF, tipografía exigida, nomenclatura y tamaño. La existencia del archivo no equivale a una entrega registrada.
+1. Revisar el PDF S3 preparado y decidir su envío antes del cierre. Verificar por separado la habilitación del foro S3.
+2. Consultar a la asesora si admite S2 fuera de plazo y cotejar su lección completa con el cuadro preparado.
+3. Contrastar el borrador S4 con su lección cuando abra y ratificar los cinco integrantes de la ponencia antes del cierre.
+4. Personalizar las réplicas únicamente después de leer mensajes reales y obtener sus enlaces; confirmar la habilitación de cada foro. Conservar intacta la evidencia S1.
+5. Antes de enviar: revisar el documento final y sus metadatos. La compilación y existencia del archivo no equivalen a una entrega registrada.
+
+## 9. Productos preparados y verificación técnica
+
+| PDF local | Páginas | Bytes | Situación documental |
+|---|---:|---:|---|
+| [TI_S2_MartinDelaCruz.pdf](TI_S2_MartinDelaCruz.pdf) | 8 | 286654 | Cuadro y ejemplos preparados; cotejo de lección y recepción tardía pendientes. |
+| [TI_S3_MartinDelaCruz.pdf](TI_S3_MartinDelaCruz.pdf) | 6 | 267948 | Mapa con ambas lecturas del aula y contraste editorial; no enviado. |
+| [TI_S4_MartinDelaCruz.pdf](TI_S4_MartinDelaCruz.pdf) | 6 | 263130 | Borrador sustantivo; no certificado frente a la lección. |
+| [PI_MOD_MartinDelaCruz.pdf](PI_MOD_MartinDelaCruz.pdf) | 10 | 287311 | Ponencia preparada; equipo y revisión colectiva pendientes. |
+| [reporte-foro-S1.pdf](reporte-foro-S1.pdf) | 6 | 270001 | Aportación y réplica modelo, dos TXT incrustados. |
+| [reporte-foro-S2.pdf](reporte-foro-S2.pdf) | 5 | 263860 | Aportación y réplica modelo, dos TXT incrustados. |
+| [reporte-foro-S3.pdf](reporte-foro-S3.pdf) | 5 | 262036 | Aportación y réplica modelo, dos TXT incrustados. |
+| [reporte-foro-S4.pdf](reporte-foro-S4.pdf) | 5 | 249667 | Aportación y réplica modelo, dos TXT incrustados. |
+
+- Compilación reproducible con [compilar-pendientes.sh](compilar-pendientes.sh): LuaLaTeX y Biber, sin citas indefinidas ni cajas desbordadas; todos los PDF menores a 2 000 000 bytes.
+- Arial 12 comprobada en el texto, los títulos y las portadas de S2 y la ponencia mediante extracción de fuentes del PDF; S2 conserva interlineado 1.5. Los símbolos matemáticos de S2 utilizan la fuente matemática de LaTeX al mismo tamaño.
+- Ocho TXT extraídos de los cuatro PDF y comparados byte a byte con sus originales. Las cajas incluyen acceso al adjunto; no se promete que un visor copie automáticamente al portapapeles.
+- Inspección visual de portadas, mapas, cuadro comparativo y una página de cajas de foro, además de lectura de contenido y referencias. No equivale a una evaluación oficial ni a una inspección visual exhaustiva de todas las páginas.
+- Cita textual de la ponencia cotejada en la página impresa 67 del artículo de Rico Martínez y colaboradores de 2024. Las ocho fuentes disciplinares están en el corpus local; esto no convierte la propuesta documental en una investigación empírica.
+- [Registro de fuentes y huellas](referencias-investigacion-aplicada-a-la-contaduria/actividades-semanales/README.md). Las tres lecturas PDF locales coinciden con Moodle por SHA-256.
+
+La [base compartida](plantillas/uas-base.tex) y la [plantilla ForoBox](plantillas/plantilla-forobox-uas.tex) son reutilizables. Las plantillas antiguas S3/S4 no deben confundirse con los nuevos productos desarrollados. El alcance sigue limitado a Subproductos, foros y ponencia; no certifica lecciones, autoevaluaciones ni el avance total del curso.

@@ -2,6 +2,14 @@
 
 Sistema documental y de plantillas para la asignatura **Investigación aplicada a la contaduría**, de la **Licenciatura en Contaduría**, Universidad Autónoma de Sinaloa (UAS).
 
+## Productos revisados el 13/09/2026
+
+El [informe de cumplimiento](REVISION-CUMPLIMIENTO-2026-09-13.md) contiene el índice de los ocho PDF preparados: S2, S3, borrador S4, ponencia y foros S1–S4 con dos textos adjuntos cada uno. Ninguno de estos nuevos productos se ha enviado desde esta revisión. S1 conserva su entrega calificada original.
+
+**Prioridad:** S3 cierra el 13/09/2026 a las 23:59 según Moodle. S4 requiere cotejar la lección; S2, confirmar recepción tardía y cotejar su lección; la ponencia, ratificar el equipo. Los cuatro foros aparecen bloqueados y las réplicas siguen siendo modelos condicionales.
+
+Desde esta carpeta, ejecutar `bash compilar-pendientes.sh`. Véanse las [instrucciones de compilación](COMPILACION-investigacion-aplicada-a-la-contaduria.md) y el [registro de fuentes](referencias-investigacion-aplicada-a-la-contaduria/actividades-semanales/README.md).
+
 ## Estado de metadatos
 
 | Campo | Valor |
