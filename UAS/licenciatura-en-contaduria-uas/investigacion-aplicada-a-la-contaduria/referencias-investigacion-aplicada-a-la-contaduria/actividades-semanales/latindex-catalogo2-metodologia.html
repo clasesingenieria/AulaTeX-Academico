@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Latindex - Sistema regional de información en línea para Revistas científicas de América Latina, el Caribe, España y Portugal</title>
+    <meta name="description" content="Latindex es producto de la cooperación de una red de instituciones. Incluye revistas de investigación científica, técnico-profesionales y de divulgación científica y cultural que se editan en América Latina, el Caribe, España y Portugal. Además, ofrece información sobre revistas con contenidos iberoamericanistas editadas en cualquier parte del mundo.">
+    <meta name="keywords" content="Revistas, Investigación científica, Técnico-profesionales, Divulgación científica, cultural">
+
+    <!-- Bootstrap -->
+    <link href="https://www.latindex.org/latindex/css/bootstrap-4.4.1.css" rel="stylesheet">
+  	<!--FontAwesome-->
+  	<link href="https://www.latindex.org/latindex/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="https://www.latindex.org/latindex/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="https://www.latindex.org/latindex/fontawesome/css/solid.css" rel="stylesheet">
+  	<!--Estilos exclusivos de Latindex-->
+  	<link href="https://www.latindex.org/latindex/css/styles_latindex.css " rel="stylesheet" type="text/css">
+    <link href="https://www.latindex.org/latindex/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="https://www.latindex.org/latindex/css/tooltip.css" rel="stylesheet" type="text/css"/>
+    <!--FAVICON-->
+    <link rel="shortcut icon" type="images/jpg" href="https://www.latindex.org/latindex/images/favicon.ico"/>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script src="https://www.latindex.org/latindex/js/jquery-3.4.1.min.js "></script>
+    <!-- Javascript internos --> 
+          </head>
+  <body>
+  <div class="container-fluid Zone_additional_features">
+    <div class="Container_languageOthers">
+      <!--Zona para redes sociales a mano izquierda-->
+      <div class="Zone-RdSoc">
+        <ul class="redes_sociales">
+          <span class="title">Síguenos en:</span>
+          <li>
+            <a href="https://www.facebook.com/Latindex.org" target="_blank" class="RedSoc_rev rds-face"><i class="fab fa-facebook-square"></i></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@Latindex97/" target="_blank" class="RedSoc_rev rds-youtube"><i class="fab fa-youtube-square"></i></a>
+          </li>
+          <li class="ico-sup-X-ltndx">
+            <a href="https://twitter.com/latindex" target="_blank"><img src="https://www.latindex.org/latindex/images/icono-X.png" alt="Icono de la red social X de Latindex"/></a>
+          </li>      
+        </ul>
+      </div>
+      <!--Zona para FAQ's, Ayuda, Contacto e Idioma a mano derecha-->
+      <div class="Zone-Others">
+        <div class="container_language">
+          <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle btn-language" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Idioma
+          </button>
+          <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+              <!-- Spanish (reset) -->
+              <a class="dropdown-item w-auto cursor-pointer" 
+                href="https://www.latindex.org/latindex/lang/es" 
+                onclick="switchLanguage(event, 'reset', this.href)">
+                  <img src="https://flagcdn.com/w20/es.png" title="Español">
+                  Español
+              </a>
+
+              <!-- English -->
+              <a class="dropdown-item w-auto cursor-pointer" 
+                href="https://www.latindex.org/latindex/lang/en" 
+                onclick="switchLanguage(event, 'es|en', this.href)">
+                  <img src="https://flagcdn.com/w20/gb.png" title="Inglés">
+                  Inglés
+              </a>
+
+              <!-- Portuguese -->
+              <a class="dropdown-item w-auto cursor-pointer" 
+                href="https://www.latindex.org/latindex/lang/pt" 
+                onclick="switchLanguage(event, 'es|pt', this.href)">
+                  <img src="https://flagcdn.com/w20/pt.png" title="Português">
+                  Portugués
+              </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid Zone_Head">
+    <div class="ZoneControl-Head">
+      <div class="Zone_logoLeft"><a href="https://www.latindex.org/latindex/inicio"><img src="https://www.latindex.org/latindex/images/logo_latindex.png" class="img-fluid" alt="Logo Latindex"></a></div>
+      <div class="Zone_tit_right"><h1>Sistema Regional de Información<br>
+        en línea para Revistas Científicas de América Latina,<br>
+        el Caribe, España y Portugal</h1></div>
+      <div class="Zone_issn notranslate"><p>ISSN: 2310-2799</p></div>
+    </div>
+  </div>
+  <div class="container-fluid menu_sup">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gray">
+     <!--<a class="navbar-brand" href="#">Navbar</a>-->
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="https://www.latindex.org/latindex/inicio"><i class="fa fa-home red-color-lat" aria-hidden="true"></i> <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle notranslate" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Quiénes somos</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="https://www.latindex.org/latindex/nosotros/descripcion">Descripción</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://www.latindex.org/latindex/nosotros/latindexHoy">Latindex hoy</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://www.latindex.org/latindex/nosotros/productos">Productos</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://www.latindex.org/latindex/nosotros/antecedentes">Antecedentes</a>
+              </div>            
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Red Latindex
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="https://www.latindex.org/latindex/redLatindex/institucionesAsociadas">Instituciones asociadas</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://www.latindex.org/latindex/redLatindex/coordinadores">Coordinadores</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://www.latindex.org/latindex/redLatindex/ingresoInstitucional">Ingreso institucional</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://www.latindex.org/latindex/redLatindex/institucionesCooperantes">Instituciones cooperantes</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Postulación</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="https://www.latindex.org/latindex/postulacion/registroDirectorio">Registro en el directorio</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://www.latindex.org/latindex/editores/formEditores">Formularios de registro y actualización en Directorio</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://www.latindex.org/latindex/postulacion/postulacionCatalogo">Metodología del Catálogo 2.0</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://www.latindex.org/latindex/postulacion/catalogo/versiones">Versiones del Catálogo 2.0</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://www.latindex.org/latindex/postulacion/catalogo/formulario">Formulario de postulación y recalificación al Catálogo 2.0</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://www.latindex.org/latindex/postulacion/logotipos">Uso de logotipos de Latindex</a>
+              </div>            
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Para editores</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="https://www.latindex.org/latindex/editores/materialTalleresVideoconferencias">Materiales de talleres y videoconferencias</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://www.latindex.org/latindex/editores/librosMateriales">Libros y otros materiales</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://www.latindex.org/latindex/editores/registroUsoISSN">Registro y uso del ISSN</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://www.latindex.org/latindex/editores/documentosLatindex">Documentos de Latindex</a>
+              </div>    
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mailto:latindex@unam.mx" role="button">Contacto</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+  </div>
+  <!--contenedor para el resto de la página-->
+  <!--<div class="container">-->
+
+      <div class="container-fluid search_princ-internal">
+	<div class="row container_SearchPrincInternal">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 elments_Search-internal">
+			<form action="https://www.latindex.org/latindex/Solr/Busqueda" method="GET" name="solar">
+				<div class="optionsSearchInternal">
+					<span class="tit_SearchInternal">Buscar en</span>
+					<div class="form-group form-check-inline">
+						<input type="radio" class="form-check-input checkbox-searchinternal" 
+						name="idModBus" id="defaultCheck1" checked="checked" 
+						value="0" >
+						<label class="form-check-label choiceSearch" for="defaultCheck1">Directorio</label>
+					</div>
+					<div class="form-group form-check-inline">
+						<input type="radio" class="form-check-input checkbox-searchinternal" 
+						name="idModBus" id="defaultCheck2"
+						value="1" >
+						<label class="form-check-label choiceSearch" for="defaultCheck2">Catálogo 2.0</label>
+					</div>
+					<!-- INICIO Búsqueda de artículos -->
+					<div class="form-group form-check-inline">
+						<input type="radio" class="form-check-input checkbox-searchinternal" 
+						name="idModBus" id="defaultCheck3"
+						value="3" >
+						<label class="form-check-label choiceSearch" for="defaultCheck3">Artículos</label>
+					</div>
+					<!--FIN Búsqueda de artículos -->
+				</div>
+				<div class="input-group box-search-princ">
+					<input name="buscar" type="text" class="form-control" placeholder="Buscar por título vigente, ISSN o término"
+					value="">
+					<span class="input-group-btn icon_glass">
+						<button class="btn btn-default searchGrl" type="submit" name="submit" value="Buscar" >
+							<i class="fas fa-search"></i>
+						</button>
+						
+					</span>
+				</div>
+				<div class="SearchExacInternal">
+					<div class="form-group form-check-inline">
+						<input type="checkbox" class="form-check-input checkbox-searchinternal" 
+							value="1" name="busqueda_exc" id="defaultCheck5">
+						<label class="form-check-label choiceExactSearch" for="defaultCheck4">Búsqueda exacta</label>
+					</div>
+				</div>
+				<!-- Cloudflare Turnstile -->
+				<div class="cf-turnstile" data-sitekey="0x4AAAAAAEQI_oIgP5NYad-L" data-size="invisible"></div>
+			</form>
+			<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+		</div>
+
+
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 botoneraSearch-internal">
+			<div class="btn-group-vertical botonera-search-internal">
+				<span class="tit_MoreSearch-internal">Búsqueda</span>
+				<div id="menu-botoneraSearchInternal">
+					<ul>
+						<li class="has-sub btnMore-search2">
+							<a href="https://www.latindex.org/latindex/bAvanzada">Avanzada&nbsp;<i class="fas fa-angle-double-right"></i></a>
+						</li>
+						<li class="has-sub btnMore-search2">
+							<a href="https://www.latindex.org/latindex/indices">Categorías&nbsp;<i class="fas fa-angle-double-right"></i></a>
+						</li>
+						<li class="has-sub btnMore-search2">
+							<a href="https://www.latindex.org/latindex/bAvanCatalogo">Características&nbsp;<i class="fas fa-angle-double-right"></i></a>
+						</li>
+						<li class="has-sub btnMore-search2">
+							<a href="https://www.latindex.org/latindex/graficas">Indicadores&nbsp;<i class="fas fa-angle-double-right"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="container-fluid Container-content">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <div class="Zone-allContent"><!--Dentro de este div deberá ir cualquier contenido Zone-allContent--> 
+
+        <ul class="breadcrumb">
+  <li><a href="https://www.latindex.org/latindex/inicio">Inicio</a></li>
+  <li>Postulación</li>
+  <li>Metodología del Catálogo 2.0</li>
+</ul>
+
+<div class="Zone-titsection">
+  <h2 class="titSection">Metodología del Catálogo 2.0</h2>
+</div>
+<h3>CARACTERÍSTICAS DE CALIDAD DEL CATÁLOGO 2.0 (Metodología)</h3>
+  <p class="txt-right"><em>Versión 8</em>, <b>18 de junio de 2025</b></p>
+
+  <p class="txt-left"><b>Introducción</b></p>
+  
+  <p>
+    Este documento contiene las políticas de calificación de revistas para su ingreso al Catálogo 2.0 de Latindex. Su objetivo es orientar a las personas editoras sobre los requisitos de postulación, la metodología de aplicación y la forma como se califican las 38 características de calidad editorial que contiene.
+  </p>
+  <p>
+  <b>La versión 2.0 se aplica únicamente a revistas en línea.</b> Esta nueva versión es efectiva desde octubre de 2018 y sustituye al Catálogo 1.0, aplicado a revistas impresas y en línea desde el año 2002 hasta 2017.
+  </p>
+  <p>
+  Cada centro nacional es responsable del proceso de calificación de revistas en línea editadas en su propio país, siempre basado en la presente metodología. Los centros nacionales pueden basarse en listas de revistas proporcionadas por sistemas nacionales de clasificación o a través de las postulaciones recibidas en:  <a href="https://www.latindex.org/latindex/postulacion/catalogo/formulario" target="_blank">https://www.latindex.org/latindex/postulacion/catalogo/formulario</a>.
+  </p>
+  <p>
+  El número de revistas pertenecientes al Catálogo 2.0 que se muestra en el sitio web irá variando conforme avance el trabajo en cada país participante. 
+  </p>
+  <p>
+    Las títulos de las revistas que formaron parte del Catálogo 1.0 (2002-2017) están disponibles para consulta en el sitio web de Latindex, en los siguientes enlaces: <a href="https://www.latindex.org/latindex/documentos/pdfs/Revistas_impresas_incluidas_en_Catalogo_v1.0_(2002-2017).pdf" target="_blank">https://www.latindex.org/latindex/documentos/pdfs/Revistas_impresas_incluidas_en_Catalogo_v1.0_(2002-2017).pdf</a> y <a href="https://www.latindex.org/latindex/documentos/pdfs/Revistas_en_linea_incluidas_en_Catalogo_v1.0(2002-2017).pdf" target="_blank">https://www.latindex.org/latindex/documentos/pdfs/Revistas_en_linea_incluidas_en_Catalogo_v1.0(2002-2017).pdf</a>
+  </p>
+  <p>
+  Cada una de las características que conforman el Catálogo 2.0 de Latindex se comprueba únicamente con la información visible y consultable en el sitio web institucional u oficial de la revista. Se considera sitio web institucional el que está bajo responsabilidad directa de la entidad editora de la revista. Se considera <i>sitio web oficial</i> aquel que, por encargo de la institución editora, es administrado por otras organizaciones o empresas para la gestión, edición y acceso completo a los contenidos de la revista. Se entiende que en los <i>sitios web oficiales</i> los contenidos continúan siendo responsabilidad de la entidad editora. Los sitios web oficiales serán considerados para calificación únicamente cuando la revista no cuente, al momento de la calificación, con un sitio web institucional o éste no se encuentre actualizado. Tanto los sitios web institucionales, como los oficiales, podrán estar dedicados a una sola revista o ser parte de un portal integrado por varias revistas.
+  </p>
+  <p>
+  Con este enfoque Latindex busca impulsar la profesionalización de los equipos editoriales institucionales para que las revistas no dependan de iniciativas externas y sean capaces de generar servicios y atender a los usuarios con base en sus propias políticas. De esta manera las instituciones responsables tienen libertad para integrar servicios que les sean de interés, mejorar su posicionamiento web (al publicar desde su propio dominio web), así como formar recursos humanos locales para impulsar dichas tareas.
+  </p>
+  <p>
+  Con la versión 2.0 se consolida al Catálogo como referencia confiable de revistas de alta calidad académica, al tiempo que brinda un compendio de buenas prácticas editoriales. En su metodología de calificación, el Catálogo 2.0 privilegia las revistas de acceso abierto no comercial, es decir, aquellas que no cobran ni por leer, ni por publicar.
+  </p>     
+
+  
+   <!--HASTA aquí -->
+
+    <h4 class="titnormal">Requisitos de postulación</h4>
+    <ol>
+      <li>Para ser calificada, la revista deben tener <b>dos años de antigüedad</b> en su versión en línea y estar vigentes al momento de la calificación.</li>
+      <li>La revista debe tener un <b>sitio web institucional u oficial</b> dedicado, donde se hará la comprobación del cumplimiento de cada una de las características.</li>
+      <li>El sitio web de la revista debe permitir el <b>acceso libre a todos los contenidos</b>. Esto significa que la nueva lista de criterios no puede ser aplicada a revistas de acceso restringido.</li>
+      <li>No se calificarán revistas digitalizadas en un solo archivo PDF en el que se integren todos los documentos o artículos publicados (comúnmente denominado “de capa a capa”). Cada artículo publicado debe ser consultado de manera independiente.</li>
+      <li>Las revistas editadas por instituciones comerciales, instituciones privadas y editores independientes, así como las que apliquen cargos de cualquier naturaleza, no serán calificadas al Catálogo a menos que estén indizadas en el Directory of Open Access Journals (DOAJ) o en SciELO al momento de su postulación o recalificación. Este requisito también aplica a revistas vinculadas con congresos, talleres u otras actividades académicas que impliquen algún tipo de cargo. Asimismo, incluye aquellas que establecen tarifas diferenciadas, como pagos por revisión acelerada, límites en la cantidad de autores o beneficios económicos para ciertas empresas. Las revistas no deberán ocultar o minimizar información sobre cargos o tarifas asociados a la publicación; deben explicar para qué son las tarifas y en qué momento del proceso se cobrarán. Las revistas que no cobren cargos de ningún tipo también deberán declararlo, así como informar si piensan establecer cargos a futuro. </li>
+      <li>No se calificará o recalificará una revista si presenta malas prácticas o un conjunto de rasgos típicos de las publicaciones espurias, documentados en <a href="https://www.latindex.org/lat/documentos/Revistas_espurias-Guia_para_editores_definitiva.pdf" target="_blank">Identificación y tratamiento de revistas espurias. Guía para editores</a>, hasta que el Comité de Revisión de Revistas Espurias referido en la Guía emita un dictamen previo a la calificación. </li>
+    </ol>
+    
+  <h4 class="titnormal">Metodología de aplicación</h4>
+  <ol>
+    <li>La calificación se aplicará únicamente en el sitio web institucional u oficial de la revista. Para la calificación no se utilizarán las versiones en línea disponibles en plataformas que agregan contenidos de revistas editadas en diferentes instituciones o países, y que aplican políticas de permanencia, ya que por esta razón el acceso a los contenidos no está asegurado a largo plazo.</li>
+    <li>Cada característica cumplida equivale a <b>un punto</b>. Para ingresar al Catálogo la revista debe cumplir las siete características básicas obligatorias y al menos 23 de las restantes características para un mínimo de 30, lo que representa el 80% de cumplimiento.</li>
+    <li>La comprobación de las características se realiza sobre un solo número, el más reciente, excepto para aquellas características en las que se considere necesario un mayor número de fascículos para comprobar su cumplimiento consistente. Los números extraordinarios o especiales no serán calificados.</li>
+    <li>Para disponer de información completa del proceso de calificación, todas las características son corroboradas y calificadas. Sin embargo, un centro nacional puede decidir no completar la calificación si una revista falla en una de las siete características obligatorias, en cuyo caso no se grabará la calificación en el sistema de ingreso de datos.</li>
+    <li>Todas las calificaciones son públicas: las aprobatorias y las no aprobatorias. Si un centro de acopio determina no hacer públicas las calificaciones reprobatorias, deberá utilizar un formulario para realizar calificaciones fuera de línea.</li>
+    <li>Cada centro nacional informará a las personas editoras sobre los procesos de recalificación o revisión en el Catálogo 2.0, de sus revistas. <strong>Las  recalificaciones podrán ser solicitadas hasta un año después de la fecha de la última calificación.</strong></li>
+    <li>Cada centro nacional podrá hacer revisiones periódicas de las revistas ingresadas al Catálogo para comprobar que siguen cumpliendo con sus normas y criterios.</li>
+    <li>Un centro nacional podrá revisar y modificar la calificación en cualquier momento si detecta que la revista incurre en malas prácticas o prácticas que son características de publicaciones espurias.</li>
+    <li>Asimismo, cada centro nacional podrá solicitar el apoyo de un Comité de Revisión, formado ad hoc, cuando considere que requiere asesoría para emitir o revisar una calificación; en este caso, el Comité de Revisión podrá tomar el tiempo que considere necesario para emitir su opinión. Si en la revisión se detecta la falla en el cumplimiento de una característica obligatoria, la revista pierde su registro en el Catálogo a partir de la fecha de revisión.</li>
+    <li>Si el centro nacional detecta malas prácticas o rasgos típicos de las publicaciones espurias en una revista, la remitirá al Comité de Revisión de Revistas Espurias para su revisión y dictamen.</li>
+    <li>En caso de que finalmente se considere que la revista o su editor infringen la ética y las buenas prácticas editoriales, la revista no podrá postularse nuevamente al Catálogo hasta transcurrido un periodo de cinco años.</li>
+  </ol>
+  <h4 class="titnormal">Catálogo 2.0<br>
+Listado de características</h4>
+  <table border="1" class="table-interiores table-striped">
+    <thead>
+                <tr>
+                  <th scope="col">CARACTERÍSTICAS BÁSICAS</th>
+                </tr>
+              </thead>
+    <tbody>
+      <tr>
+        <td>1. Responsables editoriales</td>
+      </tr>
+      <tr>
+        <td>2. Generación continua de contenidos</td>
+      </tr>
+      <tr>
+        <td class="notranslate">3.&nbsp;Identificación de la autoría</td>
+      </tr>
+      <tr>
+        <td class="notranslate">4.&nbsp;Entidad editora de la revista</td>
+      </tr>
+      <tr>
+        <td>5. Instrucciones para publicar </td>
+      </tr>
+      <tr>
+        <td>6. Sistema de arbitraje</td>
+      </tr>
+      <tr>
+        <td>7. ISSN</td>
+      </tr>
+      <tr>
+        <td class="simulaTit">CARACTERÍSTICAS DE PRESENTACIÓN</td>
+      </tr>
+      <tr>
+        <td>8. Navegación y funcionalidad en el acceso a contenidos</td>
+      </tr>
+      <tr>
+        <td>9. Acceso histórico al contenido </td>
+      </tr>
+      <tr>
+        <td>10. Mención de periodicidad</td>
+      </tr>
+      <tr>
+        <td>11. Membrete bibliográfico al inicio del artículo</td>
+      </tr>
+      <tr>
+        <td>12. Afiliación institucional de los miembros de los cuerpos editoriales</td>
+      </tr>
+      <tr>
+        <td>13. Afiliación de las personas autoras</td>
+      </tr>
+      <tr>
+        <td>14. Fechas de recepción y aceptación de originales</td>
+      </tr>
+      <tr>
+        <td class="simulaTit">CARACTERÍSTICAS DE GESTIÓN Y POLÍTICA EDITORIAL</td>
+      </tr>
+      <tr>
+        <td>15. Definición de la revista</td>
+      </tr>
+      <tr>
+        <td>16. Documentos con autoría externa</td>
+      </tr>
+      <tr>
+        <td class="notranslate">17.&nbsp;Apertura editorial</td>
+      </tr>
+      <tr>
+        <td>18. Servicios de información </td>
+      </tr>
+      <tr>
+        <td class="notranslate">19.&nbsp;Cumplimiento de periodicidad</td>
+      </tr>
+      <tr>
+        <td>20. Políticas de acceso y reuso</td>
+      </tr>
+      <tr>
+        <td>21. Código de ética</td>
+      </tr>
+      <tr>
+        <td>22. Detección de plagio</td>
+      </tr>
+      <tr>
+        <td class="simulaTit">CARACTERÍSTICAS DE CONTENIDO</td>
+      </tr>
+      <tr>
+        <td>23. Contenido original</td>
+      </tr>
+      <tr>
+        <td>24. Referencias bibliográficas adoptando una norma</td>
+      </tr>
+      <tr>
+        <td>25. Exigencia de originalidad</td>
+      </tr>
+      <tr>
+        <td>26. Resumen </td>
+      </tr>
+      <tr>
+        <td>27. Resumen en dos idiomas </td>
+      </tr>
+      <tr>
+        <td>28. Palabras clave</td>
+      </tr>
+      <tr>
+        <td>29. Palabras clave en dos idiomas </td>
+      </tr>
+      <tr>
+        <td>30. Cantidad de artículos publicados por año</td>
+      </tr>
+      <tr>
+        <td class="simulaTit">CARACTERÍSTICAS DE REVISTAS EN LÍNEA</td>
+      </tr>
+      <tr>
+        <td>31. Uso de protocolos de interoperabilidad</td>
+      </tr>
+      <tr>
+        <td>32. Uso de diferentes formatos de edición </td>
+      </tr>
+      <tr>
+        <td>33. Servicios de valor agregado </td>
+      </tr>
+      <tr>
+        <td>34. Servicios de interactividad con la persona lectora</td>
+      </tr>
+      <tr>
+        <td>35. Buscadores</td>
+      </tr>
+      <tr>
+        <td>36. Uso de identificadores uniformes de recursos</td>
+      </tr>
+      <tr>
+        <td>37. Uso de estadísticas</td>
+      </tr>
+      <tr>
+        <td>38. Políticas de preservación digital</td>
+      </tr>
+                  <tr class="totalCaract-Content">
+                      <td class="totalCaract"><h4 class="titnormal">Descripción de las características<br>
+    <span>Total de características: 38</span></h4></td>
+                  </tr>
+    </tbody>
+  </table>
+  
+  <h4 class="titnormal">CARACTERÍSTICAS BÁSICAS<br>
+  <span class="line-txt">Total de características: 7, <u>todas obligatorias</u></span></h4>
+  <ol>
+    <li><strong>Responsables editoriales</strong> <br>
+                  La revista debe mencionar el nombre de la persona editora responsable científica y los nombres de las personas que conforman los cuerpos editoriales (comité editorial, consejo editorial, consejo de redacción u otras denominaciones). Los miembros de los cuerpos editoriales deberán aparecer listados por su nombre. Para calificar será indispensable que se cumpla con todos estos requerimientos y que la información sea visible en el sitio web. 
+    <div class="gap"></div>
+    <em>Nota de aplicación: En todos los casos debe tener el nombre completo y mencionar quién es el responsable científico.</em>
+      <div class="img-list">
+        <h5 class="foot-picture">Cuadro 1.</h5>
+      <img src="../images/img-cuadro01.png" alt="Cuadro 1. Esquema de los cuerpos editoriales"/>
+      </div>
+<div class="gap"></div> 
+  </li>
+    <li><strong>Generación continua de contenidos</strong><br>
+      La revista debe demostrar la generación ininterrumpida de nuevos contenidos durante los últimos dos años consecutivos, conforme la periodicidad declarada.
+      <div class="gap"></div>
+      <em>Nota de aplicación: Si la revista tiene menos de dos años de publicarse no calificará para el Catálogo Latindex. Si la revista presenta atrasos en la publicación del último año, debió publicar correctamente el año anterior con respecto a su periodicidad. Si la revista no publicó un nuevo fascículo desde su última calificación no podrá ser calificada de nuevo. Esta característica deberá ser corroborada en los tres últimos fascículos publicados.</em>
+      <div class="gap"></div>
+      <em>Para que una nueva revista sea tomada en cuenta para calificación, debe cumplir la siguiente cantidad de fascículos:</em>
+      <div class="gap"></div>
+      <ol>
+        <li><em>si es mensual, se puede realizar la calificación a partir del fascículo 25.</em></li>
+        <li><em>si es bimestral se puede realizar la calificación a partir del fascículo 13.</em></li>
+        <li><em>si es trimestral, se puede realizar la calificación a partir del fascículo 9.</em></li>
+        <li><em>si es cuatrimestral, se puede realizar la calificación a partir del fascículo 7.</em></li>
+        <li><em>si es semestral o bianual se puede realizar la calificación a partir del fascículo 5.</em></li>
+        <li><em>si es anual, se puede realizar la calificación a partir del fascículo 3 (a partir del tercer año de existencia)</em></li>
+        <li><em>si es bienal, se puede realizar la calificación a partir del fascículo 3 (seis años después de la publicación del primer fascículo)</em></li>
+      </ol>
+      <div class="gap"></div>
+  </li>
+    <li><span class="notranslate"><strong>Identificación de la autoría</strong></span><br>
+Todos los documentos publicados en la revista deben estar firmados por las personas autoras o tener declaración de autoría institucional o indicar su origen.</li>
+    <div class="gap"></div>
+    <em>Nota de aplicación: la identificación de la autoría personal o institucional sólo será obligatoria en los artículos originales de investigación, de revisión o de opinión, así como en ensayos, casos clínicos o notas técnicas. Se recomienda asimismo el uso de identificadores persistentes como el ORCID que sirve para identificar unívocamente a los autores.</em>
+    <div class="gap"></div>
+    <li><span class="notranslate"><strong>Entidad editora de la revista</strong></span><br>
+    Deberá aportarse en lugar visible el nombre de la entidad o institución editora de la revista, la cual deberá ser de toda solvencia académica, así como su dirección postal completa y de correo electrónico. La entidad editora no deberá incurrir en malas prácticas típicas de las revistas denominadas espurias, depredadoras o fraudulentas, descritas en la <a href="https://www.latindex.org/lat/documentos/Revistas_espurias-Guia_para_editores_definitiva.pdf" target="_blank">Guía para editores</a>. Asimismo, las revistas que publique la entidad editora, cuando apliquen cargos, deberán cumplir el numeral 5 de los requisitos de postulación de esta metodología. 
+    <div class="gap"></div>
+    <em>Nota de aplicación:  La entidad editora es la institución que edita la revista, tomando en cuenta el más alto nivel de la afiliación, por ejemplo, una universidad (no sus facultades o institutos). Sus coediciones deberán ser explícitas, y sus respectivas contribuciones en cada etapa del proceso editorial deberán ser declaradas. Entiéndase solvencia académica como la certificación o grado académico del responsable científico y de los miembros de los cuerpos editoriales que demuestre su peso en el área de estudio, aplicando tanto a instituciones u organismos editores, como a personas que fungen como entidad editora. No se dará por cumplida esta característica cuando haya falta de información sobre la entidad editora, por ser éste un indicio de mala práctica.</em> </li>
+    <div class="gap"></div>
+    <li><strong>Instrucciones para publicar</strong> <br>
+Estas instrucciones deben aparecer siempre en el sitio web de la revista.</li>
+    <div class="gap"></div>
+    <li><strong>Sistema de arbitraje</strong><br>
+En la revista debe detallarse el procedimiento empleado para la selección de los artículos a publicar. El arbitraje deberá ser externo a la revista e indicar el tipo de revisión. Se pondrá especial atención al tiempo que toma el proceso de revisión y aceptación. Se recomienda incluir la instancia responsable de la decisión final.
+    <div class="gap"></div>
+    <em>Nota de aplicación: se verificará que se incluya cada uno de los pasos que deben cumplir los artículos para ser aceptados por la revista para su publicación. Se aceptará como arbitraje externo el realizado por miembros de comités o cuerpos editoriales asesores permanentes de la revista. No se considerará como arbitraje externo el realizado por el equipo interno de trabajo de la revista, es decir, el equipo técnico y las autoridades de la organización editora. El tipo de revisión aplicado podrá ser ciego (doble o simple), en línea o abierto (interactividad con los árbitros y lectores en general). No se dará por cumplida esta característica cuando al verificar el sitio web se detecten indicios claros o suficientes de que el sistema de arbitraje no se realiza del modo en que se declara.</em> </li>
+    <div class="gap"></div>
+    <li><strong>ISSN</strong> <br>
+Las revistas en línea deben contar con su propio ISSN digital. No se da por cumplido si aparece únicamente el ISSN para la versión impresa de la revista.
+      <div class="gap"></div>
+      <strong>CARACTERÍSTICAS DE PRESENTACIÓN</strong> <br>
+            <em>Total de características: 7</em></li>
+    <div class="gap"></div>
+    <li><strong>Navegación y funcionalidad en el acceso a contenidos</strong><br>
+Debe contar con sumarios, tablas de contenido o una estructura que permita el acceso a los artículos en un máximo de tres clics desde su página principal.
+      <div class="gap"></div>
+                <em>Nota de aplicación: los tres clics se empiezan a contar a partir de la página inicial del sitio web de la revista.</em></li>
+    <div class="gap"></div>
+    <li><strong>Acceso histórico al contenido</strong><br>
+La revista debe facilitar el acceso a todos sus contenidos o al menos a los publicados durante los últimos <em>cinco</em> años.
+<div class="gap"></div>
+                <em>Nota de aplicación: Si la revista tiene menos años, el acceso debe darse a los años de existencia.</em></li>
+     <div class="gap"></div>
+    <li><strong>Mención de periodicidad</strong><br>
+La revista debe mencionar su periodicidad, el número de fascículos que editará al año o en su caso, la declaración de publicación continua. En todos los casos debe incluir las fechas que cubre.
+      <div class="gap"></div>
+              <em>Nota de aplicación: “Las fechas que cubre” es el periodo que corresponde a cada fascículo publicado. Ejemplo: 2 (1) enero-julio 2023. Si es una revista anual es válido decir: Publica cada diciembre con una periodicidad anual. En el caso de que la revista adopte la modalidad de publicación continua, deberá declarar la fecha de publicación de cada artículo y los períodos de sus fascículos.</em></li>
+    <div class="gap"></div>
+    <li><strong>Membrete bibliográfico al inicio del artículo</strong><br>
+La revista debe incluir el membrete bibliográfico al inicio o al final de la página inicial de cada artículo. El membrete debe contener al menos: título completo o abreviado de la revista, fecha que cubre y la numeración de la revista (volumen, número, parte o sus equivalentes).
+      <div class="gap"></div>
+                <em>Nota de aplicación: Si falta alguno de estos elementos no califica para este criterio. El membrete debe estar presente en todos los formatos de lectura. En revistas que incluyen una portada al artículo, si el membrete aparece solamente en dicha portada no se da por cumplido el criterio.</em></li>
+    <div class="gap"></div>
+    <li><strong>Afiliación institucional de los miembros de los cuerpos editoriales</strong><br>
+La revista debe proporcionar los nombres completos de las instituciones a las que están adscritos los miembros de los diferentes cuerpos editoriales o en su caso declaración de trabajador independiente. No basta que se indique solamente el país.
+      <div class="gap"></div>
+                <em>Nota de aplicación: En la mención de la afiliación es obligatorio el uso del nombre completo de la institución. Cada afiliación debe incluir el país de la institución. En caso de no contar con afiliación debe indicar “trabajador independiente”, “investigador independiente” o equivalente.</em></li>
+    <div class="gap"></div>
+    <li><strong>Afiliación de las personas autoras</strong><br>
+En cada documento deberá constar el nombre completo de la institución de trabajo de la persona autora, o en su caso, la declaración de persona trabajadora independiente.
+      <div class="gap"></div>
+                <em>Nota de aplicación: En la mención de la afiliación de las personas autoras es obligatorio el uso del nombre completo de la institución. Cada afiliación debe incluir ciudad y país de la institución. En caso de no contar con afiliación debe indicar “trabajador independiente”, “investigador independiente” o equivalente. Cada autor debe tener su afiliación institucional y debe ser fácil de reconocer en todos los casos. Si para algún autor no se puede reconocer su afiliación se perderá este criterio. Se recomienda asimismo el uso de identificadores persistentes como el ROR (Research Organization Registry) para las instituciones.</em></li>
+    <div class="gap"></div>
+    <li><strong>Fechas de recepción y aceptación de originales</strong><br>
+En los artículos originales, de revisión, ensayos, casos clínicos y notas técnicas, deben constar las fechas de recepción y aceptación de originales. Califica solamente si indican ambas fechas.
+      <div class="gap"></div>
+      <em>
+        Nota de aplicación: Las fechas deben tener la información completa, incluyendo día, mes y año. Esta característica no se dará por cumplida si la fecha de aceptación es antes de la fecha de recepción o se utilizan fechas inexistentes.
+      </em>
+      <div class="gap"></div>
+            <strong>CARACTERÍSTICAS DE GESTIÓN Y POLÍTICA EDITORIAL</strong><br>
+            <em>Total de características: 8</em></li>
+    <div class="gap"></div>
+    <li><strong>Definición de la revista</strong><br>
+En la página de la revista deberá mencionarse el objetivo, su cobertura temática y el público al que va dirigida.
+                  <div class="gap"></div>
+<em>Nota de aplicación: Si no se incluyen los tres elementos, el punto no se otorga.</em></li>
+    <div class="gap"></div>
+    <li><strong>Documentos con autoría externa</strong><br>
+Al menos el 50% de los trabajos publicados deben provenir de autores externos a la entidad editora y a sus cuerpos editoriales. En el caso de las revistas editadas por asociaciones, se considerarán autores pertenecientes a la entidad editora los que forman parte de la directiva de la asociación o que figuran en el equipo editorial de la revista.
+      <div class="gap"></div>
+                <em>Nota de aplicación: Para contabilizar el porcentaje, se revisará en los artículos originales, de revisión, de opinión, ensayos, casos clínicos o notas técnicas, sí existe al menos una “autoría externa”. Sí un artículo tiene uno o varios autores de la institución editora de la revista y uno o varios autores de otras instituciones, se contabiliza como externo. Los miembros de los cuerpos editoriales serán considerados como internos, así como los autores adscritos a la entidad editora. Para considerar una autoría como externa, se tomará en cuenta el más alto nivel de la afiliación, por ejemplo, una universidad (no sus facultades o institutos). Esta característica deberá ser corroborada en los tres últimos números publicados.</em></li>
+    <div class="gap"></div>
+    <li><span class="notranslate"><strong>Apertura editorial</strong></span><br>
+Al menos dos terceras partes de los miembros de los órganos editoriales colegiados (comités o consejos de la revista) deberán pertenecer a instituciones diferentes a la entidad editora.
+      <div class="gap"></div>
+                <em>Nota de aplicación: Para efectuar el cálculo se considerarán todos los órganos editoriales colegiados (comité o consejo editorial, comité científico o internacional, consejo asesor o equivalentes) así como las personas con cargos de responsabilidad (persona directora, editora o coordinadora) aunque la revista no los incluya en los comités. Si la revista no menciona claramente las afiliaciones institucionales de los miembros, se perderá este criterio. La entidad editora es la institución que edita la revista según el criterio 4. Para considerar a un miembro como externo, se tomará en cuenta el más alto nivel de la afiliación, por ejemplo, una universidad (no sus facultades o institutos).</em></li>
+    <div class="gap"></div>
+    <li><strong>Servicios de información</strong><br>
+La revista debe estar incluida en algún servicio de índices y resúmenes, directorios, catálogos, portales de revistas, hemerotecas virtuales, sistemas de categorización o listas del núcleo básico de revistas nacionales, entre otros servicios de información, que sean selectivos.
+      <div class="gap"></div>
+                <em>Nota de aplicación: La revista debe mencionar en qué servicios de indexación está incluida y como mínimo debe estar en un servicio selectivo de indexación, que no sea Latindex. Si la revista menciona un índice en el que no está indexada, perderá este punto. La persona documentalista debe corroborar cada servicio listado.</em> Los índices contenidos en <a href="https://www.predatoryjournals.org/news/list-of-predatory-indexers-and-fake-impact-factors" target="_blank">https://www.predatoryjournals.org/news/list-of-predatory-indexers-and-fake-impact-factors</a> no serán considerados para dar por cumplida esta característica.</li>
+    <div class="gap"></div>
+    <li><span class="notranslate"><strong>Cumplimiento de periodicidad</strong></span><br>
+La revista debe ser publicada al inicio del periodo declarado, antes de que finalice el primer mes de este periodo. En revistas de publicación continua, se dará por cumplida la característica cuando la revista haya publicado al menos un artículo en el primer mes del periodo.
+      <div class="gap"></div>
+                <em>Nota de aplicación: El inicio del periodo declarado depende de las fechas que cubre el fascículo. Si la revista es anual y declara que la fecha de publicación es diciembre, entonces deberá publicarse a inicios del mes de diciembre. El documentalista verificará que la revista publicó en los tiempos que correspondía y la cantidad de fascículos según el criterio 10. No cumplirá la característica cuando se integren en un solo volumen, números atrasados que no fueron publicados cuando correspondía. Ejemplo: “vol. 53 Núm. 1 y 2 año: 2015”. Esta característica deberá ser corroborada en los tres últimos fascículos publicados. En el caso de revistas con periodicidad continua, cada documento que aparezca debe tener la fecha respectiva de publicación.</em></li>
+    <div class="gap"></div>
+    <li><strong>Políticas de acceso y reuso</strong><br>
+La revista debe informar con claridad cuáles son las políticas de derechos de autor que establece respecto al acceso a sus archivos; cuáles derechos conservan y cuáles ceden a las personas autoras y lectoras.
+                  <div class="gap"></div>
+<em>Nota de aplicación: Se debe especificar la forma en que la revista permite a lectores y autores reutilizar la información que contiene. Por ejemplo uso de licencias Creative Commons que establecen los permisos sobre los materiales.</em></li>
+    <div class="gap"></div>
+    <li><strong>Código de ética</strong><br>
+      La revista debe informar y describir las normas o códigos de ética que utiliza, los cuales pueden ser internacionales, institucionales o propios.
+      <div class="gap"></div>
+                <em>Nota de aplicación:</em> Pueden ser los establecidos por el <em>Committee on Publication Ethics (Code of Conduct and Best Practices Guidelines for Journals Editors,</em> (<a href="https://publicationethics.org/" target="_blank">COPE</a>), por el <em>International Committee of Medical Journal Editors</em> (<a href="https://www.icmje.org/" target="_blank">ICJME</a>) o algún otro. <em>En el caso de revistas que mencionen adhesión a alguno de estos sistemas, se deberá corroborar su pertenencia a dicha organización para darlo por cumplido. Se incluyen aquí también las declaraciones sobre el uso de la inteligencia artificial (IA) en la elaboración de los textos científicos, según lo dispone la <a href="https://www.revistas.una.ac.cr/index.php/EDUCARE/article/view/19967/30780" target="_blank">Declaración de Heredia</a>.</em> </li>
+    <div class="gap"></div>
+    <li><strong>Detección de plagio</strong><br>
+La revista debe manifestar cuáles son las políticas para la detección de plagio o similitud.
+                  <div class="gap"></div>
+<em>Nota de aplicación: No es indispensable que utilicen un software para la detección de plagio, simplemente deben declarar cómo la realizan.</em>
+<div class="gap"></div>
+<strong>CARACTERÍSTICAS DE CONTENIDO</strong><br>
+<em>Total de características: 8</em></li>
+    <div class="gap"></div>
+    <li><strong>Contenido original</strong><br>
+Al menos el 40% de los documentos publicados deben ser trabajos de investigación, comunicación científica o creación originales: artículos originales de investigación, artículos de revisión, artículos de opinión, ensayos, casos clínicos y notas técnicas.
+      <div class="gap"></div>
+                <em>Nota de aplicación: Si la revista no hace uso de secciones o categorías que faciliten calificar esta característica, entonces quedará a criterio de la persona que realice la calificación.</em></li>
+    <div class="gap"></div>
+    <li><strong>Referencias bibliográficas adoptando una norma</strong><br>
+En las instrucciones para publicar deberá indicarse la norma de elaboración de las referencias bibliográficas adoptando una norma internacional ampliamente aceptada (APA, Harvard, ISO, Vancouver u alguna otra, sin variaciones).
+      <div class="gap"></div>
+                <em>Nota de aplicación: Si la revista utiliza una norma “propia”, señalando ejemplos en lugar de citar una norma internacional, no se dará por cumplido este criterio.</em></li>
+    <div class="gap"></div>
+    <li><strong>Exigencia de originalidad</strong><br>
+En la presentación de la revista o en las instrucciones para publicar debe ser explícita la exigencia de originalidad para los trabajos sometidos a publicación.</li>
+    <div class="gap"></div>
+    <li><strong>Resumen</strong><br>
+Todos los artículos originales, de revisión, ensayos, casos clínicos y notas técnicas deberán ser acompañados de un resumen en el idioma original del trabajo.
+    <div class="gap"></div>
+    <em>Nota de aplicación: Se revisarán todos los tipos de documentos mencionados en el enunciado y sí a uno o más le falta el resumen, se pierde el criterio. En el caso de otros documentos como comunicaciones cortas, editoriales o reseñas de libro no será obligatorio que cuenten con resumen. Lo mismo aplica para la característica 27.</em></li>
+    <div class="gap"></div>
+    <li><strong>Resumen en dos idiomas</strong><br>
+       Todos los artículos originales, de revisión, ensayos, casos clínicos y notas técnicas deben incluir resúmenes en el idioma original del trabajo y en un segundo idioma.</li>
+    <div class="gap"></div>
+    <li><strong>Palabras clave</strong><br>
+Todos los artículos originales, de revisión, ensayos, casos clínicos y notas técnicas deben incluir palabras clave o equivalente en el idioma original del trabajo.
+      <div class="gap"></div>
+                <em>Nota de aplicación: Se revisarán todos los tipos de documentos mencionados en el enunciado y si a uno o más le faltan palabras clave, se pierde el criterio. En el caso de otros documentos como comunicaciones cortas, editoriales o reseñas de libro no es obligatorio que cuenten con palabras clave. Lo mismo aplica para la característica 29.</em></li>
+    <div class="gap"></div>
+    <li><strong>Palabras clave en dos idiomas</strong><br>
+Todos los artículos originales, de revisión, ensayos, casos clínicos y notas técnicas deben incluir palabras clave o equivalentes en el idioma original del trabajo y en un segundo idioma.</li>
+    <div class="gap"></div>
+    <li><strong>Cantidad de artículos publicados por año</strong><br>
+La revista debe publicar al menos cinco artículos originales, de revisión, de opinión, ensayos, casos clínicos o notas técnicas por año
+      <div class="gap"></div>
+                <em>Nota de aplicación: Si la revista no usa secciones o categorías que faciliten la identificación de los documentos mencionados en el enunciado, la calificación queda a criterio de la persona documentalista. Esta característica deberá ser corroborada con el número de fascículos que sean necesarios según la periodicidad de la revista a ser calificada.</em>
+      <div class="gap"></div>
+        <strong>CARACTERÍSTICAS DE REVISTAS EN LÍNEA</strong><br>
+            <em>Total de características: 8</em></li>
+    <div class="gap"></div>
+    <li><strong>Uso de protocolos de interoperabilidad.</strong><br>
+La revista debe incorporar protocolos de interoperabilidad que le permitan ser recolectada por otros sistemas de distribución. Para cumplir con este requisito, la revista deberá: <br><br>
+                <ul>
+      <li style="list-style: disc;">Indicar el protocolo de interoperabilidad utilizado y proporcionar la dirección electrónica para acceder a él.</li>
+      <li style="list-style: disc;">Incluir metadatos tanto en la página de presentación de la revista como en todos sus artículos.</li>
+      </ul>
+      <div class="gap"></div>
+                <em>Nota de aplicación: El protocolo OAI-PMH (Open Archives Initiative Protocol for Metadata Harvesting) permite la transferencia de recursos digitales, principalmente de carácter científico y de acceso libre. Se debe verificar que cada artículo esté descrito con metaetiquetas Dublín Core u otra norma. Es obligatorio el uso de una norma de metadatos.</em></li>
+    <div class="gap"></div>
+    <li><strong>Uso de diferentes formatos de edición</strong><br>
+Para calificar, la revista debe usar más de un formato de edición para el despliegue y lectura de los textos completos de los documentos publicados.
+      <div class="gap"></div>
+                <em>Nota de aplicación: La revista puede elegir los formatos de su preferencia según el público lector. Cada documento debe tener más de un formato. Se busca ampliar el uso del PDF, el uso de HTML y otros formatos que faciliten el hipertexto y la lectura.</em></li>
+    <div class="gap"></div>
+    <li><strong>Servicios de valor agregado</strong><br>
+La revista debe incluir servicios de valor agregado tales como formatos multimedia, materiales complementarios y prácticas de la ciencia abierta relacionados con los documentos publicados; facilidades para que personas con diferentes discapacidades puedan acceder al contenido de la revista o indicaciones sobre cómo citar los artículos.
+      <div class="gap"></div>
+                <em>Nota de aplicación: con solo que utilice uno de ellos, la característica se dará por cumplida. La interactividad con los lectores se contempla en el criterio 34. En prácticas de ciencia abierta se considera: acceso a los datos de investigación, software libre, evaluación por pares abierta, prácticas de ciencia ciudadana, recursos educativos abiertos, publicación de preprints, entre otros.</em></li>
+    <div class="gap"></div>
+    <li><strong>Servicios de interactividad con la persona lectora</strong><br>
+La revista debe incluir servicios que faciliten la interactividad con las personas lectoras tales como foros, blogs o redes sociales, que permitan comentarios y reacciones.
+      <div class="gap"></div>
+                <em>Nota de aplicación: a diferencia de la característica 33, en esta sí se presenta interactividad con los lectores, para que la persona pueda participar al dejar comentarios, llenar encuestas u opinar sobre artículos publicados o la revista. Con solo que utilice uno de ellos, la característica se dará por cumplida. Para que la existencia de foros, blogs o redes sociales sea acreditada, debe haber un enlace a estos en la página de la revista, preferentemente en la página inicial; estos espacios deben corresponder a la revista, no siendo válidas páginas o redes sociales de asociaciones o instituciones a las cuales pertenece la revista. En caso de usar las redes sociales, éstas deben estar activas continuamente.</em></li>
+    <div class="gap"></div>
+    <li><strong>Buscadores</strong><br>
+La revista debe contar con algún motor de búsqueda que permita realizar búsquedas por palabras o por índices, así como la posibilidad de utilizar operadores booleanos, entre otros.
+      <div class="gap"></div>
+                <em>Nota de aplicación: Los buscadores pueden ser tipo Google, de construcción propia, de OJS, y otros más. El fin del criterio es que los documentos puedan ser localizables por lo que se verificará que el buscador funcione adecuadamente.</em></li>
+    <div class="gap"></div>
+    <li><strong>Uso de identificadores uniformes de recursos</strong><br>
+Todos los artículos publicados deben utilizar identificadores uniformes de recursos (URI) por ejemplo, identificadores como Handle, Digital Object Identifier (DOI) o Archival Resource Key (ARK).
+      <div class="gap"></div>
+<em>Nota de aplicación: Se comprobará que los enlaces estén activos para otorgar el punto.</em></li>
+    <div class="gap"></div>
+    <li><strong>Uso de estadísticas</strong><br>
+La revista debe proporcionar herramientas relacionadas con el uso de estadísticas de su propia página.
+      <div class="gap"></div>
+                <em>Nota de aplicación: Se trata de herramientas tales como Altmetría, Google Cites, descargas, CiteULike, retuit, o estadísticas más simples. Pueden ser estadísticas por artículo (ALM) o generales de la revista.</em></li>
+    <div class="gap"></div>
+    <li><strong>Políticas de preservación digital</strong><br>
+La revista debe informar sobre las políticas de preservación de archivos digitales que ha implementado.
+      <div class="gap"></div>
+                <em>Nota de aplicación: Para calificar la revista debe detallar sus propias políticas de preservación. No es suficiente con que estampe el logo de LOCKSS o CLOCKSS, que disponga de un enlace a dichos sistemas o que muestre el texto por defecto que usa el gestor OJS.</em></li>
+    <div class="gap"></div>
+    
+    
+  </ol>
+  <h4 class="titnormal2">Anexo 1<br>
+
+Características del Catálogo 1.0 que se fusionaron en el Catálogo 2.0</h4>
+  <table border="1" class="table-interiores table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Catálogo 2.0</th>
+        <th scope="col">Catálogo 1.0 (2002-2017)</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Responsables editoriales</td>
+      <td>
+      <ul>
+                      <li>Mención del cuerpo editorial</li>
+                      <li>Mención del director </li>
+                      <li>Miembros del consejo editorial</li>
+                  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td class="notranslate">Entidad editora de la revista</td>
+      <td>
+      <ul>
+                      <li>Entidad editora</li>
+                      <li>Mención de la dirección de la revista</li>
+                  </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Navegación y funcionalidad en el acceso a contenidos</td>
+      <td>
+      <ul>
+                      <li>Navegación y funcionalidad</li>
+                      <li>Acceso a los contenidos</li>
+                  </ul>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  
+  <h3>CRÉDITOS</h3>
+        <p><em>Grupo de trabajo:</em></p>
+          <p><strong>Teresa Abejón Peña</strong>,<br>
+              Consejo Superior de Investigaciones Científicas, España<br>
+            <a href="https://orcid.org/0000-0003-1905-7771">https://orcid.org/0000-0003-1905-7771</a></p>
+        <p><strong>José Octavio Alonso Gamboa</strong>,<br>
+              Universidad Nacional Autónoma de México, México<br>
+            <a href="https://orcid.org/0000-0002-0281-9613">https://orcid.org/0000-0002-0281-9613</a></p>
+        <p><strong>Ana María Cetto</strong>,<br>
+              Universidad Nacional Autónoma de México, México<br>
+            <a href="https://orcid.org/0000-0001-6006-1102">https://orcid.org/0000-0001-6006-1102</a></p>
+        <p><strong>Saray Córdoba González</strong>,<br>
+              Universidad de Costa Rica, Costa Rica<br>
+            <a href="https://orcid.org/0000-0003-2906-8431">https://orcid.org/0000-0003-2906-8431</a></p>
+        <p><strong>Jorge Polanco Cortés</strong>,<br>
+              Universidad de Costa Rica, Costa Rica<br>
+            <a href="https://orcid.org/0000-0002-2974-5167">https://orcid.org/0000-0002-2974-5167</a></p>
+          <div class="gap"></div>
+        <div class="gap"></div>
+           <p><strong>© Latindex, 2025<br>
+Esta obra se encuentra bajo licencia Creative Commons<br>
+Atribución - No comercial – Compartir bajo la misma licencia</strong><br>
+          <img src="../images/CC-BY-NC-SA.png" alt="Licencia CC BY NC SA"/></p>
+
+<!-- Botón hacia arriba -->
+<!-- Botón hacia arriba -->
+  <p class="arrow-top">
+    <a href="#" class="ir-arriba" title="Volver arriba">
+      <span class="fa-stack">
+      <i class="fa fa-chevron-circle-up fa-stack-2x"></i>
+      </span>
+    </a>
+  </p>
+<!-- Cierre del botónn hacia arriba -->
+      </div>
+    </div>
+  </div>
+</div>
+
+    	 
+  <!--</div>-->
+  <div class="container-fluid Zone-follow">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <div class="Container-follow-others">
+          <div class="followUs">Síguenos en: 
+            <a href="https://www.facebook.com/Latindex.org" target="_blank" class="redscocial-face"><i class="fab fa-facebook-square"></i></a> 
+            <a class="redsocial-youtube" href="https://www.youtube.com/@Latindex97/" target="_blank"><i class="fab fa-youtube-square"></i></a> 
+            <a href="https://twitter.com/latindex" target="_blank" class="redscocial-x"><img src="https://www.latindex.org/latindex/images/icono-X-black.png" alt="Red social X Latindex"/></a>
+          </div>
+          <div class="faq-help"><a href="https://www.latindex.org/latindex/FAQ">FAQ</a> <strong>&#124;</strong> <a href="https://www.latindex.org/latindex/ayuda">Ayuda</a></div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <div class="Container-license-privacy">
+          <div class="license_privacy"><img src="https://www.latindex.org/latindex/images/licencias-CC/cc-by-nc-sa.png" width="104" height="44"/>
+            <strong>&#124;</strong> <a href="https://www.latindex.org/latindex/avisosprivacidad" >Privacidad</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid Zone-footer">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 col-xl-4">
+        <div class="Container-foot_01">
+            <div class="Zone-escudo-firma">
+            <a href="https://www.unam.mx/" target="_blank"><img src="https://www.latindex.org/latindex/images/escudo_firma_UNAM.png" alt="Escudo y firma de la UNAM"/></a>
+            </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9 col-xl-8">
+        <div class="Container-foot_02">
+          <div class="Zone-copyright">
+              <p>Hecho en México, Universidad Nacional Autónoma de México (UNAM). 1997-2025. 
+                Se autoriza la reproducción total o parcial de los textos aquí publicados siempre y cuando se cite la fuente completa y la dirección electrónica del sitio web. <br>
+                <a href="#">Mapa del sitio</a>  |  <a href="https://www.latindex.org/latindex/creditos">Créditos</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid Zone-footer2">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="Container-foot_03">
+          <p><u>Aviso:</u> El sistema Latindex se reserva el derecho de registrar revistas en su Directorio y de calificar revistas en su Catálogo, 
+          de acuerdo con las políticas documentadas en sus manuales y metodología, basadas en criterios exclusivamente académicos y profesionales.  Latindex realiza la clasificación de la naturaleza de las revistas y de la organización editora, 
+          sobre la base de sus propias fuentes y criterios establecidos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <style>
+/* Hide the top Google Translate banner */
+.skiptranslate {
+    display: none !important;
+}
+
+/* Prevent body from being pushed down by banner */
+body {
+    top: 0 !important;
+    position: static !important;
+}
+
+/* Hide the small tooltips/popups on hover */
+.goog-tooltip, 
+.goog-tooltip:hover, 
+.goog-text-highlight {
+    display: none !important;
+}
+</style>
+
+<!-- Google Translate Script -->
+<div id="google_translate_element" style="display:none;"></div>
+<script type="text/javascript">
+    
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'es'}, 'google_translate_element');
+    }
+    
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- JS for Flag Toggle & Switching -->
+<script type="text/javascript">
+    // Clear Google Translate cookie so original language always loads
+function resetToOriginal() {
+    /*
+    document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + window.location.hostname + ";";
+    location.reload(); // reload to show original Spanish
+    */
+    var select = document.querySelector("select.goog-te-combo");
+    if (select) {
+        select.value = "es";  // Force Spanish in the dropdown
+        select.dispatchEvent(new Event("change"));
+    }
+        var select = document.querySelector("select.goog-te-combo");
+    if (select) {
+        select.value = "es";  // Force Spanish in the dropdown
+        select.dispatchEvent(new Event("change"));
+    }
+}
+
+function doGTranslate(langPair) {
+    if (langPair.value) langPair = langPair.value;
+    var lang = langPair.split('|')[1];
+    var select = document.querySelector("select.goog-te-combo");
+    if (select && select.options.length > 0) {
+        select.value = lang;
+        select.dispatchEvent(new Event("change"));
+    } else {
+        setTimeout(function() { doGTranslate(langPair); }, 500);
+    }
+}
+
+function switchLanguage(event, langPair, url) {
+    event.preventDefault();
+
+    if (langPair === 'reset') {
+        resetToOriginal();
+    } else {
+        doGTranslate(langPair);
+    }
+    console.log('javascript')
+
+    // Delay the redirect slightly so translation triggers first
+    setTimeout(function() {
+        window.location.href = url;
+    }, 900);
+}
+</script>
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+    <script src="https://www.latindex.org/latindex/js/popper.min.js"></script>
+    <script src="https://www.latindex.org/latindex/js/bootstrap-4.4.1.js"></script>
+    <!-- Javascript internos --> 
+            <script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function () {
+
+    function updatePlaceholder() {
+        var radioValue = document.querySelector('input[name="idModBus"]:checked').value;
+        var inputElement = document.querySelector('input[name="buscar"]');
+        
+        if (radioValue === '3') {
+            inputElement.placeholder = 'Descubridor de artículos: buscar por términos, palabras clave o revista';
+        } else {
+            inputElement.placeholder = 'Buscar por título vigente, ISSN o término';
+        }
+    }
+
+    // Add event listener to the radio buttons
+    var radios = document.querySelectorAll('input[name="idModBus"]');
+    radios.forEach(function(radio) {
+        radio.addEventListener('change', updatePlaceholder);
+    });
+
+	// Set default * when empty
+	let form = document.querySelector('form[name="solar"]');
+	if(form) {
+		form.addEventListener('submit', function() {
+			let input = form.querySelector('input[name="buscar"]');
+			if (input && input.value.trim() === '') {
+				input.value = '*';
+			}
+		});
+	}
+
+    updatePlaceholder();
+  });
+</script>
+    <script type="text/javascript">
+
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            $('a.ir-arriba').fadeIn('slow');
+
+        } else {
+            $('a.ir-arriba').fadeOut('slow');
+        }
+      });
+
+      $('a.ir-arriba').hide();
+        $('a.ir-arriba').click(function(event) {
+        event.preventDefault();
+          $('html, body').animate({scrollTop: 0}, 600);
+      });
+    </script>
+  </body>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126810996-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-126810996-1');
+  </script>
+</html>

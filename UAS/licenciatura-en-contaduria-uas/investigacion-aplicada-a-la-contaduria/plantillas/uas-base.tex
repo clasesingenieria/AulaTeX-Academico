@@ -26,7 +26,7 @@
 \definecolor{uasPaper}{HTML}{F2F6FA}
 \definecolor{uasGreen}{HTML}{276B53}
 \hypersetup{pdfauthor={Martín Jonathan De La Cruz Muñoz},
-  pdfsubject={Investigación aplicada a la contaduría — UAS}}
+  pdfsubject={Investigación aplicada a la contaduría — UAS},hypertexnames=false}
 \onehalfspacing
 \setlength{\parindent}{1.27cm}
 \setlength{\parskip}{.3em}
@@ -34,11 +34,12 @@
 \setlength{\bibhang}{1.27cm}
 \setlength{\bibitemsep}{.6em}
 \raggedbottom
-\titleformat{\section}{\large\bfseries\color{uasBlue}}{\thesection.}{.5em}{}
+\titleformat{\section}{\normalsize\bfseries\color{uasBlue}}{\thesection.}{.5em}{}
 \titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{.5em}{}
 \setlist{leftmargin=*,itemsep=.3em,parsep=0pt}
 \newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
 \newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\newcommand{\fechaRealizacion}{13 de septiembre de 2026}
 \newcommand{\portada}[2]{%
   \hypersetup{pdftitle={#1}}%
   \begin{titlepage}
@@ -46,20 +47,20 @@
     \includegraphics[height=2.2cm]{assets-actividades/escudo-uas.png}\hfill
     \includegraphics[width=6cm]{../fcauas-logo.jpg}\par
     \vspace{.8cm}
-    {\Large\bfseries Universidad Autónoma de Sinaloa\par}
+    {\normalsize\bfseries Universidad Autónoma de Sinaloa\par}
     Facultad de Contaduría y Administración\par
     Licenciatura en Contaduría Pública — Modalidad Virtual\par
     \vfill
-    {\LARGE\bfseries\color{uasBlue}#1\par}
+    {\normalsize\bfseries\color{uasBlue}#1\par}
     \vspace{.6cm}#2\par
-    \vspace{.6cm}{\large Investigación aplicada a la contaduría\par}
+    \vspace{.6cm}{\normalsize Investigación aplicada a la contaduría\par}
     \vfill
     \begin{tabularx}{\textwidth}{@{}lY@{}}
       Estudiante: & Martín Jonathan De La Cruz Muñoz\\
       Matrícula: & 26031061\\
       Asesora: & Dra. Nadia Aileen Valdez Acosta\\
       Grupo: & 103 LCP\\
-      Fecha de realización: & 13 de septiembre de 2026\\
+      Fecha de realización: & \fechaRealizacion\\
       Lugar: & Culiacán, Sinaloa, México
     \end{tabularx}
   \end{titlepage}

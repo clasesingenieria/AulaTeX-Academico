@@ -1,0 +1,67 @@
+\input{plantillas/uas-base.tex}
+\begin{document}
+\portada{Estructura de un artículo de divulgación}{Mapa conceptual — Semana 4\\Borrador para cotejo con la lección del aula}
+
+\section{Propósito y alcance}
+Un artículo de divulgación comunica conocimiento especializado a lectores que no necesariamente dominan el tema. Su claridad depende de seleccionar una pregunta, explicar conceptos y mostrar las razones que respaldan la información. Divulgar no equivale a eliminar la complejidad ni a convertir una opinión en un hecho: exige hacer comprensible un problema sin ocultar sus límites.
+
+Este mapa propone una organización de entrada, desarrollo y cierre con fuentes. Se apoya en las orientaciones de \textcite{comovesautores} sobre lenguaje accesible, delimitación temática, entrada atractiva y argumentos, y en la guía de citas y referencias distribuida por UAS \parencite{guiaapa}. La agrupación gráfica y el ejemplo contable son elaboración propia; no constituyen una transcripción de la lección.
+
+\noindent\textbf{Verificación pendiente.} La consigna S4 exige basarse en la lección de la semana. El 13 de septiembre de 2026 su página de acceso no mostró el contenido y la liga alternativa al libro del dominio antiguo no resultó consultable. Por ello, esta versión no se declara lista para entregar: deberán contrastarse los nombres de las partes, su función y su orden con esa lección cuando esté habilitada. No se trasladan a la tarea los límites de extensión o formatos de envío de la revista consultada.
+
+\section{Pregunta de enfoque}
+¿Cómo organizar un artículo que permita a un lector no especializado comprender un tema, seguir su explicación y reconocer sus fuentes?
+
+\begin{landscape}
+\section{Mapa conceptual}
+\begin{center}
+\singlespacing
+\begin{tikzpicture}
+\node[raiz] (raiz) at (0,0) {Artículo de divulgación};
+\node[concepto] (entrada) at (-7,-2.3) {Título, autoría y entrada};
+\node[concepto] (desarrollo) at (0,-2.3) {Desarrollo explicativo};
+\node[concepto] (cierre) at (7,-2.3) {Cierre y fuentes};
+\draw[enlace] (raiz.west) -| node[nexo,pos=.65] {orienta al lector con} (entrada.north);
+\draw[enlace] (raiz) -- node[nexo] {explica mediante} (desarrollo);
+\draw[enlace] (raiz.east) -| node[nexo,pos=.65] {concluye y se sustenta en} (cierre.north);
+\node[detalle] (inicio) at (-7,-5.3) {Título: delimita y atrae\\Autoría: identifica responsabilidad\\Entrada: plantea tema, pregunta y relevancia};
+\node[detalle] (cuerpo) at (0,-5.3) {Subtemas y conceptos definidos\\Evidencia y argumentos\\Ejemplos, analogías o figuras pertinentes};
+\node[detalle] (final) at (7,-5.3) {Cierre: recupera la explicación y reconoce límites\\Citas: atribuyen ideas\\Referencias: permiten localizar las fuentes};
+\draw[enlace] (entrada) -- node[nexo] {cumplen funciones de} (inicio);
+\draw[enlace] (desarrollo) -- node[nexo] {organiza} (cuerpo);
+\draw[enlace] (cierre) -- node[nexo] {articulan} (final);
+\node[detalle] (lector) at (-7,-8.5) {Un propósito y un destinatario definidos};
+\node[detalle] (claridad) at (0,-8.5) {Lenguaje accesible sin perder precisión};
+\node[detalle] (trazabilidad) at (7,-8.5) {Comprensión crítica y consulta verificable};
+\draw[enlace] (inicio) -- node[nexo] {responden a} (lector);
+\draw[enlace] (cuerpo) -- node[nexo] {se comunica con} (claridad);
+\draw[enlace] (final) -- node[nexo] {favorecen} (trazabilidad);
+\end{tikzpicture}
+\end{center}
+\noindent\textit{Nota.} Organización propuesta a partir de las orientaciones de la revista ¿Cómo ves? y la guía APA del aula. Las citas pueden aparecer durante todo el artículo; no se limitan a su cierre. Pendiente cotejo con la lección S4.
+\end{landscape}
+
+\section{Funciones de las partes}
+\subsection{Título, autoría y entrada}
+El título anticipa el asunto y busca despertar interés sin prometer resultados que el texto no demuestra. La autoría identifica a quien responde por el contenido. La entrada puede plantear una situación cotidiana, una pregunta o una observación que haga visible la relevancia del tema. La revista \textcite{comovesautores} recomienda atender al nivel del lector y utilizar una entrada reconocible para él. En el mapa, estas funciones se agrupan como orientación inicial, sin imponer un único recurso narrativo.
+
+\subsection{Desarrollo}
+El cuerpo organiza los subtemas en una secuencia comprensible. Define los términos técnicos y explica las razones o evidencias de las afirmaciones. Los ejemplos y analogías facilitan la comprensión, pero deben distinguirse de los datos de una investigación. Una figura o tabla es útil cuando aporta información y tiene título, unidades y fuente; no debe añadirse solo como decoración.
+
+Los subtítulos ayudan a seguir la exposición. La guía editorial consultada recomienda delimitar el tema y hacer visibles sus argumentos \parencite{comovesautores}. Por eso, el esquema no presenta una lista universal de métodos y resultados: un artículo de divulgación no tiene que reproducir mecánicamente la estructura de un informe de investigación. Su organización responde al propósito, al público y al tratamiento del tema.
+
+\subsection{Cierre, citas y referencias}
+Se propone cerrar recuperando la pregunta inicial, sintetizando la explicación y señalando su alcance. El cierre no debería introducir una afirmación contundente que carezca de respaldo en el desarrollo. También puede abrir una pregunta pertinente que invite a seguir investigando, sin presentar una incertidumbre como certeza.
+
+Las citas reconocen ideas ajenas, incluso cuando se parafrasean; las referencias ofrecen los datos para recuperar las obras consultadas \parencite{guiaapa}. No son elementos intercambiables ni deben agregarse de manera decorativa. En el mapa se agrupan con el cierre para mostrar la integridad del producto, pero las citas acompañan las afirmaciones en el lugar donde se utilizan.
+
+\section{Aplicación contable propuesta}
+Un artículo hipotético podría titularse \enquote{Vender no siempre significa tener efectivo}. Su entrada presentaría la pregunta de por qué un negocio con ventas puede tener dificultades para pagar. El desarrollo distinguiría ventas y cobros mediante definiciones y un ejemplo simulado de operaciones a crédito; una tabla mostraría periodos e importes comparables. El cierre recuperaría la necesidad de revisar cuándo se recibe el dinero, sin afirmar que ese dato explica por sí solo toda la liquidez de una empresa.
+
+Para convertir ese bosquejo en artículo sería necesario documentar las definiciones con fuentes contables pertinentes y citar los conceptos utilizados. Aquí se ilustra una estructura, no se presentan operaciones observadas ni se sustituye el mapa por una ponencia. El producto integrador tiene su propia consigna y se prepara en un documento diferente.
+
+\section{Conclusión}
+La estructura propuesta vincula orientación inicial, explicación y cierre con fuentes. Su objetivo es que el lector comprenda el tema y pueda revisar el fundamento de las afirmaciones. La claridad se apoya en la precisión, no en la simplificación sin evidencia. Antes de considerar finalizado este trabajo, debe efectuarse el cotejo con la lección S4 y ajustar cualquier diferencia respecto de sus categorías específicas.
+
+\referencias
+\end{document}
