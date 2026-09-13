@@ -36,7 +36,7 @@ Antes de esta revisión solo existía una plantilla con marcadores por completar
 | Participación con dos compañeros | No acreditada | Sin enlaces, fechas ni identificadores de respuestas reales |
 | Calificación o finalización | No comprobadas | Solo pueden confirmarse en el aula |
 
-**Estado global: reporte y producto foro elaborados conforme al patrón contractual; publicación bloqueada por cierre confirmado en Moodle. No debe marcarse como participación realizada o entregada.** Las tres intervenciones están redactadas y las dos réplicas se basan en aportaciones reales. Sigue sin acreditarse la revisión completa del video; el estudiante debe revisar y asumir el contenido. La publicación requiere reapertura o una vía alternativa autorizada.
+**Estado global: producto foro elaborado e integridad documental verificada; contrato integral de realizar-actividad NO aprobado.** La [auditoría posterior](../auditoria-integridad-Actividad-9.md) corrigió divergencias PDF/TXT y confirmó que el observador real no permite cerrar el ciclo: 77,25/100, `passed=false`, siguiente acción `run-extractor`. Faltan extracción específica y detalles editoriales; la bibliografía general no acredita APA 7 integral. Las tres intervenciones están redactadas y las réplicas se basan en aportaciones reales, pero no están publicadas. Sigue sin acreditarse la revisión completa del video y la validación personal. No debe marcarse como participación realizada o entregada; la publicación requiere reapertura o una vía alternativa autorizada.
 
 ## Adecuación al contrato de realizar-actividad — 13 de septiembre
 
@@ -53,7 +53,7 @@ Se contrastaron `DIDACTIC_TECHNIQUE_CONTRACTS["foro_diagnostico"]` y el patrón 
 | Cierre | Firma en cada caja; conclusión en página nueva con síntesis, posición, razón y consecuencia; declaración de IA como nota al pie |
 | Preparación frente a publicación | Estado explícito en encabezado y nota final; no se atribuye envío al contenido preparado |
 
-Los botones extraen o abren los adjuntos: **no ejecutan copia automática al portapapeles**. La verificación APA del motor se ejecutó directamente, sin activar la transformación con `--apply`. Esa comprobación es estructural; la literalidad de la cita y la pertinencia de las réplicas se revisaron por separado. No se afirma haber ejecutado un ciclo completo del agente generador ni haber cumplido la publicación que el contrato presupone para una entrega final en plataforma.
+Los botones extraen o abren los adjuntos: **no ejecutan copia automática al portapapeles**. La verificación APA del motor se ejecutó directamente, sin activar la transformación con `--apply`. Esa comprobación es estructural; la literalidad de la cita y la pertinencia de las réplicas se revisaron por separado. La auditoría posterior sí ejecutó el observador completo y obtuvo un resultado no aprobado, con artefactos enlazados en el dictamen. No se afirma haber ejecutado un ciclo completo del agente generador ni haber cumplido la publicación que el contrato presupone para una entrega final en plataforma.
 
 ### Trazabilidad de las dos respuestas
 

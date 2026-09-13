@@ -1,5 +1,7 @@
 # 4.2 Foro Dinámica de Liderazgo — dos respuestas personalizadas
 
+> **ARCHIVO HISTÓRICO SUSTITUIDO — NO USAR PARA PUBLICAR.** Auditoría del 13 de septiembre de 2026: los textos siguientes son una variante previa distinta del reporte canónico. Se conservan sin alterarlos para trazabilidad. Las versiones vigentes y adjuntas al PDF son [réplica 1](foro-replica-1-Actividad-9.txt) y [réplica 2](foro-replica-2-Actividad-9.txt), reproducidas en el [reporte](reporte-fundamentos-de-gestion-administrativa-Actividad-9.tex). Los encabezados e instrucciones posteriores pertenecen al archivo histórico y no revierten este aviso.
+
 **Estado:** borradores para revisión; **no publicados**. Se leyeron los mensajes originales en la sesión autenticada. El foro informa que ya se alcanzó la fecha límite y no permite publicar: se necesita reapertura o una vía autorizada por la docente. Estos textos no acreditan interacción realizada ni sustituyen la revisión del video solicitado.
 
 ## Respuesta 1 — Mariel, «LIDERAZGO»

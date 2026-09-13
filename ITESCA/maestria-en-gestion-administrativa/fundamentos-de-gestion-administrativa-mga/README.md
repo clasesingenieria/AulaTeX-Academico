@@ -65,12 +65,14 @@ La suma de ponderaciones es 100 %. La numeración local 4/5 está invertida resp
 
 El reporte no sustituye las tres publicaciones en el foro ni acredita la finalización de la actividad en Moodle.
 
-## Foro 4.2 — reporte contractual actualizado el 13 de septiembre de 2026
+## Foro 4.2 — integridad auditada; contrato integral pendiente
 
 - [Aportación inicial copiable](foro-participacion-Actividad-9.txt): tres respuestas fundamentadas, cita textual académica paginada y referencias.
 - [Reporte con producto foro](reporte-fundamentos-de-gestion-administrativa-Actividad-9.tex): tres actos, tres cajas independientes y referencias APA por intervención.
 - [PDF verificado de siete páginas](reporte-fundamentos-de-gestion-administrativa-Actividad-9.pdf), con tres botones y tres textos adjuntos extraíbles.
 - [Réplica 1](foro-replica-1-Actividad-9.txt) y [réplica 2](foro-replica-2-Actividad-9.txt), redactadas a partir de dos aportaciones reales; no publicadas.
 - [Consigna, fuentes, matriz de cumplimiento y pendientes](referencias-fundamentos-de-gestion-administrativa/actividad-9-foro-liderazgo-consigna-y-estado.md).
-- **Validado:** comprobación APA del motor sin avisos; compilación sin errores ni citas indefinidas; producto foro elaborado en el reporte, no convertido en ensayo.
+- [Auditoría de integridad y contratos](auditoria-integridad-Actividad-9.md) y [verificador reproducible](verificar-integridad-actividad-9.py).
+- **Integridad verificada:** tres cajas cotejadas con los TXT, tres adjuntos idénticos byte a byte y compilación limpia. La variante Markdown de réplicas quedó marcada como histórica.
+- **Contrato integral NO aprobado:** observador real con 77,25/100, `passed=false`, siguiente acción `run-extractor`; falta extracción específica y detalles editoriales del nodo. «Sin avisos APA» solo corresponde al verificador heurístico, no a una certificación completa. La bibliografía general `plainnat` tampoco acredita APA 7 integral.
 - **Publicación bloqueada por cierre:** en la sesión autenticada del 13 de septiembre, [Moodle](https://cursos3.e-itesca.edu.mx/mod/forum/view.php?id=7800) informa: «Se ha alcanzado la fecha límite para publicar en este foro, por lo que ya no puede publicar en él». No se enviaron el aporte ni las respuestas ni se marcó la actividad como hecha. Vencimiento confirmado: 7 de septiembre de 2026, 23:59. Se requiere reapertura o vía alternativa autorizada por el docente; además, revisar el video completo y asumir el contenido de las tres intervenciones.
