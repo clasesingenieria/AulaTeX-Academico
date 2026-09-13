@@ -29,4 +29,4 @@ Fecha de consulta: 2026-08-28.
 
 ## Criterio de suficiencia
 
-Las fuentes 1 y 2 son primarias para Kast y Rosenzweig. Las fuentes 3–5 son materiales universitarios abiertos con autoría y metadatos comprobables para entorno y estructura. Deben combinarse con los archivos locales `Kast y Rosenzweig UI.pdf`, `La Organizacion UI.pdf` y `Enfoques Multiples UI.pdf`. No usar resultados de buscadores, blogs o entradas provisionales como respaldo disciplinar.
+Las fuentes 1 y 2 son primarias para Kast y Rosenzweig. Las fuentes 3–5 son materiales universitarios abiertos con autoría y metadatos comprobables para entorno y estructura. Deben combinarse con los extractos locales de [Kast y Rosenzweig](unidad-1-organizacion/proulx-diagnostico-cambio-organizacional-extracto-kast-rosenzweig.pdf), [organización](unidad-1-organizacion/proulx-diagnostico-cambio-organizacional-extracto-organizacion.pdf) y [enfoques múltiples](unidad-1-organizacion/proulx-diagnostico-cambio-organizacional-extracto-enfoques-multiples.pdf), cuya autoría es de Denis Proulx. No usar resultados de buscadores, blogs o entradas provisionales como respaldo disciplinar.

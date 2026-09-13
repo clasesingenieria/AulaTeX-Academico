@@ -34,10 +34,10 @@ Además, se debe responder al menos a dos aportaciones de compañeros.
 
 ## Material local prioritario
 
-- `../La Organizacion UI.pdf`
-- `../Kast y Rosenzweig UI.pdf`
-- `../Enfoques Multiples UI.pdf`
-- `../rubrica.pdf`
+- [Extracto: organización](../unidad-1-organizacion/proulx-diagnostico-cambio-organizacional-extracto-organizacion.pdf).
+- [Extracto: Kast y Rosenzweig](../unidad-1-organizacion/proulx-diagnostico-cambio-organizacional-extracto-kast-rosenzweig.pdf).
+- [Extracto: enfoques múltiples](../unidad-1-organizacion/proulx-diagnostico-cambio-organizacional-extracto-enfoques-multiples.pdf).
+- [Rúbrica general](../00-curso-y-evaluacion/rubrica-general-evaluacion.pdf).
 
 Complementar solo cuando sea necesario con fuentes académicas verificables. Toda fuente utilizada debe registrarse en `fundamentos-de-gestion-administrativa.bib` y citarse de forma visible.
 

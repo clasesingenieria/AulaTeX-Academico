@@ -26,4 +26,4 @@ De manera individual se debe desarrollar un mapa conceptual. El producto debe co
 
 ## Material local de apoyo
 
-Priorizar `Enfoques Multiples UI.pdf`, `La Organizacion UI.pdf`, `Kast y Rosenzweig UI.pdf` y `rubrica.pdf`. Contrastar sus afirmaciones con bibliografía académica verificable y registrar en BibTeX las fuentes efectivamente citadas.
+Priorizar los extractos de [enfoques múltiples](unidad-1-organizacion/proulx-diagnostico-cambio-organizacional-extracto-enfoques-multiples.pdf), [organización](unidad-1-organizacion/proulx-diagnostico-cambio-organizacional-extracto-organizacion.pdf), [Kast y Rosenzweig](unidad-1-organizacion/proulx-diagnostico-cambio-organizacional-extracto-kast-rosenzweig.pdf) y la [rúbrica general](00-curso-y-evaluacion/rubrica-general-evaluacion.pdf). Contrastar sus afirmaciones con bibliografía académica verificable y registrar en BibTeX las fuentes efectivamente citadas.

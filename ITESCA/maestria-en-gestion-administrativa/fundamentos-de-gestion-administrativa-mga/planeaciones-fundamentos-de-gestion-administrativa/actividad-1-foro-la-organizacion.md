@@ -43,10 +43,10 @@ Explicar qué constituye una organización, delimitar agrupaciones o situaciones
 
 Prioridad local:
 
-1. `referencias-fundamentos-de-gestion-administrativa/La Organizacion UI.pdf`
-2. `referencias-fundamentos-de-gestion-administrativa/Kast y Rosenzweig UI.pdf`
-3. `referencias-fundamentos-de-gestion-administrativa/Enfoques Multiples UI.pdf`
-4. `referencias-fundamentos-de-gestion-administrativa/rubrica.pdf`
+1. [Extracto: organización](../referencias-fundamentos-de-gestion-administrativa/unidad-1-organizacion/proulx-diagnostico-cambio-organizacional-extracto-organizacion.pdf).
+2. [Extracto: Kast y Rosenzweig](../referencias-fundamentos-de-gestion-administrativa/unidad-1-organizacion/proulx-diagnostico-cambio-organizacional-extracto-kast-rosenzweig.pdf).
+3. [Extracto: enfoques múltiples](../referencias-fundamentos-de-gestion-administrativa/unidad-1-organizacion/proulx-diagnostico-cambio-organizacional-extracto-enfoques-multiples.pdf).
+4. [Rúbrica general](../referencias-fundamentos-de-gestion-administrativa/00-curso-y-evaluacion/rubrica-general-evaluacion.pdf).
 
 Fuentes disciplinares ya verificadas en el `.bib` local:
 
