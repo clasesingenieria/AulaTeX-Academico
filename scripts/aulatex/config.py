@@ -241,7 +241,7 @@ def credential_status() -> list[CredentialStatus]:
                 value = os.getenv(f"ANTHROPIC_FOUNDRY_{suffix}", "").strip().strip('"').strip("'")
             if not value and inherits_anthropic and suffix == "CHAT_DEPLOYMENT":
                 value = os.getenv(f"{prefix}_DEPLOYMENT", "").strip().strip('"').strip("'")
-            if value:
+            if value and (suffix != "API_KEY" or usable_secret(value)):
                 present.append(key)
             else:
                 missing.append(key)

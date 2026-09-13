@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import base64
 import os
+import time
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Callable
@@ -325,6 +326,75 @@ def check_llm_connection(
         return LLMCallResult(selected, False, "", _friendly_error(exc))
 
     return LLMCallResult(selected, True, "Conexion verificada.")
+
+
+def validate_llm_response(
+    engine_label: str = MODEL_ROUTER_ENGINE,
+    *,
+    config: AulaTeXLLMConfig | None = None,
+    timeout_seconds: int = 45,
+    max_tokens: int = 32,
+) -> dict[str, Any]:
+    """Prueba funcional acotada, sin fallback, redirecciones ni datos sensibles.
+
+    Una configuración candidata se valida en memoria: no se vuelve a cargar el
+    .env ni se reutilizan los reintentos/límites de las tareas de generación.
+    """
+    selected = normalize_llm_engine_label(engine_label)
+    marker = "AULATEX_VALIDACION_OK"
+    started = time.perf_counter()
+    payload: dict[str, Any] = {
+        "engine": selected, "ok": False, "responded": False,
+        "marker_found": False, "response_chars": 0, "latency_ms": 0, "error": "",
+    }
+    try:
+        candidate = config if config is not None else AulaTeXLLMConfig.from_env(selected)
+        if candidate is None or not (
+            candidate.base_url and usable_secret(candidate.api_key) and candidate.deployment
+        ):
+            payload["error"] = "Configuración incompleta, API key sin descifrar o validación deshabilitada."
+            return payload
+        endpoint = (
+            _anthropic_messages_endpoint(candidate) if candidate.is_anthropic()
+            else _openai_compatible_endpoint(candidate)
+        )
+        parsed = urlsplit(endpoint)
+        if parsed.scheme != "https" or not parsed.hostname or parsed.username or parsed.password or parsed.fragment:
+            payload["error"] = "Se requiere un endpoint HTTPS sin credenciales incrustadas ni fragmentos."
+            return payload
+        requests_mod = _require_requests()
+        prompt = f"Responde exactamente con {marker} y no agregues ningún otro texto."
+        limit = max(16, min(int(max_tokens), 128))
+        headers = _anthropic_headers(candidate) if candidate.is_anthropic() else _api_key_headers(candidate)
+        body = (
+            _anthropic_payload(candidate, prompt, limit) if candidate.is_anthropic()
+            else _openai_payload(endpoint, candidate, prompt, limit, temperature=0)
+        )
+        response = requests_mod.post(
+            endpoint, headers=headers, json=body,
+            timeout=max(5, int(timeout_seconds)), allow_redirects=False,
+        )
+        if not 200 <= response.status_code < 300:
+            payload["error"] = f"HTTP {response.status_code}. Revisa endpoint, API key, deployment o cuota."
+            return payload
+        text = extract_llm_text(response.json()).strip()
+        payload.update(
+            responded=bool(text), response_chars=len(text),
+            marker_found=text == marker, ok=text == marker,
+            error="" if text == marker else "El LLM no devolvió el marcador de validación esperado.",
+        )
+    except Exception as exc:
+        # No usar _friendly_error aquí: una excepción puede contener la URL,
+        # cabeceras, API key o cuerpo devuelto por el proveedor.
+        if _requests is not None and isinstance(exc, _requests.Timeout):
+            payload["error"] = "Tiempo de espera agotado."
+        elif _requests is not None and isinstance(exc, _requests.RequestException):
+            payload["error"] = "No se pudo conectar con el proveedor; revisa la red y el endpoint."
+        else:
+            payload["error"] = "No se pudo validar la configuración o interpretar la respuesta del proveedor."
+    finally:
+        payload["latency_ms"] = round((time.perf_counter() - started) * 1000)
+    return payload
 
 
 def call_llm_text(

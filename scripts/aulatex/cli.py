@@ -5,7 +5,6 @@ import json
 from dataclasses import asdict
 import os
 from pathlib import Path
-import time
 
 from .activity_monitor import ActivityMonitor, ActivityMonitorRequest
 from .calibration import ActivityCalibration, CalibrationRequest, MotorCalibrationRequest
@@ -16,7 +15,7 @@ from .agent import AgentRequest, AulaTeXAgent
 from .agentic_patterns import pattern_catalog_markdown
 from .bibliography_repair import BibliographyRepairer, BibliographyRepairRequest
 from .compilation_repair import CompilationRepairRequest, CompilationRepairer
-from .config import credential_status, load_aulatex_env
+from .config import MODEL_ROUTER_ENGINE, credential_status, load_aulatex_env
 from .construction import ConstructionBuilder, ConstructionRequest
 from .editorial_memory import EDITORIAL_LEVELS, EditorialMemoryBuilder, EditorialMemoryRequest
 from .extractor_adapter import EXTRACTOR_MOTORS, ExtractorAdapter, ExtractorRequest
@@ -24,7 +23,7 @@ from .incremental_detail_planner import DetailPlannerRequest, IncrementalDetailP
 from .intelligent_engine import IntelligentEngine, IntelligentEngineRequest
 from .investigation import InvestigationBuilder, InvestigationRequest
 from .progress import resolve_reporter
-from .llm_bridge import DEFAULT_MAX_TOKENS, DEFAULT_TIMEOUT_SECONDS, LLM_ENGINES, AulaTeXLLMClient
+from .llm_bridge import DEFAULT_MAX_TOKENS, DEFAULT_TIMEOUT_SECONDS, LLM_ENGINES, AulaTeXLLMClient, validate_llm_response
 from .mass_editorial_runner import MassEditorialRunner, MassEditorialRunnerRequest
 from .token_counter import count_text_tokens
 from .workspace import AulaTeXWorkspace
@@ -127,9 +126,15 @@ def build_parser() -> argparse.ArgumentParser:
     check.add_argument("--engine", action="append", choices=LLM_ENGINES)
 
     validate = sub.add_parser("llm-validate", help="Verify that one LLM returns usable content without printing it.")
-    validate.add_argument("--engine", required=True, choices=LLM_ENGINES)
+    validate.add_argument("--engine", default=MODEL_ROUTER_ENGINE, choices=LLM_ENGINES)
     validate.add_argument("--timeout-seconds", type=int, default=45)
     validate.add_argument("--max-tokens", type=int, default=32)
+    validate.add_argument("--configure-on-failure", action="store_true", help="Offer secure interactive correction for model-router if validation fails.")
+
+    configure = sub.add_parser("llm-config", help="Validate model-router and repair endpoint, API key and deployment interactively on failure.")
+    configure.add_argument("--timeout-seconds", type=int, default=45)
+    configure.add_argument("--max-tokens", type=int, default=32)
+    configure.add_argument("--non-interactive", action="store_true", help="Only validate; never prompt or modify credentials.")
 
     tokenize = sub.add_parser("llm-tokenize", help="Count prompt tokens with a local Python tokenizer.")
     tokenize.add_argument("prompt", nargs="?")
@@ -437,31 +442,21 @@ def main(argv: list[str] | None = None) -> None:
             print(f"{result.engine}: {'OK' if result.ok else 'ERROR'} {result.text or result.error}")
         return
 
-    if args.command == "llm-validate":
-        marker = "AULATEX_VALIDACION_OK"
-        prompt_text = (
-            "Prueba de salud de AulaTeX. Responde exactamente con "
-            f"{marker} y no agregues ningún otro texto."
-        )
-        started = time.perf_counter()
-        result = AulaTeXLLMClient().call(
-            args.engine,
-            prompt_text,
-            max_tokens=max(16, min(int(args.max_tokens), 128)),
-            timeout_seconds=max(5, int(args.timeout_seconds)),
-        )
-        latency_ms = round((time.perf_counter() - started) * 1000)
-        response = result.text.strip() if result.ok else ""
-        marker_found = marker in response.upper()
-        payload = {
-            "engine": result.engine,
-            "ok": bool(result.ok and response and marker_found),
-            "responded": bool(response),
-            "marker_found": marker_found,
-            "response_chars": len(response),
-            "latency_ms": latency_ms,
-            "error": "" if result.ok else result.error,
-        }
+    if args.command in ("llm-validate", "llm-config"):
+        repair = args.command == "llm-config" or args.configure_on_failure
+        if repair:
+            if args.command == "llm-validate" and args.engine != MODEL_ROUTER_ENGINE:
+                parser.error("--configure-on-failure solo está disponible para model-router.")
+            from .llm_setup import configure_model_router
+
+            payload = configure_model_router(
+                timeout_seconds=args.timeout_seconds, max_tokens=args.max_tokens,
+                non_interactive=bool(getattr(args, "non_interactive", False)),
+            )
+        else:
+            payload = validate_llm_response(
+                args.engine, timeout_seconds=args.timeout_seconds, max_tokens=args.max_tokens,
+            )
         print(json.dumps(payload, ensure_ascii=False))
         if not payload["ok"]:
             raise SystemExit(1)
