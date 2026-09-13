@@ -1,0 +1,362 @@
+% Presentacion derivada del reporte final UAS.
+% Plantilla institucional de referencia:
+% presentacion-investigacion-aplicada-a-la-contaduria.tex
+\documentclass[spanish,aspectratio=169,xcolor={dvipsnames,table}]{beamer}
+\geometry{paperwidth=19.2cm,paperheight=10.8cm}
+\usepackage{fontspec}
+\usepackage[spanish,es-tabla]{babel}
+\setsansfont{Arial}
+\setmainfont{Arial}
+\usepackage{array,booktabs,graphicx,ragged2e,tabularx,tikz,hyperref}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,fit,calc}
+\usepackage{csquotes}
+\usepackage[style=apa,backend=biber,sortcites=true,doi=true,isbn=false,url=true]{biblatex}
+\addbibresource{referencias-investigacion-aplicada-a-la-contaduria/actividad-final/reporte-actividad-final-materialidad-operaciones-facturadas.bib}
+\renewcommand{\bibfont}{\fontsize{10}{13}\selectfont}
+\setlength{\bibitemsep}{1em}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+
+\newcommand{\studentshort}{M. J. de la Cruz}
+\newcommand{\departmentlogo}{assets-actividad-final/escudo-fca-marca-agua.png}
+\newcommand{\coursecode}{Grupo 103}
+\newcommand{\coursename}{Investigación aplicada a la contaduría}
+\newcommand{\locationname}{Culiacán, Sinaloa}
+\newcommand{\presentationtitle}{Materialización de las operaciones facturadas}
+\newcommand{\presentationdate}{Septiembre de 2026}
+
+\definecolor{uasBlueDark}{HTML}{0B294C}
+\definecolor{uasBlue}{HTML}{123B6D}
+\definecolor{uasGold}{HTML}{C79A2B}
+\definecolor{uasPaper}{HTML}{F4F6F8}
+\definecolor{uasInk}{HTML}{182432}
+\usetheme{default}
+\usefonttheme{professionalfonts}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{blocks}[rounded][shadow=false]
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{normal text}{fg=uasInk,bg=white}
+\setbeamercolor{structure}{fg=uasBlue}
+\setbeamercolor{frametitle}{fg=white,bg=uasBlueDark}
+\setbeamercolor{block title}{fg=white,bg=uasBlue}
+\setbeamercolor{block body}{fg=uasInk,bg=uasPaper}
+\setbeamercolor{alerted text}{fg=uasGold}
+\setbeamerfont{frametitle}{series=\bfseries,size=\large}
+\setbeamersize{text margin left=.65cm,text margin right=.65cm}
+\hypersetup{colorlinks=true,urlcolor=uasBlueDark,linkcolor=uasBlueDark}
+\setbeamertemplate{itemize item}{\textcolor{uasGold}{\large$\blacktriangleright$}}
+\setbeamertemplate{enumerate item}{\textcolor{uasGold}{\insertenumlabel.}}
+
+\setbeamertemplate{frametitle}{
+  \nointerlineskip
+  \begin{beamercolorbox}[wd=\textwidth,ht=1.02cm,dp=.22cm,leftskip=.35cm,rightskip=.25cm]{frametitle}
+    \insertframetitle\hfill\raisebox{-.10cm}{\includegraphics[height=.60cm]{\departmentlogo}}
+  \end{beamercolorbox}
+  {\color{uasGold}\rule{\textwidth}{1.3pt}}
+}
+\setbeamertemplate{footline}{
+  \leavevmode\hbox{%
+    \begin{beamercolorbox}[wd=.34\paperwidth,ht=2.7ex,dp=1ex,leftskip=.65em]{author in head/foot}\color{white}\scriptsize\studentshort\end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.44\paperwidth,ht=2.7ex,dp=1ex,center]{title in head/foot}\color{white}\scriptsize\coursename\end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.22\paperwidth,ht=2.7ex,dp=1ex,rightskip=.65em plus 1fil]{date in head/foot}\color{white}\scriptsize\insertframenumber/\inserttotalframenumber\end{beamercolorbox}}%
+}
+\setbeamercolor{author in head/foot}{bg=uasBlueDark}
+\setbeamercolor{title in head/foot}{bg=uasBlue}
+\setbeamercolor{date in head/foot}{bg=uasBlueDark}
+
+\tikzset{
+  flowbox/.style={draw=uasBlue!65,fill=uasPaper,rounded corners=2pt,align=center,text width=2.45cm,minimum height=1.02cm,font=\small},
+  evidence/.style={draw=uasGold!80!black,fill=uasGold!12,rounded corners=2pt,align=center,text width=2.3cm,minimum height=.82cm,font=\scriptsize},
+  flowarrow/.style={-{Latex[length=2.3mm]},very thick,draw=uasGold!90!black}
+}
+\newcommand{\sectionframe}[1]{%
+  \begin{frame}[plain]
+    \begin{tikzpicture}[remember picture,overlay]
+      \fill[uasBlueDark] (current page.south west) rectangle (current page.north east);
+      \node[opacity=.10,anchor=east] at ([xshift=.35cm]current page.east) {\includegraphics[height=8.8cm]{\departmentlogo}};
+      \fill[uasGold] ([xshift=1.0cm,yshift=2.1cm]current page.south west) rectangle ([xshift=1.22cm,yshift=6.5cm]current page.south west);
+    \end{tikzpicture}
+    \vspace{1.85cm}\hspace{1.45cm}{\color{white}\fontsize{26}{31}\selectfont\bfseries #1}
+  \end{frame}}
+\AtBeginSection[]{}
+
+\title[Materialidad]{\presentationtitle}
+\subtitle{Evidencia, control interno y riesgos fiscales}
+\author[\studentshort]{Martín Jonathan De La Cruz Muñoz \and Margarita Mata Camacho \and Adriana Morales Vega \and Manuela Soto Martínez \and Abel Vega Martínez}
+\institute[UAS]{Universidad Autónoma de Sinaloa\\Licenciatura en Contaduría Pública — Campus Virtual\\\coursename}
+\date[\presentationdate]{\locationname\\\presentationdate}
+
+\begin{document}
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[uasBlueDark] (current page.south west) rectangle ([xshift=.60\paperwidth]current page.north west);
+    \fill[uasBlue] ([xshift=.60\paperwidth]current page.south west) rectangle (current page.north east);
+    \node[opacity=.12] at (current page.center) {\includegraphics[width=.62\paperwidth]{\departmentlogo}};
+    \node[anchor=north east] at ([xshift=-.55cm,yshift=-.45cm]current page.north east) {\includegraphics[width=2.4cm]{\departmentlogo}};
+  \end{tikzpicture}
+  \vspace*{1.70cm}{\color{white}\fontsize{25}{30}\selectfont\bfseries\presentationtitle\par}
+  \vspace{.25cm}{\color{white!86}\large Evidencia, control interno y riesgos fiscales}\par
+  \vspace{.35cm}{\color{uasGold}\rule{.58\linewidth}{1.4pt}}\par
+  \vspace{.42cm}{\color{white}\small Martín Jonathan De La Cruz Muñoz\textperiodcentered\ Margarita Mata Camacho\textperiodcentered\ Adriana Morales Vega\\Manuela Soto Martínez\textperiodcentered\ Abel Vega Martínez}\par
+  \vspace{.20cm}{\color{white!78}\footnotesize Dra. Nadia Aileen Valdez Acosta\textperiodcentered\ \coursecode\textperiodcentered\ \locationname\textperiodcentered\ \presentationdate}
+\end{frame}
+
+\begin{frame}{Contenido}
+  \tableofcontents
+\end{frame}
+
+\section{Resumen y problema}
+\begin{frame}{Abstract / Resumen ejecutivo}
+  \begin{block}{Idea central}
+    La materialización demuestra que la operación facturada ocurrió realmente y produjo efectos económicos verificables. El CFDI es necesario, pero no basta: debe corresponder con contratos, entregables, recepción, pagos y registros.
+  \end{block}
+  \begin{columns}[T]
+    \begin{column}{.48\textwidth}\textbf{Pregunta}\par\smallskip ¿Qué evidencia relaciona una operación facturada con su ejecución real?\end{column}
+    \begin{column}{.48\textwidth}\textbf{Tesis}\par\smallskip Un expediente coherente ofrece mejor defensa que documentos aislados, sin garantizar por sí mismo la aceptación fiscal.\end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{El problema: factura no es realidad económica}
+  \begin{center}
+  \begin{tikzpicture}[node distance=1.0cm]
+    \node[flowbox] (cfdi) {\textbf{CFDI}\smallskip\\Emisión documental};
+    \node[flowbox,right=of cfdi] (real) {\textbf{Operación real}\smallskip\\Bien entregado o servicio prestado};
+    \node[flowbox,right=of real] (proof) {\textbf{Materialidad}\smallskip\\Evidencia congruente};
+    \draw[flowarrow] (cfdi)--node[above,font=\scriptsize]{no sustituye} (real);
+    \draw[flowarrow] (real)--node[above,font=\scriptsize]{se demuestra con} (proof);
+  \end{tikzpicture}
+  \end{center}
+  \vfill
+  \begin{alertblock}{Riesgo}\centering Sin trazabilidad, el registro puede ser formalmente correcto y materialmente insuficiente.\end{alertblock}
+\end{frame}
+
+\section{Fundamentos}
+\begin{frame}{De la contabilidad a la prueba de la operación}
+  \begin{center}
+  \begin{tikzpicture}[node distance=.45cm]
+    \node[flowbox] (entity) {\textbf{Entidad económica}\smallskip\\¿Quién contrata, paga y recibe?};
+    \node[flowbox,right=of entity] (record) {\textbf{Partida doble}\smallskip\\¿Cómo se registra?};
+    \node[flowbox,right=of record] (faithful) {\textbf{Representación fiel}\smallskip\\¿El registro refleja la sustancia?};
+    \node[flowbox,right=of faithful] (evidence) {\textbf{Materialidad}\smallskip\\¿Puede reconstruirse lo ocurrido?};
+    \draw[flowarrow] (entity)--(record);
+    \draw[flowarrow] (record)--(faithful);
+    \draw[flowarrow] (faithful)--(evidence);
+  \end{tikzpicture}
+  \end{center}
+  \vfill
+  \begin{columns}[T]
+    \begin{column}{.48\textwidth}
+      \begin{block}{Límite contable}\small El asiento cuadrado acredita equilibrio técnico, no que el bien se entregó o el servicio se prestó \parencite[cap. 3]{openstax2019}.\end{block}
+    \end{column}
+    \begin{column}{.48\textwidth}
+      \begin{block}{Función del control}\small Ante asimetrías de información, responsables, evidencia y revisión permiten verificar la ejecución; el registro debe representar la sustancia económica \parencite[cap. 2]{ifrs2018}.\end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Conceptos que deben distinguirse}
+  \begin{tabularx}{\linewidth}{@{}p{.24\linewidth}Y Y@{}}
+    \toprule
+    \textbf{Categoría} & \textbf{Pregunta que responde} & \textbf{No demuestra por sí sola}\\
+    \midrule
+    Materialidad & ¿La operación ocurrió y produjo efectos? & Que cumpla todos los requisitos fiscales.\\
+    Razón de negocios & ¿Existe un beneficio económico razonablemente esperado? & Que una operación real sea automáticamente deducible.\\
+    Deducción / acreditamiento & ¿Se satisfacen las condiciones del régimen? & Que el CFDI pruebe la ejecución material.\\
+    \bottomrule
+  \end{tabularx}
+  \vfill\centering\small La defensa sólida integra las tres preguntas sin confundir sus planos.
+\end{frame}
+
+\begin{frame}{Marco normativo mexicano}
+  \begin{columns}[T]
+    \begin{column}{.31\textwidth}\begin{block}{CFF}\small Art. 5-A: razón de negocios\\Art. 29-A: operaciones reales\\Art. 30: conservación\\Art. 69-B: inexistencia\\Art. 113 Bis: conductas tipificadas\end{block}\end{column}
+    \begin{column}{.31\textwidth}\begin{block}{Impuestos}\small LISR, art. 27: requisitos de deducción.\\LIVA, art. 5: condiciones del acreditamiento.\end{block}\end{column}
+    \begin{column}{.31\textwidth}\begin{block}{Criterio rector}\small La evidencia debe ser pertinente, verificable y proporcional al riesgo de la operación.\end{block}\end{column}
+  \end{columns}
+  \vfill\centering\scriptsize Fuentes normativas: \parencite{cff2026,lisr2024,liva2021}.
+\end{frame}
+
+\begin{frame}{Cuatro preguntas, cuatro planos de revisión}
+  \begin{center}
+  \begin{tikzpicture}[node distance=.28cm]
+    \node[evidence] (exist) {\textbf{1. Existencia}\\¿La operación ocurrió?\\CFF 29-A, 69-B};
+    \node[evidence,right=of exist] (business) {\textbf{2. Razón}\\¿Hay beneficio económico esperado?\\CFF 5-A};
+    \node[evidence,right=of business] (income) {\textbf{3. Deducción}\\¿Cumple requisitos?\\LISR 27};
+    \node[evidence,right=of income] (vat) {\textbf{4. IVA}\\¿Procede acreditar?\\LIVA 5};
+    \draw[flowarrow] (exist)--(business);\draw[flowarrow] (business)--(income);\draw[flowarrow] (income)--(vat);
+  \end{tikzpicture}
+  \end{center}
+  \vfill
+  \begin{alertblock}{Clave para no confundir conceptos}
+    Una respuesta afirmativa no resuelve automáticamente las demás: una operación real puede carecer de razón de negocios o incumplir requisitos de deducción/acreditamiento \parencite{cff2026,lisr2024,liva2021}.
+  \end{alertblock}
+\end{frame}
+
+\section{Método y evidencia}
+\begin{frame}{Método documental}
+  \begin{center}
+  \begin{tikzpicture}[node distance=.45cm]
+    \node[flowbox] (sources) {\textbf{Fuentes}\smallskip\\Artículos, leyes y marco contable};
+    \node[flowbox,right=of sources] (read) {\textbf{Lectura crítica}\smallskip\\Vigencia, límites y categorías};
+    \node[flowbox,right=of read] (contrast) {\textbf{Contraste}\smallskip\\Coincidencias y diferencias};
+    \node[flowbox,right=of contrast] (proposal) {\textbf{Transferencia}\smallskip\\Control y expediente};
+    \draw[flowarrow] (sources)--(read);\draw[flowarrow] (read)--(contrast);\draw[flowarrow] (contrast)--(proposal);
+  \end{tikzpicture}
+  \end{center}
+  \vfill
+  \begin{block}{Alcance}\centering Revisión documental intencional; no incluye encuestas, casos empresariales propios ni prueba empírica de eficacia.\end{block}
+\end{frame}
+
+\begin{frame}{La cadena de materialización}
+  \begin{center}
+  \begin{tikzpicture}[node distance=.25cm]
+    \node[evidence] (contract) {Contrato\\u orden};
+    \node[evidence,right=of contract] (execute) {Ejecución\\o entrega};
+    \node[evidence,right=of execute] (receive) {Recepción\\y aceptación};
+    \node[evidence,right=of receive] (pay) {Pago\\trazable};
+    \node[evidence,right=of pay] (record) {Registro\\contable};
+    \draw[flowarrow] (contract)--(execute);\draw[flowarrow] (execute)--(receive);\draw[flowarrow] (receive)--(pay);\draw[flowarrow] (pay)--(record);
+  \end{tikzpicture}
+  \end{center}
+  \vfill
+  \begin{columns}[T]
+    \begin{column}{.48\textwidth}\textbf{Servicios:} entregables, reportes, bitácoras, correos, aceptación y evidencia de uso.\end{column}
+    \begin{column}{.48\textwidth}\textbf{Compras:} pedido, recepción, inventario, logística, pago y trazabilidad del bien.\end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{La evidencia cambia con la operación}
+  \begin{tabularx}{\linewidth}{@{}p{.18\linewidth}Y Y Y@{}}
+    \toprule
+    \textbf{Operación} & \textbf{Ejecución} & \textbf{Recepción / resultado} & \textbf{Trazabilidad}\\
+    \midrule
+    Servicio profesional & Reportes, bitácoras, correos, sesiones & Entregable y aceptación; evidencia de uso & Contrato, CFDI, pago, registro\\
+    Compra de bienes & Pedido, remisión, logística & Entrada a almacén, inventario, responsable & Orden, CFDI, pago, registro\\
+    Obra / trabajo físico & Avances, estimaciones, evidencia de campo & Acta, entrega, conformidad & Contrato, pagos, pólizas\\
+    \bottomrule
+  \end{tabularx}
+  \vfill
+  \begin{block}{Criterio de suficiencia}\centering La evidencia pertinente depende del hecho que se pretende probar; fotografías genéricas o un contrato aislado no sustituyen la reconstrucción de la ejecución.\end{block}
+\end{frame}
+
+\begin{frame}{Cuando la autoridad revisa: no todo es 69-B}
+  \begin{center}
+  \begin{tikzpicture}[node distance=.36cm]
+    \node[flowbox] (review) {\textbf{Comprobación}\\Contabilidad y soporte\\CFF 42};
+    \node[flowbox,right=of review] (visit) {\textbf{Visita específica}\\Comprobantes fiscales\\CFF 49 Bis};
+    \node[flowbox,right=of visit] (presume) {\textbf{Presunción}\\Capacidad / localización\\CFF 69-B};
+    \node[flowbox,right=of presume] (response) {\textbf{Respuesta}\\Desvirtuar, acreditar\\o corregir};
+    \draw[flowarrow] (review)--(visit);\draw[flowarrow] (visit)--(presume);\draw[flowarrow] (presume)--(response);
+  \end{tikzpicture}
+  \end{center}
+  \vfill
+  \begin{columns}[T]
+    \begin{column}{.48\textwidth}\small El artículo 69-B contempla falta de capacidad material directa o indirecta y contribuyentes no localizados; no exige que todos los recursos sean propios.\end{column}
+    \begin{column}{.48\textwidth}\small Para receptores con efectos fiscales de comprobantes en listado definitivo, la norma prevé acreditar la adquisición o prestación efectiva o corregir su situación \parencite[arts. 42, 49 Bis y 69-B]{cff2026}.\end{column}
+  \end{columns}
+\end{frame}
+
+\section{Resultados y discusión}
+\begin{frame}{Qué muestran las fuentes}
+  \begin{itemize}
+    \item \textcite{rico2023mecanismo} vinculan la materialidad con mecanismos de control y evidencia.
+    \item \textcite{arrona2022certeza} advierten que un CFDI no acredita por sí solo la realización efectiva ante el artículo 69-B.
+    \item \textcite{rico2024consecuencias} relacionan la falta de comprobación con consecuencias fiscales y jurídicas.
+  \end{itemize}
+  \vfill
+  \begin{alertblock}{Coincidencia crítica}\centering La documentación fiscal debe corresponder con la realidad económica; una lista de documentos no sustituye la valoración de los hechos.\end{alertblock}
+\end{frame}
+
+\begin{frame}{Tres estudios: aporte útil, límite distinto}
+  \begin{tabularx}{\linewidth}{@{}p{.22\linewidth}Y Y@{}}
+    \toprule
+    \textbf{Estudio} & \textbf{Aporte al argumento} & \textbf{Límite para esta ponencia}\\
+    \midrule
+    \textcite{arrona2022certeza} & Relaciona fundamentos contables, evidencia y certeza ante 69-B. & Los fundamentos contables no son garantía procesal de materialidad.\\
+    \textcite{rico2023mecanismo} & Propone organizar el control y la evidencia de las operaciones. & Una lista o puntuación no sustituye valorar los hechos concretos.\\
+    \textcite{rico2024consecuencias} & Visibiliza consecuencias fiscales y jurídicas del problema. & Sus categorías deben contrastarse con legislación vigente y cambios posteriores.\\
+    \bottomrule
+  \end{tabularx}
+  \vfill\centering\small La convergencia de los tres trabajos respalda la prevención documental, no una fórmula universal de suficiencia.
+\end{frame}
+
+\begin{frame}{2026 cambia el contexto normativo}
+  \begin{center}
+  \begin{tikzpicture}
+    \draw[very thick,uasBlue] (0,0)--(13.2,0);
+    \foreach \x/\year/\label in {1/2022/Arrona,4/2023/Rico et al.,7/2024/Rico et al.,10/2025/Reforma,12.5/2026/Corte documental}{
+      \fill[uasGold] (\x,0) circle (2.2pt);
+      \node[above,font=\scriptsize\bfseries,align=center] at (\x,.18) {\year};
+      \node[below,font=\scriptsize,align=center,text width=2cm] at (\x,-.18) {\label};
+    }
+  \end{tikzpicture}
+  \end{center}
+  \vfill
+  \begin{block}{Por qué importa}
+    Los artículos académicos de 2022--2024 no podían examinar la reforma publicada el 7 de noviembre de 2025, con entrada general en vigor el 1 de enero de 2026. La discusión académica debe contrastarse con el CFF vigente al 13 de septiembre de 2026 \parencite{cff2026}.
+  \end{block}
+\end{frame}
+
+\begin{frame}{Control interno orientado al riesgo}
+  \begin{center}
+  \begin{tikzpicture}[node distance=.35cm]
+    \node[flowbox] (authorize) {\textbf{Autorizar}\smallskip\\Justificar contratación};
+    \node[flowbox,right=of authorize] (document) {\textbf{Documentar}\smallskip\\Definir y ejecutar};
+    \node[flowbox,right=of document] (reconcile) {\textbf{Conciliar}\smallskip\\CFDI, pago y registro};
+    \node[flowbox,right=of reconcile] (retain) {\textbf{Conservar}\smallskip\\Expediente verificable};
+    \draw[flowarrow] (authorize)--(document);\draw[flowarrow] (document)--(reconcile);\draw[flowarrow] (reconcile)--(retain);
+  \end{tikzpicture}
+  \end{center}
+  \vfill\centering\small La intensidad del control debe ajustarse a la naturaleza y al riesgo de la operación.
+\end{frame}
+
+\begin{frame}{Discusión: alcance y límites}
+  \begin{columns}[T]
+    \begin{column}{.47\textwidth}\begin{block}{Aporte}\small La materialización respalda la información contable, facilita el cumplimiento fiscal y reduce riesgos frente a una revisión.\end{block}\end{column}
+    \begin{column}{.47\textwidth}\begin{block}{Límite}\small La evidencia no garantiza aceptación automática; la autoridad debe valorar el régimen, el procedimiento y la prueba concreta.\end{block}\end{column}
+  \end{columns}
+  \vfill\centering\textbf{Postura:} evidencia pertinente y reconstruible, no acumulación indiscriminada.
+\end{frame}
+
+\section{Cierre}
+\begin{frame}{Conclusiones}
+  \begin{enumerate}
+    \item El CFDI identifica una transacción, pero la materialidad exige demostrar su ejecución y efectos económicos.
+    \item Materialidad, razón de negocios, deducción y acreditamiento son categorías relacionadas, pero distintas.
+    \item La prevención requiere autorización, ejecución documentada, recepción, conciliación y conservación.
+    \item La insuficiencia probatoria puede generar consecuencias fiscales, sin implicar automáticamente responsabilidad penal.
+    \item Una cultura de evidencia fortalece la confiabilidad de la información y la respuesta fiscal, pero ningún expediente garantiza por sí mismo la aceptación de la autoridad.
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Recomendaciones para la práctica contable}
+  \begin{block}{Expediente digital por operación}\centering Responsable · fecha · versiones · contrato · ejecución · recepción · CFDI · pago · registro\end{block}
+  \begin{columns}[T]
+    \begin{column}{.47\textwidth}\begin{itemize}\item Lista de verificación proporcional al riesgo.\item Conciliación periódica entre áreas operativa, fiscal y contable.\end{itemize}\end{column}
+    \begin{column}{.47\textwidth}\begin{itemize}\item Capacitación y revisiones internas.\item Conservación conforme a los plazos legales.\end{itemize}\end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Fundamentos contables del argumento}
+  La entidad económica delimita a quién pertenece la operación; la partida doble comprueba el equilibrio del registro, no la entrega del bien \parencite[cap. 3]{openstax2019}.
+
+  \medskip
+  La representación fiel exige información completa, neutral y libre de error. La forma documental no sustituye la sustancia económica \parencite[cap. 2]{ifrs2018}.
+\end{frame}
+
+\section{Referencias}
+\begin{frame}[allowframebreaks]{Referencias completas}
+  \nocite{*}
+  \printbibliography[heading=none]
+\end{frame}
+
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[uasBlueDark] (current page.south west) rectangle (current page.north east);
+    \node[opacity=.10] at (current page.center) {\includegraphics[width=.58\paperwidth]{\departmentlogo}};
+  \end{tikzpicture}
+  \vspace*{2.4cm}\centering\color{white}\fontsize{28}{34}\selectfont\bfseries Gracias\\[.3cm]
+  \color{white!82}\large La materialidad convierte documentos en evidencia reconstruible.\\[.55cm]
+  \color{uasGold}\coursecode\quad\presentationdate
+\end{frame}
+
+\end{document}
