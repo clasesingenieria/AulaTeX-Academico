@@ -131,7 +131,64 @@ ayuda; no abre GUI. La GUI se importa únicamente al pedirla explícitamente
 (el comportamiento predeterminado Windows se conserva). No uses `gui` en una
 sesión SSH sin servidor gráfico; Remote SSH no proporciona escritorio remoto.
 No se ha adaptado toda la automatización PowerShell, extractores, exportación
-TikZ ni entrenamiento/cloud a Linux. No se modifican pipelines IA ni autenticación.
+TikZ ni entrenamiento/cloud a Linux.
+
+### Validar y configurar model-router
+
+La carga del archivo de configuración no demuestra que la API key sea válida.
+Para validar el LLM y corregir su configuración si falla, sin PowerShell ni GUI:
+
+```bash
+bash scripts/aulatex.sh llm-config
+```
+
+El asistente primero prueba `Auto (model-router)`. Si falla, permite introducir
+**endpoint HTTPS, deployment y API key**, desbloquear las claves actuales mediante
+el PIN maestro, reintentar o cancelar. El PIN y la API key se solicitan con entrada
+oculta; nunca se pasan como argumentos ni se imprimen. No pegues secretos en el chat.
+
+Los datos nuevos se prueban en memoria y solo se guardan cuando el LLM devuelve
+el marcador esperado. La API key se cifra **antes** de escribir, con reemplazo
+atómico y permisos `0600`. Se preservan los otros perfiles y comentarios. Si hay
+otros secretos cifrados que deban conservarse, el PIN debe poder descifrarlos; el
+asistente no rota ni sustituye su salt. Una clave antigua de model-router dañada
+sí puede reemplazarse. Si el archivo cambia durante la edición, se aborta el
+guardado para no sobrescribir esa modificación.
+
+Se admite la raíz del recurso Azure, `/openai/v1`, `/v1` o la URL completa de
+`chat/completions`/`responses`. Una URL antigua de deployments conserva su
+`api-version` y se actualiza con el deployment introducido.
+
+**El PIN introducido en el asistente no se exporta a la terminal padre.** Para
+usar las credenciales cifradas en otras ejecuciones desde la misma terminal,
+define primero el PIN en Bash sin mostrarlo ni guardarlo en el historial:
+
+```bash
+read -r -s -p "PIN maestro de AulaTeX: " AULATEX_MASTER_PIN
+printf '\n'
+export AULATEX_MASTER_PIN
+bash scripts/aulatex.sh llm-config
+```
+
+Para automatización o comprobación sin modificaciones:
+
+```bash
+bash scripts/aulatex.sh llm-config --non-interactive
+bash scripts/aulatex.sh llm-validate
+bash scripts/aulatex.sh llm-validate --configure-on-failure
+```
+
+`llm-validate` usa model-router por defecto y conserva `--engine` para los otros
+motores. `--configure-on-failure` habilita el asistente solo para model-router.
+Sin TTY o con `--non-interactive` no se solicitan datos. La salida final es JSON
+sin secretos, con código `0` solo si la validación fue exitosa y `1` si falla o
+se cancela. El asistente interactivo añade menús antes del JSON.
+
+Estas pruebas **sí llaman al proveedor** y pueden consumir cuota: envían un prompt
+mínimo, sin documentos del proyecto, en un único intento sin fallback ni
+redirecciones, con 32 tokens de salida y timeout de 45 segundos por defecto.
+Se pueden ajustar con `--max-tokens` (16–128) y `--timeout-seconds` (mínimo 5).
+El bootstrap, la ayuda y la compilación siguen sin validar ni configurar LLM.
 
 ## Compilación y códigos de salida
 

@@ -30,12 +30,14 @@ def test_calibration_closes_only_after_semantic_validation() -> None:
     assert calibration._round_passed(_round(blocking=0, semantic_ok=True, optimize_ok=False)) is False
 
 
-def test_feedback_rules_are_promotable() -> None:
-    from pathlib import Path
-
-    rules = ActivityCalibration._rules_from_feedback(
-        Path(".aulatex-temp/feedback-externo-derecho-seguridad-social-A2.json")
+def test_feedback_rules_are_promotable(tmp_path) -> None:
+    feedback = tmp_path / "feedback.json"
+    feedback.write_text(
+        '{"feedback": "Revisar régimen voluntario y modelo germano; '
+        'trabajadoras del hogar en régimen obligatorio; distinguir seguro facultativo."}',
+        encoding="utf-8",
     )
+    rules = ActivityCalibration._rules_from_feedback(feedback)
 
     assert any("modelo germano" in rule for rule in rules)
     assert any("trabajadoras del hogar" in rule for rule in rules)

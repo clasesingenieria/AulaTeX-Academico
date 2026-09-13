@@ -37,6 +37,18 @@ Los motores disponibles son:
 
 `llm-env` muestra variables presentes/faltantes sin revelar secretos.
 `llm-check` realiza una llamada HTTP real de verificacion por motor.
+`llm-validate` comprueba la respuesta funcional de model-router por defecto y
+devuelve JSON sin secretos; admite `--engine` para otros motores.
+`llm-config` valida model-router y, si falla en una terminal interactiva, permite
+corregir endpoint, API key y deployment o introducir el PIN maestro. Solo guarda
+la configuración nueva tras validarla, con la API key cifrada. En Linux:
+
+```bash
+bash scripts/aulatex.sh llm-config
+```
+
+Consulta [la guía Linux](../../README-LINUX.md#validar-y-configurar-model-router)
+para el alcance del PIN, el modo no interactivo y los límites de la prueba.
 
 ## Arquitectura agéntica unificada
 
