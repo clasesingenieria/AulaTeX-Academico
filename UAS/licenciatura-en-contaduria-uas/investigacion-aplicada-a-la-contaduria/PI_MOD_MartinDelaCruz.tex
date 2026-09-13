@@ -1,0 +1,391 @@
+% Producto integrador: adaptación independiente del reporte local desarrollado.
+% Fuente de contenido y autoría:
+% reporte-actividad-final-materialidad-operaciones-facturadas.tex.
+% Los cinco autores se transcriben de esa versión local; esta adaptación NO
+% constituye una nueva confirmación de integrantes ni de entrega en Moodle.
+% El alumno debe revisar la aprobación del equipo antes de enviar el producto.
+% No se modifica el reporte original, la plantilla ni la bibliografía compartida.
+% Motor previsto: LuaLaTeX + Biber, desde la carpeta de esta asignatura.
+% Objetivo editorial: 8--11 páginas, incluidas portada y referencias.
+% No compilado: quedan pendientes paginación, revisión visual y tamaño del PDF.
+\input{plantillas/uas-base.tex}
+\addbibresource{referencias-investigacion-aplicada-a-la-contaduria/actividad-final/reporte-actividad-final-materialidad-operaciones-facturadas.bib}
+\ExecuteBibliographyOptions{sorting=nyt,doi=true,isbn=false,url=true}
+% La base registra fuentes semanales adicionales, pero la lista final imprime
+% solo las obras citadas en esta ponencia: las ocho del recurso anterior.
+\hypersetup{
+  pdftitle={La importancia de la materialización de las operaciones facturadas y las consecuencias de su falta de comprobación},
+  pdfauthor={Martín Jonathan De La Cruz Muñoz; Margarita Mata Camacho; Adriana Morales Vega; Manuela Soto Martínez; Abel Vega Martínez},
+  pdfsubject={Producto integrador — Ponencia administrativa — Investigación aplicada a la contaduría},
+  pdfkeywords={materialidad, operaciones facturadas, control interno, evidencia documental, CFDI}
+}
+
+\begin{document}
+
+% Portada propia para equipo: no se utiliza la macro individual \portada.
+\begin{titlepage}
+  \centering
+  \includegraphics[height=2.2cm]{assets-actividades/escudo-uas.png}\hfill
+  \includegraphics[width=6cm]{../fcauas-logo.jpg}\par
+  \vspace{.65cm}
+  {\Large\bfseries Universidad Autónoma de Sinaloa\par}
+  Facultad de Contaduría y Administración Culiacán\par
+  Licenciatura en Contaduría Pública — Modalidad Virtual\par
+  \vfill
+  {\large\bfseries Investigación aplicada a la contaduría\par}
+  \vspace{.45cm}
+  {\Large\bfseries\color{uasBlue}
+    La importancia de la materialización de las operaciones facturadas
+    y las consecuencias de su falta de comprobación\par}
+  \vspace{.35cm}
+  Producto integrador: ponencia administrativa\par
+  \vfill
+  \begin{tabularx}{\textwidth}{@{}lY@{}}
+    \textbf{Autores:} & Martín Jonathan De La Cruz Muñoz\\
+    & Margarita Mata Camacho\\
+    & Adriana Morales Vega\\
+    & Manuela Soto Martínez\\
+    & Abel Vega Martínez\\[.4em]
+    \textbf{Asesora:} & Dra. Nadia Aileen Valdez Acosta\\
+    \textbf{Grupo:} & 103\\
+    \textbf{Lugar:} & Culiacán, Sinaloa, México\\
+    \textbf{Fecha:} & 13 de septiembre de 2026
+  \end{tabularx}
+\end{titlepage}
+
+\pagestyle{plain}
+\onehalfspacing
+
+\section{Introducción}
+
+La materialidad de las operaciones facturadas plantea un problema central
+para la administración y la contaduría: distinguir la existencia de un
+comprobante de la ejecución real de la transacción que documenta. Un
+Comprobante Fiscal Digital por Internet (CFDI) puede identificar a las partes,
+el concepto y el importe, pero su emisión no demuestra por sí sola que se
+entregó el bien o se prestó el servicio. Es necesario relacionarlo con hechos
+verificables y con la documentación que se genera durante la operación.
+
+El tema es administrativo porque involucra decisiones de contratación,
+asignación de responsabilidades, supervisión de entregas y conservación de
+información. No se limita al registro de una factura por el área contable.
+Cuando compras, operación, tesorería y contabilidad trabajan sin compartir
+evidencia, se dificulta reconstruir lo ocurrido y explicar la relación entre
+los recursos utilizados y las actividades del negocio. La prevención exige
+organizar ese flujo documental desde el inicio.
+
+El objetivo general es analizar el marco contable y fiscal de la materialidad
+en México y las consecuencias de su falta de comprobación, para proponer un
+procedimiento de control documental. Los objetivos específicos son distinguir
+materialidad, razón de negocios y requisitos tributarios; identificar evidencia
+pertinente de contratación, ejecución, recepción y pago; y distribuir las
+responsabilidades de su integración y revisión.
+
+La pregunta orientadora es: ¿qué evidencia permite relacionar una operación
+facturada con su ejecución real y cuáles son los riesgos de no conservarla?
+La tesis sostiene que un expediente coherente y verificable ofrece mejores
+elementos de comprobación que los documentos aislados, sin garantizar su
+aceptación fiscal. Este argumento se desarrolla mediante una revisión
+documental, no mediante una investigación de campo ni una evaluación de
+eficacia en una empresa.
+
+Las fuentes principales son el Código Fiscal de la Federación (CFF), la Ley
+del Impuesto sobre la Renta (LISR) y la Ley del Impuesto al Valor Agregado
+(LIVA), contrastadas con los estudios de
+\textcite{arrona2022certeza,rico2023mecanismo,rico2024consecuencias}. Se emplean
+también el resumen del marco conceptual del IASB y un texto de contabilidad
+financiera para precisar los conceptos. La exposición presenta antecedentes,
+fundamentos, análisis normativo, propuesta administrativa y discusión crítica.
+
+\section{Antecedentes y precisiones conceptuales}
+
+\subsection{De la factura al control de la operación}
+
+La literatura revisada sitúa un antecedente relevante en la incorporación del
+artículo 69-B al esquema fiscal aplicado desde 2014. La preocupación consiste
+en que los comprobantes puedan utilizarse para dar efectos tributarios a
+operaciones inexistentes. \textcite{arrona2022certeza} estudian la aportación
+de los fundamentos contables y del control interno a la documentación de las
+operaciones. Su planteamiento permite desplazar la atención del comprobante
+aislado hacia la información que explica su origen.
+
+Posteriormente, \textcite{rico2023mecanismo} proponen un mecanismo de control
+para quienes realizaron operaciones reales y necesitan aportar elementos
+para acreditarlas. \textcite{rico2024consecuencias} examinan las posibles
+consecuencias jurídicas, fiscales y penales desde una aproximación contextual.
+Estos trabajos son antecedentes, no sustitutos de la legislación: sus fechas
+de publicación impiden atribuirles el análisis de reformas posteriores.
+
+\subsection{Entidad económica, representación fiel y partida doble}
+
+La entidad económica permite delimitar las operaciones del negocio respecto
+de las actividades personales de sus propietarios. Esta separación ayuda a
+identificar quién contrata, paga, recibe y registra. El principio de entidad
+separada expuesto por \textcite[cap. 3]{openstax2019} aporta un fundamento
+contable para esa delimitación, aunque no demuestra por sí mismo la realidad
+de una transacción particular.
+
+La representación fiel exige que la información sea, en la mayor medida
+posible, completa, neutral y libre de error. El resumen del marco conceptual
+del IASB destaca la sustancia de aquello que se representa
+\parencite[cap. 2]{ifrs2018}. Aplicado al problema de esta ponencia, el
+registro debe corresponder con los hechos y no limitarse a reproducir la
+apariencia formal del CFDI. Se trata de una característica cualitativa, no de
+una teoría independiente ni de una regla que garantice aceptación fiscal.
+
+La partida doble, por su parte, exige igualdad entre cargos y abonos
+\parencite[cap. 3]{openstax2019}. Ese equilibrio es una condición técnica del
+registro, pero no una prueba externa de entrega o prestación. Una póliza
+cuadrada puede requerir aclaraciones si no se relaciona con documentos que
+expliquen el hecho económico. Por ello, la calidad del asiento y la suficiencia
+del soporte deben revisarse de manera complementaria.
+
+\subsection{Materialidad y comprobación documental}
+
+En esta ponencia, materialidad designa la realidad de una operación y la
+posibilidad de acreditarla mediante evidencia pertinente. No se utiliza como
+sinónimo de importancia relativa de la información financiera. Tampoco se
+reduce a disponer de objetos físicos: un servicio puede acreditarse con
+entregables, reportes y constancias de recepción relacionados con su objeto
+\parencite{rico2023mecanismo}.
+
+La comprobación documental consiste en vincular lo convenido con lo
+ejecutado, recibido, pagado y registrado. Para una compra, podrían ser
+pertinentes el pedido y la recepción de mercancía; para un servicio, el
+informe y su aceptación. Son ejemplos orientativos, no una lista legal
+universal. La utilidad de cada documento depende de su autenticidad,
+contenido y relación con la operación que se pretende explicar.
+
+\section{Método y alcance documental}
+
+Se adopta un enfoque documental de alcance descriptivo y analítico. El corpus
+retoma las ocho fuentes del trabajo de base: tres artículos académicos, tres
+textos legales y dos fuentes contables de apoyo. Se contrastan las
+explicaciones de los estudios con las disposiciones normativas y se derivan
+criterios para organizar un expediente de operación. La selección es
+intencional; no constituye una revisión sistemática exhaustiva.
+
+El corte documental es el 13 de septiembre de 2026. Las copias legales
+conservadas en el corpus identifican las últimas reformas del CFF del 9 de
+abril de 2026, de la LISR del 1 de abril de 2024 y de la LIVA del 12 de
+noviembre de 2021. El análisis utiliza esas versiones, sin trasladar
+automáticamente a ellas las descripciones normativas de los estudios
+publicados entre 2022 y 2024.
+
+Los criterios de lectura fueron la correspondencia entre afirmación y fuente,
+la distinción entre conceptos y procedimientos, y la pertinencia de la evidencia
+para cada etapa administrativa. No se levantaron encuestas, se inspeccionaron
+empresas ni se calcularon tasas de incumplimiento. La tabla propuesta es una
+síntesis de organización documental; no representa un procedimiento aplicado
+ni resultados empíricos propios.
+
+\section{Análisis del marco contable y fiscal}
+
+\subsection{CFDI y evidencia de ejecución}
+
+El artículo 29-A, fracción IX, del CFF exige que los comprobantes amparen
+operaciones existentes, verdaderas o actos jurídicos reales. El artículo
+29-A Bis permite determinar el incumplimiento de ese requisito conforme a
+la facultad que esté ejerciendo la autoridad, sin agotar previamente el
+procedimiento del artículo 49 Bis
+\parencite[arts. 29-A y 29-A Bis]{cff2026}. Por tanto, la revisión de la
+realidad de una operación no queda reducida a comprobar el timbrado del CFDI.
+
+Desde la administración, esto justifica integrar un expediente que permita
+seguir la transacción. El contrato explica lo acordado, pero no necesariamente
+su cumplimiento; el pago acredita un movimiento de recursos, pero requiere
+relación con el bien o servicio; la recepción documenta lo recibido, pero debe
+ser congruente con lo contratado. La fuerza explicativa reside en la relación
+entre esas evidencias, no en su acumulación sin propósito.
+
+\subsection{Materialidad, razón de negocios y efectos tributarios}
+
+El artículo 5-A del CFF examina actos que carecen de razón de negocios y
+generan un beneficio fiscal. Considera el beneficio económico razonablemente
+esperado y establece condiciones procedimentales para su aplicación
+\parencite[art. 5-A]{cff2026}. No exige que toda operación produzca finalmente
+una ganancia. Una expectativa sustentada debe distinguirse de un resultado
+económico que puede variar por circunstancias posteriores.
+
+Materialidad y razón de negocios responden, entonces, a preguntas diferentes:
+si la operación ocurrió y qué justificación económica tenía. Una operación
+real puede ser examinada desde la razón de negocios; una finalidad comercial
+declarada tampoco demuestra que el servicio se prestó. Documentar la
+necesidad y autorización de una contratación aporta contexto, pero no
+sustituye la evidencia de ejecución.
+
+La deducibilidad y el acreditamiento requieren otro examen. Para las
+deducciones del título correspondiente, el artículo 27 de la LISR establece,
+entre otros requisitos, indispensabilidad, comprobante, registro y condiciones
+de pago o retención \parencite[art. 27]{lisr2024}. El artículo 5 de la LIVA
+condiciona el acreditamiento al destino de la erogación, al traslado expreso
+y separado y al pago efectivo, entre otros elementos
+\parencite[art. 5]{liva2021}. Acreditar la ejecución no dispensa del
+cumplimiento de las demás condiciones aplicables.
+
+\subsection{Procedimientos de comprobación y límites penales}
+
+El artículo 69-B contempla la presunción de inexistencia cuando el emisor
+carece de activos, personal, infraestructura o capacidad material, directa o
+indirecta, para realizar las operaciones, o no está localizado. La referencia
+a capacidad indirecta impide reducir el examen a que todos los recursos sean
+propios. El procedimiento prevé notificación, aportación de pruebas y
+resolución \parencite[art. 69-B]{cff2026}.
+
+Para quienes dieron efectos fiscales a comprobantes de un emisor incluido en
+el listado definitivo, ese artículo establece treinta días siguientes a la
+publicación para acreditar la adquisición o recepción efectiva, o corregir
+su situación. Esta vía no debe confundirse con la visita específica de los
+artículos 42, fracción V, inciso g), y 49 Bis. Esta última tiene reglas
+propias sobre presunción de falsedad, prueba y resolución; no es adecuado
+intercambiar los plazos o las opciones de ambos procedimientos
+\parencite[arts. 42, 49 Bis y 69-B]{cff2026}.
+
+La falta de comprobación puede dar lugar a rechazo de deducciones o
+acreditamientos, determinación de contribuciones y, cuando procedan,
+accesorios y sanciones. Sin embargo, una factura observada o un expediente
+incompleto no equivalen automáticamente a una condena penal. Aunque el
+ordenamiento contempla conexiones con delitos fiscales, deben examinarse
+las conductas tipificadas, sus elementos y el procedimiento correspondiente
+\parencite[arts. 69-B, 108 y 113 Bis]{cff2026}. La propuesta administrativa
+no sustituye ese análisis jurídico.
+
+\subsection{Conservación y responsabilidad administrativa}
+
+El artículo 30 del CFF establece un plazo ordinario de conservación de cinco
+años desde la presentación, o fecha debida de presentación, de las
+declaraciones relacionadas. También prevé cómputos y supuestos especiales,
+entre ellos actos con efectos prolongados y documentación vinculada a recursos
+o juicios \parencite[art. 30]{cff2026}. No corresponde destruir
+automáticamente el expediente cinco años después de la fecha de la factura.
+
+La responsabilidad administrativa consiste en asegurar que la evidencia siga
+disponible y relacionada con el registro. Se propone asignar una persona
+responsable del expediente, sin concentrar en ella la producción de todos
+los documentos: cada área debe aportar lo que conoce por su participación.
+Esta distribución desarrolla la orientación preventiva de
+\textcite{rico2023mecanismo} y evita trasladar toda la comprobación al contador
+cuando comienza una revisión.
+
+\section{Procedimiento propuesto de control documental}
+
+Se propone una secuencia integrada al ciclo normal de la operación. La
+tabla~\ref{tab:procedimiento} distribuye funciones y evidencia orientativa;
+los roles deberán adaptarse al tamaño y organización de cada entidad. No
+se atribuyen estos procedimientos a una empresa investigada ni se establece
+una puntuación de suficiencia probatoria.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Procedimiento propuesto: responsabilidades y evidencia}
+  \label{tab:procedimiento}
+  \begin{tabularx}{\textwidth}{@{}L{2.7cm}L{3.5cm}Y@{}}
+    \toprule
+    \textbf{Etapa} & \textbf{Responsabilidad} & \textbf{Evidencia orientativa}\\
+    \midrule
+    Autorizar & Área solicitante y administración & Necesidad documentada y autorización de la contratación.\\
+    Contratar & Compras o responsable designado & Contrato o pedido con objeto, condiciones y entregables.\\
+    Ejecutar y recibir & Área operativa y responsable de recepción & Reporte, entrega o aceptación vinculados con lo contratado.\\
+    Conciliar & Tesorería y contabilidad & Relación entre CFDI, pago, recepción y póliza contable.\\
+    Revisar y conservar & Revisor designado y responsable del archivo & Registro de incidencias, expediente y plazo de conservación aplicable.\\
+    \bottomrule
+  \end{tabularx}
+  \par\medskip
+  \begin{minipage}{\textwidth}
+    \textit{Nota.} Elaboración como propuesta a partir de
+    \textcite{rico2023mecanismo} y del artículo 30 del CFF
+    \parencite{cff2026}. La evidencia debe ajustarse a cada operación;
+    la tabla no es una lista legal exhaustiva ni acredita eficacia empírica.
+  \end{minipage}
+\end{table}
+
+La revisión debería comprobar identidad de las partes, fechas, objeto y
+correspondencia entre documentos. Si aparecen diferencias, se propone
+registrarlas y solicitar aclaración al área que conoce los hechos. Conservar
+la trazabilidad de una aclaración es distinto de fabricar documentos o
+alterar fechas para aparentar una ejecución. La documentación debe reflejar
+lo realmente sucedido.
+
+Cuando sea posible, quien autoriza no debería ser la única persona que
+certifique la recepción y revise el expediente. Si la estructura no permite
+separar funciones, se propone una revisión compensatoria por otra persona
+designada. Como ejemplo ilustrativo, en un servicio profesional el informe
+entregado y su aceptación pueden ser más pertinentes que fotografías
+genéricas. La elección debe responder a lo contratado, sin exigir evidencias
+ajenas a su naturaleza.
+
+\section{Discusión}
+
+Las fuentes permiten sostener que la organización documental es relevante,
+pero no que exista una fórmula universal de materialidad.
+\textcite{arrona2022certeza} destacan el aporte de los fundamentos contables;
+\textcite{rico2023mecanismo} desarrollan un mecanismo de control. La
+convergencia respalda la prevención y la vinculación de pruebas, no una
+garantía procesal derivada de cumplir una lista. Esta ponencia no valida en
+campo ninguno de esos mecanismos.
+
+La perspectiva administrativa complementa, sin reemplazar, a la contable y
+la jurídica. La administración organiza responsabilidades; la contabilidad
+relaciona el registro con los hechos; el análisis fiscal distingue requisitos,
+procedimientos y consecuencias. Un expediente puede estar ordenado y aun
+presentar evidencia insuficiente. Por eso, debe evaluarse qué permite
+demostrar cada documento y qué aspectos permanecen sin explicar.
+
+% Cita directa verificada en la conclusión del TXT local del estudio de 2024,
+% página impresa 67. Se conserva el fragmento sin modificar su redacción.
+\textcite[p. 67]{rico2024consecuencias} advierten que
+\enquote{para efectos jurídicos, fiscales y penales la norma se encuentra en
+constantes cambios}. Esta cautela es relevante: el texto legal consultado
+identifica adiciones de noviembre de 2025 en los artículos 29-A, fracción IX,
+29-A Bis y 49 Bis \parencite[arts. 29-A, 29-A Bis y 49 Bis]{cff2026}.
+Los estudios anteriores aportan contexto, pero sus afirmaciones deben
+contrastarse con la norma correspondiente al periodo analizado.
+
+La propuesta también tiene límites de implementación. Exigir documentos
+irrelevantes puede aumentar la carga administrativa sin explicar mejor la
+operación. Se defiende, por ello, un control proporcional a su naturaleza y
+riesgo, con evidencia auténtica y verificable. No se cuantifica ahorro,
+reducción de contingencias ni probabilidad de aceptación fiscal. Una futura
+evaluación requeriría examinar su aplicación y sus resultados con información
+autorizada de organizaciones concretas.
+
+\section{Conclusiones}
+
+La revisión sostiene la tesis de que comprobar una operación requiere
+relacionar el CFDI con su ejecución y no únicamente conservar documentos
+aislados. Su aportación es una propuesta preventiva de organización
+administrativa, limitada por el alcance documental del trabajo. Las
+conclusiones se presentan en orden de importancia para la práctica contable:
+
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{La prioridad es acreditar hechos reales.} El expediente debe
+  vincular contratación, ejecución, recepción y pago. Un CFDI, un contrato o
+  un pago aislado no demuestra necesariamente toda la operación; la
+  coherencia y pertinencia de la evidencia son centrales.
+
+  \item \textbf{Las categorías fiscales deben distinguirse.} Materialidad,
+  razón de negocios, deducibilidad y acreditamiento responden a requisitos
+  diferentes. Acreditar la ejecución no elimina el examen de las demás
+  condiciones legales aplicables.
+
+  \item \textbf{Las consecuencias requieren análisis separado.} La
+  insuficiencia probatoria puede producir efectos fiscales, pero no equivale
+  automáticamente a responsabilidad penal. Los procedimientos de comprobación
+  y las conductas tipificadas deben examinarse conforme a sus propias reglas.
+
+  \item \textbf{La prevención es una responsabilidad compartida.} Administración,
+  áreas operativas, tesorería y contabilidad deben aportar y revisar la
+  evidencia durante el ciclo de la operación. La conservación exige atender
+  el plazo legal aplicable, no una eliminación automática por antigüedad
+  de la factura.
+
+  \item \textbf{El procedimiento es orientativo y debe evaluarse.} La tabla
+  ofrece una forma de distribuir responsabilidades, no resultados de una
+  empresa ni una garantía de aceptación por la autoridad. Su aplicación
+  requiere adaptación, actualización normativa y revisión de evidencia
+  concreta.
+\end{enumerate}
+
+\referencias
+
+\end{document}

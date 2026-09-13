@@ -1,61 +1,78 @@
-\documentclass[12pt,letterpaper]{article}
-\usepackage[spanish,mexico]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage{geometry}
-\usepackage{setspace}
-\usepackage{graphicx}
-\usepackage{array}
-\usepackage{longtable}
-\usepackage{booktabs}
-\usepackage{hyperref}
-\usepackage{enumitem}
-\usepackage{ragged2e}
-\usepackage{titlesec}
-\usepackage{fancyhdr}
+% Ponencia final. Plantilla compartida: base/Plantilla-Informe/template.tex.
+% Estructura explícita del texto proporcionado: prevalece sobre los tres actos
+% genéricos de AulaTeX. No modificar la plantilla global para esta entrega.
+% Compilar desde la raíz mediante compilar-actividad-final.sh (LuaLaTeX/Biber).
+\documentclass[spanish,12pt,letterpaper,oneside]{article}
+\def\documenttitle{La importancia de la materialización de las operaciones facturadas y las consecuencias de su falta de comprobación}
+\def\documentsubtitle{Materialidad de las operaciones facturadas}
+\def\documentsubject{Ponencia — Actividad final}
+\def\documentauthor{Martín Jonathan De La Cruz Muñoz; Margarita Mata Camacho; Adriana Morales Vega; Manuela Soto Martínez; Abel Vega Martínez}
+\def\coursename{Investigación aplicada a la contaduría}
+\def\coursecode{Grupo 103}
+\def\universityname{Universidad Autónoma de Sinaloa}
+\def\universityfaculty{Licenciatura en Contaduría Pública — Campus Virtual}
+\def\universitydepartment{Facultad de Contaduría y Administración Culiacán}
+\def\universitydepartmentimage{UAS/licenciatura-en-contaduria-uas/fcauas-logo.jpg}
+\def\universitydepartmentimagecfg{height=1.45cm}
+\def\universitylocation{Culiacán, Sinaloa, México}
+\def\authortable{%
+	\begin{tabular}{@{}ll@{}}
+		\textbf{Autores:} & Martín Jonathan De La Cruz Muñoz \\
+		& Margarita Mata Camacho \\
+		& Adriana Morales Vega \\
+		& Manuela Soto Martínez \\
+		& Abel Vega Martínez \\[0.5em]
+		\textbf{Asesora:} & Dra. Nadia Aileen Valdez Acosta \\
+		\textbf{Materia:} & Investigación aplicada a la contaduría \\
+		\textbf{Grupo:} & 103 \\
+		\textbf{Lugar:} & Culiacán, Sinaloa \\
+		\textbf{Fecha:} & Septiembre de 2026
+	\end{tabular}%
+}
+% La configuración compartida se carga primero. Estas opciones solo afectan
+% este documento y evitan cargar natbib junto con biblatex.
+\AddToHook{file/config.tex/after}{%
+	\def\stylecitereferences{custom}%
+	\def\fontdocument{custom}%
+	\def\indexdepth{1}%
+	\def\hfwidthwrap{true}%
+	\def\hfwidthtitle{0.43}%
+	\def\hfwidthcourse{0.53}%
+}
+\input{template}
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+% Recalcular tras el headheight=64pt de la plantilla: con LuaLaTeX su
+% setpagemargincm no aplica newgeometry y el pie puede quedar fuera del papel.
+\geometry{top=3.8cm,bottom=3.2cm,left=2.54cm,right=2.54cm,
+	headheight=64pt,headsep=15pt,footskip=30pt}
+\usepackage{csquotes}
 \usepackage[style=apa,backend=biber,sortcites=true,doi=true,isbn=false,url=true]{biblatex}
 \addbibresource{referencias-investigacion-aplicada-a-la-contaduria/actividad-final/reporte-actividad-final-materialidad-operaciones-facturadas.bib}
-\geometry{margin=2.54cm}
-\setstretch{1.5}
-\setlength{\parskip}{0.35em}
-\setlength{\parindent}{1.25cm}
-\pagestyle{fancy}
-\fancyhf{}
-\rhead{Investigación aplicada a la contaduría}
-\lhead{UAS FCA}
-\cfoot{\thepage}
-\titleformat{\section}{\normalfont\Large\bfseries}{\thesection.}{0.5em}{}
-\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{0.5em}{}
+\hypersetup{pdfsubject={Actividad final — Investigación aplicada a la contaduría},urlcolor=black}
+\setlength{\emergencystretch}{2em}
+
+\newcommand{\aqmarkwater}{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[opacity=0.12,anchor=center] at ($(current page.center)+(0cm,1.3cm)$) {\includegraphics[width=.48\paperwidth]{assets-actividad-final/escudo-fca-marca-agua.png}};
+\end{tikzpicture}%
+}
 
 \begin{document}
-
-\begin{titlepage}
-\centering
-\includegraphics[width=2.2cm]{fcauas-logo.jpg}\par\vspace{0.8cm}
-{\bfseries\Large UNIVERSIDAD AUTÓNOMA DE SINALOA\par}
-\vspace{0.3cm}
-{\bfseries\Large FACULTAD DE CONTADURÍA Y ADMINISTRACIÓN\par}
-\vspace{0.3cm}
-{\bfseries\large LICENCIATURA EN CONTADURÍA PÚBLICA -- CAMPUS VIRTUAL\par}
-\vfill
-{\bfseries\LARGE Ponencia\par}
-\vspace{0.5cm}
-{\bfseries\LARGE La importancia de la materialización de las operaciones facturadas y las consecuencias de su falta de comprobación\par}
-\vspace{1.2cm}
-{\large Autores:\par}
-\vspace{0.4cm}
-Martin Jonathan De La Cruz Muñoz\par
-Margarita Mata Camacho\par
-Adriana Morales Vega\par
-Manuela Soto Martínez\par
-Abel Vega Martínez\par
-\vfill
-Culiacán, Sinaloa, septiembre de 2026\par
-\end{titlepage}
-
-\tableofcontents
-\newpage
+\AddToHookNext{shipout/background}{\aqmarkwater}
+\templatePortrait
+\templatePagecfg
+% Pies compactos, sin cortes en el subtítulo ni en el nombre de la materia.
+\fancyfoot[L]{\fontsize{9pt}{11pt}\selectfont\itshape\mbox{\documentsubtitle}}
+\fancyfoot[R]{\fontsize{9pt}{11pt}\selectfont\itshape\mbox{\coursecode\ \coursename}}
+\templateIndex
+\templateFinalcfg
+\onehalfspacing
+\widowpenalty=10000
+\clubpenalty=10000
 
 \section*{Resumen}
 \addcontentsline{toc}{section}{Resumen}
@@ -73,22 +90,36 @@ In Mexico, this requirement is especially significant due to the tax authority's
 
 \textbf{Keywords:} materialization, invoiced operations, tax substantiation, CFDI.
 
-\section{Introducción}
+\clearpage
+\section*{Introducción}
+\addcontentsline{toc}{section}{Introducción}
+\markboth{Introducción}{}
 La discusión sobre la materialidad de las operaciones facturadas se relaciona con un problema central de la contabilidad contemporánea: distinguir entre la forma documental de una operación y su sustancia económica. En la práctica, una factura puede existir sin que ello pruebe por sí sola que el bien fue entregado o que el servicio realmente se prestó. Por esa razón, el análisis de materialidad exige observar el conjunto de elementos que rodean la transacción y no únicamente el CFDI.
 
 Este tema es especialmente relevante en México por el fortalecimiento de las facultades de fiscalización y por la evolución normativa del Código Fiscal de la Federación. La razón de negocios, la presunción de inexistencia de operaciones, la visita específica para comprobar documentación y la conservación de contabilidad establecen un entorno en el que el contribuyente debe poder demostrar hechos, no solo documentos. En consecuencia, la evidencia fiscal debe articularse con la evidencia contable, jurídica y operativa.
 
 La relevancia académica de esta ponencia radica en mostrar que la materialidad no equivale a la razón de negocios ni a la simple existencia de un comprobante. Tampoco toda inconsistencia documental implica automáticamente un delito. La distinción entre estos planos permite comprender mejor el alcance de la regulación fiscal y la función preventiva del control interno.
 
+La pregunta que orienta el análisis es: ¿qué evidencia permite relacionar una operación facturada con su ejecución real y cuáles son los riesgos de no conservarla? La tesis sostiene que un expediente coherente de contratación, ejecución, recepción y pago ofrece mejores elementos de comprobación que los documentos aislados, sin constituir una garantía automática de aceptación fiscal. El argumento contrasta la legislación federal con las aportaciones de \textcite{arrona2022certeza,rico2023mecanismo,rico2024consecuencias}.
+
+\section{Objetivo general}
+Analizar el marco contable, legal y fiscal de la materialidad de las operaciones en México y las consecuencias de su falta de comprobación, con la finalidad de proponer estrategias de control interno que reduzcan riesgos patrimoniales y favorezcan la confiabilidad de la información financiera.
+
 \section{Marco teórico y conceptual}
 \subsection{Entidad económica}
 El principio de entidad económica establece que la información contable debe referirse a un sujeto económico claramente delimitado. Esto implica separar el patrimonio de la empresa del patrimonio personal de sus propietarios y registrar las operaciones conforme a la entidad que realmente las realiza. El concepto es útil porque la materialidad requiere identificar quién contrata, quién paga, quién recibe y quién ejecuta la operación.
 
+La separación entre las operaciones del negocio y las de sus propietarios permite atribuir correctamente recursos y obligaciones \parencite[cap. 3]{openstax2019}. No prueba por sí misma que la operación ocurrió, pero establece el sujeto al que debe vincularse la evidencia.
+
 \subsection{Representación fiel}
 El marco conceptual del IASB señala que la información útil debe representar fielmente aquello que pretende representar. Para ello debe ser completa, neutral y libre de error. En el contexto de la materialidad, este criterio obliga a que el registro contable no se limite a la forma externa del CFDI, sino que refleje la sustancia de la operación y su realidad económica.
 
+Estos atributos corresponden a una característica cualitativa de la información, no a una teoría independiente. El resumen oficial del marco conceptual subraya la sustancia de lo representado \parencite[cap. 2]{ifrs2018}. A su vez, la materialidad fiscal entendida como realidad de una operación no debe confundirse con la importancia relativa utilizada para evaluar información financiera.
+
 \subsection{Partida doble}
 La partida doble constituye la base técnica del registro contable. Toda transacción afecta al menos dos cuentas y conserva el equilibrio entre cargos y abonos. No obstante, el equilibrio contable no garantiza por sí mismo la existencia material de la operación; solo confirma que el asiento está formalmente cuadrado. Por ello, una contabilidad correcta en forma puede seguir siendo insuficiente si carece de sustento en la realidad de los hechos.
+
+El procedimiento de registro explicado por \textcite[cap. 3]{openstax2019} permite comprender esta diferencia: la igualdad entre débitos y créditos es una condición técnica, no una prueba externa de entrega o prestación.
 
 \subsection{Teoría de la agencia}
 La teoría de la agencia explica la relación entre un principal y un agente, donde pueden surgir asimetrías de información y conflictos de interés. En las organizaciones, los administradores y proveedores pueden actuar con información más amplia que la disponible para quienes supervisan. Por esa razón, la documentación, la auditoría y los controles internos funcionan como mecanismos de reducción de asimetrías y de verificación de que la operación realmente ocurrió.
@@ -99,35 +130,71 @@ La materialización puede definirse como la demostración de que una operación 
 \subsection{Comprobación documental y fiscal}
 La comprobación consiste en construir una cadena documental coherente que vincule la factura con la operación que la originó. Esa cadena puede integrar contrato, orden de compra, evidencia de pago, recepción, uso o aprovechamiento del bien o servicio, y documentación posterior que confirme el resultado. En materia fiscal, esta comprobación es decisiva para sustentar deducciones y acreditamientos.
 
-\subsection{Facultades de comprobación y consecuencias}
+\subsection{Facturación y su relación con la materialidad}
+El CFDI identifica fiscalmente una transacción; su timbrado no sustituye la evidencia de ejecución. El artículo 29-A, fracción IX, exige que ampare operaciones existentes, verdaderas o actos jurídicos reales. El artículo 29-A Bis permite revisar este requisito en el ejercicio de facultades de comprobación sin agotar previamente el procedimiento del artículo 49 Bis \parencite[arts. 29-A y 29-A Bis]{cff2026}. La formalidad documental y la realidad económica deben verificarse de manera complementaria.
+
+\subsection{Facultades de comprobación de la autoridad fiscal}
 La autoridad fiscal puede revisar contabilidad, papeles de trabajo y documentación soporte para verificar si las operaciones declaradas corresponden con la realidad. Cuando la materialidad no se acredita, pueden rechazarse deducciones, acreditamientos o incluso presumirse operaciones inexistentes conforme al procedimiento legal aplicable. Sin embargo, una deficiencia de soporte documental no equivale automáticamente a una condena penal; cada plano jurídico debe analizarse de manera separada.
 
+El artículo 69-B contempla la falta de capacidad material directa o indirecta, así como el supuesto de contribuyentes no localizados. No exige que todos los recursos utilizados sean propios. Prevé un procedimiento para desvirtuar la presunción y, para receptores que dieron efectos fiscales a comprobantes incluidos en el listado definitivo, un plazo de treinta días para acreditar la adquisición o prestación efectiva, o corregir su situación. No debe confundirse con la visita específica de los artículos 42 (fracción V, inciso g) y 49 Bis \parencite[arts. 42, 49 Bis y 69-B]{cff2026}.
+
+\subsection{Consecuencias de la falta de comprobación}
+La falta de soporte suficiente puede dar lugar a ajustes fiscales, rechazo de deducciones o de acreditamientos, así como a los accesorios y sanciones que procedan conforme a los hechos y disposiciones aplicables. La responsabilidad penal requiere examinar las conductas tipificadas y sus elementos; no surge automáticamente de una factura observada o de un expediente incompleto \parencite[arts. 69-B, 108 y 113 Bis]{cff2026}. El análisis contextual de \textcite{rico2024consecuencias} es útil para identificar riesgos, pero debe contrastarse con la legislación aplicable y no sustituye ese examen.
+
+\subsection{Importancia contable y control interno}
+La documentación debe producirse durante el ciclo normal de la operación, no fabricarse después de una revisión. Contratos, entregables y pagos deben ser congruentes entre sí y con la actividad del contribuyente. Un procedimiento de control debe asignar responsables para autorizar, recibir, registrar y revisar; cuando no sea posible separar funciones, debe establecer una revisión compensatoria. Estas medidas desarrollan la orientación preventiva de \textcite{rico2023mecanismo}.
+
+La conservación ordinaria prevista en el artículo 30 del CFF es de cinco años a partir de la presentación, o fecha debida de presentación, de las declaraciones relacionadas, con cómputos y supuestos especiales. No se trata de destruir automáticamente toda documentación cinco años después de la factura \parencite[art. 30]{cff2026}.
+
+\needspace{6\baselineskip}
 \section{Método}
 Se realizó una revisión documental de bibliografía legal, contable y académica sobre materialidad de operaciones, facultades de comprobación, razón de negocios y comprobación fiscal. La búsqueda se concentró en textos oficiales de la Cámara de Diputados y en artículos científicos de acceso abierto relacionados con el artículo 69-B del Código Fiscal de la Federación. Posteriormente, se seleccionaron y compararon los hallazgos para integrar una explicación conceptual y normativa coherente.
 
 La estrategia metodológica priorizó la lectura crítica de fuentes primarias y secundarias, con especial atención a la vigencia normativa, a los límites entre materialidad y razón de negocios, y a las consecuencias fiscales y jurídicas de la falta de prueba. También se contrastaron artículos académicos para identificar sus aportes, alcances y limitaciones.
 
-\section{Resultados y discusión}
+El corpus incluye tres artículos académicos, tres textos legales y dos fuentes contables de apoyo, disponibles en la carpeta de referencias. El corte documental corresponde al 13 de septiembre de 2026: CFF con última reforma de 9 de abril de 2026, LISR de 1 de abril de 2024 y LIVA de 12 de noviembre de 2021. Los hallazgos son documentales; no proceden de encuestas propias ni de una prueba de eficacia del mecanismo de control. La selección es intencional y no constituye una revisión sistemática exhaustiva.
+
+\needspace{6\baselineskip}
+\section{Resultados}
 El análisis confirma que la materialidad de las operaciones facturadas no puede sostenerse únicamente en la existencia de un CFDI. La factura acredita emisión documental, pero no necesariamente ejecución material. Por ello, una empresa requiere expedientes de operación que integren pruebas de contratación, ejecución, recepción y pago.
 
-El artículo 5-A del CFF introdujo la revisión de la razón de negocios, es decir, la evaluación de si un acto genera o no un beneficio fiscal indebido frente al propósito económico de la operación. Este examen es distinto del análisis de materialidad: puede existir una operación real pero fiscalmente cuestionable por falta de razón de negocios, o una operación aparentemente documentada pero sin realidad material suficiente.
+El artículo 5-A del CFF examina actos que carecen de razón de negocios y generan un beneficio fiscal. Considera el beneficio económico razonablemente esperado y prevé garantías procedimentales; no exige que toda operación produzca una ganancia finalmente realizada. Este examen es distinto del análisis de materialidad: una operación real puede ser cuestionada por razón de negocios, mientras que una operación documentada puede carecer de evidencia de ejecución \parencite[art. 5-A]{cff2026}.
 
 El artículo 29-A del CFF refuerza la exigencia de que los comprobantes fiscales amparen operaciones existentes, mientras que el artículo 69-B regula la presunción de inexistencia cuando el emisor carece de activos, personal, infraestructura o capacidad material. En paralelo, el artículo 49 Bis permite verificar documentos mediante visita específica, y el artículo 113 Bis prevé consecuencias penales para conductas tipificadas en supuestos legalmente precisos. El artículo 30 obliga a conservar documentación por el plazo legal aplicable. En conjunto, estas normas muestran que la defensa fiscal depende de la trazabilidad y no solo de la factura.
 
-En materia de deducciones, el artículo 27 de la LISR exige requisitos adicionales como la indispensabilidad, el comprobante y, en su caso, el medio de pago o la retención correspondiente. En el IVA, el artículo 5 de la LIVA condiciona el acreditamiento a requisitos propios del impuesto. Así, materialidad, deducibilidad y acreditamiento son categorías distintas, aunque relacionadas.
+En materia de deducciones del régimen correspondiente, el artículo 27 de la LISR exige requisitos adicionales como la indispensabilidad, el comprobante y, en su caso, el medio de pago o la retención correspondiente \parencite[art. 27]{lisr2024}. En el IVA, el artículo 5 de la LIVA condiciona el acreditamiento, entre otros elementos, al traslado separado, al pago efectivo y a la vinculación con actividades gravadas o a tasa cero \parencite[art. 5]{liva2021}. Así, materialidad, deducibilidad y acreditamiento son categorías distintas, aunque relacionadas.
 
-Los estudios revisados coinciden en que el control interno y la evidencia documental fortalecen la defensa del contribuyente. No obstante, también presentan límites: algunos utilizan muestras locales pequeñas, otros proponen mecanismos de control sin validación de campo amplia y otros mezclan categorías jurídicas o estadísticas que deben interpretarse con cautela. Su valor principal reside en resaltar que la prevención documental es indispensable, no en ofrecer una prueba automática de materialidad.
+\needspace{8\baselineskip}
+De estos hallazgos se deriva una secuencia preventiva: justificar y autorizar la contratación; definir sus condiciones; documentar la ejecución; verificar la recepción; conciliar CFDI, pago y registro; y conservar el expediente. La intensidad del control debe ajustarse al riesgo y a la naturaleza de la transacción. Para un servicio profesional, por ejemplo, el informe entregado y su aceptación pueden ser más pertinentes que fotografías genéricas. Este ejemplo es ilustrativo, no evidencia de una empresa investigada.
 
-\section{Conclusiones}
-La materialización de las operaciones facturadas constituye una exigencia central para la contabilidad y para el cumplimiento fiscal. Su importancia radica en que obliga a demostrar la realidad económica de la transacción y no solo su apariencia documental. En ese sentido, una factura, un contrato o un pago aislado no bastan; la prueba debe ser integral, coherente y congruente con la operación realizada.
+\needspace{6\baselineskip}
+\section{Discusión}
 
-La revisión normativa permite concluir que la falta de comprobación genera riesgos fiscales relevantes: rechazo de deducciones, cuestionamiento de acreditamientos y activación de procedimientos de presunción de inexistencia. Sin embargo, estos efectos no deben confundirse con una sanción penal automática, pues el plano penal requiere una tipificación y acreditación específicas.
+En relación con la materialización de las operaciones facturadas, \textcite{rico2023mecanismo} señalan la importancia de contar con mecanismos de control y evidencia que permitan demostrar la existencia real de las operaciones. Por su parte, \textcite{arrona2022certeza} destacan que la existencia de un CFDI no es suficiente para acreditar que una operación fue efectivamente realizada, especialmente ante los supuestos establecidos en el artículo 69-B del Código Fiscal de la Federación. Ambos autores coinciden en que debe existir correspondencia entre la documentación fiscal y la realidad económica de la operación. Asimismo, \textcite{rico2024consecuencias} advierten que la falta de comprobación puede generar consecuencias fiscales y jurídicas, por lo que resulta necesario fortalecer el control interno y conservar evidencia suficiente. En este sentido, la materialización permite respaldar la información contable, facilitar el cumplimiento fiscal y disminuir los riesgos ante una revisión de la autoridad.
 
-Desde la perspectiva contable, el mejor mecanismo de prevención consiste en integrar controles internos que aseguren expedientes completos por operación, revisión de proveedores, trazabilidad de pagos y conservación ordenada de evidencias. La finalidad no es acumular papeles, sino demostrar con claridad el cómo, cuándo, quién, dónde y para qué de cada transacción.
+No obstante, los estudios revisados también presentan límites: algunos utilizan muestras locales pequeñas, otros proponen mecanismos de control sin validación de campo amplia y otros mezclan categorías jurídicas o estadísticas que deben interpretarse con cautela. Su valor principal reside en resaltar que la prevención documental es indispensable, no en ofrecer una prueba automática de materialidad.
 
-En conclusión, la materialidad fortalece la confiabilidad de la información financiera y la defensa fiscal del contribuyente. Cuando la documentación se organiza con criterio técnico y el soporte coincide con la realidad económica, disminuye el riesgo frente a revisiones de la autoridad y se fortalece una cultura de cumplimiento y transparencia.
+\textcite{arrona2022certeza} destacan la utilidad de los fundamentos contables para documentar operaciones; su aportación no convierte a las normas de información financiera en una garantía procesal. \textcite{rico2023mecanismo} proponen un mecanismo de control, pero la existencia de una lista o puntuación no sustituye la valoración concreta de los hechos. La coincidencia entre ambos trabajos respalda la organización de evidencia, no una fórmula universal de suficiencia.
+
+\needspace{8\baselineskip}
+La actualización normativa es igualmente decisiva. \textcite[p. 67]{rico2024consecuencias} advierten que \enquote{para efectos jurídicos, fiscales y penales la norma se encuentra en constantes cambios}. En particular, la reforma publicada el 7 de noviembre de 2025, con entrada general en vigor el 1 de enero de 2026, incorpora disposiciones relevantes sobre comprobantes falsos que no podían ser examinadas en los artículos de 2022--2024 \parencite[decreto de 7 de noviembre de 2025 y transitorios]{cff2026}.
+
+Por tanto, la postura defendida es que el control interno debe procurar evidencia pertinente y verificable, no acumulación indiscriminada de documentos. La certeza práctica mejora cuando otra persona puede reconstruir la transacción, aunque su aceptación fiscal dependa del régimen, del procedimiento y de la valoración de las pruebas. Esta conclusión preserva tanto la responsabilidad documental del contribuyente como la necesidad de que la autoridad funde y motive sus determinaciones.
 
 \clearpage
-\printbibliography
+\needspace{6\baselineskip}
+\section{Conclusiones}
+El análisis permite establecer las siguientes conclusiones, ordenadas por su importancia para la práctica contable:
+\begin{enumerate}
+	\item La comprobación de la materialidad exige vincular la factura con hechos económicos reales. Un CFDI, un contrato o un pago aislado no ofrece necesariamente evidencia suficiente de toda la operación; la coherencia del expediente es el criterio central.
+	\item Materialidad, razón de negocios y requisitos de deducción o acreditamiento son cuestiones distintas. Acreditar la ejecución no elimina la necesidad de verificar las demás condiciones legales.
+	\item La insuficiencia probatoria puede producir consecuencias fiscales, pero no equivale automáticamente a responsabilidad penal. Los procedimientos y las conductas tipificadas deben analizarse por separado, conforme a la norma aplicable.
+	\item La prevención debe integrar autorización, documentación de la ejecución, recepción, conciliación y conservación. La responsabilidad se distribuye entre administración, áreas operativas y contabilidad, en lugar de trasladarse al contador cuando comienza una revisión.
+	\item Una cultura de evidencia pertinente fortalece la confiabilidad de la información y la capacidad de respuesta fiscal. El mecanismo propuesto es una orientación preventiva derivada de la revisión documental, no una garantía de aceptación por la autoridad ni un resultado empírico de eficacia.
+\end{enumerate}
+
+\clearpage
+\section{Referencias}
+\printbibliography[heading=none]
 
 \end{document}

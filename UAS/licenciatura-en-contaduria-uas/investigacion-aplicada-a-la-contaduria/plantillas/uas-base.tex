@@ -1,0 +1,87 @@
+% Base reutilizable; no compilar directamente. LuaLaTeX + Biber.
+% Compilar desde la carpeta de la asignatura mediante compilar-pendientes.sh.
+\documentclass[12pt,letterpaper,oneside]{article}
+\usepackage[margin=2.54cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\usepackage[spanish,es-tabla,es-nodecimaldot]{babel}
+\usepackage{csquotes,setspace,ragged2e}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{booktabs,array,longtable,tabularx}
+\usepackage{enumitem,titlesec}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\usepackage{pdflscape}
+\usepackage[most]{tcolorbox}
+\usepackage[backend=biber,style=apa,sortcites=true]{biblatex}
+\DeclareLanguageMapping{spanish}{spanish-apa}
+\addbibresource{fuentes-semanales.bib}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage{attachfile2}
+\definecolor{uasBlue}{HTML}{123B6D}
+\definecolor{uasGold}{HTML}{A77A16}
+\definecolor{uasPaper}{HTML}{F2F6FA}
+\definecolor{uasGreen}{HTML}{276B53}
+\hypersetup{pdfauthor={Martín Jonathan De La Cruz Muñoz},
+  pdfsubject={Investigación aplicada a la contaduría — UAS}}
+\onehalfspacing
+\setlength{\parindent}{1.27cm}
+\setlength{\parskip}{.3em}
+\setlength{\emergencystretch}{3em}
+\setlength{\bibhang}{1.27cm}
+\setlength{\bibitemsep}{.6em}
+\raggedbottom
+\titleformat{\section}{\large\bfseries\color{uasBlue}}{\thesection.}{.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{.5em}{}
+\setlist{leftmargin=*,itemsep=.3em,parsep=0pt}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\newcommand{\portada}[2]{%
+  \hypersetup{pdftitle={#1}}%
+  \begin{titlepage}
+    \centering
+    \includegraphics[height=2.2cm]{assets-actividades/escudo-uas.png}\hfill
+    \includegraphics[width=6cm]{../fcauas-logo.jpg}\par
+    \vspace{.8cm}
+    {\Large\bfseries Universidad Autónoma de Sinaloa\par}
+    Facultad de Contaduría y Administración\par
+    Licenciatura en Contaduría Pública — Modalidad Virtual\par
+    \vfill
+    {\LARGE\bfseries\color{uasBlue}#1\par}
+    \vspace{.6cm}#2\par
+    \vspace{.6cm}{\large Investigación aplicada a la contaduría\par}
+    \vfill
+    \begin{tabularx}{\textwidth}{@{}lY@{}}
+      Estudiante: & Martín Jonathan De La Cruz Muñoz\\
+      Matrícula: & 26031061\\
+      Asesora: & Dra. Nadia Aileen Valdez Acosta\\
+      Grupo: & 103 LCP\\
+      Fecha de realización: & 13 de septiembre de 2026\\
+      Lugar: & Culiacán, Sinaloa, México
+    \end{tabularx}
+  \end{titlepage}
+}
+\newtcolorbox{forobox}[1]{enhanced,breakable,title={#1},
+  colback=uasPaper,colframe=uasBlue,colbacktitle=uasBlue,coltitle=white,
+  fonttitle=\bfseries,boxrule=.6pt,arc=1mm,
+  left=3mm,right=3mm,top=2mm,bottom=2mm,
+  before upper={\setlength{\parindent}{0pt}\setlength{\parskip}{.5em}}}
+\attachfilesetup{color={0.071 0.231 0.427},print=false}
+\newcommand{\foroTexto}[1]{\noindent\textattachfile[
+  description={Texto de la intervención para revisar y copiar},mimetype=text/plain]{#1}{%
+  \colorbox{uasBlue}{\textcolor{white}{\small Abrir texto adjunto}}}\par}
+\newcommand{\fuenteCaja}[1]{\par\begingroup\small\fullcite{#1}\par\endgroup}
+\newcommand{\referencias}{\clearpage\printbibliography[title={Referencias}]}
+\tikzset{
+  raiz/.style={rounded corners,draw=uasBlue,fill=uasBlue,text=white,
+    align=center,text width=8cm,inner sep=8pt,font=\bfseries},
+  concepto/.style={rounded corners,draw=uasBlue,fill=uasPaper,
+    align=center,text width=5.6cm,inner sep=7pt,font=\normalsize},
+  detalle/.style={rounded corners,draw=uasGreen,fill=white,
+    align=left,text width=5.6cm,inner sep=7pt,font=\normalsize},
+  enlace/.style={-{Stealth[length=2mm]},thick,draw=uasBlue},
+  nexo/.style={fill=white,inner sep=2pt,font=\small,align=center}
+}
