@@ -50,6 +50,23 @@ def rich(paragraph):
     return "".join(out)
 
 
+def cross_references(text):
+    """Vincula menciones del cuerpo a etiquetas, sin alterar notas de fuentes."""
+    for noun, label in [("Tabla", "tab"), ("Figura", "fig")]:
+        text = re.sub(
+            rf"\b{noun}s ([12]) y ([12])\b",
+            lambda match: (noun + "s~\\ref{" + label + ":tarea6-" + match[1]
+                           + "} y~\\ref{" + label + ":tarea6-" + match[2] + "}"),
+            text,
+        )
+        text = re.sub(
+            rf"\b{noun} ([12])\b",
+            lambda match: noun + "~\\ref{" + label + ":tarea6-" + match[1] + "}",
+            text,
+        )
+    return text
+
+
 def render_table(table, number, title, note):
     assert len(table.columns) in (3, 4)
     cols = (r"@{}>{\RaggedRight\arraybackslash}p{0.14\linewidth}"
@@ -153,7 +170,7 @@ def main():
                     title, body = match.groups()
                     output.append(r"\subsubsubsection{" + escape(title) + "}\n\n" + escape(body))
             else:
-                output.append(rich(p))
+                output.append(cross_references(rich(p)))
         i += 1
     if in_refs:
         output.append(r"\end{apareferences}")

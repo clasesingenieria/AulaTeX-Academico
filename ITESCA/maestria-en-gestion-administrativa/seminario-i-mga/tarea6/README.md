@@ -71,3 +71,11 @@ La versión usa la plantilla compartida sin modificarla, papel carta, márgenes 
 La compilación se realiza desde la raíz del repositorio con el compilador habitual [latexmk-build.sh](../../../../scripts/latexmk-build.sh), indicando la fuente principal. El exportador solo debe volver a ejecutarse si se desea sincronizar cambios del Word, pues regenera el contenido editable.
 
 **Esta versión no cambia el requisito oficial de entrega:** Moodle solicita el Word con índice automático de Word, no un PDF LaTeX. Se mantienen los dos formatos y no se ha realizado un envío al aula.
+
+### Segunda revisión de la versión institucional — 13 de septiembre de 2026
+
+- Se comparó el reporte con la Actividad 2 y la configuración compartida de la plantilla ITESCA. Se mantienen la portada, los logotipos, la marca de agua, los encabezados y el pie institucional, sin modificar la plantilla global.
+- Se restableció la numeración institucional: preliminares en romanos (i–iii) y cuerpo en arábigos desde 1. La versión anterior repetía números arábigos en ambas partes.
+- Las ocho menciones internas de tablas y figuras se generan ahora con referencias cruzadas nativas a sus etiquetas; los números no están escritos manualmente. Las notas de atribución mantienen los números originales de las fuentes.
+- El resumen presenta el objetivo, el contenido y el alcance académico del ejercicio, en lugar de describir el proceso de conversión entre programas. La advertencia sobre el formato oficial queda en esta documentación.
+- Se verificaron nuevamente 25 páginas, 53 entradas de índice, dos tablas, dos figuras y cinco referencias, sin advertencias de compilación. El Word se conserva con la misma huella SHA-256.

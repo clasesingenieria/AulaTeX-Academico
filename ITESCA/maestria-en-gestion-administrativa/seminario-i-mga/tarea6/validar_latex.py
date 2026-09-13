@@ -29,6 +29,13 @@ def main():
     assert source.count(r"\begin{table}[H]") == 2
     assert source.count(r"\begin{figure}[H]") == 2
     assert source.count(r"\item ") == 5
+    labels = {f"{kind}:tarea6-{number}" for kind in ("tab", "fig") for number in (1, 2)}
+    references = re.findall(r"\\ref\{((?:tab|fig):tarea6-[12])\}", source)
+    assert set(references) == labels, "Faltan referencias cruzadas nativas"
+    aux = (build / f"{STEM}.aux").read_text()
+    for label in labels:
+        expected = label.rsplit("-", 1)[1]
+        assert re.search(r"\\newlabel\{" + re.escape(label) + r"\}\{\{" + expected + r"\}", aux), label
     exported = json.loads((ROOT / "validacion" / "exportacion-latex.json").read_text())
     word = COURSE / "entregas" / "Tarea6_DeLaCruzMunoz.docx"
     assert hashlib.sha256(word.read_bytes()).hexdigest() == exported["word_sha256_sin_cambios"]
@@ -38,6 +45,12 @@ def main():
     if not pages[-1].strip():
         pages.pop()
     assert all(page.strip() for page in pages)
+    # El resumen y el índice usan romanos; el cuerpo comienza en arábigo 1.
+    assert re.search(r"\bi\b", pages[1].splitlines()[0]), "Resumen sin página i"
+    assert re.search(r"\bii\b", pages[2].splitlines()[0]), "Índice sin página ii"
+    body_start = next(i for i, page in enumerate(pages) if i > 2
+                      and "Este documento desarrolla la Tarea 6" in page)
+    assert re.search(r"\b1\b", pages[body_start].splitlines()[0]), "El cuerpo no inicia en 1"
     selected = [1, 3]
     for i, page in enumerate(pages, 1):
         if i > 4 and any(marker in page for marker in ["Tabla 1", "Tabla 2", "Figura 1", "Figura 2", "Referencias bibliográficas"]):
@@ -62,6 +75,8 @@ def main():
               "entradas_indice_niveles_1_a_3": len(entries),
               "tablas": 2, "figuras": 2, "referencias": 5,
               "advertencias_compilacion": issues,
+              "referencias_cruzadas_nativas": len(references),
+              "numeracion": "Preliminares romanos; cuerpo arábigo desde 1",
               "plantilla": "base/Plantilla-Informe/template.tex (sin modificar)",
               "word_original_sin_cambios": True,
               "sha256_pdf": hashlib.sha256(pdf.read_bytes()).hexdigest(),
