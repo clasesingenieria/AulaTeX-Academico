@@ -1,0 +1,65 @@
+\input{plantillas/uas-base.tex}
+\begin{document}
+\portada{Búsqueda y evaluación de información confiable}{Mapa conceptual — Semana 3}
+
+\section{Introducción}
+Encontrar información en Internet no equivale a contar con evidencia suficiente. Para elaborar un trabajo académico es necesario formular una pregunta, localizar documentos pertinentes y examinar quién sostiene cada afirmación, con qué respaldo y para qué propósito. En contaduría, además, una explicación debe corresponder al periodo y al contexto de la operación analizada: un texto comprensible puede resultar inadecuado si describe una norma que ya no es aplicable.
+
+El mapa integra búsqueda, confiabilidad y revistas arbitradas e indizadas. Retoma los criterios de la lectura de \textcite{castillo2020} distribuida en la semana 3 y los complementa con la metodología editorial de \textcite{latindex2025}. La secuencia de búsqueda y el ejemplo contable son propuestas propias. La fuente complementaria no se presenta como sustituto de una lectura obligatoria del aula.
+
+\section{Pregunta de enfoque}
+¿Cómo transformar una búsqueda en Internet en información pertinente, verificable y correctamente atribuida para un trabajo de contaduría?
+
+La respuesta exige tres decisiones relacionadas: definir qué se busca, evaluar la evidencia encontrada y comprobar las características editoriales cuando se utilizan artículos de revistas. El prestigio de una institución, un dominio de Internet o una apariencia profesional son indicios que deben contrastarse, no garantías absolutas.
+
+\begin{landscape}
+\section{Mapa conceptual}
+\begin{center}
+\begin{tikzpicture}
+\node[raiz] (raiz) at (0,0) {Información académica confiable};
+\node[concepto] (buscar) at (-7,-2.3) {Búsqueda en Internet};
+\node[concepto] (evaluar) at (0,-2.3) {Evaluación de fuentes};
+\node[concepto] (revistas) at (7,-2.3) {Revistas académicas};
+\draw[enlace] (raiz.west) -| node[nexo,pos=.65] {se localiza mediante} (buscar.north);
+\draw[enlace] (raiz) -- node[nexo] {se selecciona mediante} (evaluar);
+\draw[enlace] (raiz.east) -| node[nexo,pos=.65] {puede difundirse en} (revistas.north);
+\node[detalle] (estrategia) at (-7,-5.5) {Pregunta y alcance temporal\\Palabras clave y sinónimos\\Buscadores y repositorios\\Filtros y lectura del documento};
+\node[detalle] (criterios) at (0,-5.5) {Autoría y propósito\\Precisión y contraste\\Actualización y fuentes\\Navegabilidad y usabilidad};
+\node[detalle] (editorial) at (7,-5.5) {Arbitraje: evaluación por pares\\Indización: inclusión verificable en un servicio de información\\Son procesos distintos};
+\draw[enlace] (buscar) -- node[nexo] {se organiza con} (estrategia);
+\draw[enlace] (evaluar) -- node[nexo] {considera} (criterios);
+\draw[enlace] (revistas) -- node[nexo] {se examinan por} (editorial);
+\node[detalle] (registro) at (-7,-9) {Registrar consulta, fecha, URL y motivo de selección o descarte};
+\node[detalle] (contraste) at (0,-9) {Relacionar afirmaciones con evidencia y contrastar fuentes independientes};
+\node[detalle] (verificar) at (7,-9) {Revisar política editorial y ficha del índice; leer método, resultados y límites del artículo};
+\draw[enlace] (estrategia) -- node[nexo] {debe permitir} (registro);
+\draw[enlace] (criterios) -- node[nexo] {permiten} (contraste);
+\draw[enlace] (editorial) -- node[nexo] {requieren} (verificar);
+\end{tikzpicture}
+\end{center}
+\noindent\textit{Nota.} Elaboración propia a partir de Castillo (2020) y Latindex (2025). Buscar, evaluar y verificar son acciones complementarias; ninguna garantiza por sí sola la verdad de una conclusión.
+\end{landscape}
+
+\section{Explicación de las relaciones}
+\subsection{Búsqueda orientada por una pregunta}
+Una búsqueda útil empieza por delimitar el problema, el periodo y el tipo de documento necesario. Por ejemplo, para estudiar el control documental de operaciones facturadas pueden combinarse los términos \enquote{materialidad}, \enquote{operaciones facturadas} y \enquote{control interno}. Después se comparan los resultados y se consultan los textos completos. Cuando el buscador lo admita, las comillas, los filtros temporales y los operadores booleanos ayudan a precisar la consulta; no sustituyen la lectura crítica.
+
+Conviene diferenciar las funciones de las fuentes: la legislación permite comprobar una disposición, mientras que un artículo académico aporta una interpretación o un análisis. El registro de búsqueda debe conservar la consulta utilizada, la fecha, el enlace y la razón para seleccionar cada documento. Esta secuencia es una propuesta metodológica del trabajo, no un resultado de búsqueda empírica ya realizado.
+
+\subsection{Confiabilidad como evaluación conjunta}
+\textcite{castillo2020} propone examinar autoría, propósito, precisión, actualización, fuentes y facilidad de uso. La autoría permite identificar responsabilidad y experiencia; el propósito ayuda a reconocer intereses informativos, comerciales o persuasivos. La precisión requiere contrastar afirmaciones y revisar si sus conceptos están claramente delimitados. La actualidad debe juzgarse según el tema: una fuente clásica puede ser pertinente para definir un concepto, pero no para acreditar la vigencia de una obligación fiscal.
+
+Los enlaces y referencias permiten rastrear el respaldo de lo afirmado. Una página fácil de navegar favorece esa comprobación, aunque su diseño no demuestra calidad científica. Del mismo modo, la terminación del dominio sirve para orientar la búsqueda, pero no basta para certificar autoría, ausencia de sesgo o exactitud. La decisión se sostiene en el conjunto de evidencias, no en una señal aislada.
+
+\subsection{Arbitraje e indización}
+Una revista arbitrada somete los manuscritos a evaluación por pares conforme a un procedimiento editorial. Latindex exige, en su característica 6, describir el sistema de arbitraje externo y el tipo de revisión. La indización, en cambio, se refiere a la incorporación de una revista a un servicio de información; sus requisitos dependen del servicio. La característica 18 distingue esta incorporación y exige corroborarla \parencite{latindex2025}.
+
+Por tanto, no basta encontrar un logotipo de un índice en la revista: debe comprobarse la ficha en el servicio correspondiente, su identidad y cobertura. Tampoco aparecer en un buscador general demuestra arbitraje. Estas verificaciones reducen incertidumbre editorial, pero la solidez de un artículo aún exige revisar su pregunta, método, evidencia y límites. Una política de revisión por pares no convierte cualquier afirmación publicada en una verdad definitiva.
+
+\section{Aplicación y conclusión}
+Ante una afirmación hipotética como \enquote{una factura demuestra toda la operación}, el estudiante debe precisar qué se entiende por demostrar, localizar la disposición aplicable y contrastarla con estudios que expliquen su alcance. No sería suficiente copiar la primera respuesta de un buscador ni utilizar un artículo sin revisar su fecha y fundamento. El ejemplo ilustra cómo evaluar información; no emite una conclusión jurídica sobre un caso real.
+
+En conclusión, la confiabilidad se construye mediante decisiones justificadas: buscar con un propósito, contrastar lo encontrado y reconocer los procesos editoriales de las fuentes. Registrar y citar los documentos permite que otra persona revise ese recorrido. En la formación contable, esta práctica favorece argumentos trazables y evita confundir accesibilidad, popularidad o presentación con evidencia suficiente.
+
+\referencias
+\end{document}
