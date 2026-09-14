@@ -87,15 +87,7 @@
   colbacktitle=iiiepeAqua!7,
   title={Ficha de la lectura},#1}
 
-\tikzset{
-  mindroot/.style={circle,draw=iiiepeNavy,very thick,fill=iiiepeNavy!14,text width=2.25cm,align=center,minimum size=2.35cm,font=\bfseries\small},
-  mindbranch/.style={rounded corners=3pt,draw=iiiepeBlue!85!black,thick,fill=iiiepeBlue!10,text width=3.2cm,align=center,minimum height=.72cm,font=\bfseries\footnotesize},
-  mindleaf/.style={rounded corners=2pt,draw=iiiepeInk!55,fill=white,text width=3cm,align=center,minimum height=.62cm,font=\scriptsize},
-  conceptroot/.style={rounded corners=5pt,draw=iiiepeNavy,very thick,fill=iiiepeNavy!14,text width=4.3cm,align=center,minimum height=1cm,font=\bfseries},
-  conceptbranch/.style={rounded corners=3pt,draw=iiiepeBlue!85!black,thick,fill=iiiepeBlue!10,text width=3.25cm,align=center,minimum height=.8cm,font=\bfseries\footnotesize},
-  conceptleaf/.style={rounded corners=2pt,draw=iiiepeInk!55,fill=white,text width=3cm,align=center,minimum height=.62cm,font=\scriptsize},
-  conceptarrow/.style={-{Latex[length=2mm]},draw=iiiepeNavy!80,thick}
-}
+\input{actividad-2-visuales}
 
 \begin{document}
 
@@ -110,6 +102,11 @@ Este trabajo integra tres reportes de lectura sobre la transformación educativa
 
 \templateIndex
 \templateFinalcfg
+\fancyfoot{}
+\fancyfoot[L]{\scriptsize Escuela, aprendizaje y evaluación}
+\fancyfoot[C]{\scriptsize\thepage}
+\fancyfoot[R]{\scriptsize MAEM | Actividad 2}
+\raggedbottom
 
 \section{Introducción}
 
@@ -117,7 +114,11 @@ La mejora educativa no depende de una sola reforma, herramienta o medición. Req
 
 El problema común es la distancia entre lo que la educación declara y lo que efectivamente organiza. Una escuela puede defender cooperación y autonomía mientras mantiene actividades individualizadas y repetitivas; puede incorporar tecnología sin transformar la experiencia intelectual; o puede aplicar evaluaciones rigurosas cuyos resultados se convierten en rankings sin explicación suficiente. Por ello, el criterio de análisis será la coherencia entre propósitos, prácticas y evidencias.
 
+La pregunta central es \textbf{¿qué hacer para mejorar la enseñanza y el aprendizaje de las matemáticas sin separar comprensión y equidad?} La respuesta se construye mediante tres reportes con sus mapas mentales, un cuadro comparativo y un mapa conceptual propositivo. Los mapas mentales recuperan las asociaciones de cada lectura; el cuadro distingue sus escalas y límites; el mapa conceptual formula relaciones entre decisiones, acciones y evidencias. Así, los productos sostienen un argumento y no funcionan como ilustraciones independientes.
+
 \section{Desarrollo: lecturas y productos integrados}
+
+La progresión parte de las finalidades de la escuela, pasa por las condiciones que favorecen comprender y termina en el uso de evidencias para decidir. Las síntesis de Meirieu, Sawyer y Martínez Rizo se distinguen de la propuesta de aplicación propia, desarrollada después de compararlas \citep{meirieu2020escuela,sawyer2008optimizing,martinezRizo2026pisa}.
 
 \subsection{Philippe Meirieu: la escuela después de la crisis}
 
@@ -155,30 +156,10 @@ Meirieu desplaza la igualdad de oportunidades hacia la igualdad del derecho de a
 \end{spacing}
 \end{reportelecturabox}
 
-\clearpage
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
-\resizebox{0.92\linewidth}{!}{%
-\begin{tikzpicture}[font=\sffamily,>=Latex]
-  \node[mindroot] (meirieu) at (0,0) {Escuela después\\de la crisis};
-  \node[mindbranch] (bien) at (-5,2.4) {Bien común};
-  \node[mindbranch] (mediacion) at (5,2.4) {Mediación docente};
-  \node[mindbranch] (riesgos) at (-5,-2.4) {Riesgos de retorno};
-  \node[mindbranch] (orientacion) at (5,-2.4) {Orientación democrática};
-  \node[mindleaf] (biena) at (-8.2,3.45) {Derecho a aprender};
-  \node[mindleaf] (bienb) at (-8.2,1.35) {Cooperación y alteridad};
-  \node[mindleaf] (media) at (8.2,3.45) {Autonomía se construye};
-  \node[mindleaf] (medib) at (8.2,1.35) {Clase: yo y nosotros};
-  \node[mindleaf] (riesa) at (-8.2,-1.35) {Normalidad pedagógica anterior};
-  \node[mindleaf] (riesb) at (-8.2,-3.45) {Solucionismo tecnológico};
-  \node[mindleaf] (oriena) at (8.2,-1.35) {Prácticas cooperativas};
-  \node[mindleaf] (orienb) at (8.2,-3.45) {Apoyos diferenciados};
-  \foreach \a/\b in {meirieu/bien,meirieu/mediacion,meirieu/riesgos,meirieu/orientacion}
-    \draw[conceptarrow] (\a) -- (\b);
-  \foreach \a/\b in {bien/biena,bien/bienb,mediacion/media,mediacion/medib,riesgos/riesa,riesgos/riesb,orientacion/oriena,orientacion/orienb}
-    \draw[conceptarrow] (\a) -- (\b);
-\end{tikzpicture}}
-\caption{Mapa mental de la lectura de Philippe Meirieu.}
+\resizebox{\linewidth}{!}{\MapaMeirieu}
+\caption{Mapa mental de Meirieu. Elaboración propia a partir de \citet{meirieu2020escuela}.}
 \label{fig:mapa-meirieu}
 \end{figure}
 \noindent\textit{Lectura del producto.} El nodo central expresa la tesis de la lectura: la crisis no debe conducir a restaurar la escuela anterior, sino a fortalecer una institución común mediante mediación, cooperación y apoyos que construyan autonomía.
@@ -219,30 +200,10 @@ La colaboración puede ampliar la comprensión cuando las tareas exigen interdep
 \end{spacing}
 \end{reportelecturabox}
 
-\clearpage
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
-\resizebox{0.92\linewidth}{!}{%
-\begin{tikzpicture}[font=\sffamily,>=Latex]
-  \node[mindroot] (sawyer) at (0,0) {Aprendizaje\\profundo};
-  \node[mindbranch] (activo) at (-5,2.4) {Construcción activa};
-  \node[mindbranch] (social) at (5,2.4) {Conocimiento social};
-  \node[mindbranch] (transfer) at (-5,-2.4) {Comprensión y transferencia};
-  \node[mindbranch] (docente) at (5,-2.4) {Diseño docente};
-  \node[mindleaf] (activa) at (-8.2,3.45) {Ideas previas};
-  \node[mindleaf] (activb) at (-8.2,1.35) {Problemas y explicaciones};
-  \node[mindleaf] (socia) at (8.2,3.45) {Interdependencia intelectual};
-  \node[mindleaf] (socib) at (8.2,1.35) {Argumentar y construir};
-  \node[mindleaf] (transa) at (-8.2,-1.35) {Conceptos centrales};
-  \node[mindleaf] (transb) at (-8.2,-3.45) {Situaciones nuevas};
-  \node[mindleaf] (docea) at (8.2,-1.35) {Mediación y retroalimentación};
-  \node[mindleaf] (doceb) at (8.2,-3.45) {Reflexión y metacognición};
-  \foreach \a/\b in {sawyer/activo,sawyer/social,sawyer/transfer,sawyer/docente}
-    \draw[conceptarrow] (\a) -- (\b);
-  \foreach \a/\b in {activo/activa,activo/activb,social/socia,social/socib,transfer/transa,transfer/transb,docente/docea,docente/doceb}
-    \draw[conceptarrow] (\a) -- (\b);
-\end{tikzpicture}}
-\caption{Mapa mental de la lectura de R. Keith Sawyer.}
+\resizebox{\linewidth}{!}{\MapaSawyer}
+\caption{Mapa mental de Sawyer. Elaboración propia a partir de \citet{sawyer2008optimizing}.}
 \label{fig:mapa-sawyer}
 \end{figure}
 \noindent\textit{Lectura del producto.} La estructura muestra que aprender profundamente no es recibir más información: es relacionar conocimiento previo, actividad cognitiva, colaboración, reflexión y transferencia con orientación experta.
@@ -283,41 +244,23 @@ Participar en PISA no reemplaza un sistema propio. El país necesita pruebas de 
 \end{spacing}
 \end{reportelecturabox}
 
-\clearpage
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
-\resizebox{0.92\linewidth}{!}{%
-\begin{tikzpicture}[font=\sffamily,>=Latex]
-  \node[mindroot] (martinez) at (0,0) {Evaluación\\contextualizada};
-  \node[mindbranch] (tendencia) at (-5,2.4) {Tendencias};
-  \node[mindbranch] (contexto) at (5,2.4) {Contexto y muestra};
-  \node[mindbranch] (causas) at (-5,-2.4) {Causas múltiples};
-  \node[mindbranch] (mejora) at (5,-2.4) {Evaluar para mejorar};
-  \node[mindleaf] (tenda) at (-8.2,3.45) {Serie histórica};
-  \node[mindleaf] (tendb) at (-8.2,1.35) {No reducir a ranking};
-  \node[mindleaf] (contexa) at (8.2,3.45) {Cobertura escolar};
-  \node[mindleaf] (contexb) at (8.2,1.35) {Desigualdad social};
-  \node[mindleaf] (causa) at (-8.2,-1.35) {Pandemia y prácticas};
-  \node[mindleaf] (causb) at (-8.2,-3.45) {Familia y dispositivos};
-  \node[mindleaf] (mejoa) at (8.2,-1.35) {Evidencia válida};
-  \node[mindleaf] (mejob) at (8.2,-3.45) {Decisiones y seguimiento};
-  \foreach \a/\b in {martinez/tendencia,martinez/contexto,martinez/causas,martinez/mejora}
-    \draw[conceptarrow] (\a) -- (\b);
-  \foreach \a/\b in {tendencia/tenda,tendencia/tendb,contexto/contexa,contexto/contexb,causas/causa,causas/causb,mejora/mejoa,mejora/mejob}
-    \draw[conceptarrow] (\a) -- (\b);
-\end{tikzpicture}}
-\caption{Mapa mental de la lectura de Felipe Martínez Rizo.}
+\resizebox{\linewidth}{!}{\MapaMartinez}
+\caption{Mapa mental de Martínez Rizo. Elaboración propia a partir de \citet{martinezRizo2026pisa}.}
 \label{fig:mapa-martinez}
 \end{figure}
 \noindent\textit{Lectura del producto.} El mapa desplaza la atención del ranking aislado hacia una cadena de interpretación: tendencia, composición de la muestra, causas posibles y decisiones de mejora sustentadas en evidencia.
 
 \clearpage
-\pagestyle{empty}
-\begin{landscape}
+\subsection{Cuadro comparativo: finalidades, procesos y evidencia}
+
+El cuadro se lee por filas: cada criterio contrasta una misma dimensión entre autores. Las implicaciones para matemáticas son inferencias de este trabajo, no recomendaciones idénticas formuladas por las tres fuentes.
 \begingroup
-\scriptsize
-\setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.35}
+\small
+\singlespacing
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.2}
 \begin{longtable}{@{}p{0.14\linewidth}p{0.27\linewidth}p{0.27\linewidth}p{0.27\linewidth}@{}}
 \caption{Cuadro comparativo de las tres lecturas.}\label{tab:comparativo-tres-lecturas}\\
 \toprule
@@ -338,8 +281,8 @@ Participar en PISA no reemplaza un sistema propio. El país necesita pruebas de 
 \bottomrule
 \end{longtable}
 \endgroup
-\end{landscape}
-\pagestyle{fancy}
+\noindent\textit{Fuentes:} elaboración propia a partir de \citet{meirieu2020escuela}, \citet{sawyer2008optimizing} y \citet{martinezRizo2026pisa}.
+
 \noindent\textit{Síntesis comparativa.} Las lecturas son complementarias porque responden preguntas distintas: para qué escuela, cómo se aprende y cómo interpretar la evidencia. Su articulación evita convertir una finalidad democrática, un método didáctico o un indicador en solución aislada.
 
 \subsection{De la declaración a la mejora verificable}
@@ -374,44 +317,15 @@ Una secuencia congruente podría iniciar con un problema cercano que admita vari
 
 El criterio profesional resultante es exigente: no basta con aumentar ejercicios, añadir una aplicación o elevar la frecuencia de exámenes. La intervención debe identificar qué comprende el estudiante, qué obstáculo enfrenta, qué apoyo modifica su razonamiento y qué evidencia muestra avance. Así, la actividad matemática se convierte en espacio de conocimiento compartido y no en mecanismo de clasificación.
 
-\subsection{Mapa conceptual propositivo: ¿qué hacer?}
-
-Las tres lecturas permiten responder la pregunta central de la actividad con una propuesta de intervención: construir experiencias matemáticas comunes, profundas y evaluables. El siguiente mapa conceptual traduce la comparación en decisiones concretas de diseño didáctico.
-
 \clearpage
 \pagestyle{empty}
 \begin{landscape}
-\begin{figure}[ht]
+\subsection{Mapa conceptual propositivo: ¿qué hacer?}
+\noindent Las flechas se leen como proposiciones: una finalidad requiere decisiones; estas se concretan en acciones, producen evidencias y orientan el siguiente ajuste docente.
+\begin{figure}[H]
 \centering
-\resizebox{0.94\linewidth}{!}{%
-\begin{tikzpicture}[font=\sffamily,>=Latex]
-  \node[conceptroot] (pregunta) at (0,3.6) {¿Qué hacer?\\Mejorar la enseñanza de las matemáticas};
-  \node[conceptbranch] (comun) at (-6,0.8) {Construir lo común};
-  \node[conceptbranch] (prof) at (0,0.8) {Diseñar aprendizaje profundo};
-  \node[conceptbranch] (evid) at (6,0.8) {Evaluar para intervenir};
-  \node[conceptleaf] (comuna) at (-8.8,-1.5) {Problema compartido y participación de todos};
-  \node[conceptleaf] (comunb) at (-3.3,-1.5) {Apoyos diferenciados sin bajar la exigencia};
-  \node[conceptleaf] (profa) at (-2.8,-1.5) {Activar ideas previas y formular preguntas};
-  \node[conceptleaf] (profb) at (2.8,-1.5) {Argumentar, colaborar y transferir};
-  \node[conceptleaf] (evida) at (3.3,-1.5) {Evidencias de razonamiento y proceso};
-  \node[conceptleaf] (evidb) at (8.8,-1.5) {Retroalimentar y ajustar la secuencia};
-  \node[conceptbranch] (secuencia) at (0,-4.2) {Secuencia coherente};
-  \node[conceptleaf] (paso1) at (-7,-6.4) {Problema contextualizado};
-  \node[conceptleaf] (paso2) at (-2.35,-6.4) {Representaciones y estrategias};
-  \node[conceptleaf] (paso3) at (2.35,-6.4) {Discusión y revisión};
-  \node[conceptleaf] (paso4) at (7,-6.4) {Transferencia y cierre individual};
-  \draw[conceptarrow] (pregunta) -- node[right,font=\scriptsize]{se responde mediante} (prof);
-  \draw[conceptarrow] (pregunta) -- (comun);
-  \draw[conceptarrow] (pregunta) -- (evid);
-  \foreach \a/\b in {comun/comuna,comun/comunb,prof/profa,prof/profb,evid/evida,evid/evidb}
-    \draw[conceptarrow] (\a) -- (\b);
-  \draw[conceptarrow] (comun) -- (secuencia);
-  \draw[conceptarrow] (prof) -- (secuencia);
-  \draw[conceptarrow] (evid) -- (secuencia);
-  \foreach \a/\b in {secuencia/paso1,secuencia/paso2,secuencia/paso3,secuencia/paso4}
-    \draw[conceptarrow] (\a) -- (\b);
-\end{tikzpicture}}
-\caption{Mapa conceptual propositivo para responder qué hacer en la enseñanza de las matemáticas.}
+\resizebox{!}{.70\textheight}{\MapaPropositivo}
+\caption{Propuesta propia: articular bien común, comprensión y evaluación \citep{meirieu2020escuela,sawyer2008optimizing,martinezRizo2026pisa}.}
 \label{fig:mapa-propositivo}
 \end{figure}
 \end{landscape}
