@@ -1,0 +1,432 @@
+\documentclass[spanish,letterpaper,oneside]{article}
+
+% Datos del documento
+\def\documenttitle {Escuela, aprendizaje y evaluación en transformación}
+\def\documentsubtitle {Reportes y productos didácticos}
+\def\documentsubject {Actividad 2}
+\def\documentauthor {Mtro. Martin Jonathan de la Cruz Munoz}
+\def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
+\def\coursecode {MAEM}
+
+% Identidad institucional
+\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León}
+\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
+\def\universitydepartment {Fundamentos para la enseñanza y el aprendizaje I}
+\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
+\def\universitydepartmentimagecfg {height=1.75cm}
+\def\universitylocation {Monterrey, Nuevo León}
+\def\studentfullname {Mtro. Martin Jonathan de la Cruz Muñoz}
+\def\studentid {00874}
+\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
+\def\programperiod {1er tetramestre, marzo--julio de 2026}
+\def\programmodality {Modalidad presencial}
+\def\programshort {MAEM}
+
+\def\authortable {
+  \begin{tabular}{ll}
+    \textbf{Alumno:} & \studentfullname \\
+    Matrícula: & \studentid \\
+    Correo institucional: & \studentemail \\
+    \textit{Figura docente:} & No especificada \\
+    Unidad: & \coursename \\
+    Programa: & \programshort \\
+    Periodo: & \programperiod \\
+    & \\
+    \multicolumn{2}{l}{Fecha de realización: \today} \\
+    \multicolumn{2}{l}{\universitylocation}
+  \end{tabular}
+}
+
+\input{template}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\def\portraittitlecolor {iiiepeNavy}
+\setcitestyle{authoryear,open={(},close={)}}
+
+\newcommand{\insertcoverwatermark}{%
+  \AddToShipoutPictureBG*{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[opacity=.09,inner sep=0pt] at (current page.center)
+      {\includegraphics[width=.58\paperwidth]{img/iiiepe/logo-puntos.png}};
+    \end{tikzpicture}%
+  }%
+}
+
+\newtcolorbox{reportelecturabox}[1][]{%
+  enhanced,breakable,
+  colback=iiiepePaper,colframe=iiiepeNavy,
+  boxrule=1pt,leftrule=4pt,arc=2pt,
+  left=8pt,right=8pt,top=6pt,bottom=6pt,
+  before skip=6pt,after skip=10pt,
+  fonttitle=\bfseries\color{white},coltitle=white,
+  colbacktitle=iiiepeNavy,
+  attach boxed title to top left={xshift=8pt,yshift=-2pt},
+  boxed title style={colback=iiiepeNavy,colframe=iiiepeNavy,arc=1pt},
+  title={Reporte de lectura},#1}
+
+\newtcolorbox{fichalecturabox}[1][]{%
+  enhanced,breakable,
+  colback=iiiepeAqua!7,colframe=iiiepeAqua!70!iiiepeNavy,
+  boxrule=.6pt,arc=1pt,
+  left=7pt,right=7pt,top=4pt,bottom=4pt,
+  fonttitle=\bfseries\color{iiiepeNavy},coltitle=iiiepeNavy,
+  colbacktitle=iiiepeAqua!7,
+  title={Ficha de la lectura},#1}
+
+\tikzset{
+  mindroot/.style={circle,draw=iiiepeNavy,very thick,fill=iiiepeNavy!14,text width=2.25cm,align=center,minimum size=2.35cm,font=\bfseries\small},
+  mindbranch/.style={rounded corners=3pt,draw=iiiepeBlue!85!black,thick,fill=iiiepeBlue!10,text width=3.2cm,align=center,minimum height=.72cm,font=\bfseries\footnotesize},
+  mindleaf/.style={rounded corners=2pt,draw=iiiepeInk!55,fill=white,text width=3cm,align=center,minimum height=.62cm,font=\scriptsize},
+  conceptroot/.style={rounded corners=5pt,draw=iiiepeNavy,very thick,fill=iiiepeNavy!14,text width=4.3cm,align=center,minimum height=1cm,font=\bfseries},
+  conceptbranch/.style={rounded corners=3pt,draw=iiiepeBlue!85!black,thick,fill=iiiepeBlue!10,text width=3.25cm,align=center,minimum height=.8cm,font=\bfseries\footnotesize},
+  conceptleaf/.style={rounded corners=2pt,draw=iiiepeInk!55,fill=white,text width=3cm,align=center,minimum height=.62cm,font=\scriptsize},
+  conceptarrow/.style={-{Latex[length=2mm]},draw=iiiepeNavy!80,thick}
+}
+
+\begin{document}
+
+\insertcoverwatermark
+\templatePortrait
+\templatePagecfg
+\onehalfspacing
+
+\begin{abstractd}
+Este trabajo integra tres reportes de lectura sobre la transformación educativa contemporánea. Philippe Meirieu examina el riesgo de regresar a prácticas escolares anteriores a la pandemia; Keith Sawyer sintetiza hallazgos de las ciencias del aprendizaje que cuestionan el modelo transmisivo; y Felipe Martínez Rizo propone una lectura contextualizada de los resultados de PISA 2025. A partir de estas bases se sostiene que mejorar la educación exige articular finalidades públicas, conocimiento sobre cómo se aprende y evaluación útil para decidir. La comparación se traslada a la enseñanza de las matemáticas mediante criterios de mediación docente, actividad cognitiva, equidad y uso formativo de la evidencia.
+\end{abstractd}
+
+\templateIndex
+\templateFinalcfg
+
+\section{Introducción}
+
+La mejora educativa no depende de una sola reforma, herramienta o medición. Requiere comprender qué función cumple la escuela, cómo se construye un aprendizaje profundo y qué información permite valorar sus resultados sin reducirlos a una clasificación. Las tres lecturas estudiadas abordan esos niveles desde perspectivas distintas y complementarias: la institución escolar, los procesos de aprendizaje y la evaluación de los sistemas educativos.
+
+El problema común es la distancia entre lo que la educación declara y lo que efectivamente organiza. Una escuela puede defender cooperación y autonomía mientras mantiene actividades individualizadas y repetitivas; puede incorporar tecnología sin transformar la experiencia intelectual; o puede aplicar evaluaciones rigurosas cuyos resultados se convierten en rankings sin explicación suficiente. Por ello, el criterio de análisis será la coherencia entre propósitos, prácticas y evidencias.
+
+\section{Desarrollo: lecturas y productos integrados}
+
+\subsection{Philippe Meirieu: la escuela después de la crisis}
+
+\begin{reportelecturabox}[title={Reporte de lectura 1: Philippe Meirieu}]
+\begin{spacing}{1.22}
+\begin{fichalecturabox}
+\begin{tabular}{@{}p{0.22\linewidth}p{0.70\linewidth}@{}}
+\toprule
+\textbf{Elemento} & \textbf{Descripción} \\
+\midrule
+Autoría & Philippe Meirieu. \\
+Título & \textit{«La escuela después»... ¿con la pedagogía de antes?} \\
+Publicación & Movimiento Cooperativo de Escuela Popular; traducción de una contribución publicada originalmente en francés. \\
+Año & 2020. \\
+Problema central & La crisis puede producir discursos de cambio sin modificar las prácticas que reproducen desigualdad, competencia e individualización. \\
+Tesis reconstruida & La escuela posterior a la crisis debe fortalecer su carácter institucional, colectivo y democrático, en vez de volver a la normalidad pedagógica anterior o sustituir la relación educativa por soluciones tecnocráticas. \\
+\bottomrule
+\end{tabular}
+\end{fichalecturabox}
+
+\noindent\textbf{Organización argumentativa.}\enspace
+Meirieu inicia con una advertencia: afirmar que habrá un ``antes y un después'' no garantiza una transformación. La historia educativa muestra una separación persistente entre declaraciones generosas y prácticas reales. Conceptos como autonomía, personalización, fraternidad o construcción compartida pueden permanecer en el discurso si las instituciones no revisan su organización cotidiana \citep{meirieu2020escuela}.
+
+\medskip\noindent\textbf{Hacer clase para hacer escuela.}\enspace
+Una idea representativa es que el acto pedagógico no consiste en yuxtaponer apoyos individuales. La clase articula lo común y lo singular: cada estudiante debe encontrar un lugar propio dentro de un colectivo que comparte conocimientos y valores. La escuela se constituye cuando permite decir ``yo'' y construir un ``nosotros'', bajo una mediación docente que sostiene exigencias comunes y acompaña diferencias \citep{meirieu2020escuela}.
+
+\medskip\noindent\textbf{Límite del solucionismo tecnológico.}\enspace
+El autor no niega toda posibilidad educativa de lo digital, pero cuestiona su adopción como sustituto automático del aula. Muchas plataformas responden a una lógica técnica e individual que puede convertir al alumnado en consumidor de ejercicios. Digitalizar una pedagogía conductista no produce cooperación ni comunidad; por ello, la pregunta relevante no es qué herramienta se incorpora, sino qué relación con el conocimiento y con los otros organiza.
+
+\medskip\noindent\textbf{Autonomía como finalidad.}\enspace
+La educación a distancia hizo visibles desigualdades materiales, culturales y familiares. También mostró un error pedagógico: tratar motivación, esfuerzo y autonomía como requisitos previos, cuando son objetivos que la enseñanza debe ayudar a construir. Ante una dificultad, aumentar la cantidad de la misma tarea puede profundizar el bloqueo; la intervención profesional exige identificar resistencias y ofrecer una vía distinta.
+
+\medskip\noindent\textbf{Derecho a la educación y bien común.}\enspace
+Meirieu desplaza la igualdad de oportunidades hacia la igualdad del derecho de acceso a la educación. La primera puede limitarse a ofrecer una ocasión formal; la segunda obliga a construir condiciones para que todos aprendan. La escuela que viene tendría que favorecer pedagogías cooperativas, ayuda mutua, apertura a la alteridad y acceso a bienes culturales que pueden compartirse sin agotarse \citep{meirieu2020escuela}.
+\end{spacing}
+\end{reportelecturabox}
+
+\clearpage
+\begin{figure}[ht]
+\centering
+\resizebox{0.92\linewidth}{!}{%
+\begin{tikzpicture}[font=\sffamily,>=Latex]
+  \node[mindroot] (meirieu) at (0,0) {Escuela después\\de la crisis};
+  \node[mindbranch] (bien) at (-5,2.4) {Bien común};
+  \node[mindbranch] (mediacion) at (5,2.4) {Mediación docente};
+  \node[mindbranch] (riesgos) at (-5,-2.4) {Riesgos de retorno};
+  \node[mindbranch] (orientacion) at (5,-2.4) {Orientación democrática};
+  \node[mindleaf] (biena) at (-8.2,3.45) {Derecho a aprender};
+  \node[mindleaf] (bienb) at (-8.2,1.35) {Cooperación y alteridad};
+  \node[mindleaf] (media) at (8.2,3.45) {Autonomía se construye};
+  \node[mindleaf] (medib) at (8.2,1.35) {Clase: yo y nosotros};
+  \node[mindleaf] (riesa) at (-8.2,-1.35) {Normalidad pedagógica anterior};
+  \node[mindleaf] (riesb) at (-8.2,-3.45) {Solucionismo tecnológico};
+  \node[mindleaf] (oriena) at (8.2,-1.35) {Prácticas cooperativas};
+  \node[mindleaf] (orienb) at (8.2,-3.45) {Apoyos diferenciados};
+  \foreach \a/\b in {meirieu/bien,meirieu/mediacion,meirieu/riesgos,meirieu/orientacion}
+    \draw[conceptarrow] (\a) -- (\b);
+  \foreach \a/\b in {bien/biena,bien/bienb,mediacion/media,mediacion/medib,riesgos/riesa,riesgos/riesb,orientacion/oriena,orientacion/orienb}
+    \draw[conceptarrow] (\a) -- (\b);
+\end{tikzpicture}}
+\caption{Mapa mental de la lectura de Philippe Meirieu.}
+\label{fig:mapa-meirieu}
+\end{figure}
+\noindent\textit{Lectura del producto.} El nodo central expresa la tesis de la lectura: la crisis no debe conducir a restaurar la escuela anterior, sino a fortalecer una institución común mediante mediación, cooperación y apoyos que construyan autonomía.
+
+\subsection{Keith Sawyer: aportes de las ciencias del aprendizaje}
+
+\begin{reportelecturabox}[title={Reporte de lectura 2: R. Keith Sawyer}]
+\begin{spacing}{1.22}
+\begin{fichalecturabox}
+\begin{tabular}{@{}p{0.22\linewidth}p{0.70\linewidth}@{}}
+\toprule
+\textbf{Elemento} & \textbf{Descripción} \\
+\midrule
+Autoría & R. Keith Sawyer. \\
+Título & \textit{Optimizing Learning: Implications of Learning Sciences Research}. \\
+Fuente & Capítulo 2 de \textit{Innovating to Learn, Learning to Innovate}, OCDE/CERI. \\
+Año y páginas & 2008, pp. 45--65. \\
+Problema central & El modelo escolar de la era industrial no responde adecuadamente a una economía del conocimiento que demanda comprensión, colaboración e innovación. \\
+Tesis reconstruida & La investigación sobre el aprendizaje permite diseñar ambientes donde el alumnado construye conocimiento profundo mediante actividad, interacción, reflexión y orientación docente. \\
+\bottomrule
+\end{tabular}
+\end{fichalecturabox}
+
+\noindent\textbf{Del modelo estándar al aprendizaje profundo.}\enspace
+Sawyer contrasta el modelo escolar transmisivo con los resultados de un campo interdisciplinario que integra psicología cognitiva, ciencias de la computación, antropología, sociología, neurociencias y estudios educativos. La escuela industrial fue organizada para transmitir conocimientos estandarizados; las sociedades del conocimiento, en cambio, requieren comprender principios, relacionar conceptos y usar lo aprendido en situaciones nuevas \citep{sawyer2008optimizing}.
+
+\medskip\noindent\textbf{Conocimiento previo y construcción activa.}\enspace
+El aprendizaje no comienza en una mente vacía. El alumnado llega con ideas, experiencias y explicaciones que pueden apoyar u obstaculizar la comprensión. Una enseñanza eficaz vuelve visibles esas concepciones y crea oportunidades para revisarlas. La actividad no equivale a movimiento sin dirección: implica formular problemas, producir explicaciones, contrastar evidencias y reorganizar el conocimiento con acompañamiento experto.
+
+\medskip\noindent\textbf{Comprensión integrada y transferencia.}\enspace
+Saber datos o ejecutar procedimientos aislados no garantiza que puedan utilizarse fuera del ejercicio conocido. El aprendizaje profundo organiza hechos y procedimientos alrededor de conceptos centrales. Esa estructura permite reconocer cuándo y por qué aplicar un conocimiento, comparar estrategias y transferirlo a nuevos contextos. La profundidad exige tiempo para investigar, explicar, recibir retroalimentación y revisar.
+
+\medskip\noindent\textbf{Reflexión, articulación y metacognición.}\enspace
+Las ciencias del aprendizaje destacan que comprender también requiere hacer explícito el propio razonamiento. Explicar una decisión, argumentar una estrategia y observar cómo cambia una idea ayuda a regular el proceso. La evaluación formativa se integra al aprendizaje porque ofrece información para ajustar acciones mientras se trabaja, no únicamente una calificación al final \citep{sawyer2008optimizing}.
+
+\medskip\noindent\textbf{Naturaleza social del conocimiento.}\enspace
+La colaboración puede ampliar la comprensión cuando las tareas exigen interdependencia intelectual y responsabilidad compartida. Conversar no basta: el grupo necesita objetos comunes de trabajo, criterios de calidad y estructuras para justificar, cuestionar y construir sobre las aportaciones ajenas. El docente sigue siendo decisivo como diseñador de ambientes, mediador y fuente de retroalimentación especializada.
+\end{spacing}
+\end{reportelecturabox}
+
+\clearpage
+\begin{figure}[ht]
+\centering
+\resizebox{0.92\linewidth}{!}{%
+\begin{tikzpicture}[font=\sffamily,>=Latex]
+  \node[mindroot] (sawyer) at (0,0) {Aprendizaje\\profundo};
+  \node[mindbranch] (activo) at (-5,2.4) {Construcción activa};
+  \node[mindbranch] (social) at (5,2.4) {Conocimiento social};
+  \node[mindbranch] (transfer) at (-5,-2.4) {Comprensión y transferencia};
+  \node[mindbranch] (docente) at (5,-2.4) {Diseño docente};
+  \node[mindleaf] (activa) at (-8.2,3.45) {Ideas previas};
+  \node[mindleaf] (activb) at (-8.2,1.35) {Problemas y explicaciones};
+  \node[mindleaf] (socia) at (8.2,3.45) {Interdependencia intelectual};
+  \node[mindleaf] (socib) at (8.2,1.35) {Argumentar y construir};
+  \node[mindleaf] (transa) at (-8.2,-1.35) {Conceptos centrales};
+  \node[mindleaf] (transb) at (-8.2,-3.45) {Situaciones nuevas};
+  \node[mindleaf] (docea) at (8.2,-1.35) {Mediación y retroalimentación};
+  \node[mindleaf] (doceb) at (8.2,-3.45) {Reflexión y metacognición};
+  \foreach \a/\b in {sawyer/activo,sawyer/social,sawyer/transfer,sawyer/docente}
+    \draw[conceptarrow] (\a) -- (\b);
+  \foreach \a/\b in {activo/activa,activo/activb,social/socia,social/socib,transfer/transa,transfer/transb,docente/docea,docente/doceb}
+    \draw[conceptarrow] (\a) -- (\b);
+\end{tikzpicture}}
+\caption{Mapa mental de la lectura de R. Keith Sawyer.}
+\label{fig:mapa-sawyer}
+\end{figure}
+\noindent\textit{Lectura del producto.} La estructura muestra que aprender profundamente no es recibir más información: es relacionar conocimiento previo, actividad cognitiva, colaboración, reflexión y transferencia con orientación experta.
+
+\subsection{Felipe Martínez Rizo: lectura contextualizada de PISA 2025}
+
+\begin{reportelecturabox}[title={Reporte de lectura 3: Felipe Martínez Rizo}]
+\begin{spacing}{1.22}
+\begin{fichalecturabox}
+\begin{tabular}{@{}p{0.22\linewidth}p{0.70\linewidth}@{}}
+\toprule
+\textbf{Elemento} & \textbf{Descripción} \\
+\midrule
+Autoría & Felipe Martínez Rizo. \\
+Título & \textit{Resultados de PISA 2025}. \\
+Publicación & \textit{Distancia por tiempos}, Nexos. \\
+Fecha & 9 de septiembre de 2026. \\
+Problema central & Los resultados de PISA suelen interpretarse mediante rankings y juicios alarmistas que omiten tendencias, cobertura escolar y diferencias socioeconómicas. \\
+Tesis reconstruida & El descenso del aprendizaje es grave, pero requiere comparación histórica y contextual; PISA debe complementarse con un sistema nacional sólido e independiente de evaluación educativa. \\
+\bottomrule
+\end{tabular}
+\end{fichalecturabox}
+
+\noindent\textbf{Más allá de los rankings.}\enspace
+Martínez Rizo cuestiona la lectura que equipara una posición baja con tener uno de los peores sistemas educativos del mundo. Los ordenamientos resumen puntajes, pero no explican las diferencias de desarrollo, condiciones sociales ni cobertura. Comparar a México con países latinoamericanos de condiciones más próximas ofrece una interpretación más informativa, sin negar rezagos \citep{martinezRizo2026pisa}.
+
+\medskip\noindent\textbf{La tendencia descendente.}\enspace
+El artículo sitúa PISA 2025 dentro de la serie 2000--2025. El descenso observado después de la pandemia no se revirtió y alcanza a numerosos sistemas. En México, los puntajes reportados pasan de 420 a 415 y 408 en lectura entre 2018, 2022 y 2025; de 409 a 395 y 388 en matemáticas; y de 419 a 410 y 414 en ciencias. La continuidad de la caída exige atención, aunque no autoriza conclusiones simplistas sobre una sola causa.
+
+\medskip\noindent\textbf{Cobertura y composición de las muestras.}\enspace
+Los promedios deben interpretarse considerando quiénes permanecen en la escuela. Cuando aumenta la proporción de jóvenes escolarizados, las muestras incorporan estudiantes que antes estaban excluidos y que suelen enfrentar mayores desventajas. La estabilidad de un puntaje puede coexistir con una ampliación valiosa del acceso; por eso, el dato requiere contexto demográfico y educativo.
+
+\medskip\noindent\textbf{Causas múltiples y cautela interpretativa.}\enspace
+El aprendizaje depende de factores escolares y extraescolares que cambian lentamente. El cierre prolongado de escuelas ayuda a explicar parte del retroceso de 2022, pero la continuidad en 2025 obliga a examinar también prácticas docentes, condiciones familiares, liderazgo escolar, desigualdad y relación de los jóvenes con los dispositivos digitales. Una correlación internacional no sustituye esa investigación causal.
+
+\medskip\noindent\textbf{Evaluación para comprender y mejorar.}\enspace
+Participar en PISA no reemplaza un sistema propio. El país necesita pruebas de calidad, indicadores confiables y estudios sobre procesos, prácticas y escuelas eficaces. La evaluación tiene sentido cuando permite comprender problemas y orientar políticas; pierde valor cuando se limita a producir posiciones públicas o diagnósticos sin capacidad institucional de seguimiento \citep{martinezRizo2026pisa}.
+\end{spacing}
+\end{reportelecturabox}
+
+\clearpage
+\begin{figure}[ht]
+\centering
+\resizebox{0.92\linewidth}{!}{%
+\begin{tikzpicture}[font=\sffamily,>=Latex]
+  \node[mindroot] (martinez) at (0,0) {Evaluación\\contextualizada};
+  \node[mindbranch] (tendencia) at (-5,2.4) {Tendencias};
+  \node[mindbranch] (contexto) at (5,2.4) {Contexto y muestra};
+  \node[mindbranch] (causas) at (-5,-2.4) {Causas múltiples};
+  \node[mindbranch] (mejora) at (5,-2.4) {Evaluar para mejorar};
+  \node[mindleaf] (tenda) at (-8.2,3.45) {Serie histórica};
+  \node[mindleaf] (tendb) at (-8.2,1.35) {No reducir a ranking};
+  \node[mindleaf] (contexa) at (8.2,3.45) {Cobertura escolar};
+  \node[mindleaf] (contexb) at (8.2,1.35) {Desigualdad social};
+  \node[mindleaf] (causa) at (-8.2,-1.35) {Pandemia y prácticas};
+  \node[mindleaf] (causb) at (-8.2,-3.45) {Familia y dispositivos};
+  \node[mindleaf] (mejoa) at (8.2,-1.35) {Evidencia válida};
+  \node[mindleaf] (mejob) at (8.2,-3.45) {Decisiones y seguimiento};
+  \foreach \a/\b in {martinez/tendencia,martinez/contexto,martinez/causas,martinez/mejora}
+    \draw[conceptarrow] (\a) -- (\b);
+  \foreach \a/\b in {tendencia/tenda,tendencia/tendb,contexto/contexa,contexto/contexb,causas/causa,causas/causb,mejora/mejoa,mejora/mejob}
+    \draw[conceptarrow] (\a) -- (\b);
+\end{tikzpicture}}
+\caption{Mapa mental de la lectura de Felipe Martínez Rizo.}
+\label{fig:mapa-martinez}
+\end{figure}
+\noindent\textit{Lectura del producto.} El mapa desplaza la atención del ranking aislado hacia una cadena de interpretación: tendencia, composición de la muestra, causas posibles y decisiones de mejora sustentadas en evidencia.
+
+\clearpage
+\pagestyle{empty}
+\begin{landscape}
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.35}
+\begin{longtable}{@{}p{0.14\linewidth}p{0.27\linewidth}p{0.27\linewidth}p{0.27\linewidth}@{}}
+\caption{Cuadro comparativo de las tres lecturas.}\label{tab:comparativo-tres-lecturas}\\
+\toprule
+\textbf{Criterio} & \textbf{Philippe Meirieu} & \textbf{R. Keith Sawyer} & \textbf{Felipe Martínez Rizo} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Criterio} & \textbf{Philippe Meirieu} & \textbf{R. Keith Sawyer} & \textbf{Felipe Martínez Rizo} \\
+\midrule
+\endhead
+\textbf{Escala} & Institución escolar y bien común. & Aula, procesos cognitivos y ambientes de aprendizaje. & Sistema educativo, resultados y política de evaluación. \\
+\textbf{Problema} & Volver a prácticas anteriores bajo discursos de innovación. & Mantener transmisión y repetición ante demandas de comprensión. & Interpretar PISA con rankings y sin contexto suficiente. \\
+\textbf{Idea central} & La escuela debe construir comunidad, igualdad y autonomía acompañada. & El aprendizaje profundo requiere actividad, interacción, reflexión y guía. & Los resultados deben leerse con tendencias, cobertura y condiciones sociales. \\
+\textbf{Papel docente} & Mediador de lo común y acompañante de trayectorias. & Diseñador de tareas, mediador y fuente de retroalimentación experta. & Usuario crítico de evidencia para orientar decisiones, no de rankings aislados. \\
+\textbf{Evaluación} & Debe sostener el derecho efectivo a aprender. & Es formativa: informa ajustes durante el aprendizaje. & Es contextual: permite comprender patrones y desigualdades del sistema. \\
+\textbf{Aporte a matemáticas} & Diseñar una comunidad donde todos participen en un saber común. & Promover problemas, explicaciones, representaciones y transferencia. & Interpretar logros junto con acceso, permanencia y desigualdad. \\
+\textbf{Límite o cautela} & La cooperación no elimina la necesidad de exigencia común. & La actividad sin propósito puede convertirse en superficialidad. & Un indicador comparable no explica por sí mismo las causas. \\
+\bottomrule
+\end{longtable}
+\endgroup
+\end{landscape}
+\pagestyle{fancy}
+\noindent\textit{Síntesis comparativa.} Las lecturas son complementarias porque responden preguntas distintas: para qué escuela, cómo se aprende y cómo interpretar la evidencia. Su articulación evita convertir una finalidad democrática, un método didáctico o un indicador en solución aislada.
+
+\subsection{De la declaración a la mejora verificable}
+
+Las lecturas pueden organizarse en tres escalas. Meirieu analiza la finalidad política y social de la escuela; Sawyer explica procesos y condiciones que favorecen el aprendizaje; Martínez Rizo examina evidencias agregadas sobre los resultados de los sistemas. Ninguna escala es suficiente por sí sola. Una finalidad democrática sin diseño pedagógico queda en declaración; una técnica de enseñanza sin compromiso de igualdad puede beneficiar principalmente a quienes ya poseen ventajas; una evaluación sin teoría del aprendizaje registra diferencias, pero no indica cómo intervenir.
+
+La relación entre las escalas puede formularse como una cadena de coherencia: la escuela define qué bienes comunes desea garantizar; la pedagogía organiza experiencias para que esos bienes sean aprendidos; y la evaluación aporta evidencia sobre quién aprende, qué comprende y bajo qué condiciones. Si un eslabón se separa de los demás, la mejora se debilita.
+
+\subsection{La autonomía no es un punto de partida}
+
+Meirieu y Sawyer coinciden en rechazar la imagen de un estudiante que aprende solo por recibir información. Para Meirieu, motivación y autonomía son finalidades de la acción docente, no requisitos que permitan seleccionar a quienes ya saben desenvolverse. Para Sawyer, el aprendizaje profundo exige activar conocimientos previos, orientar la investigación y hacer visible el razonamiento. En ambos casos, la mediación no se opone a la autonomía: crea las condiciones para desarrollarla progresivamente \citep{meirieu2020escuela,sawyer2008optimizing}.
+
+Esta convergencia permite distinguir personalización de individualización. Personalizar supone reconocer trayectorias, apoyos y formas de participación sin romper el horizonte común. Individualizar puede reducir la experiencia a secuencias privadas de ejercicios. Una plataforma adaptativa puede ajustar dificultad, pero no garantiza diálogo, pertenencia, argumentación ni responsabilidad hacia otros.
+
+\subsection{Tecnología, actividad y comunidad}
+
+Las tres fuentes obligan a evitar explicaciones tecnológicas simples. Meirieu advierte que lo digital puede reforzar aislamiento y estandarización; Sawyer valora herramientas cuando favorecen investigación, colaboración y representación; Martínez Rizo menciona el uso de dispositivos entre los factores que deben estudiarse, no como causa única demostrada. La pregunta compartida es funcional: ¿qué actividad cognitiva y social hace posible la herramienta?
+
+Desde esta perspectiva, una tecnología educativa es pertinente si ayuda a formular preguntas, explorar relaciones, comparar soluciones, argumentar y revisar. Es insuficiente si solo acelera la exposición o la repetición. También debe evaluarse su distribución: una actividad digital que presupone conectividad, espacio y acompañamiento puede ampliar desigualdades aunque su diseño técnico sea atractivo.
+
+\subsection{Evaluar sin reducir el aprendizaje}
+
+Sawyer sitúa la evaluación formativa dentro del proceso: la evidencia sirve para que docente y estudiante ajusten estrategias. Martínez Rizo trabaja en escala sistémica y pide interpretar los puntajes con tendencias, cobertura y contexto. Ambas perspectivas rechazan usar un resultado aislado como explicación completa. Evaluar significa producir información válida para una decisión concreta, no convertir el indicador en el objetivo de la enseñanza.
+
+PISA ofrece una referencia externa y comparable, pero no observa directamente cada práctica escolar ni explica por sí sola sus causas. La evaluación de aula, por otro lado, puede describir razonamientos y errores con detalle, pero no representa un sistema nacional. La mejora requiere articular ambas: evidencia cercana para intervenir y evidencia agregada para identificar patrones y desigualdades \citep{sawyer2008optimizing,martinezRizo2026pisa}.
+
+\subsection{Implicaciones para la enseñanza de las matemáticas}
+
+En matemáticas, el modelo transmisivo aparece cuando aprender se reduce a imitar procedimientos y obtener respuestas. Las ciencias del aprendizaje orientan hacia problemas que permitan activar ideas previas, construir representaciones, justificar estrategias y transferir conceptos. La propuesta de Meirieu añade que esas tareas deben organizar una comunidad donde cada estudiante participe en un saber común. La lectura de PISA recuerda que la calidad de tales experiencias debe analizarse junto con condiciones de acceso, permanencia y desigualdad.
+
+Una secuencia congruente podría iniciar con un problema cercano que admita varias estrategias; recuperar explicaciones iniciales; organizar trabajo colaborativo con responsabilidades intelectuales; contrastar representaciones numéricas, gráficas y algebraicas; y cerrar con una justificación individual revisada. La evaluación recogería decisiones, errores, cambios de estrategia y capacidad de transferencia, además del resultado final.
+
+El criterio profesional resultante es exigente: no basta con aumentar ejercicios, añadir una aplicación o elevar la frecuencia de exámenes. La intervención debe identificar qué comprende el estudiante, qué obstáculo enfrenta, qué apoyo modifica su razonamiento y qué evidencia muestra avance. Así, la actividad matemática se convierte en espacio de conocimiento compartido y no en mecanismo de clasificación.
+
+\subsection{Mapa conceptual propositivo: ¿qué hacer?}
+
+Las tres lecturas permiten responder la pregunta central de la actividad con una propuesta de intervención: construir experiencias matemáticas comunes, profundas y evaluables. El siguiente mapa conceptual traduce la comparación en decisiones concretas de diseño didáctico.
+
+\clearpage
+\pagestyle{empty}
+\begin{landscape}
+\begin{figure}[ht]
+\centering
+\resizebox{0.94\linewidth}{!}{%
+\begin{tikzpicture}[font=\sffamily,>=Latex]
+  \node[conceptroot] (pregunta) at (0,3.6) {¿Qué hacer?\\Mejorar la enseñanza de las matemáticas};
+  \node[conceptbranch] (comun) at (-6,0.8) {Construir lo común};
+  \node[conceptbranch] (prof) at (0,0.8) {Diseñar aprendizaje profundo};
+  \node[conceptbranch] (evid) at (6,0.8) {Evaluar para intervenir};
+  \node[conceptleaf] (comuna) at (-8.8,-1.5) {Problema compartido y participación de todos};
+  \node[conceptleaf] (comunb) at (-3.3,-1.5) {Apoyos diferenciados sin bajar la exigencia};
+  \node[conceptleaf] (profa) at (-2.8,-1.5) {Activar ideas previas y formular preguntas};
+  \node[conceptleaf] (profb) at (2.8,-1.5) {Argumentar, colaborar y transferir};
+  \node[conceptleaf] (evida) at (3.3,-1.5) {Evidencias de razonamiento y proceso};
+  \node[conceptleaf] (evidb) at (8.8,-1.5) {Retroalimentar y ajustar la secuencia};
+  \node[conceptbranch] (secuencia) at (0,-4.2) {Secuencia coherente};
+  \node[conceptleaf] (paso1) at (-7,-6.4) {Problema contextualizado};
+  \node[conceptleaf] (paso2) at (-2.35,-6.4) {Representaciones y estrategias};
+  \node[conceptleaf] (paso3) at (2.35,-6.4) {Discusión y revisión};
+  \node[conceptleaf] (paso4) at (7,-6.4) {Transferencia y cierre individual};
+  \draw[conceptarrow] (pregunta) -- node[right,font=\scriptsize]{se responde mediante} (prof);
+  \draw[conceptarrow] (pregunta) -- (comun);
+  \draw[conceptarrow] (pregunta) -- (evid);
+  \foreach \a/\b in {comun/comuna,comun/comunb,prof/profa,prof/profb,evid/evida,evid/evidb}
+    \draw[conceptarrow] (\a) -- (\b);
+  \draw[conceptarrow] (comun) -- (secuencia);
+  \draw[conceptarrow] (prof) -- (secuencia);
+  \draw[conceptarrow] (evid) -- (secuencia);
+  \foreach \a/\b in {secuencia/paso1,secuencia/paso2,secuencia/paso3,secuencia/paso4}
+    \draw[conceptarrow] (\a) -- (\b);
+\end{tikzpicture}}
+\caption{Mapa conceptual propositivo para responder qué hacer en la enseñanza de las matemáticas.}
+\label{fig:mapa-propositivo}
+\end{figure}
+\end{landscape}
+\pagestyle{fancy}
+
+\noindent\textit{Respuesta integrada.} Hacerlo significa pasar de la declaración a una secuencia observable: plantear un problema común, activar y confrontar ideas, organizar colaboración con mediación docente, recoger evidencia del razonamiento y ajustar la enseñanza. La propuesta combina la finalidad de Meirieu, las condiciones de Sawyer y la prudencia interpretativa de Martínez Rizo.
+
+\section{Conclusiones}
+
+Los tres textos convergen en una exigencia de coherencia. La escuela debe sostener el derecho a aprender y la construcción de lo común; la pedagogía debe basarse en procesos que produzcan comprensión profunda; y la evaluación debe informar decisiones sin simplificar el fenómeno educativo. Ninguna innovación merece ese nombre si conserva intacta la lógica de transmisión, selección o clasificación que afirma superar.
+
+La principal diferencia está en la escala de observación. Meirieu pregunta qué institución debe construirse; Sawyer, cómo aprenden las personas en ambientes bien diseñados; Martínez Rizo, cómo interpretar el desempeño de poblaciones y sistemas. Su integración evita dos extremos: confiar en métodos aislados sin considerar justicia educativa, o formular grandes finalidades sin mecanismos de aprendizaje y evidencia.
+
+Para la enseñanza de las matemáticas, la consecuencia es concreta: diseñar situaciones intelectualmente exigentes y socialmente inclusivas, acompañar la autonomía en lugar de presuponerla y evaluar razonamientos para intervenir. Mejorar no consiste en volver a lo anterior con más tecnología ni en perseguir un puntaje; consiste en crear mejores oportunidades de comprender, argumentar y participar en un conocimiento común.
+
+\bibliography{fundamentos-para-la-enseñanza-y-el-aprendizaje-I}
+
+\end{document}

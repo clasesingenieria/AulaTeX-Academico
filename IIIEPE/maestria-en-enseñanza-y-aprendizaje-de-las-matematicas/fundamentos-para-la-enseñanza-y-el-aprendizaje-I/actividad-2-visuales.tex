@@ -1,0 +1,75 @@
+\tikzset{
+  mentalcentro/.style={circle,fill=iiiepeNavy,text=white,text width=2.5cm,align=center,minimum size=2.8cm,font=\sffamily\bfseries\large},
+  mentalrama/.style={rounded corners=6pt,text width=2.6cm,align=center,minimum height=.9cm,inner sep=5pt,font=\sffamily\bfseries\normalsize},
+  mentalhoja/.style={rounded corners=3pt,text width=2.7cm,align=center,minimum height=.65cm,inner sep=5pt,font=\sffamily\small},
+  propuesta/.style={rounded corners=4pt,draw=iiiepeNavy,fill=iiiepePaper,text width=4cm,align=center,minimum height=.9cm,inner sep=5pt,font=\sffamily\small},
+  enlace/.style={-{Latex[length=2mm]},thick,draw=iiiepeNavy!80},
+  relacion/.style={fill=white,inner sep=2pt,font=\sffamily\scriptsize,text=iiiepeInk,align=center}
+}
+
+\newcommand{\RamaMental}[8]{%
+  \node[mentalrama,draw=#8,fill=#8!13] (#1) at (#2,#3) {#4};
+  \node[mentalhoja,draw=#8!60,fill=#8!5] (#1primera) at (#5,{#3+.72}) {#6};
+  \node[mentalhoja,draw=#8!60,fill=#8!5] (#1segunda) at (#5,{#3-.72}) {#7};
+  \draw[line width=2pt,draw=#8] (centro) to[bend left=8] (#1);
+  \draw[thick,draw=#8] (#1) to[bend left=8] (#1primera);
+  \draw[thick,draw=#8] (#1) to[bend right=8] (#1segunda);
+}
+
+\newcommand{\MapaMeirieu}{%
+\begin{tikzpicture}
+  \node[mentalcentro] (centro) at (0,0) {Hacer clase\\para hacer\\escuela};
+  \RamaMental{comunidad}{-3.8}{1.9}{Bien común}{-7.4}{Derecho a aprender}{Cooperación y alteridad}{iiiepeBlue}
+  \RamaMental{mediacion}{3.8}{1.9}{Mediación docente}{7.4}{Autonomía construida}{Articular yo y nosotros}{iiiepeAqua}
+  \RamaMental{riesgos}{-3.8}{-1.9}{Riesgos de retorno}{-7.4}{Discurso sin cambio}{Tecnología sin pedagogía}{iiiepeOrange}
+  \RamaMental{condiciones}{3.8}{-1.9}{Condiciones de igualdad}{7.4}{Apoyos diferenciados}{Acceso al saber común}{iiiepeBlue}
+\end{tikzpicture}%
+}
+
+\newcommand{\MapaSawyer}{%
+\begin{tikzpicture}
+  \node[mentalcentro] (centro) at (0,0) {Aprendizaje\\profundo};
+  \RamaMental{construccion}{-3.8}{1.9}{Construcción activa}{-7.4}{Conocimiento previo}{Problemas y explicaciones}{iiiepeBlue}
+  \RamaMental{social}{3.8}{1.9}{Dimensión social}{7.4}{Colaboración intelectual}{Argumentación compartida}{iiiepeAqua}
+  \RamaMental{transferencia}{-3.8}{-1.9}{Comprensión integrada}{-7.4}{Conceptos conectados}{Transferencia a lo nuevo}{iiiepeOrange}
+  \RamaMental{regulacion}{3.8}{-1.9}{Regulación del aprendizaje}{7.4}{Mediación y andamiaje}{Reflexión y retroalimentación}{iiiepeBlue}
+\end{tikzpicture}%
+}
+
+\newcommand{\MapaMartinez}{%
+\begin{tikzpicture}
+  \node[mentalcentro] (centro) at (0,0) {Interpretar\\para mejorar};
+  \RamaMental{tendencias}{-3.8}{1.9}{Tendencias}{-7.4}{Serie histórica}{Más allá del ranking}{iiiepeBlue}
+  \RamaMental{contextos}{3.8}{1.9}{Contexto y muestra}{7.4}{Cobertura escolar}{Desigualdad social}{iiiepeAqua}
+  \RamaMental{explicaciones}{-3.8}{-1.9}{Hipótesis, no causas probadas}{-7.4}{Factores escolares}{Condiciones extraescolares}{iiiepeOrange}
+  \RamaMental{decisiones}{3.8}{-1.9}{Evaluación propia}{7.4}{Pruebas y estudios locales}{Políticas con seguimiento}{iiiepeBlue}
+\end{tikzpicture}%
+}
+
+\newcommand{\MapaPropositivo}{%
+\begin{tikzpicture}
+  \node[propuesta,fill=iiiepeNavy,text=white,text width=6cm,font=\sffamily\bfseries] (pregunta) at (0,3) {¿Qué hacer?\\Garantizar comprensión matemática con equidad};
+  \node[propuesta,fill=iiiepeBlue!15,font=\sffamily\bfseries] (comun) at (-5.1,1.1) {Construir lo común};
+  \node[propuesta,fill=iiiepeAqua!15,font=\sffamily\bfseries] (profundo) at (0,1.1) {Diseñar comprensión};
+  \node[propuesta,fill=iiiepeOrange!15,font=\sffamily\bfseries] (evaluar) at (5.1,1.1) {Evaluar para intervenir};
+  \node[propuesta] (participacion) at (-5.1,-1) {Problema compartido, roles intelectuales y apoyos accesibles};
+  \node[propuesta] (razonamiento) at (0,-1) {Ideas previas, representaciones, argumentos y transferencia};
+  \node[propuesta] (retroalimentacion) at (5.1,-1) {Diagnóstico, criterios claros y revisión tras la retroalimentación};
+  \node[propuesta] (evidenciacomun) at (-5.1,-3.1) {Participación documentada\\y explicación individual};
+  \node[propuesta] (evidenciaprofunda) at (0,-3.1) {Estrategias justificadas\\en un problema nuevo};
+  \node[propuesta] (evidenciaevaluacion) at (5.1,-3.1) {Cambios entre la respuesta\\inicial y la revisada};
+  \node[propuesta,fill=iiiepeNavy!10,text width=8cm,font=\sffamily\bfseries] (ajuste) at (0,-5.2) {Decidir el siguiente apoyo o reto\\y volver a comprobar la comprensión};
+  \draw[enlace] (pregunta) -- node[relacion,sloped,above]{requiere} (comun);
+  \draw[enlace] (pregunta) -- node[relacion,right]{requiere} (profundo);
+  \draw[enlace] (pregunta) -- node[relacion,sloped,above]{requiere} (evaluar);
+  \draw[enlace] (comun) -- node[relacion]{se concreta en} (participacion);
+  \draw[enlace] (profundo) -- node[relacion]{se concreta en} (razonamiento);
+  \draw[enlace] (evaluar) -- node[relacion]{se concreta en} (retroalimentacion);
+  \draw[enlace] (participacion) -- node[relacion]{se observa mediante} (evidenciacomun);
+  \draw[enlace] (razonamiento) -- node[relacion]{se observa mediante} (evidenciaprofunda);
+  \draw[enlace] (retroalimentacion) -- node[relacion]{se observa mediante} (evidenciaevaluacion);
+  \draw[enlace] (evidenciacomun) -- node[relacion,sloped,above]{orienta} (ajuste);
+  \draw[enlace] (evidenciaprofunda) -- node[relacion,right]{orienta} (ajuste);
+  \draw[enlace] (evidenciaevaluacion) -- node[relacion,sloped,above]{orienta} (ajuste);
+\end{tikzpicture}%
+}

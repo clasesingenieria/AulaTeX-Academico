@@ -1,0 +1,150 @@
+\documentclass[spanish]{article}
+\usepackage[paperwidth=19.2cm,paperheight=10.8cm,margin=0cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla,es-noshorthands]{babel}
+\usepackage[scaled=.96]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[table]{xcolor}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{hyperref}
+\usetikzlibrary{arrows.meta,positioning,calc}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\fboxsep}{0pt}
+\setlength{\topskip}{0pt}
+\newcommand{\Footer}{%
+  \vfill\noindent\colorbox{iiiepeNavy}{\begin{minipage}[c][0.55cm][c]{\paperwidth}
+    \hspace*{0.55cm}{\color{white}\scriptsize Fundamentos para la enseñanza y el aprendizaje I \hfill Actividad 2 \hspace*{0.55cm}}
+  \end{minipage}}%
+}
+\newcommand{\Slide}[2]{%
+  \clearpage\thispagestyle{empty}
+  \noindent\begin{minipage}[t][10.5cm][t]{\paperwidth}
+    \noindent\colorbox{iiiepeNavy}{\begin{minipage}[c][1.05cm][c]{\paperwidth}
+      \hspace*{0.6cm}{\color{white}\Large\bfseries #1}
+    \end{minipage}}\par
+    \vspace{0.4cm}\hspace*{0.7cm}\begin{minipage}{17.75cm}\color{iiiepeInk}#2\end{minipage}
+    \Footer
+  \end{minipage}
+}
+\newcommand{\Pill}[2]{\tikz[baseline=(x.base)]{\node[rounded corners=3pt,fill=#1!15,draw=#1!70!black,inner xsep=6pt,inner ysep=4pt,text width=4.45cm,align=center] (x) {\bfseries #2};}}
+
+\begin{document}
+
+\clearpage\thispagestyle{empty}
+\noindent\begin{minipage}[t][10.5cm][t]{0.63\paperwidth}
+  \colorbox{iiiepeNavy}{\begin{minipage}[t][10.5cm][t]{0.63\paperwidth}
+    \vspace*{1.15cm}\hspace*{0.75cm}\begin{minipage}{10.2cm}
+      {\color{white}\fontsize{23}{27}\selectfont\bfseries Escuela, aprendizaje y evaluación en transformación\par}
+      \vspace{0.4cm}{\color{iiiepeAqua!35!white}\Large Actividad 2\par}
+      \vspace{0.55cm}{\color{white!85}\large Reportes de lectura y productos integrados\par}
+      \vspace{0.7cm}{\color{iiiepeOrange}\rule{8.8cm}{1.3pt}\par}
+      \vspace{0.35cm}{\color{white}\large Mtro. Martin Jonathan de la Cruz Muñoz\par}
+    \end{minipage}
+  \end{minipage}}
+\end{minipage}%
+\colorbox{iiiepeBlue}{\begin{minipage}[t][10.5cm][t]{0.37\paperwidth}
+  \vspace*{1.2cm}\centering
+  \includegraphics[height=2.1cm]{../../../base/Plantilla-Informe/img/iiiepe/marca-iiiepe.png}\par\vspace{0.65cm}
+  {\color{white}\Large\bfseries MAEM\par}\vspace{0.2cm}
+  {\color{white!85}\large IIIEPE\par}\vfill
+  {\color{white}\small Monterrey, Nuevo León\\2026}
+\end{minipage}}
+
+\Slide{Pregunta y ruta de trabajo}{%
+  \Large\bfseries ¿Cómo pasar de declaraciones educativas a decisiones de mejora verificables?\par\vspace{0.45cm}
+  \normalsize Las lecturas se organizan como una secuencia de análisis: finalidad de la escuela, condiciones del aprendizaje y lectura responsable de la evidencia.\par\vspace{0.5cm}
+  \Pill{iiiepeNavy}{1. Meirieu: para qué escuela}\hspace{0.25cm}
+  \Pill{iiiepeBlue}{2. Sawyer: cómo se aprende}\par\vspace{0.35cm}
+  \Pill{iiiepeAqua}{3. Martínez Rizo: qué evidencia interpretar}\hspace{0.25cm}
+  \Pill{iiiepeOrange}{4. ¿Qué hacer en matemáticas?}
+}
+
+\Slide{Lectura 1: Philippe Meirieu}{%
+  \begin{tikzpicture}[node distance=0.35cm and 0.65cm,>=Latex]
+    \node[rounded corners=4pt,fill=iiiepeNavy!14,draw=iiiepeNavy,very thick,text width=4.2cm,align=center,minimum height=1.05cm,font=\bfseries] (r) {La escuela como bien común};
+    \node[rounded corners=3pt,fill=iiiepeBlue!10,draw=iiiepeBlue,text width=3.5cm,align=center,minimum height=.8cm,right=of r] (a) {Autonomía se construye};
+    \node[rounded corners=3pt,fill=iiiepeAqua!12,draw=iiiepeAqua,text width=3.5cm,align=center,minimum height=.8cm,below=of a] (b) {Cooperación y alteridad};
+    \node[rounded corners=3pt,fill=iiiepeOrange!14,draw=iiiepeOrange,text width=3.5cm,align=center,minimum height=.8cm,left=of b] (c) {Evitar el retorno automático};
+    \draw[-{Latex},thick,iiiepeNavy] (r)--(a) node[midway,above,font=\scriptsize]{exige};
+    \draw[-{Latex},thick,iiiepeNavy] (r)--(b) node[midway,right,font=\scriptsize]{organiza};
+    \draw[-{Latex},thick,iiiepeNavy] (r)--(c) node[midway,below,font=\scriptsize]{cuestiona};
+  \end{tikzpicture}\par\vspace{0.35cm}
+  \textbf{Aporte:} la innovación debe fortalecer comunidad, igualdad y mediación docente; la tecnología no sustituye la relación educativa.
+}
+
+\Slide{Lectura 2: R. Keith Sawyer}{%
+  \begin{tikzpicture}[node distance=0.35cm and 0.65cm,>=Latex]
+    \node[rounded corners=4pt,fill=iiiepeNavy!14,draw=iiiepeNavy,very thick,text width=4.2cm,align=center,minimum height=1.05cm,font=\bfseries] (r) {Aprendizaje profundo};
+    \node[rounded corners=3pt,fill=iiiepeBlue!10,draw=iiiepeBlue,text width=3.5cm,align=center,minimum height=.8cm,right=of r] (a) {Ideas previas y actividad};
+    \node[rounded corners=3pt,fill=iiiepeAqua!12,draw=iiiepeAqua,text width=3.5cm,align=center,minimum height=.8cm,below=of a] (b) {Colaboración y argumentación};
+    \node[rounded corners=3pt,fill=iiiepeOrange!14,draw=iiiepeOrange,text width=3.5cm,align=center,minimum height=.8cm,left=of b] (c) {Transferencia y reflexión};
+    \draw[-{Latex},thick,iiiepeNavy] (r)--(a) node[midway,above,font=\scriptsize]{activa};
+    \draw[-{Latex},thick,iiiepeNavy] (r)--(b) node[midway,right,font=\scriptsize]{socializa};
+    \draw[-{Latex},thick,iiiepeNavy] (r)--(c) node[midway,below,font=\scriptsize]{profundiza};
+  \end{tikzpicture}\par\vspace{0.35cm}
+  \textbf{Aporte:} comprender requiere producir explicaciones, contrastar estrategias, recibir retroalimentación y usar lo aprendido en situaciones nuevas.
+}
+
+\Slide{Lectura 3: Felipe Martínez Rizo}{%
+  \begin{tikzpicture}[node distance=0.35cm and 0.65cm,>=Latex]
+    \node[rounded corners=4pt,fill=iiiepeNavy!14,draw=iiiepeNavy,very thick,text width=4.2cm,align=center,minimum height=1.05cm,font=\bfseries] (r) {Evaluación contextualizada};
+    \node[rounded corners=3pt,fill=iiiepeBlue!10,draw=iiiepeBlue,text width=3.5cm,align=center,minimum height=.8cm,right=of r] (a) {Tendencias y series};
+    \node[rounded corners=3pt,fill=iiiepeAqua!12,draw=iiiepeAqua,text width=3.5cm,align=center,minimum height=.8cm,below=of a] (b) {Cobertura y desigualdad};
+    \node[rounded corners=3pt,fill=iiiepeOrange!14,draw=iiiepeOrange,text width=3.5cm,align=center,minimum height=.8cm,left=of b] (c) {Evidencia para decidir};
+    \draw[-{Latex},thick,iiiepeNavy] (r)--(a) node[midway,above,font=\scriptsize]{compara};
+    \draw[-{Latex},thick,iiiepeNavy] (r)--(b) node[midway,right,font=\scriptsize]{contextualiza};
+    \draw[-{Latex},thick,iiiepeNavy] (r)--(c) node[midway,below,font=\scriptsize]{orienta};
+  \end{tikzpicture}\par\vspace{0.35cm}
+  \textbf{Aporte:} un resultado no explica por sí solo sus causas; la evaluación vale cuando permite comprender patrones y dar seguimiento a decisiones.
+}
+
+\Slide{Cuadro comparativo: tres escalas}{%
+  \scriptsize\renewcommand{\arraystretch}{1.35}\setlength{\tabcolsep}{4pt}
+  \begin{tabular}{p{3.1cm}p{4.25cm}p{4.25cm}p{4.25cm}}
+    \rowcolor{iiiepeNavy!14}\textbf{Criterio} & \textbf{Meirieu} & \textbf{Sawyer} & \textbf{Martínez Rizo}\\
+    Escala & Escuela y bien común & Aula y aprendizaje & Sistema y evaluación\\
+    Problema & Retorno a prácticas anteriores & Transmisión y repetición & Ranking sin contexto\\
+    Respuesta & Comunidad y mediación & Actividad, interacción y reflexión & Tendencias, cobertura y seguimiento\\
+    Matemáticas & Participación en saber común & Comprensión y transferencia & Lectura de logros con desigualdad\\
+  \end{tabular}\par\vspace{0.3cm}
+  \textbf{Clave:} las lecturas no compiten; responden preguntas distintas y se vuelven útiles cuando se articulan.
+}
+
+\Slide{Mapa conceptual propositivo: ¿qué hacer?}{%
+  \centering
+  \begin{tikzpicture}[>=Latex,node distance=0.7cm and 0.55cm]
+    \node[rounded corners=5pt,fill=iiiepeNavy!14,draw=iiiepeNavy,very thick,text width=4.5cm,align=center,minimum height=.9cm,font=\bfseries] (q) {Mejorar la enseñanza\\de las matemáticas};
+    \node[rounded corners=3pt,fill=iiiepeBlue!10,draw=iiiepeBlue,text width=4.2cm,align=center,below left=of q] (a) {Construir lo común\\problema y participación};
+    \node[rounded corners=3pt,fill=iiiepeAqua!12,draw=iiiepeAqua,text width=4.2cm,align=center,below=of q] (b) {Diseñar profundidad\\ideas, argumentos y transferencia};
+    \node[rounded corners=3pt,fill=iiiepeOrange!14,draw=iiiepeOrange,text width=4.2cm,align=center,below right=of q] (c) {Evaluar para intervenir\\evidencia y retroalimentación};
+    \node[rounded corners=3pt,fill=iiiepeNavy!8,draw=iiiepeNavy,text width=7cm,align=center,below=1cm of b] (d) {Secuencia: problema situado $\rightarrow$ estrategias $\rightarrow$ discusión $\rightarrow$ revisión y transferencia};
+    \draw[-{Latex},thick,iiiepeNavy] (q)--(a); \draw[-{Latex},thick,iiiepeNavy] (q)--(b); \draw[-{Latex},thick,iiiepeNavy] (q)--(c);
+    \draw[-{Latex},thick,iiiepeNavy] (a)--(d); \draw[-{Latex},thick,iiiepeNavy] (b)--(d); \draw[-{Latex},thick,iiiepeNavy] (c)--(d);
+  \end{tikzpicture}\par\vspace{0.3cm}
+  \textbf{Respuesta:} pasar de la declaración a una secuencia observable, inclusiva y ajustable.
+}
+
+\Slide{Cierre y referencias}{%
+  \Large\bfseries Una mejora educativa coherente debe:\par\vspace{0.25cm}
+  \normalsize\begin{itemize}\setlength{\itemsep}{0.16cm}
+    \item sostener el derecho común a aprender;
+    \item diseñar actividad cognitiva profunda y colaborativa;
+    \item evaluar razonamientos y condiciones para intervenir;
+    \item revisar la secuencia con evidencia, no con intuiciones aisladas.
+  \end{itemize}\vspace{0.15cm}
+  \scriptsize Fuentes de trabajo: Meirieu (2020), Sawyer (2008) y Martínez Rizo (2026). Las referencias completas se encuentran en el reporte de la Actividad 2.
+}
+
+\end{document}

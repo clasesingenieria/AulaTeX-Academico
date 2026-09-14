@@ -1,0 +1,131 @@
+% AulaTeX - presentacion materializada desde memoria editorial
+\documentclass[spanish]{article}
+\usepackage[paperwidth=19.2cm,paperheight=10.8cm,margin=0cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[scaled=.96]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[table]{xcolor}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{hyperref}
+
+\definecolor{unadmGreenDark}{HTML}{174A3A}
+\definecolor{unadmGreen}{HTML}{5F8F3A}
+\definecolor{unadmGold}{HTML}{B88A2A}
+\definecolor{unadmPaper}{HTML}{F6F7F2}
+\definecolor{unadmInk}{HTML}{1F2A24}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\fboxsep}{0pt}
+\renewcommand{\labelitemi}{\textcolor{unadmGreen}{\bfseries >}}
+
+\newcommand{\CoverSlide}{%
+  \thispagestyle{empty}
+  \noindent\colorbox{unadmGreenDark}{%
+    \begin{minipage}[t][10.55cm][t]{0.58\paperwidth}
+      \vspace*{1.15cm}
+      \hspace*{0.75cm}\begin{minipage}{9.7cm}
+        {\color{white}\fontsize{24}{29}\selectfont\bfseries Fundamentos Para la Enseñanza y El Aprendizaje I\par}
+        \vspace{0.35cm}
+        {\color{white!85}\Large Licenciatura en Derecho - UnADM\par}
+        \vspace{0.45cm}
+        {\color{unadmGold}\rule{8.8cm}{1.2pt}\par}
+        \vspace{0.45cm}
+        {\color{white}\large Martin Jonathan de la Cruz\par}
+      \end{minipage}
+    \end{minipage}%
+  }%
+  \colorbox{unadmGreen}{%
+    \begin{minipage}[t][10.55cm][t]{0.42\paperwidth}
+      \vspace*{1.25cm}
+      \centering
+      \includegraphics[height=2.2cm]{img/departamentos/UnADM.pdf}\\[0.65cm]
+      {\color{white}\Large\bfseries AulaTeX}\\[0.15cm]
+      {\color{white!85}Plantilla editorial verificable}\\[5.9cm]
+      {\color{white}\small Obligatoria - Semestre 2 - Bloque 1}
+    \end{minipage}%
+  }%
+}
+
+\newcommand{\ContentSlide}[2]{%
+  \clearpage
+  \thispagestyle{empty}
+  \noindent\begin{minipage}[t][10.55cm][t]{\paperwidth}
+    \noindent\colorbox{unadmGreenDark}{%
+      \begin{minipage}[c][1.18cm][c]{\paperwidth}
+        \hspace*{0.65cm}{\color{white}\Large\bfseries #1}
+      \end{minipage}%
+    }
+    \vspace{0.55cm}
+
+    \hspace*{0.8cm}\begin{minipage}{17.55cm}
+      \Large\color{unadmInk}#2
+    \end{minipage}
+    \vfill
+    \noindent\colorbox{unadmGreen}{%
+      \begin{minipage}[c][0.56cm][c]{\paperwidth}
+        \hspace*{0.65cm}{\color{white}\small Fundamentos Para la Enseñanza y El Aprendizaje I - UnADM - \today}
+      \end{minipage}%
+    }
+  \end{minipage}
+}
+
+\begin{document}
+
+\CoverSlide
+
+\ContentSlide{Objetivo editorial}{
+  {\bfseries Objetivo editable}\\[0.25cm]
+  Convertir la consigna en problema juridico verificable, con evidencia,
+  fundamento y postura academica propia.
+  \vspace{0.45cm}
+  \begin{itemize}
+    \item Semestre: 2. Bloque: 1.
+    \item Tipo: Obligatoria. Creditos: 8.
+    \item Bibliografia local: \texttt{fundamentos-para-la-enseñanza-y-el-aprendizaje-I.bib}.
+  \end{itemize}
+}
+
+\ContentSlide{Marcadores de investigacion}{
+  \begin{itemize}
+    \item Delimitar marco juridico.
+    \item Identificar instituciones y sujetos.
+    \item Vincular problema con practica profesional.
+  \end{itemize}
+}
+
+\ContentSlide{Producto y estructura}{
+  \begin{enumerate}
+    \item Problema.
+    \item Marco conceptual y normativo.
+    \item Analisis o producto visual.
+    \item Postura personal.
+    \item Conclusion.
+  \end{enumerate}
+}
+
+\ContentSlide{Indicaciones editoriales}{
+  \begin{itemize}
+    \item Sintetizar la memoria editorial de la materia sin perder continuidad con reporte y actividad.
+  \end{itemize}
+}
+
+\ContentSlide{Criterios de calidad}{
+  \begin{itemize}
+    \item Citas verificables.
+    \item Bibliografia local consistente.
+    \item Compilacion limpia.
+    \item Redaccion formal.
+  \end{itemize}
+}
+
+\ContentSlide{Cierre}{
+  \centering\vspace*{1.8cm}
+  La plantilla queda lista para desarrollar la actividad con criterio juridico,
+  trazabilidad y control editorial.
+}
+
+\end{document}
