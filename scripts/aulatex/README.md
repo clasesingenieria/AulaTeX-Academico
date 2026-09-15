@@ -104,6 +104,18 @@ Guía de uso:
 .\scripts\aulatex.ps1 editorial-memory --target <nodo> --build-level materia --propagation-mode local
 ```
 
+## Propuesta: realizar-planeación
+
+La especificación de [realizar-planeación](../../REALIZAR-PLANEACION.md) define una
+acción hermana de `realizar-actividad` para construir una planeación académica de
+una actividad desde redacciones, consignas, programas y rúbricas, sin exigir un TEX
+previo. Incluye modos de normalización, propuesta y validación, trazabilidad por
+campo, límites de herencia institucional y puntos de integración del motor.
+
+**Es un contrato propuesto, no un comando disponible.** La implementación deberá
+incorporar ejecutor y evaluador propios; no basta con registrar el nombre
+`realizar-planeacion` ni aplicar el contrato editorial del producto estudiantil.
+
 ## Fase Investigación
 
 La pestaña Investigación y el comando `investigation` consolidan la base de

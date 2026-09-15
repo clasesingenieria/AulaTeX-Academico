@@ -143,6 +143,18 @@ instrucciones locales > extractor > memoria distribuida > herencia > LLM
 
 Los artefactos temporales viven en `.aulatex-temp/`. La memoria persistente por nodo vive en carpetas `.memoria-aulatex/` distribuidas en el workspace.
 
+## Propuesta de `realizar-planeacion` (motor inteligente)
+
+La [contractualización de realizar-planeación](REALIZAR-PLANEACION.md) analiza las
+planeaciones UnADM y las consignas de otras instituciones para diseñar una
+planeación de **actividad concreta** desde descripciones y documentos de entrada.
+Define procedencia por requisito, propuestas y faltantes, secuencia, evaluación,
+compuertas e integración futura con `realizar-actividad`.
+
+**Estado: propuesta documental; la acción todavía no está implementada.** No
+resuelve la actividad ni hereda fechas, ponderaciones o políticas de UnADM a otras
+instituciones.
+
 ## Contratos de `realizar-actividad` (motor inteligente)
 
 El motor inteligente `realizar-actividad` opera bajo un **contrato editorial explícito** definido en `scripts/aulatex/activity_contract.py` (`REALIZAR_ACTIVIDAD_PIPELINE_CONTRACT`). Ese contrato se **propaga al prompt del agente** a través de `scripts/aulatex/incremental_detail_planner.py` (bloques `didactic_contract`, `structure_contract`, `layout_contract`, `bibliography_contract` y `_quality_rules()`), y se **evalúa** con `evaluate_activity_contract()` (consumido por `activity-observe` y `activity-monitor`).
