@@ -1,340 +1,136 @@
 {
-  "schema_version": "0.1-documental",
-  "contract_version": "0.1",
-  "request_id": "GGFG02-2026-II-revision-2026-09-15",
-  "mode": "proponer",
-  "planning_scope": "coleccion_de_planeaciones_individuales_de_actividad",
+  "schema_version": "0.2-index",
+  "document_type": "planning_index",
   "revision_date": "2026-09-15",
+  "subject": "Fundamentos de Gestión Administrativa",
+  "course_code": "GGFG02",
+  "moodle_course_id": 372,
+  "period": "2026-II",
   "status": "borrador",
-  "institutional_approval": {"value": null, "status": "pendiente", "source_refs": [], "derivation": "No se aporto evidencia de aprobacion institucional."},
-  "scope": {
-    "institution": {"value": "ITESCA", "status": "aportado", "source_refs": ["solicitud", "curso"], "derivation": "Contexto aportado."},
-    "program": {"value": null, "status": "pendiente", "source_refs": [], "derivation": "Contexto local de maestria registrado por separado; plan de estudios completo no validado en esta consulta."},
-    "local_program_context": "maestria-en-gestion-administrativa",
-    "subject": {"value": "Fundamentos de Gestion Administrativa", "status": "aportado", "source_refs": ["solicitud", "curso"], "derivation": "Identificacion del contexto de la solicitud."},
-    "period": {"value": "2026-II", "status": "aportado", "source_refs": ["solicitud"], "derivation": "Periodo generico del aula aportado."},
-    "course_code": "GGFG02",
-    "moodle_course_id": 372,
-    "competency": {"value": "Aplicar conceptos, herramientas y enfoques de gestion para analizar y evaluar decisiones.", "status": "aportado", "source_refs": ["solicitud", "especificaciones"], "derivation": "Sintesis propia de la competencia cuya extraccion del aula fue reportada."}
-  },
-  "provenance_policy": {
-    "consultation_date": "2026-09-15",
-    "consultation_mode": "verificacion_en_navegador_reportada_por_agente_principal_en_solicitud",
-    "network_used_for_source_consultation": true,
-    "network_used_by_delegated_writer": false,
-    "supervisory_review": {"date": "2026-09-15", "method": "consulta_directa_del_agente_principal_en_sesion_compartida_y_cotejo_de_la_sintesis", "scope": "h1_intro_fechas_y_rubricas_visibles_de_10_actividades_y_especificaciones_7767", "source_fidelity_reviewed": true, "linked_material_contents_reviewed": false, "institutional_approval": false},
-    "python_used_in_this_revision": false,
-    "source_status": "aportado",
-    "source_status_explanation": "Los requisitos son extracciones reportadas en la solicitud, no una consulta independiente ni confirmacion institucional en esta revision.",
-    "substantive_blocks": "Cada bloque value/status/source_refs/derivation transmite su procedencia a sus campos internos; las referencias resuelven en sources globales o de cada actividad.",
-    "unknowns": "Los valores desconocidos son null y se identifican como pendientes; no se sustituyen por cero.",
-    "proposals": "Objetivos, secuencias, mediacion, tiempos, matrices y listas de cotejo son propuestos y no obligaciones oficiales.",
-    "material_warning": "Consultar o disponer de un enlace no implica que su contenido haya sido leido o validado.",
-    "privacy": "Sin PII, cuentas, calificaciones personales, tokens, productos resueltos ni datos organizacionales inventados.",
-    "preservation": "Solo dos archivos nuevos; originales e indices compartidos fuera del alcance de escritura."
-  },
-  "sources": [
-    {"id": "solicitud", "role": "nota_derivada", "location": "sintesis_de_consulta_transmitida_al_redactor_delegado", "locator": "datos academicos de las actividades 1.1 a 5.1 cotejados por el agente principal", "version": "2026-09-15", "privacy": "sintesis_sanitizada", "extraction_status": "aportado", "consultation_date": "2026-09-15"},
-    {"id": "contrato", "role": "contrato_documental", "local_path": "../../../../../../REALIZAR-PLANEACION.md", "locator": "secciones 4.3 a 4.7", "version": "0.1", "privacy": "sin_datos_personales", "extraction_status": "leido_localmente", "consultation_date": "2026-09-15"},
-    {"id": "curso", "role": "contexto", "url": "https://cursos3.e-itesca.edu.mx/course/view.php?id=372", "locators": ["h1"], "version": null, "privacy": "url_sanitizada", "extraction_status": "verificacion_reportada", "consultation_date": "2026-09-15"},
-    {"id": "especificaciones", "role": "programa", "url": "https://cursos3.e-itesca.edu.mx/mod/page/view.php?id=7767", "locators": ["region main .no-overflow: Especificaciones de la asignatura"], "version": null, "privacy": "url_y_sintesis_sanitizadas", "extraction_status": "consulta_directa_cotejada", "consultation_date": "2026-09-15"},
-    {"id": "material-u1", "role": "lectura", "url": "https://cursos3.e-itesca.edu.mx/mod/folder/view.php?id=7778", "locator": "carpeta de materiales U1; contenido no examinado", "version": null, "privacy": "url_sanitizada", "extraction_status": "enlace_reportado_contenido_no_validado", "consultation_date": "2026-09-15", "content_validated": false},
-    {"id": "material-u2", "role": "lectura", "url": "https://cursos3.e-itesca.edu.mx/mod/folder/view.php?id=7785", "locator": "carpeta de materiales U2; contenido no examinado", "version": null, "privacy": "url_sanitizada", "extraction_status": "enlace_reportado_contenido_no_validado", "consultation_date": "2026-09-15", "content_validated": false},
-    {"id": "material-u3", "role": "lectura", "url": "https://cursos3.e-itesca.edu.mx/mod/folder/view.php?id=7791", "locator": "carpeta de materiales U3; contenido no examinado", "version": null, "privacy": "url_sanitizada", "extraction_status": "enlace_reportado_contenido_no_validado", "consultation_date": "2026-09-15", "content_validated": false},
-    {"id": "material-u4", "role": "lectura", "url": "https://cursos3.e-itesca.edu.mx/mod/folder/view.php?id=7797", "locator": "carpeta de materiales U4; contenido no examinado", "version": null, "privacy": "url_sanitizada", "extraction_status": "enlace_reportado_contenido_no_validado", "consultation_date": "2026-09-15", "content_validated": false},
-    {"id": "material-u5", "role": "lectura", "url": "https://cursos3.e-itesca.edu.mx/mod/folder/view.php?id=7803", "locator": "carpeta de materiales U5; contenido no examinado", "version": null, "privacy": "url_sanitizada", "extraction_status": "enlace_reportado_contenido_no_validado", "consultation_date": "2026-09-15", "content_validated": false},
-    {"id": "guia-7763", "role": "guia", "url": "https://cursos3.e-itesca.edu.mx/mod/resource/view.php?id=7763", "locator": "recurso 7763; guia no leida en esta revision", "version": null, "privacy": "url_sanitizada", "extraction_status": "enlace_reportado_contenido_no_validado", "consultation_date": "2026-09-15", "content_validated": false}
-  ],
-  "shared_pending": {
-    "value": {"timezone": null, "official_activity_objectives": null, "session_calendar": null, "maximum_file_size": null, "file_naming_rule": null, "official_cover_url": null, "general_integrity_ai_policy": null, "receipt_status": null, "extension_authorization": null},
-    "status": "pendiente",
-    "source_refs": ["solicitud"],
-    "derivation": "Estos datos no fueron aportados. Fechas pasadas no acreditan recepcion, disponibilidad actual de entrega ni prorroga."
-  },
+  "activity_count": 10,
   "activities": [
     {
-      "activity_id_aula": "1.1", "activity_id_local": 1, "moodle_module_id": 7780,
-      "title": "Foro sobre organizacion", "unit": 1, "status": "borrador",
-      "identification_provenance": {"status": "aportado", "source_refs": ["solicitud", "a11-intro"], "derivation": "Identificadores separados y titulo sintetizado, no transcripcion literal del h1."},
-      "sources": [
-        {"id": "a11-intro", "role": "consigna", "url": "https://cursos3.e-itesca.edu.mx/mod/forum/view.php?id=7780", "locators": ["h1", "#intro"], "consultation_date": "2026-09-15", "version": null, "privacy": "sintesis_sanitizada", "extraction_status": "verificacion_reportada"},
-        {"id": "a11-dates", "role": "calendario", "url": "https://cursos3.e-itesca.edu.mx/mod/forum/view.php?id=7780", "locators": [".activity-dates"], "consultation_date": "2026-09-15", "version": null, "privacy": "sin_datos_personales", "extraction_status": "verificacion_reportada"}
-      ],
-      "requirements": {"value": ["Abordar que es y que no es una organizacion y sus elementos desde los estudios organizacionales.", "Audio de hasta 3 minutos.", "Responder al menos a dos companeros."], "status": "aportado", "source_refs": ["solicitud", "a11-intro"], "derivation": "Sintesis de requisitos extraidos reportados."},
-      "delivery": {"value": {"work_mode": null, "participation": "personal_con_interaccion_entre_pares", "evidence": ["audio", "al_menos_dos_respuestas"], "channel": "foro_7780", "format": null, "audio_max_minutes": 3}, "status": "aportado", "source_refs": ["a11-intro"], "derivation": "Canal del modulo reportado; modalidad formal y formato tecnico no explicitados."},
-      "official_objective": {"value": null, "status": "pendiente", "source_refs": ["a11-intro"], "derivation": "No se aporto objetivo oficial especifico."},
-      "proposed_objective": {"value": "Distinguir organizacion de otras formas de agrupacion mediante una explicacion oral fundamentada y contrastarla con aportaciones de pares.", "status": "propuesto", "source_refs": ["a11-intro", "especificaciones"], "derivation": "Operacion observable vinculada al uso de conceptos de gestion."},
-      "sequence": {"value": [
-        {"phase": "preparacion", "student": "Revisar materiales, delimitar conceptos y preparar un esquema.", "teacher_mediation": "Orientar la delimitacion y resolver dudas.", "minutes": 30, "resources": ["material-u1"], "dependencies": "Acceso a materiales; esquema auxiliar no entregable."},
-        {"phase": "desarrollo", "student": "Grabar una explicacion propia, escuchar participaciones y redactar dos respuestas fundamentadas.", "teacher_mediation": "Facilitar contraste y preguntar por los elementos identificados.", "minutes": 50, "resources": ["material-u1", "a11-intro"], "dependencies": "Disponibilidad de participaciones de pares y medio de grabacion/reproduccion."},
-        {"phase": "cierre", "student": "Verificar duracion, audibilidad y numero de respuestas.", "teacher_mediation": "Retroalimentar precision y dialogo.", "minutes": 10, "resources": ["a11-intro"], "dependencies": "Audio y respuestas preparados."}
-      ], "status": "propuesto", "source_refs": ["a11-intro", "material-u1"], "derivation": "Diseno didactico para revision; no sesiones ni autorizacion de entrega actual."},
-      "estimated_minutes": {"value": 90, "status": "propuesto", "source_refs": ["a11-intro"], "derivation": "30 + 50 + 10; distinto del limite de 3 minutos del audio."},
-      "official_assessment": {"value": {"activity_weight": 5, "weight_unit": "porcentaje", "weight_scope": "curso", "instrument": null, "instrument_max_score": null, "levels": null}, "status": "aportado", "source_refs": ["a11-intro", "especificaciones"], "derivation": "Peso reportado; evaluacion detallada no visible, sus campos permanecen pendientes."},
-      "proposed_checklist": {"value": {"purpose": "formativo_sin_peso", "responses": ["si", "no", "por_revisar"], "criteria": ["Delimitacion conceptual", "Presencia de elementos", "Audio de hasta 3 minutos", "Al menos dos respuestas pertinentes"]}, "status": "propuesto", "source_refs": ["a11-intro"], "derivation": "Apoyo de revision, no rubrica oficial."},
-      "calendar": {"value": {"opening": null, "closing": null, "due": "2026-08-28 23:59", "timezone": null, "historical_as_of": "2026-09-15"}, "status": "aportado", "source_refs": ["a11-dates"], "derivation": "Vencimiento literal; apertura no visible, cierre separado no aportado y zona horaria pendiente. Sin recepcion ni prorroga acreditadas."},
-      "materials": {"value": ["material-u1"], "status": "aportado", "source_refs": ["solicitud", "material-u1"], "derivation": "Enlace localizado no equivale a contenido validado."},
-      "alignment": {"value": [{"objective": "Distinguir organizacion y contrastar interpretaciones", "content": "Conceptos y elementos", "step": "desarrollo", "evidence": "Audio y respuestas", "criterion": "Diferenciacion explicita, cobertura, duracion y dialogo", "criterion_authority": "propuesto"}], "status": "propuesto", "source_refs": ["a11-intro", "especificaciones"], "derivation": "Relacion objetivo-contenido-paso-evidencia-criterio."},
-      "pending": {"value": {"opening": null, "timezone": null, "formal_work_mode": null, "audio_format": null, "detailed_rubric": null, "teacher_review": null}, "status": "pendiente", "source_refs": ["a11-intro", "a11-dates"], "derivation": "Datos no explicitados o propuestas sin revision docente."},
-      "conflicts": {"value": [], "status": "aportado", "source_refs": ["solicitud"], "derivation": "No se reporto contradiccion especifica; no equivale a revision exhaustiva."}
+      "activity_id_aula": "1.1",
+      "activity_id_local": 1,
+      "moodle_module_id": 7780,
+      "title": "Foro sobre organización",
+      "markdown": "planeacion-actividad-1.1-foro-organizacion.md",
+      "json": "planeacion-actividad-1.1-foro-organizacion.json",
+      "weight_percent": 5,
+      "status": "borrador"
     },
     {
-      "activity_id_aula": "1.2", "activity_id_local": 2, "moodle_module_id": 7781,
-      "title": "Mapa conceptual", "unit": 1, "status": "borrador",
-      "identification_provenance": {"status": "aportado", "source_refs": ["solicitud", "a12-intro"], "derivation": "Identificadores separados y titulo sintetizado."},
-      "sources": [
-        {"id": "a12-intro", "role": "consigna", "url": "https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=7781", "locators": ["h1", "#intro"], "consultation_date": "2026-09-15", "version": null, "privacy": "sintesis_sanitizada", "extraction_status": "verificacion_reportada"},
-        {"id": "a12-dates", "role": "calendario", "url": "https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=7781", "locators": [".activity-dates"], "consultation_date": "2026-09-15", "version": null, "privacy": "sin_datos_personales", "extraction_status": "verificacion_reportada"},
-        {"id": "a12-rubric", "role": "rubrica", "url": "https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=7781", "locator": "rubrica visible; unico criterio de cobertura; niveles 0, 3, 5", "consultation_date": "2026-09-15", "version": null, "privacy": "sin_calificaciones_personales", "extraction_status": "verificacion_reportada"}
-      ],
-      "requirements": {"value": ["Mapa conceptual individual en PDF con portada oficial.", "Enfoques multiples, Bolman y Deal, Morgan, recursos humanos, politico, simbolico y perspectiva global.", "Canva sugerida, no obligatoria."], "status": "aportado", "source_refs": ["a12-intro", "solicitud"], "derivation": "Sintesis de requisitos extraidos reportados; no se equiparan clasificaciones de autores."},
-      "delivery": {"value": {"work_mode": "individual", "evidence": ["mapa_conceptual"], "channel": "tarea_7781", "format": "PDF", "official_cover_required": true, "official_cover_url": null, "canva_required": false}, "status": "aportado", "source_refs": ["a12-intro"], "derivation": "Conservacion de producto y formato especificos para el borrador; portada con URL pendiente."},
-      "official_objective": {"value": null, "status": "pendiente", "source_refs": ["a12-intro"], "derivation": "No se aporto objetivo oficial especifico."},
-      "proposed_objective": {"value": "Relacionar y distinguir los enfoques solicitados mediante una jerarquia conceptual y enlaces explicitos, sin atribuir equivalencias entre autores no sustentadas.", "status": "propuesto", "source_refs": ["a12-intro", "especificaciones"], "derivation": "Aplicacion observable de enfoques de gestion."},
-      "sequence": {"value": [
-        {"phase": "preparacion", "student": "Revisar U1 e identificar conceptos y autores exigidos.", "teacher_mediation": "Orientar alcance y mantener abierta la consulta sobre producto.", "minutes": 45, "resources": ["material-u1"], "dependencies": "Acceso a materiales y lectura de la discrepancia."},
-        {"phase": "desarrollo", "student": "Comparar enfoques y construir mapa con jerarquias, relaciones y portada.", "teacher_mediation": "Revisar relaciones y confusiones entre clasificaciones.", "minutes": 105, "resources": ["material-u1", "a12-intro"], "dependencies": "Conceptos seleccionados y formato de portada por confirmar."},
-        {"phase": "cierre", "student": "Revisar cobertura y legibilidad; exportar y comprobar PDF.", "teacher_mediation": "Retroalimentar con criterio oficial y lista formativa.", "minutes": 30, "resources": ["a12-rubric"], "dependencies": "Mapa preparado."}
-      ], "status": "propuesto", "source_refs": ["a12-intro", "a12-rubric", "material-u1"], "derivation": "Diseno didactico sin resolver la discrepancia institucional."},
-      "estimated_minutes": {"value": 180, "status": "propuesto", "source_refs": ["a12-intro"], "derivation": "45 + 105 + 30; carga sugerida, no plazo adicional."},
-      "official_assessment": {"value": {"activity_weight": 5, "weight_unit": "porcentaje", "weight_scope": "curso", "instrument": "rubrica_visible_un_criterio_cobertura", "instrument_max_score": 5, "instrument_score_unit": "puntos", "internal_criterion_weights": null, "levels": [{"label": "sin entregar", "score": 0}, {"label": "incompleta", "score": 3}, {"label": "completa", "score": 5}]}, "status": "aportado", "source_refs": ["a12-rubric", "especificaciones"], "derivation": "Puntos del instrumento separados del porcentaje del curso; sin formula de conversion inferida."},
-      "proposed_checklist": {"value": {"purpose": "formativo_sin_peso", "responses": ["si", "no", "por_revisar"], "criteria": ["Cobertura de enfoques", "Distincion de autores", "Relaciones explicitas", "Legibilidad", "PDF con portada"]}, "status": "propuesto", "source_refs": ["a12-intro", "a12-rubric"], "derivation": "Apoyo de revision que no sustituye el criterio oficial."},
-      "calendar": {"value": {"opening": "2026-08-11 23:59", "closing": "2026-08-24 23:59", "due": null, "timezone": null, "historical_as_of": "2026-09-15"}, "status": "aportado", "source_refs": ["a12-dates"], "derivation": "Horas literales; no se infiere vencimiento separado, zona horaria, recepcion o prorroga."},
-      "materials": {"value": ["material-u1"], "status": "aportado", "source_refs": ["solicitud", "material-u1"], "derivation": "Contenido no validado; portada con URL pendiente; Canva no obligatoria."},
-      "alignment": {"value": [{"objective": "Relacionar y distinguir enfoques", "content": "Autores y perspectivas", "step": "desarrollo", "evidence": "Mapa conceptual PDF", "official_criterion": "Cobertura", "proposed_criterion": "Jerarquia, relaciones claras y distincion de autores"}], "status": "propuesto", "source_refs": ["a12-intro", "a12-rubric", "especificaciones"], "derivation": "Alineacion con autoridad de criterios diferenciada."},
-      "pending": {"value": {"timezone": null, "official_cover_url": null, "product_resolution": null, "material_review": null, "teacher_review": null}, "status": "pendiente", "source_refs": ["a12-intro", "especificaciones"], "derivation": "Confirmar producto y portada; revisar propuestas y materiales."},
-      "conflicts": {"value": [{"field": "product", "alternatives": [{"value": "Infografia", "source_refs": ["especificaciones"]}, {"value": "Mapa conceptual", "source_refs": ["a12-intro"]}], "draft_choice": "Mapa conceptual", "resolution": null, "reason": "Se sigue la consigna puntual solo para el borrador; sin acuerdo docente acreditado."}], "status": "en_conflicto", "source_refs": ["especificaciones", "a12-intro"], "derivation": "Se conservan ambas denominaciones y la necesidad de aclaracion."}
+      "activity_id_aula": "1.2",
+      "activity_id_local": 2,
+      "moodle_module_id": 7781,
+      "title": "Mapa conceptual",
+      "markdown": "planeacion-actividad-1.2-mapa-conceptual.md",
+      "json": "planeacion-actividad-1.2-mapa-conceptual.json",
+      "weight_percent": 5,
+      "status": "borrador"
     },
     {
-      "activity_id_aula": "1.3", "activity_id_local": 3, "moodle_module_id": 7782,
-      "title": "Presentacion ejecutiva", "unit": 1, "status": "borrador",
-      "identification_provenance": {"status": "aportado", "source_refs": ["solicitud", "a13-intro"], "derivation": "Identificadores separados y titulo sintetizado."},
-      "sources": [
-        {"id": "a13-intro", "role": "consigna", "url": "https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=7782", "locators": ["h1", "#intro"], "consultation_date": "2026-09-15", "version": null, "privacy": "sintesis_sanitizada", "extraction_status": "verificacion_reportada"},
-        {"id": "a13-dates", "role": "calendario", "url": "https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=7782", "locators": [".activity-dates"], "consultation_date": "2026-09-15", "version": null, "privacy": "sin_datos_personales", "extraction_status": "verificacion_reportada"},
-        {"id": "a13-rubric", "role": "rubrica", "url": "https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=7782", "locator": "rubrica visible; niveles 0, 3, 4 extemporanea, 5", "consultation_date": "2026-09-15", "version": null, "privacy": "sin_calificaciones_personales", "extraction_status": "verificacion_reportada"}
-      ],
-      "requirements": {"value": ["Presentacion ejecutiva individual en PDF con portada oficial.", "Kast y Rosenzweig, entorno, elementos organizacionales y tipos de estructura."], "status": "aportado", "source_refs": ["a13-intro", "solicitud"], "derivation": "Sintesis de requisitos extraidos reportados."},
-      "delivery": {"value": {"work_mode": "individual", "evidence": ["presentacion_ejecutiva"], "channel": "tarea_7782", "format": "PDF", "official_cover_required": true, "official_cover_url": null, "slide_count": null}, "status": "aportado", "source_refs": ["a13-intro"], "derivation": "Producto y formato reportados; no se inventa numero de diapositivas."},
-      "official_objective": {"value": null, "status": "pendiente", "source_refs": ["a13-intro"], "derivation": "No se aporto objetivo oficial especifico."},
-      "proposed_objective": {"value": "Explicar la relacion entre entorno, elementos y estructuras organizacionales desde los referentes solicitados mediante una sintesis ejecutiva visual.", "status": "propuesto", "source_refs": ["a13-intro", "especificaciones"], "derivation": "Aplicacion de conceptos y enfoques de gestion."},
-      "sequence": {"value": [
-        {"phase": "preparacion", "student": "Revisar recursos y organizar esquema de autores, entorno y estructuras.", "teacher_mediation": "Delimitar cobertura y orientar seleccion conceptual.", "minutes": 45, "resources": ["material-u1"], "dependencies": "Acceso a materiales."},
-        {"phase": "desarrollo", "student": "Disenar presentacion propia con relaciones entre contenidos y portada.", "teacher_mediation": "Revisar coherencia conceptual y visual.", "minutes": 105, "resources": ["material-u1", "a13-intro"], "dependencies": "Esquema preparado y portada por confirmar."},
-        {"phase": "cierre", "student": "Cotejar cobertura, legibilidad y exportacion PDF.", "teacher_mediation": "Retroalimentar y aclarar aplicacion de la rubrica.", "minutes": 30, "resources": ["a13-rubric"], "dependencies": "Presentacion preparada."}
-      ], "status": "propuesto", "source_refs": ["a13-intro", "a13-rubric", "material-u1"], "derivation": "Diseno didactico sujeto a revision docente."},
-      "estimated_minutes": {"value": 180, "status": "propuesto", "source_refs": ["a13-intro"], "derivation": "45 + 105 + 30; no modifica calendario."},
-      "official_assessment": {"value": {"activity_weight": 5, "weight_unit": "porcentaje", "weight_scope": "curso", "instrument": "rubrica_visible", "instrument_max_score": 5, "instrument_score_unit": "puntos", "internal_criterion_weights": null, "levels": [{"label": "sin entrega", "score": 0}, {"label": "incompleta", "score": 3}, {"label": "extemporanea", "score": 4}, {"label": "completa", "score": 5}], "late_category_scope": "solo_actividad_1.3", "late_acceptance_authorization": null}, "status": "aportado", "source_refs": ["a13-rubric", "especificaciones"], "derivation": "Se conserva categoria extemporanea sin generalizar sancion, inferir combinacion de categorias ni afirmar aceptacion actual."},
-      "proposed_checklist": {"value": {"purpose": "formativo_sin_peso", "responses": ["si", "no", "por_revisar"], "criteria": ["Cobertura de autores", "Relacion entorno-elementos-estructuras", "Sintesis visual", "PDF con portada"]}, "status": "propuesto", "source_refs": ["a13-intro"], "derivation": "Apoyo sin peso adicional."},
-      "calendar": {"value": {"opening": "2026-08-11 00:00", "closing": "2026-08-24 23:59", "due": null, "timezone": null, "historical_as_of": "2026-09-15"}, "status": "aportado", "source_refs": ["a13-dates"], "derivation": "Horas literales; no se infiere vencimiento separado, zona horaria, recepcion o prorroga."},
-      "materials": {"value": ["material-u1"], "status": "aportado", "source_refs": ["solicitud", "material-u1"], "derivation": "Contenido no validado; URL de portada pendiente."},
-      "alignment": {"value": [{"objective": "Explicar relaciones organizacionales", "content": "Kast/Rosenzweig, entorno y estructuras", "step": "desarrollo", "evidence": "Presentacion ejecutiva PDF", "official_criterion": "Niveles reportados de entrega y completitud", "proposed_criterion": "Relaciones explicitas y sintesis legible"}], "status": "propuesto", "source_refs": ["a13-intro", "a13-rubric", "especificaciones"], "derivation": "Alineacion sin reinterpretar la rubrica."},
-      "pending": {"value": {"timezone": null, "official_cover_url": null, "slide_count": null, "rubric_category_application": null, "teacher_review": null}, "status": "pendiente", "source_refs": ["a13-intro", "a13-rubric"], "derivation": "Aclarar categoria extemporanea frente a incompleta/completa; no crear una regla combinada."},
-      "conflicts": {"value": [], "status": "aportado", "source_refs": ["solicitud"], "derivation": "No se reporto contradiccion documental; aplicacion de categorias pendiente de aclaracion."}
+      "activity_id_aula": "1.3",
+      "activity_id_local": 3,
+      "moodle_module_id": 7782,
+      "title": "Presentación ejecutiva",
+      "markdown": "planeacion-actividad-1.3-presentacion-ejecutiva.md",
+      "json": "planeacion-actividad-1.3-presentacion-ejecutiva.json",
+      "weight_percent": 5,
+      "status": "borrador"
     },
     {
-      "activity_id_aula": "2.1", "activity_id_local": 5, "moodle_module_id": 7788,
-      "title": "Video", "unit": 2, "status": "borrador",
-      "identification_provenance": {"status": "aportado", "source_refs": ["solicitud", "a21-intro"], "derivation": "Aula 2.1 corresponde al local 5, no al 4."},
-      "sources": [
-        {"id": "a21-intro", "role": "consigna", "url": "https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=7788", "locators": ["h1", "#intro"], "consultation_date": "2026-09-15", "version": null, "privacy": "sintesis_sanitizada", "extraction_status": "verificacion_reportada"},
-        {"id": "a21-dates", "role": "calendario", "url": "https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=7788", "locators": [".activity-dates"], "consultation_date": "2026-09-15", "version": null, "privacy": "sin_datos_personales", "extraction_status": "verificacion_reportada"},
-        {"id": "a21-rubric", "role": "rubrica", "url": "https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=7788", "locator": "rubrica visible; niveles 0, 8, 10", "consultation_date": "2026-09-15", "version": null, "privacy": "sin_calificaciones_personales", "extraction_status": "verificacion_reportada"}
-      ],
-      "requirements": {"value": ["Video individual de 4 a 8 minutos con estudiante en camara; entrega mediante URL.", "Enfoque organico, administracion estrategica, cambio organizacional, relaciones interorganizacionales, institucionalismo, agencia y anarquias.", "Enlace a portada oficial reportado; aplicacion al video por aclarar."], "status": "aportado", "source_refs": ["a21-intro", "solicitud"], "derivation": "Sintesis de requisitos extraidos reportados; no se presupone plataforma de alojamiento."},
-      "delivery": {"value": {"work_mode": "individual", "evidence": ["URL_de_video"], "channel": "tarea_7788", "format": "URL", "video_min_minutes": 4, "video_max_minutes": 8, "student_on_camera": true, "official_cover_link_reported": true, "official_cover_url": null, "official_cover_application": null, "hosting_platform": null}, "status": "aportado", "source_refs": ["a21-intro"], "derivation": "URL como entrega; no se exige PDF ni alojamiento publico."},
-      "official_objective": {"value": null, "status": "pendiente", "source_refs": ["a21-intro"], "derivation": "No se aporto objetivo oficial especifico."},
-      "proposed_objective": {"value": "Explicar y relacionar los enfoques y procesos solicitados en una exposicion audiovisual sintetica ajustada a su duracion.", "status": "propuesto", "source_refs": ["a21-intro", "especificaciones"], "derivation": "Comparacion de enfoques para analizar decisiones."},
-      "sequence": {"value": [
-        {"phase": "preparacion", "student": "Revisar U2 y elaborar guion de cobertura y duracion.", "teacher_mediation": "Orientar delimitacion y aclarar uso de portada.", "minutes": 60, "resources": ["material-u2"], "dependencies": "Acceso a materiales; guion auxiliar no exigido como entrega."},
-        {"phase": "desarrollo", "student": "Ensayar, grabar en camara y revisar cobertura.", "teacher_mediation": "Retroalimentar conceptos y orientar accesibilidad del audio.", "minutes": 120, "resources": ["material-u2", "a21-intro"], "dependencies": "Guion y medio de grabacion disponibles."},
-        {"phase": "cierre", "student": "Comprobar duracion y funcionamiento del enlace.", "teacher_mediation": "Orientar comprobacion de acceso sin pedir credenciales.", "minutes": 30, "resources": ["a21-rubric"], "dependencies": "Video preparado y medio de alojamiento por definir."}
-      ], "status": "propuesto", "source_refs": ["a21-intro", "a21-rubric", "material-u2"], "derivation": "Diseno didactico; no incluye imagen ni identidad del estudiante en estos documentos."},
-      "estimated_minutes": {"value": 210, "status": "propuesto", "source_refs": ["a21-intro"], "derivation": "60 + 120 + 30; distinto de 4 a 8 minutos de producto."},
-      "official_assessment": {"value": {"activity_weight": 10, "weight_unit": "porcentaje", "weight_scope": "curso", "instrument": "rubrica_visible", "instrument_max_score": 10, "instrument_score_unit": "puntos", "internal_criterion_weights": null, "levels": [{"label": "sin entrega", "score": 0}, {"label": "incompleta", "score": 8}, {"label": "completa", "score": 10}]}, "status": "aportado", "source_refs": ["a21-rubric", "especificaciones"], "derivation": "Puntos y porcentaje conservados por separado."},
-      "proposed_checklist": {"value": {"purpose": "formativo_sin_peso", "responses": ["si", "no", "por_revisar"], "criteria": ["Cobertura", "Claridad de relaciones", "Duracion 4 a 8 minutos", "Presencia en camara", "URL funcional"]}, "status": "propuesto", "source_refs": ["a21-intro"], "derivation": "Apoyo sin peso ni plataforma obligatoria adicional."},
-      "calendar": {"value": {"opening": "2026-08-17 00:00", "closing": "2026-08-24 23:59", "due": null, "timezone": null, "historical_as_of": "2026-09-15"}, "status": "aportado", "source_refs": ["a21-dates"], "derivation": "Horas literales; no se infiere vencimiento separado, zona horaria, recepcion o prorroga."},
-      "materials": {"value": ["material-u2"], "status": "aportado", "source_refs": ["solicitud", "material-u2"], "derivation": "Contenido no validado; enlace especifico de portada pendiente."},
-      "alignment": {"value": [{"objective": "Explicar y relacionar enfoques y procesos", "content": "Temas de U2", "step": "desarrollo_y_cierre", "evidence": "URL del video", "official_criterion": "Completitud", "proposed_criterion": "Cobertura, duracion, camara y acceso"}], "status": "propuesto", "source_refs": ["a21-intro", "a21-rubric", "especificaciones"], "derivation": "Alineacion conceptual y de condiciones del producto."},
-      "pending": {"value": {"timezone": null, "official_cover_url": null, "official_cover_application": null, "hosting_platform": null, "access_conditions": null, "teacher_review": null}, "status": "pendiente", "source_refs": ["a21-intro"], "derivation": "No se inventan condiciones de alojamiento ni uso de portada."},
-      "conflicts": {"value": [], "status": "aportado", "source_refs": ["solicitud"], "derivation": "No se reporto contradiccion especifica."}
+      "activity_id_aula": "2.1",
+      "activity_id_local": 5,
+      "moodle_module_id": 7788,
+      "title": "Video presentación",
+      "markdown": "planeacion-actividad-2.1-video-presentacion.md",
+      "json": "planeacion-actividad-2.1-video-presentacion.json",
+      "weight_percent": 10,
+      "status": "borrador"
     },
     {
-      "activity_id_aula": "2.2", "activity_id_local": 4, "moodle_module_id": 7787,
-      "title": "Tabla cronologica", "unit": 2, "status": "borrador",
-      "identification_provenance": {"status": "aportado", "source_refs": ["solicitud", "a22-intro"], "derivation": "Aula 2.2 corresponde al local 4, no al 5."},
-      "sources": [
-        {"id": "a22-intro", "role": "consigna", "url": "https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=7787", "locators": ["h1", "#intro"], "consultation_date": "2026-09-15", "version": null, "privacy": "sintesis_sanitizada", "extraction_status": "verificacion_reportada"},
-        {"id": "a22-dates", "role": "calendario", "url": "https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=7787", "locators": [".activity-dates"], "consultation_date": "2026-09-15", "version": null, "privacy": "sin_datos_personales", "extraction_status": "verificacion_reportada"},
-        {"id": "a22-rubric", "role": "rubrica", "url": "https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=7787", "locator": "rubrica visible; niveles 0, 8, 10", "consultation_date": "2026-09-15", "version": null, "privacy": "sin_calificaciones_personales", "extraction_status": "verificacion_reportada"}
-      ],
-      "requirements": {"value": ["Tabla cronologica individual en PDF con portada oficial.", "Columnas: teoria, anos o periodos, precursores y aportaciones.", "Referencias APA."], "status": "aportado", "source_refs": ["a22-intro", "solicitud"], "derivation": "Sintesis de requisitos extraidos reportados."},
-      "delivery": {"value": {"work_mode": "individual", "evidence": ["tabla_cronologica"], "channel": "tarea_7787", "format": "PDF", "official_cover_required": true, "official_cover_url": null, "citation_style": "APA", "citation_edition": null, "columns": ["teoria", "anos_periodos", "precursores", "aportaciones"]}, "status": "aportado", "source_refs": ["a22-intro"], "derivation": "Tabla como producto de borrador, no resolucion institucional del conflicto."},
-      "official_objective": {"value": null, "status": "pendiente", "source_refs": ["a22-intro"], "derivation": "No se aporto objetivo oficial especifico."},
-      "proposed_objective": {"value": "Organizar temporalmente las teorias solicitadas y comparar sus aportaciones mediante una tabla sustentada en fuentes.", "status": "propuesto", "source_refs": ["a22-intro", "especificaciones"], "derivation": "Distinguir conceptos y enfoques para el analisis de gestion."},
-      "sequence": {"value": [
-        {"phase": "preparacion", "student": "Revisar U2 y registrar datos verificables de teorias y periodos.", "teacher_mediation": "Orientar delimitacion y contraste de fechas.", "minutes": 60, "resources": ["material-u2"], "dependencies": "Acceso a materiales y alcance de teorias por confirmar."},
-        {"phase": "desarrollo", "student": "Construir cuatro columnas y registrar fuentes utilizadas.", "teacher_mediation": "Revisar coherencia temporal, atribuciones y aportaciones.", "minutes": 90, "resources": ["material-u2", "a22-intro"], "dependencies": "Datos contrastados."},
-        {"phase": "cierre", "student": "Cotejar columnas, APA y portada; comprobar PDF.", "teacher_mediation": "Retroalimentar cobertura sin cerrar discrepancia del producto.", "minutes": 30, "resources": ["a22-rubric"], "dependencies": "Tabla preparada y portada por confirmar."}
-      ], "status": "propuesto", "source_refs": ["a22-intro", "a22-rubric", "material-u2"], "derivation": "Diseno didactico que no produce la tabla del estudiante."},
-      "estimated_minutes": {"value": 180, "status": "propuesto", "source_refs": ["a22-intro"], "derivation": "60 + 90 + 30; no modifica calendario."},
-      "official_assessment": {"value": {"activity_weight": 10, "weight_unit": "porcentaje", "weight_scope": "curso", "instrument": "rubrica_visible", "instrument_max_score": 10, "instrument_score_unit": "puntos", "internal_criterion_weights": null, "levels": [{"label": "sin entrega", "score": 0}, {"label": "incompleta", "score": 8}, {"label": "completa", "score": 10}]}, "status": "aportado", "source_refs": ["a22-rubric", "especificaciones"], "derivation": "Puntos y porcentaje separados."},
-      "proposed_checklist": {"value": {"purpose": "formativo_sin_peso", "responses": ["si", "no", "por_revisar"], "criteria": ["Cuatro columnas completas", "Cronologia sustentada", "Precursores y aportaciones identificados", "APA", "PDF con portada"]}, "status": "propuesto", "source_refs": ["a22-intro"], "derivation": "Apoyo sin peso adicional."},
-      "calendar": {"value": {"opening": "2026-08-17 00:00", "closing": "2026-08-24 23:59", "due": null, "timezone": null, "historical_as_of": "2026-09-15"}, "status": "aportado", "source_refs": ["a22-dates"], "derivation": "Horas literales; no se infiere vencimiento separado, zona horaria, recepcion o prorroga."},
-      "materials": {"value": ["material-u2"], "status": "aportado", "source_refs": ["solicitud", "material-u2"], "derivation": "Enlace no equivale a contenido validado; portada pendiente."},
-      "alignment": {"value": [{"objective": "Organizar y comparar teorias en el tiempo", "content": "Teorias, periodos, precursores y aportaciones", "step": "desarrollo", "evidence": "Tabla cronologica PDF", "official_criterion": "Completitud", "proposed_criterion": "Correspondencia entre columnas y respaldo de cronologia"}], "status": "propuesto", "source_refs": ["a22-intro", "a22-rubric", "especificaciones"], "derivation": "Alineacion con criterios oficiales y propuestos diferenciados."},
-      "pending": {"value": {"timezone": null, "official_cover_url": null, "citation_edition": null, "theory_scope": null, "product_resolution": null, "teacher_review": null}, "status": "pendiente", "source_refs": ["a22-intro", "especificaciones"], "derivation": "No se completa bibliografia, alcance o formato no aportado."},
-      "conflicts": {"value": [{"field": "product", "alternatives": [{"value": "Linea del Tiempo", "source_refs": ["especificaciones"]}, {"value": "Tabla cronologica", "source_refs": ["a22-intro"]}], "draft_choice": "Tabla cronologica", "resolution": null, "reason": "Se sigue consigna puntual solo para el borrador; sin acuerdo docente acreditado."}], "status": "en_conflicto", "source_refs": ["especificaciones", "a22-intro"], "derivation": "Denominaciones incompatibles conservadas para aclaracion."}
+      "activity_id_aula": "2.2",
+      "activity_id_local": 4,
+      "moodle_module_id": 7787,
+      "title": "Tabla cronológica",
+      "markdown": "planeacion-actividad-2.2-tabla-cronologica.md",
+      "json": "planeacion-actividad-2.2-tabla-cronologica.json",
+      "weight_percent": 10,
+      "status": "borrador"
     },
     {
-      "activity_id_aula": "3.1", "activity_id_local": 6, "moodle_module_id": 7793,
-      "title": "Propuesta de modelo", "unit": 3, "status": "borrador",
-      "identification_provenance": {"status": "aportado", "source_refs": ["solicitud", "a31-intro"], "derivation": "Identificadores separados y titulo sintetizado."},
-      "sources": [
-        {"id": "a31-intro", "role": "consigna", "url": "https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=7793", "locators": ["h1", "#intro"], "consultation_date": "2026-09-15", "version": null, "privacy": "sintesis_sanitizada", "extraction_status": "verificacion_reportada"},
-        {"id": "a31-dates", "role": "calendario", "url": "https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=7793", "locators": [".activity-dates"], "consultation_date": "2026-09-15", "version": null, "privacy": "sin_datos_personales", "extraction_status": "verificacion_reportada"}
-      ],
-      "requirements": {"value": ["Propuesta individual PDF con portada oficial; Arial 12, interlineado 1.5, justificado y APA.", "Sustentar cambios frente a modelos existentes.", "Diagrama de etapas, descripcion de implicaciones, recomendaciones de puesta en marcha y fuentes."], "status": "aportado", "source_refs": ["a31-intro", "solicitud"], "derivation": "Sintesis de requisitos extraidos reportados."},
-      "delivery": {"value": {"work_mode": "individual", "evidence": ["propuesta_de_modelo_con_diagrama"], "channel": "tarea_7793", "format": "PDF", "official_cover_required": true, "official_cover_url": null, "font": "Arial", "font_size": 12, "line_spacing": 1.5, "alignment": "justificado", "citation_style": "APA", "citation_edition": null, "length": null}, "status": "aportado", "source_refs": ["a31-intro"], "derivation": "Formato conservado sin inventar extension ni edicion APA."},
-      "official_objective": {"value": null, "status": "pendiente", "source_refs": ["a31-intro"], "derivation": "No se aporto objetivo oficial especifico."},
-      "proposed_objective": {"value": "Disenar y justificar un modelo de decision que explicite cambios, etapas e implicaciones respecto de modelos existentes y oriente su puesta en marcha.", "status": "propuesto", "source_refs": ["a31-intro", "especificaciones"], "derivation": "Analisis y evaluacion de decisiones mediante herramientas de gestion; no se elabora el modelo."},
-      "sequence": {"value": [
-        {"phase": "preparacion", "student": "Examinar U3, comparar modelos e identificar cambios sustentados.", "teacher_mediation": "Orientar comparacion y distinguir sustento de afirmaciones no respaldadas.", "minutes": 90, "resources": ["material-u3"], "dependencies": "Acceso a materiales."},
-        {"phase": "desarrollo", "student": "Formular propuesta, diagramar etapas y redactar implicaciones y recomendaciones.", "teacher_mediation": "Preguntar por coherencia, viabilidad y relacion entre etapas.", "minutes": 210, "resources": ["material-u3", "a31-intro"], "dependencies": "Comparacion de modelos realizada."},
-        {"phase": "cierre", "student": "Revisar alineacion, APA y formato; comprobar PDF con portada.", "teacher_mediation": "Retroalimentar y solicitar aclaracion del instrumento oficial.", "minutes": 60, "resources": ["a31-intro"], "dependencies": "Propuesta preparada y portada por confirmar."}
-      ], "status": "propuesto", "source_refs": ["a31-intro", "material-u3"], "derivation": "Diseno didactico para revision."},
-      "estimated_minutes": {"value": 360, "status": "propuesto", "source_refs": ["a31-intro"], "derivation": "90 + 210 + 60; no modifica calendario."},
-      "official_assessment": {"value": {"activity_weight": 20, "weight_unit": "porcentaje", "weight_scope": "curso", "instrument": null, "instrument_max_score": null, "levels": null}, "status": "aportado", "source_refs": ["a31-intro", "especificaciones"], "derivation": "Peso reportado; rubrica detallada no visible y pendiente."},
-      "proposed_checklist": {"value": {"purpose": "formativo_sin_peso", "responses": ["si", "no", "por_revisar"], "criteria": ["Cambios sustentados", "Etapas diagramadas", "Implicaciones descritas", "Recomendaciones de puesta en marcha", "Fuentes", "Formato requerido"]}, "status": "propuesto", "source_refs": ["a31-intro"], "derivation": "Apoyo sin atribuir criterios oficiales no vistos."},
-      "calendar": {"value": {"opening": "2026-08-24 00:00", "closing": "2026-08-31 23:59", "due": null, "timezone": null, "historical_as_of": "2026-09-15"}, "status": "aportado", "source_refs": ["a31-dates"], "derivation": "Horas literales; no se infiere vencimiento separado, zona horaria, recepcion o prorroga."},
-      "materials": {"value": ["material-u3"], "status": "aportado", "source_refs": ["solicitud", "material-u3"], "derivation": "Contenido no validado; no se inventan modelos ni citas."},
-      "alignment": {"value": [{"objective": "Disenar y justificar modelo de decision", "content": "Modelos, cambios, etapas e implicaciones", "step": "desarrollo", "evidence": "Propuesta PDF con diagrama", "criterion": "Coherencia entre sustento, cambios, etapas y recomendaciones; cobertura y formato", "criterion_authority": "propuesto"}], "status": "propuesto", "source_refs": ["a31-intro", "especificaciones"], "derivation": "Relacion objetivo-contenido-paso-evidencia-criterio."},
-      "pending": {"value": {"timezone": null, "official_cover_url": null, "detailed_rubric": null, "length": null, "citation_edition": null, "teacher_review": null}, "status": "pendiente", "source_refs": ["a31-intro"], "derivation": "Datos no aportados y propuestas sujetas a revision."},
-      "conflicts": {"value": [], "status": "aportado", "source_refs": ["solicitud"], "derivation": "No se reporto contradiccion especifica."}
+      "activity_id_aula": "3.1",
+      "activity_id_local": 6,
+      "moodle_module_id": 7793,
+      "title": "Propuesta de modelo",
+      "markdown": "planeacion-actividad-3.1-propuesta-modelo.md",
+      "json": "planeacion-actividad-3.1-propuesta-modelo.json",
+      "weight_percent": 20,
+      "status": "borrador"
     },
     {
-      "activity_id_aula": "3.2", "activity_id_local": 7, "moodle_module_id": 7794,
-      "title": "Foro sobre decisiones", "unit": 3, "status": "borrador",
-      "identification_provenance": {"status": "aportado", "source_refs": ["solicitud", "a32-intro"], "derivation": "Identificadores separados y titulo sintetizado."},
-      "sources": [
-        {"id": "a32-intro", "role": "consigna", "url": "https://cursos3.e-itesca.edu.mx/mod/forum/view.php?id=7794", "locators": ["h1", "#intro"], "consultation_date": "2026-09-15", "version": null, "privacy": "sintesis_sanitizada", "extraction_status": "verificacion_reportada"},
-        {"id": "a32-dates", "role": "calendario", "url": "https://cursos3.e-itesca.edu.mx/mod/forum/view.php?id=7794", "locators": [".activity-dates"], "consultation_date": "2026-09-15", "version": null, "privacy": "sin_datos_personales", "extraction_status": "verificacion_reportada"}
-      ],
-      "requirements": {"value": ["Discutir fase con mayor riesgo de errores y fase mas importante.", "Justificar postura y ofrecer recomendaciones.", "Responder a dos companeros."], "status": "aportado", "source_refs": ["a32-intro", "solicitud"], "derivation": "Sintesis de requisitos extraidos reportados."},
-      "delivery": {"value": {"work_mode": null, "participation": "personal_con_interaccion_entre_pares", "evidence": ["participacion_inicial", "dos_respuestas"], "channel": "foro_7794", "format": null, "peer_responses": 2, "length": null}, "status": "aportado", "source_refs": ["a32-intro"], "derivation": "Participacion en foro; modalidad formal y extension no explicitadas."},
-      "official_objective": {"value": null, "status": "pendiente", "source_refs": ["a32-intro"], "derivation": "No se aporto objetivo oficial especifico."},
-      "proposed_objective": {"value": "Argumentar una valoracion de las fases de decision diferenciando riesgo e importancia y contrastar recomendaciones con las de pares.", "status": "propuesto", "source_refs": ["a32-intro", "especificaciones"], "derivation": "Analisis y evaluacion de decisiones."},
-      "sequence": {"value": [
-        {"phase": "preparacion", "student": "Revisar U3 y distinguir riesgo e importancia.", "teacher_mediation": "Aclarar que ambas preguntas requieren justificacion y no necesariamente la misma respuesta.", "minutes": 30, "resources": ["material-u3"], "dependencies": "Acceso a materiales; no se exige entrega previa de 3.1."},
-        {"phase": "desarrollo", "student": "Preparar intervencion argumentada, recomendaciones y dos respuestas.", "teacher_mediation": "Moderar contraste y pedir sustento.", "minutes": 60, "resources": ["material-u3", "a32-intro"], "dependencies": "Participaciones de pares disponibles."},
-        {"phase": "cierre", "student": "Revisar cobertura y pertinencia de respuestas.", "teacher_mediation": "Sintetizar coincidencias y diferencias sin imponer postura unica.", "minutes": 15, "resources": ["a32-intro"], "dependencies": "Intervencion y respuestas preparadas."}
-      ], "status": "propuesto", "source_refs": ["a32-intro", "material-u3"], "derivation": "Diseno didactico sin prerrequisitos institucionales inventados."},
-      "estimated_minutes": {"value": 105, "status": "propuesto", "source_refs": ["a32-intro"], "derivation": "30 + 60 + 15; no modifica calendario."},
-      "official_assessment": {"value": {"activity_weight": 5, "weight_unit": "porcentaje", "weight_scope": "curso", "instrument": null, "instrument_max_score": null, "levels": null}, "status": "aportado", "source_refs": ["a32-intro", "especificaciones"], "derivation": "Peso reportado; instrumento detallado no visible y pendiente."},
-      "proposed_checklist": {"value": {"purpose": "formativo_sin_peso", "responses": ["si", "no", "por_revisar"], "criteria": ["Identificacion de ambas fases", "Justificacion diferenciada", "Recomendaciones", "Dos respuestas pertinentes"]}, "status": "propuesto", "source_refs": ["a32-intro"], "derivation": "Apoyo formativo sin peso adicional."},
-      "calendar": {"value": {"opening": null, "closing": null, "due": "2026-08-31 23:59", "timezone": null, "historical_as_of": "2026-09-15"}, "status": "aportado", "source_refs": ["a32-dates"], "derivation": "Vencimiento literal; apertura no visible, cierre separado no aportado y zona horaria pendiente. Sin recepcion ni prorroga acreditadas."},
-      "materials": {"value": ["material-u3"], "status": "aportado", "source_refs": ["solicitud", "material-u3"], "derivation": "Enlace no equivale a lectura validada; no se reutilizan respuestas personales."},
-      "alignment": {"value": [{"objective": "Valorar fases y contrastar recomendaciones", "content": "Riesgo, importancia y recomendaciones", "step": "desarrollo", "evidence": "Intervencion inicial y dos respuestas", "criterion": "Argumentacion diferenciada, recomendaciones congruentes e interaccion", "criterion_authority": "propuesto"}], "status": "propuesto", "source_refs": ["a32-intro", "especificaciones"], "derivation": "Relacion objetivo-contenido-paso-evidencia-criterio."},
-      "pending": {"value": {"opening": null, "timezone": null, "formal_work_mode": null, "length": null, "detailed_rubric": null, "teacher_review": null}, "status": "pendiente", "source_refs": ["a32-intro", "a32-dates"], "derivation": "Datos no explicitados y propuestas sin revision docente."},
-      "conflicts": {"value": [], "status": "aportado", "source_refs": ["solicitud"], "derivation": "No se reporto contradiccion especifica."}
+      "activity_id_aula": "3.2",
+      "activity_id_local": 7,
+      "moodle_module_id": 7794,
+      "title": "Foro sobre toma de decisiones",
+      "markdown": "planeacion-actividad-3.2-foro-toma-decisiones.md",
+      "json": "planeacion-actividad-3.2-foro-toma-decisiones.json",
+      "weight_percent": 5,
+      "status": "borrador"
     },
     {
-      "activity_id_aula": "4.1", "activity_id_local": 8, "moodle_module_id": 7799,
-      "title": "Reporte de investigacion", "unit": 4, "status": "borrador",
-      "identification_provenance": {"status": "aportado", "source_refs": ["solicitud", "a41-intro"], "derivation": "Identificadores separados; el reporte se solicita como ensayo."},
-      "sources": [
-        {"id": "a41-intro", "role": "consigna", "url": "https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=7799", "locators": ["h1", "#intro"], "consultation_date": "2026-09-15", "version": null, "privacy": "sintesis_sanitizada", "extraction_status": "verificacion_reportada"},
-        {"id": "a41-dates", "role": "calendario", "url": "https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=7799", "locators": [".activity-dates"], "consultation_date": "2026-09-15", "version": null, "privacy": "sin_datos_personales", "extraction_status": "verificacion_reportada"}
-      ],
-      "requirements": {"value": ["Ensayo individual sobre nueva perspectiva del liderazgo en las organizaciones.", "Brechas generacionales, direccion y decisiones con teorias e investigaciones.", "Al menos 5 cuartillas excluyendo portada y fuentes.", "PDF con portada oficial, Arial 12, interlineado 1.5, justificado y APA."], "status": "aportado", "source_refs": ["a41-intro", "solicitud"], "derivation": "Sintesis de requisitos extraidos reportados."},
-      "delivery": {"value": {"work_mode": "individual", "evidence": ["ensayo_de_investigacion"], "channel": "tarea_7799", "format": "PDF", "official_cover_required": true, "official_cover_url": null, "minimum_cuartillas": 5, "length_excludes": ["portada", "fuentes"], "font": "Arial", "font_size": 12, "line_spacing": 1.5, "alignment": "justificado", "citation_style": "APA", "citation_edition": null}, "status": "aportado", "source_refs": ["a41-intro"], "derivation": "Minimo y exclusiones conservados; no se inventan margenes."},
-      "official_objective": {"value": null, "status": "pendiente", "source_refs": ["a41-intro"], "derivation": "No se aporto objetivo oficial especifico."},
-      "proposed_objective": {"value": "Construir una argumentacion sustentada sobre la relacion entre liderazgo, brechas generacionales, direccion y decisiones organizacionales.", "status": "propuesto", "source_refs": ["a41-intro", "especificaciones"], "derivation": "Analisis y evaluacion de decisiones desde enfoques de gestion."},
-      "sequence": {"value": [
-        {"phase": "preparacion", "student": "Revisar U4, seleccionar teorias e investigaciones verificables y delimitar linea argumental.", "teacher_mediation": "Orientar fuentes y evitar generalizaciones generacionales sin sustento.", "minutes": 120, "resources": ["material-u4"], "dependencies": "Acceso a materiales y verificacion de fuentes durante el trabajo."},
-        {"phase": "desarrollo", "student": "Planear y redactar ensayo relacionando teoria, investigacion y decisiones de direccion.", "teacher_mediation": "Retroalimentar coherencia y distinguir evidencia e interpretacion.", "minutes": 180, "resources": ["material-u4", "a41-intro"], "dependencies": "Linea argumental y fuentes seleccionadas."},
-        {"phase": "cierre", "student": "Revisar cinco cuartillas minimas excluyendo portada/fuentes, APA, formato y PDF.", "teacher_mediation": "Orientar revision de citas, extension y consigna.", "minutes": 60, "resources": ["a41-intro"], "dependencies": "Ensayo preparado y portada por confirmar."}
-      ], "status": "propuesto", "source_refs": ["a41-intro", "material-u4"], "derivation": "Diseno didactico; no redaccion del ensayo del estudiante."},
-      "estimated_minutes": {"value": 360, "status": "propuesto", "source_refs": ["a41-intro"], "derivation": "120 + 180 + 60; no modifica calendario."},
-      "official_assessment": {"value": {"activity_weight": 10, "weight_unit": "porcentaje", "weight_scope": "curso", "instrument": null, "instrument_max_score": null, "levels": null}, "status": "aportado", "source_refs": ["a41-intro", "especificaciones"], "derivation": "Peso reportado; rubrica detallada no visible y pendiente."},
-      "proposed_checklist": {"value": {"purpose": "formativo_sin_peso", "responses": ["si", "no", "por_revisar"], "criteria": ["Tesis argumental", "Relacion entre temas", "Sustento en teorias e investigaciones", "Extension minima excluyendo portada y fuentes", "APA", "Formato"]}, "status": "propuesto", "source_refs": ["a41-intro"], "derivation": "Apoyo sin sustituir instrumento oficial desconocido."},
-      "calendar": {"value": {"opening": "2026-08-31 00:00", "closing": "2026-09-07 23:37", "due": null, "timezone": null, "historical_as_of": "2026-09-15"}, "status": "aportado", "source_refs": ["a41-dates"], "derivation": "Se conserva cierre 23:37, no 23:59. No se infiere vencimiento separado, zona horaria, recepcion o prorroga."},
-      "materials": {"value": ["material-u4"], "status": "aportado", "source_refs": ["solicitud", "material-u4"], "derivation": "Contenido no validado; investigaciones por seleccionar y verificar, sin bibliografia inventada."},
-      "alignment": {"value": [{"objective": "Argumentar relaciones entre liderazgo y decisiones", "content": "Brechas generacionales, direccion y estudios", "step": "desarrollo", "evidence": "Ensayo PDF con al menos cinco cuartillas de contenido", "criterion": "Argumentacion sustentada, cobertura y extension/formato", "criterion_authority": "propuesto"}], "status": "propuesto", "source_refs": ["a41-intro", "especificaciones"], "derivation": "Relacion objetivo-contenido-paso-evidencia-criterio."},
-      "pending": {"value": {"timezone": null, "official_cover_url": null, "detailed_rubric": null, "citation_edition": null, "margins": null, "additional_cuartilla_definition": null, "teacher_review": null}, "status": "pendiente", "source_refs": ["a41-intro", "a41-dates"], "derivation": "Horario inusual no se corrige por analogia; demas datos no aportados."},
-      "conflicts": {"value": [], "status": "aportado", "source_refs": ["solicitud"], "derivation": "23:37 es un dato reportado que debe conservarse, no contradiccion demostrada."}
+      "activity_id_aula": "4.1",
+      "activity_id_local": 8,
+      "moodle_module_id": 7799,
+      "title": "Reporte de investigación",
+      "markdown": "planeacion-actividad-4.1-reporte-investigacion.md",
+      "json": "planeacion-actividad-4.1-reporte-investigacion.json",
+      "weight_percent": 10,
+      "status": "borrador"
     },
     {
-      "activity_id_aula": "4.2", "activity_id_local": 9, "moodle_module_id": 7800,
-      "title": "Foro sobre liderazgo", "unit": 4, "status": "borrador",
-      "identification_provenance": {"status": "aportado", "source_refs": ["solicitud", "a42-intro"], "derivation": "Identificadores separados y titulo sintetizado."},
-      "sources": [
-        {"id": "a42-intro", "role": "consigna", "url": "https://cursos3.e-itesca.edu.mx/mod/forum/view.php?id=7800", "locators": ["h1", "#intro"], "consultation_date": "2026-09-15", "version": null, "privacy": "sintesis_sanitizada", "extraction_status": "verificacion_reportada"},
-        {"id": "a42-dates", "role": "calendario", "url": "https://cursos3.e-itesca.edu.mx/mod/forum/view.php?id=7800", "locators": [".activity-dates"], "consultation_date": "2026-09-15", "version": null, "privacy": "sin_datos_personales", "extraction_status": "verificacion_reportada"},
-        {"id": "a42-video", "role": "lectura", "url": null, "container_url": "https://cursos3.e-itesca.edu.mx/mod/forum/view.php?id=7800", "locator": "#intro; video del aula referido", "title": null, "duration_minutes": null, "consultation_date": "2026-09-15", "version": null, "privacy": "sin_datos_personales", "extraction_status": "recurso_reportado_pendiente_de_examinar", "content_validated": false}
-      ],
-      "requirements": {"value": ["Fundamentar tres respuestas tematicas: estilos para mandos medios/altos, cualidades de direccion y cambios por brechas generacionales/megatendencias.", "Responder a dos companeros.", "Video del aula senalado como recurso, pendiente de examinar."], "status": "aportado", "source_refs": ["a42-intro", "solicitud"], "derivation": "Tres se refiere a planteamientos fundamentados, no a cantidad de companeros."},
-      "delivery": {"value": {"work_mode": null, "participation": "personal_con_interaccion_entre_pares", "evidence": ["aportacion_con_tres_respuestas_tematicas", "dos_respuestas_a_companeros"], "channel": "foro_7800", "format": null, "thematic_responses": 3, "peer_responses": 2}, "status": "aportado", "source_refs": ["a42-intro"], "derivation": "Canal y cobertura reportados; modalidad formal no explicitada."},
-      "official_objective": {"value": null, "status": "pendiente", "source_refs": ["a42-intro"], "derivation": "No se aporto objetivo oficial especifico."},
-      "proposed_objective": {"value": "Argumentar criterios de liderazgo segun niveles de mando y cambios organizacionales, contrastando las propias razones con las de pares.", "status": "propuesto", "source_refs": ["a42-intro", "especificaciones"], "derivation": "Evaluacion de decisiones de direccion."},
-      "sequence": {"value": [
-        {"phase": "preparacion", "student": "Localizar y examinar video, revisar U4 y preparar notas para tres planteamientos.", "teacher_mediation": "Aclarar acceso y pertinencia sin atribuir contenido no revisado.", "minutes": 45, "resources": ["material-u4", "a42-video"], "dependencies": "Acceso al video; duracion y contenido pendientes."},
-        {"phase": "desarrollo", "student": "Fundamentar tres planteamientos y elaborar dos respuestas a companeros.", "teacher_mediation": "Moderar contraste entre mandos y pedir sustento.", "minutes": 60, "resources": ["material-u4", "a42-intro", "a42-video"], "dependencies": "Video examinado durante el trabajo y aportaciones de pares disponibles."},
-        {"phase": "cierre", "student": "Verificar cobertura, fundamentacion y numero de respuestas.", "teacher_mediation": "Ofrecer sintesis formativa y senalar argumentos por fortalecer.", "minutes": 15, "resources": ["a42-intro"], "dependencies": "Aportacion y respuestas preparadas."}
-      ], "status": "propuesto", "source_refs": ["a42-intro", "material-u4", "a42-video"], "derivation": "Diseno provisional sujeto a revision del video."},
-      "estimated_minutes": {"value": 120, "status": "propuesto", "source_refs": ["a42-intro", "a42-video"], "derivation": "45 + 60 + 15; ajustar tras conocer duracion y contenido del video, sin modificar fechas oficiales."},
-      "official_assessment": {"value": {"activity_weight": 5, "weight_unit": "porcentaje", "weight_scope": "curso", "instrument": null, "instrument_max_score": null, "levels": null}, "status": "aportado", "source_refs": ["a42-intro", "especificaciones"], "derivation": "Peso reportado; instrumento detallado no visible y pendiente."},
-      "proposed_checklist": {"value": {"purpose": "formativo_sin_peso", "responses": ["si", "no", "por_revisar"], "criteria": ["Tres planteamientos fundamentados", "Diferenciacion de mandos", "Relacion con cambios generacionales y megatendencias", "Dos respuestas pertinentes"]}, "status": "propuesto", "source_refs": ["a42-intro"], "derivation": "Apoyo sin peso adicional."},
-      "calendar": {"value": {"opening": null, "closing": null, "due": "2026-09-07 23:59", "timezone": null, "historical_as_of": "2026-09-15"}, "status": "aportado", "source_refs": ["a42-dates"], "derivation": "Vencimiento literal; apertura no visible, cierre separado no aportado y zona horaria pendiente. Sin recepcion ni prorroga acreditadas."},
-      "materials": {"value": ["material-u4", "a42-video"], "status": "aportado", "source_refs": ["solicitud", "material-u4", "a42-video"], "derivation": "Video pendiente de examinar; enlaces no acreditan contenido validado."},
-      "alignment": {"value": [{"objective": "Argumentar criterios de liderazgo y contrastarlos", "content": "Mandos, direccion y cambios", "step": "desarrollo", "evidence": "Tres respuestas tematicas y dos replicas", "criterion": "Fundamentacion de tres planteamientos e interaccion pertinente", "criterion_authority": "propuesto"}], "status": "propuesto", "source_refs": ["a42-intro", "especificaciones"], "derivation": "Relacion objetivo-contenido-paso-evidencia-criterio."},
-      "pending": {"value": {"opening": null, "timezone": null, "formal_work_mode": null, "detailed_rubric": null, "video_url": null, "video_title": null, "video_duration": null, "video_review": null, "teacher_review": null}, "status": "pendiente", "source_refs": ["a42-intro", "a42-dates", "a42-video"], "derivation": "Examinar video antes de cerrar secuencia y carga."},
-      "conflicts": {"value": [], "status": "aportado", "source_refs": ["solicitud"], "derivation": "No se reporto contradiccion especifica; tres temas y dos companeros son cantidades distintas."}
+      "activity_id_aula": "4.2",
+      "activity_id_local": 9,
+      "moodle_module_id": 7800,
+      "title": "Foro sobre liderazgo",
+      "markdown": "planeacion-actividad-4.2-foro-liderazgo.md",
+      "json": "planeacion-actividad-4.2-foro-liderazgo.json",
+      "weight_percent": 5,
+      "status": "borrador"
     },
     {
-      "activity_id_aula": "5.1", "activity_id_local": 10, "moodle_module_id": 7805,
-      "title": "Proyecto de intervencion", "unit": 5, "status": "borrador",
-      "identification_provenance": {"status": "aportado", "source_refs": ["solicitud", "a51-intro"], "derivation": "Identificadores separados y titulo sintetizado."},
-      "sources": [
-        {"id": "a51-intro", "role": "consigna", "url": "https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=7805", "locators": ["h1", "#intro"], "consultation_date": "2026-09-15", "version": null, "privacy": "sintesis_sanitizada", "extraction_status": "verificacion_reportada"},
-        {"id": "a51-dates", "role": "calendario", "url": "https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=7805", "locators": [".activity-dates"], "consultation_date": "2026-09-15", "version": null, "privacy": "sin_datos_personales", "extraction_status": "verificacion_reportada"}
-      ],
-      "requirements": {"value": ["Programa correctivo/preventivo de gestion de la diversidad; trabajo en equipo con entrega individual PDF y portada oficial.", "Datos de organizacion, mision y vision; necesidades y herramienta para seleccionarlas.", "Tipo de intervencion; objetivos general y especificos; impactos medibles e indicadores.", "Etapas, actividades, duracion y control; recursos humanos, economicos, materiales y equipo; seguimiento."], "status": "aportado", "source_refs": ["a51-intro", "solicitud"], "derivation": "Sintesis de requisitos extraidos reportados; no se inventan organizacion ni datos."},
-      "delivery": {"value": {"work_mode": "equipo", "submission_mode": "individual", "evidence": ["proyecto_de_intervencion"], "channel": "tarea_7805", "format": "PDF", "official_cover_required": true, "official_cover_url": null, "team_size": null, "organization": null, "organization_data": null, "intervention_duration": null}, "status": "aportado", "source_refs": ["a51-intro"], "derivation": "Colaboracion y entrega individual complementarias; datos del proyecto pendientes, no resueltos."},
-      "official_objective": {"value": null, "status": "pendiente", "source_refs": ["a51-intro"], "derivation": "No se aporto objetivo oficial especifico."},
-      "proposed_objective": {"value": "Planear colaborativamente una intervencion de gestion de la diversidad que articule necesidades verificadas, objetivos, indicadores, actividades, recursos y seguimiento.", "status": "propuesto", "source_refs": ["a51-intro", "especificaciones"], "derivation": "Aplicacion de herramientas y evaluacion de decisiones de gestion."},
-      "sequence": {"value": [
-        {"phase": "preparacion", "student": "Revisar U5 y guia, acordar trabajo del equipo y reunir informacion organizacional autorizada y pertinente.", "teacher_mediation": "Aclarar alcance, tratamiento de informacion y diferencia entre colaboracion y entrega individual.", "minutes": 120, "resources": ["material-u5", "guia-7763"], "dependencies": "Acceso a guia y materiales; organizacion y datos autorizados por definir."},
-        {"phase": "desarrollo", "student": "Elaborar en equipo diagnostico y programa articulando necesidades, objetivos, indicadores, etapas y recursos.", "teacher_mediation": "Revisar congruencia y factibilidad; pedir sustento sin inventar datos.", "minutes": 300, "resources": ["material-u5", "guia-7763", "a51-intro"], "dependencies": "Guia examinada durante el trabajo y datos pertinentes reunidos."},
-        {"phase": "cierre", "student": "Revisar cobertura y consistencia del PDF comun; preparar entrega individual y comprobar portada.", "teacher_mediation": "Retroalimentar proyecto y aclarar mecanica de entrega individual.", "minutes": 60, "resources": ["a51-intro"], "dependencies": "Proyecto elaborado y portada por confirmar."}
-      ], "status": "propuesto", "source_refs": ["a51-intro", "material-u5", "guia-7763"], "derivation": "Diseno provisional; no produce diagnostico ni programa resuelto."},
-      "estimated_minutes": {"value": 480, "status": "propuesto", "source_refs": ["a51-intro", "guia-7763"], "derivation": "120 + 300 + 60 por estudiante, incluidos intercambios; no suma del equipo ni duracion de intervencion. Revisar tras leer guia."},
-      "official_assessment": {"value": {"activity_weight": 25, "weight_unit": "porcentaje", "weight_scope": "curso", "instrument": null, "instrument_max_score": null, "levels": null}, "status": "aportado", "source_refs": ["a51-intro", "especificaciones"], "derivation": "Peso reportado; rubrica detallada no visible y pendiente."},
-      "proposed_checklist": {"value": {"purpose": "formativo_sin_peso", "responses": ["si", "no", "por_revisar"], "criteria": ["Informacion organizacional pertinente", "Seleccion de necesidades sustentada", "Tipo de intervencion", "Objetivos congruentes", "Impactos e indicadores medibles", "Etapas, actividades, duracion y control", "Recursos y seguimiento", "PDF con portada y entrega individual"]}, "status": "propuesto", "source_refs": ["a51-intro"], "derivation": "Apoyo sin puntaje ni requisitos adicionales inferidos de guia no leida."},
-      "calendar": {"value": {"opening": "2026-09-01 00:00", "closing": "2026-09-14 23:59", "due": null, "timezone": null, "historical_as_of": "2026-09-15"}, "status": "aportado", "source_refs": ["a51-dates"], "derivation": "Horas literales; no se infiere vencimiento separado, zona horaria, recepcion o prorroga."},
-      "materials": {"value": ["material-u5", "guia-7763"], "status": "aportado", "source_refs": ["solicitud", "material-u5", "guia-7763"], "derivation": "Guia no leida en esta revision; enlaces no acreditan contenido validado."},
-      "alignment": {"value": [
-        {"objective": "Articular intervencion sustentada", "content": "Necesidades, objetivos e indicadores", "step": "desarrollo", "evidence": "Proyecto PDF elaborado en equipo", "criterion": "Correspondencia necesidad-objetivo-indicador y sustento del diagnostico", "criterion_authority": "propuesto"},
-        {"objective": "Planear implementacion y seguimiento", "content": "Etapas, recursos y control", "step": "desarrollo_y_cierre", "evidence": "Programa integrado en el mismo PDF con entrega individual", "criterion": "Actividades, duracion, recursos y seguimiento congruentes; entrega individual", "criterion_authority": "propuesto"}
-      ], "status": "propuesto", "source_refs": ["a51-intro", "especificaciones"], "derivation": "Dos resultados observables del objetivo general propuesto, no dos productos adicionales."},
-      "pending": {"value": {"timezone": null, "official_cover_url": null, "detailed_rubric": null, "guide_review": null, "team_size": null, "team_composition": null, "organization": null, "organization_data": null, "authorized_data_scope": null, "intervention_duration": null, "teacher_review": null}, "status": "pendiente", "source_refs": ["a51-intro", "guia-7763"], "derivation": "No inventar organizacion, mision, diagnostico, cifras ni identidades; examinar guia antes de cerrar planeacion."},
-      "conflicts": {"value": [], "status": "aportado", "source_refs": ["solicitud", "a51-intro"], "derivation": "Trabajo en equipo y entrega individual son condiciones complementarias, no contradiccion."}
+      "activity_id_aula": "5.1",
+      "activity_id_local": 10,
+      "moodle_module_id": 7805,
+      "title": "Proyecto de intervención",
+      "markdown": "planeacion-actividad-5.1-proyecto-intervencion.md",
+      "json": "planeacion-actividad-5.1-proyecto-intervencion.json",
+      "weight_percent": 25,
+      "status": "borrador"
     }
   ],
-  "review_summary": {
-    "activity_count": 10,
-    "weight_total_percent": 100,
-    "weight_scope": "curso",
-    "estimated_work_total_minutes": 2265,
-    "estimated_work_total_status": "propuesto",
-    "estimated_work_total_derivation": "90 + 180 + 180 + 210 + 180 + 360 + 105 + 360 + 120 + 480; 37 horas 45 minutos por estudiante, no carga oficial.",
-    "assignments_with_opening_and_closing": 7,
-    "forums_with_due_only": 3,
-    "product_conflicts_open": ["1.2: Infografia / Mapa conceptual", "2.2: Linea del Tiempo / Tabla cronologica"],
-    "critical_cautions": ["Cierre 4.1: 2026-09-07 23:37", "Extemporanea 4 puntos solo en rubrica 1.3", "5.1 equipo con entrega individual", "Video 4.2 y guia 5.1 pendientes de examinar", "Zona horaria pendiente en todas las actividades", "Todas las fechas finales son historicas al 2026-09-15"],
-    "technical_validation_scope": "Sintaxis, conteos, sumas, identificadores, fechas, referencias y concordancia documental; no constituye aprobacion institucional.",
-    "final_status": "borrador",
-    "institutional_approval": null,
-    "teacher_confirmation": null
+  "weight_total_percent": 100,
+  "weight_scope": "curso",
+  "clarifications": {
+    "index_only": "Índice de diez pares independientes 0.2-documental. Requisitos, fuentes, evaluación, secuencias, calendarios y pendientes completos residen en cada par, no en copias conjuntas.",
+    "paths": "markdown y json son rutas relativas a este directorio; los títulos se toman de los planes individuales.",
+    "identifiers": "activity_id_aula es cadena; activity_id_local y moodle_module_id son enteros. Aula 2.1 = local 5; aula 2.2 = local 4.",
+    "calendar": "Fechas y horas intactas en cada JSON individual y resumidas en el índice Markdown; siete tareas con apertura/cierre y tres foros con vencimiento. Zona horaria null; no inventar fechas ausentes. Cierre 4.1: 2026-09-07 23:37. Fechas finales históricas al 2026-09-15, sin recepción, disponibilidad, reapertura ni prórroga acreditadas.",
+    "weights": "Suma 100 % del curso. Puntos de rúbrica separados, sin conversión automática ni pesos formativos añadidos.",
+    "sources": "Fuentes, localizadores y usos se documentan en cada par. Extractos U1 atribuidos a Proulx; copias de Larrarte/Sánchez no cuentan como obras distintas; anarquías no atribuibles a Sánchez sin soporte; Canós y López son distintos; autoría Ana Isabel Solano. Metadatos, enlaces y existencia de PDF no equivalen a lectura actual ni respaldo disciplinar de refuerzos editoriales.",
+    "rubric": "Rúbrica general recuperada de revisión visual previa reportada en catálogo, no repetida ahora: tratamiento del tema, organización, redacción, ortografía, puntuación y bibliografía; excelente/bien/regular/deficiente; sin pesos por criterio y aplicación específica pendiente. Escalas específicas conservadas: 1.2=0/3/5, 1.3=0/3/4/5, 2.1 y 2.2=0/8/10. Extemporánea de 4 puntos solo en 1.3, no autorización actual.",
+    "activity_5_1": "Distingue consigna directa reportada, complementos de notas derivadas de guía previa y propuestas. Tres referencias del marco pueden integrar cinco totales, no ocho. Equipo con entrega individual; conciliación de versiones y lectura pendientes. Conserva 480 minutos provisionales sin afirmar suficiencia, actualidad automática de fuentes ni datos organizacionales ficticios.",
+    "activity_4_2": "Título/enlace del video y lectura Raona recuperados de nota académica local, no vistos/leídos ni verificados ahora en web. Tres planteamientos y al menos dos compañeros; sin PDF/audio/portada obligatorios. Conserva 120 minutos provisionales ajustables tras revisar recursos e interacción.",
+    "open_conflicts": "1.2: infografía/mapa conceptual; 2.2: línea del tiempo/tabla cronológica. Sin resolución docente. En 4.1 la guía auxiliar con MLA no sustituye APA.",
+    "draft_status": "Diez borradores sin aprobación institucional. Objetivos, mediación, secuencias, tiempos y criterios formativos propuestos; validación técnica no equivale a aprobación ni a actividad resuelta.",
+    "validation_scope": "Cotejo local previo de diez JSON con el conjunto anterior: identificadores, fechas, pesos, tiempos y niveles oficiales conservados. Sin consulta de red, Python, entregas ni acciones sobre calificaciones personales."
+  },
+  "historical_provenance": {
+    "git_commit": "705c0b0706dbd48364193971d6a7f23c21e87874",
+    "previous_schema_version": "0.1-documental",
+    "markdown_repository_path": "ITESCA/maestria-en-gestion-administrativa/fundamentos-de-gestion-administrativa-mga/planeaciones-generadas/2026-II/revision-2026-09-15/planeaciones.md",
+    "json_repository_path": "ITESCA/maestria-en-gestion-administrativa/fundamentos-de-gestion-administrativa-mga/planeaciones-generadas/2026-II/revision-2026-09-15/planeaciones.json",
+    "note": "Las fuentes O-md/O-json, O/J y original-md/original-json de los planes citan los conjuntos anteriores conservados en este commit, no el contenido actual de los índices. Sus localizadores de secciones, scope, shared_pending y bloques de actividad se auditan en esa versión. No se conservan duplicados obsoletos adicionales."
   }
 }

@@ -1,5 +1,7 @@
 # Fundamentos de Gestión Administrativa
 
+**Planeaciones documentales — revisión 2026-09-15:** [índice de diez planes independientes](planeaciones-generadas/2026-II/revision-2026-09-15/planeaciones.md) e [índice JSON](planeaciones-generadas/2026-II/revision-2026-09-15/planeaciones.json), con enlaces a cada par Markdown/JSON autónomo. Son borradores para revisión docente, no entregas ni documentos institucionales aprobados.
+
 **Entregables y pendientes:** consultar [ESTADO-ENTREGABLES.md](ESTADO-ENTREGABLES.md) para abrir los PDF, fuentes editables y respuestas preparadas, y distinguir preparación de entrega en Moodle.
 
 Asignatura básica de la Maestría en Gestión Administrativa del ITESCA.

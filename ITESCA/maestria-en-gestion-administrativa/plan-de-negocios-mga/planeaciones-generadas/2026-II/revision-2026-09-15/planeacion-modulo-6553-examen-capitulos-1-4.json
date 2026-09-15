@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.2-documental", "revision_date": "2026-09-15", "status": "borrador",
+  "activity_id_aula": null, "activity_id_local": null, "moodle_module_id": 6553, "module_type": "quiz",
+  "title": "Examen de conceptos: capítulos 1 al 4", "subject": "Plan de Negocios", "course_code": "GGPN01", "moodle_course_id": 213,
+  "institution": "ITESCA", "local_program_context": "Maestría en Gestión Administrativa", "period": "2026-II", "unit": null, "identification_source_ids": ["I"],
+  "provenance": {"method": "inventario_local_con_acceso_web_bloqueado", "academic_web_content_read": false, "course_access_attempt": "2026-09-15: curso 213 y página 6526 redirigieron a login", "personal_data_or_submissions_read": false, "quiz_attempts_started": false, "institutional_approval": null, "teacher_approval": null, "authority_policy": "I acredita capítulos por título, no su temario ni una obra. Sin lectura de reactivos o resolución de examen."},
+  "sources": [
+    {"id": "I", "role": "nota_derivada", "title": "Inventario ITESCA 2026-II", "location": "../../../../../PLANEACIONES-2026-II.md", "locator": "Sección 3, fila Cuestionario 6553 y límites", "consultation_date": "2026-09-15", "status": "leido_texto", "privacy": "academica_sin_datos_personales", "used_for": ["identificación y enlace"]},
+    {"id": "W", "role": "consigna", "title": "Módulo 6553", "location": "https://cursos3.e-itesca.edu.mx/mod/quiz/view.php?id=6553", "locator": "Pendiente: #intro y .activity-dates, solo antes del intento", "consultation_date": null, "registered_on": "2026-09-15", "status": "no_consultado_por_bloqueo_de_sesion", "content_read": false},
+    {"id": "E", "role": "programa", "title": "Especificaciones del curso 213", "location": "https://cursos3.e-itesca.edu.mx/mod/page/view.php?id=6526", "locator": "Pendiente: región main, .no-overflow", "consultation_date": null, "access_attempt_date": "2026-09-15", "status": "redirige_a_login", "content_read": false}
+  ],
+  "published_requirements": {"value": null, "status": "pendiente", "source_ids": ["W", "E"]},
+  "official_objective": {"value": null, "status": "pendiente", "source_ids": ["W", "E"]},
+  "objective": {"id": "O1", "value": "Organizar un repaso integrado de los conceptos que se confirmen para los capítulos 1 al 4, identificando relaciones y vacíos de comprensión.", "status": "propuesto", "source_ids": ["I"]},
+  "product": {"type": "examen_en_cuestionario_segun_inventario", "status": "extraido_de_nota_derivada", "source_ids": ["I"], "content_requirements": null, "structure": null, "format": {"value": null, "extension": null, "maximum_file_size": null, "filename": null, "status": "pendiente"}, "work_mode": null, "submission_mode": null, "channel": {"value": "Módulo quiz 6553", "location": "https://cursos3.e-itesca.edu.mx/mod/quiz/view.php?id=6553", "status": "identificado_sin_iniciar_intento", "source_ids": ["I"]}, "auxiliary_proposal": {"id": "E1", "value": "Matriz de repaso por capítulo, conceptos y dudas, sin respuestas de examen ni entrega obligatoria", "status": "propuesto"}},
+  "calendar": {"opening": null, "closing": null, "due": null, "timezone": null, "status": "pendiente", "source_ids": ["W"], "note": "Capítulos no determinan calendario ni unidad curricular."},
+  "assessment": {"activity_weight": null, "weight_unit": null, "weight_scope": null, "status": "pendiente", "source_ids": ["W", "E"], "official_instrument": {"name": null, "criteria": null, "levels": null, "max_score": null, "internal_weights": null, "status": "pendiente"}, "proposed_criteria": [{"id": "F1", "criterion": "Cobertura trazable del repaso", "evidence": "E1", "how_to_check": "Contrastar temas confirmados con la matriz y marcar conceptos aún no comprendidos.", "status": "propuesto", "weight": null}], "combination_rule": null},
+  "sequence": [
+    {"id": "S1", "phase": "preparacion", "student": "Recuperar únicamente instrucciones previas y confirmar temario/materiales de capítulos 1 al 4.", "teacher": "Aclarar alcance y condiciones sin mostrar reactivos.", "minutes": 20, "status": "propuesto"},
+    {"id": "S2", "phase": "desarrollo", "student": "Organizar un repaso integrado con materiales confirmados y registrar relaciones y dudas, sin resolver examen.", "teacher": "Orientar conexiones conceptuales y estudio focalizado.", "minutes": 70, "status": "propuesto"},
+    {"id": "S3", "phase": "cierre", "student": "Revisar cobertura con F1 y registrar condiciones faltantes; no iniciar intentos.", "teacher": "Retroalimentar necesidades de repaso.", "minutes": 30, "status": "propuesto"}
+  ],
+  "estimated_minutes": 120, "estimated_minutes_status": "propuesto",
+  "sequence_conditions": ["20 + 70 + 30 = 120; solo repaso, no duración del examen.", "No inventar contenido de capítulos 3/4, libro o prerrequisitos oficiales."],
+  "alignment": {"status": "propuesto", "objective_id": "O1", "content": "Conceptos de capítulos 1 al 4; temario por confirmar", "step_ids": ["S1", "S2", "S3"], "evidence_id": "E1", "criterion_ids": ["F1"]},
+  "resources": {"identified_readings_or_attachments": [], "status": "pendiente", "note": "Lecturas, capítulos y formatos no identificados ni leídos; el título no acredita obra bibliográfica."},
+  "pending": ["Consigna, objetivo, temario, obligatoriedad y modalidad", "Formato, extensión y configuración de respuesta", "Fechas exactas y zona horaria", "Duración, intentos, navegación y apoyos solo si figuran antes del intento", "Peso y ámbito, criterios, escala, recursos y políticas de integridad/IA"],
+  "conflicts": [], "conflicts_note": "No evaluables sin W/E.",
+  "blockers": ["Curso 213 y página 6526 redirigen a login; no buscar secretos.", "Si #intro no revela condiciones, conservar pendientes sin iniciar quiz."],
+  "validation": {"academic_completeness": "no_cumple: falta consigna", "schedule_order": "no_aplica: fechas desconocidas", "official_weight_sum": "no_aplica: pesos desconocidos", "approval": "no_aprobado"}
+}

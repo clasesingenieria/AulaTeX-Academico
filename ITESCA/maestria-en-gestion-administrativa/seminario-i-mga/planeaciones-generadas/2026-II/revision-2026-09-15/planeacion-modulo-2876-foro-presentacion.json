@@ -1,0 +1,34 @@
+{
+  "schema_version": "0.2-documental", "revision_date": "2026-09-15", "status": "borrador",
+  "activity_id_aula": null, "activity_id_local": "00", "local_id_note": "Convención del archivo previo; no número institucional.", "moodle_module_id": 2876, "module_type": "forum",
+  "title": "Foro: Conectando nuestras ideas de investigación", "subject": "Seminario I", "moodle_course_id": 215, "institution": "ITESCA", "local_program_context": "Maestría en Gestión Administrativa", "period": "2026-II", "unit": 1,
+  "provenance": {"method": "revision_local_con_consulta_previa_reportada", "network_used": false, "python_used": false, "previous_web_consultation": "Principal, sesión compartida 2026-09-15, #intro y .activity-dates; no texto redactado por el usuario.", "binary_contents_read": false, "personal_artifacts_opened": false, "personal_sections_used": false, "personal_sections_note": "Se excluyen secciones personales y de seguimiento presentes en notas mixtas.", "activity_solved": false, "submission_performed": false, "institutional_approval": null, "teacher_approval": null},
+  "sources": [
+    {"id": "W", "title": "Foro Moodle 2876", "location": "https://cursos3.e-itesca.edu.mx/mod/forum/view.php?id=2876", "locator": "#intro y .activity-dates", "status": "consulta_previa_reportada_por_principal", "consultation_date": "2026-09-15", "consulted_in_this_revision": false, "used_for": ["consigna", "vencimiento", "campos no visibles"]},
+    {"id": "L", "title": "Planeación local del foro", "location": "../../../planeaciones-seminario-i/unidad-1/actividad-00-foro-presentacion.md", "locator": "Encabezado, Borrador de participación y Pendientes académicos", "status": "leido_texto", "used_for": ["identificación local", "contraste de peso y réplicas"]},
+    {"id": "G", "title": "Perfil, objetivos y LGAC", "location": "../../../referencias-seminario-i/institucionales/itesca-mga-perfil-objetivos-lgac.md", "locator": "Objetivos, Perfil de egreso y LGAC; excluir contactos", "status": "leido_texto", "previous_consultation_date": "2026-08-29", "current_validity_verified": false, "used_for": ["contexto académico de LGAC"]}
+  ],
+  "official_objective": {"value": null, "status": "pendiente", "source_ids": ["W"]},
+  "objective": {"value": "Presentarse y vincular el interés de investigación con una LGAC.", "status": "propuesto", "source_ids": ["W", "G"]},
+  "product": {"type": "participacion_y_replica_en_foro", "work_mode": "individual", "status": "oficial_reportado", "source_ids": ["W"], "content_requirements": [
+    "Nombre, residencia, licenciatura y años desde el egreso: solo categorías, sin valores.",
+    "Situación laboral y área de trabajo: solo categorías, sin valores.",
+    "Idea de problema de investigación y expectativas del seminario, sin resolverlas.",
+    "Elegir Gestión e Innovación de las Organizaciones o Gestión Económica y Financiera de las Organizaciones.",
+    "Al menos una réplica a un compañero de la misma LGAC, sin inventar identidades o intervenciones."
+  ], "structure": ["Presentación por categorías", "Interés y elección de LGAC", "Expectativas", "Réplica pertinente"], "format": {"value": "foro", "filename": null, "length": null, "cover_required": null}, "channel": {"location": "https://cursos3.e-itesca.edu.mx/mod/forum/view.php?id=2876", "current_availability": null}},
+  "calendar": {"opening": null, "closing": null, "due": "2026-08-16 23:59", "due_literal": "16 de agosto de 2026, 23:59", "timezone": null, "status": "reportado_con_desconocidos", "source_ids": ["W"], "current_submission_availability": null, "extension_authorization": null},
+  "assessment": {"activity_weight": null, "weight_unit": null, "weight_scope": null, "status": "pendiente_no_visible", "source_ids": ["W"], "official_instrument": {"name": null, "criteria": null, "internal_weights": null, "levels": null, "status": "pendiente_no_visible"}, "proposed_criteria": [
+    {"criterion": "Cobertura", "evidence": "Guion", "how_to_check": "Localizar todas las categorías solicitadas sin inventar sus valores.", "status": "propuesto", "weight": null},
+    {"criterion": "Vinculación", "evidence": "Interés y LGAC", "how_to_check": "Comprobar relación explícita entre interés y LGAC elegida.", "status": "propuesto", "weight": null},
+    {"criterion": "Diálogo y privacidad", "evidence": "Participación futura", "how_to_check": "Revisar réplica pertinente a la misma LGAC y minimización de datos; no simular intervención ajena.", "status": "propuesto", "weight": null}
+  ], "combination_rule": null},
+  "sequence": [
+    {"phase": "preparacion", "student": "Revisar categorías y descripción académica de las dos LGAC.", "teacher": "Aclarar alcance y privacidad.", "minutes": 10, "status": "propuesto"},
+    {"phase": "desarrollo", "student": "Preparar un guion propio y planificar la réplica a la misma LGAC, sin simularla.", "teacher": "Orientar pertinencia y diálogo.", "minutes": 25, "status": "propuesto"},
+    {"phase": "cierre", "student": "Cotejar cobertura y datos necesarios; publicación fuera de esta revisión.", "teacher": "Retroalimentar claridad.", "minutes": 10, "status": "propuesto"}
+  ],
+  "estimated_minutes": 45, "estimated_minutes_status": "propuesto", "sequence_conditions": ["10 + 25 + 10 = 45; no duración oficial ni modificación de vencimiento."],
+  "pending": ["Apertura, cierre separado y zona horaria", "Peso, ámbito y rúbrica oficiales", "Objetivo oficial", "Extensión y disponibilidad actual del foro"],
+  "conflicts": [{"field": "assessment.activity_weight", "description": "L menciona 20 % de U1, no visible en W; no se adopta como peso oficial.", "status": "pendiente"}, {"field": "product.replies", "description": "L sugiere dos respuestas condicionadas; W exige al menos una réplica a la misma LGAC. Se planea conforme a W.", "status": "prioridad_consulta_principal"}]
+}
