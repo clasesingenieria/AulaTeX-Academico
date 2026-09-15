@@ -1,8 +1,8 @@
 \tikzset{
-  mentalcentro/.style={circle,fill=iiiepeNavy,text=white,text width=2.5cm,align=center,minimum size=2.8cm,font=\sffamily\bfseries\large},
+  mentalcentro/.style={circle,fill=iiiepeNavy,text=white,text width=2.7cm,align=center,minimum size=3cm,font=\sffamily\bfseries\fontsize{12}{14}\selectfont},
   mentalrama/.style={rounded corners=6pt,text width=2.6cm,align=center,minimum height=.9cm,inner sep=5pt,font=\sffamily\bfseries\normalsize},
   mentalhoja/.style={rounded corners=3pt,text width=2.7cm,align=center,minimum height=.65cm,inner sep=5pt,font=\sffamily\small},
-  propuesta/.style={rounded corners=4pt,draw=iiiepeNavy,fill=iiiepePaper,text width=4cm,align=center,minimum height=.9cm,inner sep=5pt,font=\sffamily\small},
+  propuesta/.style={rounded corners=4pt,draw=iiiepeNavy,fill=iiiepePaper,text width=4cm,align=center,minimum height=.9cm,inner sep=5pt,font=\sffamily\small,execute at begin node={\hyphenpenalty=10000\exhyphenpenalty=10000}},
   enlace/.style={-{Latex[length=2mm]},thick,draw=iiiepeNavy!80},
   relacion/.style={fill=white,inner sep=2pt,font=\sffamily\scriptsize,text=iiiepeInk,align=center}
 }
@@ -50,10 +50,10 @@
 \begin{tikzpicture}
   \node[propuesta,fill=iiiepeNavy,text=white,text width=6cm,font=\sffamily\bfseries] (pregunta) at (0,3) {¿Qué hacer?\\Garantizar comprensión matemática con equidad};
   \node[propuesta,fill=iiiepeBlue!15,font=\sffamily\bfseries] (comun) at (-5.1,1.1) {Construir lo común};
-  \node[propuesta,fill=iiiepeAqua!15,font=\sffamily\bfseries] (profundo) at (0,1.1) {Diseñar comprensión};
-  \node[propuesta,fill=iiiepeOrange!15,font=\sffamily\bfseries] (evaluar) at (5.1,1.1) {Evaluar para intervenir};
+  \node[propuesta,fill=iiiepeAqua!15,font=\sffamily\bfseries] (profundo) at (0,1.1) {Diseñar\\comprensión};
+  \node[propuesta,fill=iiiepeOrange!15,font=\sffamily\bfseries] (evaluar) at (5.1,1.1) {Evaluar para\\intervenir};
   \node[propuesta] (participacion) at (-5.1,-1) {Problema compartido, roles intelectuales y apoyos accesibles};
-  \node[propuesta] (razonamiento) at (0,-1) {Ideas previas, representaciones, argumentos y transferencia};
+  \node[propuesta] (razonamiento) at (0,-1) {Ideas previas, representaciones y comparación guiada};
   \node[propuesta] (retroalimentacion) at (5.1,-1) {Diagnóstico, criterios claros y revisión tras la retroalimentación};
   \node[propuesta] (evidenciacomun) at (-5.1,-3.1) {Participación documentada\\y explicación individual};
   \node[propuesta] (evidenciaprofunda) at (0,-3.1) {Estrategias justificadas\\en un problema nuevo};

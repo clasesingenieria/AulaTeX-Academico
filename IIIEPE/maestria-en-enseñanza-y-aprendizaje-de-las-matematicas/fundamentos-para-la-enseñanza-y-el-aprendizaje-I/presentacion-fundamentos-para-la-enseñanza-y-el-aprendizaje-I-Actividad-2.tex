@@ -18,6 +18,7 @@
 \definecolor{iiiepeOrange}{HTML}{F28C28}
 \definecolor{iiiepePaper}{HTML}{F6F8F7}
 \definecolor{iiiepeInk}{HTML}{1E2A32}
+\input{actividad-2-visuales}
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
@@ -46,7 +47,7 @@
 \noindent\begin{minipage}[t][10.5cm][t]{0.63\paperwidth}
   \colorbox{iiiepeNavy}{\begin{minipage}[t][10.5cm][t]{0.63\paperwidth}
     \vspace*{1.15cm}\hspace*{0.75cm}\begin{minipage}{10.2cm}
-      {\color{white}\fontsize{23}{27}\selectfont\bfseries Escuela, aprendizaje y evaluación en transformación\par}
+      {\color{white}\fontsize{23}{27}\selectfont\bfseries\raggedright Escuela, aprendizaje\\y evaluación\\en transformación\par}
       \vspace{0.4cm}{\color{iiiepeAqua!35!white}\Large Actividad 2\par}
       \vspace{0.55cm}{\color{white!85}\large Reportes de lectura y productos integrados\par}
       \vspace{0.7cm}{\color{iiiepeOrange}\rule{8.8cm}{1.3pt}\par}
@@ -62,9 +63,9 @@
   {\color{white}\small Monterrey, Nuevo León\\2026}
 \end{minipage}}
 
-\Slide{Pregunta y ruta de trabajo}{%
-  \Large\bfseries ¿Cómo pasar de declaraciones educativas a decisiones de mejora verificables?\par\vspace{0.45cm}
-  \normalsize Las lecturas se organizan como una secuencia de análisis: finalidad de la escuela, condiciones del aprendizaje y lectura responsable de la evidencia.\par\vspace{0.5cm}
+\Slide{Comprensión matemática con equidad}{%
+  {\Large\bfseries ¿Qué hacer para mejorar la comprensión matemática con equidad?\par}\vspace{0.45cm}
+  \normalsize El derecho a aprender requiere tareas que permitan pensar, apoyos accesibles y evaluación capaz de orientar la enseñanza.\par\vspace{0.5cm}
   \Pill{iiiepeNavy}{1. Meirieu: para qué escuela}\hspace{0.25cm}
   \Pill{iiiepeBlue}{2. Sawyer: cómo se aprende}\par\vspace{0.35cm}
   \Pill{iiiepeAqua}{3. Martínez Rizo: qué evidencia interpretar}\hspace{0.25cm}
@@ -72,79 +73,108 @@
 }
 
 \Slide{Lectura 1: Philippe Meirieu}{%
-  \begin{tikzpicture}[node distance=0.35cm and 0.65cm,>=Latex]
-    \node[rounded corners=4pt,fill=iiiepeNavy!14,draw=iiiepeNavy,very thick,text width=4.2cm,align=center,minimum height=1.05cm,font=\bfseries] (r) {La escuela como bien común};
-    \node[rounded corners=3pt,fill=iiiepeBlue!10,draw=iiiepeBlue,text width=3.5cm,align=center,minimum height=.8cm,right=of r] (a) {Autonomía se construye};
-    \node[rounded corners=3pt,fill=iiiepeAqua!12,draw=iiiepeAqua,text width=3.5cm,align=center,minimum height=.8cm,below=of a] (b) {Cooperación y alteridad};
-    \node[rounded corners=3pt,fill=iiiepeOrange!14,draw=iiiepeOrange,text width=3.5cm,align=center,minimum height=.8cm,left=of b] (c) {Evitar el retorno automático};
-    \draw[-{Latex},thick,iiiepeNavy] (r)--(a) node[midway,above,font=\scriptsize]{exige};
-    \draw[-{Latex},thick,iiiepeNavy] (r)--(b) node[midway,right,font=\scriptsize]{organiza};
-    \draw[-{Latex},thick,iiiepeNavy] (r)--(c) node[midway,below,font=\scriptsize]{cuestiona};
-  \end{tikzpicture}\par\vspace{0.35cm}
-  \textbf{Aporte:} la innovación debe fortalecer comunidad, igualdad y mediación docente; la tecnología no sustituye la relación educativa.
+  \centering\resizebox{\linewidth}{!}{\MapaMeirieu}\par\vspace{0.3cm}
+  \raggedright\textbf{Tesis:} la innovación debe fortalecer comunidad, igualdad y mediación docente; la tecnología no sustituye la relación educativa.\par\vspace{0.15cm}
+  \small Fuente: Meirieu (2020), \textit{«La escuela después»... ¿con la pedagogía de antes?}
 }
 
 \Slide{Lectura 2: R. Keith Sawyer}{%
-  \begin{tikzpicture}[node distance=0.35cm and 0.65cm,>=Latex]
-    \node[rounded corners=4pt,fill=iiiepeNavy!14,draw=iiiepeNavy,very thick,text width=4.2cm,align=center,minimum height=1.05cm,font=\bfseries] (r) {Aprendizaje profundo};
-    \node[rounded corners=3pt,fill=iiiepeBlue!10,draw=iiiepeBlue,text width=3.5cm,align=center,minimum height=.8cm,right=of r] (a) {Ideas previas y actividad};
-    \node[rounded corners=3pt,fill=iiiepeAqua!12,draw=iiiepeAqua,text width=3.5cm,align=center,minimum height=.8cm,below=of a] (b) {Colaboración y argumentación};
-    \node[rounded corners=3pt,fill=iiiepeOrange!14,draw=iiiepeOrange,text width=3.5cm,align=center,minimum height=.8cm,left=of b] (c) {Transferencia y reflexión};
-    \draw[-{Latex},thick,iiiepeNavy] (r)--(a) node[midway,above,font=\scriptsize]{activa};
-    \draw[-{Latex},thick,iiiepeNavy] (r)--(b) node[midway,right,font=\scriptsize]{socializa};
-    \draw[-{Latex},thick,iiiepeNavy] (r)--(c) node[midway,below,font=\scriptsize]{profundiza};
-  \end{tikzpicture}\par\vspace{0.35cm}
-  \textbf{Aporte:} comprender requiere producir explicaciones, contrastar estrategias, recibir retroalimentación y usar lo aprendido en situaciones nuevas.
+  \centering\resizebox{\linewidth}{!}{\MapaSawyer}\par\vspace{0.3cm}
+  \raggedright\textbf{Tesis:} comprender exige relacionar conocimientos, explicar estrategias y transferir lo aprendido con orientación experta.\par\vspace{0.15cm}
+  \small Fuente: Sawyer (2008), \textit{Optimizing Learning}, pp. 45--65.
 }
 
 \Slide{Lectura 3: Felipe Martínez Rizo}{%
-  \begin{tikzpicture}[node distance=0.35cm and 0.65cm,>=Latex]
-    \node[rounded corners=4pt,fill=iiiepeNavy!14,draw=iiiepeNavy,very thick,text width=4.2cm,align=center,minimum height=1.05cm,font=\bfseries] (r) {Evaluación contextualizada};
-    \node[rounded corners=3pt,fill=iiiepeBlue!10,draw=iiiepeBlue,text width=3.5cm,align=center,minimum height=.8cm,right=of r] (a) {Tendencias y series};
-    \node[rounded corners=3pt,fill=iiiepeAqua!12,draw=iiiepeAqua,text width=3.5cm,align=center,minimum height=.8cm,below=of a] (b) {Cobertura y desigualdad};
-    \node[rounded corners=3pt,fill=iiiepeOrange!14,draw=iiiepeOrange,text width=3.5cm,align=center,minimum height=.8cm,left=of b] (c) {Evidencia para decidir};
-    \draw[-{Latex},thick,iiiepeNavy] (r)--(a) node[midway,above,font=\scriptsize]{compara};
-    \draw[-{Latex},thick,iiiepeNavy] (r)--(b) node[midway,right,font=\scriptsize]{contextualiza};
-    \draw[-{Latex},thick,iiiepeNavy] (r)--(c) node[midway,below,font=\scriptsize]{orienta};
-  \end{tikzpicture}\par\vspace{0.35cm}
-  \textbf{Aporte:} un resultado no explica por sí solo sus causas; la evaluación vale cuando permite comprender patrones y dar seguimiento a decisiones.
+  \centering\resizebox{\linewidth}{!}{\MapaMartinez}\par\vspace{0.3cm}
+  \raggedright\textbf{Tesis:} interpretar tendencias y condiciones permite comprender los resultados; un puntaje no demuestra por sí solo sus causas.\par\vspace{0.15cm}
+  \small Fuente: Martínez Rizo (2026), \textit{Resultados de PISA 2025}.
 }
 
 \Slide{Cuadro comparativo: tres escalas}{%
-  \scriptsize\renewcommand{\arraystretch}{1.35}\setlength{\tabcolsep}{4pt}
+  \small\renewcommand{\arraystretch}{1.55}\setlength{\tabcolsep}{4pt}
   \begin{tabular}{p{3.1cm}p{4.25cm}p{4.25cm}p{4.25cm}}
     \rowcolor{iiiepeNavy!14}\textbf{Criterio} & \textbf{Meirieu} & \textbf{Sawyer} & \textbf{Martínez Rizo}\\
     Escala & Escuela y bien común & Aula y aprendizaje & Sistema y evaluación\\
     Problema & Retorno a prácticas anteriores & Transmisión y repetición & Ranking sin contexto\\
+    Idea central & Comunidad y autonomía acompañada & Comprensión profunda con guía & Interpretación histórica y contextual\\
+    Papel docente & Mediador de lo común & Diseñador y orientador & Usuario crítico de evidencia\\
     Respuesta & Comunidad y mediación & Actividad, interacción y reflexión & Tendencias, cobertura y seguimiento\\
     Matemáticas & Participación en saber común & Comprensión y transferencia & Lectura de logros con desigualdad\\
+    Cautela & Cooperar no sustituye la exigencia & Actividad no equivale a comprender & Correlación no implica causalidad\\
   \end{tabular}\par\vspace{0.3cm}
-  \textbf{Clave:} las lecturas no compiten; responden preguntas distintas y se vuelven útiles cuando se articulan.
+  \textbf{Comprensión y equidad:} la escuela garantiza el derecho a aprender, la pedagogía organiza las experiencias y la evaluación orienta los apoyos.
+  \par\vspace{0.15cm}\footnotesize Fuentes: Meirieu (2020), Sawyer (2008) y Martínez Rizo (2026).
+}
+
+\Slide{Comparación y retroalimentación con respaldo}{%
+  \textbf{Elegir estrategias con una base previa.} Star y colaboradores (2015, revisión de 2019, pp. 26--27) atribuyen evidencia moderada a la elección entre estrategias algebraicas. Cuatro de seis estudios muestran efectos positivos en algún dominio; dos presentan resultados mixtos o negativos. La comparación comienza cuando se comprende al menos una estrategia.\par\vspace{.4cm}
+  \textbf{Ofrecer información que pueda utilizarse.} Wisniewski, Zierer y Hattie (2020) integran 435 estudios y estiman un efecto medio de \(d=0.48\) después de excluir valores extremos. La heterogeneidad es elevada: el promedio no garantiza un resultado local ni equivale a un aumento de calificación.\par\vspace{.4cm}
+  \textbf{Vincular contenido y contexto.} El programa de la SEP (2024, p. 59) incluye relaciones proporcionales y no proporcionales y ecuaciones lineales en primer grado. Su pertinencia curricular no sustituye la evaluación de la intervención.\par\vspace{.4cm}
+  \textbf{Decisión docente:} diagnosticar, comparar con guía, permitir una revisión y comprobar qué cambió en la explicación.
 }
 
 \Slide{Mapa conceptual propositivo: ¿qué hacer?}{%
   \centering
-  \begin{tikzpicture}[>=Latex,node distance=0.7cm and 0.55cm]
-    \node[rounded corners=5pt,fill=iiiepeNavy!14,draw=iiiepeNavy,very thick,text width=4.5cm,align=center,minimum height=.9cm,font=\bfseries] (q) {Mejorar la enseñanza\\de las matemáticas};
-    \node[rounded corners=3pt,fill=iiiepeBlue!10,draw=iiiepeBlue,text width=4.2cm,align=center,below left=of q] (a) {Construir lo común\\problema y participación};
-    \node[rounded corners=3pt,fill=iiiepeAqua!12,draw=iiiepeAqua,text width=4.2cm,align=center,below=of q] (b) {Diseñar profundidad\\ideas, argumentos y transferencia};
-    \node[rounded corners=3pt,fill=iiiepeOrange!14,draw=iiiepeOrange,text width=4.2cm,align=center,below right=of q] (c) {Evaluar para intervenir\\evidencia y retroalimentación};
-    \node[rounded corners=3pt,fill=iiiepeNavy!8,draw=iiiepeNavy,text width=7cm,align=center,below=1cm of b] (d) {Secuencia: problema situado $\rightarrow$ estrategias $\rightarrow$ discusión $\rightarrow$ revisión y transferencia};
-    \draw[-{Latex},thick,iiiepeNavy] (q)--(a); \draw[-{Latex},thick,iiiepeNavy] (q)--(b); \draw[-{Latex},thick,iiiepeNavy] (q)--(c);
-    \draw[-{Latex},thick,iiiepeNavy] (a)--(d); \draw[-{Latex},thick,iiiepeNavy] (b)--(d); \draw[-{Latex},thick,iiiepeNavy] (c)--(d);
-  \end{tikzpicture}\par\vspace{0.3cm}
-  \textbf{Respuesta:} pasar de la declaración a una secuencia observable, inclusiva y ajustable.
+  \resizebox{!}{7.2cm}{\MapaPropositivo}\par\vspace{0.1cm}
+  \footnotesize La evidencia del razonamiento debe orientar el siguiente apoyo o reto docente.
+  \par\footnotesize Fuentes: Star et al. (2015), Collin y Quigley (2021) y SEP (2024).
 }
 
-\Slide{Cierre y referencias}{%
-  \Large\bfseries Una mejora educativa coherente debe:\par\vspace{0.25cm}
+\Slide{Aplicación: dos tarifas, una decisión justificada}{%
+  {\Large\bfseries ¿Qué tarifa conviene según la distancia?\par}\vspace{0.25cm}
+  Situación ficticia: A cobra 30 pesos iniciales y 8 por kilómetro; B cobra 12 por kilómetro, sin cuota inicial. Se comparan servicios equivalentes sin recargos.
+  \[
+    C_A(x)=30+8x,\qquad C_B(x)=12x,\qquad x\geq 0.
+  \]
+  \begin{enumerate}\setlength{\itemsep}{.12cm}
+    \item Diagnosticar costos y comprensión de una ecuación lineal; si falta esa base, modelar y posponer la comparación (10 min iniciales).
+    \item Construir tablas y gráficas en equipos con apoyos diferenciados (20 min).
+    \item Comparar la compensación de la cuota fija y la igualdad algebraica: ambas conducen a 7.5 kilómetros (15 min).
+    \item Transferir: con cuota inicial de 40 pesos, la igualdad ocurre a los 10 kilómetros; revisar la explicación (15 min).
+  \end{enumerate}
+  \textbf{Evidencia:} comparar respuesta inicial, representaciones y explicación revisada. Si se omite la cuota fija, volver al significado del valor inicial.\par\vspace{.15cm}
+  \small Primer grado de secundaria. Tiempos ajustables, no parámetros validados. Respaldo: Henderson et al. (2017), Star et al. (2015) y SEP (2024).
+}
+
+\Slide{Evaluar para ajustar la enseñanza}{%
+  {\Large\bfseries La mejora se reconoce en el razonamiento, no solo en el resultado.\par}\vspace{.3cm}
+  \begin{itemize}\setlength{\itemsep}{.18cm}
+    \item Conservar respuesta inicial, representaciones y explicación revisada.
+    \item Observar cuota fija, coherencia entre representaciones, justificación y transferencia.
+    \item Distinguir desempeño aún no logrado, logrado con apoyo y justificado con autonomía.
+    \item Proponer otro caso una semana después para observar comprensión sin ayuda inmediata.
+  \end{itemize}\vspace{.2cm}
+  \textbf{Ajuste:} si persiste la confusión sobre el costo inicial, volver al significado de la distancia cero; si no hay transferencia, contrastar estructuras.\par\vspace{.25cm}
+  La revisión diferida es una decisión local. Los registros permiten observar cambios, pero no establecer causalidad sin otro diseño de evaluación.\par\vspace{.25cm}
+  \small Respaldo: Collin y Quigley (2021), Wisniewski et al. (2020) y SEP (2024, pp. 125--126).
+}
+
+\Slide{Conclusiones: coherencia antes que novedades}{%
+  {\Large\bfseries Una mejora educativa coherente debe:\par}\vspace{0.25cm}
   \normalsize\begin{itemize}\setlength{\itemsep}{0.16cm}
     \item sostener el derecho común a aprender;
     \item diseñar actividad cognitiva profunda y colaborativa;
     \item evaluar razonamientos y condiciones para intervenir;
     \item revisar la secuencia con evidencia, no con intuiciones aisladas.
   \end{itemize}\vspace{0.15cm}
-  \scriptsize Fuentes de trabajo: Meirieu (2020), Sawyer (2008) y Martínez Rizo (2026). Las referencias completas se encuentran en el reporte de la Actividad 2.
+  \textbf{Postura:} alinear una meta comprensible, una tarea que permita pensar y una evidencia que informe el siguiente apoyo. La investigación orienta la elección de estrategias; el diagnóstico determina cuándo y cómo utilizarlas.\par\vspace{.3cm}
+  \textbf{Límite:} diseñar una propuesta no demuestra su eficacia. Se requiere observar producciones reales, revisar apoyos y evitar extrapolar el desempeño de un grupo a PISA.
+}
+
+\Slide{Referencias consultadas}{%
+  \small\raggedright
+  Meirieu, P. (2020). \textit{«La escuela después»... ¿con la pedagogía de antes?} Movimiento Cooperativo de Escuela Popular. \href{https://www.mcep.es/la-escuela-despues-con-la-pedagogia-de-antes-philippe-meirieu/}{Texto en español}.\par\vspace{.3cm}
+  Sawyer, R. K. (2008). Optimizing Learning: Implications of Learning Sciences Research. En \textit{Innovating to Learn, Learning to Innovate} (pp. 45--65). OCDE. \href{https://doi.org/10.1787/9789264039958-en}{DOI del libro}.\par\vspace{.3cm}
+  Martínez Rizo, F. (2026, 9 de septiembre). \textit{Resultados de PISA 2025}. Distancia por tiempos, Nexos. \href{https://educacion.nexos.com.mx/resultados-de-pisa-2025/}{Artículo}.\par\vspace{.3cm}
+  Henderson, P., Hodgen, J., Foster, C. y Kuchemann, D. (2017). \textit{Improving Mathematics in Key Stages 2 and 3}. Education Endowment Foundation. \href{https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/maths-ks-2-3}{Guía oficial}.\par\vspace{.3cm}
+  Collin, J. y Quigley, A. (2021). \textit{Teacher Feedback to Improve Pupil Learning}. Education Endowment Foundation. \href{https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/feedback}{Guía oficial}.\par\vspace{.35cm}
+}
+
+\Slide{Referencias: álgebra, retroalimentación y currículo}{%
+  \small\raggedright
+  Star, J. R., Caronongan, P., Foegen, A., Furgeson, J., Keating, B., Larson, M. R., Lyskawa, J., McCallum, W. G., Porath, J. y Zbiek, R. M. (2015). \textit{Teaching Strategies for Improving Algebra Knowledge in Middle and High School Students}. Institute of Education Sciences. Revisión de enero de 2019. \href{https://ies.ed.gov/ncee/wwc/PracticeGuide/20}{Ficha institucional}.\par\vspace{.55cm}
+  Wisniewski, B., Zierer, K. y Hattie, J. (2020). The Power of Feedback Revisited: A Meta-Analysis of Educational Feedback Research. \textit{Frontiers in Psychology, 10}, artículo 3087. \href{https://doi.org/10.3389/fpsyg.2019.03087}{doi:10.3389/fpsyg.2019.03087}.\par\vspace{.55cm}
+  Secretaría de Educación Pública. (2024). \textit{Programa de Estudio para la Educación Secundaria: Programa Sintético de la Fase 6}. \href{https://educacionbasica.sep.gob.mx/programas-de-estudio-para-la-educacion-preescolar-primaria-y-secundaria-programas-sinteticos-de-las-fases-2-a-6/}{Publicación oficial}.
 }
 
 \end{document}
