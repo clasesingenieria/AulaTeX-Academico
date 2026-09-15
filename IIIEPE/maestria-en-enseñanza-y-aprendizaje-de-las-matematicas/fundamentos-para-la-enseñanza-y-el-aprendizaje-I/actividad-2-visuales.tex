@@ -7,8 +7,114 @@
   relacion/.style={fill=white,inner sep=2pt,font=\sffamily\scriptsize,text=iiiepeInk,align=center}
 }
 
-\newcommand{\RamaMental}[8]{%
-  \node[mentalrama,draw=#8,fill=#8!13] (#1) at (#2,#3) {#4};
+\tikzset{
+  pics/imagenescuela/.style={code={
+    \draw (-.85,-.75) rectangle (.85,.25);
+    \draw (-1,.25) -- (0,.95) -- (1,.25);
+    \draw (-.2,-.75) rectangle (.2,-.1);
+    \draw (-.65,-.1) rectangle (-.4,.1);
+    \draw (.4,-.1) rectangle (.65,.1);
+    \draw (0,.5) circle (.12);
+  }},
+  pics/imagenlibro/.style={code={
+    \draw (0,-.7) -- (0,.55);
+    \draw (0,.55) .. controls (-.3,.85) and (-.65,.85) .. (-.95,.65)
+      -- (-.95,-.6) .. controls (-.55,-.42) and (-.25,-.45) .. (0,-.7);
+    \draw (0,.55) .. controls (.3,.85) and (.65,.85) .. (.95,.65)
+      -- (.95,-.6) .. controls (.55,-.42) and (.25,-.45) .. (0,-.7);
+    \draw (-.72,.3) -- (-.24,.15) (-.72,0) -- (-.24,-.15);
+    \draw (.24,.15) -- (.72,.3) (.24,-.15) -- (.72,0);
+  }},
+  pics/imagenpersonas/.style={code={
+    \draw (0,.52) circle (.22);
+    \draw (-.65,.27) circle (.18) (.65,.27) circle (.18);
+    \draw (-.4,-.7) -- (-.4,-.2) .. controls (-.4,.18) and (.4,.18) .. (.4,-.2) -- (.4,-.7);
+    \draw (-.95,-.65) -- (-.95,-.22) .. controls (-.95,.02) and (-.55,.02) .. (-.5,-.2);
+    \draw (.5,-.2) .. controls (.55,.02) and (.95,.02) .. (.95,-.22) -- (.95,-.65);
+  }},
+  pics/imagenpizarra/.style={code={
+    \draw (-.65,.1) rectangle (.95,.9);
+    \draw (-.3,.45) -- (.05,.65) -- (.4,.4) -- (.7,.7);
+    \draw (-.7,-.16) circle (.21);
+    \draw (-1,-.85) -- (-1,-.55) .. controls (-1,-.3) and (-.4,-.3) .. (-.4,-.55) -- (-.4,-.85);
+    \draw (-.43,-.42) -- (.15,.16);
+  }},
+  pics/imagenalerta/.style={code={
+    \draw[rounded corners=1pt] (0,.9) -- (-.95,-.75) -- (.95,-.75) -- cycle;
+    \draw[line width=1.3pt] (0,.35) -- (0,-.2);
+    \draw (0,-.48) circle (.045);
+  }},
+  pics/imagenacceso/.style={code={
+    \draw (-.8,-.8) -- (-.8,.8) -- (.25,.8) -- (.25,-.8);
+    \draw (.25,.8) -- (.85,.52) -- (.85,-.9) -- (.25,-.8);
+    \draw (.63,-.1) circle (.045);
+    \draw (-1,-.8) -- (1,-.8);
+    \draw (-.65,0) -- (.03,0) -- (-.2,.23);
+    \draw (.03,0) -- (-.2,-.23);
+  }},
+  pics/imagenpiezas/.style={code={
+    \draw (-.9,-.75) rectangle (-.08,.05);
+    \draw (.08,-.75) rectangle (.9,.05);
+    \draw (-.41,.18) rectangle (.41,.98);
+    \draw (-.6,-.75) -- (-.6,-.5) -- (-.38,-.5) -- (-.38,-.75);
+    \draw (.08,-.35) -- (.9,-.35);
+  }},
+  pics/imagendialogo/.style={code={
+    \draw[rounded corners=2pt] (-.95,.85) -- (.5,.85) -- (.5,-.05)
+      -- (-.35,-.05) -- (-.7,-.4) -- (-.7,-.05) -- (-.95,-.05) -- cycle;
+    \draw (.68,.42) -- (.95,.42) -- (.95,-.55) -- (.65,-.55)
+      -- (.65,-.88) -- (.3,-.55) -- (-.15,-.55) -- (-.15,-.3);
+    \draw (-.7,.56) -- (.25,.56) (-.7,.25) -- (.08,.25);
+  }},
+  pics/imagenconexiones/.style={code={
+    \draw (0,0) circle (.24);
+    \draw (-.72,.68) circle (.18) (.72,.68) circle (.18);
+    \draw (-.72,-.68) circle (.18) (.72,-.68) circle (.18);
+    \draw (-.18,.17) -- (-.59,.55) (.18,.17) -- (.59,.55);
+    \draw (-.18,-.17) -- (-.59,-.55) (.18,-.17) -- (.59,-.55);
+  }},
+  pics/imagenciclo/.style={code={
+    \draw (-.55,.62) arc[start angle=132,end angle=-40,radius=.83];
+    \draw (.64,-.51) -- (.64,-.1) (.64,-.51) -- (.24,-.5);
+    \draw (.55,-.62) arc[start angle=-48,end angle=-220,radius=.83];
+    \draw (-.64,.51) -- (-.64,.1) (-.64,.51) -- (-.24,.5);
+  }},
+  pics/imagengrafica/.style={code={
+    \draw (-.9,.9) -- (-.9,-.75) -- (.95,-.75);
+    \draw (-.65,-.5) -- (-.25,.12) -- (.2,-.05) -- (.72,.65);
+    \draw (.72,.65) -- (.34,.6) (.72,.65) -- (.75,.27);
+  }},
+  pics/imagenlupa/.style={code={
+    \draw (-.22,.22) circle (.57);
+    \draw[line width=1.5pt] (.2,-.2) -- (.9,-.9);
+    \draw (-.56,.3) .. controls (-.53,.55) and (-.35,.63) .. (-.13,.61);
+  }},
+  pics/imagenlista/.style={code={
+    \draw[rounded corners=1pt] (-.65,-.85) rectangle (.65,.7);
+    \draw[rounded corners=1pt] (-.25,.55) rectangle (.25,.9);
+    \draw (-.44,.16) -- (-.32,.04) -- (-.1,.32);
+    \draw (.05,.17) -- (.43,.17);
+    \draw (-.44,-.3) -- (-.32,-.42) -- (-.1,-.14);
+    \draw (.05,-.3) -- (.43,-.3);
+    \draw (-.4,-.65) -- (.43,-.65);
+  }},
+  pics/imagenanalisis/.style={code={
+    \draw (-.95,.9) -- (-.95,-.75) -- (.35,-.75);
+    \draw (-.72,-.45) -- (-.72,.02) (-.4,-.45) -- (-.4,.5);
+    \draw (.22,.25) circle (.5);
+    \draw[line width=1.5pt] (.58,-.12) -- (.98,-.68);
+  }}
+}
+
+\newcommand{\ImagenMental}[2]{%
+  \begin{tikzpicture}[x=.4cm,y=.4cm,baseline=-.1cm]
+    \path[use as bounding box] (-1.05,-1.05) rectangle (1.05,1.05);
+    \pic[draw=#2,line width=.85pt,line cap=round,line join=round] {imagen#1};
+  \end{tikzpicture}%
+}
+
+\newcommand{\RamaMental}[9]{%
+  \node[mentalrama,draw=#8,fill=#8!13] (#1) at (#2,#3) {\ImagenMental{#9}{#8!75!black}\\[1pt]#4};
   \node[mentalhoja,draw=#8!60,fill=#8!5] (#1primera) at (#5,{#3+.72}) {#6};
   \node[mentalhoja,draw=#8!60,fill=#8!5] (#1segunda) at (#5,{#3-.72}) {#7};
   \draw[line width=2pt,draw=#8] (centro) to[bend left=8] (#1);
@@ -18,31 +124,31 @@
 
 \newcommand{\MapaMeirieu}{%
 \begin{tikzpicture}
-  \node[mentalcentro] (centro) at (0,0) {Hacer clase\\para hacer\\escuela};
-  \RamaMental{comunidad}{-3.8}{1.9}{Bien común}{-7.4}{Derecho a aprender}{Cooperación y alteridad}{iiiepeBlue}
-  \RamaMental{mediacion}{3.8}{1.9}{Mediación docente}{7.4}{Autonomía construida}{Articular yo y nosotros}{iiiepeAqua}
-  \RamaMental{riesgos}{-3.8}{-1.9}{Riesgos de retorno}{-7.4}{Discurso sin cambio}{Tecnología sin pedagogía}{iiiepeOrange}
-  \RamaMental{condiciones}{3.8}{-1.9}{Condiciones de igualdad}{7.4}{Apoyos diferenciados}{Acceso al saber común}{iiiepeBlue}
+  \node[mentalcentro] (centro) at (0,0) {\ImagenMental{escuela}{white}\\[2pt]Hacer clase\\para hacer\\escuela};
+  \RamaMental{comunidad}{-3.8}{1.9}{Bien común}{-7.4}{Derecho a aprender}{Cooperación y alteridad}{iiiepeBlue}{personas}
+  \RamaMental{mediacion}{3.8}{1.9}{Mediación docente}{7.4}{Autonomía construida}{Articular yo y nosotros}{iiiepeAqua}{pizarra}
+  \RamaMental{riesgos}{-3.8}{-1.9}{Riesgos de retorno}{-7.4}{Discurso sin cambio}{Tecnología sin pedagogía}{iiiepeOrange}{alerta}
+  \RamaMental{condiciones}{3.8}{-1.9}{Condiciones de igualdad}{7.4}{Apoyos diferenciados}{Acceso al saber común}{iiiepeBlue}{acceso}
 \end{tikzpicture}%
 }
 
 \newcommand{\MapaSawyer}{%
 \begin{tikzpicture}
-  \node[mentalcentro] (centro) at (0,0) {Aprendizaje\\profundo};
-  \RamaMental{construccion}{-3.8}{1.9}{Construcción activa}{-7.4}{Conocimiento previo}{Problemas y explicaciones}{iiiepeBlue}
-  \RamaMental{social}{3.8}{1.9}{Dimensión social}{7.4}{Colaboración intelectual}{Argumentación compartida}{iiiepeAqua}
-  \RamaMental{transferencia}{-3.8}{-1.9}{Comprensión integrada}{-7.4}{Conceptos conectados}{Transferencia a lo nuevo}{iiiepeOrange}
-  \RamaMental{regulacion}{3.8}{-1.9}{Regulación del aprendizaje}{7.4}{Mediación y andamiaje}{Reflexión y retroalimentación}{iiiepeBlue}
+  \node[mentalcentro] (centro) at (0,0) {\ImagenMental{libro}{white}\\[2pt]Aprendizaje\\profundo};
+  \RamaMental{construccion}{-3.8}{1.9}{Construcción activa}{-7.4}{Conocimiento previo}{Problemas y explicaciones}{iiiepeBlue}{piezas}
+  \RamaMental{social}{3.8}{1.9}{Dimensión social}{7.4}{Colaboración intelectual}{Argumentación compartida}{iiiepeAqua}{dialogo}
+  \RamaMental{transferencia}{-3.8}{-1.9}{Comprensión integrada}{-7.4}{Conceptos conectados}{Transferencia a lo nuevo}{iiiepeOrange}{conexiones}
+  \RamaMental{regulacion}{3.8}{-1.9}{Regulación del aprendizaje}{7.4}{Mediación y andamiaje}{Reflexión y retroalimentación}{iiiepeBlue}{ciclo}
 \end{tikzpicture}%
 }
 
 \newcommand{\MapaMartinez}{%
 \begin{tikzpicture}
-  \node[mentalcentro] (centro) at (0,0) {Interpretar\\para mejorar};
-  \RamaMental{tendencias}{-3.8}{1.9}{Tendencias}{-7.4}{Serie histórica}{Más allá del ranking}{iiiepeBlue}
-  \RamaMental{contextos}{3.8}{1.9}{Contexto y muestra}{7.4}{Cobertura escolar}{Desigualdad social}{iiiepeAqua}
-  \RamaMental{explicaciones}{-3.8}{-1.9}{Hipótesis, no causas probadas}{-7.4}{Factores escolares}{Condiciones extraescolares}{iiiepeOrange}
-  \RamaMental{decisiones}{3.8}{-1.9}{Evaluación propia}{7.4}{Pruebas y estudios locales}{Políticas con seguimiento}{iiiepeBlue}
+  \node[mentalcentro] (centro) at (0,0) {\ImagenMental{analisis}{white}\\[2pt]Interpretar\\para mejorar};
+  \RamaMental{tendencias}{-3.8}{1.9}{Tendencias}{-7.4}{Serie histórica}{Más allá del ranking}{iiiepeBlue}{grafica}
+  \RamaMental{contextos}{3.8}{1.9}{Contexto y muestra}{7.4}{Cobertura escolar}{Desigualdad social}{iiiepeAqua}{personas}
+  \RamaMental{explicaciones}{-3.8}{-1.9}{Hipótesis, no causas probadas}{-7.4}{Factores escolares}{Condiciones extraescolares}{iiiepeOrange}{lupa}
+  \RamaMental{decisiones}{3.8}{-1.9}{Evaluación propia}{7.4}{Pruebas y estudios locales}{Políticas con seguimiento}{iiiepeBlue}{lista}
 \end{tikzpicture}%
 }
 
