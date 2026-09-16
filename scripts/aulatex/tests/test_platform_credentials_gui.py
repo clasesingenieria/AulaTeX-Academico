@@ -17,8 +17,17 @@ import pytest
 PIN = "solo-pruebas-pin-maestro-largo"
 
 
+@pytest.fixture(scope="module")
+def tk_root():
+    # One Tcl interpreter per process; repeated Tk()/destroy() is unreliable on Windows.
+    root = tk.Tk()
+    root.withdraw()
+    yield root
+    root.destroy()
+
+
 @pytest.fixture
-def form(tmp_path, monkeypatch):
+def form(tmp_path, monkeypatch, tk_root):
     monkeypatch.setattr(os, "environ", {})
     # Do not execute the suite's __init__ or load real configuration at collection.
     package_name = "platform_form_test_package"
@@ -36,13 +45,13 @@ def form(tmp_path, monkeypatch):
         modules[name] = module
     gui = modules["platform_credentials_gui"]
     monkeypatch.setattr(gui, "default_vault_path", lambda _: tmp_path / "platform-credentials.vault.json")
-    root = tk.Tk()
-    root.withdraw()
+    root = tk_root
     notebook = ttk.Notebook(root)
     widget = gui.PlatformCredentialsFrame(notebook, repo_root=tmp_path, institutions=["ITESCA", "UCNL"])
     notebook.add(widget, text="Plataformas")
     yield widget, gui
-    root.destroy()
+    for child in root.winfo_children():
+        child.destroy()
 
 
 def populate(widget):
