@@ -156,6 +156,8 @@ class AulaTeXApp(tk.Tk):
         notebook.add(self.extractor_tab, text="Extractor")
         notebook.add(self.compile_tab, text="Compilar")
         notebook.add(self.credentials_tab, text="Credenciales")
+        self.platforms_tab = self._build_platforms_tab(notebook)
+        notebook.add(self.platforms_tab, text="Plataformas")
 
         self._build_panel_tab()
         self._build_llm_tab()
@@ -167,6 +169,26 @@ class AulaTeXApp(tk.Tk):
         self._build_extractor_tab()
         self._build_compile_tab()
         self._build_credentials_tab()
+
+    def _build_platforms_tab(self, notebook):
+        try:
+            from .platform_credentials_gui import PlatformCredentialsFrame
+        except ModuleNotFoundError as exc:
+            if not (exc.name or "").startswith("cryptography"):
+                raise
+            frame = ttk.Frame(notebook, padding=12)
+            ttk.Label(
+                frame,
+                text="Plataformas no disponible: instala la dependencia cryptography "
+                     "en el entorno Python de AulaTeX. No se guardarán credenciales sin cifrado.",
+                wraplength=800,
+            ).pack(anchor="w")
+            return frame
+        return PlatformCredentialsFrame(
+            notebook, repo_root=self.workspace.repo_root,
+            institutions=[scope.institution or scope.label for scope in self.editorial_scopes.values()
+                          if scope.level == "institucion"],
+        )
 
     def _build_panel_tab(self) -> None:
         self.panel_tab.columnconfigure(1, weight=1)

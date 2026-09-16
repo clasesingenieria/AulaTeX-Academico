@@ -50,6 +50,63 @@ bash scripts/aulatex.sh llm-config
 Consulta [la guía Linux](../../README-LINUX.md#validar-y-configurar-model-router)
 para el alcance del PIN, el modo no interactivo y los límites de la prueba.
 
+## Credenciales de plataformas por institución
+
+En la interfaz gráfica, la pestaña **Plataformas** administra cuentas académicas
+independientemente de las claves LLM de **Credenciales**:
+
+1. Selecciona **Nueva**, elige o escribe una institución y asigna un nombre de
+   plataforma/alias. Se admiten varias plataformas y cuentas por institución.
+2. Introduce la URL HTTPS, el usuario y la contraseña. **Ejemplo ITESCA** completa
+   únicamente institución, plataforma y `https://cursos3.e-itesca.edu.mx/login/index.php`;
+   no contiene ni importa credenciales reales.
+3. Introduce tu `AULATEX_MASTER_PIN` en el campo enmascarado y pulsa **Guardar cifrado**.
+   Si el campo está vacío, se usa esa variable del entorno del proceso, si existe.
+   Nunca se usa `secret.key` como alternativa ni se guarda el PIN en disco.
+4. **Consultar** requiere el PIN y muestra solo ID de cuenta, institución, plataforma y sitio.
+  Usa alias descriptivos para distinguir tus cuentas; el ID diferencia incluso filas con el mismo nombre.
+   Selecciona una cuenta para editarla; usuario y contraseña no se precargan.
+   Dejarlos vacíos conserva sus valores existentes. En una cuenta nueva ambos son obligatorios.
+5. **Eliminar** solicita confirmación y el PIN. **Limpiar / bloquear** vacía campos
+   y lista; también se limpian después de cinco minutos sin interacción en esta pestaña.
+   Los campos sensibles se vacían después de cada operación, incluso si falla.
+
+### Almacenamiento y seguridad
+
+- Implementación: [platform_credentials.py](platform_credentials.py) y
+  [platform_credentials_gui.py](platform_credentials_gui.py). Requiere `cryptography`,
+  declarada en [requirements-linux-cli.txt](../requirements-linux-cli.txt).
+  Si falta, solo se deshabilita esta pestaña: nunca se degrada a almacenamiento en claro.
+- La ruta completa aparece al pie del formulario. Por defecto se guarda bajo
+  `%LOCALAPPDATA%/AulaTeX/<identificador-del-workspace>/` en Windows, o
+  `${XDG_DATA_HOME:-~/.local/share}/AulaTeX/<identificador-del-workspace>/` en Linux.
+  No se almacena dentro del repositorio ni en sus corpus, memorias o manifiestos.
+- Se cifra **todo el contenido**, incluidos usuario, contraseña y metadatos, con
+  Fernet autenticado. La clave se deriva mediante PBKDF2-HMAC-SHA256 (600 000
+  iteraciones), con salt aleatorio independiente del utilizado por las claves LLM.
+  Solo versión, parámetros KDF, salt y ciphertext permanecen visibles en disco.
+- Se cifra antes de crear cualquier temporal y se reemplaza el archivo de forma
+  atómica. Un bloqueo exclusivo evita escrituras simultáneas de la aplicación.
+  Si un cierre forzoso deja un bloqueo residual, cierra todas las instancias antes
+  de retirar únicamente ese bloqueo, nunca la bóveda.
+- Usa una **frase maestra larga y única**, no un PIN numérico corto: el cifrado no
+  impide ataques offline contra contraseñas débiles. No existe recuperación del PIN.
+  Conserva una copia cifrada de la bóveda fuera de Git y el PIN por separado.
+  Al mover el repositorio cambia su identificador: usa la ruta mostrada para restaurar
+  manualmente tu copia, con la aplicación cerrada.
+- **Cambiar PIN** recifra únicamente esta bóveda y exige el PIN anterior y la
+  confirmación del nuevo. No modifica las claves LLM ni el entorno. La rotación de
+  secretos LLM tampoco cambia esta bóveda: coordina ambas rotaciones si quieres
+  mantener una misma frase maestra. Las copias antiguas siguen usando el PIN anterior.
+- La aplicación no conserva una clave descifrada entre operaciones. El borrado de
+  campos no garantiza borrado físico de la memoria de Python. Un PIN exportado en
+  el entorno seguirá disponible para el proceso aunque se pulse **Limpiar / bloquear**;
+  para exigir entrada manual no lo exportes. Protege también tu sesión del sistema
+  operativo; esta función no protege contra procesos maliciosos del mismo usuario.
+- No se realiza inicio de sesión automático ni se envían datos a Telegram, al
+  navegador o a motores LLM. Introduce secretos solo en el formulario local, nunca
+  en el chat. Las credenciales existentes no se migran ni modifican automáticamente.
+
 ## Arquitectura agéntica unificada
 
 AulaTeX conserva comandos especializados, pero el modelo mental recomendado es una fachada única:

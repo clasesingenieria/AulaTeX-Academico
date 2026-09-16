@@ -133,6 +133,9 @@ secret.key
 **/secret.key
 scripts/secret.key
 
+# Bóveda institucional y copias accidentales: nunca versionar, ni cifradas.
+**/platform-credentials.vault.json*
+
 # Respaldos automaticos del .env: pueden contener secretos en claro
 scripts/aulatex.env.bak-*
 **/*.env.bak-*
