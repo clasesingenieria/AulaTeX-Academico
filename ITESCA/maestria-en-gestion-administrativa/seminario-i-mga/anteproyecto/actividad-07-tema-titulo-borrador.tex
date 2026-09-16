@@ -1,0 +1,283 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+\documentclass[
+  spanish,
+  11pt,
+]{article}
+\usepackage{xcolor}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage[]{helvet}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\ifLuaTeX
+\usepackage[bidi=basic,shorthands=off]{babel}
+\else
+\usepackage[bidi=default,shorthands=off]{babel}
+\fi
+\ifLuaTeX
+  \usepackage{selnolig} % disable illegal ligatures
+\fi
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Elección del tema y título del anteproyecto},
+  pdfauthor={Martin Jonathan de la Cruz},
+  pdflang={es},
+  colorlinks=true,
+  linkcolor={Maroon},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Elección del tema y título del anteproyecto}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Seminario I · Tarea 7 · Borrador para revisión}
+\author{Martin Jonathan de la Cruz}
+\date{15 de septiembre de 2026}
+
+\begin{document}
+\maketitle
+
+\subsection{Alcance del borrador}\label{alcance-del-borrador}
+
+Este documento desarrolla una propuesta de tema a partir del trabajo
+previo de la Tarea 3. No acredita aprobación del estudiante o de la
+docente, lectura del material «Cómo elegir tema y título», acceso a una
+empresa ni participación en el foro. El contexto profesional y las dos
+réplicas requieren información real antes de cerrar la actividad. No se
+ha publicado ni enviado este documento.
+
+\subsection{Tema y pertinencia
+institucional}\label{tema-y-pertinencia-institucional}
+
+El tema propuesto es la innovación comercial basada en datos en una
+micro, pequeña o mediana empresa de Cajeme, Sonora. El problema por
+investigar es cómo organizar y utilizar información comercial para
+fundamentar decisiones y evaluar acciones de mejora. La existencia de
+información fragmentada, dificultades de seguimiento o capacidades
+analíticas insuficientes debe comprobarse mediante diagnóstico; no se
+presenta aquí como un hecho observado en una empresa identificada.
+
+La LGAC propuesta es \textbf{Gestión e Innovación de las
+Organizaciones}. La descripción institucional incluye la gestión y
+medición de innovaciones de comercialización, procesos, organización y
+modelos de negocio en mipymes, así como el desarrollo de capacidades de
+innovación. Esta vinculación permite estudiar las decisiones y las
+prácticas organizacionales, en lugar de reducir el proyecto a instalar
+una herramienta digital (Instituto Tecnológico Superior de Cajeme
+{[}ITESCA{]}, s. f.).
+
+El antecedente académico del tema es la matriz de estado del arte
+elaborada en Tarea 3. Sus referencias deben verificarse contra los
+textos originales antes de reutilizar sus resultados en los antecedentes
+del anteproyecto. Aquí se recupera solamente la orientación temática, no
+se atribuye una nueva lectura de sus diez artículos.
+
+\subsection{Exploración de diez
+ideas}\label{exploraciuxf3n-de-diez-ideas}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Diagnosticar la madurez de los registros de ventas y clientes en una
+  MiPyME de Cajeme para identificar oportunidades de mejora comercial.
+\item
+  Diseñar un tablero de indicadores comerciales que conecte objetivos,
+  responsables, datos y frecuencia de revisión.
+\item
+  Diseñar una estrategia de innovación comercial basada en datos y una
+  ruta de evaluación ajustada a los recursos de una MiPyME.
+\item
+  Analizar las prácticas de seguimiento de prospectos y proponer un
+  procedimiento para documentar su avance hasta la compra.
+\item
+  Proponer criterios de segmentación de clientes utilizando únicamente
+  información pertinente y obtenida legítimamente.
+\item
+  Diseñar un procedimiento de seguimiento de satisfacción y tratamiento
+  de quejas que apoye decisiones comerciales.
+\item
+  Analizar la coordinación entre canales presenciales y digitales para
+  proponer mejoras en la atención al cliente.
+\item
+  Evaluar las necesidades de capacitación para interpretar indicadores
+  comerciales y convertirlos en acciones.
+\item
+  Diseñar un protocolo de calidad y protección de datos comerciales con
+  responsabilidades y controles de acceso.
+\item
+  Proponer un mecanismo periódico de revisión de campañas que relacione
+  costos, contactos y ventas, sujeto a disponibilidad de registros
+  comparables.
+\end{enumerate}
+
+Las diez ideas son alternativas generadas con apoyo de IA en esta
+sesión. No representan hallazgos, entrevistas ni elecciones ya
+confirmadas por el estudiante.
+
+\subsection{Tres ideas
+preseleccionadas}\label{tres-ideas-preseleccionadas}
+
+\textbf{Diagnóstico de registros y capacidades comerciales.} Permite
+comprobar la situación inicial y evita proponer una solución antes de
+conocer el problema. Su viabilidad depende de obtener autorización y
+acceso a registros pertinentes. El producto sería un diagnóstico con
+brechas priorizadas, sin divulgar datos de clientes.
+
+\textbf{Tablero de indicadores para la toma de decisiones.} Delimita un
+producto verificable: indicadores, definiciones, fuentes, responsables y
+periodicidad. Su pertinencia debe justificarse con las necesidades del
+negocio; disponer de un tablero no demuestra por sí mismo una mejora del
+desempeño.
+
+\textbf{Estrategia de innovación comercial basada en datos.} Integra
+diagnóstico, acciones, responsabilidades e indicadores en una propuesta
+de gestión. Es la opción recomendada porque permite articular las dos
+ideas anteriores sin prometer resultados causales ni una implementación
+para la cual todavía no existe autorización.
+
+\subsection{Tres títulos
+alternativos}\label{tres-tuxedtulos-alternativos}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Diagnóstico de capacidades para el uso de datos comerciales en una
+  MiPyME de Cajeme, Sonora.
+\item
+  Diseño de un tablero de indicadores para apoyar la toma de decisiones
+  comerciales en una MiPyME de Cajeme, Sonora.
+\item
+  Diseño de una estrategia de innovación comercial basada en datos para
+  una MiPyME de Cajeme, Sonora.
+\end{enumerate}
+
+\subsection{Título recomendado}\label{tuxedtulo-recomendado}
+
+\textbf{Diseño de una estrategia de innovación comercial basada en datos
+para una MiPyME de Cajeme, Sonora.}
+
+La recomendación conserva el tema de Tarea 3, pero delimita el
+compromiso al diseño de una estrategia. La implementación y evaluación
+de resultados podrán incorporarse cuando se confirmen empresa, permisos,
+registros y periodo disponible. No se declara una selección definitiva
+en nombre del estudiante.
+
+\subsubsection{Justificación en seis
+líneas}\label{justificaciuxf3n-en-seis-luxedneas}
+
+El tema vincula la gestión de información comercial con decisiones y
+acciones de innovación en una MiPyME.\\
+Se relaciona con la LGAC Gestión e Innovación de las Organizaciones por
+su atención a prácticas de comercialización.\\
+El diagnóstico permitirá establecer qué necesidades y oportunidades
+están respaldadas por evidencia de la empresa.\\
+La propuesta integrará acciones, responsables e indicadores acordes con
+los recursos que se documenten.\\
+El alcance de diseño evita prometer mejoras de desempeño antes de
+implementar y evaluar una intervención.\\
+Su viabilidad quedará sujeta a la autorización de acceso, la protección
+de datos y un calendario acordado.
+
+\subsection{Delimitación y pregunta inicial
+propuestas}\label{delimitaciuxf3n-y-pregunta-inicial-propuestas}
+
+\textbf{Unidad de análisis:} el proceso de gestión comercial de una
+MiPyME, todavía por seleccionar y autorizar; no una muestra
+representativa de todas las empresas de Cajeme.
+
+\textbf{Contexto espacial:} Cajeme, Sonora, en continuidad con el tema
+previo. \textbf{Delimitación temporal:} por acordar según acceso y
+calendario; no se presupone un periodo de observación ya realizado.
+
+\textbf{Pregunta inicial:} ¿Qué componentes debe integrar una estrategia
+de innovación comercial basada en datos, a partir del diagnóstico de
+necesidades y capacidades de una MiPyME de Cajeme, Sonora?
+
+\textbf{Producto esperado:} diagnóstico, prioridades de mejora, acciones
+propuestas y un esquema de indicadores y seguimiento. No se atribuyen
+aumentos de ventas, rentabilidad o retención sin mediciones.
+
+\subsection{Referencia}\label{referencia}
+
+Instituto Tecnológico Superior de Cajeme. (s. f.). \emph{Maestría en
+Gestión Administrativa}.
+https://www.itesca.edu.mx/modulos/oferta/posgrado/mgad.php
+
+\subsection{Control de realización}\label{control-de-realizaciuxf3n}
+
+\begin{itemize}
+\tightlist
+\item
+  La fuente institucional se consultó mediante la síntesis local fechada
+  el 29 de agosto de 2026; su vigencia web no se revalidó en esta
+  sesión.
+\item
+  La consigna se recuperó de la planeación documental del módulo 2906.
+  El aula redirigió al inicio de sesión el 15 de septiembre de 2026.
+\item
+  Falta localizar y leer «Cómo elegir tema y título» para contrastar los
+  criterios de selección de esta propuesta.
+\item
+  Falta incorporar el contexto profesional real del estudiante y
+  confirmar título, empresa y condiciones de acceso.
+\item
+  Faltan dos réplicas de 80--120 palabras basadas en publicaciones
+  reales de compañeros; no se inventan interlocutores ni
+  participaciones.
+\item
+  La prórroga fue informada por el usuario, sin nueva fecha confirmada;
+  no modifica las fechas oficiales registradas.
+\item
+  Se utiliza LaTeX/PDF como soporte auxiliar por instrucción del
+  usuario; el producto oficial de esta actividad es la participación en
+  el foro.
+\item
+  La Tarea 5 permanece separada: requiere el cuestionario y video del
+  formulario, no este documento.
+\end{itemize}
+
+\end{document}
