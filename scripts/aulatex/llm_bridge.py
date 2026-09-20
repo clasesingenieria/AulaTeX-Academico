@@ -364,25 +364,80 @@ def validate_llm_response(
             return payload
         requests_mod = _require_requests()
         prompt = f"Responde exactamente con {marker} y no agregues ningún otro texto."
-        limit = max(16, min(int(max_tokens), 128))
+        # Intentos con límites de salida crecientes para evitar truncamiento.
+        candidate_limits = []
+        base = max(16, int(max_tokens))
+        candidate_limits.append(min(base, 32768))
+        candidate_limits.append(min(max(128, base * 2), 32768))
+        candidate_limits.append(min(max(256, base * 4), 32768))
+
         headers = _anthropic_headers(candidate) if candidate.is_anthropic() else _api_key_headers(candidate)
-        body = (
-            _anthropic_payload(candidate, prompt, limit) if candidate.is_anthropic()
-            else _openai_payload(endpoint, candidate, prompt, limit, temperature=0)
-        )
-        response = requests_mod.post(
-            endpoint, headers=headers, json=body,
-            timeout=max(5, int(timeout_seconds)), allow_redirects=False,
-        )
-        if not 200 <= response.status_code < 300:
-            payload["error"] = f"HTTP {response.status_code}. Revisa endpoint, API key, deployment o cuota."
-            return payload
-        text = extract_llm_text(response.json()).strip()
+        response = None
+        last_json = None
+        for limit in candidate_limits:
+            body = (
+                _anthropic_payload(candidate, prompt, limit) if candidate.is_anthropic()
+                else _openai_payload(endpoint, candidate, prompt, limit, temperature=0)
+            )
+            try:
+                response = requests_mod.post(
+                    endpoint, headers=headers, json=body,
+                    timeout=max(5, int(timeout_seconds)), allow_redirects=False,
+                )
+            except Exception as exc:
+                response = None
+                last_json = None
+                payload["error"] = f"Error en la petición: {type(exc).__name__}"
+                continue
+
+            if not 200 <= response.status_code < 300:
+                payload["error"] = f"HTTP {response.status_code}. Revisa endpoint, API key, deployment o cuota."
+                try:
+                    payload["raw_response"] = (response.text or "")[:10000]
+                except Exception:
+                    payload["raw_response"] = "<no-text>"
+                return payload
+
+            try:
+                last_json = response.json()
+            except Exception:
+                last_json = None
+
+            text = extract_llm_text(last_json or {}).strip()
+            # Si conseguimos el marcador, salimos temprano.
+            if text == marker:
+                payload.update(responded=True, response_chars=len(text), marker_found=True, ok=True, error="")
+                return payload
+            # Si el resultado no trae texto pero indica truncamiento, intentamos con un límite superior.
+            # Detectar finish_reason 'length' o incomplete_details 'max_output_tokens'.
+            finish_reason = ""
+            try:
+                # varios formatos: top-level 'incomplete_details' o choices[0].finish_reason
+                if isinstance(last_json, dict) and last_json.get("incomplete_details", {}).get("reason"):
+                    finish_reason = last_json.get("incomplete_details", {}).get("reason")
+                elif isinstance(last_json, dict) and isinstance(last_json.get("choices"), list) and last_json["choices"]:
+                    finish_reason = (last_json["choices"][0].get("finish_reason") or "")
+            except Exception:
+                finish_reason = ""
+
+            if finish_reason and ("length" in finish_reason or "max_output_tokens" in str(finish_reason)):
+                # intentar siguiente limit en la lista
+                continue
+            # Si no es truncamiento ni tenemos texto, no insistir más.
+            break
+        # Si llegamos aquí, usamos la última respuesta JSON para construir el payload final
+        text = extract_llm_text(last_json or {}).strip() if last_json is not None else ""
         payload.update(
             responded=bool(text), response_chars=len(text),
             marker_found=text == marker, ok=text == marker,
             error="" if text == marker else "El LLM no devolvió el marcador de validación esperado.",
         )
+        if not payload["ok"]:
+            try:
+                payload["raw_response"] = (response.text or "")[:10000]
+            except Exception:
+                payload["raw_response"] = "<no-text>"
+            
     except Exception as exc:
         # No usar _friendly_error aquí: una excepción puede contener la URL,
         # cabeceras, API key o cuerpo devuelto por el proveedor.
@@ -622,6 +677,19 @@ def _openai_payload(
             "model": config.deployment,
             "input": prompt,
             "max_output_tokens": max(16, max_tokens),
+        }
+    # Some Azure deployments use the newer parameter name `max_completion_tokens`
+    # for the chat/completions path. Detect and use it to improve compatibility.
+    path = urlsplit(endpoint).path
+    if "/chat/completions" in path:
+        temp = temperature
+        if temp == 0:
+            temp = 1.0
+        return {
+            "model": config.deployment,
+            "messages": [{"role": "user", "content": prompt}],
+            "max_completion_tokens": max(16, max_tokens),
+            "temperature": temp,
         }
     return {
         "model": config.deployment,

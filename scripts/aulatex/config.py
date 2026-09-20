@@ -10,6 +10,8 @@ LLM_ENGINES = (
     "Claude Foundry",
     "Claude Sonnet",
     "Claude Haiku",
+    "Grok-Pensamiento-Libre",
+    "GPT-5-Mini",
     "GPT-5.6-SOL",
     "GPT-5.6-Luna",
     "GPT-5.6-Terra",
@@ -28,6 +30,8 @@ ENGINE_ENV_PREFIX = {
     "GPT-5.6-Terra": "AZURE_OPENAI_GPT_5_6_TERRA",
     "GPT-Pro": "GPT_PRO",
     "Codex": "CODEX",
+    "Grok-Pensamiento-Libre": "GROK_PENSAMIENTO_LIBRE",
+    "GPT-5-Mini": "GPT_5_MINI",
     # LLMs adicionales presentes en aulatex.env (protocolo chat/completions).
     "Mistral-Large-3": "MISTRAL_LARGE_3",
     "DeepSeek-V4-Pro": "DEEPSEEK_V4_PRO",
