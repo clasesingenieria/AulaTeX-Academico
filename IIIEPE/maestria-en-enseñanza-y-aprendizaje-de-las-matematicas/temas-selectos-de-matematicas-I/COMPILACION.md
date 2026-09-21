@@ -3,12 +3,23 @@
 Ejecutar siempre desde la raiz del proyecto:
 
 ```powershell
-.\scripts\latexmk-build.ps1 .\IIIEPE\temas-selectos-de-matematicas-I\reporte-temas-selectos-de-matematicas-I.tex
-.\scripts\latexmk-build.ps1 .\IIIEPE\temas-selectos-de-matematicas-I\reporte-temas-selectos-de-matematicas-I-Actividad-1.tex
-.\scripts\latexmk-build.ps1 .\IIIEPE\temas-selectos-de-matematicas-I\presentacion-temas-selectos-de-matematicas.tex
+$materia = '.\IIIEPE\maestria-en-enseñanza-y-aprendizaje-de-las-matematicas\temas-selectos-de-matematicas-I'
+
+# Reporte general y actividades
+.\scripts\latexmk-build.ps1 "$materia\reporte-temas-selectos-de-matematicas-I.tex"
+.\scripts\latexmk-build.ps1 "$materia\reporte-temas-selectos-de-matematicas-I-Actividad-1.tex"
+.\scripts\latexmk-build.ps1 "$materia\reporte-temas-selectos-de-matematicas-I-Actividad-2.tex"
+.\scripts\latexmk-build.ps1 "$materia\reporte-temas-selectos-de-matematicas-I-Actividad-3.tex"
+
+# Presentacion general y actividades
+.\scripts\latexmk-build.ps1 "$materia\presentacion-temas-selectos-de-matematicas.tex"
+.\scripts\latexmk-build.ps1 "$materia\presentacion-temas-selectos-de-matematicas-Actividad-1.tex"
+.\scripts\latexmk-build.ps1 "$materia\presentacion-temas-selectos-de-matematicas-Actividad-2.tex"
+.\scripts\latexmk-build.ps1 "$materia\presentacion-temas-selectos-de-matematicas-Actividad-3.tex"
 ```
 
-Para actividades 2 y 3, cambia solo el numero en el nombre del archivo.
+Cada fuente `.tex` tiene un PDF homonimo en la misma carpeta. Compila solo
+las fuentes cuyo PDF no exista o haya quedado anterior al `.tex`.
 
 ## Contrato de compilacion
 
