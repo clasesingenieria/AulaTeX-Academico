@@ -85,6 +85,48 @@ def test_validation_honors_limits_no_fallback_or_redirects(candidate, monkeypatc
     assert post.call_args.kwargs["headers"]["api-key"] == FAKE_KEY
 
 
+def test_gpt_mini_text_and_image_parameters():
+    candidate = AulaTeXLLMConfig("GPT-5-Mini", "https://example.azure.com/openai/v1", FAKE_KEY, "gpt-5-mini")
+    endpoint = llm_bridge._openai_compatible_endpoint(candidate)
+    assert endpoint == "https://example.azure.com/openai/v1/chat/completions"
+    text = llm_bridge._openai_payload(endpoint, candidate, "hola", 2048, temperature=0.3)
+    image = llm_bridge._openai_multimodal_payload(endpoint, candidate, "hola", "data:image/png;base64,AA==", 2048)
+    for payload in (text, image):
+        assert payload["model"] == "gpt-5-mini"
+        assert payload["max_completion_tokens"] == 2048
+        assert "max_tokens" not in payload
+        assert "temperature" not in payload
+    assert image["messages"][0]["content"][1]["type"] == "image_url"
+
+
+def test_mini_validation_reserves_reasoning_tokens(monkeypatch):
+    candidate = AulaTeXLLMConfig("GPT-5-Mini", "https://example.azure.com/openai/v1", FAKE_KEY, "gpt-5-mini")
+    post = Mock(return_value=response())
+    monkeypatch.setattr(requests, "post", post)
+    assert validate_llm_response("gpt-5-mini", config=candidate)["ok"]
+    assert post.call_args.kwargs["json"]["max_completion_tokens"] == 1024
+
+
+def test_default_engine_uses_setup_selection(isolated_environment):
+    isolated_environment.write_text(
+        "AULATEX_LLM_ENGINE=GPT-5-Mini\n"
+        "GPT_5_MINI_BASE_URL=https://example.azure.com/openai/v1\n"
+        "GPT_5_MINI_CHAT_DEPLOYMENT=gpt-5-mini\n"
+        f"GPT_5_MINI_API_KEY={FAKE_KEY}\n", encoding="utf-8",
+    )
+    assert AulaTeXLLMConfig.from_env().engine_label == "GPT-5-Mini"
+    assert AulaTeXLLMConfig.from_env("gpt-5-mini").deployment == "gpt-5-mini"
+
+
+def test_validation_never_returns_raw_provider_secrets(candidate, monkeypatch):
+    reply = response(status=401)
+    reply.text = FAKE_KEY
+    monkeypatch.setattr(requests, "post", Mock(return_value=reply))
+    result = validate_llm_response(config=candidate)
+    assert FAKE_KEY not in json.dumps(result)
+    assert "raw_response" not in result
+
+
 @pytest.mark.parametrize("status", [301, 302, 400, 401, 403, 404, 429, 500])
 def test_http_failure_is_sanitized_and_not_retried(candidate, monkeypatch, status):
     post = Mock(return_value=response(FAKE_KEY, status))
@@ -211,7 +253,8 @@ def test_failed_validation_manual_repair_and_encrypted_save(isolated_environment
     assert "MODEL_ROUTER_API_KEY=enc:" in stored
     assert FAKE_KEY not in stored
     assert "test-pin" not in stored
-    assert isolated_environment.stat().st_mode & 0o777 == 0o600
+    if os.name != "nt":  # Windows no implementa los bits POSIX de propietario/grupo.
+        assert isolated_environment.stat().st_mode & 0o777 == 0o600
     assert os.environ["MODEL_ROUTER_API_KEY"] == FAKE_KEY
     assert FAKE_KEY not in capsys.readouterr().out
 
@@ -306,7 +349,7 @@ def test_edit_during_pin_entry_is_preserved(isolated_environment, candidate, mon
     monkeypatch.setattr(llm_setup.getpass, "getpass", pin_prompt)
     with pytest.raises(llm_setup.ConfigurationError, match="cambió"):
         llm_setup._save_candidate(candidate, isolated_environment)
-    assert isolated_environment.read_text() == concurrent
+    assert isolated_environment.read_text(encoding="utf-8") == concurrent
     assert set(path.name for path in isolated_environment.parent.iterdir()) == {"aulatex.env", "secret.salt"}
 
 
@@ -316,7 +359,8 @@ def test_atomic_write_failure_preserves_original(isolated_environment, candidate
 
     def fail_replace(source, target):
         assert FAKE_KEY not in Path(source).read_text()
-        assert Path(source).stat().st_mode & 0o777 == 0o600
+        if os.name != "nt":
+            assert Path(source).stat().st_mode & 0o777 == 0o600
         raise OSError("Simulated write failure")
 
     monkeypatch.setattr(llm_setup.os, "replace", fail_replace)
