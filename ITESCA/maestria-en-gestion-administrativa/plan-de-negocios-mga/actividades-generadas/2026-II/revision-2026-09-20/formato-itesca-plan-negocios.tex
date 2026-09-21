@@ -1,0 +1,64 @@
+\usepackage[margin=2.54cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\usepackage[spanish,es-tabla,es-nodecimaldot]{babel}
+\usepackage{csquotes,setspace,ragged2e}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage[table]{xcolor}
+\usepackage{booktabs,array,longtable,tabularx}
+\usepackage{enumitem,amsmath,amssymb}
+\usepackage{titlesec}
+\usepackage[backend=biber,style=apa,natbib=true,sortcites=true]{biblatex}
+\DeclareLanguageMapping{spanish}{spanish-apa}
+\addbibresource{ITESCA/maestria-en-gestion-administrativa/plan-de-negocios-mga/plan-de-negocios.bib}
+\usepackage{xurl}
+\usepackage[hidelinks,hypertexnames=false]{hyperref}
+\definecolor{itescaRedDark}{HTML}{8F1117}
+\onehalfspacing
+\AtBeginDocument{\justifying}
+\setlength{\parindent}{1.27cm}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{3em}
+\setlength{\bibhang}{1.27cm}
+\setlength{\bibitemsep}{8pt}
+\titleformat{\section}{\normalfont\normalsize\bfseries}{\thesection.}{.5em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection.}{.5em}{}
+\setlist{leftmargin=*,itemsep=3pt,parsep=0pt}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\providecommand{\planCaso}{Proyecto por confirmar}
+\providecommand{\planDescripcion}{Alcance del proyecto por confirmar.}
+\providecommand{\planEstudiante}{Por confirmar en la versión de entrega}
+\providecommand{\planDocente}{Celia Velázquez Reyna}
+\providecommand{\planFecha}{\today}
+\providecommand{\planLugar}{Lugar de preparación por confirmar}
+\newcommand{\portadaITESCA}[2]{%
+  \begin{titlepage}
+    \noindent\begin{minipage}[t]{.62\textwidth}
+      \vspace{0pt}Instituto Tecnológico Superior de Cajeme\\
+      Maestría en Gestión Administrativa\\Posgrado e Investigación
+    \end{minipage}\hfill
+    \begin{minipage}[t]{.32\textwidth}
+      \vspace{0pt}\raggedleft
+      \includegraphics[width=\linewidth]{ITESCA/assets-itesca/web/logo-itesca-contorno.png}
+    \end{minipage}
+    \vfill
+    \begin{center}
+      {\LARGE\bfseries\color{itescaRedDark}#1\par}
+      \vspace{.6cm}
+      Plan de Negocios \textbf{GGPN01}\\
+      Módulo Moodle #2\\Periodo 2026-II
+    \end{center}
+    \vfill
+    \noindent\textbf{Caso de referencia: \planCaso}\\
+    \planDescripcion\\
+    Estudiante: \planEstudiante.\\
+    Docente: \planDocente.\\
+    Fecha de preparación: \planFecha.\\
+    Contexto académico: \planLugar.
+    \par\bigskip\noindent\textbf{Borrador para revisión.}
+    No acredita precios, existencias, demanda, entrega ni aprobación docente.
+  \end{titlepage}
+}
