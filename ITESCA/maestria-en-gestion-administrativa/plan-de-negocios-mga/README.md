@@ -6,7 +6,7 @@ ITESCA, Maestria en Gestion Administrativa, periodo 2026-II.
 
 - [Estado de entregables](ESTADO-ENTREGABLES.md): productos de actividad disponibles, sus límites y ruta de compilación.
 - [Plantilla de actividad](reporte-plan-de-negocios-plantilla-actividad.tex): base institucional reutilizable para reportes de actividad en la raíz de la materia.
-- [Lote realizar-actividad y piloto 6545](actividades-generadas/2026-II/revision-2026-09-20/README.md): plantilla ITESCA validada; piloto generado en TEX, PDF y Word con GPT-5.6-SOL, deployment gpt-5.6-sol. Caso hipotetico y revision editorial pendientes; las otras trece actividades del lote original no se ejecutaron.
+- [Lote realizar-actividad](LOTE-ACTIVIDADES.md): los entregables de actividad están directamente en esta raíz. Siete borradores TEX/PDF/DOCX fueron generados con GPT-5.6-SOL, deployment gpt-5.6-sol; siete módulos permanecen pendientes por requerir respuestas personales, evidencia de campo, reactivos no abiertos o grabación.
 - [Revision vigente 2026-09-20](planeaciones-generadas/2026-II/revision-2026-09-20/README.md): 14 planeaciones en Markdown y JSON, con requisitos y fechas cotejados con el aula. Son borradores con pendientes, no aprobacion docente.
 - [Registro de referencias](planeaciones-generadas/2026-II/revision-2026-09-20/REFERENCIAS.md): nueve documentos conservados en almacenamiento privado (siete PDF y dos PowerPoint), con autoria y alcance de lectura declarados.
 - [Aula del curso 213](https://cursos3.e-itesca.edu.mx/course/view.php?id=213): acceso autenticado confirmado el 2026-09-20. Consultar consignas, recursos y calendario antes de elaborar productos.
