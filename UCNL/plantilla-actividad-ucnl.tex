@@ -1,0 +1,69 @@
+\providecommand{\ucnlmateria}{Materia por confirmar}
+\providecommand{\ucnlgrupo}{Por confirmar}
+\providecommand{\ucnlperiodo}{Por confirmar}
+\providecommand{\ucnlestudiante}{Martín Jonathan de la Cruz Muñoz}
+\providecommand{\ucnlmatricula}{Por confirmar}
+\providecommand{\ucnldocente}{Por confirmar}
+\providecommand{\ucnltitulo}{Plantilla de actividad}
+\providecommand{\ucnlproducto}{Modelo editable, no actividad resuelta}
+\providecommand{\ucnllugar}{Monterrey, Nuevo León}
+\providecommand{\ucnlfecha}{Por confirmar}
+\providecommand{\ucnllogo}{UCNL/assets-ucnl/logos/logo-ucnl.png}
+\providecommand{\ucnlidioma}{spanish}
+\providecommand{\ucnlextras}{}
+\providecommand{\ucnlcontenido}{\section{Introducción}[Completar propósito y alcance.]\section{Desarrollo}[Incorporar el producto solicitado y sus evidencias.]\section{Conclusiones}[Responder al propósito con base en el desarrollo.]}
+\documentclass[12pt,letterpaper,oneside]{article}
+\usepackage[margin=2.54cm,headheight=16pt]{geometry}
+\usepackage{fontspec}
+\setmainfont{Arial}
+\usepackage[english,spanish,es-tabla]{babel}
+\usepackage{csquotes,setspace,graphicx,amsmath}
+\usepackage[table]{xcolor}
+\usepackage{array,booktabs,longtable,tabularx,enumitem,caption,titlesec,fancyhdr,etoolbox}
+\BeforeBeginEnvironment{tabularx}{\par\noindent}
+\usepackage[backend=biber,style=apa]{biblatex}
+\AtEveryBibitem{\clearfield{annotation}}
+\addbibresource{\ucnlbibliografia}
+\usepackage{xurl}
+\usepackage[hidelinks,hypertexnames=false]{hyperref}
+\definecolor{ucnlNavy}{HTML}{143A5A}
+\definecolor{ucnlAqua}{HTML}{20A99A}
+\definecolor{ucnlGold}{HTML}{C6922E}
+\titleformat{\section}{\large\bfseries\color{ucnlNavy}}{\thesection.}{.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{.5em}{}
+\setlength{\emergencystretch}{3em}
+\onehalfspacing
+\raggedbottom
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\ucnlmateria}
+\fancyfoot[L]{\small Universidad Ciudadana de Nuevo León}
+\fancyfoot[R]{\thepage}
+\ucnlextras
+\hypersetup{pdftitle={\ucnltitulo},pdfauthor={\ucnlestudiante},pdfsubject={\ucnlmateria}}
+\begin{document}
+\selectlanguage{\ucnlidioma}
+\begin{titlepage}
+\centering
+\includegraphics[width=4cm]{\ucnllogo}\par
+{\large Universidad Ciudadana de Nuevo León\par}
+Licenciatura en Administración\par
+\vfill
+{\Large\bfseries\color{ucnlNavy}\ucnltitulo\par}
+\vspace{.5cm}
+\ucnlmateria\par
+\ucnlproducto\par
+\vfill
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+Estudiante: & \ucnlestudiante\\
+Matrícula UCNL: & \ucnlmatricula\\
+Docente: & \ucnldocente\\
+Grupo: & \ucnlgrupo\\
+Periodo: & \ucnlperiodo\\
+Fecha de realización: & \ucnlfecha\\
+Lugar: & \ucnllugar
+\end{tabularx}
+\end{titlepage}
+\ucnlcontenido
+\printbibliography[title={Referencias}]
+\end{document}

@@ -1,0 +1,48 @@
+\providecommand{\ucnlmateria}{Materia por confirmar}
+\providecommand{\ucnlgrupo}{Por confirmar}
+\providecommand{\ucnlperiodo}{Por confirmar}
+\providecommand{\ucnlestudiante}{Martín Jonathan de la Cruz Muñoz}
+\providecommand{\ucnlmatricula}{Por confirmar}
+\providecommand{\ucnldocente}{Por confirmar}
+\providecommand{\ucnltitulo}{Plantilla de presentación}
+\providecommand{\ucnllogo}{UCNL/assets-ucnl/logos/logo-ucnl.png}
+\providecommand{\ucnlidioma}{spanish}
+\providecommand{\ucnldiapositivas}{\begin{frame}{Propósito}[Completar según la consigna.]\end{frame}}
+\documentclass[aspectratio=169]{beamer}
+\geometry{paperwidth=19.2cm,paperheight=10.8cm}
+\usepackage{fontspec}
+\setsansfont{Arial}
+\usepackage[english,spanish]{babel}
+\usepackage{csquotes,graphicx,booktabs,tabularx}
+\usepackage[backend=biber,style=apa]{biblatex}
+\AtEveryBibitem{\clearfield{annotation}}
+\addbibresource{\ucnlbibliografia}
+\definecolor{ucnlNavy}{HTML}{143A5A}
+\definecolor{ucnlBlue}{HTML}{1E6F9F}
+\definecolor{ucnlGold}{HTML}{C6922E}
+\definecolor{ucnlAqua}{HTML}{20A99A}
+\setbeamercolor{normal text}{fg=black,bg=white}
+\setbeamercolor{structure}{fg=ucnlNavy}
+\setbeamercolor{frametitle}{fg=ucnlNavy,bg=white}
+\setbeamercolor{block title}{fg=white,bg=ucnlNavy}
+\setbeamercolor{block body}{fg=black,bg=ucnlAqua!8}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{frametitle}{\vspace{.2cm}\insertframetitle\par\color{ucnlAqua}\rule{\textwidth}{1pt}}
+\setbeamertemplate{footline}{\hspace{.4cm}\scriptsize UCNL\hfill\ucnlmateria\hfill\insertframenumber/\inserttotalframenumber\hspace{.4cm}\vspace{.2cm}}
+\title[\ucnlmateria]{\ucnltitulo}
+\subtitle{\ucnlmateria}
+\author{\ucnlestudiante\\\small Matrícula UCNL: \ucnlmatricula}
+\institute[UCNL]{Universidad Ciudadana de Nuevo León\\Licenciatura en Administración\\Docente: \ucnldocente}
+\date{Grupo \ucnlgrupo\quad Periodo \ucnlperiodo}
+\titlegraphic{\includegraphics[height=1.4cm]{\ucnllogo}}
+\begin{document}
+\selectlanguage{\ucnlidioma}
+\begin{frame}
+\titlepage
+\end{frame}
+\ucnldiapositivas
+\begin{frame}[allowframebreaks]{Referencias}
+\footnotesize
+\printbibliography[heading=none]
+\end{frame}
+\end{document}

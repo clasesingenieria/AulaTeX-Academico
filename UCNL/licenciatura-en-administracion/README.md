@@ -2,7 +2,13 @@
 
 Sistema de carpetas y plantillas para las materias del plan de estudios 2025 de la Licenciatura en Administracion con acentuacion en Empresas de la Universidad Ciudadana de Nuevo Leon.
 
-## Fuente curricular
+## Materias verificadas en la plataforma
+
+Consulta del 23/09/2026, periodo 2026-3: [Administración II](administracion-ii-lad/BASE-ACADEMICA-2026-3.md), [Contabilidad II](contabilidad-ii-lad/BASE-ACADEMICA-2026-3.md), [Derecho Constitucional](derecho-constitucional-lad/BASE-ACADEMICA-2026-3.md), [Inglés II](ingles-ii-lad/BASE-ACADEMICA-2026-3.md), [Macroeconomía](macroeconomia-lad/BASE-ACADEMICA-2026-3.md) y [Matemáticas II](matematicas-ii-lad/BASE-ACADEMICA-2026-3.md).
+
+Estas bases incorporan material consultado, bibliografía verificada y plantillas nuevas; conservan los archivos anteriores. [Índice institucional y límites de la consulta](../README.md). La existencia de las demás carpetas no demuestra inscripción o disponibilidad actual.
+
+## Fuente curricular histórica
 
 - UCNL/assets-ucnl/oferta-educativa/planes-2025/l-admon-emp/2.png
 
