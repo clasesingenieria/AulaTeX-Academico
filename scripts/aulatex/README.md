@@ -161,6 +161,16 @@ Guía de uso:
 .\scripts\aulatex.ps1 editorial-memory --target <nodo> --build-level materia --propagation-mode local
 ```
 
+## Generar planeaciones documentales
+
+`generar-planeaciones <materia> --source <modelo.json>` normaliza un modelo
+revisado con `activity` o `activities` en `planeaciones-<materia>/` y conserva
+requisitos, fuentes y metadatos. Comparte con el materializador las carpetas de
+referencias, notas, recursos gráficos, extracción e investigación de la materia.
+No sobrescribe versiones diferentes, no crea exclusiones Git y rechaza salidas
+académicas ignoradas. No incluye generación pedagógica por LLM ni un botón GUI.
+Contrato y pruebas: [GENERAR-PLANEACIONES.md](../../GENERAR-PLANEACIONES.md).
+
 ## Propuesta: realizar-planeación
 
 La especificación de [realizar-planeación](../../REALIZAR-PLANEACION.md) define una

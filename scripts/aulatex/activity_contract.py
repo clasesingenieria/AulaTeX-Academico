@@ -115,6 +115,13 @@ REALIZAR_ACTIVIDAD_PIPELINE_CONTRACT = {
         "no_unsupported_answers": "No consolidar respuestas dudosas sin marcarlas, corregirlas o respaldarlas con fuente verificable.",
     },
     "visible_text_rules": {
+        "itesca_operational_metadata": (
+            "En entregables ITESCA no imprimir bloques 'Actividad local', 'Módulo Moodle', IDs de plataforma ni "
+            "'Vencimiento publicado' en portada, cuerpo, encabezados o pies. Conservar el número académico/local "
+            "como 'Actividad N' en la identificación y el subject. IDs, URLs de entrega y vencimientos se mantienen "
+            "en planeaciones, manifiestos y registros internos. No eliminar citas pertinentes a recursos del aula "
+            "ni confundir la fecha de elaboración con el vencimiento. Revisar el texto extraído del PDF y el Word."
+        ),
         "avoid_metadiscourse": (
             "En el cuerpo final no narrar el proceso de elaboración ni mencionar la palabra 'Actividad' como sujeto del análisis; "
             "en su lugar hablar del tema, problema, concepto, cuestionario, caso, tabla o fenómeno estudiado."

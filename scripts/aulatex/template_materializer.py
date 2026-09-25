@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Any
 
 from .workspace import AulaTeXWorkspace
+from .planning_layout import subject_layout
 
 
 @dataclass(frozen=True)
@@ -51,11 +52,7 @@ class TemplateMaterializer:
         notes: list[str] = []
         artifacts: list[Path] = []
 
-        for folder in (
-            target_dir / f"referencias-{profile.slug}",
-            target_dir / f"planeaciones-{profile.slug}",
-            target_dir / f"assets-{profile.slug}",
-        ):
+        for folder in subject_layout(target_dir).values():
             folder.mkdir(parents=True, exist_ok=True)
             artifacts.append(folder)
 
@@ -145,7 +142,14 @@ Materia de la Licenciatura en Derecho de la UnADM preparada por AulaTeX.
 - `programa-analitico-{profile.slug}.md`: encuadre editorial de la materia.
 - `planeaciones-{profile.slug}/`: planeaciones y consignas.
 - `referencias-{profile.slug}/`: fuentes, lecturas y documentos de apoyo.
+- `referencias-{profile.slug}/notas-{profile.slug}/`: notas por unidad o actividad.
 - `assets-{profile.slug}/`: imagenes o evidencias visuales especificas.
+- `extractor-aulatex/`: extracciones y fichas documentales.
+- `investigacion-aulatex/`: analisis y evidencias de investigacion.
+
+Los materiales academicos se conservan dentro de la materia y son versionables.
+No se crean exclusiones Git ni se desvian a data/private. Credenciales y secretos
+no son materiales academicos y nunca deben incluirse en estas salidas.
 
 ## Control editorial
 
@@ -771,8 +775,11 @@ con fuentes institucionales, normativas y academicas verificables \\citep{{{cita
             ],
             "folders": [
                 f"referencias-{profile.slug}",
+              f"referencias-{profile.slug}/notas-{profile.slug}",
                 f"planeaciones-{profile.slug}",
                 f"assets-{profile.slug}",
+              "extractor-aulatex",
+              "investigacion-aulatex",
             ],
             "memory_summary": self._memory_list(memory, "summary", 8),
         }

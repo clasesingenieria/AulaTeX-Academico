@@ -120,6 +120,11 @@ def build_parser() -> argparse.ArgumentParser:
     gui.add_argument("--diagnostics", action="store_true", help="Enable diagnostic metrics and performance views.")
     sub.add_parser("agent-patterns", help="List the agentic patterns integrated in AulaTeX.")
 
+    planning = sub.add_parser("generar-planeaciones", help="Normalizar planeaciones JSON en carpetas versionables de la materia; sin generación pedagógica automática.")
+    planning.add_argument("target", help="Carpeta existente de la materia.")
+    planning.add_argument("--source", required=True, help="Modelo JSON revisado con activity o activities y sus fuentes.")
+    planning.add_argument("--index-name", default="README.md", help="Nombre del índice generado; permite conservar un README por unidades.")
+
     env_cmd = sub.add_parser("llm-env", help="Show AulaTeX LLM credential status without secrets.")
 
     check = sub.add_parser("llm-check", help="Check configured AulaTeX LLM engines.")
@@ -419,6 +424,16 @@ def main(argv: list[str] | None = None) -> None:
         from .gui import main as gui_main
 
         gui_main(diagnostics_enabled=bool(getattr(args, "diagnostics", False)))
+        return
+
+    if args.command == "generar-planeaciones":
+        from .planning_layout import generate_plans
+
+        try:
+            artifacts = generate_plans(Path(args.target), Path(args.source), index_name=args.index_name)
+        except (ValueError, OSError) as error:
+            parser.error(str(error))
+        print(json.dumps({"artifacts": [str(path) for path in artifacts], "mode": "normalizar_modelo_aportado"}, ensure_ascii=False, indent=2))
         return
 
     if args.command == "agent-patterns":
