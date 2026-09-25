@@ -1,0 +1,1434 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=1in}
+\begin{document}
+\title{Soluciones: Segundo Laboratorio \ Álgebra Lineal — EJ 25}
+\author{Equipo}\date{}
+\maketitle
+\section*{Sistema I.a}
+Coeficientes y vector independiente:
+\[\left( \begin{pmatrix}-1 & -5 & 4 \\ 7 & -3 & 5 \\ -4 & -5 & 6\end{pmatrix}\right) \,, \quad \begin{pmatrix}21 \\ 0 \\ 29\end{pmatrix}\]
+\subsection*{Método de Gauss (eliminación hacia adelante)}
+Matriz aumentada inicial:
+\[\begin{pmatrix}-1 & -5 & 4 & 21 \\ 7 & -3 & 5 & 0 \\ -4 & -5 & 6 & 29\end{pmatrix}\]
+Operaciones y sustituciones:
+\begin{center}
+\begin{tabular}{ccc}
+\begin{tabular}{c} $\xrightarrow{{-1F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & 5 & -4 & -21 \\ 7 & -3 & 5 & 0 \\ -4 & -5 & 6 & 29\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{2} + (-7)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & 5 & -4 & -21 \\ 0 & -38 & 33 & 147 \\ -4 & -5 & 6 & 29\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{3} + (4)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & 5 & -4 & -21 \\ 0 & -38 & 33 & 147 \\ 0 & 15 & -10 & -55\end{pmatrix}$ \end{tabular} \\
+\begin{tabular}{c} $\xrightarrow{{\frac{-1}{38}F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & 5 & -4 & -21 \\ 0 & 1 & \frac{-33}{38} & \frac{-147}{38} \\ 0 & 15 & -10 & -55\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{3} + (-15)F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & 5 & -4 & -21 \\ 0 & 1 & \frac{-33}{38} & \frac{-147}{38} \\ 0 & 0 & \frac{115}{38} & \frac{115}{38}\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{\frac{38}{115}F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & 5 & -4 & -21 \\ 0 & 1 & \frac{-33}{38} & \frac{-147}{38} \\ 0 & 0 & 1 & 1\end{pmatrix}$ \end{tabular} \\
+\end{tabular}
+\end{center}
+Matriz tras eliminación (forma escalonada aproximada):
+\[\begin{pmatrix}1 & 5 & -4 & -21 \\ 0 & 1 & \frac{-33}{38} & \frac{-147}{38} \\ 0 & 0 & 1 & 1\end{pmatrix}\]
+\subsection*{Regla de Cramer}
+Cálculo detallado del determinante por cofactores:
+Expansión por cofactores de $\det(A)$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-3 & 5 \\ -5 & 6\end{pmatrix}\]
+\[\det(A_{1,1}) = (-3)(6) - (5)(-5) = 7\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -1 \cdot 7 = -7 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}7 & 5 \\ -4 & 6\end{pmatrix}\]
+\[\det(A_{1,2}) = (7)(6) - (5)(-4) = 62\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ -5 \cdot 62 = 310 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}7 & -3 \\ -4 & -5\end{pmatrix}\]
+\[\det(A_{1,3}) = (7)(-5) - (-3)(-4) = -47\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ 4 \cdot -47 = -188 $
+Suma de términos:
+\[\det(A) = -7 + 310 - 188 = 115\]
+Detalle de $\det(A_{1})$:
+Expansión por cofactores de $\det(A_{1})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-3 & 5 \\ -5 & 6\end{pmatrix}\]
+\[\det(A_{1,1}) = (-3)(6) - (5)(-5) = 7\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 21 \cdot 7 = 147 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}0 & 5 \\ 29 & 6\end{pmatrix}\]
+\[\det(A_{1,2}) = (0)(6) - (5)(29) = -145\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ -5 \cdot -145 = -725 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}0 & -3 \\ 29 & -5\end{pmatrix}\]
+\[\det(A_{1,3}) = (0)(-5) - (-3)(29) = 87\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ 4 \cdot 87 = 348 $
+Suma de términos:
+\[\det(A_{1}) = 147 - 725 + 348 = -230\]
+Detalle de $\det(A_{2})$:
+Expansión por cofactores de $\det(A_{2})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}0 & 5 \\ 29 & 6\end{pmatrix}\]
+\[\det(A_{1,1}) = (0)(6) - (5)(29) = -145\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -1 \cdot -145 = 145 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}7 & 5 \\ -4 & 6\end{pmatrix}\]
+\[\det(A_{1,2}) = (7)(6) - (5)(-4) = 62\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 21 \cdot 62 = -1302 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}7 & 0 \\ -4 & 29\end{pmatrix}\]
+\[\det(A_{1,3}) = (7)(29) - (0)(-4) = 203\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ 4 \cdot 203 = 812 $
+Suma de términos:
+\[\det(A_{2}) = 145 - 1302 + 812 = -345\]
+Detalle de $\det(A_{3})$:
+Expansión por cofactores de $\det(A_{3})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-3 & 0 \\ -5 & 29\end{pmatrix}\]
+\[\det(A_{1,1}) = (-3)(29) - (0)(-5) = -87\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -1 \cdot -87 = 87 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}7 & 0 \\ -4 & 29\end{pmatrix}\]
+\[\det(A_{1,2}) = (7)(29) - (0)(-4) = 203\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ -5 \cdot 203 = 1015 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}7 & -3 \\ -4 & -5\end{pmatrix}\]
+\[\det(A_{1,3}) = (7)(-5) - (-3)(-4) = -47\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ 21 \cdot -47 = -987 $
+Suma de términos:
+\[\det(A_{3}) = 87 + 1015 - 987 = 115\]
+Valores mediante Cramer:
+\[x_1 = -230/115 = -2\quad x_2 = -345/115 = -3\quad x_3 = 115/115 = 1\]
+\subsection*{Gauss-Jordan (reducción por filas)}
+Operaciones y sustituciones (Gauss-Jordan):
+Operaciones y sustituciones (Gauss-Jordan):
+\begin{center}
+\begin{tabular}{ccc}
+\begin{tabular}{c} $\xrightarrow{{-1F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & 5 & -4 & -21 \\ 7 & -3 & 5 & 0 \\ -4 & -5 & 6 & 29\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{2} + (-7)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & 5 & -4 & -21 \\ 0 & -38 & 33 & 147 \\ -4 & -5 & 6 & 29\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{3} + (4)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & 5 & -4 & -21 \\ 0 & -38 & 33 & 147 \\ 0 & 15 & -10 & -55\end{pmatrix}$ \end{tabular} \\
+\begin{tabular}{c} $\xrightarrow{{\frac{-1}{38}F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & 5 & -4 & -21 \\ 0 & 1 & \frac{-33}{38} & \frac{-147}{38} \\ 0 & 15 & -10 & -55\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{1} + (-5)F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & \frac{13}{38} & \frac{-63}{38} \\ 0 & 1 & \frac{-33}{38} & \frac{-147}{38} \\ 0 & 15 & -10 & -55\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{3} + (-15)F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & \frac{13}{38} & \frac{-63}{38} \\ 0 & 1 & \frac{-33}{38} & \frac{-147}{38} \\ 0 & 0 & \frac{115}{38} & \frac{115}{38}\end{pmatrix}$ \end{tabular} \\
+\begin{tabular}{c} $\xrightarrow{{\frac{38}{115}F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & \frac{13}{38} & \frac{-63}{38} \\ 0 & 1 & \frac{-33}{38} & \frac{-147}{38} \\ 0 & 0 & 1 & 1\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{1} + (\frac{-13}{38})F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & 0 & -2 \\ 0 & 1 & \frac{-33}{38} & \frac{-147}{38} \\ 0 & 0 & 1 & 1\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{2} + (\frac{33}{38})F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & 0 & -2 \\ 0 & 1 & 0 & -3 \\ 0 & 0 & 1 & 1\end{pmatrix}$ \end{tabular} \\
+\end{tabular}
+\end{center}
+Matriz en forma reducida por filas:
+\[\begin{pmatrix}1 & 0 & 0 & -2 \\ 0 & 1 & 0 & -3 \\ 0 & 0 & 1 & 1\end{pmatrix}\]
+Solución:
+\[x_1 = -2,\quad x_2 = -3,\quad x_3 = 1\]
+\section*{Sistema I.b}
+Coeficientes y vector independiente:
+\[\left( \begin{pmatrix}5 & -6 & -7 \\ -1 & -1 & -4 \\ -1 & 2 & 6\end{pmatrix}\right) \,, \quad \begin{pmatrix}10 \\ 27 \\ -31\end{pmatrix}\]
+\subsection*{Método de Gauss (eliminación hacia adelante)}
+Matriz aumentada inicial:
+\[\begin{pmatrix}5 & -6 & -7 & 10 \\ -1 & -1 & -4 & 27 \\ -1 & 2 & 6 & -31\end{pmatrix}\]
+Operaciones y sustituciones:
+\begin{center}
+\begin{tabular}{ccc}
+\begin{tabular}{c} $\xrightarrow{{\frac{1}{5}F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{-6}{5} & \frac{-7}{5} & 2 \\ -1 & -1 & -4 & 27 \\ -1 & 2 & 6 & -31\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{2} + (1)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{-6}{5} & \frac{-7}{5} & 2 \\ 0 & \frac{-11}{5} & \frac{-27}{5} & 29 \\ -1 & 2 & 6 & -31\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{3} + (1)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{-6}{5} & \frac{-7}{5} & 2 \\ 0 & \frac{-11}{5} & \frac{-27}{5} & 29 \\ 0 & \frac{4}{5} & \frac{23}{5} & -29\end{pmatrix}$ \end{tabular} \\
+\begin{tabular}{c} $\xrightarrow{{\frac{-5}{11}F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{-6}{5} & \frac{-7}{5} & 2 \\ 0 & 1 & \frac{27}{11} & \frac{-145}{11} \\ 0 & \frac{4}{5} & \frac{23}{5} & -29\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{3} + (\frac{-4}{5})F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{-6}{5} & \frac{-7}{5} & 2 \\ 0 & 1 & \frac{27}{11} & \frac{-145}{11} \\ 0 & 0 & \frac{29}{11} & \frac{-203}{11}\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{\frac{11}{29}F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{-6}{5} & \frac{-7}{5} & 2 \\ 0 & 1 & \frac{27}{11} & \frac{-145}{11} \\ 0 & 0 & 1 & -7\end{pmatrix}$ \end{tabular} \\
+\end{tabular}
+\end{center}
+Matriz tras eliminación (forma escalonada aproximada):
+\[\begin{pmatrix}1 & \frac{-6}{5} & \frac{-7}{5} & 2 \\ 0 & 1 & \frac{27}{11} & \frac{-145}{11} \\ 0 & 0 & 1 & -7\end{pmatrix}\]
+\subsection*{Regla de Cramer}
+Cálculo detallado del determinante por cofactores:
+Expansión por cofactores de $\det(A)$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-1 & -4 \\ 2 & 6\end{pmatrix}\]
+\[\det(A_{1,1}) = (-1)(6) - (-4)(2) = 2\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 5 \cdot 2 = 10 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-1 & -4 \\ -1 & 6\end{pmatrix}\]
+\[\det(A_{1,2}) = (-1)(6) - (-4)(-1) = -10\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ -6 \cdot -10 = -60 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-1 & -1 \\ -1 & 2\end{pmatrix}\]
+\[\det(A_{1,3}) = (-1)(2) - (-1)(-1) = -3\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -7 \cdot -3 = 21 $
+Suma de términos:
+\[\det(A) = 10 - 60 + 21 = -29\]
+Detalle de $\det(A_{1})$:
+Expansión por cofactores de $\det(A_{1})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-1 & -4 \\ 2 & 6\end{pmatrix}\]
+\[\det(A_{1,1}) = (-1)(6) - (-4)(2) = 2\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 10 \cdot 2 = 20 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}27 & -4 \\ -31 & 6\end{pmatrix}\]
+\[\det(A_{1,2}) = (27)(6) - (-4)(-31) = 38\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ -6 \cdot 38 = 228 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}27 & -1 \\ -31 & 2\end{pmatrix}\]
+\[\det(A_{1,3}) = (27)(2) - (-1)(-31) = 23\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -7 \cdot 23 = -161 $
+Suma de términos:
+\[\det(A_{1}) = 20 + 228 - 161 = 87\]
+Detalle de $\det(A_{2})$:
+Expansión por cofactores de $\det(A_{2})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}27 & -4 \\ -31 & 6\end{pmatrix}\]
+\[\det(A_{1,1}) = (27)(6) - (-4)(-31) = 38\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 5 \cdot 38 = 190 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-1 & -4 \\ -1 & 6\end{pmatrix}\]
+\[\det(A_{1,2}) = (-1)(6) - (-4)(-1) = -10\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 10 \cdot -10 = 100 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-1 & 27 \\ -1 & -31\end{pmatrix}\]
+\[\det(A_{1,3}) = (-1)(-31) - (27)(-1) = 58\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -7 \cdot 58 = -406 $
+Suma de términos:
+\[\det(A_{2}) = 190 + 100 - 406 = -116\]
+Detalle de $\det(A_{3})$:
+Expansión por cofactores de $\det(A_{3})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-1 & 27 \\ 2 & -31\end{pmatrix}\]
+\[\det(A_{1,1}) = (-1)(-31) - (27)(2) = -23\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 5 \cdot -23 = -115 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-1 & 27 \\ -1 & -31\end{pmatrix}\]
+\[\det(A_{1,2}) = (-1)(-31) - (27)(-1) = 58\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ -6 \cdot 58 = 348 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-1 & -1 \\ -1 & 2\end{pmatrix}\]
+\[\det(A_{1,3}) = (-1)(2) - (-1)(-1) = -3\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ 10 \cdot -3 = -30 $
+Suma de términos:
+\[\det(A_{3}) = -115 + 348 - 30 = 203\]
+Valores mediante Cramer:
+\[x_1 = 87/-29 = -3\quad x_2 = -116/-29 = 4\quad x_3 = 203/-29 = -7\]
+\subsection*{Gauss-Jordan (reducción por filas)}
+Operaciones y sustituciones (Gauss-Jordan):
+Operaciones y sustituciones (Gauss-Jordan):
+\begin{center}
+\begin{tabular}{ccc}
+\begin{tabular}{c} $\xrightarrow{{\frac{1}{5}F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{-6}{5} & \frac{-7}{5} & 2 \\ -1 & -1 & -4 & 27 \\ -1 & 2 & 6 & -31\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{2} + (1)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{-6}{5} & \frac{-7}{5} & 2 \\ 0 & \frac{-11}{5} & \frac{-27}{5} & 29 \\ -1 & 2 & 6 & -31\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{3} + (1)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{-6}{5} & \frac{-7}{5} & 2 \\ 0 & \frac{-11}{5} & \frac{-27}{5} & 29 \\ 0 & \frac{4}{5} & \frac{23}{5} & -29\end{pmatrix}$ \end{tabular} \\
+\begin{tabular}{c} $\xrightarrow{{\frac{-5}{11}F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{-6}{5} & \frac{-7}{5} & 2 \\ 0 & 1 & \frac{27}{11} & \frac{-145}{11} \\ 0 & \frac{4}{5} & \frac{23}{5} & -29\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{1} + (\frac{6}{5})F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & \frac{17}{11} & \frac{-152}{11} \\ 0 & 1 & \frac{27}{11} & \frac{-145}{11} \\ 0 & \frac{4}{5} & \frac{23}{5} & -29\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{3} + (\frac{-4}{5})F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & \frac{17}{11} & \frac{-152}{11} \\ 0 & 1 & \frac{27}{11} & \frac{-145}{11} \\ 0 & 0 & \frac{29}{11} & \frac{-203}{11}\end{pmatrix}$ \end{tabular} \\
+\begin{tabular}{c} $\xrightarrow{{\frac{11}{29}F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & \frac{17}{11} & \frac{-152}{11} \\ 0 & 1 & \frac{27}{11} & \frac{-145}{11} \\ 0 & 0 & 1 & -7\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{1} + (\frac{-17}{11})F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & 0 & -3 \\ 0 & 1 & \frac{27}{11} & \frac{-145}{11} \\ 0 & 0 & 1 & -7\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{2} + (\frac{-27}{11})F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & 0 & -3 \\ 0 & 1 & 0 & 4 \\ 0 & 0 & 1 & -7\end{pmatrix}$ \end{tabular} \\
+\end{tabular}
+\end{center}
+Matriz en forma reducida por filas:
+\[\begin{pmatrix}1 & 0 & 0 & -3 \\ 0 & 1 & 0 & 4 \\ 0 & 0 & 1 & -7\end{pmatrix}\]
+Solución:
+\[x_1 = -3,\quad x_2 = 4,\quad x_3 = -7\]
+\section*{Sistema I.c}
+Coeficientes y vector independiente:
+\[\left( \begin{pmatrix}-2 & -2 & 1 \\ -3 & -1 & 0 \\ -3 & -3 & 1\end{pmatrix}\right) \,, \quad \begin{pmatrix}3 \\ 3 \\ -1\end{pmatrix}\]
+\subsection*{Método de Gauss (eliminación hacia adelante)}
+Matriz aumentada inicial:
+\[\begin{pmatrix}-2 & -2 & 1 & 3 \\ -3 & -1 & 0 & 3 \\ -3 & -3 & 1 & -1\end{pmatrix}\]
+Operaciones y sustituciones:
+\begin{center}
+\begin{tabular}{ccc}
+\begin{tabular}{c} $\xrightarrow{{\frac{-1}{2}F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & 1 & \frac{-1}{2} & \frac{-3}{2} \\ -3 & -1 & 0 & 3 \\ -3 & -3 & 1 & -1\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{2} + (3)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & 1 & \frac{-1}{2} & \frac{-3}{2} \\ 0 & 2 & \frac{-3}{2} & \frac{-3}{2} \\ -3 & -3 & 1 & -1\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{3} + (3)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & 1 & \frac{-1}{2} & \frac{-3}{2} \\ 0 & 2 & \frac{-3}{2} & \frac{-3}{2} \\ 0 & 0 & \frac{-1}{2} & \frac{-11}{2}\end{pmatrix}$ \end{tabular} \\
+\begin{tabular}{c} $\xrightarrow{{\frac{1}{2}F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & 1 & \frac{-1}{2} & \frac{-3}{2} \\ 0 & 1 & \frac{-3}{4} & \frac{-3}{4} \\ 0 & 0 & \frac{-1}{2} & \frac{-11}{2}\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{-2F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & 1 & \frac{-1}{2} & \frac{-3}{2} \\ 0 & 1 & \frac{-3}{4} & \frac{-3}{4} \\ 0 & 0 & 1 & 11\end{pmatrix}$ \end{tabular} &  \\
+\end{tabular}
+\end{center}
+Matriz tras eliminación (forma escalonada aproximada):
+\[\begin{pmatrix}1 & 1 & \frac{-1}{2} & \frac{-3}{2} \\ 0 & 1 & \frac{-3}{4} & \frac{-3}{4} \\ 0 & 0 & 1 & 11\end{pmatrix}\]
+\subsection*{Regla de Cramer}
+Cálculo detallado del determinante por cofactores:
+Expansión por cofactores de $\det(A)$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-1 & 0 \\ -3 & 1\end{pmatrix}\]
+\[\det(A_{1,1}) = (-1)(1) - (0)(-3) = -1\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -2 \cdot -1 = 2 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-3 & 0 \\ -3 & 1\end{pmatrix}\]
+\[\det(A_{1,2}) = (-3)(1) - (0)(-3) = -3\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ -2 \cdot -3 = -6 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-3 & -1 \\ -3 & -3\end{pmatrix}\]
+\[\det(A_{1,3}) = (-3)(-3) - (-1)(-3) = 6\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ 1 \cdot 6 = 6 $
+Suma de términos:
+\[\det(A) = 2 - 6 + 6 = 2\]
+Detalle de $\det(A_{1})$:
+Expansión por cofactores de $\det(A_{1})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-1 & 0 \\ -3 & 1\end{pmatrix}\]
+\[\det(A_{1,1}) = (-1)(1) - (0)(-3) = -1\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 3 \cdot -1 = -3 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}3 & 0 \\ -1 & 1\end{pmatrix}\]
+\[\det(A_{1,2}) = (3)(1) - (0)(-1) = 3\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ -2 \cdot 3 = 6 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}3 & -1 \\ -1 & -3\end{pmatrix}\]
+\[\det(A_{1,3}) = (3)(-3) - (-1)(-1) = -10\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ 1 \cdot -10 = -10 $
+Suma de términos:
+\[\det(A_{1}) = -3 + 6 - 10 = -7\]
+Detalle de $\det(A_{2})$:
+Expansión por cofactores de $\det(A_{2})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}3 & 0 \\ -1 & 1\end{pmatrix}\]
+\[\det(A_{1,1}) = (3)(1) - (0)(-1) = 3\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -2 \cdot 3 = -6 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-3 & 0 \\ -3 & 1\end{pmatrix}\]
+\[\det(A_{1,2}) = (-3)(1) - (0)(-3) = -3\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 3 \cdot -3 = 9 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-3 & 3 \\ -3 & -1\end{pmatrix}\]
+\[\det(A_{1,3}) = (-3)(-1) - (3)(-3) = 12\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ 1 \cdot 12 = 12 $
+Suma de términos:
+\[\det(A_{2}) = -6 + 9 + 12 = 15\]
+Detalle de $\det(A_{3})$:
+Expansión por cofactores de $\det(A_{3})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-1 & 3 \\ -3 & -1\end{pmatrix}\]
+\[\det(A_{1,1}) = (-1)(-1) - (3)(-3) = 10\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -2 \cdot 10 = -20 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-3 & 3 \\ -3 & -1\end{pmatrix}\]
+\[\det(A_{1,2}) = (-3)(-1) - (3)(-3) = 12\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ -2 \cdot 12 = 24 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-3 & -1 \\ -3 & -3\end{pmatrix}\]
+\[\det(A_{1,3}) = (-3)(-3) - (-1)(-3) = 6\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ 3 \cdot 6 = 18 $
+Suma de términos:
+\[\det(A_{3}) = -20 + 24 + 18 = 22\]
+Valores mediante Cramer:
+\[x_1 = -7/2 = \frac{-7}{2}\quad x_2 = 15/2 = \frac{15}{2}\quad x_3 = 22/2 = 11\]
+\subsection*{Gauss-Jordan (reducción por filas)}
+Operaciones y sustituciones (Gauss-Jordan):
+Operaciones y sustituciones (Gauss-Jordan):
+\begin{center}
+\begin{tabular}{ccc}
+\begin{tabular}{c} $\xrightarrow{{\frac{-1}{2}F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & 1 & \frac{-1}{2} & \frac{-3}{2} \\ -3 & -1 & 0 & 3 \\ -3 & -3 & 1 & -1\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{2} + (3)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & 1 & \frac{-1}{2} & \frac{-3}{2} \\ 0 & 2 & \frac{-3}{2} & \frac{-3}{2} \\ -3 & -3 & 1 & -1\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{3} + (3)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & 1 & \frac{-1}{2} & \frac{-3}{2} \\ 0 & 2 & \frac{-3}{2} & \frac{-3}{2} \\ 0 & 0 & \frac{-1}{2} & \frac{-11}{2}\end{pmatrix}$ \end{tabular} \\
+\begin{tabular}{c} $\xrightarrow{{\frac{1}{2}F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & 1 & \frac{-1}{2} & \frac{-3}{2} \\ 0 & 1 & \frac{-3}{4} & \frac{-3}{4} \\ 0 & 0 & \frac{-1}{2} & \frac{-11}{2}\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{1} + (-1)F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & \frac{1}{4} & \frac{-3}{4} \\ 0 & 1 & \frac{-3}{4} & \frac{-3}{4} \\ 0 & 0 & \frac{-1}{2} & \frac{-11}{2}\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{-2F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & \frac{1}{4} & \frac{-3}{4} \\ 0 & 1 & \frac{-3}{4} & \frac{-3}{4} \\ 0 & 0 & 1 & 11\end{pmatrix}$ \end{tabular} \\
+\begin{tabular}{c} $\xrightarrow{{F_{1} + (\frac{-1}{4})F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & 0 & \frac{-7}{2} \\ 0 & 1 & \frac{-3}{4} & \frac{-3}{4} \\ 0 & 0 & 1 & 11\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{2} + (\frac{3}{4})F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & 0 & \frac{-7}{2} \\ 0 & 1 & 0 & \frac{15}{2} \\ 0 & 0 & 1 & 11\end{pmatrix}$ \end{tabular} &  \\
+\end{tabular}
+\end{center}
+Matriz en forma reducida por filas:
+\[\begin{pmatrix}1 & 0 & 0 & \frac{-7}{2} \\ 0 & 1 & 0 & \frac{15}{2} \\ 0 & 0 & 1 & 11\end{pmatrix}\]
+Solución:
+\[x_1 = -7/2,\quad x_2 = 15/2,\quad x_3 = 11\]
+\section*{Sistema I.d}
+Coeficientes y vector independiente:
+\[\left( \begin{pmatrix}-4 & 2 & 4 & 1 \\ 4 & -1 & 1 & -4 \\ 5 & -5 & -5 & -3 \\ -2 & -2 & 3 & -5\end{pmatrix}\right) \,, \quad \begin{pmatrix}-6 \\ 19 \\ 6 \\ 3\end{pmatrix}\]
+\subsection*{Método de Gauss (eliminación hacia adelante)}
+Matriz aumentada inicial:
+\[\begin{pmatrix}-4 & 2 & 4 & 1 & -6 \\ 4 & -1 & 1 & -4 & 19 \\ 5 & -5 & -5 & -3 & 6 \\ -2 & -2 & 3 & -5 & 3\end{pmatrix}\]
+Operaciones y sustituciones:
+\begin{center}
+\begin{tabular}{ccc}
+\begin{tabular}{c} $\xrightarrow{{\frac{-1}{4}F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{-1}{2} & -1 & \frac{-1}{4} & \frac{3}{2} \\ 4 & -1 & 1 & -4 & 19 \\ 5 & -5 & -5 & -3 & 6 \\ -2 & -2 & 3 & -5 & 3\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{2} + (-4)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{-1}{2} & -1 & \frac{-1}{4} & \frac{3}{2} \\ 0 & 1 & 5 & -3 & 13 \\ 5 & -5 & -5 & -3 & 6 \\ -2 & -2 & 3 & -5 & 3\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{3} + (-5)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{-1}{2} & -1 & \frac{-1}{4} & \frac{3}{2} \\ 0 & 1 & 5 & -3 & 13 \\ 0 & \frac{-5}{2} & 0 & \frac{-7}{4} & \frac{-3}{2} \\ -2 & -2 & 3 & -5 & 3\end{pmatrix}$ \end{tabular} \\
+\begin{tabular}{c} $\xrightarrow{{F_{4} + (2)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{-1}{2} & -1 & \frac{-1}{4} & \frac{3}{2} \\ 0 & 1 & 5 & -3 & 13 \\ 0 & \frac{-5}{2} & 0 & \frac{-7}{4} & \frac{-3}{2} \\ 0 & -3 & 1 & \frac{-11}{2} & 6\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{3} + (\frac{5}{2})F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{-1}{2} & -1 & \frac{-1}{4} & \frac{3}{2} \\ 0 & 1 & 5 & -3 & 13 \\ 0 & 0 & \frac{25}{2} & \frac{-37}{4} & 31 \\ 0 & -3 & 1 & \frac{-11}{2} & 6\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{4} + (3)F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{-1}{2} & -1 & \frac{-1}{4} & \frac{3}{2} \\ 0 & 1 & 5 & -3 & 13 \\ 0 & 0 & \frac{25}{2} & \frac{-37}{4} & 31 \\ 0 & 0 & 16 & \frac{-29}{2} & 45\end{pmatrix}$ \end{tabular} \\
+\begin{tabular}{c} $\xrightarrow{{\frac{2}{25}F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{-1}{2} & -1 & \frac{-1}{4} & \frac{3}{2} \\ 0 & 1 & 5 & -3 & 13 \\ 0 & 0 & 1 & \frac{-37}{50} & \frac{62}{25} \\ 0 & 0 & 16 & \frac{-29}{2} & 45\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{4} + (-16)F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{-1}{2} & -1 & \frac{-1}{4} & \frac{3}{2} \\ 0 & 1 & 5 & -3 & 13 \\ 0 & 0 & 1 & \frac{-37}{50} & \frac{62}{25} \\ 0 & 0 & 0 & \frac{-133}{50} & \frac{133}{25}\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{\frac{-50}{133}F_{4}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{-1}{2} & -1 & \frac{-1}{4} & \frac{3}{2} \\ 0 & 1 & 5 & -3 & 13 \\ 0 & 0 & 1 & \frac{-37}{50} & \frac{62}{25} \\ 0 & 0 & 0 & 1 & -2\end{pmatrix}$ \end{tabular} \\
+\end{tabular}
+\end{center}
+Matriz tras eliminación (forma escalonada aproximada):
+\[\begin{pmatrix}1 & \frac{-1}{2} & -1 & \frac{-1}{4} & \frac{3}{2} \\ 0 & 1 & 5 & -3 & 13 \\ 0 & 0 & 1 & \frac{-37}{50} & \frac{62}{25} \\ 0 & 0 & 0 & 1 & -2\end{pmatrix}\]
+\subsection*{Regla de Cramer}
+Cálculo detallado del determinante por cofactores:
+Expansión por cofactores de $\det(A)$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-1 & 1 & -4 \\ -5 & -5 & -3 \\ -2 & 3 & -5\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,1})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-5 & -3 \\ 3 & -5\end{pmatrix}\]
+\[\det(A_{1,1}) = (-5)(-5) - (-3)(3) = 34\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -1 \cdot 34 = -34 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-5 & -3 \\ -2 & -5\end{pmatrix}\]
+\[\det(A_{1,2}) = (-5)(-5) - (-3)(-2) = 19\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 1 \cdot 19 = -19 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-5 & -5 \\ -2 & 3\end{pmatrix}\]
+\[\det(A_{1,3}) = (-5)(3) - (-5)(-2) = -25\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -4 \cdot -25 = 100 $
+Suma de términos:
+\[\det(A_{1,1}) = -34 - 19 + 100 = 47\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -4 \cdot 47 = -188 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}4 & 1 & -4 \\ 5 & -5 & -3 \\ -2 & 3 & -5\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,2})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-5 & -3 \\ 3 & -5\end{pmatrix}\]
+\[\det(A_{1,1}) = (-5)(-5) - (-3)(3) = 34\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 4 \cdot 34 = 136 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}5 & -3 \\ -2 & -5\end{pmatrix}\]
+\[\det(A_{1,2}) = (5)(-5) - (-3)(-2) = -31\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 1 \cdot -31 = 31 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}5 & -5 \\ -2 & 3\end{pmatrix}\]
+\[\det(A_{1,3}) = (5)(3) - (-5)(-2) = 5\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -4 \cdot 5 = -20 $
+Suma de términos:
+\[\det(A_{1,2}) = 136 + 31 - 20 = 147\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 2 \cdot 147 = -294 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}4 & -1 & -4 \\ 5 & -5 & -3 \\ -2 & -2 & -5\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,3})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-5 & -3 \\ -2 & -5\end{pmatrix}\]
+\[\det(A_{1,1}) = (-5)(-5) - (-3)(-2) = 19\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 4 \cdot 19 = 76 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}5 & -3 \\ -2 & -5\end{pmatrix}\]
+\[\det(A_{1,2}) = (5)(-5) - (-3)(-2) = -31\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ -1 \cdot -31 = -31 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}5 & -5 \\ -2 & -2\end{pmatrix}\]
+\[\det(A_{1,3}) = (5)(-2) - (-5)(-2) = -20\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -4 \cdot -20 = 80 $
+Suma de términos:
+\[\det(A_{1,3}) = 76 - 31 + 80 = 125\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ 4 \cdot 125 = 500 $
+Matriz menor $M_{1,4}$:
+\[\begin{pmatrix}4 & -1 & 1 \\ 5 & -5 & -5 \\ -2 & -2 & 3\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,4})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-5 & -5 \\ -2 & 3\end{pmatrix}\]
+\[\det(A_{1,1}) = (-5)(3) - (-5)(-2) = -25\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 4 \cdot -25 = -100 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}5 & -5 \\ -2 & 3\end{pmatrix}\]
+\[\det(A_{1,2}) = (5)(3) - (-5)(-2) = 5\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ -1 \cdot 5 = 5 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}5 & -5 \\ -2 & -2\end{pmatrix}\]
+\[\det(A_{1,3}) = (5)(-2) - (-5)(-2) = -20\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ 1 \cdot -20 = -20 $
+Suma de términos:
+\[\det(A_{1,4}) = -100 + 5 - 20 = -115\]
+Cofactor $C_{1,4} = (-1)^{1+4} = -1$
+Término asociado: $ 1 \cdot -115 = 115 $
+Suma de términos:
+\[\det(A) = -188 - 294 + 500 + 115 = 133\]
+Detalle de $\det(A_{1})$:
+Expansión por cofactores de $\det(A_{1})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-1 & 1 & -4 \\ -5 & -5 & -3 \\ -2 & 3 & -5\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,1})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-5 & -3 \\ 3 & -5\end{pmatrix}\]
+\[\det(A_{1,1}) = (-5)(-5) - (-3)(3) = 34\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -1 \cdot 34 = -34 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-5 & -3 \\ -2 & -5\end{pmatrix}\]
+\[\det(A_{1,2}) = (-5)(-5) - (-3)(-2) = 19\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 1 \cdot 19 = -19 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-5 & -5 \\ -2 & 3\end{pmatrix}\]
+\[\det(A_{1,3}) = (-5)(3) - (-5)(-2) = -25\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -4 \cdot -25 = 100 $
+Suma de términos:
+\[\det(A_{1,1}) = -34 - 19 + 100 = 47\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -6 \cdot 47 = -282 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}19 & 1 & -4 \\ 6 & -5 & -3 \\ 3 & 3 & -5\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,2})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-5 & -3 \\ 3 & -5\end{pmatrix}\]
+\[\det(A_{1,1}) = (-5)(-5) - (-3)(3) = 34\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 19 \cdot 34 = 646 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}6 & -3 \\ 3 & -5\end{pmatrix}\]
+\[\det(A_{1,2}) = (6)(-5) - (-3)(3) = -21\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 1 \cdot -21 = 21 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}6 & -5 \\ 3 & 3\end{pmatrix}\]
+\[\det(A_{1,3}) = (6)(3) - (-5)(3) = 33\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -4 \cdot 33 = -132 $
+Suma de términos:
+\[\det(A_{1,2}) = 646 + 21 - 132 = 535\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 2 \cdot 535 = -1070 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}19 & -1 & -4 \\ 6 & -5 & -3 \\ 3 & -2 & -5\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,3})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-5 & -3 \\ -2 & -5\end{pmatrix}\]
+\[\det(A_{1,1}) = (-5)(-5) - (-3)(-2) = 19\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 19 \cdot 19 = 361 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}6 & -3 \\ 3 & -5\end{pmatrix}\]
+\[\det(A_{1,2}) = (6)(-5) - (-3)(3) = -21\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ -1 \cdot -21 = -21 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}6 & -5 \\ 3 & -2\end{pmatrix}\]
+\[\det(A_{1,3}) = (6)(-2) - (-5)(3) = 3\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -4 \cdot 3 = -12 $
+Suma de términos:
+\[\det(A_{1,3}) = 361 - 21 - 12 = 328\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ 4 \cdot 328 = 1312 $
+Matriz menor $M_{1,4}$:
+\[\begin{pmatrix}19 & -1 & 1 \\ 6 & -5 & -5 \\ 3 & -2 & 3\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,4})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-5 & -5 \\ -2 & 3\end{pmatrix}\]
+\[\det(A_{1,1}) = (-5)(3) - (-5)(-2) = -25\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 19 \cdot -25 = -475 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}6 & -5 \\ 3 & 3\end{pmatrix}\]
+\[\det(A_{1,2}) = (6)(3) - (-5)(3) = 33\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ -1 \cdot 33 = 33 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}6 & -5 \\ 3 & -2\end{pmatrix}\]
+\[\det(A_{1,3}) = (6)(-2) - (-5)(3) = 3\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ 1 \cdot 3 = 3 $
+Suma de términos:
+\[\det(A_{1,4}) = -475 + 33 + 3 = -439\]
+Cofactor $C_{1,4} = (-1)^{1+4} = -1$
+Término asociado: $ 1 \cdot -439 = 439 $
+Suma de términos:
+\[\det(A_{1}) = -282 - 1070 + 1312 + 439 = 399\]
+Detalle de $\det(A_{2})$:
+Expansión por cofactores de $\det(A_{2})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}19 & 1 & -4 \\ 6 & -5 & -3 \\ 3 & 3 & -5\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,1})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-5 & -3 \\ 3 & -5\end{pmatrix}\]
+\[\det(A_{1,1}) = (-5)(-5) - (-3)(3) = 34\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 19 \cdot 34 = 646 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}6 & -3 \\ 3 & -5\end{pmatrix}\]
+\[\det(A_{1,2}) = (6)(-5) - (-3)(3) = -21\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 1 \cdot -21 = 21 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}6 & -5 \\ 3 & 3\end{pmatrix}\]
+\[\det(A_{1,3}) = (6)(3) - (-5)(3) = 33\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -4 \cdot 33 = -132 $
+Suma de términos:
+\[\det(A_{1,1}) = 646 + 21 - 132 = 535\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -4 \cdot 535 = -2140 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}4 & 1 & -4 \\ 5 & -5 & -3 \\ -2 & 3 & -5\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,2})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-5 & -3 \\ 3 & -5\end{pmatrix}\]
+\[\det(A_{1,1}) = (-5)(-5) - (-3)(3) = 34\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 4 \cdot 34 = 136 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}5 & -3 \\ -2 & -5\end{pmatrix}\]
+\[\det(A_{1,2}) = (5)(-5) - (-3)(-2) = -31\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 1 \cdot -31 = 31 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}5 & -5 \\ -2 & 3\end{pmatrix}\]
+\[\det(A_{1,3}) = (5)(3) - (-5)(-2) = 5\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -4 \cdot 5 = -20 $
+Suma de términos:
+\[\det(A_{1,2}) = 136 + 31 - 20 = 147\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ -6 \cdot 147 = 882 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}4 & 19 & -4 \\ 5 & 6 & -3 \\ -2 & 3 & -5\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,3})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}6 & -3 \\ 3 & -5\end{pmatrix}\]
+\[\det(A_{1,1}) = (6)(-5) - (-3)(3) = -21\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 4 \cdot -21 = -84 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}5 & -3 \\ -2 & -5\end{pmatrix}\]
+\[\det(A_{1,2}) = (5)(-5) - (-3)(-2) = -31\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 19 \cdot -31 = 589 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}5 & 6 \\ -2 & 3\end{pmatrix}\]
+\[\det(A_{1,3}) = (5)(3) - (6)(-2) = 27\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -4 \cdot 27 = -108 $
+Suma de términos:
+\[\det(A_{1,3}) = -84 + 589 - 108 = 397\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ 4 \cdot 397 = 1588 $
+Matriz menor $M_{1,4}$:
+\[\begin{pmatrix}4 & 19 & 1 \\ 5 & 6 & -5 \\ -2 & 3 & 3\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,4})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}6 & -5 \\ 3 & 3\end{pmatrix}\]
+\[\det(A_{1,1}) = (6)(3) - (-5)(3) = 33\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 4 \cdot 33 = 132 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}5 & -5 \\ -2 & 3\end{pmatrix}\]
+\[\det(A_{1,2}) = (5)(3) - (-5)(-2) = 5\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 19 \cdot 5 = -95 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}5 & 6 \\ -2 & 3\end{pmatrix}\]
+\[\det(A_{1,3}) = (5)(3) - (6)(-2) = 27\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ 1 \cdot 27 = 27 $
+Suma de términos:
+\[\det(A_{1,4}) = 132 - 95 + 27 = 64\]
+Cofactor $C_{1,4} = (-1)^{1+4} = -1$
+Término asociado: $ 1 \cdot 64 = -64 $
+Suma de términos:
+\[\det(A_{2}) = -2140 + 882 + 1588 - 64 = 266\]
+Detalle de $\det(A_{3})$:
+Expansión por cofactores de $\det(A_{3})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-1 & 19 & -4 \\ -5 & 6 & -3 \\ -2 & 3 & -5\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,1})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}6 & -3 \\ 3 & -5\end{pmatrix}\]
+\[\det(A_{1,1}) = (6)(-5) - (-3)(3) = -21\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -1 \cdot -21 = 21 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-5 & -3 \\ -2 & -5\end{pmatrix}\]
+\[\det(A_{1,2}) = (-5)(-5) - (-3)(-2) = 19\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 19 \cdot 19 = -361 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-5 & 6 \\ -2 & 3\end{pmatrix}\]
+\[\det(A_{1,3}) = (-5)(3) - (6)(-2) = -3\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -4 \cdot -3 = 12 $
+Suma de términos:
+\[\det(A_{1,1}) = 21 - 361 + 12 = -328\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -4 \cdot -328 = 1312 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}4 & 19 & -4 \\ 5 & 6 & -3 \\ -2 & 3 & -5\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,2})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}6 & -3 \\ 3 & -5\end{pmatrix}\]
+\[\det(A_{1,1}) = (6)(-5) - (-3)(3) = -21\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 4 \cdot -21 = -84 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}5 & -3 \\ -2 & -5\end{pmatrix}\]
+\[\det(A_{1,2}) = (5)(-5) - (-3)(-2) = -31\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 19 \cdot -31 = 589 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}5 & 6 \\ -2 & 3\end{pmatrix}\]
+\[\det(A_{1,3}) = (5)(3) - (6)(-2) = 27\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -4 \cdot 27 = -108 $
+Suma de términos:
+\[\det(A_{1,2}) = -84 + 589 - 108 = 397\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 2 \cdot 397 = -794 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}4 & -1 & -4 \\ 5 & -5 & -3 \\ -2 & -2 & -5\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,3})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-5 & -3 \\ -2 & -5\end{pmatrix}\]
+\[\det(A_{1,1}) = (-5)(-5) - (-3)(-2) = 19\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 4 \cdot 19 = 76 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}5 & -3 \\ -2 & -5\end{pmatrix}\]
+\[\det(A_{1,2}) = (5)(-5) - (-3)(-2) = -31\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ -1 \cdot -31 = -31 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}5 & -5 \\ -2 & -2\end{pmatrix}\]
+\[\det(A_{1,3}) = (5)(-2) - (-5)(-2) = -20\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -4 \cdot -20 = 80 $
+Suma de términos:
+\[\det(A_{1,3}) = 76 - 31 + 80 = 125\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -6 \cdot 125 = -750 $
+Matriz menor $M_{1,4}$:
+\[\begin{pmatrix}4 & -1 & 19 \\ 5 & -5 & 6 \\ -2 & -2 & 3\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,4})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-5 & 6 \\ -2 & 3\end{pmatrix}\]
+\[\det(A_{1,1}) = (-5)(3) - (6)(-2) = -3\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 4 \cdot -3 = -12 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}5 & 6 \\ -2 & 3\end{pmatrix}\]
+\[\det(A_{1,2}) = (5)(3) - (6)(-2) = 27\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ -1 \cdot 27 = 27 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}5 & -5 \\ -2 & -2\end{pmatrix}\]
+\[\det(A_{1,3}) = (5)(-2) - (-5)(-2) = -20\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ 19 \cdot -20 = -380 $
+Suma de términos:
+\[\det(A_{1,4}) = -12 + 27 - 380 = -365\]
+Cofactor $C_{1,4} = (-1)^{1+4} = -1$
+Término asociado: $ 1 \cdot -365 = 365 $
+Suma de términos:
+\[\det(A_{3}) = 1312 - 794 - 750 + 365 = 133\]
+Detalle de $\det(A_{4})$:
+Expansión por cofactores de $\det(A_{4})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-1 & 1 & 19 \\ -5 & -5 & 6 \\ -2 & 3 & 3\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,1})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-5 & 6 \\ 3 & 3\end{pmatrix}\]
+\[\det(A_{1,1}) = (-5)(3) - (6)(3) = -33\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -1 \cdot -33 = 33 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-5 & 6 \\ -2 & 3\end{pmatrix}\]
+\[\det(A_{1,2}) = (-5)(3) - (6)(-2) = -3\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 1 \cdot -3 = 3 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-5 & -5 \\ -2 & 3\end{pmatrix}\]
+\[\det(A_{1,3}) = (-5)(3) - (-5)(-2) = -25\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ 19 \cdot -25 = -475 $
+Suma de términos:
+\[\det(A_{1,1}) = 33 + 3 - 475 = -439\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -4 \cdot -439 = 1756 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}4 & 1 & 19 \\ 5 & -5 & 6 \\ -2 & 3 & 3\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,2})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-5 & 6 \\ 3 & 3\end{pmatrix}\]
+\[\det(A_{1,1}) = (-5)(3) - (6)(3) = -33\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 4 \cdot -33 = -132 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}5 & 6 \\ -2 & 3\end{pmatrix}\]
+\[\det(A_{1,2}) = (5)(3) - (6)(-2) = 27\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 1 \cdot 27 = -27 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}5 & -5 \\ -2 & 3\end{pmatrix}\]
+\[\det(A_{1,3}) = (5)(3) - (-5)(-2) = 5\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ 19 \cdot 5 = 95 $
+Suma de términos:
+\[\det(A_{1,2}) = -132 - 27 + 95 = -64\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 2 \cdot -64 = 128 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}4 & -1 & 19 \\ 5 & -5 & 6 \\ -2 & -2 & 3\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,3})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-5 & 6 \\ -2 & 3\end{pmatrix}\]
+\[\det(A_{1,1}) = (-5)(3) - (6)(-2) = -3\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 4 \cdot -3 = -12 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}5 & 6 \\ -2 & 3\end{pmatrix}\]
+\[\det(A_{1,2}) = (5)(3) - (6)(-2) = 27\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ -1 \cdot 27 = 27 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}5 & -5 \\ -2 & -2\end{pmatrix}\]
+\[\det(A_{1,3}) = (5)(-2) - (-5)(-2) = -20\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ 19 \cdot -20 = -380 $
+Suma de términos:
+\[\det(A_{1,3}) = -12 + 27 - 380 = -365\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ 4 \cdot -365 = -1460 $
+Matriz menor $M_{1,4}$:
+\[\begin{pmatrix}4 & -1 & 1 \\ 5 & -5 & -5 \\ -2 & -2 & 3\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,4})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-5 & -5 \\ -2 & 3\end{pmatrix}\]
+\[\det(A_{1,1}) = (-5)(3) - (-5)(-2) = -25\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 4 \cdot -25 = -100 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}5 & -5 \\ -2 & 3\end{pmatrix}\]
+\[\det(A_{1,2}) = (5)(3) - (-5)(-2) = 5\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ -1 \cdot 5 = 5 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}5 & -5 \\ -2 & -2\end{pmatrix}\]
+\[\det(A_{1,3}) = (5)(-2) - (-5)(-2) = -20\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ 1 \cdot -20 = -20 $
+Suma de términos:
+\[\det(A_{1,4}) = -100 + 5 - 20 = -115\]
+Cofactor $C_{1,4} = (-1)^{1+4} = -1$
+Término asociado: $ -6 \cdot -115 = -690 $
+Suma de términos:
+\[\det(A_{4}) = 1756 + 128 - 1460 - 690 = -266\]
+Valores mediante Cramer:
+\[x_1 = 399/133 = 3\quad x_2 = 266/133 = 2\quad x_3 = 133/133 = 1\quad x_4 = -266/133 = -2\]
+\subsection*{Gauss-Jordan (reducción por filas)}
+Operaciones y sustituciones (Gauss-Jordan):
+Operaciones y sustituciones (Gauss-Jordan):
+\begin{center}
+\begin{tabular}{ccc}
+\begin{tabular}{c} $\xrightarrow{{\frac{-1}{4}F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{-1}{2} & -1 & \frac{-1}{4} & \frac{3}{2} \\ 4 & -1 & 1 & -4 & 19 \\ 5 & -5 & -5 & -3 & 6 \\ -2 & -2 & 3 & -5 & 3\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{2} + (-4)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{-1}{2} & -1 & \frac{-1}{4} & \frac{3}{2} \\ 0 & 1 & 5 & -3 & 13 \\ 5 & -5 & -5 & -3 & 6 \\ -2 & -2 & 3 & -5 & 3\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{3} + (-5)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{-1}{2} & -1 & \frac{-1}{4} & \frac{3}{2} \\ 0 & 1 & 5 & -3 & 13 \\ 0 & \frac{-5}{2} & 0 & \frac{-7}{4} & \frac{-3}{2} \\ -2 & -2 & 3 & -5 & 3\end{pmatrix}$ \end{tabular} \\
+\begin{tabular}{c} $\xrightarrow{{F_{4} + (2)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{-1}{2} & -1 & \frac{-1}{4} & \frac{3}{2} \\ 0 & 1 & 5 & -3 & 13 \\ 0 & \frac{-5}{2} & 0 & \frac{-7}{4} & \frac{-3}{2} \\ 0 & -3 & 1 & \frac{-11}{2} & 6\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{1} + (\frac{1}{2})F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & \frac{3}{2} & \frac{-7}{4} & 8 \\ 0 & 1 & 5 & -3 & 13 \\ 0 & \frac{-5}{2} & 0 & \frac{-7}{4} & \frac{-3}{2} \\ 0 & -3 & 1 & \frac{-11}{2} & 6\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{3} + (\frac{5}{2})F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & \frac{3}{2} & \frac{-7}{4} & 8 \\ 0 & 1 & 5 & -3 & 13 \\ 0 & 0 & \frac{25}{2} & \frac{-37}{4} & 31 \\ 0 & -3 & 1 & \frac{-11}{2} & 6\end{pmatrix}$ \end{tabular} \\
+\begin{tabular}{c} $\xrightarrow{{F_{4} + (3)F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & \frac{3}{2} & \frac{-7}{4} & 8 \\ 0 & 1 & 5 & -3 & 13 \\ 0 & 0 & \frac{25}{2} & \frac{-37}{4} & 31 \\ 0 & 0 & 16 & \frac{-29}{2} & 45\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{\frac{2}{25}F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & \frac{3}{2} & \frac{-7}{4} & 8 \\ 0 & 1 & 5 & -3 & 13 \\ 0 & 0 & 1 & \frac{-37}{50} & \frac{62}{25} \\ 0 & 0 & 16 & \frac{-29}{2} & 45\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{1} + (\frac{-3}{2})F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & 0 & \frac{-16}{25} & \frac{107}{25} \\ 0 & 1 & 5 & -3 & 13 \\ 0 & 0 & 1 & \frac{-37}{50} & \frac{62}{25} \\ 0 & 0 & 16 & \frac{-29}{2} & 45\end{pmatrix}$ \end{tabular} \\
+\begin{tabular}{c} $\xrightarrow{{F_{2} + (-5)F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & 0 & \frac{-16}{25} & \frac{107}{25} \\ 0 & 1 & 0 & \frac{7}{10} & \frac{3}{5} \\ 0 & 0 & 1 & \frac{-37}{50} & \frac{62}{25} \\ 0 & 0 & 16 & \frac{-29}{2} & 45\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{4} + (-16)F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & 0 & \frac{-16}{25} & \frac{107}{25} \\ 0 & 1 & 0 & \frac{7}{10} & \frac{3}{5} \\ 0 & 0 & 1 & \frac{-37}{50} & \frac{62}{25} \\ 0 & 0 & 0 & \frac{-133}{50} & \frac{133}{25}\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{\frac{-50}{133}F_{4}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & 0 & \frac{-16}{25} & \frac{107}{25} \\ 0 & 1 & 0 & \frac{7}{10} & \frac{3}{5} \\ 0 & 0 & 1 & \frac{-37}{50} & \frac{62}{25} \\ 0 & 0 & 0 & 1 & -2\end{pmatrix}$ \end{tabular} \\
+\begin{tabular}{c} $\xrightarrow{{F_{1} + (\frac{16}{25})F_{4}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & 0 & 0 & 3 \\ 0 & 1 & 0 & \frac{7}{10} & \frac{3}{5} \\ 0 & 0 & 1 & \frac{-37}{50} & \frac{62}{25} \\ 0 & 0 & 0 & 1 & -2\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{2} + (\frac{-7}{10})F_{4}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & 0 & 0 & 3 \\ 0 & 1 & 0 & 0 & 2 \\ 0 & 0 & 1 & \frac{-37}{50} & \frac{62}{25} \\ 0 & 0 & 0 & 1 & -2\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{3} + (\frac{37}{50})F_{4}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & 0 & 0 & 3 \\ 0 & 1 & 0 & 0 & 2 \\ 0 & 0 & 1 & 0 & 1 \\ 0 & 0 & 0 & 1 & -2\end{pmatrix}$ \end{tabular} \\
+\end{tabular}
+\end{center}
+Matriz en forma reducida por filas:
+\[\begin{pmatrix}1 & 0 & 0 & 0 & 3 \\ 0 & 1 & 0 & 0 & 2 \\ 0 & 0 & 1 & 0 & 1 \\ 0 & 0 & 0 & 1 & -2\end{pmatrix}\]
+Solución:
+\[x_1 = 3,\quad x_2 = 2,\quad x_3 = 1,\quad x_4 = -2\]
+\section*{Sistema II.a}
+Coeficientes y vector independiente:
+\[\left( \begin{pmatrix}-1 & 4 & -2 \\ -3 & 5 & 0 \\ -6 & -1 & -7\end{pmatrix}\right) \,, \quad \begin{pmatrix}-23 \\ -25 \\ -63\end{pmatrix}\]
+\subsection*{Método de Gauss (eliminación hacia adelante)}
+Matriz aumentada inicial:
+\[\begin{pmatrix}-1 & 4 & -2 & -23 \\ -3 & 5 & 0 & -25 \\ -6 & -1 & -7 & -63\end{pmatrix}\]
+Operaciones y sustituciones:
+\begin{center}
+\begin{tabular}{ccc}
+\begin{tabular}{c} $\xrightarrow{{-1F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & -4 & 2 & 23 \\ -3 & 5 & 0 & -25 \\ -6 & -1 & -7 & -63\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{2} + (3)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & -4 & 2 & 23 \\ 0 & -7 & 6 & 44 \\ -6 & -1 & -7 & -63\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{3} + (6)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & -4 & 2 & 23 \\ 0 & -7 & 6 & 44 \\ 0 & -25 & 5 & 75\end{pmatrix}$ \end{tabular} \\
+\begin{tabular}{c} $\xrightarrow{{\frac{-1}{7}F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & -4 & 2 & 23 \\ 0 & 1 & \frac{-6}{7} & \frac{-44}{7} \\ 0 & -25 & 5 & 75\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{3} + (25)F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & -4 & 2 & 23 \\ 0 & 1 & \frac{-6}{7} & \frac{-44}{7} \\ 0 & 0 & \frac{-115}{7} & \frac{-575}{7}\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{\frac{-7}{115}F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & -4 & 2 & 23 \\ 0 & 1 & \frac{-6}{7} & \frac{-44}{7} \\ 0 & 0 & 1 & 5\end{pmatrix}$ \end{tabular} \\
+\end{tabular}
+\end{center}
+Matriz tras eliminación (forma escalonada aproximada):
+\[\begin{pmatrix}1 & -4 & 2 & 23 \\ 0 & 1 & \frac{-6}{7} & \frac{-44}{7} \\ 0 & 0 & 1 & 5\end{pmatrix}\]
+\subsection*{Regla de Cramer}
+Cálculo detallado del determinante por cofactores:
+Expansión por cofactores de $\det(A)$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}5 & 0 \\ -1 & -7\end{pmatrix}\]
+\[\det(A_{1,1}) = (5)(-7) - (0)(-1) = -35\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -1 \cdot -35 = 35 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-3 & 0 \\ -6 & -7\end{pmatrix}\]
+\[\det(A_{1,2}) = (-3)(-7) - (0)(-6) = 21\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 4 \cdot 21 = -84 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-3 & 5 \\ -6 & -1\end{pmatrix}\]
+\[\det(A_{1,3}) = (-3)(-1) - (5)(-6) = 33\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -2 \cdot 33 = -66 $
+Suma de términos:
+\[\det(A) = 35 - 84 - 66 = -115\]
+Detalle de $\det(A_{1})$:
+Expansión por cofactores de $\det(A_{1})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}5 & 0 \\ -1 & -7\end{pmatrix}\]
+\[\det(A_{1,1}) = (5)(-7) - (0)(-1) = -35\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -23 \cdot -35 = 805 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-25 & 0 \\ -63 & -7\end{pmatrix}\]
+\[\det(A_{1,2}) = (-25)(-7) - (0)(-63) = 175\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 4 \cdot 175 = -700 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-25 & 5 \\ -63 & -1\end{pmatrix}\]
+\[\det(A_{1,3}) = (-25)(-1) - (5)(-63) = 340\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -2 \cdot 340 = -680 $
+Suma de términos:
+\[\det(A_{1}) = 805 - 700 - 680 = -575\]
+Detalle de $\det(A_{2})$:
+Expansión por cofactores de $\det(A_{2})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-25 & 0 \\ -63 & -7\end{pmatrix}\]
+\[\det(A_{1,1}) = (-25)(-7) - (0)(-63) = 175\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -1 \cdot 175 = -175 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-3 & 0 \\ -6 & -7\end{pmatrix}\]
+\[\det(A_{1,2}) = (-3)(-7) - (0)(-6) = 21\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ -23 \cdot 21 = 483 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-3 & -25 \\ -6 & -63\end{pmatrix}\]
+\[\det(A_{1,3}) = (-3)(-63) - (-25)(-6) = 39\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -2 \cdot 39 = -78 $
+Suma de términos:
+\[\det(A_{2}) = -175 + 483 - 78 = 230\]
+Detalle de $\det(A_{3})$:
+Expansión por cofactores de $\det(A_{3})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}5 & -25 \\ -1 & -63\end{pmatrix}\]
+\[\det(A_{1,1}) = (5)(-63) - (-25)(-1) = -340\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -1 \cdot -340 = 340 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-3 & -25 \\ -6 & -63\end{pmatrix}\]
+\[\det(A_{1,2}) = (-3)(-63) - (-25)(-6) = 39\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 4 \cdot 39 = -156 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-3 & 5 \\ -6 & -1\end{pmatrix}\]
+\[\det(A_{1,3}) = (-3)(-1) - (5)(-6) = 33\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -23 \cdot 33 = -759 $
+Suma de términos:
+\[\det(A_{3}) = 340 - 156 - 759 = -575\]
+Valores mediante Cramer:
+\[x_1 = -575/-115 = 5\quad x_2 = 230/-115 = -2\quad x_3 = -575/-115 = 5\]
+\subsection*{Gauss-Jordan (reducción por filas)}
+Operaciones y sustituciones (Gauss-Jordan):
+Operaciones y sustituciones (Gauss-Jordan):
+\begin{center}
+\begin{tabular}{ccc}
+\begin{tabular}{c} $\xrightarrow{{-1F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & -4 & 2 & 23 \\ -3 & 5 & 0 & -25 \\ -6 & -1 & -7 & -63\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{2} + (3)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & -4 & 2 & 23 \\ 0 & -7 & 6 & 44 \\ -6 & -1 & -7 & -63\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{3} + (6)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & -4 & 2 & 23 \\ 0 & -7 & 6 & 44 \\ 0 & -25 & 5 & 75\end{pmatrix}$ \end{tabular} \\
+\begin{tabular}{c} $\xrightarrow{{\frac{-1}{7}F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & -4 & 2 & 23 \\ 0 & 1 & \frac{-6}{7} & \frac{-44}{7} \\ 0 & -25 & 5 & 75\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{1} + (4)F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & \frac{-10}{7} & \frac{-15}{7} \\ 0 & 1 & \frac{-6}{7} & \frac{-44}{7} \\ 0 & -25 & 5 & 75\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{3} + (25)F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & \frac{-10}{7} & \frac{-15}{7} \\ 0 & 1 & \frac{-6}{7} & \frac{-44}{7} \\ 0 & 0 & \frac{-115}{7} & \frac{-575}{7}\end{pmatrix}$ \end{tabular} \\
+\begin{tabular}{c} $\xrightarrow{{\frac{-7}{115}F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & \frac{-10}{7} & \frac{-15}{7} \\ 0 & 1 & \frac{-6}{7} & \frac{-44}{7} \\ 0 & 0 & 1 & 5\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{1} + (\frac{10}{7})F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & 0 & 5 \\ 0 & 1 & \frac{-6}{7} & \frac{-44}{7} \\ 0 & 0 & 1 & 5\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{2} + (\frac{6}{7})F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & 0 & 5 \\ 0 & 1 & 0 & -2 \\ 0 & 0 & 1 & 5\end{pmatrix}$ \end{tabular} \\
+\end{tabular}
+\end{center}
+Matriz en forma reducida por filas:
+\[\begin{pmatrix}1 & 0 & 0 & 5 \\ 0 & 1 & 0 & -2 \\ 0 & 0 & 1 & 5\end{pmatrix}\]
+Solución:
+\[x_1 = 5,\quad x_2 = -2,\quad x_3 = 5\]
+\section*{Sistema II.b}
+Coeficientes y vector independiente:
+\[\left( \begin{pmatrix}3 & 4 & -2 & 0 \\ -3 & 3 & 4 & -1 \\ -2 & -4 & 0 & 4 \\ -5 & 1 & 3 & 4\end{pmatrix}\right) \,, \quad \begin{pmatrix}-13 \\ -8 \\ 6 \\ -9\end{pmatrix}\]
+\subsection*{Método de Gauss (eliminación hacia adelante)}
+Matriz aumentada inicial:
+\[\begin{pmatrix}3 & 4 & -2 & 0 & -13 \\ -3 & 3 & 4 & -1 & -8 \\ -2 & -4 & 0 & 4 & 6 \\ -5 & 1 & 3 & 4 & -9\end{pmatrix}\]
+Operaciones y sustituciones:
+\begin{center}
+\begin{tabular}{ccc}
+\begin{tabular}{c} $\xrightarrow{{\frac{1}{3}F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{4}{3} & \frac{-2}{3} & 0 & \frac{-13}{3} \\ -3 & 3 & 4 & -1 & -8 \\ -2 & -4 & 0 & 4 & 6 \\ -5 & 1 & 3 & 4 & -9\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{2} + (3)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{4}{3} & \frac{-2}{3} & 0 & \frac{-13}{3} \\ 0 & 7 & 2 & -1 & -21 \\ -2 & -4 & 0 & 4 & 6 \\ -5 & 1 & 3 & 4 & -9\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{3} + (2)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{4}{3} & \frac{-2}{3} & 0 & \frac{-13}{3} \\ 0 & 7 & 2 & -1 & -21 \\ 0 & \frac{-4}{3} & \frac{-4}{3} & 4 & \frac{-8}{3} \\ -5 & 1 & 3 & 4 & -9\end{pmatrix}$ \end{tabular} \\
+\begin{tabular}{c} $\xrightarrow{{F_{4} + (5)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{4}{3} & \frac{-2}{3} & 0 & \frac{-13}{3} \\ 0 & 7 & 2 & -1 & -21 \\ 0 & \frac{-4}{3} & \frac{-4}{3} & 4 & \frac{-8}{3} \\ 0 & \frac{23}{3} & \frac{-1}{3} & 4 & \frac{-92}{3}\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{\frac{1}{7}F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{4}{3} & \frac{-2}{3} & 0 & \frac{-13}{3} \\ 0 & 1 & \frac{2}{7} & \frac{-1}{7} & -3 \\ 0 & \frac{-4}{3} & \frac{-4}{3} & 4 & \frac{-8}{3} \\ 0 & \frac{23}{3} & \frac{-1}{3} & 4 & \frac{-92}{3}\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{3} + (\frac{4}{3})F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{4}{3} & \frac{-2}{3} & 0 & \frac{-13}{3} \\ 0 & 1 & \frac{2}{7} & \frac{-1}{7} & -3 \\ 0 & 0 & \frac{-20}{21} & \frac{80}{21} & \frac{-20}{3} \\ 0 & \frac{23}{3} & \frac{-1}{3} & 4 & \frac{-92}{3}\end{pmatrix}$ \end{tabular} \\
+\begin{tabular}{c} $\xrightarrow{{F_{4} + (\frac{-23}{3})F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{4}{3} & \frac{-2}{3} & 0 & \frac{-13}{3} \\ 0 & 1 & \frac{2}{7} & \frac{-1}{7} & -3 \\ 0 & 0 & \frac{-20}{21} & \frac{80}{21} & \frac{-20}{3} \\ 0 & 0 & \frac{-53}{21} & \frac{107}{21} & \frac{-23}{3}\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{\frac{-21}{20}F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{4}{3} & \frac{-2}{3} & 0 & \frac{-13}{3} \\ 0 & 1 & \frac{2}{7} & \frac{-1}{7} & -3 \\ 0 & 0 & 1 & -4 & 7 \\ 0 & 0 & \frac{-53}{21} & \frac{107}{21} & \frac{-23}{3}\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{4} + (\frac{53}{21})F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{4}{3} & \frac{-2}{3} & 0 & \frac{-13}{3} \\ 0 & 1 & \frac{2}{7} & \frac{-1}{7} & -3 \\ 0 & 0 & 1 & -4 & 7 \\ 0 & 0 & 0 & -5 & 10\end{pmatrix}$ \end{tabular} \\
+\begin{tabular}{c} $\xrightarrow{{\frac{-1}{5}F_{4}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{4}{3} & \frac{-2}{3} & 0 & \frac{-13}{3} \\ 0 & 1 & \frac{2}{7} & \frac{-1}{7} & -3 \\ 0 & 0 & 1 & -4 & 7 \\ 0 & 0 & 0 & 1 & -2\end{pmatrix}$ \end{tabular} &  &  \\
+\end{tabular}
+\end{center}
+Matriz tras eliminación (forma escalonada aproximada):
+\[\begin{pmatrix}1 & \frac{4}{3} & \frac{-2}{3} & 0 & \frac{-13}{3} \\ 0 & 1 & \frac{2}{7} & \frac{-1}{7} & -3 \\ 0 & 0 & 1 & -4 & 7 \\ 0 & 0 & 0 & 1 & -2\end{pmatrix}\]
+\subsection*{Regla de Cramer}
+Cálculo detallado del determinante por cofactores:
+Expansión por cofactores de $\det(A)$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}3 & 4 & -1 \\ -4 & 0 & 4 \\ 1 & 3 & 4\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,1})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}0 & 4 \\ 3 & 4\end{pmatrix}\]
+\[\det(A_{1,1}) = (0)(4) - (4)(3) = -12\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 3 \cdot -12 = -36 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-4 & 4 \\ 1 & 4\end{pmatrix}\]
+\[\det(A_{1,2}) = (-4)(4) - (4)(1) = -20\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 4 \cdot -20 = 80 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-4 & 0 \\ 1 & 3\end{pmatrix}\]
+\[\det(A_{1,3}) = (-4)(3) - (0)(1) = -12\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -1 \cdot -12 = 12 $
+Suma de términos:
+\[\det(A_{1,1}) = -36 + 80 + 12 = 56\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 3 \cdot 56 = 168 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-3 & 4 & -1 \\ -2 & 0 & 4 \\ -5 & 3 & 4\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,2})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}0 & 4 \\ 3 & 4\end{pmatrix}\]
+\[\det(A_{1,1}) = (0)(4) - (4)(3) = -12\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -3 \cdot -12 = 36 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-2 & 4 \\ -5 & 4\end{pmatrix}\]
+\[\det(A_{1,2}) = (-2)(4) - (4)(-5) = 12\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 4 \cdot 12 = -48 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-2 & 0 \\ -5 & 3\end{pmatrix}\]
+\[\det(A_{1,3}) = (-2)(3) - (0)(-5) = -6\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -1 \cdot -6 = 6 $
+Suma de términos:
+\[\det(A_{1,2}) = 36 - 48 + 6 = -6\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 4 \cdot -6 = 24 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-3 & 3 & -1 \\ -2 & -4 & 4 \\ -5 & 1 & 4\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,3})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-4 & 4 \\ 1 & 4\end{pmatrix}\]
+\[\det(A_{1,1}) = (-4)(4) - (4)(1) = -20\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -3 \cdot -20 = 60 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-2 & 4 \\ -5 & 4\end{pmatrix}\]
+\[\det(A_{1,2}) = (-2)(4) - (4)(-5) = 12\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 3 \cdot 12 = -36 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-2 & -4 \\ -5 & 1\end{pmatrix}\]
+\[\det(A_{1,3}) = (-2)(1) - (-4)(-5) = -22\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -1 \cdot -22 = 22 $
+Suma de términos:
+\[\det(A_{1,3}) = 60 - 36 + 22 = 46\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -2 \cdot 46 = -92 $
+Matriz menor $M_{1,4}$:
+\[\begin{pmatrix}-3 & 3 & 4 \\ -2 & -4 & 0 \\ -5 & 1 & 3\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,4})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-4 & 0 \\ 1 & 3\end{pmatrix}\]
+\[\det(A_{1,1}) = (-4)(3) - (0)(1) = -12\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -3 \cdot -12 = 36 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-2 & 0 \\ -5 & 3\end{pmatrix}\]
+\[\det(A_{1,2}) = (-2)(3) - (0)(-5) = -6\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 3 \cdot -6 = 18 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-2 & -4 \\ -5 & 1\end{pmatrix}\]
+\[\det(A_{1,3}) = (-2)(1) - (-4)(-5) = -22\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ 4 \cdot -22 = -88 $
+Suma de términos:
+\[\det(A_{1,4}) = 36 + 18 - 88 = -34\]
+Cofactor $C_{1,4} = (-1)^{1+4} = -1$
+Término asociado: $ 0 \cdot -34 = 0 $
+Suma de términos:
+\[\det(A) = 168 + 24 - 92 + 0 = 100\]
+Detalle de $\det(A_{1})$:
+Expansión por cofactores de $\det(A_{1})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}3 & 4 & -1 \\ -4 & 0 & 4 \\ 1 & 3 & 4\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,1})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}0 & 4 \\ 3 & 4\end{pmatrix}\]
+\[\det(A_{1,1}) = (0)(4) - (4)(3) = -12\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 3 \cdot -12 = -36 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-4 & 4 \\ 1 & 4\end{pmatrix}\]
+\[\det(A_{1,2}) = (-4)(4) - (4)(1) = -20\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 4 \cdot -20 = 80 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-4 & 0 \\ 1 & 3\end{pmatrix}\]
+\[\det(A_{1,3}) = (-4)(3) - (0)(1) = -12\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -1 \cdot -12 = 12 $
+Suma de términos:
+\[\det(A_{1,1}) = -36 + 80 + 12 = 56\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -13 \cdot 56 = -728 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-8 & 4 & -1 \\ 6 & 0 & 4 \\ -9 & 3 & 4\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,2})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}0 & 4 \\ 3 & 4\end{pmatrix}\]
+\[\det(A_{1,1}) = (0)(4) - (4)(3) = -12\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -8 \cdot -12 = 96 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}6 & 4 \\ -9 & 4\end{pmatrix}\]
+\[\det(A_{1,2}) = (6)(4) - (4)(-9) = 60\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 4 \cdot 60 = -240 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}6 & 0 \\ -9 & 3\end{pmatrix}\]
+\[\det(A_{1,3}) = (6)(3) - (0)(-9) = 18\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -1 \cdot 18 = -18 $
+Suma de términos:
+\[\det(A_{1,2}) = 96 - 240 - 18 = -162\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 4 \cdot -162 = 648 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-8 & 3 & -1 \\ 6 & -4 & 4 \\ -9 & 1 & 4\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,3})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-4 & 4 \\ 1 & 4\end{pmatrix}\]
+\[\det(A_{1,1}) = (-4)(4) - (4)(1) = -20\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -8 \cdot -20 = 160 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}6 & 4 \\ -9 & 4\end{pmatrix}\]
+\[\det(A_{1,2}) = (6)(4) - (4)(-9) = 60\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 3 \cdot 60 = -180 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}6 & -4 \\ -9 & 1\end{pmatrix}\]
+\[\det(A_{1,3}) = (6)(1) - (-4)(-9) = -30\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -1 \cdot -30 = 30 $
+Suma de términos:
+\[\det(A_{1,3}) = 160 - 180 + 30 = 10\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -2 \cdot 10 = -20 $
+Matriz menor $M_{1,4}$:
+\[\begin{pmatrix}-8 & 3 & 4 \\ 6 & -4 & 0 \\ -9 & 1 & 3\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,4})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-4 & 0 \\ 1 & 3\end{pmatrix}\]
+\[\det(A_{1,1}) = (-4)(3) - (0)(1) = -12\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -8 \cdot -12 = 96 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}6 & 0 \\ -9 & 3\end{pmatrix}\]
+\[\det(A_{1,2}) = (6)(3) - (0)(-9) = 18\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 3 \cdot 18 = -54 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}6 & -4 \\ -9 & 1\end{pmatrix}\]
+\[\det(A_{1,3}) = (6)(1) - (-4)(-9) = -30\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ 4 \cdot -30 = -120 $
+Suma de términos:
+\[\det(A_{1,4}) = 96 - 54 - 120 = -78\]
+Cofactor $C_{1,4} = (-1)^{1+4} = -1$
+Término asociado: $ 0 \cdot -78 = 0 $
+Suma de términos:
+\[\det(A_{1}) = -728 + 648 - 20 + 0 = -100\]
+Detalle de $\det(A_{2})$:
+Expansión por cofactores de $\det(A_{2})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-8 & 4 & -1 \\ 6 & 0 & 4 \\ -9 & 3 & 4\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,1})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}0 & 4 \\ 3 & 4\end{pmatrix}\]
+\[\det(A_{1,1}) = (0)(4) - (4)(3) = -12\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -8 \cdot -12 = 96 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}6 & 4 \\ -9 & 4\end{pmatrix}\]
+\[\det(A_{1,2}) = (6)(4) - (4)(-9) = 60\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 4 \cdot 60 = -240 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}6 & 0 \\ -9 & 3\end{pmatrix}\]
+\[\det(A_{1,3}) = (6)(3) - (0)(-9) = 18\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -1 \cdot 18 = -18 $
+Suma de términos:
+\[\det(A_{1,1}) = 96 - 240 - 18 = -162\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 3 \cdot -162 = -486 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-3 & 4 & -1 \\ -2 & 0 & 4 \\ -5 & 3 & 4\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,2})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}0 & 4 \\ 3 & 4\end{pmatrix}\]
+\[\det(A_{1,1}) = (0)(4) - (4)(3) = -12\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -3 \cdot -12 = 36 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-2 & 4 \\ -5 & 4\end{pmatrix}\]
+\[\det(A_{1,2}) = (-2)(4) - (4)(-5) = 12\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 4 \cdot 12 = -48 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-2 & 0 \\ -5 & 3\end{pmatrix}\]
+\[\det(A_{1,3}) = (-2)(3) - (0)(-5) = -6\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -1 \cdot -6 = 6 $
+Suma de términos:
+\[\det(A_{1,2}) = 36 - 48 + 6 = -6\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ -13 \cdot -6 = -78 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-3 & -8 & -1 \\ -2 & 6 & 4 \\ -5 & -9 & 4\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,3})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}6 & 4 \\ -9 & 4\end{pmatrix}\]
+\[\det(A_{1,1}) = (6)(4) - (4)(-9) = 60\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -3 \cdot 60 = -180 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-2 & 4 \\ -5 & 4\end{pmatrix}\]
+\[\det(A_{1,2}) = (-2)(4) - (4)(-5) = 12\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ -8 \cdot 12 = 96 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-2 & 6 \\ -5 & -9\end{pmatrix}\]
+\[\det(A_{1,3}) = (-2)(-9) - (6)(-5) = 48\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -1 \cdot 48 = -48 $
+Suma de términos:
+\[\det(A_{1,3}) = -180 + 96 - 48 = -132\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -2 \cdot -132 = 264 $
+Matriz menor $M_{1,4}$:
+\[\begin{pmatrix}-3 & -8 & 4 \\ -2 & 6 & 0 \\ -5 & -9 & 3\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,4})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}6 & 0 \\ -9 & 3\end{pmatrix}\]
+\[\det(A_{1,1}) = (6)(3) - (0)(-9) = 18\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -3 \cdot 18 = -54 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-2 & 0 \\ -5 & 3\end{pmatrix}\]
+\[\det(A_{1,2}) = (-2)(3) - (0)(-5) = -6\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ -8 \cdot -6 = -48 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-2 & 6 \\ -5 & -9\end{pmatrix}\]
+\[\det(A_{1,3}) = (-2)(-9) - (6)(-5) = 48\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ 4 \cdot 48 = 192 $
+Suma de términos:
+\[\det(A_{1,4}) = -54 - 48 + 192 = 90\]
+Cofactor $C_{1,4} = (-1)^{1+4} = -1$
+Término asociado: $ 0 \cdot 90 = 0 $
+Suma de términos:
+\[\det(A_{2}) = -486 - 78 + 264 + 0 = -300\]
+Detalle de $\det(A_{3})$:
+Expansión por cofactores de $\det(A_{3})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}3 & -8 & -1 \\ -4 & 6 & 4 \\ 1 & -9 & 4\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,1})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}6 & 4 \\ -9 & 4\end{pmatrix}\]
+\[\det(A_{1,1}) = (6)(4) - (4)(-9) = 60\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 3 \cdot 60 = 180 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-4 & 4 \\ 1 & 4\end{pmatrix}\]
+\[\det(A_{1,2}) = (-4)(4) - (4)(1) = -20\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ -8 \cdot -20 = -160 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-4 & 6 \\ 1 & -9\end{pmatrix}\]
+\[\det(A_{1,3}) = (-4)(-9) - (6)(1) = 30\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -1 \cdot 30 = -30 $
+Suma de términos:
+\[\det(A_{1,1}) = 180 - 160 - 30 = -10\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 3 \cdot -10 = -30 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-3 & -8 & -1 \\ -2 & 6 & 4 \\ -5 & -9 & 4\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,2})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}6 & 4 \\ -9 & 4\end{pmatrix}\]
+\[\det(A_{1,1}) = (6)(4) - (4)(-9) = 60\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -3 \cdot 60 = -180 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-2 & 4 \\ -5 & 4\end{pmatrix}\]
+\[\det(A_{1,2}) = (-2)(4) - (4)(-5) = 12\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ -8 \cdot 12 = 96 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-2 & 6 \\ -5 & -9\end{pmatrix}\]
+\[\det(A_{1,3}) = (-2)(-9) - (6)(-5) = 48\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -1 \cdot 48 = -48 $
+Suma de términos:
+\[\det(A_{1,2}) = -180 + 96 - 48 = -132\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 4 \cdot -132 = 528 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-3 & 3 & -1 \\ -2 & -4 & 4 \\ -5 & 1 & 4\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,3})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-4 & 4 \\ 1 & 4\end{pmatrix}\]
+\[\det(A_{1,1}) = (-4)(4) - (4)(1) = -20\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -3 \cdot -20 = 60 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-2 & 4 \\ -5 & 4\end{pmatrix}\]
+\[\det(A_{1,2}) = (-2)(4) - (4)(-5) = 12\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 3 \cdot 12 = -36 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-2 & -4 \\ -5 & 1\end{pmatrix}\]
+\[\det(A_{1,3}) = (-2)(1) - (-4)(-5) = -22\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -1 \cdot -22 = 22 $
+Suma de términos:
+\[\det(A_{1,3}) = 60 - 36 + 22 = 46\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -13 \cdot 46 = -598 $
+Matriz menor $M_{1,4}$:
+\[\begin{pmatrix}-3 & 3 & -8 \\ -2 & -4 & 6 \\ -5 & 1 & -9\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,4})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-4 & 6 \\ 1 & -9\end{pmatrix}\]
+\[\det(A_{1,1}) = (-4)(-9) - (6)(1) = 30\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -3 \cdot 30 = -90 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-2 & 6 \\ -5 & -9\end{pmatrix}\]
+\[\det(A_{1,2}) = (-2)(-9) - (6)(-5) = 48\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 3 \cdot 48 = -144 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-2 & -4 \\ -5 & 1\end{pmatrix}\]
+\[\det(A_{1,3}) = (-2)(1) - (-4)(-5) = -22\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -8 \cdot -22 = 176 $
+Suma de términos:
+\[\det(A_{1,4}) = -90 - 144 + 176 = -58\]
+Cofactor $C_{1,4} = (-1)^{1+4} = -1$
+Término asociado: $ 0 \cdot -58 = 0 $
+Suma de términos:
+\[\det(A_{3}) = -30 + 528 - 598 + 0 = -100\]
+Detalle de $\det(A_{4})$:
+Expansión por cofactores de $\det(A_{4})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}3 & 4 & -8 \\ -4 & 0 & 6 \\ 1 & 3 & -9\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,1})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}0 & 6 \\ 3 & -9\end{pmatrix}\]
+\[\det(A_{1,1}) = (0)(-9) - (6)(3) = -18\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 3 \cdot -18 = -54 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-4 & 6 \\ 1 & -9\end{pmatrix}\]
+\[\det(A_{1,2}) = (-4)(-9) - (6)(1) = 30\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 4 \cdot 30 = -120 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-4 & 0 \\ 1 & 3\end{pmatrix}\]
+\[\det(A_{1,3}) = (-4)(3) - (0)(1) = -12\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -8 \cdot -12 = 96 $
+Suma de términos:
+\[\det(A_{1,1}) = -54 - 120 + 96 = -78\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ 3 \cdot -78 = -234 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-3 & 4 & -8 \\ -2 & 0 & 6 \\ -5 & 3 & -9\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,2})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}0 & 6 \\ 3 & -9\end{pmatrix}\]
+\[\det(A_{1,1}) = (0)(-9) - (6)(3) = -18\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -3 \cdot -18 = 54 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-2 & 6 \\ -5 & -9\end{pmatrix}\]
+\[\det(A_{1,2}) = (-2)(-9) - (6)(-5) = 48\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 4 \cdot 48 = -192 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-2 & 0 \\ -5 & 3\end{pmatrix}\]
+\[\det(A_{1,3}) = (-2)(3) - (0)(-5) = -6\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -8 \cdot -6 = 48 $
+Suma de términos:
+\[\det(A_{1,2}) = 54 - 192 + 48 = -90\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 4 \cdot -90 = 360 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-3 & 3 & -8 \\ -2 & -4 & 6 \\ -5 & 1 & -9\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,3})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-4 & 6 \\ 1 & -9\end{pmatrix}\]
+\[\det(A_{1,1}) = (-4)(-9) - (6)(1) = 30\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -3 \cdot 30 = -90 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-2 & 6 \\ -5 & -9\end{pmatrix}\]
+\[\det(A_{1,2}) = (-2)(-9) - (6)(-5) = 48\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 3 \cdot 48 = -144 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-2 & -4 \\ -5 & 1\end{pmatrix}\]
+\[\det(A_{1,3}) = (-2)(1) - (-4)(-5) = -22\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -8 \cdot -22 = 176 $
+Suma de términos:
+\[\det(A_{1,3}) = -90 - 144 + 176 = -58\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ -2 \cdot -58 = 116 $
+Matriz menor $M_{1,4}$:
+\[\begin{pmatrix}-3 & 3 & 4 \\ -2 & -4 & 0 \\ -5 & 1 & 3\end{pmatrix}\]
+Expansión por cofactores de $\det(A_{1,4})$ por la primera fila:
+Matriz menor $M_{1,1}$:
+\[\begin{pmatrix}-4 & 0 \\ 1 & 3\end{pmatrix}\]
+\[\det(A_{1,1}) = (-4)(3) - (0)(1) = -12\]
+Cofactor $C_{1,1} = (-1)^{1+1} = 1$
+Término asociado: $ -3 \cdot -12 = 36 $
+Matriz menor $M_{1,2}$:
+\[\begin{pmatrix}-2 & 0 \\ -5 & 3\end{pmatrix}\]
+\[\det(A_{1,2}) = (-2)(3) - (0)(-5) = -6\]
+Cofactor $C_{1,2} = (-1)^{1+2} = -1$
+Término asociado: $ 3 \cdot -6 = 18 $
+Matriz menor $M_{1,3}$:
+\[\begin{pmatrix}-2 & -4 \\ -5 & 1\end{pmatrix}\]
+\[\det(A_{1,3}) = (-2)(1) - (-4)(-5) = -22\]
+Cofactor $C_{1,3} = (-1)^{1+3} = 1$
+Término asociado: $ 4 \cdot -22 = -88 $
+Suma de términos:
+\[\det(A_{1,4}) = 36 + 18 - 88 = -34\]
+Cofactor $C_{1,4} = (-1)^{1+4} = -1$
+Término asociado: $ -13 \cdot -34 = -442 $
+Suma de términos:
+\[\det(A_{4}) = -234 + 360 + 116 - 442 = -200\]
+Valores mediante Cramer:
+\[x_1 = -100/100 = -1\quad x_2 = -300/100 = -3\quad x_3 = -100/100 = -1\quad x_4 = -200/100 = -2\]
+\subsection*{Gauss-Jordan (reducción por filas)}
+Operaciones y sustituciones (Gauss-Jordan):
+Operaciones y sustituciones (Gauss-Jordan):
+\begin{center}
+\begin{tabular}{ccc}
+\begin{tabular}{c} $\xrightarrow{{\frac{1}{3}F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{4}{3} & \frac{-2}{3} & 0 & \frac{-13}{3} \\ -3 & 3 & 4 & -1 & -8 \\ -2 & -4 & 0 & 4 & 6 \\ -5 & 1 & 3 & 4 & -9\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{2} + (3)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{4}{3} & \frac{-2}{3} & 0 & \frac{-13}{3} \\ 0 & 7 & 2 & -1 & -21 \\ -2 & -4 & 0 & 4 & 6 \\ -5 & 1 & 3 & 4 & -9\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{3} + (2)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{4}{3} & \frac{-2}{3} & 0 & \frac{-13}{3} \\ 0 & 7 & 2 & -1 & -21 \\ 0 & \frac{-4}{3} & \frac{-4}{3} & 4 & \frac{-8}{3} \\ -5 & 1 & 3 & 4 & -9\end{pmatrix}$ \end{tabular} \\
+\begin{tabular}{c} $\xrightarrow{{F_{4} + (5)F_{1}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{4}{3} & \frac{-2}{3} & 0 & \frac{-13}{3} \\ 0 & 7 & 2 & -1 & -21 \\ 0 & \frac{-4}{3} & \frac{-4}{3} & 4 & \frac{-8}{3} \\ 0 & \frac{23}{3} & \frac{-1}{3} & 4 & \frac{-92}{3}\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{\frac{1}{7}F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & \frac{4}{3} & \frac{-2}{3} & 0 & \frac{-13}{3} \\ 0 & 1 & \frac{2}{7} & \frac{-1}{7} & -3 \\ 0 & \frac{-4}{3} & \frac{-4}{3} & 4 & \frac{-8}{3} \\ 0 & \frac{23}{3} & \frac{-1}{3} & 4 & \frac{-92}{3}\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{1} + (\frac{-4}{3})F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & \frac{-22}{21} & \frac{4}{21} & \frac{-1}{3} \\ 0 & 1 & \frac{2}{7} & \frac{-1}{7} & -3 \\ 0 & \frac{-4}{3} & \frac{-4}{3} & 4 & \frac{-8}{3} \\ 0 & \frac{23}{3} & \frac{-1}{3} & 4 & \frac{-92}{3}\end{pmatrix}$ \end{tabular} \\
+\begin{tabular}{c} $\xrightarrow{{F_{3} + (\frac{4}{3})F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & \frac{-22}{21} & \frac{4}{21} & \frac{-1}{3} \\ 0 & 1 & \frac{2}{7} & \frac{-1}{7} & -3 \\ 0 & 0 & \frac{-20}{21} & \frac{80}{21} & \frac{-20}{3} \\ 0 & \frac{23}{3} & \frac{-1}{3} & 4 & \frac{-92}{3}\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{4} + (\frac{-23}{3})F_{2}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & \frac{-22}{21} & \frac{4}{21} & \frac{-1}{3} \\ 0 & 1 & \frac{2}{7} & \frac{-1}{7} & -3 \\ 0 & 0 & \frac{-20}{21} & \frac{80}{21} & \frac{-20}{3} \\ 0 & 0 & \frac{-53}{21} & \frac{107}{21} & \frac{-23}{3}\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{\frac{-21}{20}F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & \frac{-22}{21} & \frac{4}{21} & \frac{-1}{3} \\ 0 & 1 & \frac{2}{7} & \frac{-1}{7} & -3 \\ 0 & 0 & 1 & -4 & 7 \\ 0 & 0 & \frac{-53}{21} & \frac{107}{21} & \frac{-23}{3}\end{pmatrix}$ \end{tabular} \\
+\begin{tabular}{c} $\xrightarrow{{F_{1} + (\frac{22}{21})F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & 0 & -4 & 7 \\ 0 & 1 & \frac{2}{7} & \frac{-1}{7} & -3 \\ 0 & 0 & 1 & -4 & 7 \\ 0 & 0 & \frac{-53}{21} & \frac{107}{21} & \frac{-23}{3}\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{2} + (\frac{-2}{7})F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & 0 & -4 & 7 \\ 0 & 1 & 0 & 1 & -5 \\ 0 & 0 & 1 & -4 & 7 \\ 0 & 0 & \frac{-53}{21} & \frac{107}{21} & \frac{-23}{3}\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{4} + (\frac{53}{21})F_{3}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & 0 & -4 & 7 \\ 0 & 1 & 0 & 1 & -5 \\ 0 & 0 & 1 & -4 & 7 \\ 0 & 0 & 0 & -5 & 10\end{pmatrix}$ \end{tabular} \\
+\begin{tabular}{c} $\xrightarrow{{\frac{-1}{5}F_{4}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & 0 & -4 & 7 \\ 0 & 1 & 0 & 1 & -5 \\ 0 & 0 & 1 & -4 & 7 \\ 0 & 0 & 0 & 1 & -2\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{1} + (4)F_{4}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & 0 & 0 & -1 \\ 0 & 1 & 0 & 1 & -5 \\ 0 & 0 & 1 & -4 & 7 \\ 0 & 0 & 0 & 1 & -2\end{pmatrix}$ \end{tabular} & \begin{tabular}{c} $\xrightarrow{{F_{2} + (-1)F_{4}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & 0 & 0 & -1 \\ 0 & 1 & 0 & 0 & -3 \\ 0 & 0 & 1 & -4 & 7 \\ 0 & 0 & 0 & 1 & -2\end{pmatrix}$ \end{tabular} \\
+\begin{tabular}{c} $\xrightarrow{{F_{3} + (4)F_{4}}}$ \\[2mm] $\begin{pmatrix}1 & 0 & 0 & 0 & -1 \\ 0 & 1 & 0 & 0 & -3 \\ 0 & 0 & 1 & 0 & -1 \\ 0 & 0 & 0 & 1 & -2\end{pmatrix}$ \end{tabular} &  &  \\
+\end{tabular}
+\end{center}
+Matriz en forma reducida por filas:
+\[\begin{pmatrix}1 & 0 & 0 & 0 & -1 \\ 0 & 1 & 0 & 0 & -3 \\ 0 & 0 & 1 & 0 & -1 \\ 0 & 0 & 0 & 1 & -2\end{pmatrix}\]
+Solución:
+\[x_1 = -1,\quad x_2 = -3,\quad x_3 = -1,\quad x_4 = -2\]
+\end{document}
