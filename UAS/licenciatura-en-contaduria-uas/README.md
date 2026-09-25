@@ -4,6 +4,7 @@ Carpeta académica para asignaturas de la Licenciatura en Contaduría de la Univ
 
 ## Materias
 
-- `investigacion-aplicada-a-la-contaduria/`
+- [Derecho mercantil](derecho-mercantil/README.md): curso 632; 15 planeaciones y plantillas de reporte, actividad y presentación.
+- [Investigación aplicada a la contaduría](investigacion-aplicada-a-la-contaduria/README.md): curso 634; 16 planeaciones, nuevo adaptador de actividad y productos históricos conservados.
 
-> La unidad académica, el plan de estudios, el semestre y las claves oficiales deben verificarse con documentación de la UAS antes de incorporarlos como metadatos definitivos.
+Verificación del aula: 22/09/2026. La plataforma corresponde a la Facultad de Contaduría y Administración y la evaluación identifica Licenciatura en Contaduría Pública. Se conserva la ruta histórica del programa. El plan de estudios, semestre, claves, grupo y datos personales no se deducen del identificador del curso.

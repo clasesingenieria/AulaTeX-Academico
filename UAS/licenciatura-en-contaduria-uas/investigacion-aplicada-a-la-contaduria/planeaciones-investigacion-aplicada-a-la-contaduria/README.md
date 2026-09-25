@@ -1,5 +1,5 @@
 # Planeaciones
 
-Archive aquí la consigna, rúbrica o planeación original de cada actividad sin modificarla.
+Aquí se conservan las planeaciones derivadas. Las consignas, rúbricas y originales se archivan en referencias, sin modificarlos.
 
-Convención sugerida: `planeacion-actividad-01.pdf` o `planeacion-semana-01.md`.
+Revisión actual: [resumen de las 16 actividades](RESUMEN-2026-09-22.md), [índice de fichas](INDICE-2026-09-22.md) y [modelo fuente](modelo-planeacion-2026-09-22.json). Cada módulo tiene Markdown y JSON. Las propuestas no implican aprobación ni entrega.

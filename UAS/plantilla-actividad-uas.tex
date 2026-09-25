@@ -1,0 +1,56 @@
+\providecommand{\actividadtitulo}{Plantilla de actividad}
+\providecommand{\actividadtipo}{Documento de trabajo}
+\providecommand{\uasestudiante}{Nombre por completar}
+\providecommand{\uasmatricula}{Por confirmar}
+\providecommand{\uasasesor}{Por confirmar}
+\providecommand{\uasgrupo}{Por confirmar}
+\providecommand{\uasfecha}{\today}
+\providecommand{\uaslugar}{Lugar por confirmar}
+\providecommand{\actividadcontenido}{\section{Introducción}Completar el propósito y el alcance.\section{Desarrollo temático}Incorporar el producto exigido por la consigna.\section{Conclusiones}Presentar conclusiones sustentadas en el desarrollo.}
+\documentclass[12pt,letterpaper,oneside]{article}
+\usepackage[margin=2.54cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Arial}
+\usepackage[spanish,es-tabla,es-nodecimaldot]{babel}
+\usepackage{csquotes,setspace,graphicx}
+\usepackage[table]{xcolor}
+\usepackage{array,booktabs,longtable,tabularx,enumitem}
+\usepackage{caption}
+\usepackage{titlesec}
+\usepackage[backend=biber,style=apa]{biblatex}
+\addbibresource{\uasbibliografia}
+\usepackage{xurl}
+\usepackage[hidelinks,hypertexnames=false]{hyperref}
+\definecolor{uasBlue}{HTML}{123B6D}
+\titleformat{\section}{\large\bfseries\color{uasBlue}}{\thesection.}{.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{.5em}{}
+\setlength{\emergencystretch}{3em}
+\onehalfspacing
+\hypersetup{pdftitle={\actividadtitulo},pdfauthor={\uasestudiante},pdfsubject={\uasmateria}}
+\begin{document}
+\begin{titlepage}
+\centering
+\includegraphics[height=2.2cm]{\uaslogo}\hfill
+\includegraphics[width=6cm]{\uasfacultadlogo}\par
+\vspace{1cm}
+Universidad Autónoma de Sinaloa\par
+Facultad de Contaduría y Administración\par
+Licenciatura en Contaduría Pública\par
+\vfill
+{\Large\bfseries\color{uasBlue}\actividadtitulo\par}
+\vspace{.5cm}
+\uasmateria\par
+\actividadtipo\par
+\vfill
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+Estudiante: & \uasestudiante\\
+Matrícula: & \uasmatricula\\
+Asesor(a): & \uasasesor\\
+Grupo: & \uasgrupo\\
+Fecha de realización: & \uasfecha\\
+Lugar: & \uaslugar
+\end{tabularx}
+\end{titlepage}
+\actividadcontenido
+\printbibliography[title={Referencias}]
+\end{document}

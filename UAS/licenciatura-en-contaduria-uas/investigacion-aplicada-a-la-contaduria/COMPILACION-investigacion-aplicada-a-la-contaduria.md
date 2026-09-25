@@ -1,5 +1,15 @@
 # Compilación — Investigación aplicada a la contaduría
 
+## Adaptador UAS para nuevas actividades
+
+Verificado el 22/09/2026 desde la raíz del repositorio:
+
+```powershell
+.\scripts\latexmk-build.ps1 UAS/licenciatura-en-contaduria-uas/investigacion-aplicada-a-la-contaduria/reporte-investigacion-aplicada-a-la-contaduria-plantilla-actividad.tex -CleanMode none -xelatex
+```
+
+Requiere Arial, XeLaTeX y Biber. Carga explícitamente la base UAS compartida, logos locales y bibliografía APA. El PDF es una muestra editable, no una actividad resuelta; no confirma datos de portada ni equipo. Para una actividad nueva, definir `actividadcontenido`, título y datos confirmados antes de cargar este adaptador. Las plantillas históricas siguientes no fueron reemplazadas ni recompiladas en esta revisión.
+
 ## Productos pendientes y foros: Linux
 
 Desde la raíz del repositorio:
