@@ -1,3 +1,47 @@
-% Base reutilizable. No compilar directamente.
-% Definir metadatos y \actividadcontenido en cada reporte de actividad.
-\input{formato-itesca-plan-negocios.tex}
+% Base de materia: actividad -> maestra MGA -> nucleo compartido del repositorio.
+\providecommand{\actividadtitulo}{Plan de Negocios}
+\providecommand{\actividadsubtitulo}{}
+\providecommand{\actividadmodulo}{Por confirmar}
+\providecommand{\actividadnumero}{\actividadmodulo}
+\providecommand{\actividadvencimiento}{Por confirmar}
+\providecommand{\actividadunidad}{Por confirmar}
+\providecommand{\actividadproducto}{Documento de trabajo}
+\providecommand{\actividadfecha}{\today}
+\providecommand{\actividadlugar}{Lugar por confirmar}
+\providecommand{\actividadnota}{}
+\providecommand{\actividadextras}{}
+\providecommand{\actividadbibliografia}{ITESCA/maestria-en-gestion-administrativa/plan-de-negocios-mga/plan-de-negocios}
+\providecommand{\actividadestudiante}{Martín Jonathan de la Cruz Muñoz}
+\providecommand{\actividadmatricula}{26130503}
+\providecommand{\actividadcorreo}{26130503@cajeme.tecnm.mx}
+\providecommand{\actividadperiodo}{2026-II}
+\providecommand{\actividaddocente}{Celia Velázquez Reyna}
+\ifdefined\actividadcontenido\else
+	\errmessage{Definir actividadcontenido antes de cargar la plantilla de materia}
+\fi
+\def\itescadocumenttitle{\actividadtitulo}
+\def\itescadocumentsubtitle{\actividadsubtitulo}
+\def\itescadocumentsubject{Actividad \actividadnumero\space - Plan de Negocios}
+\def\itescastudentname{\actividadestudiante}
+\def\itescastudentid{\actividadmatricula}
+\def\itescastudentemail{\actividadcorreo}
+\def\itescafaculty{Maestría en Gestión Administrativa}
+\def\itescacoursename{Plan de Negocios}
+\def\itescacoursecode{GGPN01}
+\def\itescadepartment{Posgrado e Investigación}
+\def\itescateachingfigure{\actividaddocente}
+\def\itescaprogramlevel{Maestría}
+\def\itescaprogramperiod{\actividadperiodo}
+\def\itescamodality{En línea}
+\def\itescalocation{\actividadlugar}
+\def\itescaactivityname{Actividad \actividadnumero}
+\def\itescasessionname{Unidad \actividadunidad}
+\def\itescablockname{Plan de Negocios}
+\def\itescamainproduct{\actividadproducto}
+\def\itescaevidencefocus{Producto visible, trazabilidad editorial y criterio aplicado al caso}
+\def\itescaqualitycriterion{Cumplimiento del contrato de realizar-actividad: forma didáctica, análisis propio, citas visibles y cierre transferible}
+\def\itescabibliography{\actividadbibliografia}
+\def\itescadocumentdate{\actividadfecha}
+\def\itescaactivitypreamble{\actividadextras}
+\long\def\itescaactivitycontent{\actividadcontenido}
+\input{ITESCA/maestria-en-gestion-administrativa/reporte-itesca-mga.tex}

@@ -13,7 +13,7 @@ Fuentes: W6539, R2. Resumen del contenido consultado, no transcripción integral
 - La presentación Competencia 1 orienta el avance hacia identidad, misión, visión, objetivos y FODA; no se asume que esa lista reproduzca los seis reactivos.
 - Describir el negocio considerando: sector, necesidad atendida u oferta, segmento o nicho, área geográfica de influencia y antecedentes en la actividad.
 
-**Producto:** Desarrollo de las seis respuestas dentro del módulo; se recomienda conservar un documento de trabajo para el integrador. Para el reactivo visible, consultar el [borrador de realización](../../realizar-actividad-capitulo-1-descripcion-empresa.md) y ajustar los datos a la experiencia real del estudiante antes de usarlo.
+**Producto:** Desarrollo de las seis respuestas dentro del módulo; se recomienda conservar un documento de trabajo para el integrador. Para el reactivo visible, consultar el [borrador de realización](../../../realizar-actividad-4-descripcion-empresa.md) y ajustar los datos a la experiencia real del estudiante antes de usarlo.
 
 **Formato:** cuestionario en plataforma; copia local recomendada por la consigna
 

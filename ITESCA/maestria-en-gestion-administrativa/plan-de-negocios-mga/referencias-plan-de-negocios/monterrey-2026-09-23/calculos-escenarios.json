@@ -1,0 +1,105 @@
+{
+  "consulted_on": "2026-09-23",
+  "municipality": "19039",
+  "census_year": 2020,
+  "population": 1142994,
+  "inhabited_dwellings": 329095,
+  "scope": "Escenarios de planeación, no estimación estadística validada de compradores ni resultados de encuesta.",
+  "scenarios": [
+    {
+      "name": "bajo",
+      "eligible_assumption": 0.1,
+      "need_given_eligible_assumption": 0.4,
+      "willing_and_able_given_need_assumption": 0.4,
+      "potential_unrounded": 18287.904000000006,
+      "potential_rounded": 18288
+    },
+    {
+      "name": "central",
+      "eligible_assumption": 0.15,
+      "need_given_eligible_assumption": 0.5,
+      "willing_and_able_given_need_assumption": 0.5,
+      "potential_unrounded": 42862.275,
+      "potential_rounded": 42862
+    },
+    {
+      "name": "alto",
+      "eligible_assumption": 0.2,
+      "need_given_eligible_assumption": 0.6,
+      "willing_and_able_given_need_assumption": 0.6,
+      "potential_unrounded": 82295.568,
+      "potential_rounded": 82296
+    }
+  ],
+  "capacity_assumptions": {
+    "bays": 1,
+    "hours_per_day": 8,
+    "days_per_year": 300,
+    "productive_fraction": 0.75,
+    "hours_per_service": 2,
+    "visits_per_customer_per_year": 1.5
+  },
+  "annual_service_capacity": 900.0,
+  "five_year_targets": [
+    {
+      "year": 1,
+      "utilization_assumption": 0.4,
+      "services": 360,
+      "distinct_customers": 240,
+      "percent_of_central_scenario": 0.56
+    },
+    {
+      "year": 2,
+      "utilization_assumption": 0.5,
+      "services": 450,
+      "distinct_customers": 300,
+      "percent_of_central_scenario": 0.7
+    },
+    {
+      "year": 3,
+      "utilization_assumption": 0.6,
+      "services": 540,
+      "distinct_customers": 360,
+      "percent_of_central_scenario": 0.84
+    },
+    {
+      "year": 4,
+      "utilization_assumption": 0.7,
+      "services": 630,
+      "distinct_customers": 420,
+      "percent_of_central_scenario": 0.98
+    },
+    {
+      "year": 5,
+      "utilization_assumption": 0.8,
+      "services": 720,
+      "distinct_customers": 480,
+      "percent_of_central_scenario": 1.12
+    }
+  ],
+  "pilot_costs_mxn": {
+    "printing_published_reference": 1500,
+    "ad_spend_internal_cap": 600,
+    "distribution_internal_estimate": 800,
+    "adaptation_and_attention_internal_estimate": 300
+  },
+  "pilot_subtotal_mxn": 3200,
+  "contingency_mxn": 320,
+  "pilot_budget_mxn": 3520,
+  "shipping_and_tax_adjustments": "No confirmados; no se supone envío gratis ni se agrega IVA a un precio que el proveedor llama final.",
+  "break_even_sensitivity": [
+    {
+      "assumed_contribution_margin_mxn": 150,
+      "additional_services": 24
+    },
+    {
+      "assumed_contribution_margin_mxn": 250,
+      "additional_services": 15
+    },
+    {
+      "assumed_contribution_margin_mxn": 350,
+      "additional_services": 11
+    }
+  ],
+  "supplier_quote_status": "Precio publicado, no cotización formal, confirmación de vigencia ni pedido."
+}

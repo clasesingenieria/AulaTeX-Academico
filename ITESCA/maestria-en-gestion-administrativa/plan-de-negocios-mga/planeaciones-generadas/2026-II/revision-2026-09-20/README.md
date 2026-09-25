@@ -60,6 +60,6 @@ Tabla completa de ponderación publicada. No repartir los 30 puntos entre ocho m
 - [Modelo consolidado](planeacion-curso.json): requisitos, fuentes, calendario, propuestas y conflictos.
 - [Informe de validación](validacion.json): controles ejecutados sobre fuentes, calendario, archivos y coherencia.
 
-Originales y extracciones: `data/private/itesca/plan-de-negocios/2026-II/revision-2026-09-20/` desde la raíz del repositorio. No se incorporan contraseñas, cookies, calificaciones, mensajes ni enlaces privados de reuniones. No se utilizó el recurso Desglose de Calificaciones ni se accionaron botones de entrega/finalización. Moodle puede registrar las visitas de lectura.
+Originales, extracciones y manifiestos: [referencias de la materia](../../../referencias-plan-de-negocios/README.md), reubicados el 2026-09-22 y versionables. Se conservan las fechas y límites de esta revisión histórica. No se incorporan contraseñas, cookies ni enlaces privados de reuniones.
 
 La recopilación y publicación se realizaron para esta revisión; no se ha habilitado una sincronización programada ni un motor automático. No se compiló el producto estudiantil ni se generaron PDF/DOCX de entrega.

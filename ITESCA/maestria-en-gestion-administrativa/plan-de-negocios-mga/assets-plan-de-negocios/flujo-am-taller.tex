@@ -1,0 +1,44 @@
+\begin{tikzpicture}[
+  every node/.style={font=\scriptsize},
+  paso/.style={draw,rounded corners=1pt,fill=black!3,text width=5.8cm,align=center,minimum height=.52cm},
+  decision/.style={diamond,draw,aspect=5,fill=yellow!12,text width=4.8cm,align=center,inner sep=1pt},
+  flecha/.style={-{Stealth[length=1.8mm]},thick},
+  etiqueta/.style={fill=white,inner sep=1pt,font=\tiny}
+]
+\node[paso] (inicio) at (0,0) {1. Inicio: recibir solicitud};
+\node[paso] (registro) at (0,-1) {2. Registrar datos y requerimiento};
+\node[decision] (informacion) at (0,-2) {3. ¿Información suficiente?};
+\node[paso] (cita) at (0,-3) {4. Programar cita o revisión};
+\node[paso] (recepcion) at (0,-4) {5. Recibir e inspeccionar vehículo};
+\node[paso] (diagnostico) at (0,-5) {6. Diagnosticar dentro del alcance autorizado};
+\node[decision] (insumos) at (0,-6) {7. ¿Requiere piezas o insumos?};
+\node[paso] (compras) at (0,-7) {8. Consultar disponibilidad y proveedores};
+\node[paso] (propuesta) at (0,-8) {9. Elaborar y comunicar propuesta};
+\node[decision] (autoriza) at (0,-9) {10. ¿Existe autorización?};
+\node[paso,text width=2cm] (cancelacion) at (5.6,-9) {11. Cerrar sin ejecución o reprogramar};
+\node[paso] (preparacion) at (0,-10) {12. Preparar área, herramientas e insumos};
+\node[paso] (ejecucion) at (0,-11) {13. Ejecutar sólo el servicio autorizado};
+\node[decision] (calidad) at (0,-12) {14. ¿Calidad y seguridad conformes?};
+\node[paso] (entrega) at (0,-13) {15. Explicar trabajo y devolver vehículo};
+\node[paso] (cierre) at (0,-14) {16. Registrar cierre y seguimiento. Fin};
+\draw[flecha] (inicio) -- (registro);
+\draw[flecha] (registro) -- (informacion);
+\draw[flecha] (informacion) -- node[etiqueta,right]{Sí} (cita);
+\draw[flecha] (informacion.west) -- (-4.2,-2) node[etiqueta,above]{No} |- (registro.west);
+\draw[flecha] (cita) -- (recepcion);
+\draw[flecha] (recepcion) -- (diagnostico);
+\draw[flecha] (diagnostico) -- (insumos);
+\draw[flecha] (insumos) -- node[etiqueta,right]{Sí} (compras);
+\draw[flecha] (insumos.west) -- (-4.2,-6) node[etiqueta,above]{No} |- (propuesta.west);
+\draw[flecha] (compras) -- node[etiqueta,right]{Localizable} (propuesta);
+\draw[flecha] (compras.east) -| node[etiqueta,above,pos=.3]{No localizable} (cancelacion.north);
+\draw[flecha] (propuesta) -- (autoriza);
+\draw[flecha] (autoriza) -- node[etiqueta,right]{Sí} (preparacion);
+\draw[flecha] (autoriza) -- node[etiqueta,above]{No} (cancelacion);
+\draw[flecha] (preparacion) -- (ejecucion);
+\draw[flecha] (ejecucion) -- (calidad);
+\draw[flecha] (calidad) -- node[etiqueta,right]{Sí} (entrega);
+\draw[flecha] (calidad.west) -- (-4.2,-12) node[etiqueta,above]{No} |- (ejecucion.west);
+\draw[flecha] (entrega) -- (cierre);
+\draw[flecha] (cancelacion.south) |- (cierre.east);
+\end{tikzpicture}

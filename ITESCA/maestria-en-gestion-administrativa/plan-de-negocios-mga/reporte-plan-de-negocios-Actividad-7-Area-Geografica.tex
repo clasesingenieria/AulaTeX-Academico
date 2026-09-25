@@ -1,0 +1,80 @@
+\def\actividadnumero{7}
+\def\actividadvencimiento{21/09/2026 23:59}
+% !TeX program = xelatex
+\def\actividadtitulo{Área geográfica de impacto del proyecto}
+\def\actividadsubtitulo{Delimitación territorial y mercado meta de AM Taller Autocentro}
+\def\actividadmodulo{6547}
+\def\actividadunidad{2}
+\def\actividadproducto{Análisis académico del área geográfica de impacto}
+\def\actividadfecha{23 de septiembre de 2026}
+\def\actividadlugar{Monterrey, Nuevo León}
+\def\actividadnota{Delimitación municipal sustentada y escenarios condicionales; no acredita demanda ni capacidad instalada.}
+\def\actividadextras{\def\natbibrefstyle{plainnat}}
+\def\actividadcontenido{%
+\section{Introducción}
+
+Se delimita el área de estudio de \textbf{AM Taller Autocentro} al municipio de Monterrey, Nuevo León, México, clave geoestadística \textbf{19039}. La elección responde a la localización solicitada para el proyecto; no acredita un establecimiento abierto ni un domicilio contratado. El análisis distingue datos censales, supuestos de mercado y metas de capacidad, para no convertir población territorial en compradores comprobados.
+
+AM Taller Autocentro se plantea como un proyecto local que integraría servicios de taller mecánico, llantera y refaccionaria, apoyados por agenda de citas, control de inventario y revisión de proveedores. La naturaleza presencial de estas actividades hace que el alcance dependa de cercanía, accesibilidad vial, tiempo de traslado y capacidad de atención. Esa relación obliga a construir primero la lógica territorial y después la estimación del mercado.
+
+\section{Delimitación territorial y mercado proyectado}
+
+\subsection{Delimitación territorial propuesta}
+
+La unidad principal es el municipio de Monterrey, no toda su zona metropolitana. Guadalupe, San Nicolás, Apodaca y los demás municipios cercanos no se suman al denominador de esta estimación. Las respuestas de otros municipios obtenidas con el instrumento regional deberán analizarse por separado; el formulario no autoriza extrapolarlas automáticamente a Monterrey.
+
+Para la puesta en marcha se propone priorizar el sector del municipio desde el cual el cliente pueda acudir en un máximo de 30 minutos; entre 30 y 45 minutos se evaluaría atención secundaria por cita. Estos umbrales son criterios propuestos, no tiempos medidos ni isócronas. Deben calcularse desde el domicilio que se confirme, considerando tráfico, vialidad y complejidad del servicio. No se asignan población ni clientes a esas franjas sin información georreferenciada.
+
+El mapa se generó con la geometría de INEGI del Marco Geoestadístico de diciembre de 2025 \citep{inegiMonterreyMarco2025}. Representa el territorio de referencia, no cobertura uniforme, una sucursal o una ruta vial. La población asociada procede de 2020; no se presenta como un conteo actualizado a 2026 ni se redistribuye sobre zonas de traslado.
+
+\begin{center}
+\includegraphics[width=.72\linewidth,height=.55\textheight,keepaspectratio]{ITESCA/maestria-en-gestion-administrativa/plan-de-negocios-mga/assets-plan-de-negocios/mapa-monterrey-inegi.png}
+\end{center}
+
+\subsection{Estimación del mercado potencial}
+
+INEGI reporta \textbf{1,142,994 habitantes} y \textbf{329,095 viviendas habitadas} en el municipio en el Censo de 2020 \citep{inegiMonterreyCenso2020}. Son unidades diferentes: una vivienda no equivale a un cliente, ni un vehículo equivale necesariamente a una persona compradora. Data México confirma la población y advierte que sus indicadores de empleo e ingreso corresponden a Nuevo León cuando no hay representatividad municipal \citep{economiaMonterreyPerfil}. No se usa ese ingreso estatal para atribuir capacidad de pago a cada habitante de Monterrey.
+
+La población elegible propuesta son personas adultas residentes en Monterrey que deciden o pagan servicios para un automóvil o camioneta ligera. Se requiere necesidad de servicio y disposición y presupuesto para contratarlo. Sin sondeo aplicado, esas condiciones no están medidas. Para explorar magnitudes se utiliza la identidad condicional:
+\[
+\mathrm{MP}=N\,p_{\mathrm{elegible}}\,p_{\mathrm{necesidad}\mid\mathrm{elegible}}\,p_{\mathrm{compra}\mid\mathrm{necesidad}}.
+\]
+El último factor reúne conjuntamente disposición y capacidad de compra entre quienes cumplen los filtros previos; no supone que ambos atributos sean independientes.
+
+\begin{longtable}{p{.14\linewidth}p{.14\linewidth}p{.16\linewidth}p{.20\linewidth}p{.19\linewidth}}
+\toprule
+\textbf{Escenario} & \textbf{Elegibles} & \textbf{Necesidad condicional} & \textbf{Disposición y capacidad} & \textbf{Personas resultantes}\\
+\midrule
+Bajo & 10\,\% & 40\,\% & 40\,\% & 18,288\\
+Central & 15\,\% & 50\,\% & 50\,\% & 42,862\\
+Alto & 20\,\% & 60\,\% & 60\,\% & 82,296\\
+\bottomrule
+\end{longtable}
+\textbf{Todas las tasas de la tabla son supuestos ilustrativos, no porcentajes obtenidos del INEGI ni de una encuesta.} Los resultados se redondean a personas y no constituyen un intervalo de confianza. El caso central calcula $1{,}142{,}994\times0.15\times0.50\times0.50=42{,}862.275$. La magnitud deberá reemplazarse al medir los filtros con datos compatibles; no se presenta como demanda comprobada \citep{albrechtMarketing2023}.
+
+\subsection{Definición del mercado meta a cinco años}
+
+Se propone una estación de trabajo con personal competente, ocho horas por día y 300 días al año, reservando 25\,\% del tiempo para preparación, pausas y tareas no facturables. Con dos horas productivas por servicio equivalente, la capacidad teórica es $1\times8\times300\times0.75/2=900$ servicios anuales. La estación, el personal y los tiempos son supuestos de planeación; no se afirma que existan. Reparaciones extensas consumirían varios servicios equivalentes.
+
+Con una recurrencia supuesta de 1.5 servicios por cliente al año, las metas se expresan en personas distintas dentro de cada periodo. Los años se cuentan desde el inicio de operación que se confirme, no desde una fecha de apertura inventada.
+\begin{longtable}{p{.10\linewidth}p{.16\linewidth}p{.18\linewidth}p{.19\linewidth}p{.20\linewidth}}
+\toprule
+\textbf{Año} & \textbf{Utilización} & \textbf{Servicios} & \textbf{Clientes distintos} & \textbf{Del escenario central}\\
+\midrule
+1 & 40\,\% & 360 & 240 & 0.56\,\%\\
+2 & 50\,\% & 450 & 300 & 0.70\,\%\\
+3 & 60\,\% & 540 & 360 & 0.84\,\%\\
+4 & 70\,\% & 630 & 420 & 0.98\,\%\\
+5 & 80\,\% & 720 & 480 & 1.12\,\%\\
+\bottomrule
+\end{longtable}
+
+No deben sumarse las metas anuales como si fueran clientes nuevos acumulados: una persona puede regresar en años distintos. En el primer año se proponen 30 servicios mensuales en promedio; en el quinto, 60. Son metas, no pronósticos demostrados. Si cambian duración del servicio, jornadas, recurrencia o elegibilidad, se recalcularán las tablas. Los resultados del instrumento de la actividad 5 permitirán contrastar necesidad, compra previa y disposición; no reemplazan por sí solos la comprobación del presupuesto disponible de cada cliente.
+
+\section{Conclusiones}
+
+El territorio queda delimitado a Monterrey y cuenta con cartografía y una base censal verificables. Los escenarios y la capacidad propuesta permiten expresar una meta de 240 a 480 clientes distintos por año sin confundirla con ventas registradas o con toda la población del municipio.
+
+Permanece pendiente confirmar domicilio, rutas de acceso, recursos y parámetros de compra mediante evidencia. La planeación cuantitativa está desarrollada, pero su validación empírica no debe darse por concluida.\footnote{Se utilizó asistencia de inteligencia artificial para organizar el análisis, generar el mapa desde el GeoJSON de INEGI y comprobar cálculos. Las tasas y metas son escenarios explícitos; no se fabricaron encuestas ni datos censales.}
+}
+\input{reporte-plan-de-negocios-plantilla-actividad.tex}

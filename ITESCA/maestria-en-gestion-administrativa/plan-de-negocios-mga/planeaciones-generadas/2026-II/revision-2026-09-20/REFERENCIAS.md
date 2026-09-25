@@ -2,7 +2,7 @@
 
 Consulta autenticada: **2026-09-20**, curso 213, GGPN01. Verificar disponibilidad requiere una cuenta autorizada. No se atribuye al aula la autoría de obras que solo aloja.
 
-Los nueve originales y su texto extraído se conservan en `data/private/itesca/plan-de-negocios/2026-II/revision-2026-09-20/`, fuera de Git. El manifiesto privado contiene URL, fecha, tamaño y SHA-256. Son materiales localizados y consultados con el alcance siguiente; no todos se han revisado íntegramente ni validado visualmente.
+Los nueve originales, sus extracciones y dos manifiestos se conservan dentro de la materia en [referencias-plan-de-negocios](../../../referencias-plan-de-negocios/README.md), sin exclusión de Git. Reubicación verificada por SHA-256 el 2026-09-22. Los manifiestos contienen procedencia, fecha, tamaño y huellas; la ubicación no acredita permiso de redistribución pública ni lectura integral. Se conserva el alcance de consulta siguiente.
 
 | ID | Referencia | Autoría / año acreditados | Lectura y localizador | Clave BibTeX |
 | --- | --- | --- | --- | --- |
