@@ -1,6 +1,6 @@
-﻿\providecommand{\itescastudentname}{Martin Jonathan de la Cruz}
+\providecommand{\itescastudentname}{Martin Jonathan de la Cruz}
 \providecommand{\itescastudentshort}{M. J. de la Cruz}
-\providecommand{\itescastudentid}{ITESCA-MGA}
+\providecommand{\itescastudentid}{26130503}
 \providecommand{\itescafaculty}{Instituto Tecnologico Superior de Cajeme}
 \providecommand{\itescafacultyname}{Maestria en Gestion Administrativa}
 \providecommand{\itescacoursename}{Maestria en Gestion Administrativa}
@@ -22,13 +22,14 @@
 \providecommand{\itescawritingmodel}{Redaccion critica, argumentacion ejecutiva y analisis profundo orientado a gestion}
 \providecommand{\itescadidactictechniques}{Estudio de caso, matriz de priorizacion, cuadro comparativo, ensayo critico, debate, portafolio y proyecto integrador}
 
-\def\itescadocumenttitle {Plantilla institucional ITESCA}
-\def\itescadocumentsubtitle {Punto de entrada canonico}
-\def\itescadocumentsubject {Maestria en Gestion Administrativa}
-\def\itescaactivityname {Punto de entrada canonico de carrera}
-\def\itescasessionname {Trayectoria academica}
-\def\itescablockname {Control editorial institucional}
-\def\itescamainproduct {Informe academico con evidencia y criterio de gestion}
+\providecommand{\itescadocumenttitle}{Plantilla institucional ITESCA}
+\providecommand{\itescadocumentsubtitle}{Punto de entrada canonico}
+\providecommand{\itescadocumentsubject}{Maestria en Gestion Administrativa}
+\providecommand{\itescaactivityname}{Punto de entrada canonico de carrera}
+\providecommand{\itescasessionname}{Trayectoria academica}
+\providecommand{\itescablockname}{Control editorial institucional}
+\providecommand{\itescamainproduct}{Informe academico con evidencia y criterio de gestion}
+\providecommand{\itescadocumentdate}{\today}
 
 % ==============================================================================
 % PLANTILLA MAESTRA GENERAL - ITESCA
@@ -136,13 +137,13 @@
 \providecommand{\itescadocumentsubtitle}{Actividad X}
 \providecommand{\itescadocumentsubject}{Informe academico}
 \providecommand{\itescastudentname}{Martin Jonathan de la Cruz}
-\providecommand{\itescastudentid}{ITESCA}
+\providecommand{\itescastudentid}{26130503}
 \providecommand{\itescacoursename}{Nombre de la asignatura}
 \providecommand{\itescacoursecode}{ITESCA}
 \providecommand{\itescafaculty}{Programa academico ITESCA}
 \providecommand{\itescadepartment}{Departamento academico}
 \providecommand{\itescateachingfigure}{Nombre por definir}
-\providecommand{\itescastudentemail}{correo.institucional@itesca.edu.mx}
+\providecommand{\itescastudentemail}{26130503@cajeme.tecnm.mx}
 \providecommand{\itescaprogramlevel}{Nivel academico por definir}
 \providecommand{\itescaprogramperiod}{Periodo academico por definir}
 \providecommand{\itescamodality}{Modalidad por definir}
@@ -208,7 +209,7 @@
 		Sesion/Bloque: & \itescasessionname\ / \itescablockname \\
 		Producto: & \itescamainproduct \\
 		& \\
-		\multicolumn{2}{l}{Fecha de realizacion: \today} \\
+		\multicolumn{2}{l}{Fecha de realizacion: \itescadocumentdate} \\
 		\multicolumn{2}{l}{\universitylocation}
 	\end{tabular}
 }
@@ -301,6 +302,19 @@
 	}%
 }
 
+\ifdefined\itescaactivitycontent
+	\usepackage{tabularx,enumitem}
+	\providecommand{\autocite}{\citep}
+	\providecommand{\textcite}{\citet}
+	\newif\ifitescaactivitycited
+	\makeatletter
+	\pretocmd{\NAT@citex}{\global\itescaactivitycitedtrue}{}{\PackageError{itesca}{No se pudo registrar citas autor-anio}{Revisar la version de natbib.}}
+	\pretocmd{\NAT@citexnum}{\global\itescaactivitycitedtrue}{}{\PackageError{itesca}{No se pudo registrar citas numericas}{Revisar la version de natbib.}}
+	\pretocmd{\nocite}{\global\itescaactivitycitedtrue}{}{\PackageError{itesca}{No se pudo registrar nocite}{Revisar la version de natbib.}}
+	\makeatother
+	\ifdefined\itescaactivitypreamble\itescaactivitypreamble\fi
+\fi
+
 \begin{document}
 
 % PORTADA
@@ -311,6 +325,15 @@
 % CONFIGURACION DE PAGINA Y ENCABEZADOS
 \templatePagecfg
 \onehalfspacing
+
+\ifdefined\itescaactivitycontent
+\templateFinalcfg
+\itescaactivitycontent
+\ifitescaactivitycited
+\clearpage
+\bibliography{\itescabibliography}
+\fi
+\else
 
 % RESUMEN / ABSTRACT
 \begin{abstractd}
@@ -697,6 +720,7 @@ En consecuencia, la calidad de la actividad depende de que el producto visible, 
 \subsection*{Citas de refuerzo Ciclo A}
 La mejora editorial se vincula con la memoria documental disponible mediante las referencias \citep{itescaSitioWeb,cicloARefuerzo02,cicloARefuerzo03,cicloARefuerzo04}. Estas citas deben revisarse en una etapa disciplinar fina para sustituir o complementar fuentes genéricas por literatura específica del tema.
 
+\fi
 \end{document}
 
 
