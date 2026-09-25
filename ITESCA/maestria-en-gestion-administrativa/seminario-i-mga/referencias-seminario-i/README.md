@@ -27,9 +27,15 @@
 
 La obra de Julio Pimienta no se incorporó porque sus metadatos editoriales estaban incompletos.
 
-## Fuente oficial pendiente de incorporación
+## Guía oficial APA incorporada
 
-- La guía web de referencias de APA está verificada, pero no se conserva todavía una copia local. Antes de utilizarla como fuente del expediente debe guardarse una versión oficial descargable o una captura documental con fecha.
+- [Reference Guide for Journal Articles, Books, and Edited Book Chapters](metodologia/apa-reference-guide.pdf): American Psychological Association, APA 7; actualización indicada en el documento: 23 de marzo de 2026.
+- [Texto extraído](metodologia/apa-reference-guide.txt) y [procedencia con SHA-256](metodologia/apa-reference-guide.json). Descarga oficial del 22 de septiembre de 2026.
+- Es una guía breve de referencias, no el manual completo ni una copia de la página web «References». No acredita por sí sola equivalencia con el recurso docente 2.1. Las notas históricas conservan el estado de consulta que tenían en su fecha.
+
+## Notas y versiones históricas
+
+Las cuatro notas por unidad se conservan en `notas-seminario-i/`. La subcarpeta `historico/` resguarda el reporte base anterior y su PDF; no deben utilizarse como versión vigente ni compilarse como una actividad.
 
 ## Política de archivos
 

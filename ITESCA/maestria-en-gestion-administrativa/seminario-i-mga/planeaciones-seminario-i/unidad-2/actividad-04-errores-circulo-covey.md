@@ -27,7 +27,7 @@ Se interpreta la extensión como **una página de contenido más portada separad
 
 - Fuente editable: [reporte-seminario-i-Actividad-4.tex](../../reporte-seminario-i-Actividad-4.tex).
 - PDF: [reporte-seminario-i-Actividad-4.pdf](../../reporte-seminario-i-Actividad-4.pdf).
-- Revisión y fuentes: [revision-actividad-04.md](../../notas/unidad-2/revision-actividad-04.md).
+- Revisión y fuentes: [revision-actividad-04.md](../../referencias-seminario-i/notas-seminario-i/unidad-2/revision-actividad-04.md).
 - Ocho errores con explicación, ejemplo y recomendación; círculos anidados de preocupación e influencia.
 - Ejemplo hipotético unificado: comercios de Cajeme, enero–junio de 2026; X = promedio de días por semana con ventas digitales; Y = porcentaje de clientes con dos o más compras respecto del total de clientes compradores del semestre. No se presenta como datos obtenidos ni como anteproyecto aprobado.
 - Covey sirve para priorizar acciones, no para asignar variables independientes/dependientes ni sustituir el método científico.

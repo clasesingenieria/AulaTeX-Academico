@@ -1,5 +1,11 @@
 # Planeaciones de Seminario I
 
+## Generación documental del 22 de septiembre de 2026
+
+[Índice de las 13 planeaciones generadas](INDICE-GENERADAS.md) a partir de las fichas locales de la revisión 2026-09-15. Se conservaron los originales y la organización por unidades. Esta ejecución normaliza documentos; no consulta Moodle ni acredita vigencia de fechas, aprobación docente o nuevas actividades.
+
+Entrada reproducible: [modelo-generacion-2026-09-22.json](modelo-generacion-2026-09-22.json), con ruta y SHA-256 de cada ficha original. Los enlaces locales de las fuentes se ajustaron a esta carpeta conservando su ubicación original como metadato.
+
 ## Unidad 1
 
 - `unidad-1/actividad-00-foro-presentacion.md`: actividad no numerada en el aula.
