@@ -27,15 +27,18 @@
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage{framed}
+\usepackage{tcolorbox}
 \usepackage{pgffor}
 \setcitestyle{authoryear,open={(},close={)}}
 
 \definecolor{uanlblue}{RGB}{0,55,108}
 \newenvironment{examplebox}[1]{%
-  \def\FrameCommand{\fcolorbox{uanlblue}{blue!3}}%
-  \MakeFramed{\advance\hsize-2\width\FrameRestore}%
+  \begin{tcolorbox}[colback=blue!3,colframe=uanlblue,boxrule=0.4pt,
+    arc=0pt,left=2mm,right=2mm,top=2mm,bottom=2mm,
+    before skip=8pt,after skip=8pt]%
+  \setstretch{1.12}%
   \noindent\textbf{#1}\par\smallskip
-}{\endMakeFramed}
+}{\end{tcolorbox}}
 \newenvironment{sourcebox}[1]{%
   \def\FrameCommand{\fcolorbox{orange!70!black}{yellow!5}}%
   \MakeFramed{\advance\hsize-2\width\FrameRestore}%
@@ -75,6 +78,6 @@
 
 \templatePagecfg
 \onehalfspacing
-\input{UANL/ingeniero-agronomo/calculo-integral/contenido-actividad-1}
+\input{UANL/ingeniero-agronomo/calculo-integral/contenido-actividad-2}
 \templateFinalcfg
 \end{document}
