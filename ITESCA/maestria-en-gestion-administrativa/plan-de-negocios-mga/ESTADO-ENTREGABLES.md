@@ -1,5 +1,9 @@
 # Plan de Negocios - Entregables por vencimiento
 
+## Actualización del sondeo del 30/09/2026
+
+La Actividad 10 de AM Taller fue entregada el 28/09 y calificada con **90/100** el 29/09. La docente solicita incorporar un sondeo real por conveniencia sobre servicio, frecuencia, gasto y satisfacción. Se prepararon una [revisión metodológica](reporte-plan-de-negocios-Actividad-10-AM-Taller-Revision.docx) y un [cuestionario de aplicación](Sondeo-AM-Taller-Aplicacion.docx); **faltan respuestas reales y resultados**, por lo que la corrección no está concluida. Moodle indica que la tarea no acepta entregas. [Evidencia, cambios y pendientes](referencias-plan-de-negocios/correccion-sondeo-2026-09-30/README.md). La tabla siguiente conserva su corte histórico del 23/09.
+
 Revision documental local: **23/09/2026**. Preparacion local no equivale a entrega ni aprobacion. **No estan completas las quince actividades.** [Dictamen por actividad y requisito](VALIDACION-ACTIVIDADES-1-15.md). El [calendario](ORDEN-ACTIVIDADES.md) conserva su consulta del 22/09/2026; esta revision no revalida el estado del aula.
 
 | Actividad | Modulo Moodle | Producto disponible | Estado |

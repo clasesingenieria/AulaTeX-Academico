@@ -1,5 +1,14 @@
 # Seminario I: estado de documentos
 
+## Entregas del 27 de septiembre de 2026
+
+- **Tarea 8:** [Word](entregas/Tarea8_DeLaCruzMunoz.docx), 9 páginas, enviado para calificar en Moodle (módulo 2908).
+- **Tarea 9:** [Word](entregas/Tarea9_DeLaCruzMunoz.docx), 14 páginas, enviado para calificar en Moodle (módulo 2909).
+- **Registro del tema:** [Word sin firmas](entregas/RegistroTema_DeLaCruzMunoz.docx) y [PDF firmado](entregas/RegistroTema_DeLaCruzMunoz_Firmado.pdf), enviados para calificar al módulo 2907 el 27/09/2026 a las 21:43, hora del aula. Ambos archivos recuperados y comprobados por SHA-256. El CVU permanece vacío en ambos documentos; el PDF escaneado se entregó exactamente como lo proporcionó el estudiante.
+- Ambas tareas enviadas a las 14:32, hora mostrada por Moodle. Archivos recuperados y comprobados por SHA-256. [Evidencias y detalles](anteproyecto/evidencias/moodle-2026-09-27/README.md).
+
+Tema tentativo: **Gestión del cumplimiento normativo para formalizar vTaxi como plataforma de taxis en Nuevo León**. No se afirma aprobación docente del tema.
+
 Revisión estructural: 22 de septiembre de 2026. Preparación local no equivale a entrega en Moodle ni aprobación del anteproyecto.
 
 | Documento | Fuente y producto | Alcance |

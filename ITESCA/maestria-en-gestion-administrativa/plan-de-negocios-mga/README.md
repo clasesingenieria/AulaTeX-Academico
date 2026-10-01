@@ -2,6 +2,10 @@
 
 ITESCA, Maestria en Gestion Administrativa, periodo 2026-II.
 
+## Corrección del sondeo de AM Taller del 30/09/2026
+
+[Revisión y archivos de aplicación](referencias-plan-de-negocios/correccion-sondeo-2026-09-30/README.md). La entrega obtuvo 90/100. Se corrigió el enfoque del sondeo y se preparó el cuestionario; faltan respuestas reales para integrar servicio, frecuencia, gasto y satisfacción. La actividad está cerrada para entregas. El estado histórico que sigue mantiene sus fechas originales.
+
 ## Validación documental del 23/09/2026
 
 [Dictamen de las actividades 1 a 15](VALIDACION-ACTIVIDADES-1-15.md) y [evidencia por requisito](VALIDACION-ACTIVIDADES-1-15.json). **No están completas las quince actividades:** los reportes de preparación no sustituyen los cuestionarios, los datos del sondeo ni el video.
