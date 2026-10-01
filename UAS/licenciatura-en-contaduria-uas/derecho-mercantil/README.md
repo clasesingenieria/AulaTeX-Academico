@@ -10,6 +10,7 @@ El siguiente cierre verificado es el **27/09/2026 a las 23:59**, para el reporte
 
 ## Plantillas y archivos
 
+- **Actividad 1, reporte de lectura S1:** [PDF para revisar y transcribir](ReporteLectura_S1_MartinJonathanDeLaCruzMunoz.pdf) y [fuente LaTeX](reporte-derecho-mercantil-Actividad-1.tex). Contiene los cinco subtemas, portada con datos confirmados y referencias a la lectura de García Máynez. Es apoyo digital: queda pendiente la escritura personal a mano, digitalización y entrega. [Soporte y decisiones editoriales](investigacion-aulatex/actividad-1/memoria-y-validacion.md).
 - [Reporte editable](reporte-derecho-mercantil.tex) y [PDF de muestra](reporte-derecho-mercantil.pdf).
 - [Ficha de actividad](actividad-derecho-mercantil.tex) y [PDF](actividad-derecho-mercantil.pdf).
 - [Presentación editable](presentacion-derecho-mercantil.tex) y [PDF](presentacion-derecho-mercantil.pdf).
@@ -25,4 +26,4 @@ Los productos nuevos se guardan en esta raíz. Notas, referencias, imágenes, ex
 
 Las tareas S1, S2 y S3 piden cuerpo manuscrito de una a dos cuartillas. La plantilla digital no reemplaza ese requisito. La guía S2 menciona obligaciones, pero el módulo de entrega pide sujetos del Derecho: la discrepancia requiere confirmación docente. El ensayo integrador pide introducción de una cuartilla, desarrollo de tres y conclusiones de una, más portada y referencias APA. Las tareas indican límite de 2 Mb.
 
-Estudiante, matrícula, asesor, grupo y lugar permanecen editables. Los diseñadores de los materiales no se identifican automáticamente como asesores del grupo.
+En las plantillas generales, estudiante, matrícula, asesor, grupo y lugar permanecen editables. Para el reporte S1 se usan los datos de los reportes UAS del estudiante y el asesor confirmado por el usuario, Wilder Alfredo Angulo. Los diseñadores de los materiales no se identifican automáticamente como asesores del grupo.
