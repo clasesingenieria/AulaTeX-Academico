@@ -1,0 +1,1853 @@
+% Contenido específico de la Actividad 2 (Evidencia 1).
+% Numeración cotejada con las cuatro imágenes de la consigna original.
+\begin{abstractd}
+Se desarrollan los 88 enunciados completos que aparecen en las cuatro imágenes de la Evidencia 1: 28 de antiderivación directa, 24 de sustitución y aplicación, y 36 de integración algebraica y trigonométrica. Cada solución muestra la elección del método, las transformaciones del integrando, los factores del diferencial, la integración y una comprobación por derivación. Se conservan los números de la fuente para facilitar el cotejo y se indican las restricciones de dominio pertinentes.
+\end{abstractd}
+\templateIndex
+\clearpage
+\pagenumbering{arabic}
+
+\section{Introducción y alcance}
+Una antiderivada de $f$ es una función $F$ que satisface $F'(x)=f(x)$. En un intervalo de definición, todas las antiderivadas difieren en una constante; por ello se escribe $\int f(x)\,dx=F(x)+C$. Integrar exige reconocer la estructura de la expresión antes de aplicar una fórmula: distribuir productos, transformar radicales en potencias, dividir polinomios o identificar una función interna y su derivada \citep{stewart2016calculus,openstax2016calculus1}.
+
+En Agronomía, una integral permite acumular una tasa de crecimiento, consumo de agua o costo marginal. La verificación por derivación comprueba que el resultado conserva la tasa de cambio original, incluidos sus signos y coeficientes.
+
+\begin{sourcebox}{Correspondencia con la consigna}
+Se resuelven los ejercicios 4.1.1--4.1.28, 4.2.1--4.2.14, 4.2.36--4.2.45 y los ejercicios 1--36 de las otras dos imágenes. Estos últimos se identifican como A.1--A.36 para evitar confundir las listas. Los ejercicios 4.1.29--4.1.30 y 4.2.15--4.2.35 no se ven completos en las capturas; de 4.2.46 sólo aparece el inicio del enunciado. No se reconstruyen expresiones ausentes. Las cuatro imágenes originales se conservan al final.
+
+El cotejo corrige cuatro transcripciones anteriores: en 4.1.12 aparece $x^4(5-x^2)$; en 4.1.19, $(x^2+4x-4)/\sqrt{x}$; en 4.1.22, $(27t^3-1)/\sqrt[3]{t}$; y en 4.2.42 el numerador es $x^3$.
+\end{sourcebox}
+
+\section{Guía de fórmulas y pasos}
+\subsection{Linealidad, potencias y logaritmos}
+Las constantes multiplicativas salen de la integral y las sumas se integran término a término:
+\[
+ \int [af(x)+bg(x)]\,dx=a\int f(x)\,dx+b\int g(x)\,dx.
+\]
+La regla de la potencia aumenta el exponente en una unidad y divide entre el nuevo exponente:
+\[
+ \int x^n\,dx=\frac{x^{n+1}}{n+1}+C\quad(n\ne-1),
+ \qquad \int\frac{dx}{x}=\ln|x|+C\quad(x\ne0).
+\]
+Por ejemplo, $\sqrt{x}=x^{1/2}$, $1/\sqrt{x}=x^{-1/2}$ y $x^a/x^b=x^{a-b}$, en el dominio donde estas expresiones estén definidas. Dividir entre $3/2$ equivale a multiplicar por $2/3$. Se escribe una sola constante $C$ porque la suma de constantes arbitrarias vuelve a ser una constante.
+
+\subsection{Cambio de variable sin saltos}
+Si $u=g(x)$, se calcula $du=g'(x)\,dx$ y se despeja el producto diferencial que aparece en la integral. Por ejemplo,
+\[
+ u=2x^2+1,\quad du=4x\,dx,\quad x\,dx=\frac{du}{4}.
+\]
+Después se reemplazan \emph{todos} los factores que contienen la variable original; no debe quedar una mezcla de $x$ y $u$. Se integra en $u$, se sustituye $u=g(x)$ en el resultado y se comprueba con la regla de la cadena:
+\[
+ \frac{d}{dx}H(g(x))=H'(g(x))g'(x).
+\]
+En particular, $\int g'(x)/g(x)\,dx=\ln|g(x)|+C$ en intervalos donde $g(x)\ne0$.
+
+\subsection{División algebraica y funciones trigonométricas}
+Si $P(x)=D(x)Q(x)+R(x)$, entonces $P/D=Q+R/D$. Esta igualdad se comprueba multiplicando y evita integrar una fracción impropia sin simplificar. También se usa
+\[
+ \int\frac{dx}{x^2+a^2}=\frac1a\arctan\!\left(\frac xa\right)+C\quad(a>0).
+\]
+Para funciones trigonométricas, los argumentos se consideran en radianes:
+\begin{align*}
+ \int\sen x\,dx&=-\cos x+C,&\int\cos x\,dx&=\sen x+C,\\
+ \int\sec^2x\,dx&=\tan x+C,&\int\csc^2x\,dx&=-\cot x+C,\\
+ \int\sec x\tan x\,dx&=\sec x+C,&\int\csc x\cot x\,dx&=-\csc x+C.
+\end{align*}
+Las integrales de secante, cosecante y tangente se justifican en los ejercicios A.30--A.36 mediante cambios de variable y derivadas de logaritmos.
+
+\subsection{Dominio y comprobación}
+Cada respuesta vale en intervalos donde el integrando sea real y esté definido. Se excluyen ceros de denominadores; una raíz cuadrada en un denominador exige radicando positivo. Las potencias con denominador impar se interpretan mediante raíces reales: $z^{1/3}=\sqrt[3]{z}$ y $z^{4/3}=(\sqrt[3]{z})^4$, incluso para $z<0$. La constante puede ser distinta en intervalos separados por singularidades.
+
+En cada caja, $I$ representa la integral buscada y $F$ su resultado sin $C$. Se calcula $F'$ y se simplifica hasta recuperar el integrando. Así se revisan exponentes, signos, factores del diferencial y condiciones iniciales \citep{thomas2018calculus}.
+
+\section{Ejercicios 4.1: antiderivación directa}
+
+\begin{examplebox}{Ejercicio 4.1.1}
+\textbf{Integral:} $\displaystyle I=\int 3x^4\,dx$.
+
+\textbf{1. Método y preparación.} El coeficiente $3$ es constante; se aplica la regla de la potencia con $n=4$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=3\int x^4\,dx=3\frac{x^{4+1}}{4+1}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac35x^5+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac35(5x^4)=3x^4.
+\end{align*}
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.1.2}
+\textbf{Integral:} $\displaystyle I=\int 2x^7\,dx$.
+
+\textbf{1. Método y preparación.} Se saca el factor $2$ y se aumenta el exponente de $7$ a $8$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=2\int x^7\,dx=2\frac{x^8}{8}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac14x^8+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac14(8x^7)=2x^7.
+\end{align*}
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.1.3}
+\textbf{Integral:} $\displaystyle I=\int \frac1{x^3}\,dx$.
+
+\textbf{1. Método y preparación.} Se escribe $1/x^3=x^{-3}$; el nuevo exponente es $-3+1=-2$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\int x^{-3}\,dx=\frac{x^{-2}}{-2}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+-\frac1{2x^2}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=-\frac12(-2)x^{-3}=\frac1{x^3}.
+\end{align*}
+\textbf{Dominio.} $x\ne0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.1.4}
+\textbf{Integral:} $\displaystyle I=\int \frac3{t^5}\,dt$.
+
+\textbf{1. Método y preparación.} Se transforma el denominador en potencia negativa: $3/t^5=3t^{-5}$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=3\int t^{-5}\,dt=3\frac{t^{-4}}{-4}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+-\frac3{4t^4}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(t)&=-\frac34(-4)t^{-5}=\frac3{t^5}.
+\end{align*}
+\textbf{Dominio.} $t\ne0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.1.5}
+\textbf{Integral:} $\displaystyle I=\int 5u^{3/2}\,du$.
+
+\textbf{1. Método y preparación.} La letra $u$ ya es la variable original; no se necesita otro cambio. Se calcula $3/2+1=5/2$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=5\frac{u^{5/2}}{5/2}+C=5\left(\frac25\right)u^{5/2}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+2u^{5/2}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(u)&=2\left(\frac52\right)u^{3/2}=5u^{3/2}.
+\end{align*}
+\textbf{Dominio.} $u\ge0$; la derivación usual se realiza para $u>0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.1.6}
+\textbf{Integral:} $\displaystyle I=\int 10\sqrt[3]{x^2}\,dx$.
+
+\textbf{1. Método y preparación.} La raíz cúbica se representa como $x^{2/3}$; $2/3+1=5/3$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=10\int x^{2/3}\,dx=10\frac{x^{5/3}}{5/3}+C=10\left(\frac35\right)x^{5/3}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+6x^{5/3}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=6\left(\frac53\right)x^{2/3}=10\sqrt[3]{x^2}.
+\end{align*}
+\textbf{Dominio.} Todos los reales; en $x=0$ la derivada también vale $0$ por su definición.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.1.7}
+\textbf{Integral:} $\displaystyle I=\int \frac2{\sqrt[3]{x}}\,dx$.
+
+\textbf{1. Método y preparación.} Se usa $2/\sqrt[3]{x}=2x^{-1/3}$ y $-1/3+1=2/3$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=2\frac{x^{2/3}}{2/3}+C=2\left(\frac32\right)x^{2/3}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+3x^{2/3}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=3\left(\frac23\right)x^{-1/3}=\frac2{\sqrt[3]{x}}.
+\end{align*}
+\textbf{Dominio.} $x\ne0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.1.8}
+\textbf{Integral:} $\displaystyle I=\int \frac3{\sqrt y}\,dy$.
+
+\textbf{1. Método y preparación.} Se escribe $3y^{-1/2}$ y se calcula $-1/2+1=1/2$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=3\frac{y^{1/2}}{1/2}+C=3(2)y^{1/2}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+6\sqrt y+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(y)&=6\left(\frac12\right)y^{-1/2}=\frac3{\sqrt y}.
+\end{align*}
+\textbf{Dominio.} $y>0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.1.9}
+\textbf{Integral:} $\displaystyle I=\int 6t^2\sqrt[3]t\,dt$.
+
+\textbf{1. Método y preparación.} En el producto se suman exponentes: $t^2t^{1/3}=t^{7/3}$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=6\int t^{7/3}\,dt=6\frac{t^{10/3}}{10/3}+C=6\left(\frac3{10}\right)t^{10/3}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac95t^{10/3}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(t)&=\frac95\left(\frac{10}3\right)t^{7/3}=6t^2\sqrt[3]t.
+\end{align*}
+\textbf{Dominio.} Todos los reales, con raíz cúbica real; en $t=0$ la derivada es $0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.1.10}
+\textbf{Integral:} $\displaystyle I=\int (3u^5-2u^3)\,du$.
+
+\textbf{1. Método y preparación.} La linealidad permite integrar cada monomio; $u$ es la variable original.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=3\int u^5\,du-2\int u^3\,du\\&=3\frac{u^6}{6}-2\frac{u^4}{4}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac{u^6-u^4}{2}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(u)&=\frac12(6u^5)-\frac12(4u^3)=3u^5-2u^3.
+\end{align*}
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.1.11}
+\textbf{Integral:} $\displaystyle I=\int y^3(2y^2-3)\,dy$.
+
+\textbf{1. Método y preparación.} Primero se distribuye $y^3$: $y^3(2y^2-3)=2y^5-3y^3$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=2\int y^5\,dy-3\int y^3\,dy\\&=2\frac{y^6}{6}-3\frac{y^4}{4}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac{y^6}{3}-\frac{3y^4}{4}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(y)&=\frac63y^5-\frac{12}4y^3=2y^5-3y^3=y^3(2y^2-3).
+\end{align*}
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.1.12}
+\textbf{Integral:} $\displaystyle I=\int x^4(5-x^2)\,dx$.
+
+\textbf{1. Método y preparación.} La fuente contiene $x^2$ dentro del paréntesis. Al distribuir: $5x^4-x^{4+2}=5x^4-x^6$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=5\int x^4\,dx-\int x^6\,dx\\&=5\frac{x^5}{5}-\frac{x^7}{7}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+x^5-\frac{x^7}{7}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=5x^4-\frac77x^6=x^4(5-x^2).
+\end{align*}
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.1.13}
+\textbf{Integral:} $\displaystyle I=\int (8x^4+4x^3-6x^2-4x+5)\,dx$.
+
+\textbf{1. Método y preparación.} Se aplica linealidad a los cinco términos, incluyendo la constante $5=5x^0$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=8\frac{x^5}{5}+4\frac{x^4}{4}-6\frac{x^3}{3}-4\frac{x^2}{2}+5x+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac85x^5+x^4-2x^3-2x^2+5x+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac85(5x^4)+4x^3-2(3x^2)-2(2x)+5\\&=8x^4+4x^3-6x^2-4x+5.
+\end{align*}
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.1.14}
+\textbf{Integral:} $\displaystyle I=\int (2+3x^2-8x^3)\,dx$.
+
+\textbf{1. Método y preparación.} La integral de una constante $k$ es $kx$; los otros términos siguen la regla de la potencia.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=2\int1\,dx+3\int x^2\,dx-8\int x^3\,dx\\&=2x+3\frac{x^3}{3}-8\frac{x^4}{4}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+2x+x^3-2x^4+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=2+3x^2-2(4x^3)=2+3x^2-8x^3.
+\end{align*}
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.1.15}
+\textbf{Integral:} $\displaystyle I=\int \sqrt x(x+1)\,dx$.
+
+\textbf{1. Método y preparación.} Se distribuye $x^{1/2}$: $x^{1/2}x+x^{1/2}=x^{3/2}+x^{1/2}$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\frac{x^{5/2}}{5/2}+\frac{x^{3/2}}{3/2}+C\\&=\frac25x^{5/2}+\frac23x^{3/2}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac25x^{5/2}+\frac23x^{3/2}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac25\frac52x^{3/2}+\frac23\frac32x^{1/2}\\&=x^{3/2}+x^{1/2}=\sqrt x(x+1).
+\end{align*}
+\textbf{Dominio.} $x\ge0$; se deriva en el interior $x>0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.1.16}
+\textbf{Integral:} $\displaystyle I=\int \left(\sqrt x-\frac1{\sqrt x}\right)\,dx$.
+
+\textbf{1. Método y preparación.} Se expresan los radicales como $x^{1/2}-x^{-1/2}$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\frac{x^{3/2}}{3/2}-\frac{x^{1/2}}{1/2}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac23x^{3/2}-2\sqrt x+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac23\frac32x^{1/2}-2\frac12x^{-1/2}=\sqrt x-\frac1{\sqrt x}.
+\end{align*}
+\textbf{Dominio.} $x>0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.1.17}
+\textbf{Integral:} $\displaystyle I=\int \left(\frac2{x^3}+\frac3{x^2}+5\right)\,dx$.
+
+\textbf{1. Método y preparación.} El integrando es $2x^{-3}+3x^{-2}+5$; los exponentes resultantes son $-2$ y $-1$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=2\frac{x^{-2}}{-2}+3\frac{x^{-1}}{-1}+5x+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+-\frac1{x^2}-\frac3x+5x+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=-(-2)x^{-3}-3(-1)x^{-2}+5=\frac2{x^3}+\frac3{x^2}+5.
+\end{align*}
+\textbf{Dominio.} $x\ne0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.1.18}
+\textbf{Integral:} $\displaystyle I=\int \left(3-\frac1{x^4}+\frac1{x^2}\right)\,dx$.
+
+\textbf{1. Método y preparación.} Se conserva el signo negativo de $-x^{-4}$ al dividir entre $-3$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=3x-\frac{x^{-3}}{-3}+\frac{x^{-1}}{-1}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+3x+\frac1{3x^3}-\frac1x+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=3+\frac13(-3)x^{-4}-(-1)x^{-2}\\&=3-\frac1{x^4}+\frac1{x^2}.
+\end{align*}
+\textbf{Dominio.} $x\ne0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.1.19}
+\textbf{Integral:} $\displaystyle I=\int \frac{x^2+4x-4}{\sqrt x}\,dx$.
+
+\textbf{1. Método y preparación.} El radical está en el denominador. Se divide cada término entre $x^{1/2}$ y se restan exponentes.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+\frac{x^2+4x-4}{\sqrt x}&=x^{3/2}+4x^{1/2}-4x^{-1/2},\\I&=\frac{x^{5/2}}{5/2}+4\frac{x^{3/2}}{3/2}-4\frac{x^{1/2}}{1/2}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac25x^{5/2}+\frac83x^{3/2}-8\sqrt x+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=x^{3/2}+4x^{1/2}-4x^{-1/2}\\&=\frac{x^2+4x-4}{\sqrt x}.
+\end{align*}
+\textbf{Dominio.} $x>0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.1.20}
+\textbf{Integral:} $\displaystyle I=\int \frac{y^4+2y^2-1}{\sqrt y}\,dy$.
+
+\textbf{1. Método y preparación.} Se divide término a término entre $y^{1/2}$: los exponentes son $7/2$, $3/2$ y $-1/2$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\int(y^{7/2}+2y^{3/2}-y^{-1/2})\,dy\\&=\frac{y^{9/2}}{9/2}+2\frac{y^{5/2}}{5/2}-\frac{y^{1/2}}{1/2}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac29y^{9/2}+\frac45y^{5/2}-2\sqrt y+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(y)&=y^{7/2}+2y^{3/2}-y^{-1/2}=\frac{y^4+2y^2-1}{\sqrt y}.
+\end{align*}
+\textbf{Dominio.} $y>0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.1.21}
+\textbf{Integral:} $\displaystyle I=\int \left(\sqrt[3]x+\frac1{\sqrt[3]x}\right)\,dx$.
+
+\textbf{1. Método y preparación.} Se utilizan las potencias $x^{1/3}+x^{-1/3}$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\frac{x^{4/3}}{4/3}+\frac{x^{2/3}}{2/3}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac34x^{4/3}+\frac32x^{2/3}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac34\frac43x^{1/3}+\frac32\frac23x^{-1/3}\\&=\sqrt[3]x+\frac1{\sqrt[3]x}.
+\end{align*}
+\textbf{Dominio.} $x\ne0$; raíces cúbicas reales.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.1.22}
+\textbf{Integral:} $\displaystyle I=\int \frac{27t^3-1}{\sqrt[3]t}\,dt$.
+
+\textbf{1. Método y preparación.} El denominador es $\sqrt[3]t$. Se obtiene $27t^{3-1/3}-t^{-1/3}=27t^{8/3}-t^{-1/3}$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=27\frac{t^{11/3}}{11/3}-\frac{t^{2/3}}{2/3}+C\\&=27\left(\frac3{11}\right)t^{11/3}-\frac32t^{2/3}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac{81}{11}t^{11/3}-\frac32t^{2/3}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(t)&=\frac{81}{11}\frac{11}3t^{8/3}-\frac32\frac23t^{-1/3}\\&=27t^{8/3}-t^{-1/3}=\frac{27t^3-1}{\sqrt[3]t}.
+\end{align*}
+\textbf{Dominio.} $t\ne0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.1.23}
+\textbf{Integral:} $\displaystyle I=\int (3\sen t-2\cos t)\,dt$.
+
+\textbf{1. Método y preparación.} Se usan $\int\sen t\,dt=-\cos t$ y $\int\cos t\,dt=\sen t$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=3\int\sen t\,dt-2\int\cos t\,dt\\&=3(-\cos t)-2\sen t+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+-3\cos t-2\sen t+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(t)&=-3(-\sen t)-2\cos t=3\sen t-2\cos t.
+\end{align*}
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.1.24}
+\textbf{Integral:} $\displaystyle I=\int (5\cos x-4\sen x)\,dx$.
+
+\textbf{1. Método y preparación.} Integrar $\sen x$ introduce un signo negativo que se combina con el coeficiente $-4$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=5\int\cos x\,dx-4\int\sen x\,dx\\&=5\sen x-4(-\cos x)+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+5\sen x+4\cos x+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=5\cos x+4(-\sen x)=5\cos x-4\sen x.
+\end{align*}
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.1.25}
+\textbf{Integral:} $\displaystyle I=\int \frac{\sen x}{\cos^2x}\,dx$.
+
+\textbf{1. Método y preparación.} Para mostrar el factor de signo, se toma $u=\cos x$, $du=-\sen x\,dx$, de donde $\sen x\,dx=-du$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=-\int u^{-2}\,du=-\frac{u^{-1}}{-1}+C=u^{-1}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\sec x+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=-\cos^{-2}x(-\sen x)=\frac{\sen x}{\cos^2x}.
+\end{align*}
+\textbf{Dominio.} $\cos x\ne0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.1.26}
+\textbf{Integral:} $\displaystyle I=\int \frac{\cos x}{\sen^2x}\,dx$.
+
+\textbf{1. Método y preparación.} Se elige $u=\sen x$ y $du=\cos x\,dx$; el denominador pasa a ser $u^2$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\int u^{-2}\,du=\frac{u^{-1}}{-1}+C=-u^{-1}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+-\csc x+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=-[-\sen^{-2}x\cos x]=\frac{\cos x}{\sen^2x}.
+\end{align*}
+\textbf{Dominio.} $\sen x\ne0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.1.27}
+\textbf{Integral:} $\displaystyle I=\int (4\csc x\cot x+2\sec^2x)\,dx$.
+
+\textbf{1. Método y preparación.} Se reconocen las derivadas $(\csc x)'=-\csc x\cot x$ y $(\tan x)'=\sec^2x$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=4\int\csc x\cot x\,dx+2\int\sec^2x\,dx\\&=4(-\csc x)+2\tan x+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+-4\csc x+2\tan x+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=-4(-\csc x\cot x)+2\sec^2x\\&=4\csc x\cot x+2\sec^2x.
+\end{align*}
+\textbf{Dominio.} $\sen x\ne0$ y $\cos x\ne0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.1.28}
+\textbf{Integral:} $\displaystyle I=\int (3\csc^2t-5\sec t\tan t)\,dt$.
+
+\textbf{1. Método y preparación.} Se usan las antiderivadas $-\cot t$ y $\sec t$, respectivamente.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=3\int\csc^2t\,dt-5\int\sec t\tan t\,dt\\&=3(-\cot t)-5\sec t+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+-3\cot t-5\sec t+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(t)&=-3(-\csc^2t)-5\sec t\tan t\\&=3\csc^2t-5\sec t\tan t.
+\end{align*}
+\textbf{Dominio.} $\sen t\ne0$ y $\cos t\ne0$.
+\end{examplebox}
+
+
+\clearpage
+\section{Ejercicios 4.2: sustitución y aplicación}
+
+\begin{examplebox}{Ejercicio 4.2.1}
+\textbf{Integral:} $\displaystyle I=\int \sqrt{1-4y}\,dy$.
+
+\textbf{1. Método y preparación.} Se elige $u=1-4y$ porque es el radicando. Entonces $du=-4\,dy$ y $dy=-du/4$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=-\frac14\int u^{1/2}\,du=-\frac14\frac{u^{3/2}}{3/2}+C\\&=-\frac14\frac23u^{3/2}+C=-\frac16u^{3/2}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+-\frac16(1-4y)^{3/2}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(y)&=-\frac16\frac32(1-4y)^{1/2}(-4)=\sqrt{1-4y}.
+\end{align*}
+\textbf{Dominio.} $y\le1/4$; la derivación se realiza en el interior.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.2.2}
+\textbf{Integral:} $\displaystyle I=\int \sqrt[3]{3x-4}\,dx$.
+
+\textbf{1. Método y preparación.} Se toma $u=3x-4$, $du=3\,dx$ y $dx=du/3$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\frac13\int u^{1/3}\,du=\frac13\frac{u^{4/3}}{4/3}+C\\&=\frac13\frac34u^{4/3}+C=\frac14u^{4/3}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac14(3x-4)^{4/3}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac14\frac43(3x-4)^{1/3}(3)=\sqrt[3]{3x-4}.
+\end{align*}
+\textbf{Dominio.} Todos los reales. En $x=4/3$ la derivada vale $0$ por continuidad del integrando y por el cociente incremental.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.2.3}
+\textbf{Integral:} $\displaystyle I=\int x\sqrt[3]{x^2-9}\,dx$.
+
+\textbf{1. Método y preparación.} Se elige $u=x^2-9$. Su diferencial es $du=2x\,dx$, así que $x\,dx=du/2$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\frac12\int u^{1/3}\,du=\frac12\frac{u^{4/3}}{4/3}+C\\&=\frac12\frac34u^{4/3}+C=\frac38u^{4/3}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac38(x^2-9)^{4/3}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac38\frac43(x^2-9)^{1/3}(2x)\\&=x\sqrt[3]{x^2-9}.
+\end{align*}
+\textbf{Dominio.} Todos los reales, con raíz cúbica real. En $x=\pm3$ la derivada es $0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.2.4}
+\textbf{Integral:} $\displaystyle I=\int x(2x^2+1)^6\,dx$.
+
+\textbf{1. Método y preparación.} La expresión elevada a la sexta potencia es $u=2x^2+1$. Se obtiene $du=4x\,dx$ y $x\,dx=du/4$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\frac14\int u^6\,du=\frac14\frac{u^7}{7}+C=\frac{u^7}{28}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac{(2x^2+1)^7}{28}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac1{28}(7)(2x^2+1)^6(4x)=x(2x^2+1)^6.
+\end{align*}
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.2.5}
+\textbf{Integral:} $\displaystyle I=\int x^2(x^3-1)^{10}\,dx$.
+
+\textbf{1. Método y preparación.} Se toma $u=x^3-1$, por lo que $du=3x^2\,dx$ y $x^2\,dx=du/3$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\frac13\int u^{10}\,du=\frac13\frac{u^{11}}{11}+C=\frac{u^{11}}{33}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac{(x^3-1)^{11}}{33}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac1{33}(11)(x^3-1)^{10}(3x^2)=x^2(x^3-1)^{10}.
+\end{align*}
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.2.6}
+\textbf{Integral:} $\displaystyle I=\int 3x\sqrt{4-x^2}\,dx$.
+
+\textbf{1. Método y preparación.} Se elige $u=4-x^2$, $du=-2x\,dx$; por tanto $3x\,dx=-3\,du/2$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=-\frac32\int u^{1/2}\,du=-\frac32\frac23u^{3/2}+C=-u^{3/2}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+-(4-x^2)^{3/2}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=-\frac32(4-x^2)^{1/2}(-2x)=3x\sqrt{4-x^2}.
+\end{align*}
+\textbf{Dominio.} $-2\le x\le2$; derivación en $(-2,2)$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.2.7}
+\textbf{Integral:} $\displaystyle I=\int \frac{y^3}{(1-2y^4)^5}\,dy$.
+
+\textbf{1. Método y preparación.} Se toma $u=1-2y^4$, $du=-8y^3\,dy$ y $y^3\,dy=-du/8$. El denominador se escribe $u^{-5}$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=-\frac18\int u^{-5}\,du=-\frac18\frac{u^{-4}}{-4}+C=\frac1{32}u^{-4}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac1{32(1-2y^4)^4}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(y)&=\frac1{32}(-4)(1-2y^4)^{-5}(-8y^3)\\&=\frac{y^3}{(1-2y^4)^5}.
+\end{align*}
+\textbf{Dominio.} $1-2y^4\ne0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.2.8}
+\textbf{Integral:} $\displaystyle I=\int \frac{s}{\sqrt{3s^2+1}}\,ds$.
+
+\textbf{1. Método y preparación.} Se define $u=3s^2+1$, $du=6s\,ds$, de modo que $s\,ds=du/6$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\frac16\int u^{-1/2}\,du=\frac16\frac{u^{1/2}}{1/2}+C=\frac13u^{1/2}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac13\sqrt{3s^2+1}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(s)&=\frac13\frac12(3s^2+1)^{-1/2}(6s)=\frac{s}{\sqrt{3s^2+1}}.
+\end{align*}
+\textbf{Dominio.} Todos los reales, pues $3s^2+1>0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.2.9}
+\textbf{Integral:} $\displaystyle I=\int (x^2-4x+4)^{4/3}\,dx$.
+
+\textbf{1. Método y preparación.} Primero se reconoce el cuadrado perfecto $x^2-4x+4=(x-2)^2$. Con $u=x-2$ y $du=dx$, la raíz cúbica real permite escribir $(u^2)^{4/3}=u^{8/3}$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\int u^{8/3}\,du=\frac{u^{11/3}}{11/3}+C=\frac3{11}u^{11/3}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac3{11}(x-2)^{11/3}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac3{11}\frac{11}3(x-2)^{8/3}\\&=[(x-2)^2]^{4/3}=(x^2-4x+4)^{4/3}.
+\end{align*}
+\textbf{Dominio.} Todos los reales. En $x=2$, el cociente incremental da derivada $0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.2.10}
+\textbf{Integral:} $\displaystyle I=\int x^4\sqrt{3x^5-5}\,dx$.
+
+\textbf{1. Método y preparación.} Se toma $u=3x^5-5$, $du=15x^4\,dx$ y $x^4\,dx=du/15$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\frac1{15}\int u^{1/2}\,du=\frac1{15}\frac23u^{3/2}+C=\frac2{45}u^{3/2}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac2{45}(3x^5-5)^{3/2}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac2{45}\frac32(3x^5-5)^{1/2}(15x^4)\\&=x^4\sqrt{3x^5-5}.
+\end{align*}
+\textbf{Dominio.} $x\ge(5/3)^{1/5}$; derivación en el interior.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.2.11}
+\textbf{Integral:} $\displaystyle I=\int x\sqrt{x+2}\,dx$.
+
+\textbf{1. Método y preparación.} Se define $u=x+2$, $du=dx$. Es necesario sustituir también el factor $x=u-2$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\int(u-2)u^{1/2}\,du=\int(u^{3/2}-2u^{1/2})\,du\\&=\frac{u^{5/2}}{5/2}-2\frac{u^{3/2}}{3/2}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac25(x+2)^{5/2}-\frac43(x+2)^{3/2}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=(x+2)^{3/2}-2(x+2)^{1/2}\\&=\sqrt{x+2}[(x+2)-2]=x\sqrt{x+2}.
+\end{align*}
+\textbf{Dominio.} $x\ge-2$; derivación para $x>-2$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.2.12}
+\textbf{Integral:} $\displaystyle I=\int \frac{t}{\sqrt{t+3}}\,dt$.
+
+\textbf{1. Método y preparación.} Con $u=t+3$, se tiene $dt=du$ y $t=u-3$. Se sustituye el numerador completo.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\int(u-3)u^{-1/2}\,du=\int(u^{1/2}-3u^{-1/2})\,du\\&=\frac23u^{3/2}-6u^{1/2}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac23(t+3)^{3/2}-6\sqrt{t+3}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(t)&=(t+3)^{1/2}-3(t+3)^{-1/2}\\&=\frac{(t+3)-3}{\sqrt{t+3}}=\frac t{\sqrt{t+3}}.
+\end{align*}
+\textbf{Dominio.} $t>-3$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.2.13}
+\textbf{Integral:} $\displaystyle I=\int \frac{2r}{(1-r)^7}\,dr$.
+
+\textbf{1. Método y preparación.} Se elige $u=1-r$, $dr=-du$ y $r=1-u$. El signo del diferencial afecta a todo el numerador.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=-2\int(1-u)u^{-7}\,du\\&=-2\int(u^{-7}-u^{-6})\,du\\&=-2\left(\frac{u^{-6}}{-6}-\frac{u^{-5}}{-5}\right)+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac1{3(1-r)^6}-\frac2{5(1-r)^5}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(r)&=2(1-r)^{-7}-2(1-r)^{-6}\\&=\frac{2-2(1-r)}{(1-r)^7}=\frac{2r}{(1-r)^7}.
+\end{align*}
+\textbf{Dominio.} $r\ne1$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.2.14}
+\textbf{Integral:} $\displaystyle I=\int x^3(2-x^2)^{12}\,dx$.
+
+\textbf{1. Método y preparación.} Se toma $u=2-x^2$, $du=-2x\,dx$. Se descompone $x^3dx=x^2(x\,dx)$ y se usa $x^2=2-u$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=-\frac12\int(2-u)u^{12}\,du\\&=\int\left(-u^{12}+\frac12u^{13}\right)\,du\\&=-\frac{u^{13}}{13}+\frac{u^{14}}{28}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+-\frac{(2-x^2)^{13}}{13}+\frac{(2-x^2)^{14}}{28}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=2x(2-x^2)^{12}-x(2-x^2)^{13}\\&=x(2-x^2)^{12}[2-(2-x^2)]\\&=x^3(2-x^2)^{12}.
+\end{align*}
+\end{examplebox}
+
+\noindent\textit{La captura continúa con los ejercicios 36--45; se respeta ese salto de numeración.}
+
+\begin{examplebox}{Ejercicio 4.2.36}
+\textbf{Integral:} $\displaystyle I=\int x(x^2+1)\sqrt{4-2x^2-x^4}\,dx$.
+
+\textbf{1. Método y preparación.} Se desarrolla $(x^2+1)^2=x^4+2x^2+1$, por lo que el radicando es $5-(x^2+1)^2$. Primero, $u=x^2+1$ y $x\,dx=du/2$. Después, $v=5-u^2$ y $u\,du=-dv/2$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\frac12\int u\sqrt{5-u^2}\,du\\&=\frac12\left(-\frac12\right)\int v^{1/2}\,dv\\&=-\frac14\frac23v^{3/2}+C=-\frac16[5-u^2]^{3/2}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+-\frac16(4-2x^2-x^4)^{3/2}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=-\frac16\frac32(4-2x^2-x^4)^{1/2}(-4x-4x^3)\\&=x(x^2+1)\sqrt{4-2x^2-x^4}.
+\end{align*}
+\textbf{Dominio.} $|x|\le\sqrt{\sqrt5-1}$; se deriva en el interior. También puede hacerse en un solo cambio con $v=4-2x^2-x^4$ y $dv=-4x(1+x^2)dx$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.2.37}
+\textbf{Integral:} $\displaystyle I=\int \frac{y+3}{(3-y)^{2/3}}\,dy$.
+
+\textbf{1. Método y preparación.} Con $u=3-y$, $dy=-du$, $y=3-u$ y $y+3=6-u$. Se sustituye también el numerador.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=-\int(6-u)u^{-2/3}\,du\\&=\int(-6u^{-2/3}+u^{1/3})\,du\\&=-6\frac{u^{1/3}}{1/3}+\frac{u^{4/3}}{4/3}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+-18(3-y)^{1/3}+\frac34(3-y)^{4/3}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(y)&=6(3-y)^{-2/3}-(3-y)^{1/3}\\&=\frac{6-(3-y)}{(3-y)^{2/3}}=\frac{y+3}{(3-y)^{2/3}}.
+\end{align*}
+\textbf{Dominio.} $y\ne3$; las raíces cúbicas se toman reales.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.2.38}
+\textbf{Integral:} $\displaystyle I=\int \sqrt{3+s}\,(s+1)^2\,ds$.
+
+\textbf{1. Método y preparación.} Se toma $u=s+3$, $ds=du$ y $s+1=u-2$. Se expande $(u-2)^2=u^2-4u+4$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\int u^{1/2}(u^2-4u+4)\,du\\&=\int(u^{5/2}-4u^{3/2}+4u^{1/2})\,du\\&=\frac27u^{7/2}-\frac85u^{5/2}+\frac83u^{3/2}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac27(s+3)^{7/2}-\frac85(s+3)^{5/2}+\frac83(s+3)^{3/2}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(s)&=(s+3)^{5/2}-4(s+3)^{3/2}+4(s+3)^{1/2}\\&=\sqrt{s+3}[(s+3)^2-4(s+3)+4]\\&=\sqrt{s+3}(s+1)^2.
+\end{align*}
+\textbf{Dominio.} $s\ge-3$; derivación en $s>-3$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.2.39}
+\textbf{Integral:} $\displaystyle I=\int \frac{(r^{1/3}+2)^4}{\sqrt[3]{r^2}}\,dr$.
+
+\textbf{1. Método y preparación.} Se define $u=r^{1/3}+2$, $du=\tfrac13r^{-2/3}dr$. Entonces $dr/\sqrt[3]{r^2}=3\,du$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=3\int u^4\,du=3\frac{u^5}{5}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac35(r^{1/3}+2)^5+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(r)&=\frac35(5)(r^{1/3}+2)^4\left(\frac13r^{-2/3}\right)\\&=\frac{(r^{1/3}+2)^4}{\sqrt[3]{r^2}}.
+\end{align*}
+\textbf{Dominio.} $r\ne0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.2.40}
+\textbf{Integral:} $\displaystyle I=\int \left(t+\frac1t\right)^{3/2}\frac{t^2-1}{t^2}\,dt$.
+
+\textbf{1. Método y preparación.} La derivada de $u=t+1/t$ es $1-1/t^2=(t^2-1)/t^2$. Todo el segundo factor queda incluido en $du$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+du&=\frac{t^2-1}{t^2}\,dt,\\I&=\int u^{3/2}\,du=\frac{u^{5/2}}{5/2}+C=\frac25u^{5/2}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac25\left(t+\frac1t\right)^{5/2}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(t)&=\frac25\frac52\left(t+\frac1t\right)^{3/2}\left(1-\frac1{t^2}\right)\\&=\left(t+\frac1t\right)^{3/2}\frac{t^2-1}{t^2}.
+\end{align*}
+\textbf{Dominio.} $t>0$ para que la potencia de denominador par sea real y $t\ne0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.2.41}
+\textbf{Integral:} $\displaystyle I=\int \frac{x^3}{(x^2+4)^{3/2}}\,dx$.
+
+\textbf{1. Método y preparación.} Se usa $u=x^2+4$, $x\,dx=du/2$ y $x^2=u-4$. Se separa $x^3dx=x^2(x\,dx)$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\frac12\int(u-4)u^{-3/2}\,du\\&=\frac12\int(u^{-1/2}-4u^{-3/2})\,du\\&=\frac12\left(2u^{1/2}+8u^{-1/2}\right)+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\sqrt{x^2+4}+\frac4{\sqrt{x^2+4}}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac{x}{\sqrt{x^2+4}}-\frac{4x}{(x^2+4)^{3/2}}\\&=\frac{x(x^2+4)-4x}{(x^2+4)^{3/2}}=\frac{x^3}{(x^2+4)^{3/2}}.
+\end{align*}
+\textbf{Dominio.} Todos los reales, pues $x^2+4>0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.2.42}
+\textbf{Integral:} $\displaystyle I=\int \frac{x^3}{\sqrt{1-2x^2}}\,dx$.
+
+\textbf{1. Método y preparación.} El numerador $x^3$ exige conservar $x^2$ al sustituir. Sea $u=1-2x^2$, $x\,dx=-du/4$ y $x^2=(1-u)/2$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=-\frac18\int(1-u)u^{-1/2}\,du\\&=-\frac18\int(u^{-1/2}-u^{1/2})\,du\\&=-\frac14u^{1/2}+\frac1{12}u^{3/2}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+-\frac14\sqrt{1-2x^2}+\frac1{12}(1-2x^2)^{3/2}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac{x}{2\sqrt{1-2x^2}}-\frac{x}{2}\sqrt{1-2x^2}\\&=\frac{x[1-(1-2x^2)]}{2\sqrt{1-2x^2}}=\frac{x^3}{\sqrt{1-2x^2}}.
+\end{align*}
+\textbf{Dominio.} $|x|<1/\sqrt2$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.2.43}
+\textbf{Integral:} $\displaystyle I=\int \sen x\,\sen(\cos x)\,dx$.
+
+\textbf{1. Método y preparación.} Se toma la función interna $u=\cos x$, $du=-\sen x\,dx$, por lo que $\sen x\,dx=-du$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=-\int\sen u\,du=-(-\cos u)+C=\cos u+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\cos(\cos x)+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=-\sen(\cos x)(-\sen x)=\sen x\,\sen(\cos x).
+\end{align*}
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.2.44}
+\textbf{Integral:} $\displaystyle I=\int \sec x\tan x\cos(\sec x)\,dx$.
+
+\textbf{1. Método y preparación.} Se toma $u=\sec x$ y $du=\sec x\tan x\,dx$. El producto exterior es exactamente la derivada de la función interna.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\int\cos u\,du=\sen u+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\sen(\sec x)+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\cos(\sec x)\,\sec x\tan x.
+\end{align*}
+\textbf{Dominio.} $\cos x\ne0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio 4.2.45: función de costo total}
+\textbf{Enunciado.} El costo marginal es $C'(x)=3(5x+4)^{-1/2}$ y el costo general es de \$10. Se interpreta este último como costo fijo: $C(0)=10$.
+
+\textbf{1. Cambio de variable.} Para recuperar el costo se integra $C'(x)$. Se usa una constante $K$ para no confundirla con el nombre de la función:
+\[
+ u=5x+4,\qquad du=5\,dx,\qquad dx=\frac{du}{5}.
+\]
+\textbf{2. Integración y sustitución inversa.}
+\begin{align*}
+ C(x)&=\frac35\int u^{-1/2}\,du
+ =\frac35\frac{u^{1/2}}{1/2}+K\\
+ &=\frac65\sqrt{5x+4}+K.
+\end{align*}
+\textbf{3. Condición inicial.} El dato de costo fijo determina la constante:
+\[
+ 10=C(0)=\frac65\sqrt4+K=\frac{12}5+K,
+ \qquad K=10-\frac{12}5=\frac{38}5.
+\]
+\textbf{Resultado:}
+\[
+ \boxed{C(x)=\frac65\sqrt{5x+4}+\frac{38}5},\qquad x\ge0.
+\]
+\textbf{4. Verificación e interpretación.}
+\[
+ C'(x)=\frac65\frac12(5x+4)^{-1/2}(5)
+ =3(5x+4)^{-1/2},\qquad C(0)=10.
+\]
+Para una cantidad producida $x\ge0$, el costo total parte de \$10 y aumenta porque su derivada es positiva. La fórmula satisface tanto la tasa marginal como el costo fijo.
+\end{examplebox}
+
+
+\clearpage
+\section{Lista A: funciones algebraicas, logarítmicas y trigonométricas}
+
+La numeración A.1--A.24 corresponde a la tercera imagen; A.25--A.36, a la cuarta.
+
+\begin{examplebox}{Ejercicio A.1}
+\textbf{Integral:} $\displaystyle I=\int \frac5x\,dx$.
+
+\textbf{1. Método y preparación.} El exponente de $x$ es $-1$, por lo que se usa el logaritmo y no la regla de la potencia.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=5\int\frac{dx}{x}=5\ln|x|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+5\ln|x|+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=5\frac1x=\frac5x.
+\end{align*}
+\textbf{Dominio.} $x\ne0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.2}
+\textbf{Integral:} $\displaystyle I=\int \frac{10}x\,dx$.
+
+\textbf{1. Método y preparación.} Se extrae la constante $10$ y se integra $1/x$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=10\int\frac{dx}{x}=10\ln|x|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+10\ln|x|+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=10\frac1x=\frac{10}x.
+\end{align*}
+\textbf{Dominio.} $x\ne0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.3}
+\textbf{Integral:} $\displaystyle I=\int \frac1{x+1}\,dx$.
+
+\textbf{1. Método y preparación.} Se elige $u=x+1$, $du=dx$. La derivada del denominador coincide con el numerador.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\int\frac{du}{u}=\ln|u|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\ln|x+1|+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac1{x+1}\frac{d}{dx}(x+1)=\frac1{x+1}.
+\end{align*}
+\textbf{Dominio.} $x\ne-1$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.4}
+\textbf{Integral:} $\displaystyle I=\int \frac1{x-5}\,dx$.
+
+\textbf{1. Método y preparación.} Se toma $u=x-5$ y $du=dx$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\int\frac{du}{u}=\ln|u|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\ln|x-5|+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac1{x-5}(1)=\frac1{x-5}.
+\end{align*}
+\textbf{Dominio.} $x\ne5$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.5}
+\textbf{Integral:} $\displaystyle I=\int \frac1{3-2x}\,dx$.
+
+\textbf{1. Método y preparación.} Sea $u=3-2x$, $du=-2\,dx$, de donde $dx=-du/2$. Este factor negativo debe conservarse.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=-\frac12\int\frac{du}{u}=-\frac12\ln|u|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+-\frac12\ln|3-2x|+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=-\frac12\frac{-2}{3-2x}=\frac1{3-2x}.
+\end{align*}
+\textbf{Dominio.} $x\ne3/2$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.6}
+\textbf{Integral:} $\displaystyle I=\int \frac1{3x+2}\,dx$.
+
+\textbf{1. Método y preparación.} Con $u=3x+2$, $du=3\,dx$ y $dx=du/3$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\frac13\int\frac{du}{u}=\frac13\ln|u|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac13\ln|3x+2|+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac13\frac3{3x+2}=\frac1{3x+2}.
+\end{align*}
+\textbf{Dominio.} $x\ne-2/3$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.7}
+\textbf{Integral:} $\displaystyle I=\int \frac{x}{x^2+1}\,dx$.
+
+\textbf{1. Método y preparación.} Se define $u=x^2+1$, $du=2x\,dx$ y $x\,dx=du/2$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\frac12\int\frac{du}{u}=\frac12\ln|u|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac12\ln(x^2+1)+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac12\frac{2x}{x^2+1}=\frac{x}{x^2+1}.
+\end{align*}
+\textbf{Dominio.} Todos los reales; se omite el valor absoluto porque $x^2+1>0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.8}
+\textbf{Integral:} $\displaystyle I=\int \frac{x^2}{3-x^3}\,dx$.
+
+\textbf{1. Método y preparación.} Se toma $u=3-x^3$, $du=-3x^2\,dx$ y $x^2\,dx=-du/3$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=-\frac13\int\frac{du}{u}=-\frac13\ln|u|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+-\frac13\ln|3-x^3|+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=-\frac13\frac{-3x^2}{3-x^3}=\frac{x^2}{3-x^3}.
+\end{align*}
+\textbf{Dominio.} $x\ne\sqrt[3]3$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.9}
+\textbf{Integral:} $\displaystyle I=\int \frac{x^2-4}{x}\,dx$.
+
+\textbf{1. Método y preparación.} Se divide cada término entre $x$: $(x^2-4)/x=x-4/x$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\int x\,dx-4\int\frac{dx}{x}\\&=\frac{x^2}{2}-4\ln|x|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac{x^2}{2}-4\ln|x|+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=x-\frac4x=\frac{x^2-4}{x}.
+\end{align*}
+\textbf{Dominio.} $x\ne0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.10}
+\textbf{Integral:} $\displaystyle I=\int \frac{x}{\sqrt{9-x^2}}\,dx$.
+
+\textbf{1. Método y preparación.} Se toma $u=9-x^2$, $du=-2x\,dx$ y $x\,dx=-du/2$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=-\frac12\int u^{-1/2}\,du=-\frac12\frac{u^{1/2}}{1/2}+C=-\sqrt u+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+-\sqrt{9-x^2}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=-\frac12(9-x^2)^{-1/2}(-2x)=\frac{x}{\sqrt{9-x^2}}.
+\end{align*}
+\textbf{Dominio.} $-3<x<3$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.11}
+\textbf{Integral:} $\displaystyle I=\int \frac{x^2+2x+3}{x^3+3x^2+9x}\,dx$.
+
+\textbf{1. Método y preparación.} La derivada del denominador es tres veces el numerador. Se elige $u=x^3+3x^2+9x$, $du=3(x^2+2x+3)dx$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+(x^2+2x+3)\,dx&=\frac{du}{3},\\I&=\frac13\int\frac{du}{u}=\frac13\ln|u|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac13\ln|x^3+3x^2+9x|+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac13\frac{3x^2+6x+9}{x^3+3x^2+9x}\\&=\frac{x^2+2x+3}{x^3+3x^2+9x}.
+\end{align*}
+\textbf{Dominio.} $x\ne0$, pues $x^2+3x+9=(x+3/2)^2+27/4>0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.12}
+\textbf{Integral:} $\displaystyle I=\int \frac{x(x+2)}{x^3+3x^2-4}\,dx$.
+
+\textbf{1. Método y preparación.} Se toma $u=x^3+3x^2-4$. Entonces $du=(3x^2+6x)dx=3x(x+2)dx$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+x(x+2)\,dx&=\frac{du}{3},\\I&=\frac13\int\frac{du}{u}=\frac13\ln|u|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac13\ln|x^3+3x^2-4|+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac13\frac{3x(x+2)}{x^3+3x^2-4}=\frac{x(x+2)}{x^3+3x^2-4}.
+\end{align*}
+\textbf{Dominio.} $x\ne1,-2$, porque $x^3+3x^2-4=(x-1)(x+2)^2$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.13}
+\textbf{Integral:} $\displaystyle I=\int \frac{x^2-3x+2}{x+1}\,dx$.
+
+\textbf{1. Método y preparación.} Se divide el polinomio. Primero $x^2/x=x$; al restar $x(x+1)$ queda $-4x+2$. Después $-4x/x=-4$; al restar $-4(x+1)$ queda $6$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+x^2-3x+2&=(x+1)(x-4)+6,\\I&=\int\left(x-4+\frac6{x+1}\right)dx\\&=\frac{x^2}{2}-4x+6\ln|x+1|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac{x^2}{2}-4x+6\ln|x+1|+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=x-4+\frac6{x+1}\\&=\frac{(x-4)(x+1)+6}{x+1}=\frac{x^2-3x+2}{x+1}.
+\end{align*}
+\textbf{Dominio.} $x\ne-1$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.14}
+\textbf{Integral:} $\displaystyle I=\int \frac{2x^2+7x-3}{x-2}\,dx$.
+
+\textbf{1. Método y preparación.} El primer término del cociente es $2x$ y el residuo parcial es $11x-3$. El segundo es $11$ y el residuo final es $19$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+2x^2+7x-3&=(x-2)(2x+11)+19,\\I&=\int\left(2x+11+\frac{19}{x-2}\right)dx\\&=x^2+11x+19\ln|x-2|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+x^2+11x+19\ln|x-2|+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=2x+11+\frac{19}{x-2}\\&=\frac{(2x+11)(x-2)+19}{x-2}=\frac{2x^2+7x-3}{x-2}.
+\end{align*}
+\textbf{Dominio.} $x\ne2$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.15}
+\textbf{Integral:} $\displaystyle I=\int \frac{x^3-3x^2+5}{x-3}\,dx$.
+
+\textbf{1. Método y preparación.} Se divide $x^3$ entre $x$ y se obtiene $x^2$. Al restar $x^2(x-3)=x^3-3x^2$, sólo queda el residuo $5$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+x^3-3x^2+5&=(x-3)x^2+5,\\I&=\int\left(x^2+\frac5{x-3}\right)dx=\frac{x^3}{3}+5\ln|x-3|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac{x^3}{3}+5\ln|x-3|+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=x^2+\frac5{x-3}=\frac{x^2(x-3)+5}{x-3}\\&=\frac{x^3-3x^2+5}{x-3}.
+\end{align*}
+\textbf{Dominio.} $x\ne3$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.16}
+\textbf{Integral:} $\displaystyle I=\int \frac{x^3-6x-20}{x+5}\,dx$.
+
+\textbf{1. Método y preparación.} La división sucesiva produce $x^2$, $-5x$ y $19$. Los residuos parciales son $-5x^2-6x-20$, $19x-20$ y, finalmente, $-115$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+x^3-6x-20&=(x+5)(x^2-5x+19)-115,\\I&=\int\left(x^2-5x+19-\frac{115}{x+5}\right)dx\\&=\frac{x^3}{3}-\frac52x^2+19x-115\ln|x+5|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac{x^3}{3}-\frac52x^2+19x-115\ln|x+5|+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=x^2-5x+19-\frac{115}{x+5}\\&=\frac{(x^2-5x+19)(x+5)-115}{x+5}\\&=\frac{x^3-6x-20}{x+5}.
+\end{align*}
+\textbf{Dominio.} $x\ne-5$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.17}
+\textbf{Integral:} $\displaystyle I=\int \frac{x^4+x-4}{x^2+2}\,dx$.
+
+\textbf{1. Método y preparación.} La división da cociente $x^2-2$ y residuo $x$. Para la fracción restante, $u=x^2+2$, $du=2x\,dx$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+x^4+x-4&=(x^2+2)(x^2-2)+x,\\I&=\int(x^2-2)dx+\int\frac{x}{x^2+2}dx\\&=\frac{x^3}{3}-2x+\frac12\int\frac{du}{u}\\&=\frac{x^3}{3}-2x+\frac12\ln|u|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac{x^3}{3}-2x+\frac12\ln(x^2+2)+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=x^2-2+\frac{x}{x^2+2}\\&=\frac{(x^2-2)(x^2+2)+x}{x^2+2}=\frac{x^4+x-4}{x^2+2}.
+\end{align*}
+\textbf{Dominio.} Todos los reales, pues $x^2+2>0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.18}
+\textbf{Integral:} $\displaystyle I=\int \frac{x^3-3x^2+4x-9}{x^2+3}\,dx$.
+
+\textbf{1. Método y preparación.} El cociente es $x-3$ y el residuo es $x$. En la fracción residual se toma $u=x^2+3$, $du=2x\,dx$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+x^3-3x^2+4x-9&=(x^2+3)(x-3)+x,\\I&=\int(x-3)dx+\frac12\int\frac{du}{u}\\&=\frac{x^2}{2}-3x+\frac12\ln|u|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac{x^2}{2}-3x+\frac12\ln(x^2+3)+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=x-3+\frac{x}{x^2+3}\\&=\frac{(x-3)(x^2+3)+x}{x^2+3}=\frac{x^3-3x^2+4x-9}{x^2+3}.
+\end{align*}
+\textbf{Dominio.} Todos los reales, pues $x^2+3>0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.19}
+\textbf{Integral:} $\displaystyle I=\int \frac{(\ln x)^2}{x}\,dx$.
+
+\textbf{1. Método y preparación.} Se elige $u=\ln x$. El diferencial $du=dx/x$ ya está presente; queda una potencia cuadrática de $u$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\int u^2\,du=\frac{u^3}{3}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac{(\ln x)^3}{3}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac13(3)(\ln x)^2\frac1x=\frac{(\ln x)^2}{x}.
+\end{align*}
+\textbf{Dominio.} $x>0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.20}
+\textbf{Integral:} $\displaystyle I=\int \frac1{x\ln(x^3)}\,dx$.
+
+\textbf{1. Método y preparación.} Se toma $u=\ln(x^3)$; por la regla de la cadena, $du=(3x^2/x^3)dx=3dx/x$, así que $dx/x=du/3$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\frac13\int\frac{du}{u}=\frac13\ln|u|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac13\ln|\ln(x^3)|+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac13\frac1{\ln(x^3)}\frac3x=\frac1{x\ln(x^3)}.
+\end{align*}
+\textbf{Dominio.} $x>0$ y $x\ne1$. La expresión $\ln(x^3)$ no se define en los reales si $x\le0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.21}
+\textbf{Integral:} $\displaystyle I=\int \frac1{\sqrt{x+1}}\,dx$.
+
+\textbf{1. Método y preparación.} La raíz abarca $x+1$. Se toma $u=x+1$, $du=dx$, y se escribe $u^{-1/2}$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\int u^{-1/2}\,du=\frac{u^{1/2}}{1/2}+C=2\sqrt u+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+2\sqrt{x+1}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=2\frac12(x+1)^{-1/2}=\frac1{\sqrt{x+1}}.
+\end{align*}
+\textbf{Dominio.} $x>-1$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.22}
+\textbf{Integral:} $\displaystyle I=\int \frac1{x^{2/3}(1+x^{1/3})}\,dx$.
+
+\textbf{1. Método y preparación.} Se toma $u=1+x^{1/3}$, $du=\tfrac13x^{-2/3}dx$ y $dx/x^{2/3}=3\,du$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=3\int\frac{du}{u}=3\ln|u|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+3\ln|1+x^{1/3}|+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac3{1+x^{1/3}}\frac13x^{-2/3}\\&=\frac1{x^{2/3}(1+x^{1/3})}.
+\end{align*}
+\textbf{Dominio.} $x\ne0,-1$; se usa la raíz cúbica real.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.23}
+\textbf{Integral:} $\displaystyle I=\int \frac{2x}{(x-1)^2}\,dx$.
+
+\textbf{1. Método y preparación.} Sea $u=x-1$, $dx=du$ y $x=u+1$. Se expande el numerador después del cambio.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=2\int\frac{u+1}{u^2}\,du=2\int(u^{-1}+u^{-2})\,du\\&=2\ln|u|-2u^{-1}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+2\ln|x-1|-\frac2{x-1}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac2{x-1}+\frac2{(x-1)^2}\\&=\frac{2(x-1)+2}{(x-1)^2}=\frac{2x}{(x-1)^2}.
+\end{align*}
+\textbf{Dominio.} $x\ne1$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.24}
+\textbf{Integral:} $\displaystyle I=\int \frac{x(x-2)}{(x-1)^3}\,dx$.
+
+\textbf{1. Método y preparación.} Con $u=x-1$, se tiene $x=u+1$, $x-2=u-1$ y $dx=du$. El producto del numerador es $(u+1)(u-1)=u^2-1$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\int\frac{u^2-1}{u^3}\,du=\int(u^{-1}-u^{-3})\,du\\&=\ln|u|-\frac{u^{-2}}{-2}+C=\ln|u|+\frac1{2u^2}+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\ln|x-1|+\frac1{2(x-1)^2}+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac1{x-1}-\frac1{(x-1)^3}\\&=\frac{(x-1)^2-1}{(x-1)^3}=\frac{x(x-2)}{(x-1)^3}.
+\end{align*}
+\textbf{Dominio.} $x\ne1$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.25}
+\textbf{Integral:} $\displaystyle I=\int \frac1{1+\sqrt{2x}}\,dx$.
+
+\textbf{1. Método y preparación.} Se sigue la sugerencia de tomar el denominador: $u=1+\sqrt{2x}$. Entonces $\sqrt{2x}=u-1$, $x=(u-1)^2/2$ y $dx=(u-1)du$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\int\frac{u-1}{u}\,du=\int(1-u^{-1})\,du\\&=u-\ln|u|+C\\&=1+\sqrt{2x}-\ln(1+\sqrt{2x})+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\sqrt{2x}-\ln(1+\sqrt{2x})+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac1{\sqrt{2x}}-\frac1{(1+\sqrt{2x})\sqrt{2x}}\\&=\frac{(1+\sqrt{2x})-1}{\sqrt{2x}(1+\sqrt{2x})}\\&=\frac1{1+\sqrt{2x}}\quad(x>0).
+\end{align*}
+\textbf{Dominio.} $x\ge0$. El término constante $1$ se absorbió en $C$. En el extremo, $F'_+(0)=1$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.26}
+\textbf{Integral:} $\displaystyle I=\int \frac1{1+\sqrt{3x}}\,dx$.
+
+\textbf{1. Método y preparación.} Sea $u=1+\sqrt{3x}$. Se despeja $x=(u-1)^2/3$ y se deriva: $dx=\tfrac23(u-1)du$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\frac23\int\frac{u-1}{u}\,du=\frac23\int(1-u^{-1})\,du\\&=\frac23[u-\ln|u|]+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac23\sqrt{3x}-\frac23\ln(1+\sqrt{3x})+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac1{\sqrt{3x}}-\frac1{(1+\sqrt{3x})\sqrt{3x}}\\&=\frac1{1+\sqrt{3x}}\quad(x>0).
+\end{align*}
+\textbf{Dominio.} $x\ge0$. El término $2/3$ se absorbió en $C$; en el extremo, $F'_+(0)=1$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.27}
+\textbf{Integral:} $\displaystyle I=\int \frac{\sqrt x}{\sqrt x-3}\,dx$.
+
+\textbf{1. Método y preparación.} Se elige $u=\sqrt x-3$. Entonces $\sqrt x=u+3$, $x=(u+3)^2$ y $dx=2(u+3)du$. Se sustituyen numerador, denominador y diferencial.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=2\int\frac{(u+3)^2}{u}\,du\\&=2\int\frac{u^2+6u+9}{u}\,du\\&=2\int(u+6+9u^{-1})\,du\\&=u^2+12u+18\ln|u|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+x+6\sqrt x+18\ln|\sqrt x-3|+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=1+\frac3{\sqrt x}+\frac9{\sqrt x(\sqrt x-3)}\\&=\frac{\sqrt x(\sqrt x-3)+3(\sqrt x-3)+9}{\sqrt x(\sqrt x-3)}\\&=\frac{x}{\sqrt x(\sqrt x-3)}=\frac{\sqrt x}{\sqrt x-3}\quad(x>0).
+\end{align*}
+\textbf{Dominio.} $x\ge0$, $x\ne9$. Al regresar a $x$, $u^2+12u=x+6\sqrt x-27$, y $-27$ se absorbe en $C$. En $x=0$ la derivada lateral es $0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.28}
+\textbf{Integral:} $\displaystyle I=\int \frac{\sqrt[3]x}{\sqrt[3]x-1}\,dx$.
+
+\textbf{1. Método y preparación.} Se toma $u=\sqrt[3]x-1$. Así, $\sqrt[3]x=u+1$, $x=(u+1)^3$ y $dx=3(u+1)^2du$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=3\int\frac{(u+1)^3}{u}\,du\\&=3\int(u^2+3u+3+u^{-1})\,du\\&=u^3+\frac92u^2+9u+3\ln|u|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+x+\frac32x^{2/3}+3x^{1/3}+3\ln|x^{1/3}-1|+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+v&=\sqrt[3]x,\qquad \frac{dv}{dx}=\frac1{3v^2}\quad(x\ne0),\\F'(x)&=\left(3v^2+3v+3+\frac3{v-1}\right)\frac1{3v^2}\\&=\frac{(v^2+v+1)(v-1)+1}{v^2(v-1)}\\&=\frac{v^3}{v^2(v-1)}=\frac{\sqrt[3]x}{\sqrt[3]x-1}.
+\end{align*}
+\textbf{Dominio.} $x\ne1$. La constante $-11/2$ que aparece al expandir se absorbe en $C$. En $x=0$ el resultado es diferenciable y su derivada vale $0$; esto se comprueba con el cociente incremental, pues $F(x)-F(0)$ es de orden $x^{4/3}$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.29}
+\textbf{Integral:} $\displaystyle I=\int \frac{\cos\theta}{\sen\theta}\,d\theta$.
+
+\textbf{1. Método y preparación.} Se toma $u=\sen\theta$, $du=\cos\theta\,d\theta$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\int\frac{du}{u}=\ln|u|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\ln|\sen\theta|+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(\theta)&=\frac{\cos\theta}{\sen\theta}.
+\end{align*}
+\textbf{Dominio.} $\sen\theta\ne0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.30}
+\textbf{Integral:} $\displaystyle I=\int \tan(5\theta)\,d\theta$.
+
+\textbf{1. Método y preparación.} Se escribe $\tan(5\theta)=\sen(5\theta)/\cos(5\theta)$. Se elige $u=\cos(5\theta)$, $du=-5\sen(5\theta)d\theta$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=-\frac15\int\frac{du}{u}=-\frac15\ln|u|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+-\frac15\ln|\cos(5\theta)|+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(\theta)&=-\frac15\frac{-5\sen(5\theta)}{\cos(5\theta)}=\tan(5\theta).
+\end{align*}
+\textbf{Dominio.} $\cos(5\theta)\ne0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.31}
+\textbf{Integral:} $\displaystyle I=\int \csc(2x)\,dx$.
+
+\textbf{1. Método y preparación.} Primero $u=2x$, $dx=du/2$. Para integrar $\csc u$, se toma $w=\csc u-\cot u$; su derivada es $w'=-\csc u\cot u+\csc^2u=\csc u\,w$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\frac12\int\csc u\,du\\&=\frac12\int\frac{dw}{w}=\frac12\ln|w|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\frac12\ln|\csc(2x)-\cot(2x)|+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac12\frac{-2\csc(2x)\cot(2x)+2\csc^2(2x)}{\csc(2x)-\cot(2x)}\\&=\frac{\csc(2x)[\csc(2x)-\cot(2x)]}{\csc(2x)-\cot(2x)}\\&=\csc(2x).
+\end{align*}
+\textbf{Dominio.} $\sen(2x)\ne0$. El argumento del logaritmo no es cero en ese dominio. También puede escribirse $\tfrac12\ln|\tan x|+C$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.32}
+\textbf{Integral:} $\displaystyle I=\int \sec\left(\frac x2\right)\,dx$.
+
+\textbf{1. Método y preparación.} Se toma $u=x/2$, $dx=2du$. Para integrar $\sec u$, sea $w=\sec u+\tan u$; entonces $dw=(\sec u\tan u+\sec^2u)du=\sec u\,w\,du$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=2\int\sec u\,du=2\int\frac{dw}{w}=2\ln|w|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+2\ln\left|\sec\left(\frac x2\right)+\tan\left(\frac x2\right)\right|+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+q&=\frac x2,\\F'(x)&=2\frac{\tfrac12\sec q\tan q+\tfrac12\sec^2q}{\sec q+\tan q}\\&=\frac{\sec q(\tan q+\sec q)}{\sec q+\tan q}=\sec\left(\frac x2\right).
+\end{align*}
+\textbf{Dominio.} $\cos(x/2)\ne0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.33}
+\textbf{Integral:} $\displaystyle I=\int \frac{\cos t}{1+\sen t}\,dt$.
+
+\textbf{1. Método y preparación.} Se toma $u=1+\sen t$, $du=\cos t\,dt$. El factor diferencial ya está en el numerador.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\int\frac{du}{u}=\ln|u|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\ln|1+\sen t|+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(t)&=\frac{\cos t}{1+\sen t}.
+\end{align*}
+\textbf{Dominio.} $1+\sen t\ne0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.34}
+\textbf{Integral:} $\displaystyle I=\int \frac{\csc^2t}{\cot t}\,dt$.
+
+\textbf{1. Método y preparación.} Se elige $u=\cot t$, $du=-\csc^2t\,dt$, así que $\csc^2t\,dt=-du$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=-\int\frac{du}{u}=-\ln|u|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+-\ln|\cot t|+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(t)&=-\frac{-\csc^2t}{\cot t}=\frac{\csc^2t}{\cot t}.
+\end{align*}
+\textbf{Dominio.} $\sen t\ne0$ y $\cos t\ne0$, para que $\csc t$ esté definida y $\cot t\ne0$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.35}
+\textbf{Integral:} $\displaystyle I=\int \frac{\sec x\tan x}{\sec x-1}\,dx$.
+
+\textbf{1. Método y preparación.} Sea $u=\sec x-1$; entonces $du=\sec x\tan x\,dx$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\int\frac{du}{u}=\ln|u|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\ln|\sec x-1|+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(x)&=\frac{\sec x\tan x}{\sec x-1}.
+\end{align*}
+\textbf{Dominio.} $\cos x\ne0$ y $\sec x\ne1$.
+\end{examplebox}
+
+\begin{examplebox}{Ejercicio A.36}
+\textbf{Integral:} $\displaystyle I=\int (\sec t+\tan t)\,dt$.
+
+\textbf{1. Método y preparación.} Por linealidad se separan ambas funciones. La secante se integra como en A.32: $\ln|\sec t+\tan t|$. Para la tangente se toma $u=\cos t$ y $du=-\sen t\,dt$.
+
+\textbf{2. Desarrollo.}
+\begin{align*}
+I&=\int\sec t\,dt+\int\frac{\sen t}{\cos t}\,dt\\&=\ln|\sec t+\tan t|-\int\frac{du}{u}\\&=\ln|\sec t+\tan t|-\ln|\cos t|+C.
+\end{align*}
+\textbf{3. Resultado.}
+\[
+\ln|\sec t+\tan t|-\ln|\cos t|+C.
+\]
+\textbf{4. Verificación por derivación.}
+\begin{align*}
+F'(t)&=\frac{\sec t\tan t+\sec^2t}{\sec t+\tan t}-\frac{-\sen t}{\cos t}\\&=\sec t+\tan t.
+\end{align*}
+\textbf{Dominio.} $\cos t\ne0$.
+\end{examplebox}
+
+
+\section{Conclusiones}
+La elección del método comienza con la forma del integrando. Los productos y cocientes de potencias se simplifican antes de integrar. En una sustitución, el diferencial determina el coeficiente exterior, mientras que los factores restantes deben expresarse en la nueva variable. En las fracciones impropias, la división polinómica separa una parte elemental y una fracción que suele conducir a un logaritmo.
+
+Las comprobaciones muestran por qué no pueden omitirse los signos de un diferencial negativo ni los coeficientes de una función compuesta. En el problema de costo total, la integración produce una familia de funciones y el costo fijo selecciona una sola. Los dominios forman parte de la respuesta: una simplificación algebraica no autoriza a incluir puntos donde el integrando original no está definido.
+
+\clearpage
+\appendix
+\section{Imágenes originales de la Evidencia 1}
+Las imágenes siguientes proceden de \texttt{Evidencia-1-20-puntos.docx}. Se conserva la fuente completa para cotejar radicales, exponentes, numeración y los límites de lo visible.
+\captionsetup{hypcap=false}
+\foreach \n in {1,...,4}{
+  \begin{center}
+    \centering
+    \includegraphics[width=0.95\textwidth,height=0.80\textheight,keepaspectratio]{UANL/ingeniero-agronomo/calculo-integral/assets-calculo-integral/actividad-1-fuentes/image\n.png}
+    \captionof{figure}{Imagen original \n\ de la Evidencia 1 (Actividad 2).}
+  \end{center}
+  \clearpage
+}
+\bibliography{UANL/ingeniero-agronomo/calculo-integral/calculo-integral}
