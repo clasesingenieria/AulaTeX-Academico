@@ -116,6 +116,13 @@ def load_aulatex_env(path: str | Path | None = None, *, override: bool = True) -
         loaded += 1
     # Descifrado autónomo de los valores enc: con la clave local del proyecto.
     _decrypt_local_secrets()
+
+    # Si no se ha especificado un engine global, preferir GPT-5-Mini como
+    # opción por defecto para invocaciones y revisiones locales.
+    if not os.getenv("AULATEX_LLM_ENGINE"):
+        os.environ.setdefault("AULATEX_LLM_ENGINE", "GPT-5-Mini")
+    if not os.getenv("AULATEX_LLM_REVIEW_ENGINE"):
+        os.environ.setdefault("AULATEX_LLM_REVIEW_ENGINE", "GPT-5-Mini")
     return EnvLoadResult(env_path, True, loaded, skipped)
 
 
