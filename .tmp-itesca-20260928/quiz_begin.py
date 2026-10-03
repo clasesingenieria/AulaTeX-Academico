@@ -1,0 +1,15 @@
+from moodle_common import *
+sys.stdout.reconfigure(encoding='utf-8')
+with sync_playwright() as p:
+ browser,context,page=login(p)
+ page.goto(BASE+'/mod/quiz/view.php?id=6552')
+ page.get_by_role('button',name='Intento de cuestionario',exact=True).click()
+ page.get_by_role('button',name='Comenzar intento',exact=True).click()
+ page.wait_for_load_state('domcontentloaded')
+ (OUT/'quiz-attempt-url.txt').write_text(page.url,encoding='utf-8')
+ text=page.locator('#region-main').inner_text()
+ (OUT/'quiz-1-page.txt').write_text(text,encoding='utf-8')
+ print('URL',page.url,'\n',text)
+ print('QUESTIONS',json.dumps(page.locator('.que').evaluate_all('(es)=>es.map(e=>({id:e.id,text:e.innerText,options:[...e.querySelectorAll("input[type=radio],input[type=checkbox],select,textarea,input[type=text]")].map(i=>({tag:i.tagName,type:i.type,name:i.name,id:i.id,value:i.value,options:i.tagName==="SELECT"?[...i.options].map(o=>({text:o.text,value:o.value})):undefined}))}))'),ensure_ascii=False))
+ print('BUTTONS',page.get_by_role('button').evaluate_all('(es)=>es.map(e=>({text:e.innerText,value:e.value,type:e.type}))'))
+ browser.close()
