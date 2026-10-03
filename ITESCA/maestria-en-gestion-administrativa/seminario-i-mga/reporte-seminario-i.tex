@@ -1,0 +1,107 @@
+% AulaTeX - plantilla materializada desde memoria editorial
+\documentclass[12pt,letterpaper,oneside]{article}
+\usepackage[margin=2.35cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[scaled=.96]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage[authoryear,round]{natbib}
+
+\definecolor{unadmGreenDark}{HTML}{174A3A}
+\definecolor{unadmGreen}{HTML}{5F8F3A}
+\definecolor{unadmGold}{HTML}{B88A2A}
+\definecolor{unadmPaper}{HTML}{F6F7F2}
+\definecolor{unadmInk}{HTML}{1F2A24}
+\hypersetup{colorlinks=true,linkcolor=unadmGreenDark,citecolor=unadmGreenDark,urlcolor=unadmGreenDark}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.72em}
+\onehalfspacing
+\bibliographystyle{plainnat}
+
+\newcommand{\pendiente}[1]{\textcolor{red}{[PENDIENTE: #1]}}
+
+\begin{document}
+
+\begin{titlepage}
+  \pagecolor{unadmPaper}
+  \color{unadmInk}
+  \begin{center}
+    \vspace*{0.8cm}
+    \includegraphics[height=2.05cm]{img/departamentos/UnADM.pdf}\\[0.7cm]
+    {\Large Universidad Abierta y a Distancia de Mexico}\\[0.2cm]
+    {\large Licenciatura en Derecho}\\[1.2cm]
+    {\color{unadmGreenDark}\rule{0.82\linewidth}{1.4pt}}\\[0.55cm]
+    {\Huge\bfseries Plantilla base de Seminario I\par}
+    \vspace{0.35cm}
+    {\Large Plantilla de reporte - Seminario I\par}
+    \vspace{0.45cm}
+    {\color{unadmGold}\rule{0.62\linewidth}{1.1pt}}\\[1.1cm]
+    \begin{tabular}{rl}
+      \textbf{Alumno:} & Martin Jonathan de la Cruz \\
+      \textbf{Matricula:} & ES2611202040 \\
+      \textbf{Figura docente:} & Nombre por definir \\
+      \textbf{Materia:} & Seminario I \\
+      \textbf{Semestre/Bloque:} & 2 / 1 \\
+      \textbf{Tipo/Creditos:} & Obligatoria / 8 \\
+      \textbf{Fecha:} & \today
+    \end{tabular}
+    \vfill
+    {\small Roma Norte, Ciudad de Mexico}
+  \end{center}
+  \nopagecolor
+\end{titlepage}
+
+\tableofcontents
+\clearpage
+
+\section*{Resumen editorial}
+\addcontentsline{toc}{section}{Resumen editorial}
+Esta plantilla materializa la memoria editorial de \textit{Seminario I}.
+La entrega debe convertir la consigna en un problema juridico delimitado, con
+fundamento verificable, analisis propio y conclusion aplicable.
+
+\section{Introduccion}
+\pendiente{Abrir con una afirmacion fuerte que traduzca la consigna a problema juridico.}
+
+\section{Encuadre institucional y juridico}
+La materia se trabaja desde la identidad academica de la UnADM y desde la
+formacion juridica aplicada. La bibliografia local debe sostener el analisis
+con fuentes institucionales, normativas y academicas verificables \citep{unadmSitioWeb,unadmMallaDerecho2024}.
+
+\section{Memoria editorial aplicada}
+\begin{itemize}
+  \item Organizar la entrega en problema, marco juridico, analisis, producto, conclusion y referencias.
+\end{itemize}
+
+\section{Marcadores de investigacion}
+\begin{itemize}
+  \item Delimitar fuentes oficiales, doctrina pertinente y criterios aplicables antes de redactar.
+\end{itemize}
+
+\section{Desarrollo del producto}
+\pendiente{Insertar aqui el producto solicitado: informe, cuadro, mapa, analisis de caso, matriz, linea de tiempo o ensayo.}
+
+\subsection{Analisis propio}
+\pendiente{Explicar la consecuencia juridica del producto y sostener una postura personal argumentada.}
+
+\section{Checklist de calidad}
+\begin{itemize}
+  \item Verificar citas, bibliografia, coherencia de estructura, ortografia y compilacion.
+\end{itemize}
+
+\section{Conclusion}
+\pendiente{Cerrar con aprendizaje, criterio juridico propio y aplicacion profesional.}
+
+\clearpage
+\nocite{unadmSitioWeb,unadmMallaDerecho2024}
+\bibliography{seminario-i}
+
+\end{document}
