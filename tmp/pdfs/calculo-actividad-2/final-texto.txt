@@ -1,0 +1,2430 @@
+Universidad Autónoma de Nuevo León
+Facultad de Agronomía
+Ingeniero Agrónomo
+Aprendizaje basado en
+problemas
+Actividad 2 — Evidencia 1
+Valor: 20 puntos
+Alumno:Diego de la Cruz
+Matrícula:Por registrar
+Grupo:Por registrar
+Docente:Por registrar
+Fecha:27 de septiembre de 2026
+General Escobedo, Nuevo León, México
+i
+Resumen
+Se desarrollan los 88 enunciados completos que aparecen en las cuatro imágenes de
+la Evidencia 1: 28 de antiderivación directa, 24 de sustitución y aplicación, y 36 de integra-
+ción algebraica y trigonométrica. Cada solución muestra la elección del método, las transfor-
+maciones del integrando, los factores del diferencial, la integración y una comprobación por
+derivación. Se conservan los números de la fuente para facilitar el cotejo y se indican las
+restricciones de dominio pertinentes.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+Índice de Contenidos ii
+Índice de Contenidos
+1. Introducción y alcance 1
+2. Guía de fórmulas y pasos 1
+2.1. Linealidad, potencias y logaritmos . . . . . . . . . . . . . . . . . . . . . . . . 1
+2.2. Cambio de variable sin saltos . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+2.3. División algebraica y funciones trigonométricas . . . . . . . . . . . . . . . . . 2
+2.4. Dominio y comprobación . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+3. Ejercicios 4.1: antiderivación directa 4
+4. Ejercicios 4.2: sustitución y aplicación 19
+5. Lista A: funciones algebraicas, logarítmicas y trigonométricas 37
+6. Conclusiones 62
+1. Imágenes originales de la Evidencia 1 63
+Referencias 67
+Índice de Figuras
+1. Imagen original 1 de la Evidencia 1 (Actividad 2). . . . . . . . . . . . . . . . . . . 63
+2. Imagen original 2 de la Evidencia 1 (Actividad 2). . . . . . . . . . . . . . . . . . . 64
+3. Imagen original 3 de la Evidencia 1 (Actividad 2). . . . . . . . . . . . . . . . . . . 65
+4. Imagen original 4 de la Evidencia 1 (Actividad 2). . . . . . . . . . . . . . . . . . . 66
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+1
+1. Introducción y alcance
+Una antiderivada defes una funciónFque satisfaceF ′(x) =f(x). En un intervalo de
+definición, todas las antiderivadas difieren en una constante; por ello se escribe
+∫︁
+f(x)dx=
+F(x) +C. Integrar exige reconocer la estructura de la expresión antes de aplicar una fórmula:
+distribuir productos, transformar radicales en potencias, dividir polinomios o identificar una
+función interna y su derivada (Stewart, 2016, Strang y Herman, 2016).
+En Agronomía, una integral permite acumular una tasa de crecimiento, consumo de agua
+o costo marginal. La verificación por derivación comprueba que el resultado conserva la tasa
+de cambio original, incluidos sus signos y coeficientes.
+Correspondencia con la consigna
+Se resuelven los ejercicios 4.1.1–4.1.28, 4.2.1–4.2.14, 4.2.36–4.2.45 y los ejercicios
+1–36 de las otras dos imágenes. Estos últimos se identifican como A.1–A.36 para evitar
+confundir las listas. Los ejercicios 4.1.29–4.1.30 y 4.2.15–4.2.35 no se ven completos en las
+capturas; de 4.2.46 sólo aparece el inicio del enunciado. No se reconstruyen expresiones
+ausentes. Las cuatro imágenes originales se conservan al final.
+El cotejo corrige cuatro transcripciones anteriores: en 4.1.12 aparecex 4(5−x2); en
+4.1.19,(x 2 + 4x−4)/√x; en 4.1.22,(27t 3−1)/
+3√
+t; y en 4.2.42 el numerador esx 3.
+2. Guía de fórmulas y pasos
+2.1. Linealidad, potencias y logaritmos
+Las constantes multiplicativas salen de la integral y las sumas se integran término a tér-
+mino: ∫︂
+[af(x) +bg(x)]dx=a
+∫︂
+f(x)dx+b
+∫︂
+g(x)dx.
+La regla de la potencia aumenta el exponente en una unidad y divide entre el nuevo exponen-
+te: ∫︂
+xndx= xn+1
+n+ 1 +C(n̸=−1),
+∫︂dx
+x = ln|x|+C(x̸= 0).
+Por ejemplo,√x=x 1/2,1/√x=x −1/2yx a/xb =x a−b, en el dominio donde estas expresiones
+estén definidas. Dividir entre3/2equivale a multiplicar por2/3. Se escribe una sola constante
+Cporque la suma de constantes arbitrarias vuelve a ser una constante.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+2.2 Cambio de variable sin saltos2
+2.2. Cambio de variable sin saltos
+Siu=g(x), se calculadu=g ′(x)dxy se despeja el producto diferencial que aparece en
+la integral. Por ejemplo,
+u= 2x 2 + 1, du= 4xdx, xdx= du
+4 .
+Después se reemplazantodoslos factores que contienen la variable original; no debe quedar
+una mezcla dexyu. Se integra enu, se sustituyeu=g(x)en el resultado y se comprueba
+con la regla de la cadena:
+d
+dxH(g(x)) =H ′(g(x))g′(x).
+En particular,
+∫︁
+g′(x)/g(x)dx= ln|g(x)|+Cen intervalos dondeg(x)̸= 0.
+2.3. División algebraica y funciones trigonométricas
+SiP(x) =D(x)Q(x) +R(x), entoncesP/D=Q+R/D. Esta igualdad se comprueba
+multiplicando y evita integrar una fracción impropia sin simplificar. También se usa
+∫︂dx
+x2 +a 2 = 1
+a arctan
+(︃x
+a
+)︃
++C(a>0).
+Para funciones trigonométricas, los argumentos se consideran en radianes:
+∫︂
+senxdx=−cosx+C,
+∫︂
+cosxdx= senx+C,
+∫︂
+sec2xdx= tanx+C,
+∫︂
+csc2xdx=−cotx+C,
+∫︂
+secxtanxdx= secx+C,
+∫︂
+cscxcotxdx=−cscx+C.
+Las integrales de secante, cosecante y tangente se justifican en los ejercicios A.30–A.36
+mediante cambios de variable y derivadas de logaritmos.
+2.4. Dominio y comprobación
+Cada respuesta vale en intervalos donde el integrando sea real y esté definido. Se excluyen
+ceros de denominadores; una raíz cuadrada en un denominador exige radicando positivo.
+Las potencias con denominador impar se interpretan mediante raíces reales:z 1/3 = 3√zy
+z4/3 = ( 3√z)4, incluso paraz <0. La constante puede ser distinta en intervalos separados por
+singularidades.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+2.4 Dominio y comprobación3
+En cada caja,Irepresenta la integral buscada yFsu resultado sinC. Se calculaF ′y
+se simplifica hasta recuperar el integrando. Así se revisan exponentes, signos, factores del
+diferencial y condiciones iniciales (Hasset al., 2018).
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+4
+3. Ejercicios 4.1: antiderivación directa
+Ejercicio 4.1.1
+Integral:I=
+∫︂
+3x4dx.
+1. Método y preparación.El coeficiente3es constante; se aplica la regla de la potencia
+conn= 4.
+2. Desarrollo.
+I= 3
+∫︂
+x4dx= 3 x4+1
+4 + 1 +C.
+3. Resultado. 3
+5x5 +C.
+4. Verificación por derivación.
+F′(x) = 3
+5(5x4) = 3x 4.
+Ejercicio 4.1.2
+Integral:I=
+∫︂
+2x7dx.
+1. Método y preparación.Se saca el factor2y se aumenta el exponente de7a8.
+2. Desarrollo.
+I= 2
+∫︂
+x7dx= 2 x8
+8 +C.
+3. Resultado. 1
+4x8 +C.
+4. Verificación por derivación.
+F′(x) = 1
+4(8x7) = 2x 7.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+5
+Ejercicio 4.1.3
+Integral:I=
+∫︂1
+x3dx.
+1. Método y preparación.Se escribe1/x 3 =x−3; el nuevo exponente es−3 + 1 =−2.
+2. Desarrollo.
+I=
+∫︂
+x−3dx= x−2
+−2+C.
+3. Resultado.
+−1
+2x2 +C.
+4. Verificación por derivación.
+F′(x) =−1
+2 (−2)x−3= 1
+x3.
+Dominio.x̸= 0.
+Ejercicio 4.1.4
+Integral:I=
+∫︂3
+t5dt.
+1. Método y preparación.Se transforma el denominador en potencia negativa:3/t 5 =
+3t−5.
+2. Desarrollo.
+I= 3
+∫︂
+t−5dt= 3 t−4
+−4+C.
+3. Resultado.
+−3
+4t4 +C.
+4. Verificación por derivación.
+F′(t) =−3
+4(−4)t−5= 3
+t5.
+Dominio.t̸= 0.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+6
+Ejercicio 4.1.5
+Integral:I=
+∫︂
+5u3/2du.
+1. Método y preparación.La letrauya es la variable original; no se necesita otro cambio.
+Se calcula3/2 + 1 = 5/2.
+2. Desarrollo.
+I= 5 u5/2
+5/2 +C= 5
+(︃2
+5
+)︃
+u5/2 +C.
+3. Resultado.
+2u5/2 +C.
+4. Verificación por derivación.
+F′(u) = 2
+(︃5
+2
+)︃
+u3/2 = 5u 3/2.
+Dominio.u≥0; la derivación usual se realiza parau>0.
+Ejercicio 4.1.6
+Integral:I=
+∫︂
+10
+3√
+x2dx.
+1. Método y preparación.La raíz cúbica se representa comox 2/3;2/3 + 1 = 5/3.
+2. Desarrollo.
+I= 10
+∫︂
+x2/3dx= 10 x5/3
+5/3 +C= 10
+(︃3
+5
+)︃
+x5/3 +C.
+3. Resultado.
+6x5/3 +C.
+4. Verificación por derivación.
+F′(x) = 6
+(︃5
+3
+)︃
+x2/3 = 10
+3√
+x2.
+Dominio.Todos los reales; enx= 0la derivada también vale0por su definición.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+7
+Ejercicio 4.1.7
+Integral:I=
+∫︂2
+3√xdx.
+1. Método y preparación.Se usa2/ 3√x= 2x −1/3y−1/3 + 1 = 2/3.
+2. Desarrollo.
+I= 2 x2/3
+2/3 +C= 2
+(︃3
+2
+)︃
+x2/3 +C.
+3. Resultado.
+3x2/3 +C.
+4. Verificación por derivación.
+F′(x) = 3
+(︃2
+3
+)︃
+x−1/3= 2
+3√x.
+Dominio.x̸= 0.
+Ejercicio 4.1.8
+Integral:I=
+∫︂3√ydy.
+1. Método y preparación.Se escribe3y −1/2y se calcula−1/2 + 1 = 1/2.
+2. Desarrollo.
+I= 3 y1/2
+1/2 +C= 3(2)y 1/2 +C.
+3. Resultado.
+6√y+C.
+4. Verificación por derivación.
+F′(y) = 6
+(︃1
+2
+)︃
+y−1/2= 3√y.
+Dominio.y >0.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+8
+Ejercicio 4.1.9
+Integral:I=
+∫︂
+6t2 3√
+tdt.
+1. Método y preparación.En el producto se suman exponentes:t 2t1/3 =t 7/3.
+2. Desarrollo.
+I= 6
+∫︂
+t7/3dt= 6 t10/3
+10/3 +C= 6
+(︃3
+10
+)︃
+t10/3 +C.
+3. Resultado. 9
+5t10/3 +C.
+4. Verificación por derivación.
+F′(t) = 9
+5
+(︃10
+3
+)︃
+t7/3 = 6t 2 3√
+t.
+Dominio.Todos los reales, con raíz cúbica real; ent= 0la derivada es0.
+Ejercicio 4.1.10
+Integral:I=
+∫︂
+(3u5−2u3)du.
+1. Método y preparación.La linealidad permite integrar cada monomio;ues la variable
+original.
+2. Desarrollo.
+I= 3
+∫︂
+u5du−2
+∫︂
+u3du
+= 3u6
+6 −2u4
+4 +C.
+3. Resultado.
+u6−u4
+2 +C.
+4. Verificación por derivación.
+F′(u) = 1
+2 (6u5)−1
+2 (4u3) = 3u 5−2u3.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+9
+Ejercicio 4.1.11
+Integral:I=
+∫︂
+y3(2y2−3)dy.
+1. Método y preparación.Primero se distribuyey 3:y 3(2y2−3) = 2y5−3y3.
+2. Desarrollo.
+I= 2
+∫︂
+y5dy−3
+∫︂
+y3dy
+= 2y6
+6 −3y4
+4 +C.
+3. Resultado.
+y6
+3 −3y4
+4 +C.
+4. Verificación por derivación.
+F′(y) = 6
+3y5−12
+4 y3 = 2y 5−3y3 =y 3(2y2−3).
+Ejercicio 4.1.12
+Integral:I=
+∫︂
+x4(5−x2)dx.
+1. Método y preparación.La fuente contienex 2 dentro del paréntesis. Al distribuir:5x 4−
+x4+2 = 5x 4−x6.
+2. Desarrollo.
+I= 5
+∫︂
+x4dx−
+∫︂
+x6dx
+= 5x5
+5 −x7
+7 +C.
+3. Resultado.
+x5−x7
+7 +C.
+4. Verificación por derivación.
+F′(x) = 5x 4−7
+7x6 =x 4(5−x2).
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+10
+Ejercicio 4.1.13
+Integral:I=
+∫︂
+(8x4 + 4x3−6x2−4x+ 5)dx.
+1. Método y preparación.Se aplica linealidad a los cinco términos, incluyendo la cons-
+tante5 = 5x 0.
+2. Desarrollo.
+I= 8 x5
+5 + 4x4
+4 −6x3
+3 −4x2
+2 + 5x+C.
+3. Resultado. 8
+5x5 +x 4−2x3−2x2 + 5x+C.
+4. Verificación por derivación.
+F′(x) = 8
+5 (5x4) + 4x3−2(3x2)−2(2x) + 5
+= 8x 4 + 4x3−6x2−4x+ 5.
+Ejercicio 4.1.14
+Integral:I=
+∫︂
+(2 + 3x2−8x3)dx.
+1. Método y preparación.La integral de una constantekeskx; los otros términos siguen
+la regla de la potencia.
+2. Desarrollo.
+I= 2
+∫︂
+1dx+ 3
+∫︂
+x2dx−8
+∫︂
+x3dx
+= 2x+ 3 x3
+3 −8x4
+4 +C.
+3. Resultado.
+2x+x 3−2x4 +C.
+4. Verificación por derivación.
+F′(x) = 2 + 3x 2−2(4x3) = 2 + 3x 2−8x3.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+11
+Ejercicio 4.1.15
+Integral:I=
+∫︂√x(x+ 1)dx.
+1. Método y preparación.Se distribuyex 1/2:x 1/2x+x 1/2 =x 3/2 +x 1/2.
+2. Desarrollo.
+I= x5/2
+5/2 + x3/2
+3/2 +C
+= 2
+5x5/2 + 2
+3x3/2 +C.
+3. Resultado. 2
+5x5/2 + 2
+3x3/2 +C.
+4. Verificación por derivación.
+F′(x) = 2
+5
+5
+2x3/2 + 2
+3
+3
+2x1/2
+=x 3/2 +x 1/2 =√x(x+ 1).
+Dominio.x≥0; se deriva en el interiorx>0.
+Ejercicio 4.1.16
+Integral:I=
+∫︂(︄
+√x−1√x
+)︄
+dx.
+1. Método y preparación.Se expresan los radicales comox 1/2−x−1/2.
+2. Desarrollo.
+I= x3/2
+3/2−x1/2
+1/2 +C.
+3. Resultado. 2
+3x3/2−2√x+C.
+4. Verificación por derivación.
+F′(x) = 2
+3
+3
+2x1/2−21
+2x−1/2=√x−1√x.
+Dominio.x>0.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+12
+Ejercicio 4.1.17
+Integral:I=
+∫︂(︃2
+x3 + 3
+x2 + 5
+)︃
+dx.
+1. Método y preparación.El integrando es2x −3+ 3x−2+ 5; los exponentes resultantes
+son−2y−1.
+2. Desarrollo.
+I= 2 x−2
+−2+ 3x−1
+−1+ 5x+C.
+3. Resultado.
+−1
+x2−3
+x + 5x+C.
+4. Verificación por derivación.
+F′(x) =−(−2)x−3−3(−1)x−2+ 5 = 2
+x3 + 3
+x2 + 5.
+Dominio.x̸= 0.
+Ejercicio 4.1.18
+Integral:I=
+∫︂(︃
+3−1
+x4 + 1
+x2
+)︃
+dx.
+1. Método y preparación.Se conserva el signo negativo de−x−4al dividir entre−3.
+2. Desarrollo.
+I= 3x−x−3
+−3+ x−1
+−1+C.
+3. Resultado.
+3x+ 1
+3x3−1
+x +C.
+4. Verificación por derivación.
+F′(x) = 3 + 1
+3 (−3)x−4−(−1)x−2
+= 3−1
+x4 + 1
+x2.
+Dominio.x̸= 0.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+13
+Ejercicio 4.1.19
+Integral:I=
+∫︂x2 + 4x−4√x dx.
+1. Método y preparación.El radical está en el denominador. Se divide cada término entre
+x1/2 y se restan exponentes.
+2. Desarrollo.
+x2 + 4x−4√x =x 3/2 + 4x1/2−4x−1/2,
+I= x5/2
+5/2 + 4x3/2
+3/2−4x1/2
+1/2 +C.
+3. Resultado. 2
+5x5/2 + 8
+3x3/2−8√x+C.
+4. Verificación por derivación.
+F′(x) =x 3/2 + 4x1/2−4x−1/2
+= x2 + 4x−4√x .
+Dominio.x>0.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+14
+Ejercicio 4.1.20
+Integral:I=
+∫︂y4 + 2y2−1√y dy.
+1. Método y preparación.Se divide término a término entrey 1/2: los exponentes son7/2,
+3/2y−1/2.
+2. Desarrollo.
+I=
+∫︂
+(y7/2 + 2y3/2−y−1/2)dy
+= y9/2
+9/2 + 2y5/2
+5/2−y1/2
+1/2 +C.
+3. Resultado. 2
+9y9/2 + 4
+5y5/2−2√y+C.
+4. Verificación por derivación.
+F′(y) =y 7/2 + 2y3/2−y−1/2= y4 + 2y2−1√y .
+Dominio.y >0.
+Ejercicio 4.1.21
+Integral:I=
+∫︂(︄
+3√x+ 1
+3√x
+)︄
+dx.
+1. Método y preparación.Se utilizan las potenciasx 1/3 +x−1/3.
+2. Desarrollo.
+I= x4/3
+4/3 + x2/3
+2/3 +C.
+3. Resultado. 3
+4x4/3 + 3
+2x2/3 +C.
+4. Verificación por derivación.
+F′(x) = 3
+4
+4
+3x1/3 + 3
+2
+2
+3x−1/3
+= 3√x+ 1
+3√x.
+Dominio.x̸= 0; raíces cúbicas reales.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+15
+Ejercicio 4.1.22
+Integral:I=
+∫︂27t3−1
+3√
+t dt.
+1. Método y preparación.El denominador es
+3√
+t. Se obtiene27t 3−1/3−t−1/3= 27t 8/3−
+t−1/3.
+2. Desarrollo.
+I= 27 t11/3
+11/3−t2/3
+2/3 +C
+= 27
+(︃3
+11
+)︃
+t11/3−3
+2t2/3 +C.
+3. Resultado. 81
+11t11/3−3
+2t2/3 +C.
+4. Verificación por derivación.
+F′(t) = 81
+11
+11
+3 t8/3−3
+2
+2
+3t−1/3
+= 27t 8/3−t−1/3= 27t3−1
+3√
+t .
+Dominio.t̸= 0.
+Ejercicio 4.1.23
+Integral:I=
+∫︂
+(3 sent−2 cost)dt.
+1. Método y preparación.Se usan
+∫︁
+sentdt=−costy
+∫︁
+costdt= sent.
+2. Desarrollo.
+I= 3
+∫︂
+sentdt−2
+∫︂
+costdt
+= 3(−cost)−2 sent+C.
+3. Resultado.
+−3 cost−2 sent+C.
+4. Verificación por derivación.
+F′(t) =−3(−sent)−2 cost= 3 sent−2 cost.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+16
+Ejercicio 4.1.24
+Integral:I=
+∫︂
+(5 cosx−4 senx)dx.
+1. Método y preparación.Integrarsenxintroduce un signo negativo que se combina con
+el coeficiente−4.
+2. Desarrollo.
+I= 5
+∫︂
+cosxdx−4
+∫︂
+senxdx
+= 5 senx−4(−cosx) +C.
+3. Resultado.
+5 senx+ 4 cosx+C.
+4. Verificación por derivación.
+F′(x) = 5 cosx+ 4(−senx) = 5 cosx−4 senx.
+Ejercicio 4.1.25
+Integral:I=
+∫︂senx
+cos2xdx.
+1. Método y preparación.Para mostrar el factor de signo, se tomau= cosx,du=
+−senxdx, de dondesenxdx=−du.
+2. Desarrollo.
+I=−
+∫︂
+u−2du=−u−1
+−1+C=u −1+C.
+3. Resultado.
+secx+C.
+4. Verificación por derivación.
+F′(x) =−cos−2x(−senx) =senx
+cos2x.
+Dominio.cosx̸= 0.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+17
+Ejercicio 4.1.26
+Integral:I=
+∫︂cosx
+sen2xdx.
+1. Método y preparación.Se eligeu= senxydu= cosxdx; el denominador pasa a ser
+u2.
+2. Desarrollo.
+I=
+∫︂
+u−2du= u−1
+−1+C=−u−1+C.
+3. Resultado.
+−cscx+C.
+4. Verificación por derivación.
+F′(x) =−[−sen−2xcosx] = cosx
+sen2x.
+Dominio.senx̸= 0.
+Ejercicio 4.1.27
+Integral:I=
+∫︂
+(4 cscxcotx+ 2 sec 2x)dx.
+1. Método y preparación.Se reconocen las derivadas(cscx) ′=−cscxcotxy(tanx)′=
+sec2x.
+2. Desarrollo.
+I= 4
+∫︂
+cscxcotxdx+ 2
+∫︂
+sec2xdx
+= 4(−cscx) + 2 tanx+C.
+3. Resultado.
+−4 cscx+ 2 tanx+C.
+4. Verificación por derivación.
+F′(x) =−4(−cscxcotx) + 2 sec2x
+= 4 cscxcotx+ 2 sec 2x.
+Dominio.senx̸= 0ycosx̸= 0.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+18
+Ejercicio 4.1.28
+Integral:I=
+∫︂
+(3 csc2t−5 secttant)dt.
+1. Método y preparación.Se usan las antiderivadas−cottysect, respectivamente.
+2. Desarrollo.
+I= 3
+∫︂
+csc2tdt−5
+∫︂
+secttantdt
+= 3(−cott)−5 sect+C.
+3. Resultado.
+−3 cott−5 sect+C.
+4. Verificación por derivación.
+F′(t) =−3(−csc2t)−5 secttant
+= 3 csc2t−5 secttant.
+Dominio.sent̸= 0ycost̸= 0.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+19
+4. Ejercicios 4.2: sustitución y aplicación
+Ejercicio 4.2.1
+Integral:I=
+∫︂√1−4ydy.
+1. Método y preparación.Se eligeu= 1−4yporque es el radicando. Entoncesdu=
+−4dyydy=−du/4.
+2. Desarrollo.
+I=−1
+4
+∫︂
+u1/2du=−1
+4
+u3/2
+3/2 +C
+=−1
+4
+2
+3u3/2 +C=−1
+6u3/2 +C.
+3. Resultado.
+−1
+6(1−4y)3/2 +C.
+4. Verificación por derivación.
+F′(y) =−1
+6
+3
+2 (1−4y)1/2(−4) =√1−4y.
+Dominio.y≤1/4; la derivación se realiza en el interior.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+20
+Ejercicio 4.2.2
+Integral:I=
+∫︂
+3√
+3x−4dx.
+1. Método y preparación.Se tomau= 3x−4,du= 3dxydx=du/3.
+2. Desarrollo.
+I= 1
+3
+∫︂
+u1/3du= 1
+3
+u4/3
+4/3 +C
+= 1
+3
+3
+4u4/3 +C= 1
+4u4/3 +C.
+3. Resultado. 1
+4 (3x−4)4/3 +C.
+4. Verificación por derivación.
+F′(x) = 1
+4
+4
+3 (3x−4)1/3(3) =
+3√
+3x−4.
+Dominio.Todos los reales. Enx= 4/3la derivada vale0por continuidad del integrando y
+por el cociente incremental.
+Ejercicio 4.2.3
+Integral:I=
+∫︂
+x
+3√
+x2−9dx.
+1. Método y preparación.Se eligeu=x 2−9. Su diferencial esdu= 2xdx, así que
+xdx=du/2.
+2. Desarrollo.
+I= 1
+2
+∫︂
+u1/3du= 1
+2
+u4/3
+4/3 +C
+= 1
+2
+3
+4u4/3 +C= 3
+8u4/3 +C.
+3. Resultado. 3
+8 (x2−9)4/3 +C.
+4. Verificación por derivación.
+F′(x) = 3
+8
+4
+3 (x2−9)1/3(2x)
+=x
+3√
+x2−9.
+Dominio.Todos los reales, con raíz cúbica real. Enx=±3la derivada es0.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+21
+Ejercicio 4.2.4
+Integral:I=
+∫︂
+x(2x2 + 1)6dx.
+1. Método y preparación.La expresión elevada a la sexta potencia esu= 2x 2 + 1. Se
+obtienedu= 4xdxyxdx=du/4.
+2. Desarrollo.
+I= 1
+4
+∫︂
+u6du= 1
+4
+u7
+7 +C= u7
+28 +C.
+3. Resultado.
+(2x2 + 1)7
+28 +C.
+4. Verificación por derivación.
+F′(x) = 1
+28 (7)(2x2 + 1)6(4x) =x(2x 2 + 1)6.
+Ejercicio 4.2.5
+Integral:I=
+∫︂
+x2(x3−1)10dx.
+1. Método y preparación.Se tomau=x 3−1, por lo quedu= 3x2dxyx 2dx=du/3.
+2. Desarrollo.
+I= 1
+3
+∫︂
+u10du= 1
+3
+u11
+11 +C= u11
+33 +C.
+3. Resultado.
+(x3−1)11
+33 +C.
+4. Verificación por derivación.
+F′(x) = 1
+33(11)(x3−1)10(3x2) =x 2(x3−1)10.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+22
+Ejercicio 4.2.6
+Integral:I=
+∫︂
+3x
+√
+4−x2dx.
+1. Método y preparación.Se eligeu= 4−x 2,du=−2xdx; por tanto3xdx=−3du/2.
+2. Desarrollo.
+I=−3
+2
+∫︂
+u1/2du=−3
+2
+2
+3u3/2 +C=−u3/2 +C.
+3. Resultado.
+−(4−x2)3/2 +C.
+4. Verificación por derivación.
+F′(x) =−3
+2 (4−x2)1/2(−2x) = 3x
+√
+4−x2.
+Dominio.−2≤x≤2; derivación en(−2,2).
+Ejercicio 4.2.7
+Integral:I=
+∫︂y3
+(1−2y4)5dy.
+1. Método y preparación.Se tomau= 1−2y 4,du=−8y 3dyyy 3dy=−du/8. El
+denominador se escribeu−5.
+2. Desarrollo.
+I=−1
+8
+∫︂
+u−5du=−1
+8
+u−4
+−4+C= 1
+32u−4+C.
+3. Resultado. 1
+32(1−2y4)4 +C.
+4. Verificación por derivación.
+F′(y) = 1
+32 (−4)(1−2y4)−5(−8y3)
+= y3
+(1−2y4)5.
+Dominio.1−2y4̸= 0.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+23
+Ejercicio 4.2.8
+Integral:I=
+∫︂s√
+3s2 + 1ds.
+1. Método y preparación.Se defineu= 3s 2 + 1,du= 6sds, de modo quesds=du/6.
+2. Desarrollo.
+I= 1
+6
+∫︂
+u−1/2du= 1
+6
+u1/2
+1/2 +C= 1
+3u1/2 +C.
+3. Resultado. 1
+3
+√
+3s2 + 1 +C.
+4. Verificación por derivación.
+F′(s) = 1
+3
+1
+2 (3s2 + 1)−1/2(6s) = s√
+3s2 + 1.
+Dominio.Todos los reales, pues3s 2 + 1>0.
+Ejercicio 4.2.9
+Integral:I=
+∫︂
+(x2−4x+ 4)4/3dx.
+1. Método y preparación.Primero se reconoce el cuadrado perfectox2−4x+4 = (x−2)2.
+Conu=x−2ydu=dx, la raíz cúbica real permite escribir(u 2)4/3 =u 8/3.
+2. Desarrollo.
+I=
+∫︂
+u8/3du= u11/3
+11/3 +C= 3
+11u11/3 +C.
+3. Resultado. 3
+11(x−2)11/3 +C.
+4. Verificación por derivación.
+F′(x) = 3
+11
+11
+3 (x−2)8/3
+= [(x−2)2]4/3 = (x 2−4x+ 4)4/3.
+Dominio.Todos los reales. Enx= 2, el cociente incremental da derivada0.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+24
+Ejercicio 4.2.10
+Integral:I=
+∫︂
+x4√
+3x5−5dx.
+1. Método y preparación.Se tomau= 3x 5−5,du= 15x4dxyx 4dx=du/15.
+2. Desarrollo.
+I= 1
+15
+∫︂
+u1/2du= 1
+15
+2
+3u3/2 +C= 2
+45u3/2 +C.
+3. Resultado. 2
+45(3x5−5)3/2 +C.
+4. Verificación por derivación.
+F′(x) = 2
+45
+3
+2 (3x5−5)1/2(15x4)
+=x 4√
+3x5−5.
+Dominio.x≥(5/3)1/5; derivación en el interior.
+Ejercicio 4.2.11
+Integral:I=
+∫︂
+x
+√
+x+ 2dx.
+1. Método y preparación.Se defineu=x+ 2,du=dx. Es necesario sustituir también
+el factorx=u−2.
+2. Desarrollo.
+I=
+∫︂
+(u−2)u1/2du=
+∫︂
+(u3/2−2u1/2)du
+= u5/2
+5/2−2u3/2
+3/2 +C.
+3. Resultado. 2
+5 (x+ 2) 5/2−4
+3 (x+ 2) 3/2 +C.
+4. Verificación por derivación.
+F′(x) = (x+ 2) 3/2−2(x+ 2)1/2
+=
+√
+x+ 2[(x+ 2)−2] =x
+√
+x+ 2.
+Dominio.x≥−2; derivación parax>−2.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+25
+Ejercicio 4.2.12
+Integral:I=
+∫︂t√t+ 3 dt.
+1. Método y preparación.Conu=t+ 3, se tienedt=duyt=u−3. Se sustituye el
+numerador completo.
+2. Desarrollo.
+I=
+∫︂
+(u−3)u−1/2du=
+∫︂
+(u1/2−3u−1/2)du
+= 2
+3u3/2−6u1/2 +C.
+3. Resultado. 2
+3 (t+ 3) 3/2−6
+√
+t+ 3 +C.
+4. Verificación por derivación.
+F′(t) = (t+ 3) 1/2−3(t+ 3)−1/2
+= (t+ 3)−3√t+ 3 = t√t+ 3 .
+Dominio.t>−3.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+26
+Ejercicio 4.2.13
+Integral:I=
+∫︂2r
+(1−r)7dr.
+1. Método y preparación.Se eligeu= 1−r,dr=−duyr= 1−u. El signo del diferencial
+afecta a todo el numerador.
+2. Desarrollo.
+I=−2
+∫︂
+(1−u)u−7du
+=−2
+∫︂
+(u−7−u−6)du
+=−2
+(︄
+u−6
+−6−u−5
+−5
+)︄
++C.
+3. Resultado. 1
+3(1−r)6− 2
+5(1−r)5 +C.
+4. Verificación por derivación.
+F′(r) = 2(1−r)−7−2(1−r)−6
+= 2−2(1−r)
+(1−r)7 = 2r
+(1−r)7.
+Dominio.r̸= 1.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+27
+Ejercicio 4.2.14
+Integral:I=
+∫︂
+x3(2−x2)12dx.
+1. Método y preparación.Se tomau= 2−x 2,du=−2xdx. Se descomponex 3dx=
+x2(xdx)y se usax 2 = 2−u.
+2. Desarrollo.
+I=−1
+2
+∫︂
+(2−u)u12du
+=
+∫︂(︃
+−u12 + 1
+2u13
+)︃
+du
+=−u13
+13 + u14
+28 +C.
+3. Resultado.
+−(2−x2)13
+13 + (2−x2)14
+28 +C.
+4. Verificación por derivación.
+F′(x) = 2x(2−x2)12−x(2−x2)13
+=x(2−x2)12[2−(2−x2)]
+=x 3(2−x2)12.
+La captura continúa con los ejercicios 36–45; se respeta ese salto de numeración.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+28
+Ejercicio 4.2.36
+Integral:I=
+∫︂
+x(x2 + 1)
+√
+4−2x2−x4dx.
+1. Método y preparación.Se desarrolla(x 2 + 1)2 =x 4 + 2x2 + 1, por lo que el radicando
+es5−(x2 + 1)2. Primero,u=x 2 + 1yxdx=du/2. Después,v= 5−u 2 yudu=−dv/2.
+2. Desarrollo.
+I= 1
+2
+∫︂
+u
+√
+5−u2du
+= 1
+2
+(︃
+−1
+2
+)︃∫︂
+v1/2dv
+=−1
+4
+2
+3v3/2 +C=−1
+6 [5−u2]3/2 +C.
+3. Resultado.
+−1
+6 (4−2x2−x4)3/2 +C.
+4. Verificación por derivación.
+F′(x) =−1
+6
+3
+2(4−2x2−x4)1/2(−4x−4x3)
+=x(x 2 + 1)
+√
+4−2x2−x4.
+Dominio.|x| ≤
+√︂√
+5−1; se deriva en el interior. También puede hacerse en un solo
+cambio conv= 4−2x2−x4 ydv=−4x(1 +x2)dx.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+29
+Ejercicio 4.2.37
+Integral:I=
+∫︂y+ 3
+(3−y)2/3dy.
+1. Método y preparación.Conu= 3−y,dy=−du,y= 3−uyy+ 3 = 6−u. Se
+sustituye también el numerador.
+2. Desarrollo.
+I=−
+∫︂
+(6−u)u−2/3du
+=
+∫︂
+(−6u−2/3+u 1/3)du
+=−6u1/3
+1/3 + u4/3
+4/3 +C.
+3. Resultado.
+−18(3−y)1/3 + 3
+4 (3−y)4/3 +C.
+4. Verificación por derivación.
+F′(y) = 6(3−y)−2/3−(3−y)1/3
+= 6−(3−y)
+(3−y)2/3 = y+ 3
+(3−y)2/3.
+Dominio.y̸= 3; las raíces cúbicas se toman reales.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+30
+Ejercicio 4.2.38
+Integral:I=
+∫︂√
+3 +s(s+ 1) 2ds.
+1. Método y preparación.Se tomau=s+ 3,ds=duys+ 1 =u−2. Se expande
+(u−2)2 =u 2−4u+ 4.
+2. Desarrollo.
+I=
+∫︂
+u1/2(u2−4u+ 4)du
+=
+∫︂
+(u5/2−4u3/2 + 4u1/2)du
+= 2
+7u7/2−8
+5u5/2 + 8
+3u3/2 +C.
+3. Resultado. 2
+7 (s+ 3) 7/2−8
+5 (s+ 3) 5/2 + 8
+3 (s+ 3) 3/2 +C.
+4. Verificación por derivación.
+F′(s) = (s+ 3) 5/2−4(s+ 3)3/2 + 4(s+ 3) 1/2
+=
+√
+s+ 3[(s+ 3) 2−4(s+ 3) + 4]
+=
+√
+s+ 3(s+ 1) 2.
+Dominio.s≥−3; derivación ens>−3.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+31
+Ejercicio 4.2.39
+Integral:I=
+∫︂(r1/3 + 2)4
+3√
+r2 dr.
+1. Método y preparación.Se defineu=r 1/3 + 2,du= 1
+3r−2/3dr. Entoncesdr/
+3√
+r2 =
+3du.
+2. Desarrollo.
+I= 3
+∫︂
+u4du= 3 u5
+5 +C.
+3. Resultado. 3
+5 (r1/3 + 2)5 +C.
+4. Verificación por derivación.
+F′(r) = 3
+5 (5)(r1/3 + 2)4
+(︃1
+3r−2/3
+)︃
+= (r1/3 + 2)4
+3√
+r2 .
+Dominio.r̸= 0.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+32
+Ejercicio 4.2.40
+Integral:I=
+∫︂(︃
+t+ 1
+t
+)︃3/2t2−1
+t2 dt.
+1. Método y preparación.La derivada deu=t+ 1/tes1−1/t 2 = (t 2−1)/t2. Todo el
+segundo factor queda incluido endu.
+2. Desarrollo.
+du= t2−1
+t2 dt,
+I=
+∫︂
+u3/2du= u5/2
+5/2 +C= 2
+5u5/2 +C.
+3. Resultado.
+2
+5
+(︃
+t+ 1
+t
+)︃5/2
++C.
+4. Verificación por derivación.
+F′(t) = 2
+5
+5
+2
+(︃
+t+ 1
+t
+)︃3/2(︃
+1−1
+t2
+)︃
+=
+(︃
+t+ 1
+t
+)︃3/2t2−1
+t2 .
+Dominio.t>0para que la potencia de denominador par sea real yt̸= 0.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+33
+Ejercicio 4.2.41
+Integral:I=
+∫︂x3
+(x2 + 4)3/2dx.
+1. Método y preparación.Se usau=x 2 + 4,xdx=du/2yx 2 =u−4. Se separa
+x3dx=x 2(xdx).
+2. Desarrollo.
+I= 1
+2
+∫︂
+(u−4)u−3/2du
+= 1
+2
+∫︂
+(u−1/2−4u−3/2)du
+= 1
+2
+(︂
+2u1/2 + 8u−1/2
+)︂
++C.
+3. Resultado. √
+x2 + 4 + 4√
+x2 + 4 +C.
+4. Verificación por derivación.
+F′(x) = x√
+x2 + 4− 4x
+(x2 + 4)3/2
+= x(x2 + 4)−4x
+(x2 + 4)3/2 = x3
+(x2 + 4)3/2.
+Dominio.Todos los reales, puesx 2 + 4>0.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+34
+Ejercicio 4.2.42
+Integral:I=
+∫︂x3
+√
+1−2x2dx.
+1. Método y preparación.El numeradorx 3 exige conservarx 2 al sustituir. Seau= 1−2x2,
+xdx=−du/4yx2 = (1−u)/2.
+2. Desarrollo.
+I=−1
+8
+∫︂
+(1−u)u−1/2du
+=−1
+8
+∫︂
+(u−1/2−u1/2)du
+=−1
+4u1/2 + 1
+12u3/2 +C.
+3. Resultado.
+−1
+4
+√
+1−2x2 + 1
+12(1−2x2)3/2 +C.
+4. Verificación por derivación.
+F′(x) = x
+2
+√
+1−2x2−x
+2
+√
+1−2x2
+= x[1−(1−2x2)]
+2
+√
+1−2x2 = x3
+√
+1−2x2.
+Dominio.|x|<1/
+√
+2.
+Ejercicio 4.2.43
+Integral:I=
+∫︂
+senxsen(cosx)dx.
+1. Método y preparación.Se toma la función internau= cosx,du=−senxdx, por lo
+quesenxdx=−du.
+2. Desarrollo.
+I=−
+∫︂
+senudu=−(−cosu) +C= cosu+C.
+3. Resultado.
+cos(cosx) +C.
+4. Verificación por derivación.
+F′(x) =−sen(cosx)(−senx) = senxsen(cosx).
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+35
+Ejercicio 4.2.44
+Integral:I=
+∫︂
+secxtanxcos(secx)dx.
+1. Método y preparación.Se tomau= secxydu= secxtanxdx. El producto exterior
+es exactamente la derivada de la función interna.
+2. Desarrollo.
+I=
+∫︂
+cosudu= senu+C.
+3. Resultado.
+sen(secx) +C.
+4. Verificación por derivación.
+F′(x) = cos(secx) secxtanx.
+Dominio.cosx̸= 0.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+36
+Ejercicio 4.2.45: función de costo total
+Enunciado.El costo marginal esC ′(x) = 3(5x+ 4) −1/2y el costo general es de $10. Se
+interpreta este último como costo fijo:C(0) = 10.
+1. Cambio de variable.Para recuperar el costo se integraC′(x). Se usa una constanteK
+para no confundirla con el nombre de la función:
+u= 5x+ 4, du= 5dx, dx= du
+5 .
+2. Integración y sustitución inversa.
+C(x) = 3
+5
+∫︂
+u−1/2du= 3
+5
+u1/2
+1/2 +K
+= 6
+5
+√
+5x+ 4 +K.
+3. Condición inicial.El dato de costo fijo determina la constante:
+10 =C(0) = 6
+5
+√
+4 +K= 12
+5 +K, K= 10− 12
+5 = 38
+5 .
+Resultado:
+C(x) = 6
+5
+√
+5x+ 4 + 38
+5 , x≥0.
+4. Verificación e interpretación.
+C′(x) = 6
+5
+1
+2 (5x+ 4)−1/2(5) = 3(5x+ 4) −1/2, C(0) = 10.
+Para una cantidad producidax≥0, el costo total parte de $10 y aumenta porque su
+derivada es positiva. La fórmula satisface tanto la tasa marginal como el costo fijo.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+37
+5. Lista A: funciones algebraicas, logarítmicas y
+trigonométricas
+La numeración A.1–A.24 corresponde a la tercera imagen; A.25–A.36, a la cuarta.
+Ejercicio A.1
+Integral:I=
+∫︂5
+xdx.
+1. Método y preparación.El exponente dexes−1, por lo que se usa el logaritmo y no
+la regla de la potencia.
+2. Desarrollo.
+I= 5
+∫︂dx
+x = 5 ln|x|+C.
+3. Resultado.
+5 ln|x|+C.
+4. Verificación por derivación.
+F′(x) = 5 1
+x = 5
+x.
+Dominio.x̸= 0.
+Ejercicio A.2
+Integral:I=
+∫︂10
+x dx.
+1. Método y preparación.Se extrae la constante10y se integra1/x.
+2. Desarrollo.
+I= 10
+∫︂dx
+x = 10 ln|x|+C.
+3. Resultado.
+10 ln|x|+C.
+4. Verificación por derivación.
+F′(x) = 10 1
+x = 10
+x.
+Dominio.x̸= 0.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+38
+Ejercicio A.3
+Integral:I=
+∫︂1
+x+ 1 dx.
+1. Método y preparación.Se eligeu=x+ 1,du=dx. La derivada del denominador
+coincide con el numerador.
+2. Desarrollo.
+I=
+∫︂du
+u = ln|u|+C.
+3. Resultado.
+ln|x+ 1|+C.
+4. Verificación por derivación.
+F′(x) = 1
+x+ 1
+d
+dx(x+ 1) = 1
+x+ 1 .
+Dominio.x̸=−1.
+Ejercicio A.4
+Integral:I=
+∫︂1
+x−5dx.
+1. Método y preparación.Se tomau=x−5ydu=dx.
+2. Desarrollo.
+I=
+∫︂du
+u = ln|u|+C.
+3. Resultado.
+ln|x−5|+C.
+4. Verificación por derivación.
+F′(x) = 1
+x−5(1) = 1
+x−5.
+Dominio.x̸= 5.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+39
+Ejercicio A.5
+Integral:I=
+∫︂1
+3−2xdx.
+1. Método y preparación.Seau= 3−2x,du=−2dx, de dondedx=−du/2. Este
+factor negativo debe conservarse.
+2. Desarrollo.
+I=−1
+2
+∫︂du
+u =−1
+2 ln|u|+C.
+3. Resultado.
+−1
+2 ln|3−2x|+C.
+4. Verificación por derivación.
+F′(x) =−1
+2
+−2
+3−2x= 1
+3−2x.
+Dominio.x̸= 3/2.
+Ejercicio A.6
+Integral:I=
+∫︂1
+3x+ 2 dx.
+1. Método y preparación.Conu= 3x+ 2,du= 3dxydx=du/3.
+2. Desarrollo.
+I= 1
+3
+∫︂du
+u = 1
+3 ln|u|+C.
+3. Resultado. 1
+3 ln|3x+ 2|+C.
+4. Verificación por derivación.
+F′(x) = 1
+3
+3
+3x+ 2 = 1
+3x+ 2 .
+Dominio.x̸=−2/3.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+40
+Ejercicio A.7
+Integral:I=
+∫︂x
+x2 + 1dx.
+1. Método y preparación.Se defineu=x 2 + 1,du= 2xdxyxdx=du/2.
+2. Desarrollo.
+I= 1
+2
+∫︂du
+u = 1
+2 ln|u|+C.
+3. Resultado. 1
+2 ln
+(︂
+x2 + 1
+)︂
++C.
+4. Verificación por derivación.
+F′(x) = 1
+2
+2x
+x2 + 1 = x
+x2 + 1.
+Dominio.Todos los reales; se omite el valor absoluto porquex 2 + 1>0.
+Ejercicio A.8
+Integral:I=
+∫︂x2
+3−x3dx.
+1. Método y preparación.Se tomau= 3−x 3,du=−3x2dxyx 2dx=−du/3.
+2. Desarrollo.
+I=−1
+3
+∫︂du
+u =−1
+3 ln|u|+C.
+3. Resultado.
+−1
+3 ln|3−x3|+C.
+4. Verificación por derivación.
+F′(x) =−1
+3
+−3x2
+3−x3 = x2
+3−x3.
+Dominio.x̸=
+3√
+3.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+41
+Ejercicio A.9
+Integral:I=
+∫︂x2−4
+x dx.
+1. Método y preparación.Se divide cada término entrex:(x 2−4)/x=x−4/x.
+2. Desarrollo.
+I=
+∫︂
+xdx−4
+∫︂dx
+x
+= x2
+2 −4 ln|x|+C.
+3. Resultado.
+x2
+2 −4 ln|x|+C.
+4. Verificación por derivación.
+F′(x) =x−4
+x = x2−4
+x .
+Dominio.x̸= 0.
+Ejercicio A.10
+Integral:I=
+∫︂x√
+9−x2dx.
+1. Método y preparación.Se tomau= 9−x 2,du=−2xdxyxdx=−du/2.
+2. Desarrollo.
+I=−1
+2
+∫︂
+u−1/2du=−1
+2
+u1/2
+1/2 +C=−√u+C.
+3. Resultado.
+−
+√
+9−x2 +C.
+4. Verificación por derivación.
+F′(x) =−1
+2 (9−x2)−1/2(−2x) = x√
+9−x2.
+Dominio.−3<x<3.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+42
+Ejercicio A.11
+Integral:I=
+∫︂x2 + 2x+ 3
+x3 + 3x2 + 9xdx.
+1. Método y preparación.La derivada del denominador es tres veces el numerador. Se
+eligeu=x 3 + 3x2 + 9x,du= 3(x 2 + 2x+ 3)dx.
+2. Desarrollo.
+(x2 + 2x+ 3)dx= du
+3 ,
+I= 1
+3
+∫︂du
+u = 1
+3 ln|u|+C.
+3. Resultado. 1
+3 ln|x3 + 3x2 + 9x|+C.
+4. Verificación por derivación.
+F′(x) = 1
+3
+3x2 + 6x+ 9
+x3 + 3x2 + 9x
+= x2 + 2x+ 3
+x3 + 3x2 + 9x.
+Dominio.x̸= 0, puesx2 + 3x+ 9 = (x+ 3/2) 2 + 27/4>0.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+43
+Ejercicio A.12
+Integral:I=
+∫︂x(x+ 2)
+x3 + 3x2−4dx.
+1. Método y preparación.Se tomau=x 3 + 3x 2−4. Entoncesdu= (3x 2 + 6x)dx=
+3x(x+ 2)dx.
+2. Desarrollo.
+x(x+ 2)dx= du
+3 ,
+I= 1
+3
+∫︂du
+u = 1
+3 ln|u|+C.
+3. Resultado. 1
+3 ln|x3 + 3x2−4|+C.
+4. Verificación por derivación.
+F′(x) = 1
+3
+3x(x+ 2)
+x3 + 3x2−4= x(x+ 2)
+x3 + 3x2−4.
+Dominio.x̸= 1,−2, porquex3 + 3x2−4 = (x−1)(x+ 2)2.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+44
+Ejercicio A.13
+Integral:I=
+∫︂x2−3x+ 2
+x+ 1 dx.
+1. Método y preparación.Se divide el polinomio. Primerox 2/x=x; al restarx(x+ 1)
+queda−4x+ 2. Después−4x/x=−4; al restar−4(x+ 1)queda6.
+2. Desarrollo.
+x2−3x+ 2 = (x+ 1)(x−4) + 6,
+I=
+∫︂(︃
+x−4 + 6
+x+ 1
+)︃
+dx
+= x2
+2 −4x+ 6 ln|x+ 1|+C.
+3. Resultado.
+x2
+2 −4x+ 6 ln|x+ 1|+C.
+4. Verificación por derivación.
+F′(x) =x−4 + 6
+x+ 1
+= (x−4)(x+ 1) + 6
+x+ 1 = x2−3x+ 2
+x+ 1 .
+Dominio.x̸=−1.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+45
+Ejercicio A.14
+Integral:I=
+∫︂2x2 + 7x−3
+x−2 dx.
+1. Método y preparación.El primer término del cociente es2xy el residuo parcial es
+11x−3. El segundo es11y el residuo final es19.
+2. Desarrollo.
+2x2 + 7x−3 = (x−2)(2x+ 11) + 19,
+I=
+∫︂(︃
+2x+ 11 + 19
+x−2
+)︃
+dx
+=x 2 + 11x+ 19 ln|x−2|+C.
+3. Resultado.
+x2 + 11x+ 19 ln|x−2|+C.
+4. Verificación por derivación.
+F′(x) = 2x+ 11 + 19
+x−2
+= (2x+ 11)(x−2) + 19
+x−2 = 2x2 + 7x−3
+x−2 .
+Dominio.x̸= 2.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+46
+Ejercicio A.15
+Integral:I=
+∫︂x3−3x2 + 5
+x−3 dx.
+1. Método y preparación.Se dividex 3 entrexy se obtienex 2. Al restarx 2(x−3) =
+x3−3x2, sólo queda el residuo5.
+2. Desarrollo.
+x3−3x2 + 5 = (x−3)x2 + 5,
+I=
+∫︂(︃
+x2 + 5
+x−3
+)︃
+dx= x3
+3 + 5 ln|x−3|+C.
+3. Resultado.
+x3
+3 + 5 ln|x−3|+C.
+4. Verificación por derivación.
+F′(x) =x 2 + 5
+x−3= x2(x−3) + 5
+x−3
+= x3−3x2 + 5
+x−3 .
+Dominio.x̸= 3.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+47
+Ejercicio A.16
+Integral:I=
+∫︂x3−6x−20
+x+ 5 dx.
+1. Método y preparación.La división sucesiva producex 2,−5xy19. Los residuos par-
+ciales son−5x2−6x−20,19x−20y, finalmente,−115.
+2. Desarrollo.
+x3−6x−20 = (x+ 5)(x2−5x+ 19)−115,
+I=
+∫︂(︃
+x2−5x+ 19−115
+x+ 5
+)︃
+dx
+= x3
+3 −5
+2x2 + 19x−115 ln|x+ 5|+C.
+3. Resultado.
+x3
+3 −5
+2x2 + 19x−115 ln|x+ 5|+C.
+4. Verificación por derivación.
+F′(x) =x 2−5x+ 19−115
+x+ 5
+= (x2−5x+ 19)(x+ 5)−115
+x+ 5
+= x3−6x−20
+x+ 5 .
+Dominio.x̸=−5.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+48
+Ejercicio A.17
+Integral:I=
+∫︂x4 +x−4
+x2 + 2 dx.
+1. Método y preparación.La división da cocientex 2−2y residuox. Para la fracción
+restante,u=x 2 + 2,du= 2xdx.
+2. Desarrollo.
+x4 +x−4 = (x2 + 2)(x2−2) +x,
+I=
+∫︂
+(x2−2)dx+
+∫︂x
+x2 + 2dx
+= x3
+3 −2x+1
+2
+∫︂du
+u
+= x3
+3 −2x+1
+2 ln|u|+C.
+3. Resultado.
+x3
+3 −2x+1
+2 ln
+(︂
+x2 + 2
+)︂
++C.
+4. Verificación por derivación.
+F′(x) =x 2−2 + x
+x2 + 2
+= (x2−2)(x2 + 2) +x
+x2 + 2 = x4 +x−4
+x2 + 2 .
+Dominio.Todos los reales, puesx 2 + 2>0.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+49
+Ejercicio A.18
+Integral:I=
+∫︂x3−3x2 + 4x−9
+x2 + 3 dx.
+1. Método y preparación.El cociente esx−3y el residuo esx. En la fracción residual
+se tomau=x 2 + 3,du= 2xdx.
+2. Desarrollo.
+x3−3x2 + 4x−9 = (x2 + 3)(x−3) +x,
+I=
+∫︂
+(x−3)dx+1
+2
+∫︂du
+u
+= x2
+2 −3x+1
+2 ln|u|+C.
+3. Resultado.
+x2
+2 −3x+1
+2 ln
+(︂
+x2 + 3
+)︂
++C.
+4. Verificación por derivación.
+F′(x) =x−3 + x
+x2 + 3
+= (x−3)(x2 + 3) +x
+x2 + 3 = x3−3x2 + 4x−9
+x2 + 3 .
+Dominio.Todos los reales, puesx 2 + 3>0.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+50
+Ejercicio A.19
+Integral:I=
+∫︂(lnx) 2
+x dx.
+1. Método y preparación.Se eligeu= lnx. El diferencialdu=dx/xya está presente;
+queda una potencia cuadrática deu.
+2. Desarrollo.
+I=
+∫︂
+u2du= u3
+3 +C.
+3. Resultado.
+(lnx) 3
+3 +C.
+4. Verificación por derivación.
+F′(x) = 1
+3(3)(lnx) 2 1
+x = (lnx) 2
+x .
+Dominio.x>0.
+Ejercicio A.20
+Integral:I=
+∫︂1
+xln(x 3)dx.
+1. Método y preparación.Se tomau= ln(x 3); por la regla de la cadena,du=
+(3x2/x3)dx= 3dx/x, así quedx/x=du/3.
+2. Desarrollo.
+I= 1
+3
+∫︂du
+u = 1
+3 ln|u|+C.
+3. Resultado. 1
+3 ln|ln
+(︂
+x3
+)︂
+|+C.
+4. Verificación por derivación.
+F′(x) = 1
+3
+1
+ln(x3)
+3
+x = 1
+xln(x 3).
+Dominio.x>0yx̸= 1. La expresiónln(x3)no se define en los reales six≤0.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+51
+Ejercicio A.21
+Integral:I=
+∫︂1√x+ 1 dx.
+1. Método y preparación.La raíz abarcax+ 1. Se tomau=x+ 1,du=dx, y se escribe
+u−1/2.
+2. Desarrollo.
+I=
+∫︂
+u−1/2du= u1/2
+1/2 +C= 2 √u+C.
+3. Resultado.
+2
+√
+x+ 1 +C.
+4. Verificación por derivación.
+F′(x) = 2 1
+2(x+ 1)−1/2= 1√x+ 1 .
+Dominio.x>−1.
+Ejercicio A.22
+Integral:I=
+∫︂ 1
+x2/3(1 +x 1/3)dx.
+1. Método y preparación.Se tomau= 1 +x 1/3,du= 1
+3x−2/3dxydx/x 2/3 = 3du.
+2. Desarrollo.
+I= 3
+∫︂du
+u = 3 ln|u|+C.
+3. Resultado.
+3 ln|1 +x1/3|+C.
+4. Verificación por derivación.
+F′(x) = 3
+1 +x 1/3
+1
+3x−2/3
+= 1
+x2/3(1 +x 1/3).
+Dominio.x̸= 0,−1; se usa la raíz cúbica real.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+52
+Ejercicio A.23
+Integral:I=
+∫︂2x
+(x−1)2dx.
+1. Método y preparación.Seau=x−1,dx=duyx=u+ 1. Se expande el numerador
+después del cambio.
+2. Desarrollo.
+I= 2
+∫︂u+ 1
+u2 du= 2
+∫︂
+(u−1+u−2)du
+= 2 ln|u|−2u−1+C.
+3. Resultado.
+2 ln|x−1|−2
+x−1+C.
+4. Verificación por derivación.
+F′(x) = 2
+x−1+ 2
+(x−1)2
+= 2(x−1) + 2
+(x−1)2 = 2x
+(x−1)2.
+Dominio.x̸= 1.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+53
+Ejercicio A.24
+Integral:I=
+∫︂x(x−2)
+(x−1)3 dx.
+1. Método y preparación.Conu=x−1, se tienex=u+ 1,x−2 =u−1ydx=du. El
+producto del numerador es(u+ 1)(u−1) =u 2−1.
+2. Desarrollo.
+I=
+∫︂u2−1
+u3 du=
+∫︂
+(u−1−u−3)du
+= ln|u|−u−2
+−2+C= ln|u|+1
+2u2 +C.
+3. Resultado.
+ln|x−1|+1
+2(x−1)2 +C.
+4. Verificación por derivación.
+F′(x) = 1
+x−1− 1
+(x−1)3
+= (x−1)2−1
+(x−1)3 = x(x−2)
+(x−1)3.
+Dominio.x̸= 1.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+54
+Ejercicio A.25
+Integral:I=
+∫︂1
+1 +
+√
+2xdx.
+1. Método y preparación.Se sigue la sugerencia de tomar el denominador:u= 1 +
+√
+2x.
+Entonces
+√
+2x=u−1,x= (u−1)2/2ydx= (u−1)du.
+2. Desarrollo.
+I=
+∫︂u−1
+u du=
+∫︂
+(1−u−1)du
+=u−ln|u|+C
+= 1 +
+√
+2x−ln
+(︂
+1 +
+√
+2x
+)︂
++C.
+3. Resultado. √
+2x−ln
+(︂
+1 +
+√
+2x
+)︂
++C.
+4. Verificación por derivación.
+F′(x) = 1√
+2x− 1
+(1 +
+√
+2x)
+√
+2x
+= (1 +
+√
+2x)−1√
+2x(1 +
+√
+2x)
+= 1
+1 +
+√
+2x (x>0).
+Dominio.x≥0. El término constante1se absorbió enC. Enx= 0la derivada lateral es
+1.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+55
+Ejercicio A.26
+Integral:I=
+∫︂1
+1 +
+√
+3xdx.
+1. Método y preparación.Seau= 1 +
+√
+3x. Se despejax= (u−1) 2/3y se deriva:
+dx= 2
+3(u−1)du.
+2. Desarrollo.
+I= 2
+3
+∫︂u−1
+u du= 2
+3
+∫︂
+(1−u−1)du
+= 2
+3 [u−ln|u|] +C.
+3. Resultado. 2
+3
+√
+3x−2
+3 ln
+(︂
+1 +
+√
+3x
+)︂
++C.
+4. Verificación por derivación.
+F′(x) = 1√
+3x− 1
+(1 +
+√
+3x)
+√
+3x
+= 1
+1 +
+√
+3x (x>0).
+Dominio.x≥0. El término2/3se absorbió enC; enx= 0la derivada lateral es1.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+56
+Ejercicio A.27
+Integral:I=
+∫︂√x√x−3dx.
+1. Método y preparación.Se eligeu= √x−3. Entonces√x=u+ 3,x= (u+ 3) 2 y
+dx= 2(u+ 3)du. Se sustituyen numerador, denominador y diferencial.
+2. Desarrollo.
+I= 2
+∫︂(u+ 3) 2
+u du
+= 2
+∫︂u2 + 6u+ 9
+u du
+= 2
+∫︂
+(u+ 6 + 9u−1)du
+=u 2 + 12u+ 18 ln|u|+C.
+3. Resultado.
+x+ 6√x+ 18 ln|√x−3|+C.
+4. Verificación por derivación.
+F′(x) = 1 + 3√x + 9√x(√x−3)
+=
+√x(√x−3) + 3(√x−3) + 9√x(√x−3)
+= x√x(√x−3)=
+√x√x−3 (x>0).
+Dominio.x≥0,x̸= 9. Al regresar ax,u2 + 12u=x+ 6 √x−27, y−27se absorbe en
+C. Enx= 0la derivada lateral es0.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+57
+Ejercicio A.28
+Integral:I=
+∫︂3√x
+3√x−1dx.
+1. Método y preparación.Se tomau= 3√x−1. Así, 3√x=u+ 1,x= (u+ 1) 3 y
+dx= 3(u+ 1) 2du.
+2. Desarrollo.
+I= 3
+∫︂(u+ 1) 3
+u du
+= 3
+∫︂
+(u2 + 3u+ 3 +u −1)du
+=u 3 + 9
+2u2 + 9u+ 3 ln|u|+C.
+3. Resultado.
+x+ 3
+2x2/3 + 3x1/3 + 3 ln|x1/3−1|+C.
+4. Verificación por derivación.
+v= 3√x, dv
+dx = 1
+3v2 (x̸= 0),
+F′(x) =
+(︃
+3v2 + 3v+ 3 + 3
+v−1
+)︃1
+3v2
+= (v2 +v+ 1)(v−1) + 1
+v2(v−1)
+= v3
+v2(v−1)=
+3√x
+3√x−1.
+Dominio.x̸= 1. La constante−11/2que aparece al expandir se absorbe enC. Enx= 0
+el resultado es diferenciable y su derivada vale0; esto se comprueba con el cociente
+incremental, puesF(x)−F(0)es de ordenx 4/3.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+58
+Ejercicio A.29
+Integral:I=
+∫︂cosθ
+senθdθ.
+1. Método y preparación.Se tomau= senθ,du= cosθdθ.
+2. Desarrollo.
+I=
+∫︂du
+u = ln|u|+C.
+3. Resultado.
+ln|senθ|+C.
+4. Verificación por derivación.
+F′(θ) =cosθ
+senθ.
+Dominio.senθ̸= 0.
+Ejercicio A.30
+Integral:I=
+∫︂
+tan(5θ)dθ.
+1. Método y preparación.Se escribetan(5θ) = sen(5θ)/cos(5θ). Se eligeu= cos(5θ),
+du=−5 sen(5θ)dθ.
+2. Desarrollo.
+I=−1
+5
+∫︂du
+u =−1
+5 ln|u|+C.
+3. Resultado.
+−1
+5 ln|cos(5θ)|+C.
+4. Verificación por derivación.
+F′(θ) =−1
+5
+−5 sen(5θ)
+cos(5θ) = tan(5θ).
+Dominio.cos(5θ)̸= 0.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+59
+Ejercicio A.31
+Integral:I=
+∫︂
+csc(2x)dx.
+1. Método y preparación.Primerou= 2x,dx=du/2. Para integrarcscu, se toma
+w= cscu−cotu; su derivada esw′=−cscucotu+ csc2u= cscuw.
+2. Desarrollo.
+I= 1
+2
+∫︂
+cscudu
+= 1
+2
+∫︂dw
+w = 1
+2 ln|w|+C.
+3. Resultado. 1
+2 ln|csc(2x)−cot(2x)|+C.
+4. Verificación por derivación.
+F′(x) = 1
+2
+−2 csc(2x) cot(2x) + 2 csc2(2x)
+csc(2x)−cot(2x)
+= csc(2x)[csc(2x)−cot(2x)]
+csc(2x)−cot(2x)
+= csc(2x).
+Dominio.sen(2x)̸= 0. El argumento del logaritmo no es cero en ese dominio. También
+puede escribirse 1
+2 ln|tanx|+C.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+60
+Ejercicio A.32
+Integral:I=
+∫︂
+sec
+(︃x
+2
+)︃
+dx.
+1. Método y preparación.Se tomau=x/2,dx= 2du. Para integrarsecu, seaw=
+secu+ tanu; entoncesdw= (secutanu+ sec 2u)du= secuwdu.
+2. Desarrollo.
+I= 2
+∫︂
+secudu= 2
+∫︂dw
+w = 2 ln|w|+C.
+3. Resultado.
+2 ln
+⃓⃓⃓⃓sec
+(︃x
+2
+)︃
++ tan
+(︃x
+2
+)︃⃓⃓⃓⃓+C.
+4. Verificación por derivación.
+q= x
+2,
+F′(x) = 2
+1
+2 secqtanq+ 1
+2 sec2q
+secq+ tanq
+= secq(tanq+ secq)
+secq+ tanq = sec
+(︃x
+2
+)︃
+.
+Dominio.cos(x/2)̸= 0.
+Ejercicio A.33
+Integral:I=
+∫︂cost
+1 + sent dt.
+1. Método y preparación.Se tomau= 1 + sent,du= costdt. El factor diferencial ya
+está en el numerador.
+2. Desarrollo.
+I=
+∫︂du
+u = ln|u|+C.
+3. Resultado.
+ln|1 + sent|+C.
+4. Verificación por derivación.
+F′(t) = cost
+1 + sent.
+Dominio.1 + sent̸= 0.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+61
+Ejercicio A.34
+Integral:I=
+∫︂csc2t
+cott dt.
+1. Método y preparación.Se eligeu= cott,du=−csc 2tdt, así quecsc 2tdt=−du.
+2. Desarrollo.
+I=−
+∫︂du
+u =−ln|u|+C.
+3. Resultado.
+−ln|cott|+C.
+4. Verificación por derivación.
+F′(t) =−−csc2t
+cott = csc2t
+cott .
+Dominio.sent̸= 0ycost̸= 0, para quecsctesté definida ycott̸= 0.
+Ejercicio A.35
+Integral:I=
+∫︂secxtanx
+secx−1dx.
+1. Método y preparación.Seau= secx−1; entoncesdu= secxtanxdx.
+2. Desarrollo.
+I=
+∫︂du
+u = ln|u|+C.
+3. Resultado.
+ln|secx−1|+C.
+4. Verificación por derivación.
+F′(x) = secxtanx
+secx−1.
+Dominio.cosx̸= 0ysecx̸= 1.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+62
+Ejercicio A.36
+Integral:I=
+∫︂
+(sect+ tant)dt.
+1. Método y preparación.Por linealidad se separan ambas funciones. La secante se
+integra como en A.32:ln|sect+tant|. Para la tangente se tomau= costydu=−sentdt.
+2. Desarrollo.
+I=
+∫︂
+sectdt+
+∫︂sent
+cost dt
+= ln|sect+ tant|−
+∫︂du
+u
+= ln|sect+ tant|−ln|cost|+C.
+3. Resultado.
+ln|sect+ tant|−ln|cost|+C.
+4. Verificación por derivación.
+F′(t) = secttant+ sec 2t
+sect+ tant −−sent
+cost
+= sect+ tant.
+Dominio.cost̸= 0.
+6. Conclusiones
+La elección del método comienza con la forma del integrando. Los productos y cocientes
+de potencias se simplifican antes de integrar. En una sustitución, el diferencial determina el
+coeficiente exterior, mientras que los factores restantes deben expresarse en la nueva va-
+riable. En las fracciones impropias, la división polinómica separa una parte elemental y una
+fracción que suele conducir a un logaritmo.
+Las comprobaciones muestran por qué no pueden omitirse los signos de un diferencial
+negativo ni los coeficientes de una función compuesta. En el problema de costo total, la in-
+tegración produce una familia de funciones y el costo fijo selecciona una sola. Los dominios
+forman parte de la respuesta: una simplificación algebraica no autoriza a incluir puntos donde
+el integrando original no está definido.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+63
+1. Imágenes originales de la Evidencia 1
+Las imágenes siguientes proceden deEvidencia-1-20-puntos.docx. Se conserva la fuen-
+te completa para cotejar radicales, exponentes, numeración y los límites de lo visible.
+Figura 1: Imagen original 1 de la Evidencia 1 (Actividad 2).
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+64
+Figura 2: Imagen original 2 de la Evidencia 1 (Actividad 2).
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+65
+Figura 3: Imagen original 3 de la Evidencia 1 (Actividad 2).
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+66
+Figura 4: Imagen original 4 de la Evidencia 1 (Actividad 2).
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
+Referencias 67
+Referencias
+Stewart, J., Calculus: Early Transcendentals. Cengage Learning, 8 ed., 2016.
+Strang, G. y Herman, E. J., Calculus Volume 1. OpenStax, Rice University, 2016, https:
+//openstax.org/details/books/calculus-volume-1.
+Hass, J., Heil, C., y Weir, M. D., Thomas’ Calculus. Pearson, 14 ed., 2018.
+Actividad 2 — Evidencia 1 Clave por registrar Cálculo Integral
