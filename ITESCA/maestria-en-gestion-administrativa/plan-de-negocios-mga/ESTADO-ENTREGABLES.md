@@ -1,5 +1,11 @@
 # Plan de Negocios - Entregables por vencimiento
 
+## Actividad 12 enviada el 05/10/2026
+
+Se envió únicamente el [PDF con portada oficial](reporte-plan-de-negocios-Actividad-12-Recursos-Humanos-Portada-Oficial.pdf), 17 páginas, al módulo 6551. Moodle confirmó **Enviado para calificar** el 5 de octubre de 2026 a las **17:20**, hora del aula, 6 horas y 38 minutos antes del cierre. Sin calificar al verificar.
+
+La portada reutiliza el recurso de la última Actividad 10 de Fundamentos de Gestión Administrativa, adaptado a Plan de Negocios. Las 16 páginas del cuerpo conservan texto y apariencia del reporte validado. La descarga remota coincide por SHA-256. [Comprobante y verificación](referencias-plan-de-negocios/actividad-12-2026-10-05/envio/README.md). El Word y el PDF de portada genérica no se enviaron. El corte histórico siguiente no refleja este envío posterior.
+
 Revision documental local: **23/09/2026**. Preparacion local no equivale a entrega ni aprobacion. **No estan completas las quince actividades.** [Dictamen por actividad y requisito](VALIDACION-ACTIVIDADES-1-15.md). El [calendario](ORDEN-ACTIVIDADES.md) conserva su consulta del 22/09/2026; esta revision no revalida el estado del aula.
 
 | Actividad | Modulo Moodle | Producto disponible | Estado |

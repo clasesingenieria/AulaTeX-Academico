@@ -16,10 +16,16 @@ with sync_playwright() as p:
   page.locator('.moodle-dialogue-focused .fp-upload-form').wait_for(state='visible')
   upload=page.locator('.moodle-dialogue-focused input[name=repo_upload_file]')
   upload.wait_for(state='visible')
+  page.wait_for_load_state('networkidle')
   upload.set_input_files(str(path))
   page.wait_for_function('(name) => Array.from(document.querySelectorAll("input[name=repo_upload_file]")).some(e=>e.files.length===1 && e.files[0].name===name)',arg=path.name)
   print('ARCHIVO PREPARADO',upload.evaluate('(e)=>({name:e.files[0].name,size:e.files[0].size})'))
-  page.get_by_role('button',name='Subir este archivo',exact=True).click()
+  with page.expect_response(lambda response: 'repository_ajax.php' in response.url and 'upload' in response.url) as pending_upload:
+   page.get_by_role('button',name='Subir este archivo',exact=True).click()
+  upload_result=pending_upload.value.json()
+  print('RESPUESTA DE CARGA',{'http':pending_upload.value.status,'fields':list(upload_result),'error':upload_result.get('error')})
+  if upload_result.get('error'):
+   raise RuntimeError('Moodle rechazó la carga: '+str(upload_result['error']))
   try:page.locator('.moodle-dialogue-focused').wait_for(state='hidden')
   except Exception:
    print('UPLOAD DIALOG',page.locator('.moodle-dialogue-focused').inner_text())

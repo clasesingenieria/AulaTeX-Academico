@@ -34,7 +34,8 @@ def main():
         assert len(output) == len(original)
         assert all(output[index].get_text() == original[index].get_text() for index in range(1, len(original)))
         output.set_metadata({"title": "AM Taller Autocentro: puestos y funciones", "author": "Martín Jonathan de la Cruz Muñoz", "subject": "Actividad 12 - Plan de Negocios"})
-        output.save(destination)
+        output.subset_fonts()
+        output.save(destination, garbage=4, deflate=True)
         output[0].get_pixmap(matrix=pymupdf.Matrix(1.5, 1.5)).save(ASSETS / "portada-oficial-verificada.png")
     with pymupdf.open(destination) as document:
         text = " ".join(document[0].get_text().split())
