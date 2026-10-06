@@ -46,6 +46,33 @@ _TRUE_VALUES = {"1", "true", "yes", "on", "si", "sí"}
 MODEL_ROUTER_ENGINE = "Auto (model-router)"
 
 
+class LLMEnginePolicyError(ValueError):
+    """A single-engine run attempted an invalid or different model route."""
+
+
+def canonical_llm_engine(engine: str) -> str | None:
+    """Resolve a configured label without silently selecting another engine."""
+    value = str(engine).strip().casefold()
+    return next((label for label in LLM_ENGINES if label.casefold() == value), None)
+
+
+def required_llm_engine() -> str | None:
+    """Return the optional, fail-closed per-process engine restriction.
+
+    This is a routing constraint, not proof of the provider's underlying model.
+    Call receipts must record the provider-reported model separately.
+    """
+    value = os.getenv("AULATEX_REQUIRED_ENGINE", "").strip()
+    if not value:
+        return None
+    selected = canonical_llm_engine(value)
+    if selected is None:
+        raise LLMEnginePolicyError("AULATEX_REQUIRED_ENGINE contiene una etiqueta de motor no válida.")
+    if model_router_only_enabled() and selected != MODEL_ROUTER_ENGINE:
+        raise LLMEnginePolicyError("AULATEX_REQUIRED_ENGINE entra en conflicto con AULATEX_MODEL_ROUTER_ONLY.")
+    return selected
+
+
 def model_router_only_enabled() -> bool:
     """Indica si toda invocación LLM debe usar exclusivamente model-router."""
     value = os.getenv("AULATEX_MODEL_ROUTER_ONLY", "").strip().lower()
@@ -54,6 +81,11 @@ def model_router_only_enabled() -> bool:
 
 def restrict_engines_to_available(engines: list[str] | tuple[str, ...]) -> list[str]:
     """Normaliza motores y aplica el modo global de deployment único."""
+    required = required_llm_engine()
+    if required:
+        if any(canonical_llm_engine(engine) != required for engine in engines):
+            raise LLMEnginePolicyError("La lista de motores no respeta AULATEX_REQUIRED_ENGINE.")
+        return [required]
     if model_router_only_enabled():
         return [MODEL_ROUTER_ENGINE]
     return [engine for engine in engines if engine in LLM_ENGINES]
@@ -109,6 +141,11 @@ def load_aulatex_env(path: str | Path | None = None, *, override: bool = True) -
         if not name:
             skipped += 1
             continue
+        # An explicit process-level restriction must survive every .env reload.
+        # In particular a saved empty value cannot silently disable a supervised run.
+        if name == "AULATEX_REQUIRED_ENGINE" and os.environ.get(name, "").strip():
+            skipped += 1
+            continue
         if not override and name in os.environ:
             skipped += 1
             continue
@@ -116,6 +153,7 @@ def load_aulatex_env(path: str | Path | None = None, *, override: bool = True) -
         loaded += 1
     # Descifrado autónomo de los valores enc: con la clave local del proyecto.
     _decrypt_local_secrets()
+    required_llm_engine()  # reject malformed/conflicting policy before any call
 
     # Si no se ha especificado un engine global, preferir GPT-5-Mini como
     # opción por defecto para invocaciones y revisiones locales.

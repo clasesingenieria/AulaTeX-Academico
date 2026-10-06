@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import base64
 import os
+import re
 import time
 from dataclasses import dataclass
 from pathlib import Path
@@ -19,6 +20,10 @@ from .config import (
     MODEL_ROUTER_ENGINE,
     load_aulatex_env,
     model_router_only_enabled,
+    canonical_llm_engine,
+    required_llm_engine,
+    LLMEnginePolicyError,
+    restrict_engines_to_available,
     usable_secret,
 )
 
@@ -64,6 +69,11 @@ def engine_chain_for_task(task: str | None, forced_engine: str | None = None) ->
     """
     import os as _os
 
+    required = required_llm_engine()
+    if required:
+        if forced_engine is not None:
+            normalize_llm_engine_label(forced_engine)
+        return [required]
     if model_router_only_enabled():
         return [MODEL_ROUTER_ENGINE]
 
@@ -93,6 +103,52 @@ class LLMCallResult:
     ok: bool
     text: str
     error: str = ""
+    requested_deployment: str = ""
+    provider_model: str = ""
+    finish_reason: str = ""
+    usage: dict | None = None
+
+
+class LLMText(str):
+    """String-compatible response carrying only non-secret model identifiers."""
+
+    def __new__(cls, text: str, *, requested_deployment: str = "", provider_model: str = "", finish_reason: str = "", usage: dict | None = None):
+        instance = super().__new__(cls, text)
+        instance.requested_deployment = requested_deployment
+        instance.provider_model = provider_model
+        instance.finish_reason = finish_reason
+        instance.usage = usage
+        return instance
+
+
+def _model_identifier(value: Any) -> str:
+    # Do not propagate arbitrary provider response fields, URLs, or error bodies.
+    return value if isinstance(value, str) and re.fullmatch(r"[A-Za-z0-9_.-]{1,160}", value) else ""
+
+
+def _response_text(payload: dict, config: AulaTeXLLMConfig) -> LLMText:
+    choices = payload.get('choices') or [{}]
+    finish = choices[0].get('finish_reason', '') if isinstance(choices[0], dict) else ''
+    if not finish:
+        finish=(payload.get('incomplete_details') or {}).get('reason') or payload.get('status','')
+    usage = {k:v for k,v in (payload.get('usage') or {}).items() if isinstance(v,int) and not isinstance(v,bool)}
+    reasoning = (payload.get('usage') or {}).get('completion_tokens_details') or {}
+    if isinstance(reasoning.get('reasoning_tokens'),int): usage['reasoning_tokens']=reasoning['reasoning_tokens']
+    return LLMText(
+        extract_llm_text(payload),
+        requested_deployment=_model_identifier(config.deployment),
+        provider_model=_model_identifier(payload.get("model")),
+        finish_reason=_model_identifier(finish), usage=usage,
+    )
+
+
+def _successful_result(engine: str, text: str) -> LLMCallResult:
+    return LLMCallResult(
+        engine, True, text,
+        requested_deployment=getattr(text, "requested_deployment", ""),
+        provider_model=getattr(text, "provider_model", ""),
+        finish_reason=getattr(text, "finish_reason", ""), usage=getattr(text,"usage",None),
+    )
 
 
 @dataclass(frozen=True)
@@ -115,7 +171,8 @@ class AulaTeXLLMConfig:
             return None
 
         selected_engine = normalize_llm_engine_label(
-            engine_label or _env("AULATEX_LLM_REVIEW_ENGINE", _env("TB_BOOKS_LLM_REVIEW_ENGINE", "Codex"))
+            engine_label or required_llm_engine()
+            or _env("AULATEX_LLM_REVIEW_ENGINE", _env("TB_BOOKS_LLM_REVIEW_ENGINE", "Codex"))
         )
         prefix = ENGINE_ENV_PREFIX[selected_engine]
 
@@ -188,7 +245,7 @@ class AulaTeXLLMClient:
             try:
                 text = call_llm_text(selected, prompt, max_tokens=candidate_max_tokens, timeout_seconds=timeout_seconds)
                 if text.strip():
-                    return LLMCallResult(selected, True, text)
+                    return _successful_result(selected, text)
                 last_exc = RuntimeError(f"{selected} devolvió una respuesta vacía.")
             except Exception as exc:
                 last_exc = exc
@@ -247,7 +304,7 @@ class AulaTeXLLMClient:
                     max_tokens=candidate_max_tokens,
                     timeout_seconds=timeout_seconds,
                 )
-                return LLMCallResult(selected, True, text)
+                return _successful_result(selected, text)
             except Exception as exc:
                 last_exc = exc
                 if not _should_retry_with_lower_max_tokens(exc):
@@ -262,7 +319,10 @@ class AulaTeXLLMClient:
         max_tokens: int = DEFAULT_MAX_TOKENS,
         timeout_seconds: int = DEFAULT_TIMEOUT_SECONDS,
     ) -> list[LLMCallResult]:
-        engine_list = [engine for engine in list(engines or self.engines()) if engine in LLM_ENGINES]
+        if required_llm_engine():
+            engine_list = restrict_engines_to_available(list(engines or []))
+        else:
+            engine_list = [engine for engine in list(engines or self.engines()) if engine in LLM_ENGINES]
         if not engine_list:
             engine_list = ["Codex"]
         results: list[LLMCallResult] = []
@@ -273,7 +333,18 @@ class AulaTeXLLMClient:
 
 
 def normalize_llm_engine_label(engine_label: str | None) -> str:
+    required = required_llm_engine()
+    if required:
+        if engine_label is None or not str(engine_label).strip():
+            return required
+        selected = canonical_llm_engine(engine_label)
+        if selected is None:
+            raise LLMEnginePolicyError("La etiqueta de motor solicitada no es válida bajo AULATEX_REQUIRED_ENGINE.")
+        if selected != required:
+            raise LLMEnginePolicyError("El motor solicitado no coincide con AULATEX_REQUIRED_ENGINE.")
+        return selected
     selected = (engine_label or "Codex").strip() or "Codex"
+    selected = canonical_llm_engine(selected) or selected
     if selected not in ENGINE_ENV_PREFIX:
         return "Codex"
     return selected
@@ -349,6 +420,8 @@ def validate_llm_response(
     }
     try:
         candidate = config if config is not None else AulaTeXLLMConfig.from_env(selected)
+        if candidate is not None and required_llm_engine():
+            normalize_llm_engine_label(candidate.engine_label)
         if candidate is None or not (
             candidate.base_url and usable_secret(candidate.api_key) and candidate.deployment
         ):
@@ -366,7 +439,7 @@ def validate_llm_response(
         prompt = f"Responde exactamente con {marker} y no agregues ningún otro texto."
         # Intentos con límites de salida crecientes para evitar truncamiento.
         candidate_limits = []
-        base = max(16, int(max_tokens))
+        base = max(1024 if _uses_reasoning_parameters(candidate) else 16, int(max_tokens))
         candidate_limits.append(min(base, 32768))
         candidate_limits.append(min(max(128, base * 2), 32768))
         candidate_limits.append(min(max(256, base * 4), 32768))
@@ -392,10 +465,6 @@ def validate_llm_response(
 
             if not 200 <= response.status_code < 300:
                 payload["error"] = f"HTTP {response.status_code}. Revisa endpoint, API key, deployment o cuota."
-                try:
-                    payload["raw_response"] = (response.text or "")[:10000]
-                except Exception:
-                    payload["raw_response"] = "<no-text>"
                 return payload
 
             try:
@@ -404,6 +473,8 @@ def validate_llm_response(
                 last_json = None
 
             text = extract_llm_text(last_json or {}).strip()
+            payload["requested_deployment"] = _model_identifier(candidate.deployment)
+            payload["provider_model"] = _model_identifier((last_json or {}).get("model"))
             # Si conseguimos el marcador, salimos temprano.
             if text == marker:
                 payload.update(responded=True, response_chars=len(text), marker_found=True, ok=True, error="")
@@ -432,12 +503,6 @@ def validate_llm_response(
             marker_found=text == marker, ok=text == marker,
             error="" if text == marker else "El LLM no devolvió el marcador de validación esperado.",
         )
-        if not payload["ok"]:
-            try:
-                payload["raw_response"] = (response.text or "")[:10000]
-            except Exception:
-                payload["raw_response"] = "<no-text>"
-            
     except Exception as exc:
         # No usar _friendly_error aquí: una excepción puede contener la URL,
         # cabeceras, API key o cuerpo devuelto por el proveedor.
@@ -486,7 +551,7 @@ def call_llm_text(
             timeout=timeout,
         )
     response.raise_for_status()
-    return extract_llm_text(response.json())
+    return _response_text(response.json(), config)
 
 
 def call_llm_multimodal(
@@ -544,7 +609,7 @@ def call_llm_multimodal(
             timeout=timeout,
         )
     response.raise_for_status()
-    return extract_llm_text(response.json())
+    return _response_text(response.json(), config)
 
 
 def extract_llm_text(payload: dict) -> str:
@@ -642,6 +707,8 @@ def _openai_compatible_endpoint(config: AulaTeXLLMConfig) -> str:
     parsed = urlsplit(config.base_url)
     if "/chat/completions" in parsed.path or "/responses" in parsed.path:
         return config.base_url
+    if parsed.path.rstrip("/").endswith("/v1"):
+        return f"{config.base_url.rstrip('/')}/chat/completions"
     return (
         f"{config.base_url.rstrip('/')}/openai/deployments/"
         f"{config.deployment}/chat/completions?api-version={config.api_version}"
@@ -664,6 +731,15 @@ def _anthropic_payload(config: AulaTeXLLMConfig, prompt: str, max_tokens: int) -
     }
 
 
+def _uses_reasoning_parameters(config: AulaTeXLLMConfig) -> bool:
+    deployment = config.deployment.casefold()
+    engine = config.engine_label.casefold()
+    return (
+        engine.startswith("gpt-5")
+        or deployment.startswith(("gpt-5", "o1", "o3", "o4"))
+    )
+
+
 def _openai_payload(
     endpoint: str,
     config: AulaTeXLLMConfig,
@@ -673,30 +749,36 @@ def _openai_payload(
     temperature: float,
 ) -> dict[str, object]:
     if "/responses" in urlsplit(endpoint).path:
-        return {
+        payload = {
             "model": config.deployment,
             "input": prompt,
             "max_output_tokens": max(16, max_tokens),
         }
-    # Some Azure deployments use the newer parameter name `max_completion_tokens`
-    # for the chat/completions path. Detect and use it to improve compatibility.
-    path = urlsplit(endpoint).path
-    if "/chat/completions" in path:
-        temp = temperature
-        if temp == 0:
-            temp = 1.0
-        return {
+        if _env("AULATEX_LLM_JSON_OBJECT", "0").lower() in _TRUE_VALUES:
+            payload["text"] = {"format": {"type": "json_object"}}
+        effort=_env('AULATEX_LLM_REASONING_EFFORT','')
+        if effort in ('minimal','low','medium','high'):
+            payload['reasoning']={'effort':effort}
+        return payload
+    if _uses_reasoning_parameters(config):
+        payload = {
             "model": config.deployment,
             "messages": [{"role": "user", "content": prompt}],
             "max_completion_tokens": max(16, max_tokens),
-            "temperature": temp,
         }
-    return {
+        if _env("AULATEX_LLM_JSON_OBJECT", "0").lower() in _TRUE_VALUES:
+            payload["response_format"] = {"type": "json_object"}
+        effort=_env('AULATEX_LLM_REASONING_EFFORT','')
+        if effort in ('minimal','low','medium','high'):
+            payload['reasoning_effort']=effort
+        return payload
+    payload = {
         "model": config.deployment,
         "messages": [{"role": "user", "content": prompt}],
         "max_tokens": max_tokens,
         "temperature": temperature,
     }
+    return payload
 
 
 def _openai_multimodal_payload(
@@ -720,7 +802,7 @@ def _openai_multimodal_payload(
             ],
             "max_output_tokens": max_tokens,
         }
-    return {
+    payload = {
         "model": config.deployment,
         "messages": [
             {
@@ -734,6 +816,14 @@ def _openai_multimodal_payload(
         "max_tokens": max_tokens,
         "temperature": config.temperature,
     }
+    if _uses_reasoning_parameters(config):
+        payload["max_completion_tokens"] = payload.pop("max_tokens")
+        payload.pop("temperature")
+        effort=_env('AULATEX_LLM_REASONING_EFFORT','')
+        if effort in ('minimal','low','medium','high'): payload['reasoning_effort']=effort
+        if _env('AULATEX_LLM_JSON_OBJECT','0').lower() in _TRUE_VALUES:
+            payload['response_format']={'type':'json_object'}
+    return payload
 
 
 def _friendly_error(exc: Exception) -> str:

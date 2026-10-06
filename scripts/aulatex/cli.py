@@ -119,6 +119,10 @@ def build_parser() -> argparse.ArgumentParser:
     gui = sub.add_parser("gui", help="Open the AulaTeX GUI.")
     gui.add_argument("--diagnostics", action="store_true", help="Enable diagnostic metrics and performance views.")
     sub.add_parser("agent-patterns", help="List the agentic patterns integrated in AulaTeX.")
+    supervised = sub.add_parser("supervised-activity", help="Run a bounded GPT-5-mini activity stage with authenticated ITESCA sources and evidence.")
+    supervised.add_argument("--out", required=True)
+    supervised.add_argument("--root", default=str(Path.cwd()))
+    supervised.add_argument("--stage", required=True, choices=["portal", "prepare", "research", "plan", "draft", "evaluate", "revise", "build", "visual", "finalize", "all"])
 
     planning = sub.add_parser("generar-planeaciones", help="Normalizar planeaciones JSON en carpetas versionables de la materia; sin generación pedagógica automática.")
     planning.add_argument("target", help="Carpeta existente de la materia.")
@@ -434,6 +438,11 @@ def main(argv: list[str] | None = None) -> None:
         except (ValueError, OSError) as error:
             parser.error(str(error))
         print(json.dumps({"artifacts": [str(path) for path in artifacts], "mode": "normalizar_modelo_aportado"}, ensure_ascii=False, indent=2))
+        return
+
+    if args.command == "supervised-activity":
+        from .supervised_activity import main as supervised_main
+        supervised_main(["--root", args.root, "--out", args.out, "--stage", args.stage])
         return
 
     if args.command == "agent-patterns":
