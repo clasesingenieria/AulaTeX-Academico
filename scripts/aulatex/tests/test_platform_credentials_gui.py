@@ -17,15 +17,6 @@ import pytest
 PIN = "solo-pruebas-pin-maestro-largo"
 
 
-@pytest.fixture(scope="module")
-def tk_root():
-    # One Tcl interpreter per process; repeated Tk()/destroy() is unreliable on Windows.
-    root = tk.Tk()
-    root.withdraw()
-    yield root
-    root.destroy()
-
-
 @pytest.fixture
 def form(tmp_path, monkeypatch, tk_root):
     monkeypatch.setattr(os, "environ", {})
@@ -55,7 +46,8 @@ def form(tmp_path, monkeypatch, tk_root):
 
 
 def populate(widget):
-    widget._itesca()
+    widget.preset.set("ITESCA Virtual")
+    widget._apply_preset()
     widget.fields["username"].set("cuenta-totalmente-ficticia")
     widget.fields["password"].set("contraseña-ficticia-para-pruebas")
     widget.fields["pin"].set(PIN)
@@ -123,6 +115,7 @@ def test_explicit_pin_overrides_environment_without_changing_it(form, monkeypatc
     populate(widget)
     widget._save()
     assert "guardadas cifradas" in widget.status.get()
+    widget.use_environment_pin.set(True)
     widget._load()
     assert "PIN incorrecto" in widget.status.get()
     assert os.environ["AULATEX_MASTER_PIN"] == "pin-del-entorno-ficticio"
@@ -132,6 +125,13 @@ def test_explicit_pin_overrides_environment_without_changing_it(form, monkeypatc
     widget._lock()
     assert "entorno" in widget.status.get()
     assert os.environ["AULATEX_MASTER_PIN"] == PIN
+    assert not widget.use_environment_pin.get()
+    widget._load()
+    assert not widget.accounts.get_children()
+    assert "Lista consultada" not in widget.status.get()
+    widget.fields["pin"].set(PIN)
+    widget._load()
+    assert "Lista consultada" in widget.status.get()
 
 
 def test_rotate_confirmation_and_success(form, monkeypatch):
@@ -156,7 +156,7 @@ def test_rotate_confirmation_and_success(form, monkeypatch):
 def test_masking_idle_callback_and_unexpected_errors(form):
     widget, _ = form
     masked = {str(entry.cget("textvariable")): entry.cget("show")
-              for entry in widget.winfo_children() if isinstance(entry, ttk.Entry)}
+              for entry in widget.editor_frame.winfo_children() if isinstance(entry, ttk.Entry)}
     for key in ("username", "password", "pin"):
         assert masked[str(widget.fields[key])] == "*"
     populate(widget)
@@ -190,6 +190,27 @@ def test_multiple_accounts_have_distinct_visible_ids(form):
     assert "usuario-ficticio" not in str(rows)
 
 
+def test_presets_only_fill_public_metadata(form):
+    widget, gui = form
+    for name, (institution, url) in gui.PLATFORM_PRESETS.items():
+        widget.preset.set(name)
+        widget._apply_preset()
+        assert widget.fields["institution"].get() == institution
+        assert widget.fields["url"].get() == url
+        assert all(widget.fields[key].get() == "" for key in ("username", "password", "pin"))
+    assert not widget.vault.path.exists()
+
+
+def test_environment_pin_requires_explicit_opt_in(form, monkeypatch):
+    widget, _ = form
+    monkeypatch.setenv("AULATEX_MASTER_PIN", PIN)
+    assert widget._pin() == ""
+    widget.use_environment_pin.set(True)
+    assert widget._pin() == PIN
+    widget._lock()
+    assert widget._pin() == ""
+
+
 @pytest.mark.parametrize("missing_crypto", [False, True])
 def test_main_notebook_integration_without_app_side_effects(form, monkeypatch, tmp_path, missing_crypto):
     widget, gui = form
@@ -198,8 +219,8 @@ def test_main_notebook_integration_without_app_side_effects(form, monkeypatch, t
     tree = ast.parse((Path(__file__).resolve().parents[1] / "gui.py").read_text(encoding="utf-8"))
     app = next(node for node in tree.body if isinstance(node, ast.ClassDef) and node.name == "AulaTeXApp")
     selected = [node for node in app.body if isinstance(node, ast.FunctionDef)
-                and node.name in ("_build_ui", "_build_platforms_tab")]
-    namespace = {"ttk": ttk, "__package__": gui.__package__}
+                and node.name in ("_build_ui", "_build_platforms_tab", "_open_auxiliary", "_open_settings")]
+    namespace = {"tk": tk, "ttk": ttk, "__package__": gui.__package__}
     exec(compile(ast.Module(body=selected, type_ignores=[]), "isolated-notebook-construction", "exec"), namespace)
     root = widget.winfo_toplevel()
     monkeypatch.setattr(root, "workspace", SimpleNamespace(repo_root=tmp_path), raising=False)
@@ -207,7 +228,7 @@ def test_main_notebook_integration_without_app_side_effects(form, monkeypatch, t
         "itesca": SimpleNamespace(level="institucion", institution="ITESCA", label="ITESCA"),
     }, raising=False)
     for node in app.body:
-        if isinstance(node, ast.FunctionDef) and node.name.startswith("_build_"):
+        if isinstance(node, ast.FunctionDef) and node.name != "__init__":
             value = MethodType(namespace[node.name], root) if node.name in namespace else lambda: None
             monkeypatch.setattr(root, node.name, value, raising=False)
     if missing_crypto:
@@ -220,9 +241,11 @@ def test_main_notebook_integration_without_app_side_effects(form, monkeypatch, t
 
         monkeypatch.setattr(builtins, "__import__", missing_dependency)
     root._build_ui()
+    assert len(root.main_notebook.tabs()) == 5
+    root._open_settings()
     notebook = root.platforms_tab.master
-    assert notebook.tab(root.platforms_tab, "text") == "Plataformas"
-    assert notebook.tab(root.credentials_tab, "text") == "Credenciales"
+    assert notebook.tab(root.platforms_tab, "text") == "Cuentas institucionales"
+    assert notebook.tab(root.credentials_tab, "text") == "Proveedores IA"
     if missing_crypto:
         assert not isinstance(root.platforms_tab, gui.PlatformCredentialsFrame)
         assert "No se guardarán credenciales sin cifrado" in root.platforms_tab.winfo_children()[0].cget("text")

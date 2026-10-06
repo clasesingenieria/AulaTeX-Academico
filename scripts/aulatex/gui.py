@@ -9,6 +9,7 @@ import tkinter as tk
 import json
 from pathlib import Path
 from tkinter import filedialog, messagebox, ttk
+from tkinter.scrolledtext import ScrolledText
 
 from .activity_monitor import ActivityMonitor, ActivityMonitorRequest
 from .agent import AgentRequest, AulaTeXAgent
@@ -41,6 +42,7 @@ from .investigation import (
     InvestigationStore,
 )
 from .llm_bridge import DEFAULT_MAX_TOKENS, LLM_ENGINES, AulaTeXLLMClient
+from .gui_widgets import EnginePicker, ScrollableForm
 from .workspace import GENERATION_MARKER_FILENAME, AulaTeXWorkspace, EditorialScope
 
 
@@ -112,7 +114,8 @@ class AulaTeXApp(tk.Tk):
         self.investigation_builder = InvestigationBuilder(self.workspace, self.llm, self.investigation_store, self.editorial_store)
         self.construction_store = ConstructionStore(self.workspace, diagnostics_enabled=self.diagnostics_enabled)
         self.construction_builder = ConstructionBuilder(self.workspace, self.llm, self.construction_store, self.editorial_store)
-        self.editorial_scopes, self.editorial_children = self.workspace.editorial_scope_index()
+        self.editorial_scopes = {}
+        self.editorial_children = {}
         self.events: queue.Queue[tuple[str, object]] = queue.Queue()
         self._tooltips: list[ToolTip] = []
         self._busy_groups: dict[str, list[tuple[object, str]]] = {}
@@ -131,44 +134,230 @@ class AulaTeXApp(tk.Tk):
 
     def _build_ui(self) -> None:
         self.columnconfigure(0, weight=1)
-        self.rowconfigure(0, weight=1)
-        notebook = ttk.Notebook(self)
-        notebook.grid(row=0, column=0, sticky="nsew")
-
+        self.rowconfigure(1, weight=1)
+        self._active_jobs = set()
+        self._aux_windows = {}
+        self._result_paths = {}
+        self.context_key = ""
+        self.context_label = tk.StringVar(self, value="Sin proyecto seleccionado")
+        self.task_status = tk.StringVar(self, value="Listo")
+        header = ttk.Frame(self, padding=(12, 8))
+        header.grid(row=0, column=0, sticky="ew")
+        header.columnconfigure(1, weight=1)
+        ttk.Label(header, text="AulaTeX", font=("TkDefaultFont", 14, "bold")).grid(row=0, column=0, padx=(0, 20))
+        ttk.Label(header, textvariable=self.context_label, wraplength=600).grid(row=0, column=1, sticky="w")
+        results_button = ttk.Menubutton(header, text="Resultados")
+        results_button.grid(row=0, column=2, sticky="e")
+        self.results_menu = tk.Menu(results_button, tearoff=False)
+        self._result_indices = {}
+        for index, (group, label) in enumerate((("compile", "Último PDF"), ("agent", "Informe del agente"),
+                ("generation", "Nodo generado"), ("investigation", "Investigación"),
+                ("feedback", "Memoria"), ("llm-chat", "Chat exportado"))):
+            self._result_indices[group] = index
+            self.results_menu.add_command(label=label, state="disabled", command=lambda key=group: self._open_result(key))
+        results_button.configure(menu=self.results_menu)
+        self.main_notebook = ttk.Notebook(self)
+        self.main_notebook.grid(row=1, column=0, sticky="nsew")
+        notebook = self.main_notebook
         self.panel_tab = ttk.Frame(notebook, padding=12)
-        self.llm_tab = ttk.Frame(notebook, padding=12)
-        self.agent_tab = ttk.Frame(notebook, padding=12)
-        self.arch_tab = ttk.Frame(notebook, padding=12)
-        self.builder_tab = ttk.Frame(notebook, padding=12)
-        self.feedback_tab = ttk.Frame(notebook, padding=12)
         self.investigation_tab = ttk.Frame(notebook, padding=12)
-        self.extractor_tab = ttk.Frame(notebook, padding=12)
-        self.compile_tab = ttk.Frame(notebook, padding=12)
-        self.credentials_tab = ttk.Frame(notebook, padding=12)
-
-        notebook.add(self.panel_tab, text="Panel")
-        notebook.add(self.llm_tab, text="LLM")
-        notebook.add(self.agent_tab, text="Flujo Agéntico")
-        notebook.add(self.arch_tab, text="Arquitectura")
-        notebook.add(self.builder_tab, text="Generación")
-        notebook.add(self.feedback_tab, text="Retroalimentacion")
-        notebook.add(self.investigation_tab, text="Investigación")
-        notebook.add(self.extractor_tab, text="Extractor")
-        notebook.add(self.compile_tab, text="Compilar")
-        notebook.add(self.credentials_tab, text="Credenciales")
-        self.platforms_tab = self._build_platforms_tab(notebook)
-        notebook.add(self.platforms_tab, text="Plataformas")
+        self.production_tab = ttk.Notebook(notebook)
+        self.feedback_tab = ttk.Frame(notebook, padding=12)
+        self.llm_tab = ttk.Frame(notebook, padding=12)
+        for frame, title in ((self.panel_tab, "Proyecto"), (self.investigation_tab, "Investigación"),
+                             (self.production_tab, "Producción"), (self.feedback_tab, "Memoria"),
+                             (self.llm_tab, "Asistente")):
+            notebook.add(frame, text=title)
+        self.builder_tab = ttk.Frame(self.production_tab, padding=12)
+        self.agent_tab = ttk.Frame(self.production_tab, padding=12)
+        self.compile_tab = ttk.Frame(self.production_tab, padding=12)
+        for frame, title in ((self.builder_tab, "Generar"), (self.agent_tab, "Revisar / ejecutar"),
+                             (self.compile_tab, "Compilar")):
+            self.production_tab.add(frame, text=title)
+        menu = tk.Menu(self)
+        tools = tk.Menu(menu, tearoff=False)
+        tools.add_command(label="Extractor", command=self._open_tools)
+        tools.add_command(label="Comprobar proveedores IA", command=self._check_llms)
+        menu.add_cascade(label="Herramientas", menu=tools)
+        menu.add_command(label="Configuración", command=self._open_settings)
+        view_menu = tk.Menu(menu, tearoff=False)
+        resolution_menu = tk.Menu(view_menu, tearoff=False)
+        for width, height in ((980, 640), (1180, 760), (1366, 768), (1600, 900), (1920, 1080)):
+            resolution_menu.add_command(label=f"{width} x {height}",
+                                        command=lambda size=(width, height): self._set_resolution(*size))
+        resolution_menu.add_separator()
+        resolution_menu.add_command(label="Ajustar al monitor", command=self._fit_monitor)
+        resolution_menu.add_command(label="Maximizar", command=self._maximize_window)
+        resolution_menu.add_command(label="Restaurar tamaño inicial", command=lambda: self._set_resolution(1180, 760))
+        view_menu.add_cascade(label="Resolución", menu=resolution_menu)
+        menu.add_cascade(label="Vista", menu=view_menu)
+        help_menu = tk.Menu(menu, tearoff=False)
+        help_menu.add_command(label="Arquitectura", command=self._show_architecture)
+        menu.add_cascade(label="Ayuda", menu=help_menu)
+        self.configure(menu=menu)
+        ttk.Label(self, textvariable=self.task_status, padding=(12, 4)).grid(row=2, column=0, sticky="ew")
+        self.protocol("WM_DELETE_WINDOW", self._request_close)
 
         self._build_panel_tab()
         self._build_llm_tab()
         self._build_agent_tab()
-        self._build_arch_tab()
         self._build_builder_tab()
         self._build_feedback_tab()
         self._build_investigation_tab()
-        self._build_extractor_tab()
         self._build_compile_tab()
-        self._build_credentials_tab()
+
+    def _monitor_work_area(self) -> tuple[int, int, int, int]:
+        if os.name == "nt":
+            import ctypes
+            from ctypes import wintypes
+
+            class MonitorInfo(ctypes.Structure):
+                _fields_ = [("size", wintypes.DWORD), ("monitor", wintypes.RECT),
+                            ("work", wintypes.RECT), ("flags", wintypes.DWORD)]
+
+            user32 = ctypes.windll.user32
+            user32.MonitorFromWindow.argtypes = [wintypes.HWND, wintypes.DWORD]
+            user32.MonitorFromWindow.restype = wintypes.HANDLE
+            user32.GetMonitorInfoW.argtypes = [wintypes.HANDLE, ctypes.POINTER(MonitorInfo)]
+            user32.GetMonitorInfoW.restype = wintypes.BOOL
+            info = MonitorInfo()
+            info.size = ctypes.sizeof(info)
+            monitor = user32.MonitorFromWindow(self.winfo_id(), 2)
+            if user32.GetMonitorInfoW(monitor, ctypes.byref(info)):
+                return info.work.left, info.work.top, info.work.right, info.work.bottom
+        return 0, 0, self.winfo_screenwidth(), self.winfo_screenheight()
+
+    def _set_resolution(self, width: int, height: int) -> None:
+        self.state("normal")
+        self.update_idletasks()
+        left, top, right, bottom = self._monitor_work_area()
+        available_width = max(1, right - left - 32)
+        available_height = max(1, bottom - top - 80)
+        width = min(width, available_width)
+        height = min(height, available_height)
+        self.minsize(min(980, width), min(640, height))
+        self.geometry(f"{width}x{height}")
+        self.task_status.set(f"Resolución de ventana: {width} x {height}")
+
+    def _fit_monitor(self) -> None:
+        left, top, right, bottom = self._monitor_work_area()
+        self._set_resolution(right - left, bottom - top)
+
+    def _maximize_window(self) -> None:
+        try:
+            self.state("zoomed")
+        except tk.TclError:
+            self._fit_monitor()
+
+    def _open_auxiliary(self, key, title, pages) -> None:
+        existing = self._aux_windows.get(key)
+        if existing is not None and existing.winfo_exists():
+            existing.deiconify()
+            existing.lift()
+            return
+        window = tk.Toplevel(self)
+        window.title(f"AulaTeX - {title}")
+        window.geometry("1000x700")
+        window.minsize(900, 600)
+        window.transient(self)
+        self._aux_windows[key] = window
+        notebook = ttk.Notebook(window)
+        notebook.pack(fill="both", expand=True)
+        for attribute, label, builder in pages:
+            if attribute == "platforms_tab":
+                frame = self._build_platforms_tab(notebook)
+                setattr(self, attribute, frame)
+            else:
+                frame = ttk.Frame(notebook, padding=12)
+                setattr(self, attribute, frame)
+                getattr(self, builder)()
+            notebook.add(frame, text=label)
+        window.protocol("WM_DELETE_WINDOW", lambda: self._close_auxiliary(key))
+
+    def _close_auxiliary(self, key) -> None:
+        if key == "tools" and "extractor" in self._active_jobs:
+            messagebox.showinfo("AulaTeX", "Espera a que termine la comprobación del extractor.", parent=self)
+            return
+        if key == "settings":
+            for variable in getattr(self, "_credential_vars", {}).values():
+                variable.set("")
+            if hasattr(self.platforms_tab, "_lock"):
+                self.platforms_tab._lock()
+        self._aux_windows.pop(key).destroy()
+
+    def _open_settings(self) -> None:
+        self._open_auxiliary("settings", "Configuración", (
+            ("credentials_tab", "Proveedores IA", "_build_credentials_tab"),
+            ("platforms_tab", "Cuentas institucionales", "_build_platforms_tab"),
+        ))
+
+    def _open_tools(self) -> None:
+        self._open_auxiliary("tools", "Herramientas", (("extractor_tab", "Extractor", "_build_extractor_tab"),))
+
+    def _show_architecture(self) -> None:
+        self._open_auxiliary("help", "Ayuda", (("arch_tab", "Arquitectura", "_build_arch_tab"),))
+
+    def _request_close(self) -> None:
+        if self._active_jobs:
+            messagebox.showinfo("AulaTeX", "Hay tareas en curso. Cancela las tareas que lo permitan y espera a que terminen antes de cerrar.", parent=self)
+            return
+        self.destroy()
+
+    def _record_result(self, group, path) -> None:
+        if path is None:
+            return
+        resolved = (self.workspace.repo_root / Path(path)).resolve()
+        if resolved.exists():
+            self._result_paths[group] = resolved
+            self.results_menu.entryconfigure(self._result_indices[group], state="normal")
+
+    def _open_result(self, group) -> None:
+        path = self._result_paths.get(group)
+        if path is None or not path.exists():
+            messagebox.showinfo("AulaTeX", "El resultado ya no está disponible.", parent=self)
+            return
+        try:
+            if os.name == "nt":
+                os.startfile(str(path))
+            else:
+                subprocess.Popen(["xdg-open", str(path)])
+        except OSError as exc:
+            messagebox.showerror("AulaTeX", f"No se pudo abrir el resultado: {exc}", parent=self)
+
+    def _use_selected_scope(self) -> None:
+        if self._active_jobs:
+            messagebox.showinfo("AulaTeX", "Espera a que terminen las tareas antes de cambiar de proyecto.", parent=self)
+            return
+        selected = self.template_tree.selection()
+        scope = self.template_nodes.get(selected[0]) if selected else None
+        if scope is None:
+            messagebox.showinfo("AulaTeX", "Selecciona un nodo del proyecto.", parent=self)
+            return
+        self.context_key = scope.key
+        self.context_label.set(" / ".join(value for value in (
+            scope.institution, scope.career, scope.subject, scope.activity) if value) or scope.label)
+        for prefix in ("feedback", "investigation", "generation"):
+            for field in ("institution", "career", "subject", "activity"):
+                variable = getattr(self, f"{prefix}_{field}", None)
+                if variable is not None:
+                    variable.set(getattr(scope, field, "") or UNSELECTED_OPTION)
+        self.generation_node_level.set({"interinstitucional": "institucion", "institucion": "carrera",
+                                        "carrera": "materia"}.get(scope.level, "actividad"))
+        self.agent_target.set(scope.relative_path if scope.level != "interinstitucional" else "")
+        self.agent_level.set("materia" if scope.level == "actividad" else scope.level)
+        activity = re.search(r"\d+", scope.activity)
+        self.agent_activity.set(int(activity.group()) if activity else 1)
+        self.generation_activity_number.set(self.agent_activity.get())
+        self._set_text(self.investigation_queries_text, "")
+        self._set_text(self.investigation_urls_text, "")
+        self.compile_target.set("")
+        target = self.workspace.repo_root / scope.relative_path
+        if target.is_file() and target.suffix.lower() == ".tex":
+            self.compile_target.set(scope.relative_path)
+        self._refresh_generation_catalog()
+        self._refresh_feedback()
+        self._refresh_investigation()
+        self.task_status.set("Contexto aplicado a las pantallas de trabajo.")
 
     def _build_platforms_tab(self, notebook):
         try:
@@ -195,10 +384,8 @@ class AulaTeXApp(tk.Tk):
         self.panel_tab.rowconfigure(3, weight=1)
         ttk.Label(self.panel_tab, text="Repositorio").grid(row=0, column=0, sticky="w")
         ttk.Label(self.panel_tab, text=str(self.workspace.repo_root)).grid(row=0, column=1, sticky="w")
-        ttk.Label(self.panel_tab, text="Credenciales").grid(row=1, column=0, sticky="w", pady=(8, 0))
-        ttk.Label(self.panel_tab, text=str(self.llm.env_path)).grid(row=1, column=1, sticky="w", pady=(8, 0))
-        ttk.Button(self.panel_tab, text="Verificar LLMs", command=self._check_llms).grid(row=2, column=0, sticky="w", pady=12)
-        ttk.Button(self.panel_tab, text="Refrescar arbol", command=self._refresh_tree).grid(row=2, column=1, sticky="w", pady=12)
+        ttk.Button(self.panel_tab, text="Usar selección", command=self._use_selected_scope).grid(row=2, column=0, sticky="w", pady=12)
+        ttk.Button(self.panel_tab, text="Actualizar proyecto", command=self._refresh_tree).grid(row=2, column=1, sticky="w", pady=12)
 
         columns = ("mem", "lock", "gen")
         self.template_tree = ttk.Treeview(self.panel_tab, columns=columns, show="tree headings")
@@ -443,7 +630,7 @@ class AulaTeXApp(tk.Tk):
             wraplength=250,
         ).grid(row=0, column=0, sticky="ew")
 
-        self.llm_session_tree = ttk.Treeview(sidebar, columns=("motor", "ctx", "estado"), show="tree headings", height=12)
+        self.llm_session_tree = ttk.Treeview(sidebar, columns=("motor", "ctx", "estado"), displaycolumns=("ctx",), show="tree headings", height=12)
         self.llm_session_tree.heading("#0", text="Tema")
         self.llm_session_tree.heading("motor", text="Motor")
         self.llm_session_tree.heading("ctx", text="Contexto")
@@ -466,31 +653,32 @@ class AulaTeXApp(tk.Tk):
 
         content.columnconfigure(0, weight=1)
         content.rowconfigure(2, weight=1)
-        content.rowconfigure(4, weight=1)
 
         self.llm_session_title = tk.StringVar(value="Editorial")
         self.llm_session_meta = tk.StringVar(value="Selecciona una sesion para comenzar.")
         ttk.Label(content, textvariable=self.llm_session_title, font=("TkDefaultFont", 11, "bold")).grid(row=0, column=0, sticky="w")
         ttk.Label(content, textvariable=self.llm_session_meta, wraplength=760).grid(row=1, column=0, sticky="ew", pady=(4, 10))
 
-        transcript_frame = ttk.LabelFrame(content, text="Conversacion", padding=8)
-        transcript_frame.grid(row=2, column=0, sticky="nsew")
+        conversation = ttk.Notebook(content)
+        conversation.grid(row=2, column=0, sticky="nsew")
+        transcript_frame = ttk.Frame(conversation, padding=8)
+        conversation.add(transcript_frame, text="Conversación")
         transcript_frame.columnconfigure(0, weight=1)
         transcript_frame.rowconfigure(0, weight=1)
-        self.llm_output = tk.Text(transcript_frame, height=18, wrap="word")
+        self.llm_output = ScrolledText(transcript_frame, height=12, width=40, wrap="word")
         self.llm_output.grid(row=0, column=0, sticky="nsew")
 
         prompt_frame = ttk.LabelFrame(content, text="Nuevo mensaje", padding=8)
         prompt_frame.grid(row=3, column=0, sticky="ew", pady=(10, 0))
         prompt_frame.columnconfigure(0, weight=1)
-        self.prompt_text = tk.Text(prompt_frame, height=7, wrap="word")
+        self.prompt_text = ScrolledText(prompt_frame, height=4, width=40, wrap="word")
         self.prompt_text.grid(row=0, column=0, sticky="ew")
         prompt_actions = ttk.Frame(prompt_frame)
         prompt_actions.grid(row=1, column=0, sticky="ew", pady=(8, 0))
         prompt_actions.columnconfigure(1, weight=1)
         self.llm_send_button = ttk.Button(prompt_actions, text="Enviar al chat", command=self._run_llm_prompt)
         self.llm_send_button.grid(row=0, column=0, sticky="w")
-        ttk.Label(prompt_actions, text="Severidad MultiMotor").grid(row=0, column=1, sticky="e", padx=(12, 6))
+        ttk.Label(prompt_actions, text="Profundidad").grid(row=0, column=1, sticky="e", padx=(12, 6))
         self.llm_multi_severity_combo = ttk.Combobox(
             prompt_actions,
             textvariable=self.llm_multi_severity,
@@ -500,13 +688,13 @@ class AulaTeXApp(tk.Tk):
         )
         self.llm_multi_severity_combo.grid(row=0, column=2, sticky="e")
         self.llm_status = tk.StringVar(value="Listo")
-        ttk.Label(prompt_actions, textvariable=self.llm_status).grid(row=0, column=3, sticky="e", padx=(12, 0))
+        ttk.Label(prompt_actions, textvariable=self.llm_status, wraplength=480).grid(row=1, column=0, columnspan=3, sticky="w", pady=(6, 0))
 
-        memory_frame = ttk.LabelFrame(content, text="Memoria compactada y diagnostico", padding=8)
-        memory_frame.grid(row=4, column=0, sticky="nsew", pady=(10, 0))
+        memory_frame = ttk.Frame(conversation, padding=8)
+        conversation.add(memory_frame, text="Memoria y diagnóstico")
         memory_frame.columnconfigure(0, weight=1)
         memory_frame.rowconfigure(0, weight=1)
-        self.llm_system = tk.Text(memory_frame, height=10, wrap="word")
+        self.llm_system = ScrolledText(memory_frame, height=12, width=40, wrap="word")
         self.llm_system.grid(row=0, column=0, sticky="nsew")
 
         self._attach_tooltip(
@@ -545,70 +733,89 @@ class AulaTeXApp(tk.Tk):
             self.llm_system,
             "Muestra ayuda del tema, resumen compacto persistente y, si aplica, el detalle del ultimo consenso multimotor.",
         )
-        self._register_busy_widgets("llm-chat", self.llm_send_button, self.llm_multi_severity_combo)
+        self._register_busy_widgets("llm-chat", self.llm_send_button, self.llm_multi_severity_combo,
+                        self.prompt_text, compact_button, export_button, clear_button)
 
         self._refresh_llm_sessions()
         self._refresh_llm_view("editorial")
 
     def _build_agent_tab(self) -> None:
         self.agent_tab.columnconfigure(1, weight=1)
-        self.agent_target = tk.StringVar(value="UnADM/licenciatura-en-derecho-unadm/historia-del-derecho-en-mexico-lde")
+        self.agent_target = tk.StringVar(value="")
         self.agent_level = tk.StringVar(value="materia")
         self.agent_action = tk.StringVar(value="generar-actividad")
         self.agent_activity = tk.IntVar(value=1)
         self.agent_iterations = tk.IntVar(value=5)
-        self.agent_engines = tk.StringVar(value="Codex, Claude Foundry, GPT-Pro, Auto (model-router)")
+        self.agent_engines = tk.StringVar(value=", ".join(self._ordered_feedback_engines()))
         self.agent_compile = tk.BooleanVar(value=True)
         self.agent_apply = tk.BooleanVar(value=False)
         self.agent_monitor_mode = tk.BooleanVar(value=True)
         self.agent_run_extractor = tk.BooleanVar(value=True)
         self.agent_max_cycles = tk.IntVar(value=1)
 
-        overview = ttk.LabelFrame(self.agent_tab, text="Enfoque actual", padding=8)
-        overview.grid(row=0, column=0, columnspan=3, sticky="ew", pady=(0, 8))
-        ttk.Label(
-            overview,
-            text=(
-                "Este panel ejecuta el flujo monitorizado de AulaTeX: observar → extractor → revisión → evaluación → memoria. "
-                "La pestaña Retroalimentación sigue administrando memoria editorial persistente; aquí se ejecutan corridas agénticas verificables."
-            ),
-            wraplength=900,
-            justify="left",
-        ).grid(row=0, column=0, sticky="w")
-
+        mode_frame = ttk.Frame(self.agent_tab)
+        mode_frame.grid(row=0, column=0, columnspan=3, sticky="ew", pady=(0, 12))
+        mode_controls = []
+        for title, value in (("Revisar archivos", True), ("Ejecutar agente", False)):
+            control = ttk.Radiobutton(mode_frame, text=title, variable=self.agent_monitor_mode,
+                                      value=value, command=self._sync_agent_mode)
+            control.pack(side="left", padx=(0, 16))
+            mode_controls.append(control)
         ttk.Label(self.agent_tab, text="Objetivo").grid(row=1, column=0, sticky="w")
-        ttk.Entry(self.agent_tab, textvariable=self.agent_target).grid(row=1, column=1, sticky="ew")
+        target_entry = ttk.Entry(self.agent_tab, textvariable=self.agent_target)
+        target_entry.grid(row=1, column=1, sticky="ew")
         self.agent_browse_button = ttk.Button(self.agent_tab, text="Buscar", command=self._browse_agent_target)
         self.agent_browse_button.grid(row=1, column=2, padx=(8, 0))
-        ttk.Label(self.agent_tab, text="Nivel").grid(row=2, column=0, sticky="w", pady=(8, 0))
-        ttk.Combobox(self.agent_tab, textvariable=self.agent_level, values=("institucion", "carrera", "materia"), state="readonly").grid(row=2, column=1, sticky="ew", pady=(8, 0))
-        ttk.Label(self.agent_tab, text="Accion").grid(row=3, column=0, sticky="w", pady=(8, 0))
-        ttk.Combobox(
-            self.agent_tab,
-            textvariable=self.agent_action,
-            values=("generar-plantilla", "generar-actividad", "realizar-actividad", "evaluar"),
-            state="readonly",
-        ).grid(row=3, column=1, sticky="ew", pady=(8, 0))
-        ttk.Label(self.agent_tab, text="Actividad").grid(row=4, column=0, sticky="w", pady=(8, 0))
-        ttk.Spinbox(self.agent_tab, from_=1, to=99, textvariable=self.agent_activity, width=8).grid(row=4, column=1, sticky="w", pady=(8, 0))
-        ttk.Label(self.agent_tab, text="Motores").grid(row=5, column=0, sticky="w", pady=(8, 0))
-        ttk.Entry(self.agent_tab, textvariable=self.agent_engines).grid(row=5, column=1, sticky="ew", pady=(8, 0))
-        ttk.Label(self.agent_tab, text="Iteraciones").grid(row=6, column=0, sticky="w", pady=(8, 0))
-        ttk.Spinbox(self.agent_tab, from_=1, to=500, textvariable=self.agent_iterations, width=8).grid(row=6, column=1, sticky="w", pady=(8, 0))
-        ttk.Label(self.agent_tab, text="Ciclos monitor").grid(row=7, column=0, sticky="w", pady=(8, 0))
-        ttk.Spinbox(self.agent_tab, from_=1, to=20, textvariable=self.agent_max_cycles, width=8).grid(row=7, column=1, sticky="w", pady=(8, 0))
-        ttk.Checkbutton(self.agent_tab, text="Modo monitorizado (ingeniería inversa)", variable=self.agent_monitor_mode).grid(row=8, column=1, sticky="w")
-        ttk.Checkbutton(self.agent_tab, text="Ejecutar extractor automáticamente", variable=self.agent_run_extractor).grid(row=9, column=1, sticky="w")
-        ttk.Checkbutton(self.agent_tab, text="Compilar y diagnosticar entorno TeX", variable=self.agent_compile).grid(row=10, column=1, sticky="w", pady=(8, 0))
-        ttk.Checkbutton(self.agent_tab, text="Copiar reporte al objetivo", variable=self.agent_apply).grid(row=11, column=1, sticky="w")
-        self.agent_run_button = ttk.Button(self.agent_tab, text="Ejecutar flujo agéntico monitorizado", command=self._run_agent)
-        self.agent_run_button.grid(row=12, column=1, sticky="w", pady=10)
-        self.agent_output = tk.Text(self.agent_tab, height=18)
-        self.agent_output.grid(row=13, column=0, columnspan=3, sticky="nsew")
-        self.agent_tab.rowconfigure(13, weight=1)
+        ttk.Label(self.agent_tab, text="Actividad").grid(row=2, column=0, sticky="w", pady=8)
+        activity_spin = ttk.Spinbox(self.agent_tab, from_=1, to=99, textvariable=self.agent_activity, width=8)
+        activity_spin.grid(row=2, column=1, sticky="w", pady=8)
+        self.agent_workflow_frame = ttk.Frame(self.agent_tab)
+        self.agent_workflow_frame.grid(row=3, column=0, columnspan=3, sticky="ew")
+        self.agent_workflow_frame.columnconfigure(1, weight=1)
+        workflow_controls = []
+        for row, (title, variable, choices) in enumerate((
+            ("Nivel", self.agent_level, ("institucion", "carrera", "materia")),
+            ("Acción", self.agent_action, ("generar-plantilla", "generar-actividad", "realizar-actividad", "evaluar")),
+        )):
+            ttk.Label(self.agent_workflow_frame, text=title).grid(row=row, column=0, sticky="w", pady=4)
+            control = ttk.Combobox(self.agent_workflow_frame, textvariable=variable, values=choices, state="readonly")
+            control.grid(row=row, column=1, sticky="ew", padx=(12, 0), pady=4)
+            workflow_controls.append(control)
+        ttk.Label(self.agent_workflow_frame, text="Motores").grid(row=2, column=0, sticky="w", pady=4)
+        engines_entry = EnginePicker(self.agent_workflow_frame, textvariable=self.agent_engines, choices=self._ordered_feedback_engines())
+        engines_entry.grid(row=2, column=1, sticky="ew", padx=(12, 0), pady=4)
+        ttk.Label(self.agent_workflow_frame, text="Iteraciones").grid(row=3, column=0, sticky="w", pady=4)
+        iterations_spin = ttk.Spinbox(self.agent_workflow_frame, from_=1, to=500, textvariable=self.agent_iterations, width=8)
+        iterations_spin.grid(row=3, column=1, sticky="w", padx=(12, 0), pady=4)
+        apply_check = ttk.Checkbutton(self.agent_workflow_frame, text="Copiar reporte al objetivo", variable=self.agent_apply)
+        apply_check.grid(row=4, column=1, sticky="w", padx=(12, 0), pady=4)
+        self.agent_monitor_frame = ttk.Frame(self.agent_tab)
+        self.agent_monitor_frame.grid(row=3, column=0, columnspan=3, sticky="ew")
+        ttk.Label(self.agent_monitor_frame, text="Ciclos de revisión").grid(row=0, column=0, sticky="w")
+        cycles_spin = ttk.Spinbox(self.agent_monitor_frame, from_=1, to=20, textvariable=self.agent_max_cycles, width=8)
+        cycles_spin.grid(row=0, column=1, sticky="w", padx=12)
+        extractor_check = ttk.Checkbutton(self.agent_monitor_frame, text="Ejecutar extractor", variable=self.agent_run_extractor)
+        extractor_check.grid(row=1, column=1, sticky="w", padx=12, pady=8)
+        compile_check = ttk.Checkbutton(self.agent_tab, text="Compilar y diagnosticar TeX", variable=self.agent_compile)
+        compile_check.grid(row=4, column=1, sticky="w", pady=8)
+        self.agent_run_button = ttk.Button(self.agent_tab, command=self._run_agent)
+        self.agent_run_button.grid(row=5, column=1, sticky="w", pady=10)
+        self.agent_output = ScrolledText(self.agent_tab, height=10, wrap="word", state="disabled")
+        self.agent_output.grid(row=6, column=0, columnspan=3, sticky="nsew")
+        self.agent_tab.rowconfigure(6, weight=1)
         self._attach_tooltip(self.agent_browse_button, "Selecciona la carpeta objetivo desde donde el agente leerá contexto y aplicará la memoria editorial heredada.")
         self._attach_tooltip(self.agent_run_button, "Ejecuta el flujo monitorizado observar→extraer→revisar→evaluar→memoria con compuertas contractuales.")
-        self._register_busy_widgets("agent", self.agent_run_button, self.agent_browse_button)
+        self._register_busy_widgets("agent", self.agent_run_button, self.agent_browse_button,
+                                    target_entry, activity_spin, *mode_controls, *workflow_controls,
+                                    engines_entry, iterations_spin, apply_check, cycles_spin,
+                                    extractor_check, compile_check)
+        self._sync_agent_mode()
+
+    def _sync_agent_mode(self) -> None:
+        monitor = self.agent_monitor_mode.get()
+        self.agent_monitor_frame.grid() if monitor else self.agent_monitor_frame.grid_remove()
+        self.agent_workflow_frame.grid_remove() if monitor else self.agent_workflow_frame.grid()
+        self.agent_run_button.configure(text="Revisar archivos" if monitor else "Ejecutar agente")
 
     def _build_arch_tab(self) -> None:
         self.arch_tab.columnconfigure(0, weight=1)
@@ -616,12 +823,14 @@ class AulaTeXApp(tk.Tk):
         self.arch_text = tk.Text(self.arch_tab, height=32, wrap="word")
         self.arch_text.grid(row=0, column=0, sticky="nsew")
         self.arch_text.insert("end", pattern_catalog_markdown())
+        self.arch_text.configure(state="disabled")
 
     def _build_builder_tab(self) -> None:
         self.builder_tab.columnconfigure(0, weight=1)
-        self.builder_tab.rowconfigure(4, weight=1)
-        output_row = 6 if self.diagnostics_enabled else 5
-        self.builder_tab.rowconfigure(output_row, weight=1)
+        self.builder_tab.rowconfigure(0, weight=1, minsize=160)
+        self.builder_tab.rowconfigure(2, weight=1, minsize=160)
+        form = ScrollableForm(self.builder_tab)
+        form.grid(row=0, column=0, sticky="nsew")
 
         self.generation_institution = tk.StringVar(value=UNSELECTED_OPTION)
         self.generation_career = tk.StringVar(value=UNSELECTED_OPTION)
@@ -639,40 +848,41 @@ class AulaTeXApp(tk.Tk):
         self.generation_progress_status = tk.StringVar(value="Listo para generar memoria fundacional.")
         self.generation_progress = tk.DoubleVar(value=0.0)
 
-        header = ttk.Frame(self.builder_tab)
+        header = ttk.Frame(form.body)
         header.grid(row=0, column=0, sticky="ew")
         header.columnconfigure(0, weight=1)
         ttk.Label(
             header,
-            text="Generación editorial descendente para crear o reforzar nodos con memoria fundacional, plan y maqueta.",
+            text="Generación editorial",
+            font=("TkDefaultFont", 12, "bold"),
             wraplength=900,
         ).grid(row=0, column=0, sticky="w")
         self.generation_help_button = ttk.Button(header, text="Ayuda", command=self._show_generation_help)
         self.generation_help_button.grid(row=0, column=1, sticky="e")
 
-        source_frame = ttk.LabelFrame(self.builder_tab, text="Padre editorial", padding=10)
+        source_frame = ttk.LabelFrame(form.body, text="Padre editorial", padding=10)
         source_frame.grid(row=1, column=0, sticky="ew", pady=(10, 0))
         for index in range(6):
             source_frame.columnconfigure(index, weight=1 if index % 2 else 0)
 
         ttk.Label(source_frame, text="Institucion").grid(row=0, column=0, sticky="w")
-        self.generation_institution_combo = ttk.Combobox(source_frame, textvariable=self.generation_institution, state="readonly")
-        self.generation_institution_combo.grid(row=0, column=1, sticky="ew", padx=(6, 12))
+        self.generation_institution_combo = ttk.Combobox(source_frame, textvariable=self.generation_institution, state="readonly", width=12)
+        self.generation_institution_combo.grid(row=0, column=1, columnspan=5, sticky="ew", padx=(6, 0))
         self.generation_institution_combo.bind("<<ComboboxSelected>>", self._on_generation_parent_changed)
 
-        ttk.Label(source_frame, text="Carrera").grid(row=0, column=2, sticky="w")
-        self.generation_career_combo = ttk.Combobox(source_frame, textvariable=self.generation_career, state="readonly")
-        self.generation_career_combo.grid(row=0, column=3, sticky="ew", padx=(6, 12))
+        ttk.Label(source_frame, text="Carrera").grid(row=1, column=0, sticky="w", pady=(6, 0))
+        self.generation_career_combo = ttk.Combobox(source_frame, textvariable=self.generation_career, state="readonly", width=12)
+        self.generation_career_combo.grid(row=1, column=1, columnspan=5, sticky="ew", padx=(6, 0), pady=(6, 0))
         self.generation_career_combo.bind("<<ComboboxSelected>>", self._on_generation_parent_changed)
 
-        ttk.Label(source_frame, text="Materia").grid(row=0, column=4, sticky="w")
-        self.generation_subject_combo = ttk.Combobox(source_frame, textvariable=self.generation_subject, state="readonly")
-        self.generation_subject_combo.grid(row=0, column=5, sticky="ew", padx=(6, 0))
+        ttk.Label(source_frame, text="Materia").grid(row=2, column=0, sticky="w", pady=(6, 0))
+        self.generation_subject_combo = ttk.Combobox(source_frame, textvariable=self.generation_subject, state="readonly", width=12)
+        self.generation_subject_combo.grid(row=2, column=1, columnspan=5, sticky="ew", padx=(6, 0), pady=(6, 0))
         self.generation_subject_combo.bind("<<ComboboxSelected>>", self._on_generation_parent_changed)
 
-        ttk.Label(source_frame, textvariable=self.generation_scope_status).grid(row=1, column=0, columnspan=6, sticky="w", pady=(10, 0))
+        ttk.Label(source_frame, textvariable=self.generation_scope_status, wraplength=700).grid(row=3, column=0, columnspan=6, sticky="w", pady=(10, 0))
 
-        control_frame = ttk.LabelFrame(self.builder_tab, text="Definicion del nodo", padding=10)
+        control_frame = ttk.LabelFrame(form.body, text="Definición del nodo", padding=10)
         control_frame.grid(row=2, column=0, sticky="ew", pady=(10, 0))
         for index in range(8):
             control_frame.columnconfigure(index, weight=1 if index in {1, 3, 5} else 0)
@@ -718,7 +928,7 @@ class AulaTeXApp(tk.Tk):
         self.generation_destination_button.grid(row=1, column=7, sticky="w", pady=(10, 0))
 
         ttk.Label(control_frame, text="Motores en orden").grid(row=2, column=0, sticky="w", pady=(10, 0))
-        self.generation_engines_entry = ttk.Entry(control_frame, textvariable=self.generation_engines)
+        self.generation_engines_entry = EnginePicker(control_frame, textvariable=self.generation_engines, choices=self._ordered_feedback_engines())
         self.generation_engines_entry.grid(row=2, column=1, columnspan=5, sticky="ew", padx=(6, 12), pady=(10, 0))
 
         ttk.Label(control_frame, text="Max tokens").grid(row=2, column=6, sticky="w", pady=(10, 0))
@@ -726,7 +936,7 @@ class AulaTeXApp(tk.Tk):
         self.generation_tokens_spin.grid(row=2, column=7, sticky="w", padx=(6, 0), pady=(10, 0))
 
         ttk.Label(control_frame, text="Ingesta textual").grid(row=3, column=0, sticky="nw", pady=(10, 0))
-        self.generation_ingest_text = tk.Text(control_frame, height=5, wrap="word")
+        self.generation_ingest_text = tk.Text(control_frame, height=5, width=32, wrap="word")
         self.generation_ingest_text.grid(row=3, column=1, columnspan=7, sticky="ew", padx=(6, 0), pady=(10, 0))
         self.generation_ingest_text.bind("<KeyRelease>", self._on_generation_level_changed)
 
@@ -738,41 +948,63 @@ class AulaTeXApp(tk.Tk):
         self.generation_ingest_document_button.grid(row=4, column=7, sticky="w", pady=(10, 0))
 
         action_frame = ttk.Frame(self.builder_tab)
-        action_frame.grid(row=3, column=0, sticky="ew", pady=(10, 0))
+        action_frame.grid(row=1, column=0, sticky="ew", pady=(10, 0))
         action_frame.columnconfigure(4, weight=1)
         self.generation_run_button = ttk.Button(action_frame, text="Generar nodo", command=self._run_generation)
         self.generation_run_button.grid(row=0, column=0, sticky="w")
         self.generation_cancel_button = ttk.Button(action_frame, text="Cancelar", command=self._cancel_generation, state="disabled")
         self.generation_cancel_button.grid(row=0, column=1, sticky="w", padx=(8, 0))
-        self.generation_refresh_button = ttk.Button(action_frame, text="Refrescar vista", command=self._reset_generation_view)
+        self.generation_refresh_button = ttk.Button(action_frame, text="Nuevo formulario", command=self._reset_generation_view)
         self.generation_refresh_button.grid(row=0, column=2, sticky="w", padx=(8, 0))
-        self.generation_help_inline_button = ttk.Button(action_frame, text="Ayuda", command=self._show_generation_help)
-        self.generation_help_inline_button.grid(row=0, column=3, sticky="w", padx=(8, 0))
         ttk.Progressbar(action_frame, variable=self.generation_progress, maximum=100).grid(row=0, column=4, sticky="ew", padx=(12, 0))
         ttk.Label(action_frame, textvariable=self.generation_progress_status).grid(row=1, column=0, columnspan=5, sticky="w", pady=(8, 0))
 
-        preview_frame = ttk.LabelFrame(self.builder_tab, text="Vista previa del nodo", padding=10)
-        preview_frame.grid(row=4, column=0, sticky="nsew", pady=(10, 0))
+        results = ttk.Notebook(self.builder_tab)
+        results.grid(row=2, column=0, sticky="nsew", pady=(10, 0))
+        preview_frame = ttk.Frame(results, padding=8)
+        results.add(preview_frame, text="Vista previa")
         preview_frame.columnconfigure(0, weight=1)
         preview_frame.rowconfigure(0, weight=1)
-        self.generation_preview_text = tk.Text(preview_frame, height=12, wrap="word")
+        self.generation_preview_text = ScrolledText(preview_frame, height=8, wrap="word")
         self.generation_preview_text.grid(row=0, column=0, sticky="nsew")
 
         self.generation_metrics_text = None
         if self.diagnostics_enabled:
-            metrics_frame = ttk.LabelFrame(self.builder_tab, text="Metricas historicas del nodo", padding=10)
-            metrics_frame.grid(row=5, column=0, sticky="nsew", pady=(10, 0))
+            metrics_frame = ttk.Frame(results, padding=8)
+            results.add(metrics_frame, text="Métricas")
             metrics_frame.columnconfigure(0, weight=1)
             metrics_frame.rowconfigure(0, weight=1)
-            self.generation_metrics_text = tk.Text(metrics_frame, height=7, wrap="word")
+            self.generation_metrics_text = ScrolledText(metrics_frame, height=8, wrap="word")
             self.generation_metrics_text.grid(row=0, column=0, sticky="nsew")
 
-        output_frame = ttk.LabelFrame(self.builder_tab, text="Salida del orquestador", padding=10)
-        output_frame.grid(row=output_row, column=0, sticky="nsew", pady=(10, 0))
+        output_frame = ttk.Frame(results, padding=8)
+        results.add(output_frame, text="Ejecución")
         output_frame.columnconfigure(0, weight=1)
         output_frame.rowconfigure(0, weight=1)
-        self.generation_output = tk.Text(output_frame, height=14, wrap="word")
+        self.generation_output = ScrolledText(output_frame, height=8, wrap="word", state="disabled")
         self.generation_output.grid(row=0, column=0, sticky="nsew")
+        for child in control_frame.winfo_children():
+            position = child.grid_info()
+            row, column = position["row"], position["column"]
+            if row == 0:
+                child.grid_configure(row=column // 2, column=column % 2, columnspan=1)
+            elif row == 1:
+                if column < 4:
+                    child.grid_configure(row=4, column=min(column, 1), columnspan=1)
+                else:
+                    child.grid_configure(row=5, column=0 if column == 4 else 2 if column == 7 else 1, columnspan=1)
+            elif row == 2:
+                child.grid_configure(row=6 if column < 6 else 7, column=0 if column in (0, 6) else 1, columnspan=1)
+            elif row == 3:
+                child.grid_configure(row=8, column=min(column, 1), columnspan=2 if column else 1)
+            elif row == 4:
+                child.grid_configure(row=9, column=0 if column == 0 else 2 if column == 7 else 1, columnspan=1)
+            if isinstance(child, ttk.Combobox):
+                child.configure(width=10)
+            elif isinstance(child, ttk.Entry):
+                child.configure(width=12)
+        for index in range(8):
+            control_frame.columnconfigure(index, weight=1 if index == 1 else 0)
 
         self._attach_tooltip(self.generation_help_button, "Abre una guía corta sobre generación editorial, memoria fundacional, ancestros, hermanos, destino y contrato futuro del Agente.")
         self._attach_tooltip(self.generation_institution_combo, "Selecciona la institución padre cuando el nodo nuevo depende de ella. El filtrado de carrera y materia se actualiza de forma dependiente.")
@@ -788,12 +1020,11 @@ class AulaTeXApp(tk.Tk):
         self._attach_tooltip(self.generation_ingest_text, "Texto libre opcional. Puedes pegar lineamientos, instrucciones del docente o notas editoriales; también funciona combinado con el documento.")
         self._attach_tooltip(self.generation_ingest_document_entry, "Documento opcional de apoyo. Puedes usarlo solo o junto con la ingesta textual para orientar memoria y TEX editorial.")
         self._attach_tooltip(self.generation_ingest_document_button, "Selecciona un documento de apoyo para usarlo como ingesta. Se intentará leer si es texto o DOCX; otros tipos se conservarán como referencia contextual.")
-        self._attach_tooltip(self.generation_engines_entry, "Lista separada por comas. Se ejecutan secuencialmente para proponer y fusionar memoria fundacional, plan y maqueta.")
+        self._attach_tooltip(self.generation_engines_entry, "Selecciona los motores. Se ejecutan en el orden del menú.")
         self._attach_tooltip(self.generation_tokens_spin, "Límite de salida por llamada LLM para cada motor y ciclo.")
         self._attach_tooltip(self.generation_run_button, "Inicia la generación editorial descendente del nodo configurado y persiste memoria, plan y maqueta.")
         self._attach_tooltip(self.generation_cancel_button, "Solicita cancelación cooperativa. La corrida se cierra cuando termina la llamada LLM que esté en curso.")
         self._attach_tooltip(self.generation_refresh_button, "Reinicia la pestaña Generación a su estado inicial, recarga el catálogo editorial y deja la vista lista para otra corrida.")
-        self._attach_tooltip(self.generation_help_inline_button, "Abre la ayuda operativa de la pestaña Generación.")
         self._attach_tooltip(self.generation_preview_text, "Muestra el padre resuelto, la clave del nodo, el destino final, el modo crear/reforzar y el contrato editorial del destino.")
         if self.generation_metrics_text is not None:
             self._attach_tooltip(self.generation_metrics_text, "Resume llamadas, caracteres, tiempos y errores por motor, además del avance por ciclo del nodo actualmente previsualizado.")
@@ -803,7 +1034,6 @@ class AulaTeXApp(tk.Tk):
             self.generation_run_button,
             self.generation_refresh_button,
             self.generation_help_button,
-            self.generation_help_inline_button,
             self.generation_institution_combo,
             self.generation_career_combo,
             self.generation_subject_combo,
@@ -821,6 +1051,7 @@ class AulaTeXApp(tk.Tk):
             self.generation_tokens_spin,
         )
 
+        form.bind_content()
         self._refresh_generation_catalog()
 
     def _build_compile_tab(self) -> None:
@@ -832,7 +1063,7 @@ class AulaTeXApp(tk.Tk):
         self.compile_browse_button.grid(row=0, column=2, padx=(8, 0))
         self.compile_run_button = ttk.Button(self.compile_tab, text="Compilar", command=self._compile_selected)
         self.compile_run_button.grid(row=1, column=1, sticky="w", pady=10)
-        self.compile_output = tk.Text(self.compile_tab, height=28)
+        self.compile_output = ScrolledText(self.compile_tab, height=18, wrap="word", state="disabled")
         self.compile_output.grid(row=2, column=0, columnspan=3, sticky="nsew")
         self.compile_tab.rowconfigure(2, weight=1)
         self._attach_tooltip(self.compile_browse_button, "Busca un archivo TeX concreto para compilar con el wrapper compartido latexmk-build.ps1.")
@@ -844,7 +1075,7 @@ class AulaTeXApp(tk.Tk):
         self.extractor_open_button.grid(row=0, column=0, sticky="w")
         self.extractor_probe_button = ttk.Button(self.extractor_tab, text="Probar configuracion", command=self._probe_extractor)
         self.extractor_probe_button.grid(row=0, column=1, sticky="w", padx=(8, 0))
-        self.extractor_output = tk.Text(self.extractor_tab, height=30)
+        self.extractor_output = ScrolledText(self.extractor_tab, height=18, wrap="word", state="disabled")
         self.extractor_output.grid(row=1, column=0, columnspan=2, sticky="nsew", pady=(10, 0))
         self.extractor_tab.rowconfigure(1, weight=1)
         self.extractor_tab.columnconfigure(1, weight=1)
@@ -854,24 +1085,9 @@ class AulaTeXApp(tk.Tk):
 
     def _build_feedback_tab(self) -> None:
         self.feedback_tab.columnconfigure(0, weight=1)
-        memory_row = 5 if self.diagnostics_enabled else 4
-        output_row = 6 if self.diagnostics_enabled else 5
-        self.feedback_tab.rowconfigure(memory_row, weight=1)
-        self.feedback_tab.rowconfigure(output_row, weight=1)
-
-        overview = ttk.LabelFrame(self.feedback_tab, text="Rol dentro del enfoque agéntico", padding=8)
-        overview.grid(row=0, column=0, sticky="ew", pady=(0, 8))
-        ttk.Label(
-            overview,
-            text=(
-                "Esta pestaña administra memoria editorial, fusión histórica y DNA reutilizable por nodo. "
-                "El flujo observar→extractor→revisión→evaluación→memoria se ejecuta desde 'Flujo Agéntico'; "
-                "aquí se consolidan Markdown/JSON históricos, reglas, quality gates, errores recurrentes y patrones aprendidos. "
-                "El enfoque recomendado es bottom-up: actividades → materia → carrera → institución, con motor de fusión antes de cada nueva construcción."
-            ),
-            wraplength=950,
-            justify="left",
-        ).grid(row=0, column=0, sticky="w")
+        self.feedback_tab.rowconfigure(4, weight=1)
+        ttk.Label(self.feedback_tab, text="Memoria editorial", font=("TkDefaultFont", 12, "bold")).grid(
+            row=0, column=0, sticky="w", pady=(0, 8))
 
         self.feedback_institution = tk.StringVar(value=UNSELECTED_OPTION)
         self.feedback_career = tk.StringVar(value=UNSELECTED_OPTION)
@@ -938,61 +1154,66 @@ class AulaTeXApp(tk.Tk):
         self.feedback_iterations_spin.grid(row=0, column=5, sticky="w", padx=(6, 0))
 
         ttk.Label(control_frame, text="Motores en orden").grid(row=1, column=0, sticky="w", pady=(10, 0))
-        self.feedback_engines_entry = ttk.Entry(control_frame, textvariable=self.feedback_engines)
+        self.feedback_engines_entry = EnginePicker(control_frame, textvariable=self.feedback_engines, choices=self._ordered_feedback_engines())
         self.feedback_engines_entry.grid(row=1, column=1, columnspan=3, sticky="ew", padx=(6, 12), pady=(10, 0))
         ttk.Label(control_frame, text="Max tokens").grid(row=1, column=4, sticky="w", pady=(10, 0))
         self.feedback_tokens_spin = ttk.Spinbox(control_frame, from_=128, to=200000, increment=128, textvariable=self.feedback_max_tokens, width=10)
         self.feedback_tokens_spin.grid(row=1, column=5, sticky="w", padx=(6, 0), pady=(10, 0))
 
         action_frame = ttk.Frame(self.feedback_tab)
-        action_frame.grid(row=2, column=0, sticky="ew", pady=(10, 0))
-        action_frame.columnconfigure(6, weight=1)
-        self.feedback_run_button = ttk.Button(action_frame, text="Fusionar y construir memoria del nodo", command=self._run_feedback_memory)
+        action_frame.grid(row=3, column=0, sticky="ew", pady=(10, 0))
+        action_frame.columnconfigure(7, weight=1)
+        self.feedback_run_button = ttk.Button(action_frame, text="Construir memoria", command=self._run_feedback_memory)
         self.feedback_run_button.grid(row=0, column=0, sticky="w")
         self.feedback_cancel_button = ttk.Button(action_frame, text="Cancelar", command=self._cancel_feedback_memory, state="disabled")
         self.feedback_cancel_button.grid(row=0, column=1, sticky="w", padx=(8, 0))
         self.feedback_resume_button = ttk.Button(action_frame, text="Reanudar", command=self._resume_feedback_memory, state="disabled")
         self.feedback_resume_button.grid(row=0, column=2, sticky="w", padx=(8, 0))
-        self.feedback_lock_button = ttk.Button(action_frame, text="Fijar reglas actuales", command=self._lock_feedback_scope)
+        self.feedback_lock_button = ttk.Button(action_frame, text="Fijar reglas", command=self._lock_feedback_scope)
         self.feedback_lock_button.grid(row=0, column=3, sticky="w", padx=(8, 0))
-        self.feedback_unlock_button = ttk.Button(action_frame, text="Liberar fijacion", command=self._unlock_feedback_scope)
-        self.feedback_unlock_button.grid(row=0, column=3, sticky="w", padx=(8, 0))
-        self.feedback_refresh_button = ttk.Button(action_frame, text="Refrescar vista", command=self._refresh_feedback)
-        self.feedback_refresh_button.grid(row=0, column=4, sticky="w", padx=(8, 0))
+        self.feedback_unlock_button = ttk.Button(action_frame, text="Liberar reglas", command=self._unlock_feedback_scope)
+        self.feedback_unlock_button.grid(row=0, column=4, sticky="w", padx=(8, 0))
+        self.feedback_refresh_button = ttk.Button(action_frame, text="Actualizar", command=self._refresh_feedback)
+        self.feedback_refresh_button.grid(row=0, column=5, sticky="w", padx=(8, 0))
         self.feedback_help_button = ttk.Button(action_frame, text="Ayuda", command=self._show_feedback_help)
-        self.feedback_help_button.grid(row=0, column=5, sticky="w", padx=(8, 0))
-        ttk.Progressbar(action_frame, variable=self.feedback_progress, maximum=100).grid(row=0, column=6, sticky="ew", padx=(12, 0))
-        ttk.Label(action_frame, textvariable=self.feedback_progress_status).grid(row=1, column=0, columnspan=7, sticky="w", pady=(8, 0))
+        self.feedback_help_button.grid(row=0, column=6, sticky="w", padx=(8, 0))
+        ttk.Progressbar(action_frame, variable=self.feedback_progress, maximum=100).grid(row=0, column=7, sticky="ew", padx=(12, 0))
+        ttk.Label(action_frame, textvariable=self.feedback_progress_status).grid(row=1, column=0, columnspan=8, sticky="w", pady=(8, 0))
 
-        plan_frame = ttk.LabelFrame(self.feedback_tab, text="Plan de propagacion y absorcion de memoria", padding=10)
-        plan_frame.grid(row=3, column=0, sticky="nsew", pady=(10, 0))
+        results = ttk.Notebook(self.feedback_tab)
+        results.grid(row=4, column=0, sticky="nsew", pady=(10, 0))
+        plan_frame = ttk.Frame(results, padding=8)
+        results.add(plan_frame, text="Plan")
         plan_frame.columnconfigure(0, weight=1)
         plan_frame.rowconfigure(0, weight=1)
-        self.feedback_plan_text = tk.Text(plan_frame, height=8, wrap="word")
+        self.feedback_plan_text = ScrolledText(plan_frame, height=8, wrap="word")
         self.feedback_plan_text.grid(row=0, column=0, sticky="nsew")
 
         self.feedback_metrics_text = None
         if self.diagnostics_enabled:
-            metrics_frame = ttk.LabelFrame(self.feedback_tab, text="Metricas por motor y ciclo", padding=10)
-            metrics_frame.grid(row=4, column=0, sticky="nsew", pady=(10, 0))
+            metrics_frame = ttk.Frame(results, padding=8)
+            results.add(metrics_frame, text="Métricas")
             metrics_frame.columnconfigure(0, weight=1)
             metrics_frame.rowconfigure(0, weight=1)
-            self.feedback_metrics_text = tk.Text(metrics_frame, height=7, wrap="word")
+            self.feedback_metrics_text = ScrolledText(metrics_frame, height=8, wrap="word")
             self.feedback_metrics_text.grid(row=0, column=0, sticky="nsew")
 
-        memory_frame = ttk.LabelFrame(self.feedback_tab, text="Memoria editorial actual y herencia util", padding=10)
-        memory_frame.grid(row=memory_row, column=0, sticky="nsew", pady=(10, 0))
+        memory_frame = ttk.Frame(results, padding=8)
+        results.add(memory_frame, text="Memoria")
         memory_frame.columnconfigure(0, weight=1)
         memory_frame.rowconfigure(0, weight=1)
-        self.feedback_memory_text = tk.Text(memory_frame, height=14, wrap="word")
+        self.feedback_memory_text = ScrolledText(memory_frame, height=8, wrap="word")
         self.feedback_memory_text.grid(row=0, column=0, sticky="nsew")
 
-        output_frame = ttk.LabelFrame(self.feedback_tab, text="Salida del orquestador", padding=10)
-        output_frame.grid(row=output_row, column=0, sticky="nsew", pady=(10, 0))
+        output_frame = ttk.Frame(results, padding=8)
+        results.add(output_frame, text="Ejecución")
         output_frame.columnconfigure(0, weight=1)
         output_frame.rowconfigure(0, weight=1)
-        self.feedback_output = tk.Text(output_frame, height=12, wrap="word")
+        self.feedback_output = ScrolledText(output_frame, height=8, wrap="word", state="disabled")
         self.feedback_output.grid(row=0, column=0, sticky="nsew")
+        for child in source_frame.winfo_children():
+            if isinstance(child, ttk.Combobox):
+                child.configure(width=10)
 
         self._attach_tooltip(self.feedback_institution_combo, "Selecciona la institución base. Al cambiarla se filtran carreras, materias y actividades disponibles para construir memoria editorial.")
         self._attach_tooltip(self.feedback_career_combo, "Selecciona el programa educativo. Si dejas materia vacía, la propagación lateral puede abarcar otros programas de la institución.")
@@ -1001,7 +1222,7 @@ class AulaTeXApp(tk.Tk):
         self._attach_tooltip(self.feedback_build_combo, "Define hasta qué nivel debe llegar la construcción en esta corrida. En local y lateral se fija al nivel del nodo origen. En descendente permite bajar hacia hijos; en ascendente y recursivo permite subir hacia padres.")
         self._attach_tooltip(self.feedback_propagation_combo, "Local: consolida sólo el nodo origen usando TEX/programa/BIB. Lateral: transfiere patrones entre hermanos del mismo nivel. Ascendente: sube hasta el nivel destino. Ascendente exhaustivo: incorpora hermanos antes de consolidar cada ascenso. Descendente: construye o refuerza hijos desde el padre. Recursivo completo: consolida subárboles completos al subir. Bidireccional progresivo: permite comunicación vertical completa, subiendo o bajando según el nivel destino.")
         self._attach_tooltip(self.feedback_iterations_spin, "Número de pasadas completas del orquestador. Cada ciclo vuelve a consultar los motores en el orden configurado.")
-        self._attach_tooltip(self.feedback_engines_entry, "Lista separada por comas. Se ejecutan del más rápido al más profundo; el orden por defecto ya sigue esa estrategia.")
+        self._attach_tooltip(self.feedback_engines_entry, "Selecciona los motores. Se ejecutan en el orden del menú.")
         self._attach_tooltip(self.feedback_tokens_spin, "Límite de salida por llamada LLM. Útil para controlar profundidad y costo por ciclo.")
         self._attach_tooltip(self.feedback_run_button, "Inicia la fusión de Markdown/JSON históricos del nodo y construye memoria editorial usando el DNA histórico disponible.")
         self._attach_tooltip(self.feedback_cancel_button, "Solicita cancelación cooperativa. La corrida termina al cerrar la llamada LLM en curso y conserva lo ya consolidado.")
@@ -1036,12 +1257,10 @@ class AulaTeXApp(tk.Tk):
 
     def _build_investigation_tab(self) -> None:
         self.investigation_tab.columnconfigure(0, weight=1)
-        self.investigation_tab.rowconfigure(4, weight=1)
-        self.investigation_tab.rowconfigure(5, weight=1)
-        output_row = 7 if self.diagnostics_enabled else 6
-        if self.diagnostics_enabled:
-            self.investigation_tab.rowconfigure(6, weight=1)
-        self.investigation_tab.rowconfigure(output_row, weight=1)
+        self.investigation_tab.rowconfigure(0, weight=1, minsize=160)
+        self.investigation_tab.rowconfigure(2, weight=1, minsize=160)
+        form = ScrollableForm(self.investigation_tab)
+        form.grid(row=0, column=0, sticky="nsew")
 
         self.investigation_institution = tk.StringVar(value=UNSELECTED_OPTION)
         self.investigation_career = tk.StringVar(value=UNSELECTED_OPTION)
@@ -1054,18 +1273,19 @@ class AulaTeXApp(tk.Tk):
         self.investigation_progress_status = tk.StringVar(value="Listo para consolidar la base de conocimiento.")
         self.investigation_progress = tk.DoubleVar(value=0.0)
 
-        header = ttk.Frame(self.investigation_tab)
+        header = ttk.Frame(form.body)
         header.grid(row=0, column=0, sticky="ew")
         header.columnconfigure(0, weight=1)
         ttk.Label(
             header,
-            text="Investiga y consolida la base de conocimiento antes del extractor: contexto local, consultas web, bibliografía, referencias y assets.",
+            text="Investigación documental",
+            font=("TkDefaultFont", 12, "bold"),
             wraplength=940,
         ).grid(row=0, column=0, sticky="w")
         self.investigation_help_button = ttk.Button(header, text="Ayuda", command=self._show_investigation_help)
         self.investigation_help_button.grid(row=0, column=1, sticky="e")
 
-        source_frame = ttk.LabelFrame(self.investigation_tab, text="Scope editorial", padding=10)
+        source_frame = ttk.LabelFrame(form.body, text="Origen editorial", padding=10)
         source_frame.grid(row=1, column=0, sticky="ew", pady=(10, 0))
         for index in range(8):
             source_frame.columnconfigure(index, weight=1 if index % 2 else 0)
@@ -1092,7 +1312,7 @@ class AulaTeXApp(tk.Tk):
 
         ttk.Label(source_frame, textvariable=self.investigation_scope_status).grid(row=1, column=0, columnspan=8, sticky="w", pady=(10, 0))
 
-        control_frame = ttk.LabelFrame(self.investigation_tab, text="Orquestación", padding=10)
+        control_frame = ttk.LabelFrame(form.body, text="Consultas y motores", padding=10)
         control_frame.grid(row=2, column=0, sticky="ew", pady=(10, 0))
         for index in range(6):
             control_frame.columnconfigure(index, weight=1 if index in {1, 3, 5} else 0)
@@ -1102,7 +1322,7 @@ class AulaTeXApp(tk.Tk):
         self.investigation_iterations_spin.grid(row=0, column=1, sticky="w", padx=(6, 12))
 
         ttk.Label(control_frame, text="Motores en orden").grid(row=0, column=2, sticky="w")
-        self.investigation_engines_entry = ttk.Entry(control_frame, textvariable=self.investigation_engines)
+        self.investigation_engines_entry = EnginePicker(control_frame, textvariable=self.investigation_engines, choices=self._ordered_feedback_engines())
         self.investigation_engines_entry.grid(row=0, column=3, sticky="ew", padx=(6, 12))
 
         ttk.Label(control_frame, text="Max tokens").grid(row=0, column=4, sticky="w")
@@ -1118,7 +1338,7 @@ class AulaTeXApp(tk.Tk):
         self.investigation_urls_text.grid(row=2, column=1, columnspan=5, sticky="ew", padx=(6, 0), pady=(10, 0))
 
         action_frame = ttk.Frame(self.investigation_tab)
-        action_frame.grid(row=3, column=0, sticky="ew", pady=(10, 0))
+        action_frame.grid(row=1, column=0, sticky="ew", pady=(10, 0))
         action_frame.columnconfigure(5, weight=1)
         self.investigation_run_button = ttk.Button(action_frame, text="Consolidar investigación", command=self._run_investigation)
         self.investigation_run_button.grid(row=0, column=0, sticky="w")
@@ -1128,40 +1348,43 @@ class AulaTeXApp(tk.Tk):
         self.investigation_refresh_button.grid(row=0, column=2, sticky="w", padx=(8, 0))
         self.investigation_defaults_button = ttk.Button(action_frame, text="Restaurar consultas", command=self._reset_investigation_queries)
         self.investigation_defaults_button.grid(row=0, column=3, sticky="w", padx=(8, 0))
-        self.investigation_help_inline_button = ttk.Button(action_frame, text="Ayuda", command=self._show_investigation_help)
-        self.investigation_help_inline_button.grid(row=0, column=4, sticky="w", padx=(8, 0))
         ttk.Progressbar(action_frame, variable=self.investigation_progress, maximum=100).grid(row=0, column=5, sticky="ew", padx=(12, 0))
         ttk.Label(action_frame, textvariable=self.investigation_progress_status).grid(row=1, column=0, columnspan=6, sticky="w", pady=(8, 0))
 
-        preview_frame = ttk.LabelFrame(self.investigation_tab, text="Plan y artefactos previstos", padding=10)
-        preview_frame.grid(row=4, column=0, sticky="nsew", pady=(10, 0))
+        results = ttk.Notebook(self.investigation_tab)
+        results.grid(row=2, column=0, sticky="nsew", pady=(10, 0))
+        preview_frame = ttk.Frame(results, padding=8)
+        results.add(preview_frame, text="Plan")
         preview_frame.columnconfigure(0, weight=1)
         preview_frame.rowconfigure(0, weight=1)
-        self.investigation_preview_text = tk.Text(preview_frame, height=10, wrap="word")
+        self.investigation_preview_text = ScrolledText(preview_frame, height=8, wrap="word")
         self.investigation_preview_text.grid(row=0, column=0, sticky="nsew")
 
-        knowledge_frame = ttk.LabelFrame(self.investigation_tab, text="Base de conocimiento actual", padding=10)
-        knowledge_frame.grid(row=5, column=0, sticky="nsew", pady=(10, 0))
+        knowledge_frame = ttk.Frame(results, padding=8)
+        results.add(knowledge_frame, text="Conocimiento")
         knowledge_frame.columnconfigure(0, weight=1)
         knowledge_frame.rowconfigure(0, weight=1)
-        self.investigation_knowledge_text = tk.Text(knowledge_frame, height=12, wrap="word")
+        self.investigation_knowledge_text = ScrolledText(knowledge_frame, height=8, wrap="word")
         self.investigation_knowledge_text.grid(row=0, column=0, sticky="nsew")
 
         self.investigation_metrics_text = None
         if self.diagnostics_enabled:
-            metrics_frame = ttk.LabelFrame(self.investigation_tab, text="Metricas del orquestador", padding=10)
-            metrics_frame.grid(row=6, column=0, sticky="nsew", pady=(10, 0))
+            metrics_frame = ttk.Frame(results, padding=8)
+            results.add(metrics_frame, text="Métricas")
             metrics_frame.columnconfigure(0, weight=1)
             metrics_frame.rowconfigure(0, weight=1)
-            self.investigation_metrics_text = tk.Text(metrics_frame, height=7, wrap="word")
+            self.investigation_metrics_text = ScrolledText(metrics_frame, height=8, wrap="word")
             self.investigation_metrics_text.grid(row=0, column=0, sticky="nsew")
 
-        output_frame = ttk.LabelFrame(self.investigation_tab, text="Salida del orquestador", padding=10)
-        output_frame.grid(row=output_row, column=0, sticky="nsew", pady=(10, 0))
+        output_frame = ttk.Frame(results, padding=8)
+        results.add(output_frame, text="Ejecución")
         output_frame.columnconfigure(0, weight=1)
         output_frame.rowconfigure(0, weight=1)
-        self.investigation_output = tk.Text(output_frame, height=10, wrap="word")
+        self.investigation_output = ScrolledText(output_frame, height=8, wrap="word", state="disabled")
         self.investigation_output.grid(row=0, column=0, sticky="nsew")
+        for child in source_frame.winfo_children():
+            if isinstance(child, ttk.Combobox):
+                child.configure(width=10)
 
         self._attach_tooltip(self.investigation_help_button, "Explica cómo usar la fase Investigación para consolidar bibliografía, referencias, programa analítico y assets antes del extractor.")
         self._attach_tooltip(self.investigation_institution_combo, "Selecciona la institución base. El resto de filtros se actualiza según la jerarquía editorial detectada.")
@@ -1169,7 +1392,7 @@ class AulaTeXApp(tk.Tk):
         self._attach_tooltip(self.investigation_subject_combo, "Selecciona la materia para priorizar programa analítico, bibliografía recomendada y carpeta de referencias.")
         self._attach_tooltip(self.investigation_activity_combo, "Refina la investigación a una actividad concreta. Esto permite crear una carpeta de referencias específica si hace falta.")
         self._attach_tooltip(self.investigation_iterations_spin, "Número de ciclos del orquestador. Cada pasada reevalúa el conocimiento acumulado y refuerza hallazgos útiles.")
-        self._attach_tooltip(self.investigation_engines_entry, "Lista separada por comas. Los motores se usan secuencialmente en cada iteración para consolidar consenso y cubrir vacíos.")
+        self._attach_tooltip(self.investigation_engines_entry, "Selecciona los motores. Se ejecutan en el orden del menú.")
         self._attach_tooltip(self.investigation_tokens_spin, "Límite de salida por llamada LLM durante la fase Investigación.")
         self._attach_tooltip(self.investigation_queries_text, "Una consulta por línea. Si lo dejas vacío, AulaTeX propondrá búsquedas por defecto según el scope seleccionado.")
         self._attach_tooltip(self.investigation_urls_text, "Una URL por línea. Útil para sembrar sitios institucionales, PDF curriculares o fuentes recomendadas antes de lanzar la corrida.")
@@ -1177,7 +1400,6 @@ class AulaTeXApp(tk.Tk):
         self._attach_tooltip(self.investigation_cancel_button, "Solicita cancelación cooperativa. La corrida se detiene al terminar la llamada LLM en curso.")
         self._attach_tooltip(self.investigation_refresh_button, "Relee el scope, la vista previa y el conocimiento persistido para la selección actual.")
         self._attach_tooltip(self.investigation_defaults_button, "Rellena de nuevo las consultas sugeridas para el scope actual, respetando la estructura editorial del repositorio.")
-        self._attach_tooltip(self.investigation_help_inline_button, "Abre la ayuda operativa de la pestaña Investigación.")
         self._attach_tooltip(self.investigation_preview_text, "Muestra los archivos y carpetas que AulaTeX planea consolidar para el scope seleccionado antes de invocar el extractor.")
         self._attach_tooltip(self.investigation_knowledge_text, "Renderiza la base de conocimiento persistida actualmente para el scope: hallazgos locales, web, bibliografía, vacíos y acciones siguientes.")
         if self.investigation_metrics_text is not None:
@@ -1189,7 +1411,6 @@ class AulaTeXApp(tk.Tk):
             self.investigation_refresh_button,
             self.investigation_defaults_button,
             self.investigation_help_button,
-            self.investigation_help_inline_button,
             self.investigation_institution_combo,
             self.investigation_career_combo,
             self.investigation_subject_combo,
@@ -1201,6 +1422,7 @@ class AulaTeXApp(tk.Tk):
             self.investigation_urls_text,
         )
 
+        form.bind_content()
         self._refresh_investigation_catalog()
         self._refresh_investigation()
 
@@ -1230,6 +1452,15 @@ class AulaTeXApp(tk.Tk):
         self._busy_groups[group] = [(widget, str(widget.cget("state"))) for widget in widgets]
 
     def _set_busy(self, group: str, busy: bool) -> None:
+        if busy:
+            self._active_jobs.add(group)
+        else:
+            self._active_jobs.discard(group)
+        labels = {"agent": "Agente", "compile": "Compilación", "generation": "Generación",
+                  "feedback": "Memoria", "investigation": "Investigación", "llm-chat": "Asistente",
+                  "extractor": "Extractor", "llm-check": "Comprobación IA"}
+        self.task_status.set("En curso: " + ", ".join(labels.get(item, item) for item in sorted(self._active_jobs))
+                             if self._active_jobs else "Listo")
         for widget, initial_state in self._busy_groups.get(group, []):
             widget.configure(state="disabled" if busy else initial_state)
         if group == "feedback":
@@ -1304,7 +1535,6 @@ class AulaTeXApp(tk.Tk):
         )
 
     def _refresh_generation_catalog(self) -> None:
-        self.editorial_scopes, self.editorial_children = self.workspace.editorial_scope_index()
         institutions = sorted(scope.label for scope in self.editorial_scopes.values() if scope.level == "institucion")
         self.generation_institution_combo.configure(values=self._with_unselected(institutions))
         if self.generation_institution.get() not in self.generation_institution_combo.cget("values"):
@@ -1675,20 +1905,29 @@ class AulaTeXApp(tk.Tk):
 
     def _compact_selected_llm_session(self) -> None:
         session_key = self._selected_llm_session()
+        self._set_busy("llm-chat", True)
 
         def work() -> None:
-            compacted = self.chat_store.compact_session(session_key, force=True)
-            status = "Sesion compactada." if compacted else "No habia suficiente historial para compactar."
-            self.events.put(("llm-refresh", {"session_key": session_key, "status": status}))
+            try:
+                compacted = self.chat_store.compact_session(session_key, force=True)
+                status = "Sesion compactada." if compacted else "No habia suficiente historial para compactar."
+                self.events.put(("llm-refresh", {"session_key": session_key, "status": status}))
+            except Exception as exc:
+                self.events.put(("llm-error", str(exc)))
 
         self._thread(work)
 
     def _export_selected_llm_session(self) -> None:
         session_key = self._selected_llm_session()
+        self._set_busy("llm-chat", True)
 
         def work() -> None:
-            path = self.chat_store.export_session_markdown(session_key)
-            self.events.put(("llm-refresh", {"session_key": session_key, "status": f"Sesion exportada en {path}"}))
+            try:
+                path = self.chat_store.export_session_markdown(session_key)
+                self.events.put(("result-path", ("llm-chat", path)))
+                self.events.put(("llm-refresh", {"session_key": session_key, "status": f"Sesion exportada en {path}"}))
+            except Exception as exc:
+                self.events.put(("llm-error", str(exc)))
 
         self._thread(work)
 
@@ -1706,10 +1945,19 @@ class AulaTeXApp(tk.Tk):
         self._refresh_llm_view(session_key, status=f"Sesion {state.definition.label} reiniciada.")
 
     def _check_llms(self) -> None:
+        if "llm-check" in self._active_jobs:
+            return
+        self._set_busy("llm-check", True)
+        self.main_notebook.select(self.llm_tab)
         def work() -> None:
-            for engine in self.llm.engines():
-                result = self.llm.check(engine)
-                self.events.put(("llm", f"[LLM] {engine}: {'OK' if result.ok else 'ERROR'} {result.text or result.error}"))
+            try:
+                for engine in self.llm.engines():
+                    result = self.llm.check(engine)
+                    self.events.put(("llm", f"[LLM] {engine}: {'OK' if result.ok else 'ERROR'} {result.text or result.error}"))
+            except Exception as exc:
+                self.events.put(("llm", f"[LLM] ERROR: {exc}"))
+            finally:
+                self.events.put(("llm-check-finished", None))
 
         self._thread(work)
 
@@ -1769,6 +2017,10 @@ class AulaTeXApp(tk.Tk):
         self.editorial_scopes = payload.get("editorial_scopes", {})
         self.editorial_children = payload.get("editorial_children", {})
         self.template_node_values = payload.get("node_values", {})
+        if not self._active_jobs.intersection({"generation", "feedback", "investigation"}):
+            self._refresh_generation_catalog()
+            self._refresh_feedback()
+            self._refresh_investigation()
         self._set_text(
             self.template_details,
             "Selecciona un nodo editorial para ver el resumen. Presiona Enter para abrir el visor del nodo. "
@@ -2035,31 +2287,19 @@ class AulaTeXApp(tk.Tk):
                     result = self.chat_store.send_prompt(session_key, prompt, severity=severity)
                 self.events.put(("llm-refresh", {"session_key": session_key, "status": result.status_message}))
             except Exception as exc:
-                self.events.put(("llm-error", f"{type(exc).__name__}: {exc}"))
+                self.events.put(("llm-error", {"error": f"{type(exc).__name__}: {exc}",
+                                               "prompt": prompt, "session_key": session_key}))
 
         self._thread(work)
 
     def _handle_local_tool_prompt(self, prompt: str) -> str | None:
-        text = prompt.lower()
+        text = prompt.strip().casefold()
 
-        if "lista" in text and ".tex" in text:
+        if text == "/listar-tex":
             files = self.workspace.find_tex_files(limit=200)
             return "[HERRAMIENTA] Archivos TEX encontrados\n\n" + "\n".join(self.workspace.relative(f) for f in files[:200])
 
-        if "compila" in text or "compilar" in text:
-            match = re.search(r"(?:en|dentro de)\s+([\w\-/]+)", text)
-            target = match.group(1) if match else "."
-            tex_files = self.workspace.find_tex_files(target, limit=20)
-            if not tex_files:
-                return f"[HERRAMIENTA] No se encontraron TEX en {target}"
-
-            outputs = []
-            for tex in tex_files[:5]:
-                result = self.workspace.compile_tex(tex)
-                outputs.append(f"{'OK' if result.ok else 'ERROR'} {self.workspace.relative(tex)}")
-            return "[HERRAMIENTA] Compilacion ejecutada\n\n" + "\n".join(outputs)
-
-        if "explora" in text or "analiza carpeta" in text:
+        if text == "/explorar":
             return self.workspace.context_summary(".", max_chars=4000)
 
         return None
@@ -2070,6 +2310,20 @@ class AulaTeXApp(tk.Tk):
             self.agent_target.set(self.workspace.relative(path))
 
     def _run_agent(self) -> None:
+        try:
+            target = self.agent_target.get().strip()
+            if not target or not (self.workspace.repo_root / target).exists():
+                raise ValueError("Selecciona un objetivo existente.")
+            if not 1 <= self.agent_activity.get() <= 99:
+                raise ValueError("La actividad debe estar entre 1 y 99.")
+            if self.agent_monitor_mode.get():
+                if not 1 <= self.agent_max_cycles.get() <= 20:
+                    raise ValueError("Los ciclos deben estar entre 1 y 20.")
+            elif not 1 <= self.agent_iterations.get() <= 500:
+                raise ValueError("Las iteraciones deben estar entre 1 y 500.")
+        except (ValueError, tk.TclError) as exc:
+            messagebox.showwarning("AulaTeX", f"Revisa la configuración: {exc}", parent=self)
+            return
         if self.agent_monitor_mode.get():
             self._run_activity_monitor()
             return
@@ -2090,6 +2344,7 @@ class AulaTeXApp(tk.Tk):
         def work() -> None:
             try:
                 result = self.agent.run(request)
+                self.events.put(("result-path", ("agent", result.report_path)))
                 self.events.put(("agent", f"[AGENTE] {'OK' if result.ok else 'CON OBSERVACIONES'}\nReporte: {result.report_path}"))
             except Exception as exc:
                 self.events.put(("agent-error", f"[AGENTE] ERROR {type(exc).__name__}: {exc}"))
@@ -2110,6 +2365,7 @@ class AulaTeXApp(tk.Tk):
         def work() -> None:
             try:
                 result = monitor.run(request)
+                self.events.put(("result-path", ("agent", result.report_path)))
                 self.events.put(
                     (
                         "agent",
@@ -2136,6 +2392,8 @@ class AulaTeXApp(tk.Tk):
         def work() -> None:
             try:
                 result = self.workspace.compile_tex(target)
+                if result.ok:
+                    self.events.put(("result-path", ("compile", Path(target).with_suffix(".pdf"))))
                 self.events.put(("compile", f"[COMPILAR] {'OK' if result.ok else 'ERROR'} {target}\n{result.stdout[-4000:]}\n{result.stderr[-2000:]}"))
             except Exception as exc:
                 self.events.put(("compile-error", f"[COMPILAR] ERROR {type(exc).__name__}: {exc}"))
@@ -2171,7 +2429,6 @@ class AulaTeXApp(tk.Tk):
         self._refresh_feedback_plan_and_memory()
 
     def _refresh_feedback_catalog(self) -> None:
-        self.editorial_scopes, self.editorial_children = self.workspace.editorial_scope_index()
         institutions = sorted(scope.label for scope in self.editorial_scopes.values() if scope.level == "institucion")
         self.feedback_institution_combo.configure(values=self._with_unselected(institutions))
         if self.feedback_institution.get() not in self.feedback_institution_combo.cget("values"):
@@ -2464,7 +2721,6 @@ class AulaTeXApp(tk.Tk):
         self._thread(work)
 
     def _refresh_investigation_catalog(self) -> None:
-        self.editorial_scopes, self.editorial_children = self.workspace.editorial_scope_index()
         institutions = sorted(scope.label for scope in self.editorial_scopes.values() if scope.level == "institucion")
         self.investigation_institution_combo.configure(values=self._with_unselected(institutions))
         if self.investigation_institution.get() not in self.investigation_institution_combo.cget("values"):
@@ -2699,12 +2955,16 @@ class AulaTeXApp(tk.Tk):
         self._refresh_feedback_plan_and_memory()
 
     def _drain_events(self) -> None:
-        while True:
+        for _ in range(100):
             try:
                 category, event = self.events.get_nowait()
             except queue.Empty:
                 break
-            if category == "agent":
+            if category == "result-path":
+                self._record_result(*event)
+            elif category == "llm-check-finished":
+                self._set_busy("llm-check", False)
+            elif category == "agent":
                 self._set_busy("agent", False)
                 self._log(self.agent_output, event)
             elif category == "agent-error":
@@ -2722,8 +2982,11 @@ class AulaTeXApp(tk.Tk):
             elif category == "llm-error":
                 self._set_busy("llm-chat", False)
                 self.llm_status.set("Error en el chat LLM")
+                payload = event if isinstance(event, dict) else {"error": str(event)}
+                if payload.get("prompt"):
+                    self._set_text(self.prompt_text, payload["prompt"])
                 self._refresh_llm_sessions()
-                self._refresh_llm_view(self._selected_llm_session(), status=str(event))
+                self._refresh_llm_view(payload.get("session_key") or self._selected_llm_session(), status=payload["error"])
             elif category == "tree-refresh":
                 self._tree_refresh_pending = False
                 self._apply_tree_refresh(event if isinstance(event, dict) else {})
@@ -2752,6 +3015,7 @@ class AulaTeXApp(tk.Tk):
                 self._handle_feedback_progress(event)
             elif category == "feedback-result":
                 self._set_busy("feedback", False)
+                self._record_result("feedback", event.manifest_path)
                 self.feedback_progress.set(100.0)
                 if event.cancelled:
                     self.feedback_progress_status.set("Memoria editorial cancelada.")
@@ -2780,6 +3044,7 @@ class AulaTeXApp(tk.Tk):
                 self._handle_investigation_progress(event)
             elif category == "investigation-result":
                 self._set_busy("investigation", False)
+                self._record_result("investigation", event.knowledge_path)
                 self.investigation_progress.set(100.0)
                 if event.cancelled:
                     self.investigation_progress_status.set("Investigación cancelada.")
@@ -2799,6 +3064,7 @@ class AulaTeXApp(tk.Tk):
                 self._handle_generation_progress(event)
             elif category == "generation-result":
                 self._set_busy("generation", False)
+                self._record_result("generation", event.manifest_path.parent)
                 self.generation_progress.set(100.0)
                 if event.cancelled:
                     self.generation_progress_status.set("Generación cancelada.")
@@ -2811,6 +3077,7 @@ class AulaTeXApp(tk.Tk):
                     )
                 self._refresh_generation_catalog()
                 self._refresh_feedback_catalog()
+                self._refresh_tree()
             elif category == "generation-error":
                 self._set_busy("generation", False)
                 self.generation_progress_status.set("Fallo en la generación editorial.")

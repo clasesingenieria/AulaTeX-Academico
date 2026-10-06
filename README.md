@@ -44,6 +44,49 @@ a notebooks, datasets, salidas ni manifiestos.
 
 - Automatizacion de compilacion y exportacion: `scripts/`.- Entrada recomendada para trabajo editorial: `scripts/aulatex.ps1`.
 
+### Interfaz de escritorio
+
+Inicia la GUI con `./scripts/aulatex.ps1`. Reinicia la ventana si ya estaba
+abierta antes de actualizar el código.
+
+- **Proyecto:** selecciona un nodo y pulsa **Usar selección** para aplicar su
+  contexto a Investigación, Generación, Memoria y al objetivo del agente.
+- **Investigación:** configura fuentes y consultas; los resultados se separan
+  en Plan, Conocimiento, Métricas opcionales y Ejecución.
+- **Producción:** reúne Generar, Revisar / ejecutar y Compilar. Los modos
+  Revisar archivos y Ejecutar agente muestran únicamente sus opciones aplicables.
+- **Memoria:** conserva la construcción, propagación y fijación de reglas,
+  con vistas separadas para plan, memoria y ejecución.
+- **Asistente:** mantiene sesiones persistentes. El texto del chat no ejecuta
+  compilaciones. `/listar-tex` y `/explorar` son consultas locales de solo lectura.
+
+El menú **Herramientas** contiene el extractor y la comprobación de proveedores.
+**Configuración** separa proveedores IA de cuentas institucionales; ambas
+pantallas conservan sus almacenes originales. **Ayuda** contiene la arquitectura.
+Estas ventanas se construyen solo al abrirlas. El catálogo editorial se obtiene
+en segundo plano y se comparte entre las pantallas; **Actualizar proyecto** lo relee.
+
+**Vista > Resolución** permite elegir 980×640, 1180×760, 1366×768, 1600×900 o
+1920×1080, ajustar al monitor actual, maximizar o restaurar el tamaño inicial.
+Los tamaños se limitan al área disponible de pantalla y conservan el escalado
+DPI del sistema. Estos ajustes no cambian la resolución física del monitor.
+
+La bóveda institucional exige una frase maestra o la selección explícita de
+**Usar PIN del entorno**. **Bloquear** limpia los campos y desactiva ese uso en
+la ventana, sin borrar ni modificar la variable de entorno del proceso.
+Los presets de plataformas contienen únicamente nombres y URLs públicas.
+
+**Resultados** permite abrir el último archivo o carpeta existente de cada tarea.
+La barra inferior identifica trabajos activos. No se permite cerrar la suite o
+aplicar otro contexto mientras hay tareas registradas en curso; las cancelaciones
+editoriales siguen siendo cooperativas y esperan a que termine la llamada activa.
+
+Pruebas de GUI aisladas, sin credenciales ni llamadas reales a modelos:
+
+```powershell
+./.venv/Scripts/python.exe -m pytest scripts/aulatex/tests/test_gui_workflows.py scripts/aulatex/tests/test_platform_credentials_gui.py scripts/aulatex/tests/test_platform_credentials.py -q
+```
+
 ## Arquitectura y compatibilidad de flujos agénticos AulaTeX
 
 AulaTeX combina flujos especializados que pueden cooperar si intercambian productos duraderos del workspace. La regla general es no depender de logs temporales como fuente de verdad: los resultados reutilizables deben materializarse en TEX, BIB, referencias, `extractor-aulatex/` o `.memoria-aulatex/`.
