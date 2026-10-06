@@ -1,0 +1,224 @@
+{
+  "title": "Administración de recursos humanos: puestos y funciones",
+  "subtitle": "AM Taller Autocentro: responsabilidades para prestar y controlar el servicio",
+  "date": "5 de octubre de 2026",
+  "location": "Monterrey, Nuevo León",
+  "introduction": [
+    "Un taller no se organiza únicamente al identificar quién repara un vehículo: también necesita responsables de atender solicitudes, verificar recursos, obtener autorizaciones, controlar insumos, cobrar y dar seguimiento. Para AM Taller Autocentro, el riesgo administrativo consiste en que esas tareas queden implícitas cuando varias funciones se concentran en una sola persona. La estructura propuesta distribuye responsabilidades sin afirmar que exista una plantilla contratada, maquinaria disponible o una capacidad de atención ya medida.",
+    "La organización se vincula con el proceso de cambio de aceite y filtro en vehículo ligero: sus 16 pasos sirven como referencia para asignar ejecución, apoyos y registros. Se consideran además las funciones de llantas y refaccionaria del proyecto, sin incorporarlas automáticamente a ese mantenimiento. La consigna permite diseñar puestos aunque el microproyecto opere individualmente y sugiere una tabla por puesto [@itescaRH]. El criterio es distinguir funciones necesarias de contrataciones efectivas y conservar un responsable identificable para cada tarea relevante."
+  ],
+  "organization": [
+    "La función principal expresa el resultado permanente esperado del puesto; las actividades precisan las acciones recurrentes para obtenerlo. El glosario del curso distingue funciones, responsabilidades y representación organizativa en sus apartados 4.2 y 4.3 [@glosario]. Aquí se añaden límites de decisión y registros para hacer verificable la coordinación, sin convertir la descripción en un contrato laboral o en una nómina presupuestada.",
+    "Se propone una estructura funcional sencilla: coordinación general articula recepción y ventas, operación técnica, refacciones e inventario y limpieza. Contabilidad y asesoría jurídica se contemplan como servicios independientes por alcance definido. La formalización de funciones y las relaciones de supervisión permiten conectar tareas especializadas, mientras la complejidad de la estructura debe adecuarse al trabajo que realmente puede coordinarse [@openstax]. Los ocho puestos representan funciones de diseño, no ocho contrataciones ni ocho plazas de tiempo completo.",
+    "Coordinación general (P1) supervisa P2 a P6 y gestiona la relación con P7 y P8. P3 y P4 conservan el criterio técnico de su especialidad; P2 no diagnostica ni autoriza reparaciones en nombre del cliente. P5 confirma existencias y compatibilidad con apoyo técnico. El cliente decide la aceptación del alcance y del importe: ninguna aprobación interna reemplaza esa autorización."
+  ],
+  "org_chart": {
+    "root": "P1",
+    "nodes": [
+      {"id": "P1", "label": "Coordinación general", "relation": "dirección"},
+      {"id": "P2", "label": "Recepción,\nventas y caja", "relation": "función interna"},
+      {"id": "P3", "label": "Mantenimiento\nautomotriz", "relation": "función interna"},
+      {"id": "P4", "label": "Llantas", "relation": "función interna"},
+      {"id": "P5", "label": "Refacciones,\ncompras e\ninventario", "relation": "función interna"},
+      {"id": "P6", "label": "Limpieza\ny orden (*)", "relation": "función interna"},
+      {"id": "P7", "label": "Contabilidad", "relation": "apoyo externo"},
+      {"id": "P8", "label": "Asesoría jurídica", "relation": "apoyo externo"}
+    ],
+    "note": "Línea continua: coordinación de funciones internas. Línea discontinua: servicio profesional externo. (*) P6 puede contratarse por alcance; P1 mantiene su coordinación. El esquema representa funciones propuestas, no ocho contrataciones."
+  },
+  "incorporation_stages": [
+    {"stage": "Diseño y arranque", "assignment": "P1, P2 y P5 pueden agruparse. P3 requiere competencia técnica; P6 se asigna expresamente. P7 y P8 se contratan por necesidad desde esta etapa.", "trigger": "Antes de aceptar servicios: comprobar recursos, disponibilidad y competencia. No se presupone que una persona pueda cubrir todo simultáneamente.", "evidence": "Asignación por función, agenda, recursos verificados e inducción. Sin capacidad suficiente, limitar el alcance o reprogramar."},
+    {"stage": "Separación funcional", "assignment": "Priorizar la separación de recepción/caja (P2) e inventario/compras (P5) respecto de P1, según el problema observado.", "trigger": "Esperas, omisiones o diferencias de caja e inventario recurrentes, sustentadas en registros; no solo una expectativa de ventas.", "evidence": "Carga de trabajo, incidencias, acciones previas y presupuesto. P1 justifica qué función necesita dedicación diferenciada."},
+    {"stage": "Ampliación técnica", "assignment": "Evaluar otra persona competente para P3 y activar P4 solo con recursos y demanda acreditados. Una revisión independiente exigible se resuelve antes, sin esperar esta etapa.", "trigger": "Carga técnica o servicios de llantas que no puedan atenderse con la capacidad comprobada y cuenten con viabilidad financiera.", "evidence": "Servicios solicitados, tiempos observados, competencias, equipo y costo de incorporación. Sin respaldo, no prometer capacidad adicional."}
+  ],
+  "technical_review": [
+    {"case": "Autocontrol del trabajo", "execution": "P3 ejecuta y registra materiales, hallazgos y correcciones.", "verification": "P3 comprueba el servicio según el procedimiento aplicable; identifica el registro como autocontrol, no revisión independiente.", "release": "P3 documenta la conformidad técnica. P2 entrega solo con cierre técnico y conciliación administrativa."},
+    {"case": "Se requiere revisión independiente", "execution": "P3 conserva el registro del trabajo y lo pone a disposición del revisor.", "verification": "P1 asigna una persona distinta con competencia acreditada para ese servicio. P4 solo puede revisar si posee esa competencia, no por su título de puesto.", "release": "Si no existe revisor competente, no se libera la orden como conforme: se documenta la limitación y se coordina apoyo o reprogramación."},
+    {"case": "Desviación o cambio de alcance", "execution": "P3 corrige una desviación del trabajo propio; un servicio diferente vuelve a evaluación de alcance.", "verification": "Se registra una nueva comprobación. P1 asegura recursos, pero no firma una liberación técnica para la que no tenga competencia.", "release": "P2 obtiene reautorización si cambia el alcance o importe. No se añade automáticamente un cargo por corregir el trabajo propio."}
+  ],
+  "roles": [
+    {
+      "id": "P1",
+      "title": "Coordinación general y administración",
+      "area": "Dirección y administración.",
+      "function": "Organizar recursos, prioridades y controles para que cada servicio tenga responsables y respaldo documental.",
+      "activities": [
+        "Asignar responsables y suplencias; comprobar carga y agenda antes de comprometer fechas.",
+        "Autorizar y documentar compras, pagos y ajustes dentro del presupuesto.",
+        "Seleccionar e inducir personal, verificando competencias antes de asignar trabajo técnico.",
+        "Revisar caja, inventario, reclamaciones y cierres; coordinar proveedores y mantenimiento.",
+        "Organizar el sondeo real y conservarlo separado de los registros de operación."
+      ],
+      "authority": "Decide prioridades administrativas y detiene servicios sin recursos o controles suficientes. No sustituye la autorización del cliente ni el juicio técnico especializado.",
+      "evidence": "Agenda, asignación por orden, autorizaciones de compra, conciliación de caja, revisión de incidencias e inducción.",
+      "profile": "Organización, control documental, nociones de costos, comunicación y capacidad para coordinar especialistas.",
+      "reporting": "Supervisa P2–P6 y coordina los encargos de P7–P8."
+    },
+    {
+      "id": "P2",
+      "title": "Recepción, ventas y caja",
+      "area": "Atención comercial y caja.",
+      "function": "Conducir la atención del cliente desde la solicitud hasta el cierre, manteniendo autorizaciones e importes trazables.",
+      "activities": [
+        "Abrir folio con solicitud, datos indispensables y condiciones de recepción.",
+        "Explicar la cotización verificada y obtener aceptación antes del trabajo cobrable.",
+        "Gestionar citas y reautorizaciones de alcance, costo o plazo.",
+        "Conciliar servicio e importe; registrar cobro y cierre terminado, no ejecutado o reprogramado.",
+        "Aplicar el instrumento de sondeo por conveniencia y registrar respuestas reales sobre servicio, frecuencia, gasto y satisfacción."
+      ],
+      "authority": "Programa y comunica dentro de lo aprobado. No diagnostica, concede cambios no autorizados ni registra ausencia de respuesta como satisfacción.",
+      "evidence": "Solicitud, cotización, aceptación, registro de caja, constancia de entrega y seguimiento consentido; base del sondeo separada.",
+      "profile": "Atención respetuosa, cálculo básico, manejo de agenda, registro exacto y resguardo de información.",
+      "reporting": "Reporta a P1; se enlaza con P3, P4 y P5."
+    },
+    {
+      "id": "P3",
+      "title": "Técnico de mantenimiento automotriz",
+      "area": "Mantenimiento automotriz.",
+      "function": "Diagnosticar, ejecutar y verificar el mantenimiento autorizado dentro de la competencia y los recursos disponibles.",
+      "activities": [
+        "Comprobar viabilidad con información del fabricante, competencia y recursos disponibles.",
+        "Inspeccionar dentro de lo autorizado y comunicar hallazgos a P2 antes de ampliar el trabajo.",
+        "Validar insumos con P5 y preparar el puesto sin delegar maniobras técnicas a limpieza.",
+        "Ejecutar lo autorizado; registrar materiales, tiempo activo y desviaciones.",
+        "Realizar autocontrol, corregir desviaciones y cumplir la revisión adicional exigible antes de liberar la orden."
+      ],
+      "authority": "Detiene una intervención insegura, fuera de capacidad o de alcance. No añade cobros ni aprueba trabajos adicionales sin aceptación del cliente.",
+      "evidence": "Lista técnica, hallazgos, orden vigente, consumo de insumos y registro de revisión y corrección.",
+      "profile": "Competencia demostrable en el mantenimiento asignado, consulta de especificaciones, uso seguro de herramientas y registro técnico.",
+      "reporting": "P1 coordina recursos; P3 responde técnicamente. Revisión independiente: otra persona competente."
+    },
+    {
+      "id": "P4",
+      "title": "Técnico de llantas",
+      "area": "Llantera, servicio complementario.",
+      "function": "Atender revisión, instalación y mantenimiento de llantas cuando se cuente con competencia, herramientas y autorización específicas.",
+      "activities": [
+        "Revisar solicitud, medidas, especificaciones y condiciones visibles de las llantas.",
+        "Validar materiales con P5 y comunicar alcance e insumos a P2.",
+        "Ejecutar operaciones autorizadas con equipo apropiado y competencia comprobable.",
+        "Registrar trabajo y revisión final; detener o canalizar lo que exceda su capacidad.",
+        "Ordenar herramientas y reportar mantenimiento o riesgos que impidan continuar."
+      ],
+      "authority": "Decide la viabilidad técnica en su especialidad; no incorpora servicios de llantas a la orden de aceite sin cotización y autorización separadas.",
+      "evidence": "Orden específica, comprobación de compatibilidad, materiales utilizados y revisión de entrega.",
+      "profile": "Competencia demostrable en llantas y manejo seguro del equipo efectivamente disponible.",
+      "reporting": "Reporta a P1; se enlaza con P2 y P5. Servicio separado del cambio de aceite."
+    },
+    {
+      "id": "P5",
+      "title": "Refacciones, compras e inventario",
+      "area": "Abastecimiento e inventario.",
+      "function": "Asegurar trazabilidad entre la necesidad del servicio, la compra autorizada y el movimiento físico de insumos.",
+      "activities": [
+        "Recibir requerimientos y cotizar; no confundir catálogo con existencia física.",
+        "Presentar compras a P1 y respetar la autorización de gasto.",
+        "Verificar cantidad, estado y especificación; solicitar validación técnica de compatibilidad.",
+        "Registrar movimientos por orden o venta y separar materiales no conformes.",
+        "Conciliar existencias, investigar diferencias y proponer reposición documentada."
+      ],
+      "authority": "Retiene insumos no conformes y comunica faltantes. No sustituye especificaciones técnicas ni autoriza por sí mismo su compra y pago.",
+      "evidence": "Requisición, cotización, autorización, comprobante, recepción, kardex o registro equivalente y devolución.",
+      "profile": "Control de inventario, identificación de piezas, cálculo básico y registro documental.",
+      "reporting": "Reporta a P1; P2 atiende ventas y P3/P4 validan compatibilidad."
+    },
+    {
+      "id": "P6",
+      "title": "Apoyo de limpieza y orden",
+      "area": "Limpieza interna o contratada por alcance.",
+      "function": "Mantener áreas comunes y de trabajo ordenadas conforme a las indicaciones de seguridad del establecimiento.",
+      "activities": [
+        "Limpiar recepción, áreas comunes y zonas liberadas por el técnico.",
+        "Mantener libre la circulación y comunicar riesgos.",
+        "Ordenar materiales de limpieza y reportar necesidades de atención especializada.",
+        "Solicitar consumibles y registrar tareas e incidentes.",
+        "Coordinar el acceso al área sin intervenir vehículos, equipos activos o materiales fuera de su capacitación."
+      ],
+      "authority": "Suspende su tarea y avisa ante un riesgo. No ejecuta mantenimiento automotriz ni maneja residuos especiales sin procedimiento y capacitación aplicables.",
+      "evidence": "Lista de limpieza, reporte de incidentes y solicitudes de consumibles.",
+      "profile": "Orden, seguimiento de instrucciones y capacitación pertinente a las tareas asignadas.",
+      "reporting": "P1 coordina; P3/P4 liberan el área. P1 contrata apoyos especializados cuando correspondan."
+    },
+    {
+      "id": "P7",
+      "title": "Servicio profesional de contabilidad",
+      "area": "Servicio contable independiente.",
+      "function": "Revisar y organizar la información contable y orientar las obligaciones fiscales y de personal que resulten aplicables.",
+      "activities": [
+        "Acordar documentos, periodicidad y entregables con P1.",
+        "Revisar comprobantes y conciliaciones e informar inconsistencias.",
+        "Preparar informes del encargo, separando datos reales y estimaciones.",
+        "Asesorar sobre nómina y obligaciones cuando se definan relaciones y remuneraciones efectivas."
+      ],
+      "authority": "Emite observaciones y trabajos dentro de su encargo. No aprueba ventas, contrata personal ni dispone de fondos sin autorización expresa.",
+      "evidence": "Acuerdo de servicio, relación documental, informes y constancias de los trabajos efectivamente realizados.",
+      "profile": "Formación y acreditación pertinentes al servicio, confidencialidad y experiencia comprobable.",
+      "reporting": "Entrega a P1; recibe registros de P2 y P5. Encargo propuesto, no vigente."
+    },
+    {
+      "id": "P8",
+      "title": "Servicio profesional de asesoría jurídica",
+      "area": "Asesoría jurídica independiente.",
+      "function": "Orientar la formalización de acuerdos y la atención de asuntos jurídicos concretos del proyecto.",
+      "activities": [
+        "Delimitar asunto, documentación y resultado del encargo.",
+        "Revisar condiciones, autorizaciones y acuerdos con clientes y proveedores.",
+        "Asesorar sobre contratación, datos y reclamaciones pertinentes al caso.",
+        "Documentar recomendaciones y decisiones que correspondan a P1."
+      ],
+      "authority": "Asesora dentro de su competencia; una representación o firma requiere facultades expresas. No certifica por sí sola la operación completa del taller.",
+      "evidence": "Encargo profesional, relación de documentos revisados, recomendaciones y seguimiento de decisiones.",
+      "profile": "Formación y acreditación pertinentes, conocimiento del asunto y manejo confidencial de información.",
+      "reporting": "P1 decide y da seguimiento al encargo; no integra una plaza permanente."
+    }
+  ],
+  "process_assignments": [
+    {"step": 1, "owner": "P2", "support": [], "record": "Solicitud con folio y servicio solicitado."},
+    {"step": 2, "owner": "P2", "support": ["P3"], "record": "Datos técnicos; información desconocida identificada."},
+    {"step": 3, "owner": "P3", "support": ["P1"], "record": "Viabilidad técnica o cierre sin ejecución."},
+    {"step": 4, "owner": "P2", "support": ["P3", "P5"], "record": "Presupuesto desglosado y plazo condicionado a recursos."},
+    {"step": 5, "owner": "P2", "support": [], "record": "Aceptación del cliente o negativa documentada."},
+    {"step": 6, "owner": "P2", "support": ["P3"], "record": "Cita, recepción y condiciones observables."},
+    {"step": 7, "owner": "P3", "support": [], "record": "Inspección dentro del alcance autorizado."},
+    {"step": 8, "owner": "P3", "support": ["P2"], "record": "Hallazgo y decisión de revisar el alcance o continuar."},
+    {"step": 9, "owner": "P2", "support": ["P3", "P1"], "record": "Cambio de presupuesto y decisión del cliente; sin ejecución anticipada."},
+    {"step": 10, "owner": "P5", "support": ["P3"], "record": "Disponibilidad física y conformidad técnica, o reprogramación."},
+    {"step": 11, "owner": "P3", "support": ["P6"], "record": "Área y recursos preparados; P6 solo apoya limpieza permitida."},
+    {"step": 12, "owner": "P3", "support": ["P5"], "record": "Servicio realizado, consumos y correcciones dentro del alcance."},
+    {"step": 13, "owner": "P3", "support": ["P1"], "record": "Autocontrol de P3 y revisión independiente cuando corresponda; P1 asigna al revisor. Si falta la revisión exigida, no liberar como conforme."},
+    {"step": 14, "owner": "P2", "support": ["P3", "P5"], "record": "Conciliación de servicio, insumos e importe autorizado."},
+    {"step": 15, "owner": "P2", "support": ["P3"], "record": "Entrega, cierre sin ejecución o reprogramación diferenciados."},
+    {"step": 16, "owner": "P2", "support": ["P1"], "record": "Cierre y seguimiento consentido; respuestas reales, no inferidas."}
+  ],
+  "complementary_assignments": [
+    {"activity": "Servicios de llantas fuera del mantenimiento elegido", "owner": "P4", "support": "P2 y P5; autorización propia del servicio."},
+    {"activity": "Venta de refacciones sin intervención del vehículo", "owner": "P2", "support": "P5 registra existencias y salida; P3/P4 aclaran compatibilidad."},
+    {"activity": "Compras, pagos, selección e inducción", "owner": "P1", "support": "P5 aporta documentación; P7/P8 asesoran según el encargo."},
+    {"activity": "Limpieza y orden de áreas", "owner": "P6", "support": "P1 programa; P3/P4 liberan las zonas de trabajo."},
+    {"activity": "Contabilidad y apoyo fiscal", "owner": "P7", "support": "P1 contrata y revisa entregables; P2/P5 proporcionan registros."},
+    {"activity": "Contratos y asuntos jurídicos", "owner": "P8", "support": "P1 define el encargo y ejecuta las decisiones que le competen."},
+    {"activity": "Soporte de agenda, mantenimiento de equipos, seguridad y residuos", "owner": "P1", "support": "Personal competente o proveedor especializado según necesidad; no se supone que P6 cubra estas especialidades."},
+    {"activity": "Sondeo real y seguimiento de servicio, frecuencia, gasto y satisfacción", "owner": "P2", "support": "P1 organiza el levantamiento y revisa calidad y procedencia de datos."}
+  ],
+  "controls": [
+    "Cada orden identificará a quien desempeña cada función y su suplencia. Si una persona concentra solicitud, compra, recepción y pago, conservará registros separados y documentará esa limitación: no equivale a segregación independiente. P1 y, dentro de su encargo, P7 contrastarán los comprobantes; las diferencias o la carga observada orientarán la separación de funciones.",
+    "La selección se basará en competencias demostrables para la función, no en edad, género u otros datos ajenos al puesto. La inducción abarcará alcance autorizado, registro de órdenes, comunicación de hallazgos, control de insumos, seguridad pertinente y resguardo de información. Las modalidades, horarios, remuneraciones y obligaciones se definirán con información real y asesoría aplicable antes de contratar; no son hechos acreditados por esta propuesta.",
+    "P2 registrará servicio, frecuencia, gasto y satisfacción mediante respuestas reales del sondeo solicitado por la docente. El seguimiento de clientes atendidos puede aportar información de operación, pero no sustituye el sondeo por conveniencia en la zona prevista. La ausencia de respuestas no valida la demanda, la satisfacción ni el número de personas por contratar. P1 deberá evaluar el crecimiento de puestos con demanda observada, carga real, competencias y viabilidad financiera."
+  ],
+  "indicators": [
+    {"name": "Autorización trazable", "definition": "Órdenes con alcance e importe aceptados antes de la intervención / órdenes con trabajo cobrable revisadas.", "owner": "P2", "review": "P1 revisa registros y detiene ampliaciones sin aceptación."},
+    {"name": "Control de insumos", "definition": "Salidas vinculadas a orden o venta / salidas de insumos revisadas.", "owner": "P5", "review": "P1 contrasta registro y comprobantes; no se compensan diferencias sin investigar."},
+    {"name": "Verificación del servicio", "definition": "Órdenes concluidas con revisión técnica documentada / órdenes concluidas revisadas.", "owner": "P3", "review": "Distinguir autocontrol y revisión por otra persona; registrar correcciones."},
+    {"name": "Respuesta al seguimiento", "definition": "Clientes que responden / clientes contactados con consentimiento; satisfacción se calcula solo entre respuestas válidas.", "owner": "P2", "review": "P1 distingue no respuesta, queja y satisfacción expresada."}
+  ],
+  "conclusion": [
+    "AM Taller Autocentro requiere coordinar funciones comerciales, administrativas, técnicas y de apoyo, aunque inicialmente una persona asuma varias. La distribución propuesta asigna responsables a los 16 pasos del mantenimiento y a las actividades complementarias de llantas, refacciones, limpieza y servicios profesionales. La trazabilidad de la orden conecta aceptación, ejecución, insumos, revisión y cobro: el control depende de esa conexión, no del número de nombres en un organigrama.",
+    "Considero preferible una estructura pequeña con límites y registros claros antes que una plantilla amplia sin sustento de demanda o capacidad financiera. La separación entre autorización comercial, decisión del cliente y revisión técnica reduce ambigüedades; reconocer las limitaciones de una operación individual evita simular controles inexistentes. La incorporación de personas deberá justificarse con carga real, competencias y recursos. El siguiente paso administrativo es asignar personas y probar el funcionamiento de los registros, mientras el sondeo pendiente aporta evidencia para dimensionar el proyecto, sin presentarlo como concluido."
+  ],
+  "ai_note": "Se utilizó GitHub Copilot para organizar las fichas, revisar su correspondencia con el proceso y preparar los documentos. La asistencia automatizada no acredita contrataciones, resultados del sondeo, revisión docente ni operación real; corresponde al estudiante revisar y asumir el contenido final.",
+  "references": [
+    {"key": "itescaRH", "citation": "Instituto Tecnológico Superior de Cajeme, s. f.", "apa": "Instituto Tecnológico Superior de Cajeme. (s. f.). Administración de Recursos Humanos (Puestos y funciones) [Consigna de Plan de Negocios]. https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=6551"},
+    {"key": "glosario", "citation": "Propuesta de glosario de conceptos, 2024", "apa": "Propuesta de glosario de conceptos. (2024). [Material didáctico de Plan de Negocios, apartados 4.2 y 4.3]. ITESCA Virtual. https://cursos3.e-itesca.edu.mx/mod/resource/view.php?id=6527"},
+    {"key": "openstax", "citation": "OpenStax, s. f.", "apa": "OpenStax. (s. f.). 10.1 Organizational structures and design. En Principles of management. https://openstax.org/books/principles-management/pages/10-1-organizational-structures-and-design"}
+  ]
+}

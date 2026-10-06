@@ -1,15 +1,5 @@
 # Plan de Negocios - Entregables por vencimiento
 
-## Actividad 11 entregada el 01/10/2026
-
-**AM Taller: diagrama de flujo del servicio.** Se enviaron al módulo 6550 la [versión gráfica](Actividad-11-AM-Taller-Version-Grafica.pdf) y la [versión redactada](Actividad-11-AM-Taller-Version-Redactada.pdf). Moodle muestra **Enviado para calificar** y los dos archivos descargados coinciden con los originales locales. [Word editable](reporte-plan-de-negocios-Actividad-11-AM-Taller.docx), [PDF integrado](reporte-plan-de-negocios-Actividad-11-AM-Taller.pdf) y [comprobante con verificación](referencias-plan-de-negocios/actividad-11-2026-10-01/README.md).
-
-El proceso contiene 16 pasos concordantes y la tabla de cuatro columnas solicitada. Los tiempos son estimaciones; los registros propuestos no sustituyen el sondeo real pendiente de la actividad 10. Se conservan las versiones anteriores y los cortes históricos que siguen.
-
-## Actualización del sondeo del 30/09/2026
-
-La Actividad 10 de AM Taller fue entregada el 28/09 y calificada con **90/100** el 29/09. La docente solicita incorporar un sondeo real por conveniencia sobre servicio, frecuencia, gasto y satisfacción. Se prepararon una [revisión metodológica](reporte-plan-de-negocios-Actividad-10-AM-Taller-Revision.docx) y un [cuestionario de aplicación](Sondeo-AM-Taller-Aplicacion.docx); **faltan respuestas reales y resultados**, por lo que la corrección no está concluida. Moodle indica que la tarea no acepta entregas. [Evidencia, cambios y pendientes](referencias-plan-de-negocios/correccion-sondeo-2026-09-30/README.md). La tabla siguiente conserva su corte histórico del 23/09.
-
 Revision documental local: **23/09/2026**. Preparacion local no equivale a entrega ni aprobacion. **No estan completas las quince actividades.** [Dictamen por actividad y requisito](VALIDACION-ACTIVIDADES-1-15.md). El [calendario](ORDEN-ACTIVIDADES.md) conserva su consulta del 22/09/2026; esta revision no revalida el estado del aula.
 
 | Actividad | Modulo Moodle | Producto disponible | Estado |

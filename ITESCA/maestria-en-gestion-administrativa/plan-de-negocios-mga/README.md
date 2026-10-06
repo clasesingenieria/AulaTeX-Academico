@@ -1,16 +1,6 @@
 # Plan de Negocios - GGPN01
 
-## Actividad 11 entregada el 01/10/2026
-
-**AM Taller: diagrama de flujo del servicio.** Se enviaron al módulo 6550 la [versión gráfica](Actividad-11-AM-Taller-Version-Grafica.pdf) y la [versión redactada](Actividad-11-AM-Taller-Version-Redactada.pdf). Moodle muestra **Enviado para calificar** y los dos archivos descargados coinciden con los originales locales. [Word editable](reporte-plan-de-negocios-Actividad-11-AM-Taller.docx), [PDF integrado](reporte-plan-de-negocios-Actividad-11-AM-Taller.pdf) y [comprobante con verificación](referencias-plan-de-negocios/actividad-11-2026-10-01/README.md).
-
-El proceso contiene 16 pasos concordantes y la tabla de cuatro columnas solicitada. Los tiempos son estimaciones; los registros propuestos no sustituyen el sondeo real pendiente de la actividad 10. Se conservan las versiones anteriores y los cortes históricos que siguen.
-
 ITESCA, Maestria en Gestion Administrativa, periodo 2026-II.
-
-## Corrección del sondeo de AM Taller del 30/09/2026
-
-[Revisión y archivos de aplicación](referencias-plan-de-negocios/correccion-sondeo-2026-09-30/README.md). La entrega obtuvo 90/100. Se corrigió el enfoque del sondeo y se preparó el cuestionario; faltan respuestas reales para integrar servicio, frecuencia, gasto y satisfacción. La actividad está cerrada para entregas. El estado histórico que sigue mantiene sus fechas originales.
 
 ## Validación documental del 23/09/2026
 
