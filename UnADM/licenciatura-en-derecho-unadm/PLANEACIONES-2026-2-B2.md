@@ -12,7 +12,7 @@ Consulta autenticada: 4 de octubre de 2026, fecha local de trabajo. Acceso media
 
 ## Documentos de trabajo
 
-- [Foros de semana 1: revision prioritaria](FOROS-SEMANA-1-REVISION.md). Consulta actualizada del 5 de octubre: controles de participacion visibles; no acredita prorroga. Consignas de los tres foros verificadas y propuestas preparadas; pendientes datos y respuestas personales. Derecho penal requiere ademas dos retroalimentaciones. Ninguna publicacion realizada.
+- [Foros de semana 1: revision prioritaria](FOROS-SEMANA-1-REVISION.md). Consulta actualizada del 5 de octubre: controles de participacion visibles; no acredita prorroga. Consignas verificadas, propuestas preparadas y tres reportes PDF con `forobox` compilados. Pendientes datos y respuestas personales; Derecho penal requiere dos retroalimentaciones a intervenciones reales. Ninguna publicacion realizada.
 - [Planeaciones de Teoria del Estado](teoria-del-estado-y-constitucion-lde/planeaciones-teoria-del-estado-y-constitucion/planeacion-S2-S3.md).
 - [Planeacion de Derecho penal](derecho-penal-especial-mexicano-lde/planeaciones-derecho-penal-especial-mexicano/planeacion-S2.md).
 - [Planeaciones de Antecedentes](antecedentes-de-los-derechos-humanos-lde/planeaciones-antecedentes-de-los-derechos-humanos/planeacion-S2.md).

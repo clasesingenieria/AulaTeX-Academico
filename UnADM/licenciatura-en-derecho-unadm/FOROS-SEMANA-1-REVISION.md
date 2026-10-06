@@ -2,6 +2,8 @@
 
 Consulta autenticada del 5 de octubre de 2026 con la boveda AulaTeX. No se publicaron participaciones. Posteriormente el usuario autorizo formular supuestos basados en el proyecto: las [propuestas completas para revisar](FOROS-SEMANA-1-PROPUESTAS.md) desarrollan el enfoque academico documentado y distinguen inferencias de datos personales no confirmados. Edad y residencia permanecen pendientes; no se inventan experiencias ni se acreditan conocimientos previos a partir de los borradores.
 
+Reportes de semana 1 compilados con `forobox`, basados en esas propuestas: [Teoria del Estado](teoria-del-estado-y-constitucion-lde/reporte-teoria-del-estado-y-constitucion-Actividad-1.pdf), [Derecho penal](derecho-penal-especial-mexicano-lde/reporte-derecho-penal-especial-mexicano-Actividad-1.pdf) y [Antecedentes](antecedentes-de-los-derechos-humanos-lde/reporte-antecedentes-de-los-derechos-humanos-Foro-S1.pdf). Derecho penal tiene una caja de participacion y dos cajas de respuesta pendientes de intervenciones reales. Los otros reportes contienen una caja de participacion; Antecedentes prohíbe abrir otros temas y no exige replicas. Ninguno acredita una publicacion.
+
 ## 1. Teoria del Estado y Constitucion, grupo 020
 
 Foro: https://aulavirtual.unadmexico.mx/mod/forum/view.php?id=213367
