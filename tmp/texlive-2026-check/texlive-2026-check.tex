@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{tikz}
+\usetikzlibrary{babel}
+\usepackage{tcolorbox}
+\usepackage{csquotes}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{tmp/texlive-2026-check/texlive-2026-check.bib}
+\usepackage{hyperref}
+\begin{document}
+\section{TeX Live 2026 verification}
+Basic PDF compilation, fonts and hyperlinks: \href{https://tug.org/texlive/}{TeX Live}.
+\[
+\int_0^1 x^2\,dx = \frac{1}{3}.
+\]
+\begin{tcolorbox}[title=Verificaci\'on en espa\~nol]
+Compilaci\'on con bibliograf\'ia: \cite{knuth1984}.
+\end{tcolorbox}
+\begin{tikzpicture}
+\draw[->] (0,0) -- (3,0);
+\draw[->] (0,0) -- (0,2);
+\draw (0,0) -- (2,1);
+\end{tikzpicture}
+\printbibliography
+\end{document}
