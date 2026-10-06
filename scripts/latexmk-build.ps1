@@ -67,20 +67,11 @@ function Initialize-PerlForLatexmk {
 }
 
 function Resolve-LatexmkExecutable {
-    $command = Get-Command latexmk -ErrorAction SilentlyContinue
-    if ($command) { return $command.Source }
-
-    $candidates = @(
-        'C:\Program Files\MiKTeX\miktex\bin\x64\latexmk.exe',
-        "$env:LOCALAPPDATA\Programs\MiKTeX\miktex\bin\x64\latexmk.exe",
-        'C:\texlive\2026\bin\windows\latexmk.exe',
-        'C:\texlive\2025\bin\windows\latexmk.exe',
-        'C:\texlive\2024\bin\windows\latexmk.exe'
-    )
-    foreach ($candidate in $candidates) {
-        if (Test-Path -LiteralPath $candidate -PathType Leaf) { return $candidate }
+    $executable = 'C:\texlive\2026\bin\windows\latexmk.exe'
+    if (Test-Path -LiteralPath $executable -PathType Leaf) {
+        return $executable
     }
-    throw 'Bloqueador de entorno: no se encontró latexmk en PATH, MiKTeX ni TeX Live.'
+    throw "Bloqueador de entorno: el proyecto requiere TeX Live 2026 con latexmk en $executable."
 }
 
 function Resolve-TexFile {
