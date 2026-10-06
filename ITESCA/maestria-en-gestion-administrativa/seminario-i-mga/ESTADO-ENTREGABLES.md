@@ -1,5 +1,15 @@
 # Seminario I: estado de documentos
 
+## Actividad 10: revisión del 4 de octubre de 2026
+
+[Word acumulativo revisado](entregas/Tarea10_DeLaCruzMunoz_Revision-2026-10-04.docx) y [PDF de consulta](entregas/Tarea10_DeLaCruzMunoz_Revision-2026-10-04.pdf), 21 páginas. Incorpora la retroalimentación docente de T1, T3 y T8: antecedentes específicos con alcance de lectura declarado, enfoque administrativo, objetivos precisados e indicadores propuestos. Conserva T9 original sin cambios y utiliza una copia de trabajo con cuatro ampliaciones identificadas. Un objetivo general, cuatro específicos, matriz, Covey e índice nativo actualizado con Microsoft Word. El Word es el archivo requerido; los complementos no lo sustituyen.
+
+[Revisión contractual y mapa de fuentes](investigacion-aulatex/actividad-10/revision-2026-10-04/revision-contractual.md). La versión anterior de T10 se conserva. La auditoría registra la preparación anterior al envío, no una aprobación docente.
+
+**Envío confirmado:** 4 de octubre de 2026, 22:04, hora mostrada por Moodle, módulo 2910. Estado **Enviado para calificar**, todavía sin calificar; enviado 1 hora y 54 minutos antes del cierre. Se entregó únicamente el Word revisado. El archivo recuperado coincide por SHA-256 con el validado: `e17ff0bd89652fcefb190156037c76e2b11827044888d1decf62f246a3c95ff6`. [Recibo](anteproyecto/evidencias/envio-actividad-10-2026-10-04/2910-receipt.json), [estado del aula](anteproyecto/evidencias/envio-actividad-10-2026-10-04/2910-after-save.txt) y [captura](anteproyecto/evidencias/envio-actividad-10-2026-10-04/2910-after-save.png). Las menciones anteriores a «sin envío» describen la fase de preparación y quedan superadas por este comprobante.
+
+Complementos: [reporte PDF](reporte-seminario-i-Actividad-10.pdf), 12 páginas, y [presentación PDF](presentacion-seminario-i-Actividad-10.pdf), 19 diapositivas. [Validación final](investigacion-aulatex/actividad-10/revision-2026-10-04/validacion-final.json) aprobada para el alcance documental registrado. Se cotejaron los títulos de doce referencias con sus DOI; queda abierta la ampliación científica regional y reciente.
+
 ## Entregas del 27 de septiembre de 2026
 
 - **Tarea 8:** [Word](entregas/Tarea8_DeLaCruzMunoz.docx), 9 páginas, enviado para calificar en Moodle (módulo 2908).
