@@ -4,6 +4,7 @@ import json
 import os
 from pathlib import Path
 from types import SimpleNamespace
+from unittest.mock import Mock
 
 import pytest
 
@@ -13,6 +14,25 @@ from scripts.aulatex.activity_optimizer import ActivityOptimizeRequest, Activity
 from scripts.aulatex.intelligent_engine import IntelligentEngine, IntelligentEngineRequest
 from scripts.aulatex.llm_bridge import LLMCallResult
 from scripts.aulatex.semantic_audit import SemanticAuditResult
+from scripts.aulatex.template_materializer import MaterializationResult
+
+
+def test_rejected_template_profile_stops_application_and_compilation(tmp_path):
+    agent = object.__new__(AulaTeXAgent)
+    agent._should_materialize_template = Mock(return_value=True)
+    rejected = MaterializationResult(False, tmp_path, (), ("Perfil incompatible",))
+    agent.template_materializer = SimpleNamespace(materialize_subject=Mock(return_value=rejected))
+    agent._apply_generated_tex = Mock()
+    agent._select_compile_targets = Mock()
+    request = AgentRequest(action="generar-plantilla", activity_number=2, compile_tex=True)
+    target = SimpleNamespace(target_path=tmp_path)
+    result, applied, builds = agent._prepare_artifacts(request, target, [], [], AgenticStateMachine(), tmp_path)
+    assert result is rejected
+    assert applied == {"applied": False, "reason": "unsupported-template-profile"}
+    assert builds == []
+    agent.template_materializer.materialize_subject.assert_called_once_with(tmp_path, activity_number=2, force=False)
+    agent._apply_generated_tex.assert_not_called()
+    agent._select_compile_targets.assert_not_called()
 
 
 class _Workspace:

@@ -100,15 +100,52 @@ class PlanningLayoutTests(unittest.TestCase):
         from aulatex.template_materializer import TemplateMaterializer
         from aulatex.workspace import AulaTeXWorkspace
 
+        self.subject = self.root / "UnADM" / "licenciatura-en-derecho-unadm" / "filosofia-del-derecho-lde"
+        self.subject.mkdir(parents=True)
         readme = self.subject / "README.md"
         readme.write_text("Materia revisada", encoding="utf-8")
         result = TemplateMaterializer(AulaTeXWorkspace(self.root)).materialize_subject(self.subject, force=False)
         self.assertTrue(result.ok)
         self.assertEqual(readme.read_text(encoding="utf-8"), "Materia revisada")
         structure = json.loads((self.subject / "estructura-aulatex.json").read_text(encoding="utf-8"))
+        self.assertEqual(structure["schema_version"], "1.0")
+        self.assertEqual(structure["kind"], "subject_file_inventory")
         for folder in subject_layout(self.subject).values():
             self.assertTrue(folder.is_dir())
             self.assertIn(folder.relative_to(self.subject).as_posix(), structure["folders"])
+
+    def test_materializer_rejects_other_institutions_without_writing(self):
+        from aulatex.template_materializer import TemplateMaterializer
+        from aulatex.workspace import AulaTeXWorkspace
+
+        materializer = TemplateMaterializer(AulaTeXWorkspace(self.root))
+        for institution in ("ITESCA", "UCNL", "UANL", "UAS", "IIIEPE", "tecnmNL"):
+            target = self.root / institution / "programa" / "materia"
+            result = materializer.materialize_subject(target, force=True)
+            self.assertFalse(result.ok)
+            self.assertFalse(target.exists())
+            self.assertFalse(result.artifacts)
+
+    def test_materializer_preserves_existing_deliverable_by_default(self):
+        from aulatex.template_materializer import TemplateMaterializer
+        from aulatex.workspace import AulaTeXWorkspace
+
+        target = self.root / "UnADM" / "licenciatura-en-derecho-unadm" / "filosofia-del-derecho-lde"
+        target.mkdir(parents=True)
+        report = target / "reporte-filosofia-del-derecho-Actividad-1.tex"
+        report.write_bytes(b"Documento revisado por el usuario")
+        result = TemplateMaterializer(AulaTeXWorkspace(self.root)).materialize_subject(target)
+        self.assertTrue(result.ok)
+        self.assertEqual(report.read_bytes(), b"Documento revisado por el usuario")
+
+    def test_materializer_rejects_similarly_named_external_program(self):
+        from aulatex.template_materializer import TemplateMaterializer
+        from aulatex.workspace import AulaTeXWorkspace
+
+        target = self.root / "otra-carpeta" / "UnADM" / "licenciatura-en-derecho-unadm" / "materia"
+        result = TemplateMaterializer(AulaTeXWorkspace(self.root)).materialize_subject(target)
+        self.assertFalse(result.ok)
+        self.assertFalse(target.exists())
 
 
 if __name__ == "__main__":

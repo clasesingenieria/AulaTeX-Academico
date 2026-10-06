@@ -129,6 +129,10 @@ def build_parser() -> argparse.ArgumentParser:
     planning.add_argument("--source", required=True, help="Modelo JSON revisado con activity o activities y sus fuentes.")
     planning.add_argument("--index-name", default="README.md", help="Nombre del índice generado; permite conservar un README por unidades.")
 
+    catalog = sub.add_parser("catalogo-plantillas", help="Auditar plantillas, estructura y temporales sin regenerar ni borrar documentos.")
+    catalog.add_argument("--root", default=str(Path.cwd()), help="Raiz del repositorio que se va a revisar.")
+    catalog.add_argument("--export", action="store_true", help="Actualizar catalogo-plantillas-aulatex.json y AUDITORIA-PLANTILLAS.md.")
+
     env_cmd = sub.add_parser("llm-env", help="Show AulaTeX LLM credential status without secrets.")
 
     check = sub.add_parser("llm-check", help="Check configured AulaTeX LLM engines.")
@@ -428,6 +432,23 @@ def main(argv: list[str] | None = None) -> None:
         from .gui import main as gui_main
 
         gui_main(diagnostics_enabled=bool(getattr(args, "diagnostics", False)))
+        return
+
+    if args.command == "catalogo-plantillas":
+        from .template_catalog import build_template_catalog, export_catalog, render_catalog_markdown
+
+        try:
+            workspace = AulaTeXWorkspace(Path(args.root).resolve())
+            catalog = build_template_catalog(workspace)
+            if args.export:
+                paths = export_catalog(workspace, catalog)
+                print(json.dumps({"subjects": len(catalog["subjects"]), "candidates": len(catalog["artifacts"]),
+                                  "issues": len(catalog["issues"]), "exports": [str(path) for path in paths]},
+                                 ensure_ascii=False, indent=2))
+            else:
+                print(render_catalog_markdown(catalog))
+        except (OSError, ValueError) as exc:
+            parser.error(str(exc))
         return
 
     if args.command == "generar-planeaciones":

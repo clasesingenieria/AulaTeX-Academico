@@ -345,3 +345,55 @@ def test_fit_monitor_uses_current_work_area(app):
     app._monitor_work_area.return_value = (1920, 0, 3840, 1040)
     app._fit_monitor()
     app._set_resolution.assert_called_once_with(1920, 1040)
+
+
+def test_catalog_renders_candidates_without_claiming_compilation(app):
+    bind_methods(app, "_build_catalog_tab", "_render_template_catalog", "_on_catalog_selection", "_set_text", json=__import__("json"),
+                 render_catalog_markdown=lambda payload: "Informe de prueba")
+    app.catalog_tab = ttk.Frame(app)
+    app.catalog_tab.pack(fill="both", expand=True)
+    app._build_catalog_tab()
+    path = "UAS/programa/materia/reporte-materia.tex"
+    catalog = {"subjects": [{"path": "UAS/programa/materia", "institution": "UAS", "selected": {},
+                             "candidates": [{"path": path, "role": "report"}]}],
+               "artifacts": {path: {"path": path, "compilation": "not_run"}}, "issues": []}
+    app._render_template_catalog(catalog)
+    parent = app.catalog_tree.get_children()[0]
+    child = app.catalog_tree.get_children(parent)[0]
+    assert app.catalog_tree.item(child, "values") == ("Reporte", "Candidata")
+    app.catalog_tree.selection_set(child)
+    app._on_catalog_selection()
+    assert "not_run" in app.catalog_details.get("1.0", "end")
+    assert "Compilación no evaluada" in app.catalog_status.get()
+
+
+def test_catalog_failure_releases_busy_state(app, monkeypatch):
+    bind_methods(app, "_drain_events", queue=queue)
+    app.catalog_status = tk.StringVar(app)
+    app.events = queue.Queue()
+    app.events.put(("catalog-error", "Fallo ficticio"))
+    monkeypatch.setattr(app, "after", Mock())
+    app._drain_events()
+    app._set_busy.assert_called_once_with("catalog", False)
+    assert app.catalog_status.get() == "Fallo ficticio"
+
+
+@pytest.mark.parametrize("confirmed", [False, True])
+def test_catalog_declaration_requires_confirmation(app, confirmed):
+    messages = Mock()
+    messages.askyesno.return_value = confirmed
+    writer = Mock()
+    bind_methods(app, "_declare_catalog_template", messagebox=messages, select_template=writer)
+    app.workspace = SimpleNamespace(repo_root=Path("."))
+    app.catalog_status = tk.StringVar(app)
+    app.catalog_tree = Mock()
+    app.catalog_tree.selection.return_value = ("candidate",)
+    app._catalog_rows = {"candidate": {"subject": {"path": "UAS/programa/materia"},
+                                      "candidate": {"path": "UAS/programa/materia/reporte-materia.tex", "role": "report"}}}
+    app._declare_catalog_template()
+    if confirmed:
+        writer.assert_called_once_with(app.workspace, "UAS/programa/materia", "UAS/programa/materia/reporte-materia.tex", "report")
+        app._refresh_template_catalog.assert_called_once()
+    else:
+        writer.assert_not_called()
+        app._refresh_template_catalog.assert_not_called()

@@ -87,6 +87,50 @@ Pruebas de GUI aisladas, sin credenciales ni llamadas reales a modelos:
 ./.venv/Scripts/python.exe -m pytest scripts/aulatex/tests/test_gui_workflows.py scripts/aulatex/tests/test_platform_credentials_gui.py scripts/aulatex/tests/test_platform_credentials.py -q
 ```
 
+## Catalogo y proteccion de plantillas
+
+**Herramientas > Plantillas y alineación** permite consultar candidatos por
+materia, discrepancias de manifiestos y temporales. La consulta se ejecuta en
+segundo plano, sin modelos ni acceso a plataformas.
+
+[seleccion-plantillas-aulatex.json](seleccion-plantillas-aulatex.json) declara
+entradas preferidas por materia y tipo: `report`, `presentation` y `activity`.
+Las selecciones iniciales corresponden a adaptadores documentados de seis
+materias de UCNL, las dos de UAS y Plan de Negocios de ITESCA. Las demás materias
+permanecen pendientes de revisión, sin elegir automáticamente por nombre.
+
+En la GUI, selecciona un candidato y pulsa **Declarar plantilla**. Tras confirmar,
+se actualiza únicamente el registro mediante reemplazo atómico. No se transforma
+el documento ni se cambian datos académicos. Declarar una plantilla no acredita
+compilación ni habilita nuevos renderizadores institucionales.
+
+```powershell
+./scripts/aulatex.ps1 catalogo-plantillas
+./scripts/aulatex.ps1 catalogo-plantillas --export
+```
+
+La segunda orden actualiza [AUDITORIA-PLANTILLAS.md](AUDITORIA-PLANTILLAS.md) y
+[catalogo-plantillas-aulatex.json](catalogo-plantillas-aulatex.json), con huellas
+SHA-256, candidatos, dependencias literales y selecciones. Los indicios de motor
+y bibliografía proceden del archivo inspeccionado; no prueban la configuración
+efectiva de todas sus dependencias. Imágenes, macros dinámicas y compilación se
+validan por separado. Los manifiestos históricos se informan, no se reescriben.
+
+El materializador existente es específico de Derecho de UnADM y rechaza otros
+programas antes de escribir. Conserva archivos existentes por defecto; el agente
+ya no fuerza su sobrescritura al pedir `generar-plantilla`. Las otras instituciones
+mantienen sus adaptadores, sin una regeneración genérica con identidad UnADM.
+
+El árbol editorial, el mapa y el inventario comparten la clasificación de nodos.
+Se incluye tecnmNL y se excluyen carpetas de apoyo y vacías sin declaración;
+un marcador explícito de materia permite registrar una materia aún vacía.
+
+La auditoría de `.tmp*`, `tmp`, `.build` y `.aulatex-temp` registra volúmenes,
+estado en Git y comprobantes reconocibles por nombre. Compara estos comprobantes
+con copias institucionales del mismo nombre mediante SHA-256. No abre sesiones
+web, no publica su contenido y nunca borra archivos, ni siquiera duplicados.
+La ausencia de coincidencia no demuestra que un comprobante sea único.
+
 ## Arquitectura y compatibilidad de flujos agénticos AulaTeX
 
 AulaTeX combina flujos especializados que pueden cooperar si intercambian productos duraderos del workspace. La regla general es no depender de logs temporales como fuente de verdad: los resultados reutilizables deben materializarse en TEX, BIB, referencias, `extractor-aulatex/` o `.memoria-aulatex/`.

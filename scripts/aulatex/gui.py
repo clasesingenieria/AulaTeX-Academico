@@ -43,6 +43,7 @@ from .investigation import (
 )
 from .llm_bridge import DEFAULT_MAX_TOKENS, LLM_ENGINES, AulaTeXLLMClient
 from .gui_widgets import EnginePicker, ScrollableForm
+from .template_catalog import build_template_catalog, export_catalog, render_catalog_markdown, select_template
 from .workspace import GENERATION_MARKER_FILENAME, AulaTeXWorkspace, EditorialScope
 
 
@@ -177,6 +178,7 @@ class AulaTeXApp(tk.Tk):
         menu = tk.Menu(self)
         tools = tk.Menu(menu, tearoff=False)
         tools.add_command(label="Extractor", command=self._open_tools)
+        tools.add_command(label="Plantillas y alineación", command=self._show_template_catalog)
         tools.add_command(label="Comprobar proveedores IA", command=self._check_llms)
         menu.add_cascade(label="Herramientas", menu=tools)
         menu.add_command(label="Configuración", command=self._open_settings)
@@ -275,6 +277,9 @@ class AulaTeXApp(tk.Tk):
         window.protocol("WM_DELETE_WINDOW", lambda: self._close_auxiliary(key))
 
     def _close_auxiliary(self, key) -> None:
+        if key == "catalog" and "catalog" in self._active_jobs:
+            messagebox.showinfo("AulaTeX", "Espera a que termine la auditoría de plantillas.", parent=self)
+            return
         if key == "tools" and "extractor" in self._active_jobs:
             messagebox.showinfo("AulaTeX", "Espera a que termine la comprobación del extractor.", parent=self)
             return
@@ -296,6 +301,137 @@ class AulaTeXApp(tk.Tk):
 
     def _show_architecture(self) -> None:
         self._open_auxiliary("help", "Ayuda", (("arch_tab", "Arquitectura", "_build_arch_tab"),))
+
+    def _show_template_catalog(self) -> None:
+        self._open_auxiliary("catalog", "Plantillas y alineación", (("catalog_tab", "Catálogo", "_build_catalog_tab"),))
+
+    def _build_catalog_tab(self) -> None:
+        self.catalog_tab.columnconfigure(0, weight=1)
+        self.catalog_tab.rowconfigure(1, weight=1)
+        self.catalog_status = tk.StringVar(self, value="Sin inventario")
+        self._catalog_payload = None
+        self._catalog_rows = {}
+        actions = ttk.Frame(self.catalog_tab)
+        actions.grid(row=0, column=0, sticky="ew", pady=(0, 8))
+        buttons = []
+        for title, command in (("Actualizar", self._refresh_template_catalog),
+                               ("Declarar plantilla", self._declare_catalog_template),
+                               ("Abrir archivo", self._open_catalog_template),
+                               ("Exportar informe", self._export_template_catalog)):
+            button = ttk.Button(actions, text=title, command=command)
+            button.pack(side="left", padx=(0, 6))
+            buttons.append(button)
+        tabs = ttk.Notebook(self.catalog_tab)
+        tabs.grid(row=1, column=0, sticky="nsew")
+        templates = ttk.Frame(tabs, padding=8)
+        templates.columnconfigure(0, weight=1)
+        templates.rowconfigure(0, weight=1)
+        templates.rowconfigure(1, weight=1)
+        tabs.add(templates, text="Plantillas")
+        self.catalog_tree = ttk.Treeview(templates, columns=("role", "status"), show="tree headings", selectmode="browse")
+        self.catalog_tree.heading("#0", text="Materia / archivo")
+        self.catalog_tree.heading("role", text="Tipo")
+        self.catalog_tree.heading("status", text="Selección")
+        self.catalog_tree.column("#0", width=480)
+        self.catalog_tree.column("role", width=100)
+        self.catalog_tree.column("status", width=130)
+        self.catalog_tree.grid(row=0, column=0, sticky="nsew")
+        scrollbar = ttk.Scrollbar(templates, orient="vertical", command=self.catalog_tree.yview)
+        scrollbar.grid(row=0, column=1, sticky="ns")
+        self.catalog_tree.configure(yscrollcommand=scrollbar.set)
+        self.catalog_tree.bind("<<TreeviewSelect>>", self._on_catalog_selection)
+        self.catalog_details = ScrolledText(templates, height=8, width=50, wrap="word", state="disabled")
+        self.catalog_details.grid(row=1, column=0, columnspan=2, sticky="nsew", pady=(8, 0))
+        self.catalog_report = ScrolledText(tabs, height=12, width=60, wrap="word", state="disabled")
+        tabs.add(self.catalog_report.frame, text="Discrepancias y temporales")
+        ttk.Label(self.catalog_tab, textvariable=self.catalog_status, wraplength=850).grid(row=2, column=0, sticky="w", pady=(8, 0))
+        self._register_busy_widgets("catalog", *buttons)
+        self._refresh_template_catalog()
+
+    def _refresh_template_catalog(self) -> None:
+        if "catalog" in self._active_jobs:
+            return
+        self._set_busy("catalog", True)
+        self.catalog_status.set("Analizando plantillas y comprobantes locales...")
+
+        def work():
+            try:
+                self.events.put(("catalog-result", build_template_catalog(self.workspace)))
+            except (OSError, ValueError) as exc:
+                self.events.put(("catalog-error", f"No se pudo completar la auditoría: {exc}"))
+
+        self._thread(work)
+
+    def _render_template_catalog(self, catalog) -> None:
+        self._catalog_payload = catalog
+        self.catalog_tree.delete(*self.catalog_tree.get_children())
+        self._catalog_rows = {}
+        roles = {"report": "Reporte", "presentation": "Presentación", "activity": "Actividad"}
+        for subject in catalog["subjects"]:
+            parent = self.catalog_tree.insert("", "end", text=f"{subject['institution']} / {Path(subject['path']).name}",
+                                              values=("Materia", "Declarada" if subject["selected"] else "Por revisar"))
+            self._catalog_rows[parent] = {"subject": subject}
+            for candidate in subject["candidates"]:
+                selected = subject["selected"].get(candidate["role"]) == candidate["path"]
+                node = self.catalog_tree.insert(parent, "end", text=Path(candidate["path"]).name,
+                                                values=(roles[candidate["role"]], "Declarada" if selected else "Candidata"))
+                self._catalog_rows[node] = {"subject": subject, "candidate": candidate}
+        self._set_text(self.catalog_report, render_catalog_markdown(catalog), readonly=True)
+        self._set_text(self.catalog_details, "", readonly=True)
+        self.catalog_status.set(f"{len(catalog['subjects'])} materias · {len(catalog['artifacts'])} candidatos · "
+                                f"{len(catalog['issues'])} incidencias · Compilación no evaluada")
+
+    def _on_catalog_selection(self, _event=None) -> None:
+        selection = self.catalog_tree.selection()
+        row = self._catalog_rows.get(selection[0]) if selection else None
+        if row is None:
+            return
+        payload = self._catalog_payload["artifacts"][row["candidate"]["path"]] if "candidate" in row else row["subject"]
+        self._set_text(self.catalog_details, json.dumps(payload, ensure_ascii=False, indent=2), readonly=True)
+
+    def _declare_catalog_template(self) -> None:
+        selection = self.catalog_tree.selection()
+        row = self._catalog_rows.get(selection[0]) if selection else None
+        if row is None or "candidate" not in row:
+            self.catalog_status.set("Selecciona un archivo candidato de una materia.")
+            return
+        candidate = row["candidate"]
+        if not messagebox.askyesno("Declarar plantilla", f"¿Usar esta plantilla para {candidate['role']}?\n\n{candidate['path']}\n\nSe actualiza el registro, no el documento.", parent=self):
+            return
+        try:
+            select_template(self.workspace, row["subject"]["path"], candidate["path"], candidate["role"])
+        except (OSError, ValueError) as exc:
+            self.catalog_status.set(str(exc))
+            return
+        self._refresh_template_catalog()
+
+    def _open_catalog_template(self) -> None:
+        selection = self.catalog_tree.selection()
+        row = self._catalog_rows.get(selection[0]) if selection else None
+        if row is None or "candidate" not in row:
+            self.catalog_status.set("Selecciona un archivo candidato.")
+            return
+        path = self.workspace.repo_root / row["candidate"]["path"]
+        if not path.is_file():
+            self.catalog_status.set("El archivo ya no existe; actualiza el catálogo.")
+            return
+        try:
+            if os.name == "nt":
+                os.startfile(str(path))
+            else:
+                subprocess.Popen(["xdg-open", str(path)])
+        except OSError as exc:
+            self.catalog_status.set(str(exc))
+
+    def _export_template_catalog(self) -> None:
+        if self._catalog_payload is None:
+            self.catalog_status.set("Actualiza primero el catálogo.")
+            return
+        try:
+            export_catalog(self.workspace, self._catalog_payload)
+            self.catalog_status.set("Informe y catálogo exportados en la raíz del repositorio.")
+        except OSError as exc:
+            self.catalog_status.set(str(exc))
 
     def _request_close(self) -> None:
         if self._active_jobs:
@@ -1458,7 +1594,7 @@ class AulaTeXApp(tk.Tk):
             self._active_jobs.discard(group)
         labels = {"agent": "Agente", "compile": "Compilación", "generation": "Generación",
                   "feedback": "Memoria", "investigation": "Investigación", "llm-chat": "Asistente",
-                  "extractor": "Extractor", "llm-check": "Comprobación IA"}
+                  "extractor": "Extractor", "llm-check": "Comprobación IA", "catalog": "Auditoría de plantillas"}
         self.task_status.set("En curso: " + ", ".join(labels.get(item, item) for item in sorted(self._active_jobs))
                              if self._active_jobs else "Listo")
         for widget, initial_state in self._busy_groups.get(group, []):
@@ -2962,6 +3098,12 @@ class AulaTeXApp(tk.Tk):
                 break
             if category == "result-path":
                 self._record_result(*event)
+            elif category == "catalog-result":
+                self._set_busy("catalog", False)
+                self._render_template_catalog(event)
+            elif category == "catalog-error":
+                self._set_busy("catalog", False)
+                self.catalog_status.set(str(event))
             elif category == "llm-check-finished":
                 self._set_busy("llm-check", False)
             elif category == "agent":

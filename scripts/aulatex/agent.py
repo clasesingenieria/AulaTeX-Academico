@@ -398,12 +398,14 @@ class AulaTeXAgent:
             materialization = self.template_materializer.materialize_subject(
                 target_ctx.target_path,
                 activity_number=request.activity_number,
-                force=request.action.strip().lower() == "generar-plantilla",
+                force=False,
             )
             workflow.record(
                 "materialize-end", "ok" if materialization.ok else "error",
-                f"{len(materialization.artifacts)} artefactos procesados",
+                f"{len(materialization.artifacts)} artefactos procesados. " + " ".join(materialization.notes),
             )
+            if not materialization.ok:
+                return materialization, {"applied": False, "reason": "unsupported-template-profile"}, []
         applied_tex = self._apply_generated_tex(request, target_ctx, tasks, results, workflow)
         compile_results: list[dict[str, object]] = []
         if request.compile_tex:

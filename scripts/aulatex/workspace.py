@@ -10,7 +10,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 
-INSTITUTIONS = ("UnADM", "UCNL", "UANL", "ITESCA", "IIIEPE")
+INSTITUTIONS = ("UnADM", "UCNL", "UANL", "ITESCA", "IIIEPE", "UAS", "tecnmNL")
 GENERATION_MARKER_FILENAME = ".aulatex-node.json"
 SKIP_DIR_NAMES = {
     ".git",
@@ -145,15 +145,33 @@ class AulaTeXWorkspace:
         marker = self._read_generation_marker(path)
         if marker:
             return marker.get("level") == "carrera"
+        if self._is_support_dir(path):
+            return False
         name = path.name.lower()
         if any(name.startswith(prefix) for prefix in CAREER_PREFIXES):
             return True
         if (path / "README.md").exists() or (path / "COMPILACION.md").exists():
-            if list(self._list_visible_dirs(path, exclude_prefixes=("referencias-",))):
+            if any(self._is_subject_dir(child) for child in self._list_visible_dirs(path)):
                 return True
         has_program_files = bool(self._match_direct_files(path, "reporte*.tex") or self._match_direct_files(path, "presentacion*.tex") or self._match_direct_files(path, "*.bib"))
-        has_children = bool(self._list_visible_dirs(path, exclude_prefixes=("referencias-",)))
+        has_children = any(self._is_subject_dir(child) for child in self._list_visible_dirs(path))
         return has_program_files and has_children
+
+    @staticmethod
+    def _is_support_dir(path: Path) -> bool:
+        name = path.name.casefold()
+        return name in {"assets", "img", "referencias", "planeaciones", "extractor-aulatex",
+                        "investigacion-aulatex", "retroalimentacion-aulatex", "actividades-generadas"} or name.startswith(
+                            ("assets-", "referencias-", "planeaciones-", "notas-"))
+
+    def _is_subject_dir(self, path: Path) -> bool:
+        marker = self._read_generation_marker(path)
+        if marker:
+            return marker.get("level") == "materia"
+        if self._is_support_dir(path):
+            return False
+        return any(path.glob("*.tex")) or any(path.glob("*.bib")) or (path / "README.md").is_file() or any(
+            path.glob("programa-analitico*.md"))
 
     def _read_generation_marker(self, root: Path) -> dict:
         marker_path = root / GENERATION_MARKER_FILENAME
@@ -259,7 +277,6 @@ class AulaTeXWorkspace:
             scopes.append(institution_scope)
 
             for child in self._list_visible_dirs(institution_root, exclude_prefixes=("referencias-",)):
-                child_marker = self._read_generation_marker(child)
                 if self._is_career_dir(child):
                     career_scope = EditorialScope(
                         key=self._scope_key("carrera", institution=institution, career=child.name),
@@ -273,8 +290,7 @@ class AulaTeXWorkspace:
                     scopes.append(career_scope)
                     subject_dirs = self._list_visible_dirs(child, exclude_prefixes=("referencias-",))
                     for subject_dir in subject_dirs:
-                        subject_marker = self._read_generation_marker(subject_dir)
-                        if subject_marker and subject_marker.get("level") not in {"materia", "actividad"}:
+                        if not self._is_subject_dir(subject_dir):
                             continue
                         subject_scope = EditorialScope(
                             key=self._scope_key("materia", institution=institution, career=child.name, subject=subject_dir.name),
@@ -309,7 +325,7 @@ class AulaTeXWorkspace:
                             )
                     continue
 
-                if child_marker and child_marker.get("level") not in {"materia", "actividad"}:
+                if not self._is_subject_dir(child):
                     continue
 
                 subject_scope = EditorialScope(
@@ -402,38 +418,23 @@ class AulaTeXWorkspace:
 
     def scan_tree(self) -> dict[str, dict[str, list[str]]]:
         tree: dict[str, dict[str, list[str]]] = {}
-        for root in self._institution_roots():
-            institution = root.name
-            careers: dict[str, list[str]] = {}
-            for career in self._list_visible_dirs(root, exclude_prefixes=("referencias-",)):
-                marker = self._read_generation_marker(career)
-                if marker and marker.get("level") not in {"carrera", "materia"}:
-                    continue
-                subjects = [
-                    child.name
-                    for child in self._list_visible_dirs(career, exclude_prefixes=("referencias-",))
-                ]
-                careers[career.name] = subjects
-            tree[institution] = careers
+        for scope in self.scan_editorial_scopes():
+            if scope.level == "institucion":
+                tree.setdefault(scope.institution, {})
+            elif scope.level == "carrera":
+                tree[scope.institution].setdefault(scope.career, [])
+            elif scope.level == "materia":
+                tree[scope.institution].setdefault(scope.career, []).append(scope.subject)
         return tree
 
     def scan_template_inventory(self) -> list[TemplateInventoryNode]:
-        inventory: list[TemplateInventoryNode] = []
-        for institution_root in self._institution_roots():
+        scopes, children = self.editorial_scope_index()
 
-            careers: list[TemplateInventoryNode] = []
-            for career_root in self._list_visible_dirs(institution_root, exclude_prefixes=("referencias-",)):
-                marker = self._read_generation_marker(career_root)
-                if marker and marker.get("level") == "materia":
-                    continue
-                subjects = [
-                    self._inventory_node(subject_root, "materia", [])
-                    for subject_root in self._list_visible_dirs(career_root, exclude_prefixes=("referencias-",))
-                ]
-                careers.append(self._inventory_node(career_root, "carrera", subjects))
+        def build(scope: EditorialScope) -> TemplateInventoryNode:
+            descendants = [build(child) for child in children.get(scope.key, []) if child.level != "actividad"]
+            return self._inventory_node(self.repo_root / scope.relative_path, scope.level, descendants)
 
-            inventory.append(self._inventory_node(institution_root, "institucion", careers))
-        return inventory
+        return [build(scope) for scope in scopes.values() if scope.level == "institucion"]
 
     def find_tex_files(self, target: str | Path | None = None, limit: int = 200) -> list[Path]:
         root = self.resolve_target(target)

@@ -37,7 +37,7 @@ class TemplateMaterializer:
     def __init__(self, workspace: AulaTeXWorkspace | None = None) -> None:
         self.workspace = workspace or AulaTeXWorkspace()
 
-    def materialize_subject(self, target: str | Path, *, activity_number: int = 1, force: bool = True) -> MaterializationResult:
+    def materialize_subject(self, target: str | Path, *, activity_number: int = 1, force: bool = False) -> MaterializationResult:
         target_dir = self.workspace.resolve_target(target)
         if target_dir == self.workspace.repo_root:
             return MaterializationResult(
@@ -45,6 +45,15 @@ class TemplateMaterializer:
                 target_dir,
                 (),
                 ("No se materializa sobre la raiz del repositorio para evitar sobrescribir README.md.",),
+            )
+        supported_parent = (self.workspace.repo_root / "UnADM" / "licenciatura-en-derecho-unadm").resolve()
+        if target_dir.parent != supported_parent:
+            return MaterializationResult(
+                False,
+                target_dir,
+                (),
+                ("El materializador actual solo admite materias de UnADM/licenciatura-en-derecho-unadm. "
+                 "Utiliza el adaptador institucional de la materia; no se ha creado ni modificado ningun archivo.",),
             )
         target_dir.mkdir(parents=True, exist_ok=True)
         profile = self._profile(target_dir, activity_number)
@@ -759,6 +768,8 @@ con fuentes institucionales, normativas y academicas verificables \\citep{{{cita
 
     def _render_structure_json(self, profile: SubjectProfile, memory: dict[str, Any]) -> str:
         payload = {
+        "schema_version": "1.0",
+        "kind": "subject_file_inventory",
             "node": profile.folder_slug,
             "slug": profile.slug,
             "title": profile.title,
