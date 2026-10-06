@@ -1,0 +1,1274 @@
+Su progreso
+  
+Curso: Teoría del Estado y Constitución | 020 | Mi UnADMPresentación
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                         Bienvenida¡Bienvenidos al ciclo escolar 2026-2, B2!Apreciable comunidad.Es un privilegio y un honor comenzar este nuevo ciclo escolar, en el que tendremos la maravillosa oportunidad de conocer la Teoría del Estado y la Constitución.¡Les deseo éxito en esta nueva etapa académica enfocada en la Teoría del Estado y la Constitución!Atentamente,Ana Lilian Sánchez Chávez
+                    
+                
+        
+
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                         Presentación del docenteSoy Ana Lilian Sánchez Chávez, Maestra en Derecho, he ejercido la profesión desde hace más de 24 años y es un honor recibirlos en la asignatura de "Teoría del Estado y Constitución".
+                    
+                
+        
+
+
+        
+            
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                                                Sala de Conferencias Web  BigBlueButton    
+                                                    
+                                        
+                                    
+                                
+                            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+        
+
+
+        
+            
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                                                Avisos  Foro    
+                                                    
+                                        
+                                    
+                                
+                            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+        
+
+
+        
+            
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                                                Foro de dudas     
+                                                    
+                                        
+                                    
+                                
+                            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+        
+
+
+        
+            
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                                                Reglamento_Universitario_2026  Archivo    
+                                                    
+                                        
+                                    
+                                
+                            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+        
+
+
+        
+            
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                                                Lineamientos_IA_Aprobados  Archivo    
+                                                    
+                                        
+                                    
+                                
+                            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+        
+
+
+        
+            
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                                                LineamientosEvaluacionAprendizaje_2024  Archivo    
+                                                    
+                                        
+                                    
+                                
+                            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+        
+
+
+        
+            
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                                                Calendario  Archivo    
+                                                    
+                                        
+                                    
+                                
+                            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+        
+
+            .aprendizajes{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 10px;
+            }
+            .contenedor{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .contenedor .d-flex{
+                display: block !important;
+                margin: 10px;
+            }
+            .title_sections{
+              height: 75px;
+              display: flex;
+              justify-content: center;
+              text-align: center;
+              background: #cecece;
+              color: #1d2125 !important;
+              align-items: center;
+              border-radius: 5px;
+              margin: 20px;
+              font-size: 3vw;
+            }
+            .left-end{
+            display: flex !important;
+             justify-content: end;
+            }
+            
+            .course-content ul.buttons li.section .content{
+                margin: 0px !important;
+                margin-right: 15px !important;
+            }
+            .aprendizaje ul.section {
+                margin: 0 !important; 
+            }
+            #section-0 .content{
+                display: block !important;
+            }
+            .message-not-content{
+                height: 250px;
+                justify-content: center;
+                display: flex;
+                align-items: center;
+                border: 1px solid #dee2e6;
+                border-radius: 10px;
+                margin-top: 15px; 
+                text-align: center;
+            }
+            .weeks-date{
+              background: #cecece;
+              width: 100%;
+              display: grid;
+              place-items: center;
+              border-radius: 5px;
+              padding: 15px;
+              margin-top: 15px;
+            }
+            .weeks-date p{
+                margin: 0px !important;
+            }
+            #completionprogressid{
+                display: none !important;
+            }
+            .content > .summary >.no-overflow {
+                width: 100%;
+            }
+            .content > .summary {
+                  width: 100%;
+                  display: grid;
+                  place-items: center;
+                  border-radius: 5px;
+            }
+            
+            @media (min-width: 600px) {
+                .title_sections{
+                    font-size: 18px !important;
+                }
+            }
+            @media (max-width: 975px) {
+                .aprendizaje{
+                    max-width: 50% !important;
+                }
+                .pleca-item{
+                background-size: cover !important; 
+                }
+            }
+            @media (max-width: 636px) {
+                .aprendizaje{
+                    max-width: 100% !important;
+                }
+                .title-date-week{
+                    font-size: 1rem !important;
+                }
+                .title-week{
+                 font-size: 1.4rem !important;
+                }
+            }
+            
+            .pleca-item{
+                background-image: url(../plecabase.png); 
+                height: auto; 
+                background-size: contain; 
+                background-repeat: repeat-x;
+            }
+            /* li > .activity-item{
+                display: flex;
+                width: 100%;
+            }*/
+            .badge{
+                white-space: revert !important;;
+            }
+            .badge > .font-weight-normal {
+                line-height: 1.9;
+            }
+            .completion-info .badge-pill{
+                border-radius: 1rem !important;
+            }
+            Planificación
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                         Introducción a la unidad didácticaLa asignatura de Teoría del Estado y Constitución constituye un eje fundamental para el ejercicio de la profesión, debido a que es una aproximación histórica, teórica, práctica y crítica del origen, naturaleza y fines del Estado, específicamente se reflexionara sobre la supremacía constitucional y la necesidad de equilibrar la soberanía con la protección de los derechos humanos en el México contemporáneo, profundizando en el análisis crítico de las funciones y límites del Estado, mediante el estudio de casos jurídicos concretos.
+                    
+                
+        
+
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                         ObjetivoInvestigar la estructura y funcionamiento del Estado para realizar análisis críticos de la estructura y funcionamiento del Estado, adquiriendo la aptitud de realizar nuevas propuestas para que un Estado cumpla puntualmente con sus objetivos.
+                    
+                
+        
+
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                         Forma de evaluación finalLineamientos: Con base en lo señalado en los
+siguientes artículos del Reglamento Universitario de la Universidad Abierta
+y a Distancia de México:
+
+Artículo
+27. La calificación representa la valoración numérica del
+aprovechamiento que la o el estudiante logró en cada unidad didáctica. La
+escala de calificaciones comprende del 0 (cero) al 100 (cien), y la
+calificación mínima aprobatoria será 60 (sesenta).
+
+En
+ningún caso procederá la renuncia a la calificación obtenida. Las
+actividades y evidencias de aprendizaje en las que se identifique falta de
+integridad académica serán evaluadas con 0 (cero).
+
+Artículo
+76. Son obligaciones de las y los estudiantes: 
+
+V.
+Realizar, con integridad académica, las actividades que están señaladas en el
+aula virtual del programa educativo en el que están inscritos, conforme a las
+fechas establecidas en el calendario de aula.
+
+Criterios de evaluaciónLineamientos para la evaluación del aprendizaje
+
+La entrega de actividades se realizará de acuerdo con el calendario
+proporcionado por su Figura Académica y marcado en el presente documento.La entrega corresponde a un solo intento.Las entregas extemporáneas a la fecha límite estarán sujeta a una
+penalización de acuerdo a la siguiente tabla. La recepción de actividades extemporáneas
+será hasta el día de cierre de aula, 02 de diciembre.
+ 
+  
+  Criterio 
+  
+  
+  Sanción / Penalización 
+  
+ 
+ 
+  
+   De 1 a 3 días hábiles
+  de actividad extemporánea 
+  
+  
+  1 punto menos
+  
+ 
+ 
+  
+   De 3 a 09 días hábiles
+  de actividad extemporánea 
+  
+  
+  2 puntos menos 
+  
+ 
+ 
+  
+  Más de 09 días hábiles de actividad extemporánea
+  
+  
+  3 puntos menos 
+  
+ 
+
+
+
+
+
+
+La persona estudiante entregará sus actividades debidamente citadas en
+formato APA 7ª edición.La aplicación o uso de las herramientas de IA se debe apegar a los Lineamientos
+para el uso ético y responsable de la IA.  Escala de evaluación para actividades con IA.
+ 
+  
+  Criterio 
+  
+  
+  Sanción / Penalización 
+  
+ 
+ 
+  
+  50% a 100%, NO declaró uso de IA.
+  
+  
+  6 puntos menos 
+  
+ 
+ 
+  
+  50% en adelante, declarado.
+  
+  
+  No se penaliza, pero se evalúa en función del
+  contenido 
+  
+ 
+ 
+  
+  0 a 49%, NO declarado
+  
+  
+  3 puntos menos 
+  
+ 
+ 
+  
+  0 al 49%, se declara el uso de IA.
+  
+  
+  No se penaliza, pero se evalúa en función del
+  contenido  
+  
+ 
+ La persona estudiante perderá su intento de envío de la actividad cuando
+entregue o realice una o más de las condiciones enunciadas en Los Lineamientos
+para la evaluación del aprendizaje: CAPÍTULO II, SECCIÓN TERCERA, DE LA
+ELABORACIÓN Y ENTREGA DE ACTIVIDADES, apartado décimo octavo.La entrega de
+actividades, recepción y evaluación se rige por dichos lineamientos y el RUUADM,
+por lo tanto, no se reciben por otros medios distintos a aula ni posterior al
+cierre de la misma.
+                    
+                
+        
+
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                         Cronograma
+            
+            
+                
+                
+                    Semanas
+                    Fechas
+                
+                
+                
+                
+                Semana 1
+                lunes 28 de septiembre de 2026 al domingo 4 de octubre de 2026
+            
+                Semana 2
+                lunes 5 de octubre de 2026 al domingo 11 de octubre de 2026
+            
+                Semana 3
+                lunes 12 de octubre de 2026 al domingo 18 de octubre de 2026
+            
+                Semana 4
+                lunes 19 de octubre de 2026 al domingo 25 de octubre de 2026
+            
+                Semana 5
+                lunes 26 de octubre de 2026 al domingo 1 de noviembre de 2026
+            
+                Semana 6
+                lunes 2 de noviembre de 2026 al domingo 8 de noviembre de 2026
+            
+                Semana 7
+                lunes 9 de noviembre de 2026 al domingo 15 de noviembre de 2026
+            
+                Semana 8
+                lunes 16 de noviembre de 2026 al domingo 22 de noviembre de 2026
+            
+                Semana 9
+                lunes 23 de noviembre de 2026 al domingo 29 de noviembre de 2026
+            
+                Semana 10
+                lunes 30 de noviembre de 2026 al domingo 6 de diciembre de 2026
+            Cierre de actividades en plataforma: 02 de diciembre de 2026, 23:55 horasEnvío de calificaciones finales: 04 de diciembre de 2026Solicitud de aclaración de calificaciones: 05 de diciembre de 2026Atención de aclaración de calificaciones: 6 de diciembre de 2026
+                
+            
+                    
+                
+        
+Semana 1 Semana 1
+                            del lunes 28 de septiembre de 2026 al domingo 4 de octubre de 2026
+                            
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        Objetivo específico:Identificar la naturaleza jurídica del Estado a través de análisis de sus distintas funciones para conocer y distinguir las causas y los fines de su funcionamiento.
+                    
+                
+        
+
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        
+                    
+                
+        
+
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        
+                    
+                
+        
+Actividades de aprendizajeRecursos de apoyo
+
+        
+            
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                                                Formulario para elegir día y hora para Sesión Síncrona "Teoría del Estado y Constitución"  URL    
+                                                    
+                                        
+                                    
+                                
+                            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+        
+Trabajo colaborativo
+
+        
+            
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                                                S1. Foro de presentación y diagnóstico     
+                                                    
+                                        
+                                    
+                                
+                            
+        
+                    
+                            
+                                        
+                                                
+                                                                
+                                                                    
+                                                                    Hecho: Ver
+                                                                
+                                                
+                                        
+                            
+                    
+            
+        
+        
+        
+        
+        
+Semana 2 Semana 2
+                            del lunes 5 de octubre de 2026 al domingo 11 de octubre de 2026
+                            
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        Objetivo específico: Identificar la naturaleza jurídica del Estado
+a través de análisis de sus distintas funciones para conocer y distinguir las
+causas y los fines de su funcionamiento. 
+                    
+                
+        
+
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        
+                    
+                
+        
+Actividades de aprendizaje
+
+        
+            
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                                                S2 Línea de tiempo  Tarea    
+                                                    
+                                        
+                                    
+                                
+                            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                            
+                                
+                                 Disponible a partir de 6 de octubre de 2026, 18:00
+                                
+                            
+        
+Recursos de apoyo
+
+        
+            
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                                                PA S2_S3 Teoría del Estado y Constitución 2026  Archivo    
+                                                    
+                                        
+                                    
+                                
+                            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+        
+Trabajo colaborativoSemana 3 Semana 3
+                            del lunes 12 de octubre de 2026 al domingo 18 de octubre de 2026
+                            
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        Objetivo específico: Analizar las formaciones políticas realizando
+un estudio de sus antecedentes para comprender el origen y los objetivos del
+Estado.
+                    
+                
+        
+
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        
+                    
+                
+                            
+                                
+                                 Disponible a partir de 9 de octubre de 2026
+                                
+                            
+        
+Actividades de aprendizajeRecursos de apoyo
+
+        
+            
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                                                PA S2_S3 Teoría del Estado y Constitución 2026  Archivo    
+                                                    
+                                        
+                                    
+                                
+                            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                            
+                                
+                                 Disponible a partir de 9 de octubre de 2026
+                                
+                            
+        
+Trabajo colaborativoSemana 4 Semana 4
+                            del lunes 19 de octubre de 2026 al domingo 25 de octubre de 2026
+                            
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        Objetivo específico: Analizar las formaciones políticas realizando
+un estudio de sus antecedentes para comprender el origen y los objetivos del
+Estado. 
+                    
+                
+        
+
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        
+                    
+                
+                            
+                                
+                                 Disponible a partir de 16 de octubre de 2026
+                                
+                            
+        
+Actividades de aprendizajeRecursos de apoyoTrabajo colaborativoSemana 5 Semana 5
+                            del lunes 26 de octubre de 2026 al domingo 1 de noviembre de 2026
+                            
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        Objetivo específico:Identificar los elementos que conforman el
+Estado para entender la razón de su estructura y funcionamiento.
+                    
+                
+        
+
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        
+                    
+                
+                            
+                                
+                                 Disponible a partir de 23 de octubre de 2026
+                                
+                            
+        
+Actividades de aprendizajeRecursos de apoyoTrabajo colaborativoSemana 6 Semana 6
+                            del lunes 2 de noviembre de 2026 al domingo 8 de noviembre de 2026
+                            
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        Objetivo específico: Dimensionar las atribuciones y organización
+del Estado para comprender la ponderación de sus facultades y poderes
+políticos. 
+                    
+                
+        
+
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        
+                    
+                
+                            
+                                
+                                 Disponible a partir de 30 de octubre de 2026
+                                
+                            
+        
+Actividades de aprendizajeRecursos de apoyoTrabajo colaborativoSemana 7 Semana 7
+                            del lunes 9 de noviembre de 2026 al domingo 15 de noviembre de 2026
+                            
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        Objetivo específico: Dimensionar las atribuciones y organización del Estado
+para comprender la ponderación de sus facultades y poderes políticos. 
+                    
+                
+        
+
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        
+                    
+                
+                            
+                                
+                                 Disponible a partir de 6 de noviembre de 2026
+                                
+                            
+        
+Actividades de aprendizajeRecursos de apoyoTrabajo colaborativoSemana 8 Semana 8
+                            del lunes 16 de noviembre de 2026 al domingo 22 de noviembre de 2026
+                            
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        Objetivo específico: Justificar la existencia del Estado y describir sus
+fines y objetivos.
+                    
+                
+        
+
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        
+                    
+                
+                            
+                                
+                                 Disponible a partir de 13 de noviembre de 2026
+                                
+                            
+        
+Actividades de aprendizajeRecursos de apoyoTrabajo colaborativoSemana 9 Semana 9
+                            del lunes 23 de noviembre de 2026 al domingo 29 de noviembre de 2026
+                            
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        Objetivo específico: Justificar la existencia del Estado y describir sus
+fines y objetivos.
+                    
+                
+        
+
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        
+                    
+                
+                            
+                                
+                                 Disponible a partir de 20 de noviembre de 2026
+                                
+                            
+        
+Actividades de aprendizajeRecursos de apoyoTrabajo colaborativoSemana 10 Semana 10
+                            del lunes 30 de noviembre de 2026 al domingo 6 de diciembre de 2026
+                            
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        Objetivo específico: Investigar la estructura y funcionamiento del Estado
+para realizar análisis críticos de la estructura y funcionamiento del Estado,
+adquiriendo la aptitud de realizar nuevas propuestas para que un Estado cumpla
+puntualmente con sus objetivos.
+                    
+                
+        
+
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        
+                    
+                
+                            
+                                
+                                 Disponible a partir de 27 de noviembre de 2026
+                                
+                            
+        
+Actividades de aprendizajeRecursos de apoyoTrabajo colaborativo#buttonsectioncontainer .buttonsection.current {
+                background: #611232;
+            }
+            #buttonsectioncontainer .buttonsection.sectionvisible {
+                background: #611232;
+            }
+            .title-week{
+                color:#611232;
+                font-size: 1.65rem;
+            }
+            .title-date-week{
+                font-size: 1.4rem;
+            }
+            :root{
+                --color_primary:#611232;
+            }
+            .main-inner .drawer-left-toggle button{
+                background: var(--color_primary) !important;
+            }
+           234567891011

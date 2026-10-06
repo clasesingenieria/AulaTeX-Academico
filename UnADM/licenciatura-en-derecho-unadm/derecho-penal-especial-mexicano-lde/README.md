@@ -12,11 +12,14 @@ Materia de la Licenciatura en Derecho de la UnADM.
 
 ## Estructura
 
-- eporte-derecho-penal-especial-mexicano.tex
-- presentacion-derecho-penal-especial-mexicano.tex
-- $(@{Name=Derecho penal especial mexicano; Block=2; Credits=8; Type=Obligatoria; Slug=derecho-penal-especial-mexicano; Semester=2}.Slug).bib
-- programa-analitico-derecho-penal-especial-mexicano.md
-- eferencias-derecho-penal-especial-mexicano/
+- [Reporte base](reporte-derecho-penal-especial-mexicano.tex).
+- [Presentacion base](presentacion-derecho-penal-especial-mexicano.tex).
+- [Bibliografia](derecho-penal-especial-mexicano.bib).
+- [Programa analitico](programa-analitico-derecho-penal-especial-mexicano.md).
+- [Seguimiento 2026-2 B2](SEGUIMIENTO-2026-2-B2.md).
+- [Planeacion S2](planeaciones-derecho-penal-especial-mexicano/planeacion-S2.md).
+- [Cuadro comparativo y caso S2](borrador-S2-cuadro-comparativo-robo.md).
+- `referencias-derecho-penal-especial-mexicano/`: documentos originales y extracciones; `inventario-aula.json` conserva la procedencia.
 
 ## Pauta editorial
 

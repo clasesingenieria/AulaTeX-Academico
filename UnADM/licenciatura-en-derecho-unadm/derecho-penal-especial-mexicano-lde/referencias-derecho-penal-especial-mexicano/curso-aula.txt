@@ -1,0 +1,886 @@
+Su progreso
+  
+Curso: Derecho penal especial mexicano | 020 | Mi UnADMPresentación
+
+        
+            
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                                                Avisos  Foro    
+                                                    
+                                        
+                                    
+                                
+                            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+        
+
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                         
+                    
+                
+        
+
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                         
+                    
+                
+        
+
+
+        
+            
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                                                Sala de Conferencias Web  BigBlueButton    
+                                                    
+                                        
+                                    
+                                
+                            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+        
+
+
+        
+            
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                                                Foro de dudas     
+                                                    
+                                        
+                                    
+                                
+                            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+        
+
+
+        
+            
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                                                CÓDIGO DE ÉTICA DE LAS PERSONAS ESTUDIANTES DE LA UNIVERSIDAD ABIERTA Y A DISTANCIA DE MÉXICO  Archivo    
+                                                    
+                                        
+                                    
+                                
+                            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+        
+
+
+        
+            
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                                                LINEAMIENTOS PARA EL USO ÉTICO Y RESPONSABLE DE LA INTELIGENCIA  ARTIFICIAL EN EL ÁMBITO ACADÉMICO DE LA UNIVERSIDAD ABIERTA Y A  DISTANCIA DE MÉXICO  Archivo    
+                                                    
+                                        
+                                    
+                                
+                            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+        
+
+
+        
+            
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                                                LINEAMIENTOS PARA LA EVALUACIÓN DEL APRENDIZAJE EN LOS NIVELES DE  TÉCNICO SUPERIOR UNIVERSITARIO, LICENCIATURA Y POSGRADO  Archivo    
+                                                    
+                                        
+                                    
+                                
+                            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+        
+
+
+        
+            
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                                                REGLAMENTO UNIVERSITARIO DE LA UNIVERSIDAD ABIERTA Y A DISTANCIA DE  MÉXICO  Archivo    
+                                                    
+                                        
+                                    
+                                
+                            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+        
+
+            .aprendizajes{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 10px;
+            }
+            .contenedor{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .contenedor .d-flex{
+                display: block !important;
+                margin: 10px;
+            }
+            .title_sections{
+              height: 75px;
+              display: flex;
+              justify-content: center;
+              text-align: center;
+              background: #cecece;
+              color: #1d2125 !important;
+              align-items: center;
+              border-radius: 5px;
+              margin: 20px;
+              font-size: 3vw;
+            }
+            .left-end{
+            display: flex !important;
+             justify-content: end;
+            }
+            
+            .course-content ul.buttons li.section .content{
+                margin: 0px !important;
+                margin-right: 15px !important;
+            }
+            .aprendizaje ul.section {
+                margin: 0 !important; 
+            }
+            #section-0 .content{
+                display: block !important;
+            }
+            .message-not-content{
+                height: 250px;
+                justify-content: center;
+                display: flex;
+                align-items: center;
+                border: 1px solid #dee2e6;
+                border-radius: 10px;
+                margin-top: 15px; 
+                text-align: center;
+            }
+            .weeks-date{
+              background: #cecece;
+              width: 100%;
+              display: grid;
+              place-items: center;
+              border-radius: 5px;
+              padding: 15px;
+              margin-top: 15px;
+            }
+            .weeks-date p{
+                margin: 0px !important;
+            }
+            #completionprogressid{
+                display: none !important;
+            }
+            .content > .summary >.no-overflow {
+                width: 100%;
+            }
+            .content > .summary {
+                  width: 100%;
+                  display: grid;
+                  place-items: center;
+                  border-radius: 5px;
+            }
+            
+            @media (min-width: 600px) {
+                .title_sections{
+                    font-size: 18px !important;
+                }
+            }
+            @media (max-width: 975px) {
+                .aprendizaje{
+                    max-width: 50% !important;
+                }
+                .pleca-item{
+                background-size: cover !important; 
+                }
+            }
+            @media (max-width: 636px) {
+                .aprendizaje{
+                    max-width: 100% !important;
+                }
+                .title-date-week{
+                    font-size: 1rem !important;
+                }
+                .title-week{
+                 font-size: 1.4rem !important;
+                }
+            }
+            
+            .pleca-item{
+                background-image: url(../plecabase.png); 
+                height: auto; 
+                background-size: contain; 
+                background-repeat: repeat-x;
+            }
+            /* li > .activity-item{
+                display: flex;
+                width: 100%;
+            }*/
+            .badge{
+                white-space: revert !important;;
+            }
+            .badge > .font-weight-normal {
+                line-height: 1.9;
+            }
+            .completion-info .badge-pill{
+                border-radius: 1rem !important;
+            }
+            Planificación
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                         
+                    
+                
+        
+
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                         
+                    
+                
+        
+
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                         
+                    
+                
+        
+
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                         
+
+                    
+                
+        
+Semana 1 Semana 1
+                            del lunes 28 de septiembre de 2026 al domingo 4 de octubre de 2026
+                            
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        
+                    
+                
+        
+Actividades de aprendizajeRecursos de apoyoTrabajo colaborativo
+
+        
+            
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                                                FORO DIAGNÓSTICO     
+                                                    
+                                        
+                                    
+                                
+                            
+        
+                    
+                            
+                                        
+                                                
+                                                                
+                                                                    Por hacer: Hacer publicaciones en foro: 1
+                                                                
+                                                
+                                        
+                            
+                    
+            
+        
+        
+        
+        
+        
+Semana 2
+Semana 2
+                            del lunes 5 de octubre de 2026 al domingo 11 de octubre de 2026
+                            
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        
+                    
+                
+        
+Actividades de aprendizaje
+
+        
+            
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                                                ACTIVIDAD S2  Tarea    
+                                                    
+                                        
+                                    
+                                
+                            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+        
+Recursos de apoyo
+
+        
+            
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                                                PLANIFICACIÓN  Archivo    
+                                                    
+                                        
+                                    
+                                
+                            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+        
+
+
+        
+            
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                                                MATERIAL DE APOYO S2  Archivo    
+                                                    
+                                        
+                                    
+                                
+                            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+        
+
+
+        
+            
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                                                CÓDIGO PENAL FEDERAL  Archivo    
+                                                    
+                                        
+                                    
+                                
+                            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+        
+
+
+        
+            
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                                                CÓDIGO PENAL DF  Archivo    
+                                                    
+                                        
+                                    
+                                
+                            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+        
+Trabajo colaborativo
+
+        
+            
+                            
+                                
+                                    
+                                        
+                                    
+                                    
+                                        
+                                                                FORO DE DUDAS S2     
+                                                    
+                                        
+                                    
+                                
+                            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+        
+Semana 3 
+Semana 3
+                            del lunes 12 de octubre de 2026 al domingo 18 de octubre de 2026
+                            
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        
+                    
+                
+        
+Actividades de aprendizajeRecursos de apoyoTrabajo colaborativoSemana 4
+Semana 4
+                            del lunes 19 de octubre de 2026 al domingo 25 de octubre de 2026
+                            
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        
+                    
+                
+        
+Actividades de aprendizajeRecursos de apoyoTrabajo colaborativoSemana 5 Semana 5
+                            del lunes 26 de octubre de 2026 al domingo 1 de noviembre de 2026
+                            
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        
+                    
+                
+        
+Actividades de aprendizajeRecursos de apoyoTrabajo colaborativoSemana 6 Semana 6
+                            del lunes 2 de noviembre de 2026 al domingo 8 de noviembre de 2026
+                            
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        
+                    
+                
+        
+Actividades de aprendizajeRecursos de apoyoTrabajo colaborativoSemana 7 Semana 7
+                            del lunes 9 de noviembre de 2026 al domingo 15 de noviembre de 2026
+                            
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        
+                    
+                
+        
+Actividades de aprendizajeRecursos de apoyoTrabajo colaborativoSemana 8 Semana 8
+                            del lunes 16 de noviembre de 2026 al domingo 22 de noviembre de 2026
+                            
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        
+                    
+                
+        
+Actividades de aprendizajeRecursos de apoyoTrabajo colaborativoSemana 9 Semana 9
+                            del lunes 23 de noviembre de 2026 al domingo 29 de noviembre de 2026
+                            
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        
+                    
+                
+        
+Actividades de aprendizajeRecursos de apoyoTrabajo colaborativoSemana 10 Semana 10
+                            del lunes 30 de noviembre de 2026 al domingo 6 de diciembre de 2026
+                            
+
+        
+            
+        
+                    
+                            
+                            
+                    
+            
+        
+        
+        
+        
+                
+                    
+                        
+                    
+                
+        
+Actividades de aprendizajeRecursos de apoyoTrabajo colaborativo#buttonsectioncontainer .buttonsection.current {
+                background: #611232;
+            }
+            #buttonsectioncontainer .buttonsection.sectionvisible {
+                background: #611232;
+            }
+            .title-week{
+                color:#611232;
+                font-size: 1.65rem;
+            }
+            .title-date-week{
+                font-size: 1.4rem;
+            }
+            :root{
+                --color_primary:#611232;
+            }
+            .main-inner .drawer-left-toggle button{
+                background: var(--color_primary) !important;
+            }
+           234567891011
