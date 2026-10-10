@@ -38,7 +38,7 @@ Las versiones `reporte-...-Actividad-...` usan la plantilla compartida AulaTeX, 
 | [Teoria del Estado S2](teoria-del-estado-y-constitucion-lde/reporte-teoria-del-estado-y-constitucion-Actividad-2.pdf) | 6 | Cierre del log correcto; portada y texto verificables |
 | [Teoria del Estado S3](teoria-del-estado-y-constitucion-lde/reporte-teoria-del-estado-y-constitucion-Actividad-3.pdf) | 5 | Cierre del log correcto; portada y texto verificables |
 | [Derecho penal S2](derecho-penal-especial-mexicano-lde/reporte-derecho-penal-especial-mexicano-Actividad-2.pdf) | 7 | Dentro del maximo de 8; portada y tabla revisadas visualmente |
-| [Antecedentes, actividad 1](antecedentes-de-los-derechos-humanos-lde/reporte-antecedentes-de-los-derechos-humanos-Actividad-1.pdf) | 5 | Compilacion correcta; contenido sigue incompleto |
+| [Antecedentes, resena S2](antecedentes-de-los-derechos-humanos-lde/reporte-antecedentes-de-los-derechos-humanos-Actividad-2.pdf) | 5 | Registro historico del borrador; ahora actividad local 2, oficial 1 |
 
 Los cuatro registros finales no muestran errores fatales, referencias indefinidas ni advertencias de desbordamiento. La compilacion correcta no acredita fidelidad audiovisual, bibliografia final ni cumplimiento del formato docente todavia no recuperado. La resena conserva advertencias de insumos pendientes. No se certifica Arial 12: la plantilla de referencia usa Helvetica; contrastar el formato docente antes de entregar la resena.
 

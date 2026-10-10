@@ -1,9 +1,8 @@
-\documentclass[12pt,spanish,letterpaper,oneside]{article}
+\documentclass[spanish,letterpaper,oneside]{article}
 
-\def\documenttitle {Fundamento y proteccion de los derechos humanos}
-\def\documentsubtitle {Dignidad, reconocimiento y garantias}
-\def\documentsubject {Actividad 1 - Antecedentes de los derechos
-humanos}
+\def\documenttitle {Derechos humanos: nociones iniciales y expectativas}
+\def\documentsubtitle {Participacion del foro diagnostico de semana 1}
+\def\documentsubject {Actividad 1 - Antecedentes de los derechos humanos}
 \def\documentauthor {Martin Jonathan de la Cruz}
 \def\coursename {Antecedentes de los derechos humanos}
 \def\coursecode {005}
@@ -19,18 +18,16 @@ humanos}
     Matricula: & ES2611202040 \\
     Figura docente: & Daniel Alexis Lozano Ortega \\
     Semestre/Bloque: & 2 / 2 \\
-    Semana: & 2 \\
+    Actividad: & 1 \\
+    Semana: & 1 \\
+    Estado: & Borrador para revision \\
     \multicolumn{2}{l}{Fecha de realizacion: \today} \\
     \multicolumn{2}{l}{\universitylocation}
   \end{tabular}
 }
 
-\let\pdfpagewidth\pagewidth
-\let\pdfpageheight\pageheight
 \input{template}
-\usepackage{fontspec}
-\setmainfont{Arial}
-\setsansfont{Arial}
+\usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage{array}
 \usepackage{booktabs}
@@ -43,6 +40,21 @@ humanos}
 \providecommand{\pandocbounded}[1]{#1}
 \providecommand{\passthrough}[1]{#1}
 \setlength{\emergencystretch}{3em}
+
+\usepackage[most]{tcolorbox}
+\definecolor{unadmGreenDark}{HTML}{174A3A}
+\definecolor{unadmGreen}{HTML}{5F8F3A}
+\definecolor{unadmPaper}{HTML}{F6F7F2}
+\newtcolorbox{forobox}[1][]{%
+  enhanced, breakable,
+  colback=unadmPaper, colframe=unadmGreen,
+  boxrule=0pt, leftrule=3pt, arc=1.2mm,
+  left=4mm, right=4mm, top=3mm, bottom=3mm,
+  fonttitle=\bfseries\color{white}, coltitle=white, colbacktitle=unadmGreenDark,
+  attach boxed title to top left={xshift=4mm,yshift=-2mm},
+  boxed title style={colframe=unadmGreenDark,arc=0.6mm},
+  #1
+}
 
 \def\coverwatermarkenabled {true}
 \def\coverwatermarkimage {img/departamentos/UnADM.pdf}
@@ -69,127 +81,43 @@ humanos}
 \templatePortrait
 \templatePagecfg
 \onehalfspacing
+\templateIndex
 \templateFinalcfg
-\newgeometry{margin=2.5cm}
 
-\section{Introduccion}
+\section{Identificacion y estado}
 
-Los derechos humanos plantean una pregunta que no se resuelve solo
-enumerando normas: por que toda persona merece proteccion frente al
-abuso. Distinguir fundamento moral, reconocimiento juridico y garantias
-permite evaluar tanto una ley como su aplicacion. El video
-\emph{Tema 11. Los Derechos Humanos Concepto y Fundamentacion}, de
-Canal UNED, presenta ese problema mediante una exposicion de Aliuska
-Duardo Sanchez, publicada el 23 de octubre de 2024, con duracion de
-17 minutos y 42 segundos \citep{unedVideo2024}.
+Propuesta de participacion basada en el proyecto, elaborada con apoyo de GitHub Copilot. Requiere revision personal; no publicada. No acredita conocimientos previos ni experiencias personales confirmadas. Edad y residencia, cuando se solicitan, permanecen pendientes.
 
-Su aportacion consiste en relacionar evolucion historica, caracteres
-de los derechos y tres fundamentaciones: iusnaturalista, positivista y
-axiologica. El contraste con la Unidad 1 permite trasladar esa
-discusion al orden juridico mexicano, sin atribuir al audiovisual
-las corrientes adicionales del cuadernillo \citep{cuadernilloADH2026}.
+\section{Participacion principal}
+\begin{forobox}[title={Participacion principal -- propuesta no publicada}]
 
-\section{Dignidad, normas y proteccion efectiva}
-\subsection{Sintesis y alcance del audiovisual}
+\textbf{¿Que entiendes por derechos humanos?}
 
-La primera idea distingue privilegios para grupos concretos de derechos
-con pretension universal. La profesora organiza la trayectoria en
-generalizacion, universalizacion e internacionalizacion, asociando esta
-ultima con tratados y garantias mas alla del Estado
-\citep[01:12--04:32]{unedVideo2024}. Es una sintesis didactica util,
-pero no una historia exhaustiva: la proclamacion universal no significa
-que todas las personas hayan disfrutado inmediatamente de igualdad.
+Entiendo que son derechos que corresponden a todas las personas por su
+dignidad y que deben respetarse sin discriminacion. Su importancia esta
+en proteger la libertad, la igualdad y las condiciones necesarias para
+vivir y desarrollarse. Considero que su reconocimiento debe acompanarse
+de mecanismos que permitan exigir su respeto cuando una autoridad o una
+persona los vulnera.
 
-La segunda idea vincula necesidades humanas, dignidad y reconocimiento
-positivo. El concepto de Perez Luno presentado en la exposicion reune
-facultades e instituciones que concretan exigencias de dignidad,
-libertad e igualdad en cada momento historico
-\citep[05:26--07:59]{unedVideo2024}. Esta relacion evita reducir los
-derechos a concesiones arbitrarias del gobernante. La universalidad,
-inalienabilidad e irrenunciabilidad remiten a la titularidad; no deben
-confundirse con reglas identicas para todo ejercicio de un derecho.
+\textbf{Menciona al menos tres derechos humanos que conozcas.}
 
-\subsection{Tres fundamentaciones y sus limites}
+El derecho a la educacion, el derecho a la salud y el derecho a la
+igualdad y no discriminacion.
 
-El \textbf{iusnaturalismo} considera los derechos inherentes a la
-persona, independientemente de su positivacion. Su fortaleza es
-permitir criticar normas injustas; su dificultad consiste en justificar
-de manera compartida que contenidos derivan de esa naturaleza
-\citep[14:33--15:36]{unedVideo2024}.
+\textbf{¿Que tema relacionado con los derechos humanos te gustaria
+aprender durante esta asignatura?}
 
-La \textbf{fundamentacion positivista} centra la existencia juridica y
-exigibilidad del derecho en su reconocimiento normativo. Aporta certeza
-para identificar obligaciones y autoridades responsables, pero el
-reconocimiento formal no demuestra por si mismo justicia ni proteccion
-efectiva \citep[15:37--16:13]{unedVideo2024}.
+Me interesa comprender como se paso del reconocimiento de ciertos
+derechos para grupos limitados a la idea de derechos para todas las
+personas. Tambien quiero conocer como esa evolucion se relaciona con las
+garantias constitucionales en Mexico y con los mecanismos que permiten
+proteger los derechos en la practica.
 
-La \textbf{fundamentacion axiologica} entiende los derechos como
-exigencias morales previas que orientan las normas. El video recoge
-la objecion de que puede confundir moral y derecho. Considero pertinente
-conservar esa distincion: un valor puede justificar una reforma sin ser
-todavia una facultad exigible por un procedimiento concreto
-\citep[16:14--17:12]{unedVideo2024}.
+\end{forobox}
 
-\subsection{Contraste con Mexico y valoracion critica}
+\section{Respuestas y alcance}
 
-La Unidad 1 incorpora ademas dignidad, contractualismo, garantismo y
-universalidad. El garantismo aporta un complemento decisivo: reconocer
-derechos exige mecanismos para protegerlos. Estas categorias pertenecen
-al cuadernillo, no a las tres fundamentaciones explicadas al final del
-video \citep{cuadernilloADH2026}.
-
-El articulo 1 constitucional reconoce derechos de la Constitucion y de
-los tratados, exige interpretacion favorable a la persona y obliga a
-las autoridades a promover, respetar, proteger y garantizar derechos
-humanos \citep[art.~1]{cpeumADH2026}. Esto relaciona fundamento,
-normatividad y garantias sin probar que sus diferencias teoricas hayan
-desaparecido. Tampoco la imprescriptibilidad de la titularidad permite
-concluir que cualquier accion procesal carezca de plazo, ni la referencia
-general a limites autoriza restricciones arbitrarias. Estas precisiones
-son necesarias al trasladar una exposicion introductoria al analisis
-juridico mexicano.
-
-\clearpage
-\section{Conclusiones}
-
-Considero mas convincente partir de la dignidad de cada persona que de
-una concesion estatal: ese criterio permite cuestionar una norma
-excluyente. Sin embargo, no entiendo que el fundamento moral sustituya
-el reconocimiento juridico ni los medios de defensa. Mi postura combina
-esa exigencia de respeto con la necesidad de obligaciones claras y
-garantias verificables \citep{cuadernilloADH2026,cpeumADH2026}.
-
-La distincion que encuentro mas relevante para mi formacion en Derecho
-es separar por que un derecho merece proteccion, donde se reconoce y
-como puede reclamarse. Esa diferencia permite examinar decisiones
-publicas sin confundir legalidad formal con justicia. La consecuencia
-profesional es exigir argumentos y mecanismos efectivos frente al abuso,
-en lugar de conformarme con una declaracion de buenas intenciones.
-La sintesis audiovisual resulta valiosa cuando se acompana de este
-contraste critico.\footnote{Se utilizo GitHub Copilot para apoyar la
-organizacion, el contraste documental y la redaccion, y Subtitle Edit
-para la transcripcion automatica. La asistencia no sustituye el analisis
-propio ni la revision personal de argumentos y fuentes.}
-
-\clearpage
-\begin{thebibliography}{3}
-\bibitem[Camara de Diputados del H. Congreso de la Union(2026)]{cpeumADH2026}
-Camara de Diputados del H. Congreso de la Union. (2026).
-\emph{Constitucion Politica de los Estados Unidos Mexicanos}
-(ultima reforma DOF 7 de octubre de 2026).
-\url{https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf}
-
-\bibitem[Lozano Ortega(2026)]{cuadernilloADH2026}
-Lozano Ortega, D. A. (2026). \emph{Unidad 1. Bases teoricas basicas
-relacionadas con los derechos humanos en Mexico}
-[Cuadernillo de contenidos, semana 2]. Universidad Abierta y a Distancia de Mexico.
-\url{https://aulavirtual.unadmexico.mx/mod/resource/view.php?id=211995}
-
-\bibitem[Universidad Nacional de Educacion a Distancia(2024)]{unedVideo2024}
-Universidad Nacional de Educacion a Distancia. (2024, 23 de octubre).
-\emph{Tema 11. Los Derechos Humanos Concepto y Fundamentacion
-(1er Curso, 1er Cuatrimestre del GRADO EN DERECHO)} [Video]. Canal UNED.
-\url{https://canal.uned.es/video/671b6728e0637d00c70d7b80}
-\end{thebibliography}
+No se agregan respuestas ficticias. La consigna consultada no exige replicas; Antecedentes indica expresamente que no es necesario responder a companeros. Si el docente solicita respuestas adicionales, deben documentarse en cajas independientes tras leer las intervenciones correspondientes.
 
 \end{document}
