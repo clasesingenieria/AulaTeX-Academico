@@ -14,7 +14,7 @@ sys.path.insert(0, str(ROOT))
 
 from scripts.aulatex.config import load_aulatex_env
 from scripts.aulatex.platform_credentials import PlatformCredentialVault, default_vault_path
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import TimeoutError as PlaywrightTimeoutError, sync_playwright
 
 HOST = "licenciatura.ucnl.edu.mx"
 BASE = "https://" + HOST
@@ -55,12 +55,25 @@ def main():
 
         context.route("**/*", guard)
         page = context.new_page()
-        page.goto(BASE + "/login/index.php", wait_until="domcontentloaded")
-        page.locator("#username").fill(credentials["username"])
-        page.locator("#password").fill(credentials["password"])
-        page.locator("#loginbtn").click()
-        page.wait_for_url(lambda url: "/login/" not in urlsplit(url).path, wait_until="domcontentloaded", timeout=15000)
+        for login_attempt in range(2):
+            page.goto(BASE + "/login/index.php", wait_until="domcontentloaded")
+            page.locator("#username").fill(credentials["username"])
+            page.locator("#password").fill(credentials["password"])
+            page.locator("#loginbtn").click()
+            try:
+                page.wait_for_url(lambda url: "/login/" not in urlsplit(url).path, wait_until="domcontentloaded", timeout=15000)
+                break
+            except PlaywrightTimeoutError:
+                message = page.locator("#region-main").inner_text()
+                if login_attempt == 0 and "excedido el tiempo" in message.casefold():
+                    context.clear_cookies()
+                    continue
+                raise RuntimeError(sanitize({"login_error": message})["login_error"]) from None
         del credentials
+        if "--check-login" in sys.argv:
+            print(json.dumps({"authenticated": True}), flush=True)
+            browser.close()
+            return
 
         def snapshot():
             frames = []
