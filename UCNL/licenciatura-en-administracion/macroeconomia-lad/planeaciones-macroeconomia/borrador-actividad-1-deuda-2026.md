@@ -4,7 +4,7 @@ Curso 20322, modulo 806398. Consigna consultada en UCNL el 05/10/2026: ver un do
 
 El video incrustado en la consigna es [Como el dinero dejo de tener valor | Politica Monetaria](https://www.youtube.com/watch?v=jw0-H2S5eT4) (duracion indicada por el reproductor: 53:18).
 
-**Pendiente antes de entregar:** ver el documental y contrastar este analisis con sus argumentos. El reproductor indica que no hay subtitulos disponibles; no se ha verificado el contenido del video ni cifras de deuda de 2026. El texto siguiente no atribuye datos ni tesis al documental. No se ha enviado al portal.
+**Pendiente antes de entregar:** ver el documental y contrastar este analisis con sus argumentos. En la nueva consulta del 09/10/2026 se verifico la descripcion del publicador: el documental original es *End of the Road: How Money Became Worthless* (2012), dirigido por Tim Delmastro, y el canal es Moconomy. La pagina anuncio una pista automatica en espanol, pero el servicio de subtitulos devolvio HTTP 200 con contenido vacio y el panel de transcripcion no proporciono texto. No se ha verificado el contenido audiovisual completo ni cifras de deuda de 2026. El texto siguiente no atribuye datos ni tesis al documental. **No se ha enviado al portal**, y el estado sin entrega se confirmo nuevamente el 09/10/2026.
 
 ## Respuesta propuesta
 

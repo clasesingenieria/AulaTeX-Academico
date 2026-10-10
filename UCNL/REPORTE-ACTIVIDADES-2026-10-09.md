@@ -1,5 +1,7 @@
 # UCNL: estado de actividades al 9 de octubre de 2026
 
+> Actualizacion posterior: se realizaron y registraron once actividades. Consultar el [resultado de envios del 09/10/2026](RESULTADO-ENVIOS-2026-10-09.md). El contenido de este reporte conserva el diagnostico anterior a esos envios.
+
 Consulta autenticada con las credenciales de la boveda de AulaTeX. Periodo **2026-3**, seis materias. Ultima comprobacion complementaria: **09/10/2026, 19:03, UTC-06:00**. Las fechas de las actividades se reproducen como aparecen en Moodle, sin convertir su zona horaria.
 
 ## Conclusion
