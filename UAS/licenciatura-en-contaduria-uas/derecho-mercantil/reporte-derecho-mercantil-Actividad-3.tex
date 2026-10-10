@@ -1,0 +1,90 @@
+\def\actividadtitulo{Las obligaciones: origen, modalidades y cumplimiento}
+\def\actividadtipo{Mapas conceptuales - Semana 3}
+\def\uasmateria{Derecho mercantil}
+\def\uasestudiante{Martín Jonathan De La Cruz Muñoz}
+\def\uasmatricula{26031061}
+\def\uasasesor{Wilder Alfredo Angulo}
+\def\uasgrupo{103 LCP}
+\def\uasfecha{9 de octubre de 2026}
+\def\uaslugar{Culiacán, Sinaloa, México}
+\def\uaslogo{UAS/licenciatura-en-contaduria-uas/derecho-mercantil/assets-derecho-mercantil/escudo-uas.png}
+\def\uasfacultadlogo{UAS/licenciatura-en-contaduria-uas/derecho-mercantil/assets-derecho-mercantil/fcauas-logo.jpg}
+\def\uasbibliografia{UAS/licenciatura-en-contaduria-uas/derecho-mercantil/obligaciones-S3.bib}
+\AddToHook{package/titlesec/after}{\RequirePackage{tikz}\usetikzlibrary{arrows.meta,babel}}
+\AddToHook{begindocument/end}{\hypersetup{pdfsubject={Actividad 3 - Derecho mercantil}}}
+\newcommand{\mapatres}[5]{%
+  \par\noindent\begin{tikzpicture}[
+    raiz/.style={draw=uasBlue,fill=uasBlue!8,align=center,text width=7cm,inner sep=4pt,font=\bfseries\fontsize{11}{12}\selectfont,anchor=south},
+    concepto/.style={draw=uasBlue!65,align=left,text width=4.75cm,inner sep=3pt,font=\fontsize{10.5}{11}\selectfont,anchor=north},
+    enlace/.style={-{Stealth[length=1.8mm]},draw=uasBlue},
+    etiqueta/.style={fill=white,inner sep=1pt,font=\fontsize{8.5}{9}\selectfont}
+  ]
+  \node[raiz] (raiz) at (7.7,0) {#1};
+  \node[concepto] (izquierda) at (2.55,-.50) {#3};
+  \node[concepto] (centro) at (7.7,-.50) {#4};
+  \node[concepto] (derecha) at (12.85,-.50) {#5};
+  \draw[draw=uasBlue] (raiz.south) -- (7.7,-.33);
+  \draw[enlace] (7.7,-.33) -| (izquierda.north);
+  \draw[enlace] (7.7,-.33) -- (centro.north);
+  \draw[enlace] (7.7,-.33) -| (derecha.north);
+  \node[etiqueta] at (7.7,-.16) {#2};
+  \end{tikzpicture}\par
+}
+\newcommand{\fuentemapa}[1]{\noindent{\footnotesize\parencite[pp.~#1]{ramirezObligacionesMapaS3}.}\par}
+\long\def\actividadcontenido{
+\setstretch{1.05}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+\titlespacing*{\subsection}{0pt}{5pt}{3pt}
+\raggedbottom
+\section{Introducción}
+Una obligación vincula a un acreedor y un deudor mediante una prestación de dar, hacer o no hacer. Distinguir su origen, modalidades y cumplimiento permite interpretar las cuentas por cobrar y por pagar sin reducir la relación jurídica a una cifra \parencite[pp.~23--24]{ramirezObligacionesMapaS3}.
+
+\section{La relación obligatoria y sus transformaciones}
+\subsection*{a) Fuentes de las obligaciones}
+\mapatres{Fuentes de las obligaciones}{se originan en}
+{\textbf{Voluntad}\par Contrato: acuerdo que crea o transmite obligaciones.\par Declaración unilateral: compromiso de una persona.}
+{\textbf{Restitución y gestión}\par Enriquecimiento ilegítimo: beneficio sin causa a costa de otro.\par Gestión de negocios: atender un asunto ajeno sin mandato.}
+{\textbf{Daños}\par Hecho ilícito: genera deber de reparar el daño.\par Riesgo creado: responsabilidad por el uso de cosas peligrosas, aun sin ilicitud.}
+\fuentemapa{54--58}
+
+\subsection*{b) Modalidades de las obligaciones}
+\mapatres{Modalidades de las obligaciones}{pueden afectar}
+{\textbf{Eficacia}\par Condición: hecho futuro incierto; suspende o resuelve efectos.\par Plazo: hecho futuro cierto; difiere exigibilidad o extingue efectos.}
+{\textbf{Sujetos}\par Mancomunadas: deuda por partes.\par Solidarias: exigencia del total; no se presumen.\par Disyuntivas: un sujeto u otro.}
+{\textbf{Prestación}\par Indivisible: no admite cumplimiento parcial.\par Conjuntiva: todas las prestaciones. Alternativa: una de varias. Facultativa: una debida, sustituible.}
+\fuentemapa{212--227}
+
+La fuente explica \emph{por qué nace} la deuda; la modalidad determina \emph{cómo opera}. Una compra a plazo conserva su origen contractual aunque el pago no sea todavía exigible. Solidaridad e indivisibilidad no son equivalentes: una concierne a la exigencia del total y la otra al cumplimiento no fraccionable.
+
+\clearpage
+\setlength{\parskip}{1pt}
+\titlespacing*{\subsection}{0pt}{3pt}{1pt}
+\subsection*{c) Transmisión de las obligaciones}
+\mapatres{Transmisión: el vínculo subsiste}{se realiza por}
+{\textbf{Cesión de derechos}\par Cambia el acreedor: cedente a cesionario. Debe notificarse al deudor; su consentimiento no es la regla.}
+{\textbf{Cesión de deudas}\par Cambia el deudor. Requiere consentimiento del acreedor; no basta el acuerdo entre deudores.}
+{\textbf{Subrogación personal}\par Quien paga ocupa el lugar del acreedor en los supuestos admitidos. El crédito subsiste frente al deudor.}
+\fuentemapa{229--234}
+
+\subsection*{d) Efectos de las obligaciones}
+\mapatres{Efectos de las obligaciones}{comprenden}
+{\textbf{Cumplimiento}\par Dar, hacer o no hacer lo debido; íntegramente y en tiempo y lugar pactados. Pagar no significa solo dar dinero.}
+{\textbf{Pago eficaz}\par Al acreedor o legitimado. Imputar a la deuda correcta y documentar. Consignar, cuando proceda, permite liberarse.}
+{\textbf{Incumplimiento}\par Puede generar exigencia de cumplimiento e indemnización según el caso. Una deuda no desaparece por dejar de pagar.}
+\fuentemapa{204--210}
+
+\subsection*{e) Extinción de las obligaciones}
+\mapatres{Extinción de las obligaciones}{puede darse por}
+{\textbf{Cumplimiento y acuerdos}\par Pago: prestación debida.\par Dación: otra aceptada.\par Remisión: perdón.\par Novación: sustituir la obligación.\par Transacción: concesiones recíprocas.}
+{\textbf{Otras causas}\par Compensación: deudas recíprocas hasta la menor.\par Confusión: acreedor y deudor coinciden.\par Pérdida de la cosa: sin culpa, con los requisitos y excepciones legales.}
+{\textbf{Tiempo y eficacia del acto}\par Prescripción negativa; caducidad.\par Rescisión; revocación.\par Condición resolutoria; término extintivo; nulidad.\par Cada figura exige su propio supuesto.}
+\fuentemapa{236--242}
+
+\section{Conclusiones}
+Considero esencial distinguir transmisión y extinción: ceder un crédito cambia a quién se paga; novar sustituye la obligación. En contaduría, identificar la causa y la evidencia evita cancelar una deuda solo porque cambió el acreedor o transcurrió tiempo.\footnote{GitHub Copilot apoyó la síntesis y los diagramas a partir de las lecturas; no sustituye la revisión, el análisis personal ni la elaboración manuscrita del estudiante.}
+\setlength{\bibitemsep}{0pt}
+\renewcommand{\bibfont}{\footnotesize}
+}
+\input{UAS/plantilla-actividad-uas.tex}

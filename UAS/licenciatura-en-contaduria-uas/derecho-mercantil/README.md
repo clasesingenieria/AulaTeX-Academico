@@ -4,6 +4,10 @@ Universidad Autónoma de Sinaloa, Facultad de Contaduría y Administración, Lic
 
 ## Planeaciones
 
+Actualización del 9/10/2026: [revisión semanal](../REVISION-ENTREGAS-2026-10-09.md). El [mapa S3](reporte-derecho-mercantil-Actividad-3.pdf) está preparado como apoyo para el manuscrito, pendiente de entrega el 11/10 a las 23:59. El [reporte del foro S3](reporte-foro-S3.pdf) se corrigió sin duplicar las publicaciones. [Soporte contractual](investigacion-aulatex/actividad-3/memoria-y-validacion.md).
+
+### Consulta histórica del 22 de septiembre
+
 [Resumen de las 15 actividades](planeaciones-derecho-mercantil/RESUMEN-2026-09-22.md): requisitos publicados, fechas, propósito propuesto, secuencia, criterios y pendientes. Incluye cuatro tareas, cuatro foros semanales, dos lecciones, dos autoevaluaciones y tres actividades de apoyo. No se resolvieron ni enviaron actividades.
 
 El siguiente cierre verificado es el **27/09/2026 a las 23:59**, para el reporte de lectura S1. La autoevaluación S2 cierra el **04/10/2026 a las 22:59**, una hora antes de la tarea de esa semana. El integrador cierra el **18/10/2026 a las 23:59**. Zona horaria no acreditada; los foros sin cierre visible permanecen pendientes, no heredan las fechas de las tareas.
