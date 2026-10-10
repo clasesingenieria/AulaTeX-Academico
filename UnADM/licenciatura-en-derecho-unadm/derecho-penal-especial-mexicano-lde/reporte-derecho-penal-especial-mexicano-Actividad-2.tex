@@ -1,8 +1,8 @@
 \documentclass[spanish,letterpaper,oneside]{article}
 
-\def\documenttitle {S2. Cuadro comparativo del delito de robo}
+\def\documenttitle {Elementos del delito de robo}
 \def\documentsubtitle {Cuadro comparativo y aplicacion al caso}
-\def\documentsubject {S2 - Derecho penal especial mexicano}
+\def\documentsubject {Actividad 2 - Derecho penal especial mexicano}
 \def\documentauthor {Martin Jonathan de la Cruz}
 \def\coursename {Derecho penal especial mexicano}
 \def\coursecode {020}
@@ -18,7 +18,7 @@
     Matricula: & ES2611202040 \\
     Figura docente: & Veronica Ortiz Lopez \\
     Semestre/Bloque: & 2 / 2 \\
-    Estado: & Borrador para revision \\
+    Semana: & 2 \\
     \multicolumn{2}{l}{Fecha de realizacion: \today} \\
     \multicolumn{2}{l}{\universitylocation}
   \end{tabular}
@@ -30,9 +30,10 @@
 \usepackage{array}
 \usepackage{booktabs}
 \usepackage{longtable}
+\usepackage{pdflscape}
 \usepackage{calc}
 \usepackage{tikz}
-\usetikzlibrary{arrows.meta,positioning,calc}
+\usetikzlibrary{arrows.meta,positioning,calc,babel}
 \setcitestyle{authoryear,open={(},close={)}}
 \providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \providecommand{\pandocbounded}[1]{#1}
@@ -67,44 +68,43 @@
 \templateIndex
 \templateFinalcfg
 
-\textbf{UnADM \textbar{} Licenciatura en Derecho \textbar{} Derecho
-penal especial mexicano \textbar{} Grupo 020}
-
-\textbf{Borrador para revision del estudiante.} Completar nombre y
-matricula antes de entregar; datos no incorporados al indice. Elaborado
-con asistencia de GitHub Copilot para organizacion y redaccion; la
-persona estudiante debe verificar fuentes y asumir o corregir los
-argumentos. No enviado al aula.
-
 \section{Introduccion}\label{introduccion}
 
 La parte especial del derecho penal identifica conductas que afectan
 bienes juridicos concretos. Comparar el robo exige distinguir el objeto
 material del interes protegido y reconocer cada elemento normativo; la
 semejanza entre dos disposiciones no implica que ambas se apliquen
-simultaneamente al mismo hecho. Esta actividad compara el supuesto del
+simultaneamente al mismo hecho. La comparacion del supuesto del
 articulo 367 del Codigo Penal Federal (CPF) con el del articulo 220 del
 Codigo Penal para el Distrito Federal (CPDF), utilizando las copias
-proporcionadas en el aula y el material de apoyo S2 (UnADM, 2026).
+proporcionadas en el aula y el material de apoyo S2 permite distinguir
+la formulacion normativa y su aplicacion al caso del telefono celular
+\citep{unadmPenalS2}.
 
-\section{Cuadro comparativo}\label{cuadro-comparativo}
+\section{Elementos del robo y aplicacion juridica}
+\subsection{Lectura del tipo penal}
+El cuadro diferencia norma, sujetos, conducta y bien juridico. El
+patrimonio es el interes protegido; el telefono constituye el objeto
+material. La comparacion se limita al supuesto basico, sin fijar penas
+ni decidir la competencia del tribunal. Cada elemento debe relacionarse
+con los hechos, no deducirse unicamente de la ausencia del propietario.
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Elemento
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Codigo Penal Federal
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Codigo Penal para el Distrito Federal
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
+\begin{landscape}
+\thispagestyle{empty}
+\subsection{Cuadro comparativo}\label{cuadro-comparativo}
+\begingroup
+\setstretch{1.05}
+\footnotesize
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.15}
+\noindent\begin{tabular}{@{}
+  >{\raggedright\arraybackslash}p{0.16\linewidth}
+  >{\raggedright\arraybackslash}p{0.40\linewidth}
+  >{\raggedright\arraybackslash}p{\dimexpr0.44\linewidth-4\tabcolsep\relax}@{}}
+\toprule
+\textbf{Elemento} & \textbf{Codigo Penal Federal} &
+\textbf{Codigo Penal para el Distrito Federal} \\
+\midrule
 Articulo aplicable & 367; 369 solo para precisar consumacion. & 220,
 primer parrafo; 222 solo para contrastar uso y dominio. \\
 Descripcion legal & ``Comete el delito de robo: el que se apodera de una
@@ -137,26 +137,29 @@ derecho; falta de consentimiento de persona facultada. Deben
 acreditarse, no presumirse solo por la ausencia del propietario. &
 Apoderamiento; cosa mueble; ajenidad; falta de consentimiento de persona
 facultada; animo de dominio expresamente mencionado. \\
-\end{longtable}
+\bottomrule
+\end{tabular}
+\captionof{table}{Comparacion del supuesto basico de robo: articulos 367 CPF y 220 CPDF.}
 
-Fuente del supuesto federal: Camara de Diputados (2026, art. 367).
-Fuente local: Asamblea Legislativa del Distrito Federal (s. f., art.
-220), copia del aula. Explicaciones contrastadas con UnADM (2026,
-material de apoyo S2). La tabla no determina vigencia de penas ni
+Fuentes normativas: \citep[art.~367]{cpfAula2026} y
+\citep[art.~220]{cpdfAulaS2}. Explicaciones contrastadas con
+\citep{unadmPenalS2}. La tabla no determina vigencia de penas ni
 jurisdiccion competente.
+\endgroup
+\end{landscape}
 
-\section{Coincidencias y diferencias}\label{coincidencias-y-diferencias}
+\subsection{Coincidencias y diferencias}\label{coincidencias-y-diferencias}
 
 \textbf{Coincidencia 1:} ambas disposiciones exigen apoderamiento de una
 cosa mueble ajena. No basta tener contacto con el objeto: debe existir
-toma de control sobre algo que no pertenece al sujeto (CPF, art. 367;
-CPDF, art. 220).
+toma de control sobre algo que no pertenece al sujeto
+\citep[art.~367]{cpfAula2026}\citep[art.~220]{cpdfAulaS2}.
 
 \textbf{Coincidencia 2:} ambas requieren ausencia de consentimiento de
 quien pueda disponer o consentir conforme al derecho. La ausencia fisica
 del propietario no equivale por si misma a falta de permiso; el supuesto
-la acredita expresamente al negar toda autorizacion (CPF, art. 367;
-CPDF, art. 220).
+la acredita expresamente al negar toda autorizacion
+\citep[art.~367]{cpfAula2026}\citep[art.~220]{cpdfAulaS2}.
 
 \textbf{Diferencia 1:} el articulo 220 expresa el ``animo de dominio'';
 el 367 no utiliza esas palabras. Es una diferencia de formulacion, no
@@ -172,7 +175,7 @@ generales de antijuridicidad. Por tanto, los elementos centrales
 examinados son ampliamente coincidentes y las diferencias descritas no
 autorizan conclusiones absolutas sobre toda la regulacion.
 
-\section{Aplicacion al caso del telefono
+\subsection{Aplicacion al caso del telefono
 celular}\label{aplicacion-al-caso-del-telefono-celular}
 
 \textbf{a) Conducta juridicamente relevante.} Tomar el telefono de otro
@@ -189,7 +192,7 @@ propietario del telefono.
 \textbf{c) Bien juridico.} El patrimonio del trabajador. El objeto
 material es el telefono. Esta distincion evita confundir el interes
 protegido por el derecho con el objeto sobre el cual recae la accion
-(UnADM, 2026).
+\citep{unadmPenalS2}.
 
 \textbf{d) Elementos identificables.} Apoderamiento: tomar y llevar el
 dispositivo; movilidad: un celular puede trasladarse; ajenidad:
@@ -212,7 +215,8 @@ competencia federal/local. No se conoce valor del telefono,
 circunstancias completas ni causa de justificacion que permita fijar una
 pena.
 
-\section{Conclusion}\label{conclusion}
+\clearpage
+\section{Conclusiones}\label{conclusion}
 
 Comparar tipos penales requiere separar su texto de las inferencias
 sobre el caso. El nucleo compartido es el apoderamiento no consentido de
@@ -222,29 +226,33 @@ total entre codigos. La aplicacion al celular muestra que sujetos,
 objeto y bien juridico cumplen funciones diferentes. Un razonamiento
 riguroso identifica elementos reconocibles y tambien limites probatorios
 y competenciales.
+Considero que la precision importa mas que afirmar una diferencia
+artificial entre normas. Desde mi formacion en Derecho, prefiero
+justificar cada elemento y reconocer los datos que faltan antes de
+concluir sobre responsabilidad o pena. Esa cautela permite formular
+argumentos revisables sin sustituir la prueba por una intuicion.\footnote{
+Se utilizo GitHub Copilot para apoyar la organizacion, la redaccion y
+la maquetacion. La asistencia no sustituye el analisis propio ni la
+revision personal de las fuentes y los argumentos antes de entregar.}
 
-\section{Referencias}\label{referencias}
-
-Asamblea Legislativa del Distrito Federal. (s. f.). \emph{Codigo Penal
+\clearpage
+\begin{thebibliography}{3}
+\bibitem[Asamblea Legislativa del Distrito Federal(s.\,f.)]{cpdfAulaS2}
+Asamblea Legislativa del Distrito Federal. (s.\,f.). \emph{Codigo Penal
 para el Distrito Federal} (arts. 220 y 222, copia proporcionada en el
 aula). Instituto de Investigaciones Legislativas.
-https://data.consejeria.cdmx.gob.mx/index.php/leyes/codigos/34-codigo-penal-para-el-distrito-federal
+\url{https://data.consejeria.cdmx.gob.mx/index.php/leyes/codigos/34-codigo-penal-para-el-distrito-federal}
 
+\bibitem[Camara de Diputados del H. Congreso de la Union(2026)]{cpfAula2026}
 Camara de Diputados del H. Congreso de la Union. (2026). \emph{Codigo
 Penal Federal} (ultima reforma indicada en la copia: DOF 13-03-2026;
-arts. 367 y 369). https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf
+arts. 367 y 369). \url{https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf}
 
+\bibitem[Universidad Abierta y a Distancia de Mexico(2026)]{unadmPenalS2}
 Universidad Abierta y a Distancia de Mexico. (2026). \emph{Material de
 apoyo S2: Derecho penal especial mexicano} {[}Material de aula, recurso
 215278{]}.
-https://aulavirtual.unadmexico.mx/mod/resource/view.php?id=215278
-
-\section{Nota de revision}\label{nota-de-revision}
-
-Las citas normativas se cotejaron con las copias descargadas. Debe
-comprobarse la consolidacion vigente del codigo local antes de convertir
-este borrador en version final. No se afirma vigencia de penas.
-Extension maxima exigida: ocho cuartillas, incluyendo identificacion y
-referencias; comprobar la exportacion final despues de personalizar.
+\url{https://aulavirtual.unadmexico.mx/mod/resource/view.php?id=215278}
+\end{thebibliography}
 
 \end{document}
