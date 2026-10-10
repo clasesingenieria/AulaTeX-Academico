@@ -1,5 +1,9 @@
 # Antecedentes de los derechos humanos: control interno y entregas
 
+Actualizacion del foro S2: reporte interno 4 mejorado con marco conceptual, seis fuentes citadas, participacion en `forobox`, boton de TXT extraible y conclusiones tematicas sin notas operativas en el cuerpo. [Texto sincronizado](participacion-foro-S2.md): 85 palabras en total, incluyendo referencia y declaracion de IA. Esta version sustituye el conteo anterior de 83 palabras. No publicada; pendientes aprobacion personal y cotejo de participacion previa. La cita textual exigida por el contrato generico no se incorpora: se documenta la adaptacion a la consigna especifica, sin afirmar cumplimiento integral del motor.
+
+Actualizacion del cuestionario S1: reporte interno 1 completado con los tres reactivos de la revision proporcionada por el usuario, respuestas y justificaciones documentales posteriores. [Registro del intento y mapa de soporte](referencias-antecedentes-de-los-derechos-humanos/revision-cuestionario-S1.md). Intento terminado el 3 de octubre de 2026, 00:27-00:29, duracion indicada 1 min 32 segundos; reactivos no calificados. Respuestas b), c) y Verdadero; la tercera no tiene marca visual original en el texto recibido. Esta actualizacion sustituye las menciones a respuestas pendientes del cuestionario en el historial siguiente. No se inicio ni envio otro intento.
+
 Actualizado: 10 de octubre de 2026. UnADM, Licenciatura en Derecho, grupo 005, curso Moodle 3441, ciclo 2026-2, bloque 2.
 
 ## Sistema de identificacion

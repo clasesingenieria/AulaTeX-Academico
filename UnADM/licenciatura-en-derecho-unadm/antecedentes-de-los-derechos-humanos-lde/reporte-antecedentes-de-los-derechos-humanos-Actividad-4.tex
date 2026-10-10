@@ -17,13 +17,19 @@ Matricula: & ES2611202040 \\
 Actividad interna: & 4 \\
 Semana: & 2 \\
 Figura docente: & Daniel Alexis Lozano Ortega \\
-Estado: & Propuesta no publicada \\
 Fecha: & \today
 \end{tabular}}
 \input{template}
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
+\setcitestyle{authoryear,open={(},close={)}}
 \usepackage[most]{tcolorbox}
+\usepackage{attachfile}
+\definecolor{unadmGreen}{HTML}{5F8F3A}
+\attachfilesetup{color={0.373 0.561 0.227},print=false}
+\newcommand{\foroCopyButton}[1]{%
+\textattachfile[appearance={},description={Participacion en texto},mimetype=text/plain]{#1}{%
+\colorbox{unadmGreen}{\small\textcolor{white}{\,Copiar participacion\,}}}}
 \newtcolorbox{forobox}{enhanced,breakable,colback=white,
 colframe=green!30!black,leftrule=2pt,boxrule=0.6pt,arc=2pt}
 \begin{document}
@@ -32,32 +38,78 @@ colframe=green!30!black,leftrule=2pt,boxrule=0.6pt,arc=2pt}
 \templateFinalcfg
 \onehalfspacing
 \section{Introduccion}
-La pregunta del foro exige elegir una fundamentacion y explicar su
-importancia actual. Unidad 1 distingue derechos inherentes a la persona,
-reconocimiento normativo y mecanismos de proteccion. El texto siguiente
-conserva la propuesta local para revision personal; no acredita publicacion.
+La proteccion de los derechos humanos exige justificar por que corresponden
+a toda persona y establecer como pueden reclamarse. El fundamento en la
+dignidad permite cuestionar normas excluyentes; el reconocimiento juridico
+y las garantias permiten convertir esa exigencia en obligaciones
+\citep{cuadernilloADH2026,ibarraCurso2022ADH}.
 \section{Dignidad y garantias institucionales}
-La consigna oficial, Actividad 2 de semana 2, pide una unica
-participacion principal de 50 a 100 palabras; no exige replicas.
-Su destino es el modulo Moodle 211997.
-\begin{forobox}
-El iusnaturalismo ofrece una explicacion convincente del origen de los derechos humanos porque los vincula con la dignidad de cada persona, no con una concesion del gobernante. Ese fundamento permite cuestionar normas injustas y defender a quienes han sido excluidos. Sin embargo, la justificacion moral necesita reconocimiento juridico y garantias efectivas: sin instituciones y mecanismos de exigibilidad, la dignidad puede quedarse en una proclamacion. Por ello, considero importante distinguir el fundamento del derecho de las condiciones que permiten protegerlo en la sociedad actual.
-\end{forobox}
-La propuesta contiene 83 palabras y debe confirmarse como postura del
-estudiante. El apoyo conceptual procede del cuadernillo de Unidad 1,
-recurso 211995; este parrafo documental no forma parte del texto que
-se publicaria. No se anaden citas literales ni requisitos genericos de
-foro que contradigan el limite y la consigna especificos.
-\section{Conclusiones}
-La propuesta vincula dignidad y exigibilidad sin confundir sus funciones.
-Antes de publicar, corresponde revisar su fidelidad a Unidad 1 y
-comprobar si ya existe una participacion propia para evitar duplicarla.
-Este reporte documenta preparacion, no envio.\footnote{GitHub Copilot
-apoyo la redaccion y organizacion; la postura requiere revision personal.}
-\section*{Fuente y destino}
-Lozano Ortega, D. A. (2026). \emph{Unidad 1. Bases teoricas basicas
-relacionadas con los derechos humanos en Mexico}. UnADM.
-\url{https://aulavirtual.unadmexico.mx/mod/resource/view.php?id=211995}.
+\subsection{Fundamento moral y reconocimiento juridico}
+El iusnaturalismo vincula los derechos con la condicion humana, con
+independencia de su reconocimiento estatal. Su fuerza critica consiste
+en no reducir la justicia a la voluntad del legislador. La perspectiva
+positivista permite identificar derechos juridicamente reconocidos,
+pero esa identificacion no demuestra por si sola su eficacia
+\citep{cuadernilloADH2026,unedVideo2024}.
 
-Foro: \url{https://aulavirtual.unadmexico.mx/mod/forum/view.php?id=211997}.
+La distincion importa en Mexico: el articulo 1 constitucional impone
+obligaciones de promover, respetar, proteger y garantizar derechos;
+la jurisprudencia 1a./J.~37/2016 reconoce dignidad como derecho
+fundamental, no mera declaracion etica
+\citep{cpeumADH2026,scjnDignidad2016ADH}. La historia comprende avances
+y retrocesos, por lo que reconocer derechos no basta para acreditar
+su disfrute \citep[p.~11]{alvarezIcaza2009ADH}.
+
+\subsection{Origen e importancia de los derechos humanos}
+\begin{forobox}
+\hfill\foroCopyButton{foro-participacion-Actividad-4.txt}\par\medskip
+\textbf{Asunto:} Dignidad y proteccion efectiva\par
+Hola, companeras y companeros.\par
+Considero que el iusnaturalismo explica mejor el origen de los derechos humanos:
+los vincula con la dignidad, no con una concesion estatal. Ese fundamento
+permite cuestionar leyes injustas y proteger a quienes han sido excluidos.
+Sin embargo, la justificacion moral necesita reconocimiento juridico y
+garantias efectivas. Por eso distingo el fundamento del derecho de los
+medios para exigir su respeto en la sociedad actual.
+
+\textbf{Referencia:} Lozano Ortega (2026), \emph{Unidad 1}, UnADM.
+
+Apoyo de IA: GitHub Copilot; organizar argumentos y revisar redaccion;
+contraste con Unidad 1.
+\end{forobox}
+La dignidad ofrece un criterio para cuestionar la exclusion; la garantia
+exige procedimientos e instituciones. Complementar estos planos evita
+confundir un ideal moral con proteccion juridica efectiva
+\citep{ibarraCurso2022ADH}.
+\clearpage
+\section{Conclusiones}
+Considero que el valor de la persona no debe depender de una concesion
+del poder. Esa posicion permite criticar leyes injustas, pero necesita
+obligaciones y medios de defensa. Para mi formacion juridica, la
+consecuencia es examinar conjuntamente fundamento, reconocimiento y
+proteccion, sin confundir legalidad formal con justicia
+\citep{cuadernilloADH2026,cpeumADH2026}.\footnote{GitHub Copilot apoyo la
+organizacion y redaccion, sin sustituir la revision personal.}
+\clearpage
+\begin{thebibliography}{6}
+\bibitem[Alvarez Icaza Longoria(2009)]{alvarezIcaza2009ADH}
+Alvarez Icaza Longoria, E. (2009). \emph{Los derechos humanos en Mexico}. Nostra Ediciones.
+\bibitem[Camara de Diputados(2026)]{cpeumADH2026}
+Camara de Diputados. (2026). \emph{Constitucion Politica de los Estados Unidos Mexicanos}.
+\url{https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf}
+\bibitem[Ibarra Olguin(2022)]{ibarraCurso2022ADH}
+Ibarra Olguin, A. M. (Ed.). (2022). \emph{Curso de derechos humanos}. Tirant lo Blanch.
+\bibitem[Lozano Ortega(2026)]{cuadernilloADH2026}
+Lozano Ortega, D. A. (2026). \emph{Unidad 1. Bases teoricas basicas relacionadas con los derechos humanos en Mexico} [Cuadernillo]. UnADM.
+\url{https://aulavirtual.unadmexico.mx/mod/resource/view.php?id=211995}
+\bibitem[Suprema Corte de Justicia de la Nacion(2016)]{scjnDignidad2016ADH}
+Suprema Corte de Justicia de la Nacion, Primera Sala. (2016).
+\emph{Dignidad humana. Constituye una norma juridica que consagra un derecho fundamental a favor de las personas y no una simple declaracion etica}
+[1a./J. 37/2016 (10a.), registro 2012363].
+\url{https://sjf2.scjn.gob.mx/detalle/tesis/2012363}
+\bibitem[Universidad Nacional de Educacion a Distancia(2024)]{unedVideo2024}
+Universidad Nacional de Educacion a Distancia. (2024, 23 de octubre).
+\emph{Tema 11. Los Derechos Humanos Concepto y Fundamentacion} [Video]. Canal UNED.
+\url{https://canal.uned.es/video/671b6728e0637d00c70d7b80}
+\end{thebibliography}
 \end{document}
