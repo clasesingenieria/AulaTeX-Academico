@@ -1,5 +1,19 @@
 # Contrato local: resena critica de video
 
+Numeracion vigente: resena = actividad interna 3, archivo reporte-antecedentes-de-los-derechos-humanos-Actividad-3.tex/pdf; Moodle conserva Actividad 1, modulo 211993. Las menciones a actividad local 2 mas abajo corresponden al historial previo a la migracion 1-4. Registro del cuestionario = 1; foro diagnostico = 2; foro S2 = 4.
+
+## Distribucion vigente del 10 de octubre
+
+Por solicitud posterior del usuario, el contexto y la presentacion del video ocupan una pagina; `resenabox` comienza en la siguiente y se extiende por exactamente dos paginas; Conclusiones comienza en una pagina propia. Portada y referencias aparte: seis paginas totales, cuatro de contenido. Esta distribucion sustituye los ajustes de tres cuartillas descritos abajo. Conserva Arial 12, interlineado 1.5, ficha interior, cita al video fuera de la caja y siete fuentes. La segunda pagina de la caja no se rellena artificialmente para ocupar toda su altura.
+
+Comprobacion: paginacion y primera pagina y cierre de caja revisados visualmente, sin recortes. Esta version excede el maximo docente de tres paginas de contenido; no se certifica cumplimiento de extension ni aptitud de envio. La separacion de las conclusiones en hoja propia y el reparto solicitado son decisiones editoriales del usuario, no requisitos nuevos del fasciculo.
+
+## Ajuste vigente de presentacion
+
+Por indicacion del usuario, la ficha se integra como tarjeta tipografica dentro de `resenabox`; la autoria se acredita en portada, sin repetir "Resenista". El tema y la cita al video se presentan antes de la caja; dentro se mantiene prosa critica sin citas repetidas ni marcas temporales. Los parrafos conceptuales preparatorios no llevan el subtitulo "Marco conceptual". La caja conserva un cierre breve, mientras la recomendacion desarrollada, el contraste mexicano y la postura personal se integran en Conclusiones. Estas indicaciones sustituyen las ubicaciones anteriores descritas en este documento, no los cinco elementos de la tecnica.
+
+Para respetar tres cuartillas, Conclusiones continua en la ultima pagina del cuerpo sin salto obligatorio. Verificacion de la version ajustada: cinco paginas totales (portada, tres de contenido y referencias); cierre completo sin pagina adicional de dos lineas, siete fuentes conservadas y compilacion sin desbordamientos ni citas indefinidas. Arial 12 e interlineado 1.5 no se redujeron. No se acredita una nueva puntuacion global del motor ni se realiza envio.
+
 ## Identificacion y alcance
 
 Fuente original cotejada: Lopez Martinez, A., Rojas Delgado, N. L., Alvarez Anaya, A. y Campos Hernandez, Y. I. (2023). 100 Tecnicas Didacticas de Ensenanza y Aprendizaje, fasciculo 2. UnADM. Seccion Resena, paginas impresas 185-195; ISBN 978-607-59731-2-8. Archivo original: referencias-aulatex/100tecnicasdidacticas Fasciculo 2 - Armando Lopez Martinez.pdf. La pagina 186 incluye expresamente libro, pelicula y documental; no establece otra tecnica independiente para video.

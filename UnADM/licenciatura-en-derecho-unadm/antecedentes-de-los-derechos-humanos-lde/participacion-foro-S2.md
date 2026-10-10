@@ -1,6 +1,6 @@
 # Foro de participacion S2: teorias de los derechos humanos
 
-Modulo Moodle 211997, denominado oficialmente Actividad 2. Texto adicional conservado; no confundir con la actividad local 1 (foro diagnostico S1) ni con la actividad local 2 (resena S2).
+Modulo Moodle 211997, denominado oficialmente Actividad 2. Corresponde al reporte interno 4; cuestionario S1 = 1, foro diagnostico S1 = 2 y resena S2 = 3.
 
 Estado: borrador ilustrativo, no publicado. La postura debe confirmarse o sustituirse por la del estudiante y contrastarse con Unidad 1; no representa sus convicciones personales. Asistencia de GitHub Copilot en redaccion. La declaracion de IA debe ajustarse al mecanismo del aula; el conteo siguiente corresponde solo al texto de intervencion.
 
