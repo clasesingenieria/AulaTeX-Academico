@@ -1,5 +1,7 @@
 # UnADM: seguimiento de materias 2026-2, bloque 2
 
+Actualizacion del 9 de octubre: [Auditoria de semana 2](AUDITORIA-SEMANA-2-2026-10-09.md). Consulta autenticada: tareas sin entrega; Estado cierra el 11 de octubre a las 23:55 y Penal a las 23:59. Recuperados formato DOCX de Estado, cuadernillo PDF y presentacion PPTX de Antecedentes; incorporadas 11 copias bibliograficas verificadas. Ningun producto certificado listo. Las observaciones siguientes conservan el historial del 4-5 de octubre y no sustituyen el dictamen actualizado.
+
 Consulta autenticada: 4 de octubre de 2026, fecha local de trabajo. Acceso mediante la boveda local de AulaTeX; no se guardaron credenciales ni sesiones en este directorio. Las planeaciones de trabajo son documentos derivados, no emitidos ni aprobados por UnADM.
 
 | Materia y grupo | Curso | Evidencia publicada | Entrega ordinaria | Estado local |
