@@ -31,6 +31,6 @@ Solicitar a cada proveedor precio por 4,000 volantes media carta, una cara a col
 
 ## Estado de las actividades
 
-El usuario confirmó que el logotipo fue creado por Martín Jonathan de la Cruz Muñoz y aceptó la investigación documental de la actividad 7 y las referencias de precios publicados de la 8. Las tres actividades quedan completas en ese alcance documental: la ausencia de trabajo de campo en la 7 o de una cotización formal en la 8 no son bloqueos académicos acordados. Los escenarios siguen siendo supuestos y las partidas internas del presupuesto no se convierten en precios publicados. [Confirmación de autoría y alcance](../../confirmacion-alcance-6-7-8-2026-09-23.md).
+El usuario confirmó que el logotipo fue creado por Martín Jonathan de la Cruz Muñoz y aceptó la investigación documental de la actividad 7 y las referencias de precios publicados de la 8. Las tres actividades quedan completas en ese alcance documental: la ausencia de trabajo de campo en la 7 o de una cotización formal en la 8 no son bloqueos académicos acordados. Los escenarios siguen siendo supuestos y las partidas internas del presupuesto no se convierten en precios publicados. [Confirmación de autoría y alcance](../confirmaciones/alcance-6-7-8-2026-09-23.md).
 
 No se acredita aprobación docente, validación comercial, pedido o entrega. Las condiciones se reconfirmarán antes de una compra. El integrador 14 no fue reescrito y debe incorporar la autoría y los avances de 6–8 posteriormente.

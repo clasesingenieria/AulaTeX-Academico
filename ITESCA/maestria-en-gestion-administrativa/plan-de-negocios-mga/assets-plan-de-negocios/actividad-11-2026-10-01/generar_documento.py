@@ -10,7 +10,7 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 sys.stdout.reconfigure(encoding='utf-8')
 ROOT=Path(__file__).resolve().parents[5];COURSE=ROOT/'ITESCA/maestria-en-gestion-administrativa/plan-de-negocios-mga'
 ASSET=COURSE/'assets-plan-de-negocios/actividad-11-2026-10-01'
-SOURCE=COURSE/'reporte-plan-de-negocios-Actividad-10-AM-Taller.docx'
+SOURCE=COURSE/'Entregas/reporte-plan-de-negocios-Actividad-10-AM-Taller.docx'
 baseline=hashlib.sha256(SOURCE.read_bytes()).hexdigest()
 data=json.loads((ASSET/'proceso.json').read_text(encoding='utf-8'))
 d=Document(SOURCE)
@@ -93,7 +93,7 @@ for a,b,c in refs:
  q=p('');q.paragraph_format.left_indent=Inches(.3);q.paragraph_format.first_line_indent=Inches(-.3);q.add_run(a);q.add_run(b).italic=True;q.add_run(c)
 p('Se utilizó asistencia de inteligencia artificial para organizar el flujo y revisar su correspondencia con la tabla. No se generaron respuestas del sondeo ni mediciones de operación.')
 d.core_properties.title='Proceso de prestación del servicio de AM Taller';d.core_properties.author='Martín Jonathan de la Cruz Muñoz'
-out=COURSE/'reporte-plan-de-negocios-Actividad-11-AM-Taller.docx';d.save(out)
+out=COURSE/'Entregas/reporte-plan-de-negocios-Actividad-11-AM-Taller.docx';d.save(out)
 assert hashlib.sha256(SOURCE.read_bytes()).hexdigest()==baseline
 assert len(t.rows)==17 and len(t.columns)==4
 print(out)

@@ -80,7 +80,7 @@ def main():
         parts = re.split(r"(\[@\w+\])", value)
         return "".join(r"\citepalias{" + part[2:-1] + "}" if part.startswith("[@") else tex_escape(part) for part in parts)
 
-    source = COURSE / "reporte-plan-de-negocios-Actividad-11-AM-Taller.docx"
+    source = COURSE / "Entregas/reporte-plan-de-negocios-Actividad-11-AM-Taller.docx"
     source_hash = hashlib.sha256(source.read_bytes()).hexdigest()
     document = Document(source)
 
@@ -255,7 +255,6 @@ def main():
     heading("Referencias", page=True)
     tex.pop()
     tex.append(r"\clearpage\renewcommand{\refname}{Referencias}\begin{thebibliography}{3}")
-    bib = []
     emphasis = {"itescaRH": "Administración de Recursos Humanos (Puestos y funciones)", "glosario": "Propuesta de glosario de conceptos", "openstax": "Principles of management"}
     for reference in sorted(data["references"], key=lambda item: item["apa"].casefold()):
         block = document.add_paragraph(style="Normal")
@@ -270,10 +269,6 @@ def main():
         tex.append(r"\bibitem[" + tex_escape(reference["citation"]) + "]{" + reference["key"] + "}")
         formatted = tex_escape(prefix).replace(tex_escape(marked), r"\textit{" + tex_escape(marked) + "}")
         tex.append(formatted + r"\url{https://" + url + "}")
-        author, year = reference["citation"].rsplit(", ", 1)
-        title = "10.1 Organizational structures and design" if reference["key"] == "openstax" else marked
-        author_field = "key" if reference["key"] == "glosario" else "author"
-        bib.append("@misc{" + reference["key"] + ",\n  " + author_field + " = {{" + tex_escape(author) + "}},\n  year = {" + year + "},\n  title = {{" + tex_escape(title) + "}},\n  howpublished = {\\url{https://" + url + "}}\n}")
     tex.append(r"\end{thebibliography}")
     source_tex = r"""\def\actividadnumero{12}
 \def\actividadtitulo{Administración de recursos humanos: puestos y funciones}
@@ -289,7 +284,6 @@ def main():
     source_tex += "}\n\\long\\def\\actividadcontenido{\n" + "\n".join(tex) + "\n}\n"
     source_tex += r"\input{ITESCA/maestria-en-gestion-administrativa/plan-de-negocios-mga/reporte-plan-de-negocios-plantilla-actividad.tex}" + "\n"
     (COURSE / (STEM + ".tex")).write_text(source_tex, encoding="utf-8")
-    (COURSE / (STEM + ".bib")).write_text("\n\n".join(bib) + "\n", encoding="utf-8")
     document.core_properties.title = data["title"]
     document.core_properties.subject = "Actividad 12 - Plan de Negocios"
     document.core_properties.author = "Martín Jonathan de la Cruz Muñoz"

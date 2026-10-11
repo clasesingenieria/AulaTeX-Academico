@@ -6,7 +6,7 @@ Material académico versionable dentro de la materia.
 
 ## Recursos incorporados el 23/09/2026
 
-- [Logotipo de AM Taller](am-taller-logo-1024.png): copia idéntica por SHA-256 del recurso existente en el proyecto local amTaller. Autor: **Martín Jonathan de la Cruz Muñoz**, según su confirmación del 23/09/2026. No se atribuye su creación a esta revisión ni se afirma un registro de marca. [Constancia de la declaración](../referencias-plan-de-negocios/notas-plan-de-negocios/confirmacion-alcance-6-7-8-2026-09-23.md).
+- [Logotipo de AM Taller](am-taller-logo-1024.png): copia idéntica por SHA-256 del recurso existente en el proyecto local amTaller. Autor: **Martín Jonathan de la Cruz Muñoz**, según su confirmación del 23/09/2026. No se atribuye su creación a esta revisión ni se afirma un registro de marca. [Constancia de la declaración](../referencias-plan-de-negocios/notas-plan-de-negocios/materiales-generales/confirmaciones/alcance-6-7-8-2026-09-23.md).
 - [Propuesta publicitaria](flyer-am-taller-propuesta.png): composición académica con el logotipo existente, lema y llamado a cotizar. No contiene contacto, precios o domicilio inventados; no se publicó como campaña.
 - [Diagrama editable](flujo-am-taller.tex) y [exportación para Word](flujo-am-taller.png): proceso propuesto de 16 nodos, con decisiones, retornos y cierre sin ejecución. No representa mediciones ni operación comprobada.
 

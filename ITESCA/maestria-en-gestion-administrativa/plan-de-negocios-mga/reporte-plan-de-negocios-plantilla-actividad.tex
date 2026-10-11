@@ -42,6 +42,34 @@
 \def\itescaqualitycriterion{Cumplimiento del contrato de realizar-actividad: forma didáctica, análisis propio, citas visibles y cierre transferible}
 \def\itescabibliography{\actividadbibliografia}
 \def\itescadocumentdate{\actividadfecha}
-\def\itescaactivitypreamble{\actividadextras}
+\def\itescaactivitypreamble{\actividadextras
+\renewcommand{\insertcoverwatermark}{}
+\renewcommand{\insertcoverinstitutionalfooter}{}
+\renewcommand{\templatePortrait}{%
+\thispagestyle{empty}
+\null
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north west,inner sep=0pt] at (current page.north west)
+{\includegraphics[width=\paperwidth,height=\paperheight]{ITESCA/maestria-en-gestion-administrativa/plan-de-negocios-mga/assets-plan-de-negocios/actividad-12-2026-10-05/portada-oficial.png}};
+\fill[white,opacity=0.96] ([xshift=0.0926\paperwidth,yshift=-0.3722\paperheight]current page.north west)
+rectangle ([xshift=0.8894\paperwidth,yshift=-0.5732\paperheight]current page.north west);
+\node[anchor=north west,text width=0.75\paperwidth,inner sep=0pt,
+font=\sffamily\fontsize{11}{14}\selectfont,text=black]
+at ([xshift=0.1122\paperwidth,yshift=-0.3874\paperheight]current page.north west)
+{Maestría en Gestión Administrativa\\
+Asignatura: Plan de Negocios\\
+Curso: GGPN01 -- Unidad \actividadunidad\\
+Estudiante: \actividadestudiante\\
+Matrícula: \actividadmatricula\\
+Docente: \actividaddocente\\
+Fecha: \actividadfecha\\
+Lugar: \actividadlugar};
+\node[anchor=north west,text width=0.49\paperwidth,inner sep=0pt,
+font=\sffamily\bfseries\fontsize{13}{16}\selectfont,text=white,align=left]
+at ([xshift=0.4307\paperwidth,yshift=-0.6979\paperheight]current page.north west)
+{\actividadtitulo\\[5pt]\actividadsubtitulo\\[8pt]
+Actividad \actividadnumero\space -- Plan de Negocios};
+\end{tikzpicture}
+\clearpage}}
 \long\def\itescaactivitycontent{\actividadcontenido}
 \input{ITESCA/maestria-en-gestion-administrativa/reporte-itesca-mga.tex}

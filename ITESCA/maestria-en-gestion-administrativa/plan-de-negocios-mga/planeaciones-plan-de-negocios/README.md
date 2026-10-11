@@ -1,6 +1,6 @@
 # Planeaciones de Plan de Negocios por vencimiento
 
-Numeracion local cotejada el 22/09/2026. [Calendario y equivalencias](../ORDEN-ACTIVIDADES.md).
+Numeracion local cotejada el 22/09/2026. [Calendario y equivalencias](../Readme%20-%20Seminario%20I.md#orden-y-numeracion).
 
 | Actividad | Modulo Moodle | Planeacion | Modelo |
 | --- | --- | --- | --- |

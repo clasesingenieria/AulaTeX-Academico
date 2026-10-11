@@ -4,7 +4,7 @@
 
 La [consigna vigente](../referencias-plan-de-negocios/consigna-actividad-5-demanda-oferta.md) confirma dos listados, sin exigir número de preguntas ni formato de archivo específico. Se desarrollaron una encuesta de 22 preguntas y una lista de cotejo de 16 ítems para AM Taller Autocentro. Las categorías, filtros, territorio, piloto y metas de levantamiento son decisiones propuestas, no datos de campo ni exigencias institucionales.
 
-Productos: [PDF](../reporte-plan-de-negocios-Actividad-5-Preguntas-Demanda-Oferta.pdf), [Word](../reporte-plan-de-negocios-Actividad-5-Preguntas-Demanda-Oferta.docx) y [LaTeX](../reporte-plan-de-negocios-Actividad-5-Preguntas-Demanda-Oferta.tex). [Nota de sustento y mapa de ítems](../referencias-plan-de-negocios/notas-plan-de-negocios/actividad-5-diseno-instrumentos.md). No se realizó envío al aula ni aplicación de los instrumentos.
+Productos: [PDF](../reporte-plan-de-negocios-Actividad-5-Preguntas-Demanda-Oferta.pdf), [Word](../Entregas/reporte-plan-de-negocios-Actividad-5-Preguntas-Demanda-Oferta.docx) y [LaTeX](../reporte-plan-de-negocios-Actividad-5-Preguntas-Demanda-Oferta.tex). [Nota de sustento y mapa de ítems](../referencias-plan-de-negocios/notas-plan-de-negocios/actividad-05-demanda-oferta/diseno-instrumentos.md). No se realizó envío al aula ni aplicación de los instrumentos.
 
 Modelo aportado; no implica aprobación docente ni entrega.
 

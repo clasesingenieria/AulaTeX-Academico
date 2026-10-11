@@ -33,7 +33,7 @@ def main():
     process_path = COURSE / "assets-plan-de-negocios/actividad-11-2026-10-01/proceso.json"
     process = json.loads(process_path.read_text(encoding="utf-8"))
     receipt = json.loads((ASSETS / "generacion.json").read_text(encoding="utf-8"))
-    source = COURSE / "reporte-plan-de-negocios-Actividad-11-AM-Taller.docx"
+    source = COURSE / "Entregas/reporte-plan-de-negocios-Actividad-11-AM-Taller.docx"
     word = COURSE / (STEM + ".docx")
     report = COURSE / (STEM + ".tex")
     document = Document(word)
@@ -106,7 +106,7 @@ def main():
     if not log.exists():
         log = ASSETS / "compilacion" / log.name
     checks["latex_log_clean"] = not re.search(r"Overfull|undefined citations|Citation .* undefined|^!", log.read_text(encoding="utf-8", errors="replace"), re.M)
-    files = [data_path, source, process_path, word, report, report.with_suffix(".bib"), report.with_suffix(".pdf"), COURSE / (STEM + "-Word.pdf"), ASSETS / "organigrama.pdf", ASSETS / "organigrama.png"]
+    files = [data_path, source, process_path, word, report, COURSE / "plan-de-negocios.bib", report.with_suffix(".pdf"), COURSE / (STEM + "-Word.pdf"), ASSETS / "organigrama.pdf", ASSETS / "organigrama.png"]
     result = {
         "passed": all(checks.values()), "checks": checks, "pdfs": pdfs,
         "role_words_before": old_words, "role_words_after": new_words,

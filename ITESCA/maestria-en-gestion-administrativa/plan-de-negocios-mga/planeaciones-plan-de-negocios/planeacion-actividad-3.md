@@ -8,5 +8,5 @@ El cuestionario documentado anteriormente comprende misión, análisis FODA, fac
 
 La preparación consiste en contrastar esas definiciones y distinguir sus funciones. Esta ficha no acredita una entrega ni una calificación.
 
-[Modelo JSON](planeacion-actividad-3.json) · [Calendario y numeración](../ORDEN-ACTIVIDADES.md).
+[Modelo JSON](planeacion-actividad-3.json) · [Calendario y numeración](../Readme%20-%20Seminario%20I.md#orden-y-numeracion).
 **Actividad local:** 3. **Modulo Moodle:** 6540. **Vencimiento publicado:** 20/09/2026 23:59. Consulta: 2026-09-22; zona horaria no verificada.
