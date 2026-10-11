@@ -2,6 +2,12 @@
 
 ITESCA, Maestria en Gestion Administrativa, periodo 2026-II.
 
+## Organizacion del 10 de octubre de 2026
+
+Se redistribuyeron 132 archivos en `referencias-plan-de-negocios/notas-plan-de-negocios/`, segun el modulo y la numeracion local acordada. Las fichas de planeaciones generadas y borradores de actividades estan en las notas de sus actividades, conservando revision y fecha. Las evidencias de T11 y T12, la correccion del sondeo de T10 y la metodologia de T5 se agruparon con sus productos. Las fuentes compartidas de Monterrey y los indices generales estan en materiales generales. [Registro de movimientos](referencias-plan-de-negocios/notas-plan-de-negocios/materiales-generales/organizacion-2026-10-10.json).
+
+Se conservaron las variantes de empresa y los archivos de la raiz sin elegir una version por inferencia. T12 enviada conserva SHA256 `1889c52facc19e8a7b4a1d28e0c23d94b89b4d25eefd433c83281708ec2ccc0c`; su [comprobante](referencias-plan-de-negocios/notas-plan-de-negocios/actividad-12/evidencias/2026-10-05/envio/6551-receipt.json) esta en notas de T12. Los enlaces principales se verificaron; no se realizaron envios ni se declara cumplimiento academico de todos los productos por esta reorganizacion.
+
 ## Validación documental del 23/09/2026
 
 [Dictamen de las actividades 1 a 15](VALIDACION-ACTIVIDADES-1-15.md) y [evidencia por requisito](VALIDACION-ACTIVIDADES-1-15.json). **No están completas las quince actividades:** los reportes de preparación no sustituyen los cuestionarios, los datos del sondeo ni el video.
@@ -10,7 +16,7 @@ Se incorporaron el flyer visual de la actividad 8 y el diagrama real de la 11; s
 
 Las actividades 3, 5, 6, 7, 8, 11 y 12 están cubiertas en el alcance documental indicado por la auditoría. El usuario confirmó su autoría del logotipo y aceptó la investigación documental de la 7 y los precios publicados para la 8. No se acredita contratación, rentabilidad, entrega ni aprobación docente. Los pendientes personales y empíricos de las otras actividades se conservan; el calendario siguiente mantiene su fecha de verificación.
 
-Actualización de 6–8: [fuentes y presupuesto local de Monterrey](referencias-plan-de-negocios/monterrey-2026-09-23/README.md) y [confirmación del usuario](referencias-plan-de-negocios/notas-plan-de-negocios/confirmacion-alcance-6-7-8-2026-09-23.md). El autor del logotipo es Martín Jonathan de la Cruz Muñoz. La 7 mantiene mapa municipal, Censo 2020 y escenarios explícitos; la 8 conserva un presupuesto de 3,520 MXN, con referencia pública de impresión de 1,500 MXN y partidas internas estimadas separadas. La cotización formal no es un requisito pendiente de la actividad académica; las condiciones comerciales se reconfirmarán antes de comprar. Los Word y sus versiones anteriores se conservan. El integrador previo requiere incorporar estos avances.
+Actualización de 6–8: [fuentes y presupuesto local de Monterrey](referencias-plan-de-negocios/notas-plan-de-negocios/materiales-generales/fuentes-monterrey-2026-09-23/README.md) y [confirmación del usuario](referencias-plan-de-negocios/notas-plan-de-negocios/confirmacion-alcance-6-7-8-2026-09-23.md). El autor del logotipo es Martín Jonathan de la Cruz Muñoz. La 7 mantiene mapa municipal, Censo 2020 y escenarios explícitos; la 8 conserva un presupuesto de 3,520 MXN, con referencia pública de impresión de 1,500 MXN y partidas internas estimadas separadas. La cotización formal no es un requisito pendiente de la actividad académica; las condiciones comerciales se reconfirmarán antes de comprar. Los Word y sus versiones anteriores se conservan. El integrador previo requiere incorporar estos avances.
 
 ## Listado completo de actividades
 
@@ -50,10 +56,10 @@ Este estado es una fotografía de la fecha de corte, no se actualiza automática
 - [Plantilla de actividad](reporte-plan-de-negocios-plantilla-actividad.tex): adaptador de metadatos y contenido para actividades; enruta cada reporte a la plantilla canónica [reporte-itesca-mga.tex](../reporte-itesca-mga.tex) y conserva el contrato visible de realizar-actividad.
 - [Lote realizar-actividad](LOTE-ACTIVIDADES.md): registro histórico de siete borradores TEX/PDF/DOCX generados con GPT-5.6-SOL, deployment gpt-5.6-sol. Los productos posteriores y sus pendientes se consultan en el estado de entregables; no se atribuyen a ese lote.
 - [Reportes de las actividades 2, 3 y 4](referencias-plan-de-negocios/notas-plan-de-negocios/actividades-2-3-4-reportes.md): preparación conceptual del diagnóstico, respuestas verificadas de la Unidad 1 y capítulo 1 de Industrial Revolucionaria. El diagnóstico no se presenta como evaluación contestada.
-- [Revision vigente 2026-09-20](planeaciones-generadas/2026-II/revision-2026-09-20/README.md): 14 planeaciones en Markdown y JSON, con requisitos y fechas cotejados con el aula. Son borradores con pendientes, no aprobacion docente.
+- [Revision vigente 2026-09-20](referencias-plan-de-negocios/notas-plan-de-negocios/materiales-generales/planeaciones-generadas/2026-II/revision-2026-09-20/README.md): 14 planeaciones en Markdown y JSON, con requisitos y fechas cotejados con el aula. Son borradores con pendientes, no aprobacion docente.
 - [Referencias de la materia](referencias-plan-de-negocios/README.md): nueve originales (siete PDF y dos PowerPoint), extracciones y manifiestos dentro de la materia, sin exclusiones de Git.
 - [Aula del curso 213](https://cursos3.e-itesca.edu.mx/course/view.php?id=213): acceso autenticado confirmado el 2026-09-20. Consultar consignas, recursos y calendario antes de elaborar productos.
-- [Revision 2026-09-15](planeaciones-generadas/2026-II/revision-2026-09-15/README.md): 14 borradores historicos basados en inventario local, sin lectura de consignas web en esa fecha. Se conservan sin sobrescribir.
+- [Revision 2026-09-15](referencias-plan-de-negocios/notas-plan-de-negocios/materiales-generales/planeaciones-generadas/2026-II/revision-2026-09-15/README.md): 14 borradores historicos basados en inventario local, sin lectura de consignas web en esa fecha. Se conservan sin sobrescribir.
 - [Bibliografia local](plan-de-negocios.bib): materiales del aula, metodología y fuentes estadísticas y comerciales de Monterrey, con fecha y alcance de consulta. Las ocho claves de memoria editorial se conservan por compatibilidad con el TEX anterior; no son fuentes académicas.
 - [Compilacion](COMPILACION.md): instrucciones para los documentos LaTeX existentes.
 

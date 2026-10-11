@@ -18,9 +18,9 @@ Se conserva AM Taller Autocentro. Monterrey y seis municipios próximos constitu
 
 | Fuente y copia local | Lectura utilizada | Aplicación |
 | --- | --- | --- |
-| [Pew Research Center: Writing Survey Questions](../metodologia-actividad-5/pew-writing-survey-questions.html) | Question development, Question wording y Question order. Sin fecha de publicación acreditada. | Neutralidad, categorías, filtro inicial, secuencia y pilotaje. No se trasladan resultados de sus encuestas al negocio. |
-| [AAPOR: Best Practices](../metodologia-actividad-5/aapor-survey-best-practices.pdf) | Actualización marzo de 2022 en portada; secciones 2, 3 y 4. | Selección, voluntariedad, no uso comercial de encuesta, pruebas previas y transparencia. |
-| [Gomez Albrecht, Green y Hoffman: Principles of Marketing](../metodologia-actividad-5/openstax-marketing-research.html) | Sección 6.3, problema, método, muestra y análisis; [ficha editorial](../metodologia-actividad-5/openstax-ficha-editorial.html), publicación 25/01/2023. | Vincular información con decisiones y limitar inferencias de muestras no probabilísticas. |
+| [Pew Research Center: Writing Survey Questions](actividad-5/metodologia/pew-writing-survey-questions.html) | Question development, Question wording y Question order. Sin fecha de publicación acreditada. | Neutralidad, categorías, filtro inicial, secuencia y pilotaje. No se trasladan resultados de sus encuestas al negocio. |
+| [AAPOR: Best Practices](actividad-5/metodologia/aapor-survey-best-practices.pdf) | Actualización marzo de 2022 en portada; secciones 2, 3 y 4. | Selección, voluntariedad, no uso comercial de encuesta, pruebas previas y transparencia. |
+| [Gomez Albrecht, Green y Hoffman: Principles of Marketing](actividad-5/metodologia/openstax-marketing-research.html) | Sección 6.3, problema, método, muestra y análisis; [ficha editorial](actividad-5/metodologia/openstax-ficha-editorial.html), publicación 25/01/2023. | Vincular información con decisiones y limitar inferencias de muestras no probabilísticas. |
 | [Competencia 2](../materiales-aula/2026-II/revision-2026-09-20/competencia-2.txt) | Contenidos de investigación: territorio, mercado meta, demanda y competencia. Autoría y año no acreditados. | Pertinencia al curso y al proyecto. |
 | [Glosario del curso](../materiales-aula/2026-II/revision-2026-09-20/glosario.txt) | Apartados 2.2, 2.2.1 y 2.2.2; portada enero de 2024. | Relación mercado, clientes y competencia. No se presentan como consultadas las obras que el glosario cita indirectamente. |
 

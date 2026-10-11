@@ -14,4 +14,4 @@ El TEX de la actividad 11 usa el diagrama editable; la imagen se usa en Word. Tr
 
 ## Delimitación de Monterrey
 
-[Mapa municipal](mapa-monterrey-inegi.png) generado desde el GeoJSON del Marco Geoestadístico INEGI, diciembre de 2025, clave 19039. [Fuente, datos y cálculos](../referencias-plan-de-negocios/monterrey-2026-09-23/README.md). Las coordenadas se representan en grados; el mapa no marca una sucursal, rutas ni tiempos de traslado. No se extrapola población de 2020 a 2026.
+[Mapa municipal](mapa-monterrey-inegi.png) generado desde el GeoJSON del Marco Geoestadístico INEGI, diciembre de 2025, clave 19039. [Fuente, datos y cálculos](../referencias-plan-de-negocios/notas-plan-de-negocios/materiales-generales/fuentes-monterrey-2026-09-23/README.md). Las coordenadas se representan en grados; el mapa no marca una sucursal, rutas ni tiempos de traslado. No se extrapola población de 2020 a 2026.

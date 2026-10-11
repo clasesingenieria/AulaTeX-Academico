@@ -19,4 +19,4 @@ Carpeta: `materiales-aula/2026-II/revision-2026-09-20/`. Contiene nueve original
 
 Cada original tiene una extracción `.txt` con el mismo nombre. Las notas nuevas se organizan en `notas-plan-de-negocios/`, por unidad o actividad, sin confundir notas con textos originales.
 
-[Catálogo de autoría y alcance de lectura](../planeaciones-generadas/2026-II/revision-2026-09-20/REFERENCIAS.md).
+[Catálogo de autoría y alcance de lectura](notas-plan-de-negocios/materiales-generales/planeaciones-generadas/2026-II/revision-2026-09-20/REFERENCIAS.md).

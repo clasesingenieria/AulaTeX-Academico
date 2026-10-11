@@ -4,7 +4,7 @@
 
 Se envió únicamente el [PDF con portada oficial](reporte-plan-de-negocios-Actividad-12-Recursos-Humanos-Portada-Oficial.pdf), 17 páginas, al módulo 6551. Moodle confirmó **Enviado para calificar** el 5 de octubre de 2026 a las **17:20**, hora del aula, 6 horas y 38 minutos antes del cierre. Sin calificar al verificar.
 
-La portada reutiliza el recurso de la última Actividad 10 de Fundamentos de Gestión Administrativa, adaptado a Plan de Negocios. Las 16 páginas del cuerpo conservan texto y apariencia del reporte validado. La descarga remota coincide por SHA-256. [Comprobante y verificación](referencias-plan-de-negocios/actividad-12-2026-10-05/envio/README.md). El Word y el PDF de portada genérica no se enviaron. El corte histórico siguiente no refleja este envío posterior.
+La portada reutiliza el recurso de la última Actividad 10 de Fundamentos de Gestión Administrativa, adaptado a Plan de Negocios. Las 16 páginas del cuerpo conservan texto y apariencia del reporte validado. La descarga remota coincide por SHA-256. [Comprobante y verificación](referencias-plan-de-negocios/notas-plan-de-negocios/actividad-12/evidencias/2026-10-05/envio/README.md). El Word y el PDF de portada genérica no se enviaron. El corte histórico siguiente no refleja este envío posterior.
 
 Revision documental local: **23/09/2026**. Preparacion local no equivale a entrega ni aprobacion. **No estan completas las quince actividades.** [Dictamen por actividad y requisito](VALIDACION-ACTIVIDADES-1-15.md). El [calendario](ORDEN-ACTIVIDADES.md) conserva su consulta del 22/09/2026; esta revision no revalida el estado del aula.
 
@@ -34,7 +34,7 @@ Los reportes 2, 3 y 4 conservan Industrial Revolucionaria como caso de la etapa 
 
 Se conserva el Word historico del modulo 6545. Los Word 6, 8 y 11 tienen [copias de la revision anterior](referencias-plan-de-negocios/notas-plan-de-negocios/historico-word-2026-09-23/README.md). En la actualizacion de Monterrey se regeneraron 6, 7 y 8 y se guardaron sus versiones previas en `referencias-plan-de-negocios/notas-plan-de-negocios/historico-word-monterrey-2026-09-23/`. El Word de apoyo de imagen de empresa tambien se sincronizo. Los demas Word no se regeneraron ni cotejaron integramente.
 
-[Fuentes, calculos y solicitud de cotizacion local](referencias-plan-de-negocios/monterrey-2026-09-23/README.md). No se contacto a proveedores ni se asumieron compromisos comerciales. Las cifras de compradores y capacidad son escenarios, no encuestas o ventas registradas.
+[Fuentes, calculos y solicitud de cotizacion local](referencias-plan-de-negocios/notas-plan-de-negocios/materiales-generales/fuentes-monterrey-2026-09-23/README.md). No se contacto a proveedores ni se asumieron compromisos comerciales. Las cifras de compradores y capacidad son escenarios, no encuestas o ventas registradas.
 
 [Confirmación del usuario para el cierre de 6–8](referencias-plan-de-negocios/notas-plan-de-negocios/confirmacion-alcance-6-7-8-2026-09-23.md). Este cierre documental no acredita entrega o aprobación docente. El Word 6 se regeneró después de confirmar autoría; sus versiones previas se conservan en `referencias-plan-de-negocios/notas-plan-de-negocios/historico-word-autoria-2026-09-23/`.
 

@@ -2,7 +2,7 @@
 
 **Estado de esta carpeta: los reportes activos de 6534, 6545, 6546, 6547, 6548, 6549, 6550 y 6551 quedaron normalizados sobre la plantilla canónica MGA; siete módulos del lote original siguen sin ejecución directa mediante este ejecutor.**
 
-Se solicito ejecutar `realizar-actividad` para las 14 [planeaciones del lote original](planeaciones-generadas/2026-II/revision-2026-09-20/README.md). El primer intento del modulo 6545 recibio HTTP 401 de `Auto (model-router)`. Tras el cambio de configuracion del usuario, se verifico el motor **GPT-5.6-SOL**, deployment **gpt-5.6-sol**, con una solicitud breve exitosa. El ejecutor ya no fuerza el motor anterior: respeta la seleccion vigente y la restriccion global cuando corresponda.
+Se solicito ejecutar `realizar-actividad` para las 14 [planeaciones del lote original](referencias-plan-de-negocios/notas-plan-de-negocios/materiales-generales/planeaciones-generadas/2026-II/revision-2026-09-20/README.md). El primer intento del modulo 6545 recibio HTTP 401 de `Auto (model-router)`. Tras el cambio de configuracion del usuario, se verifico el motor **GPT-5.6-SOL**, deployment **gpt-5.6-sol**, con una solicitud breve exitosa. El ejecutor ya no fuerza el motor anterior: respeta la seleccion vigente y la restriccion global cuando corresponda.
 
 El reintento completo supero sus tres etapas de `AulaTeXAgent` y materializo el TEX. Después, los reportes activos de la materia se normalizaron para trabajar sobre `ITESCA/maestria-en-gestion-administrativa/reporte-itesca-mga.tex`, usando `reporte-plan-de-negocios-plantilla-actividad.tex` solo como adaptador de metadatos y contenido. Se exportaron los siguientes borradores:
 
