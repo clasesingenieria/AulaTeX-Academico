@@ -7,15 +7,15 @@ Participacion y dos replicas publicadas en el modulo 211997. Autoria propia y co
 - [Participacion principal](https://aulavirtual.unadmexico.mx/mod/forum/discuss.php?d=271989#p1081012): mensaje 1081012.
 - [Replica 1](https://aulavirtual.unadmexico.mx/mod/forum/discuss.php?d=271976#p1081013): responde al mensaje 1080969.
 - [Replica 2](https://aulavirtual.unadmexico.mx/mod/forum/discuss.php?d=271975#p1081014): responde al mensaje 1080964.
-- Comprobantes locales: [principal](referencias-antecedentes-de-los-derechos-humanos/envio-foro-S2-2026-10-10/comprobante-0.json), [replica 1](referencias-antecedentes-de-los-derechos-humanos/envio-foro-S2-2026-10-10/comprobante-1.json) y [replica 2](referencias-antecedentes-de-los-derechos-humanos/envio-foro-S2-2026-10-10/comprobante-2.json).
+- Comprobantes locales: [principal](comprobantes-envio/comprobante-0.json), [replica 1](comprobantes-envio/comprobante-1.json) y [replica 2](comprobantes-envio/comprobante-2.json).
 
 ## Historial de preparacion
 
-Replicas adicionales contextualizadas el 10 de octubre: [revision y correspondencia con hilos](referencias-antecedentes-de-los-derechos-humanos/REVISION-FOROS-Y-REPLICAS-S2.md), [replica 1](foro-replica-1-Actividad-4.txt) y [replica 2](foro-replica-2-Actividad-4.txt). Autores verificados como distintos del usuario; no publicadas. La consigna no exige replicas. Estos textos sustituyen la nota anterior de intervenciones pendientes.
+Replicas adicionales contextualizadas el 10 de octubre: [revision y correspondencia con hilos](REVISION-FOROS-Y-REPLICAS-S2.md), [replica 1](../../../foro-replica-1-Actividad-4.txt) y [replica 2](../../../foro-replica-2-Actividad-4.txt). Autores verificados como distintos del usuario; no publicadas. La consigna no exige replicas. Estos textos sustituyen la nota anterior de intervenciones pendientes.
 
 Modulo Moodle 211997, denominado oficialmente Actividad 2. Corresponde al reporte interno 4; cuestionario S1 = 1, foro diagnostico S1 = 2 y resena S2 = 3.
 
-Estado: texto preparado para revision personal, no publicado por esta intervencion. Version sincronizada con el reporte interno 4 y su [TXT extraible](foro-participacion-Actividad-4.txt). Conteo completo: 82 palabras, incluyendo asunto, saludo, despedida y referencia. La declaracion de IA permanece fuera de las cajas, en conclusiones del reporte. El boton del PDF adjunta el TXT; no ejecuta copia automatica al portapapeles y su apertura depende del visor.
+Estado: texto preparado para revision personal, no publicado por esta intervencion. Version sincronizada con el reporte interno 4 y su [TXT extraible](../../../foro-participacion-Actividad-4.txt). Conteo completo: 82 palabras, incluyendo asunto, saludo, despedida y referencia. La declaracion de IA permanece fuera de las cajas, en conclusiones del reporte. El boton del PDF adjunta el TXT; no ejecuta copia automatica al portapapeles y su apertura depende del visor.
 
 ## Texto propuesto
 
