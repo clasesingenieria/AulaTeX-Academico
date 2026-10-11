@@ -1,33 +1,30 @@
-# Guía de Estudio: Anatomía Humana
+# Anatomía humana
 
-Esta guía desglosa los temas fundamentales de Anatomía Humana para el EXANI-II. Para cada tema, deberás completar dos actividades.
+Preparación local; no es una guía oficial.
 
-## Tema 1: Planimetría y Cavidades Corporales
+## Organización estructural y posición
 
-**Actividad 1: Investigación**
-Investiga en la bibliografía de Tortora y Saladin los planos anatómicos (sagital, coronal, transversal) y las principales cavidades corporales. Elabora esquemas con referencias a los términos de orientación anatómica.
+La organización se estudia desde el nivel químico y celular hasta tejidos, órganos, sistemas y organismo. La posición anatómica permite describir relaciones sin depender de la postura momentánea. Sagital divide en porciones derecha e izquierda; solo el plano medio las divide en mitades iguales. Proximal y distal expresan distancia al origen o punto de unión y no se deben restringir de manera absoluta a extremidades.
 
-**Actividad 2: Cuestionario**
-1. ¿Qué plano anatómico divide el cuerpo en mitades anterior y posterior?
-2. ¿Qué órganos principales se encuentran en la cavidad pericárdica?
-3. Define los términos 'proximal' y 'distal' usando como ejemplo el miembro superior.
+## Cavidades y regiones
 
-## Tema 2: Sistema Óseo (Esqueleto Axial y Apendicular)
+El mediastino pertenece al tórax y contiene el corazón rodeado por el pericardio. La cavidad pericárdica es el espacio potencial entre hojas serosas, no un recipiente hueco ocupado literalmente por el corazón. Los pulmones están rodeados por las pleuras, a los lados del mediastino. Para localizar regiones abdominales se usan cuatro cuadrantes o nueve regiones; no implican compartimentos separados por paredes.
 
-**Actividad 1: Investigación**
-Realiza un cuadro sinóptico clasificando los huesos del cuerpo humano según pertenezcan al esqueleto axial o al apendicular. Menciona las funciones principales del tejido óseo.
+## Clasificación y función
 
-**Actividad 2: Cuestionario**
-1. ¿Cuántos huesos conforman el esqueleto axial en un adulto típico?
-2. ¿A qué división pertenece la escápula y la clavícula?
-3. ¿Cuál es el hueso más largo del cuerpo humano?
+Los huesos largos, cortos, planos, irregulares y sesamoideos se clasifican por forma. El sistema óseo sostiene, protege, permite movimiento, almacena minerales y participa en hematopoyesis. El esqueleto axial y el apendicular son divisiones funcionales, no tipos de tejido. La tibia soporta la mayor carga de la pierna; la fíbula también transmite parte de la carga y estabiliza el tobillo. El músculo esquelético es estriado y de control somático; el cardíaco es estriado e involuntario, con uno y ocasionalmente dos núcleos centrales; el liso no tiene sarcómeros organizados.
 
-## Tema 3: Sistema Muscular
+## Representación conceptual
 
-**Actividad 1: Investigación**
-Describe los tres tipos de tejido muscular (esquelético, liso y cardíaco), haciendo énfasis en su localización, control (voluntario/involuntario) y apariencia microscópica (estriado/no estriado).
+| Concepto | Relación o función |
+| --- | --- |
+| Químico | Moléculas e iones |
+| Celular | Células especializadas |
+| Tisular | Epitelial, conectivo, muscular y nervioso |
+| Órgano | Combinación de tejidos |
+| Sistema | Órganos coordinados |
+| Organismo | Integración de sistemas |
 
-**Actividad 2: Cuestionario**
-1. ¿Qué tipo de tejido muscular recubre el tracto digestivo?
-2. ¿Qué estructura es la unidad funcional contráctil del músculo esquelético?
-3. Menciona el principal músculo implicado en la respiración basal.
+## Productos
+
+[Reporte con esquema y soluciones](reporte-examen-ingreso-anatomia.tex). [Cuestionario y justificaciones](referencias-examen-ingreso-anatomia/notas-examen-ingreso-anatomia/actividad-02-cuestionario/cuestionario-resuelto.md).

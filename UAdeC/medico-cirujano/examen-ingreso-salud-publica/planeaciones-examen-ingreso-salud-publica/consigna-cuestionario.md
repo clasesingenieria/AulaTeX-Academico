@@ -1,29 +1,22 @@
-# Cuestionario de Evaluación: Salud Pública
+# Actividad 02 - Cuestionario y soluciones justificadas
 
-**Instrucciones**: Elige la respuesta correcta para las siguientes preguntas tipo examen de admisión.
+Consigna local AulaTeX; no se presenta como instrucción oficial de UAdeC/CENEVAL.
 
-1. Componentes que conforman la Tríada Ecológica:
-   a) Vacunas, medicamentos, entorno
-   b) Huésped, agente causal, medio ambiente
-   c) Individuo, familia, comunidad
-   d) Prevención primaria, secundaria, terciaria
+## Objetivo
 
-2. Nivel de prevención enfocado en el diagnóstico precoz y el tratamiento oportuno para limitar el daño:
-   a) Prevención primaria
-   b) Prevención secundaria
-   c) Prevención terciaria
-   d) Prevención primordial
+Resolver y justificar los reactivos de práctica, identificando errores y límites.
 
-3. Es una manifestación objetiva de enfermedad que el médico puede medir o comprobar (ej. Fiebre de 39°C):
-   a) Síntoma
-   b) Síndrome
-   c) Signo
-   d) Patogenia
+## Producto
 
-4. Según la definición de la OMS (1948), la salud es:
-   a) La ausencia de enfermedad
-   b) El estado de completo bienestar físico, mental y social
-   c) El equilibrio homeostático del individuo
-   d) La adaptación óptima al medio ambiente
+[Guía](../guia-de-estudio.md), [fuente del reporte](../reporte-examen-ingreso-salud-publica.tex) y PDF compilado junto a esa fuente.
 
-5. *(Agrega 6 reactivos adicionales sobre epidemiología y prevención).*
+## Criterios
+
+- Conceptos precisos y sin afirmaciones absolutas injustificadas.
+- Fuente y alcance de consulta identificados.
+- Esquema o tabla coherente con la síntesis.
+- Cada reactivo tiene cuatro opciones y una solución justificada.
+- Sin marcadores de contenido pendiente en el producto.
+- Compilación y revisión visual verificadas por separado.
+
+La resolución modelo no acredita un intento personal; no hay envío ni calificación institucional.

@@ -1,33 +1,29 @@
-# Guía de Estudio: Biología Celular y Microbiología
+# Biología celular y microbiología
 
-Esta guía abarca la citología y los microorganismos de importancia médica.
+Preparación local; no es una guía oficial.
 
-## Tema 1: Estructura Celular y Membranas
+## Estructura y transporte
 
-**Actividad 1: Investigación**
-Compara la célula procariota con la eucariota. Posteriormente, describe el modelo del mosaico fluido de la membrana plasmática y los mecanismos de transporte (activo vs pasivo).
+Procariotas carecen de núcleo delimitado por membrana; eucariotas compartimentan funciones en organelos. Ambas tienen membrana, citoplasma, ADN y ribosomas. El ADN procariota se localiza en el nucleoide. Las mitocondrias participan en metabolismo energético; los lisosomas en degradación; los ribosomas en traducción y Golgi en procesamiento y distribución. La difusión facilitada utiliza proteínas sin consumir ATP directamente. El transporte activo primario usa energía directa y el secundario aprovecha un gradiente mantenido por otro transporte.
 
-**Actividad 2: Cuestionario**
-1. ¿Qué organelo eucariota es el sitio principal de síntesis de ATP?
-2. Menciona una diferencia estructural fundamental entre bacterias y células humanas.
-3. ¿Qué es la ósmosis y en qué categoría de transporte se clasifica?
+## Ciclo y división
 
-## Tema 2: Ciclo Celular y División Mitótica
+Interfase comprende G1, S y G2; S incluye replicación del ADN. Mitosis distribuye cromosomas duplicados en núcleos hijos; meiosis incluye dos divisiones tras una replicación y reduce la dotación cromosómica. La citocinesis suele iniciarse antes de que termine telofase y puede solaparse con la división nuclear. En animales actúa un anillo contráctil; en vegetales se forma una placa celular a partir de vesículas guiadas por el fragmoplasto.
 
-**Actividad 1: Investigación**
-Describe las fases de la Interfase (G1, S, G2) y enumera los eventos principales de la Profase, Metafase, Anafase y Telofase de la Mitosis.
+## Microorganismos
 
-**Actividad 2: Cuestionario**
-1. ¿En qué fase de la interfase ocurre la duplicación del ADN?
-2. ¿Qué ocurre con las cromátidas hermanas durante la anafase?
-3. ¿Cuál es la finalidad de la citocinesis?
+Bacterias son procariotas y muchas poseen pared de peptidoglucano; hongos son eucariotas con pared que contiene quitina. Protozoos y helmintos son grupos distintos incluidos entre parásitos médicos. Virus son agentes acelulares cuya replicación depende de células huésped. No todos los microorganismos causan enfermedad. Morfología y tinción Gram describen características, pero no establecen por sí solas especie, patogenicidad ni tratamiento.
 
-## Tema 3: Microbiología Básica
+## Representación conceptual
 
-**Actividad 1: Investigación**
-Elabora un cuadro comparativo de los 4 principales agentes infecciosos: Bacterias, Virus, Hongos y Parásitos, destacando su tipo de célula, material genético y mecanismo de reproducción.
+| Concepto | Relación o función |
+| --- | --- |
+| Bacterias | Procariotas; división celular; pared variable |
+| Virus | Acelulares; replicación dependiente del huésped |
+| Hongos | Eucariotas; levaduras o formas filamentosas |
+| Protozoos | Eucariotas unicelulares; ciclos diversos |
+| Helmintos | Eucariotas pluricelulares; ciclos diversos |
 
-**Actividad 2: Cuestionario**
-1. ¿Por qué los virus son considerados parásitos intracelulares obligados?
-2. ¿Qué estructura celular proporciona protección y forma a la mayoría de las bacterias?
-3. Menciona un ejemplo clínico de una infección causada por hongos (micosis).
+## Productos
+
+[Reporte con esquema y soluciones](reporte-examen-ingreso-biologia-celular.tex). [Cuestionario y justificaciones](referencias-examen-ingreso-biologia-celular/notas-examen-ingreso-biologia-celular/actividad-02-cuestionario/cuestionario-resuelto.md).

@@ -1,14 +1,22 @@
-# Consigna de Investigación: Salud Pública y Medicina Comunitaria
+# Actividad 01 - Síntesis y representación conceptual
 
-**Objetivo**: Entender los determinantes de la salud, epidemiología básica e historia natural de la enfermedad.
+Consigna local AulaTeX; no se presenta como instrucción oficial de UAdeC/CENEVAL.
 
-**Instrucciones**:
-1. Consulta los libros sobre Salud Pública y Epidemiología (OPS, Higashida).
-2. Desarrolla los siguientes conceptos clave exigidos en el EXANI-II:
-   - Concepto de Salud-Enfermedad (OMS).
-   - La Tríada Ecológica (Huésped, Agente, Medio Ambiente).
-   - Historia natural de la enfermedad (Periodo prepatogénico y patogénico).
-   - Niveles de prevención de Leavell y Clark (Primaria, Secundaria, Terciaria).
-   - Signos vs Síntomas (diferencias clínicas fundamentales).
+## Objetivo
 
-**Entregable**: Ensayo de 2 cuartillas exponiendo estos modelos teóricos aplicados a un caso real de enfermedad (ej. Diabetes o Dengue).
+Relacionar los conceptos de la guía mediante una síntesis y un esquema o tabla.
+
+## Producto
+
+[Guía](../guia-de-estudio.md), [fuente del reporte](../reporte-examen-ingreso-salud-publica.tex) y PDF compilado junto a esa fuente.
+
+## Criterios
+
+- Conceptos precisos y sin afirmaciones absolutas injustificadas.
+- Fuente y alcance de consulta identificados.
+- Esquema o tabla coherente con la síntesis.
+- Cada reactivo tiene cuatro opciones y una solución justificada.
+- Sin marcadores de contenido pendiente en el producto.
+- Compilación y revisión visual verificadas por separado.
+
+La resolución modelo no acredita un intento personal; no hay envío ni calificación institucional.

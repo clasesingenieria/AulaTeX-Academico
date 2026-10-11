@@ -1,14 +1,22 @@
-# Consigna de Investigación: Biología Celular y Microbiología
+# Actividad 01 - Síntesis y representación conceptual
 
-**Objetivo**: Analizar la célula como unidad de vida y reconocer los distintos microorganismos de importancia médica.
+Consigna local AulaTeX; no se presenta como instrucción oficial de UAdeC/CENEVAL.
 
-**Instrucciones**:
-1. Revisa las referencias sobre Histología y Microbiología (Fortoul, Murray, Sherris).
-2. Elabora un reporte que incluya:
-   - Diferencias principales entre células procariotas y eucariotas.
-   - Organelos celulares y sus funciones (mitocondrias, lisosomas, ribosomas, aparato de Golgi).
-   - Membrana celular: Modelo del mosaico fluido, transporte activo y pasivo.
-   - Ciclo celular: Etapas de la interfase, Mitosis vs Meiosis.
-   - Microbiología básica: Diferencia entre bacterias, virus, hongos y parásitos.
+## Objetivo
 
-**Entregable**: Reporte escrito y tabla comparativa de microorganismos.
+Relacionar los conceptos de la guía mediante una síntesis y un esquema o tabla.
+
+## Producto
+
+[Guía](../guia-de-estudio.md), [fuente del reporte](../reporte-examen-ingreso-biologia-celular.tex) y PDF compilado junto a esa fuente.
+
+## Criterios
+
+- Conceptos precisos y sin afirmaciones absolutas injustificadas.
+- Fuente y alcance de consulta identificados.
+- Esquema o tabla coherente con la síntesis.
+- Cada reactivo tiene cuatro opciones y una solución justificada.
+- Sin marcadores de contenido pendiente en el producto.
+- Compilación y revisión visual verificadas por separado.
+
+La resolución modelo no acredita un intento personal; no hay envío ni calificación institucional.

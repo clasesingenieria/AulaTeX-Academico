@@ -1,29 +1,22 @@
-# Cuestionario de Evaluación: Bioquímica
+# Actividad 02 - Cuestionario y soluciones justificadas
 
-**Instrucciones**: Responde el cuestionario para el módulo de Bioquímica.
+Consigna local AulaTeX; no se presenta como instrucción oficial de UAdeC/CENEVAL.
 
-1. Biomolécula que constituye la principal fuente de energía celular:
-   a) Lípidos
-   b) Proteínas
-   c) Carbohidratos
-   d) Ácidos nucleicos
+## Objetivo
 
-2. Producto final neto de la glucólisis por cada molécula de glucosa:
-   a) 2 piruvatos, 2 ATP, 2 NADH
-   b) 2 acetil-CoA, 4 ATP, 2 FADH2
-   c) 4 lactatos, 2 ATP
-   d) 34 ATP, agua
+Resolver y justificar los reactivos de práctica, identificando errores y límites.
 
-3. Proceso de síntesis de ARN a partir de una plantilla de ADN:
-   a) Traducción
-   b) Replicación
-   c) Retrotranscripción
-   d) Transcripción
+## Producto
 
-4. Organelo donde se lleva a cabo el Ciclo de Krebs:
-   a) Citoplasma
-   b) Matriz mitocondrial
-   c) Retículo endoplásmico
-   d) Núcleo celular
+[Guía](../guia-de-estudio.md), [fuente del reporte](../reporte-examen-ingreso-bioquimica.tex) y PDF compilado junto a esa fuente.
 
-5. *(Agrega 6 preguntas adicionales sobre metabolismo y enzimología).*
+## Criterios
+
+- Conceptos precisos y sin afirmaciones absolutas injustificadas.
+- Fuente y alcance de consulta identificados.
+- Esquema o tabla coherente con la síntesis.
+- Cada reactivo tiene cuatro opciones y una solución justificada.
+- Sin marcadores de contenido pendiente en el producto.
+- Compilación y revisión visual verificadas por separado.
+
+La resolución modelo no acredita un intento personal; no hay envío ni calificación institucional.

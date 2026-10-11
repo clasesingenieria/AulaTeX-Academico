@@ -1,15 +1,22 @@
-# Consigna de Investigación: Anatomía Humana
+# Actividad 01 - Síntesis y representación conceptual
 
-**Objetivo**: Identificar y describir la estructura básica y organización del cuerpo humano, fundamental para el examen EXANI-II Premedicina.
+Consigna local AulaTeX; no se presenta como instrucción oficial de UAdeC/CENEVAL.
 
-**Instrucciones**:
-1. Consulta los libros de referencia (Tortora, Saladin).
-2. Elabora un resumen sobre los siguientes temas clave:
-   - Niveles de organización estructural del cuerpo humano.
-   - Posición anatómica, planos (sagital, coronal, transversal) y términos direccionales.
-   - Cavidades corporales y regiones abdominopélvicas.
-   - Sistema esquelético: clasificación de los huesos y esqueleto axial vs apendicular.
-   - Sistema muscular: tipos de tejido muscular (esquelético, liso, cardíaco).
-3. Incluye diagramas anatómicos para facilitar el repaso.
+## Objetivo
 
-**Entregable**: Documento en formato Markdown o PDF con el resumen de la investigación.
+Relacionar los conceptos de la guía mediante una síntesis y un esquema o tabla.
+
+## Producto
+
+[Guía](../guia-de-estudio.md), [fuente del reporte](../reporte-examen-ingreso-anatomia.tex) y PDF compilado junto a esa fuente.
+
+## Criterios
+
+- Conceptos precisos y sin afirmaciones absolutas injustificadas.
+- Fuente y alcance de consulta identificados.
+- Esquema o tabla coherente con la síntesis.
+- Cada reactivo tiene cuatro opciones y una solución justificada.
+- Sin marcadores de contenido pendiente en el producto.
+- Compilación y revisión visual verificadas por separado.
+
+La resolución modelo no acredita un intento personal; no hay envío ni calificación institucional.

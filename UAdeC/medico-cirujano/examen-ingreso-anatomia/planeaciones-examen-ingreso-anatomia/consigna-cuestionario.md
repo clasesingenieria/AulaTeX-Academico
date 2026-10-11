@@ -1,29 +1,22 @@
-# Cuestionario de Evaluación: Anatomía Humana
+# Actividad 02 - Cuestionario y soluciones justificadas
 
-**Instrucciones**: Responde el siguiente cuestionario basado en preguntas tipo CENEVAL EXANI-II.
+Consigna local AulaTeX; no se presenta como instrucción oficial de UAdeC/CENEVAL.
 
-1. ¿Cuál es el plano anatómico que divide al cuerpo en mitades derecha e izquierda?
-   a) Coronal
-   b) Sagital
-   c) Transversal
-   d) Oblicuo
+## Objetivo
 
-2. ¿En qué cavidad corporal se encuentra el corazón?
-   a) Cavidad craneal
-   b) Cavidad pleural
-   c) Cavidad pericárdica
-   d) Cavidad pélvica
+Resolver y justificar los reactivos de práctica, identificando errores y límites.
 
-3. Tipo de tejido muscular de contracción voluntaria:
-   a) Liso
-   b) Cardíaco
-   c) Esquelético
-   d) Visceral
+## Producto
 
-4. Hueso que pertenece al esqueleto axial:
-   a) Fémur
-   b) Escápula
-   c) Esternón
-   d) Húmero
+[Guía](../guia-de-estudio.md), [fuente del reporte](../reporte-examen-ingreso-anatomia.tex) y PDF compilado junto a esa fuente.
 
-5. *(Agrega 6 reactivos adicionales similares orientados a anatomía básica).*
+## Criterios
+
+- Conceptos precisos y sin afirmaciones absolutas injustificadas.
+- Fuente y alcance de consulta identificados.
+- Esquema o tabla coherente con la síntesis.
+- Cada reactivo tiene cuatro opciones y una solución justificada.
+- Sin marcadores de contenido pendiente en el producto.
+- Compilación y revisión visual verificadas por separado.
+
+La resolución modelo no acredita un intento personal; no hay envío ni calificación institucional.

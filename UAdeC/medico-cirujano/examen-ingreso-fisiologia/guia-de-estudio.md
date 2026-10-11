@@ -1,33 +1,29 @@
-# Guía de Estudio: Fisiología Médica
+# Fisiología humana
 
-Esta guía desglosa los temas fundamentales de Fisiología para el EXANI-II.
+Preparación local; no es una guía oficial.
 
-## Tema 1: Homeostasis y Medio Interno
+## Homeostasis
 
-**Actividad 1: Investigación**
-Define el concepto de homeostasis y elabora un diagrama de flujo comparando un sistema de retroalimentación negativa frente a uno de retroalimentación positiva.
+Homeostasis es regulación dinámica dentro de rangos compatibles con función, no constancia absoluta. La retroalimentación negativa contrarresta una desviación y la positiva amplifica un proceso que necesita un mecanismo de término, como el parto. Sensor, centro integrador y efector son roles funcionales que pueden estar combinados en un mismo órgano.
 
-**Actividad 2: Cuestionario**
-1. ¿Cuál es la diferencia principal entre retroalimentación positiva y negativa?
-2. Menciona un ejemplo fisiológico clásico de retroalimentación positiva.
-3. ¿Qué componentes forman un arco reflejo homeostático básico?
+## Circulación y respiración
 
-## Tema 2: Fisiología Cardiovascular y Respiratoria
+Sístole es contracción y diástole relajación; las cámaras no se contraen todas al mismo tiempo. El nodo sinoauricular inicia normalmente la actividad cardíaca. La presión depende de gasto cardíaco y resistencia, entre otros factores. Ventilación mueve aire; difusión intercambia gases a favor de gradientes de presión parcial y perfusión transporta sangre. La mayor parte del CO2 circula como bicarbonato, aunque existen otras formas de transporte.
 
-**Actividad 1: Investigación**
-Revisa la fisiología del ciclo cardíaco (sístole y diástole) y la mecánica de la ventilación pulmonar. Resume el trayecto de la sangre desde las venas cavas hasta la aorta.
+## Endocrino y renal
 
-**Actividad 2: Cuestionario**
-1. ¿Cuál es la función del nodo sinoauricular (SA)?
-2. Durante el intercambio de gases en los alvéolos, ¿qué mecanismo de transporte celular se utiliza?
-3. ¿Qué válvulas cardíacas se cierran durante la sístole ventricular?
+Hipotálamo e hipófisis coordinan varios ejes, pero no todas las glándulas dependen de un único eje. TSH estimula tiroides; insulina favorece reducción de glucemia y glucagón movilización de reservas. La filtración renal se inicia en el corpúsculo renal; túbulos realizan reabsorción y secreción. Excreción resulta de filtración menos reabsorción más secreción. La nefrona es la unidad funcional y no debe confundirse con un uréter ni con toda la pelvis renal.
 
-## Tema 3: Fisiología Endocrina y Renal
+## Representación conceptual
 
-**Actividad 1: Investigación**
-Elabora una tabla con las principales glándulas endocrinas, las hormonas que secretan y su función principal. Adicionalmente, resume los pasos de la formación de orina en la nefrona.
+| Concepto | Relación o función |
+| --- | --- |
+| Variable regulada | Temperatura o glucemia |
+| Sensor | Detecta desviación |
+| Integración | Compara y coordina |
+| Efector | Modifica el proceso |
+| Respuesta negativa | Reduce la desviación inicial |
 
-**Actividad 2: Cuestionario**
-1. ¿Qué hormona regula principalmente la reabsorción de agua en los riñones?
-2. ¿Dónde ocurre la mayor parte de la reabsorción de nutrientes en la nefrona?
-3. ¿Cuál es la función de la insulina a nivel celular?
+## Productos
+
+[Reporte con esquema y soluciones](reporte-examen-ingreso-fisiologia.tex). [Cuestionario y justificaciones](referencias-examen-ingreso-fisiologia/notas-examen-ingreso-fisiologia/actividad-02-cuestionario/cuestionario-resuelto.md).

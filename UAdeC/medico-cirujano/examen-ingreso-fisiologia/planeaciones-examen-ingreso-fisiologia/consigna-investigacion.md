@@ -1,14 +1,22 @@
-# Consigna de Investigación: Fisiología Médica
+# Actividad 01 - Síntesis y representación conceptual
 
-**Objetivo**: Comprender el funcionamiento de los sistemas del cuerpo humano y el concepto de homeostasis.
+Consigna local AulaTeX; no se presenta como instrucción oficial de UAdeC/CENEVAL.
 
-**Instrucciones**:
-1. Utiliza las referencias proporcionadas (Boron, Ganong).
-2. Desarrolla un mapa conceptual o tabla comparativa para los siguientes procesos fisiológicos:
-   - Homeostasis: Retroalimentación positiva y negativa.
-   - Fisiología cardiovascular: Ciclo cardíaco y presión arterial.
-   - Fisiología respiratoria: Ventilación pulmonar e intercambio de gases.
-   - Sistema endocrino: Ejes hormonales y principales glándulas (hipotálamo, hipófisis, tiroides).
-   - Fisiología renal: Nefrona y filtración glomerular.
+## Objetivo
 
-**Entregable**: Mapa conceptual o documento de resumen descriptivo.
+Relacionar los conceptos de la guía mediante una síntesis y un esquema o tabla.
+
+## Producto
+
+[Guía](../guia-de-estudio.md), [fuente del reporte](../reporte-examen-ingreso-fisiologia.tex) y PDF compilado junto a esa fuente.
+
+## Criterios
+
+- Conceptos precisos y sin afirmaciones absolutas injustificadas.
+- Fuente y alcance de consulta identificados.
+- Esquema o tabla coherente con la síntesis.
+- Cada reactivo tiene cuatro opciones y una solución justificada.
+- Sin marcadores de contenido pendiente en el producto.
+- Compilación y revisión visual verificadas por separado.
+
+La resolución modelo no acredita un intento personal; no hay envío ni calificación institucional.

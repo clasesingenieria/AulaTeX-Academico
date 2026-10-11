@@ -1,13 +1,22 @@
-# Consigna de Investigación: Bioquímica y Biología Molecular
+# Actividad 01 - Síntesis y representación conceptual
 
-**Objetivo**: Dominar los conceptos fundamentales de metabolismo, biomoléculas y bases moleculares.
+Consigna local AulaTeX; no se presenta como instrucción oficial de UAdeC/CENEVAL.
 
-**Instrucciones**:
-1. Consulta las bibliografías (Mathews, Lieberman, Lozano).
-2. Investiga y define detalladamente:
-   - Biomoléculas (Carbohidratos, Lípidos, Proteínas, Ácidos nucleicos): Estructura química, enlaces y función principal.
-   - Enzimas: Concepto, sitio activo, inhibición competitiva y no competitiva.
-   - Rutas metabólicas principales: Glucólisis, Ciclo de Krebs (Ciclo del ácido cítrico), Fosforilación oxidativa.
-   - Dogma central de la biología molecular: Replicación, Transcripción, Traducción.
+## Objetivo
 
-**Entregable**: Ensayo corto y esquemas metabólicos.
+Relacionar los conceptos de la guía mediante una síntesis y un esquema o tabla.
+
+## Producto
+
+[Guía](../guia-de-estudio.md), [fuente del reporte](../reporte-examen-ingreso-bioquimica.tex) y PDF compilado junto a esa fuente.
+
+## Criterios
+
+- Conceptos precisos y sin afirmaciones absolutas injustificadas.
+- Fuente y alcance de consulta identificados.
+- Esquema o tabla coherente con la síntesis.
+- Cada reactivo tiene cuatro opciones y una solución justificada.
+- Sin marcadores de contenido pendiente en el producto.
+- Compilación y revisión visual verificadas por separado.
+
+La resolución modelo no acredita un intento personal; no hay envío ni calificación institucional.

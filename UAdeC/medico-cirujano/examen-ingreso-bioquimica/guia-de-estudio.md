@@ -1,33 +1,30 @@
-# Guía de Estudio: Bioquímica y Biología Molecular
+# Bioquímica y biología molecular
 
-Esta guía abarca los aspectos clave del metabolismo y las biomoléculas.
+Preparación local; no es una guía oficial.
 
-## Tema 1: Biomoléculas (Estructura y Función)
+## Biomoléculas
 
-**Actividad 1: Investigación**
-Describe las características químicas fundamentales de carbohidratos, lípidos, proteínas y ácidos nucleicos. Haz énfasis en los enlaces que unen a sus monómeros.
+Carbohidratos incluyen azúcares y polímeros con enlaces glucosídicos; cumplen funciones energéticas y estructurales. Lípidos tienen funciones de reserva, membrana y señalización; no todos son polímeros. Proteínas son cadenas de aminoácidos unidos por enlaces peptídicos; su estructura condiciona su función. Ácidos nucleicos son polímeros de nucleótidos con enlaces fosfodiéster y almacenan o expresan información genética.
 
-**Actividad 2: Cuestionario**
-1. ¿Qué tipo de enlace une a los aminoácidos para formar proteínas?
-2. ¿Cuál es la diferencia estructural entre ácidos grasos saturados e insaturados?
-3. ¿Qué molécula actúa como el principal almacén de energía a corto plazo en animales?
+## Enzimas y energía
 
-## Tema 2: Metabolismo Celular (Rutas Energéticas)
+Las enzimas reducen la energía de activación sin cambiar el equilibrio de la reacción. En inhibición competitiva reversible ideal aumenta Km aparente y Vmax permanece; en inhibición no competitiva pura disminuye Vmax y Km permanece. La no competitiva pura es un caso particular y no representa toda inhibición mixta. La glucólisis ocurre en citosol y obtiene dos piruvatos, dos ATP netos y dos NADH por glucosa. El ciclo del ácido cítrico ocurre principalmente en matriz mitocondrial; la cadena respiratoria y ATP sintasa en membrana interna. El rendimiento total de ATP depende de condiciones y lanzaderas, no de un valor universal fijo.
 
-**Actividad 1: Investigación**
-Dibuja un mapa metabólico simplificado que conecte la Glucólisis, el Ciclo de Krebs y la Cadena de Transporte de Electrones. Señala la ganancia de ATP en cada fase.
+## Información molecular
 
-**Actividad 2: Cuestionario**
-1. ¿Cuál es el producto final de la glucólisis en condiciones aeróbicas?
-2. ¿En qué parte de la célula eucariota ocurre el Ciclo de Krebs?
-3. ¿Qué molécula es el aceptor final de electrones en la respiración aerobia?
+Replicación copia ADN; transcripción produce ARN y traducción utiliza ARNm para sintetizar proteína. No todo ARN se traduce. Los codones se leen como tripletes: la mayoría especifica aminoácidos, pero los codones de terminación señalan el fin y no codifican uno. La retrotranscripción no invalida la distinción entre los procesos.
 
-## Tema 3: Dogma Central de la Biología Molecular
+## Representación conceptual
 
-**Actividad 1: Investigación**
-Investiga y explica los procesos de replicación, transcripción y traducción. Define el rol del ARNm, ARNt y ARNr.
+| Concepto | Relación o función |
+| --- | --- |
+| Glucosa | Entrada de seis carbonos |
+| Glucólisis: citosol | 2 piruvatos; 2 ATP netos; 2 NADH |
+| Oxidación de piruvato | Acetil-CoA, CO2 y NADH |
+| Ciclo del ácido cítrico | CO2 y transportadores reducidos |
+| Cadena respiratoria | Gradiente de protones; oxígeno aceptor final |
+| ATP sintasa | Síntesis acoplada al gradiente |
 
-**Actividad 2: Cuestionario**
-1. ¿Qué enzima es responsable de sintetizar la cadena de ARN durante la transcripción?
-2. ¿En qué organelo celular se lleva a cabo la traducción?
-3. Explica qué significa que la replicación del ADN sea 'semiconservativa'.
+## Productos
+
+[Reporte con esquema y soluciones](reporte-examen-ingreso-bioquimica.tex). [Cuestionario y justificaciones](referencias-examen-ingreso-bioquimica/notas-examen-ingreso-bioquimica/actividad-02-cuestionario/cuestionario-resuelto.md).

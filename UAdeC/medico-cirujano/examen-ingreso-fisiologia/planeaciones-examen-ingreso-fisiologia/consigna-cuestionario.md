@@ -1,29 +1,22 @@
-# Cuestionario de Evaluación: Fisiología Médica
+# Actividad 02 - Cuestionario y soluciones justificadas
 
-**Instrucciones**: Responde el siguiente cuestionario de opción múltiple tipo EXANI-II.
+Consigna local AulaTeX; no se presenta como instrucción oficial de UAdeC/CENEVAL.
 
-1. Mecanismo que mantiene constante el medio interno revirtiendo los cambios en una variable controlada:
-   a) Retroalimentación positiva
-   b) Retroalimentación negativa
-   c) Excreción
-   d) Adaptación
+## Objetivo
 
-2. ¿Cuál es el marcapasos natural del corazón que inicia los impulsos eléctricos?
-   a) Nodo auriculoventricular (AV)
-   b) Fibras de Purkinje
-   c) Nodo sinoauricular (SA)
-   d) Haz de His
+Resolver y justificar los reactivos de práctica, identificando errores y límites.
 
-3. Hormona encargada de disminuir los niveles de glucosa en sangre:
-   a) Glucagón
-   b) Insulina
-   c) Cortisol
-   d) Adrenalina
+## Producto
 
-4. Estructura funcional primaria de los riñones donde ocurre la filtración de la sangre:
-   a) Uréter
-   b) Vejiga
-   c) Nefrona
-   d) Pelvis renal
+[Guía](../guia-de-estudio.md), [fuente del reporte](../reporte-examen-ingreso-fisiologia.tex) y PDF compilado junto a esa fuente.
 
-5. *(Agrega 6 reactivos adicionales orientados a funciones corporales).*
+## Criterios
+
+- Conceptos precisos y sin afirmaciones absolutas injustificadas.
+- Fuente y alcance de consulta identificados.
+- Esquema o tabla coherente con la síntesis.
+- Cada reactivo tiene cuatro opciones y una solución justificada.
+- Sin marcadores de contenido pendiente en el producto.
+- Compilación y revisión visual verificadas por separado.
+
+La resolución modelo no acredita un intento personal; no hay envío ni calificación institucional.

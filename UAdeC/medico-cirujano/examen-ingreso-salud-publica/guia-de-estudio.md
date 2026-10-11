@@ -1,33 +1,29 @@
-# Guía de Estudio: Salud Pública y Medicina Comunitaria
+# Salud pública y epidemiología
 
-Esta guía desarrolla los pilares de la epidemiología y prevención.
+Preparación local; no es una guía oficial.
 
-## Tema 1: Concepto de Salud y Tríada Ecológica
+## Modelos y prevención
 
-**Actividad 1: Investigación**
-Investiga la definición de salud según la OMS. Luego, describe los tres componentes de la Tríada Ecológica (Huésped, Agente, Medio Ambiente) con un ejemplo de enfermedad infecciosa.
+La tríada agente-huésped-ambiente ayuda a describir enfermedades transmisibles, pero no explica por sí sola todos los procesos crónicos multifactoriales. Prevención primaria reduce aparición de enfermedad; secundaria busca detección y atención tempranas y terciaria reduce consecuencias y favorece rehabilitación. Un tamizaje positivo no equivale a diagnóstico confirmado.
 
-**Actividad 2: Cuestionario**
-1. ¿Cómo define la OMS la 'salud'?
-2. En el caso del Dengue, ¿quién actúa como el vector en la tríada ecológica?
-3. Menciona tres características del huésped que puedan influir en su susceptibilidad a enfermar.
+## Indicadores
 
-## Tema 2: Historia Natural de la Enfermedad y Prevención
+Los conteos de casos nuevos y existentes deben indicar población, definición de caso y tiempo. Incidencia acumulada relaciona nuevos casos con población inicialmente en riesgo; tasa de incidencia utiliza persona-tiempo. Prevalencia es la proporción con enfermedad en un momento o periodo definido. Letalidad relaciona muertes por una enfermedad con sus casos; mortalidad usa población. Comparar solo numeradores entre poblaciones de tamaños distintos puede inducir errores.
 
-**Actividad 1: Investigación**
-Describe el modelo de Leavell y Clark sobre la historia natural de la enfermedad. Diferencia los niveles de prevención: Primaria, Secundaria y Terciaria, dando un ejemplo para cada uno.
+## Aplicación y límites
 
-**Actividad 2: Cuestionario**
-1. La vacunación es un ejemplo de ¿qué nivel de prevención?
-2. ¿En qué consiste el periodo patogénico subclínico?
-3. Un programa de rehabilitación física pos-infarto corresponde a ¿qué nivel de prevención?
+Ejemplo ficticio: una cohorte cerrada de 100 personas inicialmente sanas presenta 5 casos nuevos en un mes: incidencia acumulada 5/100 = 5%, bajo seguimiento completo. Si 12 de 200 habitantes tienen la enfermedad en una fecha, prevalencia puntual 12/200 = 6%. No se suman automáticamente estos indicadores. Las IAAS se definen según criterios de vigilancia y no por una regla universal de 48 horas. Los síntomas son subjetivos pero pueden registrarse con escalas; los signos son observables. La epidemiología genera hipótesis, no demuestra causalidad por una asociación aislada.
 
-## Tema 3: Signos, Síntomas y Epidemiología Básica
+## Representación conceptual
 
-**Actividad 1: Investigación**
-Diferencia claramente entre un 'signo' y un 'síntoma' clínico. Investiga los conceptos de incidencia, prevalencia y letalidad.
+| Concepto | Relación o función |
+| --- | --- |
+| Pregunta de salud | Qué evento y definición de caso |
+| Población | Personas en riesgo y denominador |
+| Lugar y periodo | Delimitación de comparación |
+| Indicador | Conteo, proporción o tasa |
+| Interpretación | Limitaciones, sin causalidad automática |
 
-**Actividad 2: Cuestionario**
-1. ¿La fiebre (temperatura cuantificada) es un signo o un síntoma?
-2. Define el concepto de 'prevalencia' en salud pública.
-3. El dolor de cabeza (cefalea) referido por el paciente, ¿qué tipo de dato clínico representa?
+## Productos
+
+[Reporte con esquema y soluciones](reporte-examen-ingreso-salud-publica.tex). [Cuestionario y justificaciones](referencias-examen-ingreso-salud-publica/notas-examen-ingreso-salud-publica/actividad-02-cuestionario/cuestionario-resuelto.md).

@@ -1,29 +1,22 @@
-# Cuestionario de Evaluación: Biología Celular
+# Actividad 02 - Cuestionario y soluciones justificadas
 
-**Instrucciones**: Responde el siguiente simulacro enfocado a la célula y microbiología.
+Consigna local AulaTeX; no se presenta como instrucción oficial de UAdeC/CENEVAL.
 
-1. Organelo encargado de la digestión intracelular (autofagia y fagocitosis):
-   a) Ribosoma
-   b) Mitocondria
-   c) Lisosoma
-   d) Aparato de Golgi
+## Objetivo
 
-2. Etapa del ciclo celular donde ocurre la replicación del ADN:
-   a) Fase G1
-   b) Fase S
-   c) Fase G2
-   d) Fase M (Mitosis)
+Resolver y justificar los reactivos de práctica, identificando errores y límites.
 
-3. Tipo de transporte a través de la membrana celular que requiere gasto de ATP:
-   a) Difusión simple
-   b) Difusión facilitada
-   c) Ósmosis
-   d) Transporte activo
+## Producto
 
-4. Agentes infecciosos acelulares que requieren de una célula huésped para su replicación:
-   a) Bacterias
-   b) Hongos
-   c) Parásitos
-   d) Virus
+[Guía](../guia-de-estudio.md), [fuente del reporte](../reporte-examen-ingreso-biologia-celular.tex) y PDF compilado junto a esa fuente.
 
-5. *(Agrega 6 reactivos sobre estructura celular, mitosis/meiosis y agentes infecciosos).*
+## Criterios
+
+- Conceptos precisos y sin afirmaciones absolutas injustificadas.
+- Fuente y alcance de consulta identificados.
+- Esquema o tabla coherente con la síntesis.
+- Cada reactivo tiene cuatro opciones y una solución justificada.
+- Sin marcadores de contenido pendiente en el producto.
+- Compilación y revisión visual verificadas por separado.
+
+La resolución modelo no acredita un intento personal; no hay envío ni calificación institucional.
