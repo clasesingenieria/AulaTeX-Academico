@@ -125,6 +125,18 @@ def main():
                         frame.locator(command["selector"]).fill(command["text"])
                     elif action == "check":
                         frame.locator(command["selector"]).check()
+                    elif action == "upload":
+                        page.wait_for_load_state("networkidle")
+                        frame.locator(command["selector"]).set_input_files(command["path"])
+                    elif action == "download":
+                        with page.expect_download() as pending:
+                            frame.locator(command["selector"]).click()
+                        download = pending.value
+                        OUTPUT.mkdir(parents=True, exist_ok=True)
+                        destination = OUTPUT / download.suggested_filename
+                        download.save_as(destination)
+                        import hashlib
+                        result = {"filename": destination.name, "sha256": hashlib.sha256(destination.read_bytes()).hexdigest()}
                     elif action == "select":
                         frame.locator(command["selector"]).select_option(command["value"])
                     elif action == "evaluate":
