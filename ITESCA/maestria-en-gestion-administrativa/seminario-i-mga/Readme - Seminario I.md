@@ -12,6 +12,12 @@ Espacio de trabajo para construir el anteproyecto de titulación de la MGA del I
 
 ## Organización
 
+## Cierre documental de Tarea 11
+
+Tarea 11 terminada en el alcance documental: [Word acumulativo](Entregas/Tarea11_DeLaCruzMunoz.docx), [PDF de revision](Entregas/Tarea11_DeLaCruzMunoz.pdf) y [reporte auxiliar](reporte-seminario-i-Actividad-11.pdf). Cinco subapartados, indice actualizado y contenido de anexos conservado; el Word coincide por SHA256 con la [version validada](referencias-seminario-i/notas-seminario-i/actividad-11-justificacion/validacion-t11.json). No enviada. La consulta del corpus local es viable; entrevistas y expedientes nuevos siguen condicionados a permisos que este documento no concede.
+
+No estan implementadas todas las correcciones academicas de Seminario I: faltan los reactivos autenticos de T5 tras el acceso Google, el contexto profesional para completar T7, el semestre y la ampliacion cientifica regional/especifica. No se presentan como resueltos por cerrar T11 ni por organizar otra materia.
+
 Continuacion del cotejo: [T8 ampliada en Word](Entregas/Tarea8_DeLaCruzMunoz_Revision-2026-10-10.docx) y [PDF](Entregas/Tarea8_DeLaCruzMunoz_Revision-2026-10-10.pdf), 11 paginas, con dos informes completos de OCDE/ITF disponibles y pasajes consultados sobre gestion regulatoria y movilidad por aplicaciones. La fuente de reproduccion T8 en la raiz usa esta revision; el Word historico enviado permanece intacto. Los nuevos informes no son articulos arbitrados ni evidencia regional de Nuevo Leon. [Ampliacion y fuentes](referencias-seminario-i/notas-seminario-i/actividad-8-antecedentes/ampliacion-antecedentes-2026-10-10.json).
 
 [Reporte de T5](reporte-seminario-i-Actividad-5.pdf): documenta material, pantalla inicial y cobertura, no diez reactivos resueltos. [Acceso al cuestionario real](referencias-seminario-i/notas-seminario-i/actividad-5-escritura-cientifica/acceso-cuestionario-real.md): Forms exige sesion Google del alumno; no se recuperaron reactivos ni video y no se inicio un intento. [Protocolo de acceso vTaxi](referencias-seminario-i/notas-seminario-i/actividad-11-justificacion/protocolo-acceso-vtaxi.md): trabajo documental local autorizado por el usuario; entrevistas y expedientes nuevos requieren permiso adicional, no otorgado por este protocolo. No se declara resuelto ese acceso ni se modifico la viabilidad condicionada de T11.
