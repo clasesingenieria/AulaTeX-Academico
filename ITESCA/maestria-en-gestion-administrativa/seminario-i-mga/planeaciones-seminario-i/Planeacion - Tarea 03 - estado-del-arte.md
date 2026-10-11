@@ -1,25 +1,8 @@
-# Actividad 3 — Matriz de estado del arte
+# Planeacion - Tarea 3 - Seminario I
 
-- **Cierre:** 6 de septiembre de 2026, 23:59.
-- **Valor:** 25 % de la Unidad 2.
-- **Producto:** matriz comparativa de antecedentes científicos.
+Consulta autenticada de solo lectura: 10 de octubre de 2026. Modulo 2886.
 
-## Requisitos iniciales
-
-- Definir tema, periodo, territorio y descriptores.
-- Registrar base consultada, ecuación de búsqueda y filtros.
-- Priorizar artículos arbitrados y fuentes primarias.
-- Comparar objetivo, enfoque, muestra, técnicas, hallazgos y limitaciones.
-- Identificar convergencias, contradicciones y vacío de investigación.
-- Completar `referencias-seminario-i/notas-seminario-i/actividad-3-estado-del-arte/matrices/matriz-estado-del-arte.csv`.
-
-## Pendientes
-
-- [ ] Recuperar consigna y rúbrica literales.
-- [ ] Confirmar cantidad mínima de estudios.
-- [ ] Definir tema provisional y criterios de inclusión/exclusión.
-
-## Consigna cotejada en plataforma - 10 de octubre de 2026
+## Consigna oficial consultada
 
 📌 Tarea 3: Matriz de Estado del Arte
 
@@ -63,31 +46,42 @@ Redacción y ortografía	Lenguaje académico, citas correctas, sin errores ortog
 
 ✨ Recuerda: esta actividad busca que te familiarices con la investigación existente y desarrolles un marco sólido para tu propio trabajo, identificando cómo tu proyecto aportará al conocimiento en el área. 📚🔍
 
-
+	
  Formato 01. Matriz de estado del arte.docx
 7 de agosto de 2026, 16:12
 
-Esta consigna cotejada prevalece sobre ampliaciones o requisitos incompatibles de la ficha local anterior. El estado de entrega se controla en el Readme; esta planeacion no acredita un nuevo envio.
+## Estado observado
 
+Estado de la entrega
+Estado de la entrega
+Número del intento	Este es el intento 1.
+Estado de la entrega	Enviado para calificar
+Estado de la calificación	Calificado
+Tiempo restante	La tarea fue enviada 7 días 8 horas antes de la fecha límite
+Última modificación	domingo, 30 de agosto de 2026, 15:02
+Archivos enviados	
+	
+ reporte-seminario-i-Actividad-3.pdf
+30 de agosto de 2026, 15:02
 
-## Secuencia y control documental
+Comentarios de la entrega	
+Comentarios (0)
 
-Modulo Moodle: 2886. La normalizacion del 22 de septiembre fue local; no acredita aprobacion docente ni vigencia nueva.
+## Retroalimentacion consultada
 
-Objetivo registrado: Elaborar una síntesis crítica de los antecedentes de investigación.
+Estimado Martin Jonathan:
+Después de revisar tu Tarea 3, “Matriz de Estado del Arte”, y considerando los criterios establecidos en la rúbrica, la calificación obtenida es de 94.5/100, equivalente a 23.625/25 puntos.
+El trabajo presenta un nivel académico alto. En la matriz de referencias integras los 10 estudios solicitados, todos correspondientes al periodo establecido, y completas los principales apartados de metodología, objeto de estudio, variables o categorías, resultados y limitaciones o recomendaciones. Además, existe variedad en los enfoques metodológicos y una relación pertinente con el tema de investigación.
+En la redacción del estado del arte destaca la capacidad para realizar una síntesis crítica y no únicamente descriptiva. Logras identificar coincidencias y diferencias entre los autores y, de manera particular, señalas vacíos relacionados con el predominio de estudios transversales, la limitada desagregación por regiones y sectores y la falta de evidencia específica para Cajeme y Sonora.
+Asimismo, la relación con tu investigación es clara y pertinente, ya que vinculas los antecedentes con el problema, el objetivo general, los objetivos específicos y la justificación del proyecto. Este constituye uno de los aspectos más sólidos de la actividad.
+Los puntos que impiden alcanzar una calificación mayor corresponden principalmente a la presentación y algunos aspectos de precisión. En la portada, el número de control aparece como “Por confirmar”, por lo que queda incompleto uno de los datos solicitados. También, aunque se menciona el contexto regional y se identifica la ausencia de estudios específicos de Cajeme y Sonora, sería conveniente incorporar, cuando existan, antecedentes directamente relacionados con el ámbito regional. Finalmente, se recomienda realizar una última revisión de las referencias y DOI para asegurar su correspondencia y formato APA 7.
+En general, es un trabajo bien estructurado, pertinente y con una síntesis crítica sólida, que demuestra avances importantes en la construcción del estado del arte y en la delimitación del vacío de investigación.
+Saludos cordiales.
+Dra. Carla Olimpya Zapuche Moreno
 
-- preparacion: Aclarar corte temporal y Formato 01; planificar criterios y búsqueda documentada.
-- desarrollo: Consultar estudios elegibles, completar matriz y redactar síntesis crítica sustentada.
-- cierre: Auditar diez estudios, columnas, referencias, extensión y PDF con portada.
-- Pendiente de la ficha historica: Peso y unidad de medida oficiales
-- Pendiente de la ficha historica: Corte de últimos cinco años y alcance geográfico sin cuotas inventadas
-- Pendiente de la ficha historica: Compatibilidad 1–2 cuartillas/500–800 palabras y cómputo de portada
-- Pendiente de la ficha historica: Contenido de Formato 01 y equivalencia con adjunto
-- Pendiente de la ficha historica: Zona horaria, niveles de rúbrica y disponibilidad actual
+## Control de trabajo
 
-Las propuestas y pendientes historicos se conservan como antecedente; no sustituyen datos posteriores cotejados. [Registro original completo](../referencias-seminario-i/notas-seminario-i/materiales-generales/historico-planeaciones-2026-10-10/planeacion-modulo-2886.json).
-
-
-## Alcance de esta planeacion
-
-Una ficha Markdown por tarea. No se genera PDF: aun no hay un formato aprobado de planeacion LaTeX. Conservar originales historicos en notas y actualizar esta ficha cuando cambie una consigna, sin crear otra planeacion paralela.
+- [Consulta estructurada](../referencias-seminario-i/notas-seminario-i/actividad-3-estado-del-arte/cotejo-plataforma-2026-10-10.json).
+- [Nota de cotejo](../referencias-seminario-i/notas-seminario-i/actividad-3-estado-del-arte/cotejo-actividad-2026-10-10.md).
+- La ficha anterior se conserva en notas como antecedente. Los requisitos oficiales anteriores prevalecen sobre propuestas locales incompatibles.
+- No se realizaron envios. La calificacion mostrada no certifica el producto local revisado.

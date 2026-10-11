@@ -1,35 +1,8 @@
-# Tarea 1: Mi ruta hacia la titulación en la MGA
+# Planeacion - Tarea 1 - Seminario I
 
-- **Apertura:** 10 de agosto de 2026, 00:00.
-- **Cierre:** 30 de agosto de 2026, 23:59.
-- **Valor:** 80 % de la Unidad 1.
+Consulta autenticada de solo lectura: 10 de octubre de 2026. Modulo 2877.
 
-## Producto sugerido
-
-Mapa o ruta argumentada que conecte:
-
-1. perfil de egreso y objetivos de la MGA;
-2. LGAC elegible y profesorado asociado;
-3. requisitos académicos y administrativos de grado;
-4. anteproyecto, Consejo de Posgrado y Comité Tutorial;
-5. hitos, evidencias, riesgos y acciones personales.
-
-## Evidencia necesaria
-
-- Programa oficial de la MGA.
-- LGAC y núcleo académico básico vigentes.
-- Lineamiento de posgrado del TecNM.
-- Requisitos internos del ITESCA.
-
-## Lista de comprobación
-
-- [ ] La ruta distingue requisitos normativos de recomendaciones personales.
-- [ ] Cada requisito tiene fuente y página o sección.
-- [ ] Se indican responsables, dependencias y secuencia.
-- [ ] Se señalan documentos, fechas y puntos de decisión.
-- [ ] Se concluye con próximos pasos verificables.
-
-## Consigna cotejada en plataforma - 10 de octubre de 2026
+## Consigna oficial consultada
 
 📘 Tarea Única de la Unidad 1: Mi ruta hacia la titulación en la MGA
 
@@ -77,26 +50,41 @@ Presentación y estructura	Portada, organización clara, cuadro y ensayo bien di
 Redacción y ortografía	Lenguaje académico, sin errores ortográficos o gramaticales.	5%
 ✨ Recuerda: esta actividad busca que te apropies del sentido de la Maestría en Gestión Administrativa, reconociendo que tu proceso de investigación y titulación es una ruta estratégica que combina compromiso personal, apoyo académico y metas profesionales. 🌟📘🎓
 
-Esta consigna cotejada prevalece sobre ampliaciones o requisitos incompatibles de la ficha local anterior. El estado de entrega se controla en el Readme; esta planeacion no acredita un nuevo envio.
+## Estado observado
 
+Estado de la entrega
+Estado de la entrega
+Número del intento	Este es el intento 1.
+Estado de la entrega	Enviado para calificar
+Estado de la calificación	Calificado
+Tiempo restante	La tarea fue enviada 10 horas 41 minutos antes de la fecha límite
+Última modificación	domingo, 30 de agosto de 2026, 13:17
+Archivos enviados	
+	
+ reporte-seminario-i-Actividad-1.pdf
+30 de agosto de 2026, 13:17
 
-## Secuencia y control documental
+Comentarios de la entrega	
+Comentarios (0)
 
-Modulo Moodle: 2877. La normalizacion del 22 de septiembre fue local; no acredita aprobacion docente ni vigencia nueva.
+## Retroalimentacion consultada
 
-Objetivo registrado: Reflexionar sobre el perfil, los objetivos, las LGAC y los requisitos vinculados con el proyecto y el plan de titulación.
+Comentario
+Comentario
+Calificación	80,00 / 80,00
+Calificado sobre	martes, 1 de septiembre de 2026, 17:54
+Calificado por	CZCARLA OLIMPYA ZAPUCHE MORENO
+Comentarios de retroalimentación	
 
-- preparacion: Contrastar G y N con las fuentes institucionales aplicables antes de redactar.
-- desarrollo: Elaborar cuadro y planificar ensayo para las tres preguntas, sin atribuir datos no comprobados.
-- cierre: Cotejar conteos, extensión, fuentes, portada y exportación PDF.
-- Pendiente de la ficha historica: Vigencia de Lineamientos 2023 y numeral 3.7.2
-- Pendiente de la ficha historica: Padrón y afinidades del profesorado, no acreditados por G
-- Pendiente de la ficha historica: Comentario por apartado o global
-- Pendiente de la ficha historica: Zona horaria, niveles de rúbrica y disponibilidad actual
+Excelente Trabajo!
 
-Las propuestas y pendientes historicos se conservan como antecedente; no sustituyen datos posteriores cotejados. [Registro original completo](../referencias-seminario-i/notas-seminario-i/materiales-generales/historico-planeaciones-2026-10-10/planeacion-modulo-2877.json).
+Le recomiendo utilizar la portada institucional para las asignaciones de las materias de la maestría.
 
+Saludos.
 
-## Alcance de esta planeacion
+## Control de trabajo
 
-Una ficha Markdown por tarea. No se genera PDF: aun no hay un formato aprobado de planeacion LaTeX. Conservar originales historicos en notas y actualizar esta ficha cuando cambie una consigna, sin crear otra planeacion paralela.
+- [Consulta estructurada](../referencias-seminario-i/notas-seminario-i/actividad-1-ruta-titulacion/cotejo-plataforma-2026-10-10.json).
+- [Nota de cotejo](../referencias-seminario-i/notas-seminario-i/actividad-1-ruta-titulacion/cotejo-actividad-2026-10-10.md).
+- La ficha anterior se conserva en notas como antecedente. Los requisitos oficiales anteriores prevalecen sobre propuestas locales incompatibles.
+- No se realizaron envios. La calificacion mostrada no certifica el producto local revisado.

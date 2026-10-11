@@ -26,7 +26,7 @@ El planteamiento identifica una brecha documental en los borradores regulatorios
 - La matriz de la Tarea 3 se recuperó de Moodle. Aunque su PDF difiere binariamente del local, ambos contienen el mismo corpus de diez investigaciones utilizado en los antecedentes.
 - Se conservaron las investigaciones de T3, sin sustituir el estado del arte por una búsqueda nueva sobre transporte. La verificación bibliográfica corrigió Troise a 2022 y Omrani a 2024 según la publicación en revista; ambos DOI permanecen iguales.
 - El Círculo de Covey sigue la adaptación docente de la página 6 de `Matriz de Consistencia.pdf`, con el problema en el centro. No se sustituyó por la matriz urgente/importante ni por círculos de influencia.
-- Las fuentes oficiales y las copias de documentación interna están en `referencias-seminario-i/vtaxi-2026-09-27/`.
+- Las fuentes oficiales y las copias de documentación interna están en `referencias-seminario-i/notas-seminario-i/actividad-8-antecedentes/fuentes-vtaxi-2026-09-27/`.
 
 ## Formato y comprobación
 

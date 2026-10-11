@@ -12,6 +12,15 @@ Espacio de trabajo para construir el anteproyecto de titulación de la MGA del I
 
 ## Organización
 
+Continuacion del cotejo: [T8 ampliada en Word](Entregas/Tarea8_DeLaCruzMunoz_Revision-2026-10-10.docx) y [PDF](Entregas/Tarea8_DeLaCruzMunoz_Revision-2026-10-10.pdf), 11 paginas, con dos informes completos de OCDE/ITF disponibles y pasajes consultados sobre gestion regulatoria y movilidad por aplicaciones. La fuente de reproduccion T8 en la raiz usa esta revision; el Word historico enviado permanece intacto. Los nuevos informes no son articulos arbitrados ni evidencia regional de Nuevo Leon. [Ampliacion y fuentes](referencias-seminario-i/notas-seminario-i/actividad-8-antecedentes/ampliacion-antecedentes-2026-10-10.json).
+
+[Reporte de T5](reporte-seminario-i-Actividad-5.pdf): documenta material, pantalla inicial y cobertura, no diez reactivos resueltos. [Acceso al cuestionario real](referencias-seminario-i/notas-seminario-i/actividad-5-escritura-cientifica/acceso-cuestionario-real.md): Forms exige sesion Google del alumno; no se recuperaron reactivos ni video y no se inicio un intento. [Protocolo de acceso vTaxi](referencias-seminario-i/notas-seminario-i/actividad-11-justificacion/protocolo-acceso-vtaxi.md): trabajo documental local autorizado por el usuario; entrevistas y expedientes nuevos requieren permiso adicional, no otorgado por este protocolo. No se declara resuelto ese acceso ni se modifico la viabilidad condicionada de T11.
+
+Uniformidad de versiones: la raiz conserva fuentes y PDF de consulta; Entregas distingue originales enviados de revisiones fechadas no enviadas. T8 es reproduccion del Word ampliado, no una fuente de contenido editable en LaTeX. T5 es registro de consulta, no entregable sustitutivo; no se crea una presentacion para un cuestionario por uniformidad visual. T2, T9 y T10 conservan sus alcances documentados; el conjunto no se declara integramente listo para envio.
+
+Revision adicional de T2: [Word APA de tres paginas](Entregas/Tarea2_DeLaCruzMunoz_Revision-2026-10-10.docx) y [PDF](Entregas/Tarea2_DeLaCruzMunoz_Revision-2026-10-10.pdf), con citas y referencias comprobadas; no enviados. T7 dispone de [replicas a dos temas reales](referencias-seminario-i/notas-seminario-i/actividad-7-tema-titulo/contexto-replicas-2026-10-10.md), pendientes de revision y publicacion; falta confirmar el contexto profesional para su participacion principal. T5 requiere responder el formulario real. El semestre y el acceso a actores de vTaxi no se han confirmado: no se declara cumplimiento completo de esos requisitos. T11 permanece preparada, no enviada.
+
+- [Cotejo actualizado de actividades 1-11](referencias-seminario-i/notas-seminario-i/materiales-generales/COBERTURA-ACTIVIDADES-1-11-2026-10-10.md): once consignas y retroalimentaciones consultadas, notas individuales y once adjuntos extraidos. [Word T11 preparado](Entregas/Tarea11_DeLaCruzMunoz.docx) y [PDF de revision](Entregas/Tarea11_DeLaCruzMunoz.pdf), 24 paginas, indice actualizado y anexos conservados; no enviados. [Reporte auxiliar T11](reporte-seminario-i-Actividad-11.pdf). T4 corregida contra el material docente; T3 con periodo separado del semestre pendiente. T8 y T9 tienen reproducciones LaTeX completas de sus Word, no nuevas versiones editables. No se certifica cobertura total de T2, T5 y T7 ni se inventan fuentes regionales o acceso a actores.
 - [Auditoria vigente de LaTeX y Entregas](referencias-seminario-i/notas-seminario-i/materiales-generales/AUDITORIA-LATEX-Y-ENTREGAS-2026-10-10.md): distingue revisiones locales, archivos recuperados de Moodle, complementos y plantillas no aptas. Carpeta `Entregas` normalizada; no se realizaron envios.
 - [Estado de entregables y revision estructural](#estado-de-entregables).
 - `planeaciones-seminario-i/`: una ficha Markdown por tarea (1-18) y una para el foro de presentacion; no hay PDF de planeaciones ni formato LaTeX aprobado. Los registros anteriores por modulo y unidad quedan en notas historicas.
@@ -62,6 +71,14 @@ Se trasladaron 31 archivos aplicando el criterio de Antecedentes: libros con nom
 5. Rúbricas y materiales proporcionados en el aula virtual.
 
 ### Fuentes incorporadas al proyecto
+
+La carpeta anterior de fuentes vTaxi del 27 de septiembre se absorbio en notas por actividad, conservando los 13 archivos y sus SHA256:
+
+- Actividad 3: [metadatos de Omrani](referencias-seminario-i/notas-seminario-i/actividad-3-estado-del-arte/verificacion-bibliografica-2026-09-27/omrani-metadatos.txt) y [Troise](referencias-seminario-i/notas-seminario-i/actividad-3-estado-del-arte/verificacion-bibliografica-2026-09-27/troise-metadatos.txt), pertenecientes al corpus original del estado del arte.
+- Actividad 8: [fuentes del diagnostico vTaxi](referencias-seminario-i/notas-seminario-i/actividad-8-antecedentes/fuentes-vtaxi-2026-09-27/README.md), normativa consultada, oferta ICET y copias internas; compartidas mediante enlaces con T9 y T10, sin duplicarlas.
+- [Registro de absorcion](referencias-seminario-i/notas-seminario-i/materiales-generales/absorcion-fuentes-vtaxi-2026-10-10.json): nombres originales, destinos y hashes. El README original y las copias internas permanecen intactos; sus nombres y enlaces internos reflejan el contexto historico. Los dos TXT de metadatos mencionados en ese README estan ahora en T3, no en su misma carpeta.
+
+Los borradores internos regulatorios son objeto de analisis, no normas oficiales ni prueba de autorizacion de vTaxi. Esta reorganizacion no actualiza vigencia juridica ni realiza envios.
 
 #### Institucionales
 

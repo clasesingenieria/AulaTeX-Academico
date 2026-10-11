@@ -1,52 +1,8 @@
-# Actividad 6 — Aplicación de formato APA e índice automatizado
+# Planeacion - Tarea 6 - Seminario I
 
-- **Nombre del enlace en Moodle:** Tarea 6. Formato institucional.
-- **Consigna verificada:** [actividad 2889](https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=2889).
-- **Apertura:** 24 de agosto de 2026, 00:00.
-- **Cierre:** 13 de septiembre de 2026, 23:59, según la hora mostrada por el aula.
-- **Valor:** 15 puntos en la calificación de la Unidad 2.
-- **Modalidad:** individual, sin extensión mínima ni máxima.
-- **Entrega requerida:** un documento Word, denominado Tarea6_Apellidos.docx.
+Consulta autenticada de solo lectura: 10 de octubre de 2026. Modulo 2889.
 
-## Estado
-
-Se preparó [Tarea6_DeLaCruzMunoz.docx](../entregas/Tarea6_DeLaCruzMunoz.docx).
-También se prepararon la [versión LaTeX institucional](../reporte-seminario-i-Actividad-6.tex) y su [PDF compilado](../reporte-seminario-i-Actividad-6.pdf), solicitados como formato complementario. No sustituyen el Word requerido por la consigna.
-El aula mostraba **«Todavía no se han realizado envíos»** y **«Sin calificar»** al revisar la actividad. La preparación local no equivale a un envío: **no se ha subido ni enviado este documento**.
-
-## Cumplimiento de la consigna
-
-- [x] Leer el [recurso 2.1](https://cursos3.e-itesca.edu.mx/mod/url/view.php?id=2881).
-- [x] Descargar y conservar [Material para ejemplo.docx](../referencias-seminario-i/notas-seminario-i/actividad-6-formato-institucional/materiales/Material%20para%20ejemplo.docx) y [Portada.docx](../referencias-seminario-i/notas-seminario-i/actividad-6-formato-institucional/materiales/Portada.docx).
-- [x] Cambiar los campos grises/resaltados a negro, sin resaltado, e insertar la portada al inicio.
-- [x] Completar el nombre: Martín Jonathan de la Cruz Muñoz. La portada no solicita matrícula ni correo.
-- [x] Colocar a la Dra. Carla Olimpya Zapuche Moreno como directora de tesis **solo para el ejemplo**.
-- [x] Aplicar papel carta, márgenes de 2.54 cm, Arial 11, doble espacio, sangría inicial de 1.27 cm y páginas en la esquina superior derecha.
-- [x] Utilizar estilos de título de niveles 1, 2 y 3, más nivel 4 para conservar los subapartados más profundos del original.
-- [x] Generar un índice automático jerárquico mediante un campo TOC de Word, con enlaces y paginación calculada.
-- [x] Incorporar dos tablas y dos figuras relacionadas con el marco metodológico, con número, título y fuente.
-- [x] Incorporar referencias con sangría francesa; conservar y documentar las fuentes y sus licencias.
-- [ ] Subir el Word al aula y confirmar el estado de entrega.
-
-## Rúbrica oficial
-
-| Criterio | Descripción | Porcentaje |
-|---|---|---:|
-| Aplicación del formato APA | Aplica márgenes, niveles de título, tablas, figuras y fuentes según APA 7ª edición. | 30 % |
-| Índice automatizado | Genera correctamente el índice jerárquico con estilos de título en Word. | 25 % |
-| Integración de tablas y figuras | Incluye 2 tablas y 2 figuras pertinentes con formato APA completo. | 20 % |
-| Presentación y organización | Portada incluida, estructura clara y ordenada, coherencia visual. | 15 % |
-| Redacción y ortografía | Lenguaje académico, redacción clara y sin errores gramaticales. | 10 % |
-
-La calificación corresponde a la docente; la comprobación local no implica una puntuación garantizada.
-
-## Control y distinción de formatos
-
-Se conserva la estructura y numeración institucional del material. El formato APA se aplica al cuerpo, a los estilos y a las fuentes; el índice y la portada institucional son requisitos particulares de esta actividad. La guía no se presenta como una tesis concluida ni contiene resultados inventados.
-
-Véanse el [registro de preparación y fuentes](../referencias-seminario-i/notas-seminario-i/actividad-6-formato-institucional/elaboracion/README.md), la [validación automática](../referencias-seminario-i/notas-seminario-i/actividad-6-formato-institucional/elaboracion/validacion/verificacion.json) y el [PDF de revisión](../referencias-seminario-i/notas-seminario-i/actividad-6-formato-institucional/elaboracion/validacion/Tarea6_DeLaCruzMunoz_revision.pdf). El PDF es auxiliar; **solo se entrega el Word**.
-
-## Consigna cotejada en plataforma - 10 de octubre de 2026
+## Consigna oficial consultada
 
 📌 Tarea 6: Aplicación de formato APA e índice automatizado
 
@@ -97,33 +53,39 @@ Redacción y ortografía	Lenguaje académico, redacción clara y sin errores gra
 
 ✨ Recuerda: esta actividad te permitirá fortalecer tu dominio del formato APA y de la organización formal de un trabajo de investigación, habilidades esenciales para la elaboración de tu tesis. 📚💻
 
-
+	
  Material para ejemplo.docx
 7 de agosto de 2026, 16:12
-
+	
  Portada.docx
 7 de agosto de 2026, 16:12
 
-Esta consigna cotejada prevalece sobre ampliaciones o requisitos incompatibles de la ficha local anterior. El estado de entrega se controla en el Readme; esta planeacion no acredita un nuevo envio.
+## Estado observado
 
+Estado de la entrega
+Estado de la entrega
+Número del intento	Este es el intento 1.
+Estado de la entrega	Todavía no se han realizado envíos
+Estado de la calificación	Calificado
+Tiempo restante	La Tarea está retrasada por: 26 días 17 horas
+Última modificación	-
+Comentarios de la entrega	
+Comentarios (0)
 
-## Secuencia y control documental
+## Retroalimentacion consultada
 
-Modulo Moodle: 2889. La normalizacion del 22 de septiembre fue local; no acredita aprobacion docente ni vigencia nueva.
+Comentario
+Comentario
+Calificación	0,00 / 15,00
+Calificado sobre	jueves, 24 de septiembre de 2026, 08:20
+Calificado por	CZCARLA OLIMPYA ZAPUCHE MORENO
+Comentarios de retroalimentación	
 
-Objetivo registrado: Aplicar el formato APA y generar un índice automatizado en Word.
+No envió actividad.
 
-- preparacion: Revisar materiales y manual, confirmar copia y alcance del ejemplo sin designación real.
-- desarrollo: Aplicar portada, estilos 1–3, índice automático y dos tablas/dos figuras pertinentes.
-- cierre: Actualizar índice, comprobar rótulos y formato; conservar DOCX con nombre requerido.
-- Pendiente de la ficha historica: Consultar recurso 2.1 y detalles del manual
-- Pendiente de la ficha historica: Confirmar equivalencia de copias locales con adjuntos sin atribuir lectura actual
-- Pendiente de la ficha historica: Zona horaria, niveles de rúbrica y disponibilidad actual
-- Pendiente de la ficha historica: No inventar mínimo/máximo de extensión
+## Control de trabajo
 
-Las propuestas y pendientes historicos se conservan como antecedente; no sustituyen datos posteriores cotejados. [Registro original completo](../referencias-seminario-i/notas-seminario-i/materiales-generales/historico-planeaciones-2026-10-10/planeacion-modulo-2889.json).
-
-
-## Alcance de esta planeacion
-
-Una ficha Markdown por tarea. No se genera PDF: aun no hay un formato aprobado de planeacion LaTeX. Conservar originales historicos en notas y actualizar esta ficha cuando cambie una consigna, sin crear otra planeacion paralela.
+- [Consulta estructurada](../referencias-seminario-i/notas-seminario-i/actividad-6-formato-institucional/cotejo-plataforma-2026-10-10.json).
+- [Nota de cotejo](../referencias-seminario-i/notas-seminario-i/actividad-6-formato-institucional/cotejo-actividad-2026-10-10.md).
+- La ficha anterior se conserva en notas como antecedente. Los requisitos oficiales anteriores prevalecen sobre propuestas locales incompatibles.
+- No se realizaron envios. La calificacion mostrada no certifica el producto local revisado.

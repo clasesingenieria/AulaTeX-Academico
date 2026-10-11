@@ -1,89 +1,8 @@
-# Actividad 2 — Mi primera práctica en formato APA
+# Planeacion - Tarea 2 - Seminario I
 
-## Identificación
+Consulta autenticada de solo lectura: 10 de octubre de 2026. Modulo 2885.
 
-- **Asignatura:** Seminario I
-- **Programa:** Maestría en Gestión Administrativa
-- **Unidad:** 2. Elementos de la matriz de consistencia
-- **Valor:** 20 % de la unidad
-- **Modalidad:** Individual
-- **Entrega:** PDF
-- **Fecha límite registrada:** 30 de agosto de 2026
-
-## Objetivo
-
-Aplicar las normas APA (7.ª edición) en la presentación formal, las citas dentro del texto y la lista de referencias de un escrito breve relacionado con la gestión administrativa.
-
-## Producto central
-
-Documento académico de 2–3 cuartillas titulado **«Mi primera práctica en formato APA»**, con portada, un desarrollo temático que integra tres modalidades de citación y una lista de al menos cinco referencias de diferente naturaleza.
-
-## Tema elegido
-
-**La gestión administrativa basada en evidencia para mejorar la toma de decisiones.**
-
-El tema se vincula con el interés profesional del estudiante en transformar datos comerciales y organizacionales en decisiones verificables, éticas y orientadas a resultados.
-
-## Requisitos verificables
-
-1. Portada con nombre de la actividad, estudiante, programa, docente y fecha.
-2. Papel carta y márgenes de 2.54 cm.
-3. Fuente Arial 11 (aproximada en LaTeX mediante Helvetica) e interlineado doble.
-4. Sangría de primera línea de 1.27 cm.
-5. Desarrollo equivalente a 8–10 líneas como mínimo.
-6. Una cita textual corta de menos de 40 palabras, entre comillas y con localizador.
-7. Una cita textual larga de 40 palabras o más, en bloque, sin comillas, con sangría y localizador.
-8. Una paráfrasis con autor y año.
-9. Lista de referencias con sangría francesa y, como mínimo:
-   - un libro;
-   - un artículo científico;
-   - una página web académica;
-   - una tesis o documento académico;
-   - un video, podcast o conferencia.
-10. Correspondencia exacta entre citas y referencias.
-11. PDF final compilado sin errores bloqueantes.
-
-## Fuentes y función documental
-
-| Tipo | Fuente | Uso previsto |
-|---|---|---|
-| Libro | Hernández Sampieri, Fernández Collado y Baptista Lucio (2014) | Paráfrasis sobre decisiones metodológicamente sustentadas. |
-| Artículo científico | Rousseau (2006) | Definición y fundamento de la gestión basada en evidencia. |
-| Página académica | American Psychological Association (2022) | Regla de citas cortas y citas en bloque. |
-| Tesis | Zambrano Andrade (2018) | Antecedente aplicado de toma de decisiones administrativas. |
-| Video/conferencia | Sinek (2009) | Comunicación del propósito en el liderazgo. |
-| Libro web complementario | Bright y Cortes (2019) | Citas textuales sobre la realidad del trabajo directivo. |
-
-## Estructura prevista
-
-1. Portada.
-2. Título del texto.
-3. Párrafo temático con paráfrasis y cita corta.
-4. Cita textual larga en bloque y comentario analítico.
-5. Referencias.
-
-## Criterios de auditoría semántica
-
-- No atribuir causalidad si la fuente solo informa relación o propuesta.
-- Conservar literalmente las citas directas y comprobar su extensión.
-- Incluir página, capítulo, sección, párrafo o marca temporal según el soporte.
-- No presentar las reglas APA como resultados empíricos.
-- Distinguir entre evidencia científica, documento académico y recurso divulgativo.
-
-## Matriz de rúbrica
-
-| Criterio | Evidencia en el producto | Peso |
-|---|---|---:|
-| Uso de citas APA | Cita corta, cita larga y paráfrasis identificables y localizadas | 30 % |
-| Referencias | Seis fuentes y cinco clases documentales | 30 % |
-| Formato | Portada, márgenes, fuente, doble espacio y sangrías | 20 % |
-| Redacción y coherencia | Argumento único sobre gestión basada en evidencia, revisión ortográfica | 20 % |
-
-## Definición de terminado
-
-El producto se considera terminado cuando la auditoría confirme el cumplimiento de los requisitos, la bibliografía no tenga claves ausentes, el contrato editorial alcance 100, la optimización converja a calidad 100 y el PDF final se encuentre junto al archivo fuente.
-
-## Consigna cotejada en plataforma - 10 de octubre de 2026
+## Consigna oficial consultada
 
 📘 Tarea 2: Aplicando las Normas APA
 
@@ -131,26 +50,32 @@ Formato del documento	El archivo cumple con portada, márgenes, fuente, interlin
 Redacción y coherencia	El texto mantiene un lenguaje académico, con ideas claras y sin errores ortográficos.	20%
 ✨ Recuerda: esta práctica es clave para que domines el uso de las Normas APA desde el inicio del seminario. Tu capacidad para citar y referenciar adecuadamente te permitirá elaborar una tesis sólida, ética y con valor académico. 📖🎓
 
-Esta consigna cotejada prevalece sobre ampliaciones o requisitos incompatibles de la ficha local anterior. El estado de entrega se controla en el Readme; esta planeacion no acredita un nuevo envio.
+## Estado observado
 
+Estado de la entrega
+Estado de la entrega
+Número del intento	Este es el intento 1.
+Estado de la entrega	Enviado para calificar
+Estado de la calificación	Calificado
+Tiempo restante	La tarea fue enviada 9 horas 48 minutos antes de la fecha límite
+Última modificación	domingo, 30 de agosto de 2026, 14:10
+Archivos enviados	
+	
+ reporte-seminario-i-Actividad-2.pdf
+30 de agosto de 2026, 14:10
 
-## Secuencia y control documental
+Comentarios de la entrega	
+Comentarios (0)
 
-Modulo Moodle: 2885. La normalizacion del 22 de septiembre fue local; no acredita aprobacion docente ni vigencia nueva.
+## Retroalimentacion consultada
 
-Objetivo registrado: Aplicar las normas APA de séptima edición en un escrito académico breve.
+Estimado Martín Jonathan:
+Excelente trabajo!
+Tu desempeño refleja un excelente compromiso con la calidad académica que se espera en el nivel de Maestría. ¡Sigue así!
 
-- preparacion: Aclarar extensión y umbral; seleccionar fuentes verificables de las cinco clases.
-- desarrollo: Redactar en Word, integrar las tres modalidades y organizar referencias y portada.
-- cierre: Cotejar citas, conteos y diseño; exportar PDF y revisar legibilidad.
-- Pendiente de la ficha historica: Conciliar caso exacto de 40 palabras
-- Pendiente de la ficha historica: Distribución de 8–10 líneas y cita larga, cómputo de portada y referencias en 2–3 cuartillas
-- Pendiente de la ficha historica: Manual APA aplicable y sangrías
-- Pendiente de la ficha historica: Zona horaria, niveles de rúbrica y disponibilidad actual
+## Control de trabajo
 
-Las propuestas y pendientes historicos se conservan como antecedente; no sustituyen datos posteriores cotejados. [Registro original completo](../referencias-seminario-i/notas-seminario-i/materiales-generales/historico-planeaciones-2026-10-10/planeacion-modulo-2885.json).
-
-
-## Alcance de esta planeacion
-
-Una ficha Markdown por tarea. No se genera PDF: aun no hay un formato aprobado de planeacion LaTeX. Conservar originales historicos en notas y actualizar esta ficha cuando cambie una consigna, sin crear otra planeacion paralela.
+- [Consulta estructurada](../referencias-seminario-i/notas-seminario-i/actividad-2-normas-apa/cotejo-plataforma-2026-10-10.json).
+- [Nota de cotejo](../referencias-seminario-i/notas-seminario-i/actividad-2-normas-apa/cotejo-actividad-2026-10-10.md).
+- La ficha anterior se conserva en notas como antecedente. Los requisitos oficiales anteriores prevalecen sobre propuestas locales incompatibles.
+- No se realizaron envios. La calificacion mostrada no certifica el producto local revisado.

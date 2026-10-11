@@ -1,17 +1,8 @@
-# Actividad 10 — Formulación de objetivos
+# Planeacion - Tarea 10 - Seminario I
 
-- **Cierre:** 4 de octubre de 2026, 23:59.
+Consulta autenticada de solo lectura: 10 de octubre de 2026. Modulo 2910.
 
-## Producto previsto
-
-Objetivo general y objetivos específicos coherentes con la pregunta, el alcance y la evidencia disponible.
-
-- [ ] Emplear verbos observables.
-- [ ] Evitar actividades administrativas como objetivos de conocimiento.
-- [ ] Verificar que los específicos produzcan el general.
-- [ ] Asociar cada objetivo con procedimiento y evidencia.
-
-## Consigna cotejada en plataforma - 10 de octubre de 2026
+## Consigna oficial consultada
 
 📌 Tarea 10: Formulación de objetivos general y específicos
 
@@ -54,29 +45,34 @@ Total	8.0
 
 ✨ Consejo: Verifica que el objetivo general derive directamente del problema y que tus objetivos específicos representen pasos lógicos y medibles para alcanzarlo. Mantén coherencia entre los elementos de tu anteproyecto, la matriz y el círculo de Covey. 🧭📚
 
-
+	
  3.3 Formulación de objetivos.pdf
 7 de agosto de 2026, 16:12
 
-Esta consigna cotejada prevalece sobre ampliaciones o requisitos incompatibles de la ficha local anterior. El estado de entrega se controla en el Readme; esta planeacion no acredita un nuevo envio.
+## Estado observado
 
+Estado de la entrega
+Estado de la entrega
+Número del intento	Este es el intento 1.
+Estado de la entrega	Enviado para calificar
+Estado de la calificación	Sin calificar
+Tiempo restante	La tarea fue enviada 1 hora 54 minutos antes de la fecha límite
+Última modificación	domingo, 4 de octubre de 2026, 22:04
+Archivos enviados	
+	
+ Tarea10_DeLaCruzMunoz_Revision-2026-10-04.docx
+4 de octubre de 2026, 22:04
 
-## Secuencia y control documental
+Comentarios de la entrega	
+Comentarios (0)
 
-Modulo Moodle: 2910. La normalizacion del 22 de septiembre fue local; no acredita aprobacion docente ni vigencia nueva.
+## Retroalimentacion consultada
 
-Objetivo registrado: Planificar objetivos general y específicos coherentes con título, problema y preguntas, actualizando la matriz de consistencia y la ubicación del problema y objetivo general en Covey.
+No se recupero comentario docente en esta consulta; no implica aprobacion.
 
-- preparacion: Recuperar Word T9 y revisar título, problema, preguntas y adjunto 3.3.
-- desarrollo: Preparar 3.1 y 3.2, añadir objetivos a la matriz y ubicar problema y objetivo general en Covey.
-- cierre: Cotejar apartados 1–3, matriz, cuadrante Covey, portada e índice APA 7.
-- Pendiente de la ficha historica: Copia y contenido de 3.3, extensión Word, nombre de archivo y detalles visuales de anexos
-- Pendiente de la ficha historica: Zona horaria, niveles de rúbrica y disponibilidad actual
-- Pendiente de la ficha historica: Edición y pasajes de B
+## Control de trabajo
 
-Las propuestas y pendientes historicos se conservan como antecedente; no sustituyen datos posteriores cotejados. [Registro original completo](../referencias-seminario-i/notas-seminario-i/materiales-generales/historico-planeaciones-2026-10-10/planeacion-modulo-2910.json).
-
-
-## Alcance de esta planeacion
-
-Una ficha Markdown por tarea. No se genera PDF: aun no hay un formato aprobado de planeacion LaTeX. Conservar originales historicos en notas y actualizar esta ficha cuando cambie una consigna, sin crear otra planeacion paralela.
+- [Consulta estructurada](../referencias-seminario-i/notas-seminario-i/actividad-10-objetivos/cotejo-plataforma-2026-10-10.json).
+- [Nota de cotejo](../referencias-seminario-i/notas-seminario-i/actividad-10-objetivos/cotejo-actividad-2026-10-10.md).
+- La ficha anterior se conserva en notas como antecedente. Los requisitos oficiales anteriores prevalecen sobre propuestas locales incompatibles.
+- No se realizaron envios. La calificacion mostrada no certifica el producto local revisado.
