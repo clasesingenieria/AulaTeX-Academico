@@ -1,0 +1,15 @@
+# Planeaciones de la materia
+
+- [2876: Foro: Conectando nuestras ideas de investigación](../../../../planeaciones-seminario-i/Planeacion%20-%20Foro%20de%20presentacion.md) · [JSON](planeacion-modulo-2876.json)
+- [2877: Tarea 1: Mi ruta hacia la titulación en la MGA](../../../../planeaciones-seminario-i/Planeacion%20-%20Tarea%2001%20-%20ruta-titulacion.md) · [JSON](planeacion-modulo-2877.json)
+- [2885: Tarea 2: Mi primera práctica en formato APA](../../../../planeaciones-seminario-i/Planeacion%20-%20Tarea%2002%20-%20normas-apa.md) · [JSON](planeacion-modulo-2885.json)
+- [2886: Tarea 3: Matriz de estado del arte](../../../../planeaciones-seminario-i/Planeacion%20-%20Tarea%2003%20-%20estado-del-arte.md) · [JSON](planeacion-modulo-2886.json)
+- [2887: Tarea 4: Errores en la matriz de consistencia y Círculo de Covey](../../../../planeaciones-seminario-i/Planeacion%20-%20Tarea%2004%20-%20errores-circulo-covey.md) · [JSON](planeacion-modulo-2887.json)
+- [2888: Tarea 5: Proceso de escritura científica](../../../../planeaciones-seminario-i/Planeacion%20-%20Tarea%2005%20-%20escritura-cientifica.md) · [JSON](planeacion-modulo-2888.json)
+- [2889: Tarea 6: Formato institucional](../../../../planeaciones-seminario-i/Planeacion%20-%20Tarea%2006%20-%20formato-institucional.md) · [JSON](planeacion-modulo-2889.json)
+- [2906: Tarea 7: Foro de elección del tema y título](../../../../planeaciones-seminario-i/Planeacion%20-%20Tarea%2007%20-%20tema-titulo.md) · [JSON](planeacion-modulo-2906.json)
+- [2907: Registro de proyecto](../../../../planeaciones-seminario-i/Planeacion%20-%20Tarea%2007%20-%20tema-titulo.md) · [JSON](planeacion-modulo-2907.json)
+- [2908: Tarea 8: Antecedentes](../../../../planeaciones-seminario-i/Planeacion%20-%20Tarea%2008%20-%20antecedentes.md) · [JSON](planeacion-modulo-2908.json)
+- [2909: Tarea 9: Planteamiento del problema](../../../../planeaciones-seminario-i/Planeacion%20-%20Tarea%2009%20-%20planteamiento-problema.md) · [JSON](planeacion-modulo-2909.json)
+- [2910: Tarea 10: Objetivos](../../../../planeaciones-seminario-i/Planeacion%20-%20Tarea%2010%20-%20objetivos.md) · [JSON](planeacion-modulo-2910.json)
+- [2911: Tarea 11: Justificación](../../../../planeaciones-seminario-i/Planeacion%20-%20Tarea%2011%20-%20justificacion.md) · [JSON](planeacion-modulo-2911.json)

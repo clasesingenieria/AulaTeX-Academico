@@ -21,21 +21,21 @@
 
 | Archivo | Datos verificados | Uso posible |
 |---|---|---|
-| `metodologia/hernandez-sampieri-et-al-2014-metodologia-investigacion.pdf` | Hernández Sampieri, Fernández Collado y Baptista Lucio; 2014; McGraw-Hill Education; ISBN 9781456223960 | Diseño, problema, objetivos y método |
-| `metodologia/navarro-chavez-2014-epistemologia-metodologia-investigacion.pdf` | Navarro Chávez; 2014; Grupo Editorial Patria; ISBN 9786074388640 | Fundamentos epistemológicos |
-| `metodologia/covey-2014-siete-habitos.pdf` | Covey; 2014; Planeta; ISBN 9786079377069 | Círculo de preocupación e influencia; verificar páginas |
+| `libros-seminario-i/Metodologia de la investigacion - Hernandez Sampieri y coautores - 2014.pdf` | Hernández Sampieri, Fernández Collado y Baptista Lucio; 2014; McGraw-Hill Education; ISBN 9781456223960 | Diseño, problema, objetivos y método |
+| `libros-seminario-i/Epistemologia y metodologia de la investigacion - Navarro Chavez - 2014.pdf` | Navarro Chávez; 2014; Grupo Editorial Patria; ISBN 9786074388640 | Fundamentos epistemológicos |
+| `libros-seminario-i/Los siete habitos de la gente altamente efectiva - Stephen Covey - 2014.pdf` | Covey; 2014; Planeta; ISBN 9786079377069 | Círculo de preocupación e influencia; verificar páginas |
 
 La obra de Julio Pimienta no se incorporó porque sus metadatos editoriales estaban incompletos.
 
 ## Guía oficial APA incorporada
 
-- [Reference Guide for Journal Articles, Books, and Edited Book Chapters](metodologia/apa-reference-guide.pdf): American Psychological Association, APA 7; actualización indicada en el documento: 23 de marzo de 2026.
-- [Texto extraído](metodologia/apa-reference-guide.txt) y [procedencia con SHA-256](metodologia/apa-reference-guide.json). Descarga oficial del 22 de septiembre de 2026.
+- [Reference Guide for Journal Articles, Books, and Edited Book Chapters](libros-seminario-i/Reference%20Guide%20for%20Journal%20Articles,%20Books,%20and%20Edited%20Book%20Chapters%20-%20APA%20-%202026.pdf): American Psychological Association, APA 7; actualización indicada en el documento: 23 de marzo de 2026.
+- [Texto extraído](libros-seminario-i/Reference%20Guide%20for%20Journal%20Articles,%20Books,%20and%20Edited%20Book%20Chapters%20-%20APA%20-%202026.txt) y [procedencia con SHA-256](notas-seminario-i/actividad-2-normas-apa/procedencia-guia-APA.json). Descarga oficial del 22 de septiembre de 2026.
 - Es una guía breve de referencias, no el manual completo ni una copia de la página web «References». No acredita por sí sola equivalencia con el recurso docente 2.1. Las notas históricas conservan el estado de consulta que tenían en su fecha.
 
 ## Notas y versiones históricas
 
-Las cuatro notas por unidad se conservan en `notas-seminario-i/`. La subcarpeta `historico/` resguarda el reporte base anterior y su PDF; no deben utilizarse como versión vigente ni compilarse como una actividad.
+Las [notas por actividad](notas-seminario-i/README.md) contienen materiales docentes, formatos, consignas y revisiones; los apuntes transversales estan en materiales generales. Los libros y la guia APA, con nombres bibliograficos completos, estan en `libros-seminario-i/`; las fuentes institucionales permanecen en `institucionales/`. La subcarpeta `historico/` de notas resguarda el reporte base anterior y su PDF; no deben utilizarse como version vigente ni compilarse como una actividad. No se eliminaron versiones ni se reenviaron entregas durante esta reorganizacion.
 
 ## Política de archivos
 

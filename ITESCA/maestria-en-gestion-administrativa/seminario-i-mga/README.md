@@ -16,7 +16,7 @@ Espacio de trabajo para construir el anteproyecto de titulación de la MGA del I
 - [Planeaciones normalizadas por módulo](planeaciones-seminario-i/INDICE-GENERADAS.md): trece fichas, sin reemplazar las planeaciones por unidad.
 - `programa-analitico-seminario-i.md`: objetivo, temario, evaluación y calendario.
 - `planeaciones-seminario-i/`: control de las 18 actividades.
-- `referencias-seminario-i/notas-seminario-i/`: apuntes por unidad y versiones históricas identificadas.
+- [Notas por actividad](referencias-seminario-i/notas-seminario-i/README.md): materiales docentes, formatos, consignas y revisiones; apuntes transversales en materiales generales y versiones historicas identificadas.
 - `anteproyecto/`: matrices, capítulos y evidencias del producto integrador.
 - `referencias-seminario-i/`: fuentes incorporadas y organizadas por tipo.
 - `investigacion-aulatex/`: bitácora de búsqueda y base de conocimiento.
@@ -43,3 +43,9 @@ El reporte base anterior se conserva, sin alterar su contenido, en `referencias-
 5. Conservar cada PDF compilado junto a su `.tex` y colocar en `entregas/` únicamente la copia nombrada para el aula.
 
 > Toda fuente utilizada debe estar incorporada en `referencias-seminario-i/`; no se mantienen dependencias de rutas externas.
+
+## Reorganizacion del 10 de octubre de 2026
+
+Absorcion posterior: las carpetas de Tarea 6 y planeaciones generadas se retiraron de la raiz tras redistribuir 69 archivos en [notas por actividad](referencias-seminario-i/notas-seminario-i/README.md). Elaboracion de Tarea 6 conserva scripts, fuentes y validacion dentro de su actividad; las fichas MD/JSON generadas se agrupan por producto y fecha. Se actualizaron rutas de LaTeX, scripts y documentos. El Word de Tarea 6 paso su validador y el reporte recompilo; no hubo nuevos envios.
+
+Se trasladaron 31 archivos aplicando el criterio de Antecedentes: libros con nombres legibles, materiales en notas de actividades 1, 2, 3, 4, 6 y 10, y apuntes comunes separados. Las planeaciones permanecen en sus carpetas. Se conservaron el anteproyecto acumulativo, sus evidencias de entrega y los scripts operativos; sus rutas de consulta se actualizaron cuando fue necesario. Validadores de Tareas 6 y 10 aprobados; no hubo nuevos envios. En Windows, el validador de Tarea 6 requiere `PYTHONUTF8=1` para interpretar la salida de Poppler.
