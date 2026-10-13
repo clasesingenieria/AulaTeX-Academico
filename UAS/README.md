@@ -2,6 +2,12 @@
 
 Nodo institucional de AulaTeX-Académico para organizar plantillas, fuentes y entregables por programa y asignatura.
 
+## Seguimiento del 12 de octubre de 2026
+
+[Derecho mercantil: actividades y próximos pasos](licenciatura-en-contaduria-uas/derecho-mercantil/README.md#actividades-y-próximos-pasos): reporte S1 enviado y calificado; S2/S3 vencidos sin entrega; integrador S4 disponible hasta el 18/10 a las 23:59. La organización y elaboración local no implican envío al aula. Se conservan los trabajos ya calificados de Investigación aplicada.
+
+[Referencias de Derecho](licenciatura-en-contaduria-uas/derecho-mercantil/referencias-derecho-mercantil/README.md) y [notas por actividad](licenciatura-en-contaduria-uas/derecho-mercantil/referencias-derecho-mercantil/notas-derecho-mercantil/README.md). [Revisión de grabaciones](assets/GRABACIONES-UAS.md): apoyos externos identificados, sin sesiones del grupo confirmadas en las páginas revisadas.
+
 ## Materias disponibles
 
 Consulta autenticada del 22/09/2026 con Playwright y la bóveda local; no se guardaron credenciales ni sesiones en los archivos académicos.

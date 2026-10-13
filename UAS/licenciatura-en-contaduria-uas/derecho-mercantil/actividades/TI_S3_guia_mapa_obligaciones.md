@@ -34,7 +34,7 @@ En la práctica contable, identificar la fuente y modalidad de una obligación p
 
 ## Referencias de la semana
 
-Ramírez Patiño, E. (s. f.). *Derecho de las obligaciones* [Fragmentos de los capítulos 1, 4 y 16-19, lecturas de la semana 3; sin fecha ni editorial identificadas]. https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49889
+Ramírez Patiño, E. (s. f.). *Derecho de las obligaciones* [Fragmentos de los capítulos 1, 4 y 16-19, lecturas de la semana 3; sin fecha ni editorial identificadas]. <https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49889>
 
 Se verificaron los siete archivos originales el 9 de octubre de 2026. Son fragmentos de una misma obra, no siete libros independientes. Se usa «s. f.» porque los extractos no acreditan fecha ni editorial; las fechas de obras citadas en notas al pie no corresponden necesariamente a este libro. Se citan las páginas impresas, no las cifras de los nombres de archivo. La síntesis no acredita vigencia actual de los artículos reproducidos en la lectura.
 
@@ -47,4 +47,4 @@ Se verificaron los siete archivos originales el 9 de octubre de 2026. Son fragme
 3. Escribir el cuerpo a mano y digitalizarlo. No usar una fuente que imite manuscrita para atribuir cumplimiento inexistente.
 4. Añadir la portada. Se interpreta «añadir una portada» como adicional a las una o dos cuartillas del cuerpo; confirmar con el asesor si exige otra forma de contar páginas.
 5. Guardar el manuscrito final como `TI_S3_MartinJonathanDeLaCruzMunoz.pdf`, verificar legibilidad y tamaño menor de 2 MB. Ese archivo de entrega no se ha generado a partir de la maqueta digital.
-6. Entregar antes del 11 de octubre de 2026 a las 23:59, según Moodle; zona horaria no acreditada. El PDF de apoyo no se ha enviado.
+6. El cierre fue el 11 de octubre de 2026 a las 23:59, según Moodle; zona horaria no acreditada. La consulta del 12/10 confirma que no hubo entrega. [Solicitar autorización de entrega extemporánea](../referencias-derecho-mercantil/notas-derecho-mercantil/actividad-03-mapa-obligaciones/README.md); no se acredita reapertura y el PDF de apoyo no sustituye el manuscrito.

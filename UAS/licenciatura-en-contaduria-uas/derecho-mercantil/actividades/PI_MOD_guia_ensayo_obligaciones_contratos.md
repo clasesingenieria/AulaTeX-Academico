@@ -1,5 +1,7 @@
 # Guía de borrador para PI_MOD
 
+**Antecedente conservado.** Desde el 12/10/2026, usar el [borrador desarrollado](../PI_MOD_MartinJonathanDeLaCruzMunoz.pdf) y sus [notas canónicas de fuentes y revisión](../referencias-derecho-mercantil/notas-derecho-mercantil/actividad-04-integrador/README.md). El esquema siguiente no es el ensayo final ni su bibliografía validada. La lectura de obligaciones enlazada por el integrador es Castillo Freyre (2014), no Ramírez Patiño. La clasificación civil no determina automáticamente reconocimiento contable, provisiones o deducciones fiscales.
+
 **Pregunta:** ¿Cuál es la importancia de las obligaciones y los contratos civiles en la Contaduría Pública?
 
 ## Tesis sugerida
@@ -30,7 +32,7 @@ La revisión jurídica de contratos mejora el control interno porque permite com
 
 Las obligaciones y los contratos civiles proporcionan el marco que hace exigibles muchas operaciones de una organización. Su estudio permite a la Contaduría Pública interpretar compromisos, registrar derechos y deudas, prevenir errores y advertir riesgos. La importancia profesional de estos conceptos está en vincular la información financiera con la realidad jurídica que la origina. Por ello, una práctica contable responsable debe conservar contratos, identificar sus efectos y actuar dentro de los límites de la competencia profesional.
 
-## Referencias provisionales de la semana
+## Referencias históricas provisionales, no usar como bibliografía final
 
 - Ramírez Patiño, E. (s. f.). *Generalidades, fuentes, modalidades, transmisión, efectos y extinción de las obligaciones*. Lecturas de la Semana 3, UAS.
 - Zamora y Valencia, M. A. (s. f.). *Contratos civiles* (pp. 13-18). Lectura de la Semana 4, UAS.
