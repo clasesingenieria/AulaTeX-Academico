@@ -1,0 +1,267 @@
+\def\uadectitulo{Biología celular y microbiología}
+\input{UAdeC/medico-cirujano/assets-medico-cirujano/plantilla/reporte-uadec.tex}
+\begin{document}
+\portadaUAdeC
+\section{Actividad 1: síntesis de investigación}
+\subsection{Estructura y transporte}
+Procariotas carecen de núcleo delimitado por membrana; eucariotas compartimentan funciones en organelos. Ambas tienen membrana, citoplasma, ADN y ribosomas. El ADN procariota se localiza en el nucleoide. Las mitocondrias participan en metabolismo energético; los lisosomas en degradación; los ribosomas en traducción y Golgi en procesamiento y distribución. La difusión facilitada utiliza proteínas sin consumir ATP directamente. El transporte activo primario usa energía directa y el secundario aprovecha un gradiente mantenido por otro transporte.
+\subsection{Ciclo y división}
+Interfase comprende G1, S y G2; S incluye replicación del ADN. Mitosis distribuye cromosomas duplicados en núcleos hijos; meiosis incluye dos divisiones tras una replicación y reduce la dotación cromosómica. La citocinesis suele iniciarse antes de que termine telofase y puede solaparse con la división nuclear. En animales actúa un anillo contráctil; en vegetales se forma una placa celular a partir de vesículas guiadas por el fragmoplasto.
+\subsection{Microorganismos}
+Bacterias son procariotas y muchas poseen pared de peptidoglucano; hongos son eucariotas con pared que contiene quitina. Protozoos y helmintos son grupos distintos incluidos entre parásitos médicos. Virus son agentes acelulares cuya replicación depende de células huésped. No todos los microorganismos causan enfermedad. Morfología y tinción Gram describen características, pero no establecen por sí solas especie, patogenicidad ni tratamiento.
+\subsection{Representación conceptual y cuadro de síntesis}
+\begin{longtable}{p{0.27\linewidth}p{0.65\linewidth}}
+\toprule Concepto & Relación o función\\\midrule
+Bacterias & Procariotas; división celular; pared variable\\
+Virus & Acelulares; replicación dependiente del huésped\\
+Hongos & Eucariotas; levaduras o formas filamentosas\\
+Protozoos & Eucariotas unicelulares; ciclos diversos\\
+Helmintos & Eucariotas pluricelulares; ciclos diversos\\
+\bottomrule
+\end{longtable}
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[node distance=5mm, every node/.style={draw,rounded corners=2pt,text width=10cm,align=center,font=\small}]
+\node (step0) {Bacterias: Procariotas; división celular; pared variable};
+\node[below=of step0] (step1) {Virus: Acelulares; replicación dependiente del huésped};
+\draw[-{Stealth}] (step0) -- (step1);
+\node[below=of step1] (step2) {Hongos: Eucariotas; levaduras o formas filamentosas};
+\draw[-{Stealth}] (step1) -- (step2);
+\node[below=of step2] (step3) {Protozoos: Eucariotas unicelulares; ciclos diversos};
+\draw[-{Stealth}] (step2) -- (step3);
+\node[below=of step3] (step4) {Helmintos: Eucariotas pluricelulares; ciclos diversos};
+\draw[-{Stealth}] (step3) -- (step4);
+\end{tikzpicture}
+\caption{Esquema didáctico original; las flechas indican orden de lectura o relación conceptual, no causalidad universal.}
+\end{figure}
+
+\clearpage
+
+
+
+\section{Módulo Teórico: Citología y Microbiología de Alto Rendimiento}
+\subsection{Teoría Celular y Tipos Celulares}
+\begin{itemize}
+    \item \textbf{Célula procariota (bacterias y arqueas):} Sin núcleo delimitado por membrana; ADN localizado en el nucleoide. El modelo bacteriano habitual presenta cromosoma circular, pero existen excepciones de número y forma. Los ribosomas citoplasmáticos son 70S. Muchas bacterias poseen pared de peptidoglucano; no todas tienen pared y las arqueas no poseen peptidoglucano bacteriano.
+    \item \textbf{Célula Eucariota (Animal, Vegetal, Fungi):} Núcleo definido por doble membrana (envoltura nuclear). Organelos membranosos complejos. Cromosomas lineales múltiples. Ribosomas (80S).
+\end{itemize}
+
+\subsection{Organelos y Membrana Plasmática}
+La membrana es semipermeable, descrita por el \textbf{modelo de mosaico fluido} de Singer y Nicolson (fosfolípidos con movimiento lateral, colesterol estabilizador y proteínas integrales).
+\begin{itemize}
+    \item \textbf{Transporte pasivo:} Ósmosis (movimiento de agua a través de una membrana selectivamente permeable), difusión simple y difusión facilitada mediante canales o transportadores; no consumen ATP directamente.
+    \item \textbf{Transporte activo:} El primario utiliza energía directa, como la $\mathrm{Na}^{+}/\mathrm{K}^{+}$-ATPasa, que transporta tres sodios hacia fuera y dos potasios hacia dentro. El secundario aprovecha un gradiente electroquímico generado por otro transporte.
+    \item \textbf{Retículo Endoplásmico (RE):} Liso (REL) para síntesis lipídica y detoxificación. Rugoso (RER) tachonado de ribosomas, sintetiza proteínas de secreción.
+    \item \textbf{Aparato de Golgi:} Centro de distribución, empaquetado y glicosilación post-traduccional de proteínas.
+    \item \textbf{Lisosomas:} Compartimentos ácidos de degradación que participan en digestión intracelular y autofagia; apoptosis es un proceso de muerte celular regulada, no sinónimo de digestión lisosomal.
+\end{itemize}
+
+\subsection{Ciclo Celular y División Celular}
+\begin{tcolorbox}[colback=purple!5!white,colframe=purple!50!black,title=Fases de la Mitosis vs Meiosis]
+\textbf{Mitosis:} División ecuacional de células somáticas. 1 diploide (2n) $\rightarrow$ 2 diploides idénticas (2n).\\
+1. \textit{Profase:} Cromatina condensa en cromosomas. Se forma el huso acromático.\\
+2. \textit{Metafase:} Cromosomas al ecuador (placa metafásica).\\
+3. \textit{Anafase:} Cromátidas hermanas se separan (polos opuestos).\\
+4. \textit{Telofase:} Célula se estrangula, reaparece membrana nuclear.\\
+\textbf{Meiosis:} En humanos ocurre en la línea germinal de las gónadas. Una replicación del ADN es seguida por dos divisiones; la primera separa homólogos y reduce la dotación. La recombinación ocurre en profase I. El modelo de cuatro células haploides describe la espermatogénesis; la ovogénesis produce una célula funcional grande y cuerpos polares, no cuatro óvulos equivalentes.
+\end{tcolorbox}
+
+\subsection{Microbiología Básica}
+\begin{itemize}
+    \item \textbf{Virus:} Agentes acelulares con genoma de ADN o ARN y cápside proteica, a veces con envoltura. Algunos ciclos incluyen intermediarios de otro tipo de ácido nucleico, como en retrovirus. Su replicación depende de células huésped.
+    \item \textbf{Bacterias:} Procariotas. Se clasifican por su pared (Tinción Gram positiva = morada; Gram negativa = roja). Formas: Cocos, Bacilos, Espirilos.
+    \item \textbf{Hongos:} Eucariotas saprófitos. Pared de quitina. Levaduras (unicelular) o Mohos (multicelular hifas).
+    \item \textbf{Parásitos:} Eucariotas. Protozoarios (unicelulares móviles, ej. Amibas) y Helmintos (gusanos, metazoarios, ej. Tenia).
+\end{itemize}
+
+\newpage
+\section{Banco de Reactivos: Actividad 2: banco original de práctica}
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item \textbf{La teoría que sostiene que las mitocondrias y los cloroplastos se originaron a partir de bacterias procariotas que fueron fagocitadas por otra célula, estableciendo una relación simbiótica, se conoce como:}
+    \begin{enumerate}
+        \item[A)] Teoría Celular Clásica
+        \item[B)] Teoría Endosimbiótica
+        \item[C)] Generación Espontánea
+        \item[D)] Panspermia
+    \end{enumerate}
+    \textit{Respuesta: B. La teoría endosimbiótica, desarrollada y difundida por Lynn Margulis, se apoya en evidencia genética y semejanzas de esos organelos con bacterias. Sus ribosomas presentan características relacionadas con el origen bacteriano, pero el coeficiente de sedimentación de los ribosomas mitocondriales no es universalmente 70S.}
+
+    \item \textbf{La bomba de Sodio-Potasio (Na+/K+ ATPasa) es un ejemplo biológico clásico de:}
+    \begin{enumerate}
+        \item[A)] Difusión simple
+        \item[B)] Ósmosis
+        \item[C)] Transporte pasivo facilitado
+        \item[D)] Transporte activo primario
+    \end{enumerate}
+    \textit{Respuesta: D. Va en contra de los gradientes de concentración natural, requiriendo el uso de una molécula de ATP para funcionar.}
+
+    \item \textbf{La enzima catalasa abundante en ciertas organelas descompone el peróxido de hidrógeno ($\mathrm{H}_{2}\mathrm{O}_{2}$) en agua y oxígeno, protegiendo a la célula del estrés oxidativo. ¿Qué organelo es este?}
+    \begin{enumerate}
+        \item[A)] Peroxisoma
+        \item[B)] Lisosoma
+        \item[C)] Mitocondria
+        \item[D)] Ribosoma
+    \end{enumerate}
+    \textit{Respuesta: A. Los peroxisomas son vesículas que contienen enzimas oxidativas (catalasa) dedicadas a la desintoxicación celular. Los lisosomas usan hidrolasas ácidas para digestión.}
+
+    \item \textbf{¿Cómo se denomina el estado fuera del ciclo proliferativo en el que una célula puede permanecer quiescente y, en determinados tipos celulares, volver a dividirse?}
+    \begin{enumerate}
+        \item[A)] Fase S
+        \item[B)] Fase G0 (Quiescencia)
+        \item[C)] Fase G2
+        \item[D)] Citocinesis
+    \end{enumerate}
+    \textit{Respuesta: B. G0 designa un estado no proliferativo. La quiescencia reversible se distingue de la diferenciación terminal; fase S replica ADN, G2 prepara la división y citocinesis separa el citoplasma.}
+
+    \item \textbf{Durante la meiosis se produce la variabilidad genética gracias al entrecruzamiento (crossing-over) de cromosomas homólogos. ¿En qué etapa exacta ocurre?}
+    \begin{enumerate}
+        \item[A)] Profase I
+        \item[B)] Anafase I
+        \item[C)] Profase II
+        \item[D)] Metafase II
+    \end{enumerate}
+    \textit{Respuesta: A. El entrecruzamiento entre cromátidas no hermanas de homólogos ocurre durante profase I, asociado al paquiteno. Los quiasmas se hacen visibles después; no se debe equiparar el momento del intercambio con su observación.}
+
+    \item \textbf{¿Qué componente de la pared celular es exclusivo de las bacterias y determina su tinción en la coloración de Gram?}
+    \begin{enumerate}
+        \item[A)] Quitina
+        \item[B)] Celulosa
+        \item[C)] Peptidoglicano (Mureína)
+        \item[D)] Colesterol
+    \end{enumerate}
+    \textit{Respuesta: C. Una capa gruesa de peptidoglicano retiene el cristal violeta (Gram positivas), mientras que una fina con membrana externa se tiñe roja/rosada (Gram negativas).}
+
+    \item \textbf{El eritrocito humano se coloca en una solución altamente salina (hipertónica). ¿Qué efecto celular observaremos a causa de la ósmosis?}
+    \begin{enumerate}
+        \item[A)] Crenación (el eritrocito se encoge)
+        \item[B)] Hemólisis por entrada excesiva de agua
+        \item[C)] No habrá cambios de volumen
+        \item[D)] Ingreso masivo de sodio
+    \end{enumerate}
+    \textit{Respuesta: A. El agua sale del eritrocito hacia el medio hipertónico por ósmosis, reduciendo su volumen. Hemólisis por entrada de agua corresponde a un medio suficientemente hipotónico. Plasmólisis se reserva para células con pared; no es el término apropiado para eritrocitos.}
+
+    \item \textbf{El Retículo Endoplásmico Liso (REL) a nivel celular, muy desarrollado en hepatocitos, es vital para:}
+    \begin{enumerate}
+        \item[A)] Traducción del ARN mensajero.
+        \item[B)] Generar lisosomas primarios.
+        \item[C)] Síntesis de lípidos (esteroides) y destoxificación hepática.
+        \item[D)] Respiración celular aerobia.
+    \end{enumerate}
+    \textit{Respuesta: C. El REL carece de ribosomas y se encarga del metabolismo de carbohidratos, drogas/venenos y síntesis de hormonas lipídicas.}
+
+    \item \textbf{Microorganismo unicelular eucariota, carente de pared celular, que se moviliza a través de pseudópodos, flagelos o cilios. Pertenece al reino Protista.}
+    \begin{enumerate}
+        \item[A)] Bacteria
+        \item[B)] Hongo (levadura)
+        \item[C)] Protozoario
+        \item[D)] Virus
+    \end{enumerate}
+    \textit{Respuesta: C. Los protozoarios son eucariotas ameboideos o móviles. Bacterias carecen de núcleo. Hongos tienen pared celular.}
+
+    \item \textbf{A nivel biológico, los virus no se consideran seres vivos de forma estricta porque:}
+    \begin{enumerate}
+        \item[A)] Tienen un núcleo difuso
+        \item[B)] Contienen tanto ADN como ARN simultáneamente
+        \item[C)] No tienen metabolismo propio ni maquinaria ribosómica
+        \item[D)] Se replican por fisión binaria
+    \end{enumerate}
+    \textit{Respuesta: C. Los virus carecen de metabolismo (ribosomas, mitocondrias, producción de ATP) y deben forzar la maquinaria enzimática de la célula hospedera a reproducirlos.}
+
+    \item \textbf{En un cariotipo normal de una célula somática humana (no gameto), ¿cuál es el número total de cromosomas?}
+    \begin{enumerate}
+        \item[A)] 23
+        \item[B)] 46
+        \item[C)] 22
+        \item[D)] 92
+    \end{enumerate}
+    \textit{Respuesta: B. 46 cromosomas diploides (23 pares: 22 autosómicos y 1 par sexual). Los espermatozoides/óvulos tienen 23 (haploides).}
+
+    \item \textbf{¿Qué proceso celular forma vesículas invaginando la membrana plasmática para incorporar líquidos o moléculas grandes hacia el interior de la célula?}
+    \begin{enumerate}
+        \item[A)] Exocitosis
+        \item[B)] Endocitosis (Pinocitosis / Fagocitosis)
+        \item[C)] Difusión simple
+        \item[D)] Apoptosis
+    \end{enumerate}
+    \textit{Respuesta: B. La endocitosis permite meter partículas englobadas en membrana. Exocitosis es para secreción hacia afuera.}
+
+    \item \textbf{El SARS-CoV-2 y el VIH comparten una característica biológica en común, y es que ambos son virus de tipo:}
+    \begin{enumerate}
+        \item[A)] Bacteriófagos
+        \item[B)] Priones
+        \item[C)] Virus cuyo genoma es de ARN
+        \item[D)] Virus cuyo genoma es de ADN bicatenario
+    \end{enumerate}
+    \textit{Respuesta: C. Ambos poseen genoma de ARN, pero el VIH es un retrovirus y SARS-CoV-2 es un coronavirus de ARN de sentido positivo. La tasa de mutación no se deduce solo del tipo de genoma: los coronavirus tienen mecanismos de corrección. No son priones ni bacteriófagos.}
+
+    \item \textbf{¿Cuál es el principal centro organizador de microtúbulos en el modelo típico de célula animal, con material pericentriolar y un par de centriolos?}
+    \begin{enumerate}
+        \item[A)] Nucleolo
+        \item[B)] Centrosoma (y centriolos)
+        \item[C)] Complejo del Poro Nuclear
+        \item[D)] Aparato de Golgi
+    \end{enumerate}
+    \textit{Respuesta: B. El centrosoma incluye centriolos y material pericentriolar que nuclea microtúbulos. Los centrosomas se duplican y contribuyen a organizar los polos; células de plantas superiores pueden formar husos sin centrosomas típicos. Nucléolo, poro nuclear y Golgi no son esa estructura.}
+
+    \item \textbf{A nivel estructural, la pared celular de los hongos verdaderos está compuesta bioquímicamente por:}
+    \begin{enumerate}
+        \item[A)] Celulosa
+        \item[B)] Peptidoglicano
+        \item[C)] Ácido hialurónico
+        \item[D)] Quitina
+    \end{enumerate}
+    \textit{Respuesta: D. Quitina en los hongos. Celulosa en las plantas. Peptidoglicano en bacterias.}
+
+    \item \textbf{¿Qué opción identifica el control previo a entrar en fase S, en el que se evalúan condiciones de crecimiento y puede detenerse el ciclo ante daño del ADN?}
+    \begin{enumerate}
+        \item[A)] Control de G1 y transición G1/S
+        \item[B)] Punto M
+        \item[C)] Control del Huso
+        \item[D)] Punto de terminación telomérica
+    \end{enumerate}
+    \textit{Respuesta: A. El control G1/S precede a la replicación; p53 puede inducir detención para reparación mediante p21, senescencia o apoptosis según el contexto. No todo daño desencadena automáticamente apoptosis. El control del huso corresponde a la fase M.}
+
+    \item \textbf{En el modelo del Mosaico Fluido celular, ¿cuál molécula se inserta entre los fosfolípidos otorgando rigidez y disminuyendo la fluidez de la membrana a altas temperaturas?}
+    \begin{enumerate}
+        \item[A)] Glicoproteína
+        \item[B)] Proteína periférica
+        \item[C)] Colesterol
+        \item[D)] Oligosacárido
+    \end{enumerate}
+    \textit{Respuesta: C. El colesterol es el amortiguador térmico de la membrana animal, modulando su consistencia mecánica.}
+
+    \item \textbf{Tipo de asociación simbiótica en el que un microorganismo (ej. flora intestinal normal) se beneficia del huésped sin causarle daño ni otorgarle un beneficio directo importante:}
+    \begin{enumerate}
+        \item[A)] Mutualismo
+        \item[B)] Parasitismo
+        \item[C)] Comensalismo
+        \item[D)] Depredación
+    \end{enumerate}
+    \textit{Respuesta: C. Comensalismo = +/0. (Mutualismo es +/+, Parasitismo es +/-).}
+
+    \item \textbf{La citocinesis (separación del citoplasma) puede solaparse con anafase y telofase de la mitosis. ¿En las células animales, esto se logra gracias a un anillo contráctil formado por?}
+    \begin{enumerate}
+        \item[A)] Celulosa
+        \item[B)] Clatrina
+        \item[C)] Actina y Miosina
+        \item[D)] Microtúbulos (Tubulina)
+    \end{enumerate}
+    \textit{Respuesta: C. Actina y miosina forman el anillo contráctil que origina el surco de segmentación. En plantas, vesículas forman la placa celular guiadas por el fragmoplasto; este no es simplemente una colección de vesículas. Celulosa, clatrina y tubulina no son la pareja contráctil solicitada.}
+
+    \item \textbf{Un microorganismo se clasifica como bacilo Gram-negativo. Esta denominación bacteriana nos indica morfológicamente que es:}
+    \begin{enumerate}
+        \item[A)] Forma esférica y de color morado
+        \item[B)] Forma de bastón y de color rojo/rosa
+        \item[C)] Forma espiral y de color azul
+        \item[D)] Forma de coma y no se tiñe
+    \end{enumerate}
+    \textit{Respuesta: B. Bacilo = Bastón (cilíndrico). Gram negativo = se tiñe de fucsia/rosado/rojo con la safranina, pues perdió el cristal violeta de la pared delgada.}
+
+\end{enumerate}
+
+\section{Conclusiones}
+El material permite repasar conceptos y contrastar respuestas. La clave no acredita desempeño del aspirante ni aprobación institucional. Deben revisarse la convocatoria y el temario aplicables antes de usarlo como plan definitivo de ingreso.
+\clearpage\section{Fuentes de apoyo y alcance de consulta}
+OpenStax. Biology 2e: 4.2 Prokaryotic Cells. Consulta: 10 de octubre de 2026. \url{https://openstax.org/books/biology-2e/pages/4-2-prokaryotic-cells}\par Sección consultada: componentes comunes y contraste procariota/eucariota. El resto del banco requiere cotejo especializado.\par\medskip
+Los originales bibliográficos disponibles se identifican por nombre de archivo y SHA256 en el inventario local. No se atribuyen ediciones, páginas ni lecturas no comprobadas.
+\end{document}

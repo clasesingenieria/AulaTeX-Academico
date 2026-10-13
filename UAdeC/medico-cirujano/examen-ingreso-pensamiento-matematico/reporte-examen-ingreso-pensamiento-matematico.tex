@@ -1,0 +1,123 @@
+\def\uadectitulo{Pensamiento matemático}
+\input{UAdeC/medico-cirujano/assets-medico-cirujano/plantilla/reporte-uadec.tex}
+\begin{document}
+\portadaUAdeC
+\section{Actividad 1: síntesis de investigación}
+\subsection{Proporcionalidad y unidades}
+Una razón compara cantidades. En proporcionalidad directa el cociente permanece y en inversa permanece el producto bajo las condiciones del modelo. Un porcentaje usa base cien; aumentos sucesivos se multiplican, no se suman sin revisar la base.
+\subsection{Álgebra y geometría}
+Resolver una ecuación implica operaciones equivalentes a ambos lados y verificar el resultado. Área y perímetro tienen unidades distintas. Para triángulos rectángulos se aplica Pitágoras; no debe aplicarse sin esa condición.
+\subsection{Datos y probabilidad}
+Media suma y divide por cantidad; mediana requiere ordenar. La probabilidad clásica necesita resultados equiprobables. Los ejemplos siguientes son ficticios y no describen mediciones clínicas.
+\subsection{Representación conceptual y cuadro de síntesis}
+\begin{longtable}{p{0.27\linewidth}p{0.65\linewidth}}
+\toprule Concepto & Relación o función\\\midrule
+Datos & Cantidad, unidad y aulaTEX/base\\
+Modelo & Razón, ecuación o distribución\\
+Cálculo & Operaciones justificadas\\
+Comprobación & Sustitución, unidades y plausibilidad\\
+\bottomrule
+\end{longtable}
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[node distance=5mm, every node/.style={draw,rounded corners=2pt,text width=10cm,align=center,font=\small}]
+\node (step0) {Datos: Cantidad, unidad y base};
+\node[below=of step0] (step1) {Modelo: Razón, ecuación o distribución};
+\draw[-{Stealth}] (step0) -- (step1);
+\node[below=of step1] (step2) {Cálculo: Operaciones justificadas};
+\draw[-{Stealth}] (step1) -- (step2);
+\node[below=of step2] (step3) {Comprobación: Sustitución, unidades y plausibilidad};
+\draw[-{Stealth}] (step2) -- (step3);
+\end{tikzpicture}
+\caption{Esquema didáctico original; las flechas indican orden de lectura o relación conceptual, no causalidad universal.}
+\end{figure}
+\clearpage\section{Actividad 2: cuestionario original resuelto}
+\begin{enumerate}
+\item\textbf{Tres cuadernos cuestan 45 pesos. Al mismo precio unitario, ¿cuánto cuestan ocho?}
+\begin{enumerate}[label=\Alph*)]
+\item 80
+\item 100
+\item 120
+\item 135
+\end{enumerate}
+\textbf{Respuesta: C.} 45/3 = 15 pesos por cuaderno; 8 por 15 = 120. Las otras cantidades no conservan el precio unitario.
+\item\textbf{Un artículo de 200 pesos aumenta 10\% y luego baja 10\% sobre el nuevo precio. ¿Precio final?}
+\begin{enumerate}[label=\Alph*)]
+\item 198
+\item 200
+\item 180
+\item 220
+\end{enumerate}
+\textbf{Respuesta: A.} 200 por 1.10 por 0.90 = 198. Los porcentajes usan bases diferentes y no se cancelan.
+\item\textbf{Resuelve 3x + 5 = 20.}
+\begin{enumerate}[label=\Alph*)]
+\item 3
+\item 4
+\item 6
+\item 5
+\end{enumerate}
+\textbf{Respuesta: D.} Restar 5 y dividir entre 3 da x = 5; sustitución: 15 + 5 = 20.
+\item\textbf{¿Mediana de 2, 4, 9, 10 y 15?}
+\begin{enumerate}[label=\Alph*)]
+\item 8
+\item 9
+\item 10
+\item 15
+\end{enumerate}
+\textbf{Respuesta: B.} Ordenados, el tercer valor es 9. Media y máximo no son mediana.
+\item\textbf{En una bolsa hay tres fichas rojas y dos azules equiprobables. ¿Probabilidad de extraer una roja?}
+\begin{enumerate}[label=\Alph*)]
+\item 2/5
+\item 1/2
+\item 3/5
+\item 3/2
+\end{enumerate}
+\textbf{Respuesta: C.} Tres favorables entre cinco posibles: 3/5; 3/2 excede uno.
+\item\textbf{¿Área de un rectángulo de 6 cm por 4 cm?}
+\begin{enumerate}[label=\Alph*)]
+\item 24 cm cuadrados
+\item 20 cm
+\item 10 cm cuadrados
+\item 24 cm
+\end{enumerate}
+\textbf{Respuesta: A.} Área = 6 por 4 = 24 cm cuadrados. 20 cm sería perímetro; cm solos no son unidad de área.
+\item\textbf{¿Hipotenusa de un triángulo rectángulo con catetos 3 y 4 cm?}
+\begin{enumerate}[label=\Alph*)]
+\item 7 cm
+\item 12 cm
+\item 25 cm
+\item 5 cm
+\end{enumerate}
+\textbf{Respuesta: D.} Raíz de 3 al cuadrado más 4 al cuadrado = raíz de 25 = 5.
+\item\textbf{¿Media de 4, 6 y 8?}
+\begin{enumerate}[label=\Alph*)]
+\item 5
+\item 6
+\item 7
+\item 18
+\end{enumerate}
+\textbf{Respuesta: B.} Suma 18 dividida entre tres = 6; 18 es la suma, no la media.
+\item\textbf{Una tarea requiere 24 persona-horas. Si cuatro personas rinden igual simultáneamente, ¿tiempo ideal?}
+\begin{enumerate}[label=\Alph*)]
+\item 96 horas
+\item 24 horas
+\item 6 horas
+\item 4 horas
+\end{enumerate}
+\textbf{Respuesta: C.} 24/4 = 6 horas bajo el modelo ideal indicado; no es garantía de productividad real.
+\item\textbf{Una cantidad pasa de 50 a 65. ¿Aumento porcentual respecto a 50?}
+\begin{enumerate}[label=\Alph*)]
+\item 30\%
+\item 15\%
+\item 23\%
+\item 65\%
+\end{enumerate}
+\textbf{Respuesta: A.} (65 - 50)/50 por 100 = 30\%; 15 es aumento absoluto, no porcentaje.
+\end{enumerate}
+
+\section{Conclusiones}
+El material permite repasar conceptos y contrastar respuestas. La clave no acredita desempeño del aspirante ni aprobación institucional. Deben revisarse la convocatoria y el temario aplicables antes de usarlo como plan definitivo de ingreso.
+\clearpage\section{Fuentes de apoyo y alcance de consulta}
+OpenStax. Introductory Statistics 2e: Chapter 1, Introduction. Consulta: 10 de octubre de 2026. \url{https://openstax.org/books/introductory-statistics-2e/pages/1-introduction}\par Introducción consultada sobre interpretación de datos y muestreo; ejercicios aritméticos y algebraicos originales, verificados por cálculo.\par\medskip
+Los originales bibliográficos disponibles se identifican por nombre de archivo y SHA256 en el inventario local. No se atribuyen ediciones, páginas ni lecturas no comprobadas.
+\end{document}
