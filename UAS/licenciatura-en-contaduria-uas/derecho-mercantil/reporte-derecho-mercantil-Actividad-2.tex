@@ -1,0 +1,80 @@
+\def\actividadtitulo{Sujetos del Derecho y sus relaciones jurídicas}
+\def\actividadtipo{Cuatro diagramas de Ishikawa -- Semana 2\\Maqueta de apoyo; cuerpo manuscrito pendiente}
+\def\uasmateria{Derecho mercantil}
+\def\uasestudiante{Martín Jonathan De La Cruz Muñoz}
+\def\uasmatricula{26031061}
+\def\uasasesor{Wilder Alfredo Angulo López}
+\def\uasgrupo{103 LCP}
+\def\uasfecha{12 de octubre de 2026}
+\def\uaslugar{Culiacán, Sinaloa, México}
+\def\uaslogo{UAS/licenciatura-en-contaduria-uas/derecho-mercantil/assets-derecho-mercantil/escudo-uas.png}
+\def\uasfacultadlogo{UAS/licenciatura-en-contaduria-uas/derecho-mercantil/assets-derecho-mercantil/fcauas-logo.jpg}
+\def\uasbibliografia{UAS/licenciatura-en-contaduria-uas/derecho-mercantil/sujetos-S2.bib}
+\AddToHook{package/titlesec/after}{\RequirePackage{tikz}\usetikzlibrary{arrows.meta,babel}}
+\newcommand{\espinaconceptual}[5]{%
+  \par\noindent\begin{tikzpicture}[
+    dimension/.style={align=left,text width=4.8cm,inner sep=2pt,font=\fontsize{11}{12.5}\selectfont},
+    tema/.style={draw=uasBlue,fill=uasBlue!7,align=center,text width=2.7cm,inner sep=4pt,font=\bfseries\fontsize{11}{12.5}\selectfont},
+    espina/.style={draw=uasBlue,line width=.7pt}
+  ]
+  \node[tema] (tema) at (13.8,0) {#1};
+  \draw[espina,-{Stealth[length=2mm]}] (0,0) -- (tema.west);
+  \node[dimension,anchor=south] at (2.5,.4) {#2};
+  \node[dimension,anchor=south] at (7.7,.4) {#3};
+  \node[dimension,anchor=north] at (2.5,-.4) {#4};
+  \node[dimension,anchor=north] at (7.7,-.4) {#5};
+  \draw[espina] (2.5,.4) -- (4.3,0) -- (2.5,-.4);
+  \draw[espina] (7.7,.4) -- (9.5,0) -- (7.7,-.4);
+  \end{tikzpicture}\par
+}
+\long\def\actividadcontenido{
+\setstretch{1.06}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\titlespacing*{\section}{0pt}{4pt}{3pt}
+\titlespacing*{\subsection}{0pt}{4pt}{3pt}
+\raggedbottom
+\section*{Introducción}
+Identificar a los sujetos del Derecho permite distinguir quién es titular de derechos y obligaciones y cómo interviene en una relación jurídica. La persona física corresponde al ser humano individual; la persona moral tiene una identidad jurídica distinta de sus integrantes \parencite[621, 640]{quintanaSujetosS2}. Los cuatro diagramas siguientes organizan los subtemas solicitados. La espina se utiliza como organizador conceptual, no como prueba de causalidad: las ramas son dimensiones de análisis, no causas de un problema.
+
+\subsection*{a) Personas físicas}
+\espinaconceptual{Persona física}
+{\textbf{Sujeto individual}\par Ser humano considerado como sujeto del Derecho.}
+{\textbf{Titularidad}\par Puede ser titular de derechos y asumir obligaciones.}
+{\textbf{Identificación}\par Distinguir a la persona del papel que desempeña en una operación.}
+{\textbf{Ejemplo hipotético}\par Una persona contrata un servicio y asume el pago convenido.}
+{\small Base conceptual: \textcite[621]{quintanaSujetosS2}. Identificación y ejemplo: aplicación didáctica.}
+
+\subsection*{b) Personas morales}
+\espinaconceptual{Persona moral}
+{\textbf{Ente y personalidad}\par Sujeto jurídico con identidad propia, distinta de la de sus socios.}
+{\textbf{Voluntad}\par Prevista en sus estatutos y exteriorizada por sus órganos.}
+{\textbf{Derechos y obligaciones}\par Puede adquirir su titularidad y actuar en relaciones jurídicas.}
+{\textbf{Representación}\par Sus órganos permiten ejercer derechos y cumplir obligaciones.}
+{\small Síntesis de \textcite[640--641]{quintanaSujetosS2}; no supone que todas las personas morales sean sociedades mercantiles.}
+
+\textbf{Relación con la Contaduría Pública.} En un caso hipotético, una sociedad contrata un servicio mediante su representante. Para organizar el expediente interesa distinguir a la sociedad contratante de la persona que firma y revisar el alcance de su actuación. No debe atribuirse automáticamente a cada socio el compromiso de la sociedad ni deducirse el régimen de responsabilidad solo por la denominación del documento.
+
+\clearpage
+\subsection*{c) Sanción}
+\espinaconceptual{Sanción}
+{\textbf{Concepto en Kelsen}\par Privación coactiva de un bien, realizada por el Estado.}
+{\textbf{Supuesto}\par El acto antijurídico se define como condicionante de la sanción.}
+{\textbf{Relación entre sujetos}\par Se distingue la intervención estatal del destinatario de la consecuencia.}
+{\textbf{Otros usos del término}\par Sanción premial y sanción presidencial no equivalen al castigo.}
+{\small \textcite[234]{solanoSujetosS2} expone la teoría de Kelsen y la polisemia del término. Los ejemplos legislativos de Colombia no se presentan como normas mexicanas.}
+
+\subsection*{d) Hechos y actos jurídicos}
+\espinaconceptual{Hechos y actos jurídicos}
+{\textbf{Hecho}\par Modificación del mundo exterior; no todo hecho es un acto.}
+{\textbf{Acto}\par Hecho humano voluntario: la voluntad se exterioriza.}
+{\textbf{Relevancia jurídica}\par El Derecho atribuye efectos a los acontecimientos que regula.}
+{\textbf{Negocio jurídico}\par Voluntad encaminada a producir efectos jurídicos; especie del acto.}
+{\small Se sigue la distinción de \textcite[269--271]{solanoSujetosS2}. Un contrato es ejemplo de negocio jurídico; no todos los actos jurídicos se reducen a contratos.}
+
+\section*{Conclusión}
+Distinguir sujetos, actos y consecuencias permite explicar quién interviene y qué efectos produce su conducta. Estas preguntas orientan la revisión documental contable, sin sustituir la legislación aplicable ni convertir cualquier desacuerdo en una sanción automática.\footnote{Síntesis y diagramas elaborados con apoyo de GitHub Copilot; requieren revisión y elaboración manuscrita personal. No se ha enviado esta maqueta al aula.}
+\setlength{\bibitemsep}{2pt}
+\renewcommand{\bibfont}{\fontsize{10}{11}\selectfont}
+}
+\input{UAS/plantilla-actividad-uas.tex}
