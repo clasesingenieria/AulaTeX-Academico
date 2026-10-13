@@ -1444,7 +1444,7 @@ Inventario de solo lectura. No acredita compilacion, vigencia docente ni entrega
 | Institucion | Materias | Con candidatos | Con seleccion declarada |
 | --- | ---: | ---: | ---: |
 | IIIEPE | 2 | 2 | 0 |
-| ITESCA | 83 | 83 | 1 |
+| ITESCA | 83 | 82 | 1 |
 | UANL | 93 | 90 | 0 |
 | UAS | 2 | 2 | 2 |
 | UCNL | 55 | 54 | 6 |
@@ -1458,6 +1458,7 @@ Inventario de solo lectura. No acredita compilacion, vigencia docente ni entrega
 - no_template_candidates: UANL/ingenieria-en-administracion-y-sistemas/metodologia-de-la-programacion
 - no_template_candidates: UANL/ingeniero-agronomo/biologia-celular
 - no_template_candidates: UANL/ingeniero-agronomo/responsabilidad-social-y-desarrollo-sustentable
+- no_template_candidates: ITESCA/maestria-en-gestion-administrativa/seminario-i-mga
 - unversioned_manifest: estructura-aulatex.json
 - missing_declared_path: estructura-aulatex.json -> referencias-AulaTeX-Academico
 - missing_declared_path: estructura-aulatex.json -> planeaciones-AulaTeX-Academico
@@ -1469,6 +1470,16 @@ Inventario de solo lectura. No acredita compilacion, vigencia docente ni entrega
 - unversioned_manifest: ITESCA/maestria-en-gestion-administrativa/fundamentos-de-gestion-administrativa-mga/estructura-aulatex.json
 - missing_declared_path: ITESCA/maestria-en-gestion-administrativa/fundamentos-de-gestion-administrativa-mga/estructura-aulatex.json -> ITESCA/maestria-en-gestion-administrativa/fundamentos-de-gestion-administrativa-mga/presentacion-fundamentos-de-gestion-administrativa-Actividad-2.tex
 - unversioned_manifest: ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/estructura-aulatex.json
+- missing_declared_path: ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/estructura-aulatex.json -> ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/programa-analitico-seminario-i.md
+- missing_declared_path: ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/estructura-aulatex.json -> ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/reporte-seminario-i-mga.tex
+- missing_declared_path: ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/estructura-aulatex.json -> ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/reporte-seminario-i-mga.pdf
+- missing_declared_path: ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/estructura-aulatex.json -> ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/presentacion-seminario-i-mga.tex
+- missing_declared_path: ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/estructura-aulatex.json -> ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/reporte-seminario-i-plantilla-actividad.tex
+- missing_declared_path: ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/estructura-aulatex.json -> ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/template.tex
+- missing_declared_path: ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/estructura-aulatex.json -> ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/planeaciones-seminario-i/INDICE-GENERADAS.md
+- missing_declared_path: ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/estructura-aulatex.json -> ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/planeaciones-seminario-i/modelo-generacion-2026-09-22.json
+- missing_declared_path: ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/estructura-aulatex.json -> ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/anteproyecto
+- missing_declared_path: ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/estructura-aulatex.json -> ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/planeaciones-generadas
 - unversioned_manifest: tecnmNL/ingeniero-industrial/inferencial-i/estructura-aulatex.json
 - unversioned_manifest: UANL/ingeniero-agronomo/algebra-lineal/estructura-aulatex.json
 - unversioned_manifest: UANL/ingeniero-agronomo/calculo-integral/estructura-aulatex.json
@@ -1489,11 +1500,7 @@ Inventario de solo lectura. No acredita compilacion, vigencia docente ni entrega
 
 No se autoriza borrado automatico, ni siquiera cuando existe una copia.
 
-- .aulatex-temp: 1713 archivos; 0 registrados en Git; 1 evidencias requieren revision.
-- .build: 543 archivos; 0 registrados en Git; 0 evidencias requieren revision.
-- .tmp-itesca-20260928: 147 archivos; 140 registrados en Git; 4 evidencias requieren revision.
-- .tmp-seminario: 65 archivos; 65 registrados en Git; 0 evidencias requieren revision.
-- tmp: 253 archivos; 223 registrados en Git; 0 evidencias requieren revision.
+- .aulatex-temp: 0 archivos; 0 registrados en Git; 0 evidencias requieren revision.
 
 ### Limites
 
@@ -1503,4 +1510,5 @@ No se autoriza borrado automatico, ni siquiera cuando existe una copia.
 - Temporary evidence matching uses identical filenames and SHA-256; absence of a match does not prove uniqueness.
 
 Detalle verificable: catalogo-plantillas-aulatex.json. Seleccion explicita: seleccion-plantillas-aulatex.json.
+
 <!-- AULATEX_CATALOG_END -->
