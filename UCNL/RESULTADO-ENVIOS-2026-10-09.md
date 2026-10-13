@@ -1,5 +1,9 @@
 # UCNL: resultado de realizacion y envios
 
+Comprobacion posterior disponible: [estado del 12/10/2026](REPORTE-ACTIVIDADES-2026-10-12.md).
+El foro ya figura con 10.00 en esa nueva consulta. Este documento conserva el
+estado historico del 09/10 y sus comprobantes originales.
+
 Corte final: **09/10/2026, 21:16, UTC-06:00**. Verificacion autenticada con la boveda de AulaTeX; periodo 2026-3. Actualizado despues de publicar el Foro #1 con el SRT proporcionado por el usuario.
 
 ## Resultado Confirmado
