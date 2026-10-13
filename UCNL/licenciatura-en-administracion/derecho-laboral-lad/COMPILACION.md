@@ -3,9 +3,9 @@
 Ejecutar siempre desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\derecho-laboral-lad\reporte-derecho-laboral.tex
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\derecho-laboral-lad\reporte-derecho-laboral-Actividad-1.tex
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\derecho-laboral-lad\presentacion-derecho-laboral.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\derecho-laboral-lad\reporte-derecho-laboral.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\derecho-laboral-lad\reporte-derecho-laboral-Actividad-1.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\derecho-laboral-lad\presentacion-derecho-laboral.tex
 `
 
 ## Contrato de compilacion

@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del repositorio que contiene la carpeta ITESCA:
 
 ```powershell
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\seminario-iii-mga\\reporte-seminario-iii-mga.tex
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\seminario-iii-mga\\presentacion-seminario-iii-mga.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\seminario-iii-mga\\reporte-seminario-iii-mga.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\seminario-iii-mga\\presentacion-seminario-iii-mga.tex
 ```
 
 ## Contrato de compilacion

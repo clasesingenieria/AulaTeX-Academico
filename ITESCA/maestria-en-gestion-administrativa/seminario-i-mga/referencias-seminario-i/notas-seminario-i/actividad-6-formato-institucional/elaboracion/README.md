@@ -68,7 +68,7 @@ A petición del alumno, se añadió una versión complementaria con el mismo esq
 
 La versión usa la plantilla compartida sin modificarla, papel carta, márgenes de 2.54 cm y texto a doble espacio, con la familia Helvetica usada por las otras actividades LaTeX del curso. Conserva 74 encabezados, dos tablas editables en LaTeX, dos figuras y cinco referencias. El índice se limita a los tres niveles principales; el cuarto nivel permanece en el cuerpo. La numeración de páginas sigue la separación entre preliminares y cuerpo que establece la plantilla.
 
-La compilación se realiza desde la raíz del repositorio con el compilador habitual [latexmk-build.sh](../../../../../../../scripts/latexmk-build.sh), indicando la fuente principal. El exportador solo debe volver a ejecutarse si se desea sincronizar cambios del Word, pues regenera el contenido editable.
+La compilación se realiza desde la raíz del repositorio con el compilador habitual [latexmk-build.sh](../../../../../../../aulaTEX/latexmk-build.sh), indicando la fuente principal. El exportador solo debe volver a ejecutarse si se desea sincronizar cambios del Word, pues regenera el contenido editable.
 
 **Esta versión no cambia el requisito oficial de entrega:** Moodle solicita el Word con índice automático de Word, no un PDF LaTeX. Se mantienen los dos formatos y no se ha realizado un envío al aula.
 

@@ -14,13 +14,13 @@
 Desde la raíz del repositorio:
 
 ```powershell
-.\scripts\aulatex.ps1 agent --target .\UANL\ingeniero-agronomo\algebra-lineal --level materia --action realizar-actividad --activity 1 --run-extractor
+.\aulaTEX\aulatex.ps1 agent --target .\UANL\ingeniero-agronomo\algebra-lineal --level materia --action realizar-actividad --activity 1 --run-extractor
 ```
 
 Para el motor inteligente con monitor:
 
 ```powershell
-.\scripts\aulatex.ps1 monitor-inteligente -Target '.\UANL\ingeniero-agronomo\algebra-lineal' -Activity 1 -Actions realizar-actividad -MaxTargets 1 -Engines 'Auto (model-router)' -Backend langgraph -Console
+.\aulaTEX\aulatex.ps1 monitor-inteligente -Target '.\UANL\ingeniero-agronomo\algebra-lineal' -Activity 1 -Actions realizar-actividad -MaxTargets 1 -Engines 'Auto (model-router)' -Backend langgraph -Console
 ```
 
 Los nombres de estudiantes, matrículas, grupo, docente y fechas deben completarse antes de la entrega.

@@ -48,26 +48,26 @@ informe.pdf
 log.txt
 
 # Distribución
-base/Plantilla-Informe/dist/img
-base/Plantilla-Informe/dist/src
-base/Plantilla-Informe/dist/main.tex
-base/Plantilla-Informe/dist/example.tex
-base/Plantilla-Informe/dist/template_config.tex
+aulaTEX/base/Plantilla-Informe/dist/img
+aulaTEX/base/Plantilla-Informe/dist/src
+aulaTEX/base/Plantilla-Informe/dist/main.tex
+aulaTEX/base/Plantilla-Informe/dist/example.tex
+aulaTEX/base/Plantilla-Informe/dist/template_config.tex
 
 # Plantillas upstream de Template-Latex: material de referencia local.
 # Eran submodulos sin .gitmodules y quedaron huerfanas tras el filter-repo;
 # se conservan en disco pero no se versionan en este repositorio.
-base/cwl-docs/
-base/Export-Subtemmplate/
-base/Professional-CV/
-base/Template-Articulo/
-base/Template-Auxiliares/
-base/Template-Controles/
-base/Template-latex.github.io/
-base/Template-Poster/
-base/Template-Presentacion/
-base/Template-Reporte/
-base/Template-Tesis/
+aulaTEX/base/cwl-docs/
+aulaTEX/base/Export-Subtemmplate/
+aulaTEX/base/Professional-CV/
+aulaTEX/base/Template-Articulo/
+aulaTEX/base/Template-Auxiliares/
+aulaTEX/base/Template-Controles/
+aulaTEX/base/Template-latex.github.io/
+aulaTEX/base/Template-Poster/
+aulaTEX/base/Template-Presentacion/
+aulaTEX/base/Template-Reporte/
+aulaTEX/base/Template-Tesis/
 
 # Archivos temporales
 .build/
@@ -78,9 +78,9 @@ salidas/
 # Entrenamiento: Git conserva código/configuración/manifiestos, no datos ni pesos.
 .ipynb_checkpoints/
 **/.ipynb_checkpoints/
-data/private/*
-!data/private/.gitkeep
-models/local/
+aulaTEX/data/private/*
+!aulaTEX/data/private/.gitkeep
+aulaTEX/models/local/
 checkpoints/
 artifacts/
 outputs/
@@ -111,9 +111,9 @@ logs-compilacion-tex/
 *.xlsx
 *_temp.tex
 TODO.txt
-scripts/preview/
-scripts/tikz-preview/
-# scripts/aulatex.env se versiona con secretos cifrados (enc:); la clave secret.key permanece ignorada.
+aulaTEX/preview/
+aulaTEX/tikz-preview/
+# aulaTEX/aulatex.env se versiona con secretos cifrados (enc:); la clave secret.key permanece ignorada.
 
 # Incubadora local: conservar carpeta, ignorar contenido
 upgrade/*
@@ -132,13 +132,13 @@ bot-interfaz/interfaz.env
 # Clave de cifrado local de secretos: NUNCA versionar
 secret.key
 **/secret.key
-scripts/secret.key
+aulaTEX/secret.key
 
 # Bóveda institucional y copias accidentales: nunca versionar, ni cifradas.
 **/platform-credentials.vault.json*
 
 # Respaldos automaticos del .env: pueden contener secretos en claro
-scripts/aulatex.env.bak-*
+aulaTEX/aulatex.env.bak-*
 **/*.env.bak-*
 
 .playwright-mcp/

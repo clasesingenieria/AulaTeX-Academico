@@ -44,21 +44,21 @@
 
 - Raíz IIIEPE con archivos canónicos institucionales y bibliografía central.
 - Subestructura por carrera/programa > materia > entregables.
-- Carpeta assets y referencias a plantillas compartidas en base/.
+- Carpeta assets y referencias a plantillas compartidas en aulaTEX/base/.
 - IIIEPE/reporte-iiiepe.tex como entrada institucional para reportes generales.
 - IIIEPE/presentacion-iiiepe.tex como entrada institucional para presentaciones.
 - IIIEPE/bibliografia-iiiepe.bib como bibliografía central verificable.
 - IIIEPE/assets/ para recursos institucionales normalizados.
 - IIIEPE/<programa-o-carrera>/<materia>/ para contenidos específicos.
 - Cada materia con reporte-<materia>.tex, actividad-<materia>.tex opcional, bibliografia local opcional y COMPILACION.md.
-- Uso de base/ para plantillas compartidas mediante rutas resueltas por TEXINPUTS.
+- Uso de aulaTEX/base/ para plantillas compartidas mediante rutas resueltas por TEXINPUTS.
 - IIIEPE/reporte-iiiepe.tex
 - IIIEPE/presentacion-iiiepe.tex
 - IIIEPE/bibliografia-iiiepe.bib
 - IIIEPE/assets/
 - IIIEPE/<programa-o-carrera>/<materia>/ con reporte, actividad opcional, .bib opcional y COMPILACION.md
 - Cada materia debe contener reporte-<materia>.tex, actividad-<materia>.tex si aplica, bibliografía local opcional y COMPILACION.md.
-- Las plantillas compartidas deben invocarse desde base/ mediante rutas resueltas por TEXINPUTS.
+- Las plantillas compartidas deben invocarse desde aulaTEX/base/ mediante rutas resueltas por TEXINPUTS.
 
 ## Criterios de evaluación
 

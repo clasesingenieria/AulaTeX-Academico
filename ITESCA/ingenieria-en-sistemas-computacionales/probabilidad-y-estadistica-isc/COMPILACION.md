@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del repositorio que contiene la carpeta ITESCA:
 
 ```powershell
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\probabilidad-y-estadistica-isc\\reporte-probabilidad-y-estadistica-isc.tex
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\probabilidad-y-estadistica-isc\\presentacion-probabilidad-y-estadistica-isc.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\probabilidad-y-estadistica-isc\\reporte-probabilidad-y-estadistica-isc.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\probabilidad-y-estadistica-isc\\presentacion-probabilidad-y-estadistica-isc.tex
 ```
 
 ## Contrato de compilacion

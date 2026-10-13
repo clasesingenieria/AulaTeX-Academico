@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del repositorio que contiene la carpeta ITESCA:
 
 ```powershell
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\cultura-empresarial-isc\\reporte-cultura-empresarial-isc.tex
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\cultura-empresarial-isc\\presentacion-cultura-empresarial-isc.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\cultura-empresarial-isc\\reporte-cultura-empresarial-isc.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\cultura-empresarial-isc\\presentacion-cultura-empresarial-isc.tex
 ```
 
 ## Contrato de compilacion

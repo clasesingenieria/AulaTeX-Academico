@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\teoria-del-delito-y-tipos-de-responsabilidad-social-lde\reporte-teoria-del-delito-y-tipos-de-responsabilidad-social.tex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\teoria-del-delito-y-tipos-de-responsabilidad-social-lde\presentacion-teoria-del-delito-y-tipos-de-responsabilidad-social.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\teoria-del-delito-y-tipos-de-responsabilidad-social-lde\reporte-teoria-del-delito-y-tipos-de-responsabilidad-social.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\teoria-del-delito-y-tipos-de-responsabilidad-social-lde\presentacion-teoria-del-delito-y-tipos-de-responsabilidad-social.tex
 `
 
 ## Contrato de compilacion

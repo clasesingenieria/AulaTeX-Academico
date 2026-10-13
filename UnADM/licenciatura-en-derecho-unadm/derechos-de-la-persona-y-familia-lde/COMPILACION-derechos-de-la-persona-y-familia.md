@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derechos-de-la-persona-y-familia-lde\reporte-derechos-de-la-persona-y-familia.tex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derechos-de-la-persona-y-familia-lde\presentacion-derechos-de-la-persona-y-familia.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derechos-de-la-persona-y-familia-lde\reporte-derechos-de-la-persona-y-familia.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derechos-de-la-persona-y-familia-lde\presentacion-derechos-de-la-persona-y-familia.tex
 `
 
 ## Contrato de compilacion

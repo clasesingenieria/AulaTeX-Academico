@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\optativa-semestre-3-bloque-2-lde\reporte-optativa-semestre-3-bloque-2.tex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\optativa-semestre-3-bloque-2-lde\presentacion-optativa-semestre-3-bloque-2.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\optativa-semestre-3-bloque-2-lde\reporte-optativa-semestre-3-bloque-2.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\optativa-semestre-3-bloque-2-lde\presentacion-optativa-semestre-3-bloque-2.tex
 `
 
 ## Contrato de compilacion

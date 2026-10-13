@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del repositorio que contiene la carpeta ITESCA:
 
 ```powershell
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\fundamentos-de-gestion-administrativa-mga\\reporte-fundamentos-de-gestion-administrativa-mga.tex
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\fundamentos-de-gestion-administrativa-mga\\presentacion-fundamentos-de-gestion-administrativa-mga.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\fundamentos-de-gestion-administrativa-mga\\reporte-fundamentos-de-gestion-administrativa-mga.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\fundamentos-de-gestion-administrativa-mga\\presentacion-fundamentos-de-gestion-administrativa-mga.tex
 ```
 
 ## Contrato de compilacion

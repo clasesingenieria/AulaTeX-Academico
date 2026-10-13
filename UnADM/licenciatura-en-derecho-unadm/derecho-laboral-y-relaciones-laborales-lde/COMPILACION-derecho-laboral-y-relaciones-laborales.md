@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derecho-laboral-y-relaciones-laborales-lde\reporte-derecho-laboral-y-relaciones-laborales.tex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derecho-laboral-y-relaciones-laborales-lde\presentacion-derecho-laboral-y-relaciones-laborales.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derecho-laboral-y-relaciones-laborales-lde\reporte-derecho-laboral-y-relaciones-laborales.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derecho-laboral-y-relaciones-laborales-lde\presentacion-derecho-laboral-y-relaciones-laborales.tex
 `
 
 ## Contrato de compilacion

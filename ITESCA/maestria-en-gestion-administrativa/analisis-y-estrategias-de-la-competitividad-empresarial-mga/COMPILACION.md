@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del repositorio que contiene la carpeta ITESCA:
 
 ```powershell
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\analisis-y-estrategias-de-la-competitividad-empresarial-mga\\reporte-analisis-y-estrategias-de-la-competitividad-empresarial-mga.tex
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\analisis-y-estrategias-de-la-competitividad-empresarial-mga\\presentacion-analisis-y-estrategias-de-la-competitividad-empresarial-mga.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\analisis-y-estrategias-de-la-competitividad-empresarial-mga\\reporte-analisis-y-estrategias-de-la-competitividad-empresarial-mga.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\analisis-y-estrategias-de-la-competitividad-empresarial-mga\\presentacion-analisis-y-estrategias-de-la-competitividad-empresarial-mga.tex
 ```
 
 ## Contrato de compilacion

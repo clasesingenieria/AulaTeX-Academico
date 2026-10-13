@@ -3,10 +3,10 @@
 Ejecutar siempre desde la raiz del proyecto:
 
 ```powershell
-.\scripts\latexmk-build.ps1 .\ITESCA\maestria-en-gestion-administrativa\primer-ingreso-mga\reporte-primer-ingreso-mga.tex
-.\scripts\latexmk-build.ps1 .\ITESCA\maestria-en-gestion-administrativa\primer-ingreso-mga\reporte-primer-ingreso-mga-Actividad-1.tex
-.\scripts\latexmk-build.ps1 .\ITESCA\maestria-en-gestion-administrativa\primer-ingreso-mga\reporte-primer-ingreso-mga-Actividad-2.tex
-.\scripts\latexmk-build.ps1 .\ITESCA\maestria-en-gestion-administrativa\primer-ingreso-mga\presentacion-primer-ingreso-mga.tex
+.\aulaTEX\latexmk-build.ps1 .\ITESCA\maestria-en-gestion-administrativa\primer-ingreso-mga\reporte-primer-ingreso-mga.tex
+.\aulaTEX\latexmk-build.ps1 .\ITESCA\maestria-en-gestion-administrativa\primer-ingreso-mga\reporte-primer-ingreso-mga-Actividad-1.tex
+.\aulaTEX\latexmk-build.ps1 .\ITESCA\maestria-en-gestion-administrativa\primer-ingreso-mga\reporte-primer-ingreso-mga-Actividad-2.tex
+.\aulaTEX\latexmk-build.ps1 .\ITESCA\maestria-en-gestion-administrativa\primer-ingreso-mga\presentacion-primer-ingreso-mga.tex
 ```
 
 ## Contrato de compilacion

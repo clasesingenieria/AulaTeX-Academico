@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del repositorio que contiene la carpeta ITESCA:
 
 ```powershell
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\administracion-de-la-micro-pequena-y-medianas-empresas-mga\\reporte-administracion-de-la-micro-pequena-y-medianas-empresas-mga.tex
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\administracion-de-la-micro-pequena-y-medianas-empresas-mga\\presentacion-administracion-de-la-micro-pequena-y-medianas-empresas-mga.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\administracion-de-la-micro-pequena-y-medianas-empresas-mga\\reporte-administracion-de-la-micro-pequena-y-medianas-empresas-mga.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\administracion-de-la-micro-pequena-y-medianas-empresas-mga\\presentacion-administracion-de-la-micro-pequena-y-medianas-empresas-mga.tex
 ```
 
 ## Contrato de compilacion

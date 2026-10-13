@@ -33,5 +33,5 @@ Consulte `planeaciones-calculo-integral/INVENTARIO.md` para el vínculo entre co
 Desde la raíz del repositorio:
 
 ```powershell
-.\scripts\aulatex.ps1 agent --target .\UANL\ingeniero-agronomo\calculo-integral --level materia --action realizar-actividad --activity 1 --run-extractor
+.\aulaTEX\aulatex.ps1 agent --target .\UANL\ingeniero-agronomo\calculo-integral --level materia --action realizar-actividad --activity 1 --run-extractor
 ```

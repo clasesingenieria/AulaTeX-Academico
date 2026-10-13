@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del repositorio que contiene la carpeta ITESCA:
 
 ```powershell
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\lenguajes-y-automatas-ii-isc\\reporte-lenguajes-y-automatas-ii-isc.tex
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\lenguajes-y-automatas-ii-isc\\presentacion-lenguajes-y-automatas-ii-isc.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\lenguajes-y-automatas-ii-isc\\reporte-lenguajes-y-automatas-ii-isc.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\lenguajes-y-automatas-ii-isc\\presentacion-lenguajes-y-automatas-ii-isc.tex
 ```
 
 ## Contrato de compilacion

@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\propiedad-industrial-lde\reporte-propiedad-industrial.tex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\propiedad-industrial-lde\presentacion-propiedad-industrial.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\propiedad-industrial-lde\reporte-propiedad-industrial.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\propiedad-industrial-lde\presentacion-propiedad-industrial.tex
 `
 
 ## Contrato de compilacion

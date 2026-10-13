@@ -3,7 +3,7 @@
 Ejecutar desde la raíz del repositorio:
 
 ```powershell
-.\scripts\latexmk-build.ps1 .\UANL\ingeniero-agronomo\algebra-lineal\reporte-algebra-lineal-Actividad-1.tex
+.\aulaTEX\latexmk-build.ps1 .\UANL\ingeniero-agronomo\algebra-lineal\reporte-algebra-lineal-Actividad-1.tex
 ```
 
 ## Contrato

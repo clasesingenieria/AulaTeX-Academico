@@ -39,10 +39,10 @@ $bibtex = 'bibtex %O %B';
 
 prepend_env_paths('TEXINPUTS',
     aulatex_path('.', 0),
-    aulatex_path('base/Plantilla-Informe', 1),
-    aulatex_path('base/Plantilla-Informe/src', 1),
-    aulatex_path('base/Plantilla-Informe/img', 1),
-    aulatex_path('base/latex', 1),
+    aulatex_path('aulaTEX/base/Plantilla-Informe', 1),
+    aulatex_path('aulaTEX/base/Plantilla-Informe/src', 1),
+    aulatex_path('aulaTEX/base/Plantilla-Informe/img', 1),
+    aulatex_path('aulaTEX/base/latex', 1),
     aulatex_path('base', 1),
     aulatex_path('UnADM', 1),
     aulatex_path('UAS', 1),
@@ -56,7 +56,7 @@ prepend_env_paths('TEXINPUTS',
 # (for example other templates with the same jobname `main` or `library.bib`).
 prepend_env_paths('BIBINPUTS',
     aulatex_path('.', 0),
-    aulatex_path('base/Plantilla-Informe', 1),
+    aulatex_path('aulaTEX/base/Plantilla-Informe', 1),
     aulatex_path('UnADM', 1),
     aulatex_path('UAS', 1),
     aulatex_path('UCNL', 1),
@@ -67,8 +67,8 @@ prepend_env_paths('BIBINPUTS',
 
 prepend_env_paths('BSTINPUTS',
     aulatex_path('.', 0),
-    aulatex_path('base/Plantilla-Informe/bibtex', 1),
-    aulatex_path('base/Plantilla-Informe', 1)
+    aulatex_path('aulaTEX/base/Plantilla-Informe/bibtex', 1),
+    aulatex_path('aulaTEX/base/Plantilla-Informe', 1)
 );
 
 $clean_ext = 'aux bbl bcf blg fdb_latexmk fls lof log lot nav out run.xml snm synctex.gz toc vrb xdv';

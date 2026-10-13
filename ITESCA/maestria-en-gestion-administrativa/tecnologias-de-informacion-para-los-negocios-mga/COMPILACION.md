@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del repositorio que contiene la carpeta ITESCA:
 
 ```powershell
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\tecnologias-de-informacion-para-los-negocios-mga\\reporte-tecnologias-de-informacion-para-los-negocios-mga.tex
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\tecnologias-de-informacion-para-los-negocios-mga\\presentacion-tecnologias-de-informacion-para-los-negocios-mga.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\tecnologias-de-informacion-para-los-negocios-mga\\reporte-tecnologias-de-informacion-para-los-negocios-mga.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\tecnologias-de-informacion-para-los-negocios-mga\\presentacion-tecnologias-de-informacion-para-los-negocios-mga.tex
 ```
 
 ## Contrato de compilacion

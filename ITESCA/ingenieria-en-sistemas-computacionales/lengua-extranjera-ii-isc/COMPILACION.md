@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del repositorio que contiene la carpeta ITESCA:
 
 ```powershell
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\lengua-extranjera-ii-isc\\reporte-lengua-extranjera-ii-isc.tex
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\lengua-extranjera-ii-isc\\presentacion-lengua-extranjera-ii-isc.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\lengua-extranjera-ii-isc\\reporte-lengua-extranjera-ii-isc.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\lengua-extranjera-ii-isc\\presentacion-lengua-extranjera-ii-isc.tex
 ```
 
 ## Contrato de compilacion

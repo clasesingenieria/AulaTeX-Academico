@@ -3,9 +3,9 @@
 Ejecutar siempre desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\modificacion-del-comportamiento-organizacional-lad\reporte-modificacion-del-comportamiento-organizacional.tex
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\modificacion-del-comportamiento-organizacional-lad\reporte-modificacion-del-comportamiento-organizacional-Actividad-1.tex
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\modificacion-del-comportamiento-organizacional-lad\presentacion-modificacion-del-comportamiento-organizacional.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\modificacion-del-comportamiento-organizacional-lad\reporte-modificacion-del-comportamiento-organizacional.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\modificacion-del-comportamiento-organizacional-lad\reporte-modificacion-del-comportamiento-organizacional-Actividad-1.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\modificacion-del-comportamiento-organizacional-lad\presentacion-modificacion-del-comportamiento-organizacional.tex
 `
 
 ## Contrato de compilacion

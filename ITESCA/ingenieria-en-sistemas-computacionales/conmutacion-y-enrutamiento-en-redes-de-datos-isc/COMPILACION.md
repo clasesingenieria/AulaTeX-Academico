@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del repositorio que contiene la carpeta ITESCA:
 
 ```powershell
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\conmutacion-y-enrutamiento-en-redes-de-datos-isc\\reporte-conmutacion-y-enrutamiento-en-redes-de-datos-isc.tex
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\conmutacion-y-enrutamiento-en-redes-de-datos-isc\\presentacion-conmutacion-y-enrutamiento-en-redes-de-datos-isc.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\conmutacion-y-enrutamiento-en-redes-de-datos-isc\\reporte-conmutacion-y-enrutamiento-en-redes-de-datos-isc.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\conmutacion-y-enrutamiento-en-redes-de-datos-isc\\presentacion-conmutacion-y-enrutamiento-en-redes-de-datos-isc.tex
 ```
 
 ## Contrato de compilacion

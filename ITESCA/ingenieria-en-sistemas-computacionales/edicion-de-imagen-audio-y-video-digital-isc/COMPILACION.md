@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del repositorio que contiene la carpeta ITESCA:
 
 ```powershell
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\edicion-de-imagen-audio-y-video-digital-isc\\reporte-edicion-de-imagen-audio-y-video-digital-isc.tex
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\edicion-de-imagen-audio-y-video-digital-isc\\presentacion-edicion-de-imagen-audio-y-video-digital-isc.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\edicion-de-imagen-audio-y-video-digital-isc\\reporte-edicion-de-imagen-audio-y-video-digital-isc.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\edicion-de-imagen-audio-y-video-digital-isc\\presentacion-edicion-de-imagen-audio-y-video-digital-isc.tex
 ```
 
 ## Contrato de compilacion

@@ -5,21 +5,21 @@ Ejecutar siempre desde la raiz del proyecto.
 ## Carrera ISC
 
 ```powershell
-.\scripts\latexmk-build.ps1 .\ITESCA\ingenieria-en-sistemas-computacionales\reporte-itesca-isc.tex
-.\scripts\latexmk-build.ps1 .\ITESCA\ingenieria-en-sistemas-computacionales\presentacion-itesca-isc.tex
-.\scripts\latexmk-build.ps1 .\ITESCA\ingenieria-en-sistemas-computacionales\primer-ingreso\reporte-primer-ingreso.tex
-.\scripts\latexmk-build.ps1 .\ITESCA\ingenieria-en-sistemas-computacionales\primer-ingreso\reporte-primer-ingreso-Actividad-1.tex
-.\scripts\latexmk-build.ps1 .\ITESCA\ingenieria-en-sistemas-computacionales\primer-ingreso\presentacion-primer-ingreso.tex
+.\aulaTEX\latexmk-build.ps1 .\ITESCA\ingenieria-en-sistemas-computacionales\reporte-itesca-isc.tex
+.\aulaTEX\latexmk-build.ps1 .\ITESCA\ingenieria-en-sistemas-computacionales\presentacion-itesca-isc.tex
+.\aulaTEX\latexmk-build.ps1 .\ITESCA\ingenieria-en-sistemas-computacionales\primer-ingreso\reporte-primer-ingreso.tex
+.\aulaTEX\latexmk-build.ps1 .\ITESCA\ingenieria-en-sistemas-computacionales\primer-ingreso\reporte-primer-ingreso-Actividad-1.tex
+.\aulaTEX\latexmk-build.ps1 .\ITESCA\ingenieria-en-sistemas-computacionales\primer-ingreso\presentacion-primer-ingreso.tex
 ```
 
 ## Carrera MGA
 
 ```powershell
-.\scripts\latexmk-build.ps1 .\ITESCA\maestria-en-gestion-administrativa\reporte-itesca-mga.tex
-.\scripts\latexmk-build.ps1 .\ITESCA\maestria-en-gestion-administrativa\presentacion-itesca-mga.tex
-.\scripts\latexmk-build.ps1 .\ITESCA\maestria-en-gestion-administrativa\primer-ingreso\reporte-primer-ingreso.tex
-.\scripts\latexmk-build.ps1 .\ITESCA\maestria-en-gestion-administrativa\primer-ingreso\reporte-primer-ingreso-Actividad-1.tex
-.\scripts\latexmk-build.ps1 .\ITESCA\maestria-en-gestion-administrativa\primer-ingreso\presentacion-primer-ingreso.tex
+.\aulaTEX\latexmk-build.ps1 .\ITESCA\maestria-en-gestion-administrativa\reporte-itesca-mga.tex
+.\aulaTEX\latexmk-build.ps1 .\ITESCA\maestria-en-gestion-administrativa\presentacion-itesca-mga.tex
+.\aulaTEX\latexmk-build.ps1 .\ITESCA\maestria-en-gestion-administrativa\primer-ingreso\reporte-primer-ingreso.tex
+.\aulaTEX\latexmk-build.ps1 .\ITESCA\maestria-en-gestion-administrativa\primer-ingreso\reporte-primer-ingreso-Actividad-1.tex
+.\aulaTEX\latexmk-build.ps1 .\ITESCA\maestria-en-gestion-administrativa\primer-ingreso\presentacion-primer-ingreso.tex
 ```
 
 ## Contrato editorial

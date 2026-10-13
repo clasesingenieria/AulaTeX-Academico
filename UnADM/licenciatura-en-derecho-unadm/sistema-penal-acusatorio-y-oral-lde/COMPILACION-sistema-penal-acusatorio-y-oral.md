@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\sistema-penal-acusatorio-y-oral-lde\reporte-sistema-penal-acusatorio-y-oral.tex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\sistema-penal-acusatorio-y-oral-lde\presentacion-sistema-penal-acusatorio-y-oral.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\sistema-penal-acusatorio-y-oral-lde\reporte-sistema-penal-acusatorio-y-oral.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\sistema-penal-acusatorio-y-oral-lde\presentacion-sistema-penal-acusatorio-y-oral.tex
 `
 
 ## Contrato de compilacion

@@ -3,9 +3,9 @@
 Ejecutar siempre desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\diagnostico-y-evaluacion-empresarial-lad\reporte-diagnostico-y-evaluacion-empresarial.tex
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\diagnostico-y-evaluacion-empresarial-lad\reporte-diagnostico-y-evaluacion-empresarial-Actividad-1.tex
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\diagnostico-y-evaluacion-empresarial-lad\presentacion-diagnostico-y-evaluacion-empresarial.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\diagnostico-y-evaluacion-empresarial-lad\reporte-diagnostico-y-evaluacion-empresarial.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\diagnostico-y-evaluacion-empresarial-lad\reporte-diagnostico-y-evaluacion-empresarial-Actividad-1.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\diagnostico-y-evaluacion-empresarial-lad\presentacion-diagnostico-y-evaluacion-empresarial.tex
 `
 
 ## Contrato de compilacion

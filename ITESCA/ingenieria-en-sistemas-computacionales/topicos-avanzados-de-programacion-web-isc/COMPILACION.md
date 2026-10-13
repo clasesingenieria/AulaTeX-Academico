@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del repositorio que contiene la carpeta ITESCA:
 
 ```powershell
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\topicos-avanzados-de-programacion-web-isc\\reporte-topicos-avanzados-de-programacion-web-isc.tex
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\topicos-avanzados-de-programacion-web-isc\\presentacion-topicos-avanzados-de-programacion-web-isc.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\topicos-avanzados-de-programacion-web-isc\\reporte-topicos-avanzados-de-programacion-web-isc.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\topicos-avanzados-de-programacion-web-isc\\presentacion-topicos-avanzados-de-programacion-web-isc.tex
 ```
 
 ## Contrato de compilacion

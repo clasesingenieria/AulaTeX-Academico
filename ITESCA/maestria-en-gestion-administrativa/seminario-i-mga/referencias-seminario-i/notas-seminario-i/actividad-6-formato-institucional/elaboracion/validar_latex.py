@@ -77,7 +77,7 @@ def main():
               "advertencias_compilacion": issues,
               "referencias_cruzadas_nativas": len(references),
               "numeracion": "Preliminares romanos; cuerpo arábigo desde 1",
-              "plantilla": "base/Plantilla-Informe/template.tex (sin modificar)",
+              "plantilla": "aulaTEX/base/Plantilla-Informe/template.tex (sin modificar)",
               "word_original_sin_cambios": True,
               "sha256_pdf": hashlib.sha256(pdf.read_bytes()).hexdigest(),
               "paginas_renderizadas": selected}

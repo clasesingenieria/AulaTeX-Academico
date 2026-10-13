@@ -9,4 +9,4 @@ Espacio académico de la carrera de **Ingeniero Agrónomo** de la Universidad Au
 
 ## Convenciones AulaTeX
 
-Cada materia conserva sus fuentes LaTeX, bibliografía, planeaciones, referencias y recursos en una carpeta propia. Las evidencias se nombran `reporte-<materia>-Actividad-N.tex` y se procesan desde la raíz del repositorio mediante `scripts/aulatex.ps1`.
+Cada materia conserva sus fuentes LaTeX, bibliografía, planeaciones, referencias y recursos en una carpeta propia. Las evidencias se nombran `reporte-<materia>-Actividad-N.tex` y se procesan desde la raíz del repositorio mediante `aulaTEX/aulatex.ps1`.

@@ -10,7 +10,7 @@ Entrega de Emilio Abraham Castillo Urdiales para FIME-UANL.
 - `ejecutar-pruebas-actividad-2.ps1`: compila y ejecuta todos los programas.
 - `ejecutar-pruebas-actividad-2.bat`: iniciador para ejecutar las pruebas con doble clic en Windows.
 - `resultados-ejecucion-actividad-2.txt`: evidencia generada por el script (19/19 correctos).
-- El PDF se genera junto al archivo TeX mediante `scripts/latexmk-build.ps1`.
+- El PDF se genera junto al archivo TeX mediante `aulaTEX/latexmk-build.ps1`.
 
 ## Uso en Dev-C++
 

@@ -14,7 +14,7 @@
   "latex-workshop.latex.outDir": "%DIR%",
   "latex-workshop.synctex.afterBuild.enabled": false,
   "latex-workshop.intellisense.package.dirs": [
-    "%WORKSPACE_FOLDER%/base/latex/cwl"
+    "%WORKSPACE_FOLDER%/aulaTEX/base/latex/cwl"
   ],
   "latex-workshop.latex.recipe.default": "lastUsed",
   "latex-workshop.latex.recipes": [
@@ -36,7 +36,7 @@
       "name": "aulatex-latexmk",
       "command": "python",
       "args": [
-        "%WORKSPACE_FOLDER%/scripts/latexmk_build.py",
+        "%WORKSPACE_FOLDER%/aulaTEX/latexmk_build.py",
         "%DOC%"
       ]
     },
@@ -44,7 +44,7 @@
       "name": "aulatex-tikz",
       "command": "python",
       "args": [
-        "%WORKSPACE_FOLDER%/scripts/latexmk_build.py",
+        "%WORKSPACE_FOLDER%/aulaTEX/latexmk_build.py",
         "%DOC%",
         "--tikz"
       ]
@@ -52,8 +52,8 @@
   ],
   "latex-workshop.view.pdf.viewer": "tab",
   "aulatex.entryPoints": [
-    "base/Templates-Informe/main.tex",
-    "base/latex/main.tex",
+    "aulaTEX/base/Templates-Informe/main.tex",
+    "aulaTEX/base/latex/main.tex",
     "UnADM/reporte-unadm.tex",
     "UnADM/filosofia-del-derecho/reporte-filosofia-del-derecho-Actividad-5.tex",
     "IIIEPE/temas-selectos-de-matematicas-I/reporte-temas-selectos-de-matematicas-I.tex"

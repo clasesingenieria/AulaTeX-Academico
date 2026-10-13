@@ -3,9 +3,9 @@
 Ejecutar siempre desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\ingenieria-economica-y-financiera-lad\reporte-ingenieria-economica-y-financiera.tex
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\ingenieria-economica-y-financiera-lad\reporte-ingenieria-economica-y-financiera-Actividad-1.tex
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\ingenieria-economica-y-financiera-lad\presentacion-ingenieria-economica-y-financiera.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\ingenieria-economica-y-financiera-lad\reporte-ingenieria-economica-y-financiera.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\ingenieria-economica-y-financiera-lad\reporte-ingenieria-economica-y-financiera-Actividad-1.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\ingenieria-economica-y-financiera-lad\presentacion-ingenieria-economica-y-financiera.tex
 `
 
 ## Contrato de compilacion

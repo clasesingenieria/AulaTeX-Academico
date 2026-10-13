@@ -3,9 +3,9 @@
 Comandos desde la raiz del repositorio:
 
 ```powershell
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\fundamentos-de-gestion-administrativa-mga\reporte-fundamentos-de-gestion-administrativa.tex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\fundamentos-de-gestion-administrativa-mga\reporte-fundamentos-de-gestion-administrativa-Actividad-2.tex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\fundamentos-de-gestion-administrativa-mga\presentacion-fundamentos-de-gestion-administrativa.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\fundamentos-de-gestion-administrativa-mga\reporte-fundamentos-de-gestion-administrativa.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\fundamentos-de-gestion-administrativa-mga\reporte-fundamentos-de-gestion-administrativa-Actividad-2.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\fundamentos-de-gestion-administrativa-mga\presentacion-fundamentos-de-gestion-administrativa.tex
 ```
 
 Validaciones:

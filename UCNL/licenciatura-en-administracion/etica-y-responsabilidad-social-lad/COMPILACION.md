@@ -3,9 +3,9 @@
 Ejecutar siempre desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\etica-y-responsabilidad-social-lad\reporte-etica-y-responsabilidad-social.tex
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\etica-y-responsabilidad-social-lad\reporte-etica-y-responsabilidad-social-Actividad-1.tex
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\etica-y-responsabilidad-social-lad\presentacion-etica-y-responsabilidad-social.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\etica-y-responsabilidad-social-lad\reporte-etica-y-responsabilidad-social.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\etica-y-responsabilidad-social-lad\reporte-etica-y-responsabilidad-social-Actividad-1.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\etica-y-responsabilidad-social-lad\presentacion-etica-y-responsabilidad-social.tex
 `
 
 ## Contrato de compilacion

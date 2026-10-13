@@ -307,15 +307,15 @@ Ejecutar desde la raiz del repositorio que contiene ITESCA. En Windows:
 
 ```powershell
 $materia = '.\ITESCA\maestria-en-gestion-administrativa\seminario-i-mga'
-.\scripts\latexmk-build.ps1 "$materia\referencias-seminario-i\notas-seminario-i\materiales-generales\encuadre\reporte-seminario-i-mga.tex"
-.\scripts\latexmk-build.ps1 "$materia\referencias-seminario-i\notas-seminario-i\materiales-generales\encuadre\presentacion-seminario-i-mga.tex"
-.\scripts\latexmk-build.ps1 "$materia\reporte-seminario-i-Actividad-1.tex"
-.\scripts\latexmk-build.ps1 "$materia\reporte-seminario-i-Actividad-2.tex"
-.\scripts\latexmk-build.ps1 "$materia\reporte-seminario-i-Actividad-3.tex"
-.\scripts\latexmk-build.ps1 "$materia\reporte-seminario-i-Actividad-4.tex"
-.\scripts\latexmk-build.ps1 "$materia\reporte-seminario-i-Actividad-6.tex"
-.\scripts\latexmk-build.ps1 "$materia\reporte-seminario-i-Actividad-10.tex"
-.\scripts\latexmk-build.ps1 "$materia\presentacion-seminario-i-Actividad-10.tex"
+.\aulaTEX\latexmk-build.ps1 "$materia\referencias-seminario-i\notas-seminario-i\materiales-generales\encuadre\reporte-seminario-i-mga.tex"
+.\aulaTEX\latexmk-build.ps1 "$materia\referencias-seminario-i\notas-seminario-i\materiales-generales\encuadre\presentacion-seminario-i-mga.tex"
+.\aulaTEX\latexmk-build.ps1 "$materia\reporte-seminario-i-Actividad-1.tex"
+.\aulaTEX\latexmk-build.ps1 "$materia\reporte-seminario-i-Actividad-2.tex"
+.\aulaTEX\latexmk-build.ps1 "$materia\reporte-seminario-i-Actividad-3.tex"
+.\aulaTEX\latexmk-build.ps1 "$materia\reporte-seminario-i-Actividad-4.tex"
+.\aulaTEX\latexmk-build.ps1 "$materia\reporte-seminario-i-Actividad-6.tex"
+.\aulaTEX\latexmk-build.ps1 "$materia\reporte-seminario-i-Actividad-10.tex"
+.\aulaTEX\latexmk-build.ps1 "$materia\presentacion-seminario-i-Actividad-10.tex"
 ```
 
 La presentacion base de materia es una entrada reutilizable, no una entrega especifica ni una compilacion comprobada en la auditoria del 10 de octubre. No confundir los comandos disponibles con ejecuciones verificadas.
@@ -323,8 +323,8 @@ La presentacion base de materia es una entrada reutilizable, no una entrega espe
 En Linux, para la infografia y el complemento de Tarea 6:
 
 ```bash
-bash scripts/latexmk-build.sh ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/reporte-seminario-i-Actividad-4.tex
-bash scripts/latexmk-build.sh ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/reporte-seminario-i-Actividad-6.tex
+bash aulaTEX/latexmk-build.sh ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/reporte-seminario-i-Actividad-4.tex
+bash aulaTEX/latexmk-build.sh ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/reporte-seminario-i-Actividad-6.tex
 ```
 
 ### Contrato unico

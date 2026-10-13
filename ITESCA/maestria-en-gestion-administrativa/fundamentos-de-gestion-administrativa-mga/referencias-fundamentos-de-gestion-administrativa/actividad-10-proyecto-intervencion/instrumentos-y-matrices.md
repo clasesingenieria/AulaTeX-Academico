@@ -103,7 +103,7 @@ Registrar rol general, fecha, consentimiento y resumen no identificable. Un test
 
 - **Definición:** proporción de personas elegibles que acceden a [oportunidad concreta] en el periodo; los criterios de elegibilidad deben ser públicos y revisados por posibles barreras.
 - **Fórmula:** 100 × personas elegibles que accedieron / total de personas elegibles.
-- **Línea base/meta:** pendientes, con periodo comparable. No ampliar ni reducir el denominador para aparentar cumplimiento.
+- **Línea aulaTEX/base/meta:** pendientes, con periodo comparable. No ampliar ni reducir el denominador para aparentar cumplimiento.
 - **Fuente:** registros autorizados y agregados, sin expedientes personales en el reporte.
 - **Frecuencia/responsable propuestos:** mensual; responsable del proceso.
 - **Interpretación:** acceso alto no demuestra por sí solo equidad entre grupos ni calidad de la oportunidad. Denominador cero → no aplica. Análisis por grupos solo cuando sea pertinente, autorizado y seguro.
@@ -121,7 +121,7 @@ Registrar rol general, fecha, consentimiento y resumen no identificable. Un test
 ### I4. Compromisos implementados y verificados — producto/control
 
 - **Fórmula:** 100 × acciones vencidas completadas con evidencia aceptada / total de acciones vencidas al corte.
-- **Fuente:** plan aprobado y bitácora. **Línea base/meta:** pendientes; no confundir completar acciones con mejorar inclusión.
+- **Fuente:** plan aprobado y bitácora. **Línea aulaTEX/base/meta:** pendientes; no confundir completar acciones con mejorar inclusión.
 - **Frecuencia/responsable propuestos:** semanal; coordinación. Sin acciones vencidas → no aplica.
 - **Regla:** un cambio de plazo exige autorización y trazabilidad; no reprogramar retroactivamente para ocultar incumplimientos.
 

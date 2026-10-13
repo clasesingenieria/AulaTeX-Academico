@@ -1,0 +1,85 @@
+# AulaTeX - Stack de entrenamiento (reward model / DPO / fine-tune)
+# Entorno: .venv con Python 3.12 en la raíz del workspace.
+# El entrenamiento pesado corre en AWS/Azure; torch local es CPU (prepara/valida).
+#
+# Instalación reproducible:
+#   py -3.12 -m venv .venv
+#   .\.venv\Scripts\python.exe -m pip install -r aulaTEX/requirements-training.txt
+#   .\.venv\Scripts\python.exe -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+#
+# CLIs de nube (fuera de pip; instalados con winget):
+#   winget install Microsoft.AzureCLI    # az 2.88.0  + extensión: az extension add --name ml
+#   winget install Amazon.AWSCLI         # aws-cli 2.36.10
+#
+# Versiones verificadas al instalar (2026-07): boto3 1.43.59, sagemaker 2.257.5,
+# azure-ai-ml 1.34.1, torch 2.13.0+cpu, transformers 4.57.6, peft 0.20.0,
+# trl 0.15.2, datasets 2.21.0, accelerate 1.14.0.
+#
+# ----------------------------------------------------------------- PIPELINE ---
+# Orden de ejecución (cada paso alimenta al siguiente):
+#
+#   1. Generar datos      aulatex activity-optimize --target <ruta> --activity <n>
+#   2. Métricas por ciclo python aulaTEX/aulatex/training_dataset.py
+#                         -> dataset.jsonl + dataset-report.md (tasa de aceptación)
+#   3. Corpus de texto    python aulaTEX/aulatex_training/build_reward_corpus.py
+#                         -> reward.jsonl (regresión) + preference.jsonl (DPO)
+#   4. Validar si vale ML python aulaTEX/aulatex_training/train_policy.py
+#                         Si NO supera el baseline, NO gastes GPU: recalibra a mano.
+#   5. Reward model (GPU) python aulaTEX/aulatex_training/train_reward_model.py \
+#                             --train-file .../reward.jsonl
+#   6. Lanzar a la nube   python aulaTEX/aulatex_training/submit_cloud_job.py \
+#                             --backend aws --check     (y luego --submit --yes)
+#
+# Credenciales AWS:  aulaTEX/aulatex_training/setup_aws_credentials.ps1
+#
+# Mínimos exigidos (los scripts abortan si no se cumplen, por diseño):
+#   train_policy       >= 40 ciclos y >= 8 por clase
+#   train_reward_model >= 50 ejemplos con texto y desviación de scores >= 2.0
+#
+# Cuotas GPU verificadas (laboratorios del hub, 2026-07-24):
+#   AWS  G/VT vCPU = 8  -> ml.g5.2xlarge VIABLE (A10G/L4 24 GB)
+#   AWS  P   vCPU = 8  -> INSERVIBLE: p4d.24xlarge exige 96 vCPU
+#   Azure GPU          -> bloqueado por API en PayAsYouGo (requiere ticket manual)
+
+# --- SDKs de nube (orquestar jobs y datos) ---
+boto3>=1.34.0,<2
+botocore>=1.34.0,<2
+sagemaker>=2.220.0,<3
+azure-ai-ml>=1.20.0,<2
+azure-identity>=1.17.0,<2
+azure-storage-blob>=12.20.0,<13
+
+# --- Núcleo ML (preparación de datos y scripts de entrenamiento) ---
+# torch CPU: instalar aparte con --index-url https://download.pytorch.org/whl/cpu
+transformers>=4.44.0,<5
+peft>=0.12.0,<1
+trl>=0.9.0,<1
+# datasets <3 fija dill 0.3.8, que rompe en Python 3.14: el nuevo
+# Pickler._batch_setitems recibe 3 argumentos y dill 0.3.8 asume 2.
+# datasets >=4 traccion dill >=0.4, ya adaptado.
+datasets>=4.0.0,<6
+dill>=0.4.0
+# accelerate >=1.0 es OBLIGATORIO con transformers >=4.50: la firma de
+# Accelerator.unwrap_model(keep_torch_compile=...) cambió y 0.34 rompe Trainer.
+accelerate>=1.0,<2
+sentencepiece>=0.2.0,<1
+joblib>=1.4,<2
+scikit-learn>=1.4.0,<2
+numpy>=1.26,<3
+pandas>=2.2,<3
+
+# --- Notebooks, esquemas y observabilidad del entrenamiento ---
+jupyterlab>=4.2,<5
+ipykernel>=6.29,<8
+ipywidgets>=8.1,<9
+pydantic>=2.8,<3
+matplotlib>=3.9,<4
+tensorboard>=2.17,<3
+safetensors>=0.4,<1
+
+# bitsandbytes se instala aparte solo tras comprobar compatibilidad CUDA.
+# En Windows nativo puede fallar; para QLoRA se recomienda WSL2/Ubuntu.
+
+# --- Credenciales cifradas (reutiliza el mecanismo Fernet del proyecto) ---
+cryptography>=42,<49
+python-dotenv>=1.0.0,<2

@@ -91,15 +91,15 @@ if [[ ! -x "$venv/bin/python" ]]; then
     python3 -m venv "$venv"
 fi
 "$venv/bin/python" -m pip install --upgrade pip setuptools wheel
-requirements=(-r "$repo_root/scripts/requirements-linux-cli.txt")
+requirements=(-r "$repo_root/aulaTEX/requirements-linux-cli.txt")
 if ((with_llm)); then
-    requirements+=(-r "$repo_root/scripts/requirements-linux-llm.txt")
+    requirements+=(-r "$repo_root/aulaTEX/requirements-linux-llm.txt")
 fi
 if ((with_documents)); then
-    requirements+=(-r "$repo_root/scripts/requirements-linux-documents.txt")
+    requirements+=(-r "$repo_root/aulaTEX/requirements-linux-documents.txt")
 fi
 if ((with_notebooks)); then
-    requirements+=(-r "$repo_root/scripts/requirements-linux-notebooks.txt")
+    requirements+=(-r "$repo_root/aulaTEX/requirements-linux-notebooks.txt")
 fi
 if ((with_training)); then
     "$venv/bin/python" -m pip install --upgrade 'torch>=2.4,<3' --index-url https://download.pytorch.org/whl/cpu
@@ -115,15 +115,15 @@ version = importlib.metadata.version("torch")
 Path(sys.argv[1]).write_text(f"torch=={version}\n", encoding="utf-8")
 PY
     requirements+=(-c "$venv/torch-cpu-constraints.txt")
-    requirements+=(-r "$repo_root/scripts/requirements-linux-training.txt")
+    requirements+=(-r "$repo_root/aulaTEX/requirements-linux-training.txt")
 fi
 "$venv/bin/python" -m pip install "${requirements[@]}"
 "$venv/bin/python" -m pip check
 if ((with_notebooks)); then
     "$venv/bin/python" -m ipykernel install --user --name aulatex-linux --display-name 'AulaTeX Linux (CPU)'
 fi
-"$venv/bin/python" "$repo_root/scripts/aulatex_agent.py" --help
-printf '\n%s\n' 'Entorno listo. CLI: bash scripts/aulatex.sh --help'
+"$venv/bin/python" "$repo_root/aulaTEX/aulatex_agent.py" --help
+printf '\n%s\n' 'Entorno listo. CLI: bash aulaTEX/aulatex.sh --help'
 if ((!no_shell)) && [[ -t 0 && -t 1 ]]; then
     export VIRTUAL_ENV="$venv"
     export PATH="$venv/bin:$PATH"

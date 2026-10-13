@@ -25,7 +25,7 @@ try {
         [Environment]::SetEnvironmentVariable($name, $null, 'Process')
     }
     $subjectInputs = $PSScriptRoot.Replace('\', '/')
-    $templateInputs = (Join-Path $repoRoot 'base/Plantilla-Informe').Replace('\', '/')
+    $templateInputs = (Join-Path $repoRoot 'aulaTEX/base/Plantilla-Informe').Replace('\', '/')
     $env:TEXINPUTS = ".;$subjectInputs;$templateInputs;"
     $documents = if ($Documento -eq 'todos') { @('reporte', 'presentacion') } else { @($Documento) }
     foreach ($kind in $documents) {

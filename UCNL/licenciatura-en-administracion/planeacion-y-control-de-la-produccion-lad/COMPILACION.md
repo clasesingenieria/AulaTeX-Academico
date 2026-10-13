@@ -3,9 +3,9 @@
 Ejecutar siempre desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\planeacion-y-control-de-la-produccion-lad\reporte-planeacion-y-control-de-la-produccion.tex
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\planeacion-y-control-de-la-produccion-lad\reporte-planeacion-y-control-de-la-produccion-Actividad-1.tex
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\planeacion-y-control-de-la-produccion-lad\presentacion-planeacion-y-control-de-la-produccion.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\planeacion-y-control-de-la-produccion-lad\reporte-planeacion-y-control-de-la-produccion.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\planeacion-y-control-de-la-produccion-lad\reporte-planeacion-y-control-de-la-produccion-Actividad-1.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\planeacion-y-control-de-la-produccion-lad\presentacion-planeacion-y-control-de-la-produccion.tex
 `
 
 ## Contrato de compilacion

@@ -47,7 +47,7 @@ Distribución: **9 tareas, 4 cuestionarios y 1 foro**. La suma de tiempos propue
 
 ## Modelo y criterios de elaboración
 
-Aplicación documental del [contrato de planeación](../../../../../../../../../REALIZAR-PLANEACION.md), sin habilitar un motor. Se consultó el [ejemplo individual de Fundamentos](../../../../../../../fundamentos-de-gestion-administrativa-mga/planeaciones-generadas/2026-II/revision-2026-09-15/planeacion-actividad-1.2-mapa-conceptual.json) solo para estructura `0.2-documental`, no para transferir contenidos o reglas.
+Aplicación documental del [contrato de planeación](../../../../../../../../../README.md#contrato-realizar-planeacion), sin habilitar un motor. Se consultó el [ejemplo individual de Fundamentos](../../../../../../../fundamentos-de-gestion-administrativa-mga/planeaciones-generadas/2026-II/revision-2026-09-15/planeacion-actividad-1.2-mapa-conceptual.json) solo para estructura `0.2-documental`, no para transferir contenidos o reglas.
 
 Cada JSON incorpora sus fuentes: **I**, nota local leída el 2026-09-15; **W**, URL del módulo no consultada, registrada ese día; **E**, URL general con intento fallido ese día. `consultation_date: null` en W/E evita confundir un intento de acceso con lectura académica. El modelo es documental, no un JSON Schema oficial ni una integración del motor validada.
 

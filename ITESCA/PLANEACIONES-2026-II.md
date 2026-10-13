@@ -115,4 +115,4 @@ La actividad de perfil y la carta pueden implicar datos personales: la futura pl
 4. Crear nuevas revisiones de planeación por curso, diferenciando requisitos, propuestas y desconocidos.
 5. Validar JSON, correspondencia con Markdown, sumas, fechas, privacidad y enlaces antes de ampliar este índice.
 
-La acción automática `realizar-planeacion` sigue sin implementarse. Estos documentos constituyen una aplicación asistida del [contrato propuesto](../REALIZAR-PLANEACION.md), no una prueba de integración del motor.
+La acción automática `realizar-planeacion` sigue sin implementarse. Estos documentos constituyen una aplicación asistida del [contrato propuesto](../README.md#contrato-realizar-planeacion), no una prueba de integración del motor.

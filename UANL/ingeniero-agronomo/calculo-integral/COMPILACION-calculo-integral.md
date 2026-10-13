@@ -3,7 +3,7 @@
 Ejecutar desde la raíz del repositorio:
 
 ```powershell
-.\scripts\latexmk-build.ps1 .\UANL\ingeniero-agronomo\calculo-integral\reporte-calculo-integral-Actividad-N.tex
+.\aulaTEX\latexmk-build.ps1 .\UANL\ingeniero-agronomo\calculo-integral\reporte-calculo-integral-Actividad-N.tex
 ```
 
 Sustituir `N` por el número de actividad correspondiente.

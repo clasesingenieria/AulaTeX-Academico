@@ -3,9 +3,9 @@
 Ejecutar siempre desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\administracion-de-recursos-humanos-lad\reporte-administracion-de-recursos-humanos.tex
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\administracion-de-recursos-humanos-lad\reporte-administracion-de-recursos-humanos-Actividad-1.tex
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\administracion-de-recursos-humanos-lad\presentacion-administracion-de-recursos-humanos.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\administracion-de-recursos-humanos-lad\reporte-administracion-de-recursos-humanos.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\administracion-de-recursos-humanos-lad\reporte-administracion-de-recursos-humanos-Actividad-1.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\administracion-de-recursos-humanos-lad\presentacion-administracion-de-recursos-humanos.tex
 `
 
 ## Contrato de compilacion

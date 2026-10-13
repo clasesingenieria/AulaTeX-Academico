@@ -3,9 +3,9 @@
 Ejecutar siempre desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\presupuestos-con-enfoque-gerencial-lad\reporte-presupuestos-con-enfoque-gerencial.tex
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\presupuestos-con-enfoque-gerencial-lad\reporte-presupuestos-con-enfoque-gerencial-Actividad-1.tex
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\presupuestos-con-enfoque-gerencial-lad\presentacion-presupuestos-con-enfoque-gerencial.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\presupuestos-con-enfoque-gerencial-lad\reporte-presupuestos-con-enfoque-gerencial.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\presupuestos-con-enfoque-gerencial-lad\reporte-presupuestos-con-enfoque-gerencial-Actividad-1.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\presupuestos-con-enfoque-gerencial-lad\presentacion-presupuestos-con-enfoque-gerencial.tex
 `
 
 ## Contrato de compilacion

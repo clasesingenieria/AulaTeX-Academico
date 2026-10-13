@@ -7,7 +7,7 @@ rem La instalacion y verificacion pertenecen a .venv\install-venv.ps1.
 set "REPO_ROOT=%~dp0"
 set "INSTALLER=%REPO_ROOT%.venv\install-venv.ps1"
 set "ACTIVATE=%REPO_ROOT%.venv\Scripts\activate.bat"
-set "LLM_CONFIGURATOR=%REPO_ROOT%scripts\configure-llms.ps1"
+set "LLM_CONFIGURATOR=%REPO_ROOT%aulaTEX\configure-llms.ps1"
 set "PS_ARGS="
 set "OPEN_SHELL=1"
 set "CONFIGURE_LLM=auto"

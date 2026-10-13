@@ -24,9 +24,9 @@ Las plantillas usan las bases compartidas UCNL, Arial, interlineado 1.5 y APA co
 Desde la raíz del repositorio:
 
 ```powershell
-.\scripts\latexmk-build.ps1 UCNL/licenciatura-en-administracion/derecho-constitucional-lad/reporte-derecho-constitucional-plantilla-2026-3.tex -CleanMode none -xelatex
-.\scripts\latexmk-build.ps1 UCNL/licenciatura-en-administracion/derecho-constitucional-lad/actividad-derecho-constitucional-plantilla-2026-3.tex -CleanMode none -xelatex
-.\scripts\latexmk-build.ps1 UCNL/licenciatura-en-administracion/derecho-constitucional-lad/presentacion-derecho-constitucional-plantilla-2026-3.tex -CleanMode none -xelatex
+.\aulaTEX\latexmk-build.ps1 UCNL/licenciatura-en-administracion/derecho-constitucional-lad/reporte-derecho-constitucional-plantilla-2026-3.tex -CleanMode none -xelatex
+.\aulaTEX\latexmk-build.ps1 UCNL/licenciatura-en-administracion/derecho-constitucional-lad/actividad-derecho-constitucional-plantilla-2026-3.tex -CleanMode none -xelatex
+.\aulaTEX\latexmk-build.ps1 UCNL/licenciatura-en-administracion/derecho-constitucional-lad/presentacion-derecho-constitucional-plantilla-2026-3.tex -CleanMode none -xelatex
 ```
 
 Conservar originales, citas y límites. Esta base no resuelve actividades, ejecuta evaluaciones ni acredita envíos. Los archivos históricos se preservan; sus bibliografías de refuerzo no se incorporan a la nueva bibliografía. Versionable no significa publicado ni permiso de redistribución. [Manifiesto](base-academica-2026-3.json).

@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\integridad-en-el-servicio-publico-lde\reporte-integridad-en-el-servicio-publico.tex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\integridad-en-el-servicio-publico-lde\presentacion-integridad-en-el-servicio-publico.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\integridad-en-el-servicio-publico-lde\reporte-integridad-en-el-servicio-publico.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\integridad-en-el-servicio-publico-lde\presentacion-integridad-en-el-servicio-publico.tex
 `
 
 ## Contrato de compilacion

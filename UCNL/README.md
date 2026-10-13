@@ -33,7 +33,7 @@ Formato editorial de partida: Arial 12 en reportes, interlineado 1.5, citas y bi
 
 Al elaborar una actividad, definir `ucnlfecha` explícitamente y usar `\parencite{clave}` o `\textcite{clave}`. Las notas de procedencia se guardan como `annotation` y en los catálogos, sin insertarse en las referencias APA impresas. No mezclar estas bases con comandos de BibTeX/natbib de las plantillas históricas.
 
-Compilar desde la raíz del repositorio con `scripts/latexmk-build.ps1`, `-CleanMode none -xelatex`. Cada base de materia contiene los tres comandos exactos. Los auxiliares quedan en `.build/latex` y el PDF junto a su fuente. Los reportes y presentaciones anteriores se conservan, pero no se consideran validados de nuevo.
+Compilar desde la raíz del repositorio con `aulaTEX/latexmk-build.ps1`, `-CleanMode none -xelatex`. Cada base de materia contiene los tres comandos exactos. Los auxiliares quedan en `.build/latex` y el PDF junto a su fuente. Los reportes y presentaciones anteriores se conservan, pero no se consideran validados de nuevo.
 
 ## Pendientes y límites
 

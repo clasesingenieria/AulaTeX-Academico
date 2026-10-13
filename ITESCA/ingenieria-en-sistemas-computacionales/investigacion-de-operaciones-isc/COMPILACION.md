@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del repositorio que contiene la carpeta ITESCA:
 
 ```powershell
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\investigacion-de-operaciones-isc\\reporte-investigacion-de-operaciones-isc.tex
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\investigacion-de-operaciones-isc\\presentacion-investigacion-de-operaciones-isc.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\investigacion-de-operaciones-isc\\reporte-investigacion-de-operaciones-isc.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\investigacion-de-operaciones-isc\\presentacion-investigacion-de-operaciones-isc.tex
 ```
 
 ## Contrato de compilacion

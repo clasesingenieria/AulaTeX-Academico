@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del repositorio que contiene la carpeta ITESCA:
 
 ```powershell
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\programacion-logica-y-funcional-isc\\reporte-programacion-logica-y-funcional-isc.tex
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\programacion-logica-y-funcional-isc\\presentacion-programacion-logica-y-funcional-isc.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\programacion-logica-y-funcional-isc\\reporte-programacion-logica-y-funcional-isc.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\programacion-logica-y-funcional-isc\\presentacion-programacion-logica-y-funcional-isc.tex
 ```
 
 ## Contrato de compilacion

@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\bases-de-derecho-internacional-publico-lde\reporte-bases-de-derecho-internacional-publico.tex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\bases-de-derecho-internacional-publico-lde\presentacion-bases-de-derecho-internacional-publico.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\bases-de-derecho-internacional-publico-lde\reporte-bases-de-derecho-internacional-publico.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\bases-de-derecho-internacional-publico-lde\presentacion-bases-de-derecho-internacional-publico.tex
 `
 
 ## Contrato de compilacion

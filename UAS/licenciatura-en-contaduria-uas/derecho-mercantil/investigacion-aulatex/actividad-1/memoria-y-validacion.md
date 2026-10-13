@@ -5,7 +5,7 @@ Fecha: 27 de septiembre de 2026. Alcance: redacción y PDF de apoyo para transcr
 ## Insumos y reglas consultados antes de redactar
 
 - Consigna del usuario y `planeaciones-derecho-mercantil/planeacion-modulo-49871.json`.
-- `README.md` del repositorio y `scripts/aulatex/activity_contract.py`, contrato `REALIZAR_ACTIVIDAD_PIPELINE_CONTRACT`.
+- `README.md` del repositorio y `aulaTEX/aulatex/activity_contract.py`, contrato `REALIZAR_ACTIVIDAD_PIPELINE_CONTRACT`.
 - `.memoria-aulatex/memoria-institucion-UAS--0b2c7475ec34.json` y `UAS/memoria-fundacional.json`: identidad, no invención, trazabilidad, fuentes locales y compilación reproducible.
 - Memoria local: README, COMPILACION, manifiesto y notas de revisión de la materia. Nodo relacionado: reporte S1 y base institucional de Investigación aplicada a la contaduría, para los datos de estudiante, matrícula, grupo y lugar. Asesor confirmado expresamente por el usuario: Wilder Alfredo Angulo.
 - Plantilla visual solicitada `reporte-derecho-mercantil.pdf` y su base compartida `UAS/plantilla-actividad-uas.tex`. Se conservan portada, logos, Arial 12, color y márgenes de 2.54 cm. Se ajusta únicamente el espaciado del cuerpo para la extensión pedida.

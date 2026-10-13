@@ -10,7 +10,7 @@ El repositorio sigue el enfoque operativo de las webapps de `vWireGuard`:
 interfaz PWA en espanol, servidor Node pequeno, configuracion por entorno,
 estado vivo por WebSocket, service worker conservador y pruebas desde el dominio.
 
-La carpeta `base/` contiene proyectos usados solo como referencia. Los proyectos
+La carpeta `aulaTEX/base/` contiene proyectos usados solo como referencia. Los proyectos
 con procedencia verificable son submódulos fijados a commits de espejos privados
 propios, independientes de sus upstreams históricos; el snapshot Ionic permanece
 aislado y saneado. Ninguno forma parte del artefacto de producción ni es una
@@ -134,7 +134,7 @@ auditoria inmutable, politica de privacidad y pruebas de GPS por dispositivo.
 ## Despliegue activo Docker
 
 La PWA está publicada en `https://16.58.100.160/` mediante Compose y Caddy. El
-[publicador Linux](../scripts/deploy-docker-public.sh) construye y espera servicios
+[publicador Linux](../aulaTEX/deploy-docker-public.sh) construye y espera servicios
 saludables; Compose ordena migración y catálogo antes del arranque de la app.
 PostgreSQL y Redis tienen volúmenes persistentes y puertos en loopback. El puerto
 directo `8443` tiene bind público por defecto; debe limitarse o bloquearse externamente.

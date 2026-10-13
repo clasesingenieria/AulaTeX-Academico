@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del repositorio que contiene la carpeta ITESCA:
 
 ```powershell
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\desarrollo-de-las-organizaciones-de-calidad-mga\\reporte-desarrollo-de-las-organizaciones-de-calidad-mga.tex
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\desarrollo-de-las-organizaciones-de-calidad-mga\\presentacion-desarrollo-de-las-organizaciones-de-calidad-mga.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\desarrollo-de-las-organizaciones-de-calidad-mga\\reporte-desarrollo-de-las-organizaciones-de-calidad-mga.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\desarrollo-de-las-organizaciones-de-calidad-mga\\presentacion-desarrollo-de-las-organizaciones-de-calidad-mga.tex
 ```
 
 ## Contrato de compilacion

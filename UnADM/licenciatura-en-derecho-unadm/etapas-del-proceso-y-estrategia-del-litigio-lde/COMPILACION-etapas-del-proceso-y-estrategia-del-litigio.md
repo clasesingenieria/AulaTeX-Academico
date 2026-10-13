@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\etapas-del-proceso-y-estrategia-del-litigio-lde\reporte-etapas-del-proceso-y-estrategia-del-litigio.tex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\etapas-del-proceso-y-estrategia-del-litigio-lde\presentacion-etapas-del-proceso-y-estrategia-del-litigio.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\etapas-del-proceso-y-estrategia-del-litigio-lde\reporte-etapas-del-proceso-y-estrategia-del-litigio.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\etapas-del-proceso-y-estrategia-del-litigio-lde\presentacion-etapas-del-proceso-y-estrategia-del-litigio.tex
 `
 
 ## Contrato de compilacion

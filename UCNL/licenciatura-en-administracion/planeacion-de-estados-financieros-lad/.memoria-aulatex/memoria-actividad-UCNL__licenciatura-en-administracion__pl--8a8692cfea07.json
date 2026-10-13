@@ -20,7 +20,7 @@
     "Fuente provisional: GPT-Pro desde Actividad 1",
     "Fuente provisional: Claude Foundry desde Actividad 1",
     "Fuente provisional: Auto (model-router) desde Actividad 1",
-    "Plantilla maestra general UCNL; base/Plantilla-Informe/template.tex.",
+    "Plantilla maestra general UCNL; aulaTEX/base/Plantilla-Informe/template.tex.",
     "SUPUESTO: fuente provisional (Codex/GPT-Pro/Claude Foundry/Auto) pendiente de reemplazo por identidad canonica."
   ],
   "structure_rules": [
@@ -45,7 +45,7 @@
   ],
   "latex_rules": [
     "Compilar desde la raiz con scripts/latexmk-build.ps1 pasando solo la ruta del .tex.",
-    "\\input{template} resuelve por TEXINPUTS a base/Plantilla-Informe/template.tex; no pasar como argumento.",
+    "\\input{template} resuelve por TEXINPUTS a aulaTEX/base/Plantilla-Informe/template.tex; no pasar como argumento.",
     "Declarar \\bibliography{planeacion-de-estados-financieros}; no pasar el .bib al script.",
     "Estilo natnumurl.bst se resuelve con BSTINPUTS; auxiliares en .build/latex.",
     "Formato: fuente tipo Helvetica (Arial), interlineado 1.5, citas autor-anio con natbib \\citep/\\citet.",
@@ -378,7 +378,7 @@
         "Fuente provisional: GPT-Pro desde Actividad 1",
         "Fuente provisional: Claude Foundry desde Actividad 1",
         "Fuente provisional: Auto (model-router) desde Actividad 1",
-        "Plantilla maestra general UCNL; base/Plantilla-Informe/template.tex.",
+        "Plantilla maestra general UCNL; aulaTEX/base/Plantilla-Informe/template.tex.",
         "SUPUESTO: fuente provisional (Codex/GPT-Pro/Claude Foundry/Auto) pendiente de reemplazo por identidad canonica."
       ],
       "tone": [
@@ -494,14 +494,14 @@
       "Documento tipo informe academico UCNL con caratula, resumen breve, desarrollo, producto, conclusion y bibliografia.",
       "Mantener el formato del reporte de la materia al crear nuevas actividades.",
       "Compilar desde la raiz con scripts/latexmk-build.ps1 pasando solo la ruta del .tex.",
-      "\\input{template} resuelve por TEXINPUTS a base/Plantilla-Informe/template.tex; no pasar como argumento.",
+      "\\input{template} resuelve por TEXINPUTS a aulaTEX/base/Plantilla-Informe/template.tex; no pasar como argumento.",
       "Declarar \\bibliography{planeacion-de-estados-financieros}; no pasar el .bib al script.",
       "Estilo natnumurl.bst se resuelve con BSTINPUTS; auxiliares en .build/latex.",
       "Formato: fuente tipo Helvetica (Arial), interlineado 1.5, citas autor-anio con natbib \\citep/\\citet.",
       "SUPUESTO: fuente reconstruible con 22 bloques de contenido y ~19996 caracteres.",
       "Formato APA 7 en cuerpo y referencias",
       "Marca de agua institucional discreta opcional en portada",
-      "Plantilla maestra general UCNL; base/Plantilla-Informe/template.tex.",
+      "Plantilla maestra general UCNL; aulaTEX/base/Plantilla-Informe/template.tex.",
       "Estilo natnumurl.bst se resuelve con BSTINPUTS; auxiliares en .build/latex y .build/latex/aux.",
       ".bib se resuelve con BIBINPUTS; PDF final queda junto al .tex."
     ],
@@ -596,7 +596,7 @@
         "Secciones fijas: Introduccion, Desarrollo, Postura personal, Conclusion",
         "Plantilla maestra general UCNL",
         "Placeholders de cita (clave, clave1, clave2)",
-        "Plantilla maestra general UCNL; base/Plantilla-Informe/template.tex",
+        "Plantilla maestra general UCNL; aulaTEX/base/Plantilla-Informe/template.tex",
         "Portada admite marca de agua institucional discreta; ajustar variables coverwatermark si se apaga o cambia",
         "Revisar la bibliografia indicada, tomar notas, registrar citas y redactar con comprension propia",
         "Actualizar documenttitle, documentsubtitle, documentsubject, coursename, coursecode, universitydepartment y figura docente",
@@ -854,7 +854,7 @@
         },
         {
           "source": "Documento tipo informe academico UCNL con caratula, resumen breve, desarrollo, producto, conclusion y bibliografia",
-          "target": "Plantilla maestra general UCNL; base/Plantilla-Informe/template.tex",
+          "target": "Plantilla maestra general UCNL; aulaTEX/base/Plantilla-Informe/template.tex",
           "kind": "cohesion",
           "weight": 1,
           "justification": "Coaparecen en la misma retroalimentación editorial.",
@@ -862,7 +862,7 @@
         },
         {
           "source": "Mantener el formato del reporte de la materia al crear nuevas actividades",
-          "target": "Plantilla maestra general UCNL; base/Plantilla-Informe/template.tex",
+          "target": "Plantilla maestra general UCNL; aulaTEX/base/Plantilla-Informe/template.tex",
           "kind": "cohesion",
           "weight": 1,
           "justification": "Coaparecen en la misma retroalimentación editorial.",
@@ -906,7 +906,7 @@
         "UCNL/licenciatura-en-administracion/planeacion-de-estados-financieros-lad/reporte-planeacion-de-estados-financieros.tex": 1,
         "UCNL/licenciatura-en-administracion/planeacion-de-estados-financieros-lad/presentacion-planeacion-de-estados-financieros.tex": 1,
         "UCNL/licenciatura-en-administracion/planeacion-de-estados-financieros-lad/reporte-planeacion-de-estados-financieros-Actividad-1.tex": 1,
-        "Plantilla maestra general UCNL; base/Plantilla-Informe/template.tex": 2,
+        "Plantilla maestra general UCNL; aulaTEX/base/Plantilla-Informe/template.tex": 2,
         "Portada admite marca de agua institucional discreta; ajustar variables coverwatermark si se apaga o cambia": 1,
         "Revisar la bibliografia indicada, tomar notas, registrar citas y redactar con comprension propia": 1,
         "Actualizar documenttitle, documentsubtitle, documentsubject, coursename, coursecode, universitydepartment y figura docente": 1,

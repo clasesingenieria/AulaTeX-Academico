@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\antropologia-de-la-cultura-en-mexico-lde\reporte-antropologia-de-la-cultura-en-mexico.tex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\antropologia-de-la-cultura-en-mexico-lde\presentacion-antropologia-de-la-cultura-en-mexico.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\antropologia-de-la-cultura-en-mexico-lde\reporte-antropologia-de-la-cultura-en-mexico.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\antropologia-de-la-cultura-en-mexico-lde\presentacion-antropologia-de-la-cultura-en-mexico.tex
 `
 
 ## Contrato de compilacion

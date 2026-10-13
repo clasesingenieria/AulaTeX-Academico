@@ -5,7 +5,7 @@
 Verificado el 22/09/2026 desde la raíz del repositorio:
 
 ```powershell
-.\scripts\latexmk-build.ps1 UAS/licenciatura-en-contaduria-uas/investigacion-aplicada-a-la-contaduria/reporte-investigacion-aplicada-a-la-contaduria-plantilla-actividad.tex -CleanMode none -xelatex
+.\aulaTEX\latexmk-build.ps1 UAS/licenciatura-en-contaduria-uas/investigacion-aplicada-a-la-contaduria/reporte-investigacion-aplicada-a-la-contaduria-plantilla-actividad.tex -CleanMode none -xelatex
 ```
 
 Requiere Arial, XeLaTeX y Biber. Carga explícitamente la base UAS compartida, logos locales y bibliografía APA. El PDF es una muestra editable, no una actividad resuelta; no confirma datos de portada ni equipo. Para una actividad nueva, definir `actividadcontenido`, título y datos confirmados antes de cargar este adaptador. Las plantillas históricas siguientes no fueron reemplazadas ni recompiladas en esta revisión.
@@ -37,17 +37,17 @@ latexmk -norc -lualatex -interaction=nonstopmode -halt-on-error -outdir=.build/p
 Ejecutar desde la raíz de `AulaTeX-Academico`:
 
 ```powershell
-.\scripts\latexmk-build.ps1 .\UAS\assets\marca-uas-provisional.tex
-.\scripts\latexmk-build.ps1 .\UAS\licenciatura-en-contaduria-uas\investigacion-aplicada-a-la-contaduria\reporte-investigacion-aplicada-a-la-contaduria.tex
-.\scripts\latexmk-build.ps1 .\UAS\licenciatura-en-contaduria-uas\investigacion-aplicada-a-la-contaduria\reporte-investigacion-aplicada-a-la-contaduria-Actividad-1.tex
-.\scripts\latexmk-build.ps1 .\UAS\licenciatura-en-contaduria-uas\investigacion-aplicada-a-la-contaduria\actividad-investigacion-aplicada-a-la-contaduria.tex
-.\scripts\latexmk-build.ps1 .\UAS\licenciatura-en-contaduria-uas\investigacion-aplicada-a-la-contaduria\presentacion-investigacion-aplicada-a-la-contaduria.tex
+.\aulaTEX\latexmk-build.ps1 .\UAS\assets\marca-uas-provisional.tex
+.\aulaTEX\latexmk-build.ps1 .\UAS\licenciatura-en-contaduria-uas\investigacion-aplicada-a-la-contaduria\reporte-investigacion-aplicada-a-la-contaduria.tex
+.\aulaTEX\latexmk-build.ps1 .\UAS\licenciatura-en-contaduria-uas\investigacion-aplicada-a-la-contaduria\reporte-investigacion-aplicada-a-la-contaduria-Actividad-1.tex
+.\aulaTEX\latexmk-build.ps1 .\UAS\licenciatura-en-contaduria-uas\investigacion-aplicada-a-la-contaduria\actividad-investigacion-aplicada-a-la-contaduria.tex
+.\aulaTEX\latexmk-build.ps1 .\UAS\licenciatura-en-contaduria-uas\investigacion-aplicada-a-la-contaduria\presentacion-investigacion-aplicada-a-la-contaduria.tex
 ```
 
 ## Contrato
 
 - Al script se entrega únicamente la ruta del `.tex`.
-- `\input{template}` se resuelve desde `base/Plantilla-Informe` mediante `TEXINPUTS`.
+- `\input{template}` se resuelve desde `aulaTEX/base/Plantilla-Informe` mediante `TEXINPUTS`.
 - La bibliografía se declara como `\bibliography{investigacion-aplicada-a-la-contaduria}` y se resuelve mediante `BIBINPUTS`.
 - El PDF final se copia junto al `.tex`; los auxiliares quedan en `.build/latex`.
 - La marca provisional debe compilarse antes del reporte y la presentación.

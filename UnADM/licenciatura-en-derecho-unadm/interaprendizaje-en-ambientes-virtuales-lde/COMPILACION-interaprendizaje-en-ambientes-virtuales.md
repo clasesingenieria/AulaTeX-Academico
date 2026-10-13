@@ -3,9 +3,9 @@
 Ejecutar desde la raiz del proyecto:
 
 ```powershell
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\interaprendizaje-en-ambientes-virtuales-lde\reporte-interaprendizaje-en-ambientes-virtuales.tex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\interaprendizaje-en-ambientes-virtuales-lde\reporte-interaprendizaje-en-ambientes-virtuales-Actividad-1.tex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\interaprendizaje-en-ambientes-virtuales-lde\presentacion-interaprendizaje-en-ambientes-virtuales.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\interaprendizaje-en-ambientes-virtuales-lde\reporte-interaprendizaje-en-ambientes-virtuales.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\interaprendizaje-en-ambientes-virtuales-lde\reporte-interaprendizaje-en-ambientes-virtuales-Actividad-1.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\interaprendizaje-en-ambientes-virtuales-lde\presentacion-interaprendizaje-en-ambientes-virtuales.tex
 ```
 
 ## Contrato de compilacion

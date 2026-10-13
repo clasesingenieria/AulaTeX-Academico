@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del repositorio que contiene la carpeta ITESCA:
 
 ```powershell
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\administracion-de-redes-isc\\reporte-administracion-de-redes-isc.tex
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\administracion-de-redes-isc\\presentacion-administracion-de-redes-isc.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\administracion-de-redes-isc\\reporte-administracion-de-redes-isc.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\administracion-de-redes-isc\\presentacion-administracion-de-redes-isc.tex
 ```
 
 ## Contrato de compilacion

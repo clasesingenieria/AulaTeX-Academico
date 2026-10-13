@@ -3,9 +3,9 @@
 Ejecutar siempre desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\seguridad-industrial-y-prevencion-de-riesgos-laborales-lad\reporte-seguridad-industrial-y-prevencion-de-riesgos-laborales.tex
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\seguridad-industrial-y-prevencion-de-riesgos-laborales-lad\reporte-seguridad-industrial-y-prevencion-de-riesgos-laborales-Actividad-1.tex
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\seguridad-industrial-y-prevencion-de-riesgos-laborales-lad\presentacion-seguridad-industrial-y-prevencion-de-riesgos-laborales.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\seguridad-industrial-y-prevencion-de-riesgos-laborales-lad\reporte-seguridad-industrial-y-prevencion-de-riesgos-laborales.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\seguridad-industrial-y-prevencion-de-riesgos-laborales-lad\reporte-seguridad-industrial-y-prevencion-de-riesgos-laborales-Actividad-1.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\seguridad-industrial-y-prevencion-de-riesgos-laborales-lad\presentacion-seguridad-industrial-y-prevencion-de-riesgos-laborales.tex
 `
 
 ## Contrato de compilacion

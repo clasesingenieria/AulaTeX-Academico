@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\mecanismos-alternativos-de-resolucion-de-conflictos-lde\reporte-mecanismos-alternativos-de-resolucion-de-conflictos.tex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\mecanismos-alternativos-de-resolucion-de-conflictos-lde\presentacion-mecanismos-alternativos-de-resolucion-de-conflictos.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\mecanismos-alternativos-de-resolucion-de-conflictos-lde\reporte-mecanismos-alternativos-de-resolucion-de-conflictos.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\mecanismos-alternativos-de-resolucion-de-conflictos-lde\presentacion-mecanismos-alternativos-de-resolucion-de-conflictos.tex
 `
 
 ## Contrato de compilacion

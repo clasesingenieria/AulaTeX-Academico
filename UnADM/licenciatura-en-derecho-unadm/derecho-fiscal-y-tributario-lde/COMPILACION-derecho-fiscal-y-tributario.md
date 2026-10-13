@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derecho-fiscal-y-tributario-lde\reporte-derecho-fiscal-y-tributario.tex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derecho-fiscal-y-tributario-lde\presentacion-derecho-fiscal-y-tributario.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derecho-fiscal-y-tributario-lde\reporte-derecho-fiscal-y-tributario.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derecho-fiscal-y-tributario-lde\presentacion-derecho-fiscal-y-tributario.tex
 `
 
 ## Contrato de compilacion

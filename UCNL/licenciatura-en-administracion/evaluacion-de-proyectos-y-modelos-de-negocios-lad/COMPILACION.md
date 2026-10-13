@@ -3,9 +3,9 @@
 Ejecutar siempre desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\evaluacion-de-proyectos-y-modelos-de-negocios-lad\reporte-evaluacion-de-proyectos-y-modelos-de-negocios.tex
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\evaluacion-de-proyectos-y-modelos-de-negocios-lad\reporte-evaluacion-de-proyectos-y-modelos-de-negocios-Actividad-1.tex
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\evaluacion-de-proyectos-y-modelos-de-negocios-lad\presentacion-evaluacion-de-proyectos-y-modelos-de-negocios.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\evaluacion-de-proyectos-y-modelos-de-negocios-lad\reporte-evaluacion-de-proyectos-y-modelos-de-negocios.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\evaluacion-de-proyectos-y-modelos-de-negocios-lad\reporte-evaluacion-de-proyectos-y-modelos-de-negocios-Actividad-1.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\evaluacion-de-proyectos-y-modelos-de-negocios-lad\presentacion-evaluacion-de-proyectos-y-modelos-de-negocios.tex
 `
 
 ## Contrato de compilacion

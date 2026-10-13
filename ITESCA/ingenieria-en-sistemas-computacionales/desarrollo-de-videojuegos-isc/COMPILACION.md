@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del repositorio que contiene la carpeta ITESCA:
 
 ```powershell
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\desarrollo-de-videojuegos-isc\\reporte-desarrollo-de-videojuegos-isc.tex
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\desarrollo-de-videojuegos-isc\\presentacion-desarrollo-de-videojuegos-isc.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\desarrollo-de-videojuegos-isc\\reporte-desarrollo-de-videojuegos-isc.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\desarrollo-de-videojuegos-isc\\presentacion-desarrollo-de-videojuegos-isc.tex
 ```
 
 ## Contrato de compilacion

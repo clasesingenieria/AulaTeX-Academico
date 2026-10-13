@@ -29,7 +29,7 @@
 - Incluir criterios de evaluacion y requisitos bibliograficos minimos.
 - Definir memoria operativa, plan y maqueta inicial; no redactar desarrollo completo de la actividad.
 - Cubrir estructura mínima de reporte, actividad y presentación con criterios evaluables.
-- Garantizar compatibilidad con base/, scripts/latexmk y bibliografia-unadm.bib.
+- Garantizar compatibilidad con aulaTEX/base/, aulaTEX/latexmk y bibliografia-unadm.bib.
 - Definir memoria operativa, plan y maqueta inicial sin redactar actividad completa.
 - Cubrir estructura minima de reporte, actividad y presentacion con criterios evaluables.
 

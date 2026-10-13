@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derecho-de-la-propiedad-y-registro-lde\reporte-derecho-de-la-propiedad-y-registro.tex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derecho-de-la-propiedad-y-registro-lde\presentacion-derecho-de-la-propiedad-y-registro.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derecho-de-la-propiedad-y-registro-lde\reporte-derecho-de-la-propiedad-y-registro.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derecho-de-la-propiedad-y-registro-lde\presentacion-derecho-de-la-propiedad-y-registro.tex
 `
 
 ## Contrato de compilacion

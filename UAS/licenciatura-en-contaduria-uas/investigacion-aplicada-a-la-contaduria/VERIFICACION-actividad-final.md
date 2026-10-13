@@ -6,7 +6,7 @@ Fecha: 13 de septiembre de 2026.
 
 Se corrigió el formato independiente de la primera versión. El reporte final
 carga ahora la misma plantilla compartida que el reporte de Actividad 1 de la
-asignatura: `base/Plantilla-Informe/template.tex`, con `\templatePortrait`,
+asignatura: `aulaTEX/base/Plantilla-Informe/template.tex`, con `\templatePortrait`,
 `\templatePagecfg`, `\templateIndex` y `\templateFinalcfg`.
 No se modificaron la plantilla global ni los demás reportes.
 

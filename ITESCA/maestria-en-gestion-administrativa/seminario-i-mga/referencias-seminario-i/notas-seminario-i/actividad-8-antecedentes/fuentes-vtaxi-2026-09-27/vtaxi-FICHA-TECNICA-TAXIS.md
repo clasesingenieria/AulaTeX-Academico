@@ -67,6 +67,6 @@
 Notas y siguientes pasos sugeridos:
 - Completar los campos entre corchetes con datos reales (RFC, representante, contactos).
 - Generar `docs/openapi.yaml` con los endpoints mínimos solicitados por IMA.
-- Preparar un script en `scripts/` para exportar el padrón en CSV y cifrarlo (`scripts/padron-export.ps1` / `scripts/padron-export.sh`).
+- Preparar un script en `aulaTEX/` para exportar el padrón en CSV y cifrarlo (`aulaTEX/padron-export.ps1` / `aulaTEX/padron-export.sh`).
 
 Instrucciones: rellena los campos marcados y adjunta diagramas o exports de la base de datos de prueba donde se muestren los campos solicitados.

@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del repositorio que contiene la carpeta ITESCA:
 
 ```powershell
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\desarrollo-de-las-organizaciones-sustentables-mga\\reporte-desarrollo-de-las-organizaciones-sustentables-mga.tex
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\desarrollo-de-las-organizaciones-sustentables-mga\\presentacion-desarrollo-de-las-organizaciones-sustentables-mga.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\desarrollo-de-las-organizaciones-sustentables-mga\\reporte-desarrollo-de-las-organizaciones-sustentables-mga.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\desarrollo-de-las-organizaciones-sustentables-mga\\presentacion-desarrollo-de-las-organizaciones-sustentables-mga.tex
 ```
 
 ## Contrato de compilacion

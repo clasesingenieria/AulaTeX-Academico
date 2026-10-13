@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\instrumentos-y-mecanismos-de-proteccion-de-los-derechos-humanos-lde\reporte-instrumentos-y-mecanismos-de-proteccion-de-los-derechos-humanos.tex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\instrumentos-y-mecanismos-de-proteccion-de-los-derechos-humanos-lde\presentacion-instrumentos-y-mecanismos-de-proteccion-de-los-derechos-humanos.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\instrumentos-y-mecanismos-de-proteccion-de-los-derechos-humanos-lde\reporte-instrumentos-y-mecanismos-de-proteccion-de-los-derechos-humanos.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\instrumentos-y-mecanismos-de-proteccion-de-los-derechos-humanos-lde\presentacion-instrumentos-y-mecanismos-de-proteccion-de-los-derechos-humanos.tex
 `
 
 ## Contrato de compilacion

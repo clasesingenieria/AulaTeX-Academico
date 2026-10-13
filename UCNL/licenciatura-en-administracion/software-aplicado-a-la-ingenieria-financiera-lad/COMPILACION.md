@@ -3,9 +3,9 @@
 Ejecutar siempre desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\software-aplicado-a-la-ingenieria-financiera-lad\reporte-software-aplicado-a-la-ingenieria-financiera.tex
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\software-aplicado-a-la-ingenieria-financiera-lad\reporte-software-aplicado-a-la-ingenieria-financiera-Actividad-1.tex
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\software-aplicado-a-la-ingenieria-financiera-lad\presentacion-software-aplicado-a-la-ingenieria-financiera.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\software-aplicado-a-la-ingenieria-financiera-lad\reporte-software-aplicado-a-la-ingenieria-financiera.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\software-aplicado-a-la-ingenieria-financiera-lad\reporte-software-aplicado-a-la-ingenieria-financiera-Actividad-1.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\software-aplicado-a-la-ingenieria-financiera-lad\presentacion-software-aplicado-a-la-ingenieria-financiera.tex
 `
 
 ## Contrato de compilacion

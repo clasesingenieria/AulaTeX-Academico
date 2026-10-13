@@ -95,10 +95,10 @@ La resena interna 3 tiene seis paginas totales y cuatro de contenido: contexto, 
 Ejecutar desde la raiz del proyecto:
 
 ```powershell
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\antecedentes-de-los-derechos-humanos-lde\reporte-antecedentes-de-los-derechos-humanos-Actividad-1.tex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\antecedentes-de-los-derechos-humanos-lde\reporte-antecedentes-de-los-derechos-humanos-Actividad-2.tex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\antecedentes-de-los-derechos-humanos-lde\reporte-antecedentes-de-los-derechos-humanos-Actividad-3.tex -lualatex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\antecedentes-de-los-derechos-humanos-lde\reporte-antecedentes-de-los-derechos-humanos-Actividad-4.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\antecedentes-de-los-derechos-humanos-lde\reporte-antecedentes-de-los-derechos-humanos-Actividad-1.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\antecedentes-de-los-derechos-humanos-lde\reporte-antecedentes-de-los-derechos-humanos-Actividad-2.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\antecedentes-de-los-derechos-humanos-lde\reporte-antecedentes-de-los-derechos-humanos-Actividad-3.tex -lualatex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\antecedentes-de-los-derechos-humanos-lde\reporte-antecedentes-de-los-derechos-humanos-Actividad-4.tex
 ```
 
 La resena requiere LuaLaTeX y Arial instalada en Windows; utiliza los archivos de fuente de `C:/Windows/Fonts`. No compilarla con pdfLaTeX. La compilacion e inspeccion visual no acreditan calificacion docente ni observacion personal completa del video.

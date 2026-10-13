@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del repositorio que contiene la carpeta ITESCA:
 
 ```powershell
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\desarrollo-sustentable-isc\\reporte-desarrollo-sustentable-isc.tex
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\desarrollo-sustentable-isc\\presentacion-desarrollo-sustentable-isc.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\desarrollo-sustentable-isc\\reporte-desarrollo-sustentable-isc.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\desarrollo-sustentable-isc\\presentacion-desarrollo-sustentable-isc.tex
 ```
 
 ## Contrato de compilacion

@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\tecnica-legislativa-lde\reporte-tecnica-legislativa.tex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\tecnica-legislativa-lde\presentacion-tecnica-legislativa.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\tecnica-legislativa-lde\reporte-tecnica-legislativa.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\tecnica-legislativa-lde\presentacion-tecnica-legislativa.tex
 `
 
 ## Contrato de compilacion

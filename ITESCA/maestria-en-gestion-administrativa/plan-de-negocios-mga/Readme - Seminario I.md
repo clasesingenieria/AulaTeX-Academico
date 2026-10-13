@@ -65,7 +65,7 @@ Este estado es una fotografía de la fecha de corte, no se actualiza automática
 - [Actividades ordenadas por vencimiento](#orden-y-numeracion): numeración local del 1 al 15, cotejada con el panel y las fechas de cada módulo el 22/09/2026.
 - [Equivalencias con Moodle y migración de archivos](referencias-plan-de-negocios/notas-plan-de-negocios/materiales-generales/registros/numeracion-actividades.json): conserva IDs, fechas observadas y nombres anteriores; la numeración no modifica el aula.
 - [Planeaciones organizadas por materia](planeaciones-plan-de-negocios/README.md): fichas renumeradas por el calendario verificado el 22/09/2026. Los requisitos históricos conservan su procedencia y no se consideran revalidados sólo por revisar las fechas.
-- [Contrato de organización](../../../GENERAR-PLANEACIONES.md): materiales académicos versionables dentro de la materia, sin destinos globales ni exclusiones automáticas. Los originales y las revisiones históricas se conservan.
+- [Contrato de organización](../../../README.md#contrato-generar-planeaciones): materiales académicos versionables dentro de la materia, sin destinos globales ni exclusiones automáticas. Los originales y las revisiones históricas se conservan.
 - [Estado de entregables](#estado-de-entregables-historico): productos de actividad disponibles, sus límites y ruta de compilación.
 - [Plantilla de actividad](reporte-plan-de-negocios-plantilla-actividad.tex): adaptador de metadatos y contenido para actividades; enruta cada reporte a la plantilla canónica [reporte-itesca-mga.tex](../reporte-itesca-mga.tex) y conserva el contrato visible de realizar-actividad.
 - [Lote realizar-actividad](#historial-de-generacion): registro histórico de siete borradores TEX/PDF/DOCX generados con GPT-5.6-SOL, deployment gpt-5.6-sol. Los productos posteriores y sus pendientes se consultan en el estado de entregables; no se atribuyen a ese lote.
@@ -314,15 +314,15 @@ Historial conservado con sus fechas originales. No acredita estado actual ni sus
 Ejecutar desde la raiz del repositorio que contiene la carpeta ITESCA:
 
 ```powershell
-.\scripts\latexmk-build.ps1 .\ITESCA\maestria-en-gestion-administrativa\plan-de-negocios-mga\reporte-plan-de-negocios-mga.tex
-.\scripts\latexmk-build.ps1 .\ITESCA\maestria-en-gestion-administrativa\plan-de-negocios-mga\presentacion-plan-de-negocios-mga.tex
+.\aulaTEX\latexmk-build.ps1 .\ITESCA\maestria-en-gestion-administrativa\plan-de-negocios-mga\reporte-plan-de-negocios-mga.tex
+.\aulaTEX\latexmk-build.ps1 .\ITESCA\maestria-en-gestion-administrativa\plan-de-negocios-mga\presentacion-plan-de-negocios-mga.tex
 ```
 
 Los reportes de actividades usan la plantilla institucional local y deben compilarse con XeLaTeX:
 
 ```powershell
-.\scripts\latexmk-build.ps1 .\ITESCA\maestria-en-gestion-administrativa\plan-de-negocios-mga\reporte-plan-de-negocios-Actividad-1-Foro-Bienvenida.tex -xelatex
-.\scripts\latexmk-build.ps1 .\ITESCA\maestria-en-gestion-administrativa\plan-de-negocios-mga\reporte-plan-de-negocios-Actividad-6-Imagen-Empresa.tex -xelatex
+.\aulaTEX\latexmk-build.ps1 .\ITESCA\maestria-en-gestion-administrativa\plan-de-negocios-mga\reporte-plan-de-negocios-Actividad-1-Foro-Bienvenida.tex -xelatex
+.\aulaTEX\latexmk-build.ps1 .\ITESCA\maestria-en-gestion-administrativa\plan-de-negocios-mga\reporte-plan-de-negocios-Actividad-6-Imagen-Empresa.tex -xelatex
 ```
 
 ### Contrato de compilacion
@@ -332,7 +332,7 @@ La [numeración cronológica](#orden-y-numeracion) distingue el número local de
 ```powershell
 $materia = 'ITESCA/maestria-en-gestion-administrativa/plan-de-negocios-mga'
 Get-ChildItem -LiteralPath $materia -Filter 'reporte-plan-de-negocios-Actividad-*.tex' -File | ForEach-Object {
-	.\scripts\latexmk-build.ps1 $_.FullName -xelatex
+	.\aulaTEX\latexmk-build.ps1 $_.FullName -xelatex
 	if ($LASTEXITCODE -ne 0) { throw "Error de compilación: $($_.Name)" }
 }
 ```

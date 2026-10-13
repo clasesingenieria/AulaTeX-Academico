@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derecho-de-la-responsabilidad-civil-y-danos-lde\reporte-derecho-de-la-responsabilidad-civil-y-danos.tex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derecho-de-la-responsabilidad-civil-y-danos-lde\presentacion-derecho-de-la-responsabilidad-civil-y-danos.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derecho-de-la-responsabilidad-civil-y-danos-lde\reporte-derecho-de-la-responsabilidad-civil-y-danos.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derecho-de-la-responsabilidad-civil-y-danos-lde\presentacion-derecho-de-la-responsabilidad-civil-y-danos.tex
 `
 
 ## Contrato de compilacion

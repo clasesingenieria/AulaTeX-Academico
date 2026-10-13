@@ -12,9 +12,9 @@
 
 Rutas relativas a la raíz del repositorio:
 
-- [Contrato general y contrato de foro](../../../scripts/aulatex/activity_contract.py): tres actos, centralidad del producto, fuentes verificables, cita textual, referencias por caja, cierre y declaración de IA.
-- [Patrón maduro de foro](../../../base/latex/adaptadas/materias/tecnicas-didacticas-aprendizaje/100tecnicas-patrones-reales.json): reporte contenedor, `forobox`, TXT y adjunto mediante `attachfile`.
-- [Contrato de extracción](../../../scripts/aulatex/extractor_adapter.py): cinco artefactos nucleares.
+- [Contrato general y contrato de foro](../../../aulaTEX/aulatex/activity_contract.py): tres actos, centralidad del producto, fuentes verificables, cita textual, referencias por caja, cierre y declaración de IA.
+- [Patrón maduro de foro](../../../aulaTEX/base/latex/adaptadas/materias/tecnicas-didacticas-aprendizaje/100tecnicas-patrones-reales.json): reporte contenedor, `forobox`, TXT y adjunto mediante `attachfile`.
+- [Contrato de extracción](../../../aulaTEX/aulatex/extractor_adapter.py): cinco artefactos nucleares.
 - [Consigna y destinos verificados](foro-participacion-Actividad-7.md): identificar dos fases, justificar y recomendar, responder a dos compañeros.
 
 Se aplica la identidad ITESCA; no se traslada la paleta UnADM ni se interpreta la clave histórica `foro_diagnostico` como una consigna distinta. La exigencia de «publicado» se mantiene como condición de entrega, no se finge mediante el título de una caja.

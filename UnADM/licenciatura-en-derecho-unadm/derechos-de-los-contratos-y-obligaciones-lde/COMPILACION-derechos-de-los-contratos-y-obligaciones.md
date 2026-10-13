@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derechos-de-los-contratos-y-obligaciones-lde\reporte-derechos-de-los-contratos-y-obligaciones.tex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derechos-de-los-contratos-y-obligaciones-lde\presentacion-derechos-de-los-contratos-y-obligaciones.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derechos-de-los-contratos-y-obligaciones-lde\reporte-derechos-de-los-contratos-y-obligaciones.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derechos-de-los-contratos-y-obligaciones-lde\presentacion-derechos-de-los-contratos-y-obligaciones.tex
 `
 
 ## Contrato de compilacion

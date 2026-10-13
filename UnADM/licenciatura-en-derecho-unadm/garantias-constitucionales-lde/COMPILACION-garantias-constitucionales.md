@@ -3,8 +3,8 @@
 Ejecutar desde la raíz del proyecto:
 
 ```powershell
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\garantias-constitucionales-lde\reporte-garantias-constitucionales.tex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\garantias-constitucionales-lde\presentacion-garantias-constitucionales.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\garantias-constitucionales-lde\reporte-garantias-constitucionales.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\garantias-constitucionales-lde\presentacion-garantias-constitucionales.tex
 ```
 
 ## Contrato de compilación

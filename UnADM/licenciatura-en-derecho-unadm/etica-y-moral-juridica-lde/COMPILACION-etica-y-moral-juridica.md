@@ -3,8 +3,8 @@
 Ejecutar siempre desde la raiz del proyecto:
 
 ```powershell
-.\scripts\latexmk-build.ps1 .\UnADM\etica-y-moral-juridica\reporte-etica-y-moral-juridica.tex
-.\scripts\latexmk-build.ps1 .\UnADM\etica-y-moral-juridica\reporte-etica-y-moral-juridica-Actividad-5.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\etica-y-moral-juridica\reporte-etica-y-moral-juridica.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\etica-y-moral-juridica\reporte-etica-y-moral-juridica-Actividad-5.tex
 ```
 
 Para otra actividad, cambia solo el nombre del `.tex`.
@@ -13,7 +13,7 @@ Para otra actividad, cambia solo el nombre del `.tex`.
 
 - El unico argumento obligatorio del script es la ruta del `.tex`.
 - El `\input{template}` no se pasa como argumento. MiKTeX lo busca con `TEXINPUTS`, definido en `.latexmkrc`.
-- En esta arquitectura, `\input{template}` debe resolver a `base/Plantilla-Informe/template.tex`.
+- En esta arquitectura, `\input{template}` debe resolver a `aulaTEX/base/Plantilla-Informe/template.tex`.
 - El `.bib` tampoco se pasa al script. Cada `.tex` debe declarar `\bibliography{etica-y-moral-juridica}`.
 - BibTeX busca `etica-y-moral-juridica.bib` con `BIBINPUTS`, definido en `.latexmkrc`.
 - El estilo `natnumurl.bst` se resuelve con `BSTINPUTS`.

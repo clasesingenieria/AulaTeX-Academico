@@ -3,9 +3,9 @@
 Ejecutar siempre desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\habilidades-directivas-lad\reporte-habilidades-directivas.tex
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\habilidades-directivas-lad\reporte-habilidades-directivas-Actividad-1.tex
-.\scripts\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\habilidades-directivas-lad\presentacion-habilidades-directivas.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\habilidades-directivas-lad\reporte-habilidades-directivas.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\habilidades-directivas-lad\reporte-habilidades-directivas-Actividad-1.tex
+.\aulaTEX\latexmk-build.ps1 .\UCNL\licenciatura-en-administracion\habilidades-directivas-lad\presentacion-habilidades-directivas.tex
 `
 
 ## Contrato de compilacion

@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del repositorio que contiene la carpeta ITESCA:
 
 ```powershell
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\estadistica-aplicada-para-la-administracion-mga\\reporte-estadistica-aplicada-para-la-administracion-mga.tex
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\estadistica-aplicada-para-la-administracion-mga\\presentacion-estadistica-aplicada-para-la-administracion-mga.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\estadistica-aplicada-para-la-administracion-mga\\reporte-estadistica-aplicada-para-la-administracion-mga.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\maestria-en-gestion-administrativa\\estadistica-aplicada-para-la-administracion-mga\\presentacion-estadistica-aplicada-para-la-administracion-mga.tex
 ```
 
 ## Contrato de compilacion

@@ -3,9 +3,9 @@
 Ejecutar siempre desde la raiz del proyecto:
 
 ```powershell
-.\scripts\latexmk-build.ps1 .\ITESCA\ingenieria-en-sistemas-computacionales\primer-ingreso\reporte-primer-ingreso.tex
-.\scripts\latexmk-build.ps1 .\ITESCA\ingenieria-en-sistemas-computacionales\primer-ingreso\reporte-primer-ingreso-Actividad-1.tex
-.\scripts\latexmk-build.ps1 .\ITESCA\ingenieria-en-sistemas-computacionales\primer-ingreso\presentacion-primer-ingreso.tex
+.\aulaTEX\latexmk-build.ps1 .\ITESCA\ingenieria-en-sistemas-computacionales\primer-ingreso\reporte-primer-ingreso.tex
+.\aulaTEX\latexmk-build.ps1 .\ITESCA\ingenieria-en-sistemas-computacionales\primer-ingreso\reporte-primer-ingreso-Actividad-1.tex
+.\aulaTEX\latexmk-build.ps1 .\ITESCA\ingenieria-en-sistemas-computacionales\primer-ingreso\presentacion-primer-ingreso.tex
 ```
 
 ## Contrato de compilacion

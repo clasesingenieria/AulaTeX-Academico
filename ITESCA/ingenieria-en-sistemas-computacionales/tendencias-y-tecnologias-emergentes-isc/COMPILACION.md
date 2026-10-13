@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del repositorio que contiene la carpeta ITESCA:
 
 ```powershell
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\tendencias-y-tecnologias-emergentes-isc\\reporte-tendencias-y-tecnologias-emergentes-isc.tex
-.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\tendencias-y-tecnologias-emergentes-isc\\presentacion-tendencias-y-tecnologias-emergentes-isc.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\tendencias-y-tecnologias-emergentes-isc\\reporte-tendencias-y-tecnologias-emergentes-isc.tex
+.\\aulaTEX\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\tendencias-y-tecnologias-emergentes-isc\\presentacion-tendencias-y-tecnologias-emergentes-isc.tex
 ```
 
 ## Contrato de compilacion

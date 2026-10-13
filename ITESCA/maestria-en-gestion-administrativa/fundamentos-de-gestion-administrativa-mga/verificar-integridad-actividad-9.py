@@ -28,7 +28,7 @@ def check(condition: bool, message: str) -> None:
 
 def audit() -> dict:
     folder = Path(__file__).resolve().parent
-    root = next(p for p in folder.parents if (p / "scripts/aulatex/foro_producto.py").exists())
+    root = next(p for p in folder.parents if (p / "aulaTEX/aulatex/foro_producto.py").exists())
     sys.path.insert(0, str(root))
     from scripts.aulatex.foro_producto import ForoProductoTransformer
 

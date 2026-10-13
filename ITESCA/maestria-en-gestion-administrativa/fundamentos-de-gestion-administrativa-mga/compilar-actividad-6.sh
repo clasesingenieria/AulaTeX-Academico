@@ -20,7 +20,7 @@ if [[ "$(fc-match --format '%{family}' Arial)" != 'Arial' ]]; then
 fi
 
 cd -- "$dir"
-export TEXINPUTS="$dir:$root:$root/base/Plantilla-Informe//:${TEXINPUTS:-}"
+export TEXINPUTS="$dir:$root:$root/aulaTEX/base/Plantilla-Informe//:${TEXINPUTS:-}"
 export BIBINPUTS="$dir:$dir/..:${BIBINPUTS:-}"
 latexmk -norc -xelatex -interaction=nonstopmode -halt-on-error \
   -file-line-error -outdir="$out" "$name.tex"

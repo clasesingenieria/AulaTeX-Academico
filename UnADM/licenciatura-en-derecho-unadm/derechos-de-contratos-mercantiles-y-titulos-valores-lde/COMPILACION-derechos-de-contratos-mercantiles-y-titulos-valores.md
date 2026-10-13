@@ -3,8 +3,8 @@
 Ejecutar desde la raiz del proyecto:
 
 `powershell
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derechos-de-contratos-mercantiles-y-titulos-valores-lde\reporte-derechos-de-contratos-mercantiles-y-titulos-valores.tex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derechos-de-contratos-mercantiles-y-titulos-valores-lde\presentacion-derechos-de-contratos-mercantiles-y-titulos-valores.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derechos-de-contratos-mercantiles-y-titulos-valores-lde\reporte-derechos-de-contratos-mercantiles-y-titulos-valores.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\derechos-de-contratos-mercantiles-y-titulos-valores-lde\presentacion-derechos-de-contratos-mercantiles-y-titulos-valores.tex
 `
 
 ## Contrato de compilacion
