@@ -1,5 +1,11 @@
 # Fundamentos de Gestión Administrativa
 
+**Grabaciones revisadas el 12/10/2026:** localizadas las sesiones 2, 3 y 4;
+se conservaron [tres accesos directos](referencias-fundamentos-de-gestion-administrativa/grabaciones-fundamentos-de-gestion-administrativa/).
+Sus MP4 y SRT no están disponibles localmente por las limitaciones de acceso
+observadas. Consultar el [informe de grabaciones](../../assets-itesca/GRABACIONES-ITESCA.md)
+y el [resultado con procedencia](referencias-fundamentos-de-gestion-administrativa/notas-fundamentos-de-gestion-administrativa/materiales-generales/control-grabaciones/resultado-grabaciones-2026-10-12.json).
+
 **Planeaciones documentales — revisión 2026-09-15:** [índice de diez planes independientes](planeaciones-generadas/2026-II/revision-2026-09-15/planeaciones.md) e [índice JSON](planeaciones-generadas/2026-II/revision-2026-09-15/planeaciones.json), con enlaces a cada par Markdown/JSON autónomo. Son borradores para revisión docente, no entregas ni documentos institucionales aprobados.
 
 **Entregables y pendientes:** consultar [ESTADO-ENTREGABLES.md](ESTADO-ENTREGABLES.md) para abrir los PDF, fuentes editables y respuestas preparadas, y distinguir preparación de entrega en Moodle.

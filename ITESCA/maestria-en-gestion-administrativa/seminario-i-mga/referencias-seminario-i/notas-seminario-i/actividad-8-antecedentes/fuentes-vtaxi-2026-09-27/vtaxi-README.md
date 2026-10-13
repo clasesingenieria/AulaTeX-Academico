@@ -113,7 +113,7 @@ Opciones para instalar, reconstruir o preparar servicios locales:
 | `-WithPostgres` | Inicia PostgreSQL con Docker, migra y carga datos demo |
 | `-ResetDatabase` | Con `-WithPostgres`, elimina y recrea el volumen de datos |
 | `-SkipValidation` | Omite revisión, pruebas y compilación del APK debug |
-| `-WithExamples` | Inicializa los submódulos de `base/` sin instalar sus dependencias |
+| `-WithExamples` | Inicializa los submódulos de `aulaTEX/base/` sin instalar sus dependencias |
 | `-SkipMasterPin` | No solicita PIN ni cifra secretos locales; pensado para CI sin `.vtaxi` sensible |
 | `-SkipPortableAccess` | No exporta `.vtaxi/aws-access.enc` desde AWS durante setup |
 | `-AwsEnvironmentName`, `-AwsRegion` | Seleccionan el stack AWS para exportar el bundle; valores predeterminados `vtaxi-dev`, `us-east-1` |
@@ -161,7 +161,7 @@ arranca, evitando consumir recursos al iniciar el equipo.
 
 ### Proyectos de referencia
 
-Los proyectos externos de `base/` se fijan como submódulos Git cuando existe un
+Los proyectos externos de `aulaTEX/base/` se fijan como submódulos Git cuando existe un
 upstream verificable. No son dependencias de producción de vTaxi. Para una
 clonación existente, inicialízalos y valida su estado con:
 
@@ -209,12 +209,12 @@ iteraciones), AES-256-CBC y HMAC-SHA256. Ejemplos:
 
 ```powershell
 # Cifrar manualmente
-.\scripts\secret-vault.ps1 -Command Encrypt `
+.\aulaTEX\secret-vault.ps1 -Command Encrypt `
   -InputPath .\.vtaxi\central-access-aws.txt `
   -OutputPath .\.vtaxi\central-access-aws.txt.enc
 
 # Descifrar temporalmente; eliminar el texto plano al terminar
-.\scripts\secret-vault.ps1 -Command Decrypt `
+.\aulaTEX\secret-vault.ps1 -Command Decrypt `
   -InputPath .\.vtaxi\central-access-aws.txt.enc `
   -OutputPath .\.vtaxi\central-access-aws.txt
 ```
@@ -235,21 +235,21 @@ ni incluye automáticamente claves emitidas desde la PWA:
 
 ```powershell
 # Recomendado: solicita el PIN oculto, exporta desde AWS y cifra el bundle
-.\scripts\aws\initialize-portable-access.ps1 -EnvironmentName vtaxi-dev -Region us-east-1
+.\aulaTEX\aws\initialize-portable-access.ps1 -EnvironmentName vtaxi-dev -Region us-east-1
 git add .vtaxi\README.md .vtaxi\aws-access.enc
 
 # Alternativa si VTAXI_MASTER_PIN ya está definido
-.\scripts\aws\export-access.ps1 -EnvironmentName vtaxi-dev -Region us-east-1
+.\aulaTEX\aws\export-access.ps1 -EnvironmentName vtaxi-dev -Region us-east-1
 
 # En otra clonación, después de crear el stack, restaurar y reiniciar ECS
-.\scripts\aws\import-access.ps1 -EnvironmentName vtaxi-dev -Region us-east-1
+.\aulaTEX\aws\import-access.ps1 -EnvironmentName vtaxi-dev -Region us-east-1
 ```
 
 Para cambiar el PIN y recifrar atómicamente todos los `.enc`, el script solicita
 el PIN actual y el nuevo sin mostrarlos:
 
 ```powershell
-.\scripts\change-master-pin.ps1
+.\aulaTEX\change-master-pin.ps1
 ```
 
 No se pasa ningún PIN como argumento porque quedaría expuesto en historial y
@@ -263,10 +263,10 @@ eliminar el respaldo local al limpiar los artefactos AWS. Revisar siempre la
 previsualización antes de aplicar la limpieza:
 
 ```powershell
-.\scripts\clean-vtaxi-local.ps1 -WhatIf
-.\scripts\clean-vtaxi-local.ps1 -Confirm
+.\aulaTEX\clean-vtaxi-local.ps1 -WhatIf
+.\aulaTEX\clean-vtaxi-local.ps1 -Confirm
 # Solo después de generar y validar aws-access.enc:
-.\scripts\clean-vtaxi-local.ps1 -IncludePlaintextSecrets -Confirm
+.\aulaTEX\clean-vtaxi-local.ps1 -IncludePlaintextSecrets -Confirm
 ```
 
 Consulta [el ciclo de vida de `.vtaxi`](docs/VTAXI-LIFECYCLE.md) para la
@@ -298,7 +298,7 @@ shell web y el build que responde desde `/api/info`; si no coinciden aparece
 Para comparar la versión del workspace con la publicada:
 
 ```bash
-node scripts/check-version.js https://16.58.100.160
+node aulaTEX/check-version.js https://16.58.100.160
 ```
 
 URL local: `http://127.0.0.1:4173`. URL pública activa:
@@ -313,15 +313,15 @@ construye el contenedor y lo publica en ECR; CloudFormation crea CloudFront,
 ALB, ECS Fargate, RDS PostgreSQL, Secrets Manager y CloudWatch.
 
 ```powershell
-.\scripts\deploy-aws-fargate.ps1 -EnvironmentName vtaxi-dev -Region us-east-1
+.\aulaTEX\deploy-aws-fargate.ps1 -EnvironmentName vtaxi-dev -Region us-east-1
 # En actualizaciones ordinarias, evita volver a cargar los datos demo:
-.\scripts\deploy-aws-fargate.ps1 -EnvironmentName vtaxi-dev -Region us-east-1 -SkipSeed
+.\aulaTEX\deploy-aws-fargate.ps1 -EnvironmentName vtaxi-dev -Region us-east-1 -SkipSeed
 ```
 
 En Linux, el flujo equivalente no requiere PowerShell:
 
 ```bash
-./scripts/deploy-aws-fargate.sh --environment-name vtaxi-dev --region us-east-1 --skip-seed
+./aulaTEX/deploy-aws-fargate.sh --environment-name vtaxi-dev --region us-east-1 --skip-seed
 ```
 
 Requiere AWS CLI v2 autenticado, Node.js 20+, `zip`, `unzip`, `openssl` y
@@ -356,7 +356,7 @@ no al certificado público de Caddy en la IP actual. Espera `server.crt` y
 `C:\ProgramData\vTaxi\tls`. Para generar un certificado autofirmado:
 
 ```powershell
-.\scripts\configure-ip-tls.ps1 -PublicIp 172.174.242.218 -Port 8443
+.\aulaTEX\configure-ip-tls.ps1 -PublicIp 172.174.242.218 -Port 8443
 ```
 
 La URL resultante es `https://172.174.242.218:8443/`. El certificado temporal cifra
@@ -391,8 +391,8 @@ Comandos adicionales:
 ```powershell
 npm run local:logs
 npm run local:down
-.\scripts\local-container.ps1 reset  # borra volúmenes y reconstruye
-.\scripts\local-container.ps1 seed   # carga datos demo una vez
+.\aulaTEX\local-container.ps1 reset  # borra volúmenes y reconstruye
+.\aulaTEX\local-container.ps1 seed   # carga datos demo una vez
 ```
 
 Para cambiar las credenciales locales define `VTAXI_LOCAL_DB_PASSWORD`,
@@ -435,8 +435,8 @@ sola vez y no deben añadirse a scripts, historial de shell ni archivos de confi
 Recuperación administrativa local y mensaje para copiar a WhatsApp:
 
 ```bash
-bash scripts/set-admin-from-master-pin.sh
-python3 scripts/whatsapp_message.py
+bash aulaTEX/set-admin-from-master-pin.sh
+python3 aulaTEX/whatsapp_message.py
 ```
 
 Son operaciones distintas: la primera sustituye una clave administrativa activa;
@@ -450,7 +450,7 @@ en el chat. Los requisitos y límites están en la
 Para publicar el stack Docker en una VM Linux con Caddy en `80/443`, usa:
 
 ```bash
-bash ./scripts/deploy-docker-public.sh --public-ip 16.58.100.160
+bash ./aulaTEX/deploy-docker-public.sh --public-ip 16.58.100.160
 ```
 
 El script valida y prueba la aplicación, genera el certificado TLS interno de
@@ -526,12 +526,12 @@ acceso vehicular antes del piloto.
 ## Alternativa histórica: hub Azure
 
 Este flujo corresponde al hub Windows/Azure y no publica el Docker de la IP
-actual. `scripts/deploy-hub.ps1` publica en ese hub de WireGuard:
+actual. `aulaTEX/deploy-hub.ps1` publica en ese hub de WireGuard:
 
 ```powershell
-.\scripts\deploy-hub.ps1 -WhatIf
-.\scripts\deploy-hub.ps1
-.\scripts\deploy-hub.ps1 -Public
+.\aulaTEX\deploy-hub.ps1 -WhatIf
+.\aulaTEX\deploy-hub.ps1
+.\aulaTEX\deploy-hub.ps1 -Public
 ```
 
 La fuente permanece en `Documents\vTaxi`. El script sincroniza servidor, PWA,
@@ -550,7 +550,7 @@ ejecuta revisión y pruebas, y solo publica si ambas pasan. Se detiene con
 `Ctrl+C`. Para comprobar el mismo pipeline una sola vez:
 
 ```powershell
-.\scripts\watch-deploy.ps1 -Once
+.\aulaTEX\watch-deploy.ps1 -Once
 ```
 
 URL de staging: `https://redvpn-consola.eastus.cloudapp.azure.com:4173`.
@@ -575,10 +575,10 @@ a PostgreSQL administrado.
 | `npm run check` | Revision sintactica de cliente y servidor |
 | `npm run admin -- access list` | Metadatos de accesos por API HTTPS; no devuelve claves |
 | `npm run admin -- audit list --limit 100` | Consulta auditoría de accesos |
-| `bash scripts/set-admin-from-master-pin.sh` | Recuperación local: sustituye la clave de un administrador activo |
-| `python3 scripts/access_keys.py show --role drivers` | Muestra secretos del respaldo local; pueden estar desactualizados |
-| `python3 scripts/whatsapp_message.py` | Verifica claves del respaldo e imprime el mensaje; no envía WhatsApp |
-| `bash scripts/deploy-docker-public.sh --public-ip 16.58.100.160` | Valida, reconstruye y publica por Docker |
+| `bash aulaTEX/set-admin-from-master-pin.sh` | Recuperación local: sustituye la clave de un administrador activo |
+| `python3 aulaTEX/access_keys.py show --role drivers` | Muestra secretos del respaldo local; pueden estar desactualizados |
+| `python3 aulaTEX/whatsapp_message.py` | Verifica claves del respaldo e imprime el mensaje; no envía WhatsApp |
+| `bash aulaTEX/deploy-docker-public.sh --public-ip 16.58.100.160` | Valida, reconstruye y publica por Docker |
 | `npm run db:migrate` | Aplica migraciones PostgreSQL |
 | `npm run db:seed` | Carga el demo en PostgreSQL |
 | `npm run simulate:rexnord:inbound` | Publica una ruta no destructiva con dos recogidas en Apodaca y llegada a Rexnord Planta 2 a las 06:00 |
@@ -594,11 +594,11 @@ data/       Datos demo y fallback JSON no versionado
 db/         Migraciones PostgreSQL
 docs/       Arquitectura y hoja de ruta
 infra/      Reserva para despliegue e infraestructura
-scripts/    Preparacion local reproducible
+aulaTEX/    Preparacion local reproducible
 server/     API, WebSocket y reglas del dominio
 tests/      Pruebas node:test
 web/        PWA mobile-first
-base/       Referencias locales, excluidas de Git
+aulaTEX/base/       Referencias locales, excluidas de Git
 ```
 
 Consulta [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) y

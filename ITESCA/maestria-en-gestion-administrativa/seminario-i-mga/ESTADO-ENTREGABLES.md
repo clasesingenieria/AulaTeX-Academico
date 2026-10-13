@@ -1,3 +1,7 @@
+## Tarea 12 preparada el 12/10/2026
+
+[Word acumulativo T12](Entregas/Tarea12_DeLaCruzMunoz.docx), 29 paginas: capitulos anteriores conservados, hipotesis general y especifica, variables, tipo no causal, criterios de contraste y matriz actualizada. Covey intacto. Indice y portada actualizados. [Cotejo y evidencia](referencias-seminario-i/notas-seminario-i/actividad-12-hipotesis/README.md). Cierre consultado: **18/10/2026 23:59**. No enviada; el PDF es solo revision local, no entregable adicional.
+
 # Seminario I: estado de documentos
 
 ## Actualizacion verificada del 10 de octubre
