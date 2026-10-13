@@ -48,23 +48,23 @@
       "Definir raíz IIIEPE con subcarpetas por programa/carrera y materias dentro de cada programa.",
       "Incluir carpeta assets institucional (imagenes, tablas, logos) con nombres normalizados.",
       "Cada materia debe contener COMPILACION.md con comando exacto, .bib esperado y contrato mínimo.",
-      "Evitar duplicación de plantillas: referenciar siempre base/ mediante \\input y rutas compatibles con TEXINPUTS.",
+      "Evitar duplicación de plantillas: referenciar siempre aulaTEX/base/ mediante \\input y rutas compatibles con TEXINPUTS.",
       "Definir IIIEPE como raíz institucional con subcarpetas por programa o carrera y materias dentro de cada programa.",
       "Incluir carpeta assets/ para imágenes, tablas, logos y recursos institucionales con nombres normalizados.",
       "Cada materia debe contener COMPILACION.md con comando exacto, archivo .bib esperado y contrato mínimo de compilación.",
-      "Evitar duplicación de plantillas: referenciar base/ mediante \\input y rutas compatibles con TEXINPUTS.",
+      "Evitar duplicación de plantillas: referenciar aulaTEX/base/ mediante \\input y rutas compatibles con TEXINPUTS.",
       "Separar documentos raíz institucionales de entregables específicos de materia.",
       "Mantener una estructura mínima por materia: objetivo, competencias, desarrollo, evidencias, evaluación y referencias.",
       "Usar nombres de carpetas en minúsculas, sin espacios y con guiones para portabilidad.",
       "Conservar raíz IIIEPE con subcarpetas por programa/carrera y luego por materia.",
       "Mantener assets/ para recursos compartidos con nombres normalizados y portables.",
       "Exigir COMPILACION.md por materia con comando exacto, .bib esperado y contrato mínimo.",
-      "Evitar duplicación de plantillas; reutilizar base/ mediante \\input y rutas compatibles con TEXINPUTS.",
+      "Evitar duplicación de plantillas; reutilizar aulaTEX/base/ mediante \\input y rutas compatibles con TEXINPUTS.",
       "Conservar IIIEPE como raíz institucional con subcarpetas por programa o carrera y materias dentro de cada programa.",
       "Mantener assets/ para imágenes, tablas, logos y recursos compartidos con nombres normalizados, portables y sin espacios.",
       "Cada carpeta de materia debe incluir COMPILACION.md con comando exacto, .bib esperado y contrato mínimo de compilación.",
       "Usar estructura mínima por materia: objetivo, competencias, desarrollo o instrucciones, evidencias, evaluación y referencias.",
-      "Evitar duplicación de plantillas locales; reutilizar base/ mediante \\input y rutas resueltas por TEXINPUTS/BIBINPUTS.",
+      "Evitar duplicación de plantillas locales; reutilizar aulaTEX/base/ mediante \\input y rutas resueltas por TEXINPUTS/BIBINPUTS.",
       "Nombrar carpetas y archivos derivados en minúsculas, con guiones y sin espacios salvo artefactos heredados ya estables."
     ],
     "style_rules": [
@@ -112,22 +112,22 @@
       "No renombrar ni romper archivos canónicos o rutas existentes durante refuerzos posteriores."
     ],
     "latex_rules": [
-      "Usar plantilla institucional derivada de base/Template-Reporte o equivalente homologado.",
+      "Usar plantilla institucional derivada de aulaTEX/base/Template-Reporte o equivalente homologado.",
       "Centralizar bibliografía en bibliografia-iiiepe.bib y bibs locales solo cuando el curso lo requiera.",
       "Declarar portada, índice y secciones con comandos estándar para compatibilidad de compilación.",
       "Evitar paquetes redundantes o conflictivos con el motor base del repositorio.",
-      "Usar plantilla institucional derivada de base/Template-Reporte, base/Templates-Informe o equivalente homologado.",
+      "Usar plantilla institucional derivada de aulaTEX/base/Template-Reporte, aulaTEX/base/Templates-Informe o equivalente homologado.",
       "Centralizar bibliografía general en bibliografia-iiiepe.bib y permitir .bib local solo cuando la materia lo requiera.",
       "Declarar portada, índice, secciones y bibliografía con comandos estándar compatibles con el motor base.",
       "Evitar paquetes redundantes, conflictivos o no necesarios para el documento objetivo.",
       "Usar \\input para bloques reutilizables y evitar copiar plantillas completas en cada materia.",
       "Nombrar etiquetas LaTeX con prefijos estables: sec:, fig:, tab:, eq: y anexo:.",
       "Agregar comentarios TODO o [INV] sin impedir la compilación.",
-      "Usar plantilla homologada desde base/Template-Reporte o base/Templates-Informe.",
+      "Usar plantilla homologada desde aulaTEX/base/Template-Reporte o aulaTEX/base/Templates-Informe.",
       "Centralizar bibliografía institucional en bibliografia-iiiepe.bib; usar .bib local solo si aplica.",
       "Nombrar etiquetas con prefijos estables: sec:, fig:, tab:, eq:, anexo:.",
       "Permitir comentarios % TODO y % [INV] sin romper compilación.",
-      "Usar plantilla homologada desde base/Template-Reporte, base/Templates-Informe, base/Template-Presentacion o equivalente disponible.",
+      "Usar plantilla homologada desde aulaTEX/base/Template-Reporte, aulaTEX/base/Templates-Informe, aulaTEX/base/Template-Presentacion o equivalente disponible.",
       "El archivo raíz institucional sugerido debe resolver \\input{template} mediante TEXINPUTS, no por rutas absolutas.",
       "Centralizar bibliografía institucional en bibliografia-iiiepe.bib; usar .bib local solo si la materia lo requiere.",
       "Declarar portada, índice, secciones, anexos y bibliografía con comandos compatibles con el motor base del repositorio.",
@@ -210,21 +210,21 @@
     "estructura_base": [
       "Raíz IIIEPE con archivos canónicos institucionales y bibliografía central.",
       "Subestructura por carrera/programa > materia > entregables.",
-      "Carpeta assets y referencias a plantillas compartidas en base/.",
+      "Carpeta assets y referencias a plantillas compartidas en aulaTEX/base/.",
       "IIIEPE/reporte-iiiepe.tex como entrada institucional para reportes generales.",
       "IIIEPE/presentacion-iiiepe.tex como entrada institucional para presentaciones.",
       "IIIEPE/bibliografia-iiiepe.bib como bibliografía central verificable.",
       "IIIEPE/assets/ para recursos institucionales normalizados.",
       "IIIEPE/<programa-o-carrera>/<materia>/ para contenidos específicos.",
       "Cada materia con reporte-<materia>.tex, actividad-<materia>.tex opcional, bibliografia local opcional y COMPILACION.md.",
-      "Uso de base/ para plantillas compartidas mediante rutas resueltas por TEXINPUTS.",
+      "Uso de aulaTEX/base/ para plantillas compartidas mediante rutas resueltas por TEXINPUTS.",
       "IIIEPE/reporte-iiiepe.tex",
       "IIIEPE/presentacion-iiiepe.tex",
       "IIIEPE/bibliografia-iiiepe.bib",
       "IIIEPE/assets/",
       "IIIEPE/<programa-o-carrera>/<materia>/ con reporte, actividad opcional, .bib opcional y COMPILACION.md",
       "Cada materia debe contener reporte-<materia>.tex, actividad-<materia>.tex si aplica, bibliografía local opcional y COMPILACION.md.",
-      "Las plantillas compartidas deben invocarse desde base/ mediante rutas resueltas por TEXINPUTS."
+      "Las plantillas compartidas deben invocarse desde aulaTEX/base/ mediante rutas resueltas por TEXINPUTS."
     ],
     "criterios_evaluacion": [
       "Homogeneidad formal entre materias y documentos institucionales.",
@@ -453,7 +453,7 @@
       "Usar \\bibliography{bibliografia-iiiepe} cuando el template y el flujo bibliográfico lo permitan.",
       "Agregar checklist comentado: compila, citas resueltas, rutas relativas, assets existentes y PDF final generado.",
       "Prepara una raíz institucional reutilizable con carpetas por carrera, carpeta assets y referencias claras a plantillas LaTeX compartidas.",
-      "Usar plantilla institucional derivada de base/Template-Reporte o equivalente homologado.",
+      "Usar plantilla institucional derivada de aulaTEX/base/Template-Reporte o equivalente homologado.",
       "Centralizar bibliografía en bibliografia-iiiepe.bib y bibs locales solo cuando el curso lo requiera.",
       "Declarar portada, índice y secciones con comandos estándar para compatibilidad de compilación.",
       "Definir raíz IIIEPE con subcarpetas por programa/carrera y materias dentro de cada programa.",
@@ -511,7 +511,7 @@
       "Agregar tabla breve de control editorial: versión, fecha, responsable y estado.",
       "Raíz IIIEPE con archivos canónicos institucionales y bibliografía central.",
       "Subestructura por carrera/programa > materia > entregables.",
-      "Carpeta assets y referencias a plantillas compartidas en base/.",
+      "Carpeta assets y referencias a plantillas compartidas en aulaTEX/base/.",
       "Párrafos breves, secciones jerárquicas y objetivos evaluables por unidad.",
       "Separar contenido base, instrucciones y entregables para facilitar reutilización.",
       "Incluir criterios de evaluación explícitos en toda actividad o reporte.",
@@ -562,7 +562,7 @@
         "level": "interinstitucional",
         "label": "Interinstitucional",
         "memory": "",
-        "context": "Target: .\n\n## README.md\n# AulaTeX-Academico\n\nEntorno academico en LaTeX organizado por institucion, con una base comun de\nplantillas Pizarror y puntos de entrada canonicos para reportes, actividades,\npresentaciones y bibliografias.\n\n## Flujo Principal\n\n- Plantillas maestras y motor LaTeX: `base/`.\n- Trabajos canonicos por institucion: `UnADM/`, `UCNL/`, `IIIEPE/`, `ITESCA/`.\n- Material editorial y criterios de revision: `retroalimentacion-editorial/`.\n- Automatizacion de compilacion y exportacion: `scripts/`.\n- Residuales de compilacion: `.build/`.\n\nFlujo editorial recomendado en AulaTeX:\n\n1. Memoria editorial.\n2. Investigación.\n3. Extractor.\n4. Generación y agente.\n5. Compilación.\n\n## Comandos Utiles\n\n```powershell\n.\\scripts\\latexmk-build.ps1 .\\UnADM\\reporte-unadm.tex\n```\n\n```powershell\n.\\scripts\\latexmk-build.ps1 .\\IIIEPE\\temas-selectos-de-matematicas-I\\reporte-temas-selectos-de-matematicas-I.tex\n```\n\n```powershell\n.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\primer-ingreso\\reporte-primer-ingreso.tex\n```\n\n```powershell\n.\\scripts\\latexmk-build.ps1 .\\base\\Templates-Informe\\main.tex\n```\n\n```powershell\n.\\scripts\\aulatex.ps1\n```\n\n```powershell\n.\\scripts\\aulatex.ps1 investigation --target .\\UnADM\\licenciatura-en-derecho-unadm\\historia-del-derecho-en-mexico-lde --query \"historia del derecho en mexico unadm programa analitico\"\n```\n\nEl PDF final se copia en la misma carpeta del archivo `.tex`.\n\nCada carpeta de materia tiene un `COMPILACION.md` con el comando exacto, el\n`.bib` esperado y el contrato de compilacion. Regla central: al script solo se\nle pasa el `.tex`; `\\input{template}` se resuelve con `TEXINPUTS` y\n`\\bibliography{...}` se resuelve con `BIBINPUTS`, ambos definidos en\n`.latexmkrc`.\n\n## Estructura Canonica\n\n```text\nAulaTeX-Academico/\n|-- README.md\n|"
+        "context": "Target: .\n\n## README.md\n# AulaTeX-Academico\n\nEntorno academico en LaTeX organizado por institucion, con una base comun de\nplantillas Pizarror y puntos de entrada canonicos para reportes, actividades,\npresentaciones y bibliografias.\n\n## Flujo Principal\n\n- Plantillas maestras y motor LaTeX: `aulaTEX/base/`.\n- Trabajos canonicos por institucion: `UnADM/`, `UCNL/`, `IIIEPE/`, `ITESCA/`.\n- Material editorial y criterios de revision: `retroalimentacion-editorial/`.\n- Automatizacion de compilacion y exportacion: `scripts/`.\n- Residuales de compilacion: `.build/`.\n\nFlujo editorial recomendado en AulaTeX:\n\n1. Memoria editorial.\n2. Investigación.\n3. Extractor.\n4. Generación y agente.\n5. Compilación.\n\n## Comandos Utiles\n\n```powershell\n.\\scripts\\latexmk-build.ps1 .\\UnADM\\reporte-unadm.tex\n```\n\n```powershell\n.\\scripts\\latexmk-build.ps1 .\\IIIEPE\\temas-selectos-de-matematicas-I\\reporte-temas-selectos-de-matematicas-I.tex\n```\n\n```powershell\n.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\primer-ingreso\\reporte-primer-ingreso.tex\n```\n\n```powershell\n.\\scripts\\latexmk-build.ps1 .\\aulaTEX/base\\Templates-Informe\\main.tex\n```\n\n```powershell\n.\\scripts\\aulatex.ps1\n```\n\n```powershell\n.\\scripts\\aulatex.ps1 investigation --target .\\UnADM\\licenciatura-en-derecho-unadm\\historia-del-derecho-en-mexico-lde --query \"historia del derecho en mexico unadm programa analitico\"\n```\n\nEl PDF final se copia en la misma carpeta del archivo `.tex`.\n\nCada carpeta de materia tiene un `COMPILACION.md` con el comando exacto, el\n`.bib` esperado y el contrato de compilacion. Regla central: al script solo se\nle pasa el `.tex`; `\\input{template}` se resuelve con `TEXINPUTS` y\n`\\bibliography{...}` se resuelve con `BIBINPUTS`, ambos definidos en\n`.latexmkrc`.\n\n## Estructura Canonica\n\n```text\nAulaTeX-Academico/\n|-- README.md\n|"
       }
     ],
     "parent": {
@@ -570,7 +570,7 @@
       "level": "interinstitucional",
       "label": "Interinstitucional",
       "memory": "",
-      "context": "Target: .\n\n## README.md\n# AulaTeX-Academico\n\nEntorno academico en LaTeX organizado por institucion, con una base comun de\nplantillas Pizarror y puntos de entrada canonicos para reportes, actividades,\npresentaciones y bibliografias.\n\n## Flujo Principal\n\n- Plantillas maestras y motor LaTeX: `base/`.\n- Trabajos canonicos por institucion: `UnADM/`, `UCNL/`, `IIIEPE/`, `ITESCA/`.\n- Material editorial y criterios de revision: `retroalimentacion-editorial/`.\n- Automatizacion de compilacion y exportacion: `scripts/`.\n- Residuales de compilacion: `.build/`.\n\nFlujo editorial recomendado en AulaTeX:\n\n1. Memoria editorial.\n2. Investigación.\n3. Extractor.\n4. Generación y agente.\n5. Compilación.\n\n## Comandos Utiles\n\n```powershell\n.\\scripts\\latexmk-build.ps1 .\\UnADM\\reporte-unadm.tex\n```\n\n```powershell\n.\\scripts\\latexmk-build.ps1 .\\IIIEPE\\temas-selectos-de-matematicas-I\\reporte-temas-selectos-de-matematicas-I.tex\n```\n\n```powershell\n.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\primer-ingreso\\reporte-primer-ingreso.tex\n```\n\n```powershell\n.\\scripts\\latexmk-build.ps1 .\\base\\Templates-Informe\\main.tex\n```\n\n```powershell\n.\\scripts\\aulatex.ps1\n```\n\n```powershell\n.\\scripts\\aulatex.ps1 investigation --target .\\UnADM\\licenciatura-en-derecho-unadm\\historia-del-derecho-en-mexico-lde --query \"historia del derecho en mexico unadm programa analitico\"\n```\n\nEl PDF final se copia en la misma carpeta del archivo `.tex`.\n\nCada carpeta de materia tiene un `COMPILACION.md` con el comando exacto, el\n`.bib` esperado y el contrato de compilacion. Regla central: al script solo se\nle pasa el `.tex`; `\\input{template}` se resuelve con `TEXINPUTS` y\n`\\bibliography{...}` se resuelve con `BIBINPUTS`, ambos definidos en\n`.latexmkrc`.\n\n## Estructura Canonica\n\n```text\nAulaTeX-Academico/\n|-- README.md\n|-- base/\n|   |-- cwl-docs/\n|   |-- Export-Subtemmplate/\n|   |-- Plantilla-Informe/\n|   |-- latex/\n|   |-- Professional-CV/\n|   |-- Template-Articulo/\n|   |-- Template-Auxiliares/\n|   |-- Template-Controles/\n|   |-- Templates-Informe/\n|   |-- Template-Informe-master/\n|   |-- Template-latex.github.io/\n|   |-- Template-Poster/\n|   |-- Template-Presentacion/\n|   |-- Template-Reporte/\n|   `-- Template-Tesis/\n|-- UnADM/\n|   |-- bibliografia-unadm.bib\n|   |-- reporte-unadm.tex\n|   |-- presentacion-unadm.tex\n|   |-- referencias-unadm/\n|   |-- redaccion-en-contextos-virtuales/\n|   |-- etica-y-moral-juridica/\n|   `-- filosofia-del-derecho/\n|-- UCNL/\n|   |-- bibliografia-ucnl.bib\n|   |-- reporte-ucnl.t"
+      "context": "Target: .\n\n## README.md\n# AulaTeX-Academico\n\nEntorno academico en LaTeX organizado por institucion, con una base comun de\nplantillas Pizarror y puntos de entrada canonicos para reportes, actividades,\npresentaciones y bibliografias.\n\n## Flujo Principal\n\n- Plantillas maestras y motor LaTeX: `aulaTEX/base/`.\n- Trabajos canonicos por institucion: `UnADM/`, `UCNL/`, `IIIEPE/`, `ITESCA/`.\n- Material editorial y criterios de revision: `retroalimentacion-editorial/`.\n- Automatizacion de compilacion y exportacion: `scripts/`.\n- Residuales de compilacion: `.build/`.\n\nFlujo editorial recomendado en AulaTeX:\n\n1. Memoria editorial.\n2. Investigación.\n3. Extractor.\n4. Generación y agente.\n5. Compilación.\n\n## Comandos Utiles\n\n```powershell\n.\\scripts\\latexmk-build.ps1 .\\UnADM\\reporte-unadm.tex\n```\n\n```powershell\n.\\scripts\\latexmk-build.ps1 .\\IIIEPE\\temas-selectos-de-matematicas-I\\reporte-temas-selectos-de-matematicas-I.tex\n```\n\n```powershell\n.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\primer-ingreso\\reporte-primer-ingreso.tex\n```\n\n```powershell\n.\\scripts\\latexmk-build.ps1 .\\aulaTEX/base\\Templates-Informe\\main.tex\n```\n\n```powershell\n.\\scripts\\aulatex.ps1\n```\n\n```powershell\n.\\scripts\\aulatex.ps1 investigation --target .\\UnADM\\licenciatura-en-derecho-unadm\\historia-del-derecho-en-mexico-lde --query \"historia del derecho en mexico unadm programa analitico\"\n```\n\nEl PDF final se copia en la misma carpeta del archivo `.tex`.\n\nCada carpeta de materia tiene un `COMPILACION.md` con el comando exacto, el\n`.bib` esperado y el contrato de compilacion. Regla central: al script solo se\nle pasa el `.tex`; `\\input{template}` se resuelve con `TEXINPUTS` y\n`\\bibliography{...}` se resuelve con `BIBINPUTS`, ambos definidos en\n`.latexmkrc`.\n\n## Estructura Canonica\n\n```text\nAulaTeX-Academico/\n|-- README.md\n|-- aulaTEX/base/\n|   |-- cwl-docs/\n|   |-- Export-Subtemmplate/\n|   |-- Plantilla-Informe/\n|   |-- latex/\n|   |-- Professional-CV/\n|   |-- Template-Articulo/\n|   |-- Template-Auxiliares/\n|   |-- Template-Controles/\n|   |-- Templates-Informe/\n|   |-- Template-Informe-master/\n|   |-- Template-latex.github.io/\n|   |-- Template-Poster/\n|   |-- Template-Presentacion/\n|   |-- Template-Reporte/\n|   `-- Template-Tesis/\n|-- UnADM/\n|   |-- bibliografia-unadm.bib\n|   |-- reporte-unadm.tex\n|   |-- presentacion-unadm.tex\n|   |-- referencias-unadm/\n|   |-- redaccion-en-contextos-virtuales/\n|   |-- etica-y-moral-juridica/\n|   `-- filosofia-del-derecho/\n|-- UCNL/\n|   |-- bibliografia-ucnl.bib\n|   |-- reporte-ucnl.t"
     },
     "siblings_synthesis": "- Hermanos existentes: 8 de nivel institucion.\n- Nombres de referencia: IIIEPE, ITESCA, UANL, UCNL, UnADM, UAS, UAS-INGESTA, UCNL.\n- Hermanos con memoria o antecedentes registrados: 8.\n- Artefactos recurrentes detectados: bibliografia-ucnl.bib, presentacion-ucnl.tex, reporte-ucnl.tex.\n- Sintetiza patrones de estructura, longitud típica, bibliografía recurrente, criterios de evaluación y estilo sin copiar contenido literal.\n- Usa a los hermanos solo como contraste editorial para homogeneizar la nueva propuesta.",
     "ingesta": {
@@ -587,7 +587,7 @@
     "reglas_interinstitucionales": {
       "key": "interinstitucional",
       "memory": "",
-      "context": "Target: .\n\n## README.md\n# AulaTeX-Academico\n\nEntorno academico en LaTeX organizado por institucion, con una base comun de\nplantillas Pizarror y puntos de entrada canonicos para reportes, actividades,\npresentaciones y bibliografias.\n\n## Flujo Principal\n\n- Plantillas maestras y motor LaTeX: `base/`.\n- Trabajos canonicos por institucion: `UnADM/`, `UCNL/`, `IIIEPE/`, `ITESCA/`.\n- Material editorial y criterios de revision: `retroalimentacion-editorial/`.\n- Automatizacion de compilacion y exportacion: `scripts/`.\n- Residuales de compilacion: `.build/`.\n\nFlujo editorial recomendado en AulaTeX:\n\n1. Memoria editorial.\n2. Investigación.\n3. Extractor.\n4. Generación y agente.\n5. Compilación.\n\n## Comandos Utiles\n\n```powershell\n.\\scripts\\latexmk-build.ps1 .\\UnADM\\reporte-unadm.tex\n```\n\n```powershell\n.\\scripts\\latexmk-build.ps1 .\\IIIEPE\\temas-selectos-de-matematicas-I\\reporte-temas-selectos-de-matematicas-I.tex\n```\n\n```powershell\n.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\primer-ingreso\\reporte-primer-ingreso.tex\n```\n\n```powershell\n.\\scripts\\latexmk-build.ps1 .\\base\\Templates-Informe\\main.tex\n```\n\n```powershell\n.\\scripts\\aulatex.ps1\n```\n\n```powershell\n.\\scripts\\aulatex.ps1 investigation --target .\\UnADM\\licenciatura-en-derecho-unadm\\historia-del-derecho-en-mexico-lde --query \"historia del derecho en mexico unadm programa analitico\"\n```\n\nEl PDF final se copia en la misma carpeta del archivo `.tex`.\n\nCada carpeta de materia tiene un `COMPILACION.md` con el comando exacto, el\n`.bib` esperado y el contrato de compilacion. Regla central: al script solo se\nle pasa el `.tex`; `\\input{template}` se resuelve con `TEXINPUTS` y\n`\\bibliography{...}` se resuelve con `BIBINPUTS`, ambos definidos en\n`.latexmkrc`.\n\n## Estructura Canonica\n\n```text\nAulaTeX-Academico/\n|-- README.md\n|-- base/\n|   |-- cwl-docs/\n|   |-- Export-Subtemmplate/\n|   |-- Plantilla-Informe/\n|   |-- latex/\n|   |-- Professional-CV/\n|   |-- Template-Articulo/\n|   |-- Template-Auxiliares/\n|   |-- Template-Controles/\n|   |-- Templates-Informe/\n|   |-- Template-Informe-master/\n|   |-- Template-latex.github.io/\n|   |-- Template-Poster/\n|   |-- Template-Presentacion/\n|   |-- Template-Reporte/\n|   `-- Template-"
+      "context": "Target: .\n\n## README.md\n# AulaTeX-Academico\n\nEntorno academico en LaTeX organizado por institucion, con una base comun de\nplantillas Pizarror y puntos de entrada canonicos para reportes, actividades,\npresentaciones y bibliografias.\n\n## Flujo Principal\n\n- Plantillas maestras y motor LaTeX: `aulaTEX/base/`.\n- Trabajos canonicos por institucion: `UnADM/`, `UCNL/`, `IIIEPE/`, `ITESCA/`.\n- Material editorial y criterios de revision: `retroalimentacion-editorial/`.\n- Automatizacion de compilacion y exportacion: `scripts/`.\n- Residuales de compilacion: `.build/`.\n\nFlujo editorial recomendado en AulaTeX:\n\n1. Memoria editorial.\n2. Investigación.\n3. Extractor.\n4. Generación y agente.\n5. Compilación.\n\n## Comandos Utiles\n\n```powershell\n.\\scripts\\latexmk-build.ps1 .\\UnADM\\reporte-unadm.tex\n```\n\n```powershell\n.\\scripts\\latexmk-build.ps1 .\\IIIEPE\\temas-selectos-de-matematicas-I\\reporte-temas-selectos-de-matematicas-I.tex\n```\n\n```powershell\n.\\scripts\\latexmk-build.ps1 .\\ITESCA\\ingenieria-en-sistemas-computacionales\\primer-ingreso\\reporte-primer-ingreso.tex\n```\n\n```powershell\n.\\scripts\\latexmk-build.ps1 .\\aulaTEX/base\\Templates-Informe\\main.tex\n```\n\n```powershell\n.\\scripts\\aulatex.ps1\n```\n\n```powershell\n.\\scripts\\aulatex.ps1 investigation --target .\\UnADM\\licenciatura-en-derecho-unadm\\historia-del-derecho-en-mexico-lde --query \"historia del derecho en mexico unadm programa analitico\"\n```\n\nEl PDF final se copia en la misma carpeta del archivo `.tex`.\n\nCada carpeta de materia tiene un `COMPILACION.md` con el comando exacto, el\n`.bib` esperado y el contrato de compilacion. Regla central: al script solo se\nle pasa el `.tex`; `\\input{template}` se resuelve con `TEXINPUTS` y\n`\\bibliography{...}` se resuelve con `BIBINPUTS`, ambos definidos en\n`.latexmkrc`.\n\n## Estructura Canonica\n\n```text\nAulaTeX-Academico/\n|-- README.md\n|-- aulaTEX/base/\n|   |-- cwl-docs/\n|   |-- Export-Subtemmplate/\n|   |-- Plantilla-Informe/\n|   |-- latex/\n|   |-- Professional-CV/\n|   |-- Template-Articulo/\n|   |-- Template-Auxiliares/\n|   |-- Template-Controles/\n|   |-- Templates-Informe/\n|   |-- Template-Informe-master/\n|   |-- Template-latex.github.io/\n|   |-- Template-Poster/\n|   |-- Template-Presentacion/\n|   |-- Template-Reporte/\n|   `-- Template-"
     }
   },
   "generation_contract": {

@@ -3,9 +3,9 @@
 Comandos desde la raiz del repositorio:
 
 ```powershell
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\fundamentos-para-la-enseñanza-y-el-aprendizaje-I\reporte-fundamentos-para-la-enseñanza-y-el-aprendizaje-I.tex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\fundamentos-para-la-enseñanza-y-el-aprendizaje-I\reporte-fundamentos-para-la-enseñanza-y-el-aprendizaje-I-Actividad-2.tex
-.\scripts\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\fundamentos-para-la-enseñanza-y-el-aprendizaje-I\presentacion-fundamentos-para-la-enseñanza-y-el-aprendizaje-I.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\fundamentos-para-la-enseñanza-y-el-aprendizaje-I\reporte-fundamentos-para-la-enseñanza-y-el-aprendizaje-I.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\fundamentos-para-la-enseñanza-y-el-aprendizaje-I\reporte-fundamentos-para-la-enseñanza-y-el-aprendizaje-I-Actividad-2.tex
+.\aulaTEX\latexmk-build.ps1 .\UnADM\licenciatura-en-derecho-unadm\fundamentos-para-la-enseñanza-y-el-aprendizaje-I\presentacion-fundamentos-para-la-enseñanza-y-el-aprendizaje-I.tex
 ```
 
 Validaciones:

@@ -3,16 +3,16 @@
 Ejecutar siempre desde la raiz del proyecto:
 
 ```powershell
-.\scripts\latexmk-build.ps1 ".\IIIEPE\maestria-en-enseñanza-y-aprendizaje-de-las-matematicas\fundamentos-para-la-enseñanza-y-el-aprendizaje-I\reporte-fundamentos-para-la-enseñanza-y-el-aprendizaje-I.tex"
-.\scripts\latexmk-build.ps1 ".\IIIEPE\maestria-en-enseñanza-y-aprendizaje-de-las-matematicas\fundamentos-para-la-enseñanza-y-el-aprendizaje-I\reporte-fundamentos-para-la-enseñanza-y-el-aprendizaje-I-Actividad-1.tex"
-.\scripts\latexmk-build.ps1 ".\IIIEPE\maestria-en-enseñanza-y-aprendizaje-de-las-matematicas\fundamentos-para-la-enseñanza-y-el-aprendizaje-I\presentacion-fundamentos-para-la-enseñanza-y-el-aprendizaje.tex"
+.\aulaTEX\latexmk-build.ps1 ".\IIIEPE\maestria-en-enseñanza-y-aprendizaje-de-las-matematicas\fundamentos-para-la-enseñanza-y-el-aprendizaje-I\reporte-fundamentos-para-la-enseñanza-y-el-aprendizaje-I.tex"
+.\aulaTEX\latexmk-build.ps1 ".\IIIEPE\maestria-en-enseñanza-y-aprendizaje-de-las-matematicas\fundamentos-para-la-enseñanza-y-el-aprendizaje-I\reporte-fundamentos-para-la-enseñanza-y-el-aprendizaje-I-Actividad-1.tex"
+.\aulaTEX\latexmk-build.ps1 ".\IIIEPE\maestria-en-enseñanza-y-aprendizaje-de-las-matematicas\fundamentos-para-la-enseñanza-y-el-aprendizaje-I\presentacion-fundamentos-para-la-enseñanza-y-el-aprendizaje.tex"
 ```
 
 ## Contrato de compilación
 
 - El único argumento obligatorio del script es la ruta del `.tex`.
 - El `\input{template}` no se pasa como argumento. MiKTeX lo busca con `TEXINPUTS`, definido en `.latexmkrc`.
-- En reportes, `\input{template}` debe resolver a `base/Plantilla-Informe/template.tex`.
+- En reportes, `\input{template}` debe resolver a `aulaTEX/base/Plantilla-Informe/template.tex`.
 - El `.bib` no se pasa al script. Los reportes deben declarar `\bibliography{fundamentos-para-la-enseñanza-y-el-aprendizaje-I}`.
 - BibTeX busca `fundamentos-para-la-enseñanza-y-el-aprendizaje-I.bib` con `BIBINPUTS`.
 - El estilo `natnumurl.bst` se resuelve con `BSTINPUTS`.
