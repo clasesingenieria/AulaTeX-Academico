@@ -7,28 +7,28 @@ Las citas textuales se extrajeron de las fuentes de entrada. La búsqueda puede 
 **Calidad estimada:** media
 **Mejor similitud:** 0.1691
 **Similitud promedio:** 0.1272
-**Fuentes:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf; Garcia-Ricci-2011.pdf
-**Ubicaciones:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 21; Garcia-Ricci-2011.pdf, p. 19; Garcia-Ricci-2011.pdf, p. 24; Garcia-Ricci-2011.pdf, p. 30; Garcia-Ricci-2011.pdf, p. 31; Garcia-Ricci-2011.pdf, p. 33; Garcia-Ricci-2011.pdf, p. 34
+**Fuentes:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf
+**Ubicaciones:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 21; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 19; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 24; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 30; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 31; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 33; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 34
 
-### Garcia-Ricci-2011.pdf — p. 19 — similitud 0.1691
+### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 19 — similitud 0.1691
 
 **Detalle de puntaje:** tfidf=0.0991; bonus=0.0700
 
 > Colección de Textos sobre Derechos Humanos Finalmente, otra institución creada durante el abso- lutismo fue la diplomacia, integrada por un cuerpo per- manente y especializado de funcionarios, quienes, al ac- tuar conforme a reglas precisas, dieron origen a un derecho público europeo y a un sistema internacional de Estados.30 Resulta importante reflexionar sobre la importancia que jugó el Estado absoluto en la consolidación de los mo- dernos Estados occidentales. El absolutismo introdujo modernidad jurídica, pues creó las instituciones “estatales” que persisten hasta nuestros días: ejército, burocracia, sis- temas nacionales de impuestos y un derecho codificado.
 
-### Garcia-Ricci-2011.pdf — p. 24 — similitud 0.1250
+### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 24 — similitud 0.1250
 
 **Detalle de puntaje:** tfidf=0.0550; bonus=0.0700
 
 > Frente al absolutismo de los reyes franceses, Juan Ja- cobo Rousseau, en El contrato social, propondrá un fun- damento racional, no divino, para el surgimiento del Es- tado. Rousseau señaló que frente al estado de naturaleza, los hombres voluntariamente pactan, consienten, convie- nen en renunciar a su fuerza y libertad originales para ase- gurar su conservación.
 
-### Garcia-Ricci-2011.pdf — p. 31 — similitud 0.1213
+### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 31 — similitud 0.1213
 
 **Detalle de puntaje:** tfidf=0.0513; bonus=0.0700
 
 > Del concepto racional normativo de constitución se derivó también la idea de la “despersonalización de la soberanía’”, pues si por ésta se entiende el poder de man- do absoluto, ahora la constitución será la soberana, al ser ella quien crea todos los poderes de mando, sin que al- gún otro poder esté por encima de ella.66 Además, el con- cepto también permitió terminar con todo el elemento personal histórico y socialmente particularizado –carac- terístico del absolutismo– del Estado, pues lo presenta como un ente racional y objetivo.67 La constitución es, pues, el instrumento a partir del cual el Estado se sujetará al Derecho, con lo que se crea entonces el Estado de Derecho.
 
-### Garcia-Ricci-2011.pdf — p. 34 — similitud 0.1209
+### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 34 — similitud 0.1209
 
 **Detalle de puntaje:** tfidf=0.0509; bonus=0.0700
 
@@ -40,19 +40,19 @@ Las citas textuales se extrajeron de las fuentes de entrada. La búsqueda puede 
 
 > Sin embargo, es sólo con la igualdad formal que se consiguió con la construcción del Estado de Derecho que se pudo superar esa pervivencia del modelo jurídico político medieval. Este ideal está expresamente señalado en la Declara- ción de los Derechos del Hombre y del Ciudadano, resultado fun- damental de la revolución francesa, que muy bien sirve para explicar la construcción del nuevo modelo frente al arrumbado absolutismo. Si ya en su primer artículo se dirá que «Los hom- bres nacen y permanecen libres e iguales en derechos», en el artículo 6 se establecerá que «La ley es la expresión de la «volun- tad general».
 
-### Garcia-Ricci-2011.pdf — p. 33 — similitud 0.1203
+### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 33 — similitud 0.1203
 
 **Detalle de puntaje:** tfidf=0.0503; bonus=0.0700
 
 > Ya la propia Declaración de los Derechos del Hombre y del Ciudadano, analizada en el apartado anterior, apuntó los primeros: 1) la división de poderes; 2) la garantía de los de- rechos fundamentales; 3) la primacía de ley por ser expre- sión de la voluntad general frente a las demás normas jurí- dicas, y 4) la soberanía nacional. A pesar de que el Estado de Derecho es el resultado de una doctrina económica, esto es, el liberalismo, y re- presenta el triunfo de la burguesía frente al absolutismo, se considera una conquista histórica irreversible.
 
-### Garcia-Ricci-2011.pdf — p. 19 — similitud 0.1202
+### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 19 — similitud 0.1202
 
 **Detalle de puntaje:** tfidf=0.0502; bonus=0.0700
 
 > Además, al no haberse desplazado el poder político de los nobles, éstos siguieron dominando a las masas, cuyo descontento aumentaba progresivamente. Lo que sí fortaleció el absolutismo fue el desarrollo de los capitales mercantiles y manufactureros. Esto permitió la consolidación de la burguesía, que asumirá un papel pro- tagónico en el surgimiento del Estado moderno.
 
-### Garcia-Ricci-2011.pdf — p. 30 — similitud 0.1198
+### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 30 — similitud 0.1198
 
 **Detalle de puntaje:** tfidf=0.0498; bonus=0.0700
 
@@ -77,10 +77,10 @@ No se localizaron citas textuales por encima del umbral configurado.
 **Calidad estimada:** baja
 **Mejor similitud:** 0.0812
 **Similitud promedio:** 0.0622
-**Fuentes:** CPEUM-consulta-2026-10-09.pdf; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf; En defensa del estado de derech - Ignacio Campoy Cervera.pdf; Teoria pura del derecho - Hans Kelsen.pdf
-**Ubicaciones:** CPEUM-consulta-2026-10-09.pdf, p. 18; CPEUM-consulta-2026-10-09.pdf, p. 22; CPEUM-consulta-2026-10-09.pdf, p. 379; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 18; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 22; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 59; Teoria pura del derecho - Hans Kelsen.pdf, p. 256; Teoria pura del derecho - Hans Kelsen.pdf, p. 53
+**Fuentes:** Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf; En defensa del estado de derech - Ignacio Campoy Cervera.pdf; Teoria pura del derecho - Hans Kelsen.pdf
+**Ubicaciones:** Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 18; Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 22; Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 379; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 18; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 22; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 59; Teoria pura del derecho - Hans Kelsen.pdf, p. 256; Teoria pura del derecho - Hans Kelsen.pdf, p. 53
 
-### CPEUM-consulta-2026-10-09.pdf — p. 22 — similitud 0.0812
+### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 22 — similitud 0.0812
 
 **Detalle de puntaje:** tfidf=0.0712; bonus=0.0100
 
@@ -104,7 +104,7 @@ No se localizaron citas textuales por encima del umbral configurado.
 
 > Los funcionarios y empleados públicos respetarán el ejercicio del derecho de petición, siempre que ésta se formule por escrito, de manera pacífica y respetuosa; pero en materia política sólo podrán hacer uso de ese derecho los ciudadanos de la República. A toda petición deberá recaer un acuerdo escrito de la autoridad a quien se haya dirigido, la cual tiene obligación de hacerlo conocer en breve término al peticionario. Artículo original DOF 05-02-1917 Artículo 9o.
 
-### CPEUM-consulta-2026-10-09.pdf — p. 18 — similitud 0.0542
+### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 18 — similitud 0.0542
 
 **Detalle de puntaje:** tfidf=0.0442; bonus=0.0100
 
@@ -122,7 +122,7 @@ No se localizaron citas textuales por encima del umbral configurado.
 
 > Desde el punto de vista de una consideración orientada a la dinámica del derecho, la implantación de una norma individual por el tribunal constituye una etapa intermedia en el proceso iniciado con la erección de la constitución, y que, pasando por la legislación y la costumbre, lIeva a la sentencia judicial y de ésta, a la ejecución de la sanción. Este proceso, en el cual el derecho se autorreproduce permanentemente, va de 10 general (o abstracto) a 10 indivi- dual (o concreto).
 
-### CPEUM-consulta-2026-10-09.pdf — p. 379 — similitud 0.0485
+### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 379 — similitud 0.0485
 
 **Detalle de puntaje:** tfidf=0.0385; bonus=0.0100
 
@@ -135,8 +135,8 @@ No se localizaron citas textuales por encima del umbral configurado.
 **Calidad estimada:** media
 **Mejor similitud:** 0.2492
 **Similitud promedio:** 0.1549
-**Fuentes:** CPEUM-consulta-2026-10-09.pdf; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf; En defensa del estado de derech - Ignacio Campoy Cervera.pdf; Garcia-Ricci-2011.pdf; Teoria pura del derecho - Hans Kelsen.pdf
-**Ubicaciones:** CPEUM-consulta-2026-10-09.pdf, p. 264; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 263; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 19; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 31; Garcia-Ricci-2011.pdf, p. 11; Garcia-Ricci-2011.pdf, p. 22; Teoria pura del derecho - Hans Kelsen.pdf, p. 170; Teoria pura del derecho - Hans Kelsen.pdf, p. 47
+**Fuentes:** Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf; En defensa del estado de derech - Ignacio Campoy Cervera.pdf; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf; Teoria pura del derecho - Hans Kelsen.pdf
+**Ubicaciones:** Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 264; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 263; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 19; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 31; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 11; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 22; Teoria pura del derecho - Hans Kelsen.pdf, p. 170; Teoria pura del derecho - Hans Kelsen.pdf, p. 47
 
 ### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 19 — similitud 0.2492
 
@@ -144,7 +144,7 @@ No se localizaron citas textuales por encima del umbral configurado.
 
 > Frente a la poliarquía propia de la Edad Media, en la que los miembros de los diferentes estamentos sociales, gremios o ciudades existentes debían de regirse, más allá de las normas comunes, por las normas que les eran propias, el Estado moder- no se construyó sobre la base de la configuración de un poder 19
 
-### Garcia-Ricci-2011.pdf — p. 11 — similitud 0.2222
+### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 11 — similitud 0.2222
 
 **Detalle de puntaje:** tfidf=0.1422; bonus=0.0800
 
@@ -162,7 +162,7 @@ No se localizaron citas textuales por encima del umbral configurado.
 
 > Así, leemos en la Biblia 21 que un buey que ha matado a un hombre, debe ser muerto. En la Antigüedad existla en Atenas un tribunal especial ante el cual se procesaba una piedra o una espada, o cualquier objeto que hubiera provocado la muerte de un hom- bre, hay que suponer que sin intención.” Y todavía en la Edad Media era posible querellar a un animal, por ejemplo, a un toro, que hubiera producido la muerte de un ser humano, o a la langosta que hubiera destruido la cosecha.
 
-### Garcia-Ricci-2011.pdf — p. 22 — similitud 0.1615
+### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 22 — similitud 0.1615
 
 **Detalle de puntaje:** tfidf=0.0815; bonus=0.0800
 
@@ -174,7 +174,7 @@ No se localizaron citas textuales por encima del umbral configurado.
 
 > La obligatoriedad del Estado de garantizar la educación media superior, como deber del mismo de ofrecer un lugar para cursarla a quien teniendo la edad típica hubiera concluido la educación básica, se realizará de manera gradual y creciente a partir del ciclo escolar 2012-2013 y hasta lograr la cobertura total en sus diversas modalidades en el país a más tardar en el ciclo escolar 2021-2022, con la concurrencia presupuestal de la Federación y de las entidades federativas, y en los términos establecidos en los instrumentos del Sistema Nacional y los Sistemas Estatales de Planeación Democrática del Desarrollo. Tercero.
 
-### CPEUM-consulta-2026-10-09.pdf — p. 264 — similitud 0.1028
+### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 264 — similitud 0.1028
 
 **Detalle de puntaje:** tfidf=0.0828; bonus=0.0200
 
@@ -309,8 +309,8 @@ No se localizaron citas textuales por encima del umbral configurado.
 **Calidad estimada:** baja
 **Mejor similitud:** 0.1373
 **Similitud promedio:** 0.1293
-**Fuentes:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf; Garcia-Ricci-2011.pdf; Teoria pura del derecho - Hans Kelsen.pdf
-**Ubicaciones:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 122; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 178; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 22; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 81; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 96; Garcia-Ricci-2011.pdf, p. 19; Teoria pura del derecho - Hans Kelsen.pdf, p. 284; Teoria pura del derecho - Hans Kelsen.pdf, p. 313
+**Fuentes:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf; Teoria pura del derecho - Hans Kelsen.pdf
+**Ubicaciones:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 122; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 178; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 22; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 81; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 96; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 19; Teoria pura del derecho - Hans Kelsen.pdf, p. 284; Teoria pura del derecho - Hans Kelsen.pdf, p. 313
 
 ### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 81 — similitud 0.1373
 
@@ -348,7 +348,7 @@ No se localizaron citas textuales por encima del umbral configurado.
 
 > Esa negación absoluta por Schmitt de los derechos funda- mentales tiene un claro desarrollo en las dos negaciones que antes apuntaba y que a continuación desarrollaré: la de un derecho político tan importante como es el del sufragio univer- sal y secreto, y la del derecho a la libertad de conciencia, que viene a entenderlo como incompatible con la estructura eficaz del Estado moderno; lo que en realidad supone la negación del núcleo básico de la fundamentación de los derechos. 275 Op. cit., pp.
 
-### Garcia-Ricci-2011.pdf — p. 19 — similitud 0.1240
+### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 19 — similitud 0.1240
 
 **Detalle de puntaje:** tfidf=0.0440; bonus=0.0800
 
@@ -383,8 +383,8 @@ No se localizaron citas textuales por encima del umbral configurado.
 **Calidad estimada:** baja
 **Mejor similitud:** 0.0875
 **Similitud promedio:** 0.0664
-**Fuentes:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf; Garcia-Ricci-2011.pdf; Teoria pura del derecho - Hans Kelsen.pdf
-**Ubicaciones:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 122; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 163; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 96; Garcia-Ricci-2011.pdf, p. 28; Garcia-Ricci-2011.pdf, p. 29; Teoria pura del derecho - Hans Kelsen.pdf, p. 173; Teoria pura del derecho - Hans Kelsen.pdf, p. 175; Teoria pura del derecho - Hans Kelsen.pdf, p. 64
+**Fuentes:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf; Teoria pura del derecho - Hans Kelsen.pdf
+**Ubicaciones:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 122; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 163; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 96; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 28; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 29; Teoria pura del derecho - Hans Kelsen.pdf, p. 173; Teoria pura del derecho - Hans Kelsen.pdf, p. 175; Teoria pura del derecho - Hans Kelsen.pdf, p. 64
 
 ### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 96 — similitud 0.0875
 
@@ -416,13 +416,13 @@ No se localizaron citas textuales por encima del umbral configurado.
 
 > Desde los comienzos del pensamiento moderno de la soberanía hasta la lucha de clases proletaria, cit., pp. 27-28, 41-42 y 44, respectivamente.
 
-### Garcia-Ricci-2011.pdf — p. 29 — similitud 0.0562
+### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 29 — similitud 0.0562
 
 **Detalle de puntaje:** tfidf=0.0462; bonus=0.0100
 
 > Como ya se señaló líneas arriba, el surgimiento del Esta- do de Derecho requirió la ruptura del Estado absoluto. Dicha ruptura fue posible gracias a la Declaración, pues se convirtió en el documento fundacional de la Revolu- ción francesa. Adicionalmente, la Declaración tuvo un impacto muy importante en la construcción de la moderna Teoría de la Constitución, pues aportó los elementos para distinguir entre el acto a través del cual el pueblo se vuelve cons- ciente de su existencia política y se otorga una Constitu- ción (poder Constituyente), de la función del Estado mis- mo (poderes constituidos).
 
-### Garcia-Ricci-2011.pdf — p. 28 — similitud 0.0542
+### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 28 — similitud 0.0542
 
 **Detalle de puntaje:** tfidf=0.0442; bonus=0.0100
 
@@ -441,8 +441,8 @@ No se localizaron citas textuales por encima del umbral configurado.
 **Calidad estimada:** baja
 **Mejor similitud:** 0.0800
 **Similitud promedio:** 0.0725
-**Fuentes:** CPEUM-consulta-2026-10-09.pdf; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf
-**Ubicaciones:** CPEUM-consulta-2026-10-09.pdf, p. 1; CPEUM-consulta-2026-10-09.pdf, p. 109; CPEUM-consulta-2026-10-09.pdf, p. 116; CPEUM-consulta-2026-10-09.pdf, p. 47; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 1; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 109; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 115; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 47
+**Fuentes:** Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf
+**Ubicaciones:** Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 1; Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 109; Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 116; Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 47; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 1; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 109; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 115; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 47
 
 ### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 1 — similitud 0.0800
 
@@ -450,7 +450,7 @@ No se localizaron citas textuales por encima del umbral configurado.
 
 > CONSTITUCION POLITICA DE LOS ESTADOS UNIDOS MEXICANOS QUE REFORMA LA DE 5 DE FEBRERO DE 1857 Título Primero Capítulo I De los Derechos Humanos y sus Garantías Denominación del Capítulo reformada DOF 10-06-2011 Artículo 1o. En los Estados Unidos Mexicanos todas las personas gozarán de los derechos humanos reconocidos en esta Constitución y en los tratados internacionales de los que el Estado Mexicano sea parte, así como de las garantías para su protección, cuyo ejercicio no podrá restringirse ni suspenderse, salvo en los casos y bajo las condiciones que esta Constitución establece.
 
-### CPEUM-consulta-2026-10-09.pdf — p. 1 — similitud 0.0800
+### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 1 — similitud 0.0800
 
 **Detalle de puntaje:** tfidf=0.0700; bonus=0.0100
 
@@ -474,19 +474,19 @@ No se localizaron citas textuales por encima del umbral configurado.
 
 > Fracción reformada DOF 25-10-1967, 08-10-1974, 10-08-1987 IX. En materia de amparo directo procede el recurso de revisión en contra de las sentencias que resuelvan sobre la constitucionalidad de normas generales, establezcan la interpretación directa de un precepto de esta Constitución u omitan decidir sobre tales cuestiones cuando hubieren sido planteadas, siempre que a juicio de la Suprema Corte de Justicia de la Nación el asunto revista un interés excepcional en materia constitucional o de derechos humanos. La materia del recurso se limitará a la decisión de las cuestiones propiamente constitucionales, sin poder comprender otras.
 
-### CPEUM-consulta-2026-10-09.pdf — p. 47 — similitud 0.0700
+### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 47 — similitud 0.0700
 
 **Detalle de puntaje:** tfidf=0.0000; bonus=0.0700
 
 > La Suprema Corte de Justicia de la Nación resolverá, previo a la convocatoria que realice el Congreso de la Unión, sobre la constitucionalidad de la materia de la consulta; Apartado reformado DOF 20-12-2019 4o.
 
-### CPEUM-consulta-2026-10-09.pdf — p. 109 — similitud 0.0700
+### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 109 — similitud 0.0700
 
 **Detalle de puntaje:** tfidf=0.0000; bonus=0.0700
 
 > La Suprema Corte de Justicia de la Nación conocerá, en los términos que señale la ley reglamentaria, de los asuntos siguientes: I. De las controversias constitucionales que, sobre la constitucionalidad de las normas generales,  actos u omisiones, con excepción de las que se refieran a la materia electoral, se susciten entre: Párrafo reformado DOF 08-12-2005, 15-10-2012, 11-03-2021 a) La Federación y una entidad federativa; Inciso reformado DOF 29-01-2016 b) La Federación y un municipio; c) El Poder Ejecutivo y el Congreso de la Unión; aquél y cualquiera de las Cámaras de éste o, en su caso, la Comisión Permanente; Inciso reformado DOF 29-01-2016 109 de 416
 
-### CPEUM-consulta-2026-10-09.pdf — p. 116 — similitud 0.0700
+### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 116 — similitud 0.0700
 
 **Detalle de puntaje:** tfidf=0.0000; bonus=0.0700
 
@@ -499,22 +499,22 @@ No se localizaron citas textuales por encima del umbral configurado.
 **Calidad estimada:** baja
 **Mejor similitud:** 0.0760
 **Similitud promedio:** 0.0720
-**Fuentes:** Garcia-Ricci-2011.pdf
-**Ubicaciones:** Garcia-Ricci-2011.pdf, p. 28; Garcia-Ricci-2011.pdf, p. 32; Garcia-Ricci-2011.pdf, p. 43
+**Fuentes:** Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf
+**Ubicaciones:** Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 28; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 32; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 43
 
-### Garcia-Ricci-2011.pdf — p. 28 — similitud 0.0760
+### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 28 — similitud 0.0760
 
 **Detalle de puntaje:** tfidf=0.0660; bonus=0.0100
 
 > Conforme a lo señalado en los párrafos precedentes, se puede decir que la Ilustración, a través de todos sus pensadores, sentó las bases sobre las cuales habrá de dar- se la construcción de un nuevo modelo de Estado. Todas las ideas de los ilustrados franceses aparecieron refleja- das en la Declaración de los Derechos del Hombre y del Ciudadano, la cual fue aprobada por la Asamblea Nacio- nal Constituyente francesa el 26 de agosto de 1789. 62 Ibid., pp.
 
-### Garcia-Ricci-2011.pdf — p. 32 — similitud 0.0711
+### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 32 — similitud 0.0711
 
 **Detalle de puntaje:** tfidf=0.0611; bonus=0.0100
 
 > Los méritos de la constitución escrita consisten, pues, en dar certeza y claridad. Este hecho ha resultado innegable, pues en la actualidad se ha alcanzado lo que el profesor alemán Karl Lowenstein llamó “universalismo de la constitución escrita”, que convierte a ésta en el “sím- bolo de la conciencia nacional y estatal, de la autodeter- minación de la independencia”.71 De esta forma, el legado de la Declaración de los De- rechos del Hombre y del Ciudadano de 1789 resulta más que evidente.
 
-### Garcia-Ricci-2011.pdf — p. 43 — similitud 0.0688
+### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 43 — similitud 0.0688
 
 **Detalle de puntaje:** tfidf=0.0488; bonus=0.0200
 
@@ -527,8 +527,8 @@ No se localizaron citas textuales por encima del umbral configurado.
 **Calidad estimada:** baja
 **Mejor similitud:** 0.0816
 **Similitud promedio:** 0.0691
-**Fuentes:** CPEUM-consulta-2026-10-09.pdf; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf; Teoria pura del derecho - Hans Kelsen.pdf
-**Ubicaciones:** CPEUM-consulta-2026-10-09.pdf, p. 130; CPEUM-consulta-2026-10-09.pdf, p. 269; CPEUM-consulta-2026-10-09.pdf, p. 349; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 130; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 268; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 348; Teoria pura del derecho - Hans Kelsen.pdf, p. 186
+**Fuentes:** Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf; Teoria pura del derecho - Hans Kelsen.pdf
+**Ubicaciones:** Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 130; Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 269; Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 349; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 130; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 268; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 348; Teoria pura del derecho - Hans Kelsen.pdf, p. 186
 
 ### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 268 — similitud 0.0816
 
@@ -536,13 +536,13 @@ No se localizaron citas textuales por encima del umbral configurado.
 
 > El Ejecutivo Federal someterá a la Cámara de Senadores las ternas para la designación de los integrantes de la Junta de Gobierno del Instituto Nacional para la Evaluación de la Educación, en un plazo máximo de sesenta días naturales a partir de la publicación del presente Decreto en el Diario Oficial de la Federación, que deberá recaer en personas con capacidad y experiencia en las materias de la competencia del Instituto. Para asegurar la renovación escalonada de los integrantes, los primeros nombramientos se realizarán por los periodos siguientes: I. Dos nombramientos por un periodo de cinco años; II.
 
-### CPEUM-consulta-2026-10-09.pdf — p. 269 — similitud 0.0816
+### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 269 — similitud 0.0816
 
 **Detalle de puntaje:** tfidf=0.0616; bonus=0.0200
 
 > El Ejecutivo Federal someterá a la Cámara de Senadores las ternas para la designación de los integrantes de la Junta de Gobierno del Instituto Nacional para la Evaluación de la Educación, en un plazo máximo de sesenta días naturales a partir de la publicación del presente Decreto en el Diario Oficial de la Federación, que deberá recaer en personas con capacidad y experiencia en las materias de la competencia del Instituto. Para asegurar la renovación escalonada de los integrantes, los primeros nombramientos se realizarán por los periodos siguientes: I. Dos nombramientos por un periodo de cinco años; II.
 
-### CPEUM-consulta-2026-10-09.pdf — p. 349 — similitud 0.0768
+### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 349 — similitud 0.0768
 
 **Detalle de puntaje:** tfidf=0.0568; bonus=0.0200
 
@@ -560,7 +560,7 @@ No se localizaron citas textuales por encima del umbral configurado.
 
 > Cuando se dice que un individuo, como órgano de dere- cho, produce derecho o 10 aplica, que un individuo, como sujeto de derecho, acata o viola el derecho, sólo se expresa así, en un lenguaje personalizado, la distinción funcional que aparece entre dos tipos diferentes de conducta humana determinados por el orden jurídico. Los conceptos personalizados de “sujeto de derecho” y “órgano de derecho”, ’.5 no son conceptos necesarios para la descripción del derecho. Se trata, a la postre, de couceptos auxiliares que, como el concepto de derecho reflejo, facilitan la exposición.
 
-### CPEUM-consulta-2026-10-09.pdf — p. 130 — similitud 0.0584
+### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 130 — similitud 0.0584
 
 **Detalle de puntaje:** tfidf=0.0384; bonus=0.0200
 
@@ -585,8 +585,8 @@ No se localizaron citas textuales por encima del umbral configurado.
 **Calidad estimada:** baja
 **Mejor similitud:** 0.0976
 **Similitud promedio:** 0.0774
-**Fuentes:** CPEUM-consulta-2026-10-09.pdf; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf; Teoria pura del derecho - Hans Kelsen.pdf
-**Ubicaciones:** CPEUM-consulta-2026-10-09.pdf, p. 270; CPEUM-consulta-2026-10-09.pdf, p. 348; CPEUM-consulta-2026-10-09.pdf, p. 9; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 106; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 269; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 347; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 9; Teoria pura del derecho - Hans Kelsen.pdf, p. 365
+**Fuentes:** Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf; Teoria pura del derecho - Hans Kelsen.pdf
+**Ubicaciones:** Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 270; Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 348; Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 9; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 106; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 269; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 347; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 9; Teoria pura del derecho - Hans Kelsen.pdf, p. 365
 
 ### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 347 — similitud 0.0976
 
@@ -594,7 +594,7 @@ No se localizaron citas textuales por encima del umbral configurado.
 
 > Segundo. A partir de la entrada en vigor de este Decreto se abroga la Ley General del Servicio Profesional Docente, se derogan todas las disposiciones contenidas en las leyes secundarias y quedan sin efectos los reglamentos, acuerdos y disposiciones de carácter general contrarias a este Decreto.
 
-### CPEUM-consulta-2026-10-09.pdf — p. 348 — similitud 0.0976
+### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 348 — similitud 0.0976
 
 **Detalle de puntaje:** tfidf=0.0876; bonus=0.0100
 
@@ -612,7 +612,7 @@ No se localizaron citas textuales por encima del umbral configurado.
 
 > El uso de la evaluación del desempeño docente para dar mayor pertinencia y capacidades al  sistema nacional de formación, actualización, capacitación y superación profesional para maestros, en el  marco de la creación de un servicio profesional docente. La evaluación de los maestros debe tener, como  primer propósito, el que ellos y el sistema educativo cuenten con referentes bien fundamentados para la  reflexión y el diálogo conducentes a una mejor práctica profesional. El sistema educativo deberá otorgar  los apoyos necesarios para que los docentes puedan, prioritariamente, desarrollar sus fortalezas y  superar sus debilidades, y III.
 
-### CPEUM-consulta-2026-10-09.pdf — p. 270 — similitud 0.0745
+### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 270 — similitud 0.0745
 
 **Detalle de puntaje:** tfidf=0.0545; bonus=0.0200
 
@@ -624,7 +624,7 @@ No se localizaron citas textuales por encima del umbral configurado.
 
 > Párrafo adicionado DOF 15-05-2019 La admisión, promoción y reconocimiento del personal que ejerza la función docente, directiva o de supervisión, se realizará a través de procesos de selección a los que concurran los aspirantes en igualdad de condiciones y establecidos en la ley prevista en el párrafo anterior, los cuales serán públicos, transparentes, equitativos e imparciales y considerarán los conocimientos, aptitudes y experiencia necesarios para el aprendizaje y el desarrollo integral de los educandos. Los nombramientos derivados de estos procesos sólo se otorgarán en términos de dicha ley.
 
-### CPEUM-consulta-2026-10-09.pdf — p. 9 — similitud 0.0656
+### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 9 — similitud 0.0656
 
 **Detalle de puntaje:** tfidf=0.0556; bonus=0.0100
 
@@ -643,16 +643,16 @@ No se localizaron citas textuales por encima del umbral configurado.
 **Calidad estimada:** alta
 **Mejor similitud:** 0.2962
 **Similitud promedio:** 0.2148
-**Fuentes:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf; Garcia-Ricci-2011.pdf
-**Ubicaciones:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 148; Garcia-Ricci-2011.pdf, p. 36; Garcia-Ricci-2011.pdf, p. 37; Garcia-Ricci-2011.pdf, p. 38; Garcia-Ricci-2011.pdf, p. 46; Garcia-Ricci-2011.pdf, p. 47; Garcia-Ricci-2011.pdf, p. 8
+**Fuentes:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf
+**Ubicaciones:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 148; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 36; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 37; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 38; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 46; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 47; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 8
 
-### Garcia-Ricci-2011.pdf — p. 37 — similitud 0.2962
+### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 37 — similitud 0.2962
 
 **Detalle de puntaje:** tfidf=0.2162; bonus=0.0800
 
 > Colección de Textos sobre Derechos Humanos Éste es el principio de legalidad en su aspecto mera- mente formal.
 
-### Garcia-Ricci-2011.pdf — p. 38 — similitud 0.2371
+### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 38 — similitud 0.2371
 
 **Detalle de puntaje:** tfidf=0.1571; bonus=0.0800
 
@@ -664,31 +664,31 @@ No se localizaron citas textuales por encima del umbral configurado.
 
 > Una Constitución que coloca las leyes constitucionales de carácter jurídico-material por encima de las leyes ordinarias no solo modifica el principio fundamental de la voluntad de la mayoría del momento y el principio de legalidad basado sobre sí mismo; modifica radicalmente la estructura orgánica de semejante Estado legislati- vo». (En Schmitt, Carl, Legalidad y Legitimidad, cit., p. 73).
 
-### Garcia-Ricci-2011.pdf — p. 37 — similitud 0.2146
+### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 37 — similitud 0.2146
 
 **Detalle de puntaje:** tfidf=0.1346; bonus=0.0800
 
 > Pedro Salazar considera que se- rían: 1) la existencia de un cuerpo normativo emitido por una autoridad jurídicamente reconocida; 2) dicho cuerpo normativo debe estar integrado por normas estables, pros- pectivas, generales, claras y debidamente publicadas; 3) la aplicación de normas a los casos concretos debe ser eje- cutada por una institución imparcial, esto es, tribunales previamente establecidos, mediante procedimientos nor- mativos accesibles para todos, que garanticen que toda pena se encuentra debidamente fundada y motivada.81 El principio de legalidad en México El principio de legalidad se encuentra reconocido en la Constitución mexicana a través de diferentes disposicio- nes.
 
-### Garcia-Ricci-2011.pdf — p. 36 — similitud 0.2034
+### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 36 — similitud 0.2034
 
 **Detalle de puntaje:** tfidf=0.1234; bonus=0.0800
 
 > Estado de Derecho y Principio de Legalidad El autor elabora una crítica muy importante respecto del origen de dichos derechos, pues nos recuerda su surgimien- to como “derechos de la burguesía”, y que sólo de manera formal y parcial se conceden a los individuos de otras clases sociales.
 
-### Garcia-Ricci-2011.pdf — p. 8 — similitud 0.1851
+### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 8 — similitud 0.1851
 
 **Detalle de puntaje:** tfidf=0.1051; bonus=0.0800
 
 > Sin embargo, los países que han optado por el camino del constitucionalismo demo- crático han demostrado que sus sociedades cuentan con espacios de convivencia más ordenados y participativos en los diferentes ámbitos en los que se desarrolla la vida en comunidad: político, económico, social y cultural. El pilar fundamental del Estado de Derecho ha sido el principio de legalidad. Este principio sintetiza un profundo cambio en el pensamiento jurídico.
 
-### Garcia-Ricci-2011.pdf — p. 46 — similitud 0.1773
+### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 46 — similitud 0.1773
 
 **Detalle de puntaje:** tfidf=0.0973; bonus=0.0800
 
 > Estado de Derecho y Principio de Legalidad También se sugiere consultar la “Bibliografía general ‘El Estado de Derecho en la última década’”, elaborada por el señor Eugenio Hurtado Márquez, Director Editorial del Centro Nacional de Derechos Humanos, la cual apareció publicada en la Revista del Centro Nacional de Derechos Humanos, titulada Derechos Humanos México, núm. 15, año 5.
 
-### Garcia-Ricci-2011.pdf — p. 47 — similitud 0.1758
+### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 47 — similitud 0.1758
 
 **Detalle de puntaje:** tfidf=0.0958; bonus=0.0800
 
@@ -713,8 +713,8 @@ No se localizaron citas textuales por encima del umbral configurado.
 **Calidad estimada:** baja
 **Mejor similitud:** 0.1022
 **Similitud promedio:** 0.0694
-**Fuentes:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf; Garcia-Ricci-2011.pdf; Teoria pura del derecho - Hans Kelsen.pdf
-**Ubicaciones:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 160; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 163; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 21; Garcia-Ricci-2011.pdf, p. 28; Garcia-Ricci-2011.pdf, p. 29; Teoria pura del derecho - Hans Kelsen.pdf, p. 13; Teoria pura del derecho - Hans Kelsen.pdf, p. 64; Teoria pura del derecho - Hans Kelsen.pdf, p. 8
+**Fuentes:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf; Teoria pura del derecho - Hans Kelsen.pdf
+**Ubicaciones:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 160; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 163; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 21; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 28; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 29; Teoria pura del derecho - Hans Kelsen.pdf, p. 13; Teoria pura del derecho - Hans Kelsen.pdf, p. 64; Teoria pura del derecho - Hans Kelsen.pdf, p. 8
 
 ### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 163 — similitud 0.1022
 
@@ -722,13 +722,13 @@ No se localizaron citas textuales por encima del umbral configurado.
 
 > 255 Como advierte Javier Dorado: «Podría por tanto pensarse que el Estado liberal surgido en Europa tras la revolución francesa se configuraba como un Estado constitucional que incluía las características del constitucionalismo actual […] Sin embargo, esto no fue lo que ocurrió en realidad, y puede afirmar- se que el constitucionalismo europeo no empezó a representar estas característi- 163
 
-### Garcia-Ricci-2011.pdf — p. 29 — similitud 0.0703
+### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 29 — similitud 0.0703
 
 **Detalle de puntaje:** tfidf=0.0603; bonus=0.0100
 
 > Como ya se señaló líneas arriba, el surgimiento del Esta- do de Derecho requirió la ruptura del Estado absoluto. Dicha ruptura fue posible gracias a la Declaración, pues se convirtió en el documento fundacional de la Revolu- ción francesa. Adicionalmente, la Declaración tuvo un impacto muy importante en la construcción de la moderna Teoría de la Constitución, pues aportó los elementos para distinguir entre el acto a través del cual el pueblo se vuelve cons- ciente de su existencia política y se otorga una Constitu- ción (poder Constituyente), de la función del Estado mis- mo (poderes constituidos).
 
-### Garcia-Ricci-2011.pdf — p. 28 — similitud 0.0677
+### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 28 — similitud 0.0677
 
 **Detalle de puntaje:** tfidf=0.0577; bonus=0.0100
 
@@ -771,8 +771,8 @@ No se localizaron citas textuales por encima del umbral configurado.
 **Calidad estimada:** baja
 **Mejor similitud:** 0.0875
 **Similitud promedio:** 0.0664
-**Fuentes:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf; Garcia-Ricci-2011.pdf; Teoria pura del derecho - Hans Kelsen.pdf
-**Ubicaciones:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 122; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 163; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 96; Garcia-Ricci-2011.pdf, p. 28; Garcia-Ricci-2011.pdf, p. 29; Teoria pura del derecho - Hans Kelsen.pdf, p. 173; Teoria pura del derecho - Hans Kelsen.pdf, p. 175; Teoria pura del derecho - Hans Kelsen.pdf, p. 64
+**Fuentes:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf; Teoria pura del derecho - Hans Kelsen.pdf
+**Ubicaciones:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 122; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 163; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 96; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 28; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 29; Teoria pura del derecho - Hans Kelsen.pdf, p. 173; Teoria pura del derecho - Hans Kelsen.pdf, p. 175; Teoria pura del derecho - Hans Kelsen.pdf, p. 64
 
 ### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 96 — similitud 0.0875
 
@@ -804,13 +804,13 @@ No se localizaron citas textuales por encima del umbral configurado.
 
 > Desde los comienzos del pensamiento moderno de la soberanía hasta la lucha de clases proletaria, cit., pp. 27-28, 41-42 y 44, respectivamente.
 
-### Garcia-Ricci-2011.pdf — p. 29 — similitud 0.0562
+### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 29 — similitud 0.0562
 
 **Detalle de puntaje:** tfidf=0.0462; bonus=0.0100
 
 > Como ya se señaló líneas arriba, el surgimiento del Esta- do de Derecho requirió la ruptura del Estado absoluto. Dicha ruptura fue posible gracias a la Declaración, pues se convirtió en el documento fundacional de la Revolu- ción francesa. Adicionalmente, la Declaración tuvo un impacto muy importante en la construcción de la moderna Teoría de la Constitución, pues aportó los elementos para distinguir entre el acto a través del cual el pueblo se vuelve cons- ciente de su existencia política y se otorga una Constitu- ción (poder Constituyente), de la función del Estado mis- mo (poderes constituidos).
 
-### Garcia-Ricci-2011.pdf — p. 28 — similitud 0.0542
+### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 28 — similitud 0.0542
 
 **Detalle de puntaje:** tfidf=0.0442; bonus=0.0100
 
@@ -829,8 +829,8 @@ No se localizaron citas textuales por encima del umbral configurado.
 **Calidad estimada:** media
 **Mejor similitud:** 0.1814
 **Similitud promedio:** 0.1387
-**Fuentes:** CPEUM-consulta-2026-10-09.pdf; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf; En defensa del estado de derech - Ignacio Campoy Cervera.pdf
-**Ubicaciones:** CPEUM-consulta-2026-10-09.pdf, p. 144; CPEUM-consulta-2026-10-09.pdf, p. 330; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 143; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 96; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 100; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 127; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 31; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 99
+**Fuentes:** Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf; En defensa del estado de derech - Ignacio Campoy Cervera.pdf
+**Ubicaciones:** Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 144; Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 330; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 143; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 96; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 100; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 127; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 31; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 99
 
 ### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 143 — similitud 0.1814
 
@@ -838,7 +838,7 @@ No se localizaron citas textuales por encima del umbral configurado.
 
 > El Gobierno de la Ciudad de México, dado su carácter de Capital de los Estados Unidos Mexicanos y sede de los Poderes de la Unión, garantizará, en todo tiempo y en los términos de este artículo, las condiciones necesarias para el ejercicio de las facultades constitucionales de los poderes federales.
 
-### CPEUM-consulta-2026-10-09.pdf — p. 144 — similitud 0.1759
+### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 144 — similitud 0.1759
 
 **Detalle de puntaje:** tfidf=0.1659; bonus=0.0100
 
@@ -874,7 +874,7 @@ No se localizaron citas textuales por encima del umbral configurado.
 
 > Para los efectos del párrafo anterior, cada uno de los Poderes de la Unión postulará dos  personas para cada cargo: el Poder Ejecutivo lo hará por conducto de la persona titular  de la Presidencia de la República; el Poder Legislativo postulará una persona por cada  Cámara mediante votación calificada de dos tercios de sus integrantes presentes; y el  Poder Judicial de la Federación, por conducto del Pleno de la Suprema Corte de Justicia  de la Nación, por mayoría de seis votos. Inciso reformado DOF 02-06-2026 III.
 
-### CPEUM-consulta-2026-10-09.pdf — p. 330 — similitud 0.1031
+### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 330 — similitud 0.1031
 
 **Detalle de puntaje:** tfidf=0.0931; bonus=0.0100
 

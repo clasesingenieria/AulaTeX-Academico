@@ -13,7 +13,7 @@ Tabla obligatoria: articulo, descripcion legal, bien juridico, sujeto activo, su
 ## Calendario
 
 - Entrega ordinaria docente: 11 octubre de 2026. Hora ordinaria y zona no explicitadas; verificar en aula/docente.
-- Moodle: apertura 4 octubre, 23:59; cierre tecnico 2 diciembre, 23:59. No considerar diciembre como plazo ordinario.
+- Moodle actual, consulta autenticada 11 octubre: apertura 4 octubre, 23:59; cierre 11 octubre, 23:59; sin entrega y sin calificar. El cierre tecnico 2 diciembre fue un dato historico de la consulta del 4 octubre, no el plazo actual.
 - Sesion: martes 6 octubre, 21:00; zona no documentada.
 - Tiempo indicado: 4 horas. Distribucion local propuesta: lectura y fichado normativo, 60 min; tabla, 60 min; comparacion, 30 min; caso, 60 min; referencias y revision, 30 min.
 
@@ -33,4 +33,4 @@ Instrumento: rubrica oficial de 10 puntos. Peso: 10/100 del curso. Suma de crite
 
 El CPF descargado declara ultima reforma DOF 13-03-2026. La copia CPDF contiene disposiciones con referencias antiguas a Unidad de Cuenta: usarla como fuente proporcionada y comprobar consolidacion vigente antes de afirmar penas actuales. La comparacion solicitada se limita al supuesto de robo, no a calcular penas. La planeacion mezcla anos de reformas en su bibliografia; no transmitirlos como vigencia comprobada.
 
-Borrador disponible: `borrador-S2-cuadro-comparativo-robo.md`. Pendientes: revision personal, identidad, formato final y declaracion de IA. Ningun envio realizado. Evitar revelar datos personales en inventarios de referencia.
+Borrador historico en notas/actividad-02-cuadro-comparativo-robo/propuestas. Producto activo: reporte-derecho-penal-especial-mexicano-Actividad-2.tex y PDF en raiz; ocho paginas verificadas el 11 octubre, siete rubros y a-e, tres referencias y declaracion IA. Cotejo oficial CPF 13-03-2026, pp. 120-121; CPDF Consejeria 21-08-2026, pp. 84-85. Copias docentes intactas. No fijar penas ni decidir competencia o culpabilidad. PDF identico preparado en Entregas con nombre descriptivo local; la consigna no acredita nombre obligatorio. Pendientes: revision personal, comprobacion de selector PDF y envio autorizado posterior. Ningun envio de Penal realizado en esta sesion.
