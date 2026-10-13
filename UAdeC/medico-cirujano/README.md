@@ -38,6 +38,8 @@ La [plantilla común](assets-medico-cirujano/plantilla/README.md) usa una portad
 
 [Informe de calidad y pendientes](CALIDAD-PRODUCTOS.md): páginas, reactivos y alcance del muestreo visual.
 
+[Cotejo oficial realizado](COTEJO-ADMISION.md): estructura EXANI-II, temario de Premedicina de junio de 2025 y brechas frente al material local. [Revisión de 130 reactivos](assets-medico-cirujano/revision-2026-10-10/estado-revision.json): 130 claves con localizador confirmado. Campus y ciclo personal no confirmados; cobertura exhaustiva y revisión experta independiente no acreditadas.
+
 Se completaron las tres áreas generales y se ampliaron las cinco científicas. Las revisiones corrigen fórmulas incompletas y simplificaciones sobre planos anatómicos, fíbula, transporte celular, meiosis, ATP e indicadores epidemiológicos. Las claves son propuestas para estudio, no calificaciones.
 
 El control comprueba compilación, presencia de productos, referencias, cuatro opciones por reactivo, claves, enlaces y hashes. No certifica revisión científica integral, equivalencia psicométrica ni alineación oficial. Las consultas de OpenStax, RAE/ASALE y CDC están delimitadas en las notas de cada actividad. No se atribuye lectura íntegra de los libros locales ni se autoriza su redistribución.
