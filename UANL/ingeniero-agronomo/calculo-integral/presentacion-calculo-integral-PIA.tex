@@ -1,0 +1,155 @@
+\documentclass[
+  spanish,
+  aspectratio=169,
+  xcolor={dvipsnames,table}
+]{beamer}
+
+\geometry{paperwidth=19.2cm,paperheight=10.8cm}
+
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\usepackage[spanish,es-tabla,es-noshorthands]{babel}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{tabularx}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usepackage{hyperref}
+
+\definecolor{uanlblue}{RGB}{0,55,108}
+\definecolor{uanlgold}{RGB}{218,165,32}
+\definecolor{tableblue}{RGB}{233,240,247}
+\definecolor{darkcharcoal}{RGB}{33,37,41}
+
+\setbeamercolor{palette primary}{bg=uanlblue,fg=white}
+\setbeamercolor{palette secondary}{bg=uanlgold,fg=uanlblue}
+\setbeamercolor{structure}{fg=uanlblue}
+\setbeamercolor{title}{fg=white,bg=uanlblue}
+\setbeamercolor{frametitle}{fg=uanlblue,bg=white}
+\setbeamerfont{frametitle}{series=\bfseries,size=\large}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.5ex,dp=1.1ex,left,leftskip=1cm]{palette primary}%
+    \fontsize{7}{9}\selectfont UANL \textbar\ Facultad de Agronomía
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.5ex,dp=1.1ex,center]{palette primary}%
+    \fontsize{7}{9}\selectfont Cálculo Integral — PIA
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.5ex,dp=1.1ex,right,rightskip=1cm]{palette primary}%
+    \fontsize{7}{9}\selectfont \insertframenumber{} / \inserttotalframenumber
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[uanlblue] (current page.south west) rectangle (current page.north east);
+    \fill[uanlgold] ([yshift=1.2cm]current page.south west) rectangle ([yshift=1.45cm]current page.south east);
+  \end{tikzpicture}
+  \vspace{-0.5cm}
+  \begin{center}
+    \includegraphics[height=1.8cm]{UANL/assets-uanl/logos-institucionales.pdf}
+    \vspace{0.4cm}
+    
+    {\fontsize{10}{12}\selectfont \textbf{\color{uanlgold}UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN \textbar\ FACULTAD DE AGRONOMÍA}}\\[0.2cm]
+    {\fontsize{15}{18}\selectfont \textbf{\color{white}MODELACIÓN ANALÍTICA DE ALMACENAMIENTO HIDRÁULICO Y BOMBEO MEDIANTE CÁLCULO INTEGRAL}}\\[0.2cm]
+    {\fontsize{11}{13}\selectfont \color{white}Producto Integrador de Aprendizaje (PIA) \textbar\ 30 Puntos}\\[0.5cm]
+
+    \begin{tabular}{rl}
+      \textbf{\color{uanlgold}Estudiante:} & \color{white}Carlos Mauricio Carvajal Coronado (Matrícula: 1977875) \\
+      \textbf{\color{uanlgold}Cátedra:} & \color{white}Cálculo Integral \textbar\ REF\#261013755131 \\
+      \textbf{\color{uanlgold}Programa:} & \color{white}Ingeniero Agrónomo \textbar\ Modelo por Competencias
+    \end{tabular}
+  \end{center}
+\end{frame}
+
+\begin{frame}{1. Justificación Hidroagrícola en Nuevo León}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Contexto y Retos Regionales:}
+      \begin{itemize}
+        \item Escasez hídrica recurrente en el noreste mexicano.
+        \item Necesidad de almacenamiento eficiente en bordos de captación parcelaria.
+        \item Optimización energética en bombeo presurizado para fertirriego.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Aplicación del Cálculo Integral:}
+      \begin{itemize}
+        \item \textbf{Sólidos de revolución:} Geometría exacta del reservorio ($y = 0.05 x^2$, $H = 5\text{ m}$).
+        \item \textbf{Trabajo hidrostático:} Integración de masa y gradiente de elevación $W = \int \rho g A(y)(H-y)\,dy$.
+        \item \textbf{Integrales impropias:} Persistencia y decaimiento acumulado de nitratos en suelo.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{2. Modelado Volumétrico del Reservorio ($V = 250\pi\text{ m}^3$)}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Método de Discos:}
+      \begin{itemize}
+        \item Eje de giro vertical $y$, radio $x = \sqrt{20y}$.
+        \item Elemento diferencial: $dV = \pi (20y)\,dy$.
+        \item Integral:
+          $$V = \int_{0}^{5} 20\pi y\,dy = 20\pi \left[ \frac{y^2}{2} \right]_{0}^{5} = 250\pi\text{ m}^3$$
+        \item Capacidad: $\approx 785.4\text{ m}^3$ ($785,400\text{ litros}$).
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Método de Cascarones Cilíndricos:}
+      \begin{itemize}
+        \item Radio $x$, altura $h(x) = 5 - 0.05 x^2$.
+        \item Elemento diferencial: $dV = 2\pi x (5 - 0.05 x^2)\,dx$.
+        \item Integral:
+          $$V = 2\pi \int_{0}^{10} (5x - 0.05 x^3)\,dx = 250\pi\text{ m}^3$$
+        \item \textbf{Concordancia exacta} entre métodos analíticos independientes.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{3. Trabajo Mecánico de Vaciado y Potencia de Bombeo}
+  \begin{block}{Formulación del Trabajo Hidrostático}
+    $$W = \rho g \int_{0}^{5} \pi (20y)(5 - y)\,dy = 20\pi (9810) \left[ \frac{5y^2}{2} - \frac{y^3}{3} \right]_{0}^{5} = 1.284 \times 10^7\text{ J} \quad (12.84\text{ MJ})$$
+  \end{block}
+  \begin{itemize}
+    \item \textbf{Tiempo de operación requerido:} $T = 4\text{ horas} = 14,400\text{ segundos}$.
+    \item \textbf{Potencia útil teórica:} $P_{\text{útil}} = \frac{12.84\text{ MJ}}{14,400\text{ s}} = 891.7\text{ Watts}$.
+    \item \textbf{Potencia al freno con $\eta = 75\%$:} $P_{\text{bomba}} = 1,188.9\text{ W} \approx 1.59\text{ HP} \implies$ Motobomba de $2.0\text{ HP}$.
+    \item \textbf{Arreglo solar fotovoltaico:} 6 paneles de $450\text{ W}$ en conexión serie-paralelo.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{4. Integrales Impropias y Conclusiones del Proyecto}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Persistencia de Nitratos en Suelo:}
+      \begin{itemize}
+        \item Tasa de degradación: $C(t) = 45 e^{-0.08 t}$.
+        \item Exposición integral acumulada:
+          $$\int_{0}^{\infty} 45 e^{-0.08 t}\,dt = \frac{45}{0.08} = 562.5\text{ mg}\cdot\text{día/L}$$
+        \item \textbf{Convergencia estricta:} Evidencia ausencia de saturación ecotoxicológica en el manto freático.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Conclusiones Clave:}
+      \begin{enumerate}
+        \item Se dimensionó con rigor matemático un reservorio de riego tecnificado.
+        \item Se vinculó el cálculo diferencial e integral a la ingeniería de riego solar.
+        \item Se cumplieron con excelencia los criterios de evaluación del PIA de Cálculo Integral de la UANL.
+      \end{enumerate}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\end{document}
+

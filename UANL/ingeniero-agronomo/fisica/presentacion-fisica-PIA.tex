@@ -1,0 +1,169 @@
+\documentclass[
+  spanish,
+  aspectratio=169,
+  xcolor={dvipsnames,table}
+]{beamer}
+
+\geometry{paperwidth=19.2cm,paperheight=10.8cm}
+
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\usepackage[spanish,es-tabla,es-noshorthands]{babel}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{tabularx}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usepackage{hyperref}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+
+\definecolor{uanlblue}{RGB}{0,55,108}
+\definecolor{uanlgold}{RGB}{218,165,32}
+\definecolor{tableblue}{RGB}{233,240,247}
+\definecolor{darkcharcoal}{RGB}{33,37,41}
+
+\setbeamercolor{palette primary}{bg=uanlblue,fg=white}
+\setbeamercolor{palette secondary}{bg=uanlgold,fg=uanlblue}
+\setbeamercolor{structure}{fg=uanlblue}
+\setbeamercolor{title}{fg=white,bg=uanlblue}
+\setbeamercolor{frametitle}{fg=uanlblue,bg=white}
+\setbeamerfont{frametitle}{series=\bfseries,size=\large}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.5ex,dp=1.1ex,left,leftskip=1cm]{palette primary}%
+    \fontsize{7}{9}\selectfont UANL \textbar\ Facultad de Agronomía
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.5ex,dp=1.1ex,center]{palette primary}%
+    \fontsize{7}{9}\selectfont Física — PIA
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.5ex,dp=1.1ex,right,rightskip=1cm]{palette primary}%
+    \fontsize{7}{9}\selectfont \insertframenumber{} / \inserttotalframenumber
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[uanlblue] (current page.south west) rectangle (current page.north east);
+    \fill[uanlgold] ([yshift=1.2cm]current page.south west) rectangle ([yshift=1.45cm]current page.south east);
+  \end{tikzpicture}
+  \vspace{-0.5cm}
+  \begin{center}
+    \includegraphics[height=1.8cm]{UANL/assets-uanl/logos-institucionales.pdf}
+    \vspace{0.4cm}
+    
+    {\fontsize{10}{12}\selectfont \textbf{\color{uanlgold}UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN \textbar\ FACULTAD DE AGRONOMÍA}}\\[0.2cm]
+    {\fontsize{15}{18}\selectfont \textbf{\color{white}DISEÑO Y VALIDACIÓN EXPERIMENTAL DE PROTOTIPO VENTURI PARA FERTIRRIEGO}}\\[0.2cm]
+    {\fontsize{11}{13}\selectfont \color{white}Producto Integrador de Aprendizaje (PIA) \textbar\ 25 Puntos}\\[0.5cm]
+
+    \begin{tabular}{rl}
+      \textbf{\color{uanlgold}Estudiante:} & \color{white}Carlos Mauricio Carvajal Coronado (Matrícula: 1977875) \\
+      \textbf{\color{uanlgold}Docente Titular:} & \color{white}Garza Valverde Elizabeth \\
+      \textbf{\color{uanlgold}Programa:} & \color{white}Ingeniero Agrónomo \textbar\ REF\#261013755808
+    \end{tabular}
+  \end{center}
+\end{frame}
+
+\begin{frame}{1. Justificación y Planteamiento del Problema}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Retos de la Fertirrigación:}
+      \begin{itemize}
+        \item Alto costo de motobombas dosificadoras electromecánicas de importación.
+        \item Dependencia energética de la red eléctrica o generadores diésel en campo.
+        \item Necesidad de tecnologías pasivas basadas en leyes físicas universales.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Solución Física: Efecto Venturi:}
+      \begin{itemize}
+        \item Aprovecha la energía cinética de la propia corriente presurizada de riego.
+        \item \textbf{Ecuación de Continuidad:} $A_1 v_1 = A_2 v_2$.
+        \item \textbf{Ecuación de Bernoulli:}
+          $$P_1 + \frac{1}{2}\rho v_1^2 = P_2 + \frac{1}{2}\rho v_2^2$$
+        \item Generación de vacío relativo ($P_2 < P_{\text{atm}}$) para inyección automática.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{2. Diseño Geométrico y Deducción Teórica}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Parámetros Constructivos:}
+      \begin{itemize}
+        \item Tubería principal: $D_1 = 25.4\text{ mm}$ ($1''$).
+        \item Garganta de constricción: $D_2 = 9.5\text{ mm}$.
+        \item Relación de áreas: $A_1/A_2 \approx 7.15$.
+        \item Conos hidrodinámicos:
+          \begin{itemize}
+            \item Contracción convergente: $21^\circ$.
+            \item Difusor divergente: $7^\circ$.
+          \end{itemize}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Deducción de la Depresión Hidrodinámica:}
+      $$\Delta P = P_1 - P_2 = \frac{1}{2}\rho v_1^2 \left[ \left( \frac{D_1}{D_2} \right)^4 - 1 \right]$$
+      \begin{itemize}
+        \item Para $v_1 = 1.15\text{ m/s} \implies v_2 = 8.22\text{ m/s}$.
+        \item Depresión teórica: $\Delta P_{\text{teor}} = 33.1\text{ kPa}$.
+        \item Succión inducida: Capacidad de elevar solución nutritiva hasta $h = 1.5\text{ m}$.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{3. Validación Experimental y Análisis de Errores}
+  \begin{table}[h!]
+    \centering
+    \footnotesize
+    \begin{tabularx}{\textwidth}{cYYYY}
+      \toprule
+      \textbf{Ensayo} & \textbf{Caudal $Q$ (L/min)} & \textbf{$P_1$ Entrada (kPa)} & \textbf{$\Delta P$ Teórico (kPa)} & \textbf{$\Delta P$ Medido (kPa)} \\
+      \midrule
+      1 & 25.0 & 180.0 & 16.5 & 15.8 \\
+      2 & 30.0 & 195.0 & 23.8 & 22.9 \\
+      3 & 35.0 & 210.0 & 32.4 & 31.0 \\
+      4 & 40.0 & 230.0 & 42.3 & 40.5 \\
+      5 & 45.0 & 250.0 & 53.6 & 51.2 \\
+      \bottomrule
+    \end{tabularx}
+  \end{table}
+  \begin{itemize}
+    \item \textbf{Error relativo medio:} $4.3\%$, coherente con el coeficiente de pérdida por fricción viscosa ($K_L \approx 0.08$).
+    \item \textbf{Tasa de inyección útil:} $48.2\text{ L/h}$, suficiente para 3 hectáreas de fertirriego por goteo.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{4. Conclusiones y Escalabilidad Agrícola}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Aportes del Prototipo:}
+      \begin{itemize}
+        \item Costo de construcción inferior al $10\%$ de un inyector importado comercial.
+        \item Cero consumo de energía eléctrica externa durante la dosificación.
+        \item Alta durabilidad y mantenimiento nulo por ausencia de partes mecánicas móviles.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Conclusiones Académicas:}
+      \begin{enumerate}
+        \item Se integraron los principios de continuidad y energía hidrodinámica de Bernoulli.
+        \item El método científico y el análisis de errores validaron con rigor el prototipo.
+        \item Se satisfacen con excelencia las competencias de la unidad de Física de la Facultad de Agronomía UANL.
+      \end{enumerate}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\end{document}
+

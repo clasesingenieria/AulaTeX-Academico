@@ -1,0 +1,163 @@
+\documentclass[
+  spanish,
+  aspectratio=169,
+  xcolor={dvipsnames,table}
+]{beamer}
+
+\geometry{paperwidth=19.2cm,paperheight=10.8cm}
+
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\usepackage[spanish,es-tabla,es-noshorthands]{babel}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{tabularx}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usepackage{hyperref}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+
+\definecolor{uanlblue}{RGB}{0,55,108}
+\definecolor{uanlgold}{RGB}{218,165,32}
+\definecolor{tableblue}{RGB}{233,240,247}
+\definecolor{darkcharcoal}{RGB}{33,37,41}
+
+\setbeamercolor{palette primary}{bg=uanlblue,fg=white}
+\setbeamercolor{palette secondary}{bg=uanlgold,fg=uanlblue}
+\setbeamercolor{structure}{fg=uanlblue}
+\setbeamercolor{title}{fg=white,bg=uanlblue}
+\setbeamercolor{frametitle}{fg=uanlblue,bg=white}
+\setbeamerfont{frametitle}{series=\bfseries,size=\large}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.5ex,dp=1.1ex,left,leftskip=1cm]{palette primary}%
+    \fontsize{7}{9}\selectfont UANL \textbar\ Facultad de Agronomía
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.5ex,dp=1.1ex,center]{palette primary}%
+    \fontsize{7}{9}\selectfont Ética y Cultura de la Legalidad — PIA
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.5ex,dp=1.1ex,right,rightskip=1cm]{palette primary}%
+    \fontsize{7}{9}\selectfont \insertframenumber{} / \inserttotalframenumber
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[uanlblue] (current page.south west) rectangle (current page.north east);
+    \fill[uanlgold] ([yshift=1.2cm]current page.south west) rectangle ([yshift=1.45cm]current page.south east);
+  \end{tikzpicture}
+  \vspace{-0.5cm}
+  \begin{center}
+    \includegraphics[height=1.8cm]{UANL/assets-uanl/logos-institucionales.pdf}
+    \vspace{0.4cm}
+    
+    {\fontsize{10}{12}\selectfont \textbf{\color{uanlgold}UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN \textbar\ FACULTAD DE AGRONOMÍA}}\\[0.2cm]
+    {\fontsize{15}{18}\selectfont \textbf{\color{white}ANÁLISIS ÉTICO-JURÍDICO Y PLAN DE INTERVENCIÓN EN EL SECTOR AGROALIMENTARIO}}\\[0.2cm]
+    {\fontsize{11}{13}\selectfont \color{white}Producto Integrador de Aprendizaje (PIA) \textbar\ 40 Puntos}\\[0.5cm]
+
+    \begin{tabular}{rl}
+      \textbf{\color{uanlgold}Estudiante:} & \color{white}Carlos Mauricio Carvajal Coronado (Matrícula: 1977875) \\
+      \textbf{\color{uanlgold}Unidad:} & \color{white}Ética y Cultura de la Legalidad \textbar\ REF\#261013755115 \\
+      \textbf{\color{uanlgold}Programa:} & \color{white}Ingeniero Agrónomo \textbar\ FGU UANL
+    \end{tabular}
+  \end{center}
+\end{frame}
+
+\begin{frame}{1. Diagnóstico de la Problemática Agrícola Regional}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Dilemas Críticos en Nuevo León:}
+      \begin{itemize}
+        \item \textbf{Aprovechamiento hídrico clandestino:} Perforación no autorizada de pozos y sobreexplotación de mantos freáticos en la cuenca del Río San Juan.
+        \item \textbf{Agroquímicos ilegales:} Uso de sustancias prohibidas por COFEPRIS y disposición indebida de envases vacíos (violación de la NOM-003-STPS).
+        \item \textbf{Efectos:} Pérdida de soberanía hídrica y riesgos graves a la salud pública y biodiversidad.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Marco Ético y Filosófico:}
+      \begin{itemize}
+        \item \textbf{Adela Cortina:} Ruptura de la ética de mínimos de justicia universal por afán de lucro desmedido.
+        \item \textbf{Deontología UANL:} Compromiso ético del Ingeniero Agrónomo como custodio de los recursos naturales y la inocuidad.
+        \item \textbf{Cultura de la Legalidad:} Rechazo activo a la impunidad y fomento del apego voluntario a las normas jurídicas.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{2. Marco Normativo Federal Aplicable}
+  \begin{table}[h!]
+    \centering
+    \footnotesize
+    \begin{tabularx}{\textwidth}{lYY}
+      \toprule
+      \textbf{Legislación} & \textbf{Precepto Vulnerado} & \textbf{Consecuencia Jurídica} \\
+      \midrule
+      \textbf{CPEUM} & Art. 4.° (Medio ambiente y agua) y 27 (Nación). & Responsabilidad del Estado y tutela de derechos humanos. \\
+      \textbf{Ley de Aguas Nal.} & Art. 119 (Extracción no concesionada). & Clausura de pozos y multas de hasta 50,000 UMAs. \\
+      \textbf{LGEEPA} & Art. 109 bis / 153 (Residuos tóxicos). & Clausura de predios y remediación obligatoria de suelos. \\
+      \textbf{Código Penal Fed.} & Art. 416 y 420 Quáter (Delitos ambientales). & Prisión inconmutable de 1 a 9 años. \\
+      \bottomrule
+    \end{tabularx}
+  \end{table}
+\end{frame}
+
+\begin{frame}{3. Plan Estratégico de Intervención Profesional}
+  \begin{columns}[T]
+    \begin{column}{0.32\textwidth}
+      \textbf{\color{uanlblue}Eje 1: Auditoría Técnica}
+      \begin{itemize}
+        \item Telemetría de pozos concesionados.
+        \item Calibración de equipos de riego presurizado.
+        \item Ahorro comprobado del $30\%$ de caudal.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      \textbf{\color{uanlblue}Eje 2: Inocuidad y Biocontrol}
+      \begin{itemize}
+        \item Transición a bioinsumos certificados (MIP).
+        \item Convenio Campo Limpio (triple lavado del $100\%$ de envases).
+        \item Cero tolerancia a sustancias rojas.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      \textbf{\color{uanlblue}Eje 3: Cultura y Denuncia}
+      \begin{itemize}
+        \item Capacitación ética a productores ejidales.
+        \item Canales protegidos de denuncia ante PROFEPA.
+        \item Transparencia en cadenas de valor.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{4. Conclusiones y Compromiso Deontológico UANL}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Transformación Deontológica:}
+      \begin{itemize}
+        \item La legalidad no es burocracia: es la condición indispensable para la viabilidad de la agricultura nacional.
+        \item La ética orienta la técnica hacia el bienestar común y la preservación ecológica.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Compromiso del Ingeniero Agrónomo:}
+      \begin{enumerate}
+        \item Ejercer la profesión con rigor científico y rectitud moral inquebrantable.
+        \item Proteger el agua y el suelo como patrimonio intergeneracional sagrado.
+        \item Honrar los valores de excelencia y verdad de la UANL (*Alere Flammam Veritatis*).
+      \end{enumerate}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\end{document}
+

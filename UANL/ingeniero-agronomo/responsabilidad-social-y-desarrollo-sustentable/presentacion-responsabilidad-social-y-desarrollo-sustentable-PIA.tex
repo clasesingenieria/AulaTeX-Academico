@@ -1,0 +1,158 @@
+\documentclass[
+  spanish,
+  aspectratio=169,
+  xcolor={dvipsnames,table}
+]{beamer}
+
+\geometry{paperwidth=19.2cm,paperheight=10.8cm}
+
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\usepackage[spanish,es-tabla,es-noshorthands]{babel}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{tabularx}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usepackage{hyperref}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+
+\definecolor{uanlblue}{RGB}{0,55,108}
+\definecolor{uanlgold}{RGB}{218,165,32}
+\definecolor{tableblue}{RGB}{233,240,247}
+\definecolor{darkcharcoal}{RGB}{33,37,41}
+
+\setbeamercolor{palette primary}{bg=uanlblue,fg=white}
+\setbeamercolor{palette secondary}{bg=uanlgold,fg=uanlblue}
+\setbeamercolor{structure}{fg=uanlblue}
+\setbeamercolor{title}{fg=white,bg=uanlblue}
+\setbeamercolor{frametitle}{fg=uanlblue,bg=white}
+\setbeamerfont{frametitle}{series=\bfseries,size=\large}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.5ex,dp=1.1ex,left,leftskip=1cm]{palette primary}%
+    \fontsize{7}{9}\selectfont UANL \textbar\ Facultad de Agronomía
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.5ex,dp=1.1ex,center]{palette primary}%
+    \fontsize{7}{9}\selectfont Responsabilidad Social y Sustentabilidad — PIA
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.5ex,dp=1.1ex,right,rightskip=1cm]{palette primary}%
+    \fontsize{7}{9}\selectfont \insertframenumber{} / \inserttotalframenumber
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[uanlblue] (current page.south west) rectangle (current page.north east);
+    \fill[uanlgold] ([yshift=1.2cm]current page.south west) rectangle ([yshift=1.45cm]current page.south east);
+  \end{tikzpicture}
+  \vspace{-0.5cm}
+  \begin{center}
+    \includegraphics[height=1.8cm]{UANL/assets-uanl/logos-institucionales.pdf}
+    \vspace{0.4cm}
+    
+    {\fontsize{10}{12}\selectfont \textbf{\color{uanlgold}UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN \textbar\ FACULTAD DE AGRONOMÍA}}\\[0.2cm]
+    {\fontsize{15}{18}\selectfont \textbf{\color{white}PROYECTO DE INTERVENCIÓN SUSTENTABLE: BIOFÁBRICA COMUNITARIA EJIDAL}}\\[0.2cm]
+    {\fontsize{11}{13}\selectfont \color{white}Producto Integrador de Aprendizaje (PIA) \textbar\ 25 Puntos}\\[0.5cm]
+
+    \begin{tabular}{rl}
+      \textbf{\color{uanlgold}Estudiante:} & \color{white}Carlos Mauricio Carvajal Coronado (Matrícula: 1977875) \\
+      \textbf{\color{uanlgold}Docente Titular:} & \color{white}Cavazos Galindo Jaime Manuel \\
+      \textbf{\color{uanlgold}Programa:} & \color{white}Ingeniero Agrónomo \textbar\ REF\#261013755032
+    \end{tabular}
+  \end{center}
+\end{frame}
+
+\begin{frame}{1. Diagnóstico Socioambiental Participativo}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Problemática en Marín y General Terán:}
+      \begin{itemize}
+        \item Disposición inadecuada de estiércoles pecuarios en arroyos y caminos.
+        \item Contaminación por nitratos en mantos freáticos y emisión de $CH_4$ y $N_2O$.
+        \item Suelos degradados con materia orgánica inferior al $1.0\%$.
+        \item Alto costo de fertilizantes sintéticos importados.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Solución Propuesta: Economía Circular:}
+      \begin{itemize}
+        \item Creación de una \textbf{Biofábrica Ejidal de Co-compostaje}.
+        \item Transformación de pasivos ambientales en biofertilizante sólido y biol foliar.
+        \item Integración de la Metodología de Marco Lógico y la Norma ISO 26000.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{2. Alineación Estratégica con los ODS 2030}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{ODS 2: Hambre Cero (Meta 2.4)}
+        Prácticas agrícolas regenerativas que aumentan la resiliencia climática y restauran la fertilidad del suelo.
+      \end{block}
+      \begin{block}{ODS 6: Agua Limpia (Meta 6.3)}
+        Eliminación del vertimiento de excretas y reducción de la lixiviación de nitratos hacia norias ejidales.
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{ODS 12: Producción Responsable (Meta 12.5)}
+        Reciclaje biológico y valorización del $100\%$ de subproductos pecuarios locales.
+      \end{block}
+      \begin{block}{ODS 13: Acción por el Clima (Meta 13.3)}
+        Captura de carbono en el suelo y reducción drástica de gases de efecto invernadero.
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{3. Matriz de Marco Lógico (MML) e Indicadores}
+  \begin{table}[h!]
+    \centering
+    \footnotesize
+    \begin{tabularx}{\textwidth}{lYY}
+      \toprule
+      \textbf{Nivel} & \textbf{Objetivo} & \textbf{Meta Indicadora (IOV)} \\
+      \midrule
+      \textbf{Fin} & Elevar rentabilidad y sustentabilidad ejidal. & $+15\%$ en ingresos netos ejidales en 3 años. \\
+      \textbf{Propósito} & Valorizar el $100\%$ de excretas de la cuenca. & $3,600\text{ ton/año}$ transformadas en $1,400\text{ ton}$ de compost. \\
+      \textbf{Componente 1} & Planta de co-compostaje termofílico instalada. & 1 biofábrica comunitaria en operación continua (Mes 8). \\
+      \textbf{Componente 2} & Capacitación campesina en biofertilización. & 60 productores ejidales aplicando bioinsumos. \\
+      \textbf{Componente 3} & Monitoreo agroecológico y de emisiones. & 4 análisis anuales de suelo, agua y calidad microbiológica. \\
+      \bottomrule
+    \end{tabularx}
+  \end{table}
+\end{frame}
+
+\begin{frame}{4. Responsabilidad Social (ISO 26000) y Conclusiones}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Gobernanza y Sostenibilidad:}
+      \begin{itemize}
+        \item Constitución de un Comité de Vigilancia Ciudadana con paridad de género.
+        \item Fondo revolvente transparente para reinversión comunitaria.
+        \item Transferencia tecnológica sin intermediarios ni lucro corporativo.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Conclusiones Institucionales:}
+      \begin{enumerate}
+        \item Se demuestra la factibilidad técnica y económica de la economía circular agropecuaria en Nuevo León.
+        \item El marco lógico dota al proyecto de rigurosidad técnica, viabilidad presupuestal e impacto medible.
+        \item El trabajo consolida el compromiso social de la Facultad de Agronomía de la UANL con las comunidades rurales.
+      \end{enumerate}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\end{document}
+

@@ -1,0 +1,170 @@
+\documentclass[
+  spanish,
+  aspectratio=169,
+  xcolor={dvipsnames,table}
+]{beamer}
+
+\geometry{paperwidth=19.2cm,paperheight=10.8cm}
+
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\usepackage[spanish,es-tabla,es-noshorthands]{babel}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{tabularx}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usepackage{hyperref}
+
+\definecolor{uanlblue}{RGB}{0,55,108}
+\definecolor{uanlgold}{RGB}{218,165,32}
+\definecolor{tableblue}{RGB}{233,240,247}
+\definecolor{darkcharcoal}{RGB}{33,37,41}
+
+\setbeamercolor{palette primary}{bg=uanlblue,fg=white}
+\setbeamercolor{palette secondary}{bg=uanlgold,fg=uanlblue}
+\setbeamercolor{structure}{fg=uanlblue}
+\setbeamercolor{title}{fg=white,bg=uanlblue}
+\setbeamercolor{frametitle}{fg=uanlblue,bg=white}
+\setbeamerfont{frametitle}{series=\bfseries,size=\large}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.5ex,dp=1.1ex,left,leftskip=1cm]{palette primary}%
+    \fontsize{7}{9}\selectfont UANL \textbar\ Facultad de Agronomía
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.5ex,dp=1.1ex,center]{palette primary}%
+    \fontsize{7}{9}\selectfont Álgebra Lineal — PIA
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.5ex,dp=1.1ex,right,rightskip=1cm]{palette primary}%
+    \fontsize{7}{9}\selectfont \insertframenumber{} / \inserttotalframenumber
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[uanlblue] (current page.south west) rectangle (current page.north east);
+    \fill[uanlgold] ([yshift=1.2cm]current page.south west) rectangle ([yshift=1.45cm]current page.south east);
+  \end{tikzpicture}
+  \vspace{-0.5cm}
+  \begin{center}
+    \includegraphics[height=1.8cm]{UANL/assets-uanl/logos-institucionales.pdf}
+    \vspace{0.4cm}
+    
+    {\fontsize{10}{12}\selectfont \textbf{\color{uanlgold}UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN \textbar\ FACULTAD DE AGRONOMÍA}}\\[0.2cm]
+    {\fontsize{15}{18}\selectfont \textbf{\color{white}MODELACIÓN MATRICIAL DE FERTILIZACIÓN Y DINÁMICA POBLACIONAL CON MATRICES DE LESLIE}}\\[0.2cm]
+    {\fontsize{11}{13}\selectfont \color{white}Producto Integrador de Aprendizaje (PIA) \textbar\ 25 Puntos}\\[0.5cm]
+
+    \begin{tabular}{rl}
+      \textbf{\color{uanlgold}Estudiante:} & \color{white}Carlos Mauricio Carvajal Coronado (Matrícula: 1977875) \\
+      \textbf{\color{uanlgold}Docente Titular:} & \color{white}Miranda Vázquez José de Jesús \\
+      \textbf{\color{uanlgold}Programa:} & \color{white}Ingeniero Agrónomo \textbar\ REF\#261013755137
+    \end{tabular}
+  \end{center}
+\end{frame}
+
+\begin{frame}{1. Justificación y Objetivos de la Modelación}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Desafíos en la Citricultura Regional:}
+      \begin{itemize}
+        \item Alto costo de fertilizantes inorgánicos ($N, P, K$).
+        \item Riesgo epidemiológico del HLB transmitido por \textit{Diaphorina citri}.
+        \item Necesidad de modelos analíticos cuantitativos frente a recetas empíricas.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Aportación del Álgebra Lineal:}
+      \begin{itemize}
+        \item \textbf{Sistemas Lineales ($A\mathbf{x} = \mathbf{b}$):} Solución exacta de dosis de mezcla física sin mermas ni excesos.
+        \item \textbf{Matriz de Leslie ($L$):} Proyección estocástica de poblaciones por cohortes etarias.
+        \item \textbf{Teorema Espectral:} Autovalor $\lambda_1$ para predecir colapso o explosión poblacional bajo control biológico.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{2. Formulación del Sistema de Fertilización ($A\mathbf{x}=\mathbf{b}$)}
+  \begin{block}{Sistema Matricial de Insumo-Producto}
+    $$\begin{pmatrix}
+        0.46 & 0.18 & 0.13 \\
+        0.00 & 0.46 & 0.00 \\
+        0.00 & 0.00 & 0.44
+    \end{pmatrix}
+    \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}
+    =
+    \begin{pmatrix} 180 \\ 60 \\ 120 \end{pmatrix}$$
+  \end{block}
+  \begin{itemize}
+    \item \textbf{Determinante:} $\det(A) = 0.46 \times 0.46 \times 0.44 = 0.093104 \neq 0$ $\implies$ Rango completo ($r=3$), solución única.
+    \item \textbf{Dosis calculadas:}
+      \begin{itemize}
+        \item Nitrato de Potasio ($x_3$): $272.73\text{ kg/ha}$.
+        \item Fosfato Diamónico 18-46-0 ($x_2$): $130.43\text{ kg/ha}$.
+        \item Urea agrícola 46-0-0 ($x_1$): $263.19\text{ kg/ha}$.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{3. Dinámica Poblacional de Leslie: Formulación y Autovalores}
+  \begin{columns}[T]
+    \begin{column}{0.45\textwidth}
+      \textbf{\color{uanlblue}Matriz de Leslie ($L$):}
+      $$L = \begin{pmatrix}
+        0 & 0 & 24 \\
+        0.20 & 0 & 0 \\
+        0 & 0.25 & 0.60
+      \end{pmatrix}$$
+      \vspace{0.2cm}
+      \textbf{Ecuación característica:}
+      $$\det(L - \lambda I) = \lambda^3 - 0.60\lambda^2 - 1.20 = 0$$
+    \end{column}
+    \begin{column}{0.51\textwidth}
+      \textbf{\color{uanlblue}Comportamiento sin Control:}
+      \begin{itemize}
+        \item \textbf{Autovalor Dominante:} $\lambda_1 \approx 1.305 > 1.0$.
+        \item \textbf{Tasa de crecimiento:} $30.5\%$ de incremento por ciclo de 10 días.
+        \item \textbf{Estructura etaria asintótica ($\mathbf{w}_1$):}
+          \begin{itemize}
+            \item Huevos / ninfas tempranas: $82.8\%$
+            \item Ninfas tardías: $12.7\%$
+            \item Adultos reproductivos: $4.5\%$
+          \end{itemize}
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{4. Control Biológico con \textit{Tamarixia radiata} y Conclusiones}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Simulación de Control Biológico:}
+      \begin{itemize}
+        \item Parasitismo selectivo reduce la supervivencia ninfal $s_2$ de $0.25$ a $0.05$.
+        \item Nuevo polinomio característico:
+          $$\lambda^3 - 0.60\lambda^2 - 0.24 = 0$$
+        \item \textbf{Nuevo autovalor dominante:} $\lambda_1 = 0.898 < 1.0$.
+        \item \textbf{Resultado:} La población decae a una tasa de $10.2\%$ por intervalo $\implies$ erradicación efectiva de la plaga.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Conclusiones Clave:}
+      \begin{enumerate}
+        \item Se eliminó el desperdicio de fertilizantes mediante álgebra matricial.
+        \item Se fundamentó científicamente el control biológico sin recurrir al abuso de insecticidas organofosforados.
+        \item La matemática aplicada es una herramienta estratégica en la toma de decisiones agronómicas.
+      \end{enumerate}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\end{document}
+

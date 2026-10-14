@@ -7,8 +7,8 @@ param(
 $ErrorActionPreference = 'Stop'
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '../../..')).Path
 $relativeSubject = 'UANL/ingeniero-agronomo/responsabilidad-social-y-desarrollo-sustentable'
-$suffix = 'responsabilidad-social-y-desarrollo-sustentable-Actividad-1'
-$output = '.build/latex/uanl-rsds'
+$suffix = 'responsabilidad-social-y-desarrollo-sustentable-PIA'
+$output = '.build/latex/uanl-responsabilidad-social'
 $latexmk = (Get-Command latexmk -ErrorAction Stop).Source
 $texBin = Split-Path -Parent $latexmk
 $texRoot = Split-Path -Parent (Split-Path -Parent $texBin)
@@ -26,7 +26,8 @@ try {
     }
     $subjectInputs = $PSScriptRoot.Replace('\', '/')
     $templateInputs = (Join-Path $repoRoot 'aulaTEX/base/Plantilla-Informe').Replace('\', '/')
-    $env:TEXINPUTS = ".;$subjectInputs;$templateInputs;"
+    $uanlInputs = (Join-Path $repoRoot 'UANL').Replace('\', '/')
+    $env:TEXINPUTS = ".;$subjectInputs;$templateInputs;$uanlInputs;"
     $documents = if ($Documento -eq 'todos') { @('reporte', 'presentacion') } else { @($Documento) }
     foreach ($kind in $documents) {
         $stem = "$kind-$suffix"
