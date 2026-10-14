@@ -1,0 +1,74 @@
+% AulaTeX - maqueta inicial de construcción descendente
+% Contrato futuro: el Agente puede investigar, redactar, evaluar y compilar a partir de este archivo.
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{xcolor}
+
+\definecolor{uanlBlue}{HTML}{00376C}
+\definecolor{uanlGold}{HTML}{D4AF37}
+\definecolor{uanlGreen}{HTML}{1B5E20}
+
+\title{\textbf{Nodo Institucional: Universidad Autónoma de Nuevo León (UANL)}}
+\author{AulaTeX Académico}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\noindent\textbf{Nodo editorial:} biologia-celular-fagro\\
+\textbf{Padre editorial:} interinstitucional\\
+\textbf{Modo de generación:} reforzar\\
+\textbf{Destino:} UANL\\
+\textbf{Contrato futuro:} ready-for-agent
+
+\section*{Ingesta base y estado del nodo}
+\begin{itemize}[leftmargin=*]
+  \item Institución: Universidad Autónoma de Nuevo León (UANL).
+  \item Dependencias primarias: Facultad de Agronomía (FAGRO), Facultad de Ingeniería Mecánica y Eléctrica (FIME).
+  \item Plataforma de gestión curricular: Nexus UANL / AulaTeX.
+  \item Plantillas maestras activas: \texttt{reporte-uanl.tex}, \texttt{presentacion-uanl.tex}, \texttt{plantilla-actividad-uanl.tex}.
+  \item Repositorio bibliográfico institucional: \texttt{bibliografia-uanl.bib}.
+\end{itemize}
+
+\section*{Objetivo formativo}
+\begin{itemize}[leftmargin=*]
+  \item Estructurar una base editorial e institucional robusta para la producción de evidencias de aprendizaje, reportes de laboratorio, proyectos integradores (PIA) y defensas orales en la UANL.
+  \item Normalizar los estándares visuales (paleta Azul UANL, Oro y Verde Agronomía) y tipográficos (Arial/Helvetica, 1.5 de interlineado).
+  \item Facilitar la generación automatizada y trazable de documentos científicos con aparato crítico en APA 7ma edición.
+\end{itemize}
+
+\section*{Competencias del Modelo Educativo UANL}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Formación integral:} Capacidad para interpretar fenómenos científicos complejos y resolver problemas del entorno socioproductivo.
+  \item \textbf{Investigación y análisis crítico:} Trazabilidad metodológica, uso de fuentes indexadas primarias y contraste riguroso de hipótesis.
+  \item \textbf{Comunicación profesional y científica:} Producción de documentos y defensas orales síncronas con estructura clara, solvencia léxica y soporte visual vectorial.
+\end{itemize}
+
+\section*{Arquitectura de entregables normalizados}
+\begin{center}
+\begin{tabular}{p{0.25\linewidth} p{0.35\linewidth} p{0.30\linewidth}}
+\toprule
+\textbf{Entregable} & \textbf{Plantilla Fuente} & \textbf{Salida Verificada} \\
+\midrule
+Reporte / PIA Escrito & \texttt{reporte-uanl.tex} & \texttt{reporte-uanl.pdf} \\
+Defensa Oral Beamer & \texttt{presentacion-uanl.tex} & \texttt{presentacion-uanl.pdf} \\
+Actividad Formativa & \texttt{plantilla-actividad-uanl.tex} & Formato XeLaTeX / PDF \\
+Maqueta del Nodo & \texttt{maqueta.tex} & \texttt{maqueta.pdf} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{Criterios de evaluación y calidad}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Cero errores de compilación:} Procesamiento limpio mediante \texttt{latexmk} / \texttt{XeLaTeX}.
+  \item \textbf{Aparato crítico estricto:} Integración de citas autor-año y bibliografía completa sin fuentes huérfanas.
+  \item \textbf{Transferencia disciplinar:} Cada entregable debe incluir un apartado explícito de aplicación práctica en la profesión.
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,47 @@
+{
+  "node": {
+    "key": "biologia-celular-fagro",
+    "level": "institucion",
+    "label": "biologia-celular-fagro",
+    "relative_path": "UANL"
+  },
+  "memoria_fundacional": {
+    "summary": [
+      "Nodo institucional consolidado para la Universidad Autónoma de Nuevo León (UANL) en AulaTeX.",
+      "Se alinea al flujo estándar de cinco fases: memoria, investigación, extracción Nexus, generación/agente y compilación.",
+      "Se establece la suite de plantillas maestras: reporte-uanl.tex, presentacion-uanl.tex, plantilla-actividad-uanl.tex y maqueta.tex.",
+      "Se unifica el repositorio bibliográfico institucional en bibliografia-uanl.bib con soporte para APA 7ma edición.",
+      "Se estandariza la identidad gráfica institucional: paleta cromática Azul UANL (#00376C), Oro universitario (#D4AF37) y Verde Agronomía (#1B5E20)."
+    ],
+    "identity_rules": [
+      "Mantener prefijo y naming institucional UANL en archivos principales y rutas.",
+      "Usar carpetas canónicas por carrera: ingeniero-agronomo, ingenieria-en-mecatronica, ingenieria-en-administracion-y-sistemas.",
+      "Conservar compatibilidad con bibliografía institucional compartida: bibliografia-uanl.bib.",
+      "Centralizar logotipos vectoriales y rasterizados de alta resolución en UANL/assets-uanl/.",
+      "Mantener archivos canónicos por asignatura: reporte-*.tex, actividad-*.tex, presentacion-*.tex y COMPILACION-*.md."
+    ],
+    "structure_rules": [
+      "Organizar por carrera y asignatura dentro de UANL con subcarpetas para evidencias, referencias y planeaciones.",
+      "Separar claramente: memoria editorial, planeaciones de Nexus y piezas LaTeX compilables.",
+      "Mantener estructura común mínima y equivalente entre actividad, reporte y presentación.",
+      "Referenciar plantillas compartidas en aulaTEX/base/ sin duplicar plantillas maestras innecesariamente."
+    ],
+    "style_rules": [
+      "Redacción formal, técnica y rigurosa orientada al aprendizaje agronómico e ingenieril.",
+      "Definir conceptos clave antes del análisis y evitar generalidades o relleno retórico.",
+      "Citas en formato autor-año compatibles con APA 7ma edición en cuerpo y referencias.",
+      "Esquemas y cuadros comparativos elaborados preferentemente en TikZ y booktabs para garantizar nitidez vectorial."
+    ],
+    "quality_gates": [
+      "Toda afirmación científica o técnica debe vincularse a fuentes primarias o tratados especializados verificables.",
+      "La actividad debe incluir criterios de evaluación observables y trazables a los programas analíticos de la UANL.",
+      "Validar compilación sin errores de rutas, citas o bibliografía antes de promover cualquier entrega (salida código 0).",
+      "Garantizar la presencia de los entregables verificados en formato PDF con peso y páginas válidas."
+    ],
+    "latex_rules": [
+      "Compilación soportada mediante XeLaTeX y latexmk a través de aulaTEX/latexmk-build.ps1.",
+      "Aislamiento de residuos de compilación en .build/latex/ conforme al contrato de AulaTeX.",
+      "Compatibilidad multiplataforma asegurando codificación UTF-8 e inclusión condicional de tipografías."
+    ]
+  }
+}

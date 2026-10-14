@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>PIA Álgebra Lineal — Facultad de Agronomía UANL</title>
+  <style>
+    :root {
+      --primary: #1B4332;
+      --accent: #2D6A4F;
+      --text: #1F2937;
+      --bg: #FFFFFF;
+    }
+
+    @page {
+      size: letter;
+      margin: 20mm 20mm;
+      background: var(--bg);
+      @bottom-right {
+        content: counter(page);
+        font-family: 'Liberation Sans', 'DejaVu Sans', sans-serif;
+        font-size: 8.5pt;
+        color: var(--text);
+      }
+    }
+
+    @page :first {
+      @bottom-right {
+        content: none;
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+    }
+    body {
+      font-family: 'Liberation Sans', 'DejaVu Sans', sans-serif;
+      font-size: 10pt;
+      line-height: 1.56;
+      color: var(--text);
+    }
+
+    * { border: none; border-radius: 0; box-shadow: none; background: transparent; outline: none; }
+
+    /* Cover page (Archetype 2) */
+    .display-canvas {
+      width: 100%;
+      min-height: 235mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      page-break-after: always;
+      break-after: page;
+      text-align: center;
+    }
+
+    /* Continuous flow (Archetype 1) */
+    main.document-flow {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      font-family: 'Liberation Serif', 'DejaVu Serif', serif;
+      font-size: 18pt;
+      line-height: 1.25;
+      margin: 0 0 14px 0;
+      color: var(--primary);
+    }
+    h2 {
+      font-family: 'Liberation Serif', 'DejaVu Serif', serif;
+      font-size: 13pt;
+      line-height: 1.35;
+      margin: 26px 0 10px 0;
+      color: var(--primary);
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+    h3 {
+      font-size: 11pt;
+      line-height: 1.35;
+      margin: 18px 0 8px 0;
+      color: var(--accent);
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+    p { margin: 0 0 12px 0; text-align: justify; }
+    ul, ol { margin: 0 0 12px 0; padding-left: 20px; }
+    li { margin-bottom: 5px; text-align: justify; }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    section { margin-bottom: 18px; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+    }
+    th, td {
+      text-align: left;
+      padding: 8px 10px;
+      font-size: 9.5pt;
+      vertical-align: middle;
+    }
+    th {
+      border-bottom: 2px solid var(--primary);
+      font-weight: 700;
+      color: var(--primary);
+    }
+    td {
+      border-bottom: 1px solid rgba(0,0,0,0.09);
+    }
+    .num {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+    .center {
+      text-align: center;
+    }
+
+    /* Compact math layout table */
+    table.math-table {
+      width: auto;
+      margin: 8px auto 12px auto;
+    }
+    table.math-table td {
+      border-bottom: none;
+      padding: 2px 7px;
+      font-family: 'Liberation Serif', 'DejaVu Serif', serif;
+      font-size: 10pt;
+      text-align: center;
+    }
+
+    .math-block {
+      font-family: 'Liberation Serif', 'DejaVu Serif', serif;
+      font-size: 10pt;
+      text-align: center;
+      margin: 8px 0 12px 0;
+      line-height: 1.6;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .apa-ref {
+      padding-left: 28px;
+      text-indent: -28px;
+      margin-bottom: 9px;
+      text-align: left;
+    }
+
+    hr {
+      border-bottom: 1px solid rgba(0,0,0,0.15);
+      margin: 16px 0;
+    }
+    .full-bleed-header {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    figure { margin: 18px 0; }
+    figcaption {
+      font-size: 8.8pt;
+      color: var(--text);
+      opacity: 0.78;
+      margin-top: 8px;
+      text-align: center;
+    }
+
+    tr, figure {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. PORTADA (Archetype 2 Cover Page) -->
+  <div class="display-canvas">
+    <header>
+      <p class="center" style="font-size: 15pt; font-weight: 700; color: var(--primary); margin-bottom: 4px;">UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN</p>
+      <p class="center" style="font-size: 12.5pt; font-weight: 700; color: var(--accent); margin-bottom: 14px;">FACULTAD DE AGRONOMÍA (FAGRO)</p>
+      <hr>
+      <p class="center" style="font-size: 11pt; font-weight: 700; margin-bottom: 4px;">UNIDAD DE APRENDIZAJE: ÁLGEBRA LINEAL</p>
+      <p class="center" style="font-size: 11pt; font-weight: 700; color: var(--primary);">PRODUCTO INTEGRADOR DE APRENDIZAJE (PIA)</p>
+    </header>
+
+    <main>
+      <h1 class="center" style="font-size: 19pt; margin: 18px 0 14px 0;">Formulación y Optimización de una Mezcla de Fertilización N-P-K para el Cultivo de Maíz en Nuevo León mediante Sistemas de Ecuaciones Lineales de 3 &times; 3</h1>
+      <p class="center" style="font-size: 10.5pt; margin-bottom: 6px;"><strong>Programa Educativo:</strong> Ingeniero Agrónomo</p>
+      <p class="center" style="font-size: 10.5pt; margin-bottom: 22px;"><strong>Semestre:</strong> Agosto &ndash; Diciembre 2026</p>
+
+      <p class="center" style="font-size: 10pt; font-weight: 700; color: var(--primary); margin-bottom: 6px;">Integrantes del Equipo (Máximo 4 Integrantes)</p>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 8%;">N.&ordm;</th>
+            <th style="width: 44%;">Nombre Completo del Estudiante</th>
+            <th style="width: 16%;">Matrícula</th>
+            <th style="width: 12%;">Grupo</th>
+            <th style="width: 20%;">Carrera</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>[Nombre Completo del Estudiante 1]</td>
+            <td>[Matrícula]</td>
+            <td>[Grupo]</td>
+            <td>Ing. Agrónomo</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>[Nombre Completo del Estudiante 2]</td>
+            <td>[Matrícula]</td>
+            <td>[Grupo]</td>
+            <td>Ing. Agrónomo</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>[Nombre Completo del Estudiante 3]</td>
+            <td>[Matrícula]</td>
+            <td>[Grupo]</td>
+            <td>Ing. Agrónomo</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>[Nombre Completo del Estudiante 4]</td>
+            <td>[Matrícula]</td>
+            <td>[Grupo]</td>
+            <td>Ing. Agrónomo</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <footer>
+      <hr>
+      <p class="center" style="font-size: 9.5pt; margin-bottom: 0;">Campus Ciencias Agropecuarias, General Escobedo / Marín, Nuevo León, México &mdash; <strong>Fecha límite de entrega en Nexus:</strong> 11 de noviembre de 2026</p>
+    </footer>
+  </div>
+
+  <!-- CUERPO DEL REPORTE (Archetype 1 Continuous Flow) -->
+  <main class="document-flow">
+
+    <section>
+      <h2>2. Introducción: Nutrición Mineral Exacta mediante Álgebra Lineal</h2>
+
+      <h3>2.a. Justificación Agronómica y Matemática</h3>
+      <p>La nutrición mineral balanceada constituye uno de los pilares de la ingeniería agronómica moderna para sostener rendimientos competitivos sin degradar la fertilidad físico-química del suelo ni elevar innecesariamente los costos operativos de las unidades de producción (<a href="https://www.gob.mx/cms/uploads/attachment/file/911180/Dx_S290-Fertilizantes_2023.pdf">Secretaría de Agricultura y Desarrollo Rural [SADER], 2023</a>). En el estado de Nuevo León se establecen anualmente alrededor de 34,916 hectáreas de maíz, concentradas principalmente en los municipios del sur como Galeana y Doctor Arroyo bajo condiciones de clima estepario semiseco, con una precipitación media anual de 650 mm y temperatura promedio de 20 &deg;C (<a href="https://www.gob.mx/cms/uploads/attachment/file/928380/TRIPTICO_NUEVO_LEON_MAIZ.pdf">SADER e Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias [INIFAP], 2024</a>). Ante el alza de los insumos agrícolas, formular mezclas precisas permite cubrir la demanda fisiológica del cultivo evitando tanto déficits nutricionales como excesos que deriven en lixiviación o salinización edáfica.</p>
+
+      <p>Dentro del perfil profesional del <a href="https://www.uanl.mx/oferta/ingeniero-agronomo/">Ingeniero Agrónomo de la Facultad de Agronomía de la UANL (2025)</a>, el razonamiento matemático respalda directamente unidades de aprendizaje como <a href="https://agronomia.uanl.mx/wp-content/uploads/2025/05/LICENCIATURA-EN-INGENIERIA-EN-AGRONOMIA-plan-430-1.pdf">Fertilidad de Suelos y Cultivos Básicos (UANL, 2025)</a>. Cuando un asesor técnico dispone de tres fertilizantes compuestos comerciales con distintas concentraciones porcentuales de Nitrógeno (N), Fósforo asimilable expresado como pentóxido de difósforo (P<sub>2</sub>O<sub>5</sub>) y Potasio soluble expresado como óxido de potasio (K<sub>2</sub>O), el balance de masa de cada macronutriente da origen a un sistema acoplado de tres ecuaciones lineales con tres incógnitas (3 &times; 3). Su resolución exacta mediante métodos matriciales garantiza hallar la dosificación única por hectárea que satisface simultáneamente los tres requerimientos del cultivo.</p>
+
+      <h3>2.b. Planteamiento del Problema Aplicado a la Agronomía</h3>
+      <p>En una unidad de producción agrícola dedicada al cultivo de maíz para grano bajo riego de auxilio en el municipio de Galeana, Nuevo León, el diagnóstico de fertilidad de suelo y la meta de rendimiento fijan un requerimiento nutricional neto por hectárea de <strong>99 kg/ha de Nitrógeno (N), 83 kg/ha de Fósforo (P<sub>2</sub>O<sub>5</sub>) y 84 kg/ha de Potasio (K<sub>2</sub>O)</strong>. Para elaborar la mezcla física de fertilización, el almacén técnico dispone de tres fórmulas comerciales de fertilizantes compuestos ternarios (<a href="https://areadeagronomia.mx/wp-content/uploads/2024/12/MANUALMATADAMAS-pdf.pdf">Área de Agronomía, 2024</a>):</p>
+
+      <ul>
+        <li><strong>Fórmula A (Complejo Arrancador 12-24-12):</strong> contiene 12% de Nitrógeno (N), 24% de Fósforo (P<sub>2</sub>O<sub>5</sub>) y 12% de Potasio (K<sub>2</sub>O) en peso.</li>
+        <li><strong>Fórmula B (Complejo de Desarrollo Vegetativo 20-10-10):</strong> contiene 20% de Nitrógeno (N), 10% de Fósforo (P<sub>2</sub>O<sub>5</sub>) y 10% de Potasio (K<sub>2</sub>O) en peso.</li>
+        <li><strong>Fórmula C (Complejo de Llenado de Grano 15-05-30):</strong> contiene 15% de Nitrógeno (N), 5% de Fósforo (P<sub>2</sub>O<sub>5</sub>) y 30% de Potasio (K<sub>2</sub>O) en peso.</li>
+      </ul>
+
+      <p><strong>Problema por resolver:</strong> Determinar la cantidad exacta en kilogramos por hectárea de la Fórmula A (<i>x</i><sub>1</sub>), de la Fórmula B (<i>x</i><sub>2</sub>) y de la Fórmula C (<i>x</i><sub>3</sub>) que deben mezclarse y aplicarse en el ciclo agrícola para suministrar exactamente 99 kg de N, 83 kg de P<sub>2</sub>O<sub>5</sub> y 84 kg de K<sub>2</sub>O por hectárea.</p>
+    </section>
+
+    <section>
+      <h2>3. Recolección de Datos Técnicos y Agronómicos</h2>
+      <p>La recolección de datos se realizó mediante revisión documental de fuentes oficiales del sector agropecuario en México. Se consultaron las recomendaciones del paquete tecnológico de maíz para Nuevo León (<a href="https://www.gob.mx/cms/uploads/attachment/file/928380/TRIPTICO_NUEVO_LEON_MAIZ.pdf">SADER &amp; INIFAP, 2024</a>) y los ensayos de respuesta productiva a la fertilización mineral del <a href="https://www.scielo.org.mx/pdf/remexca/v9nspe21/2007-0934-remexca-9-spe21-4306.pdf">INIFAP (2018)</a>, donde se establece el manejo fraccionado del nitrógeno (mitad en la siembra y mitad en la escarda en etapa V5&ndash;V6) junto con la aplicación inicial del fósforo y el potasio. Asimismo, se recabaron las especificaciones químicas de fertilizantes minerales en el <a href="https://areadeagronomia.mx/wp-content/uploads/2024/12/MANUALMATADAMAS-pdf.pdf">Manual para el Cálculo de Fórmulas Generales de Fertilización (Área de Agronomía, 2024)</a>. La Tabla 1 resume los datos recolectados para el modelo lineal.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 28%;">Macronutriente Primario</th>
+            <th style="width: 18%;">Fórmula A (12-24-12)<br>[Variable <i>x</i><sub>1</sub>]</th>
+            <th style="width: 18%;">Fórmula B (20-10-10)<br>[Variable <i>x</i><sub>2</sub>]</th>
+            <th style="width: 18%;">Fórmula C (15-05-30)<br>[Variable <i>x</i><sub>3</sub>]</th>
+            <th class="num" style="width: 18%;">Requerimiento<br>(kg/ha)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Nitrógeno total (N)</strong></td>
+            <td>12% (0.12 kg/kg)</td>
+            <td>20% (0.20 kg/kg)</td>
+            <td>15% (0.15 kg/kg)</td>
+            <td class="num"><strong>99.0</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Fósforo asimilable (P<sub>2</sub>O<sub>5</sub>)</strong></td>
+            <td>24% (0.24 kg/kg)</td>
+            <td>10% (0.10 kg/kg)</td>
+            <td>5% (0.05 kg/kg)</td>
+            <td class="num"><strong>83.0</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Potasio soluble (K<sub>2</sub>O)</strong></td>
+            <td>12% (0.12 kg/kg)</td>
+            <td>10% (0.10 kg/kg)</td>
+            <td>30% (0.30 kg/kg)</td>
+            <td class="num"><strong>84.0</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>4. Metodología: Modelación Lineal y Selección del Método</h2>
+
+      <h3>4.a. Planteamiento del Sistema de Ecuaciones Lineales de 3 &times; 3</h3>
+      <p>Se definen las tres incógnitas del sistema como las cantidades en kilogramos por hectárea de cada insumo comercial:</p>
+      <ul>
+        <li><strong><i>x</i><sub>1</sub>:</strong> Cantidad requerida del fertilizante compuesto <strong>Fórmula A (12-24-12)</strong> en kg/ha.</li>
+        <li><strong><i>x</i><sub>2</sub>:</strong> Cantidad requerida del fertilizante compuesto <strong>Fórmula B (20-10-10)</strong> en kg/ha.</li>
+        <li><strong><i>x</i><sub>3</sub>:</strong> Cantidad requerida del fertilizante compuesto <strong>Fórmula C (15-05-30)</strong> en kg/ha.</li>
+      </ul>
+
+      <p>Al plantear el balance de masa para cada nutriente en proporción decimal (kg de nutriente por kg de fertilizante) y su forma entera equivalente (multiplicando cada ecuación por 100 para eliminar decimales), se obtiene el sistema lineal de 3 &times; 3:</p>
+
+      <div class="math-block">
+        <strong>Forma decimal:</strong><br>
+        0.12 <i>x</i><sub>1</sub> + 0.20 <i>x</i><sub>2</sub> + 0.15 <i>x</i><sub>3</sub> = 99 &nbsp;&nbsp;(Ecuación 1: Balance de N)<br>
+        0.24 <i>x</i><sub>1</sub> + 0.10 <i>x</i><sub>2</sub> + 0.05 <i>x</i><sub>3</sub> = 83 &nbsp;&nbsp;(Ecuación 2: Balance de P<sub>2</sub>O<sub>5</sub>)<br>
+        0.12 <i>x</i><sub>1</sub> + 0.10 <i>x</i><sub>2</sub> + 0.30 <i>x</i><sub>3</sub> = 84 &nbsp;&nbsp;(Ecuación 3: Balance de K<sub>2</sub>O)
+      </div>
+
+      <div class="math-block">
+        <strong>Forma entera equivalente (multiplicando por 100):</strong><br>
+        12 <i>x</i><sub>1</sub> + 20 <i>x</i><sub>2</sub> + 15 <i>x</i><sub>3</sub> = 9900<br>
+        24 <i>x</i><sub>1</sub> + 10 <i>x</i><sub>2</sub> + 5 <i>x</i><sub>3</sub> = 8300<br>
+        12 <i>x</i><sub>1</sub> + 10 <i>x</i><sub>2</sub> + 30 <i>x</i><sub>3</sub> = 8400
+      </div>
+
+      <p>En representación matricial <i>A</i><b>x</b> = <b>b</b>, la matriz aumentada asociada [<i>A</i> | <b>b</b>] es:</p>
+
+      <table class="math-table">
+        <tbody>
+          <tr>
+            <td>[<i>A</i> | <b>b</b>] =</td>
+            <td>&lceil;<br>&vert;<br>&lfloor;</td>
+            <td>12<br>24<br>12</td>
+            <td>20<br>10<br>10</td>
+            <td>15<br>5<br>30</td>
+            <td>&vert;<br>&vert;<br>&vert;</td>
+            <td>9900<br>8300<br>8400</td>
+            <td>&rceil;<br>&vert;<br>&rfloor;</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>4.b. Justificación del Método Visto en Clase Empleado en la Solución</h3>
+      <p>Para dar solución al sistema se eligió como método principal la <strong>Eliminación de Gauss-Jordan</strong> y como método de comprobación independiente la <strong>Regla de Cramer</strong> (<a href="https://books.google.com/books/about/ALGEBRA_LINEAL.html?id=D8HvMQEACAAJ">Grossman &amp; Flores Godoy, 2012</a>), por tres razones fundamentales:</p>
+      <ol>
+        <li><strong>Obtención directa de la matriz identidad reducida [<i>I</i><sub>3</sub> | <b>x</b>]:</strong> El algoritmo de Gauss-Jordan reduce simultáneamente los elementos por debajo y por encima de la diagonal principal hasta aislar cada incógnita (<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, <i>x</i><sub>3</sub>) sin requerir sustitución regresiva adicional.</li>
+        <li><strong>Proporcionalidad exacta en la primera columna:</strong> Los coeficientes de la primera columna (12, 24 y 12) guardan relaciones enteras exactas (24 = 2 &times; 12 y 12 = 1 &times; 12), lo que permite ejecutar las operaciones elementales de renglón sin fracciones complejas, facilitando su desarrollo ordenado en pizarrón durante el video integrador.</li>
+        <li><strong>Garantía teórica de unicidad (Regla de Cramer):</strong> Verificar que el determinante del sistema es distinto de cero (&Delta; = det(<i>A</i>) = &minus;8400 &ne; 0) demuestra que las tres ecuaciones son linealmente independientes y que existe una única combinación exacta de fertilizantes.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>5. Procedimientos: Desarrollo Paso a Paso y Herramientas</h2>
+
+      <h3>5.a. Solución Paso a Paso mediante Eliminación de Gauss-Jordan</h3>
+
+      <p><strong>Paso 1 (Matriz aumentada inicial):</strong> Se parte de la matriz aumentada con coeficientes enteros [<i>A</i> | <b>b</b>].</p>
+
+      <p><strong>Paso 2 (Eliminación debajo del primer pivote en la columna 1):</strong> Tomando el elemento <i>a</i><sub>11</sub> = 12 como referencia, se aplican las operaciones elementales <i>R</i><sub>2</sub> &larr; <i>R</i><sub>2</sub> &minus; 2<i>R</i><sub>1</sub> y <i>R</i><sub>3</sub> &larr; <i>R</i><sub>3</sub> &minus; <i>R</i><sub>1</sub>:</p>
+      <div class="math-block">
+        <i>R</i><sub>2</sub> &larr; <i>R</i><sub>2</sub> &minus; 2<i>R</i><sub>1</sub> : &nbsp; [24 &minus; 2(12), &nbsp; 10 &minus; 2(20), &nbsp; 5 &minus; 2(15) &nbsp;|&nbsp; 8300 &minus; 2(9900)] = [0, &nbsp; &minus;30, &nbsp; &minus;25 &nbsp;|&nbsp; &minus;11500]<br>
+        <i>R</i><sub>3</sub> &larr; <i>R</i><sub>3</sub> &minus; <i>R</i><sub>1</sub> : &nbsp; [12 &minus; 12, &nbsp; 10 &minus; 20, &nbsp; 30 &minus; 15 &nbsp;|&nbsp; 8400 &minus; 9900] = [0, &nbsp; &minus;10, &nbsp; 15 &nbsp;|&nbsp; &minus;1500]
+      </div>
+      <table class="math-table">
+        <tbody>
+          <tr>
+            <td>&rArr;</td>
+            <td>&lceil;<br>&vert;<br>&lfloor;</td>
+            <td>12<br>0<br>0</td>
+            <td>20<br>&minus;30<br>&minus;10</td>
+            <td>15<br>&minus;25<br>15</td>
+            <td>&vert;<br>&vert;<br>&vert;</td>
+            <td>9900<br>&minus;11500<br>&minus;1500</td>
+            <td>&rceil;<br>&vert;<br>&rfloor;</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>Paso 3 (Preparación del segundo pivote en la columna 2):</strong> Se intercambian los renglones segundo y tercero (<i>R</i><sub>2</sub> &harr; <i>R</i><sub>3</sub>) y se divide el nuevo segundo renglón entre &minus;10 (<i>R</i><sub>2</sub> &larr; &minus;(1/10)<i>R</i><sub>2</sub>):</p>
+      <table class="math-table">
+        <tbody>
+          <tr>
+            <td><i>R</i><sub>2</sub> &harr; <i>R</i><sub>3</sub> , &nbsp; <i>R</i><sub>2</sub> &larr; &minus;(1/10)<i>R</i><sub>2</sub> &nbsp;&rArr;</td>
+            <td>&lceil;<br>&vert;<br>&lfloor;</td>
+            <td>12<br>0<br>0</td>
+            <td>20<br>1<br>&minus;30</td>
+            <td>15<br>&minus;1.5<br>&minus;25</td>
+            <td>&vert;<br>&vert;<br>&vert;</td>
+            <td>9900<br>150<br>&minus;11500</td>
+            <td>&rceil;<br>&vert;<br>&rfloor;</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>Paso 4 (Eliminación arriba y abajo del segundo pivote en la columna 2):</strong> Se ejecutan las operaciones elementales <i>R</i><sub>1</sub> &larr; <i>R</i><sub>1</sub> &minus; 20<i>R</i><sub>2</sub> y <i>R</i><sub>3</sub> &larr; <i>R</i><sub>3</sub> + 30<i>R</i><sub>2</sub>:</p>
+      <div class="math-block">
+        <i>R</i><sub>1</sub> &larr; <i>R</i><sub>1</sub> &minus; 20<i>R</i><sub>2</sub> : &nbsp; [12 &minus; 0, &nbsp; 20 &minus; 20(1), &nbsp; 15 &minus; 20(&minus;1.5) &nbsp;|&nbsp; 9900 &minus; 20(150)] = [12, &nbsp; 0, &nbsp; 45 &nbsp;|&nbsp; 6900]<br>
+        <i>R</i><sub>3</sub> &larr; <i>R</i><sub>3</sub> + 30<i>R</i><sub>2</sub> : &nbsp; [0 + 0, &nbsp; &minus;30 + 30(1), &nbsp; &minus;25 + 30(&minus;1.5) &nbsp;|&nbsp; &minus;11500 + 30(150)] = [0, &nbsp; 0, &nbsp; &minus;70 &nbsp;|&nbsp; &minus;7000]
+      </div>
+      <table class="math-table">
+        <tbody>
+          <tr>
+            <td>&rArr;</td>
+            <td>&lceil;<br>&vert;<br>&lfloor;</td>
+            <td>12<br>0<br>0</td>
+            <td>0<br>1<br>0</td>
+            <td>45<br>&minus;1.5<br>&minus;70</td>
+            <td>&vert;<br>&vert;<br>&vert;</td>
+            <td>6900<br>150<br>&minus;7000</td>
+            <td>&rceil;<br>&vert;<br>&rfloor;</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>Paso 5 (Normalización del tercer pivote en la columna 3):</strong> Se divide el tercer renglón entre &minus;70 (<i>R</i><sub>3</sub> &larr; &minus;(1/70)<i>R</i><sub>3</sub>), obteniendo directamente <i>x</i><sub>3</sub> = 100:</p>
+      <table class="math-table">
+        <tbody>
+          <tr>
+            <td><i>R</i><sub>3</sub> &larr; &minus;(1/70)<i>R</i><sub>3</sub> &nbsp;&rArr;</td>
+            <td>&lceil;<br>&vert;<br>&lfloor;</td>
+            <td>12<br>0<br>0</td>
+            <td>0<br>1<br>0</td>
+            <td>45<br>&minus;1.5<br>1</td>
+            <td>&vert;<br>&vert;<br>&vert;</td>
+            <td>6900<br>150<br>100</td>
+            <td>&rceil;<br>&vert;<br>&rfloor;</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>Paso 6 (Eliminación hacia arriba en la columna 3 y normalización del primer pivote):</strong> Se aplican <i>R</i><sub>2</sub> &larr; <i>R</i><sub>2</sub> + 1.5<i>R</i><sub>3</sub> y <i>R</i><sub>1</sub> &larr; <i>R</i><sub>1</sub> &minus; 45<i>R</i><sub>3</sub>, y por último se divide el primer renglón entre 12 (<i>R</i><sub>1</sub> &larr; (1/12)<i>R</i><sub>1</sub>):</p>
+      <div class="math-block">
+        <i>R</i><sub>2</sub> &larr; <i>R</i><sub>2</sub> + 1.5<i>R</i><sub>3</sub> : &nbsp; [0, &nbsp; 1, &nbsp; &minus;1.5 + 1.5(1) &nbsp;|&nbsp; 150 + 1.5(100)] = [0, &nbsp; 1, &nbsp; 0 &nbsp;|&nbsp; 300]<br>
+        <i>R</i><sub>1</sub> &larr; <i>R</i><sub>1</sub> &minus; 45<i>R</i><sub>3</sub> : &nbsp; [12, &nbsp; 0, &nbsp; 45 &minus; 45(1) &nbsp;|&nbsp; 6900 &minus; 45(100)] = [12, &nbsp; 0, &nbsp; 0 &nbsp;|&nbsp; 2400]<br>
+        <i>R</i><sub>1</sub> &larr; (1/12)<i>R</i><sub>1</sub> : &nbsp; [2400 / 12] = [1, &nbsp; 0, &nbsp; 0 &nbsp;|&nbsp; 200]
+      </div>
+      <table class="math-table">
+        <tbody>
+          <tr>
+            <td>[<i>I</i><sub>3</sub> | <b>x</b>] =</td>
+            <td>&lceil;<br>&vert;<br>&lfloor;</td>
+            <td>1<br>0<br>0</td>
+            <td>0<br>1<br>0</td>
+            <td>0<br>0<br>1</td>
+            <td>&vert;<br>&vert;<br>&vert;</td>
+            <td>200<br>300<br>100</td>
+            <td>&rceil;<br>&vert;<br>&rfloor;</td>
+            <td>&nbsp;&rArr;&nbsp; <strong><i>x</i><sub>1</sub> = 200 kg/ha, &nbsp; <i>x</i><sub>2</sub> = 300 kg/ha, &nbsp; <i>x</i><sub>3</sub> = 100 kg/ha</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>5.a.ii. Verificación Cruzada mediante Regla de Cramer y Sustitución Directa</h3>
+      <p>Calculando el determinante principal &Delta; y los determinantes auxiliares &Delta;<sub><i>x</i>1</sub>, &Delta;<sub><i>x</i>2</sub> y &Delta;<sub><i>x</i>3</sub> por expansión de cofactores en la primera fila:</p>
+      <div class="math-block">
+        &Delta; = 12(300 &minus; 50) &minus; 20(720 &minus; 60) + 15(240 &minus; 120) = 3,000 &minus; 13,200 + 1,800 = <strong>&minus;8,400</strong><br>
+        &Delta;<sub><i>x</i>1</sub> = 9900(250) &minus; 20(207,000) + 15(1,000) = <strong>&minus;1,680,000</strong> &nbsp;&rArr;&nbsp; <i>x</i><sub>1</sub> = &minus;1,680,000 / &minus;8,400 = <strong>200 kg/ha</strong><br>
+        &Delta;<sub><i>x</i>2</sub> = 12(207,000) &minus; 9900(660) + 15(102,000) = <strong>&minus;2,520,000</strong> &nbsp;&rArr;&nbsp; <i>x</i><sub>2</sub> = &minus;2,520,000 / &minus;8,400 = <strong>300 kg/ha</strong><br>
+        &Delta;<sub><i>x</i>3</sub> = 12(1,000) &minus; 20(102,000) + 9900(120) = <strong>&minus;840,000</strong> &nbsp;&rArr;&nbsp; <i>x</i><sub>3</sub> = &minus;840,000 / &minus;8,400 = <strong>100 kg/ha</strong>
+      </div>
+
+      <p><strong>Comprobación en las tres ecuaciones originales:</strong></p>
+      <ul>
+        <li><strong>Ecuación 1 (N):</strong> 0.12(200) + 0.20(300) + 0.15(100) = 24 + 60 + 15 = <strong>99 kg/ha de N</strong> &check;</li>
+        <li><strong>Ecuación 2 (P<sub>2</sub>O<sub>5</sub>):</strong> 0.24(200) + 0.10(300) + 0.05(100) = 48 + 30 + 5 = <strong>83 kg/ha de P<sub>2</sub>O<sub>5</sub></strong> &check;</li>
+        <li><strong>Ecuación 3 (K<sub>2</sub>O):</strong> 0.12(200) + 0.10(300) + 0.30(100) = 24 + 30 + 30 = <strong>84 kg/ha de K<sub>2</sub>O</strong> &check;</li>
+      </ul>
+
+      <h3>5.b. Herramientas Utilizadas para Elaborar el Proyecto</h3>
+      <ul>
+        <li><strong>Microsoft Word con Editor de Ecuaciones nativo (OMML):</strong> maquetación digital bajo normativa APA 7.&ordf; edición y escritura formal de los sistemas de ecuaciones, matrices aumentadas y determinantes.</li>
+        <li><strong>Python 3 (NumPy y Matplotlib):</strong> validación numérica del sistema matricial y generación de gráficos de alta resolución.</li>
+        <li><strong>Literatura técnica oficial (SADER, INIFAP y UANL):</strong> consulta de paquetes tecnológicos regionales y manuales de cálculo de fertilización mineral.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>6. Resultados: Dosificación Comercial y Balance de Nutrientes</h2>
+      <p>La solución única del sistema lineal indica que se requiere una mezcla total de <strong>600 kg/ha de fertilizante comercial (12 bultos de 50 kg)</strong>, integrada por 200 kg/ha de Fórmula A, 300 kg/ha de Fórmula B y 100 kg/ha de Fórmula C, como se detalla en la Tabla 2 y en la Figura 1.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 28%;">Insumo Comercial</th>
+            <th class="num" style="width: 14%;">Dosis Óptima<br>(kg/ha)</th>
+            <th style="width: 16%;">Presentación<br>(Bultos 50 kg)</th>
+            <th class="num" style="width: 14%;">Aporte N<br>(kg/ha)</th>
+            <th class="num" style="width: 14%;">Aporte P<sub>2</sub>O<sub>5</sub><br>(kg/ha)</th>
+            <th class="num" style="width: 14%;">Aporte K<sub>2</sub>O<br>(kg/ha)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Fórmula A (12-24-12) [<i>x</i><sub>1</sub>]</strong></td>
+            <td class="num">200.0</td>
+            <td>4 bultos</td>
+            <td class="num">24.0 (24.2%)</td>
+            <td class="num">48.0 (57.8%)</td>
+            <td class="num">24.0 (28.6%)</td>
+          </tr>
+          <tr>
+            <td><strong>Fórmula B (20-10-10) [<i>x</i><sub>2</sub>]</strong></td>
+            <td class="num">300.0</td>
+            <td>6 bultos</td>
+            <td class="num">60.0 (60.6%)</td>
+            <td class="num">30.0 (36.1%)</td>
+            <td class="num">30.0 (35.7%)</td>
+          </tr>
+          <tr>
+            <td><strong>Fórmula C (15-05-30) [<i>x</i><sub>3</sub>]</strong></td>
+            <td class="num">100.0</td>
+            <td>2 bultos</td>
+            <td class="num">15.0 (15.2%)</td>
+            <td class="num">5.0 (6.0%)</td>
+            <td class="num">30.0 (35.7%)</td>
+          </tr>
+          <tr>
+            <td><strong>Total Mezcla / Meta N-P-K</strong></td>
+            <td class="num"><strong>600.0</strong></td>
+            <td><strong>12 bultos</strong></td>
+            <td class="num"><strong>99.0 (100%)</strong></td>
+            <td class="num"><strong>83.0 (100%)</strong></td>
+            <td class="num"><strong>84.0 (100%)</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <figure>
+        <img src="balance_nutricional_npk.png" alt="Gráfica de dosis óptima por fertilizante y balance apilado de N, P2O5 y K2O">
+        <figcaption>Figura 1. Dosis óptima requerida por fertilizante comercial (izquierda) y contribución acumulada al requerimiento neto de N, P<sub>2</sub>O<sub>5</sub> y K<sub>2</sub>O por hectárea (derecha).</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>7. Análisis de Resultados e Interpretación Agronómica</h2>
+      <p>Los valores obtenidos (<i>x</i><sub>1</sub> = 200 kg/ha, <i>x</i><sub>2</sub> = 300 kg/ha y <i>x</i><sub>3</sub> = 100 kg/ha) presentan plena factibilidad física y agronómica. En primer lugar, todas las variables son positivas y corresponden exactamente a múltiplos cerrados de 50 kg (4, 6 y 2 bultos comerciales), lo que elimina errores de pesaje fraccionado en campo. En segundo lugar, el análisis porcentual muestra que la <strong>Fórmula B (20-10-10)</strong> aporta el 60.6% del nitrógeno total (60 kg/ha), la <strong>Fórmula A (12-24-12)</strong> suministra el 57.8% del fósforo requerido para el desarrollo radicular (48 kg/ha de P<sub>2</sub>O<sub>5</sub>), y la <strong>Fórmula C (15-05-30)</strong> completa el 35.7% del potasio (30 kg/ha de K<sub>2</sub>O) indispensable para la tolerancia al estrés hídrico (<a href="https://areadeagronomia.mx/wp-content/uploads/2024/12/MANUALMATADAMAS-pdf.pdf">Área de Agronomía, 2024</a>). Siguiendo el criterio técnico de <a href="https://www.gob.mx/cms/uploads/attachment/file/928380/TRIPTICO_NUEVO_LEON_MAIZ.pdf">SADER e INIFAP (2024)</a> para maíz en Nuevo León, se recomienda aplicar en la siembra los 4 bultos de Fórmula A, los 2 bultos de Fórmula C y 1 bulto de Fórmula B (aportando 49 kg de N, 58 kg de P<sub>2</sub>O<sub>5</sub> y 59 kg de K<sub>2</sub>O), reservando los 5 bultos restantes de Fórmula B (250 kg/ha) para la segunda aplicación durante la escarda (etapa V5&ndash;V6).</p>
+    </section>
+
+    <section>
+      <h2>8. Conclusión</h2>
+      <p>La realización de este Producto Integrador de Aprendizaje demostró la utilidad directa del Álgebra Lineal en el ejercicio profesional del Ingeniero Agrónomo. Mediante el planteamiento de un sistema de ecuaciones lineales de 3 &times; 3 sustentado en fichas técnicas reales de fertilizantes y requerimientos del cultivo de maíz en Nuevo León, se determinó con exactitud matemática la mezcla de 200 kg/ha de Fórmula A (12-24-12), 300 kg/ha de Fórmula B (20-10-10) y 100 kg/ha de Fórmula C (15-05-30). Tanto el método de Eliminación de Gauss-Jordan como la Regla de Cramer convergieron al mismo resultado único (&Delta; = &minus;8400 &ne; 0), permitiendo cubrir el 100% de la demanda nutricional (99&ndash;83&ndash;84 kg/ha) sin desperdicio económico ni impacto ambiental por sobredosificación.</p>
+    </section>
+
+    <section>
+      <h2>9. Referencias Bibliográficas (Normativa APA 7.&ordf; Edición)</h2>
+      <p class="apa-ref">Área de Agronomía. (2024). <a href="https://areadeagronomia.mx/wp-content/uploads/2024/12/MANUALMATADAMAS-pdf.pdf"><i>Manual para el cálculo de fórmulas generales de fertilización mineral</i></a>. Portal Técnico de Ciencias Agronómicas.</p>
+      <p class="apa-ref">Grossman, S. I., y Flores Godoy, J. J. (2012). <a href="https://books.google.com/books/about/ALGEBRA_LINEAL.html?id=D8HvMQEACAAJ"><i>Álgebra lineal</i> (7.&ordf; ed.)</a>. McGraw-Hill Interamericana.</p>
+      <p class="apa-ref">Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias [INIFAP]. (2018). <a href="https://www.scielo.org.mx/pdf/remexca/v9nspe21/2007-0934-remexca-9-spe21-4306.pdf">Rendimiento de maíz grano con y sin fertilización</a>. <i>Revista Mexicana de Ciencias Agrícolas</i>, 9(Esp. 21), 4306&ndash;4315.</p>
+      <p class="apa-ref">Secretaría de Agricultura y Desarrollo Rural [SADER]. (2023). <a href="https://www.gob.mx/cms/uploads/attachment/file/911180/Dx_S290-Fertilizantes_2023.pdf"><i>Diagnóstico del Programa de Fertilizantes para el Bienestar (S290)</i></a>. Gobierno de México.</p>
+      <p class="apa-ref">Secretaría de Agricultura y Desarrollo Rural [SADER] e Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias [INIFAP]. (2024). <a href="https://www.gob.mx/cms/uploads/attachment/file/928380/TRIPTICO_NUEVO_LEON_MAIZ.pdf"><i>Paquete tecnológico para la producción de maíz en el estado de Nuevo León</i></a>. Representación de Agricultura en Nuevo León.</p>
+      <p class="apa-ref">Universidad Autónoma de Nuevo León [UANL]. (2025). <a href="https://agronomia.uanl.mx/wp-content/uploads/2025/05/LICENCIATURA-EN-INGENIERIA-EN-AGRONOMIA-plan-430-1.pdf"><i>Licenciatura en Ingeniería en Agronomía (Plan 430) &mdash; Facultad de Agronomía</i></a>. UANL.</p>
+    </section>
+
+    <section>
+      <h2>Anexo: Enlace al Video Integrador y Guía de Exposición (Parte B &mdash; 10 Puntos)</h2>
+      <p>Conforme a las indicaciones de entrega del PIA en la plataforma Nexus, a continuación se dispone el apartado para registrar el enlace público al video de exposición y la estructura sugerida de participación para los integrantes del equipo (sin acordeón y de cintura hacia arriba):</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 38%;">Elemento de Entrega del Video</th>
+            <th style="width: 62%;">Detalle / Enlace Público</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Enlace público al video (YouTube / Drive / Vimeo)</strong></td>
+            <td>[Insertar aquí la URL pública del video antes de exportar para Nexus]</td>
+          </tr>
+          <tr>
+            <td><strong>Integrante 1 (Planteamiento y Sistema 3&times;3)</strong></td>
+            <td>Presentación personal (nombre, grupo, carrera), explicación del problema de mezcla N-P-K (99, 83, 84 kg/ha) y escritura en pizarrón de las 3 ecuaciones lineales y la matriz aumentada [<i>A</i> | <b>b</b>].</td>
+          </tr>
+          <tr>
+            <td><strong>Integrante 2 (Método y Pasos 2&ndash;3 de Gauss-Jordan)</strong></td>
+            <td>Presentación personal, definición de operaciones elementales por renglón y ejecución en pizarrón de <i>R</i><sub>2</sub> &larr; <i>R</i><sub>2</sub> &minus; 2<i>R</i><sub>1</sub>, <i>R</i><sub>3</sub> &larr; <i>R</i><sub>3</sub> &minus; <i>R</i><sub>1</sub>, intercambio <i>R</i><sub>2</sub> &harr; <i>R</i><sub>3</sub> y división entre &minus;10.</td>
+          </tr>
+          <tr>
+            <td><strong>Integrante 3 (Pasos 4&ndash;6 hasta Matriz Identidad)</strong></td>
+            <td>Presentación personal y desarrollo en pizarrón de <i>R</i><sub>1</sub> &larr; <i>R</i><sub>1</sub> &minus; 20<i>R</i><sub>2</sub>, <i>R</i><sub>3</sub> &larr; <i>R</i><sub>3</sub> + 30<i>R</i><sub>2</sub> (&minus;70<i>x</i><sub>3</sub> = &minus;7000 &rArr; <i>x</i><sub>3</sub> = 100) y eliminación hacia arriba hasta obtener <i>x</i><sub>2</sub> = 300 y <i>x</i><sub>1</sub> = 200.</td>
+          </tr>
+          <tr>
+            <td><strong>Integrante 4 (Comprobación y Conclusión Agronómica)</strong></td>
+            <td>Presentación personal, sustitución directa en las 3 ecuaciones para verificar el 100% de la meta nutricional y traducción del resultado a bultos comerciales de 50 kg (4, 6 y 2 bultos).</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+</body>
+</html>

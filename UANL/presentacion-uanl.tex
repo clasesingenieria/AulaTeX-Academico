@@ -1,0 +1,407 @@
+% ==============================================================================
+% PLANTILLA DE PRESENTACIÓN INSTITUCIONAL - UANL
+% Universidad Autónoma de Nuevo León | Facultad de Agronomía / FIME
+% ==============================================================================
+% Inspirada en las directrices de identidad de AulaTeX (estilo UnADM / UANL),
+% adaptada a la paleta institucional (Azul y Oro UANL, Verde Agronomía)
+% y al flujo de defensa síncrona de reportes y Productos Integradores (PIA).
+%
+% Uso:
+% 1. Duplica o importa este archivo para presentaciones de la UANL.
+% 2. Actualiza los metadatos editables: título, actividad, asignatura, docente,
+%    matrícula, fecha y bibliografía.
+% 3. Compilar con:
+%    powershell -File .\aulaTEX\latexmk-build.ps1 .\UANL\presentacion-uanl.tex
+% ==============================================================================
+
+\documentclass[
+  spanish,
+  aspectratio=169,
+  xcolor={dvipsnames,table}
+]{beamer}
+
+% Proporción panorámica 16:9 (19.2 cm x 10.8 cm)
+\geometry{paperwidth=19.2cm,paperheight=10.8cm}
+
+\usepackage{ifxetex}
+\ifxetex
+  \usepackage{fontspec}
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[scaled=.96]{helvet}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+\usepackage[spanish,es-tabla,es-noshorthands]{babel}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{tabularx}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usetikzlibrary{arrows.meta,calc,fit,matrix,positioning,shapes.geometric,shadows.blur}
+
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+
+% ------------------------------------------------------------------------------
+% DATOS Y METADATOS EDITABLES
+% ------------------------------------------------------------------------------
+\providecommand{\studentname}{Carlos Mauricio Carvajal Coronado}
+\providecommand{\studentshort}{C. M. Carvajal Coronado}
+\providecommand{\studentid}{1977875}
+\providecommand{\teamname}{Célula Base / Individual}
+\providecommand{\universityname}{Universidad Autónoma de Nuevo León}
+\providecommand{\facultyname}{Facultad de Agronomía}
+\providecommand{\departmentname}{Ingeniero Agrónomo}
+\providecommand{\coursename}{Biología Celular}
+\providecommand{\coursecode}{REF\#261013755061}
+\providecommand{\activitytitle}{Plantilla de Presentación Institucional UANL}
+\providecommand{\activitysubtitle}{Defensa de Evidencias de Aprendizaje y PIA}
+\providecommand{\teachingfigure}{Dr. Miguel Ángel Dector Carrillo}
+\providecommand{\deliverydate}{\today}
+\providecommand{\locationname}{General Escobedo, N.L.}
+\providecommand{\departmentlogo}{img/departamentos/logo-agronomia}
+
+% ------------------------------------------------------------------------------
+% PALETA CROMÁTICA INSTITUCIONAL UANL Y FACULTAD DE AGRONOMÍA
+% ------------------------------------------------------------------------------
+\definecolor{uanlBlueDark}{HTML}{002855}   % Azul UANL profundo
+\definecolor{uanlBlue}{HTML}{00376C}       % Azul institucional UANL
+\definecolor{uanlGold}{HTML}{D4AF37}       % Oro / Dorado universitario UANL
+\definecolor{uanlGoldLight}{HTML}{F0A500}  % Oro de acento
+\definecolor{uanlGreenAgro}{HTML}{1B5E20}  % Verde Facultad de Agronomía
+\definecolor{uanlGreenLight}{HTML}{2E7D32} % Verde follaje
+\definecolor{uanlPaper}{HTML}{F6F8F7}      % Fondo tenue para cajas
+\definecolor{uanlInk}{HTML}{1A2421}        % Tipografía principal
+\definecolor{uanlMuted}{HTML}{546E66}      % Texto atenuado
+
+\mode<presentation>{
+  \usetheme{default}
+  \usefonttheme{professionalfonts}
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{blocks}[rounded][shadow=false]
+  \setbeamercovered{invisible}
+}
+\setbeamersize{text margin left=0.65cm,text margin right=0.65cm}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=uanlBlue,
+  linkcolor=uanlBlue
+}
+
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{normal text}{fg=uanlInk,bg=white}
+\setbeamercolor{structure}{fg=uanlBlue}
+\setbeamercolor{frametitle}{fg=white,bg=uanlBlue}
+\setbeamercolor{title}{fg=white,bg=uanlBlue}
+\setbeamercolor{subtitle}{fg=white}
+\setbeamercolor{block title}{fg=white,bg=uanlBlue}
+\setbeamercolor{block body}{fg=uanlInk,bg=uanlPaper}
+\setbeamercolor{block title alerted}{fg=white,bg=uanlGold}
+\setbeamercolor{block body alerted}{fg=uanlInk,bg=uanlPaper}
+\setbeamercolor{block title example}{fg=white,bg=uanlGreenAgro}
+\setbeamercolor{block body example}{fg=uanlInk,bg=uanlPaper}
+\setbeamercolor{alerted text}{fg=uanlGoldLight}
+\setbeamerfont{title}{size=\LARGE,series=\bfseries}
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+\setbeamerfont{block title}{series=\bfseries}
+\setbeamertemplate{itemize item}{\textcolor{uanlGreenAgro}{\large$\blacktriangleright$}}
+\setbeamertemplate{itemize subitem}{\textcolor{uanlGold}{\scriptsize$\blacksquare$}}
+\setbeamertemplate{enumerate item}{\textcolor{uanlBlue}{\insertenumlabel.}}
+
+% ------------------------------------------------------------------------------
+% ENCABEZADO INSTITUCIONAL
+% ------------------------------------------------------------------------------
+\setbeamertemplate{frametitle}{
+  \nointerlineskip
+  \begin{beamercolorbox}[wd=\textwidth,ht=1.05cm,dp=0.22cm,leftskip=0.40cm,rightskip=0.25cm]{frametitle}
+    \begin{minipage}[c]{0.74\textwidth}
+      \insertframetitle\par
+      \ifx\insertframesubtitle\@empty\else%
+        {\fontsize{9}{11}\selectfont\color{uanlGoldLight}\insertframesubtitle}%
+      \fi
+    \end{minipage}
+    \hfill
+    \raisebox{-0.1cm}{\includegraphics[height=0.65cm]{\departmentlogo}}
+  \end{beamercolorbox}
+  \vspace{-0.04cm}
+  {\color{uanlGold}\rule{\textwidth}{1.4pt}}
+}
+
+% ------------------------------------------------------------------------------
+% PIE DE PÁGINA INSTITUCIONAL
+% ------------------------------------------------------------------------------
+\setbeamertemplate{footline}{
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.33\paperwidth,ht=2.8ex,dp=1.1ex,leftskip=1.2em]{author in head/foot}%
+      \color{white}\studentshort\ \textbar\ \studentid
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.42\paperwidth,ht=2.8ex,dp=1.1ex,center]{title in head/foot}%
+      \color{white}\textbf{\coursename}\ (\facultyname)
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.8ex,dp=1.1ex,rightskip=1.2em plus 1fil]{date in head/foot}%
+      \color{white}\coursecode\hfill\insertframenumber/\inserttotalframenumber
+    \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
+\setbeamercolor{author in head/foot}{bg=uanlBlueDark}
+\setbeamercolor{title in head/foot}{bg=uanlGreenAgro}
+\setbeamercolor{date in head/foot}{bg=uanlBlueDark}
+
+% ------------------------------------------------------------------------------
+% BARRA DE ACENTO INFERIOR
+% ------------------------------------------------------------------------------
+\newcommand{\accentbar}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \path[use as bounding box] (0,0) rectangle (0,0);
+    \fill[uanlGreenAgro] (current page.south west) rectangle ([xshift=0.55\paperwidth,yshift=0.08cm]current page.south west);
+    \fill[uanlGold] ([xshift=0.55\paperwidth]current page.south west) rectangle ([xshift=\paperwidth,yshift=0.08cm]current page.south west);
+  \end{tikzpicture}
+}
+
+% ------------------------------------------------------------------------------
+% SEPARADOR DE SECCIONES DE ALTO IMPACTO VISUAL
+% ------------------------------------------------------------------------------
+\newcommand{\uanlsectionframe}[1]{%
+  \begin{frame}[plain]
+    \begin{tikzpicture}[remember picture,overlay]
+      \path[use as bounding box] (0,0) rectangle (0,0);
+      \fill[uanlBlueDark] (current page.south west) rectangle (current page.north east);
+      \node[opacity=0.08,anchor=east] at ([xshift=-0.5cm]current page.east) {\includegraphics[width=0.45\paperwidth]{\departmentlogo}};
+      \fill[uanlGreenAgro] ([xshift=1.05cm,yshift=2.25cm]current page.south west) rectangle ([xshift=1.25cm,yshift=6.50cm]current page.south west);
+      \fill[uanlGold] ([xshift=1.45cm,yshift=2.25cm]current page.south west) rectangle ([xshift=1.65cm,yshift=5.35cm]current page.south west);
+      \node[
+        anchor=west,
+        align=left,
+        text=white,
+        text width=0.62\paperwidth,
+        font=\fontsize{24}{29}\selectfont\bfseries
+      ] at ([xshift=2.10cm,yshift=0.60cm]current page.west) {#1};
+      \node[
+        anchor=west,
+        align=left,
+        text=uanlGoldLight,
+        font=\large\bfseries
+      ] at ([xshift=2.10cm,yshift=-0.60cm]current page.west) {\facultyname\ \textbar\ \universityname};
+    \end{tikzpicture}
+  \end{frame}
+}
+
+\newcommand{\uanlsection}[1]{%
+  \section{#1}
+  \uanlsectionframe{#1}
+}
+
+% ------------------------------------------------------------------------------
+% MACRO PARA PORTADA INSTITUCIONAL
+% ------------------------------------------------------------------------------
+\newcommand{\uanlportada}{%
+  \begin{frame}[plain]
+    \begin{tikzpicture}[remember picture,overlay]
+      \path[use as bounding box] (0,0) rectangle (0,0);
+      \fill[uanlBlueDark,opacity=0.98] (current page.south west) rectangle ([xshift=0.62\paperwidth]current page.north west);
+      \fill[uanlGreenAgro,opacity=0.94] ([xshift=0.62\paperwidth]current page.south west) rectangle (current page.north east);
+      \node[anchor=center,opacity=0.08] at (current page.center) {\includegraphics[width=0.75\paperwidth]{\departmentlogo}};
+      \node[anchor=north west] at ([xshift=0.65cm,yshift=-0.55cm]current page.north west) {\includegraphics[width=3.2cm]{\departmentlogo}};
+      \fill[uanlGold] ([xshift=0.64\paperwidth,yshift=1.25cm]current page.south west) rectangle ([xshift=0.95\paperwidth,yshift=1.38cm]current page.south west);
+      \fill[white,opacity=0.18] ([xshift=0.64\paperwidth,yshift=0.98cm]current page.south west) rectangle ([xshift=0.86\paperwidth,yshift=1.08cm]current page.south west);
+    \end{tikzpicture}
+
+    \vspace*{1.75cm}
+    \begin{minipage}{0.58\paperwidth}
+      {\color{white}\fontsize{21}{25}\selectfont\bfseries\raggedright \activitytitle\par}
+      \vspace{0.20cm}
+      {\color{uanlGoldLight}\large\bfseries \activitysubtitle}\\[0.28cm]
+      {\color{uanlGold}\rule{0.85\linewidth}{1.4pt}}\\[0.35cm]
+      {\color{white}\textbf{Estudiante:} \studentname}\\
+      {\color{white!85}\small\textbf{Matrícula:} \studentid \quad\textperiodcentered\quad \textbf{Equipo:} \teamname}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.33\paperwidth}
+      \raggedleft
+      {\color{white}\Large\bfseries UANL}\\[0.12cm]
+      {\color{white!90}\footnotesize \universityname}\\[0.35cm]
+      {\color{white}\small\bfseries \facultyname}\\
+      {\color{white!85}\small \departmentname}\\[0.35cm]
+      {\color{uanlGoldLight}\small\textbf{\coursename}}\\
+      {\color{white!75}\footnotesize Clave: \coursecode}\\[0.35cm]
+      {\color{white!80}\footnotesize \textbf{Docente:}\\ \teachingfigure}\\[0.25cm]
+      {\color{white!70}\scriptsize \locationname\ \textperiodcentered\ \deliverydate}
+    \end{minipage}
+  \end{frame}
+}
+
+% ==============================================================================
+% INICIO DE LA PRESENTACIÓN
+% ==============================================================================
+\begin{document}
+
+% 1. PORTADA
+\uanlportada
+
+% 2. OBJETIVO Y ENFOQUE INSTITUCIONAL
+\begin{frame}{Objetivo, competencias y alineación institucional}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Objetivo formativo}
+        Estructurar una defensa oral concisa, rigurosa y visualmente orientada que exponga los fundamentos biofísicos, metodológicos y analíticos del trabajo académico desarrollado en la UANL.
+      \end{block}
+      \begin{alertblock}{Criterios de acreditación UANL}
+        \begin{itemize}
+          \item Rigor conceptual sin ambigüedades técnicas.
+          \item Trazabilidad de fuentes formales en APA 7.
+          \item Capacidad de síntesis en tiempo asignado.
+        \end{itemize}
+      \end{alertblock}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{exampleblock}{Competencias del Modelo Educativo}
+        \begin{itemize}
+          \item \textbf{Pensamiento crítico:} Explicación de relaciones causa-efecto en fenómenos biológicos o de ingeniería.
+          \item \textbf{Comunicación científica:} Dominio de terminología especializada y esquemas vectoriales.
+          \item \textbf{Transferencia:} Vinculación de principios teóricos con la resolución de problemas agropecuarios o industriales.
+        \end{itemize}
+      \end{exampleblock}
+    \end{column}
+  \end{columns}
+  \accentbar
+\end{frame}
+
+% 3. SECCIÓN 1: FUNDAMENTOS TEÓRICOS
+\uanlsection{1. Fundamentos Científicos y Bases Metodológicas}
+
+\begin{frame}{Ejes temáticos y dimensiones analíticas}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Dimensión estructural y bioenergética}
+        \begin{itemize}
+          \item Análisis de la ultraestructura celular y organización subcelular.
+          \item Gradientes electroquímicos y transporte transmembranal sostenido por bombas de protones ($H^+$-ATPasa).
+          \item Homeostasis metabólica y modulación frente a estrés ambiental.
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{exampleblock}{Metodología y sistematización}
+        \begin{itemize}
+          \item Selección y depuración de literatura científica en bases indexadas (Scopus, WoS, PubMed).
+          \item Análisis comparativo transversal entre modelos vegetales y animales.
+          \item Integración de evidencia cuantitativa y experimental verificada.
+        \end{itemize}
+      \end{exampleblock}
+    \end{column}
+  \end{columns}
+  \accentbar
+\end{frame}
+
+% 4. SECCIÓN 2: EVIDENCIA VISUAL
+\uanlsection{2. Evidencia Visual y Modelado de Procesos}
+
+\begin{frame}{Arquitectura de flujo analítico y toma de decisiones}
+  \centering
+  \begin{tikzpicture}[
+    node distance=1.4cm,
+    proc/.style={
+      rectangle,
+      draw=uanlBlue,
+      fill=uanlPaper,
+      thick,
+      rounded corners=4pt,
+      text width=3.8cm,
+      align=center,
+      font=\small\sffamily,
+      minimum height=1.3cm
+    },
+    agro/.style={
+      rectangle,
+      draw=uanlGreenAgro,
+      fill=white,
+      thick,
+      rounded corners=4pt,
+      text width=3.8cm,
+      align=center,
+      font=\small\sffamily\bfseries,
+      minimum height=1.3cm
+    },
+    conn/.style={
+      -Stealth,
+      thick,
+      draw=uanlBlueDark
+    }
+  ]
+    \node[proc] (p1) {\textbf{Señal Ambiental}\\\footnotesize Detección de estímulos (luz, sequía, temperatura)};
+    \node[proc, right=1.2cm of p1] (p2) {\textbf{Cascada Intracelular}\\\footnotesize Segundos mensajeros y fosforilación ($Ca^{2+}$, SnRK2.6)};
+    \node[agro, right=1.2cm of p2] (p3) {\textbf{Respuesta Fisiológica}\\\footnotesize Modulación estomática y eficiencia en uso del agua (WUE)};
+
+    \path[conn] (p1) -- (p2);
+    \path[conn] (p2) -- (p3);
+  \end{tikzpicture}
+  \vspace{0.8cm}
+  \begin{block}{Interpretación del modelo}
+    La integración biofísica traduce gradientes osmóticos en respuestas morfológicas macroscópicas, permitiendo evaluar la tolerancia vegetal frente al estrés hídrico en sistemas de producción agrícola.
+  \end{block}
+  \accentbar
+\end{frame}
+
+% 5. CONCLUSIONES Y TRANSFERENCIA
+\uanlsection{3. Conclusiones y Transferencia Profesional}
+
+\begin{frame}{Síntesis y aplicación práctica en agronomía e industria}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Principios consolidados}
+        \begin{enumerate}
+          \item La estructura celular determina la competencia fisiológica y la resiliencia productiva del cultivo.
+          \item El aislamiento simplástico previene la disipación pasiva de potenciales osmóticos foliares.
+          \item La señalización hormonal rige la respuesta adaptativa ante fluctuaciones climáticas.
+        \end{enumerate}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{exampleblock}{Transferencia agronómica directa}
+        \begin{itemize}
+          \item \textbf{Manejo de riego de precisión:} Programación hídrica basada en conductancia estomática.
+          \item \textbf{Mejoramiento genético:} Selección de variedades con alta eficiencia en el uso del agua (WUE).
+          \item \textbf{Biotecnología:} Optimización de bioestimulantes osmoprotectores foliares.
+        \end{itemize}
+      \end{exampleblock}
+    \end{column}
+  \end{columns}
+  \accentbar
+\end{frame}
+
+% 6. REFERENCIAS BIBLIOGRÁFICAS
+\begin{frame}{Referencias bibliográficas formales (APA 7ma edición)}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \footnotesize
+      \textbf{Normativa y directrices institucionales UANL:}
+      \begin{itemize}
+        \item Universidad Autónoma de Nuevo León. (2022). \emph{Modelo Educativo de la UANL}. Monterrey: Casa Universitaria del Libro.
+        \item Universidad Autónoma de Nuevo León. (2019). \emph{Plan de Desarrollo Institucional: Visión 2030 UANL}. San Nicolás de los Garza: Rectoría UANL.
+        \item H. Consejo Universitario UANL. (2021). \emph{Estatuto General de la Universidad Autónoma de Nuevo León}.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \footnotesize
+      \textbf{Tratados y literatura científica especializada:}
+      \begin{itemize}
+        \item Alberts, B., et al. (2022). \emph{Molecular Biology of the Cell} (7th ed.). W. W. Norton \& Company.
+        \item Nelson, D. L., \& Cox, M. M. (2021). \emph{Lehninger Principles of Biochemistry} (8th ed.). W. H. Freeman.
+        \item Taiz, L., et al. (2015). \emph{Plant Physiology and Development} (6th ed.). Sinauer Associates / Oxford University Press.
+        \item Hernández-Sampieri, R., \& Mendoza, C. P. (2018). \emph{Metodología de la investigación}. McGraw-Hill.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \accentbar
+\end{frame}
+
+\end{document}

@@ -1,0 +1,128 @@
+% ==============================================================================
+% PLANTILLA DE ACTIVIDAD ACADÉMICA - UANL
+% Universidad Autónoma de Nuevo León | Facultad de Agronomía
+% ==============================================================================
+\providecommand{\uanlmateria}{Biología Celular}
+\providecommand{\uanlgrupo}{Por confirmar}
+\providecommand{\uanlperiodo}{2026-II}
+\providecommand{\uanlestudiante}{Carlos Mauricio Carvajal Coronado}
+\providecommand{\uanlmatricula}{1977875}
+\providecommand{\uanldocente}{Dr. Miguel Ángel Dector Carrillo}
+\providecommand{\uanltitulo}{Evidencia de Aprendizaje / Producto Integrador (PIA)}
+\providecommand{\uanlproducto}{Artículo de revisión bibliográfica / Reporte técnico}
+\providecommand{\uanlfacultad}{Facultad de Agronomía}
+\providecommand{\uanlcarrera}{Ingeniero Agrónomo}
+\providecommand{\uanllugar}{General Escobedo, Nuevo León}
+\providecommand{\uanlfecha}{\today}
+\providecommand{\uanllogo}{UANL/assets-uanl/logo-agronomia.png}
+\providecommand{\uanllogouanl}{UANL/assets-uanl/logo-uanl.png}
+\providecommand{\uanlbibliografia}{UANL/bibliografia-uanl.bib}
+\providecommand{\uanlidioma}{spanish}
+\providecommand{\uanlextras}{}
+\providecommand{\uanlcontenido}{%
+  \section{Introducción y Justificación}
+  [Completar propósito formativo, contexto disciplinar y objetivo de la evidencia académica.]
+  \section{Marco Teórico y Desarrollo Metodológico}
+  [Desarrollar los ejes analíticos, datos técnicos, esquemas y tablas comparativas.]
+  \section{Resultados y Discusión Crítica}
+  [Contrastar hallazgos con literatura científica y evaluar implicaciones prácticas.]
+  \section{Conclusiones y Transferencia Profesional}
+  [Sintetizar aprendizajes clave y su aplicación directa en el ejercicio profesional.]
+}
+
+\documentclass[12pt,letterpaper,oneside]{article}
+\usepackage[margin=2.54cm,headheight=16pt]{geometry}
+\usepackage{ifxetex}
+\ifxetex
+  \usepackage{fontspec}
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[scaled=.96]{helvet}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+\usepackage[english,spanish,es-tabla]{babel}
+\usepackage{csquotes,setspace,graphicx,amsmath,amssymb}
+\usepackage[table]{xcolor}
+\usepackage{array,booktabs,longtable,tabularx,enumitem,caption,titlesec,fancyhdr,etoolbox}
+\BeforeBeginEnvironment{tabularx}{\par\noindent}
+
+\usepackage[backend=biber,style=apa]{biblatex}
+\AtEveryBibitem{\clearfield{annotation}}
+\addbibresource{\uanlbibliografia}
+
+\usepackage{xurl}
+\usepackage[hidelinks,hypertexnames=false]{hyperref}
+
+% Colores institucionales UANL
+\definecolor{uanlBlue}{HTML}{00376C}
+\definecolor{uanlGold}{HTML}{D4AF37}
+\definecolor{uanlGreen}{HTML}{1B5E20}
+\definecolor{uanlDark}{HTML}{1A2421}
+
+\titleformat{\section}{\large\bfseries\color{uanlBlue}}{\thesection.}{.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries\color{uanlGreen}}{\thesubsection.}{.5em}{}
+\setlength{\emergencystretch}{3em}
+\onehalfspacing
+\raggedbottom
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{uanlBlue}\uanlmateria\ -- \uanltitulo}
+\fancyhead[R]{\small\color{gray}\uanlfacultad}
+\fancyfoot[L]{\small Universidad Autónoma de Nuevo León}
+\fancyfoot[R]{\thepage}
+
+\uanlextras
+\hypersetup{pdftitle={\uanltitulo},pdfauthor={\uanlestudiante},pdfsubject={\uanlmateria}}
+
+\begin{document}
+\selectlanguage{\uanlidioma}
+
+\begin{titlepage}
+  \centering
+  \vspace*{0.5cm}
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[height=2.2cm]{\uanllogouanl}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[height=2.2cm]{\uanllogo}
+  \end{minipage}
+  \vspace{1.2cm}
+
+  {\Large\bfseries\color{uanlBlue} UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN\par}
+  \vspace{0.3cm}
+  {\large\bfseries\color{uanlGreen} \uanlfacultad\par}
+  {\normalsize \uanlcarrera\par}
+  \vspace{0.8cm}
+  {\color{uanlGold}\rule{0.8\textwidth}{2pt}}\par
+  \vfill
+
+  {\LARGE\bfseries\color{uanlBlue} \uanltitulo\par}
+  \vspace{0.5cm}
+  {\large \textbf{Unidad de Aprendizaje:} \uanlmateria\par}
+  {\normalsize \textbf{Producto:} \uanlproducto\par}
+  \vfill
+
+  \begin{tabularx}{0.85\textwidth}{@{}lX@{}}
+    \textbf{Estudiante:} & \uanlestudiante \\
+    \textbf{Matrícula:} & \uanlmatricula \\
+    \textbf{Grupo / Periodo:} & \uanlgrupo\ / \uanlperiodo \\
+    \textbf{Docente titular:} & \uanldocente \\
+    \textbf{Lugar y fecha:} & \uanllugar, \uanlfecha \\
+  \end{tabularx}
+  \vspace{1.0cm}
+\end{titlepage}
+
+\uanlcontenido
+
+\clearpage
+\printbibliography[title={Referencias bibliográficas}]
+
+\end{document}

@@ -1,0 +1,623 @@
+% ==============================================================================
+% PRESENTACIÓN OFICIAL PIA - BIOLOGÍA CELULAR
+% Universidad Autónoma de Nuevo León | Facultad de Agronomía | Ingeniero Agrónomo
+%
+% Basada en la plantilla institucional canónica UANL (presentacion-uanl.tex),
+% adaptada al estándar y contrato de AulaTeX observado en materias como
+% Filosofía del Derecho (UnADM) e Interaprendizaje en Ambientes Virtuales.
+%
+% Compilar desde la raíz del repositorio con:
+% .\UANL\ingeniero-agronomo\biologia-celular\compilar.ps1 -Documento presentacion
+% ==============================================================================
+
+\documentclass[
+  spanish,
+  aspectratio=169,
+  xcolor={dvipsnames,table}
+]{beamer}
+
+\geometry{paperwidth=19.2cm,paperheight=10.8cm}
+
+\usepackage{ifxetex}
+\ifxetex
+  \usepackage{fontspec}
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[scaled=.96]{helvet}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+\usepackage[spanish,es-tabla,es-noshorthands]{babel}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{tabularx}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usetikzlibrary{arrows.meta,calc,fit,matrix,positioning,shapes.geometric,shadows.blur}
+
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+
+% ------------------------------------------------------------------------------
+% DATOS DE LA ACTIVIDAD INSTITUCIONAL
+% ------------------------------------------------------------------------------
+\newcommand{\studentname}{Carlos Mauricio Carvajal Coronado}
+\newcommand{\studentshort}{C. M. Carvajal Coronado}
+\newcommand{\studentid}{1977875}
+\newcommand{\teamname}{Célula Base / Por confirmar}
+\newcommand{\universityname}{Universidad Autónoma de Nuevo León}
+\newcommand{\facultyname}{Facultad de Agronomía}
+\newcommand{\departmentname}{Ingeniero Agrónomo}
+\newcommand{\coursename}{Biología Celular}
+\newcommand{\coursecode}{REF\#261013755061}
+\newcommand{\activitytitle}{Biología estructural, fisiología metabólica y señalización celular de la célula oclusiva}
+\newcommand{\activitysubtitle}{Producto Integrador de Aprendizaje (PIA) \textbar\ 35 Puntos}
+\newcommand{\teachingfigure}{Dr. Miguel Ángel Dector Carrillo}
+\newcommand{\deliverydate}{13 de octubre de 2026}
+\newcommand{\locationname}{Campus Ciencias Agropecuarias, General Escobedo / Marín, N.L.}
+\newcommand{\departmentlogo}{UANL/ingeniero-agronomo/biologia-celular/img/departamentos/logos-institucionales.pdf}
+\newcommand{\agronomialogo}{UANL/ingeniero-agronomo/biologia-celular/img/departamentos/logo-agronomia.png}
+
+% ------------------------------------------------------------------------------
+% PALETA CROMÁTICA INSTITUCIONAL UANL Y FACULTAD DE AGRONOMÍA
+% ------------------------------------------------------------------------------
+\definecolor{uanlBlueDark}{HTML}{002855}   % Azul UANL profundo
+\definecolor{uanlBlue}{HTML}{00376C}       % Azul institucional UANL
+\definecolor{uanlGold}{HTML}{D4AF37}       % Oro / Dorado universitario UANL
+\definecolor{uanlGoldLight}{HTML}{F0A500}  % Oro de acento
+\definecolor{uanlGreenAgro}{HTML}{1B5E20}  % Verde Facultad de Agronomía
+\definecolor{uanlGreenLight}{HTML}{2E7D32} % Verde follaje
+\definecolor{uanlPaper}{HTML}{F6F8F7}      % Fondo tenue para cajas
+\definecolor{uanlInk}{HTML}{1A2421}        % Tipografía principal
+\definecolor{uanlMuted}{HTML}{546E66}      % Texto atenuado
+
+\mode<presentation>{
+  \usetheme{default}
+  \usefonttheme{professionalfonts}
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{blocks}[rounded][shadow=false]
+  \setbeamercovered{invisible}
+}
+\setbeamersize{text margin left=0.65cm,text margin right=0.65cm}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=uanlBlue,
+  linkcolor=uanlBlue
+}
+
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{normal text}{fg=uanlInk,bg=white}
+\setbeamercolor{structure}{fg=uanlBlue}
+\setbeamercolor{frametitle}{fg=white,bg=uanlBlue}
+\setbeamercolor{title}{fg=white,bg=uanlBlue}
+\setbeamercolor{subtitle}{fg=white}
+\setbeamercolor{block title}{fg=white,bg=uanlBlue}
+\setbeamercolor{block body}{fg=uanlInk,bg=uanlPaper}
+\setbeamercolor{block title alerted}{fg=white,bg=uanlGold}
+\setbeamercolor{block body alerted}{fg=uanlInk,bg=uanlPaper}
+\setbeamercolor{block title example}{fg=white,bg=uanlGreenAgro}
+\setbeamercolor{block body example}{fg=uanlInk,bg=uanlPaper}
+\setbeamercolor{alerted text}{fg=uanlGoldLight}
+\setbeamerfont{title}{size=\LARGE,series=\bfseries}
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+\setbeamerfont{block title}{series=\bfseries}
+\setbeamertemplate{itemize item}{\textcolor{uanlGreenAgro}{\large$\blacktriangleright$}}
+\setbeamertemplate{itemize subitem}{\textcolor{uanlGold}{\scriptsize$\blacksquare$}}
+\setbeamertemplate{enumerate item}{\textcolor{uanlBlue}{\insertenumlabel.}}
+
+% Encabezado institucional con logotipo
+\setbeamertemplate{frametitle}{
+  \nointerlineskip
+  \begin{beamercolorbox}[wd=\textwidth,ht=1.05cm,dp=0.22cm,leftskip=0.40cm,rightskip=0.25cm]{frametitle}
+    \begin{minipage}[c]{0.78\textwidth}
+      \insertframetitle\par
+      \ifx\insertframesubtitle\@empty\else%
+        {\fontsize{8.5}{10}\selectfont\color{uanlGoldLight}\insertframesubtitle}%
+      \fi
+    \end{minipage}
+    \hfill
+    \raisebox{-0.08cm}{\includegraphics[height=0.60cm]{\departmentlogo}}
+  \end{beamercolorbox}
+  \vspace{-0.04cm}
+  {\color{uanlGold}\rule{\textwidth}{1.3pt}}
+}
+
+% Pie de página institucional UANL
+\setbeamertemplate{footline}{
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.33\paperwidth,ht=2.8ex,dp=1.1ex,leftskip=1.2em]{author in head/foot}%
+      \color{white}\studentshort\ \textbar\ \studentid
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.44\paperwidth,ht=2.8ex,dp=1.1ex,center]{title in head/foot}%
+      \color{white}\textbf{\coursename}\ (\facultyname)
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.23\paperwidth,ht=2.8ex,dp=1.1ex,rightskip=1.2em plus 1fil]{date in head/foot}%
+      \color{white}\hfill\insertframenumber/\inserttotalframenumber
+    \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
+\setbeamercolor{author in head/foot}{bg=uanlBlueDark}
+\setbeamercolor{title in head/foot}{bg=uanlGreenAgro}
+\setbeamercolor{date in head/foot}{bg=uanlBlueDark}
+
+% Barra de acento institucional inferior
+\newcommand{\accentbar}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \path[use as bounding box] (0,0) rectangle (0,0);
+    \fill[uanlGreenAgro] (current page.south west) rectangle ([xshift=0.55\paperwidth,yshift=0.08cm]current page.south west);
+    \fill[uanlGold] ([xshift=0.55\paperwidth]current page.south west) rectangle ([xshift=\paperwidth,yshift=0.08cm]current page.south west);
+  \end{tikzpicture}
+}
+
+% Separador de sección institucional
+\newcommand{\uanlsectionframe}[1]{%
+  \begin{frame}[plain]
+    \begin{tikzpicture}[remember picture,overlay]
+      \path[use as bounding box] (0,0) rectangle (0,0);
+      \fill[uanlBlueDark] (current page.south west) rectangle (current page.north east);
+      \node[opacity=0.07,anchor=east] at ([xshift=-0.5cm]current page.east) {\includegraphics[width=0.45\paperwidth]{\departmentlogo}};
+      \fill[uanlGreenAgro] ([xshift=1.05cm,yshift=2.25cm]current page.south west) rectangle ([xshift=1.25cm,yshift=6.50cm]current page.south west);
+      \fill[uanlGold] ([xshift=1.45cm,yshift=2.25cm]current page.south west) rectangle ([xshift=1.65cm,yshift=5.35cm]current page.south west);
+      \node[
+        anchor=west,
+        align=left,
+        text=white,
+        text width=0.64\paperwidth,
+        font=\fontsize{23}{28}\selectfont\bfseries
+      ] at ([xshift=2.10cm,yshift=0.60cm]current page.west) {#1};
+      \node[
+        anchor=west,
+        align=left,
+        text=uanlGoldLight,
+        font=\large\bfseries
+      ] at ([xshift=2.10cm,yshift=-0.65cm]current page.west) {\facultyname\ \textbar\ \universityname};
+    \end{tikzpicture}
+  \end{frame}
+}
+
+\newcommand{\uanlsection}[1]{%
+  \section{#1}
+  \uanlsectionframe{#1}
+}
+
+% ==============================================================================
+% CUERPO DE LA PRESENTACIÓN
+% ==============================================================================
+\begin{document}
+
+% ------------------------------------------------------------------------------
+% Portada institucional
+% ------------------------------------------------------------------------------
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \path[use as bounding box] (0,0) rectangle (0,0);
+    \fill[uanlBlueDark,opacity=0.98] (current page.south west) rectangle ([xshift=0.62\paperwidth]current page.north west);
+    \fill[uanlGreenAgro,opacity=0.94] ([xshift=0.62\paperwidth]current page.south west) rectangle (current page.north east);
+    \node[anchor=center,opacity=0.08] at (current page.center) {\includegraphics[width=0.75\paperwidth]{\departmentlogo}};
+    \node[anchor=north west] at ([xshift=0.65cm,yshift=-0.55cm]current page.north west) {\includegraphics[width=3.2cm]{\departmentlogo}};
+    \fill[uanlGold] ([xshift=0.64\paperwidth,yshift=1.25cm]current page.south west) rectangle ([xshift=0.95\paperwidth,yshift=1.38cm]current page.south west);
+    \fill[white,opacity=0.18] ([xshift=0.64\paperwidth,yshift=0.98cm]current page.south west) rectangle ([xshift=0.86\paperwidth,yshift=1.08cm]current page.south west);
+  \end{tikzpicture}
+
+  \vspace*{1.75cm}
+  \begin{minipage}{0.58\paperwidth}
+    {\color{white}\fontsize{20}{24}\selectfont\bfseries\raggedright \activitytitle\par}
+    \vspace{0.20cm}
+    {\color{uanlGoldLight}\large\bfseries \activitysubtitle}\\[0.28cm]
+    {\color{uanlGold}\rule{0.85\linewidth}{1.4pt}}\\[0.35cm]
+    {\color{white}\textbf{Estudiante:} \studentname}\\
+    {\color{white!85}\small\textbf{Matrícula:} \studentid \quad\textperiodcentered\quad \textbf{Equipo:} \teamname}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.33\paperwidth}
+    \raggedleft
+    {\color{white}\Large\bfseries UANL}\\[0.12cm]
+    {\color{white!90}\footnotesize \universityname}\\[0.35cm]
+    {\color{white}\small\bfseries \facultyname}\\
+    {\color{white!85}\small \departmentname}\\[0.35cm]
+    {\color{uanlGoldLight}\small\textbf{\coursename}}\\
+    {\color{white!75}\footnotesize Clave: \coursecode}\\[0.35cm]
+    {\color{white!80}\footnotesize \textbf{Docente:}\\ \teachingfigure}\\[0.25cm]
+    {\color{white!70}\scriptsize \locationname\ \textperiodcentered\ \deliverydate}
+  \end{minipage}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% Agenda / Contenido de la exposición (15 min)
+% ------------------------------------------------------------------------------
+\begin{frame}{Ruta de Exposición y Estructura del PIA}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Bloques temáticos principales}
+        \begin{enumerate}
+          \item Relevancia agronómica y dilema estomático ($\text{CO}_2$ vs. $H_2O$).
+          \item Ontogenia y linaje: circuito bHLH y ligandos EPF.
+          \item Ultraestructura y micelación radial de celulosa.
+          \item Fisiología de apertura: $H^+$-ATPasa, $K^+$ y malato.
+          \item Mecanismo de cierre y transducción por ABA.
+        \end{enumerate}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Análisis comparativo y cierre}
+        \begin{enumerate}
+          \setcounter{enumi}{5}
+          \item Uniones celulares: la necesidad del aislamiento simplástico.
+          \item Contraste transversal: polaridad y uniones en hepatocito.
+          \item Señalización recíproca: Insulina (RTK) vs. Glucagón (GPCR).
+          \item Aplicaciones biotecnológicas en cultivos bajo sequía.
+          \item Conclusiones integradoras y referencias APA 7.
+        \end{enumerate}
+      \end{block}
+    \end{column}
+  \end{columns}
+  \accentbar
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% SECCIÓN 1: FUNDAMENTO Y RELEVANCIA AGRONÓMICA
+% ------------------------------------------------------------------------------
+\uanlsection{1. Relevancia Agronómica y Fisiológica}
+
+\begin{frame}{El dilema del estoma: asimilación de $\text{CO}_2$ vs. transpiración}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{El dilema hídrico foliar}
+        \begin{itemize}
+          \item La fotosíntesis exige que los estomas permanezcan abiertos para permitir la difusión de $\text{CO}_2$ al mesófilo.
+          \item Por cada molécula de $\text{CO}_2$ asimilada en el ciclo de Calvin-Benson, la planta pierde entre \textbf{200 y 500 moléculas de $H_2O$} por transpiración.
+          \item Más del \textbf{95\% del agua} captada por las raíces se evapora a través del ostiolo estomático.
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Función fisiológica de la célula oclusiva}
+        \begin{itemize}
+          \item Opera como una compuerta biofísica regulable que modula la conductancia estomática ($g_s$).
+          \item Equilibra dinámicamente la turgencia celular frente a variaciones de radiación solar, humedad ambiental y potencial hídrico del suelo.
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+  \accentbar
+\end{frame}
+
+\begin{frame}{Eficiencia en el Uso del Agua (WUE) en cultivos agrícolas}
+  \begin{columns}[T]
+    \begin{column}{0.52\textwidth}
+      \begin{block}{Ecuación fundamental de WUE}
+        $$\text{WUE} = \frac{\text{Asimilación neta de } \text{CO}_2\ (A)}{\text{Tasa de transpiración}\ (E)} = \frac{A}{g_s \cdot \Delta w}$$
+        \begin{itemize}
+          \item $g_s$: Conductancia estomática dependiente del diámetro del ostiolo.
+          \item $\Delta w$: Gradiente de presión de vapor entre la cavidad subestomática y la atmósfera.
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.44\textwidth}
+      \begin{alertblock}{Reto para el Ingeniero Agrónomo}
+        En maíz, trigo, frijol y sorgo, optimizar la respuesta cinética de las células oclusivas es la vía más prometedora para sostener la productividad bajo estrés hídrico y térmico severo.
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+  \accentbar
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% SECCIÓN 2: ONTOGENIA Y BIOMECÁNICA ULTRAESTRUCTURAL
+% ------------------------------------------------------------------------------
+\uanlsection{2. Ontogenia y Biomecánica Ultraestructural}
+
+\begin{frame}{Ontogenia estomática: cascada bHLH y espaciamiento EPF--ERECTA}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Cascada secuencial de factores bHLH}
+        \begin{enumerate}
+          \item \textbf{SPCH (SPEECHLESS):} Activa la división asimétrica en la célula protodérmica madre (MMC) $\rightarrow$ genera el meristemoide (M).
+          \item \textbf{MUTE:} Detiene divisiones asimétricas y especifica a la Célula Madre de Guarda (GMC).
+          \item \textbf{FAMA + FLP:} Rige la división simétrica final y activa a RBR para forzar la diferenciación terminal en $G_0$.
+        \end{enumerate}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Regla de una célula de distancia (EPF--ERECTA)}
+        \begin{itemize}
+          \item Células del linaje secretan los péptidos \textbf{EPF1/EPF2}.
+          \item Receptores tipo quinasa \textbf{ERECTA/TMM} activan la cascada \textbf{YODA (MAPKKK) $\rightarrow$ MKK4/5 $\rightarrow$ MPK3/6}.
+          \item Las MAPK fosforilan a SPCH para su degradación, impidiendo la formación de estomas en contacto contiguo.
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+  \accentbar
+\end{frame}
+
+\begin{frame}{Ultraestructura parietal y micelación radial de celulosa}
+  \begin{columns}[T]
+    \begin{column}{0.50\textwidth}
+      \begin{block}{Engrosamiento diferencial asimétrico}
+        \begin{itemize}
+          \item \textbf{Pared periclinal interna (ostiolar):} Espesor de $2.5 - 4.5\ \mu\text{m}$, rígida y rica en pectinas reticuladas.
+          \item \textbf{Pared dorsal externa:} Espesor de $0.8 - 1.5\ \mu\text{m}$, elástica y deformable.
+        \end{itemize}
+      \end{block}
+      \begin{block}{Micelación radial de microfibrillas}
+        Las microfibrillas de celulosa irradian transversalmente desde el poro como cinchas de barril, impidiendo la dilatación radial y canalizando la turgencia hacia la elongación longitudinal.
+      \end{block}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \begin{exampleblock}{Mecanismo de arqueamiento}
+        Dado que los polos celulares se encuentran soldados mediante pectatos de calcio rígidos en la lámina media, la elongación forzada de la cara externa empuja a ambas células a curvarse hacia afuera, \textbf{abriendo el ostiolo}.
+      \end{exampleblock}
+    \end{column}
+  \end{columns}
+  \accentbar
+\end{frame}
+
+\begin{frame}{Compartimentación de organelos y dinámica vacuolar}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Vacuola central dinámica (60--85\% vol.)}
+        \begin{itemize}
+          \item Transición dinámica: vesículas fragmentadas en cierre $\leftrightarrow$ cisterna unificada en turgencia.
+          \item Bombas tonoplásticas: \textbf{V-ATPasa} y \textbf{V-PPasa} que acidifican la luz vacuolar ($\text{pH} \approx 5.0$) y concentran $K^+$ y malato.
+        \end{itemize}
+      \end{block}
+      \begin{block}{Cloroplastos estomáticos (8--15)}
+        Baja actividad fijadora de Rubisco; activos en fotofosforilación (ATP/NADPH) y degradación de almidón a fosfoenolpiruvato.
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Mitocondrias densas (80--120)}
+        Alta tasa de respiración aeróbica para alimentar a la $H^+$-ATPasa de membrana plasmática.
+      \end{block}
+      \begin{block}{Citoesqueleto dinámico}
+        \begin{itemize}
+          \item \textbf{Microtúbulos radiales:} Orientan la deposición de celulosa por complejos CESA.
+          \item \textbf{Actina:} Cables radiales en apertura; desensamblaje transitorio inducido por $Ca^{2+}$ en cierre.
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+  \accentbar
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% SECCIÓN 3: FISIOLOGÍA Y SEÑALIZACIÓN CELULAR
+% ------------------------------------------------------------------------------
+\uanlsection{3. Fisiología Homeostática y Transporte Transmembranal}
+
+\begin{frame}{Fisiología de apertura: fuerza protón-motriz e influjo de potasio}
+  \begin{columns}[T]
+    \begin{column}{0.50\textwidth}
+      \begin{block}{1. Activación de la $H^+$-ATPasa de membrana}
+        \begin{itemize}
+          \item La luz azul activa a las \textbf{fototropinas (PHOT1/2)}.
+          \item Fosforilación de Thr-947 en la $H^+$-ATPasa (AHA1/2) y anclaje de proteína \textbf{14-3-3}.
+          \item Bombeo masivo de $H^+$ hacia el apoplasto ($\text{pH} \approx 4.8$).
+        \end{itemize}
+      \end{block}
+      \begin{block}{2. Hiperpolarización de membrana ($V_m$)}
+        $V_m$ se desplaza a valores más negativos que $-160\ \text{mV}$ (hasta $-200\ \text{mV}$).
+      \end{block}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \begin{exampleblock}{3. Entrada masiva de $K^+$}
+        La hiperpolarización activa los canales rectificadores entrantes de potasio (\textbf{KAT1, KAT2, AKT1}). El $K^+$ ingresa acumulándose a concentraciones de \textbf{$400 - 800\ \text{mM}$}.
+      \end{exampleblock}
+      \begin{exampleblock}{4. Turgencia hidrostática}
+        El influjo iónico reduce el potencial de solutos ($\Psi_s \to -4.5\ \text{MPa}$) $\implies$ entrada de agua por acuaporinas $\implies \Psi_p > 3.5\ \text{MPa}$.
+      \end{exampleblock}
+    \end{column}
+  \end{columns}
+  \accentbar
+\end{frame}
+
+\begin{frame}{Contrarresto aniónico y transición diurna a sacarosa}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Neutralización por Malato$^{2-}$}
+        \begin{itemize}
+          \item El ingreso masivo de cationes $K^+$ se neutraliza sintetizando malato citosólico:
+          $$\text{PEP} + \text{HCO}_3^- \xrightarrow{\text{PEPC}} \text{Oxalacetato} \xrightarrow{\text{c-MDH}} \text{Malato}^{2-}$$
+          \item Cotransporte simporte apoplástico de $2H^+/\text{Cl}^-$ (CLCa) y $2H^+/\text{NO}_3^-$ (NRT1.5).
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Sincronía diurna con Sacarosa}
+        \begin{itemize}
+          \item \textbf{Mañana ($06:00 - 10:00\ \text{h}$):} Turgencia dominada por acumulación de $K^+$ y malato$^{2-}$.
+          \item \textbf{Tarde ($11:00 - 16:00\ \text{h}$):} El potasio decrece y la \textbf{sacarosa} asume el papel osmótico mayoritario vía transportadores SUC/SUT.
+          \item Previene toxicidad iónica y optimiza la economía de carbono celular.
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+  \accentbar
+\end{frame}
+
+\begin{frame}{Fisiología de cierre: cascada molecular del Ácido Abscísico (ABA)}
+  \begin{columns}[T]
+    \begin{column}{0.50\textwidth}
+      \begin{block}{Módulo receptor soluble PYR/PYL--PP2C--SnRK2}
+        \begin{enumerate}
+          \item En sequía, el ABA se une a los receptores citosólicos \textbf{PYR/PYL/RCAR}.
+          \item El complejo secuestra a las fosfatasas \textbf{PP2C} (ABI1/ABI2), liberando a la proteína cinasa \textbf{SnRK2.6 (OST1)}.
+          \item SnRK2.6 autofosforilada activa a la NADPH oxidasa (RBOHD/F) generando $\text{H}_2\text{O}_2$, eleva el $[Ca^{2+}]_{\text{cyt}}$ e inactiva a la $H^+$-ATPasa.
+        \end{enumerate}
+      \end{block}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \begin{alertblock}{Despolarización y eflujo pasivo}
+        \begin{itemize}
+          \item SnRK2.6 y cinasas CPK fosforilan y abren los canales aniónicos \textbf{SLAC1} y \textbf{ALMT12/QUAC1}.
+          \item Salida de aniones despolariza la membrana a $-30\ \text{mV}$.
+          \item Abre el canal de potasio saliente \textbf{GORK}.
+          \item Eflujo masivo de solutos y salida de agua por acuaporinas $\implies$ \textbf{Cierre hermético}.
+        \end{itemize}
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+  \accentbar
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% SECCIÓN 4: UNIONES CELULARES Y CONTRASTE ANIMAL
+% ------------------------------------------------------------------------------
+\uanlsection{4. Uniones Celulares y Análisis Comparativo Transversal}
+
+\begin{frame}{Uniones intercelulares: la necesidad biofísica del aislamiento simplástico}
+  \begin{columns}[T]
+    \begin{column}{0.50\textwidth}
+      \begin{block}{Sello de plasmodesmos por calosa}
+        \begin{itemize}
+          \item Durante la diferenciación terminal regulada por FAMA, los plasmodesmos primarios se obturan irreversiblemente con \textbf{calosa ($\beta$-1,3-glucano)}.
+          \item Desaparecen los desmotúbulos y se corta la continuidad citoplasmática con la epidermis foliar.
+        \end{itemize}
+      \end{block}
+      \begin{alertblock}{Justificación biofísica}
+        Si existiera continuidad simplástica, el gradiente osmótico ($> 500\ \text{mM}$) se disiparía por difusión hacia la epidermis, haciendo imposible alcanzar la turgencia ($> 3.5\ \text{MPa}$) requerida para abrir el estoma.
+      \end{alertblock}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \begin{exampleblock}{Anclaje polar en la lámina media}
+        \begin{itemize}
+          \item Los dos extremos polares permanecen sólidamente soldados por pectatos de calcio en estructura rígida de ``caja de huevos''.
+          \item Estos pivotes mecánicos forzan el arqueamiento centrífugo cuando la pared dorsal se expande.
+        \end{itemize}
+      \end{exampleblock}
+    \end{column}
+  \end{columns}
+  \accentbar
+\end{frame}
+
+\begin{frame}{Contraste transversal con el modelo animal: Hepatocito de mamífero}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Polaridad y complejos de unión hepáticos}
+        \begin{itemize}
+          \item \textbf{Uniones estrechas (\emph{Zonula occludens}):} Claudinas y ocludinas sellan el canalículo biliar impidiendo el reflujo de bilis hacia los sinusoides sanguíneos.
+          \item \textbf{Uniones adherentes y desmosomas:} E-cadherinas y desmogleínas ancladas a queratinas confieren cohesión mecánica tisular.
+          \item \textbf{Uniones comunicantes (\emph{Gap junctions}):} Hexameros de \textbf{conexina-32 (Cx32)} acoplan a los hepatocitos en un sincitio metabólico síncrono.
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Matriz extracelular del Espacio de Disse}
+        \begin{itemize}
+          \item Trama laxa de colágeno IV, laminina y fibronectina que permite el intercambio libre de albúmina y lipoproteínas plasmáticas.
+          \item Anclaje celular mediado por heterodímeros de \textbf{integrinas $\alpha_1\beta_1$}.
+          \item \textbf{Contraste funcional:} El hepatocito se acopla en sincitio tisular; la célula guarda opera en aislamiento simplástico.
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+  \accentbar
+\end{frame}
+
+\begin{frame}{Señalización homeostática comparada: Insulina (RTK) vs. Glucagón (GPCR)}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{exampleblock}{Ruta anabólica de la Insulina (RTK)}
+        \begin{itemize}
+          \item Unión a receptor tirosina cinasa $\rightarrow$ autofosforilación de subunidades $\beta$.
+          \item Reclutamiento de \textbf{IRS-1 $\rightarrow$ activación de PI3K $\rightarrow$ formación de $\text{PIP}_3$}.
+          \item Activación de \textbf{Akt/PKB $\rightarrow$ inhibición de GSK3$\beta$}.
+          \item Activación por desfosforilación de la \textbf{glucógeno sintasa} $\implies$ almacenamiento de glucógeno y lipogénesis.
+        \end{itemize}
+      \end{exampleblock}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{alertblock}{Ruta catabólica del Glucagón (GPCR)}
+        \begin{itemize}
+          \item Unión a receptor 7-TM acoplado a proteína $G\alpha_s$.
+          \item Activación de \textbf{adenilato ciclasa $\rightarrow$ incremento de AMPc}.
+          \item Activación de \textbf{Proteína Cinasa A (PKA)}.
+          \item PKA fosforila e hiperactiva a la \textbf{glucógeno fosforilasa-$a$} $\implies$ glucogenólisis y liberación de glucosa sanguínea vía GLUT2.
+        \end{itemize}
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+  \accentbar
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% SECCIÓN 5: BIOTECNOLOGÍA AGRÍCOLA Y CONCLUSIONES
+% ------------------------------------------------------------------------------
+\uanlsection{5. Biotecnología Agrícola y Conclusiones}
+
+\begin{frame}{Biotecnología estomática y resiliencia al cambio climático}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Canales iónicos optogenéticos (BLINK1)}
+        \begin{itemize}
+          \item Los estomas naturales tardan de 15 a 45 min en responder a variaciones de luz en el dosel, perdiendo agua por transpiración improductiva.
+          \item La inserción del canal sintético de potasio activado por luz azul \textbf{BLINK1} acelera las cinéticas hasta en un \textbf{500\%}, aumentando la biomasa en un \textbf{20\%} bajo el mismo volumen de riego.
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Edición CRISPR/Cas9 y miméticos de ABA}
+        \begin{itemize}
+          \item \textbf{Modulación de densidad estomática:} Edición dirigida de promotores de \textbf{SPCH/EPF1} en arroz, trigo y maíz reduce la densidad en 30--40\%, duplicando la supervivencia en sequía extrema sin merma de cosecha.
+          \item \textbf{Agroquímicos miméticos de ABA:} Análogos sintéticos (quinabactina) activan el cierre estomático preventivo ante alertas meteorológicas de olas de calor.
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+  \accentbar
+\end{frame}
+
+\begin{frame}{Conclusiones del Producto Integrador de Aprendizaje (PIA)}
+  \begin{block}{Síntesis de los principios estructurales, metabólicos y comunicantes}
+    \begin{enumerate}
+      \item \textbf{Biomecánica ultraestructural:} El engrosamiento periclinal asimétrico y la micelación radial de microfibrillas traducen la turgencia hidrostática en arqueamiento centrífugo de apertura ostiolar.
+      \item \textbf{Bioenergética y homeostasis de solutos:} La $H^+$-ATPasa electrogénica sostiene el potencial de membrana para la acumulación masiva de $K^+$, neutralizada por síntesis de malato$^{2-}$ y sacarosa.
+      \item \textbf{Paradoja del aislamiento simplástico:} El sellado por calosa en plasmodesmos es una exigencia física para evitar la disipación pasiva de solutos hacia la epidermis, en contraste con el sincitio comunicante del hepatocito animal acoplado por conexinas.
+      \item \textbf{Señalización molecular y agronomía:} El circuito $PYR/PYL \rightarrow PP2C \rightarrow SnRK2.6$ rige el cierre en sequía y constituye la diana predilecta para la ingeniería genética de la eficiencia en el uso del agua (WUE).
+    \end{enumerate}
+  \end{block}
+  \accentbar
+\end{frame}
+
+\begin{frame}{Referencias bibliográficas formales (APA 7ma edición)}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \tiny
+      \textbf{Artículos de investigación primaria e indexados:}
+      \begin{itemize}
+        \item Assmann, S. M., \& Jegla, T. (2016). Guard cell sensory systems. \emph{Current Opinion in Plant Biology}, 33, 157--167.
+        \item Hedrich, R. (2012). Ion channels in plants. \emph{Physiological Reviews}, 92(4), 1777--1811.
+        \item Jezek, M., \& Blatt, M. R. (2017). The membrane transport system of the guard cell. \emph{Plant Physiology}, 174(2), 487--519.
+        \item Lawson, T., \& Matthews, J. (2020). Guard cell metabolism and stomatal function. \emph{Annual Review of Plant Biology}, 71, 273--302.
+        \item Murata, Y., et al. (2015). Diverse signaling fluids in guard cells. \emph{Annals of Botany}, 116(4), 481--495.
+        \item Pillitteri, L. J., \& Torii, K. U. (2012). Mechanisms of stomatal development. \emph{Annual Review of Plant Biology}, 63, 591--614.
+        \item Rui, Y., \& Dinneny, J. R. (2020). A wall with integrity. \emph{New Phytologist}, 225(4), 1428--1439.
+        \item Schroeder, J. I., et al. (2001). Guard cell abscisic acid signalling. \emph{Nature}, 410, 327--330.
+        \item Treyer, A., \& Müsch, A. (2013). Hepatocyte polarity. \emph{Comprehensive Physiology}, 3(1), 243--287.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \tiny
+      \textbf{Tratados y libros de texto especializados:}
+      \begin{itemize}
+        \item Alberts, B., et al. (2022). \emph{Molecular Biology of the Cell} (7th ed.). W. W. Norton \& Company.
+        \item Karp, G., et al. (2019). \emph{Biología Celular y Molecular: Conceptos y Experimentos} (8va ed.). McGraw-Hill Interamericana.
+        \item Lodish, H., et al. (2021). \emph{Molecular Cell Biology} (9th ed.). W. H. Freeman.
+        \item Nelson, D. L., \& Cox, M. M. (2021). \emph{Lehninger Principles of Biochemistry} (8th ed.). W. H. Freeman.
+        \item Taiz, L., et al. (2015). \emph{Plant Physiology and Development} (6th ed.). Sinauer Associates / Oxford University Press.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \accentbar
+\end{frame}
+
+\end{document}
