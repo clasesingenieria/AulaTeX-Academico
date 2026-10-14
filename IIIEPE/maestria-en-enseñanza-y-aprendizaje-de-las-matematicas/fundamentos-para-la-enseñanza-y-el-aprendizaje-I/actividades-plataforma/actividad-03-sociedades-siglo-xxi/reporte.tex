@@ -1,0 +1,138 @@
+\documentclass[spanish,letterpaper,oneside]{article}
+
+% Datos del documento
+\def\documenttitle {Sociedades del siglo XXI y transformación de la enseñanza}
+\def\documentsubtitle {Fundamentos para la enseñanza y el aprendizaje I}
+\def\documentsubject {Actividad 3 · Doce argumentos y conclusión personal}
+\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
+\def\coursecode {MAEM}
+
+% Identidad institucional
+\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León}
+\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
+\def\universitydepartment {Fundamentos para la enseñanza y el aprendizaje I}
+\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
+\def\universitydepartmentimagecfg {height=1.75cm}
+\def\universitylocation {Monterrey, Nuevo León}
+\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\studentid {00874}
+\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
+\def\programperiod {1er tetramestre, marzo--julio de 2026}
+\def\programmodality {Modalidad presencial}
+\def\programshort {MAEM}
+
+\def\authortable {
+  \begin{tabular}{ll}
+    \textbf{Alumno:} & \studentfullname \\
+    Matrícula: & \studentid \\
+    Correo institucional: & \studentemail \\
+    Unidad: & \coursename \\
+    Programa: & \programshort \\
+    Periodo: & \programperiod \\
+    & \\
+    \multicolumn{2}{l}{Fecha de realización: 13 de octubre de 2026} \\
+    \multicolumn{2}{l}{\universitylocation}
+  \end{tabular}
+}
+
+\input{template}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\def\portraittitlecolor {iiiepeNavy}
+\setcitestyle{authoryear,open={(},close={)}}
+
+\newcommand{\insertcoverwatermark}{%
+  \AddToShipoutPictureBG*{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[opacity=.09,inner sep=0pt] at (current page.center)
+      {\includegraphics[width=.58\paperwidth]{img/iiiepe/logo-puntos.png}};
+    \end{tikzpicture}%
+  }%
+}
+
+\newtcolorbox{reportelecturabox}[1][]{%
+  enhanced,breakable,
+  colback=iiiepePaper,colframe=iiiepeNavy,
+  boxrule=1pt,leftrule=4pt,arc=2pt,
+  left=8pt,right=8pt,top=6pt,bottom=6pt,
+  before skip=6pt,after skip=10pt,
+  fonttitle=\bfseries\color{white},coltitle=white,
+  colbacktitle=iiiepeNavy,
+  attach boxed title to top left={xshift=8pt,yshift=-2pt},
+  boxed title style={colback=iiiepeNavy,colframe=iiiepeNavy,arc=1pt},
+  title={Reporte de lectura},#1}
+
+\newtcolorbox{fichalecturabox}[1][]{%
+  enhanced,breakable,
+  colback=iiiepeAqua!7,colframe=iiiepeAqua!70!iiiepeNavy,
+  boxrule=.6pt,arc=1pt,
+  left=7pt,right=7pt,top=4pt,bottom=4pt,
+  fontupper=\small,before upper={\setstretch{1.0}},
+  fonttitle=\bfseries\color{iiiepeNavy},coltitle=iiiepeNavy,
+  colbacktitle=iiiepeAqua!7,
+  title={Ficha de la lectura},#1}
+
+
+
+\usepackage{tabularx,colortbl,pgfplots,enumitem,needspace}\pgfplotsset{compat=1.18}\definecolor{iiiepePale}{HTML}{EEF5F8}
+\setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
+\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 3}\setstretch{1.3}\raggedbottom
+\section{Transformar la enseñanza con criterio}
+La lectura de Scott (2015a) permite analizar doce factores que presionan a los sistemas educativos. Mi postura es que la transformación debe cambiar las oportunidades de comprender, participar y argumentar. La incorporación de herramientas digitales o de vocabulario industrial no basta si la actividad intelectual del estudiante sigue limitada a reproducir instrucciones. Los argumentos siguientes relacionan cada factor con mi docencia en formación técnica e ingenierías; son reflexiones propias a partir de la lectura.
+\subsection{Competencias nuevas para un mundo complejo}
+Los problemas de mantenimiento rara vez se presentan con datos completos y una única ruta. La enseñanza debe incluir selección de información, formulación de supuestos y valoración de consecuencias. Propondría que el estudiante explique por qué un modelo es pertinente antes de resolverlo. La destreza operativa sigue siendo necesaria, pero debe integrarse con juicio y responsabilidad.
+\subsection{Nuevas características de las y los estudiantes}
+No todos los estudiantes comparten acceso digital, experiencias ni disponibilidad de tiempo. Suponer que una generación domina la tecnología puede ocultar desigualdades de uso y comprensión. Necesito diagnosticar conocimientos y condiciones, ofrecer alternativas y evitar que la familiaridad con una herramienta sustituya la valoración del razonamiento.
+\subsection{Desinterés y abandono prematuro de la educación}
+Una clase puede perder sentido cuando el estudiante no reconoce qué puede comprender o decidir con lo aprendido. Vincular las matemáticas con un problema de taller ayuda, siempre que la participación sea posible y no una demostración reservada a quienes ya saben. El abandono tiene múltiples causas; no lo reduciría a motivación individual ni atribuiría su solución a una metodología aislada.
+\subsection{Valor de la educación formal}
+El acceso a información fuera de la escuela cuestiona una enseñanza basada solo en transmitirla. La institución aporta continuidad, diálogo, criterios para evaluar fuentes y oportunidades de participar en conocimiento compartido. En ingeniería, distinguir un tutorial de una explicación justificada es parte de ese valor: la educación formal debe enseñar a comprobar y contextualizar.
+\subsection{Escasez de preparación}
+La falta de preparación puede aparecer cuando se dominan procedimientos aislados pero no se transfieren a situaciones nuevas. La respuesta docente consiste en conectar representaciones, explicitar supuestos y revisar obstáculos. También implica reconocer necesidades de formación propias: mi experiencia industrial no sustituye conocimiento didáctico sobre cómo se construye una noción matemática.
+\subsection{Evolución del mercado de trabajo}
+La automatización modifica tareas, pero la educación no debe reducir a la persona a un puesto laboral. En mantenimiento y mecatrónica, aprender a interpretar datos y argumentar una intervención permite actuar ante cambios técnicos; también ayuda a deliberar sobre seguridad, impacto y condiciones de trabajo. Enseñaría competencias transferibles sin prometer empleos ni anticipar tendencias específicas no verificadas.
+\subsection{Cambios en modelos de enseñanza y aprendizaje}
+Un proyecto modifica el aprendizaje solo si cambia lo que hacen y comprenden los estudiantes. Debe incluir problemas, apoyos, explicación y evaluación, no únicamente una actividad manual. Mi transición hacia una enseñanza humanista exige revisar quién toma decisiones y cómo se usa el error, manteniendo criterios de precisión y comprensión.
+\subsection{Nuevos medios didácticos y otras vías de aprendizaje}
+Un simulador permite variar parámetros y visualizar relaciones, pero también puede producir respuestas sin comprensión. Lo integraría con predicción, contraste y explicación, junto con una alternativa de papel o material concreto. La elección del medio debe responder a una dificultad de aprendizaje y a las condiciones de acceso, no a su novedad.
+\subsection{Evaluación y rendición de cuentas}
+Los indicadores ayudan a observar resultados, pero pueden orientar la clase hacia lo que se mide más fácilmente. Evaluaría procedimientos y argumentos, conservaría revisiones y explicaría los criterios. Un promedio no describe todas las condiciones ni demuestra la causa de un desempeño; la rendición de cuentas debe apoyar decisiones y no convertirse en etiquetamiento.
+\subsection{Aprendizaje en cualquier momento y lugar}
+La continuidad fuera del aula ofrece oportunidades de consulta y práctica, pero no elimina la necesidad de mediación. Una actividad asincrónica requiere instrucciones comprensibles, recursos accesibles y un canal para resolver dudas. También debe respetar que estudiantes de formación técnica o superior pueden tener responsabilidades laborales y familiares.
+\subsection{Crecimiento acelerado de la información}
+El problema educativo no es únicamente encontrar información, sino discriminarla. Pediría verificar unidades, procedencia, fecha y condiciones de una afirmación técnica. Al comparar dos fórmulas o recomendaciones, el estudiante debe justificar cuál corresponde al problema; acumular enlaces no equivale a construir conocimiento.
+\subsection{Del consumidor al productor de conocimiento}
+Producir conocimiento en clase puede consistir en formular un modelo, diseñar una prueba y comunicar sus límites. Un estudiante que explica por qué una calibración falla está construyendo una interpretación verificable. La producción debe ser acompañada y revisable; publicar un documento o un prototipo no garantiza por sí solo rigor ni autoría intelectual.
+\section{Tensiones entre los factores y decisiones docentes}
+La lectura reúne transformaciones sociales y educativas, pero esas tendencias no determinan una única respuesta pedagógica. El acceso permanente a información puede ampliar oportunidades y también dispersar la atención; la preparación para el trabajo puede ofrecer pertinencia y también estrechar la finalidad educativa; la rendición de cuentas puede aportar evidencia y también incentivar una enseñanza limitada al indicador. Mi argumento es que cada factor exige un criterio de decisión, no una adhesión automática a la novedad.
+Scott (2015a, pp. 3--9) organiza los factores desarrollados en este análisis. A partir de ese marco, en formación técnica priorizaría tareas que conecten interpretación y comprobación. Por ejemplo, antes de elegir una fórmula de caudal, pediría definir unidades y condiciones; antes de usar una recomendación encontrada en línea, revisar procedencia y ámbito de aplicación; antes de calificar un prototipo, solicitar una explicación individual de una decisión matemática.
+Esta postura se diferencia de una adaptación puramente instrumental: la persona debe poder comprender y cuestionar el uso del conocimiento. La relevancia profesional es una vía para plantear problemas, mientras el acompañamiento sostiene participación y juicio. Evaluaría esa relación mediante explicaciones iniciales, versiones corregidas y un caso nuevo, con criterios que se conozcan antes de la tarea.
+
+\section{Conclusión personal}
+Mi formación industrial me ha enseñado a organizar y verificar el trabajo; la maestría me lleva a ampliar qué considero una evidencia de aprendizaje. Sostengo que la transformación consiste en conservar rigor y reconocer a la persona que aprende: sus preguntas, condiciones, interpretaciones y posibilidades de participar. Aplicaría esta postura mediante problemas con supuestos explícitos, apoyos diferenciados y revisiones argumentadas. El criterio de mejora será qué logra comprender y transferir cada estudiante, no cuántas herramientas o productos se incorporaron.
+
+\section{Respaldo documental de mi enfoque docente}
+El programa de Pensamiento Matemático I de la SEP (2023, pp. 3--4) integra interpretación, argumentación, modelación y comunicación, además del procedimiento. Lo utilizo como referencia documental para mi acercamiento humanista: la precisión técnica adquiere sentido educativo cuando el estudiante puede explicar una decisión y revisar sus razones. Esta relación fundamenta las aplicaciones ilustrativas del reporte; no las convierte en episodios de aula observados.
+\needspace{5\baselineskip}\section*{Referencias}
+{\setstretch{1.15}\setlength{\parskip}{6pt}
+\par\hangindent=1.27cm\hangafter=1  Scott, C. L. (2015a). \textit{El futuro del aprendizaje 1: ¿Por qué deben cambiar el contenido y los métodos de aprendizaje en el siglo XXI?} (Investigación y prospectiva en educación, 13). UNESCO.
+\par\hangindent=1.27cm\hangafter=1  Secretaría de Educación Pública. (2022). \textit{Plan de Estudio para la educación preescolar, primaria y secundaria}. SEP.
+\par\hangindent=1.27cm Secretaría de Educación Pública. (2023). \textit{Programa de estudios del recurso sociocognitivo Pensamiento Matemático I}. Subsecretaría de Educación Media Superior. \url{https://dgb.sep.gob.mx/storage/recursos/2025/09/nfhyrKiRiF-Pensamiento-Matematico-I.pdf}
+}
+
+\end{document}

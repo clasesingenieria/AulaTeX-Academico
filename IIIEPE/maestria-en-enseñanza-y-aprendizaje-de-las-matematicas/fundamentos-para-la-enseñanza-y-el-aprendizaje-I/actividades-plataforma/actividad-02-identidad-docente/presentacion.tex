@@ -1,0 +1,295 @@
+﻿% Presentacion - PFM02 / Sesion 02
+% Suma y resta con fracciones
+
+\pdfminorversion=7
+\documentclass[
+	spanish,
+	aspectratio=1610,
+	xcolor={dvipsnames,table}
+]{beamer}
+
+\geometry{paperwidth=19.2cm,paperheight=12cm}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{lmodern}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,decorations.pathreplacing,shapes.geometric,fit,backgrounds,overlay-beamer-styles}
+\usepackage{hyperref}
+
+% Datos del alumno y del programa
+\newcommand{\studentname}{Mtro. Martín Jonathan de la Cruz Muñoz}
+\newcommand{\studentshort}{M. de la Cruz Munoz}
+\newcommand{\studentid}{00874}
+\newcommand{\studentemail}{martin.delacruz@campus.iiiepe.edu.mx}
+\newcommand{\programname}{Maestria en Aprendizaje y Ensenanza de las Matematicas}
+\newcommand{\programshort}{MAEM}
+\newcommand{\coursecode}{MAEM}
+\newcommand{\coursename}{Fundamentos para la enseñanza y el aprendizaje I}
+\newcommand{\coursegroup}{Grupo A}
+\newcommand{\courseperiod}{Marzo--julio 2026}
+\newcommand{\institutionname}{IIIEPE}
+\newcommand{\institutionlongname}{Instituto de Investigacion, Innovacion y Estudios de Posgrado para la Educacion del Estado de Nuevo Leon}
+\newcommand{\institutionplace}{Monterrey, Nuevo Leon}
+\newcommand{\iiiepelogo}{img/iiiepe/logo-iiiepe-blanco.png}
+\newcommand{\iiiepemark}{img/iiiepe/marca-iiiepe.png}
+\newcommand{\iiiepedots}{img/iiiepe/logo-puntos.png}
+
+% Paleta institucional
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\definecolor{iiiepeMuted}{HTML}{667085}
+
+\mode<presentation>{
+	\usetheme{default}
+	\usefonttheme{professionalfonts}
+	\setbeamertemplate{navigation symbols}{}
+	\setbeamertemplate{blocks}[rounded][shadow=false]
+}
+
+\hypersetup{
+	colorlinks=true,
+	urlcolor=iiiepeBlue,
+	linkcolor=iiiepeNavy
+}
+
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{normal text}{fg=iiiepeInk,bg=white}
+\setbeamercolor{structure}{fg=iiiepeBlue}
+\setbeamercolor{frametitle}{fg=white,bg=iiiepeNavy}
+\setbeamercolor{title}{fg=white,bg=iiiepeNavy}
+\setbeamercolor{block title}{fg=white,bg=iiiepeBlue}
+\setbeamercolor{block body}{fg=iiiepeInk,bg=iiiepePaper}
+\setbeamercolor{alerted text}{fg=iiiepeOrange}
+\setbeamerfont{title}{size=\LARGE,series=\bfseries}
+\setbeamerfont{frametitle}{size=\fontsize{14}{18}\selectfont,series=\bfseries}
+\setbeamerfont{block title}{series=\bfseries}
+\setbeamertemplate{itemize item}{\textcolor{iiiepeAqua}{\fontsize{14}{18}\selectfont$\blacktriangleright$}}
+\setbeamertemplate{itemize subitem}{\textcolor{iiiepeOrange}{\scriptsize$\blacksquare$}}
+\setbeamertemplate{enumerate item}{\textcolor{iiiepeBlue}{\insertenumlabel.}}
+
+\newcommand{\localLogo}[1]{%
+	\IfFileExists{#1}{\includegraphics[height=0.58cm]{#1}}{\textbf{\institutionname}}%
+}
+
+\setbeamertemplate{frametitle}{
+	\nointerlineskip
+	\begin{beamercolorbox}[wd=\textwidth,ht=1.05cm,dp=0.22cm,leftskip=0.35cm,rightskip=0.25cm]{frametitle}
+		\begin{minipage}[c]{0.72\textwidth}
+			\insertframetitle
+		\end{minipage}
+		\hfill
+		\raisebox{-0.1cm}{\localLogo{\iiiepelogo}}
+	\end{beamercolorbox}
+	\vspace{-0.04cm}
+	{\color{iiiepeOrange}\rule{\textwidth}{1.4pt}}
+}
+
+\setbeamertemplate{footline}{
+	\leavevmode
+	\hbox{%
+		\begin{beamercolorbox}[wd=.34\paperwidth,ht=2.7ex,dp=1ex,leftskip=1em]{author in head/foot}
+			\color{white}\studentshort
+		\end{beamercolorbox}
+		\begin{beamercolorbox}[wd=.38\paperwidth,ht=2.7ex,dp=1ex,center]{title in head/foot}
+			\color{white}\programshort\ -- \coursecode
+		\end{beamercolorbox}
+		\begin{beamercolorbox}[wd=.20\paperwidth,ht=2.7ex,dp=1ex,rightskip=1em plus 1fil]{date in head/foot}
+			\color{white}Matricula \studentid\hfill\insertframenumber/\inserttotalframenumber
+		\end{beamercolorbox}
+	}
+}
+\setbeamercolor{author in head/foot}{bg=iiiepeNavy}
+\setbeamercolor{title in head/foot}{bg=iiiepeBlue}
+\setbeamercolor{date in head/foot}{bg=iiiepeNavy}
+
+\newcommand{\accentbar}{%
+	\begin{tikzpicture}[remember picture,overlay]
+		\path[use as bounding box] (0,0) rectangle (0,0);
+		\fill[iiiepeAqua] (current page.south west) rectangle ([xshift=0.42\paperwidth,yshift=0.08cm]current page.south west);
+		\fill[iiiepeOrange] ([xshift=0.42\paperwidth]current page.south west) rectangle ([xshift=\paperwidth,yshift=0.08cm]current page.south west);
+	\end{tikzpicture}
+}
+
+\newcommand{\DividirEntre}[2]{\ensuremath{#1\,\text{ entre }\,#2}}
+
+\tikzset{
+	cajaProc/.style={
+		draw=iiiepeBlue,
+		rounded corners=2mm,
+		align=center,
+		inner sep=4pt,
+		minimum height=8mm,
+		font=\small
+	},
+	cajaDato/.style={
+		cajaProc,
+		fill=iiiepeBlue!8
+	},
+	cajaOp/.style={
+		cajaProc,
+		fill=iiiepeOrange!12
+	},
+	cajaRes/.style={
+		cajaProc,
+		fill=iiiepeAqua!12
+	},
+	flechaProc/.style={
+		-{Latex[length=2.4mm]},
+		thick,
+		draw=iiiepeBlue
+	},
+	notaProc/.style={
+		draw=iiiepeOrange,
+		rounded corners=2mm,
+		fill=iiiepeOrange!12,
+		align=center,
+		inner sep=4pt,
+		font=\scriptsize
+	},
+	decisionProc/.style={
+		diamond,
+		aspect=2.1,
+		draw=iiiepeBlue,
+		fill=iiiepeAqua!10,
+		align=center,
+		inner sep=2pt,
+		font=\scriptsize
+	}
+}
+
+\newcommand{\RutaOperacion}[4]{%
+\begin{tikzpicture}[node distance=6mm]
+	\node[cajaDato,visible on=<1->] (a) {#1};
+	\node[cajaOp, right=of a,visible on=<2->] (b) {#2};
+	\node[cajaOp, right=of b,visible on=<3->] (c) {#3};
+	\node[cajaRes, right=of c,visible on=<4->] (d) {#4};
+	\draw[flechaProc,visible on=<1->] (a) -- (b);
+	\draw[flechaProc,visible on=<2->] (b) -- (c);
+	\draw[flechaProc,visible on=<3->] (c) -- (d);
+\end{tikzpicture}%
+}
+
+\newcommand{\sectionframe}[1]{%
+	\begin{frame}[plain]
+		\begin{tikzpicture}[remember picture,overlay]
+			\fill[iiiepeNavy] (current page.south west) rectangle (current page.north east);
+			\IfFileExists{\iiiepedots}{%
+				\node[opacity=0.13,anchor=east] at ([xshift=0.8cm]current page.east) {\includegraphics[height=9.4cm]{\iiiepedots}};
+			}{}
+			\fill[iiiepeAqua] ([xshift=0.85cm,yshift=2.1cm]current page.south west) rectangle ([xshift=1.05cm,yshift=6.3cm]current page.south west);
+			\fill[iiiepeOrange] ([xshift=1.15cm,yshift=2.1cm]current page.south west) rectangle ([xshift=1.35cm,yshift=5.35cm]current page.south west);
+		\end{tikzpicture}
+		\vspace{1.8cm}
+		\hspace{1.25cm}
+		\begin{minipage}{0.72\paperwidth}
+			{\color{white}\Huge\bfseries #1}\\[0.25cm]
+			{\color{white!75}Sesion 02 -- Suma y resta con fracciones}
+		\end{minipage}
+	\end{frame}
+}
+
+% Separadores automaticos desactivados para evitar diapositivas repetitivas.
+% \AtBeginSection[]{\sectionframe{\insertsectionhead}}
+
+\usepackage{tabularx,pgfplots,amssymb,adjustbox}\pgfplotsset{compat=1.18}\definecolor{iiiepePale}{HTML}{EEF5F8}
+\title{Mi identidad docente y necesidades de formación}\subtitle{Actividad 2}\begin{document}
+
+\begin{frame}[plain]
+\begin{tikzpicture}[remember picture,overlay]
+\fill[iiiepeNavy] (current page.south west) rectangle ([xshift=.56\paperwidth]current page.north west);
+\fill[iiiepeBlue] ([xshift=.56\paperwidth]current page.south west) rectangle (current page.north east);
+\node[anchor=north west] at ([xshift=.55cm,yshift=-.45cm]current page.north west) {\localLogo{\iiiepelogo}};
+\IfFileExists{\iiiepedots}{\node[opacity=.13,anchor=east] at (current page.east){\includegraphics[height=9cm]{\iiiepedots}};}{}
+\end{tikzpicture}
+\vspace{1.2cm}
+\begin{minipage}{.50\paperwidth}
+{\color{white}\fontsize{23}{27}\selectfont\bfseries\raggedright\inserttitle\par}\vspace{.35cm}
+{\color{white!85}\fontsize{14}{18}\selectfont\insertsubtitle\par}\vspace{.5cm}
+{\color{iiiepeOrange}\rule{.82\linewidth}{1.3pt}}\par\vspace{.4cm}
+{\color{white}\studentname\par}\vspace{.1cm}
+{\color{white!80}\small Matrícula: \studentid\par}
+\end{minipage}\hfill
+\begin{minipage}{.35\paperwidth}\raggedleft
+{\color{white}\Large\bfseries IIIEPE\par}\vspace{.25cm}
+{\color{white!85}\small\programname\par}\vspace{.5cm}
+{\color{white}\small\coursename\par}\vspace{.5cm}
+{\color{white!80}\small 13 de octubre de 2026\par Monterrey, Nuevo León\par}
+\end{minipage}
+\end{frame}
+\begin{frame}{Mi identidad docente}
+\fontsize{14}{18}\selectfont\begin{itemize}\setlength{\itemsep}{.45cm}
+\item Base técnica e industrial en mantenimiento, mecatrónica e ingenierías.
+\item Organización, secuencia y verificación del conocimiento.
+\item Acercamiento progresivo a una enseñanza humanista.
+\end{itemize}
+\end{frame}
+\begin{frame}{Fortalezas}
+\fontsize{14}{18}\selectfont\begin{itemize}\setlength{\itemsep}{.45cm}
+\item Vincular conceptos con problemas técnicos.
+\item Establecer objetivos y criterios comprensibles.
+\item Distinguir procedimiento, resultado y comprobación.
+\end{itemize}
+\end{frame}
+\begin{frame}{Áreas de oportunidad}
+\fontsize{14}{18}\selectfont\begin{itemize}\setlength{\itemsep}{.45cm}
+\item Evitar que ejecutar sustituya a comprender.
+\item Escuchar interpretaciones y revisar puntos de partida.
+\item Diversificar apoyos sin reducir la exigencia conceptual.
+\end{itemize}
+\end{frame}
+\begin{frame}{Necesidades de formación}
+\fontsize{14}{18}\selectfont\begin{itemize}\setlength{\itemsep}{.45cm}
+\item Evaluación formativa que permita utilizar la devolución.
+\item Didáctica de las matemáticas y representaciones.
+\item Inclusión y análisis de contextos de aprendizaje.
+\end{itemize}
+\end{frame}
+\begin{frame}{Bibliografía y propósito}
+\fontsize{14}{18}\selectfont\begin{itemize}\setlength{\itemsep}{.45cm}
+\item Scott: revisar demandas y aprendizajes del siglo XXI.
+\item SEP: contextualizar problemas y proyectos.
+\item Bronfenbrenner: examinar relaciones entre persona y entorno.
+\end{itemize}
+\end{frame}
+\begin{frame}{Compromiso de desarrollo}
+\fontsize{14}{18}\selectfont\begin{itemize}\setlength{\itemsep}{.45cm}
+\item Diseñar una secuencia con predicción y explicación individual.
+\item Conservar respuesta inicial, devolución y revisión.
+\item Valorar comprensión y autonomía junto con precisión técnica.
+\end{itemize}
+\end{frame}
+\begin{frame}{Representación y explicación}
+\centering\maxsizebox{.94\linewidth}{6.0cm}{\resizebox{.86\linewidth}{!}{\begin{tikzpicture}[x=1cm,y=1cm,every node/.style={font=\small},shorten >=2pt]
+\draw[iiiepeBlue,very thick,fill=iiiepeBlue!8] (0,3.7) circle (.45);
+\draw[iiiepeBlue,very thick,fill=iiiepeBlue!8] (-.5,3.1)--(-1,1.6)--(-.65,1.4)--(-.35,2.3)--(-.30,.2)--(-.6,-2.2)--(-.12,-2.2)--(0,-.4)--(.12,-2.2)--(.6,-2.2)--(.30,.2)--(.35,2.3)--(.65,1.4)--(1,1.6)--(.5,3.1)--cycle;
+\node[align=center,text width=1.25cm,font=\scriptsize] at (0,1.45){Rigor\\Diálogo\\Dignidad};
+\node[anchor=north east,align=left,text width=4.8cm] at (-1.35,3.7){\textbf{Fortalezas}\\Organización del conocimiento.\\Conexión con problemas técnicos.\\Verificación del procedimiento.};
+\node[anchor=north east,align=left,text width=4.8cm] at (-1.35,.1){\textbf{Áreas de oportunidad}\\Ampliar el diálogo.\\Diversificar representaciones.\\Usar la devolución para revisar.};
+\node[anchor=north west,align=left,text width=4.8cm] at (1.35,3.7){\textbf{Necesidades de formación}\\Evaluación formativa.\\Didáctica de las matemáticas.\\Inclusión y mediación.};
+\node[anchor=north west,align=left,text width=4.8cm] at (1.35,.1){\textbf{Lecturas y propósito}\\Scott: formas de aprender.\\SEP: proyectos y currículo.\\Bronfenbrenner: contextos.};
+\end{tikzpicture}}}\par\vspace{.15cm}\small Explica qué relación matemática muestra la representación.
+\end{frame}
+\begin{frame}{Referencias}
+\fontsize{9}{11}\selectfont\raggedright 
+{\setlength{\parskip}{6pt}
+\par\hangindent=1.27cm\hangafter=1  Bronfenbrenner, U. (1987). \textit{La ecología del desarrollo humano}. Paidós.
+\par\hangindent=1.27cm Colegio Nacional de Educación Profesional Técnica. (2025). \textit{Perfil de egreso: Profesional Técnico-Bachiller en Mecatrónica. Modelo Académico 2025}. Secretaría Académica. \href{https://www.conalep.edu.mx/sites/default/files/micrositios/perfil_egreso_2025/ElectyElectro/PE25_Mecatr\%C3\%B3nica.pdf}{Fuente en línea}
+\par\hangindent=1.27cm\hangafter=1  Scott, C. L. (2015a). \textit{El futuro del aprendizaje 1: ¿Por qué deben cambiar el contenido y los métodos de aprendizaje en el siglo XXI?} (Investigación y prospectiva en educación, 13). UNESCO.
+\par\hangindent=1.27cm\hangafter=1  Scott, C. L. (2015b). \textit{El futuro del aprendizaje 2: ¿Qué tipo de aprendizaje se necesita en el siglo XXI?} (Investigación y prospectiva en educación, 14). UNESCO.
+\par\hangindent=1.27cm\hangafter=1  Secretaría de Educación Pública. (2022a). \textit{Plan de Estudio para la educación preescolar, primaria y secundaria}. SEP.
+\par\hangindent=1.27cm\hangafter=1  Secretaría de Educación Pública. (2022b). \textit{Sugerencias metodológicas para el desarrollo de los proyectos educativos} [Extracto de \textit{Avance del contenido para el libro del docente. Primer grado}, material en proceso de edición, pp. 64--82, 23--24]. SEP.
+}
+
+
+\end{frame}
+\end{document}

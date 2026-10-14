@@ -1,0 +1,162 @@
+\documentclass[spanish,letterpaper,oneside]{article}
+
+% Datos del documento
+\def\documenttitle {Escuela tradicional y Nueva Escuela Mexicana}
+\def\documentsubtitle {Fundamentos para la enseñanza y el aprendizaje I}
+\def\documentsubject {Actividad 6 · Cuadro comparativo y reflexión docente}
+\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
+\def\coursecode {MAEM}
+
+% Identidad institucional
+\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León}
+\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
+\def\universitydepartment {Fundamentos para la enseñanza y el aprendizaje I}
+\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
+\def\universitydepartmentimagecfg {height=1.75cm}
+\def\universitylocation {Monterrey, Nuevo León}
+\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\studentid {00874}
+\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
+\def\programperiod {1er tetramestre, marzo--julio de 2026}
+\def\programmodality {Modalidad presencial}
+\def\programshort {MAEM}
+
+\def\authortable {
+  \begin{tabular}{ll}
+    \textbf{Alumno:} & \studentfullname \\
+    Matrícula: & \studentid \\
+    Correo institucional: & \studentemail \\
+    Unidad: & \coursename \\
+    Programa: & \programshort \\
+    Periodo: & \programperiod \\
+    & \\
+    \multicolumn{2}{l}{Fecha de realización: 13 de octubre de 2026} \\
+    \multicolumn{2}{l}{\universitylocation}
+  \end{tabular}
+}
+
+\input{template}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\def\portraittitlecolor {iiiepeNavy}
+\setcitestyle{authoryear,open={(},close={)}}
+
+\newcommand{\insertcoverwatermark}{%
+  \AddToShipoutPictureBG*{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[opacity=.09,inner sep=0pt] at (current page.center)
+      {\includegraphics[width=.58\paperwidth]{img/iiiepe/logo-puntos.png}};
+    \end{tikzpicture}%
+  }%
+}
+
+\newtcolorbox{reportelecturabox}[1][]{%
+  enhanced,breakable,
+  colback=iiiepePaper,colframe=iiiepeNavy,
+  boxrule=1pt,leftrule=4pt,arc=2pt,
+  left=8pt,right=8pt,top=6pt,bottom=6pt,
+  before skip=6pt,after skip=10pt,
+  fonttitle=\bfseries\color{white},coltitle=white,
+  colbacktitle=iiiepeNavy,
+  attach boxed title to top left={xshift=8pt,yshift=-2pt},
+  boxed title style={colback=iiiepeNavy,colframe=iiiepeNavy,arc=1pt},
+  title={Reporte de lectura},#1}
+
+\newtcolorbox{fichalecturabox}[1][]{%
+  enhanced,breakable,
+  colback=iiiepeAqua!7,colframe=iiiepeAqua!70!iiiepeNavy,
+  boxrule=.6pt,arc=1pt,
+  left=7pt,right=7pt,top=4pt,bottom=4pt,
+  fontupper=\small,before upper={\setstretch{1.0}},
+  fonttitle=\bfseries\color{iiiepeNavy},coltitle=iiiepeNavy,
+  colbacktitle=iiiepeAqua!7,
+  title={Ficha de la lectura},#1}
+
+
+
+\usepackage{tabularx,colortbl,pgfplots,enumitem,needspace}\pgfplotsset{compat=1.18}\definecolor{iiiepePale}{HTML}{EEF5F8}
+\setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
+\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 6}\setstretch{1.3}\raggedbottom
+\section{Comparar decisiones de enseñanza y evaluación}
+La comparación entre escuela tradicional y Nueva Escuela Mexicana se construye como un análisis de tendencias pedagógicas, no como una clasificación absoluta de docentes o instituciones. La lectura de evaluación incluida en EVA, basada en Scallon (2004), describe cambios hacia desempeño, autenticidad, interacción y participación del estudiante; esos cambios anteceden a la NEM y no equivalen por sí solos a todo su marco curricular. El Plan de Estudio 2022 aporta la referencia para discutir el enfoque humanista, comunitario e inclusivo.
+\section{Cuadro comparativo}
+
+
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.3\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.35\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.35\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+\rowcolor{iiiepePale} \textbf{Criterio} & \textbf{Tendencia tradicional} & \textbf{Enfoque de la NEM} \\\hline
+\endfirsthead
+\hline
+\rowcolor{iiiepePale} \textbf{Criterio} & \textbf{Tendencia tradicional} & \textbf{Enfoque de la NEM} \\\hline
+\endhead
+Finalidad & Predominio de transmisión y dominio de contenidos escolares. & Formación integral, pensamiento crítico y vinculación con la comunidad; los contenidos se articulan con problemas y contextos. \\\hline
+Organización del conocimiento & Fragmentación por asignaturas y ejercicios aislados como tendencia. & Campos formativos, integración de saberes y contextualización mediante el programa analítico. \\\hline
+Papel docente & Explicar, dirigir y verificar respuestas. & Diseñar situaciones, mediar, contextualizar y ajustar apoyos con autonomía profesional. \\\hline
+Papel del estudiante & Recibir información y reproducir procedimientos. & Investigar, argumentar, colaborar y participar en decisiones de aprendizaje. \\\hline
+\end{longtable}}
+
+
+
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.3\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.35\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.35\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+\rowcolor{iiiepePale} \textbf{Criterio} & \textbf{Tendencia tradicional} & \textbf{Enfoque de la NEM} \\\hline
+\endfirsthead
+\hline
+\rowcolor{iiiepePale} \textbf{Criterio} & \textbf{Tendencia tradicional} & \textbf{Enfoque de la NEM} \\\hline
+\endhead
+Problemas matemáticos & Ejercicios con datos cerrados y una ruta anticipada. & Situaciones que permiten modelar, contrastar estrategias y justificar supuestos. \\\hline
+Evaluación & Predominio de producto final, examen y calificación. & Seguimiento de procesos, diálogo, autoevaluación y uso de evidencia para retroalimentar. \\\hline
+Error & Se registra principalmente como respuesta incorrecta. & Se interpreta para comprender obstáculos y orientar revisión, manteniendo precisión. \\\hline
+Diversidad & Ritmo, instrumento y condiciones uniformes como tendencia. & Reconocimiento de contextos, barreras y apoyos para sostener participación y aprendizaje. \\\hline
+\end{longtable}}
+
+
+
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.3\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.35\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.35\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+\rowcolor{iiiepePale} \textbf{Criterio} & \textbf{Tendencia tradicional} & \textbf{Enfoque de la NEM} \\\hline
+\endfirsthead
+\hline
+\rowcolor{iiiepePale} \textbf{Criterio} & \textbf{Tendencia tradicional} & \textbf{Enfoque de la NEM} \\\hline
+\endhead
+Relación con la comunidad & La actividad escolar puede quedar separada de su entorno. & La comunidad se considera referente de problemas, saberes y participación. \\\hline
+Evidencia de comprensión & Énfasis en respuesta y reproducción. & Explicación, representación, transferencia y revisión del razonamiento. \\\hline
+Responsabilidad & La evaluación se concentra en el docente. & Se promueve participación de estudiantes y diálogo, sin eliminar responsabilidad docente. \\\hline
+Límite del contraste & Existen explicaciones directas útiles y prácticas tradicionales diversas. & Usar proyectos o tecnología no demuestra por sí mismo integración curricular ni aprendizaje. \\\hline
+\end{longtable}}
+
+
+\section{Aplicación a mi práctica}
+Mi trayectoria en mantenimiento, mecatrónica e ingenierías ha priorizado organización del conocimiento, secuencias y resultados verificables. Estos recursos pueden contribuir a una enseñanza rigurosa; requieren revisarse cuando el control del procedimiento ocupa el lugar de la comprensión. Mi acercamiento humanista consiste en preguntar cómo interpreta el estudiante el problema y qué apoyo necesita para explicar una decisión.
+En una actividad de calibración, conservaría la explicación directa de unidades y seguridad cuando sea necesaria. Después pediría formular hipótesis, comparar representaciones y revisar un dato discrepante. La evaluación integraría procedimiento y argumento, con una oportunidad de corrección. Así, la comparación orienta decisiones concretas y evita sustituir una práctica por una etiqueta.
+\section{Una comparación que cambia la evaluación}
+Considérese la ecuación $0.5x+2=0.2x+3.8$. Un ejercicio de respuesta final puede comprobar que el estudiante obtiene $x=6$, pero no revela si comprende equivalencia. Una tarea de desempeño añade tres solicitudes: explicar qué operación conserva la igualdad, comprobar en ambos miembros y construir un problema que produzca esa relación. La diferencia está en la evidencia disponible para decidir el siguiente apoyo.
+La comparación de Scallon (2004) ayuda a distinguir producto, proceso y participación en la valoración. El marco de la SEP (2022a, 2022b) añade finalidades curriculares y comunitarias que no se reducen a cambiar el instrumento. Un examen breve puede aportar evidencia útil y un proyecto puede quedarse en reproducción: la calidad depende de qué razonamiento exige la tarea y cómo se utiliza lo observado.
+En mi práctica técnica conservaría demostraciones claras cuando sean necesarias y las acompañaría de explicación del estudiante. El criterio humanista es mantener una expectativa común de comprensión con apoyos accesibles, evitando que velocidad, experiencia previa con herramientas o disponibilidad tecnológica se conviertan en sustitutos del aprendizaje matemático.
+
+\section{Conclusión}
+El cambio relevante consiste en organizar condiciones para que más estudiantes comprendan y participen con rigor. La NEM ofrece un marco para vincular conocimiento, comunidad y formación integral; su concreción requiere diseño, acompañamiento y evidencia. Mi criterio será revisar qué decisiones amplían comprensión y autonomía, manteniendo los estándares matemáticos y técnicos pertinentes a cada nivel.
+
+\needspace{5\baselineskip}\section*{Referencias}
+{\setstretch{1.15}\setlength{\parskip}{6pt}
+\par\hangindent=1.27cm\hangafter=1  Scallon, G. (2004). \textit{L’évaluation des apprentissages dans une approche par compétences}. Éditions du Renouveau Pédagogique. Comparación de prácticas incluida en EVA.
+\par\hangindent=1.27cm\hangafter=1  Secretaría de Educación Pública. (2022a). \textit{Plan de Estudio para la educación preescolar, primaria y secundaria}. SEP.
+\par\hangindent=1.27cm\hangafter=1  Secretaría de Educación Pública. (2022b). \textit{Sugerencias metodológicas para el desarrollo de los proyectos educativos} [Extracto de \textit{Avance del contenido para el libro del docente. Primer grado}, material en proceso de edición, pp. 64--82, 23--24]. SEP.
+}
+
+\end{document}

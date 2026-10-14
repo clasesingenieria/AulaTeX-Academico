@@ -1,0 +1,171 @@
+\documentclass[spanish,letterpaper,oneside]{article}
+
+% Datos del documento
+\def\documenttitle {Metodologías de la NEM y decisiones de enseñanza}
+\def\documentsubtitle {Fundamentos para la enseñanza y el aprendizaje I}
+\def\documentsubject {Actividad 7 · Cuadros comparativos y propuesta de aplicación}
+\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
+\def\coursecode {MAEM}
+
+% Identidad institucional
+\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León}
+\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
+\def\universitydepartment {Fundamentos para la enseñanza y el aprendizaje I}
+\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
+\def\universitydepartmentimagecfg {height=1.75cm}
+\def\universitylocation {Monterrey, Nuevo León}
+\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\studentid {00874}
+\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
+\def\programperiod {1er tetramestre, marzo--julio de 2026}
+\def\programmodality {Modalidad presencial}
+\def\programshort {MAEM}
+
+\def\authortable {
+  \begin{tabular}{ll}
+    \textbf{Alumno:} & \studentfullname \\
+    Matrícula: & \studentid \\
+    Correo institucional: & \studentemail \\
+    Unidad: & \coursename \\
+    Programa: & \programshort \\
+    Periodo: & \programperiod \\
+    & \\
+    \multicolumn{2}{l}{Fecha de realización: 13 de octubre de 2026} \\
+    \multicolumn{2}{l}{\universitylocation}
+  \end{tabular}
+}
+
+\input{template}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\def\portraittitlecolor {iiiepeNavy}
+\setcitestyle{authoryear,open={(},close={)}}
+
+\newcommand{\insertcoverwatermark}{%
+  \AddToShipoutPictureBG*{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[opacity=.09,inner sep=0pt] at (current page.center)
+      {\includegraphics[width=.58\paperwidth]{img/iiiepe/logo-puntos.png}};
+    \end{tikzpicture}%
+  }%
+}
+
+\newtcolorbox{reportelecturabox}[1][]{%
+  enhanced,breakable,
+  colback=iiiepePaper,colframe=iiiepeNavy,
+  boxrule=1pt,leftrule=4pt,arc=2pt,
+  left=8pt,right=8pt,top=6pt,bottom=6pt,
+  before skip=6pt,after skip=10pt,
+  fonttitle=\bfseries\color{white},coltitle=white,
+  colbacktitle=iiiepeNavy,
+  attach boxed title to top left={xshift=8pt,yshift=-2pt},
+  boxed title style={colback=iiiepeNavy,colframe=iiiepeNavy,arc=1pt},
+  title={Reporte de lectura},#1}
+
+\newtcolorbox{fichalecturabox}[1][]{%
+  enhanced,breakable,
+  colback=iiiepeAqua!7,colframe=iiiepeAqua!70!iiiepeNavy,
+  boxrule=.6pt,arc=1pt,
+  left=7pt,right=7pt,top=4pt,bottom=4pt,
+  fontupper=\small,before upper={\setstretch{1.0}},
+  fonttitle=\bfseries\color{iiiepeNavy},coltitle=iiiepeNavy,
+  colbacktitle=iiiepeAqua!7,
+  title={Ficha de la lectura},#1}
+
+
+
+\usepackage{tabularx,colortbl,pgfplots,enumitem,needspace}\pgfplotsset{compat=1.18}\definecolor{iiiepePale}{HTML}{EEF5F8}
+\setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
+\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 7}\setstretch{1.3}\raggedbottom
+\section{Elegir una metodología según el problema}
+Las sugerencias de la SEP son alternativas para organizar proyectos educativos y no un recetario obligatorio. La elección debe atender al propósito, al problema y a las condiciones de participación. Se distinguen proyectos comunitarios, indagación con STEAM, aprendizaje basado en problemas y aprendizaje servicio. La sigla ABP es ambigua: en este reporte se escribe el nombre completo para diferenciar proyectos y problemas.
+\section{Cuadro de cuatro entradas}
+
+
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.3\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.35\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.35\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+\rowcolor{iiiepePale} \textbf{Metodología} & \textbf{Cómo se trabaja} & \textbf{Palabras clave} \\\hline
+\endfirsthead
+\hline
+\rowcolor{iiiepePale} \textbf{Metodología} & \textbf{Cómo se trabaja} & \textbf{Palabras clave} \\\hline
+\endhead
+Proyectos comunitarios & Parte de una situación del entorno; se acuerda un plan, se produce una respuesta y se comunica y revisa con la comunidad. La SEP organiza planeación, acción e intervención con momentos de seguimiento. & Comunidad, producción, contexto, participación, comunicación. \\\hline
+Indagación con STEAM & Se formula una pregunta, se diseña una indagación, se organizan resultados, se presentan y se reflexiona. Integra ciencias, tecnología, ingeniería, artes y matemáticas cuando contribuyen al problema. & Pregunta, hipótesis, evidencia, modelación, diseño, metacognición. \\\hline
+\end{longtable}}
+
+
+
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.3\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.35\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.35\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+\rowcolor{iiiepePale} \textbf{Metodología} & \textbf{Cómo se trabaja} & \textbf{Palabras clave} \\\hline
+\endfirsthead
+\hline
+\rowcolor{iiiepePale} \textbf{Metodología} & \textbf{Cómo se trabaja} & \textbf{Palabras clave} \\\hline
+\endhead
+Aprendizaje basado en problemas & Se presenta una situación, se recuperan saberes, se define el problema, se organiza la experiencia, se investiga y se analizan resultados. El proceso exige construir explicaciones y decisiones fundamentadas. & Problematización, saberes previos, investigación, argumentación, solución. \\\hline
+Aprendizaje servicio & Se reconoce una necesidad comunitaria y se acuerda un servicio ligado a aprendizajes. Se organiza, realiza, evalúa y comparte la experiencia. El servicio responde a una necesidad y no se reduce a una actividad asistencial. & Reciprocidad, necesidad, servicio, aprendizaje, responsabilidad, reflexión. \\\hline
+\end{longtable}}
+
+
+\section{Características y roles docentes y estudiantiles}
+
+
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.3\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.35\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.35\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+\rowcolor{iiiepePale} \textbf{Metodología} & \textbf{Papel docente} & \textbf{Papel del estudiante} \\\hline
+\endfirsthead
+\hline
+\rowcolor{iiiepePale} \textbf{Metodología} & \textbf{Papel docente} & \textbf{Papel del estudiante} \\\hline
+\endhead
+Proyectos comunitarios & Ayuda a delimitar una situación pertinente, acompaña el plan, ofrece criterios y facilita diálogo con destinatarios. & Participa en decisiones, investiga, produce y explica una respuesta; revisa su pertinencia con otros. \\\hline
+Indagación con STEAM & Apoya preguntas investigables, controla condiciones de seguridad, ayuda a examinar datos y conceptos. & Predice, diseña pruebas, registra, modela, contrasta y comunica; distingue observación de interpretación. \\\hline
+\end{longtable}}
+
+
+
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.3\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.35\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.35\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+\rowcolor{iiiepePale} \textbf{Metodología} & \textbf{Papel docente} & \textbf{Papel del estudiante} \\\hline
+\endfirsthead
+\hline
+\rowcolor{iiiepePale} \textbf{Metodología} & \textbf{Papel docente} & \textbf{Papel del estudiante} \\\hline
+\endhead
+Aprendizaje basado en problemas & Propone o acompaña un problema relevante, orienta búsqueda y pide justificar alternativas. & Identifica lo que sabe y necesita saber; contrasta fuentes, argumenta y revisa una solución. \\\hline
+Aprendizaje servicio & Vincula objetivos curriculares con una necesidad acordada y acompaña evaluación y reciprocidad. & Escucha a destinatarios, participa en el servicio y explica qué aprendió y cómo responde a la necesidad. \\\hline
+\end{longtable}}
+
+
+\section{Ejemplo propuesto para mi contexto}
+Propongo indagación con STEAM para estudiar un sistema de medición de bajo costo. En preparatoria puede centrarse en proporcionalidad y gráficas; en ingeniería, en calibración, regresión y análisis del error. La necesidad y la complejidad deben adecuarse al grupo y a los recursos disponibles. La secuencia no presupone que ya exista un problema medido en una institución.
+En el inicio se plantea cómo decidir si un instrumento mide de manera confiable. Después se identifican variables y se diseña una prueba segura. En el desarrollo se registran lecturas y referencias, se construyen tabla y gráfica y se revisa el modelo. La comunicación explica resultados y límites; la metacognición identifica un cambio de razonamiento. El diseño integra tecnología solo si aporta a la investigación y ofrece una alternativa con materiales sencillos.
+La evaluación considera formulación del problema, trazabilidad de datos, interpretación matemática y calidad del argumento. Se solicita una revisión después de la devolución. La distribución de roles permite observar participación; no se asume que todos aprendieron porque el equipo entregó un prototipo.
+\section{Criterios para elegir sin confundir metodologías}
+La selección puede formularse como una decisión: si el centro es elaborar una respuesta pública con destinatarios, conviene explorar proyectos comunitarios; si la pregunta exige obtener y contrastar evidencia, indagación; si el obstáculo requiere estudiar alternativas y construir una solución fundamentada, aprendizaje basado en problemas; si existe una necesidad acordada y un servicio recíproco vinculado con contenidos, aprendizaje servicio. Las fronteras pueden relacionarse, pero cada diseño debe explicar su centro.
+En el material de la SEP (2022a, 2022b), las propuestas se ofrecen como posibilidades y no como una prescripción que anule la autonomía docente. Por eso justificaría la elección por la actividad intelectual y social que se busca, los recursos y el tiempo. Un mismo problema de consumo de agua podría investigarse con mediciones o convertirse en servicio comunitario; el nombre del tema no decide la metodología.
+Para mi contexto, la indagación de un sistema de medición permite organizar preguntas, modelos y contraste. La dimensión humanista se concreta al acordar una pregunta comprensible, distribuir decisiones y ofrecer alternativas de acceso. El cierre debe mostrar qué aprendió cada integrante y cómo se utilizó una devolución para revisar, además de comunicar el producto colectivo.
+
+\section{Comparación y postura}
+Los cuatro enfoques comparten participación y contextualización, pero su centro difiere: producción comunitaria, indagación, resolución de un problema o servicio recíproco. Pueden relacionarse, aunque no es necesario combinarlos todos en una secuencia. Mi formación industrial favorece planificar y verificar; el enfoque humanista me exige añadir diálogo sobre necesidades y condiciones de aprendizaje. Elegiría la metodología que permita sostener esa relación y comprobar qué comprenden los estudiantes.
+
+\needspace{5\baselineskip}\section*{Referencias}
+{\setstretch{1.15}\setlength{\parskip}{6pt}
+\par\hangindent=1.27cm\hangafter=1  Secretaría de Educación Pública. (2022a). \textit{Plan de Estudio para la educación preescolar, primaria y secundaria}. SEP.
+\par\hangindent=1.27cm\hangafter=1  Secretaría de Educación Pública. (2022b). \textit{Sugerencias metodológicas para el desarrollo de los proyectos educativos} [Extracto de \textit{Avance del contenido para el libro del docente. Primer grado}, material en proceso de edición, pp. 64--82, 23--24]. SEP.
+}
+
+\end{document}

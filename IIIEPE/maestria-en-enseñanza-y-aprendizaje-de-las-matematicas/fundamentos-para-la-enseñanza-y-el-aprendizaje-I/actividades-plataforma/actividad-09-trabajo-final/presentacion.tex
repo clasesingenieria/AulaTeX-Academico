@@ -1,0 +1,337 @@
+﻿% Presentacion - PFM02 / Sesion 02
+% Suma y resta con fracciones
+
+\pdfminorversion=7
+\documentclass[
+	spanish,
+	aspectratio=1610,
+	xcolor={dvipsnames,table}
+]{beamer}
+
+\geometry{paperwidth=19.2cm,paperheight=12cm}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{lmodern}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,decorations.pathreplacing,shapes.geometric,fit,backgrounds,overlay-beamer-styles}
+\usepackage{hyperref}
+
+% Datos del alumno y del programa
+\newcommand{\studentname}{Mtro. Martín Jonathan de la Cruz Muñoz}
+\newcommand{\studentshort}{M. de la Cruz Munoz}
+\newcommand{\studentid}{00874}
+\newcommand{\studentemail}{martin.delacruz@campus.iiiepe.edu.mx}
+\newcommand{\programname}{Maestria en Aprendizaje y Ensenanza de las Matematicas}
+\newcommand{\programshort}{MAEM}
+\newcommand{\coursecode}{MAEM}
+\newcommand{\coursename}{Fundamentos para la enseñanza y el aprendizaje I}
+\newcommand{\coursegroup}{Grupo A}
+\newcommand{\courseperiod}{Marzo--julio 2026}
+\newcommand{\institutionname}{IIIEPE}
+\newcommand{\institutionlongname}{Instituto de Investigacion, Innovacion y Estudios de Posgrado para la Educacion del Estado de Nuevo Leon}
+\newcommand{\institutionplace}{Monterrey, Nuevo Leon}
+\newcommand{\iiiepelogo}{img/iiiepe/logo-iiiepe-blanco.png}
+\newcommand{\iiiepemark}{img/iiiepe/marca-iiiepe.png}
+\newcommand{\iiiepedots}{img/iiiepe/logo-puntos.png}
+
+% Paleta institucional
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\definecolor{iiiepeMuted}{HTML}{667085}
+
+\mode<presentation>{
+	\usetheme{default}
+	\usefonttheme{professionalfonts}
+	\setbeamertemplate{navigation symbols}{}
+	\setbeamertemplate{blocks}[rounded][shadow=false]
+}
+
+\hypersetup{
+	colorlinks=true,
+	urlcolor=iiiepeBlue,
+	linkcolor=iiiepeNavy
+}
+
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{normal text}{fg=iiiepeInk,bg=white}
+\setbeamercolor{structure}{fg=iiiepeBlue}
+\setbeamercolor{frametitle}{fg=white,bg=iiiepeNavy}
+\setbeamercolor{title}{fg=white,bg=iiiepeNavy}
+\setbeamercolor{block title}{fg=white,bg=iiiepeBlue}
+\setbeamercolor{block body}{fg=iiiepeInk,bg=iiiepePaper}
+\setbeamercolor{alerted text}{fg=iiiepeOrange}
+\setbeamerfont{title}{size=\LARGE,series=\bfseries}
+\setbeamerfont{frametitle}{size=\fontsize{14}{18}\selectfont,series=\bfseries}
+\setbeamerfont{block title}{series=\bfseries}
+\setbeamertemplate{itemize item}{\textcolor{iiiepeAqua}{\fontsize{14}{18}\selectfont$\blacktriangleright$}}
+\setbeamertemplate{itemize subitem}{\textcolor{iiiepeOrange}{\scriptsize$\blacksquare$}}
+\setbeamertemplate{enumerate item}{\textcolor{iiiepeBlue}{\insertenumlabel.}}
+
+\newcommand{\localLogo}[1]{%
+	\IfFileExists{#1}{\includegraphics[height=0.58cm]{#1}}{\textbf{\institutionname}}%
+}
+
+\setbeamertemplate{frametitle}{
+	\nointerlineskip
+	\begin{beamercolorbox}[wd=\textwidth,ht=1.05cm,dp=0.22cm,leftskip=0.35cm,rightskip=0.25cm]{frametitle}
+		\begin{minipage}[c]{0.72\textwidth}
+			\insertframetitle
+		\end{minipage}
+		\hfill
+		\raisebox{-0.1cm}{\localLogo{\iiiepelogo}}
+	\end{beamercolorbox}
+	\vspace{-0.04cm}
+	{\color{iiiepeOrange}\rule{\textwidth}{1.4pt}}
+}
+
+\setbeamertemplate{footline}{
+	\leavevmode
+	\hbox{%
+		\begin{beamercolorbox}[wd=.34\paperwidth,ht=2.7ex,dp=1ex,leftskip=1em]{author in head/foot}
+			\color{white}\studentshort
+		\end{beamercolorbox}
+		\begin{beamercolorbox}[wd=.38\paperwidth,ht=2.7ex,dp=1ex,center]{title in head/foot}
+			\color{white}\programshort\ -- \coursecode
+		\end{beamercolorbox}
+		\begin{beamercolorbox}[wd=.20\paperwidth,ht=2.7ex,dp=1ex,rightskip=1em plus 1fil]{date in head/foot}
+			\color{white}Matricula \studentid\hfill\insertframenumber/\inserttotalframenumber
+		\end{beamercolorbox}
+	}
+}
+\setbeamercolor{author in head/foot}{bg=iiiepeNavy}
+\setbeamercolor{title in head/foot}{bg=iiiepeBlue}
+\setbeamercolor{date in head/foot}{bg=iiiepeNavy}
+
+\newcommand{\accentbar}{%
+	\begin{tikzpicture}[remember picture,overlay]
+		\path[use as bounding box] (0,0) rectangle (0,0);
+		\fill[iiiepeAqua] (current page.south west) rectangle ([xshift=0.42\paperwidth,yshift=0.08cm]current page.south west);
+		\fill[iiiepeOrange] ([xshift=0.42\paperwidth]current page.south west) rectangle ([xshift=\paperwidth,yshift=0.08cm]current page.south west);
+	\end{tikzpicture}
+}
+
+\newcommand{\DividirEntre}[2]{\ensuremath{#1\,\text{ entre }\,#2}}
+
+\tikzset{
+	cajaProc/.style={
+		draw=iiiepeBlue,
+		rounded corners=2mm,
+		align=center,
+		inner sep=4pt,
+		minimum height=8mm,
+		font=\small
+	},
+	cajaDato/.style={
+		cajaProc,
+		fill=iiiepeBlue!8
+	},
+	cajaOp/.style={
+		cajaProc,
+		fill=iiiepeOrange!12
+	},
+	cajaRes/.style={
+		cajaProc,
+		fill=iiiepeAqua!12
+	},
+	flechaProc/.style={
+		-{Latex[length=2.4mm]},
+		thick,
+		draw=iiiepeBlue
+	},
+	notaProc/.style={
+		draw=iiiepeOrange,
+		rounded corners=2mm,
+		fill=iiiepeOrange!12,
+		align=center,
+		inner sep=4pt,
+		font=\scriptsize
+	},
+	decisionProc/.style={
+		diamond,
+		aspect=2.1,
+		draw=iiiepeBlue,
+		fill=iiiepeAqua!10,
+		align=center,
+		inner sep=2pt,
+		font=\scriptsize
+	}
+}
+
+\newcommand{\RutaOperacion}[4]{%
+\begin{tikzpicture}[node distance=6mm]
+	\node[cajaDato,visible on=<1->] (a) {#1};
+	\node[cajaOp, right=of a,visible on=<2->] (b) {#2};
+	\node[cajaOp, right=of b,visible on=<3->] (c) {#3};
+	\node[cajaRes, right=of c,visible on=<4->] (d) {#4};
+	\draw[flechaProc,visible on=<1->] (a) -- (b);
+	\draw[flechaProc,visible on=<2->] (b) -- (c);
+	\draw[flechaProc,visible on=<3->] (c) -- (d);
+\end{tikzpicture}%
+}
+
+\newcommand{\sectionframe}[1]{%
+	\begin{frame}[plain]
+		\begin{tikzpicture}[remember picture,overlay]
+			\fill[iiiepeNavy] (current page.south west) rectangle (current page.north east);
+			\IfFileExists{\iiiepedots}{%
+				\node[opacity=0.13,anchor=east] at ([xshift=0.8cm]current page.east) {\includegraphics[height=9.4cm]{\iiiepedots}};
+			}{}
+			\fill[iiiepeAqua] ([xshift=0.85cm,yshift=2.1cm]current page.south west) rectangle ([xshift=1.05cm,yshift=6.3cm]current page.south west);
+			\fill[iiiepeOrange] ([xshift=1.15cm,yshift=2.1cm]current page.south west) rectangle ([xshift=1.35cm,yshift=5.35cm]current page.south west);
+		\end{tikzpicture}
+		\vspace{1.8cm}
+		\hspace{1.25cm}
+		\begin{minipage}{0.72\paperwidth}
+			{\color{white}\Huge\bfseries #1}\\[0.25cm]
+			{\color{white!75}Sesion 02 -- Suma y resta con fracciones}
+		\end{minipage}
+	\end{frame}
+}
+
+% Separadores automaticos desactivados para evitar diapositivas repetitivas.
+% \AtBeginSection[]{\sectionframe{\insertsectionhead}}
+
+\usepackage{tabularx,pgfplots,amssymb,adjustbox}\pgfplotsset{compat=1.18}\definecolor{iiiepePale}{HTML}{EEF5F8}
+\title{Calibrar para decidir en la formación técnica}\subtitle{Trabajo final}\begin{document}
+
+\begin{frame}[plain]
+\begin{tikzpicture}[remember picture,overlay]
+\fill[iiiepeNavy] (current page.south west) rectangle ([xshift=.56\paperwidth]current page.north west);
+\fill[iiiepeBlue] ([xshift=.56\paperwidth]current page.south west) rectangle (current page.north east);
+\node[anchor=north west] at ([xshift=.55cm,yshift=-.45cm]current page.north west) {\localLogo{\iiiepelogo}};
+\IfFileExists{\iiiepedots}{\node[opacity=.13,anchor=east] at (current page.east){\includegraphics[height=9cm]{\iiiepedots}};}{}
+\end{tikzpicture}
+\vspace{1.2cm}
+\begin{minipage}{.50\paperwidth}
+{\color{white}\fontsize{23}{27}\selectfont\bfseries\raggedright\inserttitle\par}\vspace{.35cm}
+{\color{white!85}\fontsize{14}{18}\selectfont\insertsubtitle\par}\vspace{.5cm}
+{\color{iiiepeOrange}\rule{.82\linewidth}{1.3pt}}\par\vspace{.4cm}
+{\color{white}\studentname\par}\vspace{.1cm}
+{\color{white!80}\small Matrícula: \studentid\par}
+\end{minipage}\hfill
+\begin{minipage}{.35\paperwidth}\raggedleft
+{\color{white}\Large\bfseries IIIEPE\par}\vspace{.25cm}
+{\color{white!85}\small\programname\par}\vspace{.5cm}
+{\color{white}\small\coursename\par}\vspace{.5cm}
+{\color{white!80}\small 13 de octubre de 2026\par Monterrey, Nuevo León\par}
+\end{minipage}
+\end{frame}
+\begin{frame}{Descripción general}
+\fontsize{14}{18}\selectfont\begin{itemize}\setlength{\itemsep}{.45cm}
+\item Proyecto por realizar en preparatoria técnica de mantenimiento y mecatrónica.
+\item Adaptable a Ingeniería Mecánica, de Sistemas e Industrial.
+\item Propósito: justificar un modelo de medición e interpretar sus límites.
+\end{itemize}
+\end{frame}
+\begin{frame}{Necesidad educativa}
+\fontsize{14}{18}\selectfont\begin{itemize}\setlength{\itemsep}{.45cm}
+\item Hipótesis: ejecutar un procedimiento puede ocultar dificultades de interpretación.
+\item Pregunta: ¿cuándo podemos confiar en una lectura para decidir?
+\item El diagnóstico del grupo debe contrastar esa necesidad; no se supone demostrada.
+\end{itemize}
+\end{frame}
+\begin{frame}{Contenidos matemáticos}
+\fontsize{14}{18}\selectfont\begin{itemize}\setlength{\itemsep}{.45cm}
+\item Proporcionalidad y funciones lineales.
+\item Representación tabular, gráfica y algebraica.
+\item Medidas centrales, dispersión, error y unidades.
+\end{itemize}
+\end{frame}
+\begin{frame}{Saberes y pensamiento científico}
+\fontsize{14}{18}\selectfont\begin{itemize}\setlength{\itemsep}{.45cm}
+\item Resolver: definir variables y elegir un procedimiento.
+\item Argumentar: justificar modelo y supuestos.
+\item Representar: conectar datos, gráfica y expresión con una situación.
+\end{itemize}
+\end{frame}
+\begin{frame}{Metodología sociocrítica}
+\fontsize{14}{18}\selectfont\begin{itemize}\setlength{\itemsep}{.45cm}
+\item Aprendizaje basado en indagación con STEAM como enfoque.
+\item La pregunta exige diseñar una prueba, registrar y contrastar.
+\item Cada disciplina aporta una función; la tecnología no se añade como decoración.
+\end{itemize}
+\end{frame}
+\begin{frame}{Actividades y organización}
+\small\renewcommand{\arraystretch}{1.45}\begin{tabularx}{\linewidth}{X|X|X}\toprule
+\textbf{Fase} & \textbf{Actividad} & \textbf{Evidencia}\\\midrule
+Inicio & Pregunta y diagnóstico. & Predicción individual.\\\addlinespace
+Indagación & Referencias y lecturas repetidas. & Registro y condiciones.\\\addlinespace
+Modelación & Tabla, gráfica y ecuación. & Modelo con límites.\\\addlinespace
+Comunicación & Recomendación y contraste. & Argumento público.\\\addlinespace
+Revisión & Devolución y transferencia. & Versión corregida.\\\addlinespace
+\bottomrule\end{tabularx}
+\end{frame}
+\begin{frame}{Ejemplo matemático simulado}
+\begin{columns}[T,onlytextwidth]\column{.33\textwidth}\small
+\begin{tabular}{rrr}\toprule $x$&$y$&$e=y-x$\\\midrule 0&0.2&0.2\\2&2.3&0.3\\4&4.4&0.4\\6&6.5&0.5\\8&8.6&0.6\\\bottomrule\end{tabular}\par\vspace{.3cm}
+Datos didácticos construidos.\par $x=(y-0.2)/1.05$.
+\column{.65\textwidth}\centering\resizebox{\linewidth}{!}{\begin{tikzpicture}\begin{axis}[width=10cm,height=6cm,xlabel={Referencia $x$ (unidades)},ylabel={Lectura $y$ (unidades)},xmin=0,xmax=9,ymin=0,ymax=10,grid=major,legend pos=north west]
+\addplot[iiiepeBlue,thick,domain=0:8]{1.05*x+.2};\addlegendentry{$y=1.05x+0.2$}\addplot[iiiepeOrange,dashed,domain=0:8]{x};\addlegendentry{Ideal $y=x$}\addplot[only marks,iiiepeAqua] coordinates {(0,.2)(2,2.3)(4,4.4)(6,6.5)(8,8.6)};\end{axis}\end{tikzpicture}}\end{columns}
+\end{frame}
+\begin{frame}{Microsistema y mesosistema}
+\begin{columns}[T,onlytextwidth]\column{.52\textwidth}\centering\resizebox{\linewidth}{!}{\begin{tikzpicture}[font=\small,x=1cm,y=1cm]
+\foreach \r/\c in {4/iiiepeBlue,3.1/iiiepeAqua,2.2/iiiepeOrange,1.3/iiiepeNavy}\draw[\c,thick] (0,0) ellipse ({\r} and {\r*.65});
+\node[align=center] at (0,0){Persona\\e interacciones};\node at (0,.65){Micro};\node at (0,1.15){Meso};\node at (0,1.72){Exo};\node at (0,2.3){Macro};\draw[-Latex,thick] (-4,-3)--(4,-3) node[right]{Tiempo};\node at (0,-3.45){Cambios y continuidad: cronosistema};\end{tikzpicture}}\column{.45\textwidth}\small
+Micro: interacciones directas.\par\vspace{.25cm}Meso: vínculos entre entornos.\par\vspace{.25cm}Exo y macro: decisiones, recursos y valores.\par\vspace{.25cm}El tiempo permite examinar continuidad y cambios.\end{columns}
+\end{frame}
+\begin{frame}{Exosistema y macrosistema}
+\fontsize{14}{18}\selectfont\begin{itemize}\setlength{\itemsep}{.45cm}
+\item Exosistema: equipos, horarios y decisiones institucionales.
+\item Macrosistema: expectativas culturales sobre matemáticas, tecnología y género.
+\item Decisión: alternativas accesibles y distribución equitativa de herramientas.
+\end{itemize}
+\end{frame}
+\begin{frame}{Cronosistema y procesos}
+\fontsize{14}{18}\selectfont\begin{itemize}\setlength{\itemsep}{.45cm}
+\item Comparar predicción inicial, explicación revisada y transferencia posterior.
+\item Analizar proceso, persona, contexto y tiempo.
+\item La teoría orienta preguntas; no demuestra causas sin evidencia.
+\end{itemize}
+\end{frame}
+\begin{frame}{Evaluación formativa}
+\small\renewcommand{\arraystretch}{1.45}\begin{tabularx}{\linewidth}{X|X|X}\toprule
+\textbf{Criterio} & \textbf{Evidencia} & \textbf{Retroalimentación}\\\midrule
+Modelación & Variables y relación explicadas. & Contrastar valor inicial y proporcionalidad.\\\addlinespace
+Registro & Lecturas y condiciones conservadas. & Revisar una fila antes de continuar.\\\addlinespace
+Argumentación & Decisión con límites. & Pedir un caso fuera del intervalo.\\\addlinespace
+Revisión & Cambio entre versiones. & Solicitar justificación individual.\\\addlinespace
+\bottomrule\end{tabularx}
+\end{frame}
+\begin{frame}{Impacto esperado}
+\fontsize{14}{18}\selectfont\begin{itemize}\setlength{\itemsep}{.45cm}
+\item Distinguir relaciones proporcionales y lineales e interpretar sesgos.
+\item Comunicar una decisión con límites y evidencia.
+\item Participar y revisar en colaboración; resultados pendientes de aplicación.
+\end{itemize}
+\end{frame}
+\begin{frame}{Reflexión final}
+\fontsize{14}{18}\selectfont\begin{itemize}\setlength{\itemsep}{.45cm}
+\item El aprendizaje se concibe como construcción acompañada de relaciones.
+\item La indagación sociocrítica conecta problema, contenido y participación.
+\item Mi base industrial aporta rigor; la perspectiva humanista reconoce a la persona y su contexto.
+\end{itemize}
+\end{frame}
+\begin{frame}{Referencias}
+\fontsize{9}{11}\selectfont\raggedright 
+{\setlength{\parskip}{6pt}
+\par\hangindent=1.27cm\hangafter=1  Bronfenbrenner, U. (1987). \textit{La ecología del desarrollo humano}. Paidós.
+\par\hangindent=1.27cm Colegio Nacional de Educación Profesional Técnica. (2025). \textit{Perfil de egreso: Profesional Técnico-Bachiller en Mecatrónica. Modelo Académico 2025}. Secretaría Académica. \href{https://www.conalep.edu.mx/sites/default/files/micrositios/perfil_egreso_2025/ElectyElectro/PE25_Mecatr\%C3\%B3nica.pdf}{Fuente en línea}
+\par\hangindent=1.27cm\hangafter=1  Secretaría de Educación Pública. (2022a). \textit{Plan de Estudio para la educación preescolar, primaria y secundaria}. SEP.
+\par\hangindent=1.27cm\hangafter=1  Secretaría de Educación Pública. (2022b). \textit{Sugerencias metodológicas para el desarrollo de los proyectos educativos} [Extracto de \textit{Avance del contenido para el libro del docente. Primer grado}, material en proceso de edición, pp. 64--82, 23--24]. SEP.
+\par\hangindent=1.27cm\hangafter=1  Secretaría de Educación Pública. (2024). \textit{Programa de estudio para la educación secundaria: Programa sintético de la Fase 6}. SEP.
+\par\hangindent=1.27cm\hangafter=1  Tong, P., \& An, I. S. (2024). Review of studies applying Bronfenbrenner’s bioecological theory in international and intercultural education research. \textit{Frontiers in Psychology, 14}, Article 1233925. \href{https://doi.org/10.3389/fpsyg.2023.1233925}{Fuente en línea}
+}
+
+
+\end{frame}
+\end{document}

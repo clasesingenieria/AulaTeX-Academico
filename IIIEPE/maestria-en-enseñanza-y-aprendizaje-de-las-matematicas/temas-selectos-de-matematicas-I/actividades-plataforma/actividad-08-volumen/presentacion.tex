@@ -1,0 +1,290 @@
+﻿% Presentacion - PFM02 / Sesion 02
+% Suma y resta con fracciones
+
+\pdfminorversion=7
+\documentclass[
+	spanish,
+	aspectratio=1610,
+	xcolor={dvipsnames,table}
+]{beamer}
+
+\geometry{paperwidth=19.2cm,paperheight=12cm}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{lmodern}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,decorations.pathreplacing,shapes.geometric,fit,backgrounds,overlay-beamer-styles}
+\usepackage{hyperref}
+
+% Datos del alumno y del programa
+\newcommand{\studentname}{Mtro. Martín Jonathan de la Cruz Muñoz}
+\newcommand{\studentshort}{M. de la Cruz Munoz}
+\newcommand{\studentid}{00874}
+\newcommand{\studentemail}{martin.delacruz@campus.iiiepe.edu.mx}
+\newcommand{\programname}{Maestria en Aprendizaje y Ensenanza de las Matematicas}
+\newcommand{\programshort}{MAEM}
+\newcommand{\coursecode}{PFM02}
+\newcommand{\coursename}{Temas selectos de matemáticas I}
+\newcommand{\coursegroup}{Grupo A}
+\newcommand{\courseperiod}{Marzo--julio 2026}
+\newcommand{\institutionname}{IIIEPE}
+\newcommand{\institutionlongname}{Instituto de Investigacion, Innovacion y Estudios de Posgrado para la Educacion del Estado de Nuevo Leon}
+\newcommand{\institutionplace}{Monterrey, Nuevo Leon}
+\newcommand{\iiiepelogo}{img/iiiepe/logo-iiiepe-blanco.png}
+\newcommand{\iiiepemark}{img/iiiepe/marca-iiiepe.png}
+\newcommand{\iiiepedots}{img/iiiepe/logo-puntos.png}
+
+% Paleta institucional
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\definecolor{iiiepeMuted}{HTML}{667085}
+
+\mode<presentation>{
+	\usetheme{default}
+	\usefonttheme{professionalfonts}
+	\setbeamertemplate{navigation symbols}{}
+	\setbeamertemplate{blocks}[rounded][shadow=false]
+}
+
+\hypersetup{
+	colorlinks=true,
+	urlcolor=iiiepeBlue,
+	linkcolor=iiiepeNavy
+}
+
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{normal text}{fg=iiiepeInk,bg=white}
+\setbeamercolor{structure}{fg=iiiepeBlue}
+\setbeamercolor{frametitle}{fg=white,bg=iiiepeNavy}
+\setbeamercolor{title}{fg=white,bg=iiiepeNavy}
+\setbeamercolor{block title}{fg=white,bg=iiiepeBlue}
+\setbeamercolor{block body}{fg=iiiepeInk,bg=iiiepePaper}
+\setbeamercolor{alerted text}{fg=iiiepeOrange}
+\setbeamerfont{title}{size=\LARGE,series=\bfseries}
+\setbeamerfont{frametitle}{size=\fontsize{14}{18}\selectfont,series=\bfseries}
+\setbeamerfont{block title}{series=\bfseries}
+\setbeamertemplate{itemize item}{\textcolor{iiiepeAqua}{\fontsize{14}{18}\selectfont$\blacktriangleright$}}
+\setbeamertemplate{itemize subitem}{\textcolor{iiiepeOrange}{\scriptsize$\blacksquare$}}
+\setbeamertemplate{enumerate item}{\textcolor{iiiepeBlue}{\insertenumlabel.}}
+
+\newcommand{\localLogo}[1]{%
+	\IfFileExists{#1}{\includegraphics[height=0.58cm]{#1}}{\textbf{\institutionname}}%
+}
+
+\setbeamertemplate{frametitle}{
+	\nointerlineskip
+	\begin{beamercolorbox}[wd=\textwidth,ht=1.05cm,dp=0.22cm,leftskip=0.35cm,rightskip=0.25cm]{frametitle}
+		\begin{minipage}[c]{0.72\textwidth}
+			\insertframetitle
+		\end{minipage}
+		\hfill
+		\raisebox{-0.1cm}{\localLogo{\iiiepelogo}}
+	\end{beamercolorbox}
+	\vspace{-0.04cm}
+	{\color{iiiepeOrange}\rule{\textwidth}{1.4pt}}
+}
+
+\setbeamertemplate{footline}{
+	\leavevmode
+	\hbox{%
+		\begin{beamercolorbox}[wd=.34\paperwidth,ht=2.7ex,dp=1ex,leftskip=1em]{author in head/foot}
+			\color{white}\studentshort
+		\end{beamercolorbox}
+		\begin{beamercolorbox}[wd=.38\paperwidth,ht=2.7ex,dp=1ex,center]{title in head/foot}
+			\color{white}\programshort\ -- \coursecode
+		\end{beamercolorbox}
+		\begin{beamercolorbox}[wd=.20\paperwidth,ht=2.7ex,dp=1ex,rightskip=1em plus 1fil]{date in head/foot}
+			\color{white}Matricula \studentid\hfill\insertframenumber/\inserttotalframenumber
+		\end{beamercolorbox}
+	}
+}
+\setbeamercolor{author in head/foot}{bg=iiiepeNavy}
+\setbeamercolor{title in head/foot}{bg=iiiepeBlue}
+\setbeamercolor{date in head/foot}{bg=iiiepeNavy}
+
+\newcommand{\accentbar}{%
+	\begin{tikzpicture}[remember picture,overlay]
+		\path[use as bounding box] (0,0) rectangle (0,0);
+		\fill[iiiepeAqua] (current page.south west) rectangle ([xshift=0.42\paperwidth,yshift=0.08cm]current page.south west);
+		\fill[iiiepeOrange] ([xshift=0.42\paperwidth]current page.south west) rectangle ([xshift=\paperwidth,yshift=0.08cm]current page.south west);
+	\end{tikzpicture}
+}
+
+\newcommand{\DividirEntre}[2]{\ensuremath{#1\,\text{ entre }\,#2}}
+
+\tikzset{
+	cajaProc/.style={
+		draw=iiiepeBlue,
+		rounded corners=2mm,
+		align=center,
+		inner sep=4pt,
+		minimum height=8mm,
+		font=\small
+	},
+	cajaDato/.style={
+		cajaProc,
+		fill=iiiepeBlue!8
+	},
+	cajaOp/.style={
+		cajaProc,
+		fill=iiiepeOrange!12
+	},
+	cajaRes/.style={
+		cajaProc,
+		fill=iiiepeAqua!12
+	},
+	flechaProc/.style={
+		-{Latex[length=2.4mm]},
+		thick,
+		draw=iiiepeBlue
+	},
+	notaProc/.style={
+		draw=iiiepeOrange,
+		rounded corners=2mm,
+		fill=iiiepeOrange!12,
+		align=center,
+		inner sep=4pt,
+		font=\scriptsize
+	},
+	decisionProc/.style={
+		diamond,
+		aspect=2.1,
+		draw=iiiepeBlue,
+		fill=iiiepeAqua!10,
+		align=center,
+		inner sep=2pt,
+		font=\scriptsize
+	}
+}
+
+\newcommand{\RutaOperacion}[4]{%
+\begin{tikzpicture}[node distance=6mm]
+	\node[cajaDato,visible on=<1->] (a) {#1};
+	\node[cajaOp, right=of a,visible on=<2->] (b) {#2};
+	\node[cajaOp, right=of b,visible on=<3->] (c) {#3};
+	\node[cajaRes, right=of c,visible on=<4->] (d) {#4};
+	\draw[flechaProc,visible on=<1->] (a) -- (b);
+	\draw[flechaProc,visible on=<2->] (b) -- (c);
+	\draw[flechaProc,visible on=<3->] (c) -- (d);
+\end{tikzpicture}%
+}
+
+\newcommand{\sectionframe}[1]{%
+	\begin{frame}[plain]
+		\begin{tikzpicture}[remember picture,overlay]
+			\fill[iiiepeNavy] (current page.south west) rectangle (current page.north east);
+			\IfFileExists{\iiiepedots}{%
+				\node[opacity=0.13,anchor=east] at ([xshift=0.8cm]current page.east) {\includegraphics[height=9.4cm]{\iiiepedots}};
+			}{}
+			\fill[iiiepeAqua] ([xshift=0.85cm,yshift=2.1cm]current page.south west) rectangle ([xshift=1.05cm,yshift=6.3cm]current page.south west);
+			\fill[iiiepeOrange] ([xshift=1.15cm,yshift=2.1cm]current page.south west) rectangle ([xshift=1.35cm,yshift=5.35cm]current page.south west);
+		\end{tikzpicture}
+		\vspace{1.8cm}
+		\hspace{1.25cm}
+		\begin{minipage}{0.72\paperwidth}
+			{\color{white}\Huge\bfseries #1}\\[0.25cm]
+			{\color{white!75}Sesion 02 -- Suma y resta con fracciones}
+		\end{minipage}
+	\end{frame}
+}
+
+% Separadores automaticos desactivados para evitar diapositivas repetitivas.
+% \AtBeginSection[]{\sectionframe{\insertsectionhead}}
+
+\usepackage{tabularx,pgfplots,amssymb,adjustbox}\pgfplotsset{compat=1.18}\definecolor{iiiepePale}{HTML}{EEF5F8}
+\title{Volumen de prismas, pirámides y cilindros}\subtitle{Actividad 8}\begin{document}
+
+\begin{frame}[plain]
+\begin{tikzpicture}[remember picture,overlay]
+\fill[iiiepeNavy] (current page.south west) rectangle ([xshift=.56\paperwidth]current page.north west);
+\fill[iiiepeBlue] ([xshift=.56\paperwidth]current page.south west) rectangle (current page.north east);
+\node[anchor=north west] at ([xshift=.55cm,yshift=-.45cm]current page.north west) {\localLogo{\iiiepelogo}};
+\IfFileExists{\iiiepedots}{\node[opacity=.13,anchor=east] at (current page.east){\includegraphics[height=9cm]{\iiiepedots}};}{}
+\end{tikzpicture}
+\vspace{1.2cm}
+\begin{minipage}{.50\paperwidth}
+{\color{white}\fontsize{23}{27}\selectfont\bfseries\raggedright\inserttitle\par}\vspace{.35cm}
+{\color{white!85}\fontsize{14}{18}\selectfont\insertsubtitle\par}\vspace{.5cm}
+{\color{iiiepeOrange}\rule{.82\linewidth}{1.3pt}}\par\vspace{.4cm}
+{\color{white}\studentname\par}\vspace{.1cm}
+{\color{white!80}\small Matrícula: \studentid\par}
+\end{minipage}\hfill
+\begin{minipage}{.35\paperwidth}\raggedleft
+{\color{white}\Large\bfseries IIIEPE\par}\vspace{.25cm}
+{\color{white!85}\small\programname\par}\vspace{.5cm}
+{\color{white}\small\coursename\par}\vspace{.5cm}
+{\color{white!80}\small 13 de octubre de 2026\par Monterrey, Nuevo León\par}
+\end{minipage}
+\end{frame}
+\begin{frame}{Volumen y capacidad}
+\fontsize{14}{18}\selectfont\begin{itemize}\setlength{\itemsep}{.45cm}
+\item Prisma: V = área de base $\times$ altura.
+\item Pirámide: V = área de base $\times$ altura / 3.
+\item Cilindro: V = $\pi$r$^2$h; distinguir volumen de área superficial.
+\end{itemize}
+\end{frame}
+\begin{frame}{Problemas resueltos}
+\fontsize{14}{18}\selectfont\begin{itemize}\setlength{\itemsep}{.45cm}
+\item Cubo de arista 4 cm: 64 cm$^3$.
+\item Prisma de 8 $\times$ 5 $\times$ 3 cm: 120 cm$^3$.
+\item Pirámide con la misma base y altura: 40 cm$^3$.
+\end{itemize}
+\end{frame}
+\begin{frame}{Despejar una medida}
+\fontsize{14}{18}\selectfont\begin{itemize}\setlength{\itemsep}{.45cm}
+\item Prisma: con V = 240 y base = 40, h = 6 cm.
+\item Pirámide: con V = 96 y base = 36, h = 8 cm.
+\item Cilindro: con V = 500$\pi$ y h = 20, r = 5 cm.
+\end{itemize}
+\end{frame}
+\begin{frame}{Relaciones de variación}
+\fontsize{14}{18}\selectfont\[V=abh,\qquad V'=(sa)(sb)(sh)=s^3V.\]
+\small\renewcommand{\arraystretch}{1.45}\begin{tabularx}{\linewidth}{X|X|X}\toprule
+\textbf{Cambio} & \textbf{Factor del volumen} & \textbf{Razón}\\\midrule
+Duplicar solo la altura & 2 & La base permanece fija.\\\addlinespace
+Duplicar el radio del cilindro & 4 & El radio aparece al cuadrado.\\\addlinespace
+Duplicar todas las dimensiones & 8 & Se multiplican tres factores de escala.\\\addlinespace
+\bottomrule\end{tabularx}
+\end{frame}
+\begin{frame}{Aplicación técnica}
+\fontsize{14}{18}\selectfont\begin{itemize}\setlength{\itemsep}{.45cm}
+\item Depósito de 0.8 $\times$ 0.5 $\times$ 0.3 m: 0.12 m$^3$ = 120 L.
+\item Con 10\% libre, la capacidad operativa del ejemplo es 108 L.
+\item El espacio libre es un supuesto didáctico, no una norma de la plataforma.
+\end{itemize}
+\end{frame}
+\begin{frame}{Evaluación y reflexión}
+\fontsize{14}{18}\selectfont\begin{itemize}\setlength{\itemsep}{.45cm}
+\item Explicar el factor 1/3 y conservar unidades al despejar.
+\item Comparar material manipulable, dibujo y fórmulas.
+\item El experimento de llenado está propuesto; no se reporta como realizado.
+\end{itemize}
+\end{frame}
+\begin{frame}{Representación y explicación}
+\centering\maxsizebox{.94\linewidth}{6.0cm}{\resizebox{.86\linewidth}{!}{\begin{tikzpicture}[font=\small,x=1cm,y=1cm]
+\draw[thick,iiiepeBlue] (0,0)--(3,0)--(3,2)--(0,2)--cycle;\draw[thick,iiiepeBlue] (0,2)--(1,3)--(4,3)--(3,2);\draw[thick,iiiepeBlue] (3,0)--(4,1)--(4,3);\draw[dashed] (0,0)--(1,1)--(4,1);\draw[dashed] (1,1)--(1,3);
+\node at (1.5,-.6){Prisma: $V=A_bh$};\draw[thick,iiiepeAqua] (6,0)--(9,0)--(10,1)--(7,1)--cycle;\draw[thick,iiiepeAqua] (6,0)--(8,3)--(9,0);\draw[thick,iiiepeAqua] (10,1)--(8,3);\draw[dashed] (7,1)--(8,3);\draw[dashed] (8,3)--(8,.5);\node[right] at (8,1.7){$h$};\node at (8,-.6){Pirámide: $V=A_bh/3$};\end{tikzpicture}}}\par\vspace{.15cm}\small Explica qué relación matemática muestra la representación.
+\end{frame}
+\begin{frame}{Reto de transferencia}
+\fontsize{14}{18}\selectfont Explica qué cambia al duplicar solo la altura o todas las dimensiones.\par\vspace{.5cm}Explica tu procedimiento, comprueba la respuesta y nombra una condición que podría cambiarla.
+\end{frame}
+\begin{frame}{Referencias}
+\fontsize{9}{11}\selectfont\raggedright 
+{\setlength{\parskip}{6pt}
+\par\hangindent=1.27cm\hangafter=1  IIIEPE. (2026). \textit{Sesión 8: Medición y cálculo en diferentes contextos}. EVA posgrado.
+\par\hangindent=1.27cm\hangafter=1  Secretaría de Educación Pública. (2024). \textit{Programa de estudio para la educación secundaria: Programa sintético de la Fase 6}. SEP.
+}
+
+
+\end{frame}
+\end{document}

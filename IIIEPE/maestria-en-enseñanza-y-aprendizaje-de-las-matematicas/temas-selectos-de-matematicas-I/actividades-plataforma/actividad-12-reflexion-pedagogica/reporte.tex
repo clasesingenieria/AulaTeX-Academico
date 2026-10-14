@@ -1,0 +1,129 @@
+\documentclass[spanish,letterpaper,oneside]{article}
+
+% Datos del documento
+\def\documenttitle {Rigor matemático y acompañamiento en proyectos STEAM}
+\def\documentsubtitle {Temas selectos de matemáticas I}
+\def\documentsubject {Actividad 12 · Ensayo crítico y reflexivo}
+\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\coursename {Temas selectos de matemáticas I}
+\def\coursecode {PFM02}
+
+% Identidad institucional
+\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León}
+\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
+\def\universitydepartment {Temas selectos de matemáticas I}
+\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
+\def\universitydepartmentimagecfg {height=1.75cm}
+\def\universitylocation {Monterrey, Nuevo León}
+\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\studentid {00874}
+\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
+\def\programperiod {1er tetramestre, marzo--julio de 2026}
+\def\programmodality {Modalidad presencial}
+\def\programshort {MAEM}
+
+\def\authortable {
+  \begin{tabular}{ll}
+    \textbf{Alumno:} & \studentfullname \\
+    Matrícula: & \studentid \\
+    Correo institucional: & \studentemail \\
+    Unidad: & \coursename \\
+    Programa: & \programshort \\
+    Periodo: & \programperiod \\
+    & \\
+    \multicolumn{2}{l}{Fecha de realización: 13 de octubre de 2026} \\
+    \multicolumn{2}{l}{\universitylocation}
+  \end{tabular}
+}
+
+\input{template}
+
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\def\portraittitlecolor {iiiepeNavy}
+\setcitestyle{authoryear,open={(},close={)}}
+
+\newcommand{\insertcoverwatermark}{%
+  \AddToShipoutPictureBG*{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[opacity=.09,inner sep=0pt] at (current page.center)
+      {\includegraphics[width=.58\paperwidth]{img/iiiepe/logo-puntos.png}};
+    \end{tikzpicture}%
+  }%
+}
+
+\newtcolorbox{reportelecturabox}[1][]{%
+  enhanced,breakable,
+  colback=iiiepePaper,colframe=iiiepeNavy,
+  boxrule=1pt,leftrule=4pt,arc=2pt,
+  left=8pt,right=8pt,top=6pt,bottom=6pt,
+  before skip=6pt,after skip=10pt,
+  fonttitle=\bfseries\color{white},coltitle=white,
+  colbacktitle=iiiepeNavy,
+  attach boxed title to top left={xshift=8pt,yshift=-2pt},
+  boxed title style={colback=iiiepeNavy,colframe=iiiepeNavy,arc=1pt},
+  title={Reporte de lectura},#1}
+
+\newtcolorbox{fichalecturabox}[1][]{%
+  enhanced,breakable,
+  colback=iiiepeAqua!7,colframe=iiiepeAqua!70!iiiepeNavy,
+  boxrule=.6pt,arc=1pt,
+  left=7pt,right=7pt,top=4pt,bottom=4pt,
+  fontupper=\small,before upper={\setstretch{1.0}},
+  fonttitle=\bfseries\color{iiiepeNavy},coltitle=iiiepeNavy,
+  colbacktitle=iiiepeAqua!7,
+  title={Ficha de la lectura},#1}
+
+
+
+\usepackage{tabularx,colortbl,pgfplots,enumitem,needspace}\pgfplotsset{compat=1.18}\definecolor{iiiepePale}{HTML}{EEF5F8}
+\setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
+\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 12}\setstretch{1.5}\raggedbottom
+\newgeometry{margin=2.5cm}\fontsize{12}{18}\selectfont
+\section*{Rigor matemático y acompañamiento en proyectos STEAM}
+Mi trayectoria docente en preparatoria, particularmente en CONALEP y CECyTE en mantenimiento y mecatrónica, y en licenciaturas de Ingeniería Mecánica, de Sistemas e Industrial, me ha acostumbrado a organizar el conocimiento en función del trabajo. Esa orientación aporta claridad de objetivos, secuencia y verificación. Sin embargo, mi acercamiento a una enseñanza humanista me lleva a cuestionar una práctica demasiado mecánica: completar una tarea no demuestra que cada estudiante comprenda ni que haya tenido condiciones para participar. Sostengo que un proyecto STEAM debe conservar la exigencia matemática y ampliar las oportunidades de explicación, revisión y colaboración.
+
+La unidad permite articular cinco fases: recuperar saberes y plantear un reto, diseñar la indagación, organizar respuestas, comunicar resultados y reflexionar. Su coherencia depende de que cada fase produzca una evidencia vinculada al contenido. La revisión de Martín-Cudero et al. (2024) señala la necesidad de fortalecer la fundamentación y la implementación de STEAM en educación matemática. Por ello, construir una catapulta, un envase o una pista robótica debe acompañarse de modelos y argumentos; la actividad manual por sí sola no acredita aprendizaje profundo.
+
+Las primeras sesiones construyen una base de números racionales: convertir fracciones y decimales exige conservar el valor; sumar requiere unidades fraccionarias comparables; multiplicar y dividir requiere interpretar partes y agrupamientos. En las sesiones de proporcionalidad y ecuaciones aparece una generalización: $y=kx$ conserva cocientes, $y=k/x$ conserva productos y una igualdad se mantiene al aplicar la misma operación en ambos miembros. La catapulta exige una cautela: un alcance decreciente no prueba proporcionalidad inversa, y la constante de una relación masa-distancia no es una fuerza. Esta discusión puede favorecer comprensión porque obliga a contrastar modelo, unidades y condiciones.
+
+Las sesiones de estadística, geometría y volumen amplían esa exigencia. Dos conjuntos con media 10 pueden tener desviaciones medias de 1 y $8/3$; una decisión debe considerar dispersión. El desarrollo de un cilindro conecta $2\pi r$ con la base del rectángulo lateral; en una pirámide, altura y apotema cumplen funciones diferentes. Al duplicar todas las dimensiones, el volumen se multiplica por ocho. En álgebra, distancia y robótica, la variable representa una cantidad definida, Pitágoras calcula una longitud y un sistema de ecuaciones debe comprobarse antes de programar. Integrar estos contenidos implica explicar sus relaciones y límites, no enumerar fórmulas.
+
+La consigna menciona cinco ejes articuladores, mientras los materiales curriculares de la unidad reconocen siete. Para evitar esa reducción, integraría los siete y destacaría cinco de forma transversal: inclusión mediante apoyos y roles accesibles; pensamiento crítico al justificar algoritmos y cuestionar modelos; interculturalidad crítica al reconocer diversas formas de medir y resolver; igualdad de género al rotar liderazgo y herramientas; y vida saludable mediante seguridad, movimiento y trato respetuoso. Lectura y escritura se concretan en registros y argumentos, y artes y experiencias estéticas en la representación y el diseño. En números y ecuaciones, los ejes se observan al discutir procedimientos; en geometría, en el diseño compartido; en estadística y robótica, al interpretar evidencia y distribuir decisiones.
+
+La integración de ejes puede comprobarse por grupos de sesiones. En racionales (1--3), comparar procedimientos y aceptar apoyos concretan pensamiento crítico e inclusión; en funciones y ecuaciones (4--5), distinguir evidencia e hipótesis y distribuir decisiones incorpora esos ejes e igualdad de género. En estadística (6), examinar datos y su interpretación fortalece lectura crítica; en geometría y volumen (7--8), el diseño compartido conecta artes, precisión y participación. En álgebra, distancia y robótica (9--11), la escritura de modelos, la rotación de roles y la seguridad articulan lectura y escritura, igualdad y vida saludable. La interculturalidad exige reconocer y contrastar diversos modos de resolver, sin reducirlos a una mención decorativa.
+
+Evaluaría por agentes y momentos. La evaluación inicial recuperaría estimaciones y explicaciones individuales; durante el desarrollo, la observación y las preguntas identificarían obstáculos; en el cierre, una nueva tarea comprobaría transferencia. La autoevaluación pediría identificar una corrección, la coevaluación contrastaría procedimientos con criterios y la heteroevaluación examinaría precisión y argumento. Boström y Palm (2023) no encontraron diferencias significativas de logro en la intervención que analizaron. Ese resultado impide prometer mejora solo por aumentar actividades llamadas formativas: importa cómo la evidencia modifica la enseñanza y qué oportunidad tiene el estudiante de utilizar la devolución.
+
+El primer ajuste viable sería incorporar un ciclo breve de predicción, resolución, retroalimentación y nueva resolución. En proporcionalidad, el estudiante anticiparía una relación, construiría tabla y gráfica y comprobaría productos o cocientes. Si la evidencia contradice la hipótesis, tendría que revisar el modelo. El instrumento registraría afirmación inicial, evidencia, corrección y explicación final. Este ajuste conecta la organización del trabajo técnico con una pedagogía del acompañamiento: la revisión es parte del aprendizaje y el error tiene una función informativa. Su efecto deberá verificarse en producciones reales; la lectura cualitativa de las pruebas disponibles se centra en condiciones y decisiones, sin transcribir cifras.
+
+El segundo ajuste sería ofrecer distintas vías de representación conservando un criterio matemático común. Una ecuación podría abordarse con balanza, tabla o símbolos; una distancia, con cuadrícula, dibujo a escala o coordenadas; un volumen, con unidades cúbicas y despeje. Rotaría cálculo, medición, explicación y programación para que la familiaridad técnica no concentre la participación. Tong y An (2024) advierten que la perspectiva bioecológica suele reducirse a describir contextos y omitir procesos. Para mi diseño, esto significa observar interacciones sostenidas entre estudiantes, docente y recursos, así como cambios a lo largo del tiempo, en vez de atribuir toda dificultad a la persona.
+
+Mi propuesta conecta el rigor industrial con una responsabilidad educativa más amplia. No renuncio a comprobar unidades, cálculos o funcionamiento; incorporo preguntas sobre quién comprende, quién decide y quién necesita otra mediación. El aprendizaje profundo se reconoce cuando un estudiante justifica una equivalencia, explica un supuesto y transfiere una relación a un problema nuevo. El siguiente paso será aplicar estas mejoras, conservar evidencias iniciales y revisadas y analizar sus límites. La calidad del proyecto dependerá de esa coherencia entre contenido, participación y evaluación, no de la apariencia del prototipo.
+
+\needspace{5\baselineskip}\section*{Referencias}
+{\setstretch{1.15}\setlength{\parskip}{6pt}
+\par\hangindent=1.27cm\hangafter=1  Boström, E., \& Palm, T. (2023). The effect of a formative assessment practice on student achievement in mathematics. \textit{Frontiers in Education, 8}, Article 1101192. \url{https://doi.org/10.3389/feduc.2023.1101192}
+\par\hangindent=1.27cm\hangafter=1  Martín-Cudero, D., Cid-Cid, A. I., \& Guede-Cid, R. (2024). Analysis of mathematics education from a STEAM approach at secondary and pre-universitary educational levels: A systematic review. \textit{Journal of Technology and Science Education, 14}(2), 507--528. \url{https://doi.org/10.3926/jotse.2349}
+\par\hangindent=1.27cm\hangafter=1  Secretaría de Educación Pública. (2022a). \textit{Plan de Estudio para la educación preescolar, primaria y secundaria}. SEP.
+\par\hangindent=1.27cm\hangafter=1  Secretaría de Educación Pública. (2022b). \textit{Sugerencias metodológicas para el desarrollo de los proyectos educativos} [Extracto de \textit{Avance del contenido para el libro del docente. Primer grado}, material en proceso de edición, pp. 64--82, 23--24]. SEP.
+\par\hangindent=1.27cm\hangafter=1  Secretaría de Educación Pública. (2024). \textit{Programa de estudio para la educación secundaria: Programa sintético de la Fase 6}. SEP.
+\par\hangindent=1.27cm\hangafter=1  Tong, P., \& An, I. S. (2024). Review of studies applying Bronfenbrenner’s bioecological theory in international and intercultural education research. \textit{Frontiers in Psychology, 14}, Article 1233925. \url{https://doi.org/10.3389/fpsyg.2023.1233925}
+}
+
+\end{document}

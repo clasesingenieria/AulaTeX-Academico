@@ -1,0 +1,156 @@
+\documentclass[spanish,letterpaper,oneside]{article}
+
+% Datos del documento
+\def\documenttitle {Conocer, hacer, ser y vivir juntos en la enseñanza técnica}
+\def\documentsubtitle {Fundamentos para la enseñanza y el aprendizaje I}
+\def\documentsubject {Actividad 4 · Tipos de aprendizaje y aplicación docente}
+\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
+\def\coursecode {MAEM}
+
+% Identidad institucional
+\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León}
+\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
+\def\universitydepartment {Fundamentos para la enseñanza y el aprendizaje I}
+\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
+\def\universitydepartmentimagecfg {height=1.75cm}
+\def\universitylocation {Monterrey, Nuevo León}
+\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\studentid {00874}
+\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
+\def\programperiod {1er tetramestre, marzo--julio de 2026}
+\def\programmodality {Modalidad presencial}
+\def\programshort {MAEM}
+
+\def\authortable {
+  \begin{tabular}{ll}
+    \textbf{Alumno:} & \studentfullname \\
+    Matrícula: & \studentid \\
+    Correo institucional: & \studentemail \\
+    Unidad: & \coursename \\
+    Programa: & \programshort \\
+    Periodo: & \programperiod \\
+    & \\
+    \multicolumn{2}{l}{Fecha de realización: 13 de octubre de 2026} \\
+    \multicolumn{2}{l}{\universitylocation}
+  \end{tabular}
+}
+
+\input{template}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\def\portraittitlecolor {iiiepeNavy}
+\setcitestyle{authoryear,open={(},close={)}}
+
+\newcommand{\insertcoverwatermark}{%
+  \AddToShipoutPictureBG*{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[opacity=.09,inner sep=0pt] at (current page.center)
+      {\includegraphics[width=.58\paperwidth]{img/iiiepe/logo-puntos.png}};
+    \end{tikzpicture}%
+  }%
+}
+
+\newtcolorbox{reportelecturabox}[1][]{%
+  enhanced,breakable,
+  colback=iiiepePaper,colframe=iiiepeNavy,
+  boxrule=1pt,leftrule=4pt,arc=2pt,
+  left=8pt,right=8pt,top=6pt,bottom=6pt,
+  before skip=6pt,after skip=10pt,
+  fonttitle=\bfseries\color{white},coltitle=white,
+  colbacktitle=iiiepeNavy,
+  attach boxed title to top left={xshift=8pt,yshift=-2pt},
+  boxed title style={colback=iiiepeNavy,colframe=iiiepeNavy,arc=1pt},
+  title={Reporte de lectura},#1}
+
+\newtcolorbox{fichalecturabox}[1][]{%
+  enhanced,breakable,
+  colback=iiiepeAqua!7,colframe=iiiepeAqua!70!iiiepeNavy,
+  boxrule=.6pt,arc=1pt,
+  left=7pt,right=7pt,top=4pt,bottom=4pt,
+  fontupper=\small,before upper={\setstretch{1.0}},
+  fonttitle=\bfseries\color{iiiepeNavy},coltitle=iiiepeNavy,
+  colbacktitle=iiiepeAqua!7,
+  title={Ficha de la lectura},#1}
+
+
+
+\usepackage{tabularx,colortbl,pgfplots,enumitem,needspace}\pgfplotsset{compat=1.18}\definecolor{iiiepePale}{HTML}{EEF5F8}
+\setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
+\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 4}\setstretch{1.3}\raggedbottom
+\section{Cuatro aprendizajes que deben articularse}
+La lectura de Scott (2015b) organiza la reflexión sobre lo que se necesita aprender en el siglo XXI a partir de conocer, hacer, ser y vivir juntos. Estos pilares no describen estilos fijos de estudiantes ni cuatro tipos de personas. Son dimensiones complementarias de la formación. En mis clases técnicas y de ingeniería, permiten revisar si una tarea desarrolla comprensión, actuación, autonomía y convivencia, en lugar de valorar solo su ejecución.
+
+
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.22\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.78\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+\rowcolor{iiiepePale} \textbf{Pilar} & \textbf{Sentido y aplicación propuesta} \\\hline
+\endfirsthead
+\hline
+\rowcolor{iiiepePale} \textbf{Pilar} & \textbf{Sentido y aplicación propuesta} \\\hline
+\endhead
+Aprender a conocer & Construir comprensión, formular preguntas y examinar información. En una calibración, identificar variables, unidades y supuestos; comparar un modelo proporcional con uno que tiene término inicial. La evidencia sería una explicación de por qué se elige el modelo. \\\hline
+Aprender a hacer & Utilizar conocimientos para resolver y revisar un problema. Diseñar un procedimiento de medición, calcular un error y ajustar una decisión. La evidencia sería un registro trazable, con cálculos y justificación del cambio. \\\hline
+\end{longtable}}
+
+
+
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.22\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.78\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+\rowcolor{iiiepePale} \textbf{Pilar} & \textbf{Sentido y aplicación propuesta} \\\hline
+\endfirsthead
+\hline
+\rowcolor{iiiepePale} \textbf{Pilar} & \textbf{Sentido y aplicación propuesta} \\\hline
+\endhead
+Aprender a ser & Desarrollar autonomía, responsabilidad y juicio. Reconocer una incertidumbre, pedir apoyo y decidir con criterios de seguridad y respeto. La evidencia sería una reflexión sustentada sobre una decisión, sin confundir autonomía con trabajar sin acompañamiento. \\\hline
+Aprender a vivir juntos & Participar, escuchar y construir acuerdos con otras personas. Rotar roles técnicos y argumentativos, contrastar procedimientos y ofrecer una devolución respetuosa. La evidencia sería la distribución de decisiones y la revisión compartida de una solución. \\\hline
+\end{longtable}}
+
+
+\section{Aplicación integrada en una secuencia}
+Propondría comparar dos estrategias de mantenimiento mediante un conjunto de datos didácticos. En el inicio, cada estudiante anticiparía qué significa ``mejor'' y qué información necesita. En el desarrollo, los equipos calcularían promedios y dispersión, identificarían límites del conjunto y prepararían una recomendación. En el cierre, cada integrante explicaría una decisión y revisaría su primera postura.
+Aprender a conocer aparecería al comprender las medidas estadísticas; aprender a hacer, al calcular y representar; aprender a ser, al reconocer límites y responsabilidad; aprender a vivir juntos, al construir y revisar el argumento. La actividad no se dividiría en cuatro tareas independientes: una misma decisión exige las cuatro dimensiones.
+\section{Evaluación y apoyos}
+Evaluaría comprensión conceptual, procedimiento, justificación y colaboración mediante evidencias diferenciadas. Quien tenga dificultades de cálculo podría utilizar una tabla guiada y conservaría la responsabilidad de interpretar; quien avance con mayor autonomía podría analizar un valor extremo y explicar su efecto. El apoyo no elimina la exigencia de pensar.
+La retroalimentación incluiría una acción realizable: revisar una unidad, contrastar dos resultados o justificar un criterio. Pediría una segunda versión para que la evaluación participe en el aprendizaje. La valoración de actitudes requiere observación real; no debe inferirse del formato del documento.
+\section{Un problema que integra los cuatro pilares}
+Propongo comparar dos planes de mantenimiento: uno cobra $250+80h$ pesos y otro $100+110h$, para $h\ge0$. El punto de igualdad es $h=5$ y el costo común es 650 pesos. Antes de cinco horas conviene el segundo plan; después, el primero, suponiendo servicios equivalentes y sin cargos adicionales.
+Aprender a conocer exige interpretar pendiente y cuota fija; aprender a hacer, construir tabla, gráfica y solución algebraica; aprender a ser, reconocer límites y sostener una recomendación responsable; aprender a vivir juntos, contrastar razones y acordar una comunicación compartida. Scott (2015b, pp. 4--8) vincula los pilares con una formación que supera la reproducción de información; mi aplicación concreta es organizar una decisión que los necesite conjuntamente.
+
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.32\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.68\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+\rowcolor{iiiepePale} \textbf{Evidencia} & \textbf{Pregunta para revisar comprensión} \\\hline
+\endfirsthead
+\hline
+\rowcolor{iiiepePale} \textbf{Evidencia} & \textbf{Pregunta para revisar comprensión} \\\hline
+\endhead
+Tabla y ecuación & ¿Qué representa el costo cuando $h=0$ y por qué las dos rectas se cruzan? \\\hline
+Decisión argumentada & ¿Cambiaría tu recomendación si un servicio incluye refacciones y el otro no? \\\hline
+Revisión individual & ¿Qué idea modificaste después de escuchar otra estrategia? \\\hline
+\end{longtable}}
+
+\section{Conclusión reflexiva}
+Mi punto de partida ha sido organizar conocimiento y trabajo; estos pilares me ayudan a ampliar la finalidad de esa organización. En preparatoria y licenciatura, formar para resolver problemas debe incluir la capacidad de comprender, actuar con responsabilidad y convivir. Aplicaría esta mirada al diseñar tareas donde cada estudiante explique y revise una decisión. Una enseñanza humanista mantiene la precisión técnica, pero reconoce que aprender también implica construir autonomía y una relación respetuosa con los demás.
+
+\needspace{5\baselineskip}\section*{Referencias}
+{\setstretch{1.15}\setlength{\parskip}{6pt}
+\par\hangindent=1.27cm\hangafter=1  Delors, J., et al. (1996). \textit{La educación encierra un tesoro}. UNESCO/Santillana.
+\par\hangindent=1.27cm\hangafter=1  Scott, C. L. (2015b). \textit{El futuro del aprendizaje 2: ¿Qué tipo de aprendizaje se necesita en el siglo XXI?} (Investigación y prospectiva en educación, 14). UNESCO.
+\par\hangindent=1.27cm\hangafter=1  Secretaría de Educación Pública. (2022). \textit{Plan de Estudio para la educación preescolar, primaria y secundaria}. SEP.
+}
+
+\end{document}
