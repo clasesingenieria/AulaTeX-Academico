@@ -1,5 +1,11 @@
 # Tarea 12 - Hipotesis de trabajo
 
+## Productos y plantilla contractual
+
+[Reporte acumulativo de raíz](../../../reporte-seminario-i-Actividad-12.tex) y [PDF del reporte](../../../reporte-seminario-i-Actividad-12.pdf): mismo cuerpo, referencias y anexos que el Word acumulativo de Entregas, no un resumen auxiliar. [Cadena de plantillas y sincronización](../../../COMPILACION-seminario-i.md). Esta carpeta sólo conserva apoyo, evidencias y versiones históricas; no es el destino del reporte vigente. El reporte carga la plantilla de materia, la maestra MGA con identidad ITESCA y el núcleo compartido de AulaTeX.
+
+Sincronización corregida el 13/10/2026: 130 párrafos y tres tablas cotejados íntegramente con el PDF. Reporte de raíz: 25 páginas; PDF del Word: 31, por diferencias de maquetación. El auxiliar anterior de ocho páginas quedó en `reporte-auxiliar-anterior-2026-10-13/`, como histórico. El Word no cambió. [Registro de sincronización](sincronizacion-t12.json).
+
 ## Mejora del 13/10/2026
 
 Version vigente: 31 paginas, con dos citas textuales breves de Hernandez Sampieri y parafrasis metodologicas y administrativas verificadas. Se preciso la distincion entre hipotesis relacional y contraste documental por patrones, y la lectura no causal de X e Y. [Pasajes, cotejo de rubrica y verificaciones](revision-fundamento-2026-10-13.md). Hipotesis, matriz, Covey y capitulos anteriores conservados. Copia previa resguardada; no enviada. Los datos de 29 paginas mas abajo corresponden a la preparacion inicial.
