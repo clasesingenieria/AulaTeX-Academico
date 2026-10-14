@@ -1,5 +1,9 @@
 # Tarea 12 - Hipotesis de trabajo
 
+## Portada actualizada
+
+Se aplicó exclusivamente la portada de Plan de negocios, adaptada a Seminario I, al reporte de raíz y al Word/PDF de Entregas. Cuerpo y tablas conservados; reporte 25 páginas y Word/PDF 31. [Diseño, alcance y comprobaciones](../../../assets-seminario-i/portada/README.md). El cuerpo Word sigue editable; la portada del Word es una imagen generada. Versiones anteriores respaldadas y actividades ya enviadas intactas.
+
 ## Productos y plantilla contractual
 
 [Reporte acumulativo de raíz](../../../reporte-seminario-i-Actividad-12.tex) y [PDF del reporte](../../../reporte-seminario-i-Actividad-12.pdf): mismo cuerpo, referencias y anexos que el Word acumulativo de Entregas, no un resumen auxiliar. [Cadena de plantillas y sincronización](../../../COMPILACION-seminario-i.md). Esta carpeta sólo conserva apoyo, evidencias y versiones históricas; no es el destino del reporte vigente. El reporte carga la plantilla de materia, la maestra MGA con identidad ITESCA y el núcleo compartido de AulaTeX.

@@ -1,5 +1,9 @@
 # Compilación y contrato de Seminario I
 
+## Portada adoptada
+
+T12 y la plantilla de materia usan la portada de Plan de negocios adaptada a Seminario I. El cambio afecta solo la portada: se conservan cuerpo y anexos del reporte y del Word. [Recurso y verificaciones](assets-seminario-i/portada/README.md). Los hashes anteriores del Word documentan estados previos: la incorporación de portada modifica el archivo, no el contenido acumulativo. No se alteraron entregas históricas.
+
 Ejecutar desde la raíz del repositorio:
 
 ```powershell

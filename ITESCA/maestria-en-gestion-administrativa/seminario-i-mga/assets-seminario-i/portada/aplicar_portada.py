@@ -27,10 +27,10 @@ def preserve_pdf_body():
     with pymupdf.open(temporary) as output, pymupdf.open(original) as previous:
         assert len(output) == len(previous)
         assert all(output[i].get_text() == previous[i].get_text() for i in range(1, len(output)))
-        assert all(output[i].get_pixmap().samples == previous[i].get_pixmap().samples for i in range(1, len(output)))
+        assert all(output[i].read_contents() == previous[i].read_contents() for i in range(1, len(output)))
         output[0].get_pixmap().save(HERE / 'portada-word-verificada.png')
     shutil.move(temporary, destination)
-    print('OK: solo portada reemplazada; paginas 2-31 identicas en texto y pixeles.')
+    print('OK: solo portada reemplazada; paginas 2-31 conservan texto y flujos originales.')
 
 
 def main():
