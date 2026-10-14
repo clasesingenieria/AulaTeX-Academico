@@ -1,5 +1,7 @@
 import hashlib
 import json
+import shutil
+import sys
 from copy import deepcopy
 from pathlib import Path
 
@@ -15,6 +17,21 @@ TARGET = SUBJECT / 'Entregas/Tarea12_DeLaCruzMunoz.docx'
 GENERAL = ('En los componentes documentales aplicables al proyecto vTaxi como plataforma de taxis concesionados en Nuevo León durante septiembre a noviembre de 2026, un mayor nivel de gestión del cumplimiento normativo se relaciona con un mayor grado de preparación administrativa del expediente, expresado en documentos completos y coherentes con los requisitos aplicables y en observaciones internas atendidas con respaldo verificable.')
 SPECIFIC = ('En los componentes del expediente de vTaxi, la asignación documentada de responsables y el seguimiento de observaciones se relacionan con una mayor proporción de observaciones internas cerradas mediante evidencia documental aceptable en la revisión del caso.')
 REFERENCE = ('Price, P. C., Jhangiani, R. S., & Chiang, I.-C. A. (2015). Research methods in psychology (2nd Canadian ed.). BCcampus. https://opentextbc.ca/researchmethods/chapter/correlational-research/')
+BOOK_REFERENCES = [
+    'Hernández Sampieri, R., Fernández Collado, C., & Baptista Lucio, M. del P. (2014). Metodología de la investigación (6.ª ed.). McGraw-Hill Education.',
+    'OECD. (2018). OECD regulatory enforcement and inspections toolkit. OECD Publishing. https://doi.org/10.1787/9789264303959-en',
+]
+FOUNDATION = [
+    'Fundamento metodológico. Hernández Sampieri et al. (2014) definen las hipótesis como “explicaciones tentativas del fenómeno investigado” (p. 104). Por ello, HG es una respuesta provisional a la pregunta general, no una conclusión sobre vTaxi. Los autores vinculan su formulación con problema, antecedentes y marco teórico y exigen variables observables, relaciones precisas y técnicas disponibles para contrastarlas (pp. 105–107). La formulación conserva el caso, periodo y objetos documentales delimitados en los capítulos anteriores.',
+    'Fundamento administrativo. El criterio 8.1 del toolkit de OECD (2018, p. 39) considera relevantes los datos actualizados, la gestión de casos, los registros y los flujos de trabajo para planear y dar seguimiento a la inspección y ejecución regulatoria. Se toma como orientación conceptual sobre trazabilidad, no como norma exigible a vTaxi: su destinatario son estructuras de inspección y supervisión, no plataformas privadas. Su adaptación al caso consiste en examinar responsables identificables, revisión de aplicabilidad y seguimiento registrado frente a documentos verificables. Esos controles pueden facilitar la localización de brechas y su revisión, pero un expediente puede permanecer incompleto pese a ellos; de ahí que se proponga una relación contrastable y no un efecto garantizado.',
+    'Enlace con los antecedentes. Parker y Nielsen (2009), incorporados en el capítulo 1 con el alcance limitado de la revisión disponible, plantean el examen de sistemas de cumplimiento y su posible diferencia en la práctica. Ese antecedente y la orientación de OECD justifican investigar controles y evidencia, no dar por acreditada su eficacia. La inferencia de trabajo para vTaxi es propia: donde existen más controles documentados se espera encontrar mayor preparación del expediente, manteniendo separados los registros de gestión y la evaluación del documento resultante. Las divergencias también se registrarán y podrán debilitar la hipótesis.',
+]
+METHOD = [
+    'HG y HE1 son hipótesis de investigación correlacionales por su contenido relacional, direccionales positivas y no causales. Esto clasifica la proposición, no anuncia un estudio de correlación estadística ya diseñado o ejecutado. El procedimiento previsto para este caso es contraste documental descriptivo por patrones de correspondencia y casos contrarios. No se propone experimento, manipulación, comparación de plataformas ni generalización estadística. Hernández Sampieri et al. (2014) señalan que “Correlación y causalidad son conceptos asociados, pero distintos” (p. 111); encontrar correspondencia no demuestra que la gestión haya producido la preparación del expediente.',
+    'Convención de variables. Para responder al campo VI–VD de la consigna se identifica X: gestión del cumplimiento, y Y: preparación administrativa del expediente. En la ficha de esta actividad VI se emplea sólo como rótulo de X y VD como rótulo de Y; no se atribuyen causa y efecto. Hernández Sampieri et al. (2014, pp. 109–111) reservan la interpretación independiente/causal y dependiente/efecto para hipótesis causales; Price et al. (2015) también distinguen medición no experimental y causalidad. En el análisis se usarán X e Y y no se interpretará X como variable manipulada.',
+    'La unidad de análisis es el proyecto vTaxi; los componentes del expediente y las observaciones son unidades de registro internas, no empresas independientes. Se compararán controles y calidad documental en cortes compatibles, sin tratar versiones del mismo documento como nuevos casos. No se calcularán coeficientes, valores p ni niveles de significación: no se ha previsto una prueba inferencial. La ausencia de variación o de datos evaluables impide contrastar, no confirma HG. Cualquier incorporación posterior de un análisis estadístico requeriría justificar previamente diseño, registros suficientes y supuestos; no se presupone en esta tarea.',
+]
+MEASUREMENT = 'Reglas observables de X e Y. Por componente, X se describirá mediante tres controles comprobables: responsable efectivamente designado, revisión de aplicabilidad fechada y seguimiento documentado; el perfil contará de cero a tres presencias sólo si los tres controles son evaluables. No verificable no se recodifica como ausencia ni entra en ese perfil. Y se observará por separado: proporción de contenidos exigibles presentes, concordancia de cada contenido con el requisito y proporción de observaciones cerradas con evidencia aceptable. Se reportarán los indicadores individualmente, sin sumar porcentajes o inventar ponderaciones. Integridad será contenidos exigibles presentes entre contenidos exigibles evaluables; cierre será observaciones cerradas respaldadas entre observaciones evaluables. Con denominador cero se anotará no calculable. La falta de observaciones no prueba integridad. Antes del cotejo se fijarán aplicabilidad y criterios de aceptación; sólo después se examinará si perfiles con más controles coinciden con mejores resultados documentales comparables.'
 SECTIONS = [
     ('5.1 Hipótesis general', [
         'HG. ' + GENERAL,
@@ -40,6 +57,57 @@ SECTIONS = [
         'Estado de evidencia. Se formulan hipótesis para orientar el estudio, no resultados. Los borradores y fuentes disponibles permiten preparar la revisión inicial, pero no se cuenta aquí con mediciones completas, entrevistas realizadas, controles implementados ni cierres verificados. El acceso adicional requerirá autorización; no se fabricarán registros ni se tratará la falta de datos como confirmación. Los alcances y procedimientos detallados se desarrollarán en sus apartados posteriores sin anticipar su ejecución.',
     ]),
 ]
+
+
+def improve():
+    if not TARGET.is_file():
+        raise FileNotFoundError('Generar T12 antes de aplicar la revisión')
+    backup = HERE / 'antes-mejora-2026-10-13' / TARGET.name
+    if backup.exists():
+        raise FileExistsError('La revisión ya tiene respaldo; no se repite automáticamente')
+    document = Document(TARGET)
+    paragraphs = document.paragraphs
+    chapter = next(p for p in paragraphs if p.text == '5 Hipótesis de trabajo' and p.style.name == 'Heading 1')
+    end = next(p for p in paragraphs if p.text == '6 Alcances y limitaciones' and p.style.name == 'Heading 1')
+    chapter_index = next(index for index, paragraph in enumerate(paragraphs) if paragraph._p is chapter._p)
+    previous = [p._p.xml for p in paragraphs[:chapter_index]]
+    tables = [table._tbl.xml for table in document.tables]
+    general = next(p for p in paragraphs if p.text == 'HG. ' + GENERAL)
+    variables = next(p for p in paragraphs if p.text == SECTIONS[0][1][1])
+    variables.text = ('X (campo VI de la consigna) es el nivel de gestión del cumplimiento normativo: asignación documentada de responsabilidades, verificación de aplicabilidad y seguimiento de acciones. Y (campo VD) es el grado de preparación administrativa del expediente: integridad, coherencia con requisitos aplicables y cierre respaldado de observaciones. Son roles analíticos no causales; X no está manipulada ni Y es un efecto demostrado. Preparación no significa autorización gubernamental, operación legal acreditada ni formalización consumada.')
+    section_two = next(p for p in document.paragraphs if p.text == '5.2 Hipótesis específica' and p.style.name == 'Heading 2')
+    for text in FOUNDATION:
+        insert_before(section_two, text)
+    method_start = next(p for p in document.paragraphs if p.text == '5.3 Tipo de hipótesis' and p.style.name == 'Heading 2')
+    quality_start = next(p for p in document.paragraphs if p.text == '5.4 Criterios de calidad y contraste documental' and p.style.name == 'Heading 2')
+    for text in SECTIONS[2][1]:
+        paragraph = next(p for p in document.paragraphs if p.text == text)
+        paragraph._p.getparent().remove(paragraph._p)
+    for text in METHOD:
+        insert_before(quality_start, text)
+    quality_text = next(p for p in document.paragraphs if p.text == SECTIONS[3][1][0])
+    insert_before(quality_text, MEASUREMENT)
+    for reference_text, prefix in zip(BOOK_REFERENCES, ('Instituto de Capacitación', 'Omrani,')):
+        anchor = next(p for p in document.paragraphs if p.text.startswith(prefix) and p.style.name == 'Normal')
+        reference = insert_before(anchor, reference_text)
+        if anchor._p.pPr is not None:
+            reference._p.remove(reference._p.pPr)
+            reference._p.insert(0, deepcopy(anchor._p.pPr))
+    assert general.text == 'HG. ' + GENERAL
+    assert next(p for p in document.paragraphs if p.text == 'HE1. ' + SPECIFIC)
+    revised = document.paragraphs
+    revised_index = next(index for index, paragraph in enumerate(revised) if paragraph._p is chapter._p)
+    assert [p._p.xml for p in revised[:revised_index]] == previous
+    assert [table._tbl.xml for table in document.tables] == tables
+    backup.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(TARGET, backup)
+    pdf = TARGET.with_suffix('.pdf')
+    if pdf.exists():
+        shutil.copy2(pdf, backup.with_suffix('.pdf'))
+    document.save(TARGET)
+    result = {'operation': 'mejora-fundamento-t12', 'before_sha256': hashlib.sha256(backup.read_bytes()).hexdigest(), 'target_sha256_before_word_refresh': hashlib.sha256(TARGET.read_bytes()).hexdigest(), 'chapters_1_4_xml_unchanged': True, 'matrix_and_covey_xml_unchanged': True, 'hypotheses_unchanged': True, 'short_quotes': 2, 'new_references': BOOK_REFERENCES, 'submission_performed': False}
+    (HERE / 'mejora-t12-2026-10-13.json').write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
+    print(json.dumps(result, ensure_ascii=True))
 
 
 def insert_before(anchor, text, style='Normal'):
@@ -113,4 +181,7 @@ def re_date(text):
 
 
 if __name__ == '__main__':
-    main()
+    if sys.argv[1:] == ['--mejorar']:
+        improve()
+    else:
+        main()

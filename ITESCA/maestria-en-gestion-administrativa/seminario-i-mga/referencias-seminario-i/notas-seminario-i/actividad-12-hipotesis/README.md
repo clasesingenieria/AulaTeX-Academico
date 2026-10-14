@@ -1,5 +1,9 @@
 # Tarea 12 - Hipotesis de trabajo
 
+## Mejora del 13/10/2026
+
+Version vigente: 31 paginas, con dos citas textuales breves de Hernandez Sampieri y parafrasis metodologicas y administrativas verificadas. Se preciso la distincion entre hipotesis relacional y contraste documental por patrones, y la lectura no causal de X e Y. [Pasajes, cotejo de rubrica y verificaciones](revision-fundamento-2026-10-13.md). Hipotesis, matriz, Covey y capitulos anteriores conservados. Copia previa resguardada; no enviada. Los datos de 29 paginas mas abajo corresponden a la preparacion inicial.
+
 Preparacion local del 12/10/2026 para vTaxi. [Word acumulativo](../../../Entregas/Tarea12_DeLaCruzMunoz.docx) y [PDF de revision](../../../Entregas/Tarea12_DeLaCruzMunoz.pdf). El entregable solicitado es **un unico Word**; el PDF es solo apoyo local.
 
 ## Consigna y alcance
