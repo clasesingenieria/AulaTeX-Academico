@@ -101,7 +101,7 @@ class AulaTeXWorkspace:
     def __init__(self, repo_root: str | Path | None = None) -> None:
         self.repo_root = Path(repo_root or Path(__file__).resolve().parents[2]).resolve()
         self.scripts_dir = self.repo_root / "aulaTEX"
-        self.feedback_root = self.repo_root / "retroalimentacion-editorial" / "aulatex"
+        self.feedback_root = self.repo_root / "aulaTEX" / "retroalimentacion-editorial" / "aulatex"
         self.feedback_root.mkdir(parents=True, exist_ok=True)
         self.temp_root = self.repo_root / ".aulatex-temp"
         self.temp_root.mkdir(parents=True, exist_ok=True)

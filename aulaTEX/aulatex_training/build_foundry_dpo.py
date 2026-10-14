@@ -126,7 +126,7 @@ def main(argv: list[str] | None = None) -> int:
         if hasattr(stream, "reconfigure"):
             stream.reconfigure(encoding="utf-8", errors="replace")
 
-    training_dir = REPO_ROOT / "retroalimentacion-editorial" / "aulatex" / "training"
+    training_dir = REPO_ROOT / "aulaTEX" / "retroalimentacion-editorial" / "aulatex" / "training"
     parser = argparse.ArgumentParser(
         prog="build_foundry_dpo",
         description="Convierte preference.jsonl al formato de preference fine-tuning de Azure OpenAI.")

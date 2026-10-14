@@ -411,11 +411,8 @@ class SemanticAuditor:
 
     def _load_motor_rules(self, target_root: Path) -> str:
         candidates = [
-            target_root / "retroalimentacion-editorial" / "aulatex" / "motor-calibration-rules.json",
-            *(
-                parent / "retroalimentacion-editorial" / "aulatex" / "motor-calibration-rules.json"
-                for parent in [target_root, *target_root.parents]
-            ),
+            parent / "aulaTEX" / "retroalimentacion-editorial" / "aulatex" / "motor-calibration-rules.json"
+            for parent in [target_root, *target_root.parents]
         ]
         for candidate in candidates:
             if not candidate.exists() or not candidate.is_file():

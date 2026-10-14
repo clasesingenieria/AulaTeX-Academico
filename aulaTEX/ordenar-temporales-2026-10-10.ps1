@@ -1,7 +1,7 @@
 param([switch]$PlanOnly)
 $ErrorActionPreference = 'Stop'
 $root = Split-Path $PSScriptRoot -Parent
-$audit = Join-Path $root 'retroalimentacion-editorial/aulatex/limpieza-temporales-2026-10-10'
+$audit = Join-Path $root 'aulaTEX/retroalimentacion-editorial/aulatex/limpieza-temporales-2026-10-10'
 if (Test-Path (Join-Path $audit 'manifiesto.json')) { throw 'La limpieza ya tiene un manifiesto; no repetir' }
 New-Item -ItemType Directory -Path $audit -Force | Out-Null
 $folders = @('tmp','.tmp-itesca-20260928','.tmp-seminario')

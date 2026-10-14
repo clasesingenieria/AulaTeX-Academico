@@ -72,7 +72,12 @@ aulaTEX/base/Template-Tesis/
 # Archivos temporales
 .build/
 .aulatex-temp/
-retroalimentacion-editorial/
+aulaTEX/retroalimentacion-editorial/**
+!aulaTEX/retroalimentacion-editorial/aulatex/
+!aulaTEX/retroalimentacion-editorial/aulatex/limpieza-temporales-2026-10-10/
+!aulaTEX/retroalimentacion-editorial/aulatex/limpieza-temporales-2026-10-10/README.md
+!aulaTEX/retroalimentacion-editorial/aulatex/limpieza-temporales-2026-10-10/manifiesto.json
+!aulaTEX/retroalimentacion-editorial/aulatex/limpieza-temporales-2026-10-10/plan.json
 salidas/
 
 # Entrenamiento: Git conserva código/configuración/manifiestos, no datos ni pesos.
@@ -116,13 +121,14 @@ aulaTEX/tikz-preview/
 # aulaTEX/aulatex.env se versiona con secretos cifrados (enc:); la clave secret.key permanece ignorada.
 
 # Incubadora local: conservar carpeta, ignorar contenido
-upgrade/*
-!upgrade/.gitkeep
+aulaTEX/upgrade/*
+!aulaTEX/upgrade/.gitkeep
 
 # VS Code: compartir recetas del proyecto, no estado local del editor
 .vscode/*
 !.vscode/settings.json
 !.vscode/extensions.json
+!.vscode/AulaTeX-Linux.code-workspace
 bot-interfaz/.venv/
 bot-interfaz/.pytest_cache/
 bot-interfaz/**/__pycache__/

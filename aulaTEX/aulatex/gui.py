@@ -847,7 +847,7 @@ class AulaTeXApp(tk.Tk):
         )
         self._attach_tooltip(
             export_button,
-            "Exporta la sesion completa a Markdown dentro de retroalimentacion-editorial/aulatex/llm-chat/exports.",
+            "Exporta la sesion completa a Markdown dentro de aulaTEX/retroalimentacion-editorial/aulatex/llm-chat/exports.",
         )
         self._attach_tooltip(
             clear_button,

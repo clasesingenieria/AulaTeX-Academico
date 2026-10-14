@@ -24,7 +24,7 @@ mayor. Sin dependencias del paquete ``aulatex`` (portable a un job remoto).
 
 Uso:
     python aulaTEX/aulatex_training/train_policy.py \
-        --dataset retroalimentacion-editorial/aulatex/training/dataset.jsonl
+        --dataset aulaTEX/retroalimentacion-editorial/aulatex/training/dataset.jsonl
 """
 
 from __future__ import annotations
@@ -253,8 +253,8 @@ def evaluate(dataset_path: Path, models_dir: Path) -> int:
 
 def main(argv: list[str] | None = None) -> int:
     repo_root = Path(__file__).resolve().parents[2]
-    default_dataset = repo_root / "retroalimentacion-editorial" / "aulatex" / "training" / "dataset.jsonl"
-    default_models = repo_root / "retroalimentacion-editorial" / "aulatex" / "training" / "models"
+    default_dataset = repo_root / "aulaTEX" / "retroalimentacion-editorial" / "aulatex" / "training" / "dataset.jsonl"
+    default_models = repo_root / "aulaTEX" / "retroalimentacion-editorial" / "aulatex" / "training" / "models"
 
     parser = argparse.ArgumentParser(
         prog="train_policy",

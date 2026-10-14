@@ -211,6 +211,43 @@ def test_environment_pin_requires_explicit_opt_in(form, monkeypatch):
     assert widget._pin() == ""
 
 
+def test_new_custom_institution_uses_environment_despite_manual_pin(form, monkeypatch):
+    widget, _ = form
+    populate(widget)
+    widget._save()
+    existing_id = widget.accounts.get_children()[0]
+    monkeypatch.setenv("AULATEX_MASTER_PIN", PIN)
+    widget.use_environment_pin.set(True)
+    assert str(widget.pin_entry.cget("state")) == "disabled"
+    widget._new()
+    for key, value in {
+        "institution": "IIIEPE", "platform": "evaposgrados.iiiepe",
+        "url": "https://evaposgrados.iiiepe.edu.mx/aula/login/index.php",
+        "username": "usuario-ficticio", "password": "clave-ficticia",
+        "pin": "pin-manual-incorrecto",
+    }.items():
+        widget.fields[key].set(value)
+    widget._save()
+    assert "guardadas cifradas" in widget.status.get()
+    records = widget.vault.list_accounts(PIN)
+    assert len(records) == 2
+    assert existing_id in {record["id"] for record in records}
+    assert any(record["institution"] == "IIIEPE" for record in records)
+    widget.use_environment_pin.set(False)
+    assert str(widget.pin_entry.cget("state")) == "normal"
+    assert widget.fields["pin"].get() == ""
+
+
+def test_missing_environment_pin_does_not_fall_back_to_manual(form):
+    widget, _ = form
+    populate(widget)
+    widget.use_environment_pin.set(True)
+    widget.fields["pin"].set(PIN)
+    widget._save()
+    assert "no está disponible" in widget.status.get()
+    assert not widget.vault.path.exists()
+
+
 @pytest.mark.parametrize("missing_crypto", [False, True])
 def test_main_notebook_integration_without_app_side_effects(form, monkeypatch, tmp_path, missing_crypto):
     widget, gui = form

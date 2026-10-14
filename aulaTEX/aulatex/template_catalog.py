@@ -13,8 +13,8 @@ from .workspace import AulaTeXWorkspace
 
 
 SCHEMA_VERSION = "1.0"
-SELECTION_FILENAME = "seleccion-plantillas-aulatex.json"
-CATALOG_FILENAME = "catalogo-plantillas-aulatex.json"
+SELECTION_FILENAME = "aulaTEX/base/catalogos/seleccion-plantillas-aulatex.json"
+CATALOG_FILENAME = "aulaTEX/base/catalogos/catalogo-plantillas-aulatex.json"
 REPORT_FILENAME = "README.md"
 REPORT_START = "<!-- AULATEX_CATALOG_START -->"
 REPORT_END = "<!-- AULATEX_CATALOG_END -->"
@@ -238,6 +238,7 @@ def render_catalog_markdown(catalog: dict) -> str:
 def _write_atomic(path: Path, text: str) -> None:
     temporary = None
     try:
+        path.parent.mkdir(parents=True, exist_ok=True)
         with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", dir=path.parent,
                                          prefix=".aulatex-catalog-", suffix=".tmp", delete=False) as stream:
             temporary = Path(stream.name)

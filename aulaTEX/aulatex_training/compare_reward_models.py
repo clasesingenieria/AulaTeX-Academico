@@ -153,7 +153,7 @@ def main(argv: list[str] | None = None) -> int:
     os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
     os.environ.setdefault("TRANSFORMERS_VERBOSITY", "error")
 
-    default_corpus = (REPO_ROOT / "retroalimentacion-editorial" / "aulatex"
+    default_corpus = (REPO_ROOT / "aulaTEX" / "retroalimentacion-editorial" / "aulatex"
                       / "training" / "reward.jsonl")
     parser = argparse.ArgumentParser(prog="compare_reward_models")
     parser.add_argument("--train-file", default=str(default_corpus))

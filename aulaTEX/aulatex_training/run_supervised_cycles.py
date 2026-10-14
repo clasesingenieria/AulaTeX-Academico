@@ -110,7 +110,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--cycles", type=int, default=10)
     parser.add_argument("--engine", action="append", default=[])
     parser.add_argument("--timeout-min", type=int, default=45)
-    parser.add_argument("--out-dir", default="retroalimentacion-editorial/aulatex/training/supervised")
+    parser.add_argument("--out-dir", default="aulaTEX/retroalimentacion-editorial/aulatex/training/supervised")
     args = parser.parse_args(argv)
 
     target_dir = (REPO_ROOT / args.target).resolve()

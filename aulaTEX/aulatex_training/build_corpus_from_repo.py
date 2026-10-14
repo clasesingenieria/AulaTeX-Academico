@@ -229,7 +229,7 @@ def extract_tex_document(text: str) -> str:
 
 def iter_agent_proposal_pairs(root: Path, score_of: Any, min_gain: float):
     """Pares (propuesta del arquitecto -> TEX final) de las corridas realizar-actividad."""
-    runs_dir = root / "retroalimentacion-editorial" / "aulatex" / "runs"
+    runs_dir = root / "aulaTEX" / "retroalimentacion-editorial" / "aulatex" / "runs"
     if not runs_dir.is_dir():
         return
     for run in sorted(runs_dir.glob("*realizar-actividad*")):
@@ -262,7 +262,7 @@ def iter_optimizer_block_pairs(root: Path):
     No se filtran por ganancia de score global: la mejora es local y el score
     mide el documento completo. La justificación del motor acompaña al par.
     """
-    base = root / "retroalimentacion-editorial" / "aulatex"
+    base = root / "aulaTEX" / "retroalimentacion-editorial" / "aulatex"
     # El optimizador escribe en activity-optimize/runs; el agente en runs.
     runs_dirs = [base / "activity-optimize" / "runs", base / "runs"]
     for runs_dir in runs_dirs:
@@ -380,7 +380,7 @@ def main(argv: list[str] | None = None) -> int:
 
     root = Path(args.root).resolve()
     out_dir = Path(args.out_dir).resolve() if args.out_dir else (
-        root / "retroalimentacion-editorial" / "aulatex" / "training")
+        root / "aulaTEX" / "retroalimentacion-editorial" / "aulatex" / "training")
 
     score_of = load_scorer()
 

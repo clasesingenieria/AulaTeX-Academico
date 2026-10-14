@@ -75,6 +75,7 @@ def test_catalog_requires_explicit_selection_and_preserves_documents(tmp_path):
 def test_catalog_validates_declared_selection_and_manifest_paths(tmp_path):
     path = subject(tmp_path, "UAS/licenciatura-prueba/materia")
     relative = path.relative_to(tmp_path).as_posix()
+    (tmp_path / SELECTION_FILENAME).parent.mkdir(parents=True)
     (tmp_path / SELECTION_FILENAME).write_text(json.dumps({"schema_version": "1.0", "subjects": {
         relative: {"report": relative + "/reporte-materia.tex", "presentation": "../../private.tex"}}}), encoding="utf-8")
     (path / "estructura-aulatex.json").write_text(json.dumps({"files": ["ausente.tex", "../../../../outside.tex"]}), encoding="utf-8")
@@ -126,7 +127,7 @@ def test_selection_is_atomic_and_does_not_modify_template(tmp_path):
     catalog = build_template_catalog(workspace)
     assert catalog["subjects"][0]["selected"]["report"].endswith("reporte-materia.tex")
     assert report.read_bytes() == before
-    assert not list(tmp_path.glob(".aulatex-catalog-*"))
+    assert not list((tmp_path / SELECTION_FILENAME).parent.glob(".aulatex-catalog-*"))
     paths = export_catalog(workspace, catalog)
     assert json.loads(paths[0].read_text(encoding="utf-8"))["schema_version"] == "1.0"
     assert paths[1] == readme
@@ -144,6 +145,7 @@ def test_selection_rejects_wrong_role_and_preserves_invalid_registry(tmp_path):
     with pytest.raises(ValueError):
         select_template(workspace, relative, relative + "/reporte-materia.tex", "presentation")
     registry = tmp_path / SELECTION_FILENAME
+    registry.parent.mkdir(parents=True)
     registry.write_text('{"schema_version":"unsupported"}', encoding="utf-8")
     before = registry.read_bytes()
     with pytest.raises(ValueError):

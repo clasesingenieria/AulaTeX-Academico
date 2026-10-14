@@ -252,7 +252,7 @@ def main() -> int:
     parser.add_argument("--seed", type=int, default=20260811)
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--out", type=Path,
-                        default=REPO_ROOT / "retroalimentacion-editorial" / "aulatex"
+                        default=REPO_ROOT / "aulaTEX" / "retroalimentacion-editorial" / "aulatex"
                         / "training" / "reward-augmented.jsonl")
     args = parser.parse_args()
 

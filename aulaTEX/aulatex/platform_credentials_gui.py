@@ -77,9 +77,13 @@ class PlatformCredentialsFrame(ttk.Frame):
                 entry = ttk.Combobox(self.editor_frame, textvariable=self.fields[key], values=sorted(set(institutions)))
             else:
                 entry = ttk.Entry(self.editor_frame, textvariable=self.fields[key], show="*" if key in ("username", "password", "pin") else "")
+            if key == "pin":
+                self.pin_entry = entry
             entry.grid(row=row, column=1, sticky="ew", padx=(12, 0), pady=5)
-        ttk.Checkbutton(self.editor_frame, text="Usar PIN del entorno", variable=self.use_environment_pin).grid(
+        ttk.Checkbutton(self.editor_frame, text="Usar AULATEX_MASTER_PIN del entorno", variable=self.use_environment_pin).grid(
             row=7, column=0, columnspan=2, sticky="w", pady=8)
+        self.use_environment_pin.trace_add("write", self._pin_source_changed)
+        self.use_environment_pin.set(bool(os.environ.get("AULATEX_MASTER_PIN")))
         edit_actions = ttk.Frame(self.editor_frame)
         edit_actions.grid(row=8, column=0, columnspan=2, sticky="ew", pady=8)
         for title, command in (("Consultar", self._load), ("Guardar cifrado", self._save), ("Limpiar", self._new)):
@@ -112,11 +116,17 @@ class PlatformCredentialsFrame(ttk.Frame):
         if event.widget is self and self._idle_job is not None:
             self.after_cancel(self._idle_job)
 
+    def _pin_source_changed(self, *_args) -> None:
+        self.fields["pin"].set("")
+        self.pin_entry.configure(state="disabled" if self.use_environment_pin.get() else "normal")
+
     def _pin(self) -> str:
-        explicit = self.fields["pin"].get()
-        if explicit:
-            return explicit
-        return os.environ.get("AULATEX_MASTER_PIN", "") if self.use_environment_pin.get() else ""
+        if self.use_environment_pin.get():
+            pin = os.environ.get("AULATEX_MASTER_PIN", "")
+            if not pin.strip():
+                raise VaultError("AULATEX_MASTER_PIN no está disponible en este proceso. Reinicia AulaTeX desde una terminal que tenga la variable definida.")
+            return pin
+        return self.fields["pin"].get()
 
     def _clear_secrets(self) -> None:
         for key in ("username", "password", "pin"):
@@ -168,7 +178,9 @@ class PlatformCredentialsFrame(ttk.Frame):
         self.accounts.selection_remove(*self.accounts.selection())
         for var in self.fields.values():
             var.set("")
-        self.status.set("Nueva cuenta: completa institución, plataforma, sitio, usuario, contraseña y PIN.")
+        self.status.set("Nueva cuenta: completa institución, alias, sitio HTTPS, usuario y contraseña. "
+                        + ("Se usará AULATEX_MASTER_PIN del entorno." if self.use_environment_pin.get()
+                           else "Introduce la frase maestra o activa AULATEX_MASTER_PIN del entorno."))
 
     def _apply_preset(self, _event=None) -> None:
         selected = self.preset.get()

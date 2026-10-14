@@ -42,7 +42,7 @@ def make_client(endpoint: str, api_key: str):
 
 
 def resolve_paths(args: argparse.Namespace) -> tuple[Path, Path]:
-    base = REPO_ROOT / "retroalimentacion-editorial" / "aulatex" / "training" / "foundry"
+    base = REPO_ROOT / "aulaTEX" / "retroalimentacion-editorial" / "aulatex" / "training" / "foundry"
     train = Path(args.train_file).resolve() if args.train_file else base / "dpo-train.jsonl"
     validation = (Path(args.validation_file).resolve() if args.validation_file
                   else base / "dpo-validation.jsonl")

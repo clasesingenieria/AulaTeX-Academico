@@ -139,8 +139,9 @@ def test_cli_imports_gui_only_on_demand():
 
 def test_vscode_paths_and_shell_line_endings():
     settings = json.loads((ROOT / ".vscode/settings.json").read_text(encoding="utf-8"))
-    linux = json.loads((ROOT / "AulaTeX-Linux.code-workspace").read_text(encoding="utf-8"))
+    linux = json.loads((ROOT / ".vscode/AulaTeX-Linux.code-workspace").read_text(encoding="utf-8"))
     assert "python.defaultInterpreterPath" not in settings
+    assert linux["folders"] == [{"path": ".."}]
     assert linux["settings"]["python.defaultInterpreterPath"].endswith("/.venv-linux")
     assert settings["latex-workshop.latex.outDir"] == "%DIR%"
     for tool in settings["latex-workshop.latex.tools"]:

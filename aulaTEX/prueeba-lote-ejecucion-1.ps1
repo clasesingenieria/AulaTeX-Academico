@@ -31,7 +31,7 @@ $repoRoot = Resolve-Path (Join-Path $PSScriptRoot '..')
 $baseScript = Join-Path $PSScriptRoot 'prueeba-lote-ejecucion.ps1'
 $tempRoot = Join-Path $repoRoot '.aulatex-temp'
 $seedRoot = Join-Path $tempRoot 'editorial-memory\runs\legacy-retroalimentacion-seed'
-$retroRoot = Join-Path $repoRoot 'retroalimentacion-editorial'
+$retroRoot = Join-Path $repoRoot 'aulaTEX/retroalimentacion-editorial'
 $summaryPath = Join-Path $tempRoot 'editorial-memory\legacy-retroalimentacion-seed-summary.json'
 
 if (-not (Test-Path $baseScript)) {
@@ -156,7 +156,7 @@ header = [
     "## retroalimentacion_editorial_central",
     "- Objetivo: codificar la carpeta retroalimentacion-editorial como ADN editorial distribuido.",
     "- Regla: integrar patrones útiles en cada nodo sin conservar una memoria centralizada permanente.",
-    "- Regla: después de una ejecución completa y validada, la carpeta retroalimentacion-editorial puede eliminarse.",
+    "- Regla: después de una ejecución completa y validada, las salidas pueden eliminarse; la auditoría versionada se conserva.",
 ]
 shards: list[str] = []
 current = list(header)
@@ -230,7 +230,7 @@ if (-not $Execute) {
     Write-Host "Plan preparado. Para ejecutar codificación final:"
     Write-Host "  .\aulaTEX\prueeba-lote-ejecucion-1.ps1 -Execute"
     Write-Host ""
-    Write-Host "No se eliminó retroalimentacion-editorial porque no se ejecutó el lote."
+    Write-Host "No se eliminaron salidas de aulaTEX/retroalimentacion-editorial porque no se ejecutó el lote."
     return
 }
 
@@ -310,8 +310,14 @@ if ($LASTEXITCODE -ne 0) {
 $validationJson | Write-Host
 
 if (-not $NoDeleteRetroalimentacion -and (Test-Path $retroRoot)) {
-    Remove-Item -Path $retroRoot -Recurse -Force
-    Write-Host "Carpeta central eliminada después de codificación validada: $retroRoot" -ForegroundColor Green
+    $historicalAudit = Join-Path $retroRoot 'aulatex/limpieza-temporales-2026-10-10'
+    $feedbackDir = Join-Path $retroRoot 'aulatex'
+    if (Test-Path $feedbackDir) {
+        Get-ChildItem -LiteralPath $feedbackDir -Force |
+            Where-Object { $_.FullName -ne $historicalAudit } |
+            Remove-Item -Recurse -Force
+    }
+    Write-Host "Salidas editoriales eliminadas; auditoría histórica conservada: $historicalAudit" -ForegroundColor Green
 }
 else {
     Write-Host "Carpeta central conservada por configuración: $retroRoot" -ForegroundColor Yellow

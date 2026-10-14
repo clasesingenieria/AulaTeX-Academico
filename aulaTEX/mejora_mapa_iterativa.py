@@ -181,7 +181,7 @@ def main() -> None:
     extractor_ideas = load_extractor_ideas(subject_dir)
 
     ts = datetime.now().strftime("%Y%m%d-%H%M%S")
-    run_dir = REPO / "retroalimentacion-editorial" / "aulatex" / "mejora-mapa" / "runs" / ts
+    run_dir = REPO / "aulaTEX" / "retroalimentacion-editorial" / "aulatex" / "mejora-mapa" / "runs" / ts
     run_dir.mkdir(parents=True, exist_ok=True)
 
     base_terms = base_concepts(tex_path.read_text(encoding="utf-8"))

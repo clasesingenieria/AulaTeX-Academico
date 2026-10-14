@@ -104,7 +104,7 @@ class ActivityCalibration:
         )
         run_dir.mkdir(parents=True, exist_ok=True)
         rules = self._rules_from_feedback(feedback)
-        rules_path = self.workspace.repo_root / "retroalimentacion-editorial" / "aulatex" / "motor-calibration-rules.json"
+        rules_path = self.workspace.feedback_root / "motor-calibration-rules.json"
         rules_path.parent.mkdir(parents=True, exist_ok=True)
         existing: dict[str, Any] = {"version": 1, "rules": [], "calibrations": []}
         if rules_path.exists():

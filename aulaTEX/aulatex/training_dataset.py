@@ -1,7 +1,7 @@
 """Consolidador de dataset de entrenamiento para AulaTeX.
 
 Lee los ``manifest.json`` producidos por :mod:`aulatex.activity_optimizer`
-(``retroalimentacion-editorial/aulatex/activity-optimize/runs/<run_id>/``) y
+(``aulaTEX/retroalimentacion-editorial/aulatex/activity-optimize/runs/<run_id>/``) y
 los aplana en un ``dataset.jsonl`` con UNA fila por CICLO de optimización.
 
 Cada ciclo es la unidad de aprendizaje natural:
@@ -258,8 +258,8 @@ def main(argv: list[str] | None = None) -> int:
     )
     # Rutas por defecto relativas a la raíz del repo (aulaTEX/aulatex/ -> parents[2]).
     repo_root = Path(__file__).resolve().parents[2]
-    default_runs = repo_root / "retroalimentacion-editorial" / "aulatex" / "activity-optimize" / "runs"
-    default_out = repo_root / "retroalimentacion-editorial" / "aulatex" / "training" / "dataset.jsonl"
+    default_runs = repo_root / "aulaTEX" / "retroalimentacion-editorial" / "aulatex" / "activity-optimize" / "runs"
+    default_out = repo_root / "aulaTEX" / "retroalimentacion-editorial" / "aulatex" / "training" / "dataset.jsonl"
 
     parser.add_argument("--runs-dir", default=str(default_runs),
                         help="Directorio con los run_id/manifest.json de activity-optimize.")

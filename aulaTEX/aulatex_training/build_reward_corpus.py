@@ -186,8 +186,8 @@ def build(runs_dir: Path, out_dir: Path) -> int:
 
 def main(argv: list[str] | None = None) -> int:
     repo_root = Path(__file__).resolve().parents[2]
-    default_runs = repo_root / "retroalimentacion-editorial" / "aulatex" / "activity-optimize" / "runs"
-    default_out = repo_root / "retroalimentacion-editorial" / "aulatex" / "training"
+    default_runs = repo_root / "aulaTEX" / "retroalimentacion-editorial" / "aulatex" / "activity-optimize" / "runs"
+    default_out = repo_root / "aulaTEX" / "retroalimentacion-editorial" / "aulatex" / "training"
 
     parser = argparse.ArgumentParser(
         prog="build_reward_corpus",

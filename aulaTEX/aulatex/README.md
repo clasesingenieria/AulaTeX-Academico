@@ -210,7 +210,7 @@ El subcomando `extractor` encapsula la ejecucion de
 `aulaTEX/extractor-conceptos-ideas/run.py` y deja una corrida trazable en:
 
 ```text
-retroalimentacion-editorial/aulatex/extractor/runs/
+aulaTEX/retroalimentacion-editorial/aulatex/extractor/runs/
 ```
 
 La ejecucion queda normalizada con:
@@ -230,7 +230,7 @@ previsto sin lanzar el extractor.
 Cada ejecucion del agente crea una carpeta en:
 
 ```text
-retroalimentacion-editorial/aulatex/runs/
+aulaTEX/retroalimentacion-editorial/aulatex/runs/
 ```
 
 El ciclo base es:
@@ -296,11 +296,11 @@ estado persistido, decisiones explicitas y reevaluacion por artefactos.
 El contrato propuesto para esa capa vive en:
 
 ```text
-retroalimentacion-editorial/aulatex/agente-verdadero-contrato-operativo.md
+aulaTEX/retroalimentacion-editorial/aulatex/agente-verdadero-contrato-operativo.md
 ```
 
 La bitacora acumulada vive en:
 
 ```text
-retroalimentacion-editorial/aulatex/bitacora.md
+aulaTEX/retroalimentacion-editorial/aulatex/bitacora.md
 ```

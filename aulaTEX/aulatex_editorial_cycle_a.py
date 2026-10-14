@@ -16,7 +16,7 @@ from typing import Iterable
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 TEMP_ROOT = REPO_ROOT / ".aulatex-temp" / "ciclo-a-editorial"
-FEEDBACK_ROOT = REPO_ROOT / "retroalimentacion-editorial" / "aulatex"
+FEEDBACK_ROOT = REPO_ROOT / "aulaTEX" / "retroalimentacion-editorial" / "aulatex"
 
 DEFAULT_MASTER_SUBJECTS = [
     "UnADM/licenciatura-en-derecho-unadm/filosofia-del-derecho-lde",
@@ -844,7 +844,7 @@ def write_markdown_report(run_dir: Path, payload: dict) -> Path:
         f"- Memoria JSON: `{run_dir.relative_to(REPO_ROOT).as_posix()}/ciclo-a-memory.json`",
         f"- Reporte JSON: `{run_dir.relative_to(REPO_ROOT).as_posix()}/ciclo-a-report.json`",
         f"- Contratos: `{run_dir.relative_to(REPO_ROOT).as_posix()}/contracts/`",
-        "- Memoria interinstitucional: `retroalimentacion-editorial/aulatex/editorial-gold-standard-ciclo-a.json`",
+        "- Memoria interinstitucional: `aulaTEX/retroalimentacion-editorial/aulatex/editorial-gold-standard-ciclo-a.json`",
     ])
     report.write_text("\n".join(lines), encoding="utf-8")
     return report

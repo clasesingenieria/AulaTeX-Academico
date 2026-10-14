@@ -11,7 +11,7 @@
   modo que el avance es observable y resistente a cuelgues.
 
 .NOTES
-  Cada lote escribe su propio run en retroalimentacion-editorial/aulatex/runs.
+    Cada lote escribe su propio run en aulaTEX/retroalimentacion-editorial/aulatex/runs.
   El progreso agregado se registra en el log de progreso.
 #>
 param(

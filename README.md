@@ -4,6 +4,12 @@ Entorno academico en LaTeX organizado por institucion, con una base comun de
 plantillas Pizarror y puntos de entrada canonicos para reportes, actividades,
 presentaciones y bibliografias.
 
+La raiz conserva fuentes de ejemplo: [bibliografia](AulaTeX-Academico.bib),
+[reporte](reporte-AulaTeX-Academico.tex),
+[reporte de la actividad 1](reporte-AulaTeX-Academico-Actividad-1.tex),
+[presentacion](presentacion-AulaTeX-Academico.tex) y
+[presentacion de la actividad 1](presentacion-AulaTeX-Academico-Actividad-1.tex).
+
 ## Ubuntu y VS Code Remote SSH
 
 El entorno Linux se instala con `bash setup.sh --no-shell --skip-llm` e incluye
@@ -11,7 +17,7 @@ TeX Live completo de Ubuntu 24.04 y un entorno Python independiente de Windows.
 `bash setup.sh --all --no-shell` añade extracción documental, multimedia,
 bibliotecas IA, entrenamiento CPU y notebooks, sin descargar modelos ni configurar secretos.
 Consulta la [guía Linux](#guia-linux) para instalación, compilación,
-perfiles opcionales y uso de [AulaTeX-Linux.code-workspace](AulaTeX-Linux.code-workspace).
+perfiles opcionales y uso de [.vscode/AulaTeX-Linux.code-workspace](.vscode/AulaTeX-Linux.code-workspace).
 
 ## Entrenamiento del motor inteligente
 
@@ -93,7 +99,7 @@ Pruebas de GUI aisladas, sin credenciales ni llamadas reales a modelos:
 materia, discrepancias de manifiestos y temporales. La consulta se ejecuta en
 segundo plano, sin modelos ni acceso a plataformas.
 
-[seleccion-plantillas-aulatex.json](seleccion-plantillas-aulatex.json) declara
+El [registro de selección](aulaTEX/base/catalogos/seleccion-plantillas-aulatex.json) declara
 entradas preferidas por materia y tipo: `report`, `presentation` y `activity`.
 Las selecciones iniciales corresponden a adaptadores documentados de seis
 materias de UCNL, las dos de UAS y Plan de Negocios de ITESCA. Las demás materias
@@ -110,7 +116,7 @@ compilación ni habilita nuevos renderizadores institucionales.
 ```
 
 La segunda orden actualiza la [auditoría de plantillas](#auditoria-de-plantillas-y-temporales) y
-[catalogo-plantillas-aulatex.json](catalogo-plantillas-aulatex.json), con huellas
+[catálogo de plantillas](aulaTEX/base/catalogos/catalogo-plantillas-aulatex.json), con huellas
 SHA-256, candidatos, dependencias literales y selecciones. Los indicios de motor
 y bibliografía proceden del archivo inspeccionado; no prueban la configuración
 efectiva de todas sus dependencias. Imágenes, macros dinámicas y compilación se
@@ -444,8 +450,9 @@ AulaTeX-Academico/
 |       |-- presentacion-itesca-mga.tex
 |       |-- referencias-itesca-mga/
 |       `-- primer-ingreso/
-|-- retroalimentacion-editorial/
 `-- aulaTEX/
+  `-- retroalimentacion-editorial/
+    `-- aulatex/
 ```
 
 ## Convenciones
@@ -985,7 +992,7 @@ su existencia no demuestra que la última compilación haya funcionado.
 ### VS Code Remote SSH
 
 1. Conecta a la VM ya preparada usando la extensión Remote - SSH del equipo local.
-2. Abre [AulaTeX-Linux.code-workspace](AulaTeX-Linux.code-workspace) en la ventana
+2. Abre [.vscode/AulaTeX-Linux.code-workspace](.vscode/AulaTeX-Linux.code-workspace) en la ventana
    remota. Instala Python y LaTeX Workshop en el host remoto si VS Code lo solicita.
 3. El workspace Linux selecciona .venv-linux. Si VS Code conserva una selección
    anterior, ejecuta **Python: Select Interpreter** y elige el Python de ese entorno.
@@ -1459,10 +1466,6 @@ Inventario de solo lectura. No acredita compilacion, vigencia docente ni entrega
 - no_template_candidates: UANL/ingeniero-agronomo/biologia-celular
 - no_template_candidates: UANL/ingeniero-agronomo/responsabilidad-social-y-desarrollo-sustentable
 - no_template_candidates: ITESCA/maestria-en-gestion-administrativa/seminario-i-mga
-- unversioned_manifest: estructura-aulatex.json
-- missing_declared_path: estructura-aulatex.json -> referencias-AulaTeX-Academico
-- missing_declared_path: estructura-aulatex.json -> planeaciones-AulaTeX-Academico
-- missing_declared_path: estructura-aulatex.json -> assets-AulaTeX-Academico
 - unversioned_manifest: IIIEPE/maestria-en-enseñanza-y-aprendizaje-de-las-matematicas/fundamentos-para-la-enseñanza-y-el-aprendizaje-I/estructura-aulatex.json
 - missing_declared_path: IIIEPE/maestria-en-enseñanza-y-aprendizaje-de-las-matematicas/fundamentos-para-la-enseñanza-y-el-aprendizaje-I/estructura-aulatex.json -> IIIEPE/maestria-en-enseñanza-y-aprendizaje-de-las-matematicas/fundamentos-para-la-enseñanza-y-el-aprendizaje-I/referencias-fundamentos-para-la-enseñanza-y-el-aprendizaje-I
 - missing_declared_path: IIIEPE/maestria-en-enseñanza-y-aprendizaje-de-las-matematicas/fundamentos-para-la-enseñanza-y-el-aprendizaje-I/estructura-aulatex.json -> IIIEPE/maestria-en-enseñanza-y-aprendizaje-de-las-matematicas/fundamentos-para-la-enseñanza-y-el-aprendizaje-I/planeaciones-fundamentos-para-la-enseñanza-y-el-aprendizaje-I
@@ -1509,6 +1512,6 @@ No se autoriza borrado automatico, ni siquiera cuando existe una copia.
 - Graphics, dynamic TeX paths and system package resolution are not validated.
 - Temporary evidence matching uses identical filenames and SHA-256; absence of a match does not prove uniqueness.
 
-Detalle verificable: catalogo-plantillas-aulatex.json. Seleccion explicita: seleccion-plantillas-aulatex.json.
+Detalle verificable: aulaTEX/base/catalogos/catalogo-plantillas-aulatex.json. Seleccion explicita: aulaTEX/base/catalogos/seleccion-plantillas-aulatex.json.
 
 <!-- AULATEX_CATALOG_END -->
