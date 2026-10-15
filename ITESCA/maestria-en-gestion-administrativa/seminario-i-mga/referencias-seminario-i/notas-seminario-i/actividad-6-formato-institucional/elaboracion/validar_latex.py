@@ -37,7 +37,7 @@ def main():
         expected = label.rsplit("-", 1)[1]
         assert re.search(r"\\newlabel\{" + re.escape(label) + r"\}\{\{" + expected + r"\}", aux), label
     exported = json.loads((ROOT / "validacion" / "exportacion-latex.json").read_text())
-    word = COURSE / "entregas" / "Tarea6_DeLaCruzMunoz.docx"
+    word = COURSE / "entregas-seminario-i" / "Tarea6_DeLaCruzMunoz.docx"
     assert hashlib.sha256(word.read_bytes()).hexdigest() == exported["word_sha256_sin_cambios"]
     pdf = COURSE / f"{STEM}.pdf"
     text = subprocess.check_output(["pdftotext", "-layout", str(pdf), "-"], text=True)

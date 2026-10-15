@@ -6,7 +6,7 @@ from docx import Document
 
 ROOT = Path(__file__).resolve().parents[1]
 SUBJECT = ROOT / "ITESCA/maestria-en-gestion-administrativa/seminario-i-mga"
-WORD = SUBJECT / "Entregas/Tarea11_DeLaCruzMunoz.docx"
+WORD = SUBJECT / "entregas-seminario-i/Tarea11_DeLaCruzMunoz.docx"
 EVIDENCE = SUBJECT / "referencias-seminario-i/notas-seminario-i/actividad-11-justificacion/comprobantes-envio/2026-10-10"
 EVIDENCE.mkdir(parents=True, exist_ok=True)
 backup = EVIDENCE / "Tarea11-antes-correccion-portada.docx"

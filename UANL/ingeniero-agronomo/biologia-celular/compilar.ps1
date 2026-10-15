@@ -1,5 +1,6 @@
 [CmdletBinding()]
 param(
+    [string]$Archivo = '',
     [ValidateSet('reporte', 'presentacion', 'todos')]
     [string]$Documento = 'todos'
 )
@@ -26,12 +27,13 @@ try {
     }
     $subjectInputs = $PSScriptRoot.Replace('\', '/')
     $templateInputs = (Join-Path $repoRoot 'aulaTEX/base/Plantilla-Informe').Replace('\', '/')
-    $env:TEXINPUTS = ".;$subjectInputs;$templateInputs;"
-    $documents = if ($Documento -eq 'todos') { @('reporte', 'presentacion') } else { @($Documento) }
-    foreach ($kind in $documents) {
-        $stem = "$kind-$suffix"
+    $uanlInputs = (Join-Path $repoRoot 'UANL').Replace('\', '/')
+    $env:TEXINPUTS = ".;$subjectInputs;$templateInputs;$uanlInputs;"
+    
+    $stems = if ($Archivo) { @($Archivo) } elseif ($Documento -eq 'todos') { @("reporte-$suffix", "presentacion-$suffix") } else { @("$Documento-$suffix") }
+    foreach ($stem in $stems) {
         & $latexmk -norc -xelatex -g -interaction=nonstopmode -halt-on-error "-outdir=$output" "$relativeSubject/$stem.tex"
-        if ($LASTEXITCODE -ne 0) { throw "latexmk fallo para $kind con codigo $LASTEXITCODE" }
+        if ($LASTEXITCODE -ne 0) { throw "latexmk fallo para $stem con codigo $LASTEXITCODE" }
         $pdf = Get-Item -LiteralPath (Join-Path $output "$stem.pdf")
         $source = Get-Item -LiteralPath (Join-Path $PSScriptRoot "$stem.tex")
         if ($pdf.Length -eq 0 -or $pdf.LastWriteTimeUtc -lt $source.LastWriteTimeUtc) {
@@ -47,4 +49,3 @@ finally {
     }
     Pop-Location
 }
-

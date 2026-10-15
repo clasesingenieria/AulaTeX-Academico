@@ -2,7 +2,7 @@
 
 ## Entregable
 
-**[Tarea6_DeLaCruzMunoz.docx](../../../../entregas/Tarea6_DeLaCruzMunoz.docx)** es el único archivo que debe subirse al aula.
+**[Tarea6_DeLaCruzMunoz.docx](../../../../entregas-seminario-i/Tarea6_DeLaCruzMunoz.docx)** es el único archivo que debe subirse al aula.
 
 Se preparó a partir de los dos adjuntos de la [actividad oficial](https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=2889), cuya revisión comenzó el 12 de septiembre de 2026. La actividad cierra el **13 de septiembre de 2026 a las 23:59**, en la hora mostrada por Moodle. Estado observado: **sin envíos, sin calificar**. No se ha realizado una entrega desde esta preparación.
 

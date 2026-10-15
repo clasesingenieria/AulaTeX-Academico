@@ -1,0 +1,113 @@
+% !TeX program = xelatex
+\documentclass[12pt,spanish,letterpaper,oneside]{article}
+\PassOptionsToPackage{es-noshorthands}{babel}
+\def\documenttitle{Atlas descriptivo de tipos celulares y entidades acelulares: Microscopía óptica y electrónica}
+\def\documentsubtitle{Evidencia 2 --- Atlas morfológico y ultraestructural comparativo (Fase 2)}
+\def\documentsubject{Biología Celular --- Ingeniero Agrónomo}
+\def\documentauthor{Carlos Mauricio Carvajal Coronado}
+\def\coursename{Biología Celular}
+\def\coursecode{REF\#261013755061}
+\def\universityname{Universidad Autónoma de Nuevo León}
+\def\universityfaculty{Facultad de Agronomía}
+\def\universitydepartment{Ingeniero Agrónomo}
+\def\universitydepartmentimage{departamentos/logos-institucionales.pdf}
+\def\universitydepartmentimagecfg{height=2.1cm}
+\def\universitylocation{General Escobedo / Marín, Nuevo León, México}
+\def\authortable{%
+	\begin{Form}
+	\begin{tabular}{@{}ll@{}}
+		\textbf{Estudiante:} & Carlos Mauricio Carvajal Coronado\\[0.35cm]
+		\textbf{Matrícula:} & 1977875\\[0.35cm]
+		\textbf{Docente Titular:} & Dr. Miguel Ángel Dector Carrillo\\[0.35cm]
+		\textbf{Unidad de Aprendizaje:} & Biología Celular (Evidencia 2 \textbar\ 6 Pts)\\[0.5cm]
+		\multicolumn{2}{l}{Fecha de realización: 14 de octubre de 2026}\\
+		\multicolumn{2}{l}{\universitylocation}
+	\end{tabular}
+	\end{Form}
+}
+
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\input{template}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
+\definecolor{uanlblue}{RGB}{0,55,108}
+\definecolor{tableblue}{RGB}{233,240,247}
+\def\portraittitlecolor{uanlblue}
+\def\sectioncolor{uanlblue}
+\def\ssectioncolor{uanlblue}
+\def\documenttitlehf{Biología Celular: Evidencia 2 --- Atlas Microscópico y Ultraestructural}
+\hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Carlos Mauricio Carvajal Coronado},pdftitle={Atlas descriptivo de tipos celulares y acelulares},pdfsubject={Evidencia 2 - Biología Celular UANL}}
+\addbibresource{UANL/ingeniero-agronomo/biologia-celular/biologia-celular.bib}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\setlength{\emergencystretch}{2.5em}
+
+\begin{document}
+\hypersetup{pageanchor=false}
+\begingroup
+\fontsize{14}{17}\selectfont
+\renewcommand{\Huge}{\fontsize{14}{17}\selectfont\bfseries}
+\renewcommand{\large}{\fontsize{14}{17}\selectfont}
+\templatePortrait
+\clearpage
+\endgroup
+\hypersetup{pageanchor=true}
+\templatePagecfg
+\singlespacing
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.18}
+
+\section*{Resumen}
+El presente Atlas Documental integra el análisis comparativo, morfológico y ultraestructural de tipos celulares y entidades acelulares de alta relevancia biológica y agronómica, correspondiente a la Evidencia 2 de la Unidad de Aprendizaje de Biología Celular. A través de la caracterización de imágenes obtenidas mediante microscopía óptica de campo claro (MO), microscopía de contraste de fases y microscopía electrónica de transmisión (TEM) y barrido (SEM), se identifican los componentes citológicos diagnósticos de tejidos vegetales (células epidérmicas de \textit{Allium cepa}, parénquima asimilador de \textit{Elodea canadensis}, colénquima angular de tallos), tejidos animales de interés zootécnico (hepatocitos de bovino, epitelio respiratorio ciliado) y partículas virales fitopatógenas. Se detalla el poder de resolución teórico y práctico de cada técnica microscópica, discutiendo la relación directa entre la arquitectura citoesquelética y la funcionalidad metabólica de cada espécimen en el agroecosistema.
+
+\vspace{0.4cm}
+\noindent\textbf{Palabras clave:} Atlas celular, microscopía óptica, microscopía electrónica, citoarquitectura vegetal, hepatocito bovino, TEM/SEM.
+
+\section{Fundamentos de la Microscopía y Poder de Resolución}
+La microscopía es la herramienta de observación primaria de la citología \parencite{alberts2015}. La capacidad para distinguir dos puntos adyacentes como entidades separadas está regida por el límite de difracción de Abbe:
+\begin{equation}
+    d = \frac{0.61 \lambda}{\text{AN}} = \frac{0.61 \lambda}{n \sin \alpha}
+\end{equation}
+donde $\lambda$ es la longitud de onda de la radiación incidente, $n$ el índice de refracción del medio y $\alpha$ el semiángulo de apertura del objetivo ($\text{AN}$ apertura numérica). En microscopía óptica convencional, con luz visible ($\lambda \approx 500\text{ nm}$) y objetivos de inmersión en aceite ($n = 1.515, \text{AN} \approx 1.4$), el límite de resolución teórico ronda los $0.2\,\mu\text{m}$ ($200\text{ nm}$) \parencite{karp2014}.
+
+Por el contrario, los microscopios electrónicos emplean un haz de electrones acelerados por diferencias de potencial de $80-200\text{ kV}$, cuya longitud de onda asociada según la ecuación de De Broglie ($\lambda = h / \sqrt{2m_e e V}$) es inferior a $0.004\text{ nm}$, alcanzando un poder de resolución práctico inferior a $0.2\text{ nm}$ ($2\text{ Å}$), lo que permite observar la bicapa lipídica, complejos de poro nuclear y partículas virales \parencite{lodish2016}.
+
+\section{Tipos Celulares Vegetales Caracterizados}
+\subsection{Células Epidérmicas de Catáfila de Cebolla (\textit{Allium cepa})}
+\begin{itemize}
+    \item \textbf{Técnica:} Microscopía óptica de campo claro (aumento $100\times$ y $400\times$), tinción supravital con azul de metileno y lugol.
+    \item \textbf{Morfología y Diagnóstico:} Células rectangulares alargadas dispuestas en mosaico compacto sin espacios intercelulares. Se observa nítidamente la pared celular primaria celulósica con laminilla media pectínica, citoplasma periférico translúcido comprimido por una vacuola central túrgida que ocupa más del $85\%$ del volumen celular, y un núcleo esférico conspicuo con uno a dos nucléolos densos en posición parietal.
+\end{itemize}
+
+\subsection{Células del Mesófilo Clorofílico de Elodea (\textit{Elodea canadensis})}
+\begin{itemize}
+    \item \textbf{Técnica:} Microscopía óptica de campo claro con iluminación Köhler ($400\times$).
+    \item \textbf{Morfología y Diagnóstico:} Células parenquimáticas poliédricas ricas en cloroplastos lenticulares periféricos ($5-8\,\mu\text{m}$). Se documenta el fenómeno dinámico de \textbf{ciclosis} citoplasmática: corriente unidireccional de endoplasma impulsada por la interacción de microfilamentos de actina F y cabezas motoras de miosina XI dependientes de ATP, asegurando la distribución homogénea de $CO_2$ y luz hacia los tilacoides \parencite{taiz2015}.
+\end{itemize}
+
+\section{Tipos Celulares Animales Caracterizados}
+\subsection{Hepatocito Bovino (\textit{Bos taurus})}
+\begin{itemize}
+    \item \textbf{Técnica:} Microscopía electrónica de transmisión (TEM, contraste con acetato de uranilo y citrato de plomo, $15,000\times$).
+    \item \textbf{Morfología y Diagnóstico:} Células poliédricas con abundante retículo endoplásmico rugoso (RER) dispuesto en cisternas paralelas para la síntesis masiva de albúmina y factores de coagulación; retículo endoplásmico liso (REL) prominente especializado en desintoxicación de xenobióticos y metabolismo de glucógeno; mitocondrias con crestas densas ($>1,000$ por célula) y gránulos de glucógeno en rosetas $\alpha$ y $\beta$ \parencite{lodish2016}.
+\end{itemize}
+
+\section{Entidades Acelulares Caracterizadas}
+\subsection{Fitovirus: Virus del Mosaico del Tabaco (TMV)}
+\begin{itemize}
+    \item \textbf{Técnica:} Microscopía electrónica de transmisión (TEM) con tinción negativa con ácido fosfotúngstico ($80,000\times$).
+    \item \textbf{Morfología y Diagnóstico:} Partícula rígida cilíndrica de simetría helicoidal de $300\text{ nm}$ de longitud y $18\text{ nm}$ de diámetro. Presenta un canal central hueco de $4\text{ nm}$ rodeado por $2,130$ subunidades proteicas de cubierta (capsómeros de $17.5\text{ kDa}$) que protegen una molécula única de ARN monocatenario de sentido positivo (+ssRNA) de $6,400$ nucleótidos.
+\end{itemize}
+
+\section{Conclusiones}
+1. El atlas microscópico evidencia cómo la estructura física subcelular determina con exactitud la función metabólica en plantas y animales domésticos.
+2. La microscopía electrónica es insustituible para el diagnóstico de fitovirus y el estudio ultraestructural de organelos que no son resolubles por microscopía de campo claro.
+3. Este repertorio descriptivo aporta al estudiante de agronomía criterios analíticos de patología vegetal y zootecnia celular.
+
+\newpage
+\printbibliography[title={Referencias bibliográficas}]
+\end{document}
+

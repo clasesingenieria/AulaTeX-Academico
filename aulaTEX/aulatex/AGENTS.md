@@ -25,6 +25,15 @@ inside AulaTeX so the suite remains autonomous.
 - Verificador y validador: checks evidence, compilation and acceptance criteria.
 - Critico adversarial: finds blockers before applying changes.
 
+## Subject delivery layout
+
+- Every subject has `entregas-<subject-slug>/`; obtain its path from `subject_layout()`.
+- The subject slug removes the program suffix `-lde`, `-lad`, `-mga`, `-isc` or `-imtc`.
+- Use `subject_artifact_contract()` in new planning models and structure inventories.
+- Preserve existing delivery files and indexes. Do not create generic `Entregas/` or `entregas/` folders.
+- Editable source files keep their editorial location; the delivery directory contains the files selected for submission.
+- Full specification: [CONTRATO-ESTRUCTURA-MATERIAS.md](CONTRATO-ESTRUCTURA-MATERIAS.md).
+
 ## Runtime outputs
 
 Each agent run writes:

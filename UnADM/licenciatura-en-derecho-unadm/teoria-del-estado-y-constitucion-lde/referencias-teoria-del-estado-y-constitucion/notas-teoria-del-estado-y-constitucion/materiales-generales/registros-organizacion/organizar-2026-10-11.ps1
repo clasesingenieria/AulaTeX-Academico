@@ -31,7 +31,7 @@ if ($ValidateOnly) {
 if (Test-Path -LiteralPath $manifest) { throw 'Migracion ya registrada; usar -ValidateOnly.' }
 $inventory = @(Get-ChildItem -LiteralPath $root -Recurse -Force -File | ForEach-Object { [ordered]@{archivo=(Relative $_.FullName);bytes=$_.Length;sha256=(Digest $_.FullName)} })
 $inventory | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath (Join-Path $PSScriptRoot 'inventario-inicial.json') -Encoding utf8
-$protected = @($inventory | Where-Object { $_.archivo -like 'Entregas/*' -or $_.archivo -match '/comprobantes-envio/' })
+$protected = @($inventory | Where-Object { $_.archivo -like 'entregas-teoria-del-estado-y-constitucion/*' -or $_.archivo -match '/comprobantes-envio/' })
 $moves = [Collections.Generic.List[object]]::new()
 $updates = [Collections.Generic.List[object]]::new()
 $map = [ordered]@{}
@@ -110,7 +110,7 @@ function NewRelativeTarget($oldTarget,$currentFile) {
 }
 foreach ($file in Get-ChildItem -LiteralPath $root -Recurse -Force -File | Where-Object Extension -in @('.md','.tex','.json','.bib')) {
     $current = Relative $file.FullName
-    if ($current -match '/registros-organizacion/|/comprobantes-envio/|^Entregas/') { continue }
+    if ($current -match '/registros-organizacion/|/comprobantes-envio/|^entregas-teoria-del-estado-y-constitucion/') { continue }
     $original = if ($initialPaths.ContainsKey($current)) { $initialPaths[$current] } else { $current }
     $text = [IO.File]::ReadAllText($file.FullName)
     $before = Digest $file.FullName

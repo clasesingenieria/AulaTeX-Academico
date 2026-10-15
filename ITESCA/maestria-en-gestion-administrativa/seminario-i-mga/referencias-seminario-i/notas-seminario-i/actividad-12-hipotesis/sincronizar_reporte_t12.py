@@ -11,7 +11,7 @@ from docx.text.paragraph import Paragraph
 
 HERE = Path(__file__).resolve().parent
 SUBJECT = HERE.parents[2]
-SOURCE = SUBJECT / 'Entregas/Tarea12_DeLaCruzMunoz.docx'
+SOURCE = SUBJECT / 'entregas-seminario-i/Tarea12_DeLaCruzMunoz.docx'
 TARGET = SUBJECT / 'reporte-seminario-i-Actividad-12.tex'
 
 

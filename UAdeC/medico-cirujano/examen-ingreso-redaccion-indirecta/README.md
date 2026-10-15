@@ -10,4 +10,4 @@
 - [Inventario de libros](referencias-examen-ingreso-redaccion-indirecta/inventario-libros.json).
 - [Fuentes y límites](referencias-examen-ingreso-redaccion-indirecta/notas-examen-ingreso-redaccion-indirecta/actividad-01-investigacion/fuentes-y-alcance.md).
 
-`Entregas` queda reservado para exportaciones que exija una consigna real; no se inventa formato de envío. La bibliografía PDF local está en `libros-examen-ingreso-redaccion-indirecta`; notas, soluciones y originales históricos en `notas-examen-ingreso-redaccion-indirecta`. No se redistribuyen libros por el hecho de organizarlos.
+`entregas-examen-ingreso-redaccion-indirecta` queda reservado para exportaciones que exija una consigna real; no se inventa formato de envío. La bibliografía PDF local está en `libros-examen-ingreso-redaccion-indirecta`; notas, soluciones y originales históricos en `notas-examen-ingreso-redaccion-indirecta`. No se redistribuyen libros por el hecho de organizarlos.

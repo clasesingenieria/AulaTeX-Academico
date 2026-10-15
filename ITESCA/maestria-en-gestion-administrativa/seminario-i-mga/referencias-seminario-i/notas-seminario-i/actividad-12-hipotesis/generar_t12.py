@@ -12,8 +12,8 @@ from docx.text.paragraph import Paragraph
 
 HERE = Path(__file__).resolve().parent
 SUBJECT = HERE.parents[2]
-SOURCE = SUBJECT / 'Entregas/Tarea11_DeLaCruzMunoz.docx'
-TARGET = SUBJECT / 'Entregas/Tarea12_DeLaCruzMunoz.docx'
+SOURCE = SUBJECT / 'entregas-seminario-i/Tarea11_DeLaCruzMunoz.docx'
+TARGET = SUBJECT / 'entregas-seminario-i/Tarea12_DeLaCruzMunoz.docx'
 GENERAL = ('En los componentes documentales aplicables al proyecto vTaxi como plataforma de taxis concesionados en Nuevo León durante septiembre a noviembre de 2026, un mayor nivel de gestión del cumplimiento normativo se relaciona con un mayor grado de preparación administrativa del expediente, expresado en documentos completos y coherentes con los requisitos aplicables y en observaciones internas atendidas con respaldo verificable.')
 SPECIFIC = ('En los componentes del expediente de vTaxi, la asignación documentada de responsables y el seguimiento de observaciones se relacionan con una mayor proporción de observaciones internas cerradas mediante evidencia documental aceptable en la revisión del caso.')
 REFERENCE = ('Price, P. C., Jhangiani, R. S., & Chiang, I.-C. A. (2015). Research methods in psychology (2nd Canadian ed.). BCcampus. https://opentextbc.ca/researchmethods/chapter/correlational-research/')

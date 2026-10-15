@@ -14,7 +14,7 @@ from docx.shared import Inches, Pt
 
 ASSETS = Path(__file__).resolve().parent
 SUBJECT = ASSETS.parent
-OUTPUT = SUBJECT / "Entregas"
+OUTPUT = SUBJECT / "entregas-plan-de-negocios"
 BACKUP = SUBJECT / "referencias-plan-de-negocios/notas-plan-de-negocios/materiales-generales/word-antes-portada-oficial"
 COVERS = ASSETS / "portadas-word"
 IMAGE = ASSETS / "actividad-12-2026-10-05/portada-oficial.png"

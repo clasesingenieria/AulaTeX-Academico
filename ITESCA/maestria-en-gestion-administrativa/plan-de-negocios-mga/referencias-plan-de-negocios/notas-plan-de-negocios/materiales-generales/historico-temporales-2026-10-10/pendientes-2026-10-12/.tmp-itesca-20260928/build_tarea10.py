@@ -12,7 +12,7 @@ sys.stdout.reconfigure(encoding='utf-8',line_buffering=True)
 ROOT=Path(__file__).resolve().parents[1]
 WORK=ROOT/'.tmp-itesca-20260928'
 SEM=ROOT/'ITESCA/maestria-en-gestion-administrativa/seminario-i-mga'
-SRC=SEM/'entregas/Tarea9_DeLaCruzMunoz.docx'
+SRC=SEM/'entregas-plan-de-negocios/Tarea9_DeLaCruzMunoz.docx'
 DATA=json.loads((SEM/'anteproyecto/vtaxi-2026-09-27/contenido.json').read_text(encoding='utf-8'))
 OG='Analizar la relación entre el nivel de gestión del cumplimiento normativo y el grado de preparación administrativa de vTaxi para su formalización como plataforma de taxis concesionados en Nuevo León durante septiembre a noviembre de 2026, mediante el contraste documental de requisitos, responsabilidades y evidencias del proyecto.'
 OES=[
@@ -117,7 +117,7 @@ settings=d.settings.element
 if not settings.xpath('./w:updateFields'):
  e=OxmlElement('w:updateFields');e.set(qn('w:val'),'true');settings.append(e)
 d.core_properties.title='Formulación de objetivos del anteproyecto vTaxi';d.core_properties.author='Martín Jonathan de la Cruz Muñoz'
-out=SEM/'entregas/Tarea10_DeLaCruzMunoz.docx';d.save(out)
+out=SEM/'entregas-plan-de-negocios/Tarea10_DeLaCruzMunoz.docx';d.save(out)
 # Restore untouched package parts byte for byte after python-docx normalizes XML declarations.
 with ZipFile(SRC) as a,ZipFile(out) as b:
  preserve=[n for n in a.namelist() if n.startswith(('word/media/','word/header','word/footer'))]

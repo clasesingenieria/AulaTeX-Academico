@@ -4,7 +4,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from aulatex.planning_layout import generate_plans, subject_layout
+from aulatex.planning_layout import ensure_delivery_directory, generate_plans, subject_layout
 
 
 class PlanningLayoutTests(unittest.TestCase):
@@ -26,6 +26,9 @@ class PlanningLayoutTests(unittest.TestCase):
         model = json.loads(paths[0].read_text(encoding="utf-8"))
         self.assertEqual(model["activity"], self.payload["activities"][0])
         self.assertEqual(model["sources"], self.payload["sources"])
+        self.assertEqual(model["artifact_contract"]["deliverables_directory"], "entregas-plan-de-negocios")
+        self.assertEqual(model["artifact_contract"]["source_directory"], ".")
+        self.assertTrue((self.subject / "entregas-plan-de-negocios/README.md").is_file())
         self.assertTrue(all(path.is_relative_to(self.subject) for path in paths))
         self.assertTrue((self.subject / "referencias-plan-de-negocios/notas-plan-de-negocios").is_dir())
         self.assertFalse(list(self.subject.rglob(".gitignore")))
@@ -110,9 +113,38 @@ class PlanningLayoutTests(unittest.TestCase):
         structure = json.loads((self.subject / "estructura-aulatex.json").read_text(encoding="utf-8"))
         self.assertEqual(structure["schema_version"], "1.0")
         self.assertEqual(structure["kind"], "subject_file_inventory")
+        self.assertEqual(structure["artifact_contract"]["deliverables_directory"], "entregas-filosofia-del-derecho")
         for folder in subject_layout(self.subject).values():
             self.assertTrue(folder.is_dir())
             self.assertIn(folder.relative_to(self.subject).as_posix(), structure["folders"])
+
+    def test_delivery_initialization_preserves_existing_files_and_navigation(self):
+        folder = ensure_delivery_directory(self.subject)
+        document = folder / "trabajo-final.docx"
+        document.write_bytes(b"existing deliverable")
+        index = folder / "README.md"
+        index.write_text("Índice revisado", encoding="utf-8")
+        self.assertEqual(ensure_delivery_directory(self.subject), folder)
+        self.assertEqual(document.read_bytes(), b"existing deliverable")
+        self.assertEqual(index.read_text(encoding="utf-8"), "Índice revisado")
+
+    def test_delivery_directory_is_not_detected_as_a_subject_or_career(self):
+        from aulatex.workspace import AulaTeXWorkspace
+
+        folder = ensure_delivery_directory(self.subject)
+        (folder / "reporte.tex").write_text("source accompanying a delivery", encoding="utf-8")
+        workspace = AulaTeXWorkspace(self.root)
+        self.assertFalse(workspace._is_subject_dir(folder))
+        self.assertFalse(workspace._is_career_dir(folder))
+
+    def test_delivery_names_use_subject_slug_across_programs(self):
+        for name, expected in (
+            ("seminario-i-mga", "entregas-seminario-i"),
+            ("algebra-lineal-imtc", "entregas-algebra-lineal"),
+            ("examen-ingreso-anatomia", "entregas-examen-ingreso-anatomia"),
+            ("temas-selectos-de-matematicas-I", "entregas-temas-selectos-de-matematicas-I"),
+        ):
+            self.assertEqual(subject_layout(self.root / name)["deliveries"].name, expected)
 
     def test_materializer_rejects_other_institutions_without_writing(self):
         from aulatex.template_materializer import TemplateMaterializer

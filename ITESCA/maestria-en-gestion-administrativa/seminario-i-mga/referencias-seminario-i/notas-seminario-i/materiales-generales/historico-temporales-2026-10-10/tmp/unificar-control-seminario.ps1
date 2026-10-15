@@ -7,7 +7,7 @@ if ($text.Contains('## Compilacion vigente')) { throw 'Seccion ya integrada; rev
 $state = [IO.File]::ReadAllText((Join-Path $root 'ESTADO-ENTREGABLES.md'))
 $state = [regex]::Replace($state,'\A# Seminario I: estado de documentos\s*','')
 $state = [regex]::Replace($state,'(?m)^(#{2,5}) ','$1# ')
-$state = $state.Replace('entregas/','Entregas/')
+$state = $state.Replace('entregas-seminario-i/','entregas-seminario-i/')
 $state = $state.Replace('Revisión estructural: 22 de septiembre de 2026.', 'Historial de revision estructural: 22 de septiembre de 2026. La tabla siguiente describe aquella revision local, no la identidad de los archivos enviados ni un estado vigente de plataforma.')
 $state = $state.Replace('### Verificación técnica del 22 de septiembre de 2026','### Historial de verificacion tecnica del 22 de septiembre de 2026')
 $state = $state.Replace('[compilación](COMPILACION-seminario-i.md)','[compilacion](#compilacion-vigente)')
@@ -52,7 +52,7 @@ bash scripts/latexmk-build.sh ITESCA/maestria-en-gestion-administrativa/seminari
 
 Tarea 4 produce portada e infografia en dos paginas A4 horizontales con TikZ y bibliografia manual. El control 26130503 ya esta incorporado; semestre y fecha de entrega vigente requieren revision. [Revision de la actividad 4](referencias-seminario-i/notas-seminario-i/actividad-4-errores-circulo-covey/revision-actividad-04.md).
 
-Tarea 6 carga el [contenido editable](referencias-seminario-i/notas-seminario-i/actividad-6-formato-institucional/elaboracion/contenido-actividad-6.tex) y dos imagenes locales; no necesita descargas para compilar. Cinco referencias manuales, indice, listas y referencias cruzadas se resuelven con las pasadas de latexmk. [Control LaTeX](referencias-seminario-i/notas-seminario-i/actividad-6-formato-institucional/elaboracion/validar_latex.py) y [resultado registrado](referencias-seminario-i/notas-seminario-i/actividad-6-formato-institucional/elaboracion/validacion/verificacion-latex.json). El resultado historico del control no sustituye una ejecucion nueva. El [Word preparado](Entregas/Tarea6_DeLaCruzMunoz.docx) no se reemplaza por el PDF. En Windows, el validador del Word requiere PYTHONUTF8=1 para leer la salida de Poppler.
+Tarea 6 carga el [contenido editable](referencias-seminario-i/notas-seminario-i/actividad-6-formato-institucional/elaboracion/contenido-actividad-6.tex) y dos imagenes locales; no necesita descargas para compilar. Cinco referencias manuales, indice, listas y referencias cruzadas se resuelven con las pasadas de latexmk. [Control LaTeX](referencias-seminario-i/notas-seminario-i/actividad-6-formato-institucional/elaboracion/validar_latex.py) y [resultado registrado](referencias-seminario-i/notas-seminario-i/actividad-6-formato-institucional/elaboracion/validacion/verificacion-latex.json). El resultado historico del control no sustituye una ejecucion nueva. El [Word preparado](entregas-seminario-i/Tarea6_DeLaCruzMunoz.docx) no se reemplaza por el PDF. En Windows, el validador del Word requiere PYTHONUTF8=1 para leer la salida de Poppler.
 
 ## Discrepancias y regla de mantenimiento
 
@@ -62,7 +62,7 @@ Se consolida un unico contrato y control de estado en este Readme. Los estados s
 '@
 $text = $text.Replace('[Estado de entregables y revisión estructural](ESTADO-ENTREGABLES.md)', '[Estado de entregables y revision estructural](#estado-de-entregables)')
 $text = $text.Replace('`COMPILACION-seminario-i.md`: comandos y contrato de compilación.', '[Compilacion vigente](#compilacion-vigente): comandos y contrato unico.')
-$text = $text.Replace('`entregas/`','`Entregas/`')
+$text = $text.Replace('`entregas-seminario-i/`','`entregas-seminario-i/`')
 $text += "`n`n## Estado de entregables`n`n" + $state.Trim() + "`n`n" + $compilation.Trim() + "`n"
 [IO.File]::WriteAllText($target,$text,[Text.UTF8Encoding]::new($false))
 $mapping = @{}

@@ -4,7 +4,7 @@
 
 11 de octubre de 2026: modulo 214812, Enviado para calificar, no calificado;
 ultima modificacion en aula 22:04, 1 hora 50 minutos antes del cierre.
-[PDF enviado](Entregas/2026_TeoriaEstado_S2_Martin%20Jonathan%20de%20la%20Cruz.pdf)
+[PDF enviado](entregas-teoria-del-estado-y-constitucion/2026_TeoriaEstado_S2_Martin%20Jonathan%20de%20la%20Cruz.pdf)
 en formato docente, cuatro paginas. Descarga remota identica por SHA256
 f1fa4a382437983fbc408db57f436a8b55d8da32dd6dfe9032e4a94c0c569f22.
 [Comprobante](referencias-teoria-del-estado-y-constitucion/notas-teoria-del-estado-y-constitucion/actividad-02-linea-de-tiempo/comprobantes-envio/2026-10-11/recibo.json).

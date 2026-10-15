@@ -2,7 +2,7 @@
 
 Revisión: 22/09/2026. Módulo 6548 de Plan de Negocios GGPN01.
 
-- [Reporte LaTeX](../../../../reporte-plan-de-negocios-Actividad-5-Preguntas-Demanda-Oferta.tex), [PDF](../../../../reporte-plan-de-negocios-Actividad-5-Preguntas-Demanda-Oferta.pdf) y [Word](../../../../Entregas/reporte-plan-de-negocios-Actividad-5-Preguntas-Demanda-Oferta.docx).
+- [Reporte LaTeX](../../../../reporte-plan-de-negocios-Actividad-5-Preguntas-Demanda-Oferta.tex), [PDF](../../../../reporte-plan-de-negocios-Actividad-5-Preguntas-Demanda-Oferta.pdf) y [Word](../../../../entregas-plan-de-negocios/reporte-plan-de-negocios-Actividad-5-Preguntas-Demanda-Oferta.docx).
 - [Consigna contrastada con Moodle](../../../consigna-actividad-5-demanda-oferta.md).
 - [Nota metodológica y mapa de ítems](../diseno-instrumentos.md).
 - [Informe final con huellas de archivos](validacion-final.json).

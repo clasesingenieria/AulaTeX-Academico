@@ -1,0 +1,105 @@
+% !TeX program = xelatex
+\documentclass[12pt,spanish,letterpaper,oneside]{article}
+\PassOptionsToPackage{es-noshorthands}{babel}
+\def\documenttitle{Resolución de caso: Expresión génica coordinada, biogénesis y ensamblaje estromal de la enzima RuBisCO}
+\def\documentsubtitle{Evidencia 3 --- Reporte técnico de resolución de caso de expresión proteica (Fase 3)}
+\def\documentsubject{Biología Celular --- Ingeniero Agrónomo}
+\def\documentauthor{Carlos Mauricio Carvajal Coronado}
+\def\coursename{Biología Celular}
+\def\coursecode{REF\#261013755061}
+\def\universityname{Universidad Autónoma de Nuevo León}
+\def\universityfaculty{Facultad de Agronomía}
+\def\universitydepartment{Ingeniero Agrónomo}
+\def\universitydepartmentimage{departamentos/logos-institucionales.pdf}
+\def\universitydepartmentimagecfg{height=2.1cm}
+\def\universitylocation{General Escobedo / Marín, Nuevo León, México}
+\def\authortable{%
+	\begin{Form}
+	\begin{tabular}{@{}ll@{}}
+		\textbf{Estudiante:} & Carlos Mauricio Carvajal Coronado\\[0.35cm]
+		\textbf{Matrícula:} & 1977875\\[0.35cm]
+		\textbf{Docente Titular:} & Dr. Miguel Ángel Dector Carrillo\\[0.35cm]
+		\textbf{Unidad de Aprendizaje:} & Biología Celular (Evidencia 3 \textbar\ 6 Pts)\\[0.5cm]
+		\multicolumn{2}{l}{Fecha de realización: 14 de octubre de 2026}\\
+		\multicolumn{2}{l}{\universitylocation}
+	\end{tabular}
+	\end{Form}
+}
+
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\input{template}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
+\definecolor{uanlblue}{RGB}{0,55,108}
+\definecolor{tableblue}{RGB}{233,240,247}
+\def\portraittitlecolor{uanlblue}
+\def\sectioncolor{uanlblue}
+\def\ssectioncolor{uanlblue}
+\def\documenttitlehf{Biología Celular: Evidencia 3 --- Expresión Génica de la RuBisCO}
+\hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Carlos Mauricio Carvajal Coronado},pdftitle={Expresión génica coordinada de la enzima RuBisCO},pdfsubject={Evidencia 3 - Biología Celular UANL}}
+\addbibresource{UANL/ingeniero-agronomo/biologia-celular/biologia-celular.bib}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\setlength{\emergencystretch}{2.5em}
+
+\begin{document}
+\hypersetup{pageanchor=false}
+\begingroup
+\fontsize{14}{17}\selectfont
+\renewcommand{\Huge}{\fontsize{14}{17}\selectfont\bfseries}
+\renewcommand{\large}{\fontsize{14}{17}\selectfont}
+\templatePortrait
+\clearpage
+\endgroup
+\hypersetup{pageanchor=true}
+\templatePagecfg
+\singlespacing
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.18}
+
+\section*{Resumen}
+El presente reporte aborda la resolución del caso de estudio de la Evidencia 3 sobre la expresión génica coordinada núcleo-plastidial de la Ribulosa-1,5-bisfosfato carboxilasa/oxigenasa (RuBisCO), la proteína más abundante del planeta y catalizadora primaria de la asimilación fotosintética del carbono en plantas C3 y C4. Se describe el flujo de información genética desde la transcripción nuclear del gen \textit{RbcS} y plastidial del gen \textit{rbcL}, el procesamiento postranscripcional (capping, poliadenilación y splicing), la traducción citosólica en ribosomas 80S del precursor pre-SSU provisto de un péptido de tránsito amino-terminal, la translocación a través de los complejos translocadores de la envoltura plastidial TOC y TIC dependiente de ATP y GTP, la escisión proteolítica del péptido señal por la peptidasa estromal SPP, y el ensamblaje estequiométrico del complejo holoenzimático hexadecimérico ($L_8S_8$, $550\text{ kDa}$) mediado por chaperonas moleculares Cpn60/Cpn10 y RuBisCO activasa.
+
+\vspace{0.4cm}
+\noindent\textbf{Palabras clave:} RuBisCO, expresión génica coordinada, complejos TOC/TIC, chaperoninas Cpn60, asimilación fotosintética, agronomía molecular.
+
+\section{Introducción y Relevancia Agronómica}
+La fijación biológica del dióxido de carbono atmosférico ($CO_2$) constituye el fundamento de la productividad agrícola primaria mundial \parencite{taiz2015}. Dicho proceso es catalizado por la enzima RuBisCO en el ciclo de Calvin-Benson. A pesar de su importancia crítica, la enzima es catalíticamente lenta ($k_{\text{cat}} \approx 3-5\text{ s}^{-1}$) y propensa a reacciones parásitas de fotorrespiración por fijación competitiva de $O_2$ \parencite{alberts2015}.
+
+El interés agronómico en RuBisCO radica en que su holoenzima vegetal funcional posee una estructura cuaternaria hexadecimérica ($L_8S_8$), integrada por 8 subunidades mayores catalíticas (L, $\sim 55\text{ kDa}$) y 8 subunidades menores reguladoras (S, $\sim 13\text{ kDa}$), cuyos genes residen en dos compartimentos genómicos distintos: el plastidio y el núcleo, exigiendo una coordinación molecular impecable \parencite{lodish2016}.
+
+\section{Flujo de Expresión Génica Compartimentada}
+\subsection{Subunidad Mayor: Síntesis Plastidial (\textit{rbcL})}
+El gen \textit{rbcL} se localiza en el ADN cloroplástico circular de copia múltiple. Es transcrito por una ARN polimerasa codificada en el plastidio tipo bacteriana ($\alpha_2\beta\beta'\sigma$). El transcripto se traduce directamente en los ribosomas 70S del estroma, donde la proteína en formación interactúa tempranamente con chaperonas para prevenir agregados insolubles \parencite{alberts2015}.
+
+\subsection{Subunidad Menor: Síntesis Nuclear y Tráfico Citosólico (\textit{RbcS})}
+La familia multigénica \textit{RbcS} se localiza en el núcleo eucariota. Es transcrita por la ARN polimerasa II activada por fitocromos y luz solar, sufriendo maduración canónica (caperuza de 7-metilguanosina en $5'$, eliminación de intrones y poliadenilación en $3'$). El ARNm maduro es exportado al citosol y traducido por ribosomas 80S como un precursor pre-SSU provisto de un \textbf{péptido de tránsito estromal} N-terminal de $\sim 45-60$ aminoácidos rico en serina y treonina \parencite{lodish2016}.
+
+\section{Importación al Cloroplasto: Maquinaria TOC/TIC}
+La translocación del precursor pre-SSU desde el citoplasma hacia el estroma cloroplástico se ejecuta a través de dos supercomplejos proteicos multiproteicos de membrana:
+\begin{enumerate}
+    \item \textbf{Complejo TOC (Translocón de la Membrana Externa):} Formado por los receptores Toc159 y Toc34 que reconocen específicamente el péptido de tránsito con consumo de GTP, y el canal conductor acuoso Toc75 formado por barriles $\beta$.
+    \item \textbf{Complejo TIC (Translocón de la Membrana Interna):} Integrado por Tic110, Tic20 y Tic40. El motor de importación acoplado a la chaperona Hsp93/ClpC estromal impulsa la translocación unidireccional hidrolizando ATP en el estroma \parencite{lodish2016}.
+    \item \textbf{Procesamiento Proteolítico:} En el estroma, la enzima peptidasa de procesamiento del estroma (SPP, \textit{Stromal Processing Peptidase}) reconoce y corta el péptido señal, liberando la subunidad menor madura (SSU).
+\end{enumerate}
+
+\section{Ensamblaje Cuaternario y Activación Catalítica}
+El ensamblaje del octámero catalítico central $L_8$ no ocurre espontáneamente:
+\begin{itemize}
+    \item Las subunidades mayores L recién sintetizadas son encapsuladas por el complejo de chaperoninas estromales Cpn60$\alpha$/Cpn60$\beta$ y su cofactor Cpn10 (homólogo a GroEL/GroES de \textit{E. coli}), facilitando el plegamiento correcto dependiente de ATP.
+    \item Dimémeros $L_2$ interactúan con proteínas auxiliares de ensamblaje (Raf1, Raf2 y RbcX) para constituir el tetrámero de dímeros $L_8$.
+    \item Ocho subunidades SSU maduras se acoplan a los extremos polares del núcleo $L_8$, induciendo la liberación de las chaperonas y originando la holoenzima $L_8S_8$ de $550\text{ kDa}$ \parencite{taiz2015}.
+    \item Finalmente, la enzima es carbamilada en el residuo Lys201 con $CO_2$ activador y $Mg^{2+}$, paso mediado por la enzima chaperona RuBisCO activasa.
+\end{itemize}
+
+\section{Conclusiones}
+1. La biogénesis de RuBisCO demuestra la absoluta interdependencia evolutiva entre el genoma nuclear y plastidial en las plantas agrícolas.
+2. Los conocimientos sobre translocación TOC/TIC y chaperonas de plegamiento abren la puerta a la mejora genética de cultivos para incrementar la tasa fotosintética neta y eficiencia hídrica ante el cambio climático.
+
+\newpage
+\printbibliography[title={Referencias bibliográficas}]
+\end{document}
+

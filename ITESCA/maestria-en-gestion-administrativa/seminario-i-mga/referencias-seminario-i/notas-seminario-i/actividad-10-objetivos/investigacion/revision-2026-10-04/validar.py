@@ -25,9 +25,9 @@ def normalized(text):
 def main():
     payload = SUBJECT / "referencias-seminario-i/notas-seminario-i/actividad-10-objetivos/elaboracion-vtaxi-2026-09-28/actividad-10-revisada.json"
     data = json.loads(payload.read_text(encoding="utf-8"))
-    word = SUBJECT / "entregas/Tarea10_DeLaCruzMunoz_Revision-2026-10-04.docx"
+    word = SUBJECT / "entregas-seminario-i/Tarea10_DeLaCruzMunoz_Revision-2026-10-04.docx"
     source_word = SUBJECT / "referencias-seminario-i/notas-seminario-i/actividad-10-objetivos/elaboracion-vtaxi-2026-09-28/base-T9-corregida-para-T10.docx"
-    original_word = SUBJECT / "entregas/Tarea9_DeLaCruzMunoz.docx"
+    original_word = SUBJECT / "entregas-seminario-i/Tarea9_DeLaCruzMunoz.docx"
     report = SUBJECT / "reporte-seminario-i-Actividad-10.tex"
     slides = SUBJECT / "presentacion-seminario-i-Actividad-10.tex"
     continuity = validate_structure(source_word, word, data, after_word_refresh=True)

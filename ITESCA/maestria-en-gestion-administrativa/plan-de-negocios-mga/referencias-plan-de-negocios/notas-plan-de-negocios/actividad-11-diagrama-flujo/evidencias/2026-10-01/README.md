@@ -8,7 +8,7 @@ Moodle muestra **Enviado para calificar**, intento 1, sin calificar. Última mod
 
 - [Versión gráfica, 3 páginas](../../historico/pdf-raiz/Actividad-11-AM-Taller-Version-Grafica.pdf).
 - [Versión redactada, 7 páginas](../../historico/pdf-raiz/Actividad-11-AM-Taller-Version-Redactada.pdf).
-- [Word editable completo](../../../../../Entregas/reporte-plan-de-negocios-Actividad-11-AM-Taller.docx) y [PDF integrado, 9 páginas](../../historico/pdf-raiz/reporte-plan-de-negocios-Actividad-11-AM-Taller.pdf), conservados localmente.
+- [Word editable completo](../../../../../entregas-plan-de-negocios/reporte-plan-de-negocios-Actividad-11-AM-Taller.docx) y [PDF integrado, 9 páginas](../../historico/pdf-raiz/reporte-plan-de-negocios-Actividad-11-AM-Taller.pdf), conservados localmente.
 - [Comprobante y huellas SHA-256](6550-receipt.json), [estado textual](6550-after-save.txt), [captura del aula](6550-after-save.png) y [verificación documental](verificacion.json).
 
 Se descargaron los dos PDF desde sus enlaces de Moodle y sus huellas SHA-256 coinciden con los originales locales. No se acredita calificación ni aprobación docente.

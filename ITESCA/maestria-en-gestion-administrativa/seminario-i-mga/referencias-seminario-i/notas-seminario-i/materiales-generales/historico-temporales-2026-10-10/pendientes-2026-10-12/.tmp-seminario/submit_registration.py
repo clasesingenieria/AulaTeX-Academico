@@ -3,7 +3,7 @@ import hashlib
 from datetime import datetime,timezone
 
 mid=2907
-paths=[ROOT/'ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/entregas'/n for n in ['RegistroTema_DeLaCruzMunoz.docx','RegistroTema_DeLaCruzMunoz_Firmado.pdf']]
+paths=[ROOT/'ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/entregas-seminario-i-seminario-i'/n for n in ['RegistroTema_DeLaCruzMunoz.docx','RegistroTema_DeLaCruzMunoz_Firmado.pdf']]
 assert all(path.is_file() for path in paths)
 with sync_playwright() as p:
     browser=p.chromium.launch(headless=True)

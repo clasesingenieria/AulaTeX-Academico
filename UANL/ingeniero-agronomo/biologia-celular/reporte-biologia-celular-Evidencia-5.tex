@@ -1,0 +1,107 @@
+% !TeX program = xelatex
+\documentclass[12pt,spanish,letterpaper,oneside]{article}
+\PassOptionsToPackage{es-noshorthands}{babel}
+\def\documenttitle{Resolución de caso: Organización funcional, adhesión pectínica y señalización por ácido abscísico en el complejo estomático}
+\def\documentsubtitle{Evidencia 5 --- Reporte de resolución de caso de comunicación celular (Fase 4)}
+\def\documentsubject{Biología Celular --- Ingeniero Agrónomo}
+\def\documentauthor{Carlos Mauricio Carvajal Coronado}
+\def\coursename{Biología Celular}
+\def\coursecode{REF\#261013755061}
+\def\universityname{Universidad Autónoma de Nuevo León}
+\def\universityfaculty{Facultad de Agronomía}
+\def\universitydepartment{Ingeniero Agrónomo}
+\def\universitydepartmentimage{departamentos/logos-institucionales.pdf}
+\def\universitydepartmentimagecfg{height=2.1cm}
+\def\universitylocation{General Escobedo / Marín, Nuevo León, México}
+\def\authortable{%
+	\begin{Form}
+	\begin{tabular}{@{}ll@{}}
+		\textbf{Estudiante:} & Carlos Mauricio Carvajal Coronado\\[0.35cm]
+		\textbf{Matrícula:} & 1977875\\[0.35cm]
+		\textbf{Docente Titular:} & Dr. Miguel Ángel Dector Carrillo\\[0.35cm]
+		\textbf{Unidad de Aprendizaje:} & Biología Celular (Evidencia 5 \textbar\ 7 Pts)\\[0.5cm]
+		\multicolumn{2}{l}{Fecha de realización: 14 de octubre de 2026}\\
+		\multicolumn{2}{l}{\universitylocation}
+	\end{tabular}
+	\end{Form}
+}
+
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\input{template}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
+\definecolor{uanlblue}{RGB}{0,55,108}
+\definecolor{tableblue}{RGB}{233,240,247}
+\def\portraittitlecolor{uanlblue}
+\def\sectioncolor{uanlblue}
+\def\ssectioncolor{uanlblue}
+\def\documenttitlehf{Biología Celular: Evidencia 5 --- Comunicación Celular y Complejo Estomático}
+\hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Carlos Mauricio Carvajal Coronado},pdftitle={Organización y señalización celular en el complejo estomático},pdfsubject={Evidencia 5 - Biología Celular UANL}}
+\addbibresource{UANL/ingeniero-agronomo/biologia-celular/biologia-celular.bib}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\setlength{\emergencystretch}{2.5em}
+
+\begin{document}
+\hypersetup{pageanchor=false}
+\begingroup
+\fontsize{14}{17}\selectfont
+\renewcommand{\Huge}{\fontsize{14}{17}\selectfont\bfseries}
+\renewcommand{\large}{\fontsize{14}{17}\selectfont}
+\templatePortrait
+\clearpage
+\endgroup
+\hypersetup{pageanchor=true}
+\templatePagecfg
+\singlespacing
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.18}
+
+\section*{Resumen}
+El presente reporte documenta la resolución analítica del caso de estudio de la Evidencia 5, enfocado en los mecanismos de adhesión intercelular mediada por la laminilla media y la red de comunicación y señalización celular que opera en el complejo estomático foliar (células oclusivas y células subsidiarias adyacentes) en condiciones de estrés hídrico edáfico en cultivos de maíz y sorgo. Se desglosa la ruta de transducción molecular iniciada por la fitohormona ácido abscísico (ABA), la cual es reconocida por receptores intracelulares solubles de la familia PYR/PYL/RCAR. Dicho acoplamiento inhibe a las fosfatasas de proteína tipo 2C (PP2C), permitiendo la autofosforilación y activación de la proteína quinasa SnRK2.6 (OST1). Ésta fosforila directamente al canal aniónico lento SLAC1 y a canales de potasio rectificadores de salida (GORK), mientras desactiva la bomba de protones $H^+$-ATPasa, desencadenando una despolarización masiva de la membrana plasmática, salida masiva de solutos osmóticos ($K^+$, malato$^{2-}$, $Cl^-$) y consecuente eflujo pasivo de agua a través de acuaporinas, forzando el cierre estomático para preservar el estado hídrico de la planta.
+
+\vspace{0.4cm}
+\noindent\textbf{Palabras clave:} Comunicación celular, complejo estomático, ácido abscísico (ABA), cascada PYR/PP2C/SnRK2, canal SLAC1, turgencia celular.
+
+\section{Introducción y Planteamiento del Caso Agronómico}
+En los distritos de riego de Nuevo León, los episodios de sequía severa y altas temperaturas estivales ($>40^\circ\text{C}$) demandan una regulación ultrarrápida del intercambio gaseoso en las hojas de los cultivos \parencite{taiz2015}. La apertura y cierre del poro estomático (ostiolo) determina la tasa de transpiración y la asimilación de $CO_2$.
+
+A diferencia de las células animales que se comunican a través de uniones tipo hendidura continuas, las células oclusivas maduras sufren un aislamiento simplásmico programado durante su diferenciación: sus plasmodesmos se ocluyen permanentemente por deposición de calosa ($\beta$-1,3-glucano). En consecuencia, toda comunicación entre las células guarda y las células subsidiarias epidérmicas debe realizarse estrictamente por vía apoplásmica y señalización química mediada por receptores de membrana y segundos mensajeros \parencite{alberts2015}.
+
+\section{Adhesión Intercelular y Mecánica de la Pared Estomática}
+La integridad biomecánica del complejo estomático depende de una adhesión intercelular especializada:
+\begin{itemize}
+    \item \textbf{Laminilla Media Enriquecida en Pectinas:} Las células guarda están ancladas en sus extremos polares a las células epidérmicas circundantes mediante homogalacturonanos esterificados con metilo y reticulados por puentes de calcio ($Ca^{2+}$), resistiendo presiones hidrostáticas internas de hasta $4.5\text{ MPa}$ durante la máxima turgencia \parencite{taiz2015}.
+    \item \textbf{Engrosamiento Diferencial y Micelación Radial:} La pared celular interna que bordea el ostiolo posee un espesor microfibrilar de celulosa hasta tres veces mayor que la pared externa elástica. Las microfibrillas de celulosa se orientan en patrón radial en abanico desde el poro, obligando a las células oclusivas a curvarse hacia el exterior longitudinalmente al hincharse, abriendo el estoma.
+\end{itemize}
+
+\section{Ruta de Señalización y Transducción de Señales por ABA}
+Cuando las raíces detectan desecación en el suelo, sintetizan ácido abscísico que viaja por el xilema hacia el mesófilo foliar. La cascada de transducción intracelular en la célula oclusiva se articula en cuatro fases moleculares clave \parencite{lodish2016}:
+\begin{enumerate}
+    \item \textbf{Reconocimiento del Ligando:} El ABA ingresa al citosol y se une al bolsillo hidrofóbico de los receptores solubles PYR/PYL/RCAR (complejos con estructura de hélice-bucle-hélice).
+    \item \textbf{Inhibición de las Fosfatasas Represoras:} El complejo ternario ABA--PYR1 recluta e inactiva a las fosfatasas de proteína tipo 2C (PP2C, como ABI1 y ABI2), las cuales en condiciones basales mantienen desfosforilada e inactiva a la quinasa central.
+    \item \textbf{Activación de la Quinasa OST1 (SnRK2.6):} Al liberarse de la inhibición de PP2C, SnRK2.6 se autofosforila y activa.
+    \item \textbf{Generación de Segundos Mensajeros ($Ca^{2+}$ y ROS):} SnRK2 fosforila la NADPH oxidasa de membrana plasmática (RbohD/F), generando especies reactivas de oxígeno ($H_2O_2$) que activan canales de calcio $Ca^{2+}_{\text{in}}$, incrementando la concentración de calcio libre citosólico desde $100\text{ nM}$ hasta $>1\,\mu\text{M}$ \parencite{karp2014}.
+\end{enumerate}
+
+\section{Efectores Iónicos y Pérdida de Turgencia}
+La activación combinada de SnRK2 y el pico de $Ca^{2+}$ dispara la respuesta fisiológica final:
+\begin{align}
+    \text{SnRK2.6} + \text{SLAC1} &\longrightarrow \text{SLAC1-P (Activado: salida masiva de } Cl^- \text{ y malato}^{2-}) \\
+    \Delta V_m &\longrightarrow \text{Despolarización desde } -140\text{ mV} \text{ hacia } -40\text{ mV} \\
+    \text{Despolarización} &\longrightarrow \text{Apertura de canales de potasio de salida GORK} \\
+    \text{Inactivación de } H^+\text{-ATPasa} &\longrightarrow \text{Colapso del gradiente electroquímico}
+\end{align}
+El eflujo neto de solutos osmóticos eleva el potencial osmótico intracelular ($\Psi_s \to 0$), provocando una salida masiva de agua por endósmosis inversa a través de acuaporinas de la membrana plasmática (PIPs) y del tonoplasto (TIPs). La disminución de la presión de turgencia relaja las paredes celulares y sella herméticamente el ostiolo en menos de 10 minutos.
+
+\section{Conclusiones}
+1. El complejo estomático ejemplifica la integración perfecta entre adhesión mecánica tisular, aislamiento simplásmico y transducción de señales químicas.
+2. El esclarecimiento de la cascada ABA--PYR1--SnRK2 proporciona a la agronomía moderna dianas biológicas para seleccionar variedades de cultivos resistentes a sequías extremas sin deprimir el rendimiento del grano.
+
+\newpage
+\printbibliography[title={Referencias bibliográficas}]
+\end{document}
+

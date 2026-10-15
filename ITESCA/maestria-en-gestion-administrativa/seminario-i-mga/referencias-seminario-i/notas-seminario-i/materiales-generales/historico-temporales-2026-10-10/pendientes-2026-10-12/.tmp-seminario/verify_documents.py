@@ -12,11 +12,11 @@ def get_background(d):
     a=[p.text for p in d.paragraphs]
     start=a.index('1 Antecedentes');end=a.index('2 Planteamiento del problema')
     return a[start:end]
-docs={n:Document(C/f'entregas/Tarea{n}_DeLaCruzMunoz.docx') for n in [8,9]}
+docs={n:Document(C/f'entregas-seminario-i/Tarea{n}_DeLaCruzMunoz.docx') for n in [8,9]}
 assert get_background(docs[8])==get_background(docs[9])
 result={'antecedentes_identicos':True,'archivos':[],'revision_visual':'Todas las páginas revisadas; cuatro páginas de antecedentes son idénticas entre T8 y T9.'}
 for n,d in docs.items():
-    path=C/f'entregas/Tarea{n}_DeLaCruzMunoz.docx'
+    path=C/f'entregas-seminario-i/Tarea{n}_DeLaCruzMunoz.docx'
     with ZipFile(path) as z:
         assert len(z.namelist())==len(set(z.namelist()))
         xml=etree.fromstring(z.read('word/document.xml'))
@@ -40,7 +40,7 @@ for n,d in docs.items():
     assert 'Error!' not in text and '¡Error!' not in text
     assert all(len(x.extract_text().strip())>50 for x in reader.pages)
     result['archivos'].append({'file':path.name,'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'paginas':len(reader.pages),'titulos':headings,'indice_automatico':True})
-with ZipFile(C/'entregas/RegistroTema_DeLaCruzMunoz.docx') as a,ZipFile(C/'anteproyecto/evidencias/moodle-2026-09-27/03.01 Seleccion de proyecto de titulacion 25130604.docx') as b:
+with ZipFile(C/'entregas-seminario-i/RegistroTema_DeLaCruzMunoz.docx') as a,ZipFile(C/'anteproyecto/evidencias/moodle-2026-09-27/03.01 Seleccion de proyecto de titulacion 25130604.docx') as b:
     assert set(a.namelist())==set(b.namelist())
     assert all(a.read(n)==b.read(n) for n in a.namelist() if n!='word/document.xml')
 result['registro']={'formato_oficial_conservado':True,'pendientes':['CVU','firma del estudiante'],'enviado':False}

@@ -56,7 +56,7 @@ def main():
             document.refresh()
             index.update()
             document.getTextFields().refresh()
-        destination = COURSE / "entregas" / NAME
+        destination = COURSE / "entregas-seminario-i" / NAME
         destination.parent.mkdir(parents=True, exist_ok=True)
         validation = ROOT / "validacion"
         validation.mkdir(parents=True, exist_ok=True)

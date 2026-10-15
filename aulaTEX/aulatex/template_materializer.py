@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Any
 
 from .workspace import AulaTeXWorkspace
-from .planning_layout import subject_layout
+from .planning_layout import ensure_delivery_directory, subject_artifact_contract, subject_layout
 
 
 @dataclass(frozen=True)
@@ -64,6 +64,7 @@ class TemplateMaterializer:
         for folder in subject_layout(target_dir).values():
             folder.mkdir(parents=True, exist_ok=True)
             artifacts.append(folder)
+        ensure_delivery_directory(target_dir)
 
         files = {
             "README.md": self._render_readme(profile, memory),
@@ -74,7 +75,7 @@ class TemplateMaterializer:
             f"reporte-{profile.slug}-Actividad-{profile.activity_number}.tex": self._render_report_tex(profile, memory, activity=True),
             f"presentacion-{profile.slug}.tex": self._render_presentation_tex(profile, memory, activity=False),
             f"presentacion-{profile.slug}-Actividad-{profile.activity_number}.tex": self._render_presentation_tex(profile, memory, activity=True),
-            "estructura-aulatex.json": self._render_structure_json(profile, memory),
+            "estructura-aulatex.json": self._render_structure_json(profile, memory, target_dir),
         }
         for name, text in files.items():
             path = target_dir / name
@@ -153,6 +154,7 @@ Materia de la Licenciatura en Derecho de la UnADM preparada por AulaTeX.
 - `referencias-{profile.slug}/`: fuentes, lecturas y documentos de apoyo.
 - `referencias-{profile.slug}/notas-{profile.slug}/`: notas por unidad o actividad.
 - `assets-{profile.slug}/`: imagenes o evidencias visuales especificas.
+- `entregas-{profile.slug}/`: archivos seleccionados para la entrega de actividades.
 - `extractor-aulatex/`: extracciones y fichas documentales.
 - `investigacion-aulatex/`: analisis y evidencias de investigacion.
 
@@ -766,7 +768,7 @@ con fuentes institucionales, normativas y academicas verificables \\citep{{{cita
 \\end{{document}}
 """
 
-    def _render_structure_json(self, profile: SubjectProfile, memory: dict[str, Any]) -> str:
+    def _render_structure_json(self, profile: SubjectProfile, memory: dict[str, Any], target_dir: Path) -> str:
         payload = {
         "schema_version": "1.0",
         "kind": "subject_file_inventory",
@@ -774,6 +776,7 @@ con fuentes institucionales, normativas y academicas verificables \\citep{{{cita
             "slug": profile.slug,
             "title": profile.title,
             "activity_number": profile.activity_number,
+            "artifact_contract": subject_artifact_contract(target_dir),
             "files": [
                 f"{profile.slug}.bib",
                 f"reporte-{profile.slug}.tex",
@@ -784,14 +787,8 @@ con fuentes institucionales, normativas y academicas verificables \\citep{{{cita
                 f"COMPILACION-{profile.slug}.md",
                 "README.md",
             ],
-            "folders": [
-                f"referencias-{profile.slug}",
-              f"referencias-{profile.slug}/notas-{profile.slug}",
-                f"planeaciones-{profile.slug}",
-                f"assets-{profile.slug}",
-              "extractor-aulatex",
-              "investigacion-aulatex",
-            ],
+            "folders": [folder.relative_to(target_dir).as_posix()
+                        for folder in subject_layout(target_dir).values()],
             "memory_summary": self._memory_list(memory, "summary", 8),
         }
         return json.dumps(payload, ensure_ascii=False, indent=2)

@@ -1,0 +1,106 @@
+% !TeX program = xelatex
+\documentclass[12pt,spanish,letterpaper,oneside]{article}
+\PassOptionsToPackage{es-noshorthands}{babel}
+\def\documenttitle{Contaminación ambiental, degradación edáfica y crisis de los recursos hídricos en el agroecosistema de Nuevo León}
+\def\documentsubtitle{Evidencia 2 --- Ensayo académico sobre ambiente y sustentabilidad (Fase 2)}
+\def\documentsubject{Responsabilidad Social y Desarrollo Sustentable --- Ingeniero Agrónomo}
+\def\documentauthor{Carlos Mauricio Carvajal Coronado}
+\def\coursename{Responsabilidad Social y Desarrollo Sustentable}
+\def\coursecode{REF\#261013755032}
+\def\universityname{Universidad Autónoma de Nuevo León}
+\def\universityfaculty{Facultad de Agronomía}
+\def\universitydepartment{Ingeniero Agrónomo}
+\def\universitydepartmentimage{departamentos/logos-institucionales.pdf}
+\def\universitydepartmentimagecfg{height=2.1cm}
+\def\universitylocation{General Escobedo / Marín, Nuevo León, México}
+\def\authortable{%
+	\begin{Form}
+	\begin{tabular}{@{}ll@{}}
+		\textbf{Estudiante:} & Carlos Mauricio Carvajal Coronado\\[0.35cm]
+		\textbf{Matrícula:} & 1977875\\[0.35cm]
+		\textbf{Docente Titular:} & Cavazos Galindo Jaime Manuel\\[0.35cm]
+		\textbf{Unidad de Aprendizaje:} & Responsabilidad Social y Desarrollo Sustentable (Evidencia 2 \textbar\ 12 Pts)\\[0.5cm]
+		\multicolumn{2}{l}{Fecha de realización: 14 de octubre de 2026}\\
+		\multicolumn{2}{l}{\universitylocation}
+	\end{tabular}
+	\end{Form}
+}
+
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\input{template}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
+\definecolor{uanlblue}{RGB}{0,55,108}
+\definecolor{tableblue}{RGB}{233,240,247}
+\def\portraittitlecolor{uanlblue}
+\def\sectioncolor{uanlblue}
+\def\ssectioncolor{uanlblue}
+\def\documenttitlehf{Responsabilidad Social: Evidencia 2 --- Ensayo de Contaminación Ambiental}
+\hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Carlos Mauricio Carvajal Coronado},pdftitle={Contaminación ambiental y degradación de suelos en Nuevo León},pdfsubject={Evidencia 2 - RSyDS UANL}}
+\addbibresource{UANL/ingeniero-agronomo/responsabilidad-social-y-desarrollo-sustentable/responsabilidad-social-y-desarrollo-sustentable.bib}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\setlength{\emergencystretch}{2.5em}
+
+\begin{document}
+\hypersetup{pageanchor=false}
+\begingroup
+\fontsize{14}{17}\selectfont
+\renewcommand{\Huge}{\fontsize{14}{17}\selectfont\bfseries}
+\renewcommand{\large}{\fontsize{14}{17}\selectfont}
+\templatePortrait
+\clearpage
+\endgroup
+\hypersetup{pageanchor=true}
+\templatePagecfg
+\singlespacing
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.18}
+
+\section*{Resumen}
+En el presente trabajo se formaliza la Evidencia 2 de la Unidad de Aprendizaje de Responsabilidad Social y Desarrollo Sustentable mediante un ensayo académico crítico enfocado en la degradación fisicoquímica de los suelos agrícolas y la contaminación difusa por agroquímicos en los valles productivos de Marín, Pesquería y Cadereyta, Nuevo León. A partir de los ocho Principios Básicos de la Naturaleza descritos por Alfaro Alfaro et al., se examina la perturbación antropogénica en los ciclos biogeoquímicos del nitrógeno y del fósforo provocada por la sobrefertilización inorgánica y la lixiviación de nitratos hacia mantos freáticos someros. Se analiza la corresponsabilidad socioambiental bajo el marco de la LGEEPA y los ODS 12 y 15 de la Agenda 2030, planteando alternativas agroecológicas de biorremediación y manejo regenerativo de suelos.
+
+\vspace{0.4cm}
+\noindent\textbf{Palabras clave:} Ensayo académico, degradación de suelos, ciclos biogeoquímicos, LGEEPA, principios de la naturaleza, agroecología regenerativa.
+
+\section{Introducción}
+El estado de Nuevo León enfrenta una encrucijada socioecológica sin precedentes. A la histórica aridez climática y recurrencia de sequías se suma la intensificación de las actividades agropecuarias e industriales en la periferia del Área Metropolitana de Monterrey \parencite{cantu2016}. En los distritos de riego y zonas de temporal de municipios como Marín, Doctor González y Cadereyta, la presión por rendimientos inmediatos ha desencadenado procesos severos de salinización secundaria, pérdida de materia orgánica y contaminación de acuíferos por escurrimientos agrícolas \parencite{conagua2023}. Este ensayo analiza las causas estructurales de esta problemática a la luz de los postulados del desarrollo sustentable y la responsabilidad social universitaria.
+
+\section{Perturbación de los Principios Básicos de la Naturaleza}
+De acuerdo con el modelo conceptual de \textcite{alfaro2014}, el funcionamiento de la biósfera está regulado por principios ecológicos invariantes que han sido ignorados por el modelo de agricultura convencional:
+\begin{enumerate}
+    \item \textbf{Primer Principio (Finitud del Ecosistema):} La Tierra es un sistema viviente caracterizado por recursos finitos y una tasa de regeneración limitada. En Nuevo León, la tasa de extracción de agua subterránea duplica la recarga media anual de los acuíferos del Río San Juan y Monterrey, provocando intrusión de aguas salobres profundas \parencite{conagua2023}.
+    \item \textbf{Segundo Principio (Estructura y Función):} Los ecosistemas dependen del reciclaje biogeoquímico cerrado. La aplicación masiva de fertilizantes sintéticos (urea y fosfato diamónico) satura la capacidad tampón del suelo, alterando el equilibrio bacteriano nitrificante y provocando la acidificación localizada del sustrato edáfico.
+    \item \textbf{Tercer Principio (Flujo de Energía):} La biosfera se autosustenta mediante el flujo unidireccional de energía solar capturada por los productores primarios. La degradación de la cubierta vegetal nativa por desmonte desmedido incrementa el albedo y favorece la erosión eólica severa.
+\end{enumerate}
+
+\section{Diagnóstico de la Contaminación Agrícola en el Noreste}
+La acumulación de nitratos ($\mathrm{NO}_3^-$) en pozos agrícolas supera frecuentemente el límite máximo permisible de $10\text{ mg/L}$ fijado para consumo humano y pecuario, detonando riesgos de metahemoglobinemia y bioacumulación en cadenas tróficas \parencite{cantu2016}. Asimismo, el uso recurrente de herbicidas organoclorados y organofosforados de persistencia prolongada sin tratamiento de envases vacíos incumple la normatividad federal, generando pasivos ambientales en las márgenes de arroyos y acequias de riego ejidal \parencite{semarnat2020}.
+
+\section{Marco Jurídico e Instrumentos de Política Ambiental}
+La \textcite{lgeepa2024} mandata en su Título Cuarto la prevención y control de la contaminación del suelo y los recursos hídricos. Entre los instrumentos aplicables destacan:
+\begin{itemize}
+    \item \textbf{Ordenamiento Ecológico del Territorio:} Delimitación de zonas de veda y protección de cuencas hidrológicas prioritarias.
+    \item \textbf{Normas Oficiales Mexicanas (NOM):} Cumplimiento estricto de la NOM-021-SEMARNAT-2000 para especificaciones de fertilidad y muestreo de suelos agrícolas, y NOM-001-SEMARNAT-2021 para límites de descargas en cuerpos receptores.
+    \item \textbf{Auditorías Ambientales Voluntarias:} Mecanismo concertado ante PROFEPA para certificar que las agroempresas procesadoras de cítricos y granos operen bajo esquemas de vertido cero.
+\end{itemize}
+
+\section{Propuesta Agronómica de Solución Regenerativa}
+Frente a la degradación edáfica, el Ingeniero Agrónomo egresado de la UANL debe liderar una transición técnica hacia la agroecología:
+\begin{itemize}
+    \item \textbf{Biofertilización y Compostaje Masivo:} Valorización de excretas ganaderas y residuos agroindustriales locales para reintegrar carbono orgánico al suelo (incrementando la materia orgánica del $0.8\%$ al $>2.5\%$).
+    \item \textbf{Labranza Mínima y Cultivos de Cobertura:} Empleo de leguminosas forrajeras (*Clitoria ternatea* y *Cajanus cajan*) que fijan nitrógeno atmosférico de forma biológica y reducen la evapotranspiración edáfica.
+    \item \textbf{Manejo Integrado de Plagas (MIP):} Sustitución de agroquímicos de banda roja por bioplaguicidas a base de *Bacillus thuringiensis* y extractos de *Azadirachta indica* (neem).
+\end{itemize}
+
+\section{Conclusiones}
+1. La sustentabilidad agropecuaria en Nuevo León no es una opción mercadológica, sino un imperativo biofísico de supervivencia; continuar con el agotamiento indiscriminado de agua y suelo amenaza la seguridad alimentaria regional.
+2. La responsabilidad social agronómica exige vincular la ciencia universitaria con las comunidades ejidales para restaurar el capital natural mediante prácticas agroecológicas y el cumplimiento del marco jurídico ambiental.
+
+\newpage
+\printbibliography[title={Referencias bibliográficas}]
+\end{document}
+

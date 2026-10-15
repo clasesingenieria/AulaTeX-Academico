@@ -30,7 +30,7 @@ def main():
     backup.mkdir(exist_ok=True)
     results = []
     for name in ["Tarea8_DeLaCruzMunoz_Revision-2026-10-10.docx", "Tarea11_DeLaCruzMunoz.docx"]:
-        path = SUBJECT / "Entregas" / name
+        path = SUBJECT / "entregas-seminario-i" / name
         old_hash = hashlib.sha256(path.read_bytes()).hexdigest()
         if (backup / name).exists():
             raise FileExistsError("Confirmaciones ya aplicadas; no duplicar contenido")

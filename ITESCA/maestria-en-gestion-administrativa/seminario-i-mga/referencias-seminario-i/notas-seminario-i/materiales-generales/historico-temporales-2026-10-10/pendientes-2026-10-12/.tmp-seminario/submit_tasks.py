@@ -13,7 +13,7 @@ with sync_playwright() as p:
         before=page.locator('body').inner_text()
         if 'Todavía no se han realizado envíos' not in before:
             print('STOP unexpected prior submission',mid,flush=True);break
-        path=ROOT/f'ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/entregas/Tarea{task}_DeLaCruzMunoz.docx'
+        path=ROOT/f'ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/entregas-seminario-i-seminario-i/Tarea{task}_DeLaCruzMunoz.docx'
         page.get_by_role('button',name='Agregar entrega',exact=True).click()
         page.get_by_title('Agregar...',exact=True).click()
         page.get_by_text('Subir un archivo',exact=True).click()

@@ -80,7 +80,7 @@ def main():
         parts = re.split(r"(\[@\w+\])", value)
         return "".join(r"\citepalias{" + part[2:-1] + "}" if part.startswith("[@") else tex_escape(part) for part in parts)
 
-    source = COURSE / "Entregas/reporte-plan-de-negocios-Actividad-11-AM-Taller.docx"
+    source = COURSE / "entregas-plan-de-negocios/reporte-plan-de-negocios-Actividad-11-AM-Taller.docx"
     source_hash = hashlib.sha256(source.read_bytes()).hexdigest()
     document = Document(source)
 

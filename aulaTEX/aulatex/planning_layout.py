@@ -7,7 +7,7 @@ import subprocess
 from pathlib import Path
 
 
-CONTRACT_VERSION = "1.0"
+CONTRACT_VERSION = "1.1"
 
 
 def subject_layout(target: Path) -> dict[str, Path]:
@@ -19,9 +19,44 @@ def subject_layout(target: Path) -> dict[str, Path]:
         "references": references,
         "notes": references / f"notas-{slug}",
         "assets": target / f"assets-{slug}",
+        "deliveries": target / f"entregas-{slug}",
         "extractions": target / "extractor-aulatex",
         "research": target / "investigacion-aulatex",
     }
+
+
+def subject_artifact_contract(target: Path) -> dict[str, object]:
+    target = target.resolve()
+    layout = subject_layout(target)
+    return {
+        "version": CONTRACT_VERSION,
+        "academic_materials_versioned": True,
+        "paths_relative_to_subject": {
+            key: path.relative_to(target).as_posix() for key, path in layout.items()
+        },
+        "deliverables_directory": layout["deliveries"].relative_to(target).as_posix(),
+        "source_directory": ".",
+    }
+
+
+def ensure_delivery_directory(target: Path) -> Path:
+    """Create the canonical delivery folder without replacing existing artifacts."""
+    target = target.resolve()
+    if not target.is_dir():
+        raise ValueError("La carpeta de materia debe existir.")
+    folder = subject_layout(target)["deliveries"]
+    _safe_child(target, folder.relative_to(target).as_posix())
+    folder.mkdir(parents=True, exist_ok=True)
+    index = folder / "README.md"
+    if not index.exists():
+        index.write_text(
+            f"# {folder.name}\n\n"
+            "Archivos seleccionados para la entrega de las actividades de esta materia.\n\n"
+            "Conservar el formato y nombre exigidos por cada consigna. "
+            "Las fuentes LaTeX y los archivos de trabajo permanecen en su ubicación editorial.\n",
+            encoding="utf-8",
+        )
+    return folder
 
 
 def _safe_child(root: Path, relative: str) -> Path:
@@ -92,13 +127,9 @@ def generate_plans(target: Path, source: Path, *, index_name: str = "README.md")
             raise ValueError("Cada actividad requiere requisitos o reactivos documentados.")
         filename = f"planeacion-modulo-{identifier}"
         document = dict(context, activity=activity)
-        document["artifact_contract"] = {
-            "version": CONTRACT_VERSION,
-            "academic_materials_versioned": True,
-            "paths_relative_to_subject": {key: path.relative_to(target).as_posix() for key, path in layout.items()},
-            "deliverables_directory": ".",
-            "mode": "normalizar_modelo_aportado",
-        }
+        document["artifact_contract"] = dict(
+            subject_artifact_contract(target), mode="normalizar_modelo_aportado"
+        )
         title = " ".join(activity["title"].splitlines())
         markdown = f"# Planeación - {title}\n\nModelo aportado; no implica aprobación docente ni entrega.\n"
         for key, value in document.items():
@@ -119,6 +150,7 @@ def generate_plans(target: Path, source: Path, *, index_name: str = "README.md")
         "assets": "Imágenes y recursos gráficos de la materia, con procedencia y derechos de uso.",
         "extractions": "Extracciones y fichas con su fuente y localizador. Este índice no acredita una extracción realizada.",
         "research": "Análisis y evidencias de investigación. Este índice no acredita trabajo de campo ni resultados.",
+        "deliveries": "Archivos seleccionados para entregar, con el formato y nombre exigidos por cada consigna. Las fuentes editables mantienen su ubicación editorial.",
     }
     for key, description in descriptions.items():
         support_index = _safe_child(target, (layout[key] / "README.md").relative_to(target).as_posix())

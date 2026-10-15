@@ -10,4 +10,4 @@
 - [Inventario de libros](referencias-examen-ingreso-comprension-lectora/inventario-libros.json).
 - [Fuentes y límites](referencias-examen-ingreso-comprension-lectora/notas-examen-ingreso-comprension-lectora/actividad-01-investigacion/fuentes-y-alcance.md).
 
-`Entregas` queda reservado para exportaciones que exija una consigna real; no se inventa formato de envío. La bibliografía PDF local está en `libros-examen-ingreso-comprension-lectora`; notas, soluciones y originales históricos en `notas-examen-ingreso-comprension-lectora`. No se redistribuyen libros por el hecho de organizarlos.
+`entregas-examen-ingreso-comprension-lectora` queda reservado para exportaciones que exija una consigna real; no se inventa formato de envío. La bibliografía PDF local está en `libros-examen-ingreso-comprension-lectora`; notas, soluciones y originales históricos en `notas-examen-ingreso-comprension-lectora`. No se redistribuyen libros por el hecho de organizarlos.

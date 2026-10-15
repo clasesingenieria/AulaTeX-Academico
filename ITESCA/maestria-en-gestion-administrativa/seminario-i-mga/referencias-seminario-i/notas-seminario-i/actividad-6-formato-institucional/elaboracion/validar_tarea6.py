@@ -16,7 +16,7 @@ from PIL import Image, ImageDraw
 from generar_tarea6 import edited_text
 
 ROOT = Path(__file__).resolve().parent
-FINAL = ROOT.parents[3] / "entregas" / "Tarea6_DeLaCruzMunoz.docx"
+FINAL = ROOT.parents[3] / "entregas-seminario-i" / "Tarea6_DeLaCruzMunoz.docx"
 CHECK = ROOT / "validacion"
 PDF = CHECK / "Tarea6_DeLaCruzMunoz_revision.pdf"
 

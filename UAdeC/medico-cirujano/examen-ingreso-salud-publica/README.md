@@ -10,4 +10,4 @@
 - [Inventario de libros](referencias-examen-ingreso-salud-publica/inventario-libros.json).
 - [Fuentes y límites](referencias-examen-ingreso-salud-publica/notas-examen-ingreso-salud-publica/actividad-01-investigacion/fuentes-y-alcance.md).
 
-`Entregas` queda reservado para exportaciones que exija una consigna real; no se inventa formato de envío. La bibliografía PDF local está en `libros-examen-ingreso-salud-publica`; notas, soluciones y originales históricos en `notas-examen-ingreso-salud-publica`. No se redistribuyen libros por el hecho de organizarlos.
+`entregas-examen-ingreso-salud-publica` queda reservado para exportaciones que exija una consigna real; no se inventa formato de envío. La bibliografía PDF local está en `libros-examen-ingreso-salud-publica`; notas, soluciones y originales históricos en `notas-examen-ingreso-salud-publica`. No se redistribuyen libros por el hecho de organizarlos.

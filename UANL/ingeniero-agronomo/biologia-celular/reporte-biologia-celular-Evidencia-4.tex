@@ -1,0 +1,109 @@
+% !TeX program = xelatex
+\documentclass[12pt,spanish,letterpaper,oneside]{article}
+\PassOptionsToPackage{es-noshorthands}{babel}
+\def\documenttitle{Cuadro comparativo analítico: Estructura, fisiología de membranas, organelos y citoesqueleto vegetal versus animal}
+\def\documentsubtitle{Evidencia 4 --- Análisis ultraestructural y funcional comparativo (Fase 3)}
+\def\documentsubject{Biología Celular --- Ingeniero Agrónomo}
+\def\documentauthor{Carlos Mauricio Carvajal Coronado}
+\def\coursename{Biología Celular}
+\def\coursecode{REF\#261013755061}
+\def\universityname{Universidad Autónoma de Nuevo León}
+\def\universityfaculty{Facultad de Agronomía}
+\def\universitydepartment{Ingeniero Agrónomo}
+\def\universitydepartmentimage{departamentos/logos-institucionales.pdf}
+\def\universitydepartmentimagecfg{height=2.1cm}
+\def\universitylocation{General Escobedo / Marín, Nuevo León, México}
+\def\authortable{%
+	\begin{Form}
+	\begin{tabular}{@{}ll@{}}
+		\textbf{Estudiante:} & Carlos Mauricio Carvajal Coronado\\[0.35cm]
+		\textbf{Matrícula:} & 1977875\\[0.35cm]
+		\textbf{Docente Titular:} & Dr. Miguel Ángel Dector Carrillo\\[0.35cm]
+		\textbf{Unidad de Aprendizaje:} & Biología Celular (Evidencia 4 \textbar\ 6 Pts)\\[0.5cm]
+		\multicolumn{2}{l}{Fecha de realización: 14 de octubre de 2026}\\
+		\multicolumn{2}{l}{\universitylocation}
+	\end{tabular}
+	\end{Form}
+}
+
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\input{template}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
+\definecolor{uanlblue}{RGB}{0,55,108}
+\definecolor{tableblue}{RGB}{233,240,247}
+\def\portraittitlecolor{uanlblue}
+\def\sectioncolor{uanlblue}
+\def\ssectioncolor{uanlblue}
+\def\documenttitlehf{Biología Celular: Evidencia 4 --- Cuadro Comparativo Vegetal vs. Animal}
+\hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Carlos Mauricio Carvajal Coronado},pdftitle={Cuadro comparativo estructural y fisiológico vegetal y animal},pdfsubject={Evidencia 4 - Biología Celular UANL}}
+\addbibresource{UANL/ingeniero-agronomo/biologia-celular/biologia-celular.bib}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\setlength{\emergencystretch}{2.5em}
+
+\begin{document}
+\hypersetup{pageanchor=false}
+\begingroup
+\fontsize{14}{17}\selectfont
+\renewcommand{\Huge}{\fontsize{14}{17}\selectfont\bfseries}
+\renewcommand{\large}{\fontsize{14}{17}\selectfont}
+\templatePortrait
+\clearpage
+\endgroup
+\hypersetup{pageanchor=true}
+\templatePagecfg
+\singlespacing
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.18}
+
+\section*{Resumen}
+El presente reporte formaliza la Evidencia 4 de la Unidad de Aprendizaje de Biología Celular mediante un análisis comparativo y crítico exhaustivo entre la célula eucariota vegetal (modelo del mesófilo foliar y célula oclusiva) y la célula eucariota animal de interés agropecuario (modelo de hepatocito bovino). Se contrasta la ultraestructura de la membrana plasmática, destacando la presencia de fitoesteroles frente al colesterol animal, así como el generador primario del potencial electroquímico de transmembrana (bomba electrogénica $H^+$-ATPasa en vegetales vs. bomba $Na^+/K^+$-ATPasa en animales). Asimismo, se analizan los organelos metabólicos exclusivos (plastidios, glioxisomas y vacuola central con tonoplasto frente a lisosomas y centriolos animales) y las divergencias en la dinámica del citoesqueleto durante la citoquinesis (placa celular guiada por fragmoplasto vs. anillo contráctil de actina y miosina).
+
+\vspace{0.4cm}
+\noindent\textbf{Palabras clave:} Célula vegetal, célula animal, fitoesteroles, bomba electrogénica, fragmoplasto, tonoplasto, agronomía comparada.
+
+\section{Introducción y Justificación Comparada}
+El diseño de estrategias biotecnológicas y de manejo zootécnico y agronómico en el campo exige un conocimiento minucioso de las similitudes y divergencias funcionales entre células vegetales y animales \parencite{alberts2015}. Mientras que las plantas son organismos sésiles, fotoautótrofos y osmótrofos sometidos a presiones de turgencia hidrostática extremas ($0.5-2.0\text{ MPa}$), los animales domésticos son heterótrofos móviles con células osmóticamente isotónicas respecto a su medio extracelular \parencite{taiz2015, lodish2016}.
+
+\section{Cuadro Comparativo Estructural y Funcional}
+
+\begin{table}[h!]
+\centering
+\footnotesize
+\begin{tabularx}{\textwidth}{lYY}
+\toprule
+\textbf{Componente Subcelular} & \textbf{Célula Vegetal (Ej. Célula Mesófila / Oclusiva)} & \textbf{Célula Animal (Ej. Hepatocito Bovino)} \\
+\midrule
+\textbf{Pared Celular y Matriz} & Pared extracelular rígida de celulosa, hemicelulosas y pectinas; resiste turgencia. & Ausente; matriz extracelular glicoproteica rica en colágeno, fibronectina y laminina. \\
+\textbf{Esteroles de Membrana} & Fitoesteroles (estigmasterol, $\beta$-sitosterol y campesterol); confieren fluidez térmica. & Colesterol abundante; modula la rigidez y forma microdominios de balsas lipídicas. \\
+\textbf{Gradiente Electrogénico} & Bomba primaria de protones $H^+$-ATPasa (genera $\Delta\psi \approx -120$ a $-180\text{ mV}$). & Bomba electrogénica $Na^+/K^+$-ATPasa (genera $\Delta\psi \approx -60$ a $-90\text{ mV}$). \\
+\textbf{Compartimento Vacuolar} & Vacuola central única grande ($80-90\%$ del volumen); tonoplasto con acuaporinas TIP. & Vacuolas pequeñas temporales de pinocitosis o fagocitosis; lisosomas degradativos. \\
+\textbf{Bioenergética} & Cloroplastos fotosintéticos y mitocondrias con respiración alternativa (AOX). & Exclusivamente mitocondrias respiratorias con fosforilación oxidativa canónica. \\
+\textbf{Peroxisomas Especiales} & Glioxisomas activos en semillas (ciclo del glioxilato para convertir lípidos en glúcidos). & Peroxisomas estándar oxidativos con catalasa para degradación de $\beta$-oxidación y alcohol. \\
+\textbf{Organización Centrosomal} & Carece de centrosomas con centriolos; MTOCs difusos asociados a la envoltura nuclear. & Par de centriolos cilíndricos perpendiculares integrados por 9 tripletes de microtúbulos. \\
+\textbf{Citoquinesis Mitótica} & Centrífuga; formación de placa celular y fragmoplasto guiado por microtúbulos. & Centrípeta; estrangulamiento por anillo contráctil cortical de filamentos de actomiosina. \\
+\textbf{Comunicación Directa} & Plasmodesmos continuos atravesados por el desmotúbulo del retículo endoplásmico. & Uniones comunicantes tipo hendidura (\textit{gap junctions}) formadas por conexinas. \\
+\bottomrule
+\end{tabularx}
+\caption{Matriz comparativa exhaustiva de citoarquitectura y fisiología celular.}
+\end{table}
+
+\section{Discusión Fisiológica de las Diferencias}
+\subsection{La Regulación de la Turgencia Edáfica}
+En las plantas cultivadas, la combinación sinérgica entre la pared celular y la vacuola central permite acumular iones inorgánicos ($K^+, NO_3^-, Cl^-$) y azúcares solubles en el lumen vacuolar. Esto disminuye el potencial osmótico ($\Psi_s$) celular, provocando la entrada masiva de agua por endósmosis hasta equilibrarse con la presión de turgencia mecánica ($\Psi_p$) de la pared \parencite{taiz2015}. Este mecanismo posibilita la apertura estomática, la erección foliar y el crecimiento por elongación celular, fenómenos ausentes en células animales que se lisarían bajo presiones hipoosmóticas similares \parencite{karp2014}.
+
+\subsection{El Gradiente de Protones como Motor Secundario}
+En las células vegetales, el gradiente electroquímico generado por la extrusión activa de protones ($H^+$) mediante la $H^+$-ATPasa de membrana plasmática sirve de fuerza motriz protónica (FMP) para alimentar transportadores secundarios simporte ($H^+/\text{sacarosa}$, $H^+/\text{aminoácidos}$, $H^+/NO_3^-$) y antiporte ($H^+/Na^+$ tipo NHX vacuolar), indispensable para la tolerancia a suelos salinos en el noreste mexicano \parencite{alberts2015}.
+
+\section{Conclusiones}
+1. El cuadro comparativo confirma que las adaptaciones vegetales responden a su condición sésil y fotoautótrofa, priorizando el soporte mecánico y la economía hídrica.
+2. La comprensión de los transportadores y del fragmoplasto aporta herramientas operativas para interpretar el crecimiento de cultivos y la interacción con plaguicidas de acción selectiva.
+
+\newpage
+\printbibliography[title={Referencias bibliográficas}]
+\end{document}
+

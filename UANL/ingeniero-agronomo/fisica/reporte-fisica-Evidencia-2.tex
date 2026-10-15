@@ -1,0 +1,144 @@
+% !TeX program = xelatex
+\documentclass[12pt,spanish,letterpaper,oneside]{article}
+\PassOptionsToPackage{es-noshorthands}{babel}
+\def\documenttitle{Mecánica de fluidos y termodinámica aplicada al diseño de fertirriego y microclima en invernaderos}
+\def\documentsubtitle{Evidencia 2 --- Diagrama radial y modelación termohidráulica agronómica (Fase 2)}
+\def\documentsubject{Física --- Ingeniero Agrónomo}
+\def\documentauthor{Carlos Mauricio Carvajal Coronado}
+\def\coursename{Física}
+\def\coursecode{REF\#261013755808}
+\def\universityname{Universidad Autónoma de Nuevo León}
+\def\universityfaculty{Facultad de Agronomía}
+\def\universitydepartment{Ingeniero Agrónomo}
+\def\universitydepartmentimage{departamentos/logos-institucionales.pdf}
+\def\universitydepartmentimagecfg{height=2.1cm}
+\def\universitylocation{General Escobedo / Marín, Nuevo León, México}
+\def\authortable{%
+	\begin{Form}
+	\begin{tabular}{@{}ll@{}}
+		\textbf{Estudiante:} & Carlos Mauricio Carvajal Coronado\\[0.35cm]
+		\textbf{Matrícula:} & 1977875\\[0.35cm]
+		\textbf{Docente Titular:} & Garza Valverde Elizabeth\\[0.35cm]
+		\textbf{Unidad de Aprendizaje:} & Física (Evidencia 2 \textbar\ 10 Pts)\\[0.5cm]
+		\multicolumn{2}{l}{Fecha de realización: 14 de octubre de 2026}\\
+		\multicolumn{2}{l}{\universitylocation}
+	\end{tabular}
+	\end{Form}
+}
+
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\input{template}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
+\definecolor{uanlblue}{RGB}{0,55,108}
+\definecolor{tableblue}{RGB}{233,240,247}
+\def\portraittitlecolor{uanlblue}
+\def\sectioncolor{uanlblue}
+\def\ssectioncolor{uanlblue}
+\def\documenttitlehf{Física Agronómica: Evidencia 2 --- Fluidos y Termodinámica en Invernaderos}
+\hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Carlos Mauricio Carvajal Coronado},pdftitle={Mecánica de fluidos y termodinámica en fertirriego e invernaderos},pdfsubject={Evidencia 2 - Física UANL}}
+\addbibresource{UANL/ingeniero-agronomo/fisica/fisica.bib}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\setlength{\emergencystretch}{2.5em}
+
+\begin{document}
+\hypersetup{pageanchor=false}
+\begingroup
+\fontsize{14}{17}\selectfont
+\renewcommand{\Huge}{\fontsize{14}{17}\selectfont\bfseries}
+\renewcommand{\large}{\fontsize{14}{17}\selectfont}
+\templatePortrait
+\clearpage
+\endgroup
+\hypersetup{pageanchor=true}
+\templatePagecfg
+\singlespacing
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.18}
+
+\section*{Resumen}
+En el presente trabajo se formaliza la Evidencia 2 de la Unidad de Aprendizaje de Física mediante la articulación de un Diagrama Radial comprensivo y la modelación analítica de la mecánica de fluidos y la transferencia térmica en una unidad de producción bajo cubierta (invernadero multitúnel) en Marín, Nuevo León. En la dimensión hidrodinámica se analizan los principios de continuidad, Bernoulli y Darcy-Weisbach en líneas matrices y emisores autocompensados de fertirriego. En la dimensión termodinámica se evalúa el balance de energía en estado cuasiestacionario considerando la radiación solar incidente, las pérdidas por conducción a través del polietileno térmico y la convección forzada impulsada por extractores mecánicos. Esta integración físico-agronómica optimiza la uniformidad del coeficiente de gasto ($CU > 92\%$) y el control microclimático del cultivo protegido.
+
+\vspace{0.4cm}
+\noindent\textbf{Palabras clave:} Diagrama radial, mecánica de fluidos, termodinámica de invernaderos, ecuación de Bernoulli, Darcy-Weisbach, balance de energía.
+
+\section{Introducción}
+La ingeniería de invernaderos y los sistemas modernos de fertirriego representan aplicaciones directas de las leyes clásicas de la mecánica de fluidos y la termodinámica \parencite{streeter1998,giancoli2008}. En las zonas semiáridas del estado de Nuevo León, donde la evapotranspiración potencial supera ampliamente la precipitación pluvial, el manejo eficiente del agua presurizada y la ventilación térmica son requisitos indispensables para garantizar la rentabilidad y productividad de hortalizas de alto valor \parencite{serway2018}.
+
+\section{Estructura Conceptual: Diagrama Radial}
+El diagrama radial sintetiza las interconexiones teóricas y operativas partiendo de un foco central integrado:
+\begin{itemize}
+    \item \textbf{Núcleo Central del Diagrama:} Física de Fluidos y Termodinámica en Horticultura Protegida.
+    \item \textbf{Eje Radial 1 --- Hidrodinámica y Conservación de Masa:} Ecuación de continuidad ($Q = A_1 v_1 = A_2 v_2$). Mantenimiento del caudal a través de contracciones y ramificaciones de tuberías de polietileno de alta densidad (PEAD).
+    \item \textbf{Eje Radial 2 --- Conservación de la Energía Mecánica:} Teorema de Bernoulli generalizado con pérdidas de carga locales y lineales:
+    \begin{equation}
+        \frac{P_1}{\rho g} + \frac{v_1^2}{2g} + z_1 + H_b = \frac{P_2}{\rho g} + \frac{v_2^2}{2g} + z_2 + h_f + \sum h_m
+    \end{equation}
+    \item \textbf{Eje Radial 3 --- Disipación Viscosa (Darcy-Weisbach):} Pérdidas por rozamiento en flujo laminar y turbulento ($h_f = f \frac{L}{D} \frac{v^2}{2g}$) según el número de Reynolds ($\mathrm{Re} = \frac{\rho v D}{\mu}$).
+    \item \textbf{Eje Radial 4 --- Primera Ley de la Termodinámica:} Balance de calor en el volumen de control del invernadero ($\Delta U = Q_{\text{neto}} - W$). Conservación de la energía térmica en el aire interior y sustrato.
+    \item \textbf{Eje Radial 5 --- Mecanismos de Transferencia de Calor:}
+    \begin{itemize}
+        \item Conducción (Ley de Fourier): $q_{\text{cond}} = -k A \frac{dT}{dx}$ a través de cubiertas plásticas.
+        \item Convección (Ley de enfriamiento de Newton): $q_{\text{conv}} = h_c A (T_s - T_\infty)$ mediante ventiladores y corriente eólica.
+        \item Radiación térmica (Stefan-Boltzmann y balance PAR): Intercambio de onda larga y absorción neta de radiación fotosintéticamente activa.
+    \end{itemize}
+\end{itemize}
+
+\section{Modelación Físico-Matemática Aplicada}
+
+\subsection{Hidráulica de Emisores en Fertirriego}
+Consideremos una subunidad de riego con laterales de PEAD de diámetro interior $D = 16\text{ mm}$ ($A = 2.01 \times 10^{-4}\text{ m}^2$) que alimentan goteros autocompensados espaciados cada $0.30\text{ m}$. Cada gotero opera con caudal constante $q_g = 2.0\text{ L/h}$ ($5.56 \times 10^{-7}\text{ m}^3\text{/s}$) bajo presiones de operación de $100\text{ a }300\text{ kPa}$.
+Para un lateral de $50\text{ m}$ con 166 goteros, el caudal inicial es:
+\begin{equation}
+    Q_0 = 166 \times 5.56 \times 10^{-7}\text{ m}^3\text{/s} = 9.23 \times 10^{-5}\text{ m}^3\text{/s} \quad (332.2\text{ L/h})
+\end{equation}
+La velocidad en la entrada del lateral:
+\begin{equation}
+    v_0 = \frac{Q_0}{A} = \frac{9.23 \times 10^{-5}}{2.01 \times 10^{-4}} = 0.459\text{ m/s}
+\end{equation}
+El número de Reynolds ($\rho = 1000\text{ kg/m}^3$, $\mu = 1.0 \times 10^{-3}\text{ Pa}\cdot\text{s}$):
+\begin{equation}
+    \mathrm{Re} = \frac{1000 \times 0.459 \times 0.016}{1.0 \times 10^{-3}} = 7,344 \quad (\text{Régimen turbulento hidrodinámico})
+\end{equation}
+Calculando el factor de fricción de Blasius para tubos lisos ($f = 0.316 \mathrm{Re}^{-0.25} = 0.316 \times (7344)^{-0.25} \approx 0.034$) y aplicando el factor de reducción de salidas múltiples de Christiansen ($F \approx 0.36$):
+\begin{equation}
+    h_f = F \cdot f \frac{L}{D} \frac{v_0^2}{2g} = 0.36 \times 0.034 \times \frac{50}{0.016} \times \frac{(0.459)^2}{2 \times 9.81} \approx 0.41\text{ m.c.a. } (4.02\text{ kPa})
+\end{equation}
+Esta pérdida de carga representa menos del $4\%$ de la presión nominal de trabajo ($150\text{ kPa}$), garantizando un coeficiente de uniformidad excelente.
+
+\subsection{Balance Térmico del Invernadero en Régimen Permanente}
+Para un invernadero de $500\text{ m}^2$ de superficie y volumen $V = 2,500\text{ m}^3$ en mediodía solar con radiación global exterior $G_s = 850\text{ W/m}^2$ y transmisividad del polietileno $\tau = 0.70$:
+La energía radiante absorbida por el dosel y piso ($A_{\text{suelo}} = 500\text{ m}^2$):
+\begin{equation}
+    Q_{\text{solar}} = \tau \cdot G_s \cdot A_{\text{suelo}} \cdot \alpha = 0.70 \times 850 \times 500 \times 0.85 = 252.88\text{ kW}
+\end{equation}
+La extracción de calor mediante renovación de aire por extractores axiales a razón de $N = 45\text{ renovaciones/hora}$ ($V_{\text{aire}} = 45 \times 2500 / 3600 = 31.25\text{ m}^3\text{/s}$):
+\begin{equation}
+    Q_{\text{vent}} = \dot{m} c_p (T_{\text{int}} - T_{\text{ext}}) = (\rho_{\text{aire}} V_{\text{aire}}) c_p \Delta T
+\end{equation}
+Con $\rho_{\text{aire}} = 1.18\text{ kg/m}^3$ y $c_p = 1005\text{ J/(kg}\cdot\text{K)}$:
+\begin{equation}
+    \dot{m} c_p = (1.18 \times 31.25) \times 1005 \approx 37,059\text{ W/K} \quad (37.06\text{ kW/}^\circ\text{C})
+\end{equation}
+Despreciando pérdidas menores por suelo y conducción en horas pico, la sobretemperatura interior $\Delta T$:
+\begin{equation}
+    \Delta T = \frac{Q_{\text{solar}} - Q_{\text{evap}}}{37.06\text{ kW/}^\circ\text{C}}
+\end{equation}
+Considerando que la transpiración del cultivo absorbe el $50\%$ de la carga solar como calor latente de evaporación ($Q_{\text{latente}} \approx 126.4\text{ kW}$):
+\begin{equation}
+    \Delta T = \frac{126.44\text{ kW}}{37.06\text{ kW/}^\circ\text{C}} \approx 3.41^\circ\text{C}
+\end{equation}
+Por tanto, si la temperatura ambiental en Marín es de $32.0^\circ\text{C}$, el microclima interior estabiliza a $35.4^\circ\text{C}$, dentro del rango seguro fisiológico \parencite{tipler2010}.
+
+\section{Conclusiones}
+1. El modelado radial de los fenómenos de transporte unifica la mecánica de fluidos con la termodinámica, demostrando que la presión hidrodinámica en laterales de fertirriego y la ventilación mecánica en invernaderos son variables acopladas que rigen la microfisiología vegetal.
+2. La aplicación de las fórmulas de continuidad y pérdida de carga asegura una dosificación hídrica uniforme en el agroecosistema, reduciendo mermas energéticas en las estaciones de bombeo.
+
+\newpage
+\printbibliography[title={Referencias bibliográficas}]
+\end{document}
+

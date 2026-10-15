@@ -10,7 +10,7 @@
 
 ## Estado
 
-Se preparó [Tarea6_DeLaCruzMunoz.docx](../../../../../entregas/Tarea6_DeLaCruzMunoz.docx).
+Se preparó [Tarea6_DeLaCruzMunoz.docx](../../../../../entregas-seminario-i/Tarea6_DeLaCruzMunoz.docx).
 También se prepararon la [versión LaTeX institucional](../../../../../reporte-seminario-i-Actividad-6.tex) y su [PDF compilado](../../../../../reporte-seminario-i-Actividad-6.pdf), solicitados como formato complementario. No sustituyen el Word requerido por la consigna.
 El aula mostraba **«Todavía no se han realizado envíos»** y **«Sin calificar»** al revisar la actividad. La preparación local no equivale a un envío: **no se ha subido ni enviado este documento**.
 

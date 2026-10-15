@@ -1,0 +1,122 @@
+% !TeX program = xelatex
+\documentclass[12pt,spanish,letterpaper,oneside]{article}
+\PassOptionsToPackage{es-noshorthands}{babel}
+\def\documenttitle{Las Leyes del Movimiento de Newton aplicadas a la tracción y laboreo de suelos agrícolas}
+\def\documentsubtitle{Evidencia 1 --- Mapa cognitivo tipo sol y análisis vectorial dinámico (Fase 1)}
+\def\documentsubject{Física --- Ingeniero Agrónomo}
+\def\documentauthor{Carlos Mauricio Carvajal Coronado}
+\def\coursename{Física}
+\def\coursecode{REF\#261013755808}
+\def\universityname{Universidad Autónoma de Nuevo León}
+\def\universityfaculty{Facultad de Agronomía}
+\def\universitydepartment{Ingeniero Agrónomo}
+\def\universitydepartmentimage{departamentos/logos-institucionales.pdf}
+\def\universitydepartmentimagecfg{height=2.1cm}
+\def\universitylocation{General Escobedo / Marín, Nuevo León, México}
+\def\authortable{%
+	\begin{Form}
+	\begin{tabular}{@{}ll@{}}
+		\textbf{Estudiante:} & Carlos Mauricio Carvajal Coronado\\[0.35cm]
+		\textbf{Matrícula:} & 1977875\\[0.35cm]
+		\textbf{Docente Titular:} & Garza Valverde Elizabeth\\[0.35cm]
+		\textbf{Unidad de Aprendizaje:} & Física (Evidencia 1 \textbar\ 10 Pts)\\[0.5cm]
+		\multicolumn{2}{l}{Fecha de realización: 14 de octubre de 2026}\\
+		\multicolumn{2}{l}{\universitylocation}
+	\end{tabular}
+	\end{Form}
+}
+
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\input{template}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
+\definecolor{uanlblue}{RGB}{0,55,108}
+\definecolor{tableblue}{RGB}{233,240,247}
+\def\portraittitlecolor{uanlblue}
+\def\sectioncolor{uanlblue}
+\def\ssectioncolor{uanlblue}
+\def\documenttitlehf{Física Agronómica: Evidencia 1 --- Leyes de Newton y Mecánica Agrícola}
+\hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Carlos Mauricio Carvajal Coronado},pdftitle={Leyes de Newton en maquinaria y tracción agrícola},pdfsubject={Evidencia 1 - Física UANL}}
+\addbibresource{UANL/ingeniero-agronomo/fisica/fisica.bib}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\setlength{\emergencystretch}{2.5em}
+
+\begin{document}
+\hypersetup{pageanchor=false}
+\begingroup
+\fontsize{14}{17}\selectfont
+\renewcommand{\Huge}{\fontsize{14}{17}\selectfont\bfseries}
+\renewcommand{\large}{\fontsize{14}{17}\selectfont}
+\templatePortrait
+\clearpage
+\endgroup
+\hypersetup{pageanchor=true}
+\templatePagecfg
+\singlespacing
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.18}
+
+\section*{Resumen}
+En el presente trabajo se formaliza la Evidencia 1 de la Unidad de Aprendizaje de Física mediante la estructuración conceptual de un Mapa Cognitivo Tipo Sol y el desarrollo cuantitativo vectorial de las Leyes del Movimiento de Isaac Newton aplicadas al laboreo primario mecanizado de suelos en el municipio de Marín, Nuevo León. Se analiza la interacción física del conjunto tractor agrícola--arado de vertederas operando sobre un suelo franco-arcilloso. A partir de diagramas de cuerpo libre (DCL), se desglosa el equilibrio traslacional inercial (Primera Ley), la aceleración y fuerza requerida en la barra de tiro para vencer la resistencia específica del suelo (Segunda Ley, $F_{\text{tiro}} = m a + R_{\text{rod}} + R_{\text{arado}}$) y el principio de acción y reacción en la interfase neumático--suelo (Tercera Ley), determinando la fuerza tangencial de tracción neta y el coeficiente de patinaje óptimo ($10-15\%$).
+
+\vspace{0.4cm}
+\noindent\textbf{Palabras clave:} Leyes de Newton, mapa cognitivo tipo sol, tracción agrícola, barra de tiro, resistencia edáfica, mecánica vectorial.
+
+\section{Introducción y Marco de la Mecanización Agronómica}
+La preparación de suelos para la siembra de granos básicos y forrajes en el noreste mexicano representa una de las operaciones agronómicas de mayor demanda energética \parencite{serway2018}. El uso ineficiente de la potencia tractora no sólo encarece el consumo de combustible diésel, sino que induce compactación excesiva subsuperficial (piso de arado), degradando la porosidad edáfica \parencite{giancoli2008}.
+
+Las tres leyes clásicas del movimiento formuladas por Isaac Newton proporcionan las herramientas analíticas indispensables para modelar las fuerzas acopladas entre la máquina agrícola y el medio biofísico \parencite{tipler2010}.
+
+\section{Estructura del Mapa Cognitivo Tipo Sol}
+El mapa cognitivo tipo sol organiza los conceptos radiales que emanan del núcleo central:
+\begin{itemize}
+    \item \textbf{Núcleo Solar Central:} Dinámica Newtoniana del Laboreo Agrícola.
+    \item \textbf{Rayo 1 (Inercia y Estado Estacionario):} Primera Ley de Newton ($\sum \mathbf{F} = \mathbf{0}$ a velocidad de labranza constante $v = 1.8\text{ m/s}$).
+    \item \textbf{Rayo 2 (Segunda Ley y Fuerza Neta):} $\mathbf{F}_{\text{neta}} = \frac{d\mathbf{p}}{dt} = m \mathbf{a}$. Demanda de tiro en función del ancho y profundidad de labor.
+    \item \textbf{Rayo 3 (Acción y Reacción):} Tercera Ley de Newton ($\mathbf{F}_{AB} = -\mathbf{F}_{BA}$). Fuerza propulsora generada por el par de torsión del eje motriz sobre el suelo.
+    \item \textbf{Rayo 4 (Fricción y Rodamiento):} Coeficiente de fricción estática ($\mu_s$) y dinámica ($\mu_k$); resistencia al rodamiento de neumáticos agrícolas ($R_{\text{rod}} = C_{rr} W_t$).
+    \item \textbf{Rayo 5 (Resistencia Específica del Suelo):} Esfuerzo de corte edáfico según el criterio de Mohr-Coulomb ($\tau = c + \sigma \tan \phi$).
+\end{itemize}
+
+\section{Modelación Vectorial del Caso de Estudio}
+\subsection{Parámetros Operativos del Sistema}
+Se modela un tractor agrícola de doble tracción asistida ($4\text{WD}$) con masa total cargada $m_t = 5,200\text{ kg}$ ($W_t = m_t g = 5,200 \times 9.81 = 51,012\text{ N}$), acoplado a un arado de 4 vertederas con ancho de corte efectivo $w = 1.4\text{ m}$ y profundidad de labor $d = 0.25\text{ m}$ ($A_{\text{labor}} = 0.35\text{ m}^2$) en un suelo arcilloso con resistencia específica unitaria $k_s = 65,000\text{ N/m}^2$ ($65\text{ kPa}$).
+
+\subsection{Ecuaciones de Movimiento y Fuerza en la Barra de Tiro}
+La resistencia total al avance del arado en régimen de velocidad constante ($a=0$) es:
+\begin{equation}
+    R_{\text{arado}} = k_s \cdot A_{\text{labor}} = 65,000\text{ N/m}^2 \times 0.35\text{ m}^2 = 22,750\text{ N} \quad (22.75\text{ kN})
+\end{equation}
+La fuerza de resistencia al rodamiento de las ruedas del tractor sobre terreno labrado blando ($C_{rr} \approx 0.12$):
+\begin{equation}
+    R_{\text{rod}} = C_{rr} \cdot W_t = 0.12 \times 51,012\text{ N} \approx 6,121.4\text{ N}
+\end{equation}
+Por la Primera Ley de Newton, la fuerza tangencial bruta de tracción generada por los neumáticos traseros y delanteros debe equilibrar exactamente ambas resistencias:
+\begin{equation}
+    F_{\text{tracción}} = R_{\text{arado}} + R_{\text{rod}} = 22,750 + 6,121.4 = 28,871.4\text{ N} \quad (28.87\text{ kN})
+\end{equation}
+
+\subsection{Tercera Ley y Patinaje de Ruedas}
+Por la Tercera Ley de Newton, para que el tractor avance hacia adelante con fuerza $F_{\text{tracción}}$, las ruedas motrices deben ejercer una fuerza de cizallamiento horizontal idéntica en sentido opuesto hacia atrás sobre el estrato de suelo.
+El límite de adherencia disponible sin falla catastrófica del suelo:
+\begin{equation}
+    F_{\text{máx}} = \mu_{\text{adherencia}} \cdot W_{\text{motriz}} = 0.65 \times (0.70 \times 51,012) \approx 23,210\text{ N por eje principal}
+\end{equation}
+El patinaje se calcula mediante la relación cinemática:
+\begin{equation}
+    s = \left( 1 - \frac{v_{\text{real}}}{v_{\text{teórica}}} \right) \times 100\%
+\end{equation}
+Mantener $s$ entre $10\%$ y $15\%$ garantiza máxima eficiencia de tracción y mínima disipación térmica de energía.
+
+\section{Conclusiones}
+1. La aplicación cuantitativa de las Leyes de Newton permitió dimensionar la fuerza de tiro requerida ($28.87\text{ kN}$), vinculando la física clásica al diseño mecánico agrícola.
+2. El análisis de fuerzas de acción y reacción demuestra la necesidad de lastrar adecuadamente el tractor para optimizar la adherencia y evitar el sobreconsumo de combustible.
+
+\newpage
+\printbibliography[title={Referencias bibliográficas}]
+\end{document}
+

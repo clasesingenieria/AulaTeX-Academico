@@ -4,8 +4,8 @@ Revisión del 30 de septiembre de 2026. La docente solicita aplicar el sondeo pr
 
 ## Archivos de trabajo
 
-- [Reporte revisado en Word](../../../../Entregas/reporte-plan-de-negocios-Actividad-10-AM-Taller-Revision.docx) y [PDF](../historico/pdf-raiz/reporte-plan-de-negocios-Actividad-10-AM-Taller-Revision.pdf): revisión metodológica, con los cuatro indicadores pendientes. Conserva las fuentes y la comparación de oferentes de la entrega original.
-- [Cuestionario para aplicar en Word](../../../../Entregas/Sondeo-AM-Taller-Aplicacion.docx) y [PDF para imprimir](../historico/pdf-raiz/Sondeo-AM-Taller-Aplicacion.pdf): dos páginas con consentimiento, filtros, reactivos separados y saltos.
+- [Reporte revisado en Word](../../../../entregas-plan-de-negocios/reporte-plan-de-negocios-Actividad-10-AM-Taller-Revision.docx) y [PDF](../historico/pdf-raiz/reporte-plan-de-negocios-Actividad-10-AM-Taller-Revision.pdf): revisión metodológica, con los cuatro indicadores pendientes. Conserva las fuentes y la comparación de oferentes de la entrega original.
+- [Cuestionario para aplicar en Word](../../../../entregas-plan-de-negocios/Sondeo-AM-Taller-Aplicacion.docx) y [PDF para imprimir](../historico/pdf-raiz/Sondeo-AM-Taller-Aplicacion.pdf): dos páginas con consentimiento, filtros, reactivos separados y saltos.
 - [Copia exacta de la entrega evaluada](entregado-reporte-plan-de-negocios-Actividad-10-AM-Taller.docx). SHA-256: `76a94b5853cea87dfcf9032dfda53fe1f6a2c7986a29bb6e70bc28a50df60d1f`.
 - [Estado recuperado del aula](retroalimentacion-aula.txt). El texto recuperado muestra el resumen del comentario; el contenido completo de la observación se revisó en las capturas proporcionadas por el usuario.
 

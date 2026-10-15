@@ -21,7 +21,7 @@ def main():
     data = json.loads((SUBJECT / "referencias-seminario-i/notas-seminario-i/actividad-10-objetivos/elaboracion-vtaxi-2026-09-28/actividad-10-revisada.json").read_text(encoding="utf-8"))
     previous = OUTPUT / "antes-retroalimentacion"
     old_data = json.loads((previous / "actividad-10-revisada.json").read_text(encoding="utf-8"))
-    original = SUBJECT / "entregas/Tarea9_DeLaCruzMunoz.docx"
+    original = SUBJECT / "entregas-seminario-i/Tarea9_DeLaCruzMunoz.docx"
     original_hash = hashlib.sha256(original.read_bytes()).hexdigest()
     working = SUBJECT / "referencias-seminario-i/notas-seminario-i/actividad-10-objetivos/elaboracion-vtaxi-2026-09-28/base-T9-corregida-para-T10.docx"
     document = Document(original)
@@ -36,7 +36,7 @@ def main():
     assert [paragraph.text for paragraph in changed.paragraphs if paragraph.text not in additions] == [paragraph.text for paragraph in Document(original).paragraphs]
     render_data = deepcopy(data)
     render_data["content"]["chapter3_alignment"] += "\n\n" + data["administrative_indicators"]
-    word = SUBJECT / "entregas/Tarea10_DeLaCruzMunoz_Revision-2026-10-04.docx"
+    word = SUBJECT / "entregas-seminario-i/Tarea10_DeLaCruzMunoz_Revision-2026-10-04.docx"
     receipt = build_objectives_docx(working, render_data, word)
     formatted = Document(word)
     objective_texts = [data["content"]["general_objective"]] + [f"{number}. {text}" for number, text in enumerate(data["content"]["specific_objectives"], 1)]

@@ -10,7 +10,7 @@ Actualizado: 10 de octubre de 2026. UnADM, Licenciatura en Derecho, grupo 005, c
 
 ## Sistema de identificacion
 
-Los reportes internos se numeran consecutivamente por producto: actividades 1 y 2 para semana 1; actividades 3 y 4 para semana 2. La numeracion interna no sustituye el nombre ni el numero oficial de la plataforma. Los archivos de envio se preparan en `Entregas` con la identificacion, formato y nombre que exija cada docente.
+Los reportes internos se numeran consecutivamente por producto: actividades 1 y 2 para semana 1; actividades 3 y 4 para semana 2. La numeracion interna no sustituye el nombre ni el numero oficial de la plataforma. Los archivos de envio se preparan en `entregas-antecedentes-de-los-derechos-humanos` con la identificacion, formato y nombre que exija cada docente.
 
 | Reporte interno acordado | Semana y producto | Identificacion oficial | Modulo Moodle | Modalidad | Archivo para adjuntar |
 | --- | --- | --- | --- | --- | --- |
@@ -49,16 +49,16 @@ Estados de control: `pendiente`, `en elaboracion`, `revisado localmente`, `prepa
 
 ## Carpeta Entregas
 
-`Entregas` contiene exclusivamente versiones para adjuntar, no los reportes internos de todos los productos. En este conjunto solo la resena, actividad interna 3 y oficial 1, requiere un archivo de envio. Cuestionario y foros se realizan en la plataforma; sus reportes internos documentan el trabajo, no se adjuntan salvo nueva instruccion docente.
+`entregas-antecedentes-de-los-derechos-humanos` contiene exclusivamente versiones para adjuntar, no los reportes internos de todos los productos. En este conjunto solo la resena, actividad interna 3 y oficial 1, requiere un archivo de envio. Cuestionario y foros se realizan en la plataforma; sus reportes internos documentan el trabajo, no se adjuntan salvo nueva instruccion docente.
 
 - Conservar TEX y PDF internos en la carpeta de materia con la numeracion propia.
-- Preparar en `Entregas` el PDF o Word exigido, usando el numero oficial en su identificacion y la nomenclatura docente comprobada. No inventar un nombre obligatorio si no esta documentado.
+- Preparar en `entregas-antecedentes-de-los-derechos-humanos` el PDF o Word exigido, usando el numero oficial en su identificacion y la nomenclatura docente comprobada. No inventar un nombre obligatorio si no esta documentado.
 - No convertir a Word por defecto: LaTeX sigue siendo la fuente principal. Crear una version Word solo cuando se solicite.
-- Estar en `Entregas` significa preparado para adjuntar, NO enviado. No colocar aqui una version que incumpla un requisito conocido sin identificarla expresamente como no apta.
+- Estar en `entregas-antecedentes-de-los-derechos-humanos` significa preparado para adjuntar, NO enviado. No colocar aqui una version que incumpla un requisito conocido sin identificarla expresamente como no apta.
 - Antes de enviar: verificar modulo, nombre, formato, identidad, extension, contenido y correspondencia con la fuente interna. Registrar hash y fecha del archivo final para identificar exactamente la version enviada.
 - Conservar comprobantes en referencias del producto, separados de los archivos preparados; nunca guardar credenciales o cookies.
 
-Por solicitud del usuario, se copio la resena interna 3 a [Actividad-1-Resena-critica-de-video-Martin-Jonathan-de-la-Cruz.pdf](Entregas/Actividad-1-Resena-critica-de-video-Martin-Jonathan-de-la-Cruz.pdf). La copia se verifico por SHA-256 y no se envio. El nombre distingue la Actividad 1 oficial; es una nomenclatura descriptiva local, no un nombre obligatorio docente acreditado. Renombrar no cambia la identificacion interior, que conserva Actividad 3 del reporte interno.
+Por solicitud del usuario, se copio la resena interna 3 a [Actividad-1-Resena-critica-de-video-Martin-Jonathan-de-la-Cruz.pdf](entregas-antecedentes-de-los-derechos-humanos/Actividad-1-Resena-critica-de-video-Martin-Jonathan-de-la-Cruz.pdf). La copia se verifico por SHA-256 y no se envio. El nombre distingue la Actividad 1 oficial; es una nomenclatura descriptiva local, no un nombre obligatorio docente acreditado. Renombrar no cambia la identificacion interior, que conserva Actividad 3 del reporte interno.
 
 Estado: copia disponible, pendiente de adecuacion, NO certificada apta. Tiene seis paginas totales: portada, cuatro de contenido y referencias; excede el maximo docente de tres paginas de contenido. Antes de enviar deben ajustarse extension e identificacion interior oficial, conservando aparte el original interno.
 

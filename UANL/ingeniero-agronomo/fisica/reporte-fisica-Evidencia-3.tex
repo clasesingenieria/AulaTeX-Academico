@@ -1,0 +1,134 @@
+% !TeX program = xelatex
+\documentclass[12pt,spanish,letterpaper,oneside]{article}
+\PassOptionsToPackage{es-noshorthands}{babel}
+\def\documenttitle{Electromagnetismo y sensórica aplicada al monitoreo espectral y humedad edáfica en agricultura de precisión}
+\def\documentsubtitle{Evidencia 3 --- Reporte analítico QQQ (Qué veo, Qué no veo, Qué infiero) (Fase 3)}
+\def\documentsubject{Física --- Ingeniero Agrónomo}
+\def\documentauthor{Carlos Mauricio Carvajal Coronado}
+\def\coursename{Física}
+\def\coursecode{REF\#261013755808}
+\def\universityname{Universidad Autónoma de Nuevo León}
+\def\universityfaculty{Facultad de Agronomía}
+\def\universitydepartment{Ingeniero Agrónomo}
+\def\universitydepartmentimage{departamentos/logos-institucionales.pdf}
+\def\universitydepartmentimagecfg{height=2.1cm}
+\def\universitylocation{General Escobedo / Marín, Nuevo León, México}
+\def\authortable{%
+	\begin{Form}
+	\begin{tabular}{@{}ll@{}}
+		\textbf{Estudiante:} & Carlos Mauricio Carvajal Coronado\\[0.35cm]
+		\textbf{Matrícula:} & 1977875\\[0.35cm]
+		\textbf{Docente Titular:} & Garza Valverde Elizabeth\\[0.35cm]
+		\textbf{Unidad de Aprendizaje:} & Física (Evidencia 3 \textbar\ 10 Pts)\\[0.5cm]
+		\multicolumn{2}{l}{Fecha de realización: 14 de octubre de 2026}\\
+		\multicolumn{2}{l}{\universitylocation}
+	\end{tabular}
+	\end{Form}
+}
+
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\input{template}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
+\definecolor{uanlblue}{RGB}{0,55,108}
+\definecolor{tableblue}{RGB}{233,240,247}
+\def\portraittitlecolor{uanlblue}
+\def\sectioncolor{uanlblue}
+\def\ssectioncolor{uanlblue}
+\def\documenttitlehf{Física Agronómica: Evidencia 3 --- Electromagnetismo y Agricultura de Precisión}
+\hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Carlos Mauricio Carvajal Coronado},pdftitle={Electromagnetismo y sensórica en agricultura de precisión},pdfsubject={Evidencia 3 - Física UANL}}
+\addbibresource{UANL/ingeniero-agronomo/fisica/fisica.bib}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\setlength{\emergencystretch}{2.5em}
+
+\begin{document}
+\hypersetup{pageanchor=false}
+\begingroup
+\fontsize{14}{17}\selectfont
+\renewcommand{\Huge}{\fontsize{14}{17}\selectfont\bfseries}
+\renewcommand{\large}{\fontsize{14}{17}\selectfont}
+\templatePortrait
+\clearpage
+\endgroup
+\hypersetup{pageanchor=true}
+\templatePagecfg
+\singlespacing
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.18}
+
+\section*{Resumen}
+En el presente trabajo se formaliza la Evidencia 3 de la Unidad de Aprendizaje de Física mediante la formulación de un Reporte Analítico QQQ (Qué veo, Qué no veo, Qué infiero) centrado en el papel del electromagnetismo y la sensórica en la agricultura de precisión en los campos experimentales de la Facultad de Agronomía de la UANL (Marín, Nuevo León). Se analizan dos pilares físicos: 1) la propagación de ondas electromagnéticas e interacción fotónica con la vegetación (reflectancia espectral, absorción de clorofila y cálculo del índice NDVI mediante teledetección multiespectral); y 2) la permitividad dieléctrica de alta frecuencia ($50\text{--}100\text{ MHz}$) en sensores FDR y TDR para la determinación instantánea del contenido volumétrico de agua y conductividad eléctrica aparente del suelo. La articulación metódica QQQ permite conectar los datos de campo con las leyes fundamentales de Maxwell y Gauss.
+
+\vspace{0.4cm}
+\noindent\textbf{Palabras clave:} Reporte QQQ, electromagnetismo agronómico, ondas electromagnéticas, permitividad dieléctrica, índice NDVI, sensórica agrícola.
+
+\section{Introducción}
+El paradigma de la agricultura 4.0 se fundamenta en la adquisición masiva y precisa de datos biofísicos del cultivo y del suelo sin perturbar el agroecosistema \parencite{giancoli2008}. Desde la interacción de los fotones solares con los pigmentos fotosintéticos hasta la inducción electromagnética en solenoides y la polarización dieléctrica del agua en el suelo, las leyes del electromagnetismo clásico formuladas por James Clerk Maxwell constituyen el núcleo teórico de la instrumentación moderna en agronomía \parencite{serway2018,tipler2010}.
+
+\section{Fundamento Físico del Electromagnetismo Agrícola}
+
+\subsection{Espectro Electromagnético y Reflectancia Vegetal}
+Una onda electromagnética transversal está formada por campos $\mathbf{E}$ y $\mathbf{B}$ oscilantes perpendiculares a la dirección de propagación:
+\begin{equation}
+    c = \frac{1}{\sqrt{\mu_0 \varepsilon_0}} \approx 3 \times 10^8\text{ m/s}, \qquad c = \lambda f
+\end{equation}
+Cuando la radiación solar incide sobre el dosel de un cultivo (e.g. maíz o sorgo):
+\begin{itemize}
+    \item En la región visible (Red: $\lambda \approx 640\text{--}670\text{ nm}$), las clorofilas absorben entre el $85\%$ y el $90\%$ de los fotones para activar el fotosistema II.
+    \item En el infrarrojo cercano (NIR: $\lambda \approx 780\text{--}900\text{ nm}$), las paredes celulares del mesófilo esponjoso dispersan y refractan la radiación, generando una reflectancia de hasta el $50\%$.
+\end{itemize}
+El índice de vegetación de diferencia normalizada (NDVI) cuantifica este contraste radiométrico:
+\begin{equation}
+    \mathrm{NDVI} = \frac{\rho_{\mathrm{NIR}} - \rho_{\mathrm{Red}}}{\rho_{\mathrm{NIR}} + \rho_{\mathrm{Red}}}
+\end{equation}
+
+\subsection{Permitividad Dieléctrica Edáfica y Reflectometría}
+El agua pura posee una permitividad relativa $\varepsilon_w \approx 80$, mientras que los minerales del suelo seco poseen $\varepsilon_s \approx 3\text{--}5$ y el aire $\varepsilon_a \approx 1$.
+La ecuación empírica de Topp relaciona la permitividad dieléctrica aparente $\kappa_a$ con el contenido volumétrico de agua $\theta$ ($m^3\text{ de agua / }m^3\text{ de suelo}$):
+\begin{equation}
+    \theta = -0.053 + 0.0292 \kappa_a - 5.5 \times 10^{-4} \kappa_a^2 + 4.3 \times 10^{-6} \kappa_a^3
+\end{equation}
+Un sensor de reflectometría en el dominio de frecuencia (FDR) mide la frecuencia resonante de un circuito oscilador acoplado a guías metálicas de onda insertadas en el suelo:
+\begin{equation}
+    f_{\mathrm{osc}} = \frac{1}{2\pi \sqrt{L (C_0 + C_s)}}, \qquad C_s = g \varepsilon_0 \kappa_a
+\end{equation}
+
+\section{Matriz Analítica QQQ (Qué Veo, Qué No Veo, Qué Infiero)}
+A continuación se detalla la matriz analítica QQQ basada en un vuelo multiespectral con dron y monitoreo de sensores capacitivos en una parcela de 10 hectáreas de sorgo grano en Marín, N.L.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Matriz analítica QQQ sobre electromagnetismo y sensórica agronómica.}
+\label{tab:matriz-qqq}
+\begin{tabularx}{\textwidth}{@{}Y Y Y@{}}
+\toprule
+\textbf{1. ¿Qué Veo? (Datos observables)} & \textbf{2. ¿Qué No Veo? (Fenómenos físicos)} & \textbf{3. ¿Qué Infiero? (Conclusiones agronómicas)} \\
+\midrule
+- Mapas ráster de falso color generados con cámara multiespectral CMOS con valores NDVI entre 0.25 y 0.82. &
+- La interacción cuántica de los fotones incidentes de longitud de onda $660\text{ nm}$ excitando electrones en el anillo porfirínico del magnesio en la clorofila. &
+- Zonas de vigor foliar deficiente ($\mathrm{NDVI} < 0.40$) asociadas a deficiencias agudas de nitrógeno y pérdida de área foliar por estrés hídrico. \\
+\addlinespace
+- Lecturas digitales en pantalla de $18.5\%$ de humedad volumétrica de suelo a $20\text{ cm}$ de profundidad. &
+- La polarización molecular por orientación de los dipolos permanentes de $\mathrm{H}_2\mathrm{O}$ oscilando a un campo eléctrico alterno de $70\text{ MHz}$. &
+- El estrato radicular se encuentra por debajo del punto de marchitez permanente ($\mathrm{PMP} \approx 20\%$ en arcilla), requiriendo activación urgente del fertirriego. \\
+\addlinespace
+- Válvulas solenoides que abren y cierran el flujo de fertilizante al recibir pulsos de $12\text{ V DC}$. &
+- La fuerza magnetomotriz generada por la ley de Ampère ($\oint \mathbf{B}\cdot d\mathbf{l} = \mu_0 N I$) induciendo un campo magnético que desplaza un émbolo ferromagnético. &
+- La integración de telemetría y modulación por ancho de pulsos (PWM) permite aplicar dosis variable de fertilizante, ahorrando $22\%$ de insumos nitrogenados. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Conclusiones}
+1. El análisis metodológico QQQ pone de manifiesto que los parámetros agronómicos que se observan en pantalla son el resultado directo de fenómenos microscópicos y macroscópicos del electromagnetismo clásico y cuántico.
+2. La determinación de la permitividad dieléctrica y el espectro de reflectancia foliar facultan al agrónomo para transitar del empirismo visual al control físico cuantitativo, elevando la eficiencia hídrica y nutricional en los cultivos del noreste mexicano.
+
+\newpage
+\printbibliography[title={Referencias bibliográficas}]
+\end{document}
+

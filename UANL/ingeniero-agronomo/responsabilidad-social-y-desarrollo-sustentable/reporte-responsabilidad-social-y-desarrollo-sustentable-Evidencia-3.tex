@@ -1,0 +1,128 @@
+% !TeX program = xelatex
+\documentclass[12pt,spanish,letterpaper,oneside]{article}
+\PassOptionsToPackage{es-noshorthands}{babel}
+\def\documenttitle{Simulación y juego de roles en el análisis del conflicto socioambiental por el trasvase de agua El Cuchillo --- Distrito de Riego 026}
+\def\documentsubtitle{Evidencia 3 --- Reporte de simulación de conflicto agrario y negociación deliberativa (Fase 3)}
+\def\documentsubject{Responsabilidad Social y Desarrollo Sustentable --- Ingeniero Agrónomo}
+\def\documentauthor{Carlos Mauricio Carvajal Coronado}
+\def\coursename{Responsabilidad Social y Desarrollo Sustentable}
+\def\coursecode{REF\#261013755032}
+\def\universityname{Universidad Autónoma de Nuevo León}
+\def\universityfaculty{Facultad de Agronomía}
+\def\universitydepartment{Ingeniero Agrónomo}
+\def\universitydepartmentimage{departamentos/logos-institucionales.pdf}
+\def\universitydepartmentimagecfg{height=2.1cm}
+\def\universitylocation{General Escobedo / Marín, Nuevo León, México}
+\def\authortable{%
+	\begin{Form}
+	\begin{tabular}{@{}ll@{}}
+		\textbf{Estudiante:} & Carlos Mauricio Carvajal Coronado\\[0.35cm]
+		\textbf{Matrícula:} & 1977875\\[0.35cm]
+		\textbf{Docente Titular:} & Cavazos Galindo Jaime Manuel\\[0.35cm]
+		\textbf{Unidad de Aprendizaje:} & Responsabilidad Social y Desarrollo Sustentable (Evidencia 3 \textbar\ 12 Pts)\\[0.5cm]
+		\multicolumn{2}{l}{Fecha de realización: 14 de octubre de 2026}\\
+		\multicolumn{2}{l}{\universitylocation}
+	\end{tabular}
+	\end{Form}
+}
+
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\input{template}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
+\definecolor{uanlblue}{RGB}{0,55,108}
+\definecolor{tableblue}{RGB}{233,240,247}
+\def\portraittitlecolor{uanlblue}
+\def\sectioncolor{uanlblue}
+\def\ssectioncolor{uanlblue}
+\def\documenttitlehf{Responsabilidad Social: Evidencia 3 --- Simulación de Conflicto Socioambiental}
+\hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Carlos Mauricio Carvajal Coronado},pdftitle={Simulación de conflicto socioambiental por trasvase de agua},pdfsubject={Evidencia 3 - RSyDS UANL}}
+\addbibresource{UANL/ingeniero-agronomo/responsabilidad-social-y-desarrollo-sustentable/responsabilidad-social-y-desarrollo-sustentable.bib}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\setlength{\emergencystretch}{2.5em}
+
+\begin{document}
+\hypersetup{pageanchor=false}
+\begingroup
+\fontsize{14}{17}\selectfont
+\renewcommand{\Huge}{\fontsize{14}{17}\selectfont\bfseries}
+\renewcommand{\large}{\fontsize{14}{17}\selectfont}
+\templatePortrait
+\clearpage
+\endgroup
+\hypersetup{pageanchor=true}
+\templatePagecfg
+\singlespacing
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.18}
+
+\section*{Resumen}
+En el presente trabajo se formaliza la Evidencia 3 de la Unidad de Aprendizaje de Responsabilidad Social y Desarrollo Sustentable mediante un reporte analítico de Simulación y Juego de Roles en torno a uno de los conflictos socioambientales y agrarios más complejos del noreste de México: la disputa por el agua almacenada en la Presa El Cuchillo (China, Nuevo León) y su trasvase al Distrito de Riego 026 (Bajo Río San Juan, Tamaulipas). Se estructuran cuatro roles representativos (productores agrícolas del DR 026, organismo operador metropolitano SADM, autoridad federal CONAGUA y comunidades ejidales defensoras del caudal ecológico). A través de una metodología de mediación deliberativa fundamentada en la norma ISO 26000 y el desarrollo sustentable, se evalúan las tensiones entre seguridad alimentaria y derecho humano al agua, formulando un acuerdo vinculante de modernización hídrica, intercambio de aguas residuales tratadas y compensación ambiental de cuenca.
+
+\vspace{0.4cm}
+\noindent\textbf{Palabras clave:} Juego de roles, conflicto socioambiental, trasvase de agua, Distrito de Riego 026, ISO 26000, gobernanza del agua.
+
+\section{Contexto del Conflicto Socioambiental Agrario}
+En el marco del Convenio de Coordinación de 1996 entre el Gobierno Federal, el Gobierno de Nuevo León y el Gobierno de Tamaulipas, se estableció que si la Presa El Cuchillo cuenta con más de $315\text{ millones de m}^3$ al 31 de octubre y la Presa Marte R. Gómez en Tamaulipas almacena menos de $700\text{ millones de m}^3$, Nuevo León debe trasvasar el excedente para abastecer a más de 4,000 usuarios hidroagrícolas que cultivan 76,000 hectáreas de granos básicos en el DR 026 \parencite{conagua2023}.
+Sin embargo, el crecimiento metropolitano de Monterrey, la sequía recurrente y la construcción del acueducto El Cuchillo II han intensificado las presiones políticas y sociales para restringir el trasvase, provocando severas fricciones intersectoriales y agravando la incertidumbre de los agricultores de la cuenca baja \parencite{cantu2016}.
+
+\section{Diseño Metodológico del Juego de Roles}
+La actividad formativa asignó cuatro posturas antagónicas y complementarias a equipos de trabajo:
+
+\subsection{Rol 1: Productores Agrícolas del Distrito de Riego 026 (Tamaulipas)}
+\begin{itemize}
+    \item \textbf{Postura:} Exigencia de cumplimiento estricto del Convenio de 1996 y salvaguarda de sus derechos de concesión vigentes.
+    \item \textbf{Argumentos:} El sector agrícola genera alimentos estratégicos nacionales (maíz y sorgo). No cumplir el trasvase implica quiebra económica regional y vulneración de la certeza jurídica agraria.
+\end{itemize}
+
+\subsection{Rol 2: Servicios de Agua y Drenaje de Monterrey (Nuevo León)}
+\begin{itemize}
+    \item \textbf{Postura:} Prioridad ineludible al abasto de uso público urbano para más de 5.3 millones de ciudadanos.
+    \item \textbf{Argumentos:} El Artículo 4to Constitucional y la Ley de Aguas Nacionales establecen la primacía del consumo doméstico ante escenarios de emergencia y estiaje prolongado.
+\end{itemize}
+
+\subsection{Rol 3: Comisión Nacional del Agua (CONAGUA - Árbitro Federal)}
+\begin{itemize}
+    \item \textbf{Postura:} Imparcialidad técnica, balance hídrico de cuenca y aplicación del marco regulatorio federal.
+    \item \textbf{Argumentos:} Obligación de preservar la estabilidad hídrica integral, evitar conflictos de orden público y vigilar la capacidad de almacenamiento de los vasos de captación.
+\end{itemize}
+
+\subsection{Rol 4: Comunidades Ejidales Ribereñas y Ecologistas de la Cuenca}
+\begin{itemize}
+    \item \textbf{Postura:} Garantía del caudal ecológico mínimo del Río San Juan y restauración de humedales ribereños.
+    \item \textbf{Argumentos:} Las presas y extracciones han secado tramos enteros del río, extinguiendo fauna nativa y degradando las norias ejidales comunitarias.
+\end{itemize}
+
+\section{Matriz de Negociación y Acuerdos de Responsabilidad Social}
+Mediante una sesión de mesa redonda deliberativa guiada por los principios de la responsabilidad social (rendición de cuentas, transparencia, respeto a los derechos humanos y a la legalidad según la ISO 26000), se consensuó el siguiente acuerdo:
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Matriz de acuerdos de la simulación del conflicto hídrico El Cuchillo -- DR 026.}
+\label{tab:acuerdo-cuchillo}
+\begin{tabularx}{\textwidth}{@{}l Y Y@{}}
+\toprule
+\textbf{Eje de Compromiso} & \textbf{Acción Concertada} & \textbf{Responsable / Seguimiento} \\
+\midrule
+\textbf{Tecnificación del Riego} & Inversión conjunta federal-estatal de \$1,800 mdp para entubamiento de canales secundarios en el DR 026, reduciendo mermas por infiltración en $35\%$. & CONAGUA / Módulos de Riego DR 026. \\
+\addlinespace
+\textbf{Retorno de Agua Tratada} & Cumplimiento estricto del compromiso de devolver al río San Juan $189\text{ millones de m}^3\text{/año}$ de agua tratada con calidad NOM-001 desde las plantas Dulces Nombres y Pesquería. & SADM / SEMARNAT / PROFEPA. \\
+\addlinespace
+\textbf{Caudal Ecológico y Reforestación} & Establecimiento de un gasto ecológico continuo de $2.5\text{ m}^3\text{/s}$ y fondo ambiental para reforestar 15,000 ha de la cuenca alta con pináceas nativas. & Fideicomiso de Cuenca / Comunidades Ejidales / UANL. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Conclusiones}
+1. El ejercicio de simulación demostró que los conflictos socioambientales no pueden resolverse mediante imposiciones unilaterales ni judicialización polarizante, sino a través del diálogo informado y la corresponsabilidad social.
+2. Como profesionales de la agronomía, es imprescindible integrar la visión hidrológica y de cuenca, comprendiendo que la eficiencia en el uso del agua en parcelas es el verdadero garante de la paz y sustentabilidad regional.
+
+\newpage
+\printbibliography[title={Referencias bibliográficas}]
+\end{document}
+

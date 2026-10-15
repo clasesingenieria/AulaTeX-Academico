@@ -11,7 +11,7 @@ $record = Join-Path $PSScriptRoot 'absorcion-md.json'
 if (Test-Path -LiteralPath $record) { throw 'Absorcion ya registrada.' }
 $moves = @()
 $origins = @{}
-$protected = @(Get-ChildItem -LiteralPath (Join-Path $root 'Entregas') -File | ForEach-Object { @{archivo=[IO.Path]::GetRelativePath($root,$_.FullName);sha256=(Get-FileHash -LiteralPath $_.FullName).Hash} })
+$protected = @(Get-ChildItem -LiteralPath (Join-Path $root 'entregas-teoria-del-estado-y-constitucion') -File | ForEach-Object { @{archivo=[IO.Path]::GetRelativePath($root,$_.FullName);sha256=(Get-FileHash -LiteralPath $_.FullName).Hash} })
 foreach ($old in $map.Keys) {
     $source = Join-Path $root $old
     $target = Join-Path $root $map[$old]

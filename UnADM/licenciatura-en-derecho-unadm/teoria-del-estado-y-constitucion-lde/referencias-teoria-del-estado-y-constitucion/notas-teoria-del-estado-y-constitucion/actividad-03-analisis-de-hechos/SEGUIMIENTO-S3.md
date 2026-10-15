@@ -2,7 +2,7 @@
 
 Estado al 12 de octubre de 2026 (HC): borrador local, **no enviado**.
 Fuente editable: `../../../reporte-teoria-del-estado-y-constitucion-Actividad-3.tex`;
-PDF compilado: `../../../Entregas/2026_TeoriaEstado_S3_Martin Jonathan de la Cruz.pdf`.
+PDF compilado: `../../../entregas-teoria-del-estado-y-constitucion/2026_TeoriaEstado_S3_Martin Jonathan de la Cruz.pdf`.
 Verificar personalmente el juicio critico y el formato antes de una eventual entrega.
 
 ## Planificacion y aula

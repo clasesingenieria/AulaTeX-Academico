@@ -1,0 +1,118 @@
+% !TeX program = xelatex
+\documentclass[12pt,spanish,letterpaper,oneside]{article}
+\PassOptionsToPackage{es-noshorthands}{babel}
+\def\documenttitle{Sistemas celulares y acelulares: Fundamentos estructurales, evolutivos y relevancia fitopatológica}
+\def\documentsubtitle{Evidencia 1 --- Cuadríptico analítico y comparativo (Fase 1)}
+\def\documentsubject{Biología Celular --- Ingeniero Agrónomo}
+\def\documentauthor{Carlos Mauricio Carvajal Coronado}
+\def\coursename{Biología Celular}
+\def\coursecode{REF\#261013755061}
+\def\universityname{Universidad Autónoma de Nuevo León}
+\def\universityfaculty{Facultad de Agronomía}
+\def\universitydepartment{Ingeniero Agrónomo}
+\def\universitydepartmentimage{departamentos/logos-institucionales.pdf}
+\def\universitydepartmentimagecfg{height=2.1cm}
+\def\universitylocation{General Escobedo / Marín, Nuevo León, México}
+\def\authortable{%
+	\begin{Form}
+	\begin{tabular}{@{}ll@{}}
+		\textbf{Estudiante:} & Carlos Mauricio Carvajal Coronado\\[0.35cm]
+		\textbf{Matrícula:} & 1977875\\[0.35cm]
+		\textbf{Docente Titular:} & Dr. Miguel Ángel Dector Carrillo\\[0.35cm]
+		\textbf{Unidad de Aprendizaje:} & Biología Celular (Evidencia 1 \textbar\ 6 Pts)\\[0.5cm]
+		\multicolumn{2}{l}{Fecha de realización: 14 de octubre de 2026}\\
+		\multicolumn{2}{l}{\universitylocation}
+	\end{tabular}
+	\end{Form}
+}
+
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\input{template}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
+\definecolor{uanlblue}{RGB}{0,55,108}
+\definecolor{tableblue}{RGB}{233,240,247}
+\def\portraittitlecolor{uanlblue}
+\def\sectioncolor{uanlblue}
+\def\ssectioncolor{uanlblue}
+\def\documenttitlehf{Biología Celular: Evidencia 1 --- Sistemas Celulares y Acelulares}
+\hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Carlos Mauricio Carvajal Coronado},pdftitle={Sistemas celulares y acelulares en la agronomía},pdfsubject={Evidencia 1 - Biología Celular UANL}}
+\addbibresource{UANL/ingeniero-agronomo/biologia-celular/biologia-celular.bib}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\setlength{\emergencystretch}{2.5em}
+
+\begin{document}
+\hypersetup{pageanchor=false}
+\begingroup
+\fontsize{14}{17}\selectfont
+\renewcommand{\Huge}{\fontsize{14}{17}\selectfont\bfseries}
+\renewcommand{\large}{\fontsize{14}{17}\selectfont}
+\templatePortrait
+\clearpage
+\endgroup
+\hypersetup{pageanchor=true}
+\templatePagecfg
+\singlespacing
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.18}
+
+\section*{Resumen}
+El presente reporte técnico constituye la formalización documental de la Evidencia 1 (formato cuadríptico estructurado) de la Unidad de Aprendizaje de Biología Celular. En él se analiza de manera exhaustiva la dicotomía biológica entre sistemas celulares organizados (células procariotas y eucariotas) y entidades acelulares o subcelulares infecciosas (virus vegetales, viroides y priones). Se abordan las teorías de la evolución celular con énfasis en la Teoría Endosimbiótica Seriada propuesta por Lynn Margulis, justificando el origen procariota de las mitocondrias y cloroplastos mediante evidencias genómicas (ADN circular cerrado y ribosomas 70S). Asimismo, se examina el impacto fitopatológico y agronómico de estas entidades en cultivos de importancia socioeconómica en el noreste de México, contrastando la estructura de fitoplasmas bacterianos frente al virus del mosaico del tabaco (TMV) y el viroide del tubérculo ahusado de la papa (PSTVd).
+
+\vspace{0.4cm}
+\noindent\textbf{Palabras clave:} Sistemas celulares, entidades acelulares, procariota, eucariota, endosimbiosis, viroides, fitopatología agronómica.
+
+\section{Introducción y Perspectiva Evolutiva}
+La comprensión de los niveles de organización de la materia viva constituye la piedra angular de la ingeniería agronómica moderna \parencite{alberts2015}. Todos los organismos vivos comparten un conjunto universal de propiedades fisicoquímicas: membrana plasmática lipídica delimitante, código genético basado en ácidos nucleicos y maquinaria metabólica para transducción de energía \parencite{lodish2016}. Sin embargo, la compartimentación subcelular introdujo una divergencia evolutiva cardinal entre el dominio de las bacterias y arqueas (procariotas) y los reinos vegetal, fúngico y animal (eucariotas).
+
+Paralelamente, coexisten en la biosfera entidades macromoleculares acelulares que carecen de autonomía metabólica pero poseen capacidad replicativa obligada dentro de células hospedantes \parencite{karp2014}. En el ámbito de la producción agrícola, estas entidades microscópicas son responsables de devastadoras epifitias que diezman el rendimiento de granos, hortalizas y frutales.
+
+\section{Comparación Estructural: Procariotas vs. Eucariotas}
+La arquitectura celular procariota se caracteriza por su simplicidad estructural y extraordinaria plasticidad metabólica. Carece de envoltura nuclear carioteca; su genoma reside en una región nucleoide desprovista de histonas complejas. En contraposición, las células eucariotas presentan un sistema endomembranoso conspicuo (retículo endoplásmico rugoso y liso, aparato de Golgi, lisosomas/vacuolas centrales) que posibilita la segregación espacial de rutas biosintéticas antagónicas \parencite{alberts2015, taiz2015}.
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabularx}{\textwidth}{lYY}
+\toprule
+\textbf{Parámetro} & \textbf{Célula Procariota (Bacteria / Arquea)} & \textbf{Célula Eucariota Vegetal / Animal} \\
+\midrule
+\textbf{Envoltura Nuclear} & Ausente; material genético en nucleoide directo. & Presente; carioteca con poros nucleares complejos. \\
+\textbf{Material Genético} & ADN circular de doble hebra, típicamente único y plásmidos. & Múltiples cromosomas lineales asociados a octámeros de histonas. \\
+\textbf{Organelos Membranosos} & Ausentes; invaginaciones mesosómicas transitorias. & Mitocondrias, cloroplastos, Golgi, peroxisomas, retículo. \\
+\textbf{Ribosomas} & Coeficiente $70\text{S}$ (subunidades $50\text{S} + 30\text{S}$). & Coeficiente $80\text{S}$ citoplásmico ($60\text{S} + 40\text{S}$); $70\text{S}$ en cloroplastos. \\
+\textbf{Pared Celular} & Peptidoglicano (mureína) en eubacterias; pseudomureína. & Celulosa, hemicelulosa y pectina (vegetales); ausente en animales. \\
+\textbf{División Celular} & Fisión binaria directa sin huso mitótico. & Mitosis simétrica/asimétrica y meiosis con quiasmas. \\
+\bottomrule
+\end{tabularx}
+\caption{Matriz comparativa de características estructurales y moleculares.}
+\end{table}
+
+\section{La Teoría Endosimbiótica Seriada (SET)}
+La Teoría de la Endosimbiosis Seriada, postulada formalmente por Lynn Margulis, revolucionó la biología evolutiva al demostrar que la célula eucariota vegetal no surgió exclusivamente por mutaciones puntuales graduales, sino mediante eventos sucesivos de simbiogénesis quimérica \parencite{alberts2015}:
+\begin{enumerate}
+    \item \textbf{Origen de la Mitocondria:} Una arquea anaeróbica ancestral fagocitó una alfa-proteobacteria aeróbica capaz de fosforilación oxidativa. En lugar de ser digerida, la bacteria estableció una relación mutualista permanente, transfiriendo la mayor parte de su genoma al núcleo pero conservando ADN mitocondrial circular propio y ribosomas $70\text{S}$.
+    \item \textbf{Origen del Plastidio/Cloroplasto Vegetal:} Un eucariota heterótrofo primitivo provisto de mitocondrias incorporó por endocitosis una cianobacteria fotosintética oxigénica. La membrana interna plastidial conserva lípidos bacterianos característicos (galactolípidos y fosfatidilglicerol), mientras que la membrana externa proviene de la vesícula eucariota hospedera \parencite{taiz2015}.
+\end{enumerate}
+
+\section{Sistemas Acelulares de Interés Agronómico}
+Los sistemas acelulares no cumplen los postulados de la teoría celular moderna de Schleiden, Schwann y Virchow (la célula como unidad estructural, funcional y de origen), pero interactúan íntimamente con los agroecosistemas:
+\begin{itemize}
+    \item \textbf{Virus Vegetales (Fitovirus):} Complejos supramoleculares integrados por un genoma de ARN o ADN (monocatenario o bicatenario) protegido por una cápside proteica (capsómeros). Carecen de motilidad propia y penetran al tejido vegetal exclusivamente mediante heridas mecánicas o transmisión vectorial por insectos hemípteros (pulgones, moscas blancas, psílidos). El virus del mosaico del tabaco (TMV) causa pérdidas severas en solanáceas.
+    \item \textbf{Viroides:} Moléculas desnudas de ARN monocatenario circular de bajo peso molecular ($246-401$ nucleótidos) desprovistas por completo de cubierta proteica. Se replican en el núcleo o cloroplasto vegetal utilizando la ARN polimerasa del hospedero mediante el mecanismo de círculo rodante, actuando como ribozimas de corte catalítico. Causan el atrofiamiento severo en cítricos (Viroide de la exocortis de los cítricos, CEVd) y en papa (PSTVd).
+    \item \textbf{Priones:} Proteínas infecciosas mal plegadas ($\text{PrP}^{\text{Sc}}$) que carecen de ácidos nucleicos y catalizan el cambio conformacional de proteínas celulares normales ($\text{PrP}^{\text{C}}$), generando encefalopatías espongiformes transmisibles en rumiantes pecuarios (e.g. Encefalopatía Espongiforme Bovina, EEB).
+\end{itemize}
+
+\section{Conclusiones}
+1. La clara diferenciación entre sistemas celulares y acelulares fundamenta las estrategias modernas de diagnóstico molecular fitosanitario (PCR, secuenciación masiva) y diseño de bioinsumos en el agro.
+2. La teoría endosimbiótica confirma el origen procarionte de las plantas cultivadas, permitiendo manipular biotecnológicamente cloroplastos y mitocondrias para conferir tolerancia al estrés salino e hídrico.
+3. El dominio de estos fundamentos en el primer semestre de Ingeniero Agrónomo garantiza una sólida base biológica para las disciplinas subsecuentes de Fitopatología, Fisiología Vegetal y Genética.
+
+\newpage
+\printbibliography[title={Referencias bibliográficas}]
+\end{document}
+

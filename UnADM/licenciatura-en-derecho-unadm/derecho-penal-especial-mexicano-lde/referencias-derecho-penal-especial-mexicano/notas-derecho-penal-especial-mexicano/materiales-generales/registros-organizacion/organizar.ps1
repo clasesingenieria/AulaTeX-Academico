@@ -9,7 +9,7 @@ function RelativePath($path) { [IO.Path]::GetRelativePath($root, $path).Replace(
 function Hash($path) { (Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash.ToLowerInvariant() }
 function Category($path) {
     if ($path -match '/libros-') { return 'bibliografia' }
-    if ($path -match 'Entregas/') { return 'version preparada; no prueba envio' }
+    if ($path -match 'entregas-derecho-penal-especial-mexicano/') { return 'version preparada; no prueba envio' }
     if ($path -match 'originales|material-docente|normas') { return 'material docente o norma' }
     if ($path -match 'auditoria|evidencia|comprobante|registros') { return 'evidencia o control' }
     if ($path -match 'historico|borrador|antecedentes') { return 'borrador o antecedente preservado' }

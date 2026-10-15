@@ -33,7 +33,7 @@ Apertura, cierre, vencimiento y **zona horaria pendientes**; sin fechas inferida
 ## Fuentes, pendientes y validación
 
 - **I:** [../../../../../PLANEACIONES-2026-II.md](../../../../../../../../PLANEACIONES-2026-II.md), sección 3, fila Tarea 6549 y límites. Nota derivada leída **2026-09-15**, identificación/enlace únicamente.
-- **W:** [Módulo 6549](https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=6549), `#intro`, `.activity-dates` y rúbrica académica previstos, excluyendo entregas/calificaciones. Registrado **2026-09-15**, no consultado por bloqueo de sesión.
+- **W:** [Módulo 6549](https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=6549), `#intro`, `.activity-dates` y rúbrica académica previstos, excluyendo entregas-plan-de-negocios/calificaciones. Registrado **2026-09-15**, no consultado por bloqueo de sesión.
 - **E:** [Especificaciones 6526](https://cursos3.e-itesca.edu.mx/mod/page/view.php?id=6526), región `main`, `.no-overflow` pendientes. Intento **2026-09-15** redirigido al login; no leído.
 
 Pendientes: consigna/objetivo, datos autorizados, método/estructura/producto, entrega/modalidad, calendario/zona horaria, evaluación, recursos/formatos, relación con 6548 y políticas de integridad/IA. Conflictos no evaluables sin W/E. Bloqueos: sesión no autenticada y datos no acreditados; no se buscan secretos.

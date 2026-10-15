@@ -21,8 +21,8 @@ def insert_before(anchor, text, style):
 
 
 def main():
-    source = SUBJECT / "Entregas/Tarea8_DeLaCruzMunoz.docx"
-    target = SUBJECT / "Entregas/Tarea8_DeLaCruzMunoz_Revision-2026-10-10.docx"
+    source = SUBJECT / "entregas-seminario-i/Tarea8_DeLaCruzMunoz.docx"
+    target = SUBJECT / "entregas-seminario-i/Tarea8_DeLaCruzMunoz_Revision-2026-10-10.docx"
     if target.exists():
         raise FileExistsError("No se sobrescribe una revision existente")
     data = json.loads((HERE / "ampliacion-antecedentes-2026-10-10.json").read_text(encoding="utf-8"))

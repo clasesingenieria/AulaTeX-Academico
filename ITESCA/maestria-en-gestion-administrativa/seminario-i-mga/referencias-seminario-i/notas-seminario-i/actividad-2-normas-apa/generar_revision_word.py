@@ -77,7 +77,7 @@ def main():
             run.italic = fragment.startswith(r"\emph{")
         paragraph.paragraph_format.left_indent = Inches(0.5)
         paragraph.paragraph_format.first_line_indent = Inches(-0.5)
-    target = SUBJECT / "Entregas/Tarea2_DeLaCruzMunoz_Revision-2026-10-10.docx"
+    target = SUBJECT / "entregas-seminario-i/Tarea2_DeLaCruzMunoz_Revision-2026-10-10.docx"
     if target.exists():
         raise FileExistsError(target)
     document.save(target)

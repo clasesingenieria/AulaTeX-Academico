@@ -1,0 +1,87 @@
+% !TeX program = xelatex
+\documentclass[12pt,spanish,letterpaper,oneside]{article}
+\PassOptionsToPackage{es-noshorthands}{babel}
+\def\documenttitle{Modelos de antiderivación, linealidad y cambio de variable aplicados a tasas de crecimiento y dinámica agronómica}
+\def\documentsubtitle{Evidencia 1 --- Aprendizaje basado en problemas (ABP) (Fase 1)}
+\def\documentsubject{Cálculo Integral --- Ingeniero Agrónomo}
+\def\documentauthor{Carlos Mauricio Carvajal Coronado}
+\def\coursename{Cálculo Integral}
+\def\coursecode{REF\#261013755131}
+\def\universityname{Universidad Autónoma de Nuevo León}
+\def\universityfaculty{Facultad de Agronomía}
+\def\universitydepartment{Ingeniero Agrónomo}
+\def\universitydepartmentimage{departamentos/logos-institucionales.pdf}
+\def\universitydepartmentimagecfg{height=2.1cm}
+\def\universitylocation{General Escobedo / Marín, Nuevo León, México}
+\def\authortable{%
+	\begin{Form}
+	\begin{tabular}{@{}ll@{}}
+		\textbf{Estudiante:} & Carlos Mauricio Carvajal Coronado\\[0.35cm]
+		\textbf{Matrícula:} & 1977875\\[0.35cm]
+		\textbf{Docente:} & Cátedra de Matemáticas Aplicadas\\[0.35cm]
+		\textbf{Unidad de Aprendizaje:} & Cálculo Integral (Evidencia 1 \textbar\ 20 Puntos)\\[0.5cm]
+		\multicolumn{2}{l}{Fecha de realización: 14 de octubre de 2026}\\
+		\multicolumn{2}{l}{\universitylocation}
+	\end{tabular}
+	\end{Form}
+}
+
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\input{template}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage{framed}
+\usepackage{tcolorbox}
+\usepackage{pgffor}
+\usepackage{caption}
+\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
+\definecolor{uanlblue}{RGB}{0,55,108}
+\definecolor{tableblue}{RGB}{233,240,247}
+\def\portraittitlecolor{uanlblue}
+\def\sectioncolor{uanlblue}
+\def\ssectioncolor{uanlblue}
+\def\documenttitlehf{Cálculo Integral: Evidencia 1 --- Aprendizaje Basado en Problemas}
+\hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Carlos Mauricio Carvajal Coronado},pdftitle={Modelos de antiderivación y cambio de variable},pdfsubject={Evidencia 1 - Cálculo Integral UANL}}
+\addbibresource{UANL/ingeniero-agronomo/calculo-integral/calculo-integral.bib}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\setlength{\emergencystretch}{2.5em}
+
+\let\citep\parencite
+
+\newenvironment{examplebox}[1]{%
+  \begin{tcolorbox}[colback=blue!3,colframe=uanlblue,boxrule=0.4pt,
+    arc=0pt,left=2mm,right=2mm,top=2mm,bottom=2mm,
+    before skip=8pt,after skip=8pt]%
+  \setstretch{1.12}%
+  \noindent\textbf{#1}\par\smallskip
+}{\end{tcolorbox}}
+
+\newenvironment{sourcebox}[1]{%
+  \def\FrameCommand{\fcolorbox{orange!70!black}{yellow!5}}%
+  \MakeFramed{\advance\hsize-2\width\FrameRestore}%
+  \noindent\textbf{#1}\par\smallskip
+}{\endMakeFramed}
+
+\begin{document}
+\hypersetup{pageanchor=false}
+\begingroup
+\fontsize{14}{17}\selectfont
+\renewcommand{\Huge}{\fontsize{14}{17}\selectfont\bfseries}
+\renewcommand{\large}{\fontsize{14}{17}\selectfont}
+\templatePortrait
+\clearpage
+\endgroup
+\hypersetup{pageanchor=true}
+\templatePagecfg
+\singlespacing
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.18}
+
+\input{UANL/ingeniero-agronomo/calculo-integral/contenido-actividad-2}
+
+\newpage
+\printbibliography[title={Referencias bibliográficas}]
+\end{document}

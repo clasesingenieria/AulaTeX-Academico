@@ -30,7 +30,7 @@ def main():
     process_path = COURSE / "assets-plan-de-negocios/actividad-11-2026-10-01/proceso.json"
     process = json.loads(process_path.read_text(encoding="utf-8"))
     receipt = json.loads((ASSETS / "generacion.json").read_text(encoding="utf-8"))
-    source = COURSE / "Entregas/reporte-plan-de-negocios-Actividad-11-AM-Taller.docx"
+    source = COURSE / "entregas-plan-de-negocios/reporte-plan-de-negocios-Actividad-11-AM-Taller.docx"
     word = COURSE / (STEM + ".docx")
     report = COURSE / (STEM + ".tex")
     document = Document(word)

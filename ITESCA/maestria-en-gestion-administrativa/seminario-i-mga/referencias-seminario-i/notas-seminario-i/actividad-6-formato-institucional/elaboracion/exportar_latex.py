@@ -16,7 +16,7 @@ from docx.text.paragraph import Paragraph
 
 ROOT = Path(__file__).resolve().parent
 COURSE = ROOT.parents[3]
-WORD = COURSE / "entregas" / "Tarea6_DeLaCruzMunoz.docx"
+WORD = COURSE / "entregas-seminario-i" / "Tarea6_DeLaCruzMunoz.docx"
 ASSETS = "ITESCA/maestria-en-gestion-administrativa/seminario-i-mga/referencias-seminario-i/notas-seminario-i/actividad-6-formato-institucional/elaboracion/fuentes/"
 
 

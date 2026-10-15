@@ -10,8 +10,8 @@ from docx.text.paragraph import Paragraph
 
 HERE = Path(__file__).resolve().parent
 SUBJECT = HERE.parents[2]
-SOURCE = SUBJECT / "Entregas/Tarea10_DeLaCruzMunoz_Revision-2026-10-04.docx"
-TARGET = SUBJECT / "Entregas/Tarea11_DeLaCruzMunoz.docx"
+SOURCE = SUBJECT / "entregas-seminario-i/Tarea10_DeLaCruzMunoz_Revision-2026-10-04.docx"
+TARGET = SUBJECT / "entregas-seminario-i/Tarea11_DeLaCruzMunoz.docx"
 
 
 def insert_before(anchor, text, style):

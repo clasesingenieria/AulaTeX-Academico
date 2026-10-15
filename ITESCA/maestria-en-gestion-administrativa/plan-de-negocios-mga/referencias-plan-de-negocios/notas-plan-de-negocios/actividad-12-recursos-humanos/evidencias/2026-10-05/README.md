@@ -4,7 +4,7 @@ Preparación: 5 de octubre de 2026. Proyecto: AM Taller Autocentro, Monterrey, N
 
 ## Entregables vigentes
 
-- [Word editable](../../../../../Entregas/reporte-plan-de-negocios-Actividad-12-Recursos-Humanos.docx), 13 páginas.
+- [Word editable](../../../../../entregas-plan-de-negocios/reporte-plan-de-negocios-Actividad-12-Recursos-Humanos.docx), 13 páginas.
 - [PDF exportado del Word](../../historico/pdf-raiz/reporte-plan-de-negocios-Actividad-12-Recursos-Humanos-Word.pdf), 13 páginas y mismo contenido.
 - [Reporte institucional PDF](../../../../../reporte-plan-de-negocios-Actividad-12-Recursos-Humanos.pdf), 17 páginas, con [fuente LaTeX](../../../../../reporte-plan-de-negocios-Actividad-12-Recursos-Humanos.tex) y [bibliografía](../../../../../plan-de-negocios.bib).
 

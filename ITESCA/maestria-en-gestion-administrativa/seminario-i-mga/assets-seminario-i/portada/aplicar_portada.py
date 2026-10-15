@@ -16,7 +16,7 @@ ROOT = SUBJECT.parents[2]
 
 
 def preserve_pdf_body():
-    destination = SUBJECT / 'Entregas/Tarea12_DeLaCruzMunoz.pdf'
+    destination = SUBJECT / 'entregas-seminario-i/Tarea12_DeLaCruzMunoz.pdf'
     original = SUBJECT / 'referencias-seminario-i/notas-seminario-i/actividad-12-hipotesis/antes-portada-plan-negocios-2026-10-13/Tarea12_DeLaCruzMunoz.pdf'
     temporary = HERE / 'Tarea12-portada-cuerpo-verificado.pdf'
     with pymupdf.open(destination) as current, pymupdf.open(original) as previous, pymupdf.open() as output:
@@ -40,7 +40,7 @@ def main():
         assert image.read_bytes() == source.read_bytes()
     else:
         shutil.copy2(source, image)
-    word = SUBJECT / 'Entregas/Tarea12_DeLaCruzMunoz.docx'
+    word = SUBJECT / 'entregas-seminario-i/Tarea12_DeLaCruzMunoz.docx'
     notes = SUBJECT / 'referencias-seminario-i/notas-seminario-i/actividad-12-hipotesis'
     backup = notes / 'antes-portada-plan-negocios-2026-10-13'
     if backup.exists():

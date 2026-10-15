@@ -14,10 +14,10 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT=Path(__file__).resolve().parents[1]
 COURSE=ROOT/'ITESCA/maestria-en-gestion-administrativa/seminario-i-mga'
 WORK=ROOT/'.tmp-seminario'
-OUT=COURSE/'entregas'
+OUT=COURSE/'entregas-seminario-i'
 REFS=COURSE/'referencias-seminario-i/vtaxi-2026-09-27'
 DATA=json.loads((WORK/'content.json').read_text(encoding='utf8'))
-SOURCE=COURSE/'entregas/Tarea6_DeLaCruzMunoz.docx'
+SOURCE=COURSE/'entregas-seminario-i/Tarea6_DeLaCruzMunoz.docx'
 OFFICIAL=COURSE/'anteproyecto/evidencias/moodle-2026-09-27/03.01 Seleccion de proyecto de titulacion 25130604.docx'
 NAME='Martín Jonathan de la Cruz Muñoz'
 TEACHER='Dra. Carla Olimpya Zapuche Moreno'
