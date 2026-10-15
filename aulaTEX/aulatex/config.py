@@ -7,6 +7,9 @@ from pathlib import Path
 
 LLM_ENGINES = (
     "Auto (model-router)",
+    "Amazon Nova Pro",
+    "Amazon Nova Lite",
+    "Llama 3.3 70B",
     "Claude Foundry",
     "Claude Sonnet",
     "Claude Haiku",
@@ -24,6 +27,9 @@ LLM_ENGINES = (
 
 ENGINE_ENV_PREFIX = {
     "Auto (model-router)": "MODEL_ROUTER",
+    "Amazon Nova Pro": "AMAZON_NOVA_PRO",
+    "Amazon Nova Lite": "AMAZON_NOVA_LITE",
+    "Llama 3.3 70B": "BEDROCK_LLAMA_3_3_70B",
     "Claude Foundry": "ANTHROPIC_FOUNDRY",
     "GPT-5.6-SOL": "AZURE_OPENAI_GPT_5_6_SOL",
     "GPT-5.6-Luna": "AZURE_OPENAI_GPT_5_6_LUNA",
@@ -39,6 +45,12 @@ ENGINE_ENV_PREFIX = {
     # Anthropic Sonnet/Haiku (mismo endpoint que Claude Foundry, otro deployment).
     "Claude Sonnet": "ANTHROPIC_SONNET",
     "Claude Haiku": "ANTHROPIC_HAIKU",
+}
+
+BEDROCK_ENGINES = {
+    "Amazon Nova Pro": "us.amazon.nova-pro-v1:0",
+    "Amazon Nova Lite": "us.amazon.nova-lite-v1:0",
+    "Llama 3.3 70B": "us.meta.llama3-3-70b-instruct-v1:0",
 }
 
 REQUIRED_LLM_SUFFIXES = ("BASE_URL", "API_KEY", "CHAT_DEPLOYMENT")
@@ -155,12 +167,12 @@ def load_aulatex_env(path: str | Path | None = None, *, override: bool = True) -
     _decrypt_local_secrets()
     required_llm_engine()  # reject malformed/conflicting policy before any call
 
-    # Si no se ha especificado un engine global, preferir GPT-5-Mini como
+    # Si no se ha especificado un engine global, preferir Amazon Nova Pro como
     # opción por defecto para invocaciones y revisiones locales.
     if not os.getenv("AULATEX_LLM_ENGINE"):
-        os.environ.setdefault("AULATEX_LLM_ENGINE", "GPT-5-Mini")
+        os.environ.setdefault("AULATEX_LLM_ENGINE", "Amazon Nova Pro")
     if not os.getenv("AULATEX_LLM_REVIEW_ENGINE"):
-        os.environ.setdefault("AULATEX_LLM_REVIEW_ENGINE", "GPT-5-Mini")
+        os.environ.setdefault("AULATEX_LLM_REVIEW_ENGINE", "Amazon Nova Pro")
     return EnvLoadResult(env_path, True, loaded, skipped)
 
 
@@ -280,6 +292,33 @@ def credential_status() -> list[CredentialStatus]:
     for engine, prefix in ENGINE_ENV_PREFIX.items():
         present: list[str] = []
         missing: list[str] = []
+        if engine in BEDROCK_ENGINES:
+            aws_key = os.getenv("AWS_ACCESS_KEY_ID", "").strip()
+            aws_secret = os.getenv("AWS_SECRET_ACCESS_KEY", "").strip()
+            has_boto_creds = False
+            if not (aws_key and usable_secret(aws_secret)):
+                try:
+                    import boto3
+                    creds = boto3.Session().get_credentials()
+                    has_boto_creds = creds is not None and bool(creds.access_key)
+                except Exception:
+                    has_boto_creds = False
+            if (aws_key and usable_secret(aws_secret)) or has_boto_creds:
+                present = [f"{prefix}_MODEL_ID", "AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY"]
+                missing = []
+            else:
+                present = []
+                missing = ["AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY"]
+            statuses.append(
+                CredentialStatus(
+                    engine=engine,
+                    prefix=prefix,
+                    ok=not missing,
+                    present=tuple(present),
+                    missing=tuple(missing),
+                )
+            )
+            continue
         # Sonnet/Haiku comparten endpoint/clave con Claude Foundry: solo aportan
         # su *_DEPLOYMENT y heredan BASE_URL/API_KEY de ANTHROPIC_FOUNDRY.
         inherits_anthropic = prefix in ("ANTHROPIC_SONNET", "ANTHROPIC_HAIKU")
@@ -354,6 +393,18 @@ def _llm_group(group_id: str, title: str, prefix: str, *, description: str = "")
 
 CREDENTIAL_GROUPS: tuple[CredentialGroup, ...] = (
     _llm_group("model_router", "Auto (model-router)", "MODEL_ROUTER", description="Enrutador automático de modelos."),
+    CredentialGroup(
+        group_id="amazon_bedrock",
+        title="Amazon Bedrock",
+        description="Modelos Nova Pro, Nova Lite y Llama 3.3 en Amazon Bedrock.",
+        fields=(
+            CredentialField("AWS_ACCESS_KEY_ID", "Access Key ID", secret=True, required=False),
+            CredentialField("AWS_SECRET_ACCESS_KEY", "Secret Access Key", secret=True, required=False),
+            CredentialField("AWS_REGION", "Región", required=False, placeholder="us-east-1"),
+            CredentialField("AMAZON_NOVA_PRO_MODEL_ID", "Model ID Nova Pro", required=False, placeholder="us.amazon.nova-pro-v1:0"),
+            CredentialField("BEDROCK_LLAMA_3_3_70B_MODEL_ID", "Model ID Llama 3.3", required=False, placeholder="us.meta.llama3-3-70b-instruct-v1:0"),
+        ),
+    ),
     CredentialGroup(
         group_id="claude_foundry",
         title="Claude Foundry",

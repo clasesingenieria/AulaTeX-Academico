@@ -67,7 +67,7 @@ param(
     [ValidateSet('realizar-actividad', 'construir-memoria-editorial')]
     [string[]]$Actions = @('construir-memoria-editorial', 'realizar-actividad'),
     [int]$MaxTargets = 12,
-    [string[]]$Engines = @('Auto (model-router)'),
+    [string[]]$Engines = @('Amazon Nova Pro'),
     [int]$MonitorMaxCycles = 1,
     [int]$OptimizeCycles = 0,
     [string]$Backend = 'langgraph',

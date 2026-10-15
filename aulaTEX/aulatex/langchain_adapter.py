@@ -115,6 +115,31 @@ class AulaTeXLangChainAdapter:
         return results
 
     def _build_model(self, config: AulaTeXLLMConfig, invoke_cfg: LangChainInvocationConfig) -> Any:
+        if config.is_bedrock():
+            from langchain_core.runnables import RunnableLambda
+            from langchain_core.messages import AIMessage
+            from .llm_bridge import _call_bedrock_converse
+
+            def _invoke_bedrock(messages_or_prompt: Any) -> AIMessage:
+                if isinstance(messages_or_prompt, str):
+                    p = messages_or_prompt
+                elif isinstance(messages_or_prompt, list):
+                    parts = []
+                    for m in messages_or_prompt:
+                        if hasattr(m, "content"):
+                            parts.append(str(m.content))
+                        elif isinstance(m, dict):
+                            parts.append(str(m.get("content", "")))
+                        else:
+                            parts.append(str(m))
+                    p = "\n\n".join(parts)
+                else:
+                    p = str(messages_or_prompt)
+                res = _call_bedrock_converse(config, p, invoke_cfg.max_tokens, invoke_cfg.timeout_seconds)
+                return AIMessage(content=str(res))
+
+            return RunnableLambda(_invoke_bedrock)
+
         if config.is_anthropic():
             return ChatAnthropic(
                 model=config.deployment,

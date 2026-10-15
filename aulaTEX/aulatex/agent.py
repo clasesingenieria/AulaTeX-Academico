@@ -37,7 +37,7 @@ class AgentRequest:
     parent_scope_key: str = ""
     child_level: str = ""
     child_name: str = ""
-    engines: list[str] = field(default_factory=lambda: ["Codex", "Claude Foundry", "GPT-Pro", "Auto (model-router)"])
+    engines: list[str] = field(default_factory=lambda: ["Amazon Nova Pro", "Llama 3.3 70B", "Codex", "Claude Foundry", "Auto (model-router)"])
     iterations: int = 5
     cycle_mode: str = "stages"
     compile_tex: bool = True
@@ -727,17 +727,22 @@ class AulaTeXAgent:
     def _optimize_engines(self, engines: list[str]) -> tuple[str, ...]:
         """Motores para la optimización de calidad.
 
-        Respeta el modo exclusivo de model-router. Fuera de ese modo, prefiere
-        GPT-5.6 (Luna/Terra) por su fiabilidad con prompts largos.
+        Respeta el modo exclusivo de model-router y AULATEX_REQUIRED_ENGINE.
         """
+        required = required_llm_engine()
+        if required:
+            return (required,)
         restricted = restrict_engines_to_available(engines)
         if restricted == [MODEL_ROUTER_ENGINE]:
             return (MODEL_ROUTER_ENGINE,)
         allowed = set(self.llm.engines() or LLM_ENGINES)
+        requested_bedrock = [e for e in restricted if e in allowed and e in ("Amazon Nova Pro", "Llama 3.3 70B")]
+        if requested_bedrock:
+            return tuple(requested_bedrock)
         requested_gpt56 = [e for e in restricted if e in allowed and e.startswith("GPT-5.6")]
         if requested_gpt56:
             return tuple(requested_gpt56)
-        preferred = [e for e in ("GPT-5.6-Luna", "GPT-5.6-Terra") if e in allowed]
+        preferred = [e for e in ("Amazon Nova Pro", "Llama 3.3 70B", "GPT-5.6-Luna", "GPT-5.6-Terra") if e in restricted and e in allowed]
         return tuple(preferred) or tuple(self._normalize_engines(engines))
 
     def _record_stage_transition(self, workflow: AgenticStateMachine, base_stage: str) -> None:

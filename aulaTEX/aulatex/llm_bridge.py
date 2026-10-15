@@ -15,6 +15,7 @@ except ModuleNotFoundError:
     _requests = None
 
 from .config import (
+    BEDROCK_ENGINES,
     ENGINE_ENV_PREFIX,
     LLM_ENGINES,
     MODEL_ROUTER_ENGINE,
@@ -36,28 +37,17 @@ DEFAULT_TIMEOUT_SECONDS = 300
 # Motor de máxima calidad que "entra al quite" cuando el resto falla.
 _SAFETY_NET_ENGINE = "Claude Foundry"
 
-# Cadenas de motores por tarea (usan los labels de config.LLM_ENGINES). El
-# motor de red de seguridad (opus/Claude Foundry) se garantiza al final.
-#   - redaccion / prosa académica -> Claude Foundry (juicio) -> GPT-Pro
-#   - codigo LaTeX / estructura    -> Codex -> GPT-Pro -> Claude Foundry
-#   - razonamiento / analisis      -> Codex -> Claude Foundry -> GPT-Pro
-#   - revision / correccion        -> GPT-Pro -> Claude Foundry -> Codex
-#   - rapido / borradores          -> Auto (model-router) -> Claude Foundry
-#   - matematicas                  -> Mistral-Matematicas -> GPT-Pro
-#   - exploracion / ideacion       -> Grok-Pensamiento-Libre -> Claude Foundry
+# Cadenas de motores por tarea (usan los labels de config.LLM_ENGINES).
 _TASK_ENGINE_CHAINS: dict[str, list[str]] = {
-    # Claude Opus DZ solo tiene 13 TPM: va tras Foundry como alivio puntual del 429.
-    "redaccion": ["Claude Foundry", "Claude Opus DZ", "GPT-Pro", "Codex"],
-    "codigo": ["Codex", "GPT-Pro", "Claude Foundry"],
-    "razonamiento": ["Codex", "Claude Foundry", "Claude Opus DZ", "GPT-Pro"],
-    "revision": ["GPT-Pro", "Claude Foundry", "Claude Sonnet 4.5", "Codex"],
-    "rapido": ["Auto (model-router)", "Claude Foundry"],
-    "matematicas": ["Mistral-Matematicas", "Mistral-Medium-DZ", "GPT-Pro", "Codex"],
-    "exploracion": ["Grok-Pensamiento-Libre", "Claude Foundry", "GPT-Pro"],
-    # Las replicas -DZ usan cuota DataZone independiente: absorben el 429 de la
-    # cuota GlobalStandard, que esta saturada para los tres GPT-5.6.
-    "volumen": ["GPT-5.6-SOL-DZ", "GPT-5.6-Luna-DZ", "GPT-5.6-Terra-DZ", "Auto (model-router)"],
-    "default": ["Codex", "Claude Foundry", "GPT-Pro"],
+    "redaccion": ["Amazon Nova Pro", "Llama 3.3 70B", "Claude Foundry", "Claude Opus DZ", "GPT-Pro", "Codex"],
+    "codigo": ["Amazon Nova Pro", "Llama 3.3 70B", "Codex", "GPT-Pro", "Claude Foundry"],
+    "razonamiento": ["Amazon Nova Pro", "Llama 3.3 70B", "Codex", "Claude Foundry", "Claude Opus DZ", "GPT-Pro"],
+    "revision": ["Amazon Nova Pro", "Llama 3.3 70B", "GPT-Pro", "Claude Foundry", "Claude Sonnet 4.5", "Codex"],
+    "rapido": ["Auto (model-router)", "Amazon Nova Lite", "Amazon Nova Pro", "Claude Foundry"],
+    "matematicas": ["Amazon Nova Pro", "Llama 3.3 70B", "Mistral-Matematicas", "Mistral-Medium-DZ", "GPT-Pro", "Codex"],
+    "exploracion": ["Amazon Nova Pro", "Llama 3.3 70B", "Grok-Pensamiento-Libre", "Claude Foundry", "GPT-Pro"],
+    "volumen": ["Auto (model-router)", "Amazon Nova Lite", "Amazon Nova Pro", "GPT-5.6-SOL-DZ", "GPT-5.6-Luna-DZ", "GPT-5.6-Terra-DZ"],
+    "default": ["Amazon Nova Pro", "Llama 3.3 70B", "Codex", "Claude Foundry", "GPT-Pro"],
 }
 
 
@@ -88,6 +78,9 @@ def engine_chain_for_task(task: str | None, forced_engine: str | None = None) ->
     return base
 _MIN_MAX_TOKENS = 16
 _THEORETICAL_LIMITS = {
+    "us.amazon.nova-pro-v1:0": {"input": 300_000, "output": 10_000},
+    "us.amazon.nova-lite-v1:0": {"input": 300_000, "output": 10_000},
+    "us.meta.llama3-3-70b-instruct-v1:0": {"input": 128_000, "output": 8_192},
     "gpt-5.4-pro": {"input": 922_000, "output": 128_000},
     "model-router": {"input": 1_015_808, "output": 32_768},
     "gpt-5.3-codex": {"input": 272_000, "output": 128_000},
@@ -123,7 +116,7 @@ class LLMText(str):
 
 def _model_identifier(value: Any) -> str:
     # Do not propagate arbitrary provider response fields, URLs, or error bodies.
-    return value if isinstance(value, str) and re.fullmatch(r"[A-Za-z0-9_.-]{1,160}", value) else ""
+    return value if isinstance(value, str) and re.fullmatch(r"[A-Za-z0-9_.:-]{1,160}", value) else ""
 
 
 def _response_text(payload: dict, config: AulaTeXLLMConfig) -> LLMText:
@@ -172,21 +165,10 @@ class AulaTeXLLMConfig:
 
         selected_engine = normalize_llm_engine_label(
             engine_label or required_llm_engine()
-            or _env("AULATEX_LLM_REVIEW_ENGINE", _env("TB_BOOKS_LLM_REVIEW_ENGINE", "Codex"))
+            or _env("AULATEX_LLM_ENGINE", _env("AULATEX_LLM_REVIEW_ENGINE", _env("TB_BOOKS_LLM_REVIEW_ENGINE", "Amazon Nova Pro")))
         )
         prefix = ENGINE_ENV_PREFIX[selected_engine]
 
-        base_url = _env(f"{prefix}_BASE_URL")
-        api_key = _env(f"{prefix}_API_KEY")
-        deployment = _env(f"{prefix}_CHAT_DEPLOYMENT")
-        api_version = _env(f"{prefix}_API_VERSION", "2023-06-01")
-        # Sonnet/Haiku comparten endpoint y clave con Claude Foundry (Anthropic);
-        # solo aportan su propio *_DEPLOYMENT. Heredan base_url/api_key.
-        if prefix in ("ANTHROPIC_SONNET", "ANTHROPIC_HAIKU", "ANTHROPIC_OPUS_DZ", "ANTHROPIC_SONNET_45"):
-            base_url = base_url or _env("ANTHROPIC_FOUNDRY_BASE_URL")
-            api_key = api_key or _env("ANTHROPIC_FOUNDRY_API_KEY")
-            deployment = deployment or _env(f"{prefix}_DEPLOYMENT")
-            api_version = _env(f"{prefix}_API_VERSION", _env("ANTHROPIC_FOUNDRY_API_VERSION", "2023-06-01"))
         timeout_seconds = _env_int(
             "AULATEX_LLM_TIMEOUT_SECONDS",
             _env_int("AULATEX_LLM_VALIDATION_TIMEOUT", _env_int("TB_BOOKS_LLM_VALIDATION_TIMEOUT", DEFAULT_TIMEOUT_SECONDS)),
@@ -200,6 +182,35 @@ class AulaTeXLLMConfig:
             _env_float("TB_BOOKS_LLM_VALIDATION_TEMPERATURE", 0.0),
         )
 
+        if selected_engine in BEDROCK_ENGINES:
+            default_model = BEDROCK_ENGINES[selected_engine]
+            deployment = _env(f"{prefix}_CHAT_DEPLOYMENT", _env(f"{prefix}_MODEL_ID", default_model))
+            region = _env(f"{prefix}_REGION", _env("AWS_REGION", _env("AWS_DEFAULT_REGION", "us-east-1")))
+            base_url = f"bedrock://{region}"
+            api_key = _env("AWS_SECRET_ACCESS_KEY", "aws-credentials")
+            return cls(
+                engine_label=selected_engine,
+                base_url=base_url,
+                api_key=api_key,
+                deployment=deployment,
+                api_version="bedrock-v1",
+                timeout_seconds=max(5, timeout_seconds),
+                max_tokens=_normalize_requested_max_tokens(max_tokens),
+                temperature=max(0.0, temperature),
+            )
+
+        base_url = _env(f"{prefix}_BASE_URL")
+        api_key = _env(f"{prefix}_API_KEY")
+        deployment = _env(f"{prefix}_CHAT_DEPLOYMENT")
+        api_version = _env(f"{prefix}_API_VERSION", "2023-06-01")
+        # Sonnet/Haiku comparten endpoint y clave con Claude Foundry (Anthropic);
+        # solo aportan su propio *_DEPLOYMENT. Heredan base_url/api_key.
+        if prefix in ("ANTHROPIC_SONNET", "ANTHROPIC_HAIKU", "ANTHROPIC_OPUS_DZ", "ANTHROPIC_SONNET_45"):
+            base_url = base_url or _env("ANTHROPIC_FOUNDRY_BASE_URL")
+            api_key = api_key or _env("ANTHROPIC_FOUNDRY_API_KEY")
+            deployment = deployment or _env(f"{prefix}_DEPLOYMENT")
+            api_version = _env(f"{prefix}_API_VERSION", _env("ANTHROPIC_FOUNDRY_API_VERSION", "2023-06-01"))
+
         if not (base_url and usable_secret(api_key) and deployment):
             return None
 
@@ -212,6 +223,12 @@ class AulaTeXLLMConfig:
             timeout_seconds=max(5, timeout_seconds),
             max_tokens=_normalize_requested_max_tokens(max_tokens),
             temperature=max(0.0, temperature),
+        )
+
+    def is_bedrock(self) -> bool:
+        return (
+            self.engine_label in BEDROCK_ENGINES
+            or self.base_url.startswith("bedrock://")
         )
 
     def is_anthropic(self) -> bool:
@@ -350,6 +367,125 @@ def normalize_llm_engine_label(engine_label: str | None) -> str:
     return selected
 
 
+def _get_bedrock_client(region: str, timeout_seconds: int = 300) -> Any:
+    try:
+        import boto3
+        from botocore.config import Config as BotoConfig
+    except ModuleNotFoundError:
+        raise RuntimeError("Dependencia faltante: instala boto3 en .venv para usar Amazon Bedrock.")
+
+    aws_key = _env("AWS_ACCESS_KEY_ID")
+    aws_secret = _env("AWS_SECRET_ACCESS_KEY")
+    session_kwargs: dict[str, Any] = {}
+    if aws_key and usable_secret(aws_secret):
+        session_kwargs["aws_access_key_id"] = aws_key
+        session_kwargs["aws_secret_access_key"] = aws_secret
+
+    session = boto3.Session(**session_kwargs)
+    boto_cfg = BotoConfig(
+        connect_timeout=15,
+        read_timeout=max(30, int(timeout_seconds)),
+        retries={"max_attempts": 3, "mode": "standard"},
+    )
+    return session.client("bedrock-runtime", region_name=region, config=boto_cfg)
+
+
+def _call_bedrock_converse(
+    config: AulaTeXLLMConfig,
+    prompt: str,
+    max_tokens: int = DEFAULT_MAX_TOKENS,
+    timeout_seconds: int = DEFAULT_TIMEOUT_SECONDS,
+) -> LLMText:
+    region = config.base_url.replace("bedrock://", "").strip() or "us-east-1"
+    client = _get_bedrock_client(region, timeout_seconds=timeout_seconds)
+
+    max_allowed = 8192 if "llama" in config.deployment.lower() else 10000
+    inf_config: dict[str, Any] = {"maxTokens": max(16, min(int(max_tokens), max_allowed))}
+    if config.temperature > 0.0:
+        inf_config["temperature"] = float(config.temperature)
+
+    response = client.converse(
+        modelId=config.deployment,
+        messages=[{"role": "user", "content": [{"text": prompt}]}],
+        inferenceConfig=inf_config,
+    )
+    output = response.get("output", {})
+    message = output.get("message", {})
+    content_list = message.get("content", [])
+    parts = [item.get("text", "") for item in content_list if isinstance(item, dict) and "text" in item]
+    text = "".join(parts).strip()
+    stop_reason = response.get("stopReason", "")
+    usage_raw = response.get("usage", {})
+    usage = {
+        "prompt_tokens": usage_raw.get("inputTokens", 0),
+        "completion_tokens": usage_raw.get("outputTokens", 0),
+        "total_tokens": usage_raw.get("totalTokens", 0),
+    }
+    return LLMText(
+        text,
+        requested_deployment=_model_identifier(config.deployment),
+        provider_model=_model_identifier(config.deployment),
+        finish_reason=_model_identifier(stop_reason),
+        usage=usage,
+    )
+
+
+def _call_bedrock_multimodal(
+    config: AulaTeXLLMConfig,
+    prompt: str,
+    *,
+    image_bytes: bytes,
+    media_type: str,
+    max_tokens: int = DEFAULT_MAX_TOKENS,
+    timeout_seconds: int = DEFAULT_TIMEOUT_SECONDS,
+) -> LLMText:
+    region = config.base_url.replace("bedrock://", "").strip() or "us-east-1"
+    client = _get_bedrock_client(region, timeout_seconds=timeout_seconds)
+
+    max_allowed = 8192 if "llama" in config.deployment.lower() else 10000
+    inf_config: dict[str, Any] = {"maxTokens": max(16, min(int(max_tokens), max_allowed))}
+    if config.temperature > 0.0:
+        inf_config["temperature"] = float(config.temperature)
+
+    format_map = {
+        "image/png": "png",
+        "image/jpeg": "jpeg",
+        "image/jpg": "jpeg",
+        "image/gif": "gif",
+        "image/webp": "webp",
+    }
+    img_format = format_map.get(media_type.lower(), "png")
+    message_content = [
+        {"image": {"format": img_format, "source": {"bytes": image_bytes}}},
+        {"text": prompt},
+    ]
+
+    response = client.converse(
+        modelId=config.deployment,
+        messages=[{"role": "user", "content": message_content}],
+        inferenceConfig=inf_config,
+    )
+    output = response.get("output", {})
+    message = output.get("message", {})
+    content_list = message.get("content", [])
+    parts = [item.get("text", "") for item in content_list if isinstance(item, dict) and "text" in item]
+    text = "".join(parts).strip()
+    stop_reason = response.get("stopReason", "")
+    usage_raw = response.get("usage", {})
+    usage = {
+        "prompt_tokens": usage_raw.get("inputTokens", 0),
+        "completion_tokens": usage_raw.get("outputTokens", 0),
+        "total_tokens": usage_raw.get("totalTokens", 0),
+    }
+    return LLMText(
+        text,
+        requested_deployment=_model_identifier(config.deployment),
+        provider_model=_model_identifier(config.deployment),
+        finish_reason=_model_identifier(stop_reason),
+        usage=usage,
+    )
+
+
 def check_llm_connection(
     engine_label: str,
     *,
@@ -360,6 +496,14 @@ def check_llm_connection(
     config = AulaTeXLLMConfig.from_env(selected)
     if config is None:
         return LLMCallResult(selected, False, "", "Configuracion incompleta o validacion LLM deshabilitada.")
+
+    if config.is_bedrock():
+        timeout = max(3, min(timeout_seconds, config.timeout_seconds))
+        try:
+            _call_bedrock_converse(config, "Respond with OK.", 8, timeout)
+            return LLMCallResult(selected, True, "Conexion verificada.")
+        except Exception as exc:
+            return LLMCallResult(selected, False, "", _friendly_error(exc))
 
     try:
         requests_mod = _require_requests()
@@ -427,6 +571,24 @@ def validate_llm_response(
         ):
             payload["error"] = "Configuración incompleta, API key sin descifrar o validación deshabilitada."
             return payload
+        if candidate.is_bedrock():
+            prompt = f"Responde exactamente con {marker} y no agregues ningún otro texto."
+            try:
+                res_text = _call_bedrock_converse(candidate, prompt, int(max_tokens), int(timeout_seconds))
+                text = str(res_text).strip()
+                payload["requested_deployment"] = _model_identifier(candidate.deployment)
+                payload["provider_model"] = _model_identifier(candidate.deployment)
+                payload.update(
+                    responded=bool(text),
+                    response_chars=len(text),
+                    marker_found=marker in text,
+                    ok=marker in text,
+                    error="" if marker in text else "El LLM no devolvió el marcador de validación esperado.",
+                )
+                return payload
+            except Exception as exc:
+                payload["error"] = _friendly_error(exc)
+                return payload
         endpoint = (
             _anthropic_messages_endpoint(candidate) if candidate.is_anthropic()
             else _openai_compatible_endpoint(candidate)
@@ -535,6 +697,11 @@ def call_llm_text(
     max_output = _normalize_requested_max_tokens(max_tokens)
     max_output = _cap_output_to_theoretical_limit(max_output, theoretical)
     timeout = _normalize_timeout(timeout_seconds, max_output, config.timeout_seconds)
+
+    if config.is_bedrock():
+        return _call_bedrock_converse(config, prompt, max_output, timeout)
+
+    requests_mod = _require_requests()
     if config.is_anthropic():
         response = requests_mod.post(
             _anthropic_messages_endpoint(config),
@@ -570,13 +737,24 @@ def call_llm_multimodal(
     config = AulaTeXLLMConfig.from_env(selected)
     if config is None:
         raise RuntimeError(f"Configuracion LLM incompleta para {selected}")
-    requests_mod = _require_requests()
 
     theoretical = _theoretical_limits_for(config)
     _raise_if_prompt_exceeds_theoretical_limit(prompt, theoretical)
     max_output = _normalize_requested_max_tokens(max_tokens)
     max_output = _cap_output_to_theoretical_limit(max_output, theoretical)
     timeout = _normalize_timeout(timeout_seconds, max_output, config.timeout_seconds)
+
+    if config.is_bedrock():
+        return _call_bedrock_multimodal(
+            config,
+            prompt,
+            image_bytes=image_bytes,
+            media_type=media_type,
+            max_tokens=max_output,
+            timeout_seconds=timeout,
+        )
+
+    requests_mod = _require_requests()
     encoded = base64.b64encode(image_bytes).decode("ascii")
 
     if config.is_anthropic():
@@ -891,6 +1069,9 @@ def _max_token_attempts(max_tokens: int) -> list[int]:
 
 
 def _should_retry_with_lower_max_tokens(exc: Exception) -> bool:
+    exc_str = str(exc).lower()
+    if "maximum tokens" in exc_str or "validationexception" in exc_str or "model limit" in exc_str:
+        return True
     if _requests is not None and isinstance(exc, _requests.Timeout):
         return True
     if _requests is None or not isinstance(exc, _requests.HTTPError):

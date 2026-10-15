@@ -71,7 +71,7 @@ class ActivityOptimizeRequest:
     target_quality: float = 100.0
     max_cycles: int = 40
     stall_limit: int = 6
-    engines: tuple[str, ...] = ("GPT-5.6-Luna", "GPT-5.6-Terra")
+    engines: tuple[str, ...] = ("Amazon Nova Pro", "Llama 3.3 70B")
     max_tokens: int = DEFAULT_MAX_TOKENS
     backup: bool = True
     require_contract_100: bool = True
