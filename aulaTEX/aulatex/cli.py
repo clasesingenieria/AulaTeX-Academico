@@ -429,8 +429,9 @@ def main(argv: list[str] | None = None) -> None:
         if args.command is None and os.name != "nt":
             parser.print_help()
             return
-        from .gui import main as gui_main
+        from .gui import enable_high_dpi_awareness, main as gui_main
 
+        enable_high_dpi_awareness()
         gui_main(diagnostics_enabled=bool(getattr(args, "diagnostics", False)))
         return
 

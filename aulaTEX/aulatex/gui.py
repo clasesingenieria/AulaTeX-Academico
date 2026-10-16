@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import configparser
 import os
 import queue
 import re
@@ -97,9 +98,33 @@ class ToolTip:
             self.tip_window = None
 
 
+def enable_high_dpi_awareness() -> None:
+    """Habilita DPI awareness en Windows para renderizado nítido a resolución nativa."""
+    if os.name != "nt":
+        return
+    try:
+        import ctypes
+        # DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2 = -4
+        ctypes.windll.user32.SetProcessDpiAwarenessContext(ctypes.c_void_p(-4))
+    except (AttributeError, OSError):
+        try:
+            # PROCESS_PER_MONITOR_DPI_AWARE = 2
+            ctypes.windll.shcore.SetProcessDpiAwareness(2)
+        except (AttributeError, OSError):
+            try:
+                ctypes.windll.user32.SetProcessDPIAware()
+            except (AttributeError, OSError):
+                pass
+
+
+# Invocar al cargar el módulo para que cualquier ventana Tk abra en modo High-DPI nativo
+enable_high_dpi_awareness()
+
+
 class AulaTeXApp(tk.Tk):
     def __init__(self, *, diagnostics_enabled: bool | None = None) -> None:
         super().__init__()
+        self._setup_high_dpi_and_fonts()
         self.title("AulaTeX - suite editorial e investigacion")
         self.geometry("1180x760")
         self.minsize(980, 640)
@@ -184,14 +209,41 @@ class AulaTeXApp(tk.Tk):
         menu.add_command(label="Configuración", command=self._open_settings)
         view_menu = tk.Menu(menu, tearoff=False)
         resolution_menu = tk.Menu(view_menu, tearoff=False)
-        for width, height in ((980, 640), (1180, 760), (1366, 768), (1600, 900), (1920, 1080)):
-            resolution_menu.add_command(label=f"{width} x {height}",
-                                        command=lambda size=(width, height): self._set_resolution(*size))
+        for width, height in (
+            (980, 640),
+            (1180, 760),
+            (1280, 800),
+            (1366, 768),
+            (1600, 900),
+            (1920, 1080),
+            (2560, 1440),
+            (3840, 2160),
+        ):
+            extra = " (Full HD)" if width == 1920 else (" (2K QHD)" if width == 2560 else (" (4K UHD)" if width == 3840 else ""))
+            resolution_menu.add_command(
+                label=f"{width} x {height}{extra}",
+                command=lambda size=(width, height): self._set_resolution(*size),
+            )
         resolution_menu.add_separator()
-        resolution_menu.add_command(label="Ajustar al monitor", command=self._fit_monitor)
+        resolution_menu.add_command(label="Ajustar al monitor (Área de trabajo)", command=self._fit_monitor)
         resolution_menu.add_command(label="Maximizar", command=self._maximize_window)
         resolution_menu.add_command(label="Restaurar tamaño inicial", command=lambda: self._set_resolution(1180, 760))
-        view_menu.add_cascade(label="Resolución", menu=resolution_menu)
+        view_menu.add_cascade(label="Resolución de ventana", menu=resolution_menu)
+
+        scale_menu = tk.Menu(view_menu, tearoff=False)
+        for pct_label, factor in (
+            ("1.00 (Escala 100%)", 1.0),
+            ("1.25 (Escala 125%)", 1.25),
+            ("1.40 (Predeterminado óptimo)", 1.4),
+            ("1.50 (Escala 150%)", 1.5),
+            ("1.75 (Escala 175%)", 1.75),
+            ("2.00 (Escala 200%)", 2.0),
+        ):
+            scale_menu.add_command(label=pct_label, command=lambda f=factor: self._set_ui_scale(f))
+        scale_menu.add_separator()
+        scale_menu.add_command(label="Restablecer a escala 1.4 (Óptimo)", command=lambda: self._set_ui_scale(1.4))
+        view_menu.add_cascade(label="Escalado de Interfaz (Scale)", menu=scale_menu)
+
         menu.add_cascade(label="Vista", menu=view_menu)
         help_menu = tk.Menu(menu, tearoff=False)
         help_menu.add_command(label="Arquitectura", command=self._show_architecture)
@@ -250,6 +302,111 @@ class AulaTeXApp(tk.Tk):
             self.state("zoomed")
         except tk.TclError:
             self._fit_monitor()
+
+    def _setup_high_dpi_and_fonts(self) -> None:
+        dpi = 96
+        if os.name == "nt":
+            import ctypes
+            try:
+                dpi = ctypes.windll.user32.GetDpiForWindow(self.winfo_id())
+            except Exception:
+                pass
+        if not dpi or dpi < 72:
+            try:
+                dpi = int(self.winfo_fpixels("1i"))
+            except Exception:
+                dpi = 96
+        if dpi < 72:
+            dpi = 96
+
+        # La escala de Tkinter se fija en 1.4 para visualización óptima y nítida
+        scale = 1.4
+        try:
+            self.tk.call("tk", "scaling", scale)
+        except Exception:
+            pass
+        self._current_dpi = dpi
+        self._current_scale = 1.4
+
+        try:
+            from tkinter import font
+            base_font = "Segoe UI" if os.name == "nt" else "DejaVu Sans"
+            fixed_font = "Consolas" if os.name == "nt" else "DejaVu Sans Mono"
+            base_size = 10
+
+            font_targets = {
+                "TkDefaultFont": (base_font, base_size, "normal"),
+                "TkTextFont": (base_font, base_size, "normal"),
+                "TkHeadingFont": (base_font, base_size, "bold"),
+                "TkMenuFont": (base_font, base_size, "normal"),
+                "TkTooltipFont": (base_font, max(8, base_size - 1), "normal"),
+                "TkFixedFont": (fixed_font, base_size, "normal"),
+            }
+            for name, (fam, sz, wt) in font_targets.items():
+                try:
+                    font.nametofont(name).configure(family=fam, size=sz, weight=wt)
+                except Exception:
+                    pass
+        except Exception:
+            pass
+
+        try:
+            style = ttk.Style(self)
+            try:
+                from tkinter import font
+                linespace = font.nametofont("TkDefaultFont").metrics("linespace")
+            except Exception:
+                linespace = int(16 * scale)
+            row_height = max(24, linespace + 8)
+            style.configure("Treeview", rowheight=row_height)
+            style.configure("Treeview.Heading", padding=(int(round(6 * scale)), int(round(4 * scale))))
+            style.configure("TNotebook.Tab", padding=[int(round(12 * scale)), int(round(5 * scale))])
+            style.configure("TButton", padding=(int(round(8 * scale)), int(round(4 * scale))))
+        except Exception:
+            pass
+
+    def _set_ui_scale(self, factor: float = 1.4) -> None:
+        try:
+            self.tk.call("tk", "scaling", factor)
+            self._current_scale = factor
+
+            from tkinter import font
+            base_font = "Segoe UI" if os.name == "nt" else "DejaVu Sans"
+            fixed_font = "Consolas" if os.name == "nt" else "DejaVu Sans Mono"
+            base_size = 10
+
+            font_targets = {
+                "TkDefaultFont": (base_font, base_size, "normal"),
+                "TkTextFont": (base_font, base_size, "normal"),
+                "TkHeadingFont": (base_font, base_size, "bold"),
+                "TkMenuFont": (base_font, base_size, "normal"),
+                "TkTooltipFont": (base_font, max(8, base_size - 1), "normal"),
+                "TkFixedFont": (fixed_font, base_size, "normal"),
+            }
+            for name, (fam, sz, wt) in font_targets.items():
+                try:
+                    font.nametofont(name).configure(family=fam, size=sz, weight=wt)
+                except Exception:
+                    pass
+
+            style = ttk.Style(self)
+            try:
+                linespace = font.nametofont("TkDefaultFont").metrics("linespace")
+            except Exception:
+                linespace = int(16 * factor)
+            row_height = max(24, linespace + 8)
+            style.configure("Treeview", rowheight=row_height)
+            style.configure("Treeview.Heading", padding=(int(round(6 * factor)), int(round(4 * factor))))
+            style.configure("TNotebook.Tab", padding=[int(round(12 * factor)), int(round(5 * factor))])
+            style.configure("TButton", padding=(int(round(8 * factor)), int(round(4 * factor))))
+
+            self.task_status.set(f"Escalado de interfaz ajustado a {factor:.2f}")
+        except Exception as exc:
+            self.task_status.set(f"Error al cambiar escala: {exc}")
+
+    def _auto_detect_scale(self) -> None:
+        self._set_ui_scale(1.4)
+        self.task_status.set("Escala fijada en 1.4 (predeterminado óptimo)")
 
     def _open_auxiliary(self, key, title, pages) -> None:
         existing = self._aux_windows.get(key)
@@ -516,27 +673,66 @@ class AulaTeXApp(tk.Tk):
         )
 
     def _build_panel_tab(self) -> None:
+        self.panel_tab.columnconfigure(0, weight=1)
         self.panel_tab.columnconfigure(1, weight=1)
         self.panel_tab.rowconfigure(3, weight=1)
-        ttk.Label(self.panel_tab, text="Repositorio").grid(row=0, column=0, sticky="w")
-        ttk.Label(self.panel_tab, text=str(self.workspace.repo_root)).grid(row=0, column=1, sticky="w")
-        ttk.Button(self.panel_tab, text="Usar selección", command=self._use_selected_scope).grid(row=2, column=0, sticky="w", pady=12)
-        ttk.Button(self.panel_tab, text="Actualizar proyecto", command=self._refresh_tree).grid(row=2, column=1, sticky="w", pady=12)
+
+        repo_frame = ttk.Frame(self.panel_tab)
+        repo_frame.grid(row=0, column=0, columnspan=2, sticky="ew", pady=(0, 6))
+        repo_frame.columnconfigure(1, weight=1)
+        ttk.Label(repo_frame, text="Repositorio:", font=("Segoe UI", 9, "bold")).grid(row=0, column=0, sticky="w", padx=(0, 8))
+        ttk.Label(repo_frame, text=str(self.workspace.repo_root), foreground="#4b5563").grid(row=0, column=1, sticky="w")
+
+        btn_row = ttk.Frame(self.panel_tab)
+        btn_row.grid(row=2, column=0, columnspan=2, sticky="w", pady=(4, 10))
+        ttk.Button(btn_row, text="Usar selección", command=self._use_selected_scope).pack(side="left", padx=(0, 8))
+        ttk.Button(btn_row, text="Actualizar proyecto", command=self._refresh_tree).pack(side="left")
+
+        tree_frame = ttk.Frame(self.panel_tab)
+        tree_frame.grid(row=3, column=0, columnspan=2, sticky="nsew", pady=(0, 8))
+        tree_frame.columnconfigure(0, weight=1)
+        tree_frame.rowconfigure(0, weight=1)
 
         columns = ("mem", "lock", "gen")
-        self.template_tree = ttk.Treeview(self.panel_tab, columns=columns, show="tree headings")
+        self.template_tree = ttk.Treeview(tree_frame, columns=columns, show="tree headings")
         self.template_tree.heading("#0", text="Nodos editoriales")
         self.template_tree.heading("mem", text="Memoria")
         self.template_tree.heading("lock", text="Fijas")
         self.template_tree.heading("gen", text="Gen")
-        self.template_tree.column("#0", width=480)
-        self.template_tree.column("mem", width=100, anchor="center")
-        self.template_tree.column("lock", width=100, anchor="center")
-        self.template_tree.column("gen", width=100, anchor="center")
-        self.template_tree.grid(row=3, column=0, columnspan=2, sticky="nsew")
+        self.template_tree.column("#0", minwidth=240, width=460, stretch=True)
+        self.template_tree.column("mem", minwidth=70, width=90, stretch=False, anchor="center")
+        self.template_tree.column("lock", minwidth=70, width=90, stretch=False, anchor="center")
+        self.template_tree.column("gen", minwidth=70, width=90, stretch=False, anchor="center")
 
-        self.template_details = tk.Text(self.panel_tab, height=8)
-        self.template_details.grid(row=4, column=0, columnspan=2, sticky="ew")
+        tree_scroll = ttk.Scrollbar(tree_frame, orient="vertical", command=self.template_tree.yview)
+        self.template_tree.configure(yscrollcommand=tree_scroll.set)
+        self.template_tree.grid(row=0, column=0, sticky="nsew")
+        tree_scroll.grid(row=0, column=1, sticky="ns")
+
+        details_frame = ttk.Frame(self.panel_tab)
+        details_frame.grid(row=4, column=0, columnspan=2, sticky="ew")
+        details_frame.columnconfigure(0, weight=1)
+        details_frame.rowconfigure(0, weight=1)
+
+        self.template_details = tk.Text(
+            details_frame,
+            height=6,
+            width=40,
+            font=("Consolas", 10),
+            bg="#fbfcfd",
+            fg="#1f2937",
+            padx=8,
+            pady=6,
+            relief="solid",
+            bd=1,
+            highlightthickness=0,
+            wrap="word",
+        )
+        details_scroll = ttk.Scrollbar(details_frame, orient="vertical", command=self.template_details.yview)
+        self.template_details.configure(yscrollcommand=details_scroll.set)
+        self.template_details.grid(row=0, column=0, sticky="nsew")
+        details_scroll.grid(row=0, column=1, sticky="ns")
+
         self.template_tree.bind("<<TreeviewSelect>>", self._on_template_selected)
         self.template_tree.bind("<Return>", self._show_template_node_details)
         self.template_tree.bind("<KP_Enter>", self._show_template_node_details)
@@ -549,116 +745,686 @@ class AulaTeXApp(tk.Tk):
 
     def _build_credentials_tab(self) -> None:
         self.credentials_tab.columnconfigure(0, weight=1)
-        self.credentials_tab.rowconfigure(2, weight=1)
+        self.credentials_tab.rowconfigure(1, weight=1)
 
+        # Encabezado principal estilo moderno
         header = ttk.Frame(self.credentials_tab)
-        header.grid(row=0, column=0, sticky="ew")
+        header.grid(row=0, column=0, sticky="ew", padx=6, pady=(4, 6))
         header.columnconfigure(0, weight=1)
+
+        title_frame = ttk.Frame(header)
+        title_frame.grid(row=0, column=0, sticky="w")
         ttk.Label(
-            header,
-            text="Configura y embebe las credenciales del entorno directamente en el archivo .env del workspace.",
-            wraplength=760,
-            justify="left",
-        ).grid(row=0, column=0, sticky="w")
-        ttk.Button(header, text="Como funciona", command=self._show_credentials_help).grid(row=0, column=1, sticky="e")
+            title_frame,
+            text="Credenciales y Proveedores de IA",
+            font=("Segoe UI", 13, "bold"),
+        ).pack(anchor="w")
 
-        path_row = ttk.Frame(self.credentials_tab)
-        path_row.grid(row=1, column=0, sticky="ew", pady=(6, 8))
-        path_row.columnconfigure(1, weight=1)
-        ttk.Label(path_row, text="Archivo .env").grid(row=0, column=0, sticky="w")
-        ttk.Label(path_row, text=str(self.llm.env_path)).grid(row=0, column=1, sticky="w", padx=(8, 0))
+        env_name = getattr(getattr(self, "llm", None), "env_path", None)
+        env_display = env_name.name if env_name else "aulatex.env"
+        ttk.Label(
+            title_frame,
+            text=f"Archivo destino: {env_display} (cifrado simétrico local fuera de Git)",
+            font=("Segoe UI", 8),
+            foreground="#6b7280",
+        ).pack(anchor="w", pady=(1, 0))
 
-        canvas = tk.Canvas(self.credentials_tab, highlightthickness=0)
-        canvas.grid(row=2, column=0, sticky="nsew")
-        scrollbar = ttk.Scrollbar(self.credentials_tab, orient="vertical", command=canvas.yview)
-        scrollbar.grid(row=2, column=1, sticky="ns")
-        canvas.configure(yscrollcommand=scrollbar.set)
+        top_right = ttk.Frame(header)
+        top_right.grid(row=0, column=1, sticky="e")
 
-        inner = ttk.Frame(canvas)
-        inner_window = canvas.create_window((0, 0), window=inner, anchor="nw")
-        inner.columnconfigure(0, weight=1)
+        self._show_credentials_secrets = tk.BooleanVar(value=False)
+        ttk.Checkbutton(
+            top_right,
+            text="Mostrar secretos",
+            variable=self._show_credentials_secrets,
+            command=self._toggle_credential_secrets,
+        ).pack(side="right", padx=(8, 0))
 
-        def _on_inner_configure(_event=None) -> None:
-            canvas.configure(scrollregion=canvas.bbox("all"))
+        ttk.Button(
+            top_right,
+            text="Cómo funciona",
+            command=self._show_credentials_help,
+        ).pack(side="right")
 
-        def _on_canvas_configure(event) -> None:
-            canvas.itemconfigure(inner_window, width=event.width)
-
-        inner.bind("<Configure>", _on_inner_configure)
-        canvas.bind("<Configure>", _on_canvas_configure)
-
+        # Variables de credenciales y catálogo
         self._credential_vars: dict[str, tk.StringVar] = {}
         self._credential_show_vars: dict[str, tk.BooleanVar] = {}
         self._credential_status_labels: dict[str, ttk.Label] = {}
+        self._secret_entries: list[ttk.Entry] = []
 
         catalog = credential_catalog()
-        stored = read_env_values(
-            [field.key for group in catalog for field in group.fields],
-            self.llm.env_path,
+        catalog_keys = [field.key for group in catalog for field in group.fields]
+        extra_keys = [
+            "AULATEX_LLM_ENGINE",
+            "AULATEX_LLM_PROVIDER",
+            "LLM_PROVIDER",
+            "BASE_NOTE_PROVIDER",
+            "TB_BOOKS_LLM_REVIEW_ENGINE",
+            "BEDROCK_MODEL_ID",
+            "AMAZON_NOVA_PRO_MODEL_ID",
+            "AWS_REGION",
+            "AWS_ACCESS_KEY_ID",
+            "AWS_SECRET_ACCESS_KEY",
+            "POLLY_VOICE_ID",
+            "POLLY_ENGINE",
+            "POLLY_LANGUAGE_CODE",
+            "TTS_PROVIDER",
+            "TELEGRAM_BOT_TOKEN",
+            "TELEGRAM_CHAT_ID",
+            "TELEGRAM_USER_RESTRICTION_ENABLED",
+            "TELEGRAM_ALLOWED_USER_IDS",
+            "NOTE_GIT_AUTO_SYNC_ENABLED",
+            "NOTE_GIT_AUTO_PUSH_ENABLED",
+        ]
+        all_keys = list(dict.fromkeys(catalog_keys + extra_keys))
+        env_p = getattr(getattr(self, "llm", None), "env_path", None)
+        stored = read_env_values(all_keys, env_p) if env_p else {}
+
+        for k in all_keys:
+            self._credential_vars[k] = tk.StringVar(self, value=stored.get(k, ""))
+
+        if not self._credential_vars["AWS_REGION"].get().strip():
+            self._credential_vars["AWS_REGION"].set("us-east-2")
+        if not self._credential_vars["AMAZON_NOVA_PRO_MODEL_ID"].get().strip():
+            self._credential_vars["AMAZON_NOVA_PRO_MODEL_ID"].set("us.amazon.nova-pro-v1:0")
+        if not self._credential_vars["BEDROCK_MODEL_ID"].get().strip():
+            self._credential_vars["BEDROCK_MODEL_ID"].set("us.amazon.nova-pro-v1:0")
+        if not self._credential_vars["POLLY_VOICE_ID"].get().strip():
+            self._credential_vars["POLLY_VOICE_ID"].set("Andres")
+        if not self._credential_vars["POLLY_ENGINE"].get().strip():
+            self._credential_vars["POLLY_ENGINE"].set("generative")
+
+        # Notebook con pestañas categorizadas
+        cred_nb = ttk.Notebook(self.credentials_tab)
+        cred_nb.grid(row=1, column=0, sticky="nsew", padx=4, pady=4)
+
+        tab_llm = ttk.Frame(cred_nb, padding=10)
+        tab_audio = ttk.Frame(cred_nb, padding=10)
+        tab_system = ttk.Frame(cred_nb, padding=10)
+        tab_catalog = ttk.Frame(cred_nb, padding=8)
+
+        cred_nb.add(tab_llm, text=" 🧠 Modelo LLM ")
+        cred_nb.add(tab_audio, text=" 🎙️ Audio y Voz ")
+        cred_nb.add(tab_system, text=" 📱 Telegram y Plataformas ")
+        cred_nb.add(tab_catalog, text=" 📋 Catálogo Completo ")
+
+        # --- Pestaña 1: Modelo LLM ---
+        tab_llm.columnconfigure(0, weight=1)
+        sel_frame = ttk.LabelFrame(tab_llm, text="Selección del Modelo de Lenguaje", padding=10)
+        sel_frame.pack(fill="x", pady=(0, 10))
+        sel_frame.columnconfigure(1, weight=1)
+
+        ttk.Label(sel_frame, text="Modelo activo:", font=("Segoe UI", 9, "bold")).grid(
+            row=0, column=0, sticky="w", padx=(0, 12), pady=4
         )
 
-        for row_index, group in enumerate(catalog):
-            frame = ttk.LabelFrame(inner, text=group.title, padding=10)
-            frame.grid(row=row_index, column=0, sticky="ew", pady=(0, 10), padx=(0, 4))
-            frame.columnconfigure(1, weight=1)
+        self._llm_options = [
+            "Amazon Nova Pro (AWS Bedrock)",
+            "GPT-5 Mini (Model Router / Azure)",
+            "Amazon Nova Lite (AWS Bedrock)",
+            "GPT-Pro (Azure OpenAI)",
+            "Codex (Azure OpenAI)",
+            "Claude Foundry (Azure Anthropic)",
+            "Azure OpenAI Directo",
+            "GPT-5.6-SOL (Azure OpenAI)",
+            "GPT-5.6-Luna (Azure OpenAI)",
+            "GPT-5.6-Terra (Azure OpenAI)",
+        ]
+        self._llm_model_combo = ttk.Combobox(
+            sel_frame,
+            values=self._llm_options,
+            state="readonly",
+            font=("Segoe UI", 9),
+        )
+        self._llm_model_combo.grid(row=0, column=1, sticky="ew", pady=4)
+        self._llm_model_combo.bind("<<ComboboxSelected>>", self._on_llm_combo_changed)
 
-            status_label = ttk.Label(frame, text="", foreground="#616161")
-            status_label.grid(row=0, column=0, columnspan=3, sticky="w", pady=(0, 4))
-            self._credential_status_labels[group.group_id] = status_label
-            if group.description:
-                ttk.Label(frame, text=group.description, foreground="#616161").grid(
-                    row=1, column=0, columnspan=3, sticky="w", pady=(0, 6)
-                )
+        self._llm_cards_parent = ttk.Frame(tab_llm)
+        self._llm_cards_parent.pack(fill="both", expand=True)
+        self._llm_cards_parent.columnconfigure(0, weight=1)
 
-            for field_index, field in enumerate(group.fields):
-                grid_row = field_index + 2
-                label_text = field.label + ("" if field.required else "  (opcional)")
-                ttk.Label(frame, text=label_text).grid(row=grid_row, column=0, sticky="w", pady=2)
-                var = tk.StringVar(value=stored.get(field.key, ""))
-                self._credential_vars[field.key] = var
-                show_char = "" if not field.secret else "*"
-                entry = ttk.Entry(frame, textvariable=var, show=show_char)
-                entry.grid(row=grid_row, column=1, sticky="ew", padx=(8, 8), pady=2)
-                if field.help:
-                    self._attach_tooltip(entry, field.help)
-                if field.secret:
-                    show_var = tk.BooleanVar(value=False)
-                    self._credential_show_vars[field.key] = show_var
-                    ttk.Checkbutton(
-                        frame,
-                        text="Ver",
-                        variable=show_var,
-                        command=lambda e=entry, v=show_var: e.configure(show="" if v.get() else "*"),
-                    ).grid(row=grid_row, column=2, sticky="w", pady=2)
+        # 1. Card Amazon Bedrock (Nova Pro / Nova Lite)
+        self._frame_bedrock = ttk.LabelFrame(self._llm_cards_parent, text="Credenciales: Amazon Bedrock (Nova)", padding=10)
+        self._frame_bedrock.columnconfigure(1, weight=1)
 
+        cli_btn_frame = ttk.Frame(self._frame_bedrock)
+        cli_btn_frame.grid(row=0, column=0, columnspan=2, sticky="ew", pady=(0, 10))
+        tk.Button(
+            cli_btn_frame,
+            text="📥 Cargar automáticamente desde AWS CLI (~/.aws/credentials)",
+            command=self._load_from_aws_cli,
+            bg="#f0fdf4",
+            fg="#166534",
+            activebackground="#dcfce7",
+            activeforeground="#166534",
+            font=("Segoe UI", 9, "bold"),
+            relief="groove",
+            padx=10,
+            pady=4,
+            cursor="hand2",
+        ).pack(side="left")
+
+        self._add_cred_row(self._frame_bedrock, 1, "AWS_ACCESS_KEY_ID", "Clave (AWS Access Key ID):", secret=True)
+        self._add_cred_row(self._frame_bedrock, 2, "AWS_SECRET_ACCESS_KEY", "Secreto (AWS Secret Access Key):", secret=True)
+        self._add_cred_row(self._frame_bedrock, 3, "AWS_REGION", "Región AWS:", placeholder="us-east-2")
+        self._add_cred_row(self._frame_bedrock, 4, "BEDROCK_MODEL_ID", "Model ID Bedrock:", placeholder="us.amazon.nova-pro-v1:0")
+
+        ttk.Label(
+            self._frame_bedrock,
+            text="💡 Utiliza la sesión activa de AWS CLI / IAM. Funciona en paralelo con Polly TTS.",
+            font=("Segoe UI", 8, "italic"),
+            foreground="#0369a1",
+        ).grid(row=5, column=0, columnspan=2, sticky="w", pady=(8, 0))
+
+        # 2. Card Model Router / GPT-5 Mini
+        self._frame_mr = ttk.LabelFrame(self._llm_cards_parent, text="Credenciales: Model Router / GPT-5 Mini (Azure OpenAI)", padding=10)
+        self._frame_mr.columnconfigure(1, weight=1)
+        self._add_cred_row(self._frame_mr, 0, "MODEL_ROUTER_BASE_URL", "Endpoint / Base URL:")
+        self._add_cred_row(self._frame_mr, 1, "MODEL_ROUTER_API_KEY", "API Key:", secret=True)
+        self._add_cred_row(self._frame_mr, 2, "MODEL_ROUTER_CHAT_DEPLOYMENT", "Deployment:", placeholder="gpt-5-mini")
+
+        # 3. Card GPT-Pro
+        self._frame_pro = ttk.LabelFrame(self._llm_cards_parent, text="Credenciales: GPT-Pro (Azure OpenAI)", padding=10)
+        self._frame_pro.columnconfigure(1, weight=1)
+        self._add_cred_row(self._frame_pro, 0, "GPT_PRO_BASE_URL", "Endpoint / Base URL:")
+        self._add_cred_row(self._frame_pro, 1, "GPT_PRO_API_KEY", "API Key:", secret=True)
+        self._add_cred_row(self._frame_pro, 2, "GPT_PRO_CHAT_DEPLOYMENT", "Deployment:", placeholder="gpt-5.4-pro")
+
+        # 4. Card Codex
+        self._frame_codex = ttk.LabelFrame(self._llm_cards_parent, text="Credenciales: Codex (Azure OpenAI)", padding=10)
+        self._frame_codex.columnconfigure(1, weight=1)
+        self._add_cred_row(self._frame_codex, 0, "CODEX_BASE_URL", "Endpoint / Base URL:")
+        self._add_cred_row(self._frame_codex, 1, "CODEX_API_KEY", "API Key:", secret=True)
+        self._add_cred_row(self._frame_codex, 2, "CODEX_CHAT_DEPLOYMENT", "Deployment:", placeholder="gpt-5.3-codex")
+
+        # 5. Card Claude Foundry
+        self._frame_claude = ttk.LabelFrame(self._llm_cards_parent, text="Credenciales: Claude Foundry (Azure Anthropic)", padding=10)
+        self._frame_claude.columnconfigure(1, weight=1)
+        self._add_cred_row(self._frame_claude, 0, "ANTHROPIC_FOUNDRY_BASE_URL", "Endpoint / Base URL:")
+        self._add_cred_row(self._frame_claude, 1, "ANTHROPIC_FOUNDRY_API_KEY", "API Key:", secret=True)
+        self._add_cred_row(self._frame_claude, 2, "ANTHROPIC_FOUNDRY_CHAT_DEPLOYMENT", "Deployment:", placeholder="claude-opus-4-8")
+        self._add_cred_row(self._frame_claude, 3, "ANTHROPIC_FOUNDRY_API_VERSION", "API Version:", placeholder="2023-06-01")
+
+        # 6. Card Azure Directo
+        self._frame_azure = ttk.LabelFrame(self._llm_cards_parent, text="Credenciales: Azure OpenAI Directo / Sora", padding=10)
+        self._frame_azure.columnconfigure(1, weight=1)
+        self._add_cred_row(self._frame_azure, 0, "AZURE_ENDPOINT", "Endpoint / Base URL:")
+        self._add_cred_row(self._frame_azure, 1, "AZURE_API_KEY", "API Key:", secret=True)
+        self._add_cred_row(self._frame_azure, 2, "AZURE_OPENAI_DEPLOYMENT_NAME", "Deployment:")
+
+        # 7. Card GPT-5.6
+        self._frame_gpt56 = ttk.LabelFrame(self._llm_cards_parent, text="Credenciales: GPT-5.6 (SOL / Luna / Terra)", padding=10)
+        self._frame_gpt56.columnconfigure(1, weight=1)
+        self._add_cred_row(self._frame_gpt56, 0, "AZURE_OPENAI_GPT_5_6_SOL_BASE_URL", "SOL Base URL:")
+        self._add_cred_row(self._frame_gpt56, 1, "AZURE_OPENAI_GPT_5_6_SOL_API_KEY", "SOL API Key:", secret=True)
+        self._add_cred_row(self._frame_gpt56, 2, "AZURE_OPENAI_GPT_5_6_SOL_CHAT_DEPLOYMENT", "SOL Deployment:")
+
+        # --- Pestaña 2: Audio y Voz ---
+        tab_audio.columnconfigure(0, weight=1)
+        tts_box = ttk.LabelFrame(tab_audio, text="Síntesis de Voz / TTS (Respuesta hablada)", padding=10)
+        tts_box.pack(fill="x", pady=(0, 10))
+        tts_box.columnconfigure(1, weight=1)
+
+        ttk.Label(tts_box, text="Proveedor de Voz:", font=("Segoe UI", 9, "bold")).grid(
+            row=0, column=0, sticky="w", padx=(0, 12), pady=4
+        )
+        self._tts_options = [
+            "AWS Polly (AWS CLI)",
+            "Azure Speech Service",
+            "Desactivado (sin audio de respuesta)",
+        ]
+        self._tts_combo = ttk.Combobox(tts_box, values=self._tts_options, state="readonly", font=("Segoe UI", 9))
+        self._tts_combo.grid(row=0, column=1, sticky="ew", pady=4)
+        self._tts_combo.bind("<<ComboboxSelected>>", self._on_tts_combo_changed)
+
+        self._tts_cards_parent = ttk.Frame(tts_box)
+        self._tts_cards_parent.grid(row=1, column=0, columnspan=2, sticky="ew", pady=(8, 0))
+        self._tts_cards_parent.columnconfigure(1, weight=1)
+
+        # Polly Card
+        self._tts_frame_polly = ttk.Frame(self._tts_cards_parent)
+        self._tts_frame_polly.columnconfigure(1, weight=1)
+        self._add_cred_row(self._tts_frame_polly, 0, "POLLY_VOICE_ID", "Voz Polly:", placeholder="Andres")
+        self._add_cred_row(self._tts_frame_polly, 1, "POLLY_ENGINE", "Engine Polly:", placeholder="generative")
+        self._add_cred_row(self._tts_frame_polly, 2, "POLLY_LANGUAGE_CODE", "Idioma:", placeholder="es-MX")
+        ttk.Label(
+            self._tts_frame_polly,
+            text="✨ Polly reutiliza las credenciales de AWS cargadas en la pestaña LLM o desde AWS CLI.",
+            font=("Segoe UI", 8, "italic"),
+            foreground="#0369a1",
+        ).grid(row=3, column=0, columnspan=2, sticky="w", pady=(6, 0))
+
+        # Azure Speech Card
+        self._tts_frame_speech = ttk.Frame(self._tts_cards_parent)
+        self._tts_frame_speech.columnconfigure(1, weight=1)
+        self._add_cred_row(self._tts_frame_speech, 0, "AZURE_SPEECH_KEY", "Speech Key:", secret=True)
+        self._add_cred_row(self._tts_frame_speech, 1, "AZURE_SPEECH_REGION", "Región:", placeholder="eastus")
+        self._add_cred_row(self._tts_frame_speech, 2, "AZURE_SPEECH_LANGUAGE", "Idioma:", placeholder="es-MX")
+        self._add_cred_row(self._tts_frame_speech, 3, "AZURE_SPEECH_VOICE", "Voz:", placeholder="es-MX-JorgeNeural")
+
+        # Off Card
+        self._tts_frame_off = ttk.Frame(self._tts_cards_parent)
+        ttk.Label(
+            self._tts_frame_off,
+            text="Respuesta hablada desactivada. AulaTeX solo generará documentos y texto.",
+            font=("Segoe UI", 9, "italic"),
+            foreground="#6b7280",
+        ).pack(anchor="w", pady=4)
+
+        # Translator Box
+        tr_box = ttk.LabelFrame(tab_audio, text="Traducción de Contenidos (Azure Translator)", padding=10)
+        tr_box.pack(fill="x", pady=(0, 6))
+        tr_box.columnconfigure(1, weight=1)
+        self._add_cred_row(tr_box, 0, "AZURE_TRANSLATOR_KEY", "Translator Key:", secret=True)
+        self._add_cred_row(tr_box, 1, "AZURE_TRANSLATOR_REGION", "Región:", placeholder="eastus")
+        self._add_cred_row(tr_box, 2, "AZURE_TRANSLATOR_ENDPOINT", "Endpoint:")
+
+        # --- Pestaña 3: Telegram y Plataformas ---
+        tab_system.columnconfigure(0, weight=1)
+        tg_box = ttk.LabelFrame(tab_system, text="Bot de Telegram", padding=10)
+        tg_box.pack(fill="x", pady=(0, 10))
+        tg_box.columnconfigure(1, weight=1)
+        self._add_cred_row(tg_box, 0, "TELEGRAM_BOT_TOKEN", "Bot token:", secret=True)
+        self._add_cred_row(tg_box, 1, "TELEGRAM_ALLOWED_USER_IDS", "IDs permitidos (coma):")
+
+        git_box = ttk.LabelFrame(tab_system, text="Sincronización Git y Entorno", padding=10)
+        git_box.pack(fill="x", pady=(0, 6))
+        git_box.columnconfigure(1, weight=1)
+        self._add_cred_row(git_box, 0, "NOTE_GIT_AUTO_SYNC_ENABLED", "Auto-Sync (true/false):", placeholder="true")
+        self._add_cred_row(git_box, 1, "NOTE_GIT_AUTO_PUSH_ENABLED", "Auto-Push (true/false):", placeholder="false")
+
+        # --- Pestaña 4: Catálogo Completo (Scrollable Canvas) ---
+        tab_catalog.columnconfigure(0, weight=1)
+        tab_catalog.rowconfigure(0, weight=1)
+        cat_canvas = tk.Canvas(tab_catalog, highlightthickness=0)
+        cat_canvas.grid(row=0, column=0, sticky="nsew")
+        cat_sb = ttk.Scrollbar(tab_catalog, orient="vertical", command=cat_canvas.yview)
+        cat_sb.grid(row=0, column=1, sticky="ns")
+        cat_canvas.configure(yscrollcommand=cat_sb.set)
+
+        cat_inner = ttk.Frame(cat_canvas)
+        cat_inner_win = cat_canvas.create_window((0, 0), window=cat_inner, anchor="nw")
+        cat_inner.columnconfigure(0, weight=1)
+
+        def _cat_inner_cfg(_e=None) -> None:
+            cat_canvas.configure(scrollregion=cat_canvas.bbox("all"))
+
+        def _cat_canvas_cfg(e) -> None:
+            cat_canvas.itemconfigure(cat_inner_win, width=e.width)
+
+        cat_inner.bind("<Configure>", _cat_inner_cfg)
+        cat_canvas.bind("<Configure>", _cat_canvas_cfg)
+
+        for r_idx, grp in enumerate(catalog):
+            g_frame = ttk.LabelFrame(cat_inner, text=grp.title, padding=8)
+            g_frame.grid(row=r_idx, column=0, sticky="ew", pady=(0, 8), padx=(0, 4))
+            g_frame.columnconfigure(1, weight=1)
+
+            st_lbl = ttk.Label(g_frame, text="", foreground="#616161")
+            st_lbl.grid(row=0, column=0, columnspan=3, sticky="w", pady=(0, 2))
+            self._credential_status_labels[grp.group_id] = st_lbl
+
+            for f_idx, fld in enumerate(grp.fields):
+                f_row = f_idx + 1
+                f_lbl = fld.label + ("" if fld.required else " (opcional)")
+                ttk.Label(g_frame, text=f_lbl).grid(row=f_row, column=0, sticky="w", pady=2)
+                var = self._credential_vars.setdefault(fld.key, tk.StringVar(self, value=stored.get(fld.key, "")))
+                show_c = "*" if fld.secret and not self._show_credentials_secrets.get() else ""
+                ent = ttk.Entry(g_frame, textvariable=var, show=show_c)
+                ent.grid(row=f_row, column=1, sticky="ew", padx=(6, 6), pady=2)
+                if fld.secret:
+                    self._secret_entries.append(ent)
+                if fld.help:
+                    self._attach_tooltip(ent, fld.help)
+
+        # --- Barra inferior de acciones (Footer) ---
         actions = ttk.Frame(self.credentials_tab)
-        actions.grid(row=3, column=0, sticky="ew", pady=(8, 0))
-        self.credentials_save_button = ttk.Button(actions, text="Guardar credenciales", command=self._save_credentials)
-        self.credentials_save_button.grid(row=0, column=0, sticky="w")
-        ttk.Button(actions, text="Recargar desde .env", command=self._reload_credentials).grid(row=0, column=1, sticky="w", padx=(8, 0))
-        ttk.Button(actions, text="Verificar estado", command=self._refresh_credential_status).grid(row=0, column=2, sticky="w", padx=(8, 0))
-        ttk.Button(actions, text="Cifrar secretos ahora", command=self._encrypt_credentials).grid(row=0, column=3, sticky="w", padx=(8, 0))
+        actions.grid(row=2, column=0, sticky="ew", padx=6, pady=(8, 4))
+        actions.columnconfigure(0, weight=1)
 
-        self.credentials_status_text = ttk.Label(self.credentials_tab, text="", foreground="#2e7d32")
-        self.credentials_status_text.grid(row=4, column=0, sticky="w", pady=(6, 0))
+        self.credentials_status_text = ttk.Label(
+            actions, text="Listo.", foreground="#2e7d32", font=("Segoe UI", 9)
+        )
+        self.credentials_status_text.grid(row=0, column=0, sticky="w")
 
+        btn_box = ttk.Frame(actions)
+        btn_box.grid(row=0, column=1, sticky="e")
+
+        ttk.Button(
+            btn_box,
+            text="Cerrar",
+            command=lambda: self._close_auxiliary("settings"),
+        ).pack(side="right", padx=(6, 0))
+
+        self.credentials_save_button = tk.Button(
+            btn_box,
+            text="Guardar",
+            command=self._save_credentials,
+            bg="#2563eb",
+            fg="#ffffff",
+            activebackground="#1d4ed8",
+            activeforeground="#ffffff",
+            font=("Segoe UI", 9, "bold"),
+            padx=14,
+            pady=3,
+            relief="flat",
+            cursor="hand2",
+        )
+        self.credentials_save_button.pack(side="right", padx=(6, 0))
+
+        ttk.Button(
+            btn_box,
+            text="Probar conexión",
+            command=self._test_active_llm_connection,
+        ).pack(side="right", padx=(6, 0))
+
+        ttk.Button(
+            btn_box,
+            text="Recargar desde .env",
+            command=self._reload_credentials,
+        ).pack(side="right", padx=(6, 0))
+
+        ttk.Button(
+            btn_box,
+            text="Cifrar secretos ahora",
+            command=self._encrypt_credentials,
+        ).pack(side="right")
+
+        # Sincronizar selección inicial de Comboboxes
+        self._sync_comboboxes_from_vars()
         self._refresh_credential_status()
+
+    def _add_cred_row(
+        self,
+        parent: tk.Misc,
+        row: int,
+        key: str,
+        label: str,
+        *,
+        secret: bool = False,
+        placeholder: str = "",
+        help_text: str = "",
+    ) -> ttk.Entry:
+        ttk.Label(parent, text=label).grid(row=row, column=0, sticky="w", padx=(0, 10), pady=3)
+        var = self._credential_vars.setdefault(key, tk.StringVar(self, value=""))
+        show_char = "*" if secret and not getattr(self, "_show_credentials_secrets", tk.BooleanVar(value=False)).get() else ""
+        entry = ttk.Entry(parent, textvariable=var, show=show_char)
+        entry.grid(row=row, column=1, sticky="ew", pady=3)
+        if secret and hasattr(self, "_secret_entries"):
+            self._secret_entries.append(entry)
+        if help_text:
+            self._attach_tooltip(entry, help_text)
+        return entry
+
+    def _toggle_credential_secrets(self) -> None:
+        show = self._show_credentials_secrets.get()
+        show_char = "" if show else "*"
+        for entry in getattr(self, "_secret_entries", []):
+            try:
+                entry.configure(show=show_char)
+            except Exception:
+                pass
+
+    def _on_llm_combo_changed(self, _event=None) -> None:
+        choice = self._llm_model_combo.get()
+        target_card = getattr(self, "_frame_bedrock", None)
+        active_engine = "Amazon Nova Pro"
+        provider = "amazon-nova-pro"
+        model_id = "us.amazon.nova-pro-v1:0"
+
+        if "Bedrock" in choice:
+            target_card = getattr(self, "_frame_bedrock", None)
+            if "Lite" in choice:
+                active_engine = "Amazon Nova Lite"
+                provider = "amazon-nova-lite"
+                model_id = "us.amazon.nova-lite-v1:0"
+            else:
+                active_engine = "Amazon Nova Pro"
+                provider = "amazon-nova-pro"
+                model_id = "us.amazon.nova-pro-v1:0"
+        elif "GPT-Pro" in choice:
+            target_card = getattr(self, "_frame_pro", None)
+            active_engine = "GPT-Pro"
+            provider = "gpt-pro"
+        elif "Codex" in choice:
+            target_card = getattr(self, "_frame_codex", None)
+            active_engine = "Codex"
+            provider = "codex"
+        elif "Claude" in choice:
+            target_card = getattr(self, "_frame_claude", None)
+            active_engine = "Claude Foundry"
+            provider = "claude-foundry"
+        elif "Directo" in choice:
+            target_card = getattr(self, "_frame_azure", None)
+            active_engine = "Azure Sora / Video"
+            provider = "azure-openai"
+        elif "SOL" in choice:
+            target_card = getattr(self, "_frame_gpt56", None)
+            active_engine = "GPT-5.6-SOL"
+            provider = "gpt-5-6-sol"
+        elif "Luna" in choice:
+            target_card = getattr(self, "_frame_gpt56", None)
+            active_engine = "GPT-5.6-Luna"
+            provider = "gpt-5-6-luna"
+        elif "Terra" in choice:
+            target_card = getattr(self, "_frame_gpt56", None)
+            active_engine = "GPT-5.6-Terra"
+            provider = "gpt-5-6-terra"
+        else:
+            target_card = getattr(self, "_frame_mr", None)
+            active_engine = "Auto (model-router)"
+            provider = "model-router"
+
+        for k, v in [
+            ("AULATEX_LLM_ENGINE", active_engine),
+            ("AULATEX_LLM_PROVIDER", provider),
+            ("LLM_PROVIDER", provider),
+            ("BASE_NOTE_PROVIDER", provider),
+            ("TB_BOOKS_LLM_REVIEW_ENGINE", active_engine),
+        ]:
+            if k in self._credential_vars:
+                self._credential_vars[k].set(v)
+
+        if "Bedrock" in choice and model_id:
+            for mk in ("BEDROCK_MODEL_ID", "AMAZON_NOVA_PRO_MODEL_ID"):
+                if mk in self._credential_vars and not self._credential_vars[mk].get().strip():
+                    self._credential_vars[mk].set(model_id)
+            if "AWS_REGION" in self._credential_vars and not self._credential_vars["AWS_REGION"].get().strip():
+                self._credential_vars["AWS_REGION"].set("us-east-2")
+
+        all_cards = [
+            getattr(self, "_frame_bedrock", None),
+            getattr(self, "_frame_mr", None),
+            getattr(self, "_frame_pro", None),
+            getattr(self, "_frame_codex", None),
+            getattr(self, "_frame_claude", None),
+            getattr(self, "_frame_azure", None),
+            getattr(self, "_frame_gpt56", None),
+        ]
+        for card in all_cards:
+            if card is not None:
+                if card is target_card:
+                    card.pack(fill="x", pady=4)
+                else:
+                    card.pack_forget()
+
+    def _on_tts_combo_changed(self, _event=None) -> None:
+        choice = self._tts_combo.get()
+        mode = "polly"
+        target_frame = getattr(self, "_tts_frame_polly", None)
+
+        if "Speech" in choice:
+            mode = "speech"
+            target_frame = getattr(self, "_tts_frame_speech", None)
+        elif "Desactivado" in choice:
+            mode = "off"
+            target_frame = getattr(self, "_tts_frame_off", None)
+        else:
+            mode = "polly"
+            target_frame = getattr(self, "_tts_frame_polly", None)
+
+        if "TTS_PROVIDER" in self._credential_vars:
+            self._credential_vars["TTS_PROVIDER"].set("none" if mode == "off" else mode)
+
+        all_tts_frames = [
+            getattr(self, "_tts_frame_polly", None),
+            getattr(self, "_tts_frame_speech", None),
+            getattr(self, "_tts_frame_off", None),
+        ]
+        for frame in all_tts_frames:
+            if frame is not None:
+                if frame is target_frame:
+                    frame.pack(fill="x", pady=4)
+                else:
+                    frame.pack_forget()
+
+    def _load_from_aws_cli(self) -> None:
+        try:
+            creds_path = Path.home() / ".aws" / "credentials"
+            cfg_path = Path.home() / ".aws" / "config"
+            access_key = ""
+            secret_key = ""
+            region = "us-east-2"
+
+            if creds_path.exists():
+                parser = configparser.ConfigParser()
+                parser.read(creds_path, encoding="utf-8")
+                profile = "default"
+                if parser.has_section(profile):
+                    access_key = parser.get(profile, "aws_access_key_id", fallback="")
+                    secret_key = parser.get(profile, "aws_secret_access_key", fallback="")
+
+            if cfg_path.exists():
+                cparser = configparser.ConfigParser()
+                cparser.read(cfg_path, encoding="utf-8")
+                if cparser.has_section("default"):
+                    region = cparser.get("default", "region", fallback=region)
+                elif cparser.has_section("profile default"):
+                    region = cparser.get("profile default", "region", fallback=region)
+
+            if access_key and "AWS_ACCESS_KEY_ID" in self._credential_vars:
+                self._credential_vars["AWS_ACCESS_KEY_ID"].set(access_key)
+            if secret_key and "AWS_SECRET_ACCESS_KEY" in self._credential_vars:
+                self._credential_vars["AWS_SECRET_ACCESS_KEY"].set(secret_key)
+            if region and "AWS_REGION" in self._credential_vars:
+                self._credential_vars["AWS_REGION"].set(region)
+            if "AMAZON_NOVA_PRO_MODEL_ID" in self._credential_vars and not self._credential_vars["AMAZON_NOVA_PRO_MODEL_ID"].get().strip():
+                self._credential_vars["AMAZON_NOVA_PRO_MODEL_ID"].set("us.amazon.nova-pro-v1:0")
+            if "BEDROCK_MODEL_ID" in self._credential_vars and not self._credential_vars["BEDROCK_MODEL_ID"].get().strip():
+                self._credential_vars["BEDROCK_MODEL_ID"].set("us.amazon.nova-pro-v1:0")
+
+            masked = f"{access_key[:8]}..." if len(access_key) > 8 else access_key
+            self.credentials_status_text.configure(
+                text=f"AWS CLI cargado: {masked} ({region})",
+                foreground="#166534",
+            )
+        except Exception as exc:
+            self.credentials_status_text.configure(
+                text=f"Error al leer AWS CLI: {exc}",
+                foreground="#dc2626",
+            )
+
+    def _test_active_llm_connection(self) -> None:
+        self.credentials_status_text.configure(
+            text="Probando conexión con el modelo activo...",
+            foreground="#0284c7",
+        )
+        for key, var in self._credential_vars.items():
+            val = var.get().strip()
+            if val:
+                os.environ[key] = val
+
+        engine_choice = self._llm_model_combo.get()
+        engine = "Amazon Nova Pro"
+        if "Bedrock" in engine_choice:
+            engine = "Amazon Nova Lite" if "Lite" in engine_choice else "Amazon Nova Pro"
+        elif "GPT-Pro" in engine_choice:
+            engine = "GPT-Pro"
+        elif "Codex" in engine_choice:
+            engine = "Codex"
+        elif "Claude" in engine_choice:
+            engine = "Claude Foundry"
+        elif "Mini" in engine_choice:
+            engine = "Auto (model-router)"
+        elif "SOL" in engine_choice:
+            engine = "GPT-5.6-SOL"
+        elif "Luna" in engine_choice:
+            engine = "GPT-5.6-Luna"
+        elif "Terra" in engine_choice:
+            engine = "GPT-5.6-Terra"
+
+        def _run_test() -> None:
+            try:
+                result = self.llm.check(engine, timeout_seconds=12)
+                if result.ok:
+                    msg = f"✔ Conexión verificada con {engine}: {result.text or 'Conexión verificada.'}"
+                    color = "#16a34a"
+                else:
+                    msg = f"✖ Fallo en {engine}: {result.error}"
+                    color = "#dc2626"
+            except Exception as exc:
+                msg = f"✖ Error al probar conexión: {exc}"
+                color = "#dc2626"
+            self.after(0, lambda: self.credentials_status_text.configure(text=msg, foreground=color))
+
+        threading.Thread(target=_run_test, daemon=True).start()
+
+    def _sync_comboboxes_from_vars(self) -> None:
+        curr_eng = (
+            self._credential_vars.get("AULATEX_LLM_ENGINE", tk.StringVar()).get()
+            or self._credential_vars.get("AULATEX_LLM_PROVIDER", tk.StringVar()).get()
+            or self._credential_vars.get("LLM_PROVIDER", tk.StringVar()).get()
+            or os.getenv("AULATEX_LLM_ENGINE", "Amazon Nova Pro")
+        ).lower()
+
+        if "lite" in curr_eng:
+            self._llm_model_combo.set("Amazon Nova Lite (AWS Bedrock)")
+        elif "nova" in curr_eng or "bedrock" in curr_eng:
+            self._llm_model_combo.set("Amazon Nova Pro (AWS Bedrock)")
+        elif "gpt-pro" in curr_eng:
+            self._llm_model_combo.set("GPT-Pro (Azure OpenAI)")
+        elif "codex" in curr_eng:
+            self._llm_model_combo.set("Codex (Azure OpenAI)")
+        elif "claude" in curr_eng or "foundry" in curr_eng:
+            self._llm_model_combo.set("Claude Foundry (Azure Anthropic)")
+        elif "directo" in curr_eng or "azure-openai" in curr_eng:
+            self._llm_model_combo.set("Azure OpenAI Directo")
+        elif "sol" in curr_eng:
+            self._llm_model_combo.set("GPT-5.6-SOL (Azure OpenAI)")
+        elif "luna" in curr_eng:
+            self._llm_model_combo.set("GPT-5.6-Luna (Azure OpenAI)")
+        elif "terra" in curr_eng:
+            self._llm_model_combo.set("GPT-5.6-Terra (Azure OpenAI)")
+        elif "mini" in curr_eng or "model-router" in curr_eng:
+            self._llm_model_combo.set("GPT-5 Mini (Model Router / Azure)")
+        else:
+            self._llm_model_combo.set("Amazon Nova Pro (AWS Bedrock)")
+        self._on_llm_combo_changed()
+
+        tts = (
+            self._credential_vars.get("TTS_PROVIDER", tk.StringVar()).get()
+            or os.getenv("TTS_PROVIDER", "polly")
+        ).lower()
+        if "speech" in tts:
+            self._tts_combo.set("Azure Speech Service")
+        elif "none" in tts or "off" in tts or "desactivado" in tts:
+            self._tts_combo.set("Desactivado (sin audio de respuesta)")
+        else:
+            self._tts_combo.set("AWS Polly (AWS CLI)")
+        self._on_tts_combo_changed()
 
     def _show_credentials_help(self) -> None:
         messagebox.showinfo(
             "AulaTeX - Credenciales",
-            "1. Cada tarjeta agrupa las claves de un motor LLM o servicio (voz, traducción, video).\n"
-            "2. Los campos secretos aparecen enmascarados; usa 'Ver' para revisarlos.\n"
-            "3. 'Guardar credenciales' escribe los valores en el archivo .env del workspace,\n"
-            "   preservando comentarios y el orden existente; los campos vacíos no borran claves.\n"
-            "4. 'Recargar desde .env' descarta los cambios sin guardar y vuelve a leer el archivo.\n"
-            "5. 'Verificar estado' recalcula qué motores tienen sus tres claves obligatorias completas.\n"
-            "6. Al guardar, los secretos se cifran automáticamente con la clave local\n"
-            "   (aulaTEX/secret.key) y quedan en el .env con el prefijo 'enc:'.\n"
+            "1. Cada tarjeta agrupa las claves del motor LLM o servicio (voz, traducción, video).\n"
+            "2. Los campos secretos aparecen enmascarados; usa 'Mostrar secretos' para revisarlos.\n"
+            "3. En Amazon Bedrock, puedes pulsar 'Cargar automáticamente desde AWS CLI' para leer ~/.aws.\n"
+            "4. 'Probar conexión' verifica en tiempo real la conectividad con el modelo seleccionado.\n"
+            "5. 'Guardar' escribe los valores en el archivo .env del workspace y cifra los secretos.\n"
+            "6. 'Recargar desde .env' descarta los cambios sin guardar y vuelve a leer el archivo.\n"
             "7. 'Cifrar secretos ahora' fuerza el cifrado de cualquier valor que haya quedado en claro.\n"
-            "8. Respalda aulaTEX/secret.key fuera del repositorio: sin ella los valores 'enc:'\n"
-            "   son irrecuperables y habría que rotar todas las claves.\n"
-            "9. Las credenciales quedan embebidas localmente; no se envían a ningún servicio al guardarlas.",
+            "8. Respalda aulaTEX/secret.key fuera del repositorio.\n"
+            "9. Las credenciales quedan embebidas localmente; no se transmiten a servidores externos.",
         )
 
     def _refresh_credential_status(self) -> None:
@@ -687,6 +1453,7 @@ class AulaTeXApp(tk.Tk):
                     for group in credential_catalog()
                     if group.group_id == group_id
                     for field in group.fields
+                    if field.key in self._credential_vars
                 )
                 label.configure(
                     text="Configurado" if filled else "Sin configurar",
@@ -697,6 +1464,7 @@ class AulaTeXApp(tk.Tk):
         stored = read_env_values(list(self._credential_vars.keys()), self.llm.env_path)
         for key, var in self._credential_vars.items():
             var.set(stored.get(key, ""))
+        self._sync_comboboxes_from_vars()
         self.credentials_status_text.configure(text="Valores recargados desde el archivo .env.", foreground="#616161")
         self._refresh_credential_status()
 
@@ -704,11 +1472,15 @@ class AulaTeXApp(tk.Tk):
         values = {key: var.get() for key, var in self._credential_vars.items()}
         try:
             written_path = write_env_values(values, self.llm.env_path)
+            for key, value in values.items():
+                if value:
+                    os.environ[key] = value
         except Exception as exc:  # noqa: BLE001
-            messagebox.showerror("AulaTeX", f"No se pudieron guardar las credenciales: {exc}")
+            messagebox.showerror("AulaTeX", f"No se pudieron guardar las credenciales: {exc}", parent=self)
             return
+        active_engine = self._credential_vars.get("AULATEX_LLM_ENGINE", tk.StringVar()).get() or "Amazon Nova Pro"
         self.credentials_status_text.configure(
-            text=f"Credenciales guardadas y cifradas en {written_path}",
+            text=f"Credenciales guardadas y cifradas en {written_path.name}. Modelo activo: {active_engine}",
             foreground="#2e7d32",
         )
         self._refresh_credential_status()
@@ -717,7 +1489,7 @@ class AulaTeXApp(tk.Tk):
         try:
             cifrados = encrypt_env_secrets(self.llm.env_path)
         except Exception as exc:  # noqa: BLE001
-            messagebox.showerror("AulaTeX", f"No se pudieron cifrar los secretos: {exc}")
+            messagebox.showerror("AulaTeX", f"No se pudieron cifrar los secretos: {exc}", parent=self)
             return
         if cifrados < 0:
             self.credentials_status_text.configure(
