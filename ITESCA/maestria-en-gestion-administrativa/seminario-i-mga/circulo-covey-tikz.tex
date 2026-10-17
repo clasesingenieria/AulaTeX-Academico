@@ -1,0 +1,62 @@
+% ==============================================================================
+% CÍRCULO DE COVEY EN TIKZ - SEMINARIO I (MGA - ITESCA)
+% ==============================================================================
+% Representación vectorial institucional del esquema didáctico de articulación
+% de ideas de anteproyecto de investigación según material docente ITESCA.
+% ==============================================================================
+
+\usepackage{tikz}
+\usepackage{xcolor}
+
+\providecolor{coveyBorder}{RGB}{60,85,115}
+\providecolor{coveyCenterBg}{RGB}{246,249,253}
+\providecolor{coveyWine}{RGB}{122,28,41}
+\providecolor{coveyNavy}{RGB}{20,45,85}
+\providecolor{coveySlate}{RGB}{70,80,95}
+
+\providecommand{\circulodecovey}[1][0.64]{%
+\begin{center}\vspace*{-1mm}
+\sffamily
+\begin{tikzpicture}[x=1cm, y=1cm, scale=#1, every node/.append style={transform shape}]
+
+  % Anillos concéntricos calibrados institucionalmente
+  \draw[line width=2.0pt, color=coveyBorder] (0,0) ellipse (14.0cm and 7.8cm);
+  \draw[line width=1.4pt, color=coveyBorder] (0,0) ellipse (12.4cm and 6.45cm);
+  \draw[line width=1.4pt, color=coveyBorder] (0,0) ellipse (10.8cm and 5.1cm);
+  \draw[line width=1.4pt, color=coveyBorder] (0,0) ellipse (9.2cm and 3.75cm);
+
+  % Núcleo Central (Elipse rellena con filete guinda institucional)
+  \filldraw[fill=coveyCenterBg, draw=coveyWine, line width=2.0pt]
+    (0,0) ellipse (7.5cm and 2.4cm);
+
+  % Variables superiores con valores reales vTaxi calibrados geométricamente
+  \node[anchor=center, text=coveyNavy, font=\fontsize{11}{14}\selectfont]
+    at (0, 7.00) {\textbf{VARIABLE 1 (VI):} Gesti\'on del cumplimiento normativo};
+
+  \node[anchor=center, text=coveyNavy, font=\fontsize{11}{14}\selectfont]
+    at (0, 5.65) {\textbf{VARIABLE 2 (VD):} Preparaci\'on administrativa del expediente};
+
+  \node[anchor=center, text=coveyNavy, font=\fontsize{11}{14}\selectfont]
+    at (0, 4.30) {\textbf{VARIABLE 3 (LGAC):} Evidencias documentales y responsabilidades};
+
+  % Textos intermedios: Análisis y Conclusiones
+  \node[anchor=center, align=center, text=coveySlate, font=\bfseries\fontsize{10.5}{13}\selectfont]
+    at (0, 2.95) {AN\'ALISIS Y CORRELACI\'ON DE VARIABLES};
+  \node[anchor=center, align=center, text=coveySlate, font=\bfseries\fontsize{10.5}{13}\selectfont]
+    at (0, -2.95) {CONCLUSIONES, DESCUBRIMIENTOS Y PROPUESTAS};
+
+  % Núcleo central: Problema general y Objetivo general de vTaxi
+  \node[anchor=center, text width=13.0cm, align=center, font=\fontsize{8.5}{10.8}\selectfont] at (0, 0) {%
+    {\bfseries\fontsize{10}{12}\selectfont\color{coveyWine} PROBLEMA GENERAL}\\[2pt]
+    Los borradores regulatorios de vTaxi no acreditan una ruta validada de requisitos, responsables y evidencias para su formalizaci\'on como plataforma de taxis concesionados en Nuevo Le\'on.\\[5pt]
+    {\bfseries\fontsize{10}{12}\selectfont\color{coveyWine} OBJETIVO GENERAL}\\[2pt]
+    Analizar la relaci\'on entre el nivel de gesti\'on del cumplimiento normativo y el grado de preparaci\'on administrativa de vTaxi para su formalizaci\'on como plataforma de taxis concesionados en Nuevo Le\'on durante septiembre a noviembre de 2026, mediante el contraste documental de requisitos, responsabilidades y evidencias del proyecto.%
+  };
+
+  % Nota explicativa al pie de la elipse
+  \node[anchor=center, text=gray!80!black, font=\fontsize{8.5}{10.5}\selectfont\itshape]
+    at (0, -8.3) {Los dem\'as componentes se desarrollar\'an en etapas posteriores conforme al avance del anteproyecto};
+
+\end{tikzpicture}
+\vspace*{-1mm}\end{center}
+}
