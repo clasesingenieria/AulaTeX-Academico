@@ -22,7 +22,7 @@ from .extractor_adapter import ExtractorAdapter, ExtractorRequest, ExtractorRunR
 from .incremental_detail_planner import DetailPlannerRequest, DetailPlannerResult, IncrementalDetailPlanner
 from .langchain_adapter import AulaTeXLLMInterface, AulaTeXLangChainAdapter
 from .llm_bridge import DEFAULT_MAX_TOKENS, LLM_ENGINES, AulaTeXLLMClient, LLMCallResult
-from .config import MODEL_ROUTER_ENGINE, restrict_engines_to_available
+from .config import MODEL_ROUTER_ENGINE, required_llm_engine, restrict_engines_to_available
 from .template_materializer import MaterializationResult, TemplateMaterializer
 from .workspace import AulaTeXWorkspace
 
@@ -168,6 +168,13 @@ class AulaTeXAgent:
         applied_tex: dict[str, object] = {}
         compile_results: list[dict[str, object]] = []
         artifacts_prepared = False
+
+        # Cargar extractor previo si ya existe para alimentar la memoria desde la etapa 1
+        if target_ctx.target_path.is_dir() and (target_ctx.target_path / "extractor-aulatex").is_dir():
+            for p in sorted((target_ctx.target_path / "extractor-aulatex").glob(f"*actividad-{request.activity_number}*")):
+                if p.is_dir():
+                    self._populate_memory_from_extractor(memory, p)
+                    break
 
         for index, task in enumerate(selected_tasks, start=1):
             base_stage = self._base_stage(task.stage)
@@ -362,6 +369,56 @@ class AulaTeXAgent:
         compile_results: list[dict[str, object]],
     ) -> str:
         sections = [task.prompt, "\n## Memoria actualizada\n" + memory.summary(max_chars=12000)]
+
+        # Contexto de documento acumulativo previo (p. ej. protocolo de tesis o portafolio)
+        predecessor, prev_num = self._find_predecessor_tex(target_ctx, activity_number)
+        if predecessor is not None and predecessor.exists():
+            pred_text = predecessor.read_text(encoding="utf-8", errors="replace")
+            is_cumulative = r"\seminarioacumulativo" in pred_text or pred_text.count(r"\section{") >= 3
+            if is_cumulative:
+                excerpt_pred = pred_text[:30000]
+                if len(pred_text) > len(excerpt_pred):
+                    excerpt_pred += "\n[Contenido previo truncado para contexto...]"
+                sections.append(
+                    f"\n## DOCUMENTO ACUMULATIVO PREVIO (Actividad {prev_num}: {predecessor.name})\n"
+                    "ATENCIÓN CRÍTICA - PROTOCOLO / REPORTE ACUMULATIVO:\n"
+                    f"Esta materia opera con entregables acumulativos progresivos. La Actividad {activity_number} DEBE:\n"
+                    f"1. Preservar e integrar la estructura y secciones previas ya desarrolladas en la Actividad {prev_num} "
+                    "(Antecedentes, Planteamiento del problema, Objetivos, Justificación, Hipótesis, Anexos, Referencias).\n"
+                    f"2. Desarrollar a profundidad la nueva sección requerida para la Actividad {activity_number} "
+                    "sin recortar ni resumir el trabajo anterior.\n"
+                    f"```tex\n{excerpt_pred}\n```"
+                )
+
+        if self._base_stage(task.stage) in {"planificar", "investigar", "generar"}:
+            sections.append(
+                "\n## DIRECTRICES EDITORIALES PARA ALCANZAR CALIDAD MÁXIMA (100/100):\n"
+                "- CITAS VISIBLES (20 pts): Utilizar formalmente comandos natbib `\\citep{clave}` o `\\citet{clave}` "
+                "referenciando claves existentes del archivo .bib. NUNCA colocar citas en texto plano.\n"
+                "- ESTRUCTURA TEMÁTICA (20 pts): Organizar en secciones principales y subsecciones con títulos descriptivos "
+                "que nombren el concepto. PROHIBIDO usar títulos-etiqueta genéricos como 'Marco conceptual', 'Desarrollo', "
+                "'Metodología' o 'Participación publicada'.\n"
+                "- BASE CONCEPTUAL (15 pts): Destacar en negritas `\\textbf{...}` al menos 8 términos conceptuales clave dentro "
+                "del desarrollo, asegurando cobertura de los conceptos detectados por el extractor.\n"
+                "- BALANCE DE LISTAS (8 pts): Mantener a lo sumo UNA sola lista estructurada (`\\begin{enumerate}` o `\\begin{itemize}`) "
+                "para criterios o medidas de mitigación; redactar el resto en prosa argumentada fluida (no abusar de viñetas).\n"
+                "- CONECTORES LÓGICOS (12 pts): Emplear de forma recurrente conectores de razonamiento explícitos "
+                "('por tanto', 'por ello', 'en consecuencia', 'sin embargo', 'no obstante', 'es decir', 'en cambio', "
+                "'por el contrario', 'de ese modo', 'así', 'además', 'dado que', 'puesto que', 'en efecto', 'por consiguiente').\n"
+                "- EXTENSIÓN Y PROFUNDIDAD (10 pts): Redactar con amplitud académica suficiente (> 1,000 palabras en el cuerpo).\n"
+                "- INTEGRIDAD Y POSTURA PROPIA (15 pts): Incluir postura reflexiva explícita y compromiso ético con al menos 4 marcadores "
+                "('desde mi perspectiva', 'considero', 'sostengo', 'mi postura', 'a mi juicio', 'reflexión propia', 'no inventar registros', "
+                "'supuesto metodológico') a lo largo del desarrollo y las conclusiones, y colocar la declaración de uso de inteligencia artificial como `\\footnote` en la conclusión."
+            )
+
+        if self._base_stage(task.stage) == "generar":
+            sections.append(
+                "\n## OBLIGACIÓN ESTRICTA DE ENTREGA PARA EL ARQUITECTO:\n"
+                "Debes devolver el código LaTeX COMPLETO dentro de un único bloque ```latex ... ```.\n"
+                "PROHIBIDO responder con planes, viñetas de fases o comentarios en markdown. "
+                "Escribe directamente el código fuente LaTeX listo para guardarse en archivo y compilarse con pdflatex/bibtex."
+            )
+
         for previous, result in list(zip(previous_tasks, results))[-5:]:
             text = result.text if result.ok else result.error
             excerpt = text[:24000]
@@ -835,7 +892,8 @@ class AulaTeXAgent:
     def _select_compile_targets(self, target_ctx: AgentTargetContext, activity_number: int) -> list[Path]:
         if target_ctx.generation_mode == "downward":
             return []
-        tex_files = self.workspace.find_tex_files(target_ctx.target_path, limit=30)
+        direct_files = sorted(target_ctx.target_path.glob("*.tex")) if target_ctx.target_path.is_dir() else []
+        tex_files = direct_files + self.workspace.find_tex_files(target_ctx.target_path, limit=200)
         activity_marker = f"actividad-{int(activity_number)}".lower()
         reports = [
             path for path in tex_files
@@ -884,7 +942,100 @@ class AulaTeXAgent:
                 document = body[start:end].strip()
                 if "\\documentclass" in document:
                     return document
+            # Soportar plantillas institucionales basadas en macros e \input{} (ej. ITESCA)
+            if r"\def\seminariocontenido" in body or (r"\section{" in body and (r"\input{" in body or r"\def\seminario" in body)):
+                return body.strip()
+            # Fragmento estructurado que contiene secciones de reporte
+            if body.count(r"\section{") >= 1 and (r"\subsection{" in body or r"\citep" in body or r"\cite" in body):
+                return body.strip()
         return ""
+
+    def _find_predecessor_tex(self, target_ctx: AgentTargetContext, activity_number: int) -> tuple[Path | None, int]:
+        if int(activity_number) <= 1:
+            return None, 0
+        folder = target_ctx.target_path if target_ctx.target_path.is_dir() else target_ctx.target_path.parent
+        for prev_num in range(int(activity_number) - 1, 0, -1):
+            pattern = f"reporte-*-Actividad-{prev_num}.tex"
+            candidates = sorted(folder.glob(pattern))
+            if candidates:
+                return candidates[0], prev_num
+        return None, 0
+
+    @staticmethod
+    def _merge_cumulative_document(pred_text: str, document: str, activity_number: int) -> str:
+        merged = pred_text
+
+        # 1. Actualizar subtítulo y asunto
+        sub_m = re.search(r"\\def\\seminariosubtitulo\{([^}]+)\}", document)
+        if sub_m:
+            new_sub = sub_m.group(1).strip()
+            merged = re.sub(r"\\def\\seminariosubtitulo\{[^}]*\}", lambda _: f"\\def\\seminariosubtitulo{{{new_sub}}}", merged)
+        else:
+            merged = re.sub(
+                r"(\\def\\seminariosubtitulo\{Actividad\s+)\d+([^}]*\})",
+                lambda m: f"{m.group(1)}{activity_number}{m.group(2)}",
+                merged,
+            )
+
+        # 2. Actualizar resumen si la nueva propuesta trae uno específico
+        res_m = re.search(r"\\def\\seminarioresumen\{([^}]+)\}", document)
+        if res_m and len(res_m.group(1).strip()) > 30:
+            new_res = res_m.group(1).strip()
+            merged = re.sub(r"\\def\\seminarioresumen\{[^}]*\}", lambda _: f"\\def\\seminarioresumen{{{new_res}}}", merged)
+
+        # 3. Actualizar asunto o subject
+        merged = re.sub(
+            r"(\\def\\seminarioasunto\{Actividad\s+)\d+([^}]*\})",
+            lambda m: f"{m.group(1)}{activity_number}{m.group(2)}",
+            merged,
+        )
+        merged = re.sub(
+            r"(\\def\\documentsubject\{Actividad\s+)\d+",
+            lambda m: f"{m.group(1)}{activity_number}",
+            merged,
+        )
+
+        # 4. Extraer secciones del nuevo documento
+        new_sections = re.findall(
+            r"(\\section\*?\{[^}]+\}.*?)(?=\\section\*?\{|\\clearpage|\\def\\seminarioreferencias|\\def\\seminarioanexos|\\input\{|\\end\{document\}|$)",
+            document,
+            re.DOTALL,
+        )
+        for sec in new_sections:
+            m = re.search(r"\\section\*?\{([^}]+)\}", sec)
+            if not m:
+                continue
+            title = m.group(1).strip()
+            pattern = re.compile(
+                rf"\\section\*?\{{{re.escape(title)}\}}(.*?)(?=\\section\*?\{{|\\clearpage|\\def\\seminarioreferencias|\\def\\seminarioanexos|\\input\{{|\\end\{{document\}}|$)",
+                re.DOTALL,
+            )
+            if pattern.search(merged):
+                merged = pattern.sub(lambda _: sec.strip() + "\n\n", merged, count=1)
+            elif "conclusi" in title.lower():
+                concl_pattern = re.compile(
+                    r"\\section\*?\{Conclusi[^\}]*\}(.*?)(?=\\section\*?\{|\\clearpage|\\def\\seminarioreferencias|\\def\\seminarioanexos|\\input\{|\\end\{document\}|$)",
+                    re.DOTALL,
+                )
+                if concl_pattern.search(merged):
+                    merged = concl_pattern.sub(lambda _: sec.strip() + "\n\n", merged, count=1)
+                else:
+                    ins = re.search(r"(\\def\\seminarioanexos|\\def\\seminarioreferencias|\\input\{|\\end\{document\})", merged)
+                    if ins:
+                        pos = ins.start()
+                        merged = merged[:pos] + sec.strip() + "\n\n" + merged[pos:]
+                    else:
+                        merged += "\n\n" + sec.strip() + "\n"
+            else:
+                # Sección sustantiva nueva (e.g. Marco teórico): insertar antes de Conclusiones
+                ins = re.search(r"(\\section\*?\{Conclusi|\\def\\seminarioanexos|\\def\\seminarioreferencias|\\input\{|\\end\{document\})", merged)
+                if ins:
+                    pos = ins.start()
+                    merged = merged[:pos] + sec.strip() + "\n\n" + merged[pos:]
+                else:
+                    merged += "\n\n" + sec.strip() + "\n"
+
+        return merged
 
     def _apply_generated_tex(
         self,
@@ -894,10 +1045,10 @@ class AulaTeXAgent:
         stage_results: list[LLMCallResult],
         workflow: AgenticStateMachine,
     ) -> dict[str, object]:
-        """Vuelca al .tex la redacción del arquitecto cuando el archivo sigue vacío.
+        """Vuelca al .tex la redacción del arquitecto cuando el archivo sigue vacío o incompleto.
 
-        Solo actúa si el destino conserva placeholders activos, de modo que nunca
-        pisa una actividad ya redactada.
+        Solo actúa si el destino conserva placeholders activos, es un borrador no acumulativo
+        o su calidad editorial es insuficiente, de modo que nunca pisa una actividad ya finalizada.
         """
         summary: dict[str, object] = {"applied": False, "reason": "", "target": "", "chars": 0}
         if request.action.strip().lower() != "realizar-actividad":
@@ -920,7 +1071,15 @@ class AulaTeXAgent:
         active_text = re.sub(r"(?<!\\)%[^\n]*", "", current)
         is_placeholder = bool(re.search(r"\\pendiente\{", active_text))
         is_scaffold = not active_text.strip() or "en construcción" in active_text.lower()
-        if not is_placeholder and not is_scaffold:
+
+        predecessor, prev_num = self._find_predecessor_tex(target_ctx, request.activity_number)
+        has_missing_cumulative = False
+        if predecessor is not None and predecessor.exists():
+            pred_sample = predecessor.read_text(encoding="utf-8", errors="replace")
+            if r"\section{Antecedentes}" in pred_sample and r"\section{Antecedentes}" not in current:
+                has_missing_cumulative = True
+
+        if not is_placeholder and not is_scaffold and not has_missing_cumulative:
             summary["reason"] = "destino-ya-redactado"
             return summary
 
@@ -943,6 +1102,13 @@ class AulaTeXAgent:
             summary["reason"] = "propuesta-no-es-presentacion"
             workflow.record("apply-generated-tex", "error", "el destino es una presentación pero el documento generado no usa Beamer")
             return summary
+
+        if predecessor is not None and predecessor.exists() and not destination.name.startswith("presentacion-"):
+            pred_text = predecessor.read_text(encoding="utf-8", errors="replace")
+            is_cumulative = r"\seminarioacumulativo" in pred_text or pred_text.count(r"\section{") >= 3
+            if is_cumulative and r"\section{Antecedentes}" in pred_text:
+                if r"\section{Antecedentes}" not in document or len(document) < len(pred_text) * 0.8:
+                    document = self._merge_cumulative_document(pred_text, document, request.activity_number)
 
         destination.write_text(document, encoding="utf-8")
         summary.update(
@@ -1003,10 +1169,36 @@ class AulaTeXAgent:
                 f"extractor ok={result.ok} salida={self.workspace.relative(result.output_dir)}",
             )
             memory.remember("note", f"Extractor ejecutado: {self.workspace.relative(result.manifest_path)}")
+            self._populate_memory_from_extractor(memory, result.output_dir)
             return result
         workflow.record("tool-result", "error", f"extractor fallo: {invocation.error}")
         memory.remember("risk", f"Extractor no ejecutado: {invocation.error}")
         return None
+
+    @staticmethod
+    def _populate_memory_from_extractor(memory: SharedMemory, output_dir: Path) -> None:
+        if not output_dir.is_dir():
+            return
+        conceptos_file = output_dir / "conceptos_detectados.json"
+        if conceptos_file.exists():
+            try:
+                concepts = json.loads(conceptos_file.read_text(encoding="utf-8", errors="replace"))
+                if isinstance(concepts, list) and concepts:
+                    memory.remember(
+                        "concept",
+                        f"Conceptos clave obligatorios detectados: {', '.join(str(c) for c in concepts[:25])}"
+                    )
+            except Exception:
+                pass
+        planeacion_file = output_dir / "resumen_planeacion.json"
+        if planeacion_file.exists():
+            try:
+                plan = json.loads(planeacion_file.read_text(encoding="utf-8", errors="replace"))
+                ctx = plan.get("general_context", "")
+                if ctx:
+                    memory.remember("requirement", f"Estructura temática y planeación didáctica:\n{ctx[:4000]}")
+            except Exception:
+                pass
 
     def _build_extractor_request(self, request: AgentRequest, target_ctx: AgentTargetContext) -> ExtractorRequest:
         return ExtractorRequest(

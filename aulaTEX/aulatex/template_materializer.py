@@ -769,29 +769,16 @@ con fuentes institucionales, normativas y academicas verificables \\citep{{{cita
 """
 
     def _render_structure_json(self, profile: SubjectProfile, memory: dict[str, Any], target_dir: Path) -> str:
-        payload = {
-        "schema_version": "1.0",
-        "kind": "subject_file_inventory",
-            "node": profile.folder_slug,
-            "slug": profile.slug,
-            "title": profile.title,
-            "activity_number": profile.activity_number,
-            "artifact_contract": subject_artifact_contract(target_dir),
-            "files": [
-                f"{profile.slug}.bib",
-                f"reporte-{profile.slug}.tex",
-                f"reporte-{profile.slug}-Actividad-{profile.activity_number}.tex",
-                f"presentacion-{profile.slug}.tex",
-                f"presentacion-{profile.slug}-Actividad-{profile.activity_number}.tex",
-                f"programa-analitico-{profile.slug}.md",
-                f"COMPILACION-{profile.slug}.md",
-                "README.md",
-            ],
-            "folders": [folder.relative_to(target_dir).as_posix()
-                        for folder in subject_layout(target_dir).values()],
-            "memory_summary": self._memory_list(memory, "summary", 8),
-        }
-        return json.dumps(payload, ensure_ascii=False, indent=2)
+        from .subject_manifest import save_subject_manifest
+        manifest = save_subject_manifest(
+            target_dir,
+            trigger="materia",
+            detail=f"materializacion_actividad_{profile.activity_number}",
+            editorial_memory={"summary": self._memory_list(memory, "summary", 8)},
+            actividades={"activity_number": profile.activity_number},
+            metadata_updates={"title": profile.title, "node": profile.folder_slug, "slug": profile.slug},
+        )
+        return json.dumps(manifest, ensure_ascii=False, indent=2)
 
 
 def _first_match(text: str, pattern: str, default: str) -> str:

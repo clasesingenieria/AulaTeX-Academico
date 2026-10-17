@@ -339,6 +339,7 @@ def build_editorial_tasks(request: Any, context: str, memory: SharedMemory | Non
             prompt=base
             + "\nROL PLANIFICADOR: produce un plan breve por fases para investigar, generar, compilar y evaluar. "
             "Incluye criterios de aceptacion por institucion, carrera, materia y actividad, "
+            "verificando si la actividad es acumulativa (protocolo/portafolio) para preservar entregas anteriores, "
             "mas una seccion explicita de riesgos, faltantes, placeholders y errores bloqueantes.",
             weight=1.0,
         ),
@@ -348,16 +349,24 @@ def build_editorial_tasks(request: Any, context: str, memory: SharedMemory | Non
             mission="detectar fuentes, contexto curricular y faltantes editoriales",
             prompt=base
             + "\nROL INVESTIGADOR: diagnostica identidad institucional, programa analitico, bibliografia, "
-            "estructura local, activos visuales y riesgos de trazabilidad. Prioriza hallazgos.",
+            "estructura local, entregables acumulativos previos (reporte-*-Actividad-<N-1>.tex), activos visuales y riesgos de trazabilidad. Prioriza hallazgos.",
             weight=1.05,
         ),
         AgentTask(
             stage="generar",
             role="Arquitecto de plantillas",
-            mission="proponer estructura de reporte/presentacion y actividad",
+            mission="redactar el documento LaTeX completo y listo para compilar",
             prompt=base
-            + "\nROL ARQUITECTO: genera propuesta lista para convertir a archivos. Incluye reporte, presentacion, "
-            "pautas de realizacion, bibliografia, imagen institucional y control editorial.",
+            + "\nROL ARQUITECTO: REDACTA Y ENTREGA EL DOCUMENTO LATEX COMPLETO DENTRO DE UN BLOQUE DE CÓDIGO ```latex ... ```. "
+            "PROHIBIDO responder con un plan, viñetas de intenciones o explicaciones en markdown. Debes escribir directamente el código LaTeX del documento listo para guardarse en archivo.\n"
+            "DIRECTRICES PARA PROTOCOLOS ACUMULATIVOS Y CALIDAD 100/100:\n"
+            "1. Si la materia es acumulativa o existe un documento previo (Actividad N-1), PRESERVA íntegramente las secciones previas ya aprobadas "
+            "(Antecedentes, Planteamiento, Objetivos, Justificación, Hipótesis, Anexos, Referencias) y añade la nueva sección solicitada sin recortar las anteriores.\n"
+            "2. Citas natbib visibles con \\citep{clave} o \\citet{clave} vinculadas a claves reales del .bib (nunca texto plano).\n"
+            "3. Estructura con secciones y subsecciones con títulos conceptuales descriptivos (prohibido 'Marco conceptual' o 'Desarrollo').\n"
+            "4. Base conceptual: resaltar conceptos clave en \\textbf{...}.\n"
+            "5. Balance de listas: máximo 1 lista estructurada y el resto en prosa argumentada fluida con conectores.\n"
+            "6. Postura propia reflexiva y declaración de uso de IA como \\footnote en la conclusión.",
             weight=1.0,
         ),
         AgentTask(
@@ -366,7 +375,7 @@ def build_editorial_tasks(request: Any, context: str, memory: SharedMemory | Non
             mission="verificar consistencia, compilacion y evidencias",
             prompt=base
             + "\nROL VERIFICADOR: evalua si la propuesta es defendible y compilable. Devuelve checklist con "
-            "evidencia, riesgos latexmk, cobertura bibliografica, placeholders y pruebas recomendadas.",
+            "evidencia, riesgos latexmk, cobertura bibliografica, integridad acumulativa (no perder secciones previas), placeholders y pruebas recomendadas.",
             weight=1.1,
         ),
         AgentTask(
@@ -375,7 +384,7 @@ def build_editorial_tasks(request: Any, context: str, memory: SharedMemory | Non
             mission="encontrar fallas antes de aplicar cambios",
             prompt=base
             + "\nROL CRITICO ADVERSARIAL: busca errores bloqueantes, omisiones institucionales, alucinaciones, "
-            "fuentes no verificadas, problemas de compilacion y criterios para el siguiente ciclo.",
+            "fuentes no verificadas, perdida de capitulos en documentos acumulativos, problemas de compilacion y criterios para el siguiente ciclo.",
             weight=1.1,
         ),
     ]

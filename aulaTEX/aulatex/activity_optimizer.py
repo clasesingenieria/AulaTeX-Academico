@@ -566,7 +566,7 @@ class ActivityOptimizer:
         Nunca hace fallar la optimización: ante cualquier error, devuelve [].
         """
         target_root = tex_path.parent
-        concepts = self._read_extractor_concepts(target_root)
+        concepts = self._read_extractor_concepts(target_root, int(request.activity_number))
         if concepts:
             return concepts
         # ¿Vale la pena correr el extractor? Solo si la base conceptual del .tex es
@@ -589,16 +589,21 @@ class ActivityOptimizer:
                 activity_number=int(request.activity_number),
                 motor="tfidf",
             ))
-            return self._read_extractor_concepts(target_root)
+            return self._read_extractor_concepts(target_root, int(request.activity_number))
         except Exception:
             return []
 
-    def _read_extractor_concepts(self, target_root: Path) -> list[str]:
+    def _read_extractor_concepts(self, target_root: Path, activity_number: int = 0) -> list[str]:
         """Lee conceptos_detectados.json del extractor (varias ubicaciones posibles)."""
         candidates = [
             target_root / "extractor-aulatex" / "conceptos_detectados.json",
             target_root / "extractor-aulatex" / "conceptos.json",
         ]
+        if activity_number > 0 and (target_root / "extractor-aulatex").is_dir():
+            for p in sorted((target_root / "extractor-aulatex").glob(f"*actividad-{activity_number}*")):
+                if p.is_dir():
+                    candidates.insert(0, p / "conceptos_detectados.json")
+                    candidates.insert(1, p / "conceptos.json")
         for path in candidates:
             data = self._safe_load_json(path)
             if data is None:
@@ -803,11 +808,11 @@ class ActivityOptimizer:
             f"{', '.join(allowed_keys) or '(ninguna)'}.\n"
             "- NO cambies la técnica didáctica. Conserva el sentido salvo cuando la AUDITORÍA "
             "SEMÁNTICA exija corregir una afirmación; esa corrección tiene prioridad.\n"
-            "- Prefiere: convertir prosa difusa en enumeraciones ordenadas, añadir un conector lógico, "
-            "precisar una afirmación con una cita ya existente, reforzar la postura propia o resolver "
-            "UNA observación semántica bloqueante en una aparición exacta por ciclo. No incluyas "
-            "secciones distantes ni uses puntos suspensivos: una corrección parcial aplicable es "
-            "preferible a un bloque enorme no localizable.\n"
+            "- Prefiere: enriquecer la prosa argumentada fluida con conectores lógicos ('por tanto', 'por ello', 'en consecuencia', 'sin embargo', 'no obstante', 'es decir', 'en cambio', 'además', 'dado que'), "
+            "precisar afirmaciones con citas natbib existentes (\\citep o \\citet), destacar conceptos clave en \\textbf{...}, "
+            "reforzar la postura propia reflexiva o resolver UNA observación semántica bloqueante en una aparición exacta por ciclo. "
+            "Conserva a lo sumo 1 lista estructurada (el exceso de enumeraciones penaliza la calidad; prioriza prosa explicativa). "
+            "No incluyas secciones distantes ni uses puntos suspensivos: una corrección parcial aplicable es preferible a un bloque enorme no localizable.\n"
             f"{desired_kind_rule}\n"
             "Formato JSON EXACTO:\n"
             '{\n'

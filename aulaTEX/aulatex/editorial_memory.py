@@ -360,6 +360,42 @@ class EditorialMemoryStore:
             json.dumps(payload, ensure_ascii=False, indent=2),
             encoding="utf-8",
         )
+        if scope.level == "materia" and scope.relative_path:
+            try:
+                from .subject_manifest import save_subject_manifest
+                target = self.workspace.repo_root / scope.relative_path
+                if target.is_dir():
+                    summary = payload.get("summary") or []
+                    if isinstance(summary, str):
+                        summary = [summary]
+                    save_subject_manifest(
+                        target,
+                        trigger="sistema",
+                        detail="memoria_editorial",
+                        editorial_memory={
+                            "summary": summary,
+                            "active_activities": payload.get("active_activities", []),
+                            "updated_at": self.workspace.timestamp(),
+                        },
+                    )
+            except Exception:
+                pass
+        elif scope.level == "carrera" and scope.relative_path:
+            try:
+                from .subject_manifest import propagate_career_manifests
+                target = self.workspace.repo_root / scope.relative_path
+                if target.is_dir():
+                    propagate_career_manifests(target, detail="memoria_editorial_carrera")
+            except Exception:
+                pass
+        elif scope.level == "institucion" and scope.relative_path:
+            try:
+                from .subject_manifest import propagate_institution_manifests
+                target = self.workspace.repo_root / scope.relative_path
+                if target.is_dir():
+                    propagate_institution_manifests(target, detail="memoria_editorial_institucion")
+            except Exception:
+                pass
 
     def _enrich_memory(self, scope: EditorialScope, payload: dict) -> dict:
         enriched = self._normalize_memory(payload)

@@ -176,6 +176,18 @@ class ExtractorAdapter:
         manifest_path = run_dir / "manifest.json"
         manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
         self.workspace.append_bitacora(run_id, "extractor", manifest)
+        try:
+            from .subject_manifest import find_subject_root, save_subject_manifest
+            subject_dir = find_subject_root(resolved.target_path)
+            if subject_dir:
+                save_subject_manifest(
+                    subject_dir,
+                    trigger="sistema",
+                    detail=f"extractor_adapter_{request.motor}",
+                    actividades={"extractor_ok": ok, "output_dir": str(resolved.output_dir.name)},
+                )
+        except Exception:
+            pass
         return ExtractorRunResult(run_id, run_dir, ok, manifest_path, stdout_path, stderr_path, resolved.output_dir)
 
     def _resolve_request(self, request: ExtractorRequest) -> ResolvedExtractorRequest:
