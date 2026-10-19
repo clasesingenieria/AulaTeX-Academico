@@ -1,6 +1,7 @@
 import hashlib
 import json
 import shutil
+import sys
 from copy import deepcopy
 from pathlib import Path
 
@@ -16,7 +17,7 @@ ROOT = SUBJECT.parents[2]
 
 
 def preserve_pdf_body():
-    destination = SUBJECT / 'entregas-seminario-i/Tarea12_DeLaCruzMunoz.pdf'
+    destination = SUBJECT / 'Entregas/Tarea12_DeLaCruzMunoz.pdf'
     original = SUBJECT / 'referencias-seminario-i/notas-seminario-i/actividad-12-hipotesis/antes-portada-plan-negocios-2026-10-13/Tarea12_DeLaCruzMunoz.pdf'
     temporary = HERE / 'Tarea12-portada-cuerpo-verificado.pdf'
     with pymupdf.open(destination) as current, pymupdf.open(original) as previous, pymupdf.open() as output:
@@ -33,7 +34,7 @@ def preserve_pdf_body():
     print('OK: solo portada reemplazada; paginas 2-31 conservan texto y flujos originales.')
 
 
-def main():
+def main(refresh=False):
     source = ROOT / 'ITESCA/maestria-en-gestion-administrativa/plan-de-negocios-mga/assets-plan-de-negocios/actividad-12-2026-10-05/portada-oficial.png'
     image = HERE / 'portada-oficial.png'
     if image.exists():
@@ -42,7 +43,7 @@ def main():
         shutil.copy2(source, image)
     word = SUBJECT / 'entregas-seminario-i/Tarea12_DeLaCruzMunoz.docx'
     notes = SUBJECT / 'referencias-seminario-i/notas-seminario-i/actividad-12-hipotesis'
-    backup = notes / 'antes-portada-plan-negocios-2026-10-13'
+    backup = notes / ('antes-portada-2026-10-18' if refresh else 'antes-portada-plan-negocios-2026-10-13')
     if backup.exists():
         raise FileExistsError('La portada ya tiene respaldo; revisar antes de repetir')
     document = Document(word)
@@ -51,8 +52,8 @@ def main():
     first = next(i for i, p in enumerate(paragraphs) if p._p is index._p)
     before = [element.xml for element in document.element.body if element is index._p or element in list(document.element.body)[list(document.element.body).index(index._p):]]
     tables = [table._tbl.xml for table in document.tables]
-    metadata = 'Maestría en Gestión Administrativa\nAsignatura: Seminario I\nCurso: GGS102 - Unidad 3\nEstudiante: Martín Jonathan de la Cruz Muñoz\nMatrícula: 26130503\nDocente: Dra. Carla Olimpya Zapuche Moreno\nFecha: 12 de octubre de 2026\nLugar: Ciudad Obregón, Sonora'
-    title = 'Gestión del cumplimiento normativo para formalizar vTaxi como plataforma de taxis en Nuevo León\n\nActividad 12 - Hipótesis de trabajo\nAnteproyecto acumulativo'
+    metadata = 'Maestría en Gestión Administrativa\nAsignatura: Seminario I\nCurso: GGS102 - Unidad 3\nEstudiante: Martín Jonathan de la Cruz Muñoz\nMatrícula: 26130503\nDocente: Dra. Carla Olimpya Zapuche Moreno\nFecha: 18 de octubre de 2026\nLugar: Monterrey, Nuevo León'
+    title = 'Gestión del cumplimiento normativo para formalizar vTaxi como plataforma de taxis en Monterrey, Nuevo León\n\nActividad 12 - Hipótesis de trabajo\nAnteproyecto acumulativo'
     with pymupdf.open() as cover:
         page = cover.new_page(width=612, height=792)
         page.insert_image(page.rect, filename=str(image))
@@ -105,4 +106,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    main(refresh=sys.argv[1:] == ['--actualizar'])

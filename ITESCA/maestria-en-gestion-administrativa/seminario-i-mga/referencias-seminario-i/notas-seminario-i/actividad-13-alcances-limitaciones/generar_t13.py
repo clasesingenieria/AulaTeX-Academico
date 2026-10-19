@@ -14,8 +14,8 @@ from docx.oxml import OxmlElement
 
 HERE = Path(__file__).resolve().parent
 SUBJECT = HERE.parents[2]
-SOURCE = SUBJECT / 'entregas-seminario-i/Tarea12_DeLaCruzMunoz.docx'
-TARGET = SUBJECT / 'entregas-seminario-i/Tarea13_DeLaCruzMunoz.docx'
+SOURCE = SUBJECT / 'Entregas/Tarea12_DeLaCruzMunoz.docx'
+TARGET = SUBJECT / 'Entregas/Tarea13_DeLaCruzMunoz.docx'
 REPORT = SUBJECT / 'reporte-seminario-i-Actividad-13.tex'
 SCOPES = [
     'Alcance temático. El estudio examina la gestión administrativa del cumplimiento en vTaxi: procedimientos, responsables, verificación de aplicabilidad y seguimiento documental frente a integridad, concordancia y cierre respaldado de observaciones. La normativa sirve para definir criterios del expediente, no para emitir un dictamen jurídico. No se estudian demanda, rentabilidad, desempeño del algoritmo, seguridad vial ni efectos sobre conductores.',

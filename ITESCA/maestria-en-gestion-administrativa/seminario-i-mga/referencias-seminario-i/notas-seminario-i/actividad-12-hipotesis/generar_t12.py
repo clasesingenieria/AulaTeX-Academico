@@ -176,12 +176,108 @@ def main():
     print(json.dumps(result, ensure_ascii=True))
 
 
+def apply_feedback():
+    backup_dir = HERE / 'antes-retroalimentacion-2026-10-18'
+    if backup_dir.exists():
+        raise FileExistsError('La revisión ya tiene respaldo; comprobar el estado antes de repetir')
+    source_hash = hashlib.sha256(SOURCE.read_bytes()).hexdigest()
+    document = Document(TARGET)
+    original_covey = [[cell.text for cell in row.cells] for row in document.tables[2].rows]
+    replacements = {
+        'plataforma de taxis en Nuevo León': 'plataforma de taxis en Monterrey, Nuevo León',
+        'plataforma de taxis concesionados en Nuevo León': 'plataforma de taxis concesionados en Monterrey, Nuevo León',
+        'El ámbito espacial es Nuevo León': 'El ámbito espacial es el municipio de Monterrey, Nuevo León',
+    }
+    paragraphs = list(document.paragraphs)
+    seen = set()
+    for table in document.tables:
+        for row in table.rows:
+            for cell in row.cells:
+                if cell._tc in seen:
+                    continue
+                seen.add(cell._tc)
+                paragraphs.extend(cell.paragraphs)
+    changed = 0
+    for paragraph in paragraphs:
+        expected = paragraph.text
+        for old, new in replacements.items():
+            expected = expected.replace(old, new)
+        if expected != paragraph.text:
+            for run in paragraph.runs:
+                for old, new in replacements.items():
+                    run.text = run.text.replace(old, new)
+            if paragraph.text != expected:
+                raise ValueError('Reemplazo territorial dividido entre runs; revisar antes de guardar')
+            changed += 1
+    additions = [
+        ('4.2 Relevancia práctica', [
+            'El enfoque conceptual distingue adopción formal, gestión práctica y preparación documental. Parker y Nielsen (2009), con el alcance de resumen editorial señalado en los antecedentes, permiten separar la presencia de un sistema de cumplimiento de su administración efectiva. OECD (2018, p. 39) orienta la atención hacia registros actualizados, gestión de casos y flujos de trabajo en organismos de supervisión; su aplicación a vTaxi es analítica, no una obligación adicional impuesta al proyecto. El mecanismo propuesto es que identificar responsables y revisar requisitos facilita detectar y atender brechas; la integridad del documento resultante se evalúa por separado. La complejidad del requisito y el acceso a información pueden explicar divergencias. Así, X describe controles observables y Y describe calidad del expediente, sin definir una variable mediante la otra ni anticipar causalidad.'
+        ]),
+        ('5 Hipótesis de trabajo', [
+            'El acceso se gestionará mediante una solicitud escrita al responsable autorizado del proyecto, con propósito, periodo y lista de documentos requeridos. La autorización deberá precisar qué versiones pueden consultarse, qué datos deben anonimizarse, quién tendrá acceso a las copias y qué extractos pueden incorporarse al informe. Se llevará un registro con solicitud, respuesta, alcance concedido y restricciones por documento. Los materiales no autorizados o no disponibles se clasificarán como no verificables; no se interpretarán como incumplimientos ni se reemplazarán por registros ficticios.',
+            'Las entrevistas, si resultan necesarias, requerirán invitación y consentimiento individual separados del permiso documental. Se informarán finalidad, participación voluntaria, posibilidad de omitir respuestas o retirarse, uso de citas y condiciones de resguardo. La grabación exigirá consentimiento específico; sin él se utilizarán únicamente notas autorizadas. El plazo de conservación y la eliminación de archivos se acordarán antes de recopilar datos. Si no se obtienen permisos dentro del periodo, se mantendrá el alcance documental autorizado y se reportarán las limitaciones sin atribuir testimonios ni verificaciones inexistentes.',
+            'La delimitación geográfica del caso es el municipio de Monterrey, Nuevo León. El objeto no es el mercado de transporte de toda la entidad ni el conjunto del área metropolitana. La legislación y las competencias institucionales se examinan a escala estatal porque ese es su ámbito de aplicación; esta escala normativa no amplía la unidad de análisis territorial. Los registros de vTaxi considerados deberán referirse al caso delimitado y se identificarán por fecha y versión.'
+        ]),
+    ]
+    for heading, texts in additions:
+        anchor = next(paragraph for paragraph in document.paragraphs if paragraph.text == heading and paragraph.style.name.startswith('Heading'))
+        for text in texts:
+            insert_before(anchor, text)
+    expected_covey = original_covey
+    for row in expected_covey:
+        for index, text in enumerate(row):
+            for old, new in replacements.items():
+                text = text.replace(old, new)
+            row[index] = text
+    assert [[cell.text for cell in row.cells] for row in document.tables[2].rows] == expected_covey
+    assert changed >= 5
+    assert len(document.tables) == 3
+    assert any(paragraph.text.startswith('HG. ') for paragraph in document.paragraphs)
+    assert any(paragraph.text.startswith('HE1. ') for paragraph in document.paragraphs)
+    backup_dir.mkdir()
+    shutil.copy2(TARGET, backup_dir / TARGET.name)
+    if TARGET.with_suffix('.pdf').exists():
+        shutil.copy2(TARGET.with_suffix('.pdf'), backup_dir / TARGET.with_suffix('.pdf').name)
+    document.save(TARGET)
+    assert hashlib.sha256(SOURCE.read_bytes()).hexdigest() == source_hash
+    record = {'operation': 'retroalimentacion-t11-en-t12', 'changed_geographic_paragraphs': changed, 'added_paragraphs': sum(len(texts) for _, texts in additions), 't11_unchanged_sha256': source_hash, 'covey_only_territorial_alignment': True, 'target_sha256_before_word_refresh': hashlib.sha256(TARGET.read_bytes()).hexdigest(), 'submission_performed': False}
+    (HERE / 'retroalimentacion-t12-2026-10-18.json').write_text(json.dumps(record, ensure_ascii=False, indent=2), encoding='utf-8')
+    print(json.dumps(record, ensure_ascii=True))
+
+
+def add_mexican_context():
+    document = Document(TARGET)
+    if any('Lamas Flores y Acosta Reveles (2025)' in paragraph.text for paragraph in document.paragraphs):
+        raise ValueError('El antecedente mexicano ya está incorporado')
+    tables = [table._tbl.xml for table in document.tables]
+    anchor = next(paragraph for paragraph in document.paragraphs if paragraph.text == 'Vacíos identificados')
+    insert_before(anchor, 'En México, Lamas Flores y Acosta Reveles (2025) estudian las estrategias de cabildeo de plataformas de transporte y reparto desde un enfoque cualitativo y analítico. Combinan seguimiento de etiquetas de Twitter entre 2015 y 2018, revisión hemerográfica y entrevistas semiestructuradas a un integrante de cada una de dos organizaciones de conductores y repartidores. Las autoras identifican acciones mediante medios de comunicación, redes sociales y movilización de apoyos con recursos jurisdiccionales para influir en la regulación. Este antecedente muestra la importancia del entorno institucional y de distinguir la información empresarial de la evidencia verificable; no mide controles internos de vTaxi ni permite generalizar a todas las plataformas mexicanas.')
+    insert_before(anchor, 'La diferencia del presente caso es su escala organizacional: examina la correspondencia entre controles de gestión y preparación de documentos de una plataforma para taxis concesionados en Monterrey. El estudio de Lamas Flores y Acosta Reveles (2025) aporta contexto mexicano sobre formación y controversia de reglas, mientras Parker y Nielsen (2009) orientan la distinción entre sistemas formales y gestión práctica. Ninguno sustituye el diagnóstico del expediente. La aportación propuesta consiste en hacer trazable cada requisito aplicable, responsable, evidencia y observación, sin atribuir a vTaxi prácticas de las empresas estudiadas ni trasladarles sus resultados.')
+    anchor = next(paragraph for paragraph in document.paragraphs if paragraph.text == '4.5 Viabilidad' and paragraph.style.name == 'Heading 2')
+    insert_before(anchor, 'Frente al antecedente mexicano de Lamas Flores y Acosta Reveles (2025), centrado en actores y estrategias de influencia regulatoria, la originalidad del caso reside en la evaluación interna de controles y calidad documental antes de una eventual formalización. La comparación precisa una diferencia de objeto, escala y evidencia; no constituye una afirmación de primacía ni agota la literatura sobre movilidad en México. La revisión deberá ampliarse conforme avance el estudio, en especial con trabajos directamente referidos a Monterrey y a taxis concesionados.')
+    reference_anchor = next(paragraph for paragraph in document.paragraphs if paragraph.text.startswith('Melo,') and paragraph.style.name == 'Normal')
+    reference = insert_before(reference_anchor, '')
+    if reference_anchor._p.pPr is not None:
+        reference._p.remove(reference._p.pPr)
+        reference._p.insert(0, deepcopy(reference_anchor._p.pPr))
+    reference.add_run('Lamas Flores, M. S., & Acosta Reveles, I. L. (2025). El cabildeo mediático y en redes sociales como freno a la regulación de plataformas digitales de transporte y reparto en México. ')
+    reference.add_run('Cuadernos del Ciesal, 2').italic = True
+    reference.add_run('(24), 1–28. https://doi.org/10.35305/cc.v2i24.174')
+    assert [table._tbl.xml for table in document.tables] == tables
+    document.save(TARGET)
+    print(json.dumps({'mexican_context_added': True, 'new_reference_doi': '10.35305/cc.v2i24.174', 'tables_unchanged': True}, ensure_ascii=True))
+
+
 def re_date(text):
     return '10 de octubre de 2026' in text.casefold()
 
 
 if __name__ == '__main__':
-    if sys.argv[1:] == ['--mejorar']:
+    if sys.argv[1:] == ['--contexto-mexicano']:
+        add_mexican_context()
+    elif sys.argv[1:] == ['--retroalimentacion']:
+        apply_feedback()
+    elif sys.argv[1:] == ['--mejorar']:
         improve()
     else:
         main()

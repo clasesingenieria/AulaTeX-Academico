@@ -1,16 +1,16 @@
-## Tarea 12 preparada el 12/10/2026
+## Tarea 12 enviada el 18/10/2026
 
-[Word acumulativo T12](entregas-seminario-i/Tarea12_DeLaCruzMunoz.docx), 29 paginas: capitulos anteriores conservados, hipotesis general y especifica, variables, tipo no causal, criterios de contraste y matriz actualizada. Covey intacto. Indice y portada actualizados. [Cotejo y evidencia](referencias-seminario-i/notas-seminario-i/actividad-12-hipotesis/README.md). Cierre consultado: **18/10/2026 23:59**. No enviada; el PDF es solo revision local, no entregable adicional.
+[Word acumulativo T12](entregas-seminario-i/Tarea12_DeLaCruzMunoz.docx), 34 paginas, **Enviado para calificar**, sin calificar. Entregado el 18/10/2026 a las 00:04, hora del aula, 23 horas 54 minutos antes del cierre. Un unico Word; descarga remota coincidente por SHA-256. Incorpora las observaciones de T11 (6.70/7.00), delimita Monterrey, refuerza fundamento y originalidad con un antecedente mexicano verificado y precisa permisos de acceso. Hipotesis, matrices y Covey coherentes. [Cotejo y recibo](referencias-seminario-i/notas-seminario-i/actividad-12-hipotesis/README.md). PDF de Word de 34 paginas y reporte de raiz de 27 paginas: solo revision local, no enviados.
 
 # Seminario I: estado de documentos
 
 ## Actualizacion verificada del 10 de octubre
 
-[Auditoria de LaTeX y Entregas](referencias-seminario-i/notas-seminario-i/materiales-generales/AUDITORIA-LATEX-Y-ENTREGAS-2026-10-10.md): ocho compilaciones correctas, sin equivalencia automatica con entregables oficiales. Carpeta normalizada a `entregas-seminario-i`. PDF enviados de T1-T3 recuperados y cotejados por SHA256; difieren de las revisiones de la raiz y figuran enviados y calificados. T4 y T6 figuran sin envio, aunque el campo de calificacion indica Calificado; no se interpreta como entrega. T10 sigue enviada y sin calificar, con Word remoto identico al local. Esta consulta sustituye los estados historicos incompatibles siguientes, sin atribuir nuevas notas numericas ni envios.
+[Auditoria de LaTeX y Entregas](referencias-seminario-i/notas-seminario-i/materiales-generales/AUDITORIA-LATEX-Y-ENTREGAS-2026-10-10.md): ocho compilaciones correctas, sin equivalencia automatica con entregables oficiales. Carpeta normalizada a `Entregas`. PDF enviados de T1-T3 recuperados y cotejados por SHA256; difieren de las revisiones de la raiz y figuran enviados y calificados. T4 y T6 figuran sin envio, aunque el campo de calificacion indica Calificado; no se interpreta como entrega. T10 sigue enviada y sin calificar, con Word remoto identico al local. Esta consulta sustituye los estados historicos incompatibles siguientes, sin atribuir nuevas notas numericas ni envios.
 
 ## Actividad 10: revisión del 4 de octubre de 2026
 
-[Word acumulativo revisado](entregas-seminario-i/Tarea10_DeLaCruzMunoz_Revision-2026-10-04.docx) y [PDF de consulta](entregas-seminario-i/Tarea10_DeLaCruzMunoz_Revision-2026-10-04.pdf), 21 páginas. Incorpora la retroalimentación docente de T1, T3 y T8: antecedentes específicos con alcance de lectura declarado, enfoque administrativo, objetivos precisados e indicadores propuestos. Conserva T9 original sin cambios y utiliza una copia de trabajo con cuatro ampliaciones identificadas. Un objetivo general, cuatro específicos, matriz, Covey e índice nativo actualizado con Microsoft Word. El Word es el archivo requerido; los complementos no lo sustituyen.
+[Word acumulativo revisado](entregas/Tarea10_DeLaCruzMunoz_Revision-2026-10-04.docx) y [PDF de consulta](entregas/Tarea10_DeLaCruzMunoz_Revision-2026-10-04.pdf), 21 páginas. Incorpora la retroalimentación docente de T1, T3 y T8: antecedentes específicos con alcance de lectura declarado, enfoque administrativo, objetivos precisados e indicadores propuestos. Conserva T9 original sin cambios y utiliza una copia de trabajo con cuatro ampliaciones identificadas. Un objetivo general, cuatro específicos, matriz, Covey e índice nativo actualizado con Microsoft Word. El Word es el archivo requerido; los complementos no lo sustituyen.
 
 [Revisión contractual y mapa de fuentes](referencias-seminario-i/notas-seminario-i/actividad-10-objetivos/investigacion/revision-2026-10-04/revision-contractual.md). La versión anterior de T10 se conserva. La auditoría registra la preparación anterior al envío, no una aprobación docente.
 
@@ -20,9 +20,9 @@ Complementos: [reporte PDF](reporte-seminario-i-Actividad-10.pdf), 12 páginas, 
 
 ## Entregas del 27 de septiembre de 2026
 
-- **Tarea 8:** [Word](entregas-seminario-i/Tarea8_DeLaCruzMunoz.docx), 9 páginas, enviado para calificar en Moodle (módulo 2908).
-- **Tarea 9:** [Word](entregas-seminario-i/Tarea9_DeLaCruzMunoz.docx), 14 páginas, enviado para calificar en Moodle (módulo 2909).
-- **Registro del tema:** [Word sin firmas](entregas-seminario-i/RegistroTema_DeLaCruzMunoz.docx) y [PDF firmado](entregas-seminario-i/RegistroTema_DeLaCruzMunoz_Firmado.pdf), enviados para calificar al módulo 2907 el 27/09/2026 a las 21:43, hora del aula. Ambos archivos recuperados y comprobados por SHA-256. El CVU permanece vacío en ambos documentos; el PDF escaneado se entregó exactamente como lo proporcionó el estudiante.
+- **Tarea 8:** [Word](entregas/Tarea8_DeLaCruzMunoz.docx), 9 páginas, enviado para calificar en Moodle (módulo 2908).
+- **Tarea 9:** [Word](entregas/Tarea9_DeLaCruzMunoz.docx), 14 páginas, enviado para calificar en Moodle (módulo 2909).
+- **Registro del tema:** [Word sin firmas](entregas/RegistroTema_DeLaCruzMunoz.docx) y [PDF firmado](entregas/RegistroTema_DeLaCruzMunoz_Firmado.pdf), enviados para calificar al módulo 2907 el 27/09/2026 a las 21:43, hora del aula. Ambos archivos recuperados y comprobados por SHA-256. El CVU permanece vacío en ambos documentos; el PDF escaneado se entregó exactamente como lo proporcionó el estudiante.
 - Ambas tareas enviadas a las 14:32, hora mostrada por Moodle. Archivos recuperados y comprobados por SHA-256. [Evidencias y detalles](referencias-seminario-i/notas-seminario-i/materiales-generales/auditorias-anteproyecto/moodle-2026-09-27/README.md).
 
 Tema tentativo: **Gestión del cumplimiento normativo para formalizar vTaxi como plataforma de taxis en Nuevo León**. No se afirma aprobación docente del tema.
@@ -36,7 +36,7 @@ Revisión estructural: 22 de septiembre de 2026. Preparación local no equivale 
 | Actividad 2 | [TEX](reporte-seminario-i-Actividad-2.tex), [PDF](reporte-seminario-i-Actividad-2.pdf) | Contenido conservado; referencias manuales. |
 | Actividad 3 | [TEX](reporte-seminario-i-Actividad-3.tex), [PDF](reporte-seminario-i-Actividad-3.pdf) | Contenido conservado; referencias manuales. |
 | Actividad 4 | [TEX](reporte-seminario-i-Actividad-4.tex), [PDF](reporte-seminario-i-Actividad-4.pdf) | Infografía autocontenida. Se conserva su formato A4 horizontal, sin imponer formato de ensayo. |
-| Actividad 6 | [TEX](reporte-seminario-i-Actividad-6.tex), [PDF](reporte-seminario-i-Actividad-6.pdf), [Word](entregas-seminario-i/Tarea6_DeLaCruzMunoz.docx) | PDF complementario; el Word requerido por la consigna se conserva sin cambios. |
+| Actividad 6 | [TEX](reporte-seminario-i-Actividad-6.tex), [PDF](reporte-seminario-i-Actividad-6.pdf), [Word](entregas/Tarea6_DeLaCruzMunoz.docx) | PDF complementario; el Word requerido por la consigna se conserva sin cambios. |
 
 ## Estructura corregida
 

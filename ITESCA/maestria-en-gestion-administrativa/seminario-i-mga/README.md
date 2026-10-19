@@ -13,7 +13,7 @@ Espacio de trabajo para construir el anteproyecto de titulación de la MGA del I
 ## Organización
 
 - [Reporte T12](reporte-seminario-i-Actividad-12.tex) y [PDF académico de raíz](reporte-seminario-i-Actividad-12.pdf).
-- [Word acumulativo T12 para entrega](entregas-seminario-i/Tarea12_DeLaCruzMunoz.docx); [PDF de consulta del Word](entregas-seminario-i/Tarea12_DeLaCruzMunoz.pdf). El aula solicita un solo Word, no el reporte auxiliar.
+- [Word acumulativo T12 para entrega](Entregas/Tarea12_DeLaCruzMunoz.docx); [PDF de consulta del Word](Entregas/Tarea12_DeLaCruzMunoz.pdf). El aula solicita un solo Word, no el reporte auxiliar.
 - [Notas de T12](referencias-seminario-i/notas-seminario-i/actividad-12-hipotesis/README.md): consignas, fuentes, pasajes, generador, respaldo y comprobaciones. No son el reporte ni el archivo de entrega.
 - [Contrato de compilación y plantillas](COMPILACION-seminario-i.md).
 - [Estado de entregables y revisión estructural](ESTADO-ENTREGABLES.md).
@@ -25,7 +25,7 @@ Espacio de trabajo para construir el anteproyecto de titulación de la MGA del I
 - `referencias-seminario-i/`: fuentes incorporadas y organizadas por tipo.
 - `investigacion-aulatex/`: bitácora de búsqueda y base de conocimiento.
 - `extractor-aulatex/`: conceptos y trazabilidad generados por actividad.
-- `entregas-seminario-i/`: copias finales destinadas al aula; las fuentes permanecen en la raíz.
+- `entregas/`: copias finales destinadas al aula; las fuentes permanecen en la raíz.
 - `assets-seminario-i/`: figuras y recursos visuales propios o con licencia compatible.
 - `reporte-seminario-i-mga.tex` y `presentacion-seminario-i-mga.tex`: entradas LaTeX canónicas.
 - `reporte-seminario-i-Actividad-N.tex`: fuente de cada actividad materializada.
@@ -52,7 +52,7 @@ T12 compiló con portada identificada, matrícula, GGS102, docente y fecha; T11 
 2. Verificar autoría, año, editorial, DOI/ISBN y procedencia de cada fuente.
 3. Elaborar fichas en `referencias-seminario-i/notas-seminario-i/` con páginas y procedencia verificables.
 4. Actualizar primero las matrices y después los capítulos del anteproyecto.
-5. Conservar cada PDF compilado junto a su `.tex` y colocar en `entregas-seminario-i/` únicamente la copia nombrada para el aula.
+5. Conservar cada PDF compilado junto a su `.tex` y colocar en `entregas/` únicamente la copia nombrada para el aula.
 
 > Toda fuente utilizada debe estar incorporada en `referencias-seminario-i/`; no se mantienen dependencias de rutas externas.
 

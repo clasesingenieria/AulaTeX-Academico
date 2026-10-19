@@ -99,10 +99,10 @@ def main():
         if TARGET.with_suffix('.pdf').exists():
             shutil.copy2(TARGET.with_suffix('.pdf'), backup / TARGET.with_suffix('.pdf').name)
     output = [
-        r'\def\seminariotitulo{Gestión del cumplimiento normativo para formalizar vTaxi como plataforma de taxis en Nuevo León}',
+        r'\def\seminariotitulo{Gestión del cumplimiento normativo para formalizar vTaxi como plataforma de taxis en Monterrey, Nuevo León}',
         r'\def\seminariosubtitulo{Actividad 12 -- Anteproyecto acumulativo}',
         r'\def\seminarioasunto{Actividad 12 -- Seminario I -- MGA}',
-        r'\def\seminariofecha{12 de octubre de 2026}',
+        r'\def\seminariofecha{18 de octubre de 2026}',
         r'\def\seminarioacumulativo{}',
         r'\def\seminarioextras{\usepackage{longtable,booktabs}}',
         r'\long\def\seminariocontenido{',

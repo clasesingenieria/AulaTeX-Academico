@@ -1,5 +1,21 @@
 # Tarea 12 - Hipotesis de trabajo
 
+## Entrega verificada el 18/10/2026
+
+**Enviado para calificar**, sin calificar, modulo 2912. Ultima modificacion: 18/10/2026 a las **00:04**, hora del aula; 23 horas 54 minutos antes del cierre. Se envio unicamente [Tarea12_DeLaCruzMunoz.docx](../../../entregas-seminario-i/Tarea12_DeLaCruzMunoz.docx), 1,292,715 bytes. SHA-256 local y remoto: `5bb1f3fce48a82865cfc0da206835bb54dde8246370cdcc8470a5dd49cbe21f7`.
+
+[Recibo](comprobantes-envio/2026-10-18/2912-receipt.json), [estado posterior](comprobantes-envio/2026-10-18/2912-after-save.txt) y [validacion documental](evidencias/2026-10-18/validacion-word.json). Word/PDF de revision: **34 paginas**; reporte acumulativo de raiz: **27 paginas**, compilado con codigo 0, sin desbordamientos ni referencias indefinidas. El cuerpo y las tres tablas del Word se cotejaron contra el PDF excluyendo numeros de pagina; portada, indice y paginas clave revisados visualmente. Los PDF no se enviaron.
+
+La [retroalimentacion docente de T11](evidencias/2026-10-18/2911-consigna-estado.txt), calificada 6.70/7.00 el 15/10, se incorporo a la version acumulativa: delimitacion uniforme del caso en Monterrey, Nuevo Leon, diferenciada de la escala normativa estatal; fundamento de controles y calidad documental; procedimiento de autorizacion documental y consentimiento individual; antecedente mexicano y precision de originalidad. Se conservaron las hipotesis y la estructura de las matrices; Covey solo cambio para alinear el territorio, sin agregar hipotesis. T11 conserva SHA-256 `d6235191d3e0d0add9691a98e1b122d6996406eef750f52cb00df94b59c382f0`. Respaldos previos en `antes-retroalimentacion-2026-10-18` y `antes-portada-2026-10-18`.
+
+### Fuente mexicana contrastada
+
+Lamas Flores, M. S., y Acosta Reveles, I. L. (2025). El cabildeo mediatico y en redes sociales como freno a la regulacion de plataformas digitales de transporte y reparto en Mexico. *Cuadernos del Ciesal, 2*(24), 1-28. DOI: https://doi.org/10.35305/cc.v2i24.174.
+
+Metadatos cotejados con Crossref y la [pagina editorial](https://cuadernosdelciesal.unr.edu.ar/index.php/inicio/article/view/174). Se consultaron metodo, resultados y conclusiones del [texto completo HTML](https://cuadernosdelciesal.unr.edu.ar/index.php/inicio/article/download/174/285). Metodo cualitativo: seguimiento de etiquetas de Twitter 2015-2018, revision hemerografica y entrevistas a dos representantes de organizaciones. Se usa como contexto mexicano de influencia regulatoria, no como evidencia sobre vTaxi ni como listado de obligaciones aplicables. La descarga directa del PDF devolvio HTTP 403; no se conserva ni se afirma haber descargado ese PDF. La ampliacion no equivale a una revision exhaustiva ni acredita evidencia empirica local.
+
+Las secciones siguientes conservan el historial de preparacion del 12 y 13 de octubre. Sus conteos y menciones de ausencia de envio quedan sustituidos por el estado vigente anterior.
+
 ## Portada actualizada
 
 Se aplicó exclusivamente la portada de Plan de negocios, adaptada a Seminario I, al reporte de raíz y al Word/PDF de Entregas. Cuerpo y tablas conservados; reporte 25 páginas y Word/PDF 31. [Diseño, alcance y comprobaciones](../../../assets-seminario-i/portada/README.md). El cuerpo Word sigue editable; la portada del Word es una imagen generada. Versiones anteriores respaldadas y actividades ya enviadas intactas.
