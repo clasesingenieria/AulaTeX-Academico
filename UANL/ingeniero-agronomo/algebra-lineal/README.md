@@ -1,5 +1,37 @@
 # Álgebra Lineal — Ingeniero Agrónomo
 
+## Evidencia vigente 2.6: revision del 20 de octubre de 2026
+
+La evidencia **2.6**, mapa cognitivo de algoritmo de un problema de sistemas
+lineales, es individual, vale 10 puntos y cierra el **23 de octubre de 2026
+a las 23:42**, segun Nexus. Esta clave institucional no debe confundirse con
+la numeracion interna de los trabajos anteriores.
+
+Se verifico el acceso con AulaTeX y se descargaron la guia EV2 y la metodologia.
+El [contrato y recursos verificados](planeaciones-algebra-lineal/consigna-Evidencia-2-6.md)
+recogen la rubrica vigente. La consigna exige desarrollo individual **a mano**
+y mapa escaneado, con procedimiento y ejemplo matematico enlazados por flechas.
+
+El [reporte digital con mapa](reporte-algebra-lineal-Evidencia-2-6.pdf) y su
+[fuente editable](reporte-algebra-lineal-Evidencia-2-6.tex) están preparados
+con plantilla AulaTeX, referencias APA, Gauss-Jordan, independencia lineal,
+comprobación por Cramer y sustitución. El mapa ocupa una página horizontal.
+El caso provisional N-P-K fue sustituido por el **Sistema 11** de la hoja
+docente aportada el 22 de octubre. Solución exacta: `(-103,-74,-379)/335`.
+El sistema fue cotejado con la primera página; no tiene unidades físicas.
+
+Los recursos de Nexus están en las
+[notas de esta evidencia](referencias-algebra-lineal/notas-algebra-lineal/evidencia-2-6/CONTROL.md),
+con originales e inventario SHA-256. No se citan como autoridad matemática.
+Por instrucción del usuario, **manuscrito, escaneo y envío serán manuales**.
+No se ha enviado esta evidencia ni se ha presentado el PDF digital como un
+manuscrito. El archivo que finalmente se seleccione para entregar corresponde
+a `entregas-algebra-lineal`.
+
+La hoja docente indica vencimiento el 16 de octubre; Nexus mostraba cierre
+el 23 de octubre a las 23:42 en la consulta del 20 de octubre. Confirmar esta
+discrepancia con el profesor: no se declara una prórroga ni aceptación garantizada.
+
 ## Actividad 1: mapa cognitivo
 
 - **Actividad 1 / Fase 1:** mapa cognitivo de telaraña sobre aplicaciones del álgebra lineal en la vida cotidiana.

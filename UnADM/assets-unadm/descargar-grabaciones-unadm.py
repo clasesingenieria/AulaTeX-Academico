@@ -14,8 +14,8 @@ from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
-from scripts.aulatex.config import load_aulatex_env
-from scripts.aulatex.platform_credentials import PlatformCredentialVault, default_vault_path
+from aulaTEX.aulatex.config import load_aulatex_env
+from aulaTEX.aulatex.platform_credentials import PlatformCredentialVault, default_vault_path
 from playwright.sync_api import sync_playwright
 
 HOST = 'aulavirtual.unadmexico.mx'
@@ -78,7 +78,12 @@ def download(context, url, destination):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--first-only', action='store_true')
+    parser.add_argument('--sessions-json', type=Path)
     args = parser.parse_args()
+    recordings = RECORDINGS
+    if args.sessions_json:
+        sessions = json.loads(args.sessions_json.read_text(encoding='utf-8-sig'))
+        recordings = [(item['slug'], int(item['room']), int(item['recording']), item['session'], item['date'], item['topic']) for item in sessions]
     load_aulatex_env()
     pin = os.environ.get('AULATEX_MASTER_PIN', '')
     vault = PlatformCredentialVault(default_vault_path(ROOT))
@@ -97,7 +102,7 @@ def main():
         page.get_by_role('button', name=re.compile('Inicia sesi')).click()
         page.wait_for_url(lambda url: '/login/' not in urlsplit(url).path, wait_until='domcontentloaded')
         del credentials
-        for slug, room, recording, week, date, title in RECORDINGS[:1] if args.first_only else RECORDINGS:
+        for slug, room, recording, week, date, title in recordings[:1] if args.first_only else recordings:
             origin = f'https://{HOST}/mod/bigbluebuttonbn/bbb_view.php?action=play&bn={room}&rid={recording}&rtype=presentation'
             page.goto(origin, wait_until='networkidle')
             page.locator('video,audio').first.wait_for(state='attached', timeout=20000)

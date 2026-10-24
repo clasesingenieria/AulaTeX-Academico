@@ -1,5 +1,56 @@
 # UnADM: seguimiento de materias 2026-2, bloque 2
 
+## Actualizacion autenticada del 22 de octubre de 2026
+
+La consulta de tareas realizada en esta fecha sustituye los estados de
+envio historicos de las secciones siguientes. No se realizaron envios,
+modificaciones de entregas ni publicaciones en foros durante esta consulta.
+
+| Materia | Actividad oficial | Estado comprobado | Accion pendiente |
+| --- | --- | --- | --- |
+| Teoria del Estado | S2, linea de tiempo | Enviado para calificar | Consultar retroalimentacion; no reenviar |
+| Teoria del Estado | S3, analisis de hechos | Enviado para calificar | Consultar retroalimentacion; no reenviar |
+| Teoria del Estado | S4, foro Estado, modulo 218025 | Enlace visible; consigna y participaciones no comprobadas | Leer consigna y comprobar participacion antes de redactar |
+| Derecho penal | S2 | Enviado para calificar | Consultar retroalimentacion; no reenviar |
+| Derecho penal | S3 | Enviado para calificar | Consultar retroalimentacion; no reenviar |
+| Derecho penal | S4, tarea 218337 | Sin envio; cierre tecnico 2 diciembre, 23:59 | Leer planificacion 218336 para conocer producto y plazo docente; no usar diciembre como entrega ordinaria |
+| Antecedentes | Actividad 1, resena, tarea 211993 | Enviada el 10 octubre; calificada 7/7 el 14 octubre | Actividad concluida; no sustituir entrega |
+| Antecedentes | Actividad 3, resumen, tarea 211999 | Sin envio; cierre 18 octubre, 23:55, vencido | Revisar resumen local y consultar posibilidad de recepcion extemporanea |
+| Antecedentes | Actividad 5, cuadro comparativo, tarea 212010 | Sin envio; ordinaria 19-25 octubre, 23:55; extemporanea 26 octubre, 23:55 | Prioridad vigente: leer Unidad 3 y elaborar cuadro; confirmar revision personal antes del envio |
+| Antecedentes | Autoevaluacion | Sin envio; vigencia no comprobada | No inventar aprendizajes personales ni tratarla como urgente sin comprobar fecha |
+
+### Cuadro comparativo de Antecedentes: requisitos comprobados
+
+Comparar los antecedentes sociales y el contexto politico del desarrollo
+historico de los derechos humanos en Mexico, conforme a Unidad 3, tema 2.1.
+La tarea exige portada, introduccion breve, cuadro, conclusion y referencias.
+Ejes minimos: contexto historico, antecedentes sociales, contexto politico,
+acontecimientos, derechos o principios impulsados y aportaciones a los derechos
+humanos en Mexico. Explicitar semejanzas y diferencias e incluir reflexion
+personal argumentada. PDF, Arial 12, margenes 2.5 cm, interlineado 1.5
+(sencillo permitido dentro del cuadro), extension libre y APA 7.
+Materiales vigentes enlazados: planificacion 212008 y cuadernillo 212009.
+La descarga no se completo: fallo de peticion directa y posterior timeout
+de acceso. No se certifica lectura ni archivo local de estos recursos.
+
+### Numeracion interna y version alternativa
+
+El [reporte interno 5](antecedentes-de-los-derechos-humanos-lde/reporte-antecedentes-de-los-derechos-humanos-Actividad-5.tex)
+contiene el resumen oficial 3. El [reporte interno 7](antecedentes-de-los-derechos-humanos-lde/reporte-antecedentes-de-los-derechos-humanos-Actividad-7.tex)
+contiene el cuadro oficial 5. Los reportes 1/2, 3/4, 5/6 y 7/8 corresponden
+a los dos productos de cada semana, de S1 a S4. El reporte 8 documenta el
+parcial visible sin atribuir respuestas ni resultados.
+Consultar el [indice de equivalencias actualizado](antecedentes-de-los-derechos-humanos-lde/entregas-antecedentes-de-los-derechos-humanos/README.md).
+
+La version abreviada independiente de la resena se elimino por instruccion
+del estudiante tras contrastar su contenido con el
+[reporte 3](antecedentes-de-los-derechos-humanos-lde/reporte-antecedentes-de-los-derechos-humanos-Actividad-3.tex).
+Este conserva ficha audiovisual, teorias y contraste juridico. No se mantiene
+un archivo independiente de la version abreviada. El PDF enviado el 10 de
+octubre permanece intacto en entregas; no se sustituyo por una revision local.
+
+## Registro historico anterior
+
 Actualizacion del 9 de octubre: [Auditoria de semana 2](AUDITORIA-SEMANA-2-2026-10-09.md). Consulta autenticada: tareas sin entrega; Estado cierra el 11 de octubre a las 23:55 y Penal a las 23:59. Recuperados formato DOCX de Estado, cuadernillo PDF y presentacion PPTX de Antecedentes; incorporadas 11 copias bibliograficas verificadas. Ningun producto certificado listo. Las observaciones siguientes conservan el historial del 4-5 de octubre y no sustituyen el dictamen actualizado.
 
 Consulta autenticada: 4 de octubre de 2026, fecha local de trabajo. Acceso mediante la boveda local de AulaTeX; no se guardaron credenciales ni sesiones en este directorio. Las planeaciones de trabajo son documentos derivados, no emitidos ni aprobados por UnADM.

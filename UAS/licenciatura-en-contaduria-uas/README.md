@@ -8,6 +8,7 @@ Actualización del 12/10/2026: [estado de Derecho mercantil](derecho-mercantil/R
 
 ## Materias
 
+- [Herramientas digitales](herramientas-digitales/README.md): curso 635, incorporado el 21/10/2026; 15 planeaciones y 81 archivos de apoyo. Prioridad: evidencia real de carpeta compartida S1, cierre 25/10.
 - [Derecho mercantil](derecho-mercantil/README.md): curso 632; 15 planeaciones y plantillas de reporte, actividad y presentación.
 - [Investigación aplicada a la contaduría](investigacion-aplicada-a-la-contaduria/README.md): curso 634; 16 planeaciones, nuevo adaptador de actividad y productos históricos conservados.
 

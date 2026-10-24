@@ -11,8 +11,8 @@ from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
-from scripts.aulatex.config import load_aulatex_env
-from scripts.aulatex.platform_credentials import PlatformCredentialVault, default_vault_path
+from aulaTEX.aulatex.config import load_aulatex_env
+from aulaTEX.aulatex.platform_credentials import PlatformCredentialVault, default_vault_path
 from playwright.sync_api import sync_playwright
 
 HOST = 'aulavirtual.unadmexico.mx'
@@ -51,7 +51,7 @@ def main() -> None:
                 link = urlsplit(row['play'])
                 if link.hostname != HOST or link.path != '/mod/bigbluebuttonbn/bbb_view.php':
                     continue
-                item = {'descripcion_aula': re.sub(r'https?://\S+', '[enlace omitido]', row['text']), 'enlace_aula': room_url}
+                item = {'descripcion_aula': re.sub(r'https?://\S+', '[enlace omitido]', row['text']), 'enlace_aula': room_url, 'enlace_reproduccion': row['play']}
                 try:
                     page.goto(row['play'], wait_until='networkidle')
                     try:

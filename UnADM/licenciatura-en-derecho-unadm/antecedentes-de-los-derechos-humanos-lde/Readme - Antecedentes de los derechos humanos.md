@@ -2,6 +2,78 @@
 
 Documento unico de la materia: integra el contenido util del README anterior, retirado tras la consolidacion del 10 de octubre de 2026. Los estados obsoletos no se trasladan como vigentes.
 
+## Organizacion vigente: ocho reportes
+
+### Consulta autenticada del 23 de octubre de 2026
+
+- Resumen oficial 3, modulo 211999: sin envio, no calificado, cierre publicado
+	18 octubre, 23:55. La pagina consultada no muestra control para anadir envio.
+	Solicitar al docente una posible reapertura; no asumir recepcion extemporanea.
+- Cuadro oficial 5, modulo 212010: sin envio, no calificado, control
+	"ANADIR ENVIO" disponible; cierre 25 octubre, 23:55. PDF local y fuente
+	del reporte 7 sincronizados. Pendiente revision personal y entrega.
+- Foro oficial 4, modulo 212000: requisitos de publicacion y respuesta aun
+	pendientes. Esta consulta no acredita permiso de publicacion extemporanea
+	ni cotejo actualizado del hilo destinatario de la replica.
+- Parcial I, modulo 212011: apertura 19 octubre, 00:00; cierre 26 octubre,
+	23:55; cinco reactivos (cuatro de opcion multiple y uno verdadero/falso),
+	diez minutos y un unico intento. No se inicio el examen. Condiciones
+	incorporadas al reporte 8; no se conocen respuestas ni resultados.
+- Fechas reproducidas como aparecen en el aula, sin zona horaria verificada.
+	Consulta de solo lectura: no se enviaron archivos ni publicaron mensajes.
+
+Actualizacion del 22 de octubre de 2026, basada en las cuatro capturas del
+curso aportadas por el estudiante. Esta tabla sustituye las equivalencias
+y estados de las secciones historicas siguientes. Los numeros de los
+reportes son internos: dos productos por semana, no la numeracion Moodle.
+
+| Semana | Reporte interno | Producto del aula | Entrega | Estado visible en las capturas |
+| --- | --- | --- | --- | --- |
+| 1 | [1](reporte-antecedentes-de-los-derechos-humanos-Actividad-1.tex) | Examen Diagnostico | Intento en plataforma; sin archivo | Hecho; reporte conserva revision del intento aportada previamente |
+| 1 | [2](reporte-antecedentes-de-los-derechos-humanos-Actividad-2.tex) | Foro diagnostico | Publicacion en plataforma; sin archivo | Hecho; indicador no acredita por si solo coincidencia con el TXT local |
+| 2 | [3](reporte-antecedentes-de-los-derechos-humanos-Actividad-3.tex) | Actividad 1: Resena Critica de Video | PDF, numero oficial 1 | Hecho: Hacer un envio; entrega anterior preservada |
+| 2 | [4](reporte-antecedentes-de-los-derechos-humanos-Actividad-4.tex) | Actividad 2: Foro de participacion | Publicacion en plataforma | Hecho: Hacer publicaciones en foro: 1 |
+| 3 | [5](reporte-antecedentes-de-los-derechos-humanos-Actividad-5.tex) | Actividad 3: Resumen de lectura | PDF, numero oficial 3 | Por hacer: Hacer un envio; plazo conocido vencido, acceso actual a envio no comprobado |
+| 3 | [6](reporte-antecedentes-de-los-derechos-humanos-Actividad-6.tex) | Actividad 4: Foro de participacion y debate | Publicacion y replica en plataforma | Por hacer: Publicar respuestas: 1 y Hacer publicaciones en foro: 1 |
+| 4 | [7](reporte-antecedentes-de-los-derechos-humanos-Actividad-7.tex) | Actividad 5: Cuadro comparativo | PDF, numero oficial 5 | Por hacer: Hacer un envio |
+| 4 | [8](reporte-antecedentes-de-los-derechos-humanos-Actividad-8.tex) | Examen Parcial I | Intento en plataforma; sin archivo | Hecho: Ver; Por hacer: Hacer intentos: 1 |
+
+El reporte 5 vuelve a contener el resumen; el cuadro se traslado al reporte
+7 con sus bytes intactos. El reporte 8 es un registro documental pendiente
+de la revision del intento, no un examen resuelto. No se iniciaron intentos,
+no se publicaron mensajes y no se enviaron archivos en esta reorganizacion.
+El tramite de preferencia de reunion sincronica no se cuenta como producto.
+
+Fuentes canonicas: los ocho reportes TEX de la raiz. Los PDF de entrega se
+copian de los reportes 3, 5 y 7 con los numeros oficiales 1, 3 y 5.
+El PDF ya enviado de la resena no se sobrescribe con una version local.
+Los TXT de foro son recursos para publicar texto, no archivos para adjuntar
+como tareas; las copias S3 disponibles en entregas no prueban publicacion.
+Ver el [indice vigente de entregas](entregas-antecedentes-de-los-derechos-humanos/README.md).
+
+## Historial anterior
+
+Las equivalencias, conteos y estados siguientes conservan el contexto de
+su fecha. No sustituyen la tabla vigente ni acreditan el estado actual.
+
+### Correccion editorial del 19 de octubre de 2026
+
+Reportes canonicos: S1 = 1 (cuestionario diagnostico) y 2 (foro); S2 = 3 (resena) y 4 (foro); S3 = 5 (resumen) y 6 (foro). No se renumeran las actividades oficiales de Moodle. Esta correccion abarca los reportes 2, 5 y 6; no modifica trabajos ni publicaciones previas de S2.
+
+El antiguo informe `reporte-antecedentes-de-los-derechos-humanos-Foro-S1.tex` se absorbio en el reporte 2: sus tres respuestas se conservaron, se corrigio ortografia y se incluyeron desde el TXT canonico para impedir divergencias. El [original historico](referencias-antecedentes-de-los-derechos-humanos/notas-antecedentes-de-los-derechos-humanos/actividad-2-foro-diagnostico/historico/reporte-antecedentes-de-los-derechos-humanos-Foro-S1.tex.txt) conserva exactamente sus bytes, SHA-256 `c34dca2ec04cc69c5c29a3a34c15e7ad68454a58bf7ec2a174296e90564b5a35`; deja de ser un reporte activo. La [consigna S1](referencias-antecedentes-de-los-derechos-humanos/notas-antecedentes-de-los-derechos-humanos/actividad-2-foro-diagnostico/modulo-6.txt) exige conocimientos previos, tres preguntas y una unica publicacion, sin investigar ni responder a pares. Por eso no se insertan citas investigadas ni preguntas adicionales al grupo en esa intervencion: excepcion expresa respecto al contrato generico de foro. No se inventan edad, residencia ni experiencia personal. La version local no acredita una publicacion pasada.
+
+Los PDF ya no deben narrar preparacion, borradores, conteos o estados de plataforma. El resumen conserva introduccion, desarrollo tematico y conclusion en tercera persona. El foro S3 contiene la aportacion y la replica completas con apertura, argumento, cita literal, cierre y referencias propias, en lugar de describirlas. Sus TXT son las fuentes exactas de los bloques del PDF. Los conteos antiguos de 394/142 palabras son historicos y quedan sustituidos por la version contractual actual. Las notas de IA se conservan breves al pie por requisito del contrato; no afirman revision personal inexistente. Detalles en el [contrato actualizado](planeaciones-antecedentes-de-los-derechos-humanos/CONTRATO-RESUMEN-Y-FORO-S3.md).
+
+Estado: correccion local, sin nuevos envios ni publicaciones. Las advertencias retiradas de los PDF se conservan aqui; no equivalen a una validacion docente o del estudiante. La replica S3 se refiere al hilo 273812, consultado el 18 de octubre, y requiere reconsulta antes de publicar.
+
+## Semana 3: preparacion manual, 18 de octubre de 2026
+
+La planeacion S3 ya estaba descargada en `planeaciones-antecedentes-de-los-derechos-humanos`. El cuadernillo (Moodle 212003) y las diapositivas (212005) se descargaron a `referencias-antecedentes-de-los-derechos-humanos/notas-antecedentes-de-los-derechos-humanos/actividad-5-resumen-de-lectura/`; SHA-256: `f334dfad56c250b8710260915d740932de54ce59e58eb0c1696bf065e498e093` y `9073943d1b694b27247c4328694ce983788b286317fb189bbbe6f95c56067016` respectivamente. El libro de Rey Cantor y coautoras ya estaba en la biblioteca local; se cotejaron las paginas PDF 72-76 y 83. La Carta Magna se contrasto por separado con UK Parliament, sin atribuir su desarrollo a esas paginas.
+
+La tarea oficial 3 (Moodle 211999) corresponde al [reporte interno 5](reporte-antecedentes-de-los-derechos-humanos-Actividad-5.pdf): PDF compilado, portada, dos cuartillas de contenido y referencias. El foro oficial 4 (212000) corresponde al [reporte interno 6](reporte-antecedentes-de-los-derechos-humanos-Actividad-6.pdf) y los borradores de [aportacion](foro-participacion-Actividad-6.txt) y [replica](foro-replica-Actividad-6.txt); 394 y 142 palabras de contenido, respectivamente. La replica se preparo para el hilo 273812, consultado cuando no tenia respuestas; reconsultar antes de publicarla. Ambos reportes compilaron con LuaLaTeX; no se enviaron PDF ni mensajes S3 porque la revision personal del estudiante no estuvo disponible. El estado autenticado de la tarea era "Aun no se ha hecho ninguna tarea" en la consulta, sin presumir que permanezca igual.
+
+[Contrato de tecnica Resumen y foro S3](planeaciones-antecedentes-de-los-derechos-humanos/CONTRATO-RESUMEN-Y-FORO-S3.md): la planeacion dice 1-3 cuartillas y la tarea vigente dice 2-3; se aplico el requisito de la tarea. El motor con Amazon Nova Pro termino con incidencias: sus compuertas de monitor, optimizacion y compilacion no quedaron aprobadas; la compilacion y revision de los PDFs se completaron manualmente. `entregas-antecedentes-de-los-derechos-humanos` queda sin copia S3 hasta la validacion personal requerida por su propia convencion.
+
 Actualizacion del foro S2: reporte interno 4 con marco conceptual, seis fuentes citadas, participacion y dos replicas en cajas, TXT extraibles y conclusiones tematicas. [Texto y comprobantes](referencias-antecedentes-de-los-derechos-humanos/notas-antecedentes-de-los-derechos-humanos/actividad-4-foro-de-participacion/participacion-foro-S2.md): participacion de 82 palabras y replicas de 72 y 76, contando asunto, saludo, despedida y referencia. Las declaraciones de IA quedan fuera de las cajas. Las tres publicaciones se confirmaron el 10 de octubre; no se acredita calificacion. La cita textual exigida por el contrato generico no se incorpora: se documenta la adaptacion a la consigna especifica, sin afirmar cumplimiento integral del motor.
 
 Actualizacion del cuestionario S1: reporte interno 1 completado con los tres reactivos de la revision proporcionada por el usuario, respuestas y justificaciones documentales posteriores. [Registro del intento y mapa de soporte](referencias-antecedentes-de-los-derechos-humanos/notas-antecedentes-de-los-derechos-humanos/actividad-1-cuestionario-diagnostico/revision-cuestionario-S1.md). Intento terminado el 3 de octubre de 2026, 00:27-00:29, duracion indicada 1 min 32 segundos; reactivos no calificados. Respuestas b), c) y Verdadero; la tercera no tiene marca visual original en el texto recibido. Esta actualizacion sustituye las menciones a respuestas pendientes del cuestionario en el historial siguiente. No se inicio ni envio otro intento.
@@ -10,7 +82,7 @@ Actualizado: 10 de octubre de 2026. UnADM, Licenciatura en Derecho, grupo 005, c
 
 ## Sistema de identificacion
 
-Los reportes internos se numeran consecutivamente por producto: actividades 1 y 2 para semana 1; actividades 3 y 4 para semana 2. La numeracion interna no sustituye el nombre ni el numero oficial de la plataforma. Los archivos de envio se preparan en `entregas-antecedentes-de-los-derechos-humanos` con la identificacion, formato y nombre que exija cada docente.
+Los reportes internos se numeran consecutivamente por producto: actividades 1 y 2 para semana 1; actividades 3 y 4 para semana 2; actividades 5 y 6 para semana 3. La numeracion interna no sustituye el nombre ni el numero oficial de la plataforma. Los archivos de envio se preparan en `entregas-antecedentes-de-los-derechos-humanos` con la identificacion, formato y nombre que exija cada docente.
 
 | Reporte interno acordado | Semana y producto | Identificacion oficial | Modulo Moodle | Modalidad | Archivo para adjuntar |
 | --- | --- | --- | --- | --- | --- |
@@ -18,19 +90,23 @@ Los reportes internos se numeran consecutivamente por producto: actividades 1 y 
 | Actividad 2 | S1: foro diagnostico | Foro diagnostico | [211991](https://aulavirtual.unadmexico.mx/mod/forum/view.php?id=211991) | Publicar en foro | No previsto por la consigna conocida |
 | Actividad 3 | S2: resena critica de video | Actividad 1: Resena Critica de Video | [211993](https://aulavirtual.unadmexico.mx/mod/assign/view.php?id=211993) | Adjuntar PDF | Si, cuando cumpla requisitos |
 | Actividad 4 | S2: foro de participacion | Actividad 2: Foro de participacion | [211997](https://aulavirtual.unadmexico.mx/mod/forum/view.php?id=211997) | Una publicacion de 50-100 palabras | No previsto por la consigna conocida |
+| Actividad 5 | S3: resumen de lectura | Actividad 3: Resumen de lectura | [211999](https://aulavirtual.unadmexico.mx/mod/assign/view.php?id=211999) | Adjuntar PDF tras revision personal | Pendiente de validacion |
+| Actividad 6 | S3: foro de debate | Actividad 4: Foro de participacion y debate | [212000](https://aulavirtual.unadmexico.mx/mod/forum/view.php?id=212000) | Publicacion y replica en plataforma | No adjuntar archivo |
 
-El registro de preferencia de reunion sincrona visible en semana 1 se controla como tramite complementario, no como uno de estos cuatro productos academicos.
+El registro de preferencia de reunion sincrona visible en semana 1 se controla como tramite complementario, no como uno de estos seis productos academicos.
 
 ## Reportes internos implementados
 
 La migracion 1-4 se aplico el 10 de octubre. Los registros pendientes no se presentan como respuestas o publicaciones confirmadas.
 
-| Producto | Archivo actual | Situacion respecto al esquema 1-4 |
+| Producto | Archivo actual | Situacion respecto al esquema 1-6 |
 | --- | --- | --- |
 | Cuestionario S1 | [TEX](reporte-antecedentes-de-los-derechos-humanos-Actividad-1.tex) y [PDF](reporte-antecedentes-de-los-derechos-humanos-Actividad-1.pdf) | Registro interno 1 completado con la revision aportada; intento terminado, reactivos no calificados |
-| Foro diagnostico S1 | [TEX](reporte-antecedentes-de-los-derechos-humanos-Actividad-2.tex), [PDF](reporte-antecedentes-de-los-derechos-humanos-Actividad-2.pdf) y [TXT extraible](foro-diagnostico-Actividad-2.txt) | Reporte interno 2; estructura de foro mejorada el 10 de octubre: asunto, saludo espaciado, tres preguntas numeradas y despedida; declaracion de IA fuera de la caja. Propuesta, publicacion no cotejada |
+| Foro diagnostico S1 | [TEX](reporte-antecedentes-de-los-derechos-humanos-Actividad-2.tex), [PDF](reporte-antecedentes-de-los-derechos-humanos-Actividad-2.pdf) y [TXT extraible](foro-diagnostico-Actividad-2.txt) | Canonico 2: absorbio Foro-S1, conserva tres respuestas en bloque copiable; tres paginas, sin apendice de estado. Publicacion no cotejada |
 | Resena S2 | [TEX](reporte-antecedentes-de-los-derechos-humanos-Actividad-3.tex) y [PDF](reporte-antecedentes-de-los-derechos-humanos-Actividad-3.pdf) | Reporte interno 3; version ampliada, no apta por extension |
 | Foro de participacion S2 | [TEX](reporte-antecedentes-de-los-derechos-humanos-Actividad-4.tex), [PDF](reporte-antecedentes-de-los-derechos-humanos-Actividad-4.pdf) y [texto y comprobantes](referencias-antecedentes-de-los-derechos-humanos/notas-antecedentes-de-los-derechos-humanos/actividad-4-foro-de-participacion/participacion-foro-S2.md) | Reporte interno 4; participacion y dos replicas publicadas y verificadas el 10 de octubre |
+| Resumen S3 | [TEX](reporte-antecedentes-de-los-derechos-humanos-Actividad-5.tex) y [PDF](reporte-antecedentes-de-los-derechos-humanos-Actividad-5.pdf) | Canonico 5: sintesis tripartita en tercera persona, dos paginas de contenido, portada y referencias. Sin relato de elaboracion; no enviado |
+| Foro de debate S3 | [TEX](reporte-antecedentes-de-los-derechos-humanos-Actividad-6.tex) y [PDF](reporte-antecedentes-de-los-derechos-humanos-Actividad-6.pdf) | Canonico 6: dos bloques copiables desde TXT, referencias propias y conclusiones tematicas. Aportacion 461 palabras y replica 248 contando referencias y firma; no publicado |
 
 La resena se movio primero de 2 a 3 y el foro de 1 a 2 sin sobrescribirlos. Se corrigieron identificaciones interiores e indices vigentes. Las evidencias y evaluaciones historicas conservan sus datos originales y no certifican la nueva numeracion. El registro del cuestionario procede de la revision aportada; no se inicio otro intento. Las publicaciones confirmadas son las del foro S2; no se envio la resena.
 

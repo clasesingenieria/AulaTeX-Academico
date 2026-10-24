@@ -24,3 +24,19 @@ Arial 12, limites de paginas y cualquier formato especifico se verifican por act
 - La bibliografia local de la materia vive en estadistica-aplicada-para-la-administracion.bib.
 - Esta carpeta corresponde a la categoria tronco comun MGA.
 - La identidad institucional se hereda desde ITESCA/_shared/ y usa los assets oficiales descargados en ITESCA/assets-itesca/web/.
+
+## Unidad 1: compilación y auditoría verificadas
+
+Desde la raíz del repositorio:
+
+```powershell
+& .\.venv\Scripts\python.exe ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/validar_unidad_1.py --build --promote
+```
+
+El [validador de la unidad 1](assets-estadistica-aplicada-para-la-administracion/validar_unidad_1.py) usa TeX Live 2026, latexmk y XeLaTeX, con auxiliares exclusivos por actividad y búsquedas de plantilla acotadas. `--promote` copia los PDF verificados a la raíz de materia y a entregas, comprobando igualdad SHA-256. Sin opciones solo audita los PDF ya compilados. No interactúa con Moodle.
+
+Los documentos heredan la plantilla de materia mediante sus extensiones locales. Las referencias visibles están controladas en `thebibliography` para APA 7 y tienen entradas correspondientes en la bibliografía activa; al modificar fuentes hay que mantener ambas representaciones concordantes. No se modificó la plantilla maestra ni su estilo bibliográfico global.
+
+Arial 12 de TeX se representa como aproximadamente 11.955 puntos PDF (conversión de unidades pt/bp), no como una reducción de tamaño para ganar espacio. Se verificaron Arial regular, cursiva y negrita en todas las páginas de cuerpo de la investigación. La advertencia heredada de forma TS1 queda registrada, sin sustitución visible de Arial en ese cuerpo.
+
+La portada usa una copia idéntica del fondo oficial con ruta corta en assets: el motor no pudo cargarlo desde la ruta larga de notas en Windows. El Word original, las imágenes extraídas y sus evidencias se conservan sin modificaciones.

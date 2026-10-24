@@ -1,8 +1,8 @@
 \documentclass[spanish,letterpaper,oneside]{article}
 
 \def\documenttitle {Derechos humanos: nociones iniciales y expectativas}
-\def\documentsubtitle {Participacion del foro diagnostico de semana 1}
-\def\documentsubject {Actividad 2 - Antecedentes de los derechos humanos}
+\def\documentsubtitle {Dignidad y expectativas de aprendizaje}
+\def\documentsubject {Nociones iniciales sobre los derechos humanos}
 \def\documentauthor {Martin Jonathan de la Cruz}
 \def\coursename {Antecedentes de los derechos humanos}
 \def\coursecode {005}
@@ -18,10 +18,8 @@
     Matricula: & ES2611202040 \\
     Figura docente: & Daniel Alexis Lozano Ortega \\
     Semestre/Bloque: & 2 / 2 \\
-    Actividad: & 2 \\
     Semana: & 1 \\
-    Estado: & Borrador para revision \\
-    \multicolumn{2}{l}{Fecha de realizacion: \today} \\
+    \multicolumn{2}{l}{Fecha: \today} \\
     \multicolumn{2}{l}{\universitylocation}
   \end{tabular}
 }
@@ -42,14 +40,12 @@
 \setlength{\emergencystretch}{3em}
 
 \usepackage[most]{tcolorbox}
-\usepackage{attachfile}
+\usepackage{fvextra}
 \definecolor{unadmGreenDark}{HTML}{174A3A}
 \definecolor{unadmGreen}{HTML}{5F8F3A}
 \definecolor{unadmPaper}{HTML}{F6F7F2}
-\attachfilesetup{color={0.373 0.561 0.227},print=false}
-\newcommand{\foroCopyButton}[1]{%
-  \textattachfile[appearance={},description={Participacion en texto},mimetype=text/plain]{#1}{%
-    \colorbox{unadmGreen}{\small\textcolor{white}{\,Copiar participacion\,}}}}
+% La consigna S1 pide conocimientos previos sin investigar ni responder a pares.
+% Se preservan las tres preguntas del texto original; no se fuerza cita textual.
 \newtcolorbox{forobox}[1][]{%
   enhanced, breakable,
   colback=unadmPaper, colframe=unadmGreen,
@@ -86,67 +82,32 @@
 \templatePortrait
 \templatePagecfg
 \onehalfspacing
-\templateIndex
 \templateFinalcfg
 
-\section{Introduccion}
+\section{Introducci\'on}
 
-El diagnostico inicial permite expresar una nocion de los derechos
-humanos, reconocer algunos ejemplos y plantear intereses de aprendizaje.
-La participacion articula esas tres dimensiones: dignidad, derechos
-concretos y evolucion de su proteccion.
+La dignidad de las personas permite reconocer derechos concretos y
+preguntar por las condiciones para ejercerlos. La educaci\'on, la salud y
+la igualdad muestran que el reconocimiento jur\'idico necesita medios
+de protecci\'on; estudiar su evoluci\'on ayuda a distinguir entre enunciar
+una libertad y hacer efectivo su respeto.
 
 \section{Nociones iniciales y expectativas}
-\subsection{Participacion en el foro diagnostico}
+\subsection{Dignidad, derechos y expectativas}
 \begin{forobox}[title={Derechos humanos y expectativas de aprendizaje}]
-\hfill\foroCopyButton{foro-diagnostico-Actividad-2.txt}\par\medskip
-Hola, companeras, companeros y docente.\par\medskip
-
-\textbf{1. ¿Que entiendes por derechos humanos?}\par\smallskip
-
-Entiendo que son derechos que corresponden a todas las personas por su
-dignidad y que deben respetarse sin discriminacion. Su importancia esta
-en proteger la libertad, la igualdad y las condiciones necesarias para
-vivir y desarrollarse. Considero que su reconocimiento debe acompanarse
-de mecanismos que permitan exigir su respeto cuando una autoridad o una
-persona los vulnera.
-
-\par\medskip
-\textbf{2. Menciona al menos tres derechos humanos que conozcas.}\par\smallskip
-
-El derecho a la educacion, el derecho a la salud y el derecho a la
-igualdad y no discriminacion.
-
-\par\medskip
-\textbf{3. ¿Que tema relacionado con los derechos humanos te gustaria
-aprender durante esta asignatura?}\par\smallskip
-
-Me interesa comprender como se paso del reconocimiento de ciertos
-derechos para grupos limitados a la idea de derechos para todas las
-personas. Tambien quiero conocer como esa evolucion se relaciona con las
-garantias constitucionales en Mexico y con los mecanismos que permiten
-proteger los derechos en la practica.
-
-\par\medskip
-Saludos cordiales.
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\small,baselinestretch=1,breaksymbolleft={},breaksymbolright={}]{foro-diagnostico-Actividad-2.txt}
 \end{forobox}
 
+\clearpage
 \section{Conclusiones}
 
-Relacionar la dignidad con la educacion, la salud y la igualdad permite
-pasar de una nocion general a derechos reconocibles en la vida cotidiana.
-Mi interes de aprendizaje se centra en comprender su evolucion y los
-medios de proteccion en Mexico, distinguiendo reconocer un derecho de
-hacer efectivo su respeto.\footnote{GitHub Copilot apoyo la organizacion
-y redaccion; el texto requiere revision personal y no acredita por si
-solo conocimientos previos ni experiencias confirmadas.}
-
-\subsection*{Estado de la propuesta}
-
-La publicacion de esta version no ha sido cotejada. No se incorporan
-edad, residencia ni experiencias no confirmadas. Las tres preguntas
-conservadas orientan la propuesta; los requisitos del foro S2 no se
-trasladan al diagnostico S1. No se agregan replicas sin intervenciones
-reales y una solicitud especifica.
+Relacionar la dignidad con la educaci\'on, la salud y la igualdad permite
+pasar de una noci\'on general a derechos reconocibles en la vida cotidiana.
+Mi inter\'es de aprendizaje se centra en comprender su evoluci\'on y los
+medios de protecci\'on en M\'exico, distinguiendo reconocer un derecho de
+hacer efectivo su respeto. Esta diferencia importa porque una libertad
+reconocida pierde eficacia cuando las personas carecen de medios para
+defenderla.\footnote{Uso de IA: GitHub Copilot para organizaci\'on conceptual
+y revisi\'on ling\"u\'istica.}
 
 \end{document}
