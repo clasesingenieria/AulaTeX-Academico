@@ -1,0 +1,824 @@
+# Planeacion: Fundamentos de Gestión Administrativa
+
+Estado: needs_review. Conversion local, no aprobacion docente ni autorizacion de envio.
+
+## Identificacion
+
+```json
+{
+  "institution": "ITESCA",
+  "program": "maestria-en-gestion-administrativa",
+  "subject_id": "fundamentos-de-gestion-administrativa-mga",
+  "subject_title": "Fundamentos de Gestión Administrativa",
+  "offering_id": "oferta-bd29a4a4059c1103",
+  "period": "2026-II",
+  "modality": null
+}
+```
+
+## Actividad 7799: Reporte de investigación
+
+### Consigna importada
+
+Nueva Perspectiva del Liderazgo en las Organizaciones: aplicaciones recientes y brechas generacionales en dirección, liderazgo y toma de decisiones.
+Analizar con teorías, modelos e investigaciones pertinentes; seleccionar y consultar fuentes, sin mínimo numérico documentado para 4.1.
+Al menos cinco cuartillas de contenido, excluyendo portada y fuentes.
+Introducción con tesis, desarrollo argumental, discusión de evidencia y límites, conclusión y referencias.
+
+### Requisitos
+
+1. Nueva Perspectiva del Liderazgo en las Organizaciones: aplicaciones recientes y brechas generacionales en dirección, liderazgo y toma de decisiones.
+2. Analizar con teorías, modelos e investigaciones pertinentes; seleccionar y consultar fuentes, sin mínimo numérico documentado para 4.1.
+3. Al menos cinco cuartillas de contenido, excluyendo portada y fuentes.
+4. Introducción con tesis, desarrollo argumental, discusión de evidencia y límites, conclusión y referencias.
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[
+  {
+    "id": "step-001",
+    "order": 1,
+    "phase": "preparation",
+    "action": "Revisar consigna, seleccionar registros, consultar fuentes disponibles y anotar evidencia y límites; delimitar tesis.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-002",
+    "order": 2,
+    "phase": "construction",
+    "action": "Organizar y redactar introducción, argumentación, aplicaciones y conclusión; integrar citas diferenciando evidencia e interpretación.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-003",
+    "order": 3,
+    "phase": "review",
+    "action": "Cotejar cuartillas sin portada/fuentes, APA, redacción y formato; comprobar PDF local.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  }
+]
+```
+
+### products
+
+```json
+[
+  {
+    "id": "product-001",
+    "kind": "unspecified",
+    "recipient": null,
+    "editable_format": null,
+    "submission_format": null,
+    "structure": [
+      "ensayo_de_investigacion"
+    ],
+    "length": null,
+    "filename_pattern": null,
+    "accessibility": null,
+    "requirement_ids": [],
+    "paths": {
+      "editable": null,
+      "delivery": null
+    }
+  }
+]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": []
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": "2026-08-31 00:00",
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": "2026-09-07 23:37",
+  "timezone": null,
+  "literal": null
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## sources
+
+```json
+[
+  {
+    "id": "src-local",
+    "kind": "other",
+    "authority": "editorial",
+    "title": "planeacion-actividad-4.1-reporte-investigacion.json",
+    "url": null,
+    "path": "planeaciones-generadas/2026-II/revision-2026-09-15/planeacion-actividad-4.1-reporte-investigacion.json",
+    "sha256": "3edcb88632221ef11933dfca8b1ff78c107221bad2c52233aa213671e8e8b139",
+    "captured_at": "2026-09-15",
+    "media_type": "application/json"
+  }
+]
+```
+
+## field_status
+
+```json
+[
+  {
+    "path": "/identity",
+    "state": "inferred",
+    "reason": "Identidad editorial del catalogo; oferta interna, periodo y modalidad no acreditados cuando faltan.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/sources",
+    "state": "confirmed",
+    "reason": "Archivo local preservado; su huella no acredita autoria ni vigencia docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "local-file",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum",
+    "state": "unknown",
+    "reason": "No se deducen competencias, resultados ni temario que no esten documentados.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/",
+        "quoted_text": "Nueva Perspectiva del Liderazgo en las Organizaciones: aplicaciones recientes y brechas generacionales en dirección, liderazgo y toma de decisiones.\nAnalizar con teorías, modelos e investigaciones pertinentes; seleccionar y consultar fuentes, sin mínimo numérico documentado para 4.1.\nAl menos cinco cuartillas de contenido, excluyendo portada y fuentes.\nIntroducción con tesis, desarrollo argumental, discusión de evidencia y límites, conclusión y referencias."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/requirements",
+    "state": "confirmed",
+    "reason": "Coinciden con la entrada local; no se acredita que sean requisitos docentes integros.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "//requirements",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/sequence",
+    "state": "inferred",
+    "reason": "Secuencia propuesta preservada; fases, insumos, salidas y controles necesitan revision.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "//sequence",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/products",
+    "state": "inferred",
+    "reason": "Descripcion original preservada; no convierte examen o foro en informe LaTeX.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "//product",
+        "quoted_text": "ensayo_de_investigacion"
+      }
+    ],
+    "alternatives": []
+  }
+]
+```
+
+## review
+
+```json
+{
+  "state": "needs_review",
+  "reviewed_at": null,
+  "reviewer_role": null,
+  "critical_gaps": [
+    "Cotejar consigna y procedencia docente; conversion local no equivale a aprobacion"
+  ],
+  "semantic_validation": "failed"
+}
+```
+
+## extensions
+
+```json
+{
+  "conversion": {
+    "version": "1.0",
+    "source_format": ".json",
+    "source_sha256": "3edcb88632221ef11933dfca8b1ff78c107221bad2c52233aa213671e8e8b139",
+    "source_payload": {
+      "schema_version": "0.2-documental",
+      "revision_date": "2026-09-15",
+      "status": "borrador",
+      "activity_id_aula": "4.1",
+      "activity_id_local": 8,
+      "moodle_module_id": 7799,
+      "title": "Reporte de investigación",
+      "subject": "Fundamentos de Gestión Administrativa",
+      "course_code": "GGFG02",
+      "moodle_course_id": 372,
+      "period": "2026-II",
+      "unit": 4,
+      "provenance": {
+        "mode": "revision_local",
+        "network_used": false,
+        "python_used": false,
+        "pdf_read_in_this_revision": false,
+        "institutional_approval": null,
+        "privacy": "Sin datos personales, cuentas, estados de entrega ni productos resueltos; portada solo enlazada."
+      },
+      "sources": [
+        {
+          "id": "original-md",
+          "title": "Planeaciones derivadas para revisión",
+          "citation": "AulaTeX, revisión documental 2026-09-15, actividad 4.1.",
+          "location": "planeaciones.md",
+          "locator": "Sección 8: Actividad 4.1",
+          "status": "leido_localmente",
+          "used_for": [
+            "identidad",
+            "requisitos",
+            "calendario",
+            "peso",
+            "tiempos"
+          ]
+        },
+        {
+          "id": "original-json",
+          "title": "Modelo documental original",
+          "citation": "AulaTeX (2026-09-15), modelo 0.1-documental.",
+          "location": "planeaciones.json",
+          "locator": "activities: activity_id_aula=4.1",
+          "status": "leido_localmente",
+          "used_for": [
+            "cotejo de fechas, identificadores y desconocidos"
+          ]
+        },
+        {
+          "id": "consigna-local",
+          "title": "Identificación, consigna y trazabilidad académica 4.1",
+          "citation": "Nota local de consulta previa del 12-09-2026.",
+          "location": "../../../referencias-fundamentos-de-gestion-administrativa/actividad-8-investigacion-liderazgo/consigna-y-validacion.md",
+          "locator": "L3-L18 y tabla académica L39-L47; se excluyen producto, validación y estados personales",
+          "status": "secciones_academicas_leidas_localmente",
+          "used_for": [
+            "aplicaciones recientes",
+            "estructura",
+            "guía auxiliar",
+            "límites de fuentes",
+            "portada"
+          ]
+        },
+        {
+          "id": "aula",
+          "title": "Tarea 4.1",
+          "citation": "ITESCA, curso GGFG02, módulo 7799; consulta previa reportada en originales.",
+          "location": "https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=7799",
+          "locator": "h1, #intro, .activity-dates según originales",
+          "status": "enlace_localizado_sin_nueva_consulta_web",
+          "used_for": [
+            "canal",
+            "procedencia original de consigna y calendario"
+          ]
+        },
+        {
+          "id": "especificaciones",
+          "title": "Especificaciones del curso",
+          "citation": "ITESCA, recurso 7767; consulta previa reportada.",
+          "location": "https://cursos3.e-itesca.edu.mx/mod/page/view.php?id=7767",
+          "locator": "región principal .no-overflow según originales",
+          "status": "enlace_localizado_sin_nueva_consulta_web",
+          "used_for": [
+            "peso 10 % del curso",
+            "competencia reportada"
+          ]
+        },
+        {
+          "id": "catalogo",
+          "title": "Catálogo local de referencias",
+          "citation": "Catálogo local, revisión 12-09-2026.",
+          "location": "../../../referencias-fundamentos-de-gestion-administrativa/README.md",
+          "locator": "L39-L46: hallazgos y revisión visual previa de rúbrica",
+          "status": "leido_localmente",
+          "used_for": [
+            "dimensiones y niveles de rúbrica general sin pesos"
+          ]
+        },
+        {
+          "id": "rubrica",
+          "title": "Rúbrica general de evaluación",
+          "citation": "ITESCA, rúbrica general; fecha no identificada.",
+          "location": "../../../referencias-fundamentos-de-gestion-administrativa/00-curso-y-evaluacion/rubrica-general-evaluacion.pdf",
+          "locator": "tabla en imagen descrita por catálogo",
+          "status": "pdf_no_leido_ahora_revision_visual_previa_reportada",
+          "used_for": [
+            "referencia de evaluación general, aplicación específica pendiente"
+          ]
+        },
+        {
+          "id": "portada",
+          "title": "Plantilla de portada",
+          "citation": "ITESCA, plantilla local; fecha no identificada.",
+          "location": "../../../referencias-fundamentos-de-gestion-administrativa/00-curso-y-evaluacion/plantilla-portada.docx",
+          "locator": "archivo completo, solo enlace",
+          "status": "no_abierta_sin_extraccion_de_identidad",
+          "used_for": [
+            "portada del PDF"
+          ]
+        },
+        {
+          "id": "guia-ensayo",
+          "title": "Guía de ensayo",
+          "citation": "Guía enlazada en nota local; autor y año no constatados.",
+          "location": "https://www.unipiloto.edu.co/descargas/archivo_administracion_de_empresas/guia_ensayos.pdf",
+          "locator": "introducción con tesis, cuerpo y conclusión según nota local; sección MLA",
+          "status": "enlace_identificado_no_leido_ahora",
+          "used_for": [
+            "estructura auxiliar, no sustitución de APA"
+          ]
+        },
+        {
+          "id": "bib",
+          "title": "Bibliografía de liderazgo",
+          "citation": "Registros locales de siete publicaciones; verificación previa reportada 12-09-2026.",
+          "location": "../../../referencias-actividad-8-liderazgo.bib",
+          "locator": "jimenez2020, cortellazzo2019, rudolph2021, hoch2014, edmondson1999, wang2021, bloom2024",
+          "status": "registros_leidos_localmente_no_equivalen_a_lectura_de_textos",
+          "used_for": [
+            "selección bibliográfica y metadatos"
+          ]
+        },
+        {
+          "id": "jimenez",
+          "title": "Revisión del liderazgo, sus estilos y modelos de medición en la última década",
+          "citation": "Jiménez-López, A. F., Gómez Aguirre, D., Rendón Otálvaro, J., y Peláez Arcila, S. P. (2020). Revista Humanismo y Sociedad, 8(1), 81–98. DOI: 10.22209/rhs.v8n1a06.",
+          "location": "../../../referencias-fundamentos-de-gestion-administrativa/unidad-4-liderazgo/jimenez-lopez-y-colaboradores-2020-liderazgo-estilos-modelos-medicion.pdf",
+          "url": "https://doi.org/10.22209/rhs.v8n1a06",
+          "locator": "bib: jimenez2020; nota académica de trazabilidad",
+          "status": "pdf_local_no_leido_ahora_metadatos_constatados_en_bib",
+          "used_for": [
+            "teorías, estilos y medición; frecuencia bibliométrica no implica superioridad"
+          ]
+        },
+        {
+          "id": "cortellazzo",
+          "title": "The role of leadership in a digitalized world: A review",
+          "citation": "Cortellazzo, L., Bruni, E., y Zampieri, R. (2019). Frontiers in Psychology, 10, 1938. DOI: 10.3389/fpsyg.2019.01938.",
+          "location": "https://doi.org/10.3389/fpsyg.2019.01938",
+          "local_metadata": "../../../referencias-actividad-8-liderazgo.bib",
+          "locator": "cortellazzo2019",
+          "status": "registro_local_leido_texto_no_leido_ahora_sin_copia_local_afirmada",
+          "used_for": [
+            "liderazgo digital; revisión no prueba causalidad universal"
+          ]
+        },
+        {
+          "id": "rudolph",
+          "title": "Generations and generational differences: Debunking myths in organizational science and practice and paving new paths forward",
+          "citation": "Rudolph, C. W., Rauvola, R. S., Costanza, D. P., y Zacher, H. (2021). Journal of Business and Psychology, 36(6), 945–967. DOI: 10.1007/s10869-020-09715-2.",
+          "location": "https://doi.org/10.1007/s10869-020-09715-2",
+          "local_metadata": "../../../referencias-actividad-8-liderazgo.bib",
+          "locator": "rudolph2021; edición final 2021, no anticipada 2020",
+          "status": "registro_y_nota_local_leidos_texto_no_leido_ahora",
+          "used_for": [
+            "contrastar estereotipos, edad, periodo y cohorte"
+          ]
+        },
+        {
+          "id": "hoch",
+          "title": "Leading virtual teams: Hierarchical leadership, structural supports, and shared team leadership",
+          "citation": "Hoch, J. E., y Kozlowski, S. W. J. (2014). Journal of Applied Psychology, 99(3), 390–403. DOI: 10.1037/a0030264.",
+          "location": "https://doi.org/10.1037/a0030264",
+          "local_metadata": "../../../referencias-actividad-8-liderazgo.bib",
+          "locator": "hoch2014; nota previa de metadatos y resumen",
+          "status": "registro_y_nota_local_leidos_texto_no_leido_ahora",
+          "used_for": [
+            "apoyos y liderazgo compartido en equipos virtuales; no generalización universal"
+          ]
+        },
+        {
+          "id": "edmondson",
+          "title": "Psychological safety and learning behavior in work teams",
+          "citation": "Edmondson, A. (1999). Administrative Science Quarterly, 44(2), 350–383. DOI: 10.2307/2666999.",
+          "location": "https://doi.org/10.2307/2666999",
+          "local_metadata": "../../../referencias-actividad-8-liderazgo.bib",
+          "locator": "edmondson1999; nota previa de resumen y metadatos",
+          "status": "registro_local_leido_texto_no_leido_ahora",
+          "used_for": [
+            "antecedente conceptual, no evidencia reciente; seguridad no equivale a ausencia de exigencia"
+          ]
+        },
+        {
+          "id": "wang",
+          "title": "Achieving effective remote working during the COVID-19 pandemic: A work design perspective",
+          "citation": "Wang, B., Liu, Y., Qian, J., y Parker, S. K. (2021). Applied Psychology, 70(1), 16–59. DOI: 10.1111/apps.12290.",
+          "location": "https://doi.org/10.1111/apps.12290",
+          "local_metadata": "../../../referencias-actividad-8-liderazgo.bib",
+          "locator": "wang2021; edición final 2021",
+          "status": "registro_y_nota_de_resumen_leidos_texto_no_leido_ahora",
+          "used_for": [
+            "diseño del trabajo remoto, apoyo y autonomía; asociaciones en contexto pandémico"
+          ]
+        },
+        {
+          "id": "bloom",
+          "title": "Hybrid working from home improves retention without damaging performance",
+          "citation": "Bloom, N., Han, R., y Liang, J. (2024). Nature, 630(8018), 920–925. DOI: 10.1038/s41586-024-07500-2.",
+          "location": "https://doi.org/10.1038/s41586-024-07500-2",
+          "local_metadata": "../../../referencias-actividad-8-liderazgo.bib",
+          "locator": "bloom2024; nota previa de resúmenes, no suplementos",
+          "status": "registro_y_nota_local_leidos_texto_no_leido_ahora",
+          "used_for": [
+            "aplicación reciente sobre trabajo híbrido; verificar población y límites de extrapolación"
+          ]
+        }
+      ],
+      "product": {
+        "type": "ensayo_de_investigacion",
+        "work_mode": "individual",
+        "submission_mode": "individual",
+        "content_requirements": [
+          {
+            "id": "tema",
+            "description": "Nueva Perspectiva del Liderazgo en las Organizaciones: aplicaciones recientes y brechas generacionales en dirección, liderazgo y toma de decisiones.",
+            "status": "consigna_aula_reportada_en_original_y_nota_local",
+            "source_ids": [
+              "original-md",
+              "consigna-local",
+              "aula"
+            ]
+          },
+          {
+            "id": "sustento",
+            "description": "Analizar con teorías, modelos e investigaciones pertinentes; seleccionar y consultar fuentes, sin mínimo numérico documentado para 4.1.",
+            "status": "consigna_reportada",
+            "source_ids": [
+              "original-md",
+              "consigna-local"
+            ]
+          },
+          {
+            "id": "extension",
+            "description": "Al menos cinco cuartillas de contenido, excluyendo portada y fuentes.",
+            "status": "consigna_reportada",
+            "source_ids": [
+              "original-md",
+              "original-json"
+            ]
+          },
+          {
+            "id": "estructura",
+            "description": "Introducción con tesis, desarrollo argumental, discusión de evidencia y límites, conclusión y referencias.",
+            "status": "propuesto",
+            "source_ids": [
+              "consigna-local",
+              "guia-ensayo"
+            ]
+          }
+        ],
+        "format": {
+          "file_type": "PDF",
+          "official_cover": true,
+          "font": "Arial",
+          "font_size": 12,
+          "line_spacing": 1.5,
+          "alignment": "justificado",
+          "citation_style": "APA",
+          "citation_edition": null,
+          "minimum_cuartillas": 5,
+          "length_excludes": [
+            "portada",
+            "fuentes"
+          ],
+          "margins": null,
+          "maximum_length": null,
+          "minimum_references": null,
+          "source_ids": [
+            "original-md",
+            "consigna-local",
+            "portada"
+          ]
+        },
+        "channel": {
+          "type": "tarea_moodle",
+          "module_id": 7799,
+          "source_ids": [
+            "aula"
+          ],
+          "action_performed": false
+        },
+        "auxiliary_proposals": [
+          {
+            "description": "Esquema y matriz fuente-afirmación-límite opcionales, no entregas adicionales; siete registros candidatos, no siete lecturas obligatorias.",
+            "status": "propuesto",
+            "source_ids": [
+              "bib",
+              "consigna-local"
+            ]
+          }
+        ]
+      },
+      "calendar": {
+        "opening": "2026-08-31 00:00",
+        "closing": "2026-09-07 23:37",
+        "due": null,
+        "timezone": null,
+        "source_ids": [
+          "original-md",
+          "original-json",
+          "consigna-local"
+        ],
+        "note": "Conservar 23:37, no 23:59. Fechas históricas; no acreditan recepción, disponibilidad ni prórroga."
+      },
+      "assessment": {
+        "activity_weight": 10,
+        "weight_unit": "porcentaje",
+        "weight_scope": "curso",
+        "source_ids": [
+          "original-md",
+          "especificaciones"
+        ],
+        "official_instrument": {
+          "activity_specific": null,
+          "activity_specific_status": "no_visible_en_consulta_previa",
+          "general_instrument": "rúbrica general descrita en catálogo local",
+          "dimensions": [
+            "tratamiento del tema",
+            "organización",
+            "redacción",
+            "ortografía",
+            "puntuación",
+            "bibliografía"
+          ],
+          "levels": [
+            "excelente",
+            "bien",
+            "regular",
+            "deficiente"
+          ],
+          "criterion_weights": null,
+          "maximum_points": null,
+          "application_to_activity": null,
+          "review_status": "revision_visual_previa_reportada_no_repetida_ahora",
+          "source_ids": [
+            "catalogo",
+            "rubrica",
+            "original-md"
+          ]
+        },
+        "proposed_criteria": [
+          {
+            "criterion": "Cobertura y tesis",
+            "evidence": "Ensayo que articula liderazgo, brechas, dirección y decisiones.",
+            "how_to_check": "Localizar tesis y relaciones entre los cuatro ejes sin imponer una postura.",
+            "authority": "propuesto",
+            "source_ids": [
+              "consigna-local",
+              "original-md"
+            ]
+          },
+          {
+            "criterion": "Aplicaciones recientes y rigor",
+            "evidence": "Argumentos con estudios y contextos explícitos.",
+            "how_to_check": "Contrastar afirmación, fuente, año, población y límites; separar evidencia y estereotipos.",
+            "authority": "propuesto",
+            "source_ids": [
+              "consigna-local",
+              "bib",
+              "rudolph",
+              "bloom"
+            ]
+          },
+          {
+            "criterion": "Organización y conclusión",
+            "evidence": "Introducción, desarrollo conectado y cierre congruente.",
+            "how_to_check": "Seguir progresión argumental y respuesta de la conclusión a la tesis.",
+            "authority": "propuesto",
+            "source_ids": [
+              "guia-ensayo",
+              "consigna-local"
+            ]
+          },
+          {
+            "criterion": "Citas y bibliografía",
+            "evidence": "Citas localizables y referencias APA usadas.",
+            "how_to_check": "Cotejar cita-referencia en ambas direcciones; un enlace no acredita lectura.",
+            "authority": "propuesto",
+            "source_ids": [
+              "consigna-local",
+              "bib"
+            ]
+          },
+          {
+            "criterion": "Extensión y formato",
+            "evidence": "PDF con portada y cinco cuartillas mínimas de contenido.",
+            "how_to_check": "Excluir portada/fuentes; revisar Arial 12, interlineado 1.5 y justificación.",
+            "authority": "propuesto",
+            "source_ids": [
+              "original-md",
+              "portada"
+            ]
+          },
+          {
+            "criterion": "Escritura académica",
+            "evidence": "Texto claro y revisado.",
+            "how_to_check": "Revisar redacción, ortografía y puntuación sin ponderaciones.",
+            "authority": "propuesto",
+            "source_ids": [
+              "catalogo"
+            ]
+          }
+        ],
+        "proposed_criteria_scoring": "sin puntos ni pesos; apoyo formativo, no instrumento oficial"
+      },
+      "objective": {
+        "value": "Construir una argumentación sustentada sobre nuevas perspectivas y aplicaciones recientes del liderazgo, relacionando brechas generacionales, dirección y decisiones sin convertir estereotipos en evidencia.",
+        "status": "propuesto",
+        "official_objective": null,
+        "source_ids": [
+          "consigna-local",
+          "especificaciones"
+        ]
+      },
+      "sequence": [
+        {
+          "phase": "Preparación",
+          "student": "Revisar consigna, seleccionar registros, consultar fuentes disponibles y anotar evidencia y límites; delimitar tesis.",
+          "teacher": "Orientar pertinencia y actualidad; cuestionar generalizaciones y aclarar alcance.",
+          "minutes": 120
+        },
+        {
+          "phase": "Desarrollo",
+          "student": "Organizar y redactar introducción, argumentación, aplicaciones y conclusión; integrar citas diferenciando evidencia e interpretación.",
+          "teacher": "Retroalimentar relaciones teoría-evidencia-decisión y coherencia sin resolver la tesis.",
+          "minutes": 180
+        },
+        {
+          "phase": "Cierre",
+          "student": "Cotejar cuartillas sin portada/fuentes, APA, redacción y formato; comprobar PDF local.",
+          "teacher": "Revisar cumplimiento y retroalimentar; aclarar instrumento específico.",
+          "minutes": 60
+        }
+      ],
+      "sequence_status": "propuesto",
+      "estimated_minutes": 360,
+      "estimated_minutes_status": "provisional_reajustable",
+      "time_note": "120 + 180 + 60. Ajustar por acceso, profundidad de lectura y retroalimentación; no duración oficial ni ampliación de plazo.",
+      "pending": [
+        {
+          "field": "timezone",
+          "value": null,
+          "reason": "No inferir por ubicación ni por la zona de una consulta previa."
+        },
+        {
+          "field": "citation_edition_margins_cuartilla_definition",
+          "value": null,
+          "reason": "Sin especificación adicional documentada."
+        },
+        {
+          "field": "file_size_and_naming",
+          "value": null,
+          "reason": "Reglas técnicas desconocidas."
+        },
+        {
+          "field": "activity_rubric_and_general_application",
+          "value": null,
+          "reason": "Sin instrumento específico visible ni aplicación general confirmada."
+        },
+        {
+          "field": "selected_sources_reading",
+          "value": null,
+          "reason": "Consultar textos seleccionados y verificar actualidad y alcance; no se leyeron PDF ahora."
+        },
+        {
+          "field": "cover_version_and_teacher_review",
+          "value": null,
+          "reason": "Portada local identificada, nueva versión y revisión docente pendientes."
+        }
+      ],
+      "conflicts": [
+        {
+          "field": "citation_style",
+          "description": "Guía auxiliar incluye MLA; consigna exige APA.",
+          "draft_handling": "Conservar APA; usar guía solo como apoyo estructural.",
+          "status": "tension_documental_explicitada",
+          "source_ids": [
+            "guia-ensayo",
+            "consigna-local"
+          ]
+        }
+      ]
+    },
+    "source_blocks": [],
+    "unsegmented_document": false,
+    "period_pending": false,
+    "activity_mapping": [
+      {
+        "activity_id": "7799",
+        "local_number": 8,
+        "source_locator": "/",
+        "source_is_summary": true
+      }
+    ]
+  }
+}
+```

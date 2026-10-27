@@ -1,0 +1,1006 @@
+Fuente bibliográfica: Estadística aplicada a los negocios y la economía - Lind, Marchal y Wathen. 15.ª edición.pdf
+Actividad: 18 (6.3 Ejercicios Equipo 5% Tarea)
+Palabras clave: índices estacionales, promedio móvil, promedio móvil ponderado, suavizamiento exponencial, modelo estacional multiplicativo, pronóstico
+
+[Bloque seleccionado #634 | relevancia=18]
+Pagina 633
+para la próxima temporada. Durante el verano se mantiene ocupada con la venta de equipo de
+reemplazo. Hace algunos negocios durante la temporada navideña (cuarto trimestre), mientras
+que las últimas semanas del verano (tercer trimestre) conforman su temporada baja.
+Variación irregular
+Muchos analistas prefieren subdividir la variación irregular en variaciones episódicas y resi-
+duales. Las fluctuaciones episódicas son impredecibles, pero es posible identificarlas: por
+ejemplo, el efecto inicial de una huelga importante o de una guerra en la economía no se pue-
+den predecir. Después de eliminar las fluctuaciones episódicas, la variación restante se deno-
+mina variación residual. Las fluctuaciones residuales, con frecuencia denominadas
+fluctuaciones azarosas, son impredecibles y no se pueden identificar. Por supuesto, no es
+posible proyectar a futuro ni la variación episódica ni la residual.
+16.3 Promedio móvil
+Un promedio móvil es útil para suavizar una serie de tiempo y apreciar su tendencia. Además,
+es el método básico para medir la fluctuación estacional, que se describe más adelante en el
+capítulo. En contraste con el método de mínimos cuadrados, que expresa la tendencia en tér-
+minos de una ecuación matemática (
+ a  bt), el método del promedio móvil sólo suaviza
+las fluctuaciones de los datos. Este objetivo se logra al “desplazar” los valores medios aritmé-
+ticos en la serie de tiempo.
+Para aplicar el promedio móvil a una serie de tiempo, los datos deben seguir una tenden-
+cia muy lineal y tener un patrón rítmico definido de las fluctuaciones (que se repita, por ejem-
+plo, cada tres años). Los datos del siguiente ejemplo tienen tres componentes: tendencia, ciclo
+e irregularidad, abreviadas T, C e I. No hay variación estacional debido a que los datos se
+registran cada año. Lo que logra el promedio móvil es promediar C e I. Lo que queda es la ten-
+dencia.
+Si la duración de los ciclos es constante y las amplitudes de los ciclos son iguales, las
+fluctuaciones cíclica e irregular se eliminan por completo con el promedio móvil. El resultado
+es una recta. Por ejemplo, en la siguiente serie de tiempo, el ciclo se repite cada siete años y
+la amplitud de cada ciclo es 4; es decir, hay exactamente cuatro unidades desde el valle (el
+periodo más bajo) hasta el pico. Por lo tanto, el promedio móvil de siete años promedia a la
+perfección las fluctuaciones cíclicas e irregulares, y el residuo es una tendencia lineal.
+El primer paso para calcular el promedio móvil de siete años es determinar los totales
+móviles de siete años. Las ventas totales de los pr
+
+[Bloque seleccionado #635 | relevancia=8]
+Pagina 634
+medio de ese grupo de siete, es decir, 1987, como indica la tabla 16-1. Luego se determinan
+las ventas totales de los siguientes siete años (1985-1991 inclusive). (Una forma conveniente
+para hacer este cálculo es restar las ventas de 1984 [$1 millón] al primer total de siete años
+[$22 millones] y sumar las ventas de 1991 [$2 millones], para obtener el nuevo total de $23
+millones.) La media de este total, $3.286 millones, se coloca opuesta al año medio, 1988. Los
+datos de las ventas y el promedio móvil de siete años aparecen en la gráfica 16-3.
+16.3 Promedio móvil
+609
+Ventas
+Total móvil
+Promedio
+(en millones
+de siete
+móvil de
+Año
+de dólares)
+años
+siete años
+1984
+$1
+1985
+2
+1986
+3
+1987
+4
+22
+3.143
+1988
+5
+23
+3.286
+1989
+4
+24
+3.429
+1990
+3
+25
+3.571
+1991
+2
+26
+3.714
+1992
+3
+27
+3.857
+1993
+4
+28
+4.000
+1994
+5
+29
+4.143
+1995
+6
+30
+4.286
+1996
+5
+31
+4.429
+1997
+4
+32
+4.571
+1998
+3
+33
+4.714
+1999
+4
+34
+4.857
+2000
+5
+35
+5.000
+2001
+6
+36
+5.143
+2002
+7
+37
+5.286
+2003
+6
+38
+5.429
+2004
+5
+39
+5.571
+2005
+4
+40
+5.714
+2006
+5
+41
+5.857
+2007
+6
+2008
+7
+2009
+8
+TABLA 16-1 Cálculos para determinar el promedio móvil de siete años
+GRÁFICA 16-3 Ventas y promedio móvil de siete años
+
+[Bloque seleccionado #636 | relevancia=10]
+Pagina 635
+El número de valores de datos que se incluirán en un promedio móvil depende del carác-
+ter de los datos recopilados. Si son trimestrales, puesto que hay cuatro trimestres en un año,
+sería adecuado tener cuatro términos. Si los datos son diarios, como hay siete días en una
+semana, sería apropiado tener siete términos. También se puede emplear el método de prue-
+ba y error para determinar un número que nivele mejor las fluctuaciones debidas al azar.
+Un promedio móvil se calcula muy fácil con Excel, pues sólo requiere un comando. Si los
+datos originales se encuentran en las ubicaciones D3 a D20 y se quiere obtener un promedio
+móvil con tres periodos, se puede ir a la posición E4 y escribir  (D3  D4  D5)/3, y luego
+copiar la misma fórmula en la posición E19.
+En la tabla 16-2 se muestran los promedios móviles de tres y cinco años de algunos datos
+de producción, y se ilustran en la gráfica 16-4.
+610
+CAPÍTULO 16 Series de tiempo y proyección
+Las ventas, la producción y otras series económicas y de negocios en general no tienen
+1) periodos de oscilación con igual longitud ni 2) oscilaciones con amplitudes iguales. Por lo
+tanto, en la práctica, la aplicación de un promedio móvil no genera de manera precisa una
+recta. Por ejemplo, la serie de producción de la tabla 16-2 se repite casi cada cinco años, pero
+la amplitud de los datos varía de una oscilación a otra. La tendencia parece ser ascendente y
+un tanto lineal. Los dos promedios móviles, el de tres años y el de cinco, parecen adecuados
+para describir la tendencia en la producción desde 1991.
+El promedio móvil de cuatro años, seis años y otros números de años pares presentan un
+problema menor respecto del centrado de los totales móviles y de los promedios móviles.
+Observe en la tabla 16-3 que no hay un periodo central, por lo que los totales móviles se colo-
+can entre dos periodos. El total de los primeros cuatro años ($42) se coloca entre 2002 y 2003.
+El total de los siguientes cuatro años es $43. Se obtiene la media de los promedios de los pri-
+meros cuatro años y de los segundos cuatro años ($10.50 y $10.75, respectivamente), y la cifra
+resultante se centra en 2003. Este procedimiento se repite hasta calcular todos los promedios
+posibles de cuatro años.
+Total móvil
+Promedio
+Total móvil
+Promedio
+Producción,
+de tres
+móvil de
+de cinco
+móvil de
+Año
+Y
+años
+cinco años
+años
+cinco años
+1991
+5
+1992
+6
+19
+6.3
+1993
+8
+24
+8.0
+34
+6.8
+1994
+10
+23
+7.7
+32
+6.4
+1995
+5
+18
+6.0
+33
+6.6
+1996
+3
+15
+5.0
+35
+7.0
+1997
+7
+20
+6.7
+37
+7.4
+1998
+10
+29
+9.7
+43
+8.6
+1999
+12
+33
+11.0
+49
+9.8
+2000
+11
+32
+10.7
+55
+11.0
+2001
+9
+33
+11.0
+60
+12.0
+2
+
+[Bloque seleccionado #637 | relevancia=18]
+Pagina 636
+16.4 Promedio móvil ponderado
+En un promedio móvil se utiliza la misma ponderación para cada observación. Por ejemplo, el
+total móvil de tres años se divide entre el valor 3 para producir el promedio móvil. En otras
+palabras, en este caso, cada valor de datos tiene una ponderación de un tercio. De manera
+similar, en el caso de un promedio móvil de cinco años, cada valor de datos tiene una ponde-
+ración de un quinto.
+16.4 Promedio móvil ponderado
+611
+GRÁFICA 16-4 Promedio móvil de tres y cinco años de 1991 a 2009
+Promedio
+Total móvil
+Promedio
+móvil de
+Ventas,
+de cuatro
+móvil de
+cuatro años
+Año
+Y
+años
+cuatro años
+centrado
+2001
+$ 8
+2002
+11
+$42 (8  11  9  14)
+$10.50 ($42  4)
+2003
+9
+10.625
+43 (11  9  14  9)
+10.75 ($43  4)
+2004
+14
+10.625
+42
+10.50
+2005
+9
+10.625
+43
+10.75
+2006
+10
+10.000
+37
+9.25
+2007
+10
+9.625
+40
+10.00
+2008
+8
+2009
+12
+TABLA 16-3 Promedio móvil de cuatro años
+Producción total, promedios móviles de tres y cinco años de 1988 a 2006
+Variable
+Producción
+Tres años
+Cinco años
+Datos
+Años
+
+[Bloque seleccionado #638 | relevancia=24]
+Pagina 637
+Una extensión natural de la media ponderada que se analizó en el capítulo 3 es para cal-
+cular un promedio móvil ponderado. Esto implica seleccionar una posible ponderación distin-
+ta para cada valor de datos y luego calcular un promedio ponderado de los valores n más
+recientes como valor uniformizado. En la mayoría de las aplicaciones se emplea el valor uni-
+formizado como una proyección al futuro. Por lo tanto, a la observación más reciente se le da
+la ponderación mayor, la cual disminuye con valores de datos más antiguos. Observe que,
+tanto en el promedio móvil simple como en el promedio móvil ponderado, la suma de las pon-
+deraciones es igual a 1.
+Por ejemplo, suponga que calcula un promedio móvil ponderado de dos años para los
+datos de la tabla 16-3, y se obtiene una ponderación del doble al valor más reciente. En otras
+palabras, se asigna una ponderación de 2/3 al último año y de 1/3 al valor inmediatamente
+anterior a ése. Luego, las ventas “proyectadas” para 2003 se determinan mediante (1/3)($8) 
+(2/3)($11)  $10. El siguiente promedio móvil se calcularía como (1/3)($11)  (2/3)($9) 
+$9.667. De la misma manera, el promedio móvil final, o ponderado, de 2010, sería (1/3)($8) 
+(2/3)($12)  $10.667. En resumen, la técnica de utilizar promedios móviles tiene el objetivo de
+identificar la tendencia de largo plazo en una serie de tiempo (pues suaviza las fluctuaciones
+de corto plazo). Se utiliza para revelar cualesquiera fluctuaciones cíclicas y estacionales.
+612
+CAPÍTULO 16 Series de tiempo y proyección
+Ejemplo
+Cedar Fair opera siete parques de diversiones y cinco parques acuáticos independientes. Su
+asistencia combinada (en miles) durante los últimos 17 años aparece en la siguiente tabla. Un
+socio le pide estudiar la tendencia de la asistencia. Calcule un pro-
+medio móvil de tres años y un promedio móvil ponderado de tres
+años con ponderaciones de 0.2, 0.3 y 0.5 para años sucesivos.
+Solución
+El promedio móvil de tres años es:
+Asistencia
+Año
+(miles)
+1993
+5 761
+1994
+6 148
+1995
+6 783
+1996
+7 445
+1997
+7 405
+1998
+11 450
+1999
+11 224
+2000
+11 703
+2001
+11 890
+2002
+12 380
+2003
+12 181
+2004
+12 557
+2005
+12 700
+2006
+19 300
+2007
+22 100
+2008
+22 720
+2009
+21 136
+Asistencia
+Promedio
+Año
+(miles)
+móvil
+Determinado por
+1993
+5 761
+1994
+6 148
+6 231
+(5 761 
+6 148 
+6 783)3
+1995
+6 783
+6 792
+(6 148 
+6 783 
+7 445)3
+1996
+7 445
+7 211
+(6 783 
+7 445 
+7 405)3
+1997
+7 405
+8 767
+(7 445 
+7 405  11 450)3
+1998
+11 450
+10 026
+(7 405  11 450  11 224)3
+1999
+11 224
+11 459
+(11 450  11 224  11 703)3
+2000
+11 703
+11 606
+(11 224  11 703  11 890)3
+(continúa)
+
+[Bloque seleccionado #639 | relevancia=8]
+Pagina 638
+16.4 Promedio móvil ponderado
+613
+El promedio móvil ponderado de tres años es:
+Asistencia
+Promedio
+Año
+(miles)
+móvil
+Determinado por
+2001
+11 890
+11 991
+(11 703  11 890  12 380)3
+2002
+12 380
+12 150
+(11 890  12 380  12 181)3
+2003
+12 181
+12 373
+(12 380  12 181  12 557)3
+2004
+12 557
+12 479
+(12 181  12 557  12 700)3
+2005
+12 700
+14 852
+(12 557  12 700  19 300)3
+2006
+19 300
+18 033
+(12 700  19 300  22 100)3
+2007
+22 100
+21 373
+(19 300  22 100  22 720)/3
+2008
+22 720
+21 985
+(22 100  22 720  21 136)/3
+2009
+21 136
+Asistencia
+Promedio
+Año
+(miles)
+móvil ponderado
+Determinado por
+1993
+5 761
+1994
+6 148
+6 388
+.2(5 761) 
+.3(6 148) 
+.5(6 783)
+1995
+6 783
+6 987
+.2(6 148) 
+.3(6 783) 
+.5(7 445)
+1996
+7 445
+7 293
+.2(6 783) 
+.3(7 445) 
+.5(7 405)
+1997
+7 405
+9 436
+.2(7 445) 
+.3(7 405)  .5(11 450)
+1998
+11 450
+10 528
+.2(7 405)  .3(11 450)  .5(11 224)
+1999
+11 224
+11 509
+.2(11 450)  .3(11 224)  .5(11 703)
+2000
+11 703
+11 701
+.2(11 224)  .3(11 703)  .5(11 890)
+2001
+11 890
+12 098
+.2(11 703)  .3(11 890)  .5(12 380)
+2002
+12 380
+12 183
+.2(11 890)  .3(12 380)  .5(12 181)
+2003
+12 181
+12 409
+.2(12 380)  .3(12 181)  .5(12 557)
+2004
+12 557
+12 553
+.2(12 181)  .3(12 557)  .5(12 700)
+2005
+12 700
+15 971
+.2(12 557)  .3(12 700)  .5(19 300)
+2006
+19 300
+19 380
+.2(12 700)  .3(19 300)  .5(22 100)
+2007
+22 100
+21 850
+.2(19 300)  .3(22 100)  .5(22 720)
+2008
+22 720
+21 804
+.2(22 100)  .3(22 720)  .5(21 136)
+2009
+21 136
+
+[Bloque seleccionado #640 | relevancia=14]
+Pagina 639
+Ejercicios
+1.
+Calcule un promedio móvil ponderado en cuatro trimestres del número de suscriptores de la
+Boxley Box Company durante los nueve trimestres que abarcan los datos. Éstos se reportan en
+miles. Aplique ponderaciones de 0.1, 0.2, 0.3 y 0.4, respectivamente, a los trimestres. En pocas
+palabras, describa la tendencia en el número de suscriptores.
+614
+CAPÍTULO 16 Series de tiempo y proyección
+Estudie la gráfica con cuidado. Observará que la tendencia de la asistencia es ascendente de
+manera uniforme, con 360 000 visitantes más cada año. Sin embargo, hay un “salto” de casi 3
+millones por año entre 1997 y 1998. Es probable que esto refleje que Cedar Fair adquirió
+Knott’s Berry Farm a finales de 1997, lo que generó un incremento repentino de la asistencia.
+Ocurrió un auge similar en 2006 con la compra de King’s Island, cerca de Cincinnati. El prome-
+dio móvil ponderado sigue los datos de manera más cercana que el promedio móvil, lo que
+refleja la influencia adicional que recibe el periodo más reciente. En otras palabras, el método
+ponderado, conforme al cual se da la ponderación mayor al periodo más reciente, no será tan
+uniforme. Sin embargo, quizá sea más preciso como herramienta de proyección.
+Autoevaluación 16-1
+Determine el promedio móvil de tres años de las ventas de Waccamaw Machine Tool, Inc. Trace los
+datos originales y el promedio móvil.
+Número
+Número
+Año
+producido (miles)
+Año
+producido (miles)
+2005
+2
+2008
+5
+2006
+6
+2009
+3
+2007
+4
+2010
+10
+2.
+En la siguiente tabla aparece el número de boletos para cine que vendió el Library Cinema-
+Complex, en miles, durante el periodo de 1998 a 2010. Calcule el promedio móvil ponderado de
+cinco años con ponderaciones de 0.1, 0.1, 0.2, 0.3 y 0.3, respectivamente. Describa la tendencia
+del rendimiento.
+1er. trimestre 2008
+28 766
+2o. trimestre 2008
+30 057
+3r. trimestre 2008
+31 336
+4o. trimestre 2008
+33 240
+1er. trimestre 2009
+34 610
+2o. trimestre 2009
+35 102
+3r. trimestre 2009
+35 308
+4o. trimestre 2009
+35 203
+1er. trimestre 2010
+34 386
+1998
+8.61
+2005
+6.61
+1999
+8.14
+2006
+5.58
+2000
+7.67
+2007
+5.87
+2001
+6.59
+2008
+5.94
+2002
+7.37
+2009
+5.49
+2003
+6.88
+2010
+5.43
+2004
+6.71
+
+[Bloque seleccionado #648 | relevancia=14]
+Pagina 647
+do de la razón con el promedio móvil. Este método elimina los componentes de tendencia,
+cíclicos e irregulares de los datos originales (Y). En el siguiente análisis, T se refiere a la ten-
+dencia, S a la variación estacional, C a la variación cíclica e I a la variación irregular. Los núme-
+ros que resultan se conocen como índice estacional habitual.
+Se estudiarán con detalle los pasos para obtener los índices estacionales habituales con
+el método de la razón con el promedio móvil. Para ilustrar este método, se eligen las ventas
+trimestrales de Toys International. Primero, se muestran los pasos necesarios para llegar al
+conjunto de índices estacionales habituales. Luego se utiliza el software MegaStat Excel y
+Minitab para calcular los índices estacionales.
+622
+CAPÍTULO 16 Series de tiempo y proyección
+Ejemplo
+En la tabla 16-6 aparecen las ventas trimestrales de Toys International de 2004 a 2009. Las ven-
+tas se reportan en millones de dólares. Determine un índice estacional trimestral con el méto-
+do de la razón con el promedio móvil.
+Solución
+En la gráfica 16-8 aparecen las ventas trimestrales de Toys International durante el periodo de
+seis años. Observe la naturaleza estacional de las ventas. En cada año, las ventas del cuarto
+trimestre son las mayores, y las del segundo trimestre, las menores. Además, hay un aumento
+moderado de las ventas de un año al siguiente. Para detectar esta característica basta obser-
+var los valores de las ventas de todos los cuartos trimestres. Durante el periodo de seis años,
+las ventas en el cuarto trimestre aumentaron. Si une estos puntos en su mente, visualizará el
+incremento de las ventas en el cuarto trimestre de 2010.
+Año
+Invierno
+Primavera
+Verano
+Otoño
+2004
+6.7
+4.6
+10.0
+12.7
+2005
+6.5
+4.6
+9.8
+13.6
+2006
+6.9
+5.0
+10.4
+14.1
+2007
+7.0
+5.5
+10.8
+15.0
+2008
+7.1
+5.7
+11.1
+14.5
+2009
+8.0
+6.2
+11.4
+14.9
+TABLA 16-6 Ventas trimestrales de Toys International (millones de dólares)
+GRÁFICA 16-8 Ventas trimestrales de Toys International, 2004-2009
+Para determinar los índices estacionales trimestrales se deben dar seis pasos.
+Paso 1: Para el siguiente análisis consulte la tabla 16-7. El primer paso es determinar el
+total móvil del cuarto trimestre de 2004. Inicie con el trimestre invernal de 2004,
+sume $6.7, $4.6, $10.0 y $12.7. El total es $34.0 (millones). El total del cuarto tri-
+
+[Bloque seleccionado #650 | relevancia=16]
+Pagina 649
+624
+CAPÍTULO 16 Series de tiempo y proyección
+mestre “se desplaza” al sumar las ventas de primavera, verano y otoño de 2004
+a las ventas de invierno de 2005. El total es $33.8 (millones), determinado por 4.6
+ 10.0  12.7  6.5. Este procedimiento se aplica a las ventas trimestrales de
+cada uno de los seis años. En la columna 2 de la tabla 16-7 aparecen los totales
+móviles. Observe que el total móvil, 34.0, se coloca entre las ventas de primave-
+ra y verano de 2004; el siguiente total móvil, 33.8, se coloca entre las ventas del
+verano y otoño de 2004, etc. Verifique los totales con frecuencia para evitar erro-
+res aritméticos.
+Paso 2: Cada total móvil trimestral en la columna 2 se divide entre 4 para obtener el pro-
+medio móvil trimestral. (Vea la columna 3.) Todos los promedios móviles aún están
+colocados entre los trimestres. Por ejemplo, el primer promedio móvil (8.500) se
+coloca entre la primavera y el verano de 2004.
+Paso 3: Se centran los promedios móviles. El primer promedio móvil centrado se determi-
+na mediante (8.500  8.450)/2  8.475, y se centra en oposición al verano de
+2004. El segundo promedio móvil se determina mediante (8.450  8.450)/2 
+8.450. Los otros se determinan de manera similar. Observe en la columna 4 que
+cada promedio móvil centrado se coloca en un trimestre en particular.
+Paso 4: Luego calcule el índice estacional específico por cada trimestre dividiendo las
+ventas en la columna 1 entre el promedio móvil centrado en la columna 4. El índi-
+ce estacional específico reporta la razón del valor de la serie de tiempo original
+con el promedio móvil. Para explicar esta cuestión un poco más, si representa la
+serie de tiempo con TSCI y el promedio móvil con TC, de manera algebraica, si
+calcula TSCI/TC, el resultado es el componente estacional específico SI. El índi-
+ce estacional específico del trimestre del verano de 2004 es 1.180, determinado
+por 10.0/8.475.
+Paso 5: Los índices estacionales específicos aparecen organizados en la tabla 16-8. Esta
+tabla ayuda a ubicar los estacionales específicos de los trimestres correspondien-
+tes. Los valores 1.180, 1.130, 1.141, 1.126 y 1.143 representan estimaciones del
+índice estacional habitual del trimestre de verano. Un método razonable para
+encontrar un índice estacional habitual es promediar estos valores a fin de elimi-
+nar el componente irregular. Por lo tanto, el índice habitual del trimestre de vera-
+no se determina mediante (1.180  1.130  1.141  1.126  1.143)/5  1.144.
+Se utilizó la media aritmética, aunque también pudo emplear la mediana o una
+media modificada.
+Año
+Inv
+
+[Bloque seleccionado #665 | relevancia=14]
+Pagina 664
+a) Trace los datos.
+b) Determine la ecuación de la tendencia de mínimos cuadrados. Utilice el precio accionario actual
+y el logaritmo del precio. ¿Cuál parece producir una proyección más precisa?
+c) Calcule los puntos de los años de 1993 y 1998.
+d) Estime el precio de venta en 2012. ¿Parece una estimación razonable con base en los datos
+históricos?
+e) ¿Cuánto aumentó o disminuyó el precio accionario (por año), en promedio, durante el periodo?
+Utilice su mejor respuesta del inciso b).
+26. La producción de Reliable Manufacturing Company de 2009 y parte de 2010 es la siguiente.
+Ejercicios del capítulo
+639
+a) Con el método de razón con el promedio móvil, determine los índices específicos estacionales
+de julio, agosto y septiembre de 2009.
+b) Suponga que los índices específicos estacionales de la siguiente tabla son correctos. Inserte
+en la tabla los índices específicos estacionales que calculó en el inciso a) de julio, agosto y sep-
+tiembre de 2009, y determine los 12 índices estacionales habituales.
+Producción
+Producción
+Producción
+Producción
+en 2009
+en 2010
+en 2009
+en 2010
+Mes
+(miles)
+(miles)
+Mes
+(miles)
+(miles)
+Enero
+6
+7
+Julio
+3
+4
+Febrero
+7
+9
+Agosto
+5
+Marzo
+12
+14
+Septiembre
+14
+Abril
+8
+9
+Octubre
+6
+Mayo
+4
+5
+Noviembre
+7
+Junio
+3
+4
+Diciembre
+6
+Año
+Ene
+Feb
+Mar
+Abr
+May
+Jun
+Jul
+Ago
+Sep
+Oct
+Nov
+Dic
+2009
+?
+?
+?
+92.1
+106.5
+92.9
+2010
+88.9
+102.9
+178.9
+118.2
+60.1
+43.1
+44.0
+74.0
+200.9
+90.0
+101.9
+90.9
+2011
+87.6
+103.7
+170.2
+125.9
+59.4
+48.6
+44.2
+77.2
+196.5
+89.6
+113.2
+80.6
+2012
+79.8
+105.6
+165.8
+124.7
+62.1
+41.7
+48.2
+72.1
+203.6
+80.2
+103.0
+94.2
+2013
+89.0
+112.1
+182.9
+115.1
+57.6
+56.9
+Ventas en
+Ventas en
+Ventas en
+Ventas en
+Mes
+2009 (miles)
+2010 (miles)
+Mes
+2009 (miles)
+2010 (miles)
+Enero
+78
+65
+Julio
+81
+65
+Febrero
+72
+60
+Agosto
+85
+61
+Marzo
+80
+72
+Septiembre
+90
+75
+Abril
+110
+97
+Octubre
+98
+Mayo
+92
+86
+Noviembre
+115
+Junio
+86
+72
+Diciembre
+130
+Año
+Ene
+Feb
+Mar
+Abr
+May
+Jun
+Jul
+Ago
+Sep
+Oct
+Nov
+Dic
+2009
+?
+?
+?
+?
+123.6
+150.9
+2010
+83.9
+77.6
+86.1
+118.7
+99.7
+92.0
+87.0
+91.4
+97.3
+105.4
+124.9
+140.1
+2011
+86.7
+72.9
+86.2
+121.3
+96.6
+92.0
+85.5
+93.6
+98.2
+103.2
+126.1
+141.7
+2012
+85.6
+65.8
+89.2
+125.6
+99.6
+94.4
+88.9
+90.2
+100.2
+102.7
+121.6
+139.6
+2013
+77.3
+81.2
+85.8
+115.7
+100.3
+89.7
+c) Interprete el índice estacional habitual.
+27. Las ventas de Andre’s Boutique en 2009 y parte de 2010 son:
+a) Con el método de la razón con promedio móvil, determine los índices estacionales específicos
+de julio, agosto, septiembre y octubre de 2009.
+b) Suponga que los índices estacionales específicos de la siguiente tabla son correctos. Inserte
+en la tabla los índices estacionales específicos que calculó en el inciso a) 

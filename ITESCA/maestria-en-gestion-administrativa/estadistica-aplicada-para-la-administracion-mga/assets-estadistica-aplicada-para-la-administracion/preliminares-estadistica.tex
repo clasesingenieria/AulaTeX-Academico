@@ -1,0 +1,21 @@
+% Preliminares locales de Estadística. Se cargan desde el contenedor de materia.
+% Resumen e índice son aparato preliminar: no añaden actos al cuerpo académico.
+\providecommand{\estadisticadeclaracionia}{%
+Se utilizó inteligencia artificial como apoyo para la corrección y organización del
+contenido. El autor declara haber realizado y validado la investigación documental,
+el análisis y los resultados presentados, y asume su responsabilidad académica.%
+}
+\providecommand{\estadisticapreliminares}{%
+  \ifdefined\estadisticaresumen\else
+    \errmessage{Definir estadisticaresumen con la sintesis especifica del informe}%
+  \fi
+  \section*{Resumen}
+  \estadisticaresumen\footnote{\textbf{Declaración de uso de IA.} \estadisticadeclaracionia}
+  \par\medskip
+  \begingroup
+    \setcounter{tocdepth}{2}%
+    \renewcommand{\contentsname}{Tabla de contenido}%
+    \tableofcontents
+  \endgroup
+  \clearpage
+}

@@ -1,0 +1,677 @@
+Fuente bibliográfica: Estadística matemática con aplicaciones - Wackerly, Mendenhall y Scheaffer. 7.ª edición.pdf
+Actividad: 8 (3.2 Ejercicios 5% Tarea)
+Palabras clave: intervalo de confianza, distribución t, grados de libertad, margen de error, tamaño de muestra, proporción muestral, gasto promedio
+
+[Bloque seleccionado #385 | relevancia=30]
+Pagina 384
+360  Capítulo 7  Distribuciones muestrales y el teorema del límite central
+ DEFINICIÓN 7.2 
+Sea Z una variable aleatoria normal estándar y sea W una variable con distribución x2 
+con n grados de libertad. Entonces, si W y Z son independientes,
+T =
+Z
+√W/n
+ 
+ 
+se dice que tiene una distribución t con n grados de libertad.
+Si Y1, Y2, . . . , Yn constituye una muestra aleatoria de una población normal con media m 
+y varianza s2, el Teorema 7.1 puede aplicarse para demostrar que Z =√n (Y −m)/s tiene 
+una distribución normal estándar. El Teorema 7.3 nos dice que W = (n − 1)S2/s2 tiene una 
+distribución x2 con n = n − 1 grados de libertad y que Z y W son independientes (puesto que 
+Y y S2 son independientes). Por tanto, según la Defi nición 7.2,
+T =
+Z
+√W/n
+=
+√n(Y −m)/s
+(n −1)S2/s2 /( n −1)
+=√n
+Y −m
+S
+tiene una distribución t con (n − 1) grados de libertad.
+La ecuación para la función de densidad t no se dará aquí, pero se puede hallar en el 
+Ejercicio 7.98 donde se dan sugerencias acerca de su deducción. Al igual que la función de 
+densidad normal estándar, la función de densidad t es simétrica alrededor de cero. Además, 
+para n > 1, E(T) = 0; y para n > 2, V(T) = n/(n − 2). Estos resultados se deducen directa-
+mente de los obtenidos en los Ejercicios 4.111 y 4.112 (véase Ejercicio 7.30). De esta manera, 
+vemos que, si n > 1, una variable aleatoria con distribución t tiene el mismo valor esperado 
+que una variable aleatoria normal estándar. No obstante, una variable aleatoria normal están-
+dar siempre tiene una varianza 1 mientras que, si n > 2, la varianza de una variable aleatoria 
+con una distribución t siempre es mayor que 1.
+La fi gura 7.3 muestra la gráfi ca de una función de densidad normal estándar y una función 
+de densidad t. Observe que ambas funciones de densidad son simétricas alrededor del origen 
+pero que la densidad t tiene más masa de probabilidad en sus extremos.
+Los valores de ta tales que P(T > ta) = a se dan en la Tabla 5, Apéndice 3. Por ejemplo, 
+si una variable aleatoria tiene una distribución t con 21 grados de libertad, t.100 se encuentra 
+viendo el renglón marcado 21 gl (grados de libertad) y la columna con encabezado t.100. Con 
+el uso de la Tabla 5, vemos que t.100 = 1.323 y que para 21 grados de libertad, P(T > 1.323) 
+= .100. Se deduce que 1.323 es el cuantil .90 (el 90o. percentil) de la distribución t con 21 
+grados de libertad y en general que ta = f1–a, el cuantil (1 – a) [el percentil 100(1 – a)–ésimo] 
+de una variable aleatoria de distribución t.
+F I G U R A 7.3
+Comparación 
+de las funciones de 
+densidad normal 
+e
+
+[Bloque seleccionado #386 | relevancia=12]
+Pagina 385
+La Tabla 5, Apéndice 3, contiene ta = f1–a para cinco valores de a (.005, .010, .025, .050 y 
+.100) y 30 distribuciones t diferentes (aquellas con grados de libertad 1, 2, …, 29 e q). De ma-
+nera considerable más información acerca de estas distribuciones y las asociadas con grados 
+de libertad no incluidos en la tabla, es proporcionada por software  estadístico comercialmente 
+disponible. Si Y tiene una distribución t con n grados de libertad, el comando pt(y0,n) de 
+R (y S-Plus) da P(Y ≤ y0) mientras que qt(p,n) da el p-ésimo cuantil, el valor de fp tal 
+que P(Y ≤ fp) = p. Las probabilidades y cuantiles asociados con variables aleatorias con 
+distribución t también se pueden obtener fácilmente utilizando la aplicación breve Student’s 
+Probabilities and Quantiles (en www.thomsonedu.com/statistics/wackerly).
+ 
+EJEMPLO 7.6 
+La resistencia a la tensión para un tipo de alambre está distribuida normalmente con media 
+desconocida m y varianza desconocida s2. Seis trozos de alambre se seleccionan aleatoria-
+mente de un rollo largo; Y1, la resistencia a la tensión para el trozo i, se mide para i = 1, 2, . . . 
+, 6. La media poblacional m y la varianza s2 pueden ser estimadas por Y y S2, respectivamente. 
+Como s2
+Y = s2/n, se deduce que s2
+Y puede ser estimada por S2/n. Encuentre la probabilidad 
+aproximada de que Y esté dentro de 2S/√n de la verdadera media poblacional m.
+ 
+Solución 
+Deseamos hallar
+P −2S
+√n ≤(Y −m) ≤2S
+√n
+= P
+−2 ≤√n
+Y −m
+S
+≤2
+= P(−2 ≤T ≤2),
+donde T tiene una distribución t con, en este caso, n − 1 = 5 grados de libertad. Al observar 
+la Tabla 5, Apéndice 3, vemos que el área de la cola superior a la derecha de 2.015 es .05. En 
+consecuencia,
+P(–2.015 ≤ T ≤ 2.015) = .90,
+y la probabilidad de que Y esté a no más de 2 desviaciones estándar estimadas de m es lige-
+ramente menor que .90. En el Ejercicio 7.24 el valor exacto para P(–2 ≤ T ≤ 2) se hallará 
+usando la aplicación Student’s Probabilities and Quantiles disponible en www.thomsonedu.
+com/statistics/wackerly.
+Observe que si s2 se conociera, la probabilidad de que Y esté a no más de 2sY de m estaría 
+dada por
+P −2
+s
+√n
+≤(Y −m) ≤2
+s
+√n
+= P
+−2 ≤√n
+Y −m
+s
+≤2
+= P(−2 ≤Z ≤2) = .9544.
+Suponga que queremos comparar las varianzas de dos poblaciones normales con base en 
+información contenida en muestras aleatorias independientes provenientes de las dos pobla-
+ciones. Tomemos muestras de tamaño n1 y n2 de las dos poblaciones con varianzas s2
+1 y s2
+2, 
+7.2  Distribuciones muestrales relacionadas con la distribución normal  361
+Q
+
+[Bloque seleccionado #387 | relevancia=24]
+Pagina 386
+362  Capítulo 7  Distribuciones muestrales y el teorema del límite central
+respectivamente. Si calculamos S2
+1 de las observaciones en la muestra 1, entonces S2
+1 calcula 
+s2
+1. Del mismo modo, S2
+2 calculada de las observaciones en la segunda muestra calcula s2
+2. 
+Entonces, parece que la razón S2
+1/S2
+2 podría usarse para hacer inferencias acerca de las magni-
+tudes relativas de s2
+1 y s2
+2. Si dividimos cada S2
+i entre s2
+i , entonces la razón resultante
+S2
+1/s2
+1
+S2
+2/s2
+2
+=
+s2
+2
+s2
+1
+S2
+1
+S2
+2
+tiene una distribución F con (n1 − 1) grados de libertad en el numerador y (n2 − 1) grados 
+de libertad en el denominador. La defi nición general de una variable aleatoria que posee una 
+distribución F aparece a continuación.
+ DEFINICIÓN 7.3 
+Sean W1 y W2 variables aleatorias independientes con distribución x2, con n1 y n2 grados 
+de libertad, respectivamente. Entonces se dice que
+F = W1/n1
+W2/n2
+ 
+ 
+tiene una distribución F con n1 grados de libertad en el numerador y n2 grados de liber-
+tad en el denominador.
+La función de densidad para una variable aleatoria con distribución F se proporciona en el 
+Ejercicio 7.99 donde el método para su deducción está indicado. Se puede demostrar (véase 
+el Ejercicio 7.34) que si F posee una distribución F con n1 grados de libertad en el numerador 
+y n2 en el denominador, entonces E(F) = n2/(n2 − 2) si n2 > 2. También, si n2 > 4, entonces 
+V (F) = [2n2
+2(n1 + n2 −2)]/[n1(n2 −2)2(n2 −4)]. Observe que la media de una variable 
+aleatoria con distribución F depende sólo del número de grados de libertad n2 del denomi-
+nador.
+Considerando una vez más dos muestras aleatorias independientes tomadas de distribucio-
+nes normales, sabemos que W1 = (n1 −1)S2
+1/s2
+1 y W2 = (n2 −1)S2
+2/s2
+2 tienen distribuciones 
+x2 independientes con n1 = (n1 − 1) y n2 = (n2 − 1) grados de libertad, respectivamente. 
+Entonces, la Defi nición 7.3 implica que
+F = W1/n1
+W2/n2
+= (n1 −1)S2
+1/s2
+1 /(n1 −1)
+(n2 −1)S2
+2/s2
+2 /(n2 −1) = S2
+1/s2
+1
+S2
+2/s2
+2
+tiene una distribución F con (n1 − 1) grados de libertad en el numerador y (n2 − 1) grados de 
+libertad en el denominador.
+En la Figura 7.4 se muestra la gráfi ca de una función de densidad F. Los valores de Fa tales 
+que P(F > Fa) = a se dan en la Tabla 7, Apéndice 3, para valores de a = .100, .050, .025, 
+.010 y .005. En la Tabla 7, los encabezados de las columnas son los grados de libertad del 
+numerador mientras que los grados de libertad del denominador se dan en los encabezados 
+del renglón principal. Opuestos a cada uno de los grados de libertad del denominador (encabe-
+zados de renglón), apar
+
+[Bloque seleccionado #388 | relevancia=22]
+Pagina 387
+libertad en el denominador, entonces P(F > 7.46) = .01. Se deduce que 7.46 es el .99 cuantil 
+de la distribución F con 5 grados de libertad en el numerador y 7 grados de libertad en el de-
+nominador. En general, Fa = f1–a, el cuantil (1 – a) [el 100(1 – a)–ésimo percentil] de una 
+variable aleatoria con distribución F.
+Para los cinco valores previamente mencionados de a, la Tabla 7, Apéndice 3, proporciona 
+los valores de Fa para 646 distribuciones F (las de grados de libertad 1, 2, . . . , 10, 12, 15, 20, 
+24, 30, 40, 60, 120 e q en el numerador y las de grados de libertad 1, 2, . . . , 30, 40, 60, 120 e 
+q en el denominador). De forma considerable hay más información acerca de estas distribu-
+ciones, y las asociadas con grados de libertad no incluidas en la tabla, en software estadístico 
+que se puede adquirir comercialmente. Si Y tiene una distribución F con n1 grados de libertad 
+en el numerador y n2 grados de libertad en el denominador, el comando pf(y0,n1,n2) de 
+R (y S-Plus) da P(Y ≤ y0) mientras que qf(p,n1,n2) da el p-ésimo cuantil, el valor de fp 
+tal que P(Y ≤ fp) = p. Las probabilidades y cuantiles asociados con variables aleatorias de 
+distribución F también se pueden obtener fácilmente con el uso de la aplicación breve F-Ratio 
+Probabilities and Quantiles (en www.thomsonedu.com/statistics/wackerly).
+ 
+EJEMPLO 7.7 
+Si tomamos muestras independientes de tamaños n1 = 6 y n2 = 10 de dos poblaciones norma-
+les con la misma varianza poblacional, encuentre el número b tal que
+P
+S2
+1
+S2
+2
+≤b
+= .95.
+ 
+Solución 
+Como n1 = 6, n2 = 10 y las varianzas poblacionales son iguales, entonces
+S2
+1/s2
+1
+S2
+2/s2
+2
+= S2
+1
+S2
+2
+tiene una distribución F con n1 = n1 − 1 = 5 grados de libertad en el numerador y n2 = n2 − 1 
+= 9 grados de libertad en el denominador. Asimismo,
+P
+S2
+1
+S2
+2
+≤b
+= 1 −P
+S2
+1
+S2
+2
+> b .
+Por tanto, queremos determinar el número b que delimita un área en el extremo superior de .05 
+bajo la función de densidad F con 5 grados de libertad en el numerador y 9 grados de libertad 
+en el denominador. Si leemos en la columna 5 y renglón 9 de la Tabla 7, Apéndice 3, vemos 
+que el valor apropiado de b es 3.48.
+F I G U R A 7.4
+Una típica función 
+de densidad de 
+probabilidad F
+f(u)
+u
+F
+
+7.2  Distribuciones muestrales relacionadas con la distribución normal  363
+
+[Bloque seleccionado #391 | relevancia=20]
+Pagina 390
+366  Capítulo 7  Distribuciones muestrales y el teorema del límite central
+ 
+7.20 
+a Si U tiene una distribución x2 con n grados de libertad, encuentre E(U) y V(U).
+ 
+ 
+b  Usando los resultados del Teorema 7.3, encuentre E(S2) y V(S2) cuando Y1, Y2, . . . , Yn es una muestra 
+aleatoria de una distribución normal con media m y varianza s2.
+ 
+7.21 
+Consulte el Ejercicio 7.13. Suponga que n = 20 observaciones se han de tomar a mediciones ln(CL50) 
+y que s2 = 1.4. Denote con S2 la varianza muestral de las 20 mediciones.
+ 
+ 
+a Encuentre un número b tal que P(S2 ≤ b) = .975.
+ 
+ 
+b Encuentre un número a tal que P(a ≤ S2) = .975.
+ 
+ 
+c Si a y b son como en los incisos a y b, ¿cuál es P(a ≤ S2 ≤ b)?
+ 
+7.22 
+Ejercicio Applet Como ya indicamos en la Defi nición 4.10, una variable aleatoria Y tiene una distribu-
+ción x2 con n grados de libertad si y sólo si Y tiene una distribución gamma con a = n/2 y b = 2.
+ 
+ 
+a  Use la aplicación Comparison of Gamma Density Functions para grafi car densidades x2 con 10, 40 
+y 80 grados de libertad.
+ 
+ 
+b  ¿Qué observa usted acerca de las formas de estas funciones de densidad? ¿Cuál de ellas es más simé-
+trica?
+ 
+ 
+c  En el Ejercicio 7.97 usted demostrará que para valores grandes de n, una variable aleatoria x2 tiene 
+una distribución que puede ser aproximada por una distribución normal con m = n y s =√2n. 
+¿Cómo se comparan la media y desviación estándar de la aproximación a la distribución normal con 
+la media y la desviación estándar de la variable aleatoria x2 de Y?
+ 
+ 
+d  Consulte las gráfi cas de las densidades x2 que obtuvo en el inciso a. En el inciso c dijimos que, si el 
+número de grados de libertad es grande, la distribución x2 se puede aproximar con una distribución 
+normal. ¿Le sorprende esto? ¿Por qué?
+ 
+7.23 
+Ejercicio Applet
+ 
+ 
+a  Use la aplicación Chi-Square Probabilities and Quantiles para determinar P[Y > E(Y)] cuando Y 
+tiene distribuciones x2 con 10, 40 y 80 grados de libertad.
+ 
+ 
+b  ¿Qué observó usted acerca de P[Y > E(Y)] cuando aumenta el número de grados de libertad como en 
+el inciso a?
+ 
+ 
+c  ¿Cómo se relaciona lo que usted observó en el inciso b con las formas de las densidades x2 que ob-
+tuvo en el Ejercicio 7.22?
+ 
+7.24 
+Ejercicio Applet Consulte el Ejemplo 7.6. Suponga que T tiene una distribución t con 5 grados de liber-
+tad.
+ 
+ 
+a  Use la aplicación Student’s t Probabilities and Quantiles para hallar la probabilidad exacta de que T 
+sea mayor que 2.
+ 
+ 
+b  Use la aplicación Student’s t Probabilities and Quantiles para hallar la probabilidad exacta de que T 
+sea menor que –2.
+ 
+ 
+c  Use
+
+[Bloque seleccionado #392 | relevancia=28]
+Pagina 391
+ 
+ 
+d  Cuando Z tiene una distribución normal estándar, P(Z > 1.282) = .10 y z.10 = 1.282. ¿Qué propiedad 
+de la distribución t (cuando se compara con la distribución normal estándar) explica el hecho de que 
+todos los valores obtenidos en el inciso c son mayores que z.10 = 1.282?
+ 
+ 
+e  ¿Qué se observa acerca de los tamaños relativos de los valores de t.10 para distribuciones t con 30, 60 
+y 120 grados de libertad? Calcule lo que t.10 “converge” cuando se hace grande el número de grados 
+de libertad. [Sugerencia: vea el renglón marcado q en la Tabla 5, Apéndice 3.]
+ 
+7.26 
+Consulte el Ejercicio 7.11. Suponga que, en el problema de fertilización del bosque, la desviación 
+estándar poblacional de áreas basales no se conoce y debe estimarse a partir de la muestra. Si se ha de 
+medir una muestra aleatoria de n = 9 áreas basales, encuentre dos estadísticos g1 y g2 tales que P[g1 ≤ 
+(Y −m) ≤g2] = .90.
+ 
+7.27 
+Ejercicio Applet Consulte el Ejemplo 7.7. Si tomamos muestras independientes de tamaños n1 = 6 y 
+n2 = 10 de dos poblaciones normales con varianzas poblacionales iguales, use la aplicación F-Ratio 
+Probabilities and Quantiles para hallar
+ 
+ 
+a P(S2
+1/S2
+2 > 2).
+ 
+ 
+b P(S2
+1/S2
+2 < 0.5).
+ 
+ 
+c la probabilidad de que una de las varianzas muestrales sea al menos el doble de grande que la otra.
+ 
+7.28 
+Ejercicio Applet Suponga que Y tiene una distribución F con n1 = 4 grados de libertad en el numerador 
+y n2 = 6 grados de libertad en el denominador.
+ 
+ 
+a  Use la Tabla 7, Apéndice 3, para hallar F.025.También determínelo con la aplicación F-Ratio 
+Probabilities and Quantiles.
+ 
+ 
+b Consulte el inciso a. ¿A qué cuantil de Y corresponde F.025? ¿A qué percentil?
+ 
+ 
+c  Consulte los incisos a y b. Use la aplicación F-Ratio Probabilities and Quantiles para hallar F.975, el 
+cuantil .025 (2.5o. percentil) de la distribución de Y.
+ 
+ 
+d  Si U tiene una distribución F con n1 = 6 grados de libertad en el numerador y n2 = 4 en el denomina-
+dor, use la Tabla 7, Apéndice 3 o la aplicación F-Ratio Probabilities and Quantiles para hallar F.025.
+ 
+ 
+e  En el Ejercicio 7.29, usted demostrará que si Y es una variable aleatoria que tiene una distribución F 
+con n1 grados de libertad en el numerador y n2 en el denominador, entonces U = 1/Y tiene una distri-
+bución F con n2 grados de libertad en el numerador y n1 en el denominador. ¿Este resultado explica la 
+relación entre F.975 del inciso c (4 grados de libertad en el numerador y 6 en el denominador) y F.025 
+del inciso d (6 grados del libertad en el numerador y 4 en el denominador)? ¿Cuál es esta relación?
+ 
+7.29 
+
+[Bloque seleccionado #393 | relevancia=46]
+Pagina 392
+368  Capítulo 7  Distribuciones muestrales y el teorema del límite central
+ 
+ 
+b  De acuerdo con el resultado obtenido en el Ejercicio 4.112(a), si Y tiene una distribución x2 con 
+n grados de libertad, entonces
+E (Y a) =
+([n/2] + a)
+(n/2)
+2a,  si n > –2a.
+ 
+ 
+ 
+ Use este resultado, el resultado del inciso a y la estructura de T para demostrar lo siguiente. 
+[Sugerencia: recuerde la independencia de Z y Y.]
+ 
+ 
+ 
+ i E(T ) = 0, si
+>1.
+n
+ 
+ 
+ 
+ii 
+( )
+V (T ) = n/(n −2), si
+> 2.
+n
+ 
+7.31 
+a  Use la Tabla 7, Apéndice 3, para hallar F.01 para variables aleatorias con distribución F, todas con 
+4 grados de libertad en el numerador, pero con grados de libertad en el denominador de 10, 15, 30, 
+60, 120 e q.
+ 
+ 
+b  Consulte el inciso a. ¿Qué observa acerca de los valores de F.01 conforme aumenta el número de 
+grados de libertad del denominador?
+ 
+ 
+c ¿Cuál es χ 2
+.01 para una variable aleatoria con distribución x2 y 4 grados de libertad?
+ 
+ 
+d  Divida el valor de χ 2
+.01 (4 grados de libertad) del inciso c entre el valor de F.01 (4 grados de libertad 
+en el numerador; grados de libertad = q en el denominador). Explique por qué el valor que obtuvo 
+es adecuado para la razón. [Sugerencia: considere la defi nición de una variable aleatoria con distri-
+bución F dada en la Defi nición 7.3.]
+ 
+7.32 
+Ejercicio Applet
+ 
+ 
+a Encuentre t.05 para una variable aleatoria con distribución t y 5 grados de libertad.
+ 
+ 
+b Consulte el inciso a. ¿Cuál es P(T 2 > t2
+.05)?
+ 
+ 
+c  Encuentre F.10 para una variable aleatoria con distribución F con 1 grado de libertad en el numerador 
+y 5 grados de libertad en el denominador.
+ 
+ 
+d Compare el valor de F.10 hallado en el inciso c con el valor de t2
+.05 de los incisos a y b.
+ 
+ 
+e  En el Ejercicio 7.33 usted demostrará que si T tiene una distribución t con n grados de libertad, 
+entonces U = T 2 tiene una distribución F con 1 grado de libertad en el numerador y n grados del li-
+bertad del denominador. ¿Cómo explica esto la relación entre los valores de F.10 (1 grado de libertad 
+1 en el numerador, 5 grados de libertad en el denominador) y t2
+.05 (5 grados de libertad) que observó 
+en el inciso d?
+ 
+7.33 
+Use las estructuras de T y F dadas en las Defi niciones 7.2 y 7.3, respectivamente, para demostrar que si 
+T tiene una distribución t con n grados de libertad, entonces U = T 2 tiene una distribución F con 1 grado 
+de libertad en el numerador y n grados de libertad en el denominador.
+ 
+7.34 
+Suponga que W1 y W2 son variables aleatorias independientes y con distribución x2 con n1 y n2 grados 
+de libertad, respectivamente. De acu
+
+[Bloque seleccionado #546 | relevancia=16]
+Pagina 545
+desarrollaremos procedimientos formales para probar hipótesis acerca de m y m1 − m2, que 
+son adecuados para muestras pequeñas a partir de poblaciones normales.
+Supongamos que Y1, Y2, . . . , Yn denotan una muestra aleatoria de tamaño n de una distribu-
+ción normal con media m desconocida y varianza s2 desconocida. Si Y y S denotan la media 
+muestral y la desviación muestral estándar, respectivamente, y si H0 : m = m0 es verdadera, 
+entonces
+T = Y −m0
+S/ √n
+tiene una distribución t con n − 1 grados de libertad (vea la Sección 8.8).
+Como la distribución t es simétrica y en forma de campana, la región de rechazo para una 
+prueba de la hipótesis H0 : m = m0 con muestras pequeñas debe estar localizada en las colas 
+de la distribución t y ser determinada de forma semejante a la empleada con el estadístico 
+Z de una muestra grande. Por analogía con la prueba Z desarrollada en la Sección 10.3, la 
+región de rechazo adecuada para la alternativa de cola superior Ha : m > m0 está dada por
+RR = {t > tA},
+donde ta es tal que P{T > ta} = a para una distribución t con n − 1 grados de libertad (véase 
+la Tabla 5, Apéndice 3).
+Un resumen de las pruebas para m con base en la distribución t, conocidas como pruebas 
+t, es el siguiente.
+ 
+ 
+Prueba de muestra pequeña para m
+ 
+ 
+Suposiciones: Y1, Y2, . . . , Yn constituyen una muestra aleatoria de una distribución 
+normal con E (Yi) = m.
+H0 : m = m0.
+Ha :
+m > m0
+(alternativa de cola superior).
+m < m0
+(alternativa de cola inferior).
+m
+m0
+(alternativa de dos colas).
+Estadístico de prueba: T = Y −m0
+S/√n
+.
+Región de rechazo:
+t > ta
+(RR de cola superior).
+t < −ta
+(RR de cola inferior).
+|t| > ta/2
+(RR de dos colas).
+(Vea la Tabla 5, Apéndice 3, para valores de ta, con v = n − 1 grados de libertad.)
+ EJEMPLO 10.12 
+El ejemplo 8.11 proporciona las velocidades iniciales de ocho balas probadas con una nueva 
+pólvora, junto con la media muestral y la desviación muestral estándar, y = 2959 y s = 39.1. 
+El fabricante dice que la nueva pólvora produce un promedio de velocidad de no menos de 
+3000 pies por segundo. ¿Los datos muestrales aportan sufi ciente evidencia para contradecir lo 
+afi rmado por el fabricante en el nivel de signifi cancia de .025?
+10.8  Prueba de hipótesis con muestras pequeñas para m y m1 – m2  521
+
+[Bloque seleccionado #547 | relevancia=12]
+Pagina 546
+522  Capítulo 10  Prueba de hipótesis
+ 
+Solución 
+Suponiendo que las velocidades iniciales están distribuidas normalmente en forma aproxi-
+mada, podemos usar la prueba que acabamos de mencionar. Deseamos probar H0 : m = 3000 
+contra la alternativa, Ha : m < 3000. La región de rechazo está dada por t < −t.025 = −2.365, 
+donde t posee v = n − 1= 7 grados de libertad. Al hacer el cálculo encontramos que el valor 
+observado del estadístico de prueba es
+t = y −m0
+s/√n = 2959 −3000
+39.1/√8
+= −2.966.
+Este valor cae en la región de rechazo (esto es, t = −2.966 es menor que −2.365); por tanto, 
+la hipótesis nula es rechazada en el nivel de signifi cancia a = .025. Concluimos que existe su-
+fi ciente evidencia para contradecir lo afi rmado por el fabricante y que la verdadera velocidad 
+media es menor que 3000 ft por segundo en el nivel de signifi cancia de .025. 
+Q
+ EJEMPLO 10.13 
+¿Cuál es el valor p relacionado con el estadístico de prueba del Ejemplo 10.12?
+ 
+Solución 
+Como la hipótesis nula debe ser rechazada si t es “pequeña”, el valor mínimo de a para el 
+cual la hipótesis nula puede ser rechazada es elvalor p = P (T < −2.966), donde T tiene una 
+distribución t con n − 1 = 7 grados de libertad.
+A diferencia de la tabla de áreas bajo la curva normal (Tabla 4, Apéndice 3), la Tabla 5 
+del Apéndice 3 no indica áreas correspondientes a muchos valores de t. En lugar de ello, 
+proporciona los valores de t correspondientes a áreas de cola superior iguales a .10, .05, .025, 
+.010 y .005. En vista de que la distribución t es simétrica alrededor de 0, podemos usar estas 
+áreas de cola superior para dar las correspondientes áreas de cola inferior. En este caso, el 
+estadístico t está basado en 7 grados de libertad; por tanto, consultamos la fi la de grados de 
+libertad (gl)= 7 de la Tabla 5 y encontramos que −2.966 cae entre –t.025 = −2.365 y –t.01 = 
+−2.998. Estos valores están indicados en la Figura 10.8. Como el valor observado de T (−2.966) 
+es menor que –t.025 = −2.376 pero no menor que –t.01 = −2.998, rechazamos H0 para a = .025 
+pero no para a = .01. Entonces, el valor p para la prueba satisface a .01 ≤ valor p ≤ .025.
+El valor exacto de p se obtiene fácilmente usando la aplicación Student’s t Probabilities 
+and Quantiles (disponible en www.thomsonedu.com/statistics/wackerly). Usando la aplica-
+ción con 7 grados de libertad, obtenemos un valor p = P (T < −2.966) = P (T > 2.966) = 
+.01046, un valor que ciertamente está entre .01 y .025. Entonces, los datos indican que lo 
+dicho por el fabricante debe ser rechazado para cualquier selección de a ≥ .01046
+
+[Bloque seleccionado #548 | relevancia=14]
+Pagina 547
+Una segunda aplicación de la distribución t es en la construcción de una prueba para mues-
+tra pequeña que compara las medias de dos poblaciones normales que poseen varianzas igua-
+les. Suponga que se seleccionan muestras aleatorias independientes de cada una de dos pobla-
+ciones normales: Y11, Y12, . . . , Y1n1 de la primera y Y21, Y22, . . . , Y2n2 de la segunda, donde la 
+media y la varianza de la i-ésima población son mi y s2, para i = 1, 2. Además, suponga que 
+Y
+S2
+i
+i
+,
+y
+ para i = 1, 2, son las correspondientes medias muestrales y varianzas. Cuando estas 
+suposiciones se cumplen, en la Sección 8.8 se demuestra que si
+S2
+p = (n1 −1)S2
+1 + (n2 −1)S2
+2
+n1 + n2 −2
+es el estimador agrupado para s2, entonces
+T = (Y 1 −Y 2) −(m1 −m2)
+Sp
+1
+n1
++ 1
+n2
+tiene una distribución t de Student con n1 + n2 − 2 grados de libertad. Si deseamos probar la 
+hipótesis nula H0 : m1 − m2 = D0 para algún valor fi jo D0, se deduce que, si H0 es verdadera, 
+entonces
+T = Y 1 −Y 2 −D0
+Sp
+1
+n1
++ 1
+n2
+tiene una distribución t de Student con n1 + n2 − 2 grados de libertad. Observe que este es-
+tadístico de prueba para muestras pequeñas es parecido a su similar para muestras grandes, 
+el estadístico Z de la Sección 10.3. Las pruebas de la hipótesis H0 : m1 − m2 = D0 contra 
+alternativas de cola superior, cola inferior y de dos colas son conducidas en la misma forma 
+que en la prueba de muestras grandes, excepto que empleamos el estadístico t y tablas de la 
+distribución t para llegar a nuestras conclusiones. Veamos a continuación un resumen de los 
+procedimientos de prueba para muestras pequeñas en el caso de m1 − m2,
+ 
+ 
+Pruebas con muestras pequeñas para comparar dos medias poblacionales
+Suposiciones: muestras independientes de distribuciones normales con s2
+1 = s2
+2 .
+H0 : m1 −m2 = D0.
+Ha :
+m1 −m2 > D0
+(alternativa de cola superior).
+m1 −m2 < D0
+(alternativa de cola inferior).
+m1 −m2
+D0
+(alternativa de dos colas).
+Estadístico de prueba: T = Y 1 −Y 2 −D0
+Sp
+1
+n1 + 1
+n2
+, donde Sp =
+(n1 −1)S2
+1 + (n2 −1)S2
+2
+n1 + n2 −2
+.
+Región de rechazo:
+t > ta
+(RR de cola superior).
+t < −ta
+(RR de cola inferior).
+|t| > ta/2
+(RR de dos colas).
+ 
+Aquí, P (T > ta) = a y grados de libertad v = n1 + n2 − 2. (Vea la Tabla 5, 
+Apéndice 3.)
+10.8  Prueba de hipótesis con muestras pequeñas para m y m1 − m2  523

@@ -1,0 +1,563 @@
+Fuente bibliográfica: Estadística aplicada a los negocios y la economía - Lind, Marchal y Wathen. 15.ª edición.pdf
+Actividad: 22 (7.3 Ejercicios Equipo 5% Tarea)
+Palabras clave: mínimos cuadrados, diagrama de dispersión, pendiente, predicción, regresión múltiple, variable ficticia, fumador, significancia
+
+[Bloque seleccionado #490 | relevancia=20]
+Pagina 489
+464
+CAPÍTULO 13 Regresión lineal y correlación
+Solución
+Con base en la información de la tabla 13-1, la señora Bancer sospecha que hay una relación
+entre el número de llamadas de venta hechas en un mes y el número de copiadoras vendidas.
+Soni Jones vendió más copiadoras el mes anterior, y fue una de las tres representantes que
+hicieron 30 llamadas o más. Por otro lado, Susan Welch y Carlos Ramírez sólo hicieron 10 lla-
+madas de ventas durante el mes anterior. La señora Welch, junto con otros dos, tuvo el núme-
+ro menor de copiadoras vendidas entre los representantes muestreados.
+La implicación es que el número de copiadoras vendidas se relaciona con el número de
+llamadas de ventas. Conforme aumenta el número de llamadas de venta, parece que el núme-
+ro de copiadoras vendidas también lo hace. De este modo, el número de llamadas de ventas
+se considera variable independiente, y el de copiadoras vendidas, variable dependiente.
+La variable independiente proporciona la base para la estimación. Es la variable predicto-
+ra. Por ejemplo, digamos que se desea predecir el número esperado de copiadoras que se ven-
+derán si un representante realiza 20 llamadas de ventas. Observe que elegimos este valor. La
+variable independiente no es un número aleatorio.
+La variable dependiente es la variable que se desea predecir o estimar. También puede ser
+descrita como el resultado de un valor conocido de la variable independiente. La variable
+dependiente es aleatoria, esto es, por cada valor dado a la variable independiente, existen
+muchos posibles resultados para la variable dependiente. En este ejemplo, note que cinco
+representantes de ventas hicieron 20 llamadas de ventas. El resultado de realizar esta cantidad
+de llamadas se traduce en tres valores distintos de variable dependiente.
+Es práctica común situar la variable dependiente (copiadoras vendidas) en el eje vertical o
+Y y la variable independiente (número de llamadas de ventas) en el eje horizontal o X. Para ela-
+borar un diagrama de dispersión de la información de Copier Sales of America, inicie con el pri-
+mer representante de ventas, Tom Keller, quien hizo 20 llamadas el mes anterior y vendió 30
+copiadoras, por lo cual X  20 y Y  30. Para trazar esta información, a partir del origen vaya
+por el eje horizontal hasta el valor X  20, después haga lo mismo en el eje vertical hasta Y 
+30 y marque un punto en la intersección. Continúe este proceso hasta que trace todos los
+datos pareados, como se muestra en la gráfica 13-1.
+Llamadas 
+de ventas
+Copiadoras vendidas
+0
+10
+20
+30
+40
+50
+80
+70
+60
+50
+40
+30
+20
+10
+0
+G
+
+[Bloque seleccionado #509 | relevancia=20]
+Pagina 508
+a) Trace un diagrama de dispersión.
+b) Calcule el coeficiente de correlación.
+c) Escriba un reporte breve de sus resultados en los incisos b) y c).
+d) Determine la ecuación de regresión. Utilice los activos como variable independiente.
+e) Para un fondo con $400.0 millones en ventas, determine la tasa de rendimiento a cinco años
+(en porcentaje).
+19. Consulte el ejercicio 5.
+a) Determine la ecuación de regresión.
+b) Estime el número de delitos en una ciudad con 20 policías.
+c) Interprete la ecuación de regresión.
+20. Consulte el ejercicio 6.
+a) Determine la ecuación de regresión.
+b) Estime el precio de venta de un automóvil de 10 años.
+c) Interprete la ecuación de regresión.
+13.6 Probar la significancia de la pendiente
+En la sección anterior se mostró cómo encontrar la ecuación de la línea de regresión que mejor
+se ajusta a los datos. El método para encontrar la ecuación se basa en el principio de los míni-
+mos cuadrados. El propósito de la ecuación de regresión es cuantificar una relación lineal entre
+dos variables.
+El siguiente paso es analizar la ecuación de regresión mediante una prueba de hipótesis
+para ver si la pendiente de la recta de regresión es distinta a cero. ¿Por qué es importante
+esto? Si es posible demostrar que la pendiente de la recta de la población es distinta de cero,
+entonces se puede concluir que al utilizar la ecuación de regresión aumenta la capacidad de
+predecir o pronosticar la variable dependiente basándose en la variable independiente. Si no
+se puede demostrar que esta pendiente es distinta de cero, entonces se concluye que no tiene
+caso utilizar la variable independiente como elemento de predicción. En otras palabras, si no
+podemos demostrar que la pendiente de la recta es distinta de cero, podríamos utilizar la
+media de la variable dependiente como factor de predicción, en vez de usar la ecuación de
+regresión.
+De acuerdo con el procedimiento de prueba de hipótesis que se expuso en el capítulo 10,
+las hipótesis nula y alternativa son:
+La letra griega beta (	) se utiliza para representar la pendiente de la población de la ecuación
+de regresión. Esto es consistente con nuestra política de identificar los parámetros de pobla-
+ción mediante las letras griegas. Se supone que la información respecto de Copier Sales of
+America, la tabla 13-2 y el ejemplo del Applewood Auto Group son muestras. Cuidado aquí.
+Recuerde, ésta es sólo una muestra, pero cuando seleccionamos a un vendedor en particular
+identificamos dos piezas de información: a cuántos clientes llamó y cuántas copiadores se
+vendieron. Sin embargo, sigue siendo sól
+
+[Bloque seleccionado #539 | relevancia=27]
+Pagina 538
+14.1 Introducción
+En el capítulo 13, se describió la relación entre un par de variables en escala de intervalo o de
+razón. Este capítulo comienza con el estudio del coeficiente de correlación, el cual mide la
+fuerza de una relación. Un coeficiente cercano a más o menos 1.00 (por ejemplo, 0.88 o 0.78)
+indica una relación lineal muy fuerte, en tanto que un valor cercano a 0 (por ejemplo, 0.12 o
+0.18) significa que la relación es débil. A continuación se desarrolla un procedimiento para
+determinar una ecuación lineal con la cual expresar la relación entre las dos variables. A este
+procedimiento se le denominó recta de regresión. Esta recta describe la relación entre las
+variables. También describe el patrón general de una variable dependiente (Y) de una variable
+independiente o variable de explicación (X).
+En la correlación y regresión lineal múltiple, se emplean variables independientes adicio-
+nales (denotadas X1, X2, …, Xn) que ayudan a explicar o predecir mejor a la variable depen-
+diente (Y). Casi todas las ideas estudiadas en la correlación y regresión lineal simple se
+amplían a esta situación más general. Sin embargo, las variables independientes adicionales
+permiten hacer algunas consideraciones nuevas. El análisis de regresión múltiple sirve como
+técnica descriptiva o como técnica de inferencia.
+14.2 Análisis de regresión múltiple
+La forma descriptiva general de una ecuación lineal múltiple se muestra en la fórmula (14-1).
+Se utiliza k para representar el número de variables independientes. Por lo tanto, k puede ser
+cualquier número entero positivo.
+14.2 Análisis de regresión múltiple
+513
+ECUACIÓN GENERAL DE
+REGRESIÓN MÚLTIPLE
+Yˆ  a  b1X1  b2X2  b3X3  . . .  bkXk
+(14-1)
+OA1 Describir la relación
+entre diversas variables
+independientes y una variable
+dependiente mediante el
+análisis de regresión múltiple.
+donde:
+a es la intersección, el valor de Y cuando todas las X son cero.
+es la cantidad en que Y cambia cuando esa Xj particular aumenta una unidad, cuando
+los valores de todas las demás variables independientes se mantienen constantes. El
+subíndice j es sólo un identificador de cada variable independiente; no se emplea en los
+cálculos. En general, el subíndice es un número entero entre 1 y k, el cual es el núme-
+ro de variables independientes. Sin embargo, el subíndice también puede ser un iden-
+tificador breve o abreviado. Por ejemplo, la edad puede servir como un subíndice.
+En el capítulo 13, en el análisis de regresión se describió y probó la relación entre una variable
+dependiente, , y una sola variable independiente, X. La r
+
+[Bloque seleccionado #557 | relevancia=21]
+Pagina 556
+8.
+La siguiente captura de pantalla de regresión se obtuvo de un estudio de empresas de arquitectu-
+ra. La variable dependiente es la cantidad total de honorarios, en millones de dólares.
+14.5 Evaluación de las suposiciones de la regresión múltiple
+531
+Factor de
+predicción
+Coef
+SE Coef
+T
+Valor p
+Constante
+7.987
+2.967
+2.69
+—
+X1
+0.12242
+0.03121
+3.92
+0.000
+X2
+0.12166
+0.05353
+2.27
+0.028
+X3
+0.06281
+0.03901
+1.61
+0.114
+X4
+0.5235
+0.1420
+3.69
+0.001
+X5
+0.06472
+0.03999
+1.62
+0.112
+Análisis de la varianza
+Fuente
+DF
+SS
+MS
+F
+Valor p
+Regresión
+5
+3710.00
+742.00
+12.89
+0.000
+Error residual 
+46
+2647.38
+57.55
+Total
+51
+6357.38
+X1 es el número de arquitectos que trabajan en la compañía.
+X2 es el número de ingenieros que trabajan en la compañía.
+X3 es el número de años invertidos en proyectos de cuidado de la salud.
+X4 es el número de estados en los que opera la empresa.
+X5 es el porcentaje del trabajo de la empresa que se relaciona con el cuidado de la salud.
+a) Elabore la ecuación de regresión.
+b) ¿Cuál es el tamaño de la muestra? ¿Cuántas variables independientes hay?
+c) Realice una prueba de hipótesis global para ver si alguno de los coeficientes de regresión del
+conjunto puede ser diferente de 0. Utilice el nivel de significancia 0.05. ¿Cuál es su conclu-
+sión?
+d) Realice una prueba de hipótesis por cada variable independiente. Utilice el nivel de significan-
+cia 0.05. ¿Qué variables consideraría eliminar?
+e) Formule una estrategia para eliminar variables independientes en este caso.
+14.5 Evaluación de las suposiciones
+de la regresión múltiple
+En la sección anterior se describieron métodos para evaluar de manera estadística la ecuación
+de regresión múltiple. Los resultados de la prueba permitieron saber si al menos uno de los
+coeficientes no era igual a cero y se describió un proceso de evaluación de cada coeficiente
+de regresión. También se analizó el proceso de toma de decisiones para incluir y excluir varia-
+bles independientes en la ecuación de regresión múltiple.
+Es importante saber que la validez de las pruebas estadísticas global e individual parte de
+varias suposiciones. Es decir, si las suposiciones no son válidas, los resultados pueden estar
+sesgados o ser confusos. Sin embargo, se debe mencionar que en la práctica no siempre es
+posible un apego estricto a las suposiciones siguientes. Por fortuna, las técnicas estadísticas
+que se analizan en este capítulo parecen funcionar muy bien aunque se viole una o más de las
+suposiciones. Incluso si los valores de la ecuación de regresión múltiple tienen cierta “desvia-
+ción”, las estimaciones que proporcio
+
+[Bloque seleccionado #558 | relevancia=25]
+Pagina 557
+2.
+La variación entre los residuos es la misma tanto en el caso de valores grandes
+como pequeños de 
+En otras palabras, 
+no está relacionada, ya sea que 
+sea
+grande o pequeña.
+3.
+Los residuos siguen la distribución de probabilidad normal. Recuerde que el residuo
+es la diferencia entre el valor actual de Y y el valor estimado 
+Por lo tanto, el término
+se calcula para cada observación del conjunto de datos. Estos residuos deberán
+seguir de manera aproximada una distribución de probabilidad normal. Además, la media
+de los residuos debe ser 0.
+4.
+Las variables independientes no deben estar correlacionadas. Es decir, conviene
+seleccionar un conjunto de variables independientes que no estén correlacionadas
+entre sí.
+5.
+Los residuos son independientes. Esto significa que las observaciones sucesivas de la
+variable dependiente no están correlacionadas. Esta suposición con frecuencia se viola
+cuando se comprende el tiempo con las observaciones muestreadas.
+En esta sección se presenta un análisis breve de cada una de estas suposiciones. Además, se
+proporcionan métodos para validarlas, y se señalan las consecuencias si no se cumplen. Para
+quienes estén interesados en un análisis adicional, una referencia excelente es Kutner,
+Nachtscheim, Neter y Li, Applied Linear Statistical Models, 5a. ed., McGraw-Hill, 2005.
+Relación lineal
+Primero se verá la suposición de linealidad. La idea es que la relación entre el conjunto de
+variables independientes y la variable dependiente es lineal. Si se consideran dos variables
+independientes, se visualiza esta suposición. Las dos variables independientes y la variable
+dependiente formarían un espacio tridimensional. Por ello, la ecuación de regresión formaría
+un plano, como se muestra en la página 514. Esta suposición se evalúa con diagramas de dis-
+persión y gráficas de residuos.
+Uso de los diagramas de puntos
+La evaluación de una ecuación de regresión múltiple
+siempre debe incluir un diagrama de dispersión en el que se trace la variable dependiente con-
+tra cada variable independiente. Estos diagramas ayudan a visualizar las relaciones y propor-
+cionan una información inicial respecto de la dirección (positiva o negativa), la linealidad y la
+fuerza de la relación. Como ejemplo se analizan a continuación los diagramas de dispersión
+del caso del costo de calefacción. Las gráficas sugieren una relación muy fuerte, negativa y
+lineal entre el costo de calefacción y la temperatura, y una relación negativa entre el costo de
+calefacción y el aislamiento.
+Uso de gráficas de residuos
+Recuerde que un residuo 
+se calcula mediante la
+
+[Bloque seleccionado #561 | relevancia=32]
+Pagina 560
+tica, es casi imposible seleccionar variables que carezcan por completo de alguna relación. En
+otras palabras, es casi imposible crear un conjunto de variables independientes que no estén
+correlacionadas hasta cierto punto. Sin embargo, la comprensión general del punto de multi-
+colinealidad es importante.
+Primero, se debe destacar que la multicolinealidad no afecta la capacidad de una ecua-
+ción de regresión múltiple para predecir la variable dependiente. No obstante, cuando se tenga
+interés en evaluar la relación entre cada variable independiente y la variable dependiente, la
+multicolinealidad puede presentar resultados inesperados.
+Por ejemplo, si se usan dos promedios de calificaciones de preparatoria con multicolinea-
+lidad muy alta y la clasificación de un grupo de preparatoria para predecir el promedio de cali-
+ficaciones de los alumnos de ingreso a la universidad (variable dependiente), se esperaría que
+las dos variables independientes estén positivamente relacionadas con la variable dependien-
+te. Sin embargo, como las variables independientes están muy correlacionadas, una de las
+variables independientes puede tener un signo negativo inesperado e inexplicable. En esen-
+cia, estas dos variables independientes son redundantes cuando se trata de explicar la misma
+variación de la variable dependiente.
+Una segunda razón para evitar variables independientes correlacionadas es que pueden
+generar resultados erróneos en las pruebas de hipótesis de las variables independientes indi-
+viduales. Esto se debe a la inestabilidad del error estándar de estimación. Varias pistas que
+indican problemas con la multicolinealidad incluyen lo siguiente:
+1.
+Una variable independiente conocida como factor de predicción importante resulta con un
+coeficiente de regresión que no es significativo.
+2.
+Un coeficiente de regresión que debiera tener un signo positivo resulta negativo, o lo con-
+trario.
+3.
+Cuando se agrega o elimina una variable independiente, hay un cambio drástico de los
+valores de los coeficientes de regresión restantes.
+En nuestra evaluación de una ecuación de regresión múltiple, una aproximación para reducir
+los efectos de la multicolinealidad es seleccionar con cuidado las variables independientes
+incluidas en la ecuación de regresión. Una regla general es que, si la correlación entre dos
+variables independientes se encuentra entre 0.70 y 0.70, es probable que no haya problema
+al emplear las dos variables independientes. Una prueba más precisa es utilizar el factor de
+inflación de la varianza, el cual por lo general se escribe VIF. El valor de 
+
+[Bloque seleccionado #568 | relevancia=23]
+Pagina 567
+Hay otras situaciones que pueden tener lugar cuando se estudia la interacción entre variables
+independientes.
+1.
+Es posible tener una interacción de tres vías entre las variables independientes. En el
+ejemplo del costo de la calefacción, podría haber considerado la interacción de tres vías
+entre temperatura, aislamiento y antigüedad del calentador.
+2.
+Es posible que exista interacción donde una de las variables independientes esté en esca-
+la nominal. En el ejemplo del costo de calefacción, podría haber estudiado la interacción
+entre temperatura y garaje.
+Estudiar todas las interacciones posibles puede ser muy complejo. Sin embargo, con frecuen-
+cia una consideración cuidadosa de todas ellas proporciona una visión útil de los modelos de
+regresión.
+14.8 Regresión por pasos
+En el ejemplo del costo de calefacción (vea la información muestral en las tablas 14-1 y 14-2)
+se consideraron cuatro variables independientes: temperatura externa media, cantidad de ais-
+lamiento en la casa, antigüedad del calentador, y si había garaje o no. Para elaborar la ecua-
+ción, primero realizó una prueba global o “todo de una vez” para determinar si alguno de los
+coeficientes de regresión era significativo. Cuando determinó que al menos uno era significa-
+tivo, probó los coeficientes de regresión de manera individual para ver cuáles eran importan-
+tes. No incorporó las variables independientes que no tenían coeficientes de regresión
+significativos, e incorporó las otras. Al retener las variables independientes con coeficien-
+tes significativos, determinó la ecuación de regresión en la que se empleó el número menor de
+variables independientes. Esto facilitó interpretar la ecuación de regresión y explicó tanta va-
+riación como fue posible de la variable dependiente.
+Ahora se describe la técnica denominada regresión por pasos, más eficiente para deter-
+minar la ecuación de regresión.
+542
+CAPÍTULO 14 Análisis de correlación y regresión múltiple
+REGRESIÓN POR PASOS Método paso por paso para determinar la ecuación de regresión que
+se inicia con una sola variable independiente y agrega o elimina variables independientes
+una por una. En la ecuación de regresión sólo se incluyen las variables independientes con
+coeficientes de regresión distintos de cero.
+OA10 Explicar la regresión
+por pasos.
+En el método por pasos se desarrolla una secuencia de ecuaciones. La primera de ellas sólo
+contiene una variable independiente. Sin embargo, ésta proviene del conjunto propuesto de
+variables independientes que explica la mayoría de la variación de la variable dependiente. En
+otras palab
+
+[Bloque seleccionado #579 | relevancia=21]
+Pagina 578
+2. Esta condición se verifica al elaborar un diagrama de dispersión con los residuos en el eje ver-
+tical y los valores ajustados en el eje horizontal.
+3. Si no hay un patrón en las gráficas, es decir, si parecen aleatorias, los residuos cumplen con
+el requisito de homoscedasticidad.
+C. Los residuos siguen la distribución de probabilidad normal.
+1. Esta condición se verifica al desarrollar un histograma de los residuos para ver si siguen una
+distribución normal.
+2. La media de la distribución de los residuos es 0.
+D. Las variables independientes no están correlacionadas.
+1. Una matriz de correlación muestra todas las correlaciones posibles entre variables indepen-
+dientes. Son señales de que hay un problema si las correlaciones mayores que 0.70 o bien
+menores que 0.70.
+2. Entre las señales de variables independientes correlacionadas se encuentran los casos cuan-
+do una variable de predicción se determina insignificante, cuando se presenta una inversión
+obvia de signos en una o más de las variables independientes, o bien cuando, al eliminar una
+variable de la solución, se produce un gran cambio en los coeficientes de regresión.
+3. El factor de inflación de la varianza se emplea para identificar variables independientes corre-
+lacionadas.
+(14-7)
+E. Cada residuo es independiente de otros residuos.
+1. La autocorrelación ocurre cuando se correlacionan residuos sucesivos.
+2. Cuando existe autocorrelación, el valor del error estándar está sesgado y genera resultados
+deficientes en las pruebas de hipótesis, sin que importen los coeficientes de regresión.
+VII. Varias técnicas ayudan a elaborar un modelo de regresión.
+A. Una variable independiente ficticia o cualitativa puede asumir uno de dos resultados posibles.
+1. Se asigna un valor de 1 a uno de los resultados y 0 al otro.
+2. Se utiliza la fórmula (14-6) para determinar si la variable ficticia debe permanecer en la ecua-
+ción.
+B. Una interacción se produce cuando una variable independiente (como X2) afecta la relación con
+otra variable independiente (X1) y la variable dependiente (Y).
+C. La regresión por pasos es un proceso paso por paso para encontrar la ecuación de regresión.
+1. Sólo las variables independientes con coeficientes de regresión distintos de cero entran en la
+ecuación.
+2. Se agregan variables independientes una a la vez a la ecuación de regresión.
+Clave de pronunciación
+SÍMBOLO
+SIGNIFICADO
+PRONUNCIACIÓN
+Coeficiente de regresión
+b subíndice 1
+de la primera variable independiente
+Coeficiente de regresión de cualquier
+b subíndice k
+variable independiente
+Error estándar de estimación múl
+
+[Bloque seleccionado #594 | relevancia=41]
+Pagina 593
+La relación lineal en el caso simple que implica una variable independiente y una variable depen-
+diente se describe por la ecuación 
+En el caso de tres variables independientes, X1, X2 y X3,
+la misma ecuación de regresión múltiple es la siguiente:
+Despejar b1, b2, . . . , bk implicaría cálculos muy tediosos. Por fortuna, este problema se resuel-
+ve de manera rápida con uno de los muchos paquetes de software estadístico y paquetes de hojas de
+cálculo. En la captura de pantalla de la mayoría de los programas de software se reportan varias medi-
+ciones, como el coeficiente de determinación, el error estándar de estimación múltiple, los resultados
+de la prueba global y la prueba de las variables individuales.
+Glosario
+Yˆ  a  b1X1  b2X2  . . .  bkXk
+Yˆ  a  bx.
+568
+CAPÍTULO 14 Análisis de correlación y regresión múltiple
+La regresión y la correlación
+múltiple se ocupan de la rela-
+ción entre dos o más varia-
+bles independientes y la
+variable dependiente.
+La computadora es muy útil
+para calcular la regresión y
+la correlación múltiple.
+Capítulo 13
+Análisis de correlación
+Grupo de técnicas estadísticas para
+medir la fuerza de la relación entre dos variables.
+Coeficiente de correlación
+Medida de la fuerza de asociación
+entre dos variables.
+Coeficiente de determinación
+Proporción de la variación total
+de la variable dependiente que se explica por la variable indepen-
+diente. Adopta cualquier valor entre 0 y 1.00 inclusive. Este
+coeficiente se calcula al elevar al cuadrado el coeficiente de
+correlación, r.
+Diagrama de dispersión
+Gráfica que representa de manera
+visual la relación entre dos variables.
+Ecuación de regresión lineal
+Ecuación matemática que define
+la relación entre dos variables. Tiene la forma 
+Se
+emplea para predecir Y con base en un valor X seleccionado. Y
+es la variable dependiente, y X, la independiente.
+Error estándar de estimación
+Mide la dispersión de los valo-
+res Y reales respecto de la recta de regresión. Se reporta en las
+mismas unidades que la variable dependiente.
+Método de mínimos cuadrados
+Técnica para llegar a la ecua-
+ción de regresión minimizando la suma de los cuadrados de las
+distancias verticales entre los valores Y actuales y los valores Y
+anticipados.
+Prueba t de la significación de r
+Fórmula para responder si la
+correlación entre la población de donde se seleccionó la muestra
+es cero. El estadístico de prueba es t, y el número de grados de
+libertad, n  2.
+(13-2)
+Variable dependiente
+Variable por predecir o estimar.
+Variable independiente
+Variable que proporciona la base para
+la estimación.
+Capítulo 14
+Autocor
+
+[Bloque seleccionado #597 | relevancia=25]
+Pagina 596
+de la variación de la variable dependiente? Estime el costo
+de entrega de un equipo cuya preparación tarda 10 minutos,
+30 minutos su entrega, y debe recorrer una distancia de 14
+millas.
+2.
+Haga una prueba para determinar que al menos un coefi-
+ciente de regresión neto difiere de cero. Asimismo, pruebe si
+algunas variables se pueden omitir del análisis. Si algunas
+variables se pueden omitir, efectúe de nuevo la ecuación de
+regresión hasta que sólo se incluyan variables significativas.
+Interprete en un reporte breve la ecuación de regresión final.
+3.
+Escriba un breve reporte en el cual interprete la ecuación de
+regresión final.
+Test de práctica
+571
+Tabla ANOVA
+Fuente
+SS
+gl
+MS
+F
+valor p
+Regresión
+129.7275
+1
+129.7275
+14.50
+.0007
+Residuo
+250.4391
+28
+8.9443
+Total
+380.1667
+29
+Salida de regresión
+Variables
+Coeficientes
+Error estándar
+t (gl  28)
+Intersección
+90.6190
+1.5322
+59.141
+Pendiente
+0.9401
+0.2468
+3.808
+Análisis de regresión
+a) ¿De qué tamaño es la muestra?
+b) Escriba la ecuación de regresión. Interprete los valores de la pendiente y de la intersección.
+c) Si el valor de la variable independiente es 10, ¿cuál es el valor de la variable dependiente?
+d) Calcule el coeficiente de determinación. Interprete su valor.
+e) Calcule el coeficiente de relación. Realice una prueba de hipótesis para determinar si existe una asociación negativa signifi-
+cativa entre las variables.
+Test de práctica
+Parte 1: Objetivo
+1. En un diagrama de dispersión, ¿en qué eje se registra siempre la variable dependiente?
+1.
+2. ¿Qué nivel de medición se requiere para calcular el coeficiente de correlación?
+2.
+3. Si no existe correlación entre dos variables, ¿cuál es el valor del coeficiente de correlación?
+3.
+4. ¿Cuál de los siguientes valores indica la correlación más fuerte entre dos variables (0.65, 0.77, 0, .12)?
+4.
+5. ¿Bajo qué condiciones asumirá el coeficiente de determinación un valor mayor a 1?
+5.
+Dada la siguiente ecuación de regresión 
+y si el coeficiente de determinación es 0.81, conteste las preguntas 7, 8 y 9.
+6. ¿En qué punto cruza la ecuación de regresión el eje Y?
+6.
+7. ¿Un aumento de una unidad en la variable independiente resultará en qué cantidad de incremento o disminución de la variable
+independiente?
+7.
+8. ¿Cuál es el coeficiente de correlación? (Cuidado con el signo.)
+8.
+9. Si todos los puntos de un diagrama de dispersión estuvieran en la recta de regresión, ¿cuál sería el valor del error estándar de
+estimación?
+9.
+10. En una ecuación de regresión múltiple, ¿cuál es el máximo número permitido de variables independientes (2, 10, 30, ilimitado)?
+10.
+11

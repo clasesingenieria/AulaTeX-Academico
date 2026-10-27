@@ -1,0 +1,108 @@
+% Contrato: investigacion aplicada; tres actos y desarrollo tematico unico.
+% Nivel cognitivo: analizar estimadores y evaluar decisiones bajo incertidumbre.
+% Soporte: Wackerly caps. 8-9, OpenStax cap. 8, NIST y Bradley; trazabilidad en notas.
+\def\estadisticatitulo{Estimación y decisiones administrativas}
+\def\estadisticasubtitulo{Actividad 3: Investigación documental y aplicada}
+\def\estadisticafecha{23 de octubre de 2026}
+\def\estadisticaunidad{Distribuciones muestrales}
+\def\portadaoficial{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/portada-oficial.png}
+\def\estadisticaextras{%
+  \usepackage{fontspec}
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+  \usetikzlibrary{babel}
+  \geometry{letterpaper,left=2.3cm,right=2.3cm,top=2.2cm,bottom=2.2cm}
+  \hypersetup{pdftitle={Estimación y decisiones administrativas},pdfsubject={Actividad 3 - Estadística aplicada para la administración}}
+  \setcitestyle{citesep={;}}
+  \renewcommand{\insertcoverwatermark}{}
+  \renewcommand{\insertcoverinstitutionalfooter}{}
+  \renewcommand{\templatePortrait}{%
+    \thispagestyle{empty}
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{\portadaoficial}};
+      \node[anchor=north west,text=white,text width=10.6cm,align=center,inner sep=0pt] at ([xshift=10.1cm,yshift=-19.4cm]current page.north west) {%
+        \setstretch{1}\fontsize{12}{15}\selectfont
+        {\fontsize{16}{19}\selectfont\bfseries Estimación y decisiones\\administrativas}\par\vspace{0.18cm}
+        Estadística aplicada para la administración\par
+        Actividad 3: Investigación aplicada\par\vspace{0.12cm}
+        Martín Jonathan de la Cruz Muñoz\par
+        Matrícula: 26130503\par
+        Dra. Yoana Elizeth Tauitmes Delgado\par
+        23 de octubre de 2026
+      };
+    \end{tikzpicture}\null\clearpage
+  }
+  \renewcommand{\templatePagecfg}{}
+  \renewcommand{\templateFinalcfg}{%
+    \pagestyle{fancy}\fancyhf{}\fancyfoot[C]{\fontsize{10}{12}\selectfont\thepage}
+    \renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}
+    \setcounter{page}{2}\renewcommand{\thepage}{\arabic{page}}
+  }
+  \titleformat{\section}{\normalfont\fontsize{12}{15}\selectfont\bfseries\color{itescaRedDark}}{\thesection.}{0.5em}{}
+  \titleformat{\subsection}{\normalfont\fontsize{12}{15}\selectfont\bfseries}{\thesubsection.}{0.5em}{}
+  \titlespacing*{\section}{0pt}{8pt}{5pt}
+  \titlespacing*{\subsection}{0pt}{7pt}{4pt}
+  \renewcommand{\footnotesize}{\fontsize{12}{14.4}\selectfont}
+  \setlength{\parindent}{1.1cm}
+  \setlength{\parskip}{3pt}
+}
+\long\def\estadisticacontenido{%
+\fontsize{12}{14.4}\selectfont\setstretch{1.5}\justifying
+\begingroup
+\noindent\textbf{Resumen}\par
+Se distinguen estimador y estimación, se explican insesgamiento, eficiencia y consistencia, y se comparan estimaciones puntuales e intervalares mediante ejemplos administrativos. Las propiedades dependen de supuestos explícitos. El criterio de gestión es acompañar cada cifra de su población e incertidumbre para planificar compras, personal y recursos con decisiones revisables.\footnote{\textbf{Declaración de uso de IA.} \estadisticadeclaracionia}
+\par\medskip
+\renewcommand{\contentsname}{Tabla de contenido}
+\setcounter{tocdepth}{1}
+\setlength{\cftbeforetoctitleskip}{3pt}\setlength{\cftaftertoctitleskip}{4pt}
+\setlength{\cftbeforesecskip}{1pt}
+\renewcommand{\cfttoctitlefont}{\normalfont\fontsize{12}{15}\selectfont\bfseries}
+\tableofcontents
+\endgroup
+\medskip
+\section{Introducción}
+Planear compras, contratar personal o asignar un presupuesto exige decidir sin conocer todas las operaciones futuras ni observar a cada cliente. La estimación estadística permite inferir características de una población a partir de muestras y reconocer la incertidumbre que acompaña a esas inferencias. Su utilidad administrativa depende tanto de la regla de cálculo como de la selección de los datos: una cifra precisa puede orientar mal una decisión si excluye sistemáticamente a parte del mercado \citep{holmesBusiness2023,bradley2021}.
+
+\section{Estimadores, incertidumbre y gestión}
+\subsection{Del estimador a la estimación}
+Un parámetro describe a una población, por ejemplo, el gasto medio de todos los clientes de un periodo. Un \textit{estimador} es una regla calculada con la muestra para aproximar ese parámetro; antes de observar los datos, varía entre muestras. La \textit{estimación} es el valor obtenido al aplicar esa regla. En un caso simulado, cuatro compras de \$180, \$200, \$220 y \$240 producen una media de \$210: promediar es el estimador y \$210 es la estimación puntual. No es necesariamente la media poblacional \citep{holmesBusiness2023}.
+
+\subsection{Propiedades bajo supuestos explícitos}
+El \textit{insesgamiento} significa que la esperanza del estimador coincide con el parámetro. Para compras independientes de una misma población con media finita, el promedio es insesgado; una muestra particular puede errar. El \textit{error cuadrático medio} suma la varianza y el sesgo al cuadrado: permite comparar precisión y error sistemático, incluso entre reglas sesgadas. Una regla insesgada no es necesariamente la mejor bajo ese criterio \citep[sec. 8.2]{wackerly2010}.
+
+La \textit{eficiencia relativa} compara varianzas de estimadores insesgados del mismo parámetro. Con compras independientes, misma distribución y varianza finita positiva, promediar cuatro tiene un cuarto de la varianza de usar solo la primera: ambos son insesgados, pero el promedio aprovecha más información. Esto no demuestra optimalidad entre todos los estimadores; es una comparación bajo supuestos definidos \citep[sec. 9.2]{wackerly2010}.
+
+La \textit{consistencia} es convergencia en probabilidad al parámetro: para cualquier tolerancia positiva fija, la probabilidad de excederla tiende a cero al crecer la muestra. Con compras independientes, idénticamente distribuidas y varianza finita, la media es insesgada y su varianza es la poblacional dividida entre n; la desigualdad de Chebyshev garantiza su consistencia. Pasar de 100 a 400 compras reduce a la mitad el error estándar. Usar siempre la primera compra no es consistente si la población no es degenerada \citep[sec. 9.3]{wackerly2010}.
+
+\subsection{Estimación puntual e intervalar}
+La estimación puntual resume el parámetro mediante una cifra; la intervalar añade límites calculados con un procedimiento y un nivel de confianza. Finanzas puede utilizar un gasto medio estimado de \$210 como escenario central de presupuesto, mientras que un intervalo permite analizar la incertidumbre de esa media antes de comprometer recursos. Recursos humanos puede estimar puntualmente la proporción de empleados que requieren capacitación y usar su intervalo para dimensionar un rango de demanda, sin confundir esa proporción con la necesidad de cada persona \citep{holmesBusiness2023}.
+
+\subsection{Confianza, margen de error y ventas}
+Un intervalo de confianza estima un parámetro desconocido. Un procedimiento del 95\% generaría intervalos que contienen el parámetro en aproximadamente el 95\% de las repeticiones del muestreo, si se cumplen sus supuestos. El intervalo ya calculado contiene o no contiene la media fija: no se le atribuye a esta una probabilidad frecuentista del 95\%. El margen de error es la distancia del centro a cada extremo en un intervalo simétrico; a igual muestra y método, mayor confianza exige mayor amplitud. Más datos independientes suelen estrecharlo; mayor dispersión lo ensancha \citep{nistHandbook}.
+
+Una media semanal de ventas estimada entre \$18,000 y \$22,000 con confianza del 95\% describe el \textit{promedio poblacional} bajo el modelo y periodo estudiados. No asegura que el 95\% de las semanas venderá dentro del intervalo: predecir la siguiente semana requiere otro procedimiento y considerar estacionalidad. Sin muestra ni variabilidad documentadas, no procede reconstruir el cálculo. Se concluye que la gerencia debe valorar conjuntamente población, estimador e incertidumbre antes de contrastar ventas con costos y comprometer recursos \citep{nistHandbook}.
+
+\section{Conclusiones}
+La estimación transforma registros parciales en decisiones justificables cuando distingue tres preguntas: qué población interesa, qué regla aprovecha los datos y cuánta incertidumbre permanece. Insesgamiento, eficiencia y consistencia responden a problemas diferentes. Una regla puede acertar en promedio sin mejorar al acumular información; otra puede ofrecer poca variabilidad y conservar un sesgo de selección. Por ello, ninguna propiedad aislada basta para respaldar una decisión administrativa \citep{holmesBusiness2023,bradley2021}.
+
+En gestión financiera, el valor puntual facilita construir un presupuesto base, mientras que el intervalo ayuda a discutir la sensibilidad de comprometer gastos frente a ingresos medios inciertos. Si el umbral de viabilidad cae dentro del intervalo de ventas, la evidencia no permite afirmar con claridad que la media lo supera. Conviene evaluar escenarios, costos de equivocarse y necesidad de información adicional; el nivel de confianza no reemplaza esa valoración económica \citep{nistHandbook}.
+
+En mercadotecnia, la prioridad debe ser definir clientes, periodo y canales antes de ampliar una encuesta. En recursos humanos, se deben incluir turnos y modalidades de contratación relevantes, proteger la información personal y reconocer posibles patrones de no respuesta. El antecedente de encuestas masivas que sobreestimaron la vacunación demuestra que reunir más observaciones puede producir una seguridad aparente si la participación se relaciona con la característica estudiada \citep{bradley2021}.
+
+Considero que una gerencia responsable debe exigir una estimación central acompañada de su población objetivo, supuestos y medida de incertidumbre. La razón es práctica: una cifra sin contexto oculta los riesgos que se trasladan a compras, contratación o inversión. La consecuencia profesional es establecer decisiones revisables, con umbrales y seguimiento, en lugar de tratar el resultado como una garantía. Una estimación es útil cuando mejora la decisión y deja claro qué evidencia podría hacerla cambiar.
+
+\renewcommand{\bibsection}{\section*{Referencias}\addcontentsline{toc}{section}{Referencias}}
+\setlength{\bibhang}{1.27cm}\setlength{\bibsep}{10pt}
+\begin{thebibliography}{4}
+\bibitem[Bradley et al.(2021)]{bradley2021}
+Bradley, V. C., Kuriwaki, S., Isakov, M., Sejdinovic, D., Meng, X.-L., \& Flaxman, S. (2021). Unrepresentative big surveys significantly overestimated US vaccine uptake. \textit{Nature, 600}(7890), 695--700. \url{https://doi.org/10.1038/s41586-021-04198-4}
+\bibitem[Holmes et al.(2023)]{holmesBusiness2023}
+Holmes, A., Illowsky, B., \& Dean, S. (2023). \textit{Introductory business statistics} (2.\textsuperscript{a} ed.). OpenStax. \url{https://openstax.org/details/books/introductory-business-statistics-2e}
+\bibitem[NIST y SEMATECH(2003)]{nistHandbook}
+National Institute of Standards and Technology, \& SEMATECH. (2003). \textit{NIST/SEMATECH e-Handbook of statistical methods}. \url{https://doi.org/10.18434/M32189}
+\bibitem[Wackerly et al.(2010)]{wackerly2010}
+Wackerly, D. D., Mendenhall, W., \& Scheaffer, R. L. (2010). \textit{Estadística matemática con aplicaciones} (7.\textsuperscript{a} ed.). Cengage Learning Editores.
+\end{thebibliography}
+\global\itescaactivitycitedfalse
+}
+\input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/reporte-estadistica-aplicada-para-la-administracion-plantilla-actividad.tex}

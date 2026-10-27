@@ -1,0 +1,469 @@
+Fuente bibliográfica: Estadística aplicada a los negocios y la economía - Lind, Marchal y Wathen. 15.ª edición.pdf
+Actividad: 7 (3.1 Investigación 5% Tarea)
+Palabras clave: estimación puntual, intervalo de confianza, distribución t, ji-cuadrada, varianza poblacional, proporción poblacional, insesgamiento
+
+[Bloque seleccionado #326 | relevancia=16]
+Pagina 325
+Desviación estándar de la población
+conocida ()
+Un intervalo de confianza se calcula con el empleo de dos estadísticos: la media muestral 
+y
+la desviación estándar. De los capítulos anteriores, usted sabe que la desviación estándar es
+un estadístico importante, porque mide la dispersión, o la amplitud, de una población o de una
+muestra de distribución. Cuando se calcula un intervalo de confianza, se utiliza la desviación
+estándar para estimar el rango del intervalo de confianza.
+Para demostrar la idea del intervalo de confianza, se comienza con una suposición sim-
+ple: que conocemos el valor de la desviación estándar de la población, . Conocerla permite
+simplificar el desarrollo del intervalo de confianza, porque podemos utilizar la distribución nor-
+mal estándar que se estudió en el capítulo 8.
+Recuerde que la distribución muestral de la media es la distribución de todas las medias
+muestrales, , con tamaño de la muestra, n, de una población. Se conoce la desviación están-
+dar de la población, . A partir de esta información, y del teorema central del límite, sabemos
+que la distribución muestral sigue una distribución de probabilidad normal con una media  y
+una desviación estándar 
+. Recuerde también que este valor recibe el nombre de error
+estándar.
+Los resultados del teorema central del límite permiten afirmar lo siguiente con respecto a
+los intervalos de confianza utilizando el estadístico z:
+1.
+Noventa y cinco por ciento de las medias muestrales seleccionadas de una población se
+encontrará dentro de 1.96 errores estándares (desviación estándar de las medias mues-
+trales de la media poblacional, .
+2.
+Noventa y nueve por ciento de las medias muestrales se encontrará a 2.58 errores están-
+dares de la media poblacional.
+Los intervalos calculados de esta manera proporcionan ejemplos de los niveles de confianza
+y reciben el nombre de intervalo de confianza de 95% e intervalo de confianza de 99%. Por
+lo tanto, 95% y 99% son los niveles de confianza y se refieren al porcentaje de intervalos simi-
+larmente construidos que incluirían el parámetro a calcular, en este caso, .
+¿Cómo se obtienen los valores de 1.96 y 2.58? En el caso del intervalo de confianza de
+95%, vea el siguiente diagrama y consulte el apéndice B.1 para determinar los valores z ade-
+cuados. Localice 0.4750 en el cuerpo de la tabla. Lea los valores del renglón y la columna
+correspondientes. El valor es 1.96. Por lo tanto, la probabilidad de hallar un valor z entre 0 y
+1.96 es de 0.4750. Asimismo, la probabilidad de encontrar un valor z en el intervalo entre 0
+y 1.96 también es
+
+[Bloque seleccionado #333 | relevancia=34]
+Pagina 332
+Por fortuna, se utiliza la desviación estándar de la muestra para estimar la desviación es-
+tándar poblacional. Es decir, se utiliza s, la desviación estándar de la muestra, para estimar ,
+la desviación estándar de la población. No obstante, al hacerlo no es posible utilizar la fórmu-
+la (9-1). Como no conoce , no puede utilizar la distribución z. Sin embargo, hay una solución:
+utilizar la desviación estándar de la media y sustituir la distribución z con la distribución t.
+La distribución t es una distribución de probabilidad continua, con muchas características
+similares a las de la distribución z. William Gosset, experto cervecero, fue el primero en estu-
+diar la distribución t.
+Estaba especialmente interesado en el comportamiento exacto de la distribución del
+siguiente estadístico:
+Aquí, s es un estimador de . Le preocupaba en particular la discrepancia entre s y  cuando
+s se calculaba a partir de una muestra muy pequeña. La distribución t y la distribución normal
+estándar se muestran en la gráfica 9-1. Observe que la distribución t es más plana y que se
+extiende más que la distribución normal estándar. Esto se debe a que la desviación estándar
+de la distribución t es mayor que la distribución normal estándar.
+t  X  
+s1n
+9.3 Intervalos de confianza de una media poblacional
+307
+Estadística en acción
+William Gosset nació en
+Inglaterra en 1876 y
+murió allí en 1937.
+Trabajó muchos años en
+Arthur Guinness, Sons
+and Company. En reali-
+dad, en sus últimos años
+estuvo a cargo de
+Guiness Brewery en
+Londres. Guinness prefe-
+ría que sus empleados
+utilizaran seudónimos
+cuando publicaban traba-
+jos, de modo que, en
+1908, cuando Gosset
+escribió “The Probable
+Error of a Mean”, utilizó
+el nombre de Student.
+En este artículo describió
+por primera vez las pro-
+piedades de la distribu-
+ción t.
+GRÁFICA 9-1 Distribución normal estándar y distribución t de Student
+0
+Distribución z
+Distribución t
+Las siguientes características de la distribución t se basan en el supuesto de que la pobla-
+ción de interés es de naturaleza normal, o casi normal.
+• Como en el caso de la distribución z, es una distribución continua.
+• Como en el caso de la distribución z, tiene forma de campana y es simétrica.
+• No existe una distribución t, sino una familia de distribuciones t. Todas las distribuciones
+t tienen una media de 0, y sus desviaciones estándares difieren de acuerdo con el tama-
+ño de la muestra, n. Existe una distribución t para un tamaño de muestra de 20, otro para
+un tamaño de muestra de 22, etc. La desviación estándar de una distribución t con 5
+observaciones es
+
+[Bloque seleccionado #337 | relevancia=22]
+Pagina 336
+Los cálculos para construir un intervalo de confianza también se encuentran disponibles
+en Excel. La captura de pantalla aparece a continuación. Observe que la media de la muestra
+($49.35) y la desviación estándar de la muestra ($9.01) son las mismas que en los cálculos de
+Minitab. En la información de Excel, el último renglón de la salida también incluye el margen
+de error, que es la cantidad que se suma y se resta de la media muestral para formar los pun-
+tos extremos del intervalo de confianza. Este valor se determina a partir de la expresión
+t s
+1n  2.093 $9.01
+120  $4.22
+9.3 Intervalos de confianza de una media poblacional
+311
+Solución
+El gerente del centro comercial supone que la población de las can-
+tidades gastadas sigue la distribución normal. En este caso es una
+suposición razonable. Además, la técnica del intervalo de confian-
+za resulta muy poderosa y tiende a consignar cualquier error del
+lado conservador si la población no es normal. No cabe suponer
+una condición normal cuando la población se encuentra pronuncia-
+damente sesgada o cuando la distribución tiene colas gruesas. En
+el capítulo 18 se exponen métodos para manejar este problema en
+caso de que no sea posible suponer una condición normal. En
+este caso, resulta razonable suponer una condición normal.
+No se conoce la desviación estándar de la población. De ahí
+que resulte adecuado utilizar la distribución t y la fórmula (9-2) para
+encontrar el intervalo de confianza. Se utiliza el software Minitab
+para hallar la media y la desviación estándar de esta muestra. Los
+resultados aparecen a continuación.
+El gerente del centro comercial no conoce la media poblacional. La media muestral cons-
+tituye la mejor aproximación de dicho valor. De acuerdo con la captura de pantalla de Minitab,
+la media es de $49.35, que constituye la mejor aproximación, la estimación puntual, de la
+media poblacional desconocida.
+Se aplica la fórmula (9-2) para determinar el intervalo de confianza. El valor de t se locali-
+za en el apéndice B.2. Hay n – 1  20 – 1  19 grados de libertad. Al desplazarse por el ren-
+glón con 19 grados de libertad a la columna del intervalo de confianza de 95%, el valor de esta
+intersección es de 2.093. Se sustituyen estos valores en la fórmula 9-2 para encontrar el inter-
+valo de confianza.
+Los puntos extremos del intervalo de confianza son $45.13 y $53.57. Resulta razonable con-
+cluir que la media poblacional se encuentra en dicho intervalo.
+El gerente de Inlet Square se preguntaba si la media poblacional podría haber sido $50 o
+$60. El valor de $50 se encuentra dentro de
+
+[Bloque seleccionado #339 | relevancia=14]
+Pagina 338
+Construya el intervalo de confianza de 98% de la media poblacional. Interprete el resultado.
+9.4 Intervalo de confianza de una proporción
+El material hasta ahora expuesto en este capítulo utiliza la
+escala de medición de razón. Es decir, se emplean varia-
+bles como ingresos, pesos, distancias y edades. Ahora se
+considerarán casos como los siguientes:
+•
+El director de servicios profesionales de Southern
+Technical Institute informa que 80% de sus gradua-
+dos entra en el mercado laboral en un puesto relacio-
+nado con su área de estudio.
+•
+Un representante de ventas afirma que 45% de las
+ventas de Burger King se lleva a cabo en la ventana
+de servicio para automóviles.
+•
+Un estudio de las casas del área de Chicago indicó
+que 85% de las construcciones nuevas cuenta con
+sistema de aire acondicionado central.
+•
+Una encuesta reciente entre hombres casados de
+entre 35 y 50 años de edad descubrió que 63% creía
+que ambos cónyuges deben aportar dinero.
+Estos ejemplos ilustran la escala de medición nomi-
+nal. Cuando se mide con una escala nominal, una obser-
+vación se clasifica en uno de dos o más grupos mutuamente excluyentes. Por ejemplo, un
+graduado de Southern Tech entra al mercado laboral en un puesto relacionado con su campo
+de estudio o no lo hace. Un consumidor de Burger King hace una compra en la ventana de
+servicio para automóviles o no. Sólo hay dos posibilidades, y el resultado debe clasificarse en
+uno de los dos grupos.
+12. La industria estadounidense de lácteos desea calcular el consumo medio de leche por año. Una
+muestra de 16 personas revela que el consumo medio anual es de 60 galones, con una desviación
+estándar de 20 galones.
+a) ¿Cuál es el valor de la media poblacional? ¿Cuál es el mejor estimador de este valor?
+b) Explique por qué necesita utilizar la distribución t. ¿Qué suposiciones necesita hacer?
+c) ¿Cuál es el valor de t en un intervalo de confianza de 90%?
+d ) Construya el intervalo de confianza de 90% de la media de población.
+e) ¿Es razonable concluir que la media poblacional es de 63 galones?
+13. Merrill Lynch Securities y Health Care Retirement, Inc., son dos grandes empresas ubicadas en el
+centro de Toledo, Ohio. Contemplan ofrecer de forma conjunta servicio de guardería para sus
+empleados. Como parte del estudio de viabilidad del proyecto, desean calcular el costo medio
+semanal por el cuidado de los niños. Una muestra de 10 empleados que recurren al servicio de
+guardería revela las siguientes cantidades gastadas la semana pasada.
+9.4 Intervalo de confianza de una proporción
+313
+OA5 Construir el intervalo
+de confianza de una
+p
+
+[Bloque seleccionado #341 | relevancia=18]
+Pagina 340
+Un repaso de la interpretación del intervalo de confianza: si la encuesta fue aplicada 100 veces
+con 100 muestras distintas, los intervalos de confianza construidos a partir de 95 de las mues-
+tras contendrán la verdadera proporción de la población. Además, la interpretación de un
+intervalo de confianza resulta de mucha utilidad en la toma de decisiones, y desempeña
+un papel muy importante en especial la noche de las elecciones. Por ejemplo, Cliff Obermeyer
+se postula para representar ante el Congreso al 6o. distrito de Nueva Jersey. Suponga que se
+entrevista a los electores que acaban de votar y 275 indican que votaron por Obermeyer.
+Considere que 500 electores es una muestra aleatoria de quienes votan en el 6o. distrito. Esto
+significa que 55% de los electores de la muestra votó por Obermeyer. De acuerdo con la
+fórmula (9-3):
+Ahora, para estar seguros de la elección, Obermeyer debe ganar más de 50% de los votos
+de la población de electores. En este momento se conoce un estimador puntual, que es de
+0.55, de la población de electores que votarán por él. Ahora bien, no se conoce el porcentaje
+de la población que votará por el candidato. En estas circunstancias, la pregunta es: ¿es posi-
+ble tomar una muestra de 500 electores de una población en la que 50% o menos de los elec-
+tores apoye a Obermeyer para encontrar que 55% de la muestra lo apoya? En otras palabras,
+¿el error de muestreo, que es p    .55  .50  .05, se debe al azar, o la población de elec-
+tores que apoya a Obermeyer es superior a 0.50? Si se establece el intervalo de confianza de
+la proporción de la muestra y halla que 0.50 no se encuentra en el intervalo, concluirá que la
+proporción de electores que apoya a Obermeyer es mayor que 0.50. ¿Qué significa esto? Bien,
+significa que puede resultar electo. ¿Qué pasa si 0.50 pertenece al intervalo? Entonces con-
+cluirá que es posible que 50% o menos de los electores apoyen su candidatura y no es posi-
+ble concluir que será electo a partir de de la información de la muestra. En este caso, si se
+utiliza el nivel de significancia de 95% y la fórmula (9-4), se tiene que:
+p  z C
+p(1  p)
+n
+ .55  1.96 C
+.55(1  .55)
+500
+ .55  .044
+p  X
+n  275
+500  .55
+9.4 Intervalo de confianza de una proporción
+315
+Ejemplo
+El sindicato que representa a Bottle Blowers of America (BBA) considera la propuesta de fusión
+con Teamsters Union. De acuerdo con el reglamento del sindicato de BBA, por lo menos tres
+cuartas partes de los miembros del sindicato deben aprobar cualquier fusión. Una muestra
+aleatoria de 2 000 miembros actuales de BBA revela que 
+
+[Bloque seleccionado #342 | relevancia=20]
+Pagina 341
+Así, los puntos extremos del intervalo de confianza son: 0.55, 0.044  0.506 y 0.55 
+0.044  0.594. El valor de 0.50 no pertenece al intervalo. Por lo tanto, se concluye que
+probablemente más de 50% de los electores apoya a Obermeyer, lo cual es suficiente para
+que sea elegido.
+¿Siempre se utiliza este procedimiento? Sí. Es exactamente el procedimiento de las cade-
+nas de televisión, revistas de noticias y sondeos en la noche de las elecciones.
+316
+CAPÍTULO 9 Estimación e intervalos de confianza
+Ejercicios
+15. El propietario de West End Kwick Fill Gas Station desea determinar la proporción de clientes que
+utilizan tarjeta de crédito o débito para pagar la gasolina en el área de las bombas. Entrevistó a
+100 clientes y descubre que 80 pagaron en ella.
+a) Calcule el valor de la proporción de la población.
+b) Construya el intervalo de confianza de 95% de la proporción poblacional.
+c) Interprete sus conclusiones.
+16. Maria Wilson considera postularse para la alcaldía de la ciudad de Bear Gulch, Montana. Antes de
+solicitar la postulación, decide realizar una encuesta entre los electores de Bear Gulch. Una mues-
+tra de 400 electores revela que 300 la apoyarían en las elecciones de noviembre.
+a) Calcule el valor de la proporción de la población. Calcule el error estándar de la proporción.
+b) Construya el intervalo de confianza de 99% de la proporción poblacional.
+c) Interprete sus resultados.
+17. La televisora Fox TV considera reemplazar uno de sus programas de investigación ciminal, que se
+transmite durante las horas de mayor audiencia, por una nueva comedia orientada a la familia.
+Antes de tomar una decisión definitiva, los ejecutivos estudian una muestra de 400 telespectado-
+res. Después de ver la comedia, 250 afirmaron que la verían y sugirieron reemplazar el programa
+de investigación criminal.
+a) Calcule el valor de la proporción de la población.
+b) Construya el intervalo de confianza de 99% de la proporción poblacional.
+c) Interprete los resultados que obtuvo.
+18. Schadek Silkscreen Printing, Inc., compra tazas de plástico para imprimir en ellas logotipos de
+eventos deportivos, graduaciones, cumpleaños u otras ocasiones importantes. Zack Schadek, el
+propietario, recibió un envío grande esta mañana. Para asegurarse de la calidad del envío, selec-
+cionó una muestra aleatoria de 300 tazas. Halló que 15 estaban defectuosas.
+a) ¿Cuál es la proporción aproximada de tazas defectuosas en la población?
+b) Construya el intervalo de confianza de 95% de la proporción de tazas defectuosas.
+c) Zack llegó con su proveedor al acuerdo de que devolverá lotes co
+
+[Bloque seleccionado #350 | relevancia=22]
+Pagina 349
+32. A un inspector de carne del estado de Iowa se le encargó calcular el peso neto medio de los
+paquetes de carne molida con la etiqueta “3 libras”. Por supuesto, se da cuenta de que los paque-
+tes no pesan precisamente 3 libras. Una muestra de 36 paquetes revela que el peso medio es de
+3.01 libras, con una desviación estándar de 0.03 libras.
+a) ¿Cuál es la media poblacional estimada?
+b) Determine el intervalo de confianza de 95% de la media poblacional.
+33. Como parte de su paquete promocional, la Cámara de Comercio de Milwaukee desea tener una
+estimación del costo medio mensual de un apartamento de una recámara. Una muestra aleatoria
+de 40 apartamentos disponibles para renta reveló que el costo medio mensual era de $323. La
+desviación estándar de la muestra es $25.
+a) Determine un intervalo de confianza de 98% para el precio medio de la población.
+b) ¿Es razonable concluir que la media poblacional fue de $350 por mes?
+34. Una encuesta reciente a 50 ejecutivos despedidos reveló que tardaron 26 semanas en colocarse
+en otro puesto. La desviación estándar de la muestra fue de 6.2 semanas. Construya el intervalo
+de confianza de 95% de la media de población. ¿Es razonable que la media poblacional sea de
+28 semanas? Justifique su respuesta.
+35. Marty Rowatti recién asumió el puesto de director de la YMCA de South Jersey. Le gustaría con-
+tar con datos recientes sobre el tiempo que han pertenecido a la YMCA sus miembros actuales.
+Para investigarlo, suponga que selecciona una muestra aleatoria de 40 miembros actuales. El
+tiempo medio de membresía de quienes se encuentran en la muestra es de 8.32 años, y la des-
+viación estándar, de 3.07 años.
+a) ¿Cuál es la media de la población?
+b) Construya un intervalo de confianza de 90% para la media poblacional.
+c) La directora anterior, en el breve informe que preparó al retirarse, indicó que ahora el tiempo
+medio de membresía era de “casi 10 años”. ¿Confirma la información esta aseveración? Cite
+evidencias.
+36. La American Restaurant Association reunió información sobre la cantidad de veces que los matri-
+monios jóvenes comen fuera de casa a la semana. Una encuesta de 60 parejas indicó que la can-
+tidad media de comidas fuera de casa es de 2.76 comidas semanales, con una desviación
+estándar de 0.75, también por semana. Construya el intervalo de confianza de 97% de la media
+poblacional.
+37. La National Collegiate Athletic Association (NCAA) informó que la cantidad media de horas sema-
+nales que los asistentes de los entrenadores de fútbol invierten en entrenamiento y reclutamiento
+durante la temporada es de 70
+
+[Bloque seleccionado #352 | relevancia=16]
+Pagina 351
+Un total de 560 entrevistados eligió la primera afirmación e indicó que considera que el presiden-
+te realiza un buen trabajo.
+a) Construya el intervalo de confianza de 95% de la proporción de entrevistados que piensan que
+el presidente hace un buen trabajo.
+b) Con base en el intervalo del inciso a), ¿es razonable llegar a la conclusión de que la mayoría
+(más de la mitad) de la población considera que el presidente realiza un buen trabajo?
+51. Edward Wilkin, jefe de la policía de River City, informa que hubo 500 infracciones de tránsito el mes
+pasado. Una muestra de 35 de estas infracciones mostró que la suma media de las multas fue de
+$54, con una desviación estándar de $4.50. Construya el intervalo de confianza de 95% de la
+suma media de una infracción en River City.
+52. El First National Bank de Wilson tiene 650 clientes con cuentas de cheques. Una encuesta recien-
+te de 50 de estos clientes mostró que 26 tenían una tarjeta Visa con el banco. Construya el inter-
+valo de confianza de 99% de la proporción de clientes con cuenta de cheques que tienen una
+tarjeta Visa con el banco.
+53. Se estima que 60% de los hogares en Estados Unidos contrata televisión por cable. A usted le
+gustaría verificar esta afirmación para su clase de comunicación masiva. Si desea que su estima-
+dor se encuentre a menos de 5 puntos porcentuales con un nivel de confianza de 95%, ¿qué tama-
+ño de muestra requiere?
+54. Usted necesita calcular la cantidad media de días que viajan al año los vendedores. La media de
+un pequeño estudio piloto fue de 150 días, con una desviación estándar de 14 días. Si usted debe
+calcular la media poblacional a menos de 2 días, ¿a cuántos vendedores debe incluir en la mues-
+tra? Utilice un intervalo de confianza de 90 por ciento.
+55. Usted va a llevar a cabo el sondeo de una muestra para determinar el ingreso medio familiar en un
+área rural del centro de Florida. La pregunta es: ¿a cuántas familias se debe incluir en la muestra?
+En una muestra piloto de 10 familias, la desviación estándar de la muestra fue de $500. El patro-
+cinador de la encuesta desea que usted utilice un nivel de confianza de 95%. El estimador debe
+estar dentro de un margen de $100. ¿A cuántas familias debe entrevistar?
+56. Families USA, revista mensual que trata temas relacionados con la salud y sus costos, encuestó a
+20 de sus suscriptores. Encontró que las primas anuales de seguros de salud para una familia con
+cobertura de una empresa promediaron $10 979. La desviación estándar de la muestra fue de
+$1 000.
+a) Con base en la información de esta muestra, construya el int
+
+[Bloque seleccionado #353 | relevancia=26]
+Pagina 352
+61. Una encuesta a 36 propietarios de iPhone seleccionados al azar mostró que el precio de compra
+tiene una media de $416, con una desviación estándar muestral de $180.
+a) Calcule el error estándar de la media muestral.
+b) Calcule el intervalo de confianza de 95% de la media.
+c) ¿De qué tamaño debe ser la muestra para estimar la media poblacional dentro de $10?
+62. Usted planea llevar a cabo una encuesta para hallar la proporción de fuerza laboral con dos o más
+trabajos. Decide con base en un nivel de confianza de 95%, y establece que la proporción estima-
+da debe encontrarse en un margen de menos de 2% de la proporción poblacional. Una encuesta
+piloto revela que 5 de 50 de los entrevistados tenían dos o más trabajos. ¿A cuántos trabajadores
+debe entrevistar para satisfacer los requisitos?
+63. La proporción de contadores públicos que cambiaron de empresa en los últimos tres años se debe
+calcular con un margen de 3%. Es necesario utilizar el nivel de confianza de 95%. Un estudio que
+se realizó hace varios años reveló que el porcentaje de contadores públicos que cambió de com-
+pañía en tres años fue de 21.
+a) Para actualizar el estudio, ¿cuál es el número de expedientes de contadores públicos que se
+deben estudiar?
+b) ¿Con cuántos contadores públicos es necesario ponerse en contacto si no se cuenta con esti-
+madores anteriores de la proporción poblacional?
+64. Como parte de una revisión anual de sus cuentas, un corredor selecciona una muestra aleatoria
+de 36 clientes. Al revisar sus cuentas, calculó una media de $32 000, con una desviación estándar
+muestral de $8 200. ¿Cuál es el intervalo de confianza de 90% del valor medio de las cuentas de
+la población de clientes?
+65. El Registro Nacional de Control de peso trata de obtener secretos de éxito de gente que ha per-
+dido cuando menos 30 libras y mantuvo su peso por al menos un año. La dependencia reporta
+que de 2 700 registrados, 459 estuvieron en una dieta baja en carbohidratos (menos de 90 gramos
+al día).
+a) Construya el intervalo de confianza de 95% de esta fracción.
+b) ¿Es posible que el porcentaje de la población sea 18 por ciento?
+c) ¿Qué tan grande debe ser la muestra para estimar la proporción dentro de 0.5 por ciento?
+66. Cerca ya de las elecciones, un servicio de noticias por cable conduce una encuesta de opinión de
+1 000 probables votantes. El resultado muestra que el contendiente republicano tiene una ventaja
+de 52 a 48 por ciento.
+a) Construya el intervalo de confianza de 95% de la proporción que favorece al candidato repu-
+blicano.
+b) Calcule la probabilidad de que el candidato dem
+
+[Bloque seleccionado #453 | relevancia=18]
+Pagina 452
+tico, o MSE, y se determina mediante SSE/(n – k). Un intervalo de confianza de la diferencia
+entre dos poblaciones se obtiene mediante:
+INTERVALO DE CONFIANZA DE LA DIFERENCIA
+(12-5)
+donde:
+es la media de la primera muestra.
+es la media de la segunda muestra.
+t se obtiene del apéndice B.2. Los grados de libertad son iguales a n – k.
+MSE es el error medio cuadrático que se obtuvo de la tabla ANOVA [SSE/(n – k)].
+n1 es el número de observaciones en la primera muestra.
+n2 es el número de observaciones en la segunda muestra.
+¿Cómo se decide si hay una diferencia entre las medias de tratamiento? Si el intervalo de
+confianza incluye cero, no existe diferencia entre ellas. Por ejemplo, si el punto extremo
+izquierdo del intervalo de confianza tiene signo negativo y el punto extremo derecho tiene
+signo positivo, el intervalo incluye cero, y las dos medias no difieren. Por lo tanto, si se des-
+arrolla un intervalo de confianza a partir de la fórmula (12-5) y se tiene que la diferencia entre las
+medias muestrales fue 5.00, es decir, si 
+y 
+, el intervalo de
+confianza variará de 7.00 hasta 17.00. Expresado en símbolos:
+Observe que en este intervalo se incluye el cero. Por ello, se concluye que no hay una diferen-
+cia significativa entre las medias de tratamiento seleccionadas.
+Por otro lado, si los puntos extremos del intervalo de confianza tienen el mismo signo,
+esto indica que las medias de tratamiento difieren. Por ejemplo, si 
+y
+el intervalo de confianza variará de 0.60 hasta 0.10. Como
+0.60 y 0.10 tienen el mismo signo, ambos negativos, cero no se encuentra en el intervalo
+y se concluye que estas medias de tratamiento difieren.
+Use el ejemplo anterior sobre las aerolíneas para calcular el intervalo de confianza de la
+diferencia entre las calificaciones medias de los pasajeros de las aerolíneas Northern y
+Branson. Con un nivel de confianza de 95%, los puntos extremos del intervalo de confianza
+son 10.46 y 26.04.
+donde:
+es 87.25.
+es 69.00
+t es 2.101: del apéndice B.2 con (n – k)  22 – 4  18 grados de libertad.
+MSE es 33.0: de la tabla ANOVA con SSE/(n – k)  594.4/18.
+nE es 4.
+nUS es 6.
+El intervalo de confianza de 95% varía de 10.46 hasta 26.04. Los dos puntos extremos son
+positivos; de aquí se puede concluir que estas medias de tratamiento difieren de manera sig-
+XUS
+XA
+  18.25 
+ 7.79
+ (XA  XUS) 
+ tBMSEa 1
+nA
+ 1
+nUS
+b  (87.25  69.00) 
+ 2.101B33.0a1
+4  1
+6b
+tBMSEa 1
+n1
+ 1
+n2
+b  0.25,
+X1  X2  0.35
+(X1  X2)  tBMSEa 1
+n1
+ 1
+n2
+b  5.00  12.00  7.00 hasta 17.00
+tBMSEa 1
+n1
+ 1
+n2
+b  12
+X1  X2  5
+X2
+X1
+(X1  X2) 
+ tBMSEa 1
+n1
+ 1

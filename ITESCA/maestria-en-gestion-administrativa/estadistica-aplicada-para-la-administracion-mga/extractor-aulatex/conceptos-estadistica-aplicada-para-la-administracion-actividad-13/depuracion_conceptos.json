@@ -1,0 +1,102 @@
+{
+  "subject_slug": "estadistica-aplicada-para-la-administracion",
+  "engine": "Amazon Nova Pro",
+  "kept": [
+    "métodos de distribución libre y robustez ante asimetría",
+    "escalas de medición nominal y ordinal en gestión",
+    "diferencias estructurales entre pruebas paramétricas y no paramétricas",
+    "prueba de bondad de ajuste de Kolmogorov-Smirnov",
+    "prueba de los signos para datos pareados",
+    "prueba de rangos con signo de Wilcoxon",
+    "prueba U de Mann-Whitney para dos muestras independientes",
+    "prueba H de Kruskal-Wallis como alternativa al ANOVA",
+    "prueba Ji-cuadrada de bondad de ajuste e independencia",
+    "prueba de rachas de Wald-Wolfowitz para aleatoriedad",
+    "distribución",
+    "diferencia",
+    "correlación",
+    "estadístico"
+  ],
+  "conceptos_clave_nova_pro": [
+    {
+      "concepto": "métodos de distribución libre y robustez ante asimetría",
+      "definicion_rigurosa": "Los métodos de distribución libre son técnicas estadísticas que no requieren que los datos sigan una distribución específica, lo que los hace robustos ante asimetrías y otras desviaciones de la normalidad. Estas pruebas son especialmente útiles cuando los datos no cumplen los supuestos de normalidad requeridos por las pruebas paramétricas.",
+      "formulacion_matematica_latex": "No aplicable en este contexto",
+      "aplicacion_administrativa": "En la gestión administrativa, estos métodos permiten a los gerentes tomar decisiones basadas en datos que no siguen una distribución normal, lo que es común en muchas situaciones del mundo real.",
+      "fuente_principal": "Levin y Rubin, 2012",
+      "localizador": "libro-estadistica-para-administracion-y-economia-levin-A13.txt (bloque 1)"
+    },
+    {
+      "concepto": "escalas de medición nominal y ordinal en gestión",
+      "definicion_rigurosa": "Las escalas de medición nominal y ordinal son tipos de datos que se utilizan en estadística no paramétrica. La escala nominal clasifica datos en categorías sin orden (por ejemplo, género), mientras que la escala ordinal clasifica datos en categorías con un orden específico (por ejemplo, niveles de satisfacción).",
+      "formulacion_matematica_latex": "No aplicable en este contexto",
+      "aplicacion_administrativa": "En la gestión, estas escalas son utilizadas para clasificar y ordenar datos cualitativos, lo que permite a los gerentes evaluar y comparar diferentes aspectos de la organización.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "libro-estadistica-aplicada-a-los-negocios-y-la-economi-A13.txt (bloque 4)"
+    },
+    {
+      "concepto": "diferencias estructurales entre pruebas paramétricas y no paramétricas",
+      "definicion_rigurosa": "Las pruebas paramétricas asumen que los datos siguen una distribución específica (generalmente normal), mientras que las pruebas no paramétricas no requieren esta suposición. Las pruebas paramétricas son más potentes cuando los supuestos se cumplen, pero las pruebas no paramétricas son más robustas y flexibles en situaciones donde los datos no siguen una distribución normal.",
+      "formulacion_matematica_latex": "No aplicable en este contexto",
+      "aplicacion_administrativa": "En la práctica administrativa, la elección entre pruebas paramétricas y no paramétricas depende de la naturaleza de los datos y de los supuestos que se pueden hacer sobre ellos.",
+      "fuente_principal": "Lind, Marchal y Wathen, 2012",
+      "localizador": "libro-estadistica-aplicada-a-los-negocios-y-la-economi-A13.txt (bloque 4)"
+    },
+    {
+      "concepto": "prueba de bondad de ajuste de Kolmogorov-Smirnov",
+      "definicion_rigurosa": "La prueba de Kolmogorov-Smirnov es una prueba no paramétrica que se utiliza para determinar si una muestra proviene de una distribución específica. Compara la función de distribución empírica de la muestra con la función de distribución teórica.",
+      "formulacion_matematica_latex": "D = \\sup_x |F_n(x) - F(x)|",
+      "aplicacion_administrativa": "En la gestión, esta prueba puede ser utilizada para evaluar si los datos de un proceso siguen una distribución esperada, lo que puede ser útil para la mejora continua y el control de calidad.",
+      "fuente_principal": "Levin y Rubin, 2012",
+      "localizador": "libro-estadistica-para-administracion-y-economia-levin-A13.txt (bloque 1)"
+    },
+    {
+      "concepto": "prueba de los signos para datos pareados",
+      "definicion_rigurosa": "La prueba de los signos es una prueba no paramétrica que se utiliza para determinar si hay una diferencia significativa entre dos muestras emparejadas. Se basa en el conteo de los signos (positivos o negativos) de las diferencias entre los pares.",
+      "formulacion_matematica_latex": "S = \\sum_{i=1}^{n} \\text{signo}(X_i - Y_i)",
+      "aplicacion_administrativa": "En la gestión, esta prueba puede ser utilizada para evaluar si hay una diferencia significativa en el rendimiento antes y después de una intervención, como una capacitación o un cambio en el proceso.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "libro-estadistica-aplicada-a-los-negocios-y-la-economi-A13.txt (bloque 4)"
+    },
+    {
+      "concepto": "prueba de rangos con signo de Wilcoxon",
+      "definicion_rigurosa": "La prueba de rangos con signo de Wilcoxon es una prueba no paramétrica que se utiliza para comparar dos muestras emparejadas. Asigna rangos a las diferencias absolutas entre los pares y luego suma los rangos de los signos positivos y negativos.",
+      "formulacion_matematica_latex": "W = \\sum \\text{rangos de las diferencias positivas}",
+      "aplicacion_administrativa": "En la gestión, esta prueba puede ser utilizada para evaluar si hay una diferencia significativa en el rendimiento entre dos condiciones diferentes, como dos métodos de trabajo.",
+      "fuente_principal": "Wackerly et al., 2010",
+      "localizador": "libro-estadistica-matematica-con-aplicaciones-wackerly-A13.txt (bloque 2)"
+    },
+    {
+      "concepto": "prueba U de Mann-Whitney para dos muestras independientes",
+      "definicion_rigurosa": "La prueba U de Mann-Whitney es una prueba no paramétrica que se utiliza para comparar dos muestras independientes. Asigna rangos a todos los datos combinados y luego calcula la suma de los rangos para cada muestra.",
+      "formulacion_matematica_latex": "U = R_1 - \\frac{n_1(n_1 + 1)}{2}",
+      "aplicacion_administrativa": "En la gestión, esta prueba puede ser utilizada para evaluar si hay una diferencia significativa en el rendimiento entre dos grupos diferentes, como dos equipos de trabajo.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "libro-estadistica-aplicada-a-los-negocios-y-la-economi-A13.txt (bloque 1)"
+    },
+    {
+      "concepto": "prueba H de Kruskal-Wallis como alternativa al ANOVA",
+      "definicion_rigurosa": "La prueba H de Kruskal-Wallis es una prueba no paramétrica que se utiliza para comparar más de dos muestras independientes. Es una alternativa al ANOVA cuando los datos no cumplen los supuestos de normalidad.",
+      "formulacion_matematica_latex": "H = \\frac{12}{N(N+1)} \\sum_{i=1}^{k} \\frac{R_i^2}{n_i} - 3(N+1)",
+      "aplicacion_administrativa": "En la gestión, esta prueba puede ser utilizada para evaluar si hay una diferencia significativa en el rendimiento entre más de dos grupos diferentes, como diferentes departamentos de una organización.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "libro-estadistica-aplicada-a-los-negocios-y-la-economi-A13.txt (bloque 2)"
+    },
+    {
+      "concepto": "prueba Ji-cuadrada de bondad de ajuste e independencia",
+      "definicion_rigurosa": "La prueba Ji-cuadrada es una prueba no paramétrica que se utiliza para evaluar la bondad de ajuste de un modelo o la independencia entre dos variables. Compara las frecuencias observadas con las frecuencias esperadas.",
+      "formulacion_matematica_latex": "\\chi^2 = \\sum \\frac{(O_i - E_i)^2}{E_i}",
+      "aplicacion_administrativa": "En la gestión, esta prueba puede ser utilizada para evaluar si los datos siguen una distribución esperada o para determinar si dos variables son independientes.",
+      "fuente_principal": "Levin y Rubin, 2012",
+      "localizador": "libro-estadistica-para-administracion-y-economia-levin-A13.txt (bloque 1)"
+    },
+    {
+      "concepto": "prueba de rachas de Wald-Wolfowitz para aleatoriedad",
+      "definicion_rigurosa": "La prueba de rachas de Wald-Wolfowitz es una prueba no paramétrica que se utiliza para evaluar si una secuencia de datos es aleatoria. Cuenta el número de rachas (secuencias consecutivas de un mismo tipo de dato) y compara con lo esperado en una secuencia aleatoria.",
+      "formulacion_matematica_latex": "R = \\text{número de rachas}",
+      "aplicacion_administrativa": "En la gestión, esta prueba puede ser utilizada para evaluar si un proceso es aleatorio o si hay patrones no deseados.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "libro-estadistica-aplicada-a-los-negocios-y-la-economi-A13.txt (bloque 4)"
+    }
+  ]
+}

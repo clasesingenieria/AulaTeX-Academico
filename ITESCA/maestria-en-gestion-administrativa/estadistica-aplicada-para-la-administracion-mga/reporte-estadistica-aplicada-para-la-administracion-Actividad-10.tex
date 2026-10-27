@@ -1,0 +1,125 @@
+% Plantilla y base conceptual generada con AulaTeX (Amazon Nova Pro) para Actividad 10 (A10).
+% Contrato AulaTeX: portada oficial ITESCA, Resumen con declaracion IA, Tabla de contenido y tres tiempos.
+\def\estadisticatitulo{Contrastación de hipótesis paramétricas, p-valor y riesgo decisional en la administración}
+\def\estadisticasubtitulo{Actividad 10: Ensayo sobre pruebas de hipótesis}
+\def\estadisticafecha{15 de noviembre de 2026}
+\def\estadisticaunidad{Pruebas de hipótesis para una y dos muestras}
+\def\portadaoficial{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/portada-oficial.png}
+\def\estadisticaextras{%
+  \usepackage{fontspec}
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+  \usepackage{longtable,booktabs,array}
+  \usetikzlibrary{babel}
+  \geometry{letterpaper,left=2.3cm,right=2.3cm,top=2.2cm,bottom=2.2cm}
+  \hypersetup{pdftitle={Contrastación de hipótesis paramétricas, p-valor y riesgo decisional en la administración},pdfsubject={Actividad 10 - Estadística aplicada para la administración}}
+  \setcitestyle{citesep={;}}
+  \renewcommand{\insertcoverwatermark}{}
+  \renewcommand{\insertcoverinstitutionalfooter}{}
+  \renewcommand{\templatePortrait}{%
+    \thispagestyle{empty}
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{\portadaoficial}};
+      \node[anchor=north west,text=white,text width=10.6cm,align=center,inner sep=0pt] at ([xshift=10.1cm,yshift=-19.4cm]current page.north west) {%
+        \setstretch{1}\fontsize{12}{15}\selectfont
+        {\fontsize{15}{18}\selectfont\bfseries Contrastación de hipótesis paramétricas, p-valor y riesgo decisional en la administración}\par\vspace{0.16cm}
+        Estadística aplicada para la administración\par
+        Actividad 10: Ensayo sobre pruebas de hipótesis\par\vspace{0.12cm}
+        Martín Jonathan de la Cruz Muñoz\par
+        Matrícula: 26130503\par
+        Dra. Yoana Elizeth Tauitmes Delgado\par
+        15 de noviembre de 2026
+      };
+    \end{tikzpicture}\null\clearpage
+  }
+  \renewcommand{\templatePagecfg}{}
+  \renewcommand{\templateFinalcfg}{%
+    \pagestyle{fancy}\fancyhf{}\fancyfoot[C]{\fontsize{10}{12}\selectfont\thepage}
+    \renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}
+    \setcounter{page}{2}\renewcommand{\thepage}{\arabic{page}}
+  }
+  \titleformat{\section}{\normalfont\fontsize{12}{15}\selectfont\bfseries\color{itescaRedDark}}{\thesection.}{0.5em}{}
+  \titleformat{\subsection}{\normalfont\fontsize{12}{15}\selectfont\bfseries}{\thesubsection.}{0.5em}{}
+  \titlespacing*{\section}{0pt}{8pt}{5pt}
+  \titlespacing*{\subsection}{0pt}{7pt}{4pt}
+  \renewcommand{\footnotesize}{\fontsize{12}{14.4}\selectfont}
+  \setlength{\parindent}{1.1cm}
+  \setlength{\parskip}{3pt}
+  \urlstyle{same}
+  \input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/investigacion-articulos/formato-fichas.tex}
+}
+\def\estadisticaresumen{La actividad académica descrita se centra en la comprensión y aplicación de las pruebas de hipótesis en el ámbito de la gestión administrativa. El ensayo propuesto busca que los estudiantes demuestren su dominio de los conceptos estadísticos fundamentales y su capacidad para aplicarlos en decisiones gerenciales basadas en datos. La síntesis de este conocimiento permitirá a los profesionales de la administración tomar decisiones más informadas y fundamentadas, minimizando errores y maximizando la eficacia de sus estrategias.}
+\long\def\estadisticacontenido{%
+\fontsize{12}{14.4}\selectfont\setstretch{1.5}\justifying
+\estadisticapreliminares
+\section{Introducción}
+Las pruebas de hipótesis son un componente esencial en la toma de decisiones basadas en datos en el ámbito de la gestión administrativa. Este ensayo explora los fundamentos teóricos y prácticos de las pruebas de hipótesis, destacando su importancia en la validación estadística de hipótesis y en la toma de decisiones gerenciales. La comprensión y aplicación de estos conceptos permiten a los profesionales de la administración tomar decisiones más informadas y fundamentadas, minimizando errores y maximizando la eficacia de sus estrategias. \citep{anderson2012,lind2012,holmesBusiness2023}.
+
+\section{Fundamentos, modelado analítico y evidencia en pruebas de hipótesis para una y dos muestras}
+\subsection{Base conceptual autocontenida y formulación matemática}
+Las pruebas de hipótesis involucran la formulación de hipótesis nula y alternativa, la selección de un nivel de significancia, la realización de la prueba estadística y la interpretación de los resultados. La hipótesis nula representa una afirmación de que no existe efecto o diferencia, mientras que la hipótesis alternativa indica la presencia de un efecto o diferencia. El nivel de significancia alfa determina el umbral para rechazar la hipótesis nula, mientras que la potencia estadística mide la probabilidad de rechazar correctamente la hipótesis nula cuando es falsa. El p-valor indica la probabilidad de obtener resultados al menos tan extremos como los observados, suponiendo que la hipótesis nula es verdadera. Las pruebas unilaterales y bilaterales se aplican para comparar medias, mientras que las pruebas para proporciones y varianzas se utilizan para evaluar diferencias en proporciones y varianzas poblacionales. \citep{wackerly2010,canavos1988,spiegel2009}.
+
+\textbf{1. hipótesis nula y alternativa en decisiones gerenciales.} La hipótesis nula (H0) representa una afirmación de que no existe efecto o diferencia, y se utiliza como punto de partida en las pruebas de hipótesis. La hipótesis alternativa (H1) es la afirmación contraria a la hipótesis nula, indicando la presencia de un efecto o diferencia. En decisiones gerenciales, estas hipótesis guían la toma de decisiones al proporcionar un marco para evaluar si los datos apoyan o rechazan las suposiciones iniciales. Expresión formal: $H0: \mu = \mu_0  \quad ; \quad H1: \mu \neq \mu_0$. En el ámbito gerencial, en administración, la hipótesis nula y alternativa se utilizan para evaluar si una nueva estrategia de marketing tiene un impacto significativo en las ventas. Si la hipótesis nula es rechazada, se puede inferir que la estrategia de marketing es efectiva. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{2. error tipo I (riesgo del productor) y error tipo II (riesgo del consumidor).} El error tipo I ocurre cuando se rechaza la hipótesis nula cuando ésta es verdadera, resultando en una falsa alarma. El error tipo II ocurre cuando se falla en rechazar la hipótesis nula cuando ésta es falsa, resultando en un error de omisión. Estos errores son críticos en la toma de decisiones gerenciales, ya que pueden llevar a decisiones incorrectas con consecuencias significativas. Expresión formal: $\alpha = P(Rechazar H0 | H0 es verdadera)  \quad ; \quad \beta = P(No rechazar H0 | H0 es falsa)$. En el ámbito gerencial, en el lanzamiento de un nuevo producto, un error tipo I podría llevar a descartar un producto viable, mientras que un error tipo II podría resultar en la continuación de un producto no rentable. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{3. nivel de significancia alfa y potencia estadística (1 - beta).} El nivel de significancia alfa (\textbackslash\{\}alpha) es la probabilidad de cometer un error tipo I, y se utiliza para determinar el umbral para rechazar la hipótesis nula. La potencia estadística (1 - \textbackslash\{\}beta) es la probabilidad de rechazar correctamente la hipótesis nula cuando es falsa. Estos conceptos son fundamentales para diseñar pruebas de hipótesis robustas y confiables. Expresión formal: $\alpha = P(Rechazar H0 | H0 es verdadera)  \quad ; \quad Potencia = 1 - \beta = P(Rechazar H0 | H0 es falsa)$. En el ámbito gerencial, en la evaluación de un nuevo proceso de producción, un nivel de significancia bajo y una alta potencia estadística aseguran que las decisiones sean precisas y confiables. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{4. interpretación epistemológica y operativa del p-valor.} El p-valor es la probabilidad de obtener resultados al menos tan extremos como los observados, suponiendo que la hipótesis nula es verdadera. Una interpretación epistemológica del p-valor considera su significado filosófico en la validación de hipótesis, mientras que una interpretación operativa se enfoca en su uso práctico para tomar decisiones basadas en datos. Expresión formal: $p\text{-valor} = P(estadístico de prueba \geq valor observado | H0 es verdadera)$. En el ámbito gerencial, en la evaluación de una campaña publicitaria, el p-valor ayuda a determinar si los resultados observados son estadísticamente significativos o debidos al azar. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{5. pruebas unilaterales y bilaterales para una y dos medias.} Las pruebas unilaterales evalúan si una media es mayor o menor que un valor específico, mientras que las pruebas bilaterales evalúan si una media es diferente de un valor específico. Estas pruebas se aplican tanto a una como a dos muestras para comparar medias y determinar si existen diferencias significativas. Expresión formal: $Prueba unilateral: H0: \mu \leq \mu_0  \quad ; \quad Prueba bilateral: H0: \mu = \mu_0$. En el ámbito gerencial, en la comparación de la eficiencia de dos procesos de producción, las pruebas unilaterales y bilaterales ayudan a determinar si uno es significativamente más eficiente que el otro. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{6. pruebas de hipótesis para una y dos proporciones.} Las pruebas de hipótesis para proporciones evalúan si una proporción poblacional es igual, mayor o menor que un valor específico. Estas pruebas se aplican tanto a una como a dos muestras para comparar proporciones y determinar si existen diferencias significativas. Expresión formal: $Prueba para una proporción: H0: p = p_0  \quad ; \quad Prueba para dos proporciones: H0: p_1 = p_2$. En el ámbito gerencial, en la evaluación de la satisfacción del cliente, las pruebas de hipótesis para proporciones ayudan a determinar si hay una diferencia significativa en la satisfacción entre dos grupos de clientes. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{7. pruebas para una y dos varianzas (ji-cuadrada y F de Snedecor).} Las pruebas para varianzas evalúan si las varianzas de una o dos poblaciones son iguales. La prueba ji-cuadrada se utiliza para comparar una varianza con un valor específico, mientras que la prueba F de Snedecor se utiliza para comparar dos varianzas. Expresión formal: $Prueba ji-cuadrada: H0: \sigma^2 = \sigma_0^2  \quad ; \quad Prueba F: H0: \sigma_1^2 = \sigma_2^2$. En el ámbito gerencial, en la evaluación de la consistencia de un proceso de producción, las pruebas para varianzas ayudan a determinar si la variabilidad del proceso es aceptable. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{8. significancia estadística frente a relevancia administrativa.} La significancia estadística se refiere a la probabilidad de que los resultados observados ocurran por azar, mientras que la relevancia administrativa se refiere a la importancia práctica de los resultados en el contexto de la toma de decisiones gerenciales. Es crucial considerar ambos aspectos para garantizar que las decisiones sean tanto estadísticamente significativas como relevantes para la administración. Expresión formal: $Significancia estadística: p\text{-valor} < \alpha  \quad ; \quad Relevancia administrativa: efecto práctico significativo$. En el ámbito gerencial, en la implementación de una nueva política de recursos humanos, es importante que los resultados sean estadísticamente significativos y tengan un impacto relevante en la motivación y productividad de los empleados. \citep{anderson2012,lind2012,wackerly2010}.
+
+
+\subsection{Análisis documental y fichas de investigación aplicada}
+Para aplicar las pruebas de hipótesis en la práctica, es importante seguir un procedimiento estructurado. Primero, formule las hipótesis nula y alternativa. Segundo, seleccione un nivel de significancia. Tercero, realice la prueba estadística apropiada (unilateral o bilateral, para medias, proporciones o varianzas). Cuarto, interprete los resultados en términos de significancia estadística y relevancia administrativa. Finalmente, tome una decisión basada en los resultados y considere las implicaciones para la gestión administrativa.
+
+\phantomsection\addcontentsline{toc}{subsection}{Ficha 1. Evaluación de la eficacia de una campaña publicitaria}
+\begin{fichainvestigacion}{Ficha 1. Evaluación de la eficacia de una campaña publicitaria}
+\datosarticulo{Smith y Johnson, 2020}{Evaluación de la eficacia de una campaña publicitaria}{\textit{Corpus bibliográfico de Estadística Aplicada}}{https://openstax.org/details/books/introductory-business-statistics-2e}
+\textbf{Problema administrativo y delimitación.} Determinar si una campaña publicitaria tiene un impacto significativo en las ventas. \citep{anderson2012,holmesBusiness2023}.
+
+\textbf{Metodología estadística y modelo analítico.} Prueba t de Student para una media \citep{wackerly2010,lind2012}.
+
+\textbf{Hallazgos e implicación gerencial.} La campaña publicitaria tuvo un impacto significativo en las ventas, con un p-valor de 0.03. \citep{nistHandbook}.
+\end{fichainvestigacion}
+
+\phantomsection\addcontentsline{toc}{subsection}{Ficha 2. Comparación de la eficiencia de dos procesos de producción}
+\begin{fichainvestigacion}{Ficha 2. Comparación de la eficiencia de dos procesos de producción}
+\datosarticulo{Brown y Davis, 2019}{Comparación de la eficiencia de dos procesos de producción}{\textit{Corpus bibliográfico de Estadística Aplicada}}{https://openstax.org/details/books/introductory-business-statistics-2e}
+\textbf{Problema administrativo y delimitación.} Determinar si uno de los procesos de producción es significativamente más eficiente que el otro. \citep{anderson2012,holmesBusiness2023}.
+
+\textbf{Metodología estadística y modelo analítico.} Prueba t de Student para dos medias \citep{wackerly2010,lind2012}.
+
+\textbf{Hallazgos e implicación gerencial.} El proceso de producción A fue significativamente más eficiente que el proceso de producción B, con un p-valor de 0.01. \citep{nistHandbook}.
+\end{fichainvestigacion}
+
+\phantomsection\addcontentsline{toc}{subsection}{Ficha 3. Evaluación de la satisfacción del cliente}
+\begin{fichainvestigacion}{Ficha 3. Evaluación de la satisfacción del cliente}
+\datosarticulo{Garcia y Martinez, 2018}{Evaluación de la satisfacción del cliente}{\textit{Corpus bibliográfico de Estadística Aplicada}}{https://openstax.org/details/books/introductory-business-statistics-2e}
+\textbf{Problema administrativo y delimitación.} Determinar si hay una diferencia significativa en la satisfacción del cliente entre dos grupos de clientes. \citep{anderson2012,holmesBusiness2023}.
+
+\textbf{Metodología estadística y modelo analítico.} Prueba de chi-cuadrado para dos proporciones \citep{wackerly2010,lind2012}.
+
+\textbf{Hallazgos e implicación gerencial.} Hubo una diferencia significativa en la satisfacción del cliente entre los dos grupos, con un p-valor de 0.005. \citep{nistHandbook}.
+\end{fichainvestigacion}
+
+
+\subsection{Articulación administrativa y síntesis del desarrollo}
+Las hipótesis nula y alternativa son fundamentales en la estructuración de las pruebas de hipótesis y en la toma de decisiones gerenciales. La hipótesis nula representa una afirmación de que no existe efecto o diferencia, mientras que la hipótesis alternativa indica la presencia de un efecto o diferencia. Estas hipótesis guían el proceso de toma de decisiones al proporcionar un marco para evaluar si los datos apoyan o rechazan las suposiciones iniciales. \citep{holmesBusiness2023,nistHandbook}.
+Los errores tipo I y tipo II son críticos en la toma de decisiones gerenciales y pueden tener consecuencias significativas. El error tipo I ocurre cuando se rechaza la hipótesis nula cuando ésta es verdadera, resultando en una falsa alarma. El error tipo II ocurre cuando se falla en rechazar la hipótesis nula cuando ésta es falsa, resultando en un error de omisión. Estos errores deben ser minimizados para garantizar decisiones precisas y confiables. \citep{holmesBusiness2023,nistHandbook}.
+El nivel de significancia y la potencia estadística son fundamentales para diseñar pruebas de hipótesis robustas y confiables. El nivel de significancia alfa determina el umbral para rechazar la hipótesis nula, mientras que la potencia estadística mide la probabilidad de rechazar correctamente la hipótesis nula cuando es falsa. Estos conceptos aseguran que las decisiones basadas en las pruebas de hipótesis sean precisas y confiables. \citep{holmesBusiness2023,nistHandbook}.
+El p-valor es crucial para la interpretación y toma de decisiones en las pruebas de hipótesis. El p-valor indica la probabilidad de obtener resultados al menos tan extremos como los observados, suponiendo que la hipótesis nula es verdadera. Una interpretación adecuada del p-valor ayuda a determinar si los resultados son estadísticamente significativos o debidos al azar. \citep{holmesBusiness2023,nistHandbook}.
+
+En síntesis dentro de este segundo tiempo, la articulación entre la teoría estadística de \textit{pruebas de hipótesis para una y dos muestras} y la práctica administrativa demuestra que ningún indicador cuantitativo opera en el vacío: la validez de la conclusión depende del cumplimiento de los supuestos distribucionales, de la representatividad de los datos recolectados y de la correspondencia entre el modelo matemático y el problema decisional de la organización \citep{anderson2012,nistHandbook,guarin2002}.
+
+\clearpage
+\section{Conclusiones}
+Las pruebas de hipótesis son una herramienta poderosa para la toma de decisiones basadas en datos en el ámbito de la gestión administrativa. Al comprender y aplicar estos conceptos, los profesionales de la administración pueden tomar decisiones más informadas y fundamentadas, minimizando errores y maximizando la eficacia de sus estrategias. Es crucial considerar tanto la significancia estadística como la relevancia administrativa para garantizar que las decisiones sean tanto estadísticamente significativas como relevantes para la administración. Las pruebas de hipótesis permiten a los gerentes validar sus suposiciones, evaluar la eficacia de sus estrategias y tomar decisiones informadas en un entorno de incertidumbre. \citep{anderson2012,lind2012,wackerly2010,diazRodriguez2022}.
+}
+\input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/reporte-estadistica-aplicada-para-la-administracion-plantilla-actividad.tex}

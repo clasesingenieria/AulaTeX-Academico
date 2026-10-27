@@ -1,0 +1,791 @@
+Fuente bibliográfica: Estadística aplicada a los negocios y la economía - Lind, Marchal y Wathen. 15.ª edición.pdf
+Actividad: 21 (7.2 Investigación 4% Tarea)
+Palabras clave: regresión lineal, productividad, rentabilidad, ventas, costos, ANOVA, mínimos cuadrados, desempeño
+
+[Bloque seleccionado #489 | relevancia=17]
+Pagina 488
+13.2 ¿Qué es el análisis de correlación?
+Cuando se estudia la relación entre dos variables en escala de intervalo (o de razón), es usual
+comenzar con un diagrama de dispersión. Este procedimiento proporciona una representación
+visual de la relación entre las variables. El siguiente paso suele ser calcular el coeficiente de
+correlación, que brinda una medida cuantitativa de la fuerza de la relación entre dos variables.
+Como ejemplo, suponga que el gerente de ventas de Copier Sales of America, que tiene una
+fuerza de ventas muy grande en Estados Unidos y Canadá, desea determinar si hay alguna
+relación entre el número de llamadas de ventas en un mes y el número de copiadoras que se
+vendieron en él. El gerente selecciona una muestra aleatoria de 10 representantes de ventas y
+determina el número de llamadas de ventas que cada uno hizo el mes pasado y el número de
+copiadoras que vendió. La información muestral aparece en la tabla 13-1.
+13.2 ¿Qué es el análisis de correlación?
+463
+ta reveló algo interesante.
+En el día del accidente,
+los títulos de Morton
+Thiokol bajaron 11.86% y
+mientras que las de los
+otros tres contratistas sólo
+perdieron de 2 a 3%. ¿Es
+posible concluir que en
+los mercados financieros
+se anticipó el resultado de
+la investigación?
+TABLA 13-1 Número de llamadas de ventas y copiadoras vendidas por cada empleado
+Representante
+Número de
+Número de
+de ventas
+llamadas de ventas
+copiadoras vendidas
+Tom Keller
+20
+30
+Jeff Hall
+40
+60
+Brian Virost
+20
+40
+Greg Fish
+30
+60
+Susan Welch
+10
+30
+Carlos Ramírez
+10
+40
+Rich Niles
+20
+40
+Mike Kiel
+20
+50
+Mark Reynolds
+20
+30
+Soni Jones
+30
+70
+ANÁLISIS DE CORRELACIÓN Grupo de técnicas para medir la asociación entre dos variables.
+Al revisar los datos se observa que parece haber una relación entre el número de llama-
+das de ventas y el número de unidades vendidas. Es decir, los vendedores que hicieron más
+llamadas de venta vendieron más unidades. Sin embargo, la relación no es “perfecta” o exac-
+ta. Por ejemplo, Soni Jones hizo menos llamadas de ventas que Jeff Hall, pero vendió más uni-
+dades.
+Además de las técnicas de graficado expuestas en el capítulo 4, desarrollaremos medi-
+ciones numéricas para representar de manera más precisa la relación entre ambas variables:
+llamadas de ventas y copiadoras vendidas. Este grupo de técnicas estadísticas se denomina
+análisis de correlación.
+Ejemplo
+Copier Sales of America vende copiadoras a empresas de todos los tamaños en Estados
+Unidos y Canadá. Hace poco ascendieron a la señora Marcy Bancer al puesto de gerente
+nacional de ventas. A la siguiente junta de ventas asistirá
+
+[Bloque seleccionado #490 | relevancia=14]
+Pagina 489
+464
+CAPÍTULO 13 Regresión lineal y correlación
+Solución
+Con base en la información de la tabla 13-1, la señora Bancer sospecha que hay una relación
+entre el número de llamadas de venta hechas en un mes y el número de copiadoras vendidas.
+Soni Jones vendió más copiadoras el mes anterior, y fue una de las tres representantes que
+hicieron 30 llamadas o más. Por otro lado, Susan Welch y Carlos Ramírez sólo hicieron 10 lla-
+madas de ventas durante el mes anterior. La señora Welch, junto con otros dos, tuvo el núme-
+ro menor de copiadoras vendidas entre los representantes muestreados.
+La implicación es que el número de copiadoras vendidas se relaciona con el número de
+llamadas de ventas. Conforme aumenta el número de llamadas de venta, parece que el núme-
+ro de copiadoras vendidas también lo hace. De este modo, el número de llamadas de ventas
+se considera variable independiente, y el de copiadoras vendidas, variable dependiente.
+La variable independiente proporciona la base para la estimación. Es la variable predicto-
+ra. Por ejemplo, digamos que se desea predecir el número esperado de copiadoras que se ven-
+derán si un representante realiza 20 llamadas de ventas. Observe que elegimos este valor. La
+variable independiente no es un número aleatorio.
+La variable dependiente es la variable que se desea predecir o estimar. También puede ser
+descrita como el resultado de un valor conocido de la variable independiente. La variable
+dependiente es aleatoria, esto es, por cada valor dado a la variable independiente, existen
+muchos posibles resultados para la variable dependiente. En este ejemplo, note que cinco
+representantes de ventas hicieron 20 llamadas de ventas. El resultado de realizar esta cantidad
+de llamadas se traduce en tres valores distintos de variable dependiente.
+Es práctica común situar la variable dependiente (copiadoras vendidas) en el eje vertical o
+Y y la variable independiente (número de llamadas de ventas) en el eje horizontal o X. Para ela-
+borar un diagrama de dispersión de la información de Copier Sales of America, inicie con el pri-
+mer representante de ventas, Tom Keller, quien hizo 20 llamadas el mes anterior y vendió 30
+copiadoras, por lo cual X  20 y Y  30. Para trazar esta información, a partir del origen vaya
+por el eje horizontal hasta el valor X  20, después haga lo mismo en el eje vertical hasta Y 
+30 y marque un punto en la intersección. Continúe este proceso hasta que trace todos los
+datos pareados, como se muestra en la gráfica 13-1.
+Llamadas 
+de ventas
+Copiadoras vendidas
+0
+10
+20
+30
+40
+50
+80
+70
+60
+50
+40
+30
+20
+10
+0
+G
+
+[Bloque seleccionado #504 | relevancia=18]
+Pagina 503
+13-11 es 132. Las dos sumas son mayores que la suma de la recta de la gráfica 13-9, deter-
+minada mediante el método de los mínimos cuadrados.
+La ecuación de una recta tiene la forma
+478
+CAPÍTULO 13 Regresión lineal y correlación
+Ejemplo
+Recuerde el ejemplo de Copier Sales of America. La gerente de ventas reunió información
+sobre los números de llamadas de ventas y de copiadoras vendidas de una muestra de 10
+representantes de ventas. Como parte de su presentación en la siguiente reunión de ventas, la
+señora Bancer desea presentar información específica acerca de la relación entre el número de
+llamadas y el número de ventas. Con el método de los mínimos cuadrados, determine una
+ecuación lineal que exprese la relación entre ambas variables. ¿Cuál es el número esperado de
+copiadoras vendidas de un representante de ventas que hizo 20 llamadas?
+Solución
+El primer paso para determinar la ecuación de regresión es encontrar la pendiente de la recta de
+regresión de mínimos cuadrados. Es decir, se necesita el valor de b. En la página 468 se deter-
+minó el coeficiente de correlación r (0.759). En la captura de pantalla de Excel de la misma pági-
+na se determinó la desviación estándar de la variable independiente X (9.189) y la desviación
+estándar de la variable dependiente Y (14.337). Los valores están insertados en la fórmula (13-4).
+b  r asy
+sx
+b  .759 a14.337
+9.189 b  1.1842
+FORMA GENERAL DE LA ECUACIÓN DE REGRESIÓN LINEAL
+(13-3)
+Yˆ  a  bX
+donde:
+que se lee Y prima, es el valor de la estimación de la variable Y para un valor X selec-
+cionado.
+a es la intersección Y. Es el valor estimado de Y cuando X  0. En otras palabras, a es
+el valor estimado de Y donde la recta de regresión cruza el eje Y cuando X es cero.
+b es la pendiente de la recta, o el cambio promedio en 
+por cada cambio de una uni-
+dad (ya sea aumento o reducción) de la variable independiente X.
+X es cualquier valor de la variable independiente que se seleccione.
+La forma general de la ecuación de la regresión lineal es exactamente la misma que la
+ecuación de cualquier línea. a es la intersección con Y y b es la pendiente. El propósito de un
+análisis de regresión es calcular los valores de a y b para desarrollar una ecuación lineal que
+se ajuste mejor a los datos.
+Las fórmulas de a y b son:
+Yˆ
+Yˆ,
+donde:
+r es el coeficiente de correlación.
+es la desviación estándar de Y (la variable dependiente).
+es la desviación estándar de X (la variable independiente).
+sx
+sy
+PENDIENTE DE LA RECTA DE REGRESIÓN
+(13-4)
+b  r sy
+sx
+INTERSECCIÓN CON EL EJE Y
+(13-5)
+a  Y  bX
+donde:
+es la media de Y (la
+
+[Bloque seleccionado #505 | relevancia=15]
+Pagina 504
+Trazo de la recta de regresión
+La ecuación de mínimos cuadrados, 
+, se traza en el diagrama de dis-
+persión. El primer representante de ventas de la muestra es Tom Keller, quien hizo 20 llama-
+das. Su número estimado de copiadoras vendidas es 
+42.6316.
+Yˆ  18.9476  1.1842(20) 
+Yˆ  18.9476  1.1842X
+13.5 Análisis de regresión
+479
+Después necesita encontrar el valor de a. Para hacerlo, utilice el valor de b que recién se calcu-
+ló, así como las medias del número de llamadas de ventas y del número de copiadoras vendi-
+das. Estas medias también se encuentran en la impresión de Excel de la página 468. De la
+fórmula (13-5):
+Así, la ecuación de regresión es 
+Por lo tanto, si un vende-
+dor hace 20 llamadas, debería vender 42.6316 copiadoras, número que se determina por
+El valor b de 1.1842 significa que por cada
+llamada de ventas adicional, el vendedor debería aumentar el número de copiadoras vendidas
+en aproximadamente 1.2. En otras palabras, cinco llamadas de ventas adicionales en un mes
+generarán más o menos seis copiadoras más vendidas, número determinado por 1.1842(5) 
+5.921.
+El valor a de 18.9476 es el punto donde la ecuación cruza el eje Y. Una traducción literal
+es que si no se hacen llamadas de ventas, es decir, X  0, se venderán 18.9476 copiadoras.
+Observe que X  0 está fuera del rango de valores incluidos en la muestra y, por lo tanto, no
+se debe emplear para estimar el número de copiadoras vendidas. Las llamadas de ventas va-
+rían de 10 a 40, por lo que las estimaciones se deben hacer dentro de ese rango.
+Yˆ  18.9476  1.1842X  18.9476  1.1842(20).
+Yˆ  18.9476  1.1842X.
+a  Y  bX  45  1.1842(22)  18.9476
+OA4 Interpretar un
+análisis de regresión.
+Llamadas
+Ventas
+Llamadas
+Ventas
+Representante
+de ventas
+estimadas
+Representante
+de ventas
+estimadas
+de ventas
+(X )
+( )
+de ventas
+(X )
+( )
+Tom Keller
+20
+42.6316
+Carlos Ramírez
+10
+30.7896
+Jeff Hall
+40
+66.3156
+Rich Niles
+20
+42.6316
+Brian Virost
+20
+42.6316
+Mike Kiel
+20
+42.6316
+Greg Fish
+30
+54.4736
+Mark Reynolds
+20
+42.6316
+Susan Welch
+10
+30.7896
+Soni Jones
+30
+54.4736
+Yˆ
+Yˆ
+(X = 20, 
+Y = 42.6316)
+(X = 40, Y = 66.3156)
+Copiadoras vendidas
+0
+10
+20
+30
+40
+50
+80
+70
+60
+50
+40
+30
+20
+10
+0
+^
+^
+Llamadas 
+de ventas
+GRÁFICA 13-12 Recta de regresión en el diagrama de dispersión
+Estadística en acción
+En finanzas, los inversio-
+nistas tienen interés en el
+intercambio entre ganan-
+cias y riesgo. Una técnica
+para cuantificar el riesgo
+es el análisis de regresión
+del precio accionario de
+una compañía (variable
+dependiente) y una
+medida promedio del
+mercado accionario
+(variable independiente).
+Con frecuencia
+
+[Bloque seleccionado #506 | relevancia=17]
+Pagina 505
+de copiadoras vendidas es 45.0, que se calcula mediante 
+Si X  22 y luego
+Y  45010  45.
+La recta de regresión por mínimos cuadrados tiene algunas características interesantes y par-
+ticulares. Primero, siempre pasa por el punto 
+Para demostrar esto, se predice el núme-
+ro de copiadoras vendidas con el número medio de llamadas de ventas. En este ejemplo, el
+número medio de llamadas de ventas es 22.0, determinado por 
+El número medio
+X  22010.
+(X, Y ).
+se emplea la ecuación de regresión para encontrar el valor estimado de 
+el resultado es:
+El número estimado de copiadoras vendidas es exactamente igual al número medio de copia-
+doras vendidas. En este ejemplo sencillo se muestra que la recta de regresión pasará por el
+punto que representa a las dos medias. En este caso, la ecuación de regresión pasará por
+el punto X  22 y Y  45.
+Segundo, como se analizó antes en esta sección, no hay otra recta que pase por los datos
+donde la suma de las desviaciones al cuadrado es menor. En otras palabras, el término
+es menor cuando se aplica la ecuación de regresión por mínimos cuadrados que
+en cualquier otro caso. Para demostrar esta condición se emplea Excel.
+©(Y  Yˆ )2
+Yˆ  18.9476  1.1842(22)  45
+Yˆ,
+480
+CAPÍTULO 13 Regresión lineal y correlación
+También sucede lo
+opuesto: si el índice S&P
+disminuye 1%, el precio
+de las acciones disminui-
+rá 1.5%. Si beta es 1.0,
+un cambio de 1% en el
+índice presentará un
+cambio de 1% en su pre-
+cio. Si beta es menor que
+1.0, un cambio de 1% en
+el índice presenta un
+cambio menor a 1% del
+precio accionario.
+En las columnas A, B, y C en la hoja de cálculo de Excel anterior se duplicó la información
+muestral de la tabla 13-1. En la columna D se proporcionan los valores de las ventas estima-
+das, los valores , como se calculó antes.
+En la columna E se calcularon los residuales, o los valores de error. Ésta es la diferencia
+entre los valores reales y los valores pronosticados. Es decir, la columna E es (Y 
+). En el
+caso de Soni Jones,
+Su valor real es 70. Por lo tanto, el residual, o error de estimación, es
+Este valor refleja que la cantidad del valor predicho de ventas está “fuera” del valor de ventas
+real.
+Luego, en la columna F se elevan al cuadrado los residuales de cada vendedor y se obtie-
+ne el resultado. El total es 784.2105.
+Ésta es la suma de las diferencias al cuadrado o el valor de los mínimos cuadrados. No hay
+otra recta que pase por estos 10 puntos de datos donde la suma de las diferencias al cuadra-
+do sea menor.
+Es posible demostrar el criterio de los mínimos cuadrados con dos ecuaciones arbitrarias
+ce
+
+[Bloque seleccionado #620 | relevancia=21]
+Pagina 619
+Poder de compra del dólar
+Con el Índice de Precios al Consumidor también se deter-
+mina el poder de compra del dólar.
+Ventas deflacionadas
+Un índice de precios también sirve para “deflacionar” las ventas o
+series monetarias similares. Las ventas deflacionadas se determinan mediante:
+594
+CAPÍTULO 15 Números índice
+Las ventas deflacionadas son
+importantes para mostrar las
+tendencias en las ventas
+“reales”.
+USO DE UN ÍNDICE COMO
+FACTOR DE DEFLACIÓN
+(15-9)
+Ejemplo
+Las ventas de Hill Enterprises, pequeña compañía de moldeo por inyección al norte de Nueva
+York, aumentaron de $875 000 en 1982 a $1 482 000 en 1995, a $1 491 000 en 2000, a
+$1 502 000 en 2004, a $1 515 000 en 2007 y a $1 596 000 en 2009. El propietario, Harry Hill,
+se da cuenta de que el precio de la materia prima para el proceso también aumentó durante el
+mismo periodo, por lo que desea deflacionar las ventas para tomar en cuenta el aumento de
+precios de las materias primas. ¿Cuáles son las ventas deflacionadas de 1995, 2000, 2004,
+2007 y 2009 con base en dólares de 1982? Es decir, ¿cuáles son las ventas de 1995, 2000,
+2004, 2007 y 2009 expresadas en dólares constantes de 1982?
+Solución
+El Índice de Precios al Productor (IPP) es un índice que se publica cada mes en el Monthly
+Labor Review; también se encuentra disponible en el sitio web de la Bureau of Labor Statistics.
+Los precios del IPP reflejan los precios que paga el fabricante por metales, caucho y otros ar-
+tículos. Por lo tanto, parece un índice apropiado para deflacionar las ventas del fabricante. Las
+ventas del fabricante se presentan en la segunda columna de la tabla 15-7, y el IPP de cada
+año se encuentra en la tercera columna. En la siguiente columna se muestran las ventas divi-
+didas entre el IPP. En la columna de la derecha se dan los detalles de los cálculos. Los resul-
+tados se muestran en la siguiente captura de pantalla de Excel.
+Las ventas aumentaron de 1995 a 2009, pero si compara las ventas en dólares constan-
+tes, declinaron durante el periodo. Es decir, las ventas deflacionadas sumaron $1 072 661.87
+en 2000, pero declinaron a $1 011 477.81 en 2004. En 2007 declinaron aún más, hasta
+$909 363.75. Esto se debe a que los precios que pagó Hill Enterprises por materias primas
+aumentaron más rápido que las ventas. Entonces, en 2009 las ventas deflacionadas aumenta-
+ron con respecto al nivel de 2007.
+TABLA 15-7 Cálculo de las ventas deflacionadas de Hill Enterprises
+Año
+Ventas
+IPP
+Dólares constantes
+Calculados por:
+1982
+$ 875 000.00
+100.0
+$ 875 000.00
+($ 875 000.00/100.0)*100.0
+1995
+1 482 000.00
+127.9
+1 158 717.75
+($1 4
+
+[Bloque seleccionado #643 | relevancia=21]
+Pagina 642
+16.6 Método de los mínimos cuadrados
+617
+pantalla de Minitab. Los valores del año, años codificados y ventas ajustadas aparecen en la
+parte inferior derecha de la captura de pantalla. La mitad izquierda es una gráfica de disper-
+sión de los datos y la recta de regresión ajustada.
+A partir de la salida la ecuación de la tendencia es 
+ 6.1  1.3t. ¿Cómo se interpreta
+esta ecuación? Las ventas están en millones de dólares. Por lo tanto, el valor 1.3 indica que
+las ventas aumentaron a una tasa de 1.3 millones de dólares por año. El valor 6.1 es el valor
+estimado de las ventas en el año 0; es decir, la estimación de 2004, el cual se denomina año
+base. Por ejemplo, para determinar el punto en la recta de 2008, se sustituye el valor de t de
+4 en la ecuación. Entonces 
+ 6.1  1.3(4)  11.3.
+Si las ventas, la producción u otros datos se aproximan a una tendencia lineal, se emplea
+la ecuación desarrollada mediante la técnica de mínimos cuadrados para estimar valores futu-
+ros. Es razonable que las ventas de Jensen Foods sigan una tendencia lineal. Por ello se utili-
+za la ecuación de la tendencia para proyectar las ventas futuras.
+Consulte la tabla 16-4. El año 2005 se codifica como 1, el año 2007 como 3, y el año 2009
+como 5. Es lógico codificar 2011 como 7 y 2012 como 8. Por lo tanto, se sustituye 8 en la ecua-
+ción de la tendencia y se despeja .
+De esta manera, con base en las ventas pasadas, la estimación para 2012 es $16.5 millones.
+Yˆ  6.1  1.3t  6.1  1.3(8)  16.5
+Yˆ
+Yˆ
+Yˆ
+Estadística en acción
+Con frecuencia los inver-
+sionistas emplean el aná-
+lisis de regresión para
+estudiar la relación entre
+una acción en particular
+y la condición general del
+mercado. La variable
+dependiente es el cambio
+porcentual mensual del
+valor de la acción, y la
+variable independiente es
+el cambio porcentual
+mensual de un índice de
+mercado, como el Índice
+Compuesto 500 de
+Standard & Poor’s. El
+valor de b en la ecuación
+de regresión es el coefi-
+ciente beta, o sólo beta,
+de la acción en particu-
+lar. Si b es mayor que 1,
+se deduce que la acción
+es sensible a los cambios
+que se producen en el
+mercado. Si b se encuen-
+tra entre 0 y 1, la implica-
+ción es que la acción no
+es sensible a los cambios
+del mercado.
+Ventas (en
+millones de
+Determinado
+Año
+dólares), Y
+t
+por
+2005
+7
+1
+7.4
+6.1  1.3(1)
+2006
+10
+2
+8.7
+6.1  1.3(2)
+2007
+9
+3
+10
+6.1  1.3(3)
+2008
+11
+4
+11.3
+6.1  1.3(4)
+2009
+13
+5
+12.6
+6.1  1.3(5)
+Yˆ
+TABLA 16-4 Cálculos para determinar los puntos de la recta de mínimos cuadrados con los valores
+codificados
+En este ejemplo de serie de tiempo, había cinco años de datos 
+
+[Bloque seleccionado #644 | relevancia=16]
+Pagina 643
+Determine la ecuación de la tendencia de mínimos cuadrados. Estime las ventas de 2012.
+16.7 Tendencias no lineales
+En el análisis anterior la atención se centró en una serie de tiempo cuyo crecimiento o decli-
+nación se aproximaban a una recta. Una ecuación de tendencia lineal se utiliza para represen-
+tar la serie de tiempo cuando se considera que los datos aumentan (o disminuyen) en
+cantidades iguales, en promedio, de un periodo a otro.
+Los datos que aumentan (o disminuyen) en cantidades cada vez mayores durante un pe-
+riodo aparecen curvilíneos cuando se trazan en una gráfica con escala aritmética. En otras pa-
+Ejercicios
+3.
+A continuación se reporta el número de habitaciones alquiladas en Plantation Resorts, Georgia, de
+los años de 1999 a 2009.
+618
+CAPÍTULO 16 Series de tiempo y proyección
+Determine la ecuación de mínimos cuadrados. De acuerdo con esta información, ¿cuáles son los
+alquileres estimados para 2010?
+4.
+En la siguiente tabla aparecen las ventas netas en millones de dólares de Home Depot, Inc., y sus
+subsidiarias de 1993 a 2009.
+Año
+Ventas netas
+Año
+Ventas netas
+Año
+Ventas netas
+1993
+$ 9 239
+1999
+$38 434
+2005
+$81 511
+1994
+12 477
+2000
+45 738
+2006
+90 837
+1995
+15 470
+2001
+53 553
+2007
+77 349
+1996
+19 535
+2002
+58 247
+2008
+71 300
+1997
+24 156
+2003
+64 816
+2009
+66 200
+1998
+30 219
+2004
+73 094
+Año
+Alquiladas
+Año
+Alquiladas
+Año
+Alquiladas
+1999
+6 714
+2003
+9 762
+2007
+6 162
+2000
+7 991
+2004
+10 180
+2008
+6 897
+2001
+9 075
+2005
+8 334
+2009
+8 285
+2002
+9 775
+2006
+8 272
+Desecho
+Año
+Código
+(toneladas)
+2006
+1
+2
+2007
+2
+4
+2008
+3
+3
+Desecho
+Año
+Código
+(toneladas)
+2009
+4
+5
+2010
+5
+6
+Ventas (en
+Año
+Código
+millones de dólares)
+2004
+1
+17.5
+2005
+2
+19.0
+2006
+3
+21.0
+2007
+4
+22.7
+Ventas (en
+Año
+Código
+millones de dólares)
+2008
+5
+24.5
+2009
+6
+26.7
+2010
+7
+27.3
+OA5 Calcular una ecuación
+de tendencia no lineal.
+Determine la ecuación de mínimos cuadrados. Con base en esta información, ¿cuáles son las ven-
+tas estimadas para 2010 y 2011?
+5.
+En la siguiente tabla aparecen las cantidades anuales de vidrio de desecho producido por Kimble
+Glass Works, Inc.
+Determine la ecuación de la tendencia de mínimos cuadrados. Estime la cantidad de desecho que
+se generará en 2012.
+6.
+En la siguiente tabla aparecen las ventas de Walder’s Milk and Dairy Products, en millones de dóla-
+res, durante el periodo de 2004 a 2010.
+
+[Bloque seleccionado #647 | relevancia=16]
+Pagina 646
+Suponga que un gerente de tienda emprendedor, en un esfuerzo por estimular las ventas
+durante diciembre, introdujo diversas promociones únicas, como coros de villancicos por toda
+la tienda, exhibiciones mecánicas y dependientes vestidos con trajes de Santa Claus. Cuando
+se calculó el índice de ventas de ese mes, fue 150.0. En comparación con las ventas de
+diciembre habituales de 126.8, se concluyó que el programa de promoción fue un gran éxito.
+Determinación de un índice estacional
+Un conjunto habitual de índices mensuales consta de 12 índices representativos de los datos
+de un periodo de 12 meses. Es lógico que haya cuatro índices estacionales habituales con los
+datos reportados en el trimestre. Cada índice es un porcentaje, cuyo promedio anual es igual
+a 100.0; es decir, cada índice mensual indica el nivel de ventas, producción u otra variable en
+relación con el promedio anual de 100.0. Un índice habitual de 96.0 en enero indica que las
+ventas (o cualquier otra variable) están, en general, 4% debajo del promedio del año. Un índi-
+ce de 107.2 en octubre significa que la variable está, en general, 7.2% arriba de él.
+Hay varios métodos para medir las fluctuaciones estacionales habituales en una serie de
+tiempo. El método más común para calcular el patrón estacional habitual se denomina méto-
+16.8 Variación estacional
+Con anterioridad se mencionó que la variación estacional es otro componente de
+una serie de tiempo. Las series de negocios, como las ventas de automóviles, los
+embarques de botellas de bebidas de cola y la construcción residencial, tienen
+periodos de actividad superior e inferior al promedio cada año. En el área de pro-
+ducción, una razón para analizar las fluctuaciones estacionales es contar con un
+abastecimiento suficiente de materias primas que permita cumplir con la cambian-
+te demanda estacional. La división de recipientes de vidrio de una compañía impor-
+tante del sector, por ejemplo, fabrica botellas de cerveza no retornables, frascos
+para yodo, frascos para aspirina, botellas para cemento plastificado, etc. El depar-
+tamento de programación de producción necesita saber cuántas botellas debe pro-
+ducir y cuándo de cada tipo. Una corrida de demasiadas botellas de un tipo puede
+ocasionar un problema grave de almacenamiento. La producción no se puede basar
+por completo en los pedidos existentes, pues muchos pedidos se hacen por teléfo-
+no para su embarque inmediato. Como la demanda de muchas botellas varía de
+acuerdo con la temporada, una proyección con una anticipación de un año o dos,
+por mes, es esencial para lograr una prog
+
+[Bloque seleccionado #654 | relevancia=17]
+Pagina 653
+Para eliminar el efecto de la variación estacional, la cantidad de ventas en cada trimestre
+(con los efectos de tendencia, cíclicos, irregulares y estacionales) se divide entre el índice esta-
+cional de ese trimestre, es decir, TSCI/S. Por ejemplo, las ventas reales del primer trimestre de
+2004 fueron de $6.7 millones. El índice estacional del trimestre de invierno es 76.5%, con los
+resultados de MegaStat de la página 626. El índice de 76.5 indica que las ventas del primer
+trimestre están habitualmente 23.5% debajo del promedio de un trimestre típico. Al dividir las
+ventas reales de $6.7 millones entre 76.5, y multiplicar el resultado por 100, se obtienen las
+ventas desestacionalizadas, es decir, se elimina el efecto estacional sobre las ventas, del pri-
+mer trimestre de 2004. Éste es $8 758 170, determinado mediante ($6 700 000/76.5)100.
+Continúe este proceso con los demás trimestres en la columna 3 de la tabla 16-9, con los
+resultados reportados en millones de dólares. Como ha eliminado (cancelado) el componente
+estacional de las ventas trimestrales, la cifra de las ventas desestacionalizadas sólo contiene
+los componentes de tendencia (T), cíclica (C) e irregular (I). Al analizar las ventas desestacio-
+nalizadas en la columna 3 de la tabla 16-9, observe que las ventas de juguetes mostraron un
+aumento moderado durante el periodo de seis años. En la gráfica 16-9 aparecen tanto las ven-
+tas reales como las desestacionalizadas. Es claro que eliminar el factor estacional permite
+enfocarse en la tendencia general de largo plazo de las ventas. También puede determinar la
+ecuación de regresión de los datos de la tendencia y con ella proyectar ventas futuras.
+628
+CAPÍTULO 16 Series de tiempo y proyección
+(1)
+(2)
+(3)
+Índice
+Ventas
+Año
+Trimestre
+Ventas
+estacional
+desestacionalizadas
+2008
+Invierno
+7.1
+0.765
+9.28
+Primavera
+5.7
+0.575
+9.91
+Verano
+11.1
+1.141
+9.73
+Otoño
+14.5
+1.519
+9.55
+2009
+Invierno
+8.0
+0.765
+10.46
+Primavera
+6.2
+0.575
+10.79
+Verano
+11.4
+1.141
+9.99
+Otoño
+14.9
+1.519
+9.81
+GRÁFICA 16-9 Ventas reales y desestacionalizadas de Toys International, 2004 a 2009
+OA8 Calcular proyecciones
+estacionalmente ajustadas.
+Uso de datos desestacionalizados para proyección
+El procedimiento para identificar la tendencia y los ajustes estacionales se combina para pro-
+ducir proyecciones estacionalmente ajustadas. Para identificar la tendencia, determine la
+ecuación de la tendencia de mínimos cuadrados en los datos históricos desestacionalizados.
+Luego proyecte esta tendencia en periodos futuros, y después ajuste las tendencias de los
+valores para calcular los factor

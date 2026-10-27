@@ -1,0 +1,153 @@
+\def\estadisticatitulo{Muestreo y decisiones administrativas}
+\def\estadisticasubtitulo{Actividad 2: Investigación}
+\def\estadisticafecha{22 de octubre de 2026}
+\def\estadisticaunidad{Muestreo}
+\def\portadaoficial{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/portada-oficial.png}
+\def\estadisticaextras{%
+  \usepackage{fontspec}
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+  \usetikzlibrary{babel}
+  \geometry{letterpaper,left=2.3cm,right=2.3cm,top=2.2cm,bottom=2.2cm}
+  \hypersetup{pdftitle={Muestreo y decisiones administrativas},pdfsubject={Actividad 2 - Estadística aplicada para la administración}}
+  \setcitestyle{citesep={;}}
+  \renewcommand{\insertcoverwatermark}{}
+  \renewcommand{\insertcoverinstitutionalfooter}{}
+  \renewcommand{\templatePortrait}{%
+    \thispagestyle{empty}
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{\portadaoficial}};
+      \node[anchor=north west,text=white,text width=10.6cm,align=center,inner sep=0pt] at ([xshift=10.1cm,yshift=-19.4cm]current page.north west) {%
+        \setstretch{1}\fontsize{12}{15}\selectfont
+        {\fontsize{16}{19}\selectfont\bfseries Muestreo y decisiones\\administrativas}\par\vspace{0.18cm}
+        Estadística aplicada para la administración\par
+        Actividad 2: Investigación\par\vspace{0.12cm}
+        Martín Jonathan de la Cruz Muñoz\par
+        Matrícula: 26130503\par
+        Dra. Yoana Elizeth Tauitmes Delgado\par
+        22 de octubre de 2026
+      };
+    \end{tikzpicture}\null\clearpage
+  }
+  \renewcommand{\templatePagecfg}{}
+  \renewcommand{\templateFinalcfg}{%
+    \pagestyle{fancy}\fancyhf{}\fancyfoot[C]{\fontsize{10}{12}\selectfont\thepage}
+    \renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}
+    \setcounter{page}{2}\renewcommand{\thepage}{\arabic{page}}
+  }
+  \titleformat{\section}{\normalfont\fontsize{12}{15}\selectfont\bfseries\color{itescaRedDark}}{\thesection.}{0.5em}{}
+  \titleformat{\subsection}{\normalfont\fontsize{12}{15}\selectfont\bfseries}{\thesubsection.}{0.5em}{}
+  \titlespacing*{\section}{0pt}{8pt}{5pt}
+  \titlespacing*{\subsection}{0pt}{7pt}{4pt}
+  \renewcommand{\footnotesize}{\fontsize{12}{14.4}\selectfont}
+  \setlength{\parindent}{1.1cm}
+  \setlength{\parskip}{3pt}
+  \urlstyle{same}
+  \input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/investigacion-articulos/formato-fichas.tex}
+}
+% Informe completo: preliminares y exactamente tres tiempos académicos.
+% La versión de cinco páginas comparte portada y formato; tiene contenido propio.
+\def\estadisticaresumen{Una encuesta y un experimento responden preguntas diferentes: describir una población exige justificar a quiénes representan las respuestas; evaluar una intervención exige además una comparación causal defendible. Se desarrolla esta distinción mediante los fundamentos del muestreo y tres investigaciones sobre vacunación, evolución del teletrabajo y retención laboral. Las fichas reconstruyen población, selección, ponderación o asignación, resultados y límites. El análisis muestra que tamaño, cobertura y validez cumplen funciones distintas y propone un criterio administrativo: elegir el diseño según la decisión, documentar sus condiciones y comunicar el alcance de la evidencia.}
+\ifdefined\estadisticacontenidoexterno
+  \let\estadisticacontenido\estadisticacontenidoexterno
+\else
+\long\def\estadisticacontenido{%
+\fontsize{12}{14.4}\selectfont\setstretch{1.5}\justifying
+\estadisticapreliminares
+\section{Introducción}
+Una empresa que desea conocer la satisfacción de sus clientes y valorar una política de trabajo híbrido enfrenta dos problemas de información. En el primero necesita estimar una característica de una población; en el segundo, determinar si una intervención modifica un resultado. Consultar a quienes están disponibles puede aportar opiniones, pero no resuelve por sí mismo ninguna de esas preguntas. Es necesario explicar cómo se eligieron las unidades, quiénes respondieron y qué comparación sostiene la conclusión \citep{holmesBusiness2023}.
+
+La pregunta que guía esta investigación es qué condiciones convierten una muestra en evidencia útil para decidir y qué límites permanecen después del cálculo. Las encuestas de vacunación estudiadas por Bradley et al., la reconstrucción del teletrabajo de Barrero et al. y el ensayo de Bloom et al. permiten responderla desde tres usos distintos de los datos. El interés administrativo consiste en reconocer qué se puede estimar, qué se puede comparar y qué se puede atribuir a una intervención, antes de trasladar un resultado a otra organización.
+
+\section{Del diseño muestral a la evidencia administrativa}
+\subsection{La población que interesa y las unidades que llegan a observarse}
+La población objetivo es el conjunto de unidades sobre el que se desea concluir, delimitado por sus características, lugar y periodo. Para estudiar satisfacción no basta decir ``clientes'': debe precisarse, por ejemplo, si se incluyen todos los compradores del trimestre y todos los canales. La unidad de análisis es aquello a lo que se refiere la conclusión; la unidad de muestreo es lo que puede seleccionarse. En un diseño por etapas se pueden elegir sucursales y después personas, sin que ambas unidades sean intercambiables \citep[sec.~1.2]{holmesBusiness2023}.
+
+El marco muestral es el registro que permite acceder a las unidades elegibles. Una lista de cuentas digitales puede dejar fuera a compradores de tienda; registros duplicados pueden dar más oportunidades de selección a algunas personas. La muestra seleccionada reúne las unidades elegidas, mientras que la muestra respondente contiene las que finalmente aportan información. Confundirlas oculta la no respuesta. El parámetro es una característica poblacional, como la proporción de compradores satisfechos; el estadístico se calcula con las observaciones y se utiliza para estimarlo. La inferencia conecta ambos bajo un diseño y supuestos, no mediante el simple hecho de disponer de muchos registros \citep{holmesBusiness2023,bradley2021}.
+
+En el muestreo probabilístico, las unidades de la población cubierta tienen probabilidades conocidas y positivas de inclusión. En el aleatorio simple, todas las muestras posibles de igual tamaño tienen la misma probabilidad. La selección requiere una regla reproducible; entrevistar a quienes parecen elegidos ``al azar'' sin un procedimiento definido puede conservar preferencias del encuestador. El estratificado divide la población en grupos exhaustivos y sin traslape y selecciona aleatoriamente unidades dentro de todos ellos. Permite asegurar presencia de grupos relevantes, pero no exige darles el mismo peso en la estimación \citep[sec.~1.2]{holmesBusiness2023}.
+
+Considérese un ejemplo hipotético con 10\,000 clientes: 8\,000 de tienda y 2\,000 digitales. Seleccionar por muestreo aleatorio simple sin reemplazo 100 de cada canal, suponiendo que todos responden, produce probabilidades de inclusión de 0.0125 y 0.05, respectivamente. Sus pesos de diseño, inversos de esas probabilidades, son 80 y 20. Si las proporciones muestrales de satisfacción fueran 0.70 y 0.90, la estimación global sería $0.8(0.70)+0.2(0.90)=0.74$. Promediar las 200 respuestas sin ponderar daría 0.80 y sobrerrepresentaría el canal digital. Ninguna cifra de este ejemplo es un resultado empresarial observado: muestra por qué selección y ponderación deben corresponderse.
+
+El muestreo sistemático combina un inicio aleatorio con un intervalo de selección. Es práctico en registros, pero debe revisarse si su orden presenta una periodicidad relacionada con la variable. El muestreo por conglomerados selecciona aleatoriamente grupos naturales, como sucursales, y observa todas o algunas de sus unidades. Puede reducir desplazamientos, aunque la semejanza interna suele afectar la precisión. La diferencia es decisiva: estratificar toma muestra de todos los estratos previstos; seleccionar conglomerados estudia los grupos elegidos, no necesariamente todos \citep{holmesBusiness2023}.
+
+En las selecciones no probabilísticas se desconocen las probabilidades de inclusión. La conveniencia se apoya en unidades accesibles; el juicio, en criterios del investigador; las cuotas fijan cantidades por subgrupo sin exigir selección aleatoria; y la bola de nieve incorpora participantes mediante contactos. Pueden servir para explorar necesidades o acceder a grupos difíciles de localizar. Sin supuestos adicionales, sus porcentajes no heredan el margen de error de una muestra aleatoria simple. Cubrir cuotas demográficas tampoco demuestra que la selección sea representativa en otras características relevantes \citep{statcanNoProb2021}.
+
+El error de muestreo es la variación entre muestras bajo un diseño. El error de cobertura procede de diferencias entre marco y población; el de medición, de cómo se registra la característica; y la no respuesta puede introducir sesgo si la participación se relaciona con lo estudiado. Mayor precisión significa menor variabilidad del estimador, mientras que el sesgo es una desviación sistemática. Una estimación muy estable puede seguir alejada del valor poblacional. Por ello, aumentar el tamaño mejora cierta precisión sin garantizar la exactitud de la conclusión. El primer artículo permite observar esa diferencia en una comparación real \citep{holmesBusiness2023,bradley2021}.
+
+\phantomsection\addcontentsline{toc}{subsection}{Ficha 1. Bradley et al.: cobertura y participación}
+\begin{fichainvestigacion}{Ficha 1. Cobertura y participación en grandes encuestas}
+\datosarticulo{Valerie C. Bradley, Shiro Kuriwaki, Michael Isakov, Dino Sejdinovic, Xiao-Li Meng y Seth Flaxman (2021).}{Unrepresentative big surveys significantly overestimated US vaccine uptake}{\textit{Nature, 600}(7890), 695--700.}{https://doi.org/10.1038/s41586-021-04198-4}
+\textbf{Pregunta y población.} El estudio examina si tres grandes sistemas de encuesta estimaban adecuadamente la vacunación contra COVID-19 entre adultos estadounidenses. Contrasta las estimaciones con registros de los Centers for Disease Control and Prevention (CDC), cuyo uso como referente también se somete a análisis de incertidumbre \citep{bradley2021}.
+
+\textbf{Diseño y obtención de datos.} Delphi--Facebook seleccionaba diariamente usuarios activos mediante muestreo estratificado con probabilidades desiguales. Household Pulse utilizaba selección sistemática de domicilios del marco censal con teléfono celular o correo electrónico disponible. Axios--Ipsos encuestaba a integrantes de KnowledgePanel, reclutado probabilísticamente por direcciones postales, y facilitaba internet o tabletas cuando faltaban; sus tamaños no describen tres procedimientos de selección equivalentes. Los sistemas ponderaban las respuestas con variables demográficas, aunque sus ajustes y cobertura diferían.
+
+\textbf{Hallazgo.} En mayo de 2021, Delphi--Facebook y Household Pulse sobreestimaron la vacunación en aproximadamente 17 y 14 puntos porcentuales, respectivamente. Reunían unas 250\,000 respuestas semanales y 75\,000 por ronda quincenal. Axios--Ipsos, con cerca de 1\,000 respuestas semanales, siguió mejor el referente. La comparación no demuestra que una muestra pequeña sea superior por su tamaño: muestra que la relación entre selección, participación y variable de interés puede dominar la ventaja de reunir muchas observaciones \citep{bradley2021}.
+
+\textbf{Interpretación administrativa.} Una encuesta comercial muy difundida puede excluir compradores con menor acceso digital o distinta disposición a responder. Calcular intervalos estrechos dentro de esa base no recupera sus opiniones. Antes de ampliar entrevistas, la organización debe revisar qué segmentos cubre el marco y si las respuestas difieren de la población en características pertinentes. La conclusión del caso es que el tamaño debe evaluarse junto con el mecanismo que produjo los datos; la ponderación no constituye una reparación automática de toda selección.
+\end{fichainvestigacion}
+
+\subsection{Ponderar e interpretar la incertidumbre de una estimación}
+Ponderar significa asignar a cada observación una contribución justificada al resultado. Para una variable binaria $y_i$, que vale uno si se cumple una condición y cero si no, y un peso $w_i$ asignado a la observación $i$, una proporción ponderada puede escribirse como $\widehat P_w=\sum_i w_i y_i/\sum_i w_i$. Los pesos de diseño reflejan probabilidades de inclusión; otros ajustes buscan compensar no respuesta o aproximar distribuciones poblacionales conocidas. En el ejemplo de los canales, los pesos restituyen su participación en el universo. Si la exclusión depende de características no observadas, equilibrar edad, sexo o canal no garantiza corregirla \citep{holmesBusiness2023,bradley2021}.
+
+El error estándar describe la dispersión del estimador entre muestras. Para una proporción bajo muestreo aleatorio simple y una población grande respecto de la muestra, la aproximación $\sqrt{p(1-p)/n}$ muestra cómo intervienen tamaño y variabilidad: $p$ es la proporción poblacional y $n$, el número de respuestas completas. Para estimar ese error estándar se sustituye $p$ por una estimación muestral. No debe trasladarse sin ajustes a diseños con conglomerados o pesos desiguales. Un intervalo de confianza combina el estimador con una medida de incertidumbre bajo esas condiciones. El nivel nominal del 95\% se refiere a la cobertura del procedimiento en repeticiones del muestreo; no significa que el 95\% de las personas tenga una característica ni asigna esa probabilidad a un parámetro fijo ya estimado \citep[secs.~8.1 y 8.3]{holmesBusiness2023}.
+
+La planificación del tamaño necesita especificar el parámetro y la tolerancia. Para una proporción, la aproximación normal usa $n_0=z_{\alpha/2}^{2}p(1-p)/e^2$. Aquí $e$ es el margen absoluto tolerado, $p$ una proporción prevista para planificar, $\alpha$ el complemento del nivel de confianza y $z_{\alpha/2}$ el valor crítico normal correspondiente. Con confianza del 95\%, $\alpha=0.05$, $z_{\alpha/2}=1.96$, margen de 0.05 y $p=0.5$, se obtiene 384.16 y se redondea a 385 respuestas completas. El valor 0.5 maximiza la variabilidad de planificación dentro de esa fórmula. Si se prevé respuesta del 80\%, se planifican $\lceil385/0.80\rceil=482$ invitaciones. Esto no garantiza obtener 385 respuestas completas ni elimina una no respuesta diferencial. Una población finita con fracción muestral apreciable, otro diseño o comparaciones por subgrupos exigen revisar el cálculo; la cifra no es una regla universal \citep[sec.~8.3]{holmesBusiness2023}.
+
+También importa qué se cuenta. La proporción de días de trabajo remoto y la proporción de empleados que trabajan remotamente tienen denominadores distintos. Al comparar momentos deben conservarse definiciones, universos y procedimientos de ajuste. Los cortes repetidos describen poblaciones en fechas sucesivas; no equivalen a observar necesariamente a las mismas personas como en un panel. Estos criterios permiten interpretar el segundo artículo sin convertir una serie de porcentajes en un efecto causal.
+
+\phantomsection\addcontentsline{toc}{subsection}{Ficha 2. Barrero, Bloom y Davis: medición del cambio}
+\begin{fichainvestigacion}{Ficha 2. Medición del cambio en el trabajo desde casa}
+\datosarticulo{José María Barrero, Nicholas Bloom y Steven J. Davis (2023).}{The evolution of work from home}{\textit{Journal of Economic Perspectives, 37}(4), 23--50.}{https://doi.org/10.1257/jep.37.4.23}
+\textbf{Pregunta y unidad de análisis.} El artículo reconstruye la evolución del trabajo desde casa antes y después de la pandemia. Integra la Survey of Working Arrangements and Attitudes (SWAA), Household Pulse y fuentes históricas de uso del tiempo. En su serie principal, el indicador es la fracción de días remunerados trabajados desde casa, no la proporción de empleados en esa modalidad \citep{barrero2023}.
+
+\textbf{Obtención de participantes.} La documentación metodológica publicada por el equipo de SWAA en marzo de 2023 describe una encuesta mensual en línea, realizada por empresas que obtienen listas de posibles participantes de agregadores como Lucid. También reconoce exclusión de quienes no utilizan dispositivos digitales y posibles diferencias de habilidad tecnológica incluso después de ponderar. Esta fuente contemporánea permite distinguir el reclutamiento de la calibración posterior \citep[diaps.~3--4]{wfhMetodos2023}.
+
+\textbf{Población, filtros y ajuste.} La figura principal se refiere a personas de 20 a 64 años. La SWAA utiliza umbrales de ingresos previos de US\$20\,000 hasta marzo de 2021 y de US\$10\,000 posteriormente. Pondera por edad, sexo, educación e ingresos para aproximar la Current Population Survey; los autores también ajustan cambios en preguntas mediante regresión. Las demás fuentes tienen filtros y pesos propios. No corresponde atribuir al conjunto un único tamaño muestral ni un solo muestreo aleatorio simple \citep[figura~1 y notas]{barrero2023}.
+
+\textbf{Hallazgo.} En junio de 2023, cerca del 28\% de los días remunerados se trabajaba íntegramente desde casa, frente a alrededor del 7\% en 2019. Son porcentajes de días y no tamaños muestrales. La comparación describe un cambio considerable en la distribución del trabajo; por sí misma no demuestra que trabajar desde casa cause un aumento o una disminución de productividad.
+
+\textbf{Interpretación administrativa.} El indicador puede orientar preguntas sobre ocupación de oficinas, coordinación de equipos o demanda de servicios. Una empresa necesita comprobar si sus puestos, personal y definición de jornada son comparables antes de trasladar ese porcentaje a su planificación. La calibración con variables observadas mejora la comparabilidad buscada, pero no acredita que se hayan eliminado todas las diferencias de participación. La utilidad del caso reside en mostrar que el denominador, los filtros y los pesos forman parte del resultado: omitirlos cambia el significado de la cifra.
+\end{fichainvestigacion}
+
+\subsection{Seleccionar una muestra y asignar una intervención son decisiones distintas}
+La selección determina qué unidades llegan al estudio y condiciona a quiénes puede describir. La asignación determina qué intervención recibe cada unidad incluida. Una muestra aleatoria bien diseñada puede fundamentar una estimación poblacional sin identificar el efecto de una política. Un experimento puede respaldar una comparación causal dentro de sus participantes sin convertirlos en muestra probabilística de todas las empresas. Esta distinción separa generalización y validez interna \citep{holmesBusiness2023,bloom2024}.
+
+En una comparación observacional, quienes eligen trabajar desde casa pueden diferir en antigüedad, tareas o preferencias de quienes acuden diariamente. Una diferencia de permanencia podría relacionarse con esas características. La asignación experimental busca hacer comparables los grupos antes de la intervención para aislar su efecto bajo las condiciones del diseño. Aun así, deben revisarse cumplimiento, seguimiento, medición y pérdidas de observaciones. El mecanismo de asignación no elimina automáticamente esos problemas ni justifica extender los resultados a otra población.
+
+La magnitud del resultado también requiere una lectura precisa. Al comparar 7.2\% con 4.8\%, la reducción absoluta es de 2.4 puntos porcentuales; la relativa es de aproximadamente 33.3\%. Una prueba de equivalencia evalúa si la evidencia permite descartar diferencias que superen límites de tolerancia fijados para una medida. No demuestra identidad absoluta de los grupos. El tercer artículo reúne estas cuestiones y permite valorar una política laboral con un alcance más específico que el de las encuestas descriptivas \citep{bloom2024}.
+
+\phantomsection\addcontentsline{toc}{subsection}{Ficha 3. Bloom, Han y Liang: evaluación de una política}
+\begin{fichainvestigacion}{Ficha 3. Elegibilidad para trabajo híbrido y permanencia laboral}
+\datosarticulo{Nicholas Bloom, Ruobing Han y James Liang (2024).}{Hybrid working from home improves retention without damaging performance}{\textit{Nature, 630}(8018), 920--925.}{https://doi.org/10.1038/s41586-024-07500-2}
+\textbf{Pregunta y participantes.} El ensayo estudia si ofrecer dos días semanales de trabajo desde casa modifica la permanencia y el desempeño en Trip.com. La empresa eligió dos divisiones en Shanghái con 1\,612 empleados elegibles; excluyó practicantes y personal en prueba. Se incorporaron primero 518 voluntarios y después 1\,094 no voluntarios. Esa selección empresarial delimita el ámbito del estudio y no constituye una muestra aleatoria de las organizaciones \citep{bloom2024}.
+
+\textbf{Asignación y comparación.} La paridad del día del mes de nacimiento determinó la elegibilidad: día impar para trabajo híbrido y día par para control. Se asignaron 792 personas al tratamiento y 820 al control. La comparación corresponde a los grupos definidos por el ensayo; no debe confundirse con comparar personas que eligieron libremente modalidades laborales distintas.
+
+\textbf{Hallazgo.} Las salidas fueron del 7.2\% en control y del 4.8\% en tratamiento durante el ensayo. La diferencia es de 2.4 puntos porcentuales y la reducción relativa, de un tercio. Los análisis de equivalencia de evaluaciones del desempeño utilizaron márgenes de $\pm0.5$ puntos de la escala de calificaciones, codificada de 1 (D) a 5 (A). El resultado respalda efectos acotados en esa medición y contexto, sin probar igualdad absoluta ni autorizar la misma conclusión para cualquier indicador laboral \citep{bloom2024}.
+
+\textbf{Límites y transparencia.} El número de observaciones de desempeño disminuyó durante el seguimiento. Además, Liang declaró cargos directivos y participación accionaria en la empresa. Ambos aspectos pertenecen a la valoración del estudio: exigen examinar cobertura del seguimiento, medición e intereses declarados, sin invalidar automáticamente la comparación. La modalidad estudiada fue híbrida, no trabajo totalmente remoto.
+
+\textbf{Interpretación administrativa.} La evidencia permite discutir una intervención concreta con mejor fundamento causal interno que una encuesta de preferencias. Para adaptarla a otra organización habría que contrastar tareas, condiciones de coordinación, elegibilidad y seguimiento. La lección no es adoptar el porcentaje como pronóstico propio, sino formular una política evaluable: definir la intervención, el resultado esperado y la comparación que permitiría revisarla.
+\end{fichainvestigacion}
+
+\subsection{Lo que la comparación permite sostener para la gestión}
+Los artículos muestran tres relaciones diferentes entre datos y decisión. Bradley et al. revelan que la participación puede distorsionar una estimación aun con muchas respuestas. Barrero et al. reconstruyen un cambio mediante indicadores que dependen de filtros, denominadores y ponderaciones. Bloom et al. evalúan una intervención dentro de un grupo delimitado. La diferencia entre ellos no es únicamente el número de observaciones: cambia qué pregunta responden y qué operación justifica la conclusión.
+
+En el problema de satisfacción planteado al inicio, una gerencia necesita delimitar compradores y periodo, comprobar que el marco incluya los canales y seleccionar de acuerdo con el alcance buscado. Si asigna entrevistas iguales a canales de tamaños distintos, debe ponderar la estimación global. También necesita examinar quiénes no respondieron y reconocer que un intervalo representa incertidumbre bajo supuestos, no ausencia de todos los errores. El ejemplo hipotético de los canales muestra que un procedimiento de selección sin una lectura correcta de los pesos puede cambiar la cifra utilizada para decidir.
+
+En el problema del trabajo híbrido, conocer preferencias sirve para diseñar la intervención, pero no para atribuirle cambios en permanencia. Evaluar el efecto exige una comparación adecuada, indicadores definidos y seguimiento. La conclusión que emerge del desarrollo es que la calidad de la evidencia depende de mantener unida la cadena pregunta--población--selección o asignación--medición--interpretación. Si se rompe esa cadena, una cifra correctamente calculada puede utilizarse para sostener una afirmación que los datos no justifican.
+
+\clearpage
+\section{Conclusiones}
+El muestreo aporta evidencia administrativa cuando permite explicar a quiénes representan los datos y bajo qué condiciones se obtuvo el resultado. Los tres artículos responden a la pregunta inicial desde funciones complementarias: estimar una característica, describir su evolución y evaluar una intervención. Ninguna puede juzgarse únicamente por el tamaño de la base o por la presencia de una operación aleatoria.
+
+Sostengo que una organización debe definir primero la decisión y el alcance de la afirmación que necesita. La razón es que un diseño apropiado para conocer opiniones puede resultar insuficiente para generalizar a todos los compradores o para atribuir una mejora a una política. La cobertura, las respuestas efectivas y la ponderación fundamentan una estimación; una comparación experimental añade condiciones específicas para examinar causalidad. Esa diferencia debe conservarse al comunicar los resultados.
+
+La consecuencia profesional es solicitar, junto con cada indicador, su población, unidad, mecanismo de obtención, incertidumbre y límites. Para satisfacción, esto implica revisar marco, canales y no respuesta; para una intervención laboral, definir comparación y seguimiento antes de valorar sus efectos. La investigación documental no entrega una fórmula que sustituya ese juicio: ofrece criterios para elegir un método pertinente y mantener las decisiones abiertas a revisión cuando cambia la evidencia.
+
+\clearpage
+\input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/investigacion-articulos/referencias.tex}
+}
+\fi
+\input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/reporte-estadistica-aplicada-para-la-administracion-plantilla-actividad.tex}

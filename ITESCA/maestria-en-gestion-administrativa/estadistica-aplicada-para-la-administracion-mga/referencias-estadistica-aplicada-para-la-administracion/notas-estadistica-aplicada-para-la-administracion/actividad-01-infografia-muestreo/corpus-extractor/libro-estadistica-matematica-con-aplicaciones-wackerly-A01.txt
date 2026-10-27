@@ -1,0 +1,467 @@
+Fuente bibliográfica: Estadística matemática con aplicaciones - Wackerly, Mendenhall y Scheaffer. 7.ª edición.pdf
+Actividad: 1 (1.1 Infografía 5% Tarea)
+Palabras clave: muestreo, población, muestra, marco muestral, probabilístico, estratificado, conglomerados, tamaño de muestra, error de muestreo, sesgo
+
+[Bloque seleccionado #19 | relevancia=24]
+Pagina 18
+xvi  Prefacio
+of Gamma Density Functions and Comparison of Beta Density Functions, (Comparación de 
+Funciones de Densidad Gamma y Comparación de Funciones de Densidad Beta),  respec-
+tivamente. Las probabilidades y cuantiles asociados con variables aleatorias de distribución 
+gamma y beta se obtienen usando las aplicaciones Gamma Probabilities and Quantiles or 
+Beta Probabilities and Quantiles (Probabilidades y Cuantiles Gamma o Probabilidades y 
+Cuantiles Beta). Se proporcionan conjuntos de Ejercicios de Aplicaciones Breves para guiar 
+al usuario a descubrir resultados interesantes e informativos asociados con variables aleatorias 
+de distribución normal, beta y gamma (incluyendo las exponenciales y de χ2). Mantenemos 
+el énfasis en la distribución χ2, incluyendo algunos resultados teóricos que son útiles en el 
+posterior desarrollo de las distribuciones t y F.
+En el Capítulo 5 se deja claro que las densidades condicionales no están defi nidas para 
+valores de la variable condicionante donde la densidad marginal es cero. También hemos re-
+tenido el análisis de la “varianza condicional” y su uso para hallar la varianza de una variable 
+aleatoria. Brevemente se estudian modelos jerárquicos. Al igual que en la edición anterior, el 
+Capítulo 6 introduce el concepto del apoyo de una densidad y resalta que se puede usar un mé-
+todo de transformación cuando ésta es monótona en la región de apoyo. El método jacobiano 
+está incluido para la implementación de una transformación bivariada.
+En el Capítulo 7, la aplicación breve Comparison of Student’s t and Normal Distributions 
+(Comparación de Distribuciones t de Student y Normales) permite la visualización de simi-
+litudes y diferencias en funciones de densidad t y estándar normal y las aplicaciones bre-
+ves Probabilidades y Cuantiles Ji cuadrada, Probabilidades y Cuantiles t de Student y las 
+Probabilidades y Cuantiles de Razón F proporcionan probabilidades y cuantiles asociados 
+con las distribuciones respectivas, todos con grados de libertad especifi cados por el usuario. 
+La aplicación breve DiceSample utiliza el conocido ejemplo de lanzar dados a una mesa para 
+introducir el concepto de una distribución de muestreo. Los resultados para diferentes tama-
+ños muestrales permiten al usuario evaluar el impacto del tamaño de la muestra en la distribu-
+ción muestral de la media. La aplicación breve también permite la visualización de la forma 
+en que la distribución muestral es afectada si el dado no está balanceado. Bajo el encabezado 
+general de “Distribuciones Muestrales y el Teorema del Límite Central
+
+[Bloque seleccionado #27 | relevancia=21]
+Pagina 26
+2  Capítulo 1  ¿Qué es estadística?
+de basar inferencias en datos observados y todo el problema de tomar decisiones frente a una 
+incertidumbre”. Y Mood, Graybill y Boes 1974) defi nen la estadística como “la tecnología del 
+método científi co” y agregan que la estadística se ocupa de “(1) el diseño de experimentos e 
+investigaciones, (2) inferencia estadística”. Un examen superfi cial de estas defi niciones sugie-
+re una falta importante de acuerdo, pero todas poseen elementos comunes. Cada descripción 
+implica que los datos se recolectan, con la inferencia como objetivo. Cada una requiere selec-
+cionar un subconjunto de un gran conjunto de datos, ya sea existente o conceptual, para inferir 
+las características del conjunto completo. Todos los autores implican que la estadística es una 
+teoría de información, siendo la inferencia su objetivo.
+La gran recopilación de datos que es el objetivo de nuestro interés se denomina población, 
+y el subconjunto seleccionado de ella es una muestra. Las preferencias del electorado para 
+un candidato gubernamental, Jones, expresadas en forma cuantitativa (1 por “prefi eren” y 0 
+para “no prefi eren”) dan una población real, fi nita y existente de gran interés para Jones. Para 
+determinar la verdadera fracción que está a favor de elegirlo, Jones necesitaría entrevistar a 
+todo el electorado, trabajo que es prácticamente imposible. El voltaje en un punto particular 
+en el sistema de guía para una nave espacial puede probarse en los únicos tres sistemas que 
+se han construido. Los datos resultantes podrían usarse para estimar las características de 
+voltaje para otros sistemas que podrían manufacturarse en el futuro. En este caso, la población 
+es conceptual. Consideramos que la muestra de tres es representativa de una gran población 
+de sistemas de guía que podrían construirse usando el mismo método. Presumiblemente, esta 
+población tendría características similares a los tres sistemas de la muestra. Del mismo modo, 
+las mediciones en los pacientes para un experimento médico representan una muestra de una 
+población conceptual formada por todos los pacientes que de modo semejante sufren hoy, así 
+como los que estarán afectados en el futuro próximo. El lector encontrará útil defi nir con cla-
+ridad las poblaciones de interés para cada una de las situaciones descritas antes en esta sección 
+y para aclarar la meta inferencial para cada una. 
+Es interesante observar que la industria y el gobierno de Estados Unidos gastan miles de 
+millones de dólares cada año en busca de datos de experimentos, encuestas de muestre
+
+[Bloque seleccionado #53 | relevancia=22]
+Pagina 52
+28  Capítulo 2  Probabilidad
+ DEFINICIÓN 2.3 
+El espacio muestral asociado con un experimento es el conjunto formado por todos los 
+posibles puntos muestrales. Un espacio muestral estará denotado por S.
+Fácilmente podemos ver que el espacio muestral S asociado con el experimento de lanzar 
+un dado está formado por seis puntos muestrales correspondientes a los seis eventos simples 
+E1, E2, E3, E4, E5 y E6. Esto es, S = {E1, E2, E3, E4, E5, E6}. Un diagrama de Venn que exhibe 
+el espacio muestral para el experimento de lanzar un dado se da en la Figura 2.7.
+Para el ejemplo de microbiología de contar bacterias en un espécimen de alimento, haga-
+mos que E0 corresponda a observar 0 bacterias, E1 a observar 1 bacteria y así sucesivamente. 
+Entonces el espacio muestral es
+S = {E0, E1, E2,…}
+porque no se puede excluir ningún número entero de bacterias como posible resultado.
+Ambos espacios muestrales que examinamos tienen la propiedad de que están formados 
+ya sea por un número fi nito o uno contable de puntos muestrales. En el ejemplo de lanzar un 
+dado hay seis (un número fi nito) puntos muestrales. El número de puntos muestrales asocia-
+do con el experimento de contar bacterias es infi nito, pero el número de puntos muestrales 
+distintos se puede poner en correspondencia biunívoca con los enteros (es decir, el número de 
+puntos muestrales es contable). Se dice que estos espacios muestrales son discretos.
+ DEFINICIÓN 2.4 
+Un espacio muestral discreto es aquel que está formado ya sea por un número fi nito o 
+uno contable de puntos muestrales distintos.
+Cuando un experimento se realiza en una sola vez, se observará un y sólo un evento simple. 
+Por ejemplo, si se lanza un dado y se observa un 1, no se puede al mismo tiempo observar un 
+2. Así, el punto muestral simple E1 asociado con observar un 1 y el punto muestral simple E2 
+asociado con observar un 2 son distintos, y los conjuntos {E1} y {E2} son conjuntos mutua-
+mente excluyentes. Por tanto, los eventos E1 y E2 son mutuamente excluyentes. Del mismo 
+modo, todos los eventos simples distintos corresponden a conjuntos mutuamente excluyentes 
+de eventos simples y son por tanto eventos mutuamente excluyentes.
+Para experimentos con espacios muestrales discretos, los eventos compuestos se pueden 
+ver como grupos (conjuntos) de puntos muestrales o bien, de manera equivalente, como unio-
+nes de los conjuntos de puntos muestrales simples correspondientes a los eventos simples 
+apropiados. Por ejemplo, el evento A de lanzar un dado (observar un número impar) ocurrirá 
+F I G U R A 2.7
+Diagrama de Venn 
+para el
+
+[Bloque seleccionado #103 | relevancia=31]
+Pagina 102
+78  Capítulo 2  Probabilidad
+Se podrían revolver muy bien los elementos y seleccionar dos en forma tal que todos los pares 
+de elementos tengan igual probabilidad de selección. Un segundo procedimiento de muestreo 
+podría hacer necesario seleccionar un solo elemento, restituirlo en la población y después 
+sacar de nuevo un solo elemento. Los dos métodos de selección de muestra se denominan 
+muestreo sin y con reemplazo, respectivamente.
+Si los todos los elementos de la población N = 5 son claramente diferentes, la probabilidad de 
+sacar un par específi co, cuando se haga muestreo sin restitución, es 1/10. La probabilidad 
+de sacar el mismo par específi co, cuando se haga muestreo con restitución, es 2/25. Con toda 
+facilidad se pueden verifi car estos resultados.
+Se debe hacer notar que el método de muestreo, conocido como diseño de un experimento, 
+afecta la cantidad de información en una muestra y la probabilidad de observar un resultado 
+específi co de muestra. Por tanto, todo procedimiento muestral debe describirse con claridad si 
+deseamos hacer inferencias válidas de muestra a población.
+El estudio del diseño de experimentos, los diversos tipos de diseños junto con sus propieda-
+des, es en sí mismo un curso. En consecuencia, en esta primera etapa de estudio presentamos 
+sólo el procedimiento de muestreo más sencillo, el muestreo aleatorio simple. La noción de 
+muestreo aleatorio simple será necesaria en subsecuentes exposiciones de las probabilidades 
+asociadas con variables aleatorias e inyectará algún realismo a nuestro examen de estadís-
+tica. Eso es porque el muestreo aleatorio simple se emplea frecuentemente en la práctica. 
+Defi namos ahora el término muestreo aleatorio.
+ DEFINICIÓN 2.13 
+Represente con N y n los números de elementos en la población y la muestra, respectiva-
+mente. Si el muestreo se realiza en forma tal que cada una de las N
+n muestras tiene igual 
+probabilidad de ser seleccionada, se dice que el muestreo es aleatorio y que el resultado 
+es una muestra aleatoria.
+El muestreo aleatorio perfecto es difícil de alcanzar en la práctica. Si la población no es 
+demasiado grande, podríamos escribir cada uno de los N números en fi chas, revolverlas todas 
+y seleccionar una muestra de n fi chas. Los números de las fi chas especifi carían las mediciones 
+que aparezcan en la muestra.
+En computadora se han elaborado tablas de números aleatorios para agilizar la selección 
+de muestras aleatorias. Un ejemplo de esas tablas es la Tabla 12, Apéndice 3. Una tabla de 
+número aleatorio es un conjunto de enteros (0, 1, … , 9) generado 
+
+[Bloque seleccionado #104 | relevancia=23]
+Pagina 103
+2.13  Resumen  79
+restantes de la muestra. Si decidimos continuar hacia abajo de la página, el siguiente número 
+(inmediatamente abajo del 5) es un 2. Entonces nuestra segunda persona muestreada sería 
+el número 2. Continuando, llegamos a un 8 pero hay sólo siete elementos en la población. 
+Entonces el 8 se pasa por alto y continuamos bajando por la columna; aparecen entonces dos 
+números 5 pero ambos deben ser ignorados porque la persona 5 ya ha sido seleccionada. (La 
+fi cha número 5 se ha retirado del montón.) Por último, llegamos a un 1 y nuestra muestra de 
+tres está completa con personas numeradas 5, 2 y 1.
+Cualquier punto inicial se puede usar en una tabla de números aleatorios y podemos con-
+tinuar en cualquier dirección desde el punto inicial. No obstante, si se ha de usar más de una 
+muestra en cualquier problema, cada una debe tener un punto inicial único.
+En muchas situaciones la población es conceptual, como en una observación hecha du-
+rante un experimento de laboratorio. Aquí la población se visualiza como las infi nitamente 
+numerosas mediciones que se obtendrían si el experimento fuera a repetirse una y otra vez. Si 
+deseamos una muestra de n = 10 mediciones de esta población, repetiríamos el experimento 
+10 veces y esperaríamos que los resultados representen, con un grado razonable de aproxima-
+ción, una muestra aleatoria.
+Aun cuando el propósito principal de esta exposición fue aclarar el signifi cado de una 
+muestra aleatoria, nos gustaría mencionar que algunas técnicas de muestreo son sólo parcial-
+mente aleatorias. Por ejemplo, si deseamos determinar la preferencia electoral de la nación en 
+una elección presidencial, es probable que no escojamos una muestra aleatoria de la población 
+de votantes. Por pura casualidad, todos los votantes que aparezcan en la muestra podrían ser 
+sacados de una sola ciudad, San Francisco, por ejemplo, que no podría ser representativa de 
+la población de todos los votantes de Estados Unidos. Preferiríamos una selección aleatoria 
+de votantes provenientes de distritos políticos más pequeños, quizá estados, asignando un 
+número específi co a cada estado. La información de las submuestras seleccionadas al azar 
+sacadas de los estados respectivos se combinaría para formar una predicción respecto a toda 
+la población de votantes del país. En general, deseamos seleccionar una muestra para obtener 
+una cantidad específi ca de información a un costo mínimo.
+ 
+2.13 Resumen
+Este capítulo se ha ocupado de dar un modelo para la repetición de un experimento y, en con-
+secuencia, un modelo para las distrib
+
+[Bloque seleccionado #150 | relevancia=19]
+Pagina 149
+ 
+*3.101 
+a   Observamos una sucesión de intentos idénticos e independientes con dos posibles resultados en cada 
+intento, S y F, y con P(S) = p. El número del intento en el que observamos el quinto éxito, Y, tiene 
+una distribución binomial negativa con parámetros r = 5 y p. Suponga que observamos el quinto 
+éxito en el onceavo intento. Encuentre el valor de p que maximice P(Y = 11).
+ 
+ 
+b  Generalice el resultado del inciso a para hallar el valor de p que maximice P(Y = y0) cuando Y tiene 
+una distribución binomial negativa con parámetros r (conocidos) y p.
+ 
+3.7  La distribución de probabilidad 
+hipergeométrica
+En el Ejemplo 3.6 consideramos una población de votantes, 40% de los cuales estaban a favor 
+del candidato Jones. Se seleccionó una muestra de votantes y Y (el número a favor de Jones) 
+había de ser observado. Concluimos que si el tamaño muestral n era pequeño con respecto al 
+tamaño poblacional N, la distribución de Y podría ser calculada por medio de una distribución 
+binomial. También determinamos que si n era grande con respecto a N, la probabilidad con-
+dicional de seleccionar un votante a favor de Jones en un muestreo posterior sería afectado de 
+manera importante por las preferencias observadas de personas seleccionadas en muestreos 
+anteriores. Entonces los intentos no eran independientes y la distribución de probabilidad para 
+Y no podría ser calculada en forma adecuada por una distribución de probabilidad binomial. 
+Entonces, necesitamos desarrollar la distribución de probabilidad para Y cuando n es grande 
+con respecto a N.
+Suponga que una población contiene un número fi nito N de elementos que posee una de 
+dos características. Así, r de los elementos podrían ser rojos y b = N – r, negros. Una muestra 
+de n elementos se selecciona al azar de la población y la variable aleatoria de interés es Y, el 
+número de elementos rojos de la muestra. Esta variable aleatoria tiene lo que se conoce como 
+la distribución de probabilidad hipergeométrica. Por ejemplo, el número de trabajadores que 
+son mujeres, Y, en el Ejemplo 3.1 tiene la distribución hipergeométrica.
+La distribución de probabilidad hipergeométrica se puede obtener usando los teoremas 
+combinatorios dados en la Sección 2.6 y el método de punto muestral. Un punto muestral del 
+espacio muestral S corresponderá a una selección única de n elementos, algunos rojos y el 
+resto negros. Al igual que en el experimento binomial, cada punto muestral puede ser caracte-
+rizado por un n arreglo cuyos elementos correspondan a una selección de n elementos del total 
+de N. Si cada eleme
+
+[Bloque seleccionado #376 | relevancia=25]
+Pagina 375
+ 
+ 
+ 
+ i ¿Cuál es la forma general de la distribución muestral simulada que obtuvo?
+ 
+ 
+ 
+ii  ¿Cómo se compara la media de los 3000 valores y1, y2, . . . , y3000 con el valor de m = E(Y) calcu-
+lada en el inciso a? ¿Cómo se compara la desviación estándar de los 3000 valores con s/√3?
+ 
+ 
+e Arrastre a la parte de la pantalla marcada “Rolling 12 Loaded Dice”.
+ 
+ 
+ 
+  i  En el inciso ii, usted usará la aplicación breve para generar 3000 muestras de tamaño 12, calculará 
+la media de cada muestra observada y grafi cará estas medias en un histograma. Antes de usar la 
+aplicación, pronostique el valor aproximado que obtendrá para la media y desviación estándar de 
+los 3000 valores de y que está por generar.
+ 
+ 
+ 
+ ii  Use la aplicación para generar 3000 muestras de tamaño 12 y obtener el histograma asociado con 
+las medias muestrales respectivas, yi, i = 1, 2, . . . , 3000. ¿Cuál es la forma general de la distri-
+bución muestral simulada que obtuvo? Compare la forma de esta distribución muestral simulada 
+con la que obtuvo en el inciso d.
+ 
+ 
+ 
+iii  Haga clic en el botón “Show Stats” para observar la media y la desviación estándar de los 3000 
+valores y1, y2, . . . , y3000. ¿Cómo se comparan estos valores con los que usted pronosticó en el 
+inciso i?
+ 
+7.5 
+Ejercicio Applet ¿Qué aspecto tiene la distribución de muestreo de la media muestral si las muestras se 
+toman de una distribución aproximadamente normal? Use el applet Sampling Distribution of the Mean 
+(en www.thomsonedu.com/statistics/wackerly) para completar lo siguiente. La población de la que se 
+obtendrán las muestras está distribuida aproximadamente en forma normal con m = 16.50 y s = 6.03 
+(estos valores se proporcionan arriba del histograma poblacional y están denotados como M y S, respec-
+tivamente).
+ 
+ 
+a  Use el botón “Next Obs” para seleccionar un solo valor de la población aproximadamente normal. 
+Haga clic cuatro veces en el botón para completar una muestra de tamaño 5. ¿Qué valor obtuvo para 
+la media de esta muestra? Localice este valor en el histograma del fondo (el histograma para los 
+valores de Y).
+ 
+ 
+b  Haga clic en el botón “Reset” para borrar la gráfi ca del centro. Haga clic en el botón “Next Obs” 
+cinco veces más para obtener otra muestra de tamaño 5 de la población. ¿Qué valor obtuvo para la 
+media de esta nueva muestra? El valor que obtuvo ¿es igual al obtenido en el inciso a? ¿Por qué sí o 
+por qué no?
+ 
+ 
+c  Use el botón “1 Sample” ocho veces más para obtener un total de diez valores de la media muestral. 
+Vea el histograma de estas diez medias.
+ 
+ 
+ 
+ i ¿Qué observ
+
+[Bloque seleccionado #377 | relevancia=35]
+Pagina 376
+352  Capítulo 7  Distribuciones muestrales y el teorema del límite central
+ 
+7.6 
+Ejercicio Applet ¿Cuál es el efecto del tamaño muestral en la distribución muestral de Y? Use el applet 
+SampleSize para completar lo siguiente. Como en el Ejercicio 7.5, la población de la que se obtendrán 
+las muestras está distribuida normalmente en forma aproximada con m = 16.50 y s = 6.03 (estos valo-
+res se proporcionan arriba del histograma de población y se denotan como M y S, respectivamente).
+ 
+ 
+a  Use las fl echas arriba/abajo en la caja izquierda “Sample Size” para seleccionar uno de los tamaños 
+muestrales pequeños disponibles y las fl echas de la caja derecha “Sample Size” para seleccionar un 
+tamaño muestral más grande.
+ 
+ 
+b  Haga clic en el botón “1 Sample” unas cuantas veces. ¿Qué semejanzas existen entre los dos histo-
+gramas que generó? ¿Qué diferencias hay entre ellos?
+ 
+ 
+c  Haga clic en el botón “1000 Samples” unas cuantas veces y conteste las preguntas del inciso b.
+ 
+ 
+d  Las medias y las desviaciones estándar de las dos distribuciones muestrales ¿están cercanas a los 
+valores que esperaba? [Sugerencia: V(Y) = s2/n.]
+ 
+ 
+e  Haga clic en el botón “Toggle Normal”. ¿Qué observa acerca de lo adecuado de la aproximación de 
+las distribuciones normales?
+ 
+7.7 
+Ejercicio Applet ¿Qué aspecto tiene la distribución de muestreo de la varianza muestral si obtenemos 
+muestras de una población con una distribución aproximadamente normal? Averígüelo usando el applet 
+Sampling Distribution of the Variance (Mound Shaped Population) (en www.thomsonedu.com/statis-
+tics/wackerly) para completar lo siguiente.
+ 
+ 
+a  Haga clic en el botón “Next Obs” para tomar una muestra de tamaño 1 de la población con distribu-
+ción representada por el histograma de la parte superior. El valor obtenido se grafi ca en el histograma 
+central. Haga clic cuatro veces más para completar una muestra de tamaño 5. El valor de la varianza 
+muestral se calcula y se proporciona arriba del histograma central. ¿El valor de la varianza muestral 
+es igual al valor de la varianza poblacional? ¿Le sorprende esto?
+ 
+ 
+b  Cuando complete el inciso a, el valor de la varianza muestral también se grafi ca en el histograma de la 
+parte más baja. Haga clic en el botón “Reset” y repita el proceso del inciso a para generar un segundo 
+valor observado para la varianza muestral. ¿Obtuvo el mismo valor que observó en el inciso a? ¿Por 
+qué sí o por qué no?
+ 
+ 
+c  Haga clic en el botón “1 Sample” unas cuantas veces. Observará que diferentes muestras llevan a 
+valores diferentes de la varianza muestral. 
+
+[Bloque seleccionado #395 | relevancia=22]
+Pagina 394
+370  Capítulo 7  Distribuciones muestrales y el teorema del límite central
+ 
+ 
+c Proporcione la distribución de
+ˆu −
+c2
+1
+n1
++ c2
+2
+n2
++ ⋅⋅⋅+c2
+k
+nk
+MSE
+,
+=
+SSE
+n1 + n2
+nk −k .
+−u
+c2
+1
+n1
++ c2
+2
+n2
+c2
+k
+nk
+,
+donde MSE = n1 + n2+ ⋅⋅⋅+nk −k .
+ 
+ 
+ 
+Justifi que las afi rmaciones que haga.
+ 
+7.3 Teorema del límite central 
+En el Capítulo 5 demostramos que si Y1, Y2, . . . , Yn representa una muestra aleatoria provenien-
+te de cualquier distribución con media m y varianza s2, entonces E(Y) = m y V (Y) = s2/n.
+En esta sección desarrollaremos una aproximación para la distribución muestral de Y, que se 
+puede usar sin considerar la distribución de la población de la cual se tome la muestra.
+Si extraemos la muestra de una población normal, el Teorema 7.1 nos dice que Y tiene 
+una distribución de muestreo normal. Pero, ¿qué podemos decir acerca de la distribución 
+muestral de Y si las variables Yi no están distribuidas normalmente? Por fortuna, Y tendrá una 
+distribución muestral que es aproximadamente normal si el tamaño de la muestra es grande. 
+El enunciado formal de este resultado recibe el nombre de teorema del límite central. No 
+obstante, antes de enunciar este teorema, veremos algunos estudios prácticos que demuestran 
+la distribución muestral de Y.
+Se utilizó una computadora para generar muestras aleatorias de tamaño n de una función 
+con densidad exponencial y media 10, es decir, de una población con densidad
+f (y) =
+(1/10)e−y/10,
+y > 0,
+0,
+en cualquier otro punto.
+En la Figura 7.5 aparece una gráfi ca de esta función de densidad. La media muestral se 
+calculó para cada muestra y el histograma de frecuencia relativa para los valores de las me-
+dias muestrales para 1000 muestras, cada una de tamaño n = 5, se presenta en la Figura 7.6. 
+Observe que la Figura 7.6 presenta un histograma que tiene forma aproximada de campana, 
+pero el histograma está ligeramente sesgado.
+La Figura 7.7 es una gráfi ca de un histograma similar de frecuencia relativa de los valores 
+de la media muestral para 1000 muestras, cada una de tamaño n = 25. En este caso, la Figura 
+7.7 muestra un histograma casi simétrico en forma de campana, que se puede calcular en for-
+ma bastante cercana con una función de densidad normal.
+F I G U R A 7.5
+Función de densidad 
+exponencial
+f(y)
+y
+.1
+0
+
+[Bloque seleccionado #399 | relevancia=21]
+Pagina 398
+374  Capítulo 7  Distribuciones muestrales y el teorema del límite central
+ 
+ 
+b  Haga clic unas cuantas veces en el botón “1000 Samples” y conteste las preguntas del inciso b. ¿Los 
+histogramas generados tienen las formas que esperaba? ¿Por qué?
+ 
+ 
+c  ¿Las medias y desviaciones estándar de las dos distribuciones muestrales son cercanas a los valores 
+que esperaba? [Sugerencia: V (Y) = s2/n.]
+ 
+ 
+d  Haga clic en el botón “Toggle Normal”. ¿Qué observa acerca de lo adecuado de las distribuciones 
+normales calculadas?
+ 
+ 
+e  Haga clic en las dos distribuciones muestrales generadas para que aparezcan ventanas para cada 
+una. Use las fl echas arriba/abajo en las cajas izquierda y derecha de “Sample Size” para seleccionar 
+muestras de tamaño 10 y 25. Haga clic en el botón “Toggle Normal”. Ahora tiene ya las gráfi cas de 
+las distribuciones muestrales de las medias muestrales basadas en muestras de tamaños 1, 3, 10 y 25. 
+¿Qué observa acerca de lo adecuado de la aproximación normal cuando aumenta el tamaño mues-
+tral?
+ 
+7.41 
+Ejercicio Applet Consulte el Ejercicio 7.40. Use la aplicación SampleSize para completar lo siguiente. 
+Use la fl echa arriba/abajo a la izquierda del histograma de la distribución poblacional para seleccionar 
+la distribución “en forma de U”. ¿Cuál es la media y la desviación estándar de la población de la cual se 
+seleccionarán las muestras?
+ 
+ 
+a  Conteste las preguntas de los incisos (a-e) del Ejercicio 7.40.
+ 
+ 
+b  Consulte el inciso a. Cuando examinó la distribución muestral de Y para n = 3, tenía un “valle” en 
+el centro. ¿Por qué ocurrió esto? Use la aplicación Basic para averiguarlo. Seleccione la distribución 
+poblacional “en forma de U” y haga clic en el botón “1 Sample.” ¿Qué observa acerca de los valores 
+de observaciones individuales en la muestra? Haga clic en el botón “1 Sample” varias veces más. 
+¿Los valores de la muestra tienden a ser (relativamente) grandes o pequeños con pocos valores en el 
+“centro”? ¿Por qué? ¿Qué efecto tiene esto en el valor de la media muestral? [Sugerencia: 3 es un 
+tamaño muestral impar.]
+ 
+7.42 
+La resistencia a la ruptura del vidrio templado promedia 14 (medida en miles de libras por pulgada 
+cuadrada) y tiene una desviación estándar de 2.
+ 
+ 
+a  ¿Cuál es la probabilidad de que el promedio de resistencia a la ruptura de 100 piezas seleccionadas 
+aleatoriamente de este vidrio exceda de 14.5?
+ 
+ 
+b  Encuentre un intervalo que incluya, con probabilidad 0.95, el promedio de resistencia a la ruptura de 
+100 piezas de este vidrio seleccionadas aleatoriamente.
+ 
+7.43 
+Una antropóloga dese

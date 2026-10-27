@@ -1,0 +1,43 @@
+{
+  "schema": "aulatex.questionnaire.partial-source-validation.v1",
+  "date_local": "2026-10-24",
+  "status": "parcial; no sustituye al banco literal de reactivos ni acredita envío",
+  "validations": [
+    {
+      "number": 1,
+      "selected_option": "b",
+      "validated_concept": "Cuotas y estratificado distinguen grupos, pero cuotas usa selección no aleatoria dentro de ellos.",
+      "justification": "Fijar cantidades por grupo no equivale a seleccionar probabilísticamente a sus integrantes. El muestreo estratificado sí selecciona unidades al azar dentro de los estratos; el de cuotas completa cantidades preestablecidas con selección no aleatoria.",
+      "cite_keys": ["statcanNoProb2021"],
+      "locators": ["Quota sampling, párrafos 1–4", "Material del aula 1745-1d6cdf095c3e.txt, líneas 209–212"],
+      "validated": true
+    },
+    {
+      "number": 2,
+      "selected_option": "c",
+      "validated_concept": "Muestreo estratificado para asegurar representación de subgrupos.",
+      "justification": "Seleccionar una muestra dentro de cada estrato asegura la presencia de los subgrupos definidos y permite dimensionar cada uno según las necesidades de precisión. No implica por sí solo proporciones iguales entre estratos ni ausencia de no respuesta.",
+      "cite_keys": ["holmesBusiness2023", "statcanProb2021"],
+      "locators": ["OpenStax, sección 1.2, Stratified sample", "Statistics Canada, Stratified sampling", "Levin y Rubin (2010), página impresa 241; PDF 259"],
+      "validated": true
+    },
+    {
+      "number": 3,
+      "selected_option": "c",
+      "validated_concept": "Parámetro como medida descriptiva de población.",
+      "justification": "Un parámetro resume una característica de toda la población; un estadístico resume la muestra. La distinción depende del conjunto descrito, no de que la medida sea una media, una proporción u otro resumen.",
+      "cite_keys": ["wackerly2010"],
+      "locators": ["Wackerly et al. (2010), capítulo 7, definición 7.1, página impresa 347; extracción local líneas 26578–26605", "Levin y Rubin (2010), glosario del capítulo 6, página impresa 267; PDF 285"],
+      "validated": true
+    },
+    {
+      "number": 4,
+      "selected_option": "a",
+      "validated_concept": "Conglomerados como diseño útil ante dispersión geográfica.",
+      "justification": "Seleccionar grupos o áreas concentra las unidades observadas y reduce desplazamientos cuando la población está dispersa. Esta ventaja logística no asegura mayor precisión: la semejanza entre unidades del mismo conglomerado puede aumentar la varianza.",
+      "cite_keys": ["statcanProb2021"],
+      "locators": ["Statistics Canada, Cluster sampling, párrafos 1–5; copia local TXT líneas 98–107"],
+      "validated": true
+    }
+  ]
+}

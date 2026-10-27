@@ -1,0 +1,701 @@
+Fuente bibliográfica: Estadística para negocios y economía - Anderson, Sweeney y Williams. 11.ª edición.pdf
+Actividad: 21 (7.2 Investigación 4% Tarea)
+Palabras clave: regresión lineal, productividad, rentabilidad, ventas, costos, ANOVA, mínimos cuadrados, desempeño
+
+[Bloque seleccionado #597 | relevancia=17]
+Pagina 596
+562 
+Capítulo 14  Regresión lineal simple
+Con frecuencia las decisiones gerenciales se basan en la relación entre dos o más variables. Por 
+ejemplo, al analizar la relación entre el gasto en publicidad y las ventas, un gerente de marketing 
+puede tratar de predecir las ventas correspondientes a un determinado gasto en publicidad. En 
+otro caso, una empresa de servicios públicos establece la relación entre la temperatura diaria y 
+la demanda de electricidad para predecir la necesidad de ﬂ uido eléctrico considerando las tem-
+peraturas diarias que se esperan para el mes siguiente. Algunas veces los directivos se apoyan 
+en la intuición para juzgar la relación entre dos variables. Sin embargo, cuando los da tos es-
+tán disponibles, puede emplearse un procedimiento estadístico llamado análisis de regresión 
+para obtener una ecuación que indique cuál es la relación entre las variables.
+En la terminología que se emplea en la regresión, la variable a predecir se llama variable 
+dependiente, y a la variable o variables que se usan para predecir su valor se les llama varia-
+bles independientes. Por ejemplo, al analizar el efecto de los gastos en publicidad sobre las 
+ventas, como lo que busca el gerente de marketing es predecir estas últimas, las ventas serán la 
+variable dependiente.
+En este capítulo se estudia el tipo más sencillo de análisis de regresión en el que interviene 
+una variable independiente y una variable dependiente donde la relación entre estas variables se 
+aproxima mediante una línea recta. A este tipo de análisis se le conoce como regresión lineal 
+simple. Al análisis en el que intervienen dos o más variables independientes se le llama análisis 
+de regresión múltiple; éste y los casos en los que la relación es curvilínea se estudian en los 
+capítulos 15 y 16.
+14.1  Modelo de regresión lineal simple
+Armand’s Pizza Parlors es una cadena de restaurantes de comida italiana que abarca un área de 
+cinco estados. Las ubicaciones con mayor éxito se encuentran cerca de los campus universita-
+rios. Los gerentes creen que las ventas trimestrales de estos restaurantes (denotadas por y) están 
+directamente relacionadas con el tamaño de la población estudiantil (denotada por x); es decir, 
+en los establecimientos que están cerca de algún campus con una población estudiantil grande 
+se generan más ventas que en aquellos situados cerca de algún campus con una población es-
+tudiantil pequeña. Empleando el análisis de regresión, se puede desarrollar una ecuación que 
+muestre cuál es la relación de la variable dependiente y con la variable independien
+
+[Bloque seleccionado #599 | relevancia=18]
+Pagina 598
+564 
+Capítulo 14  Regresión lineal simple
+regresión, se obtiene la ecuación de regresión estimada. La ecuación de regresión estimada de 
+una regresión lineal simple se da a continuación.
+ECUACIÓN DE REGRESIÓN LINEAL SIMPLE ESTIMADA
+ 
+yˆ  b0  b1x 
+(14.3)
+A la gráﬁ ca de la ecuación de regresión lineal simple estimada se le llama recta de regre-
+sión estimada; b0 es la intersección con el eje y, y b1 es la pendiente. En la sección siguiente 
+se muestra el uso del método de mínimos cuadrados para calcular los valores de b0 y b1 en la 
+ecuación de regresión estimada.
+En general, yˆ es el estimador puntual de E(y), el valor medio de las y para un valor dado 
+de x. Por tanto, para estimar la media o el valor esperado de las ventas trimestrales de todos los 
+restaurantes situados cerca de los campus con 10 000 estudiantes, Armand’s tendrá que sustituir 
+x por 10 000 en la ecuación (14.3). Sin embargo, en algunos casos a la cadena le interesará pre-
+decir las ventas de un determinado restaurante. Por ejemplo, suponga que desea pronosticar las 
+ventas trimestrales del que se encuentra cerca de Talbot College, una escuela con 10 000 estu-
+diantes. Resulta que la mejor estimación de la y que corresponde a un determinado valor de x es 
+también la proporcionada por yˆ. Por tanto, para predecir las ventas trimestrales del restaurante 
+en cuestión, Armand’s también sustituirá la x de la ecuación (14.3) por 10 000.
+Como el valor de yˆ proporciona tanto una estimación puntual de E(y) para un valor dado 
+de x, como una estimación puntual de un solo valor de y para un valor dado de x, a yˆ se le llama-
+rá simplemente valor estimado de y. En la ﬁ gura 14.2 se presenta en forma resumida el proceso 
+de estimación en la regresión lineal simple.
+FIGURA 14.2  Proceso de estimación en la regresión lineal simple
+Modelo de regresión
+y  0  1x  
+Ecuación de regresión
+E(y)  0  1x
+Parámetros desconocidos
+0, 1
+Datos muestrales
+b0 y b1
+proporcionan estimaciones
+de 0 y  1
+Ecuación de regresión
+estimada
+yˆ  b0  b1x
+Estadísticos muestrales
+b0, b1
+La estimación de 0 y 1 es 
+un proceso estadístico muy 
+parecido a la estimación 
+de μ estudiada en el 
+capítulo 7. Tanto 0 como 
+1 son los parámetros de 
+interés desconocidos, y 
+b0 y b1 son los estadísticos 
+muestrales que se usan para 
+estimar los parámetros.
+
+[Bloque seleccionado #600 | relevancia=19]
+Pagina 599
+ 
+14.2  Método de mínimos cuadrados 
+565
+ 
+ 
+Student 
+Quarterly
+ 
+Restaurant 
+Population (1 000s) 
+Sales ($1 000s)
+ 
+i 
+xi 
+yi
+ 
+1 
+2 
+58
+ 
+2 
+6 
+105
+ 
+3 
+8 
+88
+ 
+4 
+8 
+118
+ 
+5 
+12 
+117
+ 
+6 
+16 
+137
+ 
+7 
+20 
+157
+ 
+8 
+20 
+169
+ 
+9 
+22 
+149
+ 
+10 
+26 
+202
+NOTAS Y COMENTARIOS
+1.  El análisis de regresión no puede entenderse co-
+mo un procedimiento para establecer una re lación 
+de causa y efecto entre las variables. Sólo indica 
+cómo o en qué medida las variables están rela-
+cionadas una con otra. Cualesquiera conclusiones 
+acerca de una relación causa y efecto deben ba-
+sarse en los conocimientos de los especialistas en 
+la aplicación de que se trate.
+2.  La ecuación de regresión en la regresión lineal 
+simple es E(y)  0  1x. En libros más avanza-
+dos sobre análisis de regresión suele escribirse la 
+ecuación como E(y|x)  0  1x, enfatizando así 
+que lo que proporciona esta expresión es el valor 
+medio de las y para un valor dado de x.
+14.2  Método de mínimos cuadrados
+El método de mínimos cuadrados es un procedimiento en el que se usan los datos muestra-
+les para encontrar la ecuación de regresión estimada. Para ilustrar este método, suponga que 
+se recolectan datos de una muestra de 10 restaurantes Armand’s Pizza Parlors ubicados todos 
+cerca de campus universitarios. Para la iésima observación o restaurante en la muestra, xi es el 
+tamaño de la población de estudiantes (en miles) en el campus, y yi son las ventas trimestrales 
+(en miles de dólares). En la tabla 14.1 se presentan los valores de xi y yi en esta muestra de 10 
+restaurantes. Como se puede ver, el restaurante 1, con xl  2 y yi  58, está cerca de un campus 
+con 2 000 estudiantes y sus ventas trimestrales son de $58 000. El restaurante 2, con x2  6 y 
+y2  105, está cerca de un campus con 6 000 estudiantes y sus ventas trimestrales son de 
+$105 000. El valor mayor corresponde a las ventas del restaurante 10, que está cerca de un cam-
+pus con 26 000 estudiantes y sus ventas trimestrales son de $202 000.
+La ﬁ gura 14.3 es el diagrama de dispersión de los datos de la tabla 14.1. La población de 
+estudiantes (Student Population) se indica en el eje horizontal (en miles) y las ventas trimes-
+trales (Quarterly Sales) en el eje vertical (en miles de $). Los diagramas de dispersión para 
+el análisis de regresión se trazan colocando la variable indepediente x en el eje horizontal y la 
+variable dependiente y en el eje vertical. Este diagrama permite observar gráﬁ camente los datos 
+y obtener conclusiones acerca de la relación entre las variables.
+¿Qué conclusión preliminar se puede fo
+
+[Bloque seleccionado #601 | relevancia=18]
+Pagina 600
+566 
+Capítulo 14  Regresión lineal simple
+lación lineal positiva entre x y y. Así, para representar la relación entre las ventas trimestrales 
+y la población de estudiantes, se elige el modelo de regresión lineal simple. Decidido esto, la 
+tarea siguiente es usar los datos muestrales de la tabla 14.1 para determinar los valores de b0 y 
+b1 en la ecuación de regresión lineal simple estimada. Para el restaurante iésimo, la ecuación de 
+regresión simple estimada es
+ 
+yˆi  b0  b1xi 
+(14.4)
+donde
+yˆi  valor estimado de las ventas trimestrales (en miles de dólares)
+del iésimo restaurante
+b0  intersección de la recta de regresión estimada con el eje y
+b1  pendiente de la recta de regresión estimada
+xi  tamaño de la población de estudiantes (en miles) del iésimo restaurante
+Como yi denota ventas observadas (reales) para el restaurante i, y yˆi representa el valor estimado 
+de las ventas en la ecuación (14.4), para cada uno de los restaurantes de la muestra habrá un 
+valor de ventas observadas yi y un valor de ventas estimadas yˆi. Para que la recta de regresión 
+estimada proporcione un buen ajuste a los datos, las diferencias entre los valores observados 
+y estimados deben ser pequeñas.
+En el método de mínimos cuadrados se usan los datos muestrales para obtener los valores 
+de b0 y b1 que minimicen la suma de los cuadrados de las desviaciones (diferencias) entre los 
+valores observados de la variable dependiente yi y los valores estimados de la variable depen-
+diente yˆi. El criterio que se emplea en el método de mínimos cuadrados se basa en la expresión 
+(14.5).
+FIGURA 14.3   Diagrama de dispersión de la población de estudiantes y ventas trimestrales 
+en Armand’s Pizza Parlors
+20
+40
+60
+80
+100
+120
+140
+160
+180
+200
+220
+Ventas trimestrales (miles de $)
+6
+0
+2
+4
+14
+8
+10
+12
+22
+16
+18
+20
+24
+26
+Población de estudiantes (miles)
+x
+y
+
+[Bloque seleccionado #624 | relevancia=15]
+Pagina 623
+ 
+14.5  Prueba de significancia 
+589
+número de grados de libertad en el numerador es igual a 1 y el número de grados de libertad en 
+el denominador es igual a n  2. Por consiguiente, si 1  0, el valor de CMR/ECM deberá ser 
+un valor cercano a 1. Pero si la hipótesis nula es falsa, (1  0), CMR sobreestimará σ 2 y el valor 
+de CMR/ECM se inﬂ ará; de esta manera valores grandes de CMR/ECM conducirán al rechazo de 
+H0 y a la conclusión de que la relación entre x y y es estadísticamente signiﬁ cativa.
+A continuación se realizará la prueba F en el ejemplo de Armand’s Pizza Parlors. El esta-
+dístico de prueba es
+F  
+CMR
+ECM  14 200
+191.25  74.25
+En la tabla de la distribución F (tabla 4 del apéndice B) se observa que con un grado de liber-
+tad en el numerador y n  2  10  2  8 grados de libertad en el denominador, F  11.26 
+proporciona un área de 0.01 en la cola superior. Por tanto, el área en la cola superior de la 
+distribución F que corresponde al estadístico de prueba F  74.25 debe de ser menor de 0.01. 
+Por tanto, concluimos que el valor-p debe de ser menor a 0.01. Empleando Excel o Minitab se 
+encuentra que el valor-p  0.000. Como el valor-p es menor que α  0.01, H0 es rechazada y 
+concluimos que entre el tamaño de la población de estudiantes y las ventas trimestrales existe 
+una relación signiﬁ cativa. A continuación se presenta un resumen de la prueba F de signiﬁ can-
+cia para la regresión lineal simple
+En el capítulo 13 vimos que el análisis de varianza (ANOVA) y la tabla de ANOVA pueden 
+utilizarse para proporcionar una visión resumida de los cálculos que se emplean en el análisis de 
+varianza. Una tabla de ANOVA similar se emplea para resumir los cálculos de la prueba F de sig-
+niﬁ cancia para la regresión. En la tabla 14.5 se presenta la forma general de una tabla de ANOVA 
+para la regresión lineal simple, y en la 14.6 la tabla de ANOVA con los cálculos para la prueba F 
+del ejemplo de Armand’s Pizza Parlors. Regresión, error y total son las etiquetas de las tres fuen-
+tes de variación, y SCR, SCE y STC son las sumas de cuadrados correspondientes que aparecen 
+en la columna 2. En la columna 3 se indican los grados de libertad 1 para SCR, n  2 para SCE y 
+n  1 para STC. Los valores de CMR y ECM aparecen en la columna 4, mientras que la 5 contie-
+ne el valor de F  CMR/ECM, y la 6 el valor-p que corresponde al valor de F de la columna 5. 
+Casi todos los resultados proporcionados por computadora para el análisis de regresión inclu-
+yen un resumen de la tabla ANOVA de la prueba F de signiﬁ cancia.
+En la regresión lineal 
+simp
+
+[Bloque seleccionado #629 | relevancia=12]
+Pagina 628
+594 
+Capítulo 14  Regresión lineal simple
+ 
+Con x  precio ($) y y  calificación, la ecuación de regresión estimada es yˆ  58.158 + 
+0.008449x. Para esos datos, SCE  173.88 y STC  756. ¿La evidencia indica que hay una 
+relación significativa entre precio y calificación?
+31. 
+En el ejercicio 20, con los datos de x  precio ($) y y  puntuación general de 10 televisores 
+de plasma de 42 pulgadas probados por Consumer Reports, se proporcionó la ecuación de 
+regresión estimada yˆ  12.0169  0.0127x. Con estos datos se obtuvieron SCE  540.04 y 
+STC  982.40. Use la prueba F para determinar si el precio de los televisores y la evaluación 
+general están relacionados en un nivel de significancia de 0.05.
+14.6  Uso de la ecuación de regresión estimada 
+para estimación y predicción
+Al usar el modelo de regresión lineal simple se hace un supuesto acerca de la relación entre x 
+y y. Después se usa el método de mínimos cuadrados para obtener una ecuación de regresión 
+lineal simple estimada. Si existe una relación signiﬁ cativa entre x y y, y el coeﬁ ciente de deter-
+minación indica que el ajuste es bueno, la ecuación de regresión estimada es útil para estima-
+ción y predicción.
+Estimación puntual
+En el ejemplo de Armand’s Pizza Parlors, la ecuación de regresión estimada yˆ  60  5x pro-
+porciona una estimación de la relación entre el tamaño de la población de estudiantes x y las 
+ventas trimestrales y. Con la ecuación de regresión estimada se puede obtener una estimación 
+puntual del valor medio de y correspondiente a un determinado valor de x, o se puede prede-
+cir el valor individual de y que corresponde a un valor determinado de x. Por ejemplo, suponga 
+que los gerentes de Armand’s desean una estimación puntual de la media de las ventas trimes-
+trales de todos los restaurantes que se encuentren cerca de campus universitarios con 10 000 
+estudiantes. Usando la ecuación de regresión estimada yˆ  60  5x, con x  10 (o 10 000 es-
+tudiantes) obtenemos yˆ  60  5(10)  110. Por tanto, una estimación puntual de la media 
+de las ventas trimestrales de todos los restaurantes de este ejemplo con 10 000 estudiantes es 
+$110 000.
+Ahora suponga que los gerentes de Armand’s desean predecir las ventas de un determinado 
+restaurante ubicado cerca de Talbot College, una escuela con 10 000 alumnos. En este caso lo 
+que interesa no es la media correspondiente a todos los restaurantes que están cerca de campus 
+con 10 000 estudiantes, sino únicamente predecir las ventas trimestrales de uno en especíﬁ co. 
+En realidad, la estimación puntual de un solo valor de y 
+
+[Bloque seleccionado #657 | relevancia=12]
+Pagina 656
+622 
+Capítulo 14  Regresión lineal simple
+En efecto, b0 y b1 son estadísticos muestrales útiles para estimar los parámetros desconocidos 
+del modelo, 0 y 1.
+El coeﬁ ciente de determinación se presentó como una medida de la bondad de ajuste para 
+la ecuación de regresión estimada, y se puede interpretar como la proporción de la variación 
+en la variable dependiente y que puede ser explicada por la ecuación de regresión estimada. 
+Asimismo, se revisó la correlación como una medida descriptiva de la intensidad de la relación 
+lineal entre dos variables.
+Se analizaron los supuestos acerca del modelo de regresión y su correspondiente térmi-
+no del error, y se presentaron las pruebas t y F, basadas en esos supuestos, como un medio para 
+determinar si la relación entre dos variables es estadísticamente signiﬁ cativa. Se mostró cómo 
+usar la ecuación de regresión estimada para obtener estimaciones de intervalos de conﬁ anza 
+para el valor medio de y y estimaciones por medio de intervalos de predicción para valores 
+individuales de y.
+El capítulo concluyó con una sección sobre soluciones por computadora de los problemas 
+de regresión y dos secciones sobre el uso del análisis residual para validar los supuestos del 
+modelo e identiﬁ car las observaciones atípicas e inﬂ uyentes.
+Glosario
+Análisis residual Análisis de los residuales que se usa para determinar si parecen ser válidos 
+los supuestos planteados acerca del modelo de regresión. También se utiliza para identiﬁ car 
+observaciones atípicas y observaciones inﬂ uyentes.
+Coeﬁ ciente de correlación Medida de la intensidad de la relación lineal entre dos variables 
+(ya estudiado en el capítulo 3).
+Coeﬁ ciente de determinación Medida de la bondad de ajuste de la ecuación de regresión 
+estimada. Se interpreta como la proporción de la variabilidad de la variable dependiente y que 
+es explicada por la ecuación de regresión estimada.
+Diagrama de dispersión Gráﬁ ca de datos bivariados en la que la variable independiente se 
+ubica en el eje horizontal y la variable dependiente en el eje vertical.
+Ecuación de regresión Ecuación que describe cómo está relacionada la media o valor es-
+perado de la variable dependiente con la variable independiente; en la regresión lineal simple, 
+E(y)  0  1x.
+Ecuación de regresión estimada Estimación de la ecuación de regresión obtenida a partir de 
+datos muestrales empleando el método de mínimos cuadrados. En la regresión lineal simple, la 
+ecuación de regresión estimada es yˆ  b0  b1x.
+Error cuadrado medio Estimación insesgada de la varianza del término del error σ 2. 
+
+[Bloque seleccionado #856 | relevancia=14]
+Pagina 855
+ 
+18.5  Estacionalidad y tendencia 
+821
+como variable categórica. Recuerde que cuando esta variable tiene k niveles, se necesitan k  1 
+variables ﬁ cticias. Por tanto, si hay cuatro estaciones, se requieren tres variables ﬁ cticias. Por 
+ejemplo, la serie de tiempo de la temporada de ventas de sombrillas es una variable cualitativa 
+con cuatro niveles: trimestre 1, trimestre 2, trimestre 3 y trimestre 4. Por tanto, para modelar los 
+efectos estacionales en la serie de tiempo de las sombrillas se necesitan 4  1  3 variables 
+ﬁ cticias. Éstas pueden ser codiﬁ cadas de la siguiente manera.
+Qtr 1   1 si el trimestre es 1  Qtr 2   1 si el trimestre es 2    Qtr 3   1 si el trimestre es 3
+                0  en otro caso                        0  en otro caso                        0  en otro caso
+Usando Yˆ para denotar el valor estimado o pronosticado de las ventas, la forma general de la 
+ecuación de regresión estimada relacionada con el número de sombrillas vendidas con base en 
+el trimestre (Qtr) en que las ventas ocurren es la siguiente:
+Yˆ  b0  b1 Qtr1  b2 Qtr2  b3 Qtr3
+La tabla 18.18 es la serie de tiempo de las ventas de sombrillas que muestra los valores codiﬁ ca-
+dos de las variables ﬁ cticias. Al utilizar estos datos y el procedimiento de regresión de Minitab, 
+se obtuvo el resultado de computadora mostrado en la ﬁ gura 18.17. La ecuación de regresión 
+múltiple estimada obtenida es
+Ventas  95.0  29.0 Qtr1  57.0 Qtr2  26.0 Qtr3
+Esta ecuación se puede utilizar para pronosticar las ventas trimestrales para el próximo año.
+Trimestre 1. Ventas  95.0  29.0(1)  57.0(0)  26.0(0)  124
+Trimestre 2. Ventas  95.0  29.0(0)  57.0(1)  26.0(0)  152
+Trimestre 3. Ventas  95.0  29.0(0)  57.0(0)  26.0(1)  121
+Trimestre 4. Ventas  95.0  29.0(0)  57.0(1)  26.0(0)  95
+FIGURA 18.16  Gráfica de la serie de tiempo de ventas de sombrillas
+Ventas
+180
+160
+4
+3
+1
+2
+3
+4
+1
+2
+3
+4
+1
+2
+3
+4
+1
+2
+3
+2
+1
+4
+140
+100
+120
+80
+60
+40
+20
+0
+Año 1
+Año 2
+Año 3
+Año 4
+Año 5
+Año/trimestre
+TABLA 18.17
+Serie de tiempo de las 
+ventas de sombrillas
+ Año Trimestre Ventas
+ 1 
+1 
+125
+ 
+ 
+2 
+153
+ 
+ 
+3 
+106
+ 
+ 
+4 
+88
+ 2 
+1 
+118
+ 
+ 
+2 
+161
+ 
+ 
+3 
+133
+ 
+ 
+4 
+102
+ 3 
+1 
+138
+ 
+ 
+2 
+144
+ 
+ 
+3 
+113
+ 
+ 
+4 
+80
+ 4 
+1 
+109
+ 
+ 
+2 
+137
+ 
+ 
+3 
+125
+ 
+ 
+4 
+109
+ 5 
+1 
+130
+ 
+ 
+2 
+165
+ 
+ 
+3 
+128
+ 
+ 
+4 
+96
+
+[Bloque seleccionado #860 | relevancia=13]
+Pagina 859
+ 
+18.5  Estacionalidad y tendencia 
+825
+Pronóstico para el periodo 19 (trimestre 3 en el año 5)
+Ventas  6.07  1.36(0)  2.03(0)  0.304(1)  0.146(19)  8.54
+Pronóstico para el periodo 20 (trimestre 4 en el año 5)
+Ventas  6.07  1.36(0)  2.03(0)  0.304(0)  0.146(20)  8.99
+Por tanto, tomando en cuenta los efectos tanto estacionales como de tendencia lineal en las 
+ventas de televisores, las estimaciones de las ventas trimestrales en el año 5 son 7 190, 6 670, 
+8 540 y 8 990.
+Las variables ﬁ cticias en la ecuación de regresión múltiple estimada realmente ofrecen cua-
+tro ecuaciones de regresión múltiple estimadas, una para cada trimestre. Por ejemplo, si el perio-
+do t corresponde al trimestre 1, la ecuación estimada para las ventas es
+Trimestre 1. Ventas  6.07  1.36(1)  2.03(0)  0.304(0)  0.146t  4.71  0.146t
+Del mismo modo, si el periodo t corresponde a los trimestres 2, 3 y 4, las estimaciones para las 
+ventas trimestrales son:
+Trimestre 2. Ventas  6.07  1.36(0)  2.03(1)  0.304(0)  0.146t  4.04  0.146t
+Trimestre 3. Ventas  6.07  1.36(0)  2.03(0)  0.304(1)  0.146t  5.77  0.146t
+Trimestre 4. Ventas  6.07  1.36(0)  2.03(0)  0.304(0)  0.146t  6.07  0.146t
+La pendiente de la tendencia lineal para cada ecuación de pronóstico trimestral es 0.146, lo que 
+indica un crecimiento en las ventas de alrededor de 146 televisores por trimestre. La única dife-
+rencia en las cuatro ecuaciones estriba en que tienen diferentes intersecciones. Por ejemplo, la 
+intersección en la ecuación del trimestre 1 es 4.71 y para el trimestre 4 es 6.07. Por tanto, las ven-
+tas en el trimestre 1 son 4.71  6.07  1.36 o 1 360 televisores menos que en el trimestre 4. 
+En otras palabras, el coeﬁ ciente estimada en la regresión para Qtr1 en la ecuación (18.12) pro-
+porciona una estimación de la diferencia en las ventas entre los trimestres 1 y 4. Interpretaciones 
+similares pueden darse para 2.03, el coeﬁ ciente estimado para la variable ﬁ cticia Qtr2, y para 
+0.304, el coeﬁ ciente estimado para la variable ﬁ cticia Qtr3.
+Modelos basados en datos mensuales
+En el ejemplo anterior de las ventas de televisores se mostró cómo utilizar las variables ﬁ cti-
+cias para tomar en cuenta los efectos estacionales trimestrales de la serie de tiempo. Debido 
+a que hubo cuatro niveles para la variable cualitativa estacional, se requerieron tres variables 
+ﬁ cticias. Sin embargo, numerosas empresas utilizan los pronósticos mensuales más que los tri-
+mestrales. Para los datos mensuales, la estación es una variable cualitativa con 12 niveles y, por 
+tanto, so
+
+[Bloque seleccionado #882 | relevancia=13]
+Pagina 881
+ 
+Caso a resolver 2  Pronóstico de pérdidas de ventas 
+847
+Month 
+Year 1 
+Year 2 
+Year 3 
+Year 4 
+Year 5
+January 
+ 
+1.45 
+2.31 
+2.31 
+2.56
+February 
+ 
+1.80 
+1.89 
+1.99 
+2.28
+March 
+ 
+2.03 
+2.02 
+2.42 
+2.69
+April 
+ 
+1.99 
+2.23 
+2.45 
+2.48
+May 
+ 
+2.32 
+2.39 
+2.57 
+2.73
+June 
+ 
+2.20 
+2.14 
+2.42 
+2.37
+July 
+ 
+2.13 
+2.27 
+2.40 
+2.31
+August 
+ 
+2.43 
+2.21 
+2.50 
+2.23
+September 
+1.71 
+1.90 
+1.89 
+2.09
+October 
+1.90 
+2.13 
+2.29 
+2.54
+November 
+2.74 
+2.56 
+2.83 
+2.97
+December 
+4.20 
+4.16 
+4.04 
+4.35
+Caso a resolver 2 
+ Elaboración del pronóstico de pérdidas 
+de ventas
+Carlson Department Store sufrió graves daños cuando un huracán azotó el 21 de agosto la zona 
+donde se encuentra establecida. La tienda fue cerrada durante cuatro meses (de septiembre a di-
+ciembre), y Carlson está involucrada en una disputa con su compañía de seguros sobre el monto 
+de las ventas perdidas durante el tiempo en que la tienda permaneció cerrada. Los dos temas 
+clave que deben ser resueltos son: 1) el importe de las ventas que Carlson habría hecho si no 
+hubiese ocurrido el huracán, y 2) si Carlson tiene derecho a alguna compensación por el exceso 
+de ventas debido al aumento de actividad comercial generado en la zona después del huracán. El 
+condado recibió más de $8 000 millones de ayuda federal por desastres y en pagos por seguros. 
+El resultado fue el aumento de las ventas en las grandes tiendas departamentales y en muchos 
+otros negocios.
+En la tabla 18.27 se presentan los datos de las ventas de Carlson en los 48 meses anteriores 
+al huracán y en la tabla 18.28 las ventas totales en el mismo periodo de todas las tiendas depar-
+tamentales del condado, así como las ventas totales en el condado durante los cuatro meses en 
+que Carlson Department Store permaneció cerrada. Los directivos de la tienda le pedirán que 
+analice estos datos y que obtenga una estimación de la pérdida de ventas que sufrió de septiem-
+bre a diciembre. También se le pedirá que determine si se puede solicitar un pago por las ventas 
+ Month 
+First Year 
+Second Year 
+Third Year
+ January 
+242 
+263 
+282
+ February 
+235 
+238 
+255
+ March 
+232 
+247 
+265
+ April 
+178 
+193 
+205
+ May 
+184 
+193 
+210
+ June 
+140 
+149 
+160
+ July 
+145 
+157 
+166
+ August 
+152 
+161 
+174
+ September 
+110 
+122 
+126
+ October 
+130 
+130 
+148
+ November  
+152 
+167 
+173
+ December 
+206 
+230 
+235
+TABLA 18.26   Ventas de alimentos y bebidas del restaurante Vintage ($ miles)
+TABLA 18.27   Ventas de Carlson Department Store ($ millones)
+ WEB archivo
+Vintage
+ WEB archivo
+CarlsonSales

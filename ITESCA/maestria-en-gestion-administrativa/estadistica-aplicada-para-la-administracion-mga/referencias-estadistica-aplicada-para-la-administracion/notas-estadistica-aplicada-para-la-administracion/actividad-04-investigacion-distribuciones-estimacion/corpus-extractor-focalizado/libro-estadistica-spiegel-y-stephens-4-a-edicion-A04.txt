@@ -1,0 +1,693 @@
+Fuente bibliográfica: Estadística - Spiegel y Stephens. 4.ª edición.pdf
+Actividad: 4 (2.1 Investigación documental y aplicada 5% Tarea)
+Palabras clave: estimador, estimación, insesgamiento, eficiencia, consistencia, intervalo de confianza, margen de error, distribución muestral
+
+[Bloque seleccionado #229 | relevancia=14]
+Pagina 228
+204  CAPÍTULO 8 TEORÍA ELEMENTAL DEL MUESTREO
+MUESTREO CON REPOSICIÓN Y SIN ELLA
+Si se extrae un número de una urna, antes de extraer otro, el número puede ser devuelto a la urna (ser repuesto) o no. 
+En el primer caso, el número puede ser extraído varias veces, en tanto que en el segundo caso sólo puede ser extraído 
+una vez. A un muestreo en el que cada miembro de la población puede ser elegido más de una vez se le llama muestreo 
+con reposición; en cambio, si sólo puede ser elegido una vez se llama muestreo sin reposición.
+Una población puede ser finita o infinita. Por ejemplo, si de una urna que contiene 100 canicas se extraen sucesi-
+vamente 10 canicas sin reposición, se está muestreando una población finita; en cambio, si se lanza una moneda 50 
+veces y se cuenta la cantidad de caras, se está muestreando de una población infinita.
+Una población finita que se muestrea con reposición puede considerarse teóricamente infinita, ya que se puede 
+extraer cualquier cantidad de muestras sin agotar la población. Para fines prácticos, cuando se muestrea de una pobla-
+ción finita pero muy grande, se puede considerar que el muestreo se hace de una población infinita. 
+DISTRIBUCIONES MUESTRALES
+Considérense todas las muestras de tamaño N que pueden extraerse de determinada población (ya sea con reposición 
+o sin ella). Para cada muestra se pueden calcular diversos estadísticos (como media o desviación estándar), los cuales 
+variarán de una muestra a otra. De esta manera se obtiene una distribución del estadístico de que se trate, a la que se 
+le llama distribución muestral.
+Por ejemplo, si el estadístico de que se trata es la media muestral, a la distribución que se obtiene se le llama dis-
+tribución muestral de las medias o distribución muestral de la media. De igual manera se pueden obtener distribucio-
+nes muestrales de las desviaciones estándar, de las varianzas, de las medianas, de las proporciones, etcétera.
+A cada distribución muestral se le puede calcular su media, su desviación estándar, etc. Así, se puede hablar de la 
+media, de la desviación estándar, de la distribución muestral de las medias, etcétera. 
+DISTRIBUCIONES MUESTRALES DE MEDIAS
+Supóngase que de una población finita de tamaño Np > N se extraen, sin reposición, todas las muestras posibles de 
+tamaño N. Si se denota con  X y  X respectivamente, a la media y a la desviación estándar de una distribución mues-
+tral de las medias, y con µ y σ, respectivamente, a la media y la desviación estándar poblacionales, entonces
+ 
+ X ¼   y   X ¼
+ﬃﬃﬃﬃ
+N
+p
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+Np  N
+Np  1
+
+
+[Bloque seleccionado #230 | relevancia=14]
+Pagina 229
+DISTRIBUCIONES MUESTRALES DE PROPORCIONES
+Supóngase que una población sea infinita y que la probabilidad de ocurrencia de un evento (llamada éxito) es p, y que 
+la probabilidad de no ocurrencia del evento es q = 1 − p. La población puede ser, por ejemplo, la de los lanzamientos 
+de una moneda, en los que la probabilidad del evento “cara” es p ¼ 1
+2. Considérense todas las posibles muestras de 
+tamaño N extraídas de esta población, y para cada muestra determínese la proporción P de éxitos. En el caso de una 
+moneda, P es la proporción de caras en N lanzamientos. De esta manera se obtiene una distribución muestral de las 
+proporciones cuya media µP y cuya desviación estándar σP están dadas por
+ 
+P ¼ p  y  P ¼
+ﬃﬃﬃﬃﬃ
+pq
+N
+r
+¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+pð1  pÞ
+N
+r
+ 
+(3)
+que se pueden obtener de la ecuación (2) sustituyendo µ = p y  ¼
+ﬃﬃﬃﬃﬃ
+pq
+p
+. Si el valor de N es grande (N ≥ 30), esta 
+distribución muestral es aproximadamente normal. Obsérvese que la población está distribuida en forma binomial. 
+Las ecuaciones (3) también son válidas para poblaciones finitas si el muestreo se hace con reposición. En el caso 
+de poblaciones finitas en las que el muestreo se hace sin reposición, las ecuaciones (3) se sustituyen por las ecuaciones 
+(1) con µ = p y  ¼
+ﬃﬃﬃﬃﬃ
+pq
+p
+.
+Obsérvese que las ecuaciones (3) pueden obtenerse más fácilmente dividiendo entre N, la media y la desviación 
+estándar (Np y ﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+Npq
+p
+) de la distribución binomial (ver capítulo 7).
+DISTRIBUCIONES MUESTRALES DE DIFERENCIAS Y SUMAS
+Se supone que se tienen dos poblaciones. Para cada muestra de tamaño N1 tomada de la primera población se calcula 
+un estadístico S1, con lo que se obtiene una distribución muestral de este estadístico S1, cuya media y desviación están-
+dar se denotan µS1 y σS1, respectivamente. De igual manera, para cada muestra de tamaño N2 tomada de la segunda 
+población se calcula un estadístico S2, con lo que se obtiene una distribución muestral de este estadístico S2, cuya media 
+y desviación estándar se denotan µS2 y σS2, respectivamente. Con todas las posibles combinaciones de estas muestras 
+de las dos poblaciones se obtiene una distribución de las diferencias, S1 – S2, a la que se le llama distribución muestral 
+de las diferencias de los estadísticos. La media y la desviación estándar de esta distribución muestral se denotan, res-
+pectivamente, µS1−S2 y σS1−S2, y están dadas por
+ 
+S1S2 ¼ S1  S2  y  S1S2 ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+2
+S1 þ 2
+S2
+q
+ 
+(4)
+siempre y cuando las muestras elegidas no dependan, de manera alguna, una de la otra (es decir, las muestras sea
+
+[Bloque seleccionado #232 | relevancia=8]
+Pagina 231
+Pueden obtenerse resultados semejantes para las distribuciones muestrales de las diferencias entre las proporciones 
+de dos poblaciones distribuidas en forma binomial con parámetros (p1, q1) y (p2, q2), respectivamente. En este caso, S1 
+y S2 son proporción de éxitos, P1 y P2, y las ecuaciones (4) se transforman en
+ 
+P1P2 ¼ P1  P2 ¼ p1  p2  y  P1P2 ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+2
+P1 þ 2
+P2
+q
+¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+p1q1
+N1
+þ p2q2
+N2
+r
+ 
+(6)
+Si N1 y N2 son grandes (N1, N2 ≥ 30), la distribución muestral de diferencias entre medias o proporciones se aproximan 
+mucho a una distribución normal.
+Algunas veces se necesita la distribución muestral de la suma de estadísticos. La media y la desviación estándar 
+de estas distribuciones están dadas por
+ 
+S1þS2 ¼ S1 þ S2  y  S1þS2 ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+2
+S1 þ 2
+S2
+q
+ 
+(7)
+suponiendo que las muestras sean independientes. 
+ERRORES ESTÁNDAR
+A la desviación estándar de la distribución muestral de un estadístico suele conocérsele como su error estándar. En la 
+tabla 8.1 se enumeran los errores estándar de distribuciones muestrales de varios estadísticos, suponiendo que el mues-
+treo es un muestreo aleatorio de una población infinita (o muy grande) o de una población finita pero hecho el muestreo 
+con reposición. Se presentan también algunas observaciones especiales en las que se dan las condiciones bajo las 
+cuales son válidas las fórmulas, así como otras observaciones pertinentes.
+Las cantidades µ, σ, p, µr y X, s, P, mr denotan media, desviación estándar, proporción y el r-ésimo momento 
+respecto a la media, poblacionales y muestrales, respectivamente.
+Se hace notar que si el tamaño N de la muestra es suficientemente grande, la distribución muestral es normal o casi 
+normal. A esto se debe que estos métodos se conozcan como métodos para muestras grandes. Cuando N < 30, a las 
+muestras se les llama pequeñas. La teoría de las muestras pequeñas o teoría del muestreo exacto, como se le llama 
+algunas veces, se estudia en el capítulo 11.
+Cuando los parámetros poblacionales, por ejemplo, σ, p o bien µr no se conocen, pueden estimarse con bastante 
+exactitud a partir de sus estadísticos muestrales, s (o bien ^s ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+N=ðN  1Þ
+p
+s), P y mr, siempre y cuando las muestras 
+sean suficientemente grandes.
+DEMOSTRACIONES DE LA TEORÍA ELEMENTAL DEL MUESTREO 
+EMPLEANDO SOFTWARE
+EJEMPLO 1
+En una población grande se define la siguiente variable aleatoria. X es la cantidad de computadoras por hogar; X está distribuida de 
+manera uniforme, es decir, p(x) = 0.25 para x = 1, 2, 3 y 4. En otras palab
+
+[Bloque seleccionado #235 | relevancia=10]
+Pagina 234
+210  CAPÍTULO 8 TEORÍA ELEMENTAL DEL MUESTREO
+ 
+lo que ilustra que  X ¼ .
+d ) La varianza de la distribución muestral de las medias es
+ 
+2
+X ¼ ð2:5  6:0Þ2 þ ð4:0  6:0Þ2 þ ð5:0  6:0Þ2 þ    þ ð9:5  6:0Þ2
+10
+¼ 4:05
+ 
+y  X ¼ 2:01. Esto ilustra que
+ 
+2
+X ¼ 2
+N
+Np  N
+Np  1
+
+
+ 
+ya que el lado derecho es igual a
+ 
+10:8
+2
+5  2
+5  1
+
+
+¼ 4:05
+ 
+que es lo que se obtuvo antes.
+8.3 
+Supóngase que las estaturas de 3 000 estudiantes del sexo masculino de una universidad tienen una distribución 
+normal con media 68.0 pulgadas (in) y desviación estándar 3.0 in. Si se obtienen 80 muestras, cada una de 25 
+estudiantes, ¿cuáles serán la media y la desviación estándar esperadas de la distribución muestral de las medias 
+si el muestreo se hace: a) con reposición y b) sin reposición?
+SOLUCIÓN
+El número de muestras de tamaño 25 que teóricamente pueden obtenerse de un grupo de 3 000 estudiantes, con reposición 
+y sin ésta son, respectivamente (3 000)25 y ð3000
+25 Þ, que son mucho más que 80. De manera que no se obtendrá una verda-
+dera distribución muestral de las medias, sino únicamente una distribución muestral experimental. De cualquier manera, 
+dado que el número de muestras es grande, habrá una estrecha coincidencia entre las dos distribuciones muestrales. Por lo 
+tanto, la media y la desviación estándar esperadas serán muy semejantes a las de la distribución teórica. Se tiene:
+a) 
+ 
+ X ¼  ¼ 68:0 in  y   X ¼
+ﬃﬃﬃﬃ
+N
+p
+¼
+3ﬃﬃﬃﬃﬃ
+25
+p
+¼ 0:6 in
+b) 
+ 
+ X ¼ 68:0 in  y  
+X =
+¯¯
+N
+√
+¯¯¯¯¯¯¯¯
+Np
+N
+Np
+1
+
+=
+3
+¯¯¯
+25
+√
+¯¯¯¯¯¯¯¯¯¯¯
+3 000
+25
+3 000
+1
+
+ 
+que es apenas ligeramente menor a 0.6 in y por lo tanto, para fines prácticos, puede considerarse igual a la del muestreo 
+con reposición. 
+De esta manera, se espera que la distribución muestral experimental de las medias esté distribuida de manera 
+aproximadamente normal con media 68.0 in y desviación estándar 0.6 in.
+8.4 
+¿En cuántas de las muestras del problema 8.3 se esperaría encontrar que la media: a) estuviera entre 66.8 y
+68.3 in y b) fuera menor a 66.4 in?
+SOLUCIÓN
+La media X de una muestra, en unidades estándar, está dada por
+z ¼
+X   X
+ X
+¼
+X  68:0
+0:6
+a) 
+ 
+66.8 en unidades estándar ¼ 66:8  68:0
+0:6
+¼ 2:0
+ 
+ 
+68.3 en unidades estándar ¼ 68:3  68:0
+0:6
+¼ 0:5
+
+[Bloque seleccionado #249 | relevancia=10]
+Pagina 248
+224  CAPÍTULO 8 TEORÍA ELEMENTAL DEL MUESTREO
+c) la media de la distribución muestral de las medias y d ) la desviación estándar de la distribución muestral de las medias. 
+Verificar los incisos c) y d ) directamente a partir de los incisos a) y b) empleando las fórmulas adecuadas.
+8.22 
+Resolver el problema 8.21 si el muestreo se hace sin reposición.
+8.23 
+Las masas de 1 500 balines están distribuidas de manera normal, siendo su media 22.40 g y su desviación estándar 0.048 g. 
+Si de esta población se toman 300 muestras aleatorias de tamaño 36, determinar la media y la desviación estándar esperadas 
+en la distribución muestral de las medias si el muestreo se hace: a) con reposición y b) sin reposición.
+8.24 
+Resolver el problema 8.23 si la población consta de 72 balines.
+8.25 
+¿En cuántas de las muestras aleatorias del problema 8.23 la media: a) estará entre 22.39 y 22.41 g, b) será mayor a 22.42 g, 
+c) será menor a 22.37 g y d ) será menor a 22.38 g o mayor a 22.41 g?
+8.26 
+La media de la vida útil de ciertos cinescopios fabricados por una empresa es 800 h y la desviación estándar es 60 h. Encontrar 
+la probabilidad de que en una muestra aleatoria de 16 cinescopios la media del tiempo de vida: a) esté entre 790 y 810 h, 
+b) sea menor a 785 h, c) sea mayor a 820 h y d ) esté entre 770 y 830 h.
+8.27 
+Repetir el problema 8.26 con una muestra aleatoria de 64 cinescopios. Explicar la diferencia.
+8.28 
+Los paquetes que se reciben en una tienda departamental pesan en promedio 300 libras (lb) y su desviación estándar es de 
+50 lb. ¿Cuál es la probabilidad de que 25 paquetes recibidos al azar pesen más del límite de seguridad especificado en el 
+elevador, que es 8 200 lb?
+NÚMEROS ALEATORIOS
+8.29 
+Repetir el problema 8.6 usando un conjunto diferente de números aleatorios y seleccionando: a) 15, b) 30, c) 45 y d ) 60 
+muestras, con reposición, de tamaño 4. En cada caso, comparar con los resultados teóricos.
+8.30 
+Repetir el problema 8.29 tomando muestras de tamaño: a) 2 y b) 8 con reposición, en lugar de tamaño 4 con reposición.
+8.31 
+Repetir el problema 8.6, pero muestreando sin reposición. Comparar con los resultados teóricos.
+8.32 
+a) 
+Mostrar cómo se toman 30 muestras de tamaño 2 de la distribución del problema 3.61.
+b) 
+Calcular la media y la desviación estándar de la distribución muestral de las medias obtenida y compararla con los 
+resultados teóricos.
+8.33 
+Repetir el problema 8.32 empleando muestras de tamaño 4.
+DISTRIBUCIÓN MUESTRAL DE PROPORCIONES
+8.34 
+Encontrar la probabilidad de que de los 200 próximos niños que nazcan, a) menos de 40% sea
+
+[Bloque seleccionado #252 | relevancia=14]
+Pagina 251
+ESTIMACIÓN DE PARÁMETROS 
+En el capítulo 8 se vio cómo emplear la teoría del muestreo para obtener información acerca de muestras extraídas en 
+forma aleatoria de una población desconocida. Sin embargo, desde el punto de vista práctico, suele ser más importan-
+te poder inferir información acerca de una población a partir de muestras obtenidas de ella. De estos problemas se 
+ocupa la inferencia estadística en la que se usan los principios de la teoría del muestreo.
+Un problema importante de la inferencia estadística es la estimación de parámetros poblacionales, o simplemente 
+parámetros (como, por ejemplo, la media y la varianza poblacionales), a partir de los correspondientes estadísticos 
+muestrales, o simplemente estadísticos (por ejemplo, la media y la varianza muestrales). En este capítulo se analiza 
+este problema.
+ESTIMACIONES INSESGADAS
+Si la media de la distribución muestral de un estadístico es igual al parámetro poblacional correspondiente se dice que 
+el estadístico es un estimador insesgado del parámetro; si no es así, se dice que es un estimador sesgado. A los valores 
+de estos estadísticos se les llama estimaciones insesgadas o sesgadas, respectivamente.
+EJEMPLO 1 La media de la distribución muestral de las medias  X es µ, la media poblacional. Por lo tanto, la media muestral 
+X es una estimación insesgada de la media poblacional µ.
+EJEMPLO 2 La media de la distribución muestral de las varianzas es
+s2 ¼ N  1
+N
+2
+donde σ2 es la varianza poblacional y N es el tamaño de la muestra (ver tabla 8.1). Por lo tanto, la varianza muestral s2 es una esti-
+mación sesgada de la varianza poblacional σ2. Empleando la varianza modificada
+^s2 ¼
+N
+N  1 s2
+se encuentra que ^s2 ¼ 2, de manera que ^s2 es una estimación insesgada de σ2. Sin embargo, ^s es una estimación sesgada de σ.
+9
+TEORÍA DE 
+LA ESTIMACIÓN 
+ESTADÍSTICA
+227
+
+[Bloque seleccionado #253 | relevancia=28]
+Pagina 252
+228  CAPÍTULO 9 TEORÍA DE LA ESTIMACIÓN ESTADÍSTICA
+En el lenguaje de la esperanza matemática (ver capítulo 6) se puede decir que un estadístico es insesgado si su 
+esperanza matemática es igual al correspondiente parámetro poblacional. Por lo tanto, X y ^s2 son insesgados, ya que 
+Ef Xg ¼  y Ef^s2g ¼ 2.
+ESTIMACIONES EFICIENTES
+Si la distribución muestral de dos estadísticos tiene la misma media (o esperanza), entonces al estadístico que tiene la 
+menor varianza se le llama estimador eficiente del parámetro correspondiente, y al otro se le llama estimador inefi-
+ciente. A los valores de estos estadísticos se les llama estimaciones eficientes e ineficientes, respectivamente.
+Si se consideran todos los estadísticos cuya distribución muestral tiene una misma media, al estadístico que tiene 
+la menor varianza suele llamársele estimador más eficiente o mejor del parámetro correspondiente.
+EJEMPLO 3 Las distribuciones muestrales de la media y de la mediana tienen la misma media, a saber, la media poblacional. 
+Sin embargo, la varianza de la distribución muestral de las medias es menor que la varianza de la distribución muestral de las 
+medianas (ver tabla 8.1). Por lo tanto, la media muestral proporciona una estimación eficiente de la media poblacional, en tanto que 
+la mediana muestral proporciona una estimación ineficiente de la media poblacional.
+De todos los estadísticos que estiman la media poblacional, la media muestral proporciona la mejor (o la más eficiente) estima-
+ción.
+En la práctica, las estimaciones ineficientes suelen usarse debido a la relativa facilidad con que algunas de ellas 
+pueden obtenerse.
+ESTIMACIONES PUNTUALES Y ESTIMACIONES POR INTERVALO; 
+SU CONFIABILIDAD
+A una estimación de un parámetro poblacional que se da mediante un solo número se le llama estimación puntual del 
+parámetro. A una estimación de un parámetro poblacional que se da mediante dos números, entre los cuales se consi-
+dera que debe estar el parámetro en cuestión, se le llama estimación por intervalo del parámetro en cuestión.
+Las estimaciones por intervalo dan la precisión, o exactitud, de la estimación, y por esto se prefieren a las estima-
+ciones puntuales.
+EJEMPLO 4 Si se dice que en la medición de una distancia se obtuvo como resultado 5.28 metros (m), se está dando una esti-
+mación puntual. En cambio, si se dice que la distancia es 5.28 ± 0.03 m (es decir, que la distancia está entre 5.25 y 5.31 m), se está 
+dando una estimación por intervalo.
+La información sobre el error (o precisión) de una estimación es su confiabilidad.
+ESTIMACIÓN DE PARÁMETROS 
+
+[Bloque seleccionado #257 | relevancia=10]
+Pagina 256
+232  CAPÍTULO 9 TEORÍA DE LA ESTIMACIÓN ESTADÍSTICA
+Obsérvese que no se empleó la corrección de Sheppard por agrupamiento. Si se emplea, se usa s = 2.79 in (ver 
+problema 4.21). 
+9.4 
+Dar una estimación insesgada e ineficiente del verdadero diámetro medio de la esfera del problema 9.2.
+SOLUCIÓN
+La mediana es un ejemplo de estimación insesgada e ineficiente de la media poblacional. Para las cinco mediciones coor-
+denadas de acuerdo con su magnitud, la mediana es 6.36 cm.
+INTERVALOS DE CONFIANZA PARA MEDIAS 
+9.5 
+Encontrar los intervalos de confianza: a) de 95% y b) 99% para estimar la estatura media de los estudiantes de 
+la universidad XYZ del problema 9.3.
+SOLUCIÓN
+a) 
+Los límites de confianza del 95% son X  1:96=
+ﬃﬃﬃﬃ
+N
+p
+. Empleando X ¼ 67:45 in, y ^s ¼ 2:93 in como estimación de 
+σ (ver problema 9.3), los límites de confianza son 67:45  1:96ð2:93=
+ﬃﬃﬃﬃﬃﬃﬃ
+100
+p
+Þ o 67.45 ± 0.57 in. Por lo tanto, el inter-
+valo de confianza del 95% para la media poblacional µ es 66.88 a 68.02 in, lo que se denota así 66.88 < µ < 68.02.
+De manera que se puede decir que la probabilidad de que la media poblacional de las estaturas se encuentre 
+entre 66.88 y 68.02 es aproximadamente de 95% o 0.95. Empleando símbolos se escribe Pr{66.88 < µ < 68.02} = 
+0.95. Esto equivale a decir que se tiene 95% de confianza en que la media poblacional (o verdadera media) se encuen-
+tre entre 66.88 y 68.02 in.
+b) 
+Los límites de confianza del 99% son X  2:58=
+ﬃﬃﬃﬃ
+N
+p
+¼ X  2:58^s=
+ﬃﬃﬃﬃ
+N
+p
+¼ 67:45  2:58ð2:93=
+ﬃﬃﬃﬃﬃﬃﬃ
+100
+p
+Þ ¼ 67.45 ± 
+0.76 in. Por lo tanto, el intervalo de confianza del 99% para la media poblacional µ es 66.69 a 68.21 in, lo que se 
+denota así 66.69 < µ < 68.21.
+Al obtener los intervalos de confianza anteriores se supuso que la población era infinita o tan grande que se 
+podía considerar que las condiciones eran las mismas que en un muestreo con reposición. En el caso de poblaciones 
+finitas, si el muestreo se hace sin reposición, se debe usar
+ 
+ﬃﬃﬃﬃ
+N
+p
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+Np  N
+Np  1
+s
+  en lugar de  
+ﬃﬃﬃﬃ
+N
+p
+ 
+Sin embargo, se puede considerar que el factor
+ 
+
+Np
+N
+Np
+1
+
+=
+
+1 546
+100
+1 546
+1
+
+= 0.967
+ 
+es prácticamente 1.0, por lo que no necesita usarse. Si se usa, los límites de confianza anteriores se convierten en 67.45 
+± 0.56 in y 67.45 ± 0.73 in, respectivamente.
+9.6 
+Una empresa tiene 5 000 árboles de navidad maduros y listos para ser cortados y vendidos. En forma aleatoria 
+se seleccionan 100 de estos árboles y se miden sus alturas. En la tabla 9.2 se dan estas alturas en pulgadas. 
+Emplear MINITAB para dar un interva
+
+[Bloque seleccionado #261 | relevancia=15]
+Pagina 260
+236  CAPÍTULO 9 TEORÍA DE LA ESTIMACIÓN ESTADÍSTICA
+a) 
+Para una confianza de 95%, 0:50zc=
+ﬃﬃﬃﬃ
+N
+p
+¼ 0:50ð1:96Þ=
+ﬃﬃﬃﬃ
+N
+p
+¼ 0:05 si N = 384.2. Por lo tanto, N debe ser 385, por lo 
+menos.
+b) 
+Para una confianza de 99.73%, 0:50zc=
+ﬃﬃﬃﬃ
+N
+p
+¼ 0:50ð3Þ=
+ﬃﬃﬃﬃ
+N
+p
+¼ 0:05 si N = 900. Por lo tanto, N debe ser 901, por lo 
+menos.
+ 
+Otro método
+ 
+1:50=
+ﬃﬃﬃﬃ
+N
+p
+< 0:05 si 
+ﬃﬃﬃﬃ
+N
+p
+=1:50 > 1=0:05 o 
+ﬃﬃﬃﬃ
+N
+p
+> 1:50=0:05. Entonces 
+ﬃﬃﬃﬃ
+N
+p
+> 30 o bien N > 900, de manera que N 
+debe ser por lo menos 901.
+9.12 
+Se realiza un estudio y se encuentra que 156 de 500 varones adultos son fumadores. Emplear el paquete de 
+software STATISTIX para dar un intervalo de confianza de 99% para p, la proporción poblacional de varones 
+adultos que son fumadores. Verificar el intervalo de confianza calculándolo a mano.
+SOLUCIÓN
+Los resultados de STATISTIX se dan a continuación. El intervalo de confianza de 99% aparece en negritas.
+Prueba de proporción de una muestra
+Tamaño de la muestra 
+500
+Éxito 
+156
+Proporción 
+0.31200
+Hipótesis nula 
+P = 0.5
+Hipótesis alterna 
+P < > 0.5
+Diferencia 
+-0.18800
+Error estándar 
+0.02072
+Z (sin corregir) 
+-8.41 
+P  0.0000
+Z (corregida) 
+-8.36 
+P  0.0000
+ 
+ 
+Intervalo de confianza 99%
+Sin corregir 
+(0.25863, 0.36537)
+Corregido 
+(0.25763, 0.36637)
+Se tiene una confianza de 99% de que el verdadero porcentaje de varones adultos fumadores esté entre 25.9% y 
+36.5%.
+Verificación:
+ 
+P ¼ 0:312, zc ¼ 2:58,
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+0:312ð0:688Þ
+500
+r
+¼ 0:0207
+P  zc
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+pð1  pÞ
+N
+r
+ o bien 0.312 ± 2.58(0.0207) o bien (0.258, 0.365). Esto es lo mismo que se obtuvo antes con el 
+paquete de software STATISTIX.
+9.13 
+Refiérase al problema 9.12 para dar un intervalo de confianza de 99% para p empleando MINITAB.
+SOLUCIÓN
+El intervalo de confianza de 99% se muestra abajo en negritas. Es el mismo que el intervalo de confianza obtenido con 
+STATISTIX en el problema 9.12.
+Muestra 
+X 
+N 
+Muestra P 
+      CI 99% 
+Valor z 
+Valor P
+1 
+ 
+156 
+500 
+0.312000 
+(0.258629, 0.365371) 
+-8.41 
+0.000
+
+[Bloque seleccionado #401 | relevancia=12]
+Pagina 400
+376  CAPÍTULO 14 TEORÍA DE LA CORRELACIÓN
+como el anterior. Para probar que el coeficiente de regresión es 0.25, por ejemplo, el valor calculado para el estadístico de 
+prueba será igual a
+t ¼ 0:4764  0:25
+0:1525
+¼ 1:48
+La hipótesis nula de que el coeficiente de regresión es igual a 0.25 no se rechazará.
+14.37 Encontrar los límites de confianza de 95% para el coeficiente de regresión del problema 14.36. Establecer el 
+intervalo de confianza sin ayuda de un software para estadística, así como con ayuda de MINITAB.
+SOLUCIÓN
+El intervalo de confianza puede expresarse como 
+a1 
+t
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+N  2
+p
+SY:X
+SX
+
+
+Por lo tanto, los límites de confianza de 95% para A1 (obtenidos haciendo t = ±t.975 = ±2.23 para 12 − 2 = 10 grados de 
+libertad) están dados por
+a1 
+2:23
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+12  2
+p
+SY:X
+SX
+
+
+¼ 0:476  2:23
+ﬃﬃﬃﬃﬃ
+10
+p
+1:28
+2:66
+
+
+¼ 0:476  0:340
+Es decir, se tiene una confianza de 95% de que A1 se encuentre entre 0.136 y 0.816.
+En el siguiente fragmento de los resultados obtenidos con MINITAB para el problema 14.36 aparece la información 
+necesaria para establecer el intervalo de confianza de 95%.
+Predictor 
+Coef 
+StDev 
+T 
+P
+Constant 
+35.82 
+10.18 
+3.52 
+0.006
+X 
+ 
+0.4764 
+0.1525 
+3.12 
+0.011
+El término
+1
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+N  2
+p
+SY:X
+SX
+
+
+se conoce como el error estándar correspondiente al coeficiente de regresión estimado. En los resultados de MINITAB este 
+error estándar es 0.1525. Para hallar el intervalo de confianza de 95%, se multiplica este error estándar por t.975, y después 
+este término se suma y se resta a a1 = 0.476, con lo que se obtiene el siguiente intervalo de confianza para A1:
+0.476 ± 2.23(0.1525) = 0.476 ± 0.340
+14.38 En el problema 14.1, encontrar los límites de confianza de 95% para las estaturas de los hijos cuyos padres 
+tienen una estatura de: a) 65.0 y b) 70.0 in. Encontrar el intervalo de confianza sin ayuda de software, así como 
+con ayuda de MINITAB.
+SOLUCIÓN
+Como t.975 = 2.23 para (12 − 2) = 10 grados de libertad, los límites de confianza de 95% para YP están dados por
+Y0 
+2:23
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+N  2
+p
+SY:X
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+N þ 1 þ ðX0  XÞ2
+S2
+X
+s
+donde Y0 = 35.82 + 0.476X0, SY .X = 1.28, SX = 2.66 y N = 12.
+a) 
+Si X0 = 65.0, entonces Y0 = 66.76 in. Además, ðX0  XÞ2 ¼ ð65:0  66:67Þ2 ¼ 2:78. De manera que los límites de 
+confianza de 95% son
+66:76  2:23
+ﬃﬃﬃﬃﬃ
+10
+p
+ð1:28Þ
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+12 þ 1 þ 2:78
+2:662
+r
+¼ 66:76  3:30 in
+ 
+Es decir, se puede tener una confianza de 95% de que las estaturas de los hijos están entre 63.46 y 70.06 in.

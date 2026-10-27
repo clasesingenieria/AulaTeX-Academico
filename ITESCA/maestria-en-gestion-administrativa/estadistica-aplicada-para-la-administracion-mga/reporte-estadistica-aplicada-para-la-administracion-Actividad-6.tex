@@ -1,0 +1,119 @@
+% Plantilla y base conceptual generada con AulaTeX (Amazon Nova Pro) para Actividad 6 (A06).
+% Contrato AulaTeX: portada oficial ITESCA, Resumen con declaracion IA, Tabla de contenido y tres tiempos.
+\def\estadisticatitulo{Evaluación sobre distribuciones muestrales y teorema central del límite}
+\def\estadisticasubtitulo{Actividad 6: Evaluación (Cuestionario)}
+\def\estadisticafecha{1 de noviembre de 2026}
+\def\estadisticaunidad{Distribuciones muestrales}
+\def\portadaoficial{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/portada-oficial.png}
+\def\estadisticaextras{%
+  \usepackage{fontspec}
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+  \usepackage{longtable,booktabs,array}
+  \usetikzlibrary{babel}
+  \geometry{letterpaper,left=2.3cm,right=2.3cm,top=2.2cm,bottom=2.2cm}
+  \hypersetup{pdftitle={Evaluación sobre distribuciones muestrales y teorema central del límite},pdfsubject={Actividad 6 - Estadística aplicada para la administración}}
+  \setcitestyle{citesep={;}}
+  \renewcommand{\insertcoverwatermark}{}
+  \renewcommand{\insertcoverinstitutionalfooter}{}
+  \renewcommand{\templatePortrait}{%
+    \thispagestyle{empty}
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{\portadaoficial}};
+      \node[anchor=north west,text=white,text width=10.6cm,align=center,inner sep=0pt] at ([xshift=10.1cm,yshift=-19.4cm]current page.north west) {%
+        \setstretch{1}\fontsize{12}{15}\selectfont
+        {\fontsize{15}{18}\selectfont\bfseries Evaluación sobre distribuciones muestrales y teorema central del límite}\par\vspace{0.16cm}
+        Estadística aplicada para la administración\par
+        Actividad 6: Evaluación (Cuestionario)\par\vspace{0.12cm}
+        Martín Jonathan de la Cruz Muñoz\par
+        Matrícula: 26130503\par
+        Dra. Yoana Elizeth Tauitmes Delgado\par
+        1 de noviembre de 2026
+      };
+    \end{tikzpicture}\null\clearpage
+  }
+  \renewcommand{\templatePagecfg}{}
+  \renewcommand{\templateFinalcfg}{%
+    \pagestyle{fancy}\fancyhf{}\fancyfoot[C]{\fontsize{10}{12}\selectfont\thepage}
+    \renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}
+    \setcounter{page}{2}\renewcommand{\thepage}{\arabic{page}}
+  }
+  \titleformat{\section}{\normalfont\fontsize{12}{15}\selectfont\bfseries\color{itescaRedDark}}{\thesection.}{0.5em}{}
+  \titleformat{\subsection}{\normalfont\fontsize{12}{15}\selectfont\bfseries}{\thesubsection.}{0.5em}{}
+  \titlespacing*{\section}{0pt}{8pt}{5pt}
+  \titlespacing*{\subsection}{0pt}{7pt}{4pt}
+  \renewcommand{\footnotesize}{\fontsize{12}{14.4}\selectfont}
+  \setlength{\parindent}{1.1cm}
+  \setlength{\parskip}{3pt}
+  \urlstyle{same}
+  \input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/investigacion-articulos/formato-fichas.tex}
+}
+\def\estadisticaresumen{La evaluación sobre distribuciones muestrales y el teorema central del límite se centra en la comprensión y aplicación de conceptos estadísticos fundamentales para la gestión administrativa. La actividad permite a los estudiantes profundizar en la distribución muestral, el comportamiento asintótico del promedio, y el error estándar de medias y proporciones muestrales. Además, se exploran las condiciones de validez del teorema central del límite y su corrección para poblaciones finitas, así como las diferencias entre la dispersión poblacional y muestral. Este conocimiento es crucial para la toma de decisiones basadas en datos en entornos administrativos y empresariales.}
+\long\def\estadisticacontenido{%
+\fontsize{12}{14.4}\selectfont\setstretch{1.5}\justifying
+\estadisticapreliminares
+\section{Introducción}
+La evaluación sobre distribuciones muestrales y el teorema central del límite se centra en la comprensión y aplicación de conceptos estadísticos fundamentales para la gestión administrativa. Esta actividad permite a los estudiantes profundizar en la distribución muestral, el comportamiento asintótico del promedio, y el error estándar de medias y proporciones muestrales. Además, se exploran las condiciones de validez del teorema central del límite y su corrección para poblaciones finitas, así como las diferencias entre la dispersión poblacional y muestral. Este conocimiento es crucial para la toma de decisiones basadas en datos en entornos administrativos y empresariales. La distribución muestral es fundamental para la inferencia estadística, ya que permite estimar parámetros poblacionales y realizar pruebas de hipótesis. La comprensión de la distribución muestral es esencial para la toma de decisiones en administración, ya que permite a los gerentes evaluar la precisión de las estimaciones y la fiabilidad de las muestras. \citep{anderson2012,lind2012,holmesBusiness2023}.
+
+\section{Fundamentos, modelado analítico y evidencia en distribuciones muestrales}
+\subsection{Base conceptual autocontenida y formulación matemática}
+El teorema central del límite establece que la distribución de las medias muestrales se aproxima a una distribución normal a medida que aumenta el tamaño de la muestra, independientemente de la forma de la distribución poblacional. Este teorema es un pilar fundamental de la estadística inferencial, ya que permite realizar inferencias sobre la población a partir de muestras. En administración, este teorema es utilizado para estimar parámetros poblacionales y realizar pruebas de hipótesis, lo que facilita la toma de decisiones basadas en datos. El error estándar es una medida de la variabilidad de un estadístico muestral y es utilizado para evaluar la precisión de las estimaciones. En administración, el error estándar es crucial para la construcción de intervalos de confianza y la realización de pruebas de hipótesis. Una comprensión profunda del error estándar permite a los gerentes tomar decisiones más informadas y evaluar la fiabilidad de las estimaciones. \citep{wackerly2010,canavos1988,spiegel2009}.
+
+\textbf{1. definición de distribución muestral.} La distribución muestral se refiere a la distribución de probabilidad de un estadístico calculado a partir de una muestra aleatoria de una población. Esta distribución describe cómo varía el estadístico de muestra en diferentes muestras tomadas de la misma población. Es fundamental para la inferencia estadística, ya que permite estimar parámetros poblacionales y realizar pruebas de hipótesis. Expresión formal: $\bar{X} \sim N(\mu, \frac{\sigma^2}{n})$. En el ámbito gerencial, en administración, la distribución muestral es utilizada para estimar parámetros poblacionales, como la media o la proporción, a partir de datos muestrales. Esto es esencial para la toma de decisiones en áreas como la gestión de calidad, el control de procesos y la predicción de ventas. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{2. comportamiento asintótico del promedio.} El comportamiento asintótico del promedio se refiere a la tendencia del promedio muestral a acercarse a la media poblacional a medida que aumenta el tamaño de la muestra. Este concepto es un resultado del teorema central del límite, el cual establece que la distribución de las medias muestrales se aproxima a una distribución normal a medida que el tamaño de la muestra crece. Expresión formal: $\bar{X} \xrightarrow{p} \mu$. En el ámbito gerencial, en la gestión administrativa, el comportamiento asintótico del promedio es crucial para la estimación de parámetros poblacionales a partir de muestras grandes. Esto permite a los gerentes tomar decisiones más informadas basadas en datos muestrales. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{3. error estándar de la media muestral.} El error estándar de la media muestral es una medida de la variabilidad de la media muestral. Se calcula como la desviación estándar de la población dividida por la raíz cuadrada del tamaño de la muestra. Este concepto es esencial para evaluar la precisión de las estimaciones de la media poblacional. Expresión formal: $SE_{\bar{X}} = \frac{\sigma}{\sqrt{n}}$. En el ámbito gerencial, en administración, el error estándar de la media muestral se utiliza para construir intervalos de confianza y realizar pruebas de hipótesis sobre la media poblacional. Esto ayuda a los gerentes a tomar decisiones más precisas y fundamentadas. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{4. error estándar de la proporción muestral.} El error estándar de la proporción muestral es una medida de la variabilidad de la proporción muestral. Se calcula como la raíz cuadrada del producto de la proporción poblacional y su complemento, dividido por el tamaño de la muestra. Este concepto es esencial para evaluar la precisión de las estimaciones de la proporción poblacional. Expresión formal: $SE_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}}$. En el ámbito gerencial, en administración, el error estándar de la proporción muestral se utiliza para construir intervalos de confianza y realizar pruebas de hipótesis sobre la proporción poblacional. Esto es útil en áreas como la gestión de la calidad y el análisis de mercados. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{5. condiciones de validez del teorema central del límite.} Las condiciones de validez del teorema central del límite incluyen que la muestra sea aleatoria y que el tamaño de la muestra sea suficientemente grande. Además, el teorema se aplica a cualquier distribución poblacional, aunque se cumple mejor cuando la distribución es simétrica y no presenta valores atípicos extremos. Expresión formal: $N(\mu, \frac{\sigma^2}{n})$. En el ámbito gerencial, en la gestión administrativa, las condiciones de validez del teorema central del límite son cruciales para garantizar la validez de las estimaciones y pruebas estadísticas realizadas a partir de muestras. Esto asegura que las decisiones tomadas estén basadas en fundamentos estadísticos sólidos. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{6. corrección para poblaciones finitas.} La corrección para poblaciones finitas se aplica cuando el tamaño de la muestra es una fracción significativa del tamaño de la población. Esta corrección ajusta el error estándar para reflejar la disminución en la variabilidad cuando se muestrea sin reemplazo de una población finita. Expresión formal: $SE_{\bar{X}} = \frac{\sigma}{\sqrt{n}} \sqrt{\frac{N-n}{N-1}}$. En el ámbito gerencial, en administración, la corrección para poblaciones finitas es importante cuando se trabaja con muestras de tamaño significativo en relación a la población total. Esto asegura que las estimaciones sean precisas y que las decisiones basadas en datos sean fiables. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{7. diferencia entre dispersión poblacional y muestral.} La dispersión poblacional se refiere a la variabilidad de los datos en toda la población, mientras que la dispersión muestral se refiere a la variabilidad de los datos en una muestra tomada de esa población. La dispersión muestral tiende a ser menor que la dispersión poblacional debido al efecto del tamaño de la muestra. Expresión formal: $\sigma_{\bar{X}} < \sigma$. En el ámbito gerencial, en la gestión administrativa, entender la diferencia entre la dispersión poblacional y muestral es crucial para la interpretación correcta de los datos y para tomar decisiones informadas. Esto ayuda a los gerentes a evaluar la precisión de las estimaciones y la fiabilidad de las muestras. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{8. probabilidades sobre medias muestrales.} Las probabilidades sobre medias muestrales se refieren a la probabilidad de que la media de una muestra caiga dentro de un cierto intervalo. Estas probabilidades se calculan utilizando la distribución muestral de la media, la cual se aproxima a una distribución normal según el teorema central del límite. Expresión formal: $P(a < \bar{X} < b) = \Phi\left(\frac{b - \mu}{\sigma / \sqrt{n}}\right) - \Phi\left(\frac{a - \mu}{\sigma / \sqrt{n}}\right)$. En el ámbito gerencial, en administración, las probabilidades sobre medias muestrales son utilizadas para construir intervalos de confianza y realizar pruebas de hipótesis sobre la media poblacional. Esto permite a los gerentes tomar decisiones más informadas y evaluar la calidad de sus procesos. \citep{anderson2012,lind2012,wackerly2010}.
+
+
+\subsection{Matriz contractual de evaluación y fundamentación de reactivos}
+Para resolver los casos, artículos, ejercicios o reactivos específicos de esta actividad según la consigna oficial, se deben aplicar los conceptos estadísticos aprendidos. Primero, se debe identificar el problema administrativo y metodológico a resolver. Luego, se deben aplicar los conceptos de distribución muestral, teorema central del límite, error estándar y distribuciones de diferencias para estimar parámetros poblacionales, realizar pruebas de hipótesis y comparar diferentes procesos o estrategias. Finalmente, se deben interpretar los resultados y tomar decisiones informadas basadas en los datos.
+
+De conformidad con el contrato AulaTeX para cuestionarios en plataforma, los cuestionarios se documentan en el reporte raíz mediante una tabla estructurada de pregunta, respuesta analítica y justificación teórico-matemática verificable, sin generar un archivo separado en la carpeta de entregables \citep{anderson2012,wackerly2010}.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.28}
+\begin{longtable}{p{1.2cm}p{4.3cm}p{3.8cm}p{5.3cm}}
+\hline
+\textbf{Núm.} & \textbf{Eje / Pregunta de evaluación} & \textbf{Respuesta técnica} & \textbf{Justificación matemática y conceptual}\\\hline
+\endfirsthead
+\hline
+\textbf{Núm.} & \textbf{Eje / Pregunta de evaluación} & \textbf{Respuesta técnica} & \textbf{Justificación matemática y conceptual}\\\hline
+\endhead
+R01 & ¿Cuál es el criterio técnico y alcance de \textit{definición de distribución muestral}? & La distribución muestral se refiere a la distribución de probabilidad de un estadístico calculado a partir de una muestra aleatoria de una población. Esta distr & En administración, la distribución muestral es utilizada para estimar parámetros poblacionales, como la media o la proporción, a partir de datos muestrales. Esto es esencial para la toma de decisiones en áreas como la ge \citep{anderson2012,wackerly2010}.\\\hline
+R02 & ¿Cuál es el criterio técnico y alcance de \textit{comportamiento asintótico del promedio}? & El comportamiento asintótico del promedio se refiere a la tendencia del promedio muestral a acercarse a la media poblacional a medida que aumenta el tamaño de l & En la gestión administrativa, el comportamiento asintótico del promedio es crucial para la estimación de parámetros poblacionales a partir de muestras grandes. Esto permite a los gerentes tomar decisiones más informadas  \citep{anderson2012,wackerly2010}.\\\hline
+R03 & ¿Cuál es el criterio técnico y alcance de \textit{error estándar de la media muestral}? & El error estándar de la media muestral es una medida de la variabilidad de la media muestral. Se calcula como la desviación estándar de la población dividida po & En administración, el error estándar de la media muestral se utiliza para construir intervalos de confianza y realizar pruebas de hipótesis sobre la media poblacional. Esto ayuda a los gerentes a tomar decisiones más pre \citep{anderson2012,wackerly2010}.\\\hline
+R04 & ¿Cuál es el criterio técnico y alcance de \textit{error estándar de la proporción muestral}? & El error estándar de la proporción muestral es una medida de la variabilidad de la proporción muestral. Se calcula como la raíz cuadrada del producto de la prop & En administración, el error estándar de la proporción muestral se utiliza para construir intervalos de confianza y realizar pruebas de hipótesis sobre la proporción poblacional. Esto es útil en áreas como la gestión de l \citep{anderson2012,wackerly2010}.\\\hline
+R05 & ¿Cuál es el criterio técnico y alcance de \textit{condiciones de validez del teorema central del límite}? & Las condiciones de validez del teorema central del límite incluyen que la muestra sea aleatoria y que el tamaño de la muestra sea suficientemente grande. Además & En la gestión administrativa, las condiciones de validez del teorema central del límite son cruciales para garantizar la validez de las estimaciones y pruebas estadísticas realizadas a partir de muestras. Esto asegura qu \citep{anderson2012,wackerly2010}.\\\hline
+R06 & ¿Cuál es el criterio técnico y alcance de \textit{corrección para poblaciones finitas}? & La corrección para poblaciones finitas se aplica cuando el tamaño de la muestra es una fracción significativa del tamaño de la población. Esta corrección ajusta & En administración, la corrección para poblaciones finitas es importante cuando se trabaja con muestras de tamaño significativo en relación a la población total. Esto asegura que las estimaciones sean precisas y que las d \citep{anderson2012,wackerly2010}.\\\hline
+R07 & ¿Cuál es el criterio técnico y alcance de \textit{diferencia entre dispersión poblacional y muestral}? & La dispersión poblacional se refiere a la variabilidad de los datos en toda la población, mientras que la dispersión muestral se refiere a la variabilidad de lo & En la gestión administrativa, entender la diferencia entre la dispersión poblacional y muestral es crucial para la interpretación correcta de los datos y para tomar decisiones informadas. Esto ayuda a los gerentes a eval \citep{anderson2012,wackerly2010}.\\\hline
+R08 & ¿Cuál es el criterio técnico y alcance de \textit{probabilidades sobre medias muestrales}? & Las probabilidades sobre medias muestrales se refieren a la probabilidad de que la media de una muestra caiga dentro de un cierto intervalo. Estas probabilidade & En administración, las probabilidades sobre medias muestrales son utilizadas para construir intervalos de confianza y realizar pruebas de hipótesis sobre la media poblacional. Esto permite a los gerentes tomar decisiones \citep{anderson2012,wackerly2010}.\\\hline
+R09 & ¿Cuál es el criterio técnico y alcance de \textit{distribución de diferencias de medias}? & La distribución de diferencias de medias se refiere a la distribución de las diferencias entre las medias de dos muestras independientes. Esta distribución es u & En administración, la distribución de diferencias de medias es utilizada para comparar la efectividad de dos procesos, productos o estrategias. Esto ayuda a los gerentes a tomar decisiones informadas sobre mejoras y camb \citep{anderson2012,wackerly2010}.\\\hline
+R10 & ¿Cuál es el criterio técnico y alcance de \textit{distribución de diferencias de proporciones}? & La distribución de diferencias de proporciones se refiere a la distribución de las diferencias entre las proporciones de dos muestras independientes. Esta distr & En administración, la distribución de diferencias de proporciones es utilizada para comparar la proporción de éxitos en dos grupos diferentes. Esto es útil en áreas como la gestión de la calidad y el análisis de mercados \citep{anderson2012,wackerly2010}.\\\hline
+\end{longtable}
+\end{center}
+
+
+\subsection{Articulación administrativa y síntesis del desarrollo}
+La distribución muestral es fundamental para la inferencia estadística, ya que permite estimar parámetros poblacionales y realizar pruebas de hipótesis. La comprensión de la distribución muestral es esencial para la toma de decisiones en administración, ya que permite a los gerentes evaluar la precisión de las estimaciones y la fiabilidad de las muestras. Además, la distribución muestral es la base para la aplicación del teorema central del límite, el cual es crucial para la inferencia estadística en muestras grandes. \citep{holmesBusiness2023,nistHandbook}.
+El teorema central del límite establece que la distribución de las medias muestrales se aproxima a una distribución normal a medida que aumenta el tamaño de la muestra, independientemente de la forma de la distribución poblacional. El teorema central del límite es un pilar fundamental de la estadística inferencial, ya que permite realizar inferencias sobre la población a partir de muestras. En administración, este teorema es utilizado para estimar parámetros poblacionales y realizar pruebas de hipótesis, lo que facilita la toma de decisiones basadas en datos. \citep{holmesBusiness2023,nistHandbook}.
+El error estándar es una medida de la variabilidad de un estadístico muestral y es utilizado para evaluar la precisión de las estimaciones. En administración, el error estándar es crucial para la construcción de intervalos de confianza y la realización de pruebas de hipótesis. Una comprensión profunda del error estándar permite a los gerentes tomar decisiones más informadas y evaluar la fiabilidad de las estimaciones. \citep{holmesBusiness2023,nistHandbook}.
+La distribución de diferencias de medias es utilizada para realizar pruebas de hipótesis sobre la diferencia entre dos medias poblacionales. En administración, la distribución de diferencias de medias es utilizada para comparar la efectividad de dos procesos, productos o estrategias. Esto permite a los gerentes tomar decisiones informadas sobre mejoras y cambios en sus operaciones. \citep{holmesBusiness2023,nistHandbook}.
+
+En síntesis dentro de este segundo tiempo, la articulación entre la teoría estadística de \textit{distribuciones muestrales} y la práctica administrativa demuestra que ningún indicador cuantitativo opera en el vacío: la validez de la conclusión depende del cumplimiento de los supuestos distribucionales, de la representatividad de los datos recolectados y de la correspondencia entre el modelo matemático y el problema decisional de la organización \citep{anderson2012,nistHandbook,guarin2002}.
+
+\clearpage
+\section{Conclusiones}
+La aplicación de los conceptos estadísticos en la toma de decisiones administrativas es crucial para la gestión eficiente y efectiva de las organizaciones. Los conceptos estadísticos, como la distribución muestral, el teorema central del límite, el error estándar y las distribuciones de diferencias, proporcionan una base sólida para la inferencia estadística y la toma de decisiones basada en datos. En administración, estos conceptos son utilizados para estimar parámetros poblacionales, realizar pruebas de hipótesis y comparar diferentes procesos o estrategias. Una comprensión profunda de estos conceptos permite a los gerentes tomar decisiones más informadas y mejorar la calidad de sus operaciones. Sin embargo, es importante tener en cuenta las limitaciones metodológicas, como la necesidad de muestras grandes y la posible presencia de valores atípicos, que pueden afectar la validez de las estimaciones y pruebas estadísticas. \citep{anderson2012,lind2012,wackerly2010,diazRodriguez2022}.
+}
+\input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/reporte-estadistica-aplicada-para-la-administracion-plantilla-actividad.tex}

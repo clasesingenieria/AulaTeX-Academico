@@ -301,406 +301,71 @@
 	}%
 }
 
+\usepackage{pdfpages}
+\usepackage{ragged2e}
+\input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/preliminares-estadistica.tex}
+\def\estadisticaresumen{La evidencia administrativa necesita una cadena coherente entre problema, población, datos y método. El informe articula selección de muestras, estimación, pruebas de hipótesis y relaciones estadísticas, con ejemplos de satisfacción, facturación y planificación. Explica por qué una cifra precisa puede seguir sesgada, por qué la significación no equivale a importancia práctica y por qué una asociación no prueba causalidad. Se sostiene que los resultados deben comunicar incertidumbre y límites, junto con criterios para revisar las decisiones.}
 \begin{document}
-
-% PORTADA
-\insertcoverwatermark
-\insertcoverinstitutionalfooter
-\templatePortrait
-
-% CONFIGURACION DE PAGINA Y ENCABEZADOS
+% Portada histórica preservada literalmente, incluida su fecha y metadatos originales.
+\includepdf[pages=1,pagecommand={}]{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/portada-historica-mga.pdf}
 \templatePagecfg
 \onehalfspacing
-
-% RESUMEN / ABSTRACT
-\begin{abstractd}
-	\textbf{Objetivo:} \textit{Refuerzo Ciclo A: Redactar el objetivo con verbo academico: analizar, explicar, comparar, interpretar, evaluar o proponer. Debe responder a la actividad o al uso canonico del archivo.}
-
-	\textbf{Producto elaborado:} \textit{Refuerzo Ciclo A: Indicar si el producto es reporte, cuadro comparativo, esquema, mapa, evidencia visual, sintesis o documento base.}
-
-	\textbf{Enfoque de analisis:} \textit{Refuerzo Ciclo A: Enunciar el criterio central. Traducir el tema a problema, sistema, consecuencia y postura.}
-
-	\textbf{Vinculacion institucional:} \textit{Refuerzo Ciclo A: Explicar como el producto se conecta con \itescafaculty, \itescacoursename\ y \itescatransfercontext.}
-
-	\textbf{Nivel cognitivo:} \textit{Refuerzo Ciclo A: Precisar si el trabajo busca comprender, aplicar, analizar, evaluar o crear.}
-\end{abstractd}
-
-% TABLA DE CONTENIDOS - INDICE
-\templateIndex
-
-% CONFIGURACIONES FINALES
 \templateFinalcfg
+% Etiquetas breves en el pie para evitar solapamiento del código histórico extenso.
+\fancyfoot[L]{\small\textit{Datos e incertidumbre}}
+\fancyfoot[R]{\small\textit{GGEA01 / Estadística aplicada}}
+\hypersetup{hidelinks}
+\justifying
+\estadisticapreliminares
+% Contrato: tres actos. Método didáctico: recorrido conceptual con contraste aplicado.
+\section{Introducción}
+Las decisiones de compra, contratación y asignación de recursos se toman con información incompleta. La estadística aplicada permite ordenar registros, inferir características de una población y evaluar la incertidumbre de esas inferencias. La dificultad no consiste únicamente en calcular una media o un porcentaje: exige saber a quién representan los datos, qué pregunta responden y qué condiciones permiten trasladar el resultado a una decisión \citep{holmesBusiness2023}.
 
-% ======================= INICIO DEL DOCUMENTO =======================
+Un análisis administrativo defendible vincula problema, diseño, evidencia y consecuencia. La precisión de una cifra no compensa la exclusión sistemática de clientes ni convierte una asociación en una causa. El criterio que articula los métodos es elegirlos por la naturaleza de los datos y por el riesgo de equivocarse, manteniendo visible el alcance de cada conclusión.
 
-% REFERENCIA METODOLOGICA:
-% Consultar: aulaTEX/base/latex/adaptadas/materias/tecnicas-didacticas-aprendizaje/Técnicas didácticas del aprendizaje.tex
-% Toda actividad debe identificar la tecnica didactica utilizada y justificarla.
+\section{Datos, inferencia y decisiones de gestión}
+\subsection{Del problema administrativo a la población}
+Una pregunta sobre satisfacción debe delimitar clientes, periodo y canal; una pregunta sobre errores contables debe definir operaciones y criterio de error. La población objetivo expresa ese alcance y el marco muestral permite acceder a sus unidades. Si el registro solo contiene ventas digitales, una selección aleatoria de ese registro no representa automáticamente a los compradores de tienda. El mecanismo de selección y las respuestas efectivas condicionan la interpretación del estadístico \citep{holmesBusiness2023,bradley2021}.
 
-% SECCION 1: INTRODUCCION
+El muestreo probabilístico asigna probabilidades de inclusión conocidas y positivas dentro de la población cubierta. El estratificado permite incluir grupos pertinentes; el muestreo por conglomerados puede reducir costos de acceso. Una encuesta por conveniencia puede ser útil para explorar necesidades, pero no hereda sin justificación el margen de error de una muestra aleatoria. La cobertura y la no respuesta se examinan junto al tamaño: más observaciones no eliminan por sí solas un sesgo de participación \citep{bradley2021}.
 
-\section{Introduccion}
+\subsection{Estimar y comunicar la incertidumbre}
+Un parámetro describe una población y un estimador es una regla calculada a partir de la muestra. La media muestral cambia entre selecciones; su distribución muestral describe esa variación. Para observaciones independientes e idénticamente distribuidas con varianza finita, su varianza es la poblacional dividida entre el tamaño de muestra. El error estándar expresa la dispersión del promedio y no debe confundirse con la desviación de observaciones individuales \citep{wackerly2010}.
 
-% PROBLEMA:
-% Delimitar la situacion, tension o necesidad que origina la actividad.
-% TESIS:
-% Formular la idea central o criterio que guiara el documento.
+La estimación puntual facilita presupuestar con un escenario central. Un intervalo de confianza añade límites bajo un procedimiento y supuestos definidos. La interpretación frecuentista del 95\% se refiere a la cobertura del procedimiento en muestreos repetidos; no asegura que el 95\% de las ventas futuras quede entre los extremos ni asigna esa probabilidad a un parámetro fijo. La amplitud depende de confianza, variabilidad, tamaño y diseño \citep{nistHandbook}.
 
-\textit{Refuerzo Ciclo A: Abrir con una afirmacion clara y academica. Evitar frases de relleno como "en este trabajo" o "es importante porque si".}
+Para una encuesta hipotética de satisfacción, 95\% de confianza, margen de cinco puntos porcentuales y proporción de planificación 0.5 producen 384.16 observaciones mediante la aproximación normal para una población grande; se redondea a 385. Con respuesta prevista de 80\%, se planifican 482 invitaciones. El cálculo supone selección aleatoria simple y no garantiza la respuesta ni corrige exclusiones del marco. La cifra adquiere significado cuando se documentan esas condiciones \citep{holmesBusiness2023}.
 
-\textit{Refuerzo Ciclo A: Explicar el problema o funcion del tema dentro del contexto de ITESCA, la carrera o la materia correspondiente.}
+\subsection{Contrastar hipótesis con relevancia práctica}
+Un contraste exige definir parámetro, hipótesis, nivel de significación, diseño y estadístico. Un resultado significativo puede acompañar una diferencia pequeña para la operación; un resultado no significativo puede provenir de información insuficiente. No rechazar la hipótesis nula no demuestra su verdad. Una decisión de cambiar un proceso debe considerar magnitud del efecto, incertidumbre, costos y supuestos, además del resultado del contraste \citep{nistHandbook}.
 
-\textit{Refuerzo Ciclo A: Cerrar con una postura inicial o con el criterio que guiara el documento.}
+La comparación de una o dos muestras depende de si las observaciones son independientes o pareadas y de la escala de medición. Los procedimientos no paramétricos, incluidos los basados en rangos, ofrecen alternativas bajo condiciones concretas. No eliminan la necesidad de independencia, una selección adecuada ni una interpretación cuidadosa de las distribuciones. Escoger la prueba después de buscar repetidamente un resultado favorable debilita el fundamento de la decisión.
 
-% SECCION 2: CONTEXTO INSTITUCIONAL
+\subsection{Relaciones, predicción y límites del modelo}
+Una relación estadística entre inversión comercial y ventas no prueba por sí sola que el gasto adicional cause el aumento. Pueden intervenir temporada, precios, demanda y selección de mercados. La regresión describe una relación condicionada al modelo y a los datos disponibles; sus supuestos y residuos deben revisarse antes de extrapolar. Del mismo modo, un intervalo para una media y un intervalo para una observación futura responden a preguntas diferentes \citep{nistHandbook}.
 
-\section{Contexto institucional y formativo}
+La planificación debe distinguir entre describir lo observado y predecir lo que ocurrirá. Un modelo útil para explicar variabilidad pasada necesita validación con evidencia pertinente para respaldar compromisos de inventario o contratación. Los cambios del entorno pueden invalidar relaciones históricas. Mantener seguimiento y comparar resultados con previsiones permite ajustar una decisión sin tratar el ajuste original como garantía permanente.
 
-\subsection{Datos academicos de la actividad}
+La integración de estos métodos conduce a una conclusión de gestión: la calidad del análisis reside en la cadena completa de inferencia. Un promedio bien calculado no corrige un marco incompleto; una prueba significativa no identifica automáticamente causalidad; y una predicción precisa en registros pasados puede fallar si cambian las condiciones. Por ello, solicitar población, diseño, supuestos, magnitud e incertidumbre resulta más útil que pedir únicamente un indicador final \citep{holmesBusiness2023,nistHandbook,bradley2021}.
 
-\begin{longtable}{@{}p{0.28\linewidth}p{0.65\linewidth}@{}}
-	\caption{Ficha editorial de la actividad}\label{tab:ficha-editorial-itesca}\\
-	\toprule
-	\textbf{Elemento} & \textbf{Criterio de redaccion} \\
-	\midrule
-	\endfirsthead
-	\toprule
-	\textbf{Elemento} & \textbf{Criterio de redaccion} \\
-	\midrule
-	\endhead
-	Institucion & \universityname. \\
-	Programa academico & \itescafaculty. \\
-	Asignatura o modulo & \itescacoursecode\ -- \itescacoursename. \\
-	Nivel y modalidad & \itescaprogramlevel; \itescamodality. \\
-	Actividad & \itescaactivityname. \\
-	Sesion/Bloque & \itescasessionname\ / \itescablockname. \\
-	Producto esperado & \itescamainproduct. \\
-	Eje institucional & \itescainstitutionalaxis. \\
-	Evidencia central & \itescaevidencefocus. \\
-	Criterio de calidad & \itescaqualitycriterion. \\
-	Transferencia & \itescatransfercontext. \\
-	\bottomrule
-\end{longtable}
+\section{Conclusiones}
+La estadística aplicada transforma información parcial en decisiones revisables cuando mantiene correspondencia entre población, medición y método. Muestreo, estimación, contraste y modelación cumplen funciones distintas y complementarias. Su aplicación requiere comunicar qué se conoce, bajo qué condiciones y qué incertidumbre permanece.
 
-\subsection{Sentido formativo en ITESCA}
+Considero que una gerencia debe exigir resultados acompañados de su alcance y de las razones que justifican el procedimiento. La razón es que las consecuencias económicas de decidir con una cifra mal interpretada pueden superar el costo de recabar información adicional. La consecuencia profesional es formular umbrales de decisión, reconocer límites de inferencia y establecer seguimiento para revisar acciones ante evidencia nueva.
 
-La actividad se ubica dentro de una trayectoria academica que exige algo mas
-que cumplir una consigna aislada. En ITESCA, el producto debe mostrar identidad
-institucional mediante una redaccion clara, evidencia verificable, criterio
-propio y relacion con la carrera. Esto significa que el documento no solo
-presenta informacion: organiza un problema, define un metodo de lectura y
-explica para que sirve el resultado dentro de la formacion profesional.
-
-\subsection{Vinculacion con el perfil profesional}
-
-\itescaprofessionalprofile. Esta vinculacion debe aparecer en el desarrollo
-como una consecuencia concreta: que decision permite tomar el analisis, que
-procedimiento mejora, que riesgo ayuda a detectar o que habito academico
-fortalece para actividades posteriores.
-
-\subsection{Datos del estudiante}
-
-\begin{itemize}
-	\item Alumno: \itescastudentname.
-	\item Matricula: \itescastudentid.
-	\item Correo institucional: \itescastudentemail.
-	\item Programa: \itescafaculty.
-	\item Asignatura: \itescacoursecode\ -- \itescacoursename.
-	\item Periodo: \itescaprogramperiod.
-\end{itemize}
-
-% SECCION 3: DESARROLLO
-
-\section{Desarrollo}
-
-% EVIDENCIA:
-% Incorporar fuentes, productos, tecnicas didacticas y datos verificables.
-% ANALISIS CRITICO:
-% Interpretar, contrastar, valorar limites, consecuencias y decisiones.
-% TRANSFERENCIA:
-% Explicar la aplicacion academica, profesional o institucional.
-
-\subsection{Contexto y problema}
-
-\textit{Refuerzo Ciclo A: Traducir la consigna a un problema operativo. Definir que debe comprenderse, resolverse, compararse o justificarse. Formula util: situacion -> tension -> criterio -> evidencia esperada.}
-
-\subsection{Marco conceptual}
-
-\textit{Refuerzo Ciclo A: Explicar conceptos, categorias o criterios con fuentes. No acumular definiciones: cada concepto debe mostrar funcion, limite o consecuencia.}
-
-\subsection{Nivel cognitivo aplicado}
-
-\textit{Refuerzo Ciclo A: Explicar que operacion intelectual exige la actividad. No quedarse en recordar definiciones si el producto requiere cuadro, evidencia, postura o propuesta. Precisar si el trabajo comprende, aplica, analiza, evalua o crea.}
-
-\subsection{Matriz de cumplimiento editorial}
-
-\begin{longtable}{@{}p{0.18\linewidth}p{0.35\linewidth}p{0.37\linewidth}@{}}
-	\caption{Matriz editable de cumplimiento ITESCA}\label{tab:matriz-cumplimiento-itesca}\\
-	\toprule
-	\textbf{Criterio} & \textbf{Pregunta de control} & \textbf{Evidencia en el documento} \\
-	\midrule
-	\endfirsthead
-	\toprule
-	\textbf{Criterio} & \textbf{Pregunta de control} & \textbf{Evidencia en el documento} \\
-	\midrule
-	\endhead
-	Problema & \textit{Refuerzo Ciclo A: Que necesidad, consigna o situacion se atiende?} & \textit{Refuerzo Ciclo A: Introduccion con problema delimitado.} \\
-	Criterio & \textit{Refuerzo Ciclo A: Con que lentes se analizara el tema?} & \textit{Refuerzo Ciclo A: Marco conceptual y postura inicial.} \\
-	Producto & \textit{Refuerzo Ciclo A: Que pieza visible se entrega?} & \textit{Refuerzo Ciclo A: Tabla, esquema, reporte, evidencia o propuesta.} \\
-	Analisis & \textit{Refuerzo Ciclo A: Que significa el producto y que demuestra?} & \textit{Refuerzo Ciclo A: Lectura propia, comparacion o interpretacion.} \\
-	Transferencia & \textit{Refuerzo Ciclo A: Como se conecta con ITESCA y la carrera?} & \textit{Refuerzo Ciclo A: Aplicacion profesional o academica.} \\
-	Cierre & \textit{Refuerzo Ciclo A: Que postura queda sostenida?} & \textit{Refuerzo Ciclo A: Conclusion con aprendizaje y consecuencia.} \\
-	\bottomrule
-\end{longtable}
-
-\subsection{Producto solicitado}
-
-\textit{Refuerzo Ciclo A: Insertar aqui el producto central. Si es visual, construirlo en LaTeX/TikZ cuando sea viable.}
-
-\subsection{Modelo de producto academico}
-
-\begin{longtable}{@{}p{0.22\linewidth}p{0.28\linewidth}p{0.40\linewidth}@{}}
-	\caption{Guia de producto segun tipo de actividad}\label{tab:producto-academico-itesca}\\
-	\toprule
-	\textbf{Producto} & \textbf{Debe mostrar} & \textbf{Control editorial} \\
-	\midrule
-	\endfirsthead
-	\toprule
-	\textbf{Producto} & \textbf{Debe mostrar} & \textbf{Control editorial} \\
-	\midrule
-	\endhead
-	Reporte & Problema, desarrollo y cierre argumentado. & Cada seccion debe tener funcion: explicar, relacionar, valorar o concluir. \\
-	Cuadro comparativo & Criterios, diferencias, semejanzas y valoracion. & No listar datos sin interpretar; cerrar con consecuencia. \\
-	Mapa o esquema & Jerarquia, conexiones y flujo conceptual. & Usar conectores claros y explicar que demuestra el mapa. \\
-	Evidencia visual & Procedimiento, resultado o captura verificable. & Rotular, contextualizar y explicar su funcion academica. \\
-	Propuesta & Diagnostico, criterio, accion y resultado esperado. & Justificar pertinencia, limite y aplicacion profesional. \\
-	Reflexion & Experiencia, aprendizaje, postura y mejora. & Evitar anecdota suelta; convertir experiencia en criterio. \\
-	\bottomrule
-\end{longtable}
-
-\subsection{Analisis propio}
-
-\textit{Refuerzo Ciclo A: Explicar que muestra el desarrollo, que decisiones de criterio se sostienen y que implicacion practica tiene para la formacion o el contexto institucional.}
-
-\subsection{Vinculacion con la carrera y el contexto institucional}
-
-\textit{Refuerzo Ciclo A: Explicar como el tema se relaciona con la carrera, la materia, el entorno profesional o la trayectoria formativa en ITESCA. Formula util: problema detectado -> criterio de analisis -> aplicacion posible -> consecuencia academica o tecnica.}
-
-\subsection{Lista de verificacion ITESCA}
-
-Antes de entregar, revisar que el producto cumpla estos criterios:
-
-\begin{itemize}
-	\item El titulo, actividad, asignatura, matricula, docente y fecha estan actualizados.
-	\item La introduccion plantea un problema o criterio, no solo anuncia el tema.
-	\item La consigna fue transformada en producto academico, no copiada como instruccion.
-	\item El desarrollo explica conceptos y tambien muestra funcion, limite o consecuencia.
-	\item El producto solicitado aparece visible, completo y rotulado.
-	\item La evidencia se interpreta con criterio propio.
-	\item La vinculacion con ITESCA, carrera, materia o contexto profesional es explicita.
-	\item Las citas autor-anio y la bibliografia son consistentes.
-	\item La conclusion sintetiza aprendizaje, postura e implicacion transferible.
-	\item El PDF compila sin errores y los recursos institucionales cargan correctamente.
-\end{itemize}
-
-% MANUAL METODOLOGICO INSTITUCIONAL
-\input{aulaTEX/base/latex/adaptadas/materias/tecnicas-didacticas-aprendizaje/Técnicas didácticas del aprendizaje}
-
-% BLOQUE OPCIONAL: CUADRO O TABLA AMPLIA
-% \clearpage
-% \pagestyle{empty}
-% \begin{landscape}
-% \begingroup
-% \scriptsize
-% \setlength{\tabcolsep}{4pt}
-% \renewcommand{\arraystretch}{1.35}
-% \begin{longtable}{@{}p{0.18\linewidth}p{0.39\linewidth}p{0.39\linewidth}@{}}
-% \caption{Titulo del cuadro comparativo}\label{tab:cuadro-comparativo}\\
-% \toprule
-% \textbf{Criterio} & \textbf{Elemento 1} & \textbf{Elemento 2} \\
-% \midrule
-% \endfirsthead
-% \toprule
-% \textbf{Criterio} & \textbf{Elemento 1} & \textbf{Elemento 2} \\
-% \midrule
-% \endhead
-% Concepto & \textit{Refuerzo Ciclo A: Contenido sintetico con cita si aplica.} & \textit{Refuerzo Ciclo A: Contenido sintetico con cita si aplica.} \\
-% Funcion & \textit{Refuerzo Ciclo A: Contenido.} & \textit{Refuerzo Ciclo A: Contenido.} \\
-% Consecuencia & \textit{Refuerzo Ciclo A: Contenido.} & \textit{Refuerzo Ciclo A: Contenido.} \\
-% \bottomrule
-% \end{longtable}
-% \endgroup
-% \end{landscape}
-% \pagestyle{fancy}
-
-% BLOQUE OPCIONAL: PRODUCTO VISUAL EN TIKZ
-% \begin{figure}[H]
-% \centering
-% \begin{tikzpicture}[
-%   node distance=1.3cm,
-%   box/.style={rectangle, rounded corners=2pt, draw=black!65, fill=black!4, align=center, minimum width=3.2cm, minimum height=0.9cm},
-%   arrow/.style={-{Latex[length=2.5mm]}, thick, draw=black!65}
-% ]
-%   \node[box] (centro) {Concepto central};
-%   \node[box, right=of centro] (relacion) {Concepto relacionado};
-%   \node[box, below=of relacion] (efecto) {Consecuencia};
-%   \draw[arrow] (centro) -- node[above]{implica} (relacion);
-%   \draw[arrow] (relacion) -- node[right]{produce} (efecto);
-% \end{tikzpicture}
-% \caption{Titulo del producto visual.}
-% \end{figure}
-
-% SECCION 4: POSTURA PERSONAL
-
-\section{Postura personal}
-
-\textit{Refuerzo Ciclo A: Redactar una postura academica y moderada. Formula util: posicion, razon y efecto.}
-
-% SECCION 5: CONCLUSION
-
-% --- Ciclo A: refuerzo editorial materializado ---
-\section*{Refuerzo editorial Ciclo A}
-Este apartado consolida la mejora editorial incremental del nodo a partir del estándar maduro de AulaTeX. El refuerzo atiende brechas detectadas de bibliografía, citas, análisis propio, transferencia y cierre argumentado, sin sustituir la consigna original ni copiar contenido de los casos maestros.
-
-\subsection*{Tesis de trabajo}
-La actividad debe sostener una postura verificable: el producto solicitado no sólo organiza información, sino que permite interpretar el problema disciplinar, justificar decisiones y reconocer sus consecuencias académicas o profesionales.
-
-\subsection*{Análisis propio}
-El hallazgo central es que una entrega madura requiere pasar de la descripción a la interpretación. Por ello, el desarrollo debe explicar qué revela el producto construido, por qué es relevante para la materia y qué criterio permite evaluar su pertinencia. Esta operación convierte la evidencia reunida en argumento académico.
-
-\subsection*{Transferencia profesional}
-La transferencia consiste en vincular el producto con situaciones reales de desempeño: diagnóstico, toma de decisiones, comunicación de resultados, cumplimiento normativo, intervención educativa o resolución de problemas según el campo disciplinar. Así, la actividad adquiere valor formativo más allá de la plantilla.
-
-\subsection*{Cierre argumentado}
-En consecuencia, la calidad de la actividad depende de que el producto visible, las fuentes y la conclusión formen una secuencia coherente. La conclusión debe recuperar la tesis, indicar el principal aprendizaje y señalar una implicación práctica o conceptual.
-
-% Brechas locales atendidas por Ciclo A: analisis_propio, conclusion_argumentada, bibliografia_insuficiente, citas_insuficientes, pendientes_editoriales
-% Reglas globales aplicadas:
-% - Priorizar cierre de brecha recurrente: bibliografia_insuficiente (427 nodos).
-% - Priorizar cierre de brecha recurrente: conclusion_argumentada (375 nodos).
-% - Priorizar cierre de brecha recurrente: citas_insuficientes (328 nodos).
-% - Priorizar cierre de brecha recurrente: analisis_propio (288 nodos).
-% --- Fin Ciclo A ---
-
-\section{Conclusion}
-
-% REFLEXION PERSONAL:
-% Sintetizar aprendizaje, postura final, transferencia y mejora futura.
-
-\textit{Refuerzo Ciclo A: Cerrar con sintesis, aprendizaje, implicacion y criterio final. No introducir informacion nueva.}
-
+El aprendizaje central consiste en usar el cálculo como parte de un argumento y no como sustituto del juicio. Una decisión responsable no promete certeza: demuestra por qué la evidencia disponible justifica una acción proporcional al riesgo y deja explícito qué podría hacerla cambiar.
 \clearpage
-\nocite{itescaSitioWeb}
-\bibliography{\itescabibliography}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\subsection*{Citas de refuerzo Ciclo A}
-La mejora editorial se vincula con la memoria documental disponible mediante las referencias \citep{cicloARefuerzo01,cicloARefuerzo02,cicloARefuerzo03,cicloARefuerzo04}. Estas citas deben revisarse en una etapa disciplinar fina para sustituir o complementar fuentes genéricas por literatura específica del tema.
+\renewcommand{\bibsection}{\section*{Referencias}\addcontentsline{toc}{section}{Referencias}}
+\setlength{\bibhang}{1.27cm}\setlength{\bibsep}{10pt}
+\begin{thebibliography}{4}
+\bibitem[Bradley et al.(2021)]{bradley2021}
+Bradley, V. C., Kuriwaki, S., Isakov, M., Sejdinovic, D., Meng, X.-L., \& Flaxman, S. (2021). Unrepresentative big surveys significantly overestimated US vaccine uptake. \textit{Nature, 600}(7890), 695--700. \url{https://doi.org/10.1038/s41586-021-04198-4}
+\bibitem[Holmes et al.(2023)]{holmesBusiness2023}
+Holmes, A., Illowsky, B., \& Dean, S. (2023). \textit{Introductory business statistics} (2.\textsuperscript{a} ed.). OpenStax. \url{https://openstax.org/details/books/introductory-business-statistics-2e}
+\bibitem[NIST y SEMATECH(2003)]{nistHandbook}
+National Institute of Standards and Technology, \& SEMATECH. (2003). \textit{NIST/SEMATECH e-Handbook of statistical methods}. \url{https://doi.org/10.18434/M32189}
+\bibitem[Wackerly et al.(2010)]{wackerly2010}
+Wackerly, D. D., Mendenhall, W., \& Scheaffer, R. L. (2010). \textit{Estadística matemática con aplicaciones} (7.\textsuperscript{a} ed.). Cengage Learning Editores.
+\end{thebibliography}
 
 \end{document}
-
-
-
-
-
-

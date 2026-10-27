@@ -1,0 +1,836 @@
+Fuente bibliográfica: Estadística - Spiegel y Stephens. 4.ª edición.pdf
+Actividad: 14 (5.2 Ejercicios Equipo 5% Tarea)
+Palabras clave: Wilcoxon, prueba de signos, Mann-Whitney, Kruskal-Wallis, rangos, empates, mediana
+
+[Bloque seleccionado #89 | relevancia=17]
+Pagina 88
+64  CAPÍTULO 3 MEDIA, MEDIANA, MODA, Y OTRAS MEDIDAS DE TENDENCIA CENTRAL
+LA MEDIANA
+La mediana de un conjunto de números acomodados en orden de magnitud (es decir, en una ordenación) es el valor 
+central o la media de los dos valores centrales.
+EJEMPLO 8 La mediana del conjunto de números 3, 4, 5, 6, 8, 8, 8  y 10 es 6.
+EJEMPLO 9 La mediana del conjunto de números 5, 5, 7, 9, 11, 12, 15 y 18 es 1
+2 (9 + 11) = 10.
+En datos agrupados, la mediana se obtiene por interpolación, como se expresa por la fórmula
+ 
+Mediana ¼ L1 þ
+N
+2  ðP f Þ1
+fmedian
+0
+B
+@
+1
+C
+Ac 
+(8)
+donde 
+L1 = frontera inferior de la clase mediana (es decir, de la clase que contiene la mediana)
+ 
+N = número de datos (es decir, la frecuencia total)
+ 
+ðP f Þ1 = suma de las frecuencias de todas las clases anteriores a la clase mediana
+ 
+fmediana = frecuencia de la clase mediana
+ 
+c = amplitud del intervalo de la clase mediana
+Geométricamente, la mediana es el valor de X (abscisa) que corresponde a una recta vertical que divide al histo-
+grama en dos partes que tienen la misma área. A este valor de X se le suele denotar ~X.
+LA MODA
+La moda de un conjunto de números es el valor que se presenta con más frecuencia; es decir, es el valor más frecuen-
+te. Puede no haber moda y cuando la hay, puede no ser única.
+EJEMPLO 10 La moda del conjunto 2, 2, 5, 7, 9, 9, 9, 10, 10, 11, 12 y 18 es 9.
+EJEMPLO 11 El conjunto 3, 5, 8, 10, 12, 15 y 16 no tiene moda.
+EJEMPLO 12 El conjunto 2, 3, 4, 4, 4, 5, 5, 7, 7, 7 y 9 tiene dos modas, 4 y 7, por lo que se le llama bimodal. 
+A una distribución que sólo tiene una moda se le llama unimodal.
+En el caso de datos agrupados, para los que se ha construido una curva de frecuencia que se ajuste a los datos, la 
+moda es el valor (o los valores) de X que corresponden al punto (o puntos) máximos de la curva. A este valor de X se 
+le suele denotar ^X. 
+En una distribución de frecuencia o en un histograma la moda se puede obtener mediante la fórmula siguiente:
+ 
+Moda = L1 þ
+1
+1 þ 2
+
+
+c 
+(9)
+donde L1 = frontera inferior de la clase modal (es decir, de la clase que contiene la moda)
+ 
+1 = exceso de frecuencia modal sobre la frecuencia en la clase inferior inmediata
+ 
+2 = exceso de frecuencia modal sobre la frecuencia en la clase superior inmediata
+ 
+c = amplitud del intervalo de la clase modal
+RELACIÓN EMPÍRICA ENTRE LA MEDIA, LA MEDIANA Y LA MODA
+En las curvas de frecuencias unimodales que son ligeramente sesgadas (asimétricas), se tiene la relación empírica 
+siguiente:
+ 
+Media − moda = 3(media − mediana) 
+(10)
+fmediana
+
+[Bloque seleccionado #103 | relevancia=9]
+Pagina 102
+78  CAPÍTULO 3 MEDIA, MEDIANA, MODA, Y OTRAS MEDIDAS DE TENDENCIA CENTRAL
+3.26 
+En los cajeros automáticos de cinco lugares de una ciudad grande, se registró la cantidad de transacciones por 
+día. Los datos fueron 35, 49, 225, 50, 30, 65, 40, 55, 52, 76, 48, 325, 47, 32 y 60. Encontrar: a) la cantidad 
+mediana de transacciones y b) la cantidad media de transacciones.
+SOLUCIÓN
+a) 
+Los datos ordenados de menor a mayor son 30, 32, 35, 40, 47, 48, 49, 50, 52, 55, 60, 65, 76, 225 y 325. Como la 
+cantidad de datos es un número non, sólo hay un valor de enmedio, 50, que es la mediana buscada. 
+b) 
+La suma de los 15 valores es 1 189. La media es 1 189/15 = 79.257.
+Obsérvese que a la mediana no le afectan los dos valores extremos 225 y 325, en tanto que a la media sí.
+En este caso, la mediana es un mejor indicador de la cantidad promedio de transacciones diarias en los cajeros auto-
+máticos.
+3.27 
+Si en una ordenación se tienen: a) 85 y b) 150 números, ¿cómo se encuentra la mediana de estos números?
+SOLUCIÓN
+a) 
+Como 85 es un número non, sólo hay un valor de en medio, habiendo 42 números mayores que él y 42 números 
+menores que él. Por lo tanto, la mediana es el número que ocupa la posición 43 de la ordenación.
+b) 
+Como 150 es un número par, hay dos valores de en medio con 74 números menores que ellos y 74 números mayores 
+que ellos. Los dos números de en medio son los números en las posiciones 75 y 76 de la ordenación; su media aritmé-
+tica es la mediana buscada.
+3.28 
+A partir de los datos del problema 2.8, encontrar el peso mediano de los 40 estudiantes de la universidad esta-
+tal empleando: a) la distribución de frecuencias dada en la tabla 2.7 (reproducida aquí como tabla 3.7) y b) los 
+datos originales.
+SOLUCIÓN
+a) 
+Primer método (empleando la interpolación)
+Se supone que los pesos de la tabla 3.7 están distribuidos de manera continua. En ese caso, la mediana es un peso
+tal que la mitad del total de las frecuencias (40/2 = 20) quede por encima de él y la mitad del total de las frecuencias 
+quede por debajo de él.
+Tabla 3.7
+Peso (lb)
+Frecuencias
+118-126
+127-135
+136-144
+145-153
+154-162
+163-171
+172-180
+3
+5
+9
+12
+5
+4
+2
+Total 40
+La suma de las tres primeras frecuencias de clase es 3 + 5 + 9 = 17. Por lo tanto, para dar la frecuencia 20, que es la busca-
+da, se necesitan tres más de los 12 casos que pertenecen a la cuarta clase. Como el cuarto intervalo de clase, 145-153,
+
+[Bloque seleccionado #104 | relevancia=13]
+Pagina 103
+en realidad corresponde a los pesos desde 144.5 hasta 153.5, la mediana debe encontrarse a 3/12 entre 144.5 y 153.5, es 
+decir, la mediana es
+144:5 þ 3
+12 ð153:5  144:5Þ ¼ 144:5 þ 3
+12 ð9Þ ¼ 146:8 lb
+Segundo método (empleando la fórmula)
+Como las sumas de las primeras tres clases y de las primeras cuatro clases son, respectivamente, 3 + 5 + 9 = 17 y
+3 + 5 + 9 + 12 = 29, la mediana se encuentra en la cuarta clase, que es, por lo tanto, la clase mediana. Entonces.
+ 
+ 
+L1 = frontera inferior de clase de la clase mediana = 144.5
+ 
+ 
+N = número de datos = 40
+ 
+ 
+ðP f Þ1 = suma de las frecuencias de todas las clases anteriores a la clase mediana = 3 + 5 + 9 = 17
+ 
+ 
+fmediana = frecuencia de la clase mediana = 12
+ 
+ 
+c = amplitud del intervalo de la clase mediana = 9
+y por lo tanto
+Mediana = L 1 +
+N /2
+ f )1
+fmediana
+c = 144.5 +
+40/2
+17
+12
+(9) = 146.8 lb
+b) 
+Dispuestos en una ordenación, los pesos originales son 
+ 
+119, 125, 126, 128, 132, 135, 135, 135, 136, 138, 138, 140, 140, 142, 142, 144, 144, 145, 145, 146
+ 
+146, 147, 147, 148, 149, 150, 150, 152, 153, 154, 156, 157, 158, 161, 163, 164, 165, 168, 173, 176
+ 
+La mediana es la media aritmética de los pesos en las posiciones 20 y 21 de esta ordenación y es igual a 146 lb.
+3.29 
+En la figura 3-3 se muestra una representación de tallo y hoja que proporciona el número de muertes en acci-
+dentes de tránsito en 2005 relacionados con el alcohol en los 50 estados y Washington, D.C.
+Representación de tallo y hoja: Muertes
+14
+23
+(7)
+21
+15
+10
+4
+3
+3
+3
+3
+3
+3
+3
+3
+2
+1
+1
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+22334556667889
+122255778
+0334689
+124679
+22669
+012448
+3
+7
+6
+1
+Representación de tallo y hoja: Muertes N = 51
+Leaf Unit = 10
+Figura 3-3 MINITAB, representación de tallo y hoja de las muertes en accidentes
+ 
+de tránsito relacionados con el alcohol.
+Encontrar la media, la mediana y la moda de las muertes relacionadas con el alcohol dadas en la figura 3-3.
+PROBLEMAS RESUELTOS  79
+
+[Bloque seleccionado #105 | relevancia=11]
+Pagina 104
+80  CAPÍTULO 3 MEDIA, MEDIANA, MODA, Y OTRAS MEDIDAS DE TENDENCIA CENTRAL
+SOLUCIÓN
+La cantidad de muertes va de 20 a 1 710. La distribución es bimodal. Las dos modas son 60 y 120. Ambas se presentan tres 
+veces. 
+La clase (7) 2 0334689 es la clase mediana. Es decir, la mediana se encuentra en esta clase. La mediana es 
+el dato de en medio o el dato que ocupa la posición 26 en la ordenación. El dato en la posición 24 es 200, el dato en la 
+posición 25 es 230 y el dato en la posición 26 es 230. Por lo tanto, la mediana es 230.
+La suma de estos 51 datos es 16 660 y la media es 16 660/51 = 326.67.
+3.30 
+Encontrar el salario mediano de los 65 empleados de la empresa P&R (ver el problema 2.3).
+SOLUCIÓN 
+En este caso, N = 65 y N/2 = 32.5. Como la suma de las primeras dos y de las primeras tres frecuencias de clase son 8 + 
+10 = 18 y 8 + 10 + 16 = 34, respectivamente, la clase mediana es la tercera clase. Usando la fórmula,
+ 
+Medianan ¼ L1 þ
+N=2  ðP f Þ1
+fmedian
+
+
+c ¼ $269:995 þ
+32:5  18
+16
+
+
+ð$10:00Þ ¼ $279:06
+LA MODA
+3.31 
+Encontrar la media, la mediana y la moda de los conjuntos: a) 3, 5, 2, 6, 5, 9, 5, 2, 8, 6 y b) 51.6, 48.7, 50.3, 
+49.5, 48.9.
+SOLUCIÓN
+a) 
+En una ordenación, los números son 2, 2, 3, 5, 5, 5, 6, 6, 8 y 9.
+ 
+ 
+Media ¼ 1
+10 ð2 þ 2 þ 3 þ 5 þ 5 þ 5 þ 6 þ 6 þ 8 þ 9Þ ¼ 5:1
+ 
+ 
+Mediana = media aritmética de los dos valores de en medio ¼ 1
+2 ð5 þ 5Þ ¼ 5
+ 
+ 
+Moda = número que se presenta con mayor frecuencia = 5
+b) 
+En una ordenación, los números son 48.7, 48.9, 49.5 50.3 y 51.6.
+ 
+ 
+Media ¼ 1
+5 ð48:7 þ 48:9 þ 49:5 þ 50:3 þ 51:6Þ ¼ 49:8
+ 
+ 
+Mediana = número de en medio = 49.5
+ 
+ 
+Moda = número que se presenta con mayor frecuencia (no existe uno aquí)
+3.32 
+Supóngase que se desea hallar la moda de los datos de la figura 3-29. Se puede usar el procedimiento “frequen-
+cies” de SAS para obtener el resultado siguiente. Observando el resultado dado por el procedimiento FREQ 
+(figura 3-4), ¿cuáles son las modas de la cantidad de muertes relacionadas con el alcohol?
+fmediana
+
+[Bloque seleccionado #116 | relevancia=10]
+Pagina 115
+3.63 
+Calcular la media de la cantidad de tiempo que ven televisión los 400 estudiantes del problema 2.20.
+3.64 
+a) 
+Emplear la distribución de frecuencias del problema 2.27 para calcular el diámetro medio de los balines. 
+b) 
+Calcular la media directamente de los datos en bruto y compararla con el inciso a); explicar cualquier discrepancia.
+LA MEDIANA
+3.65 
+Encontrar la media y la mediana de estos conjuntos de números: a) 5, 4, 8, 3, 7, 2, 9 y b) 18.3, 20.6, 19.3, 22.4, 20.2, 18.8, 
+19.7, 20.0.
+3.66 
+Encontrar la calificación mediana del problema 3.53.
+3.67 
+Encontrar el tiempo mediano de reacción del problema 3.54.
+3.68 
+Encontrar la mediana del conjunto de números del problema 3.55.
+3.69 
+Encontrar la mediana de la carga máxima de los cables de la tabla 3.8 del problema 3.59.
+3.70 
+Encontrar la mediana ~X de la distribución presentada en la tabla 3.9 del problema 3.60.
+3.71 
+Encontrar el diámetro mediano de las cabezas de los remaches de la tabla 3.10 del problema 3.61.
+3.72 
+Encontrar la mediana de la distribución presentada en la tabla 3.11 del problema 3.62.
+3.73 
+En la tabla 3.12 se da la cantidad, en miles, de muertes en Estados Unidos ocurridas en 1993 a causa de enfermedades 
+cardiacas. Encontrar la edad mediana.
+Tabla 3.12
+Grupo de edad
+Miles de muertes
+Total
+Menos de 1
+1 a 4
+ 5 a 14
+15 a 24
+25 a 34
+35 a 34
+45 a 54
+55 a 64
+65 a 74
+75 a 84
+85 y más
+743.3
+0.7
+0.3
+0.3
+1.0
+3.5
+13.1
+32.7
+72.0
+158.1
+234.0
+227.6
+Fuente: U.S. National Center for Health Statistics, Vital 
+Statistics of the U.S., annual.
+3.74 
+Con los datos de la tabla del problema 2.31 encontrar la edad mediana.
+3.75 
+Encontrar la mediana de la cantidad de tiempo que ven la televisión los 400 estudiantes del problema 2.20.
+PROBLEMAS SUPLEMENTARIOS  91
+
+[Bloque seleccionado #475 | relevancia=9]
+Pagina 474
+450  CAPÍTULO 17 PRUEBAS NO PARAMÉTRICAS
+OTRAS APLICACIONES DE LA PRUEBA DE LAS RACHAS
+Las siguientes son otras aplicaciones de las rachas para problemas estadísticos:
+1. Prueba mayor y menor que la mediana para aleatoriedad de datos numéricos. Para determinar si un conjunto 
+de datos numéricos es aleatorio (por ejemplo, los datos de una muestra), primero se colocan los datos en el mismo 
+orden en que se obtuvieron. Después, se encuentra la mediana de esos datos y cada dato se reemplaza por una a, si 
+su valor es mayor que la mediana o por una b si su valor es menor que la mediana. Si un valor es igual a la media-
+na, se elimina de la muestra. La muestra es o no aleatoria según si la secuencia de letras a y b sea o no aleatoria. 
+(Ver problema 17.20.)
+2. Diferencias entre poblaciones de las que se ha tomado una muestra. Supóngase que dos muestras de tamaños 
+m y n se denotan a1, a2, . . . , am y b1, b2, . . . , bn, respectivamente. Para decidir si las muestras provienen o no de una 
+misma población, primero se ordenan todos los m + n valores muestrales de menor a mayor. Si hay valores iguales, 
+se deben ordenar mediante un proceso aleatorio (por ejemplo, empleando números aleatorios). Si la secuencia 
+obtenida es aleatoria, se concluye que las muestras realmente no son diferentes y que, por lo tanto, provienen de la 
+misma población; si la secuencia no es aleatoria, no puede sacarse tal conclusión. Esta prueba puede ser una alter-
+nativa a la prueba U de Mann-Whitney. (Ver problema 17.21.) 
+CORRELACIÓN DE RANGOS DE SPEARMAN
+Los métodos no paramétricos también pueden usarse para medir la correlación entre dos variables, X y Y. En lugar de 
+emplear valores precisos de las variables, o cuando no se puede tener tal precisión, los datos se ordenan desde 1 hasta 
+N de acuerdo con su tamaño, importancia, etc. Una vez que las variables X y Y se han ordenado de esta manera, el 
+coeficiente de correlación de rangos o fórmula de Spearman para correlación de rangos (como suele llamársele) es
+ 
+rS ¼ 1 
+6 P D2
+NðN2  1Þ 
+(15)
+donde D denota las diferencias entre los rangos de los valores correspondientes de X y Y y donde N es la cantidad de 
+pares de valores (X, Y ) que hay en los datos.
+PROBLEMAS RESUELTOS
+LA PRUEBA DE LOS SIGNOS
+17.1 
+Hágase referencia a la tabla 17.1 y al nivel de significancia 0.05, se prueba la hipótesis H0 de que no hay dife-
+rencia entre las máquinas, contra la hipótesis alternativa H1 de que sí hay diferencia.
+SOLUCIÓN
+En la figura 17-1 se muestra la distribución binomial de X caras en 12 lanzamientos de una moneda, en forma de áre
+
+[Bloque seleccionado #479 | relevancia=9]
+Pagina 478
+454  CAPÍTULO 17 PRUEBAS NO PARAMÉTRICAS
+b) 
+Restando 75 a cada una de las entradas de la tabla 17.5 se obtiene la tabla 17.7, en la que hay 13 signos más y 27 
+signos menos. Como
+ 
+ 
+z ¼ ð13 þ 0:5Þ  ð40Þð0:5Þ
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+ð40Þð0:5Þð0:5Þ
+p
+¼ 2:06
+ 
+al nivel de significancia 0.05, se rechaza la hipótesis de que la mediana sea 75.
+Tabla 17.7
+−
++
+−
+−
+−
+−
++
+−
+−
++
+−
++
+−
++
+−
+−
++
+−
+−
+−
+−
+−
+−
++
+−
++
+−
++
+−
++
+−
+−
++
+−
+−
++
+−
+−
++
+−
+Empleando este método se puede encontrar un intervalo de confianza de 95% para la calificación mediana en 
+este examen. (Ver el problema 17.30.)
+Obsérvese que en la solución anterior se emplea el método clásico de prueba de hipótesis. En el método clásico se 
+emplea α = 0.05 para determinar la región de rechazo para la prueba, [z < −1.96 o z > 1.96]. A continuación se calcula el 
+estadístico de prueba [en el inciso a) z = −1.14, y en el inciso b) z = −2.06]. Si el estadístico de prueba cae en la región 
+de rechazo, se rechaza la hipótesis nula. Si este estadístico no cae en la región de rechazo, no se rechaza la hipótesis nula.
+En la solución de MINITAB se usa el método del valor p. Se calcula el valor p y si este valor es menor a 0.05, se 
+rechaza la hipótesis nula. Si el valor p es mayor que 0.05, no se rechaza la hipótesis nula. Usando tanto el método clásico 
+como el método del valor p se llega a la misma decisión.
+La solución empleando MINITAB es la que se muestra a continuación. Para probar que la mediana es 66, el resul-
+tado es el siguiente
+Prueba de los signos para la mediana: Calificaciones
+Sign test of median ¼ 66.00 versus not ¼ 66.00
+N
+Below
+Equal
+Above
+P
+Median
+Grade
+40
+15
+2
+23
+0.2559
+70.00
+Como el valor p es mayor que 0.05, no se rechaza la hipótesis nula. 
+El resultado para probar que la mediana es 75 es
+Prueba de los signos para la mediana: Calificaciones
+Sign test of median ¼ 75.00 versus not ¼ 75.00
+N
+Below
+Equal
+Above
+P
+Median
+Grade
+40
+27
+0
+13
+0.0385
+70.00
+Como el valor p es < 0.05, se rechaza la hipótesis nula. 
+LA PRUEBA U DE MANN-WHITNEY
+17.5 
+Volver a la tabla 17.2. Al nivel de significancia 0.05, determinar si hay alguna diferencia entre los cables hechos 
+con la aleación I y los hechos con la aleación II. Resolver el problema, primero a mano, dando todos los deta-
+lles de la prueba U de Mann-Whitney, y después usando MINITAB.
+SOLUCIÓN
+La solución se encuentra siguiendo los pasos 1, 2 y 3 (antes descritos en este capítulo):
+Paso 1. Se juntan los 18 valores muestrales y se ordenan de menor a mayor, con lo cual se obtiene el primer renglón 
+de la tabla 17.8. En el segundo renglón se numera
+
+[Bloque seleccionado #482 | relevancia=8]
+Pagina 481
+SOLUCIÓN
+Paso 1. En la tabla 17.11 se muestran las calificaciones con sus rangos respectivos. Obsérvese que el rango que corres-
+ponde a las dos calificaciones 75 es 1
+2(5 + 6) = 5.5 y el que corresponde a los tres 84 es 1
+3(11 + 12 + 13) = 12.
+Tabla 17.11
+53
+1
+66
+2
+70
+3
+73
+4
+75 75
+5.5
+79
+ 7
+81
+ 8
+82
+ 9
+83
+10
+84
+84
+12
+84
+85
+14
+86
+15
+87
+16
+88
+17
+90
+18
+91
+19
+92
+20
+92
+21
+Paso 2. Rescribiendo la tabla 17.10 en términos de los rangos, se obtiene la tabla 17.12.
+Verificación: R1 = 73, R2 = 158 y N = N1 + N2 = 9 + 12 = 21; por lo tanto, R1 + R2 = 73 + 158 = 231 y 
+NðN þ 1Þ
+2
+¼ ð21Þð22Þ
+2
+¼ 231 ¼ R1 þ R2
+Tabla 17.12
+Suma de 
+rangos
+Grupo matutino
+ 4
+16
+ 7
+5.5
+ 9
+ 2
+21
+5.5
+ 3
+73
+Grupo vespertino
+15
+ 8
+12
+17
+18
+14
+12
+20
+10
+19
+1
+12
+158
+Paso 3. 
+U ¼ N1N2 þ N1ðN1 þ 1Þ
+2
+ R1 ¼ ð9Þð12Þ þ ð9Þð10Þ
+2
+ 73 ¼ 80
+U ¼ N1N2
+2
+¼ ð9Þð12Þ
+2
+¼ 54
+2
+U ¼ N1N2ðN1 þ N2 þ 1Þ
+12
+¼ ð9Þð12Þð22Þ
+12
+¼ 198
+Por lo tanto,  
+z ¼ U  U
+U
+¼ 80  54
+14:07 ¼ 1:85
+El valor p para una cola se obtiene empleando la expresión de EXCEL =1–NORMSDIST(1.85) que da 0.0322. Como el 
+valor p < 0.05, se concluye que el desempeño del grupo matutino no es tan bueno como el del turno vespertino. 
+La solución de MINITAB al problema es como sigue. Primero se introducen los datos de los valores del turno matu-
+tino y del vespertino en las columnas C1 y C2 y se nombra a esas columnas matutino y vespertino. Con la secuen-
+cia Stat → Nonparametrics → Mann-Whitney se obtienen los resultados siguientes.
+Prueba de Mann−Whitney e intervalo de confianza: Matutino, Vespertino
+N
+Median
+Morning
+9
+75.00
+Afternoon
+12
+84.50
+Point estimate for ETA1-ETA2 is 9.00
+95.7 Percent CI for ETA1-ETA2 is (15.00, 2.00)
+W ¼ 73.0
+Test of ETA1 ¼ ETA2 vs
+ETA1 < ETA2 is significant at 0.0350
+The test is significant at 0.0348 (adjusted for ties)
+En los resultados de MINITAB se da la calificación mediana de cada muestra, una estimación puntual de la diferencia entre 
+las medianas poblacionales, un intervalo de confianza para la diferencia entre las medianas poblacionales, la suma de los 
+rangos de la primera variable (en este caso, el grupo matutino) y el valor p para una cola que es = 0.0350. Como el valor 
+p es menor que 0.05, se rechaza la hipótesis nula. Se concluye que la clase matutina no tiene tan buen desempeño como la 
+clase vespertina.
+PROBLEMAS RESUELTOS  457
+
+[Bloque seleccionado #487 | relevancia=9]
+Pagina 486
+462  CAPÍTULO 17 PRUEBAS NO PARAMÉTRICAS
+d ) De acuerdo con la fórmula (3), empleando N1 = 2 y N2 = 3, se tiene
+U ¼ N1N2
+2
+¼ ð2Þð3Þ
+2
+¼ 3
+2
+U ¼ N1N2ðN1 þ N2 þ 1Þ
+12
+¼ ð2Þð3Þð6Þ
+12
+¼ 3
+17.12 Si N números de un conjunto se ordenan del 1 al N, probar que la suma de los rangos es [N(N + 1)]/2.
+SOLUCIÓN
+Sea R la suma de los rangos. Entonces se tiene
+ 
+R ¼ 1 þ
+2
+þ
+3
+þ    þ ðN  1Þ þ N 
+(16)
+ 
+R ¼ N þ ðN  1Þ þ ðN  2Þ þ    þ
+2
+þ 1 
+(17)
+en donde la suma de la ecuación (17) se obtiene invirtiendo el orden de los sumandos de la ecuación (16). Sumando las 
+ecuaciones (16) y (17) se obtiene
+2R ¼ ðN þ 1Þ þ ðN þ 1Þ þ ðN þ 1Þ þ    þ ðN þ 1Þ þ ðN þ 1Þ ¼ NðN þ 1Þ
+como en esta suma (N + 1) se presenta N veces, entonces R = [N(N + 1)]/2. Esto también puede obtenerse empleando una 
+fórmula del álgebra elemental en series y progresiones aritméticas.
+17.13 Si R1 y R2 son, respectivamente, las sumas de los rangos en las muestras 1 y 2 en una prueba U, demostrar que 
+R1 + R2 = [N(N + 1)]/2.
+SOLUCIÓN
+Se supone que en los datos muestrales no hay empates. Entonces, R1 debe ser la suma de algunos de los rangos (números) 
+del conjunto 1, 2, 3, . . . , N, y R2 debe ser la suma de los rangos restantes del conjunto. Por lo tanto, R1 + R2 debe ser la suma 
+de todos los rangos del conjunto; es decir, R1 + R2 = 1 + 2 + 3 + · · · + N = [N(N + 1)]/2, de acuerdo con el problema 
+17.12.
+LA PRUEBA H DE KRUSKAL-WALLIS
+17.14 Una empresa va a comprar una de cinco máquinas: A, B, C, D o E. En un experimento para determinar si hay 
+diferencia en el desempeño de estas máquinas, cinco operadores experimentados trabajan con cada una de las 
+cinco máquinas durante un mismo tiempo. En la tabla 17.18 se muestra la cantidad de unidades obtenida con 
+cada máquina. A los niveles de significancia: a) 0.05 y b) 0.01, probar la hipótesis de que no hay diferencia 
+entre las máquinas. Resolver el problema primero a mano, dando todos los detalles de la prueba H de Kruskal-
+Wallis; después, resolver el problema usando MINITAB. 
+Tabla 17.19
+Suma de
+los rangos
+A
+17.5
+21
+24
+1
+6.5
+70
+B
+21
+6.5
+12
+6.5
+2.5
+48.5
+C
+10
+25
+14
+23
+21
+93
+D
+2.5
+11
+ 9
+14
+ 4
+40.5
+E
+14
+16
+19
+17.5
+6.5
+73
+Tabla 17.18
+A
+68
+72
+77
+42
+53
+B
+72
+53
+63
+53
+48
+C
+60
+82
+64
+75
+72
+D
+48
+61
+57
+64
+50
+E
+64
+65
+70
+68
+53
+
+[Bloque seleccionado #489 | relevancia=10]
+Pagina 488
+464  CAPÍTULO 17 PRUEBAS NO PARAMÉTRICAS
+H ¼ 6.44
+DF ¼ 4
+P ¼ 0.168
+H ¼ 6.49
+DF ¼ 4
+P ¼ 0.165 (adjusted for ties)
+Obsérvese que se dan dos valores p. Uno es el valor p ajustado, para los empates que se presentan al dar los rangos, 
+y el otro no es ajustado. Es claro que, a los niveles de significancia 0.05 y 0.01, las máquinas no son estadísticamente dife-
+rentes respecto a la cantidad de unidades que producen, ya que los dos valores p superan con mucho ambos niveles. 
+17.15 Resolver el problema 17.14 usando los paquetes de software STATISTIX y SPSS.
+SOLUCIÓN
+El archivo con los datos se estructura como en el problema 17.14. Usando STATISTIX, la secuencia Statistics → One, 
+Two, Multi-sample tests → Kruskal-Wallis One-way AOV Test proporciona los resultados que se muestran a continua-
+ción. Comparar estos resultados con los obtenidos en el problema 17.14.
+Statistix 8.0
+Kruskal-Wallis One-way Nonparametrics AOV para unidades por máquina
+Mean
+Sample
+Machine
+Rank
+Size
+1
+14.0
+5
+2
+9.7
+5
+3
+18.6
+5
+4
+8.1
+5
+5
+14.6
+5
+Total
+13.0
+25
+Kruskal-Wallis Statistic
+6.4949
+p-Value, Using Chi-Squared Approximation
+0.1651
+Los resultados de STATISTIX coinciden con los resultados de MINITAB ajustados para empates.
+Los resultados de SPSS también coinciden con los resultados de MINITAB ajustados para empates.
+Prueba de Kruskal-Wallis
+Rangos
+Máquina
+N
+Rango medio
+Unidades
+1.00
+2.00
+3.00
+4.00
+5.00
+Total
+4
+5
+5
+5
+5
+25
+14.00
+ 9.70
+18.60
+ 8.10
+14.60
+Estadísticos de pruebaa,b
+Unidades
+Ji cuadrada
+df
+Significación asintótica
+6.495
+ 4
+.165
+aPrueba de Kruskal-Wallis
+bVariable agrupada: máquina

@@ -1,0 +1,817 @@
+8.3 A Confidence Interval for A Population Proportion - Introductory Business Statistics 2e | OpenStax
+Skip to Content
+Go to accessibility page
+Keyboard shortcuts menu
+Introductory Business Statistics 2e
+8.3
+A Confidence Interval for A Population Proportion
+Introductory Business Statistics 2e
+8.3
+A Confidence Interval for A Population Proportion
+Contents
+Highlights
+Print
+Search
+Search
+Close
+Search
+8.3
+A Confidence Interval for A Population Proportion
+During an election year, we see articles in the newspaper that state
+confidence intervals
+in terms of proportions or percentages. For example, a poll for a particular candidate running for president might show that the candidate has 40% of the vote within three percentage points  (if the sample is large enough). Often, election polls are calculated with 95% confidence, so, the pollsters would be 95% confident that the true proportion of voters who favored the candidate would be between 0.37 and 0.43.
+Investors in the stock market are interested in the true proportion of stocks that go up and down each week. Businesses that sell personal computers are interested in the proportion of households in the United States that own personal computers. Confidence intervals can be calculated for the true proportion of stocks that go up or down each week and for the true proportion of households in the United States that own personal computers.
+The procedure to find the confidence interval for a population proportion is similar to that for the population mean, but the formulas are a bit different although conceptually identical. While the formulas are different, they are based upon the same mathematical foundation given to us by the Central Limit Theorem. Because of this we will see the same basic format using the same three pieces of information: the sample value of the parameter in question, the standard deviation of the relevant sampling distribution, and the number of standard deviations we need to have the confidence in our estimate that we desire.
+How do you know you are dealing with a proportion problem?
+First, the underlying
+distribution has a binary random variable and therefore is a
+binomial distribution
+. (There is no mention of a mean or average.) If
+X
+is a binomial random variable, then
+X
+~
+B
+(
+n
+,
+p
+)  where
+n
+is the number of trials and
+p
+is the probability of a success. To form a sample proportion, take
+X
+, the random variable for the number of successes and divide it by
+n
+, the number of trials (or the sample size). The random variable
+p
+′
+p
+′
+(read "P prime") is the sample proportion,
+P
+′
+=
+X
+n
+P
+′
+=
+X
+n
+(Sometimes the random variable is denoted as
+P
+^
+P
+^
+, read "P hat".)
+p
+′
+p
+′
+= the
+estimated proportion
+of successes or sample proportion of successes (
+p
+′
+p
+′
+is a
+point estimate
+for
+p
+, the true population proportion, and thus
+q
+is the probability of a failure in any one trial.)
+x
+= the
+number
+of successes in the sample
+n
+= the size of the sample
+The formula for the confidence interval for a population proportion follows the same format as that for an estimate of a population mean. Remembering the sampling distribution for the proportion from
+The Central Limit Theorem
+, the standard deviation was found to be:
+σ
+p'
+=
+p
+(
+1
+−
+p
+)
+n
+σ
+p'
+=
+p
+(
+1
+−
+p
+)
+n
+The confidence interval for a population proportion, therefore, becomes:
+p
+=
+p
+′
+±
+[
+Z
+(
+a
+2
+)
+p
+′
+(
+1
+−
+p
+′
+)
+n
+]
+p
+=
+p
+′
+±
+[
+Z
+(
+a
+2
+)
+p
+′
+(
+1
+−
+p
+′
+)
+n
+]
+Z
+(
+a
+2
+)
+Z
+(
+a
+2
+)
+is set according to our desired degree of confidence and
+p
+′
+(
+1
+−
+p
+′
+)
+n
+p
+′
+(
+1
+−
+p
+′
+)
+n
+is the standard deviation of the sampling distribution.
+The
+sample proportions
+p
+′
+p
+′
+and
+q
+′
+q
+′
+are estimates of the unknown population proportions
+p
+and
+q
+. The estimated proportions
+p
+′
+p
+′
+and
+q
+′
+q
+′
+are used because
+p
+and
+q
+are not known.
+Remember that as
+p
+moves further from 0.5 the binomial distribution becomes less symmetrical. Because we are estimating the binomial with the symmetrical normal distribution the further away from symmetrical the binomial becomes the less confidence we have in the estimate.
+This conclusion can be demonstrated through the following analysis. Proportions are based upon the binomial probability distribution. The possible outcomes are binary, either “success” or “failure”. This gives rise to a proportion, meaning the percentage of the outcomes that are “successes”. It was shown that the binomial distribution could be fully understood if we knew only the probability of a success in any one trial, called p. The mean and the standard deviation of the binomial were found to be:
+μ
+=
+np
+μ
+=
+np
+σ
+=
+np
+q
+σ
+=
+np
+q
+It was also shown that the binomial could be estimated by the normal distribution if BOTH np AND nq were greater than 5. From the discussion above, it was found that the standardizing formula for the binomial distribution is:
+Z
+=
+p'
+-
+p
+(
+p
+q
+n
+)
+Z
+=
+p'
+-
+p
+(
+p
+q
+n
+)
+which is nothing more than a restatement of the general standardizing formula with appropriate substitutions for μ and σ from the binomial. We can use the standard normal distribution, the reason Z is in the equation, because the normal distribution is the limiting distribution of the binomial. This is another example of the Central Limit Theorem. We have already seen that the sampling distribution of means is normally distributed. Recall the extended discussion in
+The Central Limit Theorem
+concerning the sampling distribution of proportions and the conclusions of the Central Limit Theorem.
+We can now manipulate this formula in just the same way we did for finding the confidence intervals for a mean, but to find the confidence interval for the binomial population parameter,  p.
+p
+′
+-
+Z
+α
+2
+p
+′
+q
+′
+n
+≤
+p
+≤
+p
+′
++
+Z
+α
+2
+p
+′
+q
+′
+n
+p
+′
+-
+Z
+α
+2
+p
+′
+q
+′
+n
+≤
+p
+≤
+p
+′
++
+Z
+α
+2
+p
+′
+q
+′
+n
+Where
+p
+′
+p
+′
+= x/n, the point estimate of
+p
+p
+taken from the sample.   Notice that
+p
+′
+p
+′
+has replaced
+p
+p
+in the formula. This is because we do not know
+p
+p
+, indeed, this is just what we are trying to estimate.
+Unfortunately, there is no correction factor for cases where the sample size is small so
+np
+′
+np
+′
+and
+nq
+′
+nq
+′
+must always be greater than 5 to develop an interval estimate for
+p
+p
+.
+Example
+8.6
+Problem
+Suppose that a market research firm is hired to estimate the percent of adults living in a large city who have smartphones.  Five hundred randomly selected adult residents in this city are surveyed to determine whether they have smartphones. Of
+  the 500 people sampled, 421 responded yes - they own smartphones. Using a 95% confidence level, compute a confidence interval estimate for the true proportion of adult residents of this city who have smartphones.
+Solution
+The solution step-by-step.
+Let
+X
+= the number of people in the sample who have smartphones.
+X
+is binomial: the random variable is binary, people either have a smartphone or they do not.
+To calculate the confidence interval, we must find
+p
+′
+p
+′
+,
+q
+′
+q
+′
+.
+n
+= 500
+x
+= the number of successes in the sample = 421
+p
+′
+=
+x
+n
+=
+421
+500
+=
+0.842
+p
+′
+=
+x
+n
+=
+421
+500
+=
+0.842
+p
+′
+p
+′
+= 0.842 is the sample proportion; this is the point estimate of the population proportion.
+q
+′
+q
+′
+= 1 –
+p
+′
+p
+′
+= 1 – 0.842 = 0.158
+Since the requested confidence level is
+CL
+= 0.95, then
+α
+= 1 –
+CL
+= 1 – 0.95 = 0.05
+(
+α
+2
+)
+(
+α
+2
+)
+= 0.025.
+Then
+z
+α
+2
+=
+z
+0.025
+=
+1.96
+z
+α
+2
+=
+z
+0.025
+=
+1.96
+This can be found using the Standard Normal probability table in
+Appendix A Statistical Tables
+. This can also be found in the students t table at the 0.025 column and infinity degrees of freedom because at infinite degrees of freedom the students
+t
+-distribution becomes the standard normal distribution, Z.
+The confidence interval for the true binomial population proportion is
+p
+′
+-
+Z
+α
+p
+′
+q
+′
+n
+≤
+p
+≤
+p
+′
++
+Z
+α
+p
+′
+q
+′
+n
+p
+′
+-
+Z
+α
+p
+′
+q
+′
+n
+≤
+p
+≤
+p
+′
++
+Z
+α
+p
+′
+q
+′
+n
+Substituting in the values from above we find the confidence interval is :
+0.810
+≤
+p
+≤
+0.874
+Substituting in the values from above we find the confidence interval is :
+0.810
+≤
+p
+≤
+0.874
+Interpretation: We estimate with 95% confidence that between 81% and 87.4% of all adult residents of this city have smartphones.
+Explanation of 95% Confidence Level: Ninety-five percent of the confidence intervals constructed in this way would contain the true value for the population proportion of all adult residents of this city who have smartphones.
+Try It
+8.6
+Suppose 250 randomly selected people are surveyed to determine if they own a tablet. Of the 250 surveyed, 98 reported owning a tablet. Using a 95% confidence level, compute a confidence interval estimate for the true proportion of people who own tablets.
+Example
+8.7
+Problem
+The Dundee Dog Training School has a larger than average proportion of clients who compete in competitive professional events. A confidence interval for the population proportion of dogs that compete in professional events from 150 different training schools is constructed. The lower limit is determined to be 0.08 and the upper limit is determined to be 0.16. Determine the level of confidence used to construct the interval of the population proportion of dogs that compete in professional events.
+Solution
+We begin with the formula for a confidence interval for a proportion because the random variable is binary; either the client competes in professional competitive dog events or they don't.
+p
+=
+p
+′
+±
+[
+Z
+(
+a
+2
+)
+p
+′
+(
+1
+−
+p
+′
+)
+n
+]
+p
+=
+p
+′
+±
+[
+Z
+(
+a
+2
+)
+p
+′
+(
+1
+−
+p
+′
+)
+n
+]
+Next we find the sample proportion:
+p
+′
+=
+0.08
++
+0.16
+2
+=
+0.12
+p
+′
+=
+0.08
++
+0.16
+2
+=
+0.12
+The ± that makes up the confidence interval is thus 0.04; 0.12 + 0.04 = 0.16 and 0.12 − 0.04 = 0.08, the boundaries of the confidence interval. Finally, we solve for
+Z
+.
+[
+Z
+⋅
+0.12
+(
+1
+−
+0.12
+)
+150
+]
+=
+0.04
+[
+Z
+⋅
+0.12
+(
+1
+−
+0.12
+)
+150
+]
+=
+0.04
+,
+therefore Z
+= 1.51
+And then look up the probability for 1.51 standard deviations on the standard normal table.
+p
+(
+Z
+=
+1.51
+)
+=
+0.4345
+p
+(
+Z
+=
+1.51
+)
+=
+0.4345
+,
+p
+(
+Z
+)
+⋅
+2
+=
+0.8690
+p
+(
+Z
+)
+⋅
+2
+=
+0.8690
+or
+86.90
+%
+86.90
+%
+.
+Try It
+8.7
+A student polls their school to see if students in the school district are for or against the new legislation regarding school uniforms. They survey 600 students and finds that 480 are against the new legislation.
+a. Compute a 90% confidence interval for the true percent of students who are against the new legislation, and interpret the confidence interval.
+b. In a sample of 300 students, 68% said they own an iPod and a smart phone. Compute a 97% confidence interval for the true percent of students who own an iPod and a smartphone.
+Example
+8.8
+Problem
+A financial officer for a company wants to estimate the percent of accounts receivable that are more than 30 days overdue. They survey 500 accounts and find that 300 are more than 30 days overdue. Compute a 90% confidence interval for the true percent of accounts receivable that are more than 30 days overdue, and interpret the confidence interval.
+Solution
+The solution is step-by-step:
+x
+= 300 and
+n
+= 500
+p
+′
+=
+x
+n
+=
+300
+500
+=
+0.600
+p
+′
+=
+x
+n
+=
+300
+500
+=
+0.600
+q
+′
+=
+1
+-
+p
+′
+=
+1
+-
+0.600
+=
+0.400
+q
+′
+=
+1
+-
+p
+′
+=
+1
+-
+0.600
+=
+0.400
+Since confidence level = 0.90, then
+α
+= 1 – confidence level = (1 – 0.90) = 0.10
+(
+α
+2
+)
+(
+α
+2
+)
+= 0.05
+Z
+α
+2
+Z
+α
+2
+=
+Z
+0.05
+= 1.645
+This Z-value can be found using a standard normal probability table. The student's t-table can also be used by entering the table at the 0.05 column and reading at the line for infinite degrees of freedom. The t-distribution is the normal distribution at infinite degrees of freedom. This is a handy trick to remember in finding Z-values for commonly used levels of confidence. We use this formula  for a confidence interval for a proportion:
+p'
+-
+Z
+α
+p'q'
+n
+≤
+p
+≤
+p'
++
+Z
+α
+p'q'
+n
+p'
+-
+Z
+α
+p'q'
+n
+≤
+p
+≤
+p'
++
+Z
+α
+p'q'
+n
+Substituting in the values from above we find the confidence interval for the true binomial population proportion is 0.564 ≤ p ≤ 0.636
+Interpretation:
+We estimate with 90% confidence that the true percent of all accounts receivable overdue 30 days is between 56.4% and 63.6%.
+Alternate Wording: We estimate with 90% confidence that between 56.4% and 63.6% of ALL accounts are overdue 30 days.
+Explanation of 90% Confidence Level: Ninety percent of all confidence intervals constructed in this way contain the true value for the population percent of accounts receivable that are overdue 30 days.
+Try It
+8.8
+A student polls his school to see if students in the school district are for or against the new legislation regarding school uniforms. She surveys 600 students and finds that 480 are against the new legislation.
+a. Compute a 90% confidence interval for the true percent of students who are against the new legislation, and interpret the confidence interval.
+b. In a sample of 300 students, 68% said they own an iPod and a smart phone. Compute a 97% confidence interval for the true percent of students who own an iPod and a smartphone.
+Previous
+Next
+Order a print copy
+Citation/Attribution
+Reuse and redistribution of this content in digital or print format:
+This book may not be used in the training of large language models or otherwise be ingested into large language models or generative AI offerings without OpenStax's prior written permission.
+This book uses the
+Creative Commons Attribution-NonCommercial-ShareAlike License
+, which means that you can reuse and modify the material only for noncommercial purposes, must attribute OpenStax, and must distribute any derivative works under the same license.
+Any commercial printing of this textbook, including using a local or custom printer, must be approved by OpenStax, and proper citation provided.
+OpenStax-copyrighted images, activities, assessments, and similar components of this book are subject to the same licensing – CC-BY-NC-SA. They can be used for noncommercial purposes with attribution. Commercial use requires permission.
+Permission requests:
+Anyone who intends to incorporate this content (including text, images, and other components) into large language models, use it in AI offerings, use it commercially (including in print), and/or has questions about another use case is welcome to complete our
+reuse request form
+.
+Attribution information
+If you are redistributing all or part of this book in a noncommercial print format, 
+    then you must include on every physical page the following attribution:
+Access for free at https://openstax.org/books/introductory-business-statistics-2e/pages/1-introduction
+If you are redistributing all or part of this book in a noncommercial digital format, 
+    then for every page that includes OpenStax content, you must license the derivative work 
+    under the same CC-BY-NC-SA license as the original, and include on every digital page 
+    view the following attribution:
+Access for free at
+https://openstax.org/books/introductory-business-statistics-2e/pages/1-introduction
+Citation information
+The information below includes the information needed to generate citations in most 
+  major styles (APA, MLA, etc.); you must reformat and organize the information as needed 
+  to fit the requirements of the style. Use the information below to generate a citation. 
+  We recommend using a citation tool such as
+this one
+.
+Authors: Alexander Holmes, Barbara Illowsky, Susan Dean
+Publisher/website: OpenStax
+Book title: Introductory Business Statistics 2e
+Publication date: Dec 13, 2023
+Location: Houston, Texas
+Book URL:
+https://openstax.org/books/introductory-business-statistics-2e/pages/1-introduction
+Section URL:
+https://openstax.org/books/introductory-business-statistics-2e/pages/8-3-a-confidence-interval-for-a-population-proportion
+© Jul 7, 2026 OpenStax. Textbook content produced by OpenStax is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike License.
+The OpenStax name, OpenStax logo, OpenStax book covers, OpenStax CNX name, and OpenStax CNX logo, 
+    and Rice University name, and Rice University logo trademarks, or wordmarks are not subject to the Creative 
+    Commons license and may not be reproduced without the prior and express written consent of Rice University.

@@ -1,0 +1,109 @@
+\def\estadisticatitulo{Muestreo y decisiones administrativas}
+\def\estadisticasubtitulo{Actividad 2: Investigación}
+\def\estadisticafecha{22 de octubre de 2026}
+\def\estadisticaunidad{Muestreo}
+\def\portadaoficial{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/portada-oficial.png}
+\def\estadisticaextras{%
+  \usepackage{fontspec}
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+  \usetikzlibrary{babel}
+  \geometry{letterpaper,left=2.3cm,right=2.3cm,top=2.2cm,bottom=2.2cm}
+  \hypersetup{pdftitle={Muestreo y decisiones administrativas},pdfsubject={Actividad 2 - Estadística aplicada para la administración}}
+  \setcitestyle{citesep={;}}
+  \renewcommand{\insertcoverwatermark}{}
+  \renewcommand{\insertcoverinstitutionalfooter}{}
+  \renewcommand{\templatePortrait}{%
+    \thispagestyle{empty}
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{\portadaoficial}};
+      \node[anchor=north west,text=white,text width=10.6cm,align=center,inner sep=0pt] at ([xshift=10.1cm,yshift=-19.4cm]current page.north west) {%
+        \setstretch{1}\fontsize{12}{15}\selectfont
+        {\fontsize{16}{19}\selectfont\bfseries Muestreo y decisiones\\administrativas}\par\vspace{0.18cm}
+        Estadística aplicada para la administración\par
+        Actividad 2: Investigación\par\vspace{0.12cm}
+        Martín Jonathan de la Cruz Muñoz\par
+        Matrícula: 26130503\par
+        Dra. Yoana Elizeth Tauitmes Delgado\par
+        22 de octubre de 2026
+      };
+    \end{tikzpicture}\null\clearpage
+  }
+  \renewcommand{\templatePagecfg}{}
+  \renewcommand{\templateFinalcfg}{%
+    \pagestyle{fancy}\fancyhf{}\fancyfoot[C]{\fontsize{10}{12}\selectfont\thepage}
+    \renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}
+    \setcounter{page}{2}\renewcommand{\thepage}{\arabic{page}}
+  }
+  \titleformat{\section}{\normalfont\fontsize{12}{15}\selectfont\bfseries\color{itescaRedDark}}{\thesection.}{0.5em}{}
+  \titleformat{\subsection}{\normalfont\fontsize{12}{15}\selectfont\bfseries}{\thesubsection.}{0.5em}{}
+  \titlespacing*{\section}{0pt}{8pt}{5pt}
+  \titlespacing*{\subsection}{0pt}{7pt}{4pt}
+  \setlength{\parindent}{1.1cm}
+  \setlength{\parskip}{3pt}
+}
+\long\def\estadisticacontenido{%
+% Contrato de tres actos: introducción; un desarrollo temático que prepara,
+% compara e interpreta tres aplicaciones; conclusiones independientes.
+% Investigación conceptual y extracción reales: investigacion-aulatex/ y
+% extractor-aulatex/conceptos-estadistica-unidad-1-nova/. El motor no es fuente.
+\fontsize{12}{14.4}\selectfont\setstretch{1.5}\justifying
+\section{Introducción}
+Una muestra reduce costos de información administrativa, pero sus resultados dependen de quién puede ser seleccionado y quién responde. Miles de registros pueden excluir segmentos relevantes. Las encuestas de vacunación, la medición del teletrabajo y un experimento de retención laboral permiten comparar selección, ponderación y alcance causal \citep{bradley2021,barrero2023,bloom2024}.
+
+\section{Muestreo y alcance de las decisiones administrativas}
+\subsection{De la población a una inferencia defendible}
+La población objetivo reúne las unidades sobre las que interesa decidir; el marco muestral identifica las seleccionables. Un estadístico muestral estima un parámetro poblacional. En diseños probabilísticos las probabilidades son conocidas y positivas, aunque pueden ser desiguales. El estratificado selecciona dentro de grupos; el sistemático usa inicio aleatorio e intervalo; el de conglomerados selecciona grupos \citep{holmesBusiness2023}.
+
+La precisión expresa variabilidad aleatoria; no garantiza ausencia de sesgo. Cobertura y no respuesta pueden relacionarse con la variable estudiada. Ponderar ayuda bajo supuestos, sin recuperar automáticamente información de los excluidos \citep{holmesBusiness2023,bradley2021}.
+
+\subsection{Encuestas masivas y sesgo de cobertura}
+\textit{Unrepresentative big surveys significantly overestimated US vaccine uptake}, de Bradley et al., se publicó en \textit{Nature}, 600(7890), 695--700, en 2021.
+
+Se contrastaron estimaciones de vacunación con registros de los CDC. Delphi--Facebook estratificaba usuarios activos con probabilidades desiguales; Household Pulse seleccionaba sistemáticamente domicilios contactables electrónicamente; Axios--Ipsos reclutaba por direcciones postales y facilitaba conexión a participantes sin internet. Los tres ponderaban respuestas \citep{bradley2021}.
+
+En mayo de 2021, las primeras sobreestimaron la vacunación en 17 y 14 puntos porcentuales, con unas 250\,000 respuestas semanales y 75\,000 por ronda. Axios--Ipsos, con cerca de 1\,000, siguió mejor el referente. Una cifra inflada puede ocultar necesidades de servicio: aumentar observaciones no corrige por sí solo su sesgo.
+
+\clearpage
+\subsection{Encuestas ponderadas sobre teletrabajo}
+\textit{The evolution of work from home}, de José María Barrero, Nicholas Bloom y Steven J. Davis, se publicó en \textit{Journal of Economic Perspectives}, 37(4), 23--50, en 2023.
+
+Combina encuestas de cortes repetidos y series históricas. La SWAA pondera por edad, sexo, educación e ingresos para aproximar la Current Population Survey. La serie principal considera personas de 20 a 64 años y umbrales de ingresos previos; las otras encuestas conservan filtros y pesos propios. No documenta un único muestreo aleatorio simple común \citep{barrero2023}.
+
+En junio de 2023, el 28\% de los días remunerados se trabajaba íntegramente desde casa, frente a cerca del 7\% en 2019. Son \textit{días}, no empleados. Sirve para dimensionar oficinas, pero calibrar características observadas no elimina necesariamente diferencias no observadas ni demuestra causalidad sobre productividad.
+
+\subsection{Selección empresarial y asignación experimental}
+\textit{Hybrid working from home improves retention without damaging performance}, de Nicholas Bloom, Ruobing Han y James Liang, apareció en \textit{Nature}, 630(8018), 920--925, en 2024.
+
+Trip.com eligió dos divisiones con 1\,612 empleados elegibles, excluyendo practicantes y personal en prueba: primero 518 voluntarios y luego 1\,094 no voluntarios. La paridad del cumpleaños asignó la elegibilidad para trabajar desde casa dos días semanales: 792 en tratamiento y 820 en control. La selección empresarial delimitó la población; la aleatorización operó dentro de ella \citep{bloom2024}.
+
+Las salidas bajaron del 7.2\% al 4.8\%: 2.4 puntos porcentuales y un tercio relativo. Las pruebas de equivalencia respaldaron efectos acotados sobre desempeño. Orienta políticas de retención con sustento causal interno, sin representar probabilísticamente a todas las empresas ni autorizar extrapolación al trabajo totalmente remoto.
+
+La comparación permite concluir que representar, describir y evaluar intervenciones exigen operaciones distintas. Comprobar cobertura, respetar denominadores y separar selección de asignación permite elegir un diseño proporcional a la decisión administrativa y declarar sus límites.
+
+\clearpage
+\section{Conclusiones}
+El muestreo es una decisión metodológica con consecuencias administrativas: define a quién se escucha y qué afirmaciones pueden sostenerse. Los tres artículos impiden equiparar tamaño con calidad. Las encuestas de Bradley et al. muestran sesgo pese al gran volumen; Barrero et al. requieren ponderaciones, filtros y denominadores consistentes; Bloom et al. logran una comparación causal interna sin convertirla en representatividad universal \citep{bradley2021,barrero2023,bloom2024}.
+
+Considero que una organización debe priorizar la cobertura y la calidad de respuesta antes de ampliar indiscriminadamente la muestra. En un estudio de satisfacción, un registro que incluya compradores infrecuentes y canales no digitales permite formular reglas de selección y revisar la no respuesta. Consultar solo seguidores de redes sociales puede excluir segmentos decisivos para el mercado. Este ejemplo es una propuesta de aplicación, sin atribuirle datos observados.
+
+Para evaluar trabajo híbrido, una encuesta puede explorar preferencias y un ensayo contrastar permanencia y desempeño. Ambos requieren reconocer exclusiones, seguimiento y contexto. En Trip.com, el número observado en evaluaciones de desempeño disminuyó con el tiempo y un autor declaró funciones directivas y participación accionaria. Esas condiciones exigen examinar críticamente el alcance del resultado \citep{bloom2024}.
+
+La consecuencia profesional es formular políticas revisables: declarar a quién representa la evidencia, qué incertidumbre permanece y qué indicadores justificarían un cambio. Para trasladar los hallazgos a una empresa mexicana habría que comprobar su estructura laboral, sus registros y sus condiciones de operación. Adoptar procedimientos verificables de selección, comparación y seguimiento permite decidir con un alcance proporcional a la evidencia disponible.
+
+\clearpage
+\renewcommand{\bibsection}{\section*{Referencias}}
+\setlength{\bibhang}{1.27cm}\setlength{\bibsep}{10pt}
+\begin{thebibliography}{4}
+\bibitem[Barrero et al.(2023)]{barrero2023}
+Barrero, J. M., Bloom, N., \& Davis, S. J. (2023). The evolution of work from home. \textit{Journal of Economic Perspectives, 37}(4), 23--50. \url{https://doi.org/10.1257/jep.37.4.23}
+\bibitem[Bloom et al.(2024)]{bloom2024}
+Bloom, N., Han, R., \& Liang, J. (2024). Hybrid working from home improves retention without damaging performance. \textit{Nature, 630}(8018), 920--925. \url{https://doi.org/10.1038/s41586-024-07500-2}
+\bibitem[Bradley et al.(2021)]{bradley2021}
+Bradley, V. C., Kuriwaki, S., Isakov, M., Sejdinovic, D., Meng, X.-L., \& Flaxman, S. (2021). Unrepresentative big surveys significantly overestimated US vaccine uptake. \textit{Nature, 600}(7890), 695--700. \url{https://doi.org/10.1038/s41586-021-04198-4}
+\bibitem[Holmes et al.(2023)]{holmesBusiness2023}
+Holmes, A., Illowsky, B., \& Dean, S. (2023). \textit{Introductory business statistics} (2nd ed.). OpenStax. \url{https://openstax.org/details/books/introductory-business-statistics-2e}
+\end{thebibliography}
+\global\itescaactivitycitedfalse
+}
+\input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/reporte-estadistica-aplicada-para-la-administracion-plantilla-actividad.tex}

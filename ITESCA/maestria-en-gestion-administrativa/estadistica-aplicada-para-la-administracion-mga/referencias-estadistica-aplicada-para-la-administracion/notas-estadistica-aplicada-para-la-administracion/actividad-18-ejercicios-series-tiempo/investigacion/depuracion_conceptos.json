@@ -1,0 +1,106 @@
+{
+  "subject_slug": "estadistica-aplicada-para-la-administracion",
+  "engine": "Amazon Nova Pro",
+  "kept": [
+    "cálculo de índices estacionales trimestrales en parques temáticos Vacation World (Ejercicio 1)",
+    "análisis de dispersión y correlación en tiempos de embarque logístico Bardi (Ejercicio 2)",
+    "regresión simple y múltiple de ingresos por publicidad en Showtime Movie Theater (Ejercicio 3)",
+    "error estándar de estimación en ventas de línea blanca y construcción (Ejercicio 4)",
+    "estimación de función de demanda lineal por mínimos cuadrados en Bamsy (Ejercicio 5)",
+    "pronóstico trimestral con modelo estacional multiplicativo de lanchas Cotteleer (Ejercicio 6)",
+    "comparación de promedio móvil de 3 meses, ponderado de 6 meses y suavizamiento exponencial en Telco Batteries (Ejercicio 7)",
+    "suavizamiento exponencial con alfa 0.30 para ventas anuales de automóviles (Ejercicio 8)",
+    "suavizamiento exponencial",
+    "requisitos instrucciones",
+    "deberás realizar",
+    "realizar siguientes",
+    "deberás realizar siguientes",
+    "índices estacionales",
+    "pronóstico",
+    "serie tiempo",
+    "suavizamiento",
+    "pronóstico semana"
+  ],
+  "conceptos_clave_nova_pro": [
+    {
+      "concepto": "índices estacionales",
+      "definicion_rigurosa": "Los índices estacionales son medidas estadísticas que cuantifican las variaciones cíclicas en los datos de una serie temporal, ajustando las fluctuaciones estacionales para obtener una visión más clara de las tendencias subyacentes. Estos índices se calculan típicamente como la relación entre el valor observado en un periodo específico y el valor esperado en ausencia de estacionalidad.",
+      "formulacion_matematica_latex": "I_t = \\frac{Y_t}{\\hat{Y}_t}",
+      "aplicacion_administrativa": "Los índices estacionales son utilizados en la gestión administrativa para ajustar los pronósticos de ventas y demanda, permitiendo a las empresas prepararse mejor para los picos y valles en sus ciclos de negocio.",
+      "fuente_principal": "Wackerly, Mendenhall y Scheaffer, 2010",
+      "localizador": "libro-estadistica-matematica-con-aplicaciones-wackerly-A18.txt (bloque 1)"
+    },
+    {
+      "concepto": "análisis de dispersión y correlación",
+      "definicion_rigurosa": "El análisis de dispersión y correlación en una serie temporal implica el examen de la relación entre dos variables para determinar si una variable influye en la otra. La correlación mide la fuerza y la dirección de esta relación, mientras que la dispersión visualiza la distribución de los datos.",
+      "formulacion_matematica_latex": "r = \\frac{n(\\sum xy) - (\\sum x)(\\sum y)}{\\sqrt{[n\\sum x^2 - (\\sum x)^2][n\\sum y^2 - (\\sum y)^2]}}",
+      "aplicacion_administrativa": "Este análisis es crucial para identificar factores que influyen en el rendimiento operativo, permitiendo a los gerentes tomar decisiones informadas para optimizar procesos y recursos.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "docente-1781-81c5af4f6959.txt (bloque 5)"
+    },
+    {
+      "concepto": "regresión simple y múltiple",
+      "definicion_rigurosa": "La regresión simple y múltiple son técnicas estadísticas utilizadas para modelar la relación entre una variable dependiente y una o más variables independientes. La regresión simple involucra una sola variable independiente, mientras que la regresión múltiple considera múltiples variables.",
+      "formulacion_matematica_latex": "Y = \\beta_0 + \\beta_1X_1 + \\beta_2X_2 +... + \\beta_kX_k + \\epsilon",
+      "aplicacion_administrativa": "Estas técnicas permiten a los gerentes predecir resultados basados en diferentes factores, facilitando la toma de decisiones estratégicas y tácticas en la gestión empresarial.",
+      "fuente_principal": "Wackerly, Mendenhall y Scheaffer, 2010",
+      "localizador": "libro-estadistica-matematica-con-aplicaciones-wackerly-A18.txt (bloque 2)"
+    },
+    {
+      "concepto": "error estándar de estimación",
+      "definicion_rigurosa": "El error estándar de estimación es una medida de la precisión de una estimación estadística. Representa la desviación estándar de los errores de estimación en un modelo de regresión, indicando la variabilidad de las estimaciones alrededor del valor verdadero.",
+      "formulacion_matematica_latex": "S_e = \\sqrt{\\frac{\\sum (Y_i - \\hat{Y}_i)^2}{n-k-1}}",
+      "aplicacion_administrativa": "Este concepto es esencial para evaluar la fiabilidad de los modelos predictivos en la gestión administrativa, permitiendo a los gerentes comprender la incertidumbre asociada con sus estimaciones.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "docente-1781-81c5af4f6959.txt (bloque 5)"
+    },
+    {
+      "concepto": "mínimos cuadrados",
+      "definicion_rigurosa": "El método de mínimos cuadrados es una técnica de estimación que minimiza la suma de los cuadrados de las diferencias entre los valores observados y los valores predichos por el modelo. Es ampliamente utilizado en la regresión lineal para estimar los parámetros del modelo.",
+      "formulacion_matematica_latex": "\\min \\sum (Y_i - \\hat{Y}_i)^2",
+      "aplicacion_administrativa": "Los mínimos cuadrados son fundamentales en la modelación de datos para la toma de decisiones en administración, proporcionando una base sólida para la predicción y el análisis de tendencias.",
+      "fuente_principal": "Spiegel y Stephens, 2012",
+      "localizador": "libro-estadistica-spiegel-y-stephens-4-a-edicion-A18.txt (bloque 1)"
+    },
+    {
+      "concepto": "modelo estacional multiplicativo",
+      "definicion_rigurosa": "El modelo estacional multiplicativo es un enfoque para modelar series temporales que exhiben patrones estacionales. Este modelo multiplica las tendencias y las componentes estacionales para obtener pronósticos más precisos.",
+      "formulacion_matematica_latex": "Y_t = T_t \\times S_t \\times e_t",
+      "aplicacion_administrativa": "Este modelo es utilizado en la gestión administrativa para pronosticar ventas y demanda en industrias con fuertes patrones estacionales, como el turismo y la venta minorista.",
+      "fuente_principal": "Wackerly, Mendenhall y Scheaffer, 2010",
+      "localizador": "libro-estadistica-matematica-con-aplicaciones-wackerly-A18.txt (bloque 1)"
+    },
+    {
+      "concepto": "promedio móvil",
+      "definicion_rigurosa": "El promedio móvil es una técnica de suavizamiento de series temporales que calcula el promedio de un conjunto de datos sobre un periodo específico. Se utiliza para identificar tendencias y eliminar ruido en los datos.",
+      "formulacion_matematica_latex": "\\hat{Y}_t = \\frac{1}{n} \\sum_{i=t-n+1}^{t} Y_i",
+      "aplicacion_administrativa": "Los promedios móviles son utilizados en la gestión administrativa para suavizar fluctuaciones en los datos de ventas y demanda, proporcionando una visión más clara de las tendencias a largo plazo.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "libro-estadistica-para-negocios-y-economia-anderson-sw-A18.txt (bloque 4)"
+    },
+    {
+      "concepto": "suavizamiento exponencial",
+      "definicion_rigurosa": "El suavizamiento exponencial es una técnica de pronóstico que asigna pesos decrecientes exponencialmente a las observaciones pasadas. Es utilizado para suavizar series temporales y hacer pronósticos.",
+      "formulacion_matematica_latex": "\\hat{Y}_{t+1} = \\alpha Y_t + (1 - \\alpha) \\hat{Y}_t",
+      "aplicacion_administrativa": "El suavizamiento exponencial es esencial en la gestión administrativa para hacer pronósticos de ventas y demanda, proporcionando una herramienta valiosa para la planificación estratégica.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "libro-estadistica-para-negocios-y-economia-anderson-sw-A18.txt (bloque 2)"
+    },
+    {
+      "concepto": "función de demanda lineal",
+      "definicion_rigurosa": "La función de demanda lineal describe la relación entre la cantidad demandada de un producto y su precio, asumiendo una relación lineal. Es utilizada para modelar y predecir la demanda en función de cambios en el precio.",
+      "formulacion_matematica_latex": "Q_d = a - bP",
+      "aplicacion_administrativa": "Esta función es crucial en la gestión administrativa para entender cómo los cambios en el precio afectan la demanda, permitiendo a los gerentes tomar decisiones informadas sobre fijación de precios y estrategias de marketing.",
+      "fuente_principal": "Spiegel y Stephens, 2012",
+      "localizador": "libro-estadistica-spiegel-y-stephens-4-a-edicion-A18.txt (bloque 1)"
+    },
+    {
+      "concepto": "pronóstico",
+      "definicion_rigurosa": "El pronóstico es el proceso de predicción de eventos futuros basados en datos históricos y modelos estadísticos. Es una herramienta esencial en la gestión administrativa para la planificación y toma de decisiones.",
+      "formulacion_matematica_latex": "\\hat{Y}_t = f(Y_{t-1}, Y_{t-2},..., Y_{t-n})",
+      "aplicacion_administrativa": "Los pronósticos son utilizados en la gestión administrativa para predecir ventas, demanda y otros indicadores clave de desempeño, permitiendo a las empresas anticiparse a cambios en el mercado y ajustar sus estrategias en consecuencia.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "docente-1781-81c5af4f6959.txt (bloque 5)"
+    }
+  ]
+}

@@ -1,0 +1,611 @@
+Fuente bibliográfica: Estadística para administración y economía - Levin y Rubin. 7.ª edición revisada.pdf
+Actividad: 22 (7.3 Ejercicios Equipo 5% Tarea)
+Palabras clave: mínimos cuadrados, diagrama de dispersión, pendiente, predicción, regresión múltiple, variable ficticia, fumador, significancia
+
+[Bloque seleccionado #530 | relevancia=32]
+Pagina 529
+Los científicos saben, por ejemplo, que existe una relación entre las ventas anuales de latas de
+aerosoles y la cantidad de fluorocarburos liberados a la atmósfera cada año. Si estudiáramos esta re-
+lación, “el número de latas de aerosol vendidas cada año” sería la variable independiente y “la can-
+tidad de fluorocarburos liberados anualmente” sería la variable dependiente.
+Consideremos otro ejemplo. Los economistas pueden basar sus predicciones del producto inter-
+no bruto anual, o PIB, en el gasto final de consumo dentro de la economía. Por tanto, “el consumo
+final” es la variable independiente y “el PNB” la variable dependiente.
+En regresión, podemos tener sólo una variable dependiente en la ecuación de estimación. Sin em-
+bargo, podemos usar más de una variable independiente. A menudo, cuando agregamos variables
+independientes, mejoramos la exactitud de nuestra predicción. Los economistas, por ejemplo, con
+frecuencia añaden una segunda variable independiente, “el nivel de gasto de inversión”, para mejo-
+rar su estimación del PIB.
+Los dos ejemplos de fluorocarburos y PIB son ilustraciones de asociaciones directas entre variables
+independientes y dependientes. Al incrementarse la variable independiente, la variable dependiente
+también lo hace. De manera similar, esperamos que las ventas de una compañía se incrementen al
+aumentar el presupuesto de publicidad. Podemos graficar una relación directa de este tipo colocan-
+do la variable independiente en el eje X y la variable dependiente en el eje Y. La gráfica (a) de la fi-
+gura 12-1 muestra esto. Note cómo la pendiente de la recta sube cuando X toma valores cada vez más
+grandes. Se dice que la pendiente de esta recta es positiva, porque Y crece si X crece.
+Las relaciones pueden ser inversas en vez de directas. En estos casos, la variable dependiente dis-
+minuye al aumentar la variable independiente. El gobierno supone que existe una asociación inversa
+entre un mayor gasto anual de una compañía en dispositivos anticontaminantes y menores emisiones
+contaminantes. La gráfica (b) de la figura 12-1 ilustra este tipo de relación, que se caracteriza por una
+pendiente negativa (la variable dependiente Y disminuye al aumentar la variable independiente X).
+A menudo encontramos una relación causal entre variables, esto es, la variable independien-
+te “causa” cambios en la variable dependiente. Éste es el caso en el ejemplo de la contaminación.
+Pero en muchos casos, otros factores ocasionan los cambios tanto en las variables dependientes co-
+mo en las independientes. Podríamos predecir las ventas de aretes
+
+[Bloque seleccionado #540 | relevancia=18]
+Pagina 539
+Apliquemos el criterio de mínimos cuadrados al problema de la figura 12-9. Una vez que organi-
+zamos los datos y sumamos los cuadrados de la tabla 12-5, vemos que, tal como lo pensamos, la lí-
+nea de estimación en la gráfica (b) es el mejor ajuste.
+Usando el criterio de los mínimos cuadrados, podemos determinar si una línea de estimación es
+mejor ajuste que otro. Pero para un conjunto de puntos a través de los cuales podríamos trazar un nú-
+mero infinito de líneas de estimación, ¿cómo podemos saber cuándo hemos encontrado la recta del
+mejor ajuste?
+Los estadísticos han desarrollado dos ecuaciones que podemos utilizar para encontrar la pendien-
+te y la ordenada Y de la recta de regresión de mejor ajuste. La primera fórmula calcula la pendiente:
+Cómo encontrar ma-
+temáticamente la
+recta de mínimos
+cuadrados que mejor
+se ajusta
+12.2
+Estimación mediante la recta de regresión
+521
+Aplicación del criterio de
+mínimos cuadrados a las
+líneas de estimación
+Tabla 12-5
+Suma de los valores ab-
+solutos de los errores de
+las dos líneas de estima-
+ción de la figura 12-9
+Tabla 12-4
+Gráfica (a)
+Gráfica (b)
+|Y  ˆY|
+|Y  ˆY|
+|4  4|  0
+|4  5|  1
+|7  3|  4
+|7  4|  3
+|2  2|  0
+|2  3|  1
+|2  2|  4 ←Error absoluto total
+|2  2|  5 ←Error absoluto total
+Gráfica (a)
+Gráfica (b)
+(Y  ˆY)2
+(Y  ˆY)2
+(4  4)2  (0)2  0
+(4  5)2  (1)2  1
+(7  3)2  (4)2  16
+(7  4)2  (3)2  9
+(2  2)2  (0)2  00
+(2  3)2  (1)2  01
+(7  3)2  (4)2  16 ←Suma de cuadrados
+(7  3)2  (4)2  11 ←Suma de cuadrados
+Pendiente de la recta de regresión de mejor ajuste
+b 
+[12-4]
+XY  nXY
+
+X2  nX2
+donde,
+• b  pendiente de la línea de estimación de mejor ajuste
+• X valores de la variable independiente
+• Y  valores de la variable dependiente
+• X media de los valores de la variable independiente
+• Y media de los valores de la variable dependiente
+• n  número de puntos (es decir, el número de pares de valores de las variables independiente
+y dependiente)
+La segunda fórmula calcula la ordenada Y de la recta cuya pendiente calculamos usando la ecuación
+12-4:
+Pendiente de la recta
+de regresión de míni-
+mos cuadrados
+Ordenada Y de la recta de regresión de mejor ajuste
+a  Y  bX
+[12-5]
+donde,
+• a  ordenada Y
+• b  pendiente de la ecuación 12-4
+Ordenada de la recta
+de regresión de míni-
+mos cuadrados
+
+[Bloque seleccionado #568 | relevancia=22]
+Pagina 567
+b) Construya un intervalo de confianza del 98% para la pendiente de la población.
+c)
+Interprete el intervalo de confianza de la parte b).
+Conceptos básicos
+■12-33
+En un problema de regresión con un tamaño de muestra de 25, se encontró que la pendiente es 1.12 y el
+error estándar de la estimación, 8.516. La cantidad (X2  nX2)  327.52.
+a)
+Encuentre el error estándar del coeficiente de pendiente de regresión.
+b) Pruebe si el coeficiente de regresión es diferente de 0 para un nivel de significancia de 0.05.
+c)
+Construya un intervalo de confianza del 95% para la pendiente de la población.
+Aplicaciones
+■12-34
+Ned’s Beds está considerando contratar a una compañía de publicidad para estimular el negocio. Fred, el
+hermano de Ned, investigó el campo de la publicidad de camas y recolectó los siguientes datos de la can-
+tidad de ganancias (Y) que logra una compañía de camas y la cantidad gastada en publicidad (X). Si Fred
+calcula la ecuación de regresión, la pendiente de la recta indicará el incremento en la ganancia por dólar
+gastado en publicidad. Ned hará la publicidad sólo si la ganancia de cada $1 invertido excede $1.50.
+Calcule la pendiente de la ecuación de regresión y pruebe si es mayor que 1.50. Para un nivel de signifi-
+cancia de 0.05, ¿debe Ned hacer la publicidad?
+Cantidad de 
+publicidad (X) en 
+cientos de dólares
+3.60
+4.8
+9.70
+12.60
+11.50
+10.90
+Ganancia (Y) en
+cientos de dólares
+12.13
+14.7
+22.83
+28.40
+28.33
+27.05
+Cantidad de 
+publicidad (X) en 
+cientos de dólares
+14.60
+18.2
+3.70
+9.80
+12.40
+16.90
+Ganancia (Y) en 
+cientos de dólares
+33.60
+40.8
+9.40
+24.84
+30.17
+34.70
+■12-35
+Un corredor de una empresa de inversión local ha estudiado la relación entre el incremento en el precio
+del oro (X) y las peticiones de sus clientes de liquidar las acciones (Y). Del conjunto de datos basado en
+15 observaciones, se encontró que la pendiente de la muestra era 2.9. Si el error estándar del coeficiente
+de la pendiente de regresión es 0.18, ¿existe una razón para pensar (a 0.05 de nivel de significancia) que
+la pendiente cambió de su valor anterior de 3.2?
+■12-36
+Para una muestra de 25, se encontró que la pendiente era 1.685 y el error estándar del coeficiente de re-
+gresión era 0.11. ¿Hay razones para creer que la pendiente ha cambiado de su valor anterior de 1.50? Uti-
+lice el nivel de significancia de 0.05.
+■12-37
+Los corredores de bienes raíces a menudo están interesados en ver cómo el avalúo de una casa varía de
+acuerdo con su tamaño. A continuación se muestran algunos datos del área (en miles de pies cuadrados)
+y el avalúo (en miles de dólares) para una
+
+[Bloque seleccionado #574 | relevancia=21]
+Pagina 573
+Análisis de correlación Técnica para determinar el grado
+en el que las variables se relacionan linealmente.
+Coeficiente de correlación Raíz cuadrada del coeficiente
+de determinación. Su signo indica la dirección de la relación
+entre dos variables, directa o inversa.
+Coeficiente de determinación Medida de la proporción de
+variación en Y, la variable dependiente, que explica la recta
+de regresión, esto es, la relación de Y con la variable indepen-
+diente.
+Diagrama de dispersión Gráfica de puntos en una cua-
+drícula; las coordenadas X y Y de cada punto corresponden
+a las dos mediciones hechas sobre un elemento particular de
+la muestra; el patrón de puntos ilustra la relación entre las dos
+variables.
+Ecuación de estimación Fórmula matemática que relacio-
+na la variable desconocida con las variables conocidas en el
+análisis de regresión.
+Error estándar de la estimación Medida de la confiabili-
+dad de la ecuación de estimación, que indica la variabilidad
+de los puntos observados alrededor de la recta de regresión,
+esto es, de qué manera los valores observados difieren de sus
+valores pronosticados sobre la recta de regresión.
+Error estándar del coeficiente de regresión Medida de la
+variabilidad del coeficiente de regresión de la muestra alre-
+dedor del coeficiente de regresión verdadero de la población.
+Método de mínimos cuadrados Técnica para ajustar una
+línea recta a través de un conjunto de puntos de tal manera
+que la suma de los cuadrados de las distancias verticales de
+los n puntos a la recta se minimiza.
+Repaso del capítulo
+555
+lliamsen. Estas encuestas, que clasifican a los 20 equipos
+universitarios más importantes, se siguen utilizando actual-
+mente. Raymond Stefani, profesor de ingeniería eléctrica en
+la Universidad del Estado de California, proporcionó predic-
+ciones semanales sobre más de 11,000 juegos, comenzando
+con la temporada 1970-1971 y finalizando con la de 1980-
+1981; para ello utilizó un procedimiento de mínimos cuadra-
+dos. El empleo de mínimos cuadrados permitió a Stefani pre-
+decir el equipo ganador correcto en 70% de esos juegos.
+Fuente: Raymond T. Stefani, “Applications of Statistical Methods to American
+Footba1l”, en Journal of Applied Statistics 14(1) (1987): 61-73. 
+Ordenada Y Constante para cualquier línea recta dada cu-
+yo valor representa el valor de la variable Y cuando el valor
+de la variable X es 0.
+Pendiente Constante para cualquier línea recta dada cuyo
+valor representa cuánto cambia la variable dependiente con
+un cambio de una unidad de la variable independiente.
+Recta de regresión Una línea ajustada a un conjunto
+
+[Bloque seleccionado #585 | relevancia=27]
+Pagina 584
+566
+Capítulo 13
+Regresión múltiple y modelado
+U
+n fabricante de fotocopiadoras y procesadores de texto pequeños
+para oficina, paga a sus vendedores un salario base reducido 
+más una comisión igual a un porcentaje fijo de las ventas de
+cada vendedor. Uno de ellos afirma que esta estructura salarial es
+discriminatoria para las mujeres. Los salarios base actuales de los nueve
+vendedores de la compañía son los siguientes:
+La directora de personal observa que el salario base depende de la
+antigüedad del vendedor en la compañía, pero no sabe cómo utilizar los
+datos obtenidos para darse cuenta de si depende también de su sexo y
+si existe discriminación hacia las mujeres. Los métodos que analizaremos
+en este capítulo le permitirán averiguarlo. ■
+13.1
+Análisis de regresión múltiple 
+y correlación
+Como se mencionó en el capítulo 12, podemos utilizar más de una variable independiente para esti-
+mar la variable dependiente e intentar, de esta manera, aumentar la precisión de la estimación. Este
+proceso se conoce como análisis de regresión múltiple y correlación. Está basado en las mismas su-
+posiciones y procedimientos que encontramos al utilizar la regresión simple.
+Considere al agente de bienes raíces que desea relacionar el número de casas que la firma vende
+en un mes con el monto de su publicidad mensual. Ciertamente, podemos encontrar una ecuación de
+estimación sencilla que relacione a estas dos variables. ¿Podemos también hacer más precisa nues-
+tra ecuación incluyendo en el proceso de estimación el número de vendedores que emplea cada mes?
+Probablemente la respuesta sea sí. Y ahora, como deseamos utilizar tanto el número de agentes de
+ventas como los gastos de publicidad para predecir las ventas mensuales de casas, debemos utilizar
+regresión múltiple, no simple, para determinar la relación.
+La principal ventaja de la regresión múltiple es que nos permite utilizar más información dispo-
+nible para estimar la variable dependiente. En algunas ocasiones, la correlación entre dos variables
+puede resultar insuficiente para determinar una ecuación de estimación confiable; sin embargo, si
+agregamos los datos de más variables independientes, podemos determinar una ecuación de estima-
+ción que describa la relación con mayor precisión.
+La regresión múltiple y el análisis de correlación implican un proceso de tres pasos como el que
+usamos en la regresión simple. En este proceso:
+1. Describimos la ecuación de regresión múltiple;
+2. Examinamos el error estándar de regresión múltiple de la estimación, y
+3. Utilizamos el análisis de correlación múltiple para deter
+
+[Bloque seleccionado #586 | relevancia=30]
+Pagina 585
+En este capítulo, veremos cómo encontrar la ecuación de regresión de mejor ajuste para un con-
+junto dado de datos, y cómo analizar la ecuación obtenida. Aunque mostraremos cómo se puede ha-
+cer regresión múltiple a mano o con una calculadora, pronto será evidente que no conviene hacer ni
+siquiera un problema real pequeño a mano. Afortunadamente, hay muchos paquetes de software dis-
+ponibles para hacer regresiones múltiples y otros análisis estadísticos. Estos paquetes realizan las
+“operaciones numéricas” y lo dejan libre para concentrarse en el análisis del significado de la ecua-
+ción de estimación resultante. 
+La regresión múltiple nos permitirá también ajustar tanto curvas como rectas. Usando las técni-
+cas de variables ficticias, podemos incluir factores cualitativos como el color, en nuestra regresión
+múltiple. Esta técnica nos permitirá analizar el problema de discriminación con que abrimos el 
+presente capítulo. Las variables ficticias y las curvas de ajuste son solamente dos de las muchas 
+técnicas de modelado que se pueden utilizar en la regresión múltiple para aumentar la precisión de
+nuestras ecuaciones de estimación.
+Paquetes de software
+para regresión
+13.2
+Deducción de la ecuación de regresión múltiple
+567
+Ejercicios 13.1
+Conceptos básicos
+■
+13-1
+¿Por qué utilizamos regresión múltiple en lugar de regresión simple al estimar una variable dependiente?
+■
+13-2
+¿De qué manera se utilizarán las variables ficticias en nuestro estudio de regresión múltiple?
+■
+13-3
+¿A qué se refiere la palabra múltiple en la frase regresión múltiple?
+■
+13-4
+La dueña de una cadena de almacenes desea predecir las ventas mensuales a partir del tamaño de la ciu-
+dad donde se localiza una tienda. Después de ajustar un modelo de regresión simple, decide que desea
+incluir el efecto de la temporada del año en el modelo. ¿Se puede hacer esto utilizando las técnicas del pre-
+sente capítulo?
+■
+13-5
+Describa los tres pasos del proceso de análisis de regresión múltiple y correlación.
+■
+13-6
+¿Los procedimientos utilizados en la regresión múltiple difieren mucho de los usados en regresión sim-
+ple? Explique su respuesta.
+13.2
+Deducción de la ecuación 
+de regresión múltiple
+Veamos cómo podemos calcular la ecuación de regresión múltiple. Por conveniencia, utilizaremos
+sólo dos variables independientes en el problema que trabajaremos en esta sección. Sin embargo,
+tenga en mente que en principio la misma clase de técnica se aplica a cualquier número de variables
+independientes.
+El Servicio Interno de Contribuciones (IRS, Internal Revenue Service) de Estados Unidos está
+trat
+
+[Bloque seleccionado #587 | relevancia=19]
+Pagina 586
+En este problema, X1 representa el número de horas de trabajo de auditoría de campo y X2 el nú-
+mero de horas en computadora. La variable dependiente, Y, será los impuestos reales no pagados des-
+cubiertos.
+Recuerde que en la regresión simple, la ecuación de estimación Yˆ  a  bX describe la relación
+entre las dos variables X y Y. En regresión múltiple, debemos extender esa ecuación, agregando un
+término para cada nueva variable. En símbolos, la ecuación 13-1 es la fórmula que se usa cuando te-
+nemos dos variables independientes:
+Ecuación de 
+estimación para 
+regresión múltiple
+Definición de las 
+variables
+568
+Capítulo 13
+Regresión múltiple y modelado
+Datos de los registros de
+auditorías del IRS de los
+últimos 10 meses
+Tabla 13-1
+X1
+X2
+Y
+Horas de trabajo de 
+Horas en 
+Impuestos reales
+auditoría de campo
+computadora
+no pagados descubiertos
+Mes
+(dos ceros omitidos)
+(dos ceros omitidos)
+(millones de dólares)
+Enero
+45
+16
+29
+Febrero
+42
+14
+24
+Marzo
+44
+15
+27
+Abril
+45
+13
+25
+Mayo
+43
+13
+26
+Junio
+46
+14
+28
+Julio
+44
+16
+30
+Agosto
+45
+16
+28
+Septiembre
+44
+15
+28
+Octubre
+43
+15
+27
+Ecuación de estimación que describe la relación entre tres variables
+Yˆ  a  b1X1  b2X2
+[13-1]
+Ecuaciones normales
+Y  na
+ b1X1
+b2X2
+[13-2]
+X1Y  aX1  b1X2
+1
+b2X1X2
+[13-3]
+X2Y  aX2  b1X1X2 b2X2
+2
+[13-4]
+donde,
+•
+Yˆ  valor estimado correspondiente a la variable dependiente
+•
+a  ordenada Y
+•
+X1 y X2  valores de las dos variables independientes
+•
+b1 y b2  pendientes asociadas con X1 y X2, respectivamente
+Podemos visualizar la ecuación de estimación simple como una recta en una gráfica; de manera
+similar, podemos representar una ecuación de regresión múltiple de dos variables como un plano,
+como el que ilustra la figura 13-1. Se trata de una forma o figura tridimensional, con profundidad,
+largo y ancho. Para obtener una idea intuitiva de esta forma tridimensional, visualice la intersección
+de los ejes Y, X1 y X2 como un rincón de una habitación.
+La figura 13-1 es una gráfica de los 10 puntos de la muestra y el plano alrededor del cual estos
+puntos parecen agruparse. Algunos están arriba del plano y otros abajo; del mismo modo que los pun-
+tos estaban arriba y abajo de la recta de regresión simple.
+Nuestro problema consiste en decidir cuál de los planos que podemos dibujar será el que mejor
+se ajuste. Para hacer esto, de nuevo utilizaremos el criterio de mínimos cuadrados y localizaremos
+el plano que minimice la suma de los cuadrados de los errores, es decir, de las distancias de los pun-
+tos alrededor del plano a los puntos correspondientes sobre el plano. Usemos nu
+
+[Bloque seleccionado #610 | relevancia=20]
+Pagina 609
+gar el número de anuncios como segunda variable explicativa, además del costo de los anuncios, ex-
+plica nada más alrededor del 1% adicional de la variación de las ventas totales.
+En este punto, es justo preguntarse: ¿qué variable realmente explica la variación de las ventas
+totales en la regresión múltiple? La respuesta es que ambas la explican, pero no podemos separar
+sus contribuciones individuales, debido a que están altamente correlacionadas entre sí. En
+consecuencia, sus coeficientes en la regresión múltiple tienen errores estándar altos, valores t
+calculados relativamente bajos y valores prob  | t | relativamente altos.
+¿De qué manera nos afecta esta multicolinealidad? Todavía podemos hacer predicciones relativa-
+mente precisas cuando se encuentra presente: note que para la regresión múltiple (la salida se da en
+la figura 13-8), el error estándar de la estimación, que determina el ancho de los intervalos de con-
+fianza para las predicciones es 3.989, mientras que para la regresión simple con el costo de los anun-
+cios como variable explicativa (salida en la figura 13-7), tenemos se  3.849. Lo que no podemos
+hacer es predecir con mucha precisión cómo cambiarán las ventas si aumentamos en uno el número
+de anuncios. La regresión múltiple dice que b1  0.625 (esto es, cada anuncio aumenta las ventas
+totales de pizzas alrededor de $625), pero el error estándar de este coeficiente es 1.12 (es decir, apro-
+ximadamente $1,120).
+Las contribuciones
+individuales no 
+pueden separarse
+13.4
+Inferencias sobre parámetros de población
+591
+Ejercicios 13.4
+Ejercicios de autoevaluación
+EA
+13-4
+Edith Pratt es una ocupada ejecutiva de una compañía de transporte de carga a nivel nacional, y va tarde
+a una junta porque no encuentra la salida de la regresión múltiple elaborada por un asistente. Si la regre-
+sión total es significativa al nivel 0.05, ella desea usar las salida de computadora como evidencia para fun-
+damentar algunas ideas que expondrá en la reunión. Sin embargo, su ayudante está enfermo. De hecho,
+toda la información que tiene de la regresión múltiple es un trozo de papel con los siguientes datos:
+Regresión para 
+Edith Pratt
+SCR
+872.4 con
+gl
+SCE
+con 17 gl
+SCT
+1023.6 con 24 gl
+Como el papel ni siquiera tiene todos los números, Edith ha concluido que no es útil. Usted, sin embargo,
+debe saber más que ella. ¿Puede Edith entrar en la junta o debe seguir buscando la salida de computadora?
+EA
+13-5
+Una pequeña línea aérea de Nueva Inglaterra realizó una encuesta sobre sus 15 terminales y obtuvo los si-
+guientes datos para el mes de febrero, donde
+VEN
+
+[Bloque seleccionado #625 | relevancia=16]
+Pagina 624
+606
+Capítulo 13
+Regresión múltiple y modelado
+Conceptos básicos
+■13-31
+Describa tres situaciones de la vida diaria en las que las variables ficticias podrían utilizarse en modelos
+de regresión.
+■13-32
+El dueño de restaurantes situados en dos ciudades, cree que el ingreso se puede predecir a partir del flujo
+de tránsito frente a los restaurantes con un modelo de regresión cuadrática.
+a)
+Describa un modelo cuadrático para predecir el ingreso a partir del flujo de tránsito. Establezca la for-
+ma de la ecuación de regresión.
+b) Se ha sugerido que la ciudad en donde se encuentra un restaurante tiene efecto sobre el ingreso. Ex-
+tienda el modelo del inciso a) con una variable ficticia para incorporar la sugerencia. De nuevo, esta-
+blezca la forma del modelo de regresión.
+■13-33
+Suponga que tiene un conjunto de puntos al cual ha ajustado una ecuación de regresión lineal. Aunque la
+R2 para la recta es muy alta, usted se pregunta si será buena idea ajustar una ecuación de segundo grado
+a los datos. Describa cómo tomaría su decisión basándose en:
+a)
+Un diagrama de dispersión de los datos.
+b) Una tabla de residuos de la regresión lineal.
+■13-34
+Un estadístico recolectó un conjunto de 20 pares de datos. A la variable independiente la llamó X1 y a la
+variable dependiente Y. Llevó a cabo una regresión de Y sobre X1, y no quedó satisfecho con el resultado.
+Debido a algunos patrones no aleatorios que observó en los residuos, decidió elevar al cuadrado los valo-
+res de X1; designó como X2 a estos valores al cuadrado. Luego el estadístico corrió una regresión múlti-
+ple de Y sobre X1 y X2. La ecuación resultante fue
+Yˆ  200.4  2.79X1 – 3.92X2
+El valor de Sb1 fue 3.245 y el de Sb2 fue 1.53. A un nivel de significancia de 0.05, determine si 
+a)
+el conjunto de valores lineales de X1 es una variable explicativa significativa para Y.
+b) el conjunto de valores al cuadrado de X1 es una variable explicativa significativa para Y.
+Aplicaciones
+■13-35
+La doctora Linda Frazer tiene una clínica en Filadelfia. Registró los datos de la edad, reacción a la peni-
+cilina y presión sanguínea sistólica de 30 pacientes. Estableció la presión sanguínea como la variable
+dependiente, la edad como X1 (variable independiente) y la reacción a la penicilina como X2 (varia-
+ble independiente). Designó 0 para una reacción positiva a la penicilina y 1 para una reacción negativa,
+realizó una regresión múltiple en su computadora. La ecuación de predicción es
+Yˆ  6.7  3.5X1  0.489X2
+a)
+Después de haber corrido la regresión, la doctora Frazer descubrió que en realidad quería codificar
+una r
+
+[Bloque seleccionado #630 | relevancia=22]
+Pagina 629
+Error estándar de un coeficiente de regresión Medida de
+nuestra incertidumbre acerca del valor exacto del coeficien-
+te de regresión.
+Multicolinealidad Problema estadístico que a veces se pre-
+senta en el análisis de regresión múltiple, en el que se reduce
+la confiabilidad de los coeficientes de regresión debido a un
+alto nivel de correlación entre las variables independientes.
+Regresión múltiple Proceso estadístico mediante el cual se
+utilizan varias variables para predecir otra variable.
+t calculada Estadístico que se utiliza para probar la signifi-
+cancia de una variable explicativa individual.
+Repaso del capítulo
+611
+Técnicas de modelado Métodos para decidir qué variables
+incluir en un modelo de regresión y las diferentes maneras
+de incluirlas.
+Transformaciones Manipulaciones matemáticas para con-
+vertir una variable a una forma diferente, de modo que poda-
+mos ajustar curvas o rectas mediante la regresión.
+Variable ficticia Variable que toma valores 0 o 1, y que per-
+mite incluir en un modelo de regresión factores cualitativos
+como sexo, estado civil y grado de escolaridad.
+●Ecuaciones introducidas en el capítulo 13
+■
+13-1
+Yˆ  a  b1X1  b2X2
+En regresión múltiple, ésta es la fórmula de la ecuación de estimación que describe la relación entre tres
+variables: Y, X1 y X2. Representa una regresión múltiple de dos variables con un plano, en lugar de una
+recta.
+■
+13-2
+Y 
+na  b1X1
+ b2X2
+■
+13-3
+X1Y  aX1  b1X2
+1
+ b2X1X2
+■
+13-4
+X2Y  aX2  b1X1X2  b2X2
+2
+Resolver estas tres ecuaciones determina los valores de las constantes numéricas a, b1 y b2 y, en conse-
+cuencia, el plano de regresión múltiple de mejor ajuste de una regresión múltiple de dos variables.
+■
+13-5
+Yˆ  a  b1X1  b2X2  ...  bkXk
+Ésta es la fórmula para la ecuación de estimación que describe la relación entre Y y las k variables inde-
+pendientes, X1, X2, . . . , Xk. La ecuación 13-1 es el caso especial de esta ecuación para k  2.
+■
+13-6
+se 
+Para medir la variación alrededor de una ecuación de regresión múltiple cuando hay k variables indepen-
+dientes, utilice esta ecuación para encontrar el error estándar de la estimación. El error estándar, en este
+caso, tiene n  k  1 grados de libertad, debido a las k  1 constantes numéricas que deben calcularse a
+partir de los datos (a, b1, . . . , bk).
+■
+13-7
+Y  A  B1X1  B2X2  . . .  BkXk
+Ésta es la ecuación de regresión de la población para la regresión múltiple. Su ordenada Y es A, y tiene k
+coeficientes de pendiente, uno para cada una de las variables independientes.
+■13-7a
+Y  A  B1X1  B2X2  . . .  BkXk  

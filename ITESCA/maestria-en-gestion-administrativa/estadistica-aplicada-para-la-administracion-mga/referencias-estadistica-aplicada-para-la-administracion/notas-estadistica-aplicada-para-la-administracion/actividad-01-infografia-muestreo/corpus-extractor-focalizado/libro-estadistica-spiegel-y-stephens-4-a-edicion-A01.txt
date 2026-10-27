@@ -1,0 +1,798 @@
+Fuente bibliográfica: Estadística - Spiegel y Stephens. 4.ª edición.pdf
+Actividad: 1 (1.1 Infografía 5% Tarea)
+Palabras clave: muestreo, población, muestra, marco muestral, probabilístico, estratificado, conglomerados, tamaño de muestra, error de muestreo, sesgo
+
+[Bloque seleccionado #151 | relevancia=18]
+Pagina 150
+126  CAPÍTULO 5 MOMENTOS, SESGO Y CURTOSIS
+MOMENTOS, SESGO Y CURTOSIS POBLACIONALES
+Cuando es necesario distinguir los momentos muestrales, las medidas de sesgo muestrales o las medidas de curtosis 
+muestrales, de las correspondientes medidas de la población de la que es parte la muestra, se acostumbra usar letras 
+del alfabeto latino para las primeras y letras del alfabeto griego para las últimas. Así, si los momentos muestrales se 
+denotan mr y m 0
+r, los correspondientes momentos poblacionales serán, µr y  0
+r (µ es la letra mu del alfabeto griego). 
+Como subíndices se emplean siempre letras del alfabeto latino.
+De igual manera, si las medidas muestrales de sesgo y curtosis se denotan a3 y a4, respectivamente, los sesgos y 
+las curtosis poblacionales serán α3 y α4 (α es la letra alfa del alfabeto griego).
+Como ya se dijo en el capítulo 4, la desviación estándar de una muestra y la desviación estándar de una población 
+se denotan s y σ, respectivamente.
+CÁLCULO DEL SESGO Y DE LA CURTOSIS
+EMPLEANDO SOFTWARE
+El software visto en este libro puede usarse para calcular las medidas de curtosis y de sesgo de datos muestrales. Los 
+datos que se presentan en la tabla 5.1 son muestras de 50 elementos (de tamaño 50) tomadas de distribuciones, una 
+normal, otra sesgada a la derecha, otra sesgada a la izquierda y la última es una distribución uniforme.
+Los datos normales son estaturas de mujeres, los datos sesgados a la derecha son edades de casamiento de mujeres, 
+los datos sesgados a la izquierda son edades a las que fallecen las mujeres, y los datos uniformes son cantidades de 
+Tabla 5.1
+Normal
+Sesgada a la derecha
+Sesgada a la izquierda
+Uniforme
+67
+70
+63
+65
+68
+60
+70
+64
+69
+61
+66
+65
+71
+62
+66
+68
+64
+67
+62
+66
+65
+63
+66
+65
+63
+69
+62
+67
+59
+66
+65
+63
+65
+60
+67
+64
+68
+61
+69
+65
+62
+67
+70
+64
+63
+68
+64
+65
+61
+66
+31
+43
+30
+30
+38
+26
+29
+55
+46
+26
+29
+57
+34
+34
+36
+40
+28
+26
+66
+63
+30
+33
+24
+35
+34
+40
+24
+29
+24
+27
+35
+33
+75
+38
+34
+85
+29
+40
+41
+35
+26
+34
+19
+23
+28
+26
+31
+25
+22
+28
+102
+55
+70
+95
+73
+79
+60
+73
+89
+85
+72
+92
+76
+93
+76
+97
+10
+70
+85
+25
+83
+58
+10
+92
+82
+87
+104
+75
+80
+66
+93
+90
+84
+73
+98
+79
+35
+71
+90
+71
+63
+58
+82
+72
+93
+44
+65
+77
+81
+77
+12.1
+12.1
+12.4
+12.1
+12.1
+12.2
+12.2
+12.2
+11.9
+12.2
+12.3
+12.3
+11.7
+12.3
+12.3
+12.4
+12.4
+12.1
+12.4
+12.4
+12.5
+11.8
+12.5
+12.5
+12.5
+11.6
+11.6
+12.0
+11.6
+11.6
+11.7
+12.3
+11.7
+11.7
+11.7
+11.8
+12.5
+11.8
+11.8
+11.8
+11.9
+11.9
+11.9
+12.2
+11.9
+12.0
+11.9
+12.0
+12.0
+12.0
+
+[Bloque seleccionado #228 | relevancia=25]
+Pagina 227
+TEORÍA DEL MUESTREO
+La teoría del muestreo es el estudio de la relación que existe entre una población y las muestras que se obtienen de esa 
+población. La teoría del muestreo se emplea en muchos contextos. Por ejemplo, en la estimación de cantidades pobla-
+cionales desconocidas (como la media y la varianza poblacionales), a las que se les conoce como parámetros 
+poblacionales o simplemente parámetros, a partir de las correspondientes cantidades muestrales (como la media y la 
+varianza muestrales), a menudo conocidas como estadísticos muestrales o simplemente estadísticos. El problema de 
+la estimación se estudia en el capítulo 9.
+La teoría del muestreo también sirve para determinar si las diferencias que se observan entre dos muestras se deben 
+a variaciones casuales o si son diferencias realmente significativas. Tales preguntas surgen, por ejemplo, al probar un 
+nuevo suero para el tratamiento de una enfermedad o cuando se tiene que decidir si un proceso de producción es mejor 
+que otro. Para responder a estas preguntas se usan las llamadas pruebas de significancia o de hipótesis, fundamentales 
+en la teoría de decisiones. Estos temas se tratan en el capítulo 10.
+En general, al estudio de las inferencias que se hacen acerca de una población, empleando muestras obtenidas de 
+ella, y de las indicaciones de la exactitud de tales inferencias, mediante el uso de la teoría de la probabilidad, es a lo 
+que se le llama inferencia estadística.
+MUESTRAS ALEATORIAS Y NÚMEROS ALEATORIOS
+Para que las conclusiones que se obtienen empleando la teoría del muestreo y la inferencia estadística sean válidas, las 
+muestras deben elegirse de manera que sean representativas de la población. Al estudio de los métodos de muestreo y 
+de los problemas relacionados con ellos se le conoce como diseño de experimentos.
+Una manera de obtener una muestra representativa es mediante un proceso llamado muestreo aleatorio, mediante 
+el cual cada uno de los miembros de la población tiene la misma posibilidad de ser incluido en la muestra. Una técni-
+ca para obtener una muestra aleatoria consiste en asignarle, a cada miembro de la población, un número, escribir estos 
+números en pedazos pequeños de papel, colocarlos en una urna y después extraer los números de la urna, teniendo 
+cuidado de mezclar muy bien antes de cada extracción. Una alternativa a este método es usar una tabla de números 
+aleatorios (ver el apéndice IX), la cual se construye especialmente para este fin. Ver el problema 8.6.
+8
+TEORÍA ELEMENTAL 
+DEL MUESTREO
+203
+
+[Bloque seleccionado #229 | relevancia=40]
+Pagina 228
+204  CAPÍTULO 8 TEORÍA ELEMENTAL DEL MUESTREO
+MUESTREO CON REPOSICIÓN Y SIN ELLA
+Si se extrae un número de una urna, antes de extraer otro, el número puede ser devuelto a la urna (ser repuesto) o no. 
+En el primer caso, el número puede ser extraído varias veces, en tanto que en el segundo caso sólo puede ser extraído 
+una vez. A un muestreo en el que cada miembro de la población puede ser elegido más de una vez se le llama muestreo 
+con reposición; en cambio, si sólo puede ser elegido una vez se llama muestreo sin reposición.
+Una población puede ser finita o infinita. Por ejemplo, si de una urna que contiene 100 canicas se extraen sucesi-
+vamente 10 canicas sin reposición, se está muestreando una población finita; en cambio, si se lanza una moneda 50 
+veces y se cuenta la cantidad de caras, se está muestreando de una población infinita.
+Una población finita que se muestrea con reposición puede considerarse teóricamente infinita, ya que se puede 
+extraer cualquier cantidad de muestras sin agotar la población. Para fines prácticos, cuando se muestrea de una pobla-
+ción finita pero muy grande, se puede considerar que el muestreo se hace de una población infinita. 
+DISTRIBUCIONES MUESTRALES
+Considérense todas las muestras de tamaño N que pueden extraerse de determinada población (ya sea con reposición 
+o sin ella). Para cada muestra se pueden calcular diversos estadísticos (como media o desviación estándar), los cuales 
+variarán de una muestra a otra. De esta manera se obtiene una distribución del estadístico de que se trate, a la que se 
+le llama distribución muestral.
+Por ejemplo, si el estadístico de que se trata es la media muestral, a la distribución que se obtiene se le llama dis-
+tribución muestral de las medias o distribución muestral de la media. De igual manera se pueden obtener distribucio-
+nes muestrales de las desviaciones estándar, de las varianzas, de las medianas, de las proporciones, etcétera.
+A cada distribución muestral se le puede calcular su media, su desviación estándar, etc. Así, se puede hablar de la 
+media, de la desviación estándar, de la distribución muestral de las medias, etcétera. 
+DISTRIBUCIONES MUESTRALES DE MEDIAS
+Supóngase que de una población finita de tamaño Np > N se extraen, sin reposición, todas las muestras posibles de 
+tamaño N. Si se denota con  X y  X respectivamente, a la media y a la desviación estándar de una distribución mues-
+tral de las medias, y con µ y σ, respectivamente, a la media y la desviación estándar poblacionales, entonces
+ 
+ X ¼   y   X ¼
+ﬃﬃﬃﬃ
+N
+p
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+Np  N
+Np  1
+
+
+[Bloque seleccionado #230 | relevancia=28]
+Pagina 229
+DISTRIBUCIONES MUESTRALES DE PROPORCIONES
+Supóngase que una población sea infinita y que la probabilidad de ocurrencia de un evento (llamada éxito) es p, y que 
+la probabilidad de no ocurrencia del evento es q = 1 − p. La población puede ser, por ejemplo, la de los lanzamientos 
+de una moneda, en los que la probabilidad del evento “cara” es p ¼ 1
+2. Considérense todas las posibles muestras de 
+tamaño N extraídas de esta población, y para cada muestra determínese la proporción P de éxitos. En el caso de una 
+moneda, P es la proporción de caras en N lanzamientos. De esta manera se obtiene una distribución muestral de las 
+proporciones cuya media µP y cuya desviación estándar σP están dadas por
+ 
+P ¼ p  y  P ¼
+ﬃﬃﬃﬃﬃ
+pq
+N
+r
+¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+pð1  pÞ
+N
+r
+ 
+(3)
+que se pueden obtener de la ecuación (2) sustituyendo µ = p y  ¼
+ﬃﬃﬃﬃﬃ
+pq
+p
+. Si el valor de N es grande (N ≥ 30), esta 
+distribución muestral es aproximadamente normal. Obsérvese que la población está distribuida en forma binomial. 
+Las ecuaciones (3) también son válidas para poblaciones finitas si el muestreo se hace con reposición. En el caso 
+de poblaciones finitas en las que el muestreo se hace sin reposición, las ecuaciones (3) se sustituyen por las ecuaciones 
+(1) con µ = p y  ¼
+ﬃﬃﬃﬃﬃ
+pq
+p
+.
+Obsérvese que las ecuaciones (3) pueden obtenerse más fácilmente dividiendo entre N, la media y la desviación 
+estándar (Np y ﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+Npq
+p
+) de la distribución binomial (ver capítulo 7).
+DISTRIBUCIONES MUESTRALES DE DIFERENCIAS Y SUMAS
+Se supone que se tienen dos poblaciones. Para cada muestra de tamaño N1 tomada de la primera población se calcula 
+un estadístico S1, con lo que se obtiene una distribución muestral de este estadístico S1, cuya media y desviación están-
+dar se denotan µS1 y σS1, respectivamente. De igual manera, para cada muestra de tamaño N2 tomada de la segunda 
+población se calcula un estadístico S2, con lo que se obtiene una distribución muestral de este estadístico S2, cuya media 
+y desviación estándar se denotan µS2 y σS2, respectivamente. Con todas las posibles combinaciones de estas muestras 
+de las dos poblaciones se obtiene una distribución de las diferencias, S1 – S2, a la que se le llama distribución muestral 
+de las diferencias de los estadísticos. La media y la desviación estándar de esta distribución muestral se denotan, res-
+pectivamente, µS1−S2 y σS1−S2, y están dadas por
+ 
+S1S2 ¼ S1  S2  y  S1S2 ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+2
+S1 þ 2
+S2
+q
+ 
+(4)
+siempre y cuando las muestras elegidas no dependan, de manera alguna, una de la otra (es decir, las muestras sea
+
+[Bloque seleccionado #232 | relevancia=27]
+Pagina 231
+Pueden obtenerse resultados semejantes para las distribuciones muestrales de las diferencias entre las proporciones 
+de dos poblaciones distribuidas en forma binomial con parámetros (p1, q1) y (p2, q2), respectivamente. En este caso, S1 
+y S2 son proporción de éxitos, P1 y P2, y las ecuaciones (4) se transforman en
+ 
+P1P2 ¼ P1  P2 ¼ p1  p2  y  P1P2 ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+2
+P1 þ 2
+P2
+q
+¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+p1q1
+N1
+þ p2q2
+N2
+r
+ 
+(6)
+Si N1 y N2 son grandes (N1, N2 ≥ 30), la distribución muestral de diferencias entre medias o proporciones se aproximan 
+mucho a una distribución normal.
+Algunas veces se necesita la distribución muestral de la suma de estadísticos. La media y la desviación estándar 
+de estas distribuciones están dadas por
+ 
+S1þS2 ¼ S1 þ S2  y  S1þS2 ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+2
+S1 þ 2
+S2
+q
+ 
+(7)
+suponiendo que las muestras sean independientes. 
+ERRORES ESTÁNDAR
+A la desviación estándar de la distribución muestral de un estadístico suele conocérsele como su error estándar. En la 
+tabla 8.1 se enumeran los errores estándar de distribuciones muestrales de varios estadísticos, suponiendo que el mues-
+treo es un muestreo aleatorio de una población infinita (o muy grande) o de una población finita pero hecho el muestreo 
+con reposición. Se presentan también algunas observaciones especiales en las que se dan las condiciones bajo las 
+cuales son válidas las fórmulas, así como otras observaciones pertinentes.
+Las cantidades µ, σ, p, µr y X, s, P, mr denotan media, desviación estándar, proporción y el r-ésimo momento 
+respecto a la media, poblacionales y muestrales, respectivamente.
+Se hace notar que si el tamaño N de la muestra es suficientemente grande, la distribución muestral es normal o casi 
+normal. A esto se debe que estos métodos se conozcan como métodos para muestras grandes. Cuando N < 30, a las 
+muestras se les llama pequeñas. La teoría de las muestras pequeñas o teoría del muestreo exacto, como se le llama 
+algunas veces, se estudia en el capítulo 11.
+Cuando los parámetros poblacionales, por ejemplo, σ, p o bien µr no se conocen, pueden estimarse con bastante 
+exactitud a partir de sus estadísticos muestrales, s (o bien ^s ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+N=ðN  1Þ
+p
+s), P y mr, siempre y cuando las muestras 
+sean suficientemente grandes.
+DEMOSTRACIONES DE LA TEORÍA ELEMENTAL DEL MUESTREO 
+EMPLEANDO SOFTWARE
+EJEMPLO 1
+En una población grande se define la siguiente variable aleatoria. X es la cantidad de computadoras por hogar; X está distribuida de 
+manera uniforme, es decir, p(x) = 0.25 para x = 1, 2, 3 y 4. En otras palab
+
+[Bloque seleccionado #238 | relevancia=17]
+Pagina 237
+ 
+Como se muestra la figura 8-3b),
+ 
+ 
+Probabilidad buscada = (área a la derecha de z = 2.96)
+ 
+ 
+ 
+= (área a la derecha de z = 0) – (área entre z = 0 y z = 2.96)
+ 
+ 
+ 
+= 0.5 – 0.4985 = 0.0015
+ 
+Por lo tanto, sólo hay 3 posibilidades en 2 000 de obtener una muestra de 100 balines que juntos pesen más de 510 g.
+8.6 
+a)  Mostrar la manera de tomar, de la tabla 2.1, 30 muestras aleatorias (con reposición) de 4 estudiantes cada 
+una, empleando números aleatorios.
+b) Encontrar la media y la desviación estándar de la distribución muestral de las medias del inciso a).
+c) Comparar los resultados del inciso b) con los valores teóricos y explicar cualquier discrepancia.
+SOLUCIÓN
+a) 
+Para enumerar cada uno de los 100 estudiantes se emplean los dígitos: 00, 01, 02, . . . , 99 (ver la tabla 8.3). Por lo tanto, 
+los 5 estudiantes cuya estatura está en el intervalo 60-62 están numerados 00-04; los dieciocho estudiantes cuya esta-
+tura está en el intervalo 63-65 están numerados 05-22, etc. Al número de cada estudiante se le llama número de mues-
+treo.
+Tabla 8.3
+Estatura (in)
+Frecuencias
+Número de muestreo
+60-62
+63-65
+66-68
+69-71
+72-74
+ 5
+18
+42
+27
+ 8
+00-04
+05-22
+23-64
+65-91
+92-99
+Después, se extraen números de muestreo de una tabla de números aleatorios (apéndice IX). En el primer renglón 
+se encuentra la secuencia 51, 77, 27, 46, 40, etc., la que será considerada como los números del muestreo aleatorios, 
+cada uno de los cuales dará la estatura de determinado estudiante. Así, 51 corresponde a un estudiante cuya estatura 
+está en el intervalo 66-68 in, estatura que se toma como 67 in (la marca de clase). De igual manera, 77, 27 y 46 dan 
+las estaturas 70, 67 y 67 in, respectivamente. 
+Mediante este proceso se obtiene la tabla 8.4, en la que se muestra el número de muestreo extraído, la estatura 
+correspondiente y la estatura promedio de cada una de las 30 muestras. Es necesario decir que aunque se han tomado 
+los números aleatorios del primer renglón de la tabla, igualmente podría haberse partido de cualquier otro lugar de la 
+tabla y elegir cualquier otro patrón específico. 
+b) 
+En la tabla 8.5 se da la distribución de frecuencias de las medias muestrales de las estaturas obtenidas en el inciso a). 
+Ésta es una distribución muestral de las medias. La media y la desviación estándar se obtienen, como de costumbre, 
+empleando un método de compilación de los capítulos 3 y 4:
+ 
+Media ¼ A þ cu ¼ A þ c P fu
+N
+¼ 67:00 þ ð0:75Þð23Þ
+30
+¼ 67:58 in
+ 
+Desviación estándar ¼ c
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+u2  u2
+q
+¼ c
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+P fu2
+N
+
+P fu
+N
+
+2
+s
+¼ 0
+
+[Bloque seleccionado #249 | relevancia=19]
+Pagina 248
+224  CAPÍTULO 8 TEORÍA ELEMENTAL DEL MUESTREO
+c) la media de la distribución muestral de las medias y d ) la desviación estándar de la distribución muestral de las medias. 
+Verificar los incisos c) y d ) directamente a partir de los incisos a) y b) empleando las fórmulas adecuadas.
+8.22 
+Resolver el problema 8.21 si el muestreo se hace sin reposición.
+8.23 
+Las masas de 1 500 balines están distribuidas de manera normal, siendo su media 22.40 g y su desviación estándar 0.048 g. 
+Si de esta población se toman 300 muestras aleatorias de tamaño 36, determinar la media y la desviación estándar esperadas 
+en la distribución muestral de las medias si el muestreo se hace: a) con reposición y b) sin reposición.
+8.24 
+Resolver el problema 8.23 si la población consta de 72 balines.
+8.25 
+¿En cuántas de las muestras aleatorias del problema 8.23 la media: a) estará entre 22.39 y 22.41 g, b) será mayor a 22.42 g, 
+c) será menor a 22.37 g y d ) será menor a 22.38 g o mayor a 22.41 g?
+8.26 
+La media de la vida útil de ciertos cinescopios fabricados por una empresa es 800 h y la desviación estándar es 60 h. Encontrar 
+la probabilidad de que en una muestra aleatoria de 16 cinescopios la media del tiempo de vida: a) esté entre 790 y 810 h, 
+b) sea menor a 785 h, c) sea mayor a 820 h y d ) esté entre 770 y 830 h.
+8.27 
+Repetir el problema 8.26 con una muestra aleatoria de 64 cinescopios. Explicar la diferencia.
+8.28 
+Los paquetes que se reciben en una tienda departamental pesan en promedio 300 libras (lb) y su desviación estándar es de 
+50 lb. ¿Cuál es la probabilidad de que 25 paquetes recibidos al azar pesen más del límite de seguridad especificado en el 
+elevador, que es 8 200 lb?
+NÚMEROS ALEATORIOS
+8.29 
+Repetir el problema 8.6 usando un conjunto diferente de números aleatorios y seleccionando: a) 15, b) 30, c) 45 y d ) 60 
+muestras, con reposición, de tamaño 4. En cada caso, comparar con los resultados teóricos.
+8.30 
+Repetir el problema 8.29 tomando muestras de tamaño: a) 2 y b) 8 con reposición, en lugar de tamaño 4 con reposición.
+8.31 
+Repetir el problema 8.6, pero muestreando sin reposición. Comparar con los resultados teóricos.
+8.32 
+a) 
+Mostrar cómo se toman 30 muestras de tamaño 2 de la distribución del problema 3.61.
+b) 
+Calcular la media y la desviación estándar de la distribución muestral de las medias obtenida y compararla con los 
+resultados teóricos.
+8.33 
+Repetir el problema 8.32 empleando muestras de tamaño 4.
+DISTRIBUCIÓN MUESTRAL DE PROPORCIONES
+8.34 
+Encontrar la probabilidad de que de los 200 próximos niños que nazcan, a) menos de 40% sea
+
+[Bloque seleccionado #254 | relevancia=18]
+Pagina 253
+En la tabla 9.1 se presentan los valores de zc que corresponden a varios niveles de confianza que se usan en la 
+práctica. Los valores de zc para niveles de confianza que no estén en esta tabla se pueden encontrar en las tablas de 
+áreas de la curva normal (ver apéndice II).
+Tabla 9.1
+Nivel de confianza
+99.73%
+99%
+98%
+96%
+95.45%
+95%
+90%
+80%
+68.27%
+50%
+zc
+3.00
+2.58
+2.33
+2.05
+2.00
+1.96
+1.645
+1.28
+1.00
+0.6745
+Intervalos de confianza para las medias
+Si el estadístico S es la media muestral X, entonces los límites de confianza de 95 y 99% para la estimación de la media 
+poblacional µ están dados por X  1:96 X y X  2:58 X, respectivamente. En general, los límites de confianza están 
+dados por X  zc X, donde zc (que depende del nivel de confianza deseado) puede leerse en la tabla 9.1. Empleando 
+los valores para  X obtenidos en el capítulo 8, se ve que los límites de confianza para la media poblacional están dados 
+por
+ 
+X  zc
+ﬃﬃﬃﬃ
+N
+p
+ 
+(1)
+si el muestreo se hace ya sea de una población infinita o de una población finita, pero con reposición, y están dados 
+por
+ 
+X  zc
+ﬃﬃﬃﬃ
+N
+p
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+Np  N
+Np  1
+s
+ 
+(2)
+si el muestreo se hace sin reposición de una población de tamaño finito Np.
+Por lo general no se conoce la desviación estándar poblacional σ; de manera que para obtener los límites de con-
+fianza anteriores, se usa la estimación muestral ^s o s. El resultado es satisfactorio si N ≥ 30. Si N < 30, la aproximación 
+es pobre y se debe emplear la teoría del muestreo para muestras pequeñas (ver capítulo 11).
+Intervalos de confianza para proporciones
+Si el estadístico S es la proporción de “éxitos” en una muestra de tamaño N obtenida de una población binomial en la 
+que p es la proporción de éxitos (es decir, la  probabilidad de éxito), entonces los límites de confianza para p están 
+dados por P ± zcσp, donde P es la proporción de éxitos en una muestra de tamaño N. Empleando los valores para σp 
+indicados en el capítulo 8 se ve que los límites de confianza para la proporción poblacional están dados por
+ 
+P  zc
+ﬃﬃﬃﬃﬃ
+pq
+N
+r
+¼ P  zc
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+pð1  pÞ
+N
+r
+ 
+(3)
+si el muestreo se hace de una población infinita o de una población finita, pero con reposición, y están dados por 
+ 
+P  zc
+ﬃﬃﬃﬃﬃ
+pq
+N
+r
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+Np  N
+Np  1
+s
+ 
+(4)
+si el muestreo se hace sin reposición y de una población finita de tamaño Np. 
+Para calcular estos límites de confianza se emplea la estimación muestral P para p, la que por lo general resulta 
+satisfactoria siempre que N ≥ 30. En el problema 9.12 se da un método más exacto para obten
+
+[Bloque seleccionado #300 | relevancia=18]
+Pagina 299
+En los capítulos anteriores con frecuencia se utilizó el hecho de que si el tamaño de las muestras es grande, N > 30, lo 
+que se conoce como muestras grandes, las distribuciones muestrales de muchos de los estadísticos son aproximada-
+mente normales; esta aproximación mejora a medida que aumenta N. Si el tamaño de las muestras es N < 30, lo que 
+se conoce como muestras pequeñas, esta aproximación no es buena y empeora a medida que N disminuye, de manera 
+que es necesario hacer algunas modificaciones.
+Al estudio de las distribuciones muestrales de los estadísticos, cuando las muestras son pequeñas, se le llama teoría 
+de las muestras pequeñas. Sin embargo, un nombre más adecuado sería teoría del muestreo exacto, ya que los resul-
+tados obtenidos son válidos tanto para muestras grandes como para muestras pequeñas. En este capítulo se estudian 
+tres distribuciones importantes: la distribución t de Student, la distribución ji cuadrada y la distribución F.
+DISTRIBUCIÓN t DE STUDENT
+Sea el estadístico
+ 
+t ¼
+X  
+s
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+N  1
+p
+¼
+X  
+^s=
+ﬃﬃﬃﬃ
+N
+p
+ 
+(1)
+que es análogo al estadístico z dado por
+z ¼
+X  
+=
+ﬃﬃﬃﬃ
+N
+p
+:
+Si se consideran muestras de tamaño N extraídas de una población normal (o aproximadamente normal) cuya media 
+es µ y si para cada muestra se calcula t, usando la media muestral X y la desviación estándar muestral s o ^s, se obtiene 
+la distribución muestral de t. Esta distribución (ver figura 11-1) está dada por
+ 
+Y ¼
+Y0
+1 þ
+t2
+N  1
+ 
+!N=2 ¼
+Y0
+1 þ t2
+
+ 
+!ðþ1Þ=2 
+(2)
+11
+TEORÍA DE 
+LAS MUESTRAS
+PEQUEÑAS
+275
+
+[Bloque seleccionado #483 | relevancia=20]
+Pagina 482
+458  CAPÍTULO 17 PRUEBAS NO PARAMÉTRICAS
+17.9 
+Dados los datos de la tabla 17.13, encontrar U usando: a) la fórmula (2) de este capítulo y b) el método de 
+conteo (descrito en la Nota 4 de este capítulo).
+SOLUCIÓN
+a) 
+Ordenando todos los datos juntos, de menor a mayor, y asignándoles un rango del 1 al 5, se obtiene la tabla 17.14. 
+Sustituyendo los datos de la tabla 17.13 por sus rangos correspondientes se obtiene la tabla 17.15, en la que se dan las 
+sumas de los rangos, que son R1 = 5 y R2 = 10. Como N1 = 2 y N2 = 3, el valor U para la muestra 1 es
+ 
+U ¼ N1N2 þ N1ðN1 þ 1Þ
+2
+ R1 ¼ ð2Þð3Þ þ ð2Þð3Þ
+2
+ 5 ¼ 4
+ 
+De igual manera se encuentra el valor U para la muestra 2, que es U = 2.
+b) 
+Sustituyendo los valores de la tabla 17.14 con I o II, dependiendo si el valor pertenece a la muestra 1 o a la muestra 2, 
+el primer renglón de la tabla 17.14 se transforma en
+Dato
+I
+II
+II
+I
+II
+ 
+En esta tabla se ve que
+ 
+ 
+Número de valores de la muestra 1 que preceden al primer valor de la muestra 2 = 1
+ 
+ 
+Número de valores de la muestra 1 que preceden al segundo valor de la muestra 2 = 1
+ 
+ 
+Número de valores de la muestra 1 que preceden al tercer valor de la muestra 2 
+= 2
+ 
+ 
+ 
+Total = 4
+ 
+Por lo tanto, el valor de U que corresponde a la primera muestra es 4.
+De igual manera,
+ 
+ 
+Número de valores de la muestra 2 que preceden al primer valor de la muestra 1 = 0
+ 
+ 
+Número de valores de la muestra 2 que preceden al segundo valor de la muestra 1 = 2
+ 
+ 
+ 
+Total = 2
+ 
+Por lo tanto, el valor de U que corresponde a la segunda muestra es 2.
+Obsérvese que como N1 = 2 y N2 = 3, estos valores satisfacen U1 + U2 = N1N2; es decir, 4 + 2 = 6 =
+(2)(3) = 6.
+Tabla 17.15
+Suma de
+los rangos
+Muestra 1
+4
+1
+ 5
+Muestra 2
+3
+5
+2
+10
+Tabla 17.13
+Muestra 1
+22
+10
+Muestra 2
+17
+25
+14
+Tabla 17.14
+Datos
+10
+14
+17
+22
+25
+Rango
+ 1
+ 2
+ 3
+ 4
+ 5

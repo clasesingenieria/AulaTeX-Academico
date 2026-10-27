@@ -1,0 +1,104 @@
+{
+  "subject_slug": "estadistica-aplicada-para-la-administracion",
+  "engine": "Amazon Nova Pro",
+  "kept": [
+    "criterio de selección entre estadístico Z y t de Student",
+    "efecto del nivel de confianza sobre la amplitud del intervalo",
+    "efecto del tamaño muestral sobre el margen de error",
+    "intervalo de confianza para la varianza y desviación estándar",
+    "propiedades asintóticas de los estimadores de máxima verosimilitud",
+    "error estándar estimado de una proporción",
+    "planificación muestral bajo restricción de error máximo",
+    "requisitos instrucciones",
+    "requisitos instrucciones actividad",
+    "error estándar",
+    "estimado proporción",
+    "estándar estimado",
+    "intervalo confianza",
+    "proporción",
+    "poblacional",
+    "desviación"
+  ],
+  "conceptos_clave_nova_pro": [
+    {
+      "concepto": "criterio de selección entre estadístico Z y t de Student",
+      "definicion_rigurosa": "El criterio de selección entre el estadístico Z y el t de Student depende del tamaño de la muestra y de si la varianza de la población es conocida o no. Para muestras grandes (generalmente n > 30) y cuando la varianza poblacional es conocida, se utiliza el estadístico Z. Para muestras pequeñas o cuando la varianza poblacional es desconocida, se emplea el estadístico t de Student.",
+      "formulacion_matematica_latex": "Para Z: \\( Z = \\frac{\\bar{X} - \\mu}{\\sigma / \\sqrt{n}} \\); para t: \\( t = \\frac{\\bar{X} - \\mu}{s / \\sqrt{n}} \\)",
+      "aplicacion_administrativa": "En la administración, la elección correcta entre Z y t es crucial para realizar inferencias estadísticas válidas sobre parámetros poblacionales, lo cual puede influir en decisiones críticas como la asignación de recursos o la evaluación de riesgos.",
+      "fuente_principal": "Spiegel y Stephens, 2023",
+      "localizador": "bloque 4"
+    },
+    {
+      "concepto": "efecto del nivel de confianza sobre la amplitud del intervalo",
+      "definicion_rigurosa": "El nivel de confianza determina la probabilidad de que el intervalo de confianza incluya el parámetro poblacional. Un nivel de confianza más alto (por ejemplo, 95% en vez de 90%) resulta en un intervalo más amplio, debido a que se requiere una mayor seguridad estadística.",
+      "formulacion_matematica_latex": "\\( \\text{Intervalo de confianza} = \\bar{X} \\pm z_{\\alpha/2} \\frac{\\sigma}{\\sqrt{n}} \\)",
+      "aplicacion_administrativa": "En la gestión administrativa, un intervalo de confianza más amplio puede significar una menor precisión en las estimaciones, lo que puede afectar la toma de decisiones estratégicas y operativas.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 3"
+    },
+    {
+      "concepto": "efecto del tamaño muestral sobre el margen de error",
+      "definicion_rigurosa": "El tamaño de la muestra influye directamente en el margen de error de un estimador. Cuanto mayor sea el tamaño de la muestra, menor será el margen de error, resultando en estimaciones más precisas.",
+      "formulacion_matematica_latex": "\\( \\text{Margen de error} = z_{\\alpha/2} \\frac{\\sigma}{\\sqrt{n}} \\)",
+      "aplicacion_administrativa": "En la administración, un tamaño de muestra adecuado es esencial para obtener estimaciones confiables de parámetros poblacionales, lo cual es fundamental para la planificación y la toma de decisiones.",
+      "fuente_principal": "Lind, Marchal y Wathen, 2012",
+      "localizador": "bloque 2"
+    },
+    {
+      "concepto": "intervalo de confianza para la varianza y desviación estándar",
+      "definicion_rigurosa": "El intervalo de confianza para la varianza y la desviación estándar se utiliza para estimar el rango en el que se encuentra el verdadero valor de la varianza o desviación estándar de una población.",
+      "formulacion_matematica_latex": "\\( \\chi^2_{1-\\alpha/2, n-1} \\leq \\frac{(n-1)s^2}{\\sigma^2} \\leq \\chi^2_{\\alpha/2, n-1} \\)",
+      "aplicacion_administrativa": "En la gestión de calidad, estos intervalos son utilizados para evaluar la consistencia de los procesos y productos, permitiendo tomar medidas correctivas si la variabilidad es excesiva.",
+      "fuente_principal": "Wackerly et al., 2010",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "propiedades asintóticas de los estimadores de máxima verosimilitud",
+      "definicion_rigurosa": "Las propiedades asintóticas de los estimadores de máxima verosimilitud incluyen consistencia, eficiencia y normalidad asintótica. Estos estimadores tienden a ser más precisos y confiables a medida que el tamaño de la muestra aumenta.",
+      "formulacion_matematica_latex": "\\( \\hat{\\theta}_n \\xrightarrow{p} \\theta_0 \\)",
+      "aplicacion_administrativa": "En la modelación de datos y la predicción, estas propiedades aseguran que los estimadores sean adecuados para hacer inferencias sobre parámetros poblacionales en muestras grandes.",
+      "fuente_principal": "Casella y Berger, 2002",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "error estándar estimado de una proporción",
+      "definicion_rigurosa": "El error estándar estimado de una proporción es una medida de la variabilidad de la proporción muestral como un estimador de la proporción poblacional.",
+      "formulacion_matematica_latex": "\\( \\text{Error estándar} = \\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}} \\)",
+      "aplicacion_administrativa": "En la investigación de mercados, este error estándar se utiliza para evaluar la precisión de las estimaciones de proporciones, como la cuota de mercado de un producto.",
+      "fuente_principal": "Levin y Rubin, 2014",
+      "localizador": "bloque 2"
+    },
+    {
+      "concepto": "planificación muestral bajo restricción de error máximo",
+      "definicion_rigurosa": "La planificación muestral bajo restricción de error máximo implica determinar el tamaño de la muestra necesario para lograr un margen de error deseado en las estimaciones.",
+      "formulacion_matematica_latex": "\\( n = \\left( \\frac{z_{\\alpha/2} \\sigma}{E} \\right)^2 \\)",
+      "aplicacion_administrativa": "En la administración de proyectos, esta planificación asegura que las encuestas y estudios estadísticos tengan la precisión necesaria para apoyar decisiones críticas.",
+      "fuente_principal": "Guarín-Salazar, 2018",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "requisitos instrucciones",
+      "definicion_rigurosa": "Los requisitos e instrucciones proporcionan directrices específicas sobre cómo realizar una actividad o estudio estadístico, incluyendo el nivel de confianza y el margen de error deseado.",
+      "formulacion_matematica_latex": "N/A",
+      "aplicacion_administrativa": "En la gestión de la calidad, estos requisitos aseguran que los estudios estadísticos sean rigurosos y produzcan resultados confiables.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 5"
+    },
+    {
+      "concepto": "requisitos instrucciones actividad",
+      "definicion_rigurosa": "Los requisitos e instrucciones de una actividad específica detallan las condiciones y parámetros para la realización de un estudio estadístico, incluyendo el tamaño de la muestra y el nivel de confianza.",
+      "formulacion_matematica_latex": "N/A",
+      "aplicacion_administrativa": "En la investigación de operaciones, estos requisitos guían la realización de estudios para optimizar procesos y tomar decisiones informadas.",
+      "fuente_principal": "Lind, Marchal y Wathen, 2012",
+      "localizador": "bloque 5"
+    },
+    {
+      "concepto": "error estándar",
+      "definicion_rigurosa": "El error estándar es una medida de la variabilidad de un estimador estadístico, como la media o la proporción, y se utiliza para evaluar la precisión de las estimaciones.",
+      "formulacion_matematica_latex": "\\( \\text{Error estándar} = \\frac{\\sigma}{\\sqrt{n}} \\)",
+      "aplicacion_administrativa": "En la gestión de la calidad, el error estándar ayuda a evaluar la precisión de las mediciones y a tomar decisiones sobre la mejora de los procesos.",
+      "fuente_principal": "Levin y Rubin, 2014",
+      "localizador": "bloque 2"
+    }
+  ]
+}

@@ -1,0 +1,679 @@
+Fuente bibliográfica: Estadística - Spiegel y Stephens. 4.ª edición.pdf
+Actividad: 6 (2.3 Evaluación 6% Cuestionario)
+Palabras clave: distribución muestral, teorema central del límite, error estándar, proporción muestral, varianza muestral, estandarización
+
+[Bloque seleccionado #229 | relevancia=14]
+Pagina 228
+204  CAPÍTULO 8 TEORÍA ELEMENTAL DEL MUESTREO
+MUESTREO CON REPOSICIÓN Y SIN ELLA
+Si se extrae un número de una urna, antes de extraer otro, el número puede ser devuelto a la urna (ser repuesto) o no. 
+En el primer caso, el número puede ser extraído varias veces, en tanto que en el segundo caso sólo puede ser extraído 
+una vez. A un muestreo en el que cada miembro de la población puede ser elegido más de una vez se le llama muestreo 
+con reposición; en cambio, si sólo puede ser elegido una vez se llama muestreo sin reposición.
+Una población puede ser finita o infinita. Por ejemplo, si de una urna que contiene 100 canicas se extraen sucesi-
+vamente 10 canicas sin reposición, se está muestreando una población finita; en cambio, si se lanza una moneda 50 
+veces y se cuenta la cantidad de caras, se está muestreando de una población infinita.
+Una población finita que se muestrea con reposición puede considerarse teóricamente infinita, ya que se puede 
+extraer cualquier cantidad de muestras sin agotar la población. Para fines prácticos, cuando se muestrea de una pobla-
+ción finita pero muy grande, se puede considerar que el muestreo se hace de una población infinita. 
+DISTRIBUCIONES MUESTRALES
+Considérense todas las muestras de tamaño N que pueden extraerse de determinada población (ya sea con reposición 
+o sin ella). Para cada muestra se pueden calcular diversos estadísticos (como media o desviación estándar), los cuales 
+variarán de una muestra a otra. De esta manera se obtiene una distribución del estadístico de que se trate, a la que se 
+le llama distribución muestral.
+Por ejemplo, si el estadístico de que se trata es la media muestral, a la distribución que se obtiene se le llama dis-
+tribución muestral de las medias o distribución muestral de la media. De igual manera se pueden obtener distribucio-
+nes muestrales de las desviaciones estándar, de las varianzas, de las medianas, de las proporciones, etcétera.
+A cada distribución muestral se le puede calcular su media, su desviación estándar, etc. Así, se puede hablar de la 
+media, de la desviación estándar, de la distribución muestral de las medias, etcétera. 
+DISTRIBUCIONES MUESTRALES DE MEDIAS
+Supóngase que de una población finita de tamaño Np > N se extraen, sin reposición, todas las muestras posibles de 
+tamaño N. Si se denota con  X y  X respectivamente, a la media y a la desviación estándar de una distribución mues-
+tral de las medias, y con µ y σ, respectivamente, a la media y la desviación estándar poblacionales, entonces
+ 
+ X ¼   y   X ¼
+ﬃﬃﬃﬃ
+N
+p
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+Np  N
+Np  1
+
+
+[Bloque seleccionado #230 | relevancia=14]
+Pagina 229
+DISTRIBUCIONES MUESTRALES DE PROPORCIONES
+Supóngase que una población sea infinita y que la probabilidad de ocurrencia de un evento (llamada éxito) es p, y que 
+la probabilidad de no ocurrencia del evento es q = 1 − p. La población puede ser, por ejemplo, la de los lanzamientos 
+de una moneda, en los que la probabilidad del evento “cara” es p ¼ 1
+2. Considérense todas las posibles muestras de 
+tamaño N extraídas de esta población, y para cada muestra determínese la proporción P de éxitos. En el caso de una 
+moneda, P es la proporción de caras en N lanzamientos. De esta manera se obtiene una distribución muestral de las 
+proporciones cuya media µP y cuya desviación estándar σP están dadas por
+ 
+P ¼ p  y  P ¼
+ﬃﬃﬃﬃﬃ
+pq
+N
+r
+¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+pð1  pÞ
+N
+r
+ 
+(3)
+que se pueden obtener de la ecuación (2) sustituyendo µ = p y  ¼
+ﬃﬃﬃﬃﬃ
+pq
+p
+. Si el valor de N es grande (N ≥ 30), esta 
+distribución muestral es aproximadamente normal. Obsérvese que la población está distribuida en forma binomial. 
+Las ecuaciones (3) también son válidas para poblaciones finitas si el muestreo se hace con reposición. En el caso 
+de poblaciones finitas en las que el muestreo se hace sin reposición, las ecuaciones (3) se sustituyen por las ecuaciones 
+(1) con µ = p y  ¼
+ﬃﬃﬃﬃﬃ
+pq
+p
+.
+Obsérvese que las ecuaciones (3) pueden obtenerse más fácilmente dividiendo entre N, la media y la desviación 
+estándar (Np y ﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+Npq
+p
+) de la distribución binomial (ver capítulo 7).
+DISTRIBUCIONES MUESTRALES DE DIFERENCIAS Y SUMAS
+Se supone que se tienen dos poblaciones. Para cada muestra de tamaño N1 tomada de la primera población se calcula 
+un estadístico S1, con lo que se obtiene una distribución muestral de este estadístico S1, cuya media y desviación están-
+dar se denotan µS1 y σS1, respectivamente. De igual manera, para cada muestra de tamaño N2 tomada de la segunda 
+población se calcula un estadístico S2, con lo que se obtiene una distribución muestral de este estadístico S2, cuya media 
+y desviación estándar se denotan µS2 y σS2, respectivamente. Con todas las posibles combinaciones de estas muestras 
+de las dos poblaciones se obtiene una distribución de las diferencias, S1 – S2, a la que se le llama distribución muestral 
+de las diferencias de los estadísticos. La media y la desviación estándar de esta distribución muestral se denotan, res-
+pectivamente, µS1−S2 y σS1−S2, y están dadas por
+ 
+S1S2 ¼ S1  S2  y  S1S2 ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+2
+S1 þ 2
+S2
+q
+ 
+(4)
+siempre y cuando las muestras elegidas no dependan, de manera alguna, una de la otra (es decir, las muestras sea
+
+[Bloque seleccionado #231 | relevancia=8]
+Pagina 230
+Tabla 8.1 Error estándar de distribuciones muestrales
+Distribución
+muestral
+Error
+estándar
+Observaciones
+Media
+ X ¼
+ﬃﬃﬃﬃ
+N
+p
+Esta fórmula es válida tanto para muestras grandes como para 
+muestras pequeñas. La distribución muestral de las medias se aproxima 
+a una distribución normal cuando N ≥ 30, aun cuando la población no 
+sea normal.
+ X ¼ , la media poblacional, en todos los casos.
+Proporciones
+P ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+pð1  pÞ
+N
+r
+¼
+ﬃﬃﬃﬃﬃ
+pq
+N
+r
+La observación hecha para las medias también es válida en este 
+caso.
+µP = p, en todos los casos.
+Desviaciones
+estándar
+(1) s ¼
+ﬃﬃﬃﬃﬃﬃ
+2N
+p
+(2) s ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+4  2
+2
+4N2
+s
+Cuando N ≥ 100, la distribución muestral de s es casi normal.
+σs está dada por (1) sólo si la población es normal (o 
+aproximadamente normal). Si la población no es normal, se puede usar 
+(2).
+Obsérvese que (2) se reduce a (1) cuando µ2 = σ2 y µ4 = 3σ4, lo 
+que ocurre en poblaciones normales.
+Cuando N ≥ 100, µs = σ muy aproximadamente.
+Medianas
+med ¼ 
+ﬃﬃﬃﬃﬃﬃ
+
+2N
+r
+¼ 1:2533
+ﬃﬃﬃﬃ
+N
+p
+Cuando N ≥ 30, la distribución muestral de la mediana es casi 
+normal. La fórmula dada es válida sólo si la población es normal (o 
+aproximadamente normal).
+µmed = µ
+Primero y tercer 
+cuartiles
+Q1 ¼ Q3 ¼ 1:3626
+ﬃﬃﬃﬃ
+N
+p
+La observación hecha para las medianas también es válida aquí.
+µQ1 y µQ3 son casi iguales al primero y tercer cuartiles de la 
+población.
+Obsérvese que σQ2 = σmed
+Deciles
+D1 ¼ D9 ¼ 1:7094
+ﬃﬃﬃﬃ
+N
+p
+D2 ¼ D8 ¼ 1:4288
+ﬃﬃﬃﬃ
+N
+p
+D3 ¼ D7 ¼ 1:3180
+ﬃﬃﬃﬃ
+N
+p
+D4 ¼ D6 ¼ 1:2680
+ﬃﬃﬃﬃ
+N
+p
+Las observaciones hechas para las medianas también son válidas 
+aquí.
+µD1, µD2, . . . son casi iguales al primero, segundo, . . . deciles de la 
+población.
+Obsérvese que σD5 = σmed.
+Rangos
+semiinter-
+cuartílicos
+Q ¼ 0:7867
+ﬃﬃﬃﬃ
+N
+p
+Las observaciones hechas para las medianas también son válidas 
+aquí.
+µQ es casi igual al rango semiintercuartil poblacional.
+Varianzas
+(1) S2 ¼ 2
+ﬃﬃﬃﬃ
+2
+N
+r
+(2) S2 ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+4  N  3
+N  1 2
+2
+N
+v
+u
+u
+t
+Las observaciones hechas para la desviación estándar también son 
+válidas aquí. Obsérvese que si la población es normal (2) da (1).
+µS 2 = σ2(N – 1)/N, que es casi igual a σ2 cuando N es grande.
+Coeficiente de
+variación
+V ¼
+vﬃﬃﬃﬃﬃﬃ
+2N
+p
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+1 þ 2v2
+p
+Aquí υ = σ/µ es el coeficiente de variación poblacional. La 
+fórmula dada es válida para poblaciones normales (o casi normales) y 
+N ≥ 100.
+
+[Bloque seleccionado #232 | relevancia=10]
+Pagina 231
+Pueden obtenerse resultados semejantes para las distribuciones muestrales de las diferencias entre las proporciones 
+de dos poblaciones distribuidas en forma binomial con parámetros (p1, q1) y (p2, q2), respectivamente. En este caso, S1 
+y S2 son proporción de éxitos, P1 y P2, y las ecuaciones (4) se transforman en
+ 
+P1P2 ¼ P1  P2 ¼ p1  p2  y  P1P2 ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+2
+P1 þ 2
+P2
+q
+¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+p1q1
+N1
+þ p2q2
+N2
+r
+ 
+(6)
+Si N1 y N2 son grandes (N1, N2 ≥ 30), la distribución muestral de diferencias entre medias o proporciones se aproximan 
+mucho a una distribución normal.
+Algunas veces se necesita la distribución muestral de la suma de estadísticos. La media y la desviación estándar 
+de estas distribuciones están dadas por
+ 
+S1þS2 ¼ S1 þ S2  y  S1þS2 ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+2
+S1 þ 2
+S2
+q
+ 
+(7)
+suponiendo que las muestras sean independientes. 
+ERRORES ESTÁNDAR
+A la desviación estándar de la distribución muestral de un estadístico suele conocérsele como su error estándar. En la 
+tabla 8.1 se enumeran los errores estándar de distribuciones muestrales de varios estadísticos, suponiendo que el mues-
+treo es un muestreo aleatorio de una población infinita (o muy grande) o de una población finita pero hecho el muestreo 
+con reposición. Se presentan también algunas observaciones especiales en las que se dan las condiciones bajo las 
+cuales son válidas las fórmulas, así como otras observaciones pertinentes.
+Las cantidades µ, σ, p, µr y X, s, P, mr denotan media, desviación estándar, proporción y el r-ésimo momento 
+respecto a la media, poblacionales y muestrales, respectivamente.
+Se hace notar que si el tamaño N de la muestra es suficientemente grande, la distribución muestral es normal o casi 
+normal. A esto se debe que estos métodos se conozcan como métodos para muestras grandes. Cuando N < 30, a las 
+muestras se les llama pequeñas. La teoría de las muestras pequeñas o teoría del muestreo exacto, como se le llama 
+algunas veces, se estudia en el capítulo 11.
+Cuando los parámetros poblacionales, por ejemplo, σ, p o bien µr no se conocen, pueden estimarse con bastante 
+exactitud a partir de sus estadísticos muestrales, s (o bien ^s ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+N=ðN  1Þ
+p
+s), P y mr, siempre y cuando las muestras 
+sean suficientemente grandes.
+DEMOSTRACIONES DE LA TEORÍA ELEMENTAL DEL MUESTREO 
+EMPLEANDO SOFTWARE
+EJEMPLO 1
+En una población grande se define la siguiente variable aleatoria. X es la cantidad de computadoras por hogar; X está distribuida de 
+manera uniforme, es decir, p(x) = 0.25 para x = 1, 2, 3 y 4. En otras palab
+
+[Bloque seleccionado #235 | relevancia=10]
+Pagina 234
+210  CAPÍTULO 8 TEORÍA ELEMENTAL DEL MUESTREO
+ 
+lo que ilustra que  X ¼ .
+d ) La varianza de la distribución muestral de las medias es
+ 
+2
+X ¼ ð2:5  6:0Þ2 þ ð4:0  6:0Þ2 þ ð5:0  6:0Þ2 þ    þ ð9:5  6:0Þ2
+10
+¼ 4:05
+ 
+y  X ¼ 2:01. Esto ilustra que
+ 
+2
+X ¼ 2
+N
+Np  N
+Np  1
+
+
+ 
+ya que el lado derecho es igual a
+ 
+10:8
+2
+5  2
+5  1
+
+
+¼ 4:05
+ 
+que es lo que se obtuvo antes.
+8.3 
+Supóngase que las estaturas de 3 000 estudiantes del sexo masculino de una universidad tienen una distribución 
+normal con media 68.0 pulgadas (in) y desviación estándar 3.0 in. Si se obtienen 80 muestras, cada una de 25 
+estudiantes, ¿cuáles serán la media y la desviación estándar esperadas de la distribución muestral de las medias 
+si el muestreo se hace: a) con reposición y b) sin reposición?
+SOLUCIÓN
+El número de muestras de tamaño 25 que teóricamente pueden obtenerse de un grupo de 3 000 estudiantes, con reposición 
+y sin ésta son, respectivamente (3 000)25 y ð3000
+25 Þ, que son mucho más que 80. De manera que no se obtendrá una verda-
+dera distribución muestral de las medias, sino únicamente una distribución muestral experimental. De cualquier manera, 
+dado que el número de muestras es grande, habrá una estrecha coincidencia entre las dos distribuciones muestrales. Por lo 
+tanto, la media y la desviación estándar esperadas serán muy semejantes a las de la distribución teórica. Se tiene:
+a) 
+ 
+ X ¼  ¼ 68:0 in  y   X ¼
+ﬃﬃﬃﬃ
+N
+p
+¼
+3ﬃﬃﬃﬃﬃ
+25
+p
+¼ 0:6 in
+b) 
+ 
+ X ¼ 68:0 in  y  
+X =
+¯¯
+N
+√
+¯¯¯¯¯¯¯¯
+Np
+N
+Np
+1
+
+=
+3
+¯¯¯
+25
+√
+¯¯¯¯¯¯¯¯¯¯¯
+3 000
+25
+3 000
+1
+
+ 
+que es apenas ligeramente menor a 0.6 in y por lo tanto, para fines prácticos, puede considerarse igual a la del muestreo 
+con reposición. 
+De esta manera, se espera que la distribución muestral experimental de las medias esté distribuida de manera 
+aproximadamente normal con media 68.0 in y desviación estándar 0.6 in.
+8.4 
+¿En cuántas de las muestras del problema 8.3 se esperaría encontrar que la media: a) estuviera entre 66.8 y
+68.3 in y b) fuera menor a 66.4 in?
+SOLUCIÓN
+La media X de una muestra, en unidades estándar, está dada por
+z ¼
+X   X
+ X
+¼
+X  68:0
+0:6
+a) 
+ 
+66.8 en unidades estándar ¼ 66:8  68:0
+0:6
+¼ 2:0
+ 
+ 
+68.3 en unidades estándar ¼ 68:3  68:0
+0:6
+¼ 0:5
+
+[Bloque seleccionado #238 | relevancia=10]
+Pagina 237
+ 
+Como se muestra la figura 8-3b),
+ 
+ 
+Probabilidad buscada = (área a la derecha de z = 2.96)
+ 
+ 
+ 
+= (área a la derecha de z = 0) – (área entre z = 0 y z = 2.96)
+ 
+ 
+ 
+= 0.5 – 0.4985 = 0.0015
+ 
+Por lo tanto, sólo hay 3 posibilidades en 2 000 de obtener una muestra de 100 balines que juntos pesen más de 510 g.
+8.6 
+a)  Mostrar la manera de tomar, de la tabla 2.1, 30 muestras aleatorias (con reposición) de 4 estudiantes cada 
+una, empleando números aleatorios.
+b) Encontrar la media y la desviación estándar de la distribución muestral de las medias del inciso a).
+c) Comparar los resultados del inciso b) con los valores teóricos y explicar cualquier discrepancia.
+SOLUCIÓN
+a) 
+Para enumerar cada uno de los 100 estudiantes se emplean los dígitos: 00, 01, 02, . . . , 99 (ver la tabla 8.3). Por lo tanto, 
+los 5 estudiantes cuya estatura está en el intervalo 60-62 están numerados 00-04; los dieciocho estudiantes cuya esta-
+tura está en el intervalo 63-65 están numerados 05-22, etc. Al número de cada estudiante se le llama número de mues-
+treo.
+Tabla 8.3
+Estatura (in)
+Frecuencias
+Número de muestreo
+60-62
+63-65
+66-68
+69-71
+72-74
+ 5
+18
+42
+27
+ 8
+00-04
+05-22
+23-64
+65-91
+92-99
+Después, se extraen números de muestreo de una tabla de números aleatorios (apéndice IX). En el primer renglón 
+se encuentra la secuencia 51, 77, 27, 46, 40, etc., la que será considerada como los números del muestreo aleatorios, 
+cada uno de los cuales dará la estatura de determinado estudiante. Así, 51 corresponde a un estudiante cuya estatura 
+está en el intervalo 66-68 in, estatura que se toma como 67 in (la marca de clase). De igual manera, 77, 27 y 46 dan 
+las estaturas 70, 67 y 67 in, respectivamente. 
+Mediante este proceso se obtiene la tabla 8.4, en la que se muestra el número de muestreo extraído, la estatura 
+correspondiente y la estatura promedio de cada una de las 30 muestras. Es necesario decir que aunque se han tomado 
+los números aleatorios del primer renglón de la tabla, igualmente podría haberse partido de cualquier otro lugar de la 
+tabla y elegir cualquier otro patrón específico. 
+b) 
+En la tabla 8.5 se da la distribución de frecuencias de las medias muestrales de las estaturas obtenidas en el inciso a). 
+Ésta es una distribución muestral de las medias. La media y la desviación estándar se obtienen, como de costumbre, 
+empleando un método de compilación de los capítulos 3 y 4:
+ 
+Media ¼ A þ cu ¼ A þ c P fu
+N
+¼ 67:00 þ ð0:75Þð23Þ
+30
+¼ 67:58 in
+ 
+Desviación estándar ¼ c
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+u2  u2
+q
+¼ c
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+P fu2
+N
+
+P fu
+N
+
+2
+s
+¼ 0
+
+[Bloque seleccionado #249 | relevancia=10]
+Pagina 248
+224  CAPÍTULO 8 TEORÍA ELEMENTAL DEL MUESTREO
+c) la media de la distribución muestral de las medias y d ) la desviación estándar de la distribución muestral de las medias. 
+Verificar los incisos c) y d ) directamente a partir de los incisos a) y b) empleando las fórmulas adecuadas.
+8.22 
+Resolver el problema 8.21 si el muestreo se hace sin reposición.
+8.23 
+Las masas de 1 500 balines están distribuidas de manera normal, siendo su media 22.40 g y su desviación estándar 0.048 g. 
+Si de esta población se toman 300 muestras aleatorias de tamaño 36, determinar la media y la desviación estándar esperadas 
+en la distribución muestral de las medias si el muestreo se hace: a) con reposición y b) sin reposición.
+8.24 
+Resolver el problema 8.23 si la población consta de 72 balines.
+8.25 
+¿En cuántas de las muestras aleatorias del problema 8.23 la media: a) estará entre 22.39 y 22.41 g, b) será mayor a 22.42 g, 
+c) será menor a 22.37 g y d ) será menor a 22.38 g o mayor a 22.41 g?
+8.26 
+La media de la vida útil de ciertos cinescopios fabricados por una empresa es 800 h y la desviación estándar es 60 h. Encontrar 
+la probabilidad de que en una muestra aleatoria de 16 cinescopios la media del tiempo de vida: a) esté entre 790 y 810 h, 
+b) sea menor a 785 h, c) sea mayor a 820 h y d ) esté entre 770 y 830 h.
+8.27 
+Repetir el problema 8.26 con una muestra aleatoria de 64 cinescopios. Explicar la diferencia.
+8.28 
+Los paquetes que se reciben en una tienda departamental pesan en promedio 300 libras (lb) y su desviación estándar es de 
+50 lb. ¿Cuál es la probabilidad de que 25 paquetes recibidos al azar pesen más del límite de seguridad especificado en el 
+elevador, que es 8 200 lb?
+NÚMEROS ALEATORIOS
+8.29 
+Repetir el problema 8.6 usando un conjunto diferente de números aleatorios y seleccionando: a) 15, b) 30, c) 45 y d ) 60 
+muestras, con reposición, de tamaño 4. En cada caso, comparar con los resultados teóricos.
+8.30 
+Repetir el problema 8.29 tomando muestras de tamaño: a) 2 y b) 8 con reposición, en lugar de tamaño 4 con reposición.
+8.31 
+Repetir el problema 8.6, pero muestreando sin reposición. Comparar con los resultados teóricos.
+8.32 
+a) 
+Mostrar cómo se toman 30 muestras de tamaño 2 de la distribución del problema 3.61.
+b) 
+Calcular la media y la desviación estándar de la distribución muestral de las medias obtenida y compararla con los 
+resultados teóricos.
+8.33 
+Repetir el problema 8.32 empleando muestras de tamaño 4.
+DISTRIBUCIÓN MUESTRAL DE PROPORCIONES
+8.34 
+Encontrar la probabilidad de que de los 200 próximos niños que nazcan, a) menos de 40% sea
+
+[Bloque seleccionado #252 | relevancia=10]
+Pagina 251
+ESTIMACIÓN DE PARÁMETROS 
+En el capítulo 8 se vio cómo emplear la teoría del muestreo para obtener información acerca de muestras extraídas en 
+forma aleatoria de una población desconocida. Sin embargo, desde el punto de vista práctico, suele ser más importan-
+te poder inferir información acerca de una población a partir de muestras obtenidas de ella. De estos problemas se 
+ocupa la inferencia estadística en la que se usan los principios de la teoría del muestreo.
+Un problema importante de la inferencia estadística es la estimación de parámetros poblacionales, o simplemente 
+parámetros (como, por ejemplo, la media y la varianza poblacionales), a partir de los correspondientes estadísticos 
+muestrales, o simplemente estadísticos (por ejemplo, la media y la varianza muestrales). En este capítulo se analiza 
+este problema.
+ESTIMACIONES INSESGADAS
+Si la media de la distribución muestral de un estadístico es igual al parámetro poblacional correspondiente se dice que 
+el estadístico es un estimador insesgado del parámetro; si no es así, se dice que es un estimador sesgado. A los valores 
+de estos estadísticos se les llama estimaciones insesgadas o sesgadas, respectivamente.
+EJEMPLO 1 La media de la distribución muestral de las medias  X es µ, la media poblacional. Por lo tanto, la media muestral 
+X es una estimación insesgada de la media poblacional µ.
+EJEMPLO 2 La media de la distribución muestral de las varianzas es
+s2 ¼ N  1
+N
+2
+donde σ2 es la varianza poblacional y N es el tamaño de la muestra (ver tabla 8.1). Por lo tanto, la varianza muestral s2 es una esti-
+mación sesgada de la varianza poblacional σ2. Empleando la varianza modificada
+^s2 ¼
+N
+N  1 s2
+se encuentra que ^s2 ¼ 2, de manera que ^s2 es una estimación insesgada de σ2. Sin embargo, ^s es una estimación sesgada de σ.
+9
+TEORÍA DE 
+LA ESTIMACIÓN 
+ESTADÍSTICA
+227
+
+[Bloque seleccionado #253 | relevancia=14]
+Pagina 252
+228  CAPÍTULO 9 TEORÍA DE LA ESTIMACIÓN ESTADÍSTICA
+En el lenguaje de la esperanza matemática (ver capítulo 6) se puede decir que un estadístico es insesgado si su 
+esperanza matemática es igual al correspondiente parámetro poblacional. Por lo tanto, X y ^s2 son insesgados, ya que 
+Ef Xg ¼  y Ef^s2g ¼ 2.
+ESTIMACIONES EFICIENTES
+Si la distribución muestral de dos estadísticos tiene la misma media (o esperanza), entonces al estadístico que tiene la 
+menor varianza se le llama estimador eficiente del parámetro correspondiente, y al otro se le llama estimador inefi-
+ciente. A los valores de estos estadísticos se les llama estimaciones eficientes e ineficientes, respectivamente.
+Si se consideran todos los estadísticos cuya distribución muestral tiene una misma media, al estadístico que tiene 
+la menor varianza suele llamársele estimador más eficiente o mejor del parámetro correspondiente.
+EJEMPLO 3 Las distribuciones muestrales de la media y de la mediana tienen la misma media, a saber, la media poblacional. 
+Sin embargo, la varianza de la distribución muestral de las medias es menor que la varianza de la distribución muestral de las 
+medianas (ver tabla 8.1). Por lo tanto, la media muestral proporciona una estimación eficiente de la media poblacional, en tanto que 
+la mediana muestral proporciona una estimación ineficiente de la media poblacional.
+De todos los estadísticos que estiman la media poblacional, la media muestral proporciona la mejor (o la más eficiente) estima-
+ción.
+En la práctica, las estimaciones ineficientes suelen usarse debido a la relativa facilidad con que algunas de ellas 
+pueden obtenerse.
+ESTIMACIONES PUNTUALES Y ESTIMACIONES POR INTERVALO; 
+SU CONFIABILIDAD
+A una estimación de un parámetro poblacional que se da mediante un solo número se le llama estimación puntual del 
+parámetro. A una estimación de un parámetro poblacional que se da mediante dos números, entre los cuales se consi-
+dera que debe estar el parámetro en cuestión, se le llama estimación por intervalo del parámetro en cuestión.
+Las estimaciones por intervalo dan la precisión, o exactitud, de la estimación, y por esto se prefieren a las estima-
+ciones puntuales.
+EJEMPLO 4 Si se dice que en la medición de una distancia se obtuvo como resultado 5.28 metros (m), se está dando una esti-
+mación puntual. En cambio, si se dice que la distancia es 5.28 ± 0.03 m (es decir, que la distancia está entre 5.25 y 5.31 m), se está 
+dando una estimación por intervalo.
+La información sobre el error (o precisión) de una estimación es su confiabilidad.
+ESTIMACIÓN DE PARÁMETROS 
+
+[Bloque seleccionado #409 | relevancia=10]
+Pagina 408
+384  CAPÍTULO 15 CORRELACIÓN MÚLTIPLE Y CORRELACIÓN PARCIAL
+ERROR ESTÁNDAR DE ESTIMACIÓN
+Mediante una obvia generalización de la ecuación (8) del capítulo 14 se define el error estándar de estimación de X1 
+sobre X2 y X3 como
+ 
+s1:23 ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+PðX1  X1,estÞ2
+N
+s
+ 
+(6)
+donde X1,est indica los valores estimados de X1 obtenidos con las ecuaciones de regresión (1) o (5).
+El error estándar de estimación también se puede calcular en términos de los coeficientes de correlación r12, r13 y 
+r23, empleando la fórmula
+ 
+s1:23 ¼ s1
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+1  r2
+12  r2
+13  r2
+23 þ 2r12r13r23
+1  r2
+23
+s
+ 
+(7)
+La interpretación muestral del error estándar de estimación para dos variables, dada en la página 313 para el caso 
+en el que N es grande, puede extenderse a tres dimensiones reemplazando las rectas paralelas a la recta de regresión 
+por planos paralelos al plano de regresión. La fórmula ^s1:23 ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+N=ðN  3Þ
+p
+s1:23 proporciona una mejor estimación 
+del error estándar de estimación poblacional.
+COEFICIENTE DE CORRELACIÓN MÚLTIPLE
+El coeficiente de correlación múltiple se define mediante una extensión de la ecuación (12) o (14) del capítulo 14. En 
+el caso de dos variables independientes, por ejemplo, el coeficiente de correlación múltiple está dado por
+ 
+R1:23 ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+1  s2
+1:23
+s2
+1
+s
+ 
+(8)
+donde s1 es la desviación estándar de la variable X1, y s1.23 está dado por la ecuación (6) o por la ecuación (7). La 
+cantidad R2
+1:23 se conoce como coeficiente de determinación múltiple.
+Cuando se emplea una ecuación de regresión lineal, al coeficiente de correlación múltiple se le llama coeficiente 
+de correlación lineal múltiple. A menos que se especifique otra cosa, el término correlación múltiple se empleará para 
+correlación lineal múltiple.
+La ecuación (8) también puede expresarse en términos de r12, r13 y r23 como
+ 
+R1:23 ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+r2
+12 þ r2
+13  2r12r13r23
+1  r2
+23
+s
+ 
+(9)
+El valor de un coeficiente de correlación múltiple, como R1.23, está entre 0 y 1, inclusive. Cuanto más cerca está de 
+1, mejor es la relación lineal entre las variables. Cuanto más cerca esté de 0, peor será la relación lineal entre las varia-
+bles. Si un coeficiente de correlación múltiple es 1, a esa correlación se le llama correlación perfecta. Aunque un 
+coeficiente de correlación sea 0, esto indica que no hay relación lineal entre las variables, pero puede que exista una 
+relación no lineal.
+CAMBIO DE LA VARIABLE DEPENDIENTE
+Los resultados anter

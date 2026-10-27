@@ -1,0 +1,53 @@
+% Adaptación editorial local del casoestudio/fichacaso de Derecho penal A3 UnADM.
+% Se conserva la identidad ITESCA y el cuerpo Arial 12 con interlineado 1.5.
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\definecolor{fichaRojo}{HTML}{8F1117}
+\definecolor{fichaPapel}{HTML}{FBF8F6}
+\definecolor{fichaTeal}{HTML}{006B67}
+\newtcolorbox{fichainvestigacion}[1]{%
+  enhanced,breakable,colback=fichaPapel,colframe=fichaRojo,
+  boxrule=0pt,leftrule=2.5pt,arc=1mm,
+  left=3mm,right=3mm,top=1.6mm,bottom=1.6mm,
+  title={#1},title after break={#1\ (continuación)},
+  colbacktitle=fichaRojo,coltitle=white,
+  fonttitle=\normalfont\fontsize{12}{14.4}\selectfont\bfseries,
+  fontupper=\normalfont\fontsize{12}{14.4}\selectfont,
+  before skip=8pt,after skip=8pt,
+  before upper={\setstretch{1.5}\justifying\setlength{\parindent}{0pt}\setlength{\parskip}{4pt}}%
+}
+\newcommand{\datosarticulo}[4]{%
+  \begin{tcolorbox}[colback=fichaTeal!4,colframe=fichaTeal!35,
+    boxrule=0.4pt,arc=0.6mm,left=2mm,right=2mm,top=1mm,bottom=1mm,
+    fontupper=\normalfont\fontsize{12}{14.4}\selectfont]
+    \textbf{Autoría y año:} #1\par
+    \textbf{Artículo:} \textit{#2}\par
+    \textbf{Publicación:} #3\par
+    \textbf{DOI:} \url{#4}
+  \end{tcolorbox}%
+}
+\newcommand{\datosarticulocorto}[1]{%
+  \begin{tcolorbox}[colback=fichaTeal!4,colframe=fichaTeal!35,
+    boxrule=0.4pt,arc=0.6mm,left=1.8mm,right=1.8mm,top=0.4mm,bottom=0.4mm,
+    before skip=0pt,after skip=2pt,
+    fontupper=\normalfont\fontsize{12}{14.4}\selectfont]
+    \setstretch{1.5}\justifying\setlength{\parindent}{0pt}#1
+  \end{tcolorbox}%
+}
+\newcommand{\datoscaso}[3]{%
+  \begin{tcolorbox}[colback=fichaTeal!4,colframe=fichaTeal!35,
+    boxrule=0.4pt,arc=0.6mm,left=2mm,right=2mm,top=1mm,bottom=1mm,
+    fontupper=\normalfont\fontsize{12}{14.4}\selectfont]
+    \textbf{Planteamiento y parámetro:} #1\par
+    \textbf{Problema estadístico y administrativo:} #2\par
+    \textbf{Fundamento documental:} #3
+  \end{tcolorbox}%
+}
+\newcommand{\datoscasocorto}[1]{%
+  \begin{tcolorbox}[colback=fichaTeal!4,colframe=fichaTeal!35,
+    boxrule=0.4pt,arc=0.6mm,left=1.8mm,right=1.8mm,top=0.4mm,bottom=0.4mm,
+    before skip=0pt,after skip=2pt,
+    fontupper=\normalfont\fontsize{12}{14.4}\selectfont]
+    \setstretch{1.5}\justifying\setlength{\parindent}{0pt}#1
+  \end{tcolorbox}%
+}

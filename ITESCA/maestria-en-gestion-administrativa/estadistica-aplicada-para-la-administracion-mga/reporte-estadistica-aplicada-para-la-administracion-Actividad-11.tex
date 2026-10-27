@@ -1,0 +1,125 @@
+% Plantilla y base conceptual generada con AulaTeX (Amazon Nova Pro) para Actividad 11 (A11).
+% Contrato AulaTeX: portada oficial ITESCA, Resumen con declaracion IA, Tabla de contenido y tres tiempos.
+\def\estadisticatitulo{Contrastes paramétricos de hipótesis y modelos de probabilidad en escenarios empresariales}
+\def\estadisticasubtitulo{Actividad 11: Ejercicios en equipo}
+\def\estadisticafecha{15 de noviembre de 2026}
+\def\estadisticaunidad{Pruebas de hipótesis para una y dos muestras}
+\def\portadaoficial{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/portada-oficial.png}
+\def\estadisticaextras{%
+  \usepackage{fontspec}
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+  \usepackage{longtable,booktabs,array}
+  \usetikzlibrary{babel}
+  \geometry{letterpaper,left=2.3cm,right=2.3cm,top=2.2cm,bottom=2.2cm}
+  \hypersetup{pdftitle={Contrastes paramétricos de hipótesis y modelos de probabilidad en escenarios empresariales},pdfsubject={Actividad 11 - Estadística aplicada para la administración}}
+  \setcitestyle{citesep={;}}
+  \renewcommand{\insertcoverwatermark}{}
+  \renewcommand{\insertcoverinstitutionalfooter}{}
+  \renewcommand{\templatePortrait}{%
+    \thispagestyle{empty}
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{\portadaoficial}};
+      \node[anchor=north west,text=white,text width=10.6cm,align=center,inner sep=0pt] at ([xshift=10.1cm,yshift=-19.4cm]current page.north west) {%
+        \setstretch{1}\fontsize{12}{15}\selectfont
+        {\fontsize{15}{18}\selectfont\bfseries Contrastes paramétricos de hipótesis y modelos de probabilidad en escenarios empresariales}\par\vspace{0.16cm}
+        Estadística aplicada para la administración\par
+        Actividad 11: Ejercicios en equipo\par\vspace{0.12cm}
+        Martín Jonathan de la Cruz Muñoz\par
+        Matrícula: 26130503\par
+        Dra. Yoana Elizeth Tauitmes Delgado\par
+        15 de noviembre de 2026
+      };
+    \end{tikzpicture}\null\clearpage
+  }
+  \renewcommand{\templatePagecfg}{}
+  \renewcommand{\templateFinalcfg}{%
+    \pagestyle{fancy}\fancyhf{}\fancyfoot[C]{\fontsize{10}{12}\selectfont\thepage}
+    \renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}
+    \setcounter{page}{2}\renewcommand{\thepage}{\arabic{page}}
+  }
+  \titleformat{\section}{\normalfont\fontsize{12}{15}\selectfont\bfseries\color{itescaRedDark}}{\thesection.}{0.5em}{}
+  \titleformat{\subsection}{\normalfont\fontsize{12}{15}\selectfont\bfseries}{\thesubsection.}{0.5em}{}
+  \titlespacing*{\section}{0pt}{8pt}{5pt}
+  \titlespacing*{\subsection}{0pt}{7pt}{4pt}
+  \renewcommand{\footnotesize}{\fontsize{12}{14.4}\selectfont}
+  \setlength{\parindent}{1.1cm}
+  \setlength{\parskip}{3pt}
+  \urlstyle{same}
+  \input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/investigacion-articulos/formato-fichas.tex}
+}
+\def\estadisticaresumen{Esta actividad académica se centra en la aplicación práctica de pruebas de hipótesis en el ámbito empresarial, específicamente en escenarios administrativos y de gestión. Los estudiantes deberán formular y contrastar hipótesis para planes de bonos de ventas, calcular valores-p en pruebas de cola izquierda, realizar contrastes salariales y de audiencia media, y aplicar distribuciones discretas en la aceptación de lotes. Esta práctica no solo fortalece los conocimientos estadísticos, sino que también proporciona herramientas esenciales para la toma de decisiones informadas en entornos empresariales.}
+\long\def\estadisticacontenido{%
+\fontsize{12}{14.4}\selectfont\setstretch{1.5}\justifying
+\estadisticapreliminares
+\section{Introducción}
+Esta actividad se centra en la aplicación práctica de pruebas de hipótesis en el ámbito empresarial, específicamente en escenarios administrativos y de gestión. Los estudiantes deberán formular y contrastar hipótesis para planes de bonos de ventas, calcular valores-p en pruebas de cola izquierda, realizar contrastes salariales y de audiencia media, y aplicar distribuciones discretas en la aceptación de lotes. Esta práctica no solo fortalece los conocimientos estadísticos, sino que también proporciona herramientas esenciales para la toma de decisiones informadas en entornos empresariales. La actividad se enmarca en el módulo Moodle 1769 y está ponderada en un 4\% del total de la evaluación. Los estudiantes deberán realizar los ejercicios en equipo y entregar un reporte en formato PDF siguiendo las especificaciones de formato y estilo establecidas por el docente. \citep{anderson2012,lind2012,holmesBusiness2023}.
+
+\section{Fundamentos, modelado analítico y evidencia en pruebas de hipótesis para una y dos muestras}
+\subsection{Base conceptual autocontenida y formulación matemática}
+El desarrollo de esta actividad se basa en conceptos estadísticos fundamentales como la formulación de hipótesis, el cálculo de valores-p, la realización de contrastes salariales y de audiencia media, y la aplicación de distribuciones discretas. Estos conceptos se integran en un marco teórico-matemático profundo que permite a los estudiantes comprender y aplicar las pruebas de hipótesis en contextos empresariales reales. Se destacan las definiciones, supuestos y propiedades de los estimadores y pruebas utilizadas, proporcionando una base sólida para la toma de decisiones bajo incertidumbre. \citep{wackerly2010,canavos1988,spiegel2009}.
+
+\textbf{1. formulación de hipótesis para planes de bonos de ventas.} La formulación de hipótesis en el contexto de planes de bonos de ventas implica establecer hipótesis nula y alternativa que reflejen las expectativas de rendimiento y los incentivos propuestos. Esta práctica es fundamental para evaluar la efectividad de los planes de bonificación y su impacto en el desempeño de los empleados. Expresión formal: $H_0: \mu = \mu_0 \quad \text{vs.} \quad H_a: \mu > \mu_0$. En el ámbito gerencial, este concepto guía a los gerentes en la evaluación de si un plan de bonos de ventas está logrando sus objetivos previstos, permitiendo ajustes y mejoras en la estrategia de incentivos. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{2. cálculo de valor-p en pruebas de cola izquierda con sigma conocida.} El valor-p en pruebas de cola izquierda con desviación estándar conocida se calcula como la probabilidad de obtener un valor del estadístico de prueba tan pequeño o menor que el observado, bajo la suposición de que la hipótesis nula es verdadera. Expresión formal: $p\text{-valor} = P(Z \leq z_0)$. En el ámbito gerencial, este cálculo permite a los administradores determinar la significancia estadística de sus resultados y tomar decisiones informadas sobre la validez de sus hipótesis. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{3. contraste salarial con estadístico Z de cola derecha.} El contraste salarial utilizando el estadístico Z de cola derecha implica comparar el salario observado con un valor esperado bajo la hipótesis nula, utilizando la distribución normal estándar para determinar la significancia. Expresión formal: $Z = \frac{\bar{X} - \mu_0}{\sigma / \sqrt{n}}$. En el ámbito gerencial, este contraste ayuda a los gerentes a evaluar si los salarios pagados están alineados con las expectativas del mercado o si existen discrepancias significativas. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{4. prueba t bilateral para audiencia media con varianza desconocida.} La prueba t bilateral se utiliza para determinar si la media de una población difiere significativamente de un valor hipotético cuando la varianza de la población es desconocida. Expresión formal: $t = \frac{\bar{X} - \mu_0}{s / \sqrt{n}}$. En el ámbito gerencial, esta prueba es crucial para los gerentes de marketing y publicidad para evaluar la efectividad de sus campañas y ajustar sus estrategias en consecuencia. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{5. contraste de proporción de preferencia de marca propia.} El contraste de proporción de preferencia de marca propia implica evaluar si la proporción de consumidores que prefieren una marca propia difiere significativamente de una proporción hipotética. Expresión formal: $Z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1 - p_0)}{n}}}$. En el ámbito gerencial, este contraste ayuda a los gerentes de marca a comprender las preferencias del consumidor y ajustar sus estrategias de marketing. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{6. tamaño muestral controlado por error tipo I y error tipo II.} El tamaño de la muestra se determina considerando tanto el error tipo I (rechazar una hipótesis nula verdadera) como el error tipo II (no rechazar una hipótesis nula falsa), para lograr un equilibrio entre potencia y nivel de significancia. Expresión formal: $n = \left( \frac{Z_{1-\alpha/2} + Z_{1-\beta}}{\Delta / \sigma} \right)^2$. En el ámbito gerencial, este concepto es esencial para diseñar estudios y encuestas que proporcionen resultados confiables y significativos, minimizando los riesgos de errores estadísticos. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{7. distribuciones discretas de apoyo (binomial, Poisson e hipergeométrica) en aceptación de lotes.} Las distribuciones discretas como la binomial, Poisson e hipergeométrica se utilizan para modelar y analizar la aceptación de lotes en procesos de control de calidad, considerando eventos discretos y contables. Expresión formal: $P(X = k) = \binom{n}{k} p^k (1-p)^{n-k} \quad \text{(Binomial)}$. En el ámbito gerencial, estas distribuciones permiten a los gerentes de operaciones evaluar la calidad de los productos y tomar decisiones informadas sobre la aceptación o rechazo de lotes. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{8. requisitos instrucciones.} Los requisitos e instrucciones proporcionan directrices claras sobre cómo realizar y presentar los ejercicios, asegurando que los estudiantes cumplan con los estándares académicos y de formato requeridos.  En el ámbito gerencial, estas instrucciones son cruciales para garantizar la consistencia y calidad de las entregas de los estudiantes, facilitando la evaluación y retroalimentación. \citep{anderson2012,lind2012,wackerly2010}.
+
+
+\subsection{Planteamiento analítico y estructura de resolución de los ejercicios de la unidad}
+La guía aplicada para esta actividad incluye una serie de ejercicios específicos que los estudiantes deben resolver siguiendo la consigna oficial. Se proporcionan ejemplos y casos prácticos que ilustran la aplicación de las pruebas de hipótesis en escenarios empresariales, permitiendo a los estudiantes estructurar y resolver los problemas planteados. Se destacan las fórmulas y modelos matemáticos necesarios, así como las consideraciones gerenciales y administrativas relevantes para cada caso.
+
+\subsubsection*{Ejercicio 1. Formulación de hipótesis para el plan de bonos en agencia automotriz}
+\textbf{Enunciado oficial del aula:} El volumen medio actual de ventas es de $\mu_0 = 14$ automóviles por mes. El gerente evalúa un nuevo plan de bonos para incrementar el volumen de ventas. 1) Desarrolle las hipótesis nula y alternativa más adecuadas. 2) Comente la conclusión gerencial si no puede rechazarse $H_0$. 3) Comente la conclusión gerencial si se rechaza $H_0$.
+
+\textbf{Modelo matemático y ruta de resolución:} Contraste unilateral derecho donde la hipótesis de investigación se ubica en la alternativa: $H_0: \mu \le 14$ frente a $H_a: \mu > 14$ \citep{anderson2012}.
+
+\subsubsection*{Ejercicio 2. Cálculo de valor-$p$ y regla de decisión en prueba unilateral izquierda ($n=100, \sigma=12, \alpha=0.01$)}
+\textbf{Enunciado oficial del aula:} Considere la prueba $H_0: \mu \ge 80$ frente a $H_a: \mu < 80$ con $n = 100$, $\sigma = 12$ y $\alpha = 0.01$. Calcule el estadístico $Z$, el valor-$p$ y la conclusión para: a) $\bar{x} = 78.5$; b) $\bar{x} = 77.0$; c) $\bar{x} = 75.5$; d) $\bar{x} = 81.0$.
+
+\textbf{Modelo matemático y ruta de resolución:} Error estándar $\sigma_{\bar{x}} = 12/\sqrt{100} = 1.2$, estadístico $z = (\bar{x} - 80)/1.2$ y valor-$p = \Phi(z)$ comparado contra $\alpha = 0.01$ ($z_{\text{crítico}} = -2.326$) \citep{anderson2012}.
+
+\subsubsection*{Ejercicio 3. Contraste salarial de trabajadores de producción (U.S. Department of Labor)}
+\textbf{Enunciado oficial del aula:} En 2009 el ingreso promedio por hora fue $\mu_0 = \$14.32$. En 2010 una muestra de $n = 75$ trabajadores arrojó $\bar{x} = \$14.68$ con desviación poblacional $\sigma = \$1.45$. Con $\alpha = 0.05$, ¿se puede concluir que hubo un aumento en la media de las ganancias por hora?
+
+\textbf{Modelo matemático y ruta de resolución:} Prueba $Z$ de cola derecha ($H_0: \mu \le 14.32$ vs. $H_a: \mu > 14.32$), con $z = (14.68 - 14.32)/(1.45/\sqrt{75})$ \citep{anderson2012}.
+
+\subsubsection*{Ejercicio 4. Prueba $t$ bilateral sobre la audiencia diaria de CNN (Nielsen Media Research)}
+\textbf{Enunciado oficial del aula:} En 2009 la audiencia media diaria de CNN fue de $\mu_0 = 600\,000$ espectadores. En una muestra de $n = 40$ días de 2010 se observó $\bar{x} = 612\,000$ con desviación estándar muestral $s = 65\,000$. a) Formule las hipótesis para detectar cualquier cambio en la audiencia. b) Seleccione un nivel de significancia $\alpha$ y establezca su conclusión.
+
+\textbf{Modelo matemático y ruta de resolución:} Contraste $t$ bilateral con $gl = 39$ ($H_0: \mu = 600\,000$ vs. $H_a: \mu \ne 600\,000$), estadístico $t = (612\,000 - 600\,000)/(65\,000/\sqrt{40})$ \citep{lind2012}.
+
+\subsubsection*{Ejercicio 5. Contraste de proporción sobre preferencia de marcas propias frente a marcas nacionales}
+\textbf{Enunciado oficial del aula:} Consumer Reports indica que $p_0 = 0.64$ de los clientes considera las marcas de supermercado tan buenas como las nacionales. Un fabricante de salsa de tomate encuesta a $n = 100$ clientes y 52 opinan igual ($\hat{p} = 0.52$). 1) Formule las hipótesis bilaterales. 2) Calcule el valor-$p$. 3) Establezca la conclusión con $\alpha = 0.05$.
+
+\textbf{Modelo matemático y ruta de resolución:} Prueba $Z$ bilateral para una proporción ($H_0: p = 0.64$ vs. $H_a: p \ne 0.64$), con $z = (0.52 - 0.64)/\sqrt{0.64(0.36)/100} = -2.50$ \citep{anderson2012}.
+
+\subsubsection*{Ejercicio 6. Diseño muestral controlado por Error Tipo I ($\alpha=0.05$) y Error Tipo II ($\beta=0.15$) en revista Young Adult}
+\textbf{Enunciado oficial del aula:} Para contrastar $H_0: \mu = 28$ frente a $H_a: \mu \ne 28$ con $\sigma = 6$ y $\alpha = 0.05$, el gerente admite una probabilidad $\beta = 0.15$ de cometer Error Tipo II cuando la verdadera media es $\mu_a = 29$ años. ¿De qué tamaño debe tomarse la muestra?
+
+\textbf{Modelo matemático y ruta de resolución:} Fórmula de potencia para tamaño muestral: $n = (z_{\alpha/2} + z_{\beta})^2 \sigma^2 / (\mu_0 - \mu_a)^2$, con $z_{0.025} = 1.96$ y $z_{0.15} = 1.0364$ \citep{anderson2012,wackerly2010}.
+
+
+\subsection{Articulación administrativa y síntesis del desarrollo}
+La formulación de hipótesis es el primer paso en el proceso de pruebas de hipótesis y es fundamental para establecer las afirmaciones que se probarán. Este concepto permite a los estudiantes comprender la importancia de establecer hipótesis claras y testables, lo que es esencial para el diseño y análisis de estudios estadísticos. \citep{holmesBusiness2023,nistHandbook}.
+El cálculo del valor-p es crucial para determinar la significancia estadística de los resultados obtenidos en una prueba de hipótesis. Este concepto permite a los estudiantes evaluar la evidencia en contra de la hipótesis nula y tomar decisiones informadas sobre la validez de sus hipótesis. \citep{holmesBusiness2023,nistHandbook}.
+El contraste salarial utilizando el estadístico Z de cola derecha permite evaluar si los salarios observados difieren significativamente de los esperados. Este concepto es esencial para los gerentes de recursos humanos al diseñar y evaluar políticas salariales. \citep{holmesBusiness2023,nistHandbook}.
+La prueba t bilateral se utiliza para determinar si la media de una población difiere significativamente de un valor hipotético cuando la varianza es desconocida. Este concepto es crucial para los gerentes de marketing y publicidad al evaluar la efectividad de sus campañas. \citep{holmesBusiness2023,nistHandbook}.
+
+En síntesis dentro de este segundo tiempo, la articulación entre la teoría estadística de \textit{pruebas de hipótesis para una y dos muestras} y la práctica administrativa demuestra que ningún indicador cuantitativo opera en el vacío: la validez de la conclusión depende del cumplimiento de los supuestos distribucionales, de la representatividad de los datos recolectados y de la correspondencia entre el modelo matemático y el problema decisional de la organización \citep{anderson2012,nistHandbook,guarin2002}.
+
+\clearpage
+\section{Conclusiones}
+En conclusión, esta actividad ha permitido a los estudiantes aplicar conceptos estadísticos avanzados en contextos empresariales reales, fortaleciendo sus habilidades analíticas y de toma de decisiones. Se han identificado y discutido hallazgos técnicos relevantes, reglas de decisión gerencial y limitaciones metodológicas. Los estudiantes han demostrado una comprensión profunda de las pruebas de hipótesis y su aplicación práctica en la gestión administrativa, lo que les permitirá abordar desafíos similares en su práctica profesional futura. \citep{anderson2012,lind2012,wackerly2010,diazRodriguez2022}.
+}
+\input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/reporte-estadistica-aplicada-para-la-administracion-plantilla-actividad.tex}

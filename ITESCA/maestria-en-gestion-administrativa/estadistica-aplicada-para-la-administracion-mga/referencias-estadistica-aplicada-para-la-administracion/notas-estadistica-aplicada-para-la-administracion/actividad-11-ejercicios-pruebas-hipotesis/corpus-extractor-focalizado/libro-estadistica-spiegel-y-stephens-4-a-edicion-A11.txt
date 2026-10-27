@@ -1,0 +1,657 @@
+Fuente bibliográfica: Estadística - Spiegel y Stephens. 4.ª edición.pdf
+Actividad: 11 (4.2 Ejercicios Equipo 4% Tarea)
+Palabras clave: hipótesis nula, valor-p, error tipo II, potencia, prueba Z, prueba t, proporción, Poisson, hipergeométrica
+
+[Bloque seleccionado #200 | relevancia=8]
+Pagina 199
+EJEMPLO 5 En la figura 7-2 se muestra la distribución binomial correspondiente a N = 16 y p = 0.5, ilustrando las probabili-
+dades de obtener X caras en 16 lanzamientos de una moneda, así como la distribución normal con media 8 y desviación estándar 2. 
+Obsérvese lo semejante que son ambas distribuciones. X es binomial, con media = Np = 16(0.5) = 8 y desviación estándar ﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+Npq
+p
+¼ 
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+16ð0:5Þð0:5Þ
+p
+¼ 2. Y es una curva normal con media = 8 y desviación estándar 2.
+LA DISTRIBUCIÓN DE POISSON  175
+LA DISTRIBUCIÓN DE POISSON
+La distribución de probabilidad discreta
+ 
+pðXÞ ¼ Xe
+X!
+X ¼ 0, 1, 2, . . . 
+(5)
+donde e = 2.71828 · · ·  y λ es una constante dada, se conoce como distribución de Poisson en honor a Siméon-Denis 
+Poisson, quien la descubrió a comienzos del siglo XIX. Los valores de p(X ) pueden calcularse empleando la tabla del 
+apéndice VIII (la cual da los valores de e−λ para diversos valores de λ) o usando logaritmos.
+EJEMPLO 6 El número de personas por día que llegan a una sala de urgencias tiene una distribución de Poisson con media 5. 
+Hallar la probabilidad de que cuando mucho lleguen tres personas por día y la probabilidad de que por lo menos lleguen 8 personas 
+por día. La probabilidad de que cuando mucho lleguen 3 personas es Pr{X
+3}= e
+5{50/0! + 51/1! + 52/2! + 53/3!}. De acuerdo 
+con el apéndice VIII, e−5 = 0.006738 y Pr{X
+3}= 0.006738{1+ 5 + 12.5 + 20.8333}= 0.265. Empleando MINITAB, la secuen-
+cia “Calc ⇒ Probability distribution ⇒ Poisson” da la caja de diálogo de la distribución de Poisson que se llena como se mues-
+tra en la figura 7-3.
+El resultado que se obtiene es el siguiente:
+Función de distribución acumulada
+Poisson with mean = 5
+x    P(X<=x)
+3    0.265026
+El resultado es el mismo que el hallado usando el apéndice VIII.
+Figura 7-2 Gráfica de una curva binomial correspondiente a N  16 y p  0.5 y una curva normal
+con media  8 y desviación estándar  2.
+16
+12
+8
+4
+0
+0.20
+0.15
+0.10
+0.05
+0.00
+0.20
+0.15
+0.10
+0.05
+0.00
+16
+12
+8
+4
+0
+p(X )
+X
+f(Y )
+Y
+Binomial
+Normal
+
+[Bloque seleccionado #201 | relevancia=9]
+Pagina 200
+176  CAPÍTULO 7 LAS DISTRIBUCIONES BINOMIAL, NORMAL Y DE POISSON
+La probabilidad de que lleguen por lo menos 8 personas por día es Pr{X  8} ¼ 1  Pr{X  7}. Empleando 
+MINITAB se encuentra:
+Función de distribución acumulada
+Poisson with mean = 5
+x    P(X < = x)
+7    0.866628
+Pr{X  8} ¼ 1  0.867 ¼ 0.133.
+En la tabla 7.3 se enumeran algunas de las propiedades de la distribución de Poisson.
+RELACIÓN ENTRE LAS DISTRIBUCIONES BINOMIAL Y DE POISSON
+En la distribución binomial (1), si N es grande, pero la probabilidad p de la ocurrencia de un evento es cercana a 0, con 
+lo que q = 1 − p es cercana 1, al evento se le llama evento raro. En la práctica se considera que un evento es raro si el 
+número de ensayos es por lo menos 50 (N ≥ 50) mientras que Np es menor a cinco. En tales casos la distribución bino-
+mial (1) se aproxima con la distribución de Poisson (5) con λ = Np. Esto se comprueba comparando las tablas 7.1 y 
+7.3, ya que sustituyendo λ = Np, q ≈ 1 y p ≈ 0 en la tabla 7.1 se obtienen los resultados de la tabla 7.3.
+Como existe una relación entre las distribuciones binomial y normal, también existe una relación entre las distri-
+buciones de Poisson y normal. En efecto, se puede demostrar que a medida que λ aumenta indefinidamente, la dis-
+tribución de Poisson se aproxima a la distribución normal con variable estandarizada ðX  Þ=
+ﬃﬃﬃ
+
+p
+. 
+Figura 7-3 MINITAB, cuadro de diálogo para la distribución de Poisson.
+Tabla 7.3 Distribución de Poisson
+Media
+  ¼ 
+Varianza
+ 2 ¼ 
+Desviación estándar
+  ¼
+ﬃﬃﬃ
+
+p
+Coeficiente momento de sesgo
+3 ¼ 1=
+ﬃﬃﬃ
+
+p
+Coeficiente momento de curtosis
+4 ¼ 3 þ 1=
+
+[Bloque seleccionado #219 | relevancia=9]
+Pagina 218
+194  CAPÍTULO 7 LAS DISTRIBUCIONES BINOMIAL, NORMAL Y DE POISSON
+SOLUCIÓN
+La probabilidad de que una herramienta esté defectuosa es p = 0.1.
+a) 
+Pr{2 de 10 herramientas defectuosas} ¼
+10
+2
+
+
+ð0:1Þ2ð0:9Þ8 ¼ 0:1937  o bien  0.19
+b) 
+Con λ = Np = 10(0.1) = 1 y usando e = 2.718,
+Pr{2 de 10 herramientas defectuosas} ¼ Xe
+X!
+¼ ð1Þ2e1
+2!
+¼ e1
+2 ¼ 1
+2e ¼ 0:1839  o bien  0.18
+En general, esta aproximación es buena si p ≤ 0.1 y λ = Np ≤ 5.
+7.28 
+Si la probabilidad de que un individuo tenga una reacción adversa por la inyección de determinado suero es 
+0.001, determinar la probabilidad de que de 2 000 individuos: a) exactamente 3 y b) más de 2, sufran una reac-
+ción adversa. Usar MINITAB y hallar la respuesta empleando tanto Poisson como distribuciones binomiales.
+SOLUCIÓN
+a) 
+En el siguiente resultado de MINITAB se da primero la probabilidad binomial de que exactamente 3 individuos tengan 
+una reacción adversa. Después de la probabilidad binomial se da la probabilidad de Poisson empleando λ = Np =
+(2 000)(0.001) = 2. La aproximación de Poisson al parecer es en extremo cercana a la probabilidad binomial.
+ 
+MTB > pdf 3;
+ 
+SUBC> binomial 2000.001.
+Función de probabilidad de densidad
+ 
+Binomial con n = 2000 y p = 0.001
+ 
+    x     P( X = x)
+ 
+  3.0       0.1805
+ 
+MTB > pdf 3;
+ 
+SUBC> poisson 2.
+Función de probabilidad de densidad
+ 
+Poisson con mu = 2
+ 
+     x    P( X = x)
+ 
+  3.00      0.1804
+b) 
+La probabilidad de que más de dos individuos tengan una reacción adversa se obtiene de 1 − P(X ≤ 2). El siguiente 
+resultado de MINITAB da como probabilidad de que X ≤ 2 el resultado 0.6767 usando tanto la distribución binomial 
+como la distribución de Poisson. La probabilidad de que más de 2 tengan una reacción adversa es 1 − 0.6767 = 
+0.3233.
+ 
+MTB > cdf 2;
+ 
+SUBC> binomial 2000.001.
+Función de distribución acumulada
+ 
+Binomial con n = 2000 y p = 0.001
+ 
+    x     P( X ⇐ x)
+ 
+  2.0       0.6767
+ 
+MTB > cdf 2;
+ 
+SUBC> poisson 2.
+Función de distribución acumulada
+ 
+Poisson con mu = 2
+ 
+    x     P( X ⇐ x)
+ 
+  2.0      0.6767
+
+[Bloque seleccionado #273 | relevancia=10]
+Pagina 272
+La tabla 10.1, en la que se dan los valores críticos de z tanto para pruebas de una cola como para pruebas de dos 
+colas correspondientes a varios niveles de significancia, se encontrará útil como referencia. Valores críticos de z para 
+otros niveles de significancia se encuentran en la tabla de áreas de la curva normal (apéndice II).
+PRUEBAS ESPECIALES
+Cuando las muestras son grandes, las distribuciones muestrales de muchos estadísticos tienen una distribución normal 
+(o por lo menos aproximadamente normal), y en estas pruebas se puede emplear la correspondiente puntuación z. Los 
+siguientes casos especiales, tomados de la tabla 8.1, son sólo algunos de los estadísticos de interés práctico. En cada 
+uno de estos casos, el resultado es válido para poblaciones infinitas o cuando el muestreo se hace con reposición. Si el 
+muestreo se hace de poblaciones finitas y sin reposición, es necesario modificar las fórmulas. Ver la página 182.
+1. Media. Aquí S ¼ X, la media muestral; S ¼  X ¼ , la media poblacional, y S ¼  X ¼ =
+ﬃﬃﬃﬃ
+N
+p
+, donde σ es la 
+desviación estándar poblacional y N es el tamaño de la muestra. La puntuación z está dada por
+ 
+z ¼
+X  
+=
+ﬃﬃﬃﬃ
+N
+p
+ 
+Si es necesario, para estimar σ se emplea la desviación muestral s o ^s.
+2. Proporciones. Aquí S = P, la proporción de “éxitos” en una muestra; µS = µP = p, donde p es la proporción 
+poblacional de éxitos y N es el tamaño de la muestra, y S ¼ P ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+pq=N
+p
+, donde q = 1 − p.
+ 
+La puntuación z está dada por
+ 
+z ¼ P  p
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+pq=N
+p
+ 
+En el caso de P = X/N, donde X = cantidad de éxitos obtenidos realmente en una muestra, la puntuación z se 
+transforma en
+ 
+ 
+z ¼ X  Np
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+Npq
+p
+ 
+Es decir, µX = µ = Np, X ¼  ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+Npq
+p
+ y S = X. 
+Las fórmulas para otros estadísticos se pueden obtener de manera similar.
+CURVA CARACTERÍSTICA DE OPERACIÓN; POTENCIA DE UNA PRUEBA
+Se ha visto cómo limitar el error tipo I eligiendo de manera adecuada el nivel de significancia. Para evitar totalmente 
+cometer un error tipo II, simplemente no hay que cometerlo, que es lo mismo que no aceptar ninguna hipótesis. Sin 
+embargo, en la práctica esto no es posible. Entonces lo que se hace es emplear las curvas características de operación 
+o curvas OC, que son curvas que muestran la probabilidad de cometer un error tipo II bajo diversas hipótesis. Estas 
+curvas proporcionan indicaciones de qué tan bien permite una prueba determinada minimizar los errores tipo II; es 
+decir, indican la potencia de una prueba para evitar que se cometan errores de decisión. Estas curvas son útiles e
+
+[Bloque seleccionado #274 | relevancia=10]
+Pagina 273
+PRUEBAS PARA DIFERENCIAS MUESTRALES  249
+calcula el valor p y si el valor p ≤ α, se rechaza H0. En caso contrario, no se rechaza H0. En pruebas para medias 
+empleando muestras grandes (n > 30), el valor p se calcula como sigue:
+1. Para H0 : µ = µ0 y H1 : µ < µ0, valor p = P(Z < el estadístico de prueba calculado).
+2. Para H0 : µ = µ0 y H1 : µ > µ0, valor p = P(Z > el estadístico de prueba calculado).
+3. Para H0 : µ = µ0 y H1 : µ ≠ µ0, valor p = P(Z <−| el estadístico de prueba calculado |) + P(Z > | el estadístico 
+de prueba calculado |).
+El estadístico de prueba calculado es x  0
+ðs=
+ﬃﬃn
+p Þ, donde x es la media de la muestra, s es la desviación estándar de la
+muestra y µ0 es el valor que se ha especificado para µ en la hipótesis nula. Obsérvese que σ no se conoce, se estima
+a partir de la muestra y se usa s. Este método para pruebas de hipótesis es equivalente al método de hallar el o los 
+valores críticos y si el estadístico de prueba cae en la región de rechazo, rechazar la hipótesis nula. Usando cualquiera 
+de estos métodos se llega a la misma decisión.
+GRÁFICAS DE CONTROL
+En la práctica suele ser importante darse cuenta cuándo un proceso ha cambiado lo suficiente como para que se deban 
+tomar medidas para remediar la situación. Estos problemas surgen, por ejemplo, en el control de calidad. Los supervi-
+sores de control de calidad deben decidir si los cambios observados se deben sólo a fluctuaciones casuales o a verda-
+deros cambios en el proceso de fabricación debidos al deterioro de las máquinas, a los empleados, a errores, etc. Las 
+gráficas de control proporcionan un método útil y sencillo para tratar tales problemas (ver problema 10.16).
+PRUEBAS PARA DIFERENCIAS MUESTRALES
+Diferencias entre medias
+Sean X1 y X2 las medias muestrales de muestras grandes de tamaños N1 y N2 obtenidas de poblaciones cuyas medias 
+son µ1 y µ2 y cuyas desviaciones estándar son σ1 y σ2, respectivamente. Considérese la hipótesis nula de que no hay 
+diferencia entre las dos medias poblacionales (es decir, µ1 = µ2), lo cual es equivalente a decir que las muestras se han 
+tomado de dos poblaciones que tienen la misma media.
+Haciendo µ1 = µ2 en la ecuación (5) del capítulo 8 se ve que la distribución muestral de las diferencias entre las 
+medias es aproximadamente normal con media y desviación estándar dadas por
+ 
+ X1 X2 ¼ 0  y   X1 X2 ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+2
+1
+N1
+þ 2
+2
+N2
+s
+ 
+(1)
+donde, si es necesario, se pueden usar las desviaciones estándar muestrales s1 y s2 (o ^s1 y ^s2) como estimaciones de σ1 
+y σ2.
+Empleando la variable estandarizada, o pun
+
+[Bloque seleccionado #279 | relevancia=11]
+Pagina 278
+254  CAPÍTULO 10 TEORÍA ESTADÍSTICA DE LA DECISIÓN
+SOLUCIÓN
+Si p es la probabilidad de que la persona elija correctamente el color de la carta, entonces hay que decidir entre las dos 
+hipótesis:
+H0 : p = 0.5, el individuo simplemente está adivinando (es decir, el resultado se debe a la casualidad).
+H1 : p > 0.5, la persona tiene PES.
+Como lo que interesa no es la habilidad de la persona para obtener puntuaciones extremadamente bajas, sino sólo su 
+habilidad para obtener puntuaciones altas, se elige una prueba de una cola. Si la hipótesis H0 es verdadera, entonces la media 
+y la desviación estándar de la cantidad de cartas identificadas correctamente están dadas por
+ 
+µ = Np = 50(0.5) = 25  y   ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+Npq
+p
+¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+50ð0:5Þð0:5Þ
+p
+¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+12:5
+p
+¼ 3:54
+a) 
+Como se trata de una prueba de una cola con nivel de significancia 0.05, en la figura 10-4 se debe elegir z de manera 
+que el área sombreada, en la región crítica de puntuaciones altas, sea 0.05. El área entre 0 y z será 0.4500 y z = 1.645; 
+este valor también se puede leer en la tabla 10.1. Por lo tanto, la regla de decisión (o prueba de significancia) es:
+ Si la puntuación z observada es mayor a 1.645, los resultados son significativos al nivel 0.05 y la persona tiene 
+poderes extrasensoriales.
+ Si la puntuación z es menor a 1.645, los resultados se deben a la casualidad (es decir, no son significativos al 
+nivel 0.05).
+Como 32 en unidades estándar (32 − 25)/3.54 = 1.98, lo cual es mayor a 1.645, se concluye, al nivel 0.05, que 
+la persona tiene poderes extrasensoriales.
+Obsérvese que en realidad debe aplicarse la corrección por continuidad, ya que 32 en una escala continua está 
+entre 31.5 y 32.5. Sin embargo, la puntuación estándar correspondiente a 31.5 es (31.5 − 25)/3.54 = 1.84, con lo que 
+se llega a la misma conclusión.
+b) 
+Si el nivel de significancia es 0.01, entonces el área entre 0 y z es 0.4900, de donde se concluye que z = 2.33.
+Como 32 (o 31.5) en unidades estándar es 1.98 (o 1.84), que es menor a 2.33, se concluye que los resultados no son 
+significativos al nivel 0.01.
+Algunos especialistas en estadística adoptan la siguiente terminología: resultados significativos al nivel 0.01 son 
+altamente significativos; resultados significativos al nivel 0.05, pero no al nivel 0.01, son probablemente significativos, y 
+resultados significativos a niveles mayores a 0.05 no son significativos. De acuerdo con esta terminología se concluye que 
+los resultados experimentales anteriores son probablemente significativos, de manera que será necesario hacer más inves
+
+[Bloque seleccionado #281 | relevancia=10]
+Pagina 280
+256  CAPÍTULO 10 TEORÍA ESTADÍSTICA DE LA DECISIÓN
+SOLUCIÓN
+En el siguiente resultado de MINITAB se halla, primero, la desviación estándar y después se emplea en las declaraciones 
+Ztest y Zinterval.
+MTB > standard deviation cl
+Standard deviation of hours = 1.6005
+MTB > ZTest 5.01.6005 ‘hours’ ;
+SUBC> Alternative 0.
+Prueba Z
+Test of mu = 5.000 vs mu not = 5.000
+The assumed sigma = 1.60
+Variable 
+N 
+Mean 
+StDev 
+SE Mean 
+Z 
+P
+hours 
+33 
+6.897 
+1.600 
+0.279 
+6.81 
+0.0000
+MTB > ZInterval 95.01.6005 
+‘hours’
+Variable 
+N 
+Mean 
+StDev 
+SE Mean 
+95.0 % CI
+hours 
+33 
+6.897 
+1.600 
+0.279 
+( 6.351, 7.443)
+a) 
+El valor calculado para el estadístico de prueba es Z ¼ 6:897  5
+0:279
+¼ 6:81, los valores críticos son ±1.96, y la hipóte-
+ 
+sis nula se rechaza. Obsérvese que éste es el valor encontrado que aparece en el resultado de MINITAB.
+b) 
+El valor p encontrado, de acuerdo con los resultados de MINITAB, es 0.0000, por lo tanto, el valor p < α = 0.05, la 
+hipótesis nula se rechaza.
+c) 
+Como el valor especificado por la hipótesis nula, 5, no está contenido en el intervalo de confianza de 95% para µ, la 
+hipótesis nula se rechaza.
+Estos tres procedimientos para probar una hipótesis nula contra una de hipótesis alternativa de dos colas son 
+equivalentes.
+10.9 
+La resistencia a la ruptura de los cables fabricados por una empresa tiene media de 1 800 libras (lb) y desviación 
+estándar de 100 lb. Se asegura que mediante una nueva técnica puede aumentarse la resistencia a la ruptura. 
+Para probar esto, se prueba una muestra de 50 cables y se encuentra que su resistencia media a la ruptura es
+1 850 lb. ¿Puede apoyarse, a nivel de significancia 0.01, la aseveración hecha antes?
+SOLUCIÓN
+Se tiene que decidir entre las dos hipótesis siguientes:
+H0 : µ = 1 800 lb, en realidad no hay cambio en la resistencia a la ruptura.
+H1 : µ > 1 800 lb, sí hay cambio en la resistencia a la ruptura.
+Por lo tanto, se debe usar una prueba de una cola; el diagrama correspondiente a esta prueba es idéntico al de la figura 10-4 
+del problema 10.5a). A nivel de significancia 0.01, la regla de decisión es: 
+ Si la puntuación z observada es mayor a 2.33, los resultados son significativos a nivel de significancia 0.01 y H0 se 
+rechaza.
+Si no es así, H0 se acepta (o la decisión se aplaza).
+Bajo la hipótesis de que H0 es verdadera, se encuentra que
+z = X
+N
+
+= 1 850
+1 800
+100
+50
+
+= 3.55
+que es mayor a 2.33. Por lo tanto, se concluye que los resultados son altamente significativos y que la aseveración hecha 
+puede apoyarse.
+
+[Bloque seleccionado #296 | relevancia=16]
+Pagina 295
+SOLUCIÓN
+La hipótesis nula es H0 : p = 0.4 y la hipótesis alternativa Ha : p > 0.4. El valor de X observado es 131, donde X es la can-
+tidad de los que usan algún software. El valor p = P{X ≥ 131 dado que p = 0.4}. El valor p = 1 − P{X ≤ 130 dado que
+p = 0.4}. Empleando MINITAB, con la secuencia “Calc ⇒ Probability Distribution ⇒ Binomial” se abre el cuadro de 
+diálogo que se muestra en la figura 10-14.
+Con el cuadro de diálogo de la figura 10-14 se obtiene el resultado siguiente.
+Función de distribución acumulada
+Binomial with n=300 and p=0.4
+x 
+ 
+P(X<=x)
+130  
+0.891693
+El valor p es 1 − P{X ≤ 130 dado que p = 0.4} = 1 − 0.8971 = 0.1083. El resultado X = 131 no es significativo a 
+0.01, 0.05 ni 0.10.
+PROBLEMAS SUPLEMENTARIOS
+PRUEBAS PARA MEDIAS Y PARA PROPORCIONES
+EMPLEANDO DISTRIBUCIONES NORMALES
+10.29 
+Una urna contiene sólo canicas azules y rojas. Para probar la hipótesis nula de que las canicas de ambos colores se encuen-
+tran en la misma proporción, se toma una muestra, con reposición, de 64 canicas; se anotan los colores de las canicas que 
+se van extrayendo y se adopta la siguiente regla de decisión:
+ 
+La hipótesis nula se acepta si 28 ≤ X ≤ 36, donde X es la cantidad de canicas rojas en la muestra de tamaño 64.
+ 
+La hipótesis nula se rechaza si X ≤ 27 o si X ≥ 37.
+a) 
+Encontrar la probabilidad de rechazar la hipótesis nula si es correcta.
+b) 
+Graficar la regla de decisión y el resultado que se obtenga en el inciso a).
+10.30 
+a) 
+ ¿Qué regla de decisión se adopta en el problema 10.29 si lo que se busca es que la probabilidad de rechazar la hipóte-
+sis nula siendo en realidad correcta no sea mayor a 0.01 (es decir, si se quiere que el nivel de significancia sea 0.01)?
+b) 
+¿A qué nivel de confianza se puede aceptar la hipótesis nula?
+c) 
+¿Cuál es la regla de decisión si se emplea como nivel de significancia 0.05?
+10.31 
+Supóngase que en el problema 10.29 se desea probar la hipótesis de que la proporción de canicas rojas es mayor que la de 
+canicas azules.
+a) 
+¿Cuál es entonces la hipótesis nula y cuál la hipótesis alternativa?
+b) 
+¿Se debe usar una prueba de una cola o de dos colas? ¿Por qué?
+c) 
+¿Cuál debe ser la regla de decisión si el nivel de significancia es 0.05?
+d ) ¿Cuál es la regla de decisión si el nivel de significancia es 0.01?
+10.32 
+Se lanzan 100 veces un par de dados y en 23 de las veces aparece un 7. Al nivel de significancia 0.05, probar la hipótesis 
+de que los dados no están cargados empleando: a) una prueba de dos colas y b) una prueba de una cola. Analizar las razones, 
+si es que las hay, para preferir una de estas d
+
+[Bloque seleccionado #479 | relevancia=12]
+Pagina 478
+454  CAPÍTULO 17 PRUEBAS NO PARAMÉTRICAS
+b) 
+Restando 75 a cada una de las entradas de la tabla 17.5 se obtiene la tabla 17.7, en la que hay 13 signos más y 27 
+signos menos. Como
+ 
+ 
+z ¼ ð13 þ 0:5Þ  ð40Þð0:5Þ
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+ð40Þð0:5Þð0:5Þ
+p
+¼ 2:06
+ 
+al nivel de significancia 0.05, se rechaza la hipótesis de que la mediana sea 75.
+Tabla 17.7
+−
++
+−
+−
+−
+−
++
+−
+−
++
+−
++
+−
++
+−
+−
++
+−
+−
+−
+−
+−
+−
++
+−
++
+−
++
+−
++
+−
+−
++
+−
+−
++
+−
+−
++
+−
+Empleando este método se puede encontrar un intervalo de confianza de 95% para la calificación mediana en 
+este examen. (Ver el problema 17.30.)
+Obsérvese que en la solución anterior se emplea el método clásico de prueba de hipótesis. En el método clásico se 
+emplea α = 0.05 para determinar la región de rechazo para la prueba, [z < −1.96 o z > 1.96]. A continuación se calcula el 
+estadístico de prueba [en el inciso a) z = −1.14, y en el inciso b) z = −2.06]. Si el estadístico de prueba cae en la región 
+de rechazo, se rechaza la hipótesis nula. Si este estadístico no cae en la región de rechazo, no se rechaza la hipótesis nula.
+En la solución de MINITAB se usa el método del valor p. Se calcula el valor p y si este valor es menor a 0.05, se 
+rechaza la hipótesis nula. Si el valor p es mayor que 0.05, no se rechaza la hipótesis nula. Usando tanto el método clásico 
+como el método del valor p se llega a la misma decisión.
+La solución empleando MINITAB es la que se muestra a continuación. Para probar que la mediana es 66, el resul-
+tado es el siguiente
+Prueba de los signos para la mediana: Calificaciones
+Sign test of median ¼ 66.00 versus not ¼ 66.00
+N
+Below
+Equal
+Above
+P
+Median
+Grade
+40
+15
+2
+23
+0.2559
+70.00
+Como el valor p es mayor que 0.05, no se rechaza la hipótesis nula. 
+El resultado para probar que la mediana es 75 es
+Prueba de los signos para la mediana: Calificaciones
+Sign test of median ¼ 75.00 versus not ¼ 75.00
+N
+Below
+Equal
+Above
+P
+Median
+Grade
+40
+27
+0
+13
+0.0385
+70.00
+Como el valor p es < 0.05, se rechaza la hipótesis nula. 
+LA PRUEBA U DE MANN-WHITNEY
+17.5 
+Volver a la tabla 17.2. Al nivel de significancia 0.05, determinar si hay alguna diferencia entre los cables hechos 
+con la aleación I y los hechos con la aleación II. Resolver el problema, primero a mano, dando todos los deta-
+lles de la prueba U de Mann-Whitney, y después usando MINITAB.
+SOLUCIÓN
+La solución se encuentra siguiendo los pasos 1, 2 y 3 (antes descritos en este capítulo):
+Paso 1. Se juntan los 18 valores muestrales y se ordenan de menor a mayor, con lo cual se obtiene el primer renglón 
+de la tabla 17.8. En el segundo renglón se numera
+
+[Bloque seleccionado #550 | relevancia=22]
+Pagina 549
+RESPUESTAS A LOS PROBLEMAS SUPLEMENTARIOS  525
+10.30 
+a)  Rechazar la hipótesis nula si X ≤ 21 o X ≥ 43, donde X = número de canicas rojas extraídas; b) 0.99186; c) rechazar si 
+X ≤ 23 o X ≥ 41.
+10.31 
+a)  Ho: p = 0.5 Ha: p > 0.5; b) prueba de una cola; c) rechazar la hipótesis nula si X ≥ 40; d ) rechazar la hipótesis nula si 
+X ≥ 41.
+10.32 
+a)  Para dos colas, valor p = 2*(1–BINOMDIST(22,100,0.16666,1) = 0.126 > 0.05. Al nivel de significancia 0.05, 
+no se rechaza la hipótesis nula. 
+b)  Para una cola, valor p = 1–BINOMDIST(22,100,0.16666,1) = 0.063 > 0.05. Al nivel de significancia 0.05, no 
+se rechaza la hipótesis nula.
+10.33 
+Empleando ya sea una prueba de una cola o una prueba de dos colas, al nivel de significancia 0.01 no se puede rechazar la 
+hipótesis. 
+10.34 
+ Ho: p ≥ 0.95 Ha: p < 0.95
+Valor p = P{X ≤ 182 de 200 piezas cuando p = 0.95} = BINOMDIST(182,200,0.95,1) = 0.012. No se rechaza a 
+0.01, pero se rechaza a 0.05
+10.35 
+Estadístico de prueba = 2.63, valores críticos ±1.7805, se rechaza la hipótesis nula.
+10.36 
+Estadístico de prueba = −3.39, valor crítico para 0.10 es −1.28155, valor crítico para 0.025 es −1.96. El resultado es 
+significativo a α = 0.10 y α = 0.025. 
+10.37 
+Estadístico de prueba = 6.46, valor crítico = 1.8808, se concluye que µ > 25.5.
+10.38 
+=NORMSINV(0.9) = 1.2815 para α = 0.1, =NORMSINV(0.99) = 2.3263 para α = 0.01 y =NORMSINV(0.999) 
+= 3.0902 para α = 0.001.
+10.39 
+valor p = P{X ≤ 3} + P{X ≥ 12} = 0.0352.
+10.40 
+valor p = P{Z < −2.63} + P{Z > 2.63} = 0.0085.
+10.41 
+valor p = P{Z < −3.39} = 0.00035.
+10.42 
+valor p = P{Z > 6.46} = 5.23515E-11.
+10.43 
+a) 8.64 ± 0.96 oz; b) 8.64 ± 0.83 oz; c) 8.64 ± 0.63 oz.
+10.44 
+Los límites superiores de control son: a) 12 y b) 10.
+10.45 
+Estadístico de prueba = −5.59, valor p = 0.000. Se rechaza la hipótesis nula ya que el valor p < α.
+10.46 
+Estadístico de prueba = −1.58, valor p = 0.059. Para α = 0.05 no se rechaza, para α = 0.10 sí se rechaza. 
+10.47 
+Estadístico de prueba = −1.73, valor p = 0.042. Para α = 0.05 se rechaza, para α = 0.01 no se rechaza.
+10.48 
+Con una prueba de una cola se observa que, a ambos niveles de significancia, el nuevo fertilizante es mejor. 
+10.49 
+a) Estadístico de prueba = 1.35, valor p = 0.176, no se puede rechazar la hipótesis nula a α = 0.05.
+b) Estadístico de prueba = 1.35, valor p = 0.088, no se puede rechazar la hipótesis nula a α = 0.05.
+10.50 
+a) Estadístico de prueba = 1.81, valor p = 0.07, no se puede rechazar la hipótesis nula a α = 0.05. 
+b) Estadístico de prueba = 1.81, valor p = 0.0035, se rechaza la hipótesis nula a α = 0.05.
+10.

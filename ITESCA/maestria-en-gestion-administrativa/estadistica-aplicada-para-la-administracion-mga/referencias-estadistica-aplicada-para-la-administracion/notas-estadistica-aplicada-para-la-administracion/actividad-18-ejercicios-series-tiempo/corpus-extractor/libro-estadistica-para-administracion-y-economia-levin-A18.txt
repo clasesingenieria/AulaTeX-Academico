@@ -1,0 +1,1041 @@
+Fuente bibliográfica: Estadística para administración y economía - Levin y Rubin. 7.ª edición revisada.pdf
+Actividad: 18 (6.3 Ejercicios Equipo 5% Tarea)
+Palabras clave: índices estacionales, promedio móvil, promedio móvil ponderado, suavizamiento exponencial, modelo estacional multiplicativo, pronóstico
+
+[Bloque seleccionado #711 | relevancia=9]
+Pagina 710
+todos sus productos. La habilidad de pronosticar patrones de corto plazo, como la demanda de
+pavo en Navidad, dulces el Día del Niño o duraznos en verano, es útil para la administración
+de la cadena.
+3. Una vez establecido el patrón estacional existente, podemos eliminar sus efectos de la se-
+rie de tiempo Este ajuste nos permite calcular la variación estacional que se repite cada año.
+Cuando eliminamos el efecto de la variación estacional de una serie de tiempo, hemos deses-
+tacionalizado la serie.
+Método de razón de promedio móvil
+Con el fin de medir la variación estacional, es común usar el método de razón de promedio móvil.
+Esta técnica proporciona un índice que describe el grado de variación estacional. El índice está ba-
+sado en una media de 100, con el grado de estacionalidad medido por las variaciones respecto a la
+base. Por ejemplo, si examinamos la estacionalidad de la renta de canoas en un hotel de veraneo, po-
+dríamos encontrar que el índice del trimestre de primavera es 142. El valor 142 indica que 142% 
+de las rentas trimestrales promedio ocurre en primavera. Si la administración registró 2,000 rentas de
+canoas durante todo el año anterior, entonces la renta promedio por trimestre será 2,000/4  500.
+Como el índice del trimestre de primavera es 142, estimamos el número de alquileres de canoas de
+la forma siguiente:
+
+
+↓
+500  1
+1
+4
+0
+2
+0
+  710
+→
+←
+El ejemplo con que abrimos el capítulo puede ilustrar el método de razón de promedio móvil. El
+hotel de veraneo desea establecer el patrón estacional de demanda de cuartos por parte de sus
+clientes. La administración desea mejorar el servicio al cliente y está considerando varios planes de
+contratación de personal durante los periodos pico. La tabla 15-9 presenta la ocupación por trimes-
+tre, es decir, el número promedio de huéspedes durante cada trimestre de los últimos cinco años.
+Nos referiremos a la tabla 15-9 para exponer los seis pasos requeridos para el cálculo de un índi-
+ce estacional.
+1. El primer paso en el cálculo de un índice estacional consiste en calcular el total móvil de
+4 trimestres para la serie de tiempo Para hacerlo, calculamos el total de los valores para los
+trimestres durante el primer año, 2005 en la tabla 15-9: 1,861  2,203  2,415  1,908 
+8,387. Un total móvil se asocia con el dato que ocupa el lugar medio del conjunto de valores
+del cual fue calculado. Como nuestro primer total de 8,387 se calculó a partir de cuatro datos,
+lo colocamos frente al punto medio de esos trimestres, de modo que queda en la columna 4 de
+la tabla 15-10, entre los renglon
+
+[Bloque seleccionado #712 | relevancia=10]
+Pagina 711
+Este total se coloca en la tabla 15-10 justo debajo del primer total trimestral, 8,347. Continua-
+mos con este procedimiento de “deslizar” el total de cuatro trimestres por la serie de tiempo
+hasta incluir el último valor de la serie. En el ejemplo, corresponde a las 1,967 habitaciones del
+cuarto trimestre de 2009, el último número de la columna 3 de la tabla. El último elemento de
+la columna de totales móviles es 8,793. Se encuentra entre los renglones de los trimestres 2009-
+II y 2009-III, ya que se calculó con los datos de los cuatro trimestres de 2009.
+2. En el segundo paso, calculamos el promedio móvil de los cuatro trimestres, dividiendo en-
+tre 4 cada uno de los totales. En la tabla 15-10, dividimos entre cuatro los valores que se en-
+cuentran en la columna 4, para obtener los valores de la columna 5.
+3. En el tercer paso, centramos el promedio móvil de cuatro trimestres. Los promedios mó-
+viles de la columna 5 caen a la mitad de los trimestres. Tal vez sería mejor tener promedios
+móviles asociados a cada trimestre. Con el fin de centrar nuestros promedios móviles, asocia-
+mos a cada trimestre el promedio de los dos promedios móviles de cuatro trimestres que caen
+justo arriba y abajo de éste. Para el trimestre 1991-III, el promedio móvil centrado de cuatro
+trimestres resultante es 2,104.25, es decir (2,096.75  2,111.75)/2. Los otros elementos de la 
+columna 6 se calculan de la misma forma. En la figura 15-7 se ilustra cómo el promedio mó-
+vil suaviza los picos y los valles de la serie de tiempo original. Las componentes estacional 
+e irregular se suavizaron, y la línea punteada resultante, representa las componentes cíclicas 
+y de tendencia de la serie.
+Paso 3: Centre el 
+promedio móvil de 
+4 trimestres
+Paso 2: Calcule el
+promedio móvil de
+los 4 trimestres
+15.5
+Variación estacional
+693
+Cálculo del promedio
+móvil centrado de 4 tri-
+mestres
+Tabla 15-10
+Paso 4:
+Porcentaje
+Paso 3:
+del valor
+Paso 1:
+Paso 2:
+Promedio
+real respecto
+Total
+Promedio
+móvil 
+al promedio
+móvil de
+móvil de los
+centrado de
+móvil
+Año
+Trimestre
+Ocupación
+4 trimestres
+4 trimestres
+4 trimestres
+(1)
+(2)
+(3)
+(4)
+(5)  (4)  4
+(6)
+(7)  (
+(
+3
+6
+)
+)
+  100
+2005
+I
+1,861
+II
+2,203
+III
+2,415
+8,387
+2,096.75
+2,104.250
+114.8
+IV
+1,908
+8,447
+2,111.75
+2,129.250
+89.6
+2006
+I
+1,921
+8,587
+2,146.75
+2,159.125
+89.0
+II
+2,343
+8,686
+2,171.50
+2,181.250
+107.4
+III
+2,514
+8,764
+2,191.00
+2,180.125
+115.3
+IV
+1,986
+8,677
+2,169.25
+2,145.625
+92.6
+2007
+I
+1,834
+8,488
+2,122.00
+2,070.000
+88.6
+II
+2,154
+8,072
+2,018.00
+1,994.625
+108.0
+III
+2,098
+7,885
+1,971.25
+1,971.625
+106.4
+IV
+1,799
+7,888
+1,972.00
+1,955.875
+9
+
+[Bloque seleccionado #713 | relevancia=11]
+Pagina 712
+3.
+Suponga que trabajamos con los datos de admisión de la sala de urgencias de un hospital,
+y deseamos calcular los índices diarios. En los pasos 1 y 2, calculamos los totales móviles y los
+promedios móviles de 7 días, y los promedios móviles ya quedan centrados (debido a que el
+punto medio de un periodo de 7 días es el cuarto día). En este caso, el paso 3 no es necesario.
+Siempre que el número de periodos para los cuales queremos obtener índices sea impar (7 días
+en una semana, 3 turnos en un día), podemos omitir el paso 3. Sin embargo, cuando el número
+de periodos es par (4 trimestres, 12 meses, 24 horas), entonces debemos seguir el paso 3 para
+centrar los promedios móviles obtenidos en el paso 2.
+4. Enseguida, calculamos el porcentaje del valor real con respecto al valor del promedio mó-
+vil para cada trimestre de la serie de tiempo que tenga un elemento de promedio móvil de
+4 trimestres. Este paso nos permite recuperar la componente estacional para los trimestres.
+Determinamos este porcentaje dividiendo cada uno de los valores trimestrales reales de la
+columna 3 de la tabla 15-10 entre los valores correspondientes del promedio móvil centrado de
+4 trimestres que se encuentran en la columna 6, y luego multiplicamos el resultado por 100. Por
+ejemplo, encontramos que el porcentaje correspondiente a 2005-III es:
+ 100 
+ 100
+ 114.8
+5. Para reunir todos los porcentajes de los valores reales respecto a los valores del promedio
+móvil de la columna 7 de la tabla 15-10, organícelos por trimestre independientemente al
+año que pertenezcan. Luego calcule la media modificada para cada trimestre. Esta media 
+modificada se calcula descartando los valores más alto y más bajo de cada trimestre y prome-
+diando los valores restantes. La tabla 15-11 presenta el quinto paso y el proceso para encontrar
+la media modificada.
+3.
+Los valores estacionales recuperados de los trimestres, datos en la columna 7 de la tabla
+15-10, todavía contienen las componentes cíclica e irregular de la variación de la serie de tiem-
+po. Al eliminar los valores más alto y más bajo de cada trimestre, reducimos las variaciones cí-
+clica e irregular extremas. Cuando promediamos los valores restantes, suavizamos todavía más
+estas componentes. Las variaciones cíclica e irregular tienden a ser eliminadas mediante este
+proceso, de modo que la media modificada es un índice de la componente estacional. (Algunos
+estadísticos prefieren utilizar la mediana en lugar de calcular la media modificada para obtener
+el mismo resultado.)
+Reducción de varia-
+ciones cíclica e irre-
+gular extremas
+Paso 5: 
+
+[Bloque seleccionado #716 | relevancia=12]
+Pagina 715
+Primavera
+Verano
+Otoño
+Invierno
+2006
+87
+106
+86
+125
+2007
+85
+110
+83
+127
+2008
+84
+105
+87
+128
+2009
+88
+104
+88
+124
+Aplicaciones
+■15-26
+El dueño de la empresa The Pleasure-Glide Boat ha recopilado las siguientes cifras trimestrales del nivel
+de cuentas por cobrar durante los últimos cinco años (miles de dólares):
+Primavera
+Verano
+Otoño
+Invierno
+2005
+102
+120
+90
+78
+2006
+110
+126
+95
+83
+2007
+111
+128
+97
+86
+2008
+115
+135
+103
+91
+2009
+122
+144
+110
+98
+a)
+Calcule un promedio móvil centrado de 4 trimestres.
+b) Encuentre el porcentaje de valores reales respecto al promedio móvil para cada periodo.
+c)
+Determine los índices estacionales y los índices estacionales modificados.
+■15-27
+Marie Wiggs, directora de personal de una compañía farmacéutica registró las siguientes tasas de ausen-
+tismo porcentual para cada trimestre de un periodo de cuatro años:
+Primavera
+Verano
+Otoño
+Invierno
+2006
+5.6
+6.8
+6.3
+5.2
+2007
+5.7
+6.7
+6.4
+5.4
+2008
+5.3
+6.6
+6.1
+5.1
+2009
+5.4
+6.9
+6.2
+5.3
+a)
+Elabore un promedio móvil centrado de 4 trimestres y grafíquelo junto con los datos originales. 
+b) ¿Qué puede concluir acerca del ausentismo en el inciso a)?
+■15-28
+Utilice los siguientes porcentajes de promedios reales respecto a los promedios móviles que describen las
+ventas estacionales de artículos deportivos en un periodo de cinco años, para calcular el índice estacional
+de cada estación.
+Año
+Béisbol
+Fútbol
+Básquetbol
+Jockey
+2005
+96
+128
+116
+77
+2006
+92
+131
+125
+69
+2007
+84
+113
+117
+84
+2008
+97
+118
+126
+89
+2009
+91
+121
+124
+81
+■15-29
+Un fabricante importante de resortes para automóvil ha determinado los siguientes porcentajes de prome-
+dio real respecto al promedio móvil que describen las necesidades trimestrales de dinero en efectivo de la
+compañía para los seis años anteriores:
+Primavera
+Verano
+Otoño
+Invierno
+2004
+108
+128
+94
+70
+2005
+112
+132
+88
+68
+2006
+109
+134
+84
+73
+2007
+110
+131
+90
+69
+2008
+108
+135
+89
+68
+2009
+106
+129
+93
+72
+Calcule el índice estacional para cada trimestre. Comente su comparación con los índices que calculó en
+el ejercicio 15-26.
+15.5
+Variación estacional
+697
+
+[Bloque seleccionado #717 | relevancia=11]
+Pagina 716
+■15-30
+El jefe de admisiones de una universidad ha recabado las siguientes cifras correspondientes a los ingre-
+sos por trimestre para los cinco años anteriores (cientos):
+Primavera
+Verano
+Otoño
+Invierno
+2005
+220
+203
+193
+84
+2006
+235
+208
+206
+76
+2007
+236
+206
+209
+73
+2008
+241
+215
+206
+92
+2009
+239
+221
+213
+115
+a)
+Calcule un promedio móvil centrado de cuatro trimestres.
+b) Encuentre el porcentaje del promedio real respecto al promedio móvil para cada periodo.
+c)
+Determine los índices estacionales y los índices estacionales modificados.
+■15-31
+El hotel Ski and Putt Resort, una combinación de montañas para esquiar y campo de golf, acaba de tabu-
+lar los datos del número de clientes (en miles) que ha tenido durante cada estación en los últimos 5 años.
+Calcule el índice estacional para cada trimestre. Si el hotel contrata 15 personas en el verano, ¿cuál deberá
+ser el número de empleados en el invierno, suponiendo que ambos deportes tienen iguales requerimien-
+tos de servicio?
+Primavera
+Verano
+Otoño
+Invierno
+2005
+200
+300
+125
+325
+2006
+175
+250
+150
+375
+2007
+225
+300
+200
+450
+2008
+200
+350
+225
+375
+2009
+175
+300
+200
+350
+■15-32
+David Curl Builders recolectó datos trimestrales del número de casas que comenzó a construir durante los
+últimos cinco años.
+Primavera
+Verano
+Otoño
+Invierno
+2005
+8
+10
+7
+5
+2006
+9
+10
+7
+6
+2007
+10
+11
+7
+6
+2008
+10
+12
+8
+7
+2009
+11
+13
+9
+8
+a)
+Calcule el índice estacional para cada trimestre.
+b) Si las necesidades de capital de trabajo de la constructora tienen una relación directa con el número
+de casas, ¿cuánto debe disminuir su capital de trabajo entre verano e invierno?
+Solución al ejercicio de autoevaluación
+EA
+15-4
+Año
+Primavera
+Verano
+Otoño
+Invierno
+2006
+87
+106
+86
+125
+2007
+85
+110
+83
+127
+2008
+84
+105
+87
+128
+2009
+88
+104
+88
+124
+Suma modificada
+172
+211
+173
+252
+Media modificada
+86
+105.5
+86.5
+126
+Índice estacional
+85.15
+104.46
+85.64
+124.75
+La suma de las medias modificadas fue 404, de manera que el factor de ajuste fue 400/404  0.9901. Los índices estacionales
+se obtuvieron multiplicando las medias modificadas por este factor.
+698
+Capítulo 15
+Series de tiempo y pronósticos
+
+[Bloque seleccionado #724 | relevancia=12]
+Pagina 723
+Ejercicios 15.7
+Ejercicio de autoevaluación
+EA
+15-5
+Una comisión estatal designada para controlar el consumo de energía reunió los siguientes datos corres-
+pondientes al consumo de gas natural, en millones de pies cuadrados:
+Año
+Invierno
+Primavera
+Verano
+Otoño
+2006
+293
+246
+231
+282
+2007
+301
+252
+227
+291
+2008
+304
+259
+239
+296
+2009
+306
+265
+240
+300
+a)
+Determine los índices estacionales y desestacionalice estos datos (usando un promedio móvil centra-
+do de cuatro trimestres).
+b) Calcule la recta de mínimos cuadrados que mejor describa esos datos.
+c)
+Identifique la variación cíclica de los datos con el método del residuo cíclico relativo.
+d) Represente gráficamente los datos originales, los datos desestacionalizados y la tendencia.
+Aplicaciones
+15-37
+Una agencia de ecología ha observado la calidad del aire en Nueva York durante cinco años y ha reunido
+los siguientes datos estacionales respecto a los contaminantes (en partes por millón) en el aire.
+Año
+Invierno
+Primavera
+Verano
+Otoño
+2005
+452
+385
+330
+385
+2006
+474
+397
+356
+399
+2007
+494
+409
+375
+415
+2008
+506
+429
+398
+437
+2009
+527
+454
+421
+482
+a)
+Determine los índices estacionales y desestacionalice estos datos (usando un promedio móvil centra-
+do de cuatro trimestres).
+b) Calcule la recta de mínimos cuadrados que mejor describa estos datos.
+c)
+Identifique la variación cíclica en estos datos con el método de residuos cíclicos relativos.
+d) Grafique los datos originales, los datos desestacionalizados y la tendencia.
+■15-38
+Los siguientes datos describen el desempeño de comercialización de un productor regional de cerveza:
+Ventas por trimestre (cientos de miles de dólares)
+Año
+I
+II
+III
+IV
+2005
+19
+24
+38
+25
+2006
+21
+28
+44
+23
+2007
+23
+31
+41
+23
+2008
+24
+35
+48
+21
+a)
+Calcule los índices estacionales para estos datos. (Utilice un promedio móvil centrado de cuatro trimes-
+tres.)
+b) Desestacionalice estos datos utilizando los índices del inciso a).
+15.7
+Problema que incluye a las cuatro componentes de una serie de tiempo
+705
+Un análisis completo de la serie de tiempo
+intenta explicar la tendencia secular, la
+variación cíclica y la variación estacio-
+nal. Lo que queda es la variación irregu-
+lar. Advertencia: aun el mejor análisis de series de tiempo
+describe el comportamiento anterior y puede no pronosticar
+el comportamiento futuro. Sugerencia: la manera correcta de
+proceder al analizar todas las componentes de una serie
+de tiempo es primero desestacionalizar la serie de tiempo,
+después encontrar la línea de tendencia, luego calcular la va-
+riación alrededor de la línea de tendencia y, por último,
+identificar la variación 
+
+[Bloque seleccionado #731 | relevancia=11]
+Pagina 730
+Podemos medir la variación cíclica como un porcentaje de tendencia si dividimos el valor real (Y) entre
+el valor de tendencia (Yˆ ) y luego multiplicamos por 100.
+■
+15-9
+Residuo cíclico relativo 
+ 100
+Otra medida de la variación cíclica es el residuo cíclico relativo, que se obtiene dividiendo la desviación
+de la tendencia (Y  Yˆ ) entre el valor de tendencia, y multiplicando el resultado por 100. El residuo cícli-
+co relativo se puede obtener fácilmente si restamos 100 del porcentaje de tendencia.
+●Ejercicios de repaso (para más ejercicios, consulte el CD que acompaña esta obra)
+■15-44
+El número de personas admitidas a Valley Nursing Home por trimestre está dado en la siguiente tabla:
+Primavera
+Verano
+Otoño
+Invierno
+2006
+29
+30
+41
+43
+2007
+27
+34
+45
+48
+2008
+33
+36
+46
+51
+2009
+34
+40
+47
+53
+a)
+Calcule los índices estacionales para estos datos (use un promedio móvil centrado de 4 trimestres).
+b) Desestacionalice estos datos usando los índices del inciso a).
+c)
+Encuentre la recta de mínimos cuadrados que mejor describa las cifras de la tendencia desestaciona-
+lizada.
+■15-45
+Wheeler Airlines, una línea aérea regional, ha estimado el número de pasajeros para el mes de diciembre
+en 595,000 (desestacionalizado). ¿Cuántos pasajeros debe prever la compañía si el índice estacional de
+diciembre es 128?
+■15-46
+Un grupo de investigación ecológica ha medido el nivel de contaminación por mercurio en el océano en cier-
+to punto de la costa este de Estados Unidos. Se encontraron los siguientes porcentajes de mercurio en el agua:
+Ene.
+Feb.
+Mar.
+Abr.
+May.
+Jun.
+Jul.
+Ago.
+Sep.
+Oct.
+Nov.
+Dic.
+2006
+0.3
+0.7
+0.8
+0.8
+0.7
+0.7
+0.6
+0.6
+0.4
+0.7
+0.2
+0.5
+2007
+0.4
+0.9
+0.7
+0.9
+0.5
+0.8
+0.7
+0.7
+0.4
+0.6
+0.3
+0.4
+2008
+0.2
+0.6
+0.6
+0.9
+0.7
+0.7
+0.8
+0.8
+0.5
+0.6
+0.3
+0.5
+Construya un promedio móvil centrado de 4 meses y grafíquelo junto con los datos originales.
+■15-47
+Un gerente de producción de una fábrica de papel canadiense ha acumulado la siguiente información que
+describe la cantidad de papel (en millones de libras) procesado cada trimestre:
+Primavera
+Verano
+Otoño
+Invierno
+2006
+3.1
+5.1
+5.6
+3.6
+2007
+3.3
+5.1
+5.8
+3.7
+2008
+3.4
+5.3
+6.0
+3.8
+2009
+3.7
+5.4
+6.1
+3.9
+a)
+Calcule los índices estacionales de los datos (porcentaje del promedio real respecto al promedio mó-
+vil centrado).
+b) Desestacionalice los datos utilizando los índices estacionales del inciso a).
+c)
+Encuentre la línea de mínimos cuadrados que mejor describa los datos.
+d) Estime la cantidad de libras de papel que serán procesadas durante la primavera de 2010.
+■15-48
+Describa algunas de las dificultades al usar una ecuación de esti
+
+[Bloque seleccionado #736 | relevancia=12]
+Pagina 735
+Primavera
+Verano
+Otoño
+2006
+750
+1,150
+680
+2007
+780
+1,100
+580
+2008
+800
+1,225
+610
+2009
+640
+1,050
+600
+a)
+Calcule los índices estacionales para estos datos utilizando un promedio móvil de tres periodos.
+b) Desestacionalice estos datos utilizando los índices estacionales obtenidos en el inciso a).
+■15-64
+El administrador de un restaurante desea mejorar el servicio que brinda a sus clientes y el horario de sus
+empleados, basándose en la afluencia diaria de clientes durante las últimas cuatro semanas. El número de
+clientes atendidos en el restaurante en ese periodo fue:
+Lun.
+Mar.
+Mié.
+Jue.
+Vie.
+Sáb.
+Dom.
+1
+345
+310
+385
+416
+597
+706
+653
+2
+418
+333
+400
+515
+664
+761
+702
+Semana
+3
+393
+387
+311
+535
+625
+711
+598
+4
+406
+412
+377
+444
+650
+803
+822
+Determine los índices estacionales (diarios) para estos datos. (Utilice un promedio móvil de siete días.)
+■15-65
+Suponga que las ventas de televisores de una pequeña cadena de aparatos electrodomésticos durante 2005-
+2009 fueron las siguientes:
+Año
+2005
+2006
+2007
+2008
+2009
+Ventas
+230
+250
+265
+300
+310
+a)
+Desarrolle la ecuación de estimación de segundo grado para estos datos.
+b) ¿Qué indica la magnitud de los coeficientes a, b y c respecto a la elección de una ecuación de segun-
+do grado para esos datos?
+■15-66
+La compañía Zapit ha registrado las siguientes cifras (en cientos de miles) correspondientes a las ventas
+totales en su línea de hornos de microondas durante los últimos cinco años:
+Año
+2004
+2005
+2006
+2007
+2008
+Ventas
+3.5
+3.8
+4.0
+3.7
+3.9
+La ecuación que describe la tendencia de estos volúmenes de ventas es
+Yˆ  3.78  0.07x, donde 2006  0 y las unidades de x son años
+a)
+¿Qué año tuvo el más alto porcentaje de tendencia?
+b) ¿Qué año estuvo más cercano a la línea de tendencia?
+■15-67
+Los siguientes datos muestran el número de casas listadas para venta, en miles, en el oeste de Estados Uni-
+dos al final de cada trimestre:
+Año
+Trimestre
+Casas listadas
+2005
+1
+75
+2
+77
+3
+72
+4
+74
+2006
+1
+73
+2
+74
+3
+77
+4
+73
+2007
+1
+74
+2
+79
+3
+80
+4
+82
+2008
+1
+80
+a)
+Calcule los índices estacionales para cada trimestre. (Nota: debido a que esta serie de datos es corta,
+no descarte los valores extremos en el paso 5.)
+b) Desestacionalice estos datos.
+c)
+Encuentre la recta de tendencia de mínimos cuadrados para los datos desestacionalizados.
+Repaso del capítulo
+717
+
+[Bloque seleccionado #801 | relevancia=12]
+Pagina 800
+Árboles de decisión e información nueva: aplicación del teorema
+de Bayes para revisar las probabilidades
+Precisamente cuando Christie se está preparando para decidir si dejar que la cadena de hoteles ope-
+re Snow Fun u operarlo ella, recibe una llamada de la Asociación Meteorológica ofreciendo vender-
+le un pronóstico de las nevadas de la siguiente temporada. El precio del pronóstico será $2,000, e
+indicará ya sea que las nevadas estarán por encima o bien que estarán por debajo de lo normal. Des-
+pués de hacer un poco de investigación, Christie se entera de que la Asociación Meteorológica es una
+compañía reconocida cuyos pronósticos han sido bastante buenos en el pasado, aunque, por supues-
+to, no han sido perfectamente confiables. La compañía ha pronosticado nevadas arriba de lo normal
+el 90% de todos los años en que la cantidad de nieve ha sido más de 40 pulgadas; 60% en que ha es-
+tado entre 20 y 40 pulgadas, y 30% de los años en que ha estado por debajo de 20 pulgadas.
+Para incorporar esta nueva información y decidir si debe comprar el pronóstico de nevadas,
+Christie tiene que usar el teorema de Bayes (que analizamos en el capítulo 4) para ver cómo los re-
+sultados del pronóstico harán que revise las probabilidades de nevadas que está usando para tomar
+su decisión. El pronóstico tendrá algún valor para ella si con él cambia su decisión y evita tomar una
+decisión no óptima. Sin embargo, antes de hacer los cálculos necesarios para aplicar el teorema de
+Bayes, decide ver cuánto valdría un pronóstico perfectamente confiable de las nevadas. El cálculo
+de este VEIP puede hacerse con el árbol dado en la figura 17-11. En esta figura, invertimos el orden
+del tiempo de la decisión de Christie y cuándo conoce la cantidad de nieve de la temporada. En la fi-
+gura 17-9, tuvo que decidir cómo operar el centro, y después supo la cantidad de nieve que hubo en
+realidad. Si dispusiera de un pronóstico perfectamente confiable, sabría cuánta nieve caería antes de
+tener que decidir cómo operar el centro.
+Examinemos con cuidado la figura 17-11. Aunque Christie trata de determinar el valor de un pro-
+nóstico perfectamente confiable, no puede saber de antemano el resultado del pronóstico. Cerca del
+40% del tiempo habrá más de 40 pulgadas de nieve en una temporada de esquí. Entonces, la proba-
+bilidad de que el pronóstico sea de más de 40 pulgadas de nieve es 0.4. Cuando las nevadas están en
+ese nivel, el mejor curso de acción de Christie es operar el centro sin usar equipo de fabricación de
+nieve, y su ganancia será $120,000. Otro 20% de todas las temporadas, cuan
+
+[Bloque seleccionado #803 | relevancia=19]
+Pagina 802
+de $2,000? La respuesta a esta pregunta puede hallarse en la tabla 17-13 y en la figura 17-12. La tabla
+17-13 utiliza el mismo formato que usamos en el capítulo 4 para hacer los cálculos con el fin de usar el
+teorema de Bayes para actualizar las probabilidades de nevadas, dados los resultados del pronóstico.
+Observe cómo cambian las probabilidades. Si el pronóstico es para más nieve de lo normal, la
+probabilidad de Christie de que habrá más de 40 pulgadas de nieve sube a 0.6 de su valor inicial de
+0.4. Con un pronóstico de menos nieve de lo normal, su probabilidad revisada baja a 0.1.
+La figura 17-12 ilustra todo el árbol, incluyendo la opción de comprar el pronóstico de la Asocia-
+ción Meteorológica. Revisemos el procedimiento hacia atrás de este árbol. La copa del árbol (del
+nodo 3 en adelante) es la misma que en la figura 17-10. La base del árbol (del nodo 2 en adelante)
+analiza las opciones de Christie si compra el pronóstico. En los nodos aleatorios 8, 9, 10 y 11, calcu-
+ló los valores esperados usando la regla 1. Con la regla 2, decide en el nodo 4 que operará el centro
+(pero se protege usando el equipo de fabricación de nieve) si el pronóstico es de más nieve que lo
+normal. Por otra parte, en el nodo 5 decide que aceptará la oferta de la cadena hotelera de operar
+Snow Fun si el pronóstico es de menos nieve que lo normal.
+Continuando el análisis del árbol hacia atrás, en el nodo 2 encuentra que el valor esperado de com-
+prar el pronóstico es $60,400. Finalmente, en el nodo 1, Christie decide que debe pagar a la Asocia-
+ción Meteorológica los $2,000 que cobra por su pronóstico, puesto que la ganancia esperada resul-
+tante de $60,400 es mayor que los $58,000 que espera ganar sin comprar el pronóstico.
+En resumen, vemos que la decisión óptima de Christie es comprar el pronóstico. Después, si el
+pronóstico es más nieve que lo normal, debe operar el centro ella misma, pero protegerse usando
+el equipo de fabricación de nieve. Sin embargo, si el pronóstico es menos nieve que lo normal, debe
+aceptar la oferta de la cadena de hoteles de operar Snow Fun. Si sigue este curso de acción, espera
+que su ganancia para la temporada sea de $60,400. Aun después de pagar $2,000 por el pronóstico,
+gana $2,400 más de lo que hubiera ganado si no lo hubiera usado. ¿Cuál es la cantidad máxima que
+estaría dispuesta a pagar por el pronóstico? Pagaría hasta $2,400 adicionales por él y todavía espe-
+raría ganar al menos tanto como ganaría sin comprarlo. Así, el valor esperado del pronóstico (algu-
+nas veces llamado el valor esperado de la información de la muestra, 

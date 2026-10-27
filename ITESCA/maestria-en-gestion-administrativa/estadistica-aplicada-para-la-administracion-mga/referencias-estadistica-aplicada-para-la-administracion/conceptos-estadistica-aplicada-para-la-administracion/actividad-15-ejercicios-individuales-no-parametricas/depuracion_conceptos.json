@@ -1,0 +1,97 @@
+{
+  "subject_slug": "estadistica-aplicada-para-la-administracion",
+  "engine": "Amazon Nova Pro",
+  "kept": [
+    "prueba de rachas para aleatoriedad en quejas de circulación periodística (Ejercicio 7)",
+    "prueba de rachas para patrones horarios de llegada de clientes en restaurante (Ejercicio 8)",
+    "prueba de rachas en afluencia bancaria por sexo (Ejercicio 9)",
+    "prueba de rachas para detección de defectos agrupados en envíos de vidrio (Ejercicio 10)",
+    "prueba H de Kruskal-Wallis para afluencia de compradores en tres sucursales (Ejercicio 11)",
+    "prueba U de Mann-Whitney para evaluación del desempeño de enfermeras por universidad (Ejercicio 12)",
+    "aproximación normal a la distribución del número de rachas R",
+    "prueba rachas",
+    "ejercicios",
+    "hipótesis paramétricas",
+    "pruebas hipótesis",
+    "requisitos instrucciones",
+    "deberás realizar",
+    "significancia",
+    "nivel significancia",
+    "poblaciones",
+    "aleatoriedad"
+  ],
+  "conceptos_clave_nova_pro": [
+    {
+      "concepto": "prueba de rachas",
+      "definicion_rigurosa": "La prueba de rachas es un método estadístico no paramétrico utilizado para evaluar la aleatoriedad en una secuencia de datos. Se basa en el conteo de rachas, que son secuencias consecutivas de un mismo tipo de evento. La prueba verifica si el número observado de rachas difiere significativamente del número esperado bajo la hipótesis nula de aleatoriedad.",
+      "formulacion_matematica_latex": "La estadística de prueba se calcula como $R = \\sum_{i=1}^{n} I(X_i \\neq X_{i-1})$, donde $I$ es la función indicadora y $X_i$ son los datos observados.",
+      "aplicacion_administrativa": "En administración, la prueba de rachas puede ser utilizada para detectar patrones no aleatorios en datos operacionales, como la llegada de clientes o defectos en productos, lo que permite a los gerentes identificar ineficiencias o problemas de calidad.",
+      "fuente_principal": "Wackerly, D., Mendenhall, W., & Scheaffer, R. L. (2014). Estadística matemática con aplicaciones. 7ª edición.",
+      "localizador": "libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt (bloque 1)"
+    },
+    {
+      "concepto": "prueba H de Kruskal-Wallis",
+      "definicion_rigurosa": "La prueba H de Kruskal-Wallis es una extensión de la prueba de Mann-Whitney para comparar más de dos muestras independientes. Se basa en el análisis de rangos y se utiliza para determinar si existen diferencias significativas entre las medianas de las muestras.",
+      "formulacion_matematica_latex": "La estadística de prueba se calcula como $H = \\frac{12}{N(N+1)} \\sum_{i=1}^{k} \\frac{R_i^2}{n_i} - 3(N+1)$, donde $R_i$ es la suma de rangos de la muestra $i$ y $n_i$ es el tamaño de la muestra $i$.",
+      "aplicacion_administrativa": "En el contexto administrativo, la prueba de Kruskal-Wallis puede ser aplicada para comparar el desempeño de diferentes sucursales o departamentos, ayudando a identificar diferencias significativas en el rendimiento.",
+      "fuente_principal": "Levin, R. I., & Rubin, D. S. (2013). Estadística para administración y economía. 10ª edición.",
+      "localizador": "libro-estadistica-para-administracion-y-economia-levin-A15.txt (bloque 2)"
+    },
+    {
+      "concepto": "prueba U de Mann-Whitney",
+      "definicion_rigurosa": "La prueba U de Mann-Whitney, también conocida como prueba de Wilcoxon, es un método no paramétrico utilizado para comparar dos muestras independientes. Se basa en la comparación de rangos y se utiliza para determinar si las distribuciones de las dos muestras son idénticas.",
+      "formulacion_matematica_latex": "La estadística de prueba se calcula como $U = R - \\frac{n_1(n_1 + 1)}{2}$, donde $R$ es la suma de rangos de una de las muestras y $n_1$ es el tamaño de esa muestra.",
+      "aplicacion_administrativa": "En administración, la prueba de Mann-Whitney puede ser utilizada para comparar el desempeño de dos grupos de empleados o dos métodos de producción, ayudando a identificar diferencias significativas en el rendimiento.",
+      "fuente_principal": "Anderson, D. R., Sweeney, D. J., & Williams, T. A. (2015). Estadística para negocios y economía. 11ª edición.",
+      "localizador": "docente-1776-9c622af3e4c6.txt (bloque 2)"
+    },
+    {
+      "concepto": "aproximación normal a la distribución del número de rachas R",
+      "definicion_rigurosa": "La aproximación normal a la distribución del número de rachas R se utiliza cuando el tamaño de la muestra es suficientemente grande. Esta aproximación permite calcular la probabilidad de observar un número de rachas dado bajo la hipótesis nula de aleatoriedad.",
+      "formulacion_matematica_latex": "La distribución del número de rachas R se aproxima por una distribución normal con media $\\mu_R = \\frac{2n_1n_2}{n_1 + n_2} + 1$ y varianza $\\sigma_R^2 = \\frac{2n_1n_2(2n_1n_2 - n_1 - n_2)}{(n_1 + n_2)^2(n_1 + n_2 - 1)}$.",
+      "aplicacion_administrativa": "En la gestión administrativa, esta aproximación es útil para evaluar la aleatoriedad en grandes conjuntos de datos, como la secuencia de llegadas de clientes o la distribución de defectos en productos.",
+      "fuente_principal": "Anderson, D. R., Sweeney, D. J., & Williams, T. A. (2015). Estadística para negocios y economía. 11ª edición.",
+      "localizador": "libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt (bloque 3)"
+    },
+    {
+      "concepto": "prueba de rachas para aleatoriedad en quejas de circulación periodística",
+      "definicion_rigurosa": "Esta prueba se aplica para evaluar si las quejas recibidas por una publicación periódica siguen un patrón aleatorio o si existen rachas significativas que indiquen un sesgo o patrón específico.",
+      "formulacion_matematica_latex": "Se utiliza la estadística de prueba de rachas $R$ y se compara con la distribución aproximada normal para determinar la significancia.",
+      "aplicacion_administrativa": "En la gestión de medios, esta prueba ayuda a identificar si las quejas de los lectores son aleatorias o si hay un patrón que requiera atención especial.",
+      "fuente_principal": "Wackerly, D., Mendenhall, W., & Scheaffer, R. L. (2014). Estadística matemática con aplicaciones. 7ª edición.",
+      "localizador": "libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt (bloque 1)"
+    },
+    {
+      "concepto": "prueba de rachas para patrones horarios de llegada de clientes en restaurante",
+      "definicion_rigurosa": "Esta prueba se aplica para evaluar si la llegada de clientes a un restaurante sigue un patrón aleatorio a lo largo del tiempo o si existen rachas significativas que indiquen un patrón específico.",
+      "formulacion_matematica_latex": "Se utiliza la estadística de prueba de rachas $R$ y se compara con la distribución aproximada normal para determinar la significancia.",
+      "aplicacion_administrativa": "En la gestión de restaurantes, esta prueba ayuda a identificar si la llegada de clientes es aleatoria o si hay patrones horarios que puedan optimizar la planificación de recursos.",
+      "fuente_principal": "Levin, R. I., & Rubin, D. S. (2013). Estadística para administración y economía. 10ª edición.",
+      "localizador": "libro-estadistica-para-administracion-y-economia-levin-A15.txt (bloque 4)"
+    },
+    {
+      "concepto": "prueba de rachas en afluencia bancaria por sexo",
+      "definicion_rigurosa": "Esta prueba se aplica para evaluar si la afluencia de clientes a una sucursal bancaria, clasificada por sexo, sigue un patrón aleatorio o si existen rachas significativas que indiquen un patrón específico.",
+      "formulacion_matematica_latex": "Se utiliza la estadística de prueba de rachas $R$ y se compara con la distribución aproximada normal para determinar la significancia.",
+      "aplicacion_administrativa": "En la gestión bancaria, esta prueba ayuda a identificar si la afluencia de clientes por sexo es aleatoria o si hay patrones que puedan influir en la planificación de servicios.",
+      "fuente_principal": "Wackerly, D., Mendenhall, W., & Scheaffer, R. L. (2014). Estadística matemática con aplicaciones. 7ª edición.",
+      "localizador": "libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt (bloque 1)"
+    },
+    {
+      "concepto": "prueba de rachas para detección de defectos agrupados en envíos de vidrio",
+      "definicion_rigurosa": "Esta prueba se aplica para evaluar si los defectos en los envíos de vidrio siguen un patrón aleatorio o si existen rachas significativas que indiquen un agrupamiento de defectos.",
+      "formulacion_matematica_latex": "Se utiliza la estadística de prueba de rachas $R$ y se compara con la distribución aproximada normal para determinar la significancia.",
+      "aplicacion_administrativa": "En la gestión de calidad, esta prueba ayuda a identificar si los defectos en los productos son aleatorios o si hay patrones que indiquen problemas en el proceso de producción.",
+      "fuente_principal": "Wackerly, D., Mendenhall, W., & Scheaffer, R. L. (2014). Estadística matemática con aplicaciones. 7ª edición.",
+      "localizador": "libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt (bloque 1)"
+    },
+    {
+      "concepto": "prueba U de Mann-Whitney para evaluación del desempeño de enfermeras por universidad",
+      "definicion_rigurosa": "Esta prueba se aplica para evaluar si el desempeño de las enfermeras, medido por sus calificaciones, difiere significativamente entre dos universidades.",
+      "formulacion_matematica_latex": "Se utiliza la estadística de prueba U de Mann-Whitney y se compara con la distribución aproximada normal para determinar la significancia.",
+      "aplicacion_administrativa": "En la gestión de recursos humanos en hospitales, esta prueba ayuda a identificar si las universidades de origen de las enfermeras influyen en su desempeño.",
+      "fuente_principal": "Levin, R. I., & Rubin, D. S. (2013). Estadística para administración y economía. 10ª edición.",
+      "localizador": "docente-1776-9c622af3e4c6.txt (bloque 2)"
+    }
+  ]
+}

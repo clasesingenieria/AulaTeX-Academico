@@ -1,0 +1,938 @@
+# Planeacion: Fundamentos de Gestión Administrativa
+
+Estado: needs_review. Conversion local, no aprobacion docente ni autorizacion de envio.
+
+## Identificacion
+
+```json
+{
+  "institution": "ITESCA",
+  "program": "maestria-en-gestion-administrativa",
+  "subject_id": "fundamentos-de-gestion-administrativa-mga",
+  "subject_title": "Fundamentos de Gestión Administrativa",
+  "offering_id": "oferta-bd29a4a4059c1103",
+  "period": "2026-II",
+  "modality": null
+}
+```
+
+## Actividad 7780: Foro sobre organización
+
+### Consigna importada
+
+Abordar qué es una organización en la intervención oral.
+Abordar qué no debe considerarse organización en la intervención oral.
+Abordar los principales elementos para realizar estudios organizacionales.
+Responder al menos a dos aportaciones de compañeros.
+
+### Requisitos
+
+1. Abordar qué es una organización en la intervención oral.
+2. Abordar qué no debe considerarse organización en la intervención oral.
+3. Abordar los principales elementos para realizar estudios organizacionales.
+4. Responder al menos a dos aportaciones de compañeros.
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[
+  {
+    "id": "step-001",
+    "order": 1,
+    "phase": "preparation",
+    "action": "Revisar consigna; localizar P1 y apoyos P2/P3; seleccionar pasajes y organizar las tres preguntas sin completar aquí el producto.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-002",
+    "order": 2,
+    "phase": "construction",
+    "action": "Elaborar y grabar explicación propia; escuchar aportaciones disponibles y preparar al menos dos respuestas contextualizadas.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-003",
+    "order": 3,
+    "phase": "review",
+    "action": "Cronometrar audio, revisar audibilidad y cobertura; comprobar respuestas a dos aportaciones.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  }
+]
+```
+
+### products
+
+```json
+[
+  {
+    "id": "product-001",
+    "kind": "unspecified",
+    "recipient": null,
+    "editable_format": null,
+    "submission_format": "audio",
+    "structure": [
+      "audio_y_respuestas_en_foro"
+    ],
+    "length": null,
+    "filename_pattern": null,
+    "accessibility": null,
+    "requirement_ids": [],
+    "paths": {
+      "editable": null,
+      "delivery": null
+    }
+  }
+]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": []
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": "2026-08-28 23:59",
+  "closes_at": null,
+  "timezone": null,
+  "literal": null
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## sources
+
+```json
+[
+  {
+    "id": "src-local",
+    "kind": "other",
+    "authority": "editorial",
+    "title": "planeacion-actividad-1.1-foro-organizacion.json",
+    "url": null,
+    "path": "planeaciones-generadas/2026-II/revision-2026-09-15/planeacion-actividad-1.1-foro-organizacion.json",
+    "sha256": "0a1af81c8510690dd1e515d71306eccddaf351c5bc93fa36f8b0a3afd63200bc",
+    "captured_at": "2026-09-15",
+    "media_type": "application/json"
+  }
+]
+```
+
+## field_status
+
+```json
+[
+  {
+    "path": "/identity",
+    "state": "inferred",
+    "reason": "Identidad editorial del catalogo; oferta interna, periodo y modalidad no acreditados cuando faltan.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/sources",
+    "state": "confirmed",
+    "reason": "Archivo local preservado; su huella no acredita autoria ni vigencia docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "local-file",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum",
+    "state": "unknown",
+    "reason": "No se deducen competencias, resultados ni temario que no esten documentados.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/",
+        "quoted_text": "Abordar qué es una organización en la intervención oral.\nAbordar qué no debe considerarse organización en la intervención oral.\nAbordar los principales elementos para realizar estudios organizacionales.\nResponder al menos a dos aportaciones de compañeros."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/outcomes/0",
+    "state": "inferred",
+    "reason": "Objetivo preservado del modelo local; oficialidad y propuesta no se equiparan.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "//objective",
+        "quoted_text": "Distinguir qué constituye una organización y qué queda fuera de esa delimitación, identificar elementos para su estudio y contrastar una explicación oral propia con aportaciones de pares."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/requirements",
+    "state": "confirmed",
+    "reason": "Coinciden con la entrada local; no se acredita que sean requisitos docentes integros.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "//requirements",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/sequence",
+    "state": "inferred",
+    "reason": "Secuencia propuesta preservada; fases, insumos, salidas y controles necesitan revision.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "//sequence",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/products",
+    "state": "inferred",
+    "reason": "Descripcion original preservada; no convierte examen o foro en informe LaTeX.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "//product",
+        "quoted_text": "audio_y_respuestas_en_foro"
+      }
+    ],
+    "alternatives": []
+  }
+]
+```
+
+## review
+
+```json
+{
+  "state": "needs_review",
+  "reviewed_at": null,
+  "reviewer_role": null,
+  "critical_gaps": [
+    "Cotejar consigna y procedencia docente; conversion local no equivale a aprobacion"
+  ],
+  "semantic_validation": "failed"
+}
+```
+
+## extensions
+
+```json
+{
+  "conversion": {
+    "version": "1.0",
+    "source_format": ".json",
+    "source_sha256": "0a1af81c8510690dd1e515d71306eccddaf351c5bc93fa36f8b0a3afd63200bc",
+    "source_payload": {
+      "schema_version": "0.2-documental",
+      "revision_date": "2026-09-15",
+      "status": "borrador",
+      "activity_id_aula": "1.1",
+      "activity_id_local": 1,
+      "moodle_module_id": 7780,
+      "title": "Foro sobre organización",
+      "subject": "Fundamentos de Gestión Administrativa",
+      "course_code": "GGFG02",
+      "moodle_course_id": 372,
+      "institution": "ITESCA",
+      "local_program_context": "Maestría en Gestión Administrativa",
+      "period": "2026-II",
+      "unit": 1,
+      "identification_source_ids": [
+        "O-md",
+        "O-json"
+      ],
+      "provenance": {
+        "method": "revision_documental_local",
+        "network_used": false,
+        "python_used": false,
+        "personal_data_or_submissions_read": false,
+        "binary_contents_read": false,
+        "institutional_approval": null,
+        "teacher_approval": null,
+        "previous_web_consultation": "2026-09-15, reportada por O-md/O-json; no repetida en esta revisión",
+        "source_status_policy": "leido_texto: documento local leído; solo_archivo: existencia verificada sin abrir; registro_bibliografico: metadatos de ficha, no lectura de obra; origen_web_registrado: URL de procedencia sin consulta actual",
+        "authority_policy": "Datos del aula reportados mediante originales; objetivo, mediación, secuencia y criterios formativos propuestos. No se produce la participación del estudiante.",
+        "source_ids": [
+          "O-md",
+          "O-json",
+          "C",
+          "CAT"
+        ]
+      },
+      "sources": [
+        {
+          "id": "O-md",
+          "title": "Planeaciones derivadas para revisión — Fundamentos de Gestión Administrativa",
+          "citation": "AulaTeX (2026). Planeaciones derivadas para revisión — Fundamentos de Gestión Administrativa. Revisión 2026-09-15.",
+          "location": "planeaciones.md",
+          "locator": "Alcance, contexto curricular y sección 1: actividad 1.1",
+          "status": "leido_texto",
+          "used_for": [
+            "identificación",
+            "requisitos reportados",
+            "calendario",
+            "peso",
+            "tiempos previos"
+          ]
+        },
+        {
+          "id": "O-json",
+          "title": "Planeaciones documentales GGFG02, revisión 2026-09-15",
+          "citation": "AulaTeX (2026). Planeaciones documentales GGFG02. Versión 0.1-documental.",
+          "location": "planeaciones.json",
+          "locator": "scope, shared_pending y activities[0] (activity_id_aula 1.1)",
+          "status": "leido_texto",
+          "used_for": [
+            "identificadores",
+            "procedencia del aula",
+            "requisitos",
+            "calendario",
+            "evaluación",
+            "desconocidos"
+          ]
+        },
+        {
+          "id": "C",
+          "title": "Actividad 1 — Foro: La organización",
+          "citation": "AulaTeX (sin fecha verificada). Actividad 1 — Foro: La organización. Consigna normalizada y adaptación operativa local.",
+          "location": "../../../referencias-fundamentos-de-gestion-administrativa/actividad-1-foro-la-organizacion/consigna.md",
+          "locator": "Consigna original normalizada; Producto y entrega; Estructura requerida; Material local prioritario",
+          "status": "leido_texto",
+          "used_for": [
+            "tres preguntas",
+            "audio hasta tres minutos",
+            "dos respuestas",
+            "distinción de auxiliares editoriales"
+          ]
+        },
+        {
+          "id": "W",
+          "title": "Foro Moodle 7780",
+          "citation": "ITESCA (sin fecha de publicación verificada). Foro 7780, curso GGFG02. Consulta previa reportada: 2026-09-15.",
+          "location": "https://cursos3.e-itesca.edu.mx/mod/forum/view.php?id=7780",
+          "locator": "h1, #intro y .activity-dates, según O-md/O-json",
+          "status": "origen_web_registrado",
+          "used_for": [
+            "procedencia de requisitos docentes",
+            "identificación",
+            "vencimiento"
+          ],
+          "source_ids": [
+            "O-md",
+            "O-json"
+          ],
+          "consulted_in_this_revision": false
+        },
+        {
+          "id": "E",
+          "title": "Especificaciones de la asignatura",
+          "citation": "ITESCA (sin fecha de publicación verificada). Especificaciones de la asignatura, página Moodle 7767. Consulta previa reportada: 2026-09-15.",
+          "location": "https://cursos3.e-itesca.edu.mx/mod/page/view.php?id=7767",
+          "locator": "Región principal .no-overflow, peso y competencia según O-md/O-json",
+          "status": "origen_web_registrado",
+          "used_for": [
+            "peso de 5 por ciento del curso",
+            "competencia reportada"
+          ],
+          "source_ids": [
+            "O-md",
+            "O-json"
+          ],
+          "consulted_in_this_revision": false
+        },
+        {
+          "id": "CAT",
+          "title": "Referencias — Fundamentos de Gestión Administrativa",
+          "citation": "AulaTeX (2026). Referencias — Fundamentos de Gestión Administrativa. Revisión documental 2026-09-12.",
+          "location": "../../../referencias-fundamentos-de-gestion-administrativa/README.md",
+          "locator": "Líneas 26–46, especialmente Hallazgos y trazabilidad: extractos Proulx y rúbrica general",
+          "status": "leido_texto",
+          "used_for": [
+            "autoría y título de extractos",
+            "criterios generales",
+            "niveles generales",
+            "revisión visual previa, no actual"
+          ]
+        },
+        {
+          "id": "RG",
+          "title": "Rúbrica general de evaluación",
+          "citation": "ITESCA, material del curso (sin año verificado). Rúbrica general de evaluación. Contenido reportado por el catálogo local.",
+          "location": "../../../referencias-fundamentos-de-gestion-administrativa/00-curso-y-evaluacion/rubrica-general-evaluacion.pdf",
+          "locator": "Tabla en imagen descrita en CAT; sin inspección del PDF en esta revisión",
+          "status": "solo_archivo",
+          "used_for": [
+            "localización del instrumento general, no de una rúbrica específica del foro"
+          ],
+          "source_ids": [
+            "CAT"
+          ],
+          "exists_verified": true,
+          "visual_review_current": false
+        },
+        {
+          "id": "P1",
+          "title": "Diagnóstico y cambio organizacional: Elementos claves — extracto organización",
+          "citation": "Proulx, Denis (año y edición no verificados). Diagnóstico y cambio organizacional: Elementos claves. Extracto organización. Identificación según CAT.",
+          "location": "../../../referencias-fundamentos-de-gestion-administrativa/unidad-1-organizacion/proulx-diagnostico-cambio-organizacional-extracto-organizacion.pdf",
+          "locator": "Extracto organización; pasajes y páginas por verificar durante la lectura",
+          "status": "solo_archivo",
+          "used_for": [
+            "lectura propuesta para delimitación y elementos organizacionales"
+          ],
+          "source_ids": [
+            "CAT",
+            "C"
+          ],
+          "exists_verified": true
+        },
+        {
+          "id": "P2",
+          "title": "Diagnóstico y cambio organizacional: Elementos claves — extracto Kast y Rosenzweig",
+          "citation": "Proulx, Denis (año y edición no verificados). Diagnóstico y cambio organizacional: Elementos claves. Extracto Kast y Rosenzweig. No es el libro original de esos autores.",
+          "location": "../../../referencias-fundamentos-de-gestion-administrativa/unidad-1-organizacion/proulx-diagnostico-cambio-organizacional-extracto-kast-rosenzweig.pdf",
+          "locator": "Extracto Kast y Rosenzweig; pasajes y páginas por verificar durante la lectura",
+          "status": "solo_archivo",
+          "used_for": [
+            "apoyo propuesto para elementos organizacionales",
+            "distinción de fuente secundaria y autores del modelo"
+          ],
+          "source_ids": [
+            "CAT",
+            "C"
+          ],
+          "exists_verified": true
+        },
+        {
+          "id": "P3",
+          "title": "Diagnóstico y cambio organizacional: Elementos claves — extracto enfoques múltiples",
+          "citation": "Proulx, Denis (año y edición no verificados). Diagnóstico y cambio organizacional: Elementos claves. Extracto enfoques múltiples. Identificación según CAT.",
+          "location": "../../../referencias-fundamentos-de-gestion-administrativa/unidad-1-organizacion/proulx-diagnostico-cambio-organizacional-extracto-enfoques-multiples.pdf",
+          "locator": "Extracto enfoques múltiples; pasajes y páginas por verificar durante la lectura",
+          "status": "solo_archivo",
+          "used_for": [
+            "contraste propuesto de perspectivas para el diálogo"
+          ],
+          "source_ids": [
+            "CAT",
+            "C"
+          ],
+          "exists_verified": true
+        }
+      ],
+      "product": {
+        "type": "audio_y_respuestas_en_foro",
+        "work_mode": "participacion_personal_con_interaccion_entre_pares",
+        "formal_work_mode": null,
+        "submission_mode": "publicacion_de_audio_y_respuestas_en_foro",
+        "status": "reportado",
+        "source_ids": [
+          "C",
+          "O-md",
+          "O-json",
+          "W"
+        ],
+        "content_requirements": [
+          {
+            "id": "R1",
+            "description": "Abordar qué es una organización en la intervención oral.",
+            "status": "reportado",
+            "source_ids": [
+              "C",
+              "O-md",
+              "O-json",
+              "W"
+            ]
+          },
+          {
+            "id": "R2",
+            "description": "Abordar qué no debe considerarse organización en la intervención oral.",
+            "status": "reportado",
+            "source_ids": [
+              "C",
+              "O-md",
+              "O-json",
+              "W"
+            ]
+          },
+          {
+            "id": "R3",
+            "description": "Abordar los principales elementos para realizar estudios organizacionales.",
+            "status": "reportado",
+            "source_ids": [
+              "C",
+              "O-md",
+              "O-json",
+              "W"
+            ]
+          },
+          {
+            "id": "R4",
+            "description": "Responder al menos a dos aportaciones de compañeros.",
+            "status": "reportado",
+            "source_ids": [
+              "C",
+              "O-md",
+              "O-json",
+              "W"
+            ]
+          }
+        ],
+        "structure": {
+          "value": "Intervención oral con cobertura de las tres preguntas; orden sugerido de definición, delimitación y elementos.",
+          "status": "propuesto",
+          "source_ids": [
+            "C",
+            "O-md"
+          ]
+        },
+        "format": {
+          "value": "audio",
+          "technical_extension": null,
+          "codec": null,
+          "maximum_file_size": null,
+          "audio_max_minutes": 3,
+          "peer_response_length": null,
+          "minimum_peer_responses": 2,
+          "status": "reportado_con_desconocidos",
+          "source_ids": [
+            "C",
+            "O-json"
+          ]
+        },
+        "channel": {
+          "value": "foro_7780",
+          "location": "https://cursos3.e-itesca.edu.mx/mod/forum/view.php?id=7780",
+          "status": "reportado",
+          "source_ids": [
+            "W",
+            "O-json"
+          ]
+        },
+        "tool_policy": {
+          "value": "Anchor es ejemplo técnico local, no obligatorio ni fuente disciplinar; puede usarse otro grabador.",
+          "status": "aclaracion_documental",
+          "source_ids": [
+            "C"
+          ]
+        },
+        "auxiliary_proposals": [
+          {
+            "description": "Esquema de tres preguntas, sin resolverlas en la planeación.",
+            "status": "propuesto",
+            "required_submission": false,
+            "source_ids": [
+              "C"
+            ]
+          },
+          {
+            "description": "Registro privado de ideas, fuentes y localizadores; mencionar solo fuentes realmente consultadas, sin mínimo bibliográfico añadido.",
+            "status": "propuesto",
+            "required_submission": false,
+            "source_ids": [
+              "C",
+              "CAT"
+            ]
+          },
+          {
+            "description": "Ensayo cronometrado y revisión de audibilidad.",
+            "status": "propuesto",
+            "required_submission": false,
+            "source_ids": [
+              "C",
+              "O-md"
+            ]
+          },
+          {
+            "description": "Pauta de réplica que retome una idea, contraste o amplíe y formule pregunta pertinente.",
+            "status": "propuesto",
+            "required_submission": false,
+            "source_ids": [
+              "C"
+            ]
+          }
+        ],
+        "not_imposed": [
+          "PDF adicional",
+          "portada",
+          "transcripción",
+          "guion entregable",
+          "330–390 palabras obligatorias",
+          "mínimo de referencias",
+          "Anchor obligatorio"
+        ],
+        "editorial_boundary": {
+          "value": "C describe un guion y reporte AulaTeX; O-md/O-json acreditan audio y respuestas como evidencias del aula. No elevar auxiliares a obligaciones docentes.",
+          "source_ids": [
+            "C",
+            "O-md",
+            "O-json",
+            "W"
+          ]
+        }
+      },
+      "calendar": {
+        "opening": null,
+        "closing": null,
+        "due": "2026-08-28 23:59",
+        "timezone": null,
+        "status": "reportado",
+        "historical_as_of": "2026-09-15",
+        "receipt_status": null,
+        "extension_authorization": null,
+        "current_submission_availability": null,
+        "note": "Apertura no visible, cierre separado no aportado; sin conversión horaria ni autorización de publicación tardía.",
+        "source_ids": [
+          "O-md",
+          "O-json",
+          "W"
+        ]
+      },
+      "assessment": {
+        "activity_weight": 5,
+        "weight_unit": "porcentaje",
+        "weight_scope": "curso",
+        "status": "reportado",
+        "source_ids": [
+          "O-md",
+          "O-json",
+          "E"
+        ],
+        "official_instrument": {
+          "name": null,
+          "status": "pendiente",
+          "max_score": null,
+          "levels": null,
+          "source_ids": [
+            "O-md",
+            "O-json",
+            "W"
+          ]
+        },
+        "general_instrument": {
+          "name": "Rúbrica general de evaluación",
+          "status": "reportado_por_catalogo",
+          "criteria": [
+            "tratamiento del tema",
+            "organización",
+            "redacción",
+            "ortografía",
+            "puntuación",
+            "bibliografía"
+          ],
+          "levels": [
+            "excelente",
+            "bien",
+            "regular",
+            "deficiente"
+          ],
+          "numeric_weights": null,
+          "numeric_weights_note": "El catálogo reporta que la rúbrica no muestra ponderaciones numéricas por criterio.",
+          "previous_visual_review_reported": true,
+          "visual_review_current": false,
+          "application_to_activity": "Pendiente aclarar aplicación al audio y respuestas; no sustituye el instrumento específico desconocido.",
+          "source_ids": [
+            "CAT",
+            "RG"
+          ]
+        },
+        "proposed_criteria": [
+          {
+            "criterion": "Delimitación completa",
+            "evidence": "Audio",
+            "how_to_check": "Marcar presencia de qué es y qué no es organización y comprobar que las razones no se contradigan.",
+            "authority": "propuesto",
+            "source_ids": [
+              "C",
+              "O-md"
+            ]
+          },
+          {
+            "criterion": "Elementos identificables",
+            "evidence": "Segmento del audio sobre estudio organizacional",
+            "how_to_check": "Ubicar elementos mencionados y cotejar sus explicaciones con pasajes realmente leídos.",
+            "authority": "propuesto",
+            "source_ids": [
+              "C",
+              "P1",
+              "P2"
+            ]
+          },
+          {
+            "criterion": "Control del formato oral",
+            "evidence": "Archivo o reproducción del audio",
+            "how_to_check": "Medir máximo de 3 minutos y comprobar audibilidad de principio a fin.",
+            "authority": "propuesto",
+            "source_ids": [
+              "C",
+              "O-json"
+            ]
+          },
+          {
+            "criterion": "Interacción contextualizada",
+            "evidence": "Al menos dos respuestas",
+            "how_to_check": "Contar aportaciones atendidas y localizar idea ajena retomada y contraste propio en cada respuesta.",
+            "authority": "propuesto",
+            "source_ids": [
+              "C",
+              "O-md"
+            ]
+          },
+          {
+            "criterion": "Trazabilidad conceptual",
+            "evidence": "Menciones de fuentes en audio o respuestas",
+            "how_to_check": "Distinguir autor del extracto y del modelo; no presentar archivos no leídos como evidencia consultada.",
+            "authority": "propuesto",
+            "source_ids": [
+              "CAT",
+              "P1",
+              "P2",
+              "P3"
+            ]
+          }
+        ],
+        "proposed_review_responses": [
+          "sí",
+          "no",
+          "por revisar"
+        ],
+        "proposed_criteria_weights": null,
+        "combination_rule": null,
+        "note": "Apoyo formativo sin puntos ni pesos; no se trasladan niveles de otras actividades ni se infiere conversión de la rúbrica general al 5 por ciento."
+      },
+      "objective": {
+        "value": "Distinguir qué constituye una organización y qué queda fuera de esa delimitación, identificar elementos para su estudio y contrastar una explicación oral propia con aportaciones de pares.",
+        "status": "propuesto",
+        "source_ids": [
+          "C",
+          "O-md",
+          "O-json",
+          "E"
+        ]
+      },
+      "alignment": {
+        "value": "Las tres preguntas se observan en el audio y el contraste en las respuestas; se vincula propositivamente al uso de conceptos de gestión, sin ensayo adicional ni objetivo oficial específico acreditado.",
+        "status": "propuesto",
+        "source_ids": [
+          "C",
+          "O-json",
+          "E"
+        ]
+      },
+      "sequence": [
+        {
+          "phase": "preparacion",
+          "student": "Revisar consigna; localizar P1 y apoyos P2/P3; seleccionar pasajes y organizar las tres preguntas sin completar aquí el producto.",
+          "teacher": "Aclarar delimitación y diferenciar lectura primaria de extracto secundario.",
+          "minutes": 30,
+          "status": "propuesto",
+          "source_ids": [
+            "C",
+            "O-md",
+            "O-json",
+            "CAT"
+          ]
+        },
+        {
+          "phase": "desarrollo",
+          "student": "Elaborar y grabar explicación propia; escuchar aportaciones disponibles y preparar al menos dos respuestas contextualizadas.",
+          "teacher": "Moderar contraste y preguntar por fundamento de los elementos, sin dar respuestas modelo.",
+          "minutes": 50,
+          "status": "propuesto",
+          "source_ids": [
+            "C",
+            "O-md",
+            "O-json"
+          ]
+        },
+        {
+          "phase": "cierre",
+          "student": "Cronometrar audio, revisar audibilidad y cobertura; comprobar respuestas a dos aportaciones.",
+          "teacher": "Retroalimentar precisión y pertinencia; aclarar formato y acceso pendientes.",
+          "minutes": 10,
+          "status": "propuesto",
+          "source_ids": [
+            "C",
+            "O-md",
+            "O-json"
+          ]
+        }
+      ],
+      "estimated_minutes": 90,
+      "estimated_minutes_status": "propuesto",
+      "estimated_minutes_source_ids": [
+        "O-md",
+        "O-json"
+      ],
+      "sequence_conditions": [
+        "30 + 50 + 10 = 90; carga propuesta, no sesiones fechadas ni prórroga.",
+        "Lectura de PDF prevista en la secuencia, no realizada en esta revisión.",
+        "Si no hay aportaciones de pares accesibles, solicitar orientación; no inventar compañeros o réplicas."
+      ],
+      "pending": [
+        {
+          "description": "Confirmar apertura, cierre separado y zona horaria.",
+          "source_ids": [
+            "O-json",
+            "W"
+          ]
+        },
+        {
+          "description": "Confirmar modalidad formal, extensión técnica, códec, tamaño máximo del audio y longitud de respuestas.",
+          "source_ids": [
+            "O-json",
+            "C"
+          ]
+        },
+        {
+          "description": "Aclarar instrumento específico y aplicación de rúbrica general a audio y respuestas.",
+          "source_ids": [
+            "O-json",
+            "CAT",
+            "RG"
+          ]
+        },
+        {
+          "description": "Leer extractos y verificar pasajes, año y edición antes de atribuirles afirmaciones; excluir cicloARefuerzo como respaldo disciplinar.",
+          "source_ids": [
+            "CAT",
+            "P1",
+            "P2",
+            "P3"
+          ]
+        },
+        {
+          "description": "Revisar objetivo, mediación y tiempos propuestos; sin aprobación docente acreditada.",
+          "source_ids": [
+            "O-md",
+            "O-json"
+          ]
+        }
+      ],
+      "conflicts": [
+        {
+          "field": "alcance_editorial_del_producto",
+          "description": "C agrega guion y reporte AulaTeX; O-json/W reportan audio y respuestas como entrega del aula.",
+          "status": "diferencia_de_alcance_documental",
+          "draft_treatment": "No imponer PDF, guion ni longitud editorial como requisitos oficiales; auxiliares separados.",
+          "institutional_resolution": null,
+          "source_ids": [
+            "C",
+            "O-md",
+            "O-json",
+            "W"
+          ]
+        }
+      ],
+      "conflicts_note": "No se reportó otra contradicción específica del foro; no constituye revisión exhaustiva ni traslada conflictos de otras actividades."
+    },
+    "source_blocks": [],
+    "unsegmented_document": false,
+    "period_pending": false,
+    "activity_mapping": [
+      {
+        "activity_id": "7780",
+        "local_number": 1,
+        "source_locator": "/",
+        "source_is_summary": true
+      }
+    ]
+  }
+}
+```

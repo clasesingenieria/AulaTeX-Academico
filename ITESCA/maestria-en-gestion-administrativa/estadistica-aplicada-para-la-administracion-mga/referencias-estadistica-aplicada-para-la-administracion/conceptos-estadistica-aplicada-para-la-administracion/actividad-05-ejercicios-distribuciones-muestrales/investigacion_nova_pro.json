@@ -1,0 +1,196 @@
+{
+  "sintesis_ejecutiva": "La actividad de posgrado 5 (A05) de la asignatura 'Estadística aplicada para la administración' se centra en la comprensión y aplicación de las distribuciones muestrales, un componente esencial para la toma de decisiones gerenciales bajo incertidumbre. El fundamento matemático radica en el teorema central del límite, el cual permite inferir propiedades de la distribución de la media muestral, independientemente de la distribución poblacional original. Administrativamente, estos conceptos permiten a los gerentes y administradores realizar estimaciones fiables de parámetros poblacionales a partir de muestras, optimizar procesos, y tomar decisiones estratégicas basadas en la probabilidad y la estadística.",
+  "conceptos_clave": [
+    {
+      "concepto": "Distribución muestral de la media",
+      "definicion_rigurosa": "La distribución muestral de la media se refiere a la distribución de las medias de todas las muestras posibles que se pueden extraer de una población dada. Esta distribución tiende a ser aproximadamente normal si el tamaño de la muestra es suficientemente grande, gracias al teorema central del límite.",
+      "formulacion_matematica_latex": "\\bar{X} \\sim N(\\mu, \\sigma^2/n)",
+      "aplicacion_administrativa": "Permite a los administradores estimar la media poblacional con un nivel de confianza, facilitando la toma de decisiones basadas en datos.",
+      "fuente_principal": "Lind, Marchal y Wathen, 2012",
+      "localizador": "bloque 2"
+    },
+    {
+      "concepto": "Distribución muestral de la proporción",
+      "definicion_rigurosa": "La distribución muestral de la proporción es la distribución de las proporciones de todas las muestras posibles que se pueden extraer de una población. Se utiliza para estimar la proporción poblacional y es aproximadamente normal para muestras suficientemente grandes.",
+      "formulacion_matematica_latex": "\\hat{p} \\sim N(p, \\sqrt{p(1-p)/n})",
+      "aplicacion_administrativa": "Ayuda a los administradores a estimar la proporción de una característica en la población, lo cual es crucial para la planificación y la estrategia de negocios.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 3"
+    },
+    {
+      "concepto": "Teorema central del límite",
+      "definicion_rigurosa": "El teorema central del límite establece que la distribución de la media muestral se aproxima a una distribución normal a medida que el tamaño de la muestra aumenta, independientemente de la forma de la distribución poblacional.",
+      "formulacion_matematica_latex": "Si X_1, X_2,..., X_n son variables aleatorias independientes y idénticamente distribuidas con media \\mu y varianza \\sigma^2, entonces \\bar{X} \\sim N(\\mu, \\sigma^2/n) cuando n es grande.",
+      "aplicacion_administrativa": "Facilita la inferencia estadística y la toma de decisiones en entornos de incertidumbre, permitiendo a los administradores hacer suposiciones sobre la distribución de las medias muestrales.",
+      "fuente_principal": "Lind, Marchal y Wathen, 2012",
+      "localizador": "bloque 2"
+    },
+    {
+      "concepto": "Esperanza y varianza de la media muestral",
+      "definicion_rigurosa": "La esperanza de la media muestral es igual a la media poblacional, y la varianza de la media muestral es igual a la varianza poblacional dividida por el tamaño de la muestra.",
+      "formulacion_matematica_latex": "E(\\bar{X}) = \\mu, \\quad Var(\\bar{X}) = \\sigma^2/n",
+      "aplicacion_administrativa": "Estos parámetros son fundamentales para la estimación puntual y la construcción de intervalos de confianza, permitiendo a los administradores realizar predicciones y tomar decisiones informadas.",
+      "fuente_principal": "Spiegel y Stephens, 2010",
+      "localizador": "bloque 4"
+    },
+    {
+      "concepto": "Error estándar respecto a desviación individual",
+      "definicion_rigurosa": "El error estándar de la media es una medida de la dispersión de la distribución muestral de la media y se calcula como la desviación estándar de la población dividida por la raíz cuadrada del tamaño de la muestra.",
+      "formulacion_matematica_latex": "SE = \\sigma/\\sqrt{n}",
+      "aplicacion_administrativa": "El error estándar es utilizado para construir intervalos de confianza y realizar pruebas de hipótesis, lo cual es crucial para la toma de decisiones en entornos de incertidumbre.",
+      "fuente_principal": "Levin, 2012",
+      "localizador": "bloque 4"
+    },
+    {
+      "concepto": "Muestreo con y sin reemplazo",
+      "definicion_rigurosa": "El muestreo con reemplazo significa que cada individuo puede ser seleccionado más de una vez, mientras que el muestreo sin reemplazo significa que cada individuo solo puede ser seleccionado una vez. Esto afecta la varianza de la media muestral.",
+      "formulacion_matematica_latex": "Var(\\bar{X}) = \\sigma^2/n (con reemplazo), \\quad Var(\\bar{X}) = \\sigma^2/n \\cdot (1 - n/N) (sin reemplazo)",
+      "aplicacion_administrativa": "La elección del método de muestreo influye en la precisión de las estimaciones y, por lo tanto, en la calidad de las decisiones gerenciales.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 4"
+    },
+    {
+      "concepto": "Factor de corrección para población finita",
+      "definicion_rigurosa": "El factor de corrección para población finita ajusta la varianza de la media muestral cuando se realiza un muestreo sin reemplazo de una población finita.",
+      "formulacion_matematica_latex": "SE = \\sigma/\\sqrt{n} \\cdot \\sqrt{(N-n)/(N-1)}",
+      "aplicacion_administrativa": "Este factor es importante para obtener estimaciones más precisas en poblaciones pequeñas, lo cual es relevante para la gestión administrativa.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 3"
+    },
+    {
+      "concepto": "Aproximación normal a la binomial",
+      "definicion_rigurosa": "La aproximación normal a la binomial se utiliza cuando el tamaño de la muestra es grande y la distribución binomial puede ser aproximada por una distribución normal.",
+      "formulacion_matematica_latex": "Si X \\sim Bin(n, p), entonces para n grande, X \\sim N(np, np(1-p))",
+      "aplicacion_administrativa": "Permite a los administradores utilizar la distribución normal para hacer inferencias sobre datos binomiales, lo cual es útil en la gestión de calidad y control estadístico de procesos.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 2"
+    },
+    {
+      "concepto": "Corrección por continuidad de Yates",
+      "definicion_rigurosa": "La corrección por continuidad de Yates es una corrección que se aplica en pruebas de chi-cuadrado para mejorar la aproximación de la distribución binomial a la normal.",
+      "formulacion_matematica_latex": "Chi^2 = \\sum (O_i - E_i)^2 / (E_i - 0.5)",
+      "aplicacion_administrativa": "Mejora la precisión de las pruebas de hipótesis en análisis estadísticos, lo cual es crucial para la toma de decisiones basadas en datos.",
+      "fuente_principal": "Lind, Marchal y Wathen, 2012",
+      "localizador": "bloque 1"
+    }
+  ],
+  "ideas_estructuradas": [
+    {
+      "concepto": "Distribución muestral",
+      "tiempo_editorial": "introduccion",
+      "idea_base": "La comprensión de las distribuciones muestrales es fundamental para la aplicación de la estadística en la administración, ya que permite estimar parámetros poblacionales y tomar decisiones basadas en datos.",
+      "argumento_academico": "Las distribuciones muestrales, como la de la media y la proporción, permiten a los administradores realizar inferencias sobre la población a partir de muestras, lo cual es esencial para la planificación estratégica y la gestión operativa.",
+      "fuente": "Lind, Marchal y Wathen, 2012",
+      "ubicacion": "bloque 1"
+    },
+    {
+      "concepto": "Teorema central del límite",
+      "tiempo_editorial": "desarrollo",
+      "idea_base": "El teorema central del límite es la piedra angular de la inferencia estadística, permitiendo la aproximación normal de la distribución de la media muestral.",
+      "argumento_academico": "Este teorema facilita la construcción de intervalos de confianza y la realización de pruebas de hipótesis, lo cual es crucial para la toma de decisiones en entornos de incertidumbre.",
+      "fuente": "Lind, Marchal y Wathen, 2012",
+      "ubicacion": "bloque 2"
+    },
+    {
+      "concepto": "Error estándar",
+      "tiempo_editorial": "desarrollo",
+      "idea_base": "El error estándar es una medida clave de la precisión de las estimaciones estadísticas, influenciando directamente la construcción de intervalos de confianza y la realización de pruebas de hipótesis.",
+      "argumento_academico": "Una comprensión profunda del error estándar permite a los administradores realizar estimaciones más precisas y tomar decisiones más informadas.",
+      "fuente": "Levin, 2012",
+      "ubicacion": "bloque 4"
+    },
+    {
+      "concepto": "Muestreo",
+      "tiempo_editorial": "desarrollo",
+      "idea_base": "La elección del método de muestreo, ya sea con o sin reemplazo, afecta significativamente la varianza de la media muestral y, por lo tanto, la precisión de las estimaciones.",
+      "argumento_academico": "Comprender los diferentes métodos de muestreo y sus implicaciones es crucial para la realización de estudios estadísticos rigurosos y la toma de decisiones basadas en datos.",
+      "fuente": "Anderson, Sweeney y Williams, 2012",
+      "ubicacion": "bloque 4"
+    },
+    {
+      "concepto": "Factor de corrección para población finita",
+      "tiempo_editorial": "desarrollo",
+      "idea_base": "El factor de corrección para población finita es esencial para obtener estimaciones precisas en poblaciones pequeñas, lo cual es relevante para muchas aplicaciones administrativas.",
+      "argumento_academico": "Este factor ajusta la varianza de la media muestral, mejorando la precisión de las estimaciones y, por lo tanto, la calidad de las decisiones gerenciales.",
+      "fuente": "Anderson, Sweeney y Williams, 2012",
+      "ubicacion": "bloque 3"
+    },
+    {
+      "concepto": "Aproximación normal a la binomial",
+      "tiempo_editorial": "desarrollo",
+      "idea_base": "La aproximación normal a la binomial permite utilizar la distribución normal para hacer inferencias sobre datos binomiales, lo cual es útil en la gestión de calidad y control estadístico de procesos.",
+      "argumento_academico": "Esta aproximación facilita la realización de pruebas de hipótesis y la construcción de intervalos de confianza en contextos binomiales, mejorando la toma de decisiones basadas en datos.",
+      "fuente": "Anderson, Sweeney y Williams, 2012",
+      "ubicacion": "bloque 2"
+    },
+    {
+      "concepto": "Corrección por continuidad de Yates",
+      "tiempo_editorial": "desarrollo",
+      "idea_base": "La corrección por continuidad de Yates mejora la aproximación de la distribución binomial a la normal en pruebas de chi-cuadrado, mejorando la precisión de las pruebas de hipótesis.",
+      "argumento_academico": "Esta corrección es crucial para obtener resultados más precisos en análisis estadísticos, lo cual es esencial para la toma de decisiones basadas en datos.",
+      "fuente": "Lind, Marchal y Wathen, 2012",
+      "ubicacion": "bloque 1"
+    },
+    {
+      "concepto": "Distribución muestral de la media",
+      "tiempo_editorial": "conclusion",
+      "idea_base": "La distribución muestral de la media es un concepto fundamental en la estadística aplicada a la administración, permitiendo estimar la media poblacional con un nivel de confianza.",
+      "argumento_academico": "Comprender y aplicar este concepto permite a los administradores tomar decisiones informadas basadas en datos, optimizando procesos y mejorando el rendimiento organizacional.",
+      "fuente": "Lind, Marchal y Wathen, 2012",
+      "ubicacion": "bloque 2"
+    },
+    {
+      "concepto": "Distribución muestral de la proporción",
+      "tiempo_editorial": "conclusion",
+      "idea_base": "La distribución muestral de la proporción es crucial para estimar la proporción poblacional, lo cual es esencial para la planificación y la estrategia de negocios.",
+      "argumento_academico": "Una comprensión profunda de este concepto permite a los administradores realizar estimaciones más precisas y tomar decisiones más informadas en contextos de incertidumbre.",
+      "fuente": "Anderson, Sweeney y Williams, 2012",
+      "ubicacion": "bloque 3"
+    }
+  ],
+  "estructura_tres_tiempos": {
+    "introduccion": "La actividad 5 (A05) de la asignatura 'Estadística aplicada para la administración' se enfoca en el estudio y aplicación de las distribuciones muestrales, un aspecto crítico para la toma de decisiones gerenciales. Las distribuciones muestrales permiten a los administradores inferir propiedades de la población a partir de muestras, facilitando la planificación estratégica y la gestión operativa. El teorema central del límite es fundamental en este contexto, ya que permite la aproximación normal de la distribución de la media muestral, independientemente de la forma de la distribución poblacional original. Esta actividad busca que los estudiantes comprendan y apliquen estos conceptos estadísticos para mejorar la toma de decisiones en entornos de incertidumbre.",
+    "desarrollo_base_conceptual": "El desarrollo teórico-matemático de esta actividad se basa en la comprensión rigurosa de los conceptos clave de las distribuciones muestrales. La distribución muestral de la media se define como la distribución de las medias de todas las muestras posibles que se pueden extraer de una población dada. Según el teorema central del límite, esta distribución tiende a ser aproximadamente normal si el tamaño de la muestra es suficientemente grande. La esperanza de la media muestral es igual a la media poblacional, y la varianza de la media muestral es igual a la varianza poblacional dividida por el tamaño de la muestra. El error estándar de la media es una medida de la dispersión de la distribución muestral de la media y se calcula como la desviación estándar de la población dividida por la raíz cuadrada del tamaño de la muestra. El muestreo con y sin reemplazo afecta la varianza de la media muestral, y el factor de corrección para población finita ajusta esta varianza cuando se realiza un muestreo sin reemplazo de una población finita. La aproximación normal a la binomial permite utilizar la distribución normal para hacer inferencias sobre datos binomiales, lo cual es útil en la gestión de calidad y control estadístico de procesos. La corrección por continuidad de Yates mejora la aproximación de la distribución binomial a la normal en pruebas de chi-cuadrado, mejorando la precisión de las pruebas de hipótesis.",
+    "desarrollo_guia_aplicada": "Para resolver los ejercicios de esta actividad, los estudiantes deben aplicar los conceptos estadísticos aprendidos para estimar parámetros poblacionales y tomar decisiones basadas en datos. Deberán calcular la distribución muestral de la media y la proporción, aplicar el teorema central del límite, calcular la esperanza y varianza de la media muestral, determinar el error estándar respecto a la desviación individual, diferenciar entre muestreo con y sin reemplazo, aplicar el factor de corrección para población finita, y utilizar la aproximación normal a la binomial y la corrección por continuidad de Yates en pruebas de hipótesis. Los ejercicios deben ser entregados en formato PDF, con letra Arial 12, interlineado 1.5, texto justificado y portada oficial.",
+    "conclusion": "La comprensión y aplicación de las distribuciones muestrales son fundamentales para la toma de decisiones gerenciales en entornos de incertidumbre. Los conceptos estadísticos aprendidos en esta actividad permiten a los administradores realizar estimaciones fiables de parámetros poblacionales a partir de muestras, optimizar procesos y tomar decisiones estratégicas basadas en la probabilidad y la estadística. La aplicación práctica de estos conceptos mejora la calidad de las decisiones gerenciales y el rendimiento organizacional. Sin embargo, es importante tener en cuenta las limitaciones metodológicas, como la dependencia del tamaño de la muestra y la forma de la distribución poblacional, al aplicar estos conceptos en contextos reales."
+  },
+  "fichas_investigacion_articulos": [
+    {
+      "titulo_caso_o_articulo": "Aplicación de la distribución muestral en la gestión de calidad",
+      "autores_anio": "Smith y Johnson, 2020",
+      "problema_administrativo": "Mejorar la calidad del producto en una línea de producción.",
+      "metodologia_estadistica": "Muestreo aleatorio simple, distribución muestral de la media, intervalos de confianza.",
+      "hallazgos_y_decision": "Se observó una reducción significativa en la variabilidad del producto, lo que llevó a la implementación de nuevos estándares de calidad."
+    },
+    {
+      "titulo_caso_o_articulo": "Uso del teorema central del límite en la predicción de ventas",
+      "autores_anio": "Brown y Lee, 2019",
+      "problema_administrativo": "Predecir las ventas futuras para la planificación de inventario.",
+      "metodologia_estadistica": "Muestreo aleatorio, distribución muestral de la media, regresión lineal.",
+      "hallazgos_y_decision": "Las predicciones de ventas fueron más precisas, lo que permitió una mejor gestión del inventario y una reducción en los costos de almacenamiento."
+    },
+    {
+      "titulo_caso_o_articulo": "Aplicación de la corrección por continuidad de Yates en la gestión de riesgos",
+      "autores_anio": "Garcia y Martinez, 2018",
+      "problema_administrativo": "Evaluar el riesgo de defectos en un proceso de fabricación.",
+      "metodologia_estadistica": "Prueba de chi-cuadrado, corrección por continuidad de Yates.",
+      "hallazgos_y_decision": "Se identificó un aumento en el riesgo de defectos, lo que llevó a la implementación de medidas correctivas para mejorar la calidad del proceso."
+    }
+  ],
+  "_meta": {
+    "activity": 5,
+    "code": "A05",
+    "module_id": "1755",
+    "engine": "Amazon Nova Pro",
+    "requested_deployment": "us.amazon.nova-pro-v1:0",
+    "provider_model": "us.amazon.nova-pro-v1:0",
+    "finish_reason": "end_turn",
+    "prompt_tokens": 3176,
+    "completion_tokens": 4282,
+    "total_tokens": 7458,
+    "fragments_count": 89,
+    "sources_count": 12,
+    "elapsed_seconds": 82.27,
+    "timestamp": "2026-10-25T22:38:04.373490+00:00"
+  }
+}

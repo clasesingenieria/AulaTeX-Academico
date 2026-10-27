@@ -1,0 +1,819 @@
+Fuente bibliográfica: Estadística matemática con aplicaciones - Wackerly, Mendenhall y Scheaffer. 7.ª edición.pdf
+Actividad: 21 (7.2 Investigación 4% Tarea)
+Palabras clave: regresión lineal, productividad, rentabilidad, ventas, costos, ANOVA, mínimos cuadrados, desempeño
+
+[Bloque seleccionado #12 | relevancia=16]
+Pagina 11
+Contenido  ix
+ 10 Prueba de hipótesis 488
+10.1 
+Introducción 488
+10.2 
+Elementos de una prueba estadística 489
+10.3 
+Pruebas comunes con muestras grandes 496
+10.4 
+Cálculo de las probabilidades del error tipo II y determinación del tamaño 
+muestral para la prueba Z 507
+10.5 
+Relaciones entre los procedimientos de pruebas de hipótesis e intervalos de 
+confi anza 511
+10.6 
+Otra forma de presentar los resultados de una prueba estadística: niveles de 
+signifi cancia alcanzados o valores p 513
+10.7 
+Algunos comentarios respecto a la teoría de la prueba de hipótesis 518
+10.8 
+Prueba de hipótesis con muestras pequeñas para m y m1 − m2 520
+10.9 
+Pruebas de hipótesis referentes a varianzas 530
+10.10 
+Potencia de las pruebas y el lema de Neyman-Pearson 540
+10.11 
+Pruebas de razón de probabilidad 549
+10.12 
+Resumen 556
+ 11 Modelos lineales y estimación por 
+mínimos cuadrados 563
+11.1 
+Introducción 564
+11.2 
+Modelos estadísticos lineales 566
+11.3 
+Método de mínimos cuadrados 569
+11.4 
+Propiedades de los estimadores de mínimos cuadrados: regresión lineal 
+simple 577
+11.5 
+Inferencias respecto a los parámetros bi 584
+11.6 
+Inferencias respecto a funciones lineales de los parámetros del modelo: 
+regresión lineal simple 589
+11.7 
+Predicción de un valor particular de Y mediante regresión lineal simple 593
+11.8 
+Correlación 598
+11.9 
+Algunos ejemplos prácticos 604
+11.10 
+Ajuste del modelo lineal mediante matrices 609
+11.11 
+Funciones lineales de los parámetros del modelo: regresión lineal múltiple 615
+11.12 
+Inferencias respecto a funciones lineales de los parámetros del modelo: 
+regresión lineal múltiple 616
+
+[Bloque seleccionado #588 | relevancia=12]
+Pagina 587
+CAPÍTULO    11
+Modelos lineales y estimación 
+por mínimos cuadrados
+11.1 Introducción
+11.2 Modelos estadísticos lineales
+11.3 Método de mínimos cuadrados
+11.4 Propiedades de los estimadores de mínimos cuadrados: regresión lineal simple
+11.5 Inferencias respecto a los parámetros bi
+11.6 Inferencias respecto a funciones lineales de los parámetros del modelo: regresión 
+lineal simple
+11.7 Predicción de un valor particular de Y mediante regresión lineal simple
+11.8 Correlación
+11.9 Algunos ejemplos prácticos
+11.10 Ajuste del modelo lineal mediante matrices
+11.11 Funciones lineales de los parámetros del modelo: regresión lineal múltiple
+11.12 Inferencias respecto a funciones lineales de los parámetros del modelo: regresión 
+lineal múltiple
+11.13 Predicción de un valor particular de Y mediante regresión múltiple
+11.14 Una prueba para H0: bg+1 = bg+2 = ⋅ ⋅ ⋅ = bk = 0
+11.15 Resumen y conclusiones
+ 
+Bibliografía y lecturas adicionales
+563
+
+[Bloque seleccionado #594 | relevancia=10]
+Pagina 593
+cuando x1 y x2 tomen valores específi cos. Del mismo modo, podemos desarrollar métodos 
+para predecir un valor futuro de Y cuando las variables independientes tomen valores de inte-
+rés práctico. Las Secciones 11.3 a 11.9 se concentran en el modelo de regresión lineal simple, 
+mientras que las últimas secciones se refi eren a modelos de regresión lineal múltiple.
+ 
+11.3 Método de mínimos cuadrados
+Un procedimiento para estimar los parámetros de cualquier modelo lineal, el método de míni-
+mos cuadrados, se puede ilustrar con sólo ajustar una recta a un conjunto de puntos. Suponga 
+que deseamos ajustar el modelo
+E(Y) = b0 + b1x
+al conjunto de puntos que se muestra en la Figura 11.5. [La variable independiente x podría 
+ser w2 o (w)1/2 o ln w, etc., para alguna otra variable independiente w.] Esto es, postulamos 
+que Y = b0 + b1x + e, donde e tiene alguna distribución de probabilidad con E(e) = 0. Si 
+ˆb0 y ˆb1 son estimadores de los parámetros b0 y b1, entonces ˆY = ˆb0+ ˆb1x es claramente un 
+estimador de E(Y).
+El procedimiento de mínimos cuadrados para ajustar una recta que pase por un conjun-
+to de n puntos es semejante al método que podríamos usar si ajustamos una recta a simple 
+vista; esto es, deseamos que las diferencias entre los valores observados y los puntos corres-
+pondientes en la recta ajustada sean “pequeñas” en un sentido general. Una forma cómoda 
+de lograr esto y que proporciona estimadores con buenas propiedades, es minimizar la su-
+ma de cuadrados de las desviaciones verticales a partir de la recta ajustada (vea las desviacio-
+nes indicadas en la Figura 11.5). Entonces, si
+ˆyi = ˆb0 + ˆb1xi
+es el valor pronosticado del i-ésimo valor y (cuando x = xi), entonces la desviación (a veces 
+llamada error) del valor observado de yi a partir de ˆyi = ˆb0 + ˆb1xi es la diferencia yi −ˆyi y 
+la suma de los cuadrados de las desviaciones a minimizar es
+SSE =
+n
+i=1
+(yi −ˆyi)2 =
+n
+i=1
+[yi −( ˆb0 + ˆb1xi)]2.
+F I G U R A 11.5
+Ajuste de una 
+recta que pasa 
+por un conjunto 
+de puntos 
+yi
+yiˆ
+xi
+x
+y
+11.3  Método de mínimos cuadrados  569
+
+[Bloque seleccionado #596 | relevancia=10]
+Pagina 595
+Estimadores de mínimos cuadrados para el modelo de regresión lineal simple
+1. ˆb1 = Sxy
+Sxx
+, donde Sxy =
+n
+i=1
+(xi −x)(yi −y) y Sxx =
+n
+i=1(xi −x)2.
+2. ˆb0 = y −ˆb1x.
+Ilustramos el uso de las ecuaciones anteriores con un ejemplo sencillo.
+ 
+EJEMPLO 11.1 
+Use el método de mínimos cuadrados para ajustar una recta a los n = 5 puntos de datos dados 
+en la Tabla 11.1
+ 
+Solución 
+Comenzamos el cálculo de las estimaciones de mínimos cuadrados para la pendiente y puntos 
+de intersección de la recta ajustada construyendo la Tabla 11.2. Usando los resultados de la 
+tabla obtenemos
+ˆb1 = Sxy
+Sxx
+=
+n
+i=1
+xi yi −1
+n
+n
+i=1
+xi
+n
+i=1
+yi
+n
+i=1
+x2
+i −1
+n
+n
+i=1
+xi
+2
+=
+7 −1
+5(0)(5)
+10 −1
+5(0)2
+= .7,
+ˆb0 = y −ˆb1x = 5
+5 −(.7)(0) = 1,
+y la recta ajustada es
+ˆy = 1 + .7x.
+Tabla 11.1  Datos para el Ejemplo 11.1
+x
+y
+−2
+0
+−1
+0
+0
+1
+1
+1
+2
+3
+Tabla 11.2   Cálculos para determinar los coeficientes
+xi
+yi
+xi yi
+x2
+i
+−2
+0
+0
+4
+−1
+0
+0
+1
+0
+1
+0
+0
+1
+1
+1
+1
+2
+3
+6
+4
+n
+i=1 xi = 0
+n
+i=1 yi = 5
+n
+i=1 xi yi = 7
+n
+i=1 x2
+i = 10
+11.3  Método de mínimos cuadrados  571
+
+[Bloque seleccionado #597 | relevancia=16]
+Pagina 596
+572  Capítulo 11  Modelos lineales y estimación por mínimos cuadrados
+Los cinco puntos y la recta ajustada se muestran en la Figura 11.6. 
+Q
+En esta sección, hemos determinado los estimadores de mínimos cuadrados para los pará-
+metros b0 y b1 del modelo E(Y) = b0 + b1x. El sencillo ejemplo empleado aquí reaparecerá 
+en futuras secciones para ilustrar otros cálculos. Ejercicios de naturaleza más realista se pre-
+sentan al fi nal de las secciones y se analizan dos ejemplos que comprenden datos provenientes 
+de experimentos reales en la Sección 11.9. En la siguiente sección desarrollamos las propie-
+dades estadísticas de los estimadores de mínimos cuadrados ˆb0 y ˆb1. Secciones subsiguientes 
+están dedicadas a usar estos estimadores para varios fi nes inferenciales.
+Ejercicios
+ 
+11.1 
+Si ˆb0 y ˆb1 son las estimaciones de mínimos cuadrados para la ordenada al origen y la pendiente en un 
+modelo de regresión lineal sencilla, demuestre que la ecuación de mínimos cuadrados ˆy = ˆb0 + ˆb1x 
+siempre pasa por el punto (x, y). [Sugerencia: sustituya x por x en la ecuación de mínimos cuadrados y 
+use el hecho de que ˆb0 = y −ˆb1x.]
+ 
+11.2 
+Ejercicio Applet ¿Cómo puede usted mejorar su comprensión de cómo trabaja realmente el método de 
+mínimos cuadrados? Entre a la aplicación Fitting a Line Using Least Squares (en www.thomsonedu.
+com/statistics/wackerly). Los datos que aparecen en la primera gráfi ca son del Ejemplo 11.1.
+ 
+ 
+a  ¿Cuáles son la pendiente y la ordenada al origen de la recta horizontal azul? (Vea la ecuación sobre la 
+gráfi ca.) ¿Cuál es la suma de los cuadrados de las desviaciones verticales entre los puntos sobre 
+la recta horizontal y los valores observados de las y? ¿La recta horizontal se ajusta bien a los da-
+tos? Haga clic en el botón “Display/Hide Error Squares”. Observe que las áreas de los recuadros 
+amarillos son iguales a los cuadrados de las desviaciones asociadas. ¿Cómo se compara la Suma de 
+Cuadrados de los Errores (SSE) con la suma de las áreas de los recuadros amarillos?
+ 
+ 
+b  Haga clic en el botón “Display/Hide Error Squares” para que desaparezcan los recuadros amarillos. 
+Ponga el cursor en el extremo derecho de la recta azul. Haga clic y mantenga presionado el botón 
+del mouse y arrastre la recta para que la pendiente de la recta azul se haga negativa. ¿Qué observa 
+acerca de las longitudes de las rectas verticales rojas? ¿La SSE aumenta o disminuye? ¿La recta con 
+pendiente negativa parece ajustar bien los datos?
+ 
+ 
+c  Arrastre la recta para que la pendiente sea cercana a 0.8. ¿Qué ocurre cuando se acerca la pendiente
+
+[Bloque seleccionado #600 | relevancia=10]
+Pagina 599
+ 
+11.9 
+En la siguiente tabla aparece información acerca de ocho automóviles de cuatro cilindros considerados 
+entre los más efi cientes en consumo de combustible en 2006. Los tamaños de los motores se dan en 
+volumen total de cilindros, medido en litros (L).
+ 
+ 
+a Localice los puntos en papel milimétrico.
+ 
+ 
+b Encuentre la recta de mínimos cuadrados para los datos.
+ 
+ 
+c Grafi que la recta de mínimos cuadrados para ver lo bien que se ajusta a los datos.
+ 
+ 
+d  Use la recta de mínimos cuadrados para estimar la clasifi cación media de potencia para un automóvil 
+efi ciente en uso de combustible con volumen de cilindros de 1.9 L.
+ 
+11.10 
+Suponga que hemos postulado el modelo
+Yi = b1xi + ei  i = 1, 2, . . . , n,
+ 
+ 
+donde las ei son variables aleatorias independientes y distribuidas idénticamente con E(ei) = 0. Entonces 
+ˆyi = ˆb1xi es el valor pronosticado de y cuando x = xi y SSE =
+n
+i=1[yi −ˆb1xi]2. Encuentre el estima-
+dor de mínimos cuadrados de b1. (Observe que la ecuación y = bx describe una recta que pasa por el 
+origen. A menudo el modelo que acabamos de describir se denomina modelo sin puntos de cruce.)
+ 
+11.11 
+Algunos datos obtenidos por C. E. Marcellari2 sobre la altura x y diámetro y de caparazones de tortuga 
+aparecen en la tabla siguiente. Si consideramos el modelo
+E(Y) = b1x,
+ 
+ 
+entonces la pendiente b1 es la razón entre el diámetro medio y la altura. Use el resultado del Ejercicio 
+11.10 y los datos siguientes para obtener la estimación de mínimos cuadrados de la relación entre el 
+diámetro medio y la altura.
+2. Fuente: Carlos E. Marcellari, “Revision of Serpulids of the Genus Rotularia (Annelida) at Seymour Island (An-
+tarctic Peninsula) and Their Value in Stratigraphy,” Journal of Paleontology 58(4) (1984).
+Automóvil
+Caballos de 
+potencia (y)
+Honda Civic
+1.8
+51
+Toyota Prius
+1.5
+51
+VW Golf
+2.0
+115
+VW Beetle
+2.5
+150
+Toyota Corolla
+1.8
+126
+VW Jetta
+2.5
+150
+Mini Cooper
+1.6
+118
+Toyota Yaris
+1.5
+106
+Volumen de cilindros (x)
+Espécimen
+Altura (x)
+OSU 36651
+185
+78
+OSU 36652
+194
+65
+OSU 36653
+173
+77
+OSU 36654
+200
+76
+OSU 36655
+179
+72
+OSU 36656
+213
+76
+OSU 36657
+134
+75
+OSU 36658
+191
+77
+OSU 36659
+177
+69
+OSU 36660
+199
+65
+Diámetro (y)
+Ejercicios  575
+
+[Bloque seleccionado #602 | relevancia=12]
+Pagina 601
+ 
+11.4  Propiedades de los estimadores de mínimos 
+cuadrados: regresión lineal simple
+Necesitamos determinar las propiedades estadísticas de estimadores de mínimos cuadrados 
+si deseamos usarlos para hacer inferencias estadísticas. En esta sección mostramos que los 
+estimadores de mínimos cuadrados ˆb0 y ˆb1 para los parámetros del modelo lineal simple
+Y = b0 + b1x + e
+son estimadores insesgados de sus respectivos valores paramétricos. También deduciremos 
+las varianzas de estos estimadores y, dada la suposición de que el término de error e está distri-
+buido normalmente, demostraremos que ˆb0  y ˆb1 tienen distribuciones de muestreo normales. 
+Los resultados correspondientes aplicables al modelo de regresión lineal múltiple se presentan 
+sin demostración en la Sección 11.11.
+Recuerde que previamente supusimos que e es una variable aleatoria con E(e) = 0. Ahora 
+agregaremos la suposición de que V(e) = s2. Esto es, estamos suponiendo que la diferencia 
+entre la variable aleatoria Y y E(Y)= b0 + b1x está distribuida alrededor de cero con una 
+varianza que no depende de x. Observe que V(Y) = V(e) = s2 porque los otros términos del 
+modelo lineal son constantes. (Un estimador insesgado para la varianza s2 del término de 
+error del modelo también se presenta en esta sección.)
+Suponga que se hacen n observaciones independientes de este modelo para que, antes de 
+muestrear, tengamos n variables aleatorias independientes de la forma
+Yi = b0 + b1xi + ei.
+De la Sección 11.3 sabemos que
+ˆb1 = Sxy
+Sxx
+=
+n
+i=1(xi −x)(Yi −Y)
+n
+i=1(xi −x)2
+,
+que se puede escribir como
+ˆb1 =
+n
+i=1(xi −x)Yi −Y
+n
+i=1(xi −x)
+Sxx
+.
+Entonces, como 
+n
+i=1(xi −x) = 0,, tenemos
+ˆb1 =
+n
+i=1(xi −x)Yi
+Sxx
+.
+Debido a que todas las sumatorias de nuestro análisis se sumarán a partir de i = 1 hasta n, 
+simplifi caremos nuestra notación al omitir la variable de sumatoria y su índice. Ahora encon-
+tremos el valor esperado y la varianza de ˆb1.
+11.4  Propiedades de los estimadores de mínimos cuadrados: regresión lineal simple  577
+
+[Bloque seleccionado #658 | relevancia=18]
+Pagina 657
+ 
+ 
+Cuando el modelo Y = b0 −b1x1 +b2x2
+1 +e se ajustó, la ecuación de predicción fue ˆy = 130.009 
+3.302x1 + .033x2
+1
+—
+ con SSE = 465.134. Pruebe si los términos que contienen x2(x2, x1x2, x2
+1x2) con-
+tribuyen a un ajuste considerablemente mejor a los datos. Obtenga límites para el nivel de signifi cancia 
+alcanzado.
+ 
+11.93 
+Consulte el Ejemplo 11.19. Usando el modelo reducido construya un intervalo de confi anza de 95% para 
+la resistencia esperada del caucho a la abrasión cuando x1 = 1 y x2 = −1.
+ 
+11.94 
+Consulte el Ejemplo 11.19. Construya pruebas individuales de las tres hipótesis H0 : b3 = 0, H0 : b4 = 0 
+y H0: b5 = 0. Use un nivel de signifi cancia de 1% en cada prueba. (Si han de realizarse pruebas múltiples 
+en el mismo conjunto de datos, es conveniente usar un nivel a muy pequeño en cada prueba.)
+ 
+11.15 Resumen y conclusiones
+En este capítulo hemos empleado el método de mínimos cuadrados para ajustar un modelo 
+lineal a una respuesta experimental. Supusimos que el valor esperado de Y es una función de 
+un conjunto de variables x1, x2, . . . , xk, donde la función es lineal en un conjunto de parámetros 
+desconocidos. Usamos la expresión
+Y = b0 + b1x1 + b2x2 +
++ bkxk + e
+. . .
+para denotar un modelo estadístico lineal.
+Los problemas inferenciales asociados con el modelo estadístico lineal incluyen estima-
+ción y pruebas de hipótesis que se relacionan con los parámetros de modelo b0, b1, . . . , bk y, 
+lo que es más importante, el cálculo de E (Y) que es la respuesta esperada para un ajuste parti-
+cular y la predicción de algún valor futuro de Y. Experimentos para los cuales es apropiada la 
+teoría de mínimos cuadrados incluyen experimentos controlados y aquellos en los que x1, x2, 
+. . . , xk son valores observados de variables aleatorias.
+¿Por qué usar el método de mínimos cuadrados para ajustar un modelo lineal a un conjunto 
+de datos? Donde las suposiciones acerca de los errores aleatorios e se cumplen [normalidad, 
+independencia, V (e) = s2 para todos los valores de x1, x2, . . . , xk], se puede demostrar que 
+el procedimiento de mínimos cuadrados da los mejores estimadores insesgados lineales para 
+b0, b1, . . . , bk. Esto es, si calculamos los parámetros b0, b1, . . . , bk usando funciones lineales 
+de y1, y2, . . . , yk, los estimadores de mínimos cuadrados tienen varianza mínima. Algunos 
+otros estimadores no lineales para los parámetros pueden tener una menor varianza que los 
+estimadores de mínimos cuadrados, pero, si existen estos estimadores, no se conocen en este 
+momento. De nueva cuenta, ¿por qué usar estimadores de
+
+[Bloque seleccionado #928 | relevancia=16]
+Pagina 927
+Índice  903
+ 
+método de transformación y, 298, 
+310-318
+ 
+transformaciones multivariables y, 
+325-333
+Funciones discontinuas, 210
+Funciones escalón, 159
+Funciones lineales
+ 
+correlación y, 598-604
+ 
+covarianza y, 271-276
+ 
+de modelos parámetro, 589-593, 616-
+622
+ 
+de variables aleatorias, 270-279
+ 
+estimadores de mínimos cuadrados 
+como, 582
+ 
+inferencias respecto a, 589-593, 616-
+622
+ 
+valores esperados y, 270-279
+ 
+varianza y, 270-279
+Funciones pares, 221
+G
+Generador de número aleatorio, 307
+Grados de libertad
+ 
+para distribución F, 362, 626, 665
+ 
+para distribución ji cuadrada, 322, 
+434, 716
+ 
+para distribución t, 360, 426, 430, 
+584
+ 
+para suma de cuadrados, 688
+ 
+para tablas de contingencia, 723-724
+Gráficas de residuos, 634
+H
+H (estadístico de prueba), 766, 767, 768
+Hacer inferencia, 2, 13-14
+ 
+estadísticos y, 347
+ 
+estimación y, 556
+ 
+estimadores de mínimos cuadrados y, 
+584-589
+ 
+método de Bayes para, 796-819
+ 
+probabilidad y, 21-23
+ 
+prueba de hipótesis y, 556
+ 
+regresión lineal múltiple, 616-622
+ 
+regresión lineal simple, 589-593
+Hipótesis
+ 
+alternativa, 489-490, 496, 519
+ 
+compuesta, 542
+ 
+de investigación, 489-490
+ 
+nula, 489-490, 496, 519
+ 
+simple, 541-542
+Hipótesis alternativa, 489-490
+ 
+de cola inferior, 499
+ 
+de cola superior, 497
+ 
+de dos colas, 499, 500
+ 
+prueba de muestra pequeña, 521
+ 
+selección de, 500, 519
+ 
+simple, 542, 555
+Hipótesis compuesta, 542
+Hipótesis de investigación, 489-490
+ 
+Vea también Hipótesis alternativa
+Hipótesis nula, 489-490
+ 
+compuesta, 545-546
+ 
+intervalo de confianza y, 511
+ 
+poder de la prueba y, 540-541
+ 
+prueba de, 624-633, 669
+ 
+selección de, 500, 519
+ 
+simple, 542, 555
+ 
+valor p y, 513
+Hipótesis simple, 541-542
+Histograma de frecuencia relativa, 4, 
+371
+Histogramas, 4-6
+ 
+área bajo, 5-6
+ 
+construcción de, 4-5
+ 
+distribución binomial, 104
+ 
+distribución exponencial, 371
+ 
+distribución geométrica, 115
+ 
+frecuencia relativa, 4, 371
+ 
+función de distribución bivariada, 
+159
+ 
+funciones de densidad y, 201
+ 
+interpretación probabilística de, 5-6
+ 
+probabilidad, 89, 94, 104, 115
+ 
+tridimensional, 225
+Histogramas de frecuencia. Vea 
+Histogramas
+I
+Independencia, 247-250
+ 
+definición de, 247
+ 
+establecer, 247-248
+ 
+prueba para, 598-599
+Inferencia, 2
+Integración
+ 
+límites de, 250
+ 
+región de, 231, 302
+Intentos, experimentales, 100-101
+Intersección
+ 
+de conjuntos, 24
+ 
+de eventos, 57, 223-224
+ 
+probabilidad de, 57
+Intervalo de confianza de dos lados, 407, 
+426
+Intervalo de confianza de un lado, 407, 
+426
+Intervalo insesgado de confianza, 443
+Intervalos
+ 
+creíbles de Bayes, 808-813
+ 
+de predicción, 595-597,
+
+[Bloque seleccionado #930 | relevancia=22]
+Pagina 929
+Índice  905
+Método de transformación, 298, 
+310-318
+ 
+método de función de distribución y, 
+310-311
+ 
+multivariable, 325-333
+ 
+resumen de, 316
+Método de transformación bivariada, 
+325-333
+Método de transformación de multiva-
+riable, 325-333
+Método de transformaciones, 298, 310-
+318
+ 
+método de función distribución y, 
+310-311
+ 
+multivariable, 325-333
+ 
+resumen de, 316
+Método estadístico, 814, 818, 819
+Métodos de Bayes, 796-819
+ 
+intervalos creíbles, 808-813
+ 
+previos, posteriores y estimadores, 
+797-808, 816
+ 
+pruebas de hipótesis, 813-815
+Métodos gráficos descriptivos, 3-8
+Métodos muestrales, 77
+ 
+aleatorios simples, 78
+ 
+aleatorios, 77-79
+ 
+par acoplado, 644-651
+ 
+sustitución en, 78
+Métodos numéricos descriptivos, 8-13
+Métodos paramétricos, 742, 789
+Mínimo de variables aleatorias, 333
+MLEs. Vea Estimadores de máxima 
+probabilidad
+Modelo completo, 624, 626-628
+Modelo cuadrático, 614
+Modelo de cambio, 743
+Modelo de cambio de dos muestras, 
+742-743
+ 
+suposiciones para, 743
+Modelo de efecto de bloque aleatorio, 686
+Modelo de efectos de bloque fijo, 686
+Modelo de regresión lineal múltiple, 
+566-567, 569, 609, 615-624
+ 
+estimadores de mínimos cuadrados y, 
+615-616
+ 
+inferencias acerca de funciones linea-
+les en, 616-622
+ 
+intervalos de confianza para, 618
+ 
+matrices y, 609
+ 
+predicción de valores usando, 622-624
+ 
+pruebas de hipótesis para, 618
+Modelo de regresión lineal simple, 566, 
+569, 577-583, 589-597
+ 
+correlación y, 598-604
+ 
+estimadores de mínimos cuadrados 
+para, 571, 577-583, 610
+ 
+inferencias acerca de funciones linea-
+les en, 589-593
+ 
+intervalos de confianza para, 586, 
+590, 591, 596-597
+ 
+matrices y, 610, 613
+ 
+predicción de valores usando, 593-597
+ 
+pruebas de hipótesis para, 585, 590
+Modelo de ubicación, 743
+Modelo plano, 629, 630
+Modelo reducido, 624, 626-628, 629
+ 
+comparado con modelo completo, 
+627-630
+Modelo sin intersección, 575
+Modelos, 14
+ 
+ajustados, 628-630
+ 
+cambio de dos muestras, 742-743
+ 
+completos, 624, 626-628
+ 
+cuadráticos, 614
+ 
+de segundo orden, 628-630
+ 
+determinísticos, 564-565, 566
+ 
+diseño en una dirección, 677-679
+ 
+ecuación alométrica, 606
+ 
+efectos de bloque aleatorizados, 686
+ 
+efectos de bloque fijos, 686
+ 
+efectos de bloque, 686
+ 
+jerárquicos, 288-289
+ 
+lineales, 566-569
+ 
+linealizados, 606
+ 
+matemáticos, 14
+ 
+no lineales, 608
+ 
+para diseño de bloque aleatorizado, 
+686-687
+ 
+planos, 629, 630
+ 
+probabilísticos, 26-35, 565
+ 
+reducidos, 624, 626-628, 629
+ 
+regresión lineal múltiple, 566-567, 
+569, 609, 615-624
+ 
+regresión lineal simple, 566
+ 
+regresión, 566-567, 634
+ 
+selección de, 201
+ 
+sin intersección, 

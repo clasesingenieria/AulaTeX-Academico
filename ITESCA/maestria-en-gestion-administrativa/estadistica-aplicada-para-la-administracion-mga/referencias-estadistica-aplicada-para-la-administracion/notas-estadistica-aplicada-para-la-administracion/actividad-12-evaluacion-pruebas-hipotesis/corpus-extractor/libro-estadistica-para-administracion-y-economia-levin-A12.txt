@@ -1,0 +1,561 @@
+Fuente bibliográfica: Estadística para administración y economía - Levin y Rubin. 7.ª edición revisada.pdf
+Actividad: 12 (4.3 Evaluación 5% Cuestionario)
+Palabras clave: prueba de hipótesis, región de rechazo, estadístico de prueba, error tipo I, error tipo II, dos muestras independientes, muestras pareadas
+
+[Bloque seleccionado #10 | relevancia=8]
+Pagina 9
+Capítulo 6
+Muestreo y distribuciones de muestreo
+235
+6.1
+Introducción al muestreo
+236
+6.2
+Muestreo aleatorio
+238
+6.3
+Diseño de experimentos
+244
+6.4
+Introducción a las distribuciones de muestreo
+247
+6.5
+Distribuciones de muestreo a detalle
+251
+6.6
+Una consideración operacional en el muestreo: la relación entre 
+el tamaño de muestra y el error estándar
+261
+Estadística en el trabajo
+265
+Ejercicio de base de datos computacional
+266
+Términos introducidos en el capítulo 6
+267
+Ecuaciones introducidas en el capítulo 6
+268
+Ejercicios de repaso
+268
+Capítulo 7
+Estimación
+273
+7.1
+Introducción
+274
+7.2
+Estimaciones puntuales
+277
+7.3
+Estimaciones de intervalo: conceptos básicos
+281
+7.4
+Estimaciones de intervalo e intervalos de confianza
+285
+7.5
+Cálculo de estimaciones de intervalo de la media a partir 
+de muestras grandes
+288
+7.6
+Cálculo de estimaciones de intervalo de la proporción a partir 
+de muestras grandes
+293
+7.7
+Estimaciones de intervalos con la distribución t
+297
+7.8
+Determinación del tamaño de muestra en estimación
+303
+Estadística en el trabajo
+309
+Ejercicio de base de datos computacional
+309
+Del libro de texto al mundo real
+311
+Términos introducidos en el capítulo 7
+312
+Ecuaciones introducidas en el capítulo 7
+313
+Ejercicios de repaso
+313
+Capítulo 8
+Prueba de hipótesis: Prueba de una 
+sola muestra
+319
+8.1
+Introducción
+320
+8.2
+Conceptos básicos en el procedimiento de prueba de hipótesis
+321
+8.3 
+Prueba de hipótesis
+324
+8.4
+Pruebas de hipótesis de medias cuando se conoce la desviación estándar 
+de la población
+331
+8.5
+Medición de la potencia de una prueba de hipótesis
+338
+Contenido
+vii
+
+[Bloque seleccionado #338 | relevancia=8]
+Pagina 337
+Objetivos
+Contenido del capítulo
+319
+c a p í t u l o
+•
+Aprender cómo usar las mues-
+tras para decidir si una pobla-
+ción posee una característica
+dada
+•
+Determinar qué tan impro-
+bable es que una muestra 
+observada provenga de una
+población hipotética
+•
+Comprender los dos tipos de
+errores posibles que se produ-
+cen al probar las hipótesis
+•
+Aprender cuándo usar prue-
+bas de una cola y cuándo
+pruebas de dos colas
+•
+Aprender el proceso de cinco
+pasos para probar hipótesis
+•
+Aprender cómo y cuándo usar
+las distribuciones t y normal
+para probar hipótesis sobre
+medias y proporciones de 
+población
+8.1 Introducción
+320
+8.2 Conceptos básicos en el 
+procedimiento de prueba 
+de hipótesis
+321
+8.3 Prueba de hipótesis
+324
+8.4 Pruebas de hipótesis de medias
+cuando se conoce la
+desviación estándar de la
+población
+331
+8.5 Medición de la potencia de
+una prueba de hipótesis
+338
+8.6 Prueba de hipótesis para 
+proporciones: muestras 
+grandes
+341
+8.7 Pruebas de hipótesis de medias
+cuando no se conoce la
+desviación estándar de 
+la población
+347
+•
+Estadística en el trabajo
+351
+•
+Ejercicio de base de datos
+computacional
+351
+•
+Del libro de texto al mundo
+real
+352
+•
+Términos introducidos en el
+capítulo 8
+353
+•
+Ejercicios de repaso
+353
+8
+PRUEBA DE HIPÓTESIS:
+PRUEBA DE UNA 
+SOLA MUESTRA
+
+[Bloque seleccionado #345 | relevancia=10]
+Pagina 344
+tica para rechazarla. ¿Por qué? Porque la única forma en que puede aceptarse la hipótesis con se-
+guridad es que conozcamos el parámetro de población y, desafortunadamente, esto no es posible. Por
+consiguiente, siempre que afirmemos que aceptamos la hipótesis nula, en realidad lo que queremos
+decir es que no hay suficiente evidencia estadística para rechazarla. El empleo del término aceptar,
+en vez de no rechazar, se ha convertido en el estándar. Significa simplemente que cuando los
+datos de la muestra no hacen que rechacemos una hipótesis nula, nos comportamos como si esa
+hipótesis fuera cierta.
+Selección de un nivel de significancia
+No existe un nivel de significancia único estándar o universal para probar hipótesis. En algunos ca-
+sos, se utiliza un nivel de significancia del 5%. Ciertos resultados de investigaciones publicados
+a menudo prueban hipótesis para un nivel de significancia del 1%. Es posible probar una hipótesis a
+cualquier nivel de significancia. Pero recordemos que nuestra elección del estándar mínimo para una
+probabilidad aceptable, o el nivel de significancia, es también el riesgo que corremos al rechazar
+una hipótesis nula cuando es cierta. Cuanto más alto sea el nivel de significancia que utilizamos
+para probar una hipótesis, mayor será la probabilidad de rechazar la hipótesis nula cuando es
+cierta.
+Al examinar este concepto, nos referiremos a la figura 8-4. Ésta ilustra una prueba de hipótesis
+para tres niveles de significancia: 0.01, 0.10 y 0.50. También hemos indicado la ubicación de la mis-
+ma media de muestra x en cada distribución. En las gráficas (a) y (b), aceptaríamos la hipótesis nula
+de que la media de población es igual al valor hipotetizado. Pero observe que en la gráfica (c), recha-
+zaríamos esta misma hipótesis nula. ¿Por qué? Nuestro nivel de significancia de 0.50 en esta parte
+es tan alto que rara vez aceptaríamos la hipótesis nula cuando no es cierta, pero, al mismo tiempo,
+con frecuencia la rechazaríamos aunque lo sea.
+Errores de tipo I y tipo II
+Los especialistas en estadística usan definiciones y símbolos específicos para el concepto ilustrado
+en la figura 8-4. Rechazar una hipótesis nula cuando es cierta se denomina error tipo I, y su proba-
+bilidad (que, como hemos visto, es también el nivel de significancia de la prueba) se simboliza con
+ (alfa). Por otro lado, aceptar una hipótesis nula cuando es falsa se le llama error tipo II, y su
+probabilidad se simboliza con 
+ (beta). Existe una relación entre estos dos tipos de errores: la pro-
+babilidad de cometer un tipo de error puede reducirse sólo si e
+
+[Bloque seleccionado #346 | relevancia=24]
+Pagina 345
+ridad, a menudo rechazaremos una hipótesis nula cuando sea cierta. Puesto de otra manera, con el
+fin de obtener una 
+ baja, tendremos que tolerar una  alta. Para lidiar con este trueque o intercam-
+bio en situaciones personales y profesionales, los tomadores de decisiones deciden el nivel de signi-
+ficancia adecuado examinando los costos o la penalización vinculados con ambos tipos de error.
+Suponga que cometer el error tipo I (rechazar una hipótesis nula cuando es cierta) implica el tiem-
+po y los problemas de volver a trabajar un lote de compuestos químicos que debieran haberse acepta-
+do. Al mismo tiempo, cometer un error tipo II (aceptar una hipótesis nula cuando es falsa) significa
+arriesgarse a que todo un grupo de consumidores de este compuesto químico se envenenen. Evi-
+dentemente, la administración de esta compañía preferirá el error tipo I sobre el de tipo II y, como
+resultado, establecerá niveles de significancia muy altos en sus pruebas para obtener betas (
+) bajas.
+Suponga, por otra parte, que cometer un error tipo I implica desarmar todo un motor en la fábri-
+ca, pero cometer un error tipo II implica que los distribuidores de automóviles realicen reparaciones
+de garantía relativamente baratas. Entonces es más probable que el fabricante prefiera el error tipo
+II y que establezca menores niveles de significancia en sus pruebas.
+Decisión de qué tipo de distribución usar
+en la prueba de hipótesis
+Después de decidir el nivel de significancia a utilizar, nuestra siguiente tarea en la prueba de hipóte-
+sis consiste en determinar la distribución de probabilidad adecuada. Tenemos la opción de escoger
+entre la distribución normal, tabla 1 del apéndice, y la distribución t, tabla 2 del apéndice. Las reglas
+para elegir la distribución adecuada son similares a las que encontramos en el capítulo 7 sobre es-
+timación. La tabla 8-1 resume las situaciones en las que es posible usar la distribución normal y la
+distribución t al hacer pruebas de medias. Más adelante, en este capítulo, examinaremos las distri-
+buciones apropiadas para probar hipótesis sobre proporciones.
+Recuerde otra regla que debe cumplirse al probar el valor hipotético de una media. Al igual que
+en la estimación, utilice el multiplicador de población finita siempre que la población sea finita en
+tamaño, el muestreo se haga sin reemplazo y la muestra sea de más del 5% de la población.
+Uso del multiplicador
+de población finita
+Selección de la
+distribución correcta
+antes de la prueba
+Preferencia por el
+error tipo II
+Preferencia por el
+error tipo I
+8.3
+Prueba de hipótesis
+327
+FIGURA
+
+[Bloque seleccionado #347 | relevancia=8]
+Pagina 346
+Pruebas de hipótesis de dos colas y de una cola
+En las pruebas de las siguientes medias hipotéticas de población, ilustraremos pruebas de dos colas
+y de una cola. Estos nuevos términos requieren explicación. Una prueba de dos colas rechaza la hi-
+pótesis nula si la media de muestra es significativamente mayor o menor que la media hipotética de
+la población. Por tanto, en una prueba de dos colas, existen dos regiones de rechazo. La figura 8-5
+ilustra esto.
+Una prueba de dos colas es apropiada cuando la hipótesis nula es   H0 (en donde H0 es al-
+gún valor especificado) y la hipótesis alternativa es  
+ H0. Suponga que un fabricante de focos
+desea producirlos con una vida media de   H0  1,000 horas. Si el tiempo de vida es más cor-
+to, perderá clientes en favor de su competencia; si el tiempo de vida es más largo, tendrá un costo de
+producción muy alto porque los filamentos serán excesivamente gruesos. Para verificar que su proce-
+so de producción sea adecuado, toma una muestra de la producción con el fin de probar la hipótesis
+H0:   1,000. Como no quiere desviarse significativamente de 1,000 horas en ninguna dirección,
+la hipótesis alternativa adecuada es H1:  
+ 1,000, y utiliza una prueba de dos colas. Esto es, recha-
+za la hipótesis nula si la vida media de los focos de la muestra está muy por arriba de 1,000 horas o
+muy por abajo de 1,000 horas.
+Sin embargo, existen situaciones en las que no es apropiada una prueba de dos colas y debemos
+usar una prueba de una cola. Consideremos el caso de un mayorista que compra focos al fabricante
+del ejemplo anterior. El mayorista los compra en grandes lotes y no desea aceptar un lote de focos a
+menos que su vida media sea 1,000 horas o más. Cada vez que llega una remesa, el mayorista prue-
+ba una muestra para decidir si la acepta o no. La compañía rechazará el envío sólo si le parece que
+su vida media es menor que las 1,000 horas. Si cree que los focos son mejores que lo esperado (con
+una vida media superior a 1,000 horas), es claro que no rechazará la remesa, porque la vida más lar-
+ga no tiene un costo adicional. Así que las hipótesis del mayorista son H0:   1,000 horas y
+H1:   1,000 horas. Rechaza H0 sólo si la vida media de los focos muestreados es significativa-
+mente menor que 1,000 horas. La figura 8-6 ilustra esta situación. En ella podemos ver por qué esta
+prueba se conoce como prueba de cola izquierda (o prueba de cola inferior).
+En general, se utiliza una prueba de cola izquierda (de cola inferior) si las hipótesis son H0:  
+H0 y H1:   H0. En este caso, la evidencia muestr
+
+[Bloque seleccionado #349 | relevancia=12]
+Pagina 348
+Por último, debemos recordarle de nuevo, que en cada ejemplo de pruebas de hipótesis,
+cuando aceptamos una hipótesis nula con base en la información de la muestra, en realidad es-
+tamos diciendo que no hay evidencia estadística para rechazarla. No estamos afirmando que
+la hipótesis nula sea cierta. La única forma de probar una hipótesis nula es conocer el parámetro,
+y eso no es posible cuando se trata de muestreo. Así, aceptamos la hipótesis nula y nos comporta-
+mos como si fuera cierta, simplemente porque no podemos encontrar evidencia para rechazarla.
+El aceptar H0 no
+garantiza que H0
+sea cierta
+330
+Capítulo 8
+Prueba de hipótesis: prueba de una sola muestra
+Advertencia: no debe usar los resultados
+de la muestra para decidir entre usar una
+prueba de dos colas, de cola superior o
+de cola inferior. Antes de recolectar los
+datos, se determina la forma de la prueba a partir de lo que
+piensa o desea detectar el tomador de decisiones. Sugeren-
+cia: si los investigadores de mercados sospechan que las
+personas que compran cereal escarchado también compran
+más azúcar que quienes compran cereales sin endulzar, in-
+tentarán verificar su creencia sometiendo los datos a una
+prueba de cola superior. En caso de que la media de la
+muestra (sorprendentemente) fuera menor que el valor hi-
+potético, esto no la convierte en una prueba de cola infe-
+rior, es sólo que los datos no apoyan la creencia original.
+SUGERENCIAS
+Y
+SUPOSICIONES
+Ejercicios 8.3
+Ejercicios de autoevaluación
+EA
+8-3
+Para los siguientes casos, especifique qué distribución de probabilidad usar en una prueba de hipótesis:
+a)
+H0:   27, H1:  
+ 27, x  33, ˆ  4, n  25.
+b) H0:   98.6, H1:  	 98.6, x  99.1,   1.5, n  50.
+c)
+H0:   3.5, H1:   3.5, x  2.8, ˆ  0.6, n  18.
+d) H0:   382, H1:  
+ 382, x  363,   68, n  12.
+e)
+H0:   57, H1:  	 57, x  65, ˆ  12, n  42.
+EA
+8-4
+Martha Inman, una ingeniera de seguridad en carreteras, decide probar la capacidad de carga de un puen-
+te que tiene 20 años. Dispone de una gran cantidad de datos de pruebas similares en el mismo tipo de
+puente. ¿Qué es adecuado, una prueba de una o de dos colas? Si la capacidad de carga mínima de es-
+te puente debe ser 10 toneladas, ¿cuáles son las hipótesis nula y alternativa?
+Conceptos básicos
+■
+8-13
+Formule las hipótesis nula y alternativa para probar si la nevada anual promedio en Buffalo, Nueva York,
+excede 45 pulg.
+■
+8-14
+Describa qué representan normalmente las hipótesis nula y las alternativa en el proceso de prueba de hi-
+pótesis.
+■
+8-15
+Defina el término nivel de significancia.
+■
+8-16
+Defin
+
+[Bloque seleccionado #357 | relevancia=20]
+Pagina 356
+1985, el consumo de gasolina tiene una tasa promedio de aumento de sólo 0.33% al mes. Para un nivel de
+significancia de 0.01, ¿puede concluir que el aumento en el uso de la gasolina se redujo como resultado
+del embargo y sus consecuencias?
+■
+8-33
+Bay City Bigleaguers, un equipo de béisbol semiprofesional, tiene al jugador líder de la liga en promedio
+de bateo durante muchos años. Durante los últimos años, el promedio de bateo de Joe Carver ha sido de
+.343, con una desviación estándar de .018. Sin embargo, este año, el promedio de Joe fue sólo .306. Joe
+está renegociando su contrato para el año siguiente, y el salario que podrá obtener depende en gran me-
+dida de su habilidad de convencer al dueño del equipo de que su promedio de bateo de este año no fue sig-
+nificativamente peor que en años anteriores. Si el dueño desea usar un nivel de significancia de 0.02, ¿re-
+ducirán el salario de Joe para el año próximo?
+Soluciones a los ejercicios de autoevaluación
+EA
+8-5
+  2,100
+n  25
+x  13,000
+H0:   14,500
+H1:   14,500
+  0.01
+El límite inferior de la región de aceptación es z  2.33, o
+x  H0  z/n  14,500 
+ 13,521.4 horas
+Debido al valor z observado 
+
+ 3.57  2.33
+(es decir, x  13,521.4), debe rechazarse H0. La vida promedio es significativamente menor que el valor
+hipotético.
+EA
+8-6
+  10
+n  75
+x  8.15
+H0:  = 84
+H1:  
+ 84
+  0.01
+Los límites de la región de aceptación son z  2.58 o 
+x  H0  z/n  84 
+ (81.02, 86.98) días
+Debido a que el valor z observado 
+
+ 2.17, este valor y x están en la región
+de aceptación, de manera que no se rechaza H0. La duración de la exhibición no es significativamente di-
+ferente de la de otras regiones.
+8.5
+Medición de la potencia de una prueba 
+de hipótesis
+Ahora que hemos considerado dos ejemplos de pruebas de hipótesis, resulta apropiado retroceder un
+poco para analizar lo que una buena prueba de hipótesis debe hacer. Idealmente, tanto  como 
+ (las
+probabilidades de los errores tipo I y tipo II) deben ser pequeñas. Recuerde que un error tipo I se pre-
+senta cuando rechazamos una hipótesis nula que es cierta, y que  (el nivel de significancia de la
+prueba) es la probabilidad de cometer un error tipo I. En otras palabras, una vez que decidimos el ni-
+vel de significancia, no hay nada que podamos hacer respecto a . Un error tipo II ocurre cuando
+aceptamos una hipótesis nula que es falsa; la probabilidad de un error tipo II es 
+. ¿Qué podemos
+decir respecto a 
+?
+Suponga que la hipótesis nula es falsa. Entonces los administradores desearían que la prueba de
+hipótesis la r
+
+[Bloque seleccionado #372 | relevancia=24]
+Pagina 371
+pótesis. La caída comparativamente mayor en el tiempo de
+servicio contra la edad indicó que sólo la llegada de adminis-
+tradores más jóvenes no era responsable de la disminución
+de los años de servicio. Los ferrocarriles evidentemente aho-
+ra incluían gerentes de fuera de la compañía con más fre-
+cuencia que en el pasado. También se reveló un fuerte respal-
+do para la tercera hipótesis. El número promedio de años
+en la industria declinó de 27.23 años en 1977 a 24.88 años en
+1983, estadísticamente significativo al nivel de 0.001. Es cla-
+ro que, los resultados respaldaron la hipótesis de que la ad-
+ministración de ferrocarriles sería más joven y cambiante
+después de la desregulación.
+Conclusiones Los ferrocarriles, las aerolíneas y las compa-
+ñías de transportes motorizados han experimentado desregu-
+Repaso del capítulo
+353
+laciones sustanciales durante la última década, mismas que
+crearon un ímpetu por el cambio administrativo dentro de es-
+tas industrias. La prueba de hipótesis y otros métodos esta-
+dísticos proporcionan un medio para determinar los efectos
+de la reforma regulatoria en las industrias. Esta investigación
+puede ser benéfica para el desarrollo de estructuras adminis-
+trativas exitosas en las compañías de todas las industrias, en
+la búsqueda de prosperidad en entornos altamente competi-
+tivos.
+Fuente: Curtis M. Grimm, James A. Kling y Ken G. Smith, “The Impact
+of U.S. Rail Regulatory Reform on Railroad Management and Organi-
+zational Structure”, en Transportation Research-A 21A(2), (2007): 87-
+94.
+Alfa () Probabilidad de cometer un error tipo I.
+Beta (
+) Probabilidad de cometer un error tipo II.
+Curva de potencia Gráfica de los valores de la potencia de
+una prueba para cada valor de , u otro parámetro de pobla-
+ción para el que la hipótesis alternativa es cierta. 
+Error tipo I Rechazo de una hipótesis nula cuando es ver-
+dadera.
+Error tipo II Aceptación de una hipótesis nula cuando es
+falsa.
+Escala estandarizada Medición expresada en desviaciones
+estándar a partir de la media de la variable.
+Escala sin procesar Medición en las unidades originales de
+la variable.
+Hipótesis Suposición o especulación que hacemos respecto
+a un parámetro de población.
+Hipótesis alternativa Conclusión que aceptamos cuando
+los datos no respaldan la hipótesis nula.
+Hipótesis nula Hipótesis o suposición respecto a un pará-
+metro de población que deseamos probar, generalmente una
+suposición sobre el status quo.
+Nivel de significancia Valor que indica el porcentaje de va-
+lores de la muestra que están fuera de ciertos límites, supo-
+niendo que la hipótesi
+
+[Bloque seleccionado #405 | relevancia=12]
+Pagina 404
+9.6
+Valor P: otra manera de ver 
+las prueba de hipótesis
+En el trabajo realizado sobre pruebas de hipótesis hasta ahora, una de las primeras cosas que tuvi-
+mos que hacer fue escoger un nivel de significancia, , para la prueba. Se ha vuelto tradicional se-
+leccionar un nivel de significancia de   10, 5, 2 o 1%, y casi todos nuestros ejemplos se han re-
+suelto con esos niveles. Pero, ¿por qué utilizar solamente esos valores?
+Cuando analizamos los errores tipo I y tipo II, vimos que la elección del nivel de significancia de-
+pendía de un trueque entre los costos de cada tipo de error. Si el costo de un error tipo I (rechazo inco-
+rrecto de H0) es relativamente alto, intentamos evitar este tipo de error y, en consecuencia, escogemos
+un valor pequeño de . Por otro lado, si un error tipo II (aceptación incorrecta de H0) es relativamente
+más caro, es preferible cometer un error tipo I, y escogemos un valor alto de . Sin embargo, enten-
+der la naturaleza del trueque no nos dice cómo escoger un nivel de significancia.
+Cuando probamos las hipótesis:
+H0:   H0
+H1:   H0
+  0.05
+tomamos una muestra, calculamos x y rechazamos H0 si x está tan alejada de H0 que la probabilidad
+de encontrarse un valor de x tan lejos (o más) de H0 es menor que 0.05. En otras palabras, antes de
+tomar la muestra especificamos qué tan improbables deberán ser los resultados observados para que
+rechacemos H0. Existe otra forma de enfocar la decisión de aceptar o rechazar H0 que no requiere es-
+pecificar el nivel de significancia antes de tomar la muestra. Veamos cómo es que funciona.
+Suponga que tomamos una muestra, calculamos x y luego nos preguntamos: “suponiendo que H0
+es cierta, ¿cuál es la probabilidad de obtener un valor de x a esta distancia o mayor de H0?” Esta
+probabilidad se conoce como valor P. Mientras que antes nos preguntábamos, “¿es menor que
+ la probabilidad de lo que observamos?”, ahora nos preguntamos, “¿qué tan improbable es
+el resultado que observamos?”. Una vez que se informa el valor P de la prueba, en ese momen-
+to el tomador de decisiones puede evaluar los factores relevantes y decidir si acepta o rechaza
+H0, sin que lo limite un nivel de significancia especificado.
+Otro beneficio de utilizar valores P es que proporcionan más información. Si se sabe que se ha
+rechazado H0 al nivel   0.05, solamente sabe que x se encuentra al menos 1.96 errores estándar
+alejado de H0. Sin embargo, un valor P de 0.05 nos dice que x está exactamente a 1.96 errores es-
+tándar de H0. Veamos un ejemplo.
+Valores P de dos colas cuando se conoce 
+Se utili
+
+[Bloque seleccionado #453 | relevancia=14]
+Pagina 452
+poderosos y se usan más en la práctica, restringiremos nuestro estudio al muestreo simple. Esto le
+permitirá aprender los conceptos sin quedarse atorado en los detalles.
+Un ejemplo de muestreo de aceptación
+Considere el siguiente problema, al que se enfrentó Maureen Brennan, la responsable del control de
+calidad de la empresa Northway Computers, un fabricante de computadoras personales. La North-
+way está negociando un contrato para comprar lotes de 1,000 unidades de disco de 31/2 pulg con 
+la compañía Drives Unlimited. Esta última tiene buena reputación como proveedora de unidades 
+de disco de alta calidad, pero su producción no es perfecta. Afirma que puede producir unidades de
+disco con tasas de defectos menores al 1%, nivel que le parece aceptable a Maureen Brennan. Este
+nivel del 1% se conoce como nivel de calidad aceptable (AQL, por sus siglas en inglés, acceptance
+quality level). En términos poco formales, define qué tan alto puede ser un nivel de defectos para 
+todavía constituir un “buen” lote.
+Ahora bien, ¿qué sucede cuando Maureen escoge valores de n y c para su esquema de muestreo?
+Por ejemplo, suponga que ella toma n  100 y c  l. Si p es la tasa real de defectos de la Drives
+Unlimited, la probabilidad de que se rechace un lote dado puede calcularse con la distribución bino-
+mial. Esto se debe a que la muestra aleatoria de Maureen de 100 piezas tomadas de un lote de 1,000
+unidades de disco es también una muestra aleatoria tomada de la producción total de Drives Unlimi-
+ted. Ahora, con n  100 y p  0.01, tenemos
+P(r  0 defectos) 
+prqnr
+[5-1]
+
+ 
+(0.01)0(0.99)100
+P(r  1 defecto) 
+(0.01)1(0.99)99
+Entonces, la probabilidad de que se rechace un lote es 1  0.3660  0.3697  0.2643. Esta proba-
+bilidad se conoce como riesgo del productor. Es la posibilidad de rechazar el lote aun cuando la ta-
+sa de defectos verdadera de Drives Unlimited sea sólo 1%. Esto corresponde a un error tipo I en 
+la prueba de hipótesis.
+El error tipo II nos conduce al riesgo del consumidor. Suponga que la tasa mínima de defectos
+que la empresa Northway desearía rechazar en un lote de unidades de disco es 2%. Este nivel del 2%
+se conoce como porcentaje de tolerancia de defectos en el lote (LTPD, lot tolerance percent defec-
+tive). En términos no rigurosos, el LTPD define qué tan bajo un nivel de defectos sigue constituyen-
+do un “mal” lote. Suponga que la Northway recibe un lote de 1,000 unidades de disco flexible con
+20 unidades defectuosas. ¿Cuál es la probabilidad de que este lote sea aceptado debido a que la mues-
+tra de Maureen de 100 unidades no co

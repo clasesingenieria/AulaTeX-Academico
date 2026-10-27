@@ -1,0 +1,505 @@
+Fuente bibliográfica: Estadística para negocios y economía - Anderson, Sweeney y Williams. 11.ª edición.pdf
+Actividad: 6 (2.3 Evaluación 6% Cuestionario)
+Palabras clave: distribución muestral, teorema central del límite, error estándar, proporción muestral, varianza muestral, estandarización
+
+[Bloque seleccionado #132 | relevancia=16]
+Pagina 131
+ 
+3.2  Medidas de variabilidad 
+97
+Para los datos sobre los sueldos mensuales iniciales, los cuartiles son Q3  3 600 y Q1  
+3 465. Por tanto, el rango intercuartílico es 3 600  3 465  135.
+Varianza
+La varianza es una medida de la variabilidad que utiliza todos los datos. Se basa en la diferen-
+cia entre el valor de cada observación (xi) y la media. La diferencia entre cada xi y la media (x 
+para una muestra; μ para una población) se llama desviación respecto de la media. Para una 
+muestra, una desviación respecto de la media se escribe (xi  x); para una población, se es-
+cribe (xi  μ). Si se desea calcular la varianza, las desviaciones respecto de la media se elevan 
+al cuadrado.
+Si los datos pertenecen a una población, el promedio de las desviaciones elevadas al cua-
+drado se llama varianza poblacional, la cual se denota por medio del símbolo griego σ2. Para 
+una población de N observaciones con una media poblacional μ, la definición de la varianza 
+poblacional es la siguiente.
+RANGO INTERCUARTÍLICO
+ 
+RIC  Q3  Q1 
+(3.3)
+VARIANZA POBLACIONAL
+ 
+σ 2  (xi  )2
+N
+ 
+(3.4)
+VARIANZA MUESTRAL
+ 
+s2  (xi  x)2
+n  1
+ 
+(3.5)
+La varianza muestral s2 es 
+el estimador de la varianza 
+poblacional σ2.
+En la mayoría de las aplicaciones estadísticas, los datos que se analizan provienen de una 
+muestra. Cuando se calcula una varianza muestral, a menudo lo que interesa es usarla para esti-
+mar la varianza poblacional σ2. Aunque una explicación detallada está más allá del alcance de 
+este libro, puede mostrarse que si la suma de las desviaciones respecto de la media al cuadrado 
+se divide entre n  1, y no entre n, la varianza muestral resultante proporciona un estimador 
+insesgado de la varianza poblacional. Por esta razón, la varianza muestral, denotada por s2, se 
+define como sigue.
+Para ilustrar el cálculo de la varianza muestral se usarán los datos sobre los tamaños de 
+grupo de la muestra de cinco grupos de estudiantes universitarios presentada en la sección 
+3.1. Un resumen de los datos, que incluye el cálculo de las desviaciones respecto de la media 
+y los cuadrados de las desviaciones respecto de la media, se aprecia en la tabla 3.2. La suma de 
+los cuadrados de estas desviaciones es (xi  x )2  256. Por ende, si n  1  4, la varianza 
+muestral es
+ 
+s2  (xi  x)2
+n  1
+  256
+4  64
+Antes de proseguir, observe que las unidades asociadas con la varianza muestral suelen causar 
+confusión. Debido a que los valores que se suman para calcular la varianza, (xi  x)2, están 
+elevados al cuadrado, las unidades asociadas con la varianza muestral 
+
+[Bloque seleccionado #316 | relevancia=10]
+Pagina 315
+ 
+7.5  Distribución de muestreo de x  
+281
+En los casos en que n/N  0.05, para calcular σx debe usarse la versión para poblaciones 
+ﬁ nitas de la fórmula (7.2). En este libro, a menos que se indique otra cosa, se supondrá que el ta-
+maño de la población es “grande”, n/N  0.05, y se utilizará la expresión (7.3) para calcular σx.
+Para calcular σx se necesita conocer σ, la desviación estándar de la población. Para subra-
+yar, aún más, la diferencia entre σx y σ, a la desviación estándar de x, σx, se le llama error 
+estándar de la media. En general, el término error estándar se reﬁ ere a la desviación están-
+dar de un estimador puntual. Más adelante se verá que el valor del error estándar de la media 
+ayuda a determinar qué tan lejos puede estar la media muestral de la media poblacional. Ahora, 
+de nuevo con el ejemplo de EAI, se calcula el error estándar de la media correspondiente a las 
+muestras aleatorias simples de 30 gerentes de EAI.
+En la sección 7.1 vimos que la desviación estándar de los sueldos anuales en la población 
+de los 2 500 gerentes de EAI era σ  4 000. En este caso la población es ﬁ nita, N  2 500. Sin 
+embargo, como el tamaño de la muestra es 30, se tiene n/N  30/2 500  0.012. Dado que el 
+tamaño de la muestra es menor que 5% del tamaño de la población, se puede ignorar el factor 
+de corrección para una población ﬁ nita y usar la ecuación (7.3) para calcular el error estándar.
+σx  σ
+n  4 000
+30
+  730.3
+Forma de la distribución de muestreo de x
+Los resultados anteriores respecto del valor esperado y la desviación estándar en la distribu-
+ción de muestreo de x son aplicables a cualquier población. El paso ﬁ nal para identiﬁ car las 
+características de la distribución de muestreo de x consiste en determinar la forma de la dis-
+tribución de muestreo. Se considerarán dos casos: 1) La población tiene distribución normal, y 
+2) La población no tiene distribución normal.
+La población tiene distribución normal. En muchas situaciones es razonable suponer 
+que la población de la que se selecciona la muestra aleatoria simple tiene distribución normal o 
+casi normal. Cuando esto ocurre, la distribución de muestreo de x está distribuida normalmente 
+cualquiera que sea el tamaño de la muestra.
+La población no tiene distribución normal. Cuando la población de la que se tomó 
+la muestra aleatoria simple no tiene distribución normal, el teorema del límite central ayuda a 
+determinar la forma de la distribución de muestreo de x. El enunciado de este teorema aplicado 
+a la distribución de muestreo de x dice lo siguiente.
+TEOREMA DEL LÍM
+
+[Bloque seleccionado #320 | relevancia=12]
+Pagina 319
+ 
+7.5  Distribución de muestreo de x  
+285
+una muestra de tamaño mayor. Se explorará esta posibilidad considerando la relación entre el 
+tamaño de la muestra y la distribución de muestreo de x.
+Relación entre el tamaño de la muestra 
+y la distribución de muestreo de x
+Suponga que en el problema de muestreo de EAI se toma una muestra aleatoria simple de 100 ge-
+rentes en lugar de los 30 considerados. La intuición indica que teniendo más datos proporciona-
+dos por una muestra mayor, la media muestral basada en n  100 proporcionará una mejor esti-
+mación de la media poblacional que la basada en n  30. Para ver cuán mejor es, se considerará 
+la relación entre el tamaño de la muestra y la distribución de muestreo de x.
+Primero observe que E(x)  μ independientemente del tamaño de la muestra. Entonces, 
+la media de todos los valores posibles de x es igual a la media poblacional μ independiente-
+mente del tamaño n de la muestra. No obstante, el error estándar de la media, σx  σn, está 
+relacionado con la raíz cuadrada del tamaño de la muestra. Siempre que este tamaño aumente, 
+el error estándar de la media σx disminuirá. Con n  30, el error estándar de la media en el 
+problema de EAI es 730.3. Sin embargo, aumentando el tamaño de la muestra a n = 100, el error 
+estándar de la media disminuye a
+σx  σ
+n  4 000
+100
+  400
+En la ﬁ gura 7.6 se ilustran las distribuciones de muestreo de x correspondientes a n  30 y a 
+n  100. Como la distribución muestral con n  100 tiene un error estándar más pequeño, ha-
+brá menos variación entre los valores de x y éstos tenderán a estar más cerca de la media po-
+blacional que los valores de x con n  30.
+La distribución de muestreo de x, en el caso de n  100, puede emplearse para calcular la 
+probabilidad de que una muestra aleatoria simple de 100 gerentes de EAI dé una media mues-
+tral que no diﬁ era de los $500 de la media poblacional. Como la distribución de muestreo es 
+normal y su media es $51 800 y el error estándar de la media es 400, se emplea la tabla de pro-
+babilidad normal estándar para determinar el área o la probabilidad.
+Para x  52 300 (ﬁ gura 7.7) tenemos
+z  52 300  51 800
+400
+  1.25
+FIGURA 7.6   Comparación entre las distribuciones de muestreo de x con muestras aleatorias 
+simples de tamaño n  30 y n  100 gerentes de EAI
+x
+51800
+x  730.3
+Con n  30,
+x  400
+Con n  100,
+σ
+σ
+
+[Bloque seleccionado #324 | relevancia=14]
+Pagina 323
+ 
+7.6  Distribución de muestreo de p  
+289
+a)  ¿Cuál es la probabilidad de que el precio medio en una muestra de 30 gasolineras no di-
+fiera en más de $0.03 de la media poblacional?
+b)  ¿Cuál es la probabilidad de que el precio medio en una muestra de 50 gasolineras no difie-
+ra en más de $0.03 de la media poblacional?
+c) 
+ ¿Cuál es la probabilidad de que el precio medio en una muestra de 100 gasolineras no 
+difiera en más de $0.03 de la media poblacional?
+d)  ¿Recomendaría usted alguno de los tamaños muestrales de los incisos a), b) o c) para 
+tener al menos 0.95 de probabilidad de que la media muestral esté dentro de $0.03 de la 
+media poblacional?
+ 
+30. Para estimar la edad media de una población de 4 000 empleados se selecciona una muestra 
+aleatoria simple de 40 sujetos.
+a)  ¿Usaría el factor de corrección para una población finita en el cálculo del error estándar de 
+la media? Explique.
+b)  Si la desviación estándar poblacional es σ  8.2 años, calcule el error estándar con y sin 
+el factor de corrección para una población finita. ¿Cuál es la base para ignorar el factor de 
+corrección para la población finita si n/N  0.05?
+c) 
+ ¿Cuál es la probabilidad de que la media muestral de las edades de los empleados no difiera 
+en más de 2 años de la media poblacional de las edades?
+7.6 
+Distribución de muestreo de p
+La proporción muestral p es el estimador puntual de la proporción poblacional p. La fórmula 
+para calcular la proporción muestral es
+p  x
+n
+donde
+x  número de elementos de la muestra que poseen la característica de interés
+n  tamaño de la muestra
+Como se indica en la sección 7.4, la proporción muestral p es una variable aleatoria y su distri-
+bución de probabilidad se conoce como distribución de muestreo de p.
+DISTRIBUCIÓN DE MUESTREO DE p
+La distribución de muestreo de p es la distribución de probabilidad de todos los posibles 
+valores de la proporción muestral p.
+Para determinar qué tan cerca está la proporción muestral p de la proporción poblacional 
+p, es necesario entender las propiedades de la distribución de muestreo de p: el valor espera-
+do de p, la desviación estándar de p y la forma de la distribución de muestreo de p.
+Valor esperado de p
+El valor esperado de p, la media de todos los posibles valores de p, es igual a la proporción 
+poblacional p.
+
+[Bloque seleccionado #328 | relevancia=22]
+Pagina 327
+ 
+7.6  Distribución de muestreo de p 
+293
+manera similar, para p  0.55, se tiene que z  (0.55 – 0.60)/0.049  1.02. Se encuentra que 
+la probabilidad acumulada correspondiente a z  1.02 es 0.1539. Por tanto, si el tamaño de la 
+muestra aumenta de 30 a 100, la probabilidad de que la proporción muestral p no diﬁ era en más 
+de 0.05 de la proporción poblacional p aumenta a 0.8461  0.1539  0.6922.
+Ejercicios
+Métodos
+ 
+31. Una muestra aleatoria de tamaño 100 es seleccionada de una población en la que p  0.40.
+a) ¿Cuál es el valor esperado de p?
+b) ¿Cuál es el error estándar de p?
+c) 
+Exprese la distribución de muestreo de p.
+d) ¿Qué indica esta distribución?
+ 
+32. Una proporción poblacional es 0.40. Se toma una muestra aleatoria simple de tamaño 200 y la 
+proporción muestral p se usa para estimar la proporción poblacional.
+a)  ¿Cuál es la probabilidad de que la proporción muestral esté entre 0.03 de la proporción 
+poblacional?
+b)  ¿Cuál es la probabilidad de que la proporción muestral se encuentre entre 0.05 de la 
+proporción poblacional?
+ 
+33. Suponga que la proporción poblacional es 0.55. Calcule el error estándar de la proporción, σp , 
+para los tamaños de muestra 100, 200, 500 y 1 000. ¿Qué puede decir acerca del tamaño del 
+error estándar a medida que el tamaño de la muestra aumenta?
+ 
+34. La proporción poblacional es 0.30. ¿Cuál es la probabilidad de que las proporciones muestral 
+y poblacional estén entre 0.04 con los tamaños de muestra siguientes?
+a) n  100
+b) n  200
+c) 
+n  500
+d) n  1 000
+e) 
+¿Qué ventaja tiene un tamaño grande de muestra?
+Aplicaciones
+ 
+35. El director de Doerman Distributors, Inc. piensa que 30% de los pedidos proviene de nuevos 
+clientes. Para ver la proporción de clientes nuevos se usará una muestra aleatoria simple de 100 
+pedidos.
+a)  Suponga que el director está en lo cierto y que p  0.30. ¿Cuál es la distribución de mues-
+treo de p en este estudio?
+b)  ¿Cuál es la probabilidad de que la proporción muestral de p esté entre 0.20 y 0.40?
+c) 
+ ¿Cuál es la probabilidad de que esté entre 0.25 y 0.35?
+ 
+36. The Cincinnati Enquirer informa que en Estados Unidos 66% de los adultos y 87% de los 
+jóvenes entre 12 y 17 años usan Internet (The Cincinnati Enquirer, 7 de febrero de 2006). Con-
+sidere estos datos como proporciones poblacionales y suponga que se usará una muestra de 300 
+adultos y 300 jóvenes para obtener información respecto de su opinión acerca de la seguridad 
+en Internet.
+a)  Exponga la distribución de muestreo de p, siendo p la proporción muestral de adultos que 
+usan Internet.
+b)  ¿Cuál es la 
+
+[Bloque seleccionado #331 | relevancia=12]
+Pagina 330
+296 
+Capítulo 7  Muestreo y distribuciones de muestreo
+fórmulas para la varianza muestral y la desviación estándar muestral, en el denominador se usó 
+n  1 en lugar de n para que la varianza muestral fuera un estimador insesgado de la varianza 
+poblacional.
+Eficiencia
+Suponga que se usa una muestra aleatoria simple de n elementos para obtener dos estimadores 
+puntuales insesgados de un mismo parámetro poblacional. En estas circunstancias, se preferirá 
+usar el estimador puntual con el menor error estándar, ya que tenderá a dar estimaciones más 
+cercanas al parámetro poblacional. Se dice que el estimador puntual con menor error estándar 
+tiene mayor eficiencia relativa que los otros.
+En la ﬁ gura 7.11 se presentan las distribuciones de muestreo de dos estimadores puntuales 
+insesgados, θˆ1 y θˆ2. Observe que el error estándar de θˆ1 es menor que el error estándar de θˆ2; por 
+FIGURA 7.10  Ejemplos de estimadores puntuales insesgados y sesgados
+FIGURA 7.11  Distribuciones de muestreo de dos estimadores puntuales insesgados
+Distribución de muestreo
+de θ
+El parámetro θ se localiza en la media
+de la distribución de muestreo;
+E(θ)  θ
+Gráfica A. Estimador insesgado
+Distribución de muestreo
+de θ
+El parámetro θ no se localiza en la media
+de la distribución de muestreo;
+E(θ)  θ
+Gráfica B. Estimador sesgado
+E(θ)
+Sesgo
+θ
+θ
+θ
+θ
+Distribución de muestreo
+de θ1
+Distribución de muestreo
+de θ2
+Parámetro
+θ
+θ
+
+[Bloque seleccionado #332 | relevancia=14]
+Pagina 331
+ 
+7.8  Otros métodos de muestreo 
+297
+tanto, los valores de θˆ1 tienen más posibilidades de estar cerca del parámetro θˆ que los valores 
+de θˆ2. Como el error estándar del estimador puntual θˆ1 es menor que el del estimador puntual 
+θˆ2, θˆ1 es relativamente más eﬁ ciente que θˆ2 y se preﬁ ere como estimador puntual.
+Consistencia
+La tercera propiedad relacionada con un buen estimador puntual es la consistencia. Dicho de 
+manera sencilla, un estimador puntual es consistente si su valor tiende a estar más cerca del 
+parámetro poblacional a medida que el tamaño de la muestra aumenta. En otras palabras, una 
+muestra grande tiende a proporcionar mejor estimación puntual que una pequeña. Observe 
+que en el caso de la media muestral x, el error estándar de x está dado por σx  σn. Pues-
+to que σx está vinculado con el tamaño de la muestra, de manera que muestras mayores dan 
+valores menores de σx, entonces las de tamaño grande tienden a proporcionar estimadores pun-
+tuales más cercanos a la media de la población μ. Mediante un razonamiento similar, también 
+se puede concluir que la proporción muestral p es un estimador consistente de la proporción 
+poblacional p.
+Cuando se muestrean 
+poblaciones normales, 
+el error estándar de la 
+media muestral es menor 
+que el error estándar de 
+la mediana muestral. Por 
+tanto, la media muestral 
+es más eficiente que la 
+mediana muestral.
+NOTAS Y COMENTARIOS
+En el capítulo 3 se dijo que la media y la mediana 
+son dos medidas de localización central. En este capí-
+tulo sólo se estudió la media debido a que cuando se 
+muestrea una población normal, en la cual la media 
+y la mediana poblacionales son idénticas, el error es-
+tándar de la mediana es aproximadamente 25% ma-
+yor que el error estándar de la media. Recuerde que 
+en el problema de EAI, con n  30, el error estándar 
+de la media fue σx  730.3, mientras que el de la me-
+diana en este problema sería 1.25  (730.3)  913. 
+Por tanto, la media muestral es más eficiente y tendrá 
+más probabilidad de estar dentro de una determinada 
+distancia de la media poblacional.
+7.8 
+Otros métodos de muestreo
+Se describió el muestreo aleatorio simple como un procedimiento de muestreo de una pobla-
+ción ﬁ nita y se estudiaron las propiedades de las distribuciones de muestreo de x y de p cuando 
+se usó el muestreo aleatorio simple. Sin embargo, no es el único método de muestreo que existe. 
+Hay otros, como el muestro aleatorio estratiﬁ cado, el muestreo por conglomerados y el mues-
+treo sistemático que, en ciertas situaciones, tienen ventajas sobre el aleatorio simple. En es
+
+[Bloque seleccionado #338 | relevancia=18]
+Pagina 337
+ 
+Ejercicios complementarios 
+303
+c) 
+ ¿Cuál es la probabilidad de que la media muestral no se aleje más o menos de $1 000 de la 
+media poblacional?
+d)  ¿Qué tanto variaría la probabilidad del inciso c) si el tamaño de la muestra se aumentara 
+a 100?
+ 
+47. Tres empresas transportan inventarios de distintos tamaños. El inventario de la empresa A con-
+tiene 2 000 artículos, el de la empresa B, 5 000 artículos y el de la empresa C, 10 000 artículos. 
+La desviación estándar poblacional de los costos de los artículos en los inventarios de estas 
+empresas es σ  144. Un consultor de estadística recomienda que cada compañía tome una 
+muestra de 50 artículos de su inventario para obtener una estimación estadística válida del cos-
+to promedio por unidad. Los gerentes de la firma más pequeña opinan que, como su población 
+es menor, se podrá hacer la estimación con una muestra mucho menor de la que se requiere 
+para la empresa más grande. Sin embargo, el consultor opina que para tener el mismo error 
+estándar y, por tanto, la misma precisión en los resultados muestrales, todas las compañías 
+deberán emplear el mismo tamaño de muestra, sin importar el tamaño de la población.
+a)  Utilizando el factor de corrección para una población finita, calcule el error estándar de 
+cada una de las tres empresas para un tamaño de muestra de 50.
+b)  ¿Cuál es la probabilidad para cada firma de que la media muestral x esté a no más de 25 
+de la media poblacional μ?
+ 
+48. Un investigador reporta sus resultados diciendo que el error estándar de la media es 20 y la 
+desviación estándar poblacional es 500.
+a) ¿De qué tamaño fue la muestra utilizada en esta investigación?
+b)  ¿Cuál es la probabilidad de que la estimación puntual esté a no más de 25 de la media 
+poblacional?
+ 
+49. Un inspector de control de calidad vigila periódicamente un proceso de producción. El ins-
+pector selecciona muestras aleatorias simples de 30 artículos ya terminados y calcula la media 
+muestral del peso del producto x. Si en un periodo largo se encuentra que 5% de los valores de 
+x son mayores que 2.1 libras y 5% son menores que 1.9 libras, ¿cuáles son la media y la des-
+viación estándar de la población de los productos elaborados en este proceso?
+ 
+50. Cerca de 28% de las empresas privadas tiene como propietario a una mujer (The Cincinnati 
+Enquirer, 26 de enero de 2006). Responda estas preguntas con base en una muestra de 240 
+empresas privadas.
+a)  Desarrolle la distribución de muestreo de p, la proporción muestral de las empresas pro-
+piedad de una mujer.
+b)  ¿Cuál es la probabilidad de que la
+
+[Bloque seleccionado #485 | relevancia=14]
+Pagina 484
+450 
+Capítulo 11  Inferencias acerca de varianzas poblacionales
+Es decir, aun cuando el mecanismo de llenado tenga un ajuste adecuado para una media 
+de 16 onzas, no es de esperar que todos los envases contengan exactamente esta cantidad. Para 
+calcular la varianza muestral de la cantidad de onzas en cada envase, se toma una muestra de 
+recipientes llenos. Este valor servirá como estimación de la varianza para la población de en-
+vases que están siendo llenados en el proceso de producción. Si la varianza muestral es mo-
+derada, el proceso de producción continúa. Pero si la varianza muestral es grande, puede estar 
+ocurriendo exceso o insuﬁ ciencia de llenado aunque la media de 16 onzas sea la correcta. En 
+este caso habrá que reajustar el mecanismo de producción con objeto de reducir la varianza de 
+llenado de los recipientes.
+En la primera sección se analizarán inferencias acerca de la varianza de una sola pobla-
+ción. Después se estudiarán procedimientos para inferencias acerca de varianzas de dos po-
+blaciones.
+11.1  Inferencias acerca de una varianza 
+poblacional
+La varianza muestral
+ 
+s2  (xi  x)2
+n  1
+ 
+(11.1)
+es el estimador puntual de la varianza poblacional σ 2. Cuando se hacen inferencias acerca de 
+la varianza poblacional mediante la varianza muestral, es útil la distribución de muestreo de la 
+cantidad (n  1)s2/σ 2. Esta distribución se describe como sigue.
+En muchas aplicaciones 
+de fabricación, controlar 
+la varianza del proceso es 
+de suma importancia para 
+conservar la calidad.
+La distribución ji-cuadrada 
+se basa en el muestreo de 
+una población normal.
+DISTRIBUCIÓN DE MUESTREO DE (n  1)s2/σ 2
+Siempre que de una población normal se tome una muestra aleatoria simple de tamaño n, 
+la distribución de muestreo de
+ 
+(n  1)s2
+σ 2
+ 
+(11.2)
+tendrá una distribución ji-cuadrada con n  1 grados de libertad.
+En la ﬁ gura 11.1 se presentan algunas de las posibles formas que puede tomar la distribución 
+de (n  1)s2/σ 2.
+Como se sabe, siempre que se tome una muestra aleatoria simple de tamaño n de una po-
+blación normal, la distribución muestral de (n  1)s2/σ 2 será una distribución ji-cuadrada, la 
+cual sirve para obtener una estimación por intervalo y realizar pruebas de hipótesis acerca de 
+la varianza poblacional.
+Estimación por intervalo
+Con el ﬁ n de exponer cómo usar la distribución ji-cuadrada para obtener una estimación de la 
+varianza poblacional σ 2 mediante un intervalo de conﬁ anza, suponga que desea estimar la va-
+rianza poblacional del proceso industrial de llenado que se menciona al inicio de este capítulo. 
+En una 
+
+[Bloque seleccionado #546 | relevancia=12]
+Pagina 545
+ 
+13.1  Introducción al diseño de experimentos y al análisis de varianza 
+511
+análisis de varianza, cada muestra provendrá de la misma distribución normal con media μ 
+y varianza σ 2. Recuerde que en el capítulo 7 se vio que la distribución muestral de la media 
+muestral x de una muestra aleatoria simple de tamaño n tomada de una población normal ten-
+drá una distribución normal con media μ y varianza σ 2/n. En la ﬁ gura 13.2 se ilustra una dis-
+tribución muestral de este tipo.
+Por consiguiente, si la hipótesis nula es verdadera, se considera cada una de las tres me-
+dias muestrales, x1  62, x2  66 y x3  52 de la tabla 13.1, como valores obtenidos aleato-
+riamente de la distribución muestral que aparece en la ﬁ gura 13.2. En este caso, la media y la 
+varianza de los tres valores x se pueden usar para estimar la media y la varianza de la distribu-
+ción muestral. Cuando los tamaños de las muestras son iguales, como en el caso de Chemitech, 
+la mejor estimación de la media de la distribución muestral de x es la media o el promedio de 
+las medias muestrales. Por tanto, en el experimento de Chemitech, una estimación de la media 
+de la distribución muestral de x es (62  66  52)/3  60, a la cual se le conoce como media 
+muestral general. A su vez, una estimación de la varianza de la distribución muestral de x, σ 2
+x, 
+se obtiene de la varianza de las tres medias muestrales.
+s2
+x  (62  60)2  (66  60)2  (52  60)2
+3  1
+  104
+2  52
+Como σ 2
+x  σ 2/n, al resolver para σ 2 obtenemos
+σ 2  nσ 2
+x
+Por tanto,
+Estimación de σ 2  n (estimación de σ 2
+x)  ns2
+x  5(52)  260
+Al resultado, ns2
+x  260, se le conoce como estimación de σ 2 entre tratamientos.
+La estimación σ 2 entre tratamientos se basa en el supuesto de que la hipótesis nula es ver-
+dadera. En este caso cada una de las muestras proviene de la misma población y sólo hay una 
+FIGURA 13.2  Distribución muestral de x si H0 es verdadera
+2
+Las medias muestrales están
+todas “muy cerca” porque
+sólo existe una distribución
+muestral cuando H0 es verdadera
+x3
+x1
+x2
+ n
+x
+2
+σ
+σ
+μ

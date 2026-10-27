@@ -1,0 +1,832 @@
+Fuente bibliográfica: Estadística - Spiegel y Stephens. 4.ª edición.pdf
+Actividad: 9 (3.3 Evaluación 5% Cuestionario)
+Palabras clave: estimación puntual, intervalo de confianza, valor crítico, t de Student, ji-cuadrada, margen de error
+
+[Bloque seleccionado #257 | relevancia=6]
+Pagina 256
+232  CAPÍTULO 9 TEORÍA DE LA ESTIMACIÓN ESTADÍSTICA
+Obsérvese que no se empleó la corrección de Sheppard por agrupamiento. Si se emplea, se usa s = 2.79 in (ver 
+problema 4.21). 
+9.4 
+Dar una estimación insesgada e ineficiente del verdadero diámetro medio de la esfera del problema 9.2.
+SOLUCIÓN
+La mediana es un ejemplo de estimación insesgada e ineficiente de la media poblacional. Para las cinco mediciones coor-
+denadas de acuerdo con su magnitud, la mediana es 6.36 cm.
+INTERVALOS DE CONFIANZA PARA MEDIAS 
+9.5 
+Encontrar los intervalos de confianza: a) de 95% y b) 99% para estimar la estatura media de los estudiantes de 
+la universidad XYZ del problema 9.3.
+SOLUCIÓN
+a) 
+Los límites de confianza del 95% son X  1:96=
+ﬃﬃﬃﬃ
+N
+p
+. Empleando X ¼ 67:45 in, y ^s ¼ 2:93 in como estimación de 
+σ (ver problema 9.3), los límites de confianza son 67:45  1:96ð2:93=
+ﬃﬃﬃﬃﬃﬃﬃ
+100
+p
+Þ o 67.45 ± 0.57 in. Por lo tanto, el inter-
+valo de confianza del 95% para la media poblacional µ es 66.88 a 68.02 in, lo que se denota así 66.88 < µ < 68.02.
+De manera que se puede decir que la probabilidad de que la media poblacional de las estaturas se encuentre 
+entre 66.88 y 68.02 es aproximadamente de 95% o 0.95. Empleando símbolos se escribe Pr{66.88 < µ < 68.02} = 
+0.95. Esto equivale a decir que se tiene 95% de confianza en que la media poblacional (o verdadera media) se encuen-
+tre entre 66.88 y 68.02 in.
+b) 
+Los límites de confianza del 99% son X  2:58=
+ﬃﬃﬃﬃ
+N
+p
+¼ X  2:58^s=
+ﬃﬃﬃﬃ
+N
+p
+¼ 67:45  2:58ð2:93=
+ﬃﬃﬃﬃﬃﬃﬃ
+100
+p
+Þ ¼ 67.45 ± 
+0.76 in. Por lo tanto, el intervalo de confianza del 99% para la media poblacional µ es 66.69 a 68.21 in, lo que se 
+denota así 66.69 < µ < 68.21.
+Al obtener los intervalos de confianza anteriores se supuso que la población era infinita o tan grande que se 
+podía considerar que las condiciones eran las mismas que en un muestreo con reposición. En el caso de poblaciones 
+finitas, si el muestreo se hace sin reposición, se debe usar
+ 
+ﬃﬃﬃﬃ
+N
+p
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+Np  N
+Np  1
+s
+  en lugar de  
+ﬃﬃﬃﬃ
+N
+p
+ 
+Sin embargo, se puede considerar que el factor
+ 
+
+Np
+N
+Np
+1
+
+=
+
+1 546
+100
+1 546
+1
+
+= 0.967
+ 
+es prácticamente 1.0, por lo que no necesita usarse. Si se usa, los límites de confianza anteriores se convierten en 67.45 
+± 0.56 in y 67.45 ± 0.73 in, respectivamente.
+9.6 
+Una empresa tiene 5 000 árboles de navidad maduros y listos para ser cortados y vendidos. En forma aleatoria 
+se seleccionan 100 de estos árboles y se miden sus alturas. En la tabla 9.2 se dan estas alturas en pulgadas. 
+Emplear MINITAB para dar un interva
+
+[Bloque seleccionado #259 | relevancia=6]
+Pagina 258
+234  CAPÍTULO 9 TEORÍA DE LA ESTIMACIÓN ESTADÍSTICA
+rales celebrados el año anterior. Obtener el intervalo empleando la fórmula para intervalos de confianza y usar 
+también el comando Zinterval de MINITAB para hallar este intervalo.
+SOLUCIÓN
+Una vez ingresados los datos de la tabla 9.3 en la columna 1 de la hoja de cálculo de MINITAB y de haberle dado “núme-
+ro” como nombre a esta columna, se dan los comandos para la media y la desviación estándar.
+MTB > cl media
+Columna media
+Media de número = 40.261
+MTB > cl desviación estándar
+Columna desviación estándar
+Desviación estándar de número = 9.9895
+El error estándar de la media es igual a 9:9895=
+ﬃﬃﬃﬃﬃ
+50
+p
+¼ 1:413, el valor crítico es 1.96 y el margen de error de 95% 
+es 1.96(1.413) = 2.769. El intervalo de confianza va de 40.261 − 2.769 = 37.492 a 40.261 + 2.769 = 43.030.
+Con el comando Zinterval se obtiene el resultado siguiente:
+MTB > Zinterval, de 95% de confianza sd = 9.9895 datos en cl
+Intervalos de confianza Z
+Sigma supuesta = 9.99
+Variable 
+N 
+Media 
+DesvEst 
+SE media 
+ 95.00% CI
+Número 
+50 
+40.26 
+9.99 
+1.41 
+(37.49, 43.03)
+Se tiene una confianza de 95% de que la verdadera media de todos los sacerdotes esté entre 37.49 y 43.03.
+9.8 
+Para medir el tiempo de reacción, un psicólogo estima que la desviación estándar es 0.05 segundos (s). ¿Qué 
+tan grande debe ser la muestra de las medidas para que se tenga una confianza: a) de 95% y b) de 99% en que 
+el error de esta estimación no será mayor de 0.01 s?
+SOLUCIÓN
+a) 
+Los límites de confianza del 95% son X  1:96=
+ﬃﬃﬃﬃ
+N
+p
+, siendo el error de estimación 1:96=
+ﬃﬃﬃﬃ
+N
+p
+. Tomando σ = s = 
+0.05 s, se ve que este error será igual a 0.01 s si (1.96)(0.05)/
+ﬃﬃﬃﬃ
+N
+p
+¼ 0:01; es decir, 
+ﬃﬃﬃﬃ
+N
+p
+¼ ð1:96Þð0:05Þ=0:01 ¼ 9:8 
+o bien N = 96.04. Por lo tanto, se puede tener una confianza del 95% en que el error de estimación será menor a 0.01 
+si N es 97 o mayor.
+Tabla 9.3
+32
+44
+48
+35
+34
+29
+31
+61
+37
+41
+31
+40
+44
+43
+41
+40
+41
+31
+42
+45
+29
+40
+42
+51
+16
+24
+40
+52
+62
+41
+32
+41
+45
+24
+41
+30
+42
+47
+30
+46
+38
+42
+26
+34
+45
+58
+57
+35
+62
+46
+
+[Bloque seleccionado #261 | relevancia=14]
+Pagina 260
+236  CAPÍTULO 9 TEORÍA DE LA ESTIMACIÓN ESTADÍSTICA
+a) 
+Para una confianza de 95%, 0:50zc=
+ﬃﬃﬃﬃ
+N
+p
+¼ 0:50ð1:96Þ=
+ﬃﬃﬃﬃ
+N
+p
+¼ 0:05 si N = 384.2. Por lo tanto, N debe ser 385, por lo 
+menos.
+b) 
+Para una confianza de 99.73%, 0:50zc=
+ﬃﬃﬃﬃ
+N
+p
+¼ 0:50ð3Þ=
+ﬃﬃﬃﬃ
+N
+p
+¼ 0:05 si N = 900. Por lo tanto, N debe ser 901, por lo 
+menos.
+ 
+Otro método
+ 
+1:50=
+ﬃﬃﬃﬃ
+N
+p
+< 0:05 si 
+ﬃﬃﬃﬃ
+N
+p
+=1:50 > 1=0:05 o 
+ﬃﬃﬃﬃ
+N
+p
+> 1:50=0:05. Entonces 
+ﬃﬃﬃﬃ
+N
+p
+> 30 o bien N > 900, de manera que N 
+debe ser por lo menos 901.
+9.12 
+Se realiza un estudio y se encuentra que 156 de 500 varones adultos son fumadores. Emplear el paquete de 
+software STATISTIX para dar un intervalo de confianza de 99% para p, la proporción poblacional de varones 
+adultos que son fumadores. Verificar el intervalo de confianza calculándolo a mano.
+SOLUCIÓN
+Los resultados de STATISTIX se dan a continuación. El intervalo de confianza de 99% aparece en negritas.
+Prueba de proporción de una muestra
+Tamaño de la muestra 
+500
+Éxito 
+156
+Proporción 
+0.31200
+Hipótesis nula 
+P = 0.5
+Hipótesis alterna 
+P < > 0.5
+Diferencia 
+-0.18800
+Error estándar 
+0.02072
+Z (sin corregir) 
+-8.41 
+P  0.0000
+Z (corregida) 
+-8.36 
+P  0.0000
+ 
+ 
+Intervalo de confianza 99%
+Sin corregir 
+(0.25863, 0.36537)
+Corregido 
+(0.25763, 0.36637)
+Se tiene una confianza de 99% de que el verdadero porcentaje de varones adultos fumadores esté entre 25.9% y 
+36.5%.
+Verificación:
+ 
+P ¼ 0:312, zc ¼ 2:58,
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+0:312ð0:688Þ
+500
+r
+¼ 0:0207
+P  zc
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+pð1  pÞ
+N
+r
+ o bien 0.312 ± 2.58(0.0207) o bien (0.258, 0.365). Esto es lo mismo que se obtuvo antes con el 
+paquete de software STATISTIX.
+9.13 
+Refiérase al problema 9.12 para dar un intervalo de confianza de 99% para p empleando MINITAB.
+SOLUCIÓN
+El intervalo de confianza de 99% se muestra abajo en negritas. Es el mismo que el intervalo de confianza obtenido con 
+STATISTIX en el problema 9.12.
+Muestra 
+X 
+N 
+Muestra P 
+      CI 99% 
+Valor z 
+Valor P
+1 
+ 
+156 
+500 
+0.312000 
+(0.258629, 0.365371) 
+-8.41 
+0.000
+
+[Bloque seleccionado #264 | relevancia=8]
+Pagina 263
+Dos muestras: prueba t para las medias de varones y mujeres
+Estadísticos de muestra
+Grupo 
+N 
+Media 
+DesvEst 
+ErrorEst
+---------------------------------------------
+varones 
+50 
+9.82 
+2.1542 
+0.3046
+mujeres 
+50 
+9.7 
+1.7757 
+0.2511
+Hipótesis nula: media 1 – media 2 = 0
+Alternativa 
+Media 1 – media 2 ˆ= 0
+Si las varianzas son 
+estadístico t 
+Df 
+Pr > t
+-------------------------------------------------------
+Igual 
+0.304 
+98 
+0.7618
+Desigual 
+0.304 
+94.56 
+0.7618
+Intervalo de confianza 95% para la diferencia entre dos medias.
+ 
+ 
+Límite inferior 
+Límite superior
+ 
+ 
+--------------- 
+---------------
+ 
+ 
+     -0.66 
+      0.90
+Los archivos de datos que se emplean con SAS para el análisis pueden tener los datos de varones y de mujeres en columnas 
+separadas, pero los datos también pueden consistir en las horas que se emplea el celular, en una columna, y el sexo de la 
+persona (varón o mujer), en otra columna. Varones y mujeres se pueden codificar como 1 y 2, respectivamente. En la pri-
+mera forma habrá 2 columnas y 50 renglones. En la segunda forma habrá 2 columnas y 100 renglones.
+INTERVALOS DE CONFIANZA PARA DESVIACIONES ESTÁNDAR
+9.17 
+Para un intervalo de confianza para la varianza de una población se utiliza la distribución Ji cuadrada. El
+ 
+intervalo de confianza (1 − α) × 100% es (n 1)S 2
+(
+)
+2
+2
+2 < (n 1)S 2
+(
+2
+1
+2) donde n es el tamaño de la muestra, S2 es la
+ 
+varianza muestral, 2
+=2 y 2
+1=2 pertenecen a la distribución Ji cuadrada con (n − 1) grados de libertad. Use 
+EXCEL para hallar un intervalo de confianza de 99% para la varianza de veinte recipientes de 180 onzas. Los 
+datos de los veinte recipientes se presentan en la tabla 9.5.
+Tabla 9.5
+181.5
+179.7
+178.7
+183.9
+179.7
+180.6
+180.4
+178.5
+178.8
+181.3
+180.8
+182.4
+178.5
+182.2
+180.9
+181.4
+181.4
+180.6
+180.1
+182.2
+SOLUCIÓN
+A continuación se presenta la hoja de cálculo de EXCEL. Los datos se encuentran en A1:B10. En la columna D se muestran 
+las funciones cuyos valores aparecen en la columna C.
+PROBLEMAS RESUELTOS  239
+
+[Bloque seleccionado #265 | relevancia=6]
+Pagina 264
+240  CAPÍTULO 9 TEORÍA DE LA ESTIMACIÓN ESTADÍSTICA
+El intervalo de confianza de 99% para σ2 es: (1.06085 < σ2 < 5.980446). El intervalo de confianza de 99% para σ 
+es: (1.03, 2.45).
+Obsérvese que con =VAR(A1:B10) se obtiene S2, con =CHIINV(0.005,19) se obtiene el valor de Ji cuadrada que 
+tiene a su derecha un área de 0.005, y con =CHIINV(0.995,19) el valor de ji cuadrada que tiene a su derecha un área de 
+0.995. En ambos casos, la distribución ji cuadrada tiene 19 grados de libertad.
+9.18 
+Para comparar la varianza de una población con la varianza de otra población se emplea el siguiente intervalo 
+de confianza (1 − α) × 100%:
+ 
+S2
+1
+S2
+2
+
+1
+F=2ð1, 2Þ
+< 2
+1
+2
+2
+< S2
+1
+S2
+2
+F=2ð2,1Þ,
+donde n1 y n2 son los tamaños de las dos muestras, S2
+1 y S2
+2 son las dos varianzas muestrales, v1 = n1 − 1 y
+v2 = n2 − 1 son los grados de libertad, en el numerador y en el denominador, para la distribución F y los valo-
+res F pertenecen a la distribución F. En la tabla 9.6 se dan los números de correos electrónicos enviados por 
+semana por los empleados de dos empresas.
+Dar un intervalo de confianza de 95% para 1
+2.
+Tabla 9.6
+Empresa 1
+Empresa 2
+ 81
+104
+115
+111
+ 85
+121
+ 95
+112
+100
+117
+113
+109
+101
+ 99
+100
+104
+ 98
+103
+113
+ 95
+107
+ 98
+ 95
+101
+109
+ 99
+ 93
+105
+A
+B
+C
+D
+181.5
+179.1
+178.7
+183.9
+179.7
+180.6
+180.4
+178.5
+178.8
+181.3
+180.8
+182.4
+178.5
+182.2
+180.9
+181.4
+181.4
+180.6
+180.1
+182.2
+ 2.154211
+40.93
+38.58226
+ 6.843971
+ 1.06085
+ 5.980446
+=VAR(A1:B10)
+=19*C1
+=CHIINV(0.005,19)
+=CHIINV(0.995,19)
+=C2/C3
+=C2/C4
+
+[Bloque seleccionado #297 | relevancia=6]
+Pagina 296
+272  CAPÍTULO 10 TEORÍA ESTADÍSTICA DE LA DECISIÓN
+10.34 
+Un fabricante asegura que por lo menos el 95% de los equipos que vende a una fábrica satisfacen las especificaciones. En 
+una muestra de 200 equipos examinados, 18 no cumplen con las especificaciones. Probar la afirmación del fabricante a los 
+niveles de significancia: a) 0.01 y b) 0.05.
+10.35 
+Se afirma que los compradores por Internet gastan en promedio $335 por año. Se desea probar que esta cantidad no es la 
+correcta empleando α = 0.075. Se hace un estudio en el que intervienen 300 compradores por Internet y se encuentra que 
+la media muestral es $354 y la desviación estándar es $125. Encontrar el valor del estadístico de prueba, los valores críticos 
+y efectuar la conclusión.
+10.36 
+Por experiencia se sabe que la resistencia a la ruptura de determinada marca de hilo es 9.72 onzas (oz) y su desviación 
+estándar es 1.40 oz. En una muestra reciente de 36 piezas de este hilo se encuentra que la resistencia media a la ruptura es 
+8.93 oz. Probar la hipótesis nula H0 : µ = 9.72 contra la hipótesis alternativa H0 : µ < 9.72 y dar el valor del estadístico de 
+prueba y el valor crítico que corresponde a: a) α = 0.10 y b) α = 0.025. ¿Es este resultado significativo a α = 0.10? ¿Es 
+este resultado significativo a α = 0.025?
+10.37 
+Se realiza un estudio para probar la hipótesis nula de que la cantidad media de correos electrónicos enviados semanalmen-
+te por los empleados en una ciudad grande es 25.5 contra la hipótesis alternativa de que esta cantidad es mayor a 25.5. Se 
+entrevista a 200 empleados de toda la ciudad y se encuentra que x = 30.1 y s = 10.5. Dar el valor del estadístico de prueba 
+y el valor crítico para α = 0.03, y efectuar la conclusión.
+10.38 
+Para una n grande (n > 30) y una desviación estándar conocida se usa la distribución normal estándar para realizar una 
+prueba acerca de la media de la población de la que se toma la muestra. A la hipótesis alternativa Ha : µ < µ0 se le
+llama alternativa de la cola inferior y a la hipótesis alternativa Ha : µ > µ0 se le llama alternativa de la cola superior. Para 
+una alternativa de la cola superior, dar la expresión de EXCEL para el valor crítico si α = 0.1, α = 0.01 y α = 0.001.
+VALORES p EN PRUEBAS DE HIPÓTESIS
+10.39 
+Para probar que una moneda está balanceada se lanza 15 veces y se obtienen 12 caras. Dar el valor p correspondiente a este 
+resultado. Para hallar el valor p emplear BINOMDIST de EXCEL.
+10.40 
+Dar el valor p correspondiente al resultado del problema 10.35.
+10.41 
+Dar el valor p correspondiente al resultado del problema 
+
+[Bloque seleccionado #301 | relevancia=8]
+Pagina 300
+276  CAPÍTULO 11 TEORÍA DE LAS MUESTRAS PEQUEÑAS
+donde Y0 es una constante que depende de N, tal que el área total bajo la curva sea 1, y donde a la constante ν = (N − 1) 
+se le conoce como el número de grados de libertad (ν es la letra griega nu).
+A la distribución (2) se le llama distribución t de Student en honor a su descubridor, W. S. Gossett, quien en la 
+primera mitad del siglo xx publicó sus trabajos bajo el seudónimo “Student”.
+Si los valores de ν o de N son grandes (N ≥ 30), la curva (2) se aproxima a la curva normal estándar
+Y ¼
+1ﬃﬃﬃﬃﬃ
+2
+p
+eð1=2Þt2
+como se muestra en la figura 11-1.
+INTERVALOS DE CONFIANZA
+Como se hizo en el capítulo 9 con las distribuciones normales, se pueden definir intervalos de confianza de 95%, 99% 
+u otros intervalos usando la tabla de la distribución t que aparece en el apéndice III. De esta manera puede estimarse 
+la media poblacional µ dentro de determinados límites de confianza.
+Por ejemplo, si −t.975 y t.975 son los valores de t para los cuales 2.5% del área se encuentra repartida en cada una de 
+las colas de la distribución t, entonces el intervalo de confianza para t de 95% es
+ 
+t:975 <
+X  
+s
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+N  1
+p
+< t:975 
+(3)
+a partir de lo cual se puede estimar que µ se encuentra en el intervalo
+ 
+X  t:975
+s
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+N  1
+p
+<  < X þ t:975
+s
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+N  1
+p
+ 
+(4)
+con una confianza de 95% (es decir, con una probabilidad de 0.95). Obsérvese que t.975 representa el valor del percen-
+til 97.5, y que t.025 = −t.975  representa el valor del percentil 2.5.
+En general, los límites de confianza para la media poblacional se representan mediante
+ 
+X  tc
+s
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+N  1
+p
+ 
+(5)
+donde los valores ±tc, llamados valores críticos o coeficientes de confianza, dependen del nivel de confianza deseado 
+y del tamaño de la muestra. Estos valores se leen en el apéndice III.
+Se supone que la muestra se toma de una población normal. Esta suposición se puede verificar empleando la prue-
+ba para normalidad de Kolmogorov-Smirnov.
+t
+4
+3
+2
+1
+0
+−1
+−2
+−3
+−4
+−5
+a)
+b)
+c)
+Figura 11-1 a) Curva normal estándar, b) t de Student para  = 5, c) t de Student para  = 1.
+
+[Bloque seleccionado #305 | relevancia=10]
+Pagina 304
+280  CAPÍTULO 11 TEORÍA DE LAS MUESTRAS PEQUEÑAS
+En los apéndices V y VI se dan los valores percentiles de F para los cuales las áreas en la cola derecha son 0.05 y 
+0.01, respectivamente, que se denotan F.95 y F.99. Estos valores que representan los niveles de significancia del 5%
+y del 1% se usan para determinar si la varianza S2
+1 es significativamente mayor que la varianza S2
+2. En la práctica, como 
+muestra 1 se considera la muestra que tenga la mayor varianza.
+El software para estadística permite encontrar las áreas bajo la distribución t de Student, la distribución ji cuadrada 
+y la distribución F. Este software también permite trazar las distintas distribuciones. Esto se ilustrará en la sección de 
+problemas resueltos de este capítulo.
+PROBLEMAS RESUELTOS
+DISTRIBUCIÓN t DE STUDENT
+11.1 
+En la figura 11-4 se muestra la gráfica de la distribución t de Student para nueve grados de libertad. Utilizar el 
+apéndice III para hallar los valores de a para los que: a) el área a la derecha de a sea 0.05, b) el total del área 
+sombreada sea 0.05, c) el total del área que no está sombreada sea 0.99, d ) el área sombreada de la izquierda 
+sea 0.01 y e) el área a la izquierda de a sea 0.90. Hallar los incisos del a) al e) empleando EXCEL.
+SOLUCIÓN
+a) 
+Si el área sombreada a la derecha de a es 0.05, el área a la izquierda de a es (1 − 0.05) = 0.95, y a representa el per-
+centil 95, t.95. En el apéndice III, se desciende por la columna cuyo encabezado es ν hasta llegar a la entrada 9, después 
+se avanza a la derecha hasta la columna cuyo encabezado es t.95; el resultado, 1.83, es el valor de t que se busca.
+b) 
+Si el total del área sombreada es 0.05, entonces, por simetría, el área sombreada de la derecha es 0.025. Por lo tanto, 
+el área a la izquierda de a es (1 − 0.025) = 0.975 y a representa el percentil 97.5, t.975. En el apéndice III se encuentra 
+que 2.26 es el valor de t buscado.
+c) 
+Si el total del área no sombreada es 0.99, entonces el total del área sombreada es (1 − 0.99) = 0.01 y el área sombrea-
+da a la derecha de a es 0.01/2 = 0.005. En el apéndice III se encuentra que t.995 = 3.25.
+d ) Si el área sombreada a la izquierda es 0.01, entonces por simetría el área sombreada a la derecha es 0.01. En el apén-
+dice III, t.99 = 2.82. Por lo tanto, el valor crítico de t para el cual el área sombreada a la izquierda es 0.01 es igual a 
+−2.82.
+e) 
+Si el área sombreada a la izquierda de a es 0.90, a corresponde al percentil 90, t.90, el cual en el apéndice III se encuen-
+tra que es igual a 1.38.
+Figura 11-4 Distribución t de Student para 9 grados de 
+
+[Bloque seleccionado #330 | relevancia=6]
+Pagina 329
+nula es que estos datos están distribuidos normalmente. De acuerdo con la media y con la desviación estándar 
+encontradas y suponiendo que la distribución sea normal, se obtienen las frecuencias esperadas que, redondea-
+das, son las siguientes: 10, 30, 40, 50, 36, 28 y 6.
+a) Encontrar χ2.
+b) ¿Cuántos grados de libertad tiene χ2?
+c) Empleando EXCEL, encontrar el valor crítico del 5% y dar las conclusiones al 5%.
+d ) Empleando EXCEL, hallar el valor p para el resultado.
+SOLUCIÓN
+a) 
+En la figura 12-1 se muestra parte de la hoja de cálculo de EXCEL. En C2 se ingresa =(A2-B2)^2/B2, se hace clic y 
+se arrastra desde C2 hasta C8. En C9 se ingresa =SUM(C2:C8). Como se ve, χ2 = 22.7325.
+Figura 12-1 EXCEL, parte de la hoja de cálculo para el problema 12.13.
+b) 
+Como el número de parámetros empleados para estimar las frecuencias esperadas es m = 2 (comúnmente son la media 
+µ y la desviación estándar σ de una distribución normal), ν = k − 1 − m = 7 − 1 − 2 = 4. Obsérvese que no es 
+necesario combinar clases, ya que todas las frecuencias esperadas son mayores a 5.
+c) 
+El valor crítico de 5% se obtiene mediante =CHIINV(0.05,4) y es 9.4877. Como 22.73 es mayor al valor crítico, se 
+rechaza la hipótesis nula de que los datos provengan de una distribución normal.
+d ) El valor p se encuentra mediante  =CHIDIST(22.7325,4), que da valor p = 0.000143.
+TABLAS DE CONTINGENCIA
+12.14 Se repite el problema 10.20 usando, primero, la prueba ji cuadrada, y después MINITAB. Comparar las dos 
+soluciones.
+SOLUCIÓN
+En la tabla 12.12a) se presentan las condiciones del problema. Bajo la hipótesis nula de que el suero no tiene efecto alguno, 
+se esperaría que en cada grupo se recuperaran 70 personas y 30 no, como se muestra en la tabla 12.12b). Obsérvese que la 
+hipótesis nula es equivalente a afirmar que la recuperación es independiente del uso del suero (es decir, que las clasifica-
+ciones son independientes).
+Tabla 12.12a) Frecuencias observadas
+Recuperados
+No
+recuperados
+Total
+Grupo A (usan el suero)
+75
+25
+100
+Grupo B (no usan el suero)
+65
+35
+100
+Total
+140
+60
+200
+PROBLEMAS RESUELTOS  305
+
+[Bloque seleccionado #401 | relevancia=12]
+Pagina 400
+376  CAPÍTULO 14 TEORÍA DE LA CORRELACIÓN
+como el anterior. Para probar que el coeficiente de regresión es 0.25, por ejemplo, el valor calculado para el estadístico de 
+prueba será igual a
+t ¼ 0:4764  0:25
+0:1525
+¼ 1:48
+La hipótesis nula de que el coeficiente de regresión es igual a 0.25 no se rechazará.
+14.37 Encontrar los límites de confianza de 95% para el coeficiente de regresión del problema 14.36. Establecer el 
+intervalo de confianza sin ayuda de un software para estadística, así como con ayuda de MINITAB.
+SOLUCIÓN
+El intervalo de confianza puede expresarse como 
+a1 
+t
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+N  2
+p
+SY:X
+SX
+
+
+Por lo tanto, los límites de confianza de 95% para A1 (obtenidos haciendo t = ±t.975 = ±2.23 para 12 − 2 = 10 grados de 
+libertad) están dados por
+a1 
+2:23
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+12  2
+p
+SY:X
+SX
+
+
+¼ 0:476  2:23
+ﬃﬃﬃﬃﬃ
+10
+p
+1:28
+2:66
+
+
+¼ 0:476  0:340
+Es decir, se tiene una confianza de 95% de que A1 se encuentre entre 0.136 y 0.816.
+En el siguiente fragmento de los resultados obtenidos con MINITAB para el problema 14.36 aparece la información 
+necesaria para establecer el intervalo de confianza de 95%.
+Predictor 
+Coef 
+StDev 
+T 
+P
+Constant 
+35.82 
+10.18 
+3.52 
+0.006
+X 
+ 
+0.4764 
+0.1525 
+3.12 
+0.011
+El término
+1
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+N  2
+p
+SY:X
+SX
+
+
+se conoce como el error estándar correspondiente al coeficiente de regresión estimado. En los resultados de MINITAB este 
+error estándar es 0.1525. Para hallar el intervalo de confianza de 95%, se multiplica este error estándar por t.975, y después 
+este término se suma y se resta a a1 = 0.476, con lo que se obtiene el siguiente intervalo de confianza para A1:
+0.476 ± 2.23(0.1525) = 0.476 ± 0.340
+14.38 En el problema 14.1, encontrar los límites de confianza de 95% para las estaturas de los hijos cuyos padres 
+tienen una estatura de: a) 65.0 y b) 70.0 in. Encontrar el intervalo de confianza sin ayuda de software, así como 
+con ayuda de MINITAB.
+SOLUCIÓN
+Como t.975 = 2.23 para (12 − 2) = 10 grados de libertad, los límites de confianza de 95% para YP están dados por
+Y0 
+2:23
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+N  2
+p
+SY:X
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+N þ 1 þ ðX0  XÞ2
+S2
+X
+s
+donde Y0 = 35.82 + 0.476X0, SY .X = 1.28, SX = 2.66 y N = 12.
+a) 
+Si X0 = 65.0, entonces Y0 = 66.76 in. Además, ðX0  XÞ2 ¼ ð65:0  66:67Þ2 ¼ 2:78. De manera que los límites de 
+confianza de 95% son
+66:76  2:23
+ﬃﬃﬃﬃﬃ
+10
+p
+ð1:28Þ
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+12 þ 1 þ 2:78
+2:662
+r
+¼ 66:76  3:30 in
+ 
+Es decir, se puede tener una confianza de 95% de que las estaturas de los hijos están entre 63.46 y 70.06 in.

@@ -1,0 +1,125 @@
+% Plantilla y base conceptual generada con AulaTeX (Amazon Nova Pro) para Actividad 8 (A08).
+% Contrato AulaTeX: portada oficial ITESCA, Resumen con declaracion IA, Tabla de contenido y tres tiempos.
+\def\estadisticatitulo{Resolución analítica de intervalos de confianza y tamaños de muestra en gestión}
+\def\estadisticasubtitulo{Actividad 8: Ejercicios de estimación}
+\def\estadisticafecha{8 de noviembre de 2026}
+\def\estadisticaunidad{Estimación}
+\def\portadaoficial{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/portada-oficial.png}
+\def\estadisticaextras{%
+  \usepackage{fontspec}
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+  \usepackage{longtable,booktabs,array}
+  \usetikzlibrary{babel}
+  \geometry{letterpaper,left=2.3cm,right=2.3cm,top=2.2cm,bottom=2.2cm}
+  \hypersetup{pdftitle={Resolución analítica de intervalos de confianza y tamaños de muestra en gestión},pdfsubject={Actividad 8 - Estadística aplicada para la administración}}
+  \setcitestyle{citesep={;}}
+  \renewcommand{\insertcoverwatermark}{}
+  \renewcommand{\insertcoverinstitutionalfooter}{}
+  \renewcommand{\templatePortrait}{%
+    \thispagestyle{empty}
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{\portadaoficial}};
+      \node[anchor=north west,text=white,text width=10.6cm,align=center,inner sep=0pt] at ([xshift=10.1cm,yshift=-19.4cm]current page.north west) {%
+        \setstretch{1}\fontsize{12}{15}\selectfont
+        {\fontsize{15}{18}\selectfont\bfseries Resolución analítica de intervalos de confianza y tamaños de muestra en gestión}\par\vspace{0.16cm}
+        Estadística aplicada para la administración\par
+        Actividad 8: Ejercicios de estimación\par\vspace{0.12cm}
+        Martín Jonathan de la Cruz Muñoz\par
+        Matrícula: 26130503\par
+        Dra. Yoana Elizeth Tauitmes Delgado\par
+        8 de noviembre de 2026
+      };
+    \end{tikzpicture}\null\clearpage
+  }
+  \renewcommand{\templatePagecfg}{}
+  \renewcommand{\templateFinalcfg}{%
+    \pagestyle{fancy}\fancyhf{}\fancyfoot[C]{\fontsize{10}{12}\selectfont\thepage}
+    \renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}
+    \setcounter{page}{2}\renewcommand{\thepage}{\arabic{page}}
+  }
+  \titleformat{\section}{\normalfont\fontsize{12}{15}\selectfont\bfseries\color{itescaRedDark}}{\thesection.}{0.5em}{}
+  \titleformat{\subsection}{\normalfont\fontsize{12}{15}\selectfont\bfseries}{\thesubsection.}{0.5em}{}
+  \titlespacing*{\section}{0pt}{8pt}{5pt}
+  \titlespacing*{\subsection}{0pt}{7pt}{4pt}
+  \renewcommand{\footnotesize}{\fontsize{12}{14.4}\selectfont}
+  \setlength{\parindent}{1.1cm}
+  \setlength{\parskip}{3pt}
+  \urlstyle{same}
+  \input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/investigacion-articulos/formato-fichas.tex}
+}
+\def\estadisticaresumen{Esta actividad de la asignatura 'Estadística aplicada para la administración' en el módulo de Estimación, se centra en la aplicación práctica de los conceptos de intervalos de confianza y tamaños de muestra. Los estudiantes deben calcular intervalos de confianza para diferentes niveles de confianza, determinar tamaños de muestra adecuados y comprender el impacto de la asimetría en las medidas de tendencia central. Estos conceptos son fundamentales para la toma de decisiones informadas en entornos administrativos y de negocios, donde la estimación de parámetros poblacionales es crucial para la planificación y el análisis de datos.}
+\long\def\estadisticacontenido{%
+\fontsize{12}{14.4}\selectfont\setstretch{1.5}\justifying
+\estadisticapreliminares
+\section{Introducción}
+La actividad 3.2 de la asignatura 'Estadística aplicada para la administración' se centra en la aplicación práctica de los conceptos de intervalos de confianza y tamaños de muestra. Estos conceptos son fundamentales para la estimación de parámetros poblacionales y la toma de decisiones informadas en entornos administrativos y de negocios. Los estudiantes deben calcular intervalos de confianza para diferentes niveles de confianza, determinar tamaños de muestra adecuados y comprender el impacto de la asimetría en las medidas de tendencia central. Esta actividad proporciona una oportunidad para aplicar conocimientos teóricos a situaciones prácticas, mejorando la comprensión y la habilidad para tomar decisiones basadas en datos. \citep{anderson2012,lind2012,holmesBusiness2023}.
+
+\section{Fundamentos, modelado analítico y evidencia en estimación}
+\subsection{Base conceptual autocontenida y formulación matemática}
+Los intervalos de confianza son rangos estimados dentro de los cuales se espera que caiga un parámetro poblacional con una determinada probabilidad. Estos intervalos se calculan a partir de datos muestrales y proporcionan una medida de la precisión de la estimación. Los niveles de confianza más comunes son del 90\%, 95\% y 99\%, aunque cualquier nivel puede ser utilizado. La determinación del tamaño de la muestra es esencial para garantizar la precisión de las estimaciones estadísticas. El tamaño de la muestra debe ser calculado para lograr un margen de error específico y un nivel de confianza deseado. Este cálculo es crítico para la realización de encuestas y estudios estadísticos en entornos empresariales. La asimetría en la distribución de los datos afecta las medidas de tendencia central, como la media y la mediana. En distribuciones asimétricas a la derecha, la media tiende a ser mayor que la mediana debido a la influencia de valores extremos. Este concepto es importante para la correcta interpretación de los datos en estudios de mercado y análisis de ventas. \citep{wackerly2010,canavos1988,spiegel2009}.
+
+\textbf{1. Intervalos de confianza.} Los intervalos de confianza son rangos estimados dentro de los cuales se espera que caiga un parámetro poblacional con una determinada probabilidad. Estos intervalos se calculan a partir de datos muestrales y proporcionan una medida de la precisión de la estimación. Los niveles de confianza más comunes son del 90\%, 95\% y 99\%, aunque cualquier nivel puede ser utilizado. Expresión formal: $\text{Intervalo de confianza} = \bar{X} \pm z_{\alpha/2} \left( \frac{\sigma}{\sqrt{n}} \right)$. En el ámbito gerencial, los intervalos de confianza permiten a los administradores evaluar la fiabilidad de sus estimaciones de parámetros poblacionales, lo que es crucial para la toma de decisiones en áreas como la planificación de recursos, el control de calidad y la previsión de ventas. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{2. Cuantiles de la distribución t.} Los cuantiles de la distribución t son valores que dividen la distribución en partes iguales. Para una distribución t con 16 grados de libertad, los cuantiles se utilizan para determinar áreas bajo la curva, lo que es esencial para la construcción de intervalos de confianza y la realización de pruebas de hipótesis. Expresión formal: $t_{\alpha/2, df}$. En el ámbito gerencial, el conocimiento de los cuantiles de la distribución t permite a los administradores realizar pruebas estadísticas y construir intervalos de confianza cuando la desviación estándar poblacional es desconocida. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{3. Determinación de tamaño muestral para media con margen fijo.} La determinación del tamaño de la muestra para una media con margen fijo implica calcular el número de observaciones necesarias para lograr un margen de error específico en la estimación de la media poblacional. Este cálculo se basa en la desviación estándar conocida o estimada y el nivel de confianza deseado. Expresión formal: $n = \left( \frac{z_{\alpha/2} \sigma}{E} \right)^2$. En el ámbito gerencial, la determinación del tamaño de la muestra es crucial para garantizar que las encuestas y estudios estadísticos proporcionen resultados precisos y confiables, lo que influye directamente en las decisiones estratégicas de la empresa. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{4. Intervalo de confianza para proporción de tarjetahabientes.} El intervalo de confianza para una proporción es un rango estimado dentro del cual se espera que caiga la proporción poblacional verdadera. Se calcula utilizando la proporción muestral y el margen de error, que depende del tamaño de la muestra y el nivel de confianza. Expresión formal: $\text{Intervalo de confianza} = \hat{p} \pm z_{\alpha/2} \sqrt{ \frac{\hat{p}(1-\hat{p})}{n} }$. En el ámbito gerencial, los intervalos de confianza para proporciones son utilizados en estudios de mercado para estimar la proporción de consumidores que prefieren un producto o servicio, lo que ayuda a las empresas a tomar decisiones de marketing y producto. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{5. Estimación del gasto medio con desviación estándar muestral.} La estimación del gasto medio utilizando la desviación estándar muestral implica el uso de la distribución t cuando la desviación estándar poblacional es desconocida. Este método proporciona un intervalo de confianza para la media poblacional. Expresión formal: $\text{Intervalo de confianza} = \bar{X} \pm t_{\alpha/2, df} \left( \frac{s}{\sqrt{n}} \right)$. En el ámbito gerencial, la estimación del gasto medio es esencial para la gestión financiera y presupuestaria, permitiendo a los administradores prever costos y asignar recursos de manera eficiente. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{6. Proyección del agregado poblacional a partir de la media muestral.} La proyección del agregado poblacional a partir de la media muestral implica utilizar la media muestral como estimador del parámetro poblacional. Esta proyección es fundamental para realizar estimaciones sobre la población total a partir de datos muestrales. Expresión formal: $\text{Proyección del agregado} = \bar{X} \times N$. En el ámbito gerencial, la proyección del agregado poblacional es utilizada en estudios demográficos y económicos para estimar variables como el PIB, la población total o el consumo total, lo que influye en la planificación estratégica y la formulación de políticas. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{7. Efecto de la asimetría derecha sobre la media y mediana.} En distribuciones asimétricas a la derecha, la media tiende a ser mayor que la mediana. Esto se debe a que la media es influenciada por valores extremos, mientras que la mediana no lo es. Expresión formal: $\text{Media} > \text{Mediana en distribuciones asimétricas a la derecha}$. En el ámbito gerencial, entender el efecto de la asimetría sobre las medidas de tendencia central es crucial para la interpretación correcta de los datos en estudios de mercado y análisis de ventas, donde la distribución de los datos puede ser asimétrica. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{8. Tamaño de muestra conservador sin proporción planeada.} El tamaño de muestra conservador sin proporción planeada se calcula para asegurar un margen de error deseado sin asumir una proporción poblacional conocida. Este enfoque es comúnmente utilizado cuando no se tiene información previa sobre la proporción. Expresión formal: $n = \left( \frac{z_{\alpha/2}}{E} \right)^2 \times 0.25$. En el ámbito gerencial, el cálculo de un tamaño de muestra conservador es esencial en encuestas y estudios donde no se tiene información previa sobre la proporción poblacional, asegurando que los resultados sean lo más precisos posible. \citep{anderson2012,lind2012,wackerly2010}.
+
+
+\subsection{Planteamiento analítico y estructura de resolución de los ejercicios de la unidad}
+Para resolver los ejercicios de esta actividad, los estudiantes deben seguir los siguientes pasos: 1. Calcular intervalos de confianza para diferentes niveles de confianza utilizando la fórmula adecuada. 2. Determinar el tamaño de la muestra necesario para lograr un margen de error específico y un nivel de confianza deseado. 3. Analizar el efecto de la asimetría en las medidas de tendencia central y comprender cómo afecta las estimaciones. 4. Construir intervalos de confianza para proporciones y utilizarlos para tomar decisiones informadas en estudios de mercado. 5. Estimar el gasto medio utilizando la desviación estándar muestral y aplicar este conocimiento a la gestión financiera y presupuestaria. 6. Proyectar el agregado poblacional a partir de la media muestral y utilizar esta proyección en estudios demográficos y económicos. 7. Calcular un tamaño de muestra conservador cuando no se tiene información previa sobre la proporción poblacional.
+
+\subsubsection*{Ejercicio 1. Intervalos de confianza al 90\%, 95\% y 99\% con desviación poblacional conocida}
+\textbf{Enunciado oficial del aula:} En una muestra aleatoria simple de $n = 50$ artículos de una población en la que $\sigma = 6$, la media muestral resultante es $\bar{x} = 32$. a) Proporcione un intervalo de confianza de 90\% para la media poblacional. b) Calcule un intervalo de confianza de 95\% para la media poblacional. c) Proporcione un intervalo de confianza de 99\% para el mismo indicador.
+
+\textbf{Modelo matemático y ruta de resolución:} Modelo normal con varianza conocida: $\bar{x} \pm z_{\alpha/2} (\sigma/\sqrt{n})$, donde $\sigma_{\bar{x}} = 6/\sqrt{50} \approx 0.8485$, con cuantiles críticos $z_{0.05}=1.645$, $z_{0.025}=1.960$ y $z_{0.005}=2.576$ \citep{anderson2012,lind2012}.
+
+\subsubsection*{Ejercicio 2. Probabilidades y áreas bajo la distribución $t$ de Student con $gl = 16$}
+\textbf{Enunciado oficial del aula:} En la distribución $t$ con 16 grados de libertad, encuentre el área o probabilidad en cada región: a) A la derecha de $2.120$; b) A la izquierda de $1.337$; c) A la izquierda de $-1.746$; d) A la derecha de $2.583$; e) Entre $-2.120$ y $2.120$; f) Entre $-1.746$ y $1.746$.
+
+\textbf{Modelo matemático y ruta de resolución:} Evaluación mediante la función de distribución acumulada $F_t(t; \nu=16)$ y la propiedad de simetría $P(-t_0 \le T_{16} \le t_0) = 1 - 2P(T_{16} > t_0)$ \citep{wackerly2010}.
+
+\subsubsection*{Ejercicio 3. Determinación del tamaño muestral para la media con margen de error fijo}
+\textbf{Enunciado oficial del aula:} ¿Qué tan grande debe seleccionarse una muestra para tener un intervalo de confianza de 95\% con un margen de error de $E = 10$? Suponga que la desviación estándar poblacional es $\sigma = 40$.
+
+\textbf{Modelo matemático y ruta de resolución:} Fórmula de planificación muestral: $n = \lceil (z_{\alpha/2} \sigma / E)^2 \rceil = \lceil (1.96 \times 40 / 10)^2 \rceil$ \citep{holmesBusiness2023}.
+
+\subsubsection*{Ejercicio 4. Intervalos de confianza para una proporción poblacional ($n = 800$, $\hat{p} = 0.70$)}
+\textbf{Enunciado oficial del aula:} En una muestra aleatoria de $n = 800$ elementos se obtiene una proporción muestral $\hat{p} = 0.70$. a) Proporcione un intervalo de 90\% de confianza para la proporción poblacional. b) Proporcione un intervalo de confianza de 95\% para la proporción poblacional.
+
+\textbf{Modelo matemático y ruta de resolución:} Aproximación normal de Wald para muestras grandes: $\hat{p} \pm z_{\alpha/2}\sqrt{\hat{p}(1-\hat{p})/n}$, con error estándar $\sqrt{0.70(0.30)/800} \approx 0.0162$ \citep{anderson2012}.
+
+\subsubsection*{Ejercicio 5. Estimación del gasto anual en restaurantes para mayores de 50 años (AARP)}
+\textbf{Enunciado oficial del aula:} Los $N = 92$ millones de estadounidenses de más de 50 años controlan 50\% del ingreso discrecional. La AARP estima un gasto promedio anual de $\bar{x} = \$1\,873$ con base en una muestra de $n = 80$ personas y desviación estándar muestral $s = \$550$. 1) Calcule el margen de error al 95\% de confianza. 2) Construya el intervalo de confianza del 95\% para la media poblacional. 3) Estime la cantidad total agregada gastada por los 92 millones de personas. 4) Analice el efecto del sesgo a la derecha sobre la media y la mediana.
+
+\textbf{Modelo matemático y ruta de resolución:} Uso de la distribución $t$ de Student con $gl = n - 1 = 79$ ($t_{0.025, 79} \approx 1.9905$), error estándar $s/\sqrt{80} \approx 61.4919$ y expansión al total poblacional $\hat{\tau} = N\bar{x}$ \citep{anderson2012}.
+
+\subsubsection*{Ejercicio 6. Tamaño de muestra para proporción de tarjetahabientes con saldo que genera cargos}
+\textbf{Enunciado oficial del aula:} Una firma bancaria desea estimar la proporción de tarjetahabientes con saldo distinto de cero al final del mes, con margen de error $E = 0.03$ y confianza del 98\%. a) ¿De qué tamaño deberá tomarse la muestra si se planea $p^* = 0.70$? b) ¿De qué tamaño deberá tomarse si no se puede especificar ningún valor planeado para la proporción?
+
+\textbf{Modelo matemático y ruta de resolución:} Con 98\% de confianza ($z_{0.01} \approx 2.3263$): $n = z_{0.01}^2 p^*(1-p^*)/E^2$ para el inciso (a) y cota conservadora de varianza máxima $p^* = 0.50$ para el inciso (b) \citep{lind2012}.
+
+
+\subsection{Articulación administrativa y síntesis del desarrollo}
+Los intervalos de confianza son fundamentales para estimar parámetros poblacionales y tomar decisiones informadas en entornos administrativos. Los intervalos de confianza proporcionan un rango dentro del cual se espera que caiga el parámetro poblacional con una determinada probabilidad. Este concepto es crucial para la toma de decisiones bajo incertidumbre, ya que permite evaluar la fiabilidad de las estimaciones. \citep{holmesBusiness2023,nistHandbook}.
+La determinación del tamaño de la muestra es esencial para garantizar la precisión de las estimaciones estadísticas. El tamaño de la muestra debe ser calculado para lograr un margen de error específico y un nivel de confianza deseado. Este cálculo es crítico para la realización de encuestas y estudios estadísticos en entornos empresariales. \citep{holmesBusiness2023,nistHandbook}.
+La asimetría en la distribución de los datos afecta las medidas de tendencia central, como la media y la mediana. En distribuciones asimétricas a la derecha, la media tiende a ser mayor que la mediana debido a la influencia de valores extremos. Este concepto es importante para la correcta interpretación de los datos en estudios de mercado y análisis de ventas. \citep{holmesBusiness2023,nistHandbook}.
+Los intervalos de confianza para proporciones son utilizados para estimar la proporción poblacional verdadera a partir de datos muestrales. La construcción de intervalos de confianza para proporciones es esencial en estudios de mercado y encuestas de opinión, permitiendo a las empresas tomar decisiones informadas sobre preferencias de los consumidores y tendencias del mercado. \citep{holmesBusiness2023,nistHandbook}.
+
+En síntesis dentro de este segundo tiempo, la articulación entre la teoría estadística de \textit{estimación} y la práctica administrativa demuestra que ningún indicador cuantitativo opera en el vacío: la validez de la conclusión depende del cumplimiento de los supuestos distribucionales, de la representatividad de los datos recolectados y de la correspondencia entre el modelo matemático y el problema decisional de la organización \citep{anderson2012,nistHandbook,guarin2002}.
+
+\clearpage
+\section{Conclusiones}
+La comprensión y aplicación de intervalos de confianza y tamaños de muestra son cruciales para la toma de decisiones informadas en entornos administrativos. Estos conceptos permiten a los administradores estimar parámetros poblacionales con precisión, evaluar la fiabilidad de las estimaciones y tomar decisiones estratégicas basadas en datos sólidos. La actividad 3.2 proporciona una oportunidad para aplicar conocimientos teóricos a situaciones prácticas, mejorando la comprensión y la habilidad para tomar decisiones basadas en datos. Es importante destacar que la elección del nivel de confianza y el tamaño de la muestra pueden tener un impacto significativo en la precisión y la fiabilidad de las estimaciones, por lo que es esencial considerar cuidadosamente estos factores en la planificación de estudios y encuestas. \citep{anderson2012,lind2012,wackerly2010,diazRodriguez2022}.
+}
+\input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/reporte-estadistica-aplicada-para-la-administracion-plantilla-actividad.tex}

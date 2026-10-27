@@ -1,0 +1,641 @@
+Fuente bibliográfica: Estadística - Spiegel y Stephens. 4.ª edición.pdf
+Actividad: 3 (1.3 Cuestionario 5 %)
+Palabras clave: parámetro, estadístico, estratificado, sistemático, conglomerados, cuotas, bola de nieve, error muestral
+
+[Bloque seleccionado #154 | relevancia=6]
+Pagina 153
+SPSS proporciona los siguientes resultados.
+Estadísticos descriptivos
+N
+Media
+Desv. Estándar
+Sesgo
+Curtosis
+Estadístico
+Estadístico
+Estadístico
+Estadístico
+Error estándar
+Estadístico
+Error estándar
+Estatura
+Casamientos
+Defunciones
+Llenado
+N validada
+50
+50
+50
+50
+50
+65.1200
+35.4800
+74.2000
+12.0560
+ 2.91120
+13.51075
+20.69605
+    .28368
+ −.020
+ 1.977
+−1.499
+  .016
+.337
+.337
+.337
+.337
+ −.608
+ 4.098
+ 2.637
+−1.189
+.662
+.662
+.662
+.662
+EJEMPLO 5 Si se usa SAS para calcular los valores del sesgo y de la curtosis, se obtienen los resultados que se muestran a 
+continuación. Estos resultados son prácticamente los mismos que se obtienen con EXCEL, MINITAB y SPSS.
+The MEANS Procedure
+Variable
+Mean
+Std Dev
+N
+Skewness
+Kurtosis
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+Height
+65.1200000
+2.9112029
+50
+0.0203232
+0.6083437
+Wedage
+35.4800000
+13.5107516
+50
+1.9774237
+4.0984607
+Obitage
+74.2000000
+20.6960511
+50
+1.4986145
+2.6368045
+Cola_ﬁll
+12.0560000
+0.2836785
+50
+0.0156088
+1.1889600
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+PROBLEMAS RESUELTOS
+MOMENTOS
+5.1 
+Encontrar: a) el primero, b) el segundo, c) el tercero y d ) el cuarto momentos del conjunto 2, 3, 7, 8, 10.
+SOLUCIÓN
+a) 
+El primer momento o media aritmética es
+ 
+X ¼
+P X
+N
+¼ 2 þ 3 þ 7 þ 8 þ 10
+5
+¼ 30
+5 ¼ 6
+b) 
+El segundo momento es 
+ 
+X2 ¼
+P X2
+N
+¼ 22 þ 32 þ 72 þ 82 þ 102
+5
+¼ 226
+5 ¼ 45:2
+c) 
+El tercer momento es 
+ 
+X3 ¼
+P X3
+N
+¼ 23 þ 33 þ 73 þ 83 þ 103
+5
+¼ 1 890
+5
+= 378
+d ) El cuarto momento es
+ 
+X4 ¼
+P X4
+N
+¼ 24 þ 34 þ 74 þ 84 þ 104
+5
+¼ 16 594
+5
+= 3 318.8
+PROBLEMAS RESUELTOS  129
+
+[Bloque seleccionado #232 | relevancia=6]
+Pagina 231
+Pueden obtenerse resultados semejantes para las distribuciones muestrales de las diferencias entre las proporciones 
+de dos poblaciones distribuidas en forma binomial con parámetros (p1, q1) y (p2, q2), respectivamente. En este caso, S1 
+y S2 son proporción de éxitos, P1 y P2, y las ecuaciones (4) se transforman en
+ 
+P1P2 ¼ P1  P2 ¼ p1  p2  y  P1P2 ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+2
+P1 þ 2
+P2
+q
+¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+p1q1
+N1
+þ p2q2
+N2
+r
+ 
+(6)
+Si N1 y N2 son grandes (N1, N2 ≥ 30), la distribución muestral de diferencias entre medias o proporciones se aproximan 
+mucho a una distribución normal.
+Algunas veces se necesita la distribución muestral de la suma de estadísticos. La media y la desviación estándar 
+de estas distribuciones están dadas por
+ 
+S1þS2 ¼ S1 þ S2  y  S1þS2 ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+2
+S1 þ 2
+S2
+q
+ 
+(7)
+suponiendo que las muestras sean independientes. 
+ERRORES ESTÁNDAR
+A la desviación estándar de la distribución muestral de un estadístico suele conocérsele como su error estándar. En la 
+tabla 8.1 se enumeran los errores estándar de distribuciones muestrales de varios estadísticos, suponiendo que el mues-
+treo es un muestreo aleatorio de una población infinita (o muy grande) o de una población finita pero hecho el muestreo 
+con reposición. Se presentan también algunas observaciones especiales en las que se dan las condiciones bajo las 
+cuales son válidas las fórmulas, así como otras observaciones pertinentes.
+Las cantidades µ, σ, p, µr y X, s, P, mr denotan media, desviación estándar, proporción y el r-ésimo momento 
+respecto a la media, poblacionales y muestrales, respectivamente.
+Se hace notar que si el tamaño N de la muestra es suficientemente grande, la distribución muestral es normal o casi 
+normal. A esto se debe que estos métodos se conozcan como métodos para muestras grandes. Cuando N < 30, a las 
+muestras se les llama pequeñas. La teoría de las muestras pequeñas o teoría del muestreo exacto, como se le llama 
+algunas veces, se estudia en el capítulo 11.
+Cuando los parámetros poblacionales, por ejemplo, σ, p o bien µr no se conocen, pueden estimarse con bastante 
+exactitud a partir de sus estadísticos muestrales, s (o bien ^s ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+N=ðN  1Þ
+p
+s), P y mr, siempre y cuando las muestras 
+sean suficientemente grandes.
+DEMOSTRACIONES DE LA TEORÍA ELEMENTAL DEL MUESTREO 
+EMPLEANDO SOFTWARE
+EJEMPLO 1
+En una población grande se define la siguiente variable aleatoria. X es la cantidad de computadoras por hogar; X está distribuida de 
+manera uniforme, es decir, p(x) = 0.25 para x = 1, 2, 3 y 4. En otras palab
+
+[Bloque seleccionado #252 | relevancia=10]
+Pagina 251
+ESTIMACIÓN DE PARÁMETROS 
+En el capítulo 8 se vio cómo emplear la teoría del muestreo para obtener información acerca de muestras extraídas en 
+forma aleatoria de una población desconocida. Sin embargo, desde el punto de vista práctico, suele ser más importan-
+te poder inferir información acerca de una población a partir de muestras obtenidas de ella. De estos problemas se 
+ocupa la inferencia estadística en la que se usan los principios de la teoría del muestreo.
+Un problema importante de la inferencia estadística es la estimación de parámetros poblacionales, o simplemente 
+parámetros (como, por ejemplo, la media y la varianza poblacionales), a partir de los correspondientes estadísticos 
+muestrales, o simplemente estadísticos (por ejemplo, la media y la varianza muestrales). En este capítulo se analiza 
+este problema.
+ESTIMACIONES INSESGADAS
+Si la media de la distribución muestral de un estadístico es igual al parámetro poblacional correspondiente se dice que 
+el estadístico es un estimador insesgado del parámetro; si no es así, se dice que es un estimador sesgado. A los valores 
+de estos estadísticos se les llama estimaciones insesgadas o sesgadas, respectivamente.
+EJEMPLO 1 La media de la distribución muestral de las medias  X es µ, la media poblacional. Por lo tanto, la media muestral 
+X es una estimación insesgada de la media poblacional µ.
+EJEMPLO 2 La media de la distribución muestral de las varianzas es
+s2 ¼ N  1
+N
+2
+donde σ2 es la varianza poblacional y N es el tamaño de la muestra (ver tabla 8.1). Por lo tanto, la varianza muestral s2 es una esti-
+mación sesgada de la varianza poblacional σ2. Empleando la varianza modificada
+^s2 ¼
+N
+N  1 s2
+se encuentra que ^s2 ¼ 2, de manera que ^s2 es una estimación insesgada de σ2. Sin embargo, ^s es una estimación sesgada de σ.
+9
+TEORÍA DE 
+LA ESTIMACIÓN 
+ESTADÍSTICA
+227
+
+[Bloque seleccionado #253 | relevancia=19]
+Pagina 252
+228  CAPÍTULO 9 TEORÍA DE LA ESTIMACIÓN ESTADÍSTICA
+En el lenguaje de la esperanza matemática (ver capítulo 6) se puede decir que un estadístico es insesgado si su 
+esperanza matemática es igual al correspondiente parámetro poblacional. Por lo tanto, X y ^s2 son insesgados, ya que 
+Ef Xg ¼  y Ef^s2g ¼ 2.
+ESTIMACIONES EFICIENTES
+Si la distribución muestral de dos estadísticos tiene la misma media (o esperanza), entonces al estadístico que tiene la 
+menor varianza se le llama estimador eficiente del parámetro correspondiente, y al otro se le llama estimador inefi-
+ciente. A los valores de estos estadísticos se les llama estimaciones eficientes e ineficientes, respectivamente.
+Si se consideran todos los estadísticos cuya distribución muestral tiene una misma media, al estadístico que tiene 
+la menor varianza suele llamársele estimador más eficiente o mejor del parámetro correspondiente.
+EJEMPLO 3 Las distribuciones muestrales de la media y de la mediana tienen la misma media, a saber, la media poblacional. 
+Sin embargo, la varianza de la distribución muestral de las medias es menor que la varianza de la distribución muestral de las 
+medianas (ver tabla 8.1). Por lo tanto, la media muestral proporciona una estimación eficiente de la media poblacional, en tanto que 
+la mediana muestral proporciona una estimación ineficiente de la media poblacional.
+De todos los estadísticos que estiman la media poblacional, la media muestral proporciona la mejor (o la más eficiente) estima-
+ción.
+En la práctica, las estimaciones ineficientes suelen usarse debido a la relativa facilidad con que algunas de ellas 
+pueden obtenerse.
+ESTIMACIONES PUNTUALES Y ESTIMACIONES POR INTERVALO; 
+SU CONFIABILIDAD
+A una estimación de un parámetro poblacional que se da mediante un solo número se le llama estimación puntual del 
+parámetro. A una estimación de un parámetro poblacional que se da mediante dos números, entre los cuales se consi-
+dera que debe estar el parámetro en cuestión, se le llama estimación por intervalo del parámetro en cuestión.
+Las estimaciones por intervalo dan la precisión, o exactitud, de la estimación, y por esto se prefieren a las estima-
+ciones puntuales.
+EJEMPLO 4 Si se dice que en la medición de una distancia se obtuvo como resultado 5.28 metros (m), se está dando una esti-
+mación puntual. En cambio, si se dice que la distancia es 5.28 ± 0.03 m (es decir, que la distancia está entre 5.25 y 5.31 m), se está 
+dando una estimación por intervalo.
+La información sobre el error (o precisión) de una estimación es su confiabilidad.
+ESTIMACIÓN DE PARÁMETROS 
+
+[Bloque seleccionado #274 | relevancia=7]
+Pagina 273
+PRUEBAS PARA DIFERENCIAS MUESTRALES  249
+calcula el valor p y si el valor p ≤ α, se rechaza H0. En caso contrario, no se rechaza H0. En pruebas para medias 
+empleando muestras grandes (n > 30), el valor p se calcula como sigue:
+1. Para H0 : µ = µ0 y H1 : µ < µ0, valor p = P(Z < el estadístico de prueba calculado).
+2. Para H0 : µ = µ0 y H1 : µ > µ0, valor p = P(Z > el estadístico de prueba calculado).
+3. Para H0 : µ = µ0 y H1 : µ ≠ µ0, valor p = P(Z <−| el estadístico de prueba calculado |) + P(Z > | el estadístico 
+de prueba calculado |).
+El estadístico de prueba calculado es x  0
+ðs=
+ﬃﬃn
+p Þ, donde x es la media de la muestra, s es la desviación estándar de la
+muestra y µ0 es el valor que se ha especificado para µ en la hipótesis nula. Obsérvese que σ no se conoce, se estima
+a partir de la muestra y se usa s. Este método para pruebas de hipótesis es equivalente al método de hallar el o los 
+valores críticos y si el estadístico de prueba cae en la región de rechazo, rechazar la hipótesis nula. Usando cualquiera 
+de estos métodos se llega a la misma decisión.
+GRÁFICAS DE CONTROL
+En la práctica suele ser importante darse cuenta cuándo un proceso ha cambiado lo suficiente como para que se deban 
+tomar medidas para remediar la situación. Estos problemas surgen, por ejemplo, en el control de calidad. Los supervi-
+sores de control de calidad deben decidir si los cambios observados se deben sólo a fluctuaciones casuales o a verda-
+deros cambios en el proceso de fabricación debidos al deterioro de las máquinas, a los empleados, a errores, etc. Las 
+gráficas de control proporcionan un método útil y sencillo para tratar tales problemas (ver problema 10.16).
+PRUEBAS PARA DIFERENCIAS MUESTRALES
+Diferencias entre medias
+Sean X1 y X2 las medias muestrales de muestras grandes de tamaños N1 y N2 obtenidas de poblaciones cuyas medias 
+son µ1 y µ2 y cuyas desviaciones estándar son σ1 y σ2, respectivamente. Considérese la hipótesis nula de que no hay 
+diferencia entre las dos medias poblacionales (es decir, µ1 = µ2), lo cual es equivalente a decir que las muestras se han 
+tomado de dos poblaciones que tienen la misma media.
+Haciendo µ1 = µ2 en la ecuación (5) del capítulo 8 se ve que la distribución muestral de las diferencias entre las 
+medias es aproximadamente normal con media y desviación estándar dadas por
+ 
+ X1 X2 ¼ 0  y   X1 X2 ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+2
+1
+N1
+þ 2
+2
+N2
+s
+ 
+(1)
+donde, si es necesario, se pueden usar las desviaciones estándar muestrales s1 y s2 (o ^s1 y ^s2) como estimaciones de σ1 
+y σ2.
+Empleando la variable estandarizada, o pun
+
+[Bloque seleccionado #304 | relevancia=6]
+Pagina 303
+LA DISTRIBUCIÓN F  279
+El número de grados de libertad de un estadístico, que por lo general se denota ν, se define como la cantidad N de 
+observaciones en la muestra (es decir, el tamaño de la muestra) menos la cantidad k de parámetros poblacionales que 
+tengan que estimarse a partir de las observaciones muestrales. En símbolos, ν = N − k.
+En el caso del estadístico (1), la cantidad de observaciones independientes en la muestra es N, y a partir de ellas se 
+calculan X y s. Sin embargo, como se necesita estimar µ, k = 1 y por lo tanto ν = N − 1.
+En el caso del estadístico (8), la cantidad de observaciones independientes en la muestra es N, a partir de las cuales 
+se calcula s. Sin embargo, como se tiene que estimar σ, k = 1 y por lo tanto ν = N − 1.
+LA DISTRIBUCIÓN F
+Según se ha visto, en algunas aplicaciones es importante conocer la distribución muestral de la diferencia entre las 
+medias ð X1  X2Þ de dos muestras. De igual manera, algunas veces se necesita la distribución muestral de la diferencia 
+entre varianzas ðS2
+1  S2
+2Þ. Sin embargo, resulta que esta distribución es bastante complicada. Debido a ello, se consi-
+dera el estadístico S2
+1=S2
+2, ya que un cociente grande o pequeño indica una gran diferencia, en tanto que un cociente 
+cercano a 1 indica una diferencia pequeña. En este caso se puede encontrar una distribución muestral a la que se le 
+conoce como distribución F en honor a R. A. Fischer.
+Más precisamente, supóngase que se tienen dos muestras, 1 y 2, de tamaños N1 y N2, respectivamente, obtenidas 
+de dos poblaciones normales (o casi normales) cuyas varianzas son 2
+1 y 2
+2. Sea el estadístico
+ 
+F ¼
+^S2
+1=2
+1
+^S2
+2=2
+2
+¼ N1S2
+1=ðN1  1Þ2
+1
+N2S2
+2=ðN2  1Þ2
+2
+ 
+(13)
+donde  
+^S2
+1 ¼ N1S2
+1
+N1  1
+^S2
+2 ¼ N2S2
+2
+N2  1. 
+(14)
+Entonces a la distribución muestral de F se le llama distribución F de Fisher, o simplemente distribución F, con ν1 = 
+N1 − 1 y ν2 = N2 − 1 grados de libertad. Esta distribución está dada por
+ 
+Y ¼
+CFð1=2Þ1
+ð1F þ 2Þð1þ2Þ=2 
+(15)
+donde C es una constante que depende de ν1 y ν2, de manera que el área total bajo la curva sea 1. Esta curva tiene una 
+forma similar a la de las curvas que se muestran en la figura 11-3, aunque esta forma puede variar de manera notable 
+de acuerdo con los valores de ν1 y ν2.
+Figura 11-3 La línea continua representa la distribución F con 4 y 2 grados de libertad,
+y la línea punteada representa la distribución F con 5 y 10 grados de libertad.
+20
+15
+10
+5
+0
+0.7
+0.6
+0.5
+0.4
+0.3
+0.2
+0.1
+0.0
+Variable
+F-4-2
+F-5-10
+
+[Bloque seleccionado #321 | relevancia=6]
+Pagina 320
+Si en las celdas B1:L2 de una hoja de cálculo de EXCEL se introducen las frecuencias observadas y las frecuencias 
+esperadas, en la celda B4 se introduce la expresión =(B1-B2)^2/B2, se hace clic y se arrastra desde B4 hasta L4 y las cantida-
+des en B4:L4 se suman, se obtiene 10.34 como el valor de 2 ¼ P
+j ððoj  ejÞ2=ejÞ.
+El valor p que corresponde a 10.34 se obtiene mediante la expresión de EXCEL =CHIDIST(10.34,10). Este valor p es 
+0.411 y dado que es grande, no hay razón para pensar que el dado esté cargado.
+TABLAS DE CONTINGENCIA
+A tablas como la 12.1 en las que las frecuencias observadas ocupan un solo renglón se les llama tablas de clasificación 
+en un solo sentido. Como el número de columnas es k, se les llama también tablas 1 × k (que se lee “1 por k”). Por 
+extensión de estas ideas, se obtienen tablas de clasificación en dos sentidos, o tablas h × k, en las que las frecuencias 
+observadas ocupan h renglones y k columnas. A estas tablas se les suele llamar tablas de contingencia.
+En una tabla de contingencia h × k, para cada frecuencia observada hay una frecuencia esperada (o teórica), que 
+se calcula basándose en alguna hipótesis y sujetándose a las reglas de probabilidad. A las frecuencias que ocupan las 
+celdas de una tabla de contingencia se les llama frecuencias de celda. Al total de las frecuencias de un renglón o de 
+una columna se le llama frecuencia marginal.
+Para investigar el grado de coincidencia entre las frecuencias observadas y las frecuencias esperadas se calcula el 
+estadístico
+ 
+2 ¼
+X
+j
+ðoj  ejÞ2
+ej
+ 
+(5)
+donde la suma se realiza sobre todas las celdas de la tabla de contingencia y donde los símbolos oj y ej representan 
+frecuencias, observada y esperada, en la celda j. Esta suma, que es análoga a la de la ecuación (1), contiene hk términos. 
+La suma de todas las frecuencias observadas, que se denota N, es igual a la suma de todas las frecuencias esperadas 
+[ver la ecuación (2)].
+Como antes, el estadístico (5) tiene una distribución muestral que está dada, con una aproximación muy buena, por 
+(4), siempre y cuando las frecuencias esperadas no sean demasiado pequeñas. El número de grados de libertad, ν, de 
+esta distribución ji cuadrada es, para h > 1 y k > 1, 
+1. ν = (h − 1)(k − 1) si las frecuencias esperadas pueden calcularse sin necesidad de estimar parámetros poblacio-
+nales mediante estadísticos muestrales. Una demostración de esto se da en el problema 12.18.
+2. ν = (h − 1)(k − 1) − m si las frecuencias esperadas sólo pueden calcularse estimando m parámetros poblacionales 
+mediante estadísticos muestrales.
+Las
+
+[Bloque seleccionado #473 | relevancia=9]
+Pagina 472
+448  CAPÍTULO 17 PRUEBAS NO PARAMÉTRICAS
+Si tanto N1 como N2 son por lo menos igual a 8, entonces la distribución de U es aproximadamente normal, de 
+manera que
+ 
+z ¼ U  U
+U
+ 
+(4)
+tiene una distribución normal con media 0 y desviación estándar 1. Empleando el apéndice II se puede, entonces, 
+decidir si las muestras son o no significativamente diferentes. En el problema 17.5 se muestra que, al nivel de signifi-
+cancia 0.05, hay una diferencia significativa entre los cables.
+Nota 3: Un valor de U correspondiente a la muestra 2 es el dado por el estadístico
+ 
+U ¼ N1N2 þ N2ðN2 þ 1Þ
+2
+ R2 
+(5)
+y tiene la misma distribución muestral que el estadístico (2), siendo su media y su varianza las dadas 
+por la fórmula (3). El estadístico (5) se relaciona con el estadístico (2), ya que si U1 y U2 son los 
+valores correspondientes a los estadísticos (2) y (5), respectivamente, entonces se tiene
+ 
+U1 þ U2 ¼ N1N2 
+(6)
+También se tiene
+ 
+R1 þ R2 ¼ NðN þ 1Þ
+2
+ 
+(7)
+donde N = N1 + N2. La fórmula (7) puede servir como verificación de los cálculos.
+Nota 4: En la ecuación (2), el estadístico U es el número de veces que los valores de la muestra 1 
+preceden a los valores de la muestra 2, cuando todos los valores han sido ordenados en forma cre-
+ciente de magnitud. Esto proporciona un método alternativo de conteo para hallar U.
+LA PRUEBA H DE KRUSKAL-WALLIS
+La prueba U es una prueba no paramétrica para decidir si dos muestras provienen o no de una misma población. Una 
+generalización de esta prueba para k muestras es la prueba H de Kruskal-Wallis o simplemente prueba H.
+Esta prueba se puede describir de la manera siguiente: supóngase que se tienen k muestras, cuyos tamaños son N1, 
+N2, . . . ,  Nk, por lo que el tamaño de todas estas muestras juntas será N = N1 + N2 + · · · + Nk. Supóngase además que 
+todas estas muestras se juntan y sus valores se ordenan de menor a mayor asignándoles un rango, y que las sumas de 
+los rangos, de cada una de las k muestras, son R1, R2, . . . ,  Rk, respectivamente. Se define el estadístico como 
+ 
+H ¼
+12
+NðN þ 1Þ
+X
+k
+j¼1
+R2
+j
+Nj
+ 3ðN þ 1Þ 
+(8)
+se puede demostrar que la distribución muestral de H es aproximadamente una distribución chi cuadrada con k – 1 
+grados de libertad, siempre que cada uno de los N1, N2, . . . ,  Nk, sean por lo menos de 5.
+La prueba H proporciona un método no paramétrico de análisis de varianza para clasificaciones en un sentido o 
+experimentos de un factor, pudiéndose hacer generalizaciones.
+PRUEBA H CORREGIDA PARA EMPATES
+Cuando hay demasiados empates entre las observaciones de los datos muestrales, el va
+
+[Bloque seleccionado #550 | relevancia=10]
+Pagina 549
+RESPUESTAS A LOS PROBLEMAS SUPLEMENTARIOS  525
+10.30 
+a)  Rechazar la hipótesis nula si X ≤ 21 o X ≥ 43, donde X = número de canicas rojas extraídas; b) 0.99186; c) rechazar si 
+X ≤ 23 o X ≥ 41.
+10.31 
+a)  Ho: p = 0.5 Ha: p > 0.5; b) prueba de una cola; c) rechazar la hipótesis nula si X ≥ 40; d ) rechazar la hipótesis nula si 
+X ≥ 41.
+10.32 
+a)  Para dos colas, valor p = 2*(1–BINOMDIST(22,100,0.16666,1) = 0.126 > 0.05. Al nivel de significancia 0.05, 
+no se rechaza la hipótesis nula. 
+b)  Para una cola, valor p = 1–BINOMDIST(22,100,0.16666,1) = 0.063 > 0.05. Al nivel de significancia 0.05, no 
+se rechaza la hipótesis nula.
+10.33 
+Empleando ya sea una prueba de una cola o una prueba de dos colas, al nivel de significancia 0.01 no se puede rechazar la 
+hipótesis. 
+10.34 
+ Ho: p ≥ 0.95 Ha: p < 0.95
+Valor p = P{X ≤ 182 de 200 piezas cuando p = 0.95} = BINOMDIST(182,200,0.95,1) = 0.012. No se rechaza a 
+0.01, pero se rechaza a 0.05
+10.35 
+Estadístico de prueba = 2.63, valores críticos ±1.7805, se rechaza la hipótesis nula.
+10.36 
+Estadístico de prueba = −3.39, valor crítico para 0.10 es −1.28155, valor crítico para 0.025 es −1.96. El resultado es 
+significativo a α = 0.10 y α = 0.025. 
+10.37 
+Estadístico de prueba = 6.46, valor crítico = 1.8808, se concluye que µ > 25.5.
+10.38 
+=NORMSINV(0.9) = 1.2815 para α = 0.1, =NORMSINV(0.99) = 2.3263 para α = 0.01 y =NORMSINV(0.999) 
+= 3.0902 para α = 0.001.
+10.39 
+valor p = P{X ≤ 3} + P{X ≥ 12} = 0.0352.
+10.40 
+valor p = P{Z < −2.63} + P{Z > 2.63} = 0.0085.
+10.41 
+valor p = P{Z < −3.39} = 0.00035.
+10.42 
+valor p = P{Z > 6.46} = 5.23515E-11.
+10.43 
+a) 8.64 ± 0.96 oz; b) 8.64 ± 0.83 oz; c) 8.64 ± 0.63 oz.
+10.44 
+Los límites superiores de control son: a) 12 y b) 10.
+10.45 
+Estadístico de prueba = −5.59, valor p = 0.000. Se rechaza la hipótesis nula ya que el valor p < α.
+10.46 
+Estadístico de prueba = −1.58, valor p = 0.059. Para α = 0.05 no se rechaza, para α = 0.10 sí se rechaza. 
+10.47 
+Estadístico de prueba = −1.73, valor p = 0.042. Para α = 0.05 se rechaza, para α = 0.01 no se rechaza.
+10.48 
+Con una prueba de una cola se observa que, a ambos niveles de significancia, el nuevo fertilizante es mejor. 
+10.49 
+a) Estadístico de prueba = 1.35, valor p = 0.176, no se puede rechazar la hipótesis nula a α = 0.05.
+b) Estadístico de prueba = 1.35, valor p = 0.088, no se puede rechazar la hipótesis nula a α = 0.05.
+10.50 
+a) Estadístico de prueba = 1.81, valor p = 0.07, no se puede rechazar la hipótesis nula a α = 0.05. 
+b) Estadístico de prueba = 1.81, valor p = 0.0035, se rechaza la hipótesis nula a α = 0.05.
+10.
+
+[Bloque seleccionado #598 | relevancia=6]
+Pagina 597
+ÍNDICE  573
+Dispersión relativa o varianza, 95
+Distribución acumulada “o más”, 40
+Distribución binomial, 172
+ ajuste de datos, 195
+ propiedades de, 172
+ prueba de hipótesis usando, 250
+ relación con la distribución de Poisson, 175
+ relación con la distribución normal, 174
+Distribución ji-cuadrada, 297 (ver también Ji-cuadrada)
+ intervalos de confianza usando, 278
+ pruebas de hipótesis y significancia, 294
+Distribución de Bernoulli (ver Distribución binomial)
+Distribución de Poisson, 175
+ ajuste de datos mediante, 198
+ propiedades de, 175
+ relación con las distribuciones binomial y normal, 176
+Distribución en forma de J inversa, 41
+Distribuciones de frecuencia, 37
+ acumulada, 40
+ porcentual o relativa, 39
+ reglas para la elaboración de, 38
+Distribuciones de probabilidad acumulada, 143
+Distribuciones de probabilidad continua, 143
+Distribuciones de probabilidad discreta, 142
+Distribuciones muestrales, 204
+ de diferencias y sumas, 205
+ de diversos estadísticos, 204
+ de medias, 204
+ de proporciones, 205
+ experimentales, 208
+Distribuciones unilaterales y bilaterales, 247
+Distribución F, 279 (ver también Análisis de varianza)
+Distribución multinomial, 177
+Distribución normal, 173
+ forma estándar de, 174
+ proporciones de, 174
+ relación con la distribución binomial, 174
+ relación con la distribución de Poisson, 176
+Distribución t, 275
+Distribución unimodal, 64
+Dominio de una variable, 1
+E
+Ecuaciones, 5
+ cuadráticas, 35
+ de curvas de aproximación, 317
+ de regresión, 382
+ equivalentes, 5
+ miembros izquierdo y derecho de, 5
+ simultáneas, 25, 34
+ solución de, 5
+ trasposición en, 26
+Ecuaciones normales:
+ para el plano de mínimos cuadrados, 321
+ para la parábola de mínimos cuadrados, 320
+ para la recta de mínimos cuadrados, 320
+Ecuaciones simultáneas, 5
+Ejes X y Y de un sistema de coordenadas rectangulares, 4
+Eje Y, 4
+Empates en la prueba H de Kruskal-Wallis, 448
+ en la prueba U de Mann-Whitney, 447
+Entrada de una tabla, 42
+Enumeraciones, 2
+Error de agrupación, 39
+Error estándar de estimación, 348
+ modificado, 348
+Error probable, 230
+Errores:
+ de agrupación, 39
+ de redondeo, 2
+ probables, 230
+Errores de redondeo, 2
+Errores de redondeo acumulados, 2
+Errores estándar de distribuciones muestrales, 206
+Errores tipo I y tipo II, 246
+Espacio de cuatro dimensiones, 385
+Espacio muestral, 146
+Esperanza matemática, 144
+Estadística, 1
+ deductiva o descriptiva, 1
+ definición de, 1
+ inductiva o inferencial, 1
+Estadística deductiva, 1
+Estadística descriptiva, 1
+Estadística inductiva o inferencial, 1
+Estadístico de prueba, 247
+Estadístico H, 448
+Estadístico muestral, 1
+Est

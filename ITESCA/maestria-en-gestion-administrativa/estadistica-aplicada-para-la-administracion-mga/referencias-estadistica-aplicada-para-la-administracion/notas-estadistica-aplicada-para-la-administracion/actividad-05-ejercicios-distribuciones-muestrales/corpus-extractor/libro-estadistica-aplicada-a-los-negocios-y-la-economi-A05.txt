@@ -1,0 +1,576 @@
+Fuente bibliográfica: Estadística aplicada a los negocios y la economía - Lind, Marchal y Wathen. 15.ª edición.pdf
+Actividad: 5 (2.2 Ejercicios 5% Tarea)
+Palabras clave: distribución muestral, media muestral, proporción muestral, teorema central del límite, error estándar, corrección por continuidad
+
+[Bloque seleccionado #301 | relevancia=16]
+Pagina 300
+8.4 Distribución muestral de la media
+Debido a que existe la posibilidad de que se presente un error de muestreo cuando se em-
+plean los resultados del muestreo para aproximar un parámetro poblacional, ¿cómo hacer un
+pronóstico preciso relacionado con el posible éxito de un nuevo dentífrico u otro producto
+sobre la única base de los resultados del muestreo? ¿Cómo puede el departamento de con-
+trol de calidad de una compañía de producción en serie enviar un cargamento de microchips
+a partir de una muestra de 10 chips? ¿Cómo pueden las organizaciones electorales de CNN-
+USA Today o ABC News-Washington Post hacer pronósticos precisos sobre la elección presi-
+dencial con base en una muestra de 1 200 electores registrados de una población de cerca de
+90 millones? Para responder estas preguntas, primero hay que precisar el concepto de distri-
+bución muestral de la media.
+Las medias muestrales del ejemplo anterior varían de una muestra a la siguiente. La media
+de la primera muestra de 5 días fue de 3.80 habitaciones, y la media de la segunda muestra
+fue de 3.40 habitaciones. La media poblacional fue de 3.13 habitaciones. Si se organizan las
+medias de todas las muestras posibles de 5 días en una distribución de probabilidad, el resul-
+tado recibe el nombre de distribución muestral de la media.
+8.4 Distribución muestral de la media
+275
+En la tercera muestra aleatoria, la media fue de 1.8, y el error de muestro fue de 1.33.
+Cada una de estas diferencias, 0.67, 0.27 y 1.33, representa el error de muestreo come-
+tido al calcular la media de la población. A veces estos errores son valores positivos, lo cual
+indica que la media muestral sobreexcedió la media poblacional; otras veces son valores nega-
+tivos, lo cual indica que la media muestral resultó inferior a la media poblacional.
+En este caso, con una población de 30 valores y muestras de 5 valores, existe una gran
+cantidad de muestras posibles, 142 506, para ser exactos. Para calcular este valor se aplica la
+fórmula de las combinaciones (5-10), de la página 174. Cada una de las 142 506 diferentes
+muestras cuenta con las mismas posibilidades de que se le seleccione. Cada muestra puede
+tener una media muestral diferente y, por consiguiente, un error de muestreo distinto. El valor
+del error de muestreo se basa en el valor particular de las 142 506 muestras posibles seleccio-
+nadas. Por consiguiente, los errores de muestreo son aleatorios y se presentan al azar. Si deter-
+minara la suma de estos errores de muestreo en una gran cantidad de muestras, el resultado
+se aproximaría mucho a cero. Sucede así por
+
+[Bloque seleccionado #303 | relevancia=28]
+Pagina 302
+En resumen, tome todas las posibles muestras aleatorias de una población y calcule un
+estadístico muestral (la media de los ingresos percibidos) de cada una. Este ejemplo ilustra las
+importantes relaciones entre la distribución poblacional y la distribución muestral de la media:
+1.
+La media de las medias de las muestras es exactamente igual a la media de la población.
+2.
+La dispersión de la distribución muestral de la media es más estrecha que la distribución
+poblacional.
+3.
+La distribución muestral de la media suele tener forma de campana y se aproxima a la dis-
+tribución de probabilidad normal.
+8.4 Distribución muestral de la media
+277
+TABLA 8-4 Distribución muestral de la media con n  2
+3.
+La media de la distribución muestral de la media se obtiene al sumar las medias muestra-
+les y dividir la suma entre el número de muestras. La media de todas las medias mues-
+trales se representa mediante 
+. La  recuerda que se trata de un valor poblacional, pues
+X.
+Distribución de población
+.40
+.30
+.20
+7
+.10
+.40
+.30
+.20
+.10
+Ingresos por hora
+8
+9
+μ
+Distribución muestral de las medias
+7
+Media de la muestra 
+o ingresos por hora
+8
+9
+7.5
+8.5
+X
+X
+μ
+Probabilidad
+Probabilidad
+GRÁFICA 8-1 Distribución de los valores de población y distribución muestral de las medias
+Media muestral
+Número de medias
+Probabilidad
+$7.00
+3
+.1429
+7.50
+9
+.4285
+8.00
+6
+.2857
+8.50 
+3
+.1429
+21
+1.0000
+tomó en cuenta todas las muestras posibles. El subíndice
+indica que se trata de la dis-
+tribución muestral de la media.
+4.
+Consulte la gráfica 8-1, donde aparecen las dos distribuciones poblacionales y la distribu-
+ción muestral de la media. Caben las siguientes observaciones:
+a) La media de la distribución muestral de la media ($7.71) es igual a la media de la pobla-
+ción: 
+.
+b) La dispersión de la distribución muestral de las medias es menor que la dispersión de
+los valores de población. La media de las muestras varía de $7.00 a $8.50, mientras
+que los valores de población varían de $7.00 a $9.00. Observe que, conforme se incre-
+menta el tamaño de la muestra, se reduce la dispersión de la distribución muestral de
+las medias.
+c) La forma de la distribución muestral de la media y la forma de la distribución de fre-
+cuencias de los valores de población son diferentes. La distribución muestral de las
+medias tiende a adoptar más forma de campana y a aproximarse a la distribución de
+probabilidad normal.
+  X
+X
+La media de la población
+es igual a la media de las
+medias muestrales.
+ 
+$162
+21
+$7.71
+ 
+X
+Suma de todas las medias muestrales
+Total de muestras
+$7.00
+$7.50
+# # #
+$8.50
+21
+
+[Bloque seleccionado #304 | relevancia=20]
+Pagina 303
+Dada una distribución de probabilidad normal o de forma de campana, se aplican los con-
+ceptos del capítulo 7 para determinar la probabilidad de seleccionar una muestra con una
+media muestral específica. En la siguiente sección se resalta la importancia del tamaño de
+una muestra en relación con la distribución muestral de la media.
+278
+CAPÍTULO 8 Métodos de muestreo y teorema central del límite
+Autoevaluación 8-3
+Los tiempos de servicio de los ejecutivos que laboran en Standard Chemicals son los siguientes:
+a)
+De acuerdo con la fórmula de las combinaciones, ¿cuántas muestras de tamaño 2 son posibles?
+b)
+Elabore una lista de todas las muestras posibles de 2 ejecutivos de la población y calcule las
+medias.
+c)
+Organice las medias en una distribución muestral.
+d )
+Compare la media poblacional y la media de las medias de las muestras.
+e)
+Compare la dispersión en la población con la dispersión de la distribución muestral de la media.
+f)
+A continuación se muestra una gráfica con los valores de la población. ¿Tienen los valores de
+población una distribución normal (en forma de campana)?
+g)
+¿Comienza la distribución muestral de la media que se calculó en el inciso c) a indicar una ten-
+dencia a adoptar forma de campana?
+Ejercicios
+5.
+Una población consta de los siguientes cuatro valores: 12, 12, 14 y 16.
+a) Enumere todas las muestras de tamaño 2 y calcule la media de cada muestra.
+b) Calcule la media de la distribución muestral de la media y la media de la población. Compare
+los dos valores.
+c) Compare la dispersión en la población con la de las medias de las muestras.
+6.
+Una población consta de los siguientes cinco valores: 2, 2, 4, 4 y 8.
+a) Enumere todas las muestras de tamaño 2 y calcule la media de cada muestra.
+b) Calcule la media de la distribución muestral de las medias y la media de la población. Compare
+los dos valores.
+c) Compare la dispersión en la población con la de las medias de las muestras.
+7.
+Una población consta de los siguientes cinco valores: 12, 12, 14, 15 y 20.
+a) Enumere todas las muestras de tamaño 3 y calcule la media de cada muestra.
+b) Calcule la media de la distribución muestral de las medias y la media de la población. Compare
+los dos valores.
+c) Compare la dispersión de la población con la de las medias de las muestras.
+8.
+Una población consta de los siguientes cinco valores: 0, 0, 1, 3 y 6.
+a) Enumere todas las muestras de tamaño 3 y calcule la media de cada muestra.
+b) Calcule la media de la distribución muestral de las medias y la media de la población. Compare
+los dos valores.
+c) Compare la dispersión de la población 
+
+[Bloque seleccionado #305 | relevancia=24]
+Pagina 304
+a) ¿Cuántas muestras de 3 son posibles?
+b) Enumere todas las muestras posibles de 3 y calcule el número medio de casos en cada mues-
+tra.
+c) Compare la media de la distribución muestral de las medias con la de la media poblacional.
+d ) En una gráfica similar a la 8-1, compare la dispersión en la población con la de las medias
+muestrales.
+10. Mid-Motors Ford tiene cinco vendedores. Los cinco representantes de ventas y el número de auto-
+móviles que vendieron la semana pasada son los siguientes:
+8.5 Teorema central del límite
+279
+Socio
+Número de casos
+Ruud
+3
+Wu
+6
+Sass
+3
+Flores
+3
+Wilhelms
+0
+Schueller
+1
+Representantes
+Autos
+de ventas
+vendidos
+Peter Hankish
+8
+Connie Stallter
+6
+Juan López
+4
+Ted Barnes
+10
+Peggy Chu
+6
+a) ¿Cuántas muestras de tamaño 2 son posibles?
+b) Enumere todas las muestras posibles de tamaño 2 y calcule la media en cada muestra.
+c) Compare la media de la distribución muestral de la media con la de la media poblacional.
+d ) En una gráfica similar a la 8-1, compare la dispersión de la población con la de la media de la
+muestra.
+8.5 Teorema central del límite
+En esta sección se estudia el teorema central del límite. Su aplicación a la distribución mues-
+tral de medias, introducida en la sección anterior, permite utilizar la distribución de probabili-
+dad normal para crear intervalos de confianza de la media poblacional (que se describe en el
+capítulo 9) y llevar a cabo pruebas de hipótesis (descritas en el capítulo 10). El teorema cen-
+tral del límite hace hincapié en que, en el caso de muestras aleatorias grandes, la forma de la
+distribución muestral de la media se aproxima a la distribución de probabilidad normal. La
+aproximación es más exacta en el caso de muestras grandes que en el de muestras peque-
+ñas. Ésta es una de las conclusiones más útiles de la estadística. Permite razonar sobre la dis-
+tribución de las medias muestrales sin ninguna información acerca de la forma de la distribu-
+ción de la población de la que se toma la muestra. En otras palabras, el teorema central del
+límite se cumple en el caso de todas las distribuciones.
+En seguida aparece el enunciado formal del teorema central del límite.
+TEOREMA CENTRAL DEL LÍMITE Si todas las muestras de un tamaño en particular se seleccio-
+nan de cualquier población, la distribución muestral de la media se aproxima a una distribu-
+ción normal. Esta aproximación mejora con muestras más grandes.
+OA5 Comprender y explicar
+el teorema central del límite.
+Si la población obedece a una distribución normal, entonces, en el caso de cualquier
+tamaño de muestra, la distribución muestral d
+
+[Bloque seleccionado #310 | relevancia=22]
+Pagina 309
+¿Qué concluye de este ejemplo? El teorema central del límite indica que, sin que importe
+la forma de la distribución de la población, la distribución muestral de la media se aproximará
+a la distribución de probabilidad normal. Cuanto mayor sea el número de observaciones en
+cada muestra, más evidente será la convergencia. El ejemplo de Spence Sprockets, Inc.,
+demuestra el mecanismo del teorema central del límite. Comenzó con una población con
+sesgo positivo (gráfica 8-3). Después seleccionó 25 muestras aleatorias de 5 observaciones;
+calculó la media de cada muestra y, por último, organizó las 25 medias de muestra en una grá-
+fica (gráfica 8-4). Observó un cambio en la forma de la distribución muestral de las medias res-
+pecto de la de la población. El desplazamiento va de una distribución con sesgo positivo a una
+que tiene la forma de la distribución de probabilidad normal.
+Para aclarar más los efectos del teorema central del límite, incremente el número de
+observaciones en cada muestra de 5 a 20. Seleccione 25 muestras de 20 observaciones cada
+una y calcule la media de cada una de ellas. Por último, organice estas medias muestrales
+en una gráfica (gráfica 8-5). La forma del histograma de la gráfica 8-5 se desplaza claramente
+hacia la distribución de probabilidad normal.
+284
+CAPÍTULO 8 Métodos de muestreo y teorema central del límite
+1.
+La forma de la distribución muestral de las medias es diferente a la de la población. En la
+gráfica 8-3, la distribución de empleados tiene un sesgo positivo. No obstante, conforme
+selecciona muestras aleatorias de la población, cambia la forma de la distribución mues-
+tral de las medias. A medida que incrementa el tamaño de la muestra, la distribución
+muestral de las medias se aproxima a la distribución de probabilidad normal. Este hecho
+se ilustra con el teorema central del límite.
+2.
+Hay menos dispersión en la distribución muestral de las medias que en la distribución de
+la población. En la población, los periodos de servicio variaron de 0 a 19 años. Cuando
+seleccionó muestras de tamaño 5, las medias de las muestras variaron de 1.6 a 8.6 años,
+y cuando seleccionó muestras de 20, las medias variaron de 3.05 a 7.10 años.
+GRÁFICA 8-5 Histograma del tiempo medio de servicio de 25 muestras de 20 empleados
+También puede comparar la media de las medias de la muestra con la media de la pobla-
+ción. La media de las 25 muestras de los 20 empleados de la tabla 8-6 es de 4.676 años.
+Emplee el símbolo 
+para identificar la media de la distribución muestral de las medias. El
+subíndice recuerda que la distribución se refiere
+
+[Bloque seleccionado #311 | relevancia=24]
+Pagina 310
+En el capítulo 6, la gráfica 6-3 muestra diversas distribuciones binomiales con una propor-
+ción de éxitos de 0.10, lo cual es otra demostración del teorema central del límite. Observe
+que, conforme n se incrementa de 7 a 12 y de 20 a 40, el perfil de las distribuciones de pro-
+babilidad se desplaza para acercarse cada vez más a una distribución de probabilidad normal.
+La gráfica 8-5 de la página 284 también muestra la convergencia hacia la normalidad confor-
+me n se incrementa. Esto confirma de nuevo el hecho de que, a medida que se incluyen más
+observaciones de la muestra de cualquier distribución poblacional, la forma de la distribución
+muestral de las medias se aproximará cada vez más a la distribución normal.
+El teorema central del límite mismo (lea de nuevo la definición de la página 279) no dice
+nada sobre la dispersión de la distribución muestral de medias ni sobre la comparación entre
+la media de la distribución muestral de medias y la media de la población. Sin embargo, en el
+ejemplo de Spence Sprockets hay menor dispersión en la distribución de la media muestral
+que en la distribución de la población, lo que indica la diferencia entre los rangos de la pobla-
+ción y de las medias muestrales. Observe que la media de las medias de las muestras se
+encuentra cerca de la media de la población. Se puede demostrar que la media de la distribu-
+ción muestral es la media poblacional, es decir, que 
+, y si la desviación estándar de la
+población es , la desviación estándar de las medias muestrales es 
+en la que n es el
+número de observaciones de cada muestra. Entonces, 
+es el error estándar de la
+media. En realidad, el nombre completo es desviación estándar de la distribución muestral de
+la media.
+ERROR ESTÁNDAR DE LA MEDIA
+(8-1)
+Esta sección permite importantes conclusiones.
+1.
+La media de la distribución muestral de medias será exactamente igual a la media pobla-
+cional si selecciona todas las muestras posibles del mismo tamaño de una población
+dada. Es decir,
+Aunque no seleccione todas las muestras, es de esperar que la media de la distribución
+muestral de medias se aproxime a la media poblacional.
+2.
+Habrá menos dispersión en la distribución muestral de las medias que en la población. Si
+la desviación estándar de la población es , la desviación estándar de la distribución
+muestral de medias es 
+. Note que, cuando se incrementa el tamaño de la muestra,
+disminuye el error estándar de la media.
+1n
+  X
+ X 
+
+1n
+1n
+1n,
+X  
+8.5 Teorema central del límite
+285
+OA6 Definir el error
+estándar de la media.
+Autoevaluación 8-4
+Repase los d
+
+[Bloque seleccionado #316 | relevancia=16]
+Pagina 315
+III. El error de muestreo es la diferencia entre un parámetro poblacional y un estadístico de la muestra.
+IV. La distribución muestral de la media es una distribución de probabilidad de todas las posibles
+medias muestrales del mismo tamaño de muestra.
+A. Para un tamaño de muestra dado, la media de todas las posibles medias muestrales tomadas
+de una población es igual a la media de la población.
+B. Existe una menor variación en la distribución de las medias muestrales que en la distribución de
+la población.
+C. El error estándar de la media mide la variación de la distribución muestral de las medias. El error
+estándar se calcula de la siguiente manera:
+(8-1)
+D. Si la población se rige por una distribución normal, la distribución muestral de la media también
+se regirá por la distribución normal con muestras de cualquier tamaño. Suponga que conoce la
+desviación estándar de la población. Para determinar la probabilidad de que una media mues-
+tral caiga dentro de determinada región, se aplica la fórmula:
+(8-2)
+Clave de pronunciación
+SÍMBOLO
+SIGNIFICADO
+PRONUNCIACIÓN
+Media de la distribución muestral
+mu subíndice X barra
+de la media
+Error estándar de la población 
+sigma subíndice X barra
+de la media muestral
+Ejercicios del capítulo
+19. Las tiendas de venta al menudeo en el centro comercial de North Towne Square son las siguien-
+tes:
+X
+X
+z  X  
+1n
+ X 
+
+1n
+290
+CAPÍTULO 8 Métodos de muestreo y teorema central del límite
+00
+Elder-Beerman
+09
+Lion Store
+18
+County Seat
+01
+Sears
+10
+Bootleggers
+19
+Kid Mart
+02
+Deb Shop
+11
+Formal Man
+20
+Lerner
+03
+Frederick’s of Hollywood
+12
+Leather Ltd.
+21
+Coach House Gifts
+04
+Petries
+13
+B Dalton Bookseller
+22
+Spencer Gifts
+05
+Easy Dreams
+14
+Pat’s Hallmark
+23
+CPI Photo Finish
+06
+Summit Stationers
+15
+Things Remembered
+24
+Regis Hairstylists
+07
+E. B. Brown Opticians
+16
+Pearle Vision Express
+08
+Kay-Bee Toy & Hobby
+17
+Dollar Tree
+a) Si selecciona los números aleatorios 11, 65, 86, 62, 06, 10, 12, 77 y 04, ¿con qué tiendas es
+necesario ponerse en contacto para realizar una encuesta?
+b) Seleccione una muestra aleatoria de cuatro tiendas. Utilice el apéndice B.6.
+c) Debe aplicar un procedimiento de muestreo sistemático. Es necesario ponerse en contacto con
+la primera tienda y a continuación con cada tercer establecimiento. ¿Con qué tiendas entrará
+en contacto?
+20. Medical Mutual Insurance investiga el costo de una visita de rutina a consultorios de médicos fami-
+liares en el área de Rochester, Nueva York. La siguiente constituye una lista de médicos familiares
+de la región. Se debe seleccionar a los médicos de forma aleatoria
+
+[Bloque seleccionado #319 | relevancia=18]
+Pagina 318
+a) ¿Cuántas muestras de tamaño 2 se pueden tomar?
+b) Seleccione todas las muestras posibles de tamaño 2 y calcule la cantidad media de refrigera-
+dores vendidos.
+c) Organice las medias de las muestras en una distribución de frecuencias.
+d) ¿Cuál es la media de la población? ¿Cuál es la media de las medias de la muestra?
+e) ¿Cuál es la forma de la distribución de la población?
+f) ¿Cuál es la forma de la distribución muestral de la media?
+31. Mattel Corporation produce autos de control remoto que funcionan con baterías AA. La vida media
+de las baterías para este producto es de 35.0 horas. La distribución de las vidas de las baterías se
+aproxima a una distribución de probabilidad normal con una desviación estándar de 5.5 horas.
+Como parte de su programa, Sony prueba muestras de 25 baterías.
+a) ¿Qué se puede decir sobre la forma de la distribución muestral de la media?
+b) ¿Cuál es el error estándar de la distribución muestral de la media?
+c) ¿Qué proporción de las muestras tendrá una media de vida útil de más de 36 horas?
+d ) ¿Qué proporción de la muestra tendrá una media de vida útil mayor que 34.5 horas?
+e) ¿Qué proporción de la muestra tendrá una media de vida útil entre 34.5 y 36 horas?
+32. CRA CDs, Inc., desea que las extensiones medias de los “cortes” de un CD sean de 135 segun-
+dos (2 minutos y 15 segundos). Esto permitirá a los disc jockeys contar con tiempo de sobra para
+“meter” comerciales entre cada segmento de 10 minutos. Suponga que la distribución de la exten-
+sión de los cortes sigue una distribución normal con una desviación estándar de la población de
+8 segundos, y también que selecciona una muestra de 16 cortes de varios CD vendidos por CRA
+CDs, Inc.
+a) ¿Qué puede decir sobre la forma de la distribución muestral de la media?
+b) ¿Cuál es el error estándar de la media?
+c) ¿Qué porcentaje de las medias muestrales será superior a 140 segundos?
+d ) ¿Qué porcentaje de las medias muestrales será superior a 128 segundos?
+e) ¿Qué porcentaje de las medias muestrales será superior a 128 segundos e inferior a 140?
+33. Estudios recientes indican que la mujer común de 50 años de edad gasta $350 anuales en pro-
+ductos de cuidado personal. La distribución de las sumas que se gastan se rige por una distribu-
+ción normal con una desviación estándar de $45 anuales. Se selecciona una muestra aleatoria de
+40 mujeres. La cantidad media que gasta dicha muestra es de $335. ¿Cuál es la probabilidad
+de hallar una media muestral igual o superior a la de la población indicada?
+34. Información en poder del American Institute of Insurance indica que la cantid
+
+[Bloque seleccionado #512 | relevancia=20]
+Pagina 511
+Ejercicios
+21. Remítase al ejercicio 5. La ecuación de regresión es 
+, el tamaño de la
+muestra es 8, y el error estándar de la pendiente es 0.22. Aplique el nivel de significancia
+0.05. ¿Podemos concluir que la pendiente de la recta de regresión es menor a cero?
+22. Refiérase al ejercicio 6. La ecuación de regresión es 
+, el tamaño de la
+muestra es 12, y el error estándar de la pendiente es 0.23. Aplique el nivel de significancia
+0.05. ¿Podemos concluir que la pendiente de la recta de regresión es menor a cero?
+23. Remítase al ejercicio 17. La ecuación de regresión es 
+, el tamaño de la mues-
+tra es 12, y el error estándar de la pendiente es 0.03. Aplique el nivel de significancia 0.05.
+¿Podemos concluir que la pendiente de la recta de regresión es distinta a cero?
+Yˆ  1.85  .08X
+Yˆ  11.18  0.49X
+Yˆ  29.29  0.96X
+486
+CAPÍTULO 13 Regresión lineal y correlación
+ERROR ESTÁNDAR DE ESTIMACIÓN Medida de la dispersión de los valores observados respecto
+de la recta de regresión para un valor dado de X.
+24. Refiérase al ejercicio 18. La ecuación de regresión es 
+, el tamaño de la
+muestra es 9, y el error estándar de la pendiente es 0.0032. Aplique el nivel de significancia
+0.05. ¿Podemos concluir que la pendiente de la recta de regresión es menor a cero?
+13.7 Evaluación de la capacidad
+predictora de una ecuación de regresión
+Error estándar de estimación
+Los resultados del análisis de regresión de Copier Sales of America muestran una relación sig-
+nificativa entre el número de llamadas de ventas y el número de ventas que se concretó. Al
+sustituir el nombre de las variables en la ecuación, ésta puede ser escrita como:
+Número de copiadoras vendidas  18.9476  1.1842 (Número de llamadas de ventas)
+La ecuación puede ser usada para estimar el número de copiadoras vendidas por cada
+“número de llamadas de ventas” dentro del rango de los datos. Por ejemplo, si el número de
+llamadas de ventas es 30, se puede predecir el número de copiadoras vendidas. Es 54.4736,
+determinado por 18.9476  1.1842(30). Sin embargo, los datos muestran dos representantes
+con ventas de 60 y 70 copiadoras. ¿La ecuación de regresión es un buen predictor del
+“Número de copiadoras vendidas”?
+En realidad, el pronóstico perfecto, que implica encontrar el resultado exacto, es imposi-
+ble en economía y negocios. Por ejemplo, los ingresos anuales de las ventas de gasolina (Y)
+con base en el número de registros de automóviles (X) desde una cierta fecha, sin duda que
+se podrían calcular con cierta precisión, pero el pronóstico no sería exacto hasta el dólar
+más cercano, o tal vez ni siqui
+
+[Bloque seleccionado #514 | relevancia=24]
+Pagina 513
+número de llamadas de ventas que se realizó. Es claro que estos datos no forman una línea
+perfecta. En vez de eso, los datos se diseminan alrededor de la recta de regresión de mínimos
+cuadrados que mejor se ajusta, y habrá un error en las predicciones. En la próxima sección se
+utiliza el error estándar de estimación para proporcionar información más específica con res-
+pecto al error asociado con el empleo de la ecuación de regresión para hacer predicciones.
+488
+CAPÍTULO 13 Regresión lineal y correlación
+Autoevaluación 13-5
+Consulte la autoevaluación 13-1, donde el propietario de la Haverty’s Furniture Company estudió la
+relación entre la cantidad que gastó en publicidad y los ingresos por ventas en un mes dado. La
+cantidad de ventas es la variable dependiente, y el gasto en publicidad es la variable independiente.
+a)
+Determine el error estándar de estimación.
+b)
+Determine el coeficiente de determinación.
+c)
+Interprete el coeficiente de determinación.
+Ejercicios
+(Quizás desee utilizar un paquete de software como Excel para realizar los cálculos.)
+25. Refiérase al ejercicio 5. Determine el error estándar de estimación y el coeficiente de determina-
+ción. Interprete el coeficiente de determinación.
+26. Remítase al ejercicio 6. Determine el error estándar de estimación y el coeficiente de determina-
+ción. Interprete el coeficiente de determinación.
+27. Refiérase al ejercicio 15. Determine el error estándar de estimación y el coeficiente de determina-
+ción. Interprete el coeficiente de determinación.
+28. Regrese al ejercicio 16. Determine el error estándar de estimación y el coeficiente de determina-
+ción. Interprete el coeficiente de determinación.
+Relaciones entre el coeficiente de correlación,
+el coeficiente de determinación y el error
+estándar de estimación
+En la sección 13-7 se analizó el error estándar de estimación, el cual mide la cercanía entre los
+valores reales y la recta de regresión. Cuando el error estándar es pequeño, las dos variables
+están muy relacionadas. En el cálculo del error estándar, el término clave es
+Si el valor de este término es pequeño, el error estándar también lo será.
+El coeficiente de correlación mide la fuerza de la asociación lineal entre dos variables.
+Cuando los puntos del diagrama de dispersión aparecen cerca de la recta, se observa que el
+coeficiente de correlación tiende a ser grande. Todo ello indica que el error estándar de esti-
+mación y el coeficiente de correlación están inversamente relacionados. A medida que aumen-
+ta la fuerza de la relación lineal entre dos variables, aumenta el coeficiente de corr

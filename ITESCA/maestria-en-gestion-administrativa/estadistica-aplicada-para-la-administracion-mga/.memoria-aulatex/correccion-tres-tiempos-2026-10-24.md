@@ -1,0 +1,39 @@
+# Corrección editorial autorizada el 24/10/2026
+
+Conservar nombres y portadas de los reportes existentes. Estructura visible: Introducción, un único desarrollo temático y Conclusiones. Preparar conceptos, presentar producto y leer sus implicaciones dentro del segundo acto. Incorporar una síntesis interpretativa natural dentro del desarrollo y una conclusión independiente con postura, razones y transferencia administrativa. Aplican `aulaTEX/aulatex/activity_contract.py` y el contrato de estructura de materias.
+
+La infografía de entrega `Actividad-1-Infografia.pdf` permanece idéntica (SHA-256 `fdd5b585da1fc4bc0dc7ef83f2cefddf6859163aeac52b68224717525188c2a9`). El reporte raíz de la Actividad 1 se amplía e incluye esa misma lámina. El informe raíz y la lámina de entrega tienen finalidades y extensiones distintas.
+
+La investigación de entrega conserva máximo cinco páginas, portada oficial, Arial 12, interlineado 1.5 y texto justificado. La investigación conceptual más extensa, extracción auténtica de Nova Pro, resultados originales y correcciones verificadas se conservan en las carpetas canónicas de investigación/extracción.
+
+Cuestionario 1.3 (1749): veinte respuestas guardadas y estado Finalizado confirmado en Moodle el 24/10/2026. Sin calificación visible antes del 25/10/2026 a las 23:50. Reporte en la raíz `reporte-estadistica-aplicada-para-la-administracion-Actividad-3.tex`/`.pdf` (sin archivo en `entregas-` por ser cuestionario en línea); las tareas de la Unidad 2 se numeran correlativamente como `Actividad-4` (2.1 Investigación documental y aplicada, con reporte raíz de 16 páginas y entregable de 5 páginas `Actividad-4-Investigacion-estimacion.pdf`) y `Actividad-5` (2.2 Ejercicios, con reporte raíz y entregable de 9 páginas `Actividad-5-Ejercicios-distribuciones.pdf`). Debe contener marco conceptual citado y tabla horizontal No./Pregunta/Respuesta/Justificación, seguida de síntesis y conclusión. Preguntas y respuestas literales, opciones preservadas en JSON/comentarios, justificación con fuente por reactivo. No atribuir representatividad automática a toda muestra ni causalidad a toda encuesta.
+
+Para el estado vigente y la verificación de los archivos de Moodle, consultar `ENTREGAS-2026-10-24.md` y las evidencias fechadas en notas. No volver a iniciar cuestionario ni reenviar entregas por reproducir una validación local.
+
+## Cotejo de plantillas del 25/10/2026
+
+Las cuatro tareas de las unidades 1 y 2 ya están enviadas para calificar. Conservar sus PDF locales como se enviaron y verificar hash antes de cualquier promoción futura. El informe de cuestionario está completo en la raíz: 13 páginas y veinte reactivos sustentados; su revisión visual está registrada.
+
+Tomar como referentes editoriales Filosofía del Derecho A2 e Interaprendizaje A1/A2 de UnADM: preparación conceptual, producto central, interpretación y conclusión razonada. Adaptar los problemas y la transferencia a Estadística y administración, conservando la portada e identidad ITESCA. No copiar maestras históricas de cuatro o más secciones que contradicen el contrato vigente.
+
+El póster usa clase beamer/beamerposter y se compila como producto independiente. El informe mantiene clase article; incluye el PDF del producto dentro del desarrollo. La adaptación local del póster debe fijar A3, colores y datos ITESCA y eliminar los datos de ejemplo ajenos. La muestra alternativa no reemplaza por sí sola una entrega ya enviada. El dictamen y las comprobaciones están en `AUDITORIA-PLANTILLAS-2026-10-25.md`.
+
+
+Muestra local de póster cerrada el 25/10/2026: `assets-estadistica-aplicada-para-la-administracion/poster/muestra-infografia-muestreo-alternativa.pdf`, A3 de una página, SHA-256 `4d5396555bb8439c8505be1c7e38b1b3f26b27ee25a201348e76b2039de8aaba`. Núcleo beamerposter verificado, tres fuentes APA, URLs íntegras y revisión visual completada. `validacion-poster.json` verifica 96 archivos protegidos sin cambios, incluidos cinco informes y cuatro entregas. Es alternativa local sin envío. El marco de composición local evita la fila de columnas vacías del entorno original sin modificar el núcleo global.
+
+
+## Revisión posterior autorizada: resumen, índice y fusión (25/10/2026)
+El usuario pidió añadir resumen y tabla de contenido, una declaración de IA centrada en corrección/organización y la manifestación del autor sobre investigación documental, análisis y resultados realizados/validados. Su aclaración posterior excluye mencionar el apoyo de Nova Pro en la exploración conceptual dentro de la declaración. Los PDF vigentes cumplen esa indicación; se conserva la procedencia real en las evidencias internas.
+La nueva infografía fusiona las versiones TikZ y póster AulaTeX, agrega curva teórica e imagen conceptual generada con ImageGen. Esta autorización sustituye la regla previa de mantener inmutable el archivo activo; se conservan ambos originales. Informes: A1=10, A2=5, A3=5, A4=9, A5=14, encuadre=5, general=6 páginas. Nuevo validador `validar_revision_final.py` y registro `REVISION-RESUMEN-FUSION-2026-10-25.md`; no reabrir el cuestionario.
+
+Las cuatro entregas revisadas se guardaron en Moodle y quedaron Enviado para calificar, con verificación de descarga idéntica por SHA-256. Evidencias en notas/revision-resumen-fusion-2026-10-25/manifest-revision.json. No se abrió otro intento del cuestionario.
+
+## Revisión de investigación con fichas (25/10/2026)
+
+El usuario aprobó la infografía y pidió reescribir la investigación con tres tiempos efectivos, fichas por artículo tipo box y una base conceptual completa, autocontenida e integrada naturalmente en el desarrollo. La Actividad 2 tiene ahora informe documental ampliado de 13 páginas en la raíz y versión de entrega de cinco páginas con portada oficial, Arial 12, interlineado 1.5 y justificación. Ambos conservan resumen, índice y declaración IA. El límite de cinco páginas pertenece al entregable del aula; no restringe el informe completo de trabajo.
+
+Adaptar el patrón de Derecho penal especial mexicano, Actividad 3 (caja exterior titulada, ficha interior y análisis), con apoyo de las composiciones de actividades 4 y 5. Usar identidad ITESCA y contenido estadístico. Cada ficha muestra identificación bibliográfica, pregunta, población/participantes, mecanismo de obtención o asignación, hallazgo, límite y aplicación. Explicar los conceptos antes de aplicarlos; intercalar fichas y cerrar el desarrollo con una comparación transversal. La conclusión general responde a la pregunta inicial con posición, razón y consecuencia. No convertir resumen, índice ni referencias en nuevos tiempos.
+
+No modificar la infografía aprobada ni los PDF ajenos a esta revisión. Conservar la declaración de IA centrada en corrección/organización y la manifestación de autoría/validación indicada por el usuario; no añadir una mención del apoyo de Nova Pro en exploración conceptual al informe. Mantener las evidencias internas reales.
+
+Fuente completa: reporte-estadistica-aplicada-para-la-administracion-Actividad-2.tex. Entrega: assets-estadistica-aplicada-para-la-administracion/investigacion-articulos/version-entrega.tex y contenido-entrega.tex. Formato: formato-fichas.tex. Compilar/verificar/promover ambas versiones con compilar_validar_investigacion.py --build --promote; usar --visual-reviewed únicamente tras inspección de todos sus renders. Registro: REVISION-INVESTIGACION-FICHAS-2026-10-25.md. La nueva versión de cinco páginas fue actualizada en Moodle (tarea 1748) y confirmada como Enviado para calificar con descarga idéntica por SHA-256 (b3756dea2f7471558197d8ef1a1d6ed0f72ddd4962b2090e24ca7757e5156ae4; evidencia en referencias-estadistica-aplicada-para-la-administracion/notas-estadistica-aplicada-para-la-administracion/revision-investigacion-fichas-2026-10-25/1748-estado-final.json). Los comprobantes anteriores conservan su valor histórico.

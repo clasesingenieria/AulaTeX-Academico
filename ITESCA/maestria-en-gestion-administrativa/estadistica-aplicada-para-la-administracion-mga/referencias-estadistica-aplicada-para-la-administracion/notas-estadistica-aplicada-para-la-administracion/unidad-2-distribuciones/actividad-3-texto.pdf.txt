@@ -1,0 +1,108 @@
+Estimación y decisiones
+administrativas
+Estadística aplicada para la administración
+Actividad 3: Investigación aplicada
+Martín Jonathan de la Cruz Muñoz
+Matrícula: 26130503
+Dra. Yoana Elizeth Tauitmes Delgado
+23 de octubre de 2026
+
+1. Introducción
+Planear compras, contratar personal o asignar un presupuesto exige decidir sin conocer
+todas las operaciones futuras ni observar a cada cliente. La estimación estadística permite
+inferir características de una población a partir de muestras y reconocer la incertidumbre
+que acompaña a esas inferencias. Su utilidad administrativa depende tanto de la regla de
+cálculo como de la selección de los datos: una cifra precisa puede orientar mal una decisión
+si excluye sistemáticamente a parte del mercado (Bradley et al., 2021; Holmes et al., 2023).
+2. Estimadores, incertidumbre y gestión
+2.1. Del estimador a la estimación
+Un parámetro describe a una población, por ejemplo, el gasto medio de todos los clientes
+de un periodo. Un estimador es una regla calculada con la muestra para aproximar ese
+parámetro; antes de observar los datos, varía entre muestras. La estimación es el valor
+obtenido al aplicar esa regla. En un caso simulado, cuatro compras de $180, $200, $220
+y $240 producen una media de $210: promediar es el estimador y $210 es la estimación
+puntual. No es necesariamente la media poblacional (Holmes et al., 2023).
+2.2. Propiedades bajo supuestos explícitos
+El insesgamiento significa que la esperanza del estimador coincide con el parámetro.
+Para compras independientes de una misma población con media finita, el promedio es
+insesgado; una muestra particular puede errar. El error cuadrático medio suma la varianza
+y el sesgo al cuadrado: permite comparar precisión y error sistemático, incluso entre reglas
+sesgadas. Una regla insesgada no es necesariamente la mejor bajo ese criterio (Wackerly
+et al., 2010, sec. 8.2).
+La eficiencia relativa compara varianzas de estimadores insesgados del mismo paráme-
+tro. Con compras independientes, misma distribución y varianza finita positiva, promediar
+cuatro tiene un cuarto de la varianza de usar solo la primera: ambos son insesgados, pe-
+ro el promedio aprovecha más información. Esto no demuestra optimalidad entre todos los
+estimadores; es una comparación bajo supuestos definidos (Wackerly et al., 2010, sec. 9.2).
+2
+
+La consistencia es convergencia en probabilidad al parámetro: para cualquier tolerancia
+positiva fija, la probabilidad de excederla tiende a cero al crecer la muestra. Con compras
+independientes, idénticamente distribuidas y varianza finita, la media es insesgada y su va-
+rianza es la poblacional dividida entre n; la desigualdad de Chebyshev garantiza su consis-
+tencia. Pasar de 100 a 400 compras reduce a la mitad el error estándar. Usar siempre la
+primera compra no es consistente si la población no es degenerada (Wackerly et al., 2010,
+sec. 9.3).
+2.3. Estimación puntual e intervalar
+La estimación puntual resume el parámetro mediante una cifra; la intervalar añade lími-
+tes calculados con un procedimiento y un nivel de confianza. Finanzas puede utilizar un
+gasto medio estimado de $210 como escenario central de presupuesto, mientras que un
+intervalo permite analizar la incertidumbre de esa media antes de comprometer recursos.
+Recursos humanos puede estimar puntualmente la proporción de empleados que requieren
+capacitación y usar su intervalo para dimensionar un rango de demanda, sin confundir esa
+proporción con la necesidad de cada persona (Holmes et al., 2023).
+2.4. Confianza, margen de error y ventas
+Un intervalo de confianza estima un parámetro desconocido. Un procedimiento del 95 %
+generaría intervalos que contienen el parámetro en aproximadamente el 95 % de las repe-
+ticiones del muestreo, si se cumplen sus supuestos. El intervalo ya calculado contiene o
+no contiene la media fija: no se le atribuye a esta una probabilidad frecuentista del 95 %.
+El margen de error es la distancia del centro a cada extremo en un intervalo simétrico; a
+igual muestra y método, mayor confianza exige mayor amplitud. Más datos independientes
+suelen estrecharlo; mayor dispersión lo ensancha (NIST y SEMATECH, 2003).
+Una media semanal de ventas estimada entre $18,000 y $22,000 con confianza del 95 %
+describe el promedio poblacional bajo el modelo y periodo estudiados. No asegura que el
+95 % de las semanas venderá dentro del intervalo: predecir la siguiente semana requiere
+otro procedimiento y considerar estacionalidad. Sin muestra ni variabilidad documentadas,
+no procede reconstruir el cálculo. Se concluye que la gerencia debe valorar conjuntamente
+población, estimador e incertidumbre antes de contrastar ventas con costos y comprometer
+recursos (NIST y SEMATECH, 2003).
+3
+
+3. Conclusiones
+La estimación transforma registros parciales en decisiones justificables cuando distingue
+tres preguntas: qué población interesa, qué regla aprovecha los datos y cuánta incertidum-
+bre permanece. Insesgamiento, eficiencia y consistencia responden a problemas diferentes.
+Una regla puede acertar en promedio sin mejorar al acumular información; otra puede ofre-
+cer poca variabilidad y conservar un sesgo de selección. Por ello, ninguna propiedad aislada
+basta para respaldar una decisión administrativa (Bradley et al., 2021; Holmes et al., 2023).
+En gestión financiera, el valor puntual facilita construir un presupuesto base, mientras
+que el intervalo ayuda a discutir la sensibilidad de comprometer gastos frente a ingresos
+medios inciertos. Si el umbral de viabilidad cae dentro del intervalo de ventas, la evidencia
+no permite afirmar con claridad que la media lo supera. Conviene evaluar escenarios, costos
+de equivocarse y necesidad de información adicional; el nivel de confianza no reemplaza esa
+valoración económica (NIST y SEMATECH, 2003).
+En mercadotecnia, la prioridad debe ser definir clientes, periodo y canales antes de am-
+pliar una encuesta. En recursos humanos, se deben incluir turnos y modalidades de contra-
+tación relevantes, proteger la información personal y reconocer posibles patrones de no res-
+puesta. El antecedente de encuestas masivas que sobreestimaron la vacunación demuestra
+que reunir más observaciones puede producir una seguridad aparente si la participación se
+relaciona con la característica estudiada (Bradley et al., 2021).
+Considero que una gerencia responsable debe exigir una estimación central acompañada
+de su población objetivo, supuestos y medida de incertidumbre. La razón es práctica: una
+cifra sin contexto oculta los riesgos que se trasladan a compras, contratación o inversión. La
+consecuencia profesional es establecer decisiones revisables, con umbrales y seguimiento,
+en lugar de tratar el resultado como una garantía. Una estimación es útil cuando mejora la
+decisión y deja claro qué evidencia podría hacerla cambiar.
+4
+
+Referencias
+Bradley, V. C., Kuriwaki, S., Isakov, M., Sejdinovic, D., Meng, X.-L., & Flaxman, S. (2021).
+Unrepresentative big surveys significantly overestimated US vaccine uptake. Nature,
+600(7890), 695–700. https://doi.org/10.1038/s41586-021-04198-4
+Holmes, A., Illowsky, B., & Dean, S. (2023). Introductory business statistics (2.a ed.). OpenS-
+tax. https://openstax.org/details/books/introductory-business-statistics-2e
+National Institute of Standards and Technology, & SEMATECH. (2003). NIST/SEMATECH
+e-Handbook of statistical methods. https://doi.org/10.18434/M32189
+Wackerly, D. D., Mendenhall, W., & Scheaffer, R. L. (2010). Estadística matemática con
+aplicaciones (7.a ed.). Cengage Learning Editores.
+5

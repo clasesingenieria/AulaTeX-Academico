@@ -1,0 +1,106 @@
+{
+  "subject_slug": "estadistica-aplicada-para-la-administracion",
+  "engine": "Amazon Nova Pro",
+  "kept": [
+    "parámetro poblacional",
+    "estadístico muestral",
+    "equiprobabilidad en muestreo aleatorio simple",
+    "afijación proporcional en estratos",
+    "periodicidad en muestreo sistemático",
+    "heterogeneidad interna en conglomerados",
+    "inclusión desconocida en muestreo no probabilístico",
+    "cálculo de tamaño muestral con varianza conocida",
+    "varianza máxima en proporciones",
+    "diferencia entre error aleatorio y sesgo sistemático",
+    "sistemático",
+    "muestreo sistemático",
+    "periodicidad muestreo",
+    "cuestionario muestreo",
+    "muestreo representatividad",
+    "periodicidad muestreo sistemático",
+    "estadístico",
+    "distribución"
+  ],
+  "conceptos_clave_nova_pro": [
+    {
+      "concepto": "parámetro poblacional",
+      "definicion_rigurosa": "Un parámetro poblacional es una medida que describe un aspecto de la población completa. Estos parámetros, como la media poblacional o la varianza, son generalmente desconocidos y deben ser estimados a partir de datos muestrales. La notación común para un parámetro poblacional es θ, donde θ representa la letra griega theta.",
+      "formulacion_matematica_latex": "\\theta",
+      "aplicacion_administrativa": "En administración, los parámetros poblacionales ayudan a entender características clave de un mercado o una población de clientes, lo cual es fundamental para la planificación estratégica y la toma de decisiones.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "estadístico muestral",
+      "definicion_rigurosa": "Un estadístico muestral es una medida calculada a partir de los datos de una muestra que se utiliza para estimar un parámetro poblacional. Por ejemplo, la media muestral se utiliza para estimar la media poblacional. En notación, se representa como \\( \\hat{\\theta} \\), donde \\( \\hat{\\theta} \\) se lee 'theta sombrero'.",
+      "formulacion_matematica_latex": "\\hat{\\theta}",
+      "aplicacion_administrativa": "Los estadísticos muestrales son utilizados en la administración para realizar estimaciones y previsiones sobre la población completa, lo cual es crucial para la gestión de recursos y la planificación.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "equiprobabilidad en muestreo aleatorio simple",
+      "definicion_rigurosa": "En el muestreo aleatorio simple, cada individuo de la población tiene la misma probabilidad de ser seleccionado en la muestra. Este método asegura que la muestra sea representativa de la población, minimizando los sesgos de selección.",
+      "formulacion_matematica_latex": "P(seleccionar a cualquier individuo) = \\frac{1}{N}",
+      "aplicacion_administrativa": "Este concepto es fundamental para garantizar la representatividad de la muestra en estudios de mercado, encuestas de satisfacción del cliente y otros análisis estadísticos en la administración.",
+      "fuente_principal": "Levin y Rubin, 2012",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "afijación proporcional en estratos",
+      "definicion_rigurosa": "La afijación proporcional en estratos es un método de muestreo estratificado donde el tamaño de la muestra en cada estrato es proporcional al tamaño del estrato en la población. Esto asegura que cada subgrupo de la población esté adecuadamente representado en la muestra.",
+      "formulacion_matematica_latex": "n_h = \\frac{N_h}{N} \\times n",
+      "aplicacion_administrativa": "En la gestión administrativa, este método es útil para encuestas donde la población se divide en subgrupos, como regiones geográficas o segmentos de mercado, asegurando que cada segmento tenga representación adecuada en la muestra.",
+      "fuente_principal": "Wackerly et al., 2010",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "periodicidad en muestreo sistemático",
+      "definicion_rigurosa": "En el muestreo sistemático, los individuos son seleccionados de la población a intervalos regulares. La periodicidad se refiere al intervalo fijo entre las selecciones. Este método es eficiente pero puede introducir sesgos si hay un patrón en la población que coincide con la periodicidad del muestreo.",
+      "formulacion_matematica_latex": "k = \\frac{N}{n}",
+      "aplicacion_administrativa": "Este método es utilizado en auditorías y control de calidad donde es necesario revisar elementos a intervalos regulares, pero debe ser aplicado con precaución para evitar sesgos.",
+      "fuente_principal": "Levin y Rubin, 2012",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "heterogeneidad interna en conglomerados",
+      "definicion_rigurosa": "En el muestreo por conglomerados, la población se divide en grupos o conglomerados, y luego se seleccionan algunos de estos conglomerados para formar la muestra. La heterogeneidad interna se refiere a la variabilidad dentro de cada conglomerado.",
+      "formulacion_matematica_latex": "V(\\bar{Y}) = \\frac{S^2}{n} + \\frac{M^2}{m}",
+      "aplicacion_administrativa": "Este método es útil en estudios donde la población está naturalmente agrupada, como en escuelas o regiones geográficas, pero requiere considerar la variabilidad interna de los conglomerados para obtener estimaciones precisas.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 2"
+    },
+    {
+      "concepto": "inclusión desconocida en muestreo no probabilístico",
+      "definicion_rigurosa": "En el muestreo no probabilístico, la probabilidad de inclusión de cada individuo en la muestra no es conocida. Métodos como el muestreo por conveniencia o subjetivo caen en esta categoría, y los resultados pueden no ser generalizables a la población completa.",
+      "formulacion_matematica_latex": "P(inclusión) = desconocida",
+      "aplicacion_administrativa": "Este tipo de muestreo puede ser útil en estudios exploratorios o cuando es difícil obtener una muestra probabilística, pero los resultados deben ser interpretados con precaución.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 3"
+    },
+    {
+      "concepto": "cálculo de tamaño muestral con varianza conocida",
+      "definicion_rigurosa": "El cálculo del tamaño de la muestra cuando la varianza de la población es conocida se basa en la fórmula del intervalo de confianza para la media. El tamaño de la muestra necesario para lograr un cierto nivel de precisión depende de la varianza poblacional y del nivel de confianza deseado.",
+      "formulacion_matematica_latex": "n = \\left( \\frac{Z_{\\alpha/2} \\sigma}{E} \\right)^2",
+      "aplicacion_administrativa": "En la administración, este cálculo es crucial para diseñar encuestas y estudios que requieran un nivel específico de precisión, asegurando que los resultados sean confiables y útiles para la toma de decisiones.",
+      "fuente_principal": "Spiegel y Stephens, 2012",
+      "localizador": "bloque 2"
+    },
+    {
+      "concepto": "varianza máxima en proporciones",
+      "definicion_rigurosa": "La varianza máxima de una proporción binomial ocurre cuando la proporción es 0.5. Esto se debe a que la fórmula de la varianza de una variable aleatoria binomial es V(Y) = np(1-p), y esta expresión alcanza su máximo cuando p = 0.5.",
+      "formulacion_matematica_latex": "V(Y) = np(1-p)",
+      "aplicacion_administrativa": "En estudios de mercado donde se estiman proporciones, como la proporción de clientes satisfechos, entender la varianza máxima ayuda a diseñar muestras adecuadas y a interpretar los resultados con precisión.",
+      "fuente_principal": "Wackerly et al., 2010",
+      "localizador": "bloque 3"
+    },
+    {
+      "concepto": "diferencia entre error aleatorio y sesgo sistemático",
+      "definicion_rigurosa": "El error aleatorio es la variabilidad natural en los datos debido a factores aleatorios, mientras que el sesgo sistemático es una desviación consistente de la estimación verdadera debido a factores sistemáticos. El error aleatorio puede ser reducido con muestras más grandes, mientras que el sesgo sistemático requiere ajustes en el diseño del estudio.",
+      "formulacion_matematica_latex": "Error aleatorio: E(\\hat{\\theta}) = \\theta \\\\ Sesgo sistemático: E(\\hat{\\theta}) \\neq \\theta",
+      "aplicacion_administrativa": "En la administración, entender la diferencia entre estos dos tipos de error es crucial para diseñar estudios y encuestas que proporcionen resultados confiables y para interpretar correctamente los datos obtenidos.",
+      "fuente_principal": "Wackerly et al., 2010",
+      "localizador": "bloque 1"
+    }
+  ]
+}

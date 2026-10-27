@@ -1,0 +1,917 @@
+Fuente bibliográfica: Estadística matemática con aplicaciones - Wackerly, Mendenhall y Scheaffer. 7.ª edición.pdf
+Actividad: 7 (3.1 Investigación 5% Tarea)
+Palabras clave: estimación puntual, intervalo de confianza, distribución t, ji-cuadrada, varianza poblacional, proporción poblacional, insesgamiento
+
+[Bloque seleccionado #385 | relevancia=14]
+Pagina 384
+360  Capítulo 7  Distribuciones muestrales y el teorema del límite central
+ DEFINICIÓN 7.2 
+Sea Z una variable aleatoria normal estándar y sea W una variable con distribución x2 
+con n grados de libertad. Entonces, si W y Z son independientes,
+T =
+Z
+√W/n
+ 
+ 
+se dice que tiene una distribución t con n grados de libertad.
+Si Y1, Y2, . . . , Yn constituye una muestra aleatoria de una población normal con media m 
+y varianza s2, el Teorema 7.1 puede aplicarse para demostrar que Z =√n (Y −m)/s tiene 
+una distribución normal estándar. El Teorema 7.3 nos dice que W = (n − 1)S2/s2 tiene una 
+distribución x2 con n = n − 1 grados de libertad y que Z y W son independientes (puesto que 
+Y y S2 son independientes). Por tanto, según la Defi nición 7.2,
+T =
+Z
+√W/n
+=
+√n(Y −m)/s
+(n −1)S2/s2 /( n −1)
+=√n
+Y −m
+S
+tiene una distribución t con (n − 1) grados de libertad.
+La ecuación para la función de densidad t no se dará aquí, pero se puede hallar en el 
+Ejercicio 7.98 donde se dan sugerencias acerca de su deducción. Al igual que la función de 
+densidad normal estándar, la función de densidad t es simétrica alrededor de cero. Además, 
+para n > 1, E(T) = 0; y para n > 2, V(T) = n/(n − 2). Estos resultados se deducen directa-
+mente de los obtenidos en los Ejercicios 4.111 y 4.112 (véase Ejercicio 7.30). De esta manera, 
+vemos que, si n > 1, una variable aleatoria con distribución t tiene el mismo valor esperado 
+que una variable aleatoria normal estándar. No obstante, una variable aleatoria normal están-
+dar siempre tiene una varianza 1 mientras que, si n > 2, la varianza de una variable aleatoria 
+con una distribución t siempre es mayor que 1.
+La fi gura 7.3 muestra la gráfi ca de una función de densidad normal estándar y una función 
+de densidad t. Observe que ambas funciones de densidad son simétricas alrededor del origen 
+pero que la densidad t tiene más masa de probabilidad en sus extremos.
+Los valores de ta tales que P(T > ta) = a se dan en la Tabla 5, Apéndice 3. Por ejemplo, 
+si una variable aleatoria tiene una distribución t con 21 grados de libertad, t.100 se encuentra 
+viendo el renglón marcado 21 gl (grados de libertad) y la columna con encabezado t.100. Con 
+el uso de la Tabla 5, vemos que t.100 = 1.323 y que para 21 grados de libertad, P(T > 1.323) 
+= .100. Se deduce que 1.323 es el cuantil .90 (el 90o. percentil) de la distribución t con 21 
+grados de libertad y en general que ta = f1–a, el cuantil (1 – a) [el percentil 100(1 – a)–ésimo] 
+de una variable aleatoria de distribución t.
+F I G U R A 7.3
+Comparación 
+de las funciones de 
+densidad normal 
+e
+
+[Bloque seleccionado #386 | relevancia=6]
+Pagina 385
+La Tabla 5, Apéndice 3, contiene ta = f1–a para cinco valores de a (.005, .010, .025, .050 y 
+.100) y 30 distribuciones t diferentes (aquellas con grados de libertad 1, 2, …, 29 e q). De ma-
+nera considerable más información acerca de estas distribuciones y las asociadas con grados 
+de libertad no incluidos en la tabla, es proporcionada por software  estadístico comercialmente 
+disponible. Si Y tiene una distribución t con n grados de libertad, el comando pt(y0,n) de 
+R (y S-Plus) da P(Y ≤ y0) mientras que qt(p,n) da el p-ésimo cuantil, el valor de fp tal 
+que P(Y ≤ fp) = p. Las probabilidades y cuantiles asociados con variables aleatorias con 
+distribución t también se pueden obtener fácilmente utilizando la aplicación breve Student’s 
+Probabilities and Quantiles (en www.thomsonedu.com/statistics/wackerly).
+ 
+EJEMPLO 7.6 
+La resistencia a la tensión para un tipo de alambre está distribuida normalmente con media 
+desconocida m y varianza desconocida s2. Seis trozos de alambre se seleccionan aleatoria-
+mente de un rollo largo; Y1, la resistencia a la tensión para el trozo i, se mide para i = 1, 2, . . . 
+, 6. La media poblacional m y la varianza s2 pueden ser estimadas por Y y S2, respectivamente. 
+Como s2
+Y = s2/n, se deduce que s2
+Y puede ser estimada por S2/n. Encuentre la probabilidad 
+aproximada de que Y esté dentro de 2S/√n de la verdadera media poblacional m.
+ 
+Solución 
+Deseamos hallar
+P −2S
+√n ≤(Y −m) ≤2S
+√n
+= P
+−2 ≤√n
+Y −m
+S
+≤2
+= P(−2 ≤T ≤2),
+donde T tiene una distribución t con, en este caso, n − 1 = 5 grados de libertad. Al observar 
+la Tabla 5, Apéndice 3, vemos que el área de la cola superior a la derecha de 2.015 es .05. En 
+consecuencia,
+P(–2.015 ≤ T ≤ 2.015) = .90,
+y la probabilidad de que Y esté a no más de 2 desviaciones estándar estimadas de m es lige-
+ramente menor que .90. En el Ejercicio 7.24 el valor exacto para P(–2 ≤ T ≤ 2) se hallará 
+usando la aplicación Student’s Probabilities and Quantiles disponible en www.thomsonedu.
+com/statistics/wackerly.
+Observe que si s2 se conociera, la probabilidad de que Y esté a no más de 2sY de m estaría 
+dada por
+P −2
+s
+√n
+≤(Y −m) ≤2
+s
+√n
+= P
+−2 ≤√n
+Y −m
+s
+≤2
+= P(−2 ≤Z ≤2) = .9544.
+Suponga que queremos comparar las varianzas de dos poblaciones normales con base en 
+información contenida en muestras aleatorias independientes provenientes de las dos pobla-
+ciones. Tomemos muestras de tamaño n1 y n2 de las dos poblaciones con varianzas s2
+1 y s2
+2, 
+7.2  Distribuciones muestrales relacionadas con la distribución normal  361
+Q
+
+[Bloque seleccionado #393 | relevancia=6]
+Pagina 392
+368  Capítulo 7  Distribuciones muestrales y el teorema del límite central
+ 
+ 
+b  De acuerdo con el resultado obtenido en el Ejercicio 4.112(a), si Y tiene una distribución x2 con 
+n grados de libertad, entonces
+E (Y a) =
+([n/2] + a)
+(n/2)
+2a,  si n > –2a.
+ 
+ 
+ 
+ Use este resultado, el resultado del inciso a y la estructura de T para demostrar lo siguiente. 
+[Sugerencia: recuerde la independencia de Z y Y.]
+ 
+ 
+ 
+ i E(T ) = 0, si
+>1.
+n
+ 
+ 
+ 
+ii 
+( )
+V (T ) = n/(n −2), si
+> 2.
+n
+ 
+7.31 
+a  Use la Tabla 7, Apéndice 3, para hallar F.01 para variables aleatorias con distribución F, todas con 
+4 grados de libertad en el numerador, pero con grados de libertad en el denominador de 10, 15, 30, 
+60, 120 e q.
+ 
+ 
+b  Consulte el inciso a. ¿Qué observa acerca de los valores de F.01 conforme aumenta el número de 
+grados de libertad del denominador?
+ 
+ 
+c ¿Cuál es χ 2
+.01 para una variable aleatoria con distribución x2 y 4 grados de libertad?
+ 
+ 
+d  Divida el valor de χ 2
+.01 (4 grados de libertad) del inciso c entre el valor de F.01 (4 grados de libertad 
+en el numerador; grados de libertad = q en el denominador). Explique por qué el valor que obtuvo 
+es adecuado para la razón. [Sugerencia: considere la defi nición de una variable aleatoria con distri-
+bución F dada en la Defi nición 7.3.]
+ 
+7.32 
+Ejercicio Applet
+ 
+ 
+a Encuentre t.05 para una variable aleatoria con distribución t y 5 grados de libertad.
+ 
+ 
+b Consulte el inciso a. ¿Cuál es P(T 2 > t2
+.05)?
+ 
+ 
+c  Encuentre F.10 para una variable aleatoria con distribución F con 1 grado de libertad en el numerador 
+y 5 grados de libertad en el denominador.
+ 
+ 
+d Compare el valor de F.10 hallado en el inciso c con el valor de t2
+.05 de los incisos a y b.
+ 
+ 
+e  En el Ejercicio 7.33 usted demostrará que si T tiene una distribución t con n grados de libertad, 
+entonces U = T 2 tiene una distribución F con 1 grado de libertad en el numerador y n grados del li-
+bertad del denominador. ¿Cómo explica esto la relación entre los valores de F.10 (1 grado de libertad 
+1 en el numerador, 5 grados de libertad en el denominador) y t2
+.05 (5 grados de libertad) que observó 
+en el inciso d?
+ 
+7.33 
+Use las estructuras de T y F dadas en las Defi niciones 7.2 y 7.3, respectivamente, para demostrar que si 
+T tiene una distribución t con n grados de libertad, entonces U = T 2 tiene una distribución F con 1 grado 
+de libertad en el numerador y n grados de libertad en el denominador.
+ 
+7.34 
+Suponga que W1 y W2 son variables aleatorias independientes y con distribución x2 con n1 y n2 grados 
+de libertad, respectivamente. De acu
+
+[Bloque seleccionado #417 | relevancia=6]
+Pagina 416
+392  Capítulo 8  Estimación
+ 
+8.2  Sesgo y error cuadrático medio 
+de estimadores puntuales
+La estimación puntual es similar, en muchos aspectos, a disparar a un blanco con un revól-
+ver. El estimador, que genera estimaciones, es análogo al revólver; una estimación particular 
+es comparable a un tiro; y el parámetro de interés corresponde al centro del blanco o diana. 
+Extraer una sola muestra de una población y usarla para calcular una estimación del valor del 
+parámetro equivale a disparar un solo tiro al centro del blanco.
+Suponga que un hombre dispara un solo tiro y acierta en el centro del blanco. ¿Concluimos 
+que es un excelente tirador? ¿Se atrevería a sostener el blanco cuando se haga un segundo 
+tiro? Obviamente, no podríamos afi rmar que el hombre es un experto tirador si nos basamos 
+en tan pequeña cantidad de evidencia. Por otra parte, si 100 tiros en sucesión aciertan en el 
+blanco, podríamos tener confi anza sufi ciente en el tirador y considerar sostener el blanco para 
+el siguiente tiro si la compensación es adecuada. La cuestión es que no podemos evaluar la 
+bondad de un procedimiento de estimación puntual con base en el valor de una sola estima-
+ción; más bien, debemos observar los resultados cuando el procedimiento de estimación se 
+usa en innumerables veces. Como las estimaciones son números, evaluamos la bondad del 
+estimador puntual al construir una distribución de frecuencia de los valores de las estimacio-
+nes obtenidas en muestreo repetido y observar cómo se agrupa esta distribución alrededor del 
+parámetro objetivo.
+Suponga que deseamos especifi car una estimación puntual para un parámetro poblacional 
+al que llamaremos u. El estimador de u estará indicado por el símbolo ˆu, que se lee como 
+“u sombrero”. El “sombrero” indica que estamos estimando el parámetro que está inme-
+diatamente bajo él. Con el ejemplo del disparo de revólver en mente, podemos decir que es 
+altamente deseable que la distribución de estimaciones ⎯o bien, en forma más apropiada, la 
+distribución muestral de estimaciones⎯ se agrupe alrededor del parámetro objetivo como se 
+muestra en la Figura 8.1. En otras palabras, quisiéramos que la media o valor esperado de la 
+distribución de estimaciones fuera igual al parámetro estimado; esto es, E( )ˆu
+= u. Se dice 
+que los estimadores puntuales que satisfacen esta propiedad son insesgados. La distribución 
+muestral para un estimador puntual sesgado positivamente, para el que E( )ˆu
+> u, se muestra 
+en la Figura 8.2.
+F I G U R A 8.1
+Distribución de esti-
+maciones
+
+ˆ
+F I G U R A 8.2
+Distribución muestral 
+
+[Bloque seleccionado #455 | relevancia=6]
+Pagina 454
+430  Capítulo 8  Estimación
+ 
+ 
+Resumen de intervalos de confi anza de muestra pequeña para medias de distribu-
+ciones normales con varianza(s) desconocida(s)
+Cuando el tamaño (o tamaños) de la muestra se hace grande, el número de grados de liber-
+tad para la distribución t aumenta y la distribución t puede ser calculada en forma muy precisa 
+por la distribución normal estándar. En consecuencia, los intervalos de confi anza de una mues-
+tra pequeña de esta sección son casi indistinguibles respecto de los intervalos de confi anza de 
+muestra grande de la Sección 8.6 para n grande (o n1 y n2 grandes). Los intervalos son casi 
+equivalentes cuando los grados de libertad exceden de 30.
+Los intervalos de confi anza para una sola media y la diferencia en dos medias se generaron 
+con las suposiciones de que las poblaciones de interés están distribuidas normalmente. Hay 
+sufi ciente evidencia práctica de que estos intervalos mantienen su coefi ciente de confi anza no-
+minal mientras las poblaciones muestreadas tengan distribuciones con forma casi de campana. 
+Si n1 ≈ n2, los intervalos de m1 − m2 también mantienen sus coefi cientes de confi anza nomina-
+les mientras las varianzas poblacionales sean aproximadamente iguales. La independencia de 
+las muestras es la suposición más crítica al usar los intervalos de confi anza desarrollados en 
+esta sección para comparar dos medias poblacionales.
+Ejercicios
+ 
+8.80 
+Aun cuando hay muchos tratamientos para la bulimia nervosa, algunas personas no se benefi cian de 
+ellos. En un estudio para determinar qué factores predicen quién se benefi ciará con el tratamiento, 
+Wendy Baell y E. H. Wertheim12 encontraron que la autoestima era uno de los pronosticadores im-
+portantes. La media y la desviación estándar de los valores postratamiento de autoestima para n = 21 
+personas fueron y = 26.6 y s = 7.4, respectivamente. Encuentre un intervalo de confi anza de 95% para 
+los verdaderos valores de postratamiento de autoestima.
+ 
+8.81 
+Las longitudes de caparazones de diez langostas examinados en un estudio de la infestación de la lan-
+gosta Thenus orientalis por dos tipos de lapas, Octolasmis tridens y O. lowei se dan en la siguiente tabla. 
+n = grados de libertad)
+m
+Y ± ta/2
+S
+√n
+,
+n = n −1.
+m1 −m2
+(Y 1 −Y 2) ± ta/2Sp
+1
+n1
++ 1
+n2
+s1
+s2
+2
+2
+,
+n =
+=
+n1 + n2 −2 y
+S2
+p = (n1 −1)S2
+1 + (n2 −1)S2
+2
+n1 + n2 −2
+(requiere que las muestras sean independientes 
+y la suposición de que               ).
+Parámetro
+Intervalo de confianza ( 
+donde
+12. Fuente: Wendy K. Baell y E. H. Wertheim, “Predictors of Outcome in the Treatment of Buli
+
+[Bloque seleccionado #546 | relevancia=10]
+Pagina 545
+desarrollaremos procedimientos formales para probar hipótesis acerca de m y m1 − m2, que 
+son adecuados para muestras pequeñas a partir de poblaciones normales.
+Supongamos que Y1, Y2, . . . , Yn denotan una muestra aleatoria de tamaño n de una distribu-
+ción normal con media m desconocida y varianza s2 desconocida. Si Y y S denotan la media 
+muestral y la desviación muestral estándar, respectivamente, y si H0 : m = m0 es verdadera, 
+entonces
+T = Y −m0
+S/ √n
+tiene una distribución t con n − 1 grados de libertad (vea la Sección 8.8).
+Como la distribución t es simétrica y en forma de campana, la región de rechazo para una 
+prueba de la hipótesis H0 : m = m0 con muestras pequeñas debe estar localizada en las colas 
+de la distribución t y ser determinada de forma semejante a la empleada con el estadístico 
+Z de una muestra grande. Por analogía con la prueba Z desarrollada en la Sección 10.3, la 
+región de rechazo adecuada para la alternativa de cola superior Ha : m > m0 está dada por
+RR = {t > tA},
+donde ta es tal que P{T > ta} = a para una distribución t con n − 1 grados de libertad (véase 
+la Tabla 5, Apéndice 3).
+Un resumen de las pruebas para m con base en la distribución t, conocidas como pruebas 
+t, es el siguiente.
+ 
+ 
+Prueba de muestra pequeña para m
+ 
+ 
+Suposiciones: Y1, Y2, . . . , Yn constituyen una muestra aleatoria de una distribución 
+normal con E (Yi) = m.
+H0 : m = m0.
+Ha :
+m > m0
+(alternativa de cola superior).
+m < m0
+(alternativa de cola inferior).
+m
+m0
+(alternativa de dos colas).
+Estadístico de prueba: T = Y −m0
+S/√n
+.
+Región de rechazo:
+t > ta
+(RR de cola superior).
+t < −ta
+(RR de cola inferior).
+|t| > ta/2
+(RR de dos colas).
+(Vea la Tabla 5, Apéndice 3, para valores de ta, con v = n − 1 grados de libertad.)
+ EJEMPLO 10.12 
+El ejemplo 8.11 proporciona las velocidades iniciales de ocho balas probadas con una nueva 
+pólvora, junto con la media muestral y la desviación muestral estándar, y = 2959 y s = 39.1. 
+El fabricante dice que la nueva pólvora produce un promedio de velocidad de no menos de 
+3000 pies por segundo. ¿Los datos muestrales aportan sufi ciente evidencia para contradecir lo 
+afi rmado por el fabricante en el nivel de signifi cancia de .025?
+10.8  Prueba de hipótesis con muestras pequeñas para m y m1 – m2  521
+
+[Bloque seleccionado #548 | relevancia=8]
+Pagina 547
+Una segunda aplicación de la distribución t es en la construcción de una prueba para mues-
+tra pequeña que compara las medias de dos poblaciones normales que poseen varianzas igua-
+les. Suponga que se seleccionan muestras aleatorias independientes de cada una de dos pobla-
+ciones normales: Y11, Y12, . . . , Y1n1 de la primera y Y21, Y22, . . . , Y2n2 de la segunda, donde la 
+media y la varianza de la i-ésima población son mi y s2, para i = 1, 2. Además, suponga que 
+Y
+S2
+i
+i
+,
+y
+ para i = 1, 2, son las correspondientes medias muestrales y varianzas. Cuando estas 
+suposiciones se cumplen, en la Sección 8.8 se demuestra que si
+S2
+p = (n1 −1)S2
+1 + (n2 −1)S2
+2
+n1 + n2 −2
+es el estimador agrupado para s2, entonces
+T = (Y 1 −Y 2) −(m1 −m2)
+Sp
+1
+n1
++ 1
+n2
+tiene una distribución t de Student con n1 + n2 − 2 grados de libertad. Si deseamos probar la 
+hipótesis nula H0 : m1 − m2 = D0 para algún valor fi jo D0, se deduce que, si H0 es verdadera, 
+entonces
+T = Y 1 −Y 2 −D0
+Sp
+1
+n1
++ 1
+n2
+tiene una distribución t de Student con n1 + n2 − 2 grados de libertad. Observe que este es-
+tadístico de prueba para muestras pequeñas es parecido a su similar para muestras grandes, 
+el estadístico Z de la Sección 10.3. Las pruebas de la hipótesis H0 : m1 − m2 = D0 contra 
+alternativas de cola superior, cola inferior y de dos colas son conducidas en la misma forma 
+que en la prueba de muestras grandes, excepto que empleamos el estadístico t y tablas de la 
+distribución t para llegar a nuestras conclusiones. Veamos a continuación un resumen de los 
+procedimientos de prueba para muestras pequeñas en el caso de m1 − m2,
+ 
+ 
+Pruebas con muestras pequeñas para comparar dos medias poblacionales
+Suposiciones: muestras independientes de distribuciones normales con s2
+1 = s2
+2 .
+H0 : m1 −m2 = D0.
+Ha :
+m1 −m2 > D0
+(alternativa de cola superior).
+m1 −m2 < D0
+(alternativa de cola inferior).
+m1 −m2
+D0
+(alternativa de dos colas).
+Estadístico de prueba: T = Y 1 −Y 2 −D0
+Sp
+1
+n1 + 1
+n2
+, donde Sp =
+(n1 −1)S2
+1 + (n2 −1)S2
+2
+n1 + n2 −2
+.
+Región de rechazo:
+t > ta
+(RR de cola superior).
+t < −ta
+(RR de cola inferior).
+|t| > ta/2
+(RR de dos colas).
+ 
+Aquí, P (T > ta) = a y grados de libertad v = n1 + n2 − 2. (Vea la Tabla 5, 
+Apéndice 3.)
+10.8  Prueba de hipótesis con muestras pequeñas para m y m1 − m2  523
+
+[Bloque seleccionado #921 | relevancia=8]
+Pagina 920
+896
+ÍNDICE
+A
+Ajuste, falta de, 634
+Alcance, 12
+Aleatorización, importancia de, 657
+Álgebra de matrices, 821, 823
+ 
+elementos de identidad en, 825
+Alternativa de cola inferior, 499
+Alternativa de cola superior, 497
+Alternativa de dos colas, 499, 500
+Análisis
+ 
+análisis de varianza (ANOVA), 
+661-712
+ 
+categórico de datos, 713-740
+ 
+diseño aleatorizado de bloque y, 
+688-695
+ 
+diseños en una dirección y, 667-679
+ 
+modelos lineales para, 701-705
+ 
+procedimiento para, 662-667
+ 
+prueba F y, 665, 666, 670
+ 
+repaso de introducción de, 661-662
+ 
+selección del tamaño muestral para, 
+696-698
+ 
+sumas de cuadrados, 679-680
+ 
+suposiciones para, 670
+Análisis de combinación, 38-39
+ 
+reglas de conteo en, 40-51
+ 
+resultados de, 41, 44
+Análisis de tabla de varianza, 671
+ 
+para diseño aleatorizado de bloque, 
+689, 690
+ 
+para diseños de una vía, 671-677
+ANOVA o AOV. Vea Análisis de va-
+rianza
+Aplicación Aproximación Normal por 
+Distribución Binomial, 382, 383, 
+385
+Aplicación Comparación de Funciones 
+Beta de Densidad, 194,197
+Aplicación Comparación de Funciones 
+Gamma de Densidad, 186, 189, 
+190, 366
+Aplicación Comprobación de una Línea 
+Utilizando Mínimos Cuadrados, 
+572, 574, 602
+Aplicación Revisión Binomial, 805-806, 
+811
+Aplicación Probabilidad Beta y 
+Cuantiles, 195, 198, 199, 200, 
+217, 811-812, 815
+Aplicación DiceSample, 348, 349
+Aplicación Eliminación de puntos por 
+regresión, 639
+Aplicación estimación puntual, 455
+Aplicación Intervalo de confianza P, 
+415, 416-417
+Aplicación Muestreo de Distribución de 
+la Media, 351
+Aplicación PointSingle, 454-455
+Aplicación Probabilidad Gamma y 
+Cuantiles, 186, 190, 192, 210, 
+217, 218, 411, 811, 812-813, 815
+Aplicación Probabilidad ji cuadrada 
+y cuantiles, 357, 365, 366, 533, 
+718, 719, 724, 738, 768, 773
+Aplicación Probabilidad Normal, 181, 
+182, 183, 515
+Aplicación Probabilidad t de Student 
+y Cuantiles, 361, 366, 522, 525, 
+526, 586, 601, 605, 619, 647, 700
+Aplicación Probabilidades y Cuantiles 
+de Rango F, 363, 367, 535, 537, 
+540, 627, 630, 666, 667, 671, 673, 
+674, 691, 692, 704
+Aplicación Prueba de Hipótesis (para 
+Proporciones), 501-503, 520
+Aplicación Punto por punto, 455
+Aplicación Regiones de Cola Normal y 
+Cuantiles, 179, 183, 184
+Aplicación Regla de Bayes como Árbol, 
+72-73
+Aplicación Tamaño de Muestra, 352, 
+373-374
+Aplicación VarianceSize, 353
+Aplicaciones
+ 
+Aproximación normal por distribu-
+ción binomial, 382, 383, 385
+ 
+Comparación de funciones de densi-
+dad beta, 194, 197
+ 
+Comparación de funciones de densi-
+dad gamma, 186, 189, 190, 366
+ 
+Comprobación de una línea utilizan-
+do mínimos cuadrados, 572
+
+[Bloque seleccionado #924 | relevancia=8]
+Pagina 923
+Índice  899
+ 
+media, 116-117, 836
+ 
+varianza, 116-117, 836
+Distribución hipergeométrica, 125-130
+ 
+función de generación de momento, 
+836
+ 
+función de probabilidad, 836
+ 
+media, 127, 836
+ 
+varianza, 127, 836
+Distribución log-gamma, 344
+Distribución log-normal, 218, 344
+Distribución marginal, 235-238, 288-
+289, 816
+ 
+continua, 236
+ 
+discreta, 236
+Distribución mezclada, 211-212
+Distribución normal, 10, 178-184
+ 
+asintótica, 372
+ 
+bivariada, 283-285
+ 
+distribución log-normal, 218, 344
+ 
+distribuciones muestrales y, 353-369
+ 
+estimación puntual y, 453-454
+ 
+función de generación de momento, 
+179, 321-322, 837
+ 
+función de probabilidad, 837
+ 
+funciones lineales de, 590
+ 
+media, 353-354, 837
+ 
+multivariada, 283-285
+ 
+prueba de hipótesis y, 520-521
+ 
+tablas para, 847
+ 
+varianza, 353-354, 837
+Distribución normal bivariada, 283-285
+ 
+prueba para independencia en, 598-
+599
+Distribución normal estándar, 318
+Distribución normal multivariada, 283-
+285
+Distribución posterior, 798-805, 816-819
+Distribución previa, 796, 797-805
+Distribución previa beta, 816
+Distribución t, 359-361
+ 
+función de densidad de, 360, 426
+ 
+grados de libertad para, 360, 426, 
+430, 584
+ 
+prueba de hipótesis y, 521
+ 
+tabla de puntos porcentuales de, 848
+Distribución t de Student, 359-361, 523
+ 
+Vea también Distribución t
+Distribución uniforme, 174-178
+ 
+función de generación de momento, 
+837
+ 
+función de probabilidad, 837
+ 
+media, 176, 837
+ 
+mediana, 176
+ 
+varianza, 186, 837
+Distribución Weibull, 202, 219, 468
+Distribuciones, 4
+ 
+beta, 194-201
+ 
+binomiales negativas, 121-125
+ 
+binomiales, 100-114
+ 
+bivariadas, 224-235
+ 
+caracterización única de, 138
+ 
+condicionales, 238-242
+ 
+conjuntas, 224
+ 
+continuas, 158-169
+ 
+de frecuencia relativa, 4, 5
+ 
+de funciones de variables aleatorias, 
+297
+ 
+de Pareto, 310
+ 
+de Weibull, 202, 219
+ 
+discretas, 87-91
+ 
+en forma de campana o normales, 5
+ 
+exponenciales, 837
+ 
+F, 362
+ 
+gamma, 185-194
+ 
+geométricas, 114-121
+ 
+hipergeométricas, 125-130
+ 
+ji cuadrada, 187-188
+ 
+log-gamma, 344
+ 
+log-normal, 218, 344
+ 
+marginales, 235-238, 288-289
+ 
+Maxwell, 220
+ 
+mezcladas, 211-212
+ 
+muestreo de, 346-389
+ 
+multinomiales, 279-283
+ 
+normales bivariadas, 283-285
+ 
+normales estándar, 318
+ 
+normales multivariadas, 283-285
+ 
+normales, 178-184
+ 
+Poisson, 131-138
+ 
+sesgadas, 185
+ 
+t de Student, 359-361
+ 
+teorema de Tchebysheff y, 146-149
+ 
+uniformes, 174-178
+Distribuciones bivariadas, 224-235
+ 
+método de transformación y, 314
+Distribuciones de frecuencia, 9-11
+Distribuciones de Pareto, 310
+Distribuciones de población
+ 
+prueba para idénticas, 742-743
+ 
+que difieren en ubic
+
+[Bloque seleccionado #928 | relevancia=10]
+Pagina 927
+Índice  903
+ 
+método de transformación y, 298, 
+310-318
+ 
+transformaciones multivariables y, 
+325-333
+Funciones discontinuas, 210
+Funciones escalón, 159
+Funciones lineales
+ 
+correlación y, 598-604
+ 
+covarianza y, 271-276
+ 
+de modelos parámetro, 589-593, 616-
+622
+ 
+de variables aleatorias, 270-279
+ 
+estimadores de mínimos cuadrados 
+como, 582
+ 
+inferencias respecto a, 589-593, 616-
+622
+ 
+valores esperados y, 270-279
+ 
+varianza y, 270-279
+Funciones pares, 221
+G
+Generador de número aleatorio, 307
+Grados de libertad
+ 
+para distribución F, 362, 626, 665
+ 
+para distribución ji cuadrada, 322, 
+434, 716
+ 
+para distribución t, 360, 426, 430, 
+584
+ 
+para suma de cuadrados, 688
+ 
+para tablas de contingencia, 723-724
+Gráficas de residuos, 634
+H
+H (estadístico de prueba), 766, 767, 768
+Hacer inferencia, 2, 13-14
+ 
+estadísticos y, 347
+ 
+estimación y, 556
+ 
+estimadores de mínimos cuadrados y, 
+584-589
+ 
+método de Bayes para, 796-819
+ 
+probabilidad y, 21-23
+ 
+prueba de hipótesis y, 556
+ 
+regresión lineal múltiple, 616-622
+ 
+regresión lineal simple, 589-593
+Hipótesis
+ 
+alternativa, 489-490, 496, 519
+ 
+compuesta, 542
+ 
+de investigación, 489-490
+ 
+nula, 489-490, 496, 519
+ 
+simple, 541-542
+Hipótesis alternativa, 489-490
+ 
+de cola inferior, 499
+ 
+de cola superior, 497
+ 
+de dos colas, 499, 500
+ 
+prueba de muestra pequeña, 521
+ 
+selección de, 500, 519
+ 
+simple, 542, 555
+Hipótesis compuesta, 542
+Hipótesis de investigación, 489-490
+ 
+Vea también Hipótesis alternativa
+Hipótesis nula, 489-490
+ 
+compuesta, 545-546
+ 
+intervalo de confianza y, 511
+ 
+poder de la prueba y, 540-541
+ 
+prueba de, 624-633, 669
+ 
+selección de, 500, 519
+ 
+simple, 542, 555
+ 
+valor p y, 513
+Hipótesis simple, 541-542
+Histograma de frecuencia relativa, 4, 
+371
+Histogramas, 4-6
+ 
+área bajo, 5-6
+ 
+construcción de, 4-5
+ 
+distribución binomial, 104
+ 
+distribución exponencial, 371
+ 
+distribución geométrica, 115
+ 
+frecuencia relativa, 4, 371
+ 
+función de distribución bivariada, 
+159
+ 
+funciones de densidad y, 201
+ 
+interpretación probabilística de, 5-6
+ 
+probabilidad, 89, 94, 104, 115
+ 
+tridimensional, 225
+Histogramas de frecuencia. Vea 
+Histogramas
+I
+Independencia, 247-250
+ 
+definición de, 247
+ 
+establecer, 247-248
+ 
+prueba para, 598-599
+Inferencia, 2
+Integración
+ 
+límites de, 250
+ 
+región de, 231, 302
+Intentos, experimentales, 100-101
+Intersección
+ 
+de conjuntos, 24
+ 
+de eventos, 57, 223-224
+ 
+probabilidad de, 57
+Intervalo de confianza de dos lados, 407, 
+426
+Intervalo de confianza de un lado, 407, 
+426
+Intervalo insesgado de confianza, 443
+Intervalos
+ 
+creíbles de Bayes, 808-813
+ 
+de predicción, 595-597,

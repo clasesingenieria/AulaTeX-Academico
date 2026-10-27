@@ -1,0 +1,125 @@
+% Plantilla y base conceptual generada con AulaTeX (Amazon Nova Pro) para Actividad 15 (A15).
+% Contrato AulaTeX: portada oficial ITESCA, Resumen con declaracion IA, Tabla de contenido y tres tiempos.
+\def\estadisticatitulo{Pruebas de aleatoriedad por rachas y contrastes no paramétricos en operaciones y servicios (Ejercicios 7 a 12)}
+\def\estadisticasubtitulo{Actividad 15: Ejercicios individuales}
+\def\estadisticafecha{22 de noviembre de 2026}
+\def\estadisticaunidad{Pruebas de hipótesis no paramétricas}
+\def\portadaoficial{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/portada-oficial.png}
+\def\estadisticaextras{%
+  \usepackage{fontspec}
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+  \usepackage{longtable,booktabs,array}
+  \usetikzlibrary{babel}
+  \geometry{letterpaper,left=2.3cm,right=2.3cm,top=2.2cm,bottom=2.2cm}
+  \hypersetup{pdftitle={Pruebas de aleatoriedad por rachas y contrastes no paramétricos en operaciones y servicios (Ejercicios 7 a 12)},pdfsubject={Actividad 15 - Estadística aplicada para la administración}}
+  \setcitestyle{citesep={;}}
+  \renewcommand{\insertcoverwatermark}{}
+  \renewcommand{\insertcoverinstitutionalfooter}{}
+  \renewcommand{\templatePortrait}{%
+    \thispagestyle{empty}
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{\portadaoficial}};
+      \node[anchor=north west,text=white,text width=10.6cm,align=center,inner sep=0pt] at ([xshift=10.1cm,yshift=-19.4cm]current page.north west) {%
+        \setstretch{1}\fontsize{12}{15}\selectfont
+        {\fontsize{15}{18}\selectfont\bfseries Pruebas de aleatoriedad por rachas y contrastes no paramétricos en operaciones y servicios (Ejercicios 7 a 12)}\par\vspace{0.16cm}
+        Estadística aplicada para la administración\par
+        Actividad 15: Ejercicios individuales\par\vspace{0.12cm}
+        Martín Jonathan de la Cruz Muñoz\par
+        Matrícula: 26130503\par
+        Dra. Yoana Elizeth Tauitmes Delgado\par
+        22 de noviembre de 2026
+      };
+    \end{tikzpicture}\null\clearpage
+  }
+  \renewcommand{\templatePagecfg}{}
+  \renewcommand{\templateFinalcfg}{%
+    \pagestyle{fancy}\fancyhf{}\fancyfoot[C]{\fontsize{10}{12}\selectfont\thepage}
+    \renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}
+    \setcounter{page}{2}\renewcommand{\thepage}{\arabic{page}}
+  }
+  \titleformat{\section}{\normalfont\fontsize{12}{15}\selectfont\bfseries\color{itescaRedDark}}{\thesection.}{0.5em}{}
+  \titleformat{\subsection}{\normalfont\fontsize{12}{15}\selectfont\bfseries}{\thesubsection.}{0.5em}{}
+  \titlespacing*{\section}{0pt}{8pt}{5pt}
+  \titlespacing*{\subsection}{0pt}{7pt}{4pt}
+  \renewcommand{\footnotesize}{\fontsize{12}{14.4}\selectfont}
+  \setlength{\parindent}{1.1cm}
+  \setlength{\parskip}{3pt}
+  \urlstyle{same}
+  \input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/investigacion-articulos/formato-fichas.tex}
+}
+\def\estadisticaresumen{Esta actividad académica se centra en la aplicación práctica de pruebas de hipótesis no paramétricas en el ámbito administrativo. Los estudiantes realizarán ejercicios individuales que involucran la prueba de rachas para evaluar la aleatoriedad en diferentes contextos operacionales y la aplicación de las pruebas de Kruskal-Wallis y Mann-Whitney para comparar múltiples muestras. Estas técnicas son esenciales para la toma de decisiones gerenciales basadas en datos no normalmente distribuidos, proporcionando una herramienta robusta para analizar y comparar datos en entornos complejos y variables.}
+\long\def\estadisticacontenido{%
+\fontsize{12}{14.4}\selectfont\setstretch{1.5}\justifying
+\estadisticapreliminares
+\section{Introducción}
+La actividad académica se centra en la aplicación práctica de pruebas de hipótesis no paramétricas en el ámbito administrativo. Los estudiantes realizarán ejercicios individuales que involucran la prueba de rachas para evaluar la aleatoriedad en diferentes contextos operacionales y la aplicación de las pruebas de Kruskal-Wallis y Mann-Whitney para comparar múltiples muestras. Estas técnicas son esenciales para la toma de decisiones gerenciales basadas en datos no normalmente distribuidos, proporcionando una herramienta robusta para analizar y comparar datos en entornos complejos y variables. La aleatoriedad en los datos es un aspecto crítico en la gestión administrativa, ya que permite identificar patrones no aleatorios que pueden indicar ineficiencias o problemas de calidad. La prueba de rachas es una herramienta fundamental para evaluar la aleatoriedad en secuencias de datos, lo que es crucial en la gestión administrativa para identificar patrones no aleatorios que puedan indicar ineficiencias o problemas de calidad. \citep{anderson2012,lind2012,holmesBusiness2023}.
+
+\section{Fundamentos, modelado analítico y evidencia en pruebas de hipótesis no paramétricas}
+\subsection{Base conceptual autocontenida y formulación matemática}
+La prueba de rachas se basa en el conteo de rachas en una secuencia de datos y compara el número observado de rachas con el número esperado bajo la hipótesis nula de aleatoriedad. Esta comparación permite determinar si los datos siguen un patrón aleatorio o si existen rachas significativas que indiquen un sesgo o patrón específico. La prueba H de Kruskal-Wallis es una extensión de la prueba de Mann-Whitney y se utiliza para comparar más de dos muestras independientes, lo que es útil en la gestión administrativa para evaluar el desempeño de múltiples sucursales o departamentos. La prueba H de Kruskal-Wallis se basa en el análisis de rangos y permite determinar si existen diferencias significativas entre las medianas de las muestras. La prueba U de Mann-Whitney es un método no paramétrico utilizado para comparar dos muestras independientes, lo que es útil en la gestión administrativa para evaluar el desempeño de dos grupos de empleados o dos métodos de producción. La prueba U de Mann-Whitney se basa en la comparación de rangos y permite determinar si las distribuciones de las dos muestras son idénticas. La aproximación normal a la distribución del número de rachas R se utiliza cuando el tamaño de la muestra es suficientemente grande, lo que es útil en la gestión administrativa para evaluar la aleatoriedad en grandes conjuntos de datos. La distribución del número de rachas R se aproxima por una distribución normal con media y varianza específicas, lo que permite calcular la probabilidad de observar un número de rachas dado bajo la hipótesis nula de aleatoriedad. \citep{wackerly2010,canavos1988,spiegel2009}.
+
+\textbf{1. prueba de rachas.} La prueba de rachas es un método estadístico no paramétrico utilizado para evaluar la aleatoriedad en una secuencia de datos. Se basa en el conteo de rachas, que son secuencias consecutivas de un mismo tipo de evento. La prueba verifica si el número observado de rachas difiere significativamente del número esperado bajo la hipótesis nula de aleatoriedad. Expresión formal: La estadística de prueba se calcula como $R = \sum_{i=1}^{n} I(X_i \neq X_{i-1})$, donde $I$ es la función indicadora y $X_i$ son los datos observados. En el ámbito gerencial, en administración, la prueba de rachas puede ser utilizada para detectar patrones no aleatorios en datos operacionales, como la llegada de clientes o defectos en productos, lo que permite a los gerentes identificar ineficiencias o problemas de calidad. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{2. prueba H de Kruskal-Wallis.} La prueba H de Kruskal-Wallis es una extensión de la prueba de Mann-Whitney para comparar más de dos muestras independientes. Se basa en el análisis de rangos y se utiliza para determinar si existen diferencias significativas entre las medianas de las muestras. Expresión formal: La estadística de prueba se calcula como $H = \frac{12}{N(N+1)} \sum_{i=1}^{k} \frac{R_i^2}{n_i} - 3(N+1)$, donde $R_i$ es la suma de rangos de la muestra $i$ y $n_i$ es el tamaño de la muestra $i$. En el ámbito gerencial, en el contexto administrativo, la prueba de Kruskal-Wallis puede ser aplicada para comparar el desempeño de diferentes sucursales o departamentos, ayudando a identificar diferencias significativas en el rendimiento. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{3. prueba U de Mann-Whitney.} La prueba U de Mann-Whitney, también conocida como prueba de Wilcoxon, es un método no paramétrico utilizado para comparar dos muestras independientes. Se basa en la comparación de rangos y se utiliza para determinar si las distribuciones de las dos muestras son idénticas. Expresión formal: La estadística de prueba se calcula como $U = R - \frac{n_1(n_1 + 1)}{2}$, donde $R$ es la suma de rangos de una de las muestras y $n_1$ es el tamaño de esa muestra. En el ámbito gerencial, en administración, la prueba de Mann-Whitney puede ser utilizada para comparar el desempeño de dos grupos de empleados o dos métodos de producción, ayudando a identificar diferencias significativas en el rendimiento. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{4. aproximación normal a la distribución del número de rachas R.} La aproximación normal a la distribución del número de rachas R se utiliza cuando el tamaño de la muestra es suficientemente grande. Esta aproximación permite calcular la probabilidad de observar un número de rachas dado bajo la hipótesis nula de aleatoriedad. Expresión formal: La distribución del número de rachas R se aproxima por una distribución normal con media $\mu_R = \frac{2n_1n_2}{n_1 + n_2} + 1$ y varianza $\sigma_R^2 = \frac{2n_1n_2(2n_1n_2 - n_1 - n_2)}{(n_1 + n_2)^2(n_1 + n_2 - 1)}$. En el ámbito gerencial, en la gestión administrativa, esta aproximación es útil para evaluar la aleatoriedad en grandes conjuntos de datos, como la secuencia de llegadas de clientes o la distribución de defectos en productos. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{5. prueba de rachas para aleatoriedad en quejas de circulación periodística.} Esta prueba se aplica para evaluar si las quejas recibidas por una publicación periódica siguen un patrón aleatorio o si existen rachas significativas que indiquen un sesgo o patrón específico. Expresión formal: Se utiliza la estadística de prueba de rachas $R$ y se compara con la distribución aproximada normal para determinar la significancia. En el ámbito gerencial, en la gestión de medios, esta prueba ayuda a identificar si las quejas de los lectores son aleatorias o si hay un patrón que requiera atención especial. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{6. prueba de rachas para patrones horarios de llegada de clientes en restaurante.} Esta prueba se aplica para evaluar si la llegada de clientes a un restaurante sigue un patrón aleatorio a lo largo del tiempo o si existen rachas significativas que indiquen un patrón específico. Expresión formal: Se utiliza la estadística de prueba de rachas $R$ y se compara con la distribución aproximada normal para determinar la significancia. En el ámbito gerencial, en la gestión de restaurantes, esta prueba ayuda a identificar si la llegada de clientes es aleatoria o si hay patrones horarios que puedan optimizar la planificación de recursos. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{7. prueba de rachas en afluencia bancaria por sexo.} Esta prueba se aplica para evaluar si la afluencia de clientes a una sucursal bancaria, clasificada por sexo, sigue un patrón aleatorio o si existen rachas significativas que indiquen un patrón específico. Expresión formal: Se utiliza la estadística de prueba de rachas $R$ y se compara con la distribución aproximada normal para determinar la significancia. En el ámbito gerencial, en la gestión bancaria, esta prueba ayuda a identificar si la afluencia de clientes por sexo es aleatoria o si hay patrones que puedan influir en la planificación de servicios. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{8. prueba de rachas para detección de defectos agrupados en envíos de vidrio.} Esta prueba se aplica para evaluar si los defectos en los envíos de vidrio siguen un patrón aleatorio o si existen rachas significativas que indiquen un agrupamiento de defectos. Expresión formal: Se utiliza la estadística de prueba de rachas $R$ y se compara con la distribución aproximada normal para determinar la significancia. En el ámbito gerencial, en la gestión de calidad, esta prueba ayuda a identificar si los defectos en los productos son aleatorios o si hay patrones que indiquen problemas en el proceso de producción. \citep{anderson2012,lind2012,wackerly2010}.
+
+
+\subsection{Planteamiento analítico y estructura de resolución de los ejercicios de la unidad}
+Para resolver los ejercicios individuales, los estudiantes deben aplicar las pruebas de hipótesis no paramétricas de acuerdo con la consigna oficial. Los estudiantes deben calcular la estadística de prueba para cada ejercicio y compararla con la distribución aproximada normal para determinar la significancia. Los estudiantes deben interpretar los resultados y discutir las implicaciones gerenciales de sus hallazgos. Los estudiantes deben asegurarse de que sus reportes cumplan con los requisitos de formato y presentación establecidos por el docente.
+
+\subsubsection*{Ejercicio 7. Prueba de rachas para aleatoriedad en quejas dominicales del periódico News and Clarion}
+\textbf{Enunciado oficial del aula:} Registro por sexo de $N = 28$ personas que llamaron para quejarse de la entrega dominical: M, F, F, F, M, M, F, M, F, F, F, F, M, M, M, F, M, F, M, F, F, F, F, M, M, M, M, M. Con $\alpha = 0.05$, pruebe la aleatoriedad de la secuencia y analice la naturaleza operativa del problema.
+
+\textbf{Modelo matemático y ruta de resolución:} Conteo de elementos $n_M = 14$, $n_F = 14$ y número de rachas observadas $R = 12$; evaluación con $\mu_R = \frac{2 n_1 n_2}{n_1 + n_2} + 1 = 15$ y $\sigma_R = \sqrt{\frac{2n_1 n_2(2n_1 n_2 - n_1 - n_2)}{(n_1+n_2)^2(n_1+n_2-1)}}$ \citep{levin2004}.
+
+\subsubsection*{Ejercicio 8. Prueba de rachas sobre horario de llegada de parejas mayores y menores de 30 años en restaurante}
+\textbf{Enunciado oficial del aula:} Secuencia observada entre 3:30 p.m. y 10:00 p.m. ($A \ge 30$ años, $B < 30$ años, $N = 31$ parejas): A, A, A, A, A, A, B, A, A, A, A, A, A, B, B, B, A, B, B, B, B, B, B, A, B, B, B, A, B, B, B. Con $\alpha = 0.05$, determine si la edad de los clientes según la hora de llegada no es aleatoria.
+
+\textbf{Modelo matemático y ruta de resolución:} Con $n_A = 15$, $n_B = 16$ y un número reducido de rachas $R = 8$ frente a $\mu_R = 16.48$, se evalúa el agrupamiento temporal mediante el estadístico $Z = (R - \mu_R)/\sigma_R$ \citep{levin2004}.
+
+\subsubsection*{Ejercicio 9. Prueba de rachas en la llegada de los primeros 40 clientes al First National Bank of Smithville}
+\textbf{Enunciado oficial del aula:} Secuencia de sexo de los primeros $N = 40$ clientes del martes: M, F, M, M, M, M, F, F, M, M, M, F, M, M, M, M, M, F, F, M, F, M, M, M, F, M, M, M, M, M, M, F, M, M, M, M, M, F, F, M. Pruebe la aleatoriedad de la secuencia con $\alpha = 0.05$ e interprete en el contexto bancario.
+
+\textbf{Modelo matemático y ruta de resolución:} Conteo de composición ($n_M = 30, n_F = 10$) y rachas observadas $R = 17$, contrastando contra la distribución asintótica normal bajo independencia de llegadas \citep{levin2004}.
+
+\subsubsection*{Ejercicio 10. Prueba de rachas para detección de daños agrupados en envío de esculturas de vidrio}
+\textbf{Enunciado oficial del aula:} Secuencia de $N = 25$ piezas inspeccionadas entre aceptables (A) y dañadas (D): D, A, A, A, D, D, D, D, D, A, A, D, D, A, A, A, A, D, A, A, D, D, D, D, D. Pruebe la aleatoriedad de los daños ocasionados en el envío con $\alpha = 0.05$.
+
+\textbf{Modelo matemático y ruta de resolución:} Con $n_A = 11$, $n_D = 14$ y $R = 8$ rachas ($\mu_R = 13.32$), se evalúa si los golpes durante el transporte afectan cajas o lotes contiguos generando rachas de defectos \citep{levin2004}.
+
+\subsubsection*{Ejercicio 11. Prueba $H$ de Kruskal-Wallis para el número diario de compradores en las tres boutiques de Melisa}
+\textbf{Enunciado oficial del aula:} Melisa mantiene un registro diario del número de clientes que compran en cada uno de sus tres establecimientos en centros comerciales. Utilizando la prueba de Kruskal-Wallis con $\alpha = 0.05$, determine si las tres tiendas tienen la misma mediana de compradores.
+
+\textbf{Modelo matemático y ruta de resolución:} Contraste no paramétrico de $k = 3$ muestras independientes mediante rangos conjuntos y estadístico $H \sim \chi^2_{2}$ \citep{levin2004,lind2012}.
+
+\subsubsection*{Ejercicio 12. Prueba $U$ de Mann-Whitney sobre calificaciones de ingreso de enfermeras de dos universidades}
+\textbf{Enunciado oficial del aula:} Un hospital aplica un examen (sobre 100 puntos) a enfermeras recién graduadas de dos universidades para determinar si las escuelas difieren en calidad de preparación. Use la prueba $U$ de Mann-Whitney con $\alpha = 0.10$.
+
+\textbf{Modelo matemático y ruta de resolución:} Prueba bilateral de suma de rangos de Wilcoxon / $U$ de Mann-Whitney para evaluar diferencias de localización entre los puntajes de ambas instituciones \citep{levin2004}.
+
+
+\subsection{Articulación administrativa y síntesis del desarrollo}
+La prueba de rachas es fundamental para evaluar la aleatoriedad en secuencias de datos, lo que es crucial en la gestión administrativa para identificar patrones no aleatorios que puedan indicar ineficiencias o problemas de calidad. La prueba de rachas se basa en el conteo de rachas en una secuencia de datos y compara el número observado de rachas con el número esperado bajo la hipótesis nula de aleatoriedad. Esta comparación permite determinar si los datos siguen un patrón aleatorio o si existen rachas significativas que indiquen un sesgo o patrón específico. \citep{holmesBusiness2023,nistHandbook}.
+La prueba H de Kruskal-Wallis es una extensión de la prueba de Mann-Whitney y se utiliza para comparar más de dos muestras independientes, lo que es útil en la gestión administrativa para evaluar el desempeño de múltiples sucursales o departamentos. La prueba H de Kruskal-Wallis se basa en el análisis de rangos y permite determinar si existen diferencias significativas entre las medianas de las muestras. Esta prueba es no paramétrica y no requiere que los datos sigan una distribución normal, lo que la hace robusta y aplicable a una amplia variedad de contextos administrativos. \citep{holmesBusiness2023,nistHandbook}.
+La prueba U de Mann-Whitney es un método no paramétrico utilizado para comparar dos muestras independientes, lo que es útil en la gestión administrativa para evaluar el desempeño de dos grupos de empleados o dos métodos de producción. La prueba U de Mann-Whitney se basa en la comparación de rangos y permite determinar si las distribuciones de las dos muestras son idénticas. Esta prueba es no paramétrica y no requiere que los datos sigan una distribución normal, lo que la hace robusta y aplicable a una amplia variedad de contextos administrativos. \citep{holmesBusiness2023,nistHandbook}.
+La aproximación normal a la distribución del número de rachas R se utiliza cuando el tamaño de la muestra es suficientemente grande, lo que es útil en la gestión administrativa para evaluar la aleatoriedad en grandes conjuntos de datos. La distribución del número de rachas R se aproxima por una distribución normal con media y varianza específicas, lo que permite calcular la probabilidad de observar un número de rachas dado bajo la hipótesis nula de aleatoriedad. Esta aproximación es útil para tomar decisiones basadas en datos en contextos administrativos. \citep{holmesBusiness2023,nistHandbook}.
+
+En síntesis dentro de este segundo tiempo, la articulación entre la teoría estadística de \textit{pruebas de hipótesis no paramétricas} y la práctica administrativa demuestra que ningún indicador cuantitativo opera en el vacío: la validez de la conclusión depende del cumplimiento de los supuestos distribucionales, de la representatividad de los datos recolectados y de la correspondencia entre el modelo matemático y el problema decisional de la organización \citep{anderson2012,nistHandbook,guarin2002}.
+
+\clearpage
+\section{Conclusiones}
+La aplicación de pruebas de hipótesis no paramétricas en la gestión administrativa proporciona una herramienta robusta para analizar y comparar datos en entornos complejos y variables. La aleatoriedad en los datos es un aspecto crítico en la gestión administrativa, ya que permite identificar patrones no aleatorios que pueden indicar ineficiencias o problemas de calidad. La prueba de rachas, la prueba H de Kruskal-Wallis y la prueba U de Mann-Whitney son métodos no paramétricos útiles para evaluar la aleatoriedad y comparar múltiples muestras. La aproximación normal a la distribución del número de rachas R es útil para evaluar la aleatoriedad en grandes conjuntos de datos. Los estudiantes deben aplicar estos métodos de acuerdo con la consigna oficial y discutir las implicaciones gerenciales de sus hallazgos. La significancia estadística es un criterio fundamental para determinar si los resultados de una prueba de hipótesis son confiables y no se deben a la casualidad. En la gestión administrativa, la significancia estadística permite a los gerentes tomar decisiones informadas basadas en datos. \citep{anderson2012,lind2012,wackerly2010,diazRodriguez2022}.
+}
+\input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/reporte-estadistica-aplicada-para-la-administracion-plantilla-actividad.tex}

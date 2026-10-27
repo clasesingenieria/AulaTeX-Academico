@@ -1,0 +1,698 @@
+Fuente bibliográfica: Estadística matemática con aplicaciones - Wackerly, Mendenhall y Scheaffer. 7.ª edición.pdf
+Actividad: 14 (5.2 Ejercicios Equipo 5% Tarea)
+Palabras clave: Wilcoxon, prueba de signos, Mann-Whitney, Kruskal-Wallis, rangos, empates, mediana
+
+[Bloque seleccionado #771 | relevancia=9]
+Pagina 770
+746  Capítulo 15  Estadística no paramétrica
+1/2 contra Ha : p < 1/2 con base en el valor observado de M = 3, la Tabla 1 del Apéndice 3 
+se puede usar para determinar que (como n = 15, p = 1/2)
+valor p = P(M ≤ 3) = .018.
+Para la prueba de dos colas (Ha : p ≠ 1/2), valor p = 2(.018) = .036.
+ 
+EJEMPLO 15.2 
+Encuentre el valor p asociado con la prueba de signo efectuada en el Ejemplo 15.1.
+ 
+Solución 
+La prueba del Ejemplo 15.1 es una prueba de dos colas de H0 : p = 1/2 contra Ha : p ≠ 1/2. 
+El valor calculado de M es m = 2, de modo que el valor p es 2P(M ≤ 2). De acuerdo con la 
+hipótesis nula, M tiene una distribución binomial con n = 10, p = .5 y la Tabla 1, Apéndice 
+3, da como resultado
+valor p= 2P(M ≤2) = 2(.055) = .11.
+Entonces, .11 es el valor más pequeño de a para el cual la hipótesis nula se puede rechazar. 
+Observe que el método del valor p da como resultado la misma decisión a la que se llegó en el 
+Ejemplo 15.1 donde se utilizó una prueba formal de nivel a = .11. No obstante, el método del 
+valor p eliminó la necesidad de intentar varias regiones de rechazo hasta encontrar una con un 
+valor satisfactorio para a. 
+Q
+Un problema que puede surgir en relación con una prueba de signos es que las observacio-
+nes asociadas con uno o más pares pueden ser iguales y por tanto puede resultar en empates. 
+Cuando se presente esta situación, borre los pares empatados y reduzca n, el número total de 
+pares.
+Usted también hallará situaciones donde n, el número de pares, es grande. Entonces, los 
+valores de a asociados con la prueba de signos pueden calcularse si se usa la aproximación 
+normal a la distribución binomial de probabilidad que estudiamos en la Sección 7.5. Es posi-
+ble verifi car (al comparar probabilidades exactas con sus aproximaciones) que estas aproxi-
+maciones serán bastante adecuadas para n de valor muy pequeño, 10 o 15. Este resultado se 
+debe a la simetría de la distribución binomial de probabilidad para p = .5. Para n ≥ 25, la 
+prueba Z del Capítulo 10 será sufi ciente, donde
+Z = M −np
+√npq
+= M −n/2
+(1/2)√n .
+Este estadístico se usaría para probar la hipótesis nula p = .5 contra la alternativa p ≠ .5 
+para una prueba de dos colas o contra la alternativa p > .5 (o p < .5) para una prueba de una 
+cola. Las pruebas usarían las conocidas regiones de rechazo del Capítulo 10.
+Los datos del Ejemplo 15.1 son el resultado de un experimento de observaciones pareadas. 
+Suponga que las diferencias de éstas se distribuyen normalmente con una varianza común s2. 
+¿La prueba de signos detectará un desplazamiento en la localización de las dos po
+
+[Bloque seleccionado #772 | relevancia=18]
+Pagina 771
+Ejercicios  747
+que acabamos de expresar: las diferencias en observaciones pareadas están distribuidas nor-
+malmente con una varianza común s2
+D. La prueba de signos podría ser más efi ciente cuando 
+estas suposiciones no se satisfacen.
+La prueba de signos en realidad prueba la hipótesis nula de que la mediana de las variables 
+Di es cero contra la alternativa de que es diferente de cero. [Si la mediana de las variables Di 
+es cero, implica que P(Di < 0) = P(Di > 0).] Si las variables Xi y Yi tienen la misma distribu-
+ción, la mediana de las variables Di será cero, como ya dijimos antes. No obstante, para mode-
+los que no sean el modelo de desplazamiento hay otras situaciones en las que la mediana de las 
+variables Di es cero. En estos casos la hipótesis nula para la prueba de signos es ligeramente 
+más general que el enunciado de que Xi y Yi tienen la misma distribución.
+Resumiendo, la prueba de signos es un procedimiento no paramétrico que se aplica con 
+facilidad para comparar dos poblaciones. No se hacen suposiciones respecto a las distribu-
+ciones poblacionales que sirven de base. El valor del estadístico de prueba se puede obtener 
+rápidamente por conteo visual y la región de rechazo (o valor p) se puede hallar sin problema 
+si se usa una tabla de probabilidades binomiales. Además, no es necesario conocer los valores 
+exactos de pares de respuestas, sólo si Xi > Yi para cada par (Xi, Yi). El Ejercicio 15.5 muestra 
+un ejemplo del uso de la prueba de signos para datos de este tipo.
+Ejercicios
+ 
+15.1 
+¿Qué niveles de signifi cancia entre a = .01 y a = .15 hay para una prueba de signos de dos colas con 
+25 observaciones pareadas? (Haga uso de valores tabulados en la Tabla 1, Apéndice 3, n = 25.) ¿Cuáles 
+son las correspondientes regiones de rechazo?
+ 
+15.2 
+Un estudio publicado en la American Journal of Public Health (Science News) ⎯el primero en seguir 
+niveles de plomo en la sangre de afi cionados a portar armas pero que son respetuosos de las leyes y usan 
+polígonos de tiro bajo techo⎯ demuestra un considerable riesgo de envenenamiento por plomo.1 Las 
+mediciones de exposición al plomo se hicieron en 17 miembros de un grupo de estudiantes a ofi ciales 
+de policía antes, durante y después de un periodo de 3 meses de instrucción sobre manejo de armas de 
+fuego en un polígono de tiro bajo techo propiedad del gobierno. Ninguno de los alumnos tenía niveles 
+elevados de plomo en la sangre antes del curso, pero 15 de los 17 terminaron el curso con niveles de plo-
+mo en la sangre considerados como “elevados” por la Occupational Safety and Health
+
+[Bloque seleccionado #775 | relevancia=11]
+Pagina 774
+750  Capítulo 15  Estadística no paramétrica
+a Use la prueba de signos para determinar si existe sufi ciente evidencia para indicar una diferencia en 
+la respuesta media para los dos estímulos. Use una región de rechazo para la cual a ≤ .05.
+b Pruebe la hipótesis de que no haya diferencia en la respuesta media, usando una prueba t de 
+Student.
+ 
+15.8 
+Consulte el Ejercicio 12.15. Usando la prueba de signos, ¿encuentra sufi ciente evidencia para apoyar la 
+conclusión de que los tiempos de terminación difi eren para las dos poblaciones? Use a = .10.
+ 
+15.9 
+El conjunto de datos de la siguiente tabla representa el número de accidentes industriales en 12 plantas de 
+manufactura, durante periodos de una semana antes y después de intensa promoción sobre seguridad.
+Planta
+1
+2
+3
+4
+5
+6
+Planta
+7
+8
+9
+10
+11
+12
+3
+4
+6
+3
+4
+5
+Antes
+2
+1
+3
+5
+4
+2
+Después
+5
+3
+2
+4
+4
+5
+Antes
+3
+3
+0
+3
+1
+2
+Después
+a ¿Los datos apoyan la afi rmación de que la campaña fue un éxito? ¿Cuál es el nivel de signifi cancia 
+alcanzado? ¿Qué concluiría usted con a = .01?
+b Analice los problemas asociados con un análisis paramétrico diseñado para contestar la pregunta del 
+inciso a.
+ 
+15.4 Prueba de rangos con signo de Wilcoxon para 
+un experimento de observaciones pareadas
+Al igual que en la Sección 15.3 suponga que tenemos n observaciones pareadas de la forma 
+(Xi, Yi) y que Di = Xi − Yi. De nuevo suponemos que estamos interesados en probar la hipóte-
+sis de que las X y las Y tienen la misma distribución contra la alternativa de que las distribu-
+ciones difi eren en localización. De acuerdo con la hipótesis nula de que no hay diferencia en 
+las distribuciones de las X y las Y, se esperaría (en promedio) que la mitad de las diferencias 
+en los pares sean negativas y la mitad positivas. Esto es, el número esperado de diferencias 
+negativas entre pares es n/2 (donde n es el número de pares). Además, se podría inferir que 
+las diferencias positivas y negativas de igual magnitud absoluta deberían presentarse con la 
+misma probabilidad. Si ordenáramos las diferencias de acuerdo con sus valores absolutos y 
+las clasifi cáramos de menor a mayor, las sumas de los rangos esperados para las diferencias 
+negativas y positivas serían iguales. Las diferencias grandes en las sumas de los rangos asig-
+nados a las diferencias positivas y negativas darían evidencia para indicar un desplazamiento 
+de localización entre las dos distribuciones.
+Para llevar a cabo la prueba de Wilcoxon calculamos las diferencias (Di) para cada uno de 
+los n pares. Las diferencias iguales a cero se eliminan y el número de pares, n, 
+
+[Bloque seleccionado #776 | relevancia=10]
+Pagina 775
+15.4  Prueba de rangos con signo de Wilcoxon para un experimento de observaciones pareadas  751
+pequeña de estas dos cantidades, como estadístico de prueba para probar la hipótesis nula de que 
+los dos histogramas de frecuencia relativa poblacionales son idénticos. Cuanto menor sea el valor 
+de T, mayor será el valor de evidencia a favor del rechazo de la hipótesis nula. En consecuencia, 
+rechazaremos la hipótesis nula si T es menor o igual a algún valor, por ejemplo, T0.
+Para detectar la alternativa unilateral, que afi rma que la distribución de las X se desplaza a 
+la derecha de la de las Y, usamos la suma de rango T – de las diferencias negativas y rechaza-
+mos la hipótesis nula para valores pequeños de T –, por ejemplo, T – ≤ T0. Si deseamos detectar 
+un desplazamiento de la distribución de las Y a la derecha de las X, usamos la suma de rango 
+T + de las diferencias positivas como estadístico de prueba y rechazamos valores pequeños 
+de T +, por ejemplo, T + ≤ T0.
+La probabilidad de que T sea menor o igual a algún valor T0 se ha calculado para una com-
+binación de tamaños muestrales y valores de T0. Estas probabilidades, dadas en la Tabla 9, 
+Apéndice 3, se pueden usar para hallar la región de rechazo para la prueba basada en T.
+Por ejemplo, supongamos que usted tiene n = 7 pares y desea realizar una prueba de dos 
+colas de la hipótesis nula de que las dos distribuciones de frecuencia relativa poblacionales 
+son idénticas. Entonces, con a = .05, rechazaría la hipótesis nula para todos los valores de T 
+menores o iguales a 2. La región de rechazo para la prueba Wilcoxon de suma de rango para 
+un experimento pareado es siempre de esta forma: rechazar la hipótesis nula si T ≤ T0 donde 
+T0 es el valor crítico para T. Los límites para el nivel de signifi cancia alcanzado (valor p) se 
+determinan como sigue. Para una prueba de dos colas, si T = 3 se observa cuando n = 7, la 
+Tabla 9, Apéndice 3, indica que H0 sería rechazada si a = .1, pero no si a = .05. Entonces, 
+.05 < valor p < .1. Para una alternativa unilateral de que las X están desplazadas a la derecha 
+de las Y con n = 7 y a = .05, H0 es rechazada si T = T – ≤ 4. En este caso, si T = T – = 1,
+entonces .01 < valor p < .025. La prueba basada en T, llamada prueba de de rangos con signo 
+Wilcoxon, se resume como sigue.
+Prueba de rangos con signo de Wilcoxon para un experimento 
+de observaciones pareadas
+ H0 :  las distribuciones poblacionales para las X y las Y son idénticas.
+ Ha :  (1) las dos distribuciones poblacionales difi eren en localización (dos colas), o 
+bien (2) la distribución de
+
+[Bloque seleccionado #779 | relevancia=10]
+Pagina 778
+754  Capítulo 15  Estadística no paramétrica
+ 
+15.13 
+Consulte el Ejercicio 15.4. ¿Qué respuestas se obtienen si la prueba de rangos con signo de Wilcoxon se 
+usa en el análisis de los datos? Compare estas respuestas con las obtenidas en el Ejercicio 15.4.
+ 
+15.14 
+Consulte el Ejercicio 15.6(a). Conteste la pregunta usando la prueba de rangos con signo de Wilcoxon.
+ 
+15.15 
+A ocho personas se les pidió ejecutaran un sencillo trabajo de ensamblar un rompecabezas en condicio-
+nes normales y en condiciones de estrés. Durante la condición de estrés, a las personas se les indicó que 
+se les aplicaría una ligera descarga eléctrica 3 minutos después de empezar el experimento y cada 30 
+segundos de ahí en adelante hasta terminar el trabajo. Las lecturas de presión sanguínea se tomaron en 
+ambas condiciones. Los datos de la siguiente tabla representan la lectura más alta durante el experimen-
+to.
+ 
+ 
+ 
+¿Los datos presentan sufi ciente evidencia para indicar lecturas de presión sanguínea más alta durante 
+los condiciones de estrés? Analice los datos usando la prueba de rangos con signo de Wilcoxon para un 
+experimento de observaciones pareadas. Proporcione el valor p apropiado.
+ 
+15.16 
+Se emplearon dos métodos, A y B, para controlar el tránsito en cada uno de n = 12 cruceros durante una 
+semana. Los números de accidentes que ocurrieron durante este tiempo se registraron en la siguiente 
+tabla. El orden de uso (cuál método se empleó para la primera semana) se eligió aleatoriamente para 
+cada crucero.
+Sujeto
+1
+126
+130
+2
+117
+118
+3
+115
+125
+4
+118
+120
+5
+118
+121
+6
+128
+125
+7
+125
+130
+8
+120
+120
+Normal
+Estrés
+Método
+Método
+Crucero
+Crucero
+1
+5
+4
+7
+2
+3
+2
+6
+4
+8
+4
+1
+3
+8
+9
+9
+7
+9
+4
+3
+2
+10
+5
+2
+5
+6
+3
+11
+6
+5
+6
+1
+0
+12
+1
+1
+A
+B
+A
+B
+Método
+Método
+a Analice estos datos usando la prueba de signos.
+b Analice estos datos usando la prueba de rangos con signo de Wilcoxon para un experimento de ob-
+servaciones pareadas.
+ 
+15.17 
+Investigadores en odontología han desarrollado un nuevo material para prevenir la caries, un sella-
+dor plástico que se aplica a las superfi cies de masticación de los dientes. Para determinar si el sellador 
+es efi caz, se aplicó a la mitad de los dientes de cada uno de 12 niños en edad escolar. Después de 
+2 años se hizo un recuento del número de caries en los dientes con sellador y en los dientes no tra-
+tados. Los resultados se muestran en la siguiente tabla. ¿Hay sufi ciente evidencia para indicar que 
+los dientes con sellador son menos propensos a la caries que los dientes no tratados? Pruebe usando 
+a = 0.05.
+
+[Bloque seleccionado #780 | relevancia=18]
+Pagina 779
+15.5  Uso de rangos para comparar dos distribuciones poblacionales: muestras aleatorias independientes  755
+ 
+15.18 
+Consulte el Ejercicio 12.16. Con a = .01, use la prueba de rangos con signo de Wilcoxon para ver si 
+hubo una pérdida importante en la profundidad del humus entre el principio y el fi n del estudio.
+ 
+15.19 
+Suponga que Y1, Y2, . . . , Yn es una muestra aleatoria de una función de distribución continua F(y). Se 
+desea probar una hipótesis respecto a la mediana j de F(y). Construya una prueba de H0 : j = j0 contra 
+Ha : j ≠ j0, donde j0 es una constante especifi cada.
+a Use la prueba de signos.
+b Use la prueba de rangos con signo de Wilcoxon.
+ 
+15.20 
+El vocero de una organización que apoya reducciones en impuesto a la propiedad, de cierta sección de 
+una ciudad, expresó que el ingreso medio anual de los jefes de familia en esa sección era de $15 000. 
+Una muestra aleatoria de diez jefes de familia de esa sección reveló los siguientes ingresos anuales:
+14 800
+16 900
+18 000
+19 100
+13 200
+18 500
+20 000
+19 200
+15 100
+16 500
+ 
+ 
+Con a = .10, pruebe la hipótesis de que el ingreso medio para la población de esa sección es $15 000 
+contra la alternativa de que sea mayor que $15 000.
+a Use la prueba de signos.
+b Use la prueba de rangos con signo de Wilcoxon.
+ 
+15.5 Uso de rangos para comparar 
+dos distribuciones poblacionales: 
+muestras aleatorias independientes
+Una prueba estadística para comparar dos poblaciones basada en muestras aleatorias inde-
+pendientes, la prueba de suma de rangos, fue propuesta por Frank Wilcoxon en 1945. De 
+nuevo suponemos que estamos interesados en probar si las dos poblaciones tienen la misma 
+distribución contra el desplazamiento (o localización) alternativo (véase la Sección 15.2). 
+Supongamos que usted debe seleccionar muestras aleatorias independientes de n1 y n2 obser-
+vaciones de las poblaciones I y II, respectivamente. La idea de Wilcoxon era combinar las n1 
++ n2 = n observaciones y clasifi carlas, en orden de magnitud, de 1 (la más pequeña) a n (la 
+más grande). Los empates se tratan como en la Sección 15.4. Esto es, si dos o más observacio-
+nes están empatadas para el mismo rango, el promedio de los rangos que se hubiera asignado 
+a estas observaciones se asigna a cada miembro del grupo empatado. Si las observaciones se 
+seleccionaron de poblaciones idénticas, las sumas de rango para las muestras deben ser más o 
+Niño
+Niño
+1
+3
+3
+7
+1
+5
+2
+1
+3
+8
+2
+0
+3
+0
+2
+9
+1
+6
+4
+4
+5
+10
+0
+0
+5
+1
+0
+11
+0
+3
+6
+0
+1
+12
+4
+3
+No tratado
+Con sellador
+No tratado
+Con sellador
+
+[Bloque seleccionado #782 | relevancia=11]
+Pagina 781
+15.5  Uso de rangos para comparar dos distribuciones poblacionales: muestras aleatorias independientes  757
+La suma de rangos mínima incluye los rangos 1, 2, 3, 4 o W = 10. Del mismo modo, la 
+máxima incluye los rangos 5, 6, 7, 8, con W = 26. Por tanto, incluimos estos dos valores de 
+W en la región de rechazo. ¿Cuál es el valor correspondiente de a?
+Hallar el valor de a es un problema de probabilidad que se puede resolver usando los 
+métodos del Capítulo 2. Si las poblaciones son idénticas, toda permutación de los 8 rangos 
+representa un punto muestral y es igualmente probable. Entonces, a es la suma de las proba-
+bilidades de los mismos puntos (arreglos) que implican W = 10 o W = 26. El número total de 
+permutaciones de los ocho rangos es 8! El número de arreglos diferentes de los rangos 1, 2, 
+3, 4 en la muestra I con los 5, 6, 7, 8 de la muestra II es 4! × 4!. De igual manera, el número 
+de arreglos que ponen el valor máximo de W en la muestra I (rangos 5, 6, 7, 8) es 4! × 4!. 
+Entonces, la probabilidad de que W = 10 o W = 26 es
+p(10) + p(26) = (2)(4!)(4!)
+8!
+= 2
+8
+4
+= 1
+35 = .029 .
+Si este valor de a es demasiado pequeño, la región de rechazo se puede agrandar para in-
+cluir las siguientes sumas de rangos más pequeña y más grande, W = 11 y W = 25. La suma 
+de rango W = 11 incluye los rangos 1, 2, 3, 5, y
+p(11) = 4! 4!
+8!
+= 1
+70 .
+Del mismo modo,
+p(25) = 1
+70 .
+Entonces,
+a = p(10) + p(11) + p(25) + p(26) = 2
+35 = .057 .
+La expansión de la región de rechazo para incluir 12 y 24 aumenta considerablemente el valor 
+de a. El conjunto de puntos muestrales que da un rango de 12 incluye todos los puntos mues-
+trales asociados con clasifi caciones de (1, 2, 3, 6) y (1, 2, 4, 5). Así,
+p(12) = (2)(4!)(4!)
+8!
+= 1
+35 ,
+y
+a = p(10) + p(11) + p(12) + p(24) + p(25) + p(26)
+= 1
+70 + 1
+70 + 1
+35 + 1
+35 + 1
+70 + 1
+70 = 4
+35 = .114.
+Este valor de a podría ser considerado demasiado grande para fi nes prácticos. Por tanto, esta-
+mos más satisfechos con la región de rechazo W = 10, 11, 25 y 26.
+La suma de rangos para la muestra, W = 12, no cae en esta región de rechazo preferida, 
+de modo que no tenemos evidencia sufi ciente para rechazar la hipótesis de que las distribu-
+ciones poblacionales de la cantidad de bacterias para los dos cultivos sean idénticas. 
+Q
+
+[Bloque seleccionado #791 | relevancia=8]
+Pagina 790
+766  Capítulo 15  Estadística no paramétrica
+de Kruskal–Wallis no requiere suposiciones acerca de la forma real de las distribuciones de 
+probabilidad.
+Como en la Sección 13.3 suponemos que muestras aleatorias independientes han sido to-
+madas de k poblaciones que difi eren sólo en localización, aunque no es necesario suponer que 
+estas poblaciones poseen distribuciones normales. Para una generalización completa, permiti-
+mos que los tamaños muestrales sean desiguales y con ni, para i = 1, 2, . . . , k, representamos 
+el tamaño de la muestra tomada de la i-ésima población. Igual que en el procedimiento de la 
+Sección 15.5, combinamos todas las n1 + n2 + ⋅⋅⋅ + nk = n observaciones y las clasifi camos 
+desde 1 (la más pequeña) hasta n (la más grande). Los empates se tratan como en las secciones 
+previas. Esto es, si dos o más observaciones están empatadas para el mismo rango, entonces 
+el promedio de los rangos que se hubieran asignado a estas observaciones se asigna a cada 
+miembro del grupo empatado. Con Ri denotamos la suma de los rangos de las observaciones 
+de la población i y con Ri = Ri/ni denotamos el promedio correspondiente de los rangos. Si 
+R es igual al promedio general de todos los rangos, consideramos el rango análogo SST, que 
+se calcula usando los rangos en lugar de los valores reales de las mediciones:
+V =
+k
+i=1
+ni(Ri −R)2.
+Si la hipótesis nula es verdadera y las poblaciones no difi eren en localización, esperaríamos 
+que los valores Ri fueran aproximadamente iguales y el valor resultante de V fuera relativa-
+mente pequeño. Si la hipótesis alternativa es verdadera, esperaríamos que esto se refl eje en 
+las diferencias entre los valores de Ri que llevan a un valor grande para V. Observe que R = 
+(suma de los primeros n enteros)/n = [n(n + 1)/2]/n = (n + 1)/2 y que
+V =
+k
+i=1
+ni
+Ri −n + 1
+2
+2
+.
+En lugar de concentrarse en V, Kruskal y Wallis (1952) consideraron el estadístico H = 12V/
+[n(n + 1)], que se puede reescribir (véase el Ejercicio 15.35) como
+H =
+12
+n(n + 1)
+k
+i=1
+R2
+i
+ni
+−3(n + 1).
+Como ya antes dijimos, la hipótesis nula de localizaciones iguales es rechazada a favor de la 
+alternativa de que las poblaciones difi eren en localización si el valor de H es grande. Así, 
+la correspondiente prueba de nivel a pide el rechazo de la hipótesis nula a favor de la alterna-
+tiva si H > h(a), donde h(a) es tal que, cuando H0 es verdadera, P[H > h (a)] = a.
+Si las distribuciones subyacentes son continuas y si no hay empates entre las n observa-
+ciones, la distribución nula de H puede hallarse (tediosamente) con el uso de los métodos 
+
+[Bloque seleccionado #796 | relevancia=19]
+Pagina 795
+15.8  La prueba de Friedman para diseños de bloques aleatorizados  771
+ 
+15.36 
+Suponiendo que no haya empates, obtenga la distribución nula exacta del estadístico H de Kruskal–
+Wallis para el caso k = 3, n1 = n2 = n3 = 2. [Debido a que los tamaños muestrales son todos iguales, 
+si los rangos 1 y 2 se asignan al tratamiento 1, los rangos 3 y 4 se asignan al tratamiento 2 y los rangos 
+5 y 6 se asignan al tratamiento 3, el valor de H es exactamente el mismo que si los rangos 3 y 4 se asig-
+naran al tratamiento 1, los rangos 5 y 6 se asignaran al tratamiento 2 y los rangos 1 y 2 se asignaran al 
+tratamiento 3. Esto es, para cualquier conjunto particular de rangos, podemos intercambiar los papeles 
+de las k poblaciones y obtener los mismos valores del estadístico H. Entonces, el número de casos que 
+debemos considerar puede ser reducido por un factor de 1/k!. En consecuencia, H debe ser evaluado 
+sólo para (6!/[2! ⋅ 2! ⋅ 2!])/3! = 15 arreglos distintos de rangos.]
+ 
+15.8 La prueba de Friedman para diseños de 
+bloques aleatorizados 
+En la Sección 12.4 estudiamos los méritos de un diseño de bloques aleatorizado para un 
+experimento que compara el rendimiento de varios tratamientos. Suponemos que b bloques 
+se emplean en el experimento, que está diseñado para comparar las localizaciones de las dis-
+tribuciones de las respuestas correspondientes a cada uno de k tratamientos. El ANOVA, que 
+estudiamos en la Sección 13.9, estuvo basado en las suposiciones de que las observaciones en 
+cada combinación de bloque-tratamiento estuvieron distribuidas normalmente con varianzas 
+iguales. Al igual que en el caso del diseño de un factor, la SST fue la cantidad clave en el 
+análisis.
+La prueba de Friedman, inventada por Milton Friedman (1937), economista ganador del 
+premio Nobel, está diseñada para probar la hipótesis nula de que las distribuciones de pro-
+babilidad de los k tratamientos son idénticas contra la alternativa de que al menos dos de las 
+distribuciones difi eren en localización. La prueba está basada en un estadístico equivalente en 
+rangos a la SST para el diseño de bloques aleatorizado (vea la Sección 13.9) y se calcula en la 
+siguiente forma. Después de obtener los datos de un diseño de bloques aleatorizado, dentro 
+de cada bloque los valores observados de las respuestas a cada uno de los k tratamientos se 
+clasifi can de 1 (el más pequeño del bloque) a k (el más grande del bloque). Si dos o más ob-
+servaciones del mismo bloque están empatadas para el mismo rango, entonces el promedio de 
+los rangos que se hubieran asignado a estas observaciones
+
+[Bloque seleccionado #932 | relevancia=10]
+Pagina 931
+Índice  907
+Probabilidad condicional, 47, 51-57
+ 
+experimentos binomiales y, 102
+ 
+probabilidad incondicional vs., 51-52
+Probabilidad de la muestra, 460-461
+Probabilidad incondicional, 51, 52, 102
+Probabilidades de celda, prueba 
+de hipótesis respecto a, 716-721, 
+735
+Probabilidades de fila, 722, 724-725, 
+729-731
+Procedimiento de muestreo. Vea Diseño 
+experimental
+Proceso de Poisson, 135
+Promedio ponderado, 428
+Propiedad de invarianza, 480
+Propiedad sin memoria, 189
+ 
+de distribución exponencial, 189
+ 
+de distribución geométrica, 119
+Propiedades
+ 
+invarianza, 480
+ 
+sin memoria, 189
+Prueba de aleatoriedad, 777-783
+Prueba de bondad de ajuste, 717-718, 735
+Prueba de cola superior, 512
+Prueba de Friedman, 771-777
+ 
+prueba de signo y, 773
+ 
+resumen de, 772
+Prueba de hipótesis, 488-562
+ 
+comentario sobre la teoría de, 518-
+520
+ 
+distribución ji cuadrada y, 715-716
+ 
+elementos de pruebas estadísticas y, 
+489-495
+ 
+errores en, 491, 493-494, 507-510
+ 
+hipótesis nula y, 489-490, 624-633
+ 
+informe de resultados de una prueba, 
+513-518
+ 
+intervalos de confianza relacionados 
+con, 511-513
+ 
+lema de Neyman-Pearson y, 542-546
+ 
+media y, 520-530
+ 
+muestras grandes empleadas en, 496-
+507
+ 
+muestras pequeñas empleadas en, 
+520-530
+ 
+niveles de significación alcanzados 
+en, 513-518
+ 
+poder de, 540-549
+ 
+probabilidades de error tipo II en, 
+507-510
+ 
+pruebas de razón de probabilidad 
+para, 549-556
+ 
+regresión lineal múltiple y, 618
+ 
+regresión lineal simple y, 590
+ 
+repaso de introducción de, 488-489
+ 
+varianzas y, 530-540
+Prueba de hipótesis. Vea Prueba de hi-
+pótesis
+Prueba de hipótesis de muestra pequeña, 
+520-530
+ 
+para comparar dos medias poblacio-
+nales, 523
+ 
+para una media poblacional, 521
+Prueba de homogeneidad, 731
+Prueba de ji cuadrada, 714-716
+ 
+análisis categórico de datos y, 734-
+735, 736
+ 
+bondad de ajuste y, 717-718, 735
+ 
+estadístico de prueba para, 715
+ 
+para varianza poblacional, 532-533
+Prueba de Kruskal-Wallis, 765-771
+ 
+estadístico de k-ésimo orden, 336
+ 
+k-ésimo momento de variable aleato-
+ria, 138, 202, 472
+ 
+k-ésimo momento factorial, 144
+ 
+prueba de suma de rango y, 768
+ 
+resumen de procedimiento, 767
+Prueba de no aleatoriedad, 780-781
+Prueba de rango con signo. Vea Prueba 
+de Wilcoxon de rango con signo
+Prueba de signo para un experimento de 
+pares acoplados, 744-750
+ 
+comparaciones de muestra grande y, 
+746-747
+ 
+niveles de significación alcanzados 
+para, 745-746
+ 
+prueba de Friedman y, 773
+ 
+prueba t de Student comparada con, 
+746-747
+ 
+utilidad de, 747
+Prueba de subsucesiones, 777-783
+ 
+pruebas U de Mann-Whitney y, 781
+ 
+región de r

@@ -1,0 +1,689 @@
+Fuente bibliográfica: Estadística aplicada a los negocios y la economía - Lind, Marchal y Wathen. 15.ª edición.pdf
+Actividad: 13 (5.1 Investigación 5% Tarea)
+Palabras clave: no paramétricas, libre de distribución, Kolmogorov-Smirnov, Wilcoxon, Mann-Whitney, Kruskal-Wallis, Ji-cuadrada, rangos
+
+[Bloque seleccionado #706 | relevancia=7]
+Pagina 705
+18
+Objetivos de
+aprendizaje
+Al concluir el capítulo, será
+capaz de:
+OA1 Definir una prueba no
+paramétrica y saber cuándo se
+ha aplicado una.
+OA2 Realizar la prueba de los
+signos de muestras
+dependientes con las
+distribuciones binomial y
+normal estándar como
+estadísticos de prueba.
+OA3 Realizar una prueba de
+hipótesis de muestras
+dependientes mediante la
+prueba de los rangos con
+signo de Wilcoxon.
+OA4 Realizar e interpretar la
+prueba de la suma de los
+rangos de Wilcoxon de
+muestras independientes.
+OA5 Realizar e interpretar la
+prueba de Kruskal-Wallis de
+varias muestras
+independientes.
+OA6 Calcular e interpretar el
+coeficiente de correlación de
+los rangos de Spearman.
+OA7 Realizar una prueba de
+hipótesis para determinar si la
+correlación entre los rangos de
+la población es diferente de
+cero.
+Métodos no
+paramétricos:
+análisis de datos ordenados
+Los obreros de Coastal Computer Inc., ensamblan uno o dos montajes
+parciales y los insertan en un chasis. Los ejecutivos de CC piensan
+que los empleados estarían más orgullosos de su trabajo si
+ensamblaran todos los componentes y probaran la computadora
+terminada. Se seleccionó una muestra de 25 empleados para probar la
+idea. A 20 les gustó ensamblar toda la unidad y probarla. A un nivel de
+significancia de .05, ¿es posible concluir que los empleados prefirieron
+ensamblar toda la unidad y probarla? (Vea ejercicio 8, objetivo 2.)
+
+[Bloque seleccionado #721 | relevancia=24]
+Pagina 720
+18.4 Prueba de Wilcoxon de la suma
+de rangos de muestras independientes
+Un procedimiento diseñado para determinar si dos muestras independientes provienen de
+poblaciones equivalentes es la prueba de Wilcoxon de la suma de rangos. Esta prueba es
+una alternativa a la prueba t de dos muestras descrita en la página 383, capítulo 11. Recuerde
+que la prueba t requiere que las dos poblaciones sigan la distribución normal y tengan varian-
+zas poblacionales iguales. La prueba de Wilcoxon de la suma de rangos no requiere estas con-
+diciones.
+Esta prueba se basa en la suma de los rangos. Los datos se clasifican como si las obser-
+vaciones fueran parte de una sola muestra. Si la hipótesis nula es verdadera, los rangos ten-
+drán una distribución casi uniforme entre las dos muestras, y la suma de los rangos de las dos
+muestras será casi igual. Es decir, los rangos bajo, medio y alto deberán dividirse en forma
+equitativa entre las dos muestras. Si la hipótesis alternativa es verdadera, una de las muestras
+tendrá mayor cantidad de rangos bajos y, por lo tanto, una suma de rangos menor. La otra
+muestra tendrá mayor cantidad de rangos altos, por lo que la suma de rangos será mayor. Si
+cada una de las muestras contiene al menos ocho observaciones, se utiliza la distribución nor-
+mal estándar como estadístico de prueba. La fórmula es:
+18.4 Prueba de Wilcoxon de la suma de rangos de muestras independientes
+695
+Prueba basada en la suma de
+rangos.
+OA4 Realizar e interpretar
+la prueba de la suma de los
+rangos de Wilcoxon de
+muestras independientes.
+PRUEBA DE WILCOXON DE LA SUMA DE RANGOS
+(18-4)
+z 
+W  n1(n1  n2  1)
+2
+A
+n1n2(n1  n2  1)
+12
+donde:
+es el número de observaciones de la primera muestra.
+es el número de observaciones de la segunda muestra.
+W es la suma de los rangos de la primera población.
+n2
+n1
+Ejemplo
+Dan Thompson, presidente de CEO Airlines, hace poco observó un aumento del número de
+personas que no llegan a tomar los vuelos que salen de Atlanta. Su interés principal es deter-
+minar si hay más personas que no se presentan a tomar los vuelos que salen de Atlanta en
+comparación con vuelos que salen de Chicago. Una muestra de nueve vuelos de Atlanta y
+ocho de Chicago aparece en la tabla 18-4. Con un nivel de significancia de 0.05, ¿es posible
+concluir que hay más personas que no se presentan a tomar los vuelos que salen de Atlanta?
+Solución
+Si las poblaciones de personas que no se presentan a tomar los vuelos siguen la distribución
+normal de probabilidad y tienen varianzas iguales, es adecuada la prueba t de dos muestras
+que estudió en la sección 11.4 
+
+[Bloque seleccionado #728 | relevancia=8]
+Pagina 727
+En la captura de pantalla anterior, el valor calculado de F es 3.822, y el valor p, .041. La deci-
+sión es rechazar la hipótesis nula y aceptar la hipótesis alternativa. Utilizando la prueba ANOVA
+de una vía, se concluye que los tiempos de espera medios en los tres hospitales del Sistema
+Hospitalario de las Carolinas son distintos.
+Hay conclusiones contradictorias sobre los mismos datos. ¿Por qué resulta así? Si com-
+para los resultados con el empleo de valores p, las respuestas son similares. En el caso de la
+prueba de Kruskal-Wallis el valor p fue 0.057, que sólo es un poco mayor que el nivel de sig-
+nificancia 0.05, pero la regla de decisión fue no rechazar H0. El valor p mediante ANOVA es
+0.041, que no es mucho menor que el valor crítico en la región de rechazo. Por lo tanto, para
+resumir, apenas falló en rechazar H0 con la prueba de Kruskal-Wallis y apenas estuvo en la
+región de rechazo mediante ANOVA. La diferencia entre los valores p es 0.016. Por lo tanto,
+en realidad los resultados están muy cercanos en términos de los valores p.
+702
+CAPÍTULO 18 Métodos no paramétricos: análisis de datos ordenados
+Resultados similares de la
+ANOVA de una vía y la prueba
+de Kruskal-Wallis.
+Autoevaluación 18-6
+El gerente del banco regional Statewide Financial Bank tiene interés en el índice de movimientos de
+dinero de las cuentas de cheques personales en cuatro sucursales. (El índice de movimientos es la
+velocidad a la que el dinero en una cuenta se deposita y se retira; una cuenta extremadamente acti-
+va puede tener un índice de 300; si sólo se emiten uno o dos cheques, el índice puede ser de 30,
+aproximadamente). Los índices de rotación de las muestras seleccionadas de las cuatro sucursales
+bancarias aparecen en la siguiente tabla. Con un nivel de significancia de 0.01 y la prueba de
+Kruskal-Wallis, determine si hay una diferencia entre los índices de rotación de las cuentas de che-
+ques personales de las cuatro sucursales.
+Sucursal
+Sucursal
+Sucursal
+West
+Great
+Sucursal
+Englewood
+Side
+Northern
+Sylvania
+208
+91
+302
+99
+307
+62
+103
+116
+199
+86
+319
+189
+142
+91
+340
+103
+91
+80
+180
+100
+296
+131
+Ejercicios
+19. ¿En qué condiciones debe utilizar la prueba de Kruskal-Wallis en lugar del análisis de la varianza?
+20. ¿En qué condiciones debe utilizar la prueba de Kruskal-Wallis en lugar de la prueba de Wilcoxon
+de la suma de los rangos?
+21. Los siguientes datos de la muestra se obtuvieron de tres poblaciones que no siguen una distribu-
+ción normal.
+
+[Bloque seleccionado #730 | relevancia=11]
+Pagina 729
+18.6 Correlación por orden de rango
+En el capítulo 13 se analizó r, el coeficiente de correlación de una muestra. Recuerde que r
+mide la asociación entre dos variables en escala de intervalo o de razón. Por ejemplo, el coe-
+ficiente de correlación reporta el vínculo entre el salario de ejecutivos y sus años de experien-
+cia, o entre el número de millas que un embarque tiene que recorrer y el número de días que
+tarda en llegar a su destino.
+Charles Spearman, estadístico británico, introdujo una medida para correlacionar datos
+de nivel ordinal. Esta medida permite describir la relación entre conjuntos de datos clasifica-
+dos. Por ejemplo, a dos miembros del personal en la Office of Research de la University of the
+Valley se les pide clasificar 10 propuestas de investigación de la facultad con fines de recolec-
+ción de fondos. Aquí interesa estudiar la relación entre las calificaciones de los dos miembros
+del personal. Es decir, ¿los empleados califican las mismas propuestas como las más valiosas
+y las menos valiosas para los fondos? El coeficiente de correlación por rangos de Spearman,
+denotado rs, proporciona una medida de la asociación.
+El coeficiente de correlación por rangos se calcula mediante la siguiente fórmula.
+704
+CAPÍTULO 18 Métodos no paramétricos: análisis de datos ordenados
+OA6 Calcular e interpretar
+el coeficiente de correlación
+de los rangos de Spearman.
+donde:
+d es la diferencia entre los rangos por cada par.
+n es el número de observaciones por pares.
+Al igual que el coeficiente de correlación, el coeficiente de correlación por rangos adopta
+cualquier valor en el intervalo de 1.00 a 1.00. Un valor de 1.00 indica una correlación nega-
+tiva perfecta, y un valor de 1.00, una correlación positiva perfecta entre los rangos. Una corre-
+lación de rangos de 0 indica que no hay asociación entre los rangos. Correlaciones de rangos
+de 0.84 y 0.80 indican una asociación fuerte, pero la primera indica una relación inversa entre
+los rangos, y la última, una relación directa.
+COEFICIENTE DE CORRELACIÓN
+POR RANGOS DE SPEARMAN
+(18-6)
+rs  1 
+6©d 2
+n(n2  1)
+Ejemplo
+Lorrenger Plastics, Inc., contrata a gerentes en capacitación provenientes de universidades de
+Estados Unidos. A cada aspirante el reclutador le asigna una calificación durante la entrevista
+en el campus. Esta calificación es una expresión del potencial futuro y varía de 0 a 200; la cali-
+ficación más alta indica más potencial. Si el aspirante es contratado por Lorrenger, ingresa a
+un programa de capacitación en la planta. Al terminarlo, recibe otra calificación compuesta,
+con bas
+
+[Bloque seleccionado #732 | relevancia=10]
+Pagina 731
+Prueba de significancia de rs
+En la sección 13.4 del capítulo 13 se probó la significancia de la r de Pearson. En el caso de
+datos clasificados surge la duda de que la correlación entre la población en realidad sea cero.
+Por ejemplo, en la muestra del caso anterior se tomó a 12 graduados. En la solución del ejem-
+plo, el coeficiente de correlación por rangos, 0.785, indica una relación un tanto fuerte entre
+los dos conjuntos de rangos. ¿Es posible que la correlación de 0.785 sea casual, y que la
+correlación entre los rangos en la población de verdad sea 0? Ahora realizará una prueba de
+significancia para despejar esa duda.
+En el caso de una muestra de 10 o más, la significancia de rs se determina al calcular t
+con la siguiente fórmula. La distribución de muestreo de rs sigue la distribución t con n  2
+grados de libertad.
+706
+CAPÍTULO 18 Métodos no paramétricos: análisis de datos ordenados
+Se sigue el mismo procedimiento con las calificaciones obtenidas en la planta. De nuevo,
+Ginny Alvear obtuvo la puntuación más baja, 36, así que su rango en la planta es 1. Hubo tres
+puntuaciones de 45. La media de los tres rangos empatados es 3, calculado mediante (2  3
+ 4)/3  3, así que cada uno de estos reclutas recibió un rango en la planta de 3. En la tabla
+18-9 se ilustra lo anterior, además de los cálculos necesarios para determinar rs.
+El coeficiente de correlación de rangos es 0.785, determinado mediante la fórmula (18-6):
+El valor de 0.785 indica una asociación positiva fuerte entre las calificaciones del recluta-
+dor en el campus y las del personal de capacitación. Los graduados que recibieron calificacio-
+nes altas del reclutador en el campus también fueron los que recibieron calificaciones altas del
+personal de capacitación. Sería razonable concluir que existe una asociación entre ambos gru-
+pos de calificaciones.
+rs  1 
+6©d2
+n(n2  1)  1 
+6(61.50)
+12(122  1)  1  .215  .785
+Calificación
+Rango
+Diferencia
+en
+en
+en
+en
+rangos,
+al cuadrado,
+Graduado
+campus, X
+capacitación, Y
+campus
+capacitación
+d
+d 2
+Spina, Sal
+83
+45
+3.5
+3
+0.5
+0.25
+Gordon, Ray
+106
+45
+7
+3
+4.0
+16.00
+Althoff, Roberta
+92
+45
+5
+3
+2.0
+4.00
+Alvear, Ginny
+48
+36
+1
+1
+0.0
+0.00
+Wallace, Ann
+127
+68
+11
+8
+3.0
+9.00
+Lyons, George
+113
+83
+8
+9
+1.0
+1.00
+Harbin, Joe
+118
+88
+9
+10
+1.0
+1.00
+Davison, Jack
+78
+61
+2
+6
+4.0
+16.00
+Brydon, Tom
+83
+66
+3.5
+7
+3.5
+12.25
+Bobko, Jack
+193
+94
+12
+12
+0.0
+0.00
+Koppel, Marty
+101
+56
+6
+5
+1.0
+1.00
+Nyland, Patricia
+123
+91
+10
+11
+1.0
+1.00
+0
+61.50
+TABLA 18-9 Cálculos necesarios para determinar el coeficiente de correlación de rangos (rs)
+Prueba para ver si la correla-
+ció
+
+[Bloque seleccionado #735 | relevancia=11]
+Pagina 734
+Resumen del capítulo
+I. La prueba de los signos se basa en la diferencia de signos entre dos observaciones relacionadas.
+A. No es necesario hacer suposiciones acerca de la forma de las dos poblaciones.
+B. Se basa en muestras por pares o dependientes.
+C. En el caso de muestras pequeñas, encuentre el número de signos más () o menos () y con-
+sulte la distribución binomial para el valor crítico.
+D. En el caso de una muestra de 10 signos más utilice la distribución normal estándar y la siguien-
+te fórmula.
+(18-2) (18-3)
+II. La prueba de la mediana se utiliza para probar una hipótesis acerca de la mediana de una pobla-
+ción.
+A. Encuentre  y  de una distribución normal.
+B. Se utiliza la distribución z como el estadístico de prueba.
+C. El valor de z se calcula a partir de la siguiente fórmula, donde X es el número de observaciones
+arriba y debajo de la media.
+(18-1)
+III. La prueba de Wilcoxon de los rangos con signo es una prueba no paramétrica donde no se requie-
+re la suposición de normalidad.
+A. Los datos deben estar al menos en una escala ordinal, y las muestras deben ser dependientes.
+B. Los pasos para realizar la prueba son:
+1. Clasifique las diferencias absolutas entre las observaciones relacionadas.
+2. Aplique el signo de las diferencias a los rangos.
+3. Sume los rangos negativos y los positivos.
+4. La menor de las dos sumas es el valor T calculado.
+5. Consulte el apéndice B.7 para el valor crítico y tome una decisión respecto de H0.
+IV. La prueba de Wilcoxon de la suma de rangos se usa para probar si dos muestras independientes
+provienen de poblaciones iguales.
+A. No se requiere de una suposición acerca de la forma de la población.
+B. Los datos deben estar al menos en escala ordinal.
+C. Cada muestra debe contener al menos ocho observaciones.
+D. Para determinar el valor del estadístico de prueba W, las observaciones de las muestras se cla-
+sifican de bajo a alto como si fueran de una sola población.
+E. Se determina la suma de los rangos de cada una de las dos muestras.
+F. W se utiliza para calcular z, donde W es la suma de los rangos de la primera población.
+(18-4)
+G. La distribución normal estándar, del apéndice B.1, es el estadístico de prueba.
+V. El análisis de Kruskal-Wallis de la varianza por rangos se usa para probar si varias poblaciones son
+iguales.
+A. No se requieren suposiciones respecto de la forma de las poblaciones.
+B. Las muestras deben ser independientes y al menos de escala ordinal.
+C. Las observaciones de las muestras se clasifican de menor a mayor como si fueran un solo
+grupo.
+D. El estadístico de prueba sigue la distrib
+
+[Bloque seleccionado #742 | relevancia=15]
+Pagina 741
+Repaso de los capítulos 17 y 18
+En los capítulos 17 y 18 se describieron métodos estadísticos para estudiar datos en escala nominal u
+ordinal de medición. Estos métodos son estadísticos no paramétricos o sin distribución. No requieren
+suposiciones respecto de la forma de la población. Recuerde, por ejemplo, del capítulo 12, que cuan-
+do investigó las medias de varias poblaciones supuso que las poblaciones seguían la distribución de
+probabilidad normal.
+En el capítulo 17 se describió la distribución ji cuadrada, que utilizó para comparar el conjunto
+observado de frecuencias en una muestra aleatoria con el conjunto correspondiente de frecuencias
+esperadas en la población. El nivel de medición es de escala nominal. Recuerde que cuando los datos
+se miden en un nivel nominal, las observaciones sólo se clasifican de acuerdo con alguna identifica-
+ción, nombre o característica. Por ejemplo, los 126 representantes nacionales de ventas de IBM se cla-
+sifican de acuerdo con la oficina de ventas regionales a la cual están asignados: noreste, Atlántico
+medio, sureste, norte, centro, suroeste y oeste lejano.
+En el capítulo 17 también estudió la relación entre dos variables en una tabla de contingencia. Es
+decir, observó dos características de cada individuo u objeto muestreado. Por ejemplo, ¿hay alguna
+relación entre la calidad del producto (aceptable o inaceptable) y el turno en que se fabricó (diurno, ves-
+pertino o nocturno)? La distribución ji cuadrada es el estadístico de prueba.
+En el capítulo 18 se describieron cinco pruebas no paramétricas de hipótesis y el coeficiente de
+correlación por rangos. Cada una de estas pruebas requiere la escala de medición ordinal, es decir, la
+capacidad de clasificar u ordenar las variables de interés.
+La prueba de los signos para muestras dependientes se basa en el signo de la diferencia entre
+observaciones relacionadas. La distribución nominal es el estadístico de prueba. En los casos donde
+la muestra es mayor que 10, la aproximación normal a la distribución de probabilidad binomial sirve
+como el estadístico de prueba.
+El primer paso cuando se utiliza la prueba de la mediana es contar el número de observaciones
+arriba (o debajo) de la mediana propuesta. Luego se empleó la distribución normal estándar para deter-
+minar si este número es razonable o demasiado grande para haber ocurrido por azar.
+La prueba de Wilcoxon de los rangos con signo requiere muestras dependientes. Es una extensión
+de la prueba de los signos pues emplea tanto la dirección como la magnitud de la diferencia entre los
+valores relacionados. Tiene su
+
+[Bloque seleccionado #743 | relevancia=11]
+Pagina 742
+Capítulo 18
+Análisis de la varianza en una dirección de los rangos de
+Kruskal-Wallis
+Prueba que se utiliza cuando no se pueden
+cumplir las suposiciones del análisis de la varianza (ANOVA)
+paramétrico. Su propósito es probar si varias poblaciones son
+iguales. Los datos deben estar al menos en escala ordinal.
+Coeficiente de correlación por rangos de Spearman
+Medida
+de la asociación entre los rangos de dos variables. Puede va-
+riar de 1.00 a 1.00. Un valor de 1.00 indica una asociación
+negativa perfecta entre los rangos, y un valor de 1.00, una aso-
+ciación positiva perfecta entre los rangos. Un valor de 0 indica
+que no hay asociación entre los rangos.
+Prueba de los signos
+Prueba para muestras dependientes,
+que se utiliza para determinar si hay una preferencia por una
+marca entre dos productos o si es mejor el desempeño después
+de un experimento que antes de él. Además, la prueba de los sig-
+nos se utiliza para probar una hipótesis respecto de la mediana.
+Prueba de Wilcoxon de la suma de los rangos
+Prueba no
+paramétrica que requiere muestras independientes. Los datos
+deben estar al menos en nivel ordinal. Es decir, deben ser sus-
+ceptibles de clasificación. La prueba se utiliza cuando no se
+cumplen las suposiciones de la prueba t Student paramétrica. El
+objetivo de la prueba es determinar si dos muestras indepen-
+dientes provienen de la misma población.
+Prueba de Wilcoxon de los rangos con signo
+Prueba no
+paramétrica que requiere al menos datos de nivel ordinal y mues-
+tras dependientes. Su propósito es encontrar una diferencia
+entre dos conjuntos de observaciones apareadas (relacionadas
+por pares). Se usa si no se cumplen las suposiciones que requie-
+re la prueba t por pares.
+Problemas
+717
+Problemas
+1. El propietario de Beach Front Snow Cones, Inc., considera que la mediana del número de conos
+de nieve que vende por día entre el Memorial Day y el Labor Day es 60. La siguiente es una mues-
+tra de 20 días. ¿Es razonable concluir que la mediana en realidad es mayor que 60? Utilice un nivel
+de significancia de 0.05.
+65
+70
+65
+64
+66
+54
+68
+61
+62
+67
+65
+50
+64
+55
+74
+57
+67
+72
+66
+65
+Color
+Frecuencia
+Azul
+17
+Rojo
+8
+Verde
+12
+Amarillo
+13
+Noreste
+Sureste
+Oeste
+3 645
+3 502
+3 547
+3 727
+3 645
+3 636
+3 772
+3 718
+3 659
+3 837
+3 746
+3 673
+3 873
+3 758
+3 728
+3 882
+3 845
+3 736
+3 894
+3 940
+3 788
+4 070
+3 802
+4 081
+2. Un fabricante de impermeables para niños quiere saber si éstos tienen preferencia por un color
+específico. La siguiente información es sobre la preferencia del color de una muestra de 50 niños
+de 6 y 10 años de edad. Para investigar esta cuestión utilice un n
+
+[Bloque seleccionado #759 | relevancia=11]
+Pagina 758
+Puesto que la teoría estadística se basa en la normalidad de muestras grandes, los dia-
+gramas de control deben tener como base un proceso estable, es decir, una muestra muy
+grande tomada durante un periodo extenso. Una regla básica es diseñar el diagrama después
+de seleccionar al menos 25 muestras.
+Diagrama de rangos
+Además de la ubicación central en una muestra, también debe supervisar la cantidad de varia-
+ción de muestra en muestra. Un diagrama de rangos presenta la variación de los rangos de
+las muestras. Si los puntos que representan los rangos se encuentran entre los límites supe-
+rior e inferior, concluya que la operación está bajo control. De acuerdo con la casualidad, casi
+997 de 1 000 veces el rango de las muestras estará dentro de los límites. Si el rango cae arri-
+ba de los límites, concluya que una causa asignable afectó la operación y es necesario ajus-
+tar el proceso. ¿Por qué no interesa el límite de control inferior del rango? Con frecuencia, en
+muestras pequeñas el límite inferior es cero. En realidad, en cualquier muestra de seis o
+menos, el límite de control inferior es 0. Si el rango es cero, entonces por lógica todas las par-
+tes son iguales y no hay problema con la variabilidad de la operación.
+Los límites de control superior e inferior del diagrama de rangos se determinan a partir de
+las siguientes ecuaciones.
+19.5 Objetivo y tipos de diagramas de control de calidad
+733
+Ejemplo
+El tiempo que los clientes de Statistical Software, Inc., esperaron desde que entró su llamada
+hasta que un representante técnico respondió su pregunta o resolvió su problema se encuen-
+tra registrado en la tabla 19-1. Elabore un diagrama de control de rangos. ¿Parece que hay
+algún momento en el que es demasiada la variación en la operación?
+Solución
+El primer paso es encontrar la media de los rangos de la muestra. El rango de las cinco llama-
+das de la muestra de las 7 a.m. es 11 minutos. La llamada de mayor duración seleccionada en
+esa hora fue de 15 minutos, y la más breve, de 4 minutos; la diferencia es 11 minutos. A las 8
+a.m., el rango es de 4 minutos. El total de los 16 rangos es 102 minutos, por lo que el rango
+promedio es de 6.375 minutos, determinado por 
+. Con referencia al apéndice B.8
+o a la tabla parcial de la página 731, D3 y D4 son 0 y 2.115, respectivamente. Los límites de
+control superior e inferior son 0 y 13.483.
+El diagrama del trazo de los 16 rangos de las muestras aparece en la gráfica 19-5. Este diagra-
+ma indica que todos los rangos están dentro de los límites de control. De aquí, se concluye que
+la variación en el tiemp
+
+[Bloque seleccionado #879 | relevancia=10]
+Pagina 878
+Medidas de dispersión, 58, 74-92
+desviación estándar, 79-80
+desviación estándar de datos
+agrupados, 89-92
+desviación estándar de la muestra,
+83-84
+desviación estándar de la población,
+82
+desviación media, 76-79, 82
+media aritmética, 88-89
+rango, 75-76, 82
+regla empírica, 86-87
+teorema de Chebyshev, 85-86
+varianza, 79-80
+varianza de la población, 80-81
+varianza muestral, 83
+Medidas de ubicación, 58-74
+cuartiles, 111-116
+deciles, 111-116
+diagramas de caja, 116-119
+media aritmética, 61-62, 70
+media de una muestra, 60
+media geométrica, 72-73
+media poblacional, 58-59
+media ponderada, 63
+mediana, 64-65, 70
+moda, 65-67, 70
+percentiles, 111, 116
+Método
+de selección hacia adelante, 544
+de eliminación hacia atrás, 544
+de la razón con el promedio móvil,
+621-622
+de los mínimos cuadrados, 616-618
+Métodos no paramétricos
+aproximación normal a la binomial,
+686
+coeficiente de correlación por rangos
+de Spearman, 704-706, 717
+correlación por rangos, 706
+factor de corrección de continuidad,
+686
+prueba de bondad de ajuste, 649-671
+prueba de hipótesis acerca de una
+mediana, 688
+prueba de la suma de los rangos de
+Wilcoxon, 695-698, 717
+prueba de los signos, 681-690, 717
+prueba de los rangos con signo de
+Wilcoxon, 690-695, 717
+prueba de significancia de la r de
+Pearson, 706-708
+prueba del análisis de la varianza por
+rangos de Kruskal-Wallis, 698-
+704, 717
+pruebas no paramétricas o sin
+distribución, 716
+Moda, 65-67, 70, 138
+Muestra(s), 7-8, 138
+apareada, 392
+dependientes e independientes,
+395-399
+desviación estándar de la, 83-84
+desviación estándar de la población,
+82, 317
+tamaño de la, 316-320
+nivel de confianza, 317
+margen de error, 317
+probabilística, 330
+y media poblacional, 317-318
+y proporción de una población,
+319-320
+Muestreo, 266
+aleatorio estratificado, 270-271, 330
+aleatorio simple, 267, 330
+aleatorio sistemático, 270, 330
+de aceptación, 742-746
+error de, 274-275
+por conglomerados, 271-274, 330
+razones para el, 266-267
+Mutuamente excluyente, 138, 259
+N
+Nivel
+de confianza, 317
+de intervalo, 11-12
+de razón de la medición, 12-13
+de riesgo. Véase Nivel de significancia
+de significancia, 337
+nominal, 10
+ordinal, 11
+Niveles de medición de los datos
+de intervalo, 11-12
+de razón, 12-13
+nominal, 10, 716
+ordinal, 11
+Número crítico o de aceptación, 743
+Número(s) índice, 564
+elaboración de, 577
+Índice Compuesto de Precios
+Accionarios de Standard &
+Poor’s, 590
+Índice de la Bolsa de Valores de
+Nueva York, 589
+Índice de Precios al Consumidor, 577,
+592-598, 646
+Índice de Precios al Productor, 589
+índice de precios de Laspeyres, 581
+índice de precios de Paasche, 582
+índice

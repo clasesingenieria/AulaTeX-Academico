@@ -1,0 +1,643 @@
+Fuente bibliográfica: Estadística para administración y economía - Levin y Rubin. 7.ª edición revisada.pdf
+Actividad: 5 (2.2 Ejercicios 5% Tarea)
+Palabras clave: distribución muestral, media muestral, proporción muestral, teorema central del límite, error estándar, corrección por continuidad
+
+[Bloque seleccionado #268 | relevancia=30]
+Pagina 267
+La desviación estándar de la distribución de las medias de las muestras mide el grado hasta el cual
+es de esperar que varíen las medias de las diferentes muestras, debido a este error cometido en el pro-
+ceso de muestreo. Por tanto, la desviación estándar de la distribución de una estadística de mues-
+tra se conoce como error estándar de la estadística.
+El error estándar indica no sólo el tamaño del error al azar que se ha cometido, sino también la pro-
+bable precisión que puede obtenerse al utilizar una estadística de muestra para estimar un parámetro
+de población. Una distribución de medias de muestra que está menos extendida (y que tiene un error
+estándar pequeño) constituye una mejor estimación de la media de la población que una distribución
+de medias de muestra que está ampliamente dispersa y que tiene un error estándar más grande.
+La tabla 6-7 indica el uso adecuado del término error estándar. En el capítulo 7 discutiremos có-
+mo estimar los parámetros de población usando estadísticas de muestra.
+Un uso del error estándar
+Una escuela que capacita pilotos privados para su examen de instrumentos afirma: “Nuestros egre-
+sados obtienen mejores calificaciones en el examen escrito de instrumentos que los de otras escue-
+las.” Para el lector confiado, esto parece perfectamente claro. Si desea tener una mejor calificación
+en su examen escrito de instrumentos, entonces esta escuela es su mejor apuesta.
+De hecho, sin embargo, siempre que usamos pruebas, tenemos que considerar el error estándar.
+Específicamente, necesitamos cierta medición de la precisión del instrumento de prueba, general-
+mente representada por el error estándar. Esto nos diría qué tan grande tendría que ser una diferencia
+en las calificaciones de una escuela para que fuera estadísticamente significativa. Desafortunada-
+mente, el anuncio no ofrecía datos; sólo afirmaba que “nuestros egresados lo hacen mejor”.
+Uso del error 
+estándar
+6.4
+Introducción a las distribuciones de muestreo
+249
+Terminología convencio-
+nal usada para referirse
+a las estadísticas de
+muestra
+Tabla 6-7
+Cuando deseamos referirnos a la
+Usamos el término convencional
+Desviación estándar de la distribución de
+la medias de muestra
+Desviación estándar de la distribución de
+proporciones de muestra
+Desviación estándar de la distribución de
+medianas de muestra
+Desviación estándar de la distribución de
+rangos de muestra
+Error estándar de la media
+Error estándar de la proporción
+Error estándar de la mediana
+Error estándar del rango
+Comprender las distribuciones muestra-
+les permite a los especialistas en estadís-
+tica 
+
+[Bloque seleccionado #273 | relevancia=14]
+Pagina 272
+mente distribuidas con una media de $2,000 y una desviación estándar de $600. Si el banco toma
+una muestra aleatoria de 100 cuentas, ¿cuál es la probabilidad de que la media de muestra caiga en-
+tre $1,900 y $2,050? Ésta es una pregunta con respecto a la distribución de muestreo de la media;
+por tanto, es necesario calcular primero el error estándar de la media. En este caso, utilizaremos la
+ecuación para el error estándar de la media pensada para situaciones en las que la población es infi-
+nita (más tarde introduciremos una ecuación para poblaciones finitas):
+254
+Capítulo 6
+Muestreo y distribuciones de muestreo
+Error estándar de la media para poblaciones infinitas
+Error estándar de la media ⎯⎯→x 
+[6-1]
+
+
+n
+Estandarización de la media de la muestra 
+z 
+[6-2] .
+x  
+
+x
+en la que:
+•   desviación estándar de la población
+• n  tamaño de la muestra
+Aplicando lo anterior a nuestro ejemplo, obtenemos:
+x 
+ 
+$6
+1
+0
+0
+0
+
+ $60 ←Error estándar de la media
+A continuación necesitamos usar la tabla de valores z (tabla 1 del apéndice) y la ecuación 5-6, que
+nos permite, a su vez, utilizar la tabla de la distribución normal estándar de probabilidad. Con esto
+podemos determinar la probabilidad de que la media de la muestra se encuentre entre $1,900 y
+$2,050. 
+z  
+x  
+
+
+
+[5-6]
+La ecuación 5-6 enuncia que para convertir cualquier variable aleatoria normal en una variable
+aleatoria normal estándar, es necesario sustraer la media de la variable que se está estandarizando y
+dividir el resultado entre el error estándar (la desviación estándar de dicha variable). Por tanto, en es-
+te caso particular, la ecuación 5-6 se transforma en:
+$600
+
+100
+Búsqueda del error
+estándar de la 
+media para poblacio-
+nes infinitas
+Ahora estamos listos para calcular los dos valores z de la siguiente manera:
+Para x  $1,900:
+z 
+[6-2]
+
+$1,900
+$
+
+60
+$2,000
+
+  1
+6
+0
+0
+0
+
+x  
+
+ x
+Conversión de la me-
+dia de muestra a un
+valor z
+Error estándar de 
+la media 
+
+
+n
+Media de muestra
+Media de la población
+
+[Bloque seleccionado #280 | relevancia=18]
+Pagina 279
+6.6
+Una consideración operacional en el
+muestreo: la relación entre el tamaño
+de muestra y el error estándar
+Antes, en este capítulo, vimos que el error estándar, x, es una medición de dispersión de las medias
+de muestras alrededor de la media de población. Si la dispersión disminuye (si x, se hace más pe-
+queña), entonces los valores tomados por la media de la muestra tienden a agruparse más cercana-
+mente alrededor de . Por el contrario, si la dispersión se incrementa (si x, se hace más grande), los
+valores tomados por la media de la muestra tienden a agruparse menos cercanamente alrededor de
+. Podemos concebir esta relación así: al disminuir el error estándar, el valor de cualquier me-
+dia de muestra probablemente se acercará al valor de la media de población. Los especialistas
+en estadística describen este fenómeno de otra manera: al disminuir el error estándar, se incrementa
+la precisión con la que se puede usar la media de muestra para estimar la media de población.
+Si nos remitimos a la ecuación 6-1, podemos ver que al aumentar n, x, disminuye. Esto sucede
+porque en la ecuación 6-1 un denominador grande (en la parte derecha) produciría una x, menor (en
+la parte izquierda). Dos ejemplos mostrarán esta relación; ambos suponen la misma desviación es-
+tándar de población  de 100.
+x  
+
+
+n
+
+[6-1]
+Cuando n  10:
+x  
+
+10
+1
+0
+0
+
+ 
+3
+1
+.1
+0
+6
+0
+2
+
+ 31.63 ←Error estándar de la media
+Y cuando n  100:
+x  
+
+10
+1
+0
+00
+
+ 1
+1
+0
+0
+0
+
+ 10 ←Error estándar de la media
+¿Qué hemos mostrado? Al aumentar nuestro tamaño de muestra de 10 a 100 (un incremento de 10
+veces), el error estándar disminuyó de 31.63 a 10, lo que es sólo aproximadamente un tercio de su
+valor inicial. Nuestros ejemplos muestran que, debido al hecho de que x, varía inversamente
+con la raíz cuadrada de n, hay una utilidad decreciente en el muestreo.
+Es cierto que muestrear más elementos disminuye el error estándar, pero este beneficio puede no
+valer el costo. Un estadístico diría: “El aumento de precisión no vale el costo del muestreo adicio-
+nal”. En un sentido estadístico, rara vez vale la pena tomar muestras excesivamente grandes. Los
+administradores debieran evaluar siempre tanto el valor como el costo de la precisión adicional que
+obtendrían de una muestra mayor antes de comprometer recursos para tomarla.
+El multiplicador de población finita 
+Hasta este punto en nuestros análisis de las distribuciones de muestreo hemos utilizado la ecuación
+6-1 para calcular el error estándar de la media:
+x  
+
+
+n
+
+[6-1]
+Esta ecuación está diseñada
+
+[Bloque seleccionado #287 | relevancia=14]
+Pagina 286
+●Ecuaciones introducidas en el capítulo 6
+■
+6-1
+x 
+Utilice esta fórmula para derivar el error estándar de la media cuando la población es infinita, es decir,
+cuando los elementos de la población no pueden ser enumerados en un plazo razonable, o cuando toma-
+mos muestras con reemplazo. Esta ecuación explica que la distribución de muestreo tiene una desviación
+estándar, que también llamamos error estándar, igual a la desviación estándar de la población dividida en-
+tre la raíz cuadrada del tamaño de muestra.
+■
+6-2
+z  
+x 
+x
+
+
+Una versión modificada de la ecuación 5-6, esta fórmula nos permite determinar la distancia de la media
+de la muestra x de la media de población  dividiendo la diferencia entre el error estándar de la media x.
+Una vez que hemos derivado un valor z, podemos usar la tabla de distribución de probabilidad normal
+estándar y calcular la probabilidad de que la media de muestra esté a esa distancia de la media de pobla-
+ción. Debido al teorema del límite central, podemos usar esta fórmula para distribuciones no normales si
+el tamaño de muestra es de al menos 30.
+■
+6-3
+x  
+
+
+n
+ 
+en donde,
+• N  tamaño de la población
+• n  tamaño de la muestra
+Ésta es la fórmula para encontrar el error estándar de la media cuando la población es finita, es decir, de
+tamaño establecido o limitado, y el muestreo se hace sin reemplazo.
+■
+6-4
+Multiplicador de población finita 
+En la ecuación 6-3 el término (N
+ 
+ n
+)/(N
+ 
+ 1
+), que multiplicamos por el error estándar de la ecuación
+6-1, se conoce como multiplicador de población finita. Cuando la población es pequeña en relación con
+el tamaño de la muestra,* el multiplicador de población finita reduce el tamaño del error estándar. Cual-
+quier disminución en el error estándar aumenta la precisión con la que la media de la muestra puede uti-
+lizarse para estimar la media de la población.
+●Ejercicios de repaso (para más ejercicios, consulte el CD que acompaña esta obra)
+■
+6-50
+Crash Davis es el supervisor de línea para la planta de manufactura de patines alineados en Benicia, Ca-
+lifornia. El ajuste preciso es importante para el equipo de patinaje en línea, de manera que Crash prueba
+la producción diaria seleccionando 13 pares de la línea y patinando hasta donde compra su café capuchi-
+no vespertino. Crash señala que selecciona cada par “al azar”. ¿Es ésta, de hecho, una muestra aleatoria
+de la producción del día o es “a su juicio”?
+■
+6-51
+Jim Ford, gerente de publicidad de una cadena de tiendas departamentales al menudeo, es responsable de
+elegir los anuncios comercial
+
+[Bloque seleccionado #295 | relevancia=16]
+Pagina 294
+Criterios para seleccionar un buen estimador
+Algunos estadísticos son mejores estimadores que otros. Afortunadamente, podemos evaluar la ca-
+lidad de un estadístico como estimador mediante el uso de cuatro criterios:
+1. Insesgado. Ésta es una propiedad deseable para un buen estimador. El término insesgado se re-
+fiere al hecho de que una media de la muestra es un estimador no sesgado de una media de la
+población porque la media de la distribución muestral de las medias de las muestras toma-
+das de la misma población es igual a la media de la población misma. Podemos decir que
+un estadístico es un estimador insesgado (o no sesgado) si, en promedio, tiende a tomar valo-
+res que están arriba del parámetro de la población que se está estimando con la misma frecuen-
+cia y la misma extensión con la que tiende a asumir valores abajo del parámetro poblacional
+que se está estimando.
+2. Eficiencia. Otra propiedad deseable de un buen estimador es que sea eficiente. La eficiencia se
+refiere al tamaño del error estándar del estadístico. Si comparamos dos estadísticos de una
+muestra del mismo tamaño y tratamos de decidir cuál de ellas es un estimador más eficiente,
+escogeríamos la estadística que tuviera el menor error estándar o la menor desviación estándar de
+la distribución muestral. Suponga que escogemos una muestra de un tamaño determinado y
+debemos decidir si utilizamos la media de la muestra o la mediana de la muestra para estimar
+la media de la población. Si calculamos el error estándar de la media de la muestra y encontra-
+mos que es 1.05, y luego calculamos el error estándar de la mediana de la muestra y tenemos
+que éste es 1.6, diríamos que la media de la muestra es un estimador más eficiente de la media
+poblacional ya que su error estándar es menor. Tiene sentido pensar que un estimador con un
+error estándar menor (con menos variación) tendrá mayor oportunidad de producir una estima-
+ción más cercana al parámetro poblacional que se está considerando.
+3. Consistencia. Un estadístico es un estimador consistente de un parámetro de población si al
+aumentar el tamaño de la muestra, se tiene casi la certeza de que el valor del estadístico se
+aproxima bastante al valor del parámetro poblacional. Si un estimador es consistente, se vuel-
+ve más confiable al tener tamaños de muestra más grandes. Si usted se pregunta acerca de la
+posibilidad de aumentar el tamaño de la muestra para obtener más información sobre un pará-
+metro poblacional, averigüe primero si su estadístico es un estimador consistente o no. Si no lo
+es, desperdiciará tiempo y dinero al toma
+
+[Bloque seleccionado #313 | relevancia=14]
+Pagina 312
+294
+Capítulo 7
+Estimación
+De forma parecida podemos modificar la fórmula para la desviación estándar de la distribución bino-
+mial, npq, que mide la desviación estándar del número de éxitos. Para cambiar el número de éxi-
+tos a la proporción de éxitos, dividimos npq, entre n y obtenemos pq/n. En términos estadísti-
+cos, la desviación estándar de la proporción de éxitos en una muestra se expresa en símbolos como:
+Búsqueda de la 
+desviación estándar
+de la proporción de
+la muestra
+Error estándar de la proporción
+Error estándar de la proporción
+pˆ 
+[7-4]
+pq
+
+n
+y se conoce como el error estándar de la proporción.
+Podemos ilustrar cómo utilizar estas fórmulas si, para una organización muy grande, hacemos la
+estimación de qué proporción de sus empleados prefieren planificar su propios beneficios de retiro
+en lugar de seguir un plan patrocinado por la compañía. Primero, tomamos una pequeña muestra
+aleatoria de 75 empleados y encontramos que el 0.4 de ellos están interesados en seguir sus propios
+planes de retiro. Nuestros resultados son:
+n  75 ←Tamaño de muestra
+pˆ  0.4 ←Proporción de la muestra a favor
+qˆ  0.6 ←Proporción de la muestra en contra
+A continuación, la administración solicita que utilicemos esta muestra para encontrar un intervalo en
+el que puedan tener 99% de confianza de que contiene a la proporción verdadera de la población.
+Pero, para la población, ¿qué son pˆ y qˆ? Podemos estimar los parámetros de la población median-
+te la sustitución de los estadísticos correspondientes de la muestra, pˆ y qˆ (p gorro y q gorro) en la
+fórmula del error estándar de la proporción.* Al hacer esto obtenemos:
+Estimación de la 
+proporción de 
+una población
+Error estándar estimado de la proporción
+Símbolo que indica que se está estimando 
+Estadístico de la muestra
+el error estándar de la proporción
+ˆpˆ 
+[7-5]
+
+ 0.0
+032
+ 0.057←Error estándar estimado de la proporción
+(0.4)(0.6)
+
+75
+pˆ qˆ
+
+n
+* Note que no utilizamos el multiplicador de población finita, debido a que nuestra población es muy grande en comparación
+con el tamaño de la muestra, por lo tanto es infinita y no conocemos N.
+<  0.05
+n
+N
+Ahora estamos en posibilidades de proporcionar la estimación que la administración necesita,
+usando el mismo procedimiento que seguimos con anterioridad. Un nivel de confianza del 99%
+incluiría 49.5% del área que se encuentra a cualquier lado de la media de la distribución de muestreo.
+El cuerpo de la tabla 1 del apéndice nos dice que 0.495 del área bajo la curva normal está localizada
+entre la media y un punto que se encuentr
+
+[Bloque seleccionado #398 | relevancia=20]
+Pagina 397
+dad que los hombres de adquirir automóviles deportivos. Para llegar a conclusiones en situaciones
+como éstas, usted puede tomar muestras de cada uno de los dos grupos en cuestión (votantes en Nue-
+va York y en California, o mujeres y hombres) y utilizar las proporciones de muestra para probar la
+diferencia entre las dos poblaciones.
+El procedimiento general a seguir es muy parecido a lo que hicimos en la sección 9.2, cuando
+comparamos dos medias utilizando muestras independientes: estandarizamos la diferencia entre las
+dos proporciones de muestra y basamos nuestras pruebas en la distribución normal. La única dife-
+rencia importante se dará en la forma en que encontremos una estimación para el error estándar de
+la diferencia entre las dos proporciones de muestra. Veamos algunos ejemplos.
+Pruebas de dos colas para diferencias entre proporciones
+Considere el caso de una compañía que fabrica productos medicinales y que está probando dos nue-
+vos compuestos destinados a reducir los niveles de presión sanguínea. Los compuestos se adminis-
+tran a dos conjuntos de animales de laboratorio. En el grupo uno, 71 de 100 animales respondieron
+a la droga 1 con niveles menores de presión arterial. En el grupo dos, 58 de 90 animales respondie-
+ron a la droga 2 con menores niveles de presión sanguínea. La compañía desea probar a un nivel de
+significancia de 0.05 si existe una diferencia en la eficacia de las dos medicinas. ¿De qué manera
+debemos proceder con respecto a este problema?
+p1  0.71 ←Proporción muestral de éxitos con la droga 1 
+q1  0.29 ←Proporción muestral de fracasos con la droga 1
+n1  100 ←Tamaño de la muestra para probar la droga 1
+p2  0.644←Proporción muestral de éxitos con la droga 2 
+q2  0.356←Proporción muestral de fracasos con la droga 2
+n2  90
+←Tamaño de la muestra para probar la droga 2
+H0: p1  p2
+←Hipótesis nula: no existe diferencia entre las dos drogas
+H1: p1 
+ p2
+←Hipótesis alternativa: sí existe diferencia entre ellas
+  0.05 ←Nivel de significancia para probar esta hipótesis
+La figura 9-8 ilustra esta prueba de hipótesis. Debido a que la administración de la compañía far-
+macéutica desea saber si existe una diferencia entre los dos compuestos, se trata de una prueba de
+dos colas. El nivel de significancia de 0.05 corresponde a las regiones sombreadas de la figura. Am-
+bas muestras son suficientemente grandes para justificar el uso de la distribución normal para apro-
+ximar a la binomial. En la tabla 1 del apéndice podemos determinar que el valor crítico de z para
+0.475 del área bajo la curva es 1.96.
+Como en los ejemplo
+
+[Bloque seleccionado #545 | relevancia=18]
+Pagina 544
+El error estándar de la estimación
+El siguiente proceso que debemos aprender en nuestro estudio del análisis de regresión es cómo me-
+dir la confiabilidad de la ecuación de estimación desarrollada. Aludimos a este tema cuando intro-
+dujimos los diagramas de dispersión; en ese punto, nos dimos cuenta intuitivamente de que una lí-
+nea será más exacta como estimador cuando los datos puntuales caen cerca de la línea [como en la
+gráfica (a) de la figura 12-11] que cuando los puntos están alejados de la línea [como en la gráfica
+(b) de la figura 12-1l].
+Para medir la confiabilidad de la ecuación de estimación, los especialistas en estadística han de-
+sarrollado el error estándar de la estimación. Este error estándar se simboliza por se y es similar a
+la desviación estándar (que examinamos por primera vez en el capítulo 3), en cuanto a que ambas
+son medidas de dispersión. Recordará que la desviación estándar se utiliza para medir la dispersión
+de un conjunto de observaciones respecto a la media. El error estándar de la estimación, por otra
+parte, mide la variabilidad, o dispersión, de los valores observados alrededor de la recta de re-
+gresión. Aun así, verá la similitud entre el error estándar de la estimación y la desviación estándar
+si compara la ecuación 12-6, que define el error estándar de la estimación, con la ecuación 3-18, que
+define la desviación estándar:
+Definición y uso del
+error estándar de la
+estimación
+Medición de la con-
+fiabilidad de la ecua-
+ción de estimación
+526
+Capítulo 12
+Regresión simple y correlación
+Y
+X
+(a) Esta línea de regresión es un  
+     estimador más exacto de
+     la relación entre X y Y
+Y
+X
+(b) Esta línea de regresión es un  
+     estimador menos exacto de
+     la relación entre X y Y
+FIGURA 12-11
+Grados contrastan-
+tes de dispersión
+de datos puntuales
+y el efecto resul-
+tante en la preci-
+sión de la recta de
+regresión
+donde,
+• Y  valores de la variable dependiente
+• Yˆ  valores estimados con la ecuación de estimación que corresponden a cada valor de Y
+• n  número de puntos utilizados para ajustar la línea de regresión
+Observe que, en la ecuación 12-6, la suma de las desviaciones al cuadrado se divide entre n  2 y
+no entre n. Esto sucede porque perdimos dos grados de libertad al estimar la recta de regresión. Po-
+demos razonar que, dado que los valores de a y b se obtuvieron de una muestra de datos puntuales,
+perdemos dos grados de libertad cuando usamos estos puntos para estimar la recta de regresión.
+Ahora, nos referiremos de nuevo al ejemplo anterior de la directora del Departamento de Salubri-
+dad que relaci
+
+[Bloque seleccionado #547 | relevancia=18]
+Pagina 546
+12-7, excepto uno: el valor de ∑Y2. La tabla 12-12 es una repetición de la tabla 12-7, añadiendo la
+columna Y2.
+Ahora podemos consultar la tabla 12-12 y nuestros cálculos anteriores de a y b, con el fin de
+calcular se usando el método abreviado:
+se 
+[12-7]
+
+
+ 0.7
+5
+ 0.866 ←Error estándar de $86.60
+Éste resultado es igual al obtenido usando la ecuación 12-6, ¡pero piense en cuántos pasos nos
+ahorramos!
+Interpretación del error estándar de la estimación
+Como ocurría en el caso de la desviación estándar, mientras más grande sea el error estándar de la
+estimación, mayor será la dispersión de los puntos alrededor de la línea de regresión. De manera in-
+versa, si se  0, esperamos que la ecuación de estimación sea un estimador “perfecto” de la variable
+dependiente. En ese caso, todos los puntos caerían directamente sobre la línea de regresión y no ha-
+bría puntos dispersos alrededor.
+Usaremos el error estándar de la estimación como una herramienta, de la misma forma que pode-
+mos usar la desviación estándar. Esto es, suponiendo que los puntos observados siguen una distribu-
+ción normal alrededor de la recta de regresión, podemos esperar encontrar 68% de los puntos den-
+tro de 1se (o más menos 1 error estándar de la estimación), 95.5% de los puntos dentro de 2se
+y 99.7% de los puntos dentro de 3se. La figura 12-12 ilustra estos “límites” alrededor de la línea de
+regresión. Otra cosa que debemos observar en la figura 12-12 es que el error estándar de la 
+estimación se mide a lo largo del eje Y, y no perpendicularmente desde la recta de regresión.
+En este punto, debemos establecer las suposiciones necesarias, ya que pronto haremos algunas afir-
+maciones probabilísticas. Específicamente:
+1. Los valores observados para Y tienen distribución normal alrededor de cada valor estimado de Yˆ.
+2. La varianza de las distribuciones alrededor de cada valor posible de Yˆ es la misma.
+Si esta segunda suposición no fuera cierta, entonces el error estándar en un punto de la recta de re-
+gresión podría diferir del error estándar en otro punto.
+Suposiciones para
+usar se
+Uso de se para for-
+mar límites alrededor
+de la línea de regre-
+sión
+Interpretación y uso
+del error estándar de
+la estimación
+150  90  58.5
+
+2
+150  (3.75)(24)  (0.75)(78)
+
+4  2
+∑Y2  a∑Y  b∑XY
+
+n  2
+528
+Capítulo 12
+Regresión simple y correlación
+Calculo de los
+datos para la
+ecuación 12-7
+Tabla 12-12
+Camiones
+Antigüe-
+Gastos
+n = 4 
+dad (X)
+de reparación (Y)
+XY
+X2
+Y2
+(1)
+(2)
+(3)
+(2)  (3)
+(2)2
+(3)2
+101
+5
+7
+35
+25
+49
+102
+3
+7
+21
+9
+49
+103
+3
+6
+18
+9
+36
+104
+1
+4
+4
+1
+16
+X  12
+
+[Bloque seleccionado #565 | relevancia=14]
+Pagina 564
+rencias respecto a la pendiente B de la ecuación de regresión “verdadera” (de toda la población), ba-
+sadas en la pendiente b de la ecuación de regresión estimada a partir de una muestra de valores.
+Pendiente de la recta de regresión de la población
+La recta de regresión se deriva de una muestra y no de una población entera. Como resultado, no po-
+demos esperar que la ecuación de regresión, Y  A  BX (de toda la población), sea exactamente la
+misma que la ecuación estimada a partir de observaciones de la muestra, o Yˆ  a  bX. Aun así, po-
+demos usar el valor de b, la pendiente que calculamos a partir de una muestra para probar hipótesis
+respecto al valor de B, la pendiente de la recta de regresión para toda la población.
+El procedimiento para probar una hipótesis respecto a B es similar a los procedimientos presen-
+tados en los capítulos 8 y 9, de pruebas de hipótesis. Para comprender este proceso, regresemos al
+problema de la relación entre los gastos anuales de investigación y desarrollo, y las ganancias. En la
+página 524, señalamos que b  2. El primer paso es encontrar algún valor para B con el fin de com-
+pararlo con b  2.
+Supongamos que durante un periodo extenso, la pendiente de la relación entre X y Y fue 2.1. Pa-
+ra probar si éste es todavía el caso, podríamos definir las hipótesis como
+H0: B  2.1 ←Hipótesis nula
+H1: B 	 2.1 ←Hipótesis alternativa
+Entonces, de hecho estamos probando para saber si los datos actuales indican que B ha cambiado de
+su valor histórico de 2.1.
+Para encontrar el estadístico de prueba para B, es necesario primero encontrar el error estándar
+del coeficiente de regresión. Aquí, el coeficiente de regresión con el que estamos trabajando es b, así
+que el error estándar de este coeficiente se expresa como sb. La ecuación 12-14 presenta la fórmula
+matemática para sb:
+Error estándar del
+coeficiente de 
+regresión
+Prueba de hipótesis
+respecto a B
+Diferencia entre la
+ecuación de regresión
+verdadera y la estima-
+da a partir de observa-
+ciones de la muestra
+546
+Capítulo 12
+Regresión simple y correlación
+Error estándar de b
+sb 
+[12-14]
+se
+
+X2
+ n
+X2
+Valor estandarizado de b
+t 
+[12-15]
+b  BH0
+
+sb
+donde,
+• sb  error estándar del coeficiente de regresión
+• se  error estándar de la estimación
+• X  valores de la variable independiente
+• X  media de los valores de la variable independiente
+• n  número de datos
+Una vez calculado sb, podemos utilizar la ecuación 12-15 para estandarizar la pendiente de nuestra
+ecuación de regresión:
+Estandarización 
+del coeficiente 
+de regresión
+en la que,
+•
+b  pendiente d

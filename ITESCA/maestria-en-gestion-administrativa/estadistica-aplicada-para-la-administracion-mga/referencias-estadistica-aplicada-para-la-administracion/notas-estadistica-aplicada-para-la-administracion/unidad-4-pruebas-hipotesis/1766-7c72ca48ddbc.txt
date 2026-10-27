@@ -1,0 +1,1766 @@
+Pagina 1
+ 
+1
+PRUEBAS DE HIPÓTESIS SOBRE LA IGUALDAD DE DOS MEDIAS. 
+ 
+ 
+A) Varianzas conocidas 
+ 
+ 
+Ejemplo : 
+ 
+Se emplean dos máquinas para llenar botellas de plástico con un volumen neto de 
+16 onzas. El proceso de llenado puede suponerse normal, con desviaciones 
+estándar de 
+015
+.
+1 
+
+y 
+018
+.
+2 
+
+. Ingeniería de calidad sospecha que ambas 
+máquinas llenan hasta el mismo volumen neto, sin importar que este volumen sea 
+o no de 16 onzas. Se toma una muestra aleatoria de la salida de cada máquina.  
+ 
+¿Piensa usted que ingeniería de calidad está en lo correcto? Utilizando 
+05
+.
+
+
+. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2
+1
+0 :
+
+
+H
+ 
+ 
+2
+1
+1 :
+
+
+H
+ 
+ 
+ 
+Calculando las medias de cada máquina obtenemos 
+005
+.
+16
+,
+015
+.
+16
+2
+1
+
+
+X
+X
+. 
+ 
+ 
+ 
+2
+2
+2
+1
+1
+2
+2
+1
+0
+n
+n
+X
+X
+Z
+
+
+
+
+
+=
+34
+.1
+10
+018
+.
+10
+015
+.
+005
+.
+16
+015
+.
+16
+2
+2
+
+
+
+ 
+ 
+ 
+2
+
+Z
+= Z.025 = 1.96 
+máquina 1
+máquina 2
+16.03
+16.02
+16.04
+15.97
+16.05
+15.96
+16.05
+16.01
+16.02
+15.99
+16.01
+16.03
+15.96
+16.04
+15.98
+16.02
+16.02
+16.01
+15.99
+16
+
+
+Pagina 2
+ 
+2
+ 
+ 
+ 
+ 
+ 
+El uso de la tabla es el siguiente: 
+ 
+1-.025 =.975 buscando el valor de Z correspondiente a .975  encontramos Z = 
+1.96 
+ 
+ 
+Utilizando el criterio de decisión
+2
+0
+
+Z
+Z 
+ para rechazar la hipótesis nula H0, nos 
+damos cuenta de que 1.34 no es mayor que 1.96. por lo cual no rechazamos H0. 
+No existe suficiente evidencia estadística para pensar que las medias son 
+diferentes.  
+ 
+ 
+Cuando rechazamos la hipótesis nula se considera que la prueba es potente, si 
+aceptáramos la hipótesis nula el criterio de decisión es débil, ya que generalmente 
+se busca rechazar H0. 
+ 
+ 
+PROCEDIMIENTO EN EXCEL 
+Seleccionar análisis de datos en el menú herramientas. En funciones para 
+análisis elija la opción : Prueba z para medias de dos muestras. 
+ 
+ 
+
+
+Pagina 3
+ 
+3
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+Pagina 4
+ 
+4
+PRUEBAS PARA LA IGUALDAD DE DOS VARIANZAS. 
+ 
+ 
+ 
+Ejemplo : Los siguientes son tiempos de quemado (en minutos) de señales 
+luminosas de dos tipos diferentes. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Pruebe la hipótesis de que las dos varianzas sean iguales. Use 
+05
+.
+
+
+ 
+ 
+2
+2
+2
+1
+0 :
+
+
+
+H
+ 
+ 
+2
+2
+2
+1
+1 :
+
+
+
+H
+ 
+ 
+ 
+ 
+ 
+44
+.
+100
+71
+.
+88
+70
+6.
+70
+2
+2
+2
+1
+2
+1
+
+
+
+
+S
+S
+X
+X
+ 
+ 
+ 
+2
+2
+2
+1
+0
+S
+S
+F 
+=
+877
+.
+44
+.
+100
+71
+.
+88
+
+ 
+ 
+1
+,1
+,
+2
+2
+1
+
+n
+n
+F
+= F.025,9,9= 4.03 
+ 
+1
+,1
+,2
+1
+2
+1
+
+
+
+n
+n
+F 
+=.248 
+ 
+ 
+ 
+ 
+ 
+Tipo 1
+Tipo 2
+63
+64
+81
+72
+57
+83
+66
+59
+82
+65
+82
+56
+68
+63
+59
+74
+75
+82
+73
+82
+
+
+Pagina 5
+ 
+5
+ 
+.877  no es mayor que 4.03, por lo cual no se rechaza la hipótesis nula  
+ 
+2
+2
+2
+1
+0 :
+
+
+
+H
+. 
+ 
+ 
+ 
+PROCEDIMIENTO EN EXCEL: Seleccionar análisis de datos en el menú 
+herramientas. En funciones para análisis elija la opción : Prueba F para 
+varianzas de dos muestras. 
+ 
+ 
+
+
+Pagina 6
+ 
+6
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+De la tabla deducimos que .248 es menor que .883 por lo cual no rechazamos H0. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+En la tabla de Excel tenemos el valor z = 1.34 y el valor crítico de z (dos colas) = 
+1.96, como 1.34 no es mayor que 1.96 no rechazamos la hipótesis nula. 
+ 
+ 
+B) Varianzas desconocidas: 
+ 
+Consideraremos ahora pruebas de hipótesis respecto a la igualdad de las medias 
+2
+1 
+y
+ de dos distribuciones normales donde no se conocen las varianzas 
+2
+2
+2
+1 
+y
+. 
+Tenemos dos casos en el primero las varianzas son iguales y en el segundo las 
+varianzas son desiguales, a continuación analizaremos cada uno de ellos. 
+ 
+Caso 1 varianzas iguales 
+ 
+Ejemplo : Se está investigando la resistencia de dos alambres, con la siguiente 
+información de muestra. 
+ 
+ 
+Alambre 
+ 
+ 
+Resistencia (ohms) 
+ 
+ 
+1 
+.140 
+.141 
+.139 
+.140 
+.138 
+.144 
+Prueba z para medias de dos muestras
+Variable 1
+Variable 2
+Media
+16.015
+16.005
+Varianza (conocida)
+0.000225
+0.000324
+Observaciones
+10
+10
+Diferencia hipotética de las medias
+0
+z
+1.34962722
+P(Z<=z) una cola
+0.08856785
+Valor crítico de z (una cola)
+1.644853
+Valor crítico de z (dos colas)
+0.17713571
+Valor crítico de z (dos colas)
+1.95996108
+Prueba F para varianzas de dos muestras
+Variable 1
+Variable 2
+Media
+70.6
+70
+Varianza
+88.7111111
+100.444444
+Observaciones
+10
+10
+Grados de libertad
+9
+9
+F
+0.88318584
+P(F<=f) una cola
+0.42811371
+Valor crítico para F (una cola)
+0.2483862
+
+
+Pagina 7
+ 
+7
+2 
+.135 
+.138 
+.140 
+.139 
+- 
+- 
+ 
+Suponiendo que las dos varianzas son iguales, ¿ qué conclusiones puede 
+extraerse respecto a la resistencia media de los  alambres? 
+ 
+ 
+2
+1
+0 :
+
+
+H
+ 
+2
+1
+1 :
+
+
+H
+ 
+ 
+ 
+ 
+Calculando la media y la desviación estándar de la muestra: 
+ 
+0022
+.
+0021
+.
+138
+.
+140
+.
+2
+1
+2
+1
+
+
+
+
+S
+S
+x
+x
+ 
+ 
+
+
+
+
+2
+1
+1
+2
+1
+2
+2
+2
+2
+1
+1
+
+
+
+
+
+
+n
+n
+S
+n
+S
+n
+S p
+= .0021 
+ 
+2
+1
+2
+1
+0
+1
+1
+n
+n
+S
+X
+X
+t
+p
+
+
+
+= 1.72 
+ 
+ 
+Buscamos en la tabla de distribución t el valor  
+2
+,
+2
+1
+,2
+
+n
+n
+t
+=  t.025,8 =2.306 
+Utilizando el criterio de rechazo  
+2
+,2
+0
+2
+1
+
+
+
+n
+n
+t
+t
+
+,  1.72 no es mayor que 2.306, por lo 
+tanto no rechazamos H0. 
+ 
+ 
+ 
+PROCEDIMIENTO EN EXCEL 
+Seleccionar análisis de datos en el menú herramientas. En funciones para 
+análisis elija la opción : Prueba t para dos muestras suponiendo varianzas 
+iguales. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+Pagina 8
+ 
+8
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+En la tabla de Excel encontramos los valores deseados: 1.72 no es mayor que 
+2.306 por lo cual no rechazamos Ho. 
+Prueba t para dos muestras suponiendo varianzas iguales
+Variable 1
+Variable 2
+Media
+0.14033333
+0.138
+Varianza
+4.2667E-06
+4.6667E-06
+Observaciones
+6
+4
+Varianza agrupada
+4.4167E-06
+Diferencia hipotética de las medias
+0
+Grados de libertad
+8
+Estadístico t
+1.72002633
+P(T<=t) una cola
+0.06187033
+Valor crítico de t (una cola)
+1.85954832
+P(T<=t) dos colas
+0.12374065
+Valor crítico de t (dos colas)
+2.30600563
+
+
+Pagina 9
+ 
+9
+ 
+ 
+Caso 2 Varianzas diferentes 
+ 
+Cuando las varianzas 
+2
+2
+2
+1 
+y
+ son diferentes utilizamos la estadística de prueba: 
+ 
+2
+2
+2
+1
+2
+1
+2
+1
+0
+n
+S
+n
+S
+X
+X
+t
+
+
+
+ 
+ 
+Para el calculo de lo grados de libertad utilizamos: 
+ 
+
+
+
+
+2
+1
+1
+2
+2
+2
+2
+2
+1
+2
+1
+2
+1
+2
+2
+2
+2
+1
+2
+1
+
+
+
+
+
+
+
+
+
+
+
+
+n
+n
+S
+n
+n
+S
+n
+S
+n
+S
+
+ 
+ 
+El procedimiento para llevar a cabo la prueba de hipótesis es el mismo que el caso 
+1, varianzas iguales excepto que se emplean t0 como estadística de prueba y n1 + 
+n2 -2 se sustituye por en la determinación de los grados de libertad para la 
+prueba. 
+ 
+ 
+Ejemplo : Se están investigando dos métodos para producir gasolina a partir de 
+petróleo crudo. Se supone que el rendimiento de ambos procesos se distribuye 
+normalmente. Los siguientes datos de rendimiento se han obtenido de la planta 
+piloto. 
+ 
+ 
+ 
+Proceso 
+ 
+ 
+Rendimiento %  
+ 
+ 
+1 
+24.2 
+26.6 
+25.7 
+24.8 
+25.9 
+26.5 
+2 
+21.0 
+22.1 
+21.8 
+20.9 
+22.4 
+22.0 
+ 
+ 
+¿Hay alguna razón para creer que el proceso 1 tiene un rendimiento medio 
+mayor? 
+ 
+2
+1
+1
+2
+1
+0
+:
+:
+
+
+
+
+
+
+H
+H
+ 
+ 
+Calculamos la media y la varianza para ambos procesos: 
+ 
+
+
+Pagina 10
+ 
+10
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2
+2
+2
+1
+2
+1
+2
+1
+0
+n
+S
+n
+S
+X
+X
+t
+
+
+
+=
+48
+.8
+6
+376
+.
+6
+9017
+.
+70
+.
+21
+62
+.
+25
+
+
+
+ 
+ 
+ 
+
+
+
+
+2
+1
+1
+2
+2
+2
+2
+2
+1
+2
+1
+2
+1
+2
+2
+2
+2
+1
+2
+1
+
+
+
+
+
+
+
+
+
+
+
+
+n
+n
+S
+n
+n
+S
+n
+S
+n
+S
+
+ = 
+
+
+
+9
+32
+.9
+2
+7
+6
+376
+.
+7
+6
+9017
+.
+6
+376
+.
+6
+9017
+.
+2
+2
+2
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+Buscando el valor en la tabla t encontramos t.05,9 = 1,833, mediante el criterio de  
+rechazo para una cola t0>t.05,9 , 8.48>1.833, por lo tanto rechazamos la hipótesis 
+nula, y aceptamos la hipótesis alterna, el proceso 1  tiene mayor rendimiento que 
+el proceso 2. 
+ 
+ 
+ 
+ 
+ 
+ 
+PROCEDIMIENTO EN EXCEL 
+Seleccionar análisis de datos en el menú herramientas. En funciones para 
+análisis elija la opción : Prueba t para dos muestras suponiendo varianzas 
+desiguales. 
+ 
+ 
+ 
+ 
+ 
+3760
+.
+9017
+.
+70
+.
+21
+62
+.
+25
+2
+2
+2
+1
+2
+1
+
+
+
+
+S
+S
+x
+x
+
+
+Pagina 11
+ 
+11
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+8.48 mayor que 1.83 (valor crítico de t de una cola),  se rechaza Ho. 
+ 
+ 
+ 
+ 
+Prueba t para dos muestras suponiendo varianzas desiguales
+Variable 1
+Variable 2
+Media
+25.61666667
+21.7
+Varianza
+0.901666667
+0.376
+Observaciones
+6
+6
+Diferencia hipotética de las medias
+0
+Grados de libertad
+9
+Estadístico t
+8.487571675
+P(T<=t) una cola
+6.87798E-06
+Valor crítico de t (una cola)
+1.833113856
+P(T<=t) dos colas
+1.3756E-05
+Valor crítico de t (dos colas)
+2.262158887
+
+
+Pagina 12
+ 
+12
+ 
+PRUEBAS DE HIPÓTESIS SOBRE DOS PROPORCIONES 
+ 
+En las pruebas de hipótesis sobre proporciones tratamos de probar: 
+ 
+2
+1
+1
+2
+1
+0
+:
+:
+p
+p
+H
+p
+p
+H
+
+
+ 
+ 
+Considérese que se toman dos muestras aleatorias de tamaño n1 y n2 de dos 
+poblaciones, y sea X1 y X2 el número de observaciones que pertenecen a la clase 
+de interés en la muestra 1 y 2 respectivamente. 
+ 
+Una estimación del parámetro común p es: 
+ 
+ 
+2
+1
+2
+1
+ˆ
+n
+n
+X
+X
+p
+
+
+
+ 
+ 
+La estadística de prueba para 
+2
+1
+0 :
+p
+p
+H
+
+ es entonces: 
+ 
+ 
+
+
+
+
+
+
+
+
+2
+1
+2
+1
+0
+1
+1
+)ˆ
+1(ˆ
+ˆ
+ˆ
+n
+n
+p
+p
+p
+p
+Z
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Si 
+ 
+2
+0
+
+Z
+Z 
+  o 
+2
+0
+
+Z
+Z
+
+
+ , la hipótesis nula se rechaza. 
+ 
+ 
+ 
+ 
+Ejemplo : La fracción de productos defectuosos producidos por dos líneas de 
+producción se está analizando. Una muestra aleatoria de 1000 unidades de la 
+línea 1 tiene 10 defectuosas , en tanto que una muestra aleatoria de 1200 
+unidades de la línea 2 tiene 25 defectuosas. ¿ Es razonable concluir que la línea 
+de producción 2 produce una fracción más alta de producto defectuoso que la 
+línea 1? Use 
+01
+.
+
+
+. 
+ 
+ 
+1
+1
+1ˆ
+n
+X
+p 
+2
+2
+2ˆ
+n
+X
+p 
+
+
+Pagina 13
+ 
+13
+2
+1
+1
+2
+1
+0
+:
+:
+p
+p
+H
+p
+p
+H
+
+
+ 
+ 
+ 
+2
+1
+2
+1
+ˆ
+n
+n
+X
+X
+p
+
+
+
+=
+015909
+.
+1200
+1000
+25
+10
+
+
+
+ 
+ 
+=
+01
+.
+1000
+10
+
+ 
+ 
+= 
+020833
+.
+1200
+25 
+ 
+ 
+
+
+
+
+
+
+
+
+2
+1
+2
+1
+0
+1
+1
+)ˆ
+1(ˆ
+ˆ
+ˆ
+n
+n
+p
+p
+p
+p
+Z
+=
+
+
+
+
+
+
+1200
+1
+1000
+1
+)
+98409
+(.
+015909
+.
+.
+020833
+.
+01
+.
+=     -2.02                                                     
+ 
+35
+.2
+01
+.
+
+Z
+Z
+ 
+ 
+Se utiliza la estadística de prueba Z0 y se rechaza 
+2
+1
+0 :
+p
+p
+H
+
+ si 
+
+Z
+Z
+
+
+0
+ 
+ 
+-2.02 no es menor que –2.35 por lo cual H0 no se rechaza. 
+ 
+ 
+PRUEBA T POR PARES 
+ 
+Cuando es posible resulta ventajoso utilizar muestras pareadas en las pruebas de 
+comparación. En una prueba de comparación pareada, la reducción en la 
+variabilidad experimental puede permitir la detección de pequeños movimientos en 
+los datos. 
+A pesar de que los grados de libertad sean reducidos, porque ahora el tamaño de 
+muestra corresponde al número de comparaciones. 
+Un ejemplo de este tipo de prueba es la evaluación de dos piezas de equipo de 
+inspección para determinar si existe alguna diferencia significativa entre los 
+equipos. 
+Las hipótesis de prueba en torno a la igualdad 
+2
+1 
+y
+pueden realizarse efectuando 
+una prueba t de una muestra en 
+D
+. Específicamente, probar 
+2
+1
+0 :
+
+
+H
+contra 
+2
+1
+1 :
+
+
+H
+ es equivalente a probar 
+ 
+ 
+0
+:
+0
+
+D
+H
+
+ 
+ 
+0
+1 :
+
+
+
+D
+H
+ 
+ 
+1
+1
+1ˆ
+n
+X
+p 
+2
+2
+2ˆ
+n
+X
+p 
+
+
+Pagina 14
+ 
+14
+La estadística de prueba apropiada es 
+ 
+ 
+ 
+n
+S
+D
+t
+D
+
+0
+ 
+ 
+donde 
+ 
+n
+D
+D
+j
+
+
+ 
+y 
+ 
+ 
+
+
+1
+2
+
+
+
+n
+D
+D
+S
+j
+D
+ 
+ 
+Rechazaríamos 
+0
+:
+0
+
+D
+H
+
+si 
+1
+,
+2
+0
+
+
+n
+t
+t
+
+ o si 
+1
+,
+2
+0
+
+
+
+n
+t
+t
+
+, las alternativas de un lado se 
+tratarían de manera similar. 
+ 
+Ejemplo 6: 
+ 
+Un fabricante desea comparar el proceso de armado común para uno de sus productos con 
+un método propuesto que supuestamente reduce el tiempo de armado. Se seleccionaron 
+ocho trabajadores de la planta de armado y se les pidió que armaran las unidades con ambos 
+procesos. Los siguientes son los tiempos observados en minutos. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+En 
+05
+.
+
+
+, ¿existe alguna razón para creer que el tiempo de armado para el proceso actual 
+es mayor que el del método propuesto por más de dos minutos? 
+ 
+2
+:
+0
+
+D
+H
+
+ 
+2
+:
+1
+
+D
+H
+
+ 
+ 
+ 
+ 
+ 
+ 
+Trabajador
+Proceso actual Proceso propuesto
+1
+38
+30
+2
+32
+32
+3
+41
+34
+4
+35
+37
+5
+42
+35
+6
+32
+26
+7
+45
+38
+8
+37
+32
+Trabajador
+Proceso actual Proceso propuesto
+Dj
+(Dj-D)^2
+1
+38
+30
+8
+10.5625
+2
+32
+32
+0
+22.5625
+3
+41
+34
+7
+5.0625
+4
+35
+37
+-2
+45.5625
+5
+42
+35
+7
+5.0625
+6
+32
+26
+6
+1.5625
+7
+45
+38
+7
+5.0625
+8
+37
+32
+5
+0.0625
+4.75
+95.5
+
+
+Pagina 15
+ 
+15
+ 
+ 
+n
+D
+D
+j
+
+
+= 4.75 
+ 
+ 
+
+
+1
+2
+
+
+
+n
+D
+D
+S
+j
+D
+= 3.69 
+ 
+ 
+n
+S
+D
+t
+D
+
+0
+= 
+8
+69
+.3
+2
+75
+.4
+
+= 2.107 
+ 
+895
+.1
+7
+,
+05
+.
+1
+,
+
+
+
+t
+t
+n
+
+ , debido a que 2.107 > 1.895 rechazamos H0, y aceptamos la H1: el 
+tiempo de armado para el proceso actual es mayor en dos minutos que el método propuesto. 
+ 
+ 
+PROCEDIMIENTO EN EXCEL 
+Seleccionar análisis de datos en el menú herramientas. En funciones para análisis elija 
+la opción : Prueba t para medias de dos muestras emparejadas. 
+ 
+ 
+ 
+ 
+ 
+
+
+Pagina 16
+ 
+16
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+De la tabla concluimos que 2.105 > 1.895 (valor crítico de t una cola), por lo cual 
+rechazamos Ho. 
+Prueba t para medias de dos muestras emparejadas
+Variable 1
+Variable 2
+Media
+37.75
+33
+Varianza
+22.2142857
+15.1428571
+Observaciones
+8
+8
+Coeficiente de correlación de Pearson
+0.64648725
+Diferencia hipotética de las medias
+2
+Grados de libertad
+7
+Estadístico t
+2.10583831
+P(T<=t) una cola
+0.03661855
+Valor crítico de t (una cola)
+1.89457751
+P(T<=t) dos colas
+0.0732371
+Valor crítico de t (dos colas)
+2.36462256

@@ -1,0 +1,134 @@
+% Informe conceptual de raíz; versiones previas de infografía conservadas en assets.
+% Contrato: tres actos, producto visual protagonista y síntesis natural en el desarrollo.
+\def\estadisticatitulo{Muestreo para decidir}
+\def\estadisticasubtitulo{Actividad 1: Infografía y fundamento conceptual}
+\def\estadisticafecha{22 de octubre de 2026}
+\def\estadisticaunidad{Muestreo}
+\def\estadisticaresumen{El muestreo permite obtener evidencia útil para la administración cuando población, marco y selección corresponden a la decisión. Este informe explica los diseños probabilísticos y no probabilísticos, distingue precisión y sesgo y desarrolla un ejemplo hipotético de 385 respuestas y 482 invitaciones. La infografía integra una gráfica del margen de error y una ilustración conceptual. Se concluye que ampliar la muestra mejora cierta precisión bajo supuestos, pero no corrige por sí solo exclusiones ni no respuesta diferencial.}
+\def\portadaoficial{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/portada-oficial.png}
+\def\estadisticaextras{%
+  \usepackage{pdfpages}
+  \usepackage{fontspec}
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+  \usetikzlibrary{babel}
+  \geometry{letterpaper,left=2.3cm,right=2.3cm,top=2.2cm,bottom=2.2cm}
+  \hypersetup{pdftitle={Muestreo para decidir},pdfsubject={Actividad 1 - Estadística aplicada para la administración}}
+  \setcitestyle{citesep={;}}
+  \renewcommand{\insertcoverwatermark}{}
+  \renewcommand{\insertcoverinstitutionalfooter}{}
+  \renewcommand{\templatePortrait}{%
+    \thispagestyle{empty}
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{\portadaoficial}};
+      \node[anchor=north west,text=white,text width=10.6cm,align=center,inner sep=0pt] at ([xshift=10.1cm,yshift=-19.4cm]current page.north west) {%
+        \setstretch{1}\fontsize{12}{15}\selectfont
+        {\fontsize{16}{19}\selectfont\bfseries Muestreo para decidir}\par\vspace{0.18cm}
+        Estadística aplicada para la administración\par
+        Actividad 1: Infografía\par\vspace{0.12cm}
+        Martín Jonathan de la Cruz Muñoz\par
+        Matrícula: 26130503\par
+        Dra. Yoana Elizeth Tauitmes Delgado\par
+        22 de octubre de 2026
+      };
+    \end{tikzpicture}\null\clearpage
+  }
+  \renewcommand{\templatePagecfg}{}
+  \renewcommand{\templateFinalcfg}{%
+    \pagestyle{fancy}\fancyhf{}\fancyfoot[C]{\fontsize{10}{12}\selectfont\thepage}
+    \renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}
+    \setcounter{page}{2}\renewcommand{\thepage}{\arabic{page}}
+  }
+  \titleformat{\section}{\normalfont\fontsize{12}{15}\selectfont\bfseries\color{itescaRedDark}}{\thesection.}{0.5em}{}
+  \titleformat{\subsection}{\normalfont\fontsize{12}{15}\selectfont\bfseries}{\thesubsection.}{0.5em}{}
+  \titlespacing*{\section}{0pt}{8pt}{5pt}
+  \titlespacing*{\subsection}{0pt}{7pt}{4pt}
+  \setlength{\parindent}{1.1cm}
+  \setlength{\parskip}{3pt}
+}
+\long\def\estadisticacontenido{%
+\fontsize{12}{14.4}\selectfont\setstretch{1.5}\justifying
+\widowpenalty=10000\clubpenalty=10000\displaywidowpenalty=10000
+\estadisticapreliminares
+\section{Introducción}
+Conocer a todos los clientes, revisar cada factura o entrevistar a cada colaborador puede ser inviable por tiempo y costo. El muestreo permite estudiar una parte de esas unidades para orientar decisiones sobre el conjunto. El ahorro solo es defendible cuando se conserva una relación explícita entre población objetivo, selección y afirmación final: una base grande no garantiza que los datos describan a quienes realmente interesa conocer \citep{holmesBusiness2023,bradley2021}.
+
+La cuestión administrativa consiste en decidir qué evidencia basta para actuar sin confundir precisión con representatividad. Una encuesta sobre satisfacción por canal y una auditoría de facturación comparten esa exigencia, aunque sus unidades y riesgos sean distintos. El criterio central es diseñar la selección antes de calcular el tamaño y comunicar los límites antes de convertir una estimación en una decisión.
+
+\section{Muestreo, evidencia y decisiones administrativas}
+\subsection{Población, marco y unidad de observación}
+La \textit{población objetivo} reúne las unidades sobre las que se desea concluir, delimitadas por lugar, periodo y características. ``Clientes'' resulta insuficiente si no se precisa si son compradores activos del último trimestre, usuarios registrados o personas que visitaron una sucursal. La \textit{unidad de muestreo} es la que puede seleccionarse, mientras la \textit{unidad de observación} es aquella de la que se obtiene la medición. Pueden coincidir en una encuesta de clientes o diferir si primero se seleccionan sucursales y después sus compradores \citep[sec. 1.2]{holmesBusiness2023}.
+
+El \textit{marco muestral} es el registro operativo que permite acceder a las unidades: una lista de facturas, una base de empleados o un catálogo de sucursales. No equivale automáticamente a la población. Registros duplicados, contactos desactualizados y ventas no registradas modifican las posibilidades de selección. La \textit{muestra seleccionada} tampoco coincide siempre con la \textit{muestra respondente}: una persona sorteada que no contesta forma parte de la primera, pero no de las respuestas analizadas. Distinguirlas hace visible la no respuesta.
+
+Un parámetro describe la población, como la proporción de facturas con errores; un estadístico se calcula con la muestra para estimarlo. La inferencia depende del diseño o de un modelo justificable. No es válido transferir un porcentaje observado a todo el mercado solo porque el software produjo un intervalo estrecho \citep{holmesBusiness2023,wackerly2010}.
+
+\subsection{Diseños probabilísticos y alcance de la inferencia}
+En un diseño probabilístico, cada unidad de la población cubierta tiene una probabilidad conocida y positiva de inclusión. Esa probabilidad no tiene que ser igual para todas. El diseño proporciona una base para estudiar la variabilidad del estimador y, cuando corresponde, construir intervalos y utilizar ponderaciones \citep{holmesBusiness2023}.
+
+El \textit{muestreo aleatorio simple} da la misma probabilidad a todas las muestras posibles de igual tamaño dentro de un marco definido. En una auditoría, se puede sortear un conjunto de facturas numeradas sin escoger las más fáciles de localizar. No debe confundirse ``al azar'' con elegir sin procedimiento: la selección exige una regla reproducible.
+
+El \textit{estratificado} divide la población en grupos exhaustivos y sin traslape, y selecciona aleatoriamente dentro de todos ellos. Si interesa comparar tienda física y comercio digital, ambos canales deben estar representados. La asignación puede ser proporcional o dar más observaciones a un grupo pequeño por necesidades analíticas; en este último caso, el porcentaje global requiere ponderar de acuerdo con el diseño, sin promediar mecánicamente las proporciones de los grupos.
+
+El \textit{sistemático} selecciona un inicio aleatorio y luego unidades a intervalos definidos. Resulta operativo para registros ordenados, pero una periodicidad vinculada con la característica estudiada puede distorsionar la muestra. El \textit{muestreo por conglomerados} selecciona grupos naturales, como sucursales, y observa todas o algunas unidades dentro de los grupos elegidos. Reduce desplazamientos, aunque la semejanza interna puede aumentar la varianza respecto a seleccionar individuos dispersos. Estratificar incluye unidades de todos los estratos; seleccionar conglomerados estudia grupos elegidos \citep{holmesBusiness2023}.
+
+\subsection{Selección no probabilística y fuentes de error}
+La conveniencia utiliza unidades disponibles, mientras la autoselección depende de que las personas decidan participar. Ambas pueden contribuir a explorar necesidades, detectar lenguaje o formular hipótesis. Sin conocer las probabilidades de inclusión, no procede atribuirles automáticamente el margen de error de una muestra aleatoria simple. Cualquier generalización debe explicitar los supuestos adicionales que la sostienen \citep{holmesBusiness2023}.
+
+Conviene separar cuatro fuentes de error. El \textit{error de muestreo} es la variación asociada a observar muestras distintas bajo un diseño. El \textit{error de cobertura} aparece cuando el marco omite unidades pertinentes o incluye otras ajenas. La \textit{no respuesta} compromete la inferencia cuando quienes responden difieren de quienes no lo hacen en características relevantes. El \textit{error de medición} surge si una pregunta ambigua, el recuerdo o el modo de preguntar altera lo registrado. Aumentar el tamaño reduce cierta variación aleatoria; no elimina por sí mismo los otros problemas \citep{bradley2021}.
+
+Bradley et al. compararon grandes encuestas sobre vacunación estadounidense con un referente administrativo y mostraron sobreestimaciones importantes pese a sus numerosos participantes. La lección transferible a la administración es revisar cómo la participación se relaciona con la variable de interés. No demuestra que toda encuesta digital sea inválida: evidencia que cantidad, cobertura y mecanismo de respuesta deben evaluarse conjuntamente \citep{bradley2021}.
+
+\subsection{Tamaño muestral y condiciones de planificación}
+Para estimar una proporción mediante muestreo aleatorio simple en una población grande respecto a la muestra, una aproximación inicial es:
+\[
+ n_0=\frac{z_{\alpha/2}^{\,2}\,p(1-p)}{e^2}.
+\]
+El valor crítico $z_{\alpha/2}$ corresponde al nivel de confianza y $e$ es el margen absoluto, expresado en la misma escala que la proporción. Cuando no existe una aproximación previa defendible de $p$, usar $p=0.5$ maximiza $p(1-p)$ y produce el tamaño más conservador dentro de esta fórmula \citep{holmesBusiness2023}.
+
+Para 95\% de confianza y cinco puntos porcentuales de margen:
+\[
+ n_0=\frac{1.96^2(0.5)(0.5)}{0.05^2}=384.16,
+ \qquad n=\lceil384.16\rceil=385.
+\]
+Son respuestas completas previstas bajo los supuestos del cálculo. Si se anticipa una respuesta del 80\%, la planificación inicial requiere $\lceil385/0.80\rceil=482$ invitaciones. Esa división aumenta contactos previstos, pero no garantiza alcanzar 385 respuestas ni corrige una no respuesta diferencial. Para poblaciones finitas muestreadas sin reposición puede corresponder la corrección $n=Nn_0/(N+n_0-1)$, seguida del redondeo y de los ajustes del diseño.
+
+El margen de error cuantifica variación bajo condiciones específicas; no es un límite de todos los errores de una encuesta. Tampoco basta esta fórmula para dimensionar contrastes: deben definirse efecto mínimo relevante, potencia, significación y variabilidad. Conglomerados, ponderaciones y comparaciones por subgrupos pueden exigir tamaños adicionales. El costo debe evaluarse frente al riesgo de una decisión equivocada, no únicamente frente al número de entrevistas \citep{nistHandbook,wackerly2010}.
+
+\subsection{Infografía: una parte de la población, una decisión con límites}
+La lámina reúne la secuencia población--marco--muestra, distingue los mecanismos de selección y conecta el ejemplo de 385 respuestas con decisiones sobre facturación y satisfacción. Fusiona la composición del póster AulaTeX con los diagramas y las cifras de la primera versión. La gráfica representa un cálculo teórico del margen de error, no resultados de una encuesta: para 95\% de confianza y $p=0.5$, $e=1.96\sqrt{0.25/n}$ disminuye con $n$ bajo muestreo aleatorio simple y población grande. La ilustración generada con IA es conceptual. Los ejemplos son hipotéticos y no reportan datos empresariales observados.
+
+% Se incorpora la fusión autorizada a su tamaño A3; las dos versiones previas se conservan.
+\includepdf[pages=1,fitpaper=true,pagecommand={}]{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/poster/infografia-muestreo-fusionada.pdf}
+
+\subsection{Lectura de la evidencia y transferencia a la gestión}
+En facturación, el universo debe definirse por periodo y tipo de operación; la unidad puede ser una factura y la variable, presencia de al menos un error. Un registro completo permite seleccionar con una regla aleatoria y estimar la frecuencia del problema. La estimación no identifica automáticamente su causa: atribuir errores a capacitación o software requiere evidencia adicional. Si se usa selección sistemática, debe revisarse si el orden del archivo coincide con turnos, cierres o procesos periódicos.
+
+En satisfacción, los canales pueden funcionar como estratos si interesa incluirlos todos y compararlos. Una encuesta abierta solo a seguidores digitales podría excluir a compradores de tienda y atraer especialmente a personas muy satisfechas o molestas. Ponderar por canal ayuda cuando el diseño y los registros lo permiten, pero no repara toda diferencia no observada. Conviene contrastar la muestra respondente con características conocidas de la población y documentar las limitaciones \citep{holmesBusiness2023,bradley2021}.
+
+La comparación conduce a una conclusión metodológica: el tamaño es una decisión posterior a delimitar población, variable y selección. En una auditoría importa que las facturas tengan posibilidades de inclusión compatibles con el alcance de la afirmación; en mercadotecnia importa que la voz recogida no se confunda con todos los compradores. Por ello, la gerencia debe exigir una descripción del marco, el mecanismo de selección, las respuestas efectivas y las condiciones del intervalo antes de actuar. Ese orden convierte la infografía en una pauta de decisión y evita que su síntesis visual oculte los límites del método.
+
+\clearpage
+\section{Conclusiones}
+El muestreo permite reducir el costo de conocer una población y sostener decisiones bajo incertidumbre. Su valor depende de la correspondencia entre la pregunta administrativa, las unidades cubiertas y el procedimiento de selección. Aleatorio simple, estratificado, sistemático y conglomerados responden a necesidades operativas diferentes; conveniencia y autoselección requieren especial cautela al generalizar.
+
+Considero que la primera inversión debe dirigirse a definir y actualizar el marco y a comprender la no respuesta. La razón es que una selección sesgada puede producir cifras estables y, a la vez, orientar mal presupuesto, servicio o control de calidad. La consecuencia profesional es acompañar cada resultado con su población, fecha, mecanismo de selección, tamaño efectivo y limitaciones, y establecer qué evidencia justificaría revisar la decisión.
+
+El ejemplo de 385 respuestas resume una condición de planificación, no una garantía universal. Distinguir precisión, representatividad y validez permite reconocer cuándo ampliar la muestra, cuándo rediseñar la selección y cuándo limitar el alcance de una conclusión.
+
+\clearpage
+\renewcommand{\bibsection}{\section*{Referencias}\addcontentsline{toc}{section}{Referencias}}
+\setlength{\bibhang}{1.27cm}\setlength{\bibsep}{10pt}
+\begin{thebibliography}{4}
+\bibitem[Bradley et al.(2021)]{bradley2021}
+Bradley, V. C., Kuriwaki, S., Isakov, M., Sejdinovic, D., Meng, X.-L., \& Flaxman, S. (2021). Unrepresentative big surveys significantly overestimated US vaccine uptake. \textit{Nature, 600}(7890), 695--700. \url{https://doi.org/10.1038/s41586-021-04198-4}
+\bibitem[Holmes et al.(2023)]{holmesBusiness2023}
+Holmes, A., Illowsky, B., \& Dean, S. (2023). \textit{Introductory business statistics} (2.\textsuperscript{a} ed.). OpenStax. \url{https://openstax.org/details/books/introductory-business-statistics-2e}
+\bibitem[NIST y SEMATECH(2003)]{nistHandbook}
+National Institute of Standards and Technology, \& SEMATECH. (2003). \textit{NIST/SEMATECH e-Handbook of statistical methods}. \url{https://doi.org/10.18434/M32189}
+\bibitem[Wackerly et al.(2010)]{wackerly2010}
+Wackerly, D. D., Mendenhall, W., \& Scheaffer, R. L. (2010). \textit{Estadística matemática con aplicaciones} (7.\textsuperscript{a} ed.). Cengage Learning Editores.
+\end{thebibliography}
+\global\itescaactivitycitedfalse
+}
+\input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/reporte-estadistica-aplicada-para-la-administracion-plantilla-actividad.tex}

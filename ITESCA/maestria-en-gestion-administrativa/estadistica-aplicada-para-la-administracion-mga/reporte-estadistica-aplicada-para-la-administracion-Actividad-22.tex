@@ -1,0 +1,115 @@
+% Plantilla y base conceptual generada con AulaTeX (Amazon Nova Pro) para Actividad 22 (A22).
+% Contrato AulaTeX: portada oficial ITESCA, Resumen con declaracion IA, Tabla de contenido y tres tiempos.
+\def\estadisticatitulo{Estimación por mínimos cuadrados, inferencia ANOVA y predicción en regresión simple y múltiple}
+\def\estadisticasubtitulo{Actividad 22: Ejercicios en equipo}
+\def\estadisticafecha{22 de noviembre de 2026}
+\def\estadisticaunidad{Regresión lineal}
+\def\portadaoficial{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/portada-oficial.png}
+\def\estadisticaextras{%
+  \usepackage{fontspec}
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+  \usepackage{longtable,booktabs,array}
+  \usetikzlibrary{babel}
+  \geometry{letterpaper,left=2.3cm,right=2.3cm,top=2.2cm,bottom=2.2cm}
+  \hypersetup{pdftitle={Estimación por mínimos cuadrados, inferencia ANOVA y predicción en regresión simple y múltiple},pdfsubject={Actividad 22 - Estadística aplicada para la administración}}
+  \setcitestyle{citesep={;}}
+  \renewcommand{\insertcoverwatermark}{}
+  \renewcommand{\insertcoverinstitutionalfooter}{}
+  \renewcommand{\templatePortrait}{%
+    \thispagestyle{empty}
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{\portadaoficial}};
+      \node[anchor=north west,text=white,text width=10.6cm,align=center,inner sep=0pt] at ([xshift=10.1cm,yshift=-19.4cm]current page.north west) {%
+        \setstretch{1}\fontsize{12}{15}\selectfont
+        {\fontsize{15}{18}\selectfont\bfseries Estimación por mínimos cuadrados, inferencia ANOVA y predicción en regresión simple y múltiple}\par\vspace{0.16cm}
+        Estadística aplicada para la administración\par
+        Actividad 22: Ejercicios en equipo\par\vspace{0.12cm}
+        Martín Jonathan de la Cruz Muñoz\par
+        Matrícula: 26130503\par
+        Dra. Yoana Elizeth Tauitmes Delgado\par
+        22 de noviembre de 2026
+      };
+    \end{tikzpicture}\null\clearpage
+  }
+  \renewcommand{\templatePagecfg}{}
+  \renewcommand{\templateFinalcfg}{%
+    \pagestyle{fancy}\fancyhf{}\fancyfoot[C]{\fontsize{10}{12}\selectfont\thepage}
+    \renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}
+    \setcounter{page}{2}\renewcommand{\thepage}{\arabic{page}}
+  }
+  \titleformat{\section}{\normalfont\fontsize{12}{15}\selectfont\bfseries\color{itescaRedDark}}{\thesection.}{0.5em}{}
+  \titleformat{\subsection}{\normalfont\fontsize{12}{15}\selectfont\bfseries}{\thesubsection.}{0.5em}{}
+  \titlespacing*{\section}{0pt}{8pt}{5pt}
+  \titlespacing*{\subsection}{0pt}{7pt}{4pt}
+  \renewcommand{\footnotesize}{\fontsize{12}{14.4}\selectfont}
+  \setlength{\parindent}{1.1cm}
+  \setlength{\parskip}{3pt}
+  \urlstyle{same}
+  \input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/investigacion-articulos/formato-fichas.tex}
+}
+\def\estadisticaresumen{Esta actividad académica se fundamenta en la aplicación de técnicas de regresión lineal simple y múltiple para resolver problemas administrativos y estadísticos. La regresión lineal permite modelar la relación entre una variable dependiente y una o más variables independientes, facilitando la predicción y la toma de decisiones basadas en datos. En esta actividad, se aplican métodos de mínimos cuadrados para estimar los parámetros del modelo, se realiza inferencia estadística a través de ANOVA y se evalúa la significancia de las variables mediante pruebas t. Los resultados de estos análisis proporcionan insights valiosos para la gestión administrativa, permitiendo a los gerentes tomar decisiones informadas en áreas como la depreciación de activos, la fijación de precios y la compensación salarial.}
+\long\def\estadisticacontenido{%
+\fontsize{12}{14.4}\selectfont\setstretch{1.5}\justifying
+\estadisticapreliminares
+\section{Introducción}
+La actividad 22 se centra en la aplicación de técnicas de regresión lineal simple y múltiple para resolver problemas administrativos y estadísticos. La regresión lineal permite modelar la relación entre una variable dependiente y una o más variables independientes, facilitando la predicción y la toma de decisiones basadas en datos. En esta actividad, se aplican métodos de mínimos cuadrados para estimar los parámetros del modelo, se realiza inferencia estadística a través de ANOVA y se evalúa la significancia de las variables mediante pruebas t. Los resultados de estos análisis proporcionan insights valiosos para la gestión administrativa, permitiendo a los gerentes tomar decisiones informadas en áreas como la depreciación de activos, la fijación de precios y la compensación salarial. \citep{anderson2012,lind2012,holmesBusiness2023}.
+
+\section{Fundamentos, modelado analítico y evidencia en regresión lineal}
+\subsection{Base conceptual autocontenida y formulación matemática}
+La regresión lineal simple modela la relación entre una variable dependiente y una variable independiente mediante una ecuación lineal. El modelo se expresa como Y = $\beta$0 + $\beta$1X + ε, donde Y es la variable dependiente, X es la variable independiente, $\beta$0 es el intercepto, $\beta$1 es el coeficiente de la variable independiente y ε es el término de error. La regresión lineal múltiple extiende este análisis a múltiples variables independientes, modelando la relación como Y = $\beta$0 + $\beta$1X1 + $\beta$2X2 +... + $\beta$kXk + ε. El método de mínimos cuadrados se utiliza para estimar los parámetros del modelo, minimizando la suma de los cuadrados de las diferencias entre los valores observados y los valores predichos. El ANOVA se utiliza para comparar la variabilidad entre grupos y dentro de grupos, determinando si existen diferencias significativas entre las medias de dos o más grupos. La prueba t se utiliza para evaluar la significancia de los coeficientes en un modelo de regresión, determinando si un coeficiente es significativamente diferente de cero. \citep{wackerly2010,canavos1988,spiegel2009}.
+
+\textbf{1. Regresión lineal simple.} La regresión lineal simple es un método estadístico que modela la relación entre una variable dependiente y una variable independiente mediante una ecuación lineal. Se utiliza para predecir el valor de la variable dependiente en función de los valores de la variable independiente. El modelo se expresa como Y = $\beta$0 + $\beta$1X + ε, donde Y es la variable dependiente, X es la variable independiente, $\beta$0 es el intercepto, $\beta$1 es el coeficiente de la variable independiente y ε es el término de error. Expresión formal: $Y = \beta_0 + \beta_1X + \epsilon$. En el ámbito gerencial, en administración, la regresión lineal simple se utiliza para analizar la relación entre dos variables, como la depreciación de un activo en función del kilometraje. Esto permite a los gerentes predecir el valor futuro del activo y tomar decisiones informadas sobre su mantenimiento o reemplazo. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{2. Regresión lineal múltiple.} La regresión lineal múltiple es una extensión de la regresión lineal simple que modela la relación entre una variable dependiente y dos o más variables independientes. Se utiliza para predecir el valor de la variable dependiente en función de los valores de las variables independientes. El modelo se expresa como Y = $\beta$0 + $\beta$1X1 + $\beta$2X2 +... + $\beta$kXk + ε, donde Y es la variable dependiente, X1, X2,..., Xk son las variables independientes, $\beta$0 es el intercepto, $\beta$1, $\beta$2,..., $\beta$k son los coeficientes de las variables independientes y ε es el término de error. Expresión formal: $Y = \beta_0 + \beta_1X_1 + \beta_2X_2 + \ldots + \beta_kX_k + \epsilon$. En el ámbito gerencial, en administración, la regresión lineal múltiple se utiliza para analizar la relación entre una variable dependiente y varias variables independientes, como el riesgo cardiovascular en función del tabaquismo, la edad y la presión arterial. Esto permite a los gerentes identificar los factores que más influyen en el resultado y tomar decisiones informadas para mitigar riesgos. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{3. Mínimos cuadrados.} El método de mínimos cuadrados es una técnica estadística utilizada para estimar los parámetros de un modelo de regresión. Consiste en minimizar la suma de los cuadrados de las diferencias entre los valores observados y los valores predichos por el modelo. Los estimadores obtenidos mediante este método son los que minimizan la varianza del error de estimación. Expresión formal: $\min_{\beta_0, \beta_1, \ldots, \beta_k} \sum_{i=1}^n (Y_i - (\beta_0 + \beta_1X_{i1} + \beta_2X_{i2} + \ldots + \beta_kX_{ik}))^2$. En el ámbito gerencial, en administración, el método de mínimos cuadrados se utiliza para estimar los coeficientes de un modelo de regresión, lo que permite a los gerentes predecir valores futuros y tomar decisiones informadas basadas en datos. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{4. ANOVA.} El análisis de varianza (ANOVA) es una técnica estadística utilizada para comparar la variabilidad entre grupos y dentro de grupos. Se utiliza para determinar si existen diferencias significativas entre las medias de dos o más grupos. El ANOVA se basa en la descomposición de la varianza total en varianza entre grupos y varianza dentro de grupos. Expresión formal: $F = \frac{MS_{entre}}{MS_{dentro}}$. En el ámbito gerencial, en administración, el ANOVA se utiliza para comparar la efectividad de diferentes estrategias o tratamientos. Por ejemplo, se puede utilizar para determinar si existen diferencias significativas en las ventas entre diferentes campañas de marketing. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{5. Prueba t.} La prueba t es una técnica estadística utilizada para determinar si existe una diferencia significativa entre las medias de dos grupos. Se utiliza para evaluar la significancia de los coeficientes en un modelo de regresión. La prueba t se basa en la distribución t de Student y se calcula como t = ($\beta$ - $\beta$0) / SE($\beta$), donde $\beta$ es el coeficiente estimado, $\beta$0 es el valor hipotético del coeficiente y SE($\beta$) es el error estándar del coeficiente. Expresión formal: $t = \frac{\beta - \beta_0}{SE(\beta)}$. En el ámbito gerencial, en administración, la prueba t se utiliza para evaluar la significancia de los coeficientes en un modelo de regresión, lo que permite a los gerentes determinar si una variable independiente tiene un efecto significativo sobre la variable dependiente. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{6. Variable ficticia.} Una variable ficticia (dummy) es una variable binaria que toma valores de 0 o 1 para representar la presencia o ausencia de una característica. Se utiliza en modelos de regresión para incorporar variables categóricas. Por ejemplo, en un modelo de regresión que analiza el riesgo cardiovascular, se puede utilizar una variable ficticia para representar si una persona es fumadora o no. Expresión formal: $Y = \beta_0 + \beta_1X_1 + \beta_2X_2 + \ldots + \beta_kD + \epsilon$. En el ámbito gerencial, en administración, las variables ficticias se utilizan para incorporar información categórica en modelos de regresión, lo que permite a los gerentes analizar el impacto de características específicas en el resultado. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{7. Predicción puntual.} La predicción puntual es el valor específico que se predice para la variable dependiente en función de los valores de las variables independientes. Se obtiene sustituyendo los valores de las variables independientes en la ecuación del modelo de regresión. Expresión formal: $Y_{pred} = \beta_0 + \beta_1X_1 + \beta_2X_2 + \ldots + \beta_kX_k$. En el ámbito gerencial, en administración, la predicción puntual se utiliza para estimar el valor futuro de una variable dependiente, como el precio de un producto en función de las características del mercado. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{8. Recomendación gerencial.} Una recomendación gerencial es una sugerencia basada en los resultados de un análisis estadístico que guía la toma de decisiones en un contexto administrativo. Se deriva de la interpretación de los coeficientes y la significancia de las variables en un modelo de regresión.  En el ámbito gerencial, en administración, las recomendaciones gerenciales se utilizan para orientar las decisiones estratégicas y operativas, como la asignación de recursos o la implementación de políticas. \citep{anderson2012,lind2012,wackerly2010}.
+
+
+\subsection{Planteamiento analítico y estructura de resolución de los ejercicios de la unidad}
+Para resolver los ejercicios propuestos, se deben seguir los siguientes pasos: 1) Desarrollar un diagrama de dispersión para visualizar la relación entre las variables. 2) Aplicar el método de mínimos cuadrados para estimar los parámetros del modelo de regresión. 3) Realizar inferencia estadística mediante ANOVA para evaluar la significancia del modelo. 4) Aplicar la prueba t para evaluar la significancia de cada coeficiente. 5) Realizar predicciones puntuales utilizando el modelo ajustado. 6) Derivar recomendaciones gerenciales basadas en los resultados del análisis.
+
+\subsubsection*{Ejercicio 1. Regresión lineal simple de depreciación por kilometraje en automóviles Honda Accord 2000 ($n=10$)}
+\textbf{Enunciado oficial del aula:} Datos de 10 operaciones de compra-venta: millas en miles $X \in \{90, 59, 66, 87, 90, 106, 94, 57, 138, 87\}$ y precios en miles de dólares $Y \in \{7.0, 7.5, 6.6, 7.2, 7.0, 5.4, 6.4, 7.0, 5.1, 7.2\}$. a) Trace el diagrama de dispersión. b) Analice la relación. c) Obtenga la ecuación de mínimos cuadrados. d) Interprete la pendiente. e) Prediga el precio para $100\,000$ millas ($X = 100$).
+
+\textbf{Modelo matemático y ruta de resolución:} Estimación de $\hat{Y} = b_0 + b_1 X$, cuantificación de la tasa marginal de depreciación por cada $1\,000$ millas recorridas y evaluación puntual en $X_0 = 100$ \citep{anderson2012}.
+
+\subsubsection*{Ejercicio 2. Modelo lineal del precio según rango térmico en bolsas de dormir Bergans of Norway ($n=11$)}
+\textbf{Enunciado oficial del aula:} Once modelos de bolsas de dormir con rango de temperatura en $^\circ\text{F}$ ($X$) y precio en dólares ($Y$). a) Trace el diagrama de dispersión. b) Describa la relación. c) Calcule la ecuación de regresión por mínimos cuadrados. d) Prediga el precio para un rango térmico de $20^\circ\text{F}$.
+
+\textbf{Modelo matemático y ruta de resolución:} Relación inversa entre el umbral térmico mínimo soportado ($X$) y el costo técnico de aislamiento térmico ($Y$), evaluada mediante MCO y $R^2$ \citep{anderson2012}.
+
+\subsubsection*{Ejercicio 3. Regresión entre edad y compensación salarial de directivos CEO en empresas públicas ($n=15$)}
+\textbf{Enunciado oficial del aula:} Datos de Advertising Age sobre la edad ($X$) y el sueldo anual en miles de dólares ($Y$) de 15 ejecutivos CEO (incluyendo Mark Hurd, Charles Prince, James Dimon, Rupert Murdoch y Sumner Redstone). a) Trace el diagrama de dispersión. b) Analice la relación. c) Obtenga la ecuación de regresión estimada. d) Prediga el sueldo anual de un presidente y CEO de 72 años.
+
+\textbf{Modelo matemático y ruta de resolución:} Ajuste lineal $\hat{Y} = b_0 + b_1 X$, análisis de observaciones influyentes en edades altas y predicción puntual en $X_0 = 72$ \citep{anderson2012}.
+
+\subsubsection*{Ejercicio 4. Regresión lineal múltiple con variable ficticia (tabaquismo, edad y presión arterial) sobre riesgo de infarto ($n=20$)}
+\textbf{Enunciado oficial del aula:} Estudio de la Asociación Estadounidense de Cardiología ($n = 20$ pacientes) relacionando el riesgo de infarto a 10 años ($Y$) con la edad ($X_1$), la presión sanguínea ($X_2$) y la variable ficticia de fumador ($X_3 = 1$ si fuma, $0$ si no fuma). a) Obtenga la ecuación de regresión múltiple estimada. b) Determine si fumar es un factor significativo con $\alpha = 0.05$. c) Estime el riesgo para Art Speen (68 años, fumador, presión 175) y formule la recomendación clínica/preventiva.
+
+\textbf{Modelo matemático y ruta de resolución:} Modelo $\hat{Y} = b_0 + b_1 X_1 + b_2 X_2 + b_3 X_3$, prueba $t$ parcial $t = b_3 / s_{b_3}$ con $gl = n - k - 1 = 16$ al nivel $\alpha = 0.05$, y predicción multivariable \citep{anderson2012,wackerly2010}.
+
+
+\subsection{Articulación administrativa y síntesis del desarrollo}
+La regresión lineal simple es un método estadístico fundamental para modelar la relación entre dos variables. Este método permite a los gerentes comprender y predecir cómo una variable independiente afecta a una variable dependiente, lo que es crucial para la toma de decisiones informadas. \citep{holmesBusiness2023,nistHandbook}.
+La regresión lineal múltiple extiende el análisis a múltiples variables independientes, proporcionando una visión más completa de las relaciones en los datos. Al incorporar varias variables, este método permite identificar los factores más influyentes en un resultado, lo que es esencial para la gestión estratégica. \citep{holmesBusiness2023,nistHandbook}.
+El método de mínimos cuadrados es esencial para la estimación de los parámetros en modelos de regresión. Al minimizar la suma de los cuadrados de los errores, este método proporciona estimadores eficientes y sin sesgo, lo que es fundamental para la validez de las predicciones. \citep{holmesBusiness2023,nistHandbook}.
+El ANOVA es una herramienta crucial para comparar la variabilidad entre y dentro de grupos. Al descomponer la varianza total, el ANOVA permite identificar si existen diferencias significativas entre grupos, lo que es útil para evaluar la efectividad de diferentes estrategias. \citep{holmesBusiness2023,nistHandbook}.
+
+En síntesis dentro de este segundo tiempo, la articulación entre la teoría estadística de \textit{regresión lineal} y la práctica administrativa demuestra que ningún indicador cuantitativo opera en el vacío: la validez de la conclusión depende del cumplimiento de los supuestos distribucionales, de la representatividad de los datos recolectados y de la correspondencia entre el modelo matemático y el problema decisional de la organización \citep{anderson2012,nistHandbook,guarin2002}.
+
+\clearpage
+\section{Conclusiones}
+Los hallazgos de esta actividad proporcionan una comprensión profunda de la aplicación de técnicas de regresión lineal en la gestión administrativa. Los modelos de regresión desarrollados permiten predecir valores futuros y tomar decisiones informadas en áreas críticas como la depreciación de activos, la fijación de precios y la compensación salarial. Las recomendaciones gerenciales derivadas de los análisis estadísticos guían las decisiones estratégicas y operativas, contribuyendo al éxito organizacional. Sin embargo, es importante considerar las limitaciones metodológicas, como la dependencia de los supuestos del modelo y la calidad de los datos, al interpretar los resultados. \citep{anderson2012,lind2012,wackerly2010,diazRodriguez2022}.
+}
+\input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/reporte-estadistica-aplicada-para-la-administracion-plantilla-actividad.tex}

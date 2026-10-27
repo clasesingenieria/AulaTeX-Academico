@@ -1,0 +1,98 @@
+7.2.4.2. Sample sizes required
+7.
+Product and Process Comparisons
+7.2.
+Comparisons based on data from one process
+7.2.4.
+Does the proportion of defectives meet requirements?
+7.2.4.2.
+Sample sizes required
+Derivation of formula for required sample
+size when testing proportions
+The method of determining sample sizes for testing proportions is similar
+to the method for
+determining sample sizes for
+testing the mean
+. Although the sampling distribution for proportions
+actually follows a binomial distribution, the normal approximation
+is used for this derivation.
+Problem formulation
+We want to test the hypothesis
+\(H_0: \,\, p = p_0\)
+\(H_a: \,\, p \ne p_0\)
+with \(p\)
+denoting the proportion of defectives.
+Define \(\delta\)
+as the change in the proportion defective that we are interested
+in detecting
+\(\delta = | p_1 - p_0|\).
+Specify the level of statisitical significance and statistical
+power, respectively, by
+\(P(\mbox{reject } H_0 | H_0 \mbox{ is true with any } p \ne p_0) 
+       \le \alpha\)
+\(P(\mbox{reject } H_0 | H_0 \mbox{ is false with any } p \le \delta) 
+       \le 1-\beta\).
+Definition of allowable deviation
+If we are interested in detecting a change in the proportion defective
+of size \(\delta\)
+in either direction, the corresponding confidence interval for \(p\)
+can be written as
+
+$$ \hat{p} - \delta \le p \le \hat{p} + \delta \, . $$
+Relationship to confidence interval
+For a \(100(1-\alpha)\) %
+confidence interval based on the normal distribution, where \(z_{1 - \alpha/2}\)
+is the
+critical value of
+the normal distribution
+which is exceeded with probability \(\alpha/2\),
+is
+
+$$ \delta = z_{1-\alpha/2} \, \sqrt{\frac{p_0 (1-p_0)}{N}} + z_{1-\beta} \,
+   \sqrt{\frac{p_1 (1-p_1)}{N}} \, . $$
+Minimum sample size
+Thus, the minimum sample size is
+For a two-sided interval
+$$ N \ge  \left( \frac{z_{1-\alpha/2} \, 
+       \sqrt{p_0 (1-p_0)} + z_{1-\beta} \, 
+       \sqrt{p_1 (1-p_1)}}{\delta} \, \right)^2 \, . $$
+For a one-sided interval
+$$ N \ge  \left( \frac{z_{1-\alpha} \, \sqrt{p_0 (1-p_0)} + z_{1-\beta} 
+         \, \sqrt{p_1 (1-p_1)}}{\delta} \, \right)^2 \, . $$
+The mathematical details of this derivation are given on pages
+    30-34 of
+Fleiss, Levin, and Paik
+.
+Continuity correction
+Fleiss, Levin, and Paik also recommend the following continuity
+correction,
+\( N = N' + 1/\delta \, , \)
+with \(N'\)
+denoting the sample size computed using the above formula.
+Example of calculating sample size for testing
+proportion defective
+Suppose that a department manager needs to be able to detect any
+change above 0.10 in the current proportion defective of his product
+line, which is running at approximately 10 % defective. He is interested
+in a one-sided test and does not want to stop the line except
+when the process has clearly degraded and, therefore, he chooses a
+significance level for the test of 5 %. Suppose, also, that he is
+willing to take a risk of 10 % of failing to detect a change of this
+magnitude.  With these criteria:
+\(z_{0.95} = 1.645 , \,\, z_{0.90} = 1.282\)
+\(\delta = 0.10 \,\, (p_1 = 0.20)\)
+\(p_0 = 0.10\)
+and the minimum sample size for a
+one-sided test
+procedure
+is
+
+$$\begin{eqnarray}
+N & \ge & \left( \frac{z_{1-\alpha} \, \sqrt{p_0 (1-p_0)} + z_{1-\beta} \, \sqrt{p_1 (1-p_1)}}{\delta} \, \right)^2 \\
+   &  & \\
+   &   =    & \left( \frac{1.645 \, \sqrt{0.1 \times 0.9} + 1.282 \, \sqrt{0.2 \times 0.8}}{0.1} \, \right)^2 \\
+   &  & \\
+
+   & \approx & 102 \, . 
+\end{eqnarray} $$
+With the continuity correction, the minimum sample size becomes 112.

@@ -1,0 +1,772 @@
+Fuente bibliográfica: Estadística - Spiegel y Stephens. 4.ª edición.pdf
+Actividad: 15 (5.3 Ejercicios individuales 5% Tarea)
+Palabras clave: prueba de rachas, aleatoriedad, Wald-Wolfowitz, Kruskal-Wallis, Mann-Whitney, secuencia
+
+[Bloque seleccionado #93 | relevancia=5]
+Pagina 92
+68  CAPÍTULO 3 MEDIA, MEDIANA, MODA, Y OTRAS MEDIDAS DE TENDENCIA CENTRAL
+MINITAB
+Si se selecciona la secuencia “Stat ⇒ Basic Statistics ⇒ Display Descriptive Statistics”, como resultado se obtiene:
+Estadística descriptiva: calificación de examen
+Variable 
+N N* Media SE media Desv est Mínimo 
+Q1 Mediana 
+Q3 Máxima
+Punt examen 60 
+0 59.17 
+2.87 
+22.21 
+25.00 37.25 
+57.00 78.00 
+99.00
+SPSS
+Si se selecciona la secuencia “Analyze ⇒ Descriptive Statistics ⇒ Descriptives”, como resultado se obtiene:
+Estadística descriptiva
+N
+Mínimo
+Máximo
+Media
+Desviación
+estándar
+Puntuación de examen
+N válida
+60
+60
+25.00
+99.00
+59.1667
+22.21098
+SAS
+Si se selecciona la secuencia “Solutions ⇒ Análisis ⇒ Analyst” y los datos se leen como un archivo, seleccionando 
+la secuencia “Statistics ⇒ Descriptive ⇒ Summary Statistics”, se obtiene como resultado:
+The MEANS Procedure
+Analysis Variable : Testscr
+Mean
+Std Dev
+N
+Minimum
+Maximum
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+59.1666667
+22.2109811
+60
+25.0000000
+99.0000000
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+STATISTIX
+Si se selecciona la secuencia “Statistics ⇒ Summary Statistics ⇒ Descriptive Statistics” del paquete STATISTIX, 
+como resultado se obtiene:
+Statistix 8.0
+Descriptive Staistics
+Testscore
+N
+60
+Mean
+59.167
+SD
+22.211
+Minimum
+25.000
+1st Quarti
+37.250
+3rd Quarti
+78.000
+Maximum
+99.000
+
+[Bloque seleccionado #474 | relevancia=17]
+Pagina 473
+ 
+1 
+P ðT3  TÞ
+N3  N
+ 
+(9)
+donde T es la cantidad de empates que corresponden a cada observación y donde la suma se toma sobre todas las 
+observaciones. Si no hay empates, entonces T = 0 y el factor (9) se reduce a 1, de manera que no se necesita ninguna 
+corrección. En la práctica, la corrección suele ser despreciable (es decir, no es suficiente para garantizar que haya un 
+cambio de decisión).
+PRUEBA DE LAS RACHAS PARA ALEATORIEDAD 
+Aunque la palabra “aleatorio” se ha usado muchas veces en este libro, en ninguno de los capítulos anteriores se ha dado 
+una prueba para aleatoriedad. La teoría de las rachas proporciona una prueba no paramétrica para aleatoriedad. 
+Para entender qué es una racha, considérese una secuencia formada por dos símbolos, a y b, por ejemplo,
+ 
+a a j b b b j a j b b j a a a a a j b b b j a a a a j 
+(10)
+Por ejemplo, en el lanzamiento de una moneda, a puede representar “cara” y b puede ser “cruz”; o al muestrear los 
+tornillos producidos con una máquina, a puede corresponder a “defectuoso” y b a “no defectuoso”.
+Una racha se define como un conjunto de símbolos idénticos (o semejantes) que se encuentran entre dos símbolos 
+diferentes o entre ningún símbolo (como el principio y el final de la secuencia). Si se lee la secuencia (10) de izquier-
+da a derecha, la primera racha, cuyo fin está señalado por una línea vertical, consta de dos a; de manera similar, la 
+segunda racha consta de tres b; la tercera racha consta de una a, etc. En total hay siete rachas.
+Parece claro que debe existir alguna relación entre aleatoriedad y cantidad de rachas. Así, en la secuencia
+ 
+a j b j a j b j a j b j a j b j a j b j a j b j 
+(11)
+se observa un patrón cíclico, en el que aparece una a y luego una b, otra vez una a y luego una b, etc., que sería difícil 
+pensar que fuera aleatorio. En este caso, se tienen demasiadas rachas (en realidad, se tiene la cantidad máxima posible, 
+dada la cantidad de letras a y letras b).
+Por otro lado, en la secuencia
+ 
+a a a a a a j b b b b j a a a a a j b b b j 
+(12)
+parece haber un patrón de tendencia en el que se agrupan (o acumulan) las letras a y las letras b. En este caso hay muy 
+pocas rachas y no se puede considerar que esta secuencia sea aleatoria.
+Por lo tanto, se considerará que una secuencia no es aleatoria si hay demasiadas o muy pocas rachas; si no es así, 
+se considera que la secuencia es aleatoria. Para cuantificar esta idea, supóngase que se forman todas las secuencias 
+posibles que tengan una cantidad N1 de letras a y una cantidad N2 de letras b haciendo un total N de símbolos (o letras) 
+(
+
+[Bloque seleccionado #475 | relevancia=5]
+Pagina 474
+450  CAPÍTULO 17 PRUEBAS NO PARAMÉTRICAS
+OTRAS APLICACIONES DE LA PRUEBA DE LAS RACHAS
+Las siguientes son otras aplicaciones de las rachas para problemas estadísticos:
+1. Prueba mayor y menor que la mediana para aleatoriedad de datos numéricos. Para determinar si un conjunto 
+de datos numéricos es aleatorio (por ejemplo, los datos de una muestra), primero se colocan los datos en el mismo 
+orden en que se obtuvieron. Después, se encuentra la mediana de esos datos y cada dato se reemplaza por una a, si 
+su valor es mayor que la mediana o por una b si su valor es menor que la mediana. Si un valor es igual a la media-
+na, se elimina de la muestra. La muestra es o no aleatoria según si la secuencia de letras a y b sea o no aleatoria. 
+(Ver problema 17.20.)
+2. Diferencias entre poblaciones de las que se ha tomado una muestra. Supóngase que dos muestras de tamaños 
+m y n se denotan a1, a2, . . . , am y b1, b2, . . . , bn, respectivamente. Para decidir si las muestras provienen o no de una 
+misma población, primero se ordenan todos los m + n valores muestrales de menor a mayor. Si hay valores iguales, 
+se deben ordenar mediante un proceso aleatorio (por ejemplo, empleando números aleatorios). Si la secuencia 
+obtenida es aleatoria, se concluye que las muestras realmente no son diferentes y que, por lo tanto, provienen de la 
+misma población; si la secuencia no es aleatoria, no puede sacarse tal conclusión. Esta prueba puede ser una alter-
+nativa a la prueba U de Mann-Whitney. (Ver problema 17.21.) 
+CORRELACIÓN DE RANGOS DE SPEARMAN
+Los métodos no paramétricos también pueden usarse para medir la correlación entre dos variables, X y Y. En lugar de 
+emplear valores precisos de las variables, o cuando no se puede tener tal precisión, los datos se ordenan desde 1 hasta 
+N de acuerdo con su tamaño, importancia, etc. Una vez que las variables X y Y se han ordenado de esta manera, el 
+coeficiente de correlación de rangos o fórmula de Spearman para correlación de rangos (como suele llamársele) es
+ 
+rS ¼ 1 
+6 P D2
+NðN2  1Þ 
+(15)
+donde D denota las diferencias entre los rangos de los valores correspondientes de X y Y y donde N es la cantidad de 
+pares de valores (X, Y ) que hay en los datos.
+PROBLEMAS RESUELTOS
+LA PRUEBA DE LOS SIGNOS
+17.1 
+Hágase referencia a la tabla 17.1 y al nivel de significancia 0.05, se prueba la hipótesis H0 de que no hay dife-
+rencia entre las máquinas, contra la hipótesis alternativa H1 de que sí hay diferencia.
+SOLUCIÓN
+En la figura 17-1 se muestra la distribución binomial de X caras en 12 lanzamientos de una moneda, en forma de áre
+
+[Bloque seleccionado #489 | relevancia=6]
+Pagina 488
+464  CAPÍTULO 17 PRUEBAS NO PARAMÉTRICAS
+H ¼ 6.44
+DF ¼ 4
+P ¼ 0.168
+H ¼ 6.49
+DF ¼ 4
+P ¼ 0.165 (adjusted for ties)
+Obsérvese que se dan dos valores p. Uno es el valor p ajustado, para los empates que se presentan al dar los rangos, 
+y el otro no es ajustado. Es claro que, a los niveles de significancia 0.05 y 0.01, las máquinas no son estadísticamente dife-
+rentes respecto a la cantidad de unidades que producen, ya que los dos valores p superan con mucho ambos niveles. 
+17.15 Resolver el problema 17.14 usando los paquetes de software STATISTIX y SPSS.
+SOLUCIÓN
+El archivo con los datos se estructura como en el problema 17.14. Usando STATISTIX, la secuencia Statistics → One, 
+Two, Multi-sample tests → Kruskal-Wallis One-way AOV Test proporciona los resultados que se muestran a continua-
+ción. Comparar estos resultados con los obtenidos en el problema 17.14.
+Statistix 8.0
+Kruskal-Wallis One-way Nonparametrics AOV para unidades por máquina
+Mean
+Sample
+Machine
+Rank
+Size
+1
+14.0
+5
+2
+9.7
+5
+3
+18.6
+5
+4
+8.1
+5
+5
+14.6
+5
+Total
+13.0
+25
+Kruskal-Wallis Statistic
+6.4949
+p-Value, Using Chi-Squared Approximation
+0.1651
+Los resultados de STATISTIX coinciden con los resultados de MINITAB ajustados para empates.
+Los resultados de SPSS también coinciden con los resultados de MINITAB ajustados para empates.
+Prueba de Kruskal-Wallis
+Rangos
+Máquina
+N
+Rango medio
+Unidades
+1.00
+2.00
+3.00
+4.00
+5.00
+Total
+4
+5
+5
+5
+5
+25
+14.00
+ 9.70
+18.60
+ 8.10
+14.60
+Estadísticos de pruebaa,b
+Unidades
+Ji cuadrada
+df
+Significación asintótica
+6.495
+ 4
+.165
+aPrueba de Kruskal-Wallis
+bVariable agrupada: máquina
+
+[Bloque seleccionado #491 | relevancia=5]
+Pagina 490
+466  CAPÍTULO 17 PRUEBAS NO PARAMÉTRICAS
+El valor p se da como Pr > Chi-Square 0.6375. Como el valor p es mucho mayor que 0.05, no se rechaza la 
+hipótesis nula.
+PRUEBA DE LAS RACHAS PARA ALEATORIEDAD
+17.17 En 30 lanzamientos de una moneda se obtiene la siguiente secuencia de caras (H) y cruces (T):
+H T T H T H H H T H H T T H T
+H T H H T H T T H T H H T H T
+a) Determinar la cantidad V de rachas.
+b) Al nivel de significancia 0.05, probar si esta secuencia es aleatoria.
+Resolver el problema primero a mano, dando todos los detalles de las pruebas de las rachas para aleatoriedad, 
+y después dar la solución al problema usando MINITAB.
+SOLUCIÓN
+a) 
+Empleando una línea vertical para separar las rachas
+ 
+H j T
+T j H j T j H
+H
+H j T j H
+H j T
+T j H j Tj
+H j T j H
+H j T j H j T
+T j H j T j H
+H j T j H j T j
+ 
+se observa que la cantidad de rachas es V = 22.
+b) 
+En esta muestra de lanzamientos hay N1 = 16 caras y N2 = 14 cruces, y de acuerdo con el inciso a), la cantidad de 
+rachas es V = 22. Por lo tanto, de acuerdo con las fórmulas (13) de este capítulo, se tiene 
+V ¼ 2ð16Þð14Þ
+16 þ 14 þ 1 ¼ 15:93
+2
+V ¼ 2ð16Þð14Þ½2ð16Þð14Þ  16  14
+ð16 þ 14Þ2ð16 þ 14  1Þ
+¼ 7:175
+ 
+o σV = 2.679. Por lo tanto, la puntuación z correspondiente a V = 22 rachas es
+z ¼ V  V
+V
+¼ 22  15:93
+2:679
+¼ 2:27
+ 
+En una prueba de dos colas, al nivel de significancia 0.05, se aceptará la hipótesis H0 de aleatoriedad si −1.96 ≤ z ≤ 
+1.96 y se rechazará si no es así (ver figura 17-7). Como el valor obtenido para z es 2.27 > 1.96, se concluye, al nivel 
+de significancia 0.05, que los lanzamientos no son aleatorios. La prueba indica que hay demasiadas rachas, lo que 
+indica un patrón cíclico en los lanzamientos.
+Figura 17-7 Región de rechazo en la curva normal estándar, al nivel de significancia 0.05.
+z = −1.96
+z = 1.96
+Área = 0.025
+Área = 0.025
+
+[Bloque seleccionado #492 | relevancia=6]
+Pagina 491
+Si se emplea la corrección por continuidad, la puntuación z dada arriba se convierte en
+z ¼ ð22  0:5Þ  15:93
+2:679
+¼ 2:08
+ 
+y se llega a la misma conclusión.
+La solución del problema empleando MINITAB es como se indica a continuación. En la columna C1 se ingre-
+san los datos. Cada cara se ingresa como un número 1 y cada cruz como un 0. A la columna 1 se le pone como título 
+Coin (moneda). Con la secuencia de MINITAB Stat → Nonparametrics → Runs Test se obtienen los resultados 
+siguientes.
+ 
+Prueba de las rachas: Moneda
+ 
+Runs test for Coin
+Runs above and below K = 0.533333
+The observed number of runs ¼ 22
+The expected number of runs ¼ 15.9333
+16 Observations above K
+14 below
+p-value = 0.024
+El valor K corresponde a la media de ceros y unos en la columna 1. La cantidad de observaciones mayores y 
+menores a K es la cantidad de caras y cruces en los 30 lanzamientos de la moneda. El valor p es igual a 0.0235. Como 
+este valor p es menor que 0.05, se rechaza la hipótesis nula. La cantidad de rachas no es aleatoria.
+17.18 En una muestra de 48 herramientas producidas con una máquina se encuentra la siguiente secuencia de herra-
+mientas buenas (G) y defectuosas (D):
+G
+G
+G
+G
+G
+G
+D
+D
+G
+G
+G
+G
+G
+G
+G
+G
+G
+G
+D
+D
+D
+D
+G
+G
+G
+G
+G
+G
+D
+G
+G
+G
+G
+G
+G
+G
+G
+G
+D
+D
+G
+G
+G
+G
+G
+D
+G
+G
+Al nivel de significancia 0.05, probar la aleatoriedad de la secuencia. Usar también SPSS para probar la alea-
+toriedad de la secuencia.
+SOLUCIÓN
+El número de letras D es N1 = 10 y el número de letras G es N2 = 38; el número de rachas es V = 11. Por lo tanto, la media 
+y la varianza son
+V ¼ 2ð10Þð38Þ
+10 þ 38 þ 1 ¼ 16:83
+2
+V ¼ 2ð10Þð38Þ½2ð10Þð38Þ  10  38
+ð10 þ 38Þ2ð10 þ 38  1Þ
+¼ 4:997
+de manera que σV = 2.235.
+En una prueba de dos colas, al nivel de significancia 0.05, se acepta la hipótesis H0 de aleatoriedad si −1.96 ≤ z ≤ 
+1.96 (ver figura 17-7), y se rechaza si no es así. Como la puntuación z que corresponde a V = 11 es
+z ¼ V  V
+V
+¼ 11  16:83
+2:235
+¼ 2:61
+y −2.61 < −1.96, se rechaza H0 al nivel 0.05.
+La prueba muestra que hay muy pocas rachas, lo que indica que hay una acumulación (o agrupación) de herramien-
+tas defectuosas. En otras palabras, parece haber un patrón de tendencia en la producción de herramientas defectuosas. Se 
+recomienda un examen del proceso de producción.
+PROBLEMAS RESUELTOS  467
+
+[Bloque seleccionado #493 | relevancia=8]
+Pagina 492
+468  CAPÍTULO 17 PRUEBAS NO PARAMÉTRICAS
+Con la secuencia Analyze → Nonparametric Tests → Runs de SPSS se obtienen los resultados que se dan a con-
+tinuación. Si las G se reemplazan por unos y las D por ceros, el valor de prueba (Test Value), 0.7917, es la media de estos 
+valores. Los demás valores que se dan en los resultados son N1 = 10, N2 = 38, Suma = 48 y V = 11. El valor obtenido para 
+z es el valor con corrección por continuidad. A esto se debe que el valor z difiera del valor z calculado arriba. El término 
+Asymp. Sig.(2-tailed) es el valor p para dos colas correspondiente a z = −2.386. Como se ve, los resultados de 
+SPSS contienen la misma información que se halló a mano. Sólo hay que saber interpretarla.
+Prueba de rachas
+Calidad
+Valor de pruebaa
+Casos < Valor de prueba
+Casos > = Valor de prueba
+Total de casos
+Número de rachas
+Z
+Asymp. Sig. (2 colas)
+.7917
+10
+38
+48
+11
+–2.386
+.017
+aMedia
+17.19 a)  Formar todas las secuencias posibles que contengan tres a y dos b, y dar la cantidad V de rachas corres-
+pondientes a cada secuencia.
+b) Obtener la distribución muestral de V y su gráfica.
+c) Obtener la distribución de probabilidad de V y su gráfica.
+SOLUCIÓN
+a) 
+La cantidad de secuencias con tres a y dos b es 
+5
+2
+ 
+¼ 5!
+2!3! ¼ 10
+ 
+ Estas secuencias se muestran en la tabla 17.21, dando también la cantidad de rachas correspondiente a cada secuen-
+cia.
+b) 
+En la tabla 17.22 se da la distribución muestral de V (obtenida a partir de la tabla 17.21), en la que V denota la cantidad 
+de rachas y f su frecuencia. Así, por ejemplo, la tabla 17.22 indica que hay un 5, cuatro 4, etc. En la figura 17-8 se 
+muestra la gráfica correspondiente.
+Tabla 17.21
+Secuencia
+Rachas (V )
+a
+a
+a
+b
+b
+2
+a
+a
+b
+a
+b
+4
+a
+a
+b
+b
+a
+3
+a
+b
+a
+b
+a
+5
+a
+b 
+b
+a
+a
+3
+a
+b
+a
+a
+b
+4
+b
+b
+a
+a
+a
+2
+b
+a
+b
+a
+a
+4
+b
+a
+a
+a
+b
+3
+b
+a
+a
+b
+a
+4
+Tabla 17.22
+V
+f
+2
+3
+4
+5
+2
+3
+4
+1
+
+[Bloque seleccionado #496 | relevancia=6]
+Pagina 495
+Empleando una prueba de dos colas, al nivel de significancia 0.05, la hipótesis de aleatoriedad se acepta si −1.96 ≤ z ≤ 
+1.96. Como 0.835 cae dentro de este intervalo, se concluye que la muestra es aleatoria.
+A continuación se presenta el análisis empleando STATISTIX. Las duraciones se ingresan en la columna 1 en el 
+orden en que fueron obtenidas. A la columna se le da como título Duraciones. Empleando la secuencia Statistics → 
+Randomness/Normality Tests → Runs Test se obtiene el resultado que se presenta a continuación.
+Statistix 8.0
+Prueba de rachas para duración
+Median
+257.50
+Values Above the Median
+12
+Values below the Median
+12
+Values Tied with the Median
+0
+Runs Above the Median
+8
+Runs Below the Median
+7
+Total Number of Runs
+15
+Expected Number of Runs
+13.0
+p-Value, Two-Tailed Test
+0.5264
+Probability of getting 15 or fewer runs
+0.8496
+Probability of getting 14 or more runs
+0.2632
+El valor p grande indica que la cantidad de rachas puede ser considerada como aleatoria.
+17.23 Resolver el problema 17.5 empleando la prueba de las rachas para aleatoriedad.
+SOLUCIÓN
+En el primer renglón de la tabla 17.8 aparecen ya todos los valores de las dos muestras ordenados de menor a mayor. 
+Empleando una a para cada dato de la muestra I y una b para cada dato de la muestra II, el primer renglón de la tabla 17.8 
+será
+b
+b
+b
+b
+b
+b
+b
+b
+a
+a
+a
+a
+a
+b
+b
+a
+a
+a
+Como hay cuatro rachas, se tiene V = 4, N1 = 8 y N2 = 10. Entonces,
+V ¼ 2N1N2
+N1 þ N2
+þ 1 ¼ 2ð8Þð10Þ
+18
+þ 1 ¼ 9:889
+2
+V ¼ 2N1N2ð2N1N2  N1  N2Þ
+ðN1 þ N2Þ2ðN1 þ N2  1Þ
+þ 2ð8Þð10Þð142Þ
+ð18Þ2ð17Þ
+¼ 4:125
+de manera que  
+z ¼ V  V
+V
+¼ 4  9:889
+2:031
+¼ 2:90
+Si H0 es la hipótesis de que no hay diferencia entre las aleaciones, esto equivale a la hipótesis de que la secuencia anterior 
+es aleatoria. Esta hipótesis se acepta si −1.96 ≤ z ≤ 1.96 y se rechaza si no es así. Como z = −2.90 se encuentra fuera de 
+este intervalo, se rechaza H0 y se llega a la misma conclusión que en el problema 17.5.
+Obsérvese que si se hace la corrección por continuidad,
+z ¼ V  V
+V
+¼ ð4 þ 0:5Þ  9:889
+2:031
+¼ 2:65
+y se llega a la misma conclusión. 
+PROBLEMAS RESUELTOS  471
+
+[Bloque seleccionado #502 | relevancia=6]
+Pagina 501
+17.51 
+Un maestro desea probar tres métodos de enseñanza: I, II y III. Para esto, elige en forma aleatoria tres grupos de cinco 
+estudiantes cada uno y en cada grupo prueba uno de los métodos de enseñanza. A todos los estudiantes les pone el mismo 
+examen. En la tabla 17.39 se presentan las calificaciones obtenidas. A los niveles de significancia: a) 0.05 y b) 0.01, deter-
+minar si hay diferencia entre estos métodos de enseñanza.
+Tabla 17.39
+Método I
+78
+62
+71
+58
+73
+Método II
+76
+85
+77
+90
+87
+Método III
+74
+79
+60
+75
+80
+17.52 
+En la tabla 17.40 se presentan las calificaciones obtenidas por un estudiante durante un semestre en varias materias. A los 
+niveles de significancia: a) 0.05 y b) 0.01, probar si hay diferencia entre las calificaciones en estas materias.
+Tabla 17.40
+Matemáticas
+72
+80
+83
+75
+Ciencias
+81
+74
+77
+Inglés
+88
+82
+90
+87
+80
+Economía
+74
+71
+77
+70
+17.53 
+Usando la prueba H, resolver: a) el problema 16.9, b) el problema 16.21 y c) el problema 16.22.
+17.54 
+Usando la prueba H, resolver: a) el problema 16.23, b) el problema 16.24 y c) el problema 16.25.
+PRUEBA DE LAS RACHAS PARA ALEATORIEDAD
+17.55 
+En cada una de estas secuencias, determinar la cantidad, V, de rachas.
+a) 
+A
+B
+A
+B
+B
+A
+A
+A
+B
+B
+A
+B
+b) 
+H
+H
+T
+H
+H
+H
+T
+T
+T
+T
+H
+H
+T
+H
+H
+T
+H
+T
+17.56 
+A 25 personas se les preguntó si les gustaba un producto (lo que se indica por Y y N, respectivamente). El resultado mues-
+tral obtenido es el que se presenta en la secuencia siguiente:
+ 
+Y Y N N N N Y Y Y N Y N N Y N N N N N Y Y Y Y N N
+a) 
+Determinar la cantidad, V, de rachas.
+b) 
+Al nivel de significancia 0.05, probar si estas respuestas son aleatorias.
+17.57 
+Aplicar la prueba de las rachas a las secuencias (10) y (11) de este capítulo y dar las conclusiones acerca de la aleatorie-
+dad.
+17.58 
+a) 
+ Formar todas las secuencias posibles que contengan dos letras a y una letra b y dar el número V de rachas correspon-
+diente a cada secuencia.
+b) 
+Obtener la distribución muestral de V, así como su gráfica.
+c) 
+Obtener la distribución de probabilidad de V, así como su gráfica.
+PROBLEMAS SUPLEMENTARIOS  477
+
+[Bloque seleccionado #577 | relevancia=5]
+Pagina 576
+552  RESPUESTAS A LOS PROBLEMAS SUPLEMENTARIOS
+17.51 
+H = 6.54, DF = 2, P = 0.038. Al nivel de significancia 0.05 sí hay diferencia entre los tres métodos de enseñanza, pero no 
+al nivel de significancia 0.01, ya que 0.01 < valor p < 0.05.
+17.52 
+H = 9.22, DF = 3, P = 0.026. Al nivel de significancia 0.05 hay diferencia significativa entre las cuatro materias, pero no 
+al nivel de significancia 0.01, ya que 0.01 < valor p < 0.05.
+17.53 
+a)  H = 7.88, DF = 8, P = 0.446. A los niveles de significancia 0.01 y 0.05 no hay diferencia significativa entre las dura-
+ciones de los tres cinescopios, ya que el valor p > 0.01 y 0.05.
+b)  H = 2.59, DF = 4, P = 0.629. A los niveles de significancia 0.01 y 0.05 no hay diferencia significativa entre las cinco 
+variedades de trigo, ya que el valor p > 0.01 y 0.05.
+c)  H = 5.70, DF = 3, P = 0.127. A los niveles de significancia 0.01 y 0.05 no hay diferencia significativa entre las cuatro 
+marcas de neumáticos, ya que el valor p > 0.01 y > 0.05.
+17.54 
+a)  H = 5.65, DF = 2, P = 0.059. A los niveles de significancia 0.01 y 0.05 no hay diferencia entre los tres métodos de 
+enseñanza, ya que el valor p > 0.01 y > 0.05.
+b)  H = 10.25, DF = 4, P = 0.036. Al nivel de significancia 0.05 hay diferencia entre las cinco marcas de gasolina, pero no 
+al nivel 0.01, ya que 0.01 < valor p < 0.05.
+c)  H = 9.22, DF = 3, P = 0.026. Al nivel de significancia 0.05 hay diferencia entre las cuatro materias, pero no al nivel 
+0.01, ya que 0.01 < valor p < 0.05.
+17.55 
+a) 8; b) 10. 
+17.56 
+a) El número de rachas es V = 10.
+b) La prueba de aleatoriedad está basada en la distribución normal estándar. La media es
+µV ¼ 2N1N2
+N1 þ N2
+þ 1 ¼ 2ð11Þð14Þ
+25
+þ 1 ¼ 13:32
+y la desviación estándar es
+sV ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+2ð11Þð14Þf2ð11Þð14Þ  11  14g
+252ð24Þ
+s
+¼ 2:41
+La Z encontrada es
+Z ¼ 10  13:32
+2:41
+¼ 1:38
+Empleando EXCEL, el valor p es =2*NORMSDIST(−1.38) que es 0.1676. Dado que el valor p es grande, no se duda de 
+la aleatoriedad.
+17.57 
+a)  Aun cuando el número de corridas es menor que lo esperado, el valor p no es menor que 0.05. No se rechaza la aleato-
+riedad de la secuencia (10).
+Prueba de corridas: moneda
+Runs test for coin
+Runs above and below K ¼ 0.4
+The observed number of runs ¼ 7
+The expected number of runs ¼ 10.6
+8 observations above K, 12 below
+* N is small, so the following approximation may be invalid.
+P-value ¼ 0.084
+b) El número de rachas es mayor que lo esperado. Se rechaza la aleatoriedad de la secuencia (11).
+Prueba de corridas: moneda
+Runs test for coin
+Runs above and b

@@ -1,0 +1,691 @@
+# Fichas de conceptos
+
+Las citas textuales se extrajeron de las fuentes de entrada. La búsqueda puede agrupar referencias del mismo concepto aunque estén en archivos distintos.
+
+## Ficha 01. criterio de selección entre estadístico Z y t de Student
+
+**Calidad estimada:** baja
+**Mejor similitud:** 0.0674
+**Similitud promedio:** 0.0610
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt; libro-estadistica-matematica-con-aplicaciones-wackerly-A09.txt; libro-estadistica-spiegel-y-stephens-4-a-edicion-A09.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt, bloque 1; libro-estadistica-matematica-con-aplicaciones-wackerly-A09.txt, bloque 1; libro-estadistica-matematica-con-aplicaciones-wackerly-A09.txt, bloque 3; libro-estadistica-spiegel-y-stephens-4-a-edicion-A09.txt, bloque 3; libro-estadistica-spiegel-y-stephens-4-a-edicion-A09.txt, bloque 4
+
+### libro-estadistica-spiegel-y-stephens-4-a-edicion-A09.txt — bloque 4 — similitud 0.0674
+
+**Detalle de puntaje:** tfidf=0.0574; bonus=0.0100
+
+> En la práctica, como  muestra 1 se considera la muestra que tenga la mayor varianza. El software para estadística permite encontrar las áreas bajo la distribución t de Student, la distribución ji cuadrada  y la distribución F. Este software también permite trazar las distintas distribuciones.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt — bloque 1 — similitud 0.0657
+
+**Detalle de puntaje:** tfidf=0.0457; bonus=0.0200
+
+> Fuente bibliográfica: Estadística aplicada a los negocios y la economía - Lind, Marchal y Wathen. 15.ª edición.pdf Actividad: 9 (3.3 Evaluación 5% Cuestionario) Palabras clave: estimación puntual, intervalo de confianza, valor crítico, t de Student, ji-cuadrada, margen de error [Bloque seleccionado #326 | relevancia=16] Pagina 325 Desviación estándar de la población conocida () Un intervalo de confianza se calcula con el empleo de dos estadísticos: la media muestral  y la desviación estándar.
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A09.txt — bloque 3 — similitud 0.0626
+
+**Detalle de puntaje:** tfidf=0.0426; bonus=0.0200
+
+> Use la t de Student para formar una cantidad pivote para hallar un intervalo de pre- dicción para algún nuevo valor de Y, por ejemplo Yp, a ser observado en el futuro. [Sugerencia: empiece  con la cantidad yp – y.] Observe la terminología: los parámetros son estimados; los valores de variables  aleatorias son pronosticados. [Bloque seleccionado #776 | relevancia=6] Pagina 775 15.4 Prueba de rangos con signo de Wilcoxon para un experimento de observaciones pareadas 751 pequeña de estas dos cantidades, como estadístico de prueba para probar la hipótesis nula de que  los dos histogramas de frecuencia relativa poblacionales son idénticos.
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A09.txt — bloque 1 — similitud 0.0609
+
+**Detalle de puntaje:** tfidf=0.0509; bonus=0.0100
+
+> En el Capítulo 7, la aplicación breve Comparison of Student’s t and Normal Distributions  (Comparación de Distribuciones t de Student y Normales) permite la visualización de simi- litudes y diferencias en funciones de densidad t y estándar normal y las aplicaciones bre- ves Probabilidades y Cuantiles Ji cuadrada, Probabilidades y Cuantiles t de Student y las  Probabilidades y Cuantiles de Razón F proporcionan probabilidades y cuantiles asociados  con las distribuciones respectivas, todos con grados de libertad especifi cados por el usuario.
+
+### libro-estadistica-spiegel-y-stephens-4-a-edicion-A09.txt — bloque 3 — similitud 0.0584
+
+**Detalle de puntaje:** tfidf=0.0384; bonus=0.0200
+
+> Probar la hipótesis nula H0 : µ = 9.72 contra la hipótesis alternativa H0 : µ < 9.72 y dar el valor del estadístico de  prueba y el valor crítico que corresponde a: a) α = 0.10 y b) α = 0.025. ¿Es este resultado significativo a α = 0.10? ¿Es  este resultado significativo a α = 0.025? 10.37  Se realiza un estudio para probar la hipótesis nula de que la cantidad media de correos electrónicos enviados semanalmen- te por los empleados en una ciudad grande es 25.5 contra la hipótesis alternativa de que esta cantidad es mayor a 25.5.
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A09.txt — bloque 3 — similitud 0.0512
+
+**Detalle de puntaje:** tfidf=0.0412; bonus=0.0100
+
+> Ha : (1) las dos distribuciones poblacionales difi eren en localización (dos colas), o  bien (2) la distribución de [Bloque seleccionado #921 | relevancia=12] Pagina 920 896 ÍNDICE A Ajuste, falta de, 634 Alcance, 12 Aleatorización, importancia de, 657 Álgebra de matrices, 821, 823 elementos de identidad en, 825 Alternativa de cola inferior, 499 Alternativa de cola superior, 497 Alternativa de dos colas, 499, 500 Análisis análisis de varianza (ANOVA),  661-712 categórico de datos, 713-740 diseño aleatorizado de bloque y,  688-695 diseños en una dirección y, 667-679 modelos lineales para, 701-705 procedimiento para, 662-667 prueba F y, 665, 666, 670 repaso de introducción...
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 6 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 02. efecto del nivel de confianza sobre la amplitud del intervalo
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.1471
+**Similitud promedio:** 0.1243
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt; libro-estadistica-matematica-con-aplicaciones-wackerly-A09.txt; libro-estadistica-para-administracion-y-economia-levin-A09.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt, bloque 3; libro-estadistica-matematica-con-aplicaciones-wackerly-A09.txt, bloque 3; libro-estadistica-para-administracion-y-economia-levin-A09.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt, bloque 1
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt — bloque 3 — similitud 0.1471
+
+**Detalle de puntaje:** tfidf=0.1171; bonus=0.0300
+
+> O en una encuesta de opinión, podemos decidir que desea- mos calcular la proporción de la población con un margen de error de más o menos 5%. El margen de error es la magnitud del error que se tolerará al estimar un parámetro pobla- cional. Quizás se pregunte por qué no elegir márgenes pequeños de error.
+
+### libro-estadistica-para-administracion-y-economia-levin-A09.txt — bloque 1 — similitud 0.1355
+
+**Detalle de puntaje:** tfidf=0.0955; bonus=0.0400
+
+> A menudo, sin embargo, expresaremos el intervalo de confianza en términos de errores estándar, más que con valores numéricos. Así, expresaremos los intervalos de confianza de esta forma: x  1.64x, donde: x   1.64x  límite superior del intervalo de confianza x  1.64x  límite inferior del intervalo de confianza Entonces, los límites de confianza son los límites superior e inferior del intervalo de confianza. En este caso, x   1.64x se conoce como límite superior de confianza (LSC) y x  1.64x es el límite inferior de confianza (LIC).
+
+### libro-estadistica-para-administracion-y-economia-levin-A09.txt — bloque 1 — similitud 0.1302
+
+**Detalle de puntaje:** tfidf=0.1002; bonus=0.0300
+
+> En la estimación, los niveles de confianza que se utilizan con más frecuencia son 90, 95 y 99%, pero somos libres de aplicar cualquier nivel de confianza. En la figura 7-2, por ejemplo, utili- zamos un nivel de confianza del 95.5%. El intervalo de confianza es el rango de la estimación que estamos haciendo.
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A09.txt — bloque 3 — similitud 0.1208
+
+**Detalle de puntaje:** tfidf=0.1008; bonus=0.0200
+
+> *8.134  El intervalo de confi anza de una muestra pequeña para m, basado en una t de Student (Sección 8.8)  posee una amplitud aleatoria, en contraste con el intervalo de confi anza de una muestra grande (Sección  8.6), donde la amplitud no es aleatoria si se conoce s2. Encuentre el valor esperado de la amplitud del  intervalo en el caso de una muestra pequeña si se desconoce s2. *8.135  Un intervalo de confi anza es insesgado si el valor esperado del punto medio del intervalo es igual al  parámetro estimado.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt — bloque 1 — similitud 0.1062
+
+**Detalle de puntaje:** tfidf=0.0662; bonus=0.0400
+
+> La desviación es- tándar poblacional es σ  15. a) Calcule el intervalo de confianza de 95% para la media poblacional. b) Suponga que la misma media muestral se obtuvo de una muestra de 120 artículos. Pro- porcione el intervalo de confianza de 95% para la media poblacional. c)  ¿Cuál es el efecto de una muestra de tamaño grande sobre la estimación por intervalo? 4.
+
+### libro-estadistica-para-administracion-y-economia-levin-A09.txt — bloque 1 — similitud 0.1062
+
+**Detalle de puntaje:** tfidf=0.0762; bonus=0.0300
+
+> En la tabla 7-4 presentamos varias preguntas que el cliente podría hacer y las respuestas probables. Esta tabla indica la relación directa que existe en- tre el nivel de confianza y el intervalo de confianza de cualquier estimación. A medida que el cliente va estableciendo un intervalo de confianza cada vez más estrecho, el administrador de la tienda con- si
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 03. efecto del tamaño muestral sobre el margen de error
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.1806
+**Similitud promedio:** 0.1556
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt, bloque 3; libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt, bloque 3
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt — bloque 2 — similitud 0.1806
+
+**Detalle de puntaje:** tfidf=0.1406; bonus=0.0400
+
+> NOTAS Y COMENTARIOS NOTAS Y COMENTARIOS 1. En los casos en que conoce σ, el margen de error,  zα/2(σn ), es fijo y es el mismo para todas las  muestras de tamaño n. Cuando σ no se conoce, el  margen de error, tα/2(sn ), varía de una muestra  a otra.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt — bloque 3 — similitud 0.1775
+
+**Detalle de puntaje:** tfidf=0.1475; bonus=0.0300
+
+> O en una encuesta de opinión, podemos decidir que desea- mos calcular la proporción de la población con un margen de error de más o menos 5%. El margen de error es la magnitud del error que se tolerará al estimar un parámetro pobla- cional. Quizás se pregunte por qué no elegir márgenes pequeños de error.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt — bloque 3 — similitud 0.1572
+
+**Detalle de puntaje:** tfidf=0.1172; bonus=0.0400
+
+> En un conjunto de datos se estima que el rango es 36. a) ¿Cuál es el valor planeado para la desviación estándar poblacional? b) ¿De qué tamaño deberá ser la muestra para que el margen de error en un intervalo de con- fianza de 95% sea 3? c)  ¿De qué tamaño deberá ser la muestra para que el margen de error sea 2 en un intervalo de  confianza de 95%? Aplicaciones 25.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt — bloque 3 — similitud 0.1438
+
+**Detalle de puntaje:** tfidf=0.1238; bonus=0.0200
+
+> (8.4) Como la distribución de muestreo de p es una distribución normal, si en la estimación por inter- valo de la proporción poblacional se elige como margen de error zα/2σp , entonces 100(1  α)%  de los intervalos que se obtengan contendrán la verdadera proporción poblacional. Pero para  calcular el margen de error no se puede usar directamente σp, ya que no se conoce p, pues se  está tratando de estimarlo.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt — bloque 3 — similitud 0.1395
+
+**Detalle de puntaje:** tfidf=0.1095; bonus=0.0300
+
+> Suponga que la desviación estándar es $0.15 en los precios del galón de la gasolina sin plomo  y recomiende el tamaño apropiado de muestra n que debe usar este periódico para tener un  margen de error con 95% de confianza. a) Suponga que el margen de error requerido es $0.07. b) Asuma que el margen de error deseado es $0.05. c)  Ahora considere que el margen de error requerido es $0.03. 27.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt — bloque 3 — similitud 0.1348
+
+**Detalle de puntaje:** tfidf=0.0948; bonus=0.0400
+
+> 8.3 Determinación del tamaño de la muestra  327 revisó los datos muestrales del estudio anterior y encontró que la desviación estándar muestral  del costo de la renta diaria era $9.65. Al utilizar $9.65 como valor planeado de σ, tenemos: n  (zα/2)2σ2 E 2   (1.96)2(9.65)2 22   89.43 De esta manera, el tamaño de la muestra necesario para obtener un margen de error de $2 debe  ser de por lo menos 89.43 rentas de automóviles medianos.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 04. intervalo de confianza para la varianza y desviación estándar
+
+**Calidad estimada:** alta
+**Mejor similitud:** 0.2829
+**Similitud promedio:** 0.1840
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt; libro-estadistica-aplicada-guarin-salazar-universidad--A09.txt; libro-estadistica-para-administracion-y-economia-levin-A09.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt, bloque 3; libro-estadistica-aplicada-guarin-salazar-universidad--A09.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A09.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A09.txt, bloque 2; libro-estadistica-para-administracion-y-economia-levin-A09.txt, bloque 3
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt — bloque 1 — similitud 0.2829
+
+**Detalle de puntaje:** tfidf=0.2429; bonus=0.0400
+
+> De los capítulos anteriores, usted sabe que la desviación estándar es un estadístico importante, porque mide la dispersión, o la amplitud, de una población o de una muestra de distribución. Cuando se calcula un intervalo de confianza, se utiliza la desviación estándar para estimar el rango del intervalo de confianza. Para demostrar la idea del intervalo de confianza, se comienza con una suposición sim- ple: que conocemos el valor de la desviación estándar de la población, .
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt — bloque 3 — similitud 0.1729
+
+**Detalle de puntaje:** tfidf=0.1529; bonus=0.0200
+
+> A partir de esta pequeña muestra se calcula la desviación estándar de la cantidad de horas que trabajan y se utili- za este valor como la desviación estándar de la población. 2.
+
+### libro-estadistica-aplicada-guarin-salazar-universidad--A09.txt — bloque 1 — similitud 0.1664
+
+**Detalle de puntaje:** tfidf=0.1464; bonus=0.0200
+
+> S2: Varianza muestral e:  Error máximo admitido Sin embargo, n está en función de la varianza, la cual en la práctica es desconocida, ante lo  cual debemos hacer un muestreo piloto para estimar la varianza y proceder a reajustar el  tamaño de la muestra mínimo. http://tifon.unalmed.edu.co/~pagudel/116distribuciones.html (2 de 6) [15/09/2002 7:49:11]
+
+### libro-estadistica-para-administracion-y-economia-levin-A09.txt — bloque 3 — similitud 0.1635
+
+**Detalle de puntaje:** tfidf=0.1235; bonus=0.0400
+
+> Una muestra aleatoria de 57 vehículos dio un promedio de 23.2 mph y una desviación estándar de 0.3 mph. a) Estime la desviación estándar de la población. b) Estime el error estándar de la media para esta población. c) ¿Cuáles son los límites superior e inferior del intervalo de confianza para la velocidad media dado un nivel de confianza deseado de 0.95? ■ 7-65 Dada una media de la muestra de 8, una desviación estándar de la población de 2.6 y una muestra de ta- maño 32, encuentre el nivel de confianza asociado con cada uno de los siguientes intervalos: a) (7.6136, 8.3864). b) (6.85, 9.15). c) (7.195, 8.805). ■ 7-66 Basándose en el conocimiento acerca de las cualidades...
+
+### libro-estadistica-para-administracion-y-economia-levin-A09.txt — bloque 2 — similitud 0.1617
+
+**Detalle de puntaje:** tfidf=0.1217; bonus=0.0400
+
+> La ATCN encuestó a 84 suscriptores y en- contró que el número promedio de horas que ven televisión por semana es 11.6 horas con una desviación estándar de 1.8 horas. a) ¿Cuál es la desviación estándar de la población estimada para esta población? (Existen cerca de 95,000 personas con televisión por cable en Nebraska.) b) Calcule el error estándar estimado de la media. c) Construya un intervalo de confianza del 98% para la media de la población. ■ 7-32 Joel Friedlander es un corredor de la Bolsa de Valores de Nueva York y tiene curiosidad acerca del tiem- po que transcurre entre la colocación de una orden de venta y su ejecución.
+
+### libro-estadistica-para-administracion-y-economia-levin-A09.txt — bloque 1 — similitud 0.1566
+
+**Detalle de puntaje:** tfidf=0.1266; bonus=0.0300
+
+> Si informamos que tenemos el 90% de confianza de que la media de la población de ingresos de las personas que viven en una cierta comunidad está entre $8,000 y $24,000, entonces el rango $8,000-$24,000 es nuestro intervalo de confianza. A menudo, sin embargo, expresaremos el intervalo de confianza en términos de errores estándar, más que con valores numéricos. Así, expresaremos los intervalos de confianza de esta forma: x  1.64x, donde: x   1.64x  límite superior del intervalo de confianza x  1.64x  límite inferior del intervalo de confianza Entonces, los límites de confianza son los límites superior e inferior del intervalo de confianza.
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 05. propiedades asintóticas de los estimadores de máxima verosimilitud
+
+**Calidad estimada:** baja
+**Mejor similitud:** 0.0640
+**Similitud promedio:** 0.0498
+**Fuentes:** libro-estadistica-aplicada-guarin-salazar-universidad--A09.txt; libro-estadistica-matematica-con-aplicaciones-wackerly-A09.txt; libro-estadistica-para-administracion-y-economia-levin-A09.txt
+**Ubicaciones:** libro-estadistica-aplicada-guarin-salazar-universidad--A09.txt, bloque 1; libro-estadistica-matematica-con-aplicaciones-wackerly-A09.txt, bloque 2; libro-estadistica-para-administracion-y-economia-levin-A09.txt, bloque 3
+
+### libro-estadistica-aplicada-guarin-salazar-universidad--A09.txt — bloque 1 — similitud 0.0640
+
+**Detalle de puntaje:** tfidf=0.0540; bonus=0.0100
+
+> Distribuciones Especiales  Si  entonces el 95% de las muestras se encontrarán en el  intervalo  , ahora bien , como los parámetros poblacional • y σ son desconocidos, para muestras  grandes (n>30) la varianza muestral S2 es un buen estimador de la varianza poblacional σ2 ,  podemos afirmar con una confiabilidad predeterminada que la media aritmética poblacional  • se halla en el intervalo estamos admitiendo que la diferencia máxima entre • y es de: esto es: entonces el tamaño de muestra mínimo es donde : : Valor crítico obtenido de la tabla normal, para una  confiabilidad de
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A09.txt — bloque 2 — similitud 0.0483
+
+**Detalle de puntaje:** tfidf=0.0383; bonus=0.0100
+
+> En otras palabras, quisiéramos que la media o valor esperado de la  distribución de estimaciones fuera igual al parámetro estimado; esto es, E( )ˆu = u. Se dice  que los estimadores puntuales que satisfacen esta propiedad son insesgados. La distribución  muestral para un estimador puntual sesgado positivamente, para el que E( )ˆu > u, se muestra  en la Figura 8.2.
+
+### libro-estadistica-para-administracion-y-economia-levin-A09.txt — bloque 3 — similitud 0.0468
+
+**Detalle de puntaje:** tfidf=0.0368; bonus=0.0100
+
+> Una muestra aleatoria de 57 vehículos dio un promedio de 23.2 mph y una desviación estándar de 0.3 mph. a) Estime la desviación estándar de la población. b) Estime el error estándar de la media para esta población. c) ¿Cuáles son los límites superior e inferior del intervalo de confianza para la velocidad media dado un nivel de confianza deseado de 0.95? ■ 7-65 Dada una media de la muestra de 8, una desviación estándar de la población de 2.6 y una muestra de ta- maño 32, encuentre el nivel de confianza asociado con cada uno de los siguientes intervalos: a) (7.6136, 8.3864). b) (6.85, 9.15). c) (7.195, 8.805). ■ 7-66 Basándose en el conocimiento acerca de las cualidades...
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A09.txt — bloque 2 — similitud 0.0402
+
+**Detalle de puntaje:** tfidf=0.0302; bonus=0.0100
+
+> 8.2 Sesgo y error cuadrático medio  de estimadores puntuales La estimación puntual es similar, en muchos aspectos, a disparar a un blanco con un revól- ver. El estimador, que genera estimaciones, es análogo al revólver; una estimación particular  es comparable a un tiro; y el parámetro de interés corresponde al centro del blanco o diana.
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 4 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 06. error estándar estimado de una proporción
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.1886
+**Similitud promedio:** 0.1276
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt; libro-estadistica-para-administracion-y-economia-levin-A09.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt, bloque 3; libro-estadistica-para-administracion-y-economia-levin-A09.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt, bloque 3
+
+### libro-estadistica-para-administracion-y-economia-levin-A09.txt — bloque 2 — similitud 0.1886
+
+**Detalle de puntaje:** tfidf=0.1586; bonus=0.0300
+
+> Como sabe algo acerca de estadística para la administración, Jon leyó 40 páginas seleccionadas de manera aleatoria y encontró que el promedio de errores tipográficos por página fue 4.3 y la desviación estándar de la muestra fue 1.2 errores por página. a) Calcule el error estándar estimado de la media. b) Calcule un intervalo de confianza del 90% para el número promedio verdadero de errores por página en su trabajo. ■ 7-31 La Autoridad para la Televisión por Cable de Nebraska (ATCN) realizó una prueba para determinar el tiempo que las personas pasan frente al televisor por semana.
+
+### libro-estadistica-para-administracion-y-economia-levin-A09.txt — bloque 2 — similitud 0.1518
+
+**Detalle de puntaje:** tfidf=0.1218; bonus=0.0300
+
+> La ATCN encuestó a 84 suscriptores y en- contró que el número promedio de horas que ven televisión por semana es 11.6 horas con una desviación estándar de 1.8 horas. a) ¿Cuál es la desviación estándar de la población estimada para esta población? (Existen cerca de 95,000 personas con televisión por cable en Nebraska.) b) Calcule el error estándar estimado de la media. c) Construya un intervalo de confianza del 98% para la media de la población. ■ 7-32 Joel Friedlander es un corredor de la Bolsa de Valores de Nueva York y tiene curiosidad acerca del tiem- po que transcurre entre la colocación de una orden de venta y su ejecución.
+
+### libro-estadistica-para-administracion-y-economia-levin-A09.txt — bloque 2 — similitud 0.1301
+
+**Detalle de puntaje:** tfidf=0.1001; bonus=0.0300
+
+> Preocupa- da porque su estrategia de comercialización no ha producido una identificación apropiada de las caracte- rísticas del producto, tomó una muestra de 1,500 consumidores y encontró que 956 de éstos pensaban que el producto era una cera para pulir pisos. a) Estime el error estándar de la proporción de personas que tuvo esta grave interpretación errónea del postre. b) Construya un intervalo de confianza del 96% para la proporción verdadera de la población. ■ 7-38 Michael Gordon, un jugador profesional de básquetbol, lanzó 200 tiros de castigo y encestó 174 de ellos. a) Estime el error estándar de la proporción de todos los tiros que Michael falla. b) Construya un...
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt — bloque 3 — similitud 0.1102
+
+**Detalle de puntaje:** tfidf=0.0802; bonus=0.0300
+
+> (8.4) Como la distribución de muestreo de p es una distribución normal, si en la estimación por inter- valo de la proporción poblacional se elige como margen de error zα/2σp , entonces 100(1  α)%  de los intervalos que se obtengan contendrán la verdadera proporción poblacional. Pero para  calcular el margen de error no se puede usar directamente σp, ya que no se conoce p, pues se  está tratando de estimarlo.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt — bloque 3 — similitud 0.0977
+
+**Detalle de puntaje:** tfidf=0.0677; bonus=0.0300
+
+> Suponga que se quiere dar un intervalo de confian- za de 95% para estimar la media poblacional anual de los sueldos iniciales. ¿Cuál es el valor  planeado de la desviación es [Bloque seleccionado #364 | relevancia=18] Pagina 363 8.4 Proporción poblacional  329 ximación normal a la distribución de muestreo de p. La media de la distribución de muestreo de  p es la proporción poblacional p, y el error estándar de p es σp   p(1  p) n
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt — bloque 3 — similitud 0.0873
+
+**Detalle de puntaje:** tfidf=0.0573; bonus=0.0300
+
+> Una mues- tra de 400 electores revela que 300 la apoyarían en las elecciones de noviembre. a) Calcule el valor de la proporción de la población. Calcule el error estándar de la proporción. b) Construya el intervalo de confianza de 99% de la proporción poblacional. c) Interprete sus resultados. 17.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 07. planificación muestral bajo restricción de error máximo
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.1609
+**Similitud promedio:** 0.0879
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt; libro-estadistica-aplicada-guarin-salazar-universidad--A09.txt; libro-estadistica-matematica-con-aplicaciones-wackerly-A09.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt, bloque 3; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt, bloque 5; libro-estadistica-aplicada-guarin-salazar-universidad--A09.txt, bloque 1; libro-estadistica-matematica-con-aplicaciones-wackerly-A09.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt, bloque 2
+
+### libro-estadistica-aplicada-guarin-salazar-universidad--A09.txt — bloque 1 — similitud 0.1609
+
+**Detalle de puntaje:** tfidf=0.1309; bonus=0.0300
+
+> S2: Varianza muestral e:  Error máximo admitido Sin embargo, n está en función de la varianza, la cual en la práctica es desconocida, ante lo  cual debemos hacer un muestreo piloto para estimar la varianza y proceder a reajustar el  tamaño de la muestra mínimo. http://tifon.unalmed.edu.co/~pagudel/116distribuciones.html (2 de 6) [15/09/2002 7:49:11]
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt — bloque 3 — similitud 0.1283
+
+**Detalle de puntaje:** tfidf=0.0983; bonus=0.0300
+
+> Halló que 15 estaban defectuosas. a) ¿Cuál es la proporción aproximada de tazas defectuosas en la población? b) Construya el intervalo de confianza de 95% de la proporción de tazas defectuosas. c) Zack llegó con su proveedor al acuerdo de que devolverá lotes co [Bloque seleccionado #343 | relevancia=16] Pagina 342 La primera variable es el margen de error. El máximo error admisible, designado E, es la magnitud que se suma y resta de la media muestral (o proporción muestral) para determi- nar los puntos extremos del intervalo de confianza.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt — bloque 2 — similitud 0.0734
+
+**Detalle de puntaje:** tfidf=0.0534; bonus=0.0200
+
+> NOTAS Y COMENTARIOS NOTAS Y COMENTARIOS 1. En los casos en que conoce σ, el margen de error,  zα/2(σn ), es fijo y es el mismo para todas las  muestras de tamaño n. Cuando σ no se conoce, el  margen de error, tα/2(sn ), varía de una muestra  a otra.
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A09.txt — bloque 1 — similitud 0.0571
+
+**Detalle de puntaje:** tfidf=0.0371; bonus=0.0200
+
+> La aplicación breve DiceSample utiliza el conocido ejemplo de lanzar dados a una mesa para  introducir el concepto de una distribución de muestreo. Los resultados para diferentes tama- ños muestrales permiten al usuario evaluar el impacto del tamaño de la muestra en la distribu- ción muestral de la media. La aplicación breve también permite la visualización de la forma  en que la distribución muestral es afectada si el dado no está balanceado.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt — bloque 5 — similitud 0.0550
+
+**Detalle de puntaje:** tfidf=0.0250; bonus=0.0300
+
+> [Bloque seleccionado #353 | relevancia=22] Pagina 352 61. Una encuesta a 36 propietarios de iPhone seleccionados al azar mostró que el precio de compra tiene una media de $416, con una desviación estándar muestral de $180. a) Calcule el error estándar de la media muestral. b) Calcule el intervalo de confianza de 95% de la media. c) ¿De qué tamaño debe ser la muestra para estimar la media poblacional dentro de $10? 62.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt — bloque 3 — similitud 0.0524
+
+**Detalle de puntaje:** tfidf=0.0424; bonus=0.0100
+
+> O en una encuesta de opinión, podemos decidir que desea- mos calcular la proporción de la población con un margen de error de más o menos 5%. El margen de error es la magnitud del error que se tolerará al estimar un parámetro pobla- cional.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 4 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 08. requisitos instrucciones
+
+**Calidad estimada:** baja
+**Mejor similitud:** 0.0731
+**Similitud promedio:** 0.0731
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt, bloque 5
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt — bloque 5 — similitud 0.0731
+
+**Detalle de puntaje:** tfidf=0.0631; bonus=0.0100
+
+> Decide con base en un nivel de confianza de 95%, y establece que la proporción estima- da debe encontrarse en un margen de menos de 2% de la proporción poblacional. Una encuesta piloto revela que 5 de 50 de los entrevistados tenían dos o más trabajos. ¿A cuántos trabajadores debe entrevistar para satisfacer los requisitos? 63.
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Hay 1 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 09. requisitos instrucciones actividad
+
+**Calidad estimada:** baja
+**Mejor similitud:** 0.0589
+**Similitud promedio:** 0.0467
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt; libro-estadistica-aplicada-guarin-salazar-universidad--A09.txt; libro-estadistica-matematica-con-aplicaciones-wackerly-A09.txt; libro-estadistica-para-administracion-y-economia-levin-A09.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt, bloque 5; libro-estadistica-aplicada-guarin-salazar-universidad--A09.txt, bloque 1; libro-estadistica-matematica-con-aplicaciones-wackerly-A09.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A09.txt, bloque 1
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt — bloque 5 — similitud 0.0589
+
+**Detalle de puntaje:** tfidf=0.0489; bonus=0.0100
+
+> Decide con base en un nivel de confianza de 95%, y establece que la proporción estima- da debe encontrarse en un margen de menos de 2% de la proporción poblacional. Una encuesta piloto revela que 5 de 50 de los entrevistados tenían dos o más trabajos. ¿A cuántos trabajadores debe entrevistar para satisfacer los requisitos? 63.
+
+### libro-estadistica-aplicada-guarin-salazar-universidad--A09.txt — bloque 1 — similitud 0.0466
+
+**Detalle de puntaje:** tfidf=0.0366; bonus=0.0100
+
+> Fuente bibliográfica: Estadística aplicada - Guarín Salazar. Universidad Nacional de Colombia.pdf Actividad: 9 (3.3 Evaluación 5% Cuestionario) Palabras clave: estimación puntual, intervalo de confianza, valor crítico, t de Student, ji-cuadrada, margen de error [Bloque seleccionado #170 | relevancia=2] --- PÁGINA PDF 169 --- ESTADÍSTICA APLICADA 11.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt — bloque 1 — similitud 0.0463
+
+**Detalle de puntaje:** tfidf=0.0363; bonus=0.0100
+
+> Fuente bibliográfica: Estadística aplicada a los negocios y la economía - Lind, Marchal y Wathen. 15.ª edición.pdf Actividad: 9 (3.3 Evaluación 5% Cuestionario) Palabras clave: estimación puntual, intervalo de confianza, valor crítico, t de Student, ji-cuadrada, margen de error [Bloque seleccionado #326 | relevancia=16] Pagina 325 Desviación estándar de la población conocida () Un intervalo de confianza se calcula con el empleo de dos estadísticos: la media muestral  y la desviación estándar.
+
+### libro-estadistica-para-administracion-y-economia-levin-A09.txt — bloque 1 — similitud 0.0450
+
+**Detalle de puntaje:** tfidf=0.0350; bonus=0.0100
+
+> Fuente bibliográfica: Estadística para administración y economía - Levin y Rubin. 7.ª edición revisada.pdf Actividad: 9 (3.3 Evaluación 5% Cuestionario) Palabras clave: estimación puntual, intervalo de confianza, valor crítico, t de Student, ji-cuadrada, margen de error [Bloque seleccionado #294 | relevancia=14] Pagina 293 En este capítulo introducimos métodos que nos permiten estimar con precisión razonable la proporción de la población (la fracción de la población que posee una característica dada) y la me- dia de la población. Calcular la proporción exacta o la media exacta sería una meta imposible.
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A09.txt — bloque 1 — similitud 0.0366
+
+**Detalle de puntaje:** tfidf=0.0266; bonus=0.0100
+
+> Fuente bibliográfica: Estadística matemática con aplicaciones - Wackerly, Mendenhall y Scheaffer. 7.ª edición.pdf Actividad: 9 (3.3 Evaluación 5% Cuestionario) Palabras clave: estimación puntual, intervalo de confianza, valor crítico, t de Student, ji-cuadrada, margen de error [Bloque seleccionado #19 | relevancia=4] Pagina 18 xvi Prefacio of Gamma Density Functions and Comparison of Beta Density Functions, (Comparación de  Funciones de Densidad Gamma y Comparación de Funciones de Densidad Beta), respec- tivamente.
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 5 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 10. error estándar
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2223
+**Similitud promedio:** 0.1833
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt; libro-estadistica-para-administracion-y-economia-levin-A09.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A09.txt, bloque 2; libro-estadistica-para-administracion-y-economia-levin-A09.txt, bloque 3; libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt, bloque 3
+
+### libro-estadistica-para-administracion-y-economia-levin-A09.txt — bloque 2 — similitud 0.2223
+
+**Detalle de puntaje:** tfidf=0.1423; bonus=0.0800
+
+> Preocupa- da porque su estrategia de comercialización no ha producido una identificación apropiada de las caracte- rísticas del producto, tomó una muestra de 1,500 consumidores y encontró que 956 de éstos pensaban que el producto era una cera para pulir pisos. a) Estime el error estándar de la proporción de personas que tuvo esta grave interpretación errónea del postre. b) Construya un intervalo de confianza del 96% para la proporción verdadera de la población. ■ 7-38 Michael Gordon, un jugador profesional de básquetbol, lanzó 200 tiros de castigo y encestó 174 de ellos. a) Estime el error estándar de la proporción de todos los tiros que Michael falla. b) Construya un...
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt — bloque 3 — similitud 0.1953
+
+**Detalle de puntaje:** tfidf=0.1153; bonus=0.0800
+
+> Suponga que se quiere dar un intervalo de confian- za de 95% para estimar la media poblacional anual de los sueldos iniciales. ¿Cuál es el valor  planeado de la desviación es [Bloque seleccionado #364 | relevancia=18] Pagina 363 8.4 Proporción poblacional  329 ximación normal a la distribución de muestreo de p. La media de la distribución de muestreo de  p es la proporción poblacional p, y el error estándar de p es σp   p(1  p) n
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt — bloque 1 — similitud 0.1738
+
+**Detalle de puntaje:** tfidf=0.0938; bonus=0.0800
+
+> A partir de esta información, y del teorema central del límite, sabemos que la distribución muestral sigue una distribución de probabilidad normal con una media  y una desviación estándar  . Recuerde también que este valor recibe el nombre de error estándar. Los resultados del teorema central del límite permiten afirmar lo siguiente con respecto a los intervalos de confianza utilizando el estadístico z: 1.
+
+### libro-estadistica-para-administracion-y-economia-levin-A09.txt — bloque 2 — similitud 0.1714
+
+**Detalle de puntaje:** tfidf=0.0914; bonus=0.0800
+
+> Como sabe algo acerca de estadística para la administración, Jon leyó 40 páginas seleccionadas de manera aleatoria y encontró que el promedio de errores tipográficos por página fue 4.3 y la desviación estándar de la muestra fue 1.2 errores por página. a) Calcule el error estándar estimado de la media. b) Calcule un intervalo de confianza del 90% para el número promedio verdadero de errores por página en su trabajo. ■ 7-31 La Autoridad para la Televisión por Cable de Nebraska (ATCN) realizó una prueba para determinar el tiempo que las personas pasan frente al televisor por semana.
+
+### libro-estadistica-para-administracion-y-economia-levin-A09.txt — bloque 3 — similitud 0.1711
+
+**Detalle de puntaje:** tfidf=0.0911; bonus=0.0800
+
+> Una muestra aleatoria de 57 vehículos dio un promedio de 23.2 mph y una desviación estándar de 0.3 mph. a) Estime la desviación estándar de la población. b) Estime el error estándar de la media para esta población. c) ¿Cuáles son los límites superior e inferior del intervalo de confianza para la velocidad media dado un nivel de confianza deseado de 0.95? ■ 7-65 Dada una media de la muestra de 8, una desviación estándar de la población de 2.6 y una muestra de ta- maño 32, encuentre el nivel de confianza asociado con cada uno de los siguientes intervalos: a) (7.6136, 8.3864). b) (6.85, 9.15). c) (7.195, 8.805). ■ 7-66 Basándose en el conocimiento acerca de las cualidades...
+
+### libro-estadistica-para-administracion-y-economia-levin-A09.txt — bloque 2 — similitud 0.1662
+
+**Detalle de puntaje:** tfidf=0.0862; bonus=0.0800
+
+> La ATCN encuestó a 84 suscriptores y en- contró que el número promedio de horas que ven televisión por semana es 11.6 horas con una desviación estándar de 1.8 horas. a) ¿Cuál es la desviación estándar de la población estimada para esta población? (Existen cerca de 95,000 personas con televisión por cable en Nebraska.) b) Calcule el error estándar estimado de la media. c) Construya un intervalo de confianza del 98% para la media de la población. ■ 7-32 Joel Friedlander es un corredor de la Bolsa de Valores de Nueva York y tiene curiosidad acerca del tiem- po que transcurre entre la colocación de una orden de venta y su ejecución.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 11. estimado proporción
+
+**Calidad estimada:** baja
+**Mejor similitud:** 0.0925
+**Similitud promedio:** 0.0814
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt; libro-estadistica-matematica-con-aplicaciones-wackerly-A09.txt; libro-estadistica-para-administracion-y-economia-levin-A09.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt, bloque 2; libro-estadistica-matematica-con-aplicaciones-wackerly-A09.txt, bloque 3; libro-estadistica-para-administracion-y-economia-levin-A09.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt, bloque 3
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt — bloque 2 — similitud 0.0925
+
+**Detalle de puntaje:** tfidf=0.0825; bonus=0.0100
+
+> [Bloque seleccionado #340 | relevancia=14] Pagina 339 Como ejemplo de proporción, una encuesta reciente indicó que 92 de cada 100 entrevis- tados estaban de acuerdo con el horario de verano para ahorrar energía. La proporción de la muestra es de 92/100, o 0.92, o 92%.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt — bloque 3 — similitud 0.0891
+
+**Detalle de puntaje:** tfidf=0.0791; bonus=0.0100
+
+> (8.4) Como la distribución de muestreo de p es una distribución normal, si en la estimación por inter- valo de la proporción poblacional se elige como margen de error zα/2σp , entonces 100(1  α)%  de los intervalos que se obtengan contendrán la verdadera proporción poblacional. Pero para  calcular el margen de error no se puede usar directamente σp, ya que no se conoce p, pues se  está tratando de estimarlo.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt — bloque 2 — similitud 0.0847
+
+**Detalle de puntaje:** tfidf=0.0647; bonus=0.0200
+
+> La proporción de la muestra es de 0.60, pero no se conoce la proporción poblacional. Es decir, no se conoce qué proporción de electores de la población votará por Gail.
+
+### libro-estadistica-para-administracion-y-economia-levin-A09.txt — bloque 2 — similitud 0.0743
+
+**Detalle de puntaje:** tfidf=0.0643; bonus=0.0100
+
+> Preocupa- da porque su estrategia de comercialización no ha producido una identificación apropiada de las caracte- rísticas del producto, tomó una muestra de 1,500 consumidores y encontró que 956 de éstos pensaban que el producto era una cera para pulir pisos. a) Estime el error estándar de la proporción de personas que tuvo esta grave interpretación errónea del postre. b) Construya un intervalo de confianza del 96% para la proporción verdadera de la población. ■ 7-38 Michael Gordon, un jugador profesional de básquetbol, lanzó 200 tiros de castigo y encestó 174 de ellos. a) Estime el error estándar de la proporción de todos los tiros que Michael falla. b) Construya un...
+
+### libro-estadistica-para-administracion-y-economia-levin-A09.txt — bloque 2 — similitud 0.0741
+
+**Detalle de puntaje:** tfidf=0.0641; bonus=0.0100
+
+> Como sabe algo acerca de estadística para la administración, Jon leyó 40 páginas seleccionadas de manera aleatoria y encontró que el promedio de errores tipográficos por página fue 4.3 y la desviación estándar de la muestra fue 1.2 errores por página. a) Calcule el error estándar estimado de la media. b) Calcule un intervalo de confianza del 90% para el número promedio verdadero de errores por página en su trabajo. ■ 7-31 La Autoridad para la Televisión por Cable de Nebraska (ATCN) realizó una prueba para determinar el tiempo que las personas pasan frente al televisor por semana.
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A09.txt — bloque 3 — similitud 0.0735
+
+**Detalle de puntaje:** tfidf=0.0635; bonus=0.0100
+
+> *8.134  El intervalo de confi anza de una muestra pequeña para m, basado en una t de Student (Sección 8.8)  posee una amplitud aleatoria, en contraste con el intervalo de confi anza de una muestra grande (Sección  8.6), donde la amplitud no es aleatoria si se conoce s2. Encuentre el valor esperado de la amplitud del  intervalo en el caso de una muestra pequeña si se desconoce s2. *8.135  Un intervalo de confi anza es insesgado si el valor esperado del punto medio del intervalo es igual al  parámetro estimado.
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 3 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 12. estándar estimado
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2044
+**Similitud promedio:** 0.0990
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt; libro-estadistica-matematica-con-aplicaciones-wackerly-A09.txt; libro-estadistica-para-administracion-y-economia-levin-A09.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt, bloque 3; libro-estadistica-matematica-con-aplicaciones-wackerly-A09.txt, bloque 3; libro-estadistica-para-administracion-y-economia-levin-A09.txt, bloque 2; libro-estadistica-para-administracion-y-economia-levin-A09.txt, bloque 3
+
+### libro-estadistica-para-administracion-y-economia-levin-A09.txt — bloque 2 — similitud 0.2044
+
+**Detalle de puntaje:** tfidf=0.1244; bonus=0.0800
+
+> Como sabe algo acerca de estadística para la administración, Jon leyó 40 páginas seleccionadas de manera aleatoria y encontró que el promedio de errores tipográficos por página fue 4.3 y la desviación estándar de la muestra fue 1.2 errores por página. a) Calcule el error estándar estimado de la media. b) Calcule un intervalo de confianza del 90% para el número promedio verdadero de errores por página en su trabajo. ■ 7-31 La Autoridad para la Televisión por Cable de Nebraska (ATCN) realizó una prueba para determinar el tiempo que las personas pasan frente al televisor por semana.
+
+### libro-estadistica-para-administracion-y-economia-levin-A09.txt — bloque 2 — similitud 0.1820
+
+**Detalle de puntaje:** tfidf=0.1020; bonus=0.0800
+
+> La ATCN encuestó a 84 suscriptores y en- contró que el número promedio de horas que ven televisión por semana es 11.6 horas con una desviación estándar de 1.8 horas. a) ¿Cuál es la desviación estándar de la población estimada para esta población? (Existen cerca de 95,000 personas con televisión por cable en Nebraska.) b) Calcule el error estándar estimado de la media. c) Construya un intervalo de confianza del 98% para la media de la población. ■ 7-32 Joel Friedlander es un corredor de la Bolsa de Valores de Nueva York y tiene curiosidad acerca del tiem- po que transcurre entre la colocación de una orden de venta y su ejecución.
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A09.txt — bloque 3 — similitud 0.0552
+
+**Detalle de puntaje:** tfidf=0.0452; bonus=0.0100
+
+> *8.134  El intervalo de confi anza de una muestra pequeña para m, basado en una t de Student (Sección 8.8)  posee una amplitud aleatoria, en contraste con el intervalo de confi anza de una muestra grande (Sección  8.6), donde la amplitud no es aleatoria si se conoce s2. Encuentre el valor esperado de la amplitud del  intervalo en el caso de una muestra pequeña si se desconoce s2. *8.135  Un intervalo de confi anza es insesgado si el valor esperado del punto medio del intervalo es igual al  parámetro estimado.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt — bloque 1 — similitud 0.0514
+
+**Detalle de puntaje:** tfidf=0.0414; bonus=0.0100
+
+> Fuente bibliográfica: Estadística aplicada a los negocios y la economía - Lind, Marchal y Wathen. 15.ª edición.pdf Actividad: 9 (3.3 Evaluación 5% Cuestionario) Palabras clave: estimación puntual, intervalo de confianza, valor crítico, t de Student, ji-cuadrada, margen de error [Bloque seleccionado #326 | relevancia=16] Pagina 325 Desviación estándar de la población conocida () Un intervalo de confianza se calcula con el empleo de dos estadísticos: la media muestral  y la desviación estándar.
+
+### libro-estadistica-para-administracion-y-economia-levin-A09.txt — bloque 3 — similitud 0.0509
+
+**Detalle de puntaje:** tfidf=0.0309; bonus=0.0200
+
+> Una muestra aleatoria de 57 vehículos dio un promedio de 23.2 mph y una desviación estándar de 0.3 mph. a) Estime la desviación estándar de la población. b) Estime el error estándar de la media para esta población. c) ¿Cuáles son los límites superior e inferior del intervalo de confianza para la velocidad media dado un nivel de confianza deseado de 0.95? ■ 7-65 Dada una media de la muestra de 8, una desviación estándar de la población de 2.6 y una muestra de ta- maño 32, encuentre el nivel de confianza asociado con cada uno de los siguientes intervalos: a) (7.6136, 8.3864). b) (6.85, 9.15). c) (7.195, 8.805). ■ 7-66 Basándose en el conocimiento acerca de las cualidades...
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt — bloque 3 — similitud 0.0498
+
+**Detalle de puntaje:** tfidf=0.0398; bonus=0.0100
+
+> A partir de esta pequeña muestra se calcula la desviación estándar de la cantidad de horas que trabajan y se utili- za este valor como la desviación estándar de la población. 2.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 4 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 13. intervalo confianza
+
+**Calidad estimada:** alta
+**Mejor similitud:** 0.2837
+**Similitud promedio:** 0.2127
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt; libro-estadistica-para-administracion-y-economia-levin-A09.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt, bloque 2; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt, bloque 5; libro-estadistica-para-administracion-y-economia-levin-A09.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt, bloque 1
+
+### libro-estadistica-para-administracion-y-economia-levin-A09.txt — bloque 1 — similitud 0.2837
+
+**Detalle de puntaje:** tfidf=0.2637; bonus=0.0200
+
+> Si informamos que tenemos el 90% de confianza de que la media de la población de ingresos de las personas que viven en una cierta comunidad está entre $8,000 y $24,000, entonces el rango $8,000-$24,000 es nuestro intervalo de confianza. A menudo, sin embargo, expresaremos el intervalo de confianza en términos de errores estándar, más que con valores numéricos.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt — bloque 1 — similitud 0.2387
+
+**Detalle de puntaje:** tfidf=0.2187; bonus=0.0200
+
+> En una muestra aleatoria simple de 50 artículos de una población en la que σ  6, la media  muestral resultante es 32. a) Proporcione un intervalo de confianza de 90% para la media poblacional. b) Calcule un intervalo de confianza de 95% para la media poblacional. c)  Proporcione un intervalo de confianza de 99% para el mismo indicador. 3.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt — bloque 5 — similitud 0.2079
+
+**Detalle de puntaje:** tfidf=0.1879; bonus=0.0200
+
+> Por otro lado, si los puntos extremos del intervalo de confianza tienen el mismo signo, esto indica que las medias de tratamiento difieren. Por ejemplo, si  y el intervalo de confianza variará de 0.60 hasta 0.10.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt — bloque 1 — similitud 0.2055
+
+**Detalle de puntaje:** tfidf=0.1855; bonus=0.0200
+
+> Fuente bibliográfica: Estadística aplicada a los negocios y la economía - Lind, Marchal y Wathen. 15.ª edición.pdf Actividad: 9 (3.3 Evaluación 5% Cuestionario) Palabras clave: estimación puntual, intervalo de confianza, valor crítico, t de Student, ji-cuadrada, margen de error [Bloque seleccionado #326 | relevancia=16] Pagina 325 Desviación estándar de la población conocida () Un intervalo de confianza se calcula con el empleo de dos estadísticos: la media muestral  y la desviación estándar.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt — bloque 2 — similitud 0.1728
+
+**Detalle de puntaje:** tfidf=0.1528; bonus=0.0200
+
+> Así, p, que es de 0.60, constituye un estimador de , que no se conoce. Para crear el intervalo de confianza de una proporción de población se aplica la fórmula: Un ejemplo ayudará a explicar los detalles para determinar un intervalo de confianza y el resultado. [Bloque seleccionado #341 | relevancia=14] Pagina 340 Un repaso de la interpretación del intervalo de confianza: si la encuesta fue aplicada 100 veces con 100 muestras distintas, los intervalos de confianza construidos a partir de 95 de las mues- tras contendrán la verdadera proporción de la población.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt — bloque 5 — similitud 0.1675
+
+**Detalle de puntaje:** tfidf=0.1475; bonus=0.0200
+
+> MSE es el error medio cuadrático que se obtuvo de la tabla ANOVA [SSE/(n – k)]. n1 es el número de observaciones en la primera muestra. n2 es el número de observaciones en la segunda muestra. ¿Cómo se decide si hay una diferencia entre las medias de tratamiento? Si el intervalo de confianza incluye cero, no existe diferencia entre ellas. Por ejemplo, si el punto extremo izquierdo del intervalo de confianza tiene signo negativo y el punto extremo derecho tiene signo positivo, el intervalo incluye cero, y las dos medias no difieren.
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 14. proporción
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2498
+**Similitud promedio:** 0.2205
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt; libro-estadistica-para-administracion-y-economia-levin-A09.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt, bloque 2; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt, bloque 3; libro-estadistica-para-administracion-y-economia-levin-A09.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt, bloque 3; libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt, bloque 4
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt — bloque 2 — similitud 0.2498
+
+**Detalle de puntaje:** tfidf=0.1798; bonus=0.0700
+
+> [Bloque seleccionado #340 | relevancia=14] Pagina 339 Como ejemplo de proporción, una encuesta reciente indicó que 92 de cada 100 entrevis- tados estaban de acuerdo con el horario de verano para ahorrar energía. La proporción de la muestra es de 92/100, o 0.92, o 92%.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt — bloque 3 — similitud 0.2423
+
+**Detalle de puntaje:** tfidf=0.1723; bonus=0.0700
+
+> (8.4) Como la distribución de muestreo de p es una distribución normal, si en la estimación por inter- valo de la proporción poblacional se elige como margen de error zα/2σp , entonces 100(1  α)%  de los intervalos que se obtengan contendrán la verdadera proporción poblacional. Pero para  calcular el margen de error no se puede usar directamente σp, ya que no se conoce p, pues se  está tratando de estimarlo.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt — bloque 2 — similitud 0.2111
+
+**Detalle de puntaje:** tfidf=0.1411; bonus=0.0700
+
+> La proporción de la muestra es de 0.60, pero no se conoce la proporción poblacional. Es decir, no se conoce qué proporción de electores de la población votará por Gail.
+
+### libro-estadistica-para-administracion-y-economia-levin-A09.txt — bloque 2 — similitud 0.2100
+
+**Detalle de puntaje:** tfidf=0.1400; bonus=0.0700
+
+> Preocupa- da porque su estrategia de comercialización no ha producido una identificación apropiada de las caracte- rísticas del producto, tomó una muestra de 1,500 consumidores y encontró que 956 de éstos pensaban que el producto era una cera para pulir pisos. a) Estime el error estándar de la proporción de personas que tuvo esta grave interpretación errónea del postre. b) Construya un intervalo de confianza del 96% para la proporción verdadera de la población. ■ 7-38 Michael Gordon, un jugador profesional de básquetbol, lanzó 200 tiros de castigo y encestó 174 de ellos. a) Estime el error estándar de la proporción de todos los tiros que Michael falla. b) Construya un...
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt — bloque 4 — similitud 0.2052
+
+**Detalle de puntaje:** tfidf=0.1352; bonus=0.0700
+
+> [Bloque seleccionado #367 | relevancia=28] Pagina 366 332  Capítulo 8 Estimación por intervalo 32. En una muestra aleatoria de 800 elementos se obtiene una proporción muestral, p  0.70. a) Proporcione un intervalo de 90% de confianza para la proporción poblacional. b) Proporcione un intervalo de confianza de 95% para la proporción poblacional. 33.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt — bloque 3 — similitud 0.2045
+
+**Detalle de puntaje:** tfidf=0.1345; bonus=0.0700
+
+> Antes de solicitar la postulación, decide realizar una encuesta entre los electores de Bear Gulch. Una mues- tra de 400 electores revela que 300 la apoyarían en las elecciones de noviembre. a) Calcule el valor de la proporción de la población. Calcule el error estándar de la proporción. b) Construya el intervalo de confianza de 99% de la proporción poblacional. c) Interprete sus resultados.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 15. poblacional
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2312
+**Similitud promedio:** 0.1833
+**Fuentes:** libro-estadistica-aplicada-guarin-salazar-universidad--A09.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt
+**Ubicaciones:** libro-estadistica-aplicada-guarin-salazar-universidad--A09.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt, bloque 3; libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt, bloque 4
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt — bloque 3 — similitud 0.2312
+
+**Detalle de puntaje:** tfidf=0.1612; bonus=0.0700
+
+> (8.4) Como la distribución de muestreo de p es una distribución normal, si en la estimación por inter- valo de la proporción poblacional se elige como margen de error zα/2σp , entonces 100(1  α)%  de los intervalos que se obtengan contendrán la verdadera proporción poblacional. Pero para  calcular el margen de error no se puede usar directamente σp, ya que no se conoce p, pues se  está tratando de estimarlo.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt — bloque 1 — similitud 0.2266
+
+**Detalle de puntaje:** tfidf=0.1566; bonus=0.0700
+
+> En una muestra aleatoria simple de 50 artículos de una población en la que σ  6, la media  muestral resultante es 32. a) Proporcione un intervalo de confianza de 90% para la media poblacional. b) Calcule un intervalo de confianza de 95% para la media poblacional. c)  Proporcione un intervalo de confianza de 99% para el mismo indicador. 3.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt — bloque 4 — similitud 0.1712
+
+**Detalle de puntaje:** tfidf=0.1012; bonus=0.0700
+
+> [Bloque seleccionado #367 | relevancia=28] Pagina 366 332  Capítulo 8 Estimación por intervalo 32. En una muestra aleatoria de 800 elementos se obtiene una proporción muestral, p  0.70. a) Proporcione un intervalo de 90% de confianza para la proporción poblacional. b) Proporcione un intervalo de confianza de 95% para la proporción poblacional. 33.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt — bloque 4 — similitud 0.1605
+
+**Detalle de puntaje:** tfidf=0.0905; bonus=0.0700
+
+> Los resultados mostraron que 1 760 de los encuestados afirmaron  que la salud futura es una de sus principales preocupaciones económicas. a) ¿Cuál es la estimación puntual de la proporción poblacional de adultos que piensan que la  salud futura es una de las principales preocupaciones económicas? b) A 90% de confianza, ¿cuál es el margen de error? c)  Proporcione el intervalo de 90% de confianza para la proporción poblacional de adultos  que piensan que la salud futura es una de las principales preocupaciones económicas. d) Proporcione el intervalo de 95% de confianza para esta proporción poblacional. 36.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A09.txt — bloque 2 — similitud 0.1564
+
+**Detalle de puntaje:** tfidf=0.0864; bonus=0.0700
+
+> Valores mayores  de s tienden a corresponderse con valores mayo- res de x. De esta manera, cuando x es mayor que  la media poblacional, s tiende a ser mayor que σ. Este sesgo hace que el margen de error, tα/2(sn ),  sea mayor de lo que sería si se conociera σ.
+
+### libro-estadistica-aplicada-guarin-salazar-universidad--A09.txt — bloque 1 — similitud 0.1541
+
+**Detalle de puntaje:** tfidf=0.0841; bonus=0.0700
+
+> Distribuciones Especiales  Si  entonces el 95% de las muestras se encontrarán en el  intervalo  , ahora bien , como los parámetros poblacional • y σ son desconocidos, para muestras  grandes (n>30) la varianza muestral S2 es un buen estimador de la varianza poblacional σ2 ,  podemos afirmar con una confiabilidad predeterminada que la media aritmética poblacional  • se halla en el intervalo estamos admitiendo que la diferencia máxima entre • y es de: esto es: entonces el tamaño de muestra mínimo es donde : : Valor crítico obtenido de la tabla normal, para una  confiabilidad de
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 16. desviación
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2206
+**Similitud promedio:** 0.1749
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt; libro-estadistica-para-administracion-y-economia-levin-A09.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt, bloque 3; libro-estadistica-para-administracion-y-economia-levin-A09.txt, bloque 2; libro-estadistica-para-administracion-y-economia-levin-A09.txt, bloque 3
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt — bloque 1 — similitud 0.2206
+
+**Detalle de puntaje:** tfidf=0.1506; bonus=0.0700
+
+> Fuente bibliográfica: Estadística aplicada a los negocios y la economía - Lind, Marchal y Wathen. 15.ª edición.pdf Actividad: 9 (3.3 Evaluación 5% Cuestionario) Palabras clave: estimación puntual, intervalo de confianza, valor crítico, t de Student, ji-cuadrada, margen de error [Bloque seleccionado #326 | relevancia=16] Pagina 325 Desviación estándar de la población conocida () Un intervalo de confianza se calcula con el empleo de dos estadísticos: la media muestral  y la desviación estándar.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt — bloque 3 — similitud 0.2147
+
+**Detalle de puntaje:** tfidf=0.1447; bonus=0.0700
+
+> A partir de esta pequeña muestra se calcula la desviación estándar de la cantidad de horas que trabajan y se utili- za este valor como la desviación estándar de la población. 2.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A09.txt — bloque 1 — similitud 0.1567
+
+**Detalle de puntaje:** tfidf=0.0867; bonus=0.0700
+
+> Recuerde que la distribución muestral de la media es la distribución de todas las medias muestrales, , con tamaño de la muestra, n, de una población. Se conoce la desviación están- dar de la población, . A partir de esta información, y del teorema central del límite, sabemos que la distribución muestral sigue una distribución de probabilidad normal con una media  y una desviación estándar  .
+
+### libro-estadistica-para-administracion-y-economia-levin-A09.txt — bloque 3 — similitud 0.1541
+
+**Detalle de puntaje:** tfidf=0.0841; bonus=0.0700
+
+> Una muestra aleatoria de 57 vehículos dio un promedio de 23.2 mph y una desviación estándar de 0.3 mph. a) Estime la desviación estándar de la población. b) Estime el error estándar de la media para esta población. c) ¿Cuáles son los límites superior e inferior del intervalo de confianza para la velocidad media dado un nivel de confianza deseado de 0.95? ■ 7-65 Dada una media de la muestra de 8, una desviación estándar de la población de 2.6 y una muestra de ta- maño 32, encuentre el nivel de confianza asociado con cada uno de los siguientes intervalos: a) (7.6136, 8.3864). b) (6.85, 9.15). c) (7.195, 8.805). ■ 7-66 Basándose en el conocimiento acerca de las cualidades...
+
+### libro-estadistica-para-administracion-y-economia-levin-A09.txt — bloque 3 — similitud 0.1538
+
+**Detalle de puntaje:** tfidf=0.0838; bonus=0.0700
+
+> Emplee esta información contestar los ejercicios del 7-73 al 7-76. 7-73 a) Estime el cambio promedio en el valor del activo neto (VAN) del 14 de mayo de 1993 para todos los fondos listados en The Wall Street Journal. b) Estime la desviación estándar del cambio en el valor del activo neto para todos los fondos del inciso a). c) Encuentre un intervalo de confianza del 95% para el cambio promedio en el valor del activo neto. ¿Qué suposiciones necesita hacer acerca de la distribución del cambio individual en el valor del acti- vo neto, con el fin de derivar el intervalo de confianza?
+
+### libro-estadistica-para-administracion-y-economia-levin-A09.txt — bloque 2 — similitud 0.1496
+
+**Detalle de puntaje:** tfidf=0.0796; bonus=0.0700
+
+> La ATCN encuestó a 84 suscriptores y en- contró que el número promedio de horas que ven televisión por semana es 11.6 horas con una desviación estándar de 1.8 horas. a) ¿Cuál es la desviación estándar de la población estimada para esta población? (Existen cerca de 95,000 personas con televisión por cable en Nebraska.) b) Calcule el error estándar estimado de la media. c) Construya un intervalo de confianza del 98% para la media de la población. ■ 7-32 Joel Friedlander es un corredor de la Bolsa de Valores de Nueva York y tiene curiosidad acerca del tiem- po que transcurre entre la colocación de una orden de venta y su ejecución.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.

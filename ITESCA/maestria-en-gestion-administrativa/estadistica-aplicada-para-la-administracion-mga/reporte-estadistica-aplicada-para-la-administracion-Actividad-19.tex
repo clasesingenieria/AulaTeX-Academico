@@ -1,0 +1,119 @@
+% Plantilla y base conceptual generada con AulaTeX (Amazon Nova Pro) para Actividad 19 (A19).
+% Contrato AulaTeX: portada oficial ITESCA, Resumen con declaracion IA, Tabla de contenido y tres tiempos.
+\def\estadisticatitulo{Evaluación sobre descomposición de series de tiempo y métodos de pronóstico económico}
+\def\estadisticasubtitulo{Actividad 19: Cuestionario}
+\def\estadisticafecha{22 de noviembre de 2026}
+\def\estadisticaunidad{Análisis de series de tiempo y pronósticos económicos}
+\def\portadaoficial{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/portada-oficial.png}
+\def\estadisticaextras{%
+  \usepackage{fontspec}
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+  \usepackage{longtable,booktabs,array}
+  \usetikzlibrary{babel}
+  \geometry{letterpaper,left=2.3cm,right=2.3cm,top=2.2cm,bottom=2.2cm}
+  \hypersetup{pdftitle={Evaluación sobre descomposición de series de tiempo y métodos de pronóstico económico},pdfsubject={Actividad 19 - Estadística aplicada para la administración}}
+  \setcitestyle{citesep={;}}
+  \renewcommand{\insertcoverwatermark}{}
+  \renewcommand{\insertcoverinstitutionalfooter}{}
+  \renewcommand{\templatePortrait}{%
+    \thispagestyle{empty}
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{\portadaoficial}};
+      \node[anchor=north west,text=white,text width=10.6cm,align=center,inner sep=0pt] at ([xshift=10.1cm,yshift=-19.4cm]current page.north west) {%
+        \setstretch{1}\fontsize{12}{15}\selectfont
+        {\fontsize{15}{18}\selectfont\bfseries Evaluación sobre descomposición de series de tiempo y métodos de pronóstico económico}\par\vspace{0.16cm}
+        Estadística aplicada para la administración\par
+        Actividad 19: Cuestionario\par\vspace{0.12cm}
+        Martín Jonathan de la Cruz Muñoz\par
+        Matrícula: 26130503\par
+        Dra. Yoana Elizeth Tauitmes Delgado\par
+        22 de noviembre de 2026
+      };
+    \end{tikzpicture}\null\clearpage
+  }
+  \renewcommand{\templatePagecfg}{}
+  \renewcommand{\templateFinalcfg}{%
+    \pagestyle{fancy}\fancyhf{}\fancyfoot[C]{\fontsize{10}{12}\selectfont\thepage}
+    \renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}
+    \setcounter{page}{2}\renewcommand{\thepage}{\arabic{page}}
+  }
+  \titleformat{\section}{\normalfont\fontsize{12}{15}\selectfont\bfseries\color{itescaRedDark}}{\thesection.}{0.5em}{}
+  \titleformat{\subsection}{\normalfont\fontsize{12}{15}\selectfont\bfseries}{\thesubsection.}{0.5em}{}
+  \titlespacing*{\section}{0pt}{8pt}{5pt}
+  \titlespacing*{\subsection}{0pt}{7pt}{4pt}
+  \renewcommand{\footnotesize}{\fontsize{12}{14.4}\selectfont}
+  \setlength{\parindent}{1.1cm}
+  \setlength{\parskip}{3pt}
+  \urlstyle{same}
+  \input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/investigacion-articulos/formato-fichas.tex}
+}
+\def\estadisticaresumen{Esta actividad de cuestionario se centra en la evaluación de conocimientos sobre la descomposición de series de tiempo y métodos de pronóstico económico. El fundamento estadístico radica en la identificación y análisis de componentes como tendencia, ciclo, estacionalidad e irregularidad en series temporales. El aspecto matemático se sustenta en técnicas como medias móviles centradas, normalización de índices estacionales y cálculo de tasas de variación. Gerencialmente, estos conceptos permiten a los administradores tomar decisiones informadas en áreas como previsión de ventas, gestión de inventarios y planeación estratégica, optimizando recursos y mejorando el desempeño organizacional.}
+\long\def\estadisticacontenido{%
+\fontsize{12}{14.4}\selectfont\setstretch{1.5}\justifying
+\estadisticapreliminares
+\section{Introducción}
+La unidad temática 6 se centra en el análisis de series de tiempo y pronósticos económicos, un área crítica para la gestión administrativa efectiva. Las series de tiempo son secuencias de datos ordenados cronológicamente que permiten a los analistas identificar patrones, tendencias y fluctuaciones en datos económicos y administrativos. Este análisis es fundamental para la previsión de ventas, la gestión de inventarios y la planificación estratégica. En esta actividad, se evaluará la comprensión de conceptos clave como la descomposición de series de tiempo en sus componentes principales (tendencia, ciclo, estacionalidad e irregularidad), el uso de medias móviles para suavizar datos y la desestacionalización de ventas para evaluar el desempeño real. Estos conceptos son esenciales para tomar decisiones informadas en un entorno económico dinámico. \citep{anderson2012,lind2012,holmesBusiness2023}.
+
+\section{Fundamentos, modelado analítico y evidencia en análisis de series de tiempo y pronósticos económicos}
+\subsection{Base conceptual autocontenida y formulación matemática}
+El análisis de series de tiempo implica descomponer una serie en sus componentes principales para identificar patrones y tendencias. La tendencia representa la dirección a largo plazo de la serie, el ciclo indica fluctuaciones periódicas de mediano plazo, la estacionalidad refleja patrones recurrentes en intervalos fijos y la irregularidad captura variaciones aleatorias. La identificación de estos componentes permite a los analistas comprender mejor las fluctuaciones en los datos y tomar decisiones informadas. El uso de medias móviles centradas suaviza las fluctuaciones en los datos, lo que ayuda a identificar tendencias y patrones más claramente. La desestacionalización de ventas permite evaluar el desempeño real de las ventas sin la influencia de patrones estacionales, lo que es crucial para la planificación de inventarios y la gestión de recursos. La selección de la constante de suavizamiento alfa en el suavizamiento exponencial es fundamental para la precisión de los pronósticos, lo que afecta directamente las decisiones de inventario, producción y ventas. \citep{wackerly2010,canavos1988,spiegel2009}.
+
+\textbf{1. identificación analítica de componentes de tendencia, ciclo, estacionalidad e irregularidad.} La identificación analítica de componentes en series de tiempo implica descomponer una serie en sus elementos constitutivos: tendencia (variación a largo plazo), ciclo (fluctuaciones periódicas de mediano plazo), estacionalidad (patrones recurrentes en intervalos fijos) e irregularidad (variaciones aleatorias). Esta descomposición permite una comprensión más profunda de los patrones subyacentes en los datos temporales. Expresión formal: $Y_t = T_t + C_t + S_t + I_t$. En el ámbito gerencial, la identificación de estos componentes permite a los gerentes comprender mejor las fluctuaciones en datos como ventas, costos y demanda, facilitando la toma de decisiones estratégicas y operativas. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{2. procedimiento de medias móviles centradas para periodos pares.} El procedimiento de medias móviles centradas implica calcular el promedio de un conjunto de observaciones en una serie de tiempo, centrando la media en el período actual. Para periodos pares, como 4 trimestres o 12 meses, se calcula el promedio de los valores anteriores y posteriores al período en cuestión. Expresión formal: $MMA_t = \frac{1}{2k+1} \sum_{i=-k}^{k} Y_{t+i}$. En el ámbito gerencial, este método suaviza las fluctuaciones en los datos, lo que ayuda a identificar tendencias y patrones más claramente, facilitando la previsión y el análisis. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{3. normalización de índices estacionales.} La normalización de índices estacionales consiste en ajustar los índices estacionales para que su suma sea igual al número de estaciones. Esto se logra multiplicando cada índice estacional por el número de estaciones dividido entre la suma de los índices estacionales sin ajustar. Expresión formal: $I_{estacional, ajustado} = I_{estacional} \times \frac{N}{\sum I_{estacional}}$. En el ámbito gerencial, la normalización permite una comparación justa de las variaciones estacionales a lo largo del tiempo, lo que es crucial para el análisis de ventas y otros datos cíclicos. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{4. desestacionalización de ventas.} La desestacionalización de ventas implica eliminar el componente estacional de una serie de tiempo para evaluar el desempeño real de las ventas, sin la influencia de patrones estacionales. Esto se logra dividiendo los datos originales por los índices estacionales ajustados. Expresión formal: $Venta_{desestacionalizada} = \frac{Venta_{original}}{I_{estacional, ajustado}}$. En el ámbito gerencial, la desestacionalización permite a los gerentes evaluar el rendimiento real de las ventas y tomar decisiones más informadas sobre estrategias de marketing y operaciones. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{5. selección de la constante de suavizamiento alfa.} La selección de la constante de suavizamiento alfa en el suavizamiento exponencial depende de la estabilidad de la serie de tiempo. Un valor de alfa más alto da más peso a las observaciones recientes, mientras que un valor más bajo da más peso a las observaciones pasadas. Expresión formal: $S_t = \alpha Y_t + (1 - \alpha) S_{t-1}$. En el ámbito gerencial, la elección adecuada de alfa es crucial para la precisión de los pronósticos, lo que afecta directamente las decisiones de inventario, producción y ventas. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{6. cálculo e interpretación de tasas de variación.} Las tasas de variación miden el cambio porcentual entre dos períodos consecutivos en una serie de tiempo. Se calculan dividiendo la diferencia entre los valores de dos períodos consecutivos por el valor del período anterior y multiplicando por 100. Expresión formal: $Tasa\_de\_variación = \frac{Y_t - Y_{t-1}}{Y_{t-1}} \times 100$. En el ámbito gerencial, las tasas de variación son útiles para identificar tendencias y cambios en los datos, lo que ayuda a los gerentes a tomar decisiones estratégicas y operativas. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{7. números índice.} Los números índice son medidas que comparan el valor de una variable en un período dado con su valor en un período base. Se utilizan comúnmente para medir cambios en precios, ventas y otros indicadores económicos. Expresión formal: $Índice = \frac{Valor\_actual}{Valor\_base} \times 100$. En el ámbito gerencial, los números índice permiten a los gerentes evaluar cambios relativos en variables clave, facilitando la comparación y el análisis de tendencias a lo largo del tiempo. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{8. series de tiempo.} Las series de tiempo son secuencias de datos ordenados cronológicamente. Cada observación en una serie de tiempo corresponde a un punto específico en el tiempo. Expresión formal: $Y_t = f(t)$. En el ámbito gerencial, el análisis de series de tiempo es fundamental para la previsión y el análisis de tendencias en ventas, costos, demanda y otros indicadores clave de desempeño. \citep{anderson2012,lind2012,wackerly2010}.
+
+
+\subsection{Matriz contractual de evaluación y fundamentación de reactivos}
+Para abordar esta actividad, es necesario comprender y aplicar los conceptos clave de descomposición de series de tiempo, medias móviles centradas, desestacionalización de ventas y suavizamiento exponencial. Se debe identificar y analizar los componentes de tendencia, ciclo, estacionalidad e irregularidad en una serie de tiempo dada. Además, se debe aplicar el procedimiento de medias móviles centradas para suavizar los datos y eliminar el ruido. La desestacionalización de ventas permitirá evaluar el desempeño real de las ventas, mientras que la selección adecuada de la constante de suavizamiento alfa garantizará la precisión de los pronósticos. Finalmente, se deben calcular e interpretar tasas de variación y números índice para identificar cambios y tendencias en los datos.
+
+De conformidad con el contrato AulaTeX para cuestionarios en plataforma, los cuestionarios se documentan en el reporte raíz mediante una tabla estructurada de pregunta, respuesta analítica y justificación teórico-matemática verificable, sin generar un archivo separado en la carpeta de entregables \citep{anderson2012,wackerly2010}.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.28}
+\begin{longtable}{p{1.2cm}p{4.3cm}p{3.8cm}p{5.3cm}}
+\hline
+\textbf{Núm.} & \textbf{Eje / Pregunta de evaluación} & \textbf{Respuesta técnica} & \textbf{Justificación matemática y conceptual}\\\hline
+\endfirsthead
+\hline
+\textbf{Núm.} & \textbf{Eje / Pregunta de evaluación} & \textbf{Respuesta técnica} & \textbf{Justificación matemática y conceptual}\\\hline
+\endhead
+R01 & ¿Cuál es el criterio técnico y alcance de \textit{identificación analítica de componentes de tendencia, ciclo, estacionalidad e irregularidad}? & La identificación analítica de componentes en series de tiempo implica descomponer una serie en sus elementos constitutivos: tendencia (variación a largo plazo) & La identificación de estos componentes permite a los gerentes comprender mejor las fluctuaciones en datos como ventas, costos y demanda, facilitando la toma de decisiones estratégicas y operativas. \citep{anderson2012,wackerly2010}.\\\hline
+R02 & ¿Cuál es el criterio técnico y alcance de \textit{procedimiento de medias móviles centradas para periodos pares}? & El procedimiento de medias móviles centradas implica calcular el promedio de un conjunto de observaciones en una serie de tiempo, centrando la media en el perío & Este método suaviza las fluctuaciones en los datos, lo que ayuda a identificar tendencias y patrones más claramente, facilitando la previsión y el análisis. \citep{anderson2012,wackerly2010}.\\\hline
+R03 & ¿Cuál es el criterio técnico y alcance de \textit{normalización de índices estacionales}? & La normalización de índices estacionales consiste en ajustar los índices estacionales para que su suma sea igual al número de estaciones. Esto se logra multipli & La normalización permite una comparación justa de las variaciones estacionales a lo largo del tiempo, lo que es crucial para el análisis de ventas y otros datos cíclicos. \citep{anderson2012,wackerly2010}.\\\hline
+R04 & ¿Cuál es el criterio técnico y alcance de \textit{desestacionalización de ventas}? & La desestacionalización de ventas implica eliminar el componente estacional de una serie de tiempo para evaluar el desempeño real de las ventas, sin la influenc & La desestacionalización permite a los gerentes evaluar el rendimiento real de las ventas y tomar decisiones más informadas sobre estrategias de marketing y operaciones. \citep{anderson2012,wackerly2010}.\\\hline
+R05 & ¿Cuál es el criterio técnico y alcance de \textit{selección de la constante de suavizamiento alfa}? & La selección de la constante de suavizamiento alfa en el suavizamiento exponencial depende de la estabilidad de la serie de tiempo. Un valor de alfa más alto da & La elección adecuada de alfa es crucial para la precisión de los pronósticos, lo que afecta directamente las decisiones de inventario, producción y ventas. \citep{anderson2012,wackerly2010}.\\\hline
+R06 & ¿Cuál es el criterio técnico y alcance de \textit{cálculo e interpretación de tasas de variación}? & Las tasas de variación miden el cambio porcentual entre dos períodos consecutivos en una serie de tiempo. Se calculan dividiendo la diferencia entre los valores & Las tasas de variación son útiles para identificar tendencias y cambios en los datos, lo que ayuda a los gerentes a tomar decisiones estratégicas y operativas. \citep{anderson2012,wackerly2010}.\\\hline
+R07 & ¿Cuál es el criterio técnico y alcance de \textit{números índice}? & Los números índice son medidas que comparan el valor de una variable en un período dado con su valor en un período base. Se utilizan comúnmente para medir cambi & Los números índice permiten a los gerentes evaluar cambios relativos en variables clave, facilitando la comparación y el análisis de tendencias a lo largo del tiempo. \citep{anderson2012,wackerly2010}.\\\hline
+R08 & ¿Cuál es el criterio técnico y alcance de \textit{series de tiempo}? & Las series de tiempo son secuencias de datos ordenados cronológicamente. Cada observación en una serie de tiempo corresponde a un punto específico en el tiempo. & El análisis de series de tiempo es fundamental para la previsión y el análisis de tendencias en ventas, costos, demanda y otros indicadores clave de desempeño. \citep{anderson2012,wackerly2010}.\\\hline
+R09 & ¿Cuál es el criterio técnico y alcance de \textit{análisis de series}? & El análisis de series implica descomponer una serie de tiempo en sus componentes principales para identificar patrones y tendencias. Esto incluye la identificac & El análisis de series es crucial para la toma de decisiones en áreas como previsión de ventas, gestión de inventarios y planeación estratégica. \citep{anderson2012,wackerly2010}.\\\hline
+R10 & ¿Cuál es el criterio técnico y alcance de \textit{pronósticos económicos}? & Los pronósticos económicos son predicciones sobre el futuro comportamiento de variables económicas como PIB, inflación, desempleo y ventas. Se basan en modelos  & Los pronósticos económicos guían decisiones estratégicas y operativas en áreas como inversión, financiamiento y planificación de recursos. \citep{anderson2012,wackerly2010}.\\\hline
+\end{longtable}
+\end{center}
+
+
+\subsection{Articulación administrativa y síntesis del desarrollo}
+La descomposición de series de tiempo en sus componentes principales (tendencia, ciclo, estacionalidad e irregularidad) es fundamental para comprender y prever patrones en datos económicos y administrativos. La identificación de estos componentes permite a los analistas y gerentes entender mejor las fluctuaciones en los datos, facilitando la toma de decisiones informadas. Por ejemplo, la tendencia puede indicar un crecimiento o declive a largo plazo, mientras que la estacionalidad puede revelar patrones recurrentes que afectan las ventas o la demanda. \citep{holmesBusiness2023,nistHandbook}.
+El uso de medias móviles centradas para suavizar series de tiempo es una técnica estadística clave para identificar tendencias y eliminar ruido en los datos. Al aplicar medias móviles centradas, los analistas pueden filtrar fluctuaciones aleatorias y resaltar patrones subyacentes. Esto es particularmente útil en la previsión de ventas y en la identificación de tendencias en el comportamiento del consumidor. \citep{holmesBusiness2023,nistHandbook}.
+La normalización de índices estacionales es crucial para comparar y analizar variaciones estacionales de manera justa y precisa. Al normalizar los índices estacionales, los analistas pueden ajustar las variaciones estacionales para que su suma sea igual al número de estaciones, lo que permite una comparación más precisa de los datos a lo largo del tiempo. Esto es esencial para la planificación de inventarios y la gestión de recursos. \citep{holmesBusiness2023,nistHandbook}.
+La desestacionalización de ventas permite evaluar el desempeño real de las ventas sin la influencia de patrones estacionales. Al eliminar el componente estacional de una serie de tiempo, los gerentes pueden obtener una visión más clara del rendimiento real de las ventas. Esto es crucial para tomar decisiones informadas sobre estrategias de marketing y operaciones. \citep{holmesBusiness2023,nistHandbook}.
+
+En síntesis dentro de este segundo tiempo, la articulación entre la teoría estadística de \textit{análisis de series de tiempo y pronósticos económicos} y la práctica administrativa demuestra que ningún indicador cuantitativo opera en el vacío: la validez de la conclusión depende del cumplimiento de los supuestos distribucionales, de la representatividad de los datos recolectados y de la correspondencia entre el modelo matemático y el problema decisional de la organización \citep{anderson2012,nistHandbook,guarin2002}.
+
+\clearpage
+\section{Conclusiones}
+En conclusión, el análisis de series de tiempo y los pronósticos económicos son herramientas esenciales para la gestión administrativa efectiva. La descomposición de series de tiempo en sus componentes principales, el uso de medias móviles para suavizar datos y la desestacionalización de ventas permiten a los analistas y gerentes tomar decisiones informadas en un entorno económico dinámico. La selección adecuada de la constante de suavizamiento alfa y el cálculo e interpretación de tasas de variación y números índice son cruciales para la precisión de los pronósticos y la evaluación del desempeño real de las ventas. Estos conceptos y técnicas son fundamentales para la previsión de ventas, la gestión de inventarios y la planificación estratégica, lo que permite a las organizaciones optimizar recursos y mejorar el desempeño organizacional. \citep{anderson2012,lind2012,wackerly2010,diazRodriguez2022}.
+}
+\input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/reporte-estadistica-aplicada-para-la-administracion-plantilla-actividad.tex}

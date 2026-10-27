@@ -1,0 +1,747 @@
+Fuente bibliográfica: Estadística matemática con aplicaciones - Wackerly, Mendenhall y Scheaffer. 7.ª edición.pdf
+Actividad: 15 (5.3 Ejercicios individuales 5% Tarea)
+Palabras clave: prueba de rachas, aleatoriedad, Wald-Wolfowitz, Kruskal-Wallis, Mann-Whitney, secuencia
+
+[Bloque seleccionado #69 | relevancia=4]
+Pagina 68
+44  Capítulo 2  Probabilidad
+ 
+EJEMPLO 2.9 
+Suponga que una operación de ensamble en una planta de manufacturas consta de cuatro pa-
+sos que se pueden efectuar en cualquier secuencia. Si el fabricante desea comparar el tiempo 
+de ensamble para cada una de las secuencias, ¿cuántas secuencias diferentes estarán involu-
+cradas en el experimento?
+ 
+Solución 
+El número total de secuencias es igual al número de formas de acomodar los n = 4 pasos 
+tomados r = 4 a la vez, o sea
+ 
+P4
+4 =
+4!
+(4 −4)! = 4!
+0! = 24. 
+Q
+El siguiente resultado de análisis combinatorio se puede usar para determinar el número 
+de subconjuntos de varios tamaños que se pueden formar al dividir un conjunto de n objetos 
+distintos en k grupos que no se traslapen.
+ 
+TEOREMA 2.3 
+El número de formas de dividir n objetos distintos en k grupos distintos que contienen 
+n1, n2, … , nk objetos, respectivamente, donde cada objeto aparece en exactamente un 
+grupo y 
+k
+i=1 ni = n, es
+N =
+n
+n1 n2 ⋅⋅⋅nk
+=
+n!
+n1! n2! ⋅⋅⋅nk!.
+ 
+Demostración 
+N es el número de arreglos distintos de n objetos en una fi la para un caso en el que el 
+reacomodo de los objetos dentro de un grupo no cuenta. Por ejemplo, las letras de la a 
+a la l están acomodadas en tres grupos, donde n1 = 3, n2 = 4 y n3 = 5:
+abcdefghijkl
+es uno de estos arreglos.
+ 
+ 
+El número de arreglos distintos de los n objetos, suponiendo que todos los obje-
+tos sean distintos, es Pn
+n = n! (del Teorema 2.2). Entonces Pn
+n es igual al número de 
+formas de dividir los n objetos en k grupos (ignorando el orden dentro de los grupos) 
+multiplicado por el número de formas de ordenar los n1, n2, …, nk elementos dentro de 
+cada grupo. Esta aplicación de la regla mn extendida da
+Pn
+n = (N) ⋅(n1! n2! n3!⋅⋅⋅nk!),
+ 
+ 
+donde ni! es el número de arreglos distintos de los ni objetos del grupo i.
+Al despejar N, tenemos
+N =
+n!
+n1! n2! ⋅⋅⋅nk! ≡
+n
+n1 n2 ⋅⋅⋅nk
+.
+
+[Bloque seleccionado #105 | relevancia=5]
+Pagina 104
+80  Capítulo 2  Probabilidad
+dad para las variables aleatorias que se estudiarán en el Capítulo 3. Los eventos numéricos 
+de interés para nosotros aparecen en una muestra y vamos a calcular la probabilidad de una 
+muestra observada para hacer una inferencia acerca de la población objetivo. La probabilidad 
+proporciona la base y las herramientas para la inferencia estadística, objetivo de la estadís-
+tica.
+Bibliografía y lecturas adicionales
+Ejercicios complementarios
+ 
+2.143 
+Demuestre que el Teorema 2.7 se cumple para probabilidades condicionales. Esto es, si P(B) > 0, en-
+tonces P(A B) = 1 −P(A B).
+ 
+2.144 
+Suponga que S contiene cuatro puntos muestrales, E1, E2, E3 y E4.
+ 
+ 
+a  Haga una lista de todos los posibles eventos en S (incluyendo el evento nulo).
+ 
+ 
+b  En el Ejercicio 2.68(d), se demostró que 
+n
+i=1
+n
+i
+= 2n. Use este resultado para dar el número total 
+de eventos en S.
+ 
+ 
+c  Sean A y B los eventos {E1, E2, E3} y {E2, E4}, respectivamente. Escriba los puntos muestrales en los 
+siguientes eventos: A∪B, A∩B, A∩B y A∪B.
+ 
+2.145 
+Un paciente que se somete a un examen físico anual debe pasar por 18 verifi caciones o pruebas. La 
+secuencia en la que las pruebas se realizan es importante porque el tiempo perdido entre pruebas va 
+a variar dependiendo de la secuencia. Si una experta en efi ciencia fuera a estudiar las secuencias para 
+hallar la que requirió menor tiempo, ¿cuántas secuencias estarían incluidas en su estudio si todas las 
+posibles secuencias fueran admisibles?
+ 
+2.146 
+Se sacan cinco cartas de una baraja estándar de 52 cartas. ¿Cuál es la probabilidad de que las cinco sean 
+del mismo “palo”?
+ 
+2.147 
+Consulte el Ejercicio 2.146. Un jugador ha recibido cinco cartas: dos ases, un rey, un cinco y un 9. Él 
+desecha el 5 y el 9 y recibe dos cartas más. ¿Cuál es la probabilidad de que termine con un full?
+Cramer, H. 1973. The Elements of Probability Theory and Some of Its Applications, 
+2d ed.Huntington, N. Y.: Krieger.
+Feller, W. 1968. An Introductiont to Probability Theory and Its Applications, 3d ed., 
+vol.1. NewYork: Wiley.
+———. 1971. An Introductiont to Probability Theory and Its Applications, 2d ed., 
+vol.2. New York: Wiley.
+Meyer, P. L. 1970. Introductory Probability and Statistical Applications, 2d ed. Reading, 
+Mass.: Addison-Wesley.
+Parzen, E. 1992. Modern Probability Theory and Its Applications. New York: 
+Wiley-Interscience.
+Riordan, J. 2002. Introduction to Combinatorial Analysis. Mineola, N. Y.: Dover 
+Publications.
+
+[Bloque seleccionado #108 | relevancia=4]
+Pagina 107
+Ejercicios complementarios  83
+ 
+2.157 
+Un estudio de los residentes de una región mostró que 20% eran fumadores. La probabilidad de muerte 
+debida a cáncer de pulmón si la persona fuma es diez veces mayor que la probabilidad de muerte si la 
+persona no fuma. Si la probabilidad de muerte debida a cáncer de pulmón en la región es .006, ¿cuál es 
+la probabilidad de muerte debida a cáncer de pulmón dado que la persona es fumadora?
+ 
+2.158 
+Un tazón contiene w bolas blancas y b bolas negras. Una bola se selecciona al azar del tazón, se anota 
+su color y se devuelve al tazón junto con n bolas adicionales del mismo color. Otra bola individual 
+se selecciona al azar del tazón (que ahora contiene w + b + n bolas) y se observa que la bola es 
+negra. Demuestre que la probabilidad (condicional) de que la primera bola seleccionada sea blanca
+ 
+es 
+w
+w + b + n .
+ 
+2.159 
+Parece obvio que P(∅) = 0. Demuestre que este resultado se deduce de los axiomas de la Defi nición 
+2.6.
+ 
+2.160 
+Una máquina para producir un nuevo componente electrónico experimental genera piezas defectuosas 
+de vez en cuando en una forma aleatoria. El ingeniero supervisor para una máquina particular ha obser-
+vado que piezas defectuosas parecen estar agrupándose (es decir apareciendo de un modo no aleatorio), 
+lo cual sugiere un mal funcionamiento en alguna parte de la máquina. Una prueba para la aleatoriedad 
+se basa en el número de lotes de piezas defectuosas y no defectuosas (un lote es una secuencia ininte-
+rrumpida de piezas defectuosas y no defectuosas). Cuanto más pequeño es el número de lotes, mayor 
+será la cantidad de evidencia que indica la no aleatoriedad. De 12 componentes sacados de la máquina, 
+los primeros 10 no fueron defectuosos y los últimos 2 fueron defectuosos (N N N N N N N N N N D D). 
+Suponga que no hay aleatoriedad. ¿Cuál es la probabilidad de observar
+ 
+ 
+a  este arreglo (resultante en dos lotes) dado que 10 de los 12 componentes no son defectuosos?
+ 
+ 
+b  dos lotes?
+ 
+2.161 
+Consulte el Ejercicio 2.160. ¿Cuál es la probabilidad de que el número de lotes, R, sea menor o igual a 
+3?
+ 
+2.162 
+Suponga que hay nueve espacios de estacionamiento juntos en un lote. Nueve autos necesitan ser esta-
+cionados por un empleado. Tres de los autos son costosos autos deportivos, tres son grandes autos de 
+fabricación nacional y tres son compactos importados. Suponiendo que el empleado estaciona los autos 
+al azar, ¿cuál es la probabilidad de que los tres costosos autos deportivos queden estacionados uno junto al 
+otro?
+ 
+2.163 
+Los relevadores empleados en la construcción de 
+
+[Bloque seleccionado #749 | relevancia=3]
+Pagina 748
+724  Capítulo 14  Análisis de datos categóricos
+que hayamos estimado p1 y p2, porque
+p1 + p2 + p3 = 1.
+Entonces, perdemos 3 − 1 = 2 grados de libertad para estimar las probabilidades de renglón.
+Por último, usamos las frecuencias de las celdas para estimar (c − 1) = 3 probabilidades 
+de columna y por tanto perdemos (c − 1) = 3 grados de libertad adicionales. El número total de 
+grados de libertad restante es
+gl = 12 −1 −2 −3 = 6 = (3 −1)(4 −1).
+En general vemos que el número total de grados de libertad asociado con una tabla de contin-
+gencia de r × c es
+gl = rc −1 −(r −1) −(c −1) = (r −1)(c −1).
+Por tanto, en nuestro ejemplo que relaciona el turno con el tipo de defecto del mueble, si 
+usamos a = .05, rechazaremos la hipótesis nula de que las dos clasifi caciones son indepen-
+dientes si X2 > 12.592. Como el valor del estadístico de prueba, X 2 = 19.17, excede al valor 
+crítico de x2, rechazamos la hipótesis nula en el nivel de signifi cancia a = .05. El valor p 
+asociado está dado por valor p = P(x2 > 19.17). Los límites de esta probabilidad se pueden 
+obtener usando la Tabla 6, Apéndice 3, de la cual se deduce que valor p < .005. La aplicación 
+Chi-Square Probability and Quantiles da el valor p exacto = .00389. En consecuencia, para 
+cualquier valor de a mayor o igual a .00389, los datos presentan sufi ciente evidencia para indi-
+car dependencia entre el tipo de defecto y el turno de manufactura. Es probable que un estudio 
+de las operaciones de producción para los tres turnos permita descubrir la causa.
+ 
+EJEMPLO 14.3 
+Se realizó un estudio para evaluar la efectividad de una nueva vacuna para la gripe que te-
+nía que ser administrada en una pequeña comunidad. La vacuna era gratuita para quienes la 
+solicitaran, en una secuencia de dos inyecciones durante un periodo de 2 semanas; algunas 
+personas recibieron esa secuencia, pero otras se presentaron sólo para la primera y los demás 
+no recibieron ninguna.
+Un estudio de 1000 habitantes de la localidad arrojó en la primavera siguiente la infor-
+mación que se indica en la Tabla 14.4. ¿Los datos presentan sufi ciente evidencia para indicar 
+una dependencia entre las dos clasifi caciones, es decir, categoría de vacuna y aparición o no 
+aparición de la gripe?
+  
+ 
+Solución 
+La pregunta investiga si los datos aportan sufi ciente evidencia para indicar dependencia entre 
+categoría de vacuna y aparición o no aparición de la gripe. Por tanto, analizamos los datos 
+como una tabla de contingencia.
+Tabla 14.4  Tabulación de datos para el Ejemplo 14.3
+Condición
+Gripe
+Sin gripe
+Total
+ 
+313
+109
+578
+1000
+Sin 
+
+[Bloque seleccionado #803 | relevancia=15]
+Pagina 802
+778  Capítulo 15  Estadística no paramétrica
+éstos se coloca en la máquina en una posición determinada, se extrae el aire, se bombean gases en 
+el interior del foco y la base de vidrio se sella con fuego. Si una máquina contiene 20 posiciones y 
+varias posiciones adyacentes son defectuosas (quizá debido a demasiado calor empleado en el pro-
+ceso de sellado), oleadas de focos defectuosos saldrán del proceso en forma periódica. Las pruebas 
+que comparan la fracción del proceso de piezas defectuosas producidas durante intervalos iguales 
+de tiempo no detectarán esta difi cultad periódica del proceso. Esta periodicidad, indicada por las 
+corridas de piezas defectuosas, indica que no hay aleatoriedad en la aparición de piezas defectuosas 
+a lo largo del tiempo y puede ser detectada por una prueba de aleatoriedad. La prueba estadística 
+que presentamos, conocida como prueba de corridas de ensayo, es estudiada en detalle por Wald y 
+Wolfowitz (1940). Seguirán otras aplicaciones prácticas de la prueba de corridas de ensayo.
+Como su nombre lo indica, las pruebas de corridas de ensayo se usan para estudiar una 
+secuencia de eventos en la que cada elemento de la secuencia puede tomar uno de dos resul-
+tados, no defectuoso (S) o defectuoso (F). Si consideramos la sucesión de piezas que salen 
+de un proceso de manufactura como defectuosas (F) o no defectuosas (S), la observación de 
+veinte piezas podría dar
+S
+S
+S
+S
+S
+F
+F
+S
+S
+S
+F
+F
+F
+S
+S
+S
+S
+S
+S
+S.
+Observamos las agrupaciones de piezas defectuosas y no defectuosas y nos preguntamos si 
+esta agrupación implica no aleatoriedad y, en consecuencia, falta de control de proceso.
+Por ejemplo, los primeros cinco éxitos constituyen una subsecuencia máxima de 5 elementos 
+semejantes (esto es, incluye el número máximo de elementos semejantes antes de encontrar 
+un F). (Los primeros 4 elementos forman una subsecuencia de elementos semejantes, pero no 
+es máxima porque el quinto elemento también podría estar incluido.) En consecuencia, los 20 
+elementos están dispuestos en cinco corridas de ensayo, el primero conteniendo cinco S, el 
+segundo conteniendo dos F, y así sucesivamente.
+Un número muy grande o muy pequeño de corridas de ensayo en una secuencia indica no 
+aleatoriedad. Por tanto, sea R (el número de corridas de ensayo en una secuencia) el estadís-
+tico de prueba y sean R ≤ k1 y R ≥ k2 la región de rechazo, como se indica en la Figura 15.3. 
+Entonces debemos hallar la distribución de probabilidad para R, P(R = r), para calcular a y 
+localizar una región de rechazo aceptable para la prueba.
+Suponga que la secuenc
+
+[Bloque seleccionado #804 | relevancia=4]
+Pagina 803
+15.9  Prueba de corridas de ensayo: una prueba de aleatoriedad  779
+y por tanto la probabilidad por punto muestral es
+1
+n1 + n2
+n1
+.
+El número de formas de lograr y1 corridas de ensayo S es igual al número de arreglos identifi -
+cables de n1 elementos indistinguibles en y1 celdas, ninguna de las cuales está vacía, como se 
+representa en la Figura 15.4. Esto es igual al número de formas de distribuir (y1 − 1) barras 
+interiores en los (n1 − 1) espacios entre los S elementos (las dos barras exteriores permanecen 
+fi jas). En consecuencia, es igual al número de formas de seleccionar (y1 − 1) espacios (para 
+las barras) fuera de los (n1 − 1) espacios disponibles, o sea
+n1 −1
+y1 −1 .
+El número de formas de observar y1 corridas de ensayo S y y2 corridas de ensayo F, obte-
+nido al aplicar la regla mn, es
+n1 −1
+y1 −1
+n2 −1
+y2 −1 .
+Esto da el número de puntos muestrales en el evento “y1 corridas de ensayo de las S y y2 
+corridas de ensayo de las F ”. Entonces, al multiplicar este número por la probabilidad por 
+punto muestral, obtenemos la probabilidad de exactamente y1 corridas de ensayo de las S y y2 
+corridas de ensayo de las F:
+p(y1, y2) =
+n1 −1
+y1 −1
+n2 −1
+y2 −1
+n1 + n2
+n1
+.
+ 
+Entonces, P(R = r) es igual a la suma de p(y1, y2) en todos los valores de y1 y y2 tales que (y1 
++ y2) = r.
+Para ilustrar el uso de la fórmula, el evento R = 4 podría ocurrir cuando y1 = 2 y y2 = 2 
+con elementos S o F comenzando las secuencias. Por tanto,
+P(R = 4) = 2P(Y1 = 2, Y2 = 2).
+Por otra parte, R = 5 podría ocurrir cuando y1 = 2 y y2 = 3 o cuando y1 = 3 y y2 = 2, y estos 
+sucesos son mutuamente excluyentes. Entonces,
+P(R = 5) = P(Y1 = 3, Y2 = 2) + P(Y1 = 2, Y2 = 3).
+ 
+EJEMPLO 15.9 
+Suponga que una secuencia está formada por n1 = 5 elementos S y n2 = 3 elementos F. Calcule 
+la probabilidad de observar R = 3 corridas de ensayo. Del mismo modo, calcule P(R ≤ 3).
+. . . 
+S SSSS SS
+SS SSS S
+F I G U R A 15.4
+Distribución de n1 
+elementos S en y1 
+celdas (ninguna 
+vacía)
+
+[Bloque seleccionado #805 | relevancia=10]
+Pagina 804
+780  Capítulo 15  Estadística no paramétrica
+ 
+Solución 
+Tres corridas de ensayo podrían ocurrir cuando y1 = 2 y y2 = 1, o cuando y1 = 1 y y2 = 2. 
+Entonces
+P(R = 3) = P(Y1 = 2, Y2 = 1) + P(Y1 = 1, Y2 = 2)
+=
+4
+1
+2
+0
+8
+5
++
+4
+0
+2
+1
+8
+5
+= 4
+56 + 2
+56 = .107.
+A continuación requerimos que P(R ≤3) = P(R = 2) + P(R = 3). De conformidad con 
+esto,
+P(R = 2) = 2P(Y1 = 1, Y2 = 1) = (2)
+4
+0
+2
+0
+8
+5
+= 2
+56 = .036.
+Así, la probabilidad de 3 o menos corridas de ensayo es.107 + .036 = .143. 
+Q
+Los valores de P(R ≤ a) se dan en la Tabla 10, Apéndice 3, para todas las combinaciones 
+de n1 y n2, donde n1 y n2 son menores o iguales a 10. Éstas se pueden usar para localizar las 
+regiones de rechazo de pruebas de una o de dos colas. Ilustramos con un ejemplo.
+ 
+EJEMPLO 15.10 
+Un examen de verdadero–falso se construyó con las preguntas que corren en la siguiente se-
+cuencia:
+T
+F
+F
+T
+F
+T
+F
+T
+T
+F
+T
+F
+F
+T
+F
+T
+F
+T
+T
+F.
+(T = verdadero; F = falso)
+¿Esta secuencia indica una desviación de la aleatoriedad en el arreglo de respuestas T y F?
+ 
+Solución 
+La secuencia contiene n1 = 10 respuestas T y n2 = 10 respuestas F, con y = 16 corridas de 
+ensayo. La no aleatoriedad puede estar indicada ya sea por un número inusualmente peque-
+ño o grande de corridas de ensayo; en consecuencia, estaremos usando una prueba de dos 
+colas.
+Suponga que deseamos usar a aproximadamente igual a .05 con .025 o menos en cada 
+cola de la región de rechazo. Entonces, de la Tabla 10, Apéndice 3, con n1 = n2 = 10, vemos 
+que P(R ≤ 6) = .019 y P(R ≤ 15) = .981. Entonces, P(R ≥ 16) = 1 − P(R ≤ 15) = .019 
+y rechazaríamos la hipótesis de aleatoriedad en el nivel de signifi cancia de a = .038 si R ≤ 
+6 o R ≥ 16. Como R = 16 para los datos observados, concluimos que existe evidencia para 
+indicar no aleatoriedad en el arreglo de las respuestas del profesor. El intento de mezclar las 
+respuestas está exagerado. 
+Q
+Una segunda aplicación de la prueba de corridas de ensayo está en detectar no aleatorie-
+dad de una secuencia de medidas cuantitativas en el tiempo. Estas secuencias, conocidas 
+como series de tiempo, se presentan en numerosos campos. Por ejemplo, la medición de una 
+característica de calidad de un producto industrial, presión sanguínea de una persona y el 
+precio de una acción en el mercado accionario varían todos en el tiempo. Las desviaciones 
+de la aleatoriedad en una serie, causadas ya sea por tendencias o periodicidades, se pueden
+
+[Bloque seleccionado #806 | relevancia=12]
+Pagina 805
+15.9  Prueba de corridas de ensayo: una prueba de aleatoriedad  781
+detectar al examinar las desviaciones de las mediciones de la serie de tiempo de su promedio. 
+Las desviaciones negativas y positivas podrían estar denotadas por S y F, respectivamente, y 
+podríamos entonces probar esta secuencia de tiempo de desviaciones para no aleatoriedad. 
+Ilustramos con un ejemplo.
+ 
+EJEMPLO 15.11 
+Se produce papel en un proceso continuo. Suponga que una medición de la brillantez Y se 
+hace en el papel una vez por hora y que los resultados aparecen como se muestra en la Figura 
+15.5.
+El promedio y para las 15 mediciones muestrales aparece en la fi gura. Observe las desvia-
+ciones arriba de y. ¿Estos datos indican falta de aleatoriedad y por tanto sugieren periodicidad 
+y falta de control en el proceso?
+ 
+Solución 
+La secuencia de desviaciones negativas (S) y positivas (F), como se indica en la Figura 15.5, 
+es
+S
+S
+S
+S
+F
+F
+S
+F
+F
+S
+F
+S
+S
+S
+S.
+Entonces, n1 = 10, n2 = 5 y R = 7. Consultando la Tabla 10 del Apéndice 3, encontramos P(R 
+≤ 7) = .455. Este valor de R no es improbable, suponiendo que la hipótesis de aleatoriedad 
+sea verdadera. En consecuencia, no hay sufi ciente evidencia para indicar no aleatoriedad en la 
+secuencia de mediciones de brillantez. 
+Q
+La prueba de corridas de ensayo también se puede usar para comparar dos distribuciones 
+de frecuencia poblacional para un experimento de dos muestras no pareado. De esta forma, 
+tenemos una alternativa para la prueba U de Mann–Whitney (Sección 15.6). Si las mediciones 
+para las dos muestras se arreglan en orden de magnitud, forman una secuencia. Las medicio-
+nes para las muestras 1 y 2 se pueden denotar como S y F, respectivamente y una vez más 
+nos ocupamos de una prueba de aleatoriedad. Si todas las mediciones para la muestra 1 son 
+más pequeñas que las de la muestra 2, la secuencia resultará en SSSS . . . SF FF . . . F o R 
+= 2 corridas de ensayo. Un valor pequeño de R proporciona evidencia de una diferencia en 
+las distribuciones poblacionales de frecuencia y la región de rechazo escogida es R ≤ a. Esta 
+región de rechazo implica una prueba estadística de una cola. Un ejemplo de la aplicación de 
+la prueba de corridas de ensayo para comparar dos distribuciones poblacionales de frecuencia 
+se deja como ejercicio.
+Brillantez
+Tiempo (horas)
+y
+y
+x
+F I G U R A 15.5
+Brillantez del papel 
+contra tiempo
+
+[Bloque seleccionado #807 | relevancia=5]
+Pagina 806
+782  Capítulo 15  Estadística no paramétrica
+Al igual que en el caso de los otros estadísticos de prueba no paramétricos estudiados en 
+secciones anteriores de este capítulo, la distribución de probabilidad para R tiende hacia la 
+normalidad cuando n1 y n2 se hacen grandes. La aproximación es buena cuando n1 y n2 sean 
+ambos mayores que 10. Por esta razón, podemos usar el estadístico Z como estadístico de 
+prueba con muestras grandes, donde
+son el valor esperado y la varianza de R, respectivamente. La región de rechazo para una prue-
+ba de dos colas, con a = .05, es |z| ≥ 1.96. Si a es la probabilidad deseada de un error tipo I, 
+para una prueba de cola superior, rechazamos la hipótesis nula si z > za (para una prueba de 
+cola inferior, rechazamos H0 si z < –za).
+Ejercicios
+ 
+15.46 
+Considere una prueba de corridas de ensayo basado en n1 = n2 = 5 elementos. Suponiendo que H0 sea 
+verdadera, use la Tabla 10, Apéndice 3, para hallar lo siguiente: 
+a
+P(R = 2).
+b
+P(R ≤3).
+c
+P(R ≤4).
+ 
+15.47 
+El supervisor de un sindicato dice que quienes solicitan empleos son seleccionados sin considerar de qué 
+raza son. Los registros de contratación del local, que contiene sólo miembros masculinos, mostraron la 
+siguiente secuencia de contratación de blancos (W) y negros (B):
+W
+W
+W
+W
+B
+W
+W
+W
+B
+B
+W
+B
+B
+ 
+ 
+¿Estos datos sugieren una selección racial no aleatoria en la contratación de miembros del sindicato?
+ 
+15.48 
+Las condiciones (D por enfermo, S por sano) de los árboles individuales de una fi la de diez álamos se 
+encontró que estaban, de izquierda a derecha:
+S
+S
+D
+D
+S
+D
+D
+D
+S
+S
+ 
+ 
+¿Hay sufi ciente evidencia para indicar no aleatoriedad en la secuencia y por tanto la posibilidad de con-
+tagio?
+ 
+15.49 
+Las piezas que salen de un proceso continuo de producción se clasifi caron como defectuosas (D) o no 
+defectuosas (N). Una secuencia de piezas observada en el tiempo fue como sigue:
+D
+N
+N
+N
+N
+N
+N
+D
+D
+N
+N
+N
+N
+N
+N
+D
+D
+D
+N
+N
+N
+N
+N
+D
+N
+N
+N
+D
+D
+N
+N
+N
+D
+D.
+a Calcule la probabilidad de que R ≤ 11, donde n1 = 11 y n2 = 23.
+b ¿Estos datos sugieren falta de aleatoriedad en la presencia de piezas defectuosas y no defectuosas? 
+Use la aproximación de muestra grande para la prueba de corridas de ensayo.
+Z = R −E(R)
+√V (R) ,
+y
+E(R) = 2n1n2
+n1 + n2
++ 1,
+V (R) = 2n1n2(2n1n2 −n1 −n2)
+(n1 + n2)2(n1 + n2 −1)
+
+[Bloque seleccionado #932 | relevancia=8]
+Pagina 931
+Índice  907
+Probabilidad condicional, 47, 51-57
+ 
+experimentos binomiales y, 102
+ 
+probabilidad incondicional vs., 51-52
+Probabilidad de la muestra, 460-461
+Probabilidad incondicional, 51, 52, 102
+Probabilidades de celda, prueba 
+de hipótesis respecto a, 716-721, 
+735
+Probabilidades de fila, 722, 724-725, 
+729-731
+Procedimiento de muestreo. Vea Diseño 
+experimental
+Proceso de Poisson, 135
+Promedio ponderado, 428
+Propiedad de invarianza, 480
+Propiedad sin memoria, 189
+ 
+de distribución exponencial, 189
+ 
+de distribución geométrica, 119
+Propiedades
+ 
+invarianza, 480
+ 
+sin memoria, 189
+Prueba de aleatoriedad, 777-783
+Prueba de bondad de ajuste, 717-718, 735
+Prueba de cola superior, 512
+Prueba de Friedman, 771-777
+ 
+prueba de signo y, 773
+ 
+resumen de, 772
+Prueba de hipótesis, 488-562
+ 
+comentario sobre la teoría de, 518-
+520
+ 
+distribución ji cuadrada y, 715-716
+ 
+elementos de pruebas estadísticas y, 
+489-495
+ 
+errores en, 491, 493-494, 507-510
+ 
+hipótesis nula y, 489-490, 624-633
+ 
+informe de resultados de una prueba, 
+513-518
+ 
+intervalos de confianza relacionados 
+con, 511-513
+ 
+lema de Neyman-Pearson y, 542-546
+ 
+media y, 520-530
+ 
+muestras grandes empleadas en, 496-
+507
+ 
+muestras pequeñas empleadas en, 
+520-530
+ 
+niveles de significación alcanzados 
+en, 513-518
+ 
+poder de, 540-549
+ 
+probabilidades de error tipo II en, 
+507-510
+ 
+pruebas de razón de probabilidad 
+para, 549-556
+ 
+regresión lineal múltiple y, 618
+ 
+regresión lineal simple y, 590
+ 
+repaso de introducción de, 488-489
+ 
+varianzas y, 530-540
+Prueba de hipótesis. Vea Prueba de hi-
+pótesis
+Prueba de hipótesis de muestra pequeña, 
+520-530
+ 
+para comparar dos medias poblacio-
+nales, 523
+ 
+para una media poblacional, 521
+Prueba de homogeneidad, 731
+Prueba de ji cuadrada, 714-716
+ 
+análisis categórico de datos y, 734-
+735, 736
+ 
+bondad de ajuste y, 717-718, 735
+ 
+estadístico de prueba para, 715
+ 
+para varianza poblacional, 532-533
+Prueba de Kruskal-Wallis, 765-771
+ 
+estadístico de k-ésimo orden, 336
+ 
+k-ésimo momento de variable aleato-
+ria, 138, 202, 472
+ 
+k-ésimo momento factorial, 144
+ 
+prueba de suma de rango y, 768
+ 
+resumen de procedimiento, 767
+Prueba de no aleatoriedad, 780-781
+Prueba de rango con signo. Vea Prueba 
+de Wilcoxon de rango con signo
+Prueba de signo para un experimento de 
+pares acoplados, 744-750
+ 
+comparaciones de muestra grande y, 
+746-747
+ 
+niveles de significación alcanzados 
+para, 745-746
+ 
+prueba de Friedman y, 773
+ 
+prueba t de Student comparada con, 
+746-747
+ 
+utilidad de, 747
+Prueba de subsucesiones, 777-783
+ 
+pruebas U de Mann-Whitney y, 781
+ 
+región de r

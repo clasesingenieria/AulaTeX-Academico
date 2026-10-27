@@ -1,0 +1,106 @@
+{
+  "subject_slug": "estadistica-aplicada-para-la-administracion",
+  "engine": "Amazon Nova Pro",
+  "kept": [
+    "definición de distribución muestral",
+    "comportamiento asintótico del promedio",
+    "error estándar de la media muestral",
+    "error estándar de la proporción muestral",
+    "condiciones de validez del teorema central del límite",
+    "corrección para poblaciones finitas",
+    "diferencia entre dispersión poblacional y muestral",
+    "probabilidades sobre medias muestrales",
+    "distribución de diferencias de medias",
+    "distribución de diferencias de proporciones",
+    "distribución",
+    "distribución diferencias",
+    "error estándar",
+    "central límite",
+    "teorema central",
+    "muestrales",
+    "poblacional",
+    "distribución muestreo"
+  ],
+  "conceptos_clave_nova_pro": [
+    {
+      "concepto": "definición de distribución muestral",
+      "definicion_rigurosa": "La distribución muestral se refiere a la distribución de probabilidad de un estadístico calculado a partir de una muestra aleatoria de una población. Esta distribución describe cómo varía el estadístico de muestra en diferentes muestras tomadas de la misma población. Es fundamental para la inferencia estadística, ya que permite estimar parámetros poblacionales y realizar pruebas de hipótesis.",
+      "formulacion_matematica_latex": "\\bar{X} \\sim N(\\mu, \\frac{\\sigma^2}{n})",
+      "aplicacion_administrativa": "En administración, la distribución muestral es utilizada para estimar parámetros poblacionales, como la media o la proporción, a partir de datos muestrales. Esto es esencial para la toma de decisiones en áreas como la gestión de calidad, el control de procesos y la predicción de ventas.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 3"
+    },
+    {
+      "concepto": "comportamiento asintótico del promedio",
+      "definicion_rigurosa": "El comportamiento asintótico del promedio se refiere a la tendencia del promedio muestral a acercarse a la media poblacional a medida que aumenta el tamaño de la muestra. Este concepto es un resultado del teorema central del límite, el cual establece que la distribución de las medias muestrales se aproxima a una distribución normal a medida que el tamaño de la muestra crece.",
+      "formulacion_matematica_latex": "\\bar{X} \\xrightarrow{p} \\mu",
+      "aplicacion_administrativa": "En la gestión administrativa, el comportamiento asintótico del promedio es crucial para la estimación de parámetros poblacionales a partir de muestras grandes. Esto permite a los gerentes tomar decisiones más informadas basadas en datos muestrales.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 4"
+    },
+    {
+      "concepto": "error estándar de la media muestral",
+      "definicion_rigurosa": "El error estándar de la media muestral es una medida de la variabilidad de la media muestral. Se calcula como la desviación estándar de la población dividida por la raíz cuadrada del tamaño de la muestra. Este concepto es esencial para evaluar la precisión de las estimaciones de la media poblacional.",
+      "formulacion_matematica_latex": "SE_{\\bar{X}} = \\frac{\\sigma}{\\sqrt{n}}",
+      "aplicacion_administrativa": "En administración, el error estándar de la media muestral se utiliza para construir intervalos de confianza y realizar pruebas de hipótesis sobre la media poblacional. Esto ayuda a los gerentes a tomar decisiones más precisas y fundamentadas.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 3"
+    },
+    {
+      "concepto": "error estándar de la proporción muestral",
+      "definicion_rigurosa": "El error estándar de la proporción muestral es una medida de la variabilidad de la proporción muestral. Se calcula como la raíz cuadrada del producto de la proporción poblacional y su complemento, dividido por el tamaño de la muestra. Este concepto es esencial para evaluar la precisión de las estimaciones de la proporción poblacional.",
+      "formulacion_matematica_latex": "SE_{\\hat{p}} = \\sqrt{\\frac{p(1-p)}{n}}",
+      "aplicacion_administrativa": "En administración, el error estándar de la proporción muestral se utiliza para construir intervalos de confianza y realizar pruebas de hipótesis sobre la proporción poblacional. Esto es útil en áreas como la gestión de la calidad y el análisis de mercados.",
+      "fuente_principal": "Levin, 2012",
+      "localizador": "bloque 3"
+    },
+    {
+      "concepto": "condiciones de validez del teorema central del límite",
+      "definicion_rigurosa": "Las condiciones de validez del teorema central del límite incluyen que la muestra sea aleatoria y que el tamaño de la muestra sea suficientemente grande. Además, el teorema se aplica a cualquier distribución poblacional, aunque se cumple mejor cuando la distribución es simétrica y no presenta valores atípicos extremos.",
+      "formulacion_matematica_latex": "N(\\mu, \\frac{\\sigma^2}{n})",
+      "aplicacion_administrativa": "En la gestión administrativa, las condiciones de validez del teorema central del límite son cruciales para garantizar la validez de las estimaciones y pruebas estadísticas realizadas a partir de muestras. Esto asegura que las decisiones tomadas estén basadas en fundamentos estadísticos sólidos.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 2"
+    },
+    {
+      "concepto": "corrección para poblaciones finitas",
+      "definicion_rigurosa": "La corrección para poblaciones finitas se aplica cuando el tamaño de la muestra es una fracción significativa del tamaño de la población. Esta corrección ajusta el error estándar para reflejar la disminución en la variabilidad cuando se muestrea sin reemplazo de una población finita.",
+      "formulacion_matematica_latex": "SE_{\\bar{X}} = \\frac{\\sigma}{\\sqrt{n}} \\sqrt{\\frac{N-n}{N-1}}",
+      "aplicacion_administrativa": "En administración, la corrección para poblaciones finitas es importante cuando se trabaja con muestras de tamaño significativo en relación a la población total. Esto asegura que las estimaciones sean precisas y que las decisiones basadas en datos sean fiables.",
+      "fuente_principal": "Spiegel y Stephens, 2012",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "diferencia entre dispersión poblacional y muestral",
+      "definicion_rigurosa": "La dispersión poblacional se refiere a la variabilidad de los datos en toda la población, mientras que la dispersión muestral se refiere a la variabilidad de los datos en una muestra tomada de esa población. La dispersión muestral tiende a ser menor que la dispersión poblacional debido al efecto del tamaño de la muestra.",
+      "formulacion_matematica_latex": "\\sigma_{\\bar{X}} < \\sigma",
+      "aplicacion_administrativa": "En la gestión administrativa, entender la diferencia entre la dispersión poblacional y muestral es crucial para la interpretación correcta de los datos y para tomar decisiones informadas. Esto ayuda a los gerentes a evaluar la precisión de las estimaciones y la fiabilidad de las muestras.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 3"
+    },
+    {
+      "concepto": "probabilidades sobre medias muestrales",
+      "definicion_rigurosa": "Las probabilidades sobre medias muestrales se refieren a la probabilidad de que la media de una muestra caiga dentro de un cierto intervalo. Estas probabilidades se calculan utilizando la distribución muestral de la media, la cual se aproxima a una distribución normal según el teorema central del límite.",
+      "formulacion_matematica_latex": "P(a < \\bar{X} < b) = \\Phi\\left(\\frac{b - \\mu}{\\sigma / \\sqrt{n}}\\right) - \\Phi\\left(\\frac{a - \\mu}{\\sigma / \\sqrt{n}}\\right)",
+      "aplicacion_administrativa": "En administración, las probabilidades sobre medias muestrales son utilizadas para construir intervalos de confianza y realizar pruebas de hipótesis sobre la media poblacional. Esto permite a los gerentes tomar decisiones más informadas y evaluar la calidad de sus procesos.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 3"
+    },
+    {
+      "concepto": "distribución de diferencias de medias",
+      "definicion_rigurosa": "La distribución de diferencias de medias se refiere a la distribución de las diferencias entre las medias de dos muestras independientes. Esta distribución es utilizada para realizar pruebas de hipótesis sobre la diferencia entre dos medias poblacionales.",
+      "formulacion_matematica_latex": "\\bar{X}_1 - \\bar{X}_2 \\sim N\\left(\\mu_1 - \\mu_2, \\sqrt{\\frac{\\sigma_1^2}{n_1} + \\frac{\\sigma_2^2}{n_2}}\\right)",
+      "aplicacion_administrativa": "En administración, la distribución de diferencias de medias es utilizada para comparar la efectividad de dos procesos, productos o estrategias. Esto ayuda a los gerentes a tomar decisiones informadas sobre mejoras y cambios en sus operaciones.",
+      "fuente_principal": "Spiegel y Stephens, 2012",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "distribución de diferencias de proporciones",
+      "definicion_rigurosa": "La distribución de diferencias de proporciones se refiere a la distribución de las diferencias entre las proporciones de dos muestras independientes. Esta distribución es utilizada para realizar pruebas de hipótesis sobre la diferencia entre dos proporciones poblacionales.",
+      "formulacion_matematica_latex": "\\hat{p}_1 - \\hat{p}_2 \\sim N\\left(p_1 - p_2, \\sqrt{\\frac{p_1(1-p_1)}{n_1} + \\frac{p_2(1-p_2)}{n_2}}\\right)",
+      "aplicacion_administrativa": "En administración, la distribución de diferencias de proporciones es utilizada para comparar la proporción de éxitos en dos grupos diferentes. Esto es útil en áreas como la gestión de la calidad y el análisis de mercados.",
+      "fuente_principal": "Levin, 2012",
+      "localizador": "bloque 4"
+    }
+  ]
+}

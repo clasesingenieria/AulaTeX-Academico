@@ -1,0 +1,697 @@
+Fuente bibliográfica: Estadística matemática con aplicaciones - Wackerly, Mendenhall y Scheaffer. 7.ª edición.pdf
+Actividad: 16 (6.1 Infografía Equipo 4% Tarea)
+Palabras clave: serie de tiempo, tendencia, estacionalidad, ciclo, medias móviles, suavizamiento exponencial, índice estacional, tasas de variación
+
+[Bloque seleccionado #34 | relevancia=2]
+Pagina 33
+1.3  Caracterización de un conjunto de mediciones: métodos numéricos  9
+formarse a partir del mismo conjunto de mediciones. Para hacer inferencias acerca de una pobla-
+ción basadas en información contenida en una muestra y para medir la bondad de las inferencias, 
+necesitamos cantidades rigurosamente defi nidas para resumir la información contenida en una 
+muestra. Estas cantidades muestrales por lo general tienen propiedades matemáticas, que se 
+desarrollarán en capítulos siguientes, que nos permiten hacer enunciados de probabilidad con 
+respecto a la bondad de nuestras inferencias.
+Las cantidades que defi nimos son medidas descriptivas numéricas de un conjunto de datos. 
+Buscamos algunos números que tienen interpretaciones signifi cativas y que se pueden usar 
+para describir la distribución de frecuencia de cualquier conjunto de mediciones. Centraremos 
+nuestra atención en dos tipos de números descriptivos: medidas de tendencia central y medi-
+das de dispersión o variación.
+Es probable que la medida de tendencia central más común empleada en estadística sea la 
+media aritmética. (Debido a que éste es el único tipo de media que estudiamos en este texto, 
+omitiremos la palabra aritmética.)
+ DEFINICIÓN 1.1 
+La media de una muestra de n respuestas medidas y1, y2,…,yn está dada por
+y = 1
+n
+n
+i=1
+yi.
+La media poblacional correspondiente se denota como m.
+El símbolo y, que se lee “y barra”, se refi ere a una media muestral. Por lo general no pode-
+mos medir el valor de la media poblacional, m; más bien, m es una constante desconocida que 
+podemos estimar usando información muestral.
+La media de un conjunto de mediciones sólo localiza el centro de la distribución de datos, 
+por sí misma no proporciona una descripción adecuada de un conjunto de mediciones. Dos 
+conjuntos de mediciones podrían tener distribuciones de frecuencia muy diferentes pero iguales 
+medias, como se ve en la Figura 1.3. La diferencia entre las distribuciones I y II de la fi gura se 
+encuentra en la variación o dispersión de las mediciones que están a lado y lado de la media. 
+Para describir en forma adecuada los datos, también debemos defi nir medidas de la variabi-
+lidad de datos.
+La medida de variabilidad más común empleada en estadística es la varianza, que es una 
+función de las desviaciones (o distancias) de las mediciones muestrales desde la media.
+F I G U R A 1.3
+Distribuciones de 
+frecuencia con igua-
+les medias pero con 
+diferentes cantidades 
+de variación
+
+[Bloque seleccionado #41 | relevancia=2]
+Pagina 40
+16  Capítulo 1  ¿Qué es estadística?
+Ejercicios complementarios
+ 
+1.22 
+Demuestre que la suma de las desviaciones de un conjunto de mediciones alrededor de su media es igual 
+a cero; es decir,
+n
+i
+1
+(yi −y)
+0.
+ 
+1.23 
+La duración media de anuncios comerciales por televisión es de 75 segundos con desviación estándar de 
+20 segundos. Para contestar lo siguiente, suponga que las duraciones están distribuidas normalmente en 
+forma aproximada.
+ 
+ 
+a ¿Qué porcentaje de anuncios dura más de 95 segundos?
+ 
+ 
+b ¿Qué porcentaje de anuncios dura entre 35 y 115 segundos?
+ 
+ 
+c ¿Esperaría que los anuncios duren más de 2 minutos? ¿Por qué sí o por qué no?
+ 
+1.24 
+Los deportes acuáticos se han sugerido como método de ejercicio cardiovascular para atletas lesionados 
+y otros que deseen un programa de entrenamiento aeróbico de bajo impacto. En un estudio para inves-
+tigar la relación entre cadencia de ejercicios y ritmo cardiaco,1 se midieron los ritmos cardiacos de 20 
+voluntarios en buenas condiciones a una cadencia de 48 ciclos por minuto (un ciclo formado por dos 
+pasos). Los datos son como sigue:
+1. R. P. Wilder, D. Breenan y D. E. Schotte, “A Standard Measure for Exercise Prescription for Aqua Running”, 
+en American Journal of Sports Medicine 21(1) (1993): 45.
+ 
+ 
+a  Use la amplitud de las mediciones para obtener una estimación de la desviación estándar.
+ 
+ 
+b  Construya un histograma de frecuencia para los datos. Use el histograma para obtener una aproxima-
+ción visual a y y s.
+ 
+ 
+c  Calcule y y s. Compare estos resultados con las verifi caciones de cálculo proporcionadas por los 
+incisos a y b.
+ 
+ 
+d  Construya los intervalos y ± ks, k = 1, 2 y 3, y cuente el número de mediciones que caen en cada 
+intervalo. Compare las fracciones que caen en los intervalos con las fracciones que esperaría de 
+acuerdo con la regla empírica.
+87
+109
+79
+80
+96
+95
+90
+92
+96
+98
+101
+91
+78
+112
+94
+98
+94
+107
+81
+96
+Freund, J. E., and R. E. Walpole. 1987. Mathematical Statistics, 4th ed. Englewood 
+Cliffs, N. J.: Prentice Hall.
+Iman, R. L. 1994. A Data-Based Approach to Statistics. Belmont, Calif.: Duxbury Press.
+Mendenhall, W., R. J. Beaver, and B. M. Beaver. 2006. Introduction to Probability 
+and Statistics, 12th ed. Belmont, Calif.: Duxbury Press. 
+Mood, A. M., F. A. Graybill, and D. Boes. 1974. Introduction to the Theory 
+of Statistics, 3rd ed. New York: McGraw-Hill. 
+Moore, D. S., and G. P. McCabe. 2002. Introduction to the Practice of Statistics, 
+4th ed. New York: Freeman. 
+Rice, J. A. Mathematical Statistics and Data Analysis, 2nd ed. Belmont, Calif.: Duxbury 
+Press, 1995. 
+
+[Bloque seleccionado #42 | relevancia=2]
+Pagina 41
+ 
+1.25 
+Los datos siguientes dan los tiempos de falla para n = 88 radiotransmisores-receptores: 
+ 
+ 
+ 
+ 
+16
+224
+16
+80
+96
+536
+400
+80
+392
+576
+128
+56
+656
+224
+40
+32
+358
+384
+256
+246
+328
+464
+448
+716
+304
+16
+72
+8
+80
+72
+56
+608
+108
+194
+136
+224
+80
+16
+424
+264
+156
+216
+168
+184
+552
+72
+184
+240
+438
+120
+308
+32
+272
+152
+328
+480
+60
+208
+340
+104
+72
+168
+40
+152
+360
+232
+40
+112
+112
+288
+168
+352
+56
+72
+64
+40
+184
+264
+96
+224
+168
+168
+114
+280
+152
+208
+160
+176
+ 
+ 
+a  Utilice el rango para calcular s para los n = 88 tiempos para falla.
+ 
+ 
+b  Construya un histograma de frecuencia para los datos. [Observe la tendencia de la distribución a 
+extenderse hacia fuera (sesgo) a la derecha.]
+ 
+ 
+c  Use una calculadora (o computadora) para calcular y y s. (Hacer manualmente el cálculo es demasia-
+do tedioso para este ejercicio.)
+ 
+ 
+d  Calcule los intervalos y ± ks, k = 1, 2 y 3, y cuente el número de mediciones que caen en cada 
+intervalo. Compare sus resultados con los resultados de la regla empírica. Observe que la regla empí-
+rica proporciona una descripción más o menos buena de estos datos, aun cuando la distribución está 
+altamente sesgada.
+ 
+1.26 
+Compare la razón entre la amplitud y s para los tres tamaños muestrales (n = 6, 20 y 88) para los 
+Ejercicios 1.12, 1.24 y 1.25. Observe que la razón tiende a aumentar a medida que aumenta la cantidad 
+de datos. Cuanto mayor es la cantidad de datos, mayor será su tendencia a contener algunos valores 
+extremos que infl arán el rango y tendrán relativamente poco efecto en s. Pasamos por alto este fenóme-
+no y sugerimos que el lector use 4 como la razón para hallar un valor estimado de s al comprobar sus 
+cálculos.
+ 
+1.27 
+Un conjunto de 340 califi caciones de examen, que muestran una distribución de frecuencia relativa en 
+forma de campana, tiene una media de y = 72 y una desviación estándar de s = 8. ¿Aproximadamente 
+cuántas de las califi caciones se esperaría que cayeran en el intervalo de 64 a 80? ¿Y en el intervalo de 
+56 a 88?
+ 
+1.28 
+La descarga de sólidos suspendidos de una mina de fosfato está normalmente distribuida con una des-
+carga media diaria de 27 miligramos por litro (mg/L) y desviación estándar de 14 mg/L. ¿En qué pro-
+porción de los días será la descarga diaria menor que 13 mg/L?
+ 
+1.29 
+Una máquina produce cojinetes con diámetro medio de 3.00 pulgadas y desviación estándar de 0.01 pul-
+gada. Los cojinetes con diámetros de más de 3.02 o de menos de 2.98 no satisfacen las especifi caciones 
+de calidad.
+ 
+ 
+a  ¿Aproximadamente qué fracción de la producción de esta máquina no cumplirá con las especifi cacio-
+nes?
+ 
+ 
+b  ¿Qué 
+
+[Bloque seleccionado #202 | relevancia=5]
+Pagina 201
+ 
+ 
+a  Determine el valor de k.
+ 
+ 
+b  Obtenga la función de distribución para Y.
+ 
+4.45 
+Al estudiar bajas cotizaciones para contratos de embarques, una empresa fabricante de microcompu-
+tadoras encuentra que los contratos interestatales tienen bajas cotizaciones que están uniformemente 
+distribuidas entre 20 y 25, en unidades de miles de dólares. Encuentre la probabilidad de que la baja 
+cotización en el siguiente contrato interestatal
+ 
+ 
+a esté por debajo de $22,000.
+ 
+ 
+b sea de más de $24,000.
+ 
+4.46 
+Consulte el Ejercicio 4.45. Encuentre el valor esperado de bajas cotizaciones en contratos del tipo des-
+crito ahí.
+ 
+4.47 
+La falla de una tarjeta de circuito que utiliza un sistema de cómputo interrumpe el trabajo hasta que se 
+instala una nueva. El tiempo de entrega, Y, está uniformemente distribuido en el intervalo de uno a cinco 
+días. El costo de la falla de una tarjeta y la interrupción incluye el costo fi jo c0 de una nueva tarjeta y un 
+costo que aumenta proporcionalmente con Y 2. Si C es el costo en que se incurre, C = c0 + c1 Y 2.
+ 
+ 
+a  Encuentre la probabilidad de que el tiempo de entrega exceda de dos días.
+ 
+ 
+b  En términos de c0 y c1, encuentre el costo esperado asociado con una sola tarjeta de circuito que 
+falle.
+ 
+4.48 
+Si un punto se localiza al azar en un intervalo (a, b) y si Y denota la ubicación del punto, entonces se 
+supone que Y  tiene una distribución uniforme en (a, b). Una experta en efi ciencia de la planta selecciona 
+al azar un lugar, a lo largo de una línea de ensamble de 500 pies, desde el cual observa hábitos de los 
+trabajadores de la línea. ¿Cuál es la probabilidad de que el punto que ella seleccione se encuentre
+ 
+ 
+a  a no más de 25 pies del fi nal de la línea?
+ 
+ 
+b  a no más de 25 pies del principio de la línea?
+ 
+ 
+c  más cerca del principio de la línea que al fi nal de la línea?
+ 
+4.49 
+Una llamada telefónica llega a un conmutador al azar en un intervalo de no más de un minuto. El 
+conmutador estuvo totalmente ocupado durante 15 segundos en este periodo de un minuto. ¿Cuál es la 
+probabilidad de que la llamada llegara cuando el conmutador no hubiera estado totalmente ocupado?
+ 
+4.50 
+Empezando a las 12:00 de la noche, un centro de computadoras funciona durante una hora y deja de 
+operar dos horas en un ciclo regular. Una persona que desconoce este horario marca al centro en una 
+hora al azar entre las 12:00 de la noche y las 5:00 a.m. ¿Cuál es la probabilidad de que el centro esté 
+funcionando cuando entre la llamada de la persona?
+ 
+4.51 
+El tiempo de ciclo para camiones que transportan concreto
+
+[Bloque seleccionado #367 | relevancia=3]
+Pagina 366
+342  Capítulo 6  Funciones de variables aleatorias
+ 
+6.94 
+Dos expertos en efi ciencia toman medidas independientes Y1 y Y2 acerca del tiempo que tardan unos 
+trabajadores para completar cierta tarea. Se supone que cada una de las medidas tiene una función de 
+densidad dada por
+f (y) =
+(1/4)ye−y/2,
+y > 0,
+0,
+en cualquier otro punto.
+ 
+ 
+Encuentre la función de densidad para el promedio U = (1/2)(Y1 + Y2). [Sugerencia: use el método de 
+funciones generadoras de momento.]
+ 
+6.95 
+Sean Y1 y Y2 independientes y uniformemente distribuidas en el intervalo (0, 1). Encuentre la función de 
+densidad de probabilidad de cada uno de los siguientes:
+ 
+ 
+a U1 = Y1/Y2.
+b U2 = −ln (Y1Y2).
+c U3 = Y1Y2.
+ 
+6.96 
+Suponga que Y1 está normalmente distribuida con media 5 y varianza 1 y Y2 está normalmente distribui-
+da con media 4 y varianza 3. Si Y1 y Y2 son independientes, ¿cuál es P(Y1 > Y2)?
+ 
+*6.97 
+Suponga que Y1 es una variable aleatoria binomial con cuatro intentos y probabilidad de éxito .2 y que 
+Y2 es una variable aleatoria binomial independiente con tres intentos y probabilidad de éxito .5. Sea 
+W = Y1+ Y2. De acuerdo con el Ejercicio 6.53(e), W no tiene distribución binomial. Encuentre la fun-
+ción de masa de probabilidad para W. [Sugerencia: P(W = 0) = P(Y1 = 0, Y2 = 0); P(W = 1) = 
+P(Y1 = 1, Y2 = 0) + P(Y1 = 0, Y2 = 1); etc.]
+ 
+6.98 
+El tiempo que una máquina opera sin falla está denotado por Y1 y el tiempo para reparar una falla, por 
+Y2. Después de hacer una reparación, se supone que la máquina opera como nueva. Y1 y Y2 son indepen-
+dientes y cada uno tiene la función de densidad
+f (y) =
+e−y,
+y > 0,
+0,
+en cualquier otro punto.
+ 
+ 
+Encuentre la función de densidad de probabilidad para U = Y1/(Y1 + Y2), la proporción de tiempo en 
+que la máquina está en operación durante cualquier ciclo de operación-reparación.
+ 
+*6.99 
+Consulte el Ejercicio 6.98. Demuestre que U, la proporción del tiempo que la máquina está operando 
+durante cualquier ciclo de operación-reparación, es independiente de Y1 + Y2, la duración del ciclo.
+ 
+6.100 
+El tiempo hasta que se presenta una falla en un aparato electrónico tiene una distribución exponencial 
+con media de 15 meses. Si se prueba una muestra aleatoria de cinco de esos aparatos, ¿cuál es la proba-
+bilidad de que la primera falla entre los cinco aparatos ocurra
+ 
+ 
+a después de 9 meses?,
+ 
+ 
+b antes de 12 meses?
+ 
+*6.101 
+Una paracaidista desea caer en un blanco T, pero encuentra que es igualmente probable que caiga en 
+cualquier punto sobre una recta (A, B), en la que T está en el punto medio. Encuentre la función de d
+
+[Bloque seleccionado #679 | relevancia=2]
+Pagina 678
+654  Capítulo 12  Consideraciones al diseñar experimentos
+F I G U R A 12.3
+Diseño de bloque 
+aleatorizado
+T1
+T1
+T1
+T1
+T1
+T2
+T2
+T2
+T2
+T2
+T3
+T3
+T3
+T3
+T3
+T4
+T4
+T4
+T4
+T4
+1
+2
+3
+4
+8
+Personas
+ DEFINICIÓN 12.6 
+Un diseño aleatorizado en bloque contiene b bloques y k tratamientos consistentes de b 
+bloques de k unidades experimentales cada uno. Los tratamientos se asignan de manera 
+aleatoria a las unidades de cada bloque, con cada tratamiento apareciendo exactamente 
+una vez en cada bloque.
+La diferencia entre un diseño de bloque aleatorizado y el diseño completamente aleatori-
+zado se puede demostrar al considerar un experimento diseñado para comparar la reacción de 
+una persona a un conjunto de cuatro estímulos (tratamientos), en un experimento psicológico 
+de estímulo–respuesta. Denotaremos los tratamientos como T1, T2, T3 y T4.
+Suponga que ocho personas se asignan al azar a cada uno de cuatro tratamientos. La asig-
+nación aleatoria de personas a tratamientos (o viceversa) distribuye al azar errores debidos a la 
+variabilidad de persona a persona en respuesta a los cuatro tratamientos y proporciona cuatro 
+muestras que, para todos los fi nes prácticos, son aleatorias e independientes. Éste es un diseño 
+experimental completamente aleatorizado.
+El error experimental asociado con un diseño completamente aleatorizado tiene varios 
+componentes. Algunos de éstos se deben a las diferencias entre personas, a que las medicio-
+nes repetidas de una persona no sean idénticas (debido a variaciones en las condiciones físicas 
+y psicológicas), a que el experimentador no administre un estímulo determinado con exacta-
+mente la misma intensidad en mediciones repetidas y a errores de medición. La reducción de 
+cualquiera de estas causas de error aumentará la información del experimento.
+La variación de persona a persona del experimento anterior se puede eliminar con el uso de 
+personas como bloques. Cada persona recibiría cada uno de los cuatro tratamientos asignados 
+en una secuencia aleatoria. El resultante diseño de bloque aleatorizado aparecería como en 
+la Figura 12.3. Ahora sólo ocho personas son necesarias para obtener ocho mediciones de 
+respuesta por tratamiento. Observe que cada tratamiento ocurre exactamente una vez en cada 
+bloque.
+La palabra aleatorizado en el nombre del diseño implica que los tratamientos son asigna-
+dos al azar dentro de un bloque. Para nuestro experimento, la posición del bloque se refi ere a 
+la posición en la secuencia de estímulos asignada a una persona dada en el tiempo. El propó-
+sito de hacer aleatorio esto (es decir, la posici
+
+[Bloque seleccionado #680 | relevancia=3]
+Pagina 679
+12.4  Algunos diseños experimentales elementales  655
+hasta que se recolecte la cantidad de información necesaria. Una comparación de la venta 
+de productos competitivos en supermercados debería hacerse dentro de supermercados, 
+usándolos como bloques y eliminando la variabilidad de tienda a tienda. Es frecuente que 
+experimentos con animales en agricultura y medicina utilicen camadas como bloques, apli-
+cando todos los tratamientos, uno a cada uno, a los animales dentro de la camada. Debido 
+a características hereditarias, los animales de una camada son más homogéneos que los de 
+varias camadas. Este tipo de bloque elimina la variación de una camada a otra. El análisis 
+de información generada por un diseño de bloque aleatorizado se analiza en las Secciones 
+13.8 a 13.10.
+El diseño de bloque aleatorizado es sólo uno de los muchos tipos de diseños de bloque. El 
+diseño de bloques en dos direcciones se puede lograr con el uso de un diseño de cuadro latino. 
+Supongamos que los individuos del ejemplo anterior se fatigaron cuando se les aplicaron los 
+estímulos, de modo que el último estímulo siempre produjo una respuesta más baja que el pri-
+mero. Si esta tendencia (y la consecuente falta de homogeneidad de las unidades experimenta-
+les dentro de un bloque) fuera verdadera para todos los individuos, un diseño de cuadro latino 
+sería apropiado. El diseño se construiría como se indica en la Figura 12.4. Cada estímulo se 
+aplica una vez a cada individuo y ocurre exactamente una vez en cada posición del orden de 
+presentación. Los cuatro estímulos se presentan en cada fi la (renglón) y en cada columna de la 
+confi guración de 4 × 4. El diseño resultante es un cuadro latino de 4 × 4. Un diseño de cuadro 
+latino para tres tratamientos requiere una confi guración de 3 × 3; en general, p tratamientos 
+requieren un conjunto p × p de unidades experimentales. Si se desean más observaciones 
+por tratamiento, el experimentador debe usar varias confi guraciones de cuadro latino en un 
+experimento. En el ejemplo anterior sería necesario correr dos cuadros latinos para obtener 
+ocho observaciones por tratamiento. El experimento contendría entonces el mismo número de 
+observaciones por tratamiento que el diseño aleatorizado de bloques (Figura 12.3).
+Una comparación de medias para cualquier par de estímulos eliminaría el efecto de la 
+variación de un individuo a otro, pero también eliminaría el efecto de la tendencia de fatiga 
+dentro de cada estímulo porque cada tratamiento se aplicaría en cada posición de la secuencia 
+de administrar estímulos-tiempo. Por tanto,
+
+[Bloque seleccionado #802 | relevancia=2]
+Pagina 801
+15.9  Prueba de corridas de ensayo: una prueba de aleatoriedad  777
+ 
+15.43 
+Considere el estadístico Fr de Friedman, cuando k = 2 y b = (número de bloques) = n. Entonces, 
+Fr = (2/n) (R2
+1 + R2
+2) −9n. Sea M el número de bloques (pares) en los que el tratamiento uno tiene la 
+clasifi cación 1. Si no hay empates, entonces el tratamiento 1 tiene clasifi cación 2 en los restantes n − M 
+pares. Así, R1 = M + 2(n − M) = 2n − M. De manera análoga, R2 = n + M. Sustituya estos valores en 
+la expresión anterior para Fr y demuestre que el valor resultante es 4(M − .5n)2/n. Compare este resultado 
+con el cuadrado del estadístico Z de la Sección 15.3. Este procedimiento demuestra que Fr = Z2.
+ 
+15.44 
+Considere el estadístico de Friedman
+ 
+ 
+Fr =
+12b
+k(k + 1)
+k
+i=1
+(Ri −R)2
+ 
+ 
+Eleve al cuadrado cada término de la suma y demuestre que una forma alternativa de Fr es
+ 
+ 
+Fr =
+12
+bk(k + 1)
+k
+i=1
+R2
+i −3b(k + 1).
+ 
+ 
+[Sugerencia: recuerde que Ri = Ri/b, R = (k +1)/2
+k
+i=1 Ri =
+y observe que 
+ suma de todos los ran-
+gos = bk (k + 1)/2].
+ 
+15.45 
+Si no hay empates y b = 2, k = 3, deduzca la distribución nula exacta de Fr.
+ 
+15.9 Prueba de corridas de ensayo: una prueba 
+de aleatoriedad
+Considere un proceso de producción en el que piezas manufacturadas salen en secuencia y cada 
+una es clasifi cada como defectuosa (D) o no defectuosa (N). Hemos estudiado cómo podríamos 
+comparar la fracción de piezas defectuosas para dos intervalos iguales de tiempo, con el uso 
+de una prueba Z (Capítulo 10) y ampliado esta prueba para probar la hipótesis de p constante 
+pasa dos o más intervalos de tiempo usando la prueba x2 del Capítulo 14. Los propósitos de 
+estas pruebas eran detectar un cambio o tendencia en la fracción de piezas defectuosas, p. La 
+evidencia para indicar una fracción creciente de piezas defectuosas podría indicar la necesidad 
+de un estudio del proceso para localizar la fuente del problema. Un valor decreciente podría 
+sugerir que un programa de control de calidad del proceso estaba teniendo un efecto benéfi co 
+para reducir la fracción de piezas defectuosas.
+Las tendencias en la fracción de piezas defectuosas (u otras medidas de calidad) no son la 
+única indicación de falta de control de un proceso. Un proceso podría estar causando corridas 
+periódicas de piezas defectuosas aunque la fracción promedio de piezas defectuosas permanezca 
+constante, para todos los fi nes prácticos, en periodos largos. Por ejemplo, los focos de proyecto-
+res son fabricados en una máquina giratoria con un número fi jo de posiciones para focos. Uno de 
+Sustancia química
+Rata
+1
+
+
+[Bloque seleccionado #806 | relevancia=2]
+Pagina 805
+15.9  Prueba de corridas de ensayo: una prueba de aleatoriedad  781
+detectar al examinar las desviaciones de las mediciones de la serie de tiempo de su promedio. 
+Las desviaciones negativas y positivas podrían estar denotadas por S y F, respectivamente, y 
+podríamos entonces probar esta secuencia de tiempo de desviaciones para no aleatoriedad. 
+Ilustramos con un ejemplo.
+ 
+EJEMPLO 15.11 
+Se produce papel en un proceso continuo. Suponga que una medición de la brillantez Y se 
+hace en el papel una vez por hora y que los resultados aparecen como se muestra en la Figura 
+15.5.
+El promedio y para las 15 mediciones muestrales aparece en la fi gura. Observe las desvia-
+ciones arriba de y. ¿Estos datos indican falta de aleatoriedad y por tanto sugieren periodicidad 
+y falta de control en el proceso?
+ 
+Solución 
+La secuencia de desviaciones negativas (S) y positivas (F), como se indica en la Figura 15.5, 
+es
+S
+S
+S
+S
+F
+F
+S
+F
+F
+S
+F
+S
+S
+S
+S.
+Entonces, n1 = 10, n2 = 5 y R = 7. Consultando la Tabla 10 del Apéndice 3, encontramos P(R 
+≤ 7) = .455. Este valor de R no es improbable, suponiendo que la hipótesis de aleatoriedad 
+sea verdadera. En consecuencia, no hay sufi ciente evidencia para indicar no aleatoriedad en la 
+secuencia de mediciones de brillantez. 
+Q
+La prueba de corridas de ensayo también se puede usar para comparar dos distribuciones 
+de frecuencia poblacional para un experimento de dos muestras no pareado. De esta forma, 
+tenemos una alternativa para la prueba U de Mann–Whitney (Sección 15.6). Si las mediciones 
+para las dos muestras se arreglan en orden de magnitud, forman una secuencia. Las medicio-
+nes para las muestras 1 y 2 se pueden denotar como S y F, respectivamente y una vez más 
+nos ocupamos de una prueba de aleatoriedad. Si todas las mediciones para la muestra 1 son 
+más pequeñas que las de la muestra 2, la secuencia resultará en SSSS . . . SF FF . . . F o R 
+= 2 corridas de ensayo. Un valor pequeño de R proporciona evidencia de una diferencia en 
+las distribuciones poblacionales de frecuencia y la región de rechazo escogida es R ≤ a. Esta 
+región de rechazo implica una prueba estadística de una cola. Un ejemplo de la aplicación de 
+la prueba de corridas de ensayo para comparar dos distribuciones poblacionales de frecuencia 
+se deja como ejercicio.
+Brillantez
+Tiempo (horas)
+y
+y
+x
+F I G U R A 15.5
+Brillantez del papel 
+contra tiempo
+
+[Bloque seleccionado #808 | relevancia=2]
+Pagina 807
+15.10  Coeﬁ ciente de correlación de rangos  783
+ 
+15.50 
+Una gráfi ca de control de calidad se ha mantenido para una característica medible de piezas tomadas de 
+una banda transportadora en un punto fi jo de una línea de producción. Las mediciones obtenidas hoy, en 
+orden de tiempo, son como sigue:
+68.2
+71.6
+69.3
+71.6
+70.4
+65.0
+63.6
+64.7
+65.3
+64.2
+67.6
+68.6
+66.8
+68.9
+66.8
+70.1
+a Clasifi que las mediciones de esta serie de tiempo como arriba o abajo de la media muestral y de-
+termine (usando la prueba de corridas de ensayo) si observaciones consecutivas sugieren falta de 
+estabilidad en el proceso de producción.
+b Divida el periodo en dos partes iguales y compare las medias usando la prueba t de Student. ¿Los 
+datos dan evidencia de un cambio en el nivel medio de las características de calidad? Explique.
+ 
+15.51 
+Consulte el Ejercicio 15.24. Use la prueba de corridas de ensayo para analizar los datos. Compare su 
+respuesta a este ejercicio con su respuesta al Ejercicio 15.24.
+ 
+15.52 
+Consulte el Ejercicio 15.25. Si en verdad las baterías experimentales tienen una vida media más larga, 
+¿cuál sería el efecto de esto en el número esperado de corridas de ensayo? Usando la teoría de muestras 
+grandes para la prueba de corridas de ensayo, pruebe (usando a = .05) si hay una diferencia en las dis-
+tribuciones de la duración de baterías para las dos poblaciones. Proporcione el valor p aproximado.
+ 
+15.10 Coeﬁ ciente de correlación de rangos
+En las secciones anteriores usamos rangos para indicar la magnitud relativa de observaciones en 
+pruebas no paramétricas para comparación de tratamientos. Ahora empleamos la misma téc-
+nica para probar una correlación entre dos variables clasifi cadas. Dos coefi cientes de correla-
+ción de rango común son el estadístico rS de Spearman y el t de Kendall. Presentamos el rS 
+de Spearman porque su cálculo es análogo al del coefi ciente r de correlación muestral de la 
+Sección 11.8. El coefi ciente de correlación de rango de Kendall se estudia con detalle en la 
+obra de Kendall y Stuart (1979).
+Suponga que ocho profesores de ciencias elementales han sido clasifi cados por un juez 
+según su capacidad de enseñanza y todos han hecho un examen nacional de profesores. Los 
+datos se presentan en la Tabla 15.8. ¿Los datos sugieren concordancia entre la clasifi cación 
+del juez y la califi cación del examen? Alternativamente podríamos expresar esta pregunta al 
+consultar si existe correlación entre la clasifi cación del juez y los rangos de califi caciones del 
+examen.
+Las dos variables de interés son la clasifi cación y la ca

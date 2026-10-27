@@ -1,0 +1,830 @@
+Fuente bibliográfica: Estadística para negocios y economía - Anderson, Sweeney y Williams. 11.ª edición.pdf
+Actividad: 13 (5.1 Investigación 5% Tarea)
+Palabras clave: no paramétricas, libre de distribución, Kolmogorov-Smirnov, Wilcoxon, Mann-Whitney, Kruskal-Wallis, Ji-cuadrada, rangos
+
+[Bloque seleccionado #901 | relevancia=16]
+Pagina 900
+866 
+Capítulo 19  Métodos no paramétricos
+  
+ 
+Diferencia 
+ 
+Rangos con signo
+ 
+Trabajador 
+Diferencia 
+absoluta 
+Rango 
+Negativo 
+Positivo
+       1 
+0.7 
+0.7 
+8 
+ 
+8
+       2 
+0.2 
+0.2 
+2 
+2 
+       3 
+0.4 
+0.4 
+3.5 
+ 
+3.5
+       4 
+0.5 
+0.5 
+5.5 
+ 
+5.5
+       5 
+0.4 
+0.4 
+3.5 
+3.5 
+       6 
+0.9 
+0.9 
+10 
+ 
+10
+       7 
+0.1 
+0.1 
+1 
+ 
+1
+       8 
+0.0 
+ 
+ 
+ 
+       9 
+0.6 
+0.6 
+7 
+ 
+7
+     10 
+0.5 
+0.5 
+5.5 
+ 
+5.5
+     11 
+0.8 
+0.8 
+9 
+ 
+9
+ 
+Suma de los rangos con signo T   49.5
+tiempo que se requiere para realizar la tarea? Si se asume que las diferencias tienen una distri-
+bución simétrica, pero no necesariamente una distribución normal, se aplica la prueba de rangos 
+con signo de Wilcoxon.
+En particular, se utilizará la prueba de rangos con signo de Wilcoxon para la diferencia 
+entre la mediana del tiempo de realización de la tarea para los dos métodos de producción. Las 
+hipótesis son las siguientes.
+H0: mediana para el método A  mediana para el método B  0
+Ha: mediana para el método A  mediana para el método B  0
+Si H0 no es rechazada, no podremos concluir que las medianas de los tiempos de realización de 
+la tarea son diferentes. Sin embargo, si H0 es rechazada, concluiremos que las medianas de los 
+tiempos de realización de la tarea son diferentes. Se utilizará 0.05 como nivel de signiﬁ cancia 
+para la prueba.
+El primer paso en la prueba de rangos con signo de Wilcoxon es descartar la diferencia de 
+cero para el trabajador 8 y luego calcular el valor absoluto de la diferencia para los 10 trabaja-
+dores restantes, como se muestra en la columna 3 de la tabla 19.7. A continuación se clasiﬁ carán 
+esas diferencias absolutas de menor a mayor, como se observa en la columna 4. A la diferencia 
+absoluta más pequeña, que es de 0.1 para el trabajador 7, se le asigna el rango 1. A la segunda 
+menor diferencia absoluta de 0.2, obtenida para el trabajador 2, se le asigna el rango 2. Esta cla-
+siﬁ cación de las diferencias absolutas continúa con la diferencia absoluta mayor de 0.9 para el 
+trabajador 6, al que se le asigna el rango 10. A las diferencias absolutas iguales de 0.4 para los tra-
+bajadores 3 y 5 se les asigna el rango promedio de 3.5. Del mismo modo, a las diferencias abso-
+lutas iguales de 0.5 para los trabajadores 4 y 10 se les asigna el rango promedio de 5.5.
+Una vez que los rangos de las diferencias absolutas se han determinado, a cada rango se le 
+especifica el signo de la diferencia original de los trabajadores. Los rangos de signo negativo se 
+colocan en la columna 5 y los de signo positivo en la columna 6 (vea la tabla 
+
+[Bloque seleccionado #903 | relevancia=15]
+Pagina 902
+868 
+Capítulo 19  Métodos no paramétricos
+aproxima por el intervalo de probabilidad normal, 49 a 50, y la probabilidad de que T   49.5 
+se aproxima por:
+P(T   49.5)  P z  49  27.5
+9.8107
+  P(z  2.19)
+Utilizando la tabla de distribución normal estándar y z  2.19, se observa que el valor-p de dos 
+colas  2(1  0.9857)  0.0286. Con el valor-p  0.05, H0 es rechazada, y se concluye que 
+las medianas del tiempo de realización de la tarea para los dos métodos de producción no son 
+iguales. Con T  en la cola superior de la distribución de muestreo, se observa que el método A 
+toma mayor tiempo de realización. Es de esperar que la gerencia concluya que B es el método 
+de producción más rápido o el más apropiado.
+Las pruebas de rangos con signo de Wilcoxon de una cola son posibles. Por ejemplo, si al 
+principio se hubiera buscado una evidencia estadística para concluir que el método A tomaba 
+un tiempo mediano mayor para la realización de la tarea y que el método B tenía el tiempo me-
+diano menor, se habría formulado la siguiente prueba de hipótesis de cola superior.
+H0: mediana para el método A  mediana para el método B  0
+Ha: mediana para el método A  mediana para el método B 	 0
+Al rechazar H0 se llegaría a la conclusión de que el método A tiene el tiempo mediano mayor 
+para completar la tarea y el método B tiene el tiempo mediano menor para completar la tarea. 
+También es posible la prueba de hipótesis de cola inferior.
+Como nota ﬁ nal, en la sección 19.1 se mostró cómo la prueba de signos puede utilizarse 
+tanto en una prueba de hipótesis para la mediana poblacional, como en una prueba de hipótesis 
+con muestras pareadas. En esta sección se ha demostrado el uso de la prueba de rangos con sig-
+no de Wilcoxon para una prueba de hipótesis con muestras pareadas. Sin embargo, dicha prueba 
+también puede utilizarse para una prueba no paramétrica de una mediana de la población, y no 
+hace ningún supuesto acerca de que la distribución de la población tan solo es simétrica. Si este 
+supuesto es apropiado, la prueba de rangos con signo de Wilcoxon es la prueba no paramétri-
+ca preferida para una mediana de la población. Sin embargo, si la población está sesgada, se 
+preﬁ ere la prueba de signos presentada en la sección 19.1. Con la prueba de rangos con signo 
+de Wilcoxon se utilizan las diferencias entre las observaciones y el valor hipotético de la me-
+diana poblacional en lugar de las diferencias entre las observaciones pareadas. Por lo demás, 
+los cálculos son exactamente como se muestran en esta sección. En el ejercicio 17 se le pedirá 
+
+
+[Bloque seleccionado #906 | relevancia=10]
+Pagina 905
+ 
+19.3  Prueba de Mann-Whitney-Wilcoxon 
+871
+17. 
+La prueba de aptitud académica SAT se compone de tres partes: lectura crítica, matemáticas y 
+escritura. Cada parte de la prueba se califica en una escala de 200 hasta 800 puntos, con una 
+mediana de aproximadamente 500 (The World Almanac, 2009). Se puede asumir que las pun-
+tuaciones para cada parte de la prueba son simétricas. Utilice los siguientes datos para probar la 
+hipótesis de que la puntuación mediana de la población de estudiantes en la parte de escritura 
+es 500. Utilice α  0.05. ¿Cuál es su conclusión?
+Golfer 
+1st Round 
+2nd Round
+Kevin Duke 
+65 
+71
+Andrew Buckle 
+70 
+74
+Paul Claxton 
+69 
+73
+Larry Mize 
+72 
+71
+Chris Riley 
+68 
+70
+Bubba Watson 
+70 
+68
+Carlos Franco 
+71 
+71
+Richard Johnson 
+72 
+69
+19.3  Prueba de Mann-Whitney-Wilcoxon
+En el capítulo 10 se introdujo un procedimiento para conducir una prueba de hipótesis acerca 
+de la diferencia entre las medias de dos poblaciones con dos muestras independientes, una de 
+la población 1 y otra de la población 2. Esta prueba paramétrica requería datos cuantitativos 
+y el supuesto de que ambas poblaciones tenían una distribución normal. En el caso de que las 
+desviaciones estándar de la población σ1 y σ2 fueran desconocidas, con la desviación estándar 
+muestral s1 y s2 se obtenían estimaciones para σ1 y σ2, y se utilizó la distribución t para hacer 
+una inferencia acerca de la diferencia entre las medias de las dos poblaciones.
+En esta sección se presenta una prueba no paramétrica de la diferencia entre dos poblacio-
+nes a partir de dos muestras independientes. Las ventajas de este procedimiento estriban en que 
+se pueden utilizar ya sea los datos ordinales1 o los datos cuantitativos, y no requiere el supuesto 
+de que las poblaciones tengan una distribución normal. Versiones diferentes de esta prueba 
+fueron desarrolladas conjuntamente por Mann y Whitney y también por Wilcoxon. Como re-
+sultado, a la prueba se le conoce como prueba de Mann-Whitney y prueba de suma de rangos 
+de Wilcoxon. Las pruebas son equivalentes y ambas versiones ofrecen la misma conclusión. En 
+esta sección nos referiremos a esta prueba no paramétrica como prueba de Mann-Whitney-
+Wilcoxon (MWW).
+1  Los datos ordinales son datos categóricos que pueden tener un orden jerárquico. Esta escala de medición se estudia con 
+más detalle en la sección 1.2 del capítulo 1.
+ WEB archivo
+WritingScore
+ 
+635 
+701 
+439 
+447 
+464
+ 
+502 
+405 
+453 
+471 
+476
+ 
+447 
+590 
+337 
+387 
+514
+
+[Bloque seleccionado #908 | relevancia=13]
+Pagina 907
+ 
+19.3  Prueba de Mann-Whitney-Wilcoxon 
+873
+El siguiente paso del procedimiento MWW es clasiﬁ car la combinación de las muestras de 
+menor a mayor. Puesto que hay un total de 9 sujetos, los datos de desempeño de la tabla 19.8 
+se clasiﬁ can de 1 a 9. El valor más bajo de 3 para el estudiante universitario 2 recibe un rango 
+de 1, y el segundo valor más bajo, de 8, para el estudiante universitario 4, recibe un rango de 2. 
+El valor más alto, 32, para el estudiante de bachillerato 3, recibe un rango de 9. La clasiﬁ cación 
+de rangos de las muestras combinadas para los 9 estudiantes se ilustra en la tabla 19.9.
+A continuación se suman los rangos de cada muestra como se presentan en la tabla 19.9. 
+El procedimiento de MWW puede utilizar la suma de los rangos de cualquiera de las muestras. 
+Sin embargo, en esta aplicación de la prueba se continuará con la práctica común de utilizar la 
+primera muestra, que es la de cuatro estudiantes universitarios. La suma de los rangos corres-
+pondiente será el estadístico de prueba W para la prueba de MWW. Esta suma, como se muestra 
+en la tabla 19.9, W  4  1  7  2  14.
+Se explicará ahora por qué la suma de los rangos servirá para seleccionar entre las dos 
+hipótesis H0: las dos poblaciones son idénticas, y Ha: las dos poblaciones no son idénticas. Asu-
+miendo que C denota a un estudiante universitario y H a un estudiante de bachillerato, suponga 
+que los rangos de los nueve estudiantes tienen el siguiente orden, con los cuatro estudiantes 
+universitarios obteniendo los cuatro rangos más bajos.
+Rango        1 2 3 4 
+5 
+6 
+7 
+8 
+9
+Estudiantes  C 
+C 
+C 
+C 
+H 
+H 
+H 
+H 
+H
+Observe que esta permutación u orden separa las dos muestras con todos los estudiantes uni-
+versitarios que tienen un rango inferior al de los estudiantes de bachillerato. Esta es una fuerte 
+indicación de que las dos poblaciones no son idénticas. La suma de rangos para los estudiantes 
+universitarios en este caso es W  1  2  3  4  10. 
+Los datos de este ejemplo 
+muestran cómo se puede 
+utilizar la prueba de 
+MWW con datos ordinales 
+(ordenados por rango). 
+El ejercicio 17 ofrece otra 
+aplicación que utiliza este 
+tipo de datos.
+ Estudiante 
+Calificación de  
+Estudiante 
+Calificación de
+ universitario 
+desempeño del gerente 
+de bachillerato 
+desempeño del gerente
+ 
+1 
+15 
+1 
+18
+ 
+2 
+ 3 
+2 
+20
+ 
+3 
+23 
+3 
+32
+ 
+4 
+ 8 
+4 
+ 9
+ 
+ 
+ 
+5 
+25
+TABLA 19.8   Calificación de desempeño de una muestra de estudiantes universitarios y una mues-
+tra de estudiantes de bachillerato que trabajan en Showtime Cinemas
+ 
+ 
+Calificación  
+ 
+ 
+Calificación
+ Estudi
+
+[Bloque seleccionado #909 | relevancia=10]
+Pagina 908
+874 
+Capítulo 19  Métodos no paramétricos
+Ahora considere una clasiﬁ cación donde los cuatro estudiantes universitarios tienen los cuatro 
+rangos más altos.
+Rango       1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9
+Estudiantes  H 
+H 
+H 
+H 
+H 
+C 
+C 
+C 
+C
+Observe que esta permutación u orden separa de nuevo las dos muestras, pero esta vez todos 
+los estudiantes universitarios tienen un rango mayor que los de bachillerato. Esta es otra clara 
+indicación de que las dos poblaciones no son idénticas. La suma de rangos para los estudiantes 
+universitarios en este caso es W  6  7  8  9  30. Así, se ve que la suma de los rangos 
+de este grupo debe estar entre 10 y 30. Los valores de W cerca de 10 implican que los estudian-
+tes universitarios tienen rangos más bajos que los estudiantes de bachillerato, mientras que los 
+valores de W cerca de 30 implican que los primeros tienen rangos más altos que los segundos. 
+Cualquiera de estos dos extremos sería una señal de que las dos poblaciones no son idénticas. 
+Sin embargo, si lo fueran, se esperaría una combinación en el orden de C y H de modo que la 
+suma de los rangos de W esté más cerca del promedio de los dos extremos, o sea, más cerca de 
+(10  30)/2  20.
+Asumiendo que las dos poblaciones son idénticas, se usa un programa de cómputo para cal-
+cular todos los órdenes posibles para los nueve estudiantes. Para cada orden se calcula la suma 
+de los rangos de los estudiantes universitarios. Esto proporciona la distribución de probabilidad 
+que muestra la distribución de muestreo exacta de W en la ﬁ gura 19.5. Las probabilidades 
+exactas relacionadas con el valor de W se resumen en la tabla 19.10. Si bien no se le pedirá que 
+realice esta distribución de muestreo exacta, ésta se utilizará para probar la hipótesis de que las 
+dos poblaciones de estudiantes son idénticas.
+Usemos la distribución de muestreo de W de la ﬁ gura 19.5 para calcular el valor-p para la 
+prueba como se ha realizado en otras distribuciones de muestreo. La tabla 19.9 indica que la su-
+ma de rangos para los cuatro estudiantes universitarios es W  14. Debido a que este valor de W 
+está en la cola inferior de la distribución de muestreo, empezamos por calcular la probabilidad 
+de la cola inferior P(W  14). Por tanto, tenemos 
+P(W  14)  P(10)  P(11)  P(12)  P(13)  P(14)
+ 0.0079  0.0079  0.0159  0.0238  0.0397  0.0952
+0.10
+0.09
+0.08
+0.07
+0.06
+0.03
+0.02
+0.01
+0.05
+0.04
+0.00
+Probabilidad
+10
+15
+20
+25
+30
+Todas las sumas posibles de rangos para los estudiantes universitarios
+FIGURA 19.5   Distribución de muestreo exacta de la suma de rangos para la 
+
+[Bloque seleccionado #918 | relevancia=13]
+Pagina 917
+ 
+19.4  Prueba de Kruskal-Wallis 
+883
+Williams Manufacturing Company contrata empleados para su equipo gerencial que pro-
+vienen de tres universidades. Recientemente, el director del departamento de personal de la em-
+presa comenzó a revisar el informe de desempeño anual en un intento por determinar si existen 
+diferencias en el desempeño de los empleados de acuerdo con la universidad de procedencia. 
+Se cuenta con los datos para muestras independientes de siete gerentes que se graduaron en la 
+universidad A, seis que provienen de la universidad B y siete que egresaron de la universidad 
+C. Estos datos se resumen en la tabla 19.14. La caliﬁ cación del desempeño de cada gerente se 
+registra en una escala de 0 a 100, donde 100 es la caliﬁ cación más alta. Suponga que se desea 
+probar si las tres poblaciones de gerentes son idénticas en términos de caliﬁ cación del desem-
+peño. Se utilizará un nivel de signiﬁ cancia de 0.05 para la prueba. 
+El primer paso en el procedimiento de Kruskal-Wallis es clasiﬁ car las muestras combinadas 
+de los valores más bajos a los más altos. Utilizando las 20 observaciones de la tabla 19.14, el 
+nivel más bajo de 15 para el 4º gerente en la muestra de la universidad B recibe un rango 1. La 
+más alta caliﬁ cación de 95 para el 5º director la muestra de la universidad A recibe un rango 
+de 20. Los datos de desempeño y sus rangos asignados se muestran en la tabla 19.15. Observe 
+que se asignan rangos promedio para igualar las caliﬁ caciones de desempeño de 60, 70, 80 y 
+90. La tabla 19.15 también muestra la suma de los rangos para cada una de las tres muestras. 
+El estadístico de la prueba de Kruskal-Wallis utiliza la suma de los rangos de las tres mues-
+tras y se calcula de la siguiente manera. 
+TABLA 19.14
+Evaluación del 
+desempeño de 
+20 empleados 
+de Williams
+ 
+ 
+Universidad
+ 
+A 
+B 
+C
+ 
+25 
+60 
+50
+ 
+70 
+20 
+70
+ 
+60 
+30 
+60
+ 
+85 
+15 
+80
+ 
+95 
+40 
+90
+ 
+90 
+35 
+70
+ 
+80 
+ 
+75
+ESTADÍSTICO DE PRUEBA DE KRUSKAL-WALLIS
+ 
+H  
+12
+nT(nT  1)
+Ri
+2
+ni
+k
+a
+i1
+  3(nT  1) 
+(19.7)
+donde
+k  número de poblaciones
+ni  número de observaciones en la muestra i
+nT  
+k
+a
+i1
+ nt  número total de observaciones en todas las muestras
+Ri  suma de los rangos para la muestra i
+ 
+Universidad A 
+Rango 
+Universidad B 
+Rango 
+Universidad C 
+Rango
+ 
+25 
+ 3 
+60 
+ 9 
+50 
+  7
+ 
+70 
+12 
+20 
+ 2 
+70 
+12
+ 
+60 
+  9 
+30 
+ 4 
+60 
+  9
+ 
+85 
+17 
+15 
+ 1 
+80 
+   15.5
+ 
+95 
+20 
+40 
+ 6 
+90 
+   18.5
+ 
+90 
+   18.5 
+35 
+ 5 
+70 
+12
+ 
+80 
+   15.5 
+Suma de rangos 
+27 
+75 
+14
+ 
+Suma de rangos 
+95 
+ 
+ 
+Suma de rangos 
+88
+TABLA 19.15   Rangos para las tres muestras 
+
+[Bloque seleccionado #922 | relevancia=11]
+Pagina 921
+ 
+19.5  Correlación de rangos 
+887
+ 
+M&M’s 
+Kit Kat 
+Milky Way II
+ 
+230 
+225 
+200
+ 
+210 
+205 
+208
+ 
+240 
+245 
+202
+ 
+250 
+235 
+190
+ 
+230 
+220 
+180
+19.5 Correlación de rangos
+El coeﬁ ciente de correlación producto-momento de Pearson presentado en el capítulo 3 es una 
+medición de la asociación lineal entre dos variables a partir de datos cuantitativos. En esta 
+sección se presenta una medida de correlación de la asociación entre dos variables para datos 
+ordinales u ordenados por rango. El coeﬁ ciente de correlación por rangos de Spearman se ha 
+desarrollado para este propósito.
+COEFICIENTE DE CORRELACIÓN POR RANGOS DE SPEARMAN
+ 
+rs  1  
+n
+a
+i1
+n(n2  1)
+6
+di
+2
+ 
+(19.8)
+donde
+n  número de observaciones en la muestra
+xi  rango de la observación i con respecto a la primera variable
+yi  rango de la observación i con respecto a la segunda variable
+di  xiyi
+Ilustremos el uso del coeﬁ ciente de correlación por rangos de Spearman. Una empresa 
+desea determinar si las personas que prometían el más alto potencial al momento de ser contra-
+tadas resultaron tener el registro de mayores ventas. Para investigarlo, el director de recursos 
+humanos revisó los registros originales de las entrevistas de trabajo, expediente académico y 
+cartas de recomendación de 10 miembros de la fuerza de ventas. Después de la revisión, el di-
+rector clasiﬁ có a las 10 personas con base en su potencial de éxito en el momento de ser contra-
+tadas y asignó el rango 1 a la persona que tuvo el mayor potencial. A continuación se recabaron 
+los datos de las ventas reales de cada vendedor durante sus primeros dos años de empleo. Sobre 
+la base de los registros de ventas reales se obtuvo una segunda caliﬁ cación de los 10 sujetos con 
+base en el desempeño en las ventas. En la tabla 19.16 se presentan los rangos basados en el po-
+tencial (Ranking of Potential) y en el desempeño real de cada vendedor (Salesperson). En la ter-
+cera columna se listan las ventas de dos años (Two-Year Sales) en unidades (units) y en la cuarta 
+columna el rango con base en las ventas de dos años (Ranking According to Two-Year Sales).
+Calculemos el coeﬁ ciente de correlación por rangos de Spearman para los datos de la tabla 
+19.16, los cuales se resumen en la tabla 19.17. En primer lugar, se calcula la diferencia entre los 
+dos rangos de cada vendedor, di, como se muestra en la columna 4. La suma de di
+2 en la colum-
+na 5 es 44. Este valor y el tamaño de muestra n  10 se utilizan para calcular el coeﬁ ciente de 
+correlación por rangos rs  0.733 mostrado en la tabla 19.17.
+El coeﬁ ciente de correlació
+
+[Bloque seleccionado #924 | relevancia=10]
+Pagina 923
+ 
+19.5  Correlación de rangos 
+889
+Bajo el supuesto de que la hipótesis nula es verdadera y el coeﬁ ciente de correlación por rangos 
+de la población es 0, la siguiente distribución de muestreo de rs puede utilizarse para realizar 
+la prueba. 
+DISTRIBUCIÓN DE MUESTREO DE rs
+Media: μrs  0 
+(19.9)
+ 
+Desviación estándar: σrs  
+1
+n  1 
+(19.10)
+Forma de distribución: aproximadamente normal siempre que n  10
+El coeﬁ ciente de correlación muestral por rangos entre el potencial y el desempeño de 
+ventas es rs  0.733. Al utilizar la ecuación (19.9) tenemos μrs  0, y con la ecuación (19.10) 
+tenemos σrs  1(10  1)  0.333. Con la distribución de muestreo de rs aproximada por 
+una distribución normal, la variable aleatoria normal estándar z se convierte en el estadístico 
+de prueba con
+z  
+rs  μrs
+σrs
+  0.733  0
+0.333
+  2.20
+Utilizando la tabla de probabilidad normal estándar y z  2.20 se determina que el valor-p de 
+dos colas  2(1  0.9861)  0.0278. Con un nivel de signiﬁ cancia 0.05, el valor-p  α. Por 
+tanto, se rechaza la hipótesis nula de que el coeﬁ ciente de correlación por rangos poblacional 
+sea cero. El resultado muestra que existe una correlación por rangos signiﬁ cativa entre el poten-
+cial del vendedor al momento de ser contratado y el desempeño de las ventas reales.
+Ejercicios
+Métodos
+32. 
+Considere el siguiente conjunto de clasificaciones o rangos para una muestra de 10 elementos.
+ 
+Elemento 
+x 
+y 
+Elemento 
+x 
+y
+ 
+1 
+10 
+ 8 
+ 6 
+2 
+7
+ 
+2 
+ 6 
+ 4 
+ 7 
+8 
+6
+ 
+3 
+ 7 
+10 
+ 8 
+5 
+3
+ 
+4 
+ 3 
+ 2 
+ 9 
+1 
+1
+ 
+5 
+ 4 
+ 5 
+10 
+9 
+9
+a) Calcule el coeficiente de correlación por rangos de Spearman para los datos.
+b) Utilice α  0.05 y pruebe la significancia de la correlación por rangos. ¿Cuál es su con-
+clusión?
+NOTAS Y COMENTARIOS
+El coeficiente de correlación por rangos de Spearman 
+proporciona el mismo valor que se obtiene mediante 
+el procedimiento del coeficiente de correlación pro-
+ducto-momento de Pearson con los datos ordenados 
+por rango. En los apéndices 19.1 y 19.2 se muestra 
+cómo pueden utilizarse las herramientas de correla-
+ción de Minitab y Excel para el coeficiente de co-
+rrelación producto-momento a efecto de calcular el 
+coeficiente de correlación por rangos de Spearman.
+AUTO evaluación
+
+[Bloque seleccionado #927 | relevancia=16]
+Pagina 926
+892 
+Capítulo 19  Métodos no paramétricos
+La prueba de signos es un procedimiento no paramétrico para probar hipótesis acerca de 
+una mediana de la población o con muestras pareadas. Los datos deben resumirse en dos cate-
+gorías: una denotada por un signo positivo y otra denotada por un signo negativo. La prueba 
+de rangos con signo de Wilcoxon analiza las muestras pareadas de dos poblaciones cuando se 
+dispone de datos cuantitativos. No se requiere ningún supuesto que no sea que la distribución 
+de las diferencias pareadas sea simétrica. La prueba de rangos con signo de Wilcoxon se utiliza 
+para determinar si la mediana poblacional de diferencias pareadas es cero. Esta prueba también 
+se utiliza para hacer inferencias acerca de la mediana de una población simétrica.
+La prueba de Mann-Whitney-Wilcoxon es un procedimiento no paramétrico para la dife-
+rencia entre dos poblaciones a partir de dos muestras independientes. Es una alternativa para la 
+prueba paramétrica de t para la diferencia entre las medias de dos poblaciones. Se obtienen los 
+rangos combinados para los datos de las dos muestras y el estadístico de prueba para la prue-
+ba de MWW es la suma de los rangos de la primera muestra. En la mayoría de las aplicaciones, los 
+tamaños de muestra son lo suﬁ cientemente grandes como para utilizar una aproximación nor-
+mal con el factor de corrección de continuidad en la realización de la prueba de hipótesis. Si 
+no se realiza ningún supuesto acerca de la población, el procedimiento MWW prueba si las dos 
+poblaciones son idénticas. Si puede hacer el supuesto de que las dos poblaciones tengan la mis-
+ma forma, la prueba ofrece una inferencia acerca de las diferencias entre las medianas de las 
+dos poblaciones.
+La prueba de Kruskal-Wallis extiende la prueba de MWW a tres o más poblaciones. Es una 
+alternativa al análisis paramétrico de la prueba de varianza para las diferencias entre las medias 
+de tres o más poblaciones con distribución normal. La prueba de Kruskal-Wallis no requiere 
+ningún supuesto acerca de la distribución de las poblaciones y utiliza la hipótesis nula de que 
+las k poblaciones son idénticas. Si se puede hacer el supuesto de que las poblaciones tienen la 
+misma forma, la prueba ofrece una inferencia acerca de las diferencias entre las medianas de 
+las k poblaciones. En la última sección del capítulo se introdujo el coeﬁ ciente de correlación 
+por rangos de Spearman como una medida de asociación entre dos variables basada en datos 
+ordenados por rango. 
+Glosario
+Coeﬁ ciente de correlación por rangos de Spearman Medida de corre
+
+[Bloque seleccionado #1111 | relevancia=12]
+Pagina 1110
+1076 
+Índice analítico
+M
+Malcolm Baldrige National Quality Award, 906
+Marco, 267
+Margen de error, 309, 310-314, 323n1, 331n1
+Marketing, 4
+MeadWestvaco Corporation, 266
+Media, 14-15, 87-88, 124-125, 219
+Media muestral, 126, 267, 297n1, 521n1
+Media muestral general, 511
+Media poblacional
+estimación del tamaño de la muestra cuando 
+σ conocida, 310-314
+inferencia acerca de la diferencia entre muestras 
+pareadas, 423-425
+inferencias acerca de la diferencia entre σ1 y σ2 
+conocidas, 407-412
+inferencias acerca de la diferencia entre σ1 y σ2 
+desconocidas, 415-419
+para datos agrupados, 127
+σ conocida, 310-314
+σ desconocida, 316-323
+Media poblacional: σ conocida
+estimación por intervalo, 310-314
+margen de error,  310-314
+prueba de una cola, 356-361
+Media poblacional: σ desconocida
+estimación por intervalo, 317-320
+margen de error, 317-320
+prueba de dos colas, 372-373
+pruebas de hipótesis y, 370-374
+Media ponderada, 124-125
+Media recortada, 92n1
+Mediana, 88-89
+Medida de la distancia de Cook, 679-681, 681n2
+Medidas de asociación entre dos variables, 115-124
+Medidas de localización central, 297n1
+Medidas de posición o localización, 87-92
+Medidas de variabilidad, 95-102
+Mejora continua, 909
+Método de elaboración de pronósticos usando 
+promedios móviles ponderados, 800
+Método de los mínimos cuadrados, 565-575, 569n1, 
+645-649
+Método de pronóstico de regresión de tendencia 
+lineal, 807-812, 817n1
+Método de suavizamiento exponencial, 800-804, 
+804n2
+Método del valor crítico, 360-361
+Método del valor esperado, 941-943
+Método del valor-p, 358-360
+Métodos de distribución libre, 857
+Métodos de elaboración de pronósticos
+estacionalidad y tendencia, 820-829
+promedios móviles, 797-800
+promedios móviles ponderados, 800
+proyección de tendencia, 807-820
+suavizamiento exponencial, 800-804
+Métodos no paramétricos, 857
+Prueba de Kruskal-Wallis, 882-884
+coeficiente de correlación por rangos de 
+Spearman, 887-889
+prueba de Mann-Whitney-Wilcoxon (MWW), 
+871-882
+prueba de rangos con signos de Wilcoxon, 865-871
+prueba de signos, 857-865, 861n1
+Métodos paramétricos, 856
+Minería de datos, 17-18
+Minitab, 17
+alpha to enter, 739-740
+análisis de regresión con, 637-638
+análisis de varianza, 554-555
+correlación por rangos de Spearman, 899
+covarianza y correlación, 143
+descomposición de una serie de tiempo, 
+850-851
+diagrama de caja, 143
+diagrama de puntos, 73
+diagrama de tallo y hoja, 74
+diagramas de dispersión, 74
+diferencia entre dos medias poblacionales con 
+muestras pareadas, 443
+diferencia entre dos medias poblacionales: 
+σ1 y σ2 desconocidas, 442-443
+diferencia entre dos propor

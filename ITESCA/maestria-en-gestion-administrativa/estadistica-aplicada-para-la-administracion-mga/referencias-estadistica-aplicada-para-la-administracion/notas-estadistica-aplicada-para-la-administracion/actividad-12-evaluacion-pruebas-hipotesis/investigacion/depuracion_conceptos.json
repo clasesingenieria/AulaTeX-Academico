@@ -1,0 +1,105 @@
+{
+  "subject_slug": "estadistica-aplicada-para-la-administracion",
+  "engine": "Amazon Nova Pro",
+  "kept": [
+    "regla de decisión mediante valor crítico y mediante p-valor",
+    "contraste t de Welch y varianza agrupada para dos medias independientes",
+    "prueba t para muestras pareadas o relacionadas",
+    "contraste Z con proporción combinada para dos poblaciones",
+    "prueba F de igualdad de dos varianzas poblacionales",
+    "relación de compromiso entre errores de tipo I y tipo II",
+    "curva característica de operación y función de potencia",
+    "pruebas hipótesis",
+    "requisitos instrucciones",
+    "requisitos instrucciones actividad",
+    "muestras pareadas",
+    "pareadas relacionadas",
+    "prueba muestras",
+    "error tipo",
+    "hipótesis nula",
+    "probabilidad",
+    "prueba hipótesis"
+  ],
+  "conceptos_clave_nova_pro": [
+    {
+      "concepto": "regla de decisión mediante valor crítico y mediante p-valor",
+      "definicion_rigurosa": "La regla de decisión en pruebas de hipótesis puede establecerse mediante el valor crítico o el p-valor. El valor crítico es el punto de corte en la distribución de la estadística de prueba bajo la hipótesis nula, mientras que el p-valor es la probabilidad de obtener un resultado igual o más extremo que el observado, asumiendo que la hipótesis nula es verdadera.",
+      "formulacion_matematica_latex": "H_0: \\mu = \\mu_0, \\ H_a: \\mu \\neq \\mu_0. \\ Si \\ p\\text{-valor} \\leq \\alpha, \\ rechazar \\ H_0.",
+      "aplicacion_administrativa": "Esta regla guía la toma de decisiones en situaciones de incertidumbre, permitiendo a los gerentes determinar si los resultados observados son estadísticamente significativos y, por lo tanto, si deben tomar medidas basadas en esos resultados.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 3"
+    },
+    {
+      "concepto": "contraste t de Welch y varianza agrupada para dos medias independientes",
+      "definicion_rigurosa": "El contraste t de Welch se utiliza para comparar las medias de dos poblaciones independientes cuando las varianzas poblacionales son desconocidas y se asume que no son iguales. La varianza agrupada se calcula como una combinación ponderada de las varianzas muestrales.",
+      "formulacion_matematica_latex": "t = \\frac{(\\bar{X}_1 - \\bar{X}_2) - (\\mu_1 - \\mu_2)}{\\sqrt{s_1^2/n_1 + s_2^2/n_2}}",
+      "aplicacion_administrativa": "Este contraste es útil en la comparación de dos grupos diferentes, como la eficacia de dos métodos de producción o la satisfacción del cliente en dos regiones distintas.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 5"
+    },
+    {
+      "concepto": "prueba t para muestras pareadas o relacionadas",
+      "definicion_rigurosa": "La prueba t para muestras pareadas se utiliza para comparar las medias de dos muestras relacionadas o emparejadas. Se calcula la diferencia entre cada par de observaciones y se realiza una prueba t sobre estas diferencias.",
+      "formulacion_matematica_latex": "t = \\frac{\\bar{d} - \\mu_d}{s_d/\\sqrt{n}}",
+      "aplicacion_administrativa": "Esta prueba es aplicable en escenarios donde se mide el mismo sujeto en dos condiciones diferentes, como la evaluación del rendimiento de empleados antes y después de una capacitación.",
+      "fuente_principal": "Wackerly, Mendenhall y Scheaffer, 2010",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "contraste Z con proporción combinada para dos poblaciones",
+      "definicion_rigurosa": "El contraste Z con proporción combinada se utiliza para comparar las proporciones de dos poblaciones independientes. Se calcula una proporción combinada y se realiza una prueba Z para evaluar la diferencia entre las proporciones.",
+      "formulacion_matematica_latex": "Z = \\frac{(\\hat{p}_1 - \\hat{p}_2) - (p_1 - p_2)}{\\sqrt{\\hat{p}(1 - \\hat{p})(1/n_1 + 1/n_2)}}",
+      "aplicacion_administrativa": "Este contraste es útil para comparar proporciones en diferentes grupos, como la tasa de satisfacción de clientes en dos campañas de marketing distintas.",
+      "fuente_principal": "Spiegel y Stephens, 2010",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "prueba F de igualdad de dos varianzas poblacionales",
+      "definicion_rigurosa": "La prueba F se utiliza para comparar la igualdad de dos varianzas poblacionales. Se calcula la razón entre las varianzas muestrales y se compara con la distribución F.",
+      "formulacion_matematica_latex": "F = \\frac{s_1^2}{s_2^2}",
+      "aplicacion_administrativa": "Esta prueba es crucial para verificar la homogeneidad de varianzas antes de realizar otras pruebas, como el ANOVA, en análisis comparativos.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 5"
+    },
+    {
+      "concepto": "relación de compromiso entre errores de tipo I y tipo II",
+      "definicion_rigurosa": "La relación de compromiso entre errores de tipo I (rechazar una hipótesis nula verdadera) y tipo II (no rechazar una hipótesis nula falsa) implica un equilibrio en la elección del nivel de significancia y el tamaño de la muestra. Reducir un tipo de error generalmente aumenta el otro.",
+      "formulacion_matematica_latex": "\\beta = P(\\text{no rechazar } H_0 | H_0 \\text{ falsa}), \\ \\alpha = P(\\text{rechazar } H_0 | H_0 \\text{ verdadera})",
+      "aplicacion_administrativa": "En la toma de decisiones gerenciales, entender esta relación ayuda a establecer criterios de aceptación y rechazo de hipótesis en función de los costos y consecuencias asociados con cada tipo de error.",
+      "fuente_principal": "Docente, 2026",
+      "localizador": "bloque 2"
+    },
+    {
+      "concepto": "curva característica de operación y función de potencia",
+      "definicion_rigurosa": "La curva característica de operación (CCO) y la función de potencia describen el comportamiento de una prueba estadística en términos de su capacidad para detectar efectos verdaderos y evitar falsos positivos. La CCO muestra la probabilidad de rechazar la hipótesis nula en función del parámetro poblacional, mientras que la función de potencia indica la probabilidad de rechazar la hipótesis nula para diferentes valores del parámetro.",
+      "formulacion_matematica_latex": "\\text{Función de potencia: } \\pi(\\theta) = P(\\text{rechazar } H_0 | \\theta)",
+      "aplicacion_administrativa": "Estas herramientas son esenciales para evaluar la eficiencia y fiabilidad de las pruebas estadísticas en la toma de decisiones gerenciales, asegurando que las conclusiones sean robustas y significativas.",
+      "fuente_principal": "Spiegel y Stephens, 2010",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "pruebas hipótesis",
+      "definicion_rigurosa": "Las pruebas de hipótesis son procedimientos estadísticos utilizados para evaluar si hay evidencia suficiente para rechazar una hipótesis nula en favor de una alternativa. Implican la formulación de hipótesis, la selección de un nivel de significancia, el cálculo de una estadística de prueba y la comparación con un valor crítico o p-valor.",
+      "formulacion_matematica_latex": "H_0: \\mu = \\mu_0, \\ H_a: \\mu \\neq \\mu_0. \\ z = \\frac{\\bar{X} - \\mu_0}{\\sigma/\\sqrt{n}}",
+      "aplicacion_administrativa": "Las pruebas de hipótesis son fundamentales en la gestión administrativa para tomar decisiones basadas en datos, como la evaluación de la eficacia de estrategias de marketing, la calidad de procesos de producción o la satisfacción del cliente.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 5"
+    },
+    {
+      "concepto": "requisitos instrucciones",
+      "definicion_rigurosa": "Los requisitos e instrucciones para una prueba de hipótesis incluyen la definición de hipótesis nula y alternativa, la selección del nivel de significancia, la elección de la estadística de prueba apropiada y la determinación del método de decisión (valor crítico o p-valor).",
+      "formulacion_matematica_latex": "H_0: \\mu = \\mu_0, \\ H_a: \\mu \\neq \\mu_0. \\ \\alpha = 0.05",
+      "aplicacion_administrativa": "Seguir estos requisitos asegura que las pruebas de hipótesis sean realizadas de manera rigurosa y que los resultados sean válidos y confiables para la toma de decisiones gerenciales.",
+      "fuente_principal": "Wackerly, Mendenhall y Scheaffer, 2010",
+      "localizador": "bloque 3"
+    },
+    {
+      "concepto": "muestras pareadas",
+      "definicion_rigurosa": "Las muestras pareadas consisten en observaciones que están relacionadas o emparejadas de alguna manera. Esto puede ocurrir cuando se mide el mismo sujeto en dos condiciones diferentes o cuando se comparan dos variables relacionadas.",
+      "formulacion_matematica_latex": "d_i = X_{1i} - X_{2i}",
+      "aplicacion_administrativa": "Las muestras pareadas son comunes en estudios longitudinales o en la evaluación de cambios en el mismo grupo antes y después de una intervención.",
+      "fuente_principal": "Wackerly, Mendenhall y Scheaffer, 2010",
+      "localizador": "bloque 1"
+    }
+  ]
+}

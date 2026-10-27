@@ -1,0 +1,185 @@
+% Contrato: ejercicios resueltos; conservar cinco bloques y veinte incisos.
+% Nivel cognitivo: aplicar modelos, comparar aproximaciones y evaluar supuestos.
+% Organizacion: fundamento comun, soluciones interpretadas y conclusion argumentada.
+\def\estadisticatitulo{Distribuciones muestrales en la gestión}
+\def\estadisticasubtitulo{Actividad 5: Ejercicios}
+\def\estadisticafecha{23 de octubre de 2026}
+\def\estadisticaunidad{Distribuciones muestrales}
+\def\portadaoficial{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/portada-oficial.png}
+\def\estadisticaextras{%
+  \usepackage{fontspec}
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+  \usetikzlibrary{babel}
+  \geometry{letterpaper,left=2.3cm,right=2.3cm,top=2.2cm,bottom=2.2cm}
+  \hypersetup{pdftitle={Distribuciones muestrales en la gestión},pdfsubject={Actividad 5 - Estadística aplicada para la administración}}
+  \setcitestyle{citesep={;}}
+  \renewcommand{\insertcoverwatermark}{}
+  \renewcommand{\insertcoverinstitutionalfooter}{}
+  \renewcommand{\templatePortrait}{%
+    \thispagestyle{empty}
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{\portadaoficial}};
+      \node[anchor=north west,text=white,text width=10.6cm,align=center,inner sep=0pt] at ([xshift=10.1cm,yshift=-19.4cm]current page.north west) {%
+        \setstretch{1}\fontsize{12}{15}\selectfont
+        {\fontsize{16}{19}\selectfont\bfseries Distribuciones muestrales\\en la gestión}\par\vspace{0.18cm}
+        Estadística aplicada para la administración\par
+        Actividad 5: Ejercicios\par\vspace{0.12cm}
+        Martín Jonathan de la Cruz Muñoz\par
+        Matrícula: 26130503\par
+        Dra. Yoana Elizeth Tauitmes Delgado\par
+        23 de octubre de 2026
+      };
+    \end{tikzpicture}\null\clearpage
+  }
+  \renewcommand{\templatePagecfg}{}
+  \renewcommand{\templateFinalcfg}{%
+    \pagestyle{fancy}\fancyhf{}\fancyfoot[C]{\fontsize{10}{12}\selectfont\thepage}
+    \renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}
+    \setcounter{page}{2}\renewcommand{\thepage}{\arabic{page}}
+  }
+  \titleformat{\section}{\normalfont\fontsize{12}{15}\selectfont\bfseries\color{itescaRedDark}}{\thesection.}{0.5em}{}
+  \titleformat{\subsection}{\normalfont\fontsize{12}{15}\selectfont\bfseries}{\thesubsection.}{0.5em}{}
+  \titlespacing*{\section}{0pt}{8pt}{5pt}
+  \titlespacing*{\subsection}{0pt}{7pt}{4pt}
+  \setlength{\parindent}{1.1cm}
+  \setlength{\parskip}{3pt}
+}
+\long\def\estadisticacontenido{%
+\fontsize{12}{14.4}\selectfont\setstretch{1.5}\justifying
+\begingroup
+\noindent\textbf{Resumen}\par
+Se resuelven cinco bloques de ejercicios sobre distribuciones muestrales mediante la enumeración de muestras, el modelo binomial y la distribución normal. Se comparan la dispersión individual y el error estándar, y se distinguen las probabilidades exactas de sus aproximaciones con corrección de continuidad. Los casos abarcan herramientas defectuosas, vida útil, resultados electorales y pesos individuales o medios. Los resultados muestran que aumentar el tamaño muestral concentra el estadístico, pero no determina por sí solo la probabilidad de cualquier evento ni elimina sesgos. La interpretación administrativa mantiene explícitos los supuestos de independencia, normalidad y tamaño poblacional.\footnote{\textbf{Declaración de uso de IA.} \estadisticadeclaracionia}
+\par\medskip
+\renewcommand{\contentsname}{Tabla de contenido}
+\setcounter{tocdepth}{2}
+\tableofcontents
+\endgroup
+\clearpage
+\section{Introducción}
+La variación de una observación no equivale a la variación de un promedio. Distinguirlas permite valorar pedidos defectuosos, resultados de encuestas y promedios de vida útil sin exagerar el riesgo ni la precisión. Las distribuciones muestrales describen cómo cambia un estadístico entre muestras; sus probabilidades requieren explicitar independencia, población y modelo \citep{holmesBusiness2023,nistHandbook}.
+
+\section{Muestras, proporciones y medias}
+\subsection{Fundamentos de la inferencia muestral}
+Una población es el conjunto de unidades al que se refiere la decisión; la muestra aporta observaciones de ese conjunto. Un parámetro, como la media poblacional, es fijo en el modelo; un estadístico, como la media muestral, cambia entre muestras. Su \textit{distribución muestral} describe esa variación bajo un diseño de selección, no la distribución de los datos individuales \citep[secs. 7.1--7.2]{wackerly2010}.
+
+Para n observaciones independientes e idénticamente distribuidas, con media μ y varianza finita σ², la media muestral tiene esperanza μ y varianza σ²/n. Su \textit{error estándar} es σ/√n: mide la dispersión del promedio, mientras σ mide la dispersión individual. La reposición del primer ejercicio hace independientes las extracciones; sin reposición, esa independencia deja de ser exacta y debe considerarse el tamaño de la población.
+
+El \textit{teorema del límite central} establece que la media estandarizada se aproxima a una normal al aumentar n, bajo esas condiciones. No afirma que los datos originales se vuelvan normales ni fija un tamaño universal suficiente. La asimetría y las colas influyen en la calidad de la aproximación. Si la población es normal, la media es normal para cualquier n; si no lo es, conocer solo media y varianza no determina probabilidades exactas \citep[sec. 7.3]{wackerly2010}.
+
+Para respuestas binarias independientes con probabilidad constante p, el conteo X es binomial y la proporción X/n tiene media p y error estándar √(p(1 − p)/n). Al aproximar el conteo por una normal, la \textit{corrección de continuidad} desplaza medio entero el límite: X ≥ k se aproxima desde k − 0.5 y X ≤ k hasta k + 0.5. Revisar np y n(1 − p) ayuda a detectar asimetría; el cálculo binomial exacto evita depender de esa aproximación \citep[sec. 7.5]{wackerly2010}.
+
+\clearpage
+\subsection{Población de cuatro valores}
+\textbf{1.} Para la población 3, 7, 11 y 15 se consideran todas las muestras de tamaño dos con reposición. Cada extracción tiene cuatro resultados equiprobables e independientes: existen 16 pares ordenados, cada uno con probabilidad 1/16. La tabla contiene la media de cada par; las filas indican la primera extracción y las columnas, la segunda.
+
+\begin{center}
+\begin{tabular}{r|rrrr}
+\textbf{Primera/segunda} & \textbf{3} & \textbf{7} & \textbf{11} & \textbf{15}\\\hline
+3 & 3 & 5 & 7 & 9\\
+7 & 5 & 7 & 9 & 11\\
+11 & 7 & 9 & 11 & 13\\
+15 & 9 & 11 & 13 & 15\\
+\end{tabular}
+\end{center}
+
+\textbf{a) Media poblacional:} (3 + 7 + 11 + 15)/4 = \textbf{9}.
+
+\textbf{b) Desviación poblacional:} las desviaciones respecto a 9 son −6, −2, 2 y 6; sus cuadrados suman 80. La varianza poblacional es 80/4 = 20 y su raíz es \textbf{4.472136}. Se divide entre cuatro porque se conoce toda la población, no entre tres.
+
+\textbf{c) Media de las medias:} los valores 3, 5, 7, 9, 11, 13 y 15 tienen frecuencias 1, 2, 3, 4, 3, 2 y 1. Su suma ponderada es 144; dividir entre 16 produce \textbf{9}.
+
+\textbf{d) Desviación de las medias:} la suma ponderada de cuadrados respecto a 9 es 160; la varianza es 160/16 = 10 y la desviación, \textbf{3.162278}. Coincide con 4.472136/√2: promediar conserva el centro y reduce la dispersión \citep{holmesBusiness2023}.
+
+\clearpage
+\subsection{Herramientas defectuosas}
+\textbf{2.} Una máquina produce 2\% de herramientas defectuosas. Para un pedido de 400, se pide la probabilidad de que resulte defectuoso a) 3\% o más y b) 2\% o menos. Bajo independencia y probabilidad constante, el número de defectos X tiene distribución binomial con n = 400 y p = 0.02. La media es np = 8 y la desviación es √(np(1 − p)) = √7.84 = 2.8 \citep{holmesBusiness2023}.
+
+\textbf{a) Al menos 3\%.} El umbral es 0.03(400) = 12 herramientas. Se suma la probabilidad binomial de cada conteo desde 12 hasta 400, o se resta de uno la probabilidad acumulada hasta 11. El resultado es \textbf{P(X ≥ 12) = 0.109733}, equivalente a \textbf{10.9733\%}.
+
+\textbf{b) A lo sumo 2\%.} El umbral es 0.02(400) = 8. Se suman las probabilidades de cero a ocho defectos: \textbf{P(X ≤ 8) = 0.592552}, equivalente a \textbf{59.2552\%}. El valor no es exactamente 50\%: la distribución es discreta y asimétrica, y el evento incluye el conteo ocho.
+
+Cada término de la suma binomial combina el número de formas de elegir k defectos entre 400, la probabilidad de esos k defectos y la de las 400 − k herramientas conformes. El cálculo exacto evita imponer simetría a una distribución con pocos defectos esperados.
+
+\textbf{Contraste con la aproximación normal.} Para a), la corrección de continuidad usa 11.5: z = (11.5 − 8)/2.8 = 1.25; la cola superior es \textbf{0.105650}. Para b), usa 8.5: z = (8.5 − 8)/2.8 = 0.178571; la acumulada es \textbf{0.570863}. No se sustituyen los resultados exactos por estas aproximaciones. En b), la diferencia es de aproximadamente 2.17 puntos porcentuales.
+
+La consecuencia administrativa es distinguir la tasa media de defectos del riesgo de un pedido particular. Una tasa de 2\% no garantiza exactamente ocho defectos en cada lote. Si existe dependencia entre piezas o cambia la calibración de la máquina, el modelo binomial debe revisarse; una mayor cantidad de observaciones no compensa automáticamente una selección o medición sesgada \citep{bradley2021}.
+
+\clearpage
+\subsection{Vida útil y resultados electorales}
+\textbf{3.} Los cinescopios tienen vida media de 800 h, desviación de 60 h y muestra aleatoria de 16. El error estándar es 60/√16 = 15 h. Para la media muestral, z = (límite − 800)/15. \textbf{Se supone una población normal e independencia}; el enunciado no establece normalidad y una muestra de 16 no basta por sí sola para garantizar una aproximación adecuada \citep{holmesBusiness2023}.
+
+\begin{center}
+\begin{tabular}{llll}
+\textbf{Inciso} & \textbf{Evento (h)} & \textbf{Límites z} & \textbf{Probabilidad}\\\hline
+a & Entre 790 y 810 & −0.666667; 0.666667 & 0.495015\\
+b & Menor de 785 & Menor de −1 & 0.158655\\
+c & Mayor de 820 & Mayor de 1.333333 & 0.091211\\
+d & Entre 770 y 830 & −2; 2 & 0.954500\\
+\end{tabular}
+\end{center}
+
+Las probabilidades son 49.5015\%, 15.8655\%, 9.1211\% y 95.4500\%. Para intervalos se resta la acumulada normal inferior de la superior; para la cola derecha se resta la acumulada de uno. Sin el supuesto distribucional, media y desviación no determinan esas cuatro probabilidades exactas.
+
+\textbf{4.} Un candidato recibió 46\% de los votos. En muestras de a) 200 y b) 1,000 votantes, una \textit{mayoría} exige más de la mitad: al menos 101 y 501 apoyos. Suponiendo respuestas independientes y una población grande respecto a la muestra, se usa X binomial con p = 0.46 \citep{holmesBusiness2023}.
+
+\textbf{a)} Con n = 200: media = 92; desviación = √49.68 = 7.048404. La suma binomial desde 101 hasta 200 da \textbf{0.114040 (11.4040\%)}. La normal corregida usa 100.5 y z = 1.205947: cola superior \textbf{0.113919}.
+
+\textbf{b)} Con n = 1,000: media = 460; desviación = √248.4 = 15.760711. La suma desde 501 hasta 1,000 da \textbf{0.005142 (0.5142\%)}. La normal corregida usa 500.5 y z = 2.569681: cola superior \textbf{0.005090}. La muestra mayor reduce la probabilidad de invertir la mayoría. Si se muestrea sin reposición una fracción importante del electorado, se requiere el tamaño poblacional y un modelo hipergeométrico.
+
+\clearpage
+\subsection{Peso individual y peso medio}
+\textbf{5.} Los pesos se suponen normales, con media 172 lb y desviación 29 lb. Para una persona se estandariza con z = (peso − 172)/29. Para la media de n hombres independientes, se sustituye 29 por el error estándar 29/√n. Como la normalidad se da explícitamente, la distribución de la media es normal para cualquier n; no depende aquí de una aproximación asintótica \citep{holmesBusiness2023}.
+
+\begin{center}
+\begin{tabular}{llll}
+\textbf{Inciso} & \textbf{Evento (lb)} & \textbf{n; error estándar} & \textbf{Probabilidad}\\\hline
+1a & Peso menor de 167 & 1; 29 & 0.431556\\
+1b & Media menor de 167 & 36; 4.833333 & 0.150455\\
+2a & Peso mayor de 180 & 1; 29 & 0.391327\\
+2b & Media mayor de 180 & 100; 2.9 & 0.002902\\
+3a & Peso entre 170 y 175 & 1; 29 & 0.068688\\
+3b & Media entre 170 y 175 & 64; 3.625 & 0.505479\\
+4a & Peso entre 100 y 165 & 1; 29 & 0.398112\\
+4b & Media entre 100 y 165 & 81; 3.222222 & 0.014912\\
+\end{tabular}
+\end{center}
+
+\textbf{1a y 1b.} Los límites estandarizados son −5/29 = −0.172414 y −5/(29/6) = −1.034483. Sus acumuladas normales son 43.1556\% y 15.0455\%.
+
+\textbf{2a y 2b.} Los valores z son 8/29 = 0.275862 y 8/2.9 = 2.758621. Las colas superiores son 39.1327\% y 0.2902\%.
+
+\textbf{3a y 3b.} Se resta la acumulada del límite inferior de la del superior. Para una persona, z va de −0.068966 a 0.103448: 6.8688\%. Para 64, va de −0.551724 a 0.827586: 50.5479\%.
+
+\textbf{4a y 4b.} Los límites z individuales son −2.482759 y −0.241379: 39.8112\%. Para 81, son −22.344828 y −2.172414: 1.4912\%. Aunque el promedio se concentra cerca de 172, este intervalo queda por debajo; por eso su probabilidad disminuye al promediar. En cambio, el intervalo de 170 a 175 contiene el centro y su probabilidad aumenta.
+
+De los cinco casos se concluye que aumentar n concentra el estadístico, pero la probabilidad depende de la ubicación del evento. La gerencia debe definir el umbral, distinguir observaciones individuales y promedios y revisar el modelo antes de aplicar el resultado a una decisión de aceptación \citep{holmesBusiness2023,nistHandbook}.
+
+\clearpage
+\section{Conclusiones}
+La enumeración de las 16 muestras muestra que promediar conserva la media poblacional y reduce la dispersión. Esa reducción explica por qué un peso individual mayor de 180 lb es relativamente frecuente bajo el modelo, mientras que un promedio mayor de 180 lb entre 100 hombres resulta mucho menos probable. Usar la desviación individual en lugar del error estándar habría cambiado sustancialmente la interpretación de los resultados \citep{holmesBusiness2023}.
+
+En control de calidad, la traducción de porcentajes a conteos enteros evita errores en las colas. Al menos 3\% de 400 equivale a 12 o más defectos; a lo sumo 2\% incluye ocho. La comparación entre binomial y normal demuestra que una aproximación debe evaluarse, no aplicarse automáticamente. Para el segundo evento, la diferencia de 2.17 puntos porcentuales podría afectar decisiones cercanas a un umbral de aceptación.
+
+El caso electoral separa variación aleatoria y sesgo. Una muestra mayor hace menos probable observar una mayoría contraria a una proporción poblacional de 46\%, bajo las condiciones del modelo. No elimina problemas de cobertura, no respuesta o medición. El estudio de Bradley et al. (2021) advierte que grandes encuestas pueden producir estimaciones muy precisas pero alejadas del referente si sus participantes no representan adecuadamente a la población \citep{bradley2021}.
+
+Considero indispensable comunicar los supuestos junto con las cifras. En los cinescopios, asumir normalidad permite obtener probabilidades concretas, pero ni la media de 800 h ni la desviación de 60 h prueban esa distribución. La consecuencia para una gerencia es solicitar evidencia del comportamiento de la vida útil antes de utilizar los porcentajes para garantías o inventarios. La incertidumbre cuantificada por un modelo debe mantenerse separada de la incertidumbre sobre la validez del propio modelo \citep{nistHandbook}.
+
+Las distribuciones muestrales ofrecen, por tanto, un criterio para decisiones proporcionales a la evidencia: definir el evento, identificar la unidad de análisis, elegir la distribución y revisar las condiciones. Conservar esa secuencia evita convertir una aproximación razonable en una promesa de certeza.
+
+\clearpage
+\renewcommand{\bibsection}{\section*{Referencias}\addcontentsline{toc}{section}{Referencias}}
+\setlength{\bibhang}{1.27cm}\setlength{\bibsep}{10pt}
+\begin{thebibliography}{4}
+\bibitem[Bradley et al.(2021)]{bradley2021}
+Bradley, V. C., Kuriwaki, S., Isakov, M., Sejdinovic, D., Meng, X.-L., \& Flaxman, S. (2021). Unrepresentative big surveys significantly overestimated US vaccine uptake. \textit{Nature, 600}(7890), 695--700. \url{https://doi.org/10.1038/s41586-021-04198-4}
+\bibitem[Holmes et al.(2023)]{holmesBusiness2023}
+Holmes, A., Illowsky, B., \& Dean, S. (2023). \textit{Introductory business statistics} (2.\textsuperscript{a} ed.). OpenStax. \url{https://openstax.org/details/books/introductory-business-statistics-2e}
+\bibitem[NIST y SEMATECH(2003)]{nistHandbook}
+National Institute of Standards and Technology, \& SEMATECH. (2003). \textit{NIST/SEMATECH e-Handbook of statistical methods}. \url{https://doi.org/10.18434/M32189}
+\bibitem[Wackerly et al.(2010)]{wackerly2010}
+Wackerly, D. D., Mendenhall, W., \& Scheaffer, R. L. (2010). \textit{Estadística matemática con aplicaciones} (7.\textsuperscript{a} ed.). Cengage Learning Editores.
+\end{thebibliography}
+\global\itescaactivitycitedfalse
+}
+\input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/reporte-estadistica-aplicada-para-la-administracion-plantilla-actividad.tex}

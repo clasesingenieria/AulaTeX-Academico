@@ -1,0 +1,794 @@
+# Planeacion: Fundamentos de Gestión Administrativa
+
+Estado: needs_review. Conversion local, no aprobacion docente ni autorizacion de envio.
+
+## Identificacion
+
+```json
+{
+  "institution": "ITESCA",
+  "program": "maestria-en-gestion-administrativa",
+  "subject_id": "fundamentos-de-gestion-administrativa-mga",
+  "subject_title": "Fundamentos de Gestión Administrativa",
+  "offering_id": "oferta-bd29a4a4059c1103",
+  "period": "2026-II",
+  "modality": null
+}
+```
+
+## Actividad 7794: Foro sobre toma de decisiones
+
+### Consigna importada
+
+Identificar fase con mayor riesgo de errores y justificar por qué.
+Identificar fase considerada más importante y justificar su relevancia.
+Responder ambos planteamientos; las fases pueden coincidir, manteniendo justificaciones diferenciadas.
+Ofrecer recomendaciones congruentes con riesgo e importancia argumentados.
+Responder a dos compañeros; contrastar una idea y explicar acuerdo, diferencia o recomendación es desarrollo propuesto.
+Identificar sustento y distinguir interpretación propia, sin imponer edición APA ni cuota bibliográfica.
+
+### Requisitos
+
+1. Identificar fase con mayor riesgo de errores y justificar por qué.
+2. Identificar fase considerada más importante y justificar su relevancia.
+3. Responder ambos planteamientos; las fases pueden coincidir, manteniendo justificaciones diferenciadas.
+4. Ofrecer recomendaciones congruentes con riesgo e importancia argumentados.
+5. Responder a dos compañeros; contrastar una idea y explicar acuerdo, diferencia o recomendación es desarrollo propuesto.
+6. Identificar sustento y distinguir interpretación propia, sin imponer edición APA ni cuota bibliográfica.
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[
+  {
+    "id": "step-001",
+    "order": 1,
+    "phase": "preparation",
+    "action": "Revisar U3 y distinguir criterios de riesgo e importancia.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-002",
+    "order": 2,
+    "phase": "construction",
+    "action": "Preparar intervención argumentada, recomendaciones y dos respuestas a compañeros.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-003",
+    "order": 3,
+    "phase": "review",
+    "action": "Revisar cobertura de ambos planteamientos y pertinencia de las dos respuestas.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  }
+]
+```
+
+### products
+
+```json
+[
+  {
+    "id": "product-001",
+    "kind": "unspecified",
+    "recipient": null,
+    "editable_format": null,
+    "submission_format": null,
+    "structure": [
+      "participacion_inicial_y_dos_replicas"
+    ],
+    "length": null,
+    "filename_pattern": null,
+    "accessibility": null,
+    "requirement_ids": [],
+    "paths": {
+      "editable": null,
+      "delivery": null
+    }
+  }
+]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": []
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": "2026-08-31 23:59",
+  "closes_at": null,
+  "timezone": null,
+  "literal": null
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## sources
+
+```json
+[
+  {
+    "id": "src-local",
+    "kind": "other",
+    "authority": "editorial",
+    "title": "planeacion-actividad-3.2-foro-toma-decisiones.json",
+    "url": null,
+    "path": "planeaciones-generadas/2026-II/revision-2026-09-15/planeacion-actividad-3.2-foro-toma-decisiones.json",
+    "sha256": "c2623bc6c820507b93fba88c21035d96b3b33785c9cea80d68b1438a3ec4d4d8",
+    "captured_at": "2026-09-15",
+    "media_type": "application/json"
+  }
+]
+```
+
+## field_status
+
+```json
+[
+  {
+    "path": "/identity",
+    "state": "inferred",
+    "reason": "Identidad editorial del catalogo; oferta interna, periodo y modalidad no acreditados cuando faltan.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/sources",
+    "state": "confirmed",
+    "reason": "Archivo local preservado; su huella no acredita autoria ni vigencia docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "local-file",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum",
+    "state": "unknown",
+    "reason": "No se deducen competencias, resultados ni temario que no esten documentados.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/",
+        "quoted_text": "Identificar fase con mayor riesgo de errores y justificar por qué.\nIdentificar fase considerada más importante y justificar su relevancia.\nResponder ambos planteamientos; las fases pueden coincidir, manteniendo justificaciones diferenciadas.\nOfrecer recomendaciones congruentes con riesgo e importancia argumentados.\nResponder a dos compañeros; contrastar una idea y explicar acuerdo, diferencia o recomendación es desarrollo propuesto.\nIdentificar sustento y distinguir interpretación propia, sin imponer edición APA ni cuota bibliográfica."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/outcomes/0",
+    "state": "inferred",
+    "reason": "Objetivo preservado del modelo local; oficialidad y propuesta no se equiparan.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "//objective",
+        "quoted_text": "Argumentar una valoración de las fases de decisión diferenciando riesgo e importancia y contrastar recomendaciones con las de pares."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/requirements",
+    "state": "confirmed",
+    "reason": "Coinciden con la entrada local; no se acredita que sean requisitos docentes integros.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "//requirements",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/sequence",
+    "state": "inferred",
+    "reason": "Secuencia propuesta preservada; fases, insumos, salidas y controles necesitan revision.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "//sequence",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/products",
+    "state": "inferred",
+    "reason": "Descripcion original preservada; no convierte examen o foro en informe LaTeX.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "//product",
+        "quoted_text": "participacion_inicial_y_dos_replicas"
+      }
+    ],
+    "alternatives": []
+  }
+]
+```
+
+## review
+
+```json
+{
+  "state": "needs_review",
+  "reviewed_at": null,
+  "reviewer_role": null,
+  "critical_gaps": [
+    "Cotejar consigna y procedencia docente; conversion local no equivale a aprobacion",
+    "Apertura, zona horaria, modalidad formal, extensión y formato técnico.",
+    "Instrumento específico, niveles y máximo de puntos; aplicación de rúbrica general al foro.",
+    "Vía vigente de participación e interacción; fecha pasada no autoriza prórroga.",
+    "Lectura de obras antes de argumentar; revisión docente de propósito, secuencia, tiempos y criterios."
+  ],
+  "semantic_validation": "failed"
+}
+```
+
+## extensions
+
+```json
+{
+  "conversion": {
+    "version": "1.0",
+    "source_format": ".json",
+    "source_sha256": "c2623bc6c820507b93fba88c21035d96b3b33785c9cea80d68b1438a3ec4d4d8",
+    "source_payload": {
+      "schema_version": "0.2-documental",
+      "revision_date": "2026-09-15",
+      "status": "borrador",
+      "activity_id_aula": "3.2",
+      "activity_id_local": 7,
+      "moodle_module_id": 7794,
+      "title": "Foro sobre toma de decisiones",
+      "subject": "Fundamentos de Gestión Administrativa",
+      "course_code": "GGFG02",
+      "institution": "ITESCA",
+      "program_context": "Maestría en Gestión Administrativa",
+      "period": "2026-II",
+      "moodle_course_id": 372,
+      "unit": "III. Toma de decisiones",
+      "provenance": {
+        "mode": "revision_local",
+        "new_web_consultation": false,
+        "pdf_read_now": false,
+        "personal_submissions_used": false,
+        "institutional_approval": false,
+        "bibliographic_verification": "Registros locales cotejados; contraste previo 2026-09-12 reportado, no lectura actual de PDF ni traslado de requisitos de 3.1."
+      },
+      "sources": [
+        {
+          "id": "O",
+          "title": "Planeación original",
+          "citation": "Planeaciones derivadas para revisión (2026-09-15).",
+          "location": "planeaciones.md",
+          "locator": "Actividad 3.2 — Foro sobre decisiones",
+          "status": "texto_leido",
+          "used_for": [
+            "identidad",
+            "requisitos",
+            "peso",
+            "calendario",
+            "tiempos"
+          ]
+        },
+        {
+          "id": "J",
+          "title": "Datos originales",
+          "citation": "Planeaciones documentales 0.1 (2026-09-15).",
+          "location": "planeaciones.json",
+          "locator": "activities[activity_id_aula=3.2]",
+          "status": "texto_leido",
+          "used_for": [
+            "identificadores",
+            "evaluacion",
+            "modalidad_pendiente",
+            "calendario"
+          ]
+        },
+        {
+          "id": "B",
+          "title": "Bibliografía local de U3",
+          "citation": "Bibliografía de actividad 6; contraste previo 2026-09-12 reportado en notas locales.",
+          "location": "../../../fundamentos-de-gestion-administrativa-actividad-6.bib",
+          "locator": "canos, solano2003, lopez2020 y soto2020; no trasladar requisitos de 3.1",
+          "status": "texto_leido_verificacion_previa_reportada",
+          "used_for": [
+            "autores_titulos_fechas",
+            "limites_de_verificacion"
+          ]
+        },
+        {
+          "id": "CA",
+          "title": "Toma de decisiones en la empresa: proceso y clasificación",
+          "citation": "Canós Darós, Lourdes, Carlos Pons Morera, Maria Valero Herrera y Julien Philippe Maheut (s. f.). Toma de decisiones en la empresa: proceso y clasificación. Universidad Politécnica de Valencia, material docente.",
+          "location": "../../../referencias-fundamentos-de-gestion-administrativa/unidad-3-toma-de-decisiones/canos-y-colaboradores-toma-decisiones-empresa-proceso-clasificacion.pdf",
+          "locator": "B, canos; copia sin año editorial declarado según nota previa",
+          "status": "archivo_existente_no_leido_ahora_metadatos_previos",
+          "used_for": [
+            "identificacion_y_distincion_de_fases"
+          ]
+        },
+        {
+          "id": "SO",
+          "title": "Toma de decisiones gerenciales",
+          "citation": "Solano, Ana Isabel (2003). Toma de decisiones gerenciales. Tecnología en Marcha, 16(3), 44–51.",
+          "location": "../../../referencias-fundamentos-de-gestion-administrativa/unidad-3-toma-de-decisiones/solano-toma-decisiones-gerenciales.pdf",
+          "locator": "B, solano2003; firma Ana Isabel Solano, no Isolano; contraste editorial previo reportado",
+          "status": "archivo_existente_no_leido_ahora_metadatos_previos",
+          "used_for": [
+            "valoracion_gerencial",
+            "riesgo",
+            "importancia",
+            "contraste_argumental"
+          ]
+        },
+        {
+          "id": "SOW",
+          "title": "Registro editorial de Solano",
+          "citation": "Solano, Ana Isabel (2003). Toma de decisiones gerenciales. Tecnología en Marcha; URL registrada en B.",
+          "location": "https://revistas.tec.ac.cr/index.php/tec_marcha/article/view/1467",
+          "locator": "artículo 1467",
+          "status": "url_registrada_sin_consulta_web_nueva",
+          "used_for": [
+            "localizacion_academica_de_SO"
+          ]
+        },
+        {
+          "id": "LO",
+          "title": "La toma de decisiones y la eficacia organizativa en las PyMEs comerciales de la ciudad de Ambato (Ecuador)",
+          "citation": "López, Daniel A., María D. Guamán y Juan C. Castro (2020). La toma de decisiones y la eficacia organizativa en las PyMEs comerciales de la ciudad de Ambato (Ecuador). Espacios, 41(22), artículo 27.",
+          "location": "../../../referencias-fundamentos-de-gestion-administrativa/unidad-3-toma-de-decisiones/lopez-guaman-castro-2020-decisiones-eficacia-pymes-ambato.pdf",
+          "locator": "B, lopez2020; no generalizar automáticamente desde Ambato",
+          "status": "archivo_existente_no_leido_ahora_metadatos_previos",
+          "used_for": [
+            "decision_y_eficacia",
+            "recomendaciones",
+            "replicas"
+          ]
+        },
+        {
+          "id": "LOW",
+          "title": "URL académica de López, Guamán y Castro",
+          "citation": "López, Guamán y Castro (2020). La toma de decisiones y la eficacia organizativa en las PyMEs comerciales de la ciudad de Ambato (Ecuador). Espacios; URL registrada en B.",
+          "location": "https://www.revistaespacios.com/a20v41n22/a20v41n22p27.pdf",
+          "locator": "volumen 41, número 22, artículo 27",
+          "status": "url_registrada_sin_consulta_web_nueva",
+          "used_for": [
+            "localizacion_academica_de_LO"
+          ]
+        },
+        {
+          "id": "SC",
+          "title": "La importancia de la decisión gerencial para generar un clima organizacional óptimo en una empresa",
+          "citation": "Soto-Chávez, Luis Enrique, José William Ugalde-Vicuña y María Allauca-Amaguaya (2020). La importancia de la decisión gerencial para generar un clima organizacional óptimo en una empresa. Dominio de las Ciencias, 6(4), 211–230.",
+          "location": "../../../referencias-fundamentos-de-gestion-administrativa/unidad-3-toma-de-decisiones/soto-chavez-y-colaboradores-2020-decision-gerencial-clima-organizacional.pdf",
+          "locator": "B, soto2020; examinar pasajes antes de fundamentar postura",
+          "status": "archivo_existente_no_leido_ahora_metadatos_previos",
+          "used_for": [
+            "consecuencias_organizacionales",
+            "recomendaciones",
+            "dialogo"
+          ]
+        },
+        {
+          "id": "SCW",
+          "title": "DOI de Soto-Chávez y colaboradores",
+          "citation": "Soto-Chávez, Ugalde-Vicuña y Allauca-Amaguaya (2020). La importancia de la decisión gerencial para generar un clima organizacional óptimo en una empresa. DOI registrado en B.",
+          "location": "https://doi.org/10.23857/dc.v6i4.1463",
+          "locator": "soto2020",
+          "status": "url_registrada_sin_consulta_web_nueva",
+          "used_for": [
+            "localizacion_academica_de_SC"
+          ]
+        },
+        {
+          "id": "K",
+          "title": "Catálogo local de referencias",
+          "citation": "Referencias — Fundamentos de Gestión Administrativa (2026-09-12).",
+          "location": "../../../referencias-fundamentos-de-gestion-administrativa/README.md",
+          "locator": "Hallazgos y trazabilidad, líneas 40–46",
+          "status": "texto_leido_revision_visual_previa_reportada",
+          "used_for": [
+            "Canos_y_Lopez_obras_distintas",
+            "rubrica_general"
+          ]
+        },
+        {
+          "id": "R",
+          "title": "Rúbrica general de evaluación",
+          "citation": "Rúbrica general local; autoría y fecha no confirmadas en esta revisión.",
+          "location": "../../../referencias-fundamentos-de-gestion-administrativa/00-curso-y-evaluacion/rubrica-general-evaluacion.pdf",
+          "locator": "Tabla en imagen descrita por K",
+          "status": "archivo_existente_no_leido_ahora",
+          "used_for": [
+            "original_de_rubrica_general"
+          ]
+        },
+        {
+          "id": "P",
+          "title": "Plantilla de portada existente, no exigida al foro",
+          "citation": "Plantilla local de portada; autoría y fecha no confirmadas en esta revisión.",
+          "location": "../../../referencias-fundamentos-de-gestion-administrativa/00-curso-y-evaluacion/plantilla-portada.docx",
+          "locator": "Existencia documental; no requisito del foro",
+          "status": "archivo_existente_sin_revisar_identidades",
+          "used_for": [
+            "delimitacion_no_trasladar_portada_al_foro"
+          ]
+        },
+        {
+          "id": "A",
+          "title": "Foro del aula 3.2",
+          "citation": "ITESCA. GGFG02, foro 7794; extracción reportada por O/J.",
+          "location": "https://cursos3.e-itesca.edu.mx/mod/forum/view.php?id=7794",
+          "locator": "h1, #intro y .activity-dates; instrumento detallado no visible en original",
+          "status": "referencia_del_original_sin_consulta_web_nueva",
+          "used_for": [
+            "requisitos",
+            "vencimiento",
+            "instrumento_pendiente"
+          ]
+        },
+        {
+          "id": "E",
+          "title": "Especificaciones de asignatura",
+          "citation": "ITESCA. GGFG02, página 7767; extracción reportada por O/J.",
+          "location": "https://cursos3.e-itesca.edu.mx/mod/page/view.php?id=7767",
+          "locator": "región principal .no-overflow",
+          "status": "referencia_del_original_sin_consulta_web_nueva",
+          "used_for": [
+            "peso_curso",
+            "competencia"
+          ]
+        }
+      ],
+      "product": {
+        "type": "participacion_inicial_y_dos_replicas",
+        "work_mode": null,
+        "participation": "personal_con_interaccion_entre_pares",
+        "submission_mode": "publicaciones_en_foro",
+        "content_requirements": [
+          {
+            "id": "riesgo",
+            "description": "Identificar fase con mayor riesgo de errores y justificar por qué.",
+            "status": "extraido",
+            "source_ids": [
+              "O",
+              "J",
+              "CA",
+              "SO"
+            ]
+          },
+          {
+            "id": "importancia",
+            "description": "Identificar fase considerada más importante y justificar su relevancia.",
+            "status": "extraido",
+            "source_ids": [
+              "O",
+              "J",
+              "CA",
+              "SO"
+            ]
+          },
+          {
+            "id": "distincion",
+            "description": "Responder ambos planteamientos; las fases pueden coincidir, manteniendo justificaciones diferenciadas.",
+            "status": "propuesto",
+            "source_ids": [
+              "O",
+              "J"
+            ]
+          },
+          {
+            "id": "recomendaciones",
+            "description": "Ofrecer recomendaciones congruentes con riesgo e importancia argumentados.",
+            "status": "extraido",
+            "source_ids": [
+              "O",
+              "J",
+              "LO",
+              "SC"
+            ]
+          },
+          {
+            "id": "replicas",
+            "description": "Responder a dos compañeros; contrastar una idea y explicar acuerdo, diferencia o recomendación es desarrollo propuesto.",
+            "status": "requisito_con_desarrollo_propuesto",
+            "source_ids": [
+              "O",
+              "J",
+              "LO",
+              "SC"
+            ]
+          },
+          {
+            "id": "fuentes",
+            "description": "Identificar sustento y distinguir interpretación propia, sin imponer edición APA ni cuota bibliográfica.",
+            "status": "propuesto",
+            "source_ids": [
+              "O",
+              "B"
+            ]
+          }
+        ],
+        "format": {
+          "technical_format": null,
+          "textual_post_option": "propuesto",
+          "pdf_required": false,
+          "audio_required": false,
+          "cover_required": false,
+          "peer_responses": 2,
+          "length": null,
+          "citation_style_required": null,
+          "prior_activity_3_1_required": false,
+          "source_ids": [
+            "O",
+            "J"
+          ]
+        },
+        "channel": "https://cursos3.e-itesca.edu.mx/mod/forum/view.php?id=7794",
+        "auxiliary_proposals": [
+          "Esquema riesgo–importancia, notas bibliográficas y lista de revisión opcionales, NO institucionales; no archivos ni entregas adicionales."
+        ]
+      },
+      "calendar": {
+        "opening": null,
+        "closing": null,
+        "due": "2026-08-31 23:59",
+        "timezone": null,
+        "source_ids": [
+          "O",
+          "J",
+          "A"
+        ],
+        "historical_notice": "Fecha histórica al 2026-09-15; sin recepción, reapertura ni prórroga acreditadas."
+      },
+      "assessment": {
+        "activity_weight": 5,
+        "weight_unit": "porcentaje",
+        "weight_scope": "curso",
+        "source_ids": [
+          "O",
+          "J",
+          "E"
+        ],
+        "official_instrument": {
+          "specific": {
+            "type": null,
+            "status": "pendiente_no_visible_en_original",
+            "levels": null,
+            "max_score": null,
+            "score_unit": null,
+            "conversion_to_course_weight": null,
+            "source_ids": [
+              "O",
+              "J",
+              "A"
+            ]
+          },
+          "general": {
+            "type": "rubrica_general_documentada_por_catalogo",
+            "verification": "Revision visual PREVIA reportada por K; no repetida ahora.",
+            "criteria": [
+              "tema",
+              "organización",
+              "redacción",
+              "ortografía",
+              "puntuación",
+              "bibliografía"
+            ],
+            "levels": [
+              "excelente",
+              "bien",
+              "regular",
+              "deficiente"
+            ],
+            "criterion_weights": null,
+            "automatic_application": false,
+            "source_ids": [
+              "K",
+              "R"
+            ]
+          }
+        },
+        "proposed_criteria": [
+          {
+            "criterion": "Respuesta a ambos planteamientos",
+            "evidence": "Fase de riesgo y fase importante identificadas",
+            "how_to_check": "Comprobar ambos juicios; permitir coincidencia de fase con justificaciones diferenciadas.",
+            "authority": "propuesto",
+            "source_ids": [
+              "O",
+              "J",
+              "CA"
+            ]
+          },
+          {
+            "criterion": "Justificación sustentada",
+            "evidence": "Razones y fuentes en participación inicial",
+            "how_to_check": "Revisar relación entre fase, riesgo e importancia; distinguir evidencia de opinión.",
+            "authority": "propuesto",
+            "source_ids": [
+              "O",
+              "CA",
+              "SO"
+            ]
+          },
+          {
+            "criterion": "Recomendaciones congruentes",
+            "evidence": "Orientaciones derivadas de argumentos",
+            "how_to_check": "Comprobar qué riesgo atienden o qué relevancia refuerzan, sin prometer resultados no demostrados.",
+            "authority": "propuesto",
+            "source_ids": [
+              "O",
+              "LO",
+              "SC"
+            ]
+          },
+          {
+            "criterion": "Interacción pertinente",
+            "evidence": "Dos réplicas a dos compañeros",
+            "how_to_check": "Comprobar destinatarios distintos y contraste argumentado, no solo saludo o asentimiento.",
+            "authority": "propuesto",
+            "source_ids": [
+              "O",
+              "J"
+            ]
+          },
+          {
+            "criterion": "Claridad y trazabilidad",
+            "evidence": "Publicaciones y referencias cuando se usan",
+            "how_to_check": "Revisar redacción e identificación de fuentes sin exigir PDF, audio o APA no especificado.",
+            "authority": "propuesto",
+            "source_ids": [
+              "O",
+              "J",
+              "B"
+            ]
+          }
+        ],
+        "proposed_criteria_policy": "Sí/no/por revisar, sin puntajes ni pesos añadidos; no aplicación automática de rúbrica general al foro ni sustitución del instrumento desconocido."
+      },
+      "objective": {
+        "value": "Argumentar una valoración de las fases de decisión diferenciando riesgo e importancia y contrastar recomendaciones con las de pares.",
+        "status": "propuesto"
+      },
+      "sequence": [
+        {
+          "phase": "Preparación",
+          "student": "Revisar U3 y distinguir criterios de riesgo e importancia.",
+          "teacher": "Aclarar que ambos planteamientos requieren justificación, no necesariamente fases distintas.",
+          "minutes": 30
+        },
+        {
+          "phase": "Desarrollo",
+          "student": "Preparar intervención argumentada, recomendaciones y dos respuestas a compañeros.",
+          "teacher": "Moderar contraste y pedir sustento de las recomendaciones.",
+          "minutes": 60
+        },
+        {
+          "phase": "Cierre",
+          "student": "Revisar cobertura de ambos planteamientos y pertinencia de las dos respuestas.",
+          "teacher": "Sintetizar coincidencias y diferencias sin imponer postura única.",
+          "minutes": 15
+        }
+      ],
+      "sequence_status": "propuesto",
+      "estimated_minutes": 105,
+      "estimated_minutes_status": "propuesto",
+      "bibliographic_deduplication": "Cuatro obras distintas; Canós y López no son duplicados según K. No constituyen mínimo bibliográfico exigido.",
+      "pending": [
+        "Apertura, zona horaria, modalidad formal, extensión y formato técnico.",
+        "Instrumento específico, niveles y máximo de puntos; aplicación de rúbrica general al foro.",
+        "Vía vigente de participación e interacción; fecha pasada no autoriza prórroga.",
+        "Lectura de obras antes de argumentar; revisión docente de propósito, secuencia, tiempos y criterios."
+      ],
+      "conflicts": []
+    },
+    "source_blocks": [],
+    "unsegmented_document": false,
+    "period_pending": false,
+    "activity_mapping": [
+      {
+        "activity_id": "7794",
+        "local_number": 7,
+        "source_locator": "/",
+        "source_is_summary": true
+      }
+    ]
+  }
+}
+```

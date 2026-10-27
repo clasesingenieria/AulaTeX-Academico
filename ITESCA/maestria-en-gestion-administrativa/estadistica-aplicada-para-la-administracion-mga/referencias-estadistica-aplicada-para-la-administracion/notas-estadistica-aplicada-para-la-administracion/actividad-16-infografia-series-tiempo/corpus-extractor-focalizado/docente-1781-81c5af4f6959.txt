@@ -1,0 +1,1552 @@
+Pagina 1
+SERIES DE TIEMPO
+Estadística para la administración 
+
+
+Pagina 2
+Pronosticar
+Es el arte y la ciencia de predecir los eventos futuros. 
+Horizontes de tiempo del pronóstico
+1. Pronóstico a corto plazo: Este pronóstico tiene una extensión de tiempo de hasta 1 año, pero 
+casi siempre es menor a 3 meses. Se usa para planear las compras, programar el trabajo, 
+determinar niveles de mano de obra, asignar el trabajo, y decidir los niveles de producción.
+2. Pronóstico a mediano plazo: Por lo general, un pronóstico a mediano plazo, o a plazo 
+intermedio, tiene una extensión de entre 3 meses y 3 años. Se utiliza para planear las ventas, 
+la producción, el presupuesto y el flujo de efectivo, así como para analizar diferentes planes 
+operativos.
+3. Pronóstico a largo plazo. Casi siempre su extensión es de 3 años o más. Los pronósticos a 
+largo plazo se emplean para planear la fabricación de nuevos productos, gastos de capital, 
+ubicación o expansión de las instalaciones, y para investigación y desarrollo.
+
+
+Pagina 3
+TIPOS DE PRONÓSTICOS
+Las organizaciones utilizan tres tipos principales de pronósticos en la planeación de 
+operaciones futuras:
+1. Los pronósticos económicos abordan el ciclo del negocio al predecir tasas de 
+inflación, suministros de dinero, construcción de viviendas, y otros indicadores de 
+planeación.
+2. Los pronósticos tecnológicos se refieren a las tasas de progreso tecnológico, las 
+cuales pueden resultar en el nacimiento de nuevos e interesantes productos, que 
+requerirán nuevas plantas y equipo.
+3. Los pronósticos de la demanda son proyecciones de la demanda de productos o 
+servicios de una compañía. Estos pronósticos, también llamados pronósticos de 
+ventas, orientan la producción, la capacidad y los sistemas de programación de la 
+empresa, y sirven como entradas en la planeación financiera, de marketing y de 
+personal
+
+
+Pagina 4
+SIETE PASOS EN EL SISTEMA DE PRONÓSTICO
+1. Determinar el uso del pronóstico: Disney usa los pronósticos de la asistencia al 
+parque para dirigir el personal, las horas de entrada, la disponibilidad de paseos y 
+los suministros de comida.
+2. Seleccionar los aspectos que se deben pronosticar: Para Disney World hay seis 
+parques principales. La cifra primordial que determina la mano de obra, el 
+mantenimiento y la programación es la asistencia diaria.
+3. Determinar el horizonte de tiempo del pronóstico: ¿Es a corto, mediano o largo 
+plazos? Disney desarrolla pronósticos diarios, semanales, mensuales, anuales y 
+quinquenales.
+4. Seleccionar los modelos de pronóstico: Disney usa una variedad de modelos 
+estadísticos que analizaremos, incluyendo promedios móviles, suavizamiento 
+exponencial y análisis de regresión. También emplea modelos de juicio, o no 
+cuantitativos.
+
+
+Pagina 5
+SIETE PASOS EN EL SISTEMA DE PRONÓSTICO
+5. Recopilar los datos necesarios para elaborar el pronóstico: El equipo de pronósticos 
+de Disney emplea a 35 analistas y 70 trabajadores de campo para encuestar a 1 
+millón de personas y/o negocios cada año. También utiliza una compañía llamada 
+Global Insights para elaborar los pronósticos de la industria de los viajes y recopilar 
+datos sobre tasas de cambio, llegadas a Estados Unidos, ofertas de aerolíneas, 
+tendencias en Wall Street, y programas vacacionales en las escuelas.
+6. Realizar el pronóstico.
+7. Validar e implementar los resultados: En Disney, los pronósticos se revisan 
+diariamente a los niveles más altos para asegurar la validez del modelo, de los 
+supuestos y de los datos. Se aplican las medidas de error, y después se usan los 
+pronósticos en la programación del personal a intervalos de 15 minutos.
+
+
+Pagina 6
+Promedios móviles
+El pronóstico de promedios móviles usa un número de valores de datos históricos 
+reales para generar un pronóstico. Los promedios móviles son útiles si podemos 
+suponer que la demanda del mercado permanecerá relativamente estable en el 
+tiempo. Un promedio móvil de 4 meses se encuentra simplemente al sumar la 
+demanda medida durante los últimos 4 meses y dividiéndola entre cuatro. Al concluir 
+cada mes, los datos del mes más reciente se agregan a la suma de los 3 meses 
+previos y se elimina el dato del mes más antiguo. Esta práctica tiende a suavizar las 
+irregularidades del corto plazo en las series de datos.
+Matemáticamente, el promedio móvil simple (que sirve como estimación de la 
+demanda del siguiente periodo) se expresa como
+n
+previos
+ 
+periodos
+n 
+ 
+los
+en 
+ 
+Demanda
+móvil
+ 
+Promedio
+
+
+donde n es el número de periodos incluidos en el promedio móvil
+
+
+Pagina 7
+Ejemplo
+■
+La tienda de suministros para jardín de Donna quiere hacer un pronóstico con el promedio 
+móvil de 3 meses, incluyendo un pronóstico para las ventas de cobertizos el próximo enero.
+Mes
+Ventas reales 
+de cobertizos
+ENERO
+10
+FEBRERO
+12
+MARZO
+13
+ABRIL
+16
+MAYO 
+19
+JUNIO
+23
+JULIO
+26
+AGOSTO
+30
+SEPTIEMBRE
+28
+OCTUBRE
+18
+NOVIEMBRE
+16
+DICIEMBRE
+14
+ENERO
+
+
+Pagina 8
+Promedio móvil ponderado
+EJEMPLO
+■
+La tienda de suministros para jardín de Donna (vea el ejemplo 1) quiere pronosticar 
+las ventas de cobertizos ponderando los últimos 3 meses, dando más peso a los 
+datos recientes para hacerlos más significativos
+PONDERACIONES APLICADAS
+PERIODO
+3
+Último mes
+2
+Hace dos meses
+1
+Hace tres meses
+
+
+
+nes
+Ponderacio
+n)
+ 
+periodo
+ 
+el
+en 
+ 
+Demanda
+ 
+n)(
+ 
+periodo
+ 
+el
+ 
+para
+ón 
+(Ponderaci
+ponderado
+ 
+móvil
+ 
+Promedio
+
+
+Pagina 9
+Tanto los promedios móviles simples como los ponderados son efectivos para 
+suavizar las fluctuaciones repentinas en el patrón de la demanda con el fin de 
+obtener estimaciones estables. Sin embargo, los promedios móviles presentan tres 
+problemas:
+1. Aumentar el tamaño de n (el número de periodos promediados) suaviza de mejor 
+manera las fluctuaciones, pero resta sensibilidad al método ante cambios reales en 
+los datos.
+2. Los promedios móviles no reflejan muy bien las tendencias. Porque son promedios, 
+siempre se quedarán en niveles pasados, no predicen los cambios hacia niveles 
+más altos ni más bajos. Es decir, retrasan los valores reales.
+3. Los promedios móviles requieren amplios registros de datos históricos.
+
+
+Pagina 10
+Mes 
+Ventas reales de 
+cobertizos 
+Ft 
+PMS
+Ft 
+PMP
+ENE
+10
+FEB
+12
+MAR
+13
+ABR
+16
+=(10+12+13)/3=
+11.6
+=((10*1)+(12*2)+(13*3))/(1
++2+3)=
+12.1
+MAY
+19
+=(12+13+16)/3=
+13.6
+=((12*1)+(13*2)+(16*3))/(1
++2+3)=14.3
+JUN
+23
+16.0
+17.0
+JUL
+26
+19.3
+20.5
+AGOS
+30
+22.6
+23.8
+SEP
+28
+26.3
+27.5
+OCT
+18
+28.0
+28.3
+NOV
+16
+25.3
+23.3
+DIC
+14
+20.6
+18.6
+ENE
+16.0
+15.3
+Respuesta de ejemplos
+
+
+Pagina 11
+Demanda real contra métodos de promedios móviles y promedios móviles ponderados 
+para la tienda de suministros para jardín de Donna
+0
+5
+10
+15
+20
+25
+30
+35
+ENE
+FEB
+MAR
+ABR
+MAY
+JUN
+JUL
+AGOS
+SEP
+OCT
+NOV
+DIC
+ENE
+DEMANDA DE VENTAS
+Ventas Reales
+Promedio
+Móvil
+ponderado
+Promedio 
+Móvil
+
+
+Pagina 12
+Cuadrado medio de error 
+Mes 
+Ventas 
+reales de 
+cobertizos 
+Ft 
+PMS
+Ft 
+PMP
+CME
+PMS
+(Ft-venta)
+2
+CME
+PMP
+(Ft-venta)
+2
+ENE
+10
+FEB
+12
+MAR
+13
+ABR
+16
+11.67
+12.17
+18.75
+14.67
+MAY
+19
+13.67
+14.33
+28.41
+21.81
+JUN
+23
+16.00
+17.00
+49.00
+36.00
+JUL
+26
+19.33
+20.50
+44.49
+30.25
+AGOS
+30
+22.67
+23.83
+53.73
+38.07
+SEP
+28
+26.33
+27.50
+2.79
+0.25
+OCT
+18
+28.00
+28.33
+100.00
+106.71
+NOV
+16
+25.33
+23.33
+87.05
+53.73
+DIC
+14
+20.67
+18.67
+44.49
+21.81
+ENE
+16.00
+15.33
+CME
+47.63
+35.92
+
+
+Pagina 13
+Suavizamiento exponencial
+■El suavizamiento exponencial es un sofisticado método de pronóstico 
+de promedios móviles ponderado que sigue siendo bastante fácil de 
+usar. Implica mantener muy pocos registros de datos históricos.
+■La fórmula básica para el suavizamiento exponencial se expresa 
+como sigue:
+donde  es la ponderación, o constante de suavizamiento, elegida por 
+quien pronostica, que tiene un valor de entre 0 y 1.
+
+
+Pagina 14
+■
+La ecuación también puede escribirse matemáticamente como:
+
+
+Pagina 15
+EJEMPLO
+■
+En enero, un vendedor de automóviles predijo que la demanda para febrero sería de 
+142 Ford Mustang. La demanda real en febrero fue de 153 automóviles. Usando la 
+constante de suavizamiento que eligió la administración de α = .20, el vendedor 
+quiere pronosticar la demanda para marzo usando el modelo de suavizamiento 
+exponencial.
+Nuevo pronóstico (para la demanda de marzo) =142 +.2(153-142)=142+2.2=144.2
+Así, el pronóstico de la demanda de marzo para los Ford Mustang se redondea a 144.
+
+
+Pagina 16
+EJEMPLO
+■
+Durante los últimos 8 trimestres, en el puerto de Baltimore se han descargado de los 
+barcos grandes cantidades de grano. El administrador de operaciones del puerto quiere 
+probar el uso de suavizamiento exponencial para ver qué tan bien funciona la técnica 
+para predecir el tonelaje descargado. Supone que el pronóstico de grano descargado 
+durante el primer trimestre fue de 175 toneladas. Se examinan dos valores de α:  α= .10 y  
+α= .50.
+Trimestre
+Tonelaje
+Real Descargado 
+Ft Pronóstico
+α=.10
+Ft Pronóstico
+α=.50
+1
+180
+175
+175
+2
+168
+175.50
+177.50
+3
+159
+174.75
+172.75
+4
+175
+173.17
+165.87
+5
+190
+173.35
+170.43
+6
+205
+175.02
+180.21
+7
+180
+178.02
+192.60
+8
+182
+178.21
+186.30
+9
+? 
+178.59
+184.15
+
+
+Pagina 17
+Medición del error de pronóstico
+■
+La exactitud general de cualquier modelo de pronóstico —promedios móviles, 
+suavizamiento exponencial u otro— puede determinarse al comparar los valores 
+pronosticados con los valores reales u observados.
+■
+Si Ft denota el pronóstico en el periodo t, y At denota la demanda real del periodo t, el error 
+de pronóstico (o desviación) se define como:
+Error de pronóstico = Demanda real − Valor pronosticado= At − Ft
+■
+En la práctica se usan varias medidas para calcular el error global de pronóstico. Estas 
+medidas pueden usarse para comparar distintos modelos de pronóstico, así como para 
+vigilar los pronósticos y asegurar su buen desempeño. Las tres medidas más populares son 
+la MAD (desviación absoluta media), el MSE (error cuadrático medio), y el MAPE (error 
+porcentual absoluto medio). A continuación se describen estas medidas.
+
+
+Pagina 18
+■
+Desviación absoluta media La primera medición del error global de pronóstico para un 
+modelo es la desviación absoluta media (MAD). Su valor se calcula sumando los valores 
+absolutos de los errores individuales del pronóstico y dividiendo el resultado entre el 
+número de periodos con datos (n):
+
+
+Pagina 19
+Ejercicio anterior 
+Trimestre
+Tonelaje
+Real
+Descargado 
+Ft
+Pronóstico
+α=.10
+Desviación
+Absoluta
+Ft
+Pronóstico
+α=.50
+Desviación 
+Absoluta
+1
+180
+175
+5
+175
+5
+2
+168
+175.50
+7.5
+177.50
+9.5
+3
+159
+174.75
+15.75
+172.75
+13.75
+4
+175
+173.17
+1.82
+165.87
+9.12
+5
+190
+173.35
+16.64
+170.43
+19.56
+6
+205
+175.02
+29.97
+180.21
+24.78
+7
+180
+178.02
+1.98
+192.60
+12.60
+8
+182
+178.21
+3.78
+186.30
+4.30
+Suma de 
+desviaciones
+82.45
+98.62
+MAD
+10.31
+12.33
+Razonamiento: Con base en esta comparación de las dos MAD, se prefiere una constante de 
+suavizamiento α = .10 en lugar de una  α= .50 porque su MAD es más pequeña
+
+
+Pagina 20
+Error cuadrático medio 
+■
+El error cuadrático medio (MSE) es una segunda forma de medir el error global de 
+pronóstico. El MSE es el promedio de los cuadrados de las diferencias encontradas 
+entre los valores pronosticados y los observados. Su fórmula es:
+
+
+Pagina 21
+El administrador de operaciones del puerto de Baltimore quiere calcular 
+ahora el MSE para  = .10
+Trimestre
+Tonelaje
+Real
+Descargado 
+Ft
+Pronóstico
+α=.10
+(Error)2
+Ft
+Pronóstico
+α=.50
+(Error)2
+1
+180
+175
+25
+175
+25.0
+2
+168
+175.50
+56.25
+177.50
+90.3
+3
+159
+174.75
+248.06
+172.75
+189.1
+4
+175
+173.17
+3.33
+165.87
+83.3
+5
+190
+173.35
+276.97
+170.43
+382.7
+6
+205
+175.02
+898.69
+180.21
+614.1
+7
+180
+178.02
+3.92
+192.60
+159.0
+8
+182
+178.21
+14.3
+186.30
+18.5
+MSE
+190.8
+195.23
+Razonamiento: ¿Este MSE = 190.8 es bueno o malo? Todo depende de los MSE calculados para otros métodos de pronóstico. 
+Un MSE más bajo es mejor porque es un valor que queremos minimizar. El MSE exagera los errores porque los eleva al 
+cuadrado.
+
+
+Pagina 22
+Error porcentual absoluto medio
+■
+Un problema tanto con la MAD como con el MSE es que sus valores dependen de la 
+magnitud del elemento que se pronostica. Si el elemento pronosticado se mide en 
+millares, los valores de la MAD y del MSE pueden ser muy grandes. Para evitar este 
+problema, podemos usar el error porcentual absoluto medio (MAPE). Éste se calcula como 
+el promedio de las diferencias absolutas encontradas entre los valores pronosticados y 
+los reales, y se expresa como un porcentaje de los valores reales. Es decir, si hemos 
+pronosticado n periodos y los valores reales corresponden a esa misma cantidad de 
+periodos, el MAPE se calcula como:
+
+
+Pagina 23
+El puerto de Baltimore ahora quiere calcular el MAPE cuando α= .10.
+Trimestre
+Tonelaje
+Real
+Descargado 
+Ft
+Pronóstico
+α=.10
+Error porcentual 
+absoluto
+100(|Error|/actual)
+α =.10
+Error porcentual 
+absoluto
+100(|Error|/actual)
+α =.50
+1
+180
+175
+2.78%
+2.78%
+2
+168
+175.50
+4.46%
+5.65%
+3
+159
+174.75
+9.91%
+8.65%
+4
+175
+173.17
+1.04%
+5.21%
+5
+190
+173.35
+8.76%
+10.30%
+6
+205
+175.02
+14.62%
+12.09%
+7
+180
+178.02
+1.10%
+7.01%
+8
+182
+178.21
+2.08%
+2.37%
+MAPE
+5.59%
+6.76%
+
+
+Pagina 24
+■
+Del siguiente conjunto de datos pronosticar promedio móvil 
+simple las ventas de escobas, asumiendo un valor de n = 3.
+■
+Pronosticar las ventas de escobas, asumiendo un valor de n 
+=3 y como para el promedio y como la demanda crece los 
+valores de ponderación van de menor a mayor con W1 =2.5, 
+W2= 3.5 y W3 =4.0
+■
+Pronosticar las ventas de escobas, asumiendo un valor de α= 
+0.2 y el pronóstico del periodo 1 es de 398
+Periodo Demanda
+1
+396
+2
+395
+3
+290
+4
+400
+5
+410
+6
+425
+7
+450
+8
+440
+9
+430
+10
+460
+11
+465
+12
+475
+13
+480
+14
+465
+15
+a). Realice el pronostico para cada caso
+b). Realice la gráfica comparativa de los pronósticos
+c). Realice una comparación de cada pronóstico con MAD,MSE, MAPE
+d). Genere conclusión de cual recomienda para pronosticar el periodo 
+15
+
+
+Pagina 25
+Suavizamiento exponencial con ajuste de tendencia
+■El
+suavizamiento
+exponencial
+simple,
+la
+técnica
+ilustrada
+anteriormente, como cualquier técnica de promedios móviles,
+falla en su respuesta a las tendencias. También existen otras
+técnicas
+de
+pronóstico
+que
+permiten
+manejar
+mejor
+las
+tendencias. Sin embargo, como el suavizamiento exponencial es
+un enfoque tan común en los negocios, lo estudiaremos con
+mayor detalle. A continuación se presenta la razón por la que el
+suavizamiento
+exponencial
+debe
+modificarse
+cuando
+está
+presente una tendencia
+
+
+Pagina 26
+Suavizamiento exponencial con ajuste 
+de tendencia
+■Suponga que la demanda de un producto o servicio ha
+venido aumentando en 100 unidades cada mes y que
+hemos obtenido pronósticos con α= 0.4 en el modelo de
+suavizamiento exponencial. La tabla siguiente muestra un
+retraso considerable en los meses 2, 3, 4 y 5, aun cuando
+nuestra estimación inicial para el mes 1 es perfecta.
+
+
+Pagina 27
+Suavizamiento exponencial con ajuste 
+de tendencia
+■Para mejorar nuestro pronóstico, ilustraremos un modelo de suavizamiento
+exponencial más complejo, uno que hace ajustes de tendencia. La idea es 
+calcular un promedio suavizado exponencialmente de los datos y después 
+ajustar el retraso positivo o negativo encontrado en la tendencia. La nueva 
+fórmula es:
+
+
+Pagina 28
+Suavizamiento exponencial con ajuste 
+de tendencia
+■Con el suavizamiento exponencial ajustado por la tendencia, las estimaciones 
+del promedio y de la tendencia se suavizan. Este procedimiento requiere dos 
+constantes de suavizamiento: α para el promedio y β para la tendencia. 
+Después calculamos el promedio y la tendencia para cada periodo:
+
+
+Pagina 29
+Ejemplo
+■
+Un importante fabricante de Portland quiere pronosticar la demanda de un equipo para 
+control de la contaminación. Una revisión de las ventas histórica, como se muestra a 
+continuación, indica que hay una tendencia creciente.
+■
+A las constantes de suavizamiento se les asignan los valores α = .2 y β = .4. La 
+compañía supone que el pronóstico inicial para el mes 1 (F1) fue de 11 unidades y que 
+la tendencia durante el mismo periodo (T1) fue de 2 unidades.
+Mes (t)
+Demanda (At)
+Mes (t)
+Demanda (At)
+1
+12
+6
+21
+2
+17
+7
+31
+3
+20
+5
+28
+4
+19
+8
+36
+5
+24
+10
+?
+
+
+Pagina 30
+•También pronosticamos para el mes 3
+
+
+Pagina 31
+Mes 
+Demanda Real
+Pronóstico
+Suavizado , Ft
+Tendencia 
+Suavizada, Tt
+Pronóstico 
+incluyendo la 
+tendencia
+FITt
+1
+12
+11
+2
+13.0
+2
+17
+12.80
+1.92
+14.7
+3
+20
+15.18
+2.10
+17.2
+4
+19
+5
+24
+6
+21
+7
+31
+8
+28
+9
+36
+10
+?
+
+
+Pagina 32
+Mes 
+Demanda Real
+Pronóstico
+Suavizado , Ft
+Tendencia 
+Suavizada, Tt
+Pronóstico 
+incluyendo la 
+tendencia
+FITt
+1
+12
+11
+2
+13.0
+2
+17
+12.80
+1.92
+14.7
+3
+20
+15.18
+2.10
+17.2
+4
+19
+17.82
+2.32
+20.1
+5
+24
+19.91
+2.23
+22.1
+6
+21
+22.51
+2.38
+24.8
+7
+31
+24.11
+2.07
+26.1
+8
+28
+27.14
+2.45
+29.1
+9
+36
+29.28
+2.32
+31.6
+10
+?
+32.48
+2.68
+35.1
+
+
+Pagina 33
+0
+5
+10
+15
+20
+25
+30
+35
+40
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+fabricante de Portland 
+Demanda Real
+Pronostico con tendencia
+
+
+Pagina 34
+Ejercicio 
+■Los ingresos en el despacho de abogados Smith and Wesson para el periodo de 
+febrero a julio han sido como sigue
+■Use suavizamiento exponencial con ajuste de tendencia para pronosticar el 
+ingreso de agosto para este despacho de abogados. Suponga que el pronóstico 
+inicial para febrero es de 65,000 dólares y el ajuste de tendencia inicial es de 0. 
+Las constantes de suavizamiento seleccionadas son α = .1 y β = .2.
+
+
+Pagina 35
+Proyecciones de tendencia
+■
+El último método de pronósticos de series de tiempo que analizaremos es la proyección de la 
+tendencia. Esta técnica ajusta una recta de tendencia a una serie de datos puntuales 
+históricos, y después proyecta dicha recta al futuro para obtener pronósticos de mediano y 
+largo plazos. Se pueden desarrollar varias ecuaciones matemáticas (por ejemplo, exponencial 
+y cuadrática), pero en esta sección veremos sólo tendencias lineales (en línea recta).
+
+
+Pagina 36
+Método de mínimos cuadrados
+
+
+Pagina 37
+
+
+Pagina 38
+Ejemplo
+■
+En la tabla siguiente se muestra la demanda de energía eléctrica en N. Y. Edison durante 
+el periodo 2001 a 2007, en megawatts. La empresa quiere pronosticar la demanda para 
+2008 ajustando una recta de tendencia a estos datos.
+Año
+Demanda de 
+energía 
+eléctrica 
+Año
+Demanda de 
+energía 
+eléctrica 
+2001
+74
+2005
+105
+2002
+79
+2006
+142
+2003
+80
+2007
+122
+2004
+90
+
+
+Pagina 39
+
+
+Pagina 40
+Para evaluar el modelo, graficamos la demanda histórica y la recta de tendencia. En este caso, 
+debemos tener cuidado y tratar de comprender el cambio en la demanda de 2006 a 2007.
+67.24
+77.78
+88.32
+98.86
+109.4
+119.94
+130.48
+141.02
+151.56
+0
+20
+40
+60
+80
+100
+120
+140
+160
+2001 2002 2003 2004 2005 2006 2007 2008 209
+Demanda de energía 
+eléctrica  
+Recta de tendencia
+Demanda de Energía Eléctrica
+Año
+Recta de Tendencia
+x
+y
+54
+.
+10
+70
+.
+56
+ˆ
+
+
+
+
+Pagina 41
+Notas sobre el uso del método de mínimos cuadrados
+El empleo del método de mínimos cuadrados implica que se han cumplido tres requisitos:
+1. Siempre deben graficarse los datos porque los datos de mínimos cuadrados suponen una relación 
+lineal. Si parece que exista una curva presente, probablemente sea necesario el análisis 
+curvilíneo.
+2. No se predicen periodos lejanos a la base de datos dada. Por ejemplo, si tenemos los precios 
+promedio de las existencias de Microsoft durante 20 meses, sólo podemos pronosticar 3 o 4 
+meses hacia el futuro. Los pronósticos de más tiempo tienen poca validez estadística. Por lo 
+tanto, no pueden tomarse datos de 5 años de ventas y proyectar 10 años hacia el futuro. El 
+mundo es demasiado incierto.
+3. Se supone que las desviaciones calculadas alrededor de la recta de mínimos cuadrados son 
+aleatorias (vea la figura 4.4). Por lo general, están distribuidas normalmente, con la mayoría de 
+las observaciones cerca de la recta y sólo unas cuantas más lejos.
+
+
+Pagina 42
+Ejercicio
+■
+En el hotel Toronto Towers Plaza tienen los datos del registro de cuartos de los últimos nueve años. 
+Para proyectar la ocupación futura, la administración desea determinar la tendencia matemática del 
+registro de huéspedes. Esta estimación ayudará a determinar si es necesaria una ampliación futura del 
+hotel. Dada la siguiente serie de tiempo, desarrolle una ecuación de regresión que relacione los 
+registros con el tiempo (por ejemplo, una ecuación de tendencia). Después pronostique los registros 
+para el año 2009. El registro de cuartos está en miles de unidades:
+1999: 17
+2000: 16 
+2001: 16 
+2002: 21 
+2003: 20
+2004: 20 
+2005: 23 
+2006: 25 
+2007: 24
+
+
+Pagina 43
+
+
+Pagina 44
+25.895
+27.03
+0
+5
+10
+15
+20
+25
+30
+1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009
+Registros
+Recta de tendencia
+Registros
+Año
+x
+y
+135
+.
+1
+545
+.
+14
+ˆ
+
+
+Recta de Tendencia
+
+
+Pagina 45
+Variaciones estacionales en los datos
+■Las variaciones estacionales en los datos son movimientos regulares 
+ascendentes o descendentes localizados en una serie de tiempo y que se 
+relacionan con acontecimientos recurrentes como el clima o las vacaciones. 
+La demanda de carbón o petróleo aumenta durante los meses de invierno. 
+La demanda de clubes de golf o bronceadores puede ser mayor durante el 
+verano.
+
+
+Pagina 46
+Variaciones estacionales en los datos
+■La estacionalidad puede aplicarse en forma horaria, diaria, 
+semanal, mensual o en otros patrones recurrentes. Los 
+restaurantes de comida rápida registran diariamente repuntes al 
+medio día y nuevamente después de las 5 P.M. Los cines 
+aumentan su demanda los viernes y sábados por la noche. La 
+oficina de correos, Toys “ ” Us, The Christmas Store y las tiendas 
+de tarjetas Hallmark también registran variaciones estacionales 
+tanto en el tráfico de clientes como en las ventas.
+
+
+Pagina 47
+A continuación se presentan los pasos que seguiría una compañía que 
+tiene “estaciones” de un mes:
+1. Encontrar la demanda histórica promedio de cada estación (o mes en 
+este caso) sumando la demanda medida en ese mes de cada año y 
+dividiéndola entre el número de años con datos disponibles. Por ejemplo, 
+si en enero hubo ventas de 8, 6 y 10 durante los últimos tres años, la 
+demanda promedio de enero es igual a (8 + 6 + 10)/3 = 8 unidades.
+2. Calcular la demanda promedio de todos los meses dividiendo el promedio 
+total de la demanda anual entre el número de estaciones. Por ejemplo, si 
+el promedio total de la demanda de un año es de 120 unidades y hay 12 
+estaciones (una por mes), la demanda mensual promedio es de 120/12 
+= 10 unidades.
+
+
+Pagina 48
+3. Calcular un índice estacional para cada estación dividiendo la 
+demanda histórica real de ese mes (del paso 1) entre la demanda 
+promedio de todos los meses (del paso 2). Por ejemplo, si la demanda 
+promedio histórica en enero durante los últimos 3 años es de 8 
+unidades y la demanda promedio de todos los meses es de 10 
+unidades, el índice estacional para enero es de 8/10 = .80. De igual 
+forma, un índice estacional de 1.20 para febrero significaría que la 
+demanda de febrero es 20% mayor que la demanda promedio de 
+todos los meses.
+4. Estimar la demanda total anual para el siguiente año.
+5. Dividir esta estimación de la demanda total anual entre el número de 
+estaciones, después multiplicarla por el índice estacional para ese 
+mes. Esto proporciona el pronóstico estacional.
+
+
+Pagina 49
+Ejemplo
+■
+Un distribuidor Des Moines de computadoras portátiles Sony quiere desarrollar índices 
+mensuales para las ventas. Se dispone de los datos mensuales para los años 2005 a 2007.
+
+
+Pagina 50
+
+
+Pagina 51
+■
+Conclusión: Piense en estos índices como porcentajes de las ventas promedio. Las ventas promedio (sin estacionalidad) 
+serían de 94, pero con estacionalidad, las ventas fluctúan entre 85% y 131% del promedio.
+■
+Si la demanda anual para 2008 es de 1,150 computadoras portátiles (en vez de 1,200), ¿cuáles serán los pronósticos 
+para enero, febrero y marzo? Respuesta: 92, 82 y 87, respectivamente
+
+
+Pagina 52
+MÉTODOS ASOCIATIVOS DE PRONÓSTICO:
+ANÁLISIS DE REGRESIÓN Y CORRELACIÓN
+■
+A diferencia del pronóstico de series de tiempo, los modelos de pronóstico asociativo casi 
+siempre consideran varias variables relacionadas con la cantidad que se desea predecir. 
+Una vez determinadas dichas variables, se construye un modelo estadístico que se usa 
+para pronosticar el elemento de interés. Este enfoque es más poderoso que los métodos 
+de series de tiempo que incluyen sólo valores históricos para la variable a pronosticar.
+
+
+Pagina 53
+Uso del análisis de regresión para 
+pronosticar
+■
+Con el fin de realizar un análisis de regresión lineal, Podemos usar el mismo modelo 
+matemático que empleamos con el método de mínimos cuadrados para efectuar la 
+proyección de tendencias. Las variables dependientes que deseamos pronosticar seguirán 
+siendo . Pero la variable independiente, x, ya no necesita ser el tiempo. Usamos la ecuación
+cuando       = valor de la variable dependiente
+a = intersección con el eje y
+b = pendiente de la recta de regresión
+x = variable independiente
+bx
+a
+y
+
+
+ˆ
+yˆ
+
+
+Pagina 54
+Ejemplo
+■La compañía constructora Nodel renueva casas antiguas en West 
+Bloomfield, Michigan. Con el tiempo, la compañía ha encontrado que su 
+volumen de dólares por trabajos de renovación depende de la nómina del 
+área de West Bloomfield. La administración quiere establecer una relación 
+matemática para ayudarse a predecir las ventas.
+■El Vicepresidente de Operaciones de Nodel ha preparado la tabla 
+siguiente, la cual muestra los ingresos de Nodel y la cantidad de dinero 
+percibido por los trabajadores en West Bloomfield durante los últimos 6 
+años.
+
+
+Pagina 55
+A partir de los seis puntos de datos, parece haber una ligera relación positiva entre la variable independiente (nómina) y 
+la variable dependiente (ventas): A medida que se incrementa la nómina, las ventas de Nodel tienden a ser más altas
+
+
+Pagina 56
+Podemos encontrar una ecuación matemática si usamos el enfoque de regresión de mínimos 
+cuadrados
+
+
+Pagina 57
+Por tanto: Dado el supuesto de una relación rectilínea entre la nómina y las ventas, ahora tenemos 
+una indicación de la pendiente de esa relación: Las ventas se incrementan a una tasa de un millón de 
+dólares por cada 250 millones pagados en la nómina local. Esto es porque b = .25.
+A cuánto ascienden las ventas de Nodel cuando la nómina local es de 8 mil millones de dólares? 
+Respuesta: A 3.75 millones de dólares
+
+
+Pagina 58
+Error estándar de la estimación
+■
+Para medir la exactitud de las estimaciones de regresión, debemos calcular el error 
+estándar de la estimación, Sy,x. Este cálculo se llama desviación estándar de la 
+regresión, y mide el error desde la variable dependiente, y, hasta la recta de 
+regresión, en lugar de hasta la media. La ecuación es una expresión similar a la 
+encontrada en la mayoría de los libros de estadística para calcular la desviación 
+estándar de una media aritmética
+
+
+Pagina 59
+Ejemplo
+■
+El Vice-presidente de operaciones de Nodel quiere conocer el error asociado con la recta 
+de regresión calculada en el ejemplo
+■
+Calcule el error estándar de la estimación, Sy,x, usando la ecuación.
+■
+La única cifra que necesitamos y que no es posible despejar para calcular S y,x es Σy2. 
+Algunas sumas rápidas revelan que Σy2 = 39.5.  Por lo tanto:
+
+
+Pagina 60
+■
+La interpretación del error estándar de la estimación es similar a la desviación 
+estándar; a saber, ±1 desviación estándar = .6827. Entonces existe una posibilidad 
+del 68.27% de estar a ±$306,000 de la estimación puntual de $3,250,000.
+■
+¿Cuál es la probabilidad de que las ventas excedan de $3,556,000? [Respuesta: 
+Aproximadamente un 16%].
+
+
+Pagina 61
+Coeficientes de correlación para rectas 
+de regresión
+■
+Otra forma de evaluar la relación entre dos variables consiste en calcular el 
+coeficiente de correlación. Esta medida expresa el grado o la fuerza de la relación 
+lineal
+
+
+Pagina 62
+■
+Para calcular r, usamos casi los mismos datos necesarios para calcular a y b para 
+la recta de regresión. La ecuación para r resulta más larga, y es:
+
+
+Pagina 63
+Ejemplo
+■Observamos la relación que hay entre las ventas de renovación de casas 
+de la compañía constructora Nodel y la nómina pagada en el área de West 
+Bloomfield. El vicepresidente ahora quiere conocer la fuerza de la 
+asociación entre la nómina local y las ventas.
+
+
+Pagina 64
+■
+Estar de .901 parece indicar que hay una correlación significativa y ayuda a confirmar la relación estrecha que 
+existe entre las dos variables.
+■
+Si el coeficiente de correlación fuera de –.901 en vez de .901, ¿qué significaría? [Respuesta: La correlación 
+negativa indicaría que a medida que la nómina se elevara, las  ventas disminuirían —una posibilidad bastante 
+improbable que le sugeriría revisar sus cálculos].
+
+
+Pagina 65
+Análisis de regresión múltiple
+■La regresión múltiple es una extensión práctica del modelo de 
+regresión lineal simple.  Permite construir un modelo con varias 
+variables independientes en vez de sólo una variable. Por ejemplo, 
+si la constructora Nodel desea incluir el promedio de las tasas de 
+interés anual en su modelo para el pronóstico de ventas de 
+remodelación, la ecuación apropiada sería:
+
+
+Pagina 66
+Ejemplo
+
+
+Pagina 67
+Ejemplo
+■
+El Servicio Interno de Contribuciones (IRS, Internal Revenue Service) de Estados Unidos 
+está tratando de estimar la cantidad mensual de impuestos no pagados descubiertos por 
+su departamento de auditorías. En el pasado, el IRS estimaba esta cantidad con base en 
+el número esperado de horas de trabajo de auditorías de campo. En los últimos años, sin 
+embargo, las horas de trabajo de auditorías de campo se han convertido en un 
+pronosticador errático de los impuestos no pagados reales. Como resultado, la 
+dependencia está buscando otro factor para mejorar la ecuación de estimación. El 
+departamento de auditorías tiene un registro del número de horas que usa sus 
+computadoras para detectar impuestos no pagados. ¿Podríamos combinar esta 
+información con los datos referentes a las horas de trabajo de auditorías de campo y 
+obtener una ecuación de estimación más precisa para los impuestos no pagados 
+descubiertos cada mes? En la tabla se presentan esos datos para los últimos 10 meses.
+67
+
+
+Pagina 68
+MES
+X1
+Horas de trabajo de 
+auditoria de campo (dos 
+ceros omitidos)
+X2
+Horas en computadora
+(dos ceros omitidos)
+Y
+Impuestos reales no 
+pagados 
+descubiertos(millones de 
+dólares)
+Enero 
+45
+16
+29
+Febrero 
+42
+14
+24
+marzo
+44
+15
+27
+abril 
+45
+13
+25
+mayo
+43
+13
+26
+junio 
+46
+14
+28
+julio
+44
+16
+30
+agosto
+45
+16
+28
+sep
+44
+15
+28
+oct
+43
+15
+27
+a=-13.81
+b1=0.563
+b2=1.099
+Suponga que desea 
+X1=43 ← 4,300 horas de trabajo en auditorías de campo
+X2=16 ← 1,600 horas de tiempo en computadora
+2
+099
+.1
+1
+563
+.0
+81
+.
+13
+2
+1
+ˆ
+2
+1
+x
+x
+x
+b
+x
+b
+a
+y
+
+
+
+
+
+
+
+
+
+Pagina 69
+2
+099
+.1
+1
+563
+.0
+81
+.
+13
+ˆ
+x
+x
+y
+
+
+
+
+a=-13.81
+b1=0.563
+b2=1.099
+Suponga que desea 
+X1=43 ← 4,300 horas de trabajo en auditorías de campo
+X2=16 ← 1,600 horas de tiempo en computadora
+00
+.
+008
+,
+28
+$
+008
+.
+28
+)
+16
+*
+099
+.1(
+)
+43
+*
+563
+.0
+(
+81
+.
+13
+ˆ
+
+
+
+
+
+
+y
+Por tanto, en el pronóstico para noviembre, el departamento de auditorías 
+espera encontrar una evasión de impuestos cercana a 28 millones de 
+dólares,
+
+
+Pagina 70
+Fuente:
+■
+1. Estadística para Administración y Economía, 7ma Edición – Richard I. Levin, 
+David S. Rubin.
+■
+2. Estadística para administración y economía, 10ma Edición – Anderson, Sweeney, 
+Williams

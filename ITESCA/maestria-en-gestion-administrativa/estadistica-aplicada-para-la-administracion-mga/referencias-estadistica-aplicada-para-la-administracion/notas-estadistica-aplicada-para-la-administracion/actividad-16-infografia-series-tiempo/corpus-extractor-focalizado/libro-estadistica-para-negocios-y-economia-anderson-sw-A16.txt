@@ -1,0 +1,545 @@
+Fuente bibliográfica: Estadística para negocios y economía - Anderson, Sweeney y Williams. 11.ª edición.pdf
+Actividad: 16 (6.1 Infografía Equipo 4% Tarea)
+Palabras clave: serie de tiempo, tendencia, estacionalidad, ciclo, medias móviles, suavizamiento exponencial, índice estacional, tasas de variación
+
+[Bloque seleccionado #836 | relevancia=34]
+Pagina 835
+ 
+18.3  Promedios móviles y suavizamiento exponencial 
+801
+La ecuación (18.2) muestra que el pronóstico para el periodo t  1 es un promedio pon-
+derado del valor real en el periodo t y del valor pronosticado para el periodo t. El peso dado 
+al valor real en el periodo t es la constante de suavizamiento α, y el peso dado al pronóstico 
+para el periodo t es 1  α. Resulta que el pronóstico exponencial para cualquier periodo es en 
+realidad un promedio ponderado de todos los valores reales anteriores de la serie de tiempo. Se 
+ilustra lo anterior con una serie de tiempo que sólo implica los datos de tres periodos: Y1, Y2 y Y3.
+Para empezar los cálculos, sea F1 el valor real de la serie de tiempo en el periodo 1, es de-
+cir, F1  Y1. Por tanto, el pronóstico para el periodo 2 es
+F2  αY1  (1  α)F1
+ αY1  (1  α)Y1
+ Y1
+Observe que el pronóstico de suavizamiento exponencial para el periodo 2 es igual al valor real 
+de la serie de tiempo en el periodo 1.
+El pronóstico para el periodo 3 es
+F3  αY2  (1  α)F2  αY2  (1  α)Y1
+Por último, al sustituir esta expresión para F3 en la expresión para F4 obtenemos
+F4  αY3  (1  α)F3
+ αY3  (1  α)[αY2  (1  α)Y1]
+ αY3  α(1  α)Y2  (1  α)2Y1
+Observe ahora que F4 es un promedio ponderado de los tres primeros valores de la serie de 
+tiempo. La suma de los coeﬁ cientes o pesos de Y1, Y2 y Y3 es igual a 1. Con un argumento similar 
+se puede demostrar que, en general, cualquier pronóstico Ft1 es un promedio ponderado de 
+todos los valores anteriores de la serie de tiempo.
+A pesar de que con el suavizamiento exponencial se obtiene un pronóstico que es el prome-
+dio ponderado de todas las observaciones anteriores, no deben conservarse todos los datos del 
+pasado para calcular el pronóstico del periodo siguiente. De hecho, la ecuación (18.2) muestra 
+que una vez que el valor de la constante de suavizamiento α es elegida, sólo se necesitan dos 
+informaciones para calcular el pronóstico: Yt, el valor real de la serie de tiempo para el perio-
+do t, y Ft, el pronóstico para el periodo t.
+Para ilustrar el método de suavizamiento exponencial, considere de nuevo la serie de tiem-
+po de los precios de la gasolina presentada en la tabla 18.1 y en la ﬁ gura 18.1. Como ya se 
+explicó, para iniciar los cálculos se establece un pronóstico de suavizamiento exponencial para 
+el periodo 2 igual al valor real de la serie de tiempo en el periodo 1. Por tanto, como Y1  17, 
+para empezar con los cálculos del suavizamiento exponencial se pone F2  17. Referente a los 
+datos de la serie de tiempo en la tabla 18.1, se encue
+
+[Bloque seleccionado #842 | relevancia=39]
+Pagina 841
+ 
+18.4  Proyección de la tendencia 
+807
+ 
+El rating de 11.2 puntos en 1997 indica que 11.2% de los hogares estadounidenses se sintonizó 
+para ver a Tiger Woods triunfar en su primer torneo de golf más importante y convertirse en el 
+primer afroestadounidense en ganar el Masters. Tiger Woods lo ganó en 2001 y 2005.
+a) Construya una gráfica de serie de tiempo. ¿Qué tipo de patrón existe en los datos? Opine 
+sobre algunos factores que pueden haber influido en el modelo mostrado en la gráfica de 
+series de tiempo para este periodo.
+b) Dado el patrón de la gráfica de series de tiempo desarrollado en el inciso a), ¿cree que los 
+métodos de pronóstico estudiados en esta sección son adecuados para obtener los pronós-
+ticos para esta serie de tiempo? Explique.
+c) 
+¿Recomendaría utilizar sólo los ratings de Nielsen de 2002-2008 para pronosticar el rating 
+de 2009, o debería usarse toda la serie de tiempo desde 1997 hasta 2008? Explique.
+18.4  Proyección de la tendencia
+En esta sección se presentan tres métodos de elaboración de pronósticos que son apropiados 
+para las series de tiempo que exhiben un patrón de tendencia. En primer lugar, se muestra qué 
+tan sencillo es el uso de la regresión lineal para pronosticar la serie de tiempo con tendencia li-
+neal. Después se ilustra cómo obtener los pronósticos mediante el suavizamiento exponencial 
+lineal de Holt, una extensión del único suavizamiento exponencial que utiliza dos constantes 
+de suavizamiento: la primera se toma en cuenta para el nivel de la serie de tiempo y la segunda 
+para la tendencia lineal de los datos. Por último, se muestra cómo la capacidad de ajuste a una 
+curva en el análisis de regresión permite pronosticar series de tiempo con una tendencia curvi-
+línea o no lineal.
+Regresión de tendencia lineal
+En la sección 18.1 se utilizaron las ventas de bicicletas manejadas en la tabla 18.3 y en la ﬁ gura 
+18.3 para ilustrar una serie de tiempo con un patrón de tendencia. Esta serie de tiempos se uti-
+lizará para ilustrar cómo la regresión lineal simple permite pronosticar una serie de tiempo con 
+tendencia lineal. Los datos de la serie de tiempo de las ventas de bicicletas se repiten en la tabla 
+18.12 y en la ﬁ gura 18.9.
+Aunque la gráﬁ ca de serie de tiempo de la ﬁ gura 18.9 muestra algún movimiento ascenden-
+te y descendente en los últimos 10 años, se podría estar de acuerdo en que la línea de tendencia 
+mostrada en la ﬁ gura 18.10 proporciona una aproximación razonable del movimiento de la serie 
+a largo plazo. Se pueden utilizar los métodos de regresión lineal simple (vea el capítulo 14) 
+
+[Bloque seleccionado #849 | relevancia=28]
+Pagina 848
+814 
+Capítulo 18  Análisis de series de tiempo y elaboración de pronósticos
+ 
+ 
+ 
+Nivel 
+Tendencia 
+Pronóstico 
+Error de 
+Error de pronóstico
+ 
+Año 
+Ventas (miles) Yt 
+estimado Lt 
+estimada bt 
+Ft 
+pronóstico 
+cuadrado
+ 
+1 
+21.6 
+21.600 
+1.300
+ 
+2 
+22.9 
+22.900 
+1.300 
+22.900 
+0.000 
+0.000
+ 
+3 
+25.5 
+24.330 
+1.326 
+24.200 
+1.300 
+1.690
+ 
+4 
+21.9 
+25.280 
+1.251 
+25.656 
+3.756 
+14.108
+ 
+5 
+23.9 
+26.268 
+1.198 
+26.531 
+2.631 
+6.924
+ 
+6 
+27.5 
+27.470 
+1.199 
+27.466 
+0.034 
+0.001
+ 
+7 
+31.5 
+28.952 
+1.256 
+28.669 
+2.831 
+8.016
+ 
+8 
+29.7 
+30.157 
+1.245 
+30.207 
+0.507 
+0.257
+ 
+9 
+28.6 
+31.122 
+1.189 
+31.402 
+2.802 
+7.851
+ 
+10 
+31.4 
+32.220 
+1.171 
+32.311 
+0.911 
+0.830
+ 
+ 
+ 
+ 
+ 
+ 
+Total 
+39.678
+Observe que las estimaciones, ambas en el año 10, del nivel de la serie de tiempo es L1  
+32.220 y de la pendiente es b1  1.171. Si se asume que la tendencia de los últimos 10 años en 
+las ventas es un buen indicador del futuro, la ecuación (18.9) puede utilizarse para desarrollar 
+pronósticos para periodos futuros. Por ejemplo, al sustituir t  11 en la ecuación (18.9) se ob-
+tiene la proyección de tendencia para el próximo año o el pronóstico, F11.
+F11  L10  b10(1)  32.220  1.171  33.391
+Por tanto, al utilizar el suavizamiento exponencial lineal de Holt se pronostica que el año pró-
+ximo las ventas serán de 33 391 bicicletas.
+Regresión de tendencia no lineal
+Para modelar una tendencia suele utilizarse el modelo de función lineal. Sin embargo, como 
+ya se vio, algunas veces las series de tiempo tienen tendencias curvilíneas o no lineales. Co-
+mo ejemplo, considere los ingresos anuales en millones de dólares para las ventas de un me-
+dicamento contra el colesterol en los primeros 10 años. La tabla 18.16 muestra la serie de 
+tiempo y la ﬁ gura 18.13 la gráﬁ ca correspondiente. Por ejemplo, los ingresos del año 1 fueron 
+de $23.1 millones; los del año 2 de $21.3 millones, y así sucesivamente. La gráﬁ ca de serie de 
+tiempo indica una tendencia general creciente o a la alza. Pero a diferencia de la serie de tiempo 
+de las ventas de bicicletas, la tendencia lineal no parece ser apropiada. En cambio, parece reque-
+rirse una función curvilínea para modelar la tendencia a largo plazo.
+Ecuación de tendencia cuadrática Una variedad de funciones no lineales puede utilizar-
+se para obtener una estimación de la tendencia de la serie de tiempo del colesterol. Por ejemplo, 
+considere la siguiente ecuación de tendencia cuadrática:
+ 
+Tt  b0  b1t  b2t2 
+(18.10)
+Para la serie de tiempo del colesterol, t  1 corresponde al año 1, t  2 corresponde al año 2, 
+y así s
+
+[Bloque seleccionado #852 | relevancia=29]
+Pagina 851
+ 
+18.4  Proyección de la tendencia 
+817
+Ejercicios
+Métodos
+17. 
+Considere los datos siguientes de serie de tiempo.
+t 
+1 
+2 
+3 
+4 
+5 
+6 
+7
+Yt 
+82 
+60 
+44 
+35 
+30 
+29 
+35
+t 
+1 
+2 
+3 
+4 
+5
+Yt 
+6 
+11 
+9 
+14 
+15
+t 
+1 
+2 
+3 
+4 
+5 
+6 
+7
+Yt 
+120 
+110 
+100 
+96 
+94 
+92 
+88
+NOTAS Y COMENTARIOS
+La regresión de tendencia lineal se basa en determi-
+nar la ecuación de regresión estimada que minimiza 
+la suma de los errores de pronóstico cuadrados y, por 
+consiguiente, del CME. Por tanto, se esperaría que la 
+regresión de tendencia lineal sea mejor que el suavi-
+zamiento exponencial lineal de Holt en términos del 
+CME. Por ejemplo, para la serie de tiempo de las ventas 
+de bicicletas, el valor del CME al utilizar la regresión 
+lineal es 3.07, comparado con el valor de 3.97 que 
+utiliza el suavizamiento exponencial lineal de Holt. 
+La regresión de tendencia lineal también proporcio-
+na un pronóstico más exacto con la medida EAM de 
+exactitud del pronóstico. Para la serie de tiempo de las 
+ventas de bicicletas, la regresión de tendencia lineal 
+resulta con un valor de EAM de 1.32 en comparación 
+con un valor de 1.67 según el método lineal de Holt. 
+Sin embargo, al basarse en el EPAM, el suavizamiento 
+exponencial lineal de Holt (EPAM  5.07%) es me-
+jor que la regresión de tendencia lineal (6.42%). Por 
+tanto, para la serie de tiempo de ventas de bicicletas, 
+decidir cuáles son los métodos con los que se obtie-
+nen pronósticos más exactos depende de qué medida 
+de la exactitud del pronóstico se utilice.
+a) Construya una gráfica de series de tiempo. ¿Qué tipo de patrón existe en los datos?
+b) Desarrolle la ecuación de tendencia lineal para esta serie de tiempo.
+c) 
+¿Cuál es el pronóstico para t  6?
+18. 
+Consulte la serie de tiempo del ejercicio 17. Utilice el método de suavizamiento lineal expo-
+nencial de Holt con α  0.3 y   0.5 y obtenga un pronóstico para t  6.
+19. 
+Considere la siguiente serie de tiempo.
+a) Construya una gráfica de series de tiempo. ¿Qué tipo de patrón existe en los datos?
+b) Desarrolle la ecuación de tendencia lineal para esta serie de tiempo.
+c) 
+¿Cuál es el pronóstico para t  8?
+20. 
+Considere la siguiente serie de tiempo. 
+a) Construya una gráfica de series de tiempo. ¿Qué tipo de patrón existe en los datos?
+b) Utilice Minitab o Excel para desarrollar la ecuación de tendencia cuadrática para la serie 
+de tiempo.
+c) 
+¿Cuál es el pronóstico para t  8?
+Aplicaciones
+21. 
+Debido a los altos costos de inscripción en las universidades estatales y privadas, las matrículas 
+en los colegios de educación profesional técnica (community colleg
+
+[Bloque seleccionado #865 | relevancia=33]
+Pagina 864
+830 
+Capítulo 18  Análisis de series de tiempo y elaboración de pronósticos
+donde
+Tendenciat  valor de la tendencia en el periodo t
+Estacionalt  valor estacional en el periodo t
+Irregulart  valor irregular en el periodo t
+En el modelo aditivo, los valores de los tres componentes simplemente se suman para obtener 
+el valor real de las series de tiempo Yt. El componente irregular o de error toma en cuenta la 
+variabilidad de la serie de tiempo que no puede ser explicada por los componentes de tendencia 
+y estacional.
+Un modelo aditivo es apropiado en situaciones en las que las ﬂ uctuaciones estacionales no 
+dependen del nivel de la serie de tiempo. El modelo de regresión que incorpora efectos esta-
+cionales y de tendencia en la sección 18.5 es un modelo aditivo. Éste es apropiado si las ﬂ uc-
+tuaciones estacionales en el periodo anterior son casi del mismo tamaño que las ﬂ uctuaciones 
+estacionales en periodos posteriores. Sin embargo, si las ﬂ uctuaciones estacionales cambian en 
+el tiempo y son cada vez mayores a medida que aumenta el volumen de ventas debido a una 
+tendencia lineal a largo plazo, entonces se debe utilizar el modelo multiplicativo. Muchas series 
+de tiempo para las empresas y para la economía siguen este patrón.
+Un modelo de descomposición multiplicativa toma la siguiente forma:
+ 
+Yt  Tendenciat  Estacionalt  Irregulart 
+(18.14)
+donde
+Tendenciat  valor de la tendencia en el periodo t
+Estacionalt  índice estacional en el periodo t
+Irregulart  índice irregular en el periodo t
+En este modelo los componentes de tendencia, estacional e irregular se multiplican para dar el 
+valor de la serie de tiempo. La tendencia se mide en las unidades de producto de la serie que se 
+pronostica. Sin embargo, los componentes estacional e irregular se miden en términos relativos, 
+con valores superiores a 1.00 indicando los efectos por arriba de la tendencia y con valores 
+menores a 1.00 indicando los efectos por debajo de la tendencia.
+Debido a que este es el método más utilizado en la práctica, nuestro análisis de descom-
+posición de las series de tiempo se limitará a mostrar cómo se desarrollan las estimaciones de 
+los componentes de tendencia y estacional de un modelo multiplicativo. A modo de ejemplo, 
+se trabajará con la serie de tiempo de las ventas trimestrales de televisores presentada en la sec-
+ción 18.5; los datos de las ventas trimestrales se muestran en la tabla 18.19 y la gráﬁ ca corres-
+pondiente de la serie de tiempo se presenta en la ﬁ gura 18.18. Después de demostrar cómo se 
+descompone una serie de tiempo con el modelo 
+
+[Bloque seleccionado #866 | relevancia=28]
+Pagina 865
+ 
+18.6  Descomposición de series de tiempo 
+831
+Observe que el cálculo del promedio móvil de los primeros cuatro trimestres da el promedio 
+trimestral de las ventas durante el año 1 de la serie de tiempo. Para continuar con este cálculo se 
+agrega el valor 5.8 correspondiente al primer trimestre del año 2 y se elimina el 4.8 del primer 
+trimestre del año 1. Por tanto, el segundo promedio móvil es
+Segundo promedio móvil  4.1  6.0  6.5  5.8
+4
+  22.4
+4  5.60
+De manera similar, el cálculo del tercer promedio móvil es (6.0  6.5  5.8  5.2)/4  5.875.
+Antes de continuar con el cálculo de los promedios móviles de toda la serie de tiempo, 
+regrese al primero que resultó en un valor de 5.35. Éste es el promedio trimestral del volumen 
+de ventas para el año 1. Al retroceder en su cálculo, parece razonable asociar el valor 5.35 con 
+el “central” del grupo del promedio móvil. Sin embargo, observe que como en cada prome-
+dio móvil intervienen cuatro trimestres, no hay trimestre central. El valor 5.35 corresponde en 
+realidad al periodo 2.5, la segunda mitad del trimestre 2 y la primera mitad del trimestre 3. De 
+manera similar, al pasar al valor del siguiente promedio móvil, que es 5.60, el trimestre central 
+corresponderá al periodo 3.5, la última mitad del trimestre 3 y la primera mitad del 4.
+Los dos valores del promedio móvil que se calculan no corresponden directamente a los 
+trimestres originales de la serie de tiempo. Esta diﬁ cultad se resuelve calculando el promedio 
+de los dos promedios móviles. Ya que el centro del primero es el periodo 2.5 (la mitad de un 
+periodo o trimestre más temprano) y el centro del segundo es el periodo 3.5 (la mitad del perio-
+do o trimestre más tarde), el promedio de los dos promedios móviles se centra en el trimestre 3, 
+exactamente donde debe estar. Este promedio se conoce como promedio móvil centrado, y para 
+el periodo 3 es (5.35  5.60)/2  5.475, mientras que para el periodo 4 es (5.60  5.875)/2  
+5.738. La tabla 18.21 muestra un resumen completo de los cálculos del promedio móvil y del 
+promedio móvil centrado para los datos de las ventas de televisores.
+¿Qué información se obtiene de los promedios móviles centrados de la tabla 18.21 de esta 
+serie de tiempo? La ﬁ gura 18.20 muestra una gráﬁ ca de los valores reales de la serie de tiempo 
+y de los valores de los promedios móviles centrados. Observe sobre todo cómo estos últimos tien-
+den a “suavizar” tanto las ﬂ uctuaciones estacionales como las irregulares de la serie de tiempo. 
+Los promedios móviles centrados representan la tendencia en los datos y 
+
+[Bloque seleccionado #869 | relevancia=41]
+Pagina 868
+834 
+Capítulo 18  Análisis de series de tiempo y elaboración de pronósticos
+Algunas veces es necesario un último ajuste para obtener los índices estacionales. Debido 
+a que el modelo multiplicativo requiere que el índice estacional promedio sea igual a 1.00, la 
+suma de los cuatro índices de la tabla 18.23 debe ser igual a 4.00. En otras palabras, los efectos 
+estacionales incluso deben nivelarse a lo largo del año. En el ejemplo visto aquí, el promedio 
+de los índices estacionales es igual a 1.00, y por tanto no es necesario ningún tipo de ajuste. 
+En otros casos puede requerirse un ligero ajuste. Para realizarlo, se multiplica cada índice es-
+tacional por el número de estaciones, dividido entre la suma de los índices estacionales sin 
+ajustar. Por ejemplo, cuando se tienen datos trimestrales se multiplica cada índice estacional por 
+4/(suma de los índices estacionales no ajustados). En algunos ejercicios se requerirá hacer este 
+ajuste para obtener el índice estacional adecuado.
+Desestacionalización de una serie de tiempo
+Una serie de tiempo a la que se le han eliminado los efectos estacionales se conoce como serie 
+de tiempo desestacionalizada, y al proceso de uso de los índices estacionales para eliminar 
+los efectos estacionales de una serie de tiempo se le conoce como desestacionalizar la serie 
+de tiempo. Al utilizar un modelo de descomposición multiplicativa se desestacionaliza una se-
+rie de tiempo dividiendo cada observación entre el índice estacional correspondiente. El mo-
+delo de descomposición multiplicativa es
+Yt  Tendenciat  Estacionalt  Irregulart
+Así, cuando se divide cada una de las observaciones de la serie de tiempo (Yt) entre su índice 
+estacional correspondiente, los datos resultantes muestran únicamente la tendencia y la variabi-
+lidad aleatoria (el componente irregular). La serie de tiempo desestacionalizada para las ventas 
+de televisores se resume en la tabla 18.24. Una gráﬁ ca de la serie de tiempo desestacionalizada 
+se muestra en la ﬁ gura 18.21.
+Uso de una serie de tiempo desestacionalizada 
+para identificar tendencias
+La gráﬁ ca de la serie de tiempo desestacionalizada para las ventas de televisores que se muestra 
+en la ﬁ gura 18.21 parece tener una tendencia lineal ascendente. Para identiﬁ car esta tendencia, 
+se ajustará una ecuación de tendencia lineal para la serie de tiempo desestacionalizada utilizan-
+do el mismo método que se muestra en la sección 18.4. La única diferencia estriba en que se 
+ajustará la línea de tendencia a los datos desestacionalizados en lugar de a los datos originales.
+Recuerde que
+
+[Bloque seleccionado #875 | relevancia=58]
+Pagina 874
+840 
+Capítulo 18  Análisis de series de tiempo y elaboración de pronósticos
+estacional. Los métodos de elaboración de pronósticos estudiados se basan en que estos patro-
+nes están presentes en la serie de tiempo.
+Se mostró cómo se utilizan los promedios móviles y el suavizamiento exponencial para 
+desarrollar un pronóstico de una serie de tiempo con un patrón horizontal. El método de prome-
+dios móviles consiste en calcular el promedio de los valores de datos pasados, y después usar 
+ese promedio como pronóstico para el siguiente periodo. En el método de suavizamiento expo-
+nencial se usa un promedio ponderado de los valores pasados de la serie de tiempo para calcular 
+un pronóstico. Estos métodos también se adaptan bien cuando un patrón horizontal cambia a un 
+nivel diferente y se reanuda un patrón horizontal.
+Un factor importante para determinar qué método de elaboración de pronósticos utilizar 
+involucra la exactitud del método. Se estudiaron tres medidas de exactitud de los pronósticos: 
+el error absoluto medio (EAM), el cuadrado medio debido al error (CME), y el error porcentual 
+absoluto medio (EPAM). Cada una de estas medidas está diseñada para determinar qué tan bien 
+un método de elaboración de pronósticos particular es capaz de reproducir los datos disponibles 
+de la serie de tiempo. Al seleccionar un método que tiene la mejor exactitud de los datos ya 
+conocidos, se espera que aumente la probabilidad de obtener mejores pronósticos para periodos 
+futuros.
+Para una serie de tiempo que sólo tiene tendencia lineal a largo plazo, se demostró que pue-
+de utilizarse la regresión simple de la serie de tiempo para hacer proyecciones de su tendencia. 
+También se estudió cómo una extensión del suavizamiento exponencial simple, conocido como 
+suavizamiento exponencial lineal de Holt, se utiliza para pronosticar una serie de tiempo con 
+tendencia lineal a largo plazo. Para una serie de tiempo con una tendencia curvilínea o no lineal, 
+se demostró cómo la regresión múltiple permite ajustar los datos a una ecuación de tendencia 
+cuadrática o a una ecuación de tendencia exponencial.
+Para una serie de tiempo con un componente estacional, se demostró cómo utilizar las va-
+riables ﬁ cticias en un modelo de regresión múltiple a efecto de desarrollar una ecuación de re-
+gresión estimada con efectos estacionales. Luego se amplió el método de regresión para incluir 
+situaciones en las que la serie de tiempo contiene tanto el efecto estacional como el efecto de ten-
+dencia lineal, y se mostró cómo combinar el método de la variable ﬁ cticia para el manejo d
+
+[Bloque seleccionado #876 | relevancia=48]
+Pagina 875
+ 
+Fórmulas clave 
+841
+Modelo aditivo En este modelo, el valor real de una serie de tiempo en el periodo t se obtiene 
+al sumar los valores de los componentes de tendencia, estacional e irregular.
+Modelo multiplicativo En este modelo, el valor real de una serie de tiempo en el periodo t se 
+obtiene al multiplicar los valores de los componentes de tendencia, estacional y el componente 
+irregular.
+Patrón cíclico Este patrón se presenta si la gráﬁ ca de una serie de tiempo muestra alternati-
+vamente una secuencia de puntos por debajo y por arriba de una línea de tendencia que tiene 
+una duración de más de un año.
+Patrón de tendencia Existe si la gráﬁ ca de la serie de tiempo presenta cambios o movimien-
+tos graduales hacia valores relativamente más altos o más bajos durante un largo periodo.
+Patrón estacional Es aquel patrón que existe si la gráﬁ ca de la serie de tiempo presenta un 
+patrón de repetición en periodos sucesivos. Éstos se presentan a menudo en intervalos de un 
+año, que es de donde proviene el nombre de patrón estacional.
+Patrón horizontal Se obtiene cuando los datos ﬂ uctúan alrededor de una media constante.
+Promedios móviles Método de elaboración de pronósticos que utiliza el promedio de los 
+valores de los k datos más recientes para pronosticar una serie de tiempo del periodo siguiente.
+Promedios móviles ponderados Método de elaboración de pronósticos que consiste en se-
+leccionar un peso diferente para los valores de los k datos más recientes de la serie de tiempo y 
+luego calcular el promedio ponderado de los valores. La suma de los pesos debe ser 1.
+Serie de tiempo Secuencia de observaciones sobre una variable medida en puntos sucesivos 
+en el tiempo o en periodos sucesivos.
+Serie de tiempo desestacionalizada Serie de tiempo de la cual ha sido eliminado el efecto 
+estacional al dividir cada observación de la serie de tiempo original entre el índice estacional 
+correspondiente.
+Serie de tiempo estacionaria Serie de tiempo cuyas propiedades estadísticas son indepen-
+dientes del tiempo. Para una serie de tiempo estacionaria, el proceso de generación de datos 
+tiene una media constante y la variabilidad de la serie de tiempo es constante en el tiempo.
+Suavizamiento exponencial Método de elaboración de pronósticos que utiliza un promedio 
+ponderado de los valores pasados de la serie de tiempo como un pronóstico; es un caso especial 
+del método de promedios móviles ponderados en el que se selecciona un solo peso, el de la 
+observación más reciente.
+Suavizamiento exponencial lineal Extensión del suavizamiento exponencial simple que ut
+
+[Bloque seleccionado #881 | relevancia=29]
+Pagina 880
+846 
+Capítulo 18  Análisis de series de tiempo y elaboración de pronósticos
+a) Utilice las siguientes variables ficticias para obtener una ecuación de regresión estimada 
+en la que se tome en cuenta cualquier estación del año y los efectos de tendencia lineal en 
+los datos: Qtr1  1 si es el trimestre 1, 0 en caso contrario; Qtr2  1 si es el trimestre 2, 
+0 en caso contrario; Qtr3  1 si es el trimestre 3, 0 en caso contrario.
+b) Calcule los pronósticos trimestrales para el próximo año.
+54. 
+Consulte el problema de Hudson Marine del ejercicio 53.
+a) Calcule los valores del promedio móvil centrado de esta serie de tiempo.
+b) Trace una gráfica de la serie de tiempo que presente tanto el promedio móvil centrado 
+como la serie de tiempo original. Exponga su opinión acerca de las diferencias entre la 
+gráfica de la serie de tiempo original y la serie de tiempo con promedio móvil centrado.
+c) 
+Calcule los índices estacionales para los cuatro trimestres.
+d) ¿Cuándo experimenta Hudson Marine el mayor efecto estacional? ¿Parece razonable este 
+resultado? Explique.
+55. 
+Continúe con los datos de Hudson Marine del ejercicio 53.
+a) Desestacionalice los datos y utilice la serie de tiempo desestacionalizada para identificar 
+la tendencia.
+b) Utilice los resultados del inciso a) y obtenga un pronóstico trimestral para el año siguiente 
+con base en la tendencia.
+c) 
+Utilice los índices estacionales obtenidos en el ejercicio 54 para ajustar los pronósticos 
+obtenidos en el inciso b) tomando en cuenta el efecto estacional.
+Caso a resolver 1 Pronóstico de ventas de alimentos y bebidas
+El Vintage Restaurant, en la isla Captiva, cerca de Fort Myers, Florida, es operado por su pro-
+pietaria Karen Payne, y acaba de cumplir tres años de funcionamiento. Desde que inauguró su 
+negocio, Karen ha tratado de establecer una reputación para Vintage como un restaurante de alta 
+calidad que se especializa en mariscos frescos. Gracias a sus esfuerzos y los de su personal, el 
+restaurante se ha convertido en uno de los mejores y con mayor crecimiento en la isla.
+Para mejorar la planiﬁ cación del crecimiento del restaurante en el futuro, Karen tiene que 
+desarrollar un sistema que le permita pronosticar las ventas mensuales de alimentos y bebidas 
+con hasta un año de anticipación. La tabla 18.26 muestra el valor de las ventas de alimentos y 
+bebidas (en miles de $) para cada mes (Month) de los tres primeros años de funcionamiento: 
+primer año (First Year), segundo año (Second Year) y tercer año (Third Year).
+Informe gerencial
+Elabore un análisis de los datos de las ventas de Vi

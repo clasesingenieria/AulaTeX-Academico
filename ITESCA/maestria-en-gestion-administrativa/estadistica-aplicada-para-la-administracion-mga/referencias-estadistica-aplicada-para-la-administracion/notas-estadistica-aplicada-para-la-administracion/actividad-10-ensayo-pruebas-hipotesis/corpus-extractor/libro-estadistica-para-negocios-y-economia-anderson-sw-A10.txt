@@ -1,0 +1,544 @@
+Fuente bibliográfica: Estadística para negocios y economía - Anderson, Sweeney y Williams. 11.ª edición.pdf
+Actividad: 10 (4.1 Ensayo 2% Tarea)
+Palabras clave: hipótesis nula, hipótesis alternativa, error tipo I, error tipo II, nivel de significancia, p-valor, potencia, dos muestras
+
+[Bloque seleccionado #385 | relevancia=32]
+Pagina 384
+350 
+Capítulo 9  Pruebas de hipótesis
+la hipótesis nula y se denota como Ha. En el procedimiento de pruebas de hipótesis se usan 
+datos de una muestra para probar dos aﬁ rmaciones contrarias indicadas por H0 y Ha.
+En este capítulo se describe el modo de realizar pruebas de hipótesis acerca de una media 
+poblacional y una proporción poblacional. Para empezar, se facilitan ejemplos que ilustran los 
+métodos para desarrollar las hipótesis nula y alternativa.
+9.1 
+Formulación de las hipótesis nula y alternativa
+No siempre es obvio cómo formular las hipótesis nula y alternativa. Se debe tener cuidado en 
+estructurarlas de manera apropiada para que la conclusión de la prueba de hipótesis proporcione 
+la información que el investigador o la persona que toma las decisiones desea. El contexto de la 
+situación es muy importante para determinar cómo deben establecerse las hipótesis. Todas las 
+aplicaciones de prueba de hipótesis involucran la recolección de una muestra y el uso de resul-
+tados muestrales para proporcionar evidencias y emitir conclusiones. Algunas buenas preguntas 
+a considerar al formular las hipótesis nula y alternativa son: ¿cuál es el propósito de recolectar 
+la muestra? ¿Qué conclusiones se espera formular?
+En la introducción del capítulo se establece que la hipótesis nula H0 es un supuesto ten-
+tativo acerca de un parámetro poblacional tal como una media poblacional o una proporción 
+poblacional. La hipótesis alternativa Ha es una declaración que contradice lo que establece la 
+hipótesis nula. En algunas situaciones es más fácil identiﬁ car la hipótesis alternativa prime-
+ro y luego desarrollar la nula. En otras es más fácil identiﬁ car la hipótesis nula primero y luego 
+desarrollar la alternativa. En los siguientes ejemplos se ilustrarán esas situaciones.
+La hipótesis alternativa como hipótesis 
+de investigación
+Numerosas aplicaciones de prueba de hipótesis involucran un intento de obtener evidencia en 
+apoyo de una hipótesis de investigación. En tales situaciones, con frecuencia es mejor empezar 
+con la hipótesis alternativa y convertirla en la conclusión que el investigador espera sustentar. 
+Considere un modelo de automóvil determinado que actualmente alcanza un rendimiento de 
+gasolina de 24 millas por galón en manejo urbano. Un grupo de investigación de productos 
+desarrolló un nuevo sistema de inyección de combustible diseñado para dar un mejor rendi-
+miento en millas por galón de gasolina. El grupo realizará pruebas controladas con el nuevo 
+sistema de inyección de combustible en busca de un sustento estadístico para conclui
+
+[Bloque seleccionado #389 | relevancia=30]
+Pagina 388
+354 
+Capítulo 9  Pruebas de hipótesis
+ 
+Condición poblacional
+ 
+H0 verdadera 
+Ha verdadera
+ 
+ 
+H0 es aceptada 
+Conclusión 
+Error
+ 
+ 
+ 
+correcta 
+tipo II
+ 
+Conclusión
+ 
+ 
+H0 es rechazada 
+Error 
+Conclusión
+ 
+ 
+ 
+tipo I 
+correcta
+caso de que Ha sea verdadera. Desafortunadamente, las conclusiones correctas no siempre son 
+posibles. Como la prueba de hipótesis se basa en una información muestral, debe considerarse 
+que existe la posibilidad de error. La tabla 9.1 ilustra las dos clases de errores comunes en una 
+prueba de hipótesis.
+En la primera ﬁ la se ilustra qué sucede cuando H0 es aceptada. Si H0 es verdadera, la con-
+clusión es correcta. Pero si Ha es verdadera, se comete un error tipo II; es decir, H0 es aceptada 
+cuando es falsa. En la segunda ﬁ la de la tabla 9.1 se muestra qué sucede si la conclusión es 
+rechazar H0. Si H0 es verdadera, se comete un error tipo I; es decir, H0 es rechazada cuando 
+es verdadera. Pero si Ha es verdadera, es correcto rechazar H0.
+Recuerde la prueba de hipótesis analizada en la sección 9.1 en la cual un grupo de inves-
+tigación desarrolló un nuevo sistema de inyección de combustible con objeto de aumentar el 
+rendimiento del hidrocarburo en un determinado modelo de automóvil. Como con el sistema 
+actual el rendimiento promedio es 24 millas por galón, la prueba de hipótesis se formuló como 
+sigue.
+H0: μ  24
+Ha: μ  24
+La hipótesis alternativa, Ha: μ  24, indica que los investigadores buscan evidencias muestra-
+les que apoyen la conclusión de que con el nuevo sistema de inyección de combustible la media 
+poblacional del rendimiento es mayor que 24.
+En esta aplicación, el error tipo I de rechazar H0 cuando es verdadera implica que los in-
+vestigadores aﬁ rmen que el nuevo sistema mejora el rendimiento de millas por galón (μ  24) 
+cuando en realidad no es nada mejor que el actual. En cambio, el error tipo II de aceptar H0 cuan-
+do es falsa corresponde a la conclusión de los investigadores de que el nuevo sistema no es 
+mejor que el actual (μ  24) cuando en realidad sí mejora el rendimiento de millas por galón.
+En la prueba de hipótesis del rendimiento de millas por galón, la hipótesis nula es H0: 
+μ  24. Admita que la hipótesis nula es verdadera como una igualdad; es decir μ  24. A la 
+probabilidad de cometer un error tipo I cuando la hipótesis nula es verdadera como igualdad 
+se le conoce como nivel de significancia. Por tanto, en la prueba de hipótesis del rendimiento 
+de combustible, el nivel de signiﬁ cancia es la probabilidad de rechazar H0: μ  24 cuando 
+μ  24. Dada la importancia de este concepto, 
+
+[Bloque seleccionado #390 | relevancia=40]
+Pagina 389
+ 
+9.2  Errores tipo I y tipo II 
+355
+Ejercicios
+5. 
+Nielsen informó que los hombres jóvenes estadounidenses ven diariamente 56.2 minutos de 
+televisión en las horas de mayor audiencia (The Wall Street Journal Europe, 18 de noviem-
+bre de 2003). Un investigador cree que en Alemania los jóvenes ven más tiempo la televisión 
+en las horas de mayor audiencia. Este investigador toma una muestra de hombres jóvenes ale-
+manes y registra el tiempo que ven televisión en un día. Los resultados muestrales se usan para 
+probar las siguientes hipótesis nula y alternativa.
+H0: μ  56.2
+Ha: μ  56.2
+a) ¿Cuál es el error tipo I en esta situación? ¿Qué consecuencia tiene cometerlo?
+b) ¿Cuál es el error tipo II en esta situación? ¿Qué consecuencia tiene cometerlo?
+6. 
+En la etiqueta de una botella de jugo de naranja de 3 cuartos de galón se afirma que el jugo con-
+tiene en promedio 1 gramo o menos de grasa. Responda las preguntas siguientes relacionadas 
+con una prueba de hipótesis para probar lo que se asegura en la etiqueta.
+a) Desarrolle las hipótesis nula y alternativa adecuadas.
+NOTAS Y COMENTARIOS
+Walter Williams, columnista y profesor de economía 
+de la Universidad George Mason, indica que existe 
+siempre la posibilidad de cometer un error tipo I o 
+un error tipo II al tomar cualquier decisión (The Cin-
+cinnati Enquirer, 14 de agosto de 2005). Hace notar 
+que la Food and Drug Administration (FDA) corre el 
+riesgo de cometer estos errores en sus procedimientos 
+para la aprobación de medicamentos. Cuando incurre 
+en un error tipo I, la FDA no aprueba un medicamen-
+to que es seguro y efectivo. Al cometer en un error 
+tipo II, aprueba un fármaco que presenta efectos se-
+cundarios imprevistos. Sin importar la decisión que 
+se tome, la probabilidad de cometer un error costoso 
+no se puede eliminar.
+AUTO evaluación
+Para denotar el nivel de signiﬁ cancia se usa la letra griega α (alfa), y los valores que suelen 
+utilizarse para α son 0.05 y 0.01.
+En la práctica, el responsable de la prueba de hipótesis especiﬁ ca el nivel de signiﬁ can-
+cia. Al elegir α controla la probabilidad de cometer un error tipo I. Si el costo de cometer este 
+error es alto, los valores pequeños de α son preferibles. Si el costo no es demasiado alto, en-
+tonces usa valores mayores para α. A las aplicaciones de la prueba de hipótesis en que sólo se 
+controla el error tipo I se les llama pruebas de signiﬁ cancia. Muchas aplicaciones de las prue-
+bas de hipótesis son de este tipo.
+Aunque en la mayoría de las aplicaciones de las pruebas de hipótesis se controla la pro-
+babilidad de cometer un 
+
+[Bloque seleccionado #417 | relevancia=32]
+Pagina 416
+382 
+Capítulo 9  Pruebas de hipótesis
+Se compara, entonces, el valor-p con una probabilidad controlada de cometer un error tipo I, α, 
+que se conoce como nivel de signiﬁ cancia para la prueba. Si el valor-p  α, se concluye “re-
+chazar H0”, y los resultados se declaran signiﬁ cantes; de otra manera, se concluye “no rechazar 
+H0”. Con una prueba de signiﬁ cancia se controla la probabilidad de cometer un error tipo I, pero 
+no uno tipo II. Por tanto, se recomienda la conclusión “no rechazar H0” más que “aceptar H0”, 
+po que esta última nos expone al riesgo de cometer un error tipo II de aceptar H0 cuando es falsa. 
+Con la conclusión de “no rechazar H0” la evidencia estadística se considera no concluyente y 
+es por lo general un indicador para postergar una decisión o una acción hasta que se pueda rea-
+lizar mayor investigación y pruebas.
+Pero si el propósito de una prueba de hipótesis es tomar cierta decisión cuando H0 es ver-
+dadera y una decisión diferente cuando Ha es verdadera, quien debe tomarla deseará, y en 
+muchos casos tendrá que actuar tanto en el caso en que la conclusión sea no rechazar H0 como 
+en el caso en que sea rechazar H0. Si se da esta situación, los expertos en estadística recomien-
+dan controlar la probabilidad de cometer un error tipo II. Con las probabilidades controladas 
+de cometer tanto un error tipo I como tipo II, la conclusión de la prueba de hipótesis es ya sea 
+aceptar H0 o rechazar H0. En el primer caso, se concluye que H0 es verdadera, mientras que 
+en el segundo, que Ha es verdadera. Así, se puede tomar una decisión y emprender una acción 
+apropiada cuando se llegó a una conclusión.
+Una buena ilustración de una prueba de hipótesis para tomar decisiones es el muestreo de 
+aceptación de lotes, un tema que se discutirá con más detalle en el capítulo 20. Por ejemplo, un 
+director de control de calidad tiene que decidir si acepta un pedido de baterías de un proveedor 
+o si lo rechaza por ser de mala calidad. Suponga que las especiﬁ caciones de diseño indican que 
+se requieren baterías con una vida útil promedio de por lo menos 120 horas. Para evaluar si 
+el pedido recibido satisface esta especiﬁ cación, se selecciona una muestra de 36 baterías y se 
+prueban. Con base en esta muestra, se deberá tomar la decisión de aceptar el pedido o devolver-
+lo al proveedor por no tener la calidad adecuada. Sea μ el número medio de horas de vida útil 
+que tienen las baterías del envío. Las hipótesis nula y alternativa para la media poblacional se 
+presentan a continuación.
+H0: μ  120
+Ha: μ  120
+Si H0 es rechazada, se concluye qu
+
+[Bloque seleccionado #419 | relevancia=41]
+Pagina 418
+384 
+Capítulo 9  Pruebas de hipótesis
+ 
+ 
+z  116.71  μ
+1236
+ 
+Probabilidad de 
+Potencia
+ 
+Valor de μ 
+ 
+un error tipo II () 
+(1  )
+ 
+112 
+2.36 
+0.0091 
+0.9909
+ 
+114 
+1.36 
+0.0869 
+0.9131
+ 
+115 
+0.86 
+0.1949 
+0.8051
+ 
+116.71 
+0.00 
+0.5000 
+0.5000
+ 
+117 
+0.15 
+0.5596 
+0.4404
+ 
+118 
+0.65 
+0.7422 
+0.2578
+ 
+119.999 
+1.645 
+0.9500 
+0.0500
+Estos cálculos se repiten con otros valores de μ menores de 120. Para cada valor de μ se 
+obtendrán diferentes probabilidades de cometer un error tipo II. Por ejemplo, suponga que en el 
+pedido de baterías la media de vida útil es μ  115 horas. Como H0 será aceptada siempre que 
+x  116.71, el valor z obtenido con μ  115 está dado por
+z  x  μ
+σn  116.71  115
+1236
+  0.86
+En la tabla de probabilidad normal estándar vemos que el área en la cola superior de la distri-
+bución normal estándar que corresponde a z  0.86 es 1.0000  0.8051  0.1949. Si la ver-
+dadera media es μ  115, la probabilidad de incurrir en un error tipo II es   0.1949.
+En la tabla 9.5 se muestran las probabilidades de cometer un error tipo II para varios valo-
+res de μ menores de 120. Observe que si μ aumenta y se acerca a 120, la probabilidad aumenta 
+hacia un límite superior de 0.95. Pero a medida que μ disminuye y se aleja de 120, la probabi-
+lidad de cometer el error disminuye. Este es el patrón que se debe esperar. Cuando la verdadera 
+media poblacional está cerca del valor de la hipótesis nula, μ  120, la probabilidad de come-
+ter un error tipo II es alta. Pero cuando la verdadera media poblacional está muy por debajo del 
+valor μ  120 de la hipótesis nula, la probabilidad que se menciona es baja.
+FIGURA 9.8  Probabilidad de un error tipo II cuando μ  112
+112
+116.71
+x
+2.36
+H0 aceptar
+x 
+12
+36
+ 2
+   0.0091
+σ
+x
+σ
+TABLA 9.5   Probabilidad de cometer un error tipo II en la prueba de hipótesis del muestreo 
+de aceptación de lotes
+Como se muestra en la 
+tabla 9.5, la probabilidad de 
+cometer un error tipo II 
+depende del valor de la 
+media poblacional μ. Si los 
+valores de μ son cercanos 
+a μ0, la probabilidad de 
+cometer un error tipo II 
+puede ser alta.
+
+[Bloque seleccionado #420 | relevancia=35]
+Pagina 419
+ 
+9.7  Cálculo de la probabilidad de los errores tipo II 
+385
+A la probabilidad de rechazar acertadamente H0 cuando es falsa se le llama potencia de la 
+prueba. Para cada valor especíﬁ co de μ la potencia es 1  ; es decir, la probabilidad de re-
+chazar acertadamente la hipótesis nula es 1 menos la probabilidad de cometer un error tipo II. 
+En la tabla 9.5 se listan también los valores de la potencia. Con base en estos valores, en la 
+ﬁ gura 9.9 se presentan gráﬁ camente las potencias correspondientes a cada valor μ. A este tipo 
+de gráﬁ cas se les conoce como curva de potencia. Observe que esta curva se extiende sobre 
+los valores de μ para los que la hipótesis nula es falsa. La altura en la curva de potencia para 
+cualquier valor de μ indica la probabilidad de rechazar acertadamente H0 cuando es falsa.4
+En resumen, para calcular la probabilidad de cometer un error tipo II en una prueba de 
+hipótesis para la media poblacional se puede seguir, paso a paso, el procedimiento siguiente.
+1.  Formular las hipótesis nula y alternativa.
+2.  Usar el nivel de signiﬁ cancia α y el método del valor crítico para determinar el valor 
+crítico y la regla de rechazo para la prueba.
+3.  Usar la regla de rechazo para encontrar el valor de la media muestral que corresponde 
+al valor crítico del estadístico de prueba.
+4.  Utilizar el resultado del paso 3 para determinar el valor de la media muestral que llevará 
+a la aceptación de H0. Este valor deﬁ ne la región de aceptación de la prueba.
+5.  Usar la distribución de muestreo de x para un valor de μ que satisfaga la hipótesis alter-
+nativa y la región de aceptación del paso 4 para calcular la probabilidad de que la media 
+muestral se encuentre en la región de aceptación. Ésta es la probabilidad de cometer un 
+error tipo II dado el valor de μ elegido.
+Ejercicios
+Métodos
+46. 
+Considere la prueba de hipótesis siguiente.
+H0: μ  10
+Ha: μ  10
+FIGURA 9.9  Curva de potencia para la prueba de hipótesis del muestreo de aceptación de lotes
+1.00
+0.80
+0.60
+0.40
+0.20
+Probabilidad de rechazar acertadamente H0
+112
+115
+118
+H0 falsa
+120
+μ
+4  Algunas veces, para proporcionar información acerca de la probabilidad de cometer un error tipo II, se usa otra gráfica 
+denominada curva característica de operación, la cual muestra la probabilidad de aceptar H0 y por tanto proporciona 
+ para los valores de μ en los que la hipótesis nula es falsa. Con esta gráfica se puede leer directamente la probabilidad 
+de cometer un error tipo II.
+AUTO evaluación
+
+[Bloque seleccionado #421 | relevancia=32]
+Pagina 420
+386 
+Capítulo 9  Pruebas de hipótesis
+ 
+El tamaño de la muestra es 120 y la desviación estándar poblacional es conocida con σ  5. 
+Use α  0.05.
+a) Si la media poblacional es 9, ¿cuál es la probabilidad de que la media muestral lleve a la 
+conclusión de no rechazar H0?
+b) ¿Qué tipo de error se comete si la verdadera media poblacional es 9 y se concluye que 
+H0: μ  10 es verdadera?
+c) 
+¿Cuál es la probabilidad de cometer un error tipo II si la verdadera media poblacional 
+es 8?
+47. 
+Considere la prueba de hipótesis siguiente.
+H0: μ  20
+Ha: μ  20
+ 
+Se toma una muestra de 200 elementos y la desviación estándar poblacional es σ  10. Uti-
+lice α  0.05. Calcule la probabilidad de cometer un error tipo II si la media poblacional es:
+a) μ  18.0
+b) μ  22.5
+c) 
+μ  21.0
+Aplicaciones
+48. 
+Fowle Marketing Research, Inc. basa la tarifa que cobra a sus clientes en el supuesto de que 
+una encuesta por teléfono se puede realizar en un promedio de 15 minutos o menos. Si se 
+requiere más tiempo en promedio, se cobra una cantidad adicional. Con una muestra de 35 en-
+cuestas, una desviación estándar poblacional de 4 minutos y 0.01 como nivel de significancia, 
+se usará la media muestral para probar la hipótesis nula H0: μ  15.
+a) ¿Cuál es su interpretación del error tipo II en este problema? ¿Qué impacto tiene en la 
+empresa?
+b) ¿Cuál es la probabilidad de cometer un error tipo II si la verdadera media de los tiempos 
+es μ  17 minutos?
+c) 
+¿Cuál es la probabilidad de cometerlo si la verdadera media de los tiempos es μ  18 
+minutos?
+d) Dibuje la forma general de la curva de potencia de esta prueba.
+49. 
+Un grupo de investigación del consumidor está interesado en probar la afirmación de un fa-
+bricante de automóviles de que un nuevo modelo económico recorrerá por lo menos 25 millas 
+por cada galón de gasolina (H0: μ  25).
+a) Con 0.02 como nivel de significancia y una muestra de 30 automóviles, ¿cuál es la regla 
+de rechazo basada en el valor de x en la prueba para determinar si debe rechazarse la afir-
+mación del fabricante? Suponga que σ es 3 millas por galón.
+b) ¿Cuál es la probabilidad de cometer un error tipo II si el verdadero rendimiento es 23 mi-
+llas por galón?
+c) 
+¿Cuál es la probabilidad de cometerlo si el verdadero rendimiento es 24 millas por galón?
+d) ¿Cuál es la probabilidad si el verdadero rendimiento es 25.5 millas por galón?
+50. 
+La revista Young Adult establece la hipótesis siguiente acerca de la edad de sus suscriptores.
+H0: μ  28
+Ha: μ  28
+a) En esta situación, ¿qué significa cometer un error tipo II?
+b) Se supone que la desviación
+
+[Bloque seleccionado #426 | relevancia=32]
+Pagina 425
+ 
+Resumen 
+391
+58. 
+La revista Young Adult plantea la hipótesis siguiente acerca de la edad de sus suscriptores.
+H0: μ  28
+Ha: μ  28
+ 
+Si el gerente que realiza la prueba admite una probabilidad de 0.15 de cometer un error tipo II 
+cuando la verdadera edad promedio es 29 años, ¿de qué tamaño debe tomarse la muestra? Su-
+ponga que σ  6 y que el nivel de significancia es 0.05.
+59. 
+En un estudio sobre el rendimiento de la gasolina en los automóviles, medido como millas por 
+galón, se probaron las hipótesis siguientes.
+Hipótesis 
+Conclusión
+H0: μ  25 mpg 
+Confirma lo que sostiene el fabricante
+Ha: μ  25 mpg 
+ Refuta lo que sostiene el fabricante; el rendimiento 
+ 
+es menor de lo afirmado
+ 
+Para σ  3 y un nivel de significancia de 0.02, ¿qué tamaño de muestra se recomienda si el 
+investigador desea tener 80% de probabilidad de detectar que μ es menor que 25 millas por 
+galón cuando en realidad es 24?
+Resumen
+Las pruebas de hipótesis constituyen un procedimiento estadístico que utiliza datos muestrales 
+para determinar si una aﬁ rmación acerca del valor de un parámetro poblacional debe o no re-
+chazarse. Como hipótesis se tienen dos aﬁ rmaciones opuestas acerca de un parámetro pobla-
+cional. A una se le llama hipótesis nula (H0) y a la otra hipótesis alternativa (Ha). En la sección 
+9.1 se proporcionaron los lineamientos para elaborar estas hipótesis en tres situaciones encon-
+tradas a menudo en la práctica.
+Si se tienen datos históricos o alguna otra información que proporcione una base para supo-
+ner que se conoce la desviación estándar poblacional, el procedimiento de prueba de hipótesis 
+para la media poblacional se sustenta en la distribución normal estándar. Si no se conoce σ, se 
+usa la desviación estándar muestral s para estimarlo, y el procedimiento de la prueba de hipóte-
+sis se basa en la distribución t. En ambos casos, la calidad de los resultados depende tanto de la 
+forma de la distribución de la población como del tamaño de la muestra. Si la población tiene 
+distribución normal, los dos procedimientos para la prueba de hipótesis son aplicables, aun con 
+tamaños de muestra pequeños. Si la población no está distribuida normalmente, se necesitan ta-
+maños de muestra mayores. En las secciones 9.3 y 9.4 se proporcionaron los lineamientos ge-
+nerales para determinar este tamaño. En el caso de pruebas de hipótesis para la proporción 
+poblacional, en el procedimiento de la prueba de hipótesis se usa un estadístico de prueba sus-
+tentado en la distribución normal estándar.
+En todos los casos el valor del estadístico de prueba se utiliza
+
+[Bloque seleccionado #427 | relevancia=33]
+Pagina 426
+392 
+Capítulo 9  Pruebas de hipótesis
+Glosario
+Curva de potencia Gráﬁ ca que da la probabilidad de rechazar H0 para cada uno de los posi-
+bles valores del parámetro poblacional que no satisfaga la hipótesis nula. La curva de potencia 
+proporciona las probabilidades de rechazar correctamente la hipótesis nula.
+Error tipo I Error de rechazar H0 cuando es verdadera.
+Error tipo II Error de aceptar H0 cuando es falsa.
+Estadístico de prueba Un estadístico cuyo valor ayuda a determinar si la hipótesis nula es 
+rechazada.
+Hipótesis alternativa Hipótesis que se concluye como verdadera cuando la hipótesis nula es 
+rechazada.
+Hipótesis nula Hipótesis que se supone tentativamente verdadera en una prueba de hipótesis.
+Nivel de significancia Probabilidad de cometer un error tipo I cuando la hipótesis nula es 
+verdadera como igualdad.
+Potencia Probabilidad de rechazar adecuadamente H0 cuando ésta es falsa.
+Prueba de dos colas Prueba de hipótesis en la que la hipótesis nula es rechazada debido a un 
+valor del estadístico de prueba que se encuentra en cualquiera de las dos colas de la distribución 
+muestral.
+Prueba de una cola Prueba de hipótesis en la que la hipótesis nula es rechazada para valores 
+del estadístico de prueba en una de las colas de la distribución de muestreo.
+Valor crítico Valor que se compara con el estadístico de prueba para determinar si H0 es 
+rechazada.
+Valor-p Probabilidad que proporciona una medida de la evidencia, dada por la muestra, con-
+tra la hipótesis nula. Entre menor sea un valor-p, mayor será la evidencia contra H0. En una 
+prueba de cola inferior, el valor-p es la probabilidad de obtener un valor para el estadístico 
+de prueba tan pequeño o menor que el aportado por la muestra. En una prueba de cola superior, 
+el valor-p es la probabilidad de obtener un valor para el estadístico de prueba tan grande o 
+mayor que el proporcionado por la muestra. En una prueba de dos colas, el valor-p es la pro-
+babilidad de obtener un valor para el estadístico de prueba tan poco probable, o aun menos 
+probable, que el aportado por la muestra.
+Fórmulas clave
+Estadístico de prueba en las pruebas de hipótesis para la media poblacional:
+σ conocida
+ 
+z  x  μ0
+σn 
+(9.1)
+Estadístico de prueba en las pruebas de hipótesis para la media poblacional: 
+σ desconocida
+ 
+t  x  μ0
+sn 
+(9.2)
+Estadístico de prueba en las pruebas de hipótesis para la proporción poblacional
+ 
+z  
+p0(1  p0)
+n
+p  p0
+ 
+(9.4)
+Tamaño de la muestra en una prueba de hipótesis de una cola para la media poblacional
+ 
+n  (zα  z)2σ2
+(μ0  μa)2 
+(9.7)
+En una prueba de dos colas
+
+[Bloque seleccionado #562 | relevancia=36]
+Pagina 561
+ 
+13.3  Procedimientos de comparación múltiple 
+527
+Si el intervalo de conﬁ anza hallado con la expresión (13.18) incluye el valor cero, no se puede 
+rechazar la hipótesis nula de que las dos medias poblacionales sean iguales. Pero si dicho inter-
+valo no incluye al valor cero, podemos concluir que sí hay diferencia entre las medias poblacio-
+nales. En el caso del experimento de Chemitech, recuerde que la LSD  7.34 (que corresponde 
+a t0.025  2.179). Por tanto, una estimación de la diferencia entre las medias poblacionales 1 y 
+2 empleando un intervalo de 95% de conﬁ anza es 62  66  7.34  4  7.34  11.34 
+a 3.34; como este intervalo incluye el cero, no se puede rechazar la hipótesis de que las dos 
+medias sean iguales.
+Tasas de error tipo I
+El estudio del procedimiento de la LSD de Fisher se inició con la premisa de que el análisis de 
+varianza proporcionaba evidencias estadísticas para rechazar la hipótesis nula de la igualdad en-
+tre medias poblacionales. Se mostró que en tales casos se puede emplear el procedimiento de la 
+LSD de Fisher para determinar dónde están las diferencias. Técnicamente, a este procedimiento 
+se le conoce como prueba restringida o protegida de la LSD debido a que sólo se usa si prime-
+ro se ha encontrado un valor F signiﬁ cativo al aplicar el análisis de varianza. Para ver por qué 
+es importante esta distinción en las pruebas de comparación múltiple es necesario explicar la 
+diferencia entre tasa de error tipo I por comparación y tasa de error tipo I por experimentación.
+En el experimento de Chemitech se usa el procedimiento de la LSD de Fisher para efectuar 
+tres pares de comparaciones.
+ 
+Prueba 1 
+Prueba 2 
+Prueba 3
+H0: μ1  μ2 
+ H0: μ1  μ3 
+ H0: μ2  μ3
+Ha: μ1  μ2  Ha: μ1  μ3  Ha: μ2  μ3
+En cada caso, el nivel de signiﬁ cancia empleado es α  0.05. Por tanto, en cada prueba, si 
+la hipótesis nula es verdadera, la probabilidad de que se cometa un error tipo I es α  0.05; 
+entonces, la probabilidad de no cometer un error tipo I es 1  0.05  0.95. En el estudio de 
+los procedimientos de comparación múltiple, a esta probabilidad de cometer un error tipo I 
+(α  0.05) se le conoce como tasa de error tipo I por comparación, la cual indica el nivel de 
+signiﬁ cancia que corresponde a una sola comparación por pares.
+Considere ahora una cuestión ligeramente diferente. ¿Cuál es la probabilidad de que al 
+hacer tres comparaciones por pares se cometa un error tipo I en por lo menos una de las tres 
+pruebas? Para responder esta pregunta, observe que la probabilidad de que no se cometa un 
+error tipo I en ninguna 

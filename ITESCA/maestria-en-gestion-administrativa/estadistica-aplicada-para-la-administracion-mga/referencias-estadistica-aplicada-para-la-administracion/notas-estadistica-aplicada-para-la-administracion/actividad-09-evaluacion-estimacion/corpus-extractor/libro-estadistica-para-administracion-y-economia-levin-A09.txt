@@ -1,0 +1,564 @@
+Fuente bibliográfica: Estadística para administración y economía - Levin y Rubin. 7.ª edición revisada.pdf
+Actividad: 9 (3.3 Evaluación 5% Cuestionario)
+Palabras clave: estimación puntual, intervalo de confianza, valor crítico, t de Student, ji-cuadrada, margen de error
+
+[Bloque seleccionado #294 | relevancia=14]
+Pagina 293
+En este capítulo introducimos métodos que nos permiten estimar con precisión razonable la
+proporción de la población (la fracción de la población que posee una característica dada) y la me-
+dia de la población. Calcular la proporción exacta o la media exacta sería una meta imposible. Pe-
+ro, a pesar de ello, seremos capaces de hacer una estimación, establecer una afirmación respecto
+al error que tal vez acompañará a esta estimación, y poner en marcha algunos controles para evi-
+tar dicho error en la medida de lo posible. Como tomadores de decisiones, nos veremos forzados,
+en ocasiones, a confiar en nuestros presentimientos. Sin embargo, en otras situaciones, en las que
+dispongamos de información y podamos aplicar los conceptos de estadística, tendremos mejores
+resultados.
+Tipos de estimaciones
+Podemos hacer dos tipos de estimaciones concernientes a una población: una estimación puntual y
+una estimación de intervalo. Una estimación puntual es un solo número que se utiliza para esti-
+mar un parámetro de población desconocido. Si, mientras observa al primer integrante de un equipo
+de fútbol americano salir al campo de juego, se dice: “¡Caramba! Apuesto a que el peso promedio de
+los jugadores defensivos es de 125 kilogramos”, usted ha hecho una estimación puntual. El jefe
+de departamento de una universidad estaría haciendo una estimación puntual si afirmara: “Nuestros
+datos actuales indican que en esta materia tendremos 350 estudiantes el siguiente semestre.”
+A menudo, una estimación puntual es insuficiente debido a que sólo tienen dos opciones: es
+correcta o está equivocada. Si le dicen solamente que la afirmación sobre la inscripción está equivo-
+cada, no sabe qué tanto está mal y no puede tener la certeza de que la estimación es confiable. Si se
+entera de que sólo está errada por 10 estudiantes, podría aceptar a 350 estudiantes como una buena
+estimación de la inscripción futura. Pero si está equivocada en 90 estudiantes, la rechazaría como es-
+timación de la inscripción futura. Entonces, una estimación puntual es mucho más útil si viene acom-
+pañada por una estimación del error que podría estar implicado.
+Una estimación de intervalo es un conjunto de valores que se utiliza para estimar un pará-
+metro de la población. Una estimación de este tipo indica el error de dos maneras: por la extensión
+del intervalo y por la probabilidad de que el verdadero parámetro poblacional se encuentre dentro del
+intervalo. En este caso, el jefe de departamento diría algo como lo siguiente: “Estimo que la inscrip-
+ción real de este curso para el próximo semestre es
+
+[Bloque seleccionado #305 | relevancia=20]
+Pagina 304
+del área bajo la curva y, así, 0.4495 del área a ambos lados de la media en una distribución normal.
+De manera parecida, 2.58 errores estándar incluyen alrededor de 99% del área o 49.51% a cada 
+lado de la media.
+En estadística, la probabilidad que asociamos con una estimación de intervalo se conoce co-
+mo nivel de confianza. Esta probabilidad indica qué tanta confianza tenemos de que la estimación
+de intervalo incluya al parámetro de población. Una probabilidad más alta implica una mayor con-
+fianza. En la estimación, los niveles de confianza que se utilizan con más frecuencia son 90, 95 y
+99%, pero somos libres de aplicar cualquier nivel de confianza. En la figura 7-2, por ejemplo, utili-
+zamos un nivel de confianza del 95.5%.
+El intervalo de confianza es el rango de la estimación que estamos haciendo. Si informamos
+que tenemos el 90% de confianza de que la media de la población de ingresos de las personas que
+viven en una cierta comunidad está entre $8,000 y $24,000, entonces el rango $8,000-$24,000 es
+nuestro intervalo de confianza. A menudo, sin embargo, expresaremos el intervalo de confianza en
+términos de errores estándar, más que con valores numéricos. Así, expresaremos los intervalos de
+confianza de esta forma: x  1.64x, donde:
+x 
+ 1.64x  límite superior del intervalo de confianza
+x  1.64x  límite inferior del intervalo de confianza
+Entonces, los límites de confianza son los límites superior e inferior del intervalo de confianza. En
+este caso, x 
+ 1.64x se conoce como límite superior de confianza (LSC) y x  1.64x es el límite
+inferior de confianza (LIC).
+Relación entre nivel de confianza e intervalo de confianza
+Podría pensarse que deberíamos utilizar un alto nivel de confianza, como 99%, en todos los proble-
+mas sobre estimaciones. Después de todo, parece ser que un alto nivel de confianza significa un al-
+to grado de precisión en lo que a la estimación concierne. En la práctica, sin embargo, altos niveles
+de confianza producen intervalos de confianza grandes, y éstos, de hecho, dan estimaciones bastan-
+te imprecisas.
+Considere, por ejemplo, el caso de un cliente de una tienda de electrodomésticos que pregunta so-
+bre la entrega de una nueva lavadora de ropa. En la tabla 7-4 presentamos varias preguntas que
+el cliente podría hacer y las respuestas probables. Esta tabla indica la relación directa que existe en-
+tre el nivel de confianza y el intervalo de confianza de cualquier estimación. A medida que el cliente
+va estableciendo un intervalo de confianza cada vez más estrecho, el administrador de la tienda con-
+si
+
+[Bloque seleccionado #311 | relevancia=12]
+Pagina 310
+Aplicaciones
+■
+7-29
+La enfermera de la secundaria de Westview está interesada en conocer la estatura promedio de los estu-
+diantes del último año, pero no tiene suficiente tiempo para examinar los registros de los 430 estudiantes.
+Por ello, selecciona 48 al azar y encuentra que la media de la muestra es 64.5 pulgadas y la desviación es-
+tándar es 2.3 pulgadas.
+a)
+Encuentre la estimación del error estándar de la media.
+b) Construya un intervalo de confianza del 90% para la media.
+■
+7-30
+Jon Jackobsen, un pasante de posgrado muy dedicado, acaba de terminar una primera versión de su tesis
+de 700 páginas. Jon mecanografió el trabajo por sí mismo y está interesado en conocer el número prome-
+dio de errores tipográficos por página, pero no quiere leer todo el documento. Como sabe algo acerca de
+estadística para la administración, Jon leyó 40 páginas seleccionadas de manera aleatoria y encontró que el
+promedio de errores tipográficos por página fue 4.3 y la desviación estándar de la muestra fue 1.2 errores
+por página.
+a)
+Calcule el error estándar estimado de la media.
+b) Calcule un intervalo de confianza del 90% para el número promedio verdadero de errores por página
+en su trabajo.
+■
+7-31
+La Autoridad para la Televisión por Cable de Nebraska (ATCN) realizó una prueba para determinar el
+tiempo que las personas pasan frente al televisor por semana. La ATCN encuestó a 84 suscriptores y en-
+contró que el número promedio de horas que ven televisión por semana es 11.6 horas con una desviación
+estándar de 1.8 horas.
+a)
+¿Cuál es la desviación estándar de la población estimada para esta población? (Existen cerca de
+95,000 personas con televisión por cable en Nebraska.)
+b) Calcule el error estándar estimado de la media.
+c)
+Construya un intervalo de confianza del 98% para la media de la población.
+■
+7-32
+Joel Friedlander es un corredor de la Bolsa de Valores de Nueva York y tiene curiosidad acerca del tiem-
+po que transcurre entre la colocación de una orden de venta y su ejecución. Joel hizo un muestreo de 45
+órdenes y encontró que el tiempo medio para la ejecución fue 24.3 minutos, con una desviación estándar
+de 3.2 minutos. Ayude a Joel con la construcción de un intervalo de confianza del 95% para el tiempo me-
+dio para la ejecución de una orden.
+■
+7-33
+Oscar T. Grady es el gerente de producción de la compañía Citrus Groves, localizada justo al norte de Oca-
+la, Florida. Oscar está preocupado debido a que las heladas tardías de los últimos tres años han estado
+dañando los 2,500 naranjos que posee la Citrus Groves. Con el fin de determinar el grado del daño oc
+
+[Bloque seleccionado #315 | relevancia=12]
+Pagina 314
+■
+7-37
+La encargada de publicidad para el nuevo postre garapiñado de lima-limón de los productos Clear´n Light
+está intranquila por el mal desempeño del postre en el mercado y por su futuro en la empresa. Preocupa-
+da porque su estrategia de comercialización no ha producido una identificación apropiada de las caracte-
+rísticas del producto, tomó una muestra de 1,500 consumidores y encontró que 956 de éstos pensaban que
+el producto era una cera para pulir pisos.
+a)
+Estime el error estándar de la proporción de personas que tuvo esta grave interpretación errónea del
+postre.
+b) Construya un intervalo de confianza del 96% para la proporción verdadera de la población.
+■
+7-38
+Michael Gordon, un jugador profesional de básquetbol, lanzó 200 tiros de castigo y encestó 174 de ellos.
+a)
+Estime el error estándar de la proporción de todos los tiros que Michael falla.
+b) Construya un intervalo de confianza del 98% para la proporción de todos los tiros de castigo que Mi-
+chael falla.
+■
+7-39
+Hace poco SnackMore encuestó a 95 consumidores y encontró que el 80% compraba galletas sin grasa
+de SnackMore cada mes.
+a)
+Estime el error estándar de la proporción.
+b) Construya un intervalo del 95% de confianza para la proporción verdadera de personas que compran
+las galletas cada mes.
+■
+7-40
+El dueño de la empresa Home Loan Company investigó aleatoriamente 150 de las 3,000 cuentas de la
+compañía y determinó que 60% estaba en una posición excelente.
+a)
+Encuentre un intervalo de confianza del 95% para la proporción de cuentas que están en posición ex-
+celente.
+b) Con base en el inciso anterior, calcule el intervalo para el número absoluto de cuentas que cumplen
+con el requisito de excelencia, manteniendo el mismo nivel de confianza del 95%?
+■
+7-41
+Durante un año y medio las ventas han estado disminuyendo de manera consistente en las 1,500 sucursa-
+les de una cadena de comida rápida. Una empresa de asesores ha determinado que 31% de una muestra
+de 95 sucursales tiene claros signos de una mala administración. Construya un intervalo de confianza del
+98% para esta proporción.
+■
+7-42
+El consejo estudiantil de una universidad tomó una muestra de 45 libros de texto de la librería universita-
+ria y determinó que de ellos, 60% se vendía en más del 50% arriba de su costo al mayoreo. Dé un inter-
+valo de confianza del 96% para la proporción de libros cuyo precio sea más del 50% mayor que el costo
+al mayoreo.
+■
+7-43
+Barry Turnbull, el famoso analista de Wall Street, está interesado en conocer la proporción de accionistas
+individuales que planean vender al menos un cuarto del total de
+
+[Bloque seleccionado #333 | relevancia=10]
+Pagina 332
+■
+7-64
+El límite de velocidad establecido en el Cross-Bronx Expressway es 55 mph. La congestión hace que la
+velocidad real sea mucho menor. Una muestra aleatoria de 57 vehículos dio un promedio de 23.2 mph y
+una desviación estándar de 0.3 mph.
+a)
+Estime la desviación estándar de la población.
+b) Estime el error estándar de la media para esta población.
+c)
+¿Cuáles son los límites superior e inferior del intervalo de confianza para la velocidad media dado un
+nivel de confianza deseado de 0.95?
+■
+7-65
+Dada una media de la muestra de 8, una desviación estándar de la población de 2.6 y una muestra de ta-
+maño 32, encuentre el nivel de confianza asociado con cada uno de los siguientes intervalos:
+a)
+(7.6136, 8.3864).
+b) (6.85, 9.15).
+c)
+(7.195, 8.805).
+■
+7-66
+Basándose en el conocimiento acerca de las cualidades deseables de los estimadores, ¿por qué razones
+debe considerarse a x como el “mejor” estimador de la media verdadera de la población?
+■
+7-67
+El presidente de la Offshore Oil ha estado preocupado acerca del número de peleas ocurridas en las ins-
+talaciones a su cargo y está considerando varios cursos de acción. En un esfuerzo por entender qué causa
+las peleas en alta mar, tomó una muestra aleatoria de 41 días en los que un equipo de trabajadores regre-
+sa a trabajar después de un permiso para ir a tierra firme. Para esta muestra, la proporción promedio de
+trabajadores que intervinieron en peleas cada día es 0.032, y la desviación estándar asociada es 0.0130.
+a)
+Dé una estimación puntual de la proporción promedio de trabajadores que intervinieron en peleas en
+un día cualquiera en que la planta de trabajadores regresa de tierra firme.
+b) Estime la desviación estándar de la población asociada con este índice de peleas.
+c)
+Encuentre un intervalo de confianza del 90% para la proporción de trabajadores que regresan e inter-
+vienen en peleas.
+■
+7-68
+Dadas las siguientes expresiones para los límites de un intervalo de confianza, encuentre el nivel de con-
+fianza asociado con el intervalo:
+a)
+x  1.25x a x 
+ 1.25x.
+b) x  2.4x a x 
+ 2.4x.
+c)
+x  1.68x a x 
+ 1.68x.
+■
+7-69
+La empresa Harris Polls, Inc., se dedica a investigar amas de casa. De encuestas anteriores, se sabe que la
+desviación estándar del número de horas por semana que un ama de casa dedica a ver televisión es de 1.1
+horas. Harris Polls desea determinar el número promedio de horas por semana que un ama de casa en Es-
+tados Unidos dedica a ver televisión. La precisión es importante y, en consecuencia, Harris Polls quiere
+tener una certeza del 98% de que el número de muestr
+
+[Bloque seleccionado #334 | relevancia=14]
+Pagina 333
+The Wall Street Journal proporciona información financiera diariamente respecto a más de 3,000 fondos de inver-
+sión mutua. La tabla MR7-1 da información de una muestra aleatoria de 35 de ellos y su desempeño al cierre del
+viernes 14 de mayo de 1993. Emplee esta información contestar los ejercicios del 7-73 al 7-76.
+7-73
+a)
+Estime el cambio promedio en el valor del activo neto (VAN) del 14 de mayo de 1993 para todos los
+fondos listados en The Wall Street Journal.
+b) Estime la desviación estándar del cambio en el valor del activo neto para todos los fondos del inciso a).
+c)
+Encuentre un intervalo de confianza del 95% para el cambio promedio en el valor del activo neto.
+¿Qué suposiciones necesita hacer acerca de la distribución del cambio individual en el valor del acti-
+vo neto, con el fin de derivar el intervalo de confianza?
+7-74
+a)
+Estime la desviación estándar del cambio porcentual actualizado en valor (%ACT), de todos los fon-
+dos listados.
+b) Suponiendo que la desviación estándar que estimó en el inciso a) es cercana a la desviación estándar
+real de la población, ¿qué tan grande deberá ser una muestra para estimar el cambio porcentual pro-
+medio actualizado en valor, dentro de 0.5% con 99% de confianza?
+7-75
+Los fondos para los cuales el precio de oferta (PO) es el mismo que el valor del activo neto (VAN) se co-
+nocen como fondos “no cargados”. Utilice la muestra de 35 fondos para estimar qué fracción de todos los
+fondos listados en The Wall Street Journal son fondos no cargados. Dé un intervalo de confianza del 98%
+para esta fracción.
+7-76
+Usted cree que los fondos no cargados no deberían agruparse con los demás. Suponiendo que los cambios
+porcentuales actualizados individuales en valor para los fondos no cargados tienen una distribución apro-
+ximadamente normal, encuentre un intervalo de confianza del 95% para su cambio porcentual promedio
+actualizado en valor. ¿Es necesario suponer la distribución normal? Explique su respuesta.
+■
+7-77
+Al evaluar la efectividad de un programa federal de rehabilitación, en una investigación de 52 de los 900
+internos de una prisión se encontró que 35% de éstos era reincidente.
+a)
+Estime el error estándar de la proporción de reincidentes.
+b) Construya un intervalo de confianza del 90% para la proporción de reincidentes entre los internos de
+esta prisión.
+■
+7-78
+Durante la cosecha de manzanas, se revisaron por separado 150 fanegas de la fruta en busca de manzanas
+en mal estado (debido, como usted sabe, a que una manzana mala puede echar a perder a todo el canasto)
+y se encontró que había un promedio de 3.2
+
+[Bloque seleccionado #471 | relevancia=18]
+Pagina 470
+3. dividimos cada diferencia al cuadrado entre fe, y
+4. sumamos los ocho resultados.
+Numéricamente, los cálculos son sencillos si utilizamos una tabla como la 11-4, que muestra los
+pasos.
+La respuesta obtenida, 2.764, es el valor de ji-cuadrada en nuestro problema de comparación de
+las preferencias de métodos de evaluación. Si este valor fuera muy grande, digamos 20, indicaría una
+diferencia sustantiva entre los valores observados y los valores esperados. Una ji-cuadrada de cero,
+por otro lado, indica que las frecuencias observadas son exactamente iguales a las frecuencias espe-
+radas. El valor de ji-cuadrada nunca puede ser negativo, porque la diferencia entre las frecuencias
+observadas y esperadas siempre están al cuadrado.
+La distribución ji-cuadrada
+Si la hipótesis nula es verdadera, entonces la distribución de muestreo del estadístico ji-cuadrada, 2,
+puede aproximarse bastante bien mediante una curva continua conocida como distribución ji-cua-
+drada. Como en el caso de la distribución t, existe una distribución ji-cuadrada diferente para cada
+número de grados de libertad. En la figura 11-1 se indican las tres diferentes distribuciones ji-cua-
+drada correspondientes a 1, 5 y 10 grados de libertad. Para un número muy pequeño de grados de
+libertad, la distribución ji-cuadrada está seriamente sesgada a la derecha. Conforme aumenta el nú-
+mero de grados de libertad, la curva hace cada vez más simétrica hasta que el número de grados de
+libertad alcanza valores grandes, en cuyo caso la distribución puede aproximarse con la normal.
+La distribución ji-cuadrada es una distribución de probabilidad. En consecuencia, el área total ba-
+jo la curva de cada distribución ji-cuadrada es 1.0. Como en el caso de la distribución t, es posible
+tener un número muy grande de distribuciones ji-cuadrada, de modo que no resulta práctico cons-
+truir una tabla que contenga las áreas bajo la curva de todos los valores posibles del área. En la tabla
+5 del apéndice se ilustran sólo las áreas de la cola que se utilizan con más frecuencia en pruebas de
+significancia que usan la distribución ji-cuadrada.
+Determinación de los grados de libertad
+Para utilizar la prueba ji-cuadrada, debemos calcular los grados de libertad en la tabla de contingen-
+cia aplicando la ecuación 11-2:
+Cálculo de los grados
+de libertad
+Búsqueda de proba-
+bilidades cuando se
+utiliza una distribu-
+ción ji-cuadrada
+Descripción de 
+una distribución 
+ji-cuadrada
+Interpretación del 
+estadístico 
+ji-cuadrada
+452
+Capítulo 11
+Ji-cuadrada y análisis de varianza
+Cálculo del estadístico
+2 (ji-cuadrada) a part
+
+[Bloque seleccionado #476 | relevancia=17]
+Pagina 475
+Precauciones al usar la prueba ji-cuadrada
+Para utilizar una prueba de hipótesis ji-cuadrada, debemos tener un tamaño de muestra lo suficien-
+temente grande que garantice la similitud entre la distribución teórica correcta y nuestra distribución
+de muestreo de 2, el estadístico ji-cuadrada. Cuando las frecuencias esperadas son muy pequeñas,
+el valor de 2 estará sobrestimado y se tendrá como resultado demasiados rechazos de la hipótesis
+nula. Para evitar incurrir en inferencias incorrectas de la prueba de hipótesis ji-cuadrada, si-
+ga la regla general de que una frecuencia esperada de menos de 5 en una celda de una tabla de
+contingencia es demasiado pequeña para utilizarse.* Cuando la tabla contiene más de una celda
+con una frecuencia esperada menor que 5, podemos combinarlas con el fin de obtener una frecuencia
+esperada de 5 o más grande. Sin embargo, al hacerlo, reducimos el número de categorías de los da-
+tos y obtendremos menos información de la tabla de contingencia.
+Esta regla nos permitirá utilizar la prueba de hipótesis ji-cuadrada de una manera apropiada, pe-
+ro, desafortunadamente, cada prueba sólo puede reflejar (y no mejorar) la calidad de los datos con
+que se hace. Hasta este momento, hemos rechazado la hipótesis nula si la diferencia entre las
+frecuencias observadas y esperadas —es decir, el valor ji-cuadrada calculado— es demasiado gran-
+de. En el caso de la preferencia por el método de evaluación, habríamos rechazado la hipótesis nula
+a un nivel de significancia de 0.10 si nuestro valor ji-cuadrada hubiera sido 6.251 o más. Pero si el
+valor ji-cuadrada fuera cero, tendríamos que ser cuidadosos al preguntar si no existe absolu-
+tamente ninguna diferencia entre las frecuencias observadas y las esperadas. Si tenemos una
+opinión fuerte de que debería existir alguna diferencia, tendríamos que examinar tanto la forma de
+recolección de los datos o como la manera de hacer las mediciones, o ambas cosas, para tener la
+certeza de que las diferencias existentes no fueron minimizadas o pasadas por alto al recolectar los
+datos de muestra.
+En la década de 1860, los experimentos del monje Gregor Mendel con las características de los
+chícharos lo condujeron a proponer la existencia de los genes. Los resultados experimentales de
+Mendel eran sorprendentemente cercanos a los pronosticados por su teoría. Un siglo más tarde, los
+estadísticos estudiaron los “datos de los chícharos” de Mendel, les hicieron una prueba ji-cuadrada
+y llegaron a la conclusión de que el valor ji-cuadrada era demasiado pequeño; es decir, los datos ex-
+perimentales dados po
+
+[Bloque seleccionado #484 | relevancia=9]
+Pagina 483
+La figura 11-7 ilustra una distribución ji-cuadrada con 3 grados de libertad, en la que el nivel de
+significancia de 0.20 es el área sombreado. Note que la región de aceptación para la hipótesis nula
+(que establece que los datos de la muestra vienen de una distribución binomial con p  0.4) se ex-
+tiende desde la cola izquierda hasta el valor ji-cuadrada de 4.642. Obviamente, el valor ji-cuadrada
+de la muestra, 5.0406, cae fuera de esta región de aceptación. Por consiguiente, rechazamos la hipó-
+tesis nula y llegamos a la conclusión de que la distribución binomial con p  0.4 no proporciona una
+buena descripción de nuestras frecuencias observadas.
+Ilustración del 
+problema
+Interpretación de 
+los resultados
+11.3
+Ji-cuadrada como prueba de bondad de ajuste: prueba de lo apropiado de una distribución
+465
+Región de aceptación
+Acepte la hipótesis nula si el
+valor de la muestra está en esta región
+Valor ji-cuadrada de la 
+muestra, 5.0406
+4.642
+0.20 del área
+FIGURA 11-7
+Prueba de bondad
+de ajuste al nivel de
+significancia de
+0.20; ilustra la
+región de acep-
+tación y el valor 
+ji-cuadrada de la
+muestra, 5.0406
+Muchas personas saben que la prueba de
+ji-cuadrada se puede usar como prueba
+de bondad de ajuste y la mayoría puede
+hacer los cálculos. Sin embargo, sólo
+unos cuantos pueden explicar la lógica de emplear la prue-
+ba con este fin, en términos de sentido común. Sugerencia:
+si se tiene una distribución que se cree que es normal, pero
+no se tiene la seguridad, se usa una distribución normal co-
+nocida para generar los valores esperados y después, con
+los métodos de ji-cuadrada, se ve cuánta diferencia hay en-
+tre estos valores esperados y los valores observados en una
+muestra tomada de la distribución que se piensa es normal.
+Si la diferencia es demasiado grande, la distribución no es
+normal.
+SUGERENCIAS
+Y
+SUPOSICIONES
+Ejercicios 11.3
+Ejercicios de autoevaluación
+EA
+11-3
+Para el nivel de significancia de 0.10, ¿se puede concluir que las siguientes 400 observaciones siguen una
+distribución de Poisson con 
+  3?
+Número de llegadas por hora
+0
+1
+2
+3
+4
+5 o más
+Número de horas
+20
+57
+98
+85
+78
+62
+EA
+11-4
+Después de años de trabajar en una estación de pesado para camiones, Jeff Simpson siente que el peso por
+camión (en miles de libras) sigue una distribución normal con   71 y   15. Con el objeto de probar
+esta suposición, Jeff recolecta los siguientes datos un lunes y registra el peso de cada camión que llega a
+su báscula.
+85
+57
+60
+81
+89
+63
+52
+65
+77
+64
+89
+86
+90
+60
+57
+61
+95
+78
+66
+92
+50
+56
+95
+60
+82
+55
+61
+81
+61
+53
+63
+75
+50
+98
+63
+77
+50
+62
+79
+69
+76
+66
+97
+67
+5
+
+[Bloque seleccionado #504 | relevancia=11]
+Pagina 503
+Si la varianza de la población es 2, entonces el estadístico tiene una distribución ji-cuadrada con
+n  1 grados de libertad. Este resultado es exacto si la población es normal; pero, incluso para mues-
+tras tomadas de poblaciones no normales, suele ser una buena aproximación. Podemos ahora usar la
+distribución ji-cuadrada para formar intervalos de confianza y probar hipótesis respecto a 2.
+Intervalos de confianza para la varianza de población
+Suponga que queremos un intervalo de confianza del 95% para el problema de entrega de correo. La
+figura 11-14 muestra cómo empezar a formarlo.
+Construcción de un
+intervalo de confian-
+za para una varianza
+11.5
+Inferencias acerca de una varianza de población
+485
+Estadístico ji-cuadrada para inferencias sobre una varianza
+2 
+[11-12]
+(n  1)s2
+
+2
+FIGURA 11-14
+Construcción de 
+un intervalo de
+confianza para 
+2
+0.025 del área
+Distribución 2 
+0.025 del
+área
+2
+2 
+ 
+L
+U
+2 
+[11-13]
+(n  1)s2
+
+2
+Intervalo de confianza para 2
+2
+L 
+←Límite inferior de confianza
+[11-14]
+2
+U 
+←Límite superior de confianza
+(n  1)s2
+
+2
+L
+(n  1)s2
+
+2
+U
+Note que, debido a que 2 aparece en el denominador de la ecuación 11-13, podemos usar 2
+U para
+encontrar 2
+L y 2
+L para encontrar 2
+U. Continuando con el problema del director general del servicio
+postal, vemos que puede tener una certeza del 95% de que la varianza de la población está entre
+241.35 y 1,941.28 horas al cuadrado:
+Límites superior e 
+inferior para el inter-
+valo de confianza
+y, entonces, nuestro intervalo de confianza está dado por:
+Localizamos dos puntos en la distribución 2: 2
+U corta 0.025 del área en la cola superior de la
+distribución y 2
+L corta 0.025 del área en la cola inferior de la distribución. (Para un intervalo de con-
+fianza del 99%, tendríamos 0.005 del área en cada cola y otras mitades similares para otros niveles
+de confianza.) Los valores de 2
+L, y de 2
+U se pueden encontrar en la tabla 5 del apéndice. En el pro-
+blema de entrega de correo, con 9  1  8 grados de libertad, 2
+L  2.180 y 2
+U  17.535.
+Ahora, la ecuación 11-12 da 2 en términos de s2, n y 2. Para obtener un intervalo de confianza
+para 2, despejamos 2 de la ecuación 11-12:

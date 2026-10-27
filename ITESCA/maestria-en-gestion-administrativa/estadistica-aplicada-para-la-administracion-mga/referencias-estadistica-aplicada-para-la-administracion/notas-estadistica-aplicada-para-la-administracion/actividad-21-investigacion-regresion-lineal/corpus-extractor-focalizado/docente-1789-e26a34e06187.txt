@@ -1,0 +1,957 @@
+Pagina 1
+  
+ 
+ 
+1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Estadística para la administración 
+Tema 7 Regresión Lineal 
+
+
+Pagina 2
+  
+ 
+ 
+2
+7 Análisis de Regresión Lineal y Múltiple Regresión lineal 
+7.1 Regresión Lineal 
+En múltiples ocasiones en la práctica se requiere analizar la relación entre dos variables cuantitativas. Los dos objetivos 
+fundamentales del análisis de regresión serán, por un lado, determinar si dichas variables están asociadas y en qué sentido 
+se da dicha asociación (es decir, si los valores de una de las variables tienden a aumentar –o disminuir- al aumentar los 
+valores de la otra); y por otro, estudiar si los valores de una variable pueden ser utilizados para predecir el valor de la otra.  
+La forma correcta de abordar el primer problema es recurriendo a coeficientes de correlación. Sin embargo, el estudio de la 
+correlación es insuficiente para obtener una respuesta a la segunda cuestión: se limita a indicar la fuerza de la asociación 
+mediante un único número, tratando las variables de modo simétrico, mientras que nosotros estaríamos interesados en 
+modelar dicha relación y usar una de las variables para explicar la otra.  
+Para tal propósito se recurrirá a la técnica de regresión. Aquí se analizará el caso más sencillo en el que se considera 
+únicamente la relación entre dos variables. Así mismo, se limitará al caso en el que la relación que se pretende modelar es 
+de tipo lineal (Regresión Lineal Simple). 
+La recta de regresión. 
+Consideremos una variable aleatoria respuesta (o dependiente) Y, que supondremos relacionada con otra variable (no 
+necesariamente aleatoria) que llamaremos explicativa, predictora o independiente y que se denotará por X.  A partir de una 
+muestra de “n” individuos para los que se dispone de los valores de ambas variables, {(Xi,Yi),i = 1,...n}, se puede visualizar 
+gráficamente la relación existente entre ambas mediante un gráfico de dispersión, en el que los valores de la variable X se 
+disponen en el eje horizontal y los de Y en el vertical.  
+En el siguiente gráfico se observa un ejemplo de un diagrama de dispersión, en el que la nube de puntos sigue una tendencia 
+lineal: 
+ 
+El problema que subyace a la metodología de la regresión lineal simple es el de encontrar una recta que ajuste a la nube de 
+puntos del diagrama así dibujado, y que pueda ser utilizada para predecir los valores de Y a partir de los de X.  La ecuación 
+general de la recta de regresión será entonces de la forma:  Y = a + bX . 
+Para definir la recta hay que determinar los valores de los parámetros "a" y "b": 
+El parámetro "a" es el valor que toma la variable dependiente "y", cuando la variable independiente "x" vale 0, y es el punto 
+donde la recta cruza el eje vertical. 
+El parámetro "b" determina la pendiente de la recta, su grado de inclinación. 
+Tradicionalmente se ha recurrido para ello al método de mínimos cuadrados, que elige como recta de regresión a aquella que 
+minimiza las distancias verticales de las observaciones a la recta. 
+El parámetro "b", según el método de mínimos cuadrados, viene determinado por la siguiente fórmula: 
+
+
+ x
+de
+ 
+cuadrados
+ 
+de
+ 
+suma
+ xy
+de
+ 
+cuadrados
+ 
+de
+ 
+suma
+2
+2
+
+
+
+
+
+
+
+
+
+X
+XY
+SC
+SC
+n
+x
+x
+n
+y
+x
+xy
+b
+ 
+El parámetro "a" viene determinado por: 
+x
+b
+y
+a
+
+
+ 
+Donde y Es la media de la variable "y", y x es la media de "x".  
+Ejemplo. 
+Los gastos publicitarios y los volúmenes de  ventas de una compañía durante 10 meses   de una compañía fueron 
+seleccionados al azar. Los datos se encuentran en la tabla inferior. 
+ 
+MES 
+GASTOS 
+PUBLICITARIOS  
+(miles de pesos) 
+x 
+VOLUMEN 
+DE 
+VENTAS 
+(miles de pesos) 
+y 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+1.2 
+.8 
+1 
+1.3 
+.7 
+.8 
+1 
+.6 
+.9 
+1.1 
+101 
+92 
+110 
+120 
+90 
+82 
+93 
+75 
+91 
+105 
+  
+
+
+Pagina 3
+  
+ 
+ 
+3
+Grafique las dos variables en un diagrama de dispersión para verificar que el modelo lineal puede ser el adecuado. 
+Diagrama de dispersión
+GASTOS PUBLICITARIOS
+VOLUMEN DE VENTAS
+0.6
+0.7
+0.8
+0.9
+1
+1.1
+1.2
+1.3
+1.4
+75
+85
+95
+105
+115
+125
+ 
+Como puede observarse las dos variables tienden a relacionarse de manera lineal y puede notarse también que mientras los 
+gastos publicitarios aumentan también lo hacen las ventas. 
+ 
+Obtenga la recta de predicción de mínimos cuadrados 
+ 
+Las fórmulas para estimar a y b  son: 
+ 
+x
+xy
+SC
+SC
+b 
+   y    
+x
+b
+y
+a
+
+
+ 
+donde: 
+n
+x
+x
+SC
+n
+i
+i
+n
+i
+i
+x
+2
+1
+1
+2
+
+
+
+
+
+
+
+
+
+
+
+
+ = suma de cuadrados de x 
+n
+y
+x
+y
+x
+SC
+n
+i
+i
+n
+i
+i
+n
+i
+i
+i
+xy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1
+1
+1
+ = suma de cuadrados de xy 
+n
+y
+y
+SC
+n
+i
+i
+n
+i
+i
+y
+2
+1
+1
+2
+
+
+
+
+
+
+
+
+
+
+
+
+ suma de cuadrados de y 
+ 
+Los cálculos se simplifican realizando la siguiente tabla: 
+ 
+yi 
+xi 
+2
+ix
+ 
+xiyi 
+2
+iy
+ 
+101 
+92 
+110 
+120 
+90 
+82 
+93 
+75 
+91 
+105 
+1.2 
+.8 
+1 
+1.3 
+.7 
+.8 
+1 
+.6 
+.9 
+1.1 
+1.44 
+.64 
+1 
+1.69 
+.49 
+.64 
+1 
+.36 
+.81 
+1.21 
+121.2 
+73.6 
+110 
+156 
+63 
+65.6 
+93 
+45 
+81.9 
+115.5 
+10,201 
+8,464 
+12,100 
+14,400 
+8,100 
+6,724 
+8,649 
+5,625 
+8,281 
+11,025 
+
+
+
+10
+1
+I
+iy
+959 
+
+
+
+10
+1
+I
+ix
+9.4 
+
+
+
+10
+1
+2
+I
+ix
+9.28 
+
+
+
+10
+1
+I
+i
+i y
+x
+924.8 
+
+
+
+10
+1
+2
+I
+iy
+93,569 
+ 
+Sustituyendo en las fórmulas se obtienen lo siguiente: 
+ 
+n
+x
+x
+SC
+n
+i
+i
+n
+i
+i
+x
+2
+1
+1
+2
+
+
+
+
+
+
+
+
+
+
+
+
+  =  
+444
+.0
+10
+)
+4.9
+(
+28
+.9
+2
+
+
+ 
+ 
+
+
+Pagina 4
+  
+ 
+ 
+4
+n
+y
+x
+y
+x
+SC
+n
+i
+i
+n
+i
+i
+n
+i
+i
+i
+xy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1
+1
+1
+=
+34
+.
+23
+10
+)
+959
+)(
+4.9
+(
+8.
+924
+
+
+ 
+ 
+x
+xy
+SC
+SC
+b 
+57
+.
+52
+444
+.0
+34
+.
+23
+
+
+ 
+ 
+x
+b
+y
+a
+
+
+n
+x
+b
+n
+y
+i
+i
+i
+i
+
+
+
+
+
+
+10
+1
+10
+1
+49
+.
+46
+10
+4.9
+)
+57
+.
+52
+(
+10
+959
+
+
+
+
+
+
+
+
+
+ 
+Así la recta ajustada es: 
+x
+bx
+a
+y
+57
+.
+52
+49
+.
+46
+ˆ
+
+
+
+
+ 
+ 
+Si graficamos la línea recta en el diagrama de dispersión tenemos: 
+Diagrama de dispersión
+GASTOS PUBLICITARIOS
+VOLUMEN DE VENTAS
+0.6
+0.7
+0.8
+0.9
+1
+1.1
+1.2
+1.3
+1.4
+75
+85
+95
+105
+115
+125
+ 
+c) Estime las ventas cuando los gastos publicitarios son de 1 (miles) de pesos. 
+Sustituyendo en la ecuación encontrada se obtiene: 
+06
+.
+99
+)1(
+57
+.
+52
+49
+.
+46
+ˆ
+
+
+
+y
+ 
+ 
+UTILIDAD DEL MODELO 
+ 
+Para verificar que el modelo que se ajustó es el adecuado se usan varias técnicas. Dos de ellas son: la prueba de la pendiente 
+de la recta y el coeficiente de correlación lineal de Pearson (r). 
+ 
+1. Prueba de Hipótesis Relativa a la pendiente de la recta 
+Se prueban las siguientes hipótesis: 
+Hipótesis Nula Ho: b = 0 (El modelo no es útil) 
+Hipótesis Alternativa Ha: b ≠ 0 (el modelo  es útil) 
+ 
+La estadística de prueba utilizada es: 
+x
+SC
+s
+b
+t 
+ 
+Donde:  
+2
+2
+
+n
+SCE
+s
+ y 
+xy
+y
+bSC
+SC
+SCE
+
+
+ 
+ 
+y el criterio de rechazo es: Rechazar Ho:b=0 si t > tα/2, (n-2) ó t <- tα/2, (n-2)   
+d) Pruebe la utilidad del modelo por medio de la pendiente y encuentre la bondad de ajuste por medio del coeficiente de 
+correlación. 
+ 
+ 
+Para Probar que el modelo lineal es útil. 
+ Se calcula primeramente s de la siguiente forma: 
+n
+y
+y
+SC
+n
+i
+i
+n
+i
+i
+y
+2
+1
+1
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9.
+600
+,1
+10
+959
+569
+,
+93
+2
+
+
+
+ 
+
+
+Pagina 5
+  
+ 
+ 
+5
+sustituyendo los valores de SCy, SCxy y b en la fórmula de SCE y se obtiene 
+ 
+xy
+y
+bSC
+SC
+SCE
+
+
+= 1,600.9 – (52.5676)(23.34) =373.97, sustituyendo en la fórmula de s2 se obtiene 
+ 
+2
+2
+
+n
+SCE
+s
+75
+.
+46
+8
+97
+.
+373
+
+
+ 
+84
+.6
+75
+.
+46
+2
+
+
+
+s
+s
+ 
+ 
+Para probar que el modelo lineal es útil, se desea probar: 
+Ho: β1 = 0 
+Ha: : β1 ≠ 0 
+ 
+Si se escoge α = 0.05, 
+306
+.2
+8,
+025
+.0
+2
+,
+2
+/
+
+
+
+t
+t
+n
+
+, entonces se rechazaría Ho si t > 2.306 ó t < -2.306 . El valor de t 
+calculado con la fórmula es: 
+ 
+ 
+x
+SC
+s
+b
+t 
+ 
+12
+.5
+444
+.0
+84
+.6
+57
+.
+52
+
+
+ 
+como 5.12 > 2.306 entonces se rechaza Ho : β1 = 0 y se acepta Ha: : β1 ≠ 0 y por lo tanto se concluye que hay evidencia que 
+indica que los gastos publicitarios  son útiles para predecir los volúmenes de venta, es decir el modelo lineal es útil. 
+ 
+ 
+2. Coeficiente de correlación lineal de Pearson (r) 
+ 
+Para calcular este coeficiente de correlación se utiliza la fórmula 
+ 
+ 
+La correlación sería perfecta (1 ó -1) si los puntos todos formaran una recta. Cuando no hay una tendencia hacia arriba o 
+hacia abajo, la correlación está cerca de cero.  
+El coeficiente de correlación puede tomar valores entre +1 y -1, donde el signo indica dirección de la relación.
+ 
+Cuando se observan valores como +0.9 ó -0.9 se dice que la relación es fuerte. Valores como ± 0.1 indican una correlación 
+débil. 
+La magnitud de la correlación (si es fuerte o débil) se mide utilizando el valor absoluto. La dirección se determina con el signo. 
+Cálculo del coeficiente de correlación de Pearson (r) 
+Esta fórmula requiere menos cómputos, pues usa las puntuaciones crudas sin necesidad de convertirlas en desviaciones o 
+puntuaciones estandarizadas. (Hinkle, p.113)  
+
+
+Pagina 6
+  
+ 
+ 
+6
+ 
+y
+x
+xy
+SC
+SC
+SC
+r 
+ 
+Para calcular el coeficiente de correlación se utiliza la fórmula 
+ 
+88
+.0
+)
+9.
+1600
+)(
+444
+.0
+(
+34
+.
+23
+
+
+
+y
+x
+xy
+SC
+SC
+SC
+r
+ 
+ASIGNACIÓN 
+ 
+1.- La ganancia o pérdida de una acción de la Compañía “ Empacadora Sonora”  así como la del índice promedio en el 
+mercado de acciones se observó en el período 1994 a 2003 y se dan en la siguiente tabla 
+AÑO     “Empacadora Sonora”    Índice promedio     
+1994                18.4                          12.9  
+1995                29.7                            9.1 
+1996              -12.3                         -13.1 
+1997               10.8                           20.1 
+1998               23.6                             7.7 
+1999             -16.2                          -11.4 
+2000                5.8                              0.1 
+2001                7.2                            10.8 
+2002                7.7                            15.6 
+2003               -8.8                          -17.4 
+ 
+Encuentre la ecuación de predicción 
+Grafique los puntos y la recta de regresión para verificar sus cálculos 
+¿Es útil el modelo? 
+¿Hay buen ajuste del modelo a los datos? 
+      R:  a) y = 3.5504+0.8836x   c) si, t = 3.33     d) si, r = 0.762 
+2.- Se condujo a un experimento en  un supermercado para estudiar la relación entre la cantidad de espacio destinado a un 
+determinado café (marca A) y el volumen de ventas semanales de ese café. La cantidad de espacio destinado en la estantería 
+se varió en exhibidores de 3, 6 y 9 anaqueles aleatoriamente durante 12 semanas, mientras que para las otras marcas de 
+café, se mantuvieron constantes en exhibidores de tres anaqueles. Los datos del experimento se dan en la tabla: 
+ 
+Ventas semanales 
+Exhibidor 
+de 
+anaqueles 
+526 
+6 
+421 
+3 
+581 
+6 
+630 
+9 
+412 
+3 
+560 
+9 
+434 
+6 
+443 
+3 
+590 
+9 
+570 
+6 
+346 
+3 
+672 
+9 
+Encuentre la ecuación de predicción 
+Grafique los puntos y la recta de regresión para verificar sus cálculos 
+¿Es útil el modelo? 
+¿Hay buen ajuste del modelo a los datos? 
+              R:  a) y = 307.91+34.6x  c) si, t = 5.68     d) si, r = 0.8738 
+ 
+ 
+ 
+ 

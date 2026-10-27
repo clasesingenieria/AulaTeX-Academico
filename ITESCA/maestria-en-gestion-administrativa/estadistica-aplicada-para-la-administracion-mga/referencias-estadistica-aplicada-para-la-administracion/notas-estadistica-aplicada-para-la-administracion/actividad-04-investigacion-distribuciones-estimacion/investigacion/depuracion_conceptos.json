@@ -1,0 +1,106 @@
+{
+  "subject_slug": "estadistica-aplicada-para-la-administracion",
+  "engine": "Amazon Nova Pro",
+  "kept": [
+    "estimador como variable aleatoria",
+    "estimación puntual numérica",
+    "propiedad de insesgamiento",
+    "eficiencia relativa de estimadores",
+    "consistencia en probabilidad",
+    "error cuadrático medio",
+    "estimación por intervalos",
+    "nivel de confianza frecuentista",
+    "margen de error administrativo",
+    "error estándar de la media",
+    "interpretación gerencial de intervalos de ventas",
+    "estimador",
+    "¿Qué es un estimador en estadística?",
+    "¿Qué diferencia existe entre estimador",
+    "estimación?",
+    "Propiedades de los estimadores",
+    "Definir",
+    "intervalo confianza"
+  ],
+  "conceptos_clave_nova_pro": [
+    {
+      "concepto": "estimador como variable aleatoria",
+      "definicion_rigurosa": "Un estimador es una función de las observaciones muestrales que se utiliza para estimar un parámetro poblacional. Como se basa en datos muestrales, es considerado una variable aleatoria, ya que su valor puede variar de una muestra a otra. La distribución del estimador depende de la distribución de la muestra y del tamaño de la muestra.",
+      "formulacion_matematica_latex": "\\hat{\\theta} = g(X_1, X_2, \\ldots, X_n)",
+      "aplicacion_administrativa": "En la administración, los estimadores se utilizan para estimar parámetros poblacionales clave, como la media o la varianza, a partir de datos muestrales. Esto permite a los gerentes tomar decisiones informadas basadas en estimaciones precisas y confiables.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "libro-estadistica-para-administracion-y-economia-levin-A04.txt (bloque 4)"
+    },
+    {
+      "concepto": "estimación puntual numérica",
+      "definicion_rigurosa": "La estimación puntual es el proceso de utilizar un solo valor, calculado a partir de los datos de la muestra, para estimar un parámetro poblacional. Este valor se conoce como el estimado puntual y se utiliza para proporcionar una estimación específica del parámetro.",
+      "formulacion_matematica_latex": "\\hat{\\theta} = \\bar{X}",
+      "aplicacion_administrativa": "En la administración, la estimación puntual se utiliza para obtener un valor específico que represente un parámetro poblacional, como la media de ventas. Esto ayuda a los gerentes a tomar decisiones rápidas y precisas.",
+      "fuente_principal": "Lind, Marchal y Wathen, 2012",
+      "localizador": "00-consigna-y-planeacion-A04.txt (bloque 1)"
+    },
+    {
+      "concepto": "propiedad de insesgamiento",
+      "definicion_rigurosa": "Un estimador se dice que es insesgado si su valor esperado es igual al parámetro poblacional que está estimando. En otras palabras, el estimador no sistemáticamente sobreestima ni subestima el parámetro.",
+      "formulacion_matematica_latex": "E(\\hat{\\theta}) = \\theta",
+      "aplicacion_administrativa": "La propiedad de insesgamiento es crucial en la administración para garantizar que las estimaciones sean precisas y no introduzcan sesgos en las decisiones tomadas.",
+      "fuente_principal": "Wackerly et al., 2010",
+      "localizador": "00-consigna-y-planeacion-A04.txt (bloque 1)"
+    },
+    {
+      "concepto": "eficiencia relativa de estimadores",
+      "definicion_rigurosa": "La eficiencia relativa de dos estimadores mide la relación entre sus varianzas. Un estimador es más eficiente que otro si tiene una varianza menor para el mismo tamaño de muestra. La eficiencia relativa se calcula como la razón de las varianzas de los dos estimadores.",
+      "formulacion_matematica_latex": "Eficiencia\\_relativa = \\frac{Var(\\hat{\\theta}_1)}{Var(\\hat{\\theta}_2)}",
+      "aplicacion_administrativa": "En la administración, elegir el estimador más eficiente puede reducir la incertidumbre y mejorar la precisión de las estimaciones, lo que conduce a decisiones más informadas.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "00-consigna-y-planeacion-A04.txt (bloque 1)"
+    },
+    {
+      "concepto": "consistencia en probabilidad",
+      "definicion_rigurosa": "Un estimador es consistente si converge en probabilidad al parámetro poblacional a medida que el tamaño de la muestra aumenta. Esto significa que la probabilidad de que el estimador se aleje del parámetro poblacional se vuelve arbitrariamente pequeña a medida que el tamaño de la muestra aumenta.",
+      "formulacion_matematica_latex": "\\hat{\\theta}_n \\xrightarrow{p} \\theta",
+      "aplicacion_administrativa": "La consistencia en probabilidad asegura que las estimaciones se vuelvan más precisas a medida que se recopila más información, lo que es esencial para la toma de decisiones a largo plazo en la administración.",
+      "fuente_principal": "Lind, Marchal y Wathen, 2012",
+      "localizador": "00-consigna-y-planeacion-A04.txt (bloque 1)"
+    },
+    {
+      "concepto": "error cuadrático medio",
+      "definicion_rigurosa": "El error cuadrático medio (ECM) de un estimador es la expectativa del cuadrado de la diferencia entre el estimador y el parámetro poblacional. Es una medida de la precisión del estimador.",
+      "formulacion_matematica_latex": "ECM(\\hat{\\theta}) = E[(\\hat{\\theta} - \\theta)^2]",
+      "aplicacion_administrativa": "En la administración, minimizar el error cuadrático medio de un estimador puede conducir a estimaciones más precisas y, por lo tanto, a mejores decisiones.",
+      "fuente_principal": "Wackerly et al., 2010",
+      "localizador": "00-consigna-y-planeacion-A04.txt (bloque 1)"
+    },
+    {
+      "concepto": "estimación por intervalos",
+      "definicion_rigurosa": "La estimación por intervalos proporciona un rango de valores dentro del cual se espera que caiga el parámetro poblacional con una cierta probabilidad. Este rango se conoce como intervalo de confianza.",
+      "formulacion_matematica_latex": "\\hat{\\theta} \\pm z_{\\alpha/2} \\cdot \\frac{\\sigma}{\\sqrt{n}}",
+      "aplicacion_administrativa": "En la administración, los intervalos de confianza se utilizan para proporcionar un rango de valores posibles para un parámetro poblacional, lo que permite a los gerentes tomar decisiones más informadas y considerar la incertidumbre.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "00-consigna-y-planeacion-A04.txt (bloque 1)"
+    },
+    {
+      "concepto": "nivel de confianza frecuentista",
+      "definicion_rigurosa": "El nivel de confianza frecuentista es la probabilidad de que el intervalo de confianza contenga el parámetro poblacional. Es un indicador de la fiabilidad del intervalo de confianza.",
+      "formulacion_matematica_latex": "P(\\hat{\\theta} - z_{\\alpha/2} \\cdot \\frac{\\sigma}{\\sqrt{n}} < \\theta < \\hat{\\theta} + z_{\\alpha/2} \\cdot \\frac{\\sigma}{\\sqrt{n}}) = 1 - \\alpha",
+      "aplicacion_administrativa": "En la administración, el nivel de confianza frecuentista ayuda a los gerentes a evaluar la fiabilidad de las estimaciones y tomar decisiones basadas en la probabilidad de que el intervalo de confianza contenga el parámetro poblacional.",
+      "fuente_principal": "Lind, Marchal y Wathen, 2012",
+      "localizador": "00-consigna-y-planeacion-A04.txt (bloque 1)"
+    },
+    {
+      "concepto": "margen de error administrativo",
+      "definicion_rigurosa": "El margen de error administrativo es la mitad del ancho del intervalo de confianza. Representa la cantidad máxima por la cual el estimador puede diferir del parámetro poblacional.",
+      "formulacion_matematica_latex": "E = z_{\\alpha/2} \\cdot \\frac{\\sigma}{\\sqrt{n}}",
+      "aplicacion_administrativa": "En la administración, el margen de error administrativo ayuda a los gerentes a entender la precisión de las estimaciones y a tomar decisiones informadas sobre la tolerancia al error.",
+      "fuente_principal": "Wackerly et al., 2010",
+      "localizador": "00-consigna-y-planeacion-A04.txt (bloque 1)"
+    },
+    {
+      "concepto": "error estándar de la media",
+      "definicion_rigurosa": "El error estándar de la media es la desviación estándar de la distribución del estimador de la media. Mide la precisión con la que la media muestral estima la media poblacional.",
+      "formulacion_matematica_latex": "SEM = \\frac{\\sigma}{\\sqrt{n}}",
+      "aplicacion_administrativa": "En la administración, el error estándar de la media se utiliza para evaluar la precisión de la media muestral como estimador de la media poblacional, lo que es crucial para la toma de decisiones basadas en datos.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "libro-estadistica-para-administracion-y-economia-levin-A04.txt (bloque 1)"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+\providecommand{\estadisticatitulo}{Estadística aplicada para la administración}
+\providecommand{\estadisticasubtitulo}{Informe académico}
+\providecommand{\estadisticafecha}{\today}
+\providecommand{\estadisticaunidad}{}
+\providecommand{\estadisticaextras}{}
+\ifdefined\estadisticacontenido\else
+  \errmessage{Definir estadisticacontenido antes de cargar la plantilla de materia}
+\fi
+\def\itescadocumenttitle{\estadisticatitulo}
+\def\itescadocumentsubtitle{\estadisticasubtitulo}
+\def\itescadocumentsubject{Estadística aplicada para la administración}
+\def\itescadocumentdate{\estadisticafecha}
+\def\itescastudentname{Martín Jonathan de la Cruz Muñoz}
+\def\itescastudentshort{M. J. de la Cruz}
+\def\itescastudentid{26130503}
+\def\itescastudentemail{26130503@cajeme.tecnm.mx}
+\def\itescafaculty{Maestría en Gestión Administrativa}
+\def\itescafacultyname{Maestría en Gestión Administrativa}
+\def\itescacoursename{Estadística aplicada para la administración}
+\def\itescacoursecode{GGEA01}
+\def\itescadepartment{Posgrado e Investigación}
+\def\itescateachingfigure{Dra. Yoana Elizeth Tauitmes Delgado}
+\def\itescaprogramlevel{Maestría}
+\def\itescaprogramperiod{2026-II}
+\def\itescamodality{Virtual}
+\def\itescalocation{Monterrey, Nuevo León}
+\def\itescasessionname{\estadisticaunidad}
+\def\itescablockname{Estadística aplicada}
+\def\itescamainproduct{Informe académico}
+\def\itescaactivityname{\estadisticasubtitulo}
+\def\itescatransfercontext{Análisis de datos para decisiones administrativas}
+\def\itescabibliography{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/referencias-estadistica-verificadas}
+\def\itescaactivitypreamble{%
+  \usepackage{ragged2e}
+  \hypersetup{hidelinks,hypertexnames=false}
+  \setlength{\emergencystretch}{2em}
+  \estadisticaextras
+}
+\long\def\itescaactivitycontent{%
+  \justifying
+  \setstretch{1.5}
+  \estadisticacontenido
+}
+\input{ITESCA/maestria-en-gestion-administrativa/reporte-itesca-mga.tex}

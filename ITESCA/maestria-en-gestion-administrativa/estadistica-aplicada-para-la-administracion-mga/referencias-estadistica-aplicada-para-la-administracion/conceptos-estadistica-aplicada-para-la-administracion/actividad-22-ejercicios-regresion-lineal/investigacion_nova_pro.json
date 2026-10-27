@@ -1,0 +1,180 @@
+{
+  "sintesis_ejecutiva": "Esta actividad académica se fundamenta en la aplicación de técnicas de regresión lineal simple y múltiple para resolver problemas administrativos y estadísticos. La regresión lineal permite modelar la relación entre una variable dependiente y una o más variables independientes, facilitando la predicción y la toma de decisiones basadas en datos. En esta actividad, se aplican métodos de mínimos cuadrados para estimar los parámetros del modelo, se realiza inferencia estadística a través de ANOVA y se evalúa la significancia de las variables mediante pruebas t. Los resultados de estos análisis proporcionan insights valiosos para la gestión administrativa, permitiendo a los gerentes tomar decisiones informadas en áreas como la depreciación de activos, la fijación de precios y la compensación salarial.",
+  "conceptos_clave": [
+    {
+      "concepto": "Regresión lineal simple",
+      "definicion_rigurosa": "La regresión lineal simple es un método estadístico que modela la relación entre una variable dependiente y una variable independiente mediante una ecuación lineal. Se utiliza para predecir el valor de la variable dependiente en función de los valores de la variable independiente. El modelo se expresa como Y = β0 + β1X + ε, donde Y es la variable dependiente, X es la variable independiente, β0 es el intercepto, β1 es el coeficiente de la variable independiente y ε es el término de error.",
+      "formulacion_matematica_latex": "Y = \\beta_0 + \\beta_1X + \\epsilon",
+      "aplicacion_administrativa": "En administración, la regresión lineal simple se utiliza para analizar la relación entre dos variables, como la depreciación de un activo en función del kilometraje. Esto permite a los gerentes predecir el valor futuro del activo y tomar decisiones informadas sobre su mantenimiento o reemplazo.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "libro-estadistica-para-negocios-y-economia-anderson-sw-A22.txt (bloque 5)"
+    },
+    {
+      "concepto": "Regresión lineal múltiple",
+      "definicion_rigurosa": "La regresión lineal múltiple es una extensión de la regresión lineal simple que modela la relación entre una variable dependiente y dos o más variables independientes. Se utiliza para predecir el valor de la variable dependiente en función de los valores de las variables independientes. El modelo se expresa como Y = β0 + β1X1 + β2X2 +... + βkXk + ε, donde Y es la variable dependiente, X1, X2,..., Xk son las variables independientes, β0 es el intercepto, β1, β2,..., βk son los coeficientes de las variables independientes y ε es el término de error.",
+      "formulacion_matematica_latex": "Y = \\beta_0 + \\beta_1X_1 + \\beta_2X_2 + \\ldots + \\beta_kX_k + \\epsilon",
+      "aplicacion_administrativa": "En administración, la regresión lineal múltiple se utiliza para analizar la relación entre una variable dependiente y varias variables independientes, como el riesgo cardiovascular en función del tabaquismo, la edad y la presión arterial. Esto permite a los gerentes identificar los factores que más influyen en el resultado y tomar decisiones informadas para mitigar riesgos.",
+      "fuente_principal": "Levin, 2012",
+      "localizador": "libro-estadistica-para-administracion-y-economia-levin-A22.txt (bloque 5)"
+    },
+    {
+      "concepto": "Mínimos cuadrados",
+      "definicion_rigurosa": "El método de mínimos cuadrados es una técnica estadística utilizada para estimar los parámetros de un modelo de regresión. Consiste en minimizar la suma de los cuadrados de las diferencias entre los valores observados y los valores predichos por el modelo. Los estimadores obtenidos mediante este método son los que minimizan la varianza del error de estimación.",
+      "formulacion_matematica_latex": "\\min_{\\beta_0, \\beta_1, \\ldots, \\beta_k} \\sum_{i=1}^n (Y_i - (\\beta_0 + \\beta_1X_{i1} + \\beta_2X_{i2} + \\ldots + \\beta_kX_{ik}))^2",
+      "aplicacion_administrativa": "En administración, el método de mínimos cuadrados se utiliza para estimar los coeficientes de un modelo de regresión, lo que permite a los gerentes predecir valores futuros y tomar decisiones informadas basadas en datos.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "libro-estadistica-para-negocios-y-economia-anderson-sw-A22.txt (bloque 5)"
+    },
+    {
+      "concepto": "ANOVA",
+      "definicion_rigurosa": "El análisis de varianza (ANOVA) es una técnica estadística utilizada para comparar la variabilidad entre grupos y dentro de grupos. Se utiliza para determinar si existen diferencias significativas entre las medias de dos o más grupos. El ANOVA se basa en la descomposición de la varianza total en varianza entre grupos y varianza dentro de grupos.",
+      "formulacion_matematica_latex": "F = \\frac{MS_{entre}}{MS_{dentro}}",
+      "aplicacion_administrativa": "En administración, el ANOVA se utiliza para comparar la efectividad de diferentes estrategias o tratamientos. Por ejemplo, se puede utilizar para determinar si existen diferencias significativas en las ventas entre diferentes campañas de marketing.",
+      "fuente_principal": "Levin, 2012",
+      "localizador": "libro-estadistica-para-administracion-y-economia-levin-A22.txt (bloque 5)"
+    },
+    {
+      "concepto": "Prueba t",
+      "definicion_rigurosa": "La prueba t es una técnica estadística utilizada para determinar si existe una diferencia significativa entre las medias de dos grupos. Se utiliza para evaluar la significancia de los coeficientes en un modelo de regresión. La prueba t se basa en la distribución t de Student y se calcula como t = (β - β0) / SE(β), donde β es el coeficiente estimado, β0 es el valor hipotético del coeficiente y SE(β) es el error estándar del coeficiente.",
+      "formulacion_matematica_latex": "t = \\frac{\\beta - \\beta_0}{SE(\\beta)}",
+      "aplicacion_administrativa": "En administración, la prueba t se utiliza para evaluar la significancia de los coeficientes en un modelo de regresión, lo que permite a los gerentes determinar si una variable independiente tiene un efecto significativo sobre la variable dependiente.",
+      "fuente_principal": "Wackerly et al., 2010",
+      "localizador": "libro-estadistica-matematica-con-aplicaciones-wackerly-A22.txt (bloque 1)"
+    },
+    {
+      "concepto": "Variable ficticia",
+      "definicion_rigurosa": "Una variable ficticia (dummy) es una variable binaria que toma valores de 0 o 1 para representar la presencia o ausencia de una característica. Se utiliza en modelos de regresión para incorporar variables categóricas. Por ejemplo, en un modelo de regresión que analiza el riesgo cardiovascular, se puede utilizar una variable ficticia para representar si una persona es fumadora o no.",
+      "formulacion_matematica_latex": "Y = \\beta_0 + \\beta_1X_1 + \\beta_2X_2 + \\ldots + \\beta_kD + \\epsilon",
+      "aplicacion_administrativa": "En administración, las variables ficticias se utilizan para incorporar información categórica en modelos de regresión, lo que permite a los gerentes analizar el impacto de características específicas en el resultado.",
+      "fuente_principal": "Levin, 2012",
+      "localizador": "libro-estadistica-para-administracion-y-economia-levin-A22.txt (bloque 5)"
+    },
+    {
+      "concepto": "Predicción puntual",
+      "definicion_rigurosa": "La predicción puntual es el valor específico que se predice para la variable dependiente en función de los valores de las variables independientes. Se obtiene sustituyendo los valores de las variables independientes en la ecuación del modelo de regresión.",
+      "formulacion_matematica_latex": "Y_{pred} = \\beta_0 + \\beta_1X_1 + \\beta_2X_2 + \\ldots + \\beta_kX_k",
+      "aplicacion_administrativa": "En administración, la predicción puntual se utiliza para estimar el valor futuro de una variable dependiente, como el precio de un producto en función de las características del mercado.",
+      "fuente_principal": "Levin, 2012",
+      "localizador": "libro-estadistica-para-administracion-y-economia-levin-A22.txt (bloque 5)"
+    },
+    {
+      "concepto": "Recomendación gerencial",
+      "definicion_rigurosa": "Una recomendación gerencial es una sugerencia basada en los resultados de un análisis estadístico que guía la toma de decisiones en un contexto administrativo. Se deriva de la interpretación de los coeficientes y la significancia de las variables en un modelo de regresión.",
+      "formulacion_matematica_latex": "No aplicable",
+      "aplicacion_administrativa": "En administración, las recomendaciones gerenciales se utilizan para orientar las decisiones estratégicas y operativas, como la asignación de recursos o la implementación de políticas.",
+      "fuente_principal": "Levin, 2012",
+      "localizador": "libro-estadistica-para-administracion-y-economia-levin-A22.txt (bloque 5)"
+    }
+  ],
+  "ideas_estructuradas": [
+    {
+      "concepto": "Regresión lineal simple",
+      "tiempo_editorial": "introduccion",
+      "idea_base": "La regresión lineal simple es un método estadístico fundamental para modelar la relación entre dos variables.",
+      "argumento_academico": "Este método permite a los gerentes comprender y predecir cómo una variable independiente afecta a una variable dependiente, lo que es crucial para la toma de decisiones informadas.",
+      "fuente": "Anderson, Sweeney y Williams, 2012",
+      "ubicacion": "libro-estadistica-para-negocios-y-economia-anderson-sw-A22.txt (bloque 5)"
+    },
+    {
+      "concepto": "Regresión lineal múltiple",
+      "tiempo_editorial": "desarrollo",
+      "idea_base": "La regresión lineal múltiple extiende el análisis a múltiples variables independientes, proporcionando una visión más completa de las relaciones en los datos.",
+      "argumento_academico": "Al incorporar varias variables, este método permite identificar los factores más influyentes en un resultado, lo que es esencial para la gestión estratégica.",
+      "fuente": "Levin, 2012",
+      "ubicacion": "libro-estadistica-para-administracion-y-economia-levin-A22.txt (bloque 5)"
+    },
+    {
+      "concepto": "Mínimos cuadrados",
+      "tiempo_editorial": "desarrollo",
+      "idea_base": "El método de mínimos cuadrados es esencial para la estimación de los parámetros en modelos de regresión.",
+      "argumento_academico": "Al minimizar la suma de los cuadrados de los errores, este método proporciona estimadores eficientes y sin sesgo, lo que es fundamental para la validez de las predicciones.",
+      "fuente": "Anderson, Sweeney y Williams, 2012",
+      "ubicacion": "libro-estadistica-para-negocios-y-economia-anderson-sw-A22.txt (bloque 5)"
+    },
+    {
+      "concepto": "ANOVA",
+      "tiempo_editorial": "desarrollo",
+      "idea_base": "El ANOVA es una herramienta crucial para comparar la variabilidad entre y dentro de grupos.",
+      "argumento_academico": "Al descomponer la varianza total, el ANOVA permite identificar si existen diferencias significativas entre grupos, lo que es útil para evaluar la efectividad de diferentes estrategias.",
+      "fuente": "Levin, 2012",
+      "ubicacion": "libro-estadistica-para-administracion-y-economia-levin-A22.txt (bloque 5)"
+    },
+    {
+      "concepto": "Prueba t",
+      "tiempo_editorial": "desarrollo",
+      "idea_base": "La prueba t es esencial para evaluar la significancia de los coeficientes en un modelo de regresión.",
+      "argumento_academico": "Al determinar si un coeficiente es significativamente diferente de cero, la prueba t ayuda a los gerentes a identificar los factores más importantes en un modelo.",
+      "fuente": "Wackerly et al., 2010",
+      "ubicacion": "libro-estadistica-matematica-con-aplicaciones-wackerly-A22.txt (bloque 1)"
+    },
+    {
+      "concepto": "Variable ficticia",
+      "tiempo_editorial": "desarrollo",
+      "idea_base": "Las variables ficticias permiten incorporar información categórica en modelos de regresión.",
+      "argumento_academico": "Al representar características específicas, las variables ficticias proporcionan una visión más completa de las relaciones en los datos, lo que es útil para la toma de decisiones.",
+      "fuente": "Levin, 2012",
+      "ubicacion": "libro-estadistica-para-administracion-y-economia-levin-A22.txt (bloque 5)"
+    },
+    {
+      "concepto": "Predicción puntual",
+      "tiempo_editorial": "desarrollo",
+      "idea_base": "La predicción puntual es el valor específico que se predice para la variable dependiente.",
+      "argumento_academico": "Al sustituir los valores de las variables independientes en la ecuación del modelo, la predicción puntual proporciona una estimación concreta del resultado, lo que es útil para la planificación y la toma de decisiones.",
+      "fuente": "Levin, 2012",
+      "ubicacion": "libro-estadistica-para-administracion-y-economia-levin-A22.txt (bloque 5)"
+    },
+    {
+      "concepto": "Recomendación gerencial",
+      "tiempo_editorial": "conclusion",
+      "idea_base": "Las recomendaciones gerenciales se derivan de los resultados de los análisis estadísticos.",
+      "argumento_academico": "Al interpretar los coeficientes y la significancia de las variables, las recomendaciones gerenciales guían las decisiones estratégicas y operativas, lo que es esencial para el éxito organizacional.",
+      "fuente": "Levin, 2012",
+      "ubicacion": "libro-estadistica-para-administracion-y-economia-levin-A22.txt (bloque 5)"
+    }
+  ],
+  "estructura_tres_tiempos": {
+    "introduccion": "La actividad 22 se centra en la aplicación de técnicas de regresión lineal simple y múltiple para resolver problemas administrativos y estadísticos. La regresión lineal permite modelar la relación entre una variable dependiente y una o más variables independientes, facilitando la predicción y la toma de decisiones basadas en datos. En esta actividad, se aplican métodos de mínimos cuadrados para estimar los parámetros del modelo, se realiza inferencia estadística a través de ANOVA y se evalúa la significancia de las variables mediante pruebas t. Los resultados de estos análisis proporcionan insights valiosos para la gestión administrativa, permitiendo a los gerentes tomar decisiones informadas en áreas como la depreciación de activos, la fijación de precios y la compensación salarial.",
+    "desarrollo_base_conceptual": "La regresión lineal simple modela la relación entre una variable dependiente y una variable independiente mediante una ecuación lineal. El modelo se expresa como Y = β0 + β1X + ε, donde Y es la variable dependiente, X es la variable independiente, β0 es el intercepto, β1 es el coeficiente de la variable independiente y ε es el término de error. La regresión lineal múltiple extiende este análisis a múltiples variables independientes, modelando la relación como Y = β0 + β1X1 + β2X2 +... + βkXk + ε. El método de mínimos cuadrados se utiliza para estimar los parámetros del modelo, minimizando la suma de los cuadrados de las diferencias entre los valores observados y los valores predichos. El ANOVA se utiliza para comparar la variabilidad entre grupos y dentro de grupos, determinando si existen diferencias significativas entre las medias de dos o más grupos. La prueba t se utiliza para evaluar la significancia de los coeficientes en un modelo de regresión, determinando si un coeficiente es significativamente diferente de cero.",
+    "desarrollo_guia_aplicada": "Para resolver los ejercicios propuestos, se deben seguir los siguientes pasos: 1) Desarrollar un diagrama de dispersión para visualizar la relación entre las variables. 2) Aplicar el método de mínimos cuadrados para estimar los parámetros del modelo de regresión. 3) Realizar inferencia estadística mediante ANOVA para evaluar la significancia del modelo. 4) Aplicar la prueba t para evaluar la significancia de cada coeficiente. 5) Realizar predicciones puntuales utilizando el modelo ajustado. 6) Derivar recomendaciones gerenciales basadas en los resultados del análisis.",
+    "conclusion": "Los hallazgos de esta actividad proporcionan una comprensión profunda de la aplicación de técnicas de regresión lineal en la gestión administrativa. Los modelos de regresión desarrollados permiten predecir valores futuros y tomar decisiones informadas en áreas críticas como la depreciación de activos, la fijación de precios y la compensación salarial. Las recomendaciones gerenciales derivadas de los análisis estadísticos guían las decisiones estratégicas y operativas, contribuyendo al éxito organizacional. Sin embargo, es importante considerar las limitaciones metodológicas, como la dependencia de los supuestos del modelo y la calidad de los datos, al interpretar los resultados."
+  },
+  "fichas_investigacion_articulos": [
+    {
+      "titulo_caso_o_articulo": "Análisis de la depreciación de activos en función del kilometraje",
+      "autores_anio": "Anderson, Sweeney y Williams, 2012",
+      "problema_administrativo": "Determinar la relación entre la depreciación de un activo y el kilometraje recorrido.",
+      "metodologia_estadistica": "Regresión lineal simple, mínimos cuadrados, ANOVA",
+      "hallazgos_y_decision": "Se encontró una relación lineal significativa entre la depreciación y el kilometraje. Los gerentes pueden utilizar este modelo para predecir la depreciación futura y tomar decisiones informadas sobre el mantenimiento o reemplazo de activos."
+    },
+    {
+      "titulo_caso_o_articulo": "Efecto del tabaquismo, la edad y la presión arterial sobre el riesgo cardiovascular",
+      "autores_anio": "Levin, 2012",
+      "problema_administrativo": "Evaluar el impacto del tabaquismo, la edad y la presión arterial en el riesgo cardiovascular.",
+      "metodologia_estadistica": "Regresión lineal múltiple, variables ficticias, prueba t",
+      "hallazgos_y_decision": "Se identificaron efectos significativos del tabaquismo, la edad y la presión arterial sobre el riesgo cardiovascular. Los gerentes pueden utilizar estos resultados para implementar políticas de salud y seguridad en el trabajo."
+    },
+    {
+      "titulo_caso_o_articulo": "Relación entre la edad y la compensación salarial de los directivos CEO",
+      "autores_anio": "Levin, 2012",
+      "problema_administrativo": "Determinar si existe una relación entre la edad y la compensación salarial de los directivos CEO.",
+      "metodologia_estadistica": "Regresión lineal simple, prueba t",
+      "hallazgos_y_decision": "Se encontró una relación significativa entre la edad y la compensación salarial. Los gerentes pueden utilizar estos resultados para revisar y ajustar las políticas de compensación."
+    }
+  ],
+  "_meta": {
+    "activity": 22,
+    "code": "A22",
+    "module_id": "1793",
+    "engine": "Amazon Nova Pro",
+    "requested_deployment": "us.amazon.nova-pro-v1:0",
+    "provider_model": "us.amazon.nova-pro-v1:0",
+    "finish_reason": "end_turn",
+    "prompt_tokens": 3477,
+    "completion_tokens": 4719,
+    "total_tokens": 8196,
+    "fragments_count": 67,
+    "sources_count": 12,
+    "elapsed_seconds": 81.99,
+    "timestamp": "2026-10-25T22:38:04.093102+00:00"
+  }
+}

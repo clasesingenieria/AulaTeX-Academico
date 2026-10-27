@@ -1,0 +1,538 @@
+Fuente bibliográfica: Estadística aplicada a los negocios y la economía - Lind, Marchal y Wathen. 15.ª edición.pdf
+Actividad: 2 (1.2 Investigación 3% Tarea)
+Palabras clave: muestreo, encuesta, cuotas, aleatorio, tamaño efectivo, no respuesta, ponderación, representatividad
+
+[Bloque seleccionado #21 | relevancia=10]
+Pagina 20
+Contenido
+xix
+6.3 Variables aleatorias
+189
+Variable aleatoria discreta
+190
+Variable aleatoria continua
+190
+6.4 Media, varianza y desviación estándar
+de una distribución de probabilidad discreta
+191
+Media
+191
+Varianza y desviación estándar
+191
+Ejercicios
+193
+6.5 Distribución de probabilidad binomial
+195
+¿Cómo se calcula una probabilidad binomial?
+196
+Tablas de probabilidad binomial
+198
+Ejercicios
+201
+Distribuciones de probabilidad binomial
+acumulada
+202
+Ejercicios
+203
+6.6 Distribución de probabilidad
+hipergeométrica
+204
+Ejercicios
+207
+6.7 Distribución de probabilidad de Poisson
+207
+Ejercicios
+212
+Resumen del capítulo
+212
+Ejercicios del capítulo
+213
+Ejercicios de la base de datos
+218
+Comandos de software
+219
+Respuestas a las autoevaluaciones
+221
+Capítulo
+7 Distribuciones de probabilidad
+continua
+222
+7.1 Introducción
+223
+7.2 La familia de distribuciones de probabilidad
+uniforme
+223
+Ejercicios
+226
+7.3 La familia de distribuciones de probabilidad
+normal
+227
+7.4 Distribución de probabilidad normal
+estándar
+229
+Aplicaciones de la distribución normal
+estándar
+231
+Regla empírica
+231
+Ejercicios
+233
+Determinación de áreas bajo la curva normal
+233
+Ejercicios
+236
+Ejercicios
+239
+Ejercicios
+241
+7.5 Aproximación de la distribución normal
+a la binomial
+242
+Factor de corrección de continuidad
+242
+Cómo aplicar el factor de corrección
+244
+Ejercicios
+245
+7.6 La familia de distribuciones exponenciales
+246
+Ejercicios
+250
+Resumen del capítulo
+251
+Ejercicios del capítulo
+252
+Ejercicios de la base de datos
+256
+Comandos de software
+256
+Respuestas a las autoevaluaciones
+257
+Repaso de los capítulos 5 a 7
+258
+Glosario
+259
+Problemas
+260
+Casos
+261
+Test de práctica
+263
+Capítulo
+8 Métodos de muestreo y teorema
+central del límite
+265
+8.1 Introducción
+266
+8.2 Métodos de muestreo
+266
+Razones para muestrear
+266
+Muestreo aleatorio simple
+267
+Muestreo aleatorio sistemático
+270
+Muestreo aleatorio estratificado
+270
+Muestreo por conglomerados
+271
+Ejercicios
+272
+8.3 “Error” de muestreo
+274
+8.4 Distribución muestral de la media
+275
+Ejercicios
+278
+8.5 Teorema central del límite
+279
+Ejercicios
+285
+8.6 Uso de la distribución muestral
+de la media
+286
+Ejercicios
+289
+Resumen del capítulo
+289
+Clave de pronunciación
+290
+Ejercicios del capítulo
+290
+Ejercicios de la base de datos
+295
+Comandos de software
+295
+Respuestas a las autoevaluaciones
+296
+
+[Bloque seleccionado #292 | relevancia=19]
+Pagina 291
+8.1 Introducción
+En los capítulos 2 a 4 se hizo hincapié en las técnicas para describir datos. Con el fin de ilus-
+trar dichas técnicas, se organizaron las ganancias sobre 180 vehículos que el mes pasado ven-
+dió Applewood Auto Group en una distribución de frecuencias para calcular las diversas medi-
+das de ubicación y dispersión. Dichas medidas, como la media y la desviación estándar, des-
+criben el precio de venta habitual y la dispersión de las ganancias. En esos capítulos se des-
+tacó la descripción de la condición de los datos: se describió algo que ya había sucedido.
+En el capítulo 5 se comienza a establecer el fundamento de la inferencia estadística con
+el estudio de la probabilidad. Recuerde que, en la inferencia estadística, el objetivo es deter-
+minar algo sobre una población a partir sólo de una muestra. La población es todo el grupo de
+individuos u objetos en estudio, y la muestra es una parte o subconjunto de dicha población.
+El capítulo 6 amplía los conceptos de probabilidad al describir tres distribuciones de probabi-
+lidad discreta: binomial, hipergeométrica y de Poisson. En el capítulo 7 se describen tres dis-
+tribuciones de probabilidad continua: la uniforme, la normal y la exponencial. Las distribucio-
+nes de probabilidad abarcan todos los posibles resultados de un experimento, así como la
+probabilidad asociada con cada resultado. Mediante las distribuciones de probabilidad se eva-
+luó la posibilidad de que algo ocurra en el futuro.
+En este capítulo comienza el estudio del muestreo, herramienta para inferir algo sobre una
+población. Primero se analizan los métodos para seleccionar una muestra de una población.
+Después se construye una distribución de la media de la muestra para entender la forma en
+que las medias muestrales tienden a acumularse en torno a la media de la población. Por últi-
+mo, se demuestra que, para cualquier población, la forma de esta distribución de muestreo
+tiende a seguir la distribución de probabilidad normal.
+8.2 Métodos de muestreo
+Ya se mencionó en el capítulo 1 que el propósito de la estadística inferencial consiste en deter-
+minar algo sobre una población a partir de una muestra. Una muestra es una porción o parte
+de la población de interés. En muchos casos, el muestreo resulta más accesible que el estu-
+dio de toda la población. En esta sección se explican las razones principales para muestrear
+y, en seguida, diversos métodos para elegir una muestra.
+Razones para muestrear
+Cuando se estudian las características de una población, existen diversas razones prácticas
+para preferir algunas partes o m
+
+[Bloque seleccionado #293 | relevancia=12]
+Pagina 292
+Para ejemplificar el muestreo aleatorio simple y la selección, suponga que una población
+consta de 845 empleados de Nitra Industries, de la cual se va a elegir una muestra de 52
+empleados. Una forma de asegurarse de que todos los empleados de la población tienen las
+mismas posibilidades de que se les elija consiste en escribir primero el nombre de cada
+empleado en un papel y depositarlos todos en una caja. Después de mezclar todos los pape-
+les, se efectúa la primera selección tomando uno de la caja sin mirarlo. Se repite este proce-
+so hasta terminar de elegir la muestra de 52 empleados.
+Un método más conveniente de seleccionar una muestra aleatoria consiste en utilizar un
+número de identificación por cada empleado y una tabla de números aleatorios como la del
+apéndice B.6. Como su nombre lo indica, estos números se generaron mediante un proceso
+aleatorio (en este caso, con una computadora). La probabilidad de 0, 1, 2, …, 9 es la misma
+para cada dígito de un número. Por consiguiente, la probabilidad de que se seleccione al
+empleado 011 es la misma que tienen los empleados 722 o 382. Cuando se emplean núme-
+3.
+Es imposible verificar de manera física todos los elementos de la población. Algunas
+poblaciones son infinitas. Sería imposible verificar toda el agua del lago Erie en lo que se
+refiere a niveles de bacterias, así que se eligen muestras en diversos lugares de él. Las
+poblaciones de peces, aves, serpientes o mosquitos son grandes, y se desplazan, nacen
+y mueren de manera continua. En lugar de intentar contar todos los patos que hay en
+Canadá o todos los peces del lago Pontchartrain, se hacen aproximaciones mediante
+diversas técnicas: se cuentan todos los patos que hay en un estanque, capturados al azar,
+se revisan las cestas de los cazadores o se colocan redes en lugares predeterminados en
+el lago.
+4.
+Algunas pruebas son de naturaleza destructiva. Si los catadores de
+vino de Sutter Home Winery, California, se bebieran todo el vino para eva-
+luar la vendimia, acabarían con la cosecha y no quedaría nada disponible
+para la venta. En el área de producción industrial: las placas de acero,
+cables y productos similares deben contar con una resistencia mínima a
+la tensión. Para cerciorarse de que el producto satisface la norma mínima,
+el departamento de control de calidad elige una muestra de la producción.
+Cada pieza se somete a tensión hasta que se rompe y se registra el punto
+de ruptura (medido en libras por pulgada cuadrada). Es obvio que si se
+sometieran todos los cables o todas las placas a pruebas de resistencia
+a la tensión no habría prod
+
+[Bloque seleccionado #296 | relevancia=36]
+Pagina 295
+Por ejemplo, puede estudiar los gastos en publicidad de las 352 empresas más grandes
+de Estados Unidos. Suponga que el objetivo del estudio consiste en determinar si las empre-
+sas con altos rendimientos sobre el capital (una medida de rentabilidad) gastan en publicidad
+la mayor parte del dinero ganado que las empresas con un registro de bajo rendimiento o défi-
+cit. Para asegurar que la muestra sea una representación imparcial de las 352 empresas, éstas
+se deben agrupar de acuerdo con su rendimiento porcentual sobre el capital. La tabla 8-1
+incluye los estratos y las frecuencias relativas. Si aplicara el muestreo aleatorio simple, obser-
+ve que las empresas del tercero y cuarto estratos tienen una probabilidad alta de que se les
+seleccione (0.87), mientras que las empresas de los demás estratos tienen menos (0.13).
+Podría no seleccionar ninguna de las empresas que aparecen en los estratos 1 o 5 sencilla-
+mente por azar. No obstante, el muestreo aleatorio estratificado garantizará que por lo menos
+una empresa de los estratos 1 o 5 aparezca en la muestra. Considere una selección de 50
+compañías para llevar a cabo un estudio minucioso. Entonces se seleccionará de forma alea-
+toria 1 (0.02  50) empresas del estrato 1; 5 (0.10  50), del estrato 2, etc. En este caso, el
+número de empresas en cada estrato es proporcional a la frecuencia relativa del estrato en la
+población. El muestreo estratificado ofrece la ventaja de que, en algunos casos, refleja con
+Primero se calcula k, que es el resultado de dividir el tamaño de la población entre el tama-
+ño de la muestra. En el caso de Computers Graphic, Inc., seleccione cada vigésimo recibo
+(2 000/100) de los cajones del archivo; al hacerlo evita el proceso de numeración. Si k no es
+un número entero, hay que redondearlo.
+Para seleccionar el primer recibo emplee el muestreo aleatorio simple. Por ejemplo, selec-
+cione un número de la tabla de números aleatorios entre 1 y k, en este caso, 20. Suponga que
+el número aleatorio resultó ser 18. Entonces, a partir del recibo 18, se seleccionará cada vigé-
+simo recibo (18, 38, 58, etc.) como muestra.
+Antes de aplicar el muestreo aleatorio sistemático, debe observar con cuidado el orden
+físico de la población. Cuando el orden físico se relaciona con la característica de la población,
+no debe aplicar el muestreo aleatorio sistemático. Por ejemplo, si los recibos se archivan en
+orden creciente de ventas, el muestreo aleatorio sistemático no garantiza una muestra aleato-
+ria. Debe aplicar otros métodos de muestreo.
+Muestreo aleatorio estratificado
+Cuando una población
+
+[Bloque seleccionado #297 | relevancia=19]
+Pagina 296
+mayor fidelidad las características de la población que el muestreo aleatorio simple o el mues-
+treo aleatorio sistemático.
+8.2 Métodos de muestreo
+271
+TABLA 8-1 Número seleccionado de una muestra aleatoria estratificada proporcional
+* 0.02 de 50  1, 0.10 de 50  5, etcétera.
+Probabilidad 
+Número de
+Frecuencia 
+Número
+Estrato
+(recuperación de capital)
+empresas
+relativa
+muestreado
+1
+30% y más
+8
+0.02
+1*
+2
+De 20% a 30%
+35
+0.10
+5*
+3
+De 10% a 20%
+189
+0.54
+27
+4
+De 0% a 10%
+115
+0.33
+16
+5
+Déficit
+5
+0.01
+1
+Total
+352
+1.00
+50
+Muestreo por conglomerados
+Otro tipo común de muestreo es el muestreo por conglomerados, que a menudo se emplea
+para reducir el costo de muestrear una población dispersa en cierta área geográfica.
+MUESTREO POR CONGLOMERADOS La población se divide en conglomerados a partir de los lími-
+tes naturales geográficos o de otra clase. A continuación se seleccionan los conglomerados
+al azar y se toma una muestra de forma aleatoria con elementos de cada grupo.
+Suponga que desea determinar la opinión de los residentes de algún estado con referen-
+cia a las políticas federales y estatales de protección ambiental. Seleccionar una muestra alea-
+toria de residentes y ponerse en contacto con cada persona requeriría mucho tiempo y resul-
+taría muy costoso. Sería mejor aplicar el muestreo por conglomerados y subdividir el estado
+en pequeñas unidades: condados o regiones. Con frecuencia se les conoce como unidades
+primarias.
+Suponga que dividió el estado en 12 unidades primarias, seleccionó al azar cuatro regio-
+nes, 2, 7, 4 y 12, y concentró su atención en estas unidades primarias. Usted puede tomar una
+muestra aleatoria de los residentes de cada una de estas regiones y entrevistarse con ellos
+(observe que se trata de una combinación de un muestreo por conglomerados y un muestreo
+aleatorio simple).
+El estudio de los métodos de muestreo de las secciones anteriores no incluye todos los
+métodos de muestreo disponibles para el investigador. Si usted emprendiera un proyecto de
+investigación importante de marketing, finanzas, contabilidad u otras áreas, necesitaría con-
+sultar libros dedicados exclusivamente a la teoría del muestreo y al diseño de muestras.
+12
+3
+1
+2
+4
+5
+6
+7
+8
+9
+10
+11
+Muchos métodos más de
+muestreo.
+Autoevaluación 8-2
+Consulte la autoevaluación 8-1 y la lista de alumnos de la página 269. Suponga que en un muestreo
+aleatorio sistemático se debe elegir a cada noveno estudiante de la clase. Al principio se elige al
+azar al cuarto estudiante de la lista. Dicho estudiante es el número 03. Recuerde que los números
+aleatorios comienzan con 00, en
+
+[Bloque seleccionado #300 | relevancia=13]
+Pagina 299
+a) Seleccione una muestra aleatoria de cuatro agentes. Los números aleatorios son: 02, 59, 51,
+25, 14, 29, 77, 69 y 18. ¿Qué distribuidores se incluirán en la muestra?
+b) Utilice la tabla de números aleatorios para seleccionar su propia muestra de cuatro agentes.
+c) Una muestra consta de cada séptimo distribuidor. El número 04 se selecciona como punto de
+partida. ¿Qué agentes se deben incluir en la muestra?
+8.3 “Error” de muestreo
+En la sección anterior se estudiaron métodos de muestreo útiles para seleccionar una mues-
+tra que constituya una representación imparcial o sin sesgos de la población. Es importante
+señalar que, en cada método, la selección de cualquier posible muestra de determinado tama-
+ño de una población tiene una posibilidad o probabilidad conocida, que constituye otra forma
+de describir un método de muestreo sin sesgo.
+Las muestras se emplean para determinar características de la población. Por ejemplo,
+con la media de una muestra se calcula la media de la población. No obstante, como la mues-
+tra forma parte o es una porción representativa de la población, es poco probable que su
+media sea exactamente igual a la media poblacional. Asimismo, es poco probable que la des-
+viación estándar de la muestra sea exactamente igual a la desviación estándar de la población.
+Por lo tanto, puede esperar una diferencia entre un estadístico de la muestra y el parámetro de
+la población correspondiente. Esta diferencia recibe el nombre de error de muestreo.
+274
+CAPÍTULO 8 Métodos de muestreo y teorema central del límite
+ERROR DE MUESTREO Diferencia entre el estadístico de una muestra y el parámetro de la
+población correspondiente.
+OA3 Definir un error de
+muestreo.
+Ejemplo
+Revise el ejemplo anterior de la página 268, en el que estudió el número de habitaciones ren-
+tadas en Foxtrot Inn, en Tryon, Carolina del Norte. La población se refiere al número de habita-
+ciones rentadas cada uno de los 30 días de junio de 2011. Determine la media de la población.
+Utilice Excel u otro software de estadística para seleccionar tres muestras aleatorias de cinco
+días. Calcule la media de cada muestra y compárela con la media poblacional. ¿Cuál es el error
+de muestreo en cada caso?
+Durante el mes se rentaron un total de 94 habitaciones. Por lo tanto, la media de las unidades
+que se rentaron por noche es de 3.13. Ésta es la media de la población. Este valor se designa
+con la letra griega .
+La primera muestra aleatoria de cinco noches dio como resultado el siguiente número de habi-
+taciones rentadas: 4, 7, 4, 3 y 1. La media de esta muestra de cinco noches es d
+
+[Bloque seleccionado #301 | relevancia=9]
+Pagina 300
+8.4 Distribución muestral de la media
+Debido a que existe la posibilidad de que se presente un error de muestreo cuando se em-
+plean los resultados del muestreo para aproximar un parámetro poblacional, ¿cómo hacer un
+pronóstico preciso relacionado con el posible éxito de un nuevo dentífrico u otro producto
+sobre la única base de los resultados del muestreo? ¿Cómo puede el departamento de con-
+trol de calidad de una compañía de producción en serie enviar un cargamento de microchips
+a partir de una muestra de 10 chips? ¿Cómo pueden las organizaciones electorales de CNN-
+USA Today o ABC News-Washington Post hacer pronósticos precisos sobre la elección presi-
+dencial con base en una muestra de 1 200 electores registrados de una población de cerca de
+90 millones? Para responder estas preguntas, primero hay que precisar el concepto de distri-
+bución muestral de la media.
+Las medias muestrales del ejemplo anterior varían de una muestra a la siguiente. La media
+de la primera muestra de 5 días fue de 3.80 habitaciones, y la media de la segunda muestra
+fue de 3.40 habitaciones. La media poblacional fue de 3.13 habitaciones. Si se organizan las
+medias de todas las muestras posibles de 5 días en una distribución de probabilidad, el resul-
+tado recibe el nombre de distribución muestral de la media.
+8.4 Distribución muestral de la media
+275
+En la tercera muestra aleatoria, la media fue de 1.8, y el error de muestro fue de 1.33.
+Cada una de estas diferencias, 0.67, 0.27 y 1.33, representa el error de muestreo come-
+tido al calcular la media de la población. A veces estos errores son valores positivos, lo cual
+indica que la media muestral sobreexcedió la media poblacional; otras veces son valores nega-
+tivos, lo cual indica que la media muestral resultó inferior a la media poblacional.
+En este caso, con una población de 30 valores y muestras de 5 valores, existe una gran
+cantidad de muestras posibles, 142 506, para ser exactos. Para calcular este valor se aplica la
+fórmula de las combinaciones (5-10), de la página 174. Cada una de las 142 506 diferentes
+muestras cuenta con las mismas posibilidades de que se le seleccione. Cada muestra puede
+tener una media muestral diferente y, por consiguiente, un error de muestreo distinto. El valor
+del error de muestreo se basa en el valor particular de las 142 506 muestras posibles seleccio-
+nadas. Por consiguiente, los errores de muestreo son aleatorios y se presentan al azar. Si deter-
+minara la suma de estos errores de muestreo en una gran cantidad de muestras, el resultado
+se aproximaría mucho a cero. Sucede así por
+
+[Bloque seleccionado #324 | relevancia=10]
+Pagina 323
+Los siguientes ejemplos ilustran los estimadores puntuales de medias poblacionales.
+1.
+El turismo constituye una fuente importante de ingresos para muchos países caribeños,
+como Barbados. Suponga que la Oficina de Turismo de Barbados desea un cálculo apro-
+ximado de la cantidad media que gastan los turistas que visitan el país. No resultaría via-
+ble ponerse en contacto con cada turista. Por consiguiente, se selecciona al azar a 500
+turistas en el momento en que salen del país y se les pregunta los detalles de los gastos
+que realizaron durante su visita a la isla. La cantidad media que gastó la muestra de 500
+turistas constituye un cálculo aproximado del parámetro poblacional desconocido. Es
+decir, la media muestral es el estimador puntual de la media poblacional.
+9.1 Introducción
+En el capítulo anterior se inició el estudio de la estadística inferencial. En él se presentaron las
+razones y métodos de muestreo. Las razones del muestreo son las siguientes:
+• Entrar en contacto con toda la población consume demasiado tiempo.
+• El costo de estudiar todos los elementos de la población es muy alto.
+• Por lo general, los resultados de la muestra resultan adecuados.
+• Algunas pruebas resultan negativas.
+• Es imposible revisar todos los elementos.
+Existen varios métodos de muestreo. El aleatorio simple es el que más se utiliza. En este
+tipo de muestreo, cada miembro de la población posee las mismas posibilidades de ser selec-
+cionado como parte de la muestra. Otros métodos de muestreo son el sistemático, el estrati-
+ficado y el muestreo por conglomerados.
+El capítulo 8 presenta información relacionada con la media, la desviación estándar o la
+forma de la población. En la mayoría de las situaciones de negocios, dicha información no se
+encuentra disponible. En realidad, el propósito del muestreo es calcular de forma aproximada
+algunos de estos valores. Por ejemplo, se selecciona una muestra de una población y se uti-
+liza la media de la muestra para aproximar la media de la población.
+En este capítulo se estudian diversos aspectos importantes del muestreo. El primer paso
+es el estudio del estimador puntual. Un estimador puntual consiste en un solo valor (punto)
+deducido de una muestra para estimar el valor de una población. Por ejemplo, suponga que
+elige una muestra de 50 ejecutivos de nivel medio y le pregunta a cada uno de ellos la cantidad
+de horas que laboró la semana pasada. Se calcula la media de esta muestra de 50 y se utiliza
+el valor de la media muestral como estimador puntual de la media poblacional desconocida.
+Ahora bien, un estimador puntual
+
+[Bloque seleccionado #356 | relevancia=20]
+Pagina 355
+das. Es posible aplicar diversos métodos de muestreo, como el muestreo aleatorio simple, sistemático,
+estratificado y por conglomerados.
+Sin que importe el método de muestreo elegido, pocas veces un estadístico de la muestra es igual
+al parámetro poblacional correspondiente. Por ejemplo, la media de una muestra casi nunca es exac-
+tamente la misma que la media de la población. La diferencia entre este estadístico muestral y el pará-
+metro poblacional es el error de muestreo.
+En el capítulo 8 se demostró que, al seleccionar todas las muestras posibles de determinado tama-
+ño de una población y calcular la media de estas muestras, el resultado será exactamente igual a la
+media poblacional; también, que la dispersión en la distribución de las medias muestrales es igual a la
+desviación estándar de la población dividida entre la raíz cuadrada del tamaño de la muestra. Este
+resultado recibe el nombre de error estándar de la media. Existe menos dispersión en la distribución de
+las medias muestrales que en las poblacionales. Además, conforme se incrementa el número de obser-
+vaciones en cada muestra, se reduce la dispersión en la distribución del muestreo.
+El teorema central del límite es el fundamento de la inferencia estadística. Establece que si la
+población de la que se seleccionan las muestras sigue la distribución de probabilidad normal, la distri-
+bución de las medias muestrales también seguirá la distribución normal. Si la población no es nor-
+mal, se aproximará a la distribución de probabilidad normal conforme se incremente el tamaño de la
+muestra.
+En el capítulo 9 se explican los estimadores puntuales y los estimadores por intervalo. Un estima-
+dor puntual es un solo valor que se utiliza para calcular un parámetro de la población. Un estimador por
+intervalo es un conjunto de valores en el que se espera que se presente el parámetro de la población.
+Por ejemplo, con base en una muestra, se calcula que el ingreso anual medio de los pintores profesio-
+nales de casas de Atlanta, Georgia (la población), es de $45 300. Dicho estimador recibe el nombre de
+estimador puntual. Si establece que la media de la población probablemente se encuentre en el inter-
+valo de $45 200 a $45 400, dicho estimador se denomina estimador por intervalo. Los dos puntos extre-
+mos ($45 200 y $ $45 400) son los límites de confianza de la media poblacional. Se describió el
+procedimiento para establecer un intervalo de confianza para medias grandes y pequeñas, así como
+para proporciones muestrales. En este capítulo también se expuso un método para determinar el tama-
+ño nece
+
+[Bloque seleccionado #769 | relevancia=10]
+Pagina 768
+• General Motors compra parabrisas de muchos proveedores. GM insiste en que los lotes
+sean de 1 000, y está dispuesto a aceptar 50 o menos defectos en cada lote, es decir, 5%
+de defectos. Le gustaría desarrollar un procedimiento de muestreo para verificar que los
+embarques que recibe cumplan con el criterio.
+El hilo conductor en estos casos es la necesidad de verificar que un producto que entra
+a la planta cumpla con los requisitos estipulados. La situación es semejante a una puerta de
+mosquitero, que permite que entre el aire caliente del verano al recinto mientras mantiene
+afuera a los mosquitos. El muestreo de aceptación permite que entren los lotes con calidad
+aceptable al área de manufactura y se queden afuera los que no son aceptables.
+Por supuesto, la situación en los negocios modernos es más compleja. El comprador
+quiere protección para no aceptar lotes inferiores al estándar de calidad. La mejor protección
+contra la calidad inferior es una inspección de 100%. Desafortunadamente, con frecuencia el
+costo de una inspección de 100% es prohibitivo. Otro problema con la verificación de cada
+artículo es que la prueba puede ser destructiva. Si se probaran todos los focos hasta que se
+fundieran antes de su embarque, no quedaría ninguno para vender. Asimismo, la inspección
+de 100% quizá permita identificar todos los defectos. Por lo tanto, en situaciones prácticas,
+pocas veces se lleva a cabo una inspección completa.
+El procedimiento habitual es examinar la calidad de las partes de entrada mediante un
+plan de muestreo estadístico. De acuerdo con este plan, se selecciona al azar una muestra de
+n unidades de los lotes de N unidades (la población). Esto se denomina muestreo de acep-
+tación. La inspección determinará el número de defectos que hay en la muestra. Este núme-
+ro se compara con uno predeterminado, denominado número crítico o número de acepta-
+ción. Por lo general, el número de aceptación se designa c. Si el número de defectos en la
+muestra de tamaño n es menor o igual a c, el lote se acepta. Si el número de defectos exce-
+de c, el lote se rechaza y se regresa al proveedor, o tal vez se someta a una inspección com-
+pleta.
+El muestreo de aceptación es un proceso de toma de decisiones. Hay dos decisiones
+posibles: aceptar o rechazar el lote. Además, hay dos situaciones en las cuales se toma la
+decisión: el lote es bueno o el lote es malo. Éstos son estados de la naturaleza. Si el lote es
+bueno y la inspección de la muestra revela que el lote es bueno, o si el lote es malo y la ins-
+pección de la muestra indica que es malo, se toma una deci

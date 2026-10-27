@@ -1,0 +1,80 @@
+% Adaptador local de póster ITESCA. Requiere clase beamer; no es un article.
+% Hereda el núcleo real sin copiarlo ni modificar sus configuraciones globales.
+% Hook por basename de LaTeX: después de config_poster y antes de imports/cmd.
+\providecommand{\itescapostertitle}{Estadística aplicada para la administración}
+\providecommand{\itescaposterauthor}{Martín Jonathan de la Cruz Muñoz}
+\providecommand{\itescaposterstudentid}{26130503}
+\providecommand{\itescaposterdate}{25 de octubre de 2026}
+\providecommand{\itescapostercourse}{Estadística aplicada para la administración}
+\providecommand{\itescaposterteacher}{Dra. Yoana Elizeth Tauitmes Delgado}
+\providecommand{\itescaposterwidth}{29.7}
+\providecommand{\itescaposterheight}{42}
+\providecommand{\itescapostercolumns}{1}
+\providecommand{\itescaposterfontsize}{12}
+\def\documenttitle{\itescapostertitle}
+\AddToHookNext{file/config_poster.tex/after}{%
+  \def\posterwidth{\itescaposterwidth}
+  \def\posterheight{\itescaposterheight}
+  \def\colnumbers{\itescapostercolumns}
+  \def\colseparation{0.025\paperwidth}
+  \def\documentfontsize{\itescaposterfontsize}
+  \def\fontdocument{lmodern}
+  \def\stylecitereferences{custom}
+  \definecolor{itescaPosterRed}{HTML}{8F1117}
+  \definecolor{itescaPosterAccent}{HTML}{D70F18}
+  \definecolor{itescaPosterInk}{HTML}{181818}
+  \definecolor{itescaPosterPaper}{HTML}{F4F7F7}
+  \definecolor{itescaPosterTeal}{HTML}{006B67}
+  \setbeamercolor{normal text}{fg=itescaPosterInk,bg=white}
+  \setbeamercolor{structure}{fg=itescaPosterRed}
+  \setbeamercolor{headline}{fg=itescaPosterInk,bg=white}
+  \setbeamercolor{headline rule}{bg=itescaPosterAccent}
+  \setbeamercolor{block title}{fg=itescaPosterRed,bg=white}
+  \setbeamercolor{block body}{fg=itescaPosterInk,bg=itescaPosterPaper}
+  \setbeamerfont{headline title}{size=\fontsize{24}{27},series=\bfseries}
+  \setbeamerfont{headline author}{size=\fontsize{10.5}{12}}
+  \setbeamerfont{headline institute}{size=\fontsize{10}{12}}
+  \setbeamerfont{block title}{size=\fontsize{14}{16},series=\bfseries}
+  \setbeamerfont{block body}{size=\fontsize{12}{14.2}}
+  \setbeamerfont{footline}{size=\fontsize{8.5}{10}}
+}
+\AddToHookNext{file/imports_poster.tex/after}{%
+  \usepackage{fontspec}
+  \setmainfont{Arial}\setsansfont{Arial}
+  \usefonttheme{professionalfonts}
+  \usepackage[authoryear,round]{natbib}
+  \setcitestyle{citesep={;}}
+  \usepackage{tikz}
+  \usetikzlibrary{arrows.meta,positioning,calc,babel}
+}
+\makeatletter
+\def\input@path{{aulaTEX/base/Plantilla-Informe/}}
+\makeatother
+\input{aulaTEX/base/Plantilla-Informe/template_poster.tex}
+% Marco local de ancho útil explícito; evita la fila exterior de columnas vacías
+% del entorno poster. Usa el mismo núcleo beamerposter, cabecera, pie y bloques.
+\setbeamersize{text margin left=\sepwidth,text margin right=\sepwidth}
+\newenvironment{itescaposter}[1][]{%
+  \begin{frame}[fragile,t,environment=itescaposter,#1]%
+}{\end{frame}}
+\author{\texorpdfstring{\itescaposterauthor\quad Matrícula: \itescaposterstudentid}{\itescaposterauthor; Matrícula: \itescaposterstudentid}}
+\institute{Maestría en Gestión Administrativa\\\itescapostercourse\\\itescaposterteacher}
+\logoleft{width=3.4cm}{ITESCA/assets-itesca/web/logo-itesca-contorno.png}
+\footercontent{\textbf{VARIANTE LOCAL DE MUESTRA}\quad GGEA01\quad\itescaposterdate}
+\hypersetup{hidelinks,breaklinks=true,pdftitle={\itescapostertitle},pdfauthor={\itescaposterauthor},pdfsubject={Infografía alternativa local de muestreo; sin envío a plataforma}}
+% Espaciado local de bloques. El núcleo aporta beamerposter, columnas, cabecera,
+% pie, comandos matemáticos, imágenes, tablas y tamaño beamerposter.
+\setbeamertemplate{block begin}{%
+  \begin{beamercolorbox}[wd=\linewidth,sep=0.09cm]{block title}%
+    \usebeamerfont{block title}\insertblocktitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=\linewidth,sep=0.18cm]{block body}%
+    \usebeamerfont{block body}\justifying
+    \setlength{\parindent}{0pt}\setlength{\parskip}{0.35em}%
+}
+\setbeamertemplate{block end}{\end{beamercolorbox}\vspace{0.22cm}}
+\newenvironment{itescaposterpanel}[1]{%
+  \setbeamercolor{block title}{fg=itescaPosterTeal,bg=white}%
+  \setbeamerfont{block title}{size=\fontsize{13}{15},series=\bfseries}%
+  \begin{block}{#1}%
+}{\end{block}}

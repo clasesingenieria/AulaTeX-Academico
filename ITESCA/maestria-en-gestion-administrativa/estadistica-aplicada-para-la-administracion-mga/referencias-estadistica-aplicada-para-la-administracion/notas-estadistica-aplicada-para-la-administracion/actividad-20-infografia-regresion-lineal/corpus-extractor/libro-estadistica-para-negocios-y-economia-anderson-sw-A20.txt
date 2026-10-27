@@ -1,0 +1,550 @@
+Fuente bibliográfica: Estadística para negocios y economía - Anderson, Sweeney y Williams. 11.ª edición.pdf
+Actividad: 20 (7.1 Infografía Equipo 3% Tarea)
+Palabras clave: regresión lineal simple, regresión lineal múltiple, mínimos cuadrados, correlación, coeficiente de determinación, ANOVA, variables ficticias
+
+[Bloque seleccionado #20 | relevancia=12]
+Pagina 19
+ 
+Contenido 
+xvii
+Recolección de datos 509
+Supuestos para el análisis de varianza 510
+Análisis de varianza: una perspectiva conceptual 510
+13.2  Análisis de varianza y el diseño completamente aleatorizado 513
+Estimación de la varianza poblacional entre tratamientos 514
+Estimación de la varianza poblacional dentro de los tratamientos 515
+Comparación de las estimaciones de las varianzas: la prueba F 516
+Tabla de ANOVA 518
+Resultados de computadora para el análisis de varianza 519
+Prueba para la igualdad de k medias poblacionales: un estudio 
+observacional 520
+13.3  Procedimientos de comparación múltiple 524
+LSD de Fisher 524
+Tasas de error tipo I 527
+13.4  Diseño de bloques aleatorizado 530
+Prueba de estrés para controladores de tráfico aéreo 531
+Procedimiento ANOVA 532
+Cálculos y conclusiones 533
+13.5  Experimento factorial 537
+Procedimiento ANOVA 539
+Cálculos y conclusiones 539
+Resumen 544
+Glosario 545
+Fórmulas clave 545
+Ejercicios complementarios 547
+Caso a resolver 1 Wentworth Medical Center 552
+Caso a resolver 2 Compensación para profesionales de ventas 553
+Apéndice 13.1 Análisis de varianza con Minitab 554
+Apéndice 13.2 Análisis de varianza con Excel 555
+Apéndice 13.3  Análisis de un diseño completamente aleatorizado 
+usando StatTools 557
+Capítulo 14 Regresión lineal simple  560
+Estadística en la práctica. Alliance Data Systems 561
+14.1  Modelo de regresión lineal simple 562
+Modelo de regresión y ecuación de regresión 562
+Ecuación de regresión estimada 563
+14.2  Método de mínimos cuadrados 565
+14.3  Coeficiente de determinación 576
+Coeficiente de correlación 579
+14.4  Supuestos del modelo 583
+14.5  Prueba de significancia 585
+Estimación de σ 2 585
+Prueba t 586
+
+[Bloque seleccionado #599 | relevancia=14]
+Pagina 598
+564 
+Capítulo 14  Regresión lineal simple
+regresión, se obtiene la ecuación de regresión estimada. La ecuación de regresión estimada de 
+una regresión lineal simple se da a continuación.
+ECUACIÓN DE REGRESIÓN LINEAL SIMPLE ESTIMADA
+ 
+yˆ  b0  b1x 
+(14.3)
+A la gráﬁ ca de la ecuación de regresión lineal simple estimada se le llama recta de regre-
+sión estimada; b0 es la intersección con el eje y, y b1 es la pendiente. En la sección siguiente 
+se muestra el uso del método de mínimos cuadrados para calcular los valores de b0 y b1 en la 
+ecuación de regresión estimada.
+En general, yˆ es el estimador puntual de E(y), el valor medio de las y para un valor dado 
+de x. Por tanto, para estimar la media o el valor esperado de las ventas trimestrales de todos los 
+restaurantes situados cerca de los campus con 10 000 estudiantes, Armand’s tendrá que sustituir 
+x por 10 000 en la ecuación (14.3). Sin embargo, en algunos casos a la cadena le interesará pre-
+decir las ventas de un determinado restaurante. Por ejemplo, suponga que desea pronosticar las 
+ventas trimestrales del que se encuentra cerca de Talbot College, una escuela con 10 000 estu-
+diantes. Resulta que la mejor estimación de la y que corresponde a un determinado valor de x es 
+también la proporcionada por yˆ. Por tanto, para predecir las ventas trimestrales del restaurante 
+en cuestión, Armand’s también sustituirá la x de la ecuación (14.3) por 10 000.
+Como el valor de yˆ proporciona tanto una estimación puntual de E(y) para un valor dado 
+de x, como una estimación puntual de un solo valor de y para un valor dado de x, a yˆ se le llama-
+rá simplemente valor estimado de y. En la ﬁ gura 14.2 se presenta en forma resumida el proceso 
+de estimación en la regresión lineal simple.
+FIGURA 14.2  Proceso de estimación en la regresión lineal simple
+Modelo de regresión
+y  0  1x  
+Ecuación de regresión
+E(y)  0  1x
+Parámetros desconocidos
+0, 1
+Datos muestrales
+b0 y b1
+proporcionan estimaciones
+de 0 y  1
+Ecuación de regresión
+estimada
+yˆ  b0  b1x
+Estadísticos muestrales
+b0, b1
+La estimación de 0 y 1 es 
+un proceso estadístico muy 
+parecido a la estimación 
+de μ estudiada en el 
+capítulo 7. Tanto 0 como 
+1 son los parámetros de 
+interés desconocidos, y 
+b0 y b1 son los estadísticos 
+muestrales que se usan para 
+estimar los parámetros.
+
+[Bloque seleccionado #614 | relevancia=12]
+Pagina 613
+ 
+14.3  Coeficiente de determinación 
+579
+Ahora se verá como se usan estas tres sumas de cuadrados, STC, SCR y SCE, para obtener 
+una medida de la bondad de ajuste de la ecuación de regresión estimada. Esta ecuación se 
+ajustaría perfectamente a los datos si cada uno de los valores de la variable dependiente yi se en-
+contrara sobre la recta de regresión. En este caso, para todas las observaciones se tendría que 
+yi  yˆi sería igual a 0, con lo que SCE  0. Como STC  SCR  SCE, vemos que para que haya 
+un ajuste perfecto, SCR debe ser igual a STC, y el cociente (SCR/STC) debe ser igual a 1. Cuando 
+los ajustes son malos, se tendrán valores altos para SCE. Si en la ecuación (14.11) despejamos 
+ésta, tenemos que SCE  STC  SCR. Por consiguiente, el valor más grande de SCE (y por tanto 
+el ajuste más pobre) se presenta cuando SCR  0 y SCE  STC.
+El cociente SCR/STC, que puede tomar valores entre 0 y 1, se usa para evaluar la bondad de 
+ajuste de la ecuación de regresión estimada. A este cociente se le llama coeﬁ ciente de determi-
+nación y se denota como r 2.
+En el ejemplo de Armand’s Pizza Parlors, el valor del coeﬁ ciente de determinación es
+r 2  
+SCR
+STC  14 200
+15 730  0.9027
+Cuando se expresa el coeﬁ ciente de determinación en forma de porcentaje, r 2 se puede in-
+terpretar como el porcentaje de la suma total de cuadrados que se explica mediante el uso de 
+la ecuación de regresión estimada. En el ejemplo de Armand’s Pizza Parlors se concluye que 
+90.27% de la suma total de cuadrados se explica utilizando la ecuación de regresión estimada 
+yˆ  60  5x para predecir las ventas trimestrales. En otras palabras, 90.27% de la variabilidad 
+en las ventas se explica por la relación lineal que existe entre éstas y el tamaño de la pobla-
+ción de estudiantes. Sería satisfactorio encontrar un buen ajuste para la ecuación de regresión 
+estimada.
+Coeficiente de correlación
+En el capítulo 3 se presentó el coeficiente de correlación como una medida descriptiva de la 
+intensidad de la relación lineal entre dos variables x y y. Los valores del coeﬁ ciente de corre-
+lación siempre estarán entre 1 y 1. Un valor de 1 indica que las dos variables x y y están 
+perfectamente relacionadas en un sentido lineal positivo. Es decir, todos los puntos de los datos 
+se encuentran en una línea recta que tiene pendiente positiva. Un valor de 1 indica que x y 
+y están perfectamente relacionadas en un sentido lineal negativo con todos los puntos de los 
+datos en una recta con pendiente negativa. Los valores del coeﬁ ciente de correlación cercanos a 
+0 indican que x
+
+[Bloque seleccionado #615 | relevancia=19]
+Pagina 614
+580 
+Capítulo 14  Regresión lineal simple
+El signo del coeﬁ ciente de correlación muestral es positivo si la ecuación de regresión es-
+timada tiene pendiente positiva (b1  0), y es negativo si la ecuación de regresión estimada 
+tiene pendiente negativa (bl  0).
+En el ejemplo de Armand’s Pizza Parlor, el valor del coeﬁ ciente de determinación corres-
+pondiente a la ecuación de regresión estimada yˆ  60  5x es 0.9027. Como la pendiente de 
+esta ecuación es positiva, la ecuación (14.13) indica que el coeﬁ ciente de correlación mues-
+tral es  0.9027  0.9501. Con este coeﬁ ciente rxy  0.9501, concluimos que existe una 
+fuerte relación lineal positiva entre x y y.
+En el caso de una relación lineal entre dos variables, tanto el coeﬁ ciente de determinación 
+como el coeﬁ ciente de correlación muestral proporcionan medidas de la fuerza de la relación. 
+El primero provee una medida entre 0 y 1, mientras que el segundo proporciona una medida en-
+tre 1 y 1. Aunque el coeﬁ ciente de correlación muestral está restringido a la relación lineal 
+entre dos variables, el coeﬁ ciente de determinación puede emplearse para relaciones no lineales 
+y para otras en las que hay dos o más variables independientes. Por tanto, ofrece un rango de 
+aplicación más amplio.
+donde:
+b1  pendiente de la ecuación de regresión estimada yˆ  b0  b1x
+NOTAS Y COMENTARIOS
+NOTAS Y COMENTARIOS
+1.  Al desarrollar la ecuación de regresión estima-
+da mediante el método de mínimos cuadrados y 
+calcular el coeficiente de determinación, no se hizo 
+ningún supuesto probabilístico acerca del térmi-
+no del error ; tampoco se realizó ninguna prueba 
+estadística de significancia para la relación entre 
+x y y. Los valores grandes de r2 implican que la 
+recta de mínimos cuadrados se ajusta mejor a los 
+datos; es decir, las observaciones se encuentran 
+más cerca de la recta de mínimos cuadrados. Sin 
+embargo, usando sólo r2 no se pueden formular 
+conclusiones acerca de si la relación entre x y y 
+es estadísticamente significativa. Tal conclusión 
+debe basarse en consideraciones que implican el 
+tamaño de la muestra y las propiedades de la dis-
+tribución de muestreo adecuada de los estimado-
+res de mínimos cuadrados.
+2.  Para fines prácticos, cuando se trata de datos que 
+se manejan típicamente en las ciencias sociales, 
+valores de r2 tan pequeños como 0.25 suelen con-
+siderarse útiles. En datos de física o de ciencias 
+de la vida suelen encontrarse valores r2 de 0.60 
+o más, en algunos casos mayores de 0.90. En las 
+aplicaciones de negocios, los valores de r2 varían 
+enormemente dependi
+
+[Bloque seleccionado #624 | relevancia=12]
+Pagina 623
+ 
+14.5  Prueba de significancia 
+589
+número de grados de libertad en el numerador es igual a 1 y el número de grados de libertad en 
+el denominador es igual a n  2. Por consiguiente, si 1  0, el valor de CMR/ECM deberá ser 
+un valor cercano a 1. Pero si la hipótesis nula es falsa, (1  0), CMR sobreestimará σ 2 y el valor 
+de CMR/ECM se inﬂ ará; de esta manera valores grandes de CMR/ECM conducirán al rechazo de 
+H0 y a la conclusión de que la relación entre x y y es estadísticamente signiﬁ cativa.
+A continuación se realizará la prueba F en el ejemplo de Armand’s Pizza Parlors. El esta-
+dístico de prueba es
+F  
+CMR
+ECM  14 200
+191.25  74.25
+En la tabla de la distribución F (tabla 4 del apéndice B) se observa que con un grado de liber-
+tad en el numerador y n  2  10  2  8 grados de libertad en el denominador, F  11.26 
+proporciona un área de 0.01 en la cola superior. Por tanto, el área en la cola superior de la 
+distribución F que corresponde al estadístico de prueba F  74.25 debe de ser menor de 0.01. 
+Por tanto, concluimos que el valor-p debe de ser menor a 0.01. Empleando Excel o Minitab se 
+encuentra que el valor-p  0.000. Como el valor-p es menor que α  0.01, H0 es rechazada y 
+concluimos que entre el tamaño de la población de estudiantes y las ventas trimestrales existe 
+una relación signiﬁ cativa. A continuación se presenta un resumen de la prueba F de signiﬁ can-
+cia para la regresión lineal simple
+En el capítulo 13 vimos que el análisis de varianza (ANOVA) y la tabla de ANOVA pueden 
+utilizarse para proporcionar una visión resumida de los cálculos que se emplean en el análisis de 
+varianza. Una tabla de ANOVA similar se emplea para resumir los cálculos de la prueba F de sig-
+niﬁ cancia para la regresión. En la tabla 14.5 se presenta la forma general de una tabla de ANOVA 
+para la regresión lineal simple, y en la 14.6 la tabla de ANOVA con los cálculos para la prueba F 
+del ejemplo de Armand’s Pizza Parlors. Regresión, error y total son las etiquetas de las tres fuen-
+tes de variación, y SCR, SCE y STC son las sumas de cuadrados correspondientes que aparecen 
+en la columna 2. En la columna 3 se indican los grados de libertad 1 para SCR, n  2 para SCE y 
+n  1 para STC. Los valores de CMR y ECM aparecen en la columna 4, mientras que la 5 contie-
+ne el valor de F  CMR/ECM, y la 6 el valor-p que corresponde al valor de F de la columna 5. 
+Casi todos los resultados proporcionados por computadora para el análisis de regresión inclu-
+yen un resumen de la tabla ANOVA de la prueba F de signiﬁ cancia.
+En la regresión lineal 
+simp
+
+[Bloque seleccionado #657 | relevancia=14]
+Pagina 656
+622 
+Capítulo 14  Regresión lineal simple
+En efecto, b0 y b1 son estadísticos muestrales útiles para estimar los parámetros desconocidos 
+del modelo, 0 y 1.
+El coeﬁ ciente de determinación se presentó como una medida de la bondad de ajuste para 
+la ecuación de regresión estimada, y se puede interpretar como la proporción de la variación 
+en la variable dependiente y que puede ser explicada por la ecuación de regresión estimada. 
+Asimismo, se revisó la correlación como una medida descriptiva de la intensidad de la relación 
+lineal entre dos variables.
+Se analizaron los supuestos acerca del modelo de regresión y su correspondiente térmi-
+no del error, y se presentaron las pruebas t y F, basadas en esos supuestos, como un medio para 
+determinar si la relación entre dos variables es estadísticamente signiﬁ cativa. Se mostró cómo 
+usar la ecuación de regresión estimada para obtener estimaciones de intervalos de conﬁ anza 
+para el valor medio de y y estimaciones por medio de intervalos de predicción para valores 
+individuales de y.
+El capítulo concluyó con una sección sobre soluciones por computadora de los problemas 
+de regresión y dos secciones sobre el uso del análisis residual para validar los supuestos del 
+modelo e identiﬁ car las observaciones atípicas e inﬂ uyentes.
+Glosario
+Análisis residual Análisis de los residuales que se usa para determinar si parecen ser válidos 
+los supuestos planteados acerca del modelo de regresión. También se utiliza para identiﬁ car 
+observaciones atípicas y observaciones inﬂ uyentes.
+Coeﬁ ciente de correlación Medida de la intensidad de la relación lineal entre dos variables 
+(ya estudiado en el capítulo 3).
+Coeﬁ ciente de determinación Medida de la bondad de ajuste de la ecuación de regresión 
+estimada. Se interpreta como la proporción de la variabilidad de la variable dependiente y que 
+es explicada por la ecuación de regresión estimada.
+Diagrama de dispersión Gráﬁ ca de datos bivariados en la que la variable independiente se 
+ubica en el eje horizontal y la variable dependiente en el eje vertical.
+Ecuación de regresión Ecuación que describe cómo está relacionada la media o valor es-
+perado de la variable dependiente con la variable independiente; en la regresión lineal simple, 
+E(y)  0  1x.
+Ecuación de regresión estimada Estimación de la ecuación de regresión obtenida a partir de 
+datos muestrales empleando el método de mínimos cuadrados. En la regresión lineal simple, la 
+ecuación de regresión estimada es yˆ  b0  b1x.
+Error cuadrado medio Estimación insesgada de la varianza del término del error σ 2. 
+
+[Bloque seleccionado #785 | relevancia=19]
+Pagina 784
+750 
+Capítulo 16  Análisis de regresión: construcción de modelos
+16.6  Autocorrelación y la prueba 
+de Durbin-Watson
+A menudo, los datos utilizados para los estudios de regresión en la economía y los negocios es-
+tán correlacionados en el tiempo. No es raro que el valor de y en el periodo t, denotado por yt, 
+esté relacionado con el valor de y en un periodo anterior. En tales casos, se dice que existe una 
+autocorrelación (también llamada correlación serial) en los datos. Si el valor de y en el perio-
+do t se relaciona con su valor en el periodo t  1, existe una autocorrelación de primer orden. 
+Si el valor de y en el periodo t se relaciona con el valor de y en el periodo t  2, existe una 
+autocorrelación de segundo orden, y así sucesivamente.
+Uno de los supuestos del modelo de regresión indica que los términos del error son inde-
+pendientes. Sin embargo, cuando existe la autocorrelación, este supuesto es violado. En el caso 
+de la autocorrelación de primer orden, el error en el periodo t, denotado t, estará relacionada 
+con el error en el periodo t  1, denotado t1. Dos casos de autocorrelación de primer orden 
+se ilustran en la ﬁ gura 16.19. El grupo A muestra una autocorrelación positiva y el grupo B una 
+autocorrelación negativa. En la autocorrelación positiva se espera un residual positivo en un 
+periodo, seguido por un residual negativo en el periodo siguiente, y así sucesivamente. En la 
+autocorrelación negativa se espera un residual positivo en un periodo, seguido de un residual 
+negativo en el periodo siguiente, después un residual positivo, y así sucesivamente.
+Cuando la autocorrelación está presente, se pueden cometer errores serios al realizar la 
+prueba de signiﬁ cancia estadística basada en el modelo de regresión supuesto. Por tanto, es 
+importante detectar la autocorrelación y emprender acciones correctivas. A continuación se 
+mostrará cómo el estadístico de Durbin-Watson se utiliza para detectar la autocorrelación de 
+primer orden.
+Suponga que los valores de  no son independientes sino que están relacionadas de la si-
+guiente manera.
+ 
+t  t1  zt 
+(16.16)
+donde  es un parámetro con un valor absoluto menor que 1, y zt es una variable aleatoria dis-
+tribuida normal e independientemente con una media de 0 y una varianza de σ 2. En la ecuación 
+(16.16) se observa que si   0, los términos del error no están relacionados, y cada uno tiene 
+una media de 0 y una varianza de σ 2. En este caso no hay autocorrelación y se satisfacen los 
+FIGURA 16.19  Dos conjuntos de datos con autocorrelación de primer orden
+0
+Tiempo
+t
+yt 
+
+[Bloque seleccionado #787 | relevancia=15]
+Pagina 786
+752 
+Capítulo 16  Análisis de regresión: construcción de modelos
+La hipótesis alternativa para probar la autocorrelación negativa es
+Ha:   0
+También es posible una prueba de dos colas. En este caso la hipótesis alternativa es
+Ha:   0
+La ﬁ gura 16.20 muestra cómo se utilizan los valores de dL y dU de la tabla 16.11 para probar si 
+existe autocorrelación. En el gráﬁ co A se presenta la prueba para una autocorrelación positiva. 
+Si d  dL, se concluye que existe una autocorrelación positiva. Si dL  d  dU, se dice que la 
+prueba no es concluyente. Si d  dU, se concluye que no hay evidencia de una autocorrelación 
+positiva.
+En el gráﬁ co B se muestra la prueba de autocorrelación negativa. Si d  4  dL, se con-
+cluye que existe una autocorrelación negativa. Si 4  dU  d  4  dL, se dice que la prueba 
+no es concluyente. Si d  4  dU, se concluye que no hay evidencia de una autocorrelación 
+negativa.
+FIGURA 16.20  Prueba de hipótesis de autocorrelación utilizando la prueba de Durbin-Watson
+dU
+dL
+0
+2
+Poco
+concluyente
+No hay evidencia de autocorrelación positiva
+Gráfico A.  Prueba de autocorrelación positiva
+Autoco-
+rrelación
+positiva
+dU
+2
+4  dL
+4
+No hay evidencia de autocorrelación negativa
+Gráfico B.  Prueba de autocorrelación negativa
+dU
+dL
+0
+4  dU
+2
+4  dL
+4
+Poco
+concluyente
+No hay evidencia
+de autocorrelación
+Gráfico C.  Prueba de autocorrelación de dos colas
+Autoco-
+rrelación
+positiva
+Autoco-
+rrelación
+negativa
+Poco
+concluyente
+Autoco-
+rrelación
+negativa
+Poco
+concluyente
+4  dU
+dL
+
+[Bloque seleccionado #922 | relevancia=12]
+Pagina 921
+ 
+19.5  Correlación de rangos 
+887
+ 
+M&M’s 
+Kit Kat 
+Milky Way II
+ 
+230 
+225 
+200
+ 
+210 
+205 
+208
+ 
+240 
+245 
+202
+ 
+250 
+235 
+190
+ 
+230 
+220 
+180
+19.5 Correlación de rangos
+El coeﬁ ciente de correlación producto-momento de Pearson presentado en el capítulo 3 es una 
+medición de la asociación lineal entre dos variables a partir de datos cuantitativos. En esta 
+sección se presenta una medida de correlación de la asociación entre dos variables para datos 
+ordinales u ordenados por rango. El coeﬁ ciente de correlación por rangos de Spearman se ha 
+desarrollado para este propósito.
+COEFICIENTE DE CORRELACIÓN POR RANGOS DE SPEARMAN
+ 
+rs  1  
+n
+a
+i1
+n(n2  1)
+6
+di
+2
+ 
+(19.8)
+donde
+n  número de observaciones en la muestra
+xi  rango de la observación i con respecto a la primera variable
+yi  rango de la observación i con respecto a la segunda variable
+di  xiyi
+Ilustremos el uso del coeﬁ ciente de correlación por rangos de Spearman. Una empresa 
+desea determinar si las personas que prometían el más alto potencial al momento de ser contra-
+tadas resultaron tener el registro de mayores ventas. Para investigarlo, el director de recursos 
+humanos revisó los registros originales de las entrevistas de trabajo, expediente académico y 
+cartas de recomendación de 10 miembros de la fuerza de ventas. Después de la revisión, el di-
+rector clasiﬁ có a las 10 personas con base en su potencial de éxito en el momento de ser contra-
+tadas y asignó el rango 1 a la persona que tuvo el mayor potencial. A continuación se recabaron 
+los datos de las ventas reales de cada vendedor durante sus primeros dos años de empleo. Sobre 
+la base de los registros de ventas reales se obtuvo una segunda caliﬁ cación de los 10 sujetos con 
+base en el desempeño en las ventas. En la tabla 19.16 se presentan los rangos basados en el po-
+tencial (Ranking of Potential) y en el desempeño real de cada vendedor (Salesperson). En la ter-
+cera columna se listan las ventas de dos años (Two-Year Sales) en unidades (units) y en la cuarta 
+columna el rango con base en las ventas de dos años (Ranking According to Two-Year Sales).
+Calculemos el coeﬁ ciente de correlación por rangos de Spearman para los datos de la tabla 
+19.16, los cuales se resumen en la tabla 19.17. En primer lugar, se calcula la diferencia entre los 
+dos rangos de cada vendedor, di, como se muestra en la columna 4. La suma de di
+2 en la colum-
+na 5 es 44. Este valor y el tamaño de muestra n  10 se utilizan para calcular el coeﬁ ciente de 
+correlación por rangos rs  0.733 mostrado en la tabla 19.17.
+El coeﬁ ciente de correlació
+
+[Bloque seleccionado #1107 | relevancia=12]
+Pagina 1106
+1072 
+Índice analítico
+Medición del riesgo en el mercado bursátil, 
+631-632
+Metropolitan Research, Inc., 341
+Par, Inc., 441-442
+Pelican Stores, 71-72, 137-138
+Predicción del porcentaje de triunfos de la NFL, 
+708-709
+Programa de entrenamiento de la fuerza aérea, 
+469
+Pronóstico de pérdidas de ventas, 847-848
+Pronóstico de ventas de alimentos y bebidas, 
+846-847
+Quality Associates, Inc., 396-397
+Rendimiento de combustible en los automóviles, 
+759-760
+Revista Young Profesional, 338-339
+Specialty Toys, 261-262
+Transacciones del sitio web de Heavenly 
+Chocolates, 139-141
+Una agenda bipartidista para el cambio, 501-502
+Wentworth Medical Center, 552-553
+Causas comunes, 909
+Causas imputables en el control estadístico de 
+procesos, 909
+Censo, 15
+Cincinnatti Enquirer, 190
+Citibank, 194
+Clase de extremo abierto, 45n3
+Clases, 39, 40
+ancho de, 40
+límites de, 40
+número de, 39
+punto medio de, 41
+CME. Véase Cuadrado medio debido al error 
+(CME)
+CMR. Véase Cuadrado medio debido a la regresión 
+(CMR);
+CMTR. Véase Cuadrado medio debido a los 
+tratamientos (CMTR)
+Cociente de posibilidades de Odds, 688-691, 692n1
+Coeficiente de confianza, 313
+Coeficiente de correlación del producto-momento 
+de Pearson, 119-120, 889n1
+Coeficiente de correlación por rangos de Spearman, 
+887-889, 889n1
+Software de hoja de cálculo y, 887-889, 889n1
+Coeficiente de correlación, 119-120, 579-580
+Coeficiente de determinación, 576-583, 579, 580n1, 
+692n2
+Coeficiente de determinación múltiple, 654-655
+Coeficiente de determinación múltiple ajustado, 
+655, 655n1
+Coeficiente de variación, 99
+Coeficientes, interpretación de los, 648-649
+Colgate-Palmolive Company, 32
+Combinaciones, 154
+Complementos, 164, 165
+Computadoras, 17
+Confiabilidad del modelo, 18
+Conglomerados o clusters, 298
+Consecuencias, 939
+Consistencia, 297
+Constante de suavizamiento, 800, 801
+Contabilidad, 3
+Control de calidad, 905-908
+Control estadístico de procesos, 908-920
+causas imputables, 909
+causas comunes, 909
+gráfica x, 909-915
+gráfica np, 919-920
+gráfica p, 917-919
+gráfica R, 915-917
+Correlación serial, 750
+Covarianza, 115-119
+Cravens, David W., 735
+Criterio de aceptación, 924
+Criterio de mínimos cuadrados, 567, 569n1, 645
+Crosby, Philip B., 905
+Cuadrado medio de la regresión (CMR), 588
+Cuadrado medio debido a los tratamientos (CMTR), 
+514-515
+Cuartiles, 91-92
+Curva Bell, Véase también Curva normal, 238-240
+Curva normal. Véase también Curva de Bell, 238-
+240
+Curva característica de operación (OC), 925
+Curvas de potencia, 385
+Customer’s Afternoon Letter, 772
+D
+Datos
+aplicaciones de, 580nl
+bimodal y multimodal, 89
+fuentes 

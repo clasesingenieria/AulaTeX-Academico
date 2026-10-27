@@ -1,0 +1,795 @@
+Fuente bibliográfica: Estadística matemática con aplicaciones - Wackerly, Mendenhall y Scheaffer. 7.ª edición.pdf
+Actividad: 17 (6.2 Investigación 4% Tarea)
+Palabras clave: series de tiempo, pronósticos económicos, demanda, estacionalidad, ARIMA, suavizamiento exponencial, planeación financiera
+
+[Bloque seleccionado #65 | relevancia=1]
+Pagina 64
+40  Capítulo 2  Probabilidad
+ 
+2.31 
+Un furgón de ferrocarril contiene seis sistemas electrónicos complejos. Dos de los seis se han de selec-
+cionar al azar para hacerles pruebas completas y luego clasifi carlos como defectuosos o no defectuo-
+sos.
+ 
+ 
+a  Si dos de los seis sistemas en realidad están defectuosos, encuentre la probabilidad de que al menos 
+uno de los dos sistemas probados sea defectuoso. Encuentre la probabilidad de que ambos sean de-
+fectuosos.
+ 
+ 
+b  Si cuatro de los seis sistemas están defectuosos en realidad, encuentre las probabilidades indicadas 
+en el inciso a.
+ 
+2.32 
+Un detallista vende sólo dos estilos de consolas estéreo y la experiencia muestra que ambas tienen igual 
+demanda. Cuatro clientes en sucesión entran a la tienda para comprar estéreos. El vendedor está intere-
+sado en sus preferencias.
+ 
+ 
+a  Indique las posibilidades para arreglos de preferencia entre los cuatro clientes (esto es, indique el 
+espacio muestral).
+ 
+ 
+b  Asigne probabilidades a los puntos muestrales.
+ 
+ 
+c  Denote con A el evento de que los cuatro clientes prefi eran el mismo estilo. Encuentre P(A).
+ 
+2.33 
+La Ofi cina del Censo reporta que el ingreso familiar mediano para todas las familias en Estados Unidos, 
+durante el año 2003, fue $43,318. Esto es, la mitad de todas las familias estadounidenses tuvo ingresos 
+que rebasaban esta cantidad y la mitad tuvo ingresos iguales o menores a esta cantidad. Suponga que se 
+hace una encuesta a cuatro familias y que cada una de ellas revela si su ingreso rebasó los $43,318 en 
+2003.
+ 
+ 
+a  Indique los puntos del espacio muestral.
+ 
+ 
+b  Identifi que los eventos simples en cada uno de los eventos siguientes:
+ 
+A: al menos dos tuvieron ingresos de más de $43,318.
+ 
+B: exactamente dos tuvieron ingresos de más de $43,318.
+ 
+C: exactamente una tuvo ingresos menores o iguales a $43,318.
+ 
+ 
+c  Haga uso de la interpretación dada para la mediana para asignar probabilidades a los eventos simples 
+y encuentre P(A), P(B) y P(C).
+ 
+2.34 
+Los pacientes que llegan a una clínica para atención externa pueden seleccionar una de tres estaciones 
+de servicio. Suponga que los médicos se asignan al azar a las estaciones y que los pacientes por tanto no 
+tienen preferencia de estación. Tres pacientes llegan a la clínica y se observa su selección de estación.
+ 
+ 
+a  Indique los puntos muestrales para el experimento.
+ 
+ 
+b  Sea A el evento de que cada estación recibe a un paciente. Indique los puntos muestrales en A.
+ 
+ 
+c  Haga una asignación razonable de probabilidades a los puntos muestrales y encuentre P(A).
+ 
+2.6 Herram
+
+[Bloque seleccionado #125 | relevancia=1]
+Pagina 124
+100  Capítulo 3  Variables aleatorias discretas y sus distribuciones de probabilidad
+ 
+ 
+d Use la Defi nición 3.5 y el resultado del inciso b para demostrar que
+V (X) = E{[(X −E(X)]2} = E[(Y – m)2] =
+2;
+s
+ 
+ 
+ 
+esto es, X = Y + 1 y Y tienen varianzas iguales.
+ 
+3.31 
+Suponga que Y es una variable aleatoria discreta con media m y varianza s2 y sea W = 2Y.
+ 
+ 
+a ¿Espera usted que la media de W sea mayor, menor o igual que m = E(Y)? ¿Por qué?
+ 
+ 
+b  Use el Teorema 3.4 para expresar E(W)= E(2Y) en términos de m = E(Y). ¿Este resultado está de 
+acuerdo con la respuesta al inciso a?
+ 
+ 
+c  Recordando que la varianza es una medida de dispersión, ¿espera usted que la varianza de W sea 
+mayor, menor o igual que s2 = V(Y)? ¿Por qué?
+ 
+ 
+d  Use la Defi nición 3.5 y el resultado del inciso b para demostrar que
+V (W) = E{[W −E(W)]2} = E[4(Y −m)2] = 4
+2;
+s
+     
+ 
+ 
+esto es, W = 2Y tiene una varianza que cuadriplica la de Y.
+ 
+3.32 
+Suponga que Y es una variable aleatoria discreta con media m y varianza s2 y sea U = Y/10.
+ 
+ 
+a ¿Espera usted que la media de U sea mayor, menor o igual a m = E(Y)? ¿Por qué?
+ 
+ 
+b  Use el Teorema 3.4 para expresar E(U)= E(Y/10) en términos que m = E(Y). ¿Este resultado está de 
+acuerdo con la respuesta al inciso a?
+ 
+ 
+c  Recordando que la varianza es una medida de dispersión, ¿espera usted que la varianza de U sea 
+mayor, menor o igual que s2 = V(Y)? ¿Por qué?
+ 
+ 
+d Use la Defi nición 3.5 y el resultado del inciso (b) para demostrar que
+V (U) = E{[U −E(U)]2} = E[.01(Y −m)2] = .01
+2;
+s
+ 
+   
+ 
+esto es, U  = Y/10 tiene varianza .01 veces la de Y.
+ 
+3.33 
+Sea Y una variable aleatoria discreta con media m y varianza s2. Si a y b son constantes, use los Teoremas 
+3.3 y 3.6 para demostrar que
+ 
+ 
+a E(aY + b) = aE(Y) + b = am + b,
+b V (aY + b) = a2V (Y) = a2s2.
+ 
+3.34 
+El gerente del almacén de una fábrica ha construido la siguiente distribución de probabilidad para la 
+demanda diaria (número de veces que se usa) de una herramienta en particular. 
+ 
+ 
+y
+0
+1
+2
+p(y)
+.1
+.5
+.4
+ 
+ 
+Cuesta a la fábrica $10 cada vez que la herramienta se usa. Encuentre la media y la varianza del costo 
+diario por usar la herramienta.
+ 
+3.4 La distribución de probabilidad binomial
+Algunos experimentos consisten en la observación de una secuencia de intentos idénticos e 
+independientes, cada uno de los cuales puede resultar en una de dos salidas. Cada artículo que 
+sale de la línea de producción de manufacturas es defectuoso o no defectuoso. Cada disparo en 
+una secuencia de tiros a un blanco puede resultar en un acierto o en no acierto y cada una de
+
+[Bloque seleccionado #180 | relevancia=1]
+Pagina 179
+ 
+3.206 
+Los registros de accidentes recolectados por una compañía de seguros de automóviles dan la siguiente 
+información. La probabilidad de que un conductor asegurado tenga un accidente automovilístico es .15. 
+Si ha ocurrido un accidente, las averías al vehículo ascienden al 20% de su valor comercial con una 
+probabilidad de .80, a 60% de su valor comercial con una probabilidad de .12 y a pérdida total con 
+una probabilidad de .08. ¿Qué prima debe cobrar la compañía sobre un auto de $12,000 para que la 
+ganancia esperada por la compañía sea cero?
+ 
+3.207 
+El número de personas que entran en la unidad de cuidados intensivos de un hospital en cualquier día 
+posee una distribución de Poisson con media igual a cinco personas por día.
+ 
+ 
+a  ¿Cuál es la probabilidad de que el número de personas que entren en la unidad de cuidados intensivos 
+en un día particular sea igual a 2? ¿y que sea menor o igual que 2?
+ 
+ 
+b  ¿Es probable que Y pase de 10? Explique.
+ 
+3.208 
+Una encuesta reciente sugiere que los estadounidenses anticipan una reducción en sus estándares de vida 
+y que un nivel cada vez más creciente de consumo ya no es tan importante como lo fue en el pasado. 
+Suponga que una encuesta de 2000 personas indica que 1373 están a favor de que, por medios legislati-
+vos, se obligue a una reducción en el tamaño de los automóviles hechos en Estados Unidos. ¿Esperaría 
+observar hasta 1373 personas a favor de esta proposición si, de hecho, el público general se ha dividido 
+en 50 a 50 con respecto a este problema? ¿Por qué?
+ 
+3.209 
+Un proveedor de maquinaria pesada para construcción ha encontrado que normalmente se obtienen 
+nuevos clientes por medio de solicitudes de éstos en llamadas de ventas y que la probabilidad de venta 
+de una pieza particular de equipo es .3. Si el proveedor tiene tres máquinas para venta, ¿cuál es la pro-
+babilidad de que se requieran menos de cinco llamadas de clientes para agotar el inventario?
+ 
+3.210 
+Calcule P(|Y – l|≤ 2s) para la distribución de probabilidad de Poisson del Ejemplo 3.22. ¿Esto está de 
+acuerdo con la regla empírica?
+ 
+*3.211 
+Una comerciante tiene en existencia cierto artículo perecedero. Ella sabe que en cualquier día determi-
+nado tendrá una demanda de dos, tres o cuatro de estos artículos con probabilidades .1, .4 y .5, respec-
+tivamente. Compra los artículos en $1.00 cada uno y los vende en $1.20 cada uno. Si quedan algunos al 
+fi nal del día, representan pérdida total. ¿Cuántos artículos debe tener en existencia para maximizar su 
+utilidad diaria esperada?
+ 
+*3.212 
+Demuestre que la función de pr
+
+[Bloque seleccionado #193 | relevancia=3]
+Pagina 192
+168  Capítulo 4  Variables continuas y sus distribuciones de probabilidad
+ 
+ 
+a  Demuestre que F(y) tiene las propiedades de una función de distribución.
+ 
+ 
+b  Encuentre el cuantil .30, f.30, de Y.
+ 
+ 
+c  Encuentre f(y).
+ 
+ 
+d  Encuentre la probabilidad de que el transistor opere durante al menos 200 horas.
+ 
+ 
+e Encuentre P(Y > 100|Y ≤ 200).
+ 
+4.13 
+Un proveedor de queroseno tiene un tanque de 150 galones que se llena al empezar cada semana. Su 
+demanda semanal muestra un comportamiento de frecuencia relativo que aumenta de manera continua 
+hasta 100 galones y luego se nivela entre 100 y 150 galones. Si Y denota la demanda semanal en cientos 
+de galones, la frecuencia relativa de demanda puede ser modelada por
+f (y) =
+y,
+0 ≤y ≤1,
+1,
+1 < y ≤1.5,
+0,
+en cualquier otro punto.
+ 
+ 
+a  Encuentre F(y).
+ 
+ 
+b  Encuentre P(0 ≤ Y ≤ .5).
+ 
+ 
+c  Encuentre P(.5 ≤ Y ≤ 1.2).
+ 
+4.14 
+Una gasolinera opera dos bombas, cada una de las cuales puede bombear hasta 10,000 galones de gaso-
+lina en un mes. La cantidad total de gasolina bombeada en un mes es una variable aleatoria Y (medida 
+en 10,000 galones) con una función de densidad de probabilidad dada por
+f (y) =
+y,
+0 < y < 1,
+2 −y,
+1 ≤y < 2,
+0,
+en cualquier otro punto.
+ 
+ 
+a  Grafi que f(y).
+ 
+ 
+b  Encuentre F(y) y grafíquela.
+ 
+ 
+c  Encuentre la probabilidad de que la gasolinera bombee entre 8000 y 12,000 galones en un mes par-
+ticular.
+ 
+ 
+d  Dado que la gasolinera bombeó más de 10,000 galones en un mes particular, encuentre la probabili-
+dad de que haya bombeado más de 15,000 galones durante el mes.
+ 
+4.15 
+Como una medición de inteligencia, a unos ratones se les toma el tiempo que tardan para pasar por un 
+laberinto para llegar a una recompensa de alimento. El tiempo (en segundos) necesario para cualquier 
+ratón es una variable aleatoria Y con una función de densidad dada por
+f (y) =
+b
+y2 ,
+y ≥b,
+0,
+en cualquier otro punto,
+ 
+ 
+donde b es el tiempo mínimo posible necesario para recorrer el laberinto.
+ 
+ 
+a  Demuestre que f(y) tiene las propiedades de una función de densidad.
+ 
+ 
+b  Encuentre F(y).
+ 
+ 
+c  Encuentre P(Y > b + c) para una constante positiva c.
+ 
+ 
+d  Si c y d son constantes positivas tales que d > c, encuentre P(Y > b + d |Y > b + c).
+ 
+4.16 
+Sea Y poseedor de una función de densidad
+f (y) =
+c(2 −y),
+0 ≤y ≤2,
+0,
+en cualquier otro punto.
+
+[Bloque seleccionado #208 | relevancia=2]
+Pagina 207
+ 
+ 
+a  Use la Tabla 4, Apéndice 3 para determinar la proporción de botellas que tendrán más de 17 onzas.
+ 
+ 
+b  Ejercicio Applet Use la aplicación breve Normal Probabilities para obtener la respuesta al inciso a.
+ 
+4.64 
+Se observó que la cantidad semanal de dinero gastado por una compañía durante largo tiempo en mante-
+nimiento y reparaciones, está normalmente distribuida en forma aproximada con media de $400 y des-
+viación estándar de $20. Si están presupuestados $450 para la próxima semana, ¿cuál es la probabilidad 
+de que los costos reales rebasen la cantidad presupuestada?
+ 
+ 
+a  Conteste la pregunta usando la Tabla 4, Apéndice 3.
+ 
+ 
+b  Ejercicio Applet Use la aplicación breve Normal Probabilities para obtener la respuesta.
+ 
+ 
+c  ¿Por qué son diferentes los valores marcados en los dos ejes horizontales?
+ 
+4.65 
+En el Ejercicio 4.64, ¿cuánto debe presupuestarse para reparaciones y mantenimiento semanal para 
+lograr que la probabilidad de que la cantidad presupuestada en una semana determinada sea excedida 
+sólo .1?
+ 
+4.66 
+Una operación de maquinado produce cojinetes con diámetros que están normalmente distribuidos con 
+media de 3.0005 pulgadas y desviación estándar de .0010 pulgadas. Las especifi caciones requieren que
+los diámetros de los cojinetes se encuentren en el intervalo 3.000 ± .0020 pulgadas. Los cojinetes 
+que estén fuera de este intervalo son considerados de desecho y deben volver a maquinarse. Con el ajuste 
+de la máquina existente, ¿qué fracción de la producción total se desechará?
+ 
+ 
+a  Conteste la pregunta usando la Tabla 4, Apéndice 3.
+ 
+ 
+b  Ejercicio Applet Obtenga la respuesta usando la aplicación breve Normal Probabilities.
+ 
+4.67 
+En el Ejercicio 4.66, ¿cuál debe ser el diámetro medio para que la fracción de cojinetes desechados sea 
+mínima?
+ 
+4.68 
+Los promedios de califi caciones (GPA, por sus siglas en inglés) de una gran población de estudiantes 
+universitarios están normalmente distribuidos en forma aproximada, con media de 2.4 y desviación 
+estándar .8. ¿Qué fracción de los estudiantes alcanzarán un GPA de más de 3.0? 
+ 
+ 
+a  Conteste la pregunta usando la Tabla 4, Apéndice 3.
+ 
+ 
+b  Ejercicio Applet Use la aplicación breve Normal Tail Areas and Quantiles para obtener la respuesta.
+ 
+4.69 
+Consulte el Ejercicio 4.68. Si los estudiantes que alcancen un GPA menor que 1.9 serán suspendidos de 
+la universidad, ¿qué porcentaje de los estudiantes será suspendido?
+ 
+4.70 
+Consulte el Ejercicio 4.68. Suponga que se seleccionan al azar tres estudiantes del alumnado. ¿Cuál es 
+la probabilidad de que los tres alcancen 
+
+[Bloque seleccionado #215 | relevancia=3]
+Pagina 214
+190  Capítulo 4  Variables continuas y sus distribuciones de probabilidad
+ 
+4.85 
+Ejercicio Applet Use la aplicación breve Comparison of Gamma Density Functions para comparar 
+funciones de densidad gamma con (α = 1, b = 1), (α = 1, b = 2) y (α = 1, b = 4).
+ 
+ 
+a  ¿Qué otro nombre se da a las funciones de densidad que observó?
+ 
+ 
+b  ¿Estas densidades tienen la misma forma general?
+ 
+ 
+c  El parámetro b es un parámetro “de escala”. ¿Qué observa usted acerca de la “dispersión” de estas 
+tres funciones de densidad?
+ 
+4.86 
+Ejercicio Applet Cuando examinamos la distribución χ2 en esta sección, presentamos (con justifi cación 
+en el Capítulo 6) el hecho de que si Y tiene distribución gamma con a = n/2 para algún entero n, enton-
+ces 2Y/b tiene una distribución χ2. En particular, se dijo que cuando a = 1.5 y b = 4, W = Y/2 tiene 
+una distribución χ2 con tres grados de libertad.
+ 
+ 
+a  Use la aplicación Gamma Probabilities and Quantiles para hallar P(Y < 3.5).
+ 
+ 
+b  Use la aplicación Gamma Probabilities and Quantiles para hallar P(W < 1.75). [Sugerencia: 
+Recuerde que la distribución χ2 con ν grados de libertad es simplemente una distribución gamma con 
+a = ν/2 y b = 2.]
+ 
+ 
+c  Compare sus respuestas a los incisos a y b.
+ 
+4.87 
+Ejercicio Applet Hagamos que Y y W tengan las distribuciones dadas en el Ejercicio 4.86.
+ 
+ 
+a  Use la aplicación Gamma Probabilities and Quantiles para hallar el cuantil .05 de la distribución de 
+Y.
+ 
+ 
+b  Use la aplicación Gamma Probabilities and Quantiles para hallar el cuantil .05 de la distribución χ2 
+con tres grados de libertad.
+ 
+ 
+c  ¿Cuál es la relación entre el cuantil .05 de la distribución gamma (a = 1.5, b = 4) y el cuantil .05 de 
+la distribución χ2 con tres grados de libertad? Explique esta relación.
+ 
+4.88 
+La magnitud de temblores registrados en una región de América del Norte puede modelarse como si 
+tuviera una distribución exponencial con media 2.4, según se mide en la escala de Richter. Encuentre la 
+probabilidad de que un temblor que ocurra en esta región
+ 
+ 
+a  sea mayor que 3.0 en la escala de Richter.
+ 
+ 
+b  caiga entre 2.0 y 3.0 en la escala de Richter.
+ 
+4.89 
+Si Y tiene una distribución exponencial y P(Y > 2) = .0821, ¿cuál es
+ 
+ 
+a
+= E(Y)?
+b
+P(Y ≤1.7)?
+b
+ 
+4.90 
+Consulte el Ejercicio 4.88. De los siguientes diez temblores que afecten esta región, ¿cuál es la probabi-
+lidad de que al menos uno de ellos sea mayor que 5.0 en la escala de Richter?
+ 
+4.91 
+El operador de una estación de bombeo ha observado que la demanda de agua durante las primeras horas 
+de la tarde tiene una distribución aproxima
+
+[Bloque seleccionado #242 | relevancia=1]
+Pagina 241
+ 
+4.171 
+Suponga que llegan clientes a una caja a razón de dos por minuto.
+ 
+ 
+a  ¿Cuáles son la media y la varianza de los tiempos de espera entre llegadas sucesivas de clientes?
+ 
+ 
+b  Si una empleada tarda tres minutos en atender al primer cliente que llega a una caja, ¿cuál es la 
+probabilidad de que al menos un cliente más esté esperando cuando se termine de servir al primer 
+cliente?
+ 
+4.172 
+Las llamadas para conexiones de entrada a un centro de computación llegan a un ritmo promedio de cua-
+tro por minuto. Las llamadas siguen una distribución de Poisson. Si llega una llamada al principio de un 
+intervalo de un minuto, ¿cuál es la probabilidad de que una segunda llamada no llegue en los siguientes 
+20 segundos?
+ 
+4.173 
+Suponga que plantas de una especie particular se dispersan en una superfi cie de modo que el número 
+de ellas en un área determinada sigue una distribución de Poisson con densidad media de l plantas por 
+unidad de área. Si una planta se selecciona al azar en esta área, encuentre la función de densidad de pro-
+babilidad de la distancia a la planta vecina más cercana. [Sugerencia: Si R denota la distancia a la vecina 
+más próxima, entonces P(R > r) es igual a la probabilidad de no ver plantas en un círculo de radio r.]
+ 
+4.174 
+El tiempo (en horas) que un gerente tarda en entrevistar a un solicitante de trabajo tiene una distribución 
+exponencial con b = 1/2. Los solicitantes son citados a intervalos de un cuarto de hora, empezando a 
+las 8:00 a.m. y llegan exactamente a tiempo. Cuando el candidato citado a las 8:15 a.m. llega a la ofi cina 
+del gerente, ¿cuál es la probabilidad de que tenga que esperar antes de ser entrevistado?
+ 
+4.175 
+El valor de la mediana y de una variable aleatoria continua es aquel para el que F(y) = .5. Encuentre el 
+valor de la mediana de la variable aleatoria del Ejercicio 4.11.
+ 
+4.176 
+Si Y tiene una distribución exponencial con media b, encuentre (como función de b) la mediana de Y.
+ 
+4.177 
+Ejercicio Applet Use la aplicación Gamma Probabilities and Quantiles para hallar las medianas de 
+variables aleatorias con distribución gamma y parámetros
+ 
+ 
+a  a = 1, b = 3. Compare su respuesta con la del Ejercicio 4.176.
+ 
+ 
+b  a = 2, b = 2. ¿La mediana es mayor o menor que E(Y)?
+ 
+ 
+c  a = 5, b = 10. ¿La mediana es mayor o menor que E(Y)?
+ 
+ 
+d  En todos estos casos, la mediana excede a la media. ¿Cómo se refl eja eso en las formas de las densi-
+dades correspondientes?
+ 
+4.178 
+Grafi que la función de densidad de probabilidad beta para a = 3 y b = 2.
+ 
+ 
+a  Si Y tiene esta función de densidad beta, e
+
+[Bloque seleccionado #332 | relevancia=1]
+Pagina 331
+aleatorio de la computadora para producir valores u1, u2, . . . , un de una distribución uniforme 
+(0, 1) y luego calculamos yi = –b ln(1 − ui), i = 1, 2, . . . , n para obtener valores de variables 
+aleatorias con la distribución exponencial requerida.
+Mientras una función de distribución prescrita F(y) posea una inversa única F –1(⋅), se puede 
+aplicar la técnica anterior. En casos como el ilustrado en el Ejemplo 6.5 podemos fácilmente 
+escribir la forma de F –1(⋅) y continuar como antes. Si la expresión de una función de distribu-
+ción no se puede escribir en una forma fácilmente invertible (recuerde que las funciones de 
+distribución de variables aleatorias de distribución normal, gamma y beta se determinan por 
+medio de tablas que se obtuvieron con el uso de técnicas de integración numérica), nuestro 
+trabajo es más difícil. En estos casos se usan otros métodos para generar observaciones con 
+la distribución deseada.
+En el siguiente conjunto de ejercicios encontrará problemas que se pueden resolver con el 
+uso de las técnicas presentadas en esta sección. Los ejercicios que implican determinar F –1(U) 
+para alguna distribución específi ca F(y) se concentran en casos donde F –1(⋅) existe en forma 
+cerrada.
+Ejercicios
+ 
+6.1 
+Sea Y una variable aleatoria con función de densidad de probabilidad dada por
+f (y) =
+2(1 −y),
+0 ≤y ≤1,
+0,
+en cualquier otro punto.
+ 
+ 
+a Encuentre la función de densidad de U1 = 2Y − 1.
+ 
+ 
+b Encuentre la función de densidad de U2 = 1 − 2Y.
+ 
+ 
+c Encuentre la función de densidad de U3 = Y 2.
+ 
+ 
+d  Encuentre E(U1), E(U2) y E(U3) usando las funciones de densidad obtenidas para estas variables 
+aleatorias.
+ 
+ 
+e Encuentre E(U1), E(U2) y E(U3) con los métodos del Capítulo 4.
+ 
+6.2 
+Sea Y una variable aleatoria con una función de densidad dada por
+f (y) =
+(3/2)y2,
+−1 ≤y ≤1,
+0,
+ en cualquier otro punto.
+ 
+ 
+a Encuentre la función de densidad de U1 = 3Y .
+ 
+ 
+b Encuentre la función de densidad de U2 = 3 −Y.
+ 
+ 
+c Encuentre la función de densidad de U3 = Y 2.
+ 
+6.3 
+Un proveedor de queroseno tiene una demanda semanal Y que posee una función de densidad de proba-
+bilidad dada por
+f (y) =
+y,
+0 ≤y ≤1,
+1,
+1 < y ≤1.5,
+0,
+en cualquier otro punto,
+ 
+ 
+con mediciones en cientos de galones. (Este problema planteó en el Ejercicio 4.13.) La utilidad del 
+proveedor está dada por U = 10Y − 4.
+ 
+ 
+a Encuentre la función de densidad de probabilidad para U.
+ 
+ 
+b Use la respuesta al inciso a para encontrar E(U).
+ 
+ 
+c Encuentre E(U) con los métodos del Capítulo 4.
+Ejercicios  307
+
+[Bloque seleccionado #657 | relevancia=4]
+Pagina 656
+632  Capítulo 11  Modelos lineales y estimación por mínimos cuadrados
+ 
+ 
+¿Las siguientes frases son verdaderas o falsas?
+ 
+ 
+a Si se ajusta el modelo I, la estimación para s2 está basada en 16 grados de libertad.
+ 
+ 
+b  Si se ajusta el modelo II, podemos realizar la prueba t para determinar si x2 contribuye a un mejor 
+ajuste del modelo a los datos.
+ 
+ 
+c Si los modelos I y II se ajustan, entonces SSEI ≤ SSEII.
+ 
+ 
+d Si los modelos I y II se ajustan, entonces s2
+I ≤ˆ
+ˆ
+s2
+II.
+ 
+ 
+e El modelo II es una reducción del modelo I.
+ 
+ 
+f  Los modelos I y III se pueden comparar usando la técnica de modelo completo/reducido presentado 
+en la Sección 11.14.
+ 
+11.89 
+Consulte los tres modelos dados en el Ejercicio 11.88. Denote con R2
+I, R2
+II
+R2
+III
+y
+los coefi cientes de 
+determinación para los modelos I, II y III. ¿Las expresiones siguientes son verdaderas o falsas?
+ 
+ 
+a
+R2
+I ≥R2
+II.
+b
+R2
+I ≥R2
+III.
+.
+c
+R2
+II ≤R2
+III
+ 
+11.90 
+Consulte el Ejercicio 11.69.
+ 
+ 
+a  Para el modelo cuadrático realice una prueba F de H0 : b2 = 0, usando a = .05. Compare el resultado 
+con la solución de la prueba en el Ejercicio 11.72.
+ 
+ 
+b Pruebe H0 : b1 = b2 = 0 con un nivel de signifi cancia de 5%.
+ 
+11.91 
+Consulte el Ejercicio 11.74. Pruebe la hipótesis con un nivel de signifi cancia de 5% de que ni T1 ni T2 
+afectan la producción.
+ 
+11.92 
+Las empresas de energía eléctrica, que deben planear la operación y expansión de generación de elec-
+tricidad, están muy interesadas en pronosticar la demanda de clientes tanto a corto como a largo plazos. 
+Se realizó un estudio a corto plazo para investigar el efecto de la temperatura x1 media diaria de cada 
+mes y el costo por kilowatt-hora, x2 en el consumo medio diario (en kWh) por familia. Los directores de 
+la compañía esperaban que la demanda de electricidad subiera en climas fríos (debido a la calefacción 
+empleada), bajara cuando la temperatura fuera moderada y volviera a subir la demanda cuando la tem-
+peratura aumentara y fuera necesario usar el aire acondicionado. Esperaban que la demanda se redujera 
+a medida que subiera el costo por kilowatt-hora, refl ejando mayor atención a la conservación. Se obtu-
+vieron datos durante 2 años, periodo durante el cual el costo por kilowatt-hora x2 aumentó debido a los 
+crecientes costos del combustible. Los directores de la compañía ajustaron el modelo
+Y = b0 + b1x1 + b2x2
+1 + b3x2 + b4x1x2 + b5x2
+1x2 + e
+ 
+ 
+a los datos de la siguiente tabla y obtuvieron ˆy = 325.606−11.383x1 +.113x2
+1 −21.699x2 + .873x1x2
+−.009x2
+1x2 con SSE = 152.1776.
+Consumo medio diario
+Precio por kWh (x2)
+8¢
+
+
+[Bloque seleccionado #805 | relevancia=2]
+Pagina 804
+780  Capítulo 15  Estadística no paramétrica
+ 
+Solución 
+Tres corridas de ensayo podrían ocurrir cuando y1 = 2 y y2 = 1, o cuando y1 = 1 y y2 = 2. 
+Entonces
+P(R = 3) = P(Y1 = 2, Y2 = 1) + P(Y1 = 1, Y2 = 2)
+=
+4
+1
+2
+0
+8
+5
++
+4
+0
+2
+1
+8
+5
+= 4
+56 + 2
+56 = .107.
+A continuación requerimos que P(R ≤3) = P(R = 2) + P(R = 3). De conformidad con 
+esto,
+P(R = 2) = 2P(Y1 = 1, Y2 = 1) = (2)
+4
+0
+2
+0
+8
+5
+= 2
+56 = .036.
+Así, la probabilidad de 3 o menos corridas de ensayo es.107 + .036 = .143. 
+Q
+Los valores de P(R ≤ a) se dan en la Tabla 10, Apéndice 3, para todas las combinaciones 
+de n1 y n2, donde n1 y n2 son menores o iguales a 10. Éstas se pueden usar para localizar las 
+regiones de rechazo de pruebas de una o de dos colas. Ilustramos con un ejemplo.
+ 
+EJEMPLO 15.10 
+Un examen de verdadero–falso se construyó con las preguntas que corren en la siguiente se-
+cuencia:
+T
+F
+F
+T
+F
+T
+F
+T
+T
+F
+T
+F
+F
+T
+F
+T
+F
+T
+T
+F.
+(T = verdadero; F = falso)
+¿Esta secuencia indica una desviación de la aleatoriedad en el arreglo de respuestas T y F?
+ 
+Solución 
+La secuencia contiene n1 = 10 respuestas T y n2 = 10 respuestas F, con y = 16 corridas de 
+ensayo. La no aleatoriedad puede estar indicada ya sea por un número inusualmente peque-
+ño o grande de corridas de ensayo; en consecuencia, estaremos usando una prueba de dos 
+colas.
+Suponga que deseamos usar a aproximadamente igual a .05 con .025 o menos en cada 
+cola de la región de rechazo. Entonces, de la Tabla 10, Apéndice 3, con n1 = n2 = 10, vemos 
+que P(R ≤ 6) = .019 y P(R ≤ 15) = .981. Entonces, P(R ≥ 16) = 1 − P(R ≤ 15) = .019 
+y rechazaríamos la hipótesis de aleatoriedad en el nivel de signifi cancia de a = .038 si R ≤ 
+6 o R ≥ 16. Como R = 16 para los datos observados, concluimos que existe evidencia para 
+indicar no aleatoriedad en el arreglo de las respuestas del profesor. El intento de mezclar las 
+respuestas está exagerado. 
+Q
+Una segunda aplicación de la prueba de corridas de ensayo está en detectar no aleatorie-
+dad de una secuencia de medidas cuantitativas en el tiempo. Estas secuencias, conocidas 
+como series de tiempo, se presentan en numerosos campos. Por ejemplo, la medición de una 
+característica de calidad de un producto industrial, presión sanguínea de una persona y el 
+precio de una acción en el mercado accionario varían todos en el tiempo. Las desviaciones 
+de la aleatoriedad en una serie, causadas ya sea por tendencias o periodicidades, se pueden

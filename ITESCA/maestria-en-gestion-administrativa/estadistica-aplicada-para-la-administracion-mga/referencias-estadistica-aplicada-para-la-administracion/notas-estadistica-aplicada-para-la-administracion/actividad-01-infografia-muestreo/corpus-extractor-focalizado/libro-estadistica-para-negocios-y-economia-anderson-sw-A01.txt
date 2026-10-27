@@ -1,0 +1,433 @@
+Fuente bibliográfica: Estadística para negocios y economía - Anderson, Sweeney y Williams. 11.ª edición.pdf
+Actividad: 1 (1.1 Infografía 5% Tarea)
+Palabras clave: muestreo, población, muestra, marco muestral, probabilístico, estratificado, conglomerados, tamaño de muestra, error de muestreo, sesgo
+
+[Bloque seleccionado #302 | relevancia=44]
+Pagina 301
+ 
+7.1  El problema de muestreo de Electronics Associates 
+267
+Para empezar, se presentan dos ejemplos en los que se utiliza el muestreo para responder 
+una pregunta de investigación acerca de una población.
+1.  Los miembros de un partido político en Texas consideraban postular a un determinado 
+candidato para el Senado, y los dirigentes del partido querían estimar la proporción 
+de votantes registrados en el estado que podían apoyarlo. Por tanto, se seleccionó una 
+muestra de 400 votantes registrados en Texas, y 160 de este total indicaron estar a favor 
+del candidato. Así, una estimación de la proporción de la población de votantes regis-
+trados a favor del candidato es 160/400  0.40.
+2.  Un fabricante de llantas está considerando producir un nuevo modelo que ofrezca 
+mayor duración que los actuales neumáticos de línea de la empresa. Para estimar la 
+duración media, en millas, el fabricante selecciona una muestra de 120 neumáticos nue-
+vos para probarlos. De los resultados de esta prueba se obtiene una media muestral de 
+36 500 millas. Por tanto, una estimación de la vida útil media de la población de nue-
+vas llantas es 36 500 millas.
+Es importante observar que los resultados muestrales sólo proporcionan una estimación de los 
+valores de las características de la población. No se espera que exactamente 0.40, o 40%, de 
+la población de los votantes registrados esté a favor del candidato, ni que la media muestral 
+de 36 500 millas sea exactamente igual al millaje medio de la población de todos los nuevos 
+neumáticos. La razón es simple: la muestra sólo contiene una parte de la población. Es de espe-
+rarse algún error de muestro. Con métodos adecuados, los resultados muestrales proporcionarán 
+“buenas” estimaciones de los parámetros poblacionales. Pero ¿cuán buenos puede esperarse 
+que sean estos resultados? Por fortuna, existen procedimientos estadísticos para responder esta 
+pregunta.
+Deﬁ namos algunos términos que se utilizan en el muestreo. La población muestreada 
+es aquella de la cual se extrae la muestra, y un marco es la lista de los elementos de donde se 
+seleccionará la muestra. En el primer ejemplo, la población muestreada son todos los votantes 
+registrados en Texas, y el marco es una lista de todos los votantes registrados. Debido a que 
+éstos constituyen un número ﬁ nito, el primer ejemplo ilustra qué es un muestreo de una pobla-
+ción ﬁ nita. En la sección 7.2 se analiza cómo seleccionar una muestra aleatoria simple cuando 
+se muestrea una población ﬁ nita.
+Deﬁ nir la población muestreada del ejemplo del millaje de los neumáticos
+
+[Bloque seleccionado #303 | relevancia=47]
+Pagina 302
+268 
+Capítulo 7  Muestreo y distribuciones de muestreo
+Utilizando los 2 500 gerentes de la empresa como población para este estudio, es posible 
+determinar el sueldo anual y la situación respecto del programa de capacitación de cada suje-
+to al consultar los archivos del personal. El conjunto de datos que contiene esta información 
+para cada uno de los 2 500 gerentes que forman la población se encuentra en el archivo deno-
+minado EAI.
+Con los datos de EAI y las fórmulas presentadas en el capítulo 3, se calcula la media pobla-
+cional y la desviación estándar poblacional de los sueldos anuales.
+Media poblacional μ  $51 800
+Desviación estándar poblacional σ  $4 000
+Los datos sobre la situación de la capacitación indican que 1 500 de los 2 500 gerentes han com-
+pletado el programa respectivo.
+A las características numéricas de una población, como la media y la desviación estándar, se 
+les llama parámetros. Si p denota la proporción de la población que ha completado el progra-
+ma de capacitación, se tiene que p  1 500/2 500  0.60. La media poblacional de los sueldos 
+anuales (μ  $51 800), la desviación estándar poblacional de los sueldos anuales (σ  $4 000) 
+y la proporción poblacional de quienes han completado el programa de capacitación (p  0.60) 
+son parámetros de la población de gerentes de EAI.
+Ahora suponga que la información necesaria acerca de todos los gerentes de EAI no esté 
+disponible en la base de datos de la empresa. La pregunta que se considera ahora es: ¿cómo 
+el director de personal de la empresa puede obtener estimaciones de los parámetros pobla-
+cionales utilizando una muestra de los gerentes, en lugar de estudiar a los 2 500 sujetos de la 
+población? Asuma que se empleará una muestra de 30 gerentes. Es obvio que el tiempo y el 
+costo de la elaboración de un perﬁ l será mucho menor usando 30 sujetos que la población ente-
+ra. Si el director de personal tuviera la certeza de que una muestra de 30 gerentes proporciona la 
+información adecuada acerca de la población de 2 500, preferiría trabajar con una muestra que 
+hacerlo con toda la población. Para explorar la posibilidad de usar una muestra en el estudio de 
+EAI, primero se considerará cómo determinar la de 30 gerentes.
+7.2 
+ Selección de una muestra
+En esta sección se describe cómo seleccionar una muestra. Primero se estudiará cómo selec-
+cionarla de una población ﬁ nita y luego de una población inﬁ nita.
+Muestreo de una población finita
+Los profesionales de la estadística recomiendan seleccionar una muestra de probabilidad 
+cuando se muestree de una población ﬁ nita, de
+
+[Bloque seleccionado #305 | relevancia=37]
+Pagina 304
+270 
+Capítulo 7  Muestreo y distribuciones de muestreo
+Cuando se selecciona una muestra en la que se aceptan números aleatorios ya usados y los 
+gerentes correspondientes son incluidos dos o más veces, se realiza un muestreo con rempla-
+zo. Muestrear con remplazo es una forma válida de identiﬁ car una muestra aleatoria simple; 
+sin embargo, como es el procedimiento de muestreo más usado, cuando se hable de muestreo 
+aleatorio simple se asumirá que éste es sin reemplazo.
+Muestreo de una población infinita
+Algunas veces se quiere seleccionar una muestra de una población, pero ésta es inﬁ nitamente 
+grande o sus elementos están siendo generados por un proceso en marcha, por lo cual no hay 
+límite para el número de elementos que pueden ser generados. Por tanto, no es posible hacer 
+una lista de todos los elementos de la población. Esto se considera el caso de una población 
+inﬁ nita, con la cual no se puede seleccionar una muestra aleatoria simple debido a que no es 
+factible construir un marco constituido por todos los elementos. En el caso de una población 
+inﬁ nita, los profesionales de la estadística recomiendan seleccionar lo que se llama una muestra 
+aleatoria.
+MUESTRA ALEATORIA (POBLACIÓN INFINITA)
+Una muestra aleatoria de tamaño n de una población infinita es seleccionada de ma-
+nera tal que se satisfagan las condiciones siguientes.
+1. Cada elemento elegido proviene de la misma población.
+2. Cada elemento es seleccionado de manera independiente.
+La implementación del proceso de selección de una muestra aleatoria en una población 
+inﬁ nita se debe efectuar con cuidado y criterio. Cada caso puede requerir un procedimiento 
+de selección diferente. Considere dos ejemplos para ver qué signiﬁ can las condiciones 1) cada 
+elemento seleccionado proviene de la misma población, y 2) cada elemento se elige de manera 
+independiente.
+Una aplicación de control de calidad común involucra un proceso de producción donde 
+no hay un límite en el número de elementos generados. La población conceptual que se mues-
+trea son todos los elementos que se pueden producir (no sólo los que se producen) por el proce-
+so de manufactura. Debido a que no es posible hacer una lista de todos ellos, se considera que 
+la población es inﬁ nita. Para ser más precisos, considere una línea de producción diseñada 
+para llenar cajas de un cereal para desayunar con un peso medio de 24 onzas por caja. De ma-
+nera periódica, un inspector de control de calidad selecciona muestras de 12 cajas llenas con 
+este proceso para determinar si éste funciona de manera apropiada o si, tal vez, un
+
+[Bloque seleccionado #306 | relevancia=46]
+Pagina 305
+ 
+7.2  Selección de una muestra 
+271
+en la medida en que se diseñe un procedimiento de muestreo en el que todos los elementos de 
+la muestra son clientes del restaurante y son seleccionados de manera independiente. En este 
+caso, el empleado que obtiene la muestra necesita seleccionarla de las personas que llegan al 
+establecimiento y realizan un consumo para asegurar que se satisfaga la condición de que sean 
+de la misma población. Si, por ejemplo, elige alguna persona que llegó al restaurante sólo para 
+entrar al sanitario, podría no ser un consumidor y se violaría la condición de que sean de la mis-
+ma población. Así, en la medida en que el encuestador extrae la muestra de entre las personas 
+que realizan un consumo en el restaurante, se satisface la condición 1. Asegurarse de que los 
+consumidores son seleccionados en forma independiente puede ser más difícil.
+El propósito de la segunda condición del procedimiento de selección de una muestra alea-
+toria (cada elemento se elige de manera independiente) consiste en prevenir el sesgo en la se-
+lección, que en este caso podría ocurrir si el encuestador fuera libre de tomar clientes para la 
+muestra de manera arbitraria. Podría ser que éste se sintiera más cómodo seleccionando clientes 
+de un grupo de edad particular y evitaría los de otros grupos de edad. El sesgo podría ocurrir 
+también si eligiera un grupo de cinco comensales que entraron juntos al restaurante y le pidiera 
+a todos participar en la muestra. Un grupo de clientes podría muy bien mostrar características 
+similares, lo que generaría información engañosa acerca de la población. Se puede evitar un 
+sesgo en una selección como ésta asegurando que la elección de un cliente especíﬁ co no in-
+ﬂ uya en la de cualquier otro. Esto es, los elementos (clientes) son escogidos de manera inde-
+pendiente.
+McDonald’s, el restaurante líder en comida rápida, realizó un muestreo aleatorio simple 
+precisamente en una situación así. El procedimiento de muestreo se basó en el hecho de que 
+algunos clientes presentaban cupones de descuento. Cada vez que una persona presentaba un 
+cupón, a la siguiente que se atendía se le pedía que llenara un cuestionario sobre el perﬁ l del 
+cliente. Como quienes llegaban al restaurante presentaban cupones de descuento aleatoria e 
+independientemente, este plan de muestreo garantizaba que los clientes fueran seleccionados 
+de manera independiente. Por consiguiente, los dos requerimientos para un muestreo aleatorio 
+simple de una población inﬁ nita fueron satisfechos.
+Las poblaciones inﬁ nitas suelen asociarse con un 
+
+[Bloque seleccionado #316 | relevancia=39]
+Pagina 315
+ 
+7.5  Distribución de muestreo de x  
+281
+En los casos en que n/N  0.05, para calcular σx debe usarse la versión para poblaciones 
+ﬁ nitas de la fórmula (7.2). En este libro, a menos que se indique otra cosa, se supondrá que el ta-
+maño de la población es “grande”, n/N  0.05, y se utilizará la expresión (7.3) para calcular σx.
+Para calcular σx se necesita conocer σ, la desviación estándar de la población. Para subra-
+yar, aún más, la diferencia entre σx y σ, a la desviación estándar de x, σx, se le llama error 
+estándar de la media. En general, el término error estándar se reﬁ ere a la desviación están-
+dar de un estimador puntual. Más adelante se verá que el valor del error estándar de la media 
+ayuda a determinar qué tan lejos puede estar la media muestral de la media poblacional. Ahora, 
+de nuevo con el ejemplo de EAI, se calcula el error estándar de la media correspondiente a las 
+muestras aleatorias simples de 30 gerentes de EAI.
+En la sección 7.1 vimos que la desviación estándar de los sueldos anuales en la población 
+de los 2 500 gerentes de EAI era σ  4 000. En este caso la población es ﬁ nita, N  2 500. Sin 
+embargo, como el tamaño de la muestra es 30, se tiene n/N  30/2 500  0.012. Dado que el 
+tamaño de la muestra es menor que 5% del tamaño de la población, se puede ignorar el factor 
+de corrección para una población ﬁ nita y usar la ecuación (7.3) para calcular el error estándar.
+σx  σ
+n  4 000
+30
+  730.3
+Forma de la distribución de muestreo de x
+Los resultados anteriores respecto del valor esperado y la desviación estándar en la distribu-
+ción de muestreo de x son aplicables a cualquier población. El paso ﬁ nal para identiﬁ car las 
+características de la distribución de muestreo de x consiste en determinar la forma de la dis-
+tribución de muestreo. Se considerarán dos casos: 1) La población tiene distribución normal, y 
+2) La población no tiene distribución normal.
+La población tiene distribución normal. En muchas situaciones es razonable suponer 
+que la población de la que se selecciona la muestra aleatoria simple tiene distribución normal o 
+casi normal. Cuando esto ocurre, la distribución de muestreo de x está distribuida normalmente 
+cualquiera que sea el tamaño de la muestra.
+La población no tiene distribución normal. Cuando la población de la que se tomó 
+la muestra aleatoria simple no tiene distribución normal, el teorema del límite central ayuda a 
+determinar la forma de la distribución de muestreo de x. El enunciado de este teorema aplicado 
+a la distribución de muestreo de x dice lo siguiente.
+TEOREMA DEL LÍM
+
+[Bloque seleccionado #322 | relevancia=40]
+Pagina 321
+ 
+7.5  Distribución de muestreo de x  
+287
+Ejercicios
+Métodos
+ 
+18. La media de una población es 200 y su desviación estándar es 50. Se tomará una muestra 
+aleatoria simple de tamaño 100 y se utilizará la media muestral x para estimar la media po-
+blacional.
+a) ¿Cuál es el valor esperado de x?
+b) ¿Cuál es la desviación estándar de x?
+c) 
+Ilustre la distribución de muestreo de x.
+d) ¿Qué expresa la distribución de muestreo de x?
+ 
+19. La media de una población es 200 y su desviación estándar es 50. Suponga que se selecciona 
+una muestra aleatoria simple de tamaño 100 y que se usa x para estimar μ.
+a)  ¿Cuál es la probabilidad de que la diferencia entre la media muestral y la media pobla-
+cional no sea mayor que 5?
+b)  ¿Y de que la diferencia entre la media muestral y la media poblacional no sea mayor 
+que 10?
+ 
+20. Suponga que la desviación estándar poblacional es σ  25. Calcule el error estándar de la me-
+dia, σx, con muestras de tamaño 50, 100, 150 y 200. ¿Qué puede decir acerca del tamaño del 
+error estándar de la media conforme el tamaño de la muestra aumenta?
+ 
+21. Suponga que se toma una muestra aleatoria simple de tamaño 50 a partir de una población 
+en la que σ  10. Determine el valor del error estándar de la media en cada uno de los casos 
+siguientes (si es necesario, use el factor de corrección para una población finita).
+a) El tamaño de la población es infinito.
+b) El tamaño de la población es N  50 000.
+c) 
+El tamaño de la población es N  5 000.
+d) El tamaño de la población es N  500.
+Aplicaciones
+ 
+22. Regrese al problema de los gerentes de EAI. Suponga que se utiliza una muestra aleatoria sim-
+ple de 60 gerentes.
+a)  Dibuje la distribución de muestreo de x si se emplean muestras aleatorias simples de ta-
+maño 60.
+b)  ¿Qué sucede con la distribución de muestreo de x si se usan muestras aleatorias simples 
+de tamaño 120?
+c) 
+ ¿Qué puede decir acerca de qué le sucede a la distribución de muestreo de x conforme el 
+tamaño de la muestra aumenta? ¿Parece lógica esta generalización? Explique.
+ 
+23. En el problema de muestreo de EAI (figura 7.5), se indicó que con n  30, la probabilidad de 
+que la media muestral no difiriera más de $500 de la media poblacional era 0.5034.
+a)  ¿Cuál es la probabilidad de que la media muestral no difiera más de $500 de la media 
+poblacional si se usa una muestra de tamaño 60?
+b)  Responda el inciso a) si el tamaño de la muestra es 120.
+ 
+24. Barron’s reportó que el número promedio de semanas que un individuo está desempleado es de 
+17.5 (Barron’s, 18 de febrero de 2008). Suponga que el tamaño de la
+
+[Bloque seleccionado #333 | relevancia=41]
+Pagina 332
+298 
+Capítulo 7  Muestreo y distribuciones de muestreo
+un estrato son parecidos, éste tendrá una varianza pequeña. Por tanto, con muestras relativa-
+mente pequeñas de los estratos se obtienen buenas estimaciones de sus características. Si éstos 
+son homogéneos, el muestreo aleatorio estratiﬁ cado proporciona resultados tan precisos como 
+los de un muestreo aleatorio simple, pero con una muestra de tamaño total menor.
+Muestreo por conglomerados
+En el muestreo por conglomerados (o clusters) los elementos de la población primero se 
+dividen en grupos separados, llamados conglomerados o clusters. Cada elemento pertenece a 
+uno y sólo un conglomerado (vea la ﬁ gura 7.13). Se toma una muestra aleatoria simple de los 
+conglomerados. Todos los elementos en cada conglomerado muestreado forman la muestra. 
+Este muestreo tiende a proporcionar mejores resultados cuando los elementos dentro de los 
+conglomerados no son semejantes. Lo ideal es que cada conglomerado sea una representación, 
+a pequeña escala, de la población completa. Si todos son semejantes en este aspecto, tomando 
+en la muestra un número pequeño de conglomerados, se obtendrá una buena estimación de los 
+parámetros poblacionales.
+Una de las principales aplicaciones del muestro por conglomerados es el muestreo de áreas, 
+en el que los conglomerados son las manzanas de una ciudad u otras zonas bien deﬁ nidas. Por 
+lo general, precisa tamaños de muestra mayores que los requeridos en el muestreo aleatorio 
+simple o en el muestreo aleatorio estratiﬁ cado. Sin embargo, permite reducir costos debido a 
+que cuando se envía a un entrevistador a uno de los conglomerados de la muestra (por ejemplo, 
+a una manzana de una ciudad), puede obtener muchas observaciones en poco tiempo. Por tan-
+to, provee una muestra de tamaño grande a un costo signiﬁ cantemente menor.
+Muestreo sistemático
+Para ciertos muestreos, en especial en aquellos con poblaciones grandes, se necesita mucho 
+tiempo para tomar una muestra aleatoria simple, pues se requiere determinar primero los nú-
+FIGURA 7.12  Diagrama de un muestreo aleatorio estratificado
+.  .  .
+Población
+Estrato 2
+Estrato 1
+Estrato H
+FIGURA 7.13  Diagrama del muestreo por conglomerados
+.  .  .
+Población
+Conglomerado 2
+Conglomerado 1
+Conglomerado K
+El muestreo por 
+conglomerados o clusters 
+funciona mejor cuando cada 
+conglomerado proporciona 
+una representación a menor 
+escala de la población.
+
+[Bloque seleccionado #334 | relevancia=54]
+Pagina 333
+ 
+7.8  Otros métodos de muestreo 
+299
+meros aleatorios y después contar y recorrer toda una lista de la población hasta encontrar 
+los elementos correspondientes. Una alternativa al muestreo aleatorio simple es el muestreo 
+sistemático. Por ejemplo, si se quiere una muestra de tamaño 50 de una población que tiene 
+5 000 elementos, se muestrea uno de cada 5 000/50  100 elementos de la población. En este 
+caso, un muestreo sistemático consiste en seleccionar en forma aleatoria uno de los primeros 
+100 elementos de la lista de la población. Los otros se identiﬁ can empezando con el primer ele-
+mento muestreado y seleccionando cada 100o. elemento que siga en la lista. En efecto, los 
+elementos de la muestra de 50 se identiﬁ can moviéndose sistemáticamente entre la población 
+e identiﬁ cando cada 100o. elemento después del primero seleccionado aleatoriamente. Por lo 
+general, de esta manera es más fácil identiﬁ car la muestra de 50 que si se utilizara el muestreo 
+aleatorio simple. Como el primer elemento que se selecciona es elegido al azar, se supone que 
+una muestra sistemática tiene las propiedades de una muestra aleatoria simple. Este supuesto 
+es aplicable, en especial, cuando la lista de los elementos de la población constituye un orden 
+aleatorio de los elementos.
+Muestreo de conveniencia
+Los métodos de muestreo hasta ahora analizados se conocen como técnicas probabilísticas 
+de muestreo. Los elementos seleccionados de una población tienen una probabilidad conocida 
+de ser incluidos en la muestra. La ventaja del muestreo probabilístico estriba en que, por lo 
+general, se identiﬁ ca la distribución de muestreo del estadístico muestral correspondiente. Para 
+determinar las propiedades de la distribución de muestreo se usan las fórmulas para el mues-
+treo aleatorio simple presentadas en este capítulo. La distribución de muestreo permite plantear 
+aﬁ rmaciones probabilísticas acerca del error asociado con el uso de los resultados muestrales al 
+hacer inferencias de la población.
+El muestreo de conveniencia es una técnica de muestreo no probabilística. Como el 
+nombre lo indica, la muestra se determina principalmente por conveniencia. Los elementos 
+se incluyen sin que haya una probabilidad previamente especiﬁ cada o conocida de que sean 
+incorporados en la muestra. Por ejemplo, un profesor que realiza una investigación en una 
+universidad puede usar estudiantes voluntarios para que constituyan una muestra simplemente 
+porque los tiene al alcance y participarán como sujetos a un costo bajo o sin costo. De manera 
+similar, un inspector puede mue
+
+[Bloque seleccionado #335 | relevancia=44]
+Pagina 334
+300 
+Capítulo 7  Muestreo y distribuciones de muestreo
+Cuando se realizan muestreos de poblaciones finitas, 
+se recomienda usar métodos de muestreo probabilís-
+tico: muestreo aleatorio simple, muestreo aleatorio es-
+tratificado, muestreo por conglomerados o muestreo 
+sistemático. Existen fórmulas para evaluar la “bon-
+dad” de los resultados muestrales basadas en el uso 
+de estos métodos en términos de la cercanía de los 
+NOTAS Y COMENTARIOS
+resultados a los parámetros poblacionales que se es-
+timan. Con los muestreos de conveniencia o con los 
+subjetivos no se puede estimar la bondad de los resul-
+tados. Por tanto, debe tenerse mucho cuidado al in-
+terpretar resultados basados en métodos de muestreo 
+no probabilístico.
+Resumen
+En este capítulo se presentaron los conceptos de muestreo aleatorio simple y distribución de 
+muestreo. Se describió cómo seleccionar una muestra aleatoria simple de una población ﬁ nita 
+y una muestra aleatoria de una población inﬁ nita. Los datos recolectados de tales muestras se 
+pueden utilizar para obtener estimadores puntuales de los parámetros poblacionales. Ya que dis-
+tintas muestras proporcionan valores diferentes de los estimadores puntuales, los estimadores 
+puntuales como x y p son variables aleatorias. A la distribución de probabilidad de una varia-
+ble aleatoria de este tipo se le conoce como distribución de muestreo. En particular, se descri-
+bieron las distribuciones de muestreo de la media muestral x y de la proporción muestral p.
+Al estudiar las características de las distribuciones de muestreo de x y de p, se estableció 
+que E(x)  μ y que E(p )  p. Después de proporcionar las fórmulas para la desviación están-
+dar o error estándar de dichos estimadores, se describieron las condiciones necesarias para que 
+las distribuciones de muestreo de x y de p sigan una distribución normal. Otros métodos de 
+muestreo que también se abordaron son el muestreo aleatorio estratiﬁ cado, por conglomerados 
+o clusters, sistemático, por conveniencia y subjetivo.
+Glosario
+Consistencia Propiedad de un estimador puntual que se hace presente siempre que muestras 
+más grandes tienden a proporcionar estimaciones puntuales más cercanas al parámetro pobla-
+cional.
+Distribución de muestreo o muestral Distribución de probabilidad que consta de todos los 
+posibles valores de un estadístico muestral.
+Eficiencia relativa Dados dos estimadores puntuales insesgados de un mismo parámetro po-
+blacional, el estimador puntual con menor error estándar será más eﬁ ciente.
+Error estándar Desviación estándar de un estimador puntual.
+Estadísti
+
+[Bloque seleccionado #336 | relevancia=46]
+Pagina 335
+ 
+Fórmulas clave 
+301
+Marco Lista de los elementos de donde se selecciona la muestra.
+Muestreo aleatorio Muestra aleatoria de una población inﬁ nita seleccionada de manera tal 
+que se satisfagan las condiciones siguientes: 1) cada elemento escogido proviene de la misma 
+población y, 2) cada elemento se selecciona de manera independiente.
+Muestreo aleatorio estratificado Método probabilístico en el que primero se divide la pobla-
+ción en estratos y después se toma una muestra aleatoria simple de cada estrato.
+Muestreo aleatorio simple Muestra aleatoria simple de tamaño n de una población ﬁ nita de 
+tamaño N seleccionada de manera que cada posible muestra de tamaño n tenga la misma pro-
+babilidad de ser seleccionada.
+Muestreo con remplazo Una vez que un elemento se ha incluido en la muestra, se regresa 
+a la población. Un elemento ya seleccionado puede nuevamente ser elegido y aparecer más de 
+una vez en la muestra.
+Muestreo de conveniencia Método no probabilístico en el que la selección de los elementos 
+para la muestra es acorde con la conveniencia.
+Muestreo por conglomerados o clusters Método probabilístico en el que primero se divide 
+la población en conglomerados y después se toma una muestra aleatoria de éstos.
+Muestreo sin remplazo Una vez que un elemento ha sido incluido en la muestra, se retira de 
+la población y ya no se selecciona más.
+Muestreo sistemático Método probabilístico en el que primero se selecciona uno de los pri-
+meros k elementos de una población y después cada k-ésimo elemento.
+Muestreo subjetivo Método no probabilístico en el que la selección de los elementos para la 
+muestra se realiza de acuerdo con la opinión de la persona que efectúa el estudio.
+Parámetro Característica numérica de una población, por ejemplo, media poblacional μ, des-
+viación estándar poblacional σ, proporción poblacional p, etcétera.
+Población muestreada Población de la cual se extrae la muestra.
+Población objetivo Es aquella de la cual se hacen inferencias estadísticas como estimacio-
+nes puntuales. Es importante que la población objetivo corresponda tan cercanamente como 
+sea posible a la población muestreada.
+Teorema del límite central Permite usar la distribución de probabilidad normal para apro-
+ximar la distribución de muestreo de x siempre que la muestra sea grande.
+Fórmulas clave
+Valor esperado de x
+ 
+E(x)  μ 
+(7.1)
+Desviación estándar de x (error estándar)
+ 
+Población ﬁ nita 
+Población inﬁ nita
+ 
+σx  
+N  n
+N  1
+σ
+n 
+σx  σ
+n 
+(7.2)
+Valor esperado de p
+ 
+E(p)  p 
+(7.4)

@@ -1,0 +1,111 @@
+% Plantilla y base conceptual generada con AulaTeX (Amazon Nova Pro) para Actividad 16 (A16).
+% Contrato AulaTeX: portada oficial ITESCA, Resumen con declaracion IA, Tabla de contenido y tres tiempos.
+\def\estadisticatitulo{Arquitectura visual del análisis de series de tiempo y pronósticos económicos en la planeación}
+\def\estadisticasubtitulo{Actividad 16: Infografía en equipo}
+\def\estadisticafecha{22 de noviembre de 2026}
+\def\estadisticaunidad{Análisis de series de tiempo y pronósticos económicos}
+\def\portadaoficial{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/portada-oficial.png}
+\def\estadisticaextras{%
+  \usepackage{fontspec}
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+  \usepackage{longtable,booktabs,array}
+  \usetikzlibrary{babel}
+  \geometry{letterpaper,left=2.3cm,right=2.3cm,top=2.2cm,bottom=2.2cm}
+  \hypersetup{pdftitle={Arquitectura visual del análisis de series de tiempo y pronósticos económicos en la planeación},pdfsubject={Actividad 16 - Estadística aplicada para la administración}}
+  \setcitestyle{citesep={;}}
+  \renewcommand{\insertcoverwatermark}{}
+  \renewcommand{\insertcoverinstitutionalfooter}{}
+  \renewcommand{\templatePortrait}{%
+    \thispagestyle{empty}
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{\portadaoficial}};
+      \node[anchor=north west,text=white,text width=10.6cm,align=center,inner sep=0pt] at ([xshift=10.1cm,yshift=-19.4cm]current page.north west) {%
+        \setstretch{1}\fontsize{12}{15}\selectfont
+        {\fontsize{15}{18}\selectfont\bfseries Arquitectura visual del análisis de series de tiempo y pronósticos económicos en la planeación}\par\vspace{0.16cm}
+        Estadística aplicada para la administración\par
+        Actividad 16: Infografía en equipo\par\vspace{0.12cm}
+        Martín Jonathan de la Cruz Muñoz\par
+        Matrícula: 26130503\par
+        Dra. Yoana Elizeth Tauitmes Delgado\par
+        22 de noviembre de 2026
+      };
+    \end{tikzpicture}\null\clearpage
+  }
+  \renewcommand{\templatePagecfg}{}
+  \renewcommand{\templateFinalcfg}{%
+    \pagestyle{fancy}\fancyhf{}\fancyfoot[C]{\fontsize{10}{12}\selectfont\thepage}
+    \renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}
+    \setcounter{page}{2}\renewcommand{\thepage}{\arabic{page}}
+  }
+  \titleformat{\section}{\normalfont\fontsize{12}{15}\selectfont\bfseries\color{itescaRedDark}}{\thesection.}{0.5em}{}
+  \titleformat{\subsection}{\normalfont\fontsize{12}{15}\selectfont\bfseries}{\thesubsection.}{0.5em}{}
+  \titlespacing*{\section}{0pt}{8pt}{5pt}
+  \titlespacing*{\subsection}{0pt}{7pt}{4pt}
+  \renewcommand{\footnotesize}{\fontsize{12}{14.4}\selectfont}
+  \setlength{\parindent}{1.1cm}
+  \setlength{\parskip}{3pt}
+  \urlstyle{same}
+  \input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/investigacion-articulos/formato-fichas.tex}
+}
+\def\estadisticaresumen{La actividad académica en cuestión se centra en el análisis de series de tiempo y la elaboración de pronósticos económicos, fundamentales para la gestión administrativa y la toma de decisiones estratégicas. Este ejercicio promueve la comprensión y aplicación de métodos estadísticos avanzados para descomponer y modelar series temporales, lo cual es crucial para anticipar tendencias y variaciones en datos económicos y organizacionales.}
+\long\def\estadisticacontenido{%
+\fontsize{12}{14.4}\selectfont\setstretch{1.5}\justifying
+\estadisticapreliminares
+\section{Introducción}
+El análisis de series de tiempo y la elaboración de pronósticos económicos son herramientas fundamentales en la gestión administrativa. Esta actividad académica se centra en la comprensión y aplicación de métodos estadísticos avanzados para descomponer y modelar series temporales, lo cual es crucial para anticipar tendencias y variaciones en datos económicos y organizacionales. La representación gráfica de series de tiempo permite visualizar patrones y tendencias a lo largo del tiempo, facilitando la identificación de la estructura subyacente de los datos y la toma de decisiones basada en evidencia. \citep{anderson2012,lind2012,holmesBusiness2023}.
+
+\section{Fundamentos, modelado analítico y evidencia en análisis de series de tiempo y pronósticos económicos}
+\subsection{Base conceptual autocontenida y formulación matemática}
+La descomposición de una serie de tiempo en sus componentes clásicos (tendencia secular, variación estacional, fluctuación cíclica e irregular) permite una comprensión más profunda de los patrones y tendencias subyacentes. La elección entre el esquema aditivo y multiplicativo de descomposición es crucial para la precisión de los análisis y pronósticos. Los métodos de promedios móviles simples y ponderados, así como el suavizado exponencial simple, son herramientas esenciales para el suavizado de series de tiempo y la mejora de la precisión de los pronósticos. El cálculo de índices estacionales y la desestacionalización permiten una mejor comprensión de las tendencias y patrones subyacentes, particularmente en sectores como el retail. Las tasas de variación periódica e interanual son métricas útiles para evaluar el desempeño y las tendencias a lo largo del tiempo, mientras que las métricas de error de pronóstico (MAD, MSE, MAPE) son esenciales para la evaluación y selección de modelos de pronóstico en la gestión administrativa. \citep{wackerly2010,canavos1988,spiegel2009}.
+
+\textbf{1. Definición y representación gráfica de una serie de tiempo.} Una serie de tiempo es un conjunto de observaciones secuenciales tomadas en intervalos regulares. Su representación gráfica permite visualizar patrones y tendencias a lo largo del tiempo. Esta visualización es esencial para identificar la estructura subyacente de los datos y para la toma de decisiones basada en evidencia. Expresión formal: $X_t = f(t) + \epsilon_t$. En el ámbito gerencial, en administración, la representación gráfica de series de tiempo ayuda a identificar tendencias de ventas, costos y otros indicadores clave de desempeño, facilitando la planificación estratégica y operativa. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{2. Componentes clásicos: tendencia secular, variación estacional, fluctuación cíclica e irregular.} La tendencia secular representa el movimiento a largo plazo de una serie de tiempo. La variación estacional se refiere a patrones recurrentes en intervalos regulares. La fluctuación cíclica implica movimientos no periódicos que pueden estar asociados con ciclos económicos. La irregularidad representa variaciones aleatorias sin patrón definido. Expresión formal: $Y_t = T_t + S_t + C_t + I_t$. En el ámbito gerencial, estos componentes son fundamentales para descomponer y entender las variaciones en datos económicos, permitiendo a los administradores ajustar sus estrategias de acuerdo a las tendencias y patrones identificados. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{3. Esquema aditivo frente a esquema multiplicativo de descomposición.} El esquema aditivo supone que los componentes de una serie de tiempo se suman linealmente, mientras que el esquema multiplicativo implica que estos componentes se multiplican. La elección entre ambos esquemas depende de la naturaleza de los datos y de los objetivos del análisis. Expresión formal: $Y_t = T_t + S_t + I_t (aditivo); Y_t = T_t \times S_t \times I_t (multiplicativo)$. En el ámbito gerencial, la elección correcta del esquema de descomposición es crucial para la precisión de los pronósticos y la efectividad de las estrategias de gestión. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{4. Método de promedios móviles simples y ponderados.} Los promedios móviles simples calculan el promedio de un conjunto de observaciones pasadas, mientras que los promedios móviles ponderados asignan diferentes pesos a las observaciones en función de su relevancia temporal. Ambos métodos son utilizados para suavizar las fluctuaciones en series de tiempo y mejorar la precisión de los pronósticos. Expresión formal: $SMA = \frac{1}{n}\sum_{i=1}^{n} X_i; WMA = \sum_{i=1}^{n} w_i X_i$. En el ámbito gerencial, estos métodos son ampliamente utilizados en la gestión de inventarios, pronósticos de ventas y análisis de costos para reducir la volatilidad y mejorar la toma de decisiones. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{5. Suavizado exponencial simple y constante de atenuación alfa.} El suavizado exponencial simple es un método de pronóstico que utiliza un promedio ponderado de las observaciones pasadas, donde las observaciones más recientes tienen un peso mayor. La constante de atenuación alfa determina la velocidad con la que los pesos de las observaciones disminuyen. Expresión formal: $F_t = \alpha X_t + (1-\alpha) F_{t-1}$. En el ámbito gerencial, este método es útil para pronosticar variables económicas y financieras, permitiendo a los administradores ajustar sus estrategias en función de las tendencias identificadas. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{6. Cálculo de índices estacionales y desestacionalización.} Los índices estacionales miden la magnitud de las variaciones estacionales en una serie de tiempo. La desestacionalización implica ajustar los datos para eliminar el efecto estacional, permitiendo una mejor visualización de las tendencias y patrones subyacentes. Expresión formal: $I_t = \frac{Y_t}{\hat{Y}_t}; \hat{Y}_t = \frac{Y_t}{I_t}$. En el ámbito gerencial, la desestacionalización es crucial para el análisis de series de tiempo en sectores como el retail, donde las ventas pueden variar significativamente según la temporada. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{7. Tasas de variación periódica e interanual.} Las tasas de variación periódica miden el cambio en una serie de tiempo en un intervalo específico (por ejemplo, mensual o trimestral), mientras que las tasas de variación interanual miden el cambio en un año. Estas tasas son útiles para evaluar el desempeño y las tendencias a lo largo del tiempo. Expresión formal: $RV_t = \frac{Y_t - Y_{t-1}}{Y_{t-1}} \times 100; RAV_t = \frac{Y_t - Y_{t-12}}{Y_{t-12}} \times 100$. En el ámbito gerencial, estas tasas son utilizadas en la gestión financiera y operativa para evaluar el rendimiento y ajustar las estrategias en función de las tendencias identificadas. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{8. Métricas de error de pronóstico (MAD, MSE, MAPE).} El Error Absoluto Medio (MAD), el Error Cuadrático Medio (MSE) y el Error Porcentual Absoluto Medio (MAPE) son métricas utilizadas para evaluar la precisión de los modelos de pronóstico. Cada métrica ofrece una perspectiva diferente sobre el rendimiento del modelo. Expresión formal: $MAD = \frac{1}{n}\sum_{i=1}^{n} |Y_i - \hat{Y}_i|; MSE = \frac{1}{n}\sum_{i=1}^{n} (Y_i - \hat{Y}_i)^2; MAPE = \frac{1}{n}\sum_{i=1}^{n} \frac{|Y_i - \hat{Y}_i|}{Y_i} \times 100$. En el ámbito gerencial, estas métricas son esenciales para la evaluación y selección de modelos de pronóstico en la gestión administrativa, permitiendo a los administradores elegir el modelo más adecuado para sus necesidades. \citep{anderson2012,lind2012,wackerly2010}.
+
+
+\subsection{Arquitectura visual y síntesis comparativa para la infografía}
+Para realizar esta actividad, los equipos deberán investigar el tema de análisis de series de tiempo y pronósticos económicos, y crear una infografía que incluya al menos tres fuentes de consulta en formato APA. La infografía deberá cubrir los conceptos clave de la unidad, incluyendo la definición y representación gráfica de una serie de tiempo, los componentes clásicos, los esquemas de descomposición, los métodos de promedios móviles y suavizado exponencial, el cálculo de índices estacionales y desestacionalización, las tasas de variación periódica e interanual, y las métricas de error de pronóstico. Los equipos deberán trabajar en colaboración para asegurar que la infografía sea completa y precisa, y que incluya referencias adecuadas a las fuentes consultadas.
+
+La arquitectura visual de la infografía se organiza en cuatro bloques analíticos que condensan las fórmulas, supuestos e interpretaciones gerenciales de la unidad \citep{anderson2012,hyndmanForecasting2021}:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{p{3.6cm}p{5.2cm}p{5.8cm}}
+\hline
+\textbf{Eje conceptual} & \textbf{Formulación y estructura técnica} & \textbf{Aplicación en decisiones administrativas}\\\hline
+Definición y representación gráfica de una serie de tiempo & Una serie de tiempo es un conjunto de observaciones secuenciales tomadas en intervalos regulares. Su representación gráfica permite visualizar patrones y tendencias a lo ... & En administración, la representación gráfica de series de tiempo ayuda a identificar tendencias de ventas, costos y otros indicadores clave de desempeño, facilitando la p...\\\hline
+Componentes clásicos: tendencia secular, variación estacional, fluctuación cíclica e irregular & La tendencia secular representa el movimiento a largo plazo de una serie de tiempo. La variación estacional se refiere a patrones recurrentes en intervalos regulares. La ... & Estos componentes son fundamentales para descomponer y entender las variaciones en datos económicos, permitiendo a los administradores ajustar sus estrategias de acuerdo ...\\\hline
+Esquema aditivo frente a esquema multiplicativo de descomposición & El esquema aditivo supone que los componentes de una serie de tiempo se suman linealmente, mientras que el esquema multiplicativo implica que estos componentes se multipl... & La elección correcta del esquema de descomposición es crucial para la precisión de los pronósticos y la efectividad de las estrategias de gestión....\\\hline
+Método de promedios móviles simples y ponderados & Los promedios móviles simples calculan el promedio de un conjunto de observaciones pasadas, mientras que los promedios móviles ponderados asignan diferentes pesos a las o... & Estos métodos son ampliamente utilizados en la gestión de inventarios, pronósticos de ventas y análisis de costos para reducir la volatilidad y mejorar la toma de decisio...\\\hline
+Suavizado exponencial simple y constante de atenuación alfa & El suavizado exponencial simple es un método de pronóstico que utiliza un promedio ponderado de las observaciones pasadas, donde las observaciones más recientes tienen un... & Este método es útil para pronosticar variables económicas y financieras, permitiendo a los administradores ajustar sus estrategias en función de las tendencias identifica...\\\hline
+Cálculo de índices estacionales y desestacionalización & Los índices estacionales miden la magnitud de las variaciones estacionales en una serie de tiempo. La desestacionalización implica ajustar los datos para eliminar el efec... & La desestacionalización es crucial para el análisis de series de tiempo en sectores como el retail, donde las ventas pueden variar significativamente según la temporada....\\\hline
+\end{tabular}
+\end{center}
+
+
+\subsection{Articulación administrativa y síntesis del desarrollo}
+La comprensión de la definición y representación gráfica de una serie de tiempo es fundamental para el análisis de datos temporales en la gestión administrativa. La representación gráfica permite identificar patrones y tendencias, lo cual es esencial para la toma de decisiones estratégicas y operativas en la administración. \citep{holmesBusiness2023,nistHandbook}.
+La descomposición de una serie de tiempo en sus componentes clásicos permite una comprensión más profunda de los patrones y tendencias subyacentes. Cada componente ofrece información valiosa sobre las variaciones en los datos, lo cual es crucial para la planificación y la toma de decisiones en la gestión administrativa. \citep{holmesBusiness2023,nistHandbook}.
+La elección entre el esquema aditivo y multiplicativo de descomposición es crucial para la precisión de los análisis y pronósticos. La correcta elección del esquema de descomposición permite una mejor comprensión y modelado de las series de tiempo, lo cual es esencial para la toma de decisiones informadas. \citep{holmesBusiness2023,nistHandbook}.
+Los métodos de promedios móviles son herramientas esenciales para el suavizado de series de tiempo y la mejora de la precisión de los pronósticos. La aplicación de estos métodos permite a los administradores reducir la volatilidad y mejorar la toma de decisiones en la gestión de inventarios, pronósticos de ventas y análisis de costos. \citep{holmesBusiness2023,nistHandbook}.
+
+En síntesis dentro de este segundo tiempo, la articulación entre la teoría estadística de \textit{análisis de series de tiempo y pronósticos económicos} y la práctica administrativa demuestra que ningún indicador cuantitativo opera en el vacío: la validez de la conclusión depende del cumplimiento de los supuestos distribucionales, de la representatividad de los datos recolectados y de la correspondencia entre el modelo matemático y el problema decisional de la organización \citep{anderson2012,nistHandbook,guarin2002}.
+
+\clearpage
+\section{Conclusiones}
+El análisis de series de tiempo y la elaboración de pronósticos económicos son herramientas esenciales en la gestión administrativa, permitiendo a los administradores anticipar tendencias y variaciones en datos económicos y organizacionales. La comprensión y aplicación de métodos estadísticos avanzados para descomponer y modelar series temporales es crucial para la toma de decisiones informadas. Aunque estos métodos ofrecen una gran precisión y utilidad, es importante considerar sus limitaciones y asumir un enfoque crítico y riguroso en su aplicación. \citep{anderson2012,lind2012,wackerly2010,diazRodriguez2022}.
+}
+\input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/reporte-estadistica-aplicada-para-la-administracion-plantilla-actividad.tex}

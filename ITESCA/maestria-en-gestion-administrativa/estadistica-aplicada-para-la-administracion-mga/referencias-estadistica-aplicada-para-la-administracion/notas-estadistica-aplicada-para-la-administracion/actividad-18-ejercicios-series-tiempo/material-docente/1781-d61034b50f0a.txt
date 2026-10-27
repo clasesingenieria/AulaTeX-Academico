@@ -1,0 +1,376 @@
+Pagina 1
+ 
+ 
+ 
+5.Series temporales 
+Estadística para la administración 
+
+
+Pagina 2
+  
+ 
+                                                                                   Página 1 de 7 
+ 
+5. Series temporales  
+5.1 Introducción  
+Los pronósticos, o predicciones, son una herramienta esencial en cualquier proceso de 
+toma de decisiones. Sus aplicaciones varían desde la determinación de los requerimientos 
+de inventario de una pequeña zapatería hasta la estimación de las ventas anuales de juegos 
+de video. La calidad de los pronósticos que los tomadores de decisiones pueden realizar 
+está estrechamente relacionada con la información que puede extraerse y utilizarse a partir 
+de los datos históricos. El análisis de series de tiempo es un método cuantitativo que 
+utilizamos para determinar patrones de comportamiento en los datos recolectados a través 
+del tiempo. 
+Utilizamos el término serie de tiempo para referirnos a cualquier grupo de información 
+estadística que se acumula a intervalos regulares. Con respecto en una variable de interés, 
+existen cuatro tipos de cambio o variación implicados en el análisis de series de tiempo, 
+éstos son: 
+1. Tendencia secular o variación secular 
+2. Fluctuación cíclica o variación cíclica 
+3. Variación estacional 
+4. Variación irregular 
+La tendencia secular, el valor de la variable tiende a aumentar o disminuir en un periodo 
+muy largo. El incremento estable en los costos de vida registrados en el Índice de Precios 
+al Consumidor (IPC) es un ejemplo de tendencia secular. De un año a otro, el costo de vida 
+varía bastante, pero si examinamos un periodo a largo plazo, nos damos cuenta que la 
+tendencia tiende a aumentar de manera estable. 
+La fluctuación cíclica el ejemplo más común de fluctuación cíclica es el ciclo económico. A 
+través del tiempo, hay años en los que el ciclo económico llega a un pico arriba de la línea 
+de tendencia; en otros, es probable que la actividad de los negocios disminuya abajo de la 
+línea de tendencia. El tiempo que transcurre entre picos y depresiones es al menos un año, 
+y puede llegar a ser hasta 15 o 20. 
+La variación estacional, como cabría esperar, este tipo de variación implica patrones de 
+cambio en el lapso de un año que tienden a repetirse anualmente. Por ejemplo, un médico 
+puede esperar un aumento sustancial en el número de casos de gripe cada invierno y de 
+afectados de tifoidea cada verano. Como se trata de patrones regulares son útiles al 
+pronosticar el futuro. 
+
+
+Pagina 3
+  
+ 
+                                                                                   Página 2 de 7 
+La variación irregular es el cuarto tipo de cambio que ocurre en el análisis de las series de 
+tiempo. En muchas situaciones, el valor de una variable puede ser completamente 
+impredecible cambiando de manera aleatoria. Las variaciones irregulares describen esos 
+movimientos. Los efectos que el conflicto de Medio Oriente en 1973, la situación de Irán en 
+1979-1981, el colapso de la OPEP en 1986 y la situación de Irak en 1990 tuvieron sobre los 
+precios de la gasolina en Estados Unidos son ejemplos de variación irregular 
+PRONÓSTICOS PARA LA TOMA DE DECISIONES  
+Un aspecto esencial en la administración de cualquier organización es la planeación para 
+el futuro. En efecto, el éxito a largo plazo de una organización está estrechamente 
+relacionado con la capacidad que tenga la administración de anticipar el futuro y elaborar 
+estrategias adecuadas. Criterio, intuición y atención al entorno económico permiten que un 
+administrador tenga una idea aproximada de lo que puede ocurrir en el futuro. Sin embargo, 
+no resulta fácil convertir una idea aproximada en un número que pueda representar el 
+volumen de ventas del trimestre próximo el costo de la materia prima en el año siguiente. 
+El objetivo de este capítulo es presentar varios métodos para obtener pronósticos. 
+Los datos históricos forman una serie de tiempo. Una serie de tiempo es un conjunto de 
+observaciones de una variable medida en puntos sucesivos en el tiempo o en periodos de 
+tiempo sucesivos. En este capítulo se presentan varios métodos para el análisis de series 
+de tiempo. El objetivo de tal análisis es obtener un buen pronóstico o predicción de los 
+valores futuros de una serie de tiempo. 
+1. CONCEPTOS GENERALES DE PRONÓSTICOS 
+¿Qué es un pronóstico? 
+Cuando cualquier empresa o individuo, hace una afirmación acerca de  
+ 
+la ocurrencia o no ocurrencia de un evento  
+ 
+la fecha en que va a suceder algo  
+ 
+la intensidad de un evento futuro  
+está realizando un pronóstico. Como se ve de la anterior afirmación, los pronósticos son 
+tan frecuentes que no se trata de ver si vamos a hacer pronósticos sino de cómo hacerlos.  
+A lo largo del curso hablaremos de técnicas diseñadas para obtener pronósticos. Antes de 
+meternos en una larga serie de métodos es bueno que señalemos algunas generalidades 
+sobre los pronósticos.  
+Cómo se relacionan los pronósticos con otras disciplinas  
+1) Relación con la toma de decisiones. El uso principal de los pronósticos está relacionado 
+con la toma de decisiones. Algunas son ``pequeñas'' decisiones, por ejemplo, las 
+
+
+Pagina 4
+  
+ 
+                                                                                   Página 3 de 7 
+relacionadas al mantenimiento de un adecuado nivel de inventario. Algunas son ``grandes'' 
+decisiones, como las relacionadas con inversiones. En todo caso los pronósticos para ser 
+útiles deben estar relacionados con la toma de decisiones. Para que un pronóstico sea útil 
+se debe presentar con oportunidad.  
+2) Relación con la planeación. Al desempeño de una empresa lo afectan eventos externos 
+y eventos internos. En este contexto llamo externos a los eventos que afectan a la empresa 
+pero sobre los cuales tiene poco o nulo control. Estos factores externos incontrolables, por 
+lo general son aquellos que tratamos con las técnicas de pronósticos. Por otra parte los 
+eventos internos son los relacionados a decisiones que la empresa toma; sobre los eventos 
+internos la empresa tiene completo control. La planeación relaciona tanto los externos como 
+los internos.  
+Clasificación de los pronósticos  
+1) Corto, mediano y largo plazos. Un criterio de división de los pronósticos atiende al tiempo 
+para el cual se prepara el pronóstico. Estos tiempos varían con el uso del pronóstico.  
+ 
+Para programación de producción, transporte, efectivo, personal. Generalmente se 
+hacen pronósticos de corto plazo. Un ejemplo es la programación del efectivo, una 
+cuenta bancaria debe tener dinero suficiente para afrontar los compromisos 
+previstos. Si tiene más dinero se pierde la oportunidad de invertirlo, si tiene menos 
+no habrá la liquidez suficiente para afrontar compromisos y puede haber pérdida de 
+oportunidades.  
+ 
+Para adquisiciones de materia prima, personal, equipo. Se hacen pronósticos de 
+mediano plazo. Las adquisiciones de algunos bienes no son inmediatas y necesitan 
+un cierto tiempo para realizarse (algún personal calificado no se consigue en forma 
+inmediata), es preciso planear adecuadamente y para eso es útil tener un pronóstico 
+de necesidades.  
+ 
+Para algunos aspectos de presupuestación, planeación de inversiones, planeación 
+estratégica. Se requieren pronósticos de largo plazo. Las inversiones de capital 
+siempre requieren de pronósticos, tanto de la necesidad de las mismas como de 
+plazos en los que se espera recuperar la inversión, estos últimos requieren de 
+pronósticos de otras cosas como ventas, tasas de interés y otros factores 
+importantes.  
+2) Complejidad de la técnica. Hay pronósticos muy simples en cuanto a la técnica para 
+elaborarlos. Quizá el más simple es ``lo mismo que hoy''. En el otro extremo se encuentran 
+
+
+Pagina 5
+  
+ 
+                                                                                   Página 4 de 7 
+los pronósticos usando computadoras y algoritmos sofisticados, o los que reúnen la opinión 
+de varios expertos y que pueden llevar meses para su conclusión.  
+3) Integración de los pronósticos. Los pronósticos se realizan en diferentes departamentos 
+de las empresas y requieren de una integración para darles coherencia. Producción, 
+Ventas, Desarrollo del producto, Presupuestos, Tesorería y Dirección General, pueden 
+estar haciendo pronósticos cada cual por su parte e incluso los pronósticos pueden ser 
+contradictorios. Es necesario sistematizar la forma de obtenerlos y planear cómo se van a 
+integrar.  
+Clasificación de los métodos de pronóstico 
+Los pronósticos se requieren  
+ 
+en diferentes situaciones  
+ 
+para diferentes objetivos  
+ 
+y se hacen por diferentes métodos.  
+Clasificando los métodos para tener pronósticos, los dividimos en dos tipos principales:  
+ 
+Cuantitativos.  
+ 
+Cualitativos o Tecnológicos.  
+Métodos Cuantitativos.  
+Los métodos cuantitativos se basan en datos históricos. Esta información pasada se 
+encuentra en forma numérica. Las fuentes usuales son los registros de la propia empresa 
+o información oficial de diverso origen: gobierno, asociaciones de empresarios o 
+profesionistas, organismos internacionales.  
+Se debe tener cuidado, sobre todo cuando la información proviene de la propia empresa 
+(aunque en la proveniente de otras fuentes también hay que cuidarse), que haya sido 
+cuantificada de manera uniforme. Para información sobre costos, por ejemplo, hay que 
+asegurarse que los costos incluyan los mismos conceptos en todos los años que vamos a 
+utilizar; de no ser así es preciso tratar previamente los datos.  
+Para aplicar los métodos cuantitativos es preciso convencernos, razonablemente, de que 
+se cumple la llamada Hipótesis de Continuidad. Este supuesto es que los factores externos 
+en los que se dieron los datos históricos no cambiarán en el futuro para el que estamos 
+pronosticando. Estos factores son, en forma destacada:  
+ 
+Economía en general.  
+ 
+Competencia en el mercado (oferta).  
+ 
+Estado del mercado (demanda).  
+ 
+Estado tecnológico del producto (``ciclo de vida del producto'').  
+
+
+Pagina 6
+  
+ 
+                                                                                   Página 5 de 7 
+Esta continuidad del ambiente nunca se da en forma perfecta, sino en forma gradual. Se 
+requiere buen juicio para suponer que las violaciones a la continuidad no van a afectar a 
+los resultados de la aplicación del método de pronóstico.  
+Los métodos cuantitativos son de dos tipos según la información en que se basan:  
+ 
+Métodos de Series de Tiempo. Se usa información de la misma variable que se va 
+a pronosticar.  
+ 
+Métodos Causales. Se utiliza información de la variable que se va a pronosticar y 
+de otras variables que influyen en ella o que están relacionadas con ella y cuyo 
+pronóstico sea más simple.  
+Métodos Cualitativos.  
+Estos métodos reciben también el nombre de tecnológicos, porque históricamente se 
+usaron primero para pronosticar cambios tecnológicos.  
+La posición central en estos métodos no la tienen los datos pasados, sino la experiencia de 
+las personas. Frecuentemente se usa la experiencia y buen juicio de varios expertos. Hay 
+2 tipos de métodos:  
+ 
+Exploratorios o Prospectivos. Se parte de las experiencias pasadas y presentes para 
+proyectar al futuro, sopesando las diferentes posibilidades.  
+ 
+Normativos o Deductivos. En éstos se procede al revés, se parte de las metas u 
+objetivos a lograr en el futuro y se analiza qué se necesita para lograrlos y eso nos 
+da pauta para pensar cuando sucederán los eventos previstos para el futuro.  
+Los métodos tecnológicos son útiles para desarrollo de productos, inversiones de capital, 
+planeación estratégica.  
+Método Delphi  
+Un método tecnológico muy usado es el método Delphi; éste trata de obtener un consenso 
+confiable entre diversos expertos para usarlo como base para pronosticar.  
+Al reunir a varios expertos para que emitan sus opiniones hay factores sicológicos que 
+afectan al consenso. Algunos expertos pueden tener mayor claridad en sus exposiciones, 
+ser más persuasivos, o mejores polemistas que otros, sin que tengan mayor razón. Por esto 
+el método Delphi funciona evitando que los expertos se reúnan, toda la comunicación se 
+hace mediante un coordinador.  
+Delphi necesita un grupo de expertos que estén dispuestos a contestar una serie de 
+preguntas, y exponer sus razones, respecto a algún desarrollo tecnológico.  
+ 
+ 
+
+
+Pagina 7
+  
+ 
+                                                                                   Página 6 de 7 
+5.1 Representación gráfica y componentes de una serie. 
+Como ya hemos comentado, la representación gráfica de una serie temporal se realiza 
+mediante el uso de los ejes cartesianos. En el eje de abscisas se representa el tiempo (t) y 
+en el eje de ordenadas se representan los valores de la magnitud observada (Yt) con lo que 
+se obtienen una serie de puntos (t, Yt) que al unirlos nos permiten obtener unas primeras 
+conclusiones de la evolución histórica de la serie. 
+La representación gráfica de la serie de ventas que hemos utilizado como ejemplo aparece 
+en la figura 5.1, y sus datos corresponden a la tabla 5.1 
+Tabla 5.1 
+Meses  
+Ventas mensuales en miles de pesetas  
+1979 
+1980 
+1981 
+1982 
+1983 
+1984 
+Enero  
+89 
+100 
+115 
+124 
+136 
+152 
+Febrero  
+103 
+106 
+122 
+126 
+150 
+152 
+Marzo  
+117 
+103 
+143 
+127 
+166 
+147 
+Abril  
+135 
+82 
+157 
+110 
+179 
+126 
+Mayo  
+154 
+85 
+175 
+110 
+201 
+132 
+Junio  
+147 
+76 
+175 
+97 
+202 
+119 
+Julio  
+163 
+66 
+185 
+94 
+211 
+122 
+Agosto  
+142 
+68 
+164 
+89 
+194 
+111 
+Septiembre  
+155 
+85 
+178 
+110 
+201 
+134 
+Octubre  
+136 
+96 
+168 
+119 
+193 
+142 
+Noviembre  
+119 
+103 
+142 
+124 
+166 
+151 
+Diciembre  
+123 
+133 
+151 
+148 
+179 
+175 
+ 
+Figura 5.1 
+ 
+Desde el punto de vista clásico una serie está formada por cuatro componentes: 
+60
+120
+180
+240
+Yt
+t
+
+
+Pagina 8
+  
+ 
+                                                                                   Página 7 de 7 
+a. Componente tendencial o tendencia (T): Es una componente de la serie que 
+refleja su evolución a largo plazo. En nuestro ejemplo la tendencia se obtendría 
+teniendo en cuenta la evolución de las ventas a lo largo de todo el período de seis 
+años. Esta componente puede ser de naturaleza estacionaria ( se representaría por 
+una recta paralela al eje de abscisas), de naturaleza lineal (creciente o decreciente), 
+de naturaleza parabólica, de naturaleza exponencial, etc. 
+b. Componente cíclica (C): Es una componente de la serie que recoge las 
+oscilaciones periódicas de amplitud superior a un año y se deben principalmente a 
+la alternancia de etapas de prosperidad y depresión en la actividad económica. 
+Cuanto mayor sea el período de un ciclo, mayor ha de ser el número de 
+observaciones de la variable para que aquel sea reconocible.  
+c. Componente estacional (E): Es una componente de la serie que recoge las 
+oscilaciones que se producen en períodos iguales o inferiores a un año y que se 
+repiten de forma regular en los diferentes años. Si se considera el año como período 
+marco o de repetición pueden observarse las fluctuaciones de la magnitud a lo largo 
+de sus meses o de sus trimestres, cuatrimestres, etc. El origen de las variaciones 
+estacionales (componente estacional) puede estar en factores físico-naturales como 
+son las estaciones climatológicas o en factores culturales o de tradición: fiestas 
+navideñas, vacaciones, horarios comerciales, etc. Por ejemplo, el clima afecta a la 
+venta de una serie de productos: los helados y refrescos se venden 
+fundamentalmente en verano y la ropa de abrigo en invierno.  
+d. Componente residual (R): Es una componente de la serie temporal que recoge las 
+fluctuaciones erráticas que se dan por la ocurrencia de fenómenos imprevisibles (un 
+pedido extraordinario en una empresa, una huelga, una catástrofe).  
+ 
+ 
+Fuente: 
+1. Estadística para Administración y Economía, 7ma Edición – Richard I. Levin, David S. Rubin. 
+2. Estadística para administración y economía, 10ma Edición – Anderson, Sweeney, Williams 

@@ -1,0 +1,102 @@
+% ALTERNATIVA LOCAL. No sustituye ningún PDF entregado ni el informe de raíz.
+% Técnica: infografía de muestreo, con diagrama TikZ y jerarquía visual.
+% Tres tiempos visuales: introducción, núcleo temático con análisis y conclusiones.
+% En póster se usan bloques; los section del núcleo heredan supuestos de article.
+% El reporte canónico de tres secciones conserva su fuente y PDF independientes.
+\documentclass[spanish,final,xcolor={dvipsnames,table}]{beamer}
+\def\itescapostertitle{Muestreo para decidir}
+\input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/poster/adaptador-poster-estadistica-itesca.tex}
+\newlength{\itescapanelwidth}
+\setlength{\itescapanelwidth}{0.485\colwidth}
+\begin{document}
+\templatePagecfg\templateFinalcfg
+\setlength{\parindent}{0pt}
+\begin{itescaposter}
+\setstretch{1}\fontsize{12}{14.2}\selectfont\setlength{\parindent}{0pt}
+\begin{block}{Introducción}
+El muestreo selecciona unidades de una población para conocer sus características sin observarla completa. En administración reduce costo y tiempo, pero una conclusión defendible depende del diseño, la cobertura y la respuesta; reunir más datos no garantiza representar al grupo de interés \citep{bradley2021,holmesBusiness2023}.
+\end{block}
+
+\begin{block}{Muestreo: del universo a la decisión}
+\centering
+\begin{tikzpicture}[
+ box/.style={draw=itescaPosterTeal,fill=white,rounded corners=2pt,minimum height=1.45cm,text width=7.5cm,align=center,font=\fontsize{12}{14}\selectfont},
+ every path/.style={line width=1pt},>=Stealth]
+\node[box] (population) {\textbf{Población}\par Clientes del periodo que interesa conocer};
+\node[box,right=1.15cm of population] (frame) {\textbf{Marco muestral}\par Registro que permite seleccionarlos};
+\node[box,right=1.15cm of frame] (sample) {\textbf{Muestra}\par Clientes seleccionados para observar};
+\draw[->,itescaPosterTeal] (population.east)--(frame.west);
+\draw[->,itescaPosterTeal] (frame.east)--(sample.west);
+\end{tikzpicture}
+\end{block}
+
+\begin{columns}[t,totalwidth=\colwidth]
+\begin{column}{\itescapanelwidth}
+\begin{itescaposterpanel}{01 / Diseños probabilísticos}
+Cada unidad tiene probabilidad conocida y positiva de inclusión; no siempre es igual.
+
+\textbf{Aleatorio simple.} Todas las muestras del mismo tamaño tienen la misma probabilidad: sortear clientes de un registro completo.
+
+\textbf{Estratificado.} Seleccionar al azar dentro de todos los estratos: clientes por canal de compra.
+
+\textbf{Sistemático.} Inicio aleatorio y cada $k$ unidades: revisar cada décima factura; evitar periodicidades.
+
+\textbf{Conglomerados.} Sortear grupos, como sucursales, y estudiar sus unidades. Reduce desplazamientos, pero la semejanza interna puede disminuir precisión \citep{holmesBusiness2023}.
+\end{itescaposterpanel}
+
+\begin{itescaposterpanel}{02 / ¿Cuántas respuestas?}
+\textbf{Ejemplo hipotético:} proporción de clientes satisfechos; muestra aleatoria simple, aproximación normal y población grande respecto de la muestra.
+\[
+ n_0=\frac{z_{\alpha/2}^{\,2}p(1-p)}{e^2}
+ =\frac{1.96^2(0.5)(0.5)}{0.05^2}=384.16
+\]
+\textbf{Planificar 385 respuestas completas.} Confianza del 95\%, margen de cinco puntos porcentuales y $p=0.5$, que maximiza la variabilidad de planificación \citep{holmesBusiness2023}.
+
+Con respuesta prevista del 80\%:
+\[
+ \lceil385/0.80\rceil=482\quad\text{invitaciones}.
+\]
+No garantiza esa respuesta ni corrige sesgo. Otros diseños requieren ajustes. Para contrastar hipótesis, también se especifican potencia y efecto mínimo detectable \citep{nistHandbook}.
+\end{itescaposterpanel}
+\end{column}
+\begin{column}{\itescapanelwidth}
+\begin{itescaposterpanel}{03 / Selección no probabilística}
+No permite conocer la probabilidad de inclusión de cada unidad.
+
+\textbf{Conveniencia.} Entrevistar a quienes están disponibles, como compradores presentes en una tienda.
+
+\textbf{Autoselección.} Responder por iniciativa propia, como en una encuesta abierta en redes sociales.
+
+Sirve para explorar; no atribuirle el margen de error de una muestra aleatoria sin supuestos adicionales. \textbf{Más respuestas no corrigen por sí solas el sesgo.} Una selección aleatoria dentro de un marco incompleto tampoco cubre automáticamente a toda la población \citep{bradley2021}.
+\end{itescaposterpanel}
+
+\begin{itescaposterpanel}{04 / Aplicaciones administrativas}
+\textbf{Calidad de facturación.} Seleccionar facturas con inicio aleatorio, estimar la proporción con errores y decidir dónde auditar. Los errores detectados no demuestran sus causas.
+
+\textbf{Satisfacción por canal.} Estratificar clientes de tienda y venta digital, seleccionar al azar en ambos y ponderar según el diseño. Escuchar solo a seguidores digitales excluye otros compradores.
+
+La comparación conduce a una conclusión práctica: \textbf{definir población, marco y selección antes de ampliar la encuesta}. El porcentaje orienta decisiones cuando se conocen tanto las unidades observadas como las excluidas \citep{bradley2021,holmesBusiness2023}.
+\end{itescaposterpanel}
+\end{column}
+\end{columns}
+
+\begin{block}{Conclusiones}
+Una decisión responsable revisa cobertura, selección y no respuesta antes de celebrar el tamaño de la base. Conviene invertir primero en datos pertinentes y después en cantidad: así el ahorro del muestreo no se convierte en un costo por decisiones sesgadas. Este criterio permite delimitar qué se puede inferir y qué evidencia adicional necesita la gerencia.
+\end{block}
+
+\begin{block}{Referencias}
+\fontsize{9.5}{11.1}\selectfont\setstretch{1}\raggedright
+\urlstyle{same}\Urlmuskip=0mu plus 1mu
+\setlength{\emergencystretch}{2em}
+\renewcommand{\bibsection}{}\setlength{\bibsep}{2pt}\setlength{\bibhang}{0.65cm}
+\begin{thebibliography}{3}
+\bibitem[Bradley et al.(2021)]{bradley2021}
+Bradley, V. C., Kuriwaki, S., Isakov, M., Sejdinovic, D., Meng, X.-L., \& Flaxman, S. (2021). Unrepresentative big surveys significantly overestimated US vaccine uptake. \textit{Nature, 600}(7890), 695--700. \url{https://doi.org/10.1038/s41586-021-04198-4}
+\bibitem[Holmes et al.(2023)]{holmesBusiness2023}
+Holmes, A., Illowsky, B., \& Dean, S. (2023). \textit{Introductory business statistics} (2.\textsuperscript{a} ed.). OpenStax. \url{https://openstax.org/details/books/introductory-business-statistics-2e}
+\bibitem[NIST y SEMATECH(2003)]{nistHandbook}
+National Institute of Standards and Technology \& SEMATECH. (2003). \textit{NIST/SEMATECH e-Handbook of statistical methods}. \url{https://doi.org/10.18434/M32189}
+\end{thebibliography}
+\end{block}
+\end{itescaposter}
+\end{document}

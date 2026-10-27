@@ -1,0 +1,1155 @@
+Pagina 1
+ 
+ 
+ 
+ 
+Estadística para la administración 
+Tema 4 Pruebas de hipótesis para una y dos 
+muestras 
+
+
+Pagina 2
+  
+ 
+                                                                                   Página 1 de 28 
+INFERENCIA ESTADÍSTICA ACERCA DE MEDIAS Y DE PROPORCIONES CON 
+DOS POBLACIONES 
+En este tema se presenta el estudio de la inferencia estadística mostrando la forma de estimar por 
+intervalo y realizar pruebas de hipótesis cuando se tienen dos poblaciones y lo que interesa es la 
+diferencia entre dos medias poblacionales o entre dos proporciones poblacionales. Por ejemplo, 
+quizá desee obtener una estimación por intervalo para la diferencia entre el salario inicial medio de 
+la población de hombres y el salario inicial medio de la población de mujeres, o necesite realizar una 
+prueba de hipótesis para determinar si hay alguna diferencia entre la proporción de piezas 
+defectuosas producidas por el proveedor A y la proporción de partes defectuosas producidas por el 
+proveedor B. El estudio de inferencia estadística para dos poblaciones se inicia mostrando la forma 
+de obtener una estimación mediante un intervalo de confianza y cómo realizar una prueba de 
+hipótesis para la diferencia entre las medias de dos poblaciones en el caso en que se considera que 
+se conocen las desviaciones estándar de estas dos poblaciones. 
+ 
+Inferencias acerca de la diferencia entre dos medias poblacionales: 
+𝝈𝟏 𝒚 𝝈𝟐conocidas. 
+ 
+Sean μ1 la media de la población 1 y μ2 la media de la población 2, lo que interesa aquí son 
+inferencias acerca de la diferencia entre las medias: μ1                                                           μ2. Para 
+hacer una inferencia acerca de esta diferencia, se elige una muestra aleatoria simple de n1 unidades 
+de la población 1 y otra muestra aleatoria simple de n2 unidades de la población 2. A estas dos 
+muestras que se toman separada e independientemente se les conoce como muestras aleatorias 
+simples independientes. En esta sección se supondrá que se cuenta con información que permite 
+considerar que las dos desviaciones estándar σ1 y σ2 se conocen antes de tomar las muestras. Este 
+caso se conoce como el caso σ1 y σ2 conocidas. En el ejemplo siguiente, se muestra cómo calcular 
+el margen de error y obtener una estimación por intervalo para la diferencia entre las dos medias 
+poblacionales cuando se conocen σ1 y σ2. 
+ 
+Estimación por intervalo de μ1 - μ2 
+Greystone Department Stores, Inc. tiene dos tiendas en Buffalo, Nueva York, una en el centro de la 
+ciudad y otra en un centro comercial. El gerente regional ha observado que los productos que se 
+venden bien en una tienda no se venden bien en la otra. El gerente cree que esto se debe a 
+diferencias demográficas entre los clientes de las dos tiendas. Debe haber diferencias de edad, 
+educación, ingreso, etc., entre los clientes de una y otra tienda. Suponga que el gerente pide que se 
+investigue la diferencia entre las medias de las edades de los clientes de las dos tiendas.  
+Si la población 1 es la población de clientes que compra en la tienda del centro de la ciudad y la 
+población 2 es la población de clientes que compra en la tienda del centro comercial, se tiene:  
+
+
+Pagina 3
+  
+ 
+                                                                                   Página 2 de 28 
+𝜇1= media de la población 1 (es decir, media de las edades de los clientes que compran en la 
+tienda del centro de la ciudad). 
+𝜇2= media de la población 2 (es decir, media de las edades de los clientes que compran en la 
+tienda del centro comercial)  
+  
+La diferencia entre las dos medias poblacionales es 𝜇1 - 𝜇2.  
+Para estimar 𝜇1 - 𝜇2, se toma una muestra aleatoria simple de 𝑛1 clientes de la población 1 y una 
+muestra aleatoria simple de 𝑛2 clientes de la población 2, y se calculan las dos medias muestrales:  
+𝑥̅1 = media muestral de las edades en la muestra aleatoria simple de 𝑛1 clientes del centro de 
+la ciudad  
+𝑥̅2 = media muestral de las edades en la muestra aleatoria simple de 𝑛2 clientes del centro 
+comercial 
+La estimación puntual de la diferencia entre las dos medias poblacionales es la diferencia entre las 
+dos medias muestrales. 
+ 
+ 
+ 
+En la siguiente figura se proporciona una visión esquemática del proceso que se sigue para estimar 
+la diferencia entre dos medias poblacionales empleando dos muestras aleatorias simples. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Como otros estimadores puntuales, el estimador puntual 𝑥̅1 - 𝑥̅2 tiene un error estándar que 
+describe la variación de la distribución muestral del estimador. Cuando se tienen dos muestras 
+aleatorias simples independientes, el error estándar de 𝑥̅1 - 𝑥̅2 es el siguiente: 
+
+
+Pagina 4
+  
+ 
+                                                                                   Página 3 de 28 
+ 
+ 
+ 
+Si ambas poblaciones tienen distribución normal o si los tamaños de las muestras son 
+suficientemente grandes para que el teorema del límite central permita concluir que las 
+distribuciones muestrales de 𝑥̅1 y 𝑥̅2 puedan ser aproximadas mediante una distribución normal, la 
+distribución muestral de 𝑥̅1 - 𝑥̅2 tendrá una distribución normal cuya media es 𝜇1 - 𝜇2.  
+Como se mostró en el capítulo 8, una estimación por intervalo está dada por una estimación puntual 
+± un margen de error. En el caso de la estimación de la diferencia entre dos medias poblacionales, 
+una estimación por intervalo tendrá la forma siguiente:  
+𝑥̅1 - 𝑥̅2 ±  Margen de error 
+ 
+Como la distribución muestral de 𝑥̅1 - 𝑥̅2 tiene una distribución normal, el margen de error se 
+expresa de la manera siguiente: 
+Margen de error = 𝑧𝛼2
+⁄ 𝜎𝑥1̅̅̅̅−𝑥2̅̅̅̅  = 𝑧𝛼2
+⁄ √𝜎1
+2
+𝑛1 +
+𝜎2
+2
+𝑛2 
+En consecuencia, la estimación por intervalo de la diferencia entre las dos medias poblacionales es 
+la siguiente: 
+ 
+ 
+ 
+ 
+De regreso al ejemplo de la tienda de departamentos Greystone: de acuerdo con datos de anteriores 
+estudios demográficos sobre los clientes, las dos desviaciones estándar poblaciones se conocen y 
+son 𝜎1 = 9 años y 𝜎2 = 10 años. De los datos de las dos muestras aleatorias simples independientes 
+de los clientes de Greystone se obtuvieron los resultados siguientes. 
+ 
+ 
+ 
+ 
+ 
+Mediante la primera expresión para el estimador diferencial  se encuentra que la estimación puntual 
+de la diferencia entre las dos medias poblacionales es 𝑥̅1 - 𝑥̅2  = 40 - 35 = 5 años. Por ende, se estima 
+
+
+Pagina 5
+  
+ 
+                                                                                   Página 4 de 28 
+que, en promedio, los clientes de la tienda en el centro de la ciudad son cinco años mayores que los 
+clientes de la tienda del centro comercial. Ahora, con la expresión para la estimación por intervalo 
+se calcula el margen de error y se proporciona una estimación por intervalo de 𝜇1 - 𝜇2. Si tiene 95% 
+de confianza y 𝑧𝛼2
+⁄ = 𝑧𝛼2
+⁄ = 𝑧0.025 = 1.96: 
+𝑥̅1 - 𝑥̅2 ± 𝑧𝛼2
+⁄ √𝜎1
+2
+𝑛1 +
+𝜎2
+2
+𝑛2 
+40 - 35 ± 1.96√92
+36 +
+102
+49 
+5 ± 4.06 
+El margen de error es 4.06 años y la estimación por intervalo de 95% de confianza de la diferencia 
+entre las medias poblacionales va de 5 - 4.06 = 0.94 años a 5 + 4.06 = 9.06 
+Prueba de hipótesis acerca de 𝝁𝟏 - 𝝁𝟐 
+Ahora se verán las pruebas de hipótesis acerca de la diferencia entre dos medias poblacionales. 𝐷0 
+denota la diferencia hipotética entre 𝜇1 y 𝜇2, las tres formas que puede tener una prueba de 
+hipótesis son las siguientes: 
+ 
+ 
+ 
+En muchas aplicaciones 𝐷0= 0. Con un ejemplo de una prueba de hipótesis de dos colas, cuando 𝐷0= 
+0 la hipótesis nula es 𝐻0: 𝜇1 - 𝜇2 = 0. En este caso, la hipótesis nula es que 𝜇1 y 𝜇2 son iguales. 
+Rechazar 𝐻0 lleva a la conclusión de que 𝐻𝑎: 𝜇1 - 𝜇2 ≠ 0 es verdadera: 𝜇1 y 𝜇2 no son iguales.  
+Los pasos para realizar una prueba de hipótesis también son aplicables aquí. Hay que elegir el nivel 
+de significancia, calcular el valor del estadístico de prueba y encontrar el valor-p para determinar si 
+se rechaza la hipótesis nula. En el caso de dos muestras aleatorias independientes, se mostró que el 
+estimador puntual 𝑥̅1 - 𝑥̅2 tiene un error estándar 𝜎𝑥1̅̅̅̅−𝑥2̅̅̅̅  y, cuando los tamaños de las muestras 
+son suficientemente grandes, la distribución de 𝑥̅1 - 𝑥̅2 se puede considerar como una distribución 
+normal. En este caso, el estadístico de prueba para la diferencia entre dos medias poblacionales 
+cuando se conocen 𝜎1  y 𝜎1   es el que se da a continuación. 
+ 
+ 
+ 
+
+
+Pagina 6
+  
+ 
+                                                                                   Página 5 de 28 
+ 
+ 
+ 
+ 
+ 
+El uso de dicho estadístico de prueba se muestra en el siguiente ejemplo de prueba de hipótesis.  
+Como parte de un estudio para evaluar las diferencias en la calidad entre dos centros de enseñanza, 
+se aplica un examen estandarizado a los individuos de ambos centros. La diferencia de calidad se 
+evalúa comparando las medias de las puntuaciones obtenidas en el examen. Las medias 
+poblacionales en cada uno de los centros son: 
+𝜇1 = Media de las puntuaciones den los exámenes presentados por los individuos del centro 
+A 
+𝜇2 = Media de las puntuaciones den los exámenes presentados por los individuos del centro 
+B 
+Debe partir de la suposición tentativa de que no hay diferencia entre la calidad de la capacitación 
+en uno y otro centro de enseñanza. Entonces, en términos de las puntuaciones medias obtenidas 
+en el examen, la hipótesis nula es que 𝜇1 - 𝜇2. = 0. Si las evidencias muestrales llevan a rechazar esta 
+hipótesis, se concluirá que sí hay diferencia entre las medias de las puntuaciones de examen en las 
+dos poblaciones. Esta conclusión indicará que hay diferencia en la calidad de los dos centros y 
+sugerirá la necesidad de realizar un estudio para investigar las razones de estas diferencias.  
+Las hipótesis nula y alternativa en esta prueba de dos colas se expresan como se indica a 
+continuación. 
+ 
+ 
+ 
+En exámenes estandarizados practicados ya en diversas ocasiones, siempre se ha obtenido una 
+desviación estándar cercana a 10 puntos. Por tanto, usará esta información y considerará que las 
+desviaciones estándar poblacionales se conocen y que son 𝜎1 = 10 y 𝜎2 = 10. Para este estudio se 
+especifica un nivel de significancia α = 0.05.  
+Con muestras aleatorias simples independientes de 𝑛1 = 30 individuos del centro de enseñanza A y 
+𝑛2 = 40 individuos del centro de enseñanza B. Las medias muestrales correspondientes son 𝑥̅1 = 82 
+y 𝑥̅2  = 78. ¿Estos datos indican que existe una diferencia significativa entre las medias poblacionales 
+de los dos centros de enseñanza? Para responder esta pregunta se calcula el estadístico de prueba. 
+ 
+
+
+Pagina 7
+  
+ 
+                                                                                   Página 6 de 28 
+ 
+ 
+ 
+A continuación, se calcula el valor-p de esta prueba de dos colas. Como el estadístico de prueba z se 
+encuentra en la cola superior, se calcula primero el área bajo la curva a la derecha de z = 1.66. En la 
+tabla de la distribución normal estándar, el área a la izquierda de z = 1.66 es 0.9515. Por ende, el 
+área en la cola superior de la distribución es 1.000 - 0.9515 = 0.0485. Como es una prueba de dos 
+colas, hay que duplicar el área que queda a la cola: el valor-p = 2(0.0485) = 0.0970. Como la regla es 
+rechazar 𝐻0 si el valor-p ≤ α, puesto que el valor-p es 0.0970, no se puede rechazar 𝐻0 al nivel de 
+significancia 0.05. Los resultados muestrales no proporcionan suficiente evidencia para concluir que 
+hay una diferencia de calidad entre los dos centros de enseñanza.  
+ 
+Para las pruebas de hipótesis, se usará el método del valor-p descrito con anterioridad. Sin embargo, 
+si el estudiante así lo prefiere, use el estadístico de prueba y la regla de rechazo del valor crítico. 
+Para α = 0.05 y 𝑧𝛼2
+⁄ = 𝑧0.025 = 1.96, la regla de rechazo empleando el método del valor crítico será, 
+rechazar 𝐻0 si z ≤ 1.96 o si z ≤ 1.96. Como z = 1.66, se llega a la misma conclusión de no rechazar 
+𝐻0.  
+La prueba de hipótesis de dos colas se puede emplear para encontrar la diferencia entre dos medias 
+poblacionales. Las pruebas de la cola superior e inferior también se considerarán. Dichas pruebas 
+aplican el mismo estadístico de prueba. El procedimiento para calcular el valor-p y las reglas de 
+rechazo para pruebas de una cola son las que se presentaron con anterioridad. 
+ 
+Inferencias acerca de la diferencia entre dos medias poblacionales: 𝝈𝟏 y 𝝈𝟏 
+desconocidas. 
+En esta sección el estudio de las inferencias sobre la diferencia entre dos medias poblacionales se 
+extiende al caso en el que las dos desviaciones estándar poblacionales, 𝜎1 y 𝜎2 no se conocen. En 
+este caso, para estimar las desviaciones estándar poblacionales desconocidas se emplean las 
+desviaciones estándar muestrales, 𝑠1 y 𝑠2. Cuando se usan las desviaciones estándar muestrales en 
+las estimaciones por intervalo y en las pruebas de hipótesis, se emplea la distribución t en lugar de 
+la distribución normal estándar 
+ Estimación por intervalo para 𝝁𝟏 - 𝝁𝟐 
+En el ejemplo siguiente se muestra cómo calcular el margen de error y obtener una estimación por 
+intervalo para la diferencia entre dos medias poblacionales cuando 𝜎1 y 𝜎1  no se conocen. 
+Clearwater National Bank realiza un estudio para identificar diferencias entre las cuentas de cheques 
+de sus clientes en dos de sus sucursales; toma una muestra aleatoria simple de 28 cuentas de la 
+sucursal Cherry Grove y otra muestra aleatoria simple e independiente de 22 cuentas de cheques 
+de la sucursal Beechmont. El saldo se registra en las cuentas de cheques. A continuación, se presenta 
+un resumen de los saldos en estas cuentas de cheques. 
+
+
+Pagina 8
+  
+ 
+                                                                                   Página 7 de 28 
+ 
+ 
+ 
+El banco desea estimar la diferencia entre el saldo medio en las cuentas de cheques de la población 
+de clientes de Cherry Grove y el saldo medio en las cuentas de cheques de la población de clientes 
+de Becchmont. A continuación, se calculará el margen de error y se dará una estimación por 
+intervalo para la diferencia entre estas dos medias poblacionales.  
+ 
+ 
+Cuando no se conocen 𝜎1 y 𝜎2 se emplean 𝑠1 y 𝑠2 para estimar 𝜎1 y 𝜎2 y 𝑧𝛼2
+⁄ se sustituye por 𝑡𝛼2
+⁄ . 
+Entonces, la estimación por intervalo para la diferencia entre dos medias poblacionales queda dada 
+por la expresión siguiente: 
+ 
+ 
+ 
+ 
+En esta expresión el uso de la distribución t es una aproximación, pero proporciona resultados 
+excelentes y es relativamente fácil de usar. La única dificultad que se encuentra al emplear la 
+expresión es determinar los grados de libertad para 𝑡𝛼2
+⁄ . Los paquetes de software calculan 
+automáticamente los grados de libertad. La fórmula que se usa es la siguiente: 
+ 
+ 
+ 
+ 
+ 
+Al retomar el ejemplo del banco se mostrará cómo usar la expresión de estimación por intervalo 
+para la diferencia entre dos medias poblacionales  𝜎1 y 𝜎2 desconocidas para obtener un intervalo 
+de confianza de 95% para estimar la diferencia entre las medias poblacionales de los saldos en las 
+cuentas de cheques en sus dos sucursales. Los datos muestrales de la sucursal Cherry Grove son 𝑛1 
+= 28, 𝑥̅1 = $1025, 𝑠1= $150 y los de la sucursal Beechmont son 𝑛2 = 22, 𝑥̅2 = $910, 𝑠2 = $125. El 
+cálculo de los grados de libertad para 𝑡𝛼2
+⁄ es: 
+ 
+ 
+
+
+Pagina 9
+  
+ 
+                                                                                   Página 8 de 28 
+ 
+ 
+ 
+ 
+Como el resultado no es un número entero, se redondea hacia abajo a 47 para tener un valor t 
+mayor y dar una estimación por intervalo más prudente. En la tabla de la distribución t para 47 
+grados de libertad, se encuentra 𝑡0.025 = 2.012. De acuerdo con la expresión (10.6), el intervalo de 
+confianza de 95% para la diferencia entre las dos medias poblacionales se calcula como sigue. 
+ 
+ 
+ 
+ 
+La estimación puntual de la diferencia entre las dos medias poblacionales de los saldos en las 
+cuentas de cheques es $115. El margen de error es $78 y la estimación por intervalo de 95% de 
+confianza para la diferencia entre las dos medias poblacionales es el que va de 115 - 78 = $37 a 115 
++ 78 = $193.  
+El cálculo a mano de los grados de libertad usando la expresión anterior es laborioso, pero muy 
+sencillo si se usa un paquete de software. Sin embargo, observe que las expresiones 𝑠1
+2 𝑛1
+⁄
+ y 
+𝑠2
+2 𝑛2
+⁄
+ aparecen tanto en la expresión por la estimación por intervalo para la diferencia entre dos 
+medias poblacionales, así como, en la expresión para los grados de libertas para una distribución t 
+con dos muestras aleatorias independientes. Por tanto, sólo habrá que calcular estas expresiones 
+una vez para usarlas en ambas expresiones. 
+ 
+Pruebas de hipótesis acerca de 𝝁𝟏 - 𝝁𝟐 
+Ahora se estudiarán las pruebas de hipótesis acerca de la diferencia entre las medias de dos 
+poblaciones cuando no se conocen las desviaciones estándar poblacionales 𝜎1 - 𝜎2. Sea 𝐷0 la 
+diferencia hipotética entre 𝜇1 y 𝜇2: 
+ 
+ 
+ 
+El estadístico de prueba z sigue la distribución normal estándar.  
+
+
+Pagina 10
+  
+ 
+                                                                                   Página 9 de 28 
+Cuando no se conocen 𝜎1 y 𝜎2, se usa 𝑠1 para estimar 𝜎1 y 𝑠2 para estimar 𝑠2. Sustituyendo 𝜎1  y 
+𝜎2  por estas desviaciones estándar muestrales se obtiene el siguiente estadístico de prueba para el 
+caso en el que no se conocen 𝜎1 y 𝜎2. 
+ 
+Ahora se demostrará el uso del estadístico de prueba en el ejemplo siguiente.  
+Considere un nuevo software que ayuda a los analistas de sistemas a reducir el tiempo requerido 
+para diseñar, elaborar y poner en marcha un sistema de información. Para evaluar las ventajas del 
+nuevo software, se toma una muestra de 24 analistas de sistemas. A cada analista se le da 
+información sobre un sistema de información hipotético. A 12 de ellos se les pide que elaboren el 
+sistema de información usando la tecnología existente y a los otros 12 analistas se les capacita para 
+usar el nuevo software y se les pide que lo empleen para elaborar el sistema de información.  
+En el estudio participan dos poblaciones: una población de analistas de sistema que usan la 
+tecnología ya existente y una población de analistas de sistemas que usan el nuevo software. En 
+términos del tiempo necesario para el proyecto del sistema de información, las medias 
+poblacionales son las siguientes: 
+ 
+𝜇1= media del tiempo que necesitan para el proyecto los analistas que emplean la tecnología 
+ya existente 
+𝜇2= media del tiempo que necesitan para el proyecto los analistas que emplean la tecnología 
+ya existente 
+El investigador encargado de la evaluación del nuevo software espera poder demostrar que con el 
+nuevo software se necesita menos tiempo para el proyecto del sistema de información. De manera 
+que el investigador tratará de hallar evidencias que le permitan concluir que 𝜇2 es menor que 𝜇1, 
+caso en el que la diferencia 𝜇1 - 𝜇2 será mayor que cero. La hipótesis de investigación 𝜇1 - 𝜇2 > 0 
+se establece como la hipótesis alternativa. Por lo que la prueba de hipótesis será 
+ 
+ 
+ 
+Como nivel de significancia se usará α = 0.05 
+
+
+Pagina 11
+  
+ 
+                                                                                   Página 10 de 28 
+Suponga que los resultados de los 24 analistas son los que se presentan en la tabla siguiente.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Con el estadístico de prueba dado de hipótesis acerca de 𝜇1 y 𝜇2  𝜎1 y 𝜎2 desconocidas se tiene 
+lo siguiente: 
+ 
+ 
+De acuerdo con la ecuación de los grados de liberta: Distribución t con dos muestras aleatorias 
+independientes se obtuvo lo siguiente: 
+ 
+ 
+ 
+Al redondear hacia abajo, se usará una distribución t con 21 grados de libertad. El renglón 
+correspondiente de la distribución t es: 
+ 
+ 
+ 
+En una prueba de la cola superior, el valor-p es el área en la cola superior a la derecha de t = 2.27. 
+De acuerdo con este resultado se ve que el valor-p está entre 0.025 y 0.01. Por tanto, el valor-p es 
+menor que α = 0.05 y se rechaza 𝐻0. Los resultados muestrales permiten al investigador concluir 
+que 𝜇1 - 𝜇2 > 0, o que 𝜇1 > 𝜇2. La investigación favorece la conclusión de que con el nuevo software 
+el tiempo requerido es menor 
+ 
+ 
+ 
+
+
+Pagina 12
+  
+ 
+                                                                                   Página 11 de 28 
+ 
+Inferencias acerca de la diferencia entre dos medias poblacionales: muestras 
+pareadas 
+Suponga que los empleados de una fábrica usan dos métodos distintos para realizar una 
+determinada tarea. Con objeto de maximizar la producción, la empresa desea identificar el método 
+con el que la media poblacional del tiempo necesario para realizar esta tarea sea menor. Sea 𝜇1 la 
+media poblacional del tiempo empleando el método 1 y 𝜇2 la media poblacional del tiempo 
+requerido para realizar la tarea con el método 2. Puesto que no hay ninguna indicación de cuál sea 
+el mejor método, se empieza por suponer que con los dos métodos se obtiene la misma media 
+poblacional del tiempo requerido para realizar la tarea. De esta manera, la hipótesis nula es 𝐻0: 𝜇1  
+- 𝜇2 = 0. Si se rechaza esta hipótesis se podrá concluir que las medias poblacionales de los tiempos 
+requeridos para realizar la tarea son diferentes con los dos métodos. En tal caso se recomendará el 
+método que proporcione el menor tiempo para la realización de la tarea. Las hipótesis nula y 
+alternativa se expresan como sigue 
+ 
+ 
+En la elección del método de muestreo para obtener los datos y probar las hipótesis, se consideran 
+dos diseños alternativos. Uno se basa en muestras independientes y el otro en muestras por pares. 
+ 1. Diseño de muestras independientes: se toma una muestra aleatoria simple de trabajadores 
+y cada uno de ellos usa el método 1. Se toma otra muestra aleatoria simple de trabajadores 
+y cada uno de ellos usa el método 2. Se utiliza el procedimiento para probar la diferencia entre 
+las dos medias. 
+2. Diseño de muestras pareadas: se toma una muestra aleatoria simple de trabajadores. Cada 
+trabajador primero usa uno de los métodos y después usa el otro método. A cada trabajador 
+se le asigna en forma aleatoria el orden en que usará los dos métodos, algunos trabajadores 
+primero usarán el método 1 y otros el método 2.  
+En el diseño de muestras pareadas los dos métodos se prueban bajo condiciones similares (es decir, 
+con los mismos trabajadores); por tanto, este diseño suele conducir a errores muestrales más 
+pequeños que el diseño de muestras independientes. La razón principal es que en el diseño de 
+muestras pareadas se elimina la variación entre los trabajadores, ya que los mismos trabajadores 
+prueban los dos métodos.  
+A continuación, con el empleo del diseño de muestras pareadas se demostrará la diferencia entre 
+las medias de los dos métodos de producción. Se emplea una muestra aleatoria de seis trabajadores.  
+Observe que de cada trabajador se obtuvieron dos datos, uno con cada método de producción, 
+también que en la última columna se da, para cada trabajador de la muestra, la diferencia di entre 
+los tiempos para realizar la tarea.  
+Lo principal en el análisis de muestras pareadas es darse cuenta de que únicamente hay que 
+considerar la columna de las diferencias. De manera que se tienen seis datos (0.6, -0.2, 0.5, 0.3, 0.0 
+
+
+Pagina 13
+  
+ 
+                                                                                   Página 12 de 28 
+y 0.6) que se usarán para analizar la diferencia entre las medias poblacionales de los dos métodos 
+de producción.  
+Sea 𝜇𝑑 la media de las diferencias en la población de trabajadores. Con esta notación, las hipótesis 
+nula y alternativa se expresan como sigue 
+ 
+ 
+Si se rechaza 𝐻0, se concluye que difieren las medias poblacionales de los tiempos requeridos para 
+realizar la tarea con los dos métodos.  
+La notación d sirve para recordar que las muestras pareadas proporcionan datos que son diferencias.  
+ 
+ 
+ 
+A continuación, se calcula la media y la desviación estándar de las seis diferencias. 
+ 
+ 
+ 
+ 
+ 
+Como la muestra es pequeña, n = 6, es necesario suponer que la población de las diferencias tiene 
+una distribución normal. Esta suposición es necesaria para usar la distribución t en la prueba de 
+hipótesis y para calcular una estimación por intervalo. Con esta suposición, el estadístico de prueba 
+siguiente tiene una distribución t con n - 1 grados de libertad. 
+ 
+ 
+ 
+ 
+A continuación se usará la ecuación anterior para probar las hipótesis 𝐻0: 𝜇𝑑 = 0 y 𝐻𝑎: 𝜇𝑑 ≠ 0, 
+usando α = 0.05. El estadístico de prueba se calcula sustituyendo en la ecuación anterior los 
+resultados muestrales, 𝑑̅ = 0.30, 𝑠𝑑 = 0.335 y n = 6. 
+ 
+
+
+Pagina 14
+  
+ 
+                                                                                   Página 13 de 28 
+ 
+ 
+Ahora se calculará el valor-p para esta prueba de dos colas. Como t = 2.20 > 0, el estadístico de 
+prueba se encuentra en la cola superior de la distribución t. Como t = 2.20, el área en la cola superior 
+a la derecha del estadístico de prueba se encuentra usando la tabla de la distribución t con = n - 1 = 
+6 - 1 = 5 grados de libertad. A continuación, se copia la información correspondiente al renglón de 
+la distribución t para 5 grados de libertad. 
+ 
+ 
+ 
+Como se ve, el área en la cola superior está entre 0.05 y 0.025. Por tratarse de una prueba de dos 
+colas, se duplica este valor y se concluye que el valor-p está entre 0.10 y 0.05. Este valor-p es mayor 
+a α = 0.05. Por ende, no se rechaza la hipótesis nula 𝐻0: 𝜇𝑑 = 0. El valor-p, que es 0.080. Además, 
+también se obtiene un intervalo de confianza para estimar la diferencia entre las dos medias 
+poblacionales usando la metodología presentada en el capítulo 8 para una sola población. A 
+continuación, el cálculo para obtener un intervalo de confianza de 95%. 
+ 
+ 
+ 
+Por tanto, el margen de error es 0.35 y el intervalo de 95% de confianza para estimar la diferencia 
+entre las medias poblacionales de los dos métodos de producción es el intervalo que va de -0.05 
+minutos a 0.65 minutos. 
+Inferencias acerca de la diferencia entre dos proporciones poblacionales 
+Sea 𝑝1 una proporción de la población 1 y 𝑝2 una proporción de la población 2, a continuación se 
+considerarán inferencias acerca de la diferencia entre dos proporciones poblacionales: 𝑝1- 𝑝2. Para 
+las inferencias acerca de estas diferencias, se seleccionan dos muestras aleatorias independientes, 
+una de 𝑛1 unidades de la población 1 y otra de 𝑛1 unidades de la población 2.  
+Estimación por intervalo para 𝒑𝟏 - 𝒑𝟐   
+En el ejemplo siguiente se mostrará cómo calcular un margen de error y una estimación por 
+intervalo para la diferencia entre dos proporciones poblacionales.  
+Una empresa que se dedica a elaborar declaraciones de impuestos desea comparar la calidad del 
+trabajo que se realiza en dos de sus oficinas regionales. Con muestras aleatorias de las declaraciones 
+de impuestos elaboradas en dichas oficinas y verificando la exactitud de las declaraciones, la 
+empresa podrá estimar la proporción de declaraciones con errores elaboradas en cada una de estas 
+oficinas. Interesa conocer la diferencia entre las proporciones siguientes:  
+
+
+Pagina 15
+  
+ 
+                                                                                   Página 14 de 28 
+𝑝1 = proporción de declaraciones erróneas en la población 1 (oficina 1)  
+𝑝2 = proporción de declaraciones erróneas en la población 2 (oficina 2)  
+𝑝̅1 = proporción muestral en una muestra aleatoria simple de la población 1  
+𝑝̅2 = proporción muestral en una muestra aleatoria simple de la población 2  
+La diferencia entre las dos proporciones poblacionales está dada por 𝑝1 - 𝑝2. La estimación puntual 
+de 𝑝1 - 𝑝2 es la siguiente. 
+ 
+ 
+ 
+ 
+ 
+Por ende, el estimador puntual de la diferencia entre dos proporciones poblaciones es la diferencia 
+entre las proporciones muestrales de dos muestras aleatorias simples independientes.  
+Como ocurre con otros estimadores puntuales, 𝑝̅1 - 𝑝̅2 tiene una distribución muestral que refleja 
+los valores que podría tomar 𝑝̅1 - 𝑝̅2 si se tomaran repetidas muestras aleatorias simples 
+independientes. La media de esta distribución muestral es 𝑝1 - 𝑝2 y el error estándar de 𝑝̅1 - 𝑝̅2es el 
+siguiente. 
+ 
+ 
+ 
+Si los tamaños de las muestras son suficientemente grandes para que 𝑛1𝑝1, 𝑛1 (1 - 𝑝1), 𝑛2 𝑝2 y 𝑛2 
+(1 - 𝑝2) sean todos mayores o iguales que 5, la distribución muestral de 𝑝̅1 - 𝑝̅2puede ser aproximada 
+por una distribución normal.  
+Como ya se indicó antes, una estimación por intervalo está dada por una estimación puntual ± un 
+margen de error. En la estimación de la diferencia entre dos proporciones poblacionales, una 
+estimación por intervalo toma la forma siguiente: 
+ 
+ 
+Aproximando la distribución muestral de 𝑝̅1 - 𝑝̅2mediante una distribución normal, se podrá usar 
+como margen de error 𝑧𝛼2
+⁄ 𝜎𝑝1−𝑝2, Sin embargo 𝜎𝑝1−𝑝2 como es dada por la ecuación  de la 
+inferencia de la diferencia entre dos proporciones poblacionales no se puede usar directamente 
+porque no se conoce ninguna de las dos proporciones poblacionales 𝑝1 y  𝑝2. Usando la proporción 
+
+
+Pagina 16
+  
+ 
+                                                                                   Página 15 de 28 
+muestral 𝑝̅1 para estimar 𝑝1 y la proporción muestral 𝑝̅2 para estimar 𝑝2, el margen de error queda 
+como sigue. 
+ 
+ 
+La forma general de una estimación por intervalo para la diferencia entre dos proporciones 
+poblacionales es la siguiente 
+ 
+ 
+ 
+ 
+ 
+De regreso al ejemplo de elaboración de declaraciones de impuestos, se encuentra que de las 
+muestras independientes aleatorias simples de las dos oficinas se obtienen los datos siguientes. 
+ 
+ 
+ 
+Las proporciones muestrales en cada una de las oficinas son las siguientes 
+ 
+La estimación puntual de la diferencia entre las proporciones de declaraciones con errores en las 
+dos poblaciones es 𝑝̅1 - 𝑝̅1 = 0.14 - 0.09 = 0.05. Entonces se estima que la oficina 1 comete 0.05 o 
+5% más errores que la oficina 2.  
+Ahora se puede usar la expresión de la estimación por intervalo para la diferencia entre dos 
+proporciones poblacionales para calcular el margen de error y la estimación por intervalo para la 
+diferencia entre las dos proporciones poblacionales. Con un intervalo de 90% de confianza con 𝑧𝛼2
+⁄ 
+= 𝑧0.025 = 1.645, se tiene: 
+ 
+ 
+ 
+ 
+El margen de error es 0.045 y el intervalo de 90% de confianza es el intervalo que va de 0.005 a 
+0.095. 
+ 
+
+
+Pagina 17
+  
+ 
+                                                                                   Página 16 de 28 
+Prueba de hipótesis acerca de 𝒑𝟏 - 𝒑𝟐  
+Ahora se considerarán las pruebas de hipótesis acerca de la diferencia entre las proporciones de dos 
+poblaciones. Se verán pruebas que comprenden el caso en que no hay diferencia entre las dos 
+proporciones poblacionales. En tal caso, las tres formas de las pruebas de hipótesis son las 
+siguientes: 
+ 
+ 
+Si se supone que 𝐻0, considerada como igualdad, es verdadera, se tiene 𝑝1 - 𝑝2 = 0, que equivale a 
+decir que dichas proporciones poblacionales son iguales, 𝑝1 - 𝑝2.  
+El estadístico de prueba se basará en la distribución muestral del estimador puntual 𝑝̅1 - 𝑝̅2 
+Si se supone que 𝐻0 es verdadera como igualdad, las proporciones poblacionales son iguales y 𝑝1 = 
+𝑝2 = p En este caso se convierte en 
+ 
+ 
+ 
+Como no se conoce p, se combinan los estimadores puntuales de las dos muestras ( 𝑝̅1 y 𝑝̅2) con 
+objeto de obtener un solo estimador puntual de p. 
+ 
+ 
+ 
+El estimador combinado de p es un promedio ponderado de 𝑝̅1 y 𝑝̅2.  
+La estimación del error estándar de 𝑝̅1 - 𝑝̅2, se usa en el estadístico de prueba. La fórmula general 
+del estadístico de prueba para una prueba de hipótesis acerca de la diferencia entre dos 
+proporciones poblacionales es el estimador puntual dividido entre la estimación de 𝜎𝑝̅1 − 𝑝̅2, . 
+ 
+ 
+ 
+ 
+Tal estadístico de prueba se usa con muestras grandes, en las que 𝑛1𝑝1, 𝑛1 (1 - 𝑝1), 𝑛2 𝑝2 y 𝑛2 (1 - 
+𝑝2), sean todos mayores o iguales que 5.  
+De nuevo al ejemplo de la empresa que se dedica a elaborar declaraciones de impuestos, suponga 
+que la empresa desea realizar una prueba de hipótesis para determinar si las proporciones de 
+
+
+Pagina 18
+  
+ 
+                                                                                   Página 17 de 28 
+errores en las dos oficinas son diferentes. Para esto, se requiere una prueba de hipótesis de dos 
+colas. Las hipótesis nula y alternativa son las siguientes: 
+ 
+ 
+ 
+Si se rechaza 𝐻0, la empresa concluiría que la proporción de errores que se cometen en las dos 
+oficinas es distinta. Como nivel de significancia se usará α = 0.10.  
+En los datos muestrales recogidos previamente se encuentra que 𝑝̅1 = 0.14 en la muestra de 𝑛1 = 
+250 declaraciones de la oficina 1 y 𝑝̅2  = 0.09 en la muestra de 𝑛1 = 300 declaraciones en la muestra 
+de la oficina 2. A continuación se calculará la estimación combinada de p. 
+ 
+ 
+Con la estimación combinada y la diferencia entre las proporciones muestrales, se obtiene el valor 
+del estadístico de prueba como se indica a continuación. 
+ 
+ 
+ 
+Para calcular el valor-p para esta prueba de dos colas, se observa, primero, que z = 1.85 se encuentra 
+en la cola superior de la distribución normal estándar. A partir de z = 1.85 y la tabla de la distribución 
+normal estándar, se encuentra que el área en la cola superior es 1.0000 - 0.9678 = 0.0322. 
+Multiplicando esta área por dos, dado que se trata de una prueba de dos colas, se encuentra que el 
+valor-p es 2(0.0322) = 0.0644. Como el valor-p es menor a α = 0.10, se rechaza 𝐻0 para el nivel de 
+significancia 0.10. La empresa concluye que las proporciones de errores de las dos oficinas difieren. 
+La conclusión de esta prueba de hipótesis es consistente con los resultados de la estimación por 
+intervalo que se calculó antes y que indicaban que la diferencia entre las proporciones poblacionales 
+en las dos oficinas estaba entre 0.005 y 0.095, siendo la oficina 1 la que tenía una mayor tasa de 
+errores. 
+ 
+INFERENCIAS ACERCA DE VARIANZAS POBLACIONALES 
+Inferencias acerca de una varianza poblacional 
+La varianza muestral es el estimador puntual de la varianza poblacional 𝜎2. Cuando se hacen 
+inferencias acerca de la varianza poblacional mediante la varianza muestral, la distribución muestral 
+de la cantidad (n - 1) 𝑠2/𝜎2 es de utilidad. Esta distribución muestral se describe como sigue.  
+
+
+Pagina 19
+  
+ 
+                                                                                   Página 18 de 28 
+ 
+ 
+ 
+ 
+ 
+En la figura se muestran algunas de las formas que puede tomar la distribución (n - 1) 𝑠2/𝜎2.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Como ya sabe, siempre que tome una muestra aleatoria simple de tamaño n de una población 
+normal, la distribución muestral de (n - 1) 𝑠2/𝜎2será una distribución chi-cuadrada, la cual sirve para 
+obtener una estimación por intervalos y realizar pruebas de hipótesis para la varianza poblacional. 
+Estimación por intervalos  
+Con el fin de exponer cómo usar la distribución chi-cuadrada para obtener una estimación de la 
+varianza poblacional 𝜎2 mediante un intervalo de confianza, suponga que desea estimar la varianza 
+poblacional del proceso de llenado citado al comienzo de este capítulo. En una muestra de 20 
+envases encuentra que la varianza muestral de las cantidades de llenado es 𝑠2 = 0.0025. Sin 
+embargo, sabe que no puede esperar que la varianza de 20 envases corresponda al valor exacto de 
+la varianza de toda la población de envases que se llenan en este proceso de producción. Así, 
+deseará obtener una estimación por intervalo para la varianza poblacional. 
+ 
+La notación 𝑋𝛼2 denota el valor de la distribución chi-cuadrada que proporciona un área o 
+probabilidad α a la derecha del valor 𝑋𝛼2.  
+Por ejemplo, en la siguiente figura, aparece la distribución chi-cuadrada con 19 grados de libertad, 
+en la que 𝑋0.025
+2
+=  32.852 significa que 2.5% de los valores chi-cuadrada se encuentran a la derecha 
+de 32.852 y 𝑋0.020.9755
+2
+ = 8.907 significa que 97.5% de los valores chi-cuadrada se encuentran a la 
+derecha de 8.907.  
+
+
+Pagina 20
+  
+ 
+                                                                                   Página 19 de 28 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+En la gráfica de la figura anterior se ve que 0.95 o 95% de los valores chi-cuadrada se encuentran 
+entre 𝑋0.975
+2
+ y 𝑋0.025
+2
+. Es decir, hay un 0.95 de probabilidad de obtener un valor 𝑋2 tal que: 
+ 
+ 
+La expresión anterior  (n - 1) 𝑠2/𝜎2sigue una distribución chi-cuadrada, por tanto, se puede sustituir 
+𝑋2 por n - 1) 𝑠2/𝜎2y escribir 
+ 
+ 
+La expresión anterior proporciona una estimación por intervalo en la que 0.95 o 95% de todos los 
+valores que puede tomar (n - 1) 𝑠2/𝜎2están en el intervalo que va de 𝑋0.975
+2
+y 𝑋0.025
+2
+. Ahora es 
+necesario realizar algunas manipulaciones algebraicas a la expresión para obtener una estimación 
+por intervalo para la varianza poblacional 𝑠2. se combinan para obtener 
+ 
+ 
+ 
+La expresión anterior proporciona una estimación por intervalo de confianza de 95% para la varianza 
+poblacional 𝜎2.  
+Ahora, de regreso con el problema de dar una estimación por intervalo para la varianza poblacional 
+de las cantidades de llenado, recuerde que en la muestra de 20 envases, la varianza muestral fue 𝑠2 
+= 0.0025. Dado que el tamaño de la muestra es 20, se tienen 19 grados de libertad. Como se muestra 
+en la figura anterior ya se determinó que 𝑋0.975
+2
+ = 8.907 y 𝑋0.025
+2
+ = 32.852. Sustituyendo estos valores 
+en la expresión se obtiene la siguiente estimación por intervalo para la varianza poblacional. 
+ 
+ 
+
+
+Pagina 21
+  
+ 
+                                                                                   Página 20 de 28 
+De esta manera se ha ilustrado el proceso del uso de la distribución chi-cuadrada para obtener una 
+estimación por intervalo para la varianza poblacional y para la desviación estándar poblacional. 
+Observe, que, como se usaron 𝑋0.975
+2
+ y 𝑋0.025
+2
+, el coeficiente de confianza de la estimación por 
+intervalo es 0.95. Extendiendo la expresión al caso general, con cualquier coeficiente de confianza, 
+se tiene la siguiente estimación por intervalo para la varianza poblacional. 
+ 
+ 
+ 
+ 
+ 
+Pruebas de hipótesis  
+ 
+Con para denotar el valor hipotético de la varianza poblacional, las tres formas de una prueba de 
+hipótesis para la varianza poblacional son las siguientes: 
+ 
+ 
+En una prueba de hipótesis para la varianza poblacional se emplean el valor hipotético de la varianza 
+poblacional 𝜎0
+2 y la varianza muestral 𝑠2 para calcular el valor del estadístico de prueba 𝑋2. Si la 
+población tiene una distribución normal, el estadístico de prueba es el siguiente: 
+ 
+ 
+ 
+ 
+ 
+Una vez calculado el valor del estadístico de prueba 𝑋2, para determinar si se rechaza la hipótesis 
+nula se emplea el método del valor-p o el método del valor crítico.  
+Considere ahora el siguiente ejemplo. La St. Louis Metro Bus Company de Estados Unidos, desea dar 
+una imagen de confiabilidad haciendo que sus conductores sean puntuales en los horarios de 
+llegada a las paradas. La empresa desea que haya poca variabilidad en dichos tiempos. En términos 
+de la varianza de los tiempos de llegada a las paradas, la empresa desea que la varianza sea de 4 
+minutos o menos. Se formula la siguiente prueba de hipótesis para que la empresa pueda 
+determinar si la varianza poblacional en los tiempos de llegada a las paradas es demasiado grande. 
+ 
+
+
+Pagina 22
+  
+ 
+                                                                                   Página 21 de 28 
+ 
+Suponer, tentativamente, que 𝐻0 sea verdadera, es admitir que la varianza poblacional en los 
+tiempos de llegada a las paradas se encuentra dentro de los lineamientos establecidos por la 
+empresa. La 𝐻0 se rechaza si las evidencias muestrales indican que la varianza poblacional excede 
+los lineamientos de la empresa. En tal caso habrá que tomar medidas para reducir la varianza 
+poblacional. Esta prueba de hipótesis se realiza usando como nivel de significancia α = 0.05.  
+Asuma que en una muestra aleatoria de 24 llegadas a cierta parada en una intersección en el centro 
+de la ciudad, la varianza muestral encontrada es 𝑠2 = 4.9. Si la distribución poblacional de los 
+tiempos de llegada a las paradas es aproximadamente normal, el valor del estadístico de prueba es 
+el siguiente: 
+ 
+En la siguiente figura se muestra la distribución chi-cuadrada con n - 1 = 24 - 1 = 23 grados de 
+libertad. Como ésta es una prueba de la cola superior, el área bajo la curva a la derecha del valor del 
+estadístico de prueba 𝑋2 = 28.18 es el valor-p de la prueba.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Como ocurre con las tablas de la distribución t, las tablas de la distribución chi-cuadrada no son 
+suficientemente detalladas para permitir determinar con exactitud el valor-p. Sin embargo, con las 
+tablas de la distribución chi-cuadrada se obtiene un intervalo en el que se encuentra el valor-p.  
+Por ejemplo, usando la tabla de la chi-cuadrada se encuentra la información siguiente para la 
+distribución chi-cuadrada con 23 grados de libertad 
+ 
+ 
+ 
+ 
+Como 𝑋2 = 28.18 es menor que 32.007, el área en la cola superior (el valor-p) es mayor que 0.10. 
+Como el valor-p es > α = 0.05, no se puede rechazar la hipótesis nula. La muestra no lleva a la 
+conclusión de que la varianza en los tiempos de llegada a las paradas sea demasiado grande.  
+
+
+Pagina 23
+  
+ 
+                                                                                   Página 22 de 28 
+Como ocurre con los otros procedimientos para pruebas de hipótesis, aquí también es posible 
+emplear el método del valor crítico para obtener la conclusión de la prueba de hipótesis. Así α = 
+0.05, 𝑋0.05
+2
+ proporciona el valor crítico en la cola superior para esta prueba. Empleando la tabla de 
+la chi-cuadrada y 23 grados de libertad, 𝑋0.05
+2
+ = 35.172. De manera que la regla de rechazo para los 
+tiempos de llegada a las paradas es la siguiente: 
+ 
+ 
+Como el valor del estadístico de prueba es 𝑋2 = 28.18, no se puede rechazar la hipótesis nula.  
+En la práctica, las pruebas de hipótesis para la varianza poblacional que se encuentran con más 
+frecuencia son pruebas de hipótesis de la cola superior, como la aquí presentada. En situaciones 
+que implican tiempos de llegada, tiempos de producción, pesos de llenado, dimensiones de piezas, 
+etc., varianzas pequeñas son deseables, mientras que varianzas grandes son inaceptables. Al 
+establecer la varianza poblacional máxima permitida, es posible probar la hipótesis nula de que la 
+varianza poblacional es menor o igual que el valor máximo permitido, contra la hipótesis alternativa 
+de que la varianza poblacional es mayor que el valor máximo permitido. Con esta estructura de la 
+prueba, deberán tomarse medidas correctivas, siempre que se rechace la hipótesis nula, lo que 
+indica la presencia de una varianza poblacional demasiado grande.  
+Como ocurre con la media y la proporción poblacionales, también se realizan pruebas de hipótesis 
+que tienen otras formas.  
+A continuación, se presenta una prueba de dos colas para la varianza poblacional considerando una 
+situación que suele presentarse en las oficinas que otorgan licencias para conducir vehículos de 
+motor en Estados Unidos. Históricamente, la varianza en las puntuaciones de los exámenes 
+presentados por las personas que solicitan una licencia para conducir ha sido 𝜎2 = 100. Ahora se ha 
+elaborado un nuevo examen con preguntas nuevas. Los administradores de dicha oficina desean 
+que la varianza en las puntuaciones del examen permanezca en los niveles históricos. Para estudiar 
+la varianza en las puntuaciones del nuevo examen se propone la siguiente prueba de hipótesis de 
+dos colas. 
+ 
+ 
+El rechazo de 𝐻0 indicará que la varianza ha cambiado y que será necesario revisar algunas de las 
+preguntas del nuevo examen para que la varianza en las puntuaciones en este examen sea parecida 
+a la varianza en las puntuaciones del examen anterior. El nuevo examen será aplicado a los 
+integrantes de una muestra de 30 solicitantes de licencia de conducir. En esta prueba se usará como 
+nivel de significancia α = 0.05.  
+En este caso la varianza muestral de las puntuaciones de 30 exámenes fue 𝑠2 - 162. El valor del 
+estadístico de prueba chi-cuadrada es el siguiente: 
+ 
+ 
+
+
+Pagina 24
+  
+ 
+                                                                                   Página 23 de 28 
+Ahora, queda calcular el valor-p. Mediante la tabla de la chi-cuadrada y n - 1 = 30 - 1 = 29 grados de 
+libertad (gl) se encuentra lo siguiente: 
+ 
+ 
+ 
+ 
+De manera que el valor del estadístico de prueba 𝑋2 = 46.98 corresponde a un área entre 0.025 y 
+0.01 en la cola superior de la distribución chi-cuadrada. Al duplicar este valor, se tiene que el valor- 
+está entre 0.05 y 0.02. Como el valor-p ≤ α = 0.05, se rechaza 𝐻0 y se concluye que en el nuevo 
+examen las puntuaciones presentan una varianza poblacional distinta a la varianza histórica de 𝜎2 
+= 100.  
+Un resumen de las pruebas de hipótesis para la varianza poblacional se presenta en la tabla 
+siguiente. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Inferencias acerca de dos varianzas poblacionales  
+En algunas aplicaciones estadísticas interesa comparar las varianzas de las calidades de producto 
+obtenido mediante dos métodos de producción diferentes, o las varianzas de tiempos de fabricación 
+empleando dos métodos diferentes, o las varianzas de las temperaturas que se tienen con dos 
+dispositivos distintos de calentamiento. Para comparar dos varianzas poblacionales, se emplean 
+datos obtenidos de dos muestras aleatorias independientes, una de la población 1 y otra de la 
+población 2. Para hacer las inferencias acerca de las dos varianzas poblacionales 𝑠1
+2 y 𝑠2
+2 se usan las 
+dos varianzas muestrales 𝜎1
+2 y 𝜎2
+2. Cuando las varianzas de dos poblaciones normales son iguales 
+(𝜎1
+2 = 𝜎2
+2), la distribución muestral de la proporción entre las dos varianzas muestrales 𝑠1
+2/𝑠2
+2 es la 
+siguiente. 
+
+
+Pagina 25
+  
+ 
+                                                                                   Página 24 de 28 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+La siguiente figura es una gráfica de la distribución F con 20 grados de libertad tanto en el numerador 
+como en el denominador. Como se ve en esta gráfica, la distribución F no es simétrica y los valores 
+F no pueden ser negativos. La forma de cada distribución F depende de los grados de libertad en el 
+numerador y de los grados de libertad en el denominador.  
+ 
+ 
+ 
+ 
+ 
+ 
+Para denotar el valor F correspondiente a un área o probabilidad α en la cola superior de la 
+distribución, se usa la notación 𝐹𝛼. Por ejemplo, como aparece en la figura anterior, 𝐹0.05 
+corresponde a un área de 0.05 en la cola superior de la distribución F con 20 grados de libertad en 
+el numerador y 20 grados de libertad en el denominador. El valor de 𝐹0.05 se encuentra en la tabla 
+de la distribución F. Usando 20 grados de libertad en el numerador, 20 grados de libertad en el 
+denominador y el renglón correspondiente a un área de 0.05 en la cola superior de la distribución, 
+se encuentra 𝐹0.05 = 2.12.  
+Ahora se verá cómo usar la distribución F para realizar una prueba de hipótesis para las varianzas 
+de dos poblaciones. Se empieza con una prueba sobre la igualdad de las dos varianzas poblacionales. 
+Las hipótesis son las siguientes: 
+ 
+ 
+ 
+De manera tentativa se supone que las varianzas poblacionales son iguales. Si se rechaza 𝐻0 se llega 
+a la conclusión de que las varianzas poblacionales no son iguales.  
+
+
+Pagina 26
+  
+ 
+                                                                                   Página 25 de 28 
+Para realizar esta prueba de hipótesis se requieren dos muestras aleatorias independientes, una de 
+cada población. Se calculan las dos varianzas muestrales. A la población en la que se encuentre la 
+mayor varianza muestral se le considera la población 1. De manera que el tamaño de muestra 𝑛1 y 
+la varianza muestral 𝑠1
+2  corresponden a la población 1 y el tamaño de muestra 𝑛2 y la varianza 
+muestral 𝑠2
+2 corresponden a la población 2. Con base en la suposición de que las dos poblaciones 
+tengan una distribución normal, la relación entre las varianzas muestrales proporciona el siguiente 
+estadístico de prueba F. 
+ 
+ 
+ 
+ 
+ 
+ 
+Como el estadístico de prueba F se construye con la varianza muestral más grande 𝑠1
+2  en el 
+numerador, el valor del estadístico de prueba se encontrará siempre en la cola superior de la 
+distribución F. Por tanto, las tablas de la distribución F, únicamente necesitan proporcionar áreas o 
+probabilidades en la cola superior. Si no se construyera de este modo el estadístico de prueba, serían 
+necesarias áreas o probabilidades en la cola inferior. En tal caso se necesitarían más cálculos o tablas 
+más extensas para la distribución F. A continuación, se presenta un ejemplo de una prueba de 
+hipótesis para la igualdad de dos varianzas poblacionales.  
+Dullus County Schools está por renovar el contrato del servicio de autobús para el año entrante y 
+debe decidirse entre dos empresas que prestan el servicio, la empresa Milbank y la empresa Gulf 
+Park. Como medida de la calidad del servicio se emplea la varianza en los tiempos en que llega a 
+recoger/dejar a las personas. Poca varianza indica un mejor servicio, un servicio de mayor calidad. 
+Si las varianzas de las dos empresas son iguales, la escuela elegirá la empresa que ofrezca mejores 
+condiciones financieras. Pero si hay una diferencia significativa en las varianzas, la escuela preferirá 
+la empresa con la menor varianza o mejor servicio. Las hipótesis en este caso son las siguientes: 
+ 
+ 
+ 
+Si se rechaza 𝐻0, se concluirá que los servicios no tienen la misma calidad. Para realizar esta prueba 
+de hipótesis se usa como nivel de significancia α = 0.10. 
+ 
+En una muestra de 26 tiempos de llegada de la empresa Milbank la varianza muestral es 48 y en una 
+muestra de 16 tiempos de llegada de la empresa Gulf Park la varianza muestral es 20. Como la 
+varianza en la muestra de Milbank es la mayor, Milbank será la población 1. Usando la ecuación dek 
+
+
+Pagina 27
+  
+ 
+                                                                                   Página 26 de 28 
+estadístico de prueba para pruebas de hipótesis acerca de varianzas poblacionales con 𝜎1
+2 = 𝜎2
+2  se 
+encuentra el valor del estadístico de prueba: 
+ 
+ 
+La distribución F es la que tiene 𝑛1 - 1 = 26 - 1 = 25 grados de libertad en el numerador y 𝑛2 - 1 = 16 
+- 1 = 15 grados de libertad en el denominador.  
+Igual que en las otras pruebas de hipótesis, para llegar a una conclusión en esta prueba de hipótesis 
+se puede emplear el método del valor-p o el método del valor crítico. En la tabla se pueden 
+encontrar las siguientes áreas en la cola superior correspondientes a los valores F de una 
+distribución F con 25 grados de libertad en el numerador y 15 grados de libertad en el denominador. 
+ 
+ 
+ 
+ 
+Como F = 2.40 está entre 2.28 y 2.69, el área en la cola superior de la distribución está entre 0.05 y 
+0.025. Como se trata de una prueba de dos colas, se duplica el área de la cola superior, y se obtiene 
+un valor-p entre 0.10 y 0.05. Como se eligió α - 0.10 como nivel de significancia, el valor-p α < 0.10. 
+Por tanto, se rechaza la hipótesis nula. Esto lleva a la conclusión de que los dos servicios de autobús 
+difieren en términos de la varianza de los tiempos en que llegan a recoger/dejar a las personas. Se 
+le recomienda a la escuela el servicio de menor varianza o el servicio mejor que es el ofrecido por la 
+empresa Gulf Park.  
+Para usar el método del valor crítico en una prueba de hipótesis de dos colas con α = 0.10, se toman 
+los valores críticos correspondientes a un área α/2 = 0.10/2 = 0.05 en cada cola de la distribución. 
+Como el valor del estadístico de prueba calculado está siempre en la cola superior, basta determinar 
+el valor crítico en la cola superior. En la tabla de la distribución F se encuentra que 𝐹0.05 = 2.28. Así, 
+aun cuando se trata de una prueba de dos colas, la regla de rechazo es la siguiente: 
+ 
+Como el estadístico de prueba es F = 2.40, mayor que 2.28, se rechaza H0 y se concluye que los dos 
+servicios difieren en términos de la varianza en los tiempos en que llegan a recoger/dejar a las 
+personas.  
+ 
+También se pueden realizar pruebas de una cola para dos varianzas poblacionales. En estos casos 
+se usa la distribución F para determinar si una varianza poblacional es significativamente mayor que 
+la otra. Una prueba de hipótesis para dos varianzas poblacionales se formula siempre como una 
+prueba de la cola superior 
+ 
+ 
+
+
+Pagina 28
+  
+ 
+                                                                                   Página 27 de 28 
+En esta forma de una prueba de hipótesis, el valor-p y el valor crítico siempre se encuentran en la 
+cola superior de la distribución F. De esta manera, sólo se necesitan los valores F de la cola superior, 
+lo cual simplifica tanto los cálculos como la tabla de la distribución F.  
+A continuación, se ilustra el uso de la distribución F para realizar una prueba de una cola para las 
+varianzas de dos poblaciones, empleando una encuesta sobre opinión pública. Para estudiar las 
+actitudes frente a los asuntos políticos actuales se emplea una muestra de 31 hombres y otra de 41 
+mujeres. Al investigador que realiza el estudio le interesa saber si los datos muestrales indican que 
+entre las mujeres hay mayor variación en las actitudes respecto de los asuntos políticos que entre 
+los hombres. En la forma de la prueba de hipótesis dada arriba, las mujeres serán la población 1 y 
+los hombres la población 2. La prueba de hipótesis se plantea como sigue: 
+ 
+ 
+Rechazar 𝐻0 dará al investigador el respaldo estadístico necesario para concluir que las mujeres 
+muestran mayor variación en las actitudes respecto a los asuntos políticos.  
+Con la varianza muestral de las mujeres en el numerador y la varianza muestral de los hombres en 
+el denominador, la distribución F tendrá 𝑛1 - 1 = 41 - 1 = 40 grados de libertad en el numerador y 𝑛2  
+- 1 = 31 - 1 = 30 grados de libertad en el denominador. En esta prueba de hipótesis se usa α = 0.05 
+como nivel de significancia. Como resultado de la prueba se encontró una varianza muestral para 
+las mujeres y una varianza muestral para los hombres. El estadístico de prueba es el siguiente: 
+ 
+ 
+En la tabla de la distribución F con 40 grados de libertad en el numerador y 30 grados de libertad en 
+el denominador da 𝐹0.10 = 1.57. Como el estadístico de prueba, F = 1.50, es menor que 1.57, el área 
+en la cola superior debe ser mayor que 0.10. Por ende, el valor-p es mayor a 0.10. Como el valor-p 
+> α - 0.05, no se puede rechazar 𝐻0. Por tanto, los resultados muestrales no favorecen la conclusión 
+de que entre las mujeres haya mayor variación en la actitud frente a los asuntos políticos que entre 
+los hombres. En la tabla 11.4 se presenta un resumen de las pruebas de hipótesis para dos varianzas 
+poblacionales. 
+
+
+Pagina 29
+  
+ 
+                                                                                   Página 28 de 28 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Nota material extraído del libro de: 
+Anderson, D. R., Sweeney, D. J., Williams, T. A., (2008), Estadística para administración y 
+economía, (10ª edición) CENGAGE learning. 
+ 
+ 
+ 
+ 
+ 
+ 

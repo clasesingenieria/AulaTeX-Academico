@@ -1,0 +1,119 @@
+% Plantilla y base conceptual generada con AulaTeX (Amazon Nova Pro) para Actividad 12 (A12).
+% Contrato AulaTeX: portada oficial ITESCA, Resumen con declaracion IA, Tabla de contenido y tres tiempos.
+\def\estadisticatitulo{Evaluación sobre pruebas de hipótesis paramétricas para una y dos muestras}
+\def\estadisticasubtitulo{Actividad 12: Evaluación (Cuestionario)}
+\def\estadisticafecha{15 de noviembre de 2026}
+\def\estadisticaunidad{Pruebas de hipótesis para una y dos muestras}
+\def\portadaoficial{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/portada-oficial.png}
+\def\estadisticaextras{%
+  \usepackage{fontspec}
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+  \usepackage{longtable,booktabs,array}
+  \usetikzlibrary{babel}
+  \geometry{letterpaper,left=2.3cm,right=2.3cm,top=2.2cm,bottom=2.2cm}
+  \hypersetup{pdftitle={Evaluación sobre pruebas de hipótesis paramétricas para una y dos muestras},pdfsubject={Actividad 12 - Estadística aplicada para la administración}}
+  \setcitestyle{citesep={;}}
+  \renewcommand{\insertcoverwatermark}{}
+  \renewcommand{\insertcoverinstitutionalfooter}{}
+  \renewcommand{\templatePortrait}{%
+    \thispagestyle{empty}
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{\portadaoficial}};
+      \node[anchor=north west,text=white,text width=10.6cm,align=center,inner sep=0pt] at ([xshift=10.1cm,yshift=-19.4cm]current page.north west) {%
+        \setstretch{1}\fontsize{12}{15}\selectfont
+        {\fontsize{15}{18}\selectfont\bfseries Evaluación sobre pruebas de hipótesis paramétricas para una y dos muestras}\par\vspace{0.16cm}
+        Estadística aplicada para la administración\par
+        Actividad 12: Evaluación (Cuestionario)\par\vspace{0.12cm}
+        Martín Jonathan de la Cruz Muñoz\par
+        Matrícula: 26130503\par
+        Dra. Yoana Elizeth Tauitmes Delgado\par
+        15 de noviembre de 2026
+      };
+    \end{tikzpicture}\null\clearpage
+  }
+  \renewcommand{\templatePagecfg}{}
+  \renewcommand{\templateFinalcfg}{%
+    \pagestyle{fancy}\fancyhf{}\fancyfoot[C]{\fontsize{10}{12}\selectfont\thepage}
+    \renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}
+    \setcounter{page}{2}\renewcommand{\thepage}{\arabic{page}}
+  }
+  \titleformat{\section}{\normalfont\fontsize{12}{15}\selectfont\bfseries\color{itescaRedDark}}{\thesection.}{0.5em}{}
+  \titleformat{\subsection}{\normalfont\fontsize{12}{15}\selectfont\bfseries}{\thesubsection.}{0.5em}{}
+  \titlespacing*{\section}{0pt}{8pt}{5pt}
+  \titlespacing*{\subsection}{0pt}{7pt}{4pt}
+  \renewcommand{\footnotesize}{\fontsize{12}{14.4}\selectfont}
+  \setlength{\parindent}{1.1cm}
+  \setlength{\parskip}{3pt}
+  \urlstyle{same}
+  \input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/investigacion-articulos/formato-fichas.tex}
+}
+\def\estadisticaresumen{Esta actividad de evaluación se centra en la aplicación de pruebas de hipótesis paramétricas en contextos de una y dos muestras, fundamentales para la toma de decisiones gerenciales. El cuestionario evalúa la comprensión de diversos conceptos estadísticos, como la regla de decisión mediante valor crítico y p-valor, contrastes t y Z, y la relación entre errores de tipo I y II, proporcionando una base sólida para la aplicación práctica en la administración.}
+\long\def\estadisticacontenido{%
+\fontsize{12}{14.4}\selectfont\setstretch{1.5}\justifying
+\estadisticapreliminares
+\section{Introducción}
+La unidad temática 4 de la asignatura 'Estadística aplicada para la administración' se centra en las pruebas de hipótesis para una y dos muestras. Estas pruebas son fundamentales para la toma de decisiones en entornos de incertidumbre, proporcionando una base cuantitativa para evaluar hipótesis y tomar decisiones informadas. En esta actividad, se evaluará la comprensión de diversos conceptos estadísticos, como la regla de decisión mediante valor crítico y p-valor, contrastes t y Z, y la relación entre errores de tipo I y II. Estos conceptos son esenciales para la aplicación práctica en la gestión administrativa, permitiendo a los gerentes determinar si los resultados observados son estadísticamente significativos y, por lo tanto, si deben tomar medidas basadas en esos resultados. \citep{anderson2012,lind2012,holmesBusiness2023}.
+
+\section{Fundamentos, modelado analítico y evidencia en pruebas de hipótesis para una y dos muestras}
+\subsection{Base conceptual autocontenida y formulación matemática}
+El desarrollo teórico-matemático de esta actividad se basa en la integración de definiciones, supuestos y propiedades de los estimadores o pruebas. Se abordarán conceptos como la regla de decisión mediante valor crítico y p-valor, contrastes t de Welch y varianza agrupada para dos medias independientes, prueba t para muestras pareadas o relacionadas, contraste Z con proporción combinada para dos poblaciones, prueba F de igualdad de dos varianzas poblacionales, relación de compromiso entre errores de tipo I y tipo II, y curva característica de operación y función de potencia. Cada uno de estos conceptos se definirá formalmente, se expresará en términos matemáticos y se explicará su aplicación en la toma de decisiones gerenciales. \citep{wackerly2010,canavos1988,spiegel2009}.
+
+\textbf{1. regla de decisión mediante valor crítico y mediante p-valor.} La regla de decisión en pruebas de hipótesis puede establecerse mediante el valor crítico o el p-valor. El valor crítico es el punto de corte en la distribución de la estadística de prueba bajo la hipótesis nula, mientras que el p-valor es la probabilidad de obtener un resultado igual o más extremo que el observado, asumiendo que la hipótesis nula es verdadera. Expresión formal: $H_0: \mu = \mu_0, \ H_a: \mu \neq \mu_0. \ Si \ p\text{-valor} \leq \alpha, \ rechazar \ H_0.$. En el ámbito gerencial, esta regla guía la toma de decisiones en situaciones de incertidumbre, permitiendo a los gerentes determinar si los resultados observados son estadísticamente significativos y, por lo tanto, si deben tomar medidas basadas en esos resultados. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{2. contraste t de Welch y varianza agrupada para dos medias independientes.} El contraste t de Welch se utiliza para comparar las medias de dos poblaciones independientes cuando las varianzas poblacionales son desconocidas y se asume que no son iguales. La varianza agrupada se calcula como una combinación ponderada de las varianzas muestrales. Expresión formal: $t = \frac{(\bar{X}_1 - \bar{X}_2) - (\mu_1 - \mu_2)}{\sqrt{s_1^2/n_1 + s_2^2/n_2}}$. En el ámbito gerencial, este contraste es útil en la comparación de dos grupos diferentes, como la eficacia de dos métodos de producción o la satisfacción del cliente en dos regiones distintas. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{3. prueba t para muestras pareadas o relacionadas.} La prueba t para muestras pareadas se utiliza para comparar las medias de dos muestras relacionadas o emparejadas. Se calcula la diferencia entre cada par de observaciones y se realiza una prueba t sobre estas diferencias. Expresión formal: $t = \frac{\bar{d} - \mu_d}{s_d/\sqrt{n}}$. En el ámbito gerencial, esta prueba es aplicable en escenarios donde se mide el mismo sujeto en dos condiciones diferentes, como la evaluación del rendimiento de empleados antes y después de una capacitación. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{4. contraste Z con proporción combinada para dos poblaciones.} El contraste Z con proporción combinada se utiliza para comparar las proporciones de dos poblaciones independientes. Se calcula una proporción combinada y se realiza una prueba Z para evaluar la diferencia entre las proporciones. Expresión formal: $Z = \frac{(\hat{p}_1 - \hat{p}_2) - (p_1 - p_2)}{\sqrt{\hat{p}(1 - \hat{p})(1/n_1 + 1/n_2)}}$. En el ámbito gerencial, este contraste es útil para comparar proporciones en diferentes grupos, como la tasa de satisfacción de clientes en dos campañas de marketing distintas. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{5. prueba F de igualdad de dos varianzas poblacionales.} La prueba F se utiliza para comparar la igualdad de dos varianzas poblacionales. Se calcula la razón entre las varianzas muestrales y se compara con la distribución F. Expresión formal: $F = \frac{s_1^2}{s_2^2}$. En el ámbito gerencial, esta prueba es crucial para verificar la homogeneidad de varianzas antes de realizar otras pruebas, como el ANOVA, en análisis comparativos. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{6. relación de compromiso entre errores de tipo I y tipo II.} La relación de compromiso entre errores de tipo I (rechazar una hipótesis nula verdadera) y tipo II (no rechazar una hipótesis nula falsa) implica un equilibrio en la elección del nivel de significancia y el tamaño de la muestra. Reducir un tipo de error generalmente aumenta el otro. Expresión formal: $\beta = P(\text{no rechazar } H_0 | H_0 \text{ falsa}), \ \alpha = P(\text{rechazar } H_0 | H_0 \text{ verdadera})$. En el ámbito gerencial, en la toma de decisiones gerenciales, entender esta relación ayuda a establecer criterios de aceptación y rechazo de hipótesis en función de los costos y consecuencias asociados con cada tipo de error. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{7. curva característica de operación y función de potencia.} La curva característica de operación (CCO) y la función de potencia describen el comportamiento de una prueba estadística en términos de su capacidad para detectar efectos verdaderos y evitar falsos positivos. La CCO muestra la probabilidad de rechazar la hipótesis nula en función del parámetro poblacional, mientras que la función de potencia indica la probabilidad de rechazar la hipótesis nula para diferentes valores del parámetro. Expresión formal: $\text{Función de potencia: } \pi(\theta) = P(\text{rechazar } H_0 | \theta)$. En el ámbito gerencial, estas herramientas son esenciales para evaluar la eficiencia y fiabilidad de las pruebas estadísticas en la toma de decisiones gerenciales, asegurando que las conclusiones sean robustas y significativas. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{8. pruebas hipótesis.} Las pruebas de hipótesis son procedimientos estadísticos utilizados para evaluar si hay evidencia suficiente para rechazar una hipótesis nula en favor de una alternativa. Implican la formulación de hipótesis, la selección de un nivel de significancia, el cálculo de una estadística de prueba y la comparación con un valor crítico o p-valor. Expresión formal: $H_0: \mu = \mu_0, \ H_a: \mu \neq \mu_0. \ z = \frac{\bar{X} - \mu_0}{\sigma/\sqrt{n}}$. En el ámbito gerencial, las pruebas de hipótesis son fundamentales en la gestión administrativa para tomar decisiones basadas en datos, como la evaluación de la eficacia de estrategias de marketing, la calidad de procesos de producción o la satisfacción del cliente. \citep{anderson2012,lind2012,wackerly2010}.
+
+
+\subsection{Matriz contractual de evaluación y fundamentación de reactivos}
+La guía analítica detallada para resolver o estructurar los casos, artículos, ejercicios o reactivos específicos de esta actividad según la consigna oficial se basará en la aplicación práctica de los conceptos estadísticos discutidos. Se proporcionarán ejemplos y ejercicios para ilustrar cómo aplicar estas pruebas en escenarios administrativos reales, como la comparación de la eficacia de diferentes estrategias de marketing, la evaluación de la calidad de procesos de producción o la satisfacción del cliente. Se enfatizará la importancia de seguir los requisitos e instrucciones para una prueba de hipótesis rigurosa y confiable.
+
+De conformidad con el contrato AulaTeX para cuestionarios en plataforma, los cuestionarios se documentan en el reporte raíz mediante una tabla estructurada de pregunta, respuesta analítica y justificación teórico-matemática verificable, sin generar un archivo separado en la carpeta de entregables \citep{anderson2012,wackerly2010}.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.28}
+\begin{longtable}{p{1.2cm}p{4.3cm}p{3.8cm}p{5.3cm}}
+\hline
+\textbf{Núm.} & \textbf{Eje / Pregunta de evaluación} & \textbf{Respuesta técnica} & \textbf{Justificación matemática y conceptual}\\\hline
+\endfirsthead
+\hline
+\textbf{Núm.} & \textbf{Eje / Pregunta de evaluación} & \textbf{Respuesta técnica} & \textbf{Justificación matemática y conceptual}\\\hline
+\endhead
+R01 & ¿Cuál es el criterio técnico y alcance de \textit{regla de decisión mediante valor crítico y mediante p-valor}? & La regla de decisión en pruebas de hipótesis puede establecerse mediante el valor crítico o el p-valor. El valor crítico es el punto de corte en la distribución & Esta regla guía la toma de decisiones en situaciones de incertidumbre, permitiendo a los gerentes determinar si los resultados observados son estadísticamente significativos y, por lo tanto, si deben tomar medidas basada \citep{anderson2012,wackerly2010}.\\\hline
+R02 & ¿Cuál es el criterio técnico y alcance de \textit{contraste t de Welch y varianza agrupada para dos medias independientes}? & El contraste t de Welch se utiliza para comparar las medias de dos poblaciones independientes cuando las varianzas poblacionales son desconocidas y se asume que & Este contraste es útil en la comparación de dos grupos diferentes, como la eficacia de dos métodos de producción o la satisfacción del cliente en dos regiones distintas. \citep{anderson2012,wackerly2010}.\\\hline
+R03 & ¿Cuál es el criterio técnico y alcance de \textit{prueba t para muestras pareadas o relacionadas}? & La prueba t para muestras pareadas se utiliza para comparar las medias de dos muestras relacionadas o emparejadas. Se calcula la diferencia entre cada par de ob & Esta prueba es aplicable en escenarios donde se mide el mismo sujeto en dos condiciones diferentes, como la evaluación del rendimiento de empleados antes y después de una capacitación. \citep{anderson2012,wackerly2010}.\\\hline
+R04 & ¿Cuál es el criterio técnico y alcance de \textit{contraste Z con proporción combinada para dos poblaciones}? & El contraste Z con proporción combinada se utiliza para comparar las proporciones de dos poblaciones independientes. Se calcula una proporción combinada y se re & Este contraste es útil para comparar proporciones en diferentes grupos, como la tasa de satisfacción de clientes en dos campañas de marketing distintas. \citep{anderson2012,wackerly2010}.\\\hline
+R05 & ¿Cuál es el criterio técnico y alcance de \textit{prueba F de igualdad de dos varianzas poblacionales}? & La prueba F se utiliza para comparar la igualdad de dos varianzas poblacionales. Se calcula la razón entre las varianzas muestrales y se compara con la distribu & Esta prueba es crucial para verificar la homogeneidad de varianzas antes de realizar otras pruebas, como el ANOVA, en análisis comparativos. \citep{anderson2012,wackerly2010}.\\\hline
+R06 & ¿Cuál es el criterio técnico y alcance de \textit{relación de compromiso entre errores de tipo I y tipo II}? & La relación de compromiso entre errores de tipo I (rechazar una hipótesis nula verdadera) y tipo II (no rechazar una hipótesis nula falsa) implica un equilibrio & En la toma de decisiones gerenciales, entender esta relación ayuda a establecer criterios de aceptación y rechazo de hipótesis en función de los costos y consecuencias asociados con cada tipo de error. \citep{anderson2012,wackerly2010}.\\\hline
+R07 & ¿Cuál es el criterio técnico y alcance de \textit{curva característica de operación y función de potencia}? & La curva característica de operación (CCO) y la función de potencia describen el comportamiento de una prueba estadística en términos de su capacidad para detec & Estas herramientas son esenciales para evaluar la eficiencia y fiabilidad de las pruebas estadísticas en la toma de decisiones gerenciales, asegurando que las conclusiones sean robustas y significativas. \citep{anderson2012,wackerly2010}.\\\hline
+R08 & ¿Cuál es el criterio técnico y alcance de \textit{pruebas hipótesis}? & Las pruebas de hipótesis son procedimientos estadísticos utilizados para evaluar si hay evidencia suficiente para rechazar una hipótesis nula en favor de una al & Las pruebas de hipótesis son fundamentales en la gestión administrativa para tomar decisiones basadas en datos, como la evaluación de la eficacia de estrategias de marketing, la calidad de procesos de producción o la sat \citep{anderson2012,wackerly2010}.\\\hline
+R09 & ¿Cuál es el criterio técnico y alcance de \textit{requisitos instrucciones}? & Los requisitos e instrucciones para una prueba de hipótesis incluyen la definición de hipótesis nula y alternativa, la selección del nivel de significancia, la  & Seguir estos requisitos asegura que las pruebas de hipótesis sean realizadas de manera rigurosa y que los resultados sean válidos y confiables para la toma de decisiones gerenciales. \citep{anderson2012,wackerly2010}.\\\hline
+R10 & ¿Cuál es el criterio técnico y alcance de \textit{muestras pareadas}? & Las muestras pareadas consisten en observaciones que están relacionadas o emparejadas de alguna manera. Esto puede ocurrir cuando se mide el mismo sujeto en dos & Las muestras pareadas son comunes en estudios longitudinales o en la evaluación de cambios en el mismo grupo antes y después de una intervención. \citep{anderson2012,wackerly2010}.\\\hline
+\end{longtable}
+\end{center}
+
+
+\subsection{Articulación administrativa y síntesis del desarrollo}
+La comprensión de la regla de decisión mediante valor crítico y p-valor es esencial para la correcta aplicación de pruebas de hipótesis en la gestión administrativa. El valor crítico y el p-valor proporcionan criterios objetivos para determinar si los resultados de una prueba estadística son estadísticamente significativos. Esto es crucial para evitar conclusiones erróneas en la toma de decisiones gerenciales. \citep{holmesBusiness2023,nistHandbook}.
+El contraste t de Welch es una herramienta valiosa para comparar medias de dos poblaciones independientes con varianzas desconocidas. Este contraste permite a los gerentes evaluar si las diferencias observadas entre dos grupos son estadísticamente significativas, lo que puede influir en decisiones estratégicas. \citep{holmesBusiness2023,nistHandbook}.
+La prueba t para muestras pareadas es esencial para comparar medidas repetidas en el mismo sujeto. Esta prueba ayuda a los gerentes a evaluar la eficacia de intervenciones o cambios en procesos, proporcionando evidencia estadística de mejoras o diferencias significativas. \citep{holmesBusiness2023,nistHandbook}.
+El contraste Z con proporción combinada es útil para comparar proporciones en dos poblaciones independientes. Este contraste permite a los gerentes evaluar la eficacia de diferentes estrategias o campañas, proporcionando una base estadística para la toma de decisiones. \citep{holmesBusiness2023,nistHandbook}.
+
+En síntesis dentro de este segundo tiempo, la articulación entre la teoría estadística de \textit{pruebas de hipótesis para una y dos muestras} y la práctica administrativa demuestra que ningún indicador cuantitativo opera en el vacío: la validez de la conclusión depende del cumplimiento de los supuestos distribucionales, de la representatividad de los datos recolectados y de la correspondencia entre el modelo matemático y el problema decisional de la organización \citep{anderson2012,nistHandbook,guarin2002}.
+
+\clearpage
+\section{Conclusiones}
+En conclusión, esta actividad de evaluación proporciona una base sólida para la comprensión y aplicación de pruebas de hipótesis paramétricas en la gestión administrativa. Los conceptos estadísticos discutidos, como la regla de decisión mediante valor crítico y p-valor, contrastes t y Z, y la relación entre errores de tipo I y II, son esenciales para la toma de decisiones informadas en entornos de incertidumbre. La aplicación práctica de estas pruebas en escenarios administrativos reales permite a los gerentes evaluar la eficacia de estrategias, procesos y campañas, proporcionando una base cuantitativa para la toma de decisiones. Sin embargo, es importante reconocer las limitaciones metodológicas y los supuestos subyacentes en estas pruebas, así como la necesidad de un equilibrio entre los errores de tipo I y II en la toma de decisiones. \citep{anderson2012,lind2012,wackerly2010,diazRodriguez2022}.
+}
+\input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/reporte-estadistica-aplicada-para-la-administracion-plantilla-actividad.tex}

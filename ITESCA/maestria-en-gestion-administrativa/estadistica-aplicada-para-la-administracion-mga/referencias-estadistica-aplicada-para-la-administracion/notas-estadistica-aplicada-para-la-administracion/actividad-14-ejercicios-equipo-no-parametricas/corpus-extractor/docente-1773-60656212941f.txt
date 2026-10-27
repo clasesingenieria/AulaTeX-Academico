@@ -1,0 +1,676 @@
+Pagina 1
+ 
+ 
+ 
+Unidad I Prueba de Hipótesis 
+Estadística para la administración II 
+ 
+Estadística para la administración 
+Tema 5. Pruebas de hipótesis no paramétricas   
+
+
+Pagina 2
+  
+ 
+                                                                                   Página 1 de 19 
+Introducción 
+La mayoría de las pruebas de hipótesis analizadas hasta ahora hacen inferencias respecto a 
+los parámetros de la población, como la media y la proporción. Estas pruebas paramétricas 
+usan la estadística paramétrica de muestras que provinieron de la población que se está 
+probando. Para formular estas pruebas, hicimos suposiciones restrictivas sobre las 
+poblaciones de las que extraíamos muestras. 
+Lo que se aprendió, supusimos que nuestras muestras eran grandes o provenían de 
+poblaciones con distribución normal. Pero las poblaciones no siempre son normales. 
+Incluso cuando una prueba de bondad de ajuste indica que una población es 
+aproximadamente normal, no siempre podemos estar seguros de que es correcto, porque la 
+prueba no es 100% confiable. Claramente, existen ciertas situaciones en las que el uso de la 
+curva normal no es apropiado. Para estos casos, requerimos alternativas a la estadística 
+paramétrica y a las pruebas de hipótesis específicas que hemos estado utilizando hasta 
+ahora. 
+Por fortuna, recientemente los estadísticos han desarrollado técnicas útiles que no hacen 
+suposiciones restrictivas respecto a la forma de las distribuciones de población. Éstas se 
+conocen como pruebas sin distribución o, más comúnmente, pruebas no paramétricas. 
+Las hipótesis de una prueba no paramétrica se refieren a algo distinto del valor de un 
+parámetro de población. Existe un gran número de pruebas de este tipo, algunas de ellas 
+son de las más conocidas y más utilizadas: 
+1. La prueba de signo para datos por pares, en la que los signos positivo o negativo 
+sustituyen a los valores cuantitativos. 
+2. Una prueba de suma de rangos, a menudo llamada la prueba U de Mann-Whitney, 
+que puede usarse para determinar si dos muestras independientes se sacaron de la misma 
+población. Usa más información que la prueba de signo. 
+3. Otra prueba de suma de rangos, la prueba Kruskal-Wallis, que generaliza el análisis 
+de varianza para poder prescindir de la suposición de que las poblaciones tienen 
+distribución normal. 
+4. La prueba de corridas de una sola muestra, un método para determinar la 
+aleatoriedad con la que se han seleccionado los elementos muestreados. 
+5. Correlación de rango, un método para hacer el análisis de correlación cuando no se 
+dispone de los datos para usar la forma numérica, pero cuando la información es suficiente 
+para clasificar los datos como primero, segundo, tercero, etcétera. 
+6. La prueba de Kolmogorov-Smirnov, otro método para determinar la la bondad de 
+ajuste entre una muestra observada y una distribución de probabilidad teórica. 
+Ventajas de los métodos no paramétricos 
+Los métodos no paramétricos tienen ciertas ventajas claras sobre los métodos paramétricos: 
+1. No requieren la suposición de que una población está distribuida en forma de curva 
+normal u otra forma específica. 
+2. Generalmente, es más sencillo realizarlas y entenderlas. La mayor parte de las 
+pruebas no paramétricas no exigen el tipo de cálculos laboriosos a menudo necesarios, por 
+ejemplo, para calcular una desviación estándar. Una prueba no paramétrica nos puede pedir 
+reemplazar valores numéricos con el orden en el que aparecen en una lista de la tabla. 
+Obviamente, en términos de cálculos, manejar 1, 2, 3, 4 y 5 requiere menos esfuerzo que 
+trabajar con 13.33, 76.50, 101.79, 113.45 y 189.42. 
+
+
+Pagina 3
+  
+ 
+                                                                                   Página 2 de 19 
+ 
+3. Algunas veces ni siquiera se requiere un ordenamiento o clasificación formal. 
+Muchas veces, lo único que podemos hacer es describir un resultado como “mejor” que 
+otro. Cuando ocurre esto, o cuando nuestras mediciones no son tan exactas como es 
+necesario para las pruebas paramétricas, podemos usar métodos no paramétricos. 
+ 
+Desventajas de los métodos no paramétricos 
+Dos desventajas acompañan al uso de pruebas no paramétricas: 
+1. Ignoran cierta cantidad de información. Hemos mostrado cómo los valores 1, 2, 3, 4 
+y 5 pueden reemplazar a los números 13.33, 76.50, 101.79, 113.45 y 189.42. Sin embargo, 
+si representamos “189.42” por “5” perdemos información contenida en el valor 189.42. 
+Observe que en nuestro ordenamiento de los números 13.33, 76.50, 101.79, 113.45 y 
+189.42, el valor 189.42 puede convertirse en 1,189.42 y seguir siendo el quinto de la lista o 
+el de mayor valor. Pero si esta lista es un conjunto de datos, tendremos un conocimiento 
+mayor si sabemos que el valor más alto es 1,189.42, en vez de 189.42, de lo que sabríamos 
+al representar ambos números con 5. 
+2. A menudo no son tan eficientes o “claras” como las pruebas paramétricas. La 
+estimación de un intervalo a un nivel de confianza del 95% usando una prueba no 
+paramétrica puede tener el doble de tamaño que la estimación con una prueba. Cuando 
+usamos pruebas no paramétricas hacemos un trueque: perdemos agudeza en la estimación 
+de intervalos, pero ganamos la posibilidad de usar menos información y calcular con mayor 
+rapidez.  
+ 
+5.1 Diferencia entre pruebas paramétricas y no paramétricas 
+Las pruebas paramétricas y no paramétricas son métodos estadísticos utilizados para 
+analizar datos y contrastar hipótesis, pero difieren en los supuestos que requieren y en el 
+tipo de datos con los que trabajan. 
+ 
+Pruebas paramétricas: 
+Se aplican cuando los datos siguen una distribución normal y se conocen o se 
+pueden estimar los parámetros poblacionales (media y desviación estándar). 
+Requieren niveles de medición de intervalo o razón. 
+Ejemplos: prueba t de Student, ANOVA, correlación de Pearson. 
+ 
+Pruebas no paramétricas: 
+Se utilizan cuando los datos no cumplen con los supuestos de normalidad, cuando 
+las muestras son pequeñas o cuando las variables se miden en escala ordinal o 
+nominal. No dependen de los parámetros poblacionales. 
+Ejemplos: Kolmogórov-Smirnov, Wilcoxon, Mann-Whitney, Ji-cuadrada. 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+Pagina 4
+  
+ 
+                                                                                   Página 3 de 19 
+Diferencias principales: 
+Característica 
+Pruebas Paramétricas 
+Pruebas No Paramétricas 
+Supuesto de 
+normalidad 
+Requieren distribución normal 
+No requieren distribución normal 
+Tipo de datos 
+Intervalo o razón 
+Ordinal o nominal 
+Uso de parámetros 
+Utilizan parámetros 
+poblacionales 
+No utilizan parámetros 
+Ejemplos 
+t de Student, ANOVA 
+Wilcoxon, Mann-Whitney, Ji-
+cuadrada 
+ 
+5.2 Prueba de Kolmogórov-Smirnov 
+La prueba de Kolmogorov-Smirnov es una prueba estadística utilizada para determinar si una 
+muestra de datos sigue una distribución específica. Fue desarrollada por los matemáticos 
+Andrey Kolmogorov y Nikolai Smirnov en la década de 1930. Esta prueba es ampliamente 
+utilizada para evaluar la normalidad de los datos, pero también se aplica a otros tipos de 
+distribuciones. La prueba de Kolmogorov-Smirnov se basa en la comparación de la función 
+de distribución acumulada (FDA) empírica de los datos con la FDA teórica de la distribución 
+en estudio. El procedimiento general de la prueba se puede resumir en los siguientes pasos: 
+ • Hipótesis nula (H0): La hipótesis nula establece que la muestra de datos proviene de una 
+distribución específica (por ejemplo, una distribución uniforme).  
+• Hipótesis alternativa (H1): La hipótesis alternativa afirma que la muestra de datos no sigue 
+la distribución específica.  
+• Cálculo de la función de distribución acumulada empírica: Se calcula la función de 
+distribución acumulada empírica de los datos, que es una estimación de la FDA de la muestra. 
+ • Comparación con la FDA teórica: Se compara la FDA empírica con la FDA teórica de la 
+distribución en estudio. Se busca la mayor diferencia absoluta entre ambas distribuciones, 
+conocida como estadístico de prueba (D).  
+• Cálculo del valor de prueba: Se calcula el valor de prueba (KS) utilizando una fórmula que 
+depende del tamaño de la muestra y el nivel de significancia deseado.  
+• Valor crítico: Se compara el valor de prueba con un valor crítico, obtenido de tablas de 
+referencia o mediante software estadístico. 
+ Si el valor de prueba es mayor que el valor crítico, se rechaza la hipótesis nula y se concluye 
+que los datos no siguen la distribución específica. 
+Es importante destacar que la prueba de Kolmogorov-Smirnov es no paramétrica, lo que 
+significa que no hace suposiciones sobre los parámetros de la distribución. Por lo tanto, puede 
+ser utilizada para evaluar la normalidad de los datos incluso cuando la media y la varianza 
+son desconocidas o cuando los datos presentan asimetría o sesgo. Además, la prueba de 
+Kolmogorov-Smirnov es sensible al tamaño de la muestra. Para muestras grandes, la prueba 
+tiene más poder para detectar desviaciones de la distribución específica. Sin embargo, en 
+muestras pequeñas, la prueba puede tener menos poder y puede ser más propensa a errores 
+de tipo II. La prueba de Kolmogorov-Smirnov es una prueba estadística utilizada para 
+evaluar si una muestra de datos sigue una distribución específica. Se basa en la comparación 
+de la función de distribución acumulada empírica de los datos con la función de distribución 
+acumulada teórica de la distribución en estudio. La interpretación adecuada de los resultados 
+debe considerar el tamaño de la muestra y el nivel de significancia deseado. 
+ 
+ 
+
+
+Pagina 5
+  
+ 
+                                                                                   Página 4 de 19 
+ 
+ 
+Estadístico de prueba de Kolmogorov-Smirnov 
+ 
+ 
+Propuesta por Kolmogorov, esta es una prueba estadística que también nos sirve para 
+determinar si un conjunto 𝑟𝑖 cumple la propiedad de uniformidad. Es recomendable 
+aplicarla en conjuntos 𝑟𝑖 pequeños, por ejemplo, n<20. El procedimiento es el siguiente: 
+1. Ordenar de menor a mayor los números de conjunto 𝑟𝑖 
+𝑟1 ≤𝑟2 ≤𝑟3 ≤⋯… . ≤𝑟𝑛 
+2. Determinar los valores de 𝐷+, 𝐷− 𝑦 𝐷 con las siguientes ecuaciones 
+𝐷+ =
+{𝑖
+𝑛−𝑟𝑖}
+1≤𝑖≤𝑛
+𝑚𝑎𝑥
+ 
+𝐷= max (𝐷+, 𝐷−) 
+𝐷−=
+{𝑟𝑖−1 −𝑖
+𝑛}
+1≤𝑖≤𝑛
+𝑚𝑎𝑥
+ 
+3. Determinar el valor crítico Dα,n de acuerdo con la tabla de valores críticos de 
+Kolmogorov-Smimov para un grado de confianza α, y según el tamaño de la muestra n. 
+4. Si el valor D es mayor que el valor crítico D α,n se concluye que los números del conjunto 
+ri no siguen una distribución uniforme; de lo contrario se dice que no se ha detectado 
+diferencia significativa entre la distribución de los números del conjunto ri y la distribución 
+uniforme 
+ 
+ 
+Ejemplo 
+Realizar la prueba Kolgomorov-Smirnov, con un nivel de confianza de 90%, al siguiente 
+conjunto r¡ de 10 números:  
+ri={0.97, 0.11,0.65,0.26,0.98,0.03,0.13,0.89,0.21,0.69} 
+El nivel de confianza de 90 % implica α=10 %. Si se ordenan los números ri  de menor a 
+mayor, la secuencia es: 
+0.03 0.11 0.13 0.21 0.26 0.65 0.69 0.89 0.97 0.98  
+• Hipótesis nula (H0): los datos siguen una distribución uniforme 
+• Hipótesis alternativa (H1): los datos no siguen la distribución propuesta 
+n=10 
+
+
+Pagina 6
+  
+ 
+                                                                                   Página 5 de 19 
+ 
+ 
+𝐷+ =
+{𝑖
+𝑛−𝑟𝑖}
+1≤𝑖≤𝑛
+𝑚𝑎𝑥
+ 
+𝐷= max (𝐷+, 𝐷−)=(0.24,0.19) 
+𝐷−=
+{𝑟𝑖−1 −𝑖
+𝑛}
+1≤𝑖≤𝑛
+𝑚𝑎𝑥
+ 
+ 
+De acuerdo con la tabla de valores para la prueba Kolmogorov-Smirnov, el valor crítico 
+D0.10,10correspondiente a n = 10 es D0.10,10 = 0.368 (valor de tabla de abajo), que resulta 
+mayor al valor D = 0.24; por lo tanto, se concluye que los números del conjunto r¡ se 
+distribuyen uniformemente. 
+Es el valor máximo de esa 
+línea que es lo 
+Que representa esa 
+fórmula en este renglón 
+Es el valor máximo de esa 
+línea que es lo 
+Que representa esa 
+fórmula en este renglón 
+
+
+Pagina 7
+  
+ 
+                                                                                   Página 6 de 19 
+ 
+Otro ejemplo  
+Un problema que ilustra la prueba de K-S 
+Suponga que la central telefónica del condado de Orange, en California, ha llevado un registro del número de 
+“transmisores” (un tipo de equipo automático que se utiliza en las centrales telefónicas) usados en un instante 
+dado. Las observaciones se hicieron en 3,754 ocasiones distintas.  
+ 
+
+
+Pagina 8
+  
+ 
+                                                                                   Página 7 de 19 
+ 
+Para propósitos de planeación de inversión de capital, el funcionario de presupuesto de esta compañía piensa 
+que el patrón de uso sigue una distribución de Poisson con una media de 8.5. Si desea probar esta hipótesis al 
+nivel de significancia de 0.01, puede emplear la prueba de K-S. Formularíamos nuestras hipótesis de la 
+siguiente manera: 
+ 
+Cálculo del estadístico de K-S Para calcular el estadístico de K-S para este problema, simplemente elija Dn, la 
+desviación absoluta máxima de Fe, alejada de Fo. 
+ 
+ 
+
+
+Pagina 9
+  
+ 
+                                                                                   Página 8 de 19 
+ 
+ 
+ 
+5.3 Prueba de Wilcoxon 
+La prueba de Wilcoxon es una prueba no paramétrica utilizada para comparar dos muestras 
+emparejadas o relacionadas. Es útil cuando no se cumplen las suposiciones de normalidad.   
+Existen dos pruebas principales con el nombre de Wilcoxon:  
+1) Prueba de rangos con signo de Wilcoxon: Se utiliza para comparar dos muestras 
+relacionadas o mediciones repetidas del mismo grupo de sujetos, como los resultados de un 
+tratamiento.  
+2) Prueba de suma de rangos de Wilcoxon (o prueba U de Mann-Whitney): Se utiliza para 
+comparar dos muestras independientes. 
+ 
+5.4 Prueba de signos de rango de Wilcoxon 
+Una de las pruebas no paramétricas más fáciles es la prueba de signo. Su nombre se debe a que está basada en 
+la dirección (o signo de más o menos) de un par de observaciones y no en su magnitud numérica. 
+Considere el resultado de un panel de prueba de 40 estudiantes de penúltimo año de universidad que evalúa la 
+efectividad de dos tipos de clases: conferencias grandes de profesores de tiempo completo o secciones pequeñas 
+con ayudantes de posgrado. La tabla enumera las respuestas a esta petición: “Califique la efectividad de 
+transmisión de conocimientos de estos dos tipos de clases, asignando un número de 4 a 1. La calificación de 4 
+es excelente y el 1 es mala.” En este caso, la prueba de signo nos puede ayudar a determinar si los estudiantes 
+sienten que hay una diferencia entre la efectividad de los dos tipos de clases. 
+ 
+
+
+Pagina 10
+  
+ 
+                                                                                   Página 9 de 19 
+ 
+Podemos comenzar, como en la tabla 14-2, convirtiendo las evaluaciones de los dos métodos de enseñanza en 
+signos. Aquí, un signo más significa que el estudiante prefiere las conferencias grandes; un signo menos 
+indica una preferencia por secciones pequeñas, y un cero representa un empate (sin preferencia). Si contamos 
+el último renglón de la tabla 14-2, obtenemos lo siguiente: 
+Número de signos +  
+ 
+19 
+Número de signos -  
+ 
+11 
+Número de ceros  
+ 
+10 
+Tamaño total de muestra  
+40 
+ 
+ 
+Establecimiento de las hipótesis 
+Estamos usando la prueba de signo para determinar si nuestro panel percibe una diferencia real entre los dos 
+tipos de clases. Puesto que estamos probando diferencias percibidas, excluiremos las evaluaciones empatadas 
+(0). Vemos que hay 19 signos más y 11 signos menos, para un total de 30 respuestas utilizables. Si no hay 
+diferencia entre los dos tipos de clases, p (la probabilidad de que la primera calificación exceda a la segunda) 
+sería 0.5, y esperaríamos obtener aproximadamente 15 signos más y 15 signos menos. Estableceríamos 
+nuestras hipótesis de la siguiente manera: 
+H0: p = 0.5 Hipótesis nula: no hay diferencia entre los dos tipos de clases 
+H1: p ≠ 0.5 Hipótesis alternativa: hay diferencia entre los dos tipos de clases 
+Si observa con cuidado las hipótesis, notará que la situación es parecida al lanzamiento de monedas. Si 
+lanzáramos al aire una moneda no cargada 30 veces, p sería 0.5, y esperaríamos aproximadamente 15 caras y 
+15 cruces. En ese caso, utilizaríamos la distribución binomial como la distribución de muestreo apropiada. Tal 
+vez también recuerde que cuando np y nq son cada una al menos 5, podemos utilizar la distribución normal 
+para aproximar a la binomial. Éste es precisamente el caso con los resultados de nuestro panel de estudiantes. 
+Así, podemos aplicar la distribución normal a nuestra prueba de los dos métodos de enseñanza. 
+pH0=0.5 Proporción hipotética de la población que prefiere las conferencias para todos 
+qH0=0.5 Proporción hipotética de la población que piensa que prefiere secciones pequeñas (qH0 = 1- pH0) 
+q n = 30 Tamaño de muestra 
+q𝑝̅= 0.633 Proporción de éxitos en la muestra (19/30) 
+ 𝑞̅= 0.367 Proporción de fracasos en la muestra (11/30) 
+ 
+Prueba de una hipótesis de que no hay diferencia 
+Suponga que la oficina del rector desea probar la hipótesis de que no hay diferencia en la percepción del 
+estudiante entre los dos tipos de clases al nivel de significancia de 0.05. El primer paso es calcular el error 
+estándar de la proporción: 
+ 
+
+
+Pagina 11
+  
+ 
+                                                                                   Página 10 de 19 
+ 
+Como queremos saber si la proporción verdadera es mayor o menor que la proporción hipotética, se trata de 
+una prueba de dos colas. La figura ilustra esta prueba de hipótesis. Las dos regiones sombreadas representan 
+el nivel de significancia de 0.05. 
+Ahora usaremos la ecuación para estandarizar la proporción de la muestra, 𝑝̅, restando 𝑝𝐻0, la proporción 
+hipotética, y dividiendo entre 𝜎𝑝̅, el error estándar de la proporción. 
+ 
+Al colocar este valor estándar, 1.462, en la escala z se ve que la proporción de la muestra se encuentra dentro 
+de la región de aceptación, como se ilustra en la figura siguiente. Por tanto, el rector debe aceptar la hipótesis 
+nula de que los estudiantes no perciben diferencia entre los dos tipos de clase. 
+ 
+Una prueba de signo como ésta es bastante sencilla y se aplica para pruebas de una y de dos colas. Por lo 
+general se basa en la distribución binomial. Sin embargo, recuerde que fue posible usar la aproximación 
+normal a la binomial como distribución de la muestra porque np y nq eran mayores o iguales que 5. Cuando 
+estas condiciones no se cumplen, debemos usar la distribución binomial. 
+ 
+ 
+5.5 Prueba de Mann-Whitney 
+Pruebas de suma de rangos: prueba U de Mann-Whitney y prueba de Kruskal-Wallis 
+Las pruebas de suma de rangos son una familia completa de pruebas; nos concentraremos en sólo dos miembros 
+de ella: la prueba U de Mann-Whitney y la prueba de Kruskal-Wallis. Usaremos la prueba de Mann-Whitney 
+cuando tengamos sólo dos poblaciones y la prueba de Kruskal-Wallis cuando se trate de más de dos. El uso de 
+estas pruebas nos permitirá determinar si las muestras independientes se obtuvieron de la misma población (o 
+de distintas poblaciones con la misma distribución). El uso de la clasificación de la información en lugar de los 
+signos más y menos desperdicia menos datos que la prueba de los signos. 
+Solución de un problema usando la prueba U de Mann-Whitney 
+Suponga que la junta directiva de una gran universidad estatal del este de Estados Unidos desea probar la 
+hipótesis de que las calificaciones promedio en la prueba SAT en dos planteles de la universidad son iguales. 
+La junta mantiene estadísticas de todos los estudiantes en todos los planteles del sistema. Una muestra aleatoria 
+de 15 estudiantes de cada plantel produjo los datos que se muestran en la tabla 14-3. 
+
+
+Pagina 12
+  
+ 
+                                                                                   Página 11 de 19 
+Para aplicar la prueba U de Mann-Whitney a este problema, comenzamos por clasificar las calificaciones en 
+orden ascendente, indicando junto a cada una el símbolo del plantel, como se ve en la tabla 14-4. 
+A continuación, aprendamos los símbolos usados para la prueba U de Mann-Whitney en el contexto de este 
+problema: 
+n1 = número de elementos en la muestra 1, es decir, el número de estudiantes del plantel A 
+n2 = número de elementos en la muestra 2, es decir, el número de estudiantes del plantel S 
+R1=suma de los rangos de los elementos en la muestra 1: la suma de los rangos de todas las calificaciones del 
+plantel A de la tabla 14-5 
+R2= suma de los rangos de los elementos en la muestra 2: la suma de los rangos de todas las calificaciones del 
+plantel S de la tabla 14-5 
+En este caso, tanto n1 como n2 son iguales a 15, pero no es necesario que ambas muestras sean del mismo 
+tamaño. Ahora, en la tabla 14-5, reproducimos los datos de la tabla 14-3, agregando los rangos de la tabla 14-
+4. Después sumamos los rangos de cada plantel. Como resultado, tenemos todos los valores que necesitamos 
+para solucionar este problema, porque sabemos que 
+n1 =15 
+n2 = 15 
+R1 = 247 
+R2 = 218 
+ 
+ 
+ 
+Cálculo del estadístico U 
+Usando los valores de n1 y n2 y las sumas de rangos R1 y R2, podemos determinar el estadístico u, una medida 
+de la diferencia entre las observaciones clasificadas de las dos muestras de calificaciones en el SAT: 
+ 
+ 
+Si la hipótesis nula de que n1 _ n2 observaciones provienen de poblaciones idénticas es cierta, entonces el 
+estadístico u tiene una distribución muestral con una media de 
+
+
+Pagina 13
+  
+ 
+                                                                                   Página 12 de 19 
+ 
+y un error estándar de 
+ 
+Prueba de las hipótesis 
+La distribución muestral del estadístico u puede aproximarse por la distribución normal cuando tanto n1 como 
+n2 son mayores que 10. Como nuestro problema cumple esta condición, podemos usar  tabla de distribución de 
+probabilidad normal estándar para hacer la prueba. La junta de directores desea probar al nivel de significancia 
+de 
+0.15 
+la 
+hipótesis 
+de 
+que 
+estas 
+muestras 
+fueron 
+extraídas 
+de 
+poblaciones 
+idénticas. 
+ 
+La junta de directores desea saber si el promedio de calificación de la prueba de aptitud académica, SAT, en 
+cualquiera de dos escuelas es mejor o peor que en la otra. La figura 14-13 ilustra la gráfica de esta prueba. Las 
+dos áreas sombreadas representan el nivel de significancia de 0.15. Como se está usando la distribución normal 
+como distribución de la muestra en esta prueba, de la tabla 1 del apéndice se puede determinar que el valor 
+crítico de z para un área de 0.425 es 1.44. Ahora usamos la ecuación 6-2 para estandarizar la estadística u de 
+la muestra, restando μu, su media, y dividiendo entre μu, su error estándar. 
+
+
+Pagina 14
+  
+ 
+                                                                                   Página 13 de 19 
+ 
+ 
+ 
+La figura 14-4 señala el valor estandarizado de la muestra u y los valores críticos de z para la prueba. La junta 
+de directores debe observar que el estadístico de la muestra está dentro de los valores críticos para la prueba y 
+concluir que las distribuciones y, por ende, las medias de las calificaciones del SAT en las dos escuelas son 
+iguales. 
+ 
+ 
+ 
+ 
+Propiedades especiales de la prueba U 
+El estadístico u tiene una característica que permite a los usuarios ahorrar tiempo en cálculos cuando las dos 
+muestras bajo observación tienen diferente tamaño. Acabamos de calcular el valor de u usando la ecuación 
+ 
+ 
+ 
+La respuesta habría sido 127 (que se aleja hacia arriba de la media de 112.5 justo tanto como 98 se aleja hacia 
+abajo). En este problema, habríamos tardado lo mismo calculando el valor del estadístico U con la ecuación 
+14-1 que con la 14-4. En otros casos, cuando el número de elementos es mayor en una muestra que en la otra, 
+elija la ecuación que requerirá menos trabajo. Sin importar si calculó U usando la ecuación 14-1 o la 14-4, 
+llegará a la misma conclusión. Observe que en este ejemplo, la respuesta 127 cae en la región de aceptación tal 
+como lo hizo 98. 
+
+
+Pagina 15
+  
+ 
+                                                                                   Página 14 de 19 
+¿Qué pasa si aparecen empates cuando clasificamos los elementos para esta prueba? Por ejemplo, ¿qué sucede 
+si las calificaciones 13 y 14 de la tabla 14-4 tuvieran ambas el valor 920? En este caso, encontramos el 
+promedio de sus rangos (13 +l4)/2 = 13.5, y asignamos el resultado a los dos. 
+Si hubiera un empate entre tres clasificaciones, 13, 14 y 15, por ejemplo, promediamos estos rangos 
+(13 + 14 +15)/3 = 14, y usamos ese valor para los tres elementos. 
+Solución de un problema usando la prueba de Kruskal-Wallis 
+Como se observó en esta sección, la prueba de Kruskal-Wallis es una extensión de la prueba de Mann-Whitney 
+para casos en que están involucradas más de dos poblaciones. Esta prueba, también, depende de los rangos de 
+las observaciones de la muestra. 
+La tabla 14-6 presenta las calificaciones de una muestra de 20 pilotos estudiantes en su examen escrito de la 
+Agencia Federal de Aviación (AFA), dispuestas según el método que se empleó en su capacitación: videocasete, 
+audiocasete o salón de clase. 
+La AFA está interesada en evaluar la efectividad de estos tres métodos de capacitación. Específicamente, desea 
+probar, al nivel de significancia de 0.10, la hipótesis de que las calificaciones medias en el examen escrito de 
+los pilotos estudiantes capacitados por estos tres métodos son iguales. Puesto que tenemos más de dos 
+poblaciones involucradas, es pertinente aplicar la prueba de Kruskal-Wallis en este caso. Para ello, comenzamos 
+en la tabla 14-7 por clasificar todas las calificaciones en orden ascendente, indicando junto a cada una el símbolo 
+del método de entrenamiento que se utilizó. Los empates se manejan promediando los rangos, como se hizo 
+con la prueba de Mann-Whitney. 
+A continuación, definimos los símbolos usados en una prueba de Kruskal-Wallis: 
+nj = número de elementos en la muestra j 
+Rj = suma de los rangos de todos los elementos en la muestra j 
+k = número de muestras 
+n = n1 + n2 + . . . + nk, el número total de observaciones en todas las muestras 
+ 
+ 
+La tabla 14-8 contiene los datos de la tabla 14-7 reclasificados de tal forma que facilita calcular las sumas de 
+los rangos para cada método de capacitación. Entonces podemos usar la ecuación 14-5 para calcular el 
+estadístico K, una medida de las diferencias entre las observaciones clasificadas en las tres muestras. 
+ 
+ 
+ 
+ 
+
+
+Pagina 16
+  
+ 
+                                                                                   Página 15 de 19 
+Prueba de las hipótesis 
+La distribución muestral del estadístico K puede aproximarse por una distribución ji-cuadrada cuando los 
+tamaños de todas las muestras son al menos 5. Como nuestro problema satisface esta condición, podemos usar 
+la distribución ji-cuadrada y la tabla 5 del apéndice para esta prueba. En una prueba de Kruskal-Wallis, el 
+número apropiado de grados de libertad es k - 1, que en este problema es (3 - 1) o 2, puesto que tenemos tres 
+muestras.: 
+ 
+ 
+Las hipótesis pueden enunciarse de la siguiente manera: 
+ 
+La figura 14-5 ilustra una distribución ji-cuadrada con 2 grados de libertad. El área sombreada representa el 
+nivel de significancia de 0.10. Observe que la región de aceptación para la hipótesis nula (que no existen 
+diferencias entre las tres poblaciones) se extiende de cero a un valor ji-cuadrada de 4.605. Obviamente, el valor 
+muestral K de 1.143 está dentro de la región de aceptación; por consiguiente, la AFA debe aceptar la hipótesis 
+nula y concluir que no hay diferencias en los resultados obtenidos al usar los tres métodos de capacitación. 
+ 
+ 
+Prueba de corridas de una sola muestra 
+Hasta ahora, hemos supuesto que las muestras en los problemas se seleccionaron aleatoriamente, esto es, se 
+eligieron sin preferencia o sesgo. ¿Qué pasaría si llegara a observar patrones recurrentes en una muestra 
+elegida por otra persona? Suponga que los solicitantes de capacitación para trabajos especializados tuvieran 
+que seleccionarse sin importar el sexo, a partir de una población grande. Usando la notación M = mujer y H = 
+hombre, encuentra que el primer grupo entra en este orden: 
+M, M, M, M, H, H, H, H, M, M, M, M, H, H, H, H 
+Por inspección, concluiría que aunque el número total de solicitantes se divide por igual entre los sexos, el 
+orden no es aleatorio. Un proceso aleatorio rara vez enumeraría dos elementos en grupos alternos de cuatro. 
+Suponga ahora que los solicitantes empiezan a llegar en este orden: 
+M, H, M, H, M, H, M, H, M, H, M, H, M, H, M, H 
+
+
+Pagina 17
+  
+ 
+                                                                                   Página 16 de 19 
+Resulta igual de irracional pensar que un proceso de selección aleatorio produciría un patrón de orden como 
+éste de hombres y mujeres. En este caso, también, la proporción de mujeres respecto a hombres es correcta, 
+pero sospecharía respecto al orden en el que llegaron. 
+Para permitirnos probar la aleatoriedad del orden de las muestras, los estadísticos han desarrollado la teoría de 
+corridas. Una corrida es una secuencia de ocurrencias idénticas precedidas y seguidas de ocurrencias 
+diferentes o del todo por ninguna. Si los hombres y las mujeres entran de la siguiente manera, la secuencia 
+contendrá tres corridas: 
+M,    H, H, H, H,   M 
+1a.         2a.          3a. 
+Una prueba de corridas usaría los siguientes símbolos si tuviera sólo dos tipos de ocurrencias: 
+n1 = número de ocurrencias del tipo 1 
+n2 =número de ocurrencias del tipo 2 
+r = número de corridas 
+Apliquemos estos símbolos a un patrón diferente para la llegada de los solicitantes: 
+H, M, M, H, H, H, H, M, M, M, H, H, M, H, M, M, H 
+En este caso, los valores de n1, n2 y r serían 
+n1 = 8 Número de mujeres 
+n2 = 9 Número de hombres 
+r = 9 Número de corridas 
+ 
+Un problema que ilustra una prueba de corridas de una sola muestra 
+Un fabricante de cereal para el desayuno usa una máquina para introducir aleatoriamente uno de dos tipos de 
+muñecos en cada caja. La compañía desea una aleatoriedad tal que no todos los niños de un vecindario 
+terminen con el mismo muñeco. Los probadores eligen muestras de 60 cajas sucesivas para ver si la máquina 
+está mezclando adecuadamente los dos tipos de muñecos. Usando los símbolos A y B para representar los dos 
+tipos de muñecos, un probador reportó que uno de estos lotes se presentó como sigue: 
+B, A, B, B, B, A, A, A, B, B, A, B, B, B, B, A, A, A, A, B, 
+A, B, A, A, B, B, B, A, A, B, A, A, A, A, B, B, A, B, B, A, 
+A, A, A, B, B, A, B, B, B, B, A, A, B, B, A, B, A, A, B, B 
+Los valores de esta prueba serían: 
+n1 = 29 Número de cajas que contienen el muñeco A 
+n2=31 Número de cajas que contienen el muñeco B 
+r = 29 Número de corridas 
+La distribución de muestreo del estadístico r 
+El número de corridas, r, es un estadístico con su propia distribución de muestreo especial y su propia prueba. 
+Es obvio que las corridas pueden ser de diferente longitud y en una muestra pueden ocurrir diversos números 
+de corridas. Los estadísticos pueden probar que demasiadas corridas o muy pocas en una muestra indican que 
+intervino algo más que el azar cuando se seleccionaron los elementos. 
+Una prueba de corridas de una sola muestra, entonces, está basada en la idea de que muy pocas o 
+demasiadas corridas muestran que los elementos no fueron elegidos aleatoriamente. 
+Para derivar la media de la distribución de muestreo del estadístico r utilice la siguiente fórmula: 
+
+
+Pagina 18
+  
+ 
+                                                                                   Página 17 de 19 
+ 
+ Para nuestro problema, el error estándar del estadístico r se convierte: 
+ 
+Prueba de las hipótesis 
+En la prueba de corridas de una sola muestra, la distribución muestral de r puede aproximarse de cerca por la 
+distribución normal si n1 o bien n2 es mayor que 20. Nuestra compañía de cereales tiene una muestra de 60 
+cajas, así que podemos usar la aproximación normal. La gerencia está interesada en probar, al nivel de 0.20, la 
+hipótesis de que los muñecos están mezclados aleatoriamente, por lo que la prueba se convierte en: 
+ 
+Puesto que demasiadas o muy pocas corridas indicarían que el proceso mediante el cual se introducen los 
+muñecos en las cajas no es aleatorio, una prueba de dos colas es apropiada. La figura 14-6 ilustra esta prueba. 
+A continuación se usa la ecuación 6-2 para estandarizar el estadístico de la muestra r, 29, restando μr, su 
+media y dividiendo entre 𝜎r, su error estándar. 
+
+
+Pagina 19
+  
+ 
+                                                                                   Página 18 de 19 
+ 
+ 
+ 
+Colocando el valor estandarizado en la escala z de la figura 14-7 se ve que cae dentro de los valores críticos 
+para esta prueba. Por tanto, la administración debe aceptar la hipótesis nula y concluir, a partir de esta prueba, 
+que los muñecos se ponen en las cajas en orden aleatorio. 
+ 
+Ejercicio: 
+El profesor Ike Newton desea determinar si sus alumnos más brillantes (aquellos con las mejores notas) tienden a 
+devolver más pronto sus exámenes (porque pueden recordar el material más rápido) o más tarde (porque toman más 
+tiempo para escribir lo que saben) que los demás de la clase. Para cierto examen particular de física, observa que los 
+estudiantes obtienen las siguientes calificaciones de acuerdo con el orden de entrega de sus exámenes. 
+ 
+a) Si el profesor Newton considera a quienes obtienen notas de 90 o más como sus estudiantes brillantes, entonces, 
+a un nivel de significancia del 5%, ¿podría concluir que los estudiantes más brillantes entregaron sus exámenes de 
+manera aleatoria? 
+b) Si una calificación de 60 o más permite aprobar la materia del profesor Newton, ¿entonces los estudiantes que 
+aprobaron contra los que no lo hicieron entregaron sus exámenes aleatoriamente? (También use un nivel de 
+significancia del 5%.) 
+
+
+Pagina 20
+  
+ 
+                                                                                   Página 19 de 19 
+ 
+ 
+ 
+ 
+ 
+Texto recuperado de libro LEVIN, RICHARD I. y RUBIN, DAVID S.  Séptima edición revisada Estadística para administración y 
+economía.  PEARSON EDUCACIÓN, México, 2010 
+ 
+ 
+ 

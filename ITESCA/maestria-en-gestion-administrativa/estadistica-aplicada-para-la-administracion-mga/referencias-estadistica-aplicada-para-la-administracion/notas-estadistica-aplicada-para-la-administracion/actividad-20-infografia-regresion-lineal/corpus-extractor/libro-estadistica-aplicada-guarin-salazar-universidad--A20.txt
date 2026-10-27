@@ -1,0 +1,410 @@
+Fuente bibliográfica: Estadística aplicada - Guarín Salazar. Universidad Nacional de Colombia.pdf
+Actividad: 20 (7.1 Infografía Equipo 3% Tarea)
+Palabras clave: regresión lineal simple, regresión lineal múltiple, mínimos cuadrados, correlación, coeficiente de determinación, ANOVA, variables ficticias
+
+[Bloque seleccionado #5 | relevancia=6]
+--- PÁGINA PDF 4 ---
+ESTADÍSTICA APLICADA   Tabla de Contenido
+. 
+ 
+8. Regresión y Correlación Lineal
+8.1   Tablas de doble entrada
+8.2   Correlación
+8.3   Regresión lineal
+  8.3.1   Ajuste rectilíneo (método de los mínimos cuadrados)
+  8.3.2   Ajuste parabólica (método de los mínimos cuadrados)
+Cuestionario y ejercicios propuestos
+. 
+ 
+9. Tasas e Índices
+9.1   Tasa
+9.2   Índice
+  9.2.1   Índice simple
+    9.2.1.1   Índice de base fija
+    9.2.1.2   Índice de base móvil
+  9.2.2   Índices compuestos (globales)
+    9.2.2.1   Índice de Laspeyres
+    9.2.2.2   Índice de Passche
+    9.2.2.3   Índice ideal de Fisher
+Cuestionario y ejercios propuestos
+. 
+ 
+10. Nociones de Probabilidad  (Eventos)
+10.1   Nociones de conteo
+  10.1.1   Principio fundamental 1
+  10.1.2   Principio fundamental 2
+  10.1.3   Permutaciones
+  10.1.4   Variaciones
+  10.1.5   Combinaciones
+  10.1.6   Permutaciones con repetición
+  10.1.7   Variaciones con repetición
+  Ejercicios propuestos
+10.2   Definición de probabilidad
+  10.2.1   Probabilidad a priori
+  10.2.2   Probabilidad a posteriori
+  10.2.3   Probabilidad subjetiva
+10.3   Axiomas de la teoría de probabilidades
+10.4   Probabilidad condicional e independencia estadística
+  Cuestionario y ejercicios propuestos
+http://tifon.unalmed.edu.co/~pagudel/tabla.html (3 de 4) [15/09/2002 7:40:53]
+
+[Bloque seleccionado #81 | relevancia=3]
+--- PÁGINA PDF 80 ---
+ESTADÍSTICA APLICADA   8. Regresión y Correlación Lineal 
+Analizando los relativos para cada una de las variables podemos sacar, entre otras, las siguientes 
+conclusiones:  
+G     El 64% tiene una experiencia igual o inferior a 6 años.
+G     El 68% tiene una experiencia entre 5 y 7 años incluyendo sus extremos.
+G     El 60% gana 54.000 pesos diarios o menos.
+G     El 62% gana entre 53.000 y 55.000 pesos incluyendo sus extremos.
+Las tablas de doble entrada también pueden usarse para variables cualitativas, o combinarse 
+variables cualitativas con cuantitativas.
+Estado Civil y Número de Hijos de
+50 Obreras de la Fabrica “La Hilacha"
+X: Estado Civil,    Y : Número De Hijos.
+Se deja al lector la interpretación y análisis de esta tabla.
+8.2  CORRELACIÓN 
+En el análisis conjunto para dos o más variables es básica la búsqueda del tipo y grado de la 
+relación que pueda existir entre ellas, o si por el contrario, las variables sean independientes 
+entre sí y la relación que puedan mostrar se debe únicamente al azar, o a través de terceras 
+variables.
+El sondeo del tipo y grado de la correlación, parte desde la misma presunción del investigador, 
+teniendo presente que la búsqueda de relaciones entre variables debe ser lógica, es decir 
+relacionar lo que sea razonable y no datos cuya asociación sea desde cualquier punto de vista 
+absurda.
+http://tifon.unalmed.edu.co/~pagudel/8regresion.html (3 de 11) [15/09/2002 7:44:09]
+
+[Bloque seleccionado #83 | relevancia=3]
+--- PÁGINA PDF 82 ---
+ESTADÍSTICA APLICADA   8. Regresión y Correlación Lineal 
+ 
+A pesar de la ilustración visual que ofrecen las gráficas, solo podemos 
+percibir la tendencia, mas no el grado o fortaleza de la relación, entre la 
+variable independiente “X” y la variable dependiente “Y”.
+Para cuantificar la calidad de la dependencia, entre las dos variables, el 
+indicador mas acostumbrado es el Coeficiente de correlación, definido 
+como:
+  
+   
+,  donde: 
+  
+r :   Coeficiente de correlación entre “X” y “Y”
+Sx:    Desviación típica de “X” 
+Sy:    Desciacion típica de “Y”
+Sx,y : Covarianza entre “X” y “Y”
+http://tifon.unalmed.edu.co/~pagudel/8regresion.html (5 de 11) [15/09/2002 7:44:09]
+
+[Bloque seleccionado #86 | relevancia=10]
+--- PÁGINA PDF 85 ---
+ESTADÍSTICA APLICADA   8. Regresión y Correlación Lineal 
+  
+El coeficiente de correlación, es un indicador del grado de la relación entre las dos variables, el 
+cual oscila en el intervalo cerrado 
+, es decir,  
+.
+Cuando r toma un valor extremo, ya sea r=1 ó  r=-1  existe una correlación perfecta positiva o 
+negativa según el signo, como lo podemos corroborar en el siguiente ejemplo:
+Aspiración Salarial, de Acuerdo a La Experiencia de las Obreras de la 
+Fabrica de Confecciones  “La Hilacha”
+ ,  Correlación perfecta  positiva
+  
+Sin embargo, no todas las relaciones son tan ideales, en el común de los 
+casos  –1< r <1. Empíricamente se afirma que: 
+1.  Si  
+  Correlación perfecta
+2.  Si  
+ ó  
+  Correlación excelente
+3.  Si  
+ó 
+Correlación buena
+4.  Si  
+ ó 
+ Correlación regular
+5.  Si  
+  ó  
+   Correlación mala
+6.  Si  
+   No hay correlación
+http://tifon.unalmed.edu.co/~pagudel/8regresion.html (8 de 11) [15/09/2002 7:44:09]
+
+[Bloque seleccionado #88 | relevancia=4]
+--- PÁGINA PDF 87 ---
+ESTADÍSTICA APLICADA   8. Regresión y Correlación Lineal 
+8
+56
+448 64 3136
+4
+52
+208
+16
+2704
+4
+52
+208 16 2704
+8
+57
+456
+64
+3249
+6
+54
+324 36 2916
+7
+56
+392
+49
+3136
+5
+53
+265 25 2809
+3
+51
+153
+9
+2601
+7
+55
+385 49 3025
+8
+58
+464
+64
+3364
+7
+55
+385 49 3025
+6
+55
+330
+36
+3025
+7
+55
+385 49 3025
+5
+53
+265
+25
+2809
+4
+52
+208 16 2704
+6
+54
+324
+36
+2916
+7
+55
+385 49 3025
+6
+53
+318
+36
+2809
+5
+53
+265 25 2809
+7
+56
+392
+49
+3136
+TOTAL
+294
+2705 160391850146501
+  
+Se vislumbra una relación positiva, con coeficiente de correlación: 
+ 
+Entre la experiencia y el salario actual hay una excelente correlación 
+positiva.
+Si escudriñamos en la magnitud de las relaciones entre las diferentes 
+variables cuantitativas, que se han indagado a las obreras de “LA 
+HILACHA” encontramos los siguientes coeficientes de correlación:
+http://tifon.unalmed.edu.co/~pagudel/8regresion.html (10 de 11) [15/09/2002 7:44:09]
+
+[Bloque seleccionado #89 | relevancia=3]
+--- PÁGINA PDF 88 ---
+ESTADÍSTICA APLICADA   8. Regresión y Correlación Lineal 
+ 
+En el problema que nos ocupa, la variable salario/día tiene una excelente 
+correlación positiva, con los años de experiencia, y una buena correlación 
+directa con la calificación y la escolaridad, empero hay una buena relación 
+inversa, con la variable ausencias al trabajo.
+ . . . 
+ . . . 
+ 
+http://tifon.unalmed.edu.co/~pagudel/8regresion.html (11 de 11) [15/09/2002 7:44:09]
+
+[Bloque seleccionado #90 | relevancia=8]
+--- PÁGINA PDF 89 ---
+ESTADÍSTICA APLICADA   8. Regresión y Correlación Lineal 
+8. Regresión y Correlación Lineal
+ 
+8.3  REGRESIÓN LINEAL 
+Teniendo ya conocimiento de la intensidad de la correlación entre las variables, manifestada a 
+través del diagrama de dispersión, y el coeficiente de correlación, podemos ensayar el ajuste de 
+un modelo estadístico que se adapte mejor a las n observaciones; lo que lleva por nombre 
+regresión. Uno de los procedimientos muy comunes en el ajuste regresivo es el método de los 
+mínimos cuadrados, que produce estimaciones con menor error cuadrático promedio 
+8.3.1  Ajuste Rectilíneo (Método de los Mínimos Cuadrados)
+La forma general de una ecuación de línea recta es: 
+  con: 
+X :  Variable independiente
+Y :  Variable dependiente
+a  : Término independiente o intercepto
+b :  Coeficiente de X
+Debemos establecer los parámetro “a”  y  “b” de la ecuación para poder 
+expresar los valores de la variable Y en función de los valores de la variable 
+X, esto es:
+multipliquemos cada una de estas ecuaciones por su respectivo valor de X 
+http://tifon.unalmed.edu.co/~pagudel/83regresion.html (1 de 17) [15/09/2002 7:45:13]
+
+[Bloque seleccionado #94 | relevancia=4]
+--- PÁGINA PDF 93 ---
+ESTADÍSTICA APLICADA   8. Regresión y Correlación Lineal 
+El programa calcula: 
+  y
+  y consecuentemente el modelo
+, 
+el paquete hace también las pruebas t student para la hipótesis nula H0 : 
+a=0  vs la hipótesis alternativa H1 : 
+ y  H0 : b = 0  vs H1 : 
+, dado 
+que el valor “p” para ambos casos  p= 0.0000, con una confiabilidad 
+superior al 99% se rechazan ambas hipótesis de nulidad, a favor de las 
+hipótesis alternativas. En cuanto al valor p = 0.0000 (para la prueba F) en 
+la tabla de  análisis de varianza, también se interpreta la validez del modelo 
+con un nivel de confiabilidad superior al 99%. 
+De otro lado corrobora una correlación positiva excelente  r=0.957578 y un 
+coeficiente de determinación R-cuadrado, de 91.6956% que indica el 
+porcentaje de la variable salario explicado por la variable experiencia.
+El coficiente de determinación R2  viene expresado como:  
+http://tifon.unalmed.edu.co/~pagudel/83regresion.html (5 de 17) [15/09/2002 7:45:14]
+
+[Bloque seleccionado #100 | relevancia=3]
+--- PÁGINA PDF 99 ---
+ESTADÍSTICA APLICADA   8. Regresión y Correlación Lineal 
+2
+6
+4
+54
+8
+1
+2
+53.85 -    0.15
+3
+4
+3
+52
+11
+4
+1
+51.51 -    0.49
+1
+8
+9
+57
+3
+0
+4
+57.07
+0.07
+0
+7
+8
+56
+5
+0
+4
+55.72 -    0.28
+2
+3
+3
+51
+6
+4
+1
+51.10
+0.10
+1
+8
+9
+58
+3
+0
+4
+57.07 -    0.93
+2
+6
+5
+55
+4
+0
+2
+54.77 -    0.23
+1
+5
+5
+53
+2
+4
+1
+52.71 -    0.29
+2
+6
+4
+54
+3
+1
+1
+54.10
+0.10
+2
+6
+5
+53
+7
+3
+1
+53.39
+0.39
+1
+7
+6
+56
+3
+0
+3
+55.54 -    0.46
+8.3.2  Ajuste Parabólico (Método Mínimos Cuadrados) 
+Suele suceder que al dibujar la nube de puntos correspondiente a n 
+observaciones bivariante, se observa una tendencia no rectilínea, pero a la 
+cual se le puede ajustar un modelo teórico conocido.
+Dentro de la familia de modelos, es de aplicación común el ajuste regresivo 
+polinomial de grado  s  “
+”. Similarmente con el procedimiento seguido 
+en el ajuste rectilíneo, vamos a encontrar las ecuaciones normales par una 
+parábola, de forma general 
+es decir 
+,  
+, .......,  
+ . Si 
+cada una de estas ecuaciones la multiplicamos por su respectivo valor de x, 
+y repetimos la acción tenemos:
+http://tifon.unalmed.edu.co/~pagudel/83regresion.html (11 de 17) [15/09/2002 7:45:14]
+
+[Bloque seleccionado #105 | relevancia=4]
+--- PÁGINA PDF 104 ---
+ESTADÍSTICA APLICADA   8. Regresión y Correlación Lineal 
+1.1  Calcular el coeficiente de correlación e interpretarlo.
+1.2  Ajustar el modelo adecuado para esta información.
+1.3  ¿ Cuánto se estima, debe pagar una familia con ingreso mensual de 270.000 
+pesos? 
+2.  ¿ Que es un coeficiente de correlación ?
+3.  Cuando hay correlación:  
+3.1 Perfecta
+3.2 Excelente
+3.3 Buena 
+http://tifon.unalmed.edu.co/~pagudel/83regresion.html (16 de 17) [15/09/2002 7:45:14]

@@ -1,0 +1,589 @@
+Fuente bibliográfica: Estadística para negocios y economía - Anderson, Sweeney y Williams. 11.ª edición.pdf
+Actividad: 22 (7.3 Ejercicios Equipo 5% Tarea)
+Palabras clave: mínimos cuadrados, diagrama de dispersión, pendiente, predicción, regresión múltiple, variable ficticia, fumador, significancia
+
+[Bloque seleccionado #210 | relevancia=17]
+Pagina 209
+ 
+4.4  Probabilidad condicional 
+175
+Ejercicios
+Métodos
+30. 
+Suponga que tenemos dos eventos, A y B, con P(A)  0.50; P(B)  0.60, y P(A  B)  0.40.
+a) Calcule P(A  B).
+b) Calcule P(B  A).
+c) 
+¿Los eventos A y B son independientes? ¿Por qué?
+con una suscripción también adquiera la edición dominical (evento S) es de 0.75; es decir, 
+P(S  D)  0.75. ¿Cuál es la probabilidad de que una familia se suscriba tanto a las ediciones 
+dominicales como a las ediciones diarias del periódico? Utilizando la ley de la multiplicación, 
+calculamos el P(S  D) deseado como
+ 
+P(S  D)  P(D)P(S  D)  0.84(0.75)  0.63
+Se sabe que 63% de las familias se suscribe tanto a las ediciones dominicales como a las diarias.
+Antes de concluir esta sección, considere el caso especial de la ley de la multiplicación 
+cuando los eventos involucrados son independientes. Recuerde que los eventos A y B son in-
+dependientes siempre que P(A  B)  P(A) o P(B  A)  P(B). Por consiguiente, utilizando las 
+ecuaciones (4.11) y (4.12) para el caso especial de los eventos independientes, obtenemos la ley 
+de la multiplicación siguiente.
+Para calcular la probabilidad de la intersección de dos eventos independientes, sencillamente 
+se multiplican las probabilidades correspondientes. Observe que la ley de la multiplicación para 
+eventos independientes proporciona otra manera de determinar si A y B son independientes. Es 
+decir, si P(A  B)  P(A)P(B), entonces A y B son independientes; si P(A  B)  P(A)P(B), 
+entonces A y B son dependientes.
+Como una aplicación de la ley de la multiplicación para eventos independientes, considere 
+la situación de un gerente de estaciones de servicio que sabe, a partir de su experiencia, que 
+80% de los clientes usa tarjeta de crédito cuando compra gasolina. ¿Cuál es la probabilidad de 
+que los siguientes dos clientes que compren gasolina usen tarjeta de crédito? Si
+A  el evento de que el primer cliente use tarjeta de crédito
+B  el evento de que el segundo cliente use tarjeta de crédito
+entonces el evento de interés está en A  B. Debido a que no existe más información, es posible 
+asumir de manera razonable que A y B son eventos independientes. Por tanto,
+ 
+P(A  B)  P(A)P(B)  (0.80)(0.80)  0.64
+Para resumir esta sección, observe que nuestro interés en la probabilidad condicional está 
+motivado por el hecho de que los eventos con frecuencia están relacionados. En estos casos, 
+se dice que los eventos son dependientes y las fórmulas de la probabilidad condicional en las 
+ecuaciones (4.7) y (4.8) deben usarse para calcular las probabilidades respe
+
+[Bloque seleccionado #608 | relevancia=17]
+Pagina 607
+ 
+14.2  Método de mínimos cuadrados 
+573
+a) Trace un diagrama de dispersión utilizando el precio como la variable independiente.
+b) ¿Qué indica el diagrama de dispersión del inciso a) acerca de la relación entre las dos 
+variables?
+c) 
+Use el método de mínimos cuadrados para desarrollar la ecuación de regresión estimada.
+d) Proporcione una interpretación para la pendiente de la ecuación de regresión estimada.
+e) 
+La maleta de la marca Eagle Creek Hovercraft tiene un precio de $225. Usando la ecuación 
+de regresión estimada desarrollada en el inciso c), prediga la puntuación para esta maleta.
+10. 
+Con base en la revisión anual de sueldos de Advertising Age, Mark Hurd, de 49 años, pre-
+sidente (Chairman) y presidente ejecutivo (CEO) de Hewlett-Packard Co., recibió un sueldo 
+anual de $817 000, un bono de más de $5 millones y otras compensaciones que superaron los 
+$17 millones. Su compensación total fue ligeramente mejor que el pago total promedio de un 
+CEO, $12.4 millones. La tabla siguiente muestra la edad (Age) y el sueldo anual (Salary) en mi-
+les de dólares de  Mark Hurd y otros 14 ejecutivos (Executive) con su respectivo cargo (Title), 
+quienes dirigen empresas que cotizan en la bolsa (Advertising Age, 5 de diciembre de 2006).
+a) Trace un diagrama de dispersión con estos datos utilizando la edad del ejecutivo como la 
+variable independiente.
+b) ¿Qué indica el diagrama de dispersión del inciso a) acerca de la relación entre las dos 
+variables?
+c) 
+Use el método de mínimos cuadrados para obtener la ecuación de regresión estimada.
+d) Suponga que Bill Gustin, de 72 años, es el presidente y CEO de una de las principales em-
+presas de electrónica. Prediga su sueldo anual.
+ 
+Brand 
+Price ($) 
+Score
+ 
+Briggs & Riley 
+325 
+72
+ 
+Hartman 
+350 
+74
+ 
+Heys 
+67 
+54
+ 
+Kenneth Cole Reaction 
+120 
+54
+ 
+Liz Claiborne 
+85 
+64
+ 
+Samsonite 
+180 
+57
+ 
+Titan 
+360 
+66
+ 
+TravelPro 
+156 
+67
+ 
+Tumi 
+595 
+87
+ 
+Victorinox 
+400 
+77
+ 
+ 
+ 
+ 
+Salary
+Executive 
+Title 
+Company 
+Age 
+($1 000s)
+Charles Prince 
+Chmn/CEO 
+Citigroup 
+56 
+1 000
+Harold McGraw III 
+Chmn/Pres/CEO 
+McGraw-Hill Cos. 
+57 
+1 172
+James Dimon 
+Pres/CEO 
+JP Morgan Chase & Co. 
+50 
+1 000
+K. Rupert Murdoch 
+Chmn/CEO 
+News Corp. 
+75 
+4 509
+Kenneth D. Lewis 
+Chmn/Pres/CEO 
+Bank of America 
+58 
+1 500
+Kenneth I. Chenault 
+Chmn/CEO 
+American Express Co. 
+54 
+1 092
+Louis C. Camilleri 
+Chmn/CEO 
+Altria Group 
+51 
+1 663
+Mark V. Hurd 
+Chmn/Pres/CEO 
+Hewlett-Packard Co. 
+49 
+817
+Martin S. Sorrell 
+CEO 
+WPP Group 
+61 
+1 562
+Robert L. Nardelli 
+Chmn/Pres/CEO 
+Home Depot 
+57 
+2 164
+Samuel J. Palmisano 
+Chmn/Pres/CEO 
+IBM
+
+[Bloque seleccionado #679 | relevancia=33]
+Pagina 678
+644 
+Capítulo 15  Regresión múltiple
+En el capítulo 14 se presentó la regresión lineal simple y su uso en la obtención de una ecua-
+ción de regresión estimada que describe la relación entre dos variables. Recuerde que la variable 
+que se predice o explica es la variable dependiente y, mientras que la independiente se utiliza 
+para predecir o explicar la variable dependiente. En este capítulo se continúa con el estudio del 
+análisis de regresión considerando las situaciones en las que intervienen dos o más variables 
+independientes. Este estudio, al que se le conoce como análisis de regresión múltiple, permite 
+tomar más factores en consideración y, por tanto, obtener mejores estimaciones que las que 
+ofrece la regresión lineal simple.
+15.1  Modelo de regresión múltiple
+El análisis de regresión múltiple estudia la relación de una variable dependiente y con dos o 
+más variables independientes. En términos generales, suele utilizarse p para denotar el número 
+de estas últimas.
+Modelo de regresión y ecuación de regresión
+Los conceptos de modelo de regresión y ecuación de regresión estudiados en el capítulo ante-
+rior son aplicables al caso de la regresión múltiple. A la ecuación que describe cómo está rela-
+cionada la variable dependiente y con las variables independientes x1, x2, . . . , xp y un término 
+de error se le conoce como modelo de regresión múltiple. Se inicia con el supuesto de que este 
+modelo toma la forma siguiente.
+MODELO DE REGRESIÓN MÚLTIPLE
+ 
+y  0  1x1  2x2  . . .  pxp   
+(15.1)
+ECUACIÓN DE REGRESIÓN MÚLTIPLE
+ 
+E(y)  0  1x1  2x2  . . .  pxp 
+(15.2)
+Ecuación de regresión múltiple estimada
+Si se conocieran los valores de 0, 1, 2, . . . , p, se podría usar la ecuación (15.2) a efecto 
+de calcular el valor medio de y para valores dados de x1, x2, . . . , xp. Desafortunadamente, los 
+valores de estos parámetros suelen en general no conocerse y es necesario estimarlos a partir 
+de datos muestrales. Para calcular los valores de los estadísticos muestrales b0, b1, b2, . . . , bp, 
+que se usan como estimadores puntuales de los parámetros 0, 1, 2, . . . , p, se emplea una 
+En el modelo de regresión múltiple, 0, 1, 2, . . . , p, son los parámetros y el término de 
+error  (la letra griega épsilon) es una variable aleatoria. Examinando con atención este modelo 
+vemos que y es una función lineal de x1, x2, . . . , xp (la parte de 0  1x1  2x2  . . .  
+pxp) más el término de error . Este último corresponde a la variabilidad en y que no puede 
+ser explicada por el efecto lineal de las p variables indepen
+
+[Bloque seleccionado #680 | relevancia=31]
+Pagina 679
+ 
+15.2  Método de mínimos cuadrados 
+645
+ECUACIÓN DE REGRESIÓN MÚLTIPLE ESTIMADA
+ 
+yˆ  b0  b1x1  b2x2  . . .  bpxp 
+(15.3)
+donde:
+b0, b1, b2, . . . , bp son las estimaciones de 0, 1, 2, . . . , p
+yˆ  valor estimado de la variable dependiente
+CRITERIO DE MÍNIMOS CUADRADOS
+ 
+min (yi  yˆi)2 
+(15.4)
+muestra aleatoria simple. Con los estadísticos muestrales se obtiene la siguiente ecuación de 
+regresión múltiple estimada.
+FIGURA 15.1  Proceso de estimación en la regresión múltiple
+Modelo de 
+regresión múltiple
+y  0  1x1  2x2  . . .  pxp  
+Ecuación de regresión múltiple
+E(y)  0  1x1  2x2  . . .  pxp
+0, 1, 2, . . . p son 
+parámetros desconocidos
+Datos muestrales:
+b0, b1, b2, . . . , bp
+proporcionan las estimaciones de
+0, 1, 2, . . . , p
+Cálculo de la ecuación
+de regresión múltiple
+estimada
+y  b0  b1x1  b2x2  . . .  bpxp
+b0, b1, b2, . . . bp son
+estadísticos muestrales
+x1
+x2
+xp
+y
+ˆ
+Este proceso de estimación para la regresión múltiple se muestra en la ﬁ gura 15.1.
+15.2  Método de mínimos cuadrados
+En el capítulo 14 se usó el método de mínimos cuadrados para obtener la ecuación de regre-
+sión estimada que permitía aproximar mejor la relación lineal entre las variables dependiente 
+e independiente. Con este método también se desarrolla la ecuación de regresión múltiple esti-
+mada. El criterio en el método de mínimos cuadrados, como ya se dijo, es el siguiente.
+En la regresión lineal 
+simple, b0 y b1 son los 
+estadísticos muestrales 
+utilizados para estimar 
+los parámetros 0 y 1. 
+En la regresión múltiple, 
+en el proceso de inferencia 
+estadística análogo, 
+b0, b1, b2, . . . , bp denotan 
+los estadísticos muestrales 
+utilizados para estimar 
+los parámetros 
+0, 1, 2, . . . p.
+
+[Bloque seleccionado #681 | relevancia=19]
+Pagina 680
+646 
+Capítulo 15  Regresión múltiple
+ 
+Driving 
+x1  Miles 
+y  Travel Time
+ 
+Assignment 
+Traveled 
+(hours)
+ 
+1 
+100 
+9.3
+ 
+2 
+50 
+4.8
+ 
+3 
+100 
+8.9
+ 
+4 
+100 
+6.5
+ 
+5 
+50 
+4.2
+ 
+6 
+80 
+6.2
+ 
+7 
+75 
+7.4
+ 
+8 
+65 
+6.0
+ 
+9 
+90 
+7.6
+ 
+10 
+90 
+6.1
+Los valores estimados de la variable dependiente se calculan con la ecuación de regresión 
+múltiple estimada
+yˆ  b0  b1x1  b2x2  . . .  bpxp
+Como indica la expresión (15.4), el método de mínimos cuadrados usa datos muestrales para 
+obtener los valores de b0, b1, b2, . . . , bp que hacen que la suma de los cuadrados de los residua-
+les [las desviaciones entre los valores observados de la variable dependiente ( yi) y los valores 
+estimados de la variable dependiente (yˆi)] sea un mínimo.
+En el capítulo 14 se proporcionaron las fórmulas para calcular los estimadores b0 y b1 para 
+la ecuación de regresión lineal simple estimada yˆ  b0  b1x empleando el método de mínimos 
+cuadrados. Con conjuntos de datos relativamente pequeños fue posible usar esas fórmulas para 
+obtener b0 y b1 mediante cálculos manuales. En la regresión múltiple, en cambio, las fórmulas 
+para los coeﬁ cientes de regresión b0, b1, b2, . . . , bp utilizan álgebra matricial y quedan fuera del 
+alcance de este libro. Por esta razón, el estudio de la regresión múltiple centrará la atención en 
+el uso de software para obtener la ecuación de regresión estimada y alguna otra información. Se 
+hará énfasis en la interpretación de los resultados que proporciona este software y no en cómo 
+efectuar los cálculos para la regresión múltiple.
+Un ejemplo: Butler Trucking Company
+Para ilustrar el análisis de regresión múltiple se utilizará el problema de Butler Trucking Com-
+pany, una empresa que se dedica al transporte de objetos y mercancías en el sur de California. 
+Su actividad principal es hacer entregas en su área local. Para mejorar el horario de trabajo, 
+los gerentes deseaban estimar el tiempo total de recorrido diario necesario para efectuar las 
+entregas.
+Al principio, los gerentes creyeron que el tiempo total de recorrido diario estaba estrecha-
+mente relacionado con el número de millas recorridas para realizar las entregas. A partir de una 
+muestra aleatoria simple de 10 repartidores con asignación de recorrido (Driving Assignment) 
+se obtuvieron los datos que se presentan en la tabla 15.1 y en el diagrama de dispersión de la 
+ﬁ gura 15.2. Después de observar este diagrama, los gerentes consideraron que, para descri-
+bir la relación entre tiempo total de recorrido y en horas (Travel Time/hours) y el número de 
+millas recorridas x1 (Miles T
+
+[Bloque seleccionado #692 | relevancia=17]
+Pagina 691
+ 
+15.4  Supuestos del modelo 
+657
+15.4  Supuestos del modelo
+En la sección 15.1 se presentó el siguiente modelo de regresión múltiple.
+Los supuestos acerca del término del error  en el modelo de regresión múltiple son análo-
+gos a los supuestos en el modelo de regresión lineal simple.
+Para entender mejor la forma de la relación dada por la ecuación (15.11), considere la si-
+guiente ecuación de regresión múltiple con dos variables independientes.
+E(y)  0  1x1  2x2
+La gráﬁ ca de esta ecuación es un plano en el espacio tridimensional. La ﬁ gura 15.5 es un ejem-
+plo de gráﬁ ca de este tipo. Observe que, como se indica, el valor de  es la diferencia entre el 
+verdadero valor de y y su valor esperado, E(y), cuando x1  x1* y x2  x2*. 
+modelo de regresión múltiple
+ 
+y  0  1x1  2x2  . . .  pxp   
+(15.10)
+SUPUESTOS SOBRE EL TÉRMINO DEL ERROR  EN EL MODELO DE REGRESIÓN MÚLTIPLE 
+y  0  1x1  . . .  pxp  
+1.  El término del error  es una variable aleatoria cuya media o valor esperado es 
+cero, es decir, E()  0
+ 
+ Consecuencia. Para los valores dados de x1, x2, . . . , xp, el valor esperado o va-
+lor promedio de y está dado por
+ 
+E(y)  0  1x1  2x2  . . .  pxp 
+(15.11)
+ 
+ Ésta es la ecuación de regresión múltiple presentada en la sección 15.1. En dicha 
+expresión, E(y) representa el promedio de todos los valores que puede tomar y 
+para valores dados de x1, x2, . . . , xp.
+2.  La varianza de  se denota σ 2 y es la misma para todos los valores de las varia-
+bles independientes x1, x2, . . . , xp.
+ 
+ Consecuencia. La varianza de y respecto de la línea de regresión es σ 2 y es la 
+misma para todos los valores de x1, x2, . . . , xp.
+3.  Los valores de  son independientes.
+ 
+ Consecuencia. El valor de  para un determinado conjunto de valores de las va-
+riables independientes no está relacionado con el valor de  de ningún otro con-
+junto de valores.
+4.  El término del error  es una variable aleatoria distribuida normalmente y refleja 
+la desviación entre el valor de y y su valor esperado dado por y  0  1x1  
+2x2  . . .  pxp.
+ 
+ Consecuencia. Como 0,  1, . . . , p son constantes para los valores dados de 
+x1, x2, . . . , xp, la variable dependiente y es también una variable aleatoria distri-
+buida normalmente.
+
+[Bloque seleccionado #697 | relevancia=27]
+Pagina 696
+662 
+Capítulo 15  Regresión múltiple
+Observe que los valores de estas dos razones-t y sus correspondientes valores-p aparecen en 
+la ﬁ gura 15.6. Usando α  0.01, los valores-p 0.000 y 0.004 en los resultados de Minitab 
+indican que H0: 1  0 y H0: 2  0 pueden ser rechazadas. Así, ambos parámetros son es-
+tadísticamente signiﬁ cativos. También en la tabla 2 del apéndice B se encuentra que con n  
+p  1  10  2  1  7 grados de libertad, t0.005  3.499. Como 6.18  3.499, H0: 1  0 
+es rechazada. De manera similar, como 4.18  3.499,  H0: 2  0 es rechazada.
+Multicolinealidad
+En el análisis de regresión se recurre al término variable independiente para referirse a cualquier 
+variable utilizada para predecir o explicar el valor de la variable dependiente. Sin embargo, este 
+término no signiﬁ ca que tales variables sean independientes entre ellas en sentido estadístico. 
+Al contrario, en un problema de regresión múltiple la mayoría de las variables independientes 
+están, en cierto grado, correlacionadas unas con otras. En el ejemplo de Butler Trucking con dos 
+variables independientes x1 (millas recorridas) y x2 (número de entregas), las millas recorridas 
+pueden tratarse como la variable dependiente y el número de entregas como la variable inde-
+pendiente para determinar si ambas están relacionadas entre sí. Después se calcula el coeﬁ ciente 
+de correlación muestral rx1x2 para determinar la magnitud de tal relación. Con esto obtenemos 
+rx1x2  0.16. Por tanto, se encuentra que existe cierto grado de relación lineal entre estas dos va-
+riables independientes. En el análisis de regresión múltiple, la multicolinealidad expresa la 
+correlación entre las variables independientes.
+Para tener una mejor perspectiva de los problemas potenciales de la multicolinealidad, se 
+considerará una modiﬁ cación al ejemplo de Butler Trucking. En lugar de que x2 sea el número 
+de entregas, denotará el número de galones de gasolina consumidos. Es claro que x1 (las mi-
+llas recorridas) y x2 están relacionadas, es decir, se sabe que el número de galones de gasolina 
+consumidos depende del número de millas recorridas. Por tanto, se concluirá que x1 y x2 son 
+variables independientes fuertemente correlacionadas.
+Suponga que se obtiene la ecuación yˆ  b0 	 b1x1 	 b2x2 y que la prueba F indica que 
+esta relación es signiﬁ cativa. Después suponga que se realiza la prueba t para 1 a efecto 
+de determinar si 1  0 y H0: 1  0 no puede ser rechazada. ¿Esto signiﬁ ca que el tiempo de 
+recorrido no está relacionado con las millas recorridas? No necesariamente. Lo que
+
+[Bloque seleccionado #730 | relevancia=38]
+Pagina 729
+ 
+Glosario 
+695
+de regresión múltiple E(y)  0  1x1  2x2  . . .  pxp indica que el valor esperado o 
+media de la variable dependiente y, denotado como E(y), está relacionado con los valores de 
+las variables independientes x1, x2, . . . , xp. Para obtener la ecuación de regresión múltiple 
+estimada yˆ  b0  b1x1  b2x2  . . .  bpxp se emplean los datos muestrales y el método 
+de mínimos cuadrados. En efecto, b0, b1, b2, . . . , bp son estadísticos muestrales utilizados para 
+estimar los parámetros desconocidos 0, 1, 2, . . . , p del modelo. A lo largo del capítulo se 
+emplearon salidas de pantalla de computadora para hacer énfasis en el hecho de que el software 
+para estadística es el único medio realista para realizar los numerosos cálculos que se requieren 
+en el análisis de regresión múltiple.
+El coeﬁ ciente de determinación múltiple se presentó como una medida de la bondad de 
+ajuste de la ecuación de regresión estimada. Este coeﬁ ciente determina la proporción de la va-
+riación en y que puede ser explicada por la ecuación de regresión estimada. El coeﬁ ciente de 
+determinación múltiple ajustado es una medida similar de bondad de ajuste que se adapta al nú-
+mero de variables independientes evitando, de esta manera, sobreestimar el efecto de adicionar 
+más variables independientes.
+Como un medio para determinar estadísticamente si la relación entre las variables era sig-
+niﬁ cativa, se presentaron una prueba F y una prueba t. La primera permite determinar si existe 
+una relación global signiﬁ cativa entre la variable dependiente y el conjunto de todas las va-
+riables independientes, y la segunda se usa para determinar si existe una relación signiﬁ cativa 
+entre la variable dependiente y una determinada variable independiente del modelo de regre-
+sión. También se trató la relación entre las variables independientes, a lo cual se le llama mul-
+ticolinealidad.
+En la sección sobre variables cualitativas independientes se mostró el uso de variables 
+ﬁ cticias para incorporar datos cualitativos en el análisis de regresión múltiple. En la sección 
+sobre análisis residual se estudió el análisis residual, el cual permite conﬁ rmar los supuestos del 
+modelo, detectar observaciones atípicas e identiﬁ car observaciones inﬂ uyentes. Se estudiaron 
+asimismo los residuales estandarizados, la inﬂ uencia, los residuales eliminados estudentizados 
+y la medida de la distancia de Cook. El capítulo concluye con una sección sobre el uso de la 
+regresión logística para modelar situaciones en las que la variable dependiente sólo puede asu-
+mir dos v
+
+[Bloque seleccionado #731 | relevancia=30]
+Pagina 730
+696 
+Capítulo 15  Regresión múltiple
+Ecuación de regresión múltiple estimada Estimación de la ecuación de regresión múltiple 
+basada en datos muestrales y en el método de mínimos cuadrados; es decir, yˆ  b0  b1x1  
+b2x2  . . .  bpxp.
+Influencia Mide qué tan lejos se encuentran de su media los valores de las variables inde-
+pendientes.
+Logit Logaritmo natural de las posibilidades a favor de y  1; es decir, g(x1, x2, . . . , xp)  
+0  1x1  2x2  . . .  pxp.
+Logit estimado Estimación del logit basado en datos muestrales; es decir, gˆ(x1, x2, . . . , 
+xp)  b0  b1x1  b2x2  . . .  bpxp.
+Medida de la distancia de Cook Medida de la inﬂ uencia de una observación basada tanto 
+en la inﬂ uencia (leverage) de la observación i como en el residual de la observación i.
+Método de mínimos cuadrados Método empleado para obtener la ecuación de regresión 
+estimada. Permite minimizar la suma de los cuadrados de los residuales (las desviaciones entre 
+los valores observados de la variable dependiente, yi, y los valores estimados de la variable 
+dependiente yˆi).
+Modelo de regresión múltiple Ecuación matemática que describe cómo está relacionada 
+la variable dependiente y con las variables independientes x1, x2, . . . , xp y con el término del 
+error .
+Multicolinealidad Término que describe la correlación entre las variables independientes.
+Observación atípica Es aquella que se sale del patrón que sigue el resto de las observa-
+ciones.
+Observación influyente Es aquella que tiene una gran inﬂ uencia en los resultados de la re-
+gresión.
+Posibilidades a favor de la ocurrencia de un evento Probabilidad de que ocurra el evento 
+dividida entre la probabilidad de que no ocurra.
+Residuales eliminados estudentizados Residuales estandarizados que se basan en un error 
+estándar de estimación corregido, el cual se obtuvo eliminando la observación i del conjunto de 
+datos y realizando después el análisis de regresión y los cálculos.
+Variable cualitativa independiente Variable independiente con datos cualitativos.
+Variable ficticia Se utiliza para modelar el efecto de las variables cualitativas independien-
+tes. Las variables ﬁ cticias sólo toman los valores 0 y 1.
+Fórmulas clave
+Modelo de regresión múltiple
+ 
+y  0  1x1  2x2  . . .  pxp   
+(15.1)
+Ecuación de regresión múltiple
+ 
+E(y)  0  1x1  2x2  . . .  pxp 
+(15.2)
+Ecuación de regresión múltiple estimada
+ 
+yˆ  b0  b1x1  b2x2  . . .  bpxp 
+(15.3)
+Criterio de mínimos cuadrados
+ 
+min (yi  yˆi)2 
+(15.4)
+Relación entre STC, SCR y SCE
+ 
+STC  SCR  SCE 
+(15.7)
+
+[Bloque seleccionado #764 | relevancia=23]
+Pagina 763
+ 
+16.2  Determinación de cuándo agregar o eliminar variables 
+729
+a) Desarrolle un diagrama de dispersión con los datos del ingreso familiar promedio como 
+variable independiente y el porcentaje de la fuerza de trabajo en el campo creativo co-
+mo variable dependiente. ¿El modelo de regresión lineal simple parece apropiado?
+b) Desarrolle un diagrama de dispersión para estos datos con el índice del costo de vida como 
+variable independiente y el porcentaje de la fuerza de trabajo en el campo creativo co-
+mo variable dependiente. ¿El modelo lineal simple parece ser apropiado? 
+c) 
+Utilice los datos proporcionados para desarrollar la ecuación de regresión múltiple esti-
+mada a efecto de calcular el porcentaje de la fuerza de trabajo en los campos creativos.
+d) Tucson, Arizona, es un área metropolitana con una población de 946 362 habitantes, un 
+ingreso familiar promedio de $42 984, y un índice en el costo de vida de 99. Desarrolle 
+una estimación del porcentaje de la fuerza de trabajo en los ámbitos creativos de Tucson. 
+¿Existen factores que se deben considerar antes de utilizar esta estimación puntual?
+16.2  Determinación de cuándo agregar 
+o eliminar variables
+En esta sección se mostrará como usar la prueba F para determinar si es conveniente agregar 
+una o más variables independientes a un modelo de regresión múltiple. Esta prueba consiste en 
+determinar la reducción del valor de la suma de cuadrados debido al error como resultado de 
+agregar una o más variables independientes al modelo. En primer lugar se ilustrará cómo utili-
+zar la prueba en el contexto del ejemplo de Butler Trucking.
+En el capítulo 15 se presentó el caso de Butler Trucking para ilustrar el uso del análisis de 
+regresión múltiple. Recuerde que los directivos deseaban desarrollar una ecuación de regresión 
+estimada para predecir el tiempo total del recorrido diario de los camiones con dos variables 
+independientes: millas recorridas y número de repartos. Con millas recorridas x1 como la única 
+variable independiente, el método de mínimos cuadrados proporciona la siguiente ecuación de 
+regresión estimada.
+yˆ  1.27  0.0678x1
+En el capítulo 15 se mostró que la suma de cuadrados debido al error con este modelo fue 
+SCE  8.029. Cuando se le agregó una segunda variable independiente x2, número de entregas, 
+se obtuvo la siguiente ecuación de regresión estimada.
+yˆ  0.869  0.0611x1  0.923x2
+La suma de cuadrados debido al error para este modelo fue SCE  2.299. Claramente, agregar 
+x2 dio como resultado una reducción de SCE. La pregunta que se desea responder es: ¿La adi-
+ci

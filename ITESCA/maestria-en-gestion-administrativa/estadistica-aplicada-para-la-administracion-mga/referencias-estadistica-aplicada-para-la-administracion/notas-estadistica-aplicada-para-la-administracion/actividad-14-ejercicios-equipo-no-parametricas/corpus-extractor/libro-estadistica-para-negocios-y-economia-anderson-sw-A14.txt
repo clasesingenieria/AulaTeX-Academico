@@ -1,0 +1,633 @@
+Fuente bibliográfica: Estadística para negocios y economía - Anderson, Sweeney y Williams. 11.ª edición.pdf
+Actividad: 14 (5.2 Ejercicios Equipo 5% Tarea)
+Palabras clave: Wilcoxon, prueba de signos, Mann-Whitney, Kruskal-Wallis, rangos, empates, mediana
+
+[Bloque seleccionado #892 | relevancia=27]
+Pagina 891
+ 
+19.1  La prueba de signos 
+857
+cional σ, el estadístico de prueba para hacer una inferencia sobre la media poblacional ha de-
+mostrado tener una distribución t. Como resultado, la distribución t se utilizó para calcular los 
+intervalos de confianza y realizar pruebas de hipótesis sobre una media poblacional normal-
+mente distribuida.
+En este capítulo se presentan métodos no paramétricos para realizar inferencias sobre 
+la población sin necesidad de un supuesto sobre la forma específica de la distribución de pro-
+babilidad poblacional. Por esta razón, estos métodos no paramétricos se llaman métodos de 
+distribución libre.
+La mayoría de los métodos estadísticos conocidos como métodos paramétricos requieren 
+datos cuantitativos, mientras que los no paramétricos permiten inferencias basadas en cualquier 
+tipo de datos cualitativos o cuantitativos. Sin embargo, los cálculos en los métodos no paramé-
+tricos se realizan generalmente con datos categóricos. Así, siempre que los datos sean cuanti-
+tativos, se transformarán en categóricos con el fin de realizar la prueba no paramétrica. En la 
+primera sección del capítulo se muestra cómo la distribución binomial utiliza dos tipos de datos 
+para hacer una inferencia sobre la media poblacional. En las siguientes tres secciones se des-
+cribe cómo los datos ordenados por rango se utilizan en pruebas no paramétricas acerca de dos 
+o más poblaciones. En la sección final se manejan datos ordenados por rango para calcular la 
+correlación de rangos de dos variables.
+19.1  La prueba de signos
+La prueba de signos es un método no paramétrico versátil para pruebas de hipótesis que uti-
+liza la distribución binomial con p  0.50 como distribución de muestreo. No requiere un su-
+puesto acerca de la distribución de la población. En esta sección se presentan dos aplicaciones 
+de la prueba de signos: la que involucra la prueba de hipótesis acerca de una mediana pobla-
+cional y la que involucra la prueba de muestras pareadas acerca de la diferencia entre dos po-
+blaciones.
+Prueba de hipótesis acerca de una mediana poblacional
+En el capítulo 9 se describe cómo llevar a cabo pruebas de hipótesis sobre la mediana poblacio-
+nal. En esta sección se estudia cómo la prueba de signos se utiliza para realizar una prueba de 
+hipótesis acerca de la mediana poblacional. Si se considera una población donde no hay un valor 
+en los datos que sea exactamente igual a la mediana, ésta es la medida de tendencia central que 
+divide a la población de manera que 50% de los valores son mayores a la mediana y 50% de los 
+valores son menores a l
+
+[Bloque seleccionado #901 | relevancia=24]
+Pagina 900
+866 
+Capítulo 19  Métodos no paramétricos
+  
+ 
+Diferencia 
+ 
+Rangos con signo
+ 
+Trabajador 
+Diferencia 
+absoluta 
+Rango 
+Negativo 
+Positivo
+       1 
+0.7 
+0.7 
+8 
+ 
+8
+       2 
+0.2 
+0.2 
+2 
+2 
+       3 
+0.4 
+0.4 
+3.5 
+ 
+3.5
+       4 
+0.5 
+0.5 
+5.5 
+ 
+5.5
+       5 
+0.4 
+0.4 
+3.5 
+3.5 
+       6 
+0.9 
+0.9 
+10 
+ 
+10
+       7 
+0.1 
+0.1 
+1 
+ 
+1
+       8 
+0.0 
+ 
+ 
+ 
+       9 
+0.6 
+0.6 
+7 
+ 
+7
+     10 
+0.5 
+0.5 
+5.5 
+ 
+5.5
+     11 
+0.8 
+0.8 
+9 
+ 
+9
+ 
+Suma de los rangos con signo T   49.5
+tiempo que se requiere para realizar la tarea? Si se asume que las diferencias tienen una distri-
+bución simétrica, pero no necesariamente una distribución normal, se aplica la prueba de rangos 
+con signo de Wilcoxon.
+En particular, se utilizará la prueba de rangos con signo de Wilcoxon para la diferencia 
+entre la mediana del tiempo de realización de la tarea para los dos métodos de producción. Las 
+hipótesis son las siguientes.
+H0: mediana para el método A  mediana para el método B  0
+Ha: mediana para el método A  mediana para el método B  0
+Si H0 no es rechazada, no podremos concluir que las medianas de los tiempos de realización de 
+la tarea son diferentes. Sin embargo, si H0 es rechazada, concluiremos que las medianas de los 
+tiempos de realización de la tarea son diferentes. Se utilizará 0.05 como nivel de signiﬁ cancia 
+para la prueba.
+El primer paso en la prueba de rangos con signo de Wilcoxon es descartar la diferencia de 
+cero para el trabajador 8 y luego calcular el valor absoluto de la diferencia para los 10 trabaja-
+dores restantes, como se muestra en la columna 3 de la tabla 19.7. A continuación se clasiﬁ carán 
+esas diferencias absolutas de menor a mayor, como se observa en la columna 4. A la diferencia 
+absoluta más pequeña, que es de 0.1 para el trabajador 7, se le asigna el rango 1. A la segunda 
+menor diferencia absoluta de 0.2, obtenida para el trabajador 2, se le asigna el rango 2. Esta cla-
+siﬁ cación de las diferencias absolutas continúa con la diferencia absoluta mayor de 0.9 para el 
+trabajador 6, al que se le asigna el rango 10. A las diferencias absolutas iguales de 0.4 para los tra-
+bajadores 3 y 5 se les asigna el rango promedio de 3.5. Del mismo modo, a las diferencias abso-
+lutas iguales de 0.5 para los trabajadores 4 y 10 se les asigna el rango promedio de 5.5.
+Una vez que los rangos de las diferencias absolutas se han determinado, a cada rango se le 
+especifica el signo de la diferencia original de los trabajadores. Los rangos de signo negativo se 
+colocan en la columna 5 y los de signo positivo en la columna 6 (vea la tabla 
+
+[Bloque seleccionado #903 | relevancia=34]
+Pagina 902
+868 
+Capítulo 19  Métodos no paramétricos
+aproxima por el intervalo de probabilidad normal, 49 a 50, y la probabilidad de que T   49.5 
+se aproxima por:
+P(T   49.5)  P z  49  27.5
+9.8107
+  P(z  2.19)
+Utilizando la tabla de distribución normal estándar y z  2.19, se observa que el valor-p de dos 
+colas  2(1  0.9857)  0.0286. Con el valor-p  0.05, H0 es rechazada, y se concluye que 
+las medianas del tiempo de realización de la tarea para los dos métodos de producción no son 
+iguales. Con T  en la cola superior de la distribución de muestreo, se observa que el método A 
+toma mayor tiempo de realización. Es de esperar que la gerencia concluya que B es el método 
+de producción más rápido o el más apropiado.
+Las pruebas de rangos con signo de Wilcoxon de una cola son posibles. Por ejemplo, si al 
+principio se hubiera buscado una evidencia estadística para concluir que el método A tomaba 
+un tiempo mediano mayor para la realización de la tarea y que el método B tenía el tiempo me-
+diano menor, se habría formulado la siguiente prueba de hipótesis de cola superior.
+H0: mediana para el método A  mediana para el método B  0
+Ha: mediana para el método A  mediana para el método B 	 0
+Al rechazar H0 se llegaría a la conclusión de que el método A tiene el tiempo mediano mayor 
+para completar la tarea y el método B tiene el tiempo mediano menor para completar la tarea. 
+También es posible la prueba de hipótesis de cola inferior.
+Como nota ﬁ nal, en la sección 19.1 se mostró cómo la prueba de signos puede utilizarse 
+tanto en una prueba de hipótesis para la mediana poblacional, como en una prueba de hipótesis 
+con muestras pareadas. En esta sección se ha demostrado el uso de la prueba de rangos con sig-
+no de Wilcoxon para una prueba de hipótesis con muestras pareadas. Sin embargo, dicha prueba 
+también puede utilizarse para una prueba no paramétrica de una mediana de la población, y no 
+hace ningún supuesto acerca de que la distribución de la población tan solo es simétrica. Si este 
+supuesto es apropiado, la prueba de rangos con signo de Wilcoxon es la prueba no paramétri-
+ca preferida para una mediana de la población. Sin embargo, si la población está sesgada, se 
+preﬁ ere la prueba de signos presentada en la sección 19.1. Con la prueba de rangos con signo 
+de Wilcoxon se utilizan las diferencias entre las observaciones y el valor hipotético de la me-
+diana poblacional en lugar de las diferencias entre las observaciones pareadas. Por lo demás, 
+los cálculos son exactamente como se muestran en esta sección. En el ejercicio 17 se le pedirá 
+
+
+[Bloque seleccionado #913 | relevancia=17]
+Pagina 912
+878 
+Capítulo 19  Métodos no paramétricos
+distribución normal. Con W  169.5 en la cola superior de la distribución de muestreo, tenemos 
+los siguientes cálculos del valor-p.
+P(W  169.5)  P z  169  138
+15.1658
+  P(z  2.04)
+Utilizando la variable aleatoria normal estándar y z  2.04, el valor-p de dos colas 
+ 2(10.9793)  0.0414. Con el valor-p  0.05, H0 es rechazada y se concluye que las dos 
+poblaciones de saldos de cuentas no son idénticas. El valor de la cola superior del estadístico 
+de prueba W indica que la población de saldos de cuentas en la sucursal 1 tiende a ser mayor.
+Como comentario ﬁ nal, conviene decir que algunas aplicaciones de la prueba de MWW ha-
+cen adecuado asumir que las dos poblaciones tienen formas idénticas, y si éstas son diferentes, 
+es sólo por un cambio en la ubicación de las distribuciones. Si las dos poblaciones tienen la 
+misma forma, la prueba de hipótesis puede expresarse en términos de la diferencia entre las 
+dos medianas de las poblaciones. Cualquier diferencia entre las medianas se interpreta como un 
+cambio de ubicación de una población comparada con la otra. En este caso, las tres formas de la 
+prueba de MWW sobre la mediana de dos poblaciones son las siguientes.
+138
+σW  15.1658
+Distribución de muestreo
+de W si las poblaciones
+son idénticas
+W
+FIGURA 19.6   Distribución de muestreo de W para el ejemplo del Third National Bank
+     Prueba de dos colas 
+Prueba de cola inferior 
+Prueba de cola superior
+H0: mediana1  mediana2  0 
+H0: mediana1  mediana2  0 
+H0: mediana1  mediana2  0
+Ha: mediana1  mediana2  0 
+Ha: mediana1  mediana2  0 
+Ha: mediana1  mediana2 	 0
+NOTAS Y COMENTARIOS
+El procedimiento de Minitab para la prueba MWW se 
+describe en el apéndice 19.1. Minitab parte del supues-
+to de que las dos poblaciones tienen la misma forma. 
+En consecuencia, describe los resultados de la prueba 
+en términos de una prueba acerca de las medianas de 
+las dos poblaciones. Si no se siente cómodo al reali-
+zar el supuesto de la “misma forma”, los resultados 
+de Minitab siguen siendo aplicables. Sin embargo, es 
+necesario que usted los interprete como una prueba 
+de la hipótesis nula de que las dos poblaciones son 
+idénticas.
+Si se puede suponer 
+que las dos poblaciones 
+tienen la misma forma, 
+la prueba MWW se 
+convierte en una prueba 
+sobre la diferencia entre 
+las medianas de las dos 
+poblaciones.
+
+[Bloque seleccionado #927 | relevancia=25]
+Pagina 926
+892 
+Capítulo 19  Métodos no paramétricos
+La prueba de signos es un procedimiento no paramétrico para probar hipótesis acerca de 
+una mediana de la población o con muestras pareadas. Los datos deben resumirse en dos cate-
+gorías: una denotada por un signo positivo y otra denotada por un signo negativo. La prueba 
+de rangos con signo de Wilcoxon analiza las muestras pareadas de dos poblaciones cuando se 
+dispone de datos cuantitativos. No se requiere ningún supuesto que no sea que la distribución 
+de las diferencias pareadas sea simétrica. La prueba de rangos con signo de Wilcoxon se utiliza 
+para determinar si la mediana poblacional de diferencias pareadas es cero. Esta prueba también 
+se utiliza para hacer inferencias acerca de la mediana de una población simétrica.
+La prueba de Mann-Whitney-Wilcoxon es un procedimiento no paramétrico para la dife-
+rencia entre dos poblaciones a partir de dos muestras independientes. Es una alternativa para la 
+prueba paramétrica de t para la diferencia entre las medias de dos poblaciones. Se obtienen los 
+rangos combinados para los datos de las dos muestras y el estadístico de prueba para la prue-
+ba de MWW es la suma de los rangos de la primera muestra. En la mayoría de las aplicaciones, los 
+tamaños de muestra son lo suﬁ cientemente grandes como para utilizar una aproximación nor-
+mal con el factor de corrección de continuidad en la realización de la prueba de hipótesis. Si 
+no se realiza ningún supuesto acerca de la población, el procedimiento MWW prueba si las dos 
+poblaciones son idénticas. Si puede hacer el supuesto de que las dos poblaciones tengan la mis-
+ma forma, la prueba ofrece una inferencia acerca de las diferencias entre las medianas de las 
+dos poblaciones.
+La prueba de Kruskal-Wallis extiende la prueba de MWW a tres o más poblaciones. Es una 
+alternativa al análisis paramétrico de la prueba de varianza para las diferencias entre las medias 
+de tres o más poblaciones con distribución normal. La prueba de Kruskal-Wallis no requiere 
+ningún supuesto acerca de la distribución de las poblaciones y utiliza la hipótesis nula de que 
+las k poblaciones son idénticas. Si se puede hacer el supuesto de que las poblaciones tienen la 
+misma forma, la prueba ofrece una inferencia acerca de las diferencias entre las medianas de 
+las k poblaciones. En la última sección del capítulo se introdujo el coeﬁ ciente de correlación 
+por rangos de Spearman como una medida de asociación entre dos variables basada en datos 
+ordenados por rango. 
+Glosario
+Coeﬁ ciente de correlación por rangos de Spearman Medida de corre
+
+[Bloque seleccionado #928 | relevancia=17]
+Pagina 927
+ 
+Ejercicios complementarios 
+893
+Prueba de rangos con signo de Wilcoxon Prueba no paramétrica de la diferencia entre las 
+medianas de dos poblaciones basada en muestras pareadas. El procedimiento utiliza datos cuan-
+titativos y está basado en el supuesto de que la distribución de las diferencias es simétrica. Los 
+datos de diferencias pareadas se utilizan para hacer una inferencia acerca de las medianas de 
+las dos poblaciones. Esta prueba también se utiliza para hacer inferencias acerca de la mediana 
+de una población simétrica.
+Prueba de signos Prueba de hipótesis no paramétrica acerca de una mediana de la población 
+o que identiﬁ ca las diferencias entre dos poblaciones basadas en muestras pareadas. Los datos 
+se resumen en dos categorías, la denotada por un signo positivo o por un signo negativo, y la 
+distribución binomial con p  0.50 proporciona la distribución de muestreo para el estadístico 
+de prueba.
+Fórmulas clave
+Prueba de signos: aproximación normal
+Media: μ  0.50n 
+(19.1)
+ 
+Desviación estándar: σ  0.25n 
+(19.2)
+Prueba de rangos con signo de Wilcoxon: aproximación normal
+Media: μT   n(n  1)
+4
+ 
+(19.3)
+ 
+Desviación estándar: σT   
+n(n  1)(2n  1)
+24
+  
+(19.4)
+Prueba de Mann-Whitney-Wilcoxon: aproximación normal
+Media: μW  1⁄2 n1(n1  n2  1) 
+(19.5)
+ 
+Desviación estándar: σW   112 n1n2(n1  n2  1) 
+(19.6)
+Estadístico de prueba de Kruskal-Wallis
+ 
+H  
+12
+nT(nT  1)
+Ri
+2
+ni
+k
+a
+i1
+  3(nT  1) 
+(19.7)
+Coeficiente de correlación por rangos de Spearman
+ 
+rs  1  
+n
+a
+i1
+n(n2  1)
+6
+di
+2
+ 
+(19.8)
+Ejercicios complementarios
+38. 
+ En una encuesta se planteó la siguiente pregunta: ¿Está a favor o en contra de proporcionar 
+vales libres de impuestos o deducciones fiscales a los padres que envían a sus hijos a escuelas 
+privadas? De 2 010 personas entrevistadas, 905 se manifestaron a favor de la propuesta, 1 045 
+se opusieron y 60 no dieron ninguna opinión. ¿Los datos indican una diferencia significativa en 
+las preferencias por el apoyo financiero a los padres que envían a sus hijos a escuelas privadas? 
+Utilice 0.05 como nivel de significancia.
+39. 
+Debido a una reciente disminución en el mercado de la vivienda, la mediana del precio nacional 
+de venta de casas unifamiliares es $180 000 (Asociación Nacional de Agentes Inmobiliarios, 
+enero de 2009). Suponga que los siguientes datos se obtuvieron de las muestras de ventas re-
+cientes para viviendas unifamiliares en San Luis y Denver.
+
+[Bloque seleccionado #933 | relevancia=15]
+Pagina 932
+898 
+Capítulo 19  Métodos no paramétricos
+Paso 3. Elija 1-Sample Wilcoxon.
+Paso 4. Cuando el cuadro de diálogo 1-Sample Wilcoxon aparezca:
+ 
+ 
+Introduzca C3 en el cuadro Variables.
+ 
+ 
+Seleccione Test Median.
+ 
+ 
+Introduzca el valor hipotético 0 en el cuadro Test Median.
+ 
+ 
+Seleccione not equal del menú Alternative.
+ 
+ 
+Haga clic en OK.
+Observe que el procedimiento de Minitab utiliza las diferencias de los datos pareados de la 
+columna C3. Aunque el archivo muestra los tiempos para cada método de producción en las 
+columnas C1 y C2, estos datos no se utilizan para obtener el resultado de Minitab.
+El mismo procedimiento se utiliza para probar una hipótesis acerca de la mediana de una 
+población simétrica. Ingrese los datos reales en cualquier columna de la hoja de cálculo y siga 
+los pasos anteriores. Introduzca el valor hipótetico de la mediana poblacional en el cuadro Test 
+Median y seleccione la hipótesis alternativa deseada en el cuadro Alternative. Los resultados 
+se obtienen haciendo clic en OK. Para realizar esta prueba no es necesario ingresar la diferencia 
+de los datos. La rutina de Minitab hará los cálculos automáticamente. Recuerde que esta prueba 
+es válida sólo para la mediana de una población simétrica.
+Prueba de Mann-Whitney-Wilcoxon 
+Los siguientes pasos permiten probar la hipótesis de que dos poblaciones son idénticas con 
+dos muestras independientes, una de cada población. Se utilizará el ejemplo del Third National 
+Bank de la sección 19.3 para ilustrar el procedimiento. El archivo de datos ThirdNational pro-
+vee los 12 saldos de la cuenta de la sucursal 1 en la columna C1, y los 10 saldos de la cuenta de 
+la sucursal 2 en la columna C2. Los pasos siguientes aplicarán el procedimiento de Minitab para 
+probar H0: las dos poblaciones son idénticas, contra Ha: las dos poblaciones no son idénticas. 
+Paso 1. Seleccione el menú Stat.
+Paso 2. Elija Nonparametrics.
+Paso 3. Elija Mann-Whitney.
+Paso 4. Cuando el cuadro de diálogo Mann-Whitney aparezca:
+ 
+ 
+Introduzca C1 en el cuadro First sample.
+ 
+ 
+Introduzca C2 en el cuadro Second sample.
+ 
+ 
+Seleccione not equal del menú Alternative.
+ 
+ 
+Haga clic en OK.
+Minitab informará el valor del estadístico de prueba y el valor-p correspondiente. Puesto que 
+Minitab supone automáticamente que las dos poblaciones tienen la misma forma, la salida des-
+cribe el resultado en términos de la diferencia entre las medianas de las dos poblaciones. Obser-
+ve que el resultado también proporciona una estimación puntual y una estimación por intervalo 
+de conﬁ anza de la diferencia entre las medianas. La 
+
+[Bloque seleccionado #934 | relevancia=18]
+Pagina 933
+ 
+Apéndice 19.2  Métodos no paramétricos con Excel 
+899
+Paso 1. Seleccione el menú Stat.
+Paso 2. Elija Nonparametrics.
+Paso 3. Elija Kruskal-Wallis.
+Paso 4. Cuando el cuadro de diálogo Kruskal-Wallis aparezca:
+ 
+ 
+Introduzca C2 en el cuadro Response.
+ 
+ 
+Introduzca C1 en el cuadro Factor.
+ 
+ 
+Haga clic en OK.
+Correlación por rangos de Spearman
+El coeﬁ ciente de correlación por rangos de Spearman es el mismo que el coeﬁ ciente de correla-
+ción de Pearson calculado para datos ordinales u ordenados por rango. Así que se puede obtener 
+el coeﬁ ciente de correlación de Spearman con los datos ordenados por rango mediante el proce-
+dimiento de Minitab que permite calcular el coeﬁ ciente de correlación de Pearson. Se utilizarán 
+los datos de las ventas potenciales y las ventas reales del periodo de dos años presentados en 
+la sección 19.5. El archivo de datos PotentialActual proporciona la clasiﬁ cación del potencial 
+de cada empleado en la columna C2 y la clasiﬁ cación de las ventas reales de un periodo de dos 
+años por empleado en la columna C3. Los siguientes pasos de Minitab sirven para calcular la 
+correlación por rangos de Spearman para las dos variables.
+Paso 1. Seleccione el menú Stat.
+Paso 2. Elija Basic Statistics.
+Paso 3. Elija Correlation.
+Paso 4. Cuando el cuadro de diálogo Correlation aparezca:
+ 
+ 
+Introduzca C2 C3 en el cuadro Variables.
+ 
+ 
+Elimine Display p-values.
+ 
+ 
+Haga clic en OK.
+En el resultado de Minitab se obtiene un valor de 0.733 para el coeﬁ ciente de correlación de 
+Pearson. Dado que los datos ya estaban ordenados por rango, éste es también el coeﬁ ciente 
+de correlación por rangos de Spearman. Sin embargo, el valor-p para el coeﬁ ciente de Pearson 
+no es el apropiado para los datos ordenados por rango y no debe interpretarse como el valor-p 
+para el coeﬁ ciente de Spearman. 
+Apéndice 19.2 
+Métodos no paramétricos con Excel
+Excel carece de procedimientos no paramétricos en su paquete de Data Analysis, pero se mos-
+trará cómo utilizar la función BINOMDIST para realizar una prueba de los signos y cómo utilizar 
+el procedimiento Data Analysis para calcular un coeﬁ ciente de correlación por rango. El com-
+plemento de SatTools, para Excel se puede utilizar para la prueba de signos de Wilcoxon y en la 
+prueba de Mann-Whitney-Wilcoxon (vea el apéndice 19.3).
+Prueba de signos
+La prueba de signos utiliza una distribución de muestreo binomial con p  0.50 para condu-
+cir una prueba de hipótesis acerca de una mediana poblacional o una prueba de hipótesis con 
+muestras pareadas. La función BINOMDIST de Excel permite calcular probabil
+
+[Bloque seleccionado #936 | relevancia=17]
+Pagina 935
+ 
+Apéndice 19.3  Métodos no paramétricos con StatTools 
+901
+Paso 4. Cuando el cuadro de diálogo Correlation Dialog aparezca:
+ 
+ 
+Introduzca B1:C1 en el cuadro Input Range.
+ 
+ 
+Seleccione Grouped by Columns.
+ 
+ 
+Elija Labels in First Row.
+ 
+ 
+Seleccione Output Range.
+ 
+ 
+Introduzca D1 en el cuadro Output Range. 
+ 
+ 
+Haga clic en OK.
+El coeﬁ ciente de correlación por rangos de Spearman aparecerá en la celda E3.
+Apéndice 19.3 
+Métodos no paramétricos con StatTools
+En este apéndice se muestra cómo usar StatTools para la prueba de signos de Wilcoxon y la 
+prueba de Mann-Whitney-Wilcoxon.
+Prueba de rangos con signo de Wilcoxon 
+para muestras pareadas
+Los siguientes pasos permiten probar la hipótesis acerca de la diferencia entre dos medianas 
+poblacionales con base en muestras pareadas. Para ilustrar el procedimiento se utilizarán los 
+datos del tiempo para completar la tarea de producción de la sección 19.2. El archivo de da-
+tos MatchedSample proporciona los tiempos de producción para el método A en la columna 
+A, los tiempos de producción para el método B en la columna B y las diferencias entre los dos 
+métodos en la columna C. Comenzamos por usar el Data Set Manager para crear un conjunto 
+de datos de StatTools con el procedimiento descrito en el apéndice del capítulo 1. Con los si-
+guientes pasos se prueba la hipótesis H0: mediana  0 y Ha:  mediana  0 para la población de 
+las diferencias.
+Paso 1. Haga clic en la barra de herramientas StatTools.
+Paso 2. En Analyses Group, seleccione Nonparametric Tests.
+Paso 3. Elija Wilcoxon Signed-Rank Test.
+Paso 4. Cuando el cuadro de diálogo de Wilcoxon Sign-Rank Test aparezca:
+ 
+ 
+Seleccione One-Sample Analysis en el cuadro Analysis Type.
+ 
+ 
+Verifique la variable Difference.
+ 
+ 
+Introduzca 0 en el cuadro Null Hypothesis Value.
+ 
+ 
+Seleccione Not Equal to Null Value en el cuadro Alternative Hypothesis.
+ 
+ 
+Haga clic en OK.
+El mismo procedimiento también se puede usar para probar una hipótesis sobre la mediana de 
+una población simétrica. Introduzca los datos en cualquier columna de la hoja de cálculo. A con-
+tinuación siga los pasos anteriores. Ingrese el valor hipotético de la mediana poblacional en el 
+cuadro de diálogo Null Hypothesis Value y seleccione las hipótesis alternativas deseadas en 
+el cuadro Alternative Hypothesis. Haga clic en OK para obtener los resultados. Para esta prue-
+ba no tenemos que introducir los datos de las diferencias, porque la rutina de StatTools efectuará 
+los cálculos automáticamente. Pero recuerde, esta prueba es sólo válida para la mediana de una 
+población simétrica.
+Pr
+
+[Bloque seleccionado #1111 | relevancia=20]
+Pagina 1110
+1076 
+Índice analítico
+M
+Malcolm Baldrige National Quality Award, 906
+Marco, 267
+Margen de error, 309, 310-314, 323n1, 331n1
+Marketing, 4
+MeadWestvaco Corporation, 266
+Media, 14-15, 87-88, 124-125, 219
+Media muestral, 126, 267, 297n1, 521n1
+Media muestral general, 511
+Media poblacional
+estimación del tamaño de la muestra cuando 
+σ conocida, 310-314
+inferencia acerca de la diferencia entre muestras 
+pareadas, 423-425
+inferencias acerca de la diferencia entre σ1 y σ2 
+conocidas, 407-412
+inferencias acerca de la diferencia entre σ1 y σ2 
+desconocidas, 415-419
+para datos agrupados, 127
+σ conocida, 310-314
+σ desconocida, 316-323
+Media poblacional: σ conocida
+estimación por intervalo, 310-314
+margen de error,  310-314
+prueba de una cola, 356-361
+Media poblacional: σ desconocida
+estimación por intervalo, 317-320
+margen de error, 317-320
+prueba de dos colas, 372-373
+pruebas de hipótesis y, 370-374
+Media ponderada, 124-125
+Media recortada, 92n1
+Mediana, 88-89
+Medida de la distancia de Cook, 679-681, 681n2
+Medidas de asociación entre dos variables, 115-124
+Medidas de localización central, 297n1
+Medidas de posición o localización, 87-92
+Medidas de variabilidad, 95-102
+Mejora continua, 909
+Método de elaboración de pronósticos usando 
+promedios móviles ponderados, 800
+Método de los mínimos cuadrados, 565-575, 569n1, 
+645-649
+Método de pronóstico de regresión de tendencia 
+lineal, 807-812, 817n1
+Método de suavizamiento exponencial, 800-804, 
+804n2
+Método del valor crítico, 360-361
+Método del valor esperado, 941-943
+Método del valor-p, 358-360
+Métodos de distribución libre, 857
+Métodos de elaboración de pronósticos
+estacionalidad y tendencia, 820-829
+promedios móviles, 797-800
+promedios móviles ponderados, 800
+proyección de tendencia, 807-820
+suavizamiento exponencial, 800-804
+Métodos no paramétricos, 857
+Prueba de Kruskal-Wallis, 882-884
+coeficiente de correlación por rangos de 
+Spearman, 887-889
+prueba de Mann-Whitney-Wilcoxon (MWW), 
+871-882
+prueba de rangos con signos de Wilcoxon, 865-871
+prueba de signos, 857-865, 861n1
+Métodos paramétricos, 856
+Minería de datos, 17-18
+Minitab, 17
+alpha to enter, 739-740
+análisis de regresión con, 637-638
+análisis de varianza, 554-555
+correlación por rangos de Spearman, 899
+covarianza y correlación, 143
+descomposición de una serie de tiempo, 
+850-851
+diagrama de caja, 143
+diagrama de puntos, 73
+diagrama de tallo y hoja, 74
+diagramas de dispersión, 74
+diferencia entre dos medias poblacionales con 
+muestras pareadas, 443
+diferencia entre dos medias poblacionales: 
+σ1 y σ2 desconocidas, 442-443
+diferencia entre dos propor

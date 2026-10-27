@@ -1,0 +1,106 @@
+{
+  "subject_slug": "estadistica-aplicada-para-la-administracion",
+  "engine": "Amazon Nova Pro",
+  "kept": [
+    "aplicación empírica del muestreo",
+    "marco muestral administrativo",
+    "muestreo por cuotas estratificadas",
+    "error total de encuesta",
+    "paradoja de muestras masivas",
+    "correlación por diseño defectuoso",
+    "ponderación post-estratificación",
+    "asignación experimental aleatoria",
+    "validez interna y externa",
+    "tamaño efectivo de muestra",
+    "sesgo de autoselección",
+    "inferencia en estudios empresariales",
+    "aplicación",
+    "aplicación empírica",
+    "empírica muestreo",
+    "aplicación empírica muestreo",
+    "cuotas estratificadas",
+    "distribución"
+  ],
+  "conceptos_clave_nova_pro": [
+    {
+      "concepto": "aplicación empírica del muestreo",
+      "definicion_rigurosa": "La aplicación empírica del muestreo se refiere al proceso de seleccionar una porción de individuos de una población para realizar inferencias sobre el conjunto total. Este método se fundamenta en la teoría estadística y permite evaluar parámetros poblacionales a través de estadísticos muestrales. La selección adecuada de la muestra es crucial para asegurar la representatividad y minimizar el error de estimación.",
+      "formulacion_matematica_latex": "\\text{Si } X_1, X_2, \\ldots, X_n \\text{ son variables aleatorias independientes e idénticamente distribuidas, entonces } \\bar{X} \\sim N(\\mu, \\sigma^2/n)",
+      "aplicacion_administrativa": "En administración, la aplicación empírica del muestreo permite realizar encuestas y estudios de mercado con un costo y tiempo reducidos, proporcionando información valiosa para la toma de decisiones estratégicas.",
+      "fuente_principal": "Wackerly, Mendenhall y Scheaffer, 2010",
+      "localizador": "libro-estadistica-matematica-con-aplicaciones-wackerly-A02.txt (bloque 1)"
+    },
+    {
+      "concepto": "marco muestral administrativo",
+      "definicion_rigurosa": "El marco muestral administrativo es la lista o base de datos que contiene todos los elementos de la población de interés para un estudio. Es fundamental para garantizar que la muestra seleccionada sea representativa y que todos los elementos tengan una probabilidad conocida de ser incluidos en el estudio.",
+      "formulacion_matematica_latex": "N = \\text{Total de elementos en el marco muestral}",
+      "aplicacion_administrativa": "En el ámbito administrativo, el marco muestral ayuda a identificar y seleccionar adecuadamente a los participantes en encuestas o estudios, asegurando que las conclusiones sean generalizables a la población total.",
+      "fuente_principal": "Spiegel y Stephens, 2010",
+      "localizador": "libro-estadistica-spiegel-y-stephens-4-a-edicion-A02.txt (bloque 2)"
+    },
+    {
+      "concepto": "muestreo por cuotas estratificadas",
+      "definicion_rigurosa": "El muestreo por cuotas estratificadas es un método en el que la población se divide en subgrupos o estratos, y se seleccionan muestras de cada estrato proporcionalmente al tamaño del estrato en la población total. Este método busca mejorar la representatividad de la muestra al asegurar que todos los subgrupos importantes estén adecuadamente representados.",
+      "formulacion_matematica_latex": "n_h = \\frac{N_h}{N} \\times n",
+      "aplicacion_administrativa": "En estudios de mercado, el muestreo por cuotas estratificadas permite obtener una visión más precisa de las preferencias y comportamientos de diferentes segmentos de la población, lo que es crucial para el diseño de estrategias de marketing.",
+      "fuente_principal": "Wackerly, Mendenhall y Scheaffer, 2010",
+      "localizador": "libro-estadistica-matematica-con-aplicaciones-wackerly-A02.txt (bloque 1)"
+    },
+    {
+      "concepto": "error total de encuesta",
+      "definicion_rigurosa": "El error total de encuesta es la suma de los errores de muestreo y los errores no muestrales que pueden afectar la precisión de los resultados de una encuesta. Incluye errores de medición, de cobertura, de no respuesta y otros errores sistemáticos.",
+      "formulacion_matematica_latex": "E_T = E_M + E_NM",
+      "aplicacion_administrativa": "Minimizar el error total de encuesta es esencial para garantizar la fiabilidad y validez de los resultados de las encuestas en estudios administrativos y de mercado.",
+      "fuente_principal": "Wackerly, Mendenhall y Scheaffer, 2010",
+      "localizador": "libro-estadistica-matematica-con-aplicaciones-wackerly-A02.txt (bloque 4)"
+    },
+    {
+      "concepto": "paradoja de muestras masivas",
+      "definicion_rigurosa": "La paradoja de muestras masivas se refiere al fenómeno en el que, a pesar de aumentar el tamaño de la muestra, la variabilidad y el error de estimación no disminuyen proporcionalmente. Esto ocurre debido a la presencia de sesgos sistemáticos o a la falta de representatividad en la muestra.",
+      "formulacion_matematica_latex": "Var(\\bar{X}) = \\frac{\\sigma^2}{n}",
+      "aplicacion_administrativa": "En la práctica administrativa, comprender esta paradoja ayuda a evitar conclusiones erróneas basadas en muestras grandes pero no representativas, lo que es crucial para la toma de decisiones informadas.",
+      "fuente_principal": "Levin, 2010",
+      "localizador": "libro-estadistica-para-administracion-y-economia-levin-A02.txt (bloque 4)"
+    },
+    {
+      "concepto": "correlación por diseño defectuoso",
+      "definicion_rigurosa": "La correlación por diseño defectuoso ocurre cuando la estructura del diseño del estudio introduce correlaciones espurias entre las variables, lo que puede llevar a conclusiones falsas sobre la relación causal entre ellas.",
+      "formulacion_matematica_latex": "\\text{Correlación espuria} = \\frac{\\text{Cov}(X, Y)}{\\sigma_X \\sigma_Y}",
+      "aplicacion_administrativa": "En investigación administrativa, evitar la correlación por diseño defectuoso es crucial para garantizar la validez de las conclusiones y la eficacia de las intervenciones basadas en los resultados del estudio.",
+      "fuente_principal": "Wackerly, Mendenhall y Scheaffer, 2010",
+      "localizador": "libro-estadistica-matematica-con-aplicaciones-wackerly-A02.txt (bloque 1)"
+    },
+    {
+      "concepto": "ponderación post-estratificación",
+      "definicion_rigurosa": "La ponderación post-estratificación es un método utilizado para ajustar las ponderaciones de las unidades muestrales después de la recolección de datos para que la muestra sea más representativa de la población total. Esto se logra reasignando pesos a las unidades muestrales en función de su pertenencia a diferentes estratos.",
+      "formulacion_matematica_latex": "w_i = \\frac{N_h}{n_h}",
+      "aplicacion_administrativa": "En estudios de mercado y encuestas de opinión, la ponderación post-estratificación ayuda a corregir desbalances en la muestra y mejorar la precisión de las estimaciones.",
+      "fuente_principal": "Wackerly, Mendenhall y Scheaffer, 2010",
+      "localizador": "libro-estadistica-matematica-con-aplicaciones-wackerly-A02.txt (bloque 1)"
+    },
+    {
+      "concepto": "asignación experimental aleatoria",
+      "definicion_rigurosa": "La asignación experimental aleatoria es un método en el que los participantes son asignados al azar a diferentes grupos de tratamiento para garantizar que las diferencias observadas entre los grupos sean atribuibles al tratamiento y no a otras variables.",
+      "formulacion_matematica_latex": "P(\\text{Asignación}) = \\frac{1}{k}",
+      "aplicacion_administrativa": "En estudios experimentales en administración, la asignación aleatoria ayuda a controlar variables de confusión y mejorar la validez interna del estudio.",
+      "fuente_principal": "Guarín-Salazar, 2010",
+      "localizador": "libro-estadistica-aplicada-guarin-salazar-universidad--A02.txt (bloque 3)"
+    },
+    {
+      "concepto": "tamaño efectivo de muestra",
+      "definicion_rigurosa": "El tamaño efectivo de muestra es una medida que ajusta el tamaño nominal de la muestra para tener en cuenta la posible correlación entre las unidades muestrales o la no respuesta. Un tamaño efectivo de muestra más pequeño indica una mayor correlación o una tasa más alta de no respuesta.",
+      "formulacion_matematica_latex": "n_{eff} = \\frac{n}{1 + (n-1)\\rho}",
+      "aplicacion_administrativa": "En la planificación de estudios estadísticos, calcular el tamaño efectivo de muestra ayuda a determinar el número real de observaciones necesarias para lograr la precisión deseada.",
+      "fuente_principal": "Wackerly, Mendenhall y Scheaffer, 2010",
+      "localizador": "libro-estadistica-matematica-con-aplicaciones-wackerly-A02.txt (bloque 1)"
+    },
+    {
+      "concepto": "sesgo de autoselección",
+      "definicion_rigurosa": "El sesgo de autoselección ocurre cuando los participantes en un estudio se autoseleccionan en función de características que pueden estar correlacionadas con las variables de interés, lo que puede llevar a conclusiones sesgadas.",
+      "formulacion_matematica_latex": "\\text{Sesgo} = E(\\hat{\\theta}) - \\theta",
+      "aplicacion_administrativa": "En estudios de mercado y encuestas de satisfacción, identificar y corregir el sesgo de autoselección es crucial para obtener resultados fiables y generalizables.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "libro-estadistica-aplicada-a-los-negocios-y-la-economi-A02.txt (bloque 3)"
+    }
+  ]
+}

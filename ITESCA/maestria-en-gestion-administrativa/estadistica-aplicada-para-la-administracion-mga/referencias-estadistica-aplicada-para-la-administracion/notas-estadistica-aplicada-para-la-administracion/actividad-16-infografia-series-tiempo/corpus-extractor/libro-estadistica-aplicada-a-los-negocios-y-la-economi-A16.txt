@@ -1,0 +1,692 @@
+Fuente bibliográfica: Estadística aplicada a los negocios y la economía - Lind, Marchal y Wathen. 15.ª edición.pdf
+Actividad: 16 (6.1 Infografía Equipo 4% Tarea)
+Palabras clave: serie de tiempo, tendencia, estacionalidad, ciclo, medias móviles, suavizamiento exponencial, índice estacional, tasas de variación
+
+[Bloque seleccionado #631 | relevancia=17]
+Pagina 630
+16.1 Introducción
+En este capítulo se efectúa el análisis y la proyección de las series de tiempo. Una serie de
+tiempo es un grupo de datos registrados durante un periodo semanal, trimestral o anual. Dos
+ejemplos de las series de tiempo son las ventas
+de Microsoft Corporation por trimestre desde
+1985, y la producción anual de ácido sulfúrico
+desde 1970.
+Un análisis de la historia, que es una serie de
+tiempo, es útil para que la administración tome
+decisiones hoy y planee con base en una predic-
+ción, o proyección, de largo plazo. En general, se
+supone que los patrones pasados continuarán en
+el futuro. Las proyecciones de largo plazo se
+amplían a más de 1 año; son comunes las proyec-
+ciones de 2, 5 y 10 años. Las proyecciones de largo plazo son esenciales a fin de dar tiempo
+suficiente para que los departamentos de compras, manufactura, ventas, finanzas y otros de
+una compañía elaboren planes para construir nuevas plantas, solicitar financiamiento, desarro-
+llar productos nuevos y métodos de ensamble innovadores.
+En Estados Unidos, la proyección del nivel de ventas, tanto de corto como de largo pla-
+zos, se rige casi por la propia naturaleza de las organizaciones de negocios. La competencia
+por el dinero de los consumidores, la presión para obtener utilidades para los accionistas, el
+deseo de obtener una mayor participación de mercado y las ambiciones de los ejecutivos son
+algunas fuerzas de motivación en los negocios. Por lo tanto, se necesita una proyección (una
+declaración de los objetivos de la administración) para tener las materias primas, las instala-
+ciones de producción y el personal para cumplir con la demanda.
+Este capítulo trata del uso de los datos para proyectar eventos futuros. Primero se anali-
+zan los componentes de una serie de tiempo; luego, algunas técnicas para analizar los datos
+y, por último, se proyectan eventos futuros.
+16.2 Componentes de una serie de tiempo
+Una serie de tiempo consta de cuatro componentes: tendencia, variación cíclica, variación
+estacional y variación irregular.
+Tendencia secular
+Las tendencias de largo plazo de las ventas, el empleo, los precios accionarios y de otras
+series de negocios y económicas siguen varios patrones. Algunas se mueven hacia arriba en
+forma uniforme, otras declinan y otras más permanecen iguales con el paso del tiempo.
+16.2 Componentes de una serie de tiempo
+605
+¿Qué es una serie de tiempo?
+TENDENCIA SECULAR Dirección uniforme de una serie de tiempo de largo plazo.
+OA1 Definir los compo-
+nentes de una serie de
+tiempo.
+Los siguientes son varios ejemplos de una tendencia secular.
+
+
+[Bloque seleccionado #633 | relevancia=11]
+Pagina 632
+Casi todos los negocios suelen tener patrones estacionales recurrentes. Por ejemplo, la
+ropa para caballeros y niños tiene ventas muy elevadas justo antes de Navidad, y relativamen-
+te bajas después de esa celebración y durante el verano. Las ventas de juguetes son otro
+ejemplo con un patrón estacional extremo. Más de la mitad de los negocios del año se reali-
+zan, en general, en noviembre y diciembre. El negocio de jardinería es estacional en los esta-
+dos del noreste y del centro-norte de Estados Unidos. Muchos negocios tratan de equilibrar
+los efectos estacionales y se dedican a otras actividades de compensación estacional. En el
+noreste de Estados Unidos es posible ver al encargado de un negocio de jardinería con un qui-
+tanieve al frente del camión, en un intento por obtener algún ingreso durante la temporada de
+invierno. Con frecuencia, en las cercanías de los centros de esquí de todo el país hay campos
+de golf. Los propietarios de los albergues tratan de rentarlos a esquiadores en el invierno y a
+golfistas en el verano. Éste es un método eficaz para repartir los gastos fijos en todo el año,
+en lugar de distribuirlos sólo en algunos meses.
+En la gráfica 16-2 aparecen las ventas trimestrales, en millones de dólares, de Hercher
+Sporting Goods, Inc. Dicha compañía de artículos deportivos del área de Chicago se especia-
+liza en la venta de equipo de béisbol y softbol a preparatorias, universidades y ligas juveniles.
+También tiene varias tiendas de descuento en algunos de los centros comerciales más gran-
+des. Para su negocio existe un patrón estacional distintivo. La mayoría de sus ventas son en el
+primero y segundo trimestres del año, cuando las escuelas y organizaciones compran equipo
+16.2 Componentes de una serie de tiempo
+607
+VARIACIÓN CÍCLICA Aumento y reducción de una serie de tiempo durante periodos mayores
+de un año.
+GRÁFICA 16-1 Baterías que vendió National Battery Retailers, Inc., de 1991 a 2010
+Año
+1991
+1996
+2001
+2006
+2011
+Prosperidad 
+Recuperación 
+Recesión 
+Tendencia secular
+de largo plazo
+Depresión 
+Baterías vendidas (miles)
+75
+70
+65
+60
+55
+50
+45
+40
+VARIACIÓN ESTACIONAL Patrones de cambio en una serie de tiempo en un año. Estos patrones
+tienden a repetirse cada año.
+En la tabla 16-1 se presentan las unidades anuales de baterías que vendió National
+Battery Retailers, Inc., desde 1991 hasta 2010. Se resalta el ciclo natural del negocio. Los
+periodos son de recuperación, seguidos por prosperidad, luego recesión y, por último, el ciclo
+desciende con depresión.
+Variación estacional
+El tercer componente de una serie de tiempo es la va
+
+[Bloque seleccionado #634 | relevancia=17]
+Pagina 633
+para la próxima temporada. Durante el verano se mantiene ocupada con la venta de equipo de
+reemplazo. Hace algunos negocios durante la temporada navideña (cuarto trimestre), mientras
+que las últimas semanas del verano (tercer trimestre) conforman su temporada baja.
+Variación irregular
+Muchos analistas prefieren subdividir la variación irregular en variaciones episódicas y resi-
+duales. Las fluctuaciones episódicas son impredecibles, pero es posible identificarlas: por
+ejemplo, el efecto inicial de una huelga importante o de una guerra en la economía no se pue-
+den predecir. Después de eliminar las fluctuaciones episódicas, la variación restante se deno-
+mina variación residual. Las fluctuaciones residuales, con frecuencia denominadas
+fluctuaciones azarosas, son impredecibles y no se pueden identificar. Por supuesto, no es
+posible proyectar a futuro ni la variación episódica ni la residual.
+16.3 Promedio móvil
+Un promedio móvil es útil para suavizar una serie de tiempo y apreciar su tendencia. Además,
+es el método básico para medir la fluctuación estacional, que se describe más adelante en el
+capítulo. En contraste con el método de mínimos cuadrados, que expresa la tendencia en tér-
+minos de una ecuación matemática (
+ a  bt), el método del promedio móvil sólo suaviza
+las fluctuaciones de los datos. Este objetivo se logra al “desplazar” los valores medios aritmé-
+ticos en la serie de tiempo.
+Para aplicar el promedio móvil a una serie de tiempo, los datos deben seguir una tenden-
+cia muy lineal y tener un patrón rítmico definido de las fluctuaciones (que se repita, por ejem-
+plo, cada tres años). Los datos del siguiente ejemplo tienen tres componentes: tendencia, ciclo
+e irregularidad, abreviadas T, C e I. No hay variación estacional debido a que los datos se
+registran cada año. Lo que logra el promedio móvil es promediar C e I. Lo que queda es la ten-
+dencia.
+Si la duración de los ciclos es constante y las amplitudes de los ciclos son iguales, las
+fluctuaciones cíclica e irregular se eliminan por completo con el promedio móvil. El resultado
+es una recta. Por ejemplo, en la siguiente serie de tiempo, el ciclo se repite cada siete años y
+la amplitud de cada ciclo es 4; es decir, hay exactamente cuatro unidades desde el valle (el
+periodo más bajo) hasta el pico. Por lo tanto, el promedio móvil de siete años promedia a la
+perfección las fluctuaciones cíclicas e irregulares, y el residuo es una tendencia lineal.
+El primer paso para calcular el promedio móvil de siete años es determinar los totales
+móviles de siete años. Las ventas totales de los pr
+
+[Bloque seleccionado #641 | relevancia=10]
+Pagina 640
+16.5 Tendencia lineal
+La tendencia de largo plazo de muchas series de negocios, como ventas, exportaciones y pro-
+ducción, con frecuencia se aproxima a una recta. En este caso, la ecuación para describir este
+crecimiento es:
+16.5 Tendencia lineal
+615
+La ecuación de la recta de la gráfica 16-5 es:
+donde:
+representa las ventas en millones de dólares.
+1 es la intercepción con el eje Y. También representa las ventas en millones de dólares del
+año 0, o 2000.
+t se refiere al incremento de ventas anual.
+Yˆ
+Yˆ  1  2t
+donde:
+que se lee Y testada, es el valor proyectado de la variable Y de un valor seleccionado
+de t.
+a es la intersección con el eje Y. Es el valor estimado de Y cuando t  0. Otra forma de
+expresar esto es: a es el valor estimado de Y donde la línea cruza el eje Y cuando t es
+cero.
+b es la pendiente de la recta, o el cambio promedio en 
+por cada aumento de una uni-
+dad en t.
+t es cualquier valor de tiempo seleccionado.
+Para ilustrar el significado de , a, b y t en un problema de serie de tiempo, en la gráfica
+16-5 se traza una recta para representar la tendencia habitual de las ventas. Suponga que esta
+compañía inició sus operaciones en 2001. Este año inicial (2001) se designa de manera arbi-
+traria como año 1. Observe que las ventas aumentaron $2 millones en promedio cada año; es
+decir, con base en la recta trazada por los datos de ventas, éstas aumentaron de $3 millones
+en 2001 a $5 millones en 2002, a $7 millones en 2003, a $9 millones en 2004, y así sucesiva-
+mente. Por lo tanto, la pendiente, o b, es 2. Además, observe que la recta interseca el eje Y
+(cuando t  0) en $1 millón. Este punto es a. Otra manera de determinar b es ubicar el punto
+de partida de la recta en el año 1, que en este problema es 3 para 2001. Luego se ubica el
+valor en la recta del último año, que para 2009 es 19. Las ventas se incrementaron $19 millo-
+nes  $3 millones  $16 millones, en ocho años (de 2001 a 2009). Por lo tanto, 16  8  2,
+que es la pendiente de la recta, o b.
+Yˆ
+Yˆ
+Yˆ
+La pendiente de la recta de la
+tendencia es b.
+GRÁFICA 16-5 Recta ajustada a los datos de ventas
+24
+20
+16
+12
+8
+4
+ 
+2001 
+2002 
+2003 
+2004 
+2005 
+2006 
+2007 
+2008 
+2009 Años 
+ 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+Códigos
+Ventas (en millones de dólares)
+Tendencia 
+Ventas 
+OA3 Determinar una ecua-
+ción de tendencia lineal.
+ECUACIÓN DE TENDENCIA LINEAL
+(16-1)
+Yˆ  a  bt
+
+[Bloque seleccionado #644 | relevancia=9]
+Pagina 643
+Determine la ecuación de la tendencia de mínimos cuadrados. Estime las ventas de 2012.
+16.7 Tendencias no lineales
+En el análisis anterior la atención se centró en una serie de tiempo cuyo crecimiento o decli-
+nación se aproximaban a una recta. Una ecuación de tendencia lineal se utiliza para represen-
+tar la serie de tiempo cuando se considera que los datos aumentan (o disminuyen) en
+cantidades iguales, en promedio, de un periodo a otro.
+Los datos que aumentan (o disminuyen) en cantidades cada vez mayores durante un pe-
+riodo aparecen curvilíneos cuando se trazan en una gráfica con escala aritmética. En otras pa-
+Ejercicios
+3.
+A continuación se reporta el número de habitaciones alquiladas en Plantation Resorts, Georgia, de
+los años de 1999 a 2009.
+618
+CAPÍTULO 16 Series de tiempo y proyección
+Determine la ecuación de mínimos cuadrados. De acuerdo con esta información, ¿cuáles son los
+alquileres estimados para 2010?
+4.
+En la siguiente tabla aparecen las ventas netas en millones de dólares de Home Depot, Inc., y sus
+subsidiarias de 1993 a 2009.
+Año
+Ventas netas
+Año
+Ventas netas
+Año
+Ventas netas
+1993
+$ 9 239
+1999
+$38 434
+2005
+$81 511
+1994
+12 477
+2000
+45 738
+2006
+90 837
+1995
+15 470
+2001
+53 553
+2007
+77 349
+1996
+19 535
+2002
+58 247
+2008
+71 300
+1997
+24 156
+2003
+64 816
+2009
+66 200
+1998
+30 219
+2004
+73 094
+Año
+Alquiladas
+Año
+Alquiladas
+Año
+Alquiladas
+1999
+6 714
+2003
+9 762
+2007
+6 162
+2000
+7 991
+2004
+10 180
+2008
+6 897
+2001
+9 075
+2005
+8 334
+2009
+8 285
+2002
+9 775
+2006
+8 272
+Desecho
+Año
+Código
+(toneladas)
+2006
+1
+2
+2007
+2
+4
+2008
+3
+3
+Desecho
+Año
+Código
+(toneladas)
+2009
+4
+5
+2010
+5
+6
+Ventas (en
+Año
+Código
+millones de dólares)
+2004
+1
+17.5
+2005
+2
+19.0
+2006
+3
+21.0
+2007
+4
+22.7
+Ventas (en
+Año
+Código
+millones de dólares)
+2008
+5
+24.5
+2009
+6
+26.7
+2010
+7
+27.3
+OA5 Calcular una ecuación
+de tendencia no lineal.
+Determine la ecuación de mínimos cuadrados. Con base en esta información, ¿cuáles son las ven-
+tas estimadas para 2010 y 2011?
+5.
+En la siguiente tabla aparecen las cantidades anuales de vidrio de desecho producido por Kimble
+Glass Works, Inc.
+Determine la ecuación de la tendencia de mínimos cuadrados. Estime la cantidad de desecho que
+se generará en 2012.
+6.
+En la siguiente tabla aparecen las ventas de Walder’s Milk and Dairy Products, en millones de dóla-
+res, durante el periodo de 2004 a 2010.
+
+[Bloque seleccionado #650 | relevancia=10]
+Pagina 649
+624
+CAPÍTULO 16 Series de tiempo y proyección
+mestre “se desplaza” al sumar las ventas de primavera, verano y otoño de 2004
+a las ventas de invierno de 2005. El total es $33.8 (millones), determinado por 4.6
+ 10.0  12.7  6.5. Este procedimiento se aplica a las ventas trimestrales de
+cada uno de los seis años. En la columna 2 de la tabla 16-7 aparecen los totales
+móviles. Observe que el total móvil, 34.0, se coloca entre las ventas de primave-
+ra y verano de 2004; el siguiente total móvil, 33.8, se coloca entre las ventas del
+verano y otoño de 2004, etc. Verifique los totales con frecuencia para evitar erro-
+res aritméticos.
+Paso 2: Cada total móvil trimestral en la columna 2 se divide entre 4 para obtener el pro-
+medio móvil trimestral. (Vea la columna 3.) Todos los promedios móviles aún están
+colocados entre los trimestres. Por ejemplo, el primer promedio móvil (8.500) se
+coloca entre la primavera y el verano de 2004.
+Paso 3: Se centran los promedios móviles. El primer promedio móvil centrado se determi-
+na mediante (8.500  8.450)/2  8.475, y se centra en oposición al verano de
+2004. El segundo promedio móvil se determina mediante (8.450  8.450)/2 
+8.450. Los otros se determinan de manera similar. Observe en la columna 4 que
+cada promedio móvil centrado se coloca en un trimestre en particular.
+Paso 4: Luego calcule el índice estacional específico por cada trimestre dividiendo las
+ventas en la columna 1 entre el promedio móvil centrado en la columna 4. El índi-
+ce estacional específico reporta la razón del valor de la serie de tiempo original
+con el promedio móvil. Para explicar esta cuestión un poco más, si representa la
+serie de tiempo con TSCI y el promedio móvil con TC, de manera algebraica, si
+calcula TSCI/TC, el resultado es el componente estacional específico SI. El índi-
+ce estacional específico del trimestre del verano de 2004 es 1.180, determinado
+por 10.0/8.475.
+Paso 5: Los índices estacionales específicos aparecen organizados en la tabla 16-8. Esta
+tabla ayuda a ubicar los estacionales específicos de los trimestres correspondien-
+tes. Los valores 1.180, 1.130, 1.141, 1.126 y 1.143 representan estimaciones del
+índice estacional habitual del trimestre de verano. Un método razonable para
+encontrar un índice estacional habitual es promediar estos valores a fin de elimi-
+nar el componente irregular. Por lo tanto, el índice habitual del trimestre de vera-
+no se determina mediante (1.180  1.130  1.141  1.126  1.143)/5  1.144.
+Se utilizó la media aritmética, aunque también pudo emplear la mediana o una
+media modificada.
+Año
+Inv
+
+[Bloque seleccionado #654 | relevancia=11]
+Pagina 653
+Para eliminar el efecto de la variación estacional, la cantidad de ventas en cada trimestre
+(con los efectos de tendencia, cíclicos, irregulares y estacionales) se divide entre el índice esta-
+cional de ese trimestre, es decir, TSCI/S. Por ejemplo, las ventas reales del primer trimestre de
+2004 fueron de $6.7 millones. El índice estacional del trimestre de invierno es 76.5%, con los
+resultados de MegaStat de la página 626. El índice de 76.5 indica que las ventas del primer
+trimestre están habitualmente 23.5% debajo del promedio de un trimestre típico. Al dividir las
+ventas reales de $6.7 millones entre 76.5, y multiplicar el resultado por 100, se obtienen las
+ventas desestacionalizadas, es decir, se elimina el efecto estacional sobre las ventas, del pri-
+mer trimestre de 2004. Éste es $8 758 170, determinado mediante ($6 700 000/76.5)100.
+Continúe este proceso con los demás trimestres en la columna 3 de la tabla 16-9, con los
+resultados reportados en millones de dólares. Como ha eliminado (cancelado) el componente
+estacional de las ventas trimestrales, la cifra de las ventas desestacionalizadas sólo contiene
+los componentes de tendencia (T), cíclica (C) e irregular (I). Al analizar las ventas desestacio-
+nalizadas en la columna 3 de la tabla 16-9, observe que las ventas de juguetes mostraron un
+aumento moderado durante el periodo de seis años. En la gráfica 16-9 aparecen tanto las ven-
+tas reales como las desestacionalizadas. Es claro que eliminar el factor estacional permite
+enfocarse en la tendencia general de largo plazo de las ventas. También puede determinar la
+ecuación de regresión de los datos de la tendencia y con ella proyectar ventas futuras.
+628
+CAPÍTULO 16 Series de tiempo y proyección
+(1)
+(2)
+(3)
+Índice
+Ventas
+Año
+Trimestre
+Ventas
+estacional
+desestacionalizadas
+2008
+Invierno
+7.1
+0.765
+9.28
+Primavera
+5.7
+0.575
+9.91
+Verano
+11.1
+1.141
+9.73
+Otoño
+14.5
+1.519
+9.55
+2009
+Invierno
+8.0
+0.765
+10.46
+Primavera
+6.2
+0.575
+10.79
+Verano
+11.4
+1.141
+9.99
+Otoño
+14.9
+1.519
+9.81
+GRÁFICA 16-9 Ventas reales y desestacionalizadas de Toys International, 2004 a 2009
+OA8 Calcular proyecciones
+estacionalmente ajustadas.
+Uso de datos desestacionalizados para proyección
+El procedimiento para identificar la tendencia y los ajustes estacionales se combina para pro-
+ducir proyecciones estacionalmente ajustadas. Para identificar la tendencia, determine la
+ecuación de la tendencia de mínimos cuadrados en los datos históricos desestacionalizados.
+Luego proyecte esta tendencia en periodos futuros, y después ajuste las tendencias de los
+valores para calcular los factor
+
+[Bloque seleccionado #662 | relevancia=16]
+Pagina 661
+Ejercicios
+15. Recuerde el ejercicio 9 del capítulo 14 y la ecuación de regresión para predecir el desempeño en
+el trabajo. Vea la página 544.
+a) Trace los residuos en el orden en el cual se presentan los datos.
+b) Pruebe por autocorrelación con un nivel de significancia de 0.05.
+16. Considere los datos del ejercicio 10 del capítulo 14 y la ecuación de regresión para predecir las
+comisiones ganadas. Vea la página 545.
+a) Trace los residuos en el orden en el cual se presentan los datos.
+b) Pruebe la autocorrelación con un nivel de significancia de 0.01.
+Resumen del capítulo
+I. Una serie de tiempo es un conjunto de datos durante un periodo.
+A. La tendencia es la dirección de largo plazo de la serie de tiempo.
+B. El componente cíclico es la fluctuación por arriba y por debajo de la recta de tendencia de largo
+plazo durante un periodo mayor.
+C. La variación estacional es el patrón en una serie de tiempo en un año. Estos patrones tienden a
+repetirse año tras año en la mayoría de los negocios.
+D. La variación irregular se divide en dos componentes.
+1. Las variaciones episódicas son impredecibles, pero en general se pueden identificar. Un
+ejemplo es una inundación.
+2. Las variaciones residuales son de naturaleza aleatoria.
+II. Un promedio móvil se utiliza para suavizar la tendencia en una serie de tiempo.
+III. La ecuación de la tendencia lineal es 
+donde a es la intersección con el eje Y, b es la
+pendiente de la recta y t es el tiempo codificado.
+A. La ecuación de la tendencia se determina mediante el principio de los mínimos cuadrados.
+B. Si la tendencia no es lineal, sino más bien los incrementos tienden a ser un porcentaje constan-
+te, los valores Y se convierten en logaritmos y con éstos se determina la ecuación de mínimos
+cuadrados.
+IV. Se puede estimar un factor estacional con el método de la razón con el promedio móvil.
+A. El procedimiento de seis pasos produce el índice estacional de cada periodo.
+1. En general, los factores estacionales se calculan por mes o trimestre.
+2. El factor estacional se utiliza para ajustar las proyecciones, tomando en cuenta los efectos
+de la temporada.
+V. El estadístico de Durbin-Watson (16-4) se utiliza para probar si hay autocorrelación.
+(16-4)
+Ejercicios del capítulo
+17. Consulte el siguiente diagrama.
+d 
+a
+n
+t2
+(et  et1)2
+a
+n
+t1
+(et)2
+Yˆ  a  bt,
+636
+CAPÍTULO 16 Series de tiempo y proyección
+20 000
+18 000
+16 000
+14 000
+12 000
+10 000
+0 1990 
+1995 
+2000 
+2005
+2010
+Producción
+
+[Bloque seleccionado #663 | relevancia=9]
+Pagina 662
+a) Estime la ecuación de la tendencia lineal de la serie de producción trazando la recta de los
+datos.
+b) ¿Cuál es el decremento anual promedio de la producción?
+c) Con base en la ecuación de la tendencia, ¿cuál es la proyección para 2014?
+18. Consulte el siguiente diagrama.
+a) Estime la ecuación de la tendencia lineal de la serie de ingreso personal.
+b) ¿Cuál es el aumento anual promedio del ingreso personal?
+Ejercicios del capítulo
+637
+18 000
+16 000
+14 000
+12 000
+10 000
+8 000
+6 000
+4 000
+2 000
+0
+ 1995 
+2000 
+2005 
+2010
+Ingreso personal (en dólares)
+2000
+2001
+2002
+2003
+2004
+2005
+2006
+2007
+2008
+2009
+2010
+1.11
+1.28
+1.17
+1.10
+1.06
+1.14
+1.24
+1.33
+1.38
+1.50
+1.65
+Año
+Ventas
+Año
+Ventas
+2005
+7.45
+2008
+7.94
+2006
+7.83
+2009
+7.76
+2007
+8.07
+2010
+7.90
+Año
+Empleados
+Año
+Empleados
+2005
+45.6
+2008
+39.3
+2006
+42.2
+2009
+34.0
+2007
+41.1
+2010
+30.0
+a) Trace los datos.
+b) Determine la ecuación de la tendencia de mínimos cuadrados.
+c) Con la ecuación de la tendencia, calcule los puntos de 2007 y 2010. Trace los puntos en la grá-
+fica y la recta de regresión.
+d) Estime el número de empleados en 2013.
+e) ¿En cuánto aumentó (o disminuyó) el número de empleados por año, en promedio, durante el
+periodo?
+19. El movimiento de los activos, excepto inversiones en efectivo y de corto plazo, de RNC Company
+de 2000 a 2010 es:
+a) Trace los datos.
+b) Determine la ecuación de la tendencia de mínimos cuadrados.
+c) Calcule los puntos de la recta de tendencia de 2003 y 2008, y trace la recta en la gráfica.
+d) Estime el movimiento de los activos en 2015.
+e) ¿Cuánto aumentó el movimiento de activos por año, en promedio, de 2000 a 2010?
+20. Las ventas, en miles de millones de dólares, de Keller Overhead Door, Inc., de 2005 a 2010 son:
+a) Trace los datos.
+b) Determine la ecuación de la tendencia de mínimos cuadrados.
+c) Utilice la ecuación de la tendencia para calcular los puntos de 2007 y 2010. Trace los puntos
+en la gráfica y la recta de regresión.
+d) Estime las ventas netas de 2013.
+e) ¿Cuánto aumentaron (o disminuyeron) las ventas por año, en promedio, durante el periodo?
+21. El número de empleados, en miles, de Keller Overhead Door, Inc., de 2005 a 2010 es:
+
+[Bloque seleccionado #671 | relevancia=20]
+Pagina 670
+Repaso de los capítulos 15 y 16
+En el capítulo 15 se presentan los números índices. Un número índice describe el cambio relativo de
+valor de un periodo, denominado periodo base, a otro denominado periodo dado. En realidad es un
+porcentaje, pero, en general, el signo de porcentaje se omite. Los índices se utilizan para comparar el
+cambio en series desiguales en el tiempo. Por ejemplo, una compañía podría querer comparar el cam-
+bio en las ventas con el cambio en el número de vendedores empleados durante el mismo periodo. Una
+comparación directa no es significativa porque las unidades de un conjunto de datos son dólares, y del
+otro, personas. Los números índice también facilitan la comparación de valores muy grandes, donde la
+cantidad de cambio en los valores actuales es muy grande y, por lo tanto, difíciles de interpretar.
+Hay dos tipos de índices de precios. Un índice de precios no ponderado no considera las cantida-
+des. Para formar un índice no ponderado se divide el valor del periodo base entre el periodo actual
+(también denominado periodo dado) y se reporta el cambio porcentual. Por lo tanto, si las ventas fue-
+ron de $12 000 000 en 2004 y de $18 600 000 en 2010, el índice de precios sin ponderar simple de
+2010 es:
+Se concluye que las ventas aumentaron 55% durante el periodo de seis años.
+Un índice de precios ponderado considera las cantidades. El índice ponderado más común es el
+índice de precios de Laspeyres. En él se utilizan las cantidades del periodo base como ponderaciones
+para comparar cambios de precios. Se calcula al multiplicar las cantidades del periodo base por el pre-
+cio del periodo base por cada producto considerado, y se suma el total. Este resultado es el denomi-
+nador de la fracción. El numerador de la fracción es el producto de las cantidades del periodo base por
+el precio actual. Por ejemplo, una tienda de aparatos electrónicos vendió 50 computadoras a $1 000 y
+200 reproductores de DVD a $150 cada uno en el año 2004. En 2010, la misma tienda vendió 60 com-
+putadoras a $1 200 y 230 reproductores de DVD a $175. El índice de precios de Laspeyres es:
+Observe que se utilizan las mismas cantidades del periodo base como ponderaciones tanto en el
+numerador como en el denominador. El índice indica 18.75% de aumento del valor de las ventas duran-
+te el periodo de seis años.
+El índice de uso y reporte más frecuente es el Índice de Precios al Consumidor (IPC). El IPC es un
+índice del tipo de Laspeyres. Lo elabora cada mes el U.S. Department of Labor para reportar la tasa de
+inflación de los precios de bienes y servicios en Estados 

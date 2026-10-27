@@ -1,0 +1,539 @@
+Fuente bibliográfica: Estadística matemática con aplicaciones - Wackerly, Mendenhall y Scheaffer. 7.ª edición.pdf
+Actividad: 3 (1.3 Cuestionario 5 %)
+Palabras clave: parámetro, estadístico, estratificado, sistemático, conglomerados, cuotas, bola de nieve, error muestral
+
+[Bloque seleccionado #484 | relevancia=12]
+Pagina 483
+ 
+ 
+( ˆpn −p) √ˆpn ˆqn/ n
+/
+ converge en una distribución normal estándar. [Sugerencia: escriba Y como lo hici-
+mos en la Sección 7.5.]
+ 
+9.4 Suﬁ ciencia
+Hasta aquí hemos seleccionado estimadores con base en la intuición. Por tanto, elegimos 
+Y y S2 como los estimadores de la media y la varianza, respectivamente, de la distribución 
+normal. (Parece que éstos deben ser buenos estimadores de los parámetros poblacionales.) 
+Hemos visto que en ocasiones es más conveniente usar estimadores insesgados. De hecho, se 
+ha demostrado que Y y S2 son estimadores insesgados de la media poblacional m y la varianza 
+s2, respectivamente. Observe que hemos empleado la información en una muestra de tamaño 
+n para calcular el valor de dos estadísticos que funcionan como estimadores para los paráme-
+tros de interés. En esta etapa los valores muestrales reales ya no son importantes; más bien, 
+resumimos la información de la muestra que se relaciona con los parámetros de interés al usar 
+los estadísticos Y y S2. ¿Este proceso de resumir o reducir los datos a los dos estadísticos Y y 
+S2 conserva toda la información acerca de m y s2 en el conjunto original de n observaciones 
+muestrales? O bien, ¿se ha perdido u ocultado alguna información acerca de estos parámetros 
+en el proceso de reducir los datos? En esta sección presentamos métodos para hallar estadísti-
+cos que en cierto sentido resumen toda la información de una muestra acerca de un parámetro 
+objetivo. Se dice que estos estadísticos tienen la propiedad de sufi ciencia o, dicho en una 
+forma más sencilla, reciben el nombre de estadísticos sufi cientes. Como veremos en la si-
+guiente sección, “buenos” estimadores son (o se puede hacer que sean) funciones de cualquier 
+estadístico sufi ciente. En realidad, los estadísticos sufi cientes a menudo se pueden usar para 
+desarrollar estimadores que tienen varianza mínima entre todos los estimadores insesgados.
+Para ilustrar la noción de un estadístico sufi ciente, consideremos los resultados de n inten-
+tos de un experimento binomial, X1,  X2, . . . , Xn, donde
+Xi =
+1,
+si el i-ésimo intento es un éxito,
+0,
+si el i-ésimo intento es un fracaso.
+Si p es la probabilidad de éxito en cualquier intento, entonces, para i = 1, 2, . . . , n,
+Xi =
+1,
+con probabilidad p,
+0,
+con probabilidad q = 1 − p.
+Suponga que nos dan un valor de Y =
+n
+i=1 Xi , el número de éxitos entre los n intentos. Si 
+conocemos el valor de Y, ¿podemos obtener alguna información adicional acerca de p al ver 
+otras funciones de X1,  X2, . . . , Xn? Una forma de responder esta pregunta es ver la distribuci
+
+[Bloque seleccionado #487 | relevancia=13]
+Pagina 486
+462  Capítulo 9  Propiedades de los estimadores puntuales y métodos de estimación
+Observe que L (u) es una función sólo de u y y y que si
+g(y, u) = e−ny/u
+un
+h (y1, y2, . . . , yn) = 1,
+y
+entonces
+L (y1, y2, . . . , yn u) = g(y, u) × h (y1, y2, . . . , yn)
+|
+En consecuencia, el Teorema 9.4 implica que Y es un estadístico sufi ciente para el paráme-
+tro u. 
+Q
+El Teorema 9.4 se puede usar para demostrar que hay muchos posibles estadísticos sufi -
+cientes para cualquier parámetro poblacional. Primero que nada, de acuerdo con la Defi nición 
+9.3 o el criterio de factorización (Teorema 9.4), la muestra aleatoria por sí misma es un es-
+tadístico sufi ciente. En segundo término, si Y1, Y2, . . . , Yn denotan una muestra aleatoria de 
+una distribución con una función de densidad con parámetro u, entonces el conjunto de esta-
+dísticos de orden Y(1)≤ Y(2) ≤ ⋅ ⋅ ⋅ ≤ Y(n), que es una función de Y1, Y2, . . . , Yn, es sufi ciente 
+para u. En el Ejemplo 9.5 decidimos que Y es un estadístico sufi ciente para la estimación de u. 
+El Teorema 9.4 también podría haberse usado para demostrar que 
+n
+i=1 Yi es otro estadístico 
+sufi ciente. De hecho, para la distribución exponencial descrita en el Ejemplo 9.5, cualquier 
+estadístico que sea una función biunívoca de Y es un estadístico sufi ciente.
+En nuestro ejemplo inicial de esta sección, que comprende el número de éxitos en n inten-
+tos, Y =
+n
+i=1 Xi reduce los datos X1, X2, . . . , Xn a un solo valor que permanece sufi ciente 
+para p. En general, nos gustaría hallar un estadístico sufi ciente que reduzca los datos de la 
+muestra tanto como sea posible. Aun cuando muchos estadísticos son sufi cientes para el pa-
+rámetro u asociado con una distribución específi ca, la aplicación del criterio de factorización 
+lleva por lo general a un estadístico que proporciona el “mejor” resumen de la información 
+en los datos. En el Ejemplo 9.5 este estadístico es Y (o alguna función biunívoca de él). En la 
+siguiente sección, demostraremos la forma en que estos estadísticos sufi cientes se pueden usar 
+para generar estimadores insesgados con varianza mínima.
+Ejercicios
+ 
+9.37 
+Suponga que X1, X2, . . . , Xn denotan n variables aleatorias de Bernoulli independientes e idénticamente 
+distribuidas, tales que
+P(Xi = 1) = p
+y
+P(Xi = 0) = 1 −p,
+ 
+ 
+para cada i = 1, 2, . . . , n. Demuestre que 
+n
+i=1 Xi es sufi ciente para p usando para ello el criterio de 
+factorización dado en el Teorema 9.4.
+ 
+9.38 
+Sea Y1, Y2, . . . , Yn una muestra aleatoria de una distribución normal con media m y varianza s2.
+ 
+ 
+a Si m es desconocida y s2 es
+
+[Bloque seleccionado #490 | relevancia=18]
+Pagina 489
+ 
+ 
+ Recuerde los Teoremas 5.14 y 5.15, donde consideramos la forma de hallar medias y 
+varianzas de variables aleatorias con el uso de medias y varianzas condicionales. Como 
+ˆu es un estimador insesgado para u, el Teorema 5.14 implica que
+E(ˆu∗) = E[E(ˆu U)] = E(ˆu) = u.
+|
+Entonces, ˆu∗ es un estimador insesgado para u.
+ El Teorema 5.15 implica que
+V (ˆu) = V [E(ˆu U)] + E[V (ˆu U)]
+= V (ˆu∗) + E[V (ˆu U)].
+|
+|
+|
+ 
+ 
+Como V (ˆu U = u) ≥0
+|
+ para toda u, se deduce que E[V (ˆu U)] ≥0
+|
+ y por tanto 
+que V (ˆu) ≥V (ˆu∗), como dijimos.
+El Teorema 9.5 implica que un estimador insesgado para u con una varianza pequeña es, 
+o puede hacerse que sea, una función de un estadístico sufi ciente. Si tenemos un estimador 
+insesgado para u, podríamos mejorarlo con el uso del resultado del Teorema 9.5. Inicialmente 
+puede parecer que si se aplica una vez el teorema de Rao–Blackwell para obtener un mejor 
+estimador insesgado y luego se aplica nuevamente al nuevo estimador resultante se obtiene 
+un estimador insesgado aún mejor. Si aplicamos el teorema de Rao–Blackwell usando el esta-
+dístico sufi ciente U, entonces ˆu∗= E(ˆu U)
+|
+ será una función del estadístico U, por ejemplo 
+ˆu∗= h (U). Suponga que reaplicamos el teorema de Rao–Blackwell a ˆu∗ con el uso del mismo 
+estadístico sufi ciente U. Puesto que, en general, E (h (U)|U) = h (U), vemos que usando de 
+nuevo el teorema de Rao–Blackwell nuestro “nuevo” estimador es simplemente h(U) = ˆu∗.
+Esto es, si usamos el mismo estadístico sufi ciente en aplicaciones sucesivas del teorema de 
+Rao–Blackwell, no ganamos nada después de la primera aplicación. La única forma en que 
+aplicaciones sucesivas pueden llevar a mejores estimadores insesgados es si usamos un es-
+tadístico sufi ciente distinto cada vez que se reaplica el teorema. Así, no es necesario usar 
+el teorema de Rao–Blackwell sucesivamente si usamos el estadístico sufi ciente correcto en 
+nuestra aplicación inicial.
+Debido a que numerosos estadísticos son sufi cientes para un parámetro u asociado con una 
+distribución, ¿qué estadístico sufi ciente debemos usar cuando apliquemos este teorema? Para 
+las distribuciones que estudiamos en este texto, el criterio de factorización de manera típica 
+identifi ca un estadístico U que mejor resume la información de los datos acerca del parámetro 
+u. Tales estadísticos reciben el nombre de estadísticos sufi cientes mínimos. El Ejercicio 9.66 
+presenta un método para determinar un estadístico sufi ciente mínimo que podría ser de in-
+terés para algunos lectores. En unos pocos de los ejercicios subsiguientes veremos
+
+[Bloque seleccionado #497 | relevancia=10]
+Pagina 496
+472  Capítulo 9  Propiedades de los estimadores puntuales y métodos de estimación
+ 
+ 
+ 
+ ii Demuestre que para que esta relación sea independiente de p, debemos tener
+n
+i=1
+xi −
+n
+i=1
+yi = 0
+o
+n
+i=1
+xi =
+n
+i=1
+yi.
+ 
+ 
+ 
+iii  De acuerdo con el método de Lehmann y Scheffé, ¿cuál es el estadístico sufi ciente mínimo para p? 
+¿Cómo se compara este estadístico sufi ciente con el estadístico sufi ciente deducido en el Ejemplo 
+9.6 usando el criterio de factorización?
+ 
+ 
+b Considere la densidad de Weibull estudiada en el Ejemplo 9.7.
+ 
+ 
+ 
+   i Demuestre que
+L (x1, x2
+. . .
+. . .
+xn u)
+L (y1, y2, . . . ,
+, . . . ,
+yn u) =
+x1x2
+xn
+y1y2
+yn
+exp −1
+u
+n
+i=1
+x2
+i −
+n
+i=1
+y2
+i
+.
+|
+|
+ 
+ 
+ 
+ ii Demuestre que 
+n
+i=1 Y 2
+i es un estadístico sufi ciente mínimo para u.
+ 
+*9.67 
+Consulte el Ejercicio 9.66. Suponga que se toma una muestra de tamaño n de una población normal 
+con media m y varianza s2. Demuestre que 
+ y
+n
+i=1 Yi,
+n
+i=1 Y 2
+i conjuntamente forman estadísticos 
+sufi cientes mínimos para m y s2.
+ 
+*9.68 
+Suponga que un estadístico U tiene una función de densidad de probabilidad que es positiva en el inter-
+valo a ≤ u ≤ b y suponga que la densidad depende de un parámetro u que puede variar en el intervalo a1 
+≤ u ≤ a2. Suponga también que g(u) es continua para u en el intervalo [a, b]. Si E [(g(U) | u] = 0 para 
+toda u en el intervalo [a1, a2] implica que g(u) sea idénticamente cero, entonces se dice que la familia 
+de funciones de densidad {fU (u | u), a1 ≤ u ≤ a2} está completa. (Todos los estadísticos que empleamos 
+en la Sección 9.5 tienen familias completas de funciones de densidad.) Suponga que U es un estadístico 
+sufi ciente para u, y g1(U) y g2(U) son estimadores insesgados de u. Demuestre que, si la familia de fun-
+ciones de densidad para U está completa, g1(U) debe ser igual a g2(U), y entonces hay una función única 
+de U que es un estimador insesgado de u.
+ 
+ 
+ 
+Acoplada con el teorema de Rao–Blackwell, la propiedad de completabilidad de fU (u | u), junto con la 
+sufi ciencia de U, asegura que hay un estimador insesgado único de varianza mínima (UMVUE) de u. 
+ 
+9.6 Método de momentos
+En esta sección estudiaremos uno de los métodos más antiguos para obtener estimadores 
+puntuales: el método de momentos. Un método más refi nado, el de verosimilitud máxima, es 
+el tema de la Sección 9.7.
+El método de momentos es un procedimiento muy sencillo para hallar un estimador para 
+uno o más parámetros poblacionales. Recuerde que el k-ésimo momento de una variable alea-
+toria, tomado alrededor del origen, es
+mk = E(Y k).
+El correspondiente k-ésimo momen
+
+[Bloque seleccionado #505 | relevancia=10]
+Pagina 504
+480  Capítulo 9  Propiedades de los estimadores puntuales y métodos de estimación
+Para demostrar esto, sólo necesitamos observar que si U es un estadístico sufi ciente para u, 
+el criterio de factorización (Teorema 9.4) implica que la verosimilitud puede ser factorizada 
+como
+L(u) = L(y1, y2 , . . . , yn u) = g(u, u) h(y1, y2 , . . . , yn),
+|
+donde g (u, u) es una función de sólo u y u y h (y1, y2, . . . , yn) no depende de u. Por tanto, se 
+deduce que
+ln[L(u)] = ln[g(u, u) ] + ln[h (y1, y2 , . . . , yn)].
+Observe que ln[h (y1, y2, . . . , yn)] no depende de u y por tanto maximizar ln[L (u)] con res-
+pecto a u es equivalente a maximizar ln[g (u, u)] con respecto a u. Como ln[g (u, u)] depende 
+de los datos sólo mediante el valor del estadístico sufi ciente U, el MLE para u es siempre 
+alguna función de U. En consecuencia, si un MLE para un parámetro se puede hallar y luego 
+ajustar para ser insesgado, el estimador resultante es con frecuencia un MVUE del parámetro 
+en cuestión.
+Los MLE tienen algunas propiedades adicionales que hacen que este método de estimación 
+sea particularmente atractivo. En el Ejemplo 9.9 consideramos la estimación de u2, una fun-
+ción del parámetro u. Funciones de otros parámetros también pueden ser de interés. Por ejem-
+plo, la varianza de una variable aleatoria binomial es np (1 − p), una función del parámetro p. 
+Si Y tiene una distribución de Poisson con media l, se deduce que P(Y = 0) = e−l; podemos 
+desear calcular esta función de l. En general, si u es el parámetro asociado con una distribu-
+ción, en ocasiones estamos interesados en calcular alguna función de u, por ejemplo t(u), en 
+lugar de u misma. En el Ejercicio 9.94 usted demostrará que si t(u) es una función biunívoca 
+de u y si ˆu es el MLE para u, entonces el MLE de t(u) está dado por
+t(u) = t(ˆu).
+Este resultado, a veces conocido como la propiedad de invarianza de los MLE, también se 
+cumple para cualquier función de un parámetro de interés (no sólo funciones biunívocas). 
+Véanse más detalles en la obra de Casella y Berger (2002).
+ 
+EJEMPLO 9.17 
+En el Ejemplo 9.14, encontramos que el estimador de máxima verosimilitud (MLE) de una 
+proporción binomial p está dado por ˆp = Y/ n. ¿Cuál es el MLE para la varianza de Y?
+ 
+Solución 
+La varianza de una variable aleatoria binomial Y está dada por V (Y) = np (1 − p). Como V (Y) 
+es una función del parámetro binomial p, por ejemplo, V(Y) = t(p) con t(p) = np (1 − p), se 
+deduce que el MLE de V(Y) está dado por
+V (Y) = t( p) = t( ˆp) = n
+Y
+n
+1 −Y
+n
+.
+Este estimador no está insesgado, pero, usando el resultado de
+
+[Bloque seleccionado #574 | relevancia=14]
+Pagina 573
+ 
+ 
+ 
+ ii Pruebe que L (p0)/L (pa) < k si y sólo si 
+n
+i=1 yi > k∗ para alguna constante k*.
+ 
+ 
+ 
+iii Defi na la región de rechazo para la prueba más potente de H0 contra Ha.
+ 
+ 
+b  Recuerde que 
+n
+i=1 Yi tiene una distribución binomial con parámetros n y p. Indique el modo de 
+determinar los valores de cualesquiera constantes contenidas en la región de rechazo obtenidas en el 
+inciso [a(iii)].
+ 
+ 
+c  ¿La prueba obtenida en el inciso a es uniformemente más potente para probar H0 : p = p0 contra Ha : 
+p > p0? ¿Por qué sí o por qué no?
+ 
+*10.103 
+Sea Y1, Y2, . . . , Yn una muestra aleatoria de una distribución uniforme en el intervalo (0, u).
+ 
+ 
+a Encuentre la prueba nivel a más potente para probar H0 : u = u0 contra Ha : u = ua, donde ua < u0.
+ 
+ 
+b  ¿La prueba obtenida en el inciso a es uniformemente más potente para probar H0 : u = u0 contra Ha  : 
+u < u0?
+ 
+*10.104 
+Consulte la muestra aleatoria del Ejercicio 10.103.
+ 
+ 
+a Encuentre la prueba nivel a más potente para probar H0 : u = u0 contra Ha : u = ua, donde ua > u0.
+ 
+ 
+b  ¿La prueba obtenida en el inciso a es uniformemente más potente para probar H0 : u = u0 contra Ha : 
+u > u0?
+ 
+ 
+c ¿Es única la prueba nivel a más potente que encontró en el inciso a?
+ 
+10.11 Pruebas de razón de probabilidad
+El Teorema 10.1 proporciona un método para construir pruebas más potentes para hipóte-
+sis simples cuando se conoce la distribución de las observaciones, excepto para el valor de 
+un parámetro individual desconocido. Este método puede usarse a veces para hallar pruebas 
+uniformemente más potentes para hipótesis compuestas que comprenden un parámetro indi-
+vidual. En muchos casos, la distribución de interés tiene más de un parámetro desconocido. 
+En esta sección presentamos un método muy general que se puede usar para obtener pruebas 
+de hipótesis. El procedimiento funciona para hipótesis simples o compuestas ya sea que estén 
+presentes o no otros parámetros con valores desconocidos.
+Suponga que una muestra aleatoria se selecciona de una distribución y que la función de 
+probabilidad L (y1, y2, . . . , yn | u1, u2, . . . , uk)
+|
+ es una función de k parámetros, u1, u2, . . . , uk. 
+Para simplifi car la notación, denotemos con Θ el vector de todos los parámetros k, es decir, 
+Θ = (u1, u2, . . . , uk), y escribimos la función de probabilidad como L (Θ). Puede ser el caso 
+que estemos interesados en probar hipótesis sólo alrededor de uno de los parámetros, por 
+ejemplo u1. Por ejemplo, si, como en el Ejemplo 10.24, tomamos una muestra de una pobla-
+ción distribuida normalmente con media desconocida m
+
+[Bloque seleccionado #767 | relevancia=11]
+Pagina 766
+742  Capítulo 15  Estadística no paramétrica
+Los procedimientos estadísticos no paramétricos se aplican no sólo a observaciones que 
+son difíciles de cuantifi car, sino que también son particularmente útiles para hacer inferencias 
+en situaciones en las que existe una seria duda acerca de las suposiciones que son la base de 
+la metodología estándar. Por ejemplo, la prueba t para comparar un par de medias basadas en 
+muestras independientes, Sección 10.8, está basada en la suposición de que ambas poblacio-
+nes están distribuidas normalmente con varianzas iguales. El experimentador nunca sabrá si 
+estas suposiciones se cumplen en una situación práctica, pero con frecuencia estará razonable-
+mente seguro de que las desviaciones de las suposiciones serán lo sufi cientemente pequeñas 
+para que las propiedades del procedimiento estadístico no se alteren. Esto es, a y b serán más 
+o menos lo que el experimentador piensa que son. Por otra parte, no es raro que el experi-
+mentador dude de la validez de una suposición y se pregunte si está usando un procedimiento 
+estadístico válido. A veces esta difi cultad se puede salvar si se usa una prueba de estadístico 
+no paramétrico, con lo cual se evita usar un procedimiento estadístico que sea apropiado sólo 
+para un conjunto muy incierto de suposiciones.
+El término estadístico no paramétrico no tiene defi nición estándar que haya sido acor-
+dada por todos los expertos en estadística, pero casi todos concuerdan en que los métodos 
+estadísticos no paramétricos funcionan bien con suposiciones bastante generales acerca de 
+la naturaleza de cualesquiera distribuciones de probabilidad o parámetros que intervienen 
+en un problema inferencial. Como tesis de trabajo, defi niremos métodos paramétricos como 
+aquellos que se aplican a problemas donde la(s) distribución(es) de la(s) cual(es) se toman las 
+muestras están especifi cadas excepto para los valores de un número fi nito de parámetros. Los 
+métodos no paramétricos se aplican en todos los otros casos. Por ejemplo, la prueba t de una 
+muestra desarrollada en el Capítulo 10 se aplica cuando la población está distribuida normal-
+mente con media y varianza desconocidas. Debido a que la distribución de la cual se toma la 
+muestra está especifi cada excepto para los valores de dos parámetros, m y s2, la prueba t es 
+un procedimiento paramétrico. En forma alternativa, suponga que muestras independientes 
+se toman de dos poblaciones y que deseamos probar la hipótesis de que dos distribuciones 
+poblacionales son idénticas pero de forma no especifi cada. En este caso, la d
+
+[Bloque seleccionado #826 | relevancia=10]
+Pagina 825
+16.2  Bayesianos previos, posteriores y estimadores  801
+(previas y posteriores) asociadas con la previa beta con parámetros a  1, b  3. Las gráficas 
+de las distribuciones beta asociadas con la previa beta (10, 30) se dan en la Figura 16.1(b).    Q
+En los Ejemplos 16.1 y 16.2 obtuvimos densidades posteriores que, como la previa, son 
+densidades beta con valores de parámetro alterados (por los datos).
+ DEFINICIÓN 16.1  
+Las distribuciones previas que resulten en distribuciones posteriores que sean de la mis-
+ma forma funcional que la previa, pero con valores de parámetro alterados, se denomi-
+nan previas conjugadas.
+Cualquier distribución beta es una distribución previa conjugada para una distribución de 
+Bernoulli (o una binomial). Cuando la previa se actualiza (usando los datos), el resultado es 
+una beta posterior con valores de parámetro alterados. Esto es conveniente desde el punto 
+de vista computacional porque podemos determinar la fórmula exacta para la posterior y de 
+ahí en adelante usar propiedades previamente desarrolladas de una distribución conocida. 
+Para las distribuciones que usamos en este capítulo, hay previas conjugadas asociadas con 
+los parámetros relevantes. Es frecuente que estas familias de previas conjugadas se vean lo 
+sufi cientemente claras para manejar casi todas las situaciones prácticas. Como resultado, las 
+previas conjugadas se usan frecuentemente en la práctica.
+Como la posterior es una función de densidad de probabilidad de buena fe, algún resumen 
+característico de esta densidad da una estimación para u. Por ejemplo, podríamos usar la me-
+dia, la mediana o la moda de la densidad posterior de nuestro estimador. Si estamos interesa-
+dos en estimar alguna función de u, por ejemplo t(u), usaremos el valor esperado posterior de 
+t(u) como nuestro estimador para esta función de u.
+DEFINICIÓN 16.2  
+Sea Y1, Y2, . . . , Yn una muestra aleatoria con función de verosimilitud L(y1, y2, . . . , yn | u), 
+y que u tenga densidad previa g(u). El estimador posterior de Bayes para t(u) está dado 
+por
+t(u) B = E(t(u) | Y1, Y2, . . . , Yn).
+ 
+EJEMPLO 16.3 
+En el Ejemplo 16.1 encontramos la distribución posterior del parámetro p de Bernoulli basado 
+en una previa beta con parámetros (a, b). Encuentre los estimadores de Bayes para p y p (1  
+p). [Recuerde que p (1  p) es la varianza de una variable aleatoria de Bernoulli con parámetro 
+p].
+ 
+ 
+Solución 
+En el Ejemplo 16.1 encontramos que la densidad posterior de p es una densidad beta con 
+parámetros a
+yi + a y b
+n −
+yi + b:
+∗
+∗
+g ( p | y1, y2, . . . , yn) =
++ b )
+) pa −1(1 −p)
+
+[Bloque seleccionado #837 | relevancia=10]
+Pagina 836
+812  Capítulo 16  Introducción a los métodos de Bayes para inferencia
+e ¿Cuál es un intervalo creíble de 95% basado en la previa y el resultado de su muestra de tamaño 1? 
+¿Es mayor o menor que el intervalo que obtuvo (sin datos) en el inciso a?
+f Haga clic en el botón “Next Trial” una vez más. Compare la longitud de este intervalo (con base en 
+los resultados de una muestra de tamaño 2) con los intervalos obtenidos en los incisos a y e.
+g Use la aplicación Beta Probabilities and Quantiles para calcular la probabilidad posterior de que p 
+sea mayor que el punto extremo superior del intervalo que obtuvo en el inciso f. ¿El valor de esta 
+probabilidad posterior le sorprende?
+h Haga clic en el botón “Next Trial” varias veces. Describa la forma en que la posterior cambia con 
+datos adicionales. ¿Qué observa usted acerca de las longitudes de los intervalos creíbles obtenidos 
+usando posteriores con base en tamaños muestrales más grandes?
+ 
+16.14 
+Ejercicio Applet Consulte el Ejercicio 16.13. Seleccione un valor para el verdadero valor de la propor-
+ción p de Bernoulli y valores para los parámetros de la previa beta conjugada.
+a Repita el Ejercicio 16.13 a–h, usando los valores que seleccionó.
+b Haga clic también en el botón “50 Trials” unas pocas veces. Observe los valores de las sucesivas 
+desviaciones estándar posteriores y las longitudes de los intervalos creíbles sucesivos.
+ 
+i ¿Qué observa acerca de las desviaciones estándar de las distribuciones posteriores sucesivas?
+ 
+ii Con base en su respuesta al inciso i, ¿qué efecto espera observar acerca de las longitudes de 
+intervalos creíbles sucesivos?
+ 
+iii ¿Las longitudes de los intervalos creíbles sucesivos se comportaron como usted anticipó en el 
+inciso ii?
+ 
+16.15 
+Ejercicio Applet En el Ejercicio 16.7 reconsideramos nuestro ejemplo de introducción donde el núme-
+ro de quienes responden a un tratamiento para una enfermedad virulenta, en una muestra de tamaño n, 
+tuvo una distribución binomial con parámetro p y usamos una beta previa para p con parámetros a = 1 y 
+b = 3. Posteriormente hallamos que, al observar Y = y que respondieron, la función de densidad posterior 
+para p | y es una densidad beta con parámetros a = y +a = y +1
+b = n −y +b = n −y +3.
+y
+∗
+∗
+ Si 
+obtuvimos una muestra de tamaño n = 25 que contenía 4 personas que respondieron al nuevo tratamien-
+to, encuentre un intervalo creíble de 95% para p. [Utilice la aplicación Beta Probabilities and Quantiles 
+en www.thomsonedu.com/statistics/wackerly. Alternativamente, si W es una variable aleatoria de distri-
+bución beta con parámetros
+
+[Bloque seleccionado #841 | relevancia=13]
+Pagina 840
+816  Capítulo 16  Introducción a los métodos de Bayes para inferencia
+ 
+16.5 Resumen y comentarios adicionales
+Como ya hemos visto en las secciones previas, la clave de los métodos inferenciales de Bayes 
+(hallar estimadores, intervalos creíbles o realizar pruebas de hipótesis) es hallar la distribución 
+posterior del parámetro u. En especial cuando hay poca información, esta posterior depende 
+en gran medida de la distribución fundamental y previa de la población de la cual se toma la 
+muestra. Nos hemos enfocado en el uso de previas conjugadas debido a la sencillez resultante 
+de hallar la distribución posterior pedida del parámetro de interés. Por supuesto que las previas 
+conjugadas no son las únicas previas que se pueden usar, pero tienen la ventaja de resultar 
+cálculos fáciles. Esto no significa que una previa conjugada sea necesariamente la elección 
+correcta para la previa. Incluso si seleccionamos correctamente la familia de la cual se tome 
+la previa (hemos hecho repetido uso de previas beta y gamma), prevalece la dificultad de se-
+leccionar los valores apropiados asociados con los parámetros de la previa. Hemos visto, sin 
+embargo, que la opción de los valores de parámetro para la previa tiene impacto decreciente 
+para tamaños muestrales más grandes.
+Quizá sea apropiado hacer algunos comentarios acerca de la selección de valores de los 
+parámetros de la densidad previa. Si usamos una previa normal con media ν y varianza d2 y 
+pensamos que es probable (o improbable) que el parámetro poblacional sea cercano a ν, usa-
+ríamos un valor relativamente pequeño (grande) para d2. Cuando se usa una previa beta con 
+parámetros a y b para un parámetro que pensamos que tiene un valor cercano a c, podríamos 
+seleccionar a y b tales que la media de la previa, a/(a + b), es igual a c y la varianza de la 
+previa, ab [(a + b)2(a + b + 1)],
+/
+es pequeña. En el ejemplo de introducción empleamos 
+una previa beta con a = 1 y b = 3 porque pensamos que alrededor de 25% de quienes 
+recibieron un nuevo tratamiento responderían favorablemente. La media y la desviación es-
+tándar de la posterior son, respectivamente, .25 y .1936. Observe que éstas no son las únicas 
+opciones para a y b que den .25 como la media de la previa. En general, si a/(a + b) = c, 
+entonces para cualquier k > 0, a′ = ka y b′ = kb también satisfacen a′/(a′ + b′) = c. No 
+obstante, para una densidad beta con parámetros a′ = ka y b′ = kb, la varianza de la previa 
+es a b [(a + b )2(a + b + 1)] = ab [(a + b)2(ka + kb + 1)].
+/
+Por tanto, si nuestra selec-
+ción inicial de a y b da un valor ap

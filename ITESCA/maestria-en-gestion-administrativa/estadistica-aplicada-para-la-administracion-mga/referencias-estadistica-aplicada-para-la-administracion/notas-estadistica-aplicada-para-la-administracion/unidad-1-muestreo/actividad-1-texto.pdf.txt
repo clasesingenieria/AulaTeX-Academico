@@ -1,0 +1,257 @@
+Muestreo para decidir
+Estadística aplicada para la administración
+Actividad 1: Infografía
+Martín Jonathan de la Cruz Muñoz
+Matrícula: 26130503
+Dra. Yoana Elizeth Tauitmes Delgado
+22 de octubre de 2026
+
+1. Introducción
+Conocer a todos los clientes, revisar cada factura o entrevistar a cada colaborador puede
+ser inviable por tiempo y costo. El muestreo permite estudiar una parte de esas unidades
+para orientar decisiones sobre el conjunto. El ahorro solo es defendible cuando se conserva
+una relación explícita entre población objetivo, selección y afirmación final: una base grande
+no garantiza que los datos describan a quienes realmente interesa conocer (Bradley et al.,
+2021; Holmes et al., 2023).
+La cuestión administrativa consiste en decidir qué evidencia basta para actuar sin confun-
+dir precisión con representatividad. Una encuesta sobre satisfacción por canal y una audito-
+ría de facturación comparten esa exigencia, aunque sus unidades y riesgos sean distintos.
+El criterio central es diseñar la selección antes de calcular el tamaño y comunicar los límites
+antes de convertir una estimación en una decisión.
+2. Muestreo, evidencia y decisiones administrativas
+2.1. Población, marco y unidad de observación
+La población objetivo reúne las unidades sobre las que se desea concluir, delimitadas
+por lugar, periodo y características. “Clientes” resulta insuficiente si no se precisa si son
+compradores activos del último trimestre, usuarios registrados o personas que visitaron una
+sucursal. La unidad de muestreo es la que puede seleccionarse, mientras la unidad de ob-
+servación es aquella de la que se obtiene la medición. Pueden coincidir en una encuesta de
+clientes o diferir si primero se seleccionan sucursales y después sus compradores (Holmes
+et al., 2023, sec. 1.2).
+El marco muestral es el registro operativo que permite acceder a las unidades: una lista de
+facturas, una base de empleados o un catálogo de sucursales. No equivale automáticamen-
+te a la población. Registros duplicados, contactos desactualizados y ventas no registradas
+modifican las posibilidades de selección. La muestra seleccionada tampoco coincide siem-
+pre con la muestra respondente: una persona sorteada que no contesta forma parte de la
+primera, pero no de las respuestas analizadas. Distinguirlas hace visible la no respuesta.
+Un parámetro describe la población, como la proporción de facturas con errores; un es-
+tadístico se calcula con la muestra para estimarlo. La inferencia depende del diseño o de
+un modelo justificable. No es válido transferir un porcentaje observado a todo el mercado
+2
+
+solo porque el software produjo un intervalo estrecho (Holmes et al., 2023; Wackerly et al.,
+2010).
+2.2. Diseños probabilísticos y alcance de la inferencia
+En un diseño probabilístico, cada unidad de la población cubierta tiene una probabilidad
+conocida y positiva de inclusión. Esa probabilidad no tiene que ser igual para todas. El diseño
+proporciona una base para estudiar la variabilidad del estimador y, cuando corresponde,
+construir intervalos y utilizar ponderaciones (Holmes et al., 2023).
+El muestreo aleatorio simple da la misma probabilidad a todas las muestras posibles de
+igual tamaño dentro de un marco definido. En una auditoría, se puede sortear un conjunto de
+facturas numeradas sin escoger las más fáciles de localizar. No debe confundirse “al azar”
+con elegir sin procedimiento: la selección exige una regla reproducible.
+El estratificado divide la población en grupos exhaustivos y sin traslape, y selecciona
+aleatoriamente dentro de todos ellos. Si interesa comparar tienda física y comercio digital,
+ambos canales deben estar representados. La asignación puede ser proporcional o dar más
+observaciones a un grupo pequeño por necesidades analíticas; en este último caso, el por-
+centaje global requiere ponderar de acuerdo con el diseño, sin promediar mecánicamente
+las proporciones de los grupos.
+El sistemático selecciona un inicio aleatorio y luego unidades a intervalos definidos. Re-
+sulta operativo para registros ordenados, pero una periodicidad vinculada con la caracte-
+rística estudiada puede distorsionar la muestra. El muestreo por conglomerados selecciona
+grupos naturales, como sucursales, y observa todas o algunas unidades dentro de los gru-
+pos elegidos. Reduce desplazamientos, aunque la semejanza interna puede aumentar la
+varianza respecto a seleccionar individuos dispersos. Estratificar incluye unidades de todos
+los estratos; seleccionar conglomerados estudia grupos elegidos (Holmes et al., 2023).
+2.3. Selección no probabilística y fuentes de error
+La conveniencia utiliza unidades disponibles, mientras la autoselección depende de que
+las personas decidan participar. Ambas pueden contribuir a explorar necesidades, detec-
+tar lenguaje o formular hipótesis. Sin conocer las probabilidades de inclusión, no procede
+atribuirles automáticamente el margen de error de una muestra aleatoria simple. Cualquier
+3
+
+generalización debe explicitar los supuestos adicionales que la sostienen (Holmes et al.,
+2023).
+Conviene separar cuatro fuentes de error. El error de muestreo es la variación asociada a
+observar muestras distintas bajo un diseño. El error de cobertura aparece cuando el marco
+omite unidades pertinentes o incluye otras ajenas. La no respuesta compromete la inferencia
+cuando quienes responden difieren de quienes no lo hacen en características relevantes. El
+error de medición surge si una pregunta ambigua, el recuerdo o el modo de preguntar altera
+lo registrado. Aumentar el tamaño reduce cierta variación aleatoria; no elimina por sí mismo
+los otros problemas (Bradley et al., 2021).
+Bradley et al. compararon grandes encuestas sobre vacunación estadounidense con un
+referente administrativo y mostraron sobreestimaciones importantes pese a sus numerosos
+participantes. La lección transferible a la administración es revisar cómo la participación se
+relaciona con la variable de interés. No demuestra que toda encuesta digital sea inválida: evi-
+dencia que cantidad, cobertura y mecanismo de respuesta deben evaluarse conjuntamente
+(Bradley et al., 2021).
+2.4. Tamaño muestral y condiciones de planificación
+Para estimar una proporción mediante muestreo aleatorio simple en una población grande
+respecto a la muestra, una aproximación inicial es:
+n0 =
+z 2
+α/2 p(1 −p)
+e2
+.
+El valor crítico zα/2 corresponde al nivel de confianza y e es el margen absoluto, expresado
+en la misma escala que la proporción. Cuando no existe una aproximación previa defendible
+de p, usar p = 0,5 maximiza p(1 −p) y produce el tamaño más conservador dentro de esta
+fórmula (Holmes et al., 2023).
+Para 95 % de confianza y cinco puntos porcentuales de margen:
+n0 = 1,962(0,5)(0,5)
+0,052
+= 384,16,
+n = ⌈384,16⌉= 385.
+Son respuestas completas previstas bajo los supuestos del cálculo. Si se anticipa una res-
+puesta del 80 %, la planificación inicial requiere ⌈385/0,80⌉= 482 invitaciones. Esa división
+4
+
+aumenta contactos previstos, pero no garantiza alcanzar 385 respuestas ni corrige una no
+respuesta diferencial. Para poblaciones finitas muestreadas sin reposición puede corres-
+ponder la corrección n = Nn0/(N + n0 −1), seguida del redondeo y de los ajustes del
+diseño.
+El margen de error cuantifica variación bajo condiciones específicas; no es un límite de to-
+dos los errores de una encuesta. Tampoco basta esta fórmula para dimensionar contrastes:
+deben definirse efecto mínimo relevante, potencia, significación y variabilidad. Conglomera-
+dos, ponderaciones y comparaciones por subgrupos pueden exigir tamaños adicionales. El
+costo debe evaluarse frente al riesgo de una decisión equivocada, no únicamente frente al
+número de entrevistas (NIST y SEMATECH, 2003; Wackerly et al., 2010).
+2.5. Infografía: una parte de la población, una decisión con límites
+La lámina reúne la secuencia población–marco–muestra, distingue los mecanismos de
+selección y conecta el ejemplo de 385 respuestas con decisiones sobre facturación y satis-
+facción. Su lectura debe conservar la condición que sostiene todo el recorrido: seleccionar
+unidades pertinentes y documentar quién queda fuera. Los ejemplos son hipotéticos; ilustran
+el diseño y no reportan datos empresariales observados.
+5
+
+Maestría en Gestión Administrativa
+Estadística aplicada para la administración
+Muestreo para decidir
+Una parte de la población, una decisión con límites
+Martín Jonathan de la Cruz Muñoz | Matrícula: 26130503 | Actividad 1: Infografía
+Dra. Yoana Elizeth Tauitmes Delgado | 22 de octubre de 2026
+Introducción
+El muestreo selecciona unidades de una población para estudiar sus características sin observarla completa. En administración reduce costos
+y tiempos, pero una conclusión solo es defendible si el diseño y la respuesta permiten representar al grupo de interés (Holmes et al., 2023).
+Del universo al dato: elegir antes de contar
+Población
+Clientes a quienes se quiere conocer
+Marco
+Registro que permite seleccionarlos
+Muestra
+Clientes seleccionados para observar
+01 / Muestreo probabilístico
+Cada unidad tiene probabilidad conocida y positiva de inclusión. No
+siempre es igual.
+Aleatorio simple. Todas las muestras de igual tamaño tienen la
+misma probabilidad: sortear clientes de un registro completo.
+Estratificado. Seleccionar al azar dentro de todos los estratos:
+clientes por canal de compra.
+Sistemático. Inicio aleatorio y cada k unidades: revisar cada déci-
+ma factura; evitar periodicidades.
+Conglomerados. Sortear grupos y estudiar sus unidades: sucursa-
+les seleccionadas al azar. Puede reducir costos, pero la semejanza
+interna afecta la precisión.
+02 / Muestreo no probabilístico
+La selección no permite conocer la probabilidad de inclusión de
+cada unidad.
+Conveniencia. Entrevistar a quienes están disponibles: comprado-
+res presentes en una tienda.
+Autoselección. Responder por iniciativa propia: una encuesta
+abierta en redes sociales.
+Útil para exploración; no atribuirle el margen de error de una
+muestra aleatoria sin supuestos adicionales.
+Más respuestas no corrigen por sí solas el sesgo. Una selección
+aleatoria dentro de un marco incompleto tampoco cubre automáti-
+camente a toda la población (Bradley et al., 2021).
+Fundamentos y ejemplos de selección: Holmes et al. (2023, sec. 1.2); cobertura y no respuesta: Bradley et al. (2021).
+03 / ¿Cuántas respuestas se necesitan?
+Ejemplo hipotético: estimar la proporción de clientes satisfechos. Aproximación normal,
+muestra aleatoria simple y población grande respecto de la muestra.
+n0 =
+z 2
+α/2 p(1 −p)
+e2
+= 1,962(0,5)(0,5)
+0,052
+= 384,16
+z = 1,96: confianza de 95 %; e = 0,05: margen de cinco puntos porcentuales; p = 0,5:
+máxima variabilidad. Redondear hacia arriba (Holmes et al., 2023).
+385
+respuestas completas
+Respuesta prevista: 80 %
+⌈385/0,80⌉= 482
+invitaciones planificadas.
+No es una fórmula universal: otros diseños requieren ajustes. Para contrastar hipótesis también se especifican potencia y efecto mínimo detectable (NIST y
+SEMATECH, 2003, sec. 7.2.4.2).
+04 / Aplicaciones administrativas y de mercado
+Administración: calidad de facturación.
+Seleccionar facturas con inicio aleatorio, estimar la proporción con
+errores y decidir dónde auditar. No confundir errores detectados con
+causas demostradas.
+Mercado: satisfacción por canal.
+Estratificar clientes de tienda y venta digital, seleccionar al azar
+en ambos y ponderar según el diseño. Escuchar solo seguidores
+digitales excluye otros compradores.
+Conclusiones
+Una decisión responsable exige revisar cobertura, selección y no respuesta antes de celebrar el tamaño de la base. El criterio es invertir pri-
+mero en datos pertinentes y después en cantidad: así el ahorro del muestreo no se convierte en un costo por decisiones sesgadas.
+Referencias
+Bradley, V. C., Kuriwaki, S., Isakov, M., Sejdinovic, D., Meng, X.-L., & Flaxman, S. (2021). Unrepresentative big surveys significantly
+overestimated US vaccine uptake. Nature, 600(7890), 695–700. https://doi.org/10.1038/s41586-021-04198-4
+Holmes, A., Illowsky, B., & Dean, S. (2023). Introductory business statistics (2.a ed.). OpenStax.
+https://openstax.org/details/books/introductory-business-statistics-2e
+National Institute of Standards and Technology & SEMATECH. (2003). NIST/SEMATECH e-Handbook of statistical methods.
+https://doi.org/10.18434/M32189
+
+2.6. Lectura de la evidencia y transferencia a la gestión
+En facturación, el universo debe definirse por periodo y tipo de operación; la unidad puede
+ser una factura y la variable, presencia de al menos un error. Un registro completo permi-
+te seleccionar con una regla aleatoria y estimar la frecuencia del problema. La estimación
+no identifica automáticamente su causa: atribuir errores a capacitación o software requiere
+evidencia adicional. Si se usa selección sistemática, debe revisarse si el orden del archivo
+coincide con turnos, cierres o procesos periódicos.
+En satisfacción, los canales pueden funcionar como estratos si interesa incluirlos todos y
+compararlos. Una encuesta abierta solo a seguidores digitales podría excluir a compradores
+de tienda y atraer especialmente a personas muy satisfechas o molestas. Ponderar por
+canal ayuda cuando el diseño y los registros lo permiten, pero no repara toda diferencia no
+observada. Conviene contrastar la muestra respondente con características conocidas de
+la población y documentar las limitaciones (Bradley et al., 2021; Holmes et al., 2023).
+La comparación conduce a una conclusión metodológica: el tamaño es una decisión pos-
+terior a delimitar población, variable y selección. En una auditoría importa que las facturas
+tengan posibilidades de inclusión compatibles con el alcance de la afirmación; en mercado-
+tecnia importa que la voz recogida no se confunda con todos los compradores. Por ello, la
+gerencia debe exigir una descripción del marco, el mecanismo de selección, las respuestas
+efectivas y las condiciones del intervalo antes de actuar. Ese orden convierte la infografía
+en una pauta de decisión y evita que su síntesis visual oculte los límites del método.
+7
+
+3. Conclusiones
+El muestreo permite reducir el costo de conocer una población y sostener decisiones ba-
+jo incertidumbre. Su valor depende de la correspondencia entre la pregunta administrativa,
+las unidades cubiertas y el procedimiento de selección. Aleatorio simple, estratificado, sis-
+temático y conglomerados responden a necesidades operativas diferentes; conveniencia y
+autoselección requieren especial cautela al generalizar.
+Considero que la primera inversión debe dirigirse a definir y actualizar el marco y a com-
+prender la no respuesta. La razón es que una selección sesgada puede producir cifras es-
+tables y, a la vez, orientar mal presupuesto, servicio o control de calidad. La consecuencia
+profesional es acompañar cada resultado con su población, fecha, mecanismo de selección,
+tamaño efectivo y limitaciones, y establecer qué evidencia justificaría revisar la decisión.
+El ejemplo de 385 respuestas resume una condición de planificación, no una garantía
+universal. Distinguir precisión, representatividad y validez permite reconocer cuándo ampliar
+la muestra, cuándo rediseñar la selección y cuándo limitar el alcance de una conclusión.1
+1 Se utilizó Amazon Nova Pro mediante AulaTEX para apoyar la extracción y organización conceptual y con-
+trastar la cobertura de fuentes. Su salida fue revisada frente a las referencias; no sustituye el análisis ni la
+interpretación del contenido.
+8
+
+Referencias
+Bradley, V. C., Kuriwaki, S., Isakov, M., Sejdinovic, D., Meng, X.-L., & Flaxman, S. (2021).
+Unrepresentative big surveys significantly overestimated US vaccine uptake. Nature,
+600(7890), 695–700. https://doi.org/10.1038/s41586-021-04198-4
+Holmes, A., Illowsky, B., & Dean, S. (2023). Introductory business statistics (2.a ed.). OpenS-
+tax. https://openstax.org/details/books/introductory-business-statistics-2e
+National Institute of Standards and Technology, & SEMATECH. (2003). NIST/SEMATECH
+e-Handbook of statistical methods. https://doi.org/10.18434/M32189
+Wackerly, D. D., Mendenhall, W., & Scheaffer, R. L. (2010). Estadística matemática con
+aplicaciones (7.a ed.). Cengage Learning Editores.
+9

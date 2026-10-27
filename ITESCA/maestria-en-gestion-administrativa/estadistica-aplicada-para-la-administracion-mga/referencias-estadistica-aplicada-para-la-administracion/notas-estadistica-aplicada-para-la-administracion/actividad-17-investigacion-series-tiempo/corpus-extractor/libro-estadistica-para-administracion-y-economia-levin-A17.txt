@@ -1,0 +1,721 @@
+Fuente bibliográfica: Estadística para administración y economía - Levin y Rubin. 7.ª edición revisada.pdf
+Actividad: 17 (6.2 Investigación 4% Tarea)
+Palabras clave: series de tiempo, pronósticos económicos, demanda, estacionalidad, ARIMA, suavizamiento exponencial, planeación financiera
+
+[Bloque seleccionado #13 | relevancia=6]
+Pagina 12
+Capítulo 14
+Métodos no paramétricos
+621
+14.1
+Introducción a la estadística no paramétrica
+622
+14.2
+Prueba de signo para datos por pares
+624
+14.3
+Pruebas de suma de rangos: prueba U de Mann-Whitney y prueba 
+de Kruskal-Wallis
+630
+14.4
+Prueba de corridas de una sola muestra
+640
+14.5
+Correlación de rango
+646
+14.6
+Prueba de Kolmogorov-Smirnov
+655
+Estadística en el trabajo
+659
+Ejercicio de base de datos computacional
+660
+Del libro de texto al mundo real
+661
+Términos introducidos en el capítulo 14
+662
+Ecuaciones introducidas en el capítulo 14
+662
+Ejercicios de repaso
+663
+Capítulo 15
+Series de tiempo y pronósticos
+673 
+15.1
+Introducción
+674
+15.2
+Variación en las series de tiempo
+675
+15.3
+Análisis de tendencia (variación secular)
+676
+15.4
+Variación cíclica
+686
+15.5
+Variación estacional
+691
+15.6
+Variación irregular
+699
+15.7
+Problema que incluye a las cuatro componentes de una serie de tiempo
+699
+15.8
+Análisis de series de tiempo en pronósticos
+707
+Estadística en el trabajo
+708
+Ejercicio de base de datos computacional
+709
+Del libro de texto al mundo real
+709
+Términos introducidos en el capítulo 15
+710
+Ecuaciones introducidas en el capítulo 15
+711
+Ejercicios de repaso
+712
+Capítulo 16
+Números índice
+719
+16.1
+Definición de número índice
+720
+16.2
+Índice de agregados no ponderados
+723
+16.3
+Índice de agregados ponderados
+727
+16.4
+Métodos de promedio de relativos
+735
+16.5
+Índices de cantidad y de valor
+740
+16.6
+Problemas en la construcción y el uso de números índice
+744
+Estadística en el trabajo
+745
+Ejercicio de base de datos computacional
+746
+x
+Contenido
+
+[Bloque seleccionado #629 | relevancia=6]
+Pagina 628
+Problemas de negocios y datos
+Antes de partir, se espe-
+ra que el complemento completo de partes de un avión esté
+en perfectas condiciones de operación. Si una parte reempla-
+zable está defectuosa, será removida e idealmente se sustitui-
+rá por otra en servicio proveniente del almacén. La pieza
+defectuosa se envía a reparación y se ordena otra pieza que
+funciona para el almacén. Uno de los deberes del Departa-
+mento de Administración de Materiales de American Airli-
+nes consiste en distribuir partes a los almacenes de una
+manera efectiva en costos, equilibrando el costo de tener la
+parte y el costo del faltante en el almacén; al tiempo que
+mantiene un nivel aceptable de disponibilidad. El problema
+consiste en encontrar un método de asignación que propor-
+cione el menor costo total.
+Desarrollo de RAPS
+La empresa venía usando un Sistema
+de Pronósticos y Control de Disponibilidad de Reempla-
+zables (ROFACS, Rotables Forecasting and Availability
+Control System), basado en la metodología de las series de
+tiempo para apoyar la toma de decisiones sobre la distribu-
+ción de partes reparables. ROFACS era un indicador valioso
+de niveles de asignación apropiados, pero los departamentos
+de Tecnologías de Decisión y Administración de Materiales
+reconocieron que había deficiencias en el sistema. El análi-
+sis de sensibilidad era difícil y llevaba mucho tiempo, no
+existía documentación del sistema y se pensaba que algunos
+de los elementos de datos críticos eran imprecisos. Ade-
+más, los pronósticos tenían una respuesta lenta a cambios
+moderados en el uso de aviones y la expansión de la flota.
+Tecnologías de Decisión desarrolló el RAPS con la apro-
+bación, cooperación y participación del Departamento de
+Administración de Materiales. El objetivo de RAPS es reco-
+mendar asignaciones de partes disponibles y ayudar a los
+administradores de inventario a analizar el control de partes
+reemplazables.
+Pronósticos
+El resultado final de una corrida de RAPS es
+una asignación de partes reemplazables con un costo míni-
+mo derivada de un proceso de pronósticos de dos etapas:
+1) cálculo de la demanda total del sistema para la parte y
+2) distribución de la demanda entre los almacenes individua-
+les. Para calcular la demanda total esperada del sistema,
+RAPS utiliza una regresión lineal para establecer una rela-
+ción entre las partes reemplazadas por mes y las distintas
+610
+Capítulo 13
+Regresión múltiple y modelado
+funciones en horas de vuelo mensuales. El sistema actualiza
+historias de 18 meses de reemplazos y horas de vuelo por
+mes. Después, un módulo calcula los coeficientes
+
+[Bloque seleccionado #693 | relevancia=12]
+Pagina 692
+674
+Capítulo 15
+Series de tiempo y pronósticos
+L
+a administración de un campo de esquí tiene los siguientes datos
+acerca de la ocupación trimestral correspondientes a un periodo 
+de cinco años:
+Año
+1er. trim.
+2o. trim.
+3er. trim.
+4o. trim.
+2005
+1,861
+2,203
+2,415
+1,908
+2006
+1,921
+2,343
+2,514
+1,986
+2007
+1,834
+2,154
+2,098
+1,799
+2008
+1,837
+2,025
+2,304
+1,965
+2009
+2,073
+2,414
+2,339
+1,967
+Con el fin de mejorar su servicio, la administración debe entender el 
+patrón estacional de la demanda de habitaciones. Con los métodos ana-
+lizados en este capítulo, ayudaremos a la administración del hotel a 
+discernir ese patrón, si existe, y a utilizarlo para pronosticar la demanda
+de habitaciones. ■
+15.1
+Introducción
+Los pronósticos, o predicciones, son una herramienta esencial en cualquier proceso de toma de deci-
+siones. Sus aplicaciones varían desde la determinación de los requerimientos de inventario de una
+pequeña zapatería hasta la estimación de las ventas anuales de juegos de video. La calidad de los pro-
+nósticos que los tomadores de decisiones pueden realizar está estrechamente relacionada con la in-
+formación que puede extraerse y utilizarse a partir de los datos históricos. El análisis de series de
+tiempo es un método cuantitativo que utilizamos para determinar patrones de comportamiento en los
+datos recolectados a través del tiempo. La tabla 15-1 es un ejemplo de datos de una serie de tiempo.
+El análisis de series de tiempo se utiliza para detectar patrones de cambio o permanencia en la in-
+formación estadística en intervalos o periodos regulares. Proyectamos estos patrones para obtener
+una estimación para el futuro. En consecuencia, el análisis de series de tiempo nos ayuda a manejar
+la incertidumbre asociada con los acontecimientos futuros.
+Uso del análisis de
+series de tiempo
+Serie de tiempo para
+el número de buques 
+cargados, en Morehead,
+Carolina del Norte
+Tabla 15-1
+Año
+2002
+2003
+2004
+2005
+2006
+2007
+2008
+2009
+Número
+98
+105
+116
+119
+135
+156
+177
+208
+Ejercicios 15.1
+Conceptos básicos
+■
+15-1
+¿Qué valor tienen los pronósticos en el proceso de toma de decisiones?
+■
+15-2
+¿Con qué propósito aplicamos el análisis de series de tiempo a datos recolectados durante un tiempo?
+■
+15-3
+¿Qué beneficios proporciona la determinación de patrones históricos?
+■
+15-4
+¿Cómo afectarán los errores en los pronósticos al gobierno de una ciudad?
+
+[Bloque seleccionado #694 | relevancia=8]
+Pagina 693
+15.2
+Variación en las series de tiempo
+Utilizamos el término serie de tiempo para referirnos a cualquier grupo de información estadística
+que se acumula a intervalos regulares. Con respecto en una variable de interés, existen cuatro tipos
+de cambio o variación implicados en el análisis de series de tiempo, éstos son:
+1. Tendencia secular o variación secular
+2. Fluctuación cíclica o variación cíclica
+3. Variación estacional
+4. Variación irregular
+Con el primer tipo de variación, la tendencia secular, el valor de la variable tiende a aumentar o
+disminuir en un periodo muy largo. El incremento estable en los costos de vida registrados en el Índi-
+ce de Precios al Consumidor (IPC) es un ejemplo de tendencia secular. De un año a otro, el costo de
+vida varía bastante, pero si examinamos un periodo a largo plazo, nos damos cuenta que la tendencia
+tiende a aumentar de manera estable. La gráfica (a) de la figura 15-1 muestra una tendencia secular
+en una serie de tiempo creciente que fluctúa.
+El segundo tipo de variación observado en una serie de tiempo es la fluctuación cíclica. El ejem-
+plo más común de fluctuación cíclica es el ciclo económico. A través del tiempo, hay años en los que
+Fluctuación cíclica
+Tendencia secular
+Cuatro tipos de varia-
+ción en las series de
+tiempo
+15.2
+Variación en las series de tiempo
+675
+Y
+Serie de tiempo real
+Tendencia secular
+Tiempo en años
+(a)
+Y
+Fluctuación cíclica
+Línea de tendencia 
+Tiempo en años
+(b)
+Y
+Variación estacional
+Variación estacional
+Tiempo en años
+(c)
+Y
+Variación irregular
+Tiempo en años
+(d)
+FIGURA 15-1
+Variación en las
+series de tiempo
+
+[Bloque seleccionado #695 | relevancia=6]
+Pagina 694
+el ciclo económico llega a un pico arriba de la línea de tendencia; en otros, es probable que la acti-
+vidad de los negocios disminuya abajo de la línea de tendencia. El tiempo que transcurre entre picos
+y depresiones es al menos un año, y puede llegar a ser hasta 15 o 20. La gráfica (b) de la figura 15-1
+ilustra un patrón típico de fluctuación cíclica arriba y abajo de la línea de tendencia secular. Obser-
+ve que los movimientos cíclicos no siguen ningún patrón regular, sino que se mueven de manera un
+tanto impredecible.
+El tercer tipo de cambio en los datos de una serie de tiempo es la variación estacional. Como ca-
+bría esperar, este tipo de variación implica patrones de cambio en el lapso de un año que tienden a
+repetirse anualmente. Por ejemplo, un médico puede esperar un aumento sustancial en el número de
+casos de gripe cada invierno y de afectados de tifoidea cada verano. Como se trata de patrones regu-
+lares son útiles al pronosticar el futuro. La gráfica (c) de la figura 15-1 muestra una variación esta-
+cional. Note cómo alcanza un pico cada cuarto trimestre del año.
+La variación irregular es el cuarto tipo de cambio que ocurre en el análisis de las series de tiem-
+po. En muchas situaciones, el valor de una variable puede ser completamente impredecible cambian-
+do de manera aleatoria. Las variaciones irregulares describen esos movimientos. Los efectos que el
+conflicto de Medio Oriente en 1973, la situación de Irán en 1979-1981, el colapso de la OPEP en 
+1986 y la situación de Irak en 1990 tuvieron sobre los precios de la gasolina en Estados Unidos son
+ejemplos de variación irregular. La gráfica (d) de la figura 15-1 ilustra la variación irregular.
+Hasta ahora, nos hemos referido a las series de tiempo como datos que presentan una de las cua-
+tro variaciones descritas. Sin embargo, en la mayor parte de los casos las series de tiempo contie-
+nen varias de estas componentes. Así, podemos describir la variación total en una sola serie de tiempo
+en términos de estas cuatro clases de variación. En las siguientes secciones examinaremos las cua-
+tro componentes y las formas en que medimos cada uno.
+Ejercicios 15.2
+Conceptos básicos
+■
+15-5
+Identifique las cuatro principales componentes de una serie de tiempo y explique el tipo de cambio, en el
+tiempo, al que se aplica.
+■
+15-6
+¿Cuál de las cuatro componentes de una serie de tiempo se utilizaría para describir el efecto de las ventas
+navideñas de una tienda departamental al menudeo?
+■
+15-7
+¿Cuál es la ventaja de descomponer una serie de tiempo en sus cuatro componentes?
+■
+15-8
+¿Cuál de las cuatr
+
+[Bloque seleccionado #711 | relevancia=6]
+Pagina 710
+todos sus productos. La habilidad de pronosticar patrones de corto plazo, como la demanda de
+pavo en Navidad, dulces el Día del Niño o duraznos en verano, es útil para la administración
+de la cadena.
+3. Una vez establecido el patrón estacional existente, podemos eliminar sus efectos de la se-
+rie de tiempo Este ajuste nos permite calcular la variación estacional que se repite cada año.
+Cuando eliminamos el efecto de la variación estacional de una serie de tiempo, hemos deses-
+tacionalizado la serie.
+Método de razón de promedio móvil
+Con el fin de medir la variación estacional, es común usar el método de razón de promedio móvil.
+Esta técnica proporciona un índice que describe el grado de variación estacional. El índice está ba-
+sado en una media de 100, con el grado de estacionalidad medido por las variaciones respecto a la
+base. Por ejemplo, si examinamos la estacionalidad de la renta de canoas en un hotel de veraneo, po-
+dríamos encontrar que el índice del trimestre de primavera es 142. El valor 142 indica que 142% 
+de las rentas trimestrales promedio ocurre en primavera. Si la administración registró 2,000 rentas de
+canoas durante todo el año anterior, entonces la renta promedio por trimestre será 2,000/4  500.
+Como el índice del trimestre de primavera es 142, estimamos el número de alquileres de canoas de
+la forma siguiente:
+
+
+↓
+500  1
+1
+4
+0
+2
+0
+  710
+→
+←
+El ejemplo con que abrimos el capítulo puede ilustrar el método de razón de promedio móvil. El
+hotel de veraneo desea establecer el patrón estacional de demanda de cuartos por parte de sus
+clientes. La administración desea mejorar el servicio al cliente y está considerando varios planes de
+contratación de personal durante los periodos pico. La tabla 15-9 presenta la ocupación por trimes-
+tre, es decir, el número promedio de huéspedes durante cada trimestre de los últimos cinco años.
+Nos referiremos a la tabla 15-9 para exponer los seis pasos requeridos para el cálculo de un índi-
+ce estacional.
+1. El primer paso en el cálculo de un índice estacional consiste en calcular el total móvil de
+4 trimestres para la serie de tiempo Para hacerlo, calculamos el total de los valores para los
+trimestres durante el primer año, 2005 en la tabla 15-9: 1,861  2,203  2,415  1,908 
+8,387. Un total móvil se asocia con el dato que ocupa el lugar medio del conjunto de valores
+del cual fue calculado. Como nuestro primer total de 8,387 se calculó a partir de cuatro datos,
+lo colocamos frente al punto medio de esos trimestres, de modo que queda en la columna 4 de
+la tabla 15-10, entre los renglon
+
+[Bloque seleccionado #727 | relevancia=8]
+Pagina 726
+1. En pronósticos, proyectamos la tendencia histórica y la variación cíclica al futuro. Debemos
+preguntarnos “¿qué tan regulares y duraderas fueron las tendencias pasadas?, ¿cuáles son las
+posibilidades de que tales patrones estén cambiando?”
+2. ¿Qué tan precisos son los datos históricos que utilizamos en el análisis de series de tiempo? Si
+una compañía cambió de un sistema de contabilidad de inventario PEPS (primero en entrar, pri-
+mero en salir) a un sistema UEPS (último en entrar, primero en salir) en un periodo dentro del
+tiempo que se analiza, los datos (como las ganancias trimestrales) obtenidos antes y después
+del cambio no son comparables y tampoco son muy útiles para pronosticar.
+708
+Capítulo 15
+Series de tiempo y pronósticos
+Advertencia: los administradores inteli-
+gentes se dan cuenta de que explicar la
+mayor parte de la variación en una serie
+de tiempo de datos históricos no signifi-
+ca que este mismo patrón continuará en el futuro. Sugeren-
+cia: estos mismos administradores inteligentes combinan
+todos los pronósticos disponibles de la serie de tiempo con
+respuestas intuitivas para ampliar las preguntas de ¿qué pa-
+sa si...?, que siempre son parte de la planeación estratégica.
+Estas preguntas se refieren al entorno (sociológico, econó-
+mico, político) de negocios futuros y si cambiará en forma
+significativa el entorno existente cuando se reunieron los
+datos de la serie de tiempo.
+SUGERENCIAS
+Y
+SUPOSICIONES
+Ejercicios 15.8
+■15-40
+Enumere cuatro errores que pueden afectar las predicciones con una serie de tiempo.
+■15-41
+Cuando se utiliza una serie de tiempo para pronosticar el futuro, ¿qué garantías necesitamos en los datos
+históricos en los que se basan nuestras predicciones?
+■15-42
+¿Qué problemas pueden desarrollarse si utilizamos las cifras de inscripciones pasadas a la universidad pa-
+ra pronosticar las inscripciones futuras?
+■15-43
+¿De qué manera los pronósticos con series de tiempo manejarían cuestiones como las siguientes? 
+a)
+Cambios en la ley federal de recaudación de impuestos. 
+b) Cambios en los sistemas de contabilidad.
+Loveland Computers
+Caso 15: Series de tiempo
+Lee Azko descansaba en su
+bien ganada fama. El complicado análisis de regresión de los
+resultados de los gastos de publicidad había dado a Sherrel
+Wrigtht más confianza para utilizar el argumento de una me-
+jor planeación. Incluso Walter Azko comenzó a reconocer
+que parte del éxito de marketing no dependía del azar, sino que
+existían ciertas reglas.
+“Nunca pude ver el valor de publicar anuncios de cinco o
+seis anuncios de una plana”, dijo el tío Walter mientras 
+
+[Bloque seleccionado #785 | relevancia=7]
+Pagina 784
+En nuestro ejemplo, la distribución de probabilidad de la demanda es:
+Tamaño
+Prob. del tamaño
+del mercado
+del mercado
+10
+0.15
+11
+0.20
+12
+0.40
+13
+0.25
+1.00
+Esta distribución nos dice que al aumentar el inventario, la probabilidad de vender una unidad adi-
+cional ( p) disminuye. Si incrementamos el inventario de 10 a 11 unidades, la probabilidad de ven-
+der las 11 es 0.85. Ésta es la probabilidad de que la demanda sea 11 unidades o más. Los cálculos
+son los siguientes:
+Probabilidad de que la demanda sea 11
+0.20
+Probabilidad de que la demanda sea 12
+0.40
+Probabilidad de que la demanda sea 13
+0.25
+Prob. de que la demanda sea 11 o más unidades
+0.85
+Si añadimos una doceava unidad, la probabilidad de vender las 12 unidades se reduce a 0.65 (la
+suma de las probabilidades de demanda de 12 o 13 unidades). Por último, la adición de una trecea-
+va unidad lleva consigo sólo una probabilidad de 0.25 de vender las 13 unidades, porque la deman-
+da será 13 unidades sólo 25% del tiempo.
+Derivación de la ecuación de probabilidad mínima
+La ganancia marginal esperada de almacenar y vender una unidad adicional es la ganancia margi-
+nal de la unidad multiplicada por la probabilidad de que se venda dicha unidad; esto es p(GM). La
+pérdida marginal esperada de almacenar y no vender una unidad adicional es la pérdida marginal
+en que se incurre si no se vende la unidad multiplicada por la probabilidad de que no se venda; es
+decir (1  p)(PM). Podemos generalizar que el comerciante en esta situación mantendría existen-
+cias hasta el punto en que:
+p(GM)  (1 – p)(PM) 
+[17-1]
+Esta ecuación describe el punto hasta el cual la ganancia marginal esperada de almacenar y ven-
+der una unidad adicional, p(GM), es igual a la pérdida marginal esperada de almacenar y no vender
+la unidad (1  p)(PM). Mientras p(GM) sea mayor que (1  p)(PM), se deben almacenar unidades
+adicionales, porque la ganancia esperada de esa decisión es mayor que la pérdida esperada.
+En cualquier problema de inventario, habrá un solo valor de p para el que la ecuación de maxi-
+mización es cierta. Debemos determinar ese valor para conocer la acción de inventario óptima. Po-
+demos hacer esto tomando nuestra ecuación de maximización y despejando p de la siguiente ma-
+nera:
+p(GM)  (1 – p)(PM)
+[17-1]
+Multiplicando los dos términos del lado derecho de la ecuación, obtenemos
+p(GM)  PM – p(PM)
+Reuniendo los términos que contienen a p, tenemos
+p(GM)  p(PM)  PM
+o
+p(GM  PM)  PM
+Dividiendo ambos lados de la ecuación entre GM  PM obtenemos
+Acción de inventario
+óptima
+Definición de 
+ganancia y pérdida
+marginal
+
+[Bloque seleccionado #814 | relevancia=7]
+Pagina 813
+el fabricante ofrece en la línea, también desea minimizar los faltantes. Intenta decidir el número de bol-
+sas de viaje de mujer que debe comprar. Su estimación de las ventas probables basándose en parte en su
+experiencia es:
+Bolsas
+32
+33
+34
+35
+36
+37
+38
+Probabilidad
+0.10
+0.14
+0.15
+0.20
+0.17
+0.13
+0.11
+La tienda planea vender estas bolsas en $42.75. El costo al mayoreo es $26.00. ¿Cuántas bolsas deben pe-
+dirse para su venta?
+■17-35
+Archdale, una cadena de tiendas de moda masculina, está considerando comprar un lote de 5,700 corba-
+tas de Beau Charin Company. El lote de corbatas costará $16,500 y cada corbata se venderá en $3.50. El
+vicepresidente de ventas de Archdale ha afirmado que piensa que la cadena podría vender 5,000 corbatas,
+y las posibilidades son de 2 a 3 de que las ventas reales estén dentro de 200 arriba o abajo de su estima-
+ción. Las corbatas no vendidas carecen de valor.
+a)
+¿Cuál es la probabilidad de que Archdale al menos quede a mano en la venta de corbatas?
+b) ¿Cuál es la probabilidad de que Archdale pueda ganar 10% o más de su inversión en inventario?
+■17-36
+Barry Roberts, abogado corporativo en jefe de Triangle Electronics, acaba de enterarse que un competidor
+ha entablado dos demandas relacionadas de violación de patentes contra Triangle. La primera se dictará en
+la Suprema Corte en tres meses, y la segunda está programada 6 meses después. Barry estima que el pri-
+mer juicio no tomará más de cuatro meses en concluir. Las opciones disponibles para Triangle en cada caso
+son llegar a un arreglo amistoso o dejar que se lleve a cabo el juicio. La preparación de cualquiera de los jui-
+cios costará $7,500, pero parte de la preparación legal del primero ayudará en el segundo, así que el costo
+de prepararse para ambos juicios será de sólo $12,000. Barry estima que le costará a Triangle $75,000 lle-
+gar a un arreglo en la primera demanda y $45,000 en la segunda. Claro que si llega a un acuerdo, Triangle
+evita los costos de preparación del juicio. Si las demandas van a juicio y Triangle gana, no habrá más cos-
+tos. Sin embargo, Barry estima que perder el primero ocasionaría costos adicionales de $150,000, y perder
+el segundo costaría aproximadamente $90,000. Piensa que Triangle tiene 60% de posibilidades de ganar el
+primer juicio. La posibilidad de ganar el segundo depende de la resolución del primero: 40% si se llega a
+un acuerdo fuera de la corte, 80% si llega a juicio y gana, y 10% si llega a juicio y pierde.
+a)
+Construya el árbol de decisiones de Barry para decidir cómo proceder.
+b) ¿Qué debe hacer Barry para minimizar el costo e
+
+[Bloque seleccionado #923 | relevancia=7]
+Pagina 922
+R-42
+Respuestas a ejercicios seleccionados
+■17-18
+Alternativa
+Opción a 2 meses
+Opción a 4 meses
+No comprar
+Utilidad esperada
+0.685
+0.870
+0.700
+Debe decidirse por la opción a 4 meses.
+■17-20
+P(dure  6 meses)  0.9927, de modo que debe realizar la contratación.
+■17-22
+P (dure  116,224 millas)  0.5987.
+■17-24
+PA  0.9394, PB  0.9162, así que compre las acciones.
+■17-26
+a)
+Los gastos de las ramas “operar ella, con fabricación de nieve” se convierten en 95, 43, 9, con un
+valor esperado de 43. Deberá dejar que la cadena hoteles opere la estación de esquí.
+b) En este caso los pagos y el VE son 96, 48, 0 y 48. Debe operar ella con el equipo de fabricación de
+nieve.
+c)
+Es indiferente a un aumento del 26% en el costo de operación; su ganancia de cualquiera de las alter-
+nativas es $45,000 en este punto.
+■17-28
+a)
+Opción
+Autobús
+Caminar
+Bicicleta
+Automóvil
+Retraso esperado
+15.50
+16.00
+14.00
+15.25
+Debe irse en bicicleta.
+b)
+Opción
+Autobús
+Caminar
+Bicicleta
+Automóvil
+Utilidad esperada
+82.50
+82.00
+86.00
+83.25
+Todavía debe irse en bicicleta.
+■17-30
+a)
+P(demanda  2213)  0.8686.
+b) P(demanda  3263)  0.5, deben comprar los módulos.
+■17-32
+a)
+p*  0.545, así, debe ordenar 44 colas.
+b) VEIP  $21.88, el aumento esperado en la ganancia si el requerimiento de pedidos por adelantado no
+cambia la distribución de demanda.
+■17-34
+p*  0.608, debe ordenar 35 bolsas.
+■17-36
+a)
+Los tres números en algunos de los nodos corresponden a los costos esperados para los incisos b, d.i
+y d.ii.
+$99,000
+87,500
+115,200
+No
+No
+Gana
+Pierde
+Gana
+Pierde
+Gana
+Pierde
+Sí
+Sí
+No
+Sí
+No
+Sí
+[D]
+[D]
+(C)
+[D]
+[D]
+(C)
+0.60
+Gana
+Pierde
+0.40
+$120,000
+95,000
+136,500
+$30,000
+27,500
+30,000
+$202,500
+177,500
+243,000
+$136,500
+$120,000
+95,000
+165,000
+$52,500
+27,500
+97,500
+$202,500
+177,500
+247,500
+$82,500
+$12,000
+$102,000
+$162,000
+$252,000
+$172,500
+$30,000
+$243,000
+0.40
+0.60
+(C)
+0.80
+0.20
+(C)
+0.10
+0.90
+Demanda # 1
+¿A juicio?
+Demanda # 2
+¿A juicio?
+Demanda # 1
+Resultado
+Pago
+Pago
+Prob
+Demanda # 2
+Resultado
+Pago
+Pago
+Prob
+$99,000
+87,500
+115,200
+Pago
+b) Intentar #1. Si gana, debe intentar #2; en cualquier otro caso, debe optar por #2.
+c)
+$99,000  $66,000  $ 33,000.
+d) (i) Intentar #1. Llegar a un acuerdo en el #2, independientemente del resultado del juicio #1.
+(ii) Intentar #1. Llegar a un acuerdo en el #2, independientemente del resultado del juicio #1. 
+■17-38
+p*  0.065, de modo que debe ordenar 25 trajes de baño.

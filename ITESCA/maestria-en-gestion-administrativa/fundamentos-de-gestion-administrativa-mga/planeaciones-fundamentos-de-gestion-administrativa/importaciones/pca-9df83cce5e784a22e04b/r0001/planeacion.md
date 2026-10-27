@@ -1,0 +1,336 @@
+# Planeacion: fundamentos-de-gestion-administrativa-mga
+
+Estado: needs_review. Conversion local, no aprobacion docente ni autorizacion de envio.
+
+## Identificacion
+
+```json
+{
+  "institution": "ITESCA",
+  "program": "maestria-en-gestion-administrativa",
+  "subject_id": "fundamentos-de-gestion-administrativa-mga",
+  "subject_title": "fundamentos-de-gestion-administrativa-mga",
+  "offering_id": "oferta-81c3e77b18baca54",
+  "period": null,
+  "modality": null
+}
+```
+
+## Actividad source-8139ca591cb2f6e2: planeacion-actividad-2.1-video-presentacion
+
+### Consigna importada
+
+[document]
+# Actividad 2.1 — Video presentación
+
+## Identidad y alcance
+
+- Institución: ITESCA; contexto de programa: Maestría en Gestión Administrativa.
+- Asignatura: Fundamentos de Gestión Administrativa; curso GGFG02; Moodle 372; periodo 2026-II.
+- Unidad II: Evolución de la Gestión; actividad del aula **2.1**, número local **5**, módulo **7788**.
+- Estado: **borrador**; revisión documental local **2026-09-15**, sin consulta web nueva.
+- Documento autónomo de planeación, no producto estudiantil ni aprobación institucional.
+- Requisitos y calendario proceden de los originales; propósito, secuencia y criterios formativos son propuestas.
+- Se leyeron notas y registros bibliográficos; no se leyeron ahora los PDF ni se revisaron identidades.
+- No se reproducen estados personales, calificaciones, grabaciones ni entregas previas.
+
+## Calendario y propósito
+
+| Dato del original | Valor conservado |
+| --- | --- |
+| Apertura | 2026-08-17 00:00 |
+| Cierre | 2026-08-24 23:59 |
+| Vencimiento separado | No aportado |
+| Zona horaria | Pendiente; sin conversión |
+| Peso | **10 % del curso**, no porcentaje interno de rúbrica |
+
+Fechas históricas al 2026-09-15: no acreditan recepción, reapertura ni prórroga.
+**Propósito PROPUESTO:** explicar y relacionar los enfoques y procesos solicitados en una exposición audiovisual sintética ajustada a su duración.
+Vinculación: comparar enfoques de gestión para analizar decisiones; no se atribuye un objetivo oficial específico.
+
+## Producto, componentes y entrega
+
+| Componente | Contenido mínimo y tratamiento | Autoridad / fuentes |
+| --- | --- | --- |
+| Enfoque orgánico | Explicar el enfoque; propuesto: contrastar adaptación y estructuras mecanicistas/orgánicas. | Requisito; Sánchez y Burns–Stalker |
+| Administración estratégica | Explicar la organización en función de los estrategas; propuesto: distinguir intención y formación de patrones. | Requisito; Sánchez y Mintzberg |
+| Cambio organizacional | Articular el cambio mediante relaciones interorganizacionales, institucionalismo, agencia y anarquías organizadas. | Requisito; consigna local |
+| Relaciones interorganizacionales | Explicar su relación con el cambio; propuesto: señalar vínculos y dependencia del entorno. | Requisito; Sánchez; Larrarte como contexto |
+| Institucionalismo | Explicar su relación con el cambio; propuesto: legitimidad y presiones institucionales. | Requisito; Meyer–Rowan y DiMaggio–Powell |
+| Agencia | Explicar su relación con el cambio; propuesto: principal–agente, información y costos. | Requisito; Jensen–Meckling |
+| Anarquías organizadas | Explicar su relación con el cambio; propuesto: problemas, soluciones, participantes y oportunidades de decisión. | Requisito; Cohen–March–Olsen |
+| Sustento de exposición | Identificar fuentes utilizadas mediante menciones o apoyo visual legible. | Propuesto; sin bibliografía audiovisual obligatoria añadida |
+| Forma y modalidad | Video individual de **4 a 8 minutos**, estudiante **en cámara**. | Original y consigna |
+| Entrega y canal | **URL del video** en tarea 7788; plataforma y permisos concretos por confirmar. | Original; no se exige alojamiento público |
+| Portada | Existe plantilla local; aplicación al video y URL oficial pendientes. | No convertirla en PDF obligatorio |
+
+Guion, esquema de cobertura, diapositivas, cronómetro y prueba de sonido son auxiliares **NO institucionales**, opcionales.
+Ni un PDF ni el guion sustituyen el video o la URL; no se impone aplicación, número de diapositivas ni extensión escrita.
+
+## Secuencia didáctica PROPUESTA
+
+| Fase | Estudiante | Docente | Minutos |
+| --- | --- | --- | --- |
+| Preparación | Revisar U2 y fuentes; elaborar guion auxiliar de cobertura y duración. | Orientar delimitación y aclarar aplicación de portada. | 60 |
+| Desarrollo | Ensayar, grabar en cámara y revisar cobertura y relaciones conceptuales. | Retroalimentar conceptos y orientar claridad del audio. | 120 |
+| Cierre | Comprobar duración real y funcionamiento de la URL para el destinatario. | Orientar comprobación de acceso sin pedir credenciales. | 30 |
+
+**Total: 210 minutos propuestos**; se conservan los tiempos del original, no un calendario de sesiones.
+La duración final debe medirse sobre la grabación; la estimación del guion no acredita 4–8 minutos.
+
+## Fuentes concretas y alcance de verificación
+
+**O / J.** [Planeación original](planeaciones.md) y [datos originales](planeaciones.json), actividad 2.1: textos leídos ahora; requisitos, fechas, rúbrica y tiempos.
+**C.** [Consigna local](../../../referencias-fundamentos-de-gestion-administrativa/actividad-5-video-presentacion/consigna.md): se usan solo instrucciones académicas, no estados personales ni entregables editoriales.
+**F / B.** [Nota de fuentes](../../../referencias-fundamentos-de-gestion-administrativa/actividad-5-video-presentacion/fuentes.md) y [bibliografía específica](../../../referencias-fundamentos-de-gestion-administrativa/actividad-5-video-presentacion/referencias-actividad-5.bib): texto leído; cotejo local de autores, títulos y años.
+**S.** Sánchez Bañuelos, María Nélida (2017). *Aportes teóricos a la gestión organizacional: la evolución en la visión de la organización*. Ciencias Administrativas, 10, 64–74.
+[PDF existente](../../../referencias-fundamentos-de-gestion-administrativa/actividad-5-video-presentacion/sanchez-banuelos-2017-aportes-teoricos-gestion-organizacional.pdf); [registro académico Redalyc](https://www.redalyc.org/articulo.oa?id=511653854007). Uso: articulación de orgánico, estrategia, relaciones, institucionalismo y agencia; metadatos con verificación previa reportada, PDF no leído ahora.
+**L.** Larrarte, Patricia (s. f.). *Fundamentos de administración. Eje 1: Conceptualicemos*. Fundación Universitaria del Área Andina.
+[PDF existente](../../../referencias-fundamentos-de-gestion-administrativa/actividad-5-video-presentacion/larrarte-fundamentos-administracion-eje-1.pdf). Uso: contexto histórico y ambiente; F reporta autoría verificada y ausencia de año; no se inventa fecha ni se afirma lectura actual del PDF.
+**BS.** Burns, Tom, y G. M. Stalker (1961). *The Management of Innovation*. Tavistock Publications.
+Registro en B/F, **sin copia completa localizada aquí**; uso propuesto: contraste orgánico/mecanicista; obra no leída ahora.
+**M.** Mintzberg, Henry (1978). *Patterns in Strategy Formation*. Management Science, 24(9), 934–948. [DOI registrado](https://doi.org/10.1287/mnsc.24.9.934).
+Registro B/F, sin copia completa localizada; uso: estrategia y patrones; sin consulta web ni lectura de la obra ahora.
+**MR.** Meyer, John W., y Brian Rowan (1977). *Institutionalized Organizations: Formal Structure as Myth and Ceremony*. American Journal of Sociology, 83(2), 340–363. [DOI registrado](https://doi.org/10.1086/226550).
+Registro B/F, sin copia completa localizada; uso: legitimidad y estructura institucional; no lectura actual de la obra.
+**DP.** DiMaggio, Paul J., y Walter W. Powell (1983). *The Iron Cage Revisited: Institutional Isomorphism and Collective Rationality in Organizational Fields*. American Sociological Review, 48(2), 147–160. [DOI registrado](https://doi.org/10.2307/2095101).
+Registro B/F, sin copia completa localizada; uso: presiones coercitivas, miméticas y normativas; no lectura actual de la obra.
+**JM.** Jensen, Michael C., y William H. Meckling (1976). *Theory of the Firm: Managerial Behavior, Agency Costs and Ownership Structure*. Journal of Financial Economics, 3(4), 305–360. [DOI registrado](https://doi.org/10.1016/0304-405X(76)90026-X).
+Registro B/F, sin copia completa localizada; uso: relaciones y costos de agencia; no lectura actual de la obra.
+**CMO.** Cohen, Michael D., James G. March y Johan P. Olsen (1972). *A Garbage Can Model of Organizational Choice*. Administrative Science Quarterly, 17(1), 1–25. [DOI registrado](https://doi.org/10.2307/2392088).
+Registro B/F con cotejo Crossref previo reportado; sin copia completa localizada; uso: anarquías organizadas; no atribuir este desarrollo a Sánchez sin soporte.
+**A / E.** [Tarea 7788](https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=7788) y [especificaciones 7767](https://cursos3.e-itesca.edu.mx/mod/page/view.php?id=7767): referencias del original, sin acceso web nuevo; localizadores `#intro`, `.activity-dates`, rúbrica y `.no-overflow`.
+**K / R / P.** [Catálogo](../../../referencias-fundamentos-de-gestion-administrativa/README.md), [rúbrica general existente](../../../referencias-fundamentos-de-gestion-administrativa/00-curso-y-evaluacion/rubrica-general-evaluacion.pdf) y [plantilla existente](../../../referencias-fundamentos-de-gestion-administrativa/00-curso-y-evaluacion/plantilla-portada.docx): se leyó el catálogo, no los binarios ni identidades.
+El catálogo documenta duplicados exactos de Larrarte y Sánchez entre actividades 4 y 5: **dos obras, no cuatro fuentes**.
+
+## Evaluación: tres niveles separados
+
+**Rúbrica específica oficial reportada en O/J:** sin entrega **0**, incompleta **8**, completa **10**; máximo **10 puntos**, distinto del **10 % del curso**; sin fórmula de conversión inferida.
+**Rúbrica general documentada por K:** revisión visual **PREVIA**, no repetida aquí; tema, organización, redacción, ortografía, puntuación y bibliografía; excelente/bien/regular/deficiente, **sin pesos numéricos**.
+No aplicar automáticamente la rúbrica general como puntos al video; su pertinencia debe aclararse con la docente.
+
+| Criterio PROPUESTO, sin puntos | Evidencia | Comprobación formativa |
+| --- | --- | --- |
+| Cobertura y articulación | Exposición de todos los componentes | Cotejar orgánico, estrategia y cambio con sus cuatro perspectivas; no solo enumerarlos. |
+| Precisión y atribución | Explicaciones y fuentes identificadas | Contrastar con fuentes; separar anarquías de la cobertura atribuible a Sánchez. |
+| Duración y cámara | Grabación final | Medir entre 4:00 y 8:00 y comprobar presencia del estudiante. |
+| Comunicación comprensible | Audio y apoyos si se usan | Revisar audibilidad y legibilidad sin exigir diapositivas. |
+| Entrega accesible | URL | Comprobar reproducción por destinatario sin compartir credenciales. |
+
+Lista formativa sí/no/por revisar; no añade puntajes ni sustituye la rúbrica específica.
+
+## Pendientes y conflictos
+
+- Confirmar zona horaria, vía vigente de recepción y condiciones de acceso; fechas históricas no autorizan entrega tardía.
+- Aclarar plataforma, tratamiento de portada y aplicación de rúbrica general al video.
+- Leer las obras antes de cerrar atribuciones; disponibilidad de URL o registro no acredita lectura.
+- Revisar con docente propósito, secuencia, tiempos y criterios propuestos; no hay aval institucional.
+- No se reporta contradicción específica del producto; aplicación de portada permanece pendiente.
+- Verificación técnica de enlaces locales y JSON no equivale a validación académica de las obras.
+
+
+### Requisitos
+
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[]
+```
+
+### products
+
+```json
+[]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": []
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": null
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## sources
+
+```json
+[
+  {
+    "id": "src-local",
+    "kind": "other",
+    "authority": "unknown",
+    "title": "planeacion-actividad-2.1-video-presentacion.md",
+    "url": null,
+    "path": "planeaciones-generadas/2026-II/revision-2026-09-15/planeacion-actividad-2.1-video-presentacion.md",
+    "sha256": "8139ca591cb2f6e2a3b38acb469ce3b3fde5ee4ed21ac4aff957a135419d8b67",
+    "captured_at": null,
+    "media_type": "text/plain"
+  }
+]
+```
+
+## field_status
+
+```json
+[
+  {
+    "path": "/identity",
+    "state": "inferred",
+    "reason": "Identidad editorial del catalogo; oferta interna, periodo y modalidad no acreditados cuando faltan.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/sources",
+    "state": "confirmed",
+    "reason": "Archivo local preservado; su huella no acredita autoria ni vigencia docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "local-file",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum",
+    "state": "unknown",
+    "reason": "No se deducen competencias, resultados ni temario que no esten documentados.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "document",
+        "quoted_text": "[document]\n# Actividad 2.1 — Video presentación\n\n## Identidad y alcance\n\n- Institución: ITESCA; contexto de programa: Maestría en Gestión Administrativa.\n- Asignatura: Fundamentos de Gestión Administrativa; curso GGFG02; Moodle 372; periodo 2026-II.\n- Unidad II: Evolución de la Gestión; actividad del aula **2.1**, número local **5**, módulo **7788**.\n- Estado: **borrador**; revisión documental local **2026-09-15**, sin consulta web nueva.\n- Documento autónomo de planeación, no producto estudiantil ni aprobación institucional.\n- Requisitos y calendario proceden de los originales; propósito, secuencia y criterios formativos son propuestas.\n- Se leyeron notas y registros bibliográficos; no se leyeron ahora los PDF ni se revisaron identidades.\n- No se reproducen estados personales, calificaciones, grabaciones ni entregas previas.\n\n## Calendario y propósito\n\n| Dato del original | Valor conservado |\n| --- | --- |\n| Apertura | 2026-08-17 00:00 |\n| Cierre | 2026-08-24 23:59 |\n| Vencimiento separado | No aportado |\n| Zona horaria | Pendiente; sin conversión |\n| Peso | **10 % del curso**, no porcentaje interno de rúbrica |\n\nFechas históricas al 2026-09-15: no acreditan recepción, reapertura ni prórroga.\n**Propósito PROPUESTO:** explicar y relacionar los enfoques y procesos solicitados en una exposición audiovisual sintética ajustada a su duración.\nVinculación: comparar enfoques de gestión para analizar decisiones; no se atribuye un objetivo oficial específico.\n\n## Producto, componentes y entrega\n\n| Componente | Contenido mínimo y tratamiento | Autoridad / fuentes |\n| --- | --- | --- |\n| Enfoque orgánico | Explicar el enfoque; propuesto: contrastar adaptación y estructuras mecanicistas/orgánicas. | Requisito; Sánchez y Burns–Stalker |\n| Administración estratégica | Explicar la organización en función de los estrategas; propuesto: distinguir intención y formación de patrones. | Requisito; Sánchez y Mintzberg |\n| Cambio organizacional | Articular el cambio mediante relaciones interorganizacionales, institucionalismo, agencia y anarquías organizadas. | Requisito; consigna local |\n| Relaciones interorganizacionales | Explicar su relación con el cambio; propuesto: señalar vínculos y dependencia del entorno. | Requisito; Sánchez; Larrarte como contexto |\n| Institucionalismo | Explicar su relación con el cambio; propuesto: legitimidad y presiones institucionales. | Requisito; Meyer–Rowan y DiMaggio–Powell |\n| Agencia | Explicar su relación con el cambio; propuesto: principal–agente, información y costos. | Requisito; Jensen–Meckling |\n| Anarquías organizadas | Explicar su relación con el cambio; propuesto: problemas, soluciones, participantes y oportunidades de decisión. | Requisito; Cohen–March–Olsen |\n| Sustento de exposición | Identificar fuentes utilizadas mediante menciones o apoyo visual legible. | Propuesto; sin bibliografía audiovisual obligatoria añadida |\n| Forma y modalidad | Video individual de **4 a 8 minutos**, estudiante **en cámara**. | Original y consigna |\n| Entrega y canal | **URL del video** en tarea 7788; plataforma y permisos concretos por confirmar. | Original; no se exige alojamiento público |\n| Portada | Existe plantilla local; aplicación al video y URL oficial pendientes. | No convertirla en PDF obligatorio |\n\nGuion, esquema de cobertura, diapositivas, cronómetro y prueba de sonido son auxiliares **NO institucionales**, opcionales.\nNi un PDF ni el guion sustituyen el video o la URL; no se impone aplicación, número de diapositivas ni extensión escrita.\n\n## Secuencia didáctica PROPUESTA\n\n| Fase | Estudiante | Docente | Minutos |\n| --- | --- | --- | --- |\n| Preparación | Revisar U2 y fuentes; elaborar guion auxiliar de cobertura y duración. | Orientar delimitación y aclarar aplicación de portada. | 60 |\n| Desarrollo | Ensayar, grabar en cámara y revisar cobertura y relaciones conceptuales. | Retroalimentar conceptos y orientar claridad del audio. | 120 |\n| Cierre | Comprobar duración real y funcionamiento de la URL para el destinatario. | Orientar comprobación de acceso sin pedir credenciales. | 30 |\n\n**Total: 210 minutos propuestos**; se conservan los tiempos del original, no un calendario de sesiones.\nLa duración final debe medirse sobre la grabación; la estimación del guion no acredita 4–8 minutos.\n\n## Fuentes concretas y alcance de verificación\n\n**O / J.** [Planeación original](planeaciones.md) y [datos originales](planeaciones.json), actividad 2.1: textos leídos ahora; requisitos, fechas, rúbrica y tiempos.\n**C.** [Consigna local](../../../referencias-fundamentos-de-gestion-administrativa/actividad-5-video-presentacion/consigna.md): se usan solo instrucciones académicas, no estados personales ni entregables editoriales.\n**F / B.** [Nota de fuentes](../../../referencias-fundamentos-de-gestion-administrativa/actividad-5-video-presentacion/fuentes.md) y [bibliografía específica](../../../referencias-fundamentos-de-gestion-administrativa/actividad-5-video-presentacion/referencias-actividad-5.bib): texto leído; cotejo local de autores, títulos y años.\n**S.** Sánchez Bañuelos, María Nélida (2017). *Aportes teóricos a la gestión organizacional: la evolución en la visión de la organización*. Ciencias Administrativas, 10, 64–74.\n[PDF existente](../../../referencias-fundamentos-de-gestion-administrativa/actividad-5-video-presentacion/sanchez-banuelos-2017-aportes-teoricos-gestion-organizacional.pdf); [registro académico Redalyc](https://www.redalyc.org/articulo.oa?id=511653854007). Uso: articulación de orgánico, estrategia, relaciones, institucionalismo y agencia; metadatos con verificación previa reportada, PDF no leído ahora.\n**L.** Larrarte, Patricia (s. f.). *Fundamentos de administración. Eje 1: Conceptualicemos*. Fundación Universitaria del Área Andina.\n[PDF existente](../../../referencias-fundamentos-de-gestion-administrativa/actividad-5-video-presentacion/larrarte-fundamentos-administracion-eje-1.pdf). Uso: contexto histórico y ambiente; F reporta autoría verificada y ausencia de año; no se inventa fecha ni se afirma lectura actual del PDF.\n**BS.** Burns, Tom, y G. M. Stalker (1961). *The Management of Innovation*. Tavistock Publications.\nRegistro en B/F, **sin copia completa localizada aquí**; uso propuesto: contraste orgánico/mecanicista; obra no leída ahora.\n**M.** Mintzberg, Henry (1978). *Patterns in Strategy Formation*. Management Science, 24(9), 934–948. [DOI registrado](https://doi.org/10.1287/mnsc.24.9.934).\nRegistro B/F, sin copia completa localizada; uso: estrategia y patrones; sin consulta web ni lectura de la obra ahora.\n**MR.** Meyer, John W., y Brian Rowan (1977). *Institutionalized Organizations: Formal Structure as Myth and Ceremony*. American Journal of Sociology, 83(2), 340–363. [DOI registrado](https://doi.org/10.1086/226550).\nRegistro B/F, sin copia completa localizada; uso: legitimidad y estructura institucional; no lectura actual de la obra.\n**DP.** DiMaggio, Paul J., y Walter W. Powell (1983). *The Iron Cage Revisited: Institutional Isomorphism and Collective Rationality in Organizational Fields*. American Sociological Review, 48(2), 147–160. [DOI registrado](https://doi.org/10.2307/2095101).\nRegistro B/F, sin copia completa localizada; uso: presiones coercitivas, miméticas y normativas; no lectura actual de la obra.\n**JM.** Jensen, Michael C., y William H. Meckling (1976). *Theory of the Firm: Managerial Behavior, Agency Costs and Ownership Structure*. Journal of Financial Economics, 3(4), 305–360. [DOI registrado](https://doi.org/10.1016/0304-405X(76)90026-X).\nRegistro B/F, sin copia completa localizada; uso: relaciones y costos de agencia; no lectura actual de la obra.\n**CMO.** Cohen, Michael D., James G. March y Johan P. Olsen (1972). *A Garbage Can Model of Organizational Choice*. Administrative Science Quarterly, 17(1), 1–25. [DOI registrado](https://doi.org/10.2307/2392088).\nRegistro B/F con cotejo Crossref previo reportado; sin copia completa localizada; uso: anarquías organizadas; no atribuir este desarrollo a Sánchez sin soporte.\n**A / E.** [Tarea 7788](https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=7788) y [especificaciones 7767](https://cursos3.e-itesca.edu.mx/mod/page/view.php?id=7767): referencias del original, sin acceso web nuevo; localizadores `#intro`, `.activity-dates`, rúbrica y `.no-overflow`.\n**K / R / P.** [Catálogo](../../../referencias-fundamentos-de-gestion-administrativa/README.md), [rúbrica general existente](../../../referencias-fundamentos-de-gestion-administrativa/00-curso-y-evaluacion/rubrica-general-evaluacion.pdf) y [plantilla existente](../../../referencias-fundamentos-de-gestion-administrativa/00-curso-y-evaluacion/plantilla-portada.docx): se leyó el catálogo, no los binarios ni identidades.\nEl catálogo documenta duplicados exactos de Larrarte y Sánchez entre actividades 4 y 5: **dos obras, no cuatro fuentes**.\n\n## Evaluación: tres niveles separados\n\n**Rúbrica específica oficial reportada en O/J:** sin entrega **0**, incompleta **8**, completa **10**; máximo **10 puntos**, distinto del **10 % del curso**; sin fórmula de conversión inferida.\n**Rúbrica general documentada por K:** revisión visual **PREVIA**, no repetida aquí; tema, organización, redacción, ortografía, puntuación y bibliografía; excelente/bien/regular/deficiente, **sin pesos numéricos**.\nNo aplicar automáticamente la rúbrica general como puntos al video; su pertinencia debe aclararse con la docente.\n\n| Criterio PROPUESTO, sin puntos | Evidencia | Comprobación formativa |\n| --- | --- | --- |\n| Cobertura y articulación | Exposición de todos los componentes | Cotejar orgánico, estrategia y cambio con sus cuatro perspectivas; no solo enumerarlos. |\n| Precisión y atribución | Explicaciones y fuentes identificadas | Contrastar con fuentes; separar anarquías de la cobertura atribuible a Sánchez. |\n| Duración y cámara | Grabación final | Medir entre 4:00 y 8:00 y comprobar presencia del estudiante. |\n| Comunicación comprensible | Audio y apoyos si se usan | Revisar audibilidad y legibilidad sin exigir diapositivas. |\n| Entrega accesible | URL | Comprobar reproducción por destinatario sin compartir credenciales. |\n\nLista formativa sí/no/por revisar; no añade puntajes ni sustituye la rúbrica específica.\n\n## Pendientes y conflictos\n\n- Confirmar zona horaria, vía vigente de recepción y condiciones de acceso; fechas históricas no autorizan entrega tardía.\n- Aclarar plataforma, tratamiento de portada y aplicación de rúbrica general al video.\n- Leer las obras antes de cerrar atribuciones; disponibilidad de URL o registro no acredita lectura.\n- Revisar con docente propósito, secuencia, tiempos y criterios propuestos; no hay aval institucional.\n- No se reporta contradicción específica del producto; aplicación de portada permanece pendiente.\n- Verificación técnica de enlaces locales y JSON no equivale a validación académica de las obras.\n"
+      }
+    ],
+    "alternatives": []
+  }
+]
+```
+
+## review
+
+```json
+{
+  "state": "needs_review",
+  "reviewed_at": null,
+  "reviewer_role": null,
+  "critical_gaps": [
+    "Cotejar consigna y procedencia docente; conversion local no equivale a aprobacion",
+    "Documento sin segmentar: identificar actividades, requisitos, preguntas y rubrica antes de ejecutar"
+  ],
+  "semantic_validation": "failed"
+}
+```
+
+## extensions
+
+```json
+{
+  "conversion": {
+    "version": "1.0",
+    "source_format": ".md",
+    "source_sha256": "8139ca591cb2f6e2a3b38acb469ce3b3fde5ee4ed21ac4aff957a135419d8b67",
+    "source_payload": null,
+    "source_blocks": [
+      {
+        "locator": "document",
+        "text": "# Actividad 2.1 — Video presentación\n\n## Identidad y alcance\n\n- Institución: ITESCA; contexto de programa: Maestría en Gestión Administrativa.\n- Asignatura: Fundamentos de Gestión Administrativa; curso GGFG02; Moodle 372; periodo 2026-II.\n- Unidad II: Evolución de la Gestión; actividad del aula **2.1**, número local **5**, módulo **7788**.\n- Estado: **borrador**; revisión documental local **2026-09-15**, sin consulta web nueva.\n- Documento autónomo de planeación, no producto estudiantil ni aprobación institucional.\n- Requisitos y calendario proceden de los originales; propósito, secuencia y criterios formativos son propuestas.\n- Se leyeron notas y registros bibliográficos; no se leyeron ahora los PDF ni se revisaron identidades.\n- No se reproducen estados personales, calificaciones, grabaciones ni entregas previas.\n\n## Calendario y propósito\n\n| Dato del original | Valor conservado |\n| --- | --- |\n| Apertura | 2026-08-17 00:00 |\n| Cierre | 2026-08-24 23:59 |\n| Vencimiento separado | No aportado |\n| Zona horaria | Pendiente; sin conversión |\n| Peso | **10 % del curso**, no porcentaje interno de rúbrica |\n\nFechas históricas al 2026-09-15: no acreditan recepción, reapertura ni prórroga.\n**Propósito PROPUESTO:** explicar y relacionar los enfoques y procesos solicitados en una exposición audiovisual sintética ajustada a su duración.\nVinculación: comparar enfoques de gestión para analizar decisiones; no se atribuye un objetivo oficial específico.\n\n## Producto, componentes y entrega\n\n| Componente | Contenido mínimo y tratamiento | Autoridad / fuentes |\n| --- | --- | --- |\n| Enfoque orgánico | Explicar el enfoque; propuesto: contrastar adaptación y estructuras mecanicistas/orgánicas. | Requisito; Sánchez y Burns–Stalker |\n| Administración estratégica | Explicar la organización en función de los estrategas; propuesto: distinguir intención y formación de patrones. | Requisito; Sánchez y Mintzberg |\n| Cambio organizacional | Articular el cambio mediante relaciones interorganizacionales, institucionalismo, agencia y anarquías organizadas. | Requisito; consigna local |\n| Relaciones interorganizacionales | Explicar su relación con el cambio; propuesto: señalar vínculos y dependencia del entorno. | Requisito; Sánchez; Larrarte como contexto |\n| Institucionalismo | Explicar su relación con el cambio; propuesto: legitimidad y presiones institucionales. | Requisito; Meyer–Rowan y DiMaggio–Powell |\n| Agencia | Explicar su relación con el cambio; propuesto: principal–agente, información y costos. | Requisito; Jensen–Meckling |\n| Anarquías organizadas | Explicar su relación con el cambio; propuesto: problemas, soluciones, participantes y oportunidades de decisión. | Requisito; Cohen–March–Olsen |\n| Sustento de exposición | Identificar fuentes utilizadas mediante menciones o apoyo visual legible. | Propuesto; sin bibliografía audiovisual obligatoria añadida |\n| Forma y modalidad | Video individual de **4 a 8 minutos**, estudiante **en cámara**. | Original y consigna |\n| Entrega y canal | **URL del video** en tarea 7788; plataforma y permisos concretos por confirmar. | Original; no se exige alojamiento público |\n| Portada | Existe plantilla local; aplicación al video y URL oficial pendientes. | No convertirla en PDF obligatorio |\n\nGuion, esquema de cobertura, diapositivas, cronómetro y prueba de sonido son auxiliares **NO institucionales**, opcionales.\nNi un PDF ni el guion sustituyen el video o la URL; no se impone aplicación, número de diapositivas ni extensión escrita.\n\n## Secuencia didáctica PROPUESTA\n\n| Fase | Estudiante | Docente | Minutos |\n| --- | --- | --- | --- |\n| Preparación | Revisar U2 y fuentes; elaborar guion auxiliar de cobertura y duración. | Orientar delimitación y aclarar aplicación de portada. | 60 |\n| Desarrollo | Ensayar, grabar en cámara y revisar cobertura y relaciones conceptuales. | Retroalimentar conceptos y orientar claridad del audio. | 120 |\n| Cierre | Comprobar duración real y funcionamiento de la URL para el destinatario. | Orientar comprobación de acceso sin pedir credenciales. | 30 |\n\n**Total: 210 minutos propuestos**; se conservan los tiempos del original, no un calendario de sesiones.\nLa duración final debe medirse sobre la grabación; la estimación del guion no acredita 4–8 minutos.\n\n## Fuentes concretas y alcance de verificación\n\n**O / J.** [Planeación original](planeaciones.md) y [datos originales](planeaciones.json), actividad 2.1: textos leídos ahora; requisitos, fechas, rúbrica y tiempos.\n**C.** [Consigna local](../../../referencias-fundamentos-de-gestion-administrativa/actividad-5-video-presentacion/consigna.md): se usan solo instrucciones académicas, no estados personales ni entregables editoriales.\n**F / B.** [Nota de fuentes](../../../referencias-fundamentos-de-gestion-administrativa/actividad-5-video-presentacion/fuentes.md) y [bibliografía específica](../../../referencias-fundamentos-de-gestion-administrativa/actividad-5-video-presentacion/referencias-actividad-5.bib): texto leído; cotejo local de autores, títulos y años.\n**S.** Sánchez Bañuelos, María Nélida (2017). *Aportes teóricos a la gestión organizacional: la evolución en la visión de la organización*. Ciencias Administrativas, 10, 64–74.\n[PDF existente](../../../referencias-fundamentos-de-gestion-administrativa/actividad-5-video-presentacion/sanchez-banuelos-2017-aportes-teoricos-gestion-organizacional.pdf); [registro académico Redalyc](https://www.redalyc.org/articulo.oa?id=511653854007). Uso: articulación de orgánico, estrategia, relaciones, institucionalismo y agencia; metadatos con verificación previa reportada, PDF no leído ahora.\n**L.** Larrarte, Patricia (s. f.). *Fundamentos de administración. Eje 1: Conceptualicemos*. Fundación Universitaria del Área Andina.\n[PDF existente](../../../referencias-fundamentos-de-gestion-administrativa/actividad-5-video-presentacion/larrarte-fundamentos-administracion-eje-1.pdf). Uso: contexto histórico y ambiente; F reporta autoría verificada y ausencia de año; no se inventa fecha ni se afirma lectura actual del PDF.\n**BS.** Burns, Tom, y G. M. Stalker (1961). *The Management of Innovation*. Tavistock Publications.\nRegistro en B/F, **sin copia completa localizada aquí**; uso propuesto: contraste orgánico/mecanicista; obra no leída ahora.\n**M.** Mintzberg, Henry (1978). *Patterns in Strategy Formation*. Management Science, 24(9), 934–948. [DOI registrado](https://doi.org/10.1287/mnsc.24.9.934).\nRegistro B/F, sin copia completa localizada; uso: estrategia y patrones; sin consulta web ni lectura de la obra ahora.\n**MR.** Meyer, John W., y Brian Rowan (1977). *Institutionalized Organizations: Formal Structure as Myth and Ceremony*. American Journal of Sociology, 83(2), 340–363. [DOI registrado](https://doi.org/10.1086/226550).\nRegistro B/F, sin copia completa localizada; uso: legitimidad y estructura institucional; no lectura actual de la obra.\n**DP.** DiMaggio, Paul J., y Walter W. Powell (1983). *The Iron Cage Revisited: Institutional Isomorphism and Collective Rationality in Organizational Fields*. American Sociological Review, 48(2), 147–160. [DOI registrado](https://doi.org/10.2307/2095101).\nRegistro B/F, sin copia completa localizada; uso: presiones coercitivas, miméticas y normativas; no lectura actual de la obra.\n**JM.** Jensen, Michael C., y William H. Meckling (1976). *Theory of the Firm: Managerial Behavior, Agency Costs and Ownership Structure*. Journal of Financial Economics, 3(4), 305–360. [DOI registrado](https://doi.org/10.1016/0304-405X(76)90026-X).\nRegistro B/F, sin copia completa localizada; uso: relaciones y costos de agencia; no lectura actual de la obra.\n**CMO.** Cohen, Michael D., James G. March y Johan P. Olsen (1972). *A Garbage Can Model of Organizational Choice*. Administrative Science Quarterly, 17(1), 1–25. [DOI registrado](https://doi.org/10.2307/2392088).\nRegistro B/F con cotejo Crossref previo reportado; sin copia completa localizada; uso: anarquías organizadas; no atribuir este desarrollo a Sánchez sin soporte.\n**A / E.** [Tarea 7788](https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=7788) y [especificaciones 7767](https://cursos3.e-itesca.edu.mx/mod/page/view.php?id=7767): referencias del original, sin acceso web nuevo; localizadores `#intro`, `.activity-dates`, rúbrica y `.no-overflow`.\n**K / R / P.** [Catálogo](../../../referencias-fundamentos-de-gestion-administrativa/README.md), [rúbrica general existente](../../../referencias-fundamentos-de-gestion-administrativa/00-curso-y-evaluacion/rubrica-general-evaluacion.pdf) y [plantilla existente](../../../referencias-fundamentos-de-gestion-administrativa/00-curso-y-evaluacion/plantilla-portada.docx): se leyó el catálogo, no los binarios ni identidades.\nEl catálogo documenta duplicados exactos de Larrarte y Sánchez entre actividades 4 y 5: **dos obras, no cuatro fuentes**.\n\n## Evaluación: tres niveles separados\n\n**Rúbrica específica oficial reportada en O/J:** sin entrega **0**, incompleta **8**, completa **10**; máximo **10 puntos**, distinto del **10 % del curso**; sin fórmula de conversión inferida.\n**Rúbrica general documentada por K:** revisión visual **PREVIA**, no repetida aquí; tema, organización, redacción, ortografía, puntuación y bibliografía; excelente/bien/regular/deficiente, **sin pesos numéricos**.\nNo aplicar automáticamente la rúbrica general como puntos al video; su pertinencia debe aclararse con la docente.\n\n| Criterio PROPUESTO, sin puntos | Evidencia | Comprobación formativa |\n| --- | --- | --- |\n| Cobertura y articulación | Exposición de todos los componentes | Cotejar orgánico, estrategia y cambio con sus cuatro perspectivas; no solo enumerarlos. |\n| Precisión y atribución | Explicaciones y fuentes identificadas | Contrastar con fuentes; separar anarquías de la cobertura atribuible a Sánchez. |\n| Duración y cámara | Grabación final | Medir entre 4:00 y 8:00 y comprobar presencia del estudiante. |\n| Comunicación comprensible | Audio y apoyos si se usan | Revisar audibilidad y legibilidad sin exigir diapositivas. |\n| Entrega accesible | URL | Comprobar reproducción por destinatario sin compartir credenciales. |\n\nLista formativa sí/no/por revisar; no añade puntajes ni sustituye la rúbrica específica.\n\n## Pendientes y conflictos\n\n- Confirmar zona horaria, vía vigente de recepción y condiciones de acceso; fechas históricas no autorizan entrega tardía.\n- Aclarar plataforma, tratamiento de portada y aplicación de rúbrica general al video.\n- Leer las obras antes de cerrar atribuciones; disponibilidad de URL o registro no acredita lectura.\n- Revisar con docente propósito, secuencia, tiempos y criterios propuestos; no hay aval institucional.\n- No se reporta contradicción específica del producto; aplicación de portada permanece pendiente.\n- Verificación técnica de enlaces locales y JSON no equivale a validación académica de las obras.\n"
+      }
+    ],
+    "unsegmented_document": true,
+    "period_pending": true,
+    "activity_mapping": [
+      {
+        "activity_id": "source-8139ca591cb2f6e2",
+        "local_number": null,
+        "source_locator": "document",
+        "source_is_summary": false
+      }
+    ]
+  }
+}
+```

@@ -1,0 +1,532 @@
+Fuente bibliográfica: Estadística para negocios y economía - Anderson, Sweeney y Williams. 11.ª edición.pdf
+Actividad: 5 (2.2 Ejercicios 5% Tarea)
+Palabras clave: distribución muestral, media muestral, proporción muestral, teorema central del límite, error estándar, corrección por continuidad
+
+[Bloque seleccionado #122 | relevancia=14]
+Pagina 121
+ 
+3.1  Medidas de posición o localización 
+87
+MEDIA MUESTRAL
+ 
+x  xi
+n 
+(3.1)
+La media muestral x es 
+un estadístico muestral.
+Se presentan las medidas numéricas de posición, dispersión, forma y asociación. Si las me-
+didas se calculan para los datos de una muestra, se les llama estadístico muestral. Si se calculan 
+para los datos de una población, se les llama parámetros poblacionales. En la inferencia esta-
+dística, un estadístico muestral se conoce como estimador puntual del parámetro poblacional 
+correspondiente. En el capítulo 7 se verá con más detalle el proceso de la estimación puntual.
+En los tres apéndices del capítulo se explica cómo se usan Minitab, Excel y StatTools para 
+calcular las medidas numéricas descritas en el capítulo.
+3.1 
+Medidas de posición o localización
+Media
+La media, o valor medio, es quizá la medida de ubicación más importante para una variable, 
+pues proporciona una medida de la ubicación central de los datos. Si los datos son para una 
+muestra, la media se denota por x; si son para una población, se denota por la letra griega μ.
+En las fórmulas estadísticas se acostumbra denotar el valor de la primera observación de 
+la variable x mediante x1, el valor de la segunda observación de la variable x por medio de x2, y 
+así sucesivamente. En general, el valor de la i-ésima observación de la variable x se representa 
+por medio de xi. Si se tiene una muestra con n observaciones, la fórmula para la media muestral 
+es la siguiente.
+En la fórmula anterior, el numerador es la suma de los valores de las n observaciones. Es 
+decir,
+xi  x1  x2  . . .  xn
+La letra griega  es el signo de sumatoria.
+Para ilustrar el cálculo de una media muestral, considere los datos siguientes sobre el tamaño 
+del grupo para una muestra de cinco grupos de estudiantes universitarios.
+46 54 42 46 32
+La notación x1, x2, x3, x4, x5 se utiliza para representar el número de estudiantes en cada uno de 
+los cinco grupos.
+x1  46  x2  54  x3  42  x4  46  x5  32
+Por consiguiente, para calcular la media muestral se escribe
+ 
+x  xi
+n  x1  x2  x3  x4  x5
+5
+  46  54  42  46  32
+5
+  44
+El tamaño de grupo de la media muestral es 44 estudiantes.
+Otro ejemplo del cálculo de una media muestral se da en la situación siguiente. Suponga que 
+una oficina de colocación de empleos a nivel universitario envió un cuestionario a una muestra 
+de licenciados en administración de empresas recién egresados solicitando información sobre
+
+[Bloque seleccionado #161 | relevancia=16]
+Pagina 160
+126 
+Capítulo 3  Estadística descriptiva: medidas numéricas
+MEDIA MUESTRAL PARA DATOS AGRUPADOS
+ 
+x  fiMi
+n
+ 
+(3.16)
+donde
+Mi  punto medio para la clase i
+fi  frecuencia para la clase i
+n  tamaño muestral
+ 
+Duración de la 
+Punto medio 
+Frecuencia
+ 
+auditoría (días) 
+de la clase (Mi) 
+( fi) 
+fiMi
+ 
+10–14 
+12 
+ 4 
+ 48
+ 
+15–19 
+17 
+ 8 
+136
+ 
+20–24 
+22 
+ 5 
+110
+ 
+25–29 
+27 
+ 2 
+ 54
+ 
+30–34 
+32 
+ 1 
+ 32
+ 
+ 
+ 
+20 
+380
+Media muestral x  fiMi
+n
+  380
+20
+  19 días
+TABLA 3.10   Cálculo de la media muestral de la duración de la auditoría para los datos agrupados
+el denominador de la ecuación es la suma de las frecuencias, la cual es el tamaño muestral n. 
+Es decir, fi  n. Por tanto, la ecuación para la media muestral de los datos agrupados es la 
+siguiente.
+VARIANZA MUESTRAL PARA DATOS AGRUPADOS
+ 
+s2  fi(Mi  x)2
+n  1
+ 
+(3.17)
+Con los puntos medios de clase, Mi, a medio camino entre los límites de clase, la primera 
+de 10–14 en la tabla 3.9 tiene un punto medio en (10  14)/2  12. Los cinco puntos medios de 
+clase y el cálculo de la media ponderada para los datos de duración de la auditoría se resumen en 
+la tabla 3.10. Como puede verse, la media muestral de la duración de la auditoría es de 19 días.
+Para calcular la varianza de datos agrupados se usa una versión ligeramente alterada de 
+la fórmula para la varianza proporcionada en la ecuación (3.5). En esta ecuación las desvia-
+ciones cuadradas de los datos con respecto a la media muestral x se escribieron como (xi  x)2. 
+Sin embargo, con los datos agrupados, los valores no se conocen. En este caso, el punto medio 
+de la clase, Mi, se trata como si fuera representativo de los xi valores en la clase correspondien-
+te. Por tanto, las desviaciones cuadradas respecto de la media muestral, (xi  x)2, se remplazan 
+por (Mi  x)2. Así, del mismo modo que con los cálculos de la media muestral para los datos 
+agrupados, se pesa cada valor por la frecuencia de la clase, fi. La suma de las desviaciones 
+cuadradas con respecto a la media para todos los datos se aproxima por medio de fi(Mi  x)2. 
+El término n  1 en vez de n aparece en el denominador con el fin de hacer de la varianza mues-
+tral la estimación de la varianza poblacional. De ahí que la fórmula siguiente se use con objeto 
+de obtener la varianza muestral para los datos agrupados.
+
+[Bloque seleccionado #316 | relevancia=14]
+Pagina 315
+ 
+7.5  Distribución de muestreo de x  
+281
+En los casos en que n/N  0.05, para calcular σx debe usarse la versión para poblaciones 
+ﬁ nitas de la fórmula (7.2). En este libro, a menos que se indique otra cosa, se supondrá que el ta-
+maño de la población es “grande”, n/N  0.05, y se utilizará la expresión (7.3) para calcular σx.
+Para calcular σx se necesita conocer σ, la desviación estándar de la población. Para subra-
+yar, aún más, la diferencia entre σx y σ, a la desviación estándar de x, σx, se le llama error 
+estándar de la media. En general, el término error estándar se reﬁ ere a la desviación están-
+dar de un estimador puntual. Más adelante se verá que el valor del error estándar de la media 
+ayuda a determinar qué tan lejos puede estar la media muestral de la media poblacional. Ahora, 
+de nuevo con el ejemplo de EAI, se calcula el error estándar de la media correspondiente a las 
+muestras aleatorias simples de 30 gerentes de EAI.
+En la sección 7.1 vimos que la desviación estándar de los sueldos anuales en la población 
+de los 2 500 gerentes de EAI era σ  4 000. En este caso la población es ﬁ nita, N  2 500. Sin 
+embargo, como el tamaño de la muestra es 30, se tiene n/N  30/2 500  0.012. Dado que el 
+tamaño de la muestra es menor que 5% del tamaño de la población, se puede ignorar el factor 
+de corrección para una población ﬁ nita y usar la ecuación (7.3) para calcular el error estándar.
+σx  σ
+n  4 000
+30
+  730.3
+Forma de la distribución de muestreo de x
+Los resultados anteriores respecto del valor esperado y la desviación estándar en la distribu-
+ción de muestreo de x son aplicables a cualquier población. El paso ﬁ nal para identiﬁ car las 
+características de la distribución de muestreo de x consiste en determinar la forma de la dis-
+tribución de muestreo. Se considerarán dos casos: 1) La población tiene distribución normal, y 
+2) La población no tiene distribución normal.
+La población tiene distribución normal. En muchas situaciones es razonable suponer 
+que la población de la que se selecciona la muestra aleatoria simple tiene distribución normal o 
+casi normal. Cuando esto ocurre, la distribución de muestreo de x está distribuida normalmente 
+cualquiera que sea el tamaño de la muestra.
+La población no tiene distribución normal. Cuando la población de la que se tomó 
+la muestra aleatoria simple no tiene distribución normal, el teorema del límite central ayuda a 
+determinar la forma de la distribución de muestreo de x. El enunciado de este teorema aplicado 
+a la distribución de muestreo de x dice lo siguiente.
+TEOREMA DEL LÍM
+
+[Bloque seleccionado #318 | relevancia=14]
+Pagina 317
+ 
+7.5  Distribución de muestreo de x  
+283
+observaciones atípicas, pueden necesitarse muestras de tamaño 50. Por último, si la población 
+es discreta, el tamaño de muestra necesario para la aproximación normal suele depender de la 
+proporción poblacional. Se profundizará más en este tema cuando se estudie la distribución de 
+muestreo de p en la sección 7.6.
+Distribución de muestreo de x en el problema de EAI
+En el problema de EAI, para el que ya previamente se mostró que E(x)  $51 800 y σx  730.3, 
+no se cuenta con ninguna información acerca de la distribución de la población, que puede es-
+tar o no distribuida normalmente. Si se da el segundo caso, la distribución muestral de x estará 
+distribuida normalmente. Si la población no tiene una distribución normal, la muestra aleato-
+ria simple de 30 gerentes y el teorema del límite central permiten concluir que la distribución de 
+muestreo de x puede aproximarse mediante una distribución normal. En cualquiera de los casos, 
+se concluye que la distribución de muestreo de x se describe mediante una distribución normal 
+como la que se muestra en la ﬁ gura 7.4.
+Valor práctico de la distribución de muestreo de x
+Siempre que se seleccione una muestra aleatoria simple y se use el valor de la media muestral 
+para estimar el valor de la media poblacional μ, no se podrá esperar que la media muestral sea 
+exactamente igual a la media poblacional. La razón práctica por la que interesa la distribución 
+de muestreo de x estriba en que se puede usar para proporcionar información probabilística 
+acerca de la diferencia entre la media muestral y la media poblacional. Para demostrar este uso, 
+se retomará el problema de EAI.
+Suponga que el director de personal cree que la media muestral será una estimación acep-
+table de la media poblacional si la primera está en un margen de $500 de la segunda. Sin em-
+bargo, no es posible garantizar que la media muestral esté en un margen de $500 de la media 
+poblacional. En efecto, en la tabla 7.5 y en la ﬁ gura 7.1 se observa que algunas de las 500 me-
+dias muestrales diﬁ eren en más de $2 000 de la media poblacional. Entonces hay que pensar en 
+el requerimiento del director de personal en términos de probabilidad. Es decir, a éste le interesa 
+la interrogante siguiente: ¿cuál es la probabilidad de que la media muestral obtenida usando 
+una muestra aleatoria simple de 30 gerentes de EAI se encuen tre en un margen de $500 de la 
+media poblacional?
+FIGURA 7.4   Distribución de muestreo de x para el sueldo medio anual de una muestra 
+aleatoria simple de 30 gerentes de EAI
+x
+5180
+
+[Bloque seleccionado #322 | relevancia=20]
+Pagina 321
+ 
+7.5  Distribución de muestreo de x  
+287
+Ejercicios
+Métodos
+ 
+18. La media de una población es 200 y su desviación estándar es 50. Se tomará una muestra 
+aleatoria simple de tamaño 100 y se utilizará la media muestral x para estimar la media po-
+blacional.
+a) ¿Cuál es el valor esperado de x?
+b) ¿Cuál es la desviación estándar de x?
+c) 
+Ilustre la distribución de muestreo de x.
+d) ¿Qué expresa la distribución de muestreo de x?
+ 
+19. La media de una población es 200 y su desviación estándar es 50. Suponga que se selecciona 
+una muestra aleatoria simple de tamaño 100 y que se usa x para estimar μ.
+a)  ¿Cuál es la probabilidad de que la diferencia entre la media muestral y la media pobla-
+cional no sea mayor que 5?
+b)  ¿Y de que la diferencia entre la media muestral y la media poblacional no sea mayor 
+que 10?
+ 
+20. Suponga que la desviación estándar poblacional es σ  25. Calcule el error estándar de la me-
+dia, σx, con muestras de tamaño 50, 100, 150 y 200. ¿Qué puede decir acerca del tamaño del 
+error estándar de la media conforme el tamaño de la muestra aumenta?
+ 
+21. Suponga que se toma una muestra aleatoria simple de tamaño 50 a partir de una población 
+en la que σ  10. Determine el valor del error estándar de la media en cada uno de los casos 
+siguientes (si es necesario, use el factor de corrección para una población finita).
+a) El tamaño de la población es infinito.
+b) El tamaño de la población es N  50 000.
+c) 
+El tamaño de la población es N  5 000.
+d) El tamaño de la población es N  500.
+Aplicaciones
+ 
+22. Regrese al problema de los gerentes de EAI. Suponga que se utiliza una muestra aleatoria sim-
+ple de 60 gerentes.
+a)  Dibuje la distribución de muestreo de x si se emplean muestras aleatorias simples de ta-
+maño 60.
+b)  ¿Qué sucede con la distribución de muestreo de x si se usan muestras aleatorias simples 
+de tamaño 120?
+c) 
+ ¿Qué puede decir acerca de qué le sucede a la distribución de muestreo de x conforme el 
+tamaño de la muestra aumenta? ¿Parece lógica esta generalización? Explique.
+ 
+23. En el problema de muestreo de EAI (figura 7.5), se indicó que con n  30, la probabilidad de 
+que la media muestral no difiriera más de $500 de la media poblacional era 0.5034.
+a)  ¿Cuál es la probabilidad de que la media muestral no difiera más de $500 de la media 
+poblacional si se usa una muestra de tamaño 60?
+b)  Responda el inciso a) si el tamaño de la muestra es 120.
+ 
+24. Barron’s reportó que el número promedio de semanas que un individuo está desempleado es de 
+17.5 (Barron’s, 18 de febrero de 2008). Suponga que el tamaño de la
+
+[Bloque seleccionado #324 | relevancia=18]
+Pagina 323
+ 
+7.6  Distribución de muestreo de p  
+289
+a)  ¿Cuál es la probabilidad de que el precio medio en una muestra de 30 gasolineras no di-
+fiera en más de $0.03 de la media poblacional?
+b)  ¿Cuál es la probabilidad de que el precio medio en una muestra de 50 gasolineras no difie-
+ra en más de $0.03 de la media poblacional?
+c) 
+ ¿Cuál es la probabilidad de que el precio medio en una muestra de 100 gasolineras no 
+difiera en más de $0.03 de la media poblacional?
+d)  ¿Recomendaría usted alguno de los tamaños muestrales de los incisos a), b) o c) para 
+tener al menos 0.95 de probabilidad de que la media muestral esté dentro de $0.03 de la 
+media poblacional?
+ 
+30. Para estimar la edad media de una población de 4 000 empleados se selecciona una muestra 
+aleatoria simple de 40 sujetos.
+a)  ¿Usaría el factor de corrección para una población finita en el cálculo del error estándar de 
+la media? Explique.
+b)  Si la desviación estándar poblacional es σ  8.2 años, calcule el error estándar con y sin 
+el factor de corrección para una población finita. ¿Cuál es la base para ignorar el factor de 
+corrección para la población finita si n/N  0.05?
+c) 
+ ¿Cuál es la probabilidad de que la media muestral de las edades de los empleados no difiera 
+en más de 2 años de la media poblacional de las edades?
+7.6 
+Distribución de muestreo de p
+La proporción muestral p es el estimador puntual de la proporción poblacional p. La fórmula 
+para calcular la proporción muestral es
+p  x
+n
+donde
+x  número de elementos de la muestra que poseen la característica de interés
+n  tamaño de la muestra
+Como se indica en la sección 7.4, la proporción muestral p es una variable aleatoria y su distri-
+bución de probabilidad se conoce como distribución de muestreo de p.
+DISTRIBUCIÓN DE MUESTREO DE p
+La distribución de muestreo de p es la distribución de probabilidad de todos los posibles 
+valores de la proporción muestral p.
+Para determinar qué tan cerca está la proporción muestral p de la proporción poblacional 
+p, es necesario entender las propiedades de la distribución de muestreo de p: el valor espera-
+do de p, la desviación estándar de p y la forma de la distribución de muestreo de p.
+Valor esperado de p
+El valor esperado de p, la media de todos los posibles valores de p, es igual a la proporción 
+poblacional p.
+
+[Bloque seleccionado #328 | relevancia=22]
+Pagina 327
+ 
+7.6  Distribución de muestreo de p 
+293
+manera similar, para p  0.55, se tiene que z  (0.55 – 0.60)/0.049  1.02. Se encuentra que 
+la probabilidad acumulada correspondiente a z  1.02 es 0.1539. Por tanto, si el tamaño de la 
+muestra aumenta de 30 a 100, la probabilidad de que la proporción muestral p no diﬁ era en más 
+de 0.05 de la proporción poblacional p aumenta a 0.8461  0.1539  0.6922.
+Ejercicios
+Métodos
+ 
+31. Una muestra aleatoria de tamaño 100 es seleccionada de una población en la que p  0.40.
+a) ¿Cuál es el valor esperado de p?
+b) ¿Cuál es el error estándar de p?
+c) 
+Exprese la distribución de muestreo de p.
+d) ¿Qué indica esta distribución?
+ 
+32. Una proporción poblacional es 0.40. Se toma una muestra aleatoria simple de tamaño 200 y la 
+proporción muestral p se usa para estimar la proporción poblacional.
+a)  ¿Cuál es la probabilidad de que la proporción muestral esté entre 0.03 de la proporción 
+poblacional?
+b)  ¿Cuál es la probabilidad de que la proporción muestral se encuentre entre 0.05 de la 
+proporción poblacional?
+ 
+33. Suponga que la proporción poblacional es 0.55. Calcule el error estándar de la proporción, σp , 
+para los tamaños de muestra 100, 200, 500 y 1 000. ¿Qué puede decir acerca del tamaño del 
+error estándar a medida que el tamaño de la muestra aumenta?
+ 
+34. La proporción poblacional es 0.30. ¿Cuál es la probabilidad de que las proporciones muestral 
+y poblacional estén entre 0.04 con los tamaños de muestra siguientes?
+a) n  100
+b) n  200
+c) 
+n  500
+d) n  1 000
+e) 
+¿Qué ventaja tiene un tamaño grande de muestra?
+Aplicaciones
+ 
+35. El director de Doerman Distributors, Inc. piensa que 30% de los pedidos proviene de nuevos 
+clientes. Para ver la proporción de clientes nuevos se usará una muestra aleatoria simple de 100 
+pedidos.
+a)  Suponga que el director está en lo cierto y que p  0.30. ¿Cuál es la distribución de mues-
+treo de p en este estudio?
+b)  ¿Cuál es la probabilidad de que la proporción muestral de p esté entre 0.20 y 0.40?
+c) 
+ ¿Cuál es la probabilidad de que esté entre 0.25 y 0.35?
+ 
+36. The Cincinnati Enquirer informa que en Estados Unidos 66% de los adultos y 87% de los 
+jóvenes entre 12 y 17 años usan Internet (The Cincinnati Enquirer, 7 de febrero de 2006). Con-
+sidere estos datos como proporciones poblacionales y suponga que se usará una muestra de 300 
+adultos y 300 jóvenes para obtener información respecto de su opinión acerca de la seguridad 
+en Internet.
+a)  Exponga la distribución de muestreo de p, siendo p la proporción muestral de adultos que 
+usan Internet.
+b)  ¿Cuál es la 
+
+[Bloque seleccionado #332 | relevancia=22]
+Pagina 331
+ 
+7.8  Otros métodos de muestreo 
+297
+tanto, los valores de θˆ1 tienen más posibilidades de estar cerca del parámetro θˆ que los valores 
+de θˆ2. Como el error estándar del estimador puntual θˆ1 es menor que el del estimador puntual 
+θˆ2, θˆ1 es relativamente más eﬁ ciente que θˆ2 y se preﬁ ere como estimador puntual.
+Consistencia
+La tercera propiedad relacionada con un buen estimador puntual es la consistencia. Dicho de 
+manera sencilla, un estimador puntual es consistente si su valor tiende a estar más cerca del 
+parámetro poblacional a medida que el tamaño de la muestra aumenta. En otras palabras, una 
+muestra grande tiende a proporcionar mejor estimación puntual que una pequeña. Observe 
+que en el caso de la media muestral x, el error estándar de x está dado por σx  σn. Pues-
+to que σx está vinculado con el tamaño de la muestra, de manera que muestras mayores dan 
+valores menores de σx, entonces las de tamaño grande tienden a proporcionar estimadores pun-
+tuales más cercanos a la media de la población μ. Mediante un razonamiento similar, también 
+se puede concluir que la proporción muestral p es un estimador consistente de la proporción 
+poblacional p.
+Cuando se muestrean 
+poblaciones normales, 
+el error estándar de la 
+media muestral es menor 
+que el error estándar de 
+la mediana muestral. Por 
+tanto, la media muestral 
+es más eficiente que la 
+mediana muestral.
+NOTAS Y COMENTARIOS
+En el capítulo 3 se dijo que la media y la mediana 
+son dos medidas de localización central. En este capí-
+tulo sólo se estudió la media debido a que cuando se 
+muestrea una población normal, en la cual la media 
+y la mediana poblacionales son idénticas, el error es-
+tándar de la mediana es aproximadamente 25% ma-
+yor que el error estándar de la media. Recuerde que 
+en el problema de EAI, con n  30, el error estándar 
+de la media fue σx  730.3, mientras que el de la me-
+diana en este problema sería 1.25  (730.3)  913. 
+Por tanto, la media muestral es más eficiente y tendrá 
+más probabilidad de estar dentro de una determinada 
+distancia de la media poblacional.
+7.8 
+Otros métodos de muestreo
+Se describió el muestreo aleatorio simple como un procedimiento de muestreo de una pobla-
+ción ﬁ nita y se estudiaron las propiedades de las distribuciones de muestreo de x y de p cuando 
+se usó el muestreo aleatorio simple. Sin embargo, no es el único método de muestreo que existe. 
+Hay otros, como el muestro aleatorio estratiﬁ cado, el muestreo por conglomerados y el mues-
+treo sistemático que, en ciertas situaciones, tienen ventajas sobre el aleatorio simple. En es
+
+[Bloque seleccionado #337 | relevancia=24]
+Pagina 336
+302 
+Capítulo 7  Muestreo y distribuciones de muestreo
+Desviación estándar de p (error estándar)
+ 
+Población ﬁ nita 
+Población inﬁ nita
+ 
+σp  
+N  n
+N  1 p(1  p)
+n
+ 
+σp  
+p(1  p)
+n
+ 
+(7.5)
+Ejercicios complementarios
+ 
+42. U. S. News & World Report publica información extensa acerca de las mejores universidades 
+de Estados Unidos (America’s Best Colleges, ed. 2009). Entre otras cosas, proporciona una 
+lista de las 133 mejores universidades a nivel nacional. Se desea tomar una muestra de tales 
+instituciones para realizar un estudio de seguimiento de sus alumnos. Inicie en la parte inferior 
+de la tercera columna de dígitos aleatorios de la tabla 7.1. Ignore los dos primeros dígitos de 
+cada conjunto de cinco números usando números aleatorios de tres cifras. Empiece con 959, 
+lea hacia arriba de la columna para identificar el número (de 1 a 133) de las siete primeras 
+universidades a incluir en una muestra aleatoria simple. Continúe iniciando en la parte inferior 
+de las columnas cuarta y quinta, y lea hacia arriba si es necesario.
+ 
+43. Los estadounidenses están cada vez más preocupados por el aumento en los costos de Medi-
+care. En 1990 el promedio de gastos anuales de un derechohabiente de Medicare ascendía a 
+$3 267; en 2003 este promedio había aumentado a $6 883 (Money, otoño de 2003). Suponga 
+que usted contrata a una firma de consultoría para tomar una muestra de 50 de los derecho-
+habientes de Medicare en 2003 con objeto de investigar los gastos. Asuma que la desvia ción 
+estándar poblacional en 2003 fue $2 000.
+a)  Presente la distribución de muestreo de la cantidad media de los gastos de Medicare para 
+una muestra de 50 derechohabientes en 2003.
+b)  ¿Cuál es la probabilidad de que la media muestral no se aleje más de $300 de la media 
+poblacional?
+c) 
+ ¿Cuál es la probabilidad de que la media muestral sea mayor que $7 500? Si la empresa que 
+contrató le dice que la media muestral para los derechohabientes que entrevistó es $7 500, 
+¿dudaría de que la empresa contratada hubiera hecho un procedimiento de muestreo alea-
+torio simple adecuado? ¿Por qué?
+ 
+44. BusinessWeek encuesta a exalumnos de administración 10 años después de terminados sus 
+estudios (BusinessWeek, 22 de septiembre de 2003). Uno de sus hallazgos indica que gastan en 
+promedio $115.50 semanales en comidas sociales. A usted se le pide que realice un estudio con 
+una muestra de 40 de estos exalumnos. Asuma que la desviación estándar poblacional es $35.
+a)  Presente la distribución de muestreo de x, la media muestral de los gastos semanales de 
+los 40 exalumnos de adm
+
+[Bloque seleccionado #338 | relevancia=22]
+Pagina 337
+ 
+Ejercicios complementarios 
+303
+c) 
+ ¿Cuál es la probabilidad de que la media muestral no se aleje más o menos de $1 000 de la 
+media poblacional?
+d)  ¿Qué tanto variaría la probabilidad del inciso c) si el tamaño de la muestra se aumentara 
+a 100?
+ 
+47. Tres empresas transportan inventarios de distintos tamaños. El inventario de la empresa A con-
+tiene 2 000 artículos, el de la empresa B, 5 000 artículos y el de la empresa C, 10 000 artículos. 
+La desviación estándar poblacional de los costos de los artículos en los inventarios de estas 
+empresas es σ  144. Un consultor de estadística recomienda que cada compañía tome una 
+muestra de 50 artículos de su inventario para obtener una estimación estadística válida del cos-
+to promedio por unidad. Los gerentes de la firma más pequeña opinan que, como su población 
+es menor, se podrá hacer la estimación con una muestra mucho menor de la que se requiere 
+para la empresa más grande. Sin embargo, el consultor opina que para tener el mismo error 
+estándar y, por tanto, la misma precisión en los resultados muestrales, todas las compañías 
+deberán emplear el mismo tamaño de muestra, sin importar el tamaño de la población.
+a)  Utilizando el factor de corrección para una población finita, calcule el error estándar de 
+cada una de las tres empresas para un tamaño de muestra de 50.
+b)  ¿Cuál es la probabilidad para cada firma de que la media muestral x esté a no más de 25 
+de la media poblacional μ?
+ 
+48. Un investigador reporta sus resultados diciendo que el error estándar de la media es 20 y la 
+desviación estándar poblacional es 500.
+a) ¿De qué tamaño fue la muestra utilizada en esta investigación?
+b)  ¿Cuál es la probabilidad de que la estimación puntual esté a no más de 25 de la media 
+poblacional?
+ 
+49. Un inspector de control de calidad vigila periódicamente un proceso de producción. El ins-
+pector selecciona muestras aleatorias simples de 30 artículos ya terminados y calcula la media 
+muestral del peso del producto x. Si en un periodo largo se encuentra que 5% de los valores de 
+x son mayores que 2.1 libras y 5% son menores que 1.9 libras, ¿cuáles son la media y la des-
+viación estándar de la población de los productos elaborados en este proceso?
+ 
+50. Cerca de 28% de las empresas privadas tiene como propietario a una mujer (The Cincinnati 
+Enquirer, 26 de enero de 2006). Responda estas preguntas con base en una muestra de 240 
+empresas privadas.
+a)  Desarrolle la distribución de muestreo de p, la proporción muestral de las empresas pro-
+piedad de una mujer.
+b)  ¿Cuál es la probabilidad de que la

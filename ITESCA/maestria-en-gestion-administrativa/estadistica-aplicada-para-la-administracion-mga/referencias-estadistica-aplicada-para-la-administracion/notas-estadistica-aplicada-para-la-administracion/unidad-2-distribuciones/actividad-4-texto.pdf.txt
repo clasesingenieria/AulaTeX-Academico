@@ -1,0 +1,251 @@
+Distribuciones muestrales
+en la gestión
+Estadística aplicada para la administración
+Actividad 4: Ejercicios
+Martín Jonathan de la Cruz Muñoz
+Matrícula: 26130503
+Dra. Yoana Elizeth Tauitmes Delgado
+23 de octubre de 2026
+
+1. Introducción
+La variación de una observación no equivale a la variación de un promedio. Distinguirlas
+permite valorar pedidos defectuosos, resultados de encuestas y promedios de vida útil sin
+exagerar el riesgo ni la precisión. Las distribuciones muestrales describen cómo cambia un
+estadístico entre muestras; sus probabilidades requieren explicitar independencia, población
+y modelo (Holmes et al., 2023; NIST y SEMATECH, 2003).
+2. Muestras, proporciones y medias
+2.1. Fundamentos de la inferencia muestral
+Una población es el conjunto de unidades al que se refiere la decisión; la muestra apor-
+ta observaciones de ese conjunto. Un parámetro, como la media poblacional, es fijo en el
+modelo; un estadístico, como la media muestral, cambia entre muestras. Su distribución
+muestral describe esa variación bajo un diseño de selección, no la distribución de los datos
+individuales (Wackerly et al., 2010, secs. 7.1–7.2).
+Para n observaciones independientes e idénticamente distribuidas, con media μ y varian-
+za finita σ2, la media muestral tiene esperanza μ y varianza σ2/n. Su error estándar es σ/√n:
+mide la dispersión del promedio, mientras σ mide la dispersión individual. La reposición del
+primer ejercicio hace independientes las extracciones; sin reposición, esa independencia
+deja de ser exacta y debe considerarse el tamaño de la población.
+El teorema del límite central establece que la media estandarizada se aproxima a una
+normal al aumentar n, bajo esas condiciones. No afirma que los datos originales se vuelvan
+normales ni fija un tamaño universal suficiente. La asimetría y las colas influyen en la calidad
+de la aproximación. Si la población es normal, la media es normal para cualquier n; si no
+lo es, conocer solo media y varianza no determina probabilidades exactas (Wackerly et al.,
+2010, sec. 7.3).
+Para respuestas binarias independientes con probabilidad constante p, el conteo X es
+binomial y la proporción X/n tiene media p y error estándar √(p(1 −p)/n). Al aproximar el
+conteo por una normal, la corrección de continuidad desplaza medio entero el límite: X ≥k
+se aproxima desde k −0.5 y X ≤k hasta k + 0.5. Revisar np y n(1 −p) ayuda a detectar
+asimetría; el cálculo binomial exacto evita depender de esa aproximación (Wackerly et al.,
+2010, sec. 7.5).
+2
+
+2.2. Población de cuatro valores
+1. Para la población 3, 7, 11 y 15 se consideran todas las muestras de tamaño dos con
+reposición. Cada extracción tiene cuatro resultados equiprobables e independientes: existen
+16 pares ordenados, cada uno con probabilidad 1/16. La tabla contiene la media de cada
+par; las filas indican la primera extracción y las columnas, la segunda.
+Primera/segunda
+3
+7
+11
+15
+3
+3
+5
+7
+9
+7
+5
+7
+9
+11
+11
+7
+9
+11
+13
+15
+9
+11
+13
+15
+a) Media poblacional: (3 + 7 + 11 + 15)/4 = 9.
+b) Desviación poblacional: las desviaciones respecto a 9 son −6, −2, 2 y 6; sus cuadra-
+dos suman 80. La varianza poblacional es 80/4 = 20 y su raíz es 4.472136. Se divide entre
+cuatro porque se conoce toda la población, no entre tres.
+c) Media de las medias: los valores 3, 5, 7, 9, 11, 13 y 15 tienen frecuencias 1, 2, 3, 4,
+3, 2 y 1. Su suma ponderada es 144; dividir entre 16 produce 9.
+d) Desviación de las medias: la suma ponderada de cuadrados respecto a 9 es 160;
+la varianza es 160/16 = 10 y la desviación, 3.162278. Coincide con 4.472136/√2: promediar
+conserva el centro y reduce la dispersión (Holmes et al., 2023).
+3
+
+2.3. Herramientas defectuosas
+2. Una máquina produce 2 % de herramientas defectuosas. Para un pedido de 400, se
+pide la probabilidad de que resulte defectuoso a) 3 % o más y b) 2 % o menos. Bajo inde-
+pendencia y probabilidad constante, el número de defectos X tiene distribución binomial con
+n = 400 y p = 0.02. La media es np = 8 y la desviación es √(np(1 −p)) = √7.84 = 2.8 (Holmes
+et al., 2023).
+a) Al menos 3 %. El umbral es 0.03(400) = 12 herramientas. Se suma la probabilidad
+binomial de cada conteo desde 12 hasta 400, o se resta de uno la probabilidad acumulada
+hasta 11. El resultado es P(X ≥12) = 0.109733, equivalente a 10.9733 %.
+b) A lo sumo 2 %. El umbral es 0.02(400) = 8. Se suman las probabilidades de cero a
+ocho defectos: P(X ≤8) = 0.592552, equivalente a 59.2552 %. El valor no es exactamente
+50 %: la distribución es discreta y asimétrica, y el evento incluye el conteo ocho.
+Cada término de la suma binomial combina el número de formas de elegir k defectos
+entre 400, la probabilidad de esos k defectos y la de las 400 −k herramientas conformes. El
+cálculo exacto evita imponer simetría a una distribución con pocos defectos esperados.
+Contraste con la aproximación normal. Para a), la corrección de continuidad usa 11.5:
+z = (11.5 −8)/2.8 = 1.25; la cola superior es 0.105650. Para b), usa 8.5: z = (8.5 −8)/2.8
+= 0.178571; la acumulada es 0.570863. No se sustituyen los resultados exactos por estas
+aproximaciones. En b), la diferencia es de aproximadamente 2.17 puntos porcentuales.
+La consecuencia administrativa es distinguir la tasa media de defectos del riesgo de un
+pedido particular. Una tasa de 2 % no garantiza exactamente ocho defectos en cada lote. Si
+existe dependencia entre piezas o cambia la calibración de la máquina, el modelo binomial
+debe revisarse; una mayor cantidad de observaciones no compensa automáticamente una
+selección o medición sesgada (Bradley et al., 2021).
+4
+
+2.4. Vida útil y resultados electorales
+3. Los cinescopios tienen vida media de 800 h, desviación de 60 h y muestra aleatoria
+de 16. El error estándar es 60/√16 = 15 h. Para la media muestral, z = (límite −800)/15. Se
+supone una población normal e independencia; el enunciado no establece normalidad y
+una muestra de 16 no basta por sí sola para garantizar una aproximación adecuada (Holmes
+et al., 2023).
+Inciso
+Evento (h)
+Límites z
+Probabilidad
+a
+Entre 790 y 810
+−0.666667; 0.666667
+0.495015
+b
+Menor de 785
+Menor de −1
+0.158655
+c
+Mayor de 820
+Mayor de 1.333333
+0.091211
+d
+Entre 770 y 830
+−2; 2
+0.954500
+Las probabilidades son 49.5015 %, 15.8655 %, 9.1211 % y 95.4500 %. Para intervalos se
+resta la acumulada normal inferior de la superior; para la cola derecha se resta la acumu-
+lada de uno. Sin el supuesto distribucional, media y desviación no determinan esas cuatro
+probabilidades exactas.
+4. Un candidato recibió 46 % de los votos. En muestras de a) 200 y b) 1,000 votantes,
+una mayoría exige más de la mitad: al menos 101 y 501 apoyos. Suponiendo respuestas
+independientes y una población grande respecto a la muestra, se usa X binomial con p =
+0.46 (Holmes et al., 2023).
+a) Con n = 200: media = 92; desviación = √49.68 = 7.048404. La suma binomial desde
+101 hasta 200 da 0.114040 (11.4040 %). La normal corregida usa 100.5 y z = 1.205947: cola
+superior 0.113919.
+b) Con n = 1,000: media = 460; desviación = √248.4 = 15.760711. La suma desde 501
+hasta 1,000 da 0.005142 (0.5142 %). La normal corregida usa 500.5 y z = 2.569681: co-
+la superior 0.005090. La muestra mayor reduce la probabilidad de invertir la mayoría. Si
+se muestrea sin reposición una fracción importante del electorado, se requiere el tamaño
+poblacional y un modelo hipergeométrico.
+5
+
+2.5. Peso individual y peso medio
+5. Los pesos se suponen normales, con media 172 lb y desviación 29 lb. Para una per-
+sona se estandariza con z = (peso −172)/29. Para la media de n hombres independientes,
+se sustituye 29 por el error estándar 29/√n. Como la normalidad se da explícitamente, la
+distribución de la media es normal para cualquier n; no depende aquí de una aproximación
+asintótica (Holmes et al., 2023).
+Inciso
+Evento (lb)
+n; error estándar
+Probabilidad
+1a
+Peso menor de 167
+1; 29
+0.431556
+1b
+Media menor de 167
+36; 4.833333
+0.150455
+2a
+Peso mayor de 180
+1; 29
+0.391327
+2b
+Media mayor de 180
+100; 2.9
+0.002902
+3a
+Peso entre 170 y 175
+1; 29
+0.068688
+3b
+Media entre 170 y 175
+64; 3.625
+0.505479
+4a
+Peso entre 100 y 165
+1; 29
+0.398112
+4b
+Media entre 100 y 165
+81; 3.222222
+0.014912
+1a y 1b. Los límites estandarizados son −5/29 = −0.172414 y −5/(29/6) = −1.034483. Sus
+acumuladas normales son 43.1556 % y 15.0455 %.
+2a y 2b. Los valores z son 8/29 = 0.275862 y 8/2.9 = 2.758621. Las colas superiores son
+39.1327 % y 0.2902 %.
+3a y 3b. Se resta la acumulada del límite inferior de la del superior. Para una persona, z
+va de −0.068966 a 0.103448: 6.8688 %. Para 64, va de −0.551724 a 0.827586: 50.5479 %.
+4a y 4b. Los límites z individuales son −2.482759 y −0.241379: 39.8112 %. Para 81, son
+−22.344828 y −2.172414: 1.4912 %. Aunque el promedio se concentra cerca de 172, este
+intervalo queda por debajo; por eso su probabilidad disminuye al promediar. En cambio, el
+intervalo de 170 a 175 contiene el centro y su probabilidad aumenta.
+De los cinco casos se concluye que aumentar n concentra el estadístico, pero la proba-
+bilidad depende de la ubicación del evento. La gerencia debe definir el umbral, distinguir
+observaciones individuales y promedios y revisar el modelo antes de aplicar el resultado a
+una decisión de aceptación (Holmes et al., 2023; NIST y SEMATECH, 2003).
+6
+
+3. Conclusiones
+La enumeración de las 16 muestras muestra que promediar conserva la media poblacio-
+nal y reduce la dispersión. Esa reducción explica por qué un peso individual mayor de 180
+lb es relativamente frecuente bajo el modelo, mientras que un promedio mayor de 180 lb en-
+tre 100 hombres resulta mucho menos probable. Usar la desviación individual en lugar del
+error estándar habría cambiado sustancialmente la interpretación de los resultados (Holmes
+et al., 2023).
+En control de calidad, la traducción de porcentajes a conteos enteros evita errores en las
+colas. Al menos 3 % de 400 equivale a 12 o más defectos; a lo sumo 2 % incluye ocho. La
+comparación entre binomial y normal demuestra que una aproximación debe evaluarse, no
+aplicarse automáticamente. Para el segundo evento, la diferencia de 2.17 puntos porcen-
+tuales podría afectar decisiones cercanas a un umbral de aceptación.
+El caso electoral separa variación aleatoria y sesgo. Una muestra mayor hace menos pro-
+bable observar una mayoría contraria a una proporción poblacional de 46 %, bajo las condi-
+ciones del modelo. No elimina problemas de cobertura, no respuesta o medición. El estudio
+de Bradley et al. (2021) advierte que grandes encuestas pueden producir estimaciones muy
+precisas pero alejadas del referente si sus participantes no representan adecuadamente a
+la población (Bradley et al., 2021).
+Considero indispensable comunicar los supuestos junto con las cifras. En los cinescopios,
+asumir normalidad permite obtener probabilidades concretas, pero ni la media de 800 h ni la
+desviación de 60 h prueban esa distribución. La consecuencia para una gerencia es solicitar
+evidencia del comportamiento de la vida útil antes de utilizar los porcentajes para garantías
+o inventarios. La incertidumbre cuantificada por un modelo debe mantenerse separada de
+la incertidumbre sobre la validez del propio modelo (NIST y SEMATECH, 2003).
+Las distribuciones muestrales ofrecen, por tanto, un criterio para decisiones proporciona-
+les a la evidencia: definir el evento, identificar la unidad de análisis, elegir la distribución y
+revisar las condiciones. Conservar esa secuencia evita convertir una aproximación razona-
+ble en una promesa de certeza.
+7
+
+Referencias
+Bradley, V. C., Kuriwaki, S., Isakov, M., Sejdinovic, D., Meng, X.-L., & Flaxman, S. (2021).
+Unrepresentative big surveys significantly overestimated US vaccine uptake. Nature,
+600(7890), 695–700. https://doi.org/10.1038/s41586-021-04198-4
+Holmes, A., Illowsky, B., & Dean, S. (2023). Introductory business statistics (2.a ed.). OpenS-
+tax. https://openstax.org/details/books/introductory-business-statistics-2e
+National Institute of Standards and Technology, & SEMATECH. (2003). NIST/SEMATECH
+e-Handbook of statistical methods. https://doi.org/10.18434/M32189
+Wackerly, D. D., Mendenhall, W., & Scheaffer, R. L. (2010). Estadística matemática con
+aplicaciones (7.a ed.). Cengage Learning Editores.
+8

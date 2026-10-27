@@ -1,0 +1,457 @@
+Fuente bibliográfica: Estadística - Spiegel y Stephens. 4.ª edición.pdf
+Actividad: 17 (6.2 Investigación 4% Tarea)
+Palabras clave: series de tiempo, pronósticos económicos, demanda, estacionalidad, ARIMA, suavizamiento exponencial, planeación financiera
+
+[Bloque seleccionado #16 | relevancia=2]
+Pagina 15
+  XIII
+PREFACIO A LA
+SEGUNDA EDIBCIÓN
+La estadística, o los métodos estadísticos, como se llaman algunas veces, desempeñan un papel cada vez más impor-
+tante en casi todas las áreas del quehacer humano. Aunque en un principio tenía que ver solamente con asuntos de 
+Estado, a lo que debe su nombre, en la actualidad la influencia de la estadística se ha extendido a la agricultura, la 
+biología, el comercio, la química, la comunicación, la economía, la educación, la electrónica, la medicina, la física, las 
+ciencias políticas, la psicología, la sociología y a muchos otros campos de la ciencia y la ingeniería.
+El propósito de esta obra es presentar una introducción a los principios generales de la estadística, que será útil a 
+todos los individuos sin importar su campo de especialización. Se diseñó para usarse ya sea como consulta para todos 
+los textos estándar modernos o como un libro para un curso formal de estadística. Será también de gran valor como 
+referencia para todos aquellos que estén aplicando la estadística en su campo de investigación particular.
+Cada capítulo empieza con una presentación clara de las definiciones correspondientes, los teoremas y principios, 
+junto con algunos materiales ilustrativos y descriptivos. A esto le sigue un conjunto de problemas resueltos y comple-
+mentarios, que en muchos casos usan datos de situaciones estadísticas reales. Los problemas resueltos sirven para 
+ilustrar y ampliar la teoría, hacen énfasis en aquellos pequeños puntos importantes sin los cuales el estudiante se sen-
+tiría continuamente inseguro; además, proporciona una repetición de los principios básicos, aspecto que es vital para 
+una enseñanza eficiente. En los problemas resueltos se incluyen numerosas deducciones de fórmulas. La cantidad de 
+problemas complementarios con respuestas constituyen una revisión completa del material de cada capítulo. 
+Los únicos conocimientos matemáticos necesarios para la comprensión de todo el libro son la aritmética y el álge-
+bra elemental. En el capítulo 1 viene una revisión de los conceptos matemáticos importantes, que se pueden leer al 
+principio del curso o después, cuando la necesidad se presente. 
+Los primeros capítulos se ocupan del análisis de las distribuciones de frecuencia y de las correspondientes medidas 
+de tendencia central, dispersión, sesgo y curtosis. Lo anterior lleva, de manera natural, a una discusión de la teoría de 
+probabilidad elemental y sus aplicaciones, lo que prepara el camino para el estudio de la teoría del muestreo. De entra-
+da, se abordan las técnicas de las muestras grande
+
+[Bloque seleccionado #22 | relevancia=4]
+Pagina 21
+ 
+Relaciones no lineales 
+320
+ 
+La parábola de mínimos cuadrados 
+320
+ 
+Regresión 
+321
+ 
+Aplicaciones a series de tiempo 
+321
+ 
+Problemas en los que intervienen más de dos variables 
+321
+CAPÍTULO 14 
+Teoría de la correlación 
+345
+ 
+Correlación y regresión 
+345
+ 
+Correlación lineal  
+345
+ 
+Medidas de la correlación 
+346
+ 
+Las rectas de regresión de mínimos cuadrados 
+346
+ 
+El error estándar de estimación 
+347
+ 
+Variación explicada y no explicada 
+348
+ 
+Coeficiente de correlación 
+348
+ 
+Observaciones acerca del coeficiente de correlación 
+349
+ 
+Fórmula producto-momento para el coeficiente de correlación lineal 
+350
+ 
+Fórmulas simplificadas para el cálculo  
+350
+ 
+Rectas de regresión y el coeficiente de correlación lineal 
+351
+ 
+Correlación de series de tiempo 
+351
+ 
+Correlación de atributos 
+351
+ 
+Teoría muestral de la correlación 
+351
+ 
+Teoría muestral de la regresión 
+352
+CAPÍTULO 15 
+Correlación múltiple y correlación parcial 
+382
+ 
+Correlación múltiple 
+382
+ 
+Notación empleando subíndice 
+382
+ 
+Ecuaciones de regresión y planos de regresión 
+382
+ 
+Ecuaciones normales para los planos de regresión de mínimos cuadrados  
+383
+ 
+Planos de regresión y coeficientes de correlación 
+383
+ 
+Error estándar de estimación 
+384
+ 
+Coeficiente de correlación múltiple 
+384
+ 
+Cambio de la variable dependiente 
+384
+ 
+Generalizaciones a más de tres variables 
+385
+ 
+Correlación parcial 
+385
+ 
+Relaciones entre coeficientes de correlación múltiple y coeficientes de
+ 
+ 
+correlación parcial 
+386
+ 
+Regresión múltiple no lineal 
+386
+CAPÍTULO 16 
+Análisis de varianza 
+403
+ 
+Objetivo del análisis de varianza 
+403
+ 
+Clasificación en un sentido o experimentos con un factor 
+403
+ 
+Variación total, variación dentro de tratamientos y variación entre
+ 
+ 
+tratamientos 
+404
+ 
+Métodos abreviados para obtener las variaciones 
+404
+CONTENIDO  XIX
+
+[Bloque seleccionado #346 | relevancia=2]
+Pagina 345
+Para recordar las ecuaciones (23), obsérvese que se pueden obtener formalmente multiplicando la ecuación (22) 
+por 1, X y X 2, respectivamente, y sumando a ambos lados de las ecuaciones resultantes. Esta técnica puede extenderse 
+a las ecuaciones normales de curvas cúbicas de mínimos cuadrados, ecuaciones cuárticas de mínimos cuadrados y, en 
+general, a cualquiera de las curvas de mínimos cuadrados correspondientes a la ecuación (5).
+Como en el caso de la recta de mínimos cuadrados, las ecuaciones (23) se simplifican si las X se escogen de mane-
+ra que P X ¼ 0. Estas ecuaciones también se simplifican empleando las nuevas variables x ¼ X  X y y ¼ Y  Y.
+REGRESIÓN
+Con frecuencia se desea estimar el valor de la variable Y que corresponde a un valor dado de la variable X, basándose 
+en los datos muestrales. Esto se hace estimando el valor de Y a partir de la curva de mínimos cuadrados ajustada a los 
+datos muestrales. A la curva de mínimos cuadrados se le llama curva de regresión de Y en X, debido a que Y se estima 
+a partir de X.
+Si lo que se desea es estimar un valor de X a partir de un valor dado de Y, se emplea la curva de regresión de X en 
+Y, que es lo mismo que intercambiar las variables en el diagrama de dispersión, de manera que X sea la variable depen-
+diente y Y sea la variable independiente. En este caso se sustituyen las desviaciones verticales, de la definición de la 
+curva de mínimos cuadrados de la página 284, por desviaciones horizontales.
+En general, la recta o la curva de regresión de Y en X no es igual a la recta o a la curva de regresión de X en Y.
+APLICACIONES A SERIES DE TIEMPO
+Si la variable independiente X representa tiempo, los datos dan el valor de Y en distintos momentos. A los datos orde-
+nados de acuerdo con el tiempo se les llama serie de tiempo. En este caso, a la recta o a la curva de regresión de Y en 
+X se le llama recta o curva de tendencia y se emplea para hacer estimaciones, predicciones o pronósticos. 
+PROBLEMAS EN LOS QUE INTERVIENEN MÁS DE DOS VARIABLES
+Los problemas en los que intervienen más de dos variables se tratan de manera análoga a los problemas de dos varia-
+bles. Por ejemplo, entre las tres variables X, Y y Z puede haber una relación que pueda ser descrita mediante la ecua-
+ción
+ 
+Z ¼ a0 þ a1X þ a2Y 
+(24)
+a la que se le llama ecuación lineal en las variables X, Y y Z.
+En un sistema de coordenadas rectangulares, esta ecuación representa un plano y los puntos muestrales (X1, Y1, Z1), 
+(X2, Y2, Z2), . . . , (XN, YN, ZN) estarán “dispersos” no demasiado lejos de este plano, al que se le llama plano
+
+[Bloque seleccionado #360 | relevancia=2]
+Pagina 359
+SOLUCIÓN
+ð X, YÞ es lo mismo que (x barra, y barra) y es igual a (66.83, 154.17). Obsérvese que peso = 3.22(66.83) − 60.9 = 
+154.17 y estatura = 31.0 + 0.232(154.17) = 66.83. Por lo tanto, ambas rectas pasan a través de (x barra, y barra).
+Tabla 13.8
+X ′
+Y ′
+X ′ 2
+X ′Y ′
+Y ′2
+    5
+−2
+    7
+−5
+    1
+    5
+    9
+    0
+−3
+    2
+    0
+    3
+   5
+  0
+    30
+−15
+   6
+    18
+    28
+    10
+−18
+−5
+−11
+    2
+25
+ 4
+49
+25
+ 1
+25
+81
+ 0
+ 9
+ 4
+ 0
+ 9
+ 25
+ 0
+210
+ 75
+ 6
+ 90
+252
+ 0
+ 54
+−10
+ 0
+ 6
+ 25
+ 0
+900
+225
+ 36
+324
+784
+100
+324
+ 25
+121
+ 4
+
+ X ′ = 22
+
+ Y ′ = 50
+
+ X ′2 = 232
+
+ X ′Y ′ = 708
+
+ Y ′2 = 2 868
+APLICACIONES PARA SERIES DE TIEMPO 
+13.19 En la tabla 13.9 se presentan, en millones de dólares, las exportaciones agrícolas de Estados Unidos. Usar 
+MINITAB para hacer lo siguiente:
+Tabla 13.9
+Año
+2000
+2001
+2002
+2003
+2004
+2005
+Valor total
+Código del año
+51 246
+1
+53 659
+2
+53 115
+3
+59 364
+4
+61 383
+5
+62 958
+6
+Fuente: The 2007 Statistical Abstract.
+PROBLEMAS RESUELTOS  335
+Figura 13-12 Tanto la recta de regresión de estatura contra peso como la recta de
+regresión del peso contra estatura pasan a través del punto (x barra, y barra).
+Estatura
+Peso
+74
+72
+70
+68
+66
+64
+62
+60
+180
+170
+160
+150
+140
+130
+Gráfica de peso contra estatura, estatura contra peso
+Estatura = 31.0 + 0.232 Peso
+Peso = 3.22 Estatura − 60.9
+(x barra, y barra)
+
+[Bloque seleccionado #376 | relevancia=2]
+Pagina 375
+RECTAS DE REGRESIÓN Y EL COEFICIENTE DE CORRELACIÓN LINEAL
+La ecuación de la recta de regresión por mínimos cuadrados Y = a0 + a1X, la recta de regresión de Y sobre X, puede 
+expresarse como
+ 
+Y  Y ¼ rsY
+sX
+ðX  XÞ  o bien  
+y ¼ rsY
+sX
+x 
+(25)
+De igual manera, la recta de regresión de X sobre Y, X = b0 + b1Y, puede expresarse como
+ 
+X  X ¼ rsX
+sY
+ðY  YÞ  o bien  x ¼ rsX
+sY
+y 
+(26)
+Las pendientes de las rectas de regresión (25) y (26) son iguales si y sólo si r = ±1. En esos casos las dos rectas 
+son idénticas y existe una perfecta correlación entre X y Y. Si r = 0, las rectas forman ángulos rectos y no hay corre-
+lación lineal entre X y Y. Por lo tanto, el coeficiente de correlación lineal mide qué tanto se apartan las dos rectas de 
+regresión.
+Obsérvese que si las ecuaciones (25) y (26) se expresan como Y = a0 + a1X y X = b0 + b1Y, respectivamente, 
+entonces a1b1 = r2 (ver problema 14.22).
+CORRELACIÓN DE SERIES DE TIEMPO
+Si las variables X y Y dependen del tiempo, es posible que entre X y Y exista una relación, aunque esta relación no sea, 
+necesariamente, de dependencia directa y produzca una “correlación sin sentido”. El coeficiente de correlación se 
+obtiene considerando los pares de valores (X, Y ) correspondientes a los distintos tiempos y procediendo como de cos-
+tumbre, haciendo uso de las fórmulas anteriores (ver problema 14.28).
+También se puede tratar de correlacionar los valores de una variable X en cierto tiempo con los correspondientes 
+valores de X en un tiempo anterior. A esta correlación se le llama autocorrelación.
+CORRELACIÓN DE ATRIBUTOS
+Los métodos descritos en este capítulo no permiten considerar la correlación entre variables, por naturaleza, no numé-
+ricas; por ejemplo, atributos de individuos (como color de pelo, color de ojos, etc.). La correlación de atributos se 
+analiza en el capítulo 12.
+TEORÍA MUESTRAL DE LA CORRELACIÓN
+Los N pares de valores (X, Y ) de dos variables pueden considerarse como muestras de una población que consta de 
+todos estos pares. Como hay dos variables, a esta población se le llama población bivariada, la que se supondrá tiene 
+una distribución normal bivariada.
+Se puede pensar que existe un coeficiente de correlación poblacional teórico, denotado ρ, que se estima por el 
+coeficiente de correlación muestral r. Las pruebas de significancia o de hipótesis relacionadas con los diferentes valo-
+res de ρ requieren del conocimiento de la distribución muestral de r. Para ρ = 0 esta distribución es simétrica y se usa 
+un estadístico que implica la distribución de Student. Para ρ ≠ 0 esta distr
+
+[Bloque seleccionado #405 | relevancia=2]
+Pagina 404
+380  CAPÍTULO 14 TEORÍA DE LA CORRELACIÓN
+14.59 
+a) 
+Dados los datos del problema 14.58, encontrar la ecuación de regresión por mínimos cuadrados de Y sobre X.
+b) 
+Estimar los pesos de los hombres cuyas estaturas son 64 y 72 in, respectivamente.
+14.60 
+Dados los datos del problema 14.58, encontrar: a) sY .X y b) sX .Y.
+14.61 
+Establecer la fórmula (21) de este capítulo para el coeficiente de correlación de datos agrupados.
+CORRELACIÓN DE SERIES DE TIEMPO
+14.62 
+En la tabla 14.26 se presenta el gasto anual promedio, por consumidor, en atención a la salud y el ingreso per cápita desde 
+1999 hasta 2004. Encontrar el coeficiente de correlación.
+Tabla 14.26
+Año
+1999
+2000
+2001
+2002
+2003
+2004
+Costo de la atención a la salud
+1 959
+2 066
+2 182
+2 350
+2 416
+2 574
+Ingreso per cápita
+27 939
+29 845
+30 574
+30 810
+31 484
+33 050
+Fuente: Bureau of Laboral Statistics and U.S. Bureau of Economic Analysis.
+14.63 
+En la tabla 14.27 se muestran temperatura y precipitación promedio durante el mes de julio en una ciudad, desde 2000 hasta 
+2006. Hallar el coeficiente de correlación.
+Tabla 14.27
+Año
+2000
+2001
+2002
+2003
+2004
+2005
+2006
+Temperatura (F)
+78.1
+71.8
+75.6
+72.7
+75.3
+73.6
+75.1
+Precipitación (in)
+6.23
+3.64
+3.42
+2.84
+1.83
+2.82
+4.04
+TEORÍA MUESTRAL DE LA CORRELACIÓN
+14.64 
+En una muestra de tamaño 27, el coeficiente de correlación calculado es 0.40. ¿Puede concluirse a los niveles de signifi-
+cancia: a) 0.05 y b) 0.01, que el coeficiente de correlación poblacional correspondiente sea distinto de cero?
+14.65 
+En una muestra de tamaño 35, el coeficiente de correlación calculado es 0.50. ¿Puede concluirse al nivel de significancia 
+0.05 que el coeficiente de correlación poblacional sea: a) tan pequeño como ρ = 0.30 y b) tan grande como ρ = 0.70?
+14.66 
+Encontrar los límites de confianza de: a) 95% y b) 99% para un coeficiente de correlación que se ha calculado que es 0.60 
+a partir de una muestra de tamaño 28.
+14.67 
+Resolver el problema 14.66 si la muestra es de tamaño 52.
+14.68 
+Encontrar los límites de confianza de 95% para el coeficiente de correlación calculado: a) en el problema 14.46 y b) en el 
+problema 14.58.
+14.69 
+Los coeficientes de correlación obtenidos a partir de dos muestras, una de tamaño 23 y otra de tamaño 28, fueron 0.80 y 
+0.95, respectivamente. ¿Puede concluirse a los niveles de significancia: a) 0.05 y b) 0.01, que existe una diferencia signi-
+ficativa entre estos dos coeficientes?

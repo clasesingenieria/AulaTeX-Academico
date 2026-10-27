@@ -1,0 +1,749 @@
+# Fichas de conceptos
+
+Las citas textuales se extrajeron de las fuentes de entrada. La búsqueda puede agrupar referencias del mismo concepto aunque estén en archivos distintos.
+
+## Ficha 01. prueba de rachas para aleatoriedad en quejas de circulación periodística (Ejercicio 7)
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.1432
+**Similitud promedio:** 0.0915
+**Fuentes:** docente-1776-9c622af3e4c6.txt; libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt; libro-estadistica-spiegel-y-stephens-4-a-edicion-A15.txt
+**Ubicaciones:** docente-1776-9c622af3e4c6.txt, bloque 1; libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt, bloque 1; libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt, bloque 4; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt, bloque 1; libro-estadistica-spiegel-y-stephens-4-a-edicion-A15.txt, bloque 5
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt — bloque 1 — similitud 0.1432
+
+**Detalle de puntaje:** tfidf=0.1032; bonus=0.0400
+
+> Fuente bibliográfica: Estadística matemática con aplicaciones - Wackerly, Mendenhall y Scheaffer. 7.ª edición.pdf Actividad: 15 (5.3 Ejercicios individuales 5% Tarea) Palabras clave: prueba de rachas, aleatoriedad, Wald-Wolfowitz, Kruskal-Wallis, Mann-Whitney, secuencia [Bloque seleccionado #69 | relevancia=4] Pagina 68 44 Capítulo 2 Probabilidad EJEMPLO 2.9  Suponga que una operación de ensamble en una planta de manufacturas consta de cuatro pa- sos que se pueden efectuar en cualquier secuencia. Si el fabricante desea comparar el tiempo  de ensamble para cada una de las secuencias, ¿cuántas secuencias diferentes estarán involu- cradas en el experimento?
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt — bloque 1 — similitud 0.1203
+
+**Detalle de puntaje:** tfidf=0.0803; bonus=0.0400
+
+> Fuente bibliográfica: Estadística para negocios y economía - Anderson, Sweeney y Williams. 11.ª edición.pdf Actividad: 15 (5.3 Ejercicios individuales 5% Tarea) Palabras clave: prueba de rachas, aleatoriedad, Wald-Wolfowitz, Kruskal-Wallis, Mann-Whitney, secuencia [Bloque seleccionado #391 | relevancia=6] Pagina 390 356  Capítulo 9 Pruebas de hipótesis b) ¿Cuál es el error tipo I en esta situación? ¿Qué consecuencias tiene cometerlo? c)  ¿Cuál es el error tipo II en esta situación? ¿Qué consecuencias tiene cometerlo? 7.
+
+### docente-1776-9c622af3e4c6.txt — bloque 1 — similitud 0.0827
+
+**Detalle de puntaje:** tfidf=0.0427; bonus=0.0400
+
+> Use la prueba U de Mann-Whitney con el 5% de nivel de significancia. 7.- El News and Clarion mantenía un registro del sexo de las personas que llamaban a la oficina de  circulación para quejarse de los problemas con la entrega del periódico dominical. Para un domingo  reciente, donde M = mujer y H = hombre, los datos fueron los siguientes: M, F, F, F, M, M, F, M, F, F, F, F, M, M, M, F, M, F, M, F, F, F, F, M, M, M, M, M Usando el nivel de significancia de 0.05, pruebe la aleatoriedad de esta secuencia. ¿Hay algo  respecto a la naturaleza de este problema que lo induzca a creer que una secuencia así no es  aleatoria?
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt — bloque 4 — similitud 0.0774
+
+**Detalle de puntaje:** tfidf=0.0374; bonus=0.0400
+
+> Las medicio- nes para las muestras 1 y 2 se pueden denotar como S y F, respectivamente y una vez más  nos ocupamos de una prueba de aleatoriedad. Si todas las mediciones para la muestra 1 son  más pequeñas que las de la muestra 2, la secuencia resultará en SSSS . . .
+
+### libro-estadistica-spiegel-y-stephens-4-a-edicion-A15.txt — bloque 5 — similitud 0.0635
+
+**Detalle de puntaje:** tfidf=0.0335; bonus=0.0300
+
+> No se rechaza la aleato- riedad de la secuencia (10). Prueba de corridas: moneda Runs test for coin Runs above and below K ¼ 0.4 The observed number of runs ¼ 7 The expected number of runs ¼ 10.6 8 observations above K, 12 below N is small, so the following approximation may be invalid. P-value ¼ 0.084 b) El número de rachas es mayor que lo esperado.
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt — bloque 4 — similitud 0.0618
+
+**Detalle de puntaje:** tfidf=0.0318; bonus=0.0300
+
+> Este valor de R no es improbable, suponiendo que la hipótesis de aleatoriedad  sea verdadera. En consecuencia, no hay sufi ciente evidencia para indicar no aleatoriedad en la  secuencia de mediciones de brillantez. Q La prueba de corridas de ensayo también se puede usar para comparar dos distribuciones  de frecuencia poblacional para un experimento de dos muestras no pareado.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 3 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 02. prueba de rachas para patrones horarios de llegada de clientes en restaurante (Ejercicio 8)
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.1571
+**Similitud promedio:** 0.1028
+**Fuentes:** docente-1776-9c622af3e4c6.txt; libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt; libro-estadistica-para-administracion-y-economia-levin-A15.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt
+**Ubicaciones:** docente-1776-9c622af3e4c6.txt, bloque 1; docente-1776-9c622af3e4c6.txt, bloque 2; libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A15.txt, bloque 4; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt, bloque 1
+
+### libro-estadistica-para-administracion-y-economia-levin-A15.txt — bloque 4 — similitud 0.1571
+
+**Detalle de puntaje:** tfidf=0.1171; bonus=0.0400
+
+> Anotó si cada pare- ja tenía menos o más que 30 años. Sus notas se reproducen a continuación. (A  30 y mayores; B  me- nores de 30.) (3:30 p.m.) A,A,A,A,A,A, B,A,A,A,A,A,A, B, B, B,A, B, B, B, B, B, B,A, B, B, B,A, B, B, B (10 p.m.) Para un nivel de significancia del 5%, ¿estaba en lo correcto el dueño del restaurante en cuanto a que la edad de sus clientes a distintas horas de la tarde no es aleatoria? ■14-29 Kathy Phillips está a cargo de la programación de producción en una imprenta.
+
+### docente-1776-9c622af3e4c6.txt — bloque 1 — similitud 0.1470
+
+**Detalle de puntaje:** tfidf=0.1070; bonus=0.0400
+
+> Anotó si cada pareja tenía menos o más que 30 años. Sus notas se reproducen a  continuación. (A =30 y mayores; B=menores de 30.)  (3:30 p.m.) A, A, A, A, A, A, B, A, A, A, A, A, A, B, B,  B, A, B, B, B, B, B, B, A, B, B, B, A, B, B, B (10 p.m.) Para un nivel de significancia del 5%, ¿estaba en lo correcto el dueño del restaurante en cuanto a  que la edad de sus clientes a distintas horas de la tarde no es aleatoria? Pagina 3 Ejercicios Mtra.
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt — bloque 1 — similitud 0.0879
+
+**Detalle de puntaje:** tfidf=0.0479; bonus=0.0400
+
+> Fuente bibliográfica: Estadística matemática con aplicaciones - Wackerly, Mendenhall y Scheaffer. 7.ª edición.pdf Actividad: 15 (5.3 Ejercicios individuales 5% Tarea) Palabras clave: prueba de rachas, aleatoriedad, Wald-Wolfowitz, Kruskal-Wallis, Mann-Whitney, secuencia [Bloque seleccionado #69 | relevancia=4] Pagina 68 44 Capítulo 2 Probabilidad EJEMPLO 2.9  Suponga que una operación de ensamble en una planta de manufacturas consta de cuatro pa- sos que se pueden efectuar en cualquier secuencia. Si el fabricante desea comparar el tiempo  de ensamble para cada una de las secuencias, ¿cuántas secuencias diferentes estarán involu- cradas en el experimento?
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt — bloque 1 — similitud 0.0787
+
+**Detalle de puntaje:** tfidf=0.0387; bonus=0.0400
+
+> Fuente bibliográfica: Estadística para negocios y economía - Anderson, Sweeney y Williams. 11.ª edición.pdf Actividad: 15 (5.3 Ejercicios individuales 5% Tarea) Palabras clave: prueba de rachas, aleatoriedad, Wald-Wolfowitz, Kruskal-Wallis, Mann-Whitney, secuencia [Bloque seleccionado #391 | relevancia=6] Pagina 390 356  Capítulo 9 Pruebas de hipótesis b) ¿Cuál es el error tipo I en esta situación? ¿Qué consecuencias tiene cometerlo? c)  ¿Cuál es el error tipo II en esta situación? ¿Qué consecuencias tiene cometerlo? 7.
+
+### docente-1776-9c622af3e4c6.txt — bloque 1 — similitud 0.0781
+
+**Detalle de puntaje:** tfidf=0.0481; bonus=0.0300
+
+> Se  presentan los datos de 13 estudiantes de zona rural de primer ingreso elegidos al azar y de 16 con  antecedentes urbanos. Use la prueba U de Mann-Whitney con el 5% de nivel de significancia. 7.- El News and Clarion mantenía un registro del sexo de las personas que llamaban a la oficina de  circulación para quejarse de los problemas con la entrega del periódico dominical.
+
+### docente-1776-9c622af3e4c6.txt — bloque 2 — similitud 0.0681
+
+**Detalle de puntaje:** tfidf=0.0381; bonus=0.0300
+
+> La siguiente  es una muestra de esos datos. Utilizando la prueba de Kruskal-Wallis, ¿puede decir, al nivel de  significancia de 0.05, que sus tiendas tienen el mismo número de clientes que compran? 12.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 3 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 03. prueba de rachas en afluencia bancaria por sexo (Ejercicio 9)
+
+**Calidad estimada:** baja
+**Mejor similitud:** 0.0876
+**Similitud promedio:** 0.0763
+**Fuentes:** docente-1776-9c622af3e4c6.txt; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A15.txt; libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt; libro-estadistica-para-administracion-y-economia-levin-A15.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt
+**Ubicaciones:** docente-1776-9c622af3e4c6.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A15.txt, bloque 5; libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt, bloque 1; libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt, bloque 4; libro-estadistica-para-administracion-y-economia-levin-A15.txt, bloque 5; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt, bloque 1
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt — bloque 1 — similitud 0.0876
+
+**Detalle de puntaje:** tfidf=0.0576; bonus=0.0300
+
+> Fuente bibliográfica: Estadística matemática con aplicaciones - Wackerly, Mendenhall y Scheaffer. 7.ª edición.pdf Actividad: 15 (5.3 Ejercicios individuales 5% Tarea) Palabras clave: prueba de rachas, aleatoriedad, Wald-Wolfowitz, Kruskal-Wallis, Mann-Whitney, secuencia [Bloque seleccionado #69 | relevancia=4] Pagina 68 44 Capítulo 2 Probabilidad EJEMPLO 2.9  Suponga que una operación de ensamble en una planta de manufacturas consta de cuatro pa- sos que se pueden efectuar en cualquier secuencia. Si el fabricante desea comparar el tiempo  de ensamble para cada una de las secuencias, ¿cuántas secuencias diferentes estarán involu- cradas en el experimento?
+
+### libro-estadistica-para-administracion-y-economia-levin-A15.txt — bloque 5 — similitud 0.0870
+
+**Detalle de puntaje:** tfidf=0.0570; bonus=0.0300
+
+> B B B A A A B A A A A A A B B B B A B A A A A B B A A B B B B A B B B B A A A A A A B B B ■14-32 El First National Bank de Smithville registró el sexo de los primeros 40 clientes, que aparecieron el pa- sado martes, con M = mujer y H = hombre, y obtuvo los siguientes datos: M, F, M, M, M, M, F, F, M, M, M, F, M, M, M, M, M, F, F, M, F, M, M, M, F, M, M, M, M, M, M, F, M, M, M, M, M, F, F, M Al nivel de significancia de 0.05, pruebe la aleatoriedad de esta secuencia. ¿existe algo en el área bancaria o en la naturaleza de este problema que lo lleve a aceptar intuitivamente lo que encontró estadísticamente?
+
+### docente-1776-9c622af3e4c6.txt — bloque 1 — similitud 0.0845
+
+**Detalle de puntaje:** tfidf=0.0545; bonus=0.0300
+
+> Pagina 3 Ejercicios Mtra. Yoana Tautimes Delgado 3 9.- El First National Bank de Smithville registró el sexo de los primeros 40 clientes, que aparecieron  el pasado martes, con M = mujer y H = hombre, y obtuvo los siguientes datos:  M, F, M, M, M, M, F, F, M, M, M, F, M, M, M, M, M, F, F, M,  F, M, M, M, F, M, M, M, M, M, M, F, M, M, M, M, M, F, F, M  Al nivel de significancia de 0.05, pruebe la aleatoriedad de esta secuencia. ¿existe algo en el área  bancaria o en la naturaleza de este problema que lo lleve a aceptar intuitivamente lo que encontró  estadísticamente?
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt — bloque 1 — similitud 0.0765
+
+**Detalle de puntaje:** tfidf=0.0465; bonus=0.0300
+
+> Fuente bibliográfica: Estadística para negocios y economía - Anderson, Sweeney y Williams. 11.ª edición.pdf Actividad: 15 (5.3 Ejercicios individuales 5% Tarea) Palabras clave: prueba de rachas, aleatoriedad, Wald-Wolfowitz, Kruskal-Wallis, Mann-Whitney, secuencia [Bloque seleccionado #391 | relevancia=6] Pagina 390 356  Capítulo 9 Pruebas de hipótesis b) ¿Cuál es el error tipo I en esta situación? ¿Qué consecuencias tiene cometerlo? c)  ¿Cuál es el error tipo II en esta situación? ¿Qué consecuencias tiene cometerlo? 7.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A15.txt — bloque 5 — similitud 0.0661
+
+**Detalle de puntaje:** tfidf=0.0461; bonus=0.0200
+
+> En una prueba de signos, ¿las muestras son dependientes o independientes? 6.
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt — bloque 4 — similitud 0.0562
+
+**Detalle de puntaje:** tfidf=0.0362; bonus=0.0200
+
+> Esta  región de rechazo implica una prueba estadística de una cola. Un ejemplo de la aplicación de  la prueba de corridas de ensayo para comparar dos distribuciones poblacionales de frecuencia  se deja como ejercicio. Brillantez Tiempo (horas) y y x F I G U R A 15.5 Brillantez del papel  contra tiempo [Bloque seleccionado #807 | relevancia=5] Pagina 806 782 Capítulo 15 Estadística no paramétrica Al igual que en el caso de los otros estadísticos de prueba no paramétricos estudiados en  secciones anteriores de este capítulo, la distribución de probabilidad para R tiende hacia la  normalidad cuando n1 y n2 se hacen grandes.
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 3 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 04. prueba de rachas para detección de defectos agrupados en envíos de vidrio (Ejercicio 10)
+
+**Calidad estimada:** baja
+**Mejor similitud:** 0.0987
+**Similitud promedio:** 0.0802
+**Fuentes:** docente-1776-9c622af3e4c6.txt; libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt; libro-estadistica-spiegel-y-stephens-4-a-edicion-A15.txt
+**Ubicaciones:** docente-1776-9c622af3e4c6.txt, bloque 1; libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt, bloque 1; libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt, bloque 4; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt, bloque 3; libro-estadistica-spiegel-y-stephens-4-a-edicion-A15.txt, bloque 5
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt — bloque 1 — similitud 0.0987
+
+**Detalle de puntaje:** tfidf=0.0587; bonus=0.0400
+
+> Fuente bibliográfica: Estadística matemática con aplicaciones - Wackerly, Mendenhall y Scheaffer. 7.ª edición.pdf Actividad: 15 (5.3 Ejercicios individuales 5% Tarea) Palabras clave: prueba de rachas, aleatoriedad, Wald-Wolfowitz, Kruskal-Wallis, Mann-Whitney, secuencia [Bloque seleccionado #69 | relevancia=4] Pagina 68 44 Capítulo 2 Probabilidad EJEMPLO 2.9  Suponga que una operación de ensamble en una planta de manufacturas consta de cuatro pa- sos que se pueden efectuar en cualquier secuencia. Si el fabricante desea comparar el tiempo  de ensamble para cada una de las secuencias, ¿cuántas secuencias diferentes estarán involu- cradas en el experimento?
+
+### docente-1776-9c622af3e4c6.txt — bloque 1 — similitud 0.0982
+
+**Detalle de puntaje:** tfidf=0.0782; bonus=0.0200
+
+> 10.- Se inspeccionó una secuencia de pequeñas esculturas de vidrio para detectar daños ocasionados  en el envío. La secuencia de piezas aceptables (A) y dañadas (D) fue la siguiente:  D, A, A, A, D, D, D, D, D, A, A, D, D, A, A, A, A, D, A, A, D, D, D, D, D  Pruebe la aleatoriedad de los daños ocasionados en el envío usando el nivel de significancia de 0.05.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt — bloque 1 — similitud 0.0874
+
+**Detalle de puntaje:** tfidf=0.0474; bonus=0.0400
+
+> Fuente bibliográfica: Estadística para negocios y economía - Anderson, Sweeney y Williams. 11.ª edición.pdf Actividad: 15 (5.3 Ejercicios individuales 5% Tarea) Palabras clave: prueba de rachas, aleatoriedad, Wald-Wolfowitz, Kruskal-Wallis, Mann-Whitney, secuencia [Bloque seleccionado #391 | relevancia=6] Pagina 390 356  Capítulo 9 Pruebas de hipótesis b) ¿Cuál es el error tipo I en esta situación? ¿Qué consecuencias tiene cometerlo? c)  ¿Cuál es el error tipo II en esta situación? ¿Qué consecuencias tiene cometerlo? 7.
+
+### libro-estadistica-spiegel-y-stephens-4-a-edicion-A15.txt — bloque 5 — similitud 0.0672
+
+**Detalle de puntaje:** tfidf=0.0472; bonus=0.0200
+
+> No se rechaza la aleato- riedad de la secuencia (10). Prueba de corridas: moneda Runs test for coin Runs above and below K ¼ 0.4 The observed number of runs ¼ 7 The expected number of runs ¼ 10.6 8 observations above K, 12 below N is small, so the following approximation may be invalid. P-value ¼ 0.084 b) El número de rachas es mayor que lo esperado.
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt — bloque 4 — similitud 0.0669
+
+**Detalle de puntaje:** tfidf=0.0369; bonus=0.0300
+
+> Esta  región de rechazo implica una prueba estadística de una cola. Un ejemplo de la aplicación de  la prueba de corridas de ensayo para comparar dos distribuciones poblacionales de frecuencia  se deja como ejercicio. Brillantez Tiempo (horas) y y x F I G U R A 15.5 Brillantez del papel  contra tiempo [Bloque seleccionado #807 | relevancia=5] Pagina 806 782 Capítulo 15 Estadística no paramétrica Al igual que en el caso de los otros estadísticos de prueba no paramétricos estudiados en  secciones anteriores de este capítulo, la distribución de probabilidad para R tiende hacia la  normalidad cuando n1 y n2 se hacen grandes.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt — bloque 3 — similitud 0.0631
+
+**Detalle de puntaje:** tfidf=0.0331; bonus=0.0300
+
+> 2. El procedimiento de Minitab para la prueba de  Kruskal-Wallis se describe en el apéndice 19.1. Minitab asume que las poblaciones tienen la mis- ma forma.
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 3 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 05. prueba H de Kruskal-Wallis para afluencia de compradores en tres sucursales (Ejercicio 11)
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.1800
+**Similitud promedio:** 0.1467
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A15.txt; libro-estadistica-para-administracion-y-economia-levin-A15.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A15.txt, bloque 3; libro-estadistica-para-administracion-y-economia-levin-A15.txt, bloque 2; libro-estadistica-para-administracion-y-economia-levin-A15.txt, bloque 5; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt, bloque 3
+
+### libro-estadistica-para-administracion-y-economia-levin-A15.txt — bloque 2 — similitud 0.1800
+
+**Detalle de puntaje:** tfidf=0.1400; bonus=0.0400
+
+> Solución de un problema usando la prueba de Kruskal-Wallis Como se observó en esta sección, la prueba de Kruskal-Wallis es una extensión de la prueba de Mann-Whitney para casos en que están involucradas más de dos poblaciones. Esta prueba, también, depende de los rangos de las observaciones de la muestra.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt — bloque 3 — similitud 0.1616
+
+**Detalle de puntaje:** tfidf=0.1216; bonus=0.0400
+
+> 2. El procedimiento de Minitab para la prueba de  Kruskal-Wallis se describe en el apéndice 19.1. Minitab asume que las poblaciones tienen la mis- ma forma.
+
+### libro-estadistica-para-administracion-y-economia-levin-A15.txt — bloque 2 — similitud 0.1393
+
+**Detalle de puntaje:** tfidf=0.0993; bonus=0.0400
+
+> Los empates se manejan promediando los rangos, como se hizo con la prueba de Mann-Whitney. A continuación, definimos los símbolos usados en una prueba de Kruskal-Wallis: nj  número de elementos en la muestra j Rj  suma de los rangos de todos los elementos en la muestra j k  número de muestras n  n1  n2  . . .  nk, el número total de observaciones en todas las muestras Símbolos utilizados para un [Bloque seleccionado #655 | relevancia=5] Pagina 654 prueba de Kruskal-Wallis, el número apropiado de grados de libertad es k  1, que en este proble- ma es (3  1) o 2, puesto que tenemos tres muestras.
+
+### libro-estadistica-para-administracion-y-economia-levin-A15.txt — bloque 5 — similitud 0.1391
+
+**Detalle de puntaje:** tfidf=0.0991; bonus=0.0400
+
+> Prueba de Kolmogorov-Smirnov Prueba no paramétrica que no requiere que los datos se agrupen para determinar si existe una diferencia significativa entre la distribución de frecuencias observada y la distribución de frecuencias teórica. 662 Capítulo 14 Métodos no paramétricos Prueba de Kruskal-Wallis Método no paramétrico para probar si tres o más muestras independientes se extrajeron de poblaciones con la misma distribución. Es una versión no pa- ramétrica de ANOVA, que estudiamos en el capítulo 11.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt — bloque 3 — similitud 0.1360
+
+**Detalle de puntaje:** tfidf=0.0960; bonus=0.0400
+
+> Si puede hacer el supuesto de que las dos poblaciones tengan la mis- ma forma, la prueba ofrece una inferencia acerca de las diferencias entre las medianas de las  dos poblaciones. La prueba de Kruskal-Wallis extiende la prueba de MWW a tres o más poblaciones. Es una  alternativa al análisis paramétrico de la prueba de varianza para las diferencias entre las medias  de tres o más poblaciones con distribución normal.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A15.txt — bloque 3 — similitud 0.1241
+
+**Detalle de puntaje:** tfidf=0.0841; bonus=0.0400
+
+> Si se cumplen estas suposiciones en el ejemplo de los tiempos de espera en los hos- pitales, utilice la distribución F como estadístico de prueba. Si no es así, aplique la prueba de Kruskal-Wallis sin distribución. Para resaltar las similitudes entre estos dos enfoques, se resuelve el ejemplo respecto del conocimiento de los principios de administración de ejecuti- vos mediante la técnica ANOVA.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 06. prueba U de Mann-Whitney para evaluación del desempeño de enfermeras por universidad (Ejercicio 12)
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.1649
+**Similitud promedio:** 0.1039
+**Fuentes:** docente-1776-9c622af3e4c6.txt; libro-estadistica-para-administracion-y-economia-levin-A15.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt
+**Ubicaciones:** docente-1776-9c622af3e4c6.txt, bloque 1; docente-1776-9c622af3e4c6.txt, bloque 2; libro-estadistica-para-administracion-y-economia-levin-A15.txt, bloque 2; libro-estadistica-para-administracion-y-economia-levin-A15.txt, bloque 5; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt, bloque 3
+
+### docente-1776-9c622af3e4c6.txt — bloque 2 — similitud 0.1649
+
+**Detalle de puntaje:** tfidf=0.1249; bonus=0.0400
+
+> Basándose en las siguientes calificaciones (de 100 puntos posibles), ayude a la oficina de personal  del hospital a determinar si las escuelas difieren en calidad. Use la prueba u de Mann-Whitney con  un nivel de significancia del 10%.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt — bloque 3 — similitud 0.1056
+
+**Detalle de puntaje:** tfidf=0.0656; bonus=0.0400
+
+> 2. El procedimiento de Minitab para la prueba de  Kruskal-Wallis se describe en el apéndice 19.1. Minitab asume que las poblaciones tienen la mis- ma forma.
+
+### libro-estadistica-para-administracion-y-economia-levin-A15.txt — bloque 5 — similitud 0.0952
+
+**Detalle de puntaje:** tfidf=0.0652; bonus=0.0300
+
+> Prueba U de Mann-Whitney Método no paramétrico usa- do para determinar si dos muestras independientes se extra- jeron de poblaciones con la misma distribución. Teoría de corridas Teoría desarrollada para permitimos pro- bar la aleatoriedad del orden de las muestras. ●Ecuaciones introducidas en el capítulo 14 ■ 14-1 U  n1n2   R1 Para aplicar la prueba U de Mann-Whitney, se necesita esta fórmula para derivar el estadístico U, una me- dida de la diferencia entre las observaciones clasificadas y las dos variables. R1 es la suma de los rangos de las observaciones de la variable 1; n1 y n2 son los números de elementos de las muestras 1 y 2, respec- tivamente.
+
+### docente-1776-9c622af3e4c6.txt — bloque 1 — similitud 0.0938
+
+**Detalle de puntaje:** tfidf=0.0538; bonus=0.0400
+
+> De una muestra de días que se consideraron fuertes en compras, los siguientes  datos proporcionan las ventas de una tienda en los días que dio muestras de quesos y en los que no. Use la prueba u de Mann-Whitney y un nivel de significancia de 5% para decidir si regalar muestras  frente a las tiendas produjo mayores ventas. 6.- Una universidad que acepta estudiantes de preparatorias rurales y urbanas desea saber si los  antecedentes en distintos llevan a una diferencia en los promedios generales del primer año.
+
+### docente-1776-9c622af3e4c6.txt — bloque 1 — similitud 0.0923
+
+**Detalle de puntaje:** tfidf=0.0523; bonus=0.0400
+
+> 3. Pruebe la hipótesis de que no hay diferencia entre las edades de empleados masculinos y  femeninos de cierta compañía, utilizando la prueba u de Mann-Whitney para los datos de la  muestra. Use el nivel de significancia de 0.10.
+
+### libro-estadistica-para-administracion-y-economia-levin-A15.txt — bloque 2 — similitud 0.0714
+
+**Detalle de puntaje:** tfidf=0.0414; bonus=0.0300
+
+> Solución de un problema usando la prueba de Kruskal-Wallis Como se observó en esta sección, la prueba de Kruskal-Wallis es una extensión de la prueba de Mann-Whitney para casos en que están involucradas más de dos poblaciones. Esta prueba, también, depende de los rangos de las observaciones de la muestra.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 1 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 07. aproximación normal a la distribución del número de rachas R
+
+**Calidad estimada:** baja
+**Mejor similitud:** 0.0967
+**Similitud promedio:** 0.0762
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A15.txt; libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt; libro-estadistica-spiegel-y-stephens-4-a-edicion-A15.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A15.txt, bloque 2; libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt, bloque 3; libro-estadistica-spiegel-y-stephens-4-a-edicion-A15.txt, bloque 5
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt — bloque 3 — similitud 0.0967
+
+**Detalle de puntaje:** tfidf=0.0667; bonus=0.0300
+
+> La prueba de Kruskal-Wallis extiende la prueba de MWW a tres o más poblaciones. Es una  alternativa al análisis paramétrico de la prueba de varianza para las diferencias entre las medias  de tres o más poblaciones con distribución normal.
+
+### libro-estadistica-spiegel-y-stephens-4-a-edicion-A15.txt — bloque 5 — similitud 0.0821
+
+**Detalle de puntaje:** tfidf=0.0621; bonus=0.0200
+
+> Prueba de corridas: moneda Runs test for coin Runs above and below K ¼ 0.4 The observed number of runs ¼ 7 The expected number of runs ¼ 10.6 8 observations above K, 12 below N is small, so the following approximation may be invalid. P-value ¼ 0.084 b) El número de rachas es mayor que lo esperado. Se rechaza la aleatoriedad de la secuencia (11).
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A15.txt — bloque 2 — similitud 0.0788
+
+**Detalle de puntaje:** tfidf=0.0488; bonus=0.0300
+
+> II [Bloque seleccionado #724 | relevancia=2] Pagina 723 Ejercicios 15. Se seleccionaron las siguientes observaciones de manera aleatoria de poblaciones que no nece- sariamente tenían una distribución normal.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A15.txt — bloque 2 — similitud 0.0693
+
+**Detalle de puntaje:** tfidf=0.0493; bonus=0.0200
+
+> A un nivel de significancia de 0.05, ¿es posible concluir que el proceso que deben cubrir los clien- tes que solicitan un préstamo hipotecario a tasa fija a 30 años tarda menos? No suponga que la distribución del tiempo sigue una distribución normal para algún grupo. 18.5
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt — bloque 1 — similitud 0.0658
+
+**Detalle de puntaje:** tfidf=0.0458; bonus=0.0200
+
+> Fuente bibliográfica: Estadística matemática con aplicaciones - Wackerly, Mendenhall y Scheaffer. 7.ª edición.pdf Actividad: 15 (5.3 Ejercicios individuales 5% Tarea) Palabras clave: prueba de rachas, aleatoriedad, Wald-Wolfowitz, Kruskal-Wallis, Mann-Whitney, secuencia [Bloque seleccionado #69 | relevancia=4] Pagina 68 44 Capítulo 2 Probabilidad EJEMPLO 2.9  Suponga que una operación de ensamble en una planta de manufacturas consta de cuatro pa- sos que se pueden efectuar en cualquier secuencia. Si el fabricante desea comparar el tiempo  de ensamble para cada una de las secuencias, ¿cuántas secuencias diferentes estarán involu- cradas en el experimento?
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A15.txt — bloque 2 — similitud 0.0647
+
+**Detalle de puntaje:** tfidf=0.0347; bonus=0.0300
+
+> Una muestra de 10 estudiantes en el campus y otra de 12 estudiantes por internet reveló la siguiente información. No suponga que las dos distribuciones del tiempo de estudio, que se reportan en horas, siguen una distribución normal. A un nivel de significancia de 0.05, ¿es posible concluir que los estudian- tes por internet estudian más?
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 4 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 08. prueba rachas
+
+**Calidad estimada:** baja
+**Mejor similitud:** 0.1045
+**Similitud promedio:** 0.0680
+**Fuentes:** libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt; libro-estadistica-para-administracion-y-economia-levin-A15.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt; libro-estadistica-spiegel-y-stephens-4-a-edicion-A15.txt
+**Ubicaciones:** libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A15.txt, bloque 5; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt, bloque 3; libro-estadistica-spiegel-y-stephens-4-a-edicion-A15.txt, bloque 5
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt — bloque 1 — similitud 0.1045
+
+**Detalle de puntaje:** tfidf=0.0845; bonus=0.0200
+
+> Fuente bibliográfica: Estadística matemática con aplicaciones - Wackerly, Mendenhall y Scheaffer. 7.ª edición.pdf Actividad: 15 (5.3 Ejercicios individuales 5% Tarea) Palabras clave: prueba de rachas, aleatoriedad, Wald-Wolfowitz, Kruskal-Wallis, Mann-Whitney, secuencia [Bloque seleccionado #69 | relevancia=4] Pagina 68 44 Capítulo 2 Probabilidad EJEMPLO 2.9  Suponga que una operación de ensamble en una planta de manufacturas consta de cuatro pa- sos que se pueden efectuar en cualquier secuencia. Si el fabricante desea comparar el tiempo  de ensamble para cada una de las secuencias, ¿cuántas secuencias diferentes estarán involu- cradas en el experimento?
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt — bloque 1 — similitud 0.0883
+
+**Detalle de puntaje:** tfidf=0.0683; bonus=0.0200
+
+> Fuente bibliográfica: Estadística para negocios y economía - Anderson, Sweeney y Williams. 11.ª edición.pdf Actividad: 15 (5.3 Ejercicios individuales 5% Tarea) Palabras clave: prueba de rachas, aleatoriedad, Wald-Wolfowitz, Kruskal-Wallis, Mann-Whitney, secuencia [Bloque seleccionado #391 | relevancia=6] Pagina 390 356  Capítulo 9 Pruebas de hipótesis b) ¿Cuál es el error tipo I en esta situación? ¿Qué consecuencias tiene cometerlo? c)  ¿Cuál es el error tipo II en esta situación? ¿Qué consecuencias tiene cometerlo? 7.
+
+### libro-estadistica-spiegel-y-stephens-4-a-edicion-A15.txt — bloque 5 — similitud 0.0666
+
+**Detalle de puntaje:** tfidf=0.0466; bonus=0.0200
+
+> No se rechaza la aleato- riedad de la secuencia (10). Prueba de corridas: moneda Runs test for coin Runs above and below K ¼ 0.4 The observed number of runs ¼ 7 The expected number of runs ¼ 10.6 8 observations above K, 12 below N is small, so the following approximation may be invalid. P-value ¼ 0.084 b) El número de rachas es mayor que lo esperado.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt — bloque 3 — similitud 0.0572
+
+**Detalle de puntaje:** tfidf=0.0472; bonus=0.0100
+
+> Se obtienen los  rangos combinados para los datos de las dos muestras y el estadístico de prueba para la prue- ba de MWW es la suma de los rangos de la primera muestra. En la mayoría de las aplicaciones, los  tamaños de muestra son lo suﬁ cientemente grandes como para utilizar una aproximación nor- mal con el factor de corrección de continuidad en la realización de la prueba de hipótesis.
+
+### libro-estadistica-para-administracion-y-economia-levin-A15.txt — bloque 5 — similitud 0.0489
+
+**Detalle de puntaje:** tfidf=0.0389; bonus=0.0100
+
+> Corrida Secuencia de ocurrencias idénticas precedidas y seguidas de ocurrencias diferentes o por ninguna. Prueba de corridas de una sola muestra Método no para- métrico para determinar la aleatoriedad con que se seleccio- naron los elementos de una muestra. Prueba de Kolmogorov-Smirnov Prueba no paramétrica que no requiere que los datos se agrupen para determinar si existe una diferencia significativa entre la distribución de frecuencias observada y la distribución de frecuencias teórica.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt — bloque 3 — similitud 0.0428
+
+**Detalle de puntaje:** tfidf=0.0328; bonus=0.0100
+
+> [Bloque seleccionado #927 | relevancia=5] Pagina 926 892  Capítulo 19 Métodos no paramétricos La prueba de signos es un procedimiento no paramétrico para probar hipótesis acerca de  una mediana de la población o con muestras pareadas. Los datos deben resumirse en dos cate- gorías: una denotada por un signo positivo y otra denotada por un signo negativo.
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 4 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 09. ejercicios
+
+**Calidad estimada:** baja
+**Mejor similitud:** 0.1199
+**Similitud promedio:** 0.1143
+**Fuentes:** docente-1776-9c622af3e4c6.txt; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A15.txt; libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt; libro-estadistica-para-administracion-y-economia-levin-A15.txt
+**Ubicaciones:** docente-1776-9c622af3e4c6.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A15.txt, bloque 2; libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A15.txt, bloque 5
+
+### libro-estadistica-para-administracion-y-economia-levin-A15.txt — bloque 5 — similitud 0.1199
+
+**Detalle de puntaje:** tfidf=0.0499; bonus=0.0700
+
+> Soluciones a los ejercicios de autoevaluación EA 14-5 a) G denota a los estudiantes con 90 o más y L denota a los que tienen menos de 90: G L L L G G L L L L L G L L L L L G L L L L L L L L L L G L n1  # de G´s  6 r  10 n2  # de L´s  24   0.05  r   1   1  10.6 r   r  1.69 Los valores críticos de z son ±1.96.
+
+### docente-1776-9c622af3e4c6.txt — bloque 1 — similitud 0.1176
+
+**Detalle de puntaje:** tfidf=0.0476; bonus=0.0700
+
+> Sus notas se reproducen a  continuación. (A =30 y mayores; B=menores de 30.)  (3:30 p.m.) A, A, A, A, A, A, B, A, A, A, A, A, A, B, B,  B, A, B, B, B, B, B, B, A, B, B, B, A, B, B, B (10 p.m.) Para un nivel de significancia del 5%, ¿estaba en lo correcto el dueño del restaurante en cuanto a  que la edad de sus clientes a distintas horas de la tarde no es aleatoria? Pagina 3 Ejercicios Mtra.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A15.txt — bloque 2 — similitud 0.1169
+
+**Detalle de puntaje:** tfidf=0.0469; bonus=0.0700
+
+> Una probabilidad subjetiva se basa en cualquier información disponible. II [Bloque seleccionado #724 | relevancia=2] Pagina 723 Ejercicios 15. Se seleccionaron las siguientes observaciones de manera aleatoria de poblaciones que no nece- sariamente tenían una distribución normal.
+
+### docente-1776-9c622af3e4c6.txt — bloque 1 — similitud 0.1125
+
+**Detalle de puntaje:** tfidf=0.0425; bonus=0.0700
+
+> Pagina 1 Ejercicios Mtra. Yoana Tautimes Delgado 1 1.
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt — bloque 1 — similitud 0.1108
+
+**Detalle de puntaje:** tfidf=0.0408; bonus=0.0700
+
+> Fuente bibliográfica: Estadística matemática con aplicaciones - Wackerly, Mendenhall y Scheaffer. 7.ª edición.pdf Actividad: 15 (5.3 Ejercicios individuales 5% Tarea) Palabras clave: prueba de rachas, aleatoriedad, Wald-Wolfowitz, Kruskal-Wallis, Mann-Whitney, secuencia [Bloque seleccionado #69 | relevancia=4] Pagina 68 44 Capítulo 2 Probabilidad EJEMPLO 2.9  Suponga que una operación de ensamble en una planta de manufacturas consta de cuatro pa- sos que se pueden efectuar en cualquier secuencia. Si el fabricante desea comparar el tiempo  de ensamble para cada una de las secuencias, ¿cuántas secuencias diferentes estarán involu- cradas en el experimento?
+
+### docente-1776-9c622af3e4c6.txt — bloque 1 — similitud 0.1080
+
+**Detalle de puntaje:** tfidf=0.0380; bonus=0.0700
+
+> Use  la prueba de Kruskal- Wallis con un nivel de significancia de 0.05. Pagina 2 Ejercicios Mtra. Yoana Tautimes Delgado 2 5.- Para incrementar las ventas durante los días de más demanda, una cadena de tiendas que vende  queso en centros comerciales da pruebas de su producto a la entrada de las tiendas.
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 10. hipótesis paramétricas
+
+**Calidad estimada:** baja
+**Mejor similitud:** 0.1031
+**Similitud promedio:** 0.0707
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A15.txt; libro-estadistica-para-administracion-y-economia-levin-A15.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A15.txt, bloque 3; libro-estadistica-para-administracion-y-economia-levin-A15.txt, bloque 2; libro-estadistica-para-administracion-y-economia-levin-A15.txt, bloque 4; libro-estadistica-para-administracion-y-economia-levin-A15.txt, bloque 5; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt, bloque 3
+
+### libro-estadistica-para-administracion-y-economia-levin-A15.txt — bloque 5 — similitud 0.1031
+
+**Detalle de puntaje:** tfidf=0.0831; bonus=0.0200
+
+> Pruebas no paramétricas Técnicas estadísticas que no ha- cen suposiciones restrictivas respecto a la forma de la distri- bución de población al realizar una prueba de hipótesis. Prueba U de Mann-Whitney Método no paramétrico usa- do para determinar si dos muestras independientes se extra- jeron de poblaciones con la misma distribución.
+
+### libro-estadistica-para-administracion-y-economia-levin-A15.txt — bloque 2 — similitud 0.1012
+
+**Detalle de puntaje:** tfidf=0.0912; bonus=0.0100
+
+> Las hipótesis pueden enunciarse de la siguien- te manera: H0: 1  2  3 ←Hipótesis nula: no hay diferencia entre las tres poblaciones, es decir, tienen la misma media H1: 1, 2 y 3 ←Hipótesis alternativa: existen diferencias entre las tres poblaciones;  no todas son iguales en particular, tienen distintas medias   0.10 ←Nivel de significancia para probar estas hipótesis La figura 14-5 ilustra una distribución ji-cuadrada con 2 grados de libertad. El área sombreada re- presenta el nivel de significancia de 0.10.
+
+### libro-estadistica-para-administracion-y-economia-levin-A15.txt — bloque 4 — similitud 0.0581
+
+**Detalle de puntaje:** tfidf=0.0481; bonus=0.0100
+
+> Sospecha que cada  semana las viejas prensas se descomponen antes que las nuevas, ya que todas las prensas se verifican y reparan durante el fin de semana. Para probar su hipótesis, Kathy registró el número de las prensas que fallaron durante la semana. Las prensas 1, 2 y 3 son las más antiguas.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A15.txt — bloque 3 — similitud 0.0551
+
+**Detalle de puntaje:** tfidf=0.0451; bonus=0.0100
+
+> Para resaltar las similitudes entre estos dos enfoques, se resuelve el ejemplo respecto del conocimiento de los principios de administración de ejecuti- vos mediante la técnica ANOVA. Para iniciar, formule las hipótesis nula y alternativa de los tres grupos. :    : No todas las medias de tratamiento son iguales. Para un nivel de significancia de 0.05, con k  1  3  1  2 grados de libertad en el numerador y n  k  21  3  18 grados de libertad en el denominador, el valor crítico de F es 3.55.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt — bloque 3 — similitud 0.0549
+
+**Detalle de puntaje:** tfidf=0.0449; bonus=0.0100
+
+> Aunque el archivo muestra los tiempos para cada método de producción en las  columnas C1 y C2, estos datos no se utilizan para obtener el resultado de Minitab. El mismo procedimiento se utiliza para probar una hipótesis acerca de la mediana de una  población simétrica. Ingrese los datos reales en cualquier columna de la hoja de cálculo y siga  los pasos anteriores.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt — bloque 1 — similitud 0.0521
+
+**Detalle de puntaje:** tfidf=0.0421; bonus=0.0100
+
+> Suponga que se implementará un nuevo método de producción si mediante una prueba de  hipótesis se confirma la conclusión de que el nuevo método reduce el costo medio de opera- ción por hora. a) Proporcione las hipótesis nula y alternativa adecuadas si el costo medio de producción  actual por hora es $220. b) ¿Cuál es el error tipo I en esta situación? ¿Qué consecuencias tiene cometerlo? c)  ¿Cuál es el error tipo II en esta situación? ¿Qué consecuencias tiene cometerlo?
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 4 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 11. pruebas hipótesis
+
+**Calidad estimada:** baja
+**Mejor similitud:** 0.0964
+**Similitud promedio:** 0.0750
+**Fuentes:** docente-1776-9c622af3e4c6.txt; libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt; libro-estadistica-para-administracion-y-economia-levin-A15.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt
+**Ubicaciones:** docente-1776-9c622af3e4c6.txt, bloque 1; libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A15.txt, bloque 2; libro-estadistica-para-administracion-y-economia-levin-A15.txt, bloque 5; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt, bloque 1
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt — bloque 1 — similitud 0.0964
+
+**Detalle de puntaje:** tfidf=0.0764; bonus=0.0200
+
+> Fuente bibliográfica: Estadística para negocios y economía - Anderson, Sweeney y Williams. 11.ª edición.pdf Actividad: 15 (5.3 Ejercicios individuales 5% Tarea) Palabras clave: prueba de rachas, aleatoriedad, Wald-Wolfowitz, Kruskal-Wallis, Mann-Whitney, secuencia [Bloque seleccionado #391 | relevancia=6] Pagina 390 356  Capítulo 9 Pruebas de hipótesis b) ¿Cuál es el error tipo I en esta situación? ¿Qué consecuencias tiene cometerlo? c)  ¿Cuál es el error tipo II en esta situación? ¿Qué consecuencias tiene cometerlo? 7.
+
+### libro-estadistica-para-administracion-y-economia-levin-A15.txt — bloque 2 — similitud 0.0856
+
+**Detalle de puntaje:** tfidf=0.0756; bonus=0.0100
+
+> Las hipótesis pueden enunciarse de la siguien- te manera: H0: 1  2  3 ←Hipótesis nula: no hay diferencia entre las tres poblaciones, es decir, tienen la misma media H1: 1, 2 y 3 ←Hipótesis alternativa: existen diferencias entre las tres poblaciones;  no todas son iguales en particular, tienen distintas medias   0.10 ←Nivel de significancia para probar estas hipótesis La figura 14-5 ilustra una distribución ji-cuadrada con 2 grados de libertad. El área sombreada re- presenta el nivel de significancia de 0.10.
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt — bloque 1 — similitud 0.0770
+
+**Detalle de puntaje:** tfidf=0.0670; bonus=0.0100
+
+> Escriba los puntos muestrales en los  siguientes eventos: A∪B, A∩B, A∩B y A∪B. 2.145  Un paciente que se somete a un examen físico anual debe pasar por 18 verifi caciones o pruebas. La  secuencia en la que las pruebas se realizan es importante porque el tiempo perdido entre pruebas va  a variar dependiendo de la secuencia.
+
+### libro-estadistica-para-administracion-y-economia-levin-A15.txt — bloque 5 — similitud 0.0674
+
+**Detalle de puntaje:** tfidf=0.0574; bonus=0.0100
+
+> Prueba de los signos Prueba para la diferencia entre las ob- servaciones por pares, donde los signos  y  sustituyen a los valores cuantitativos. Pruebas de sumas de rangos Familia de pruebas no para- métricas que usan la información de orden en un conjunto de datos.
+
+### libro-estadistica-para-administracion-y-economia-levin-A15.txt — bloque 5 — similitud 0.0658
+
+**Detalle de puntaje:** tfidf=0.0458; bonus=0.0200
+
+> Pruebas no paramétricas Técnicas estadísticas que no ha- cen suposiciones restrictivas respecto a la forma de la distri- bución de población al realizar una prueba de hipótesis. Prueba U de Mann-Whitney Método no paramétrico usa- do para determinar si dos muestras independientes se extra- jeron de poblaciones con la misma distribución.
+
+### docente-1776-9c622af3e4c6.txt — bloque 1 — similitud 0.0577
+
+**Detalle de puntaje:** tfidf=0.0377; bonus=0.0200
+
+> Pruebe la hipótesis de que no existe  diferencia en la cantidad en dólares recibida por pagos en efectivo, cheque o tarjeta de crédito. Use  la prueba de Kruskal- Wallis con un nivel de significancia de 0.05.
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 4 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 12. requisitos instrucciones
+
+**Calidad estimada:** baja
+**Mejor similitud:** 0.0550
+**Similitud promedio:** 0.0542
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A15.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A15.txt, bloque 3; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt, bloque 4
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt — bloque 4 — similitud 0.0550
+
+**Detalle de puntaje:** tfidf=0.0450; bonus=0.0100
+
+> El complemento de Excel PrecisionTree suele utilizarse para elaborar los árboles de deci- sión y resolver los problemas respectivos presentados en este capítulo. Las instrucciones para  descargar e instalar el software PrecisionTree en su equipo se proporcionan en el sitio web del  libro. En el apéndice al final del capítulo se incluye un ejemplo de cómo utilizar PrecisionTree  para el problema del PDC de la sección 21.1.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A15.txt — bloque 3 — similitud 0.0535
+
+**Detalle de puntaje:** tfidf=0.0435; bonus=0.0100
+
+> Probablemente, el primer enfoque para comparar los tiempos de espera es determinar si existe una diferencia entre los tiempos de espera medios en los tres hospitales, esto es, utili- zar la ANOVA de una vía descrita en la sección 12.5. Sin embargo, como se describió en la sec- ción 12.4, esta prueba exige tres requisitos: 1. Las muestras deben ser de poblaciones independientes.
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 2 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 13. deberás realizar
+
+**Calidad estimada:** baja
+**Mejor similitud:** 0.0689
+**Similitud promedio:** 0.0607
+**Fuentes:** libro-estadistica-para-administracion-y-economia-levin-A15.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt
+**Ubicaciones:** libro-estadistica-para-administracion-y-economia-levin-A15.txt, bloque 5; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt, bloque 3
+
+### libro-estadistica-para-administracion-y-economia-levin-A15.txt — bloque 5 — similitud 0.0689
+
+**Detalle de puntaje:** tfidf=0.0589; bonus=0.0100
+
+> Pruebas no paramétricas Técnicas estadísticas que no ha- cen suposiciones restrictivas respecto a la forma de la distri- bución de población al realizar una prueba de hipótesis. Prueba U de Mann-Whitney Método no paramétrico usa- do para determinar si dos muestras independientes se extra- jeron de poblaciones con la misma distribución.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt — bloque 3 — similitud 0.0605
+
+**Detalle de puntaje:** tfidf=0.0505; bonus=0.0100
+
+> Los resultados  se obtienen haciendo clic en OK. Para realizar esta prueba no es necesario ingresar la diferencia  de los datos. La rutina de Minitab hará los cálculos automáticamente.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt — bloque 1 — similitud 0.0573
+
+**Detalle de puntaje:** tfidf=0.0473; bonus=0.0100
+
+> En tales casos, para propósitos  prácticos se considera que se conoce la desviación estándar poblacional. En esta sección se  muestra cómo realizar una prueba de hipótesis para la media poblacional en el caso en que σ  es conocida.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt — bloque 3 — similitud 0.0560
+
+**Detalle de puntaje:** tfidf=0.0460; bonus=0.0100
+
+> Como resultado, describe la prueba  de Kruskal-Wallis como una prueba de las dife- rencias entre las medianas de las poblaciones. Si  no se siente cómodo al realizar el supuesto de la  “misma forma”, puede seguir utilizando Minitab. Sin embargo, tendrá que interpretar los resultados  como una prueba de hipótesis nula en la que todas  las poblaciones son idénticas.
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 4 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 14. significancia
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2084
+**Similitud promedio:** 0.1482
+**Fuentes:** docente-1776-9c622af3e4c6.txt; libro-estadistica-para-administracion-y-economia-levin-A15.txt; libro-estadistica-spiegel-y-stephens-4-a-edicion-A15.txt
+**Ubicaciones:** docente-1776-9c622af3e4c6.txt, bloque 1; docente-1776-9c622af3e4c6.txt, bloque 2; libro-estadistica-para-administracion-y-economia-levin-A15.txt, bloque 2; libro-estadistica-para-administracion-y-economia-levin-A15.txt, bloque 4; libro-estadistica-spiegel-y-stephens-4-a-edicion-A15.txt, bloque 5
+
+### libro-estadistica-spiegel-y-stephens-4-a-edicion-A15.txt — bloque 5 — similitud 0.2084
+
+**Detalle de puntaje:** tfidf=0.1384; bonus=0.0700
+
+> [Bloque seleccionado #577 | relevancia=5] Pagina 576 552 RESPUESTAS A LOS PROBLEMAS SUPLEMENTARIOS 17.51  H = 6.54, DF = 2, P = 0.038. Al nivel de significancia 0.05 sí hay diferencia entre los tres métodos de enseñanza, pero no  al nivel de significancia 0.01, ya que 0.01 < valor p < 0.05. 17.52  H = 9.22, DF = 3, P = 0.026.
+
+### docente-1776-9c622af3e4c6.txt — bloque 1 — similitud 0.1435
+
+**Detalle de puntaje:** tfidf=0.0735; bonus=0.0700
+
+> Anotó si cada pareja tenía menos o más que 30 años. Sus notas se reproducen a  continuación. (A =30 y mayores; B=menores de 30.)  (3:30 p.m.) A, A, A, A, A, A, B, A, A, A, A, A, A, B, B,  B, A, B, B, B, B, B, B, A, B, B, B, A, B, B, B (10 p.m.) Para un nivel de significancia del 5%, ¿estaba en lo correcto el dueño del restaurante en cuanto a  que la edad de sus clientes a distintas horas de la tarde no es aleatoria? Pagina 3 Ejercicios Mtra.
+
+### docente-1776-9c622af3e4c6.txt — bloque 1 — similitud 0.1379
+
+**Detalle de puntaje:** tfidf=0.0679; bonus=0.0700
+
+> Se  presentan los datos de 13 estudiantes de zona rural de primer ingreso elegidos al azar y de 16 con  antecedentes urbanos. Use la prueba U de Mann-Whitney con el 5% de nivel de significancia. 7.- El News and Clarion mantenía un registro del sexo de las personas que llamaban a la oficina de  circulación para quejarse de los problemas con la entrega del periódico dominical.
+
+### docente-1776-9c622af3e4c6.txt — bloque 2 — similitud 0.1346
+
+**Detalle de puntaje:** tfidf=0.0646; bonus=0.0700
+
+> La siguiente  es una muestra de esos datos. Utilizando la prueba de Kruskal-Wallis, ¿puede decir, al nivel de  significancia de 0.05, que sus tiendas tienen el mismo número de clientes que compran? 12.
+
+### libro-estadistica-para-administracion-y-economia-levin-A15.txt — bloque 4 — similitud 0.1326
+
+**Detalle de puntaje:** tfidf=0.0626; bonus=0.0700
+
+> Use el nivel de significancia de 0.10. ¿Puede pensar en alguna característica del entor- no de este problema que apoye lo que encontró con la estadística? ■14-28 El dueño de un restaurante ha observado con los años que las parejas de más edad parecen comer más temprano que las parejas jóvenes en su tranquilo y romántico restaurante. Sospecha que tal vez sea por- que deben dejar a los niños con alguien que los cuide y porque las parejas de más edad se acuestan más temprano.
+
+### libro-estadistica-para-administracion-y-economia-levin-A15.txt — bloque 2 — similitud 0.1319
+
+**Detalle de puntaje:** tfidf=0.0619; bonus=0.0700
+
+> Las hipótesis pueden enunciarse de la siguien- te manera: H0: 1  2  3 ←Hipótesis nula: no hay diferencia entre las tres poblaciones, es decir, tienen la misma media H1: 1, 2 y 3 ←Hipótesis alternativa: existen diferencias entre las tres poblaciones;  no todas son iguales en particular, tienen distintas medias   0.10 ←Nivel de significancia para probar estas hipótesis La figura 14-5 ilustra una distribución ji-cuadrada con 2 grados de libertad. El área sombreada re- presenta el nivel de significancia de 0.10.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 15. nivel significancia
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.1887
+**Similitud promedio:** 0.1411
+**Fuentes:** docente-1776-9c622af3e4c6.txt; libro-estadistica-para-administracion-y-economia-levin-A15.txt; libro-estadistica-spiegel-y-stephens-4-a-edicion-A15.txt
+**Ubicaciones:** docente-1776-9c622af3e4c6.txt, bloque 1; docente-1776-9c622af3e4c6.txt, bloque 2; libro-estadistica-para-administracion-y-economia-levin-A15.txt, bloque 2; libro-estadistica-para-administracion-y-economia-levin-A15.txt, bloque 4; libro-estadistica-spiegel-y-stephens-4-a-edicion-A15.txt, bloque 5
+
+### libro-estadistica-spiegel-y-stephens-4-a-edicion-A15.txt — bloque 5 — similitud 0.1887
+
+**Detalle de puntaje:** tfidf=0.1687; bonus=0.0200
+
+> [Bloque seleccionado #577 | relevancia=5] Pagina 576 552 RESPUESTAS A LOS PROBLEMAS SUPLEMENTARIOS 17.51  H = 6.54, DF = 2, P = 0.038. Al nivel de significancia 0.05 sí hay diferencia entre los tres métodos de enseñanza, pero no  al nivel de significancia 0.01, ya que 0.01 < valor p < 0.05. 17.52  H = 9.22, DF = 3, P = 0.026.
+
+### docente-1776-9c622af3e4c6.txt — bloque 1 — similitud 0.1441
+
+**Detalle de puntaje:** tfidf=0.1241; bonus=0.0200
+
+> Anotó si cada pareja tenía menos o más que 30 años. Sus notas se reproducen a  continuación. (A =30 y mayores; B=menores de 30.)  (3:30 p.m.) A, A, A, A, A, A, B, A, A, A, A, A, A, B, B,  B, A, B, B, B, B, B, B, A, B, B, B, A, B, B, B (10 p.m.) Para un nivel de significancia del 5%, ¿estaba en lo correcto el dueño del restaurante en cuanto a  que la edad de sus clientes a distintas horas de la tarde no es aleatoria? Pagina 3 Ejercicios Mtra.
+
+### docente-1776-9c622af3e4c6.txt — bloque 1 — similitud 0.1345
+
+**Detalle de puntaje:** tfidf=0.1145; bonus=0.0200
+
+> Se  presentan los datos de 13 estudiantes de zona rural de primer ingreso elegidos al azar y de 16 con  antecedentes urbanos. Use la prueba U de Mann-Whitney con el 5% de nivel de significancia. 7.- El News and Clarion mantenía un registro del sexo de las personas que llamaban a la oficina de  circulación para quejarse de los problemas con la entrega del periódico dominical.
+
+### docente-1776-9c622af3e4c6.txt — bloque 2 — similitud 0.1291
+
+**Detalle de puntaje:** tfidf=0.1091; bonus=0.0200
+
+> La siguiente  es una muestra de esos datos. Utilizando la prueba de Kruskal-Wallis, ¿puede decir, al nivel de  significancia de 0.05, que sus tiendas tienen el mismo número de clientes que compran? 12.
+
+### libro-estadistica-para-administracion-y-economia-levin-A15.txt — bloque 4 — similitud 0.1257
+
+**Detalle de puntaje:** tfidf=0.1057; bonus=0.0200
+
+> Use el nivel de significancia de 0.10. ¿Puede pensar en alguna característica del entor- no de este problema que apoye lo que encontró con la estadística? ■14-28 El dueño de un restaurante ha observado con los años que las parejas de más edad parecen comer más temprano que las parejas jóvenes en su tranquilo y romántico restaurante. Sospecha que tal vez sea por- que deben dejar a los niños con alguien que los cuide y porque las parejas de más edad se acuestan más temprano.
+
+### libro-estadistica-para-administracion-y-economia-levin-A15.txt — bloque 2 — similitud 0.1245
+
+**Detalle de puntaje:** tfidf=0.1045; bonus=0.0200
+
+> Las hipótesis pueden enunciarse de la siguien- te manera: H0: 1  2  3 ←Hipótesis nula: no hay diferencia entre las tres poblaciones, es decir, tienen la misma media H1: 1, 2 y 3 ←Hipótesis alternativa: existen diferencias entre las tres poblaciones;  no todas son iguales en particular, tienen distintas medias   0.10 ←Nivel de significancia para probar estas hipótesis La figura 14-5 ilustra una distribución ji-cuadrada con 2 grados de libertad. El área sombreada re- presenta el nivel de significancia de 0.10.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 16. poblaciones
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2520
+**Similitud promedio:** 0.1823
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A15.txt; libro-estadistica-para-administracion-y-economia-levin-A15.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A15.txt, bloque 3; libro-estadistica-para-administracion-y-economia-levin-A15.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt, bloque 3
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt — bloque 3 — similitud 0.2520
+
+**Detalle de puntaje:** tfidf=0.1820; bonus=0.0700
+
+> En la mayoría de las aplicaciones, los  tamaños de muestra son lo suﬁ cientemente grandes como para utilizar una aproximación nor- mal con el factor de corrección de continuidad en la realización de la prueba de hipótesis. Si  no se realiza ningún supuesto acerca de la población, el procedimiento MWW prueba si las dos  poblaciones son idénticas. Si puede hacer el supuesto de que las dos poblaciones tengan la mis- ma forma, la prueba ofrece una inferencia acerca de las diferencias entre las medianas de las  dos poblaciones.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt — bloque 3 — similitud 0.1892
+
+**Detalle de puntaje:** tfidf=0.1192; bonus=0.0700
+
+> La prueba de Kruskal-Wallis no requiere  ningún supuesto acerca de la distribución de las poblaciones y utiliza la hipótesis nula de que  las k poblaciones son idénticas. Si se puede hacer el supuesto de que las poblaciones tienen la  misma forma, la prueba ofrece una inferencia acerca de las diferencias entre las medianas de  las k poblaciones.
+
+### libro-estadistica-para-administracion-y-economia-levin-A15.txt — bloque 2 — similitud 0.1694
+
+**Detalle de puntaje:** tfidf=0.0994; bonus=0.0700
+
+> Las hipótesis pueden enunciarse de la siguien- te manera: H0: 1  2  3 ←Hipótesis nula: no hay diferencia entre las tres poblaciones, es decir, tienen la misma media H1: 1, 2 y 3 ←Hipótesis alternativa: existen diferencias entre las tres poblaciones;  no todas son iguales en particular, tienen distintas medias   0.10 ←Nivel de significancia para probar estas hipótesis La figura 14-5 ilustra una distribución ji-cuadrada con 2 grados de libertad. El área sombreada re- presenta el nivel de significancia de 0.10.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A15.txt — bloque 3 — similitud 0.1652
+
+**Detalle de puntaje:** tfidf=0.0952; bonus=0.0700
+
+> Sin embargo, como se describió en la sec- ción 12.4, esta prueba exige tres requisitos: 1. Las muestras deben ser de poblaciones independientes. 2.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt — bloque 3 — similitud 0.1592
+
+**Detalle de puntaje:** tfidf=0.0892; bonus=0.0700
+
+> El procedimiento de Minitab para la prueba de  Kruskal-Wallis se describe en el apéndice 19.1. Minitab asume que las poblaciones tienen la mis- ma forma. Como resultado, describe la prueba  de Kruskal-Wallis como una prueba de las dife- rencias entre las medianas de las poblaciones.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A15.txt — bloque 3 — similitud 0.1586
+
+**Detalle de puntaje:** tfidf=0.0886; bonus=0.0700
+
+> Los datos deben resumirse en dos cate- gorías: una denotada por un signo positivo y otra denotada por un signo negativo. La prueba  de rangos con signo de Wilcoxon analiza las muestras pareadas de dos poblaciones cuando se  dispone de datos cuantitativos. No se requiere ningún supuesto que no sea que la distribución  de las diferencias pareadas sea simétrica.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 17. aleatoriedad
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.1783
+**Similitud promedio:** 0.1561
+**Fuentes:** libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt; libro-estadistica-para-administracion-y-economia-levin-A15.txt
+**Ubicaciones:** libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt, bloque 2; libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt, bloque 4; libro-estadistica-para-administracion-y-economia-levin-A15.txt, bloque 4
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt — bloque 4 — similitud 0.1783
+
+**Detalle de puntaje:** tfidf=0.1083; bonus=0.0700
+
+> Observe las desvia- ciones arriba de y. ¿Estos datos indican falta de aleatoriedad y por tanto sugieren periodicidad  y falta de control en el proceso? Solución  La secuencia de desviaciones negativas (S) y positivas (F), como se indica en la Figura 15.5,  es S S S S F F S F F S F S S S S.
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt — bloque 4 — similitud 0.1659
+
+**Detalle de puntaje:** tfidf=0.0959; bonus=0.0700
+
+> Por ejemplo, la medición de una  característica de calidad de un producto industrial, presión sanguínea de una persona y el  precio de una acción en el mercado accionario varían todos en el tiempo. Las desviaciones  de la aleatoriedad en una serie, causadas ya sea por tendencias o periodicidades, se pueden [Bloque seleccionado #806 | relevancia=12] Pagina 805 15.9 Prueba de corridas de ensayo: una prueba de aleatoriedad 781 detectar al examinar las desviaciones de las mediciones de la serie de tiempo de su promedio.
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt — bloque 4 — similitud 0.1588
+
+**Detalle de puntaje:** tfidf=0.0888; bonus=0.0700
+
+> Solución  La secuencia contiene n1 = 10 respuestas T y n2 = 10 respuestas F, con y = 16 corridas de  ensayo. La no aleatoriedad puede estar indicada ya sea por un número inusualmente peque- ño o grande de corridas de ensayo; en consecuencia, estaremos usando una prueba de dos  colas. Suponga que deseamos usar a aproximadamente igual a .05 con .025 o menos en cada  cola de la región de rechazo.
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A15.txt — bloque 2 — similitud 0.1560
+
+**Detalle de puntaje:** tfidf=0.0860; bonus=0.0700
+
+> El ingeniero supervisor para una máquina particular ha obser- vado que piezas defectuosas parecen estar agrupándose (es decir apareciendo de un modo no aleatorio),  lo cual sugiere un mal funcionamiento en alguna parte de la máquina. Una prueba para la aleatoriedad  se basa en el número de lotes de piezas defectuosas y no defectuosas (un lote es una secuencia ininte- rrumpida de piezas defectuosas y no defectuosas). Cuanto más pequeño es el número de lotes, mayor  será la cantidad de evidencia que indica la no aleatoriedad.
+
+### libro-estadistica-para-administracion-y-economia-levin-A15.txt — bloque 4 — similitud 0.1454
+
+**Detalle de puntaje:** tfidf=0.0754; bonus=0.0700
+
+> Los probadores eligen muestras de 60 cajas sucesivas para ver si la máquina está mezclando adecuadamente los dos tipos de muñecos. Usando los símbo- [Bloque seleccionado #663 | relevancia=6] Pagina 662 Usando el nivel de significancia de 0.05, pruebe la aleatoriedad de esta secuencia. ¿Hay algo respecto a la naturaleza de este problema que lo induzca a creer que una secuencia así no es aleatoria? ■14-27 La Agencia de Servicios Sociales del condado de Kerwin mantiene este registro del número diario de so- licitantes de asesoría matrimonial en el orden en que aparecen en la agencia durante 30 días hábiles.
+
+### libro-estadistica-para-administracion-y-economia-levin-A15.txt — bloque 4 — similitud 0.1319
+
+**Detalle de puntaje:** tfidf=0.0619; bonus=0.0700
+
+> Si los hombres y las mujeres entran de la siguiente manera, la secuencia contendrá tres corridas: La teoría de corridas Concepto de  aleatoriedad 640 Capítulo 14 Métodos no paramétricos Y esta secuencia contiene seis corridas: Una prueba de corridas usaría los siguientes símbolos si tuviera sólo dos tipos de ocurrencias: n1  número de ocurrencias del tipo 1 n2  número de ocurrencias del tipo 2 r  número de corridas Apliquemos estos símbolos a un patrón diferente para la llegada de los solicitantes: H, M, M, H, H, H, H, M, M, M, H, H, M, H, M, M, H En este caso, los valores de n1, n2 y r serían n1  8 ←Número de mujeres n2  9 ←Número de hombres r  9 ←Número de...
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.

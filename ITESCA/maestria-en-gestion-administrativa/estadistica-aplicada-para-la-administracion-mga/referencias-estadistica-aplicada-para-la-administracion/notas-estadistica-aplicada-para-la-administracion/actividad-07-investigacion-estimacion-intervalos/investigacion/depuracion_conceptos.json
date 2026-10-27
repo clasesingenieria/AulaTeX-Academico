@@ -1,0 +1,106 @@
+{
+  "subject_slug": "estadistica-aplicada-para-la-administracion",
+  "engine": "Amazon Nova Pro",
+  "kept": [
+    "estimadores puntuales comunes",
+    "insesgamiento eficiencia y consistencia",
+    "intervalo de confianza para la media con sigma conocida",
+    "intervalo de confianza para la media con distribución t de Student",
+    "intervalo de confianza para una proporción poblacional",
+    "intervalo de confianza para la varianza con distribución ji-cuadrada",
+    "grados de libertad en estimación",
+    "nivel de confianza y riesgo alfa",
+    "precisión y amplitud del intervalo",
+    "aplicaciones de estimación en finanzas y operaciones",
+    "intervalo confianza",
+    "estimación",
+    "intervalos",
+    "construye intervalo",
+    "cómo construye",
+    "construye intervalo confianza",
+    "distribución",
+    "poblacional"
+  ],
+  "conceptos_clave_nova_pro": [
+    {
+      "concepto": "Estimadores puntuales comunes",
+      "definicion_rigurosa": "Los estimadores puntuales son funciones de una muestra que se utilizan para estimar un parámetro poblacional. Los estimadores puntuales comunes incluyen la media muestral, la proporción muestral y la varianza muestral. Estos estimadores proporcionan un valor único que se espera que sea cercano al valor real del parámetro poblacional.",
+      "formulacion_matematica_latex": "\\bar{X} \\sim N(\\mu, \\sigma^2/n)",
+      "aplicacion_administrativa": "En administración, los estimadores puntuales se utilizan para estimar parámetros como la media de costos, la proporción de clientes satisfechos o la varianza de los tiempos de entrega, lo que ayuda a la toma de decisiones estratégicas.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "Insesgamiento, eficiencia y consistencia",
+      "definicion_rigurosa": "El insesgamiento se refiere a la diferencia entre el valor esperado del estimador y el valor real del parámetro. La eficiencia mide la varianza del estimador, donde un estimador más eficiente tiene una varianza menor. La consistencia indica que el estimador converge en probabilidad al parámetro poblacional a medida que aumenta el tamaño de la muestra.",
+      "formulacion_matematica_latex": "E(\\hat{\\theta}) = \\theta",
+      "aplicacion_administrativa": "En finanzas, un estimador insesgado y eficiente para la media de retornos puede mejorar la precisión de las predicciones de rendimiento de inversiones.",
+      "fuente_principal": "Lind, Marchal y Wathen, 2012",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "Intervalo de confianza para la media con sigma conocida",
+      "definicion_rigurosa": "El intervalo de confianza para la media con desviación estándar conocida se calcula utilizando la distribución normal estándar. Este intervalo proporciona un rango de valores dentro del cual se espera que caiga la media poblacional con una cierta probabilidad.",
+      "formulacion_matematica_latex": "\\bar{X} \\pm z_{\\alpha/2} \\frac{\\sigma}{\\sqrt{n}}",
+      "aplicacion_administrativa": "En operaciones, este intervalo puede usarse para estimar el rango de costos promedio de producción, lo que ayuda en la planificación presupuestaria.",
+      "fuente_principal": "Wackerly et al., 2010",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "Intervalo de confianza para la media con distribución t de Student",
+      "definicion_rigurosa": "Cuando la desviación estándar de la población es desconocida, se utiliza la distribución t de Student para construir el intervalo de confianza para la media. Este intervalo se ajusta a la variabilidad adicional introducida por la estimación de la desviación estándar.",
+      "formulacion_matematica_latex": "\\bar{X} \\pm t_{\\alpha/2, n-1} \\frac{s}{\\sqrt{n}}",
+      "aplicacion_administrativa": "En mercadotecnia, este intervalo puede aplicarse para estimar el rango de precios aceptables para un nuevo producto, considerando la incertidumbre en la variabilidad de las respuestas de los consumidores.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "Intervalo de confianza para una proporción poblacional",
+      "definicion_rigurosa": "El intervalo de confianza para una proporción poblacional se calcula utilizando la distribución normal aproximada o la distribución binomial. Este intervalo proporciona un rango de valores dentro del cual se espera que caiga la proporción poblacional con una cierta probabilidad.",
+      "formulacion_matematica_latex": "\\hat{p} \\pm z_{\\alpha/2} \\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}",
+      "aplicacion_administrativa": "En gestión de recursos humanos, este intervalo puede usarse para estimar la proporción de empleados satisfechos con las políticas de la empresa, lo que ayuda en la toma de decisiones sobre bienestar laboral.",
+      "fuente_principal": "Levin, 2010",
+      "localizador": "bloque 2"
+    },
+    {
+      "concepto": "Intervalo de confianza para la varianza con distribución ji-cuadrada",
+      "definicion_rigurosa": "El intervalo de confianza para la varianza se calcula utilizando la distribución ji-cuadrada. Este intervalo proporciona un rango de valores dentro del cual se espera que caiga la varianza poblacional con una cierta probabilidad.",
+      "formulacion_matematica_latex": "\\frac{(n-1)s^2}{\\chi^2_{\\alpha/2, n-1}} \\leq \\sigma^2 \\leq \\frac{(n-1)s^2}{\\chi^2_{1-\\alpha/2, n-1}}",
+      "aplicacion_administrativa": "En control de calidad, este intervalo puede usarse para estimar la variabilidad en los tiempos de ciclo de producción, lo que ayuda en la identificación de procesos inestables.",
+      "fuente_principal": "Wackerly et al., 2010",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "Grados de libertad en estimación",
+      "definicion_rigurosa": "Los grados de libertad en estimación se refieren al número de valores en los cálculos estadísticos que son libres de variar. En la construcción de intervalos de confianza, los grados de libertad afectan la forma de la distribución utilizada.",
+      "formulacion_matematica_latex": "df = n - 1",
+      "aplicacion_administrativa": "En finanzas, los grados de libertad son cruciales para la precisión de los intervalos de confianza en la estimación de riesgos de portafolio.",
+      "fuente_principal": "Wackerly et al., 2010",
+      "localizador": "bloque 2"
+    },
+    {
+      "concepto": "Nivel de confianza y riesgo alfa",
+      "definicion_rigurosa": "El nivel de confianza es la probabilidad de que el intervalo de confianza contenga el parámetro poblacional. El riesgo alfa (nivel de significancia) es la probabilidad de cometer un error tipo I, es decir, rechazar una hipótesis nula verdadera.",
+      "formulacion_matematica_latex": "1 - \\alpha",
+      "aplicacion_administrativa": "En estrategia empresarial, el nivel de confianza y el riesgo alfa guían las decisiones sobre lanzamiento de nuevos productos, considerando el equilibrio entre precisión y riesgo.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "Precisión y amplitud del intervalo",
+      "definicion_rigurosa": "La precisión de un intervalo de confianza se refiere a la proximidad del intervalo al valor real del parámetro. La amplitud del intervalo es la diferencia entre los límites superior e inferior del intervalo.",
+      "formulacion_matematica_latex": "Amplitud = Límite superior - Límite inferior",
+      "aplicacion_administrativa": "En logística, la precisión y amplitud del intervalo de confianza para el tiempo de entrega pueden influir en la planificación de inventarios y la satisfacción del cliente.",
+      "fuente_principal": "Levin, 2010",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "Aplicaciones de estimación en finanzas y operaciones",
+      "definicion_rigurosa": "Las aplicaciones de estimación en finanzas y operaciones incluyen la predicción de rendimientos de inversiones, la optimización de procesos y la gestión de riesgos. Los intervalos de confianza proporcionan una medida de la incertidumbre asociada con estas estimaciones.",
+      "formulacion_matematica_latex": "No aplicable",
+      "aplicacion_administrativa": "En finanzas, los intervalos de confianza para los rendimientos esperados ayudan a los inversores a tomar decisiones informadas. En operaciones, los intervalos de confianza para los tiempos de ciclo mejoran la eficiencia del proceso.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 1"
+    }
+  ]
+}

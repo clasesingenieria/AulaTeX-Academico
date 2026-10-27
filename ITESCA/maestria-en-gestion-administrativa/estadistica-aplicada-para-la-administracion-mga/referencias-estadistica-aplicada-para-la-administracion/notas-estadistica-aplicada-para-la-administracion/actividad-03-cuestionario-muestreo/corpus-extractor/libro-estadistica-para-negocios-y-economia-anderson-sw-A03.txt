@@ -1,0 +1,466 @@
+Fuente bibliográfica: Estadística para negocios y economía - Anderson, Sweeney y Williams. 11.ª edición.pdf
+Actividad: 3 (1.3 Cuestionario 5 %)
+Palabras clave: parámetro, estadístico, estratificado, sistemático, conglomerados, cuotas, bola de nieve, error muestral
+
+[Bloque seleccionado #53 | relevancia=9]
+Pagina 52
+18 
+Capítulo 1  Datos y estadística
+integración creativa de todos estos métodos y tecnologías de las ciencias de la computación 
+que involucran la inteligencia artificial y el aprendizaje de máquinas para hacerla eficiente. Se 
+requiere una inversión significativa en tiempo y dinero para implementar software de minería 
+de datos comercial desarrollado por empresas como Oracle, Teradata y SAS. Los conceptos 
+estadísticos introducidos en este libro serán útiles en la comprensión de la metodología esta-
+dística empleada por el software de minería de datos y le permitirán una mejor comprensión de 
+la información estadística desarrollada.
+Dado que los modelos estadísticos juegan un papel importante en el desarrollo de mode-
+los predictivos en la minería de datos, muchas de las preocupaciones que inquietan a los exper-
+tos en el desarrollo de modelos estadísticos también son aplicables. Por ejemplo, una inquietud 
+en cualquier estudio estadístico se relaciona con el problema de la confiabilidad del modelo. 
+Encontrar uno que funcione bien para una muestra de datos en particular no necesariamente 
+significa que pueda aplicarse de manera confiable a otros datos. Uno de los enfoques estadís-
+ticos comunes para la evaluación de la confiabilidad del modelo es dividir el banco de datos 
+muestral en dos partes: un banco de datos de entrenamiento y un banco de datos de prueba. Si 
+el modelo desarrollado usando los datos de entrenamiento puede predecir de manera precisa 
+valores en los datos de prueba, decimos que es confiable. Una ventaja que la minería de datos 
+tiene sobre la estadística clásica reside en que la enorme cantidad de datos disponible permite 
+al software de minería de datos la partición del banco de datos, de modo que un modelo desa-
+rrollado para el banco de datos de entrenamiento pueda probarse para la confiabilidad de otros 
+datos. En este sentido, la partición del banco de datos permite que la minería de datos desarrolle 
+modelos y relaciones y luego observe de manera rápida si son repetibles y válidos con datos 
+nuevos y diferentes. Por otra parte, una advertencia para las aplicaciones de minería de datos es 
+que, con tantos datos disponibles, existe el peligro de sobreajuste (overfitting) del modelo al 
+punto de que las asociaciones equivocadas y las conclusiones de causa y efecto parecen existir. 
+La interpretación cuidadosa de la minería de datos se produce, y pruebas adicionales ayudarán 
+a evitar esta dificultad.
+1.8 
+Lineamientos éticos para la práctica estadística
+El comportamiento ético es algo por lo que debemos luchar en todo l
+
+[Bloque seleccionado #330 | relevancia=25]
+Pagina 329
+ 
+7.7  Propiedades de los estimadores puntuales 
+295
+7.7 
+Propiedades de los estimadores puntuales
+En este capítulo se ha explicado que los estadísticos muestrales, como la media muestral x, la 
+desviación estándar muestral s y la proporción muestral p sirven como estimadores puntua-
+les de sus correspondientes parámetros poblacionales, μ, σ y p. Resulta interesante advertir 
+que cada uno de estos estadísticos muestrales sean los estimadores puntuales de sus corres-
+pondientes parámetros poblacionales. Sin embargo, antes de usar un estadístico muestral como 
+estimador puntual, se veriﬁ ca si éste tiene ciertas propiedades que corresponden a un buen es-
+timador puntual. En esta sección se estudian las propiedades que deben tener los buenos estima-
+dores puntuales: insesgadez, eﬁ ciencia y consistencia.
+Como hay distintos estadísticos muestrales que se utilizan como estimadores puntuales de 
+sus diferentes parámetros poblacionales, en esta sección se usará la notación general siguiente.
+θ  parámetro poblacional de interés
+θˆ  estadístico muestral o estimador puntual de θ
+En esta notación, θ es la letra griega theta y la notación θˆ se lee “theta sombrero”. En general, 
+θ representa cualquier parámetro poblacional como, por ejemplo, la media poblacional, la des-
+viación estándar poblacional, la proporción poblacional, etc., y θˆ representa el correspondiente 
+estadístico muestral, por ejemplo, la media muestral, la desviación estándar muestral y la pro-
+porción muestral.
+Insesgadez
+Si el valor esperado del estadístico muestral es igual al parámetro poblacional que se estima, se 
+dice que el estadístico muestral es un estimador insesgado del parámetro poblacional.
+INSESGADEZ
+El estadístico muestral θˆ es un estimador insesgado del parámetro poblacional θ si
+ 
+E(θˆ)  θ 
+donde
+E(θˆ)  valor esperado del estadístico muestral θˆ
+Por tanto, el valor esperado, o media, de todos los posibles valores de un estadístico mues-
+tral insesgado es igual al parámetro poblacional que se está estimando.
+En la ﬁ gura 7.10 se exponen los casos de los estimadores puntuales sesgado e insesgado. 
+En la gráﬁ ca que ilustra el estimador insesgado, la media de la distribución de muestreo es igual 
+al valor del parámetro poblacional. En este caso los errores de estimación se equilibran, ya 
+que algunas veces el valor del estimador puntual θˆ puede ser menor que θ y otras veces es ma-
+yor que θ. En el estimador sesgado, la media de la distribución de muestreo es menor o mayor 
+que el valor del parámetro poblacional. En la gráﬁ ca B de la ﬁ gura 7.10, E(θˆ) es mayor que 
+
+
+[Bloque seleccionado #332 | relevancia=8]
+Pagina 331
+ 
+7.8  Otros métodos de muestreo 
+297
+tanto, los valores de θˆ1 tienen más posibilidades de estar cerca del parámetro θˆ que los valores 
+de θˆ2. Como el error estándar del estimador puntual θˆ1 es menor que el del estimador puntual 
+θˆ2, θˆ1 es relativamente más eﬁ ciente que θˆ2 y se preﬁ ere como estimador puntual.
+Consistencia
+La tercera propiedad relacionada con un buen estimador puntual es la consistencia. Dicho de 
+manera sencilla, un estimador puntual es consistente si su valor tiende a estar más cerca del 
+parámetro poblacional a medida que el tamaño de la muestra aumenta. En otras palabras, una 
+muestra grande tiende a proporcionar mejor estimación puntual que una pequeña. Observe 
+que en el caso de la media muestral x, el error estándar de x está dado por σx  σn. Pues-
+to que σx está vinculado con el tamaño de la muestra, de manera que muestras mayores dan 
+valores menores de σx, entonces las de tamaño grande tienden a proporcionar estimadores pun-
+tuales más cercanos a la media de la población μ. Mediante un razonamiento similar, también 
+se puede concluir que la proporción muestral p es un estimador consistente de la proporción 
+poblacional p.
+Cuando se muestrean 
+poblaciones normales, 
+el error estándar de la 
+media muestral es menor 
+que el error estándar de 
+la mediana muestral. Por 
+tanto, la media muestral 
+es más eficiente que la 
+mediana muestral.
+NOTAS Y COMENTARIOS
+En el capítulo 3 se dijo que la media y la mediana 
+son dos medidas de localización central. En este capí-
+tulo sólo se estudió la media debido a que cuando se 
+muestrea una población normal, en la cual la media 
+y la mediana poblacionales son idénticas, el error es-
+tándar de la mediana es aproximadamente 25% ma-
+yor que el error estándar de la media. Recuerde que 
+en el problema de EAI, con n  30, el error estándar 
+de la media fue σx  730.3, mientras que el de la me-
+diana en este problema sería 1.25  (730.3)  913. 
+Por tanto, la media muestral es más eficiente y tendrá 
+más probabilidad de estar dentro de una determinada 
+distancia de la media poblacional.
+7.8 
+Otros métodos de muestreo
+Se describió el muestreo aleatorio simple como un procedimiento de muestreo de una pobla-
+ción ﬁ nita y se estudiaron las propiedades de las distribuciones de muestreo de x y de p cuando 
+se usó el muestreo aleatorio simple. Sin embargo, no es el único método de muestreo que existe. 
+Hay otros, como el muestro aleatorio estratiﬁ cado, el muestreo por conglomerados y el mues-
+treo sistemático que, en ciertas situaciones, tienen ventajas sobre el aleatorio simple. En es
+
+[Bloque seleccionado #333 | relevancia=14]
+Pagina 332
+298 
+Capítulo 7  Muestreo y distribuciones de muestreo
+un estrato son parecidos, éste tendrá una varianza pequeña. Por tanto, con muestras relativa-
+mente pequeñas de los estratos se obtienen buenas estimaciones de sus características. Si éstos 
+son homogéneos, el muestreo aleatorio estratiﬁ cado proporciona resultados tan precisos como 
+los de un muestreo aleatorio simple, pero con una muestra de tamaño total menor.
+Muestreo por conglomerados
+En el muestreo por conglomerados (o clusters) los elementos de la población primero se 
+dividen en grupos separados, llamados conglomerados o clusters. Cada elemento pertenece a 
+uno y sólo un conglomerado (vea la ﬁ gura 7.13). Se toma una muestra aleatoria simple de los 
+conglomerados. Todos los elementos en cada conglomerado muestreado forman la muestra. 
+Este muestreo tiende a proporcionar mejores resultados cuando los elementos dentro de los 
+conglomerados no son semejantes. Lo ideal es que cada conglomerado sea una representación, 
+a pequeña escala, de la población completa. Si todos son semejantes en este aspecto, tomando 
+en la muestra un número pequeño de conglomerados, se obtendrá una buena estimación de los 
+parámetros poblacionales.
+Una de las principales aplicaciones del muestro por conglomerados es el muestreo de áreas, 
+en el que los conglomerados son las manzanas de una ciudad u otras zonas bien deﬁ nidas. Por 
+lo general, precisa tamaños de muestra mayores que los requeridos en el muestreo aleatorio 
+simple o en el muestreo aleatorio estratiﬁ cado. Sin embargo, permite reducir costos debido a 
+que cuando se envía a un entrevistador a uno de los conglomerados de la muestra (por ejemplo, 
+a una manzana de una ciudad), puede obtener muchas observaciones en poco tiempo. Por tan-
+to, provee una muestra de tamaño grande a un costo signiﬁ cantemente menor.
+Muestreo sistemático
+Para ciertos muestreos, en especial en aquellos con poblaciones grandes, se necesita mucho 
+tiempo para tomar una muestra aleatoria simple, pues se requiere determinar primero los nú-
+FIGURA 7.12  Diagrama de un muestreo aleatorio estratificado
+.  .  .
+Población
+Estrato 2
+Estrato 1
+Estrato H
+FIGURA 7.13  Diagrama del muestreo por conglomerados
+.  .  .
+Población
+Conglomerado 2
+Conglomerado 1
+Conglomerado K
+El muestreo por 
+conglomerados o clusters 
+funciona mejor cuando cada 
+conglomerado proporciona 
+una representación a menor 
+escala de la población.
+
+[Bloque seleccionado #335 | relevancia=16]
+Pagina 334
+300 
+Capítulo 7  Muestreo y distribuciones de muestreo
+Cuando se realizan muestreos de poblaciones finitas, 
+se recomienda usar métodos de muestreo probabilís-
+tico: muestreo aleatorio simple, muestreo aleatorio es-
+tratificado, muestreo por conglomerados o muestreo 
+sistemático. Existen fórmulas para evaluar la “bon-
+dad” de los resultados muestrales basadas en el uso 
+de estos métodos en términos de la cercanía de los 
+NOTAS Y COMENTARIOS
+resultados a los parámetros poblacionales que se es-
+timan. Con los muestreos de conveniencia o con los 
+subjetivos no se puede estimar la bondad de los resul-
+tados. Por tanto, debe tenerse mucho cuidado al in-
+terpretar resultados basados en métodos de muestreo 
+no probabilístico.
+Resumen
+En este capítulo se presentaron los conceptos de muestreo aleatorio simple y distribución de 
+muestreo. Se describió cómo seleccionar una muestra aleatoria simple de una población ﬁ nita 
+y una muestra aleatoria de una población inﬁ nita. Los datos recolectados de tales muestras se 
+pueden utilizar para obtener estimadores puntuales de los parámetros poblacionales. Ya que dis-
+tintas muestras proporcionan valores diferentes de los estimadores puntuales, los estimadores 
+puntuales como x y p son variables aleatorias. A la distribución de probabilidad de una varia-
+ble aleatoria de este tipo se le conoce como distribución de muestreo. En particular, se descri-
+bieron las distribuciones de muestreo de la media muestral x y de la proporción muestral p.
+Al estudiar las características de las distribuciones de muestreo de x y de p, se estableció 
+que E(x)  μ y que E(p )  p. Después de proporcionar las fórmulas para la desviación están-
+dar o error estándar de dichos estimadores, se describieron las condiciones necesarias para que 
+las distribuciones de muestreo de x y de p sigan una distribución normal. Otros métodos de 
+muestreo que también se abordaron son el muestreo aleatorio estratiﬁ cado, por conglomerados 
+o clusters, sistemático, por conveniencia y subjetivo.
+Glosario
+Consistencia Propiedad de un estimador puntual que se hace presente siempre que muestras 
+más grandes tienden a proporcionar estimaciones puntuales más cercanas al parámetro pobla-
+cional.
+Distribución de muestreo o muestral Distribución de probabilidad que consta de todos los 
+posibles valores de un estadístico muestral.
+Eficiencia relativa Dados dos estimadores puntuales insesgados de un mismo parámetro po-
+blacional, el estimador puntual con menor error estándar será más eﬁ ciente.
+Error estándar Desviación estándar de un estimador puntual.
+Estadísti
+
+[Bloque seleccionado #395 | relevancia=8]
+Pagina 394
+360 
+Capítulo 9  Pruebas de hipótesis
+suﬁ cientemente pequeño como para que H0 sea rechazada? La respuesta depende del nivel de 
+signiﬁ cancia de la prueba.
+Como se indicó antes, el director del programa de pruebas de la FTC eligió como nivel de 
+signiﬁ cancia un valor de 0.01. Seleccionar α  0.01 signiﬁ ca que él está dispuesto a tolerar 
+una probabilidad de 0.01 para rechazar la hipótesis nula cuando sea verdadera como igualdad 
+(μ0  3). La muestra de 36 latas de Hilltop Coffee dio como resultado un valor-p  0.0038, lo 
+cual signiﬁ ca que la probabilidad de obtener x  2.92 o menor, si la hipótesis nula considera-
+da como igualdad es verdadera, es 0.0038. Como 0.0038 es menor o igual que α  0.01, H0 es 
+rechazada. De manera que para el nivel de signiﬁ cancia 0.01 se encontró evidencia estadística 
+suﬁ ciente para rechazar la hipótesis nula.
+Ahora se puede establecer ya la regla general para determinar cuándo rechazar la hipóte-
+sis nula al usar el método del valor-p. Dado un nivel de signiﬁ cancia α, la regla para el rechazo 
+utilizando el método del valor-p es la siguiente.
+REGLA PARA EL RECHAZO USANDO EL VALOR-p
+Rechazar H0 si el valor-p  α
+En la prueba para Hilltop Coffee, el valor-p de 0.0038 llevó a que la hipótesis nula fuera 
+rechazada. Aunque la base para tomar la decisión del rechazo fue comparar el valor-p con el 
+nivel de signiﬁ cancia especiﬁ cado por el director de la FTC, el valor-p observado de 0.0038 
+indica que H0 hubiera sido rechazada para cualquier valor de α  0.0038. Debido a esto, el 
+valor-p se conoce también como nivel de signiﬁ cancia observado.
+Quienes toman decisiones pueden expresar opiniones distintas respecto del costo de come-
+ter un error tipo I y elegir niveles de signiﬁ cancia distintos. Al proporcionar el valor-p como 
+parte de los resultados de la prueba de hipótesis, alguien que toma decisiones puede comparar 
+el valor-p con su propio nivel de signiﬁ cancia y posiblemente tome otra decisión respecto de 
+rechazar o no H0.
+Método del valor crítico En este método primero se determina un valor para el estadís-
+tico de prueba llamado valor crítico. En una prueba de cola inferior éste sirve como punto de 
+referencia para determinar si el valor del estadístico de prueba es lo suﬁ cientemente pequeño 
+para rechazar la hipótesis nula. El valor crítico es el valor del estadístico de prueba que corres-
+ponde a un área de α (nivel de signiﬁ cancia) en la cola inferior de la distribución de muestreo 
+del estadístico. En otras palabras, es el mayor valor del estadístico de prueba que hará que se 
+rechace la hipót
+
+[Bloque seleccionado #426 | relevancia=9]
+Pagina 425
+ 
+Resumen 
+391
+58. 
+La revista Young Adult plantea la hipótesis siguiente acerca de la edad de sus suscriptores.
+H0: μ  28
+Ha: μ  28
+ 
+Si el gerente que realiza la prueba admite una probabilidad de 0.15 de cometer un error tipo II 
+cuando la verdadera edad promedio es 29 años, ¿de qué tamaño debe tomarse la muestra? Su-
+ponga que σ  6 y que el nivel de significancia es 0.05.
+59. 
+En un estudio sobre el rendimiento de la gasolina en los automóviles, medido como millas por 
+galón, se probaron las hipótesis siguientes.
+Hipótesis 
+Conclusión
+H0: μ  25 mpg 
+Confirma lo que sostiene el fabricante
+Ha: μ  25 mpg 
+ Refuta lo que sostiene el fabricante; el rendimiento 
+ 
+es menor de lo afirmado
+ 
+Para σ  3 y un nivel de significancia de 0.02, ¿qué tamaño de muestra se recomienda si el 
+investigador desea tener 80% de probabilidad de detectar que μ es menor que 25 millas por 
+galón cuando en realidad es 24?
+Resumen
+Las pruebas de hipótesis constituyen un procedimiento estadístico que utiliza datos muestrales 
+para determinar si una aﬁ rmación acerca del valor de un parámetro poblacional debe o no re-
+chazarse. Como hipótesis se tienen dos aﬁ rmaciones opuestas acerca de un parámetro pobla-
+cional. A una se le llama hipótesis nula (H0) y a la otra hipótesis alternativa (Ha). En la sección 
+9.1 se proporcionaron los lineamientos para elaborar estas hipótesis en tres situaciones encon-
+tradas a menudo en la práctica.
+Si se tienen datos históricos o alguna otra información que proporcione una base para supo-
+ner que se conoce la desviación estándar poblacional, el procedimiento de prueba de hipótesis 
+para la media poblacional se sustenta en la distribución normal estándar. Si no se conoce σ, se 
+usa la desviación estándar muestral s para estimarlo, y el procedimiento de la prueba de hipóte-
+sis se basa en la distribución t. En ambos casos, la calidad de los resultados depende tanto de la 
+forma de la distribución de la población como del tamaño de la muestra. Si la población tiene 
+distribución normal, los dos procedimientos para la prueba de hipótesis son aplicables, aun con 
+tamaños de muestra pequeños. Si la población no está distribuida normalmente, se necesitan ta-
+maños de muestra mayores. En las secciones 9.3 y 9.4 se proporcionaron los lineamientos ge-
+nerales para determinar este tamaño. En el caso de pruebas de hipótesis para la proporción 
+poblacional, en el procedimiento de la prueba de hipótesis se usa un estadístico de prueba sus-
+tentado en la distribución normal estándar.
+En todos los casos el valor del estadístico de prueba se utiliza
+
+[Bloque seleccionado #427 | relevancia=12]
+Pagina 426
+392 
+Capítulo 9  Pruebas de hipótesis
+Glosario
+Curva de potencia Gráﬁ ca que da la probabilidad de rechazar H0 para cada uno de los posi-
+bles valores del parámetro poblacional que no satisfaga la hipótesis nula. La curva de potencia 
+proporciona las probabilidades de rechazar correctamente la hipótesis nula.
+Error tipo I Error de rechazar H0 cuando es verdadera.
+Error tipo II Error de aceptar H0 cuando es falsa.
+Estadístico de prueba Un estadístico cuyo valor ayuda a determinar si la hipótesis nula es 
+rechazada.
+Hipótesis alternativa Hipótesis que se concluye como verdadera cuando la hipótesis nula es 
+rechazada.
+Hipótesis nula Hipótesis que se supone tentativamente verdadera en una prueba de hipótesis.
+Nivel de significancia Probabilidad de cometer un error tipo I cuando la hipótesis nula es 
+verdadera como igualdad.
+Potencia Probabilidad de rechazar adecuadamente H0 cuando ésta es falsa.
+Prueba de dos colas Prueba de hipótesis en la que la hipótesis nula es rechazada debido a un 
+valor del estadístico de prueba que se encuentra en cualquiera de las dos colas de la distribución 
+muestral.
+Prueba de una cola Prueba de hipótesis en la que la hipótesis nula es rechazada para valores 
+del estadístico de prueba en una de las colas de la distribución de muestreo.
+Valor crítico Valor que se compara con el estadístico de prueba para determinar si H0 es 
+rechazada.
+Valor-p Probabilidad que proporciona una medida de la evidencia, dada por la muestra, con-
+tra la hipótesis nula. Entre menor sea un valor-p, mayor será la evidencia contra H0. En una 
+prueba de cola inferior, el valor-p es la probabilidad de obtener un valor para el estadístico 
+de prueba tan pequeño o menor que el aportado por la muestra. En una prueba de cola superior, 
+el valor-p es la probabilidad de obtener un valor para el estadístico de prueba tan grande o 
+mayor que el proporcionado por la muestra. En una prueba de dos colas, el valor-p es la pro-
+babilidad de obtener un valor para el estadístico de prueba tan poco probable, o aun menos 
+probable, que el aportado por la muestra.
+Fórmulas clave
+Estadístico de prueba en las pruebas de hipótesis para la media poblacional:
+σ conocida
+ 
+z  x  μ0
+σn 
+(9.1)
+Estadístico de prueba en las pruebas de hipótesis para la media poblacional: 
+σ desconocida
+ 
+t  x  μ0
+sn 
+(9.2)
+Estadístico de prueba en las pruebas de hipótesis para la proporción poblacional
+ 
+z  
+p0(1  p0)
+n
+p  p0
+ 
+(9.4)
+Tamaño de la muestra en una prueba de hipótesis de una cola para la media poblacional
+ 
+n  (zα  z)2σ2
+(μ0  μa)2 
+(9.7)
+En una prueba de dos colas
+
+[Bloque seleccionado #765 | relevancia=9]
+Pagina 764
+730 
+Capítulo 16  Análisis de regresión: construcción de modelos
+El resultado es una medida de la disminución de la SCE por la variable independiente añadida 
+al modelo. El denominador del estadístico F es el cuadrado medio debido al error para el mo-
+delo que incluye todas las variables independientes. Para Butler Trucking esto corresponde al 
+modelo que contiene tanto x1 como x2, por lo que p  2 y
+CME  
+SCE(x1, x2)
+n  p  1  2.299
+7
+  0.3284
+El siguiente estadístico F proporciona las bases para comprobar si la suma de x2 es estadística-
+mente signiﬁ cativa.
+ 
+F  
+SCE(x1)  SCE(x1, x2)
+1
+SCE(x1, x2)
+n  p  1
+ 
+(16.10)
+El número de grados de libertad del numerador para esta prueba F es igual al número de va-
+riables añadidas al modelo, y los grados de libertad en el denominador es igual a n  p  1.
+Para el problema de Butler Trucking obtenemos
+F  
+5.730
+1
+2.299
+7
+  5.730
+0.3284  17.45
+Consulte la tabla 4 del apéndice B. Se determina que para un nivel de signiﬁ cancia de α  
+0.05, F0.05  5.59. Debido a que F  17.45  F0.05  5.59, la hipótesis nula de que x2 no es 
+estadísticamente signiﬁ cativa puede ser rechazada; en otras palabras, al agregar x2 al modelo 
+en el que sólo se tiene x1 se obtiene una reducción signiﬁ cativa en la suma de cuadrados debido 
+al error.
+Cuando se desea probar la signiﬁ cancia agregando sólo una variable independiente al mo-
+delo, el resultado con la prueba F que se acaba de describir también se puede obtener mediante 
+la prueba t para la signiﬁ cancia de uno de sus parámetros (el cual se describe en la sección 15.4). 
+De hecho, el estadístico F calculado es el cuadrado del estadístico t que se utiliza para probar la 
+signiﬁ cancia de un solo parámetro. 
+Debido a que la prueba t es equivalente a la prueba F cuando sólo una variable indepen-
+diente se añade al modelo, ahora se puede aclarar aún más el uso correcto de la prueba t para 
+probar la signiﬁ cancia de un solo parámetro. Si uno de los parámetros no es signiﬁ cativo, la va-
+riable correspondiente puede eliminarse del modelo. Sin embargo, si la prueba t muestra que 
+hay dos o más parámetros que no son signiﬁ cativos, nunca se puede eliminar más de una varia-
+ble independiente del modelo con base en esta prueba; si una variable es eliminada, una segun-
+da variable que inicialmente no era signiﬁ cativa se vuelve signiﬁ cativa.
+Ahora cabe considerar si la adición de más de una variable independiente, como un con-
+junto, da como resultado una reducción signiﬁ cativa de la suma de cuadrados debido al error.
+Caso general
+Considere el siguiente modelo de
+
+[Bloque seleccionado #1102 | relevancia=10]
+Pagina 1101
+Apéndice F   Cálculo de los valores-p 
+utilizando Minitab y Excel
+Aquí se describe cómo se pueden utilizar Minitab y Excel para calcular los valores-p de los 
+estadísticos z, t,  2 y F que se manejan en las pruebas de hipótesis. Como se analiza en el texto, 
+los valores-p aproximados correspondientes a los estadísticos t,  2 y F sólo se pueden obtener 
+mediante el uso de tablas. Este apéndice es útil para una persona que ha calculado manualmente 
+estadísticos de prueba, o por otros medios, y desea utilizar software para calcular el valor-p 
+exacto. 
+Usando Minitab
+Minitab puede utilizarse para proporcionar la probabilidad acumulada relacionada con z, t,  2 y 
+el estadístico de prueba F. Así que el valor-p en la cola inferior se obtiene directamente, mientras 
+que en la cola superior se calcula restando 1 del valor-p de la cola inferior. El valor-p en las dos 
+colas se obtiene duplicando el menor de los valores-p de las colas superior e inferior.
+Estadístico de prueba z En la sección 9.3 se utiliza como ejemplo la cola menor de la 
+hipótesis de prueba del Café Hilltop; el valor del estadístico de prueba es z  2.67. Los pasos 
+de Minitab utilizados para calcular la probabilidad acumulada correspondiente a z  2.67 son 
+los siguientes.
+Paso 1. Seleccione el menú Calc.
+Paso 2. Elija Probability Distributions.
+Paso 3. Selecciona Normal.
+Paso 4. Cuando el cuadro de diálogo Normal Distribution aparezca:
+Seleccione Cumulative probability.
+Ingrese 0 en el apartado Mean.
+Ingrese 1 en el apartado Standard deviation.
+Seleccione Input Constant.
+Ingrese 2.67 en el apartado Input Constant.
+Haga clic en OK.
+Minitab proporcionará la probabilidad acumulada de 0.0038. Ésta es el valor-p para la cola 
+inferior que se utilizó en la prueba de hipótesis de Hilltop Coffee.
+Para una prueba de cola superior, el valor-p se calcula a partir de la probabilidad acumulada 
+obtenida por Minitab como sigue.
+El valor-p  1  probabilidad acumulada
+Por ejemplo, el valor-p en la cola superior correspondiente a un estadístico de prueba de z  
+2.67 es 1  0.0038  0.9962, y para las dos colas correspondiente a un estadístico de prueba 
+de z  2.67 es el doble del mínimo de los valores-p de las colas inferior y superior; es decir, 
+el valor-p para las dos colas correspondiente a z  2.67 es 2(.0038)  0.0076. 
+Estadístico de prueba t El ejemplo del aeropuerto Heathrow de la sección 9.4 se utiliza 
+para ilustrar esta prueba; el valor del estadístico de prueba es t  1.84 con 59 grados de liber-
+tad. Los pasos de Minitab utilizados para calcular la probabilidad acumulada 

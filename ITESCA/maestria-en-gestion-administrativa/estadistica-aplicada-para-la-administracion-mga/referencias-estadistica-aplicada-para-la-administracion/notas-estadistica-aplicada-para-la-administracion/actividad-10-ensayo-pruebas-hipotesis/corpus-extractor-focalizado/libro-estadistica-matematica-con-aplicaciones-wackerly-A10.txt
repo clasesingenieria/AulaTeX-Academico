@@ -1,0 +1,516 @@
+Fuente bibliográfica: Estadística matemática con aplicaciones - Wackerly, Mendenhall y Scheaffer. 7.ª edición.pdf
+Actividad: 10 (4.1 Ensayo 2% Tarea)
+Palabras clave: hipótesis nula, hipótesis alternativa, error tipo I, error tipo II, nivel de significancia, p-valor, potencia, dos muestras
+
+[Bloque seleccionado #515 | relevancia=32]
+Pagina 514
+490  Capítulo 10  Prueba de hipótesis
+podemos demostrar que los datos apoyan el rechazo de la hipótesis nula p = .5 (el valor mí-
+nimo necesario para una conseguir una mayoría) en favor de la hipótesis alternativa p < .5, 
+hemos alcanzado nuestro objetivo de investigación. Aun cuando es común hablar de probar 
+una hipótesis nula, el objetivo de investigación suele ser demostrar apoyo para la hipótesis 
+alternativa, si dicho apoyo se justifi ca.
+¿Cómo usamos esos datos para decidir entre la hipótesis nula y la hipótesis alternativa? 
+Suponga que n = 15 votantes se seleccionan aleatoriamente de una ciudad y se registra Y, el 
+número que está a favor de Jones. Si nadie en la muestra está a favor de Jones (Y = 0), ¿qué 
+se concluiría acerca de lo dicho por Jones? Si Jones en realidad es favorecido por más de 50% 
+del electorado, no es imposible observar que Y = 0 están a favor de Jones en una muestra 
+de tamaño n = 15, pero es altamente improbable. Es mucho más probable que observemos 
+Y = 0 si la hipótesis alternativa fuera cierta. Entonces, rechazaríamos la hipótesis nula (p = .5 
+a favor de la hipótesis alternativa (p < .5). Si observamos Y = 1 (o cualquier valor pequeño 
+de Y), un razonamiento análogo nos lleva a la misma conclusión.
+Cualquier prueba de hipótesis estadística funciona exactamente de la misma forma y está 
+compuesta de los mismos elementos esenciales.
+ 
+ 
+Los elementos de una prueba estadística
+ 
+ 
+1. Hipótesis nula, H0
+ 
+ 
+2. Hipótesis alternativa, Ha
+ 
+ 
+3. Estadístico de prueba
+ 
+ 
+4. Región de rechazo
+Para nuestro ejemplo, la hipótesis a ser probada, llamada hipótesis nula y denotada por H0, 
+es p = .5. La hipótesis alternativa (o investigación), denotada como Ha, es la hipótesis a ser 
+aceptada en caso que H0 sea rechazada. Por lo general la hipótesis alternativa es la que quere-
+mos comprobar con base en la información contenida en la muestra; así, en nuestro ejemplo, 
+Ha es p < .5.
+Las partes esenciales de una prueba estadística son el estadístico de prueba y una región de 
+rechazo asociada. El estadístico de prueba (al igual que un estimador) es una función de las me-
+diciones muestrales (Y en nuestro ejemplo) en las que la decisión estadística estará basada. La 
+región de rechazo, que de aquí en adelante estará denotada por RR, especifi ca los valores del 
+estadístico de prueba para el cual la hipótesis nula ha de ser rechazada a favor de la hipótesis 
+alternativa. Si, para una muestra particular, el valor calculado del estadístico de prueba cae en 
+la región de rechazo RR, rechazamos la hipótesis nula H0 y aceptamos la
+
+[Bloque seleccionado #516 | relevancia=22]
+Pagina 515
+10.2  Elementos de una prueba estadística  491
+criterios objetivos para decidir cuál valor de k especifi ca una buena región de rechazo de la 
+forma {y ≤ k}.
+Para cualquier región de rechazo fi ja (determinada por un valor particular de k), dos tipos 
+de errores se pueden cometer al llegar a una decisión. Podemos decidir a favor de Ha cuando 
+H0 es verdadera (error tipo I), o podemos decidir a favor de H0 cuando Ha es verdadera (error 
+tipo II).
+ DEFINICIÓN 10.1 
+Se comete un error tipo I si H0 es rechazada cuando H0 es verdadera. La probabilidad 
+de un error tipo I está denotada por a. El valor de a se denomina nivel de la prueba.
+ 
+ 
+ Se comete un error tipo II si H0 es aceptada cuando Ha es verdadera. La probabilidad 
+de un error tipo II está denotada por b.
+Para la encuesta política de Jones, cometer un error tipo I, es decir rechazar H0 : p = .5 (y 
+por tanto aceptar Ha : p < .5) cuando de hecho H0 es verdadera, signifi ca concluir que Jones 
+perderá cuando en realidad va a ganar. En contraste, cometer un error tipo II signifi ca aceptar 
+H0 : p = .5 cuando p < .5 y concluir que Jones ganará cuando en realidad va a perder. Para 
+casi todas las situaciones reales, las decisiones incorrectas cuestan dinero, prestigio o tiempo e 
+implican una pérdida. Entonces, a y b, las probabilidades de cometer estos dos tipos de error, 
+miden los riesgos relacionados con las dos posibles decisiones erróneas que podrían resultar 
+de una prueba estadística. Como tales, proporcionan una forma muy práctica de medir la 
+bondad de una prueba.
+ 
+EJEMPLO 10.1 
+Para la encuesta política de Jones se muestrearon n = 15 votantes. Deseamos probar 
+H0 : p = .5 contra la alternativa, Ha : p < .5. El estadístico de prueba es Y, el número de votan-
+tes muestreados a favor de Jones. Calcule a si seleccionamos RR = {y ≤ 2} como la región 
+de rechazo.
+ 
+Solución 
+Por defi nición,
+ 
+a = P (error tipo I) = P (rechazar H0 cuando H0 es verdadera)
+ 
+= P (valor del estadístico de prueba está en RR cuando H0 es verdadera)
+ 
+= P (Y ≤ 2 cuando p = .5).
+Observe que Y es una variable aleatoria binomial con n = 15. Si H0 es verdadera, p = .5 y 
+obtenemos
+a =
+2
+y=0
+15
+y
+(.5)y(.5)15−y =
+15
+0
+(.5)15 +
+15
+1
+(.5)15 +
+15
+2
+(.5)15.
+F I G U R A 10.1
+Región de rechazo, 
+RR = {y ≤ k}, para 
+una prueba de la 
+hipótesis H0: p = .5 
+contra la alternativa 
+Ha: p < .5
+0
+1
+2
+11
+12
+13
+14
+15
+k
+(k + 1)
+y: Número de votantes que están a favor de Jones
+~~
+~~
+Región de 
+rechazo, RR
+
+[Bloque seleccionado #519 | relevancia=18]
+Pagina 518
+494  Capítulo 10  Prueba de hipótesis
+los riesgos de cometer errores tipo I y tipo II, aunque a como b siguen siendo todavía muy 
+grandes. ¿Cómo podemos reducirlas? La respuesta es clara y lógica: debemos obtener más 
+información sobre la verdadera naturaleza de la población al aumentar el tamaño muestral. 
+Para casi todas las pruebas estadísticas, si a está fi ja en algún valor aceptablemente pequeño, 
+b disminuye cuando el tamaño muestral aumenta. 
+Q
+En esta sección hemos defi nido los elementos esenciales de cualquier prueba estadística. 
+Hemos visto que se pueden cometer dos posibles tipos de error al probar una hipótesis: los 
+errores tipo I y tipo II. Las probabilidades de cometer estos errores sirven como criterios para 
+evaluar un procedimiento de prueba. En las siguientes secciones usaremos las distribuciones 
+muestrales que obtuvimos en el Capítulo 7 para desarrollar métodos que permitan probar hi-
+pótesis relacionadas con parámetros de frecuente interés práctico.
+Ejercicios
+ 
+10.1 
+Defi na a y b para una prueba estadística de hipótesis.
+ 
+10.2 
+Un investigador ha preparado un nivel de dosis de droga que según él, inducirá el sueño en 80% de las 
+personas que sufren de insomnio. Después de examinar la dosis, pensamos que lo dicho por él respecto 
+a la efectividad de la dosis es exagerado. En un intento por refutar su dicho, administramos la dosis pres-
+crita a 20 personas que padecen de insomnio y observamos Y, el número de individuos a quienes la dosis 
+induce el sueño. Deseamos probar la hipótesis H0: p = .8 contra la alternativa, Ha : p < .8. Suponga que 
+se usa la región de rechazo {y ≤ 12}.
+ 
+ 
+a De acuerdo con la información de este problema, ¿qué es un error tipo I?
+ 
+ 
+b Encuentre a.
+ 
+ 
+c Con base en la información de este problema, ¿qué es un error tipo II?
+ 
+ 
+d Encuentre b cuando p = .6.
+ 
+ 
+e Encuentre b cuando p = .4.
+ 
+10.3 
+Consulte el Ejercicio 10.2.
+ 
+ 
+a Defi na la región de rechazo de la forma {y ≤ c} de modo que a ≈ .01.
+ 
+ 
+b Para la región de rechazo del inciso a, encuentre b cuando p = .6.
+ 
+ 
+c Para la región de rechazo del inciso a, encuentre b cuando p = .4.
+ 
+10.4 
+Suponga que deseamos probar la hipótesis nula H0 de que la proporción p de hojas de contabilidad con 
+errores es igual a .05 contra la alternativa Ha de que la proporción es mayor que .05 usando el siguiente 
+esquema. Se seleccionan al azar dos hojas de contabilidad. Si ninguna de ellas tiene errores, rechazamos 
+H0; si una o más contienen un error, vemos una tercera hoja. Si ésta no tiene errores, rechazamos H0. En 
+todos los otros casos acepta
+
+[Bloque seleccionado #528 | relevancia=14]
+Pagina 527
+ 
+10.12 
+Ejercicio Applet Consulte el Ejercicio 10.11. Cambie a a .1 pero conserve H0 : p = .5, Ha : p ≠ .5 y el 
+verdadero valor de p = .6. Simule al menos 200 pruebas cuando n = 15. Repita para n = 30, 50 y 100. 
+Haga clic en el botón “Show Summary”. Ahora tendrá dos tablas de resumen (pudiera ser necesario 
+arrastrar primero la última tabla de la parte superior). Compare los porcentajes de error cuando se simu-
+len pruebas usando 15, 30, 50 y 100 intentos.
+ 
+ 
+a  ¿Cuál de las dos pruebas a = .05 o a = .10 proporciona los valores simulados más pequeños para b, 
+usando muestras de tamaño 15?
+ 
+ 
+b  ¿Cuál proporciona los valores simulados más pequeños de b para cada uno de los otros tamaños 
+muestrales?
+ 
+10.13 
+Ejercicio Applet Si usted repitiera las instrucciones del Ejercicio 10.10, usando n = 100 en lugar de n 
+= 30, ¿qué esperaría que fuera similar? ¿Qué esperaría que fuera diferente?
+ 
+10.14 
+Ejercicio Applet Consulte el Ejercicio 10.9. Inicie la aplicación breve para probar H0 : p = .1 contra 
+Ha : p < .1 al hacer clic en el botón de radio “Lower” en la línea marcada “Tail” y ajustar el valor hipo-
+tético a .1. Fije el verdadero valor de p = .1, n = .5 y a = .20.
+ 
+ 
+a  Haga clic en el botón “Draw Sample” hasta que obtenga una muestra con cero éxitos. ¿Cuál es el 
+valor de z? ¿Cuál es el mínimo valor posible para z? ¿Es posible que obtenga una muestra de modo 
+que el valor de z caiga en la región de rechazo? ¿Qué implica esto acerca de la probabilidad de que el 
+procedimiento de prueba con “muestras grandes” rechace la hipótesis nula? ¿Este resultado invalida 
+el uso de pruebas con muestras grandes para una proporción?
+ 
+ 
+b  ¿La prueba del inciso a rechazará la hipótesis nula verdadera aproximadamente 20% del tiempo si 
+usamos n = 10? Inténtelo simulando al menos 100 pruebas. ¿Qué proporción de las simulaciones 
+resulta en rechazo de la hipótesis nula?
+ 
+ 
+c  Examine los valores de ˆp en la tabla bajo la curva normal e identifi que el valor de ˆp para el cual la 
+hipótesis nula es rechazada. Use las tablas del apéndice para calcular la probabilidad de observar este 
+valor cuando n = 10 y p = .1. ¿Este valor es cercano a .2?
+ 
+ 
+d  ¿Es n = 100 sufi cientemente grande para que la proporción simulada de rechazos sea cercana a .2? 
+Simule al menos 100 pruebas y dé su respuesta con base en la simulación.
+ 
+10.15 
+Ejercicio Applet Consulte el Ejercicio 10.10. Haga clic en el botón “Clear Summary” para borrar los 
+resultados de cualquiera de las simulaciones previas. Cambie el tamaño muestral para cada simulación 
+a n = 30 e inicie la aplicac
+
+[Bloque seleccionado #538 | relevancia=28]
+Pagina 537
+ 
+ 
+a ¿Cómo se compara el valor m = 130 con este límite superior?
+ 
+ 
+b  Con base en el límite superior del inciso a, ¿debe aceptarse la hipótesis alternativa del Ejercicio 
+10.19?
+ 
+ 
+c ¿Hay algún confl icto entre la respuesta del inciso b y su respuesta al Ejercicio 10.19?
+ 
+10.6  Otra forma de presentar los resultados 
+de una prueba estadística: niveles de 
+signiﬁ cancia alcanzados o valores p
+Como ya indicamos previamente, es frecuente que la probabilidad a de un error tipo I reciba el 
+nombre de nivel de signifi cancia o bien, dicho en forma más sencilla, nivel de la prueba. Aun 
+cuando se recomienden con frecuencia pequeños valores de a, el valor real de a para usar en un 
+análisis es un tanto arbitrario. Un experimentador puede escoger poner en práctica una prueba con 
+a = .05 mientras que otro podría preferir a = .01. Es posible, por tanto, que dos personas analicen 
+la misma información y lleguen a conclusiones opuestas, una que concluya que la hipótesis nula 
+debe ser rechazada en el nivel de signifi cancia a = .05 y la otra que decida que la hipótesis 
+nula debe ser rechazada con a = .01. Además, los valores de a de .05 o .01 a menudo se emplean 
+por costumbre o por comodidad más que como resultado de una cuidadosa consideración de 
+las consecuencias de cometer un error tipo I.
+Una vez tomada una decisión sobre un estadístico de prueba (Y en nuestro ejemplo de en-
+cuesta o una de las Z de la Sección 10.3), a veces es posible presentar el valor p o el nivel de 
+signifi cancia alcanzado y que está relacionado con una prueba. Esta cantidad es un estadístico 
+que representa el valor más pequeño de a para el cual se puede rechazar la hipótesis nula.
+ DEFINICIÓN 10.2 
+Si W es un estadístico de prueba, el valor p, o nivel de signifi cancia alcanzado, es el 
+nivel más pequeño de signifi cancia a para el cual la información observada indica que 
+la hipótesis nula debe ser rechazada.
+Cuanto más pequeño sea el valor de p, es más fuerte la evidencia de que la hipótesis nula 
+debe ser rechazada. Numerosas publicaciones científi cas requieren que investigadores noti-
+fi quen los valores p relacionados con pruebas estadísticas, porque le dan al lector más infor-
+mación que la contenida en un informe de que la hipótesis nula fue o no rechazada por algún 
+valor de a seleccionado por el investigador. Si el valor de p es lo sufi cientemente pequeño 
+para convencer al lector, debe rechazar la hipótesis nula. Si un experimentador tiene un valor 
+de a en mente, se puede usar el valor p para poner en práctica una prueba de nivel a. El valor 
+p es el más p
+
+[Bloque seleccionado #543 | relevancia=16]
+Pagina 542
+518  Capítulo 10  Prueba de hipótesis
+por 23 individuos. ¿Estos resultados indican que usar una modelo femenina aumenta el costo percibido 
+de un automóvil? Encuentre el valor p relacionado e indique su conclusión para una prueba de nivel 
+a = .05.
+ 
+10.7  Algunos comentarios respecto 
+a la teoría de la prueba de hipótesis
+Como ya señalamos antes, podemos elegir entre poner en práctica una prueba de una o de dos 
+colas para una situación determinada. Esta elección está dictada por los aspectos prácticos del 
+problema y depende del valor alternativo del parámetro u que el experimentador está tratando 
+de detectar. Si sufriéramos una gran pérdida fi nanciera cuando u fuera mayor que u0 pero no 
+si fuera menor, concentraríamos nuestra atención en detectar valores de u mayores que u0. En 
+consecuencia, rechazaríamos la cola superior de la distribución para el estadístico de prueba 
+previamente estudiado. Por otra parte, si estuviéramos igualmente interesados en detectar 
+valores de u menores o mayores que u0, emplearíamos una prueba de dos colas.
+La teoría de pruebas estadísticas de las hipótesis, explicada en la Sección 10.2 y utilizada 
+en la Sección 10.3, es un procedimiento bien defi nido que hace posible que el investigador 
+rechace o acepte la hipótesis nula con riesgo medido a o b. Desafortunadamente, este sistema 
+no es sufi ciente para todas las situaciones prácticas.
+Para cualquier prueba estadística, la probabilidad a de un error tipo I depende del valor 
+del parámetro especifi cado en la hipótesis nula. Esta probabilidad puede ser calculada, al 
+menos aproximadamente, para cada uno de los procedimientos de prueba estudiados en este 
+texto. Para los procedimientos que hemos visto hasta aquí, la probabilidad b de un error tipo 
+II puede ser calculada sólo después que un valor específi co del parámetro de interés haya 
+sido seleccionado para considerarlo. La selección de un valor prácticamente signifi cativo para 
+este parámetro es, con frecuencia, difícil. Incluso si se puede identifi car una alternativa sig-
+nifi cativa, el cálculo real de b es a veces bastante tedioso. La especifi cación de una hipótesis 
+alternativa signifi cativa es incluso más difícil para algunos de los procedimientos de prueba 
+que consideraremos en los siguientes capítulos.
+Desde luego, no deseamos pasar por alto la posibilidad de cometer un error tipo II. Más 
+adelante en este capítulo determinaremos métodos para seleccionar pruebas con el más pe-
+queño valor posible de b para pruebas donde a, la probabilidad de un error tipo I, es un valor 
+fi jo seleccionado p
+
+[Bloque seleccionado #544 | relevancia=26]
+Pagina 543
+queda en la región de rechazo, rechazamos H0 y decimos que la evidencia apoya la hipótesis 
+de investigación de que Jones perderá. En esta situación, habremos demostrado que se apoya 
+la hipótesis que nos interesa, es decir, la hipótesis de investigación. Sin embargo, si Y no cae 
+en la región de rechazo y no podemos determinar un valor específi co de p en Ha que sea de 
+interés directo, simplemente decimos que no rechazamos H0 y debemos buscar información 
+adicional antes de llegar a una conclusión. De manera alternativa, podríamos indicar el valor 
+de p relacionado con la prueba estadística y dejar la interpretación al lector.
+Si H0 es rechazada por un  valor “pequeño” de a (o por un valor p pequeño), este suceso 
+no implica que la hipótesis nula sea “errónea en una cantidad grande”. Sí signifi ca que la hi-
+pótesis nula puede ser rechazada con base en un procedimiento que incorrectamente rechaza 
+la hipótesis nula (cuando H0 es verdadera) con una pequeña probabilidad (esto es, con una 
+pequeña probabilidad de un error tipo I). También debemos abstenernos de igualar la signi-
+fi cancia estadística con la práctica. Si consideramos el experimento descrito y analizado en 
+los Ejemplos 10.7 y 10.11, el valor p de .0124 es “pequeño”, y el resultado es estadística-
+mente signifi cativo para cualquier selección de a ≥ .0124. No obstante, la diferencia entre 
+los tiempos medios de reacción para las dos muestras es de sólo .2 segundo, un resultado que 
+puede o no ser prácticamente signifi cativo. Para evaluar la signifi cancia práctica de esa dife-
+rencia, es posible formar un intervalo de confi anza para m1 − m2 con el uso de los métodos 
+de la Sección 8.6.
+Finalmente, son oportunos algunos comentarios respecto a la selección de las hipótesis 
+nulas que hemos empleado, en particular en las pruebas de una cola. Así, en el Ejemplo 
+10.1 identifi camos la hipótesis alternativa apropiada como Ha : p < .5 y empleamos H0 : 
+p = .5 como nuestra hipótesis nula. El estadístico de prueba fue Y = número de votantes 
+que estaban a favor de Jones en una muestra de tamaño n = 15. Una región de rechazo que 
+consideramos era {y ≤ 2}. Usted podría preguntarse por qué no usamos H ∗
+0 : p ≥.5 como la 
+hipótesis nula. Esto tiene sentido porque todo posible valor de p está ya sea en H ∗
+0 : p ≥.5 
+o en Ha: p < 0.5.
+Entonces, ¿por qué usamos H0 : p = .5? Sencillamente porque lo que en realidad nos im-
+porta es la hipótesis alternativa Ha : p < .5; la hipótesis nula no es nuestro principal interés. 
+Como ya dijimos, por lo general no aceptamos en realidad la hipótesis nul
+
+[Bloque seleccionado #565 | relevancia=20]
+Pagina 564
+540  Capítulo 10  Prueba de hipótesis
+ 
+ 
+a  ¿Qué se puede decir acerca del nivel de signifi cancia alcanzado usando la tabla F del apéndice?
+ 
+ 
+b  Ejercicio Applet ¿Qué se puede decir acerca del nivel de signifi cancia obtenido usando la aplicación 
+F-Ratio Probabilities and Quantiles?
+ 
+ 
+c ¿Qué concluiría usted, con a = .02?
+ 
+10.85 
+Ejercicio Applet Un instrumento de precisión está garantizado para ser preciso con una variación de 
+no más de 2 unidades. Una muestra de cuatro lecturas de un instrumento en un mismo objeto dio las 
+medidas 353, 351, 351 y 355. Dé el nivel de signifi cancia alcanzado para probar la hipótesis nula s = 
+.7 contra la hipótesis alternativa s > .7.
+ 
+10.86 
+Los exámenes de aptitud deben producir califi caciones con una gran cantidad de variación para que un 
+administrador pueda distinguir entre personas con baja aptitud y otras de elevada aptitud. El examen es-
+tándar empleado por cierta industria ha producido califi caciones con desviación estándar de 10 puntos. 
+Un nuevo examen se aplica a 20 posibles empleados y produce una desviación estándar muestral de 12 
+puntos. ¿Las califi caciones del nuevo examen son considerablemente más variables que las del examen 
+estándar? Use a = .01.
+ 
+10.87 
+Consulte el Ejercicio 10.70. ¿Hay sufi ciente evidencia, en el nivel de signifi cancia de 5%, para apoyar 
+la conclusión de que la varianza en mediciones de niveles de DDT es mayor para los pelícanos jóvenes 
+que para los polluelos?
+ 
+10.10  Potencia de las pruebas y el lema 
+de Neyman-Pearson
+En las siguientes secciones de este capítulo, pasamos de ejemplos prácticos de pruebas es-
+tadísticas a una exposición teórica de sus propiedades. Hemos sugerido pruebas específi cas 
+para varias situaciones prácticas de pruebas de hipótesis, pero usted puede preguntarse por 
+qué seleccionamos esas pruebas en particular. ¿Cómo decidimos sobre los estadísticos de 
+prueba que se presentaron y cómo sabíamos que habíamos seleccionado las mejores regiones 
+de rechazo?
+La bondad de una prueba es medida por a y b, las probabilidades de errores tipo I y tipo II, 
+respectivamente. Por lo general, el valor de a se elige de antemano y determina la ubicación 
+de la región de rechazo. Un concepto relacionado pero muy útil para evaluar el desempeño de 
+una prueba recibe el nombre de potencia de la prueba. Básicamente, la potencia de una prueba 
+es la probabilidad de que la prueba lleve al rechazo de la hipótesis nula.
+ DEFINICIÓN 10.3 
+Suponga que W es el estadístico de prueba y RR es la región de rechazo para una prueba 
+de una hipótesis que involu
+
+[Bloque seleccionado #566 | relevancia=26]
+Pagina 565
+la capacidad de la prueba para detectar que la hipótesis nula es falsa. Esto es, para u = ua,
+potencia(ua) = P (rechazar H0 cuando u = ua).
+Si expresamos la probabilidad b de cometer un error tipo II cuando u = ua como b(ua), en-
+tonces
+b(ua) = P (aceptar H0 cuando u = ua).
+Se deduce que la potencia de la prueba en ua y la probabilidad de cometer un error tipo II están 
+relacionados de la siguiente manera.
+Relación entre potencia y B
+Si ua es un valor de u en la hipótesis alternativa Ha, entonces
+potencia(ua) = 1 − b(ua).
+Una curva de potencia típica, una gráfi ca de potencia(u), se ilustra en la Figura 10.13.
+Idealmente, una prueba detectaría una desviación desde H0 : u = u0 con certeza; esto es, 
+potencia(ua) sería 1 para toda ua en Ha (vea la Figura 10.14). Porque, para un tamaño muestral 
+fi jo, a y b no pueden hacerse arbitrariamente pequeños, es evidente que esto no es posible. 
+Por tanto, para un tamaño muestral fi jo n, adoptamos el procedimiento de seleccionar un valor 
+(pequeño) para a y hallar una región de rechazo RR para minimizar b(ua) en cada ua en Ha. 
+De manera equivalente, seleccionamos RR para maximizar la potencia(u) para u en Ha. De 
+entre todas las pruebas con nivel de signifi cancia de a, buscamos la prueba cuya función de 
+potencia se acerque más a la función de potencia ideal (Figura 10.14) si existe esa prueba. 
+¿Cómo determinamos este procedimiento de prueba?
+Antes de continuar, debemos defi nir las hipótesis simple y compuesta. Suponga que Y1, 
+Y2, . . . , Yn constituyen una muestra aleatoria de una distribución exponencial con parámetro 
+Potencia
+1
+F I G U R A 10.13
+Curva típica de po-
+tencia para la prueba 
+de H0 : u = u0 contra 
+la alternativa 
+Ha : u ≠ u0
+F I G U R A 10.14
+Curva ideal 
+de potencia para la 
+prueba de H0 : u = u0 
+contra Ha : u ≠ u0
+( )
+
+
+0
+1
+Potencia
+10.10  Potencia de las pruebas y el lema de Neyman-Pearson  541
+
+[Bloque seleccionado #582 | relevancia=16]
+Pagina 581
+tes para hipótesis compuestas nulas y alternativas si la distribución básica se especifi ca, ex-
+cepto por el valor de un parámetro individual. La razón de probabilidades produce un método 
+general para desarrollar una prueba estadística. Las pruebas de razón de verosimilitudes se 
+pueden efectuar ya sea que existan o no parámetros de ruido. En general, las pruebas de razón 
+de probabilidades poseen propiedades deseables. Los procedimientos de Neyman−Pearson 
+y de razón de verosimilitudes requieren que la distribución de la(s) población(es) mostrada(s) 
+sea conocida, excepto para los valores de algunos parámetros. De otro modo, las funciones de 
+probabilidad no pueden ser determinadas y los métodos no se pueden aplicar.
+ 
+ Bibliografía y lecturas adicionales
+ 
+ Ejercicios complementarios
+ 
+10.115 
+Verdadero o falso.
+ 
+ 
+a  Si el valor p para una prueba es .036, la hipótesis nula puede ser rechazada en el nivel de signifi cancia 
+a = .05.
+ 
+ 
+b En una prueba formal de hipótesis, a es la probabilidad de que la hipótesis nula sea incorrecta.
+ 
+ 
+c  Si el valor p es muy pequeño para una prueba que compara dos medias poblacionales, la diferencia 
+entre las medias debe ser grande.
+ 
+ 
+d  La potencia(u*) es la probabilidad de que la hipótesis nula sea rechazada cuando u = u*.
+ 
+ 
+e La potencia(u) se calcula siempre suponiendo que la hipótesis nula es verdadera.
+ 
+ 
+f  Si .01 < valor p < .025, la hipótesis nula siempre puede ser rechazada en el nivel de signifi cancia 
+a = .02.
+ 
+ 
+g  Suponga que una prueba es una prueba nivel a uniformemente más poderosa respecto al valor de 
+un parámetro u. Si ua es un valor en la hipótesis alternativa, b (ua) podría ser menor para alguna otra 
+prueba nivel a.
+ 
+ 
+h Cuando se desarrolla una prueba de razón de probabilidad, es posible que L( ˆ 0) > L( ˆ
+ 
+ 
+ i −2 ln(l) es siempre positivo.
+ 
+10.116 
+Consulte el Ejercicio 10.6. Encuentre la potencia(p), para p = .2, .3, .4, .5, .6, .7 y .8 y trace un dibujo 
+aproximado de la función de potencia.
+Ejercicios complementarios  557
+Casella, G., and R. L. Berger. 2002. Statistical Inference, 2d ed. Pacific Grove, Calif.: Duxbury.
+Cramer, H. 1963. Mathematical Methods of Statistics. Princeton, N.J.: Princeton University Press.
+Hoel, P.G. 1984. Introduction to Mathematical Statistics, 5th ed. New York: Wiley.
+Hogg, R. V., A. T. Craig, and J. W. McKean. 2005. Introduction to Mathematical Statistics, 6th ed. 
+Upper Saddle River, N.J.: Pearson Prentice Hall.
+Lehmann, E. L., and J. P. Romano. 2006. Testing Statistical Hypotheses, 3d ed. New York: Springer.
+Miller, I., and M. Mill

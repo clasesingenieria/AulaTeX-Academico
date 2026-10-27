@@ -1,0 +1,709 @@
+Fuente bibliográfica: Estadística - Spiegel y Stephens. 4.ª edición.pdf
+Actividad: 10 (4.1 Ensayo 2% Tarea)
+Palabras clave: hipótesis nula, hipótesis alternativa, error tipo I, error tipo II, nivel de significancia, p-valor, potencia, dos muestras
+
+[Bloque seleccionado #271 | relevancia=18]
+Pagina 270
+246  CAPÍTULO 10 TEORÍA ESTADÍSTICA DE LA DECISIÓN
+PRUEBAS DE HIPÓTESIS Y DE SIGNIFICANCIA O REGLAS DE DECISIÓN
+Si se supone que una hipótesis es verdadera, pero se encuentra que los resultados que se observan en una muestra 
+aleatoria difieren marcadamente de los resultados esperados de acuerdo con la hipótesis (es decir, esperados con base 
+sólo en la casualidad, empleando la teoría del muestreo), entonces se dice que las diferencias observadas son signifi-
+cativas y se estará inclinado a rechazar la hipótesis (o por lo menos a no aceptarla de acuerdo con la evidencia obteni-
+da). Por ejemplo, si en 20 lanzamientos de una moneda se obtienen 16 caras, se estará inclinado a rechazar que la 
+moneda es buena, aun cuando se puede estar equivocado.
+A los procedimientos que permiten determinar si las muestras observadas difieren significativamente de los resul-
+tados esperados, ayudando así a decidir si se acepta o se rechaza la hipótesis, se les llama pruebas de hipótesis, pruebas 
+de significancia o reglas de decisión.
+ERRORES TIPO I Y TIPO II
+Si se rechaza una hipótesis que debería aceptarse se dice que se comete un error tipo I. Si por otro lado, se acepta una 
+hipótesis que debería rechazarse, se comete un error tipo II. En cualquiera de los casos ha habido una decisión errónea 
+o se ha hecho un juicio erróneo.
+Para que las reglas de decisión (o pruebas de hipótesis) sean buenas, deben diseñarse de manera que se minimicen 
+los errores de decisión. Esto no es sencillo, ya que para cualquier tamaño dado de muestra, al tratar de disminuir un 
+tipo de error suele incrementarse el otro tipo de error. En la práctica, un tipo de error puede ser más importante que 
+otro y habrá que sacrificar uno con objeto de limitar al más notable. La única manera de reducir los dos tipos de error 
+es aumentando el tamaño de la muestra, lo que no siempre es posible.
+NIVEL DE SIGNIFICANCIA
+Cuando se prueba determinada hipótesis, a la probabilidad máxima con la que se está dispuesto a cometer un error tipo 
+I se le llama nivel de significancia de la prueba. Esta probabilidad acostumbra denotarse α y por lo general se especi-
+fica antes de tomar cualquier muestra para evitar que los resultados obtenidos influyan sobre la elección del valor de 
+esta probabilidad.
+En la práctica, se acostumbran los niveles de significancia 0.05 o 0.01, aunque también se usan otros valores. Si, 
+por ejemplo, al diseñar la regla de decisión se elige el nivel de significancia 0.05 (o bien 5%), entonces existen 5 posi-
+bilidades en 100 de que se rechace una hipótesis que debía ser aceptada; 
+
+[Bloque seleccionado #273 | relevancia=16]
+Pagina 272
+La tabla 10.1, en la que se dan los valores críticos de z tanto para pruebas de una cola como para pruebas de dos 
+colas correspondientes a varios niveles de significancia, se encontrará útil como referencia. Valores críticos de z para 
+otros niveles de significancia se encuentran en la tabla de áreas de la curva normal (apéndice II).
+PRUEBAS ESPECIALES
+Cuando las muestras son grandes, las distribuciones muestrales de muchos estadísticos tienen una distribución normal 
+(o por lo menos aproximadamente normal), y en estas pruebas se puede emplear la correspondiente puntuación z. Los 
+siguientes casos especiales, tomados de la tabla 8.1, son sólo algunos de los estadísticos de interés práctico. En cada 
+uno de estos casos, el resultado es válido para poblaciones infinitas o cuando el muestreo se hace con reposición. Si el 
+muestreo se hace de poblaciones finitas y sin reposición, es necesario modificar las fórmulas. Ver la página 182.
+1. Media. Aquí S ¼ X, la media muestral; S ¼  X ¼ , la media poblacional, y S ¼  X ¼ =
+ﬃﬃﬃﬃ
+N
+p
+, donde σ es la 
+desviación estándar poblacional y N es el tamaño de la muestra. La puntuación z está dada por
+ 
+z ¼
+X  
+=
+ﬃﬃﬃﬃ
+N
+p
+ 
+Si es necesario, para estimar σ se emplea la desviación muestral s o ^s.
+2. Proporciones. Aquí S = P, la proporción de “éxitos” en una muestra; µS = µP = p, donde p es la proporción 
+poblacional de éxitos y N es el tamaño de la muestra, y S ¼ P ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+pq=N
+p
+, donde q = 1 − p.
+ 
+La puntuación z está dada por
+ 
+z ¼ P  p
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+pq=N
+p
+ 
+En el caso de P = X/N, donde X = cantidad de éxitos obtenidos realmente en una muestra, la puntuación z se 
+transforma en
+ 
+ 
+z ¼ X  Np
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+Npq
+p
+ 
+Es decir, µX = µ = Np, X ¼  ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+Npq
+p
+ y S = X. 
+Las fórmulas para otros estadísticos se pueden obtener de manera similar.
+CURVA CARACTERÍSTICA DE OPERACIÓN; POTENCIA DE UNA PRUEBA
+Se ha visto cómo limitar el error tipo I eligiendo de manera adecuada el nivel de significancia. Para evitar totalmente 
+cometer un error tipo II, simplemente no hay que cometerlo, que es lo mismo que no aceptar ninguna hipótesis. Sin 
+embargo, en la práctica esto no es posible. Entonces lo que se hace es emplear las curvas características de operación 
+o curvas OC, que son curvas que muestran la probabilidad de cometer un error tipo II bajo diversas hipótesis. Estas 
+curvas proporcionan indicaciones de qué tan bien permite una prueba determinada minimizar los errores tipo II; es 
+decir, indican la potencia de una prueba para evitar que se cometan errores de decisión. Estas curvas son útiles e
+
+[Bloque seleccionado #280 | relevancia=16]
+Pagina 279
+10.7 
+El valor p en una prueba de hipótesis se define como el menor nivel de significancia al cual se rechaza la hipó-
+tesis nula. En este problema se ilustra el cálculo del valor p para un estadístico de prueba. Usar los datos del 
+problema 9.6 para probar la hipótesis nula de que la altura media de los árboles es igual a 5 pies (ft) contra la 
+hipótesis alternativa de que la altura media es menor a 5 ft. Encontrar el valor p de esta prueba.
+SOLUCIÓN
+El valor encontrado para z es z = (59.22 − 60)/1.01 = −0.77. El menor nivel de significancia al que se rechaza la hipóte-
+sis nula es el valor p = P(z < −0.77) = 0.5 − 0.2794 = 0.2206. La hipótesis nula se rechaza si el valor p es menor al nivel 
+de significancia preestablecido. En este problema, si el nivel de significancia preestablecido es 0.05, no se rechaza la hipó-
+tesis nula. A continuación se presenta la solución que da MINITAB, donde el comando Alternative-1 indica que se 
+trata de una prueba de la cola inferior.
+MTB> ZTest mean = 60 sd = 10.111 data in cl ;
+SUBC>Alternative –1
+Prueba Z
+Test of mu = 60.00 vs mu < 60.00
+The assumed sigma = 10.1
+Variable 
+N 
+Mean 
+StDev 
+SE Mean 
+Z 
+P
+height 
+100 
+59.22 
+10.11 
+1.01 
+–0.77 
+0.22
+10.8 
+Se toma una muestra de 33 personas que escuchen radio y se determina la cantidad de horas, por semana, que 
+escuchan la radio. Los datos son los siguientes.
+ 
+9
+8
+7
+4
+8
+6
+8
+8
+7
+10
+8
+10
+6
+7
+7
+8
+9
+6
+5
+8
+5
+6
+8
+7
+8
+5
+5
+8
+7
+6
+6
+4
+5
+Probar, de las siguientes tres maneras equivalentes, la hipótesis nula µ = 5 horas (h) contra la hipótesis alter-
+nativa µ ≠ 5 h al nivel de significancia α = 0.05:
+a) Calcular el valor del estadístico de prueba y compararlo con el valor crítico correspondiente a α = 0.05.
+b) Calcular el valor p del estadístico de prueba encontrado y comparar este valor p con α = 0.05.
+c) Calcular el intervalo de confianza 1 − α = 0.95 para µ y determinar si 5 cae dentro de este intervalo.
+PROBLEMAS RESUELTOS  255
+50
+40
+30
+20
+10
+0
+0.12
+0.10
+0.08
+0.06
+0.04
+0.02
+0.00
+Z = −1.645
+Figura 10-5 Comparación entre la prueba exacta a la izquierda (binomial) y la prueba aproximada
+a la derecha (normal estándar).
+
+[Bloque seleccionado #281 | relevancia=16]
+Pagina 280
+256  CAPÍTULO 10 TEORÍA ESTADÍSTICA DE LA DECISIÓN
+SOLUCIÓN
+En el siguiente resultado de MINITAB se halla, primero, la desviación estándar y después se emplea en las declaraciones 
+Ztest y Zinterval.
+MTB > standard deviation cl
+Standard deviation of hours = 1.6005
+MTB > ZTest 5.01.6005 ‘hours’ ;
+SUBC> Alternative 0.
+Prueba Z
+Test of mu = 5.000 vs mu not = 5.000
+The assumed sigma = 1.60
+Variable 
+N 
+Mean 
+StDev 
+SE Mean 
+Z 
+P
+hours 
+33 
+6.897 
+1.600 
+0.279 
+6.81 
+0.0000
+MTB > ZInterval 95.01.6005 
+‘hours’
+Variable 
+N 
+Mean 
+StDev 
+SE Mean 
+95.0 % CI
+hours 
+33 
+6.897 
+1.600 
+0.279 
+( 6.351, 7.443)
+a) 
+El valor calculado para el estadístico de prueba es Z ¼ 6:897  5
+0:279
+¼ 6:81, los valores críticos son ±1.96, y la hipóte-
+ 
+sis nula se rechaza. Obsérvese que éste es el valor encontrado que aparece en el resultado de MINITAB.
+b) 
+El valor p encontrado, de acuerdo con los resultados de MINITAB, es 0.0000, por lo tanto, el valor p < α = 0.05, la 
+hipótesis nula se rechaza.
+c) 
+Como el valor especificado por la hipótesis nula, 5, no está contenido en el intervalo de confianza de 95% para µ, la 
+hipótesis nula se rechaza.
+Estos tres procedimientos para probar una hipótesis nula contra una de hipótesis alternativa de dos colas son 
+equivalentes.
+10.9 
+La resistencia a la ruptura de los cables fabricados por una empresa tiene media de 1 800 libras (lb) y desviación 
+estándar de 100 lb. Se asegura que mediante una nueva técnica puede aumentarse la resistencia a la ruptura. 
+Para probar esto, se prueba una muestra de 50 cables y se encuentra que su resistencia media a la ruptura es
+1 850 lb. ¿Puede apoyarse, a nivel de significancia 0.01, la aseveración hecha antes?
+SOLUCIÓN
+Se tiene que decidir entre las dos hipótesis siguientes:
+H0 : µ = 1 800 lb, en realidad no hay cambio en la resistencia a la ruptura.
+H1 : µ > 1 800 lb, sí hay cambio en la resistencia a la ruptura.
+Por lo tanto, se debe usar una prueba de una cola; el diagrama correspondiente a esta prueba es idéntico al de la figura 10-4 
+del problema 10.5a). A nivel de significancia 0.01, la regla de decisión es: 
+ Si la puntuación z observada es mayor a 2.33, los resultados son significativos a nivel de significancia 0.01 y H0 se 
+rechaza.
+Si no es así, H0 se acepta (o la decisión se aplaza).
+Bajo la hipótesis de que H0 es verdadera, se encuentra que
+z = X
+N
+
+= 1 850
+1 800
+100
+50
+
+= 3.55
+que es mayor a 2.33. Por lo tanto, se concluye que los resultados son altamente significativos y que la aseveración hecha 
+puede apoyarse.
+
+[Bloque seleccionado #291 | relevancia=22]
+Pagina 290
+266  CAPÍTULO 10 TEORÍA ESTADÍSTICA DE LA DECISIÓN
+A16 =AVERAGE(A2:E11). La media de los datos de las mujeres se calcula ingresando en la celda A17 =AVERAGE(F2:
+J11). El estadístico de prueba es =(A16-A17)/SQRT(A14/50+A15/50) y se muestra en A19. Este estadístico tiene una 
+distribución normal estándar y su valor es 0.304. La expresión =2*(1-NORMSDIST(A19) calcula el área a la derecha de 
+0.304 y la duplica. Con esto se obtiene que el valor p = 0.761.
+Como este valor p no es menor que ninguno de los valores α usuales, 0.01 o bien 0.05, no se rechaza la hipótesis 
+nula. La probabilidad de obtener muestras como la obtenida es 0.761, suponiendo que la hipótesis nula sea verdadera. Por 
+lo tanto, no hay evidencia que sugiera que la hipótesis nula es falsa y que se deba rechazar.
+10.20 Se tienen dos grupos de personas, A y B, cada uno de 100 personas que padecen una enfermedad. Al grupo A 
+se le administra un suero, pero al grupo B (que es el grupo control) no; por lo demás, los dos grupos se tratan 
+en forma idéntica. En los grupos A y B se encuentra que 75 y 65 personas, respectivamente, se recuperan de 
+esta enfermedad. A los niveles de significancia: a) 0.01, b) 0.05 y c) 0.10, probar la hipótesis de que el suero 
+ayuda a la curación de la enfermedad. Calcular el valor p y mostrar que valor p > 0.01, valor p > 0.05, pero 
+valor p < 0.10.
+SOLUCIÓN
+Sean p1 y p2 las proporciones poblacionales de las personas curadas: 1) usando el suero y 2) sin usar el suero, respectiva-
+mente. Hay que decidir entre las hipótesis:
+H0 : p1 = p2, las diferencias observadas se deben a la casualidad (es decir, el suero no es eficiente).
+H1 : p1 > p2, el suero sí es eficiente.
+Bajo la hipótesis H0,
+µP1−P2 = 0 y  P1P2 ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+pq
+1
+N1
+þ 1
+N2
+
+
+s
+¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+ð0:70Þð0:30Þ
+1
+100 þ 1
+100
+
+
+s
+¼ 0:0648 
+donde, como estimación de p, se ha empleado la proporción promedio de curados en las dos muestras dada por (75 + 
+65)/200 = 0.70, de donde q = 1 − p = 0.30. Por lo tanto,
+z ¼ P1  P2
+P1P2
+¼ 0:750  0:650
+0:0648
+¼ 1:54
+a) 
+Empleando una prueba de una cola al nivel de significancia 0.01, la hipótesis H0 se rechaza únicamente si la puntuación 
+z es mayor a 2.33. Como la puntuación z es de sólo 1.54, se concluye que a este nivel de significancia los resultados 
+se deben a la casualidad.
+b) 
+Empleando una prueba de una cola al nivel de significancia 0.05, la hipótesis H0 se rechaza únicamente si la puntuación 
+z es mayor a 1.645. Por lo tanto, se concluye que a este nivel de significancia los resultados se de
+
+[Bloque seleccionado #292 | relevancia=16]
+Pagina 291
+SOLUCIÓN
+Obsérvese que la proporción de personas que sana en cada grupo es 225/300 = 0.750 y 195/300 = 0.650, respectivamen-
+te, que son las mismas que en el problema 10.20. De acuerdo con la hipótesis H0
+µP1−P2 = 0  y  P1P2 ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+pq
+1
+N1
+þ 1
+N2
+
+
+s
+¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+ð0:70Þð0:30Þ
+1
+300 þ 1
+300
+
+
+s
+¼ 0:0374
+donde (225 + 195)/600 = 0.70 se usa como estimación de p. Por lo tanto,
+z ¼ P1  P2
+P1P2
+¼ 0:750  0:650
+0:0374
+¼ 2:67
+Como el valor de z es mayor que 2.33, la hipótesis nula se puede rechazar al nivel de significancia 0.01; es decir, se puede 
+concluir que el suero es efectivo con una probabilidad de estar equivocado de sólo 0.01.
+Esto muestra cómo al aumentar el tamaño de la muestra se incrementa la confiabilidad de las decisiones. Sin embar-
+go, en muchos casos suele no ser posible aumentar el tamaño de la muestra. En esos casos se está forzado a tomar las 
+decisiones con base en la información disponible, y por lo tanto se debe conformar con correr mayor riesgo de tomar una 
+decisión incorrecta.
+valor p =1-NORMDIST(2.67) = 0.003793. Esto es menor a 0.01.
+10.22 Se realizó un sondeo en una muestra de 300 votantes del distrito A y 200 votantes del distrito B; se encontró 
+que 56 y 48%, respectivamente, estaban a favor de determinado candidato. Al nivel de significancia 0.05, 
+probar las hipótesis: a) existe diferencia entre los distritos, b) el candidato se prefiere en el distrito A y c)
+calcular el valor p de los incisos a) y b).
+SOLUCIÓN
+Sean p1 y p2 las proporciones de todos los votantes de los distritos A y B que están a favor de este candidato. Bajo la hipó-
+tesis H0 : p1 = p2, se tiene
+µP1−P2 = 0  y  
+P1P2 ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+pq
+1
+N1
+þ 1
+N2
+
+
+s
+¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+ð0:528Þð0:472Þ
+1
+300 þ 1
+200
+
+
+s
+¼ 0:0456
+donde se emplean los valores [(0.56)(300) + (0.48)(200)]/500 = 0.528 y (1 − 0.528) = 0.472 como estimaciones de p y 
+q, respectivamente. Por lo tanto, 
+z ¼ P1  P2
+P1P2
+¼ 0:560  0:480
+0:0456
+¼ 1:75
+a) 
+Si sólo se desea determinar si existe alguna diferencia entre los distritos, hay que decidir entre las hipótesis H0 : p1 = 
+p2 y H1 : p1 ≠ p2, lo que implica una prueba de dos colas. Usando una prueba de dos colas al nivel de significancia 0.05, 
+H0 se puede rechazar si z está fuera del intervalo −1.96 a 1.96. Como z = 1.75 se encuentra en este intervalo, a este 
+nivel no se puede rechazar H0; esto es, no hay diferencia significativa entre los dos distritos.
+b) 
+Si se desea determinar si el candidato es pre
+
+[Bloque seleccionado #296 | relevancia=30]
+Pagina 295
+SOLUCIÓN
+La hipótesis nula es H0 : p = 0.4 y la hipótesis alternativa Ha : p > 0.4. El valor de X observado es 131, donde X es la can-
+tidad de los que usan algún software. El valor p = P{X ≥ 131 dado que p = 0.4}. El valor p = 1 − P{X ≤ 130 dado que
+p = 0.4}. Empleando MINITAB, con la secuencia “Calc ⇒ Probability Distribution ⇒ Binomial” se abre el cuadro de 
+diálogo que se muestra en la figura 10-14.
+Con el cuadro de diálogo de la figura 10-14 se obtiene el resultado siguiente.
+Función de distribución acumulada
+Binomial with n=300 and p=0.4
+x 
+ 
+P(X<=x)
+130  
+0.891693
+El valor p es 1 − P{X ≤ 130 dado que p = 0.4} = 1 − 0.8971 = 0.1083. El resultado X = 131 no es significativo a 
+0.01, 0.05 ni 0.10.
+PROBLEMAS SUPLEMENTARIOS
+PRUEBAS PARA MEDIAS Y PARA PROPORCIONES
+EMPLEANDO DISTRIBUCIONES NORMALES
+10.29 
+Una urna contiene sólo canicas azules y rojas. Para probar la hipótesis nula de que las canicas de ambos colores se encuen-
+tran en la misma proporción, se toma una muestra, con reposición, de 64 canicas; se anotan los colores de las canicas que 
+se van extrayendo y se adopta la siguiente regla de decisión:
+ 
+La hipótesis nula se acepta si 28 ≤ X ≤ 36, donde X es la cantidad de canicas rojas en la muestra de tamaño 64.
+ 
+La hipótesis nula se rechaza si X ≤ 27 o si X ≥ 37.
+a) 
+Encontrar la probabilidad de rechazar la hipótesis nula si es correcta.
+b) 
+Graficar la regla de decisión y el resultado que se obtenga en el inciso a).
+10.30 
+a) 
+ ¿Qué regla de decisión se adopta en el problema 10.29 si lo que se busca es que la probabilidad de rechazar la hipóte-
+sis nula siendo en realidad correcta no sea mayor a 0.01 (es decir, si se quiere que el nivel de significancia sea 0.01)?
+b) 
+¿A qué nivel de confianza se puede aceptar la hipótesis nula?
+c) 
+¿Cuál es la regla de decisión si se emplea como nivel de significancia 0.05?
+10.31 
+Supóngase que en el problema 10.29 se desea probar la hipótesis de que la proporción de canicas rojas es mayor que la de 
+canicas azules.
+a) 
+¿Cuál es entonces la hipótesis nula y cuál la hipótesis alternativa?
+b) 
+¿Se debe usar una prueba de una cola o de dos colas? ¿Por qué?
+c) 
+¿Cuál debe ser la regla de decisión si el nivel de significancia es 0.05?
+d ) ¿Cuál es la regla de decisión si el nivel de significancia es 0.01?
+10.32 
+Se lanzan 100 veces un par de dados y en 23 de las veces aparece un 7. Al nivel de significancia 0.05, probar la hipótesis 
+de que los dados no están cargados empleando: a) una prueba de dos colas y b) una prueba de una cola. Analizar las razones, 
+si es que las hay, para preferir una de estas d
+
+[Bloque seleccionado #308 | relevancia=24]
+Pagina 307
+b) 
+Para una prueba de dos colas al nivel de significancia 0.01, se adopta la siguiente regla de decisión:
+ Aceptar H0 si t se encuentra dentro del intervalo −t.995 a t.995, el cual para 10 − 1 = 9 grados de libertad es el 
+intervalo −3.25 a 3.25.
+Rechazar H0 si no es así.
+Como t = 3.00, se acepta H0 al nivel de significancia 0.01.
+Como H0 se puede rechazar al nivel de significancia 0.05 pero no al nivel de significancia 0.01, se dice que la mues-
+tra da como resultado una probabilidad significativa (ver esta terminología al final del problema 10.5). Por lo tanto, será 
+recomendable verificar el funcionamiento de la máquina o, por lo menos, tomar otra muestra.
+11.7 
+El gerente de un centro comercial realiza una prueba de hipótesis para probar µ = $50 contra µ ≠ $50, donde 
+µ representa la cantidad media que gasta un comprador en ese centro comercial. En los datos que se presentan 
+en la tabla 11.2 se dan las cantidades, en dólares, gastadas por 28 personas en el centro comercial. Para esta 
+prueba de hipótesis, usando la distribución t de Student, se supone que los datos empleados para la prueba han 
+sido tomados de una población distribuida normalmente. Esta suposición de normalidad puede comprobarse 
+usando cualquiera de los métodos para pruebas de normalidad. MINITAB tiene tres posibilidades diferentes 
+para pruebas de normalidad. Probar la normalidad al nivel de significancia convencional α = 0.05. Si la supo-
+sición de normalidad no se rechaza, entonces se procede a realizar la prueba de hipótesis en que µ = $50 
+contra la alternativa µ ≠ $50 empleando α = 0.05.
+Tabla 11.2
+68
+49
+45
+76
+65
+50
+54
+92
+24
+36
+60
+66
+57
+74
+52
+75
+36
+40
+62
+56
+94
+57
+64
+72
+65
+59
+45
+33
+SOLUCIÓN
+Empleando la prueba para normalidad de Anderson-Darling de MINITAB se obtiene el valor p = 0.922, la prueba de nor-
+malidad de Ryan-Joyner da un valor p mayor a 0.10, y la prueba de normalidad de Kolmogorov-Smirnov da un valor p 
+mayor a 0.15. Al nivel de significancia convencional de 5%, en ninguno de los tres casos se puede rechazar la hipótesis de 
+que los datos han sido tomados de una población distribuida normalmente. Recuérdese que una hipótesis nula se rechaza 
+sólo si el valor p es menor que el nivel de significancia preestablecido. A continuación se presenta el análisis de MINITAB 
+para la prueba de la cantidad media gastada por los clientes. Empleando el método clásico para pruebas de hipótesis, la 
+hipótesis nula se rechaza si el valor encontrado para el estadístico de prueba es mayor, en valor absoluto, a 2.05. El valor 
+crítico, 2.05, se encuentra empleando la distr
+
+[Bloque seleccionado #550 | relevancia=28]
+Pagina 549
+RESPUESTAS A LOS PROBLEMAS SUPLEMENTARIOS  525
+10.30 
+a)  Rechazar la hipótesis nula si X ≤ 21 o X ≥ 43, donde X = número de canicas rojas extraídas; b) 0.99186; c) rechazar si 
+X ≤ 23 o X ≥ 41.
+10.31 
+a)  Ho: p = 0.5 Ha: p > 0.5; b) prueba de una cola; c) rechazar la hipótesis nula si X ≥ 40; d ) rechazar la hipótesis nula si 
+X ≥ 41.
+10.32 
+a)  Para dos colas, valor p = 2*(1–BINOMDIST(22,100,0.16666,1) = 0.126 > 0.05. Al nivel de significancia 0.05, 
+no se rechaza la hipótesis nula. 
+b)  Para una cola, valor p = 1–BINOMDIST(22,100,0.16666,1) = 0.063 > 0.05. Al nivel de significancia 0.05, no 
+se rechaza la hipótesis nula.
+10.33 
+Empleando ya sea una prueba de una cola o una prueba de dos colas, al nivel de significancia 0.01 no se puede rechazar la 
+hipótesis. 
+10.34 
+ Ho: p ≥ 0.95 Ha: p < 0.95
+Valor p = P{X ≤ 182 de 200 piezas cuando p = 0.95} = BINOMDIST(182,200,0.95,1) = 0.012. No se rechaza a 
+0.01, pero se rechaza a 0.05
+10.35 
+Estadístico de prueba = 2.63, valores críticos ±1.7805, se rechaza la hipótesis nula.
+10.36 
+Estadístico de prueba = −3.39, valor crítico para 0.10 es −1.28155, valor crítico para 0.025 es −1.96. El resultado es 
+significativo a α = 0.10 y α = 0.025. 
+10.37 
+Estadístico de prueba = 6.46, valor crítico = 1.8808, se concluye que µ > 25.5.
+10.38 
+=NORMSINV(0.9) = 1.2815 para α = 0.1, =NORMSINV(0.99) = 2.3263 para α = 0.01 y =NORMSINV(0.999) 
+= 3.0902 para α = 0.001.
+10.39 
+valor p = P{X ≤ 3} + P{X ≥ 12} = 0.0352.
+10.40 
+valor p = P{Z < −2.63} + P{Z > 2.63} = 0.0085.
+10.41 
+valor p = P{Z < −3.39} = 0.00035.
+10.42 
+valor p = P{Z > 6.46} = 5.23515E-11.
+10.43 
+a) 8.64 ± 0.96 oz; b) 8.64 ± 0.83 oz; c) 8.64 ± 0.63 oz.
+10.44 
+Los límites superiores de control son: a) 12 y b) 10.
+10.45 
+Estadístico de prueba = −5.59, valor p = 0.000. Se rechaza la hipótesis nula ya que el valor p < α.
+10.46 
+Estadístico de prueba = −1.58, valor p = 0.059. Para α = 0.05 no se rechaza, para α = 0.10 sí se rechaza. 
+10.47 
+Estadístico de prueba = −1.73, valor p = 0.042. Para α = 0.05 se rechaza, para α = 0.01 no se rechaza.
+10.48 
+Con una prueba de una cola se observa que, a ambos niveles de significancia, el nuevo fertilizante es mejor. 
+10.49 
+a) Estadístico de prueba = 1.35, valor p = 0.176, no se puede rechazar la hipótesis nula a α = 0.05.
+b) Estadístico de prueba = 1.35, valor p = 0.088, no se puede rechazar la hipótesis nula a α = 0.05.
+10.50 
+a) Estadístico de prueba = 1.81, valor p = 0.07, no se puede rechazar la hipótesis nula a α = 0.05. 
+b) Estadístico de prueba = 1.81, valor p = 0.0035, se rechaza la hipótesis nula a α = 0.05.
+10.
+
+[Bloque seleccionado #576 | relevancia=20]
+Pagina 575
+RESPUESTAS A LOS PROBLEMAS SUPLEMENTARIOS  551
+17.34 
+La suma de los rangos de la muestra menor = 141.5 y la suma de los rangos de la muestra mayor = 158.5. El valor p  para 
+dos colas = 0.3488. Al nivel de significancia 0.05 no se rechaza la hipótesis nula de no diferencia, pues el valor p > 
+0.05.
+17.35 
+En el problema 17.34, al nivel 0.01 no se puede rechazar la hipótesis nula en la prueba de una cola.
+17.36 
+La suma de los rangos de la muestra menor = 132.5 y la suma de los rangos de la muestra mayor = 77.5. Para dos colas el 
+valor p = 0.0044. La hipótesis nula de no diferencia se rechaza tanto a nivel 0.01 como a nivel 0.05, ya que el valor p < 
+0.05.
+17.37 
+Al nivel de significancia 0.05, el agricultor del problema 17.36 puede concluir que el trigo II da mayor rendimiento que el 
+trigo I.
+17.38 
+Para la marca A, la suma de los rangos = 86.0 y para la marca B, la suma de los rangos = 124.0. Para dos colas el valor p 
+= 0.1620. a) Al nivel de significancia 0.05, no se rechaza la hipótesis nula de no diferencia entre las dos marcas versus hay 
+diferencia, ya que el valor p > 0.05. b) Al nivel de significancia 0.05 no se puede concluir que la marca B sea mejor que la 
+marca A, ya que para una cola valor p (0.081) > 0.05.
+17.39 
+Sí, se puede emplear tanto la prueba U como la prueba de los signos para determinar si hay diferencia entre las dos máqui-
+nas.
+17.41 
+3.
+17.42 
+6.
+17.46 
+a) 246; b) 168; c) 0.
+17.47 
+a) 236; b) 115; c) 100.
+17.49 
+H = 2.59, DF = 4, P = 0.629. A los niveles de significancia 0.05 y 0.01, no hay diferencia entre los rendimientos de las 
+cinco variedades, ya que el valor p es mayor que 0.01 y que 0.05.
+17.50 
+H = 8.42, DF =  3, P = 0.038. Al nivel de significancia 0.05 sí hay diferencia entre las cuatro marcas de neumáticos, pero 
+no al nivel de significancia 0.01, ya que 0.01 < valor p < 0.05.
+35
+10
+5
+0
+5
+24
+1
+6
+11
+16
+22
+3
+8
+13
+18
+34
+9
+4
+1
+6
+28
+3
+2
+7
+12
+38
+13
+8
+3
+2
+46
+21
+16
+11
+6
+41
+16
+11
+6
+1
+27
+2
+3
+8
+13
+31
+6
+1
+4
+9
+23
+2
+7
+12
+17
+30
+5
+0
+5
+10
+37
+12
+7
+2
+3
+36
+11
+6
+1
+4
+24
+1
+6
+11
+16
+0.00154388
+2*BINOMDIST(4,24,0.5,1)
+Reject null
+0.307456255
+2*BINOMDIST(9,24,0.5,1)
+Do not reject null
+0.541256189
+2*BINOMDIST(10,24,0.5,1)
+Do not reject null
+0.004077315
+2*BINOMDIST(5,25,0.5,1)
+Reject null

@@ -1,0 +1,601 @@
+Fuente bibliográfica: Estadística matemática con aplicaciones - Wackerly, Mendenhall y Scheaffer. 7.ª edición.pdf
+Actividad: 2 (1.2 Investigación 3% Tarea)
+Palabras clave: muestreo, encuesta, cuotas, aleatorio, tamaño efectivo, no respuesta, ponderación, representatividad
+
+[Bloque seleccionado #102 | relevancia=5]
+Pagina 101
+2.12  Muestreo aleatorio  77
+ 
+EJEMPLO 2.25 
+Calcule las probabilidades para cada valor de Y del Ejemplo 2.24.
+ 
+Solución 
+El evento {Y = 0} resulta sólo del punto muestral E4. Si las monedas están balanceadas, los 
+puntos muestrales son igualmente probables; por tanto,
+P(Y = 0) = P(E4) = 1/4.
+Del mismo modo,
+ 
+P(Y = 1) = P(E2) + P(E3) = 1/2
+y
+P(Y = 2) = P(E1) = 1/4. 
+Q
+En los dos capítulos siguientes veremos un examen más detallado de variables aleatorias.
+Ejercicios
+ 
+2.139 
+Consulte el Ejercicio 2.112. Con la variable aleatoria Y represente al número de aparatos de radar que 
+detectan un avión particular. Calcule las probabilidades asociadas con cada valor de Y.
+ 
+2.140 
+Consulte el Ejercicio 2.120. Con la variable aleatoria Y represente el número de refrigeradores defectuo-
+sos hallados después de probar tres de ellos. Calcule las probabilidades para cada valor de Y.
+ 
+2.141 
+Consulte de nuevo el Ejercicio 2.120. Con la variable aleatoria Y represente el número de la prueba en 
+la que se identifi ca el último refrigerador defectuoso. Calcule las probabilidades para cada valor de Y.
+ 
+2.142 
+Un proyectil puede aterrizar en cualquiera de cuatro posiciones, A, B, C y D, con igual probabilidad. El 
+proyectil se usa dos veces y la posición se anota en cada vez. Con la variable aleatoria Y denote el número 
+de posiciones en las que el proyectil no aterrizó. Calcule las probabilidades para cada valor de Y.
+ 
+2.12 Muestreo aleatorio
+Como tema fi nal en este capítulo pasamos de la teoría a la aplicación y examinamos la na-
+turaleza de experimentos realizados en estadística. Un experimento estadístico involucra la 
+observación de una muestra seleccionada de un conjunto más grande de datos, existente o 
+conceptual, llamado población. Las mediciones de la muestra, vistas como observaciones de 
+los valores de una o más variables aleatorias, se emplean entonces para hacer una inferencia 
+acerca de las características de la población objetivo.
+¿Cómo se hacen estas inferencias? Una respuesta exacta a esta pregunta se pospone para 
+más adelante, pero una observación general se deduce de nuestra exposición en la Sección 2.2. 
+Ahí aprendimos que la probabilidad de la muestra observada desempeña un importante papel 
+para hacer una inferencia y evaluar su credibilidad.
+Sin extendernos sobre el punto, es claro que el método de muestreo afectará la probabilidad 
+del resultado de una muestra particular. Por ejemplo, supongamos que una población fi cticia 
+contiene sólo N = 5 elementos, de los cuales pensamos tomar una muestra de tamaño n = 2.
+
+[Bloque seleccionado #103 | relevancia=23]
+Pagina 102
+78  Capítulo 2  Probabilidad
+Se podrían revolver muy bien los elementos y seleccionar dos en forma tal que todos los pares 
+de elementos tengan igual probabilidad de selección. Un segundo procedimiento de muestreo 
+podría hacer necesario seleccionar un solo elemento, restituirlo en la población y después 
+sacar de nuevo un solo elemento. Los dos métodos de selección de muestra se denominan 
+muestreo sin y con reemplazo, respectivamente.
+Si los todos los elementos de la población N = 5 son claramente diferentes, la probabilidad de 
+sacar un par específi co, cuando se haga muestreo sin restitución, es 1/10. La probabilidad 
+de sacar el mismo par específi co, cuando se haga muestreo con restitución, es 2/25. Con toda 
+facilidad se pueden verifi car estos resultados.
+Se debe hacer notar que el método de muestreo, conocido como diseño de un experimento, 
+afecta la cantidad de información en una muestra y la probabilidad de observar un resultado 
+específi co de muestra. Por tanto, todo procedimiento muestral debe describirse con claridad si 
+deseamos hacer inferencias válidas de muestra a población.
+El estudio del diseño de experimentos, los diversos tipos de diseños junto con sus propieda-
+des, es en sí mismo un curso. En consecuencia, en esta primera etapa de estudio presentamos 
+sólo el procedimiento de muestreo más sencillo, el muestreo aleatorio simple. La noción de 
+muestreo aleatorio simple será necesaria en subsecuentes exposiciones de las probabilidades 
+asociadas con variables aleatorias e inyectará algún realismo a nuestro examen de estadís-
+tica. Eso es porque el muestreo aleatorio simple se emplea frecuentemente en la práctica. 
+Defi namos ahora el término muestreo aleatorio.
+ DEFINICIÓN 2.13 
+Represente con N y n los números de elementos en la población y la muestra, respectiva-
+mente. Si el muestreo se realiza en forma tal que cada una de las N
+n muestras tiene igual 
+probabilidad de ser seleccionada, se dice que el muestreo es aleatorio y que el resultado 
+es una muestra aleatoria.
+El muestreo aleatorio perfecto es difícil de alcanzar en la práctica. Si la población no es 
+demasiado grande, podríamos escribir cada uno de los N números en fi chas, revolverlas todas 
+y seleccionar una muestra de n fi chas. Los números de las fi chas especifi carían las mediciones 
+que aparezcan en la muestra.
+En computadora se han elaborado tablas de números aleatorios para agilizar la selección 
+de muestras aleatorias. Un ejemplo de esas tablas es la Tabla 12, Apéndice 3. Una tabla de 
+número aleatorio es un conjunto de enteros (0, 1, … , 9) generado 
+
+[Bloque seleccionado #176 | relevancia=6]
+Pagina 175
+Ejercicios complementarios
+ 
+3.180 
+Cuatro números posiblemente ganadores de una lotería —AB-4536, NH-7812, SQ-7855 y ZY-3221— 
+llegan por correo. Usted gana un premio si uno de sus cuatro números es igual a uno de los números 
+ganadores contenidos en una lista que tienen quienes dirigen la lotería. Se concede un primer premio 
+de $100,000, dos segundos premios de $50,000 cada uno y diez terceros premios de $1000 cada uno. 
+Para ser elegible para ganar, es necesario enviar por correo el cupón a la compañía a un costo de 33¢ 
+por envío. No se requiere hacer compras. De la estructura de los números que se reciban, es obvio que 
+los números enviados constan de dos letras seguidas de cuatro dígitos. Suponiendo que los números 
+recibidos se generaron al azar, ¿cuáles son las expectativas de que gane la lotería? ¿Merecen la pena los 
+33¢ para entrar a esta lotería?
+ 
+3.181 
+El muestreo de piezas defectuosas de grandes lotes de productos manufacturados da un número de pie-
+zas defectuosas, Y, que sigue una distribución de probabilidad binomial. Un plan de muestreo consiste 
+en especifi car el número de piezas n por incluirse en una muestra y un número de aceptación a. El lote 
+es aceptado si Y ≤ a y rechazado si Y > a. Denote con p la proporción de piezas defectuosas del lote. 
+Para n = 5 y a = 0, calcule la probabilidad de aceptación del lote si (a) p = 0, (b) p = .1, (c) p = .3, 
+(d) p = .5, (e) p = 1.0. Una gráfi ca que muestra la probabilidad de aceptación de lote como función de la 
+fracción defectuosa del lote se llama curva característica de operación para el plan muestral. Construya 
+la curva característica de operación para el plan n = 5, a = 0. Observe que un plan de muestreo es un 
+ejemplo de inferencia estadística. Aceptar o rechazar un lote con base en información contenida en la 
+muestra es equivalente a concluir que el lote es bueno o malo. “Bueno” implica que una parte pequeña 
+es defectuosa y que por tanto el lote es apropiado para despacharse.
+ 
+3.182 
+Consulte el Ejercicio 3.181. Use la Tabla 1, Apéndice 3 para construir las curvas características de ope-
+ración para los siguientes planes de muestreo:
+ 
+ 
+a n = 10, a = 0.
+ 
+ 
+b n = 10, a = 1.
+ 
+ 
+c n = 10, a = 2.
+ 
+ 
+Para cada plan de muestreo, calcule P(aceptación de lote) para p = 0, .05 .1, .3, .5, y 1.0. Nuestra in-
+tuición sugiere que con el plan de muestreo (a) sería mucho menos probable aceptar lotes malos que 
+los planes (b) y (c). Una comparación visual de las curvas características de operación confi rmará esta 
+conjetura intuitiva.
+Hogg, R. V., A. T. Craig, and J. W. McK
+
+[Bloque seleccionado #322 | relevancia=7]
+Pagina 321
+como estimación de m. ¿Qué tan buena es esta estimación? La respuesta depende del com-
+portamiento de las variables aleatorias Y1, Y2, . . . , Yn y su efecto en la distribución de 
+Y = (1/n)
+n
+i=1 Yi.
+El error de estimación, la diferencia entre la estimación y el parámetro estimado (para 
+nuestro ejemplo, la diferencia entre y y m) constituyen una medida de la bondad de una es-
+timación. Como Y1, Y2, . . . , Yn son variables aleatorias, al repetir el muestreo, Y también es 
+una variable aleatoria (y una función de las n variables Y1, Y2, . . . , Yn). Por tanto, no podemos 
+estar seguros de que el error de estimación sea menor que un valor específi co, B, por ejem-
+plo. Sin embargo, si pudiéramos determinar la distribución de probabilidad del estimador Y,
+la utilizaríamos para determinar la probabilidad de que el error de estimación sea menor o 
+igual a B.
+Para determinar la distribución de probabilidad para una función de n variables aleatorias, 
+Y1, Y2, . . . , Yn, debemos calcular la distribución de probabilidad conjunta para las variables 
+aleatorias mismas. Por lo general suponemos que las observaciones se obtienen mediante 
+muestreo aleatorio, como se defi nió en la Sección 2.12. Vimos en la Sección 3.7 que el mues-
+treo aleatorio a partir de una población fi nita (muestreo sin restitución) resulta en intentos 
+dependientes, que se hacen esencialmente independientes si la población es grande cuando se 
+compara con el tamaño de la muestra.
+En todo el resto de este libro supondremos que las poblaciones son grandes en compara-
+ción con el tamaño muestral y, en consecuencia, que las variables aleatorias obtenidas a través 
+de muestreo aleatorio son, de hecho, independientes entre sí. Entonces, en el caso discreto, la 
+función de probabilidad conjunta para las variables Y1, Y2, . . . , Yn, seleccionadas de la misma 
+población, está dada por
+p(y1, y2, . . . ,
+. . .
+yn) = p(y1) p(y2)
+p(yn).
+En el caso continuo, la función de densidad conjunta es
+f (y1, y2, . . . ,
+ . . .
+yn) = f (y1) f (y2)
+f (yn).
+El enunciado “Y1, Y2, . . . , Yn es una muestra aleatoria de una población con densidad f(y)” 
+signifi ca que las variables aleatorias son independientes con función de densidad común 
+f(y).
+ 
+6.2  Determinación de la distribución 
+de probabilidad de una función de 
+variables aleatorias
+En esta sección presentaremos tres métodos para determinar la distribución de probabilidad 
+para una función de variables aleatorias y un cuarto método para determinar la distribución 
+conjunta de varias funciones de variables aleatorias. Cualquiera de estos métodos se
+
+[Bloque seleccionado #373 | relevancia=4]
+Pagina 372
+348  Capítulo 7  Distribuciones muestrales y el teorema del límite central
+La deducción de la distribución de muestreo de la variable aleatoria Y trazada en el Ejemplo 
+7.1 utiliza el método de punto de muestra que se introdujo en el Capítulo 2. Aun cuando no 
+es difícil completar los cálculos del Ejemplo 7.1 y dar la distribución de muestreo exacta para 
+Y, el proceso es tedioso. ¿Cómo podemos tener una idea de la forma de esta distribución de 
+muestro sin molestarnos en completar estos cálculos? Una forma es simular la distribución 
+de muestreo al tomar muestras independientes repetidas, cada una de tamaño 3, calculando 
+el valor observado y para cada muestra y construyendo un histograma de estos valores ob-
+servados. El resultado de una de estas simulaciones se ilustra en la Figura 7.1(a), que es una 
+gráfi ca obtenida usando la aplicación breve DiceSample (disponible en www.thomsonedu.
+com/statistics/wackerly).
+¿Qué puede observar en la Figura 7.1(a)? Como ya dijimos, el máximo valor observado de 
+Y es 6 y el valor mínimo es 1. También, los valores obtenidos en la simulación se acumulan 
+en forma de montículo aproximadamente centrado en 3.5, que es la media teórica de Y. En la 
+Figura 7.1(b) vemos que el promedio y desviación estándar de los 4000 valores simulados de 
+Y son muy cercanos a los valores teóricos obtenidos en el Ejemplo 7.1.
+F I G U R A 7.1
+(a) Distribución de 
+muestreo simulado 
+para Y , Ejemplo 7.1; 
+(b) media y desvia-
+ción estándar de 
+los 4000 valores 
+simulados de Y
+0
+129
+258
+387
+516
+Número de tiros = 4000
+Frecuencia
+1
+2
+3
+4
+5
+6
+Media de 3 dados
+(a)
+Prob. de pobl. (1) 0.167 (2) 0.167 (3) 0.167 (4) 0.167 (5) 0.167 (6) 0.167 
+Población: Media = 3.500   Desv.Est. = 1.708 
+Muestras = 4000 de tamaño 3
+Media = 3.495 
+Desv. Est. = 0.981 
++/− 1 Desv. Est.: 0.683 
++/− 2 Desv. Est.: 0.962 
++/− 3 Desv. Est.: 1.000
+(b)
+
+[Bloque seleccionado #428 | relevancia=4]
+Pagina 427
+Ejercicios  403
+ 
+8.22 
+Es frecuente que un aumento en el porcentaje de ahorros de los consumidores se encuentre ligado a la 
+falta de confi anza en la economía y se dice que es un indicador de una tendencia recesiva en aquélla. Un 
+muestreo aleatorio de n = 200 cuentas de ahorros en una comunidad local mostró que el aumento medio 
+en los valores de las cuentas de ahorros era de 7.2% en los últimos 12 meses, con desviación estándar de 
+5.6%. Estime el porcentaje medio de aumento en los valores de las cuentas de ahorros en los últimos 12 
+meses para depositantes de la comunidad. Establezca un límite para su error de estimación.
+ 
+8.23 
+La Environmental Protection Agency en conjunto con la Universidad de Florida recientemente realizó 
+un amplio estudio de los posibles efectos de trazas de elementos en el agua potable sobre la formación 
+de cálculos renales. La tabla siguiente presenta datos de edad, cantidad de calcio en agua potable (me-
+dida en partes por millón) y hábitos de fumar. Estos datos se obtuvieron de individuos con problemas 
+actuales de cálculos renales, todos los cuales vivían en las dos Carolinas y en estados de las Montañas 
+Rocallosas.
+ 
+ 
+a  Estime la concentración promedio de calcio en el agua potable para pacientes con cálculos renales en 
+las Carolinas. Establezca un límite para el error de estimación.
+ 
+ 
+b  Calcule la diferencia en edades medias para pacientes con cálculos renales en las Carolinas y en las 
+Rocallosas. Fije un límite para el error de estimación.
+ 
+ 
+c  Calcule y precise un límite de desviación estándar de 2 en la diferencia en proporciones de pacientes 
+con cálculos renales, de las Carolinas y las Rocallosas, que eran fumadores en el momento de hacer 
+el estudio.
+ 
+8.24 
+Los resultados de una encuesta de opinión pública publicados en la Internet2 indicaron que 69% de quie-
+nes respondieron clasifi caron el costo de la gasolina como una crisis o problema importante. El artículo 
+indica que 1001 adultos, de 18 años o más, fueron entrevistados y que los resultados tienen un error de 
+muestreo de 3%. ¿Cómo se calculó el 3% y cómo debería interpretarse? ¿Podemos concluir que una 
+mayoría de los individuos del grupo de mayores de 18 años pensaron que el costo de la gasolina era una 
+crisis o problema importante?
+ 
+8.25 
+Se realizó un estudio para comparar el promedio de llamadas de emergencia a la policía en cada turno de 
+8 horas en dos distritos de una ciudad grande. Se seleccionaron aleatoriamente muestras de 100 turnos 
+de 8 horas de los registros policíacos para cada una de las dos regiones y se registró e
+
+[Bloque seleccionado #429 | relevancia=11]
+Pagina 428
+404  Capítulo 8  Estimación
+ 
+ 
+a  Calcule la diferencia en el número medio de llamadas de emergencia a la policía por turno de 8 horas 
+entre los dos distritos de la ciudad.
+ 
+ 
+b Encuentre un límite para el error de estimación.
+ 
+8.26 
+Los vehículos gemelos Spirit y Opportunity, que recorrieron la superfi cie de Marte en el invierno de 
+2004, hallaron evidencia de que una vez hubo agua en el planeta, elevando la posibilidad de que una vez 
+hubo vida en el mismo. ¿Piensa usted que Estados Unidos debería continuar un programa para enviar 
+seres humanos a Marte? Una encuesta de opiniones3 indicó que 49% de los 1093 adultos encuestados 
+piensa que se debería continuar ese programa.
+ 
+ 
+a  Estime la proporción de todos los norteamericanos que piensan que Estados Unidos debería continuar 
+un programa para enviar seres humanos a Marte. Encuentre un límite en el error de estimación.
+ 
+ 
+b  La encuesta en realidad formuló varias preguntas. Si quisiéramos informar un error de estimación 
+que sería válido para todas las preguntas de la encuesta, ¿qué valor deberíamos usar? [Sugerencia: 
+¿cuál es el máximo valor posible para p × q?]
+ 
+8.27 
+Una muestra aleatoria de 985 “probables votantes” ⎯a quienes se considera que probablemente voten 
+en una elección próxima⎯ fueron encuestados durante una indagación por teléfono realizada por el par-
+tido republicano. De aquellos contactados, 592 indicaron que tenían intención de votar por el candidato 
+republicano en la elección.
+ 
+ 
+a  De acuerdo con este estudio, la estimación para p, la proporción de todos los “posibles votantes” que 
+votarán por el candidato republicano, es p = .601. Encuentre un límite para el error de estimación.
+ 
+ 
+b  Si los “probables votantes” son representativos de quienes realmente votarán, ¿piensa usted que el 
+candidato republicano será elegido? ¿Por qué? ¿Qué confi anza tiene usted en su decisión?
+ 
+ 
+c  ¿Puede usted dar razones por las que los encuestados podrían no ser representativos de los que en 
+realidad voten en la elección?
+ 
+8.28 
+En un estudio de la relación entre orden de nacimiento y éxito universitario, un investigador encontró 
+que 126 en una muestra de 180 egresados de universidad fueron hijos primogénitos o hijos únicos; en 
+una muestra de 100 no egresados de edad y antecedentes socio económicos comparables, el número de 
+primogénitos o hijos únicos era de sólo 54. Estime la diferencia en las proporciones de primogénitos o 
+hijos únicos para las dos poblaciones de las que se tomaron estas muestras. Establezca un límite para el 
+error de estimación.
+ 
+8.29 
+En ocasione
+
+[Bloque seleccionado #444 | relevancia=5]
+Pagina 443
+Ejercicios  419
+ 
+ 
+a  Encuentre un intervalo de confi anza de 99% para la diferencia en tiempo promedio de muda para 
+machos “normales” contra los “separados” de sus parejas.
+ 
+ 
+b Interprete el intervalo.
+ 
+8.63 
+A la mayoría de estadounidenses les gusta participar eventos deportivos o al menos verlos. Algunos 
+sienten que los deportes tienen más que sólo valor de entretenimiento. En una encuesta de 1000 adultos, 
+realizada por KRC Research & Consulting, 78% sintieron que los deportes de gran atractivo tienen un 
+efecto positivo en la sociedad.9
+ 
+ 
+a  Encuentre un intervalo de confi anza de 95% para el porcentaje del público que piensa que los depor-
+tes tienen un efecto positivo en la sociedad.
+ 
+ 
+b  La encuesta publicó un margen de error de “más o menos 3.1%”. ¿Esto concuerda con la respuesta 
+de usted al inciso a? ¿Qué valor de p produce el margen de error dado por la encuesta?
+ 
+8.64 
+En una encuesta de la CNN/USA Today/Gallup a 1000  estadounidenses se les preguntó qué tan bien 
+los describía el término patriótico.10 Algunos resultados de la encuesta están contenidos en la siguiente 
+tabla de resumen.
+ 
+ 
+a  Si los grupos de 18–34 y 60 o más años estaban formados de 340 y 150 individuos, respectivamente, 
+encuentre un intervalo de confi anza de 98% para la diferencia en proporciones de los individuos en 
+estos grupos de edades que acordaron que patriótico los describía muy bien.
+ 
+ 
+b  Con base en el intervalo que obtuvo en el inciso a, ¿piensa que la diferencia en proporciones de los 
+que se vieron a sí mismos como patrióticos es de hasta 0.6? Explique.
+ 
+8.65 
+Para una comparación de los porcentajes de piezas defectuosas producidas por dos líneas de montaje, 
+de cada línea se seleccionaron muestras aleatorias independientes de 100 piezas. La línea A produjo 18 
+piezas defectuosas en la muestra y la línea B contenía 12 piezas defectuosas.
+ 
+ 
+a  Encuentre un intervalo de confi anza de 98% para la verdadera diferencia en proporciones de piezas 
+defectuosas para las dos líneas.
+ 
+ 
+b  ¿Hay evidencia aquí que sugiera que una línea produce una proporción más alta de piezas defectuo-
+sas que la otra?
+ 
+8.66 
+Históricamente, la biología se ha impartido en conferencias y la evaluación de su aprendizaje se logró 
+mediante pruebas de vocabulario y datos memorizados. Un nuevo currículo inventado por un profesor: 
+Biología, contenido de una comunidad (BACC, por sus siglas en inglés), está basado en estándares, 
+orientado a actividades y centrado en preguntas. Los estudiantes a quienes se enseñó a usar los méto-
+dos históricos y los nuevos fuero
+
+[Bloque seleccionado #446 | relevancia=5]
+Pagina 445
+8.7  Selección del tamaño muestral  421
+adultos jóvenes y el cambio correspondiente para adultos mayores, cuando pasamos de los que tienen 
+bajo porcentaje de ver TV a aquellos que tienen altos porcentajes de verla. (Los datos sugieren que el 
+porcentaje de ver violencia puede aumentar con adultos jóvenes pero disminuye con adultos mayores.)
+ 
+8.7 Selección del tamaño muestral
+El diseño de un experimento es en esencia un plan para adquirir una cantidad de información. 
+Al igual que cualquier otra mercancía, la información se puede comprar a precios que varían 
+dependiendo de la forma en la que se obtienen los datos. Algunas mediciones contienen una 
+gran cantidad de información acerca del parámetro de interés; otras pueden contener poca o 
+ninguna. La investigación, ya sea científi ca o de otro tipo, se hace para obtener información. 
+Obviamente, deberíamos buscar obtener información a un costo mínimo.
+El procedimiento de muestreo, o diseño experimental, como suele llamarse, afecta la canti-
+dad de información por medición. Éste, junto con el tamaño muestral n controla la cantidad to-
+tal de información relevante en una muestra. En esta etapa de nuestro estudio nos ocuparemos 
+de la situación de muestreo más sencilla: muestreo aleatorio de una población relativamente 
+grande. Primero dedicamos nuestra atención a la selección del tamaño muestral n.
+Un investigador avanza poco en la planeación de un experimento antes de abordar el 
+problema de seleccionar el tamaño muestral. De hecho, una de las preguntas más frecuen-
+tes que se plantea un estadístico es ¿cuántas mediciones deben incluirse en la muestra? 
+Desafortunadamente, el estadístico no puede contestar esta pregunta sin saber cuánta infor-
+mación desea obtener el experimentador. Si nos referimos específi camente a una estimación, 
+nos gustaría saber qué tan precisa desea el experimentador que sea. El experimentador puede 
+indicar la precisión deseada al especifi car un límite en el error de estimación.
+Por ejemplo, suponga que deseamos estimar el promedio diario de producción m de un 
+producto químico y deseamos que el error de estimación sea menor que 5 toneladas con pro-
+babilidad de .95. Debido a que aproximadamente 95% de las medias muestrales estarán a no 
+más de 2sY de m en muestreo repetido, estamos pidiendo que 2sY sea igual a 5 toneladas (vea 
+la Figura 8.9). Entonces
+2s
+√n = 5
+y
+n = 4s2
+25 .
+No podemos obtener un valor numérico exacto para n a menos que se conozca la desviación 
+estándar poblacional s. Esto es exactamente lo que esperaríamos porque la variabilidad aso-
+ciada con 
+
+[Bloque seleccionado #931 | relevancia=7]
+Pagina 930
+906  Índice
+Momentos muestrales, 472-473
+Momentos poblacionales, 472-473
+MSB. Vea Cuadrático medio para blo-
+ques
+MSE. Vea Cuadrático medio para error
+MST. Vea Cuadrático medio para trata-
+mientos
+Muestra
+ 
+aleatoria, 78
+ 
+definición de, 2
+ 
+elementos que afectan información 
+en, 640-641
+ 
+independiente, 645, 653
+ 
+pareada, 644-651
+ 
+probabilidad de, 460-461
+ 
+tamaño de, 421-425
+Muestra aleatoria, 78
+ 
+como estadístico suficiente, 461
+ 
+independiente, 653, 755-765
+ 
+simple, 78
+ 
+tamaño de, 421-424
+Muestras aleatorias independientes, 653
+ 
+prueba de suma de rango para, 755-
+757
+ 
+prueba U de Mann-Whitney para, 
+756, 758-765
+Muestras grandes
+ 
+estimadores de máxima probabilidad 
+y, 483-485
+ 
+intervalos de confianza y, 411-421, 
+483-484
+ 
+prueba de Friedman para, 772
+ 
+prueba de signo para comparar, 746-
+747
+ 
+prueba de Wilcoxon de rango con 
+signo para, 752-753
+ 
+prueba U de Mann-Whitney para, 
+761-762
+ 
+pruebas de hipótesis y, 496-507
+ 
+pruebas de Kruskal-Wallis para, 766-
+767
+ 
+pruebas de razón de probabilidad y, 
+553
+Muestreo
+ 
+aleatorio, 77-79
+ 
+error de predecir, 594
+Muestreo aleatorio, 77-79
+Muestreo aleatorio simple, 78
+Muestreo con/sin restitución, 78
+Multicolinealidad, 634
+Multiplicación
+ 
+de fila-columna, 822-824
+ 
+de matriz por número real, 822
+ 
+matricial, 822-824
+Multiplicación de fila-columna, 822-824
+MVUEs. Vea Estimadores insesgados de 
+varianza mínima
+N
+Nivel de confianza, 422
+Nivel de la prueba, 491
+Nivel de significación, 513-518
+ 
+alcanzada, 513-518, 745-746
+Nivel de un factor, 652, 661
+Niveles de significación alcanzados, 
+513-518, 745-746
+Normal previa a distribución, 816
+Números grandes, ley de, 451
+O
+Operaciones de fila, 829-832
+P
+p(y), 88, 91, 102
+Parámetro de escala, 185
+Parámetro de forma, 185
+Parámetro objetivo, 391
+Parámetros, 91, 390
+ 
+de función de densidad normal biva-
+riada, 284
+ 
+de función de densidad, 175
+ 
+definición de, 93
+ 
+distribución gamma, 185
+ 
+estimador de mínimo cuadrado, 584-
+589
+ 
+estimados, 443, 569
+ 
+forma y escala, 185
+ 
+inferencias respecto a modelo, 589-
+593, 616-622
+ 
+perjuicio, 546, 549
+Parámetros de modelo
+ 
+regresión lineal múltiple, 616-624
+ 
+regresión lineal sencilla, 589-593
+Parámetros de perjuicio, 546, 549
+Particiones
+ 
+de espacio muestral, 70, 71
+ 
+de objetos en grupos, 44
+ 
+de suma total de cuadrados, 662, 
+688
+Pearson, Karl, 714, 715
+Pendiente, estimación de, 643
+Percentil, 164
+Permutación, 43
+Plenitud, 472
+Población
+ 
+comparación de prueba de signo de, 
+747
+ 
+definición de, 2
+ 
+muestra aleatoria de, 77-79
+Poder de la prueba, 540-549
+ 
+definición de, 540
+ 
+errores tipo II y, 541
+ 
+

@@ -1,0 +1,694 @@
+Fuente bibliográfica: Estadística para negocios y economía - Anderson, Sweeney y Williams. 11.ª edición.pdf
+Actividad: 15 (5.3 Ejercicios individuales 5% Tarea)
+Palabras clave: prueba de rachas, aleatoriedad, Wald-Wolfowitz, Kruskal-Wallis, Mann-Whitney, secuencia
+
+[Bloque seleccionado #391 | relevancia=6]
+Pagina 390
+356 
+Capítulo 9  Pruebas de hipótesis
+b) ¿Cuál es el error tipo I en esta situación? ¿Qué consecuencias tiene cometerlo?
+c) 
+¿Cuál es el error tipo II en esta situación? ¿Qué consecuencias tiene cometerlo?
+7. 
+El personal de ventas de Carpetland tiene un promedio de $8 000 semanales en ventas. Steve 
+Contois, vicepresidente de la empresa, propone un plan de compensación con nuevos incen-
+tivos. Steve espera que los resultados de un periodo de prueba permitirán concluir que el plan 
+de compensación aumenta el promedio de ventas de los vendedores.
+a) Establezca las hipótesis nula y alternativa adecuadas.
+b) ¿Cuál es el error tipo I en esta situación? ¿Qué consecuencias tiene cometerlo?
+c) 
+¿Cuál es el error tipo II en esta situación? ¿Qué consecuencias tiene cometerlo?
+8. 
+Suponga que se implementará un nuevo método de producción si mediante una prueba de 
+hipótesis se confirma la conclusión de que el nuevo método reduce el costo medio de opera-
+ción por hora.
+a) Proporcione las hipótesis nula y alternativa adecuadas si el costo medio de producción 
+actual por hora es $220.
+b) ¿Cuál es el error tipo I en esta situación? ¿Qué consecuencias tiene cometerlo?
+c) 
+¿Cuál es el error tipo II en esta situación? ¿Qué consecuencias tiene cometerlo?
+9.3 
+ Media poblacional: σ conocida
+En el capítulo 8 se dijo que el caso de σ conocida se reﬁ ere a aplicaciones en las que se cuenta 
+con datos históricos o con alguna información que permita obtener buenas estimaciones de 
+la desviación estándar poblacional antes de tomar la muestra. En tales casos, para propósitos 
+prácticos se considera que se conoce la desviación estándar poblacional. En esta sección se 
+muestra cómo realizar una prueba de hipótesis para la media poblacional en el caso en que σ 
+es conocida.
+Los métodos que se presentan dan resultados exactos si la población de la que se seleccio-
+na la muestra tiene distribución normal. En los casos en los que no sea razonable suponer que 
+la población tiene esta distribución, se pueden aplicar estos métodos siempre y cuando el tama-
+ño de la muestra sea suﬁ cientemente grande. Al ﬁ nal de esta sección se proporcionan algunos 
+consejos prácticos en relación con la distribución poblacional y el tamaño de la muestra.
+Prueba de una cola
+La prueba de una cola para la media poblacional toma una de las dos formas siguientes.
+ 
+Prueba de cola inferior (o izquierda) 
+Prueba de cola superior (o derecha)
+ 
+H0: μ  μ0 
+H0: μ  μ0
+ 
+Ha: μ  μ0 
+Ha: μ  μ0
+A continuación se presenta un ejemplo de una prueba para la cola inferior.
+La Federal Trade Commission (FTC) de E
+
+[Bloque seleccionado #692 | relevancia=4]
+Pagina 691
+ 
+15.4  Supuestos del modelo 
+657
+15.4  Supuestos del modelo
+En la sección 15.1 se presentó el siguiente modelo de regresión múltiple.
+Los supuestos acerca del término del error  en el modelo de regresión múltiple son análo-
+gos a los supuestos en el modelo de regresión lineal simple.
+Para entender mejor la forma de la relación dada por la ecuación (15.11), considere la si-
+guiente ecuación de regresión múltiple con dos variables independientes.
+E(y)  0  1x1  2x2
+La gráﬁ ca de esta ecuación es un plano en el espacio tridimensional. La ﬁ gura 15.5 es un ejem-
+plo de gráﬁ ca de este tipo. Observe que, como se indica, el valor de  es la diferencia entre el 
+verdadero valor de y y su valor esperado, E(y), cuando x1  x1* y x2  x2*. 
+modelo de regresión múltiple
+ 
+y  0  1x1  2x2  . . .  pxp   
+(15.10)
+SUPUESTOS SOBRE EL TÉRMINO DEL ERROR  EN EL MODELO DE REGRESIÓN MÚLTIPLE 
+y  0  1x1  . . .  pxp  
+1.  El término del error  es una variable aleatoria cuya media o valor esperado es 
+cero, es decir, E()  0
+ 
+ Consecuencia. Para los valores dados de x1, x2, . . . , xp, el valor esperado o va-
+lor promedio de y está dado por
+ 
+E(y)  0  1x1  2x2  . . .  pxp 
+(15.11)
+ 
+ Ésta es la ecuación de regresión múltiple presentada en la sección 15.1. En dicha 
+expresión, E(y) representa el promedio de todos los valores que puede tomar y 
+para valores dados de x1, x2, . . . , xp.
+2.  La varianza de  se denota σ 2 y es la misma para todos los valores de las varia-
+bles independientes x1, x2, . . . , xp.
+ 
+ Consecuencia. La varianza de y respecto de la línea de regresión es σ 2 y es la 
+misma para todos los valores de x1, x2, . . . , xp.
+3.  Los valores de  son independientes.
+ 
+ Consecuencia. El valor de  para un determinado conjunto de valores de las va-
+riables independientes no está relacionado con el valor de  de ningún otro con-
+junto de valores.
+4.  El término del error  es una variable aleatoria distribuida normalmente y refleja 
+la desviación entre el valor de y y su valor esperado dado por y  0  1x1  
+2x2  . . .  pxp.
+ 
+ Consecuencia. Como 0,  1, . . . , p son constantes para los valores dados de 
+x1, x2, . . . , xp, la variable dependiente y es también una variable aleatoria distri-
+buida normalmente.
+
+[Bloque seleccionado #906 | relevancia=4]
+Pagina 905
+ 
+19.3  Prueba de Mann-Whitney-Wilcoxon 
+871
+17. 
+La prueba de aptitud académica SAT se compone de tres partes: lectura crítica, matemáticas y 
+escritura. Cada parte de la prueba se califica en una escala de 200 hasta 800 puntos, con una 
+mediana de aproximadamente 500 (The World Almanac, 2009). Se puede asumir que las pun-
+tuaciones para cada parte de la prueba son simétricas. Utilice los siguientes datos para probar la 
+hipótesis de que la puntuación mediana de la población de estudiantes en la parte de escritura 
+es 500. Utilice α  0.05. ¿Cuál es su conclusión?
+Golfer 
+1st Round 
+2nd Round
+Kevin Duke 
+65 
+71
+Andrew Buckle 
+70 
+74
+Paul Claxton 
+69 
+73
+Larry Mize 
+72 
+71
+Chris Riley 
+68 
+70
+Bubba Watson 
+70 
+68
+Carlos Franco 
+71 
+71
+Richard Johnson 
+72 
+69
+19.3  Prueba de Mann-Whitney-Wilcoxon
+En el capítulo 10 se introdujo un procedimiento para conducir una prueba de hipótesis acerca 
+de la diferencia entre las medias de dos poblaciones con dos muestras independientes, una de 
+la población 1 y otra de la población 2. Esta prueba paramétrica requería datos cuantitativos 
+y el supuesto de que ambas poblaciones tenían una distribución normal. En el caso de que las 
+desviaciones estándar de la población σ1 y σ2 fueran desconocidas, con la desviación estándar 
+muestral s1 y s2 se obtenían estimaciones para σ1 y σ2, y se utilizó la distribución t para hacer 
+una inferencia acerca de la diferencia entre las medias de las dos poblaciones.
+En esta sección se presenta una prueba no paramétrica de la diferencia entre dos poblacio-
+nes a partir de dos muestras independientes. Las ventajas de este procedimiento estriban en que 
+se pueden utilizar ya sea los datos ordinales1 o los datos cuantitativos, y no requiere el supuesto 
+de que las poblaciones tengan una distribución normal. Versiones diferentes de esta prueba 
+fueron desarrolladas conjuntamente por Mann y Whitney y también por Wilcoxon. Como re-
+sultado, a la prueba se le conoce como prueba de Mann-Whitney y prueba de suma de rangos 
+de Wilcoxon. Las pruebas son equivalentes y ambas versiones ofrecen la misma conclusión. En 
+esta sección nos referiremos a esta prueba no paramétrica como prueba de Mann-Whitney-
+Wilcoxon (MWW).
+1  Los datos ordinales son datos categóricos que pueden tener un orden jerárquico. Esta escala de medición se estudia con 
+más detalle en la sección 1.2 del capítulo 1.
+ WEB archivo
+WritingScore
+ 
+635 
+701 
+439 
+447 
+464
+ 
+502 
+405 
+453 
+471 
+476
+ 
+447 
+590 
+337 
+387 
+514
+
+[Bloque seleccionado #918 | relevancia=4]
+Pagina 917
+ 
+19.4  Prueba de Kruskal-Wallis 
+883
+Williams Manufacturing Company contrata empleados para su equipo gerencial que pro-
+vienen de tres universidades. Recientemente, el director del departamento de personal de la em-
+presa comenzó a revisar el informe de desempeño anual en un intento por determinar si existen 
+diferencias en el desempeño de los empleados de acuerdo con la universidad de procedencia. 
+Se cuenta con los datos para muestras independientes de siete gerentes que se graduaron en la 
+universidad A, seis que provienen de la universidad B y siete que egresaron de la universidad 
+C. Estos datos se resumen en la tabla 19.14. La caliﬁ cación del desempeño de cada gerente se 
+registra en una escala de 0 a 100, donde 100 es la caliﬁ cación más alta. Suponga que se desea 
+probar si las tres poblaciones de gerentes son idénticas en términos de caliﬁ cación del desem-
+peño. Se utilizará un nivel de signiﬁ cancia de 0.05 para la prueba. 
+El primer paso en el procedimiento de Kruskal-Wallis es clasiﬁ car las muestras combinadas 
+de los valores más bajos a los más altos. Utilizando las 20 observaciones de la tabla 19.14, el 
+nivel más bajo de 15 para el 4º gerente en la muestra de la universidad B recibe un rango 1. La 
+más alta caliﬁ cación de 95 para el 5º director la muestra de la universidad A recibe un rango 
+de 20. Los datos de desempeño y sus rangos asignados se muestran en la tabla 19.15. Observe 
+que se asignan rangos promedio para igualar las caliﬁ caciones de desempeño de 60, 70, 80 y 
+90. La tabla 19.15 también muestra la suma de los rangos para cada una de las tres muestras. 
+El estadístico de la prueba de Kruskal-Wallis utiliza la suma de los rangos de las tres mues-
+tras y se calcula de la siguiente manera. 
+TABLA 19.14
+Evaluación del 
+desempeño de 
+20 empleados 
+de Williams
+ 
+ 
+Universidad
+ 
+A 
+B 
+C
+ 
+25 
+60 
+50
+ 
+70 
+20 
+70
+ 
+60 
+30 
+60
+ 
+85 
+15 
+80
+ 
+95 
+40 
+90
+ 
+90 
+35 
+70
+ 
+80 
+ 
+75
+ESTADÍSTICO DE PRUEBA DE KRUSKAL-WALLIS
+ 
+H  
+12
+nT(nT  1)
+Ri
+2
+ni
+k
+a
+i1
+  3(nT  1) 
+(19.7)
+donde
+k  número de poblaciones
+ni  número de observaciones en la muestra i
+nT  
+k
+a
+i1
+ nt  número total de observaciones en todas las muestras
+Ri  suma de los rangos para la muestra i
+ 
+Universidad A 
+Rango 
+Universidad B 
+Rango 
+Universidad C 
+Rango
+ 
+25 
+ 3 
+60 
+ 9 
+50 
+  7
+ 
+70 
+12 
+20 
+ 2 
+70 
+12
+ 
+60 
+  9 
+30 
+ 4 
+60 
+  9
+ 
+85 
+17 
+15 
+ 1 
+80 
+   15.5
+ 
+95 
+20 
+40 
+ 6 
+90 
+   18.5
+ 
+90 
+   18.5 
+35 
+ 5 
+70 
+12
+ 
+80 
+   15.5 
+Suma de rangos 
+27 
+75 
+14
+ 
+Suma de rangos 
+95 
+ 
+ 
+Suma de rangos 
+88
+TABLA 19.15   Rangos para las tres muestras 
+
+[Bloque seleccionado #920 | relevancia=5]
+Pagina 919
+ 
+19.4  Prueba de Kruskal-Wallis 
+885
+Ejercicios
+Aplicaciones
+26. 
+Una muestra de 15 consumidores ofrece las siguientes calificaciones para tres productos di-
+ferentes. A cinco de los consumidores se les asignó aleatoriamente probar y calificar cada pro-
+ducto. Utilice la prueba de Kruskal-Wallis y α  0.05 para determinar si existe una diferencia 
+significativa entre las respectivas calificaciones.
+ 
+Producto
+ 
+A 
+B 
+C
+ 
+50 
+80 
+60
+ 
+62 
+95 
+45
+ 
+75 
+98 
+30
+ 
+48 
+87 
+58
+ 
+65 
+90 
+57
+27. 
+Se evalúan tres programas de preparación para un examen de admisión. Las calificaciones ob-
+tenidas por una muestra de 20 personas que utilizaron los programas de preparación arrojaron 
+los siguientes datos. Utilice la prueba de Kruskal-Wallis para determinar si existe una diferencia 
+significativa entre los tres programas. Utilice α  0.05.
+ 
+Programa
+ 
+A 
+B 
+C
+ 
+540 
+450 
+600
+ 
+400 
+540 
+630
+ 
+490 
+400 
+580
+ 
+530 
+410 
+490
+ 
+490 
+480 
+590
+ 
+610 
+370 
+620
+ 
+ 
+550 
+570
+28. 
+ El entrenamiento durante 40 minutos de una de las siguientes actividades durante tres días a la 
+semana favorece la pérdida de peso. Los siguientes datos muestrales de tres diferentes activi-
+dades presentan el número de calorías quemadas durante 40 minutos de ejercicio. ¿Estos datos 
+indican diferencias en la cantidad de calorías quemadas en las tres actividades? Utilice 0.05 
+como nivel de significancia. ¿Cuál es su conclusión?
+2.  El procedimiento de Minitab para la prueba de 
+Kruskal-Wallis se describe en el apéndice 19.1. 
+Minitab asume que las poblaciones tienen la mis-
+ma forma. Como resultado, describe la prueba 
+de Kruskal-Wallis como una prueba de las dife-
+rencias entre las medianas de las poblaciones. Si 
+no se siente cómodo al realizar el supuesto de la 
+“misma forma”, puede seguir utilizando Minitab. 
+Sin embargo, tendrá que interpretar los resultados 
+como una prueba de hipótesis nula en la que todas 
+las poblaciones son idénticas.
+ WEB archivo
+TestPrepare
+AUTO evaluación
+AUTO evaluación
+
+[Bloque seleccionado #927 | relevancia=5]
+Pagina 926
+892 
+Capítulo 19  Métodos no paramétricos
+La prueba de signos es un procedimiento no paramétrico para probar hipótesis acerca de 
+una mediana de la población o con muestras pareadas. Los datos deben resumirse en dos cate-
+gorías: una denotada por un signo positivo y otra denotada por un signo negativo. La prueba 
+de rangos con signo de Wilcoxon analiza las muestras pareadas de dos poblaciones cuando se 
+dispone de datos cuantitativos. No se requiere ningún supuesto que no sea que la distribución 
+de las diferencias pareadas sea simétrica. La prueba de rangos con signo de Wilcoxon se utiliza 
+para determinar si la mediana poblacional de diferencias pareadas es cero. Esta prueba también 
+se utiliza para hacer inferencias acerca de la mediana de una población simétrica.
+La prueba de Mann-Whitney-Wilcoxon es un procedimiento no paramétrico para la dife-
+rencia entre dos poblaciones a partir de dos muestras independientes. Es una alternativa para la 
+prueba paramétrica de t para la diferencia entre las medias de dos poblaciones. Se obtienen los 
+rangos combinados para los datos de las dos muestras y el estadístico de prueba para la prue-
+ba de MWW es la suma de los rangos de la primera muestra. En la mayoría de las aplicaciones, los 
+tamaños de muestra son lo suﬁ cientemente grandes como para utilizar una aproximación nor-
+mal con el factor de corrección de continuidad en la realización de la prueba de hipótesis. Si 
+no se realiza ningún supuesto acerca de la población, el procedimiento MWW prueba si las dos 
+poblaciones son idénticas. Si puede hacer el supuesto de que las dos poblaciones tengan la mis-
+ma forma, la prueba ofrece una inferencia acerca de las diferencias entre las medianas de las 
+dos poblaciones.
+La prueba de Kruskal-Wallis extiende la prueba de MWW a tres o más poblaciones. Es una 
+alternativa al análisis paramétrico de la prueba de varianza para las diferencias entre las medias 
+de tres o más poblaciones con distribución normal. La prueba de Kruskal-Wallis no requiere 
+ningún supuesto acerca de la distribución de las poblaciones y utiliza la hipótesis nula de que 
+las k poblaciones son idénticas. Si se puede hacer el supuesto de que las poblaciones tienen la 
+misma forma, la prueba ofrece una inferencia acerca de las diferencias entre las medianas de 
+las k poblaciones. En la última sección del capítulo se introdujo el coeﬁ ciente de correlación 
+por rangos de Spearman como una medida de asociación entre dos variables basada en datos 
+ordenados por rango. 
+Glosario
+Coeﬁ ciente de correlación por rangos de Spearman Medida de corre
+
+[Bloque seleccionado #933 | relevancia=4]
+Pagina 932
+898 
+Capítulo 19  Métodos no paramétricos
+Paso 3. Elija 1-Sample Wilcoxon.
+Paso 4. Cuando el cuadro de diálogo 1-Sample Wilcoxon aparezca:
+ 
+ 
+Introduzca C3 en el cuadro Variables.
+ 
+ 
+Seleccione Test Median.
+ 
+ 
+Introduzca el valor hipotético 0 en el cuadro Test Median.
+ 
+ 
+Seleccione not equal del menú Alternative.
+ 
+ 
+Haga clic en OK.
+Observe que el procedimiento de Minitab utiliza las diferencias de los datos pareados de la 
+columna C3. Aunque el archivo muestra los tiempos para cada método de producción en las 
+columnas C1 y C2, estos datos no se utilizan para obtener el resultado de Minitab.
+El mismo procedimiento se utiliza para probar una hipótesis acerca de la mediana de una 
+población simétrica. Ingrese los datos reales en cualquier columna de la hoja de cálculo y siga 
+los pasos anteriores. Introduzca el valor hipótetico de la mediana poblacional en el cuadro Test 
+Median y seleccione la hipótesis alternativa deseada en el cuadro Alternative. Los resultados 
+se obtienen haciendo clic en OK. Para realizar esta prueba no es necesario ingresar la diferencia 
+de los datos. La rutina de Minitab hará los cálculos automáticamente. Recuerde que esta prueba 
+es válida sólo para la mediana de una población simétrica.
+Prueba de Mann-Whitney-Wilcoxon 
+Los siguientes pasos permiten probar la hipótesis de que dos poblaciones son idénticas con 
+dos muestras independientes, una de cada población. Se utilizará el ejemplo del Third National 
+Bank de la sección 19.3 para ilustrar el procedimiento. El archivo de datos ThirdNational pro-
+vee los 12 saldos de la cuenta de la sucursal 1 en la columna C1, y los 10 saldos de la cuenta de 
+la sucursal 2 en la columna C2. Los pasos siguientes aplicarán el procedimiento de Minitab para 
+probar H0: las dos poblaciones son idénticas, contra Ha: las dos poblaciones no son idénticas. 
+Paso 1. Seleccione el menú Stat.
+Paso 2. Elija Nonparametrics.
+Paso 3. Elija Mann-Whitney.
+Paso 4. Cuando el cuadro de diálogo Mann-Whitney aparezca:
+ 
+ 
+Introduzca C1 en el cuadro First sample.
+ 
+ 
+Introduzca C2 en el cuadro Second sample.
+ 
+ 
+Seleccione not equal del menú Alternative.
+ 
+ 
+Haga clic en OK.
+Minitab informará el valor del estadístico de prueba y el valor-p correspondiente. Puesto que 
+Minitab supone automáticamente que las dos poblaciones tienen la misma forma, la salida des-
+cribe el resultado en términos de la diferencia entre las medianas de las dos poblaciones. Obser-
+ve que el resultado también proporciona una estimación puntual y una estimación por intervalo 
+de conﬁ anza de la diferencia entre las medianas. La 
+
+[Bloque seleccionado #975 | relevancia=7]
+Pagina 974
+940 
+Capítulo 21  Análisis de decisiones
+Los gerentes deberán elegir, primero, una alternativa de decisión (tamaño del complejo), a 
+la cual seguirá un estado de la naturaleza (la demanda de los condominios), y finalmente se 
+tendrá una consecuencia. En este caso, la consecuencia son las utilidades que obtendrá PDC.
+Tablas de pagos
+Dadas las tres alternativas de decisión y los dos estados de la naturaleza, ¿qué tamaño del com-
+plejo debe elegir PDC? Para responder esta pregunta, la empresa necesita conocer la consecuen-
+cia relacionada con cada alternativa de decisión y cada estado. En el análisis de decisiones, nos 
+referimos a la consecuencia resultante de la combinación específica de una alternativa de deci-
+sión y un estado como un pago. La tabla que muestra los pagos para todas las combinaciones de 
+las alternativas de decisión y los estados de la naturaleza es una tabla de pagos.
+Debido a que PDC desea elegir el tamaño del complejo que le proporcione una mayor uti-
+lidad, ésta se usa como consecuencia. La tabla de pagos junto con las utilidades expresadas 
+en millones de dólares se muestra en la tabla 21.1. Observe, por ejemplo, que si se construye 
+un complejo mediano y la demanda resulta ser alta, se tendrá una utilidad de $14 millones. Se 
+utilizará la notación Vij para denotar la utilidad relacionada con la alternativa de decisión i y el 
+estado de la naturaleza j. Al utilizar la tabla 21.1, V31  20 significa que se tendrá un pago de 
+$20 millones si la decisión es construir un complejo grande (d3) y la demanda que presenta el 
+estado de la naturaleza es alta (s1). De manera similar, V32  9 significa una pérdida de 9 mi-
+llones si la decisión es construir un complejo grande (d3) y se presenta un estado de la naturaleza 
+de baja demanda (s2) .
+Árboles de decisión
+Un árbol de decisión muestra gráficamente el carácter secuencial del proceso de toma de 
+decisiones. En la figura 21.1 se presenta un árbol de decisión para el problema de PDC, lo que de-
+muestra el carácter o la progresión lógica que se presentará con el tiempo. En primer lugar, 
+PDC deberá tomar una decisión con respecto al tamaño del condominio (d1, d2, d3). Después de 
+tomada ésta, se presentará ya sea el estado de la naturaleza s1 o s2. El número que aparece en 
+cada punto extremo del árbol indica el pago relacionado con una secuencia en particular. Por 
+ejemplo, el pago 8 que se encuentra más arriba indica que se espera una utilidad de $8 millo-
+nes si PDC construye un complejo de condominios pequeño (d1) y la demanda resulta  ser alta 
+(s1). El pago siguiente, 7, si
+
+[Bloque seleccionado #1000 | relevancia=10]
+Pagina 999
+ 
+Glosario 
+965
+cierta información sobre los eventos inciertos y las posibles consecuencias o pagos. A los even-
+tos futuros inciertos se les conoce como eventos aleatorios y a los resultados de los eventos 
+aleatorios se les conoce como estados de la naturaleza.
+En este capítulo se mostró cómo las tablas de pagos y los árboles de decisión permiten es-
+tructurar un problema de decisión y describir las relaciones entre las decisiones, los eventos alea-
+torios y las consecuencias. Con las estimaciones de probabilidad que proporcionan los estados 
+de la naturaleza, se utilizó el método del valor esperado para identificar la alternativa de decisión 
+o la estrategia de decisión recomendable.
+En los casos en que la información muestral sobre los eventos aleatorios está disponible, 
+existe una secuencia de decisiones que se puede tomar. En primer lugar, decidir si se obtiene 
+o no la información muestral. Si la respuesta es afirmativa, deberá desarrollarse una estrategia 
+de decisión óptima basada en información muestral específica. En este caso pueden utilizarse 
+los árboles de decisión y el método del valor esperado para determinar la estrategia de decisión 
+óptima.
+El complemento de Excel PrecisionTree suele utilizarse para elaborar los árboles de deci-
+sión y resolver los problemas respectivos presentados en este capítulo. Las instrucciones para 
+descargar e instalar el software PrecisionTree en su equipo se proporcionan en el sitio web del 
+libro. En el apéndice al final del capítulo se incluye un ejemplo de cómo utilizar PrecisionTree 
+para el problema del PDC de la sección 21.1.
+Glosario
+Árbol de decisión Representación gráfica de un problema de decisión que muestra el carácter 
+secuencial del proceso de toma de decisiones.
+Consecuencia Resultado obtenido cuando se elige una alternativa de decisión y se produce 
+un evento aleatorio. A la medida de la consecuencia se le llama pago.
+Estados de la naturaleza Posibles resultados de eventos aleatorios que afectan el pago aso-
+ciado con una alternativa de decisión.
+Estrategia de decisión Estrategia que involucra una secuencia de decisiones y los resultados 
+aleatorios de proporcionar la solución óptima a un problema de decisión.
+Eventos aleatorios Evento futuro incierto que afecta la consecuencia, o pagos, relacionada 
+con una decisión.
+Información muestral Nueva información obtenida mediante la investigación o la experi-
+mentación que permite una revisión o actualización de las probabilidades del estado de la na-
+turaleza.
+Método del valor esperado Método para elegir una alternativa de decisión que
+
+[Bloque seleccionado #1111 | relevancia=4]
+Pagina 1110
+1076 
+Índice analítico
+M
+Malcolm Baldrige National Quality Award, 906
+Marco, 267
+Margen de error, 309, 310-314, 323n1, 331n1
+Marketing, 4
+MeadWestvaco Corporation, 266
+Media, 14-15, 87-88, 124-125, 219
+Media muestral, 126, 267, 297n1, 521n1
+Media muestral general, 511
+Media poblacional
+estimación del tamaño de la muestra cuando 
+σ conocida, 310-314
+inferencia acerca de la diferencia entre muestras 
+pareadas, 423-425
+inferencias acerca de la diferencia entre σ1 y σ2 
+conocidas, 407-412
+inferencias acerca de la diferencia entre σ1 y σ2 
+desconocidas, 415-419
+para datos agrupados, 127
+σ conocida, 310-314
+σ desconocida, 316-323
+Media poblacional: σ conocida
+estimación por intervalo, 310-314
+margen de error,  310-314
+prueba de una cola, 356-361
+Media poblacional: σ desconocida
+estimación por intervalo, 317-320
+margen de error, 317-320
+prueba de dos colas, 372-373
+pruebas de hipótesis y, 370-374
+Media ponderada, 124-125
+Media recortada, 92n1
+Mediana, 88-89
+Medida de la distancia de Cook, 679-681, 681n2
+Medidas de asociación entre dos variables, 115-124
+Medidas de localización central, 297n1
+Medidas de posición o localización, 87-92
+Medidas de variabilidad, 95-102
+Mejora continua, 909
+Método de elaboración de pronósticos usando 
+promedios móviles ponderados, 800
+Método de los mínimos cuadrados, 565-575, 569n1, 
+645-649
+Método de pronóstico de regresión de tendencia 
+lineal, 807-812, 817n1
+Método de suavizamiento exponencial, 800-804, 
+804n2
+Método del valor crítico, 360-361
+Método del valor esperado, 941-943
+Método del valor-p, 358-360
+Métodos de distribución libre, 857
+Métodos de elaboración de pronósticos
+estacionalidad y tendencia, 820-829
+promedios móviles, 797-800
+promedios móviles ponderados, 800
+proyección de tendencia, 807-820
+suavizamiento exponencial, 800-804
+Métodos no paramétricos, 857
+Prueba de Kruskal-Wallis, 882-884
+coeficiente de correlación por rangos de 
+Spearman, 887-889
+prueba de Mann-Whitney-Wilcoxon (MWW), 
+871-882
+prueba de rangos con signos de Wilcoxon, 865-871
+prueba de signos, 857-865, 861n1
+Métodos paramétricos, 856
+Minería de datos, 17-18
+Minitab, 17
+alpha to enter, 739-740
+análisis de regresión con, 637-638
+análisis de varianza, 554-555
+correlación por rangos de Spearman, 899
+covarianza y correlación, 143
+descomposición de una serie de tiempo, 
+850-851
+diagrama de caja, 143
+diagrama de puntos, 73
+diagrama de tallo y hoja, 74
+diagramas de dispersión, 74
+diferencia entre dos medias poblacionales con 
+muestras pareadas, 443
+diferencia entre dos medias poblacionales: 
+σ1 y σ2 desconocidas, 442-443
+diferencia entre dos propor

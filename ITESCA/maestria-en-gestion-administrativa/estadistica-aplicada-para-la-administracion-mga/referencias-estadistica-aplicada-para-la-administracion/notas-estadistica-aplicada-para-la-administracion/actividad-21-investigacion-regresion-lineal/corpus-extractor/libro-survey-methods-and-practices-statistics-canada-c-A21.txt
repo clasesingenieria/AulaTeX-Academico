@@ -1,0 +1,910 @@
+Fuente bibliográfica: Survey Methods and Practices - Statistics Canada. Cat. 12-587-X.pdf
+Actividad: 21 (7.2 Investigación 4% Tarea)
+Palabras clave: regresión lineal, productividad, rentabilidad, ventas, costos, ANOVA, mínimos cuadrados, desempeño
+
+[Bloque seleccionado #259 | relevancia=2]
+--- PÁGINA PDF 258 ---
+SURVEY METHODS AND PRACTICES 
+STATISTICS CANADA 
+246
+11.4.2.2 Comparing Two (Sub-)population Means  
+ 
+The approach to the test on one mean can readily be extended to two means: the difference between two 
+groups is of interest, or perhaps, the same group measured at two points in time. Now, it is assumed that a 
+sample was drawn from each group, that the samples are independent and that each sample is large 
+enough to justify the application of the Central Limit Theorem. 
+ 
+Now, the first group has unknown mean 
+1Y and the second group has unknown mean 
+2
+Y ; if the null 
+hypothesis is true, these unknown means are equal. Thus, their difference is zero and their estimates 
+should be quite close to one another. Any large observed difference between the estimates must be either 
+because the samples are unfortunately bad (but there is no good reason for that), or because H0 is false. 
+Following this rationale, the test can be laid out as:  
+ 
+
+
+
+≠
+=
+2
+1
+1
+2
+1
+0
+:
+:
+Y
+Y
+H
+Y
+Y
+H
+ 
+ 
+with the asymptotically normal test statistic: 
+ 
+)
+ˆ
+(
+ˆ
+)
+ˆ
+(
+ˆ
+ˆ
+ˆ
+2
+1
+2
+1
+Y
+r
+a
+V
+Y
+r
+a
+V
+Y
+Y
+z
++
+−
+=
+. 
+ 
+The level of the test is decided in advance, usually 5%. Since this is a two-tailed test, this corresponds to 
+rejecting the null hypothesis if the test statistic lies outside (–1.96, 1.96). (Note that this test statistic is 
+only correct if the two samples are independent.) 
+ 
+Example 11.4: Testing Two Means from an SRS 
+ 
+Suppose an analyst is interested in determining whether the people in one province weigh more, on 
+average, than the people another province. A simple random sample was drawn in each province and the 
+results are 
+1ˆY = 95, 
+2ˆY = 105, 
+)
+ˆ
+(ˆ
+1Y
+E
+S
+= 1.4, 
+)
+ˆ
+(ˆ
+2
+Y
+E
+S
+= 2.2. Then the test statistic is: 
+ 
+83
+.3
+80
+.6
+10
+2.2
+4.1
+105
+95
+2
+2
+−
+=
+−
+=
++
+−
+=
+z
+ 
+ 
+and the two groups are declared to be significantly different.  
+ 
+ 
+11.4.2.3 Comparing Many (sub-)population Means: the One-way ANOVA and Linear Regression 
+Models  
+ 
+The natural extension of the above theory is to develop a test for the comparison of the means of many 
+groups. With ANOVA (analysis of variance) no assumption is made about the relationship that could 
+exist among the means; with linear models, a linear relationship among the means is hypothesised. Linear 
+models fall in a class of statistical techniques used to determine if a response variable is linearly related to 
+one or more explanatory variables. A key characteristic of linear models is that the effects of the various 
+explanatory variables are additive.
+
+[Bloque seleccionado #260 | relevancia=4]
+--- PÁGINA PDF 259 ---
+ANALYSIS OF SURVEY DATA 
+STATISTICS CANADA 
+247
+11.4.2.3.1 Analysis of Variance (ANOVA) 
+ 
+ANOVA is used to assess the effects of one or more qualitative variables (called factors) on a continuous 
+response variable. The differences between means are tested by investigating the variability in a set of 
+observations to determine if the variability is random, or if it can be attributed to the factor(s).  
+ 
+The simplest ANOVA involves a one-way design in which a sample is drawn from each of the k different 
+groups of a single factor (i.e., k different means are compared and the null hypothesis is that they are all 
+equal). For example, the analyst might want to test the null hypothesis that there is no difference in mean 
+incomes for ten provinces: 
+ 
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+:
+Y
+Y
+Y
+Y
+Y
+Y
+Y
+Y
+Y
+Y
+H O
+=
+=
+=
+=
+=
+=
+=
+=
+=
+. 
+ 
+The mathematical expression for the ANOVA model has the following form:  
+ 
+i
+g
+gi
+y
+ε
+γ
+γ
++
++
+=
+0
+ 
+ 
+where ygi is the value of the response variable, income, for the ith unit of the gth province; γ0 is the mean 
+income across all provinces; γg is the difference between province g’s mean income and the national 
+income; if all means are equal, ∑γg = 0; finally, εi is assumed to be a random error variable with mean 0 
+and variance σ2. 
+ 
+The total variation in the population is divided into variation due to the differences between the k groups 
+and variation due to differences between subjects within the same group:  
+ 
+(
+)
+∑∑
+∑
+∑∑
+−
++
+−
+=
+−
+g
+i
+g
+gi
+g
+g
+g
+g
+i
+gi
+Y
+y
+Y
+Y
+N
+Y
+y
+2
+2
+2
+)
+(
+)
+(
+ 
+ 
+where Ng is the number of units in group g, Y is the mean of group g and Y is the overall mean. 
+ 
+If independent random samples have been drawn from g normally distributed populations, then this 
+variation can be estimated as follows:  
+ 
+(
+)
+)
+(
+)
+(
+)
+(
+)
+(
+)
+(
+2
+2
+2
+Residual
+SS
+Model
+SS
+total
+SS
+y
+y
+y
+y
+n
+y
+y
+g
+S
+i
+g
+gi
+g
+g
+g
+g
+S
+i
+gi
++
+=
+−
++
+−
+=
+−
+∑∑
+∑
+∑∑
+∈
+∈
+ 
+ 
+where ng is the number of sampled units in group g, 
+g
+y is the sample mean of group g, y is the overall 
+sample mean and SS stands for ‘sums of squares’. 
+ 
+If the k sample means are all the same, they are also equal to the overall mean y . Then, within the limits 
+of random variation, the between group variance, namely: 
+ 
+1
+)
+(
+)
+(
+−
+=
+g
+Model
+SS
+Model
+MS
+ 
+should be close to zero.
+
+[Bloque seleccionado #261 | relevancia=2]
+--- PÁGINA PDF 260 ---
+SURVEY METHODS AND PRACTICES 
+STATISTICS CANADA 
+248
+This can be assessed using an F-test built as follows: 
+ 
+
+
+
+≠
+=
+=
+≡
+
+
+
+≠
+∀
+=
+k
+j
+Y
+Y
+H
+Y
+Y
+H
+j
+H
+g
+H
+k
+j
+j
+g
+,
+ 
+some
+for 
+,
+:
+:
+ 
+some
+for 
+,0
+:
+,0
+:
+1
+10
+1
+0
+1
+0
+L
+γ
+γ
+ 
+ 
+with the test statistic 
+)
+1
+(
+;1
+~
+)1
+(
+)
+(
+)1
+(
+)
+(
+)
+(
+)
+(
+−
+−
+−
+−
+=
+=
+g
+n
+g
+g
+g
+F
+n
+g
+Residual
+SS
+g
+Model
+SS
+Residual
+MS
+Model
+MS
+F
+ 
+ 
+This test statistic has a Fisher-Snedecor F-distribution with (g-1) and g(ng-1) degrees of freedom. The 
+critical values are read off ‘F tables’ with the appropriate level α and degrees of freedom. The test will 
+find a significant difference among the means if the calculated F statistic is large enough, that is, larger 
+than the tabulated critical value. 
+ 
+The case described here is for the simplest sample design: assuming equal size samples in each group and 
+simple random sampling in each group. This is not typical situation of large scale surveys, and need not 
+be efficient in practical applications of experimental designs. 
+ 
+For more information on ANOVA, see any introductory statistics book (e.g., Lohr, 1999, Wonnacott and 
+Wonnacott, 1977), or books on experimental designs (Box, Hunter, Hunter, 1978).  
+ 
+ 
+11.4.2.3.2 Linear Regression 
+ 
+Linear regression is probably the best known linear model. Whereas ANOVA is used to determine if one 
+group mean is significantly different from the rest, regression is used to identify or model the relationship 
+among the different group means. Another application of linear regression is to make predictions or 
+forecasts of the response variable for values of the known related explanatory variables. In linear 
+regression, the response variable is usually a continuous variable (e.g., age, weight, height) and the 
+explanatory variables are either qualitative or quantitative. When only one explanatory variable is used, 
+the regression is called simple, when several are used, the regression is called multiple.  
+ 
+For example, suppose that a survey collecting weight and height data has been conducted and the analyst 
+is interested in how these two variables are related. From the following graph of the data, there seems to 
+be a linear relationship between the two variables. 
+ 
+The mathematical model for this relationship has the following form:  
+ 
+i
+i
+i
+x
+y
+ε
+β
+β
++
++
+=
+1
+0
+ 
+ 
+where yi is the value of the continuous response variable, weight, for the ith unit; xi is the value of the 
+explanatory variable, height, for the ith unit; β0 is the y-intercept (the value of y when xi=0); β1 is the slope 
+of the line (the change i
+
+[Bloque seleccionado #263 | relevancia=3]
+--- PÁGINA PDF 262 ---
+SURVEY METHODS AND PRACTICES 
+STATISTICS CANADA 
+250
+ 
+ 
+ 
+ 
+Table 8: Estimated Values for Bo, B1 
+ 
+Estimate SE(Estimate)
+z 
+0ˆβ 
+-90.88 
+7.66 
+ 
+1ˆβ 
+0.95 
+0.04 
+21.09
+  
+The analyst would conclude that there is a significant relationship between the weight and height of 
+people in the population.  
+ 
+Regression is also used by surveys during estimation or imputation to improve the quality of the estimates 
+(see Chapter 7 - Estimation and Chapter 10 - Processing). For more information on regression analysis 
+and how to calculate β0 and β1, see Draper and Smith (1981). 
+ 
+ 
+11.4.3  The Case of Complex Survey Data  
+ 
+11.4.3.1 Testing for a Single Mean  
+ 
+The test for a mean can be readily extended to the case of complex survey data. In effect, the large sample 
+requirements for the test are covered by the finite population version of the Central Limit Theorem. The 
+correct estimation of the sampling error of the estimator of the mean (that is, accounting for stratification 
+and clustering of the data) replaces the traditional requirements that the data be independent and 
+identically distributed of the traditional requirements. 
+ 
+ 
+11.4.3.2 Comparing Many Sub-population Means: Adapting the ANOVA and Regression  
+ 
+ANOVA and regression models can be applied to populations and inferential analyses can be made when 
+samples with complex survey designs are drawn from those populations. Few books devote space to the 
+estimation and testing of the parameters of ANOVA and linear regression models under complex designs, 
+those who do regroup them under the umbrella of linear models and treat both at once. 
+ 
+The theoretical interest and difficulties are beyond the scope of this manual. By now, the reader should be 
+fully aware that ordinary statistical packages will not correctly account for the eventual complexities of 
+the design of interest, and would probably yield misleading results. More can be found in Chapter 8 of 
+Thompson, 1992, Chapter 7 of Särndal et al., 1992, and in Chapter 8 of Lehtonen and Pahkinen, 1995. 
+ 
+ 
+11.5  Testing Hypotheses About a Population: Discrete Variables  
+ 
+The previous section 11.4 discussed testing hypotheses using continuous variables. Often, analysis is 
+performed on categorical data (e.g., analysis of counts for different categories). For example, in the joint 
+distribution presented in Table 3, the analyst may want to test if the proportion in the population of office 
+workers with low blood pressure is different from the proportion of manual workers with low blood 
+pressure.
+
+[Bloque seleccionado #266 | relevancia=1]
+--- PÁGINA PDF 265 ---
+ANALYSIS OF SURVEY DATA 
+STATISTICS CANADA 
+253
+In this situation, suppose that r populations are being compared.  Let 
+i
+j
+p | be the proportion of individuals 
+in the ith population having the jth value of a c-category discrete variable. Since each individual in the ith 
+population has to fall into one of the c categories, 
+1
+| =
+∑
+j
+ij
+p
+. The hypothesis to be tested is  
+
+
+
+≠
+=
+=
+=
+=
+j
+k
+i
+p
+p
+H
+c
+j
+p
+p
+p
+H
+k
+j
+ij
+r
+j
+j
+j
+ 
+one
+least 
+at 
+for 
+ 
+and
+and
+some
+for
+,
+:
+...
+1
+,
+...
+:
+|
+|
+1
+|
+2|
+1|
+0
+. 
+ 
+Suppose that independent simple random samples of sizes ni+, i=1, …, r, are chosen from each of the  
+populations. Let nij be the number of individuals from the ith population with the jth value of the discrete 
+variable. Obviously, 
++
+=
+∑
+i
+j
+ij
+n
+n
+, the sample size. The counts may be shown in a r×c table and the 
+proportion pj|i may be estimated by 
+.
+ˆ |
++
+=
+i
+ij
+ij
+n
+n
+p
+  
+ 
+Pearson’s statistic for testing homogeneity has the form: 
+ 
+(
+)
+∑
+∑
++
++
++
++
++
++
++
++
++
+=
+−
+=
+r
+i
+j
+j
+c
+j
+j
+j
+ij
+i
+H
+n
+n
+p
+p
+p
+p
+n
+n
+n
+X
+.
+ˆ
+where
+,
+ˆ
+ˆ
+ˆ
+2
+|
+2
+)
+(
+ 
+ 
+There is also a corresponding likelihood ratio statistic. 
+ 
+Straightforward calculations will show that X2
+(H) can also be written as  
+ 
+(
+)
+∑∑
++
++
++
++
+−
+=
+r
+i
+c
+j
+j
+i
+j
+i
+ij
+H
+p
+p
+p
+p
+p
+n
+X
+ˆ
+ˆ
+ˆ
+ˆ
+ˆ
+2
+2
+)
+(
+ , 
+ 
+which has the same form as Pearson’s X2 statistic for testing independence. Also, under the null 
+hypothesis of homogeneity, X2
+(H) has an asymptotic Chi-square distribution with (r-1)(c-1) degrees of 
+freedom. 
+ 
+Example 11.6 (continued): Test of Homogeneity  
+ 
+Suppose that, in the political opinion survey examined above, instead of a simple random sample, four 
+independent simple random samples had been taken, each from a different political opinion group. The 
+test of homogeneity would be testing whether the frequency of reading the paper is the same for each 
+political group.  
+ 
+ 
+11.5.1.3 Use of Log-Linear Models when Testing Hypotheses 
+Relationships among the proportions in the cells of a contingency table may often be expressed in the 
+form of a log-linear model. For a two-way table, for example, a saturated log-linear model is in the form 
+of a 2-factor ANOVA model with interaction:
+
+[Bloque seleccionado #400 | relevancia=2]
+--- PÁGINA PDF 399 ---
+STATISTICS CANADA 
+387
+Index 
+ 
+ 
+- 
+acceptance control: see quality – quality control – acceptance control 
+ 
+- 
+acceptance sampling: see quality – quality control – statistical product control – 
+acceptance sampling 
+ 
+- 
+accuracy: see estimator – accurate estimator 
+ 
+- 
+administrative data: 4.3.3 and Appendix A; see also data collection- other methods of 
+data collection – administrative data 
+o sources of administrative data: Appendix A 
+o usefulness of administrative data: Appendix A 
+o uses of administrative data: Appendix A 
+ 
+- 
+analysis of variance (ANOVA): see data analysis – hypothesis testing for continuous 
+variables – simple survey data – testing many means- ANOVA 
+ 
+- 
+area frame: see frames (survey frame/ sampling frame) – area frame 
+ 
+- 
+bias: see also estimator – unbiased estimator; see also estimation – estimating the 
+sampling variance – estimating confidence intervals – in the presence of bias. 
+ 
+- 
+bootstrap: see estimation –estimating the sampling variance - estimating variance using 
+replicated sampling / jackknife / bootstrap 
+ 
+- 
+calibration and generalised regression: see weights – using auxiliary information to 
+adjust weights – calibration and generalised regression 
+ 
+- 
+CAPI/CASI/CATI: see data collection – computer assisted. 
+ 
+- 
+census: see sample design - sample versus census 
+ 
+- 
+chi-square test statistic: 11.4.1; 11.5.1.1; 11.5.1.2; 11.5.1.3; 11.5.2. See also data 
+analysis - hypothesis testing for discrete/categorical variables.  
+ 
+- 
+cluster sampling: see sample design – probability sampling – cluster sampling 
+ 
+- 
+coding: see processing – coding 
+ 
+- 
+coefficient of variation (CV): See estimation - estimating a coefficient of variation (CV) 
+ 
+- 
+confidentiality: see data dissemination – disclosure control; see also data dissemination 
+- other confidentiality considerations; see also 5.1.3; 5.5.1; 9.2.2; 9.3.1.1; 9.4; 9.4.2.  
+ 
+- 
+contingency tables: see data analysis – hypothesis testing for discrete/categorical 
+variables – testing for independence 
+ 
+- 
+control charts: see quality - quality control - statistical process control - control charts
+
+[Bloque seleccionado #401 | relevancia=2]
+--- PÁGINA PDF 400 ---
+SURVEY METHODS AND PRACTICES 
+STATISTICS CANADA 
+388
+- 
+data analysis: 1.1.9, 11.0 and Chapter 11. See also estimation. 
+o summary measures: 11.3 
+ 
+simple survey data: 11.3.1 
+• 
+estimation and presentation of frequency distributions: 
+11.3.1.1 
+o charts and diagrams: 11.3.1.1.1. See also data 
+dissemination – tables/charts. 
+• 
+location (mean, median, mode, quartiles, percentiles): 
+11.3.1.2 
+• 
+spread (population and sampling variance, range, 
+interquartile range): 11.3.1.3. See also estimation – estimating 
+the population variance and estimation – estimating the 
+sampling variance. 
+ 
+complex survey data: 11.3.2 
+• 
+median: 11.3.2.1  
+• 
+spread (population and sampling variance, range, 
+interquartile range): 11.3.2.2 
+o hypothesis testing for continuous variables:11.4 
+ 
+simple survey data: 11.4.2 
+• 
+testing for a single mean: 11.4.2.1  
+• 
+testing for two means: 11.4.2.2  
+• 
+testing many means: 11.4.2.3 
+o linear regression: 11.4.2.3; 11.4.2.3.2  
+o analysis of variance (ANOVA): 11.4.2.3.1 
+ 
+complex survey data: 11.4.3 
+• 
+testing for a single mean: 11.4.3.1  
+• 
+testing many means (adapting the ANOVA and regression): 
+11.4.3.2 
+o hypothesis testing for discrete/categorical variables: 11.5 
+ 
+simple survey data: 11.5.1 
+• 
+testing for independence/contingency tables: 11.5.1.1  
+• 
+testing for homogeneity: 11.5.1.2  
+• 
+log-linear models: 11.5.1.3. 
+ 
+complex data: 11.5.2 
+• 
+tests of independence and tests of homogeneity: 11.5.2  
+o data analysis report: see data dissemination – data analysis report 
+ 
+- 
+data capture: see processing – data capture 
+ 
+- 
+data collection: 1.1.5; 4.0 
+o self-enumeration: 4.1; 4.1.1 
+o interviewer-assisted: 4.1; 4.1.2 
+ 
+personal interviews: 4.1; 4.1.2.1 
+ 
+telephone interviews: 4.1; 4.1.2.2 
+o choosing between self-enumeration versus interviewer-assisted: 4.1.3 
+o other methods of data collection: 
+ 
+administrative data: 4.3.3 see also Administrative data 
+ 
+combined methods: 4.3.4 
+ 
+direct observation: 4.3.1 
+ 
+electronic data reporting (EDR): 4.3.2

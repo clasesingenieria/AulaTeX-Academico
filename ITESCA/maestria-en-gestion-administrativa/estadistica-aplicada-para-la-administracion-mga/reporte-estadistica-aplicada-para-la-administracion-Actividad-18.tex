@@ -1,0 +1,135 @@
+% Plantilla y base conceptual generada con AulaTeX (Amazon Nova Pro) para Actividad 18 (A18).
+% Contrato AulaTeX: portada oficial ITESCA, Resumen con declaracion IA, Tabla de contenido y tres tiempos.
+\def\estadisticatitulo{Modelado práctico de índices estacionales, promedios móviles, suavizamiento exponencial y regresión}
+\def\estadisticasubtitulo{Actividad 18: Ejercicios en equipo}
+\def\estadisticafecha{22 de noviembre de 2026}
+\def\estadisticaunidad{Análisis de series de tiempo y pronósticos económicos}
+\def\portadaoficial{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/portada-oficial.png}
+\def\estadisticaextras{%
+  \usepackage{fontspec}
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+  \usepackage{longtable,booktabs,array}
+  \usetikzlibrary{babel}
+  \geometry{letterpaper,left=2.3cm,right=2.3cm,top=2.2cm,bottom=2.2cm}
+  \hypersetup{pdftitle={Modelado práctico de índices estacionales, promedios móviles, suavizamiento exponencial y regresión},pdfsubject={Actividad 18 - Estadística aplicada para la administración}}
+  \setcitestyle{citesep={;}}
+  \renewcommand{\insertcoverwatermark}{}
+  \renewcommand{\insertcoverinstitutionalfooter}{}
+  \renewcommand{\templatePortrait}{%
+    \thispagestyle{empty}
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{\portadaoficial}};
+      \node[anchor=north west,text=white,text width=10.6cm,align=center,inner sep=0pt] at ([xshift=10.1cm,yshift=-19.4cm]current page.north west) {%
+        \setstretch{1}\fontsize{12}{15}\selectfont
+        {\fontsize{15}{18}\selectfont\bfseries Modelado práctico de índices estacionales, promedios móviles, suavizamiento exponencial y regresión}\par\vspace{0.16cm}
+        Estadística aplicada para la administración\par
+        Actividad 18: Ejercicios en equipo\par\vspace{0.12cm}
+        Martín Jonathan de la Cruz Muñoz\par
+        Matrícula: 26130503\par
+        Dra. Yoana Elizeth Tauitmes Delgado\par
+        22 de noviembre de 2026
+      };
+    \end{tikzpicture}\null\clearpage
+  }
+  \renewcommand{\templatePagecfg}{}
+  \renewcommand{\templateFinalcfg}{%
+    \pagestyle{fancy}\fancyhf{}\fancyfoot[C]{\fontsize{10}{12}\selectfont\thepage}
+    \renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}
+    \setcounter{page}{2}\renewcommand{\thepage}{\arabic{page}}
+  }
+  \titleformat{\section}{\normalfont\fontsize{12}{15}\selectfont\bfseries\color{itescaRedDark}}{\thesection.}{0.5em}{}
+  \titleformat{\subsection}{\normalfont\fontsize{12}{15}\selectfont\bfseries}{\thesubsection.}{0.5em}{}
+  \titlespacing*{\section}{0pt}{8pt}{5pt}
+  \titlespacing*{\subsection}{0pt}{7pt}{4pt}
+  \renewcommand{\footnotesize}{\fontsize{12}{14.4}\selectfont}
+  \setlength{\parindent}{1.1cm}
+  \setlength{\parskip}{3pt}
+  \urlstyle{same}
+  \input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/investigacion-articulos/formato-fichas.tex}
+}
+\def\estadisticaresumen{Esta actividad de la asignatura 'Estadística aplicada para la administración' en el módulo de análisis de series de tiempo y pronósticos económicos, tiene como objetivo fundamental capacitar a los estudiantes en la aplicación práctica de técnicas estadísticas avanzadas para la toma de decisiones gerenciales. Los ejercicios propuestos abarcan desde el cálculo de índices estacionales y análisis de dispersión, hasta modelos de regresión y suavizamiento exponencial. Estas técnicas son esenciales para la predicción y el análisis de tendencias en datos temporales, lo cual es crucial en la gestión administrativa para la planificación estratégica, la optimización de recursos y la mejora continua en las operaciones empresariales.}
+\long\def\estadisticacontenido{%
+\fontsize{12}{14.4}\selectfont\setstretch{1.5}\justifying
+\estadisticapreliminares
+\section{Introducción}
+La unidad temática sobre análisis de series de tiempo y pronósticos económicos en la asignatura 'Estadística aplicada para la administración' introduce conceptos y técnicas esenciales para la gestión administrativa. Esta unidad tiene como objetivo capacitar a los estudiantes en la aplicación práctica de técnicas estadísticas avanzadas para la toma de decisiones gerenciales. Los ejercicios propuestos abarcan una variedad de técnicas, desde el cálculo de índices estacionales y análisis de dispersión, hasta modelos de regresión y suavizamiento exponencial. Estas técnicas son cruciales para la predicción y el análisis de tendencias en datos temporales, lo cual es fundamental en la gestión administrativa para la planificación estratégica, la optimización de recursos y la mejora continua en las operaciones empresariales. \citep{anderson2012,lind2012,holmesBusiness2023}.
+
+\section{Fundamentos, modelado analítico y evidencia en análisis de series de tiempo y pronósticos económicos}
+\subsection{Base conceptual autocontenida y formulación matemática}
+El desarrollo teórico-matemático de esta unidad se centra en la integración de definiciones, supuestos y propiedades de los estimadores y pruebas estadísticas utilizados en el análisis de series temporales. Se exploran en profundidad conceptos como los índices estacionales, el análisis de dispersión y correlación, la regresión simple y múltiple, el error estándar de estimación, los mínimos cuadrados, el modelo estacional multiplicativo, los promedios móviles y el suavizamiento exponencial. Cada concepto se desarrolla con rigor matemático y se vincula con su aplicación práctica en la gestión administrativa. Se destacan las fórmulas y modelos matemáticos relevantes, así como las fuentes principales del corpus bibliográfico. \citep{wackerly2010,canavos1988,spiegel2009}.
+
+\textbf{1. índices estacionales.} Los índices estacionales son medidas estadísticas que cuantifican las variaciones cíclicas en los datos de una serie temporal, ajustando las fluctuaciones estacionales para obtener una visión más clara de las tendencias subyacentes. Estos índices se calculan típicamente como la relación entre el valor observado en un periodo específico y el valor esperado en ausencia de estacionalidad. Expresión formal: $I_t = \frac{Y_t}{\hat{Y}_t}$. En el ámbito gerencial, los índices estacionales son utilizados en la gestión administrativa para ajustar los pronósticos de ventas y demanda, permitiendo a las empresas prepararse mejor para los picos y valles en sus ciclos de negocio. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{2. análisis de dispersión y correlación.} El análisis de dispersión y correlación en una serie temporal implica el examen de la relación entre dos variables para determinar si una variable influye en la otra. La correlación mide la fuerza y la dirección de esta relación, mientras que la dispersión visualiza la distribución de los datos. Expresión formal: $r = \frac{n(\sum xy) - (\sum x)(\sum y)}{\sqrt{[n\sum x^2 - (\sum x)^2][n\sum y^2 - (\sum y)^2]}}$. En el ámbito gerencial, este análisis es crucial para identificar factores que influyen en el rendimiento operativo, permitiendo a los gerentes tomar decisiones informadas para optimizar procesos y recursos. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{3. regresión simple y múltiple.} La regresión simple y múltiple son técnicas estadísticas utilizadas para modelar la relación entre una variable dependiente y una o más variables independientes. La regresión simple involucra una sola variable independiente, mientras que la regresión múltiple considera múltiples variables. Expresión formal: $Y = \beta_0 + \beta_1X_1 + \beta_2X_2 +... + \beta_kX_k + \epsilon$. En el ámbito gerencial, estas técnicas permiten a los gerentes predecir resultados basados en diferentes factores, facilitando la toma de decisiones estratégicas y tácticas en la gestión empresarial. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{4. error estándar de estimación.} El error estándar de estimación es una medida de la precisión de una estimación estadística. Representa la desviación estándar de los errores de estimación en un modelo de regresión, indicando la variabilidad de las estimaciones alrededor del valor verdadero. Expresión formal: $S_e = \sqrt{\frac{\sum (Y_i - \hat{Y}_i)^2}{n-k-1}}$. En el ámbito gerencial, este concepto es esencial para evaluar la fiabilidad de los modelos predictivos en la gestión administrativa, permitiendo a los gerentes comprender la incertidumbre asociada con sus estimaciones. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{5. mínimos cuadrados.} El método de mínimos cuadrados es una técnica de estimación que minimiza la suma de los cuadrados de las diferencias entre los valores observados y los valores predichos por el modelo. Es ampliamente utilizado en la regresión lineal para estimar los parámetros del modelo. Expresión formal: $\min \sum (Y_i - \hat{Y}_i)^2$. En el ámbito gerencial, los mínimos cuadrados son fundamentales en la modelación de datos para la toma de decisiones en administración, proporcionando una base sólida para la predicción y el análisis de tendencias. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{6. modelo estacional multiplicativo.} El modelo estacional multiplicativo es un enfoque para modelar series temporales que exhiben patrones estacionales. Este modelo multiplica las tendencias y las componentes estacionales para obtener pronósticos más precisos. Expresión formal: $Y_t = T_t \times S_t \times e_t$. En el ámbito gerencial, este modelo es utilizado en la gestión administrativa para pronosticar ventas y demanda en industrias con fuertes patrones estacionales, como el turismo y la venta minorista. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{7. promedio móvil.} El promedio móvil es una técnica de suavizamiento de series temporales que calcula el promedio de un conjunto de datos sobre un periodo específico. Se utiliza para identificar tendencias y eliminar ruido en los datos. Expresión formal: $\hat{Y}_t = \frac{1}{n} \sum_{i=t-n+1}^{t} Y_i$. En el ámbito gerencial, los promedios móviles son utilizados en la gestión administrativa para suavizar fluctuaciones en los datos de ventas y demanda, proporcionando una visión más clara de las tendencias a largo plazo. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{8. suavizamiento exponencial.} El suavizamiento exponencial es una técnica de pronóstico que asigna pesos decrecientes exponencialmente a las observaciones pasadas. Es utilizado para suavizar series temporales y hacer pronósticos. Expresión formal: $\hat{Y}_{t+1} = \alpha Y_t + (1 - \alpha) \hat{Y}_t$. En el ámbito gerencial, el suavizamiento exponencial es esencial en la gestión administrativa para hacer pronósticos de ventas y demanda, proporcionando una herramienta valiosa para la planificación estratégica. \citep{anderson2012,lind2012,wackerly2010}.
+
+
+\subsection{Planteamiento analítico y estructura de resolución de los ejercicios de la unidad}
+La guía analítica detallada para resolver los ejercicios propuestos en esta actividad se estructura en torno a la aplicación práctica de las técnicas estadísticas presentadas. Se proporcionan pasos específicos para calcular índices estacionales, realizar análisis de dispersión y correlación, aplicar modelos de regresión, estimar errores estándar, utilizar mínimos cuadrados, aplicar modelos estacionales multiplicativos, calcular promedios móviles y aplicar suavizamiento exponencial. Cada paso se explica con claridad y se ilustra con ejemplos concretos, facilitando la comprensión y aplicación de los conceptos por parte de los estudiantes.
+
+\subsubsection*{Ejercicio 1. Cálculo de índices estacionales trimestrales de asistencia al parque Vacation World (2015--2017)}
+\textbf{Enunciado oficial del aula:} Asistencia trimestral (en miles) de 2015 a 2017: Invierno (80, 66, 90), Primavera (95, 82, 145), Verano (152, 125, 204) y Otoño (73, 55, 97). Calcule los índices estacionales usando todos los datos.
+
+\textbf{Modelo matemático y ruta de resolución:} Cálculo de promedios móviles de 4 trimestres, promedios móviles centrados (PMC), razones al promedio móvil $Y_t / \text{PMC}_t$ y normalización para que la suma de los 4 índices sea igual a 4.00 (o 400\%) \citep{anderson2012,lind2012}.
+
+\subsubsection*{Ejercicio 2. Diagrama de dispersión y correlación entre distancia y tiempo de envío en Bardi ($n=20$)}
+\textbf{Enunciado oficial del aula:} Jim Bardi seleccionó una muestra aleatoria de $n = 20$ embarques registrando la distancia en millas ($X$) y el tiempo de envío en días ($Y$). Trace el diagrama de dispersión, determine el coeficiente de correlación lineal $r$ y pruebe si existe una correlación positiva significativa.
+
+\textbf{Modelo matemático y ruta de resolución:} Cálculo de $r = S_{xy}/\sqrt{S_{xx}S_{yy}}$ y contraste $t = r\sqrt{n-2}/\sqrt{1-r^2}$ con $gl = 18$ para $H_0: \rho \le 0$ frente a $H_a: \rho > 0$ \citep{lind2012}.
+
+\subsubsection*{Ejercicio 3. Regresión lineal simple y múltiple de ingresos semanales según publicidad en Showtime Movie Theater}
+\textbf{Enunciado oficial del aula:} Con datos históricos de $n = 8$ semanas sobre ingreso bruto semanal ($Y$, miles de \$), publicidad en televisión ($X_1$) y publicidad en periódicos ($X_2$): a) Obtenga la regresión simple $\hat{Y} = b_0 + b_1 X_1$. b) Obtenga la regresión múltiple $\hat{Y} = b_0 + b_1 X_1 + b_2 X_2$. c) Compare e interprete el coeficiente de televisión en ambos modelos. d) Pronostique el ingreso para $X_1 = 3.5$ y $X_2 = 1.8$ (miles de \$).
+
+\textbf{Modelo matemático y ruta de resolución:} Estimación por mínimos cuadrados ordinarios $\hat{\boldsymbol{\beta}} = (\mathbf{X}^\top\mathbf{X})^{-1}\mathbf{X}^\top\mathbf{y}$ y distinción entre efecto marginal total y efecto parcial manteniendo constante el segundo medio publicitario \citep{anderson2012}.
+
+\subsubsection*{Ejercicio 4. Regresión y error estándar de estimación entre construcción de casas y ventas de línea blanca ($n=10$)}
+\textbf{Enunciado oficial del aula:} Datos históricos de construcción de casas ($X$, miles) de 3.0 a 6.0 y ventas de línea blanca ($Y$, miles) de 6.0 a 11.7. a) Desarrolle la ecuación de regresión lineal. b) Interprete la pendiente. c) Calcule e interprete el error estándar de la estimación $s_{y\cdot x}$.
+
+\textbf{Modelo matemático y ruta de resolución:} Cálculo de $b_1 = S_{xy}/S_{xx}$, $b_0 = \bar{Y} - b_1\bar{X}$ y error estándar $s_{y\cdot x} = \sqrt{\text{SCE}/(n-2)}$ \citep{lind2012}.
+
+\subsubsection*{Ejercicio 5. Estimación de la función de demanda lineal para la muñeca ``Ma'am'' de Bamsy ($n=8$)}
+\textbf{Enunciado oficial del aula:} Precios $P \in \{30, 27.5, 26, 24, 22.05, 20, 18, 16.5\}$ y cantidades vendidas $Q \in \{135, 166, 193, 200, 222, 248, 260, 286\}$. a) Grafique los datos. b) Calcule la recta de mínimos cuadrados $\hat{Q} = b_0 + b_1 P$. c) Trace la recta ajustada.
+
+\textbf{Modelo matemático y ruta de resolución:} Modelado econométrico de demanda con pendiente negativa ($b_1 < 0$) que cuantifica la sensibilidad marginal de las unidades demandadas ante reducciones de un dólar en el precio \citep{anderson2012}.
+
+\subsubsection*{Ejercicio 6. Pronóstico estacional multiplicativo para la demanda de lanchas de Mark Cotteleer (2004--2009)}
+\textbf{Enunciado oficial del aula:} Con las demandas por temporada (Invierno, Primavera, Verano, Otoño) de 2004 a 2007 y un pronóstico anual de $5\,600$ lanchas para 2009, determine la demanda esperada para la primavera de 2009 usando el modelo estacional multiplicativo.
+
+\textbf{Modelo matemático y ruta de resolución:} Cálculo del índice estacional de primavera $I_{\text{Primavera}}$ y aplicación al promedio trimestral esperado de 2009: $\hat{Y}_{2009,\text{Prim}} = (5\,600 / 4) \times I_{\text{Primavera}}$ \citep{anderson2012,hyndmanForecasting2021}.
+
+\subsubsection*{Ejercicio 7. Comparación de promedio móvil de 3 meses, ponderado de 6 meses y suavizamiento exponencial en Telco Batteries}
+\textbf{Enunciado oficial del aula:} Con las ventas mensuales de enero (20) a diciembre (23): a) Grafique la serie. b) Pronostique enero siguiente mediante: i) promedio móvil de 3 meses; ii) promedio móvil ponderado de 6 meses (0.1, 0.1, 0.1, 0.2, 0.2, 0.3); iii) suavizamiento exponencial con $\alpha = 0.3$ y $F_{\text{sep}} = 18$. c) Evalúe qué método permite proyectar hasta el mes de marzo.
+
+\textbf{Modelo matemático y ruta de resolución:} Aplicación recursiva de $F_{t+1} = \alpha Y_t + (1-\alpha)F_t$ y análisis del horizonte de pronóstico de métodos de suavizamiento frente a modelos con tendencia \citep{hyndmanForecasting2021,anderson2012}.
+
+\subsubsection*{Ejercicio 8. Suavizamiento exponencial ($\alpha = 0.30$) para las ventas anuales de Volkswagen Beetle en Nevada (2003--2008)}
+\textbf{Enunciado oficial del aula:} Ventas observadas: 2003 (450, con pronóstico inicial $F_{2003}=410$), 2004 (495), 2005 (518), 2006 (563), 2007 (584). Desarrolle los pronósticos secuenciales de 2004 a 2008 con $\alpha = 0.30$.
+
+\textbf{Modelo matemático y ruta de resolución:} Actualización adaptativa año por año $F_{t+1} = 0.30 Y_t + 0.70 F_t$ desde $t=2003$ hasta obtener $F_{2008}$ \citep{anderson2012}.
+
+
+\subsection{Articulación administrativa y síntesis del desarrollo}
+Los índices estacionales son fundamentales para ajustar los modelos de pronóstico y entender las variaciones cíclicas en los datos de ventas y demanda. Al calcular los índices estacionales, se puede descomponer una serie temporal en sus componentes estacionales, tendenciosos y aleatorios, proporcionando una visión más clara de las tendencias subyacentes y facilitando la toma de decisiones en entornos de incertidumbre. \citep{holmesBusiness2023,nistHandbook}.
+El análisis de dispersión y correlación permite identificar relaciones entre variables en una serie temporal, lo cual es crucial para entender los factores que influyen en el rendimiento operativo. Al aplicar técnicas de análisis de dispersión y correlación, los gerentes pueden identificar variables clave que impactan en la demanda y el rendimiento, permitiendo una optimización más efectiva de los procesos y recursos. \citep{holmesBusiness2023,nistHandbook}.
+La regresión simple y múltiple son técnicas esenciales para modelar la relación entre variables y hacer pronósticos en la gestión administrativa. Estas técnicas permiten a los gerentes predecir resultados basados en múltiples factores, facilitando la toma de decisiones estratégicas y tácticas en un entorno empresarial dinámico. \citep{holmesBusiness2023,nistHandbook}.
+El error estándar de estimación es una medida crucial de la precisión de los modelos predictivos en la gestión administrativa. Al comprender el error estándar de estimación, los gerentes pueden evaluar la fiabilidad de sus modelos predictivos y tomar decisiones informadas bajo incertidumbre. \citep{holmesBusiness2023,nistHandbook}.
+
+En síntesis dentro de este segundo tiempo, la articulación entre la teoría estadística de \textit{análisis de series de tiempo y pronósticos económicos} y la práctica administrativa demuestra que ningún indicador cuantitativo opera en el vacío: la validez de la conclusión depende del cumplimiento de los supuestos distribucionales, de la representatividad de los datos recolectados y de la correspondencia entre el modelo matemático y el problema decisional de la organización \citep{anderson2012,nistHandbook,guarin2002}.
+
+\clearpage
+\section{Conclusiones}
+La conclusión de esta unidad temática sintetiza los hallazgos técnicos y las reglas de decisión gerencial derivadas de la aplicación de las técnicas estadísticas presentadas. Se destaca la importancia de estas técnicas para la toma de decisiones en entornos de incertidumbre y se discuten las limitaciones metodológicas inherentes a cada enfoque. Se enfatiza la necesidad de una aplicación crítica y contextualizada de las técnicas estadísticas en la gestión administrativa, considerando siempre las particularidades de cada caso y las implicaciones éticas y prácticas de las decisiones tomadas. \citep{anderson2012,lind2012,wackerly2010,diazRodriguez2022}.
+}
+\input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/reporte-estadistica-aplicada-para-la-administracion-plantilla-actividad.tex}

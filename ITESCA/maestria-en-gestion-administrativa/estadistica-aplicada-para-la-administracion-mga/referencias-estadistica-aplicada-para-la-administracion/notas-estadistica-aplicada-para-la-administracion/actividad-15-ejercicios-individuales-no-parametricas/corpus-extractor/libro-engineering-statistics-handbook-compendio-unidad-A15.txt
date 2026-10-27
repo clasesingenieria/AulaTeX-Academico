@@ -1,0 +1,165 @@
+Fuente bibliográfica: Engineering Statistics Handbook (Compendio Unidades 1-7) - NIST-SEMATECH (2013).pdf
+Actividad: 15 (5.3 Ejercicios individuales 5% Tarea)
+Palabras clave: prueba de rachas, aleatoriedad, Wald-Wolfowitz, Kruskal-Wallis, Mann-Whitney, secuencia
+
+--- PÁGINA PDF 1 ---
+NIST/SEMATECH e-Handbook of Statistical Methods (Compendio
+Unidades 1 a 7)
+National Institute of Standards and Technology ? U.S. Department of
+Commerce (2013)
+Contenido y fuentes verificadas:
+1. Unidad 1 y 3 - Selecting Sample Sizes (7.2.4.2)
+   URL: https://www.itl.nist.gov/div898/handbook/prc/section2/prc242.htm
+2. Unidad 2 y 3 - Confidence Intervals for a Mean and Variance (1.3.5.2 & 1.3.5.7)
+   URL: https://www.itl.nist.gov/div898/handbook/eda/section3/eda352.htm
+3. Unidad 4 - What are Hypothesis Tests and Steps (7.1.3)
+   URL: https://www.itl.nist.gov/div898/handbook/prc/section1/prc13.htm
+4. Unidad 4 - Two-Sample t-Test for Equal Means (1.3.5.3)
+   URL: https://www.itl.nist.gov/div898/handbook/eda/section3/eda353.htm
+5. Unidad 5 - Kolmogorov-Smirnov Goodness-of-Fit Test (1.3.5.16)
+   URL: https://www.itl.nist.gov/div898/handbook/eda/section3/eda35g.htm
+6. Unidad 5 - Chi-Square Goodness-of-Fit Test (1.3.5.15)
+   URL: https://www.itl.nist.gov/div898/handbook/eda/section3/eda35f.htm
+7. Unidad 5 - Runs Test for Detecting Non-randomness (1.3.5.13)
+   URL: https://www.itl.nist.gov/div898/handbook/eda/section3/eda35d.htm
+8. Unidad 6 - Introduction to Time Series Analysis (6.4.1)
+   URL: https://www.itl.nist.gov/div898/handbook/pmc/section4/pmc41.htm
+9. Unidad 6 - Moving Techniques and Exponential Smoothing (6.4.2 & 6.4.3)
+   URL: https://www.itl.nist.gov/div898/handbook/pmc/section4/pmc42.htm
+10. Unidad 6 - Single Exponential Smoothing (6.4.3.1)
+   URL: https://www.itl.nist.gov/div898/handbook/pmc/section4/pmc431.htm
+11. Unidad 7 - Linear Least Squares Regression (4.1.4.1)
+   URL: https://www.itl.nist.gov/div898/handbook/pmd/section1/pmd141.htm
+
+--- PÁGINA PDF 3 ---
+1. Unidad 1 y 3 - Selecting Sample Sizes (7.2.4.2) (Parte 2) | Fuente: https://www.itl.nist.gov/div898/handbook/prc/section2/prc242.htm
+------------------------------------------------------------------------------------------
+the normal distribution
+that is exceeded with
+probability
+-->
+Value for the true proportion defective
+-->
+known. Usually, this is not the case. If we are interested in detecting
+a change relative to an historical or hypothesized value, this value is
+taken as the value of
+for this purpose. Note that taking the value
+of the proportion defective to be 0.5 leads to the largest possible sample
+size.
+-->
+Example of calculating sample size for testing
+proportion defective
+Suppose that a department manager needs to be able to detect any
+change above 0.10 in the current proportion defective of his product
+line, which is running at approximately 10 % defective. He is interested
+in a one-sided test and does not want to stop the line except
+when the process has clearly degraded and, therefore, he chooses a
+significance level for the test of 5 %. Suppose, also, that he is
+willing to take a risk of 10 % of failing to detect a change of this
+magnitude. With these criteria:
+\(z_{0.95} = 1.645 , \,\, z_{0.90} = 1.282\)
+0.95
+= 1.645;
+0.90
+= 1.282-->
+\(\delta = 0.10 \,\, (p_1 = 0.20)\)
+= 0.10
+= 0.20) -->
+\(p_0 = 0.10\)
+= 0.10 -->
+and the minimum sample size for a
+one-sided test
+procedure
+$$\begin{eqnarray}
+N & \ge & \left( \frac{z_{1-\alpha} \, \sqrt{p_0 (1-p_0)} + z_{1-\beta} \, \sqrt{p_1 (1-p_1)}}{\delta} \, \right)^2 \\
+& & \\
+& = & \left( \frac{1.645 \, \sqrt{0.1 \times 0.9} + 1.282 \, \sqrt{0.2 \times 0.8}}{0.1} \, \right)^2 \\
+& & \\
+& \approx & 102 \, .
+\end{eqnarray} $$
+= [p(1-p)/delta**2]*[z(.05)+z(.10)]**2 = 0.10*0.90*2.927**2/0.10**2
+is approximately 77">
+-->
+= [z(alpha)*SQRT(p0*(1-p0)) + z(beta)*SQRT(p1*(1-P1))/delta]^2
+= (1.645*SQRT(0.1*0.9) + 1.282*SQRT(0.2*0.8)/0.1)^2">
+-->
+With the continuity correction, the minimum sample si
+
+--- PÁGINA PDF 7 ---
+3. Unidad 4 - What are Hypothesis Tests and Steps (7.1.3) (Parte 2) | Fuente:
+https://www.itl.nist.gov/div898/handbook/prc/section1/prc13.htm
+------------------------------------------------------------------------------------------
+Errors of the second kind
+The risk of failing to reject the null hypothesis when it is in
+fact false is not chosen by the user but is determined, as one
+might expect, by the magnitude of the real discrepancy. This risk,
+\(\beta\),
+, -->
+is usually referred to as the
+error of the second kind
+. Large
+discrepancies between reality and the null hypothesis are easier
+to detect and lead to small errors of the second kind; while small
+discrepancies are more difficult to detect and lead to large errors
+of the second kind. Also the risk \(\beta\)
+-->
+increases as the risk \(\alpha\)
+-->
+decreases. The risks of errors of the second kind are usually
+summarized by an
+operating characteristic curve (OC)
+for
+the test. OC curves for several types of tests are shown in
+(Natrella, 1962)
+Guidance in this chapter
+This chapter gives methods for constructing test statistics and
+their corresponding critical values for both one-sided and
+two-sided tests for the specific situations outlined under the
+scope
+. It also provides guidance on the
+sample sizes required for these tests.
+Further guidance on statistical hypothesis testing, significance
+levels and critical regions, is given in
+Chapter 1
+
+--- PÁGINA PDF 12 ---
+5. Unidad 5 - Kolmogorov-Smirnov Goodness-of-Fit Test (1.3.5.16) (Parte 3) | Fuente:
+https://www.itl.nist.gov/div898/handbook/eda/section3/eda35g.htm
+------------------------------------------------------------------------------------------
+There are many non-parametric and robust techniques that
+are not based on strong distributional assumptions. By
+non-parametric, we mean a technique, such as the
+sign test
+that is not based on a specific distributional assumption.
+By robust, we mean a statistical technique that performs well
+under a wide range of distributional assumptions.
+However, techniques based on specific distributional assumptions
+are in general more powerful than these non-parametric and
+robust techniques. By power, we mean the ability to detect
+a difference when that difference actually exists. Therefore,
+if the distributional assumptions can be confirmed, the
+parametric techniques are generally preferred.
+If you are using a technique that makes a normality (or some
+other type of distributional) assumption, it is important to
+confirm that this assumption is in fact justified. If
+it is, the more powerful parametric techniques can be used.
+If the distributional assumption is not justified, using
+a non-parametric or robust technique may be required.
+Related Techniques
+Anderson-Darling goodness-of-fit Test
+Chi-Square goodness-of-fit Test
+Shapiro-Wilk
+Normality Test
+Probability Plots
+Probability Plot Correlation Coefficient
+Plot
+Software
+Some general purpose statistical software programs support the
+Kolmogorov-Smirnov goodness-of-fit test, at least for
+the more common distributions.
+Both
+Dataplot code
+and
+R code
+can be used to generate the
+analyses in this section.

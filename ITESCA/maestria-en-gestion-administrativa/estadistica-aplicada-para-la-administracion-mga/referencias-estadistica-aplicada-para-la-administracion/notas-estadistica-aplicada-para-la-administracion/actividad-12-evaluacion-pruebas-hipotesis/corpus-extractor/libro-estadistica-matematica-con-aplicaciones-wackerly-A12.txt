@@ -1,0 +1,558 @@
+Fuente bibliográfica: Estadística matemática con aplicaciones - Wackerly, Mendenhall y Scheaffer. 7.ª edición.pdf
+Actividad: 12 (4.3 Evaluación 5% Cuestionario)
+Palabras clave: prueba de hipótesis, región de rechazo, estadístico de prueba, error tipo I, error tipo II, dos muestras independientes, muestras pareadas
+
+[Bloque seleccionado #515 | relevancia=30]
+Pagina 514
+490  Capítulo 10  Prueba de hipótesis
+podemos demostrar que los datos apoyan el rechazo de la hipótesis nula p = .5 (el valor mí-
+nimo necesario para una conseguir una mayoría) en favor de la hipótesis alternativa p < .5, 
+hemos alcanzado nuestro objetivo de investigación. Aun cuando es común hablar de probar 
+una hipótesis nula, el objetivo de investigación suele ser demostrar apoyo para la hipótesis 
+alternativa, si dicho apoyo se justifi ca.
+¿Cómo usamos esos datos para decidir entre la hipótesis nula y la hipótesis alternativa? 
+Suponga que n = 15 votantes se seleccionan aleatoriamente de una ciudad y se registra Y, el 
+número que está a favor de Jones. Si nadie en la muestra está a favor de Jones (Y = 0), ¿qué 
+se concluiría acerca de lo dicho por Jones? Si Jones en realidad es favorecido por más de 50% 
+del electorado, no es imposible observar que Y = 0 están a favor de Jones en una muestra 
+de tamaño n = 15, pero es altamente improbable. Es mucho más probable que observemos 
+Y = 0 si la hipótesis alternativa fuera cierta. Entonces, rechazaríamos la hipótesis nula (p = .5 
+a favor de la hipótesis alternativa (p < .5). Si observamos Y = 1 (o cualquier valor pequeño 
+de Y), un razonamiento análogo nos lleva a la misma conclusión.
+Cualquier prueba de hipótesis estadística funciona exactamente de la misma forma y está 
+compuesta de los mismos elementos esenciales.
+ 
+ 
+Los elementos de una prueba estadística
+ 
+ 
+1. Hipótesis nula, H0
+ 
+ 
+2. Hipótesis alternativa, Ha
+ 
+ 
+3. Estadístico de prueba
+ 
+ 
+4. Región de rechazo
+Para nuestro ejemplo, la hipótesis a ser probada, llamada hipótesis nula y denotada por H0, 
+es p = .5. La hipótesis alternativa (o investigación), denotada como Ha, es la hipótesis a ser 
+aceptada en caso que H0 sea rechazada. Por lo general la hipótesis alternativa es la que quere-
+mos comprobar con base en la información contenida en la muestra; así, en nuestro ejemplo, 
+Ha es p < .5.
+Las partes esenciales de una prueba estadística son el estadístico de prueba y una región de 
+rechazo asociada. El estadístico de prueba (al igual que un estimador) es una función de las me-
+diciones muestrales (Y en nuestro ejemplo) en las que la decisión estadística estará basada. La 
+región de rechazo, que de aquí en adelante estará denotada por RR, especifi ca los valores del 
+estadístico de prueba para el cual la hipótesis nula ha de ser rechazada a favor de la hipótesis 
+alternativa. Si, para una muestra particular, el valor calculado del estadístico de prueba cae en 
+la región de rechazo RR, rechazamos la hipótesis nula H0 y aceptamos la
+
+[Bloque seleccionado #516 | relevancia=32]
+Pagina 515
+10.2  Elementos de una prueba estadística  491
+criterios objetivos para decidir cuál valor de k especifi ca una buena región de rechazo de la 
+forma {y ≤ k}.
+Para cualquier región de rechazo fi ja (determinada por un valor particular de k), dos tipos 
+de errores se pueden cometer al llegar a una decisión. Podemos decidir a favor de Ha cuando 
+H0 es verdadera (error tipo I), o podemos decidir a favor de H0 cuando Ha es verdadera (error 
+tipo II).
+ DEFINICIÓN 10.1 
+Se comete un error tipo I si H0 es rechazada cuando H0 es verdadera. La probabilidad 
+de un error tipo I está denotada por a. El valor de a se denomina nivel de la prueba.
+ 
+ 
+ Se comete un error tipo II si H0 es aceptada cuando Ha es verdadera. La probabilidad 
+de un error tipo II está denotada por b.
+Para la encuesta política de Jones, cometer un error tipo I, es decir rechazar H0 : p = .5 (y 
+por tanto aceptar Ha : p < .5) cuando de hecho H0 es verdadera, signifi ca concluir que Jones 
+perderá cuando en realidad va a ganar. En contraste, cometer un error tipo II signifi ca aceptar 
+H0 : p = .5 cuando p < .5 y concluir que Jones ganará cuando en realidad va a perder. Para 
+casi todas las situaciones reales, las decisiones incorrectas cuestan dinero, prestigio o tiempo e 
+implican una pérdida. Entonces, a y b, las probabilidades de cometer estos dos tipos de error, 
+miden los riesgos relacionados con las dos posibles decisiones erróneas que podrían resultar 
+de una prueba estadística. Como tales, proporcionan una forma muy práctica de medir la 
+bondad de una prueba.
+ 
+EJEMPLO 10.1 
+Para la encuesta política de Jones se muestrearon n = 15 votantes. Deseamos probar 
+H0 : p = .5 contra la alternativa, Ha : p < .5. El estadístico de prueba es Y, el número de votan-
+tes muestreados a favor de Jones. Calcule a si seleccionamos RR = {y ≤ 2} como la región 
+de rechazo.
+ 
+Solución 
+Por defi nición,
+ 
+a = P (error tipo I) = P (rechazar H0 cuando H0 es verdadera)
+ 
+= P (valor del estadístico de prueba está en RR cuando H0 es verdadera)
+ 
+= P (Y ≤ 2 cuando p = .5).
+Observe que Y es una variable aleatoria binomial con n = 15. Si H0 es verdadera, p = .5 y 
+obtenemos
+a =
+2
+y=0
+15
+y
+(.5)y(.5)15−y =
+15
+0
+(.5)15 +
+15
+1
+(.5)15 +
+15
+2
+(.5)15.
+F I G U R A 10.1
+Región de rechazo, 
+RR = {y ≤ k}, para 
+una prueba de la 
+hipótesis H0: p = .5 
+contra la alternativa 
+Ha: p < .5
+0
+1
+2
+11
+12
+13
+14
+15
+k
+(k + 1)
+y: Número de votantes que están a favor de Jones
+~~
+~~
+Región de 
+rechazo, RR
+
+[Bloque seleccionado #517 | relevancia=20]
+Pagina 516
+492  Capítulo 10  Prueba de hipótesis
+Usando la Tabla 1 del Apéndice 3 para evitar este cálculo, encontramos a = .004. Entonces, si 
+decidimos usar la región de rechazo RR = {y ≤ 2}, asumimos un riesgo muy pequeño (a = 
+.004) de concluir que Jones perderá si en realidad es el ganador. 
+Q
+ 
+EJEMPLO 10.2 
+Consulte el Ejemplo 10.1. ¿Nuestra prueba es tan buena como para evitar concluir que Jones 
+va a ganar si en realidad perderá? Suponga que él recibirá 30% de los votos (p = .3). ¿Cuál es 
+la probabilidad b de que la muestra erróneamente nos lleve a concluir que H0 es verdadera y 
+que Jones v<a a ganar?
+ 
+Solución 
+Por defi nición,
+ 
+b = P (error tipo II) = P (aceptar H0 cuando Ha es verdadera)
+ 
+= P (el valor del estadístico de prueba no está en RR cuando Ha es verdadera).
+Como buscamos calcular b cuando p = .3 (un valor particular de p que está en Ha),
+b = P (Y > 2 cuando p = .3) =
+15
+y=3
+15
+y
+(.3)y(.7)15−y.
+De nuevo, consultando la Tabla 1, Apéndice 3, encontramos que b = .873. Si usamos RR = 
+{y ≤ 2}, nuestra prueba por lo general nos llevará a concluir que Jones es ganador (con pro-
+babilidad b = .873), aun cuando p tan bajo como p = .3. 
+Q
+El valor de b depende del verdadero valor del parámetro p. Cuanto mayor sea la diferencia 
+entre p y el valor hipotético (nulo) de p = .5, menor es la verosimilitud de que no rechacemos 
+la hipótesis nula.
+ 
+EJEMPLO 10.3 
+Consulte los Ejemplos 10.1 y 10.2. Calcule el valor de b si Jones recibirá sólo 10% de los 
+votos (p = .1).
+ 
+Solución 
+En este caso, deseamos calcular b cuando p = .1 (otro valor particular de p en Ha).
+ 
+b = P (error tipo II) = P (aceptar H0 cuando p = .1)
+ 
+= P (el valor del estadístico de prueba no está en RR cuando p = .1)
+ 
+= P (Y > 2 cuando p = .1) =
+15
+y=3
+15
+y
+(.1)y(.9)15−y = .184.
+En consecuencia, si usamos {y ≤ 2} como la región de rechazo, el valor de b cuando p = 
+.10 es menor que el valor para b que obtuvimos en el Ejemplo 10.2 con p = .30 (.184 contra 
+.873). No obstante, cuando usamos esta región de rechazo, todavía tenemos una probabilidad 
+bastante grande de decir que Jones es ganador si en verdad recibirá sólo 10% de los votos.
+ 
+Q
+
+[Bloque seleccionado #518 | relevancia=30]
+Pagina 517
+10.2  Elementos de una prueba estadística  493
+Los Ejemplos 10.1 al 10.3 muestran que la prueba usando RR = {y ≤ 2} garantiza dismi-
+nuir el riesgo de cometer un error tipo I (a = .004), pero no ofrece protección adecuada contra 
+un error tipo II. ¿Cómo podemos mejorar nuestra prueba? Una forma es balancear a y b al 
+cambiar la región de rechazo. Si agrandamos RR en una nueva región de rechazo RR* (esto 
+es, RR ⊂ RR*), la prueba usando RR* nos llevará a rechazar H0 con más frecuencia. Si a* y a 
+denotan las probabilidades de errores tipo I (niveles de las pruebas) cuando usamos RR* y RR 
+como las regiones de rechazo, respectivamente, entonces, como RR ⊂ RR*,
+a* = P (estadístico de prueba está en RR* cuando H0 es verdadera)
+ 
+≥ P (estadístico de prueba está en RR cuando H0 es verdadera) = a.
+Del mismo modo, si usamos la región de rechazo agrandada RR*, el procedimiento de prueba 
+nos llevará a aceptar H0 con menos frecuencia. Si b* y b denotan las probabilidades de errores 
+tipo II para las pruebas que usan RR* y RR, respectivamente, entonces
+b* = P (estadístico de prueba no está en RR* cuando Ha es verdadera)
+ 
+≤ P (estadístico de prueba no está en RR cuando Ha es verdadera) = b.
+En consecuencia, si cambiamos la región de rechazo para aumentar a, entonces b disminuirá. 
+Del mismo modo, si el cambio en la región de rechazo resulta en una disminución en a, en-
+tonces b aumentará. Por tanto, a y b están relacionadas de manera inversa.
+ 
+EJEMPLO 10.4 
+Consulte las prueba analizada en el Ejemplo 10.1. Ahora suponga que RR = {y ≤ 5}. Calcule 
+el nivel a de la prueba y calcule b si p = .3. Compare los resultados con los valores obtenidos 
+en los Ejemplos 10.1 y 10.2 (donde usamos RR = {y ≤ 2}).
+ 
+Solución 
+En este caso,
+a = P (estadístico de prueba está en RR cuando H0 es verdadera)
+ 
+= P (Y ≤ 5 cuando p = .5) =
+5
+y=0
+15
+y
+(.5)15 = .151.
+Cuando p = .3,
+b = P (estadístico de prueba no está en RR cuando Ha es verdadera y p = .3)
+ 
+= P (Y > 5 cuando p = .3) =
+15
+y=6
+15
+y
+(.3)y(.7)15−y = .278.
+Una comparación de las a y b calculadas aquí con los resultados de los Ejemplos 10.1 y 
+10.2 muestra que ampliar la región de rechazo de RR = {y ≤ 2} a RR* = {y ≤ 5} aumenta 
+a y disminuye b (véase la Tabla 10.1). Por tanto, hemos alcanzado un mejor balance entre 
+RR
+Probabilidades de error
+{y ≤2}
+{y ≤5}
+a
+.004
+.151
+b cuando p = .3
+.873
+.278
+Tabla 10.1  Comparación de a y b para dos regiones de rechazo diferentes
+
+[Bloque seleccionado #519 | relevancia=26]
+Pagina 518
+494  Capítulo 10  Prueba de hipótesis
+los riesgos de cometer errores tipo I y tipo II, aunque a como b siguen siendo todavía muy 
+grandes. ¿Cómo podemos reducirlas? La respuesta es clara y lógica: debemos obtener más 
+información sobre la verdadera naturaleza de la población al aumentar el tamaño muestral. 
+Para casi todas las pruebas estadísticas, si a está fi ja en algún valor aceptablemente pequeño, 
+b disminuye cuando el tamaño muestral aumenta. 
+Q
+En esta sección hemos defi nido los elementos esenciales de cualquier prueba estadística. 
+Hemos visto que se pueden cometer dos posibles tipos de error al probar una hipótesis: los 
+errores tipo I y tipo II. Las probabilidades de cometer estos errores sirven como criterios para 
+evaluar un procedimiento de prueba. En las siguientes secciones usaremos las distribuciones 
+muestrales que obtuvimos en el Capítulo 7 para desarrollar métodos que permitan probar hi-
+pótesis relacionadas con parámetros de frecuente interés práctico.
+Ejercicios
+ 
+10.1 
+Defi na a y b para una prueba estadística de hipótesis.
+ 
+10.2 
+Un investigador ha preparado un nivel de dosis de droga que según él, inducirá el sueño en 80% de las 
+personas que sufren de insomnio. Después de examinar la dosis, pensamos que lo dicho por él respecto 
+a la efectividad de la dosis es exagerado. En un intento por refutar su dicho, administramos la dosis pres-
+crita a 20 personas que padecen de insomnio y observamos Y, el número de individuos a quienes la dosis 
+induce el sueño. Deseamos probar la hipótesis H0: p = .8 contra la alternativa, Ha : p < .8. Suponga que 
+se usa la región de rechazo {y ≤ 12}.
+ 
+ 
+a De acuerdo con la información de este problema, ¿qué es un error tipo I?
+ 
+ 
+b Encuentre a.
+ 
+ 
+c Con base en la información de este problema, ¿qué es un error tipo II?
+ 
+ 
+d Encuentre b cuando p = .6.
+ 
+ 
+e Encuentre b cuando p = .4.
+ 
+10.3 
+Consulte el Ejercicio 10.2.
+ 
+ 
+a Defi na la región de rechazo de la forma {y ≤ c} de modo que a ≈ .01.
+ 
+ 
+b Para la región de rechazo del inciso a, encuentre b cuando p = .6.
+ 
+ 
+c Para la región de rechazo del inciso a, encuentre b cuando p = .4.
+ 
+10.4 
+Suponga que deseamos probar la hipótesis nula H0 de que la proporción p de hojas de contabilidad con 
+errores es igual a .05 contra la alternativa Ha de que la proporción es mayor que .05 usando el siguiente 
+esquema. Se seleccionan al azar dos hojas de contabilidad. Si ninguna de ellas tiene errores, rechazamos 
+H0; si una o más contienen un error, vemos una tercera hoja. Si ésta no tiene errores, rechazamos H0. En 
+todos los otros casos acepta
+
+[Bloque seleccionado #521 | relevancia=16]
+Pagina 520
+496  Capítulo 10  Prueba de hipótesis
+ 
+10.3 Pruebas comunes con muestras grandes
+Suponga que deseamos probar un conjunto de hipótesis respecto a un parámetro u con base 
+en una muestra aleatoria Y1, Y2, . . . , Yn. En esta sección desarrollaremos procedimientos de 
+prueba de hipótesis que están basados en un estimador ˆu que tiene una distribución muestral 
+normal (aproximadamente) con media u y error estándar sˆu. Los estimadores de muestra 
+grande del Capítulo 8 (Tabla 8.1), por ejemplo Y
+ˆp
+y
+, satisfacen estos requisitos. También 
+los satisfacen los estimadores empleados para comparar dos medias poblacionales (m1 − m2) 
+y para la comparación de dos parámetros binomiales (p1 − p2).
+Si u0 es un valor específi co de u, podemos probar H0 : u = u0 contra Ha : u > u0. La Figura 
+10.2 contiene una gráfi ca que ilustra las distribuciones muestrales de ˆu para varios valores 
+de u. Si ˆu es cercana a u0, parece razonable aceptar H0. Pero, si en realidad u > u0, es más 
+probable que ˆu sea más grande. En consecuencia, valores grandes de ˆu (valores mayores a u0 
+en una cantidad apropiada) favorecen el rechazo de H0 : u = u0 y una aceptación de Ha : u > 
+u0. Esto es, las hipótesis nula y alternativa, el estadístico de prueba y la región de rechazo son 
+como sigue:
+H0 : u = u0.
+Ha : u > u0.
+Estadístico de prueba: ˆu.
+Región de rechazo: RR={ ˆu
+k}
+>
+ para alguna selección de k.
+El valor real de k en la región de rechazo RR se determina al fi jar la probabilidad a de error 
+tipo I (el nivel de la prueba) y escoger k de conformidad (vea Figura 10.3). Si H0 es verdadera, 
+ˆu tiene una distribución aproximadamente normal con media u0 y error estándar sˆu. Por tanto, 
+F I G U R A 10.2
+Distribuciones 
+muestrales del 
+estimador ˆu para 
+varios valores de u
+F I G U R A 10.3
+Región de rechazo 
+de muestra grande 
+para H0 : u = u0 
+contra Ha : u > u0
+ˆ
+f( )
+ˆ
+0
+ˆ
+f( )
+ˆ
+0
+k
+Rechazar H0
+u
+u
+u
+a
+
+[Bloque seleccionado #522 | relevancia=16]
+Pagina 521
+si deseamos una prueba de nivel a,
+k = u0 + zasˆu
+es la selección apropiada para k [si Z tiene una distribución normal estándar, entonces za es tal 
+que P (Z > za) = a]. Como
+RR = {ˆu : ˆu > u0 + zasˆu} =
+ˆu :
+ˆu −u  0
+sˆu
+> za
+si Z = ( ˆu −u0)/sˆu se usa como estadístico de prueba, la región de rechazo también se puede 
+escribir como RR = {z > za}. Observe que Z mide el número de errores estándar entre el 
+estimador para u y u0, el valor de u especifi cado en H0. Por tanto, una forma equivalente de la 
+prueba de hipótesis, con nivel a, es la siguiente:
+H0 : u = u0.
+Ha : u > u0.
+Estadístico de prueba: Z =
+ˆu −u0
+sˆu
+.
+Región de rechazo: {z > za}.
+H0 es rechazada si Z cae sufi cientemente alejada en la cola superior de la distribución normal 
+estándar. La hipótesis alternativa Ha : u > u0 se denomina alternativa de cola superior y RR 
+= {z > za} se conoce como región de rechazo de cola superior. Observe que la fórmula pre-
+cedente para Z es sencillamente
+  estimador para el parámetro– valor del parámetro dado por H0
+Z = ––––––––––––––––––––––––––––––––––––––––––––––––––
+error estándar del estimador
+ 
+EJEMPLO 10.5 
+El vicepresidente de ventas de una gran empresa afi rma que los vendedores están promedian-
+do no más de 15 contactos de venta por semana. (Le gustaría aumentar esta cantidad.) Como 
+prueba de su afi rmación, aleatoriamente se seleccionan n = 36 vendedores y se registra el nú-
+mero de contactos hechos por cada uno para una sola semana seleccionada al azar. La media 
+y varianza de las 36 mediciones fueron 17 y 9, respectivamente. ¿La evidencia contradice lo 
+dicho por el vicepresidente? Use una prueba con nivel a = .05.
+ 
+Solución 
+Estamos interesados en la hipótesis de investigación de que la afi rmación del vicepresidente 
+es incorrecta. Esto se puede escribir formalmente como Ha : m > 15, donde m es el número 
+medio de contactos de ventas por semana. Por tanto, estamos interesados en probar
+H0 : m = 15  contra  Ha : m > 15.
+Sabemos que para n lo sufi cientemente grande, la media muestral Y es un estimador puntual 
+de m que está distribuido normalmente en forma aproximada con mY = m
+sY = s/√n.
+y
+ 
+En consecuencia, nuestro estadístico de prueba es
+Z = Y −m0
+sY
+= Y −m0
+s/ √n.
+La región de rechazo, con a = .05, está dada por {z > z.05 = 1.645} (véase Tabla 4, Apéndice 
+3). La varianza poblacional s2 no se conoce, pero puede estimarse de manera muy precisa 
+(porque n = 36 es lo sufi cientemente grande) con la varianza muestral s2 = 9.
+10.3  Pruebas comunes con muestras grandes  497
+
+[Bloque seleccionado #543 | relevancia=22]
+Pagina 542
+518  Capítulo 10  Prueba de hipótesis
+por 23 individuos. ¿Estos resultados indican que usar una modelo femenina aumenta el costo percibido 
+de un automóvil? Encuentre el valor p relacionado e indique su conclusión para una prueba de nivel 
+a = .05.
+ 
+10.7  Algunos comentarios respecto 
+a la teoría de la prueba de hipótesis
+Como ya señalamos antes, podemos elegir entre poner en práctica una prueba de una o de dos 
+colas para una situación determinada. Esta elección está dictada por los aspectos prácticos del 
+problema y depende del valor alternativo del parámetro u que el experimentador está tratando 
+de detectar. Si sufriéramos una gran pérdida fi nanciera cuando u fuera mayor que u0 pero no 
+si fuera menor, concentraríamos nuestra atención en detectar valores de u mayores que u0. En 
+consecuencia, rechazaríamos la cola superior de la distribución para el estadístico de prueba 
+previamente estudiado. Por otra parte, si estuviéramos igualmente interesados en detectar 
+valores de u menores o mayores que u0, emplearíamos una prueba de dos colas.
+La teoría de pruebas estadísticas de las hipótesis, explicada en la Sección 10.2 y utilizada 
+en la Sección 10.3, es un procedimiento bien defi nido que hace posible que el investigador 
+rechace o acepte la hipótesis nula con riesgo medido a o b. Desafortunadamente, este sistema 
+no es sufi ciente para todas las situaciones prácticas.
+Para cualquier prueba estadística, la probabilidad a de un error tipo I depende del valor 
+del parámetro especifi cado en la hipótesis nula. Esta probabilidad puede ser calculada, al 
+menos aproximadamente, para cada uno de los procedimientos de prueba estudiados en este 
+texto. Para los procedimientos que hemos visto hasta aquí, la probabilidad b de un error tipo 
+II puede ser calculada sólo después que un valor específi co del parámetro de interés haya 
+sido seleccionado para considerarlo. La selección de un valor prácticamente signifi cativo para 
+este parámetro es, con frecuencia, difícil. Incluso si se puede identifi car una alternativa sig-
+nifi cativa, el cálculo real de b es a veces bastante tedioso. La especifi cación de una hipótesis 
+alternativa signifi cativa es incluso más difícil para algunos de los procedimientos de prueba 
+que consideraremos en los siguientes capítulos.
+Desde luego, no deseamos pasar por alto la posibilidad de cometer un error tipo II. Más 
+adelante en este capítulo determinaremos métodos para seleccionar pruebas con el más pe-
+queño valor posible de b para pruebas donde a, la probabilidad de un error tipo I, es un valor 
+fi jo seleccionado p
+
+[Bloque seleccionado #544 | relevancia=16]
+Pagina 543
+queda en la región de rechazo, rechazamos H0 y decimos que la evidencia apoya la hipótesis 
+de investigación de que Jones perderá. En esta situación, habremos demostrado que se apoya 
+la hipótesis que nos interesa, es decir, la hipótesis de investigación. Sin embargo, si Y no cae 
+en la región de rechazo y no podemos determinar un valor específi co de p en Ha que sea de 
+interés directo, simplemente decimos que no rechazamos H0 y debemos buscar información 
+adicional antes de llegar a una conclusión. De manera alternativa, podríamos indicar el valor 
+de p relacionado con la prueba estadística y dejar la interpretación al lector.
+Si H0 es rechazada por un  valor “pequeño” de a (o por un valor p pequeño), este suceso 
+no implica que la hipótesis nula sea “errónea en una cantidad grande”. Sí signifi ca que la hi-
+pótesis nula puede ser rechazada con base en un procedimiento que incorrectamente rechaza 
+la hipótesis nula (cuando H0 es verdadera) con una pequeña probabilidad (esto es, con una 
+pequeña probabilidad de un error tipo I). También debemos abstenernos de igualar la signi-
+fi cancia estadística con la práctica. Si consideramos el experimento descrito y analizado en 
+los Ejemplos 10.7 y 10.11, el valor p de .0124 es “pequeño”, y el resultado es estadística-
+mente signifi cativo para cualquier selección de a ≥ .0124. No obstante, la diferencia entre 
+los tiempos medios de reacción para las dos muestras es de sólo .2 segundo, un resultado que 
+puede o no ser prácticamente signifi cativo. Para evaluar la signifi cancia práctica de esa dife-
+rencia, es posible formar un intervalo de confi anza para m1 − m2 con el uso de los métodos 
+de la Sección 8.6.
+Finalmente, son oportunos algunos comentarios respecto a la selección de las hipótesis 
+nulas que hemos empleado, en particular en las pruebas de una cola. Así, en el Ejemplo 
+10.1 identifi camos la hipótesis alternativa apropiada como Ha : p < .5 y empleamos H0 : 
+p = .5 como nuestra hipótesis nula. El estadístico de prueba fue Y = número de votantes 
+que estaban a favor de Jones en una muestra de tamaño n = 15. Una región de rechazo que 
+consideramos era {y ≤ 2}. Usted podría preguntarse por qué no usamos H ∗
+0 : p ≥.5 como la 
+hipótesis nula. Esto tiene sentido porque todo posible valor de p está ya sea en H ∗
+0 : p ≥.5 
+o en Ha: p < 0.5.
+Entonces, ¿por qué usamos H0 : p = .5? Sencillamente porque lo que en realidad nos im-
+porta es la hipótesis alternativa Ha : p < .5; la hipótesis nula no es nuestro principal interés. 
+Como ya dijimos, por lo general no aceptamos en realidad la hipótesis nul
+
+[Bloque seleccionado #568 | relevancia=22]
+Pagina 567
+ EJEMPLO 10.22 
+Suponga que Y representa una sola observación de una población con función de densidad de 
+probabilidad dada por
+f (y u) =
+uyu−1,
+0 < y < 1,
+0,
+en cualquier otro punto.
+|
+Encuentre la más potente prueba con nivel de signifi cancia a = .05 para probar H0 : u = 2 
+contra Ha : u = 1.
+ 
+Solución 
+Como ambas hipótesis son simples, el Teorema 10.1 puede aplicarse para obtener la prueba 
+requerida. En este caso,
+L(u0)
+L(ua) = f (y u0)
+f (y ua) =
+2y
+(1)y0 = 2y,
+para 0 < y < 1,
+|
+|
+y la forma de la región de rechazo para la más potente prueba es
+2y < k.
+Del mismo modo, la región de rechazo RR es {y < k/2}. O bien, debido a que k/2 = k* es 
+una constante, la región de rechazo es RR: {y < k*}.
+Como a = .05 está especifi cada, el valor de k* está determinado por
+.05 = P(Y en RR cuando u = 2) = P(Y < k∗cuando u = 2) =
+k∗
+0
+2y dy = (k∗)2.
+Por tanto, (k*)2 = .05 y la región de rechazo de la más potente prueba es
+RR: {y < √.05 = .2236}
+Entre todas las pruebas para H0 contra Ha basadas en un tamaño muestral de 1 y con a fi ja en 
+.05, esta prueba tiene el máximo valor posible para potencia (ua) = potencia(1). De la misma 
+manera, entre todas las pruebas con a = .05 esta prueba tiene la mínima probabilidad de co-
+meter un error tipo II cuando b (ua) se evalúa en ua = 1. ¿Cuál es el valor real para potencia(u) 
+cuando u = 1?
+potencia(1) = P(Y en RR cuando u = 1) = P(Y < .2236 cuando u = 1)
+=
+.2236
+0
+(1) dy = .2236
+Aun cuando la región de rechazo {y < .2236} da el máximo valor para potencia(1) entre to-
+das las pruebas con a = .05, vemos que b (1) = 1 − .2236 = .7764 todavía es muy grande.
+ 
+Q
+Observe que las formas del estadístico de prueba y la región de rechazo dependen de H0 y 
+Ha. Si se cambia la alternativa a Ha : u = 4, la prueba más potente está basada en Y 2, y rechaza-
+mos H0 a favor de Ha si Y 2 > k′, para alguna constante k′. También observe que el lema de 
+Neyman−Pearson proporciona la forma de la región de rechazo; la región de rechazo real 
+depende del valor especifi cado para a.
+Para distribuciones discretas, no siempre es posible hallar una prueba cuyo nivel de signifi -
+cancia sea exactamente igual a algún valor predeterminado de a. En tales casos, especifi camos 
+10.10  Potencia de las pruebas y el lema de Neyman-Pearson  543

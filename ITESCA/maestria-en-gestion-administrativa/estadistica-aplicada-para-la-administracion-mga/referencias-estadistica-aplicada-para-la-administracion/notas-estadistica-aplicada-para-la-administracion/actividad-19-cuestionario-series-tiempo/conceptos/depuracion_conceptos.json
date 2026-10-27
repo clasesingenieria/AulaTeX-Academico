@@ -1,0 +1,103 @@
+{
+  "subject_slug": "estadistica-aplicada-para-la-administracion",
+  "engine": "Amazon Nova Pro",
+  "kept": [
+    "identificación analítica de componentes de tendencia, ciclo, estacionalidad e irregularidad",
+    "procedimiento de medias móviles centradas para periodos pares (4 trimestres o 12 meses)",
+    "normalización de índices estacionales para que su suma sea igual al número de estaciones",
+    "desestacionalización de ventas para evaluar desempeño real",
+    "selección de la constante de suavizamiento alfa según estabilidad de la serie",
+    "cálculo e interpretación de tasas de variación y números índice",
+    "series tiempo",
+    "requisitos instrucciones",
+    "requisitos instrucciones actividad",
+    "análisis series",
+    "pronósticos económicos",
+    "tiempo pronósticos",
+    "serie tiempo",
+    "estacional",
+    "pronóstico"
+  ],
+  "conceptos_clave_nova_pro": [
+    {
+      "concepto": "identificación analítica de componentes de tendencia, ciclo, estacionalidad e irregularidad",
+      "definicion_rigurosa": "La identificación analítica de componentes en series de tiempo implica descomponer una serie en sus elementos constitutivos: tendencia (variación a largo plazo), ciclo (fluctuaciones periódicas de mediano plazo), estacionalidad (patrones recurrentes en intervalos fijos) e irregularidad (variaciones aleatorias). Esta descomposición permite una comprensión más profunda de los patrones subyacentes en los datos temporales.",
+      "formulacion_matematica_latex": "Y_t = T_t + C_t + S_t + I_t",
+      "aplicacion_administrativa": "La identificación de estos componentes permite a los gerentes comprender mejor las fluctuaciones en datos como ventas, costos y demanda, facilitando la toma de decisiones estratégicas y operativas.",
+      "fuente_principal": "Lind, Marchal y Wathen, 2012",
+      "localizador": "bloque 2"
+    },
+    {
+      "concepto": "procedimiento de medias móviles centradas para periodos pares",
+      "definicion_rigurosa": "El procedimiento de medias móviles centradas implica calcular el promedio de un conjunto de observaciones en una serie de tiempo, centrando la media en el período actual. Para periodos pares, como 4 trimestres o 12 meses, se calcula el promedio de los valores anteriores y posteriores al período en cuestión.",
+      "formulacion_matematica_latex": "MMA_t = \\frac{1}{2k+1} \\sum_{i=-k}^{k} Y_{t+i}",
+      "aplicacion_administrativa": "Este método suaviza las fluctuaciones en los datos, lo que ayuda a identificar tendencias y patrones más claramente, facilitando la previsión y el análisis.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "normalización de índices estacionales",
+      "definicion_rigurosa": "La normalización de índices estacionales consiste en ajustar los índices estacionales para que su suma sea igual al número de estaciones. Esto se logra multiplicando cada índice estacional por el número de estaciones dividido entre la suma de los índices estacionales sin ajustar.",
+      "formulacion_matematica_latex": "I_{estacional, ajustado} = I_{estacional} \\times \\frac{N}{\\sum I_{estacional}}",
+      "aplicacion_administrativa": "La normalización permite una comparación justa de las variaciones estacionales a lo largo del tiempo, lo que es crucial para el análisis de ventas y otros datos cíclicos.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 4"
+    },
+    {
+      "concepto": "desestacionalización de ventas",
+      "definicion_rigurosa": "La desestacionalización de ventas implica eliminar el componente estacional de una serie de tiempo para evaluar el desempeño real de las ventas, sin la influencia de patrones estacionales. Esto se logra dividiendo los datos originales por los índices estacionales ajustados.",
+      "formulacion_matematica_latex": "Venta_{desestacionalizada} = \\frac{Venta_{original}}{I_{estacional, ajustado}}",
+      "aplicacion_administrativa": "La desestacionalización permite a los gerentes evaluar el rendimiento real de las ventas y tomar decisiones más informadas sobre estrategias de marketing y operaciones.",
+      "fuente_principal": "Docente, 2026",
+      "localizador": "bloque 5"
+    },
+    {
+      "concepto": "selección de la constante de suavizamiento alfa",
+      "definicion_rigurosa": "La selección de la constante de suavizamiento alfa en el suavizamiento exponencial depende de la estabilidad de la serie de tiempo. Un valor de alfa más alto da más peso a las observaciones recientes, mientras que un valor más bajo da más peso a las observaciones pasadas.",
+      "formulacion_matematica_latex": "S_t = \\alpha Y_t + (1 - \\alpha) S_{t-1}",
+      "aplicacion_administrativa": "La elección adecuada de alfa es crucial para la precisión de los pronósticos, lo que afecta directamente las decisiones de inventario, producción y ventas.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 5"
+    },
+    {
+      "concepto": "cálculo e interpretación de tasas de variación",
+      "definicion_rigurosa": "Las tasas de variación miden el cambio porcentual entre dos períodos consecutivos en una serie de tiempo. Se calculan dividiendo la diferencia entre los valores de dos períodos consecutivos por el valor del período anterior y multiplicando por 100.",
+      "formulacion_matematica_latex": "Tasa\\_de\\_variación = \\frac{Y_t - Y_{t-1}}{Y_{t-1}} \\times 100",
+      "aplicacion_administrativa": "Las tasas de variación son útiles para identificar tendencias y cambios en los datos, lo que ayuda a los gerentes a tomar decisiones estratégicas y operativas.",
+      "fuente_principal": "Levin y Rubin, 2012",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "números índice",
+      "definicion_rigurosa": "Los números índice son medidas que comparan el valor de una variable en un período dado con su valor en un período base. Se utilizan comúnmente para medir cambios en precios, ventas y otros indicadores económicos.",
+      "formulacion_matematica_latex": "Índice = \\frac{Valor\\_actual}{Valor\\_base} \\times 100",
+      "aplicacion_administrativa": "Los números índice permiten a los gerentes evaluar cambios relativos en variables clave, facilitando la comparación y el análisis de tendencias a lo largo del tiempo.",
+      "fuente_principal": "Levin y Rubin, 2012",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "series de tiempo",
+      "definicion_rigurosa": "Las series de tiempo son secuencias de datos ordenados cronológicamente. Cada observación en una serie de tiempo corresponde a un punto específico en el tiempo.",
+      "formulacion_matematica_latex": "Y_t = f(t)",
+      "aplicacion_administrativa": "El análisis de series de tiempo es fundamental para la previsión y el análisis de tendencias en ventas, costos, demanda y otros indicadores clave de desempeño.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "análisis de series",
+      "definicion_rigurosa": "El análisis de series implica descomponer una serie de tiempo en sus componentes principales para identificar patrones y tendencias. Esto incluye la identificación de tendencia, ciclo, estacionalidad e irregularidad.",
+      "formulacion_matematica_latex": "Y_t = T_t + C_t + S_t + I_t",
+      "aplicacion_administrativa": "El análisis de series es crucial para la toma de decisiones en áreas como previsión de ventas, gestión de inventarios y planeación estratégica.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 3"
+    },
+    {
+      "concepto": "pronósticos económicos",
+      "definicion_rigurosa": "Los pronósticos económicos son predicciones sobre el futuro comportamiento de variables económicas como PIB, inflación, desempleo y ventas. Se basan en modelos estadísticos y análisis de series de tiempo.",
+      "formulacion_matematica_latex": "Pronóstico = f(Datos\\_históricos, Variables\\_económicas)",
+      "aplicacion_administrativa": "Los pronósticos económicos guían decisiones estratégicas y operativas en áreas como inversión, financiamiento y planificación de recursos.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 4"
+    }
+  ]
+}

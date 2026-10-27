@@ -1,0 +1,106 @@
+{
+  "subject_slug": "estadistica-aplicada-para-la-administracion",
+  "engine": "Amazon Nova Pro",
+  "kept": [
+    "concepto de regresión y correlación lineal de Pearson",
+    "ecuación del modelo de regresión lineal simple y método de mínimos cuadrados ordinarios",
+    "interpretación económica del intercepto y la pendiente marginal",
+    "descomposición de la suma de cuadrados (STC = SCR + SCE)",
+    "coeficiente de determinación R cuadrado y R cuadrado ajustado",
+    "modelo de regresión lineal múltiple y coeficientes parciales",
+    "análisis de varianza (ANOVA) y prueba F de significancia global",
+    "pruebas t individuales, multicolinealidad y variables indicadoras (dummy)",
+    "regresión",
+    "correlación lineal de Pearson",
+    "ecuación del modelo de regresión lineal simple",
+    "método de mínimos cuadrados ordinarios",
+    "interpretación económica del intercepto",
+    "la pendiente marginal",
+    "coeficiente",
+    "determinación",
+    "coeficiente determinación",
+    "mínimos cuadrados"
+  ],
+  "conceptos_clave_nova_pro": [
+    {
+      "concepto": "concepto de regresión",
+      "definicion_rigurosa": "La regresión es un método estadístico que permite modelar y analizar la relación entre una variable dependiente y una o más variables independientes. Su objetivo principal es estimar la relación funcional que mejor describe los datos observados, facilitando la predicción y el análisis de tendencias.",
+      "formulacion_matematica_latex": "y = \\beta_0 + \\beta_1x + \\epsilon",
+      "aplicacion_administrativa": "En administración, la regresión se utiliza para predecir variables de interés, como ventas, costos o rendimiento, en función de variables explicativas como publicidad, precio o volumen de producción. Esto permite a los gerentes tomar decisiones informadas basadas en análisis cuantitativos.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "correlación lineal de Pearson",
+      "definicion_rigurosa": "La correlación lineal de Pearson es una medida estadística que cuantifica la fuerza y la dirección de la relación lineal entre dos variables. Su valor varía entre -1 y 1, donde 1 indica una relación positiva perfecta, -1 una relación negativa perfecta y 0 ninguna relación lineal.",
+      "formulacion_matematica_latex": "r = \\frac{n(\\sum xy) - (\\sum x)(\\sum y)}{\\sqrt{[n\\sum x^2 - (\\sum x)^2][n\\sum y^2 - (\\sum y)^2]}}",
+      "aplicacion_administrativa": "En administración, la correlación de Pearson ayuda a identificar relaciones entre variables, como la relación entre gastos en marketing y ventas, lo que puede guiar estrategias de inversión y optimización de recursos.",
+      "fuente_principal": "Levin y Rubin, 2012",
+      "localizador": "bloque 3"
+    },
+    {
+      "concepto": "ecuación del modelo de regresión lineal simple",
+      "definicion_rigurosa": "La ecuación del modelo de regresión lineal simple describe la relación lineal entre una variable dependiente y una variable independiente. La ecuación se expresa como y = β0 + β1x + ε, donde β0 es el intercepto, β1 es la pendiente y ε es el término de error.",
+      "formulacion_matematica_latex": "y = \\beta_0 + \\beta_1x + \\epsilon",
+      "aplicacion_administrativa": "Esta ecuación permite a los administradores predecir el valor de la variable dependiente en función de la variable independiente, lo que es útil para la planificación y la toma de decisiones estratégicas.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "método de mínimos cuadrados ordinarios",
+      "definicion_rigurosa": "El método de mínimos cuadrados ordinarios (MCO) es una técnica para estimar los parámetros de un modelo de regresión lineal. El objetivo es minimizar la suma de los cuadrados de las diferencias entre los valores observados y los valores predichos por el modelo.",
+      "formulacion_matematica_latex": "\\min \\sum_{i=1}^{n} (y_i - (\\beta_0 + \\beta_1x_i))^2",
+      "aplicacion_administrativa": "El MCO es ampliamente utilizado en administración para estimar modelos de regresión que ayudan a predecir variables clave, como ventas o costos, en función de variables explicativas.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 2"
+    },
+    {
+      "concepto": "interpretación económica del intercepto",
+      "definicion_rigurosa": "El intercepto en un modelo de regresión lineal representa el valor esperado de la variable dependiente cuando todas las variables independientes son iguales a cero. En términos económicos, el intercepto puede interpretar la constante o el valor base de la variable dependiente en ausencia de influencias de las variables independientes.",
+      "formulacion_matematica_latex": "y = \\beta_0 + \\beta_1x",
+      "aplicacion_administrativa": "En administración, el intercepto puede representar el nivel base de ventas o costos cuando no hay inversión en marketing o cuando otras variables influyentes son cero, lo que ayuda a establecer un punto de referencia para las proyecciones.",
+      "fuente_principal": "Levin y Rubin, 2012",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "la pendiente marginal",
+      "definicion_rigurosa": "La pendiente marginal en un modelo de regresión lineal representa el cambio en la variable dependiente por cada unidad de cambio en la variable independiente. Es un indicador de la sensibilidad de la variable dependiente a cambios en la variable independiente.",
+      "formulacion_matematica_latex": "\\frac{\\Delta y}{\\Delta x} = \\beta_1",
+      "aplicacion_administrativa": "En administración, la pendiente marginal ayuda a entender cuánto cambia una variable dependiente, como las ventas, por cada unidad de cambio en una variable independiente, como el gasto en publicidad, lo que es crucial para la planificación de estrategias de marketing.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 2"
+    },
+    {
+      "concepto": "descomposición de la suma de cuadrados",
+      "definicion_rigurosa": "La descomposición de la suma de cuadrados (STC = SCR + SCE) divide la variabilidad total en la variable dependiente en dos componentes: la suma de cuadrados debido a la regresión (SCR) y la suma de cuadrados debido al error (SCE). Esta descomposición ayuda a evaluar la bondad de ajuste del modelo de regresión.",
+      "formulacion_matematica_latex": "STC = SCR + SCE",
+      "aplicacion_administrativa": "En administración, esta descomposición permite evaluar cuánto de la variabilidad en la variable dependiente se explica por el modelo de regresión y cuánto se debe al error, lo que es esencial para validar la eficacia del modelo.",
+      "fuente_principal": "Anderson, Sweeney y Williams, 2012",
+      "localizador": "bloque 2"
+    },
+    {
+      "concepto": "coeficiente de determinación R cuadrado",
+      "definicion_rigurosa": "El coeficiente de determinación R cuadrado (R²) mide la proporción de la variabilidad en la variable dependiente que se explica por el modelo de regresión. Su valor varía entre 0 y 1, donde 1 indica que el modelo explica toda la variabilidad y 0 indica que el modelo no explica nada.",
+      "formulacion_matematica_latex": "R^2 = \\frac{SCR}{STC}",
+      "aplicacion_administrativa": "En administración, R² ayuda a evaluar la eficacia del modelo de regresión en explicar la variable dependiente, lo que es crucial para tomar decisiones informadas basadas en análisis cuantitativos.",
+      "fuente_principal": "Levin y Rubin, 2012",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "R cuadrado ajustado",
+      "definicion_rigurosa": "El R cuadrado ajustado es una versión modificada del coeficiente de determinación R² que tiene en cuenta el número de variables independientes en el modelo. Ajusta el valor de R² para penalizar la inclusión de variables adicionales que no aportan información significativa.",
+      "formulacion_matematica_latex": "\\bar{R}^2 = 1 - (1 - R^2)\\frac{n-1}{n-k-1}",
+      "aplicacion_administrativa": "En administración, el R cuadrado ajustado proporciona una medida más precisa de la bondad de ajuste del modelo, evitando la sobreajuste y permitiendo una comparación justa entre modelos con diferentes números de variables.",
+      "fuente_principal": "Levin y Rubin, 2012",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "modelo de regresión lineal múltiple",
+      "definicion_rigurosa": "El modelo de regresión lineal múltiple extiende el modelo de regresión lineal simple al incluir múltiples variables independientes. La ecuación se expresa como y = β0 + β1x1 + β2x2 +... + βpxp + ε, donde βi son los coeficientes de regresión y ε es el término de error.",
+      "formulacion_matematica_latex": "y = \\beta_0 + \\beta_1x_1 + \\beta_2x_2 +... + \\beta_px_p + \\epsilon",
+      "aplicacion_administrativa": "En administración, el modelo de regresión lineal múltiple permite analizar la relación entre una variable dependiente y varias variables independientes, lo que es útil para evaluar la influencia combinada de múltiples factores en un resultado.",
+      "fuente_principal": "Wackerly et al., 2010",
+      "localizador": "bloque 1"
+    }
+  ]
+}

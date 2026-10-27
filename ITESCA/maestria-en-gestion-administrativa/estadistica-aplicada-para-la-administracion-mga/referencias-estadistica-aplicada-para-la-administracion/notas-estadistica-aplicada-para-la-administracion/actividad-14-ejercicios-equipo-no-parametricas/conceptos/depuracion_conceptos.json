@@ -1,0 +1,81 @@
+{
+  "subject_slug": "estadistica-aplicada-para-la-administracion",
+  "engine": "Amazon Nova Pro",
+  "kept": [
+    "prueba de rangos con signo de Wilcoxon para satisfacción laboral antes y después de adquisición (Ejercicio 1)",
+    "prueba de los signos para series pareadas de temperaturas estacionales (Ejercicio 2)",
+    "prueba U de Mann-Whitney para comparación de edades por género (Ejercicio 3)",
+    "prueba H de Kruskal-Wallis para ventas por catálogo según método de pago (Ejercicio 4)",
+    "prueba U de Mann-Whitney para efectividad de degustaciones en tiendas (Ejercicio 5)",
+    "prueba U de Mann-Whitney para desempeño académico según procedencia rural o urbana (Ejercicio 6)",
+    "corrección por empates en asignación de rangos",
+    "prueba mann-whitney",
+    "requisitos instrucciones",
+    "deberás realizar",
+    "hipótesis paramétricas",
+    "pruebas hipótesis",
+    "realizar siguientes",
+    "poblaciones",
+    "distribución",
+    "observaciones",
+    "diferencias"
+  ],
+  "conceptos_clave_nova_pro": [
+    {
+      "concepto": "prueba de rangos con signo de Wilcoxon",
+      "definicion_rigurosa": "La prueba de rangos con signo de Wilcoxon es un método estadístico no paramétrico utilizado para comparar dos muestras emparejadas. Se basa en la asignación de rangos a las diferencias entre los pares de observaciones y luego en la suma de estos rangos. Esta prueba es particularmente útil cuando los datos no siguen una distribución normal y se desea evaluar si existe una diferencia significativa en la localización de las distribuciones de las dos muestras.",
+      "formulacion_matematica_latex": "Sea $(X_i, Y_i)$ un par de observaciones emparejadas. Se calcula la diferencia $D_i = X_i - Y_i$ para cada par. A cada diferencia se le asigna un rango, y luego se suman los rangos de las diferencias positivas y negativas. El estadístico de prueba $T$ se compara con valores críticos de la tabla de Wilcoxon.",
+      "aplicacion_administrativa": "En administración, esta prueba puede utilizarse para evaluar la satisfacción laboral antes y después de una intervención, como una adquisición empresarial, ayudando a determinar si la intervención ha tenido un efecto significativo en la satisfacción de los empleados.",
+      "fuente_principal": "Wackerly, D., Mendenhall, W., & Scheaffer, R. L. (2010). Mathematical Statistics with Applications. Cengage Learning.",
+      "localizador": "libro-estadistica-matematica-con-aplicaciones-wackerly-A14.txt (bloque 2)"
+    },
+    {
+      "concepto": "prueba de los signos",
+      "definicion_rigurosa": "La prueba de los signos es un método no paramétrico que se utiliza para evaluar si existe una diferencia significativa en una muestra emparejada. Se basa en contar el número de signos positivos y negativos en las diferencias entre los pares de observaciones. Esta prueba es útil cuando los datos son ordinales o cuando se desconoce la distribución de los datos.",
+      "formulacion_matematica_latex": "Sea $(X_i, Y_i)$ un par de observaciones emparejadas. Se calcula la diferencia $D_i = X_i - Y_i$ para cada par. Se cuenta el número de signos positivos y negativos. El estadístico de prueba se compara con la distribución binomial.",
+      "aplicacion_administrativa": "En administración, esta prueba puede utilizarse para analizar tendencias en datos temporales, como las variaciones estacionales en las temperaturas, ayudando a identificar patrones y tomar decisiones basadas en estos patrones.",
+      "fuente_principal": "Anderson, D. R., Sweeney, D. J., & Williams, T. A. (2012). Statistics for Business and Economics. Cengage Learning.",
+      "localizador": "docente-1776-9c622af3e4c6.txt (bloque 1)"
+    },
+    {
+      "concepto": "prueba U de Mann-Whitney",
+      "definicion_rigurosa": "La prueba U de Mann-Whitney, también conocida como prueba de suma de rangos, es un método no paramétrico utilizado para comparar dos muestras independientes. Se basa en la asignación de rangos combinados a todas las observaciones y luego en la comparación de las sumas de los rangos de cada muestra. Esta prueba es útil cuando los datos no siguen una distribución normal y se desea evaluar si existe una diferencia significativa en la localización de las distribuciones de las dos muestras.",
+      "formulacion_matematica_latex": "Sea $X_1, X_2, \\ldots, X_m$ y $Y_1, Y_2, \\ldots, Y_n$ dos muestras independientes. Se combinan y ordenan todas las observaciones, asignando rangos. El estadístico de prueba $U$ se calcula como la suma de los rangos de una de las muestras y se compara con valores críticos.",
+      "aplicacion_administrativa": "En administración, esta prueba puede utilizarse para comparar la edad de empleados por género, ayudando a identificar si existen diferencias significativas en la distribución de edades entre géneros.",
+      "fuente_principal": "Levin, R. I., & Rubin, D. S. (2012). Statistics for Management. Pearson.",
+      "localizador": "libro-estadistica-para-administracion-y-economia-levin-A14.txt (bloque 4)"
+    },
+    {
+      "concepto": "prueba H de Kruskal-Wallis",
+      "definicion_rigurosa": "La prueba H de Kruskal-Wallis es un método no paramétrico utilizado para comparar más de dos muestras independientes. Se basa en la asignación de rangos combinados a todas las observaciones y luego en la comparación de las sumas de los rangos de cada muestra. Esta prueba es útil cuando los datos no siguen una distribución normal y se desea evaluar si existe una diferencia significativa en la localización de las distribuciones de las muestras.",
+      "formulacion_matematica_latex": "Sea $X_{1}, X_{2}, \\ldots, X_{k}$ $k$ muestras independientes. Se combinan y ordenan todas las observaciones, asignando rangos. El estadístico de prueba $H$ se calcula y se compara con la distribución chi-cuadrado.",
+      "aplicacion_administrativa": "En administración, esta prueba puede utilizarse para comparar las ventas por catálogo según el método de pago, ayudando a identificar si existen diferencias significativas en las ventas según el método de pago utilizado.",
+      "fuente_principal": "Levin, R. I., & Rubin, D. S. (2012). Statistics for Management. Pearson.",
+      "localizador": "libro-estadistica-para-administracion-y-economia-levin-A14.txt (bloque 4)"
+    },
+    {
+      "concepto": "prueba U de Mann-Whitney para efectividad de degustaciones en tiendas",
+      "definicion_rigurosa": "La prueba U de Mann-Whitney se aplica para evaluar la efectividad de las degustaciones en tiendas al comparar las ventas en días con y sin degustaciones. Se basa en la asignación de rangos combinados a todas las observaciones y luego en la comparación de las sumas de los rangos de cada muestra. Esta prueba es útil cuando los datos no siguen una distribución normal y se desea evaluar si existe una diferencia significativa en las ventas debido a las degustaciones.",
+      "formulacion_matematica_latex": "Sea $X_1, X_2, \\ldots, X_m$ y $Y_1, Y_2, \\ldots, Y_n$ dos muestras independientes de ventas con y sin degustaciones. Se combinan y ordenan todas las observaciones, asignando rangos. El estadístico de prueba $U$ se calcula y se compara con valores críticos.",
+      "aplicacion_administrativa": "En administración, esta prueba puede utilizarse para evaluar si las degustaciones en tiendas aumentan las ventas, ayudando a tomar decisiones sobre la implementación de estrategias de marketing.",
+      "fuente_principal": "Anderson, D. R., Sweeney, D. J., & Williams, T. A. (2012). Statistics for Business and Economics. Cengage Learning.",
+      "localizador": "docente-1776-9c622af3e4c6.txt (bloque 1)"
+    },
+    {
+      "concepto": "prueba U de Mann-Whitney para desempeño académico según procedencia rural o urbana",
+      "definicion_rigurosa": "La prueba U de Mann-Whitney se aplica para evaluar el desempeño académico de estudiantes según su procedencia rural o urbana. Se basa en la asignación de rangos combinados a todas las observaciones y luego en la comparación de las sumas de los rangos de cada muestra. Esta prueba es útil cuando los datos no siguen una distribución normal y se desea evaluar si existe una diferencia significativa en el desempeño académico según la procedencia.",
+      "formulacion_matematica_latex": "Sea $X_1, X_2, \\ldots, X_m$ y $Y_1, Y_2, \\ldots, Y_n$ dos muestras independientes de desempeño académico de estudiantes rurales y urbanos. Se combinan y ordenan todas las observaciones, asignando rangos. El estadístico de prueba $U$ se calcula y se compara con valores críticos.",
+      "aplicacion_administrativa": "En administración, esta prueba puede utilizarse para evaluar si existen diferencias en el desempeño académico según la procedencia de los estudiantes, ayudando a identificar áreas de mejora en la educación.",
+      "fuente_principal": "Levin, R. I., & Rubin, D. S. (2012). Statistics for Management. Pearson.",
+      "localizador": "libro-estadistica-para-administracion-y-economia-levin-A14.txt (bloque 4)"
+    },
+    {
+      "concepto": "corrección por empates en asignación de rangos",
+      "definicion_rigurosa": "La corrección por empates en la asignación de rangos es un ajuste necesario cuando hay valores idénticos en los datos. En lugar de asignar el mismo rango a todos los valores empatados, se promedia el rango que correspondería a esos valores. Esta corrección es esencial para mantener la validez de las pruebas no paramétricas cuando hay empates.",
+      "formulacion_matematica_latex": "Si hay $g$ grupos de empates, donde el $i$-ésimo grupo tiene $t_i$ observaciones empatadas, el ajuste se realiza promediando los rangos. El estadístico de prueba se ajusta en consecuencia.",
+      "aplicacion_administrativa": "En administración, esta corrección es crucial para garantizar la precisión de las pruebas no paramétricas en datos con empates, lo que es común en muchas aplicaciones empresariales.",
+      "fuente_principal": "Anderson, D. R., Sweeney, D. J., & Williams, T. A. (2012). Statistics for Business and Economics. Cengage Learning.",
+      "localizador": "libro-estadistica-para-negocios-y-economia-anderson-sw-A14.txt (bloque 3)"
+    }
+  ]
+}

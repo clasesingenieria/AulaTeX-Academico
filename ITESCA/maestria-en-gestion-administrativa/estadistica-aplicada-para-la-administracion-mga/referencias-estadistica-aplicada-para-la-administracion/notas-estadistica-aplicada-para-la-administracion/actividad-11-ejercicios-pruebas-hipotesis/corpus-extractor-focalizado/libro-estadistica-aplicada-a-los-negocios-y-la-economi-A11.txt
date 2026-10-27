@@ -1,0 +1,449 @@
+Fuente bibliográfica: Estadística aplicada a los negocios y la economía - Lind, Marchal y Wathen. 15.ª edición.pdf
+Actividad: 11 (4.2 Ejercicios Equipo 4% Tarea)
+Palabras clave: hipótesis nula, valor-p, error tipo II, potencia, prueba Z, prueba t, proporción, Poisson, hipergeométrica
+
+[Bloque seleccionado #340 | relevancia=16]
+Pagina 339
+Como ejemplo de proporción, una encuesta reciente indicó que 92 de cada 100 entrevis-
+tados estaban de acuerdo con el horario de verano para ahorrar energía. La proporción de la
+muestra es de 92/100, o 0.92, o 92%. Si p representa la proporción de la muestra, X el núme-
+ro de éxitos y n el número de elementos de la muestra, se determina una proporción muestral
+de la siguiente manera:
+314
+CAPÍTULO 9 Estimación e intervalos de confianza
+La proporción de la población se define por medio de . Por consiguiente,  se refie-
+re al porcentaje de éxitos en la población. Recuerde, del capítulo 6, que  es la proporción
+de éxitos en una distribución binomial. Esto permite continuar la práctica de utilizar letras grie-
+gas para identificar parámetros de población y letras latinas para identificar estadísticas mues-
+trales.
+Para crear el intervalo de confianza de una proporción, es necesario cumplir con los
+siguientes supuestos:
+1.
+Las condiciones binomiales, estudiadas en el capítulo 6, han quedado satisfechas. En
+resumen, estas condiciones son:
+a) Los datos de la muestra son resultado de conteos.
+b) Sólo hay dos posibles resultados (lo normal es referirse a uno de los resultados como
+éxito y al otro como fracaso).
+c) La probabilidad de un éxito permanece igual de una prueba a la siguiente.
+d) Las pruebas son independientes. Esto significa que el resultado de la prueba no influ-
+ye en el resultado de otra.
+2.
+Los valores n y n(1  ) deben ser mayores o iguales que 5. Esta condición permite recu-
+rrir al teorema central del límite y emplear la distribución normal estándar, es decir, z, para
+completar un intervalo de confianza.
+El desarrollo del estimador puntual de la proporción de la población y el intervalo de con-
+fianza de una proporción de población es similar a hacerlo para una media. Para ilustrarlo,
+considere lo siguiente: John Gail es candidato para representar al tercer distrito de Nebraska
+ante el Congreso. De una muestra aleatoria de 100 electores en el distrito, 60 indican que pla-
+nean votar por él en las próximas elecciones. La proporción de la muestra es de 0.60, pero no
+se conoce la proporción poblacional. Es decir, no se conoce qué proporción de electores de
+la población votará por Gail. El valor de la muestra, 0.60, es el mejor estimador del parámetro
+poblacional desconocido. Así, p, que es de 0.60, constituye un estimador de , que no se
+conoce.
+Para crear el intervalo de confianza de una proporción de población se aplica la fórmula:
+Un ejemplo ayudará a explicar los detalles para determinar un intervalo de confianza y el
+resultado.
+
+
+[Bloque seleccionado #342 | relevancia=14]
+Pagina 341
+Así, los puntos extremos del intervalo de confianza son: 0.55, 0.044  0.506 y 0.55 
+0.044  0.594. El valor de 0.50 no pertenece al intervalo. Por lo tanto, se concluye que
+probablemente más de 50% de los electores apoya a Obermeyer, lo cual es suficiente para
+que sea elegido.
+¿Siempre se utiliza este procedimiento? Sí. Es exactamente el procedimiento de las cade-
+nas de televisión, revistas de noticias y sondeos en la noche de las elecciones.
+316
+CAPÍTULO 9 Estimación e intervalos de confianza
+Ejercicios
+15. El propietario de West End Kwick Fill Gas Station desea determinar la proporción de clientes que
+utilizan tarjeta de crédito o débito para pagar la gasolina en el área de las bombas. Entrevistó a
+100 clientes y descubre que 80 pagaron en ella.
+a) Calcule el valor de la proporción de la población.
+b) Construya el intervalo de confianza de 95% de la proporción poblacional.
+c) Interprete sus conclusiones.
+16. Maria Wilson considera postularse para la alcaldía de la ciudad de Bear Gulch, Montana. Antes de
+solicitar la postulación, decide realizar una encuesta entre los electores de Bear Gulch. Una mues-
+tra de 400 electores revela que 300 la apoyarían en las elecciones de noviembre.
+a) Calcule el valor de la proporción de la población. Calcule el error estándar de la proporción.
+b) Construya el intervalo de confianza de 99% de la proporción poblacional.
+c) Interprete sus resultados.
+17. La televisora Fox TV considera reemplazar uno de sus programas de investigación ciminal, que se
+transmite durante las horas de mayor audiencia, por una nueva comedia orientada a la familia.
+Antes de tomar una decisión definitiva, los ejecutivos estudian una muestra de 400 telespectado-
+res. Después de ver la comedia, 250 afirmaron que la verían y sugirieron reemplazar el programa
+de investigación criminal.
+a) Calcule el valor de la proporción de la población.
+b) Construya el intervalo de confianza de 99% de la proporción poblacional.
+c) Interprete los resultados que obtuvo.
+18. Schadek Silkscreen Printing, Inc., compra tazas de plástico para imprimir en ellas logotipos de
+eventos deportivos, graduaciones, cumpleaños u otras ocasiones importantes. Zack Schadek, el
+propietario, recibió un envío grande esta mañana. Para asegurarse de la calidad del envío, selec-
+cionó una muestra aleatoria de 300 tazas. Halló que 15 estaban defectuosas.
+a) ¿Cuál es la proporción aproximada de tazas defectuosas en la población?
+b) Construya el intervalo de confianza de 95% de la proporción de tazas defectuosas.
+c) Zack llegó con su proveedor al acuerdo de que devolverá lotes co
+
+[Bloque seleccionado #362 | relevancia=40]
+Pagina 361
+Paso 1: Se establece la hipótesis nula (H0)
+y la hipótesis alternativa (H1)
+El primer paso consiste en establecer la hipótesis que se debe probar. Ésta recibe el nombre
+de hipótesis nula, la cual se designa H0, y se lee “H subíndice cero”. La letra mayúscula H
+representa la hipótesis, y el subíndice cero implica que “no hay diferencia”. Por lo general se
+incluye un término no en la hipótesis nula, que significa que “no hay cambio”. Por ejemplo, la
+hipótesis nula que se refiere a la cantidad media de millas que recorre cada neumático con cin-
+turón de acero no es diferente de 60 000. La hipótesis nula se escribiría H0:   60 000. En
+términos generales, la hipótesis nula se formula para realizar una prueba. O se rechaza o no
+se rechaza. Es una afirmación que no se rechaza a menos que la información de la muestra
+ofrezca evidencia convincente de que es falsa.
+Cabe hacer hincapié en que, si la hipótesis nula no se rechaza con base en los datos de
+la muestra, no es posible decir que la hipótesis nula sea verdadera. En otras palabras, el hecho
+de no rechazar una hipótesis no prueba que H0 sea verdadera, sino que no rechazamos H0.
+Para probar sin lugar a dudas que la hipótesis nula es verdadera, sería necesario conocer el
+parámetro poblacional. Para determinarlo, habría que probar, entrevistar o contar cada ele-
+mento de la población. Esto no resulta factible. La alternativa consiste en tomar una muestra
+de la población.
+También debe destacarse que con frecuencia la hipótesis nula inicia con las expresiones:
+“No existe diferencia significativa entre…” o “La resistencia media del vidrio a los impactos no
+es significativamente diferente de…” Al seleccionar una muestra de una población, el estadís-
+tico de la muestra es numéricamente distinto del parámetro poblacional hipotético. Como
+ejemplo, suponga que la hipótesis de la resistencia de un platón de vidrio a los impactos es
+de 70 psi, y que la resistencia media de una muestra de 12 platones de vidrio es de 69.5 psi.
+Se debe tomar la decisión con la diferencia de 0.5 psi. ¿Se trata de una diferencia real, es decir,
+una diferencia significativa, o la diferencia entre el estadístico de la muestra (69.5) y el pará-
+metro poblacional hipotético (70.0) es aleatorio y se debe al error de muestreo? Según se dijo,
+la respuesta a esta pregunta implica una prueba de significancia, que recibe el nombre de
+prueba de hipótesis. Una hipótesis nula es:
+336
+CAPÍTULO 10 Pruebas de hipótesis de una muestra
+La hipótesis alternativa describe lo que se concluirá si se rechaza la hipótesis nula. Se
+representa H1 y se lee “
+
+[Bloque seleccionado #363 | relevancia=20]
+Pagina 362
+Paso 2: Se selecciona un nivel de significancia
+Después de establecer las hipótesis nula y alternativa, el siguiente paso consiste en determi-
+nar el nivel de significancia.
+10.4 Procedimiento de cinco pasos para probar una hipótesis
+337
+El nivel de significancia se expresa con la letra griega alfa, . En ocasiones también se
+conoce como nivel de riesgo. Éste quizá sea un término más adecuado porque se trata del
+riesgo que se corre al rechazar la hipótesis nula cuando es verdadera.
+No existe ningún nivel de significancia que se aplique a todas las pruebas. Se toma la
+decisión de utilizar el nivel de 0.05 (expresado con frecuencia como nivel de 5%), nivel de 0.01,
+nivel de 0.10 o cualquier otro nivel entre 0 y 1. Se acostumbra elegir el nivel de 0.05 en el caso
+de los proyectos de investigación relacionados con los consumidores; el nivel de 0.01 en rela-
+ción con el del control de calidad, y el de 0.10 en el de las encuestas políticas. Usted, como
+investigador, debe elegir el nivel de significancia antes de formular una regla de decisión y
+recopilar los datos de la muestra.
+Para ilustrar cómo es posible rechazar una hipótesis verdadera, suponga que una empre-
+sa fabricante de computadoras personales utiliza una gran cantidad de tarjetas con circuitos
+impresos. Los proveedores participan en una licitación y el que presenta la
+cotización más baja obtiene el contrato. Suponga que éste especifica que el
+departamento de control de calidad del fabricante de computadoras tomará
+una muestra de los envíos que llegan. Si más de 6% de las tarjetas de la
+muestra no cumple con las normas, el envío se rechaza. La hipótesis nula con-
+siste en que el envío de tarjetas contiene 6% o menos tarjetas que no satisfa-
+cen las normas. La hipótesis alternativa consiste en que más de 6% de las
+tarjetas están defectuosas.
+Una muestra de 50 tarjetas de circuitos de Allied Electronics, que se reci-
+bieron el 21 de julio, reveló que 4, es decir, 8%, no cumplían con las normas.
+El envío se rechazó en virtud de que excedía el máximo de 6% de tarjetas que
+no cumplían con las normas. Si en realidad el envío no cumplía con las nor-
+mas, fue acertada la decisión de devolver las tarjetas al proveedor. No obstante, suponga que
+las 4 tarjetas elegidas de la muestra de 50 eran las únicas que no cumplían con las normas en
+un envío de 4 000 tarjetas. Entonces, sólo 0.1% se encontraba defectuoso (4/4 000  0.001).
+En este caso, menos de 6% de todo el envío no satisfacía las normas, y rechazarlo fue un
+error. En términos de la prueba de hipótesis, rechazamos la hipótesis nula de que el 
+
+[Bloque seleccionado #364 | relevancia=16]
+Pagina 363
+2 de las 50 tarjetas (4%) no son aceptables, mientras que 48 de 50 lo son. De acuerdo con
+el procedimiento mencionado, como la muestra contiene menos de 6% de tarjetas que no
+cumplen con las normas, el envío se acepta. ¡Puede suceder que, por azar, las 48 tarjetas que
+contiene la muestra sean las únicas aceptables en todo el envío, que consta de miles de tar-
+jetas!
+En retrospectiva, el investigador no puede estudiar cada elemento o individuo de la pobla-
+ción. Por lo tanto, existe la posibilidad de que se presenten dos clases de error: un error tipo
+I, en el que se rechaza la hipótesis nula cuando en realidad debe aceptarse, y un error tipo II,
+en el que se acepta la hipótesis nula cuando en realidad debe rechazarse.
+Con frecuencia se hace referencia a la probabilidad de cometer estos dos posibles erro-
+res como alfa, , y beta, . Alfa () es la probabilidad de cometer un error tipo I, y beta (), la
+probabilidad de cometer un error tipo II.
+La siguiente tabla resume las decisiones que el investigador puede tomar y sus posibles
+consecuencias.
+338
+CAPÍTULO 10 Pruebas de hipótesis de una muestra
+Paso 3: Se selecciona el estadístico de prueba
+Hay muchos estadísticos de prueba. En este capítulo se utilizan z y t como estadísticos de
+prueba. En otros capítulos aparecen estadísticos de prueba como F y 2, conocida como ji-
+cuadrada.
+La prueba de hipótesis de la media (), cuando se conoce  o el tamaño de la muestra es gran-
+de, es el estadístico de prueba z que se calcula de la siguiente manera:
+PRUEBA DE LA MEDIA CUANDO SE CONOCE 
+(10-1)
+El valor z se basa en la distribución muestral de 
+que sigue la distribución normal cuando la
+muestra es razonablemente grande, con una media 
+igual a  y una desviación estándar
+igual a 
+. Por consiguiente, puede determinar si la diferencia entre 
+y  es significati-
+va desde una perspectiva estadística al determinar el número de desviaciones estándares a
+las que se encuentra 
+de , con la fórmula (10.1).
+Paso 4: Se formula la regla de decisión
+Una regla de decisión es un enunciado sobre las condiciones específicas en que se rechaza
+la hipótesis nula y aquellas en las que no se rechaza. La región o área de rechazo define la ubi-
+cación de todos esos valores que son tan grandes o tan pequeños que la probabilidad de que
+ocurran en una hipótesis nula verdadera es muy remota.
+En la gráfica 10-1 se presenta la región de rechazo de una prueba de significancia que se
+efectuará más adelante en este capítulo.
+X
+X
+1n
+x
+(x )
+X,
+z  X 	 
+
+1n
+Investigador
+Hipótesis 
+No rechaza
+Rechaza
+nula
+H0
+H0
+H0 es verdadera
+Decis
+
+[Bloque seleccionado #365 | relevancia=24]
+Pagina 364
+Observe lo siguiente en la gráfica:
+• El área en que se acepta la hipótesis nula se localiza a la izquierda de 1.65. En breve se
+explicará la forma de obtener el valor de 1.65.
+• El área de rechazo se encuentra a la derecha de 1.65.
+• Se aplica una prueba de una sola cola (este hecho también se explicará más adelante).
+• Se eligió el nivel de significancia de 0.05.
+• La distribución muestral del estadístico z tiene una distribución normal.
+• El valor 1.65 separa las regiones en que se rechaza la hipótesis nula y en la que se acepta.
+• El valor de 1.65 es el valor crítico.
+10.4 Procedimiento de cinco pasos para probar una hipótesis
+339
+Paso 5: Se toma una decisión
+El quinto y último paso en la prueba de hipótesis consiste en calcular el estadístico de la prue-
+ba, comparándola con el valor crítico, y tomar la decisión de rechazar o no la hipótesis nula.
+De acuerdo con la gráfica 10-1, si, a partir de la información de la muestra, se calcula que z
+tiene un valor de 2.34, se rechaza la hipótesis nula con un nivel de significancia de 0.05. La
+decisión de rechazar H0 se tomó porque 2.34 se localiza en la región de rechazo; es decir, más
+allá de 1.65. Se rechaza la hipótesis nula porque es poco probable que un valor z tan alto se
+deba al error de muestreo (azar).
+Si el valor calculado hubiera sido de 1.65 o menos, supongamos 0.71, la hipótesis nula no
+se habría rechazado. Un valor calculado tan bajo no se atribuye al azar, es decir, al error de
+muestreo.
+Como se indicó, en la prueba de hipótesis sólo es posible una de las dos decisiones: la
+hipótesis nula se acepta o se rechaza. En lugar de aceptar la hipótesis nula, H0, algunos inves-
+tigadores prefieren expresar la decisión como “no se rechaza H0”, “se decide no rechazar H0”
+o “los resultados de la muestra no permiten rechazar H0”.
+Es necesario subrayar de nuevo que siempre existe la posibilidad de que la hipótesis nula
+se rechace cuando en realidad no se debe rechazar (error tipo I). Asimismo, existe una posibi-
+lidad definible de que la hipótesis nula se acepte cuando debiera rechazarse (error tipo II).
+Escala de z
+0
+1.65
+Valor 
+crítico
+Región de 
+rechazo
+No se
+rechaza Ho
+Probabilidad = .95
+Probabilidad = .05
+GRÁFICA 10-1 Distribución muestral del estadístico z; prueba de una cola a la derecha; nivel de
+significancia de 0.05
+VALOR CRÍTICO Punto de división entre la región en que se rechaza la hipótesis nula y aquella
+en la que se acepta.
+Estadística en acción
+Durante la Segunda
+Guerra Mundial, los
+encargados de la planea-
+ción militar de los aliados
+necesitaban cálculos
+aproximados de la canti-
+
+
+[Bloque seleccionado #385 | relevancia=21]
+Pagina 384
+Ejercicios
+21. Sean las siguientes hipótesis:
+Una muestra de 100 observaciones reveló que p  0.75. ¿Puede rechazar la hipótesis nula en el
+nivel de significancia de 0.05?
+a) Formule la regla de decisión.
+b) Calcule el valor del estadístico de prueba.
+c) ¿Cuál es su decisión respecto de la hipótesis nula?
+22. Sean las siguientes hipótesis:
+Una muestra de 120 observaciones reveló que p  0.30. ¿Puede rechazar la hipótesis nula en el
+nivel de significancia de 0.05?
+a) Formule la regla de decisión.
+b) Calcule el valor del estadístico de prueba.
+c) ¿Cuál es su decisión respecto de la hipótesis nula?
+Nota: se recomienda utilizar el procedimiento de los cinco pasos de la prueba de hipótesis y resolver
+los siguientes problemas.
+23. El National Safety Council informó que 52% de los conductores estadounidenses que viajan por
+autopista de cuota es de género masculino. Una muestra de 300 automóviles que viajaron el día
+de ayer por la autopista de Nueva Jersey reveló que a 170 los manejaban hombres. Con un nivel de
+significancia de 0.01, ¿puede concluir que por la autopista de cuota de Nueva Jersey manejaba
+una proporción mayor de hombres que lo indicado por las estadísticas nacionales?
+24. Un artículo reciente de USA Today informó que sólo hay un trabajo disponible por cada tres nue-
+vos graduados de universidad. Las principales razones fueron una sobrepoblación de graduados
+universitarios y una economía débil. Una encuesta de 200 recién graduados reveló que 80 estu-
+diantes tenían trabajo. Con un nivel de significancia de 0.02, ¿puede concluir que una proporción
+mayor de estudiantes de su escuela tienen empleo?
+25. Chicken Delight afirma que 90% de sus pedidos se entrega en 10 minutos desde que se hace el
+pedido. Una muestra de 100 pedidos mostró que 82 se entregaron en el tiempo prometido. Con
+un nivel de significancia de 0.10, ¿puede concluir que menos de 90% de los pedidos se entregó
+en menos de 10 minutos?
+26. Una investigación de la Universidad de Toledo indica que 50% de los estudiantes cambia de área
+de estudios después del primer año. Una muestra aleatoria de 100 estudiantes de la Facultad de
+Administración reveló que 48 habían cambiado de área de estudio después del primer año del pro-
+grama de estudios. ¿Hubo una reducción significativa en la proporción de estudiantes que cambian
+de área el primer año en este programa? Realice una prueba con un nivel de significancia de 0.05.
+10.10 Error tipo II
+Recuerde que el nivel de significancia, identificado con el símbolo , es la probabilidad de que
+la hipótesis nula se rechace cuando es verdadera. Est
+
+[Bloque seleccionado #388 | relevancia=22]
+Pagina 387
+Ejercicios
+27. Consulte la tabla 10-4 y el ejemplo anterior. Si n  100,   400, 
+c  9 922 y 1  9 880, verifi-
+que que la probabilidad de cometer un error tipo II sea de 0.1469.
+28. Consulte la tabla 10-4 y el ejemplo anterior. Si n  100,   400, 
+c  9 922 y 1  9 940, verifi-
+que que la probabilidad de cometer un error tipo II sea de 0.6736.
+X
+X
+362
+CAPÍTULO 10 Pruebas de hipótesis de una muestra
+Resumen del capítulo
+I. El objetivo de la prueba de hipótesis consiste en verificar la validez de una afirmación relacionada
+con un parámetro de la población.
+II. Los pasos para llevar a cabo una prueba de hipótesis son los siguientes:
+A. Se formula la hipótesis nula (H0) y la hipótesis alternativa (H1).
+B. Se selecciona el nivel de significancia.
+1. El nivel de significancia es la probabilidad de rechazar una hipótesis nula verdadera.
+2. Los niveles de significancia más frecuentes son 0.01, 0.05 y 0.10, pero es posible cualquier
+valor entre 0 y 1.00.
+TABLA 10-4 Probabilidades de cometer un error tipo II con 0  10 000 libras y medias alternativas
+seleccionadas, nivel de significancia 0.05
+De acuerdo con las técnicas que se ilustran en las gráficas 10-9, región B, y 10-10, región
+C, puede determinarse la probabilidad de aceptar una hipótesis como verdadera cuando en
+realidad es falsa para cualquier valor de 1.
+Las probabilidades de cometer un error tipo II aparecen en la columna central de la tabla
+10-4 para valores selectos de , dados en la columna de la izquierda. La columna derecha pro-
+porciona la probabilidad de no cometer un error tipo II, que también se conoce como la fuerza
+de una prueba.
+Autoevaluación 10-6
+Repase el ejemplo anterior. Suponga que la media real de un lote de barras de acero que llega es
+de 10 180 psi. ¿Cuál es la probabilidad de que el inspector de control de calidad acepte las barras
+como si tuvieran una media de 10 000 psi? (Parece poco probable que las barras de acero se
+rechacen si la fuerza de tensión es mayor que la especificada. No obstante, puede ser que la clavija
+tenga una doble función en un motor fuera de borda. Tal vez esté diseñada para que no se des-
+prenda si el motor golpea un objeto pequeño, aunque sí lo haga si golpea una roca. Por consiguien-
+te, el acero no debe ser demasiado fuerte.)
+El área no sombreada de la gráfica 10-10, región C, representa la probabilidad de aceptar por
+error la hipótesis que indica que la fuerza de tensión media de las barras de acero es de 10 000 psi.
+¿Cuál es la probabilidad de cometer un error tipo II?
+Media 
+Probabilidad 
+Probabilidad
+alternativa 
+de cometer
+de no c
+
+[Bloque seleccionado #389 | relevancia=21]
+Pagina 388
+C. Se selecciona el estadístico de prueba.
+1. Un estadístico de prueba es un valor que se calcula a partir de la información de una mues-
+tra para determinar si se rechaza la hipótesis nula.
+2. En este capítulo se consideraron dos estadísticos de prueba.
+a) La distribución normal estándar se utiliza cuando la población sigue la distribución normal
+y se conoce la desviación estándar de la población.
+b) La distribución t de Student se emplea cuando la población sigue la distribución normal y
+se desconoce la desviación estándar de la población.
+D. Se establece la regla de decisión.
+1. La regla de decisión indica la condición o condiciones en que se rechaza la hipótesis nula.
+2. En una prueba de dos colas, la región de rechazo se divide uniformemente entre las colas
+izquierda y derecha de la distribución.
+3. En una prueba de una cola, toda la región de rechazo se encuentra en la cola izquierda o
+en la cola derecha.
+E. Se selecciona una muestra, se calcula el valor del estadístico de la prueba, se toma una deci-
+sión respecto de la hipótesis nula y se interpretan los resultados.
+III. Un valor p es la probabilidad de que el valor del estadístico de prueba sea tan extremo como el
+valor calculado cuando la hipótesis nula es verdadera.
+IV. Al probar una hipótesis sobre la media de la población:
+A. Si se conoce la desviación estándar de la población, , el estadístico de prueba es la distribu-
+ción normal estándar, y se determina a partir de:
+(10-1)
+B. Si no se conoce la desviación estándar de la población, pero hay por lo menos 30 observacio-
+nes en la muestra, s se sustituye por . El estadístico de prueba es la distribución t, y su valor
+se determina de acuerdo con:
+(10-2)
+Las principales características de la distribución t de Student son:
+1. Es una distribución continua.
+2. Tiene forma de campana y es simétrica.
+3. Es plana o más amplia que la distribución normal estándar.
+4. Existe una familia de distribuciones t, según el número de grados de libertad.
+V. Cuando se prueba la proporción de una población:
+A. Deben cumplirse las condiciones binomiales.
+B. Tanto n como n(1 	 ) deben ser al menos 5.
+C. El estadístico de prueba es
+(10-3)
+VI. Existen dos tipos de errores que se pueden presentar en una prueba de hipótesis.
+A. Un error tipo I, cuando se rechaza una hipótesis nula.
+1. La probabilidad de cometer un error tipo I es igual al nivel de significancia.
+2. Esta probabilidad se designa con la letra griega .
+B. Un error tipo II, cuando no se rechaza una hipótesis nula falsa.
+1. La probabilidad de cometer un error tipo II se designa con la letra gr
+
+[Bloque seleccionado #658 | relevancia=16]
+Pagina 657
+fianza o un intervalo de proyección, donde se use el error estándar de estimación múltiple,
+quizá no produzca los resultados correctos.
+La autocorrelación, reportada como r, es la fuerza de la asociación entre residuos sucesi-
+vos. La r tiene el mismo significado que el coeficiente de correlación. Es decir, los valores cer-
+canos a 1.00 o 1.00 indican una asociación fuerte, y los valores cercanos a 0, que no hay
+asociación. En lugar de realizar de manera directa una prueba de hipótesis en r, se emplea el
+estadístico de Durbin-Watson.
+El estadístico de Durbin-Watson, identificado con la letra d, se calcula primero al determi-
+nar los residuos por cada observación. Es decir, et  (Yt 
+t). Luego, se calcula d mediante
+la siguiente relación.
+Yˆ
+632
+CAPÍTULO 16 Series de tiempo y proyección
+Para determinar el numerador de la fórmula (16-4), “retarde” cada uno de los residuos un
+periodo y luego eleve al cuadrado la diferencia entre residuos consecutivos. Esta maniobra, a
+la que también se le puede llamar determinación de las diferencias, toma en cuenta la suma
+de las observaciones de 2, en lugar de 1, hasta n. En el denominador se elevan al cuadrado
+los residuos y se suman todas las observaciones n.
+El valor del estadístico de Durbin-Watson, que varía de 0 a 4, es 2.00 cuando no hay auto-
+correlación entre los residuos. Cuando el valor de d se acerca a 0, indica una autocorrelación
+positiva. Los valores mayores que 2 indican una autocorrelación negativa. En la práctica, la
+autocorrelación casi no se presenta. Para que esto ocurra, los residuos sucesivos tenderían a
+ser grandes, pero con signos opuestos.
+Para realizar una prueba de autocorrelación, las hipótesis nula y alternativa son:
+H0: Sin correlación residual (  0)
+H1: Correlación residual positiva ( 	 0)
+Recuerde, del capítulo anterior, que r se refiere a la correlación muestral, y que  es el coefi-
+ciente de correlación entre la población. Los valores críticos de d aparecen en el apéndice
+B.10. Para determinar el valor crítico, necesita  (el nivel de significancia), n (el tamaño mues-
+tral) y k (el número de variables independientes). La regla de decisión de la prueba de Durbin-
+Watson difiere de lo acostumbrado. Como es común, hay un rango de valores donde la
+hipótesis nula se rechaza y otro donde no se rechaza. Sin embargo, también hay un rango
+donde la prueba no es concluyente. Es decir, en el rango no concluyente, la hipótesis nula no
+se rechaza ni se acepta. Para expresarlo de manera más formal:
+• Los valores menores que dl obligan a rechazar la hipótesis nula.
+• Los valores mayore

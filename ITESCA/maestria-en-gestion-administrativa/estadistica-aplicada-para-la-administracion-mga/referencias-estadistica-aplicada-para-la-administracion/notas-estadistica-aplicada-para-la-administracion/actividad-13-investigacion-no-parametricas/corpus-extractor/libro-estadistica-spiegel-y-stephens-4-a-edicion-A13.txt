@@ -1,0 +1,902 @@
+Fuente bibliográfica: Estadística - Spiegel y Stephens. 4.ª edición.pdf
+Actividad: 13 (5.1 Investigación 5% Tarea)
+Palabras clave: no paramétricas, libre de distribución, Kolmogorov-Smirnov, Wilcoxon, Mann-Whitney, Kruskal-Wallis, Ji-cuadrada, rangos
+
+[Bloque seleccionado #23 | relevancia=5]
+Pagina 22
+XX  CONTENIDO
+ 
+Modelo matemático para el análisis de varianza 
+405
+ 
+Valores esperados de las variaciones 
+405
+ 
+Distribuciones de las variaciones 
+406
+ 
+Prueba F para la hipótesis nula de medias iguales 
+406
+ 
+Tablas para el análisis de varianza 
+406
+ 
+Modificaciones para cantidades desiguales de observaciones  
+407
+ 
+Clasificación en dos sentidos o experimentos con dos factores 
+407
+ 
+Notación para experimentos con dos factores 
+408
+ 
+Variaciones en los experimentos con dos factores 
+408
+ 
+Análisis de varianza para experimentos con dos factores 
+409
+ 
+Experimentos con dos factores con replicación 
+410
+ 
+Diseño experimental 
+412
+CAPÍTULO 17 
+Pruebas no paramétricas 
+446
+ 
+Introducción 
+446
+ 
+La prueba de los signos 
+446
+ 
+La prueba U de Mann-Whitney 
+447
+ 
+La prueba H de Kruskal-Wallis 
+448
+ 
+Prueba H corregida para empates 
+448
+ 
+Prueba de las rachas para aleatoriedad  
+449
+ 
+Otras aplicaciones de la prueba de las rachas 
+450
+ 
+Correlación de rangos de Spearman 
+450
+CAPÍTULO 18 
+ Control estadístico de procesos y capacidad de procesos 480
+ 
+Análisis general de las gráficas de control 
+480
+ 
+Gráficas de control de variables y gráficas de control de atributos 
+481
+ 
+Gráficas X-barra y gráficas R 
+481
+ 
+Pruebas para causas especiales 
+484
+ 
+Capacidad de procesos 
+484
+ 
+Gráficas P y NP 
+487
+ 
+Otras gráficas de control 
+489
+Respuestas a los problemas suplementarios 
+505
+Apéndices 
+ 
+559
+ 
+I Ordenadas (Y ) en z, en la curva normal estándar 
+561
+ 
+II Áreas bajo la curva normal estándar, desde 0 hasta z 
+562
+ III  Valores percentiles (tp) correspondientes a la distribución t de Student con ν grados
+de libertad (área sombreada = p) 
+563
+ IV  Valores percentiles (χ2
+p) correspondientes a la distribución Ji cuadrada con ν grados 
+de libertad (área sombreada = p) 
+564
+
+[Bloque seleccionado #471 | relevancia=6]
+Pagina 470
+INTRODUCCIÓN
+La mayor parte de las pruebas de hipótesis y significancia (o reglas de decisión), vistas en los capítulos anteriores, 
+requieren varias suposiciones acerca de la población de la que se toma la muestra. Por ejemplo, en la clasificación en 
+un sentido del capítulo 16 se requiere que las poblaciones tengan una distribución normal y desviaciones estándar 
+iguales.
+En la práctica, hay situaciones en las que tales suposiciones no se justifican o en las que se duda que se satisfagan, 
+como es el caso de poblaciones muy sesgadas. Debido a esto, se han desarrollado diversas pruebas y métodos que son 
+independientes tanto de la distribución de las poblaciones como de sus correspondientes parámetros. Estas pruebas se 
+conocen como pruebas no paramétricas.
+Las pruebas no paramétricas se emplean como sustitutos sencillos de pruebas más complicadas; son especialmen-
+te útiles cuando se tienen datos no numéricos, como en el caso de consumidores que ordenan cereales u otros produc-
+tos, de acuerdo con su preferencia.
+LA PRUEBA DE LOS SIGNOS
+Considérese la tabla 17.1 en la que se muestran las cantidades de tornillos defectuosos producidos en 12 días conse-
+cutivos con dos máquinas (I y II); se supone que las dos máquinas tienen la misma producción total diaria. Se desea 
+probar la hipótesis H0 de que no hay diferencia entre las máquinas: que las diferencias observadas entre las máquinas, 
+en términos de cantidades de tornillos defectuosos producidos, son resultado de la casualidad, lo que equivale a decir 
+que las muestras provienen de la misma población.
+Tabla 17.1
+Día
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+Máquina I
+47
+56
+54
+49
+36
+48
+51
+38
+61
+49
+56
+52
+Máquina II
+71
+63
+45
+64
+50
+55
+42
+46
+53
+57
+75
+60
+Una sencilla prueba no paramétrica para muestras por pares es la prueba de los signos. Esta prueba consiste en 
+calcular las diferencias entre las cantidades de tornillos defectuosos producidos por día y anotar únicamente el signo 
+de cada diferencia, por ejemplo, el día 1 la diferencia es 47-71, que es negativa. De esta manera, a partir de la tabla 
+17.1 se obtiene la secuencia de signos siguiente.
+ 
+
+
+þ
+
+
+
+þ
+
+þ
+
+
+ 
+(1)
+446  
+17
+PRUEBAS 
+NO PARAMÉTRICAS
+
+[Bloque seleccionado #472 | relevancia=6]
+Pagina 471
+(es decir, 3 signos más y 9 signos menos). Si es igualmente probable obtener un + que un −, se esperaría que se obtu-
+vieran 6 de cada uno. La prueba H0 es, entonces, equivalente a preguntarse si una moneda está o no cargada, si en 12 
+lanzamientos de la moneda se obtienen 3 caras (+) y 9 cruces (−). Esto implica la distribución binomial vista en el 
+capítulo 7. En el problema 17.1 se muestra que empleando una prueba de dos colas con esta distribución, al nivel de 
+significancia 0.05, no se puede rechazar H0; es decir, a este nivel no hay diferencia entre las máquinas.
+Nota 1: Si algún día las máquinas producen la misma cantidad de tornillos defectuosos, una dife-
+rencia en la secuencia (1) será cero. En este caso, se eliminan esos valores muestrales y se usan 11 
+en vez de 12 observaciones.
+Nota 2: También puede usarse una aproximación normal a la distribución binomial empleando la 
+corrección por continuidad (ver problema 17.2).
+Aunque la prueba de los signos es especialmente útil para muestras por pares, como la  muestra de la tabla 17.1, 
+también puede usarse para problemas con muestras sencillas (no pares) (ver los problemas 17.3 y 17.4).
+LA PRUEBA U DE MANN-WHITNEY
+Considérese la tabla 17.2, en la que se dan las resistencias de cables hechos de dos aleaciones distintas, I y II. En esta 
+tabla se tienen dos muestras: 8 cables de la aleación I, y 10 cables de la aleación II. Se quiere decidir si hay diferencia 
+entre las muestras o, lo que es lo mismo, si provienen o no de la misma población. Aunque este problema se puede 
+resolver empleando la prueba t del capítulo 11, también puede utilizarse una prueba no paramétrica llamada la prueba 
+U de Mann-Whitney. Esta prueba consta de los pasos siguientes:
+Tabla 17.2
+Aleación I
+Aleación II
+18.3
+16.4
+22.7
+17.8
+12.6
+14.1
+20.5
+10.7
+15.9
+18.9
+25.3
+16.1
+24.2
+19.6
+12.9
+15.2
+11.8
+14.7
+Paso 1. Se combinan todos los valores muestrales, se ordenan de menor a mayor, y a cada uno de los valores se 
+le asigna una posición o rango (en este caso del 1 al 18). Si dos o más valores muestrales son idénticos (es decir, si hay 
+puntuaciones empatadas, o empates), a cada uno de los valores muestrales se les asigna una posición (o rango) igual 
+a la media de las posiciones que les tocaría ocupar. Si en la tabla 17.2 la entrada 18.9 fuera 18.3, las posiciones 12
+y 13 estarían ocupadas por dos valores idénticos, de manera que la posición (o rango) asignada a cada uno sería
+1
+2(12 + 13) = 12.5.
+Paso 2. Se obtiene la suma de los rangos de cada muestra. Estas sumas se denotan R1 y R2, siendo N1 y N2 los 
+respectivos tamañ
+
+[Bloque seleccionado #473 | relevancia=5]
+Pagina 472
+448  CAPÍTULO 17 PRUEBAS NO PARAMÉTRICAS
+Si tanto N1 como N2 son por lo menos igual a 8, entonces la distribución de U es aproximadamente normal, de 
+manera que
+ 
+z ¼ U  U
+U
+ 
+(4)
+tiene una distribución normal con media 0 y desviación estándar 1. Empleando el apéndice II se puede, entonces, 
+decidir si las muestras son o no significativamente diferentes. En el problema 17.5 se muestra que, al nivel de signifi-
+cancia 0.05, hay una diferencia significativa entre los cables.
+Nota 3: Un valor de U correspondiente a la muestra 2 es el dado por el estadístico
+ 
+U ¼ N1N2 þ N2ðN2 þ 1Þ
+2
+ R2 
+(5)
+y tiene la misma distribución muestral que el estadístico (2), siendo su media y su varianza las dadas 
+por la fórmula (3). El estadístico (5) se relaciona con el estadístico (2), ya que si U1 y U2 son los 
+valores correspondientes a los estadísticos (2) y (5), respectivamente, entonces se tiene
+ 
+U1 þ U2 ¼ N1N2 
+(6)
+También se tiene
+ 
+R1 þ R2 ¼ NðN þ 1Þ
+2
+ 
+(7)
+donde N = N1 + N2. La fórmula (7) puede servir como verificación de los cálculos.
+Nota 4: En la ecuación (2), el estadístico U es el número de veces que los valores de la muestra 1 
+preceden a los valores de la muestra 2, cuando todos los valores han sido ordenados en forma cre-
+ciente de magnitud. Esto proporciona un método alternativo de conteo para hallar U.
+LA PRUEBA H DE KRUSKAL-WALLIS
+La prueba U es una prueba no paramétrica para decidir si dos muestras provienen o no de una misma población. Una 
+generalización de esta prueba para k muestras es la prueba H de Kruskal-Wallis o simplemente prueba H.
+Esta prueba se puede describir de la manera siguiente: supóngase que se tienen k muestras, cuyos tamaños son N1, 
+N2, . . . ,  Nk, por lo que el tamaño de todas estas muestras juntas será N = N1 + N2 + · · · + Nk. Supóngase además que 
+todas estas muestras se juntan y sus valores se ordenan de menor a mayor asignándoles un rango, y que las sumas de 
+los rangos, de cada una de las k muestras, son R1, R2, . . . ,  Rk, respectivamente. Se define el estadístico como 
+ 
+H ¼
+12
+NðN þ 1Þ
+X
+k
+j¼1
+R2
+j
+Nj
+ 3ðN þ 1Þ 
+(8)
+se puede demostrar que la distribución muestral de H es aproximadamente una distribución chi cuadrada con k – 1 
+grados de libertad, siempre que cada uno de los N1, N2, . . . ,  Nk, sean por lo menos de 5.
+La prueba H proporciona un método no paramétrico de análisis de varianza para clasificaciones en un sentido o 
+experimentos de un factor, pudiéndose hacer generalizaciones.
+PRUEBA H CORREGIDA PARA EMPATES
+Cuando hay demasiados empates entre las observaciones de los datos muestrales, el va
+
+[Bloque seleccionado #475 | relevancia=7]
+Pagina 474
+450  CAPÍTULO 17 PRUEBAS NO PARAMÉTRICAS
+OTRAS APLICACIONES DE LA PRUEBA DE LAS RACHAS
+Las siguientes son otras aplicaciones de las rachas para problemas estadísticos:
+1. Prueba mayor y menor que la mediana para aleatoriedad de datos numéricos. Para determinar si un conjunto 
+de datos numéricos es aleatorio (por ejemplo, los datos de una muestra), primero se colocan los datos en el mismo 
+orden en que se obtuvieron. Después, se encuentra la mediana de esos datos y cada dato se reemplaza por una a, si 
+su valor es mayor que la mediana o por una b si su valor es menor que la mediana. Si un valor es igual a la media-
+na, se elimina de la muestra. La muestra es o no aleatoria según si la secuencia de letras a y b sea o no aleatoria. 
+(Ver problema 17.20.)
+2. Diferencias entre poblaciones de las que se ha tomado una muestra. Supóngase que dos muestras de tamaños 
+m y n se denotan a1, a2, . . . , am y b1, b2, . . . , bn, respectivamente. Para decidir si las muestras provienen o no de una 
+misma población, primero se ordenan todos los m + n valores muestrales de menor a mayor. Si hay valores iguales, 
+se deben ordenar mediante un proceso aleatorio (por ejemplo, empleando números aleatorios). Si la secuencia 
+obtenida es aleatoria, se concluye que las muestras realmente no son diferentes y que, por lo tanto, provienen de la 
+misma población; si la secuencia no es aleatoria, no puede sacarse tal conclusión. Esta prueba puede ser una alter-
+nativa a la prueba U de Mann-Whitney. (Ver problema 17.21.) 
+CORRELACIÓN DE RANGOS DE SPEARMAN
+Los métodos no paramétricos también pueden usarse para medir la correlación entre dos variables, X y Y. En lugar de 
+emplear valores precisos de las variables, o cuando no se puede tener tal precisión, los datos se ordenan desde 1 hasta 
+N de acuerdo con su tamaño, importancia, etc. Una vez que las variables X y Y se han ordenado de esta manera, el 
+coeficiente de correlación de rangos o fórmula de Spearman para correlación de rangos (como suele llamársele) es
+ 
+rS ¼ 1 
+6 P D2
+NðN2  1Þ 
+(15)
+donde D denota las diferencias entre los rangos de los valores correspondientes de X y Y y donde N es la cantidad de 
+pares de valores (X, Y ) que hay en los datos.
+PROBLEMAS RESUELTOS
+LA PRUEBA DE LOS SIGNOS
+17.1 
+Hágase referencia a la tabla 17.1 y al nivel de significancia 0.05, se prueba la hipótesis H0 de que no hay dife-
+rencia entre las máquinas, contra la hipótesis alternativa H1 de que sí hay diferencia.
+SOLUCIÓN
+En la figura 17-1 se muestra la distribución binomial de X caras en 12 lanzamientos de una moneda, en forma de áre
+
+[Bloque seleccionado #480 | relevancia=7]
+Pagina 479
+PROBLEMAS RESUELTOS  455
+Tabla 17.8
+10.7
+1
+11.8
+2
+12.6
+3
+12.9
+4
+14.1
+ 5
+14.7
+ 6
+15.2
+7
+15.9
+8
+16.1
+9
+16.4
+10
+17.8
+11
+18.3
+12
+18.9
+13
+19.6
+14
+20.5
+15
+22.7
+16
+24.2
+17
+25.3
+18
+Paso 2. Para hallar la suma de los rangos de cada muestra, se rescribe la tabla 17.2 con los rangos correspondien-
+tes a cada valor de acuerdo con la tabla 17.8, y de esta manera se obtiene la tabla 17.9. La suma de los rangos correspon-
+diente a la aleación I es 106 y la suma de los rangos correspondientes a la aleación II es 65.
+Tabla 17.9
+Aleación I
+Aleación II
+Resistencia
+del cable
+Rango
+Resistencia
+del cable
+Rango
+18.3
+16.4
+22.7
+17.8
+18.9
+25.3
+16.1
+24.2
+12
+10
+16
+11
+13
+18
+9
+17
+12.6
+14.1
+20.5
+10.7
+15.9
+19.6
+12.9
+15.2
+ 3
+ 5
+15
+ 1
+ 8
+14
+ 4
+ 7
+Suma 106
+11.8
+14.7
+2
+6
+Suma 65
+Paso 3. Como la muestra de la aleación I es la menor, N1
+ = 8 y N2
+ = 10. Las correspondientes sumas de los rangos 
+son R1
+ = 106 y R2
+ = 65. Entonces
+U ¼ N1N2 þ N1ðN1 þ 1Þ
+2
+ R1 ¼ ð8Þð10Þ þ ð8Þð9Þ
+2
+ 106 ¼ 10
+U ¼ N1N2
+2
+¼ ð8Þð10Þ
+2
+¼ 40
+2
+U ¼ N1N2ðN1 þ N2 þ 1Þ
+12
+¼ ð8Þð10Þð19Þ
+12
+¼ 126:67
+Por lo que σU = 11.25 y 
+z ¼ U  U
+U
+¼ 10  40
+11:25 ¼ 2:67
+Dado que la hipótesis H0 que se está probando es que no hay diferencia entre las aleaciones, se requiere una prueba de dos 
+colas. La regla de decisión al nivel de significancia 0.05 es:
+Aceptar H0 si −1.96 ≤ z ≤ 1.96.
+Rechazar H0 si no es así.
+Como z = −2.67, se rechaza H0 y se concluye que al nivel de significancia 0.05, sí hay diferencia entre las aleaciones.
+A continuación se presenta la solución a este problema obtenida con MINITAB. Primero, se ingresan los datos de la 
+aleación I en la columna C1 y los datos de la aleación II en la columna C2, y a las columnas se les pone como encabezado 
+AleaciónI y AleaciónII. Mediante la secuencia Stat → Nonparametrics → Mann-Whitney se obtienen los resul-
+tados siguientes.
+Prueba de Mann-Whitney e intervalo de confianza: AleaciónI y AleaciónII
+N
+Median
+AlloyI
+8
+18.600
+AlloyII
+10
+14.400
+
+[Bloque seleccionado #487 | relevancia=10]
+Pagina 486
+462  CAPÍTULO 17 PRUEBAS NO PARAMÉTRICAS
+d ) De acuerdo con la fórmula (3), empleando N1 = 2 y N2 = 3, se tiene
+U ¼ N1N2
+2
+¼ ð2Þð3Þ
+2
+¼ 3
+2
+U ¼ N1N2ðN1 þ N2 þ 1Þ
+12
+¼ ð2Þð3Þð6Þ
+12
+¼ 3
+17.12 Si N números de un conjunto se ordenan del 1 al N, probar que la suma de los rangos es [N(N + 1)]/2.
+SOLUCIÓN
+Sea R la suma de los rangos. Entonces se tiene
+ 
+R ¼ 1 þ
+2
+þ
+3
+þ    þ ðN  1Þ þ N 
+(16)
+ 
+R ¼ N þ ðN  1Þ þ ðN  2Þ þ    þ
+2
+þ 1 
+(17)
+en donde la suma de la ecuación (17) se obtiene invirtiendo el orden de los sumandos de la ecuación (16). Sumando las 
+ecuaciones (16) y (17) se obtiene
+2R ¼ ðN þ 1Þ þ ðN þ 1Þ þ ðN þ 1Þ þ    þ ðN þ 1Þ þ ðN þ 1Þ ¼ NðN þ 1Þ
+como en esta suma (N + 1) se presenta N veces, entonces R = [N(N + 1)]/2. Esto también puede obtenerse empleando una 
+fórmula del álgebra elemental en series y progresiones aritméticas.
+17.13 Si R1 y R2 son, respectivamente, las sumas de los rangos en las muestras 1 y 2 en una prueba U, demostrar que 
+R1 + R2 = [N(N + 1)]/2.
+SOLUCIÓN
+Se supone que en los datos muestrales no hay empates. Entonces, R1 debe ser la suma de algunos de los rangos (números) 
+del conjunto 1, 2, 3, . . . , N, y R2 debe ser la suma de los rangos restantes del conjunto. Por lo tanto, R1 + R2 debe ser la suma 
+de todos los rangos del conjunto; es decir, R1 + R2 = 1 + 2 + 3 + · · · + N = [N(N + 1)]/2, de acuerdo con el problema 
+17.12.
+LA PRUEBA H DE KRUSKAL-WALLIS
+17.14 Una empresa va a comprar una de cinco máquinas: A, B, C, D o E. En un experimento para determinar si hay 
+diferencia en el desempeño de estas máquinas, cinco operadores experimentados trabajan con cada una de las 
+cinco máquinas durante un mismo tiempo. En la tabla 17.18 se muestra la cantidad de unidades obtenida con 
+cada máquina. A los niveles de significancia: a) 0.05 y b) 0.01, probar la hipótesis de que no hay diferencia 
+entre las máquinas. Resolver el problema primero a mano, dando todos los detalles de la prueba H de Kruskal-
+Wallis; después, resolver el problema usando MINITAB. 
+Tabla 17.19
+Suma de
+los rangos
+A
+17.5
+21
+24
+1
+6.5
+70
+B
+21
+6.5
+12
+6.5
+2.5
+48.5
+C
+10
+25
+14
+23
+21
+93
+D
+2.5
+11
+ 9
+14
+ 4
+40.5
+E
+14
+16
+19
+17.5
+6.5
+73
+Tabla 17.18
+A
+68
+72
+77
+42
+53
+B
+72
+53
+63
+53
+48
+C
+60
+82
+64
+75
+72
+D
+48
+61
+57
+64
+50
+E
+64
+65
+70
+68
+53
+
+[Bloque seleccionado #489 | relevancia=9]
+Pagina 488
+464  CAPÍTULO 17 PRUEBAS NO PARAMÉTRICAS
+H ¼ 6.44
+DF ¼ 4
+P ¼ 0.168
+H ¼ 6.49
+DF ¼ 4
+P ¼ 0.165 (adjusted for ties)
+Obsérvese que se dan dos valores p. Uno es el valor p ajustado, para los empates que se presentan al dar los rangos, 
+y el otro no es ajustado. Es claro que, a los niveles de significancia 0.05 y 0.01, las máquinas no son estadísticamente dife-
+rentes respecto a la cantidad de unidades que producen, ya que los dos valores p superan con mucho ambos niveles. 
+17.15 Resolver el problema 17.14 usando los paquetes de software STATISTIX y SPSS.
+SOLUCIÓN
+El archivo con los datos se estructura como en el problema 17.14. Usando STATISTIX, la secuencia Statistics → One, 
+Two, Multi-sample tests → Kruskal-Wallis One-way AOV Test proporciona los resultados que se muestran a continua-
+ción. Comparar estos resultados con los obtenidos en el problema 17.14.
+Statistix 8.0
+Kruskal-Wallis One-way Nonparametrics AOV para unidades por máquina
+Mean
+Sample
+Machine
+Rank
+Size
+1
+14.0
+5
+2
+9.7
+5
+3
+18.6
+5
+4
+8.1
+5
+5
+14.6
+5
+Total
+13.0
+25
+Kruskal-Wallis Statistic
+6.4949
+p-Value, Using Chi-Squared Approximation
+0.1651
+Los resultados de STATISTIX coinciden con los resultados de MINITAB ajustados para empates.
+Los resultados de SPSS también coinciden con los resultados de MINITAB ajustados para empates.
+Prueba de Kruskal-Wallis
+Rangos
+Máquina
+N
+Rango medio
+Unidades
+1.00
+2.00
+3.00
+4.00
+5.00
+Total
+4
+5
+5
+5
+5
+25
+14.00
+ 9.70
+18.60
+ 8.10
+14.60
+Estadísticos de pruebaa,b
+Unidades
+Ji cuadrada
+df
+Significación asintótica
+6.495
+ 4
+.165
+aPrueba de Kruskal-Wallis
+bVariable agrupada: máquina
+
+[Bloque seleccionado #497 | relevancia=10]
+Pagina 496
+472  CAPÍTULO 17 PRUEBAS NO PARAMÉTRICAS
+CORRELACIÓN DE RANGOS
+17.24 Las calificaciones, en teoría y laboratorio, de una clase de biología que se presentan en la tabla 17.25 corres-
+ponden a 10 estudiantes colocados en orden alfabético. Encontrar el coeficiente de correlación de rangos. Usar 
+SPSS para calcular la correlación de rangos de Spearman. 
+Tabla 17.25
+Laboratorio
+8
+3
+ 9
+2
+7
+10
+4
+6
+1
+5
+Teoría
+9
+5
+10
+1
+8
+ 7
+3
+4
+2
+6
+SOLUCIÓN
+En la tabla 17.26 se presentan las diferencias, D, entre los rangos (calificaciones) de laboratorio y de teoría de cada estu-
+diante; se da también D2 y  D2. Entonces
+rS ¼ 1 
+6 P D2
+NðN2  1Þ ¼ 1 
+6ð24Þ
+10ð102  1Þ ¼ 0:8545
+lo que indica que hay una estrecha relación entre las calificaciones de teoría y de laboratorio.
+Tabla 17.26
+Diferencia entre los rangos (D)
+−1
+−2
+−1
+1
+−1
+3
+1
+2
+−1
+−1
+D2
+−1
+−4
+−1
+1
+−1
+9
+1
+4
+−1
+−1
+
+ D2 = 24
+Los datos de la tabla 17.26 se ingresan en las columnas tituladas Lab y Lecture (Teoría). Con la secuencia Analyze 
+→ Correlate → Bivariate se obtienen los resultados siguientes.
+Correlaciones
+Lab
+Teoría
+Correlación de rangos
+de Spearman
+Lab
+Coeficiente de correlación
+Sig. (2 colas)
+N
+1.000
+.
+10
+.855
+.002
+10
+Teoría
+Coeficiente de correlación
+Sig. (2 colas)
+N
+.855
+.002
+10
+1.000
+10
+El resultado indica que hay una correlación significativa entre los desempeños en teoría y en laboratorio.
+17.25 En la tabla 17.27 se muestran las estaturas de una muestra de 12 padres y de sus hijos mayores adultos. Encontrar 
+el coeficiente de correlación de rangos. Resolver el problema primero a mano, dando todos los detalles para 
+hallar el coeficiente de correlación de rangos. Después, usar SAS para hallar la solución del problema.
+
+[Bloque seleccionado #576 | relevancia=6]
+Pagina 575
+RESPUESTAS A LOS PROBLEMAS SUPLEMENTARIOS  551
+17.34 
+La suma de los rangos de la muestra menor = 141.5 y la suma de los rangos de la muestra mayor = 158.5. El valor p  para 
+dos colas = 0.3488. Al nivel de significancia 0.05 no se rechaza la hipótesis nula de no diferencia, pues el valor p > 
+0.05.
+17.35 
+En el problema 17.34, al nivel 0.01 no se puede rechazar la hipótesis nula en la prueba de una cola.
+17.36 
+La suma de los rangos de la muestra menor = 132.5 y la suma de los rangos de la muestra mayor = 77.5. Para dos colas el 
+valor p = 0.0044. La hipótesis nula de no diferencia se rechaza tanto a nivel 0.01 como a nivel 0.05, ya que el valor p < 
+0.05.
+17.37 
+Al nivel de significancia 0.05, el agricultor del problema 17.36 puede concluir que el trigo II da mayor rendimiento que el 
+trigo I.
+17.38 
+Para la marca A, la suma de los rangos = 86.0 y para la marca B, la suma de los rangos = 124.0. Para dos colas el valor p 
+= 0.1620. a) Al nivel de significancia 0.05, no se rechaza la hipótesis nula de no diferencia entre las dos marcas versus hay 
+diferencia, ya que el valor p > 0.05. b) Al nivel de significancia 0.05 no se puede concluir que la marca B sea mejor que la 
+marca A, ya que para una cola valor p (0.081) > 0.05.
+17.39 
+Sí, se puede emplear tanto la prueba U como la prueba de los signos para determinar si hay diferencia entre las dos máqui-
+nas.
+17.41 
+3.
+17.42 
+6.
+17.46 
+a) 246; b) 168; c) 0.
+17.47 
+a) 236; b) 115; c) 100.
+17.49 
+H = 2.59, DF = 4, P = 0.629. A los niveles de significancia 0.05 y 0.01, no hay diferencia entre los rendimientos de las 
+cinco variedades, ya que el valor p es mayor que 0.01 y que 0.05.
+17.50 
+H = 8.42, DF =  3, P = 0.038. Al nivel de significancia 0.05 sí hay diferencia entre las cuatro marcas de neumáticos, pero 
+no al nivel de significancia 0.01, ya que 0.01 < valor p < 0.05.
+35
+10
+5
+0
+5
+24
+1
+6
+11
+16
+22
+3
+8
+13
+18
+34
+9
+4
+1
+6
+28
+3
+2
+7
+12
+38
+13
+8
+3
+2
+46
+21
+16
+11
+6
+41
+16
+11
+6
+1
+27
+2
+3
+8
+13
+31
+6
+1
+4
+9
+23
+2
+7
+12
+17
+30
+5
+0
+5
+10
+37
+12
+7
+2
+3
+36
+11
+6
+1
+4
+24
+1
+6
+11
+16
+0.00154388
+2*BINOMDIST(4,24,0.5,1)
+Reject null
+0.307456255
+2*BINOMDIST(9,24,0.5,1)
+Do not reject null
+0.541256189
+2*BINOMDIST(10,24,0.5,1)
+Do not reject null
+0.004077315
+2*BINOMDIST(5,25,0.5,1)
+Reject null

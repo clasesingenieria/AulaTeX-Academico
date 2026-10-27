@@ -1,0 +1,828 @@
+Fuente bibliográfica: Estadística matemática con aplicaciones - Wackerly, Mendenhall y Scheaffer. 7.ª edición.pdf
+Actividad: 22 (7.3 Ejercicios Equipo 5% Tarea)
+Palabras clave: mínimos cuadrados, diagrama de dispersión, pendiente, predicción, regresión múltiple, variable ficticia, fumador, significancia
+
+[Bloque seleccionado #98 | relevancia=11]
+Pagina 97
+Ejercicios  73
+ 
+ 
+a  ¿Qué impacto tendría esto en P(A|B)?
+ 
+ 
+b  Suponga que P(A | B) disminuyó a .12 y todas las demás probabilidades siguieron sin cambio. Use la 
+aplicación Bayes’ Rule as a Tree para reevaluar P(A | B).
+ 
+ 
+c  ¿Cómo se compara la respuesta que usted obtuvo en el inciso b con la obtenida en el Ejercicio 2.122? 
+¿Le sorprende este resultado?
+ 
+ 
+d  Suponga que todas las probabilidades siguen iguales excepto P(A | B). Use la aplicación de prueba y 
+error para hallar el valor de P(A | B) para el cual P(B | A)= .3000.
+ 
+ 
+e  Si la línea 1 produjo sólo artículos defectuosos pero todas las otras probabilidades siguieron sin cam-
+bio, ¿cuál es P(B | A)?
+ 
+ 
+f  Un amigo esperaba que la respuesta al inciso e fuera 1. Explique por qué, dadas las condiciones del 
+inciso e, P(B | A) ≠ 1.
+ 
+2.124 
+Una población de electores contiene 40% de republicanos y 60% de demócratas. Se publica que 30% de 
+los republicanos y 70% de los demócratas están a favor de un tema de elección. Se encuentra que una 
+persona seleccionada al azar de esta población está a favor del tema en cuestión. Encuentre la probabi-
+lidad condicional de que esta persona sea un demócrata.
+ 
+2.125 
+Una prueba de diagnóstico para una enfermedad es tal que (correctamente) detecta la enfermedad en 
+90% de los individuos que en realidad tienen la enfermedad. También, si una persona no tiene la enfer-
+medad, la prueba reportará que él o ella no la tiene con probabilidad .9. Sólo 1% de la población tiene 
+la enfermedad en cuestión. Si una persona es seleccionada al azar de la población y la prueba de diag-
+nóstico indica que tiene la enfermedad, ¿cuál es la probabilidad condicional de que tenga, en realidad, 
+la enfermedad? ¿La respuesta lo sorprende? ¿Se considera confi able esta prueba de diagnóstico?
+ 
+2.126 
+Ejercicio Applet Consulte el Ejercicio 2.125. La probabilidad de que la prueba detecte la enfermedad 
+dado que el paciente tiene la enfermedad se denomina sensibilidad de la prueba. La especifi cidad de 
+la prueba es la probabilidad de que la prueba no indique enfermedad dado que el paciente no tiene en-
+fermedades. El valor de predicción positivo de la prueba es la probabilidad de que el paciente tenga la 
+enfermedad dado que la prueba indica que la enfermedad está presente. En el Ejercicio 2.125, la enfer-
+medad en cuestión era relativamente rara, presentándose con una probabilidad .01 y la prueba descrita 
+tiene sensibilidad = especifi cidad = .90 y valor de predicción positivo = .0833.
+ 
+ 
+a  En un esfuerzo por aumentar el valor de predicción positivo de la prueba, la s
+
+[Bloque seleccionado #272 | relevancia=11]
+Pagina 271
+ 
+*5.42 
+Se sabe que el número de defectos por yarda Y para cierta tela tiene una distribución de Poisson, con pará-
+metro l. No obstante, l es una variable aleatoria con función de densidad de probabilidad dada por
+f (l) =
+e−l,
+l ≥0,
+0,
+en cualquier otro punto.
+ 
+ 
+Encuentre la función de probabilidad incondicional para Y.
+ 
+5.4 Variables aleatorias independientes
+En el Ejemplo 5.8 vimos dos variables aleatorias dependientes, para las cuales las probabili-
+dades asociadas con Y1 dependían del valor observado de Y2. En el Ejercicio 5.24 (y algunos 
+otros) éste no fue el caso: las probabilidades asociadas con Y1 eran iguales, cualquiera que 
+fuera el valor observado de Y2. Ahora presentamos una defi nición formal de independencia de 
+variables aleatorias.
+Dos eventos A y B son independientes si P(A ∩ B) = P(A) × P(B). Cuando estudiemos 
+variables aleatorias, si a < b y c < d es frecuente que nos interesemos en eventos del tipo (a < 
+Y1 ≤ b) ∩ (c < Y2 ≤ d). Por consistencia con la defi nición anterior de eventos independientes, 
+si Y1 y Y2 son independientes, nos gustaría tener
+P(a < Y1 ≤b, c < Y2 ≤d) = P(a < Y1 ≤b) × P(c < Y2 ≤d)
+para cualquier elección de números reales a < b y c < d. Esto es, si Y1 y Y2 son indepen-
+dientes, la probabilidad conjunta se puede escribir como el producto de las probabilidades 
+marginales. Esta propiedad se satisface si Y1 y Y2 son independientes en el sentido detallado 
+en la siguiente defi nición.
+ DEFINICIÓN 5.8 
+Sea Y1 que tiene una función de distribución F1(y1) y sea Y2 que tiene una función de dis-
+tribución F2(y2), y F(y1, y2) es la función de distribución conjunta de  Y1 y Y2. Entonces 
+se dice que Y1 y Y2 son independientes si y sólo si
+F(y1, y2) = F1(y1)F2(y2)
+ 
+ 
+para todo par de números reales (y1,  y2).
+ 
+ 
+ Si Y1 y Y2 no son independientes, se dice que son dependientes.
+Por lo general es cómodo establecer la presencia o ausencia de independencia, por medio 
+del resultado del siguiente teorema. Se omite la demostración; vea “Bibliografía y lecturas 
+adicionales” al fi nal del capítulo.
+ 
+TEOREMA 5.4 
+Si Y1 y Y2 son variables aleatorias discretas con función de probabilidad conjunta p(y1, 
+y2) y funciones de probabilidad marginal p1(y1) y p2(y2), respectivamente, entonces Y1 y 
+Y2 son independientes si y sólo si
+p(y1, y2) = p1(y1) p2(y2)
+ 
+ 
+para todos los pares de números reales (y1,  y2).
+5.4  Variables aleatorias independientes  247
+
+[Bloque seleccionado #589 | relevancia=12]
+Pagina 588
+564  Capítulo 11  Modelos lineales y estimación por mínimos cuadrados
+ 
+11.1 Introducción
+En el Capítulo 9 consideramos varios métodos para hallar estimadores de parámetros, inclu-
+yendo los métodos de momentos y máxima probabilidad, así como los basados en estadísticos 
+sufi cientes. Otro método de estimación, el de mínimos cuadrados, es el tema de este capítu-
+lo.
+En todas nuestras explicaciones anteriores acerca de la inferencia estadística supusimos 
+que las variables aleatorias Y1, Y2, . . . , Yn, eran independientes y distribuidas idénticamente. 
+Una implicación de esta suposición es que el valor esperado de Yi, E(Yi), es constante (si 
+existe). Esto es, E(Yi) = m no depende del valor de ninguna otra variable. Obviamente, esta 
+suposición no es válida en muchos problemas inferenciales. Por ejemplo, la distancia media 
+de frenado para cierto tipo de automóvil dependerá de la rapidez a la que el automóvil se esté 
+moviendo; la potencia media de un antibiótico depende del tiempo que éste haya estado al-
+macenado; la cantidad media de alargamiento observada en una aleación de metal depende de 
+la fuerza aplicada y la temperatura de la aleación. En este capítulo emprendemos un estudio 
+de procedimientos inferenciales que se pueden usar cuando una variable aleatoria Y, llamada 
+variable dependiente, tiene una media que es función de una o más variables no aleatorias x1, 
+x2, . . . , xk, llamadas variables independientes. (En este contexto, los términos independiente y 
+dependiente se usan en su sentido matemático. No hay relación con el concepto probabilístico 
+de variables aleatorias independientes.)
+Muchos tipos diferentes de funciones matemáticas se pueden usar para modelar una res-
+puesta que sea una función de una o más variables independientes. Éstas se pueden clasifi car 
+en dos categorías: modelos determinísticos y probabilísticos. Por ejemplo, suponga que y y x 
+están relacionadas de acuerdo con la ecuación
+y = b0 + b1x,
+donde b0 y b1 son parámetros desconocidos. Este modelo se llama modelo matemático deter-
+minístico porque no toma en cuenta ningún error para predecir o pronosticar y como función 
+de x. Este modelo implica que y siempre tome el valor b0 + b1(5.5) siempre que x = 5.5. 
+Suponga que recolectamos una muestra de n valores de y correspondientes a n ajustes 
+diferentes de la variable independiente x y que una gráfi ca de los datos es como se ilustra 
+en la Figura 11.1. Está claro en la fi gura que el valor esperado de Y puede aumentar como 
+función lineal de x, pero un modelo determinístico está lejos de una descripción ade
+
+[Bloque seleccionado #597 | relevancia=20]
+Pagina 596
+572  Capítulo 11  Modelos lineales y estimación por mínimos cuadrados
+Los cinco puntos y la recta ajustada se muestran en la Figura 11.6. 
+Q
+En esta sección, hemos determinado los estimadores de mínimos cuadrados para los pará-
+metros b0 y b1 del modelo E(Y) = b0 + b1x. El sencillo ejemplo empleado aquí reaparecerá 
+en futuras secciones para ilustrar otros cálculos. Ejercicios de naturaleza más realista se pre-
+sentan al fi nal de las secciones y se analizan dos ejemplos que comprenden datos provenientes 
+de experimentos reales en la Sección 11.9. En la siguiente sección desarrollamos las propie-
+dades estadísticas de los estimadores de mínimos cuadrados ˆb0 y ˆb1. Secciones subsiguientes 
+están dedicadas a usar estos estimadores para varios fi nes inferenciales.
+Ejercicios
+ 
+11.1 
+Si ˆb0 y ˆb1 son las estimaciones de mínimos cuadrados para la ordenada al origen y la pendiente en un 
+modelo de regresión lineal sencilla, demuestre que la ecuación de mínimos cuadrados ˆy = ˆb0 + ˆb1x 
+siempre pasa por el punto (x, y). [Sugerencia: sustituya x por x en la ecuación de mínimos cuadrados y 
+use el hecho de que ˆb0 = y −ˆb1x.]
+ 
+11.2 
+Ejercicio Applet ¿Cómo puede usted mejorar su comprensión de cómo trabaja realmente el método de 
+mínimos cuadrados? Entre a la aplicación Fitting a Line Using Least Squares (en www.thomsonedu.
+com/statistics/wackerly). Los datos que aparecen en la primera gráfi ca son del Ejemplo 11.1.
+ 
+ 
+a  ¿Cuáles son la pendiente y la ordenada al origen de la recta horizontal azul? (Vea la ecuación sobre la 
+gráfi ca.) ¿Cuál es la suma de los cuadrados de las desviaciones verticales entre los puntos sobre 
+la recta horizontal y los valores observados de las y? ¿La recta horizontal se ajusta bien a los da-
+tos? Haga clic en el botón “Display/Hide Error Squares”. Observe que las áreas de los recuadros 
+amarillos son iguales a los cuadrados de las desviaciones asociadas. ¿Cómo se compara la Suma de 
+Cuadrados de los Errores (SSE) con la suma de las áreas de los recuadros amarillos?
+ 
+ 
+b  Haga clic en el botón “Display/Hide Error Squares” para que desaparezcan los recuadros amarillos. 
+Ponga el cursor en el extremo derecho de la recta azul. Haga clic y mantenga presionado el botón 
+del mouse y arrastre la recta para que la pendiente de la recta azul se haga negativa. ¿Qué observa 
+acerca de las longitudes de las rectas verticales rojas? ¿La SSE aumenta o disminuye? ¿La recta con 
+pendiente negativa parece ajustar bien los datos?
+ 
+ 
+c  Arrastre la recta para que la pendiente sea cercana a 0.8. ¿Qué ocurre cuando se acerca la pendiente
+
+[Bloque seleccionado #599 | relevancia=17]
+Pagina 598
+574  Capítulo 11  Modelos lineales y estimación por mínimos cuadrados
+ 
+11.6 
+Ejercicio Applet Consulte los Ejercicios 11.2 y 11.5. Los datos del Ejercicio 11.5 aparecen en la gráfi ca 
+bajo el encabezado “Another Example” en la aplicación Fitting a Line Using Least Squares. De nuevo, 
+la recta azul horizontal que inicialmente aparece en la gráfi ca es una recta con pendiente 0.
+ 
+ 
+a  ¿Cuál es la ordenada al origen de la recta con pendiente 0? ¿Cuál es el valor de la SSE para la recta 
+con pendiente 0?
+ 
+ 
+b  ¿Piensa usted que una recta con pendiente negativa se ajustará bien a los datos? Si la recta es arras-
+trada para producir una pendiente negativa, ¿la SSE aumenta o disminuye?
+ 
+ 
+c  Arrastre la recta para obtener una línea que visualmente se ajuste bien a los datos. ¿Cuál es la ecua-
+ción de la recta que obtuvo? ¿Cuál es el valor de la SSE? ¿Qué le ocurre a la SSE si la pendiente (y 
+la ordenada al origen) de la recta se cambia desde la que usted ajusta visualmente?
+ 
+ 
+d  La recta que usted ajusta visualmente, ¿es la recta de mínimos cuadrados? Haga clic en el botón 
+“Find Best Model” para obtener la recta con la SSE más pequeña. ¿Cómo se comparan la pendiente 
+y la ordenada al origen de la recta de mínimos cuadrados con la pendiente y la ordenada al origen de 
+la recta que usted visualmente ajustó en el inciso c? ¿Cómo se comparan las sumas de cuadrados del 
+error (SSE)?
+ 
+ 
+e  Consulte el inciso a. ¿Cuál es la coordenada y del punto alrededor del cual gira la recta azul?
+ 
+ 
+f  Haga clic en el botón “Display/Hide Error Squares”. ¿Qué observa usted sobre el tamaño de los 
+recuadros amarillos que aparecen en la gráfi ca? ¿Cuál es la suma de las áreas de los recuadros ama-
+rillos?
+ 
+11.7 
+Ejercicio Applet Mueva la parte de la aplicación marcada como “Curvilinear Relationship” asociada 
+con la aplicación Fitting a Line Using Least Squares.
+ 
+ 
+a  ¿Le parece que una recta dará un buen ajuste a los datos en la gráfi ca? ¿Parece que es probable que 
+haya alguna relación funcional entre E(Y) y x?
+ 
+ 
+b  ¿Hay alguna recta que se ajuste mejor a los datos que aquella con pendiente 0?
+ 
+ 
+c  Si usted ajusta una recta a un conjunto de datos y obtiene que la recta de mejor ajuste tiene pendiente 
+0, ¿signifi ca eso que no hay relación funcional entre E(Y) y la variable independiente? ¿Por qué?
+ 
+11.8 
+Experimentos de laboratorio diseñados para medir valores de la LC50 (concentración letal que mata 
+50% de la especie a prueba), para el efecto de ciertos tóxicos en peces, son realizados siguiendo dos 
+métodos. Uno consiste en circular agua continuam
+
+[Bloque seleccionado #600 | relevancia=12]
+Pagina 599
+ 
+11.9 
+En la siguiente tabla aparece información acerca de ocho automóviles de cuatro cilindros considerados 
+entre los más efi cientes en consumo de combustible en 2006. Los tamaños de los motores se dan en 
+volumen total de cilindros, medido en litros (L).
+ 
+ 
+a Localice los puntos en papel milimétrico.
+ 
+ 
+b Encuentre la recta de mínimos cuadrados para los datos.
+ 
+ 
+c Grafi que la recta de mínimos cuadrados para ver lo bien que se ajusta a los datos.
+ 
+ 
+d  Use la recta de mínimos cuadrados para estimar la clasifi cación media de potencia para un automóvil 
+efi ciente en uso de combustible con volumen de cilindros de 1.9 L.
+ 
+11.10 
+Suponga que hemos postulado el modelo
+Yi = b1xi + ei  i = 1, 2, . . . , n,
+ 
+ 
+donde las ei son variables aleatorias independientes y distribuidas idénticamente con E(ei) = 0. Entonces 
+ˆyi = ˆb1xi es el valor pronosticado de y cuando x = xi y SSE =
+n
+i=1[yi −ˆb1xi]2. Encuentre el estima-
+dor de mínimos cuadrados de b1. (Observe que la ecuación y = bx describe una recta que pasa por el 
+origen. A menudo el modelo que acabamos de describir se denomina modelo sin puntos de cruce.)
+ 
+11.11 
+Algunos datos obtenidos por C. E. Marcellari2 sobre la altura x y diámetro y de caparazones de tortuga 
+aparecen en la tabla siguiente. Si consideramos el modelo
+E(Y) = b1x,
+ 
+ 
+entonces la pendiente b1 es la razón entre el diámetro medio y la altura. Use el resultado del Ejercicio 
+11.10 y los datos siguientes para obtener la estimación de mínimos cuadrados de la relación entre el 
+diámetro medio y la altura.
+2. Fuente: Carlos E. Marcellari, “Revision of Serpulids of the Genus Rotularia (Annelida) at Seymour Island (An-
+tarctic Peninsula) and Their Value in Stratigraphy,” Journal of Paleontology 58(4) (1984).
+Automóvil
+Caballos de 
+potencia (y)
+Honda Civic
+1.8
+51
+Toyota Prius
+1.5
+51
+VW Golf
+2.0
+115
+VW Beetle
+2.5
+150
+Toyota Corolla
+1.8
+126
+VW Jetta
+2.5
+150
+Mini Cooper
+1.6
+118
+Toyota Yaris
+1.5
+106
+Volumen de cilindros (x)
+Espécimen
+Altura (x)
+OSU 36651
+185
+78
+OSU 36652
+194
+65
+OSU 36653
+173
+77
+OSU 36654
+200
+76
+OSU 36655
+179
+72
+OSU 36656
+213
+76
+OSU 36657
+134
+75
+OSU 36658
+191
+77
+OSU 36659
+177
+69
+OSU 36660
+199
+65
+Diámetro (y)
+Ejercicios  575
+
+[Bloque seleccionado #622 | relevancia=11]
+Pagina 621
+el intervalo de confi anza correspondiente. El resultado es que las bandas de predicción caen 
+uniformemente más lejos de la recta de predicción que las bandas de confi anza. Las bandas de 
+predicción también están más cercanas entre sí cuando x = x.
+Ejercicios
+ 
+11.42 
+Suponga que el modelo Y = b0 + b1x + e se ajusta a los n puntos (y1, x1), . . . , (yn, xn). ¿A qué valor de 
+x se minimiza la longitud del intervalo de predicción para Y?
+ 
+11.43 
+Consulte los Ejercicios 11.5 y 11.17. Use los datos y el modelo dados ahí para construir un intervalo de 
+predicción de 95% para la mediana de los precios de venta en 1980.
+ 
+11.44 
+Consulte el Ejercicio 11.43. Encuentre un intervalo de predicción de 95% para la mediana de los precios 
+de venta para el año 1981. Repita para 1982. ¿Consideraría adecuado utilizar este modelo y los datos del 
+Ejercicio 11.5 para predecir la mediana de los precios de venta para el año 1988?
+ 
+11.45 
+Consulte los Ejercicios 11.8 y 11.18. Encuentre un intervalo de predicción de 95% para un LC50 de fl ujo 
+si se observa que el LC50 estático es de 12 partes por millón. Compare la longitud de este intervalo con 
+la del intervalo hallado en el Ejercicio 11.37.
+ 
+11.46 
+Consulte el Ejercicio 11.16. Encuentre un intervalo de predicción de 95% para la potencia de una onza 
+de antibiótico almacenado a 65°F. Compare este intervalo con el calculado en el Ejercicio 11.39.
+ 
+11.47 
+Consulte el Ejercicio 11.14. Encuentre un intervalo de predicción de 95% para la proporción de sobre-
+vivientes cuando x = .60.
+F I G U R A 11.7
+Alguna información 
+hipotética y 
+bandas de conﬁ anza 
+y predicción con 
+ella relacionadas
+1
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+2 3 4 5 6 7 8 9 10
+1 2 3 4 5 6 7 8 9 10
+y
+y
+x
+x
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+1 2 3 4 5 6 7 8 9 10
+y
+x
+Intervalo de 
+confianza de 95% 
+para E(Y) cuando 
+x = 7
+Bandas de 
+confianza de 
+95% para E(Y) 
+Bandas de predicción de 95% para Y
+x = 4.75
+E(Y) calculada 
+cuando x = 8
+valor real observado de 
+Y cuando x = 8
+Ejercicios  597
+
+[Bloque seleccionado #658 | relevancia=20]
+Pagina 657
+ 
+ 
+Cuando el modelo Y = b0 −b1x1 +b2x2
+1 +e se ajustó, la ecuación de predicción fue ˆy = 130.009 
+3.302x1 + .033x2
+1
+—
+ con SSE = 465.134. Pruebe si los términos que contienen x2(x2, x1x2, x2
+1x2) con-
+tribuyen a un ajuste considerablemente mejor a los datos. Obtenga límites para el nivel de signifi cancia 
+alcanzado.
+ 
+11.93 
+Consulte el Ejemplo 11.19. Usando el modelo reducido construya un intervalo de confi anza de 95% para 
+la resistencia esperada del caucho a la abrasión cuando x1 = 1 y x2 = −1.
+ 
+11.94 
+Consulte el Ejemplo 11.19. Construya pruebas individuales de las tres hipótesis H0 : b3 = 0, H0 : b4 = 0 
+y H0: b5 = 0. Use un nivel de signifi cancia de 1% en cada prueba. (Si han de realizarse pruebas múltiples 
+en el mismo conjunto de datos, es conveniente usar un nivel a muy pequeño en cada prueba.)
+ 
+11.15 Resumen y conclusiones
+En este capítulo hemos empleado el método de mínimos cuadrados para ajustar un modelo 
+lineal a una respuesta experimental. Supusimos que el valor esperado de Y es una función de 
+un conjunto de variables x1, x2, . . . , xk, donde la función es lineal en un conjunto de parámetros 
+desconocidos. Usamos la expresión
+Y = b0 + b1x1 + b2x2 +
++ bkxk + e
+. . .
+para denotar un modelo estadístico lineal.
+Los problemas inferenciales asociados con el modelo estadístico lineal incluyen estima-
+ción y pruebas de hipótesis que se relacionan con los parámetros de modelo b0, b1, . . . , bk y, 
+lo que es más importante, el cálculo de E (Y) que es la respuesta esperada para un ajuste parti-
+cular y la predicción de algún valor futuro de Y. Experimentos para los cuales es apropiada la 
+teoría de mínimos cuadrados incluyen experimentos controlados y aquellos en los que x1, x2, 
+. . . , xk son valores observados de variables aleatorias.
+¿Por qué usar el método de mínimos cuadrados para ajustar un modelo lineal a un conjunto 
+de datos? Donde las suposiciones acerca de los errores aleatorios e se cumplen [normalidad, 
+independencia, V (e) = s2 para todos los valores de x1, x2, . . . , xk], se puede demostrar que 
+el procedimiento de mínimos cuadrados da los mejores estimadores insesgados lineales para 
+b0, b1, . . . , bk. Esto es, si calculamos los parámetros b0, b1, . . . , bk usando funciones lineales 
+de y1, y2, . . . , yk, los estimadores de mínimos cuadrados tienen varianza mínima. Algunos 
+otros estimadores no lineales para los parámetros pueden tener una menor varianza que los 
+estimadores de mínimos cuadrados, pero, si existen estos estimadores, no se conocen en este 
+momento. De nueva cuenta, ¿por qué usar estimadores de
+
+[Bloque seleccionado #930 | relevancia=12]
+Pagina 929
+Índice  905
+Método de transformación, 298, 
+310-318
+ 
+método de función de distribución y, 
+310-311
+ 
+multivariable, 325-333
+ 
+resumen de, 316
+Método de transformación bivariada, 
+325-333
+Método de transformación de multiva-
+riable, 325-333
+Método de transformaciones, 298, 310-
+318
+ 
+método de función distribución y, 
+310-311
+ 
+multivariable, 325-333
+ 
+resumen de, 316
+Método estadístico, 814, 818, 819
+Métodos de Bayes, 796-819
+ 
+intervalos creíbles, 808-813
+ 
+previos, posteriores y estimadores, 
+797-808, 816
+ 
+pruebas de hipótesis, 813-815
+Métodos gráficos descriptivos, 3-8
+Métodos muestrales, 77
+ 
+aleatorios simples, 78
+ 
+aleatorios, 77-79
+ 
+par acoplado, 644-651
+ 
+sustitución en, 78
+Métodos numéricos descriptivos, 8-13
+Métodos paramétricos, 742, 789
+Mínimo de variables aleatorias, 333
+MLEs. Vea Estimadores de máxima 
+probabilidad
+Modelo completo, 624, 626-628
+Modelo cuadrático, 614
+Modelo de cambio, 743
+Modelo de cambio de dos muestras, 
+742-743
+ 
+suposiciones para, 743
+Modelo de efecto de bloque aleatorio, 686
+Modelo de efectos de bloque fijo, 686
+Modelo de regresión lineal múltiple, 
+566-567, 569, 609, 615-624
+ 
+estimadores de mínimos cuadrados y, 
+615-616
+ 
+inferencias acerca de funciones linea-
+les en, 616-622
+ 
+intervalos de confianza para, 618
+ 
+matrices y, 609
+ 
+predicción de valores usando, 622-624
+ 
+pruebas de hipótesis para, 618
+Modelo de regresión lineal simple, 566, 
+569, 577-583, 589-597
+ 
+correlación y, 598-604
+ 
+estimadores de mínimos cuadrados 
+para, 571, 577-583, 610
+ 
+inferencias acerca de funciones linea-
+les en, 589-593
+ 
+intervalos de confianza para, 586, 
+590, 591, 596-597
+ 
+matrices y, 610, 613
+ 
+predicción de valores usando, 593-597
+ 
+pruebas de hipótesis para, 585, 590
+Modelo de ubicación, 743
+Modelo plano, 629, 630
+Modelo reducido, 624, 626-628, 629
+ 
+comparado con modelo completo, 
+627-630
+Modelo sin intersección, 575
+Modelos, 14
+ 
+ajustados, 628-630
+ 
+cambio de dos muestras, 742-743
+ 
+completos, 624, 626-628
+ 
+cuadráticos, 614
+ 
+de segundo orden, 628-630
+ 
+determinísticos, 564-565, 566
+ 
+diseño en una dirección, 677-679
+ 
+ecuación alométrica, 606
+ 
+efectos de bloque aleatorizados, 686
+ 
+efectos de bloque fijos, 686
+ 
+efectos de bloque, 686
+ 
+jerárquicos, 288-289
+ 
+lineales, 566-569
+ 
+linealizados, 606
+ 
+matemáticos, 14
+ 
+no lineales, 608
+ 
+para diseño de bloque aleatorizado, 
+686-687
+ 
+planos, 629, 630
+ 
+probabilísticos, 26-35, 565
+ 
+reducidos, 624, 626-628, 629
+ 
+regresión lineal múltiple, 566-567, 
+569, 609, 615-624
+ 
+regresión lineal simple, 566
+ 
+regresión, 566-567, 634
+ 
+selección de, 201
+ 
+sin intersección, 
+
+[Bloque seleccionado #935 | relevancia=15]
+Pagina 934
+910  Índice
+Variable aleatoria hipergeométrica, 126, 
+150
+Variable aleatoria ji cuadrada, 187-188
+Variable aleatoria normal, 181
+Variable aleatoria normal estándar, 
+181
+Variable aleatoria uniforme, 174-176
+Variable aleatoria vectorial, 598
+Variable aleatoria Weibull, 219
+Variable de respuesta, 566
+Variable ficticia, 701
+Variable gamma aleatoria, 187-188
+ 
+función de generación de momento, 
+203
+ 
+ji cuadrada, 187-188
+Variable indicadora, 701
+Variables
+ 
+aleatorias, 75-77
+ 
+Bernoulli, 166, 322, 462, 466
+ 
+con cambio de escala, 628
+ 
+continuas, 157-158
+ 
+cualitativas, 662
+ 
+dependientes, 247, 564
+ 
+discretas, 86-87
+ 
+ficticias, 701
+ 
+independientes, 247-255, 564
+ 
+indicador, 701
+ 
+no aleatorias, 564
+ 
+no correlacionadas, 265, 267
+ 
+respuesta, 566
+ 
+suma de cuadrados para, 663
+Variables aleatorias, 75-77
+ 
+Bernoulli, 166, 322, 462, 466
+ 
+beta, 194-196
+ 
+binomial, 107-108
+ 
+binomiales negativas, 122
+ 
+conjuntamente continuas, 227, 228
+ 
+conjuntamente discretas, 227
+ 
+continuas, 157-158
+ 
+covarianza de, 264-270
+ 
+de distribución t, comparadas con 
+normales, 359-360
+ 
+de valor entero, 143-144
+ 
+de Weibull, 219
+ 
+densidad condicional de, 240-241
+ 
+dependiente, 247, 564
+ 
+desviación estándar de, 93
+ 
+discretas, 86-87
+ 
+distribución mezclada, 211-212
+ 
+exponenciales, 188
+ 
+función de densidad de probabilidad 
+para, 161-165, 171-172
+ 
+función de densidad, 161-165
+ 
+función de distribución de, 158-165
+ 
+funciones de generación de momento 
+de, 138-141
+ 
+funciones de generación de probabi-
+lidad para, 143-146
+ 
+funciones de probabilidad discreta 
+condicional, 239
+ 
+funciones de, 296-345
+ 
+funciones lineales de, 270-279
+ 
+gamma, 187-188
+ 
+geométricas, 116-117
+ 
+hipergeométricas, 126
+ 
+independientes, 247-255, 564
+ 
+ji cuadrada, 187-188
+ 
+k-ésimo momento de, 138, 202, 472
+ 
+k-ésimo momento factorial de, 138
+ 
+mediana de, 164, 747
+ 
+medias para, 150
+ 
+medidas de dependencia, 264
+ 
+mínimas/máximas de, 333
+ 
+momentos de, 138
+ 
+momentos factoriales para, 144
+ 
+no correlacionadas, 265, 267
+ 
+normales estándar, 181
+ 
+normales, 181
+ 
+ordenadas, 333
+ 
+Poisson, 132
+ 
+prueba para independencia de, 598-
+604
+ 
+uniformes, 174-176
+ 
+univariadas, 226
+ 
+valores de predicción de, usando 
+regresión lineal simple, 593-598
+ 
+valores de predicción de, usando 
+regresión múltiple, 622-624
+ 
+valores esperados de, 91-100, 170-
+174, 202-207, 255-258
+ 
+varianza, 93
+ 
+vectoriales, 598
+Variables aleatorias conjuntamente con-
+tinuas, 227, 228
+Variables aleatorias continuas, 157-222
+ 
+continuas conjuntamente, 226-228
+ 
+definición de, 160
+ 
+distribución beta, 194-201
+ 
+distribución condici

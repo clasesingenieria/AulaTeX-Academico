@@ -1,0 +1,838 @@
+Fuente bibliográfica: Estadística para administración y economía - Levin y Rubin. 7.ª edición revisada.pdf
+Actividad: 15 (5.3 Ejercicios individuales 5% Tarea)
+Palabras clave: prueba de rachas, aleatoriedad, Wald-Wolfowitz, Kruskal-Wallis, Mann-Whitney, secuencia
+
+[Bloque seleccionado #417 | relevancia=5]
+Pagina 416
+Ventas de autos 
+Primer trimestre 
+de lujo 2007
+2008
+Porcentaje de autos nacionales
+47.5
+46.2
+Porcentaje de autos importados
+52.5
+53.8
+Total de unidades vendidas
+373,842
+372,442
+■
+9-46
+Un químico que se encuentra desarrollando repelentes de insectos desea saber si una nueva fórmula da
+mayor protección contra los piquetes que la que proporciona el producto líder del mercado. En un expe-
+rimento, se roció un brazo de 14 voluntarios con el producto viejo y el otro brazo con la nueva fórmula.
+Luego cada individuo metió los brazos en una cámara llena de mosquitos y otros insectos que pican. El
+número de piquetes recibidos en cada brazo se registró en la tabla siguiente. Al nivel   0.01, ¿deberá
+el químico concluir que la nueva fórmula, de hecho, es más efectiva que el producto líder en el mercado?
+Individuo
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+Fórmula vieja
+5
+2
+5
+4
+3
+6
+2
+4
+2
+6
+5
+7
+1
+3
+Fórmula nueva
+3
+1
+5
+1
+1
+4
+4
+2
+5
+2
+3
+3
+1
+2
+■
+9-47
+Long Distance Carrier (LDC) intenta observar el efecto de ofrecer “1 mes gratis” con una cuota fija de
+$10.95, contra la oferta de una cuota mensual más baja ($8.75) sin el mes gratis. Para probar qué puede ser
+más atractivo para los consumidores, Long Distance realiza una prueba de mercado breve: 12 represen-
+tantes hacen llamadas usando un enfoque y 10 usan el otro. El siguiente número de clientes estuvo de
+acuerdo en cambiar su servicio de larga distancia actual a LDC:
+Oferta
+Número de cambios
+1 mes gratis
+118
+115
+122
+99
+106
+125
+102
+100
+92
+103
+113
+129
+Cuota mensual baja
+115
+126
+113
+110
+135
+102
+124
+137
+108
+128
+Pruebe para un nivel de significancia del 10% si existen diferencias significativas entre las dos ofertas.
+■
+9-48
+¿El nivel percibido de responsabilidad por una acción está relacionado con la severidad de sus consecuen-
+cias? Esta pregunta fue la base de un estudio sobre responsabilidad en el que los sujetos leían la descrip-
+ción de un accidente ocurrido en una carretera federal. Las consecuencias, en términos de costos y daños
+físicos, se describían como menores y graves. Se utilizó un cuestionario para calificar el grado de respon-
+sabilidad que los individuos creían que debían asignar al personaje principal. A continuación se dan los
+resultados para los grupos de consecuencias menores y consecuencias graves. Las calificaciones altas co-
+rresponden a una responsabilidad mayor atribuible al personaje principal. Si se utiliza un nivel de signi-
+ficancia del 0.025, ¿se concluye del estudio que las consecuencias graves conducen a una mayor atribu-
+ción de responsabilidad?
+Consecuencias
+Grado de responsabilidad
+Meno
+
+[Bloque seleccionado #649 | relevancia=9]
+Pagina 648
+EA
+14-2
+Antes
+7.0
+6.0
+5.4
+5.9
+3.9
+5.7
+6.9
+7.6
+6.3
+5.8
+5.1
+5.9
+Después
+5.3
+6.1
+5.6
+5.7
+3.7
+4.7
+6.1
+7.2
+6.4
+5.7
+4.9
+5.8
+Signo
+
+
+
+
+
+
+
+
+
+
+
+
+12 respuestas: 3(), 9().
+Para n  12, p  0.5, la probabilidad de 9 o más signos menos es 0.0729 (tabla 3 del apéndice). Como
+0.10  0.0729  0.05, no pueden tener una confianza del 95% de que los niveles de hidrocarburos hayan
+bajado, pero pueden concluir, para   0.10, que las reglas son efectivas. Así, estarán vigentes todavía el
+año próximo.
+14.3
+Pruebas de suma de rangos:
+prueba U de Mann-Whitney 
+y prueba de Kruskal-Wallis
+En el capítulo 11, mostramos cómo usar el análisis de varianza para probar la hipótesis de que va-
+rias medias de población son iguales. Supusimos para esas pruebas que las poblaciones tenían una
+distribución normal con varianzas iguales. Muchas veces estas suposiciones no se satisfacen y en-
+tonces podemos utilizar dos pruebas no paramétricas; ninguna de ellas depende de las suposiciones
+de normalidad. Estas dos pruebas se llaman pruebas de suma de rangos porque la prueba depende de
+los rangos o clasificaciones de las observaciones de muestra.
+Las pruebas de suma de rangos son una familia completa de pruebas; nos concentraremos en só-
+lo dos miembros de ella: la prueba U de Mann-Whitney y la prueba de Kruskal-Wallis. Usaremos la
+prueba de Mann-Whitney cuando tengamos sólo dos poblaciones y la prueba de Kruskal-Wallis
+cuando se trate de más de dos. El uso de estas pruebas nos permitirá determinar si las muestras inde-
+pendientes se obtuvieron de la misma población (o de distintas poblaciones con la misma distribu-
+ción). El uso de la clasificación de la información en lugar de los signos más y menos desperdicia
+menos datos que la prueba de los signos.
+Solución de un problema usando la prueba 
+U de Mann-Whitney
+Suponga que la junta directiva de una gran universidad estatal del este de Estados Unidos desea pro-
+bar la hipótesis de que las calificaciones promedio en la prueba SAT en dos planteles de la universi-
+dad son iguales. La junta mantiene estadísticas de todos los estudiantes en todos los planteles del sis-
+tema. Una muestra aleatoria de 15 estudiantes de cada plantel produjo los datos que se muestran en
+la tabla 14-3.
+Para aplicar la prueba U de Mann-Whitney a este problema, comenzamos por clasificar las cali-
+ficaciones en orden ascendente, indicando junto a cada una el símbolo del plantel, como se ve en la
+tabla 14-4.
+A continuación, aprendamos los símbolos usados para la prueba U de Mann-Whitney en el con-
+texto de este problema:
+n1  número de elementos en la m
+
+[Bloque seleccionado #653 | relevancia=7]
+Pagina 652
+La respuesta habría sido 127 (que se aleja hacia arriba de la media de 112.5 justo tanto como 98 se
+aleja hacia abajo). En este problema, habríamos tardado lo mismo calculando el valor del estadísti-
+co U con la ecuación 14-1 que con la 14-4. En otros casos, cuando el número de elementos es mayor
+en una muestra que en la otra, elija la ecuación que requerirá menos trabajo. Sin importar si calcu-
+ló U usando la ecuación 14-1 o la 14-4, llegará a la misma conclusión. Observe que en este ejemplo,
+la respuesta 127 cae en la región de aceptación tal como lo hizo 98.
+¿Qué pasa si aparecen empates cuando clasificamos los elementos para esta prueba? Por ejem-
+plo, ¿qué sucede si las calificaciones 13 y 14 de la tabla 14-4 tuvieran ambas el valor 920? En este
+caso, encontramos el promedio de sus rangos (13  l4)/2  13.5, y asignamos el resultado a los dos.
+Si hubiera un empate entre tres clasificaciones, 13, 14 y 15, por ejemplo, promediamos estos rangos
+(13  14  15)/3  14, y usamos ese valor para los tres elementos.
+Solución de un problema usando la prueba de Kruskal-Wallis
+Como se observó en esta sección, la prueba de Kruskal-Wallis es una extensión de la prueba de
+Mann-Whitney para casos en que están involucradas más de dos poblaciones. Esta prueba, también,
+depende de los rangos de las observaciones de la muestra.
+La tabla 14-6 presenta las calificaciones de una muestra de 20 pilotos estudiantes en su examen
+escrito de la Agencia Federal de Aviación (AFA), dispuestas según el método que se empleó en su
+capacitación: videocasete, audiocasete o salón de clase.
+La AFA está interesada en evaluar la efectividad de estos tres métodos de capacitación. Específi-
+camente, desea probar, al nivel de significancia de 0.10, la hipótesis de que las calificaciones medias
+en el examen escrito de los pilotos estudiantes capacitados por estos tres métodos son iguales. Puesto
+que tenemos más de dos poblaciones involucradas, es pertinente aplicar la prueba de Kruskal-Wallis
+en este caso. Para ello, comenzamos en la tabla 14-7 por clasificar todas las calificaciones en orden
+ascendente, indicando junto a cada una el símbolo del método de entrenamiento que se utilizó. Los
+empates se manejan promediando los rangos, como se hizo con la prueba de Mann-Whitney.
+A continuación, definimos los símbolos usados en una prueba de Kruskal-Wallis:
+nj  número de elementos en la muestra j
+Rj  suma de los rangos de todos los elementos en la muestra j
+k  número de muestras
+n  n1  n2  . . .  nk, el número total de observaciones en todas las muestras
+Símbolos utilizados
+para un
+
+[Bloque seleccionado #655 | relevancia=5]
+Pagina 654
+prueba de Kruskal-Wallis, el número apropiado de grados de libertad es k  1, que en este proble-
+ma es (3  1) o 2, puesto que tenemos tres muestras. Las hipótesis pueden enunciarse de la siguien-
+te manera:
+H0: 	1  	2  	3
+←Hipótesis nula: no hay diferencia entre las tres poblaciones, es decir, tienen la misma media
+H1: 	1, 	2 y 	3
+←Hipótesis alternativa: existen diferencias entre las tres poblaciones; 
+no todas son iguales
+en particular, tienen distintas medias
+  0.10
+←Nivel de significancia para probar estas hipótesis
+La figura 14-5 ilustra una distribución ji-cuadrada con 2 grados de libertad. El área sombreada re-
+presenta el nivel de significancia de 0.10. Observe que la región de aceptación para la hipótesis nula
+(que no existen diferencias entre las tres poblaciones) se extiende de cero a un valor ji-cuadrada de
+4.605. Obviamente, el valor muestral K de 1.143 está dentro de la región de aceptación; por consi-
+guiente, la AFA debe aceptar la hipótesis nula y concluir que no hay diferencias en los resultados ob-
+tenidos al usar los tres métodos de capacitación.
+Interpretación 
+de los resultados
+Formulación de 
+las hipótesis
+636
+Capítulo 14
+Métodos no paramétricos
+FIGURA 14-5
+Prueba de 
+Kruskal-Wallis 
+al nivel de 
+significancia de
+0.10; señala la 
+región de 
+aceptación y el 
+estadístico 
+muestral K
+Ilustración 
+de la prueba
+0
+4.605
+0.10 de área
+Valor de la muestra
+K, 1.143
+Región de aceptación
+Acepte la hipótesis nula si el valor 
+de la muestra está en esta región
+Ejercicios 14.3
+Ejercicios de autoevaluación
+EA
+14-3
+La boutique de Melisa tiene tres establecimientos en centros comerciales. Melisa mantiene un registro dia-
+rio del número de clientes que realmente compran en cada establecimiento. La siguiente es una muestra
+de esos datos. Utilizando la prueba de Kruskal-Wallis, ¿puede decir, al nivel de significancia de 0.05, que
+sus tiendas tienen el mismo número de clientes que compran?
+Centro comercial Eastowne
+99
+64
+101
+85 
+79
+88
+97
+95
+90
+100
+Centro comercial Craborchard
+83
+102
+125
+61
+91
+96
+94
+89
+93 
+75
+Centro comercial Fairforest
+89
+98
+56
+105
+87
+90
+87
+101
+76 
+89
+EA
+14-4
+Un gran hospital contrata la mayor parte de sus enfermeras en dos universidades importantes del área. Du-
+rante el año pasado, aplicaron un examen a las enfermeras recién graduadas que entran al hospital para
+Las pruebas de suma de rangos, como las
+de Mann-Whitney y de Kruskal-Wallis,
+a menudo producen empates. Cuando los
+encuentre, recuerde que cada valor em-
+patado obtiene un rango promedio. Si los elementos 10° y
+11° están empatados, cada uno obtiene un rango de 
+
+[Bloque seleccionado #656 | relevancia=5]
+Pagina 655
+determinar qué escuela parece preparar mejor a sus enfermeras, si alguna lo hace. Basándose en las si-
+guientes calificaciones (de 100 puntos posibles), ayude a la oficina de personal del hospital a determinar
+si las escuelas difieren en calidad. Use la prueba u de Mann-Whitney con un nivel de significancia del 10%.
+Calificaciones del examen
+Escuela A
+97
+69
+73
+84
+76
+92
+90
+88
+84
+87
+93
+Escuela B
+88
+99
+65
+69
+97
+84
+85
+89
+91
+90
+87
+91
+72
+Aplicaciones
+■14-14
+Pruebe la hipótesis de que no hay diferencia entre las edades de empleados masculinos y femeninos de
+cierta compañía, utilizando la prueba u de Mann-Whitney para los datos de la muestra. Use el nivel de sig-
+nificancia de 0.10.
+Hombres
+31
+25
+38
+33
+42
+40
+44
+26
+43 
+35
+Mujeres
+44
+30
+34
+47
+35
+32
+35
+47
+48
+34
+■14-15
+En la tabla siguiente se dan los precios de venta de tres marcas de zapatos. Use la prueba de Kruskal-Wa-
+llis para determinar si existe alguna diferencia entre los precios de venta de las marcas a lo largo del país.
+Utilice el nivel de significancia de 0.01.
+Marca A
+$89
+90
+92
+81
+76
+88
+85
+95
+97
+86
+100
+Marca B
+$78
+93
+81
+87
+89
+71
+90
+96
+82
+85
+Marca C
+$80
+88
+86
+85
+79
+80
+84
+85
+90
+92
+■14-16
+Una compañía de regalos de compras por catálogo tiene la siguiente muestra de ventas en dólares, sepa-
+rados de acuerdo con la forma de pago del pedido. Pruebe la hipótesis de que no existe diferencia en la
+cantidad en dólares recibida por pagos en efectivo, cheque o tarjeta de crédito. Use la prueba de Kruskal-
+Wallis con un nivel de significancia de 0.05.
+Pagos con tarjeta de crédito
+78
+64
+75
+45
+82
+69 
+60
+Pagos con cheque
+110
+70
+53
+51
+61
+68
+Pagos con efectivo
+90
+68
+70
+54
+74
+65
+59
+■14-17
+Los siguientes datos muestran horas anuales perdidas por enfermedad de los 24 hombres y mujeres de la
+Northern Packing Company, Inc. Al nivel de significancia de 0.10, ¿existe alguna diferencia atribuible al
+sexo? Utilice la prueba U de Mann-Whitney.
+Hombres
+31
+44
+25
+30
+70
+63
+54
+42
+36
+22
+25
+50
+Mujeres
+38
+34
+33
+47
+58
+83
+18
+36
+41
+37
+24
+48
+■14-18
+Un fabricante de juguetes cambió el tipo de máquinas inyectoras de plástico que usaba porque una má-
+quina moderna dio evidencias de ser más económica. Sin embargo, al iniciar la temporada de Navidad, la
+productividad pareció un poco menor a la del año anterior. Los registros de producción de los últimos años
+estaban disponibles y el gerente de producción decidió comparar el resultado mensual de los 15 meses en
+que se usaron las máquinas antiguas y los 11 meses de producción de ese año. Los registros muestran es-
+tas cantidades de producción con las máquinas antiguas y las nuevas.
+Produ
+
+[Bloque seleccionado #657 | relevancia=4]
+Pagina 656
+¿Puede concluir la compañía, a un nivel de significancia de 0.10, que el cambio en las máquinas ha redu-
+cido la producción?
+■14-19
+Hank’s Hot Dogs tiene cuatro puestos de hot dogs en el Memorial Stadium. Hank sabe cuántos hot dogs
+se venden en cada puesto durante cada juego de fútbol y quiere determinar si los cuatro venden el mismo
+número. Use la prueba de Kruskal-Wallis, para un nivel de significancia de 0.10, ¿puede decir si los pues-
+tos tienen la misma cantidad de ventas de hot dogs?
+Juego
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Visitantes norte
+755
+698
+725
+895
+886
+794
+694
+827
+814
+Visitantes sur
+782
+724
+754
+825
+815
+826
+752
+784
+789
+Casa norte
+714
+758
+684
+816
+856
+884
+774
+812
+734
+Casa sur
+776
+824
+654
+779
+898
+687
+716
+889
+917
+■14-20
+Para incrementar las ventas durante los días de más demanda, una cadena de tiendas que vende queso en
+centros comerciales da pruebas de su producto a la entrada de las tiendas. La administración de la cade-
+na define los días de más venta y selecciona aleatoriamente los días para repartir muestras. De una mues-
+tra de días que se consideraron fuertes en compras, los siguientes datos proporcionan las ventas de una
+tienda en los días que dio muestras de quesos y en los que no.
+Ventas (en cientos)
+Días de promoción
+18
+21
+23
+15
+19
+26
+17
+18
+22
+20
+18
+21
+27
+Días normales
+22
+17
+15
+23
+25
+20
+26
+24
+16
+17
+23
+21
+Use la prueba u de Mann-Whitney y un nivel de significancia de 5% para decidir si regalar muestras fren-
+te a las tiendas produjo mayores ventas.
+■14-21
+Una compañía está interesada en saber si hay una diferencia en la tasa de producción de empleados
+hombres y mujeres en el departamento de moldes. Se pidió a Judy Johnson, gerente de producción, que
+realizara un estudio para medir la producción de trabajadores hombres y mujeres durante una semana. De
+alguna manera, uno de los empleados de oficina extravió una porción de los datos, y Judy sólo pudo lo-
+calizar la siguiente información de los registros de las pruebas:
+U  176.4275
+	U  1,624
+R1  3,255
+Judy también recordó que el tamaño de la muestra de hombres, n2, era 2 unidades mayor que n1.
+Reconstruya un valor z para la prueba y determine si puede suponerse que la producción semanal, a
+un nivel de significancia del 5%, es la misma tanto para hombres como para mujeres. También indique los
+valores para n1, n2 y R2.
+■14-22
+Una universidad que acepta estudiantes de preparatorias rurales y urbanas desea saber si los antecedentes
+distintos llevan a una diferencia en los promedios generales del primer año. Se presentan los datos de 13
+estudiantes de zona rural de primer ingreso elegidos al azar
+
+[Bloque seleccionado #659 | relevancia=6]
+Pagina 658
+14.4
+Prueba de corridas de una 
+sola muestra
+Hasta ahora, hemos supuesto que las muestras en los problemas se seleccionaron aleatoriamente, es-
+to es, se eligieron sin preferencia o sesgo. ¿Qué pasaría si llegara a observar patrones recurrentes en
+una muestra elegida por otra persona? Suponga que los solicitantes de capacitación para trabajos es-
+pecializados tuvieran que seleccionarse sin importar el sexo, a partir de una población grande. Usan-
+do la notación M  mujer y H  hombre, encuentra que el primer grupo entra en este orden:
+M, M, M, M, H, H, H, H, M, M, M, M, H, H, H, H
+Por inspección, concluiría que aunque el número total de solicitantes se divide por igual entre los se-
+xos, el orden no es aleatorio. Un proceso aleatorio rara vez enumeraría dos elementos en grupos al-
+ternos de cuatro. Suponga ahora que los solicitantes empiezan a llegar en este orden:
+M, H, M, H, M, H, M, H, M, H, M, H, M, H, M, H
+Resulta igual de irracional pensar que un proceso de selección aleatorio produciría un patrón de or-
+den como éste de hombres y mujeres. En este caso, también, la proporción de mujeres respecto a
+hombres es correcta, pero sospecharía respecto al orden en el que llegaron.
+Para permitirnos probar la aleatoriedad del orden de las muestras, los estadísticos han desarrolla-
+do la teoría de corridas. Una corrida es una secuencia de ocurrencias idénticas precedidas y se-
+guidas de ocurrencias diferentes o del todo por ninguna. Si los hombres y las mujeres entran de
+la siguiente manera, la secuencia contendrá tres corridas:
+La teoría de corridas
+Concepto de 
+aleatoriedad
+640
+Capítulo 14
+Métodos no paramétricos
+Y esta secuencia contiene seis corridas:
+Una prueba de corridas usaría los siguientes símbolos si tuviera sólo dos tipos de ocurrencias:
+n1  número de ocurrencias del tipo 1
+n2  número de ocurrencias del tipo 2
+r  número de corridas
+Apliquemos estos símbolos a un patrón diferente para la llegada de los solicitantes:
+H, M, M, H, H, H, H, M, M, M, H, H, M, H, M, M, H
+En este caso, los valores de n1, n2 y r serían
+n1  8 ←Número de mujeres
+n2  9 ←Número de hombres
+r  9 ←Número de corridas
+Un problema que ilustra una prueba de corridas 
+de una sola muestra
+Un fabricante de cereal para el desayuno usa una máquina para introducir aleatoriamente uno de dos
+tipos de muñecos en cada caja. La compañía desea una aleatoriedad tal que no todos los niños de un
+vecindario terminen con el mismo muñeco. Los probadores eligen muestras de 60 cajas sucesivas
+para ver si la máquina está mezclando adecuadamente los dos tipos de muñecos. Usando los símbo-
+
+
+[Bloque seleccionado #663 | relevancia=6]
+Pagina 662
+Usando el nivel de significancia de 0.05, pruebe la aleatoriedad de esta secuencia. ¿Hay algo respecto a
+la naturaleza de este problema que lo induzca a creer que una secuencia así no es aleatoria?
+■14-27
+La Agencia de Servicios Sociales del condado de Kerwin mantiene este registro del número diario de so-
+licitantes de asesoría matrimonial en el orden en que aparecen en la agencia durante 30 días hábiles.
+3, 4, 6, 8, 4, 6, 7, 2, 5, 7, 4, 8, 4, 7, 9,
+5, 9, 10, 5, 7, 4, 9, 8, 9, 11, 6, 7, 5, 9, 12
+Pruebe la aleatoriedad de esta secuencia viendo si los valores mayores y menores que la media ocurren
+en orden aleatorio. Use el nivel de significancia de 0.10. ¿Puede pensar en alguna característica del entor-
+no de este problema que apoye lo que encontró con la estadística?
+■14-28
+El dueño de un restaurante ha observado con los años que las parejas de más edad parecen comer más
+temprano que las parejas jóvenes en su tranquilo y romántico restaurante. Sospecha que tal vez sea por-
+que deben dejar a los niños con alguien que los cuide y porque las parejas de más edad se acuestan más
+temprano. Una tarde, decidió llevar un registro de la llegada de parejas al restaurante. Anotó si cada pare-
+ja tenía menos o más que 30 años. Sus notas se reproducen a continuación. (A  30 y mayores; B  me-
+nores de 30.)
+(3:30 p.m.) A,A,A,A,A,A, B,A,A,A,A,A,A, B, B,
+B,A, B, B, B, B, B, B,A, B, B, B,A, B, B, B (10 p.m.)
+Para un nivel de significancia del 5%, ¿estaba en lo correcto el dueño del restaurante en cuanto a que la
+edad de sus clientes a distintas horas de la tarde no es aleatoria?
+■14-29
+Kathy Phillips está a cargo de la programación de producción en una imprenta. La compañía tiene seis
+prensas grandes, que a menudo se descomponen, y uno de los mayores problemas de Kathy es cumplir
+con las fechas de entrega cuando ocurren desperfectos imprevistos en las prensas. Sospecha que cada 
+semana las viejas prensas se descomponen antes que las nuevas, ya que todas las prensas se verifican y
+reparan durante el fin de semana. Para probar su hipótesis, Kathy registró el número de las prensas que
+fallaron durante la semana. Las prensas 1, 2 y 3 son las más antiguas.
+Número de prensa en el orden de falla
+1, 2, 3, 1, 4, 5, 3, 1, 2, 5, 1, 3, 6, 2, 3, 6, 2, 2, 3, 5, 4,
+6, 4, 2, 1, 3, 4, 5, 5, 1, 4, 5, 2, 3, 5, 6, 4, 3, 2, 5, 4, 3.
+a)
+A un nivel de significancia del 5%, ¿tiene Kathy una hipótesis válida respecto a que las fallas de las
+prensas no son aleatorias?
+b) ¿Es apropiada su hipótesis en cuanto a la decisión que desea tomar de reprogramar más trabajo a prin-
+cipios de la 
+
+[Bloque seleccionado #664 | relevancia=5]
+Pagina 663
+c)
+Puesto que los análisis por computadora son mucho más rápidos que los hechos a mano, y como es
+posible hacer varios de los análisis por computadora, cada semana hay aproximadamente tres veces
+más análisis de éstos que los hechos a mano. ¿Existe evidencia estadística en el inciso a) para apoyar
+la creencia de que en alguna parte del proceso de muestreo no ocurre la aleatoriedad? Si es así, ¿cuál
+es la evidencia?
+d) ¿La conclusión a la que llegó en el inciso c) lo lleva a alguna nueva conclusión respecto a la prueba
+de corridas de una sola muestra, particularmente en lo que se refiere a su respuesta en a)?
+■14-31
+Bank of America tiene curiosidad acerca del grado académico de los usuarios de sus cajeros automáticos
+(ATM) colocados en el edificios de la Sociedad de Alumnos. Los estudiantes de primero y segundo año
+se clasifican como tipo A, los de tercero y cuarto como tipo B. Los datos de 45 personas que usaron el
+ATM el viernes en la tarde son los siguientes. Pruebe que esta secuencia sea aleatoria para un nivel de sig-
+nificancia de 0.05.
+B B B A A A B A A A A A A B B B B A B A A A A B B A A B B B B A B B B B A A A A A A B B B
+■14-32
+El First National Bank de Smithville registró el sexo de los primeros 40 clientes, que aparecieron el pa-
+sado martes, con M = mujer y H = hombre, y obtuvo los siguientes datos:
+M, F, M, M, M, M, F, F, M, M, M, F, M, M, M, M, M, F, F, M,
+F, M, M, M, F, M, M, M, M, M, M, F, M, M, M, M, M, F, F, M
+Al nivel de significancia de 0.05, pruebe la aleatoriedad de esta secuencia. ¿existe algo en el área bancaria
+o en la naturaleza de este problema que lo lleve a aceptar intuitivamente lo que encontró estadísticamente?
+Soluciones a los ejercicios de autoevaluación
+EA
+14-5
+a)
+G denota a los estudiantes con 90 o más y L denota a los que tienen menos de 90:
+G L L L G G L L L L L G L L L L L G L L L L L L L L L L G L
+n1  # de G´s  6
+r  10
+n2  # de L´s  24
+  0.05
+	r 
+ 1 
+ 1  10.6
+r  
+r  1.69
+Los valores críticos de z son ±1.96. El valor estandarizado de r es 
+z 
+
+ 0.355
+de manera que se acepta H0. La secuencia es aleatoria.
+b) Si P denota aprobar (≥60) y F denota no aprobar (< 60), se obtiene
+P P P P P P P P P P P P F P P P P P P P F F F F P P P F P P
+n1  # de P´s  24
+r  7
+n2  # de F´s  6
+  0.05
+	r 
+ 1  10.6
+r   1.69
+2(24)(6)[2(24)(6)  24  6]
+
+(30)2(29)
+2(24)(6)
+
+30
+10  10.6
+
+1.69
+r  	r
+
+r
+2(6)(24)[2(6)(24)  6  24]
+
+(30)2(29)
+2n1n2(2n1n2  n1  n2)
+
+(n1  n2)2(n1  n2  1)
+2(6)(24)
+
+30
+2n1n2
+
+n1  n2
+14.4
+Prueba de corridas de una sola muestra
+645
+
+[Bloque seleccionado #681 | relevancia=10]
+Pagina 680
+Repaso del capítulo
+Coeficiente de correlación de rangos Medida del grado
+de asociación entre dos variables que se basa en los rangos
+o clasificación de las observaciones, no en sus valores nu-
+méricos.
+Correlación de rango Método para hacer análisis de corre-
+lación cuando los datos no están disponibles en forma numé-
+rica, pero se tiene información suficiente para clasificar los
+datos.
+Corrida Secuencia de ocurrencias idénticas precedidas y
+seguidas de ocurrencias diferentes o por ninguna.
+Prueba de corridas de una sola muestra Método no para-
+métrico para determinar la aleatoriedad con que se seleccio-
+naron los elementos de una muestra.
+Prueba de Kolmogorov-Smirnov Prueba no paramétrica
+que no requiere que los datos se agrupen para determinar
+si existe una diferencia significativa entre la distribución
+de frecuencias observada y la distribución de frecuencias
+teórica.
+662
+Capítulo 14
+Métodos no paramétricos
+Prueba de Kruskal-Wallis Método no paramétrico para
+probar si tres o más muestras independientes se extrajeron de
+poblaciones con la misma distribución. Es una versión no pa-
+ramétrica de ANOVA, que estudiamos en el capítulo 11.
+Prueba de los signos Prueba para la diferencia entre las ob-
+servaciones por pares, donde los signos  y  sustituyen a
+los valores cuantitativos.
+Pruebas de sumas de rangos Familia de pruebas no para-
+métricas que usan la información de orden en un conjunto de
+datos.
+Pruebas no paramétricas Técnicas estadísticas que no ha-
+cen suposiciones restrictivas respecto a la forma de la distri-
+bución de población al realizar una prueba de hipótesis.
+Prueba U de Mann-Whitney Método no paramétrico usa-
+do para determinar si dos muestras independientes se extra-
+jeron de poblaciones con la misma distribución.
+Teoría de corridas Teoría desarrollada para permitimos pro-
+bar la aleatoriedad del orden de las muestras.
+●Ecuaciones introducidas en el capítulo 14
+■
+14-1
+U  n1n2 
+ R1
+Para aplicar la prueba U de Mann-Whitney, se necesita esta fórmula para derivar el estadístico U, una me-
+dida de la diferencia entre las observaciones clasificadas y las dos variables. R1 es la suma de los rangos
+de las observaciones de la variable 1; n1 y n2 son los números de elementos de las muestras 1 y 2, respec-
+tivamente. No es necesario que ambas sean del mismo tamaño.
+■
+14-2
+	U 
+Si la hipótesis nula de una prueba U de Mann-Whitney es que n1  n2 observaciones provienen de pobla-
+ciones idénticas, entonces el estadístico U tiene una distribución de muestreo con una media igual al pro-
+ducto de n1 y n2 dividido entre 2.
+■
+14-3
+U 
+Est

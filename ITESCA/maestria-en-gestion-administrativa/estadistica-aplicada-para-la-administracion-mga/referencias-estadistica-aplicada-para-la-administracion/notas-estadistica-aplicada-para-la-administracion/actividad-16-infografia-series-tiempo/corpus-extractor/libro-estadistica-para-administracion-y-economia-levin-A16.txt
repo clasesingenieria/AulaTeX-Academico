@@ -1,0 +1,783 @@
+Fuente bibliográfica: Estadística para administración y economía - Levin y Rubin. 7.ª edición revisada.pdf
+Actividad: 16 (6.1 Infografía Equipo 4% Tarea)
+Palabras clave: serie de tiempo, tendencia, estacionalidad, ciclo, medias móviles, suavizamiento exponencial, índice estacional, tasas de variación
+
+[Bloque seleccionado #694 | relevancia=17]
+Pagina 693
+15.2
+Variación en las series de tiempo
+Utilizamos el término serie de tiempo para referirnos a cualquier grupo de información estadística
+que se acumula a intervalos regulares. Con respecto en una variable de interés, existen cuatro tipos
+de cambio o variación implicados en el análisis de series de tiempo, éstos son:
+1. Tendencia secular o variación secular
+2. Fluctuación cíclica o variación cíclica
+3. Variación estacional
+4. Variación irregular
+Con el primer tipo de variación, la tendencia secular, el valor de la variable tiende a aumentar o
+disminuir en un periodo muy largo. El incremento estable en los costos de vida registrados en el Índi-
+ce de Precios al Consumidor (IPC) es un ejemplo de tendencia secular. De un año a otro, el costo de
+vida varía bastante, pero si examinamos un periodo a largo plazo, nos damos cuenta que la tendencia
+tiende a aumentar de manera estable. La gráfica (a) de la figura 15-1 muestra una tendencia secular
+en una serie de tiempo creciente que fluctúa.
+El segundo tipo de variación observado en una serie de tiempo es la fluctuación cíclica. El ejem-
+plo más común de fluctuación cíclica es el ciclo económico. A través del tiempo, hay años en los que
+Fluctuación cíclica
+Tendencia secular
+Cuatro tipos de varia-
+ción en las series de
+tiempo
+15.2
+Variación en las series de tiempo
+675
+Y
+Serie de tiempo real
+Tendencia secular
+Tiempo en años
+(a)
+Y
+Fluctuación cíclica
+Línea de tendencia 
+Tiempo en años
+(b)
+Y
+Variación estacional
+Variación estacional
+Tiempo en años
+(c)
+Y
+Variación irregular
+Tiempo en años
+(d)
+FIGURA 15-1
+Variación en las
+series de tiempo
+
+[Bloque seleccionado #695 | relevancia=27]
+Pagina 694
+el ciclo económico llega a un pico arriba de la línea de tendencia; en otros, es probable que la acti-
+vidad de los negocios disminuya abajo de la línea de tendencia. El tiempo que transcurre entre picos
+y depresiones es al menos un año, y puede llegar a ser hasta 15 o 20. La gráfica (b) de la figura 15-1
+ilustra un patrón típico de fluctuación cíclica arriba y abajo de la línea de tendencia secular. Obser-
+ve que los movimientos cíclicos no siguen ningún patrón regular, sino que se mueven de manera un
+tanto impredecible.
+El tercer tipo de cambio en los datos de una serie de tiempo es la variación estacional. Como ca-
+bría esperar, este tipo de variación implica patrones de cambio en el lapso de un año que tienden a
+repetirse anualmente. Por ejemplo, un médico puede esperar un aumento sustancial en el número de
+casos de gripe cada invierno y de afectados de tifoidea cada verano. Como se trata de patrones regu-
+lares son útiles al pronosticar el futuro. La gráfica (c) de la figura 15-1 muestra una variación esta-
+cional. Note cómo alcanza un pico cada cuarto trimestre del año.
+La variación irregular es el cuarto tipo de cambio que ocurre en el análisis de las series de tiem-
+po. En muchas situaciones, el valor de una variable puede ser completamente impredecible cambian-
+do de manera aleatoria. Las variaciones irregulares describen esos movimientos. Los efectos que el
+conflicto de Medio Oriente en 1973, la situación de Irán en 1979-1981, el colapso de la OPEP en 
+1986 y la situación de Irak en 1990 tuvieron sobre los precios de la gasolina en Estados Unidos son
+ejemplos de variación irregular. La gráfica (d) de la figura 15-1 ilustra la variación irregular.
+Hasta ahora, nos hemos referido a las series de tiempo como datos que presentan una de las cua-
+tro variaciones descritas. Sin embargo, en la mayor parte de los casos las series de tiempo contie-
+nen varias de estas componentes. Así, podemos describir la variación total en una sola serie de tiempo
+en términos de estas cuatro clases de variación. En las siguientes secciones examinaremos las cua-
+tro componentes y las formas en que medimos cada uno.
+Ejercicios 15.2
+Conceptos básicos
+■
+15-5
+Identifique las cuatro principales componentes de una serie de tiempo y explique el tipo de cambio, en el
+tiempo, al que se aplica.
+■
+15-6
+¿Cuál de las cuatro componentes de una serie de tiempo se utilizaría para describir el efecto de las ventas
+navideñas de una tienda departamental al menudeo?
+■
+15-7
+¿Cuál es la ventaja de descomponer una serie de tiempo en sus cuatro componentes?
+■
+15-8
+¿Cuál de las cuatr
+
+[Bloque seleccionado #696 | relevancia=25]
+Pagina 695
+Razones para estudiar las tendencias
+Existen tres razones por las cuales resulta útil estudiar las tendencias seculares:
+1. El estudio de tendencias seculares nos permite describir un patrón histórico. Existen mu-
+chos ejemplos en los que podemos utilizar un patrón del pasado para evaluar el éxito de una po-
+lítica anterior. Por ejemplo, una universidad puede evaluar la efectividad de un programa de
+captación de estudiantes mediante el examen de sus tendencias en las inscripciones anteriores.
+2. El estudio de tendencias seculares nos permite proyectar patrones o tendencias pasados
+al futuro. El conocimiento del pasado nos puede hablar en gran medida acerca del futuro. Por
+ejemplo, el examen de la tasa de crecimiento de la población mundial puede ser de ayuda para
+estimar la población en algún momento futuro dado.
+3. En muchas situaciones, el estudio de la tendencia secular de una serie de tiempo nos per-
+mite eliminar la componente de tendencia de la serie. Esto facilita el estudio de las otras tres
+componentes de la serie de tiempo. Si deseamos determinar la variación estacional de la venta
+de esquíes, por ejemplo, la eliminación de la componente de tendencia nos proporciona una
+idea más precisa de la componente estacional.
+Las tendencias pueden ser rectas o curvilíneas (logarítmicas, exponenciales, potenciales y polinó-
+micas). Antes de examinar el método lineal o de línea recta para describir tendencias, debemos re-
+cordar que algunas relaciones no toman esa forma. El aumento de contaminantes en el ambiente 
+sigue una curva de pendiente creciente parecida a la que mostramos en la gráfica (a) de la figura 
+15-2. Otro ejemplo común de una relación curvilínea es el ciclo de vida de un nuevo producto co-
+mercial, que se ilustra en la gráfica (b) de la misma figura. Cuando se introduce en el mercado un
+nuevo producto, su volumen de ventas es bajo (I). Conforme el producto adquiere reconocimiento 
+y éxito, las ventas aumentan con una rapidez cada vez mayor (II). Después de que el producto se 
+establece firmemente, sus ventas crecen con rapidez constante (III). Por último, cuando el producto
+llega al fin de su ciclo de vida, las ventas unitarias empiezan a disminuir (IV).
+Ajuste de la tendencia lineal con el método 
+de mínimos cuadrados
+Además de las tendencias que se pueden describir por una curva, existen otras que se describen por
+una línea recta. Éstas se conocen como tendencias lineales. Antes de desarrollar la ecuación para una
+tendencia lineal, necesitamos revisar la ecuación general para estimar una línea recta (ecuación 12-3):
+Ecuación pa
+
+[Bloque seleccionado #706 | relevancia=29]
+Pagina 705
+Método de residuos
+Cuando observamos una serie de tiempo consistente en datos anuales, sólo se toman en cuen-
+ta las componentes de tendencia secular, cíclica e irregular. (Esto es así porque la variación es-
+tacional pasa por un ciclo completo y regular cada año y no afecta más un año que otro.) Da-
+do que podemos describir la tendencia secular utilizando una línea de tendencia, es posible aislar de
+la tendencia las componentes cíclica e irregular restantes. Supondremos que la componente cíclica
+explica la mayor parte de la variación que quedó sin explicar por la componente de tendencia secu-
+lar. (Muchas series de tiempo reales no satisfacen esta suposición. Los métodos como el análisis 
+de Fourier y el análisis espectral pueden estudiar la componente cíclica de estas series de tiempo.
+Dichos métodos, sin embargo, están más allá del objetivo del presente libro.)
+Si utilizamos una serie de tiempo compuesta por datos anuales, podemos encontrar la fracción de
+la tendencia dividiendo el valor real (Y) entre el valor de tendencia correspondiente (Yˆ) para cada valor
+de la serie de tiempo. Luego se multiplica el resultado de este cálculo por 100. Esto da la medida de
+la variación cíclica como un porcentaje de tendencia. Presentamos el proceso en la ecuación 15-8:
+Expresión de la varia-
+ción cíclica como por-
+centaje de tendencia
+15.4
+Variación cíclica
+687
+Porcentaje de tendencia 
+ 100
+[15-8]
+Y
+Yˆ
+donde,
+• Y  valor real de la observación en la serie de tiempo
+• Yˆ  valor de tendencia estimado a partir del mismo punto de la serie de tiempo
+Ahora aplicaremos este procedimiento.
+La cooperativa de comercialización de granjeros desea medir las variaciones en las cosechas de
+trigo de sus miembros durante ocho años. La tabla 15-6 da el volumen de cereal cosechado cada uno de
+los 8 años. La columna Y contiene los valores de la tendencia lineal para cada periodo. La recta de ten-
+dencia fue generada utilizando los métodos ilustrados en la sección 15.3 de este capítulo. Observe
+que en la gráfica del valor real (Y) y del valor de tendencia (Yˆ) para los 8 años, figura 15-5, los valo-
+res reales quedan por arriba y abajo de la recta de tendencia.
+Ahora ya podemos determinar el porcentaje de tendencia para cada año de la muestra (columna
+4 de la tabla 15-7). En esta columna podemos ver la variación de las cosechas reales alrededor de la
+tendencia estimada (98.7 a 102.5). Podemos atribuir estas variaciones cíclicas a factores como llu-
+vias y cambios de temperatura. Sin embargo, debido a que estos factores son relativamente impre-
+decibles, no podemos determ
+
+[Bloque seleccionado #707 | relevancia=17]
+Pagina 706
+donde,
+• Y  valor real de la serie de tiempo 
+• Yˆ  valor de tendencia estimado a partir del mismo punto de la serie de tiempo
+La tabla 15-8 muestra los cálculos del residuo cíclico relativo para el problema de la cooperativa de
+granjeros. Observe que la forma fácil de calcular el residuo cíclico relativo (columna 5) consiste en
+restar 100 del porcentaje de tendencia (columna 4).
+Estas dos medidas de variación cíclica, porcentaje de tendencia y residuo cíclico relativo, son por-
+centajes de la tendencia. Por ejemplo, en 2007, el porcentaje de tendencia indicaba que la cosecha
+real fue del 98.8% de la cosecha esperada para ese año. Para el mismo año, el residuo cíclico relati-
+vo indicó que la cosecha real estaba 1.2% por debajo de la cosecha esperada (un residuo cíclico re-
+lativo de 1.2).
+A menudo, graficamos la variación cíclica como el porcentaje de tendencia. En la figura 15-6 se
+ilustra cómo este proceso elimina la línea de tendencia y aísla la componente cíclica de la serie de
+Gráfica de la 
+variación cíclica
+Comparación de dos
+medidas de variación
+cíclica
+688
+Capítulo 15
+Series de tiempo y pronósticos
+Residuo cíclico relativo
+ 100
+[15-9]
+Y  Yˆ
+
+Yˆ
+7.4
+7.6
+7.8
+8.0
+8.2
+8.4
+8.6
+8.8
+9.0
+9.2
+2010
+2009
+2008
+2007
+2006
+2005
+2004
+2003
+2002
+Fluctuaciones cíclicas arriba  
+de la línea de tendencia
+Gráfica de puntos  
+reales ( Y )
+Fluctuaciones cíclicas 
+abajo de la línea  
+de tendencia
+Línea de tendencia 
+(gráfica de Y)
+Tiempo
+Bushels (decenas de miles)
+ˆ
+FIGURA 15-5
+Fluctuaciones cícli-
+cas alrededor de la
+línea de tendencia
+Cálculo del porcentaje
+de tendencia
+Tabla 15-7
+Y
+Yˆ
+  100
+X
+Y Bushels reales
+ˆY Bushels estimados
+Porcentaje de tendencia
+Año
+( 10,000)
+( 10,000)
+(1)
+(2)
+(3)
+(4)  (
+(
+2
+3
+)
+)
+  100
+2002
+7.5
+7.6
+98.7
+2003
+7.8
+7.8
+100.0
+2004
+8.2
+8.0
+102.5
+2005
+8.2
+8.2
+100.0
+2006
+8.4
+8.4
+100.0
+2007
+8.5
+8.6
+98.8
+2008
+8.7
+8.8
+98.9
+2009
+9.1
+9.0
+101.1
+
+[Bloque seleccionado #709 | relevancia=15]
+Pagina 708
+a)
+Encuentre la ecuación lineal de estimación que mejor describa estos datos.
+b) Calcule el porcentaje de tendencia para estos datos.
+c)
+Calcule el residuo cíclico relativo para estos datos.
+d) ¿En qué años se presentó la mayor fluctuación en la tendencia? ¿Es ésta la misma para ambos mé-
+todos?
+Aplicaciones
+■15-20
+La compañía de computación Microprocessing, especializada en ingeniería de software, ha recolectado
+los siguientes registros de rendimientos para el periodo de 1989 a 1995.
+Año
+2003
+2004
+2005
+2006
+2007
+2008
+2009
+Recuperación (cientos de miles de dólares) 
+1.1
+1.5
+1.9
+2.1
+2.4
+2.9
+3.5
+La ecuación de segundo grado que mejor describe la tendencia secular para estos datos es:
+Yˆ  2.119  0.375x  0.020x2, donde 2006  0, y la unidad de x  1 año
+a)
+Calcule el porcentaje de tendencia para estos datos.
+b) Calcule el residuo cíclico relativo para estos datos.
+c)
+Grafique el porcentaje de tendencia del inciso a).
+d) ¿En qué año se presentó la mayor fluctuación en la tendencia? ¿Es ésta la misma para ambos métodos?
+■15-21
+La tienda departamental BullsEye ha expandido su participación en el mercado durante los últimos 7 años,
+con las siguientes ventas brutas en millones de dólares:
+Año
+2003
+2004
+2005
+2006
+2007
+2008
+2009
+Ventas
+14.8
+20.7
+24.6
+32.9
+37.8
+47.6
+51.7
+a)
+Encuentre la ecuación lineal de estimación que mejor describa estos datos.
+b) Calcule el porcentaje de tendencia para estos datos.
+c)
+Calcule el residuo cíclico relativo para estos datos.
+d) ¿En qué años ocurre la mayor fluctuación desde la tendencia y es la misma para ambos métodos?
+■15-22
+Joe Honeg, gerente de ventas responsable de la división de aparatos electrodomésticos de una gran com-
+pañía de productos de consumo, ha recogido los siguientes datos correspondientes a las ventas unitarias
+de su división durante los últimos cinco años:
+Año
+2005
+2006
+2007
+2008
+2009
+Unidades (decenas de miles)
+32
+46
+50
+66
+68
+La ecuación que describe la tendencia secular para las ventas de aparatos electrodomésticos es
+Yˆ  52.4  9.2x, en la que 2007  0, y la unidad de x  1 año
+a)
+Calcule el porcentaje de tendencia para estos datos. 
+b) Calcule el residuo cíclico relativo para estos datos. 
+c)
+Grafique el porcentaje de tendencia del inciso a). 
+d) ¿En qué año ocurrió la mayor fluctuación en la tendencia? ¿Es la misma para ambos métodos?
+■15-23
+Suponga que es el administrador principal de presupuesto de una pequeña empresa cuyos requerimientos
+de financiamiento durante los últimos años fueron:
+Año
+2003
+2004
+2005
+2006
+2007
+2008
+2009
+Millones de dólares requeridos
+2.2
+2.1
+2.4
+2.6
+2.7
+2.9
+2.8
+La ecu
+
+[Bloque seleccionado #714 | relevancia=16]
+Pagina 713
+6. El paso final que se muestra en la tabla 15-12 es un ligero ajuste de la media modificada.
+Note que los cuatro índices de la tabla 15-11 dan un total de 404.1. Sin embargo, la base de un
+índice es 100. Entonces, los cuatro índices trimestrales deben dar un total de 400 y su media debe
+ser 100. Para corregir este error, multiplicamos cada uno de los índices trimestrales de la tabla
+15-11 por una constante de ajuste. Este número se encuentra dividiendo la suma deseada de los
+índices (400) entre la suma real (404.1). En este caso, el resultado es 0.9899. En la tabla 15-12
+se ve que multiplicar los índices por la constante de ajuste hace que den un total de 400. (En
+ocasiones, incluso después de haber hecho este ajuste, la media de los índices estacionales no
+es exactamente 100, debido a los errores de redondeo acumulados. Sin embargo, en este caso
+la media es exactamente 100.)
+Paso 6: Ajuste la 
+media modificada
+15.5
+Variación estacional
+695
+Procedimiento seguido
+en el paso 5 para calcu-
+lar un índice estacional*
+Tabla 15-11
+Año
+Trimestre I
+Trimestre II
+Trimestre III
+Trimestre IV
+2005
+—
+—
+114.8
+89.6
+2006
+89.0
+107.4
+115.3
+92.6
+2007
+88.6
+108.0
+106.4
+92.0
+2008
+93.5
+100.6
+111.7
+91.8
+2009
+094.5
+109.8
+.0—0
+.0—0
+182.5
+215.4
+226.5
+183.8
+Media modificada:
+Trimestre I:
+
+18
+2
+2.5
+  91.25
+Trimestre II: 
+21
+2
+5.4
+  107.70
+Trimestre III: 
+22
+2
+6.5
+  113.25
+Trimestre IV: 
+18
+2
+3.8
+  91.90
+Total de índices  404.1
+Procedimiento para
+el paso 6
+Tabla 15-12
+Trimestre
+Índices desajustados
+
+Constante de ajuste
+
+Índice estacional
+I
+91.25
+
+0.9899
+
+90.3
+II
+107.70
+
+0.9899
+
+106.6
+III
+113.25
+
+0.9899
+
+112.1
+IV
+91.90
+
+0.9899
+
+,091.0
+Total de los índices estacionales 
+400.0
+Media de los índices  40
+4
+0
+ 100.0
+Usos del índice estacional
+El método de razón del promedio móvil que acabamos de estudiar, nos permite identificar la varia-
+ción estacional de una serie de tiempo. Los índices estacionales se utilizan para eliminar los efectos
+de estacionalidad de una serie de tiempo. A este proceso se le denomina desestacionalización de una
+serie de tiempo. Antes de poder identificar la componente de tendencia o la cíclica de una serie de
+tiempo, es necesario eliminar la variación estacional. Para desestacionalizar una serie de tiempo, di-
+Desestacionalización
+de una serie de 
+tiempo
+*Los valores eliminados están tachados con una diagonal.
+
+[Bloque seleccionado #718 | relevancia=16]
+Pagina 717
+15.6
+Variación irregular
+La última componente de una serie de tiempo es la variación irregular. Después de eliminar las varia-
+ciones de tendencia, cíclica y estacional de una serie de tiempo, todavía queda un factor impredecible.
+Por lo común, la variación irregular se presenta en intervalos cortos y sigue un patrón aleatorio.
+Debido a lo impredecible de la variación irregular, no tenemos la intención de intentar describir-
+la de manera matemática. Sin embargo, a menudo podemos aislar sus causas. Por ejemplo, la crisis
+financiera en la ciudad de Nueva York en 1995 fue un factor irregular que deprimió severamente el
+mercado de bonos municipales. En 2009, las temperaturas inusualmente bajas que se presentaron a
+finales de diciembre en los estados del norte de la Unión Americana fueron un factor irregular que
+aumentó significativamente el consumo de electricidad y de combustibles. La Guerra del Golfo Pér-
+sico de 1991 fue otro factor irregular que hizo aumentar significativamente el número de viajes por
+aire y mar durante meses, a medida que se trasladaban tropas y suministros al lugar del conflicto. Sin
+embargo, no todas las causas de la variación irregular se pueden identificar con tanta facilidad. Un
+factor que permite a los administradores manejar la variación irregular es que, con el tiempo, estos
+movimientos aleatorios tienden a contrarrestarse entre sí.
+Dificultad para 
+manejar la variación
+irregular
+15.7
+Problema que incluye a las cuatro componentes de una serie de tiempo
+699
+Advertencia: la variación irregular es
+muy importante, pero no se explica mate-
+máticamente. Es “lo que queda” después
+de eliminar la variación por tendencia,
+cíclica y estacional de una serie de tiempo. En la mayoría
+de los casos, es difícil, si no imposible, pronosticar la varia-
+ción irregular y nunca se intenta “ajustar una línea” para ex-
+plicarla. Sugerencia: a menudo se encontrará variación irre-
+gular reconocida con un pie de página o un comentario en
+una gráfica. Ejemplos de esto serían “mercado cerrado por
+el día del trabajo” o “la Semana Santa cayó en marzo este
+año en lugar de abril”.
+SUGERENCIAS
+Y
+SUPOSICIONES
+Ejercicios 15.6
+Conceptos básicos
+■15-33
+¿Por qué no proyectamos la variación irregular al futuro?
+■15-34
+¿Cuáles de los siguientes incisos ilustran variaciones irregulares?
+a)
+Una sequía larga que lleva a aumentar los precios de los alimentos.
+b) El efecto de la nieve sobre el negocio del esquí.
+c)
+Descuento, por única vez, en los impuestos federales para la adquisición de casas nuevas.
+d) El colapso en los precios del petróleo crudo al inicio de
+
+[Bloque seleccionado #721 | relevancia=19]
+Pagina 720
+Se han identificado las componentes estacional y de tendencia de la serie de tiempo. A continua-
+ción, encontraremos la variación cíclica alrededor de la línea de tendencia. Esta componente se iden-
+tifica midiendo la variación desestacionalizada alrededor de la línea de tendencia. En este problema,
+calcularemos la variación cíclica en la tabla 15-19, usando el método de residuos.
+Si suponemos que la variación irregular es, en general, de corto plazo y relativamente insignifi-
+cante, hemos descrito por completo la serie de tiempo de este problema utilizando las componentes
+de tendencia, estacional y cíclica. En la figura 15-8 ilustramos la serie de tiempo original, su prome-
+dio móvil (que contiene tanto la componente de tendencia como la cíclica) y la línea de tendencia.
+Ahora, suponga que la administración del complejo de veraneo que hemos usado como ejemplo
+desea estimar el volumen de ventas para el tercer trimestre de 2010. ¿Qué debe hacer la administra-
+ción?
+1. Debe determinarse el valor desestacionalizado de las ventas del tercer trimestre de 2010,
+mediante la ecuación de tendencia, Yˆ  18  0.16x. Esto requiere la codificación del tiempo,
+2010-III. Ese trimestre (2010-III) es tres trimestres después de 1995-IV que, como se ve en la
+tabla 15-18, tiene un valor de tiempo codificado de 19. Sumando 2 por cada trimestre, la admi-
+nistración encuentra que x  19  2(3)  25. Sustituyendo este valor (x  25) en la ecuación
+de tendencia se produce el siguiente resultado:
+Yˆ  a  bx
+ 18  0.16(25)
+ 18  4
+ 22
+Así, la estimación de ventas desestacionalizada para 1996-III es $220,000. Este punto se señala
+sobre la línea de tendencia en la figura 15-8.
+Paso 1: Determina-
+ción del valor deses-
+tacionalizado de las
+ventas para el perio-
+do deseado
+Predicciones utili-
+zando una serie de
+tiempo
+Suposiciones acerca
+de la variación 
+irregular
+Paso 3: Búsqueda
+de la variación cíclica
+702
+Capítulo 15
+Series de tiempo y pronósticos
+Cálculo de los valores
+desestacionalizados de
+la serie de tiempo
+Tabla 15-17
+Año
+Trimestre
+Ventas reales
+Ventas desestacionalizadas
+(1)
+(2)
+(3)
+(4)
+(5)  (3)  (4)
+2005
+I
+16
+0.951
+16.8
+II
+21
+1.299
+16.2
+III
+9
+0.612
+14.7
+IV
+18
+1.139
+15.8
+2006
+I
+15
+0.951
+15.8
+II
+20
+1.299
+15.4
+III
+10
+0.612
+16.3
+IV
+18
+1.139
+15.8
+2007
+I
+17
+0.951
+17.9
+II
+24
+1.299
+18.5
+III
+13
+0.612
+21.2
+IV
+22
+1.139
+19.3
+2008
+I
+17
+0.951
+17.9
+II
+25
+1.299
+19.2
+III
+11
+0.612
+18.0
+IV
+21
+1.139
+18.4
+2009
+I
+18
+0.951
+18.9
+II
+26
+1.299
+20.0
+III
+14
+0.612
+22.9
+IV
+25
+1.139
+21.9
+Índice estacional
+
+
+100
+
+[Bloque seleccionado #730 | relevancia=19]
+Pagina 729
+Ecuación de segundo grado Forma matemática que se uti-
+liza para describir una curva parabólica que puede usarse en
+el análisis de tendencia de una serie de tiempo.
+Fluctuación cíclica Tipo de variación que se presenta en
+una serie de tiempo, en la cual el valor de la variable fluctúa
+alrededor de una línea de tendencia secular.
+Media modificada Método estadístico utilizado en el análi-
+sis de series de tiempo. Descarta los valores más alto y más
+bajo cuando se calcula una media.
+Método de razón de promedio móvil Método estadístico
+empleado para medir la variación estacional. Usa un índice
+que describe el grado de dicha variación.
+Método de residuos Método para describir la componente
+cíclica de una serie de tiempo. Supone que la mayor parte de
+la variación de la serie que no explica la tendencia secular se
+debe a factores cíclicos.
+Repaso del capítulo
+711
+Residuo cíclico relativo Medida de la variación cíclica, uti-
+liza la desviación porcentual de cada valor de la serie respec-
+to a la tendencia.
+Serie de tiempo Los datos acumulados acerca de una va-
+riable a intervalos regulares y los métodos estadísticos utiliza-
+dos para determinar patrones en esos datos.
+Tendencia secular Tipo de variación en una serie de tiem-
+po. El valor de la variable que tiende a aumentar o disminuir
+en un periodo largo.
+Variación estacional Patrones de cambio de una serie de
+tiempo que ocurren en un año; patrones que tienden a repe-
+tirse cada año.
+Variación irregular Condición de una serie de tiempo en la
+que el valor de una variable es completamente impredecible.
+●Ecuaciones introducidas en el capítulo 15
+■
+15-1
+b 
+Esta fórmula, introducida en el capítulo 12 como la ecuación 12-4, nos permite calcular la pendiente de
+la línea de regresión de mejor ajuste para cualquier conjunto de datos de dos variables. Los símbolos X
+ y
+Y representan las medias de los valores de las variables independiente y dependiente, respectivamente; n
+es el número de datos con los cuales se ajusta la línea.
+■
+15-2
+a  Y  bX
+Vimos esta fórmula como la ecuación 12-5. Nos permite calcular la ordenada Y de la recta de regresión
+de mejor ajuste para cualquier conjunto de datos de dos variables.
+■
+15-3
+b 
+Cuando el tiempo medido en años individuales (X) se cambia a valores de tiempo codificados (x) restan-
+do la media (x  X  X), la ecuación 15-1, para la pendiente de la recta de tendencia se simplifica y se
+convierte en la ecuación 15-3.
+■
+15-4
+a  Y
+De manera parecida, utilizar los valores de tiempo codificado también nos permite simplificar la ecuación
+15-2 para obtener la ordenada 

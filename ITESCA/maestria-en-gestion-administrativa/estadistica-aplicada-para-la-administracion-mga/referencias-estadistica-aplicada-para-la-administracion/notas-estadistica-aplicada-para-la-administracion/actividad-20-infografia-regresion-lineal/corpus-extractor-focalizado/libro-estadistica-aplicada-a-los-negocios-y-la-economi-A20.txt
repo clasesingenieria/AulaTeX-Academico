@@ -1,0 +1,759 @@
+Fuente bibliográfica: Estadística aplicada a los negocios y la economía - Lind, Marchal y Wathen. 15.ª edición.pdf
+Actividad: 20 (7.1 Infografía Equipo 3% Tarea)
+Palabras clave: regresión lineal simple, regresión lineal múltiple, mínimos cuadrados, correlación, coeficiente de determinación, ANOVA, variables ficticias
+
+[Bloque seleccionado #23 | relevancia=14]
+Pagina 22
+Contenido
+xxi
+Ejercicios
+391
+11.5 Pruebas de hipótesis de dos muestras:
+muestras dependientes
+392
+11.6 Comparación de muestras
+dependientes e independientes
+395
+Ejercicios
+398
+Resumen del capítulo
+399
+Clave de pronunciación
+400
+Ejercicios del capítulo
+400
+Ejercicios de la base de datos
+406
+Comandos de software
+407
+Respuestas a las autoevaluaciones
+408
+Capítulo
+12 Análisis de la varianza
+410
+12.1 Introducción
+411
+12.2 La distribución F
+411
+12.3 Comparación de dos varianzas
+poblacionales
+412
+Ejercicios
+415
+12.4 Suposiciones en el análisis de la varianza
+(ANOVA)
+416
+12.5 La prueba ANOVA
+418
+Ejercicios
+425
+12.6 Tratamiento e inferencia sobre pares
+de medias
+426
+Ejercicios
+429
+12.7 Análisis de la varianza de dos vías
+430
+Ejercicios
+434
+12.8 ANOVA de dos vías con interacción
+435
+Gráficas de interacción
+436
+Prueba de hipótesis para detectar interacción
+437
+Ejercicios
+440
+Resumen del capítulo
+442
+Clave de pronunciación
+443
+Ejercicios del capítulo
+443
+Ejercicios de la base de datos
+451
+Comandos de software
+452
+Respuestas a las autoevaluaciones
+454
+Repaso de los capítulos 10 al 12
+455
+Glosario
+456
+Problemas
+457
+Casos
+459
+Test de práctica
+459
+Capítulo
+13 Regresión lineal y correlación
+461
+13.1 Introducción
+462
+13.2 ¿Qué es el análisis de correlación?
+463
+13.3 Coeficiente de correlación
+465
+Ejercicios
+470
+13.4 Prueba de la importancia del coeficiente
+de correlación
+472
+Ejercicios
+475
+13.5 Análisis de regresión
+476
+Principio de los mínimos cuadrados
+476
+Trazo de la recta de regresión
+479
+Ejercicios
+481
+13.6 Probar la significancia
+de la pendiente
+483
+Ejercicios
+486
+13.7 Evaluación de la capacidad predictora
+de una ecuación de regresión
+486
+Error estándar de estimación
+486
+El coeficiente de determinación
+487
+Ejercicios
+488
+Relaciones entre el coeficiente de correlación,
+el coeficiente de determinación y el error estándar
+de estimación
+488
+Ejercicios
+490
+13.8 Estimaciones de intervalo
+de predicción
+490
+Suposiciones de la regresión lineal
+490
+Intervalos de confianza e intervalos
+de predicción
+492
+Ejercicios
+494
+13.9 Transformación de datos
+495
+Ejercicios
+497
+Resumen del capítulo
+498
+Clave de pronunciación
+499
+Ejercicios del capítulo
+500
+Ejercicios de la base de datos
+509
+Comandos de software
+510
+Respuestas a las autoevaluaciones
+511
+Capítulo
+14 Análisis de regresión múltiple
+512
+14.1 Introducción
+513
+14.2 Análisis de regresión múltiple
+513
+Ejercicios
+517
+
+[Bloque seleccionado #491 | relevancia=28]
+Pagina 490
+13.3 Coeficiente de correlación
+El coeficiente de correlación, creado por Karl Pearson alrededor de 1900, describe la fuerza
+de la relación entre dos conjuntos de variables en escala de intervalo o de razón. Se designa
+con la letra r, y con frecuencia se le conoce como r de Pearson y coeficiente de correlación
+producto-momento. Puede adoptar cualquier valor de 1.00 a 1.00, inclusive. Un coeficien-
+te de correlación de 1.00 o bien de 1.00 indica una correlación perfecta. Por ejemplo, un
+coeficiente de correlación para el caso anterior calculado a 1.00 indicaría que el número de
+llamadas de ventas y la cantidad de copiadoras que vende cada representante están perfec-
+tamente relacionados en un sentido lineal positivo. Un valor calculado de 1.00 revela que las
+llamadas de ventas y el número de copiadoras vendidas están perfectamente relacionados en
+un sentido lineal inverso. En la gráfica 13-2 se muestra cómo aparecería el diagrama de dis-
+persión si la relación entre los dos conjuntos de datos fuera lineal y perfecta.
+13.3 Coeficiente de correlación
+465
+X
+Y
+X
+Y
+Correlación negativa perfecta
+Correlación positiva perfecta
+Recta con 
+pendiente negativa
+Recta con 
+pendiente positiva
+r = –1.00
+r = +1.00
+GRÁFICA 13-2 Diagramas de dispersión con correlación negativa perfecta y correlación positiva
+perfecta
+Correlación positiva
+.50
+1.00
+–.50
+–1.00
+0
+Correlación negativa
+Correlación
+negativa
+moderada
+Correlación
+negativa
+perfecta
+Correlación
+negativa
+débil
+Correlación
+negativa
+fuerte
+Correlación
+positiva
+moderada
+No hay
+correlación
+Correlación
+positiva
+perfecta
+Correlación
+positiva
+débil
+Correlación
+positiva
+fuerte
+OA2 Calcular, probar e
+interpretar la relación entre
+dos variables utilizando el
+coeficiente de correlación.
+Si no hay ninguna relación entre los dos conjuntos de variables, la r de Pearson es cero.
+Un coeficiente de correlación r cercano a 0 (sea 0.08) indica que la relación lineal es muy débil.
+Se llega a la misma conclusión si r  0.08. Los coeficientes de 0.91 y  0.91 tienen una
+fuerza igual; los dos indican una correlación muy fuerte entre las dos variables. Por lo tanto, la
+fuerza de la correlación no depende de la dirección (ya sea  o bien ).
+En la gráfica 13-3 se muestran los diagramas de dispersión cuando r  0, una r débil (sea
+0.23), y una r fuerte (sea 0.87). Observe que, si la correlación es débil, se presenta una dis-
+persión considerable respecto de la recta trazada a través del centro de los datos. En el dia-
+grama de dispersión que representa una fuerte relación, hay muy poca dispersión respecto de
+la recta. Esto 
+
+[Bloque seleccionado #513 | relevancia=17]
+Pagina 512
+El error estándar de estimación se determina con la fórmula (13-7).
+13.7 Evaluación de la capacidad predictora de una ecuación de regresión
+487
+El coeficiente de determinación es fácil de calcular. Es el coeficiente de correlación al cua-
+drado. Por lo tanto, también se usa el término R al cuadrado. En el caso de Copier Sales of
+America, el coeficiente de correlación de la relación entre el número de copiadoras vendidas
+y el número de llamadas de ventas es 0.759. Si calculamos (0.759)2, el coeficiente de determi-
+nación es 0.576. Observe las celdas azul (Multiple R) y verde (R-square) resaltadas en la hoja
+de cálculo de la página 484. Para interpretar mejor el coeficiente de determinación, conviérta-
+lo a porcentajes. Así, se dice que 57.6% de la variación del número de copiadoras vendidas
+se explica, o está representado por la variación del número de llamadas de ventas.
+¿Con cuánta exactitud predice la ecuación de regresión el número de copiadoras vendi-
+das mediante el número de llamadas de ventas realizadas? Si fuera posible hacer prediccio-
+nes perfectas, el coeficiente de determinación sería de 100%. Esto significaría que la variable
+independiente, el número de llamadas de ventas, explica, o representa, toda la variación del
+número de copiadoras vendidas. Un coeficiente de determinación de 100% se asocia con un
+coeficiente de correlación de 1.0 o 1.0. Consulte la gráfica 13-2, que muestra que una pre-
+dicción perfecta se asocia con una perfecta relación lineal, donde todos los puntos de los
+datos forman una recta perfecta en un diagrama de dispersión. Nuestro análisis muestra que
+sólo 57.6% de la variación del número de copiadoras vendidas se explica por la variación del
+COEFICIENTE DE DETERMINACIÓN Proporción de la variación total de la variable dependiente Y
+que se explica, o contabiliza, por la variación de la variable dependiente X.
+OA7 Calcular e interpretar
+el coeficiente de
+determinación.
+El cálculo del error estándar de estimación requiere de la suma de las diferencias al cua-
+drado entre cada valor observado de Y y el valor predicho de Y, que se identifica como 
+en
+el numerador. Este cálculo se ilustra en la hoja de cálculo de la página 484. Observe la celda
+G13 de la hoja de cálculo. Es un valor muy importante. Es el numerador en el cálculo del error
+estándar de estimación.
+Este cálculo puede ser eliminado utilizando un software estadístico como Excel. El error están-
+dar de estimación se incluye en el análisis de regresión de Excel y está resaltado en amarillo
+en la página 484. Su valor es 9.901.
+Si el error estándar de estim
+
+[Bloque seleccionado #514 | relevancia=22]
+Pagina 513
+número de llamadas de ventas que se realizó. Es claro que estos datos no forman una línea
+perfecta. En vez de eso, los datos se diseminan alrededor de la recta de regresión de mínimos
+cuadrados que mejor se ajusta, y habrá un error en las predicciones. En la próxima sección se
+utiliza el error estándar de estimación para proporcionar información más específica con res-
+pecto al error asociado con el empleo de la ecuación de regresión para hacer predicciones.
+488
+CAPÍTULO 13 Regresión lineal y correlación
+Autoevaluación 13-5
+Consulte la autoevaluación 13-1, donde el propietario de la Haverty’s Furniture Company estudió la
+relación entre la cantidad que gastó en publicidad y los ingresos por ventas en un mes dado. La
+cantidad de ventas es la variable dependiente, y el gasto en publicidad es la variable independiente.
+a)
+Determine el error estándar de estimación.
+b)
+Determine el coeficiente de determinación.
+c)
+Interprete el coeficiente de determinación.
+Ejercicios
+(Quizás desee utilizar un paquete de software como Excel para realizar los cálculos.)
+25. Refiérase al ejercicio 5. Determine el error estándar de estimación y el coeficiente de determina-
+ción. Interprete el coeficiente de determinación.
+26. Remítase al ejercicio 6. Determine el error estándar de estimación y el coeficiente de determina-
+ción. Interprete el coeficiente de determinación.
+27. Refiérase al ejercicio 15. Determine el error estándar de estimación y el coeficiente de determina-
+ción. Interprete el coeficiente de determinación.
+28. Regrese al ejercicio 16. Determine el error estándar de estimación y el coeficiente de determina-
+ción. Interprete el coeficiente de determinación.
+Relaciones entre el coeficiente de correlación,
+el coeficiente de determinación y el error
+estándar de estimación
+En la sección 13-7 se analizó el error estándar de estimación, el cual mide la cercanía entre los
+valores reales y la recta de regresión. Cuando el error estándar es pequeño, las dos variables
+están muy relacionadas. En el cálculo del error estándar, el término clave es
+Si el valor de este término es pequeño, el error estándar también lo será.
+El coeficiente de correlación mide la fuerza de la asociación lineal entre dos variables.
+Cuando los puntos del diagrama de dispersión aparecen cerca de la recta, se observa que el
+coeficiente de correlación tiende a ser grande. Todo ello indica que el error estándar de esti-
+mación y el coeficiente de correlación están inversamente relacionados. A medida que aumen-
+ta la fuerza de la relación lineal entre dos variables, aumenta el coeficiente de corr
+
+[Bloque seleccionado #515 | relevancia=20]
+Pagina 514
+ble independiente) y (2) el error, o variación inexplicable. Estas categorías se identifican en la
+primera columna de la siguiente tabla ANOVA. La columna con el encabezado “gl” se refiere a
+los grados de libertad asociados a cada categoría. El número total de grados de libertad es
+n  1. El número de grados de libertad de la regresión es 1, pues sólo hay una variable inde-
+pendiente. El número de grados de libertad asociados con el término de error es n – 2. El tér-
+mino “SS” ubicado en medio de la tabla ANOVA se refiere a la suma de los cuadrados. Note
+que el total de los grados de libertad es igual a la suma de los grados de libertad de la regre-
+sión y del residual (error), mientras que la suma total de los cuadrados es igual a la suma de
+los cuadrados de la suma de la regresión y el residuo (error). Esto se aplica a cualquier tabla
+ANOVA.
+13.7 Evaluación de la capacidad predictora de una ecuación de regresión
+489
+COEFICIENTE DE DETERMINACIÓN
+(13-8)
+La suma de cuadrados ANOVA se calcula como sigue:
+Suma de regresión de los cuadrados  SSR 
+ 1 065.789
+Suma del residual o error de los cuadrados  SSE 
+ 784.211
+Suma total de los cuadrados  SS total 
+ 1 850.00
+Recuerde que el coeficiente de determinación se define como el porcentaje de la varia-
+ción total (SS Total) explicado por la ecuación de regresión (SSR). El valor R-cuadrado (r2)
+puede ser validado mediante la tabla ANOVA.
+(Y  Y )2
+(Y  Yˆ )2
+(Yˆ  Y )2
+Utilizando la tabla ANOVA, el coeficiente de determinación es 1065.789/1850.00  0.576. Por
+lo tanto, a mayor variación de la variable dependiente (SS Total) explicada por la variable inde-
+pendiente (SSR), más alto será el coeficiente de determinación.
+El coeficiente de determinación puede expresarse también en términos de la variación del
+residuo o error:
+En este caso, el coeficiente de determinación y la suma del residuo o error de los cuadrados
+están inversamente relacionados. Mientras más alta sea la variación inexplicable o error como
+porcentaje de la variación total, menor será el coeficiente de determinación. En este caso,
+42.4% de la variación total de la variable dependiente es una variación residual o error.
+r 2
+SSR
+SS total
+1
+SSE
+SS total
+r 2
+1
+SSE
+SS total
+1
+784.211
+1 850.00
+1
+0.424
+0.576
+
+[Bloque seleccionado #548 | relevancia=18]
+Pagina 547
+1
+R2
+1
+SSR
+SS total
+SSE
+SS total
+41 695
+212 916
+.196
+R2
+SSR
+SS total
+171 220
+212 916
+.804
+R2
+adj
+1
+41 695
+20
+(3
+1)
+212 916
+20
+1
+1
+2 606
+11 206.0
+1
+.23
+.77
+Podemos calcular el coeficiente de determinación a partir de la información de la tabla ANOVA.
+Observe la columna de la suma de los cuadrados, etiquetada con SS en la captura de panta-
+lla de Excel, y utilice la suma de los cuadrados de la regresión, SSR, y divídala entre la suma
+total de los cuadrados, SS total.
+522
+CAPÍTULO 14 Análisis de correlación y regresión múltiple
+COEFICIENTE DE DETERMINACIÓN AJUSTADO
+(14-4)
+R2
+adj  1 
+SSE
+n  (k  1)
+SS total
+n  1
+COEFICIENTE DE DETERMINACIÓN MÚLTIPLE
+(14-3)
+R2 
+SSR
+SS total
+Usando los residuos y la suma total de los cuadrados de la tabla ANOVA, se puede em-
+plear la fórmula (14-3) para calcular el coeficiente de determinación múltiple.
+¿Cómo se interpreta este valor? Las variables independientes (temperatura externa, cantidad
+de aislamiento y antigüedad del calentador) explican, o contabilizan, 80.4% de la variación del
+costo de calefacción. En otras palabras, 19.6% de la variación se debe a otras fuentes, como
+el error aleatorio o variables no incluidas en el análisis. Mediante la tabla ANOVA, 19.6%
+corresponde a la suma de los errores al cuadrado dividida entre la suma total de los cuadra-
+dos. Si SSR  SSE  SS total, la relación siguiente es válida.
+Coeficiente ajustado de determinación
+El número de variables independientes de una ecuación de regresión múltiple aumenta el coe-
+ficiente de determinación. Cada nueva variable independiente hace que las predicciones sean
+más precisas, lo que a su vez reduce el SSE y aumenta el SSR. De aquí, R2 aumenta sólo debi-
+do al número total de variables independientes y no porque la variable independiente agrega-
+da sea un buen factor de predicción de la variable dependiente. De hecho, si el número de
+variables, k, y el tamaño de la muestra, n, son iguales, el coeficiente de determinación es 1.0.
+En la práctica, esta situación es poco frecuente y también sería éticamente cuestionable. Para
+equilibrar el efecto del número de variables independientes en el coeficiente de determinación
+múltiple, los paquetes de software estadísticos emplean un coeficiente de determinación ajus-
+tado múltiple.
+Las sumas totales de los cuadrados y del error se dividen entre sus grados de libertad. Obser-
+ve en especial que los grados de libertad para la suma de los errores al cuadrado incluyen k,
+el número de variables independientes. En el ejemplo del costo de calefacción, el coeficiente
+de determinación ajustado es:
+Si se 
+
+[Bloque seleccionado #549 | relevancia=21]
+Pagina 548
+Ejercicios
+5.
+Considere la siguiente tabla ANOVA.
+14.4 Inferencias en la regresión lineal múltiple
+523
+Autoevaluación 14-2
+Consulte la autoevaluación 14-1 respecto de los restaurantes en Myrtle Beach. La parte de la tabla
+ANOVA de la captura de pantalla de la regresión es la siguiente.
+Análisis de regresión
+Fuente
+DF
+SS
+MS
+Regresión
+5
+100
+20
+Error residual 
+20
+40
+2
+Total
+25
+140
+a)
+¿Cuál fue el tamaño de la muestra?
+b)
+¿Cuántas variables independientes hay?
+c)
+¿Cuántas variables dependientes hay?
+d)
+Calcule el error estándar de estimación. ¿Entre qué valores estará aproximadamente 95% de los
+residuos?
+e)
+Determine el coeficiente de determinación múltiple. Interprete este valor.
+f)
+Encuentre el coeficiente de determinación múltiple, ajustado según los grados de libertad.
+Análisis de la varianza
+Fuente
+DF
+SS
+MS
+F
+P
+Regresión
+2
+77.907
+38.954
+4.14
+0.021
+Error residual 
+62
+583.693
+9.414
+Total
+64
+661.600
+Análisis de la varianza
+Fuente
+DF
+SS
+MS
+F
+Regresión
+5
+3710.00
+742.00
+12.89
+Error residual 
+46
+2647.38
+57.55
+Total
+51
+6357.38
+a) Determine el error estándar de estimación. ¿Entre qué valores estará cerca de 95% de los resi-
+duos?
+b) Determine el coeficiente de determinación múltiple. Interprete este valor.
+c) Determine el coeficiente de determinación múltiple, ajustado según los grados de libertad.
+6.
+Considere la siguiente tabla ANOVA.
+a) Determine el error estándar de estimación. ¿Entre qué valores estará aproximadamente 95%
+de los residuos?
+b) Determine el coeficiente de determinación múltiple. Interprete este valor.
+c) Determine el coeficiente de determinación múltiple, ajustado por los grados de libertad.
+14.4 Inferencias en la regresión lineal múltiple
+Hasta este punto, el análisis de regresión múltiple se consideró sólo como una forma para des-
+cribir la relación entre una variable dependiente y varias variables independientes. Sin embar-
+go, el método de mínimos cuadrados también permite inferir o generalizar a partir de la
+relación de una población completa. Recuerde que cuando se crearon intervalos de confian-
+za o cuando se realizaron pruebas de hipótesis como parte de la estadística inferencial, los
+datos se consideraron una muestra aleatoria tomada de una población.
+En el escenario de la regresión múltiple, se supone que hay una ecuación desconocida de
+regresión múltiple de la población que relaciona la variable dependiente con las k variables
+
+[Bloque seleccionado #594 | relevancia=19]
+Pagina 593
+La relación lineal en el caso simple que implica una variable independiente y una variable depen-
+diente se describe por la ecuación 
+En el caso de tres variables independientes, X1, X2 y X3,
+la misma ecuación de regresión múltiple es la siguiente:
+Despejar b1, b2, . . . , bk implicaría cálculos muy tediosos. Por fortuna, este problema se resuel-
+ve de manera rápida con uno de los muchos paquetes de software estadístico y paquetes de hojas de
+cálculo. En la captura de pantalla de la mayoría de los programas de software se reportan varias medi-
+ciones, como el coeficiente de determinación, el error estándar de estimación múltiple, los resultados
+de la prueba global y la prueba de las variables individuales.
+Glosario
+Yˆ  a  b1X1  b2X2  . . .  bkXk
+Yˆ  a  bx.
+568
+CAPÍTULO 14 Análisis de correlación y regresión múltiple
+La regresión y la correlación
+múltiple se ocupan de la rela-
+ción entre dos o más varia-
+bles independientes y la
+variable dependiente.
+La computadora es muy útil
+para calcular la regresión y
+la correlación múltiple.
+Capítulo 13
+Análisis de correlación
+Grupo de técnicas estadísticas para
+medir la fuerza de la relación entre dos variables.
+Coeficiente de correlación
+Medida de la fuerza de asociación
+entre dos variables.
+Coeficiente de determinación
+Proporción de la variación total
+de la variable dependiente que se explica por la variable indepen-
+diente. Adopta cualquier valor entre 0 y 1.00 inclusive. Este
+coeficiente se calcula al elevar al cuadrado el coeficiente de
+correlación, r.
+Diagrama de dispersión
+Gráfica que representa de manera
+visual la relación entre dos variables.
+Ecuación de regresión lineal
+Ecuación matemática que define
+la relación entre dos variables. Tiene la forma 
+Se
+emplea para predecir Y con base en un valor X seleccionado. Y
+es la variable dependiente, y X, la independiente.
+Error estándar de estimación
+Mide la dispersión de los valo-
+res Y reales respecto de la recta de regresión. Se reporta en las
+mismas unidades que la variable dependiente.
+Método de mínimos cuadrados
+Técnica para llegar a la ecua-
+ción de regresión minimizando la suma de los cuadrados de las
+distancias verticales entre los valores Y actuales y los valores Y
+anticipados.
+Prueba t de la significación de r
+Fórmula para responder si la
+correlación entre la población de donde se seleccionó la muestra
+es cero. El estadístico de prueba es t, y el número de grados de
+libertad, n  2.
+(13-2)
+Variable dependiente
+Variable por predecir o estimar.
+Variable independiente
+Variable que proporciona la base para
+la estimación.
+Capítulo 14
+Autocor
+
+[Bloque seleccionado #658 | relevancia=16]
+Pagina 657
+fianza o un intervalo de proyección, donde se use el error estándar de estimación múltiple,
+quizá no produzca los resultados correctos.
+La autocorrelación, reportada como r, es la fuerza de la asociación entre residuos sucesi-
+vos. La r tiene el mismo significado que el coeficiente de correlación. Es decir, los valores cer-
+canos a 1.00 o 1.00 indican una asociación fuerte, y los valores cercanos a 0, que no hay
+asociación. En lugar de realizar de manera directa una prueba de hipótesis en r, se emplea el
+estadístico de Durbin-Watson.
+El estadístico de Durbin-Watson, identificado con la letra d, se calcula primero al determi-
+nar los residuos por cada observación. Es decir, et  (Yt 
+t). Luego, se calcula d mediante
+la siguiente relación.
+Yˆ
+632
+CAPÍTULO 16 Series de tiempo y proyección
+Para determinar el numerador de la fórmula (16-4), “retarde” cada uno de los residuos un
+periodo y luego eleve al cuadrado la diferencia entre residuos consecutivos. Esta maniobra, a
+la que también se le puede llamar determinación de las diferencias, toma en cuenta la suma
+de las observaciones de 2, en lugar de 1, hasta n. En el denominador se elevan al cuadrado
+los residuos y se suman todas las observaciones n.
+El valor del estadístico de Durbin-Watson, que varía de 0 a 4, es 2.00 cuando no hay auto-
+correlación entre los residuos. Cuando el valor de d se acerca a 0, indica una autocorrelación
+positiva. Los valores mayores que 2 indican una autocorrelación negativa. En la práctica, la
+autocorrelación casi no se presenta. Para que esto ocurra, los residuos sucesivos tenderían a
+ser grandes, pero con signos opuestos.
+Para realizar una prueba de autocorrelación, las hipótesis nula y alternativa son:
+H0: Sin correlación residual (  0)
+H1: Correlación residual positiva ( 	 0)
+Recuerde, del capítulo anterior, que r se refiere a la correlación muestral, y que  es el coefi-
+ciente de correlación entre la población. Los valores críticos de d aparecen en el apéndice
+B.10. Para determinar el valor crítico, necesita  (el nivel de significancia), n (el tamaño mues-
+tral) y k (el número de variables independientes). La regla de decisión de la prueba de Durbin-
+Watson difiere de lo acostumbrado. Como es común, hay un rango de valores donde la
+hipótesis nula se rechaza y otro donde no se rechaza. Sin embargo, también hay un rango
+donde la prueba no es concluyente. Es decir, en el rango no concluyente, la hipótesis nula no
+se rechaza ni se acepta. Para expresarlo de manera más formal:
+• Los valores menores que dl obligan a rechazar la hipótesis nula.
+• Los valores mayore
+
+[Bloque seleccionado #875 | relevancia=17]
+Pagina 874
+849
+Índice
+A
+Acciones, 754
+Ajustes del costo de vida, 595
+Alternativas de decisión. Véase Acciones
+Análisis de correlación, 463
+Análisis de la varianza, 411
+de dos vías, 430-435
+de dos vías con interacción, 435-437
+suposiciones en el, 416
+Análisis de regresión, 462, 476-483
+coeficiente de determinación, 487
+coeficiente de determinación ajustado,
+522
+ecuación de regresión, 476
+ecuación de regresión lineal, 478
+evaluación de una ecuación de
+regresión, 486-487
+intersección con el eje Y, 478
+pendiente de la recta de regresión,
+478
+principio de los mínimos cuadrados,
+477
+recta de regresión, 479
+significancia de la pendiente,
+483-486
+Análisis de regresión múltiple, 513-537
+autocorrelación, 537
+coeficiente de determinación múltiple,
+521, 522
+con interacción, 540
+del mejor subconjunto, 544
+diagramas de puntos, 532
+ecuación de regresión múltiple, 513
+evaluación de coeficientes de
+regresión, 526-530
+evaluación de una ecuación de
+regresión múltiple, 519
+factor de inflación de la varianza, 535
+gráficas de residuos, 532-533
+homoscedasticidad, 534
+interacción, 540
+método de selección hacia adelante,
+544
+método de eliminación hacia atrás,
+544
+prueba global, 524-526
+regresión del mejor subconjunto,
+529-530, 544
+regresión por pasos, 529, 542-544
+repaso, 546-551
+suposición de linealidad, 532
+tabla ANOVA, 519
+Análisis de sensibilidad, 762-763
+ANOVA. Véase Análisis de la varianza
+Aplicación de las computadoras, 14-16
+Atributo. Véase Variable cualitativa
+Árbol
+de decisión, 764-765
+diagramas de, 164-167
+Arrepentimiento
+estrategias de, 760
+Véase también Pérdida de oportunidad
+Atributos, diagramas de 737-742
+Autocorrelación, 537
+B
+Barras, gráficas de, 24-25
+Bayes, teorema de, 167-171
+Bimodal, distribución, 120, 260
+Binomial, probabilidad, 195-204
+Bloqueo, variables de, 431
+Bolsa de Valores de Nueva York, 589
+Bondad de ajuste, prueba de, 649-671
+C
+Caja, diagrama de, 116-119, 138
+Calidad
+control estadístico de la, 721
+función del control de, 722
+14 puntos de Deming, 722
+Clase, 138
+Coeficiente de sesgo, 119-123, 138
+de Pearson, 120
+Coeficiente de correlación, 465-472, 488
+prueba t del, 473
+Coeficiente de determinación, 487, 489
+ajustado, 522
+múltiple, 521, 522
+Control estadístico de la calidad, 721
+Control estadístico del proceso, 721
+Correlación(es)
+coeficiente de, 465-472, 488

@@ -1,0 +1,187 @@
+% Fusión nueva: conserva original y prototipo; usa el núcleo real de póster.
+% Tres tiempos visuales: introducción, producto temático con síntesis, conclusión.
+% La curva es un cálculo determinista hipotético, no un registro de personas.
+\documentclass[spanish,final,xcolor={dvipsnames,table}]{beamer}
+\def\itescapostertitle{Muestreo para decidir}
+\input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/poster/adaptador-poster-estadistica-itesca.tex}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\setbeamerfont{headline title}{size=\fontsize{30}{33},series=\bfseries}
+\setbeamerfont{block body}{size=\fontsize{12}{14.5}}
+\setbeamerfont{block title}{size=\fontsize{15}{17},series=\bfseries}
+\renewcommand{\insertfootercontent}{\textbf{Actividad 1: Infografía}\quad Estadística aplicada para la administración\quad 25 de octubre de 2026}
+\hypersetup{pdftitle={Muestreo para decidir},pdfsubject={Actividad 1 - Estadística aplicada para la administración}}
+\newlength{\fusionpanelwidth}
+\setlength{\fusionpanelwidth}{0.485\colwidth}
+\newcommand{\fusionimagepath}{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/poster/ilustracion-muestreo-administrativo.png}
+% Cabecera local compacta: conserva identidad y datos sin consumir el área analítica.
+\setbeamertemplate{headline}{%
+  \begin{beamercolorbox}[wd=\paperwidth,leftskip=0.75cm,rightskip=0.75cm,sep=0.14cm]{headline}%
+    \vspace{0.20cm}
+    \begin{minipage}[c]{0.15\paperwidth}
+      \includegraphics[width=3.2cm]{ITESCA/assets-itesca/web/logo-itesca-contorno.png}
+    \end{minipage}%
+    \begin{minipage}[c]{0.77\paperwidth}
+      \centering
+      {\fontsize{28}{31}\selectfont\bfseries\color{itescaPosterInk} Muestreo para decidir\par}
+      \vspace{0.18cm}
+      {\fontsize{10.5}{12.5}\selectfont
+      Martín Jonathan de la Cruz Muñoz\quad Matrícula: 26130503\par
+      Maestría en Gestión Administrativa\par
+      Estadística aplicada para la administración\par
+      Dra. Yoana Elizeth Tauitmes Delgado\par}
+    \end{minipage}\par\vspace{0.10cm}
+  \end{beamercolorbox}%
+  {\color{itescaPosterAccent}\hrule height 1.5pt}%
+}
+\setbeamertemplate{block end}{\end{beamercolorbox}\vspace{0.16cm}}
+\begin{document}
+\templatePagecfg\templateFinalcfg
+\begin{itescaposter}
+\setstretch{1}\fontsize{12}{14.5}\selectfont\setlength{\parindent}{0pt}
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[itescaPosterRed] (current page.north west) rectangle ([xshift=0.22cm]current page.south west);
+\end{tikzpicture}
+\begin{columns}[T,totalwidth=\colwidth]
+\begin{column}{0.545\colwidth}
+\begin{block}{Introducción}
+{\color{itescaPosterTeal}\bfseries Una parte de la población, una decisión con límites.}
+
+El muestreo permite conocer un conjunto sin observarlo completo. Ahorra tiempo y costo, pero sus conclusiones dependen de la selección, la cobertura y la respuesta. Una base grande puede describir mal a quienes interesa conocer \citep{holmesBusiness2023,bradley2021}.
+\end{block}
+\end{column}
+\begin{column}{0.435\colwidth}
+\begingroup
+\def\marginimagetop{0}\def\marginimagebottom{0}\def\captionlessmarginimage{0}
+\insertimage{\fusionimagepath}{width=12cm,height=4cm}{}
+\endgroup
+\end{column}
+\end{columns}
+
+\begin{block}{Del universo al dato: elegir antes de contar}
+\centering
+\begin{tikzpicture}[
+  box/.style={draw=itescaPosterTeal,fill=white,rounded corners=2pt,minimum height=1.35cm,text width=7.8cm,align=center,font=\fontsize{12}{14}\selectfont},
+  >=Stealth,every path/.style={line width=1pt}]
+\node[box] (p) {\textbf{Población}\par Clientes del periodo que interesa conocer};
+\node[box,right=0.9cm of p] (f) {\textbf{Marco muestral}\par Registro que permite seleccionarlos};
+\node[box,right=0.9cm of f] (s) {\textbf{Muestra}\par Clientes seleccionados para observar};
+\draw[->,itescaPosterTeal] (p.east)--(f.west);
+\draw[->,itescaPosterTeal] (f.east)--(s.west);
+\end{tikzpicture}
+\end{block}
+
+\begin{columns}[T,totalwidth=\colwidth]
+\begin{column}{\fusionpanelwidth}
+\begin{itescaposterpanel}{01 / Diseños probabilísticos}
+Probabilidades conocidas y positivas de inclusión; \textbf{no siempre iguales}.
+
+\textbf{Aleatorio simple.} Todas las muestras de igual tamaño tienen la misma probabilidad: sortear clientes de un registro completo.
+
+\textbf{Estratificado.} Seleccionar al azar dentro de todos los estratos: clientes por canal de compra.
+
+\textbf{Sistemático.} Inicio aleatorio y cada $k$ unidades: revisar cada décima factura; evitar periodicidades.
+
+\textbf{Conglomerados.} Sortear grupos, como sucursales, y estudiar sus unidades. Ahorra desplazamientos; la semejanza interna puede reducir precisión \citep{holmesBusiness2023}.
+\end{itescaposterpanel}
+\end{column}
+\begin{column}{\fusionpanelwidth}
+\begin{itescaposterpanel}{02 / Selección no probabilística}
+No permite conocer las probabilidades de inclusión bajo un diseño probabilístico.
+
+\textbf{Conveniencia.} Entrevistar a personas disponibles: compradores presentes en una tienda.
+
+\textbf{Autoselección.} Responder por iniciativa propia: encuesta abierta en redes sociales.
+
+Útil para explorar; no atribuirle el margen de una muestra aleatoria sin supuestos adicionales.
+
+{\color{itescaPosterRed}\bfseries Más respuestas no corrigen por sí solas el sesgo.} Sortear dentro de un marco incompleto tampoco cubre automáticamente a toda la población \citep{bradley2021}.
+\end{itescaposterpanel}
+\end{column}
+\end{columns}
+
+\begin{columns}[T,totalwidth=\colwidth]
+\begin{column}{0.545\colwidth}
+\begin{itescaposterpanel}{03 / Tamaño y precisión}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=14.4cm,height=6.1cm,
+  xmin=50,xmax=1100,ymin=0,ymax=11,
+  axis lines=left,axis line style={itescaPosterInk},
+  xlabel={Respuestas completas ($n$)},
+  ylabel={Margen (puntos porcentuales)},
+  xlabel style={font=\fontsize{10.5}{12}\selectfont},
+  ylabel style={font=\fontsize{10.5}{12}\selectfont},
+  tick label style={font=\fontsize{10}{12}\selectfont},
+  xtick={100,385,1000},ytick={0,2,4,6,8,10},
+  grid=major,grid style={gray!18},clip=false]
+\addplot[domain=80:1100,samples=140,very thick,color=itescaPosterTeal]{98/sqrt(x)};
+\addplot[only marks,mark=*,mark size=2.6pt,color=itescaPosterRed] coordinates {(100,9.8) (385,4.994542475) (1000,3.099032107)};
+\node[anchor=west,font=\fontsize{10.5}{12}\selectfont,text=itescaPosterRed] at (axis cs:135,9.8) {100: 9.80 pp};
+\node[anchor=south west,font=\fontsize{10.5}{12}\selectfont,text=itescaPosterRed] at (axis cs:410,5.25) {385: 4.99 pp};
+\node[anchor=north east,font=\fontsize{10.5}{12}\selectfont,text=itescaPosterRed] at (axis cs:1025,2.7) {1000: 3.10 pp};
+\end{axis}
+\end{tikzpicture}
+\par\raggedright\fontsize{10.5}{12.5}\selectfont
+\textbf{Escenario hipotético, no datos observados.} $e=1.96\sqrt{0.5(0.5)/n}$: 95\%, muestreo aleatorio simple y población grande respecto de la muestra. La curva muestra menor variación; \textbf{no demuestra ausencia de sesgo} \citep{holmesBusiness2023}.
+\end{itescaposterpanel}
+\end{column}
+\begin{column}{0.435\colwidth}
+\begin{itescaposterpanel}{04 / Planificar respuestas}
+\begin{minipage}{0.47\linewidth}
+{\color{itescaPosterRed}\fontsize{45}{48}\selectfont\bfseries 385}
+\end{minipage}%
+\begin{minipage}{0.50\linewidth}
+\bfseries respuestas completas\par\normalfont 95\% de confianza\par margen de 5 pp
+\end{minipage}
+\[
+n_0=\frac{1.96^2(0.5)(0.5)}{0.05^2}=384.16
+\]
+Redondear hacia arriba. Se usa $p=0.5$ como máxima variabilidad en esta planificación \citep{holmesBusiness2023}.
+
+Con respuesta prevista de 80\%:
+\[
+\lceil385/0.80\rceil=\boxed{482}\ \text{invitaciones}.
+\]
+No garantiza 385 respuestas ni corrige no respuesta diferencial. Otros diseños necesitan ajustes.
+
+\textbf{Para contrastes:} definir también potencia y efecto mínimo detectable; esta fórmula no los sustituye \citep{nistHandbook}.
+\end{itescaposterpanel}
+\end{column}
+\end{columns}
+
+\begin{block}{Aplicaciones: del porcentaje a una acción defendible}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.485\linewidth}
+\textbf{Administración / calidad de facturación.} Seleccionar facturas con inicio aleatorio, estimar errores y orientar la auditoría. Los errores detectados no demuestran sus causas.
+\end{column}
+\begin{column}{0.485\linewidth}
+\textbf{Mercado / satisfacción por canal.} Seleccionar al azar dentro de tienda física y venta digital, y ponderar según el diseño. Escuchar solo a seguidores digitales excluye otros compradores.
+\end{column}
+\end{columns}
+\medskip
+La comparación conduce a una conclusión práctica: \textbf{definir población, marco y selección antes de ampliar la encuesta}. Así se reconoce qué representa el porcentaje y qué permanece fuera \citep{bradley2021,holmesBusiness2023}.
+\end{block}
+
+\begin{block}{Conclusiones}
+Una decisión responsable revisa cobertura, selección y no respuesta antes de celebrar el tamaño de la base. Conviene invertir primero en datos pertinentes y después en cantidad: el ahorro del muestreo solo es útil si la gerencia conoce los límites de la evidencia.
+\end{block}
+
+\begin{block}{Referencias}
+\fontsize{9.5}{11.1}\selectfont\setstretch{1}\raggedright
+\urlstyle{same}\Urlmuskip=0mu plus 1mu\setlength{\emergencystretch}{2em}
+\renewcommand{\bibsection}{}\setlength{\bibsep}{2pt}\setlength{\bibhang}{0.65cm}
+\begin{thebibliography}{3}
+\bibitem[Bradley et al.(2021)]{bradley2021}
+Bradley, V. C., Kuriwaki, S., Isakov, M., Sejdinovic, D., Meng, X.-L., \& Flaxman, S. (2021). Unrepresentative big surveys significantly overestimated US vaccine uptake. \textit{Nature, 600}(7890), 695--700. \url{https://doi.org/10.1038/s41586-021-04198-4}
+\bibitem[Holmes et al.(2023)]{holmesBusiness2023}
+Holmes, A., Illowsky, B., \& Dean, S. (2023). \textit{Introductory business statistics} (2.ª ed.). OpenStax. \url{https://openstax.org/details/books/introductory-business-statistics-2e}
+\bibitem[NIST y SEMATECH(2003)]{nistHandbook}
+National Institute of Standards and Technology \& SEMATECH. (2003). \textit{NIST/SEMATECH e-Handbook of statistical methods}. \url{https://doi.org/10.18434/M32189}
+\end{thebibliography}
+\end{block}
+{\fontsize{8}{9.5}\selectfont\raggedright
+\textbf{Apoyo de IA y responsabilidad académica.} Se utilizó IA como apoyo para la corrección y organización del contenido. El autor declara haber realizado y validado la investigación documental, el análisis y los resultados. Imagen: ilustración conceptual generada con IA, sin datos empíricos.\par}
+\end{itescaposter}
+\end{document}

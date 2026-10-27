@@ -1,0 +1,810 @@
+Fuente bibliográfica: Estadística matemática con aplicaciones - Wackerly, Mendenhall y Scheaffer. 7.ª edición.pdf
+Actividad: 19 (6.4 Cuestionario 5%)
+Palabras clave: serie de tiempo, tendencia, estacionalidad, medias móviles centradas, índice estacional, suavizamiento exponencial, tasas de variación
+
+[Bloque seleccionado #34 | relevancia=2]
+Pagina 33
+1.3  Caracterización de un conjunto de mediciones: métodos numéricos  9
+formarse a partir del mismo conjunto de mediciones. Para hacer inferencias acerca de una pobla-
+ción basadas en información contenida en una muestra y para medir la bondad de las inferencias, 
+necesitamos cantidades rigurosamente defi nidas para resumir la información contenida en una 
+muestra. Estas cantidades muestrales por lo general tienen propiedades matemáticas, que se 
+desarrollarán en capítulos siguientes, que nos permiten hacer enunciados de probabilidad con 
+respecto a la bondad de nuestras inferencias.
+Las cantidades que defi nimos son medidas descriptivas numéricas de un conjunto de datos. 
+Buscamos algunos números que tienen interpretaciones signifi cativas y que se pueden usar 
+para describir la distribución de frecuencia de cualquier conjunto de mediciones. Centraremos 
+nuestra atención en dos tipos de números descriptivos: medidas de tendencia central y medi-
+das de dispersión o variación.
+Es probable que la medida de tendencia central más común empleada en estadística sea la 
+media aritmética. (Debido a que éste es el único tipo de media que estudiamos en este texto, 
+omitiremos la palabra aritmética.)
+ DEFINICIÓN 1.1 
+La media de una muestra de n respuestas medidas y1, y2,…,yn está dada por
+y = 1
+n
+n
+i=1
+yi.
+La media poblacional correspondiente se denota como m.
+El símbolo y, que se lee “y barra”, se refi ere a una media muestral. Por lo general no pode-
+mos medir el valor de la media poblacional, m; más bien, m es una constante desconocida que 
+podemos estimar usando información muestral.
+La media de un conjunto de mediciones sólo localiza el centro de la distribución de datos, 
+por sí misma no proporciona una descripción adecuada de un conjunto de mediciones. Dos 
+conjuntos de mediciones podrían tener distribuciones de frecuencia muy diferentes pero iguales 
+medias, como se ve en la Figura 1.3. La diferencia entre las distribuciones I y II de la fi gura se 
+encuentra en la variación o dispersión de las mediciones que están a lado y lado de la media. 
+Para describir en forma adecuada los datos, también debemos defi nir medidas de la variabi-
+lidad de datos.
+La medida de variabilidad más común empleada en estadística es la varianza, que es una 
+función de las desviaciones (o distancias) de las mediciones muestrales desde la media.
+F I G U R A 1.3
+Distribuciones de 
+frecuencia con igua-
+les medias pero con 
+diferentes cantidades 
+de variación
+
+[Bloque seleccionado #42 | relevancia=2]
+Pagina 41
+ 
+1.25 
+Los datos siguientes dan los tiempos de falla para n = 88 radiotransmisores-receptores: 
+ 
+ 
+ 
+ 
+16
+224
+16
+80
+96
+536
+400
+80
+392
+576
+128
+56
+656
+224
+40
+32
+358
+384
+256
+246
+328
+464
+448
+716
+304
+16
+72
+8
+80
+72
+56
+608
+108
+194
+136
+224
+80
+16
+424
+264
+156
+216
+168
+184
+552
+72
+184
+240
+438
+120
+308
+32
+272
+152
+328
+480
+60
+208
+340
+104
+72
+168
+40
+152
+360
+232
+40
+112
+112
+288
+168
+352
+56
+72
+64
+40
+184
+264
+96
+224
+168
+168
+114
+280
+152
+208
+160
+176
+ 
+ 
+a  Utilice el rango para calcular s para los n = 88 tiempos para falla.
+ 
+ 
+b  Construya un histograma de frecuencia para los datos. [Observe la tendencia de la distribución a 
+extenderse hacia fuera (sesgo) a la derecha.]
+ 
+ 
+c  Use una calculadora (o computadora) para calcular y y s. (Hacer manualmente el cálculo es demasia-
+do tedioso para este ejercicio.)
+ 
+ 
+d  Calcule los intervalos y ± ks, k = 1, 2 y 3, y cuente el número de mediciones que caen en cada 
+intervalo. Compare sus resultados con los resultados de la regla empírica. Observe que la regla empí-
+rica proporciona una descripción más o menos buena de estos datos, aun cuando la distribución está 
+altamente sesgada.
+ 
+1.26 
+Compare la razón entre la amplitud y s para los tres tamaños muestrales (n = 6, 20 y 88) para los 
+Ejercicios 1.12, 1.24 y 1.25. Observe que la razón tiende a aumentar a medida que aumenta la cantidad 
+de datos. Cuanto mayor es la cantidad de datos, mayor será su tendencia a contener algunos valores 
+extremos que infl arán el rango y tendrán relativamente poco efecto en s. Pasamos por alto este fenóme-
+no y sugerimos que el lector use 4 como la razón para hallar un valor estimado de s al comprobar sus 
+cálculos.
+ 
+1.27 
+Un conjunto de 340 califi caciones de examen, que muestran una distribución de frecuencia relativa en 
+forma de campana, tiene una media de y = 72 y una desviación estándar de s = 8. ¿Aproximadamente 
+cuántas de las califi caciones se esperaría que cayeran en el intervalo de 64 a 80? ¿Y en el intervalo de 
+56 a 88?
+ 
+1.28 
+La descarga de sólidos suspendidos de una mina de fosfato está normalmente distribuida con una des-
+carga media diaria de 27 miligramos por litro (mg/L) y desviación estándar de 14 mg/L. ¿En qué pro-
+porción de los días será la descarga diaria menor que 13 mg/L?
+ 
+1.29 
+Una máquina produce cojinetes con diámetro medio de 3.00 pulgadas y desviación estándar de 0.01 pul-
+gada. Los cojinetes con diámetros de más de 3.02 o de menos de 2.98 no satisfacen las especifi caciones 
+de calidad.
+ 
+ 
+a  ¿Aproximadamente qué fracción de la producción de esta máquina no cumplirá con las especifi cacio-
+nes?
+ 
+ 
+b  ¿Qué 
+
+[Bloque seleccionado #103 | relevancia=1]
+Pagina 102
+78  Capítulo 2  Probabilidad
+Se podrían revolver muy bien los elementos y seleccionar dos en forma tal que todos los pares 
+de elementos tengan igual probabilidad de selección. Un segundo procedimiento de muestreo 
+podría hacer necesario seleccionar un solo elemento, restituirlo en la población y después 
+sacar de nuevo un solo elemento. Los dos métodos de selección de muestra se denominan 
+muestreo sin y con reemplazo, respectivamente.
+Si los todos los elementos de la población N = 5 son claramente diferentes, la probabilidad de 
+sacar un par específi co, cuando se haga muestreo sin restitución, es 1/10. La probabilidad 
+de sacar el mismo par específi co, cuando se haga muestreo con restitución, es 2/25. Con toda 
+facilidad se pueden verifi car estos resultados.
+Se debe hacer notar que el método de muestreo, conocido como diseño de un experimento, 
+afecta la cantidad de información en una muestra y la probabilidad de observar un resultado 
+específi co de muestra. Por tanto, todo procedimiento muestral debe describirse con claridad si 
+deseamos hacer inferencias válidas de muestra a población.
+El estudio del diseño de experimentos, los diversos tipos de diseños junto con sus propieda-
+des, es en sí mismo un curso. En consecuencia, en esta primera etapa de estudio presentamos 
+sólo el procedimiento de muestreo más sencillo, el muestreo aleatorio simple. La noción de 
+muestreo aleatorio simple será necesaria en subsecuentes exposiciones de las probabilidades 
+asociadas con variables aleatorias e inyectará algún realismo a nuestro examen de estadís-
+tica. Eso es porque el muestreo aleatorio simple se emplea frecuentemente en la práctica. 
+Defi namos ahora el término muestreo aleatorio.
+ DEFINICIÓN 2.13 
+Represente con N y n los números de elementos en la población y la muestra, respectiva-
+mente. Si el muestreo se realiza en forma tal que cada una de las N
+n muestras tiene igual 
+probabilidad de ser seleccionada, se dice que el muestreo es aleatorio y que el resultado 
+es una muestra aleatoria.
+El muestreo aleatorio perfecto es difícil de alcanzar en la práctica. Si la población no es 
+demasiado grande, podríamos escribir cada uno de los N números en fi chas, revolverlas todas 
+y seleccionar una muestra de n fi chas. Los números de las fi chas especifi carían las mediciones 
+que aparezcan en la muestra.
+En computadora se han elaborado tablas de números aleatorios para agilizar la selección 
+de muestras aleatorias. Un ejemplo de esas tablas es la Tabla 12, Apéndice 3. Una tabla de 
+número aleatorio es un conjunto de enteros (0, 1, … , 9) generado 
+
+[Bloque seleccionado #679 | relevancia=2]
+Pagina 678
+654  Capítulo 12  Consideraciones al diseñar experimentos
+F I G U R A 12.3
+Diseño de bloque 
+aleatorizado
+T1
+T1
+T1
+T1
+T1
+T2
+T2
+T2
+T2
+T2
+T3
+T3
+T3
+T3
+T3
+T4
+T4
+T4
+T4
+T4
+1
+2
+3
+4
+8
+Personas
+ DEFINICIÓN 12.6 
+Un diseño aleatorizado en bloque contiene b bloques y k tratamientos consistentes de b 
+bloques de k unidades experimentales cada uno. Los tratamientos se asignan de manera 
+aleatoria a las unidades de cada bloque, con cada tratamiento apareciendo exactamente 
+una vez en cada bloque.
+La diferencia entre un diseño de bloque aleatorizado y el diseño completamente aleatori-
+zado se puede demostrar al considerar un experimento diseñado para comparar la reacción de 
+una persona a un conjunto de cuatro estímulos (tratamientos), en un experimento psicológico 
+de estímulo–respuesta. Denotaremos los tratamientos como T1, T2, T3 y T4.
+Suponga que ocho personas se asignan al azar a cada uno de cuatro tratamientos. La asig-
+nación aleatoria de personas a tratamientos (o viceversa) distribuye al azar errores debidos a la 
+variabilidad de persona a persona en respuesta a los cuatro tratamientos y proporciona cuatro 
+muestras que, para todos los fi nes prácticos, son aleatorias e independientes. Éste es un diseño 
+experimental completamente aleatorizado.
+El error experimental asociado con un diseño completamente aleatorizado tiene varios 
+componentes. Algunos de éstos se deben a las diferencias entre personas, a que las medicio-
+nes repetidas de una persona no sean idénticas (debido a variaciones en las condiciones físicas 
+y psicológicas), a que el experimentador no administre un estímulo determinado con exacta-
+mente la misma intensidad en mediciones repetidas y a errores de medición. La reducción de 
+cualquiera de estas causas de error aumentará la información del experimento.
+La variación de persona a persona del experimento anterior se puede eliminar con el uso de 
+personas como bloques. Cada persona recibiría cada uno de los cuatro tratamientos asignados 
+en una secuencia aleatoria. El resultante diseño de bloque aleatorizado aparecería como en 
+la Figura 12.3. Ahora sólo ocho personas son necesarias para obtener ocho mediciones de 
+respuesta por tratamiento. Observe que cada tratamiento ocurre exactamente una vez en cada 
+bloque.
+La palabra aleatorizado en el nombre del diseño implica que los tratamientos son asigna-
+dos al azar dentro de un bloque. Para nuestro experimento, la posición del bloque se refi ere a 
+la posición en la secuencia de estímulos asignada a una persona dada en el tiempo. El propó-
+sito de hacer aleatorio esto (es decir, la posici
+
+[Bloque seleccionado #680 | relevancia=3]
+Pagina 679
+12.4  Algunos diseños experimentales elementales  655
+hasta que se recolecte la cantidad de información necesaria. Una comparación de la venta 
+de productos competitivos en supermercados debería hacerse dentro de supermercados, 
+usándolos como bloques y eliminando la variabilidad de tienda a tienda. Es frecuente que 
+experimentos con animales en agricultura y medicina utilicen camadas como bloques, apli-
+cando todos los tratamientos, uno a cada uno, a los animales dentro de la camada. Debido 
+a características hereditarias, los animales de una camada son más homogéneos que los de 
+varias camadas. Este tipo de bloque elimina la variación de una camada a otra. El análisis 
+de información generada por un diseño de bloque aleatorizado se analiza en las Secciones 
+13.8 a 13.10.
+El diseño de bloque aleatorizado es sólo uno de los muchos tipos de diseños de bloque. El 
+diseño de bloques en dos direcciones se puede lograr con el uso de un diseño de cuadro latino. 
+Supongamos que los individuos del ejemplo anterior se fatigaron cuando se les aplicaron los 
+estímulos, de modo que el último estímulo siempre produjo una respuesta más baja que el pri-
+mero. Si esta tendencia (y la consecuente falta de homogeneidad de las unidades experimenta-
+les dentro de un bloque) fuera verdadera para todos los individuos, un diseño de cuadro latino 
+sería apropiado. El diseño se construiría como se indica en la Figura 12.4. Cada estímulo se 
+aplica una vez a cada individuo y ocurre exactamente una vez en cada posición del orden de 
+presentación. Los cuatro estímulos se presentan en cada fi la (renglón) y en cada columna de la 
+confi guración de 4 × 4. El diseño resultante es un cuadro latino de 4 × 4. Un diseño de cuadro 
+latino para tres tratamientos requiere una confi guración de 3 × 3; en general, p tratamientos 
+requieren un conjunto p × p de unidades experimentales. Si se desean más observaciones 
+por tratamiento, el experimentador debe usar varias confi guraciones de cuadro latino en un 
+experimento. En el ejemplo anterior sería necesario correr dos cuadros latinos para obtener 
+ocho observaciones por tratamiento. El experimento contendría entonces el mismo número de 
+observaciones por tratamiento que el diseño aleatorizado de bloques (Figura 12.3).
+Una comparación de medias para cualquier par de estímulos eliminaría el efecto de la 
+variación de un individuo a otro, pero también eliminaría el efecto de la tendencia de fatiga 
+dentro de cada estímulo porque cada tratamiento se aplicaría en cada posición de la secuencia 
+de administrar estímulos-tiempo. Por tanto,
+
+[Bloque seleccionado #802 | relevancia=2]
+Pagina 801
+15.9  Prueba de corridas de ensayo: una prueba de aleatoriedad  777
+ 
+15.43 
+Considere el estadístico Fr de Friedman, cuando k = 2 y b = (número de bloques) = n. Entonces, 
+Fr = (2/n) (R2
+1 + R2
+2) −9n. Sea M el número de bloques (pares) en los que el tratamiento uno tiene la 
+clasifi cación 1. Si no hay empates, entonces el tratamiento 1 tiene clasifi cación 2 en los restantes n − M 
+pares. Así, R1 = M + 2(n − M) = 2n − M. De manera análoga, R2 = n + M. Sustituya estos valores en 
+la expresión anterior para Fr y demuestre que el valor resultante es 4(M − .5n)2/n. Compare este resultado 
+con el cuadrado del estadístico Z de la Sección 15.3. Este procedimiento demuestra que Fr = Z2.
+ 
+15.44 
+Considere el estadístico de Friedman
+ 
+ 
+Fr =
+12b
+k(k + 1)
+k
+i=1
+(Ri −R)2
+ 
+ 
+Eleve al cuadrado cada término de la suma y demuestre que una forma alternativa de Fr es
+ 
+ 
+Fr =
+12
+bk(k + 1)
+k
+i=1
+R2
+i −3b(k + 1).
+ 
+ 
+[Sugerencia: recuerde que Ri = Ri/b, R = (k +1)/2
+k
+i=1 Ri =
+y observe que 
+ suma de todos los ran-
+gos = bk (k + 1)/2].
+ 
+15.45 
+Si no hay empates y b = 2, k = 3, deduzca la distribución nula exacta de Fr.
+ 
+15.9 Prueba de corridas de ensayo: una prueba 
+de aleatoriedad
+Considere un proceso de producción en el que piezas manufacturadas salen en secuencia y cada 
+una es clasifi cada como defectuosa (D) o no defectuosa (N). Hemos estudiado cómo podríamos 
+comparar la fracción de piezas defectuosas para dos intervalos iguales de tiempo, con el uso 
+de una prueba Z (Capítulo 10) y ampliado esta prueba para probar la hipótesis de p constante 
+pasa dos o más intervalos de tiempo usando la prueba x2 del Capítulo 14. Los propósitos de 
+estas pruebas eran detectar un cambio o tendencia en la fracción de piezas defectuosas, p. La 
+evidencia para indicar una fracción creciente de piezas defectuosas podría indicar la necesidad 
+de un estudio del proceso para localizar la fuente del problema. Un valor decreciente podría 
+sugerir que un programa de control de calidad del proceso estaba teniendo un efecto benéfi co 
+para reducir la fracción de piezas defectuosas.
+Las tendencias en la fracción de piezas defectuosas (u otras medidas de calidad) no son la 
+única indicación de falta de control de un proceso. Un proceso podría estar causando corridas 
+periódicas de piezas defectuosas aunque la fracción promedio de piezas defectuosas permanezca 
+constante, para todos los fi nes prácticos, en periodos largos. Por ejemplo, los focos de proyecto-
+res son fabricados en una máquina giratoria con un número fi jo de posiciones para focos. Uno de 
+Sustancia química
+Rata
+1
+
+
+[Bloque seleccionado #806 | relevancia=2]
+Pagina 805
+15.9  Prueba de corridas de ensayo: una prueba de aleatoriedad  781
+detectar al examinar las desviaciones de las mediciones de la serie de tiempo de su promedio. 
+Las desviaciones negativas y positivas podrían estar denotadas por S y F, respectivamente, y 
+podríamos entonces probar esta secuencia de tiempo de desviaciones para no aleatoriedad. 
+Ilustramos con un ejemplo.
+ 
+EJEMPLO 15.11 
+Se produce papel en un proceso continuo. Suponga que una medición de la brillantez Y se 
+hace en el papel una vez por hora y que los resultados aparecen como se muestra en la Figura 
+15.5.
+El promedio y para las 15 mediciones muestrales aparece en la fi gura. Observe las desvia-
+ciones arriba de y. ¿Estos datos indican falta de aleatoriedad y por tanto sugieren periodicidad 
+y falta de control en el proceso?
+ 
+Solución 
+La secuencia de desviaciones negativas (S) y positivas (F), como se indica en la Figura 15.5, 
+es
+S
+S
+S
+S
+F
+F
+S
+F
+F
+S
+F
+S
+S
+S
+S.
+Entonces, n1 = 10, n2 = 5 y R = 7. Consultando la Tabla 10 del Apéndice 3, encontramos P(R 
+≤ 7) = .455. Este valor de R no es improbable, suponiendo que la hipótesis de aleatoriedad 
+sea verdadera. En consecuencia, no hay sufi ciente evidencia para indicar no aleatoriedad en la 
+secuencia de mediciones de brillantez. 
+Q
+La prueba de corridas de ensayo también se puede usar para comparar dos distribuciones 
+de frecuencia poblacional para un experimento de dos muestras no pareado. De esta forma, 
+tenemos una alternativa para la prueba U de Mann–Whitney (Sección 15.6). Si las mediciones 
+para las dos muestras se arreglan en orden de magnitud, forman una secuencia. Las medicio-
+nes para las muestras 1 y 2 se pueden denotar como S y F, respectivamente y una vez más 
+nos ocupamos de una prueba de aleatoriedad. Si todas las mediciones para la muestra 1 son 
+más pequeñas que las de la muestra 2, la secuencia resultará en SSSS . . . SF FF . . . F o R 
+= 2 corridas de ensayo. Un valor pequeño de R proporciona evidencia de una diferencia en 
+las distribuciones poblacionales de frecuencia y la región de rechazo escogida es R ≤ a. Esta 
+región de rechazo implica una prueba estadística de una cola. Un ejemplo de la aplicación de 
+la prueba de corridas de ensayo para comparar dos distribuciones poblacionales de frecuencia 
+se deja como ejercicio.
+Brillantez
+Tiempo (horas)
+y
+y
+x
+F I G U R A 15.5
+Brillantez del papel 
+contra tiempo
+
+[Bloque seleccionado #808 | relevancia=2]
+Pagina 807
+15.10  Coeﬁ ciente de correlación de rangos  783
+ 
+15.50 
+Una gráfi ca de control de calidad se ha mantenido para una característica medible de piezas tomadas de 
+una banda transportadora en un punto fi jo de una línea de producción. Las mediciones obtenidas hoy, en 
+orden de tiempo, son como sigue:
+68.2
+71.6
+69.3
+71.6
+70.4
+65.0
+63.6
+64.7
+65.3
+64.2
+67.6
+68.6
+66.8
+68.9
+66.8
+70.1
+a Clasifi que las mediciones de esta serie de tiempo como arriba o abajo de la media muestral y de-
+termine (usando la prueba de corridas de ensayo) si observaciones consecutivas sugieren falta de 
+estabilidad en el proceso de producción.
+b Divida el periodo en dos partes iguales y compare las medias usando la prueba t de Student. ¿Los 
+datos dan evidencia de un cambio en el nivel medio de las características de calidad? Explique.
+ 
+15.51 
+Consulte el Ejercicio 15.24. Use la prueba de corridas de ensayo para analizar los datos. Compare su 
+respuesta a este ejercicio con su respuesta al Ejercicio 15.24.
+ 
+15.52 
+Consulte el Ejercicio 15.25. Si en verdad las baterías experimentales tienen una vida media más larga, 
+¿cuál sería el efecto de esto en el número esperado de corridas de ensayo? Usando la teoría de muestras 
+grandes para la prueba de corridas de ensayo, pruebe (usando a = .05) si hay una diferencia en las dis-
+tribuciones de la duración de baterías para las dos poblaciones. Proporcione el valor p aproximado.
+ 
+15.10 Coeﬁ ciente de correlación de rangos
+En las secciones anteriores usamos rangos para indicar la magnitud relativa de observaciones en 
+pruebas no paramétricas para comparación de tratamientos. Ahora empleamos la misma téc-
+nica para probar una correlación entre dos variables clasifi cadas. Dos coefi cientes de correla-
+ción de rango común son el estadístico rS de Spearman y el t de Kendall. Presentamos el rS 
+de Spearman porque su cálculo es análogo al del coefi ciente r de correlación muestral de la 
+Sección 11.8. El coefi ciente de correlación de rango de Kendall se estudia con detalle en la 
+obra de Kendall y Stuart (1979).
+Suponga que ocho profesores de ciencias elementales han sido clasifi cados por un juez 
+según su capacidad de enseñanza y todos han hecho un examen nacional de profesores. Los 
+datos se presentan en la Tabla 15.8. ¿Los datos sugieren concordancia entre la clasifi cación 
+del juez y la califi cación del examen? Alternativamente podríamos expresar esta pregunta al 
+consultar si existe correlación entre la clasifi cación del juez y los rangos de califi caciones del 
+examen.
+Las dos variables de interés son la clasifi cación y la ca
+
+[Bloque seleccionado #932 | relevancia=2]
+Pagina 931
+Índice  907
+Probabilidad condicional, 47, 51-57
+ 
+experimentos binomiales y, 102
+ 
+probabilidad incondicional vs., 51-52
+Probabilidad de la muestra, 460-461
+Probabilidad incondicional, 51, 52, 102
+Probabilidades de celda, prueba 
+de hipótesis respecto a, 716-721, 
+735
+Probabilidades de fila, 722, 724-725, 
+729-731
+Procedimiento de muestreo. Vea Diseño 
+experimental
+Proceso de Poisson, 135
+Promedio ponderado, 428
+Propiedad de invarianza, 480
+Propiedad sin memoria, 189
+ 
+de distribución exponencial, 189
+ 
+de distribución geométrica, 119
+Propiedades
+ 
+invarianza, 480
+ 
+sin memoria, 189
+Prueba de aleatoriedad, 777-783
+Prueba de bondad de ajuste, 717-718, 735
+Prueba de cola superior, 512
+Prueba de Friedman, 771-777
+ 
+prueba de signo y, 773
+ 
+resumen de, 772
+Prueba de hipótesis, 488-562
+ 
+comentario sobre la teoría de, 518-
+520
+ 
+distribución ji cuadrada y, 715-716
+ 
+elementos de pruebas estadísticas y, 
+489-495
+ 
+errores en, 491, 493-494, 507-510
+ 
+hipótesis nula y, 489-490, 624-633
+ 
+informe de resultados de una prueba, 
+513-518
+ 
+intervalos de confianza relacionados 
+con, 511-513
+ 
+lema de Neyman-Pearson y, 542-546
+ 
+media y, 520-530
+ 
+muestras grandes empleadas en, 496-
+507
+ 
+muestras pequeñas empleadas en, 
+520-530
+ 
+niveles de significación alcanzados 
+en, 513-518
+ 
+poder de, 540-549
+ 
+probabilidades de error tipo II en, 
+507-510
+ 
+pruebas de razón de probabilidad 
+para, 549-556
+ 
+regresión lineal múltiple y, 618
+ 
+regresión lineal simple y, 590
+ 
+repaso de introducción de, 488-489
+ 
+varianzas y, 530-540
+Prueba de hipótesis. Vea Prueba de hi-
+pótesis
+Prueba de hipótesis de muestra pequeña, 
+520-530
+ 
+para comparar dos medias poblacio-
+nales, 523
+ 
+para una media poblacional, 521
+Prueba de homogeneidad, 731
+Prueba de ji cuadrada, 714-716
+ 
+análisis categórico de datos y, 734-
+735, 736
+ 
+bondad de ajuste y, 717-718, 735
+ 
+estadístico de prueba para, 715
+ 
+para varianza poblacional, 532-533
+Prueba de Kruskal-Wallis, 765-771
+ 
+estadístico de k-ésimo orden, 336
+ 
+k-ésimo momento de variable aleato-
+ria, 138, 202, 472
+ 
+k-ésimo momento factorial, 144
+ 
+prueba de suma de rango y, 768
+ 
+resumen de procedimiento, 767
+Prueba de no aleatoriedad, 780-781
+Prueba de rango con signo. Vea Prueba 
+de Wilcoxon de rango con signo
+Prueba de signo para un experimento de 
+pares acoplados, 744-750
+ 
+comparaciones de muestra grande y, 
+746-747
+ 
+niveles de significación alcanzados 
+para, 745-746
+ 
+prueba de Friedman y, 773
+ 
+prueba t de Student comparada con, 
+746-747
+ 
+utilidad de, 747
+Prueba de subsucesiones, 777-783
+ 
+pruebas U de Mann-Whitney y, 781
+ 
+región de r
+
+[Bloque seleccionado #933 | relevancia=2]
+Pagina 932
+908  Índice
+ 
+selección apropiada, 500
+ 
+signo, 744-750
+ 
+suma de rango, 755-757, 758, 762
+ 
+U de Mann-Whitney, 758-765
+ 
+uniformemente más potente, 544-546
+ 
+valores p en, 513-518
+Pruebas de razón de probabilidad, 549-
+556
+ 
+descripción de, 549-550
+ 
+muestra grande, 553
+ 
+poder de la prueba y, 553
+ 
+región de rechazo de, 550, 552
+Pruebas de una cola, 499, 509, 751
+Pruebas estadísticas
+ 
+bondad de, 540, 556
+ 
+elementos de, 489-495
+ 
+informe de resultados de, 513-518
+ 
+poder de, 540-549
+ 
+robustez de, 525, 537
+ 
+teoría de, 518-519
+ 
+Vea también Pruebas de hipótesis
+Pruebas estadísticas robustas, 525
+Pruebas t, 521
+ 
+del análisis de prueba de varianza, 
+666
+ 
+dos muestras, 525, 666-667
+ 
+pruebas de signo contra,  746-747
+ 
+usando estimadores de mínimos 
+cuadrados, 565
+ 
+utilidad de, 525
+Punto muestral, 27
+ 
+como par ordenado, 41
+ 
+evento simple y, 27
+ 
+herramientas para contar, 40-51
+ 
+igualmente probable, 38, 120
+ 
+representaciones de, 43
+Puntos de influencia alta, 634, 639
+R
+r (estadístico de prueba), 599
+Rango, 755-757
+Región de aceptación, 511
+Región de rechazo (RR), 490-491
+ 
+complemento de, 511
+ 
+de cola inferior, 499
+ 
+de cola superior, 497
+ 
+de dos colas, 499, 500, 584, 751
+ 
+de una cola, 751
+ 
+forma de, 543
+ 
+gráfica de, 534
+ 
+prueba de razón de probabilidad, 
+550, 552
+ 
+prueba de subsucesiones, 778, 781, 782
+ 
+prueba F, 536
+Región de rechazo de cola inferior, 499
+Región de rechazo de cola superior, 497
+Región de rechazo de dos colas, 499, 
+500
+Regla de Bayes, 71-72
+Regla empírica, 10, 11
+Regla mn, 41-43
+Reglas de conteo, 40-51
+Regresión
+ 
+lineal múltiple, 566-567, 569, 609, 
+615-624
+ 
+lineal simple, 577-583, 589-597
+Representaciones geométricas
+ 
+función de densidad conjunta, 229, 
+230, 231
+ 
+función de densidad marginal, 238
+Residuos, 634
+Resultados aislados, 634
+rs (estadístico de prueba), 784, 786
+S
+Sensibilidad de una prueba, 73
+Serie
+ 
+de Taylor, 835
+ 
+geométrica, 67, 835
+ 
+logarítmica, 739
+Serie de tiempo, 780-781
+Serie geométrica, fórmula para suma de, 
+67, 835
+Series de potencia, 204
+Sesgo de estimadores puntuales, 392
+Significación estadística, 519
+Significación práctica, 519
+Significación, estadística contra práctica, 
+518
+Sistema simultáneo de ecuaciones li-
+neales
+ 
+expresión matricial para, 827-829
+ 
+solución usando matrices, 833-834
+SSB. Vea Suma de cuadrados para blo-
+ques
+SSE. Vea Suma de cuadrados para error
+SST. Vea Suma de cuadrados para trata-
+mientos
+Subconjuntos, 23
+Subsucesiones, 778, 869
+Suficiencia, 459-464
+ 
+definición de, 460
+ 
+y probabilidad, 460-461
+Suma de cuadrados de desviaciones
+ 
+aditividad de, 679-681

@@ -1,0 +1,55 @@
+\fontsize{12}{14.4}\selectfont\setstretch{1.5}\justifying
+\begingroup
+\noindent\textbf{Resumen}\par
+El muestreo conecta una población con la evidencia utilizada para decidir. Se explican sus diseños y límites y se comparan tres investigaciones sobre vacunación, teletrabajo y permanencia laboral. La selección, la ponderación y la asignación experimental justifican conclusiones distintas; el tamaño no sustituye esas condiciones.\footnote{\textbf{Declaración de uso de IA.} \estadisticadeclaracionia}
+\par\medskip
+\renewcommand{\contentsname}{Tabla de contenido}\setcounter{tocdepth}{1}
+\setlength{\cftbeforetoctitleskip}{3pt}\setlength{\cftaftertoctitleskip}{4pt}\setlength{\cftbeforesecskip}{1pt}
+\renewcommand{\cfttoctitlefont}{\normalfont\fontsize{12}{15}\selectfont\bfseries}
+\tableofcontents
+\endgroup\medskip
+\section{Introducción}
+Conocer la satisfacción de los clientes y evaluar una política de trabajo híbrido exige evidencia diferente. La pregunta es cuándo una muestra permite describir una población y cuándo una comparación permite valorar una intervención. Tres artículos muestran cómo el diseño condiciona las conclusiones administrativas, más allá de reunir muchas respuestas.
+
+\section{Del diseño muestral a la evidencia administrativa}
+La población objetivo delimita las unidades, el lugar y el periodo sobre los que interesa concluir. El marco muestral permite seleccionarlas, pero puede excluir segmentos. La muestra seleccionada tampoco equivale a la respondente. Un parámetro describe la población; un estadístico se calcula con la muestra para estimarlo. La inferencia requiere justificar esa conexión \citep{holmesBusiness2023}.
+
+En diseños probabilísticos se conocen las probabilidades positivas de inclusión. El aleatorio simple da igual probabilidad a todas las muestras del mismo tamaño; el estratificado selecciona aleatoriamente dentro de todos los estratos; el sistemático usa inicio aleatorio e intervalo; y el de conglomerados selecciona grupos aleatoriamente. Conveniencia, juicio, cuotas y bola de nieve no permiten conocer esas probabilidades. Generalizar sus porcentajes exige supuestos adicionales \citep{holmesBusiness2023,statcanNoProb2021}.
+
+Los pesos reflejan la contribución de las unidades: al entrevistar cantidades iguales de dos canales de tamaños distintos, la estimación global debe considerar su participación poblacional. Calibrar características observadas no elimina todo sesgo. Mayor precisión significa menor variabilidad del estimador; el sesgo es una desviación sistemática por cobertura, participación o medición. Un intervalo nominal del 95\% describe la cobertura del procedimiento en muestreos repetidos bajo sus supuestos; no subsana esos errores \citep{holmesBusiness2023,bradley2021}.
+
+La selección delimita a quiénes representa el estudio; la asignación distribuye intervenciones entre quienes ya participan. Una encuesta puede estimar preferencias sin identificar sus causas. Un experimento puede sostener causalidad interna sin representar a todas las organizaciones. Las fichas aplican estas distinciones a evidencia publicada.
+
+\tcbset{before skip=4pt,after skip=4pt}
+\begin{fichainvestigacion}{Ficha 1. Bradley et al. (2021): cobertura y participación}
+\datosarticulocorto{\textbf{Ficha:} Bradley et al. (2021). \textit{Unrepresentative big surveys significantly overestimated US vaccine uptake}. \textit{Nature, 600}(7890), 695--700.}
+
+\textbf{Pregunta y diseño.} Se comparan estimaciones de vacunación de adultos estadounidenses con registros de los CDC. Delphi--Facebook seleccionaba usuarios activos estratificadamente; Household Pulse, domicilios contactables mediante selección sistemática; Axios--Ipsos, participantes de un panel probabilístico reclutado por direcciones postales, con acceso digital facilitado. Los tres ponderaban respuestas.
+
+\textbf{Resultado e interpretación.} En mayo de 2021, Delphi y Household Pulse sobreestimaron la vacunación en 17 y 14 puntos porcentuales: reunían unas 250\,000 respuestas semanales y 75\,000 quincenales, respectivamente. Axios, con cerca de 1\,000 semanales, siguió mejor el referente. No es una ventaja universal de las muestras pequeñas: evidencia que el mecanismo de participación puede dominar el tamaño. En una encuesta comercial, ampliar una base digital no recupera automáticamente compradores excluidos \citep{bradley2021}.
+\end{fichainvestigacion}
+
+\begin{fichainvestigacion}{Ficha 2. Barrero, Bloom y Davis (2023): medir el cambio}
+\datosarticulocorto{\textbf{Ficha:} Barrero, Bloom y Davis (2023). \textit{The evolution of work from home}. \textit{Journal of Economic Perspectives, 37}(4), 23--50.}
+
+\textbf{Pregunta y diseño.} Reconstruye la evolución del trabajo desde casa con SWAA, Household Pulse y fuentes históricas. La serie principal se refiere a personas de 20--64 años. SWAA obtiene respuestas en línea mediante proveedores que utilizan listas de agregadores \citep[diap.~3]{wfhMetodos2023}. Usa umbrales de ingresos previos de US\$20\,000 hasta marzo de 2021 y US\$10\,000 después; pondera edad, sexo, educación e ingresos para aproximar la Current Population Survey. Las otras fuentes tienen filtros y pesos propios.
+
+\textbf{Resultado e interpretación.} En junio de 2023, cerca del 28\% de los días remunerados se trabajaba íntegramente desde casa, frente al 7\% en 2019. Son días, no empleados ni tamaño muestral. El indicador puede orientar la planificación de oficinas; sus filtros y denominador deben comprobarse antes de trasladarlo a otra organización. La descripción no identifica un efecto causal sobre productividad \citep{barrero2023}.
+\end{fichainvestigacion}
+
+\begin{fichainvestigacion}{Ficha 3. Bloom, Han y Liang (2024): evaluar una política}
+\datosarticulocorto{\textbf{Ficha:} Bloom, Han y Liang (2024). \textit{Hybrid working from home improves retention without damaging performance}. \textit{Nature, 630}(8018), 920--925.}
+
+\textbf{Pregunta y diseño.} Trip.com estudió dos divisiones con 1\,612 empleados elegibles. La paridad del día del mes de nacimiento asignó elegibilidad para dos días semanales desde casa: 792 en tratamiento y 820 en control. La selección empresarial y la asignación interna son operaciones diferentes.
+
+\textbf{Resultado e interpretación.} Las salidas fueron 7.2\% en control y 4.8\% en tratamiento: 2.4 puntos porcentuales menos, una reducción relativa de un tercio. Las pruebas de equivalencia del desempeño examinaron límites de $\pm0.5$ puntos de evaluación; no prueban identidad absoluta. Disminuyeron las observaciones de seguimiento y Liang declaró cargos y participación accionaria. El ensayo orienta una política híbrida en ese contexto; no representa todas las empresas ni el trabajo totalmente remoto \citep{bloom2024}.
+\end{fichainvestigacion}
+
+La comparación permite sostener que cada decisión exige una justificación propia: cobertura y respuesta para estimar, definiciones y pesos para comparar periodos, y asignación y seguimiento para evaluar intervenciones. Una cifra puede estar bien calculada y utilizarse fuera de ese alcance. La aplicación administrativa consiste en conservar unidas pregunta, población, diseño e interpretación.
+
+\section{Conclusiones}
+El muestreo produce evidencia útil cuando el diseño corresponde a la afirmación que se desea sostener. Estimar, describir cambios y evaluar intervenciones requieren condiciones distintas.
+
+Sostengo que la gerencia debe exigir población, mecanismo de obtención y límites junto con cada resultado, porque el volumen y la aleatoriedad no garantizan por sí solos conclusiones pertinentes. En satisfacción implica revisar marco y no respuesta; en trabajo híbrido, comparación y seguimiento. Así las decisiones pueden revisarse con nueva evidencia.
+
+\input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/investigacion-articulos/referencias.tex}

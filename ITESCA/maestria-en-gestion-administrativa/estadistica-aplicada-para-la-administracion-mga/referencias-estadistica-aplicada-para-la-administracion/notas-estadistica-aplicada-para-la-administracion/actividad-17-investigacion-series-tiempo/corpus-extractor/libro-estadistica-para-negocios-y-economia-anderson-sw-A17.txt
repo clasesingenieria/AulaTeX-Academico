@@ -1,0 +1,542 @@
+Fuente bibliográfica: Estadística para negocios y economía - Anderson, Sweeney y Williams. 11.ª edición.pdf
+Actividad: 17 (6.2 Investigación 4% Tarea)
+Palabras clave: series de tiempo, pronósticos económicos, demanda, estacionalidad, ARIMA, suavizamiento exponencial, planeación financiera
+
+[Bloque seleccionado #24 | relevancia=13]
+Pagina 23
+ 
+Contenido 
+xxi
+Resumen 780
+Glosario 780
+Fórmulas clave 780
+Ejercicios complementarios 781
+Capítulo 18  Análisis de series de tiempo y elaboración 
+de pronósticos  784
+Estadística en la práctica. Nevada Occupational Health Clinic 785
+18.1  Patrones de una serie de tiempo 786
+Patrón horizontal 786
+Patrón de tendencia 788
+Patrón estacional 788
+Patrones de tendencia y estacional 789
+Patrón cíclico 789
+Selección de un método de elaboración de pronósticos 791
+18.2  Exactitud del pronóstico 792
+18.3  Promedios móviles y suavizamiento exponencial 797
+Promedios móviles 797
+Promedios móviles ponderados 800
+Suavizamiento exponencial 800
+18.4  Proyección de la tendencia 807
+Regresión de tendencia lineal 807
+Suavizamiento exponencial lineal de Holt 812
+Regresión de tendencia no lineal 814
+18.5  Estacionalidad y tendencia 820
+Estacionalidad sin tendencia 820
+Estacionalidad y tendencia 823
+Modelos basados en datos mensuales 825
+18.6  Descomposición de series de tiempo 829
+Cálculo de los índices estacionales 830
+Desestacionalización de una serie de tiempo 834
+Uso de una serie de tiempo desestacionalizada para identificar 
+tendencias 834
+Ajustes estacionales 836
+Modelos basados en datos mensuales 837
+Patrón cíclico 837
+Resumen 839
+Glosario 840
+Fórmulas clave 841
+Ejercicios complementarios 842
+Caso a resolver 1 Pronóstico de ventas de alimentos y bebidas 846
+Caso a resolver 2 Elaboración del pronóstico de pérdidas de ventas 847
+Apéndice 18.1 Elaboración de pronósticos con Minitab 848
+Apéndice 18.2 Elaboración de pronósticos con Excel 851
+Apéndice 18.3 Elaboración de pronósticos con StatTools 852
+
+[Bloque seleccionado #42 | relevancia=12]
+Pagina 41
+ 
+1.2  Datos 
+7
+ejemplo, considere el costo de un automóvil. Un valor cero para el costo indicaría que el vehícu-
+lo no tiene costo, es gratis. Además, si se compara el costo de un automóvil de $30 000 con el 
+costo de un segundo automóvil de $15 000, la propiedad de la razón muestra que el primero 
+cuesta $30 000/$15 000  2 veces, o el doble, que el segundo.
+Datos categóricos y cuantitativos
+Los datos se clasifican como categóricos o cuantitativos. Los que se agrupan por categorías 
+específicas se conocen como datos categóricos. Este tipo de datos utiliza una escala de medi-
+ción que puede ser nominal u ordinal. Los que utilizan valores numéricos para indicar cuánto o 
+cuántos se conocen como datos cuantitativos; éstos se obtienen usando la escala de medición 
+ya sea de intervalo o de razón.
+Una variable categórica incluye datos categóricos y una variable cuantitativa com-
+prende datos cuantitativos. El análisis estadístico apropiado para una variable en particular de-
+pende de que ésta sea categórica o cuantitativa. Si la variable es categórica, el análisis estadístico 
+es muy limitado. Los datos categóricos se resumen mediante el conteo del número de obser-
+vaciones en cada categoría o por medio del cálculo de la proporción de las observaciones en 
+cada categoría. Sin embargo, aun cuando estos datos se identifican por medio de un código 
+aritmético, operaciones como la suma, la resta, la multiplicación y la división no producen 
+resultados que tengan sentido. En la sección 2.1 se estudian algunas maneras de resumir los 
+datos categóricos.
+Las operaciones aritméticas sí proporcionan resultados con sentido para las variables cuan-
+titativas. Por ejemplo, los datos cuantitativos pueden sumarse y luego dividirse entre el número 
+de observaciones para calcular el valor promedio, el cual tiene significado y se interpreta con 
+facilidad. En general, se tienen más alternativas para el análisis estadístico cuando los datos 
+son cuantitativos. La sección 2.2 y el capítulo 3 proporcionan maneras de resumir este tipo de 
+datos.
+Datos de corte transversal y de series de tiempo
+Para efectos del análisis estadístico es importante distinguir entre datos de corte transversal y 
+datos de series de tiempo. Los datos de corte transversal son recabados en el mismo momento, 
+o aproximadamente al mismo tiempo. Los de la tabla 1.1 son de corte transversal debido a 
+que describen las cinco variables para los 25 fondos de inversión en el mismo momento. Los 
+datos de series de tiempo o de series temporales son recabados a lo largo de varios periodos. 
+Por ejemplo, la
+
+[Bloque seleccionado #821 | relevancia=22]
+Pagina 820
+786 
+Capítulo 18  Análisis de series de tiempo y elaboración de pronósticos
+el futuro. En estos casos, los pronósticos se pueden obtener mediante un método de series de 
+tiempo o un método causal. Este capítulo se centrará exclusivamente en los métodos de elabo-
+ración de pronósticos cuantitativos.
+Si los datos históricos se limitan a los valores pasados de la variable que se pronostica, al 
+procedimiento de elaboración de pronósticos se le llama método de series de tiempo, y los datos 
+históricos se reﬁ eren como una serie de tiempo. El objetivo del análisis de la serie de tiempo 
+es descubrir un patrón en los datos históricos o de series de tiempo para después extrapolar el 
+modelo al futuro. El pronóstico se basa únicamente en los valores pasados de la variable o en 
+los errores de pronóstico del pasado. 
+Los métodos de elaboración de pronósticos causales se basan en el supuesto de que la 
+variable a pronosticar tiene una relación de causa y efecto con una o más variables. En el estu-
+dio del análisis de regresión de los capítulos 14, 15 y 16 se mostró cómo una o más variables 
+independientes podrían ser utilizadas para pronosticar el valor de una sola variable dependiente. 
+En cuanto a los análisis de regresión como una herramienta de elaboración de pronósticos, se 
+puede observar el valor de la serie de tiempo que se desea pronosticar como la variable depen-
+diente. Por tanto, si se identiﬁ ca un buen conjunto de variables independientes relacionadas o 
+explicativas, podemos desarrollar una ecuación de regresión y predecir la serie de tiempo. Por 
+ejemplo, las ventas de muchos productos están inﬂ uidas por los gastos de publicidad, por lo 
+que el análisis de regresión sirve para desarrollar una ecuación que muestre cómo las ventas y 
+la publicidad están relacionadas. Una vez que se determina el presupuesto de publicidad para 
+el siguiente periodo, se podría sustituir este valor en la ecuación y obtener una predicción para el 
+volumen de ventas de ese periodo. Observe que si se utiliza un método de series de tiempo para 
+obtener el pronóstico, los gastos de publicidad no serían considerados, es decir, en este método 
+el pronóstico se basa únicamente en las ventas del pasado.
+Al tratar el tiempo como variable independiente y la serie de tiempo como una variable 
+dependiente, el análisis de regresión también puede utilizarse como un método de series de 
+tiempo. Para diferenciar la aplicación del análisis de regresión en estos dos casos, se utilizan los 
+términos regresión de corte transversal y regresión de series de tiempo. Por tanto, la re
+
+[Bloque seleccionado #836 | relevancia=14]
+Pagina 835
+ 
+18.3  Promedios móviles y suavizamiento exponencial 
+801
+La ecuación (18.2) muestra que el pronóstico para el periodo t  1 es un promedio pon-
+derado del valor real en el periodo t y del valor pronosticado para el periodo t. El peso dado 
+al valor real en el periodo t es la constante de suavizamiento α, y el peso dado al pronóstico 
+para el periodo t es 1  α. Resulta que el pronóstico exponencial para cualquier periodo es en 
+realidad un promedio ponderado de todos los valores reales anteriores de la serie de tiempo. Se 
+ilustra lo anterior con una serie de tiempo que sólo implica los datos de tres periodos: Y1, Y2 y Y3.
+Para empezar los cálculos, sea F1 el valor real de la serie de tiempo en el periodo 1, es de-
+cir, F1  Y1. Por tanto, el pronóstico para el periodo 2 es
+F2  αY1  (1  α)F1
+ αY1  (1  α)Y1
+ Y1
+Observe que el pronóstico de suavizamiento exponencial para el periodo 2 es igual al valor real 
+de la serie de tiempo en el periodo 1.
+El pronóstico para el periodo 3 es
+F3  αY2  (1  α)F2  αY2  (1  α)Y1
+Por último, al sustituir esta expresión para F3 en la expresión para F4 obtenemos
+F4  αY3  (1  α)F3
+ αY3  (1  α)[αY2  (1  α)Y1]
+ αY3  α(1  α)Y2  (1  α)2Y1
+Observe ahora que F4 es un promedio ponderado de los tres primeros valores de la serie de 
+tiempo. La suma de los coeﬁ cientes o pesos de Y1, Y2 y Y3 es igual a 1. Con un argumento similar 
+se puede demostrar que, en general, cualquier pronóstico Ft1 es un promedio ponderado de 
+todos los valores anteriores de la serie de tiempo.
+A pesar de que con el suavizamiento exponencial se obtiene un pronóstico que es el prome-
+dio ponderado de todas las observaciones anteriores, no deben conservarse todos los datos del 
+pasado para calcular el pronóstico del periodo siguiente. De hecho, la ecuación (18.2) muestra 
+que una vez que el valor de la constante de suavizamiento α es elegida, sólo se necesitan dos 
+informaciones para calcular el pronóstico: Yt, el valor real de la serie de tiempo para el perio-
+do t, y Ft, el pronóstico para el periodo t.
+Para ilustrar el método de suavizamiento exponencial, considere de nuevo la serie de tiem-
+po de los precios de la gasolina presentada en la tabla 18.1 y en la ﬁ gura 18.1. Como ya se 
+explicó, para iniciar los cálculos se establece un pronóstico de suavizamiento exponencial para 
+el periodo 2 igual al valor real de la serie de tiempo en el periodo 1. Por tanto, como Y1  17, 
+para empezar con los cálculos del suavizamiento exponencial se pone F2  17. Referente a los 
+datos de la serie de tiempo en la tabla 18.1, se encue
+
+[Bloque seleccionado #839 | relevancia=15]
+Pagina 838
+804 
+Capítulo 18  Análisis de series de tiempo y elaboración de pronósticos
+Ejercicios
+Métodos
+5. 
+Considere los datos siguientes de serie de tiempo.
+ 
+ 
+Valores de la serie 
+ 
+Error de 
+Error de pronóstico
+ Semana 
+de tiempo 
+Pronóstico 
+pronóstico 
+cuadrado
+ 
+1 
+17
+ 
+2 
+21 
+17.00 
+4.00 
+16.00
+ 
+3 
+19 
+18.20 
+0.80 
+0.64
+ 
+4 
+23 
+18.44 
+4.56 
+20.79
+ 
+5 
+18 
+19.81 
+1.81 
+3.28
+ 
+6 
+16 
+19.27 
+3.27 
+10.69
+ 
+7 
+20 
+18.29 
+1.71 
+2.92
+ 
+8 
+18 
+18.80 
+0.80 
+0.64
+ 
+9 
+22 
+18.56 
+3.44 
+11.83
+ 
+10 
+20 
+19.59 
+0.41 
+0.17
+ 
+11 
+15 
+19.71 
+4.71 
+22.18
+ 
+12 
+22 
+18.30 
+3.70 
+13.69
+ 
+ 
+ 
+Totales 
+8.03 
+102.83
+TABLA 18.11   Resumen de los pronósticos de suavizamiento exponencial y de los errores 
+de pronóstico para las ventas de gasolina con constante de suavizamiento 
+α  0.3
+Semana 
+1 
+2 
+3 
+4 
+5 
+6
+Valor 
+18 
+13 
+16 
+11 
+17 
+14
+NOTAS Y COMENTARIOS
+1.  Los paquetes de hoja de cálculo son una ayuda 
+eficaz en la elección de un valor adecuado para α 
+en el suavizamiento exponencial. Con los datos 
+de las series de tiempo y las fórmulas de elabora-
+ción de pronósticos, en una hoja de cálculo se pue-
+den probar diferentes valores de α y elegir el que 
+proporciona el error de pronóstico más pequeño 
+utilizando una o más medidas de exactitud de pro-
+nóstico (EAM, CME o EPAM).
+2.  Presentamos el promedio móvil y los métodos de 
+suavizamiento exponencial en el contexto de una 
+serie de tiempo estacionaria. Estos métodos tam-
+bién pueden utilizarse para pronosticar una serie de 
+tiempo no estacionaria que cambia de nivel pero no 
+muestra una tendencia o estacionalidad. Los pro-
+medios móviles con valores pequeños de k se pue-
+den adaptar más rápidamente que los promedios 
+móviles con valores mayores de k. Los modelos de 
+suavizamiento exponencial con constantes de sua-
+vizamiento más cercanas a 1 se adaptan más rápi-
+damente que los modelos con valores más pequeños 
+de la constante de suavizamiento.
+a) Construya una gráfica de serie de tiempo. ¿Qué tipo de patrón existe en los datos?
+b) Obtenga los pronósticos con un promedio móvil a tres semanas para esta serie de tiempo. 
+Calcule el CME y un pronóstico para la semana 7.
+c) 
+Utilice α  0.2 para calcular los pronósticos de suavizamiento exponencial de la serie de 
+tiempo. Calcule el CME y dé un pronóstico para la semana 7.
+AUTO evaluación
+
+[Bloque seleccionado #841 | relevancia=14]
+Pagina 840
+806 
+Capítulo 18  Análisis de series de tiempo y elaboración de pronósticos
+b) Remítase a los coeficientes o pesos de los valores del pasado Y12, Y11, Y10, Y9 y Y8. ¿Qué 
+puede decir acerca de los pesos que el suavizamiento exponencial proporciona a los valo-
+res pasados al obtener un nuevo pronóstico? Compare estos pesos con los del método del 
+promedio móvil.
+Aplicaciones
+11. 
+Para Hawkins Company, los porcentajes de los embarques mensuales recibidos en los últimos 
+12 meses son 80, 82, 84, 83, 83, 84, 85, 84, 82, 83, 84 y 83.
+a) Construya una gráfica para la serie de tiempo. ¿Qué tipo de patrón existe en los datos?
+b) Compare el pronóstico obtenido mediante promedios móviles de tres meses con el pro-
+nóstico obtenido por el método de suavizamiento exponencial con α  0.2. ¿Con cuál se 
+obtienen pronósticos más precisos al utilizar el CME como medida de exactitud?
+c) 
+¿Cuál es el pronóstico para el próximo mes?
+12. 
+A continuación se proporcionan las tasas de interés de bonos corporativos triple A de 12 meses 
+consecutivos.
+9.5  9.3  9.4  9.6  9.8  9.7  9.8  10.5  9.9  9.7  9.6  9.6
+a) Construya una gráfica de serie de tiempo. ¿Qué tipo de patrón existe en los datos?
+b) Desarrolle promedios móviles de tres y cuatro meses para esta serie de tiempo. ¿Con cuál 
+de estos promedios móviles se obtiene un pronóstico más exacto basado en el CME? Ex-
+plique.
+c) 
+¿Cuál es el pronóstico para el promedio móvil del próximo mes?
+13. 
+Los valores de los contratos de construcción en Alabama (en millones de dólares) para un pe-
+riodo de 12 meses son los siguientes.
+240  350  230  260  280  320  220  310  240  310  240  230
+a) Construya una gráfica de serie de tiempo. ¿Qué tipo de patrón existe en los datos?
+b) Compare el método del promedio móvil a tres meses con el pronóstico de suavizamiento 
+exponencial utilizando α  0.2. ¿Con cuál se obtienen pronósticos más precisos basados 
+en el CME?
+c) 
+¿Cuál es el pronóstico para el próximo mes?
+14. 
+En la siguiente serie de tiempo se muestran las ventas de un producto en particular en los últi-
+mos 12 meses.
+a) Construya una gráfica de serie de tiempo. ¿Qué tipo de patrón existe en los datos?
+b) Utilice α  0.3 para calcular los pronósticos de suavizamiento exponencial de la serie de 
+tiempo.
+c) 
+Utilice una constante de suavizamiento de α  0.5 para calcular los pronósticos de sua-
+vizamiento exponencial. ¿Cuál de las constantes de suavizamiento, 0.3 o 0.5, parece pro-
+porcionar pronósticos más precisos basados en el CME?
+15. 
+Los datos siguientes son los valores del Commodity Futures Index de 10 semanas: 7.35, 7
+
+[Bloque seleccionado #864 | relevancia=13]
+Pagina 863
+ 
+18.6  Descomposición de series de tiempo 
+829
+a) Construya una gráfica de series de tiempo. ¿Qué tipo de patrón existe en los datos?
+b) Desarrolle una ecuación de regresión estimada que tome en cuenta cualquier efecto de 
+estacionalidad o de tendencia lineal en los datos. Utilice las siguientes variables ficticias 
+que tomen en cuenta los efectos estacionales: Jan  1 si es enero, 0 en caso contrario; 
+Feb  1 si es febrero, 0 en caso contrario; Mar  1 si es marzo, 0 en caso contrario; . . . 
+Nov  1 si es noviembre, 0 en caso contrario. Observe que al utilizar este método de co-
+dificación, cuando las 11 variables ficticias son 0, la observación corresponde a un gasto 
+en diciembre.
+c) 
+Calcule los pronósticos mensuales para el siguiente año con base en los efectos tanto de 
+tendencia como estacionales.
+18.6  Descomposición de series de tiempo
+En esta sección se enfoca la atención en lo que se conoce como descomposición de series de 
+tiempo, la cual se puede utilizar para separar o descomponer una serie de tiempo en su parte 
+de tendencia y estacional y en su componente irregular, aunque este método puede utilizarse 
+para el pronóstico, y su aplicación principal es conseguir una mejor comprensión de la serie 
+de tiempo. Muchas series de tiempo para las empresas y la economía de Estados Unidos son 
+sostenidas y publicadas por agencias gubernamentales como la Oﬁ cina del Censo y la Oﬁ cina 
+de Estadísticas Laborales. Estas agencias utilizan la descomposición de series de tiempo para 
+crear series desestacionalizadas.
+Entender qué sucede en realidad con una serie de tiempo a menudo depende del uso de los 
+datos desestacionalizados. Por ejemplo, podríamos estar interesados en saber si el consumo de 
+energía eléctrica está aumentando en nuestra área. Suponga que se entera de que éste se redujo 
+3% en septiembre con respecto al mes anterior. Se debe ser cuidadoso al ejercitar el uso de esa 
+información, porque cada vez que una inﬂ uencia estacional está presente, esas comparaciones 
+pueden ser engañosas si los datos no han sido desestacionalizados. El hecho de que el consumo 
+de energía eléctrica se haya reducido 3% entre agosto y septiembre podría ser por el efecto 
+estacional que se relaciona con una disminución en el uso del aire acondicionado y no por una 
+disminución del uso de la energía eléctrica a largo plazo. En efecto, después de ajustar el efecto 
+estacional, se podría incluso determinar que el consumo de energía eléctrica aumentó. Muchas 
+series de tiempo, como las estadísticas de desempleo y las ventas de casas y al detalle (o al me
+
+[Bloque seleccionado #875 | relevancia=13]
+Pagina 874
+840 
+Capítulo 18  Análisis de series de tiempo y elaboración de pronósticos
+estacional. Los métodos de elaboración de pronósticos estudiados se basan en que estos patro-
+nes están presentes en la serie de tiempo.
+Se mostró cómo se utilizan los promedios móviles y el suavizamiento exponencial para 
+desarrollar un pronóstico de una serie de tiempo con un patrón horizontal. El método de prome-
+dios móviles consiste en calcular el promedio de los valores de datos pasados, y después usar 
+ese promedio como pronóstico para el siguiente periodo. En el método de suavizamiento expo-
+nencial se usa un promedio ponderado de los valores pasados de la serie de tiempo para calcular 
+un pronóstico. Estos métodos también se adaptan bien cuando un patrón horizontal cambia a un 
+nivel diferente y se reanuda un patrón horizontal.
+Un factor importante para determinar qué método de elaboración de pronósticos utilizar 
+involucra la exactitud del método. Se estudiaron tres medidas de exactitud de los pronósticos: 
+el error absoluto medio (EAM), el cuadrado medio debido al error (CME), y el error porcentual 
+absoluto medio (EPAM). Cada una de estas medidas está diseñada para determinar qué tan bien 
+un método de elaboración de pronósticos particular es capaz de reproducir los datos disponibles 
+de la serie de tiempo. Al seleccionar un método que tiene la mejor exactitud de los datos ya 
+conocidos, se espera que aumente la probabilidad de obtener mejores pronósticos para periodos 
+futuros.
+Para una serie de tiempo que sólo tiene tendencia lineal a largo plazo, se demostró que pue-
+de utilizarse la regresión simple de la serie de tiempo para hacer proyecciones de su tendencia. 
+También se estudió cómo una extensión del suavizamiento exponencial simple, conocido como 
+suavizamiento exponencial lineal de Holt, se utiliza para pronosticar una serie de tiempo con 
+tendencia lineal a largo plazo. Para una serie de tiempo con una tendencia curvilínea o no lineal, 
+se demostró cómo la regresión múltiple permite ajustar los datos a una ecuación de tendencia 
+cuadrática o a una ecuación de tendencia exponencial.
+Para una serie de tiempo con un componente estacional, se demostró cómo utilizar las va-
+riables ﬁ cticias en un modelo de regresión múltiple a efecto de desarrollar una ecuación de re-
+gresión estimada con efectos estacionales. Luego se amplió el método de regresión para incluir 
+situaciones en las que la serie de tiempo contiene tanto el efecto estacional como el efecto de ten-
+dencia lineal, y se mostró cómo combinar el método de la variable ﬁ cticia para el manejo d
+
+[Bloque seleccionado #885 | relevancia=13]
+Pagina 884
+850 
+Capítulo 18  Análisis de series de tiempo y elaboración de pronósticos
+Paso 4. Cuando el cuadro de diálogo Trend Analysis aparezca:
+ 
+ 
+Introduzca C2 en el cuadro Variable.
+ 
+ 
+Elija Linear como tipo de modelo.
+ 
+ 
+Seleccione Generate forecasts.
+ 
+ 
+Introduzca 1 en el cuadro Number of forecasts.
+ 
+ 
+Introduzca 10 en el cuadro Starting from origin.
+ 
+ 
+Haga clic en Ok.
+La ecuación para la tendencia lineal, medidas de exactitud del pronóstico y los pronósticos para 
+el año siguiente se muestran en la ventana de la sesión. En los resultados de Minitab, el error 
+absoluto medio se etiqueta MAD y el error cuadrático medio MSD. Para obtener pronósticos de 
+una tendencia cuadrática o una tendencia exponencial, seleccione Quadratic de Exponential 
+growth en vez de Linear en el paso 4.
+Suavizamiento exponencial lineal de Holt
+Para mostrar cómo utilizar Minitab para elaborar pronósticos con el método de suavizamiento 
+exponencial lineal de Holt, se desarrolla nuevamente un pronóstico para la serie de tiempo de 
+las ventas de bicicletas de la tabla 18.3 y la ﬁ gura 18.3. En Minitab, el método de suavizamiento 
+exponencial lineal de Holt se reﬁ ere como suavizamiento exponencial doble (Double Expo-
+nential Smoothing). El número de años se introduce en la columna 1 y los datos de ventas en 
+la columna 2 de la hoja de cálculo. Los pasos siguientes pueden utilizarse para pronosticar las 
+ventas del año 11 mediante el suavizamiento exponencial lineal de Holt con α  0.1 y   0.2.
+Paso 1. Seleccione el menú Stat.
+Paso 2. Elija Time Series.
+Paso 3. Elija Double Exp Smoothing.
+Paso 4. Cuando el cuadro de diálogo Double Exponential Smoothing aparezca:
+ 
+ 
+Introduzca C2 en el cuadro Variable.
+ 
+ 
+Seleccione la opción Use para Weights to Use in Smoothing.
+ 
+ 
+Introduzca 0.1 en el cuadro level.
+ 
+ 
+Introduzca 0.2 en el cuadro trend.
+ 
+ 
+Seleccione Generate forecasts.
+ 
+ 
+Introduzca 1 en el cuadro Number of forecasts.
+ 
+ 
+Introduzca 10 en el cuadro Starting from origin.
+ 
+ 
+Haga clic en Ok.
+Las medidas de exactitud de los pronósticos y los pronósticos de suavizamiento exponencial li-
+neal de Holt para el año 11 se muestran en la ventana de la sesión. En los resultados de Minitab, 
+el error absoluto medio se etiqueta MAD y el cuadrado medio debido al error o error cuadrático 
+medio, MSD.
+Descomposición de una serie de tiempo
+El uso de Minitab para pronosticar una serie de tiempo con tendencia y estacionalidad me-
+diante la descomposición de series de tiempo se muestra desarrollando un pronóstico para la 
+serie de tiempo de las ventas de televisores de la tabla 1
+
+[Bloque seleccionado #983 | relevancia=15]
+Pagina 982
+948 
+Capítulo 21  Análisis de decisiones
+posibilidades para cada tipo de vino fue necesario evaluar cuatro posibilidades. Apoyada en 
+algunos pronósticos de publicaciones industriales, la gerencia desarrolló las siguientes evalua-
+ciones de probabilidad.
+Las proyecciones de ingresos muestran una contribución anual de $20 000 si Seneca Hill só-
+lo planta uva Chardonnay y la demanda para este vino es baja, y de $70 000 si sólo planta dicha 
+variedad y la demanda es alta. Si planta sólo uvas Riesling, la proyección anual de utilidades es 
+de $25 000 si la demanda es baja para estas uvas, y de $45 000 si la demanda es alta. Si Seneca 
+planta ambos tipos de uvas, las proyecciones anuales de utilidades se muestran en la siguiente 
+tabla.
+a)  ¿Cuál es la decisión a tomar, el evento aleatorio y la consecuencia? Identifique las alterna-
+tivas para las decisiones y los posibles resultados de los eventos aleatorios.
+b)  Elabore un árbol de decisión.
+c) 
+ Utilice el método del valor esperado para recomendar qué alternativa debe seguir Seneca 
+Hill Winery para maximizar la utilidad anual esperada.
+d)  Suponga que la gerencia está interesada en las probabilidades estimadas si la demanda 
+para el vino Chardonnay es alta. Algunos suponen que es probable que la demanda para 
+Riesling también sea alta en este caso. Suponga que la probabilidad de que la demanda sea 
+alta para Chardonnay y baja para Riesling es de 0.05, y que la probabilidad de una deman-
+da alta tanto para Chardonnay como para Riesling sea de 0.40. ¿Cómo cambiaría esto la 
+decisión recomendada? Suponga que las probabilidades de que la demanda de Chardonnay 
+sea baja se mantienen entre 0.05 y 0.50.
+e) 
+ Otros miembros del equipo gerencial esperan que el mercado de Chardonnay se sature en 
+algún punto en el futuro, causando la caída de los precios. Suponga que las proyecciones 
+anuales de utilidades caigan a $50 000 si la demanda para Chardonnay es alta y sólo se 
+siembra este tipo de uvas. Utilice las estimaciones de probabilidades iniciales y determine 
+cuánto afectaría este cambio a la decisión óptima.
+ 7. 
+ El Lake Placid Town Council ha decidido construir un nuevo centro comunitario para conven-
+ciones, conciertos y otros eventos públicos, pero existe una controversia importante respecto 
+del tamaño apropiado. Muchos ciudadanos influyentes desean un centro grande que sea un 
+escaparate para la zona, pero el alcalde cree que si la demanda no apoya dicho centro, la co-
+munidad perdería una gran cantidad de dinero. A efecto de proporcionar una estructura para 
+el proceso de decisión, el consejo 

@@ -1,0 +1,780 @@
+Fuente bibliográfica: Estadística matemática con aplicaciones - Wackerly, Mendenhall y Scheaffer. 7.ª edición.pdf
+Actividad: 4 (2.1 Investigación documental y aplicada 5% Tarea)
+Palabras clave: estimador, estimación, insesgamiento, eficiencia, consistencia, intervalo de confianza, margen de error, distribución muestral
+
+[Bloque seleccionado #416 | relevancia=24]
+Pagina 415
+8.1  Introducción  391
+Suponga que deseamos estimar la cantidad promedio m de mercurio que un proceso recién 
+inventado puede eliminar de 1 onza de mineral obtenido de un lugar geográfi co determinado. 
+Podríamos dar nuestra estimación o cálculo en dos formas distintas. Primero, podríamos usar 
+un solo número, por ejemplo .13 onzas, que consideramos es cercano a la media poblacional 
+desconocida m. Este tipo de estimación se llama estimación puntual porque un solo valor o 
+punto constituye la estimación de m. En segundo término podríamos decir que m está entre 
+dos números, por ejemplo entre .07 y .19 onzas. En este segundo procedimiento de estimación 
+los dos valores se pueden utilizar para construir un intervalo (.07, .19) que tiene la intención 
+de encerrar el parámetro de interés; entonces, la estimación se denomina estimación de inter-
+valo.
+La información de la muestra se puede emplear para calcular el valor de una estimación 
+puntual, una estimación de intervalo o ambas. En cualquier caso, la estimación real se logra 
+con el uso de un estimador del parámetro objetivo.
+ DEFINICIÓN 8.1 
+Un estimador es una regla, a menudo expresada como una fórmula, que indica cómo 
+calcular el valor de una estimación con base en las mediciones contenidas en una mues-
+tra.
+Por ejemplo, la media muestral
+Y = 1
+n
+n
+i=1
+Yi
+es un posible estimador puntual de la media poblacional m. Claramente, la expresión para Y es 
+una regla y una fórmula. Nos indica que sumemos las observaciones muestrales y dividamos 
+entre el tamaño muestral n.
+Un investigador que necesite una estimación de intervalo de un parámetro debe usar los 
+datos muestrales para calcular dos valores, escogidos de tal modo que el intervalo que formen 
+incluya el parámetro objetivo con una probabilidad específi ca. En las siguientes secciones se 
+darán ejemplos de estimadores por intervalos.
+Muchos estimadores diferentes (reglas de estimación) pueden obtenerse para el mismo 
+parámetro poblacional. Esto no debe ser sorprendente. Diez ingenieros, cada uno de ellos 
+asignado a estimar el costo de un gran trabajo de construcción, podrían usar métodos diferen-
+tes de estimación y por tanto llegar a diferentes evaluaciones del costo total. Estos ingenieros, 
+llamados estimadores en la industria de la construcción, basan sus estimaciones en lineamien-
+tos fi jos especifi cados y en la intuición. Cada estimador representa una regla subjetiva humana 
+única para obtener una sola estimación. Esto nos lleva a un punto más importante: algunos es-
+timadores se consideran buenos y otros malos. La administración de
+
+[Bloque seleccionado #417 | relevancia=18]
+Pagina 416
+392  Capítulo 8  Estimación
+ 
+8.2  Sesgo y error cuadrático medio 
+de estimadores puntuales
+La estimación puntual es similar, en muchos aspectos, a disparar a un blanco con un revól-
+ver. El estimador, que genera estimaciones, es análogo al revólver; una estimación particular 
+es comparable a un tiro; y el parámetro de interés corresponde al centro del blanco o diana. 
+Extraer una sola muestra de una población y usarla para calcular una estimación del valor del 
+parámetro equivale a disparar un solo tiro al centro del blanco.
+Suponga que un hombre dispara un solo tiro y acierta en el centro del blanco. ¿Concluimos 
+que es un excelente tirador? ¿Se atrevería a sostener el blanco cuando se haga un segundo 
+tiro? Obviamente, no podríamos afi rmar que el hombre es un experto tirador si nos basamos 
+en tan pequeña cantidad de evidencia. Por otra parte, si 100 tiros en sucesión aciertan en el 
+blanco, podríamos tener confi anza sufi ciente en el tirador y considerar sostener el blanco para 
+el siguiente tiro si la compensación es adecuada. La cuestión es que no podemos evaluar la 
+bondad de un procedimiento de estimación puntual con base en el valor de una sola estima-
+ción; más bien, debemos observar los resultados cuando el procedimiento de estimación se 
+usa en innumerables veces. Como las estimaciones son números, evaluamos la bondad del 
+estimador puntual al construir una distribución de frecuencia de los valores de las estimacio-
+nes obtenidas en muestreo repetido y observar cómo se agrupa esta distribución alrededor del 
+parámetro objetivo.
+Suponga que deseamos especifi car una estimación puntual para un parámetro poblacional 
+al que llamaremos u. El estimador de u estará indicado por el símbolo ˆu, que se lee como 
+“u sombrero”. El “sombrero” indica que estamos estimando el parámetro que está inme-
+diatamente bajo él. Con el ejemplo del disparo de revólver en mente, podemos decir que es 
+altamente deseable que la distribución de estimaciones ⎯o bien, en forma más apropiada, la 
+distribución muestral de estimaciones⎯ se agrupe alrededor del parámetro objetivo como se 
+muestra en la Figura 8.1. En otras palabras, quisiéramos que la media o valor esperado de la 
+distribución de estimaciones fuera igual al parámetro estimado; esto es, E( )ˆu
+= u. Se dice 
+que los estimadores puntuales que satisfacen esta propiedad son insesgados. La distribución 
+muestral para un estimador puntual sesgado positivamente, para el que E( )ˆu
+> u, se muestra 
+en la Figura 8.2.
+F I G U R A 8.1
+Distribución de esti-
+maciones
+
+ˆ
+F I G U R A 8.2
+Distribución muestral 
+
+[Bloque seleccionado #418 | relevancia=21]
+Pagina 417
+8.2  Sesgo y error cuadrático medio de estimadores puntuales  393
+ DEFINICIÓN 8.2 
+Si ˆu es un estimador puntual de un parámetro u, entonces ˆu es un estimador insesgado si 
+E( ˆu) = u. Si E( ˆu) = u, se dice que ˆu está sesgado.
+ DEFINICIÓN 8.3 
+El sesgo de un estimador puntual ˆu está dado por B( ˆu) = E( ˆu) −u.
+La Figura 8.3 muestra dos posibles distribuciones muestrales para los estimadores pun-
+tuales insesgados de un parámetro objetivo u. Preferiríamos que nuestro estimador tuviera 
+el tipo de distribución indicado en la Figura 8.3(b) porque una varianza pequeña garantiza 
+que, en un muestreo repetido, una fracción más alta de valores de ˆu2 estará “cerca” de u. Por 
+consiguiente, además de preferir un estimador insesgado, necesitamos que la varianza de la 
+distribución del estimador V (ˆu) sea lo más pequeña posible. Dados dos estimadores insesga-
+dos de un parámetro u seleccionaríamos el estimador con la menor varianza mientras, todo lo 
+demás permanece igual.
+Más que usar el sesgo y la varianza de un estimador puntual para caracterizar su bondad, 
+podríamos emplear E[( ˆu −u)2], el promedio del cuadrado de la distancia entre el estimador 
+y su parámetro objetivo.
+ DEFINICIÓN 8.4 
+El error cuadrático medio de un estimador puntual ˆu es
+MSE( ˆu) = E[( ˆu −u)2].
+El error cuadrático medio de un estimador ˆu, MSE ( ˆu), es una función de su varianza y su 
+sesgo. Si B( ˆu) representa el sesgo del estimador ˆu, se puede demostrar que
+MSE(ˆu) = V(ˆu) + [B( ˆu)]2.
+Dejaremos la demostración de este resultado como Ejercicio 8.1.
+En esta sección hemos defi nido propiedades deseables de los estimadores puntuales. En 
+particular, a menudo buscamos estimadores insesgados con varianzas relativamente pequeñas. 
+En la siguiente sección estudiaremos algunos estimadores puntuales insesgados comunes y 
+útiles.
+F I G U R A 8.3
+Distribuciones 
+muestrales para dos 
+estimadores insesga-
+dos: (a) estimador con 
+variación grande; (b) 
+estimador con varia-
+ción pequeña
+ˆ
+f( 1)
+ˆ
+f( 2)
+ˆ 1
+ˆ 2
+
+
+(a)
+(b)
+
+[Bloque seleccionado #420 | relevancia=17]
+Pagina 419
+Ejercicios  395
+ 
+8.9 
+Suponga que Y1, Y2, . . . , Yn constituyen una muestra aleatoria de una población con función de densidad 
+de probabilidad
+ 
+f (y) =
+1
+u + 1
+e−y/(u+1),
+y > 0, u > −1,
+0,
+en cualquier otro punto.
+ 
+ 
+Sugiera un estadístico apropiado para usarlo como estimador insesgado para u. [Sugerencia:considere Y.]
+ 
+8.10 
+El número de descomposturas por semana para un tipo de minicomputadora es una variable aleatoria Y 
+con una distribución de Poisson y media l. Existe una muestra aleatoria Y1, Y2, . . . , Yn de observaciones 
+del número semanal de descomposturas.
+ 
+ 
+a Sugiera un estimador insesgado para l.
+ 
+ 
+b El costo semanal de reparar estas descomposturas es C = 3Y + Y2. Demuestre que E(C) = 4l + l2.
+ 
+ 
+c  Encuentre una función de Y1, Y2, . . . , Yn que sea un estimador insesgado de E(C). [Sugerencia: use 
+lo que sepa acerca de Y y (Y)2.]
+ 
+8.11 
+Sea Y1, Y2, . . . , Yn una muestra aleatoria de tamaño n de una población con media 3. Suponga que ˆu2 es 
+un estimador insesgado de E(Y2) y que ˆ3u es un estimador insesgado de E(Y3). Proponga un estimador 
+insesgado para el tercer momento central de la distribución subyacente.
+ 
+8.12 
+La lectura en un voltímetro conectado a un circuito de prueba está distribuida uniformemente en el 
+intervalo (u, u + 1), donde u es el valor desconocido del voltaje real del circuito. Suponga que Y1, 
+Y2, . . . , Yn denota una muestra aleatoria de esas lecturas.
+ 
+ 
+a Demuestre que Y es un estimador sesgado de u y calcule el sesgo.
+ 
+ 
+b Encuentre una función de Y que sea un estimador insesgado de u.
+ 
+ 
+c Encuentre MSE(Y) cuando Y se use como estimador de u.
+ 
+8.13 
+Hemos visto que si Y tiene una distribución binomial con parámetros n y p, entonces Y/n es un estima-
+dor insesgado de p. Para calcular la varianza de Y, por lo general usamos n(Y/n)(1 − Y/n).
+ 
+ 
+a Demuestre que el estimador sugerido es un estimador sesgado de V(Y).
+ 
+ 
+b Modifi que ligeramente n(Y/n)(1 − Y/n) para formar un estimador insesgado de V(Y).
+ 
+8.14 
+Sea Y1, Y2, . . . , Yn una muestra aleatoria de tamaño n de una población cuya densidad está dada por
+f (y) =
+aya−1/u a,
+0 ≤y ≤u,
+0,
+en cualquier otro punto,
+ 
+ 
+donde a > 0 es un valor fi jo conocido, pero u no se conoce. (Ésta es la familia de distribuciones de 
+potencia introducidas en el ejercicio 6.17.) Considere el estimador ˆu = máx(Y1, Y2, . . . , Yn).
+ 
+ 
+a Demuestre que ˆu es un estimador sesgado de ˆu.
+ 
+ 
+b Determine un multiplo de ˆu que constituya un estimador de ˆu.
+ 
+ 
+c Deduzca MSE(ˆu)
+ 
+8.15 
+Sea Y1, Y2, . . . , Yn una muestra aleatoria de tamaño n de una poblac
+
+[Bloque seleccionado #425 | relevancia=17]
+Pagina 424
+400  Capítulo 8  Estimación
+ DEFINICIÓN 8.5 
+El error de estimación e es la distancia entre un estimador y su parámetro objetivo. Esto 
+es, e = ˆu −u.
+Como ˆu es una variable aleatoria, el error de estimación también es una cantidad aleatoria 
+y no podemos decir qué tan grande o pequeño será para una estimación particular, pero po-
+demos plantear enunciados de probabilidad acerca de él. Por ejemplo, suponga que ˆu es un 
+estimador insesgado de u y tiene una distribución muestral como se muestra en la Figura 8.4. 
+Si seleccionamos dos puntos, (u − b) y (u + b), situados cerca de las colas de la densidad de 
+probabilidad, la probabilidad de que el error de estimación e sea menor que b está representa-
+da por el área sombreada de la Figura 8.4. Esto es,
+P( ˆu −u < b) = P[−b < (ˆu −u) < b] = P(u −b < ˆ
++ b).
+u < u
+Podemos considerar a b como un límite probabilístico en el error de estimación. Aun cuan-
+do no estamos seguros de que un error determinado sea menor que b, la Figura 8.4 indica que 
+P(e < b) es alto. Si b se puede considerar desde un punto de vista práctico como pequeño, 
+entonces P(e < b) da una medida de la bondad de una sola estimación. Esta probabilidad iden-
+tifi ca la fracción de veces, en muestreo repetido, que el estimador ˆu cae dentro de b unidades 
+de u, el parámetro objetivo.
+Suponga que deseamos hallar el valor de b para que P(e < b) = .90. Esto es fácil si conoce-
+mos la función de densidad de probabilidad de ˆu. Entonces buscamos un valor b tal que
+u+b
+u−b
+f (ˆu) d ˆu = .90.
+Pero ya sea que conozcamos o no la distribución de probabilidad de ˆu, si ˆu es insesgado 
+podemos hallar un límite aproximado en e al expresar b como un múltiplo del error estándar 
+de ˆu (recuerde que el error estándar de un estimador es simplemente un nombre alternativo 
+conveniente para la desviación estándar del estimador.) Por ejemplo, para k ≥ 1, si hacemos 
+b = ksˆu, sabemos por el teorema de Tchebysheff que e será menor que ksˆu con probabilidad 
+de al menos 1 − 1/k2. Un valor de k cómodo y de uso frecuente es k = 2. En consecuencia, 
+sabemos que e será menor que b = 2sˆu con probabilidad de al menos .75.
+Usted encontrará que, con probabilidad en la cercanía de .95, muchas variables aleatorias 
+observadas en la naturaleza se encuentran a no más de 2 desviaciones estándar de sus medias. 
+La probabilidad de que Y se encuentre en el intervalo (m ± 2s) se muestra en la Tabla 8.2 para 
+F I G U R A 8.4
+Distribución muestral 
+de un estimador 
+puntual ˆu
+ˆ
+b
+b
+(
+– b)
+
+(
++ b)
+
+
+ˆ
+f( )
+P( < b)
+
+
+[Bloque seleccionado #469 | relevancia=15]
+Pagina 468
+CAPÍTULO    9
+Propiedades de los estimadores 
+puntuales y métodos 
+de estimación
+9.1 
+Introducción
+9.2 
+Eﬁ ciencia relativa
+9.3 
+Consistencia
+9.4 
+Suﬁ ciencia
+9.5 
+Teorema de Rao–Blackwell y estimación insesgada de varianza mínima
+9.6 
+Método de momentos
+9.7 
+Método de máxima verosimilitud
+9.8 
+Algunas propiedades de los estimadores de máxima verosimilitud 
+con muestras grandes (opcional)
+9.9 
+Resumen
+ 
+Bibliografía y lecturas adicionales
+ 
+9.1 Introducción
+En el Capítulo 8 presentamos algunos estimadores intuitivos para parámetros que con fre-
+cuencia son de interés en problemas prácticos. Un estimador ˆu para un parámetro objetivo u es 
+una función de las variables aleatorias observadas en una muestra y, por tanto, también es una 
+variable aleatoria. En consecuencia, un estimador tiene una distribución de probabilidad, la 
+distribución muestral del estimador. Observamos en la Sección 8.2 que, si 
+ˆ
+E(u) = u, entonces 
+el estimador tiene la (a veces) deseable propiedad de ser insesgado.
+En este capítulo emprendemos un análisis más formal y detallado de algunas de las propie-
+dades matemáticas de estimadores puntuales, en particular las nociones de efi ciencia, consis-
+tencia y sufi ciencia. Presentamos un resultado, el teorema de Rao–Blackwell, que proporciona 
+un enlace entre los estadísticos sufi cientes y los estimadores insesgados de los parámetros. En 
+términos generales, un estimador insesgado con variación pequeña es, o se puede hacer que 
+444
+
+[Bloque seleccionado #490 | relevancia=15]
+Pagina 489
+ 
+ 
+ Recuerde los Teoremas 5.14 y 5.15, donde consideramos la forma de hallar medias y 
+varianzas de variables aleatorias con el uso de medias y varianzas condicionales. Como 
+ˆu es un estimador insesgado para u, el Teorema 5.14 implica que
+E(ˆu∗) = E[E(ˆu U)] = E(ˆu) = u.
+|
+Entonces, ˆu∗ es un estimador insesgado para u.
+ El Teorema 5.15 implica que
+V (ˆu) = V [E(ˆu U)] + E[V (ˆu U)]
+= V (ˆu∗) + E[V (ˆu U)].
+|
+|
+|
+ 
+ 
+Como V (ˆu U = u) ≥0
+|
+ para toda u, se deduce que E[V (ˆu U)] ≥0
+|
+ y por tanto 
+que V (ˆu) ≥V (ˆu∗), como dijimos.
+El Teorema 9.5 implica que un estimador insesgado para u con una varianza pequeña es, 
+o puede hacerse que sea, una función de un estadístico sufi ciente. Si tenemos un estimador 
+insesgado para u, podríamos mejorarlo con el uso del resultado del Teorema 9.5. Inicialmente 
+puede parecer que si se aplica una vez el teorema de Rao–Blackwell para obtener un mejor 
+estimador insesgado y luego se aplica nuevamente al nuevo estimador resultante se obtiene 
+un estimador insesgado aún mejor. Si aplicamos el teorema de Rao–Blackwell usando el esta-
+dístico sufi ciente U, entonces ˆu∗= E(ˆu U)
+|
+ será una función del estadístico U, por ejemplo 
+ˆu∗= h (U). Suponga que reaplicamos el teorema de Rao–Blackwell a ˆu∗ con el uso del mismo 
+estadístico sufi ciente U. Puesto que, en general, E (h (U)|U) = h (U), vemos que usando de 
+nuevo el teorema de Rao–Blackwell nuestro “nuevo” estimador es simplemente h(U) = ˆu∗.
+Esto es, si usamos el mismo estadístico sufi ciente en aplicaciones sucesivas del teorema de 
+Rao–Blackwell, no ganamos nada después de la primera aplicación. La única forma en que 
+aplicaciones sucesivas pueden llevar a mejores estimadores insesgados es si usamos un es-
+tadístico sufi ciente distinto cada vez que se reaplica el teorema. Así, no es necesario usar 
+el teorema de Rao–Blackwell sucesivamente si usamos el estadístico sufi ciente correcto en 
+nuestra aplicación inicial.
+Debido a que numerosos estadísticos son sufi cientes para un parámetro u asociado con una 
+distribución, ¿qué estadístico sufi ciente debemos usar cuando apliquemos este teorema? Para 
+las distribuciones que estudiamos en este texto, el criterio de factorización de manera típica 
+identifi ca un estadístico U que mejor resume la información de los datos acerca del parámetro 
+u. Tales estadísticos reciben el nombre de estadísticos sufi cientes mínimos. El Ejercicio 9.66 
+presenta un método para determinar un estadístico sufi ciente mínimo que podría ser de in-
+terés para algunos lectores. En unos pocos de los ejercicios subsiguientes veremos
+
+[Bloque seleccionado #500 | relevancia=18]
+Pagina 499
+Usando el criterio de factorización podemos demostrar que 
+n
+i=1 Yi y el producto 
+n
+i=1 Yi son 
+estadísticos sufi cientes para la función de densidad gamma. Como los estimadores del método 
+de momentos a y
+ˆ
+ˆb no son funciones de estos estadísticos sufi cientes, podemos hallar más 
+estimadores efi cientes para los parámetros a y b. No obstante, es considerablemente más di-
+fícil aplicar otros métodos para hallar estimadores de estos parámetros.
+Para resumir, el método de momentos permite generar estimadores de parámetros desco-
+nocidos al igualar los correspondientes momentos muestrales y poblacionales. El método es 
+fácil de emplear y proporciona estimadores consistentes, pero los estimadores obtenidos por 
+este método en ocasiones no son funciones de estadísticos sufi cientes. En consecuencia, es 
+frecuente que los estimadores del método de momentos no sean efi cientes y en muchos casos 
+sean sesgados. Las virtudes básicas de este método son su facilidad de aplicación y que a 
+veces proporciona estimadores con propiedades razonables.
+Ejercicios
+ 
+9.69 
+Sea Y1, Y2, . . . , Yn una muestra aleatoria de la función de densidad de probabilidad
+f (y u) =
+(u + 1)yu,
+0 < y < 1
+u
+−1,
+0,
+en cualquier otro punto.
+|
+>
+ 
+ 
+Encuentre un estimador para u por el método de momentos. Demuestre que el estimador es consistente. 
+¿El estimador es una función del estadístico sufi ciente −
+n
+i=1 ln(Yi) que podemos obtener del criterio 
+de factorización? ¿Qué implicaciones tiene esto?
+ 
+9.70 
+Suponga que Y1, Y2, . . . , Yn constituyen una muestra aleatoria de una distribución de Poisson con media 
+l. Encuentre el estimador del método de momentos para l.
+ 
+9.71 
+Si Y1, Y2, . . . , Yn denotan una muestra aleatoria de la distribución normal con media conocida m = 0 y 
+varianza desconocida s2, encuentre el estimador de s2 por el método de momentos.
+ 
+9.72 
+Si Y1, Y2, . . . , Yn denotan una muestra aleatoria de una distribución normal con media m y varianza s2, 
+encuentre los estimadores de m y s2 por medio del método de momentos.
+ 
+9.73 
+Una urna contiene u bolas negras y N − u bolas blancas. Una muestra de n bolas se ha de seleccionar sin 
+restitución. Sea Y el número de bolas negras de la muestra. Demuestre que (N/n)Y es el estimador del 
+método de momentos para u.
+ 
+9.74 
+Sea Y1, Y2, . . . , Yn una muestra aleatoria de la función de densidad de probabilidad dada por
+f (y u) =
+2
+u2
+(u −y),
+0 ≤y ≤u,
+0,
+en cualquier otro punto.
+|
+ 
+ 
+a Encuentre un estimador para u usando el método de momentos.
+ 
+ 
+b ¿Este estimador es un estadístico sufi ciente para u?
+ 
+9.75 
+Sea Y1
+
+[Bloque seleccionado #925 | relevancia=24]
+Pagina 924
+900  Índice
+Eficiencia relativa, 445-448
+Elementos de identidad, 824-826
+Enlaces
+ 
+en correlación de rango, 783-784
+ 
+en experimentos pareados, 746, 750-
+751, 766
+Error cuadrático medio de estimadores 
+puntuales, 393
+Error de estimación, 297, 399-400
+ 
+buen límite aproximado en, 401
+ 
+límite probabilístico en, 400
+ 
+tamaño muestral y, 421-422
+Errores
+ 
+aleatorios, 568, 584, 633
+ 
+cuadráticos medios, 393
+ 
+estándar, 397, 399, 645
+ 
+experimentales, 654
+ 
+predicción, 594-595, 622-623
+ 
+tipo I, 491, 493-494
+ 
+tipo II, 491, 493-494, 507-510, 541
+ 
+Vea también Suma de cuadrados de 
+error
+Errores aleatorios, 568, 584, 633
+Errores estándar
+ 
+datos pareados y, 645
+ 
+de estimadores puntuales, 397, 399
+Errores tipo I, 491, 493-494
+ 
+probabilidad de, 491, 493
+ 
+relacionados a errores tipo II, 493
+Errores tipo II, 491, 493-494
+ 
+poder de pruebas y, 541
+ 
+probabilidad de, 491, 493, 507-510
+ 
+relacionados con errores tipo I, 493
+Espacio muestral, 28, 70
+ 
+discreto, 28, 29
+ 
+partición de, 70, 71
+Espacio muestral discreto, 28
+Especificidad de una prueba, 73
+Estadística, 347
+ 
+definición de, 1-2
+ 
+F, 535-537
+ 
+k-ésimo orden, 336-337
+ 
+no paramétrica, 742
+ 
+objetivo de, 2-3
+ 
+orden, 333-340
+ 
+paramétrica, 742
+ 
+suficiente mínimo, 465, 467, 471
+ 
+suficiente, 459, 461-462
+ 
+usos para, 1
+ 
+y prueba de hipótesis, 489
+Estadístico, 346-347
+ 
+k-ésimo orden, 336
+ 
+suficiente. Vea Estadístico suficiente
+Estadístico de orden, 333-340
+Estadístico de prueba
+ 
+como elemento de prueba estadística, 
+490
+ 
+Vea también Estadística de prueba 
+específica
+Estadístico de prueba de Pearson, 714, 
+715
+Estadístico no paramétrico, 741-795
+ 
+coeficiente de correlación de rango 
+de Spearman, 783-789
+ 
+definición de, 742
+ 
+fuentes de información adicional 
+sobre, 790-791
+ 
+modelo de cambio de dos muestras, 
+742-743
+ 
+prueba de Friedman, 771-777
+ 
+prueba de signo para un experimento 
+de pares acoplados, 744-750
+ 
+prueba de subsucesiones, 777-783
+ 
+prueba de suma de rango, 755-757
+ 
+prueba de Wilcoxon de rango con 
+signo, 750-755
+ 
+prueba de Wilcoxon de suma de 
+rango, 755
+ 
+prueba Kruskal-Wallis, 765-771
+ 
+prueba U de Mann-Whitney, 756, 
+758-765
+ 
+usos para, 741-742, 789-790
+Estadístico suficiente, 459, 461-462
+ 
+estimadores insesgados y, 464-470
+ 
+funciones de, 465, 470
+ 
+intervalos de confianza y, 468
+ 
+mínimo, 465, 471
+ 
+usos para, 464-465, 468
+Estadísticos mínimos suficientes, 465, 
+471
+Estimación, 390-443
+ 
+bondad de, 556
+ 
+diseño aleatorizado de bloque y, 695-
+696
+ 
+diseños en una dirección y, 681-685
+ 
+error de, 297, 399-400, 422
+ 
+inferencias y, 556
+ 
+máxima probabilidad, 476-483
+ 
+
+
+[Bloque seleccionado #926 | relevancia=15]
+Pagina 925
+Índice  901
+ 
+intervalo de confianza para, 586
+ 
+notación empleada para, 577
+ 
+propiedades de, 577-583, 616
+ 
+prueba de hipótesis para, 585
+ 
+regresión lineal múltiple y, 615-616
+ 
+regresión lineal simple y, 571, 
+577-583, 610
+ 
+valor esperado para, 577-581
+ 
+varianza para, 577-581
+Estimadores insesgados de varianza 
+mínima (MVUEs), 465-472, 476
+ 
+únicos, 472
+ 
+y el método de máxima probabilidad, 
+476-477
+Estimadores puntuales
+ 
+bondad de, 392, 399-406
+ 
+consistencia de, 448-459
+ 
+eficiencia relativa de, 445-448
+ 
+error cuadrático medio de, 393
+ 
+errores estándar de, 397, 399
+ 
+insesgados, 392, 393, 396-399, 445
+ 
+método de momentos, 472-475
+ 
+propiedades de, 445-464
+ 
+sesgados, 392, 393
+ 
+suficiencia de, 459-464
+ 
+suficiente mínimo, 467
+ 
+tamaños muestrales para, 397
+ 
+valores esperados de, 397, 399
+ 
+Vea también Estimadores
+Estimadores puntuales insesgados, 392, 
+393
+ 
+consistencia de, 450
+ 
+distribuciones muestrales para, 393
+ 
+eficiencia relativa de, 445
+ 
+regresión lineal simple y, 577
+ 
+teorema de Rao-Blackwell para, 
+464-472
+ 
+varianza mínima única, 472
+ 
+varianza mínima, 464-472
+ 
+varianza muestral como, 398
+Estimadores sesgados, 392, 393
+ 
+distribución muestral para, 393
+ 
+estimadores de Bayes como, 803, 818
+Eventos, 27
+ 
+aleatorios, 20
+ 
+complementarios, 66
+ 
+compuestos, 27, 28-29
+ 
+dependientes, 53
+ 
+descomposición de, 70
+ 
+diferencia simétrica entre, 74
+ 
+espacio muestral discreto, 29
+ 
+estocásticos, 20
+ 
+independientes, 53
+ 
+intersección de dos o más, 223-235
+ 
+intersección de n, 231
+ 
+mutuamente exclusivos, 58, 59
+ 
+numéricos, 75
+ 
+simples, 27
+Eventos aleatorios, 20
+Eventos complementarios, 66
+Eventos compuestos, 27, 28-29
+Eventos dependientes, 53
+Eventos estocásticos, 20
+Eventos independientes, 53
+Eventos mutuamente exclusivos, 58, 59
+ 
+y ley aditiva de probabilidad, 63-64
+Eventos numéricos, 75
+Eventos simples, 27
+Expansión binomial, 46, 104, 835
+Expansión de serie de Taylor, 835
+Expectativas
+ 
+condicionales, 285-290
+ 
+distribuciones mezcladas y, 210-213
+ 
+funciones discontinuas y, 210-213
+Expectativas condicionales, 285-290
+Experimento de diferencia pareada, 648
+Experimento de muestras independien-
+tes, 645
+Experimento de pares acoplados, 641
+ 
+diseño experimental de, 644-651
+ 
+prueba de signo para, 744-750
+ 
+prueba de Wilcoxon de rango con 
+signo para, 750-755
+ 
+utilidad de, 648
+Experimento de un solo factor, 652
+Experimentos, 26-35
+ 
+binomiales, 101-102, 280
+ 
+datos categóricos, 713-714
+ 
+definición de, 27
+ 
+diferencia pareada, 648
+ 
+diseño de, 78, 421, 640-660
+ 
+errores asociados con, 654
+ 
+factor único, 652
+ 
+factores y niv

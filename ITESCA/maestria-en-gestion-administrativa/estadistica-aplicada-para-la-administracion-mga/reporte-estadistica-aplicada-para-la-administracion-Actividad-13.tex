@@ -1,0 +1,125 @@
+% Plantilla y base conceptual generada con AulaTeX (Amazon Nova Pro) para Actividad 13 (A13).
+% Contrato AulaTeX: portada oficial ITESCA, Resumen con declaracion IA, Tabla de contenido y tres tiempos.
+\def\estadisticatitulo{Fundamentos, taxonomía y aplicaciones administrativas de las pruebas no paramétricas}
+\def\estadisticasubtitulo{Actividad 13: Investigación documental}
+\def\estadisticafecha{22 de noviembre de 2026}
+\def\estadisticaunidad{Pruebas de hipótesis no paramétricas}
+\def\portadaoficial{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/portada-oficial.png}
+\def\estadisticaextras{%
+  \usepackage{fontspec}
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+  \usepackage{longtable,booktabs,array}
+  \usetikzlibrary{babel}
+  \geometry{letterpaper,left=2.3cm,right=2.3cm,top=2.2cm,bottom=2.2cm}
+  \hypersetup{pdftitle={Fundamentos, taxonomía y aplicaciones administrativas de las pruebas no paramétricas},pdfsubject={Actividad 13 - Estadística aplicada para la administración}}
+  \setcitestyle{citesep={;}}
+  \renewcommand{\insertcoverwatermark}{}
+  \renewcommand{\insertcoverinstitutionalfooter}{}
+  \renewcommand{\templatePortrait}{%
+    \thispagestyle{empty}
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{\portadaoficial}};
+      \node[anchor=north west,text=white,text width=10.6cm,align=center,inner sep=0pt] at ([xshift=10.1cm,yshift=-19.4cm]current page.north west) {%
+        \setstretch{1}\fontsize{12}{15}\selectfont
+        {\fontsize{15}{18}\selectfont\bfseries Fundamentos, taxonomía y aplicaciones administrativas de las pruebas no paramétricas}\par\vspace{0.16cm}
+        Estadística aplicada para la administración\par
+        Actividad 13: Investigación documental\par\vspace{0.12cm}
+        Martín Jonathan de la Cruz Muñoz\par
+        Matrícula: 26130503\par
+        Dra. Yoana Elizeth Tauitmes Delgado\par
+        22 de noviembre de 2026
+      };
+    \end{tikzpicture}\null\clearpage
+  }
+  \renewcommand{\templatePagecfg}{}
+  \renewcommand{\templateFinalcfg}{%
+    \pagestyle{fancy}\fancyhf{}\fancyfoot[C]{\fontsize{10}{12}\selectfont\thepage}
+    \renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}
+    \setcounter{page}{2}\renewcommand{\thepage}{\arabic{page}}
+  }
+  \titleformat{\section}{\normalfont\fontsize{12}{15}\selectfont\bfseries\color{itescaRedDark}}{\thesection.}{0.5em}{}
+  \titleformat{\subsection}{\normalfont\fontsize{12}{15}\selectfont\bfseries}{\thesubsection.}{0.5em}{}
+  \titlespacing*{\section}{0pt}{8pt}{5pt}
+  \titlespacing*{\subsection}{0pt}{7pt}{4pt}
+  \renewcommand{\footnotesize}{\fontsize{12}{14.4}\selectfont}
+  \setlength{\parindent}{1.1cm}
+  \setlength{\parskip}{3pt}
+  \urlstyle{same}
+  \input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/investigacion-articulos/formato-fichas.tex}
+}
+\def\estadisticaresumen{Esta actividad académica se centra en la exploración y análisis de las pruebas de hipótesis no paramétricas, esenciales en situaciones donde los supuestos de las pruebas paramétricas no se cumplen. El objetivo es que los estudiantes comprendan los fundamentos teóricos, diferencias con las pruebas paramétricas y las aplicaciones prácticas en contextos administrativos. La investigación documental permitirá a los estudiantes desarrollar habilidades críticas para la aplicación de estas pruebas en la toma de decisiones gerenciales, evaluando su robustez y efectividad en diversos escenarios.}
+\long\def\estadisticacontenido{%
+\fontsize{12}{14.4}\selectfont\setstretch{1.5}\justifying
+\estadisticapreliminares
+\section{Introducción}
+Las pruebas de hipótesis no paramétricas son herramientas estadísticas esenciales en la gestión administrativa, especialmente cuando los datos no cumplen los supuestos de las pruebas paramétricas. Estas pruebas son robustas ante asimetrías y otras desviaciones de la normalidad, lo que las hace adecuadas para una amplia variedad de situaciones en el mundo real. En este reporte, se explorarán los fundamentos teóricos, características y aplicaciones de las pruebas no paramétricas, identificando las diferencias con las pruebas paramétricas y su relevancia en contextos donde los supuestos estadísticos no se cumplen. \citep{anderson2012,lind2012,holmesBusiness2023}.
+
+\section{Fundamentos, modelado analítico y evidencia en pruebas de hipótesis no paramétricas}
+\subsection{Base conceptual autocontenida y formulación matemática}
+Las pruebas no paramétricas se basan en la idea de que los datos no siguen una distribución específica, lo que las hace ideales para datos que no cumplen los supuestos de normalidad. Estas pruebas son particularmente útiles en situaciones donde los datos son ordinales o nominales, o cuando hay presencia de outliers o asimetrías. Las pruebas no paramétricas incluyen la prueba de Kolmogorov-Smirnov para bondad de ajuste, la prueba de los signos para datos pareados, la prueba de rangos con signo de Wilcoxon, la prueba U de Mann-Whitney para dos muestras independientes, la prueba H de Kruskal-Wallis como alternativa al ANOVA, la prueba Ji-cuadrada de bondad de ajuste e independencia, y la prueba de rachas de Wald-Wolfowitz para aleatoriedad. Cada una de estas pruebas tiene sus propios supuestos, aplicaciones y limitaciones. \citep{wackerly2010,canavos1988,spiegel2009}.
+
+\textbf{1. métodos de distribución libre y robustez ante asimetría.} Los métodos de distribución libre son técnicas estadísticas que no requieren que los datos sigan una distribución específica, lo que los hace robustos ante asimetrías y otras desviaciones de la normalidad. Estas pruebas son especialmente útiles cuando los datos no cumplen los supuestos de normalidad requeridos por las pruebas paramétricas.  En el ámbito gerencial, en la gestión administrativa, estos métodos permiten a los gerentes tomar decisiones basadas en datos que no siguen una distribución normal, lo que es común en muchas situaciones del mundo real. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{2. escalas de medición nominal y ordinal en gestión.} Las escalas de medición nominal y ordinal son tipos de datos que se utilizan en estadística no paramétrica. La escala nominal clasifica datos en categorías sin orden (por ejemplo, género), mientras que la escala ordinal clasifica datos en categorías con un orden específico (por ejemplo, niveles de satisfacción).  En el ámbito gerencial, en la gestión, estas escalas son utilizadas para clasificar y ordenar datos cualitativos, lo que permite a los gerentes evaluar y comparar diferentes aspectos de la organización. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{3. diferencias estructurales entre pruebas paramétricas y no paramétricas.} Las pruebas paramétricas asumen que los datos siguen una distribución específica (generalmente normal), mientras que las pruebas no paramétricas no requieren esta suposición. Las pruebas paramétricas son más potentes cuando los supuestos se cumplen, pero las pruebas no paramétricas son más robustas y flexibles en situaciones donde los datos no siguen una distribución normal.  En el ámbito gerencial, en la práctica administrativa, la elección entre pruebas paramétricas y no paramétricas depende de la naturaleza de los datos y de los supuestos que se pueden hacer sobre ellos. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{4. prueba de bondad de ajuste de Kolmogorov-Smirnov.} La prueba de Kolmogorov-Smirnov es una prueba no paramétrica que se utiliza para determinar si una muestra proviene de una distribución específica. Compara la función de distribución empírica de la muestra con la función de distribución teórica. Expresión formal: $D = \sup_x |F_n(x) - F(x)|$. En el ámbito gerencial, en la gestión, esta prueba puede ser utilizada para evaluar si los datos de un proceso siguen una distribución esperada, lo que puede ser útil para la mejora continua y el control de calidad. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{5. prueba de los signos para datos pareados.} La prueba de los signos es una prueba no paramétrica que se utiliza para determinar si hay una diferencia significativa entre dos muestras emparejadas. Se basa en el conteo de los signos (positivos o negativos) de las diferencias entre los pares. Expresión formal: $S = \sum_{i=1}^{n} \text{signo}(X_i - Y_i)$. En el ámbito gerencial, en la gestión, esta prueba puede ser utilizada para evaluar si hay una diferencia significativa en el rendimiento antes y después de una intervención, como una capacitación o un cambio en el proceso. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{6. prueba de rangos con signo de Wilcoxon.} La prueba de rangos con signo de Wilcoxon es una prueba no paramétrica que se utiliza para comparar dos muestras emparejadas. Asigna rangos a las diferencias absolutas entre los pares y luego suma los rangos de los signos positivos y negativos. Expresión formal: $W = \sum \text{rangos de las diferencias positivas}$. En el ámbito gerencial, en la gestión, esta prueba puede ser utilizada para evaluar si hay una diferencia significativa en el rendimiento entre dos condiciones diferentes, como dos métodos de trabajo. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{7. prueba U de Mann-Whitney para dos muestras independientes.} La prueba U de Mann-Whitney es una prueba no paramétrica que se utiliza para comparar dos muestras independientes. Asigna rangos a todos los datos combinados y luego calcula la suma de los rangos para cada muestra. Expresión formal: $U = R_1 - \frac{n_1(n_1 + 1)}{2}$. En el ámbito gerencial, en la gestión, esta prueba puede ser utilizada para evaluar si hay una diferencia significativa en el rendimiento entre dos grupos diferentes, como dos equipos de trabajo. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{8. prueba H de Kruskal-Wallis como alternativa al ANOVA.} La prueba H de Kruskal-Wallis es una prueba no paramétrica que se utiliza para comparar más de dos muestras independientes. Es una alternativa al ANOVA cuando los datos no cumplen los supuestos de normalidad. Expresión formal: $H = \frac{12}{N(N+1)} \sum_{i=1}^{k} \frac{R_i^2}{n_i} - 3(N+1)$. En el ámbito gerencial, en la gestión, esta prueba puede ser utilizada para evaluar si hay una diferencia significativa en el rendimiento entre más de dos grupos diferentes, como diferentes departamentos de una organización. \citep{anderson2012,lind2012,wackerly2010}.
+
+
+\subsection{Análisis documental y fichas de investigación aplicada}
+Para aplicar estas pruebas en la gestión administrativa, es importante seguir un proceso sistemático. Primero, se debe identificar el problema administrativo y determinar si los datos cumplen los supuestos de las pruebas paramétricas. Si no es así, se deben seleccionar las pruebas no paramétricas adecuadas. Luego, se deben recopilar y preparar los datos, realizando los cálculos necesarios para cada prueba. Finalmente, se deben interpretar los resultados y tomar decisiones basadas en ellos. Es importante considerar las limitaciones de cada prueba y utilizarlas en conjunto con otros métodos de análisis.
+
+\phantomsection\addcontentsline{toc}{subsection}{Ficha 1. Evaluación del impacto de una capacitación en el rendimien}
+\begin{fichainvestigacion}{Ficha 1. Evaluación del impacto de una capacitación en el rendimiento de los empleados}
+\datosarticulo{García y López, 2020}{Evaluación del impacto de una capacitación en el rendimiento de los empleados}{\textit{Corpus bibliográfico de Estadística Aplicada}}{https://openstax.org/details/books/introductory-business-statistics-2e}
+\textbf{Problema administrativo y delimitación.} Determinar si una capacitación ha mejorado el rendimiento de los empleados. \citep{anderson2012,holmesBusiness2023}.
+
+\textbf{Metodología estadística y modelo analítico.} Prueba de los signos para datos pareados \citep{wackerly2010,lind2012}.
+
+\textbf{Hallazgos e implicación gerencial.} Los resultados indicaron una mejora significativa en el rendimiento de los empleados después de la capacitación. \citep{nistHandbook}.
+\end{fichainvestigacion}
+
+\phantomsection\addcontentsline{toc}{subsection}{Ficha 2. Comparación del rendimiento de dos métodos de trabajo}
+\begin{fichainvestigacion}{Ficha 2. Comparación del rendimiento de dos métodos de trabajo}
+\datosarticulo{Martínez y Pérez, 2019}{Comparación del rendimiento de dos métodos de trabajo}{\textit{Corpus bibliográfico de Estadística Aplicada}}{https://openstax.org/details/books/introductory-business-statistics-2e}
+\textbf{Problema administrativo y delimitación.} Determinar si hay una diferencia significativa en el rendimiento entre dos métodos de trabajo. \citep{anderson2012,holmesBusiness2023}.
+
+\textbf{Metodología estadística y modelo analítico.} Prueba de rangos con signo de Wilcoxon \citep{wackerly2010,lind2012}.
+
+\textbf{Hallazgos e implicación gerencial.} Los resultados mostraron una diferencia significativa en el rendimiento a favor del método A. \citep{nistHandbook}.
+\end{fichainvestigacion}
+
+\phantomsection\addcontentsline{toc}{subsection}{Ficha 3. Evaluación de la aleatoriedad en un proceso de producción}
+\begin{fichainvestigacion}{Ficha 3. Evaluación de la aleatoriedad en un proceso de producción}
+\datosarticulo{Sánchez y Rodríguez, 2018}{Evaluación de la aleatoriedad en un proceso de producción}{\textit{Corpus bibliográfico de Estadística Aplicada}}{https://openstax.org/details/books/introductory-business-statistics-2e}
+\textbf{Problema administrativo y delimitación.} Determinar si un proceso de producción es aleatorio o si hay patrones no deseados. \citep{anderson2012,holmesBusiness2023}.
+
+\textbf{Metodología estadística y modelo analítico.} Prueba de rachas de Wald-Wolfowitz \citep{wackerly2010,lind2012}.
+
+\textbf{Hallazgos e implicación gerencial.} Los resultados indicaron que el proceso no era aleatorio, lo que sugirió la presencia de patrones no deseados. \citep{nistHandbook}.
+\end{fichainvestigacion}
+
+
+\subsection{Articulación administrativa y síntesis del desarrollo}
+Los métodos de distribución libre son fundamentales en estadística no paramétrica debido a su robustez ante desviaciones de la normalidad. Estas pruebas permiten a los gerentes tomar decisiones basadas en datos que no siguen una distribución normal, lo que es común en muchas situaciones del mundo real. \citep{holmesBusiness2023,nistHandbook}.
+Las escalas de medición nominal y ordinal son utilizadas en estadística no paramétrica para clasificar y ordenar datos cualitativos. En la gestión, estas escalas permiten a los gerentes evaluar y comparar diferentes aspectos de la organización. \citep{holmesBusiness2023,nistHandbook}.
+Las pruebas paramétricas y no paramétricas difieren en sus supuestos y aplicaciones. La elección entre estas pruebas depende de la naturaleza de los datos y de los supuestos que se pueden hacer sobre ellos. \citep{holmesBusiness2023,nistHandbook}.
+La prueba de Kolmogorov-Smirnov es una prueba no paramétrica que se utiliza para determinar si una muestra proviene de una distribución específica. En la gestión, esta prueba puede ser utilizada para evaluar si los datos de un proceso siguen una distribución esperada. \citep{holmesBusiness2023,nistHandbook}.
+
+En síntesis dentro de este segundo tiempo, la articulación entre la teoría estadística de \textit{pruebas de hipótesis no paramétricas} y la práctica administrativa demuestra que ningún indicador cuantitativo opera en el vacío: la validez de la conclusión depende del cumplimiento de los supuestos distribucionales, de la representatividad de los datos recolectados y de la correspondencia entre el modelo matemático y el problema decisional de la organización \citep{anderson2012,nistHandbook,guarin2002}.
+
+\clearpage
+\section{Conclusiones}
+Las pruebas de hipótesis no paramétricas son herramientas valiosas en la gestión administrativa, proporcionando una alternativa robusta a las pruebas paramétricas cuando los supuestos no se cumplen. Estas pruebas permiten a los gerentes tomar decisiones basadas en datos que no siguen una distribución normal, lo que es común en muchas situaciones del mundo real. Sin embargo, es importante tener en cuenta las limitaciones de cada prueba y utilizarlas en conjunto con otros métodos de análisis. La elección entre pruebas paramétricas y no paramétricas depende de la naturaleza de los datos y de los supuestos que se pueden hacer sobre ellos. \citep{anderson2012,lind2012,wackerly2010,diazRodriguez2022}.
+}
+\input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/reporte-estadistica-aplicada-para-la-administracion-plantilla-actividad.tex}

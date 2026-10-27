@@ -1,0 +1,718 @@
+Fuente bibliográfica: Estadística para administración y economía - Levin y Rubin. 7.ª edición revisada.pdf
+Actividad: 20 (7.1 Infografía Equipo 3% Tarea)
+Palabras clave: regresión lineal simple, regresión lineal múltiple, mínimos cuadrados, correlación, coeficiente de determinación, ANOVA, variables ficticias
+
+[Bloque seleccionado #555 | relevancia=18]
+Pagina 554
+Los estadísticos han desarrollado dos medidas para describir la correlación entre dos variables: el
+coeficiente de determinación y el coeficiente de correlación. Presentar estas dos medidas de asocia-
+ción es el objetivo de esta sección.
+El coeficiente de determinación
+El coeficiente de determinación es la principal forma en que podemos medir el grado, o fuerza, de
+la asociación que existe entre dos variables, X y Y. Debido a que usamos una muestra de puntos pa-
+ra desarrollar rectas de regresión, nos referimos a esta medida como el coeficiente de determinación
+muestral.
+El coeficiente de determinación muestral se deriva de la relación entre dos tipos de variación: la
+variación de los valores Y en un conjunto de datos alrededor de
+1. la recta de regresión ajustada;
+2. su propia media.
+El término variación en estos dos casos se utiliza en su sentido estadístico usual para expresar “la
+suma de los cuadrados de un grupo de desviaciones”. Usando esta definición, entonces, es razona-
+ble expresar la variación de los valores Y alrededor de la recta de regresión con esta ecuación:
+Desarrollo del coefi-
+ciente de determina-
+ción muestral
+Dos medidas que
+describen la correla-
+ción
+536
+Capítulo 12
+Regresión simple y correlación
+Variación de los valores de Y alrededor de la recta de regresión
+Variación de los valores de Y alrededor de la recta de regresión  (Y  Yˆ)2
+[12-8]
+Variación de los valores de Y alrededor de su propia media 
+Variación de los valores de Y alrededor de su propia media  (Y  Y)2
+[12-9]
+Coeficiente de determinación muestral
+r2  1  
+[12-10]
+(Y  Yˆ)2
+
+(Y  Y)2
+La segunda variación, la de los valores de Y alrededor de su propia media, está determinada por:
+Uno menos la razón entre estas dos variaciones es el coeficiente de determinación muestral, que se
+denota por r2:
+Las siguientes dos secciones mostrarán que r2, según la definición de la ecuación 12-10, es una me-
+dida del grado de asociación lineal entre X y Y.
+Una interpretación intuitiva de r 2
+Considere las dos formas extremas en las que las variables X y Y pueden relacionarse. En la tabla
+12-13, cada valor observado de Y cae en la línea de estimación, como puede verse en la figura 12-13.
+Ésta es una correlación perfecta.
+La ecuación de estimación apropiada para estos datos es fácil de determinar. Dado que la recta de
+regresión pasa por el origen, sabemos que la ordenada Y es cero; como Y se incrementa en 4 cada
+vez que X se incrementa en 1, la pendiente debe ser igual a 4. Por tanto, la recta de regresión es:
+Yˆ  4X
+Ecuación de estima-
+ción apropiada para
+un ejemplo
+
+[Bloque seleccionado #558 | relevancia=11]
+Pagina 557
+Variación de los valores de Y alrededor 
+de la recta de regresión  (Y  Yˆ)2
+[12-8]
+(16  9)2  (3)2  9
+(12  9)2  (3)2  9
+(16  9)2  (3)2  9
+(12  9)2  (3)2  9
+(16  9)2  (3)2  9
+(12  9)2  (3)2  9
+(16  9)2  (3)2  9
+(12  9)2  (3)2  9
+72
+ ←(Y Yˆ )2
+Variación de los valores de Y alrededor 
+de su propia media  (Y  Y)2
+[12-9]
+(16  9)2  (3)2  9
+(12  9)2  (3)2  9
+(16  9)2  (3)2  9
+(12  9)2  (3)2  9
+(16  9)2  (3)2  9
+(12  9)2  (3)2  9
+(16  9)2  (3)2  9
+(12  9)2  (3)2  9
+72
+ ←(Y  Y)2
+Sustituyendo estos dos valores en la ecuación 12-10, vemos que el coeficiente de determinación de
+la muestra es 0:
+r2  1 
+[12-10]
+ 1  7
+7
+2
+2
+
+ 1  1
+ 0 ←coeficiente de determinación de la
+muestra cuando no hay correlación
+Por tanto, el valor de r2 es cero cuando no hay correlación.
+En los problemas con que se topa la mayoría de los responsables de la toma de decisiones, r2 cae-
+rá en alguna parte entre estos dos extremos de 1 y 0. Recuerde, no obstante, que r2 cercana a 1 indica
+una fuerte correlación entre X y Y, mientras que r2 cercana a 0 significa que existe poca correlación
+entre estas dos variables.
+Un punto que debemos resaltar es que r2 mide sólo la fuerza de una relación lineal entre dos
+variables. Por ejemplo, si tuviéramos muchos puntos X y Y, y todos cayeran en la circunferencia de
+un círculo, aunque dispersos aleatoriamente, claramente habría una relación entre estos puntos (to-
+dos están en el mismo círculo). Pero en este caso, si calculáramos r2, resultaría estar cerca de cero,
+porque los puntos no tienen una relación lineal entre ellos.
+Otra interpretación de r2
+Los estadísticos también interpretan el coeficiente de determinación de la muestra viendo la canti-
+dad de la variación en Y que se explica por la recta de regresión. Para entender este significado de
+r 2, consideremos la recta de regresión de la figura 12-15. Aquí, separamos un valor observado de Y,
+mostrado como el círculo negro superior. Si usamos la media de los valores deY,Y, para estimar este
+Otra forma de inter-
+pretar el coeficiente
+de determinación de
+la muestra
+Interpretación de
+los valores r2
+(Y  Yˆ)2
+
+(Y  Y)2
+12.3
+Análisis de correlación
+539
+
+[Bloque seleccionado #562 | relevancia=27]
+Pagina 561
+Ejercicios 12.3
+Ejercicios de autoevaluación
+EA
+12-4
+Las librerías de la universidad han vendido el libro Believe or Not: Wonders of Statistics Guide durante
+12 semestres y desean estimar la relación entre las ventas y el número de secciones de estadística elemen-
+tal que se enseñan en cada semestre. Se recolectaron los siguientes datos:
+Ventas (unidades)
+33
+38
+24
+61
+52
+45
+Número de secciones
+3
+7
+6
+6
+10
+12
+Ventas (unidades)
+65
+82
+29
+63
+50
+79
+Número de secciones
+12
+13
+12
+13
+14
+15
+a)
+Desarrolle la ecuación de estimación que mejor se ajuste a los datos.
+b) Calcule el coeficiente de determinación de la muestra y el coeficiente de correlación de la muestra.
+EA
+12-5
+Calcule el coeficiente de determinación de la muestra y el coeficiente de correlación de la muestra para
+los datos del ejercicio EA 12-3.
+Conceptos básicos
+■12-25
+¿Qué tipo de correlación (positiva, negativa o cero) debe esperarse de estas variaciones?
+a)
+Habilidad de los supervisores y producción de sus subordinados.
+b) Edad en el primer trabajo de tiempo completo y años de educación.
+c)
+Peso y presión sanguínea.
+d) Promedio general en la universidad y estatura del estudiante.
+En los siguientes ejercicios, calcule el coeficiente de determinación de la muestra y el coeficiente de co-
+rrelación para los ejercicios especificados.
+■12-26
+Calcule el coeficiente de determinación de la muestra y el coeficiente de correlación para los datos del
+ejercicio 12-17.
+■12-27
+Calcule el coeficiente de determinación de la muestra y el coeficiente de correlación para los datos del
+ejercicio 12-18.
+■12-28
+Calcule el coeficiente de determinación de la muestra y el coeficiente de correlación para los datos del
+ejercicio 12-19.
+■12-29
+Calcule el coeficiente de determinación de la muestra y el coeficiente de correlación para los datos del
+ejercicio 12-20.
+■12-30
+Calcule el coeficiente de determinación de la muestra y el coeficiente de correlación para los datos del
+ejercicio 12-21.
+Aplicaciones
+■12-31
+El Bank of Lincoln está interesado en reducir el tiempo que las personas esperan para ver a su banquero
+personal. También le interesa la relación entre el tiempo de espera (Y) en minutos y el número de banque-
+ros atendiendo (X). Los clientes se seleccionaron al azar con los datos siguientes:
+12.3
+Análisis de correlación
+543
+Advertencia: como ya sabe que el coefi-
+ciente de determinación (r2) es el cua-
+drado del coeficiente de correlación, r,
+debe tener cuidado de usar todo, menos
+las correlaciones más altas, como base para tomar decisio-
+nes. Sugerencia: si se encuentra que la cantidad gastada en
+películas se 
+
+[Bloque seleccionado #576 | relevancia=13]
+Pagina 575
+■12-12
+r  r2
+
+El coeficiente de correlación de la muestra se denota por r y se encuentra tomando la raíz cuadrada del
+coeficiente de determinación de la muestra. Es una segunda medida (además de r2) que podemos utilizar
+para describir qué tan bien una variable explica a otra. El signo de r es igual al signo de b; indica la direc-
+ción de la relación entre las dos variables X y Y.
+■12-13
+Y  A  BX
+Toda recta de regresión de la población tiene la forma de la ecuación 12-13, donde A es la intersección Y
+para la población, y B es la pendiente.
+■12-13a
+Y  A  BX  e
+Como no todos los puntos individuales de un población están en la recta de regresión de la población, los
+puntos individuales satisfacen la ecuación 12-13a, en donde e es una variación aleatoria respecto a la rec-
+ta de regresión de la población. En promedio, e es igual a cero, porque las variaciones arriba de la recta
+de regresión se cancelan con las variaciones que se encuentran abajo de ella.
+■12-14
+sb 
+Al manejar una muestra, podemos usar esta fórmula para obtener el error estándar del coeficiente de re-
+gresión, b.
+■12-15 
+t 
+Una vez calculado sb con la ecuación 12-14, podemos usar esta ecuación para estandarizar el valor obser-
+vado del coeficiente de regresión. Después realizamos la prueba de hipótesis comparando este valor es-
+tandarizado con el o los valores críticos de la tabla 2 del apéndice.
+●Ejercicios de repaso (para más ejercicios, consulte el CD que acompaña esta obra)
+■12-45
+Un consultor está interesado en el grado de precisión con que un nuevo índice de desempeño laboral mi-
+de lo que es importante para una corporación. Una forma de verificarlo es analizar la relación entre el índi-
+ce de evaluación del trabajo y el salario de un empleado. Se tomó una muestra de ocho empleados y se
+recabó información del salario (en miles de dólares) y el índice de evaluación del trabajo (1 a 10, donde
+10 es la mejor calificación).
+Índice de evaluación del trabajo (X)
+9
+7
+8
+4
+7
+5
+5
+6
+Salario (Y)
+36
+25
+33
+15
+28
+19
+20
+22
+a)
+Desarrolle la ecuación de estimación que mejor describa estos datos.
+b) Calcule el error estándar de la estimación, se, para estos datos.
+c)
+Calcule el coeficiente de determinación de la muestra, r2, para estos datos.
+■12-46
+La Stork Foundation desea mostrar con estadísticas que, contrariamente a la creencia popular, las cigüe-
+ñas sí traen a los bebés. Para esto ha recolectado datos sobre el número de cigüeñas y el número de bebés
+(ambos en miles) en varias ciudades grandes de Europa central.
+Cigüeñas
+27
+38
+13
+24
+6
+19
+15
+Bebés
+35
+46
+19
+32
+15
+31
+20
+a) Calcule e
+
+[Bloque seleccionado #596 | relevancia=13]
+Pagina 595
+n  k  1  10  3  1  6 grados de libertad. El valor apropiado de t para nuestra estima-
+ción del intervalo es de 2.447. En consecuencia, podemos calcular los límites de nuestro in-
+tervalo de confianza como sigue:
+Yˆ  t(se)  27,905,000  (2.447)(286,000)
+Yˆ  t(se)  27,905,000  699,800
+Yˆ  t(se)  28,604,800 ←Límite superior
+Yˆ  t(se)  27,905,000  (2.447)(286,000)
+Yˆ  t(se)  27,905,000 – 699,800
+Yˆ  t(se)  27,205,200 ←Límite inferior
+Con un nivel de confianza del 95%, el departamento de auditorías puede sentirse seguro de
+que los descubrimientos reales estarán en este intervalo, que va de $27,205,200 a $28,604,800.
+Si el IRS desea usar un nivel de confianza menor como 90%, puede reducir el intervalo de
+valores para la estimación de descubrimientos de impuestos no pagados. Igual que con la re-
+gresión simple, podemos utilizar la distribución normal estándar (tabla 1 del apéndice) para
+aproximar la distribución t siempre que los grados de libertad (n menos el número de coefi-
+cientes de regresión estimados) sea un número mayor que 30.
+Al añadir la tercera variable independiente (recompensas a informantes), ¿mejoró nuestra
+regresión? Como se mide la dispersión de los datos alrededor del plano de regresión, valores
+menores de se deberían indicar mejores regresiones. Para la regresión de dos variables que hi-
+cimos con anterioridad en este mismo capítulo, se resultó ser 1.076. Como al agregar la terce-
+ra variable se se redujo a 0.286, vemos que sí mejoró el ajuste de la regresión en este ejemplo.
+Sin embargo, en general no es cierto que al agregar variables siempre se reduzca se.
+3. El coeficiente de determinación múltiple. Al estudiar el análisis de correlación simple, medi-
+mos la fuerza de la relación entre dos variables, utilizando el coeficiente de determinación de
+la muestra, r2. Este coeficiente de determinación es la fracción de la variación total de la va-
+riable dependiente Y que se explica con la ecuación de estimación.
+Similarmente, en la correlación múltiple mediremos la fuerza de la relación entre tres varia-
+bles utilizando el coeficiente de determinación múltiple, R2, o su raíz cuadrada, R (el coeficien-
+te de correlación múltiple). Este coeficiente de determinación múltiple es también la fracción
+que representa la porción de la variación total de Y que “explica” el plano de regresión.
+Note que la salida del programa da el valor 98.3% para R2. Esto nos dice que las tres va-
+riables independientes explican 98.3% de la variación total de impuestos no pagados descu-
+biertos. Para la regresión de dos variables hecha ant
+
+[Bloque seleccionado #665 | relevancia=16]
+Pagina 664
+Los valores críticos de z son ±1.96. El valor estandarizado de r es
+z 
+ 2.13
+de manera que se rechaza H0 porque z  1.96. Esta secuencia no es aleatoria.
+14.5
+Correlación de rango
+Los capítulos 12 y 13 nos introdujeron a los conceptos de correlación y coeficiente de correlación,
+una medida de asociación entre dos variables. Con frecuencia, en el análisis de correlación, la 
+información no está disponible en forma de valores numéricos como los utilizados en los proble-
+mas de esos capítulos. Sin embargo, si podemos asignar clasificaciones a los elementos de cada una
+de las dos variables que estamos estudiando, entonces podemos calcular un coeficiente de corre-
+lación de rango. Éste es una medida de la correlación que existe entre los dos conjuntos de 
+rangos, una medida del grado de asociación entre las variables que no podríamos calcular 
+de otra manera.
+Una segunda razón para aprender el método de correlación de rango es la posibilidad de simpli-
+ficar el proceso de cálculo de un coeficiente de correlación a partir de un conjunto de datos muy gran-
+de para cada una de las dos variables. Para probar lo tedioso que esto puede ser, intente aumentar
+uno de los problemas de correlación del capítulo 12, por un factor de 10, y realizar los cálculos ne-
+cesarios. En lugar de tener que hacer estos cálculos, podemos calcular una medida de asociación
+basada en los rangos de las observaciones, no en los valores numéricos de los datos. Esta medición se
+conoce como coeficiente de correlación de rango de Spearman, en honor al estadístico que lo desa-
+rrolló a principios del siglo XX.
+El coeficiente de correlación de rangos
+Mediante un par de ejemplos, aprenderemos a calcular e interpretar esta medida de la asociación en-
+tre dos variables clasificadas. Primero, consideremos la tabla 14-9, que enumera cinco personas y
+compara el rango o clasificación académica que obtuvieron en la universidad con el nivel que han
+logrado en cierta compañía 10 años después de graduarse. El valor 5 representa el rango más alto del
+grupo; 1 es el más bajo.
+Usando la información de la tabla 14-9, podemos calcular un coeficiente de correlación de ran-
+gos entre el éxito en la universidad y el nivel logrado en la compañía 10 años después. Lo único que
+necesitamos es la ecuación 14-8 y unos cuantos cálculos.
+Cálculo del 
+coeficiente de 
+correlación de rangos
+Listado de las 
+variables clasificadas
+Otra ventaja del 
+uso de la correlación
+de rango
+Función del 
+coeficiente de 
+correlación 
+de rango
+7  10.6
+
+1.69
+646
+Capítulo 14
+Métodos no paramétricos
+donde,
+• rs  coeficiente de
+
+[Bloque seleccionado #667 | relevancia=12]
+Pagina 666
+de cada pareja de observaciones, encontrar d2, y luego sumar todas las d2. Sustituyendo estos valo-
+res en la ecuación 14-8, encontramos un coeficiente de correlación de rango cuyo valor es l:
+rs  1 
+[14-8]
+ 1 
+ 1 
+ 1  2
+ 1 ←Coeficiente de correlación de rangos
+En el capítulo 12, aprendimos que un coeficiente de correlación de 1 representa una correlación
+inversa perfecta. Eso es justamente lo que ocurre en nuestro caso: la gente que más destacó en la uni-
+versidad terminó en los rangos menores de una organización. Ahora apliquemos estas ideas.
+Solución de un problema usando correlación de rangos
+La correlación de rangos es una técnica útil para examinar la conexión entre calidad del aire y la evi-
+dencia de enfermedades pulmonares que analizamos en el problema del inicio del capítulo. La tabla
+14-12 reproduce los datos encontrados por la organización de la salud que estudia el problema. En
+la misma tabla, hacemos algunos cálculos necesarios para encontrar rs.
+Usando los datos de la tabla 14-12 y la ecuación 14-8, podemos encontrar el coeficiente de corre-
+lación de rangos para este problema:
+rs  1 
+[14-8]
+ 1 
+ 1 
+ 1  0.2636
+ 0.7364 ←Coeficiente de correlación de rangos
+Un coeficiente de correlación de 0.736 sugiere una asociación positiva sustancial entre calidad pro-
+medio del aire y la ocurrencia de enfermedades pulmonares, al menos en las 11 ciudades muestrea-
+das; esto es, altos niveles de contaminación van acompañados de enfermedades pulmonares.
+¿Cómo podemos probar este valor de 0.736? Podemos aplicar los mismos métodos usados para
+probar hipótesis en los capítulos 8 y 9. Al realizar esas pruebas en rs, tratamos de evitar el error de
+concluir que existe una asociación entre dos variables si en realidad no existe en la población de la
+cual se tomaron esas dos muestras, es decir, si el coeficiente de correlación de rango de la población,
+s (ro sub s), es realmente igual a cero.
+Para pequeños valores de n (n menor o igual que 30), la distribución de rs no es normal, y a
+diferencia de otras estadísticas de muestras pequeñas que hemos encontrado, no es apropiado
+usar la distribución t para probar hipótesis acerca del coeficiente de correlación de rangos. En
+su lugar, utilizamos la tabla 7 del apéndice para determinar las regiones de aceptación y de rechazo
+de las hipótesis. En nuestro problema actual, suponga que la organización de salud desea probar, al
+Prueba de hipótesis
+acerca de la 
+correlación de rangos
+Interpretación de 
+los resultados
+348
+
+1,320
+6(58)
+
+11(121  1)
+6
+d2
+
+n(n2  1)
+Búsqueda del 
+coeficiente d
+
+[Bloque seleccionado #668 | relevancia=11]
+Pagina 667
+nivel de significancia de 0.05, la hipótesis nula de que existe una correlación de cero en los datos cla-
+sificados de todas las ciudades del mundo. Nuestro problema entonces se convierte en:
+H0: s  0
+←Hipótesis nula: no existe correlación en los datos clasificados de la población
+H1: s  0
+←Hipótesis alternativa: existe correlación en los datos clasificados de las poblaciones
+  0.05 ←Nivel de significancia para probar estas hipótesis
+Una prueba de dos colas es adecuada, así que consultamos la tabla 7 del apéndice, en el renglón
+correspondiente a n  11 (el número de ciudades) y la columna correspondiente al nivel de signifi-
+cancia de 0.05. Encontramos que los valores críticos para rs son 0.6091, esto es, el límite superior
+de la región de aceptación es 0.6091 y el límite inferior es 0.6091.
+La figura 14-8 ilustra los límites de la región de aceptación y el coeficiente de correlación de ran-
+gos calculado a partir de la muestra de calidad de aire. De esta figura, podemos ver que el coeficien-
+te de correlación de rango cae fuera de la región de aceptación. Por consiguiente, rechazamos la hi-
+pótesis nula de no correlación y concluimos que existe una asociación entre los niveles de calidad
+del aire y la incidencia de enfermedades pulmonares en las ciudades del mundo.
+Si el tamaño de la muestra es mayor que 30, ya no podemos utilizar la tabla 7 del apéndice. Sin
+embargo, cuando n es mayor que 30, la distribución muestral de rs es aproximadamente normal, con
+media de cero y desviación estándar de 1/n 
+ l. En consecuencia, el error estándar de rs es 
+La distribución apro-
+piada para valores de
+n mayores que 30
+Formulación 
+de las hipótesis
+14.5
+Correlación de rango
+649
+Rangos de 11
+ciudades
+Tabla 14-12
+Rango de
+Diferencia
+Rango de la
+enfermedad
+entre los dos
+Diferencia al
+calidad de aire
+pulmonar
+rangos
+cuadrado
+Ciudad
+(1)
+(2)
+(1)  (2)
+[(1)  (2)]2
+A
+4
+5
+1
+1
+B
+7
+4
+3
+9
+C
+9
+7
+2
+4
+D
+1
+3
+2
+4
+E
+2
+1
+1
+1
+F
+10
+11
+1
+1
+G
+3
+2
+1
+1
+H
+5
+10
+5
+25
+I
+6
+8
+2
+4
+J
+8
+6
+2
+4
+K
+11
+9
+2
+4
+Mejor rango  11
+d2  58 ←Suma de los
+Peor rango  1
+cuadrados de
+las diferencias
+Error estándar del coeficiente de la correlación de rangos
+rs 
+[14-9]
+1
+
+n 
+ 1
+
+y podemos usar la tabla 1 del apéndice para encontrar los valores de z para probar las hipótesis con
+respecto a la correlación de rangos de población.
+Como un ejemplo de prueba de hipótesis de coeficientes de correlación de rango cuando n es ma-
+yor que 30; consideremos el caso de un científico social que intenta determinar si la gente brillante
+tiende a elegir un cónyuge que también sea brillante. Sel
+
+[Bloque seleccionado #670 | relevancia=12]
+Pagina 669
+Usando los datos de la tabla 14-13 y la ecuación 14-8, podemos encontrar el coeficiente de corre-
+lación de rangos para este problema:
+rs  1 
+[14-8]
+ 1 
+ 1 
+ 1  0.1913
+rs  0.8087 ←Coeficiente de correlación de rangos
+Si el científico social desea probar su hipótesis al nivel de significancia de 0.01, su problema pue-
+de formularse así:
+H0: s  0 
+←Hipótesis nula: no existe correlación de rangos en la población, esto es, 
+la inteligencia de los esposos y esposas está mezclada al azar
+H1: s  0 
+←Hipótesis alternativa: la correlación de rangos de la población es positiva, 
+es decir, las personas brillantes eligen esposos brillantes
+  0.01 ←Nivel de significancia para probar estas hipótesis
+Es adecuado realizar una prueba de cola superior. De la tabla 1 del apéndice, encontramos que el
+valor z crítico para el nivel de significancia de 0.01 es 2.33. La figura 14-9 ilustra esta prueba de hi-
+pótesis, donde la región sombreada en la cola superior de la distribución corresponde al nivel de sig-
+nificancia de 0.01.
+Para calcular nuestro estadístico de prueba, primero encontramos el error estándar rs:
+rs 
+[14-9]
+
+ 0.1796
+Ahora podemos usar la ecuación 6-2 para estandarizar el coeficiente de correlación del rango, rs,
+restando 0, su valor hipotético y dividiendo entre rs, su error estándar.
+z 
+[6-2]
+z 
+z  4.503
+La figura 14-10 muestra el límite de la región de aceptación y el coeficiente de correlación de rangos
+que calculamos de los datos del CI. En esta figura, podemos ver que el coeficiente de correlación de
+rango de 0.809 cae bastante fuera de la región de aceptación. Por tanto, rechazamos la hipótesis nu-
+la de no correlación y concluimos que la gente brillante tiende a elegir cónyuges brillantes.
+Una propiedad especial de la correlación de rangos
+La correlación de rango tiene una ventaja útil sobre el método de correlación que analizamos en el
+capítulo 12. Suponga que tenemos casos en los que existen una o varias observaciones sumamente
+Ventaja de la 
+correlación de rangos
+Interpretación de 
+los resultados
+0.8087
+
+0.1796
+rs  0
+
+rs
+1
+
+32 
+ 1
+
+1
+
+n 
+ 1
+
+Formulación de 
+las hipótesis
+6,261
+
+32,736
+6(1,043.5)
+
+32(1,024  1)
+6
+d2
+
+n(n2  1)
+14.5
+Correlación de rango
+651
+
+[Bloque seleccionado #671 | relevancia=11]
+Pagina 670
+extremas en los datos originales. Calcular el coeficiente de correlación con valores numéricos, co-
+mo lo hicimos en el capítulo 12, puede no producir una buena descripción de la asociación existen-
+te entre dos variables. Sin embargo, las observaciones extremas en una prueba de correlación de ran-
+gos nunca producirán una diferencia de rangos grande.
+Considere el siguiente arreglo de datos de dos variables, X y Y:
+X
+10
+13
+16
+19
+25
+Y
+34
+40
+45
+51
+117
+Debido al valor alto del quinto término de Y, obtendríamos dos respuestas significativamente dife-
+rentes para r si se usan los métodos convencional y de correlación de rangos. En este caso, el méto-
+do de correlación de rangos es menos sensible al valor extremo. Asignamos un orden de rango de 5
+al valor numérico de 117 y evitamos el efecto sobre el valor del coeficiente de correlación.
+652
+Capítulo 14
+Métodos no paramétricos
+FIGURA 14-9
+Prueba de 
+hipótesis de cola
+superior al nivel 
+de significancia de
+0.01
+0.50 del área
+0.49 del área
+0.01 del área
+Valor crítico
+z = 2.33
+sH0 = 0
+FIGURA 14-10
+Prueba de 
+hipótesis de cola
+superior al nivel 
+de significancia de
+0.01; indica la 
+región de 
+aceptación y el
+coeficiente de 
+correlación 
+de rango de la 
+muestra
+Región de aceptación
+Acepte la hipótesis nula si el valor 
+muestral está en esta región
+2.33
+4.503
+Distribución de rs
+0
+Coeficiente de correlación 
+de rango de muestra estándar
+Cuando existen valores extremos en los
+datos originales, la correlación de rangos
+puede producir resultados más útiles que
+el método de correlación explicado en el
+capítulo 12, porque las observaciones extremas nunca pro-
+ducen una gran diferencia en el rango. Sugerencia: la corre-
+lación de rangos es muy útil cuando los datos no siguen una
+distribución normal. Tome el caso de una colecta de fondos
+para una universidad donde se obtienen algunas donaciones
+“grandes”, muchas donaciones menores que $100 y un in-
+tervalo muy amplio en medio. No tiene sentido usar las téc-
+nicas de correlación del capítulo 12 para investigar las rela-
+ciones entre el número de cartas de petición y el tamaño de
+las donaciones con este tipo de distribución porque las do-
+naciones de millón y medio de dólares distorsionan el estu-
+dio. Aplicar la correlación de rangos en un caso como éste
+funciona bastante bien.
+SUGERENCIAS
+Y
+SUPOSICIONES

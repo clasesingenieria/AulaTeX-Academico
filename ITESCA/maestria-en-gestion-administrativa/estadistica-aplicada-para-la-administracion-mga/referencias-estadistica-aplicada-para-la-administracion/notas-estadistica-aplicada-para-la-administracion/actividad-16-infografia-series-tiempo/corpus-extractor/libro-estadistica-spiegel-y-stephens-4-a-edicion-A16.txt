@@ -1,0 +1,798 @@
+Fuente bibliográfica: Estadística - Spiegel y Stephens. 4.ª edición.pdf
+Actividad: 16 (6.1 Infografía Equipo 4% Tarea)
+Palabras clave: serie de tiempo, tendencia, estacionalidad, ciclo, medias móviles, suavizamiento exponencial, índice estacional, tasas de variación
+
+[Bloque seleccionado #12 | relevancia=2]
+Pagina 11
+Esta nueva edición contiene ejemplos nuevos, 130 figuras nuevas y resultados obtenidos empleando cinco paquetes de 
+software representativos de los cientos o quizá miles de paquetes de software usados en estadística. Todas las figuras 
+de la tercera edición han sido sustituidas por figuras nuevas, un poco diferentes, creadas empleando estos cinco paque-
+tes de software: EXCEL, MINITAB, SAS, SPSS y STATISTIX. Los ejemplos tienen una gran influencia de USA Today, 
+pues este periódico es una gran fuente de temas y ejemplos actuales de la estadística.
+Otros de los cambios que se encontrarán en esta edición son: el capítulo 18 sobre análisis de serie de tiempos fue 
+eliminado y el capítulo 19 sobre control estadístico de procesos y capacidad de procesos se convirtieron en el capítulo 
+18. Las respuestas a los ejercicios complementarios, al final de cada capítulo, se presentan ahora con más detalle. En 
+todo el libro se analizan y emplean más los valores p.
+RECONOCIMIENTOS
+Dado que el software para estadística es muy importante en este libro, quiero agradecer a las personas y empresas 
+siguientes por permitirme usar su software.
+MINITAB: Laura Brown, coordinadora del Programa de Ayuda a los Autores, Minitab, Inc., 1829 Pine Hall Road, 
+State College, PA 16801. Yo soy miembro del programa de ayuda a los autores que practica Minitab, Inc. “Partes de 
+los datos y de los resultados que se encuentran en esta publicación/libro han sido impresas con la autorización de 
+Minitab, Inc. Todo este material, así como los derechos de autor, son propiedad exclusiva de Minitab, Inc.” La dirección 
+de Minitab en la red es www.minitab.com.
+SAS: Sandy Varner, directora de operaciones de mercadotecnia, SAS Publishing, Cary, NC. “Creado con el software 
+SAS. Copyright 2006. SAS Institute Inc., Cary, NC.” Se cita de su sitio en la red: “SAS es el líder en servicios y soft-
+ware inteligente para negocios. A lo largo de sus 30 años, SAS ha crecido —de siete empleados a casi 10 000 en todo 
+el mundo, de unos cuantos clientes a más de 40 000— y todos estos años ha sido rentable”. La dirección en la red de 
+SAS es www.sas.com.
+SPSS: Jill Rietema, gerente de cuenta, Publicaciones, SPSS. Se cita de su sitio en la red: “SPSS Inc. es líder como 
+proveedor mundial de soluciones y software para análisis predictivo. Fundada en 1968, actualmente SPSS tiene más 
+de 250 000 clientes en todo el mundo, atendidos por más de 1 200 empleados en 60 países.” La dirección en la Red de 
+SPSS es www.spss.com.
+STATISTIX: Dr. Gerard Nimis, presidente, Analytical Software, P.O. Box (apartado postal)
+
+[Bloque seleccionado #19 | relevancia=3]
+Pagina 18
+XVI  CONTENIDO
+CAPÍTULO 3 
+ Media, mediana y moda, y otras medidas
+de tendencia central 
+61
+ 
+Índices o subíndices 
+61
+ 
+Sumatoria 
+61
+ 
+Promedios o medidas de tendencia central 
+62
+ 
+La media aritmética 
+62
+ 
+Media aritmética ponderada 
+62
+ 
+Propiedades de la media aritmética 
+63
+ 
+Cálculo de la media aritmética para datos agrupados 
+63
+ 
+La mediana 
+64
+ 
+La moda 
+64
+ 
+Relación empírica entre la media, la mediana y la moda 
+64
+ 
+La media geométrica G 
+65
+ 
+La media armónica H 
+65
+ 
+Relación entre las medias aritmética, geométrica y armónica 
+66
+ 
+La raíz cuadrada media 
+66
+ 
+Cuartiles, deciles y percentiles 
+66
+ 
+Software y medidas de tendencia central 
+67
+CAPÍTULO 4 
+ Desviación estándar y otras medidas de dispersión 
+95
+ 
+Dispersión o variación 
+95
+ 
+Rango 
+95
+ 
+Desviación media 
+95
+ 
+Rango semiintercuartílico 
+96
+ 
+Rango percentil 10-90 
+96
+ 
+Desviación estándar 
+96
+ 
+Varianza 
+97
+ 
+Método abreviado para el cálculo de la desviación estándar 
+97
+ 
+Propiedades de la desviación estándar 
+98
+ 
+Comprobación de Charlier 
+99
+ 
+Corrección de Sheppard para la varianza 
+100
+ 
+Relaciones empíricas entre las medidas de dispersión 
+100
+ 
+Dispersión absoluta y relativa; coeficiente de variación 
+100
+ 
+Variable estandarizada; puntuaciones estándar 
+101
+ 
+Software y medidas de dispersión 
+101
+CAPÍTULO 5 
+Momentos, sesgo y curtosis 
+123
+ 
+Momentos 
+123
+ 
+Momentos para datos agrupados 
+123
+ 
+Relaciones entre momentos 
+124
+ 
+Cálculo de momentos con datos agrupados 
+124
+ 
+Comprobación de Charlier y corrección de Sheppard 
+124
+ 
+Momentos en forma adimensional 
+124
+ 
+Sesgo  
+125
+ 
+Curtosis 
+125
+
+[Bloque seleccionado #43 | relevancia=4]
+Pagina 42
+18  CAPÍTULO 1 VARIABLES Y GRÁFICAS
+−20
+−10
+0
+10
+20
+30
+40
+50
+60
+eje y
+eje x
+−6
+−5
+−4
+−3
+−2
+−1
+0 
+1 
+2 
+3 
+4 
+5 
+6
+Figura 1-4 Diagrama EXCEL de una curva llamada parábola.
+SOLUCIÓN
+Primer método
+La primer gráfica que se muestra en la figura 1-5 es la gráfica de una serie de tiempos. En este diagrama se presentan los 
+nuevos casos de diabetes desde 1997 hasta 2005. Se muestra que durante este periodo la cantidad de nuevos casos ha ido 
+aumentando.
+Segundo método
+A la figura 1-6 se le conoce como gráfica de barras, carta de barras o diagrama de barras. El ancho de las barras, que en 
+todas es el mismo, no tiene ningún significado en este caso y pueden ser de cualquier tamaño en tanto no se traslapen.
+Año
+Millones
+2005
+2004
+2003
+2002
+2001
+2000
+1999
+1998
+1997
+1.4
+1.3
+1.2
+1.1
+1.0
+0.9
+Figura 1-5 MINITAB, serie de tiempos de nuevos casos de diabetes por año.
+
+[Bloque seleccionado #44 | relevancia=2]
+Pagina 43
+Año
+Millones
+2005
+2004
+2003
+2002
+2001
+2000
+1999
+1998
+1997
+1.4
+1.2
+1.0
+0.8
+0.6
+0.4
+0.2
+0.0
+Figura 1-6 MINITAB, gráfica de barras de los nuevos casos de diabetes por año.
+Tercer método
+En la figura 1-7 se muestra una gráfica de barras en la que las barras son horizontales en vez de verticales.
+Año
+Millones
+2005
+2004
+2003
+2002
+2001
+2000
+1999
+1998
+1997
+1.4
+1.2
+1.0
+0.8
+0.6
+0.4
+0.2
+0.0
+Figura 1-7 MINITAB, gráfica de barras horizontales de nuevos casos de diabetes por año.
+1.24 
+Grafique los datos del problema 1.14 usando una gráfica de MINITAB para serie de tiempos, una gráfica de 
+barras agrupadas con efecto tridimensional (3-D) de EXCEL y una gráfica de barras apiladas con efecto 3-D 
+de EXCEL.
+SOLUCIÓN
+Las soluciones se dan en las figuras 1-8, 1-9 y 1-10.
+PROBLEMAS RESUELTOS  19
+
+[Bloque seleccionado #87 | relevancia=3]
+Pagina 86
+62  CAPÍTULO 3 MEDIA, MEDIANA, MODA, Y OTRAS MEDIDAS DE TENDENCIA CENTRAL
+PROMEDIOS O MEDIDAS DE TENDENCIA CENTRAL
+Un promedio es un valor típico o representativo de un conjunto de datos. Como estos valores típicos tienden a encon-
+trarse en el centro de los conjuntos de datos, ordenados de acuerdo con su magnitud, a los promedios se les conoce 
+también como medidas de tendencia central.
+Se pueden definir varios tipos de promedios; los más usados son la media aritmética, la mediana, la moda, la media 
+geométrica y la media armónica. Cada una de ellas tiene ventajas y desventajas de acuerdo con el tipo de datos y el 
+propósito de su uso.
+LA MEDIA ARITMÉTICA
+La media aritmética, o brevemente la media, de un conjunto de N números X1, X2, X3, . . . , XN se denota así: X (que se 
+lee “X barra”) y está definida como
+ 
+X ¼ X1 þ X2 þ X3 þ    þ XN
+N
+¼
+X
+N
+j¼1
+Xj
+N
+¼
+P X
+N 
+(1)
+EJEMPLO 4 La media aritmética de los números 8, 3, 5, 12 y 10 es
+X ¼ 8 þ 3 þ 5 þ 12 þ 10
+5
+¼ 38
+5 ¼ 7:6
+Si los números X1, X2, . . . , XK se presentan f1, f2, . . . , fK veces, respectivamente (es decir, se presentan con frecuencias 
+f1, f2, . . . , fK), su media aritmética es
+ 
+X = f1X 1 + f2X 2
+fKX K
+f1 + f2
+fK
+=
+
+K
+j=1
+fjX j
+
+K
+j=1
+fj
+=
+ fX
+fX
+ f
+=
+
+N
+ 
+(2)
+donde N ¼ P f es la suma de las frecuencias (es decir, la cantidad total de casos).
+EJEMPLO 5 Si 5, 8, 6 y 2 se presentan con frecuencias 3, 2, 4 y 1, respectivamente, su media aritmética es
+X ¼ ð3Þð5Þ þ ð2Þð8Þ þ ð4Þð6Þ þ ð1Þð2Þ
+3 þ 2 þ 4 þ 1
+¼ 15 þ 16 þ 24 þ 2
+10
+¼ 5:7
+MEDIA ARITMÉTICA PONDERADA
+Algunas veces, a los números X1, X2, . . . , XK  se les asignan ciertos factores de ponderación (o pesos) w1, w2, . . . , wK, 
+que dependen del significado o importancia que se les asigne a estos números. En este caso, a
+ 
+X ¼ w1X1 þ w2X2 þ    þ wKXk
+w1 þ w2 þ    þ wK
+¼
+P wX
+P w 
+(3)
+se le llama media aritmética ponderada. Obsérvese la semejanza con la ecuación (2), la cual se puede considerar como 
+una media aritmética ponderada con pesos f1, f2, . . . , fK.
+EJEMPLO 6 Si en una clase, al examen final se le da el triple de valor que a los exámenes parciales y un estudiante obtiene 85 
+en el examen final, y 70 y 90 en los dos exámenes parciales, su puntuación media es
+X ¼ ð1Þð70Þ þ ð1Þð90Þ þ ð3Þð85Þ
+1 þ 1 þ 3
+¼ 415
+5 ¼ 83
+
+[Bloque seleccionado #92 | relevancia=3]
+Pagina 91
+EJEMPLO 17 Utilizar EXCEL para hallar Q1, Q2, Q3, D9 y P95, en la muestra siguiente de puntuaciones.
+88
+45
+53
+86
+33
+86
+85
+30
+89
+53
+41
+96
+56
+38
+62
+71
+51
+86
+68
+29
+28
+47
+33
+37
+25
+36
+33
+94
+73
+46
+42
+34
+79
+72
+88
+99
+82
+62
+57
+42
+28
+55
+67
+62
+60
+96
+61
+57
+75
+93
+34
+75
+53
+32
+28
+73
+51
+69
+91
+35
+Para encontrar el primer cuartil, ingrese los datos en los primeros 60 renglones de la columna A de la hoja de
+cálculo de EXCEL. Después, dé el comando =PERCENTILE(A1:A60,0.25). EXCEL da el valor 37.75. Se encuentra 
+que 15 de los 60 valores, o el 25%, son menores que 37.75. De igual manera =PERCENTILE(A1:A60,0.5) da 57, 
+=PERCENTILE(A1:A60,0.75) da 76, =PERCENTILE(A1:A60,0.9) da 89.2, =PERCENTILE(A1:A60,0.95) da 94.1. 
+EXCEL da los cuartiles, deciles y percentiles expresados como percentiles.
+A continuación se describe un algoritmo que suele emplearse para hallar cuartiles, deciles y percentiles. Primero 
+se ordenan los datos del ejemplo 17 de acuerdo con su magnitud; el resultado es:
+Puntuaciones de examen
+25
+28
+28
+28
+29
+30
+32
+33
+33
+33
+34
+34
+35
+36
+37
+38
+41
+42
+42
+45
+46
+47
+51
+51
+53
+53
+53
+55
+56
+57
+57
+60
+61
+62
+62
+62
+67
+68
+69
+71
+72
+73
+73
+75
+75
+79
+82
+85
+86
+86
+86
+88
+88
+89
+91
+93
+94
+96
+96
+99
+Supóngase que se quiere encontrar el primer cuartil (que es el percentil 25). Se calcula i = np/100 = 60(25)/100 
+= 15. Como 15 es un número entero, se saca el promedio de los datos en las posiciones 15 y 16 de los datos ordenados 
+de menor a mayor. Es decir, se promedian 37 y 38 y se obtiene 37.5 como primer cuartil (Q1 = 37.5). Para hallar el 
+percentil 93, se calcula np/100 = 60(93)/100 y se obtiene 55.8. Como este número no es un entero, se redondea hacia 
+arriba y se obtiene 56. El número que ocupa la posición 56 en los datos ordenados es 93 y P93 = 93. El comando de 
+EXCEL =PERCENTILE(A1:A60,0.93) da 92.74. Obsérvese que con EXCEL no se obtienen los mismos valores para 
+los percentiles, pero sí valores cercanos. A medida que los conjuntos de datos son mayores, tienden a obtenerse los 
+mismos valores.
+SOFTWARE Y MEDIDAS DE TENDENCIA CENTRAL
+Todos los paquetes de software utilizados en este libro dan las estadísticas descriptivas vistas en esta sección. A con-
+tinuación se presentan los resultados que se obtienen con estos cinco paquetes empleando las puntuaciones de examen 
+del ejemplo 17. 
+EXCEL
+Seleccionando la secuencia “Tools ⇒ Data Analysis ⇒ Descriptive Statistics”, se obtienen las medidas de tendencia 
+central mediana, media y moda, así como varias medidas de dispersión.
+Media
+59.16667
+Error típico
+2.867425
+Mediana
+57
+Moda
+28
+Desviación estándar
+22.21098
+Varianza de la muestra
+
+[Bloque seleccionado #346 | relevancia=3]
+Pagina 345
+Para recordar las ecuaciones (23), obsérvese que se pueden obtener formalmente multiplicando la ecuación (22) 
+por 1, X y X 2, respectivamente, y sumando a ambos lados de las ecuaciones resultantes. Esta técnica puede extenderse 
+a las ecuaciones normales de curvas cúbicas de mínimos cuadrados, ecuaciones cuárticas de mínimos cuadrados y, en 
+general, a cualquiera de las curvas de mínimos cuadrados correspondientes a la ecuación (5).
+Como en el caso de la recta de mínimos cuadrados, las ecuaciones (23) se simplifican si las X se escogen de mane-
+ra que P X ¼ 0. Estas ecuaciones también se simplifican empleando las nuevas variables x ¼ X  X y y ¼ Y  Y.
+REGRESIÓN
+Con frecuencia se desea estimar el valor de la variable Y que corresponde a un valor dado de la variable X, basándose 
+en los datos muestrales. Esto se hace estimando el valor de Y a partir de la curva de mínimos cuadrados ajustada a los 
+datos muestrales. A la curva de mínimos cuadrados se le llama curva de regresión de Y en X, debido a que Y se estima 
+a partir de X.
+Si lo que se desea es estimar un valor de X a partir de un valor dado de Y, se emplea la curva de regresión de X en 
+Y, que es lo mismo que intercambiar las variables en el diagrama de dispersión, de manera que X sea la variable depen-
+diente y Y sea la variable independiente. En este caso se sustituyen las desviaciones verticales, de la definición de la 
+curva de mínimos cuadrados de la página 284, por desviaciones horizontales.
+En general, la recta o la curva de regresión de Y en X no es igual a la recta o a la curva de regresión de X en Y.
+APLICACIONES A SERIES DE TIEMPO
+Si la variable independiente X representa tiempo, los datos dan el valor de Y en distintos momentos. A los datos orde-
+nados de acuerdo con el tiempo se les llama serie de tiempo. En este caso, a la recta o a la curva de regresión de Y en 
+X se le llama recta o curva de tendencia y se emplea para hacer estimaciones, predicciones o pronósticos. 
+PROBLEMAS EN LOS QUE INTERVIENEN MÁS DE DOS VARIABLES
+Los problemas en los que intervienen más de dos variables se tratan de manera análoga a los problemas de dos varia-
+bles. Por ejemplo, entre las tres variables X, Y y Z puede haber una relación que pueda ser descrita mediante la ecua-
+ción
+ 
+Z ¼ a0 þ a1X þ a2Y 
+(24)
+a la que se le llama ecuación lineal en las variables X, Y y Z.
+En un sistema de coordenadas rectangulares, esta ecuación representa un plano y los puntos muestrales (X1, Y1, Z1), 
+(X2, Y2, Z2), . . . , (XN, YN, ZN) estarán “dispersos” no demasiado lejos de este plano, al que se le llama plano
+
+[Bloque seleccionado #361 | relevancia=4]
+Pagina 360
+336  CAPÍTULO 13 AJUSTE DE CURVAS Y MÉTODO DE MÍNIMOS CUADRADOS
+a) Graficar los datos y mostrar la recta de regresión de mínimos cuadrados.
+b) Encontrar y graficar la recta de tendencia de los datos.
+c) Dar los valores ajustados y los residuales empleando los códigos de los años.
+d ) Estimar el valor de las exportaciones agrícolas en 2006.
+SOLUCIÓN
+a) 
+En la figura 13-13a) se muestran los datos y la recta de regresión. La gráfica que se muestra en la figura 13-13a) se 
+obtiene empleando la secuencia Stat → Regresión → Fitted line plot.
+b) 
+La gráfica que se muestra en la figura 13.13b) se obtiene empleando la secuencia Stat → Time series → Trend 
+Análisis. Ésta es una manera diferente de ver los mismos datos. Tal vez sea un poco más fácil emplear los números 
+índice (códigos de los años) en vez de los años.
+Figura 13-13 a) Recta de regresión de las exportaciones agrícolas de Estados Unidos
+dadas en millones de dólares.
+Figura 13-13 b) Recta de tendencia de las exportaciones agrícolas de Estados Unidos,
+dadas en millones de dólares.
+Índice
+Valor total
+6
+5
+4
+3
+2
+1
+64 000
+62 000
+60 000
+58 000
+56 000
+54 000
+52 000
+50 000
+Variable
+Real
+Ajustada
+Gráfica del análisis de tendencia del valor total
+Modelo de tendencia lineal
+Yt = 48 156.1 + 2 513.74∗t
+Año
+Valor total
+2005
+2004
+2003
+2002
+2001
+2000
+64 000
+62 000
+60 000
+58 000
+56 000
+54 000
+52 000
+50 000
+Gráfica de la recta ajustada
+valor total = −4 976 816 + 2 514 año
+
+[Bloque seleccionado #362 | relevancia=6]
+Pagina 361
+c) 
+En la tabla 13.10 se dan los valores ajustados y los residuales de los datos que se presentan en la tabla 13.9; se emplean 
+años codificados.
+Tabla 13.10
+Año codificado
+Valor total
+Valor ajustado
+Residual
+1
+2
+3
+4
+5
+6
+51 246
+53 659
+53 115
+59 364
+61 383
+62 958
+50 669.8
+53 183.6
+55 697.3
+58 211.0
+60 724.8
+63 238.5
+576.19
+475.45
+−2 582.30
+1 152.96
+658.22
+−280.52
+d ) Empleando el año codificado, el valor estimado es Yt = 48 156.1 + 2 513.74(7) = 65 752.3.
+13.20 En la tabla 13.11 se presenta el poder de compra del dólar, medido a través de los precios al consumidor, de 
+acuerdo con lo informado por la Oficina de Estadísticas Laborales de Estados Unidos. 
+Tabla 13.11
+Año
+2000
+2001
+2002
+2003
+2004
+2005
+Precios al consumidor
+0.581
+0.565
+0.556
+0.544
+0.530
+0.512
+Fuente: U. S. Bureau of Labor Statistics, Survey of Current Business.
+a) Graficar los datos y obtener la recta de tendencia usando MINITAB.
+b) Encontrar, a mano, la ecuación de la línea de tendencia.
+c) Estimar el precio al consumidor del 2008 suponiendo que la tendencia continúe tres años más.
+SOLUCIÓN
+a) 
+En la figura 13-14, la línea continua es la gráfica de los datos de la tabla 13.11 y la línea punteada es la gráfica de la 
+recta de mínimos cuadrados.
+PROBLEMAS RESUELTOS  337
+Figura 13-14 Línea de tendencia del poder de compra.
+Índice
+6
+5
+4
+3
+2
+1
+0.59
+0.58
+0.57
+0.56
+0.55
+0.54
+0.53
+0.52
+0.51
+Variable
+Real
+Ajustada
+Gráfica del análisis de tendencia del poder de compra
+Modelo de tendencia lineal
+Yt = 0.5942 − 0.0132∗t
+Poder de compra
+
+[Bloque seleccionado #368 | relevancia=4]
+Pagina 367
+c) 
+Encontrar la recta de mínimos cuadrados que se ajusta a los datos, usando Y como la variable independiente.
+d ) Si la calificación de un estudiante en álgebra es 75, ¿cuál es la calificación que se espera que obtenga en física?
+e) 
+Si la calificación de un estudiante en física es 95, ¿cuál es la calificación que se espera que obtenga en álgebra?
+Tabla 13.19
+Álgebra (X )
+75
+80
+93
+65
+87
+71
+98
+68
+84
+77
+Física (Y )
+82
+78
+86
+72
+91
+80
+95
+72
+89
+74
+13.36 
+En la tabla 13.20 se muestra la tasa de nacimiento por cada mil personas desde 1998 hasta 2004.
+a) 
+Graficar estos datos.
+b) 
+Hallar la recta de mínimos cuadrados que se ajusta a estos datos. Asignar a los años 1998 a 2004 los números 1 a 7.
+c) 
+Calcular los valores de tendencia (valores ajustados) y los residuales.
+d ) Indicar cuál será la tasa de nacimiento en 2010, suponiendo que la tendencia actual continúa.
+Tabla 13.20
+Año
+1998
+1999
+2000
+2001
+2002
+2003
+2004
+Tasa de nacimientos por cada 1 000
+14.3
+14.2
+14.4
+14.1
+13.9
+14.1
+14.0
+Fuente: U.S. Nacional Center for Health Statistics, Vital Statistics of the United Status, annual; Nacional Vital Statistics 
+Reports y datos inéditos.
+13.37 
+En la tabla 13.21 se presenta, en miles, la población de Estados Unidos de 85 o más años, desde 1999 hasta 2005.
+a) 
+Graficar estos datos.
+b) 
+Encontrar la recta de mínimos cuadrados que se ajusta a estos datos. Asignar a los años 1999 a 2005 los números 1
+a 7.
+c) 
+Calcular los valores de tendencia (valores ajustados) y los residuales.
+d ) Suponiendo que la tendencia actual continúe, indicar cuál será el número de personas de 85 años o más en el 2010.
+Tabla 13.21
+Año
+1999
+2000
+2001
+2002
+2003
+2004
+2005
+85 o más
+4 154
+4 240
+4 418
+4 547
+4 716
+4 867
+5 096
+Fuente: U.S. Bureau of Census.
+CURVAS DE MÍNIMOS CUADRADOS
+13.38 
+Ajustar una parábola de mínimos cuadrados, Y = a0 + a1X + a2X 2, a los datos de la tabla 13.22.
+Tabla 13.22
+X
+0
+1
+2
+3
+4
+5
+6
+Y
+2.4
+2.1
+3.2
+5.6
+9.3
+14.6
+21.9
+PROBLEMAS SUPLEMENTARIOS  343

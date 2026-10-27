@@ -1,0 +1,90 @@
+{
+  "subject_slug": "estadistica-aplicada-para-la-administracion",
+  "engine": "Amazon Nova Pro",
+  "kept": [
+    "intervalos de confianza al 90 95 y 99 por ciento",
+    "cuantiles de la distribución t con 16 grados de libertad",
+    "determinación de tamaño muestral para media con margen fijo",
+    "intervalo de confianza para proporción de tarjetahabientes",
+    "estimación del gasto medio con desviación estándar muestral",
+    "proyección del agregado poblacional a partir de la media muestral",
+    "efecto de la asimetría derecha sobre la media y mediana",
+    "tamaño de muestra conservador sin proporción planeada",
+    "intervalos confianza",
+    "proporción",
+    "confianza ciento",
+    "intervalos confianza ciento",
+    "requisitos instrucciones",
+    "deberás realizar",
+    "distribución",
+    "grados libertad",
+    "intervalo confianza",
+    "desviación"
+  ],
+  "conceptos_clave_nova_pro": [
+    {
+      "concepto": "Intervalos de confianza",
+      "definicion_rigurosa": "Los intervalos de confianza son rangos estimados dentro de los cuales se espera que caiga un parámetro poblacional con una determinada probabilidad. Estos intervalos se calculan a partir de datos muestrales y proporcionan una medida de la precisión de la estimación. Los niveles de confianza más comunes son del 90%, 95% y 99%, aunque cualquier nivel puede ser utilizado.",
+      "formulacion_matematica_latex": "\\text{Intervalo de confianza} = \\bar{X} \\pm z_{\\alpha/2} \\left( \\frac{\\sigma}{\\sqrt{n}} \\right)",
+      "aplicacion_administrativa": "Los intervalos de confianza permiten a los administradores evaluar la fiabilidad de sus estimaciones de parámetros poblacionales, lo que es crucial para la toma de decisiones en áreas como la planificación de recursos, el control de calidad y la previsión de ventas.",
+      "fuente_principal": "Levin, R. I., & Rubin, D. S. (2012). Estadística para administración y economía. Pearson.",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "Cuantiles de la distribución t",
+      "definicion_rigurosa": "Los cuantiles de la distribución t son valores que dividen la distribución en partes iguales. Para una distribución t con 16 grados de libertad, los cuantiles se utilizan para determinar áreas bajo la curva, lo que es esencial para la construcción de intervalos de confianza y la realización de pruebas de hipótesis.",
+      "formulacion_matematica_latex": "t_{\\alpha/2, df}",
+      "aplicacion_administrativa": "El conocimiento de los cuantiles de la distribución t permite a los administradores realizar pruebas estadísticas y construir intervalos de confianza cuando la desviación estándar poblacional es desconocida.",
+      "fuente_principal": "Anderson, D. R., Sweeney, D. J., & Williams, T. A. (2012). Estadística para negocios y economía. Cengage Learning.",
+      "localizador": "bloque 2"
+    },
+    {
+      "concepto": "Determinación de tamaño muestral para media con margen fijo",
+      "definicion_rigurosa": "La determinación del tamaño de la muestra para una media con margen fijo implica calcular el número de observaciones necesarias para lograr un margen de error específico en la estimación de la media poblacional. Este cálculo se basa en la desviación estándar conocida o estimada y el nivel de confianza deseado.",
+      "formulacion_matematica_latex": "n = \\left( \\frac{z_{\\alpha/2} \\sigma}{E} \\right)^2",
+      "aplicacion_administrativa": "La determinación del tamaño de la muestra es crucial para garantizar que las encuestas y estudios estadísticos proporcionen resultados precisos y confiables, lo que influye directamente en las decisiones estratégicas de la empresa.",
+      "fuente_principal": "Lind, D. A., Marchal, W. G., & Wathen, S. A. (2012). Estadística aplicada a los negocios y la economía. McGraw-Hill.",
+      "localizador": "bloque 3"
+    },
+    {
+      "concepto": "Intervalo de confianza para proporción de tarjetahabientes",
+      "definicion_rigurosa": "El intervalo de confianza para una proporción es un rango estimado dentro del cual se espera que caiga la proporción poblacional verdadera. Se calcula utilizando la proporción muestral y el margen de error, que depende del tamaño de la muestra y el nivel de confianza.",
+      "formulacion_matematica_latex": "\\text{Intervalo de confianza} = \\hat{p} \\pm z_{\\alpha/2} \\sqrt{ \\frac{\\hat{p}(1-\\hat{p})}{n} }",
+      "aplicacion_administrativa": "Los intervalos de confianza para proporciones son utilizados en estudios de mercado para estimar la proporción de consumidores que prefieren un producto o servicio, lo que ayuda a las empresas a tomar decisiones de marketing y producto.",
+      "fuente_principal": "Lind, D. A., Marchal, W. G., & Wathen, S. A. (2012). Estadística aplicada a los negocios y la economía. McGraw-Hill.",
+      "localizador": "bloque 2"
+    },
+    {
+      "concepto": "Estimación del gasto medio con desviación estándar muestral",
+      "definicion_rigurosa": "La estimación del gasto medio utilizando la desviación estándar muestral implica el uso de la distribución t cuando la desviación estándar poblacional es desconocida. Este método proporciona un intervalo de confianza para la media poblacional.",
+      "formulacion_matematica_latex": "\\text{Intervalo de confianza} = \\bar{X} \\pm t_{\\alpha/2, df} \\left( \\frac{s}{\\sqrt{n}} \\right)",
+      "aplicacion_administrativa": "La estimación del gasto medio es esencial para la gestión financiera y presupuestaria, permitiendo a los administradores prever costos y asignar recursos de manera eficiente.",
+      "fuente_principal": "Anderson, D. R., Sweeney, D. J., & Williams, T. A. (2012). Estadística para negocios y economía. Cengage Learning.",
+      "localizador": "bloque 5"
+    },
+    {
+      "concepto": "Proyección del agregado poblacional a partir de la media muestral",
+      "definicion_rigurosa": "La proyección del agregado poblacional a partir de la media muestral implica utilizar la media muestral como estimador del parámetro poblacional. Esta proyección es fundamental para realizar estimaciones sobre la población total a partir de datos muestrales.",
+      "formulacion_matematica_latex": "\\text{Proyección del agregado} = \\bar{X} \\times N",
+      "aplicacion_administrativa": "La proyección del agregado poblacional es utilizada en estudios demográficos y económicos para estimar variables como el PIB, la población total o el consumo total, lo que influye en la planificación estratégica y la formulación de políticas.",
+      "fuente_principal": "Anderson, D. R., Sweeney, D. J., & Williams, T. A. (2012). Estadística para negocios y economía. Cengage Learning.",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "Efecto de la asimetría derecha sobre la media y mediana",
+      "definicion_rigurosa": "En distribuciones asimétricas a la derecha, la media tiende a ser mayor que la mediana. Esto se debe a que la media es influenciada por valores extremos, mientras que la mediana no lo es.",
+      "formulacion_matematica_latex": "\\text{Media} > \\text{Mediana en distribuciones asimétricas a la derecha}",
+      "aplicacion_administrativa": "Entender el efecto de la asimetría sobre las medidas de tendencia central es crucial para la interpretación correcta de los datos en estudios de mercado y análisis de ventas, donde la distribución de los datos puede ser asimétrica.",
+      "fuente_principal": "Anderson, D. R., Sweeney, D. J., & Williams, T. A. (2012). Estadística para negocios y economía. Cengage Learning.",
+      "localizador": "bloque 1"
+    },
+    {
+      "concepto": "Tamaño de muestra conservador sin proporción planeada",
+      "definicion_rigurosa": "El tamaño de muestra conservador sin proporción planeada se calcula para asegurar un margen de error deseado sin asumir una proporción poblacional conocida. Este enfoque es comúnmente utilizado cuando no se tiene información previa sobre la proporción.",
+      "formulacion_matematica_latex": "n = \\left( \\frac{z_{\\alpha/2}}{E} \\right)^2 \\times 0.25",
+      "aplicacion_administrativa": "El cálculo de un tamaño de muestra conservador es esencial en encuestas y estudios donde no se tiene información previa sobre la proporción poblacional, asegurando que los resultados sean lo más precisos posible.",
+      "fuente_principal": "Anderson, D. R., Sweeney, D. J., & Williams, T. A. (2012). Estadística para negocios y economía. Cengage Learning.",
+      "localizador": "bloque 4"
+    }
+  ]
+}

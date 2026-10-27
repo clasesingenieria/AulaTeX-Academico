@@ -1,0 +1,1495 @@
+Pagina 1
+ 
+ 
+ 
+ 
+Estadística para la administración 
+Tema 2. Distribuciones muestrales 
+
+
+Pagina 2
+  
+ 
+                                                                                   Página 1 de 15 
+2.1 Definición de distribución muestral 
+Una distribución muestral es una distribución de probabilidad de una estadística (como la 
+media o la proporción) calculada a partir de un gran número de muestras aleatorias del 
+mismo tamaño, extraídas de una población específica. En lugar de analizar la población 
+completa, se analizan las estadísticas de muchas muestras para hacer inferencias sobre 
+la población. 
+ 
+1.Ejemplo: 
+Imagina que queremos saber la estatura media de todos los estudiantes de una 
+universidad (la población). Medir a todos sería muy difícil. 
+Población: Todos los 10,000 estudiantes de la universidad. 
+Muestra: Tomamos una muestra aleatoria de 50 estudiantes y calculamos su estatura 
+media. Supongamos que nos da 172 cm. 
+Repetición: Repetimos el proceso muchas veces: tomamos otra muestra de 50 y 
+obtenemos una media de 174 cm; otra más y obtenemos 171 cm, y así sucesivamente. 
+Distribución Muestral: Si graficamos todas estas medias muestrales (172, 174, 171, ...), la 
+distribución que se forma es la distribución muestral de la media. 
+Respuesta del ejemplo: La distribución muestral no es la distribución de las estaturas de 
+los estudiantes, sino la distribución de las medias de las estaturas calculadas a partir de 
+cada muestra de 50 estudiantes. Esta nueva distribución nos permite estimar la verdadera 
+media de la población con mayor certeza. 
+ 
+2.Ejemplo resuelto: 
+Población = {2, 4, 6} 
+Tomamos todas las posibles muestras de tamaño 2 (sin reemplazo): 
+{2,4} → media = 3 
+{2,6} → media = 4 
+{4,6} → media = 5 
+Las medias posibles {3, 4, 5} forman la distribución muestral de la media 
+ 
+3.Ejemplo: Supón que tienes una población de 5 estudiantes con las siguientes 
+calificaciones: 6, 7, 8, 9, 10. Si tomamos todas las posibles muestras de tamaño 2 y 
+calculamos la media de cada muestra, obtenemos una distribución muestral de la media. 
+Muestras posibles y sus medias: 
+
+
+Pagina 3
+  
+ 
+                                                                                   Página 2 de 15 
+(6,7) → media = 6.5 
+(6,8) → media = 7 
+(6,9) → media = 7.5 
+(6,10) → media = 8 
+(7,8) → media = 7.5 
+(7,9) → media = 8 
+(7,10) → media = 8.5 
+(8,9) → media = 8.5 
+(8,10) → media = 9 
+(9,10) → media = 9.5 
+Resultado: La distribución muestral de la media está formada por los valores: 6.5, 7, 7.5, 
+8, 8.5, 9, 9.5 
+ 
+Las Distribuciones muestrales el campo de la inferencia estadística trata básicamente con 
+generalizaciones y predicciones. 
+Por ejemplo, con base en las opiniones de varias personas entrevistadas en la calle, 
+los estadounidenses podrían afirmar que en una próxima elección 60% de los votantes 
+de la ciudad de Detroit favorecerían a cierto candidato. En este caso tratamos con una 
+muestra aleatoria de opiniones de una población finita muy grande. Por otro lado, con 
+base en las estimaciones de 3 contratistas seleccionados al azar, de los 30 que laboran 
+actualmente en esta ciudad, podríamos afirmar que el costo promedio de construir una 
+residencia en Charleston, Carolina del Sur, está entre $330,000 y $335,000. La población 
+que se va a muestrear aquí también es finita, pero muy pequeña. Finalmente, 
+consideremos una máquina despachadora de bebida gaseosa que está diseñada para 
+servir en promedio 240 mililitros de bebida. Un ejecutivo de la empresa calcula la media 
+de 40 bebidas servidas y obtiene 𝑥̅ = 236 mililitros y, con base en este valor, decide que la 
+máquina está sirviendo bebidas con un contenido promedio de μ = 240 mililitros. Las 
+40 bebidas servidas representan una muestra de la población infinita de posibles bebidas 
+que despachará esta máquina. 
+ 
+Inferencias sobre la población a partir de información de la muestra 
+En cada uno de los ejemplos anteriores calculamos un estadístico de una muestra que se 
+selecciona de la población, y con base en tales estadísticos hicimos varias afirmaciones 
+respecto a los valores de los parámetros de la población, que pueden ser o no ciertas. 
+
+
+Pagina 4
+  
+ 
+                                                                                   Página 3 de 15 
+El ejecutivo de la empresa decide que la máquina despachadora está sirviendo bebidas 
+con un contenido promedio de 240 mililitros, aunque la media de la muestra fue de 236 
+mililitros, porque conoce la teoría del muestreo según la cual, si μ = 240 mililitros, tal 
+valor de la muestra podría ocurrir fácilmente. De hecho, si realiza pruebas similares, 
+cada hora por ejemplo, esperaría que los valores del estadístico 𝑥̅  fluctuaran por arriba y 
+por abajo de μ = 240 mililitros. Sólo cuando el valor de 𝑥̅  difiera considerablemente de 
+240 mililitros el ejecutivo de la empresa tomará medidas para ajustar la máquina. 
+Como un estadístico es una variable aleatoria que depende sólo de la muestra observada, 
+debe tener una distribución de probabilidad. 
+La distribución muestral de un estadístico depende de la distribución de la población, 
+del tamaño de las muestras y del método de selección de las muestras.  
+La distribución de probabilidad de 𝑋̅ se llama distribución muestral de la media. 
+ 
+¿Qué es la distribución muestral de 𝑿̅? 
+Se deberían considerar las distribuciones muestrales de 𝑋̅  y 𝑆2 como los mecanismos a 
+partir de los cuales se puede hacer inferencias acerca de los parámetros μ y 𝜎2. La 
+distribución muestral de 𝑋̅  con tamaño muestral n es la distribución que resulta cuando un 
+experimento se lleva a cabo una y otra vez (siempre con una muestra de tamaño n) y 
+resultan los diversos valores de 𝑋̅. Por lo tanto, esta distribución muestral describe la 
+variabilidad de los promedios muestrales alrededor de la media de la población μ. En el 
+caso de la máquina despachadora de bebidas, el conocer la distribución muestral de 𝑋̅  le 
+permite al analista encontrar una discrepancia “típica” entre un valor 𝑋̅ observado y el 
+verdadero valor de μ. Se aplica el mismo principio en el caso de la distribución de. La 
+distribución muestral produce información acerca de la variabilidad de los valores de 𝑆2 
+alrededor de 𝜎2 en experimentos que se repiten. 
+ 
+2.2 Distribución muestral de la media 
+La distribución muestral de la media describe cómo se comportan las medias obtenidas 
+de todas las posibles muestras del mismo tamaño. 
+• 
+Propiedades: 
+1. Media: μₓ̄ = μ 
+2. Varianza: σ²ₓ̄ = σ²/n 
+3. Error estándar: σₓ̄ = σ/√n 
+
+
+Pagina 5
+  
+ 
+                                                                                   Página 4 de 15 
+4. Si la población es normal o n ≥ 30, la distribución muestral de la media es 
+aproximadamente normal. 
+ 
+1. Ejemplo resuelto: 
+Población con μ = 100, σ = 20, muestra de n = 25. 
+Media muestral esperada: μₓ̄ = 100 
+Error estándar: σₓ̄ = 20/√25 = 4 
+Distribución: X̄ ~ N(100, 4) 
+ 
+Supóngase que de una población finita de tamaño Np > N se extraen, sin reposición, 
+todas las muestras posibles de tamaño N. Si se denota con 𝜇𝑋 ̅ y 𝜎𝑥̅ respectivamente, a la 
+media y a la desviación estándar de una distribución muestral de las medias, y con μ y σ, 
+respectivamente, a la media y la desviación estándar poblacionales, entonces 
+ 
+𝜇𝑋 ̅ = 𝜇      y     𝜎𝑥̅ =
+𝜎
+√𝑁√
+𝑁𝑝−𝑁
+𝑁𝑝−1 
+Si la población es infinita, o si el muestreo se hace con reposición, las fórmulas anteriores 
+se reducen a 
+𝜇𝑋 ̅ = 𝜇    y   𝜎𝑥̅ =
+𝜎
+√𝑁 
+Si el valor de N es grande (N ≥ 30), la distribución muestral de las medias es 
+aproximadamente normal con media 𝜇𝑋 ̅ y desviación estándar 𝜎𝑥̅, independientemente de 
+la población (siempre y cuando la media y la varianza poblacionales sean finitas y el 
+tamaño de la población sea por lo menos el doble del tamaño de la muestra). Si la 
+población es infinita, este resultado es un caso especial del teorema del límite central de 
+la teoría avanzada de la probabilidad, el cual muestra que la exactitud de la aproximación 
+aumenta a medida que N aumenta. Esto suele indicarse diciendo que la distribución 
+muestral es asintóticamente normal. 
+Si la población está distribuida normalmente, la distribución muestral de las medias 
+también es normal aun cuando el valor de N sea pequeño (es decir, N < 30). 
+ 
+2. Ejemplo resuelto 
+Una población consta de los cinco números 2, 3, 6, 8 y 11. Considerar todas las muestras 
+de tamaño 2 que pueden extraerse de esta población con reposición. Encontrar: a) la 
+
+
+Pagina 6
+  
+ 
+                                                                                   Página 5 de 15 
+media de la población, b) la desviación estándar de la población, c) la media de la 
+distribución muestral de las medias y d) la desviación estándar de la distribución muestral 
+de las medias (es decir, el error estándar de las medias). 
+Respuesta: 
+a)  𝜇=
+2+3+6+8+11
+5
+=
+30
+5 = 6.0 
+ 
+b) 𝜎2 =
+(2−6)2+(3−6)2+(6−6)2+(8−6)2+(11−6)2
+5
+=
+16+9+0+4+25
+5
+= 10.8  𝑦 𝜎= 3.29 
+c) Existen 5(5) = 25 muestras de tamaño 2 que pueden extraerse con reposición (ya que a 
+cada uno de los cinco números de la primera extracción le corresponden cada uno de los 
+cinco números de la segunda extracción). Así, se tiene 
+ 
+ 
+ 
+Las medias muestrales correspondientes son 
+ 
+ 
+y la media de la distribución muestral de las medias es 
+ 
+𝜇𝑥̅ = 𝑠𝑢𝑚𝑎 𝑑𝑒 𝑡𝑜𝑑𝑎𝑠 𝑙𝑎𝑠 𝑚𝑒𝑑𝑖𝑎𝑠 𝑚𝑢𝑒𝑠𝑡𝑟𝑎𝑙𝑒𝑠(2.0 + 2.5 + ⋯. +11.0) 
+25
+= 150
+25 = 6.0 
+ 
+lo que ilustra que 𝜇𝑋 ̅ = 𝜇 
+ 
+d) La varianza 𝜎𝑥̅
+2 de la distribución muestral de las medias se obtiene restándole 6 a cada 
+una de las medias, elevando cada resultado al cuadrado, sumando los 25 resultados 
+obtenidos y dividiendo esta suma entre el 25. El resultado final es 
+
+
+Pagina 7
+  
+ 
+                                                                                   Página 6 de 15 
+ 𝜎𝑥̅
+2=
+135
+25 = 5.4 y por lo tanto 𝜎𝑥̅ = √5.4 = 2.32. Esto ilustra que en una población finita en la 
+que se muestrea con reposición (o en una población infinita), 𝜎𝑥̅
+2 =
+𝜎2
+𝑁, ya que el lado 
+derecho es 10.8/2 = 5.40, que coincide con el valor anterior. 
+ 
+ 
+ 
+3.Ejemplo 
+Supóngase que las estaturas de 3 000 estudiantes del sexo masculino de una universidad 
+tienen una distribución normal con media 68.0 pulgadas (in) y desviación estándar 3.0 in. 
+Si se obtienen 80 muestras, cada una de 25 estudiantes, ¿cuáles serán la media y la 
+desviación estándar esperadas de la distribución muestral de las medias si el muestreo se 
+hace: a) con reposición y b) sin reposición? 
+Respuesta: 
+ 
+ 
+2.3 Distribución muestral de la proporción 
+De manera similar a la media, esta es la distribución de todas las proporciones posibles 
+(porcentajes) de una característica de interés, obtenidas de muestras de un tamaño 
+determinado. La media de la distribución muestral de proporciones (μₚ) es igual a la 
+proporción poblacional (P). 
+
+
+Pagina 8
+  
+ 
+                                                                                   Página 7 de 15 
+ 
+1.Ejemplo resuelto: 
+En una universidad, el 60% son mujeres (p=0.60), con n=100. 
+Media: μₚ̂ = 0.60 
+Error estándar: σₚ̂ = √[0.60(1−0.60)/100] = 0.049 
+Distribución: p̂ ~ N(0.60, 0.049) 
+ 
+Supóngase que una población sea infinita y que la probabilidad de ocurrencia de un evento 
+(llamada éxito) es p, y que la probabilidad de no ocurrencia del evento es q = 1 − p. La 
+población puede ser, por ejemplo, la de los lanzamientos de una moneda, en los que la 
+probabilidad del evento “cara” es p= ½ . Considérense todas las posibles muestras de 
+tamaño N extraídas de esta población, y para cada muestra determínese la proporción P 
+de éxitos. En el caso de una moneda, P es la proporción de caras en N lanzamientos. De 
+esta manera se obtiene una distribución muestral de las proporciones cuya media 𝜇𝑃 y cuya 
+desviación estándar 𝜎𝑃 están dadas por 
+ 
+𝜇𝑃= 𝑝    y     𝜎𝑃= √
+𝑝𝑞
+𝑁= √𝑝(1−𝑞)
+𝑁
+ 
+ 
+que se pueden obtener de la ecuación 𝜇𝑋 ̅ = 𝜇  y  𝜎𝑥̅ =
+𝜎
+√𝑁  sustituyendo μ = p y 𝜎= √𝑝𝑞.Si 
+el valor de N es grande (N ≥ 30), esta distribución muestral es aproximadamente normal. 
+Obsérvese que la población está distribuida en forma binomial. Las ecuaciones 𝜇𝑃= 𝑝 y 
+𝜎𝑃= √
+𝑝𝑞
+𝑁= √𝑝(1−𝑞)
+𝑁
+ 
+ también son válidas para poblaciones finitas si el muestreo se hace con reposición. En el 
+caso de poblaciones finitas en las que el muestreo se hace sin reposición, las ecuaciones 
+
+
+Pagina 9
+  
+ 
+                                                                                   Página 8 de 15 
+𝜇𝑃= 𝑝 y 𝜎𝑃= √
+𝑝𝑞
+𝑁= √𝑝(1−𝑞)
+𝑁
+  se sustituyen por las ecuaciones 𝜇𝑋 ̅ = 𝜇 y  𝜎𝑥̅ =
+𝜎
+√𝑁√
+𝑁𝑝−𝑁
+𝑁𝑝−1 con 
+μ = p y 𝜎= √𝑝𝑞. Obsérvese que las ecuaciones 𝜇𝑃= 𝑝 y 𝜎𝑃= √
+𝑝𝑞
+𝑁= √𝑝(1−𝑞)
+𝑁
+ 
+ pueden obtenerse más fácilmente dividiendo entre N, la media y la desviación 
+estándar (Np y √𝑁𝑝𝑞) de la distribución binomial. 
+2.Ejemplo  
+Encontrar la probabilidad de que en 120 lanzamientos de una moneda: a) menos del 40% 
+o más del 60% sean cara y b) 
+5
+8  o más sean cara. 
+SOLUCIÓN 
+Primer método 
+Los 120 lanzamientos de la moneda se consideran una muestra de la población infinita de 
+todos los posibles lanzamientos de una moneda. En esta población la probabilidad de 
+obtener cara es p= ½ y la probabilidad de obtener cruz es q= 1 – p = ½  
+a) La probabilidad que se busca es que, en 120 lanzamientos, la cantidad de caras sea 
+menor a 48 o mayor a 72. Se procederá, empleando la aproximación normal a la binomial. 
+Como el número de caras es una variable discreta, se busca la probabilidad de que el 
+número de caras sea menor a 47.5 o mayor a 72.5. 
+μ = número esperado de caras= Np= 120(1/2)=60 y 𝜎= √𝑁𝑝𝑞= √(120)(
+1
+2)(
+1
+2) = 5.48 
+47.5 en unidades estándar =
+47.5−60
+5.48
+= −2.28 
+ 
+72.5 en unidades estándar =
+72.5−60
+5.48
+= 2.28 
+Como se muestra en la figura 
+Probabilidad buscada= (área a la izquierda de -2.28 más área a la derecha de 2.28) 
+ 
+ 
+ 
+=(2(0.0113)=0.0226) 
+ 
+ 
+
+
+Pagina 10
+  
+ 
+                                                                                   Página 9 de 15 
+Segundo método 
+𝜇𝑝= 𝑝=
+1
+2 = 0.50  𝜎𝑝= √
+𝑝𝑞
+𝑁= √(1
+2)(1
+2)
+120 = 0.0456 
+40% en unidades estándar = 
+0.40−0.50
+0.0465
+= −2.19 
+60% en unidades estándar=
+0.60−0.50
+0.0456
+= 2.19 
+ 
+Probabilidad buscada = (área a la izquierda de –2.19 más área a la derecha de 2.19) 
+ 
+ 
+ 
+= (2(0.0143) = 0.0286) 
+Aunque este resultado es exacto a dos cifras significativas, no hay una coincidencia exacta 
+debido a que no se usó el hecho de que una proporción es en realidad una variable discreta. 
+Para tomar en cuenta esto, a 0.40 se le resta ½ N= ½ (120) y a 0.60 se le suma ½ N= ½ 
+(120); como 1/240= 0.00417. las proporciones buscadas son, en unidades estándar, 
+ 
+0.10 −0.00417 −0.50
+0.0456
+= −2.28  𝑦 0.60 + 0.00417 −0.50
+0.0456
+= 2.28 
+Con lo que se obtiene coincidencia con el primer método. 
+Obsérvese que (0.40 − 0.00417) y (0.60 + 0.00417) corresponden a las proporciones 
+47.5/120 y 72.5/120 usadas en el primer método. 
+b) Usando el segundo método del inciso a) se encuentra que como 5/8=0.6250, 
+(0.6250-0.00417) en unidades estándar =
+0.6250−0.00417−0.50
+0.0456
+= 2.65 
+Probabilidad buscada = (área bajo la curva normal a la derecha de z = 2.65) 
+= (área a la derecha de z = 0) – (área entre z = 0 y z = 2.65) 
+= 0.5 – 0.4960 = 0.0040 
+  
+2.4 Teorema central del límite 
+El teorema central del límite establece que, para muestras suficientemente grandes (n ≥ 
+30), la distribución muestral de la media se aproxima a una distribución normal, 
+independientemente de la forma de la población original. 
+El teorema del límite central implica dos distribuciones diferentes: la distribución de la 
+población original y la distribución de las medias de muestra. Se utilizan los símbolos 𝜇 y 𝜎 
+para denotar la media y la desviación estándar de la población original, pero ahora 
+necesitamos nuevas notaciones para la media y la desviación estándar de la distribución 
+de medias de muestra. 
+
+
+Pagina 11
+  
+ 
+                                                                                   Página 10 de 15 
+Notación para la distribución muestral de 𝒙̅ 
+Si se seleccionan todas las muestras aleatorias de tamaño n de una población con media 
+𝜇 y desviación estándar 𝜎, la media de las medias de muestra se denota con 𝜇𝑥̅ de modo 
+que 𝜇𝑥̅ = 𝜇 
+También la desviación estándar de las medias de muestra se denota con 𝜎𝑥̅ , de manera 
+que 𝜎𝑥̅ =
+𝜎
+√𝑛   
+𝜎𝑥̅ suele denominarse el error estándar de la media. 
+ 
+Aplicación del teorema del límite central 
+Es posible resolver muchos problemas prácticos importantes con el teorema del límite 
+central. Cuando trabaje en este tipo de problemas, recuerde que si el tamaño de la muestra 
+es mayor que 30, o si la población original se distribuye normalmente, debe tratar la 
+distribución de medias de muestra como si fuera una distribución normal con media 𝜇 y 
+desviación estándar 
+𝜎
+√𝑛. 
+En el siguiente ejemplo, el inciso a) incluye un valor individual, pero el inciso b incluye la 
+media de una muestra de 12 hombres, por lo cual usaremos el teorema del límite central al 
+trabajar con la variable aleatoria 𝑥̅ . Estudie este ejemplo con atención para comprender la 
+diferencia significativa entre los procedimientos que se utilizaron en los incisos a y b. 
+Observe cómo este ejemplo ilustra el siguiente procedimiento de trabajo: 
+Cuando trabaje con un valor individual de una población que se distribuye 
+Normalmente 𝒛=
+𝒙−𝝁
+𝝈 
+Cuando trabaje con una media de alguna muestra (o grupo), asegúrese de utilizar el 
+valor de 
+𝝈
+√𝒏 para la desviación estándar de las medias de muestra. Use 𝒛=
+𝒙̅−𝝁
+𝝈
+√𝒏
+ 
+EJEMPLO  
+Seguridad del teleférico En el problema señalamos que un teleférico en Vail, Colorado, 
+lleva a los esquiadores a la cima de la montaña. Hay una placa que indica que su 
+capacidad máxima es de 12 personas o 2004 libras. Dicha capacidad se excedería si 12 
+personas tienen pesos con una media mayor que 2004/12 =167 libras. 
+Puesto que los hombres suelen pesar más que las mujeres, el “peor de los casos” 
+implicaría a 12 pasajeros hombres. Los pesos de los hombres se distribuyen 
+normalmente, con una media de 172 libras y una desviación estándar de 29 libras (según 
+datos del National Health Survey). 
+
+
+Pagina 12
+  
+ 
+                                                                                   Página 11 de 15 
+a. Calcule la probabilidad de que, al seleccionar aleatoriamente a un hombre, su peso sea 
+mayor de 167 libras. 
+b. Calcule la probabilidad de que 12 hombres que se seleccionaron al azar tengan una 
+media mayor de 167 libras (de manera que su peso total sea mayor que la máxima 
+capacidad del teleférico de 2004 libras). 
+SOLUCIÓN 
+a) Aproximación: Utilice los métodos presentados (ya que estamos trabajando con un 
+valor individual de una población distribuida normalmente). Buscamos el área de la región 
+que se sombreó de la figura. Antes de emplear la tabla A-2 (Se presenta al final), 
+convertimos el peso de 167 a su puntuación z correspondiente: 
+𝑧= 𝑥−𝜇
+𝜎
+= 167 −172
+29
+= −0.17 
+Ahora nos remitimos a la tabla A-2, usando z = -0.17; encontramos que el área 
+acumulativa a la izquierda de 167 libras es 0.4325. La región que se sombreó es, por 
+tanto, 1 - 0.4325 = 0.5675. La probabilidad de que un hombre que se selecciona 
+aleatoriamente pese más de 167 libras es de 0.5675. 
+ 
+Distribución de pesos individuales de hombres 
+b) Aproximación: Utilice el teorema del límite central (ya que estamos trabajando con la 
+media de una muestra de 12 hombres, no de un solo hombre). Aun cuando el tamaño de 
+la muestra no es mayor de 30, empleamos una distribución normal por la siguiente razón: 
+la población original de hombres tiene una distribución normal, de manera que las 
+muestras de cualquier tamaño producirán medias distribuidas normalmente. Puesto que 
+ahora estamos trabajando con una distribución de medias de muestra, debemos emplear 
+los parámetros 𝜇𝑥̅ 𝑦 𝜎𝑥̅ , que se evalúan de la siguiente manera: 
+𝜇𝑥̅ = 𝜇= 172 
+𝜎𝑥̅ = 𝜎
+√𝑛= 29
+√12
+= 8.37158 
+ 
+ 
+
+
+Pagina 13
+  
+ 
+                                                                                   Página 12 de 15 
+ 
+Medias de muestras de los pesos de 12 hombres 
+El siguiente es un punto importante: debemos usar la desviación estándar que se calculó 
+de 8.37158, no la desviación estándar original de 29 (porque estamos trabajando con la 
+distribución de medias de muestra, con una desviación estándar de 8.37158 y no con la 
+distribución de pesos individuales, cuya desviación estándar es de 29). Deseamos 
+encontrar el área que se sombreó de la figura anterior. En la tabla A-2 obtenemos la 
+puntuación z relevante, que se calcula de la siguiente manera: 
+𝑧= 𝑥̅ −𝜇𝑥̅
+𝜎𝑥̅
+= 167 −172
+29
+√12
+=
+−5
+8.37158 = −0.60 
+Si nos remitimos a la tabla A-2, encontramos que z = -0.60 corresponde a un área 
+izquierda acumulativa de 0.2743, por lo que la región que se sombreó es 1 - 0.2743 = 
+0.7257. La probabilidad de que los 12 hombres tengan un peso medio mayor que 167 
+libras es de 0.7257. 
+INTERPRETACIÓN Hay una probabilidad de 0.5675 de que un hombre pese más de 167 
+libras y otra de 0.7257 de que 12 hombres tengan un peso medio mayor que 167 libras. 
+Puesto que la capacidad máxima del teleférico es de 2004 libras, es probable (con una 
+probabilidad de 0.7257) que se sobrecargue si se llena con 12 hombres que se 
+seleccionaron al azar. Sin embargo, la seguridad de los pasajeros no es tan mala, por 
+factores como: 1. es probable que los hombres esquiadores tengan un peso medio menor 
+que la media de 172 libras de la población general de hombres; 2. es probable que 
+también suban mujeres esquiadoras, y tienden a pesar menos que los hombres; 3. a 
+pesar de que la capacidad máxima que se señaló es de 2004 libras, el teleférico se diseñó 
+para operar con seguridad con pesos muy por encima de la carga conservadora de 2004 
+libras. No obstante, los operadores del teleférico harían bien en evitar una carga de 12 
+hombres, especialmente si parecen ser muy pesados. Los cálculos utilizados aquí son 
+exactamente los mismos que emplean los ingenieros cuando diseñan teleféricos, 
+elevadores, escaleras eléctricas, aviones y otros aparatos que cargan personas. 
+ 
+
+
+Pagina 14
+  
+ 
+                                                                                   Página 13 de 15 
+Interpretación de resultados 
+El siguiente ejemplo ilustra otra aplicación del teorema del límite central, pero examine 
+con atención la conclusión a la que se llega. Este ejemplo muestra el tipo de pensamiento 
+que es fundamental para el importante procedimiento de prueba hipótesis. Este ejemplo 
+ilustra la regla del suceso poco común de la estadística inferencial 
+ 
+Corrección para una población finita 
+Al aplicar el teorema del límite central, el uso de 𝜎𝑥̅ =
+𝜎
+√𝑛  supone que la población tiene un 
+número infinito de miembros. Cuando hacemos un muestreo con reemplazo (es decir, que 
+se regresa cada elemento que se eligió antes de hacer la siguiente selección), la 
+población es efectivamente infinita. Aunque muchas aplicaciones realistas implican un 
+muestreo sin reemplazo, tales muestras sucesivas dependen de resultados previos. En la 
+fabricación, los inspectores de control de calidad suelen muestrear elementos de una 
+racha finita de producción, sin reemplazarlos.  Para una población finita como ésta tal vez 
+necesitemos ajustar 𝜎𝑥̅. La siguiente es la regla práctica: 
+Cuando realice un muestreo sin reemplazo y el tamaño de muestra n sea mayor que el 
+5% de la población finita de tamaño N (es decir, n > 0.05N), ajuste la desviación estándar 
+de medias de muestra 𝜎𝑥̅, multiplicándola por el factor de corrección de población finita: 
+√𝑁−𝑛
+𝑁−1 
+El teorema del límite central es muy importante porque nos permite usar los métodos 
+básicos de la distribución normal en una amplia variedad de circunstancias. 
+ 
+2.5 Varianza y esperanza de distribuciones muestrales 
+Valor esperado de 𝒙̅  se tiene una población con media μ y varianza σ2. Se selecciona 
+una muestra aleatoria simple de tamaño n cuyas observaciones individuales se denotan 
+x1, x2, . . . , xn. La media muestral x se calcula como sigue. 
+𝑥̅ = ∑𝑥𝑖
+𝑛 
+ 
+Si se repiten los muestreos aleatorios simples de tamaño n, 𝑥̅ será una variable aleatoria 
+que tomará diferentes valores dependiendo de los n elementos que formen la muestra. El 
+valor esperado de la variable aleatoria 𝑥̅ es la media de todos los posibles valores de 𝑥̅. 
+
+
+Pagina 15
+  
+ 
+                                                                                   Página 14 de 15 
+Media de 𝑥̅ = 𝐸(𝑥̅) = 𝐸(
+∑𝑥𝑖
+𝑛) =
+1
+𝑛[𝐸(𝑥1 + 𝑥2 + ⋯+ 𝑥𝑛] =
+1
+𝑛[(𝐸(𝑥1) + 𝐸(𝑥2) + ⋯+ 𝐸(𝑥𝑛)] 
+Para cada 𝑥𝑖se tiene 𝐸(𝑥𝑖) = 𝜇 por lo tanto, escribimos  
+𝐸(𝑥̅) = 1
+𝑛[(𝜇+ 𝜇+ ⋯+ 𝜇] = 1
+𝑛(𝑛𝜇) = 𝜇 
+Este resultado indica que la media de todos los posibles valores de 𝑥̅ es igual a la media 
+poblacional μ. Es decir, E(𝑥̅) = μ. 
+ 
+Desviación estándar de 𝒙̅ se tiene, de nuevo, una población con media μ y varianza σ2, y 
+una media muestral dada por   
+𝑥̅ = ∑𝑥𝑖
+𝑛 
+Se sabe que 𝑥̅ es una variable aleatoria que toma distintos valores numéricos, con 
+repetidas muestras aleatorias simples de tamaño n, dependiendo de los n elementos que 
+integran la muestra. Lo que sigue es una derivación de la fórmula para la desviación 
+estándar de los valores de 𝑥̅, 𝜎𝑥̅, en el caso de que la población sea infi nita. La deducción 
+de la fórmula para 𝜎𝑥̅, cuando la población es finita y el muestreo se realiza sin remplazo 
+es más complicada. 
+De vuelta al caso de una población infinita, recuerde que una muestra aleatoria simple de 
+una población infinita consta de observaciones x1, x2, . . . , xn que son independientes. Las 
+dos expresiones siguientes son fórmulas generales para la varianza de variables 
+aleatorias. 
+Var (ax) = a2 Var (x) 
+donde a es una constante y x es una variable aleatoria, y 
+Var (x + y) =Var (x) + Var (y) 
+donde x y y son variables aleatorias independientes. Utilizando las dos ecuaciones 
+anteriores, se puede deducir la fórmula para la varianza de la variable aleatoria x como 
+sigue. 
+𝑉𝑎𝑟(𝑥̅) = 𝑉𝑎𝑟 (
+∑𝑥𝑖
+𝑛) = 𝑉𝑎𝑟(1
+𝑛∑𝑥𝑖) 
+Entonces, como 1/n es una constante, tenemos 
+
+
+Pagina 16
+  
+ 
+                                                                                   Página 15 de 15 
+ 
+Referencias 
+Anderson, D. R., Sweeney, D. J., & Williams, T. A. (2020). Estadística para administración 
+y economía (13ª ed.). Cengage Learning. 
+Hernández Sampieri, R., Fernández Collado, C., & Baptista, P. (2022). Metodología de la 
+investigación (7ª ed.). McGraw-Hill. 
+Levin, R. I., & Rubin, D. S. (2017). Estadística para administración y economía (8ª ed.). 
+Pearson Educación. 
+Scheaffer, R. L., Mendenhall, W., & Ott, L. (2018). Elementary Survey Sampling (7th ed.). 
+Duxbury Press. 
+Malhotra, N. K. (2020). Investigación de mercados: un enfoque aplicado (7ª ed.). Pearson 
+Educación. 
+ 
+
+
+Pagina 17
+734
+APÉNDICE A
+0
+z
+TABLA A-2
+Distribución normal estándar (z): Área acumulativa de la IZQUIERDA
+z
+.00
+.01
+.02
+.03
+.04
+.05
+.06
+.07
+.08
+.09
+3.50 
+y 
+menores
+.0001
+3.4
+.0003
+.0003
+.0003
+.0003
+.0003
+.0003
+.0003
+.0003
+.0003
+.0002
+3.3
+.0005
+.0005
+.0005
+.0004
+.0004
+.0004
+.0004
+.0004
+.0004
+.0003
+3.2
+.0007
+.0007
+.0006
+.0006
+.0006
+.0006
+.0006
+.0005
+.0005
+.0005
+3.1
+.0010
+.0009
+.0009
+.0009
+.0008
+.0008
+.0008
+.0008
+.0007
+.0007
+3.0
+.0013
+.0013
+.0013
+.0012
+.0012
+.0011
+.0011
+.0011
+.0010
+.0010
+2.9
+.0019
+.0018
+.0018
+.0017
+.0016
+.0016
+.0015
+.0015
+.0014
+.0014
+2.8
+.0026
+.0025
+.0024
+.0023
+.0023
+.0022
+.0021
+.0021
+.0020
+.0019
+2.7
+.0035
+.0034
+.0033
+.0032
+.0031
+.0030
+.0029
+.0028
+.0027
+.0026
+2.6
+.0047
+.0045
+.0044
+.0043
+.0041
+.0040
+.0039
+.0038
+.0037
+.0036
+2.5
+.0062
+.0060
+.0059
+.0057
+.0055
+.0054
+.0052
+.0051
+.0049
+.0048
+2.4
+.0082
+.0080
+.0078
+.0075
+.0073
+.0071
+.0069
+.0068
+.0066
+.0064
+2.3
+.0107
+.0104
+.0102
+.0099
+.0096
+.0094
+.0091
+.0089
+.0087
+.0084
+2.2
+.0139
+.0136
+.0132
+.0129
+.0125
+.0122
+.0119
+.0116
+.0113
+.0110
+2.1
+.0179
+.0174
+.0170
+.0166
+.0162
+.0158
+.0154
+.0150
+.0146
+.0143
+2.0
+.0228
+.0222
+.0217
+.0212
+.0207
+.0202
+.0197
+.0192
+.0188
+.0183
+1.9
+.0287
+.0281
+.0274
+.0268
+.0262
+.0256
+.0250
+.0244
+.0239
+.0233
+1.8
+.0359
+.0351
+.0344
+.0336
+.0329
+.0322
+.0314
+.0307
+.0301
+.0294
+1.7
+.0446
+.0436
+.0427
+.0418
+.0409
+.0401
+.0392
+.0384
+.0375
+.0367
+1.6
+.0548
+.0537
+.0526
+.0516
+.0505
+.0495
+.0485
+.0475
+.0465
+.0455
+1.5
+.0668
+.0655
+.0643
+.0630
+.0618
+.0606
+.0594
+.0582
+.0571
+.0559
+1.4
+.0808
+.0793
+.0778
+.0764
+.0749
+.0735
+.0721
+.0708
+.0694
+.0681
+1.3
+.0968
+.0951
+.0934
+.0918
+.0901
+.0885
+.0869
+.0853
+.0838
+.0823
+1.2
+.1151
+.1131
+.1112
+.1093
+.1075
+.1056
+.1038
+.1020
+.1003
+.0985
+1.1
+.1357
+.1335
+.1314
+.1292
+.1271
+.1251
+.1230
+.1210
+.1190
+.1170
+1.0
+.1587
+.1562
+.1539
+.1515
+.1492
+.1469
+.1446
+.1423
+.1401
+.1379
+0.9
+.1841
+.1814
+.1788
+.1762
+.1736
+.1711
+.1685
+.1660
+.1635
+.1611
+0.8
+.2119
+.2090
+.2061
+.2033
+.2005
+.1977
+.1949
+.1922
+.1894
+.1867
+0.7
+.2420
+.2389
+.2358
+.2327
+.2296
+.2266
+.2236
+.2206
+.2177
+.2148
+0.6
+.2743
+.2709
+.2676
+.2643
+.2611
+.2578
+.2546
+.2514
+.2483
+.2451
+0.5
+.3085
+.3050
+.3015
+.2981
+.2946
+.2912
+.2877
+.2843
+.2810
+.2776
+0.4
+.3446
+.3409
+.3372
+.3336
+.3300
+.3264
+.3228
+.3192
+.3156
+.3121
+0.3
+.3821
+.3783
+.3745
+.3707
+.3669
+.3632
+.3594
+.3557
+.3520
+.3483
+0.2
+.4207
+.4168
+.4129
+.4090
+.4052
+.4013
+.3974
+.3936
+.3897
+.3859
+0.1
+.4602
+.4562
+.4522
+.4483
+.4443
+.4404
+.4364
+.4325
+.4286
+.4247
+0.0
+.5000
+.4960
+.4920
+.4880
+.4840
+.4801
+.4761
+.4721
+.4681
+.4641
+NOTA: Para valores de z por debajo de 23.49, utilice 0.0001 para el área.
+*Utilice estos valores comunes, que resultan por interpolación:
+Puntuación z
+Área
+1.645
+0.0500
+2.575
+0.0050
+Puntuaciones z NEGATIVAS
+*
+*
+
+
+Pagina 18
+Apéndice A
+735
+0
+z
+TABLA A-2
+(continuación) Área acumulativa de la IZQUIERDA
+z
+.00
+.01
+.02
+.03
+.04
+.05
+.06
+.07
+.08
+.09
+0.0
+.5000
+.5040
+.5080
+.5120
+.5160
+.5199
+.5239
+.5279
+.5319
+.5359
+0.1
+.5398
+.5438
+.5478
+.5517
+.5557
+.5596
+.5636
+.5675
+.5714
+.5753
+0.2
+.5793
+.5832
+.5871
+.5910
+.5948
+.5987
+.6026
+.6064
+.6103
+.6141
+0.3
+.6179
+.6217
+.6255
+.6293
+.6331
+.6368
+.6406
+.6443
+.6480
+.6517
+0.4
+.6554
+.6591
+.6628
+.6664
+.6700
+.6736
+.6772
+.6808
+.6844
+.6879
+0.5
+.6915
+.6950
+.6985
+.7019
+.7054
+.7088
+.7123
+.7157
+.7190
+.7224
+0.6
+.7257
+.7291
+.7324
+.7357
+.7389
+.7422
+.7454
+.7486
+.7517
+.7549
+0.7
+.7580
+.7611
+.7642
+.7673
+.7704
+.7734
+.7764
+.7794
+.7823
+.7852
+0.8
+.7881
+.7910
+.7939
+.7967
+.7995
+.8023
+.8051
+.8078
+.8106
+.8133
+0.9
+.8159
+.8186
+.8212
+.8238
+.8264
+.8289
+.8315
+.8340
+.8365
+.8389
+1.0
+.8413
+.8438
+.8461
+.8485
+.8508
+.8531
+.8554
+.8577
+.8599
+.8621
+1.1
+.8643
+.8665
+.8686
+.8708
+.8729
+.8749
+.8770
+.8790
+.8810
+.8830
+1.2
+.8849
+.8869
+.8888
+.8907
+.8925
+.8944
+.8962
+.8980
+.8997
+.9015
+1.3
+.9032
+.9049
+.9066
+.9082
+.9099
+.9115
+.9131
+.9147
+.9162
+.9177
+1.4
+.9192
+.9207
+.9222
+.9236
+.9251
+.9265
+.9279
+.9292
+.9306
+.9319
+1.5
+.9332
+.9345
+.9357
+.9370
+.9382
+.9394
+.9406
+.9418
+.9429
+.9441
+1.6
+.9452
+.9463
+.9474
+.9484
+.9495
+.9505
+.9515
+.9525
+.9535
+.9545
+1.7
+.9554
+.9564
+.9573
+.9582
+.9591
+.9599
+.9608
+.9616
+.9625
+.9633
+1.8
+.9641
+.9649
+.9656
+.9664
+.9671
+.9678
+.9686
+.9693
+.9699
+.9706
+1.9
+.9713
+.9719
+.9726
+.9732
+.9738
+.9744
+.9750
+.9756
+.9761
+.9767
+2.0
+.9772
+.9778
+.9783
+.9788
+.9793
+.9798
+.9803
+.9808
+.9812
+.9817
+2.1
+.9821
+.9826
+.9830
+.9834
+.9838
+.9842
+.9846
+.9850
+.9854
+.9857
+2.2
+.9861
+.9864
+.9868
+.9871
+.9875
+.9878
+.9881
+.9884
+.9887
+.9890
+2.3
+.9893
+.9896
+.9898
+.9901
+.9904
+.9906
+.9909
+.9911
+.9913
+.9916
+2.4
+.9918
+.9920
+.9922
+.9925
+.9927
+.9929
+.9931
+.9932
+.9934
+.9936
+2.5
+.9938
+.9940
+.9941
+.9943
+.9945
+.9946
+.9948
+.9949
+.9951
+.9952
+2.6
+.9953
+.9955
+.9956
+.9957
+.9959
+.9960
+.9961
+.9962
+.9963
+.9964
+2.7
+.9965
+.9966
+.9967
+.9968
+.9969
+.9970
+.9971
+.9972
+.9973
+.9974
+2.8
+.9974
+.9975
+.9976
+.9977
+.9977
+.9978
+.9979
+.9979
+.9980
+.9981
+2.9
+.9981
+.9982
+.9982
+.9983
+.9984
+.9984
+.9985
+.9985
+.9986
+.9986
+3.0
+.9987
+.9987
+.9987
+.9988
+.9988
+.9989
+.9989
+.9989
+.9990
+.9990
+3.1
+.9990
+.9991
+.9991
+.9991
+.9992
+.9992
+.9992
+.9992
+.9993
+.9993
+3.2
+.9993
+.9993
+.9994
+.9994
+.9994
+.9994
+.9994
+.9995
+.9995
+.9995
+3.3
+.9995
+.9995
+.9995
+.9996
+.9996
+.9996
+.9996
+.9996
+.9996
+.9997
+3.4
+.9997
+.9997
+.9997
+.9997
+.9997
+.9997
+.9997
+.9997
+.9997
+.9998
+3.50 
+.9999
+y 
+mayores
+NOTA: Para valores de z por encima de 3.49, utilice 0.9999 para el área.
+*Utilice estos valores comunes, que resultan por interpolación:
+Puntuación z
+Área
+1.645
+0.9500
+2.575
+0.9950
+*
+*
+Valores comunes críticos
+Nivel de
+Valor
+conﬁanza
+crítico
+0.90
+1.645
+0.95
+1.960
+0.99
+2.575
+Puntuaciones z POSITIVAS

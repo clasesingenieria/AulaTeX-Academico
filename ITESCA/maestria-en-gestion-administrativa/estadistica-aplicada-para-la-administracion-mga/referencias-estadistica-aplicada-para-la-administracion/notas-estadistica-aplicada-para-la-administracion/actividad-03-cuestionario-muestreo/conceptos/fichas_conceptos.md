@@ -1,0 +1,819 @@
+# Fichas de conceptos
+
+Las citas textuales se extrajeron de las fuentes de entrada. La búsqueda puede agrupar referencias del mismo concepto aunque estén en archivos distintos.
+
+## Ficha 01. parámetro poblacional
+
+**Calidad estimada:** alta
+**Mejor similitud:** 0.3853
+**Similitud promedio:** 0.2462
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt; libro-estadistica-para-administracion-y-economia-levin-A03.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt; libro-estadistica-spiegel-y-stephens-4-a-edicion-A03.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt, bloque 3; libro-estadistica-para-administracion-y-economia-levin-A03.txt, bloque 3; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 1; libro-estadistica-spiegel-y-stephens-4-a-edicion-A03.txt, bloque 2
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 1 — similitud 0.3853
+
+**Detalle de puntaje:** tfidf=0.3053; bonus=0.0800
+
+> Como hay distintos estadísticos muestrales que se utilizan como estimadores puntuales de  sus diferentes parámetros poblacionales, en esta sección se usará la notación general siguiente. θ  parámetro poblacional de interés θˆ  estadístico muestral o estimador puntual de θ En esta notación, θ es la letra griega theta y la notación θˆ se lee “theta sombrero”.
+
+### libro-estadistica-spiegel-y-stephens-4-a-edicion-A03.txt — bloque 2 — similitud 0.2648
+
+**Detalle de puntaje:** tfidf=0.1848; bonus=0.0800
+
+> En la práctica, las estimaciones ineficientes suelen usarse debido a la relativa facilidad con que algunas de ellas  pueden obtenerse. ESTIMACIONES PUNTUALES Y ESTIMACIONES POR INTERVALO;  SU CONFIABILIDAD A una estimación de un parámetro poblacional que se da mediante un solo número se le llama estimación puntual del  parámetro. A una estimación de un parámetro poblacional que se da mediante dos números, entre los cuales se consi- dera que debe estar el parámetro en cuestión, se le llama estimación por intervalo del parámetro en cuestión.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 1 — similitud 0.2538
+
+**Detalle de puntaje:** tfidf=0.1738; bonus=0.0800
+
+> E(θˆ)  θ  donde E(θˆ)  valor esperado del estadístico muestral θˆ Por tanto, el valor esperado, o media, de todos los posibles valores de un estadístico mues- tral insesgado es igual al parámetro poblacional que se está estimando. En la ﬁ gura 7.10 se exponen los casos de los estimadores puntuales sesgado e insesgado.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt — bloque 3 — similitud 0.2054
+
+**Detalle de puntaje:** tfidf=0.1254; bonus=0.0800
+
+> [Bloque seleccionado #360 | relevancia=9] Pagina 359 10.1 Introducción En el capítulo 8 dio inicio el estudio de la inferencia estadística. Se describió la forma de selec- cionar una muestra aleatoria y, a partir de ella, calcular el valor de un parámetro poblacional. Por ejemplo, se seleccionó una muestra de 5 empleados de Spence Sprockets para determi- nar la cantidad de años de servicio de cada empleado entrevistado, se calculó la media de los años de servicio y se utilizó la media de la muestra para estimar la media de los años de servi- cio de todo el personal.
+
+### libro-estadistica-para-administracion-y-economia-levin-A03.txt — bloque 3 — similitud 0.1890
+
+**Detalle de puntaje:** tfidf=0.1090; bonus=0.0800
+
+> Un estadístico es un estimador consistente de un parámetro de población si al aumentar el tamaño de la muestra, se tiene casi la certeza de que el valor del estadístico se aproxima bastante al valor del parámetro poblacional. Si un estimador es consistente, se vuel- ve más confiable al tener tamaños de muestra más grandes.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt — bloque 3 — similitud 0.1793
+
+**Detalle de puntaje:** tfidf=0.0993; bonus=0.0800
+
+> En este capítulo, en lugar de crear un con- junto de valores en el que se espera que se presente el parámetro poblacional, se expone un procedimiento para probar la validez de un enunciado relativo a un parámetro poblacional.
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 02. estadístico muestral
+
+**Calidad estimada:** alta
+**Mejor similitud:** 0.4294
+**Similitud promedio:** 0.1973
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt; libro-estadistica-spiegel-y-stephens-4-a-edicion-A03.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 3; libro-estadistica-spiegel-y-stephens-4-a-edicion-A03.txt, bloque 2
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 1 — similitud 0.4294
+
+**Detalle de puntaje:** tfidf=0.3494; bonus=0.0800
+
+> Como hay distintos estadísticos muestrales que se utilizan como estimadores puntuales de  sus diferentes parámetros poblacionales, en esta sección se usará la notación general siguiente. θ  parámetro poblacional de interés θˆ  estadístico muestral o estimador puntual de θ En esta notación, θ es la letra griega theta y la notación θˆ se lee “theta sombrero”.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 1 — similitud 0.2029
+
+**Detalle de puntaje:** tfidf=0.1229; bonus=0.0800
+
+> Resulta interesante advertir  que cada uno de estos estadísticos muestrales sean los estimadores puntuales de sus corres- pondientes parámetros poblacionales. Sin embargo, antes de usar un estadístico muestral como  estimador puntual, se veriﬁ ca si éste tiene ciertas propiedades que corresponden a un buen es- timador puntual. En esta sección se estudian las propiedades que deben tener los buenos estima- dores puntuales: insesgadez, eﬁ ciencia y consistencia.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 1 — similitud 0.1587
+
+**Detalle de puntaje:** tfidf=0.0787; bonus=0.0800
+
+> E(θˆ)  θ  donde E(θˆ)  valor esperado del estadístico muestral θˆ Por tanto, el valor esperado, o media, de todos los posibles valores de un estadístico mues- tral insesgado es igual al parámetro poblacional que se está estimando. En la ﬁ gura 7.10 se exponen los casos de los estimadores puntuales sesgado e insesgado.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 3 — similitud 0.1552
+
+**Detalle de puntaje:** tfidf=0.0752; bonus=0.0800
+
+> Glosario Consistencia Propiedad de un estimador puntual que se hace presente siempre que muestras  más grandes tienden a proporcionar estimaciones puntuales más cercanas al parámetro pobla- cional. Distribución de muestreo o muestral Distribución de probabilidad que consta de todos los  posibles valores de un estadístico muestral. Eficiencia relativa Dados dos estimadores puntuales insesgados de un mismo parámetro po- blacional, el estimador puntual con menor error estándar será más eﬁ ciente.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt — bloque 2 — similitud 0.1432
+
+**Detalle de puntaje:** tfidf=0.0632; bonus=0.0800
+
+> La diferencia entre este estadístico muestral y el pará- metro poblacional es el error de muestreo. En el capítulo 8 se demostró que, al seleccionar todas las muestras posibles de determinado tama- ño de una población y calcular la media de estas muestras, el resultado será exactamente igual a la media poblacional; también, que la dispersión en la distribución de las medias muestrales es igual a la desviación estándar de la población dividida entre la raíz cuadrada del tamaño de la muestra.
+
+### libro-estadistica-spiegel-y-stephens-4-a-edicion-A03.txt — bloque 2 — similitud 0.0943
+
+**Detalle de puntaje:** tfidf=0.0743; bonus=0.0200
+
+> Sin embargo, la varianza de la distribución muestral de las medias es menor que la varianza de la distribución muestral de las  medianas (ver tabla 8.1). Por lo tanto, la media muestral proporciona una estimación eficiente de la media poblacional, en tanto que  la mediana muestral proporciona una estimación ineficiente de la media poblacional.
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 03. equiprobabilidad en muestreo aleatorio simple
+
+**Calidad estimada:** alta
+**Mejor similitud:** 0.5534
+**Similitud promedio:** 0.3336
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt; libro-estadistica-para-administracion-y-economia-levin-A03.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A03.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 3
+
+### libro-estadistica-para-administracion-y-economia-levin-A03.txt — bloque 1 — similitud 0.5534
+
+**Detalle de puntaje:** tfidf=0.5234; bonus=0.0300
+
+> Base de la inferencia estadística: el muestreo aleatorio simple El muestreo sistemático, el estratificado y el de racimo intentan aproximarse al muestreo aleatorio simple. Todos son métodos que han sido desarrollados por su precisión, su economía o su factibilidad.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 2 — similitud 0.3691
+
+**Detalle de puntaje:** tfidf=0.3391; bonus=0.0300
+
+> Por tanto, la media muestral es más eficiente y tendrá  más probabilidad de estar dentro de una determinada  distancia de la media poblacional. 7.8  Otros métodos de muestreo Se describió el muestreo aleatorio simple como un procedimiento de muestreo de una pobla- ción ﬁ nita y se estudiaron las propiedades de las distribuciones de muestreo de x y de p cuando  se usó el muestreo aleatorio simple. Sin embargo, no es el único método de muestreo que existe.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 3 — similitud 0.3325
+
+**Detalle de puntaje:** tfidf=0.3025; bonus=0.0300
+
+> [Bloque seleccionado #335 | relevancia=16] Pagina 334 300  Capítulo 7 Muestreo y distribuciones de muestreo Cuando se realizan muestreos de poblaciones finitas,  se recomienda usar métodos de muestreo probabilís- tico: muestreo aleatorio simple, muestreo aleatorio es- tratificado, muestreo por conglomerados o muestreo  sistemático. Existen fórmulas para evaluar la “bon- dad” de los resultados muestrales basadas en el uso  de estos métodos en términos de la cercanía de los  NOTAS Y COMENTARIOS resultados a los parámetros poblacionales que se es- timan.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt — bloque 1 — similitud 0.2801
+
+**Detalle de puntaje:** tfidf=0.2501; bonus=0.0300
+
+> Si k no es un número entero, hay que redondearlo. Para seleccionar el primer recibo emplee el muestreo aleatorio simple. Por ejemplo, selec- cione un número de la tabla de números aleatorios entre 1 y k, en este caso, 20.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 2 — similitud 0.2511
+
+**Detalle de puntaje:** tfidf=0.2211; bonus=0.0300
+
+> Una de las principales aplicaciones del muestro por conglomerados es el muestreo de áreas,  en el que los conglomerados son las manzanas de una ciudad u otras zonas bien deﬁ nidas. Por  lo general, precisa tamaños de muestra mayores que los requeridos en el muestreo aleatorio  simple o en el muestreo aleatorio estratiﬁ cado. Sin embargo, permite reducir costos debido a  que cuando se envía a un entrevistador a uno de los conglomerados de la muestra (por ejemplo,  a una manzana de una ciudad), puede obtener muchas observaciones en poco tiempo.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 2 — similitud 0.2157
+
+**Detalle de puntaje:** tfidf=0.1857; bonus=0.0300
+
+> Si éstos  son homogéneos, el muestreo aleatorio estratiﬁ cado proporciona resultados tan precisos como  los de un muestreo aleatorio simple, pero con una muestra de tamaño total menor. Muestreo por conglomerados En el muestreo por conglomerados (o clusters) los elementos de la población primero se  dividen en grupos separados, llamados conglomerados o clusters.
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 04. afijación proporcional en estratos
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.1979
+**Similitud promedio:** 0.0824
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt; libro-estadistica-para-administracion-y-economia-levin-A03.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A03.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 2
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt — bloque 1 — similitud 0.1979
+
+**Detalle de puntaje:** tfidf=0.1779; bonus=0.0200
+
+> Si aplicara el muestreo aleatorio simple, obser- ve que las empresas del tercero y cuarto estratos tienen una probabilidad alta de que se les seleccione (0.87), mientras que las empresas de los demás estratos tienen menos (0.13). Podría no seleccionar ninguna de las empresas que aparecen en los estratos 1 o 5 sencilla- mente por azar.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 2 — similitud 0.0453
+
+**Detalle de puntaje:** tfidf=0.0353; bonus=0.0100
+
+> En es [Bloque seleccionado #333 | relevancia=14] Pagina 332 298  Capítulo 7 Muestreo y distribuciones de muestreo un estrato son parecidos, éste tendrá una varianza pequeña. Por tanto, con muestras relativa- mente pequeñas de los estratos se obtienen buenas estimaciones de sus características.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt — bloque 1 — similitud 0.0442
+
+**Detalle de puntaje:** tfidf=0.0342; bonus=0.0100
+
+> Para asegurar que la muestra sea una representación imparcial de las 352 empresas, éstas se deben agrupar de acuerdo con su rendimiento porcentual sobre el capital. La tabla 8-1 incluye los estratos y las frecuencias relativas.
+
+### libro-estadistica-para-administracion-y-economia-levin-A03.txt — bloque 1 — similitud 0.0420
+
+**Detalle de puntaje:** tfidf=0.0320; bonus=0.0100
+
+> Aun cuando este tipo de muestreo puede ser inapropiado cuando los elementos entran en un patrón secuencial, este método puede requerir me- nos tiempo y, algunas veces, tiene como resultado un costo menor que el método de muestreo alea- torio simple. Muestreo estratificado  Para utilizar el muestreo estratificado, dividimos la población en grupos relativamente homogéneos, llamados estratos.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 3 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 05. periodicidad en muestreo sistemático
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2789
+**Similitud promedio:** 0.1930
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt; libro-estadistica-para-administracion-y-economia-levin-A03.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt, bloque 2; libro-estadistica-para-administracion-y-economia-levin-A03.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 3
+
+### libro-estadistica-para-administracion-y-economia-levin-A03.txt — bloque 1 — similitud 0.2789
+
+**Detalle de puntaje:** tfidf=0.2589; bonus=0.0200
+
+> Fuente bibliográfica: Estadística para administración y economía - Levin y Rubin. 7.ª edición revisada.pdf Actividad: 3 (1.3 Cuestionario 5 %) Palabras clave: parámetro, estadístico, estratificado, sistemático, conglomerados, cuotas, bola de nieve, error muestral [Bloque seleccionado #260 | relevancia=12] Pagina 259 Muestreo sistemático En el muestreo sistemático, los elementos son seleccionados de la población dentro de un intervalo uniforme que se mide con respecto al tiempo, al orden o al espacio.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 3 — similitud 0.2025
+
+**Detalle de puntaje:** tfidf=0.1825; bonus=0.0200
+
+> [Bloque seleccionado #335 | relevancia=16] Pagina 334 300  Capítulo 7 Muestreo y distribuciones de muestreo Cuando se realizan muestreos de poblaciones finitas,  se recomienda usar métodos de muestreo probabilís- tico: muestreo aleatorio simple, muestreo aleatorio es- tratificado, muestreo por conglomerados o muestreo  sistemático. Existen fórmulas para evaluar la “bon- dad” de los resultados muestrales basadas en el uso  de estos métodos en términos de la cercanía de los  NOTAS Y COMENTARIOS resultados a los parámetros poblacionales que se es- timan.
+
+### libro-estadistica-para-administracion-y-economia-levin-A03.txt — bloque 1 — similitud 0.1839
+
+**Detalle de puntaje:** tfidf=0.1639; bonus=0.0200
+
+> Los empleados numerados con 2, 3, 4 y 5 no hubieran teni- do ninguna oportunidad de haber sido seleccionados juntos. En el muestreo sistemático existe el problema de introducir un error en el proceso de muestreo. Suponga que estuviera muestreando el desecho de papel producido domésticamente, y decidiera muestrear 100 casas cada lunes.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 2 — similitud 0.1696
+
+**Detalle de puntaje:** tfidf=0.1496; bonus=0.0200
+
+> Sin embargo, no es el único método de muestreo que existe. Hay otros, como el muestro aleatorio estratiﬁ cado, el muestreo por conglomerados y el mues- treo sistemático que, en ciertas situaciones, tienen ventajas sobre el aleatorio simple. En es [Bloque seleccionado #333 | relevancia=14] Pagina 332 298  Capítulo 7 Muestreo y distribuciones de muestreo un estrato son parecidos, éste tendrá una varianza pequeña.
+
+### libro-estadistica-para-administracion-y-economia-levin-A03.txt — bloque 1 — similitud 0.1628
+
+**Detalle de puntaje:** tfidf=0.1428; bonus=0.0200
+
+> Base de la inferencia estadística: el muestreo aleatorio simple El muestreo sistemático, el estratificado y el de racimo intentan aproximarse al muestreo aleatorio simple. Todos son métodos que han sido desarrollados por su precisión, su economía o su factibilidad.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt — bloque 2 — similitud 0.1604
+
+**Detalle de puntaje:** tfidf=0.1404; bonus=0.0200
+
+> En este tipo de muestreo, cada miembro de la población posee las mismas posibilidades de ser selec- cionado como parte de la muestra. Otros métodos de muestreo son el sistemático, el estrati- ficado y el muestreo por conglomerados. El capítulo 8 presenta información relacionada con la media, la desviación estándar o la forma de la población.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 06. heterogeneidad interna en conglomerados
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2584
+**Similitud promedio:** 0.1128
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt; libro-estadistica-matematica-con-aplicaciones-wackerly-A03.txt; libro-estadistica-para-administracion-y-economia-levin-A03.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt, bloque 1; libro-estadistica-matematica-con-aplicaciones-wackerly-A03.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A03.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 3
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 2 — similitud 0.2584
+
+**Detalle de puntaje:** tfidf=0.2484; bonus=0.0100
+
+> Si éstos  son homogéneos, el muestreo aleatorio estratiﬁ cado proporciona resultados tan precisos como  los de un muestreo aleatorio simple, pero con una muestra de tamaño total menor. Muestreo por conglomerados En el muestreo por conglomerados (o clusters) los elementos de la población primero se  dividen en grupos separados, llamados conglomerados o clusters. Cada elemento pertenece a  uno y sólo un conglomerado (vea la ﬁ gura 7.13).
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 2 — similitud 0.1697
+
+**Detalle de puntaje:** tfidf=0.1597; bonus=0.0100
+
+> Una de las principales aplicaciones del muestro por conglomerados es el muestreo de áreas,  en el que los conglomerados son las manzanas de una ciudad u otras zonas bien deﬁ nidas. Por  lo general, precisa tamaños de muestra mayores que los requeridos en el muestreo aleatorio  simple o en el muestreo aleatorio estratiﬁ cado.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt — bloque 1 — similitud 0.0874
+
+**Detalle de puntaje:** tfidf=0.0774; bonus=0.0100
+
+> Seleccionar una muestra alea- toria de residentes y ponerse en contacto con cada persona requeriría mucho tiempo y resul- taría muy costoso. Sería mejor aplicar el muestreo por conglomerados y subdividir el estado en pequeñas unidades: condados o regiones. Con frecuencia se les conoce como unidades primarias.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 3 — similitud 0.0547
+
+**Detalle de puntaje:** tfidf=0.0447; bonus=0.0100
+
+> Después de proporcionar las fórmulas para la desviación están- dar o error estándar de dichos estimadores, se describieron las condiciones necesarias para que  las distribuciones de muestreo de x y de p sigan una distribución normal. Otros métodos de  muestreo que también se abordaron son el muestreo aleatorio estratiﬁ cado, por conglomerados  o clusters, sistemático, por conveniencia y subjetivo.
+
+### libro-estadistica-para-administracion-y-economia-levin-A03.txt — bloque 1 — similitud 0.0536
+
+**Detalle de puntaje:** tfidf=0.0436; bonus=0.0100
+
+> Fuente bibliográfica: Estadística para administración y economía - Levin y Rubin. 7.ª edición revisada.pdf Actividad: 3 (1.3 Cuestionario 5 %) Palabras clave: parámetro, estadístico, estratificado, sistemático, conglomerados, cuotas, bola de nieve, error muestral [Bloque seleccionado #260 | relevancia=12] Pagina 259 Muestreo sistemático En el muestreo sistemático, los elementos son seleccionados de la población dentro de un intervalo uniforme que se mide con respecto al tiempo, al orden o al espacio.
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A03.txt — bloque 1 — similitud 0.0528
+
+**Detalle de puntaje:** tfidf=0.0428; bonus=0.0100
+
+> Fuente bibliográfica: Estadística matemática con aplicaciones - Wackerly, Mendenhall y Scheaffer. 7.ª edición.pdf Actividad: 3 (1.3 Cuestionario 5 %) Palabras clave: parámetro, estadístico, estratificado, sistemático, conglomerados, cuotas, bola de nieve, error muestral [Bloque seleccionado #484 | relevancia=12] Pagina 483 ( ˆpn −p) √ˆpn ˆqn/ n /  converge en una distribución normal estándar. [Sugerencia: escriba Y como lo hici- mos en la Sección 7.5.] 9.4 Suﬁ ciencia Hasta aquí hemos seleccionado estimadores con base en la intuición.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 3 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 07. inclusión desconocida en muestreo no probabilístico
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.1757
+**Similitud promedio:** 0.0904
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt; libro-estadistica-para-administracion-y-economia-levin-A03.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt; libro-estadistica-spiegel-y-stephens-4-a-edicion-A03.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt, bloque 2; libro-estadistica-para-administracion-y-economia-levin-A03.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 3; libro-estadistica-spiegel-y-stephens-4-a-edicion-A03.txt, bloque 2
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 3 — similitud 0.1757
+
+**Detalle de puntaje:** tfidf=0.1557; bonus=0.0200
+
+> Con los muestreos de conveniencia o con los  subjetivos no se puede estimar la bondad de los resul- tados. Por tanto, debe tenerse mucho cuidado al in- terpretar resultados basados en métodos de muestreo  no probabilístico. Resumen En este capítulo se presentaron los conceptos de muestreo aleatorio simple y distribución de  muestreo.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 2 — similitud 0.0902
+
+**Detalle de puntaje:** tfidf=0.0802; bonus=0.0100
+
+> Por tanto, la media muestral es más eficiente y tendrá  más probabilidad de estar dentro de una determinada  distancia de la media poblacional. 7.8  Otros métodos de muestreo Se describió el muestreo aleatorio simple como un procedimiento de muestreo de una pobla- ción ﬁ nita y se estudiaron las propiedades de las distribuciones de muestreo de x y de p cuando  se usó el muestreo aleatorio simple. Sin embargo, no es el único método de muestreo que existe.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt — bloque 2 — similitud 0.0768
+
+**Detalle de puntaje:** tfidf=0.0568; bonus=0.0200
+
+> En este capítulo se estudian diversos aspectos importantes del muestreo. El primer paso es el estudio del estimador puntual.
+
+### libro-estadistica-para-administracion-y-economia-levin-A03.txt — bloque 1 — similitud 0.0693
+
+**Detalle de puntaje:** tfidf=0.0593; bonus=0.0100
+
+> Base de la inferencia estadística: el muestreo aleatorio simple El muestreo sistemático, el estratificado y el de racimo intentan aproximarse al muestreo aleatorio simple. Todos son métodos que han sido desarrollados por su precisión, su economía o su factibilidad.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 3 — similitud 0.0660
+
+**Detalle de puntaje:** tfidf=0.0560; bonus=0.0100
+
+> Ya que dis- tintas muestras proporcionan valores diferentes de los estimadores puntuales, los estimadores  puntuales como x y p son variables aleatorias. A la distribución de probabilidad de una varia- ble aleatoria de este tipo se le conoce como distribución de muestreo. En particular, se descri- bieron las distribuciones de muestreo de la media muestral x y de la proporción muestral p.
+
+### libro-estadistica-spiegel-y-stephens-4-a-edicion-A03.txt — bloque 2 — similitud 0.0646
+
+**Detalle de puntaje:** tfidf=0.0446; bonus=0.0200
+
+> [Bloque seleccionado #252 | relevancia=10] Pagina 251 ESTIMACIÓN DE PARÁMETROS  En el capítulo 8 se vio cómo emplear la teoría del muestreo para obtener información acerca de muestras extraídas en  forma aleatoria de una población desconocida. Sin embargo, desde el punto de vista práctico, suele ser más importan- te poder inferir información acerca de una población a partir de muestras obtenidas de ella.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 4 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 08. cálculo de tamaño muestral con varianza conocida
+
+**Calidad estimada:** baja
+**Mejor similitud:** 0.0942
+**Similitud promedio:** 0.0770
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt; libro-estadistica-spiegel-y-stephens-4-a-edicion-A03.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 4; libro-estadistica-spiegel-y-stephens-4-a-edicion-A03.txt, bloque 2
+
+### libro-estadistica-spiegel-y-stephens-4-a-edicion-A03.txt — bloque 2 — similitud 0.0942
+
+**Detalle de puntaje:** tfidf=0.0742; bonus=0.0200
+
+> Sin embargo, la varianza de la distribución muestral de las medias es menor que la varianza de la distribución muestral de las  medianas (ver tabla 8.1). Por lo tanto, la media muestral proporciona una estimación eficiente de la media poblacional, en tanto que  la mediana muestral proporciona una estimación ineficiente de la media poblacional.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 1 — similitud 0.0844
+
+**Detalle de puntaje:** tfidf=0.0744; bonus=0.0100
+
+> Como hay distintos estadísticos muestrales que se utilizan como estimadores puntuales de  sus diferentes parámetros poblacionales, en esta sección se usará la notación general siguiente. θ  parámetro poblacional de interés θˆ  estadístico muestral o estimador puntual de θ En esta notación, θ es la letra griega theta y la notación θˆ se lee “theta sombrero”.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt — bloque 2 — similitud 0.0839
+
+**Detalle de puntaje:** tfidf=0.0639; bonus=0.0200
+
+> El turismo constituye una fuente importante de ingresos para muchos países caribeños, como Barbados. Suponga que la Oficina de Turismo de Barbados desea un cálculo apro- ximado de la cantidad media que gastan los turistas que visitan el país. No resultaría via- ble ponerse en contacto con cada turista.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 2 — similitud 0.0715
+
+**Detalle de puntaje:** tfidf=0.0515; bonus=0.0200
+
+> Observe  que en el caso de la media muestral x, el error estándar de x está dado por σx  σn. Pues- to que σx está vinculado con el tamaño de la muestra, de manera que muestras mayores dan  valores menores de σx, entonces las de tamaño grande tienden a proporcionar estimadores pun- tuales más cercanos a la media de la población μ.
+
+### libro-estadistica-spiegel-y-stephens-4-a-edicion-A03.txt — bloque 2 — similitud 0.0657
+
+**Detalle de puntaje:** tfidf=0.0457; bonus=0.0200
+
+> Por lo tanto, X y ^s2 son insesgados, ya que  Ef Xg ¼  y Ef^s2g ¼ 2. ESTIMACIONES EFICIENTES Si la distribución muestral de dos estadísticos tiene la misma media (o esperanza), entonces al estadístico que tiene la  menor varianza se le llama estimador eficiente del parámetro correspondiente, y al otro se le llama estimador inefi- ciente. A los valores de estos estadísticos se les llama estimaciones eficientes e ineficientes, respectivamente.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 4 — similitud 0.0625
+
+**Detalle de puntaje:** tfidf=0.0425; bonus=0.0200
+
+> Fórmulas clave Estadístico de prueba en las pruebas de hipótesis para la media poblacional: σ conocida z  x  μ0 σn  (9.1) Estadístico de prueba en las pruebas de hipótesis para la media poblacional:  σ desconocida t  x  μ0 sn  (9.2) Estadístico de prueba en las pruebas de hipótesis para la proporción poblacional z   p0(1  p0) n p  p0 (9.4) Tamaño de la muestra en una prueba de hipótesis de una cola para la media poblacional n  (zα  z)2σ2 (μ0  μa)2  (9.7) En una prueba de dos colas
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 3 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 09. varianza máxima en proporciones
+
+**Calidad estimada:** baja
+**Mejor similitud:** 0.0858
+**Similitud promedio:** 0.0568
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt; libro-estadistica-matematica-con-aplicaciones-wackerly-A03.txt; libro-estadistica-spiegel-y-stephens-4-a-edicion-A03.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt, bloque 2; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt, bloque 3; libro-estadistica-matematica-con-aplicaciones-wackerly-A03.txt, bloque 1; libro-estadistica-matematica-con-aplicaciones-wackerly-A03.txt, bloque 2; libro-estadistica-matematica-con-aplicaciones-wackerly-A03.txt, bloque 3; libro-estadistica-spiegel-y-stephens-4-a-edicion-A03.txt, bloque 2
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A03.txt — bloque 3 — similitud 0.0858
+
+**Detalle de puntaje:** tfidf=0.0658; bonus=0.0200
+
+> EJEMPLO 9.17  En el Ejemplo 9.14, encontramos que el estimador de máxima verosimilitud (MLE) de una  proporción binomial p está dado por ˆp = Y/ n. ¿Cuál es el MLE para la varianza de Y? Solución  La varianza de una variable aleatoria binomial Y está dada por V (Y) = np (1 − p).
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A03.txt — bloque 2 — similitud 0.0720
+
+**Detalle de puntaje:** tfidf=0.0520; bonus=0.0200
+
+> Demuestre que, si la familia de fun- ciones de densidad para U está completa, g1(U) debe ser igual a g2(U), y entonces hay una función única  de U que es un estimador insesgado de u. Acoplada con el teorema de Rao–Blackwell, la propiedad de completabilidad de fU (u | u), junto con la  sufi ciencia de U, asegura que hay un estimador insesgado único de varianza mínima (UMVUE) de u. 9.6 Método de momentos En esta sección estudiaremos uno de los métodos más antiguos para obtener estimadores  puntuales: el método de momentos.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt — bloque 3 — similitud 0.0499
+
+**Detalle de puntaje:** tfidf=0.0399; bonus=0.0100
+
+> Después se muestran los pasos para llevar a cabo una prueba de hipótesis esta- dística. A continuación se aplican pruebas de hipótesis para medias y proporciones. En la últi- ma sección del capítulo se describen los posibles errores que se deben al muestreo en las pruebas de hipótesis.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt — bloque 2 — similitud 0.0462
+
+**Detalle de puntaje:** tfidf=0.0362; bonus=0.0100
+
+> Los dos puntos extre- mos ($45 200 y $ $45 400) son los límites de confianza de la media poblacional. Se describió el procedimiento para establecer un intervalo de confianza para medias grandes y pequeñas, así como para proporciones muestrales.
+
+### libro-estadistica-spiegel-y-stephens-4-a-edicion-A03.txt — bloque 2 — similitud 0.0440
+
+**Detalle de puntaje:** tfidf=0.0340; bonus=0.0100
+
+> De estos problemas se  ocupa la inferencia estadística en la que se usan los principios de la teoría del muestreo. Un problema importante de la inferencia estadística es la estimación de parámetros poblacionales, o simplemente  parámetros (como, por ejemplo, la media y la varianza poblacionales), a partir de los correspondientes estadísticos  muestrales, o simplemente estadísticos (por ejemplo, la media y la varianza muestrales). En este capítulo se analiza  este problema.
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A03.txt — bloque 1 — similitud 0.0426
+
+**Detalle de puntaje:** tfidf=0.0326; bonus=0.0100
+
+> Por tanto, elegimos  Y y S2 como los estimadores de la media y la varianza, respectivamente, de la distribución  normal. (Parece que éstos deben ser buenos estimadores de los parámetros poblacionales.)  Hemos visto que en ocasiones es más conveniente usar estimadores insesgados. De hecho, se  ha demostrado que Y y S2 son estimadores insesgados de la media poblacional m y la varianza  s2, respectivamente.
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 5 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 10. diferencia entre error aleatorio y sesgo sistemático
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.1792
+**Similitud promedio:** 0.1387
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt; libro-estadistica-para-administracion-y-economia-levin-A03.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A03.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A03.txt, bloque 4; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 2
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt — bloque 1 — similitud 0.1792
+
+**Detalle de puntaje:** tfidf=0.1492; bonus=0.0300
+
+> Entonces, a partir del recibo 18, se seleccionará cada vigé- simo recibo (18, 38, 58, etc.) como muestra. Antes de aplicar el muestreo aleatorio sistemático, debe observar con cuidado el orden físico de la población. Cuando el orden físico se relaciona con la característica de la población, no debe aplicar el muestreo aleatorio sistemático.
+
+### libro-estadistica-para-administracion-y-economia-levin-A03.txt — bloque 1 — similitud 0.1766
+
+**Detalle de puntaje:** tfidf=0.1366; bonus=0.0400
+
+> Fuente bibliográfica: Estadística para administración y economía - Levin y Rubin. 7.ª edición revisada.pdf Actividad: 3 (1.3 Cuestionario 5 %) Palabras clave: parámetro, estadístico, estratificado, sistemático, conglomerados, cuotas, bola de nieve, error muestral [Bloque seleccionado #260 | relevancia=12] Pagina 259 Muestreo sistemático En el muestreo sistemático, los elementos son seleccionados de la población dentro de un intervalo uniforme que se mide con respecto al tiempo, al orden o al espacio.
+
+### libro-estadistica-para-administracion-y-economia-levin-A03.txt — bloque 1 — similitud 0.1387
+
+**Detalle de puntaje:** tfidf=0.1187; bonus=0.0200
+
+> Base de la inferencia estadística: el muestreo aleatorio simple El muestreo sistemático, el estratificado y el de racimo intentan aproximarse al muestreo aleatorio simple. Todos son métodos que han sido desarrollados por su precisión, su economía o su factibilidad.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 2 — similitud 0.1217
+
+**Detalle de puntaje:** tfidf=0.1017; bonus=0.0200
+
+> Sin embargo, no es el único método de muestreo que existe. Hay otros, como el muestro aleatorio estratiﬁ cado, el muestreo por conglomerados y el mues- treo sistemático que, en ciertas situaciones, tienen ventajas sobre el aleatorio simple. En es [Bloque seleccionado #333 | relevancia=14] Pagina 332 298  Capítulo 7 Muestreo y distribuciones de muestreo un estrato son parecidos, éste tendrá una varianza pequeña.
+
+### libro-estadistica-para-administracion-y-economia-levin-A03.txt — bloque 4 — similitud 0.1098
+
+**Detalle de puntaje:** tfidf=0.0998; bonus=0.0100
+
+> Digamos que suponemos un cierto valor para una media de población. Para probar la validez de esa suposición recolectamos datos de muestra y determinamos la diferencia en- tre el valor hipotético y el valor real de la media de la muestra. Después juzgamos si la diferencia obtenida es significativa o no.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 2 — similitud 0.1060
+
+**Detalle de puntaje:** tfidf=0.0760; bonus=0.0300
+
+> Por tan- to, provee una muestra de tamaño grande a un costo signiﬁ cantemente menor. Muestreo sistemático Para ciertos muestreos, en especial en aquellos con poblaciones grandes, se necesita mucho  tiempo para tomar una muestra aleatoria simple, pues se requiere determinar primero los nú- FIGURA 7.12 Diagrama de un muestreo aleatorio estratificado . . . Población Estrato 2 Estrato 1 Estrato H FIGURA 7.13 Diagrama del muestreo por conglomerados . . .
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 11. sistemático
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2328
+**Similitud promedio:** 0.1462
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt; libro-estadistica-matematica-con-aplicaciones-wackerly-A03.txt; libro-estadistica-para-administracion-y-economia-levin-A03.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt, bloque 1; libro-estadistica-matematica-con-aplicaciones-wackerly-A03.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A03.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 3
+
+### libro-estadistica-para-administracion-y-economia-levin-A03.txt — bloque 1 — similitud 0.2328
+
+**Detalle de puntaje:** tfidf=0.1628; bonus=0.0700
+
+> Fuente bibliográfica: Estadística para administración y economía - Levin y Rubin. 7.ª edición revisada.pdf Actividad: 3 (1.3 Cuestionario 5 %) Palabras clave: parámetro, estadístico, estratificado, sistemático, conglomerados, cuotas, bola de nieve, error muestral [Bloque seleccionado #260 | relevancia=12] Pagina 259 Muestreo sistemático En el muestreo sistemático, los elementos son seleccionados de la población dentro de un intervalo uniforme que se mide con respecto al tiempo, al orden o al espacio.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt — bloque 1 — similitud 0.1679
+
+**Detalle de puntaje:** tfidf=0.0979; bonus=0.0700
+
+> Entonces, a partir del recibo 18, se seleccionará cada vigé- simo recibo (18, 38, 58, etc.) como muestra. Antes de aplicar el muestreo aleatorio sistemático, debe observar con cuidado el orden físico de la población. Cuando el orden físico se relaciona con la característica de la población, no debe aplicar el muestreo aleatorio sistemático.
+
+### libro-estadistica-para-administracion-y-economia-levin-A03.txt — bloque 1 — similitud 0.1453
+
+**Detalle de puntaje:** tfidf=0.0753; bonus=0.0700
+
+> Los empleados numerados con 2, 3, 4 y 5 no hubieran teni- do ninguna oportunidad de haber sido seleccionados juntos. En el muestreo sistemático existe el problema de introducir un error en el proceso de muestreo. Suponga que estuviera muestreando el desecho de papel producido domésticamente, y decidiera muestrear 100 casas cada lunes.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 3 — similitud 0.1117
+
+**Detalle de puntaje:** tfidf=0.0417; bonus=0.0700
+
+> Después de proporcionar las fórmulas para la desviación están- dar o error estándar de dichos estimadores, se describieron las condiciones necesarias para que  las distribuciones de muestreo de x y de p sigan una distribución normal. Otros métodos de  muestreo que también se abordaron son el muestreo aleatorio estratiﬁ cado, por conglomerados  o clusters, sistemático, por conveniencia y subjetivo.
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A03.txt — bloque 1 — similitud 0.1100
+
+**Detalle de puntaje:** tfidf=0.0400; bonus=0.0700
+
+> Fuente bibliográfica: Estadística matemática con aplicaciones - Wackerly, Mendenhall y Scheaffer. 7.ª edición.pdf Actividad: 3 (1.3 Cuestionario 5 %) Palabras clave: parámetro, estadístico, estratificado, sistemático, conglomerados, cuotas, bola de nieve, error muestral [Bloque seleccionado #484 | relevancia=12] Pagina 483 ( ˆpn −p) √ˆpn ˆqn/ n /  converge en una distribución normal estándar. [Sugerencia: escriba Y como lo hici- mos en la Sección 7.5.] 9.4 Suﬁ ciencia Hasta aquí hemos seleccionado estimadores con base en la intuición.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 2 — similitud 0.1098
+
+**Detalle de puntaje:** tfidf=0.0398; bonus=0.0700
+
+> Sin embargo, no es el único método de muestreo que existe. Hay otros, como el muestro aleatorio estratiﬁ cado, el muestreo por conglomerados y el mues- treo sistemático que, en ciertas situaciones, tienen ventajas sobre el aleatorio simple. En es [Bloque seleccionado #333 | relevancia=14] Pagina 332 298  Capítulo 7 Muestreo y distribuciones de muestreo un estrato son parecidos, éste tendrá una varianza pequeña.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 12. muestreo sistemático
+
+**Calidad estimada:** alta
+**Mejor similitud:** 0.3389
+**Similitud promedio:** 0.2420
+**Fuentes:** libro-estadistica-para-administracion-y-economia-levin-A03.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt
+**Ubicaciones:** libro-estadistica-para-administracion-y-economia-levin-A03.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 3
+
+### libro-estadistica-para-administracion-y-economia-levin-A03.txt — bloque 1 — similitud 0.3389
+
+**Detalle de puntaje:** tfidf=0.2589; bonus=0.0800
+
+> Fuente bibliográfica: Estadística para administración y economía - Levin y Rubin. 7.ª edición revisada.pdf Actividad: 3 (1.3 Cuestionario 5 %) Palabras clave: parámetro, estadístico, estratificado, sistemático, conglomerados, cuotas, bola de nieve, error muestral [Bloque seleccionado #260 | relevancia=12] Pagina 259 Muestreo sistemático En el muestreo sistemático, los elementos son seleccionados de la población dentro de un intervalo uniforme que se mide con respecto al tiempo, al orden o al espacio.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 3 — similitud 0.2625
+
+**Detalle de puntaje:** tfidf=0.1825; bonus=0.0800
+
+> [Bloque seleccionado #335 | relevancia=16] Pagina 334 300  Capítulo 7 Muestreo y distribuciones de muestreo Cuando se realizan muestreos de poblaciones finitas,  se recomienda usar métodos de muestreo probabilís- tico: muestreo aleatorio simple, muestreo aleatorio es- tratificado, muestreo por conglomerados o muestreo  sistemático. Existen fórmulas para evaluar la “bon- dad” de los resultados muestrales basadas en el uso  de estos métodos en términos de la cercanía de los  NOTAS Y COMENTARIOS resultados a los parámetros poblacionales que se es- timan.
+
+### libro-estadistica-para-administracion-y-economia-levin-A03.txt — bloque 1 — similitud 0.2439
+
+**Detalle de puntaje:** tfidf=0.1639; bonus=0.0800
+
+> Los empleados numerados con 2, 3, 4 y 5 no hubieran teni- do ninguna oportunidad de haber sido seleccionados juntos. En el muestreo sistemático existe el problema de introducir un error en el proceso de muestreo. Suponga que estuviera muestreando el desecho de papel producido domésticamente, y decidiera muestrear 100 casas cada lunes.
+
+### libro-estadistica-para-administracion-y-economia-levin-A03.txt — bloque 1 — similitud 0.2228
+
+**Detalle de puntaje:** tfidf=0.1428; bonus=0.0800
+
+> Base de la inferencia estadística: el muestreo aleatorio simple El muestreo sistemático, el estratificado y el de racimo intentan aproximarse al muestreo aleatorio simple. Todos son métodos que han sido desarrollados por su precisión, su economía o su factibilidad.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 2 — similitud 0.2141
+
+**Detalle de puntaje:** tfidf=0.1341; bonus=0.0800
+
+> Por tan- to, provee una muestra de tamaño grande a un costo signiﬁ cantemente menor. Muestreo sistemático Para ciertos muestreos, en especial en aquellos con poblaciones grandes, se necesita mucho  tiempo para tomar una muestra aleatoria simple, pues se requiere determinar primero los nú- FIGURA 7.12 Diagrama de un muestreo aleatorio estratificado . . . Población Estrato 2 Estrato 1 Estrato H FIGURA 7.13 Diagrama del muestreo por conglomerados . . .
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 2 — similitud 0.1696
+
+**Detalle de puntaje:** tfidf=0.1496; bonus=0.0200
+
+> Sin embargo, no es el único método de muestreo que existe. Hay otros, como el muestro aleatorio estratiﬁ cado, el muestreo por conglomerados y el mues- treo sistemático que, en ciertas situaciones, tienen ventajas sobre el aleatorio simple. En es [Bloque seleccionado #333 | relevancia=14] Pagina 332 298  Capítulo 7 Muestreo y distribuciones de muestreo un estrato son parecidos, éste tendrá una varianza pequeña.
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 13. periodicidad muestreo
+
+**Calidad estimada:** alta
+**Mejor similitud:** 0.3022
+**Similitud promedio:** 0.2373
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt; libro-estadistica-para-administracion-y-economia-levin-A03.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt, bloque 2; libro-estadistica-para-administracion-y-economia-levin-A03.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 3
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 3 — similitud 0.3022
+
+**Detalle de puntaje:** tfidf=0.2922; bonus=0.0100
+
+> [Bloque seleccionado #335 | relevancia=16] Pagina 334 300  Capítulo 7 Muestreo y distribuciones de muestreo Cuando se realizan muestreos de poblaciones finitas,  se recomienda usar métodos de muestreo probabilís- tico: muestreo aleatorio simple, muestreo aleatorio es- tratificado, muestreo por conglomerados o muestreo  sistemático. Existen fórmulas para evaluar la “bon- dad” de los resultados muestrales basadas en el uso  de estos métodos en términos de la cercanía de los  NOTAS Y COMENTARIOS resultados a los parámetros poblacionales que se es- timan.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 2 — similitud 0.2985
+
+**Detalle de puntaje:** tfidf=0.2885; bonus=0.0100
+
+> Por tanto, la media muestral es más eficiente y tendrá  más probabilidad de estar dentro de una determinada  distancia de la media poblacional. 7.8  Otros métodos de muestreo Se describió el muestreo aleatorio simple como un procedimiento de muestreo de una pobla- ción ﬁ nita y se estudiaron las propiedades de las distribuciones de muestreo de x y de p cuando  se usó el muestreo aleatorio simple. Sin embargo, no es el único método de muestreo que existe.
+
+### libro-estadistica-para-administracion-y-economia-levin-A03.txt — bloque 1 — similitud 0.2233
+
+**Detalle de puntaje:** tfidf=0.2133; bonus=0.0100
+
+> Base de la inferencia estadística: el muestreo aleatorio simple El muestreo sistemático, el estratificado y el de racimo intentan aproximarse al muestreo aleatorio simple. Todos son métodos que han sido desarrollados por su precisión, su economía o su factibilidad.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 3 — similitud 0.2114
+
+**Detalle de puntaje:** tfidf=0.2014; bonus=0.0100
+
+> Ya que dis- tintas muestras proporcionan valores diferentes de los estimadores puntuales, los estimadores  puntuales como x y p son variables aleatorias. A la distribución de probabilidad de una varia- ble aleatoria de este tipo se le conoce como distribución de muestreo. En particular, se descri- bieron las distribuciones de muestreo de la media muestral x y de la proporción muestral p.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt — bloque 2 — similitud 0.1983
+
+**Detalle de puntaje:** tfidf=0.1883; bonus=0.0100
+
+> Las razones del muestreo son las siguientes: • Entrar en contacto con toda la población consume demasiado tiempo. • El costo de estudiar todos los elementos de la población es muy alto. • Por lo general, los resultados de la muestra resultan adecuados. • Algunas pruebas resultan negativas. • Es imposible revisar todos los elementos. Existen varios métodos de muestreo.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 2 — similitud 0.1899
+
+**Detalle de puntaje:** tfidf=0.1799; bonus=0.0100
+
+> Una de las principales aplicaciones del muestro por conglomerados es el muestreo de áreas,  en el que los conglomerados son las manzanas de una ciudad u otras zonas bien deﬁ nidas. Por  lo general, precisa tamaños de muestra mayores que los requeridos en el muestreo aleatorio  simple o en el muestreo aleatorio estratiﬁ cado.
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 14. cuestionario muestreo
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.1553
+**Similitud promedio:** 0.1289
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt; libro-estadistica-para-administracion-y-economia-levin-A03.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt, bloque 2; libro-estadistica-para-administracion-y-economia-levin-A03.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 3
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 3 — similitud 0.1553
+
+**Detalle de puntaje:** tfidf=0.1453; bonus=0.0100
+
+> [Bloque seleccionado #335 | relevancia=16] Pagina 334 300  Capítulo 7 Muestreo y distribuciones de muestreo Cuando se realizan muestreos de poblaciones finitas,  se recomienda usar métodos de muestreo probabilís- tico: muestreo aleatorio simple, muestreo aleatorio es- tratificado, muestreo por conglomerados o muestreo  sistemático. Existen fórmulas para evaluar la “bon- dad” de los resultados muestrales basadas en el uso  de estos métodos en términos de la cercanía de los  NOTAS Y COMENTARIOS resultados a los parámetros poblacionales que se es- timan.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 2 — similitud 0.1534
+
+**Detalle de puntaje:** tfidf=0.1434; bonus=0.0100
+
+> Por tanto, la media muestral es más eficiente y tendrá  más probabilidad de estar dentro de una determinada  distancia de la media poblacional. 7.8  Otros métodos de muestreo Se describió el muestreo aleatorio simple como un procedimiento de muestreo de una pobla- ción ﬁ nita y se estudiaron las propiedades de las distribuciones de muestreo de x y de p cuando  se usó el muestreo aleatorio simple. Sin embargo, no es el único método de muestreo que existe.
+
+### libro-estadistica-para-administracion-y-economia-levin-A03.txt — bloque 1 — similitud 0.1348
+
+**Detalle de puntaje:** tfidf=0.1148; bonus=0.0200
+
+> Fuente bibliográfica: Estadística para administración y economía - Levin y Rubin. 7.ª edición revisada.pdf Actividad: 3 (1.3 Cuestionario 5 %) Palabras clave: parámetro, estadístico, estratificado, sistemático, conglomerados, cuotas, bola de nieve, error muestral [Bloque seleccionado #260 | relevancia=12] Pagina 259 Muestreo sistemático En el muestreo sistemático, los elementos son seleccionados de la población dentro de un intervalo uniforme que se mide con respecto al tiempo, al orden o al espacio.
+
+### libro-estadistica-para-administracion-y-economia-levin-A03.txt — bloque 1 — similitud 0.1160
+
+**Detalle de puntaje:** tfidf=0.1060; bonus=0.0100
+
+> Base de la inferencia estadística: el muestreo aleatorio simple El muestreo sistemático, el estratificado y el de racimo intentan aproximarse al muestreo aleatorio simple. Todos son métodos que han sido desarrollados por su precisión, su economía o su factibilidad.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 3 — similitud 0.1101
+
+**Detalle de puntaje:** tfidf=0.1001; bonus=0.0100
+
+> Ya que dis- tintas muestras proporcionan valores diferentes de los estimadores puntuales, los estimadores  puntuales como x y p son variables aleatorias. A la distribución de probabilidad de una varia- ble aleatoria de este tipo se le conoce como distribución de muestreo. En particular, se descri- bieron las distribuciones de muestreo de la media muestral x y de la proporción muestral p.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt — bloque 2 — similitud 0.1036
+
+**Detalle de puntaje:** tfidf=0.0936; bonus=0.0100
+
+> Las razones del muestreo son las siguientes: • Entrar en contacto con toda la población consume demasiado tiempo. • El costo de estudiar todos los elementos de la población es muy alto. • Por lo general, los resultados de la muestra resultan adecuados. • Algunas pruebas resultan negativas. • Es imposible revisar todos los elementos. Existen varios métodos de muestreo.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 15. muestreo representatividad
+
+**Calidad estimada:** alta
+**Mejor similitud:** 0.3022
+**Similitud promedio:** 0.2373
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt; libro-estadistica-para-administracion-y-economia-levin-A03.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt, bloque 2; libro-estadistica-para-administracion-y-economia-levin-A03.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 3
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 3 — similitud 0.3022
+
+**Detalle de puntaje:** tfidf=0.2922; bonus=0.0100
+
+> [Bloque seleccionado #335 | relevancia=16] Pagina 334 300  Capítulo 7 Muestreo y distribuciones de muestreo Cuando se realizan muestreos de poblaciones finitas,  se recomienda usar métodos de muestreo probabilís- tico: muestreo aleatorio simple, muestreo aleatorio es- tratificado, muestreo por conglomerados o muestreo  sistemático. Existen fórmulas para evaluar la “bon- dad” de los resultados muestrales basadas en el uso  de estos métodos en términos de la cercanía de los  NOTAS Y COMENTARIOS resultados a los parámetros poblacionales que se es- timan.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 2 — similitud 0.2985
+
+**Detalle de puntaje:** tfidf=0.2885; bonus=0.0100
+
+> Por tanto, la media muestral es más eficiente y tendrá  más probabilidad de estar dentro de una determinada  distancia de la media poblacional. 7.8  Otros métodos de muestreo Se describió el muestreo aleatorio simple como un procedimiento de muestreo de una pobla- ción ﬁ nita y se estudiaron las propiedades de las distribuciones de muestreo de x y de p cuando  se usó el muestreo aleatorio simple. Sin embargo, no es el único método de muestreo que existe.
+
+### libro-estadistica-para-administracion-y-economia-levin-A03.txt — bloque 1 — similitud 0.2233
+
+**Detalle de puntaje:** tfidf=0.2133; bonus=0.0100
+
+> Base de la inferencia estadística: el muestreo aleatorio simple El muestreo sistemático, el estratificado y el de racimo intentan aproximarse al muestreo aleatorio simple. Todos son métodos que han sido desarrollados por su precisión, su economía o su factibilidad.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 3 — similitud 0.2114
+
+**Detalle de puntaje:** tfidf=0.2014; bonus=0.0100
+
+> Ya que dis- tintas muestras proporcionan valores diferentes de los estimadores puntuales, los estimadores  puntuales como x y p son variables aleatorias. A la distribución de probabilidad de una varia- ble aleatoria de este tipo se le conoce como distribución de muestreo. En particular, se descri- bieron las distribuciones de muestreo de la media muestral x y de la proporción muestral p.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt — bloque 2 — similitud 0.1983
+
+**Detalle de puntaje:** tfidf=0.1883; bonus=0.0100
+
+> Las razones del muestreo son las siguientes: • Entrar en contacto con toda la población consume demasiado tiempo. • El costo de estudiar todos los elementos de la población es muy alto. • Por lo general, los resultados de la muestra resultan adecuados. • Algunas pruebas resultan negativas. • Es imposible revisar todos los elementos. Existen varios métodos de muestreo.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 2 — similitud 0.1899
+
+**Detalle de puntaje:** tfidf=0.1799; bonus=0.0100
+
+> Una de las principales aplicaciones del muestro por conglomerados es el muestreo de áreas,  en el que los conglomerados son las manzanas de una ciudad u otras zonas bien deﬁ nidas. Por  lo general, precisa tamaños de muestra mayores que los requeridos en el muestreo aleatorio  simple o en el muestreo aleatorio estratiﬁ cado.
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 16. periodicidad muestreo sistemático
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2789
+**Similitud promedio:** 0.1930
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt; libro-estadistica-para-administracion-y-economia-levin-A03.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt, bloque 2; libro-estadistica-para-administracion-y-economia-levin-A03.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 3
+
+### libro-estadistica-para-administracion-y-economia-levin-A03.txt — bloque 1 — similitud 0.2789
+
+**Detalle de puntaje:** tfidf=0.2589; bonus=0.0200
+
+> Fuente bibliográfica: Estadística para administración y economía - Levin y Rubin. 7.ª edición revisada.pdf Actividad: 3 (1.3 Cuestionario 5 %) Palabras clave: parámetro, estadístico, estratificado, sistemático, conglomerados, cuotas, bola de nieve, error muestral [Bloque seleccionado #260 | relevancia=12] Pagina 259 Muestreo sistemático En el muestreo sistemático, los elementos son seleccionados de la población dentro de un intervalo uniforme que se mide con respecto al tiempo, al orden o al espacio.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 3 — similitud 0.2025
+
+**Detalle de puntaje:** tfidf=0.1825; bonus=0.0200
+
+> [Bloque seleccionado #335 | relevancia=16] Pagina 334 300  Capítulo 7 Muestreo y distribuciones de muestreo Cuando se realizan muestreos de poblaciones finitas,  se recomienda usar métodos de muestreo probabilís- tico: muestreo aleatorio simple, muestreo aleatorio es- tratificado, muestreo por conglomerados o muestreo  sistemático. Existen fórmulas para evaluar la “bon- dad” de los resultados muestrales basadas en el uso  de estos métodos en términos de la cercanía de los  NOTAS Y COMENTARIOS resultados a los parámetros poblacionales que se es- timan.
+
+### libro-estadistica-para-administracion-y-economia-levin-A03.txt — bloque 1 — similitud 0.1839
+
+**Detalle de puntaje:** tfidf=0.1639; bonus=0.0200
+
+> Los empleados numerados con 2, 3, 4 y 5 no hubieran teni- do ninguna oportunidad de haber sido seleccionados juntos. En el muestreo sistemático existe el problema de introducir un error en el proceso de muestreo. Suponga que estuviera muestreando el desecho de papel producido domésticamente, y decidiera muestrear 100 casas cada lunes.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 2 — similitud 0.1696
+
+**Detalle de puntaje:** tfidf=0.1496; bonus=0.0200
+
+> Sin embargo, no es el único método de muestreo que existe. Hay otros, como el muestro aleatorio estratiﬁ cado, el muestreo por conglomerados y el mues- treo sistemático que, en ciertas situaciones, tienen ventajas sobre el aleatorio simple. En es [Bloque seleccionado #333 | relevancia=14] Pagina 332 298  Capítulo 7 Muestreo y distribuciones de muestreo un estrato son parecidos, éste tendrá una varianza pequeña.
+
+### libro-estadistica-para-administracion-y-economia-levin-A03.txt — bloque 1 — similitud 0.1628
+
+**Detalle de puntaje:** tfidf=0.1428; bonus=0.0200
+
+> Base de la inferencia estadística: el muestreo aleatorio simple El muestreo sistemático, el estratificado y el de racimo intentan aproximarse al muestreo aleatorio simple. Todos son métodos que han sido desarrollados por su precisión, su economía o su factibilidad.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt — bloque 2 — similitud 0.1604
+
+**Detalle de puntaje:** tfidf=0.1404; bonus=0.0200
+
+> En este tipo de muestreo, cada miembro de la población posee las mismas posibilidades de ser selec- cionado como parte de la muestra. Otros métodos de muestreo son el sistemático, el estrati- ficado y el muestreo por conglomerados. El capítulo 8 presenta información relacionada con la media, la desviación estándar o la forma de la población.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 17. estadístico
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.1983
+**Similitud promedio:** 0.1822
+**Fuentes:** libro-estadistica-matematica-con-aplicaciones-wackerly-A03.txt; libro-estadistica-para-administracion-y-economia-levin-A03.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt; libro-estadistica-spiegel-y-stephens-4-a-edicion-A03.txt
+**Ubicaciones:** libro-estadistica-matematica-con-aplicaciones-wackerly-A03.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A03.txt, bloque 3; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 4; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 5; libro-estadistica-spiegel-y-stephens-4-a-edicion-A03.txt, bloque 4
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A03.txt — bloque 1 — similitud 0.1983
+
+**Detalle de puntaje:** tfidf=0.1283; bonus=0.0700
+
+> El Teorema 9.4 también podría haberse usado para demostrar que  n i=1 Yi es otro estadístico  sufi ciente. De hecho, para la distribución exponencial descrita en el Ejemplo 9.5, cualquier  estadístico que sea una función biunívoca de Y es un estadístico sufi ciente.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 4 — similitud 0.1888
+
+**Detalle de puntaje:** tfidf=0.1188; bonus=0.0700
+
+> En una  prueba de cola inferior, el valor-p es la probabilidad de obtener un valor para el estadístico  de prueba tan pequeño o menor que el aportado por la muestra. En una prueba de cola superior,  el valor-p es la probabilidad de obtener un valor para el estadístico de prueba tan grande o  mayor que el proporcionado por la muestra.
+
+### libro-estadistica-spiegel-y-stephens-4-a-edicion-A03.txt — bloque 4 — similitud 0.1871
+
+**Detalle de puntaje:** tfidf=0.1171; bonus=0.0700
+
+> En el problema 17.5 se muestra que, al nivel de signifi- cancia 0.05, hay una diferencia significativa entre los cables. Nota 3: Un valor de U correspondiente a la muestra 2 es el dado por el estadístico U ¼ N1N2 þ N2ðN2 þ 1Þ 2  R2  (5) y tiene la misma distribución muestral que el estadístico (2), siendo su media y su varianza las dadas  por la fórmula (3). El estadístico (5) se relaciona con el estadístico (2), ya que si U1 y U2 son los  valores correspondientes a los estadísticos (2) y (5), respectivamente, entonces se tiene U1 þ U2 ¼ N1N2  (6) También se tiene R1 þ R2 ¼ NðN þ 1Þ 2 (7) donde N = N1 + N2.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 1 — similitud 0.1801
+
+**Detalle de puntaje:** tfidf=0.1101; bonus=0.0700
+
+> Como hay distintos estadísticos muestrales que se utilizan como estimadores puntuales de  sus diferentes parámetros poblacionales, en esta sección se usará la notación general siguiente. θ  parámetro poblacional de interés θˆ  estadístico muestral o estimador puntual de θ En esta notación, θ es la letra griega theta y la notación θˆ se lee “theta sombrero”.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 5 — similitud 0.1766
+
+**Detalle de puntaje:** tfidf=0.1066; bonus=0.0700
+
+> El valor-p  1  probabilidad acumulada Por ejemplo, el valor-p en la cola superior correspondiente a un estadístico de prueba de z   2.67 es 1  0.0038  0.9962, y para las dos colas correspondiente a un estadístico de prueba  de z  2.67 es el doble del mínimo de los valores-p de las colas inferior y superior; es decir,  el valor-p para las dos colas correspondiente a z  2.67 es 2(.0038)  0.0076. Estadístico de prueba t El ejemplo del aeropuerto Heathrow de la sección 9.4 se utiliza  para ilustrar esta prueba; el valor del estadístico de prueba es t  1.84 con 59 grados de liber- tad.
+
+### libro-estadistica-para-administracion-y-economia-levin-A03.txt — bloque 3 — similitud 0.1624
+
+**Detalle de puntaje:** tfidf=0.0924; bonus=0.0700
+
+> Un estadístico es un estimador consistente de un parámetro de población si al aumentar el tamaño de la muestra, se tiene casi la certeza de que el valor del estadístico se aproxima bastante al valor del parámetro poblacional. Si un estimador es consistente, se vuel- ve más confiable al tener tamaños de muestra más grandes.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 18. distribución
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.1989
+**Similitud promedio:** 0.1840
+**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt; libro-estadistica-matematica-con-aplicaciones-wackerly-A03.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt; libro-estadistica-spiegel-y-stephens-4-a-edicion-A03.txt
+**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt, bloque 2; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt, bloque 3; libro-estadistica-matematica-con-aplicaciones-wackerly-A03.txt, bloque 4; libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt, bloque 4; libro-estadistica-spiegel-y-stephens-4-a-edicion-A03.txt, bloque 4
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt — bloque 2 — similitud 0.1989
+
+**Detalle de puntaje:** tfidf=0.1289; bonus=0.0700
+
+> La diferencia entre este estadístico muestral y el pará- metro poblacional es el error de muestreo. En el capítulo 8 se demostró que, al seleccionar todas las muestras posibles de determinado tama- ño de una población y calcular la media de estas muestras, el resultado será exactamente igual a la media poblacional; también, que la dispersión en la distribución de las medias muestrales es igual a la desviación estándar de la población dividida entre la raíz cuadrada del tamaño de la muestra. Este resultado recibe el nombre de error estándar de la media.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt — bloque 3 — similitud 0.1958
+
+**Detalle de puntaje:** tfidf=0.1258; bonus=0.0700
+
+> En este capítulo se consideraron dos estadísticos de prueba. a) La distribución normal estándar se utiliza cuando la población sigue la distribución normal y se conoce la desviación estándar de la población. b) La distribución t de Student se emplea cuando la población sigue la distribución normal y se desconoce la desviación estándar de la población. D.
+
+### libro-estadistica-spiegel-y-stephens-4-a-edicion-A03.txt — bloque 4 — similitud 0.1832
+
+**Detalle de puntaje:** tfidf=0.1132; bonus=0.0700
+
+> Como antes, el estadístico (5) tiene una distribución muestral que está dada, con una aproximación muy buena, por  (4), siempre y cuando las frecuencias esperadas no sean demasiado pequeñas. El número de grados de libertad, ν, de  esta distribución ji cuadrada es, para h > 1 y k > 1,  1. ν = (h − 1)(k − 1) si las frecuencias esperadas pueden calcularse sin necesidad de estimar parámetros poblacio- nales mediante estadísticos muestrales.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A03.txt — bloque 3 — similitud 0.1804
+
+**Detalle de puntaje:** tfidf=0.1104; bonus=0.0700
+
+> Si no se conoce la desviación estándar de la población, pero hay por lo menos 30 observacio- nes en la muestra, s se sustituye por . El estadístico de prueba es la distribución t, y su valor se determina de acuerdo con: (10-2) Las principales características de la distribución t de Student son: 1. Es una distribución continua.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A03.txt — bloque 4 — similitud 0.1793
+
+**Detalle de puntaje:** tfidf=0.1093; bonus=0.0700
+
+> En la sección  9.1 se proporcionaron los lineamientos para elaborar estas hipótesis en tres situaciones encon- tradas a menudo en la práctica. Si se tienen datos históricos o alguna otra información que proporcione una base para supo- ner que se conoce la desviación estándar poblacional, el procedimiento de prueba de hipótesis  para la media poblacional se sustenta en la distribución normal estándar. Si no se conoce σ, se  usa la desviación estándar muestral s para estimarlo, y el procedimiento de la prueba de hipóte- sis se basa en la distribución t.
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A03.txt — bloque 4 — similitud 0.1664
+
+**Detalle de puntaje:** tfidf=0.0964; bonus=0.0700
+
+> DEFINICIÓN 16.1  Las distribuciones previas que resulten en distribuciones posteriores que sean de la mis- ma forma funcional que la previa, pero con valores de parámetro alterados, se denomi- nan previas conjugadas. Cualquier distribución beta es una distribución previa conjugada para una distribución de  Bernoulli (o una binomial). Cuando la previa se actualiza (usando los datos), el resultado es  una beta posterior con valores de parámetro alterados.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.

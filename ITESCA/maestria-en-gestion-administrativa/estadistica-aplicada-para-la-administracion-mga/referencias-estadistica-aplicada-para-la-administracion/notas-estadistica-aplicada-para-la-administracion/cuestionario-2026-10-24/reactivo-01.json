@@ -1,0 +1,106 @@
+{
+  "path": "/mod/quiz/attempt.php",
+  "text": "Atrás\nTiempo restante\nOcultar\nPregunta\n1\nSin responder aún\nSe puntúa como 0 sobre 1,00\nMarcar pregunta\nEnunciado de la pregunta\nEl muestreo por cuotas se parece al estratificado, pero:\nPregunta 1\nRespuesta\na.\nNo requiere definir cuotas previas.\nb.\nNo usa selección aleatoria dentro de los grupos.\nc.\nEs más preciso estadísticamente.\nQuitar mi elección\nLa conexión de red se ha perdido. (Ha fallado el guardado automático).\nAnote las respuestas introducidas en esta página en los últimos minutos, y trate de volver a conectarse.\nUna vez que la conexión se haya restablecido, sus respuestas deben ser guardados y este mensaje desaparecerá.\nLa conexión de red se ha recuperado. Puede continuar de forma segura.",
+  "forms": [
+    {
+      "index": 0,
+      "id": "responseform",
+      "action_path": "/mod/quiz/processattempt.php",
+      "controls": [
+        {
+          "name": "q6402:15_:flagged",
+          "type": "hidden"
+        },
+        {
+          "name": "q6402:15_:flagged",
+          "type": "checkbox",
+          "label": "Marcar pregunta",
+          "value": "1"
+        },
+        {
+          "name": "q6402:15_:sequencecheck",
+          "type": "hidden"
+        },
+        {
+          "name": "q6402:15_answer",
+          "type": "radio",
+          "label": "0",
+          "value": "0"
+        },
+        {
+          "name": "q6402:15_answer",
+          "type": "radio",
+          "label": "1",
+          "value": "1"
+        },
+        {
+          "name": "q6402:15_answer",
+          "type": "radio",
+          "label": "2",
+          "value": "2"
+        },
+        {
+          "name": "q6402:15_answer",
+          "type": "radio",
+          "label": "Quitar mi elección",
+          "value": "-1"
+        },
+        {
+          "name": "next",
+          "type": "submit",
+          "label": "Siguiente página"
+        },
+        {
+          "name": "attempt",
+          "type": "hidden"
+        },
+        {
+          "name": "thispage",
+          "type": "hidden"
+        },
+        {
+          "name": "nextpage",
+          "type": "hidden"
+        },
+        {
+          "name": "timeup",
+          "type": "hidden"
+        },
+        {
+          "name": "sesskey",
+          "type": "hidden"
+        },
+        {
+          "name": "mdlscrollto",
+          "type": "hidden"
+        },
+        {
+          "name": "slots",
+          "type": "hidden"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "id": "url_select_f6add582f6851b7",
+      "action_path": "/course/jumpto.php",
+      "controls": [
+        {
+          "name": "sesskey",
+          "type": "hidden"
+        },
+        {
+          "name": "jump",
+          "type": "select",
+          "label": "Ir a... Avisos Presentación y Bienvenida Programa de la asignatura Especificaciones de la asignatura Material de Apoyo PÁGINA DE HERRAMIENTA DE APOYO Enlace de videoconferencia Foro de Bienvenida y Dudas de la materia Materiales de apoyo 1.1 Infografía 5% 1.2 Investigación 3% Materiales de apoyo 2.1 Investigación documental y aplicada 5% 2.2 Ejercicios 5% 2.3 Evaluación 6% Materiales de apoyo 3.1 Investigación 5% 3.2 Ejercicios 5% 3.3 Evaluación 5% Materiales de apoyo 4.1 Ensayo  2% 4.2 Ejercicios Equipo 4% 4.3 Evaluación 5% Materiales de apoyo 5.1 Investigación 5% 5.2 Ejercicios Equipo 5% 5.3 Ejercicios individuales 5% video de apoyo Materiales de apoyo 6.1 Infografía Equipo 4% 6.2 Investigación 4% 6.3 Ejercicios Equipo 5% 6.4 Cuestionario 5% Materiales de apoyo 7.1 Infografía Equipo 3% 7.2 Investigación 4% 7.3  Ejercicios Equipo 5%"
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Atrás",
+      "url": "https://cursos3.e-itesca.edu.mx/mod/quiz/view.php?id=1749"
+    }
+  ]
+}

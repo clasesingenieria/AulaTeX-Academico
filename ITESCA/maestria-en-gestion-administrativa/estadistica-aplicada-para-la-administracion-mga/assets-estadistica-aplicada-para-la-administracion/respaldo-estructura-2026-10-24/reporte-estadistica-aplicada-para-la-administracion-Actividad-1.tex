@@ -1,0 +1,98 @@
+\def\estadisticatitulo{Muestreo para decidir}
+\def\estadisticasubtitulo{Actividad 1: Infografía}
+\def\estadisticafecha{22 de octubre de 2026}
+\def\estadisticaunidad{Muestreo}
+\def\estadisticaextras{%
+  \usepackage{fontspec}
+  \setmainfont{Arial}\setsansfont{Arial}
+  \usetikzlibrary{babel}
+  \geometry{paperwidth=297mm,paperheight=420mm,margin=12mm}
+  \definecolor{muestreoTeal}{HTML}{006B67}
+  \definecolor{muestreoPale}{HTML}{EAF4F2}
+  \definecolor{muestreoGray}{HTML}{F1F2F3}
+  \hypersetup{pdftitle={Muestreo para decidir},pdfsubject={Actividad 1 - Estadística aplicada para la administración}}
+  \setcitestyle{citesep={;}}
+  \renewcommand{\insertcoverwatermark}{}
+  \renewcommand{\insertcoverinstitutionalfooter}{}
+  \renewcommand{\templatePortrait}{}
+  \renewcommand{\templatePagecfg}{}
+  \renewcommand{\templateFinalcfg}{\pagestyle{empty}}
+}
+\long\def\estadisticacontenido{%
+\setstretch{1}\fontsize{12}{15}\selectfont\pagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+\begin{scope}[shift={(current page.north west)},x=1cm,y=-1cm,
+  every node/.style={anchor=north west,inner sep=0pt,outer sep=0pt,align=left},
+  copy/.style={font=\fontsize{12}{15}\selectfont},
+  heading/.style={font=\fontsize{16}{19}\selectfont\bfseries},
+  smallcopy/.style={font=\fontsize{10.5}{13}\selectfont}]
+\fill[itescaRed] (0,0) rectangle (0.35,42);
+\node at (1.2,0.8) {\includegraphics[width=3.4cm]{ITESCA/assets-itesca/web/logo-itesca-contorno.png}};
+\node[smallcopy,text width=18cm] at (5.2,1.05) {\textbf{Maestría en Gestión Administrativa}\par Estadística aplicada para la administración};
+\node[font=\fontsize{32}{36}\selectfont\bfseries,text=itescaRedDark] at (1.2,2.4) {Muestreo para decidir};
+\node[font=\fontsize{17}{20}\selectfont,text=muestreoTeal] at (1.2,3.9) {Una parte de la población, una decisión con límites};
+\node[smallcopy,text width=27.2cm] at (1.2,4.9) {\textbf{Martín Jonathan de la Cruz Muñoz} | Matrícula: 26130503 | Actividad 1: Infografía\par Dra. Yoana Elizeth Tauitmes Delgado | 22 de octubre de 2026};
+
+\node[heading,text=muestreoTeal] at (1.2,6.25) {Introducción};
+\node[copy,text width=27.2cm] at (1.2,7.05) {El muestreo selecciona unidades de una población para estudiar sus características sin observarla completa. En administración reduce costos y tiempos, pero una conclusión solo es defendible si el diseño y la respuesta permiten representar al grupo de interés \citep{holmesBusiness2023}.};
+
+\node[heading,text=itescaRedDark] at (1.2,9.0) {Del universo al dato: elegir antes de contar};
+\foreach \pos/\label/\detail in {1.2/Población/Clientes a quienes se quiere conocer,10.5/Marco/Registro que permite seleccionarlos,19.8/Muestra/Clientes seleccionados para observar}{
+  \fill[muestreoPale] (\pos,10.05) rectangle +(8.5,1.8);
+  \node[font=\fontsize{14}{17}\selectfont\bfseries,text=muestreoTeal] at (\pos+0.3,10.3) {\label};
+  \node[smallcopy,text width=7.8cm] at (\pos+0.3,11.0) {\detail};
+}
+\draw[-{Stealth[length=3mm]},thick,muestreoTeal] (9.85,10.9) -- (10.3,10.9);
+\draw[-{Stealth[length=3mm]},thick,muestreoTeal] (19.15,10.9) -- (19.6,10.9);
+
+\node[heading,text=muestreoTeal] at (1.2,12.6) {01 / Muestreo probabilístico};
+\node[copy,text width=13cm] at (1.2,13.5) {Cada unidad tiene probabilidad conocida y positiva de inclusión. No siempre es igual.\par\medskip
+\textbf{Aleatorio simple.} Todas las muestras de igual tamaño tienen la misma probabilidad: sortear clientes de un registro completo.\par\medskip
+\textbf{Estratificado.} Seleccionar al azar dentro de todos los estratos: clientes por canal de compra.\par\medskip
+\textbf{Sistemático.} Inicio aleatorio y cada $k$ unidades: revisar cada décima factura; evitar periodicidades.\par\medskip
+\textbf{Conglomerados.} Sortear grupos y estudiar sus unidades: sucursales seleccionadas al azar. Puede reducir costos, pero la semejanza interna afecta la precisión.};
+
+\node[heading,text=itescaRedDark] at (15.5,12.6) {02 / Muestreo no probabilístico};
+\node[copy,text width=12.8cm] at (15.5,13.5) {La selección no permite conocer la probabilidad de inclusión de cada unidad.\par\medskip
+\textbf{Conveniencia.} Entrevistar a quienes están disponibles: compradores presentes en una tienda.\par\medskip
+\textbf{Autoselección.} Responder por iniciativa propia: una encuesta abierta en redes sociales.\par\medskip
+Útil para exploración; no atribuirle el margen de error de una muestra aleatoria sin supuestos adicionales.\par\medskip
+\textcolor{itescaRedDark}{\textbf{Más respuestas no corrigen por sí solas el sesgo.}} Una selección aleatoria dentro de un marco incompleto tampoco cubre automáticamente a toda la población \citep{bradley2021}.};
+\node[smallcopy,text width=27cm] at (1.2,21.1) {Fundamentos y ejemplos de selección: Holmes et al. (2023, sec. 1.2); cobertura y no respuesta: Bradley et al. (2021).};
+
+\fill[muestreoGray] (1.2,22.05) rectangle (28.3,28.55);
+\node[heading,text=muestreoTeal] at (1.6,22.45) {03 / ¿Cuántas respuestas se necesitan?};
+\node[copy,text width=17cm] at (1.6,23.4) {\textbf{Ejemplo hipotético:} estimar la proporción de clientes satisfechos. Aproximación normal, muestra aleatoria simple y población grande respecto de la muestra.\par\medskip
+\(\displaystyle n_0=\frac{z_{\alpha/2}^{\,2}\,p(1-p)}{e^2}=\frac{1.96^2(0.5)(0.5)}{0.05^2}=384.16\)\par\medskip
+$z=1.96$: confianza de 95\%; $e=0.05$: margen de cinco puntos porcentuales; $p=0.5$: máxima variabilidad. Redondear hacia arriba \citep{holmesBusiness2023}.};
+\node[font=\fontsize{52}{56}\selectfont\bfseries,text=itescaRedDark] at (21.1,23.4) {385};
+\node[copy,text width=6.3cm,align=center] at (20.7,25.1) {respuestas completas\par\smallskip Respuesta prevista: 80\%\par $\lceil 385/0.80\rceil=482$\par invitaciones planificadas.};
+\node[smallcopy,text width=26cm] at (1.6,27.5) {No es una fórmula universal: otros diseños requieren ajustes. Para contrastar hipótesis también se especifican potencia y efecto mínimo detectable (NIST y SEMATECH, 2003, sec. 7.2.4.2).};
+
+\node[heading,text=muestreoTeal] at (1.2,29.05) {04 / Aplicaciones administrativas y de mercado};
+\node[copy,text width=13cm] at (1.2,30.0) {\textbf{Administración: calidad de facturación.}\par Seleccionar facturas con inicio aleatorio, estimar la proporción con errores y decidir dónde auditar. No confundir errores detectados con causas demostradas.};
+\node[copy,text width=12.8cm] at (15.5,30.0) {\textbf{Mercado: satisfacción por canal.}\par Estratificar clientes de tienda y venta digital, seleccionar al azar en ambos y ponderar según el diseño. Escuchar solo seguidores digitales excluye otros compradores.};
+
+\draw[itescaRed,line width=1.2pt] (1.2,32.95) -- (28.3,32.95);
+\node[heading,text=itescaRedDark] at (1.2,33.4) {Conclusiones};
+\node[copy,text width=27.1cm] at (1.2,34.2) {Una decisión responsable exige revisar cobertura, selección y no respuesta antes de celebrar el tamaño de la base. El criterio es invertir primero en datos pertinentes y después en cantidad: así el ahorro del muestreo no se convierte en un costo por decisiones sesgadas.};
+
+\node[text width=27.1cm,font=\fontsize{10}{12}\selectfont] at (1.2,36.15) {%
+  \renewcommand{\bibsection}{{\fontsize{12}{14}\selectfont\bfseries Referencias}\par\smallskip}
+  \setlength{\bibsep}{5pt}\setlength{\bibhang}{0.7cm}
+  \begin{thebibliography}{3}
+  \fontsize{10}{12}\selectfont\setstretch{1}
+  \bibitem[Bradley et al.(2021)]{bradley2021}
+  Bradley, V. C., Kuriwaki, S., Isakov, M., Sejdinovic, D., Meng, X.-L., \& Flaxman, S. (2021). Unrepresentative big surveys significantly overestimated US vaccine uptake. \textit{Nature, 600}(7890), 695--700. \url{https://doi.org/10.1038/s41586-021-04198-4}
+  \bibitem[Holmes et al.(2023)]{holmesBusiness2023}
+  Holmes, A., Illowsky, B., \& Dean, S. (2023). \textit{Introductory business statistics} (2.\textsuperscript{a} ed.). OpenStax. \url{https://openstax.org/details/books/introductory-business-statistics-2e}
+  \bibitem[NIST y SEMATECH(2003)]{nistHandbook}
+  National Institute of Standards and Technology \& SEMATECH. (2003). \textit{NIST/SEMATECH e-Handbook of statistical methods}. \url{https://doi.org/10.18434/M32189}
+  \end{thebibliography}
+};
+\end{scope}
+\end{tikzpicture}
+\null
+\global\itescaactivitycitedfalse
+}
+\input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/reporte-estadistica-aplicada-para-la-administracion-plantilla-actividad.tex}

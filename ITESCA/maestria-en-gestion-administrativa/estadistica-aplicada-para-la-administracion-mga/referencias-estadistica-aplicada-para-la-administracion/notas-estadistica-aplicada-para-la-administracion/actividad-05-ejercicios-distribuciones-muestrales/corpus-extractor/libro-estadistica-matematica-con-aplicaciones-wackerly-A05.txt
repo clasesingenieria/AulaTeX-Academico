@@ -1,0 +1,563 @@
+Fuente bibliográfica: Estadística matemática con aplicaciones - Wackerly, Mendenhall y Scheaffer. 7.ª edición.pdf
+Actividad: 5 (2.2 Ejercicios 5% Tarea)
+Palabras clave: distribución muestral, media muestral, proporción muestral, teorema central del límite, error estándar, corrección por continuidad
+
+[Bloque seleccionado #19 | relevancia=8]
+Pagina 18
+xvi  Prefacio
+of Gamma Density Functions and Comparison of Beta Density Functions, (Comparación de 
+Funciones de Densidad Gamma y Comparación de Funciones de Densidad Beta),  respec-
+tivamente. Las probabilidades y cuantiles asociados con variables aleatorias de distribución 
+gamma y beta se obtienen usando las aplicaciones Gamma Probabilities and Quantiles or 
+Beta Probabilities and Quantiles (Probabilidades y Cuantiles Gamma o Probabilidades y 
+Cuantiles Beta). Se proporcionan conjuntos de Ejercicios de Aplicaciones Breves para guiar 
+al usuario a descubrir resultados interesantes e informativos asociados con variables aleatorias 
+de distribución normal, beta y gamma (incluyendo las exponenciales y de χ2). Mantenemos 
+el énfasis en la distribución χ2, incluyendo algunos resultados teóricos que son útiles en el 
+posterior desarrollo de las distribuciones t y F.
+En el Capítulo 5 se deja claro que las densidades condicionales no están defi nidas para 
+valores de la variable condicionante donde la densidad marginal es cero. También hemos re-
+tenido el análisis de la “varianza condicional” y su uso para hallar la varianza de una variable 
+aleatoria. Brevemente se estudian modelos jerárquicos. Al igual que en la edición anterior, el 
+Capítulo 6 introduce el concepto del apoyo de una densidad y resalta que se puede usar un mé-
+todo de transformación cuando ésta es monótona en la región de apoyo. El método jacobiano 
+está incluido para la implementación de una transformación bivariada.
+En el Capítulo 7, la aplicación breve Comparison of Student’s t and Normal Distributions 
+(Comparación de Distribuciones t de Student y Normales) permite la visualización de simi-
+litudes y diferencias en funciones de densidad t y estándar normal y las aplicaciones bre-
+ves Probabilidades y Cuantiles Ji cuadrada, Probabilidades y Cuantiles t de Student y las 
+Probabilidades y Cuantiles de Razón F proporcionan probabilidades y cuantiles asociados 
+con las distribuciones respectivas, todos con grados de libertad especifi cados por el usuario. 
+La aplicación breve DiceSample utiliza el conocido ejemplo de lanzar dados a una mesa para 
+introducir el concepto de una distribución de muestreo. Los resultados para diferentes tama-
+ños muestrales permiten al usuario evaluar el impacto del tamaño de la muestra en la distribu-
+ción muestral de la media. La aplicación breve también permite la visualización de la forma 
+en que la distribución muestral es afectada si el dado no está balanceado. Bajo el encabezado 
+general de “Distribuciones Muestrales y el Teorema del Límite Central
+
+[Bloque seleccionado #374 | relevancia=8]
+Pagina 373
+Algunos de los ejercicios del fi nal de esta sección utilizan la aplicación breve DiceSample 
+para explorar la distribución muestral simulada de Y para diferentes tamaños muestrales y 
+para tiros de dados en los que se usan dados “cargados”. Otras aplicaciones se usan para si-
+mular las distribuciones muestrales para la media y la varianza de muestras tomadas de una 
+distribución en forma de campana.
+Al igual que las distribuciones muestrales simuladas que usted observará en los ejercicios, 
+la forma de la distribución muestral teórica de cualquier estadístico dependerá de la distribu-
+ción de las variables aleatorias observables de la muestra. En la siguiente sección usaremos los 
+métodos del Capítulo 6 para deducir las distribuciones muestrales para algunos estadísticos 
+empleados para hacer inferencias acerca de los parámetros de una distribución normal.
+Ejercicios
+ 
+7.1 
+Ejercicio Applet En el Ejemplo 7.1 obtuvimos la media y varianza de la variable aleatoria Y con base 
+en una muestra de tamaño 3 tomada de una población conocida, la asociada con lanzar al aire un dado 
+balanceado. Recuerde que si Y denota el número de puntos observados en la cara superior en un solo tiro 
+de un dado balanceado, como en el Ejercicio 3.22,
+P(Y = i) = 1/ 6,
+i = 1, 2, . . . , 6,
+m = E(Y) = 3.5,
+Var(Y) = 2.9167.
+ 
+ 
+Use la aplicación DiceSample (en www.thomsonedu.com/statistics/wackerly) para completar lo si-
+guiente:
+ 
+ 
+a  Use el botón “Roll One Set” para tomar una muestra de tamaño 3 de la población de tiros de dados. 
+¿Qué valor se obtuvo para la media de esta muestra? ¿Dónde cae este valor en el histograma? ¿El va-
+lor obtenido es igual a uno de los posibles valores asociados con un solo tiro de un dado balanceado? 
+¿Por qué sí o por qué no?
+ 
+ 
+b  Use el botón “Roll One Set” para obtener de nuevo otra muestra de tamaño 3 de una población de 
+tiros de dados. ¿Qué valor se obtuvo para la media de esta nueva muestra? El valor obtenido ¿es igual 
+al valor obtenido en el inciso a? ¿Por qué sí o por qué no?
+ 
+ 
+c  Use el botón “Roll One Set” ocho veces más para obtener un total de diez valores de la media mues-
+tral. Vea el histograma de estas diez medias. ¿Qué se observa? ¿Cuántos valores diferentes para la 
+media muestral se obtuvieron? ¿Qué valores se observaron más de una vez?
+ 
+ 
+d  Use el botón “Roll 10 Sets” hasta obtener o grafi car 100 valores realizados para la media mues-
+tral, Y . ¿Qué puede observar acerca de la forma del histograma de los 100 valores recabados? 
+Haga clic en el botón “Show Stats” para ver la media y la desviación estándar de los 
+
+[Bloque seleccionado #376 | relevancia=16]
+Pagina 375
+ 
+ 
+ 
+ i ¿Cuál es la forma general de la distribución muestral simulada que obtuvo?
+ 
+ 
+ 
+ii  ¿Cómo se compara la media de los 3000 valores y1, y2, . . . , y3000 con el valor de m = E(Y) calcu-
+lada en el inciso a? ¿Cómo se compara la desviación estándar de los 3000 valores con s/√3?
+ 
+ 
+e Arrastre a la parte de la pantalla marcada “Rolling 12 Loaded Dice”.
+ 
+ 
+ 
+  i  En el inciso ii, usted usará la aplicación breve para generar 3000 muestras de tamaño 12, calculará 
+la media de cada muestra observada y grafi cará estas medias en un histograma. Antes de usar la 
+aplicación, pronostique el valor aproximado que obtendrá para la media y desviación estándar de 
+los 3000 valores de y que está por generar.
+ 
+ 
+ 
+ ii  Use la aplicación para generar 3000 muestras de tamaño 12 y obtener el histograma asociado con 
+las medias muestrales respectivas, yi, i = 1, 2, . . . , 3000. ¿Cuál es la forma general de la distri-
+bución muestral simulada que obtuvo? Compare la forma de esta distribución muestral simulada 
+con la que obtuvo en el inciso d.
+ 
+ 
+ 
+iii  Haga clic en el botón “Show Stats” para observar la media y la desviación estándar de los 3000 
+valores y1, y2, . . . , y3000. ¿Cómo se comparan estos valores con los que usted pronosticó en el 
+inciso i?
+ 
+7.5 
+Ejercicio Applet ¿Qué aspecto tiene la distribución de muestreo de la media muestral si las muestras se 
+toman de una distribución aproximadamente normal? Use el applet Sampling Distribution of the Mean 
+(en www.thomsonedu.com/statistics/wackerly) para completar lo siguiente. La población de la que se 
+obtendrán las muestras está distribuida aproximadamente en forma normal con m = 16.50 y s = 6.03 
+(estos valores se proporcionan arriba del histograma poblacional y están denotados como M y S, respec-
+tivamente).
+ 
+ 
+a  Use el botón “Next Obs” para seleccionar un solo valor de la población aproximadamente normal. 
+Haga clic cuatro veces en el botón para completar una muestra de tamaño 5. ¿Qué valor obtuvo para 
+la media de esta muestra? Localice este valor en el histograma del fondo (el histograma para los 
+valores de Y).
+ 
+ 
+b  Haga clic en el botón “Reset” para borrar la gráfi ca del centro. Haga clic en el botón “Next Obs” 
+cinco veces más para obtener otra muestra de tamaño 5 de la población. ¿Qué valor obtuvo para la 
+media de esta nueva muestra? El valor que obtuvo ¿es igual al obtenido en el inciso a? ¿Por qué sí o 
+por qué no?
+ 
+ 
+c  Use el botón “1 Sample” ocho veces más para obtener un total de diez valores de la media muestral. 
+Vea el histograma de estas diez medias.
+ 
+ 
+ 
+ i ¿Qué observ
+
+[Bloque seleccionado #379 | relevancia=8]
+Pagina 378
+354  Capítulo 7  Distribuciones muestrales y el teorema del límite central
+ 
+Demostración 
+Como Y1, Y2, . . . , Yn es una muestra aleatoria de una distribución normal con media m y 
+varianza s2, Yi, i = 1, 2, . . . , n son variables independientes distribuidas normalmente, 
+con E(Yi) = m y V(Yi) = s2. Además,
+Y = 1
+n
+n
+i=1
+Yi = 1
+n (Y1) + 1
+n (Y2) + ⋅⋅⋅+ 1
+n (Yn)
+= a1Y1 + a2Y2 + ⋅⋅⋅+ anYn,
+donde ai = 1/ n, i = 1, 2, . . . , n.
+ 
+ 
+Así, Y es una combinación lineal de Y1, Y2, . . . , Yn, y se puede aplicar el Teorema 6.3 
+para concluir que Y está distribuida normalmente con
+E(Y) = E
+1
+n (Y1) + ⋅⋅⋅+ 1
+n (Yn)
+= 1
+n (m)+ ⋅⋅⋅+ 1
+n (m) = m
+ 
+ 
+y
+V (Y) = V
+1
+n (Y1) + ⋅⋅⋅+ 1
+n (Yn)
+= 1
+n2 (s2) + ⋅⋅⋅+ 1
+n2 (s2)
+= 1
+n2 (ns2) = s2
+n .
+ 
+ 
+Esto es, la distribución muestral de Y es normal con media mY = m y varianza 
+s2
+Y = s2/n.
+Observe que la varianza de cada una de las variables aleatorias Y1, Y2, . . . , Yn es s2 y 
+la varianza de la distribución muestral de la variable aleatoria Y es s2/n. En lo sucesivo, 
+habrá oportunidad de referirnos a estas dos varianzas. Conservaremos la notación s2 para 
+la varianza de las variables aleatorias Y1, Y2, . . . , Yn, y sY
+2 se usará para denotar la varianza 
+de la distribución muestral de la variable aleatoria Y. De manera análoga , s será conservada 
+como la notación para la desviación estándar de las Yi, y la desviación estándar de la distribu-
+ción muestral de Y se denota sY.
+De acuerdo con las condiciones del Teorema 7.1, Y está normalmente distribuida con me-
+dia mY = m y varianza s2
+Y = s2/n. Se deduce que
+Z = Y −mY
+sY
+= Y −m
+s/√n =√n
+Y −m
+s
+tiene una distribución normal estándar. Ilustraremos la aplicación del Teorema 7.1 con el 
+siguiente ejemplo.
+ 
+EJEMPLO 7.2 
+Una máquina embotelladora puede ser regulada para que descargue un promedio de m on-
+zas por botella. Se ha observado que la cantidad de líquido dosifi cado por la máquina está 
+distribuida normalmente con s = 1.0 onza. Una muestra de n = 9 botellas se selecciona 
+aleatoriamente de la producción de la máquina en un día determinado (todas embotelladas 
+con el mismo ajuste de la máquina) y las onzas de contenido líquido se miden para cada una. 
+Determine la probabilidad de que la media muestral se encuentre a no más de .3 onza de la 
+verdadera media m para el ajuste seleccionado de la máquina.
+
+[Bloque seleccionado #390 | relevancia=10]
+Pagina 389
+buidas normalmente con desviación estándar aproxima de 4 pulgadas cuadradas. Si el guardabosque 
+muestrea n = 9 árboles, encuentre la probabilidad de que la media muestral se encuentre a no más de 2 
+pulgadas cuadradas de la media poblacional.
+ 
+7.12 
+Suponga que al guardabosque del Ejercicio 7.11 le gustaría que la media muestral estuviera a no más 
+de 1 pulgada cuadrada de la media poblacional, con probabilidad .90. ¿Cuántos árboles debe medir para 
+asegurar este grado de precisión?
+ 
+7.13 
+La Environmental Protection Agency se ocupa del problema de establecer criterios para las cantidades 
+de sustancias químicas tóxicas permitidas en lagos y ríos de agua dulce. Una medida común de toxicidad 
+para cualquier contaminante es la concentración de éste que mataría a la mitad de la especie de prueba 
+en un tiempo determinado (por lo general 96 horas para especies de peces). Esta medida se denomina 
+CL50 (concentración letal que mata 50% de la especie de prueba). En muchos estudios, los valores 
+contenidos en el logaritmo natural de mediciones del CL50 están distribuidos normalmente y, en conse-
+cuencia, el análisis está basado en datos del ln(CL50).
+ 
+ 
+ 
+Estudios de los efectos del cobre en cierta especie de peces (por ejemplo la especie A) muestran que 
+la varianza de mediciones de ln(CL50) es alrededor de .4 con mediciones de concentración en miligra-
+mos por litro. Si han de completarse n = 10 estudios sobre el CL50 para cobre, encuentre la probabili-
+dad de que la media muestral de ln(CL50) difi era de la verdadera media poblacional en no más de .5.
+ 
+7.14 
+Si en el Ejercicio 7.13 deseamos que la media muestral difi era de la media poblacional en no más de .5 
+con probabilidad .95, ¿cuántas pruebas deben realizarse?
+ 
+7.15 
+Suponga que X1, X2, . . . , Xm y Y1, Y2, . . . , Yn son muestras aleatorias independientes, con las variables 
+Xi distribuidas normalmente con media m1 y varianza s2
+1 y las variables Yi distribuidas normalmente con 
+media m2 y varianza s2
+2. La diferencia entre las medias muestrales, X −Y, es entonces una combinación 
+lineal de m + n variables aleatorias distribuidas normalmente y, por el Teorema 6.3, tiene una distribu-
+ción normal.
+ 
+ 
+a Encuentre E(X −Y).
+ 
+ 
+b Encuentre V (X −Y).
+ 
+ 
+c  Suponga que s2
+1 = 2, s2
+2 = 2.5 y m = n. Encuentre los tamaños muestrales para que (X −Y) se 
+encuentre a no más de 1 unidad de (m1 − m2) con probabilidad .95.
+ 
+7.16 
+Refi riéndose al Ejercicio 7.13, suponga que los efectos del cobre en una segunda especie (por ejemplo la 
+especie B) de peces muestran la varianza de mediciones de ln(
+
+[Bloque seleccionado #395 | relevancia=10]
+Pagina 394
+370  Capítulo 7  Distribuciones muestrales y el teorema del límite central
+ 
+ 
+c Proporcione la distribución de
+ˆu −
+c2
+1
+n1
++ c2
+2
+n2
++ ⋅⋅⋅+c2
+k
+nk
+MSE
+,
+=
+SSE
+n1 + n2
+nk −k .
+−u
+c2
+1
+n1
++ c2
+2
+n2
+c2
+k
+nk
+,
+donde MSE = n1 + n2+ ⋅⋅⋅+nk −k .
+ 
+ 
+ 
+Justifi que las afi rmaciones que haga.
+ 
+7.3 Teorema del límite central 
+En el Capítulo 5 demostramos que si Y1, Y2, . . . , Yn representa una muestra aleatoria provenien-
+te de cualquier distribución con media m y varianza s2, entonces E(Y) = m y V (Y) = s2/n.
+En esta sección desarrollaremos una aproximación para la distribución muestral de Y, que se 
+puede usar sin considerar la distribución de la población de la cual se tome la muestra.
+Si extraemos la muestra de una población normal, el Teorema 7.1 nos dice que Y tiene 
+una distribución de muestreo normal. Pero, ¿qué podemos decir acerca de la distribución 
+muestral de Y si las variables Yi no están distribuidas normalmente? Por fortuna, Y tendrá una 
+distribución muestral que es aproximadamente normal si el tamaño de la muestra es grande. 
+El enunciado formal de este resultado recibe el nombre de teorema del límite central. No 
+obstante, antes de enunciar este teorema, veremos algunos estudios prácticos que demuestran 
+la distribución muestral de Y.
+Se utilizó una computadora para generar muestras aleatorias de tamaño n de una función 
+con densidad exponencial y media 10, es decir, de una población con densidad
+f (y) =
+(1/10)e−y/10,
+y > 0,
+0,
+en cualquier otro punto.
+En la Figura 7.5 aparece una gráfi ca de esta función de densidad. La media muestral se 
+calculó para cada muestra y el histograma de frecuencia relativa para los valores de las me-
+dias muestrales para 1000 muestras, cada una de tamaño n = 5, se presenta en la Figura 7.6. 
+Observe que la Figura 7.6 presenta un histograma que tiene forma aproximada de campana, 
+pero el histograma está ligeramente sesgado.
+La Figura 7.7 es una gráfi ca de un histograma similar de frecuencia relativa de los valores 
+de la media muestral para 1000 muestras, cada una de tamaño n = 25. En este caso, la Figura 
+7.7 muestra un histograma casi simétrico en forma de campana, que se puede calcular en for-
+ma bastante cercana con una función de densidad normal.
+F I G U R A 7.5
+Función de densidad 
+exponencial
+f(y)
+y
+.1
+0
+
+[Bloque seleccionado #399 | relevancia=10]
+Pagina 398
+374  Capítulo 7  Distribuciones muestrales y el teorema del límite central
+ 
+ 
+b  Haga clic unas cuantas veces en el botón “1000 Samples” y conteste las preguntas del inciso b. ¿Los 
+histogramas generados tienen las formas que esperaba? ¿Por qué?
+ 
+ 
+c  ¿Las medias y desviaciones estándar de las dos distribuciones muestrales son cercanas a los valores 
+que esperaba? [Sugerencia: V (Y) = s2/n.]
+ 
+ 
+d  Haga clic en el botón “Toggle Normal”. ¿Qué observa acerca de lo adecuado de las distribuciones 
+normales calculadas?
+ 
+ 
+e  Haga clic en las dos distribuciones muestrales generadas para que aparezcan ventanas para cada 
+una. Use las fl echas arriba/abajo en las cajas izquierda y derecha de “Sample Size” para seleccionar 
+muestras de tamaño 10 y 25. Haga clic en el botón “Toggle Normal”. Ahora tiene ya las gráfi cas de 
+las distribuciones muestrales de las medias muestrales basadas en muestras de tamaños 1, 3, 10 y 25. 
+¿Qué observa acerca de lo adecuado de la aproximación normal cuando aumenta el tamaño mues-
+tral?
+ 
+7.41 
+Ejercicio Applet Consulte el Ejercicio 7.40. Use la aplicación SampleSize para completar lo siguiente. 
+Use la fl echa arriba/abajo a la izquierda del histograma de la distribución poblacional para seleccionar 
+la distribución “en forma de U”. ¿Cuál es la media y la desviación estándar de la población de la cual se 
+seleccionarán las muestras?
+ 
+ 
+a  Conteste las preguntas de los incisos (a-e) del Ejercicio 7.40.
+ 
+ 
+b  Consulte el inciso a. Cuando examinó la distribución muestral de Y para n = 3, tenía un “valle” en 
+el centro. ¿Por qué ocurrió esto? Use la aplicación Basic para averiguarlo. Seleccione la distribución 
+poblacional “en forma de U” y haga clic en el botón “1 Sample.” ¿Qué observa acerca de los valores 
+de observaciones individuales en la muestra? Haga clic en el botón “1 Sample” varias veces más. 
+¿Los valores de la muestra tienden a ser (relativamente) grandes o pequeños con pocos valores en el 
+“centro”? ¿Por qué? ¿Qué efecto tiene esto en el valor de la media muestral? [Sugerencia: 3 es un 
+tamaño muestral impar.]
+ 
+7.42 
+La resistencia a la ruptura del vidrio templado promedia 14 (medida en miles de libras por pulgada 
+cuadrada) y tiene una desviación estándar de 2.
+ 
+ 
+a  ¿Cuál es la probabilidad de que el promedio de resistencia a la ruptura de 100 piezas seleccionadas 
+aleatoriamente de este vidrio exceda de 14.5?
+ 
+ 
+b  Encuentre un intervalo que incluya, con probabilidad 0.95, el promedio de resistencia a la ruptura de 
+100 piezas de este vidrio seleccionadas aleatoriamente.
+ 
+7.43 
+Una antropóloga dese
+
+[Bloque seleccionado #400 | relevancia=8]
+Pagina 399
+desviación estándar poblacional de mediciones de pH no se conoce, la experiencia del pasado indica que 
+casi todos los suelos tienen un valor de pH de entre 5 y 8. Si el científi co selecciona n = 40 muestras, 
+encuentre la probabilidad aproximada de que la media muestral de las 40 mediciones de pH esté a .2 
+unidades del verdadero promedio de pH para el campo. [Sugerencia: vea el Ejercicio 1.17.]
+ 
+7.47 
+Suponga que al científi co del Ejercicio 7.46 le gustaría que la media muestral estuviera a no más de .1 
+de la verdadera media con probabilidad .90. ¿Cuántas muestras de núcleos debe tomar?
+ 
+7.48 
+Un aspecto importante de un plan económico federal era que los consumidores ahorraran una parte im-
+portante de dinero que recibieran por una reducción de impuestos sobre sus ingresos. Suponga que las 
+primeras estimaciones de la parte del total de impuesto ahorrada, con base en una muestra aleatoria de 
+35 economistas, tuvo media de 26% y desviación estándar de 12%.
+ 
+ 
+a  ¿Cuál es la probabilidad aproximada de que la estimación de la media muestral, basada en una mues-
+tra aleatoria de n = 35 economistas, se encuentre a no más de 1% de la media de la población de las 
+estimaciones de todos los economistas?
+ 
+ 
+b  ¿Es necesariamente verdadero que la media de la población de las estimaciones de todos los econo-
+mistas sea igual al porcentaje de ahorro en impuestos que en realidad se logrará?
+ 
+7.49 
+El tiempo necesario para el mantenimiento periódico de un automóvil u otra máquina tiene por lo 
+general una distribución de probabilidad en forma de campana. Debido a que se presentarán algunos 
+alargamientos en los tiempos de servicio, la distribución tiende a estar sesgada a la derecha. Suponga 
+que el tiempo necesario para dar servicio a un automóvil que ha recorrido 5000 millas tiene una media 
+de 1.4 horas y desviación estándar de .7 horas. Suponga también que el departamento de servicio planea 
+atender a 50 automóviles por jornada de 8 horas y que, para hacerlo, puede dedicar un tiempo promedio 
+máximo de sólo 1.6 horas por automóvil. ¿Cuántos días tendrá que trabajar tiempo extra el departamento 
+de servicio?
+ 
+7.50 
+Se ha encontrado que las mediciones de resistencia al corte en soldaduras por puntos tienen una des-
+viación estándar de 10 libras por pulgada cuadrada (psi). Si se han de medir 100 soldaduras de prueba, 
+¿cuál es la probabilidad aproximada de que la media muestral se encuentre a no más de 1 psi de la ver-
+dadera media poblacional?
+ 
+7.51 
+Consulte el Ejercicio 7.50. Si la desviación estándar de mediciones de resistencia al corte e
+
+[Bloque seleccionado #425 | relevancia=8]
+Pagina 424
+400  Capítulo 8  Estimación
+ DEFINICIÓN 8.5 
+El error de estimación e es la distancia entre un estimador y su parámetro objetivo. Esto 
+es, e = ˆu −u.
+Como ˆu es una variable aleatoria, el error de estimación también es una cantidad aleatoria 
+y no podemos decir qué tan grande o pequeño será para una estimación particular, pero po-
+demos plantear enunciados de probabilidad acerca de él. Por ejemplo, suponga que ˆu es un 
+estimador insesgado de u y tiene una distribución muestral como se muestra en la Figura 8.4. 
+Si seleccionamos dos puntos, (u − b) y (u + b), situados cerca de las colas de la densidad de 
+probabilidad, la probabilidad de que el error de estimación e sea menor que b está representa-
+da por el área sombreada de la Figura 8.4. Esto es,
+P( ˆu −u < b) = P[−b < (ˆu −u) < b] = P(u −b < ˆ
++ b).
+u < u
+Podemos considerar a b como un límite probabilístico en el error de estimación. Aun cuan-
+do no estamos seguros de que un error determinado sea menor que b, la Figura 8.4 indica que 
+P(e < b) es alto. Si b se puede considerar desde un punto de vista práctico como pequeño, 
+entonces P(e < b) da una medida de la bondad de una sola estimación. Esta probabilidad iden-
+tifi ca la fracción de veces, en muestreo repetido, que el estimador ˆu cae dentro de b unidades 
+de u, el parámetro objetivo.
+Suponga que deseamos hallar el valor de b para que P(e < b) = .90. Esto es fácil si conoce-
+mos la función de densidad de probabilidad de ˆu. Entonces buscamos un valor b tal que
+u+b
+u−b
+f (ˆu) d ˆu = .90.
+Pero ya sea que conozcamos o no la distribución de probabilidad de ˆu, si ˆu es insesgado 
+podemos hallar un límite aproximado en e al expresar b como un múltiplo del error estándar 
+de ˆu (recuerde que el error estándar de un estimador es simplemente un nombre alternativo 
+conveniente para la desviación estándar del estimador.) Por ejemplo, para k ≥ 1, si hacemos 
+b = ksˆu, sabemos por el teorema de Tchebysheff que e será menor que ksˆu con probabilidad 
+de al menos 1 − 1/k2. Un valor de k cómodo y de uso frecuente es k = 2. En consecuencia, 
+sabemos que e será menor que b = 2sˆu con probabilidad de al menos .75.
+Usted encontrará que, con probabilidad en la cercanía de .95, muchas variables aleatorias 
+observadas en la naturaleza se encuentran a no más de 2 desviaciones estándar de sus medias. 
+La probabilidad de que Y se encuentre en el intervalo (m ± 2s) se muestra en la Tabla 8.2 para 
+F I G U R A 8.4
+Distribución muestral 
+de un estimador 
+puntual ˆu
+ˆ
+b
+b
+(
+– b)
+
+(
++ b)
+
+
+ˆ
+f( )
+P( < b)
+
+
+[Bloque seleccionado #431 | relevancia=8]
+Pagina 430
+406  Capítulo 8  Estimación
+ 
+ 
+a  Estime la media lA del número de puntos de nucleación para el régimen A y precise un límite de error 
+estándar de 2 en el error de estimación.
+ 
+ 
+b  Estime la diferencia en la media del número de puntos de nucleación lA − lB para los regímenes A y 
+B. Establezca un límite de error estándar de 2 para el error de estimación. ¿Se diría que el régimen B 
+tiende a producir un promedio mayor de puntos de nucleación? ¿Por qué?
+ 
+8.36 
+Si Y1, Y2, …, Yn denotan una muestra aleatoria de una distribución exponencial con media u, entonces 
+E(Yi) = u y V(Yi) = u2. Entonces, E(Y) = u y V (Y) = u2/ n o sY = u/√n. Sugiera un estimador 
+insesgado para u y dé una estimación para el error estándar del estimador sugerido.
+ 
+8.37 
+Consulte el Ejercicio 8.36. Un ingeniero observa n = 10 mediciones independientes de la duración de 
+un componente electrónico. El promedio de estas 10 mediciones es de 1020 horas. Si estas duraciones 
+provienen de una distribución exponencial con media u, estime u y ponga un límite de error estándar de 
+2 en el error de estimación.
+ 
+8.38 
+El número de personas que acuden a un banco de sangre hasta que se encuentra la primera de ellas con 
+sangre tipo A es una variable aleatoria Y con distribución geométrica. Si p denota la probabilidad de 
+que cualquier persona seleccionada aleatoriamente posea sangre tipo A, entonces E(Y) = 1/p y V(Y) = 
+(1 − p)/p2.
+ 
+ 
+a Determine una función de Y que sea un estimador insesgado de V(Y).
+ 
+ 
+b  Sugiera una forma de establecer un límite de error estándar de 2 para el error de estimación cuando 
+Y se use para calcular 1/p.
+ 
+8.5 Intervalos de conﬁ anza
+Un estimador de intervalo es una regla que especifi ca el método para usar las mediciones 
+muestrales en el cálculo de dos números que forman los puntos extremos del intervalo. En el 
+caso  ideal, el intervalo resultante tiene dos propiedades: primero, contiene el parámetro ob-
+jetivo u; en segundo, su amplitud será relativamente pequeña. Uno o ambos puntos extremos 
+del intervalo, siendo funciones de las mediciones muéstrales, variarán aleatoriamente de una 
+muestra a otra. Entonces, la longitud y ubicación del intervalo son cantidades aleatorias; no 
+podemos estar seguros de que el parámetro objetivo u (fi jo) caiga entre los puntos extremos 
+de cualquier intervalo individual calculado a partir de una sola muestra. En este caso, nuestro 
+objetivo es hallar un estimador de intervalo capaz de generar intervalos estrechos que tengan 
+una alta probabilidad de incluir a u.
+Los estimadores de intervalo suelen recibir el nom

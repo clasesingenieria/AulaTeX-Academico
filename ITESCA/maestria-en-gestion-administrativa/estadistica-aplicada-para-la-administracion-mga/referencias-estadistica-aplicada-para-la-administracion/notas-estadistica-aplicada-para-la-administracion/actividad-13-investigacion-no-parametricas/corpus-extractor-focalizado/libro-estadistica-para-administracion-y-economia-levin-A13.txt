@@ -1,0 +1,897 @@
+Fuente bibliográfica: Estadística para administración y economía - Levin y Rubin. 7.ª edición revisada.pdf
+Actividad: 13 (5.1 Investigación 5% Tarea)
+Palabras clave: no paramétricas, libre de distribución, Kolmogorov-Smirnov, Wilcoxon, Mann-Whitney, Kruskal-Wallis, Ji-cuadrada, rangos
+
+[Bloque seleccionado #471 | relevancia=18]
+Pagina 470
+3. dividimos cada diferencia al cuadrado entre fe, y
+4. sumamos los ocho resultados.
+Numéricamente, los cálculos son sencillos si utilizamos una tabla como la 11-4, que muestra los
+pasos.
+La respuesta obtenida, 2.764, es el valor de ji-cuadrada en nuestro problema de comparación de
+las preferencias de métodos de evaluación. Si este valor fuera muy grande, digamos 20, indicaría una
+diferencia sustantiva entre los valores observados y los valores esperados. Una ji-cuadrada de cero,
+por otro lado, indica que las frecuencias observadas son exactamente iguales a las frecuencias espe-
+radas. El valor de ji-cuadrada nunca puede ser negativo, porque la diferencia entre las frecuencias
+observadas y esperadas siempre están al cuadrado.
+La distribución ji-cuadrada
+Si la hipótesis nula es verdadera, entonces la distribución de muestreo del estadístico ji-cuadrada, 2,
+puede aproximarse bastante bien mediante una curva continua conocida como distribución ji-cua-
+drada. Como en el caso de la distribución t, existe una distribución ji-cuadrada diferente para cada
+número de grados de libertad. En la figura 11-1 se indican las tres diferentes distribuciones ji-cua-
+drada correspondientes a 1, 5 y 10 grados de libertad. Para un número muy pequeño de grados de
+libertad, la distribución ji-cuadrada está seriamente sesgada a la derecha. Conforme aumenta el nú-
+mero de grados de libertad, la curva hace cada vez más simétrica hasta que el número de grados de
+libertad alcanza valores grandes, en cuyo caso la distribución puede aproximarse con la normal.
+La distribución ji-cuadrada es una distribución de probabilidad. En consecuencia, el área total ba-
+jo la curva de cada distribución ji-cuadrada es 1.0. Como en el caso de la distribución t, es posible
+tener un número muy grande de distribuciones ji-cuadrada, de modo que no resulta práctico cons-
+truir una tabla que contenga las áreas bajo la curva de todos los valores posibles del área. En la tabla
+5 del apéndice se ilustran sólo las áreas de la cola que se utilizan con más frecuencia en pruebas de
+significancia que usan la distribución ji-cuadrada.
+Determinación de los grados de libertad
+Para utilizar la prueba ji-cuadrada, debemos calcular los grados de libertad en la tabla de contingen-
+cia aplicando la ecuación 11-2:
+Cálculo de los grados
+de libertad
+Búsqueda de proba-
+bilidades cuando se
+utiliza una distribu-
+ción ji-cuadrada
+Descripción de 
+una distribución 
+ji-cuadrada
+Interpretación del 
+estadístico 
+ji-cuadrada
+452
+Capítulo 11
+Ji-cuadrada y análisis de varianza
+Cálculo del estadístico
+2 (ji-cuadrada) a part
+
+[Bloque seleccionado #476 | relevancia=17]
+Pagina 475
+Precauciones al usar la prueba ji-cuadrada
+Para utilizar una prueba de hipótesis ji-cuadrada, debemos tener un tamaño de muestra lo suficien-
+temente grande que garantice la similitud entre la distribución teórica correcta y nuestra distribución
+de muestreo de 2, el estadístico ji-cuadrada. Cuando las frecuencias esperadas son muy pequeñas,
+el valor de 2 estará sobrestimado y se tendrá como resultado demasiados rechazos de la hipótesis
+nula. Para evitar incurrir en inferencias incorrectas de la prueba de hipótesis ji-cuadrada, si-
+ga la regla general de que una frecuencia esperada de menos de 5 en una celda de una tabla de
+contingencia es demasiado pequeña para utilizarse.* Cuando la tabla contiene más de una celda
+con una frecuencia esperada menor que 5, podemos combinarlas con el fin de obtener una frecuencia
+esperada de 5 o más grande. Sin embargo, al hacerlo, reducimos el número de categorías de los da-
+tos y obtendremos menos información de la tabla de contingencia.
+Esta regla nos permitirá utilizar la prueba de hipótesis ji-cuadrada de una manera apropiada, pe-
+ro, desafortunadamente, cada prueba sólo puede reflejar (y no mejorar) la calidad de los datos con
+que se hace. Hasta este momento, hemos rechazado la hipótesis nula si la diferencia entre las
+frecuencias observadas y esperadas —es decir, el valor ji-cuadrada calculado— es demasiado gran-
+de. En el caso de la preferencia por el método de evaluación, habríamos rechazado la hipótesis nula
+a un nivel de significancia de 0.10 si nuestro valor ji-cuadrada hubiera sido 6.251 o más. Pero si el
+valor ji-cuadrada fuera cero, tendríamos que ser cuidadosos al preguntar si no existe absolu-
+tamente ninguna diferencia entre las frecuencias observadas y las esperadas. Si tenemos una
+opinión fuerte de que debería existir alguna diferencia, tendríamos que examinar tanto la forma de
+recolección de los datos o como la manera de hacer las mediciones, o ambas cosas, para tener la
+certeza de que las diferencias existentes no fueron minimizadas o pasadas por alto al recolectar los
+datos de muestra.
+En la década de 1860, los experimentos del monje Gregor Mendel con las características de los
+chícharos lo condujeron a proponer la existencia de los genes. Los resultados experimentales de
+Mendel eran sorprendentemente cercanos a los pronosticados por su teoría. Un siglo más tarde, los
+estadísticos estudiaron los “datos de los chícharos” de Mendel, les hicieron una prueba ji-cuadrada
+y llegaron a la conclusión de que el valor ji-cuadrada era demasiado pequeño; es decir, los datos ex-
+perimentales dados po
+
+[Bloque seleccionado #484 | relevancia=9]
+Pagina 483
+La figura 11-7 ilustra una distribución ji-cuadrada con 3 grados de libertad, en la que el nivel de
+significancia de 0.20 es el área sombreado. Note que la región de aceptación para la hipótesis nula
+(que establece que los datos de la muestra vienen de una distribución binomial con p  0.4) se ex-
+tiende desde la cola izquierda hasta el valor ji-cuadrada de 4.642. Obviamente, el valor ji-cuadrada
+de la muestra, 5.0406, cae fuera de esta región de aceptación. Por consiguiente, rechazamos la hipó-
+tesis nula y llegamos a la conclusión de que la distribución binomial con p  0.4 no proporciona una
+buena descripción de nuestras frecuencias observadas.
+Ilustración del 
+problema
+Interpretación de 
+los resultados
+11.3
+Ji-cuadrada como prueba de bondad de ajuste: prueba de lo apropiado de una distribución
+465
+Región de aceptación
+Acepte la hipótesis nula si el
+valor de la muestra está en esta región
+Valor ji-cuadrada de la 
+muestra, 5.0406
+4.642
+0.20 del área
+FIGURA 11-7
+Prueba de bondad
+de ajuste al nivel de
+significancia de
+0.20; ilustra la
+región de acep-
+tación y el valor 
+ji-cuadrada de la
+muestra, 5.0406
+Muchas personas saben que la prueba de
+ji-cuadrada se puede usar como prueba
+de bondad de ajuste y la mayoría puede
+hacer los cálculos. Sin embargo, sólo
+unos cuantos pueden explicar la lógica de emplear la prue-
+ba con este fin, en términos de sentido común. Sugerencia:
+si se tiene una distribución que se cree que es normal, pero
+no se tiene la seguridad, se usa una distribución normal co-
+nocida para generar los valores esperados y después, con
+los métodos de ji-cuadrada, se ve cuánta diferencia hay en-
+tre estos valores esperados y los valores observados en una
+muestra tomada de la distribución que se piensa es normal.
+Si la diferencia es demasiado grande, la distribución no es
+normal.
+SUGERENCIAS
+Y
+SUPOSICIONES
+Ejercicios 11.3
+Ejercicios de autoevaluación
+EA
+11-3
+Para el nivel de significancia de 0.10, ¿se puede concluir que las siguientes 400 observaciones siguen una
+distribución de Poisson con 
+  3?
+Número de llegadas por hora
+0
+1
+2
+3
+4
+5 o más
+Número de horas
+20
+57
+98
+85
+78
+62
+EA
+11-4
+Después de años de trabajar en una estación de pesado para camiones, Jeff Simpson siente que el peso por
+camión (en miles de libras) sigue una distribución normal con   71 y   15. Con el objeto de probar
+esta suposición, Jeff recolecta los siguientes datos un lunes y registra el peso de cada camión que llega a
+su báscula.
+85
+57
+60
+81
+89
+63
+52
+65
+77
+64
+89
+86
+90
+60
+57
+61
+95
+78
+66
+92
+50
+56
+95
+60
+82
+55
+61
+81
+61
+53
+63
+75
+50
+98
+63
+77
+50
+62
+79
+69
+76
+66
+97
+67
+5
+
+[Bloque seleccionado #640 | relevancia=9]
+Pagina 639
+MÉTODOS NO
+PARAMÉTRICOS 
+Objetivos
+Contenido del capítulo
+c a p í t u l o14
+621
+•
+Probar hipótesis cuando no 
+es posible hacer alguna
+suposición sobre la
+distribución de la cual se
+muestrea
+•
+Saber qué pruebas sin
+distribución (no paramétricas)
+son apropiadas para
+diferentes situaciones
+•
+Usar e interpretar cada una de
+las seis pruebas de hipótesis
+no paramétricas estándar
+•
+Conocer las ventajas y
+desventajas de las pruebas 
+no paramétricas
+14.1 Introducción a la estadística 
+no paramétrica
+622
+14.2 Prueba de signo para datos
+por pares
+624
+14.3 Pruebas de suma de rangos:
+prueba U de Mann-Whitney
+y prueba de Kruskal-Wallis
+630
+14.4 Prueba de corridas de una
+sola muestra
+640
+14.5 Correlación de rango
+646
+14.6 Prueba de Kolmogorov-
+Smirnov
+655
+•
+Estadística en el trabajo
+659
+•
+Ejercicio de base de datos
+computacional
+660
+•
+Del libro de texto al mundo
+real
+661
+•
+Términos introducidos en 
+el capítulo 14
+662
+•
+Ecuaciones introducidas en 
+el capítulo 14
+662
+•
+Ejercicios de repaso
+663
+14
+
+[Bloque seleccionado #643 | relevancia=9]
+Pagina 642
+Ejercicios 14.1
+Conceptos básicos
+■
+14-1
+¿Cuál es la diferencia entre los tipos de preguntas contestadas por pruebas paramétricas y las contestadas
+por pruebas no paramétricas?
+■
+14-2
+La hipótesis nula examinada con mayor frecuencia en las pruebas no paramétricas (elija un inciso)
+a)
+incluye especificaciones de parámetros de una población.
+b) se usa para evaluar algún aspecto general de la población.
+c)
+es muy parecida a la utilizada en el análisis de regresión.
+d) prueba simultáneamente más de dos parámetros de población.
+■
+14-3
+¿Cuáles son las principales ventajas de los métodos no paramétricos sobre los métodos paramétricos?
+■
+14-4
+¿Cuáles son las principales desventajas de las pruebas no paramétricas?
+■
+14-5
+George Shoaf es un entrevistador que trabaja en la oficina matriz de una aseguradora grande; para apro-
+vechar mejor su tiempo, la compañía requiere que la recepcionista programe sus entrevistas de acuerdo
+con un programa preciso. No hay periodos de 5 minutos que no cuenten, ni siquiera de llamadas telefóni-
+cas. Desafortunadamente, la recepcionista minimizó la duración de las entrevistas, y ha programado
+demasiados solicitantes de empleo, lo que lleva a largas esperas en el vestíbulo. Aunque los periodos de
+espera pueden ser cortos por la mañana, al avanzar el día el entrevistador se va retrasando y se hacen más
+largos. Para evaluar el problema, ¿debe suponer el entrevistador que los tiempos de espera sucesivos si-
+guen una distribución normal?
+Aplicaciones
+■
+14-6
+La International Communications Corporation planea cambiar el paquete de prestaciones ofrecido a los
+empleados. La compañía está considerando diferentes combinaciones de participación de utilidades, ser-
+vicios médicos y planes de retiro. Algunas muestras de una amplia variedad de combinaciones de presta-
+ciones se describieron en un folleto y se distribuyeron entre los empleados, luego se registraron sus pre-
+ferencias. Los siguientes fueron los resultados:
+Rango
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+Combinación de 
+reparto de utilidades-
+Servicios médicos-retiro
+15
+5
+14
+4
+6
+16
+7
+8
+13
+3
+17
+18
+12
+2
+9
+1
+11
+19
+10
+Número de preferencias
+52
+49
+39
+38
+37
+36
+32
+29
+26
+25
+24
+18
+15
+15
+14
+10
+10
+10
+9
+¿Sacrificará la compañía información real al usar la prueba de rangos como su criterio de decisión? (Su-
+gerencia: grafique los datos.)
+14.2
+Prueba de signo para datos por pares
+Una de las pruebas no paramétricas más fáciles es la prueba de signo. Su nombre se debe a que es-
+tá basada en la dirección (o signo de más o menos) de un par de observaciones y no en su magnitud
+numérica.
+
+[Bloque seleccionado #649 | relevancia=19]
+Pagina 648
+EA
+14-2
+Antes
+7.0
+6.0
+5.4
+5.9
+3.9
+5.7
+6.9
+7.6
+6.3
+5.8
+5.1
+5.9
+Después
+5.3
+6.1
+5.6
+5.7
+3.7
+4.7
+6.1
+7.2
+6.4
+5.7
+4.9
+5.8
+Signo
+
+
+
+
+
+
+
+
+
+
+
+
+12 respuestas: 3(), 9().
+Para n  12, p  0.5, la probabilidad de 9 o más signos menos es 0.0729 (tabla 3 del apéndice). Como
+0.10  0.0729  0.05, no pueden tener una confianza del 95% de que los niveles de hidrocarburos hayan
+bajado, pero pueden concluir, para   0.10, que las reglas son efectivas. Así, estarán vigentes todavía el
+año próximo.
+14.3
+Pruebas de suma de rangos:
+prueba U de Mann-Whitney 
+y prueba de Kruskal-Wallis
+En el capítulo 11, mostramos cómo usar el análisis de varianza para probar la hipótesis de que va-
+rias medias de población son iguales. Supusimos para esas pruebas que las poblaciones tenían una
+distribución normal con varianzas iguales. Muchas veces estas suposiciones no se satisfacen y en-
+tonces podemos utilizar dos pruebas no paramétricas; ninguna de ellas depende de las suposiciones
+de normalidad. Estas dos pruebas se llaman pruebas de suma de rangos porque la prueba depende de
+los rangos o clasificaciones de las observaciones de muestra.
+Las pruebas de suma de rangos son una familia completa de pruebas; nos concentraremos en só-
+lo dos miembros de ella: la prueba U de Mann-Whitney y la prueba de Kruskal-Wallis. Usaremos la
+prueba de Mann-Whitney cuando tengamos sólo dos poblaciones y la prueba de Kruskal-Wallis
+cuando se trate de más de dos. El uso de estas pruebas nos permitirá determinar si las muestras inde-
+pendientes se obtuvieron de la misma población (o de distintas poblaciones con la misma distribu-
+ción). El uso de la clasificación de la información en lugar de los signos más y menos desperdicia
+menos datos que la prueba de los signos.
+Solución de un problema usando la prueba 
+U de Mann-Whitney
+Suponga que la junta directiva de una gran universidad estatal del este de Estados Unidos desea pro-
+bar la hipótesis de que las calificaciones promedio en la prueba SAT en dos planteles de la universi-
+dad son iguales. La junta mantiene estadísticas de todos los estudiantes en todos los planteles del sis-
+tema. Una muestra aleatoria de 15 estudiantes de cada plantel produjo los datos que se muestran en
+la tabla 14-3.
+Para aplicar la prueba U de Mann-Whitney a este problema, comenzamos por clasificar las cali-
+ficaciones en orden ascendente, indicando junto a cada una el símbolo del plantel, como se ve en la
+tabla 14-4.
+A continuación, aprendamos los símbolos usados para la prueba U de Mann-Whitney en el con-
+texto de este problema:
+n1  número de elementos en la m
+
+[Bloque seleccionado #653 | relevancia=12]
+Pagina 652
+La respuesta habría sido 127 (que se aleja hacia arriba de la media de 112.5 justo tanto como 98 se
+aleja hacia abajo). En este problema, habríamos tardado lo mismo calculando el valor del estadísti-
+co U con la ecuación 14-1 que con la 14-4. En otros casos, cuando el número de elementos es mayor
+en una muestra que en la otra, elija la ecuación que requerirá menos trabajo. Sin importar si calcu-
+ló U usando la ecuación 14-1 o la 14-4, llegará a la misma conclusión. Observe que en este ejemplo,
+la respuesta 127 cae en la región de aceptación tal como lo hizo 98.
+¿Qué pasa si aparecen empates cuando clasificamos los elementos para esta prueba? Por ejem-
+plo, ¿qué sucede si las calificaciones 13 y 14 de la tabla 14-4 tuvieran ambas el valor 920? En este
+caso, encontramos el promedio de sus rangos (13  l4)/2  13.5, y asignamos el resultado a los dos.
+Si hubiera un empate entre tres clasificaciones, 13, 14 y 15, por ejemplo, promediamos estos rangos
+(13  14  15)/3  14, y usamos ese valor para los tres elementos.
+Solución de un problema usando la prueba de Kruskal-Wallis
+Como se observó en esta sección, la prueba de Kruskal-Wallis es una extensión de la prueba de
+Mann-Whitney para casos en que están involucradas más de dos poblaciones. Esta prueba, también,
+depende de los rangos de las observaciones de la muestra.
+La tabla 14-6 presenta las calificaciones de una muestra de 20 pilotos estudiantes en su examen
+escrito de la Agencia Federal de Aviación (AFA), dispuestas según el método que se empleó en su
+capacitación: videocasete, audiocasete o salón de clase.
+La AFA está interesada en evaluar la efectividad de estos tres métodos de capacitación. Específi-
+camente, desea probar, al nivel de significancia de 0.10, la hipótesis de que las calificaciones medias
+en el examen escrito de los pilotos estudiantes capacitados por estos tres métodos son iguales. Puesto
+que tenemos más de dos poblaciones involucradas, es pertinente aplicar la prueba de Kruskal-Wallis
+en este caso. Para ello, comenzamos en la tabla 14-7 por clasificar todas las calificaciones en orden
+ascendente, indicando junto a cada una el símbolo del método de entrenamiento que se utilizó. Los
+empates se manejan promediando los rangos, como se hizo con la prueba de Mann-Whitney.
+A continuación, definimos los símbolos usados en una prueba de Kruskal-Wallis:
+nj  número de elementos en la muestra j
+Rj  suma de los rangos de todos los elementos en la muestra j
+k  número de muestras
+n  n1  n2  . . .  nk, el número total de observaciones en todas las muestras
+Símbolos utilizados
+para un
+
+[Bloque seleccionado #654 | relevancia=10]
+Pagina 653
+La tabla 14-8 contiene los datos de la tabla 14-7 reclasificados de tal forma que facilita calcular las
+sumas de los rangos para cada método de capacitación. Entonces podemos usar la ecuación 14-5 pa-
+ra calcular el estadístico K, una medida de las diferencias entre las observaciones clasificadas en las
+tres muestras.
+Reclasificación de los
+datos para calcular
+sumas de rangos
+14.3
+Pruebas de suma de rangos: prueba U de Mann-Whitney y prueba de Kruskal-Wallis
+635
+Calificaciones del 
+examen escrito 
+clasificadas en orden 
+ascendente
+Tabla 14-7
+Califi-
+Método de
+Califi-
+Método de
+Rango
+caciones
+capacitación
+Rango
+caciones
+capacitación
+1
+50
+S
+11
+81
+S
+2
+55
+VC
+12
+82
+VC
+3
+57
+AC
+13
+83
+S
+4
+65
+AC
+14
+84
+S
+5
+68
+S
+15
+88
+VC
+6
+70
+VC
+16
+89
+AC
+7
+74
+VC
+17
+91
+S
+8
+77
+S
+18
+92
+S
+9
+78
+AC
+19
+93
+VC
+l0
+80
+AC
+20
+94
+S
+Estadístico K
+K 
+
+ 3(n  1)
+[14-5]
+R2
+j
+
+nj
+12
+
+n(n  1)
+
+
+
+
+  3(20  1)
+ (0.02857)(620.2  352.8  1,272.1  63)
+ 1.143
+Prueba de las hipótesis
+La distribución muestral del estadístico K puede aproximarse por una distribución ji-cuadrada cuan-
+do los tamaños de todas las muestras son al menos 5. Como nuestro problema satisface esta con-
+dición, podemos usar la distribución ji-cuadrada y la tabla 5 del apéndice para esta prueba. En una
+(107)2
+
+9
+(42)2
+
+5
+(61)2
+
+6
+12
+
+20(201)
+Cálculo del 
+estadístico K
+Datos y rango 
+ordenados según 
+el método de 
+capacitación
+Tabla 14-8
+Video-
+casete
+Rango
+Audiocasete
+Rango
+Salón
+Rango
+74
+7
+78
+9
+68
+5
+88
+15
+80
+10
+83
+13
+82
+12
+65
+4
+50
+1
+93
+19
+57
+3
+91
+17
+55
+2
+89
+16
+84
+14
+70
+6
+42 ←Suma 
+77
+8
+61 ←Suma 
+de rangos
+94
+20
+de rangos
+81
+11
+92
+18
+107←Suma 
+de rangos
+
+[Bloque seleccionado #666 | relevancia=11]
+Pagina 665
+Los cálculos en forma tabular son sencillos, como se ve en la tabla 14-10. Por tanto, tenemos toda la
+información que necesitamos para encontrar el coeficiente de correlación de rango para este pro-
+blema:
+rs  1 
+[14-8]
+ 1 
+ 1 
+rs  1 ←Coeficiente de correlación de rangos
+Como estudiamos en el capítulo 12, este coeficiente de correlación de 1 indica que existe una aso-
+ciación perfecta o correlación perfecta entre las dos variables. Esto verifica lo que se ve en la tabla
+14-9, que los rangos universitarios y de la compañía para cada persona son idénticos.
+Otro ejemplo nos familiarizará más con el manejo del coeficiente de correlación de rangos. En la
+tabla 14-11 se presenta el caso de otras cinco personas, pero esta vez los rangos universitarios y de
+la compañía 10 años después parecen ser opuestos. Podemos calcular la diferencia entre los rangos
+Cálculo de otro 
+coeficiente de 
+correlación de rangos
+Explicación de los va-
+lores del coeficiente de
+correlación de rango
+0
+
+120
+6(0)
+
+5(25  1)
+6
+d2
+
+n(n2  1)
+14.5
+Correlación de rango
+647
+Comparación de los 
+rangos de cinco 
+estudiantes
+Tabla 14-9
+Rango en la 
+Rango
+compañía 10 años 
+Estudiante
+universitario
+después
+John
+4
+4
+Margaret
+3
+3
+Debbie
+1
+1
+Steve
+2
+2
+Lisa
+5
+5
+Generación de 
+información para 
+calcular el coeficiente 
+de correlación de rangos
+Tabla 14-10
+Rango
+Rango en
+Diferencia entre 
+Diferencia
+universitario
+la compañía
+los dos rangos
+al cuadrado
+Estudiante
+(1) 
+(2)
+(1)  (2)
+[(1)  (2)]2
+John
+4
+4
+0
+0
+Margaret
+3
+3
+0
+0
+Debbie
+1
+1
+0
+0
+Steve
+2
+2
+0
+0
+Lisa
+5
+5
+0
+0
+d2  0 ←Suma de los
+cuadrados de
+las diferencias
+Generación de datos 
+para calcular el 
+coeficiente de 
+correlación de rangos
+Tabla 14-11
+Rango
+Rango en
+Diferencia entre 
+Diferencia
+universitario
+la compañía
+los dos rangos
+al cuadrado
+Estudiante
+(1) 
+(2)
+(1)  (2)
+[(1)  (2)]2
+JohRoy
+5
+1
+4
+16
+David
+1
+5
+4
+16
+Jay
+3
+3
+0
+0
+Charlotte
+2
+4
+2
+4
+Kathy
+4
+2
+2
+4
+d2  40 ←Suma de los 
+cuadrados de 
+las diferencias
+
+[Bloque seleccionado #681 | relevancia=15]
+Pagina 680
+Repaso del capítulo
+Coeficiente de correlación de rangos Medida del grado
+de asociación entre dos variables que se basa en los rangos
+o clasificación de las observaciones, no en sus valores nu-
+méricos.
+Correlación de rango Método para hacer análisis de corre-
+lación cuando los datos no están disponibles en forma numé-
+rica, pero se tiene información suficiente para clasificar los
+datos.
+Corrida Secuencia de ocurrencias idénticas precedidas y
+seguidas de ocurrencias diferentes o por ninguna.
+Prueba de corridas de una sola muestra Método no para-
+métrico para determinar la aleatoriedad con que se seleccio-
+naron los elementos de una muestra.
+Prueba de Kolmogorov-Smirnov Prueba no paramétrica
+que no requiere que los datos se agrupen para determinar
+si existe una diferencia significativa entre la distribución
+de frecuencias observada y la distribución de frecuencias
+teórica.
+662
+Capítulo 14
+Métodos no paramétricos
+Prueba de Kruskal-Wallis Método no paramétrico para
+probar si tres o más muestras independientes se extrajeron de
+poblaciones con la misma distribución. Es una versión no pa-
+ramétrica de ANOVA, que estudiamos en el capítulo 11.
+Prueba de los signos Prueba para la diferencia entre las ob-
+servaciones por pares, donde los signos  y  sustituyen a
+los valores cuantitativos.
+Pruebas de sumas de rangos Familia de pruebas no para-
+métricas que usan la información de orden en un conjunto de
+datos.
+Pruebas no paramétricas Técnicas estadísticas que no ha-
+cen suposiciones restrictivas respecto a la forma de la distri-
+bución de población al realizar una prueba de hipótesis.
+Prueba U de Mann-Whitney Método no paramétrico usa-
+do para determinar si dos muestras independientes se extra-
+jeron de poblaciones con la misma distribución.
+Teoría de corridas Teoría desarrollada para permitimos pro-
+bar la aleatoriedad del orden de las muestras.
+●Ecuaciones introducidas en el capítulo 14
+■
+14-1
+U  n1n2 
+ R1
+Para aplicar la prueba U de Mann-Whitney, se necesita esta fórmula para derivar el estadístico U, una me-
+dida de la diferencia entre las observaciones clasificadas y las dos variables. R1 es la suma de los rangos
+de las observaciones de la variable 1; n1 y n2 son los números de elementos de las muestras 1 y 2, respec-
+tivamente. No es necesario que ambas sean del mismo tamaño.
+■
+14-2
+	U 
+Si la hipótesis nula de una prueba U de Mann-Whitney es que n1  n2 observaciones provienen de pobla-
+ciones idénticas, entonces el estadístico U tiene una distribución de muestreo con una media igual al pro-
+ducto de n1 y n2 dividido entre 2.
+■
+14-3
+U 
+Est

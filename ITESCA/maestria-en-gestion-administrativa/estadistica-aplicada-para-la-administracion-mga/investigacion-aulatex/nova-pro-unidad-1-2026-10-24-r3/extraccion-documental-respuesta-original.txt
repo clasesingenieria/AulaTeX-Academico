@@ -1,0 +1,703 @@
+```json
+{
+  "fichas_conceptos": [
+    {
+      "id": "c01",
+      "concepto": "Muestreo probabilístico",
+      "definicion_sintetica": "Técnica de muestreo en la que cada elemento de la población tiene una probabilidad conocida y no nula de ser seleccionado.",
+      "fuentes": [
+        {
+          "id": "holmesMuestreo2023",
+          "localizador": "L249"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Selección de una muestra representativa para encuestas de satisfacción laboral.",
+      "limite": "Requiere conocimiento previo de la población."
+    },
+    {
+      "id": "c02",
+      "concepto": "Muestreo no probabilístico",
+      "definicion_sintetica": "Técnica de muestreo en la que la probabilidad de selección de los elementos de la población es desconocida o nula.",
+      "fuentes": [
+        {
+          "id": "holmesMuestreo2023",
+          "localizador": "L249"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Encuestas de satisfacción laboral donde no se conoce la composición de la población.",
+      "limite": "No garantiza la representatividad de la muestra."
+    },
+    {
+      "id": "c03",
+      "concepto": "Unidad",
+      "definicion_sintetica": "Elemento individual de la población que se mide en un estudio.",
+      "fuentes": [
+        {
+          "id": "holmesMuestreo2023",
+          "localizador": "L20"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Cada empleado en un estudio de satisfacción laboral.",
+      "limite": "Depende de la definición clara del elemento a medir."
+    },
+    {
+      "id": "c04",
+      "concepto": "Parámetro",
+      "definicion_sintetica": "Característica numérica de una población que se estima a partir de la muestra.",
+      "fuentes": [
+        {
+          "id": "holmesMuestreo2023",
+          "localizador": "L20"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Tasa de rotación de empleados en una empresa.",
+      "limite": "La estimación depende de la calidad de la muestra."
+    },
+    {
+      "id": "c05",
+      "concepto": "Marco",
+      "definicion_sintetica": "Conjunto de elementos de la población que se incluye en el estudio.",
+      "fuentes": [
+        {
+          "id": "holmesMuestreo2023",
+          "localizador": "L20"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Todos los empleados de una empresa en un estudio de satisfacción laboral.",
+      "limite": "Debe ser claramente definido para evitar sesgos."
+    },
+    {
+      "id": "c06",
+      "concepto": "Error aleatorio",
+      "definicion_sintetica": "Variabilidad natural en los datos debido a factores impredecibles.",
+      "fuentes": [
+        {
+          "id": "holmesMuestreo2023",
+          "localizador": "L26"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Variación en las respuestas de los empleados en una encuesta.",
+      "limite": "Dificulta la comparación entre muestras."
+    },
+    {
+      "id": "c07",
+      "concepto": "Sesgo",
+      "definicion_sintetica": "Desviación sistemática de la estimación real debido a un diseño de muestra defectuoso.",
+      "fuentes": [
+        {
+          "id": "holmesMuestreo2023",
+          "localizador": "L296"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Sobreestimación de la tasa de vacunación en una encuesta.",
+      "limite": "Afecta la validez de las conclusiones."
+    },
+    {
+      "id": "c08",
+      "concepto": "Ponderación",
+      "definicion_sintetica": "Asignación de pesos a los elementos de la muestra para corregir desbalances en la representación.",
+      "fuentes": [
+        {
+          "id": "holmesProporcion2023",
+          "localizador": "L31"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Ajuste de la muestra en una encuesta para reflejar la distribución de edad y género en la población.",
+      "limite": "Depende de la precisión de los pesos asignados."
+    },
+    {
+      "id": "c09",
+      "concepto": "Precisión",
+      "definicion_sintetica": "Capacidad de un estimador para acercarse al valor verdadero de un parámetro.",
+      "fuentes": [
+        {
+          "id": "holmesProporcion2023",
+          "localizador": "L20"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Precisión en la estimación de la tasa de vacunación.",
+      "limite": "Afectada por el tamaño de la muestra y la variabilidad."
+    },
+    {
+      "id": "c10",
+      "concepto": "Potencia",
+      "definicion_sintetica": "Probabilidad de que una prueba estadística detecte un efecto verdadero cuando existe.",
+      "fuentes": [
+        {
+          "id": "holmesProporcion2023",
+          "localizador": "L20"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Potencia de una prueba para detectar cambios en la satisfacción laboral.",
+      "limite": "Depende del tamaño de la muestra y el efecto a detectar."
+    },
+    {
+      "id": "c11",
+      "concepto": "Validez causal",
+      "definicion_sintetica": "Capacidad de un estudio para establecer una relación causal entre variables.",
+      "fuentes": [
+        {
+          "id": "bloom2024",
+          "localizador": "L106"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Determinar si el trabajo desde casa causa una reducción en la rotación de empleados.",
+      "limite": "Requiere un diseño experimental riguroso."
+    },
+    {
+      "id": "c12",
+      "concepto": "Validez externa",
+      "definicion_sintetica": "Capacidad de generalizar los resultados de un estudio a otras poblaciones o contextos.",
+      "fuentes": [
+        {
+          "id": "bloom2024",
+          "localizador": "L106"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Generalizar los resultados de un estudio sobre trabajo desde casa a otras empresas.",
+      "limite": "Depende de la similitud entre la muestra y la población general."
+    },
+    {
+      "id": "c13",
+      "concepto": "Tamaño de la muestra",
+      "definicion_sintetica": "Número de elementos seleccionados de la población para el estudio.",
+      "fuentes": [
+        {
+          "id": "nistTamano",
+          "localizador": "L1"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Determinar el tamaño adecuado de la muestra para una encuesta de satisfacción laboral.",
+      "limite": "Un tamaño de muestra muy pequeño puede no ser representativo."
+    },
+    {
+      "id": "c14",
+      "concepto": "Diseño experimental",
+      "definicion_sintetica": "Planificación y estructuración de un estudio para probar hipótesis.",
+      "fuentes": [
+        {
+          "id": "bloom2024",
+          "localizador": "L106"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Diseñar un experimento para evaluar el impacto del trabajo desde casa en la productividad.",
+      "limite": "Requiere control sobre variables externas."
+    },
+    {
+      "id": "c15",
+      "concepto": "Intervalo de confianza",
+      "definicion_sintetica": "Rango de valores que se espera contenga el valor verdadero de un parámetro con una cierta probabilidad.",
+      "fuentes": [
+        {
+          "id": "holmesProporcion2023",
+          "localizador": "L20"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Estimar la tasa de vacunación con un intervalo de confianza del 95%.",
+      "limite": "Depende del tamaño de la muestra y la variabilidad de los datos."
+    },
+    {
+      "id": "c16",
+      "concepto": "Sesgo de selección",
+      "definicion_sintetica": "Error sistemático en la selección de la muestra que afecta la representatividad.",
+      "fuentes": [
+        {
+          "id": "bradley2021",
+          "localizador": "L94"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Sesgo en la selección de participantes en una encuesta de vacunación.",
+      "limite": "Dificulta la interpretación de los resultados."
+    },
+    {
+      "id": "c17",
+      "concepto": "Efecto placebo",
+      "definicion_sintetica": "Respuesta positiva de los participantes debido a la creencia de que están recibiendo un tratamiento efectivo.",
+      "fuentes": [
+        {
+          "id": "bloom2024",
+          "localizador": "L408"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Efecto placebo en la percepción de productividad al trabajar desde casa.",
+      "limite": "Dificulta la evaluación objetiva de los resultados."
+    },
+    {
+      "id": "c18",
+      "concepto": "Variable categórica",
+      "definicion_sintetica": "Variable que puede tomar valores discretos y no numéricos.",
+      "fuentes": [
+        {
+          "id": "holmesMuestreo2023",
+          "localizador": "L27"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Género de los empleados en un estudio de satisfacción laboral.",
+      "limite": "Requiere métodos estadísticos específicos para su análisis."
+    },
+    {
+      "id": "c19",
+      "concepto": "Variable continua",
+      "definicion_sintetica": "Variable que puede tomar cualquier valor dentro de un rango.",
+      "fuentes": [
+        {
+          "id": "holmesMuestreo2023",
+          "localizador": "L34"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Número de horas trabajadas por empleado en un estudio de productividad.",
+      "limite": "Requiere métodos estadísticos adecuados para su análisis."
+    },
+    {
+      "id": "c20",
+      "concepto": "Muestreo estratificado",
+      "definicion_sintetica": "Técnica de muestreo en la que la población se divide en subgrupos y se seleccionan muestras de cada uno.",
+      "fuentes": [
+        {
+          "id": "holmesMuestreo2023",
+          "localizador": "L259"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Seleccionar muestras de diferentes departamentos en una empresa para un estudio de satisfacción laboral.",
+      "limite": "Requiere conocimiento previo de la población y sus subgrupos."
+    },
+    {
+      "id": "c21",
+      "concepto": "Muestreo sistemático",
+      "definicion_sintetica": "Técnica de muestreo en la que se seleccionan elementos a intervalos regulares.",
+      "fuentes": [
+        {
+          "id": "holmesMuestreo2023",
+          "localizador": "L259"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Seleccionar cada décimo empleado en una lista para una encuesta.",
+      "limite": "Puede introducir sesgos si hay patrones en la población."
+    },
+    {
+      "id": "c22",
+      "concepto": "Muestreo por conveniencia",
+      "definicion_sintetica": "Técnica de muestreo en la que se seleccionan elementos fácilmente accesibles.",
+      "fuentes": [
+        {
+          "id": "holmesMuestreo2023",
+          "localizador": "L296"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Seleccionar empleados que están presentes en la oficina en un día específico para una encuesta.",
+      "limite": "No garantiza la representatividad de la muestra."
+    },
+    {
+      "id": "c23",
+      "concepto": "Muestreo aleatorio simple",
+      "definicion_sintetica": "Técnica de muestreo en la que cada elemento de la población tiene la misma probabilidad de ser seleccionado.",
+      "fuentes": [
+        {
+          "id": "holmesMuestreo2023",
+          "localizador": "L249"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Seleccionar aleatoriamente empleados para una encuesta de satisfacción laboral.",
+      "limite": "Requiere una lista completa de la población."
+    },
+    {
+      "id": "c24",
+      "concepto": "Muestreo por cuotas",
+      "definicion_sintetica": "Técnica de muestreo en la que se seleccionan elementos para alcanzar proporciones específicas en la muestra.",
+      "fuentes": [
+        {
+          "id": "holmesMuestreo2023",
+          "localizador": "L259"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Asegurar que la muestra de una encuesta incluya proporciones iguales de hombres y mujeres.",
+      "limite": "Puede introducir sesgos si las cuotas no se establecen correctamente."
+    },
+    {
+      "id": "c25",
+      "concepto": "Muestreo por conglomerados",
+      "definicion_sintetica": "Técnica de muestreo en la que se seleccionan grupos enteros de la población.",
+      "fuentes": [
+        {
+          "id": "holmesMuestreo2023",
+          "localizador": "L259"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Seleccionar departamentos enteros en una empresa para un estudio de satisfacción laboral.",
+      "limite": "Puede introducir sesgos si los conglomerados no son representativos."
+    },
+    {
+      "id": "c26",
+      "concepto": "Muestreo de bolas",
+      "definicion_sintetica": "Técnica de muestreo en la que se seleccionan elementos usando un proceso aleatorio simulado.",
+      "fuentes": [
+        {
+          "id": "holmesMuestreo2023",
+          "localizador": "L259"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Seleccionar empleados para una encuesta usando un sorteo.",
+      "limite": "Depende de la aleatoriedad del proceso de selección."
+    },
+    {
+      "id": "c27",
+      "concepto": "Muestreo de juicio",
+      "definicion_sintetica": "Técnica de muestreo en la que se seleccionan elementos basándose en el juicio del investigador.",
+      "fuentes": [
+        {
+          "id": "holmesMuestreo2023",
+          "localizador": "L296"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Seleccionar empleados que el investigador considera representativos para una encuesta.",
+      "limite": "Sujeto a sesgos debido a la subjetividad del investigador."
+    },
+    {
+      "id": "c28",
+      "concepto": "Muestreo secuencial",
+      "definicion_sintetica": "Técnica de muestreo en la que la selección de elementos continúa hasta que se alcance un criterio específico.",
+      "fuentes": [
+        {
+          "id": "holmesMuestreo2023",
+          "localizador": "L259"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Continuar seleccionando empleados para una encuesta hasta que se alcance un número específico de respuestas.",
+      "limite": "Puede introducir sesgos si el criterio de parada no es adecuado."
+    },
+    {
+      "id": "c29",
+      "concepto": "Muestreo de conveniencia",
+      "definicion_sintetica": "Técnica de muestreo en la que se seleccionan elementos que están disponibles en el momento.",
+      "fuentes": [
+        {
+          "id": "holmesMuestreo2023",
+          "localizador": "L296"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Seleccionar empleados que están presentes en la oficina en un día específico para una encuesta.",
+      "limite": "No garantiza la representatividad de la muestra."
+    },
+    {
+      "id": "c30",
+      "concepto": "Muestreo estratificado proporcional",
+      "definicion_sintetica": "Técnica de muestreo en la que se seleccionan muestras de cada estrato en proporción al tamaño del estrato en la población.",
+      "fuentes": [
+        {
+          "id": "holmesMuestreo2023",
+          "localizador": "L259"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Seleccionar muestras de diferentes departamentos en una empresa en proporción a su tamaño.",
+      "limite": "Requiere conocimiento previo de la población y sus estratos."
+    },
+    {
+      "id": "c31",
+      "concepto": "Muestreo sistemático proporcional",
+      "definicion_sintetica": "Técnica de muestreo en la que se seleccionan elementos a intervalos regulares en proporción al tamaño del estrato en la población.",
+      "fuentes": [
+        {
+          "id": "holmesMuestreo2023",
+          "localizador": "L259"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Seleccionar empleados a intervalos regulares en proporción a su departamento para una encuesta.",
+      "limite": "Puede introducir sesgos si hay patrones en la población."
+    },
+    {
+      "id": "c32",
+      "concepto": "Muestreo aleatorio estratificado",
+      "definicion_sintetica": "Técnica de muestreo en la que se seleccionan muestras aleatorias de cada estrato.",
+      "fuentes": [
+        {
+          "id": "holmesMuestreo2023",
+          "localizador": "L259"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Seleccionar aleatoriamente empleados de cada departamento para una encuesta.",
+      "limite": "Requiere una lista completa de la población y sus estratos."
+    },
+    {
+      "id": "c33",
+      "concepto": "Muestreo aleatorio simple",
+      "definicion_sintetica": "Técnica de muestreo en la que cada elemento de la población tiene la misma probabilidad de ser seleccionado.",
+      "fuentes": [
+        {
+          "id": "holmesMuestreo2023",
+          "localizador": "L249"
+        }
+      ],
+      "aplicacion_administrativa_hipotetica": "Seleccionar aleatoriamente empleados para una encuesta de satisfacción laboral.",
+      "limite": "Requiere una lista completa de la población."
+    }
+  ],
+  "conceptos_detectados": [
+    "Muestreo probabilístico",
+    "Muestreo no probabilístico",
+    "Unidad",
+    "Parámetro",
+    "Marco",
+    "Error aleatorio",
+    "Sesgo",
+    "Ponderación",
+    "Precisión",
+    "Potencia",
+    "Validez causal",
+    "Validez externa",
+    "Tamaño de la muestra",
+    "Diseño experimental",
+    "Intervalo de confianza",
+    "Sesgo de selección",
+    "Efecto placebo",
+    "Variable categórica",
+    "Variable continua",
+    "Muestreo estratificado",
+    "Muestreo sistemático",
+    "Muestreo por conveniencia",
+    "Muestreo aleatorio simple",
+    "Muestreo por cuotas",
+    "Muestreo por conglomerados",
+    "Muestreo de bolas",
+    "Muestreo de juicio",
+    "Muestreo secuencial",
+    "Muestreo de conveniencia",
+    "Muestreo estratificado proporcional",
+    "Muestreo sistemático proporcional",
+    "Muestreo aleatorio estratificado"
+  ],
+  "ideas_detectadas": [
+    {
+      "id": "i01",
+      "idea": "El tamaño de la muestra no garantiza la precisión de los resultados si hay sesgos en la muestra.",
+      "tipo": "hallazgo documental",
+      "fuentes": [
+        {
+          "id": "bradley2021",
+          "localizador": "L94"
+        }
+      ]
+    },
+    {
+      "id": "i02",
+      "idea": "Las grandes muestras pueden ser menos precisas si no se controlan los sesgos.",
+      "tipo": "hallazgo documental",
+      "fuentes": [
+        {
+          "id": "bradley2021",
+          "localizador": "L94"
+        }
+      ]
+    },
+    {
+      "id": "i03",
+      "idea": "La ponderación de la muestra puede corregir desbalances en la representación.",
+      "tipo": "hallazgo documental",
+      "fuentes": [
+        {
+          "id": "holmesProporcion2023",
+          "localizador": "L31"
+        }
+      ]
+    },
+    {
+      "id": "i04",
+      "idea": "La precisión de un estimador depende del tamaño de la muestra y la variabilidad de los datos.",
+      "tipo": "hallazgo documental",
+      "fuentes": [
+        {
+          "id": "holmesProporcion2023",
+          "localizador": "L20"
+        }
+      ]
+    },
+    {
+      "id": "i05",
+      "idea": "La potencia de una prueba estadística depende del tamaño de la muestra y el efecto a detectar.",
+      "tipo": "hallazgo documental",
+      "fuentes": [
+        {
+          "id": "holmesProporcion2023",
+          "localizador": "L20"
+        }
+      ]
+    },
+    {
+      "id": "i06",
+      "idea": "La validez causal requiere un diseño experimental riguroso.",
+      "tipo": "hallazgo documental",
+      "fuentes": [
+        {
+          "id": "bloom2024",
+          "localizador": "L106"
+        }
+      ]
+    },
+    {
+      "id": "i07",
+      "idea": "La validez externa depende de la similitud entre la muestra y la población general.",
+      "tipo": "hallazgo documental",
+      "fuentes": [
+        {
+          "id": "bloom2024",
+          "localizador": "L106"
+        }
+      ]
+    },
+    {
+      "id": "i08",
+      "idea": "El trabajo desde casa puede mejorar la satisfacción laboral y reducir la rotación de empleados.",
+      "tipo": "hallazgo documental",
+      "fuentes": [
+        {
+          "id": "bloom2024",
+          "localizador": "L106"
+        }
+      ]
+    },
+    {
+      "id": "i09",
+      "idea": "El trabajo desde casa no afecta significativamente la productividad de los empleados.",
+      "tipo": "hallazgo documental",
+      "fuentes": [
+        {
+          "id": "bloom2024",
+          "localizador": "L106"
+        }
+      ]
+    },
+    {
+      "id": "i10",
+      "idea": "La percepción de los empleados sobre la productividad del trabajo desde casa puede cambiar después de experimentar con él.",
+      "tipo": "hallazgo documental",
+      "fuentes": [
+        {
+          "id": "bloom2024",
+          "localizador": "L408"
+        }
+      ]
+    },
+    {
+      "id": "i11",
+      "idea": "Los sesgos en la selección de la muestra pueden afectar la representatividad y la interpretación de los resultados.",
+      "tipo": "hallazgo documental",
+      "fuentes": [
+        {
+          "id": "bradley2021",
+          "localizador": "L94"
+        }
+      ]
+    },
+    {
+      "id": "i12",
+      "idea": "El efecto placebo puede influir en la percepción de los empleados sobre la productividad al trabajar desde casa.",
+      "tipo": "hallazgo documental",
+      "fuentes": [
+        {
+          "id": "bloom2024",
+          "localizador": "L408"
+        }
+      ]
+    }
+  ],
+  "articulos": [
+    {
+      "id": "a01",
+      "titulo": "Unrepresentative big surveys significantly overestimated US vaccine uptake",
+      "autores": "Valerie C. Bradley, Shiro Kuriwaki, Xiao-Li Meng",
+      "publicacion_anio": "2021",
+      "poblacion_y_marco": "Población: Adultos en los Estados Unidos. Marco: Encuestas de vacunación.",
+      "seleccion_muestreo": "Muestreo no probabilístico.",
+      "tamano_y_disenio": "Tamaño de la muestra: 250,000 (Delphi–Facebook), 606,000 (Census Household Pulse). Diseño: Encuestas en línea.",
+      "resultado_y_denominador": "Sobreestimación de la tasa de vacunación en 17 puntos porcentuales (Delphi–Facebook) y 14 puntos porcentuales (Census Household Pulse).",
+      "uso_administrativo": "Evaluación de la precisión de las encuestas de vacunación.",
+      "limites": "Sesgos en la muestra y falta de representatividad.",
+      "localizadores": [
+        "bradley2021:L94"
+      ]
+    },
+    {
+      "id": "a02",
+      "titulo": "The Evolution of Work from Home",
+      "autores": "José María Barrero, Nicholas Bloom, Steven J. Davis",
+      "publicacion_anio": "2023",
+      "poblacion_y_marco": "Población: Trabajadores en los Estados Unidos. Marco: Trabajo desde casa.",
+      "seleccion_muestreo": "Muestreo probabilístico.",
+      "tamano_y_disenio": "Tamaño de la muestra: 28% de días remunerados. Diseño: Encuestas y análisis de datos.",
+      "resultado_y_denominador": "28% de días remunerados trabajados desde casa en junio de 2023.",
+      "uso_administrativo": "Análisis de la evolución del trabajo desde casa.",
+      "limites": "Dependencia de la precisión de los datos y las encuestas.",
+      "localizadores": [
+        "barrero2023:L25"
+      ]
+    },
+    {
+      "id": "a03",
+      "titulo": "Hybrid working from home improves job satisfaction and reduces attrition without affecting performance",
+      "autores": "Nicholas Bloom, Ruobing Han, James Liang",
+      "publicacion_anio": "2024",
+      "poblacion_y_marco": "Población: Empleados universitarios en una empresa tecnológica china. Marco: Trabajo desde casa híbrido.",
+      "seleccion_muestreo": "Muestreo aleatorio.",
+      "tamano_y_disenio": "Tamaño de la muestra: 1,612 empleados. Diseño: Experimento aleatorizado.",
+      "resultado_y_denominador": "Reducción de la rotación de empleados en un 33% (de 7.2% a 4.8%) y mejora en la satisfacción laboral.",
+      "uso_administrativo": "Evaluación de la eficacia del trabajo desde casa híbrido.",
+      "limites": "Resultados limitados a la empresa y el contexto específico del experimento.",
+      "localizadores": [
+        "bloom2024:L106"
+      ]
+    }
+  ],
+  "trazabilidad_fuentes": [
+    {
+      "id": "t01",
+      "conceptos_o_resultados_sustentados": [
+        "Muestreo probabilístico",
+        "Muestreo no probabilístico",
+        "Unidad",
+        "Parámetro",
+        "Marco",
+        "Error aleatorio",
+        "Sesgo",
+        "Ponderación",
+        "Precisión",
+        "Potencia",
+        "Validez causal",
+        "Validez externa",
+        "Tamaño de la muestra",
+        "Diseño experimental",
+        "Intervalo de confianza",
+        "Sesgo de selección",
+        "Efecto placebo",
+        "Variable categórica",
+        "Variable continua",
+        "Muestreo estratificado",
+        "Muestreo sistemático",
+        "Muestreo por conveniencia",
+        "Muestreo aleatorio simple",
+        "Muestreo por cuotas",
+        "Muestreo por conglomerados",
+        "Muestreo de bolas",
+        "Muestreo de juicio",
+        "Muestreo secuencial",
+        "Muestreo de conveniencia",
+        "Muestreo estratificado proporcional",
+        "Muestreo sistemático proporcional",
+        "Muestreo aleatorio estratificado"
+      ],
+      "localizadores": [
+        "holmesMuestreo2023:L249",
+        "holmesProporcion2023:L31",
+        "nistTamano:L1",
+        "bradley2021:L94",
+        "bloom2024:L106"
+      ]
+    }
+  ],
+  "alertas": [
+    "La ausencia de significación estadística no implica igualdad.",
+    "La calidad de los datos es más importante que la cantidad.",
+    "Los sesgos en la muestra pueden magnificarse con tamaños de muestra grandes.",
+    "La ponderación de la muestra es crucial para la representatividad.",
+    "La validez causal requiere un diseño experimental riguroso."
+  ]
+}
+```

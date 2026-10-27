@@ -1,0 +1,508 @@
+Fuente bibliográfica: Estadística para negocios y economía - Anderson, Sweeney y Williams. 11.ª edición.pdf
+Actividad: 8 (3.2 Ejercicios 5% Tarea)
+Palabras clave: intervalo de confianza, distribución t, grados de libertad, margen de error, tamaño de muestra, proporción muestral, gasto promedio
+
+[Bloque seleccionado #350 | relevancia=30]
+Pagina 349
+ 
+8.1  Media poblacional: σ conocida 
+315
+2. 
+En una muestra aleatoria simple de 50 artículos de una población en la que σ  6, la media 
+muestral resultante es 32.
+a) Proporcione un intervalo de confianza de 90% para la media poblacional.
+b) Calcule un intervalo de confianza de 95% para la media poblacional.
+c) 
+Proporcione un intervalo de confianza de 99% para el mismo indicador.
+3. 
+En una muestra aleatoria simple de 60 artículos, la media muestral es 80. La desviación es-
+tándar poblacional es σ  15.
+a) Calcule el intervalo de confianza de 95% para la media poblacional.
+b) Suponga que la misma media muestral se obtuvo de una muestra de 120 artículos. Pro-
+porcione el intervalo de confianza de 95% para la media poblacional.
+c) 
+¿Cuál es el efecto de una muestra de tamaño grande sobre la estimación por intervalo?
+4. 
+Para la media poblacional, el intervalo de confianza de 95% resultó de 152 a 160. Si σ  15, 
+¿cuál es el tamaño de la muestra utilizada en este estudio?
+Aplicaciones
+5. 
+Con objeto de estimar la cantidad media que gasta un cliente en una comida en un importan-
+te restaurante de Atlanta, se recabaron los datos de una muestra de 49 comensales. Suponga que 
+la desviación estándar de la población es $5.
+a) ¿Cuál es el margen de error para 95% de confianza?
+b) Si la media poblacional es $24.80, ¿cuál es el intervalo de confianza de 95% para la media 
+poblacional?
+6. 
+Nielsen Media Research llevó a cabo un estudio para conocer cuánto tiempo se veía televisión 
+en los hogares en el horario de 8:00 a 11:00 de la noche. Los datos que se encuentran en el 
+archivo Nielsen son consistentes con los hallazgos reportados (The World Almanac, 2003). 
+Con base en estudios anteriores, la desviación estándar poblacional se considera conocida y es 
+σ  3.5 horas. Proporcione una estimación mediante un intervalo de confianza de 95% para la 
+media del tiempo que se ve televisión a la semana en el horario de referencia.
+7. 
+The Wall Street Journal informó que en 2008 los accidentes automovilísticos le costaron 
+$162 mil millones a Estados Unidos (The Wall Street Journal, 5 de marzo de 2008). El costo 
+promedio por persona de los accidentes automovilísticos en el área de Tampa, Florida, fue con-
+siderado de $1 599. Suponga que este costo promedio se basó en una muestra de 50 personas 
+que estuvieron involucradas en dichos percances y que la desviación estándar poblacional es 
+σ  $600. ¿Cuál es el margen de error para un intervalo de 95% de confianza? ¿Qué recomen-
+daría si el estudio requiriera un margen de error de $150 o menos?
+8. 
+The National Qua
+
+[Bloque seleccionado #351 | relevancia=38]
+Pagina 350
+316 
+Capítulo 8  Estimación por intervalo
+a) Proporcione un intervalo de estimación de 90% de confianza para la media poblacional.
+b) Calcule un intervalo de 95%.
+c) 
+Proporcione ahora un intervalo de estimación de 99%.
+d) ¿Qué le sucede a la amplitud del intervalo de confianza a medida que el nivel de confianza 
+aumenta? ¿Parece esto razonable? Explique.
+8.2 
+ Media poblacional: σ desconocida
+Cuando se calcula una estimación por intervalo para la media poblacional, suele no contarse 
+con una buena estimación de la desviación estándar poblacional. En tales casos se usa la misma 
+muestra para calcular μ y σ. Esta situación se conoce como σ desconocida. Cuando se utiliza 
+s para estimar σ, el margen de error y la estimación por intervalo de la media poblacional se 
+basan en una distribución de probabilidad conocida como distribución t. Aunque el desarrollo 
+matemático de esta última parte del supuesto de que la población muestreada tiene una distri-
+bución normal, las investigaciones han demostrado que la distribución t se aplica en muchas 
+situaciones en que la población se desvía signiﬁ cantemente de la normal. Más adelante, en esta 
+misma sección se proporcionan lineamientos para usar la distribución t cuando la población no 
+está distribuida normalmente.
+La distribución t es una familia de distribuciones de probabilidad similar, y cada una de-
+pende de un parámetro conocido como grados de libertad. La distribución t para un grado de 
+libertad es única, como lo es para dos grados o tres grados de libertad, etc. A medida que este 
+número aumenta, la diferencia entre la distribución t y la distribución normal estándar se redu-
+ce. En la ﬁ gura 8.4 se muestran las distribuciones t para 10 y 20 grados de libertad y su relación 
+con la distribución de probabilidad normal estándar. Observe que una distribución t con más 
+FIGURA 8.4   Comparación de la distribución normal estándar con las distribuciones t para 10 
+y 20 grados de libertad
+0
+z, t
+Distribución normal estándar
+Distribución t (20 grados de libertad)
+Distribución t (10 grados de libertad)
+William Sealy Gosset, 
+quien publicaba bajo el 
+seudónimo “Student” es el 
+creador de la distribución t. 
+Gosset, que había estudiado 
+matemáticas en Oxford, 
+trabajaba para Guinness 
+Brewery en Dublín, Irlanda. 
+Desarrolló la distribución t 
+cuando trabajaba sobre 
+materiales a pequeña 
+escala y con experimentos 
+de temperatura.
+
+[Bloque seleccionado #352 | relevancia=36]
+Pagina 351
+ 
+8.2  Media poblacional: σ desconocida 
+317
+grados de libertad exhibe menos variabilidad y un mayor parecido con la distribución normal 
+estándar. Note también que la media de toda distribución t es cero.
+Para denotar el área en la cola superior de la distribución t, a la t se le coloca un subíndice. 
+Por ejemplo, así como se usó z0.025 para indicar el valor de z que deja en la cola superior de la 
+distribución normal estándar un área de 0.025, también se usará t0.025 para indicar el valor de t
+que deja en la cola superior de la distribución t un área de 0.025. En general, se manejará la 
+notación tα/2 para representar el valor de t que deja un área de α/2 en la cola superior de la dis-
+tribución t (ﬁ gura 8.5).
+La tabla 2 del apéndice B contiene una distribución t. En la tabla 8.2 se muestra una par-
+te. Cada ﬁ la corresponde a una distribución t distinta con los grados de libertad que se indican. 
+Por ejemplo, en la distribución t con 9 grados de libertad, t0.025  2.262. De manera similar, 
+en la distribución t con 60 grados de libertad, t0.025  2.000. A medida que estos grados aumen-
+tan, t0.025 se aproxima a z0.025  1.96. En efecto, el valor z de la distribución normal estándar 
+se encuentra en la ﬁ la correspondiente a inﬁ nitos grados de libertad (etiquetado como ) de la 
+tabla de distribuciones t. Si los grados de libertad son más de 100, se puede usar la ﬁ la corres-
+pondiente a inﬁ nitos grados para aproximar el verdadero valor de t; en otras palabras, para más 
+de 100 grados de libertad, el valor z normal estándar proporciona una buena aproximación del 
+valor t.
+Margen de error y estimación por intervalo
+En la sección 8.1 se mostró que la estimación por intervalo de la media poblacional cuando σ 
+es conocida es
+x  zα/2 σ
+n 
+Para calcular una estimación por intervalo de μ cuando no se conoce σ, se usa la desviación 
+estándar muestral s para estimar σ, y zα/2 se sustituye por el valor tα/2 de la distribución t. El 
+A medida que los grados 
+de libertad aumentan, la 
+distribución t se aproxima 
+más a la distribución 
+normal estándar.
+FIGURA 8.5  Distribución t con un área o probabilidad α/2 en la cola superior
+t
+α/2
+0
+tα/2
+
+[Bloque seleccionado #358 | relevancia=38]
+Pagina 357
+ 
+8.2  Media poblacional: σ desconocida 
+323
+se pueden usar tamaños de muestra menores. En caso de que no se conozca σ y si la distribu-
+ción de la población es muy sesgada o existen observaciones atípicas, se recomienda que el 
+tamaño de la muestra sea n  50.
+NOTAS Y COMENTARIOS
+NOTAS Y COMENTARIOS
+1.  En los casos en que conoce σ, el margen de error, 
+zα/2(σn ), es fijo y es el mismo para todas las 
+muestras de tamaño n. Cuando σ no se conoce, el 
+margen de error, tα/2(sn ), varía de una muestra 
+a otra. Esta variación se debe a que la desviación 
+estándar muestral s cambia de acuerdo con la 
+muestra que se seleccione. Si s es grande, se ob-
+tiene un margen de error mayor, mientras que si s 
+es pequeña, se obtiene un margen de error menor.
+2.  ¿Qué sucede con las estimaciones por intervalo 
+cuando la población es sesgada? Considere una 
+población sesgada a la derecha en la cual los da-
+tos con valores grandes jalan la distribución hacia 
+esa dirección. Cuando existe un sesgo así, hay una 
+correlación positiva entre la media muestral x y 
+la desviación estándar muestral s. Valores mayores 
+de s tienden a corresponderse con valores mayo-
+res de x. De esta manera, cuando x es mayor que 
+la media poblacional, s tiende a ser mayor que σ. 
+Este sesgo hace que el margen de error, tα/2(sn ), 
+sea mayor de lo que sería si se conociera σ. Un 
+intervalo de confianza con un margen de error 
+mayor tenderá a incluir con más frecuencia la me-
+dia poblacional μ que si se usara el verdadero 
+valor σ. Pero cuando x es menor que la media po-
+blacional, la correlación entre x y s hace que el 
+margen de error sea más pequeño. En este caso, 
+dichos intervalos de confianza con menor margen 
+de error incluirán la media poblacional menos 
+veces que si se conociera y se usara σ. Por esta 
+razón se recomienda usar tamaños de muestra más 
+grandes cuando la distribución de la población es 
+muy sesgada.
+Ejercicios
+Métodos
+11. 
+En la distribución t con 16 grados de libertad, encuentre el área, o la probabilidad, de cada una 
+de las regiones siguientes.
+a) A la derecha de 2.120
+b) A la izquierda de 1.337
+c) 
+A la izquierda de 1.746
+d) A la derecha de 2.583
+e) 
+Entre 2.120 y 2.120
+f ) 
+Entre 1.746 y 1.746
+12. 
+Encuentre los valores de t para las situaciones siguientes.
+a) Un área de 0.025 en la cola superior, con 12 grados de libertad.
+b) Un área de 0.05 en la cola inferior, con 50 grados de libertad.
+c) 
+Un área de 0.01 en la cola superior, con 30 grados de libertad.
+d) Entre los que queda 90% del área, con 25 grados de libertad.
+e) 
+Entre los que queda 95% del á
+
+[Bloque seleccionado #361 | relevancia=22]
+Pagina 360
+326 
+Capítulo 8  Estimación por intervalo
+La cantidad zα/2(σn) es el margen de error. De manera que, como se ve, zα/2, la desviación 
+estándar poblacional σ, y el tamaño de la muestra n se combinan para determinar el margen de 
+error. Una vez que se selecciona el coeﬁ ciente de conﬁ anza 1  α, zα/2 puede ser determinado. 
+Por tanto, si se tiene el valor de σ, es posible encontrar el tamaño de muestra n necesario para 
+proporcionar cualquier margen de error deseado. A continuación se presenta el desarrollo de la 
+fórmula utilizada para calcular el tamaño n de muestra deseado.
+Sea E  el margen de error deseado:
+E  zα/2 σ
+n
+Al despejar n tenemos
+n  zα/2σ
+E
+Al elevar al cuadrado ambos lados de esta ecuación, se obtiene la expresión siguiente para el 
+tamaño de la muestra.
+Este tamaño de muestra proporciona el margen de error deseado al nivel de conﬁ anza 
+elegido.
+En la ecuación (8.3), E es el margen de error que el usuario está dispuesto a aceptar, y el 
+valor zα/2 es consecuencia directa del nivel de conﬁ anza que se utilizará para calcular la esti-
+mación por intervalo. A reserva de la decisión del usuario, 95% de conﬁ anza es el valor más 
+frecuentemente elegido (z0.025  1.96).
+Por último, para usar la ecuación (8.3) es necesario contar con el valor de la desviación 
+estándar poblacional σ. Sin embargo, aun cuando este valor no se conozca, puede utilizarse la 
+ecuación (8.3) siempre que se tenga un valor preliminar o un valor planeado de σ. En la prácti-
+ca, suele usarse alguno de los procedimientos siguientes para obtenerlo.
+1.  Se utiliza como valor planeado de σ una estimación de la desviación estándar poblacio-
+nal calculada a partir de datos de estudios anteriores.
+2.  Se opta por un estudio piloto seleccionando una muestra preliminar. La desviación están-
+dar muestral obtenida de la muestra preliminar puede usarse como valor planeado de σ.
+3.  Se usa el juicio personal para “adivinar el mejor” valor de σ. Por ejemplo, se puede em-
+pezar por estimar el mayor y el menor valor en los datos de la población. La diferencia 
+entre ambos valores proporciona una estimación del rango de los datos. Por último, este 
+valor dividido entre 4 suele considerarse como una aproximación burda a la desviación 
+estándar y tomarse como un valor planeado aceptable de σ.
+Se considera el ejemplo siguiente para mostrar el uso de la ecuación (8.3) en la determinación 
+del tamaño de la muestra. En un estudio previo para investigar el costo de la renta de auto-
+móviles en Estados Unidos se encontró que el costo medio de rentar un vehículo mediano era 
+apro
+
+[Bloque seleccionado #362 | relevancia=30]
+Pagina 361
+ 
+8.3  Determinación del tamaño de la muestra 
+327
+revisó los datos muestrales del estudio anterior y encontró que la desviación estándar muestral 
+del costo de la renta diaria era $9.65. Al utilizar $9.65 como valor planeado de σ, tenemos:
+n  (zα/2)2σ2
+E 2
+  (1.96)2(9.65)2
+22
+  89.43
+De esta manera, el tamaño de la muestra necesario para obtener un margen de error de $2 debe 
+ser de por lo menos 89.43 rentas de automóviles medianos. En casos como éste, en los que el 
+valor de n no es un número entero, se redondea al siguiente valor entero; así que el tamaño de 
+muestras que se aconseja es 90 rentas de automóviles medianos.
+Ejercicios
+Métodos
+23. 
+¿Qué tan grande debe seleccionarse una muestra para tener un intervalo de confianza de 95% 
+con un margen de error de 10? Suponga que la desviación estándar poblacional es 40.
+24. 
+En un conjunto de datos se estima que el rango es 36.
+a) ¿Cuál es el valor planeado para la desviación estándar poblacional?
+b) ¿De qué tamaño deberá ser la muestra para que el margen de error en un intervalo de con-
+fianza de 95% sea 3?
+c) 
+¿De qué tamaño deberá ser la muestra para que el margen de error sea 2 en un intervalo de 
+confianza de 95%?
+Aplicaciones
+25. 
+Remítase al ejemplo de Scheer Industries de la sección 8.2. Use 6.84 días como valor planeado 
+para la desviación estándar poblacional.
+a) Asuma 95% de confianza, ¿de qué tamaño deberá ser la muestra para tener un margen de 
+error de 1.5 días?
+b) Si la declaración de precisión se hizo con 90% de confianza, ¿de qué tamaño deberá ser la 
+muestra para tener un margen de error de 2 días?
+26. 
+El costo promedio de un galón de gasolina sin plomo en Greater Cincinnati es $2.41 (The Cin-
+cinnati Enquirer, 3 de febrero de 2006). En una época de constantes cambios en los precios, 
+un periódico muestrea las gasolineras y presenta un informe sobre los precios del combustible. 
+Suponga que la desviación estándar es $0.15 en los precios del galón de la gasolina sin plomo 
+y recomiende el tamaño apropiado de muestra n que debe usar este periódico para tener un 
+margen de error con 95% de confianza.
+a) Suponga que el margen de error requerido es $0.07.
+b) Asuma que el margen de error deseado es $0.05.
+c) 
+Ahora considere que el margen de error requerido es $0.03.
+27. 
+Los sueldos anuales iniciales para estudiantes graduados en una carrera en administración se 
+espera que estén entre $30 000 y $45 000. Suponga que se quiere dar un intervalo de confian-
+za  de 95% para estimar la media poblacional anual de los sueldos iniciales. ¿Cuál es el valor 
+planeado de la desviación es
+
+[Bloque seleccionado #366 | relevancia=20]
+Pagina 365
+ 
+8.4  Proporción poblacional 
+331
+Así, el tamaño de la muestra debe ser por lo menos de 1 514.5 golﬁ stas mujeres para satisfacer 
+el margen de error requerido. Al redondear al valor entero siguiente, tenemos que se necesitan 
+1 515 golﬁ stas para obtener el margen de error deseado.
+La cuarta alternativa sugerida para seleccionar un valor planeado p* es elegir p*  0.50. 
+Cuando no se cuenta con ninguna otra información, suele utilizarse este valor. Para entender por 
+qué, observe que el numerador de la ecuación (8.7) indica que el tamaño de la muestra es pro-
+porcional a la cantidad p*(1  p*). Si el valor de p*(1  p*) es grande, el tamaño de la muestra 
+también lo será. En la tabla 8.5 se consideran algunos valores que puede tener p*(l  p*). El 
+máximo valor se presenta cuando p*  0.50. De esta manera, en caso de duda acerca del valor 
+planeado apropiado, sabemos que p*  0.50 dará el mayor tamaño de muestra que se puede 
+recomendar. En efecto, con el mayor tamaño de muestra posible se va a lo seguro. Si resulta 
+que la proporción muestral es diferente del valor planeado, el margen de error será menor que 
+el anticipado. De manera que al usar p*  0.50 se garantiza que el tamaño de la muestra será 
+suﬁ ciente para obtener el margen de error deseado.
+En el ejemplo del estudio de las golﬁ stas, si se usa como valor planeado p*  0.50, el ta-
+maño de muestra que se obtiene es
+n  (zα/2)2p*(1  p*)
+E 2
+  (1.96)2(0.50)(1  0.50)
+(0.025)2
+  1 536.6
+Es decir, una muestra ligeramente mayor: 1 537 mujeres golﬁ stas.
+ 
+p* 
+p*(1  p*)
+ 
+0.10 
+(0.10)(0.90)   0.09
+ 
+0.30 
+(0.30)(0.70)  0.21
+ 
+0.40 
+(0.40)(0.60)  0.24
+ 
+0.50 
+(0.50)(0.50)  0.25 
+máximo valor de p*(1  p*)
+ 
+0.60 
+(0.60)(0.40)  0.24
+ 
+0.70 
+(0.70)(0.30)  0.21
+ 
+0.90 
+(0.90)(0.10)  0.09
+TABLA 8.5   Algunos valores posibles de p*(1  p*)
+NOTAS Y COMENTARIOS
+El margen de error deseado para calcular una pro-
+porción poblacional casi siempre es 0.10 o menos. 
+En las encuestas de opinión pública a nivel nacional 
+en Estados Unidos conducidas por Gallup y Harris, 
+un margen de error de 0.03 o 0.04 es común. Con es-
+tos márgenes, la ecuación (8.7) suministra un tamaño 
+de la muestra que es suficiente para satisfacer los re-
+querimientos de np  5 y n(1  p)  5 para usar 
+una distribución normal como aproximación de la dis-
+tribución de muestreo de x.
+Ejercicios
+Métodos
+31. 
+Una muestra aleatoria simple de 400 individuos proporciona 100 respuestas Sí.
+a) Determine la estimación puntual de la proporción poblacional de individuos cuya res-
+puesta será Sí.
+b) ¿Cuál es la estimación del e
+
+[Bloque seleccionado #367 | relevancia=24]
+Pagina 366
+332 
+Capítulo 8  Estimación por intervalo
+32. 
+En una muestra aleatoria de 800 elementos se obtiene una proporción muestral, p  0.70.
+a) Proporcione un intervalo de 90% de confianza para la proporción poblacional.
+b) Proporcione un intervalo de confianza de 95% para la proporción poblacional.
+33. 
+En un estudio, el valor planeado para la proporción poblacional es p*  0.35. ¿De qué tamaño 
+se debe tomar la muestra para dar un intervalo de confianza de 95% con un margen de error 
+de 0.05?
+34. 
+Para 95% de confianza, ¿de qué tamaño se deberá tomar la muestra para obtener un margen de 
+error de 0.03 en la estimación de una proporción poblacional? Suponga que no se cuenta con 
+datos anteriores para obtener un valor planeado de p*.
+Aplicaciones
+35. 
+El Consumer Reports National Research Center realizó una encuesta telefónica con 2 000 adul-
+tos para conocer sus principales preocupaciones económicas proyectadas al futuro (Consumer 
+Reports, enero de 2009). Los resultados mostraron que 1 760 de los encuestados afirmaron 
+que la salud futura es una de sus principales preocupaciones económicas.
+a) ¿Cuál es la estimación puntual de la proporción poblacional de adultos que piensan que la 
+salud futura es una de las principales preocupaciones económicas?
+b) A 90% de confianza, ¿cuál es el margen de error?
+c) 
+Proporcione el intervalo de 90% de confianza para la proporción poblacional de adultos 
+que piensan que la salud futura es una de las principales preocupaciones económicas.
+d) Proporcione el intervalo de 95% de confianza para esta proporción poblacional.
+36. 
+Con base en estadísticas publicadas por la CNBC, la cantidad de vehículos que no están ase-
+gurados es sorprendente (CNBC, 23 de febrero de 2006). Los resultados muestrales indican que 
+46 de 200 vehículos no están asegurados.
+a) ¿Cuál es la estimación puntual de la proporción de vehículos no asegurados?
+b) Proporcione un intervalo de confianza de 95% para la proporción poblacional.
+37. 
+Towers Perrin, una firma de consultoría de recursos humanos de Nueva York, realizó un es-
+tudio con 1 100 empleados de empresas medianas y grandes para determinar qué tan insatis-
+fechos estaban con su trabajo (The Wall Street Journal, 29 de enero de 2003). En el archivo 
+JobSatisfaction se muestran datos representativos. Un Sí como respuesta indica que al em-
+pleado le desagrada mucho su puesto actual.
+a) Proporcione la estimación puntual de la proporción poblacional de empleados a quienes 
+les disgusta mucho su puesto actual.
+b) A 95% de confianza, ¿cuál es el margen de error?
+c) 
+¿Cuál es el intervalo de con
+
+[Bloque seleccionado #369 | relevancia=26]
+Pagina 368
+334 
+Capítulo 8  Estimación por intervalo
+Para la media poblacional se presentaron estimaciones por intervalo en dos casos. En el 
+caso de σ conocida, se usan datos históricos o alguna otra información para obtener una esti-
+mación de σ antes de tomar la muestra. Entonces, el análisis de nuevos datos muestrales se 
+realiza bajo el supuesto de que se conoce σ. En el caso de σ desconocida, los datos muestrales 
+se usan para estimar tanto la media poblacional como la desviación estándar poblacional. La 
+decisión ﬁ nal de qué procedimiento de estimación por intervalo utilizar depende de que el ana-
+lista decida qué método proporciona una mejor estimación de σ.
+Para σ conocida, el procedimiento de estimación por intervalo se basa en el valor supues-
+to de σ y en el uso de la distribución normal estándar. En cuanto a σ desconocida, para el 
+procedimiento de estimación por intervalo se usa la desviación estándar muestral s y la distri-
+bución t. En ambos casos, la calidad de la estimación por intervalo depende de la distribución 
+de la población y del tamaño de la muestra. Si la población tiene una distribución normal, la 
+estimación por intervalo será exacta en ambos casos, aun cuando los tamaños de las muestras 
+sean pequeños. Si la población no tiene distribución normal, la estimación por intervalo resul-
+tante será aproximada. Tamaños de muestras mayores proporcionarán mejores aproximacio-
+nes, pero entre más sesgada sea la población, mayor será el tamaño de la muestra necesario 
+para obtener una buena aproximación. En las secciones 8.1 y 8.2 se proporcionaron consejos 
+prácticos respecto del tamaño de muestra necesario para obtener buenas aproximaciones. En 
+la mayoría de los casos, un tamaño 30 o mayor proporcionará una buena aproximación para el 
+intervalo de conﬁ anza.
+La forma general de una estimación por intervalo para la proporción poblacional es p  
+margen de error. En la práctica, los tamaños de muestra empleados en estimaciones por interva-
+lo de una proporción poblacional suelen ser grandes. Entonces, el procedimiento de estimación 
+por intervalo se basa en la distribución normal estándar.
+Algunas veces se especiﬁ ca un determinado margen de error antes de llevar a cabo el plan 
+de muestreo. También se explicó cómo elegir el tamaño de muestra adecuado para obtener la 
+precisión deseada.
+Glosario
+σ conocida Caso en el que datos históricos o alguna otra información proporciona un buen 
+valor para ser considerado como desviación estándar poblacional antes de tomar la muestra. 
+Este valor conocido de σ se usa en la estimación por interva
+
+[Bloque seleccionado #372 | relevancia=28]
+Pagina 371
+ 
+Ejercicios complementarios 
+337
+51. 
+Un centro médico quiere estimar la media del tiempo que se necesita para programar una cita 
+de un paciente. ¿De qué tamaño deberá ser la muestra si se quiere que el margen de error sea de 
+2 minutos y que el nivel de confianza sea 95%? ¿De qué tamaño deberá tomarse la muestra si 
+se quiere que el nivel de confianza sea 99%? Para la desviación estándar poblacional use 8 mi-
+nutos como valor planeado.
+52. 
+BusinessWeek presenta datos sobre el sueldo anual más bonos de presidentes ejecutivos (CEO). 
+En una muestra preliminar la desviación estándar es $675; los datos se dan en miles de dólares. 
+¿De cuántos CEO deberá constar la muestra si se quiere estimar el sueldo anual más bonos con 
+un margen de error de $100 000? (Nota. El margen de error deseado será E  100 si los datos 
+están dados en miles de dólares.) Use 95% de confianza.
+53. 
+El National Center for Education Statistics informa que 47% de los estudiantes universitarios 
+trabaja para pagar sus estudios y su sustento. Suponga que se empleó una muestra de 450 estu-
+diantes en la investigación.
+a) Proporcione un intervalo de confianza de 95% para dicha proporción poblacional.
+b) Proporcione un intervalo de confianza de 99% para la proporción poblacional de estu-
+diantes que trabajan para mantenerse y pagar sus estudios.
+c) 
+¿Qué ocurre con el margen de error cuando el nivel de confianza aumenta de 95% a 
+99%?
+54. 
+En un estudio de USA Today/CNN/Gallup realizado con 369 padres que trabajan, se encontró 
+que 200 consideran que pasan muy poco tiempo con sus hijos debido a sus compromisos la-
+borales.
+a) Proporcione una estimación puntual de la proporción poblacional de padres que trabajan y 
+piensan que pasan muy poco tiempo con sus hijos debido a sus compromisos laborales.
+b) ¿Cuál es el margen de error para 95% de confianza?
+c) 
+¿Cuál es el intervalo de confianza de 95% para la proporción poblacional de padres que 
+trabajan y piensan que pasan muy poco tiempo con sus hijos debido a sus compromisos 
+ocupacionales?
+55. 
+¿De qué le sería más difícil prescindir: de su televisor o de su computadora? En un estudio 
+reciente efectuado con 1 677 usuarios de Internet en Estados Unidos, se encontró que a 74% 
+de la élite tecnológica juvenil (edad promedio de 22 años) le sería más difícil prescindir de su 
+computadora (PC Magazine, 3 de febrero de 2004). Sólo para 48% sería más difícil renunciar 
+a su televisor.
+a) Desarrolle un intervalo de confianza de 95% para la proporción de jóvenes a quienes les 
+sería difícil prescindir de su computadora.
+b) Encuentre un 

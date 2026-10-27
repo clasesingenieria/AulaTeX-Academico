@@ -1,0 +1,711 @@
+Fuente bibliográfica: Estadística para negocios y economía - Anderson, Sweeney y Williams. 11.ª edición.pdf
+Actividad: 18 (6.3 Ejercicios Equipo 5% Tarea)
+Palabras clave: índices estacionales, promedio móvil, promedio móvil ponderado, suavizamiento exponencial, modelo estacional multiplicativo, pronóstico
+
+[Bloque seleccionado #828 | relevancia=29]
+Pagina 827
+ 
+18.2  Exactitud del pronóstico 
+793
+Por ejemplo, debido a que el distribuidor vendió en realidad 21 mil galones de gasolina en la 
+semana 2 y el pronóstico al utilizar el volumen de ventas en la semana 1 fue de 17 mil galones, 
+el error de pronóstico en la semana 2 es
+Error de pronóstico en la semana 2  21  17  4
+El hecho de que el error de pronóstico sea positivo, indica que en la semana 2 el método de 
+elaboración de pronósticos subestimó el valor real de las ventas. A continuación utilice 21, el 
+valor real de las ventas en la semana 2, como pronóstico para la semana 3. Ya que el valor real 
+de las ventas en la semana 3 es 19, el error de pronóstico para esta semana es 19  21  2. 
+En este caso, el error negativo indica que en la semana 3 el pronóstico sobrestimó el valor real. 
+Así, el error de pronóstico puede ser positivo o negativo dependiendo de si es demasiado bajo 
+o demasiado alto. Un resumen completo de los errores de pronóstico para este método ingenuo 
+se muestra en la tabla 18.7, en la columna Error de pronóstico.
+Una medida sencilla de exactitud de los pronósticos es la media o promedio de errores de 
+pronóstico. La tabla 18.7 muestra que la suma de estos errores para la serie de tiempo de las 
+ventas de gasolina es 5, por lo que la media o promedio del error de pronóstico es 5/11  0.45. 
+Observe que aunque la serie de tiempo de gasolina se compone de 12 valores, al calcular la 
+media del error se divide la suma de los errores entre 11, ya que existen solamente 11 errores 
+de pronóstico. Debido a que la media del error de pronóstico es positiva, el método arroja pro-
+nósticos bajos; es decir, los valores observados tienden a ser mayores que los pronosticados. 
+Debido a que los errores de pronóstico positivos y negativos tienden a compensarse entre sí, 
+es probable que la media del error sea pequeña, así que ésta no es una medida muy útil para la 
+exactitud del pronóstico.
+El error absoluto medio, que se denota EAM, es una medida de exactitud del pronóstico 
+que evita el problema de los errores positivos y negativos que se compensan entre sí. Como es 
+de esperar, dado su nombre, EAM es el promedio de los valores absolutos de los errores de pro-
+nóstico. La tabla 18.7 muestra que la suma de los valores absolutos de los errores de pronóstico 
+es 41; por tanto
+EAM  promedio del valor absoluto de los errores de pronóstico  41
+11  3.73
+ 
+ 
+Valor de 
+ 
+ 
+Valor absoluto 
+Error de 
+ 
+Valor absoluto
+ 
+ 
+la serie 
+ 
+Error de 
+del error 
+pronóstico 
+Error 
+del error
+ Semana 
+de tiempo Pronóstico pronóstico 
+de pronóstico 
+cuadra
+
+[Bloque seleccionado #833 | relevancia=30]
+Pagina 832
+798 
+Capítulo 18  Análisis de series de tiempo y elaboración de pronósticos
+Para utilizar los promedios móviles a efecto de pronosticar las series de tiempo, primero se 
+debe seleccionar el orden, o el número de los valores de las series de tiempo que se incluirán 
+en el promedio móvil. Si sólo los valores más recientes se consideran relevantes, es preferible 
+utilizar un valor pequeño de k. Si existen valores más antiguos que se consideren relevantes, 
+entonces es mejor un valor grande de k. Como se mencionó antes, una serie de tiempo con un 
+patrón horizontal puede cambiar con el tiempo a un nuevo nivel. Un promedio móvil se adap-
+tará al nuevo nivel y seguirá brindando pronósticos adecuados después de k periodos. Así, un 
+valor menor de k hará un seguimiento más rápido en el cambio en una serie de tiempo, pero 
+los valores mayores serán más eﬁ caces para el suavizamiento de las ﬂ uctuaciones aleatorias en 
+el tiempo. Así que el criterio de negocios basado en el entendimiento del comportamiento de 
+una serie de tiempo es de gran ayuda en la elección de un buen valor de k.
+Para ilustrar cómo los promedios móviles pueden utilizarse para pronosticar las ventas de 
+gasolina, se utilizará un promedio móvil de tres semanas (k  3). Se comienza por calcular el 
+pronóstico de ventas en la semana 4 con la media de los valores de la serie de tiempo en las 
+semanas 1 a 3.
+F4  promedio de las semanas 1 a 3  17  21  19
+3
+  19
+Por tanto, el pronóstico del promedio móvil de ventas en la semana 4 es 19 o 19 mil galones de 
+gasolina. Debido a que el valor real observado en esta semana es 23, el error de pronóstico en 
+la semana 4 es 23  19  4.
+A continuación se calcula el pronóstico de ventas en la semana 5 al promediar los valores 
+de la serie de tiempo de las semanas 2 a 4.
+F5  promedio de las semanas 2 a 4  21  19  23
+3
+  21
+Por tanto, el pronóstico de las ventas en la semana 5 es 21 y el error relacionado con este indi-
+cador es 18  21   3. Un resumen completo del pronóstico del promedio móvil para las 
+series de tiempo en las tres semanas de ventas de gasolina se proporciona en la tabla 18.9. La 
+ﬁ gura 18.7 muestra la gráﬁ ca de la serie de tiempo original y el pronóstico del promedio móvil 
+de tres semanas. Observe cómo la gráﬁ ca de los pronósticos por promedio móvil ha tendido a 
+suavizar las ﬂ uctuaciones aleatorias en la serie de tiempo.
+ 
+ 
+Valor de 
+ 
+ 
+Valor absoluto 
+Error de 
+ 
+Valor absoluto
+ 
+ 
+la serie 
+ 
+Error de 
+del error 
+pronóstico 
+Error 
+del error
+ Semana 
+de tiempo Pronóstico pronóstico 
+de pronóstico 
+cuadrado 
+porc
+
+[Bloque seleccionado #834 | relevancia=27]
+Pagina 833
+ 
+18.3  Promedios móviles y suavizamiento exponencial 
+799
+Para pronosticar las ventas en la semana 13, el siguiente periodo en el futuro, se calcula 
+simplemente el promedio de los valores de la serie de tiempo en las semanas 10, 11 y 12.
+F13  promedio de las semanas 10 a 12  20  15  22
+3
+  19
+Por tanto, el pronóstico para la semana 13 es 19 o 19 mil galones de gasolina.
+Exactitud del pronóstico En la sección 18.2 se estudiaron tres medidas de exactitud del 
+pronóstico: EAM, CME y EPAM. Al utilizar los cálculos del promedio móvil de tres semanas de 
+la tabla 18.9, los valores para estas tres medidas de exactitud del pronóstico son
+EAM  24
+9  2.67
+CME  92
+9  10.22
+EPAM  129.21
+9
+  14.36%
+En la sección 18.2 también se mostró que al utilizar las observaciones más recientes como 
+pronóstico para la siguiente semana (un promedio móvil de orden k  1) dio como resultado 
+los valores de EAM  3.73, CME  16.27 y EPAM  19.24%. Así, en cada caso el método de 
+promedio móvil para las tres semanas proporcionó pronósticos más exactos que el simple uso 
+de la observación más reciente como pronóstico.
+Para determinar si con un orden distinto de k se pueden obtener pronósticos más precisos 
+con el promedio móvil, se recomienda el uso del método de prueba y error para determinar el 
+valor de k que minimiza el CME. Para la serie de tiempo de ventas de gasolina se puede mostrar 
+que el valor mínimo del CME corresponde a un promedio móvil de orden k  6 con CME  
+6.79. Si se está dispuesto a asumir que el orden del promedio móvil que es mejor para los datos 
+FIGURA 18.7   Gráfica de series de tiempo de las ventas de gasolina y pronósticos del promedio 
+móvil a tres semanas
+Ventas (miles de galones)
+0
+20
+15
+10
+5
+0
+4
+7
+9
+Semana
+25
+1
+2
+3
+6
+5
+8
+10
+12
+11
+Pronóstico del promedio
+móvil a tres semanas
+En situaciones donde es 
+necesario comparar los 
+métodos de elaboración 
+de pronósticos para distintos 
+periodos, son preferibles 
+las medidas relativas como 
+EPAM para comparar 
+un pronóstico de ventas 
+semanales con un pronóstico 
+de ventas mensuales.
+
+[Bloque seleccionado #835 | relevancia=41]
+Pagina 834
+800 
+Capítulo 18  Análisis de series de tiempo y elaboración de pronósticos
+históricos también será mejor para los valores futuros de la serie de tiempo, el pronóstico para el 
+promedio móvil más preciso en las ventas de gasolina se puede obtener utilizando un promedio 
+móvil de orden k  6.
+Promedios móviles ponderados
+En el método del promedio móvil, cada observación en los cálculos recibe el mismo peso. 
+Una variante, conocida como promedios móviles ponderados, consiste en seleccionar un pe-
+so diferente para cada uno de los valores y después calcular el promedio ponderado de los k 
+valores más recientes como pronóstico. En la mayoría de los casos la observación más recien-
+te recibe el mayor peso, y los pesos se reducen para los datos más antiguos. Utilice la serie 
+de tiempo de las ventas de gasolina para ilustrar el cálculo de un promedio móvil ponderado de 
+tres semanas. Asigne un peso de 3/6 a la observación más reciente, un peso de 2/6 a la segunda 
+observación más reciente, y un peso de 1/6 a la tercera observación más reciente. Utilizando 
+este promedio ponderado, el pronóstico para la semana 4 se calcula como sigue.
+Pronóstico para la semana 4  16(17)  26(21)  36(19)  19.33
+Observe que en el método del promedio móvil ponderado la suma de los pesos es igual a 1.
+Exactitud del pronóstico Para utilizar el método de promedios móviles ponderados, pri-
+mero debe seleccionar la cantidad de valores que se incluirán en el promedio móvil ponderado 
+y después elegir los pesos para cada uno de los valores. En general, si se cree que el pasado re-
+ciente es un mejor predictor del futuro que el pasado distante, habrá que asignar pesos mayores 
+a las observaciones más recientes. Sin embargo, si la serie de tiempo es muy variable, puede ser 
+mejor elegir pesos aproximadamente iguales para todos los datos. El único requisito en la se-
+lección de los pesos es que su suma debe ser igual a 1. Para estimar si con una determinada 
+combinación de cantidad de datos y de pesos se obtiene un pronóstico más preciso que con 
+otra combinación, se recomienda utilizar el CME como medida de exactitud del pronóstico. Es 
+decir, si se supone que la combinación que es mejor para el pasado también será mejor para el 
+futuro, se utilizará la combinación del número de valores y pesos que minimice el CME de la 
+serie de tiempo histórica para pronosticar el siguiente valor en la serie de tiempo.
+Suavizamiento exponencial
+El suavizamiento exponencial también utiliza un promedio ponderado de los valores pasa-
+dos de la serie de tiempo como pronóstico; es un caso esp
+
+[Bloque seleccionado #836 | relevancia=30]
+Pagina 835
+ 
+18.3  Promedios móviles y suavizamiento exponencial 
+801
+La ecuación (18.2) muestra que el pronóstico para el periodo t  1 es un promedio pon-
+derado del valor real en el periodo t y del valor pronosticado para el periodo t. El peso dado 
+al valor real en el periodo t es la constante de suavizamiento α, y el peso dado al pronóstico 
+para el periodo t es 1  α. Resulta que el pronóstico exponencial para cualquier periodo es en 
+realidad un promedio ponderado de todos los valores reales anteriores de la serie de tiempo. Se 
+ilustra lo anterior con una serie de tiempo que sólo implica los datos de tres periodos: Y1, Y2 y Y3.
+Para empezar los cálculos, sea F1 el valor real de la serie de tiempo en el periodo 1, es de-
+cir, F1  Y1. Por tanto, el pronóstico para el periodo 2 es
+F2  αY1  (1  α)F1
+ αY1  (1  α)Y1
+ Y1
+Observe que el pronóstico de suavizamiento exponencial para el periodo 2 es igual al valor real 
+de la serie de tiempo en el periodo 1.
+El pronóstico para el periodo 3 es
+F3  αY2  (1  α)F2  αY2  (1  α)Y1
+Por último, al sustituir esta expresión para F3 en la expresión para F4 obtenemos
+F4  αY3  (1  α)F3
+ αY3  (1  α)[αY2  (1  α)Y1]
+ αY3  α(1  α)Y2  (1  α)2Y1
+Observe ahora que F4 es un promedio ponderado de los tres primeros valores de la serie de 
+tiempo. La suma de los coeﬁ cientes o pesos de Y1, Y2 y Y3 es igual a 1. Con un argumento similar 
+se puede demostrar que, en general, cualquier pronóstico Ft1 es un promedio ponderado de 
+todos los valores anteriores de la serie de tiempo.
+A pesar de que con el suavizamiento exponencial se obtiene un pronóstico que es el prome-
+dio ponderado de todas las observaciones anteriores, no deben conservarse todos los datos del 
+pasado para calcular el pronóstico del periodo siguiente. De hecho, la ecuación (18.2) muestra 
+que una vez que el valor de la constante de suavizamiento α es elegida, sólo se necesitan dos 
+informaciones para calcular el pronóstico: Yt, el valor real de la serie de tiempo para el perio-
+do t, y Ft, el pronóstico para el periodo t.
+Para ilustrar el método de suavizamiento exponencial, considere de nuevo la serie de tiem-
+po de los precios de la gasolina presentada en la tabla 18.1 y en la ﬁ gura 18.1. Como ya se 
+explicó, para iniciar los cálculos se establece un pronóstico de suavizamiento exponencial para 
+el periodo 2 igual al valor real de la serie de tiempo en el periodo 1. Por tanto, como Y1  17, 
+para empezar con los cálculos del suavizamiento exponencial se pone F2  17. Referente a los 
+datos de la serie de tiempo en la tabla 18.1, se encue
+
+[Bloque seleccionado #837 | relevancia=32]
+Pagina 836
+802 
+Capítulo 18  Análisis de series de tiempo y elaboración de pronósticos
+ 
+ 
+Valores de la serie 
+ 
+Error de 
+Error de pronóstico
+ Semana 
+de tiempo 
+Pronóstico 
+pronóstico 
+cuadrado
+ 
+1 
+17
+ 
+2 
+21 
+17.00 
+4.00 
+16.00
+ 
+3 
+19 
+17.80 
+1.20 
+1.44
+ 
+4 
+23 
+18.04 
+4.96 
+24.60
+ 
+5 
+18 
+19.03 
+1.03 
+1.06
+ 
+6 
+16 
+18.83 
+2.83 
+8.01
+ 
+7 
+20 
+18.26 
+1.74 
+3.03
+ 
+8 
+18 
+18.61 
+0.61 
+0.37
+ 
+9 
+22 
+18.49 
+3.51 
+12.32
+ 
+10 
+20 
+19.19 
+0.81 
+0.66
+ 
+11 
+15 
+19.35 
+4.35 
+18.92
+ 
+12 
+22 
+18.48 
+3.52 
+12.39
+ 
+ 
+ 
+Totales 
+10.92 
+98.80
+un pronóstico de suavizamiento exponencial o un error de pronóstico para la semana 1, ya que 
+no se obtuvo ningún pronóstico. Para la semana 12, se tiene que Y12  22 y F12  18.48. Se 
+puede utilizar esta información para generar un pronóstico sobre la semana 13.
+F13  0.2Y12  0.8F12  0.2(22)  0.8(18.48)  19.18
+Por tanto, el pronóstico de suavizamiento exponencial de la cantidad vendida en la semana 13 
+es 19.18, o 19 180 galones de gasolina. Con este pronóstico, la empresa, como consecuencia, 
+puede hacer planes y tomar decisiones.
+La ﬁ gura 18.8 muestra la gráﬁ ca de los valores reales y pronosticados de la serie de tiem-
+po. Observe en especial cómo los pronósticos “suavizan” la irregularidad de las ﬂ uctuaciones 
+de la serie de tiempo.
+Exactitud del pronóstico En los cálculos anteriores para el suavizamiento exponencial se 
+utilizó una constante de suavizamiento de α  0.2. Aunque cualquier valor para α entre 0 y 1 
+es aceptable, algunos darán mejores pronósticos que otros. Una idea de cómo elegir el mejor 
+valor para α se obtiene al revisar el modelo básico de suavizamiento exponencial de la siguien-
+te manera.
+Ft1  αYt  (1  α)Ft
+Ft1  αYt  Ft  αFt
+ 
+Ft1  Ft  α(Yt  Ft) 
+(18.3)
+Así, el nuevo pronóstico Ft1 es igual al anterior Ft más un ajuste, el cual es la constante de 
+suavizamiento α multiplicada por el error de pronóstico más reciente Yt  Ft. Es decir, el pro-
+nóstico para el periodo t  1 se obtiene al ajustar el pronóstico para el periodo t mediante 
+una fracción del error de pronóstico. Si en la serie de tiempo existe una variabilidad aleatoria 
+considerable, se preﬁ ere un valor pequeño para la constante de suavizamiento. La razón de esta 
+elección estriba en que gran parte del error de pronóstico se debe a la variabilidad aleatoria, y 
+no se quiere reaccionar de forma exagerada y ajustar los pronósticos muy rápidamente. Para una 
+serie de tiempo con una variabilidad aleatoria relativamente pequeña, los errores de pronóstico 
+tienden más a representar un cambio en el nivel de la serie. Por ta
+
+[Bloque seleccionado #840 | relevancia=49]
+Pagina 839
+ 
+18.3  Promedios móviles y suavizamiento exponencial 
+805
+d) Compare el método del promedio móvil a tres semanas con el método de suavizamiento 
+exponencial utilizando α  0.2. ¿Cuál parece dar un pronóstico más preciso basado en el 
+CME? Explique.
+e) 
+Utilice una constante de suavizamiento de α  0.4 para calcular el pronóstico de suavi-
+zamiento exponencial. ¿Una constante de suavizamiento de 0.2 o de 0.4 parece propor-
+cionar pronósticos más precisos basados en el CME? Explique.
+6. 
+Considere los datos siguientes de serie de tiempo.
+Semana 
+1 
+2 
+3 
+4 
+5 
+6 
+7
+Valor 
+24 
+13 
+20 
+12 
+19 
+23 
+15
+ 
+Construya una gráfica de serie de tiempo. ¿Qué tipo de patrón existe en los datos?
+a) Desarrolle el pronóstico de promedio móvil para tres semanas en esta serie de tiempo. 
+Calcule el CME y proporcione un pronóstico para la semana 8.
+b) Utilice α  0.2 para calcular los pronósticos de suavizamiento exponencial de la serie de 
+tiempo. Calcule el CME y proporcione un pronóstico para la semana 8.
+c) 
+Compare el método del promedio móvil a tres semanas con el método de suavizamiento 
+exponencial utilizando α  0.2. ¿Cuál parece dar pronósticos más precisos basados en el 
+CME?
+d) Utilice una constante de suavizamiento de α  0.4 para calcular los pronósticos de sua-
+vizamiento exponencial. ¿Una constante de suavizamiento de 0.2 o de 0.4 parece ofrecer 
+pronósticos más precisos basados en el CME? Explique.
+7. 
+Regrese a los datos de la serie de tiempo para las ventas de gasolina de la tabla 18.1.
+a) Calcule los promedios móviles de la serie de tiempo a 4 y 5 semanas.
+b) Calcule el CME de los pronósticos obtenidos con los promedios móviles de 4 y 5 semanas.
+c) 
+¿Cuál parece ser de los datos pasados el mejor número de semanas a utilizar (3, 4 o 5) 
+para el cálculo del promedio móvil? Recuerde que el CME para el promedio móvil de tres 
+semanas es 10.22.
+8. 
+Consulte de nuevo los datos de la serie de tiempo de las ventas de gasolina de la tabla 18.1.
+a) Utilice 1/2 como el peso de la observación más reciente, 1/3 para la segunda observación 
+más reciente y 1/6 para la tercera observación más reciente. Calcule un promedio móvil 
+ponderado de las tres semanas para la serie de tiempo.
+b) Determine el CME del promedio móvil ponderado del inciso a). ¿Prefiere éste que el 
+promedio móvil no ponderado? Recuerde que el CME del promedio móvil ponderado es 
+10.22.
+c) 
+Suponga que se le permite elegir cualesquiera pesos, siempre y cuando su suma sea 1. 
+¿Siempre será posible elegir un conjunto de pesos que hagan que el CME sea menor para 
+el promedio móvil ponderado qu
+
+[Bloque seleccionado #841 | relevancia=35]
+Pagina 840
+806 
+Capítulo 18  Análisis de series de tiempo y elaboración de pronósticos
+b) Remítase a los coeficientes o pesos de los valores del pasado Y12, Y11, Y10, Y9 y Y8. ¿Qué 
+puede decir acerca de los pesos que el suavizamiento exponencial proporciona a los valo-
+res pasados al obtener un nuevo pronóstico? Compare estos pesos con los del método del 
+promedio móvil.
+Aplicaciones
+11. 
+Para Hawkins Company, los porcentajes de los embarques mensuales recibidos en los últimos 
+12 meses son 80, 82, 84, 83, 83, 84, 85, 84, 82, 83, 84 y 83.
+a) Construya una gráfica para la serie de tiempo. ¿Qué tipo de patrón existe en los datos?
+b) Compare el pronóstico obtenido mediante promedios móviles de tres meses con el pro-
+nóstico obtenido por el método de suavizamiento exponencial con α  0.2. ¿Con cuál se 
+obtienen pronósticos más precisos al utilizar el CME como medida de exactitud?
+c) 
+¿Cuál es el pronóstico para el próximo mes?
+12. 
+A continuación se proporcionan las tasas de interés de bonos corporativos triple A de 12 meses 
+consecutivos.
+9.5  9.3  9.4  9.6  9.8  9.7  9.8  10.5  9.9  9.7  9.6  9.6
+a) Construya una gráfica de serie de tiempo. ¿Qué tipo de patrón existe en los datos?
+b) Desarrolle promedios móviles de tres y cuatro meses para esta serie de tiempo. ¿Con cuál 
+de estos promedios móviles se obtiene un pronóstico más exacto basado en el CME? Ex-
+plique.
+c) 
+¿Cuál es el pronóstico para el promedio móvil del próximo mes?
+13. 
+Los valores de los contratos de construcción en Alabama (en millones de dólares) para un pe-
+riodo de 12 meses son los siguientes.
+240  350  230  260  280  320  220  310  240  310  240  230
+a) Construya una gráfica de serie de tiempo. ¿Qué tipo de patrón existe en los datos?
+b) Compare el método del promedio móvil a tres meses con el pronóstico de suavizamiento 
+exponencial utilizando α  0.2. ¿Con cuál se obtienen pronósticos más precisos basados 
+en el CME?
+c) 
+¿Cuál es el pronóstico para el próximo mes?
+14. 
+En la siguiente serie de tiempo se muestran las ventas de un producto en particular en los últi-
+mos 12 meses.
+a) Construya una gráfica de serie de tiempo. ¿Qué tipo de patrón existe en los datos?
+b) Utilice α  0.3 para calcular los pronósticos de suavizamiento exponencial de la serie de 
+tiempo.
+c) 
+Utilice una constante de suavizamiento de α  0.5 para calcular los pronósticos de sua-
+vizamiento exponencial. ¿Cuál de las constantes de suavizamiento, 0.3 o 0.5, parece pro-
+porcionar pronósticos más precisos basados en el CME?
+15. 
+Los datos siguientes son los valores del Commodity Futures Index de 10 semanas: 7.35, 7
+
+[Bloque seleccionado #875 | relevancia=29]
+Pagina 874
+840 
+Capítulo 18  Análisis de series de tiempo y elaboración de pronósticos
+estacional. Los métodos de elaboración de pronósticos estudiados se basan en que estos patro-
+nes están presentes en la serie de tiempo.
+Se mostró cómo se utilizan los promedios móviles y el suavizamiento exponencial para 
+desarrollar un pronóstico de una serie de tiempo con un patrón horizontal. El método de prome-
+dios móviles consiste en calcular el promedio de los valores de datos pasados, y después usar 
+ese promedio como pronóstico para el siguiente periodo. En el método de suavizamiento expo-
+nencial se usa un promedio ponderado de los valores pasados de la serie de tiempo para calcular 
+un pronóstico. Estos métodos también se adaptan bien cuando un patrón horizontal cambia a un 
+nivel diferente y se reanuda un patrón horizontal.
+Un factor importante para determinar qué método de elaboración de pronósticos utilizar 
+involucra la exactitud del método. Se estudiaron tres medidas de exactitud de los pronósticos: 
+el error absoluto medio (EAM), el cuadrado medio debido al error (CME), y el error porcentual 
+absoluto medio (EPAM). Cada una de estas medidas está diseñada para determinar qué tan bien 
+un método de elaboración de pronósticos particular es capaz de reproducir los datos disponibles 
+de la serie de tiempo. Al seleccionar un método que tiene la mejor exactitud de los datos ya 
+conocidos, se espera que aumente la probabilidad de obtener mejores pronósticos para periodos 
+futuros.
+Para una serie de tiempo que sólo tiene tendencia lineal a largo plazo, se demostró que pue-
+de utilizarse la regresión simple de la serie de tiempo para hacer proyecciones de su tendencia. 
+También se estudió cómo una extensión del suavizamiento exponencial simple, conocido como 
+suavizamiento exponencial lineal de Holt, se utiliza para pronosticar una serie de tiempo con 
+tendencia lineal a largo plazo. Para una serie de tiempo con una tendencia curvilínea o no lineal, 
+se demostró cómo la regresión múltiple permite ajustar los datos a una ecuación de tendencia 
+cuadrática o a una ecuación de tendencia exponencial.
+Para una serie de tiempo con un componente estacional, se demostró cómo utilizar las va-
+riables ﬁ cticias en un modelo de regresión múltiple a efecto de desarrollar una ecuación de re-
+gresión estimada con efectos estacionales. Luego se amplió el método de regresión para incluir 
+situaciones en las que la serie de tiempo contiene tanto el efecto estacional como el efecto de ten-
+dencia lineal, y se mostró cómo combinar el método de la variable ﬁ cticia para el manejo d
+
+[Bloque seleccionado #1087 | relevancia=33]
+Pagina 1086
+1052 
+Apéndice D  Soluciones a las autoevaluaciones y respuestas a los ejercicios. . .
+ 
+d)  El promedio cambiante de tres semanas proporciona un 
+mejor pronóstico, ya que éste tiene un MCE menor
+ 
+e) Una constante de suavizamiento  0.4
+ 
+ El pronóstico de suavizamiento exponencial que utiliza 
+α  0.4 proporciona un mejor pronóstico que el que utili-
+za α  0.2, ya que éste tiene un CME menor
+ 6. a)  El dato parece seguir un patrón horizontal
+ 
+b)  CME  110
+4  27.5
+ 
+ 
+ El pronóstico para la semana 8 es 19
+ 
+c)  CME  252.87
+6
+  42.15
+ 
+ 
+ El pronóstico para la semana 7 es 19.12
+ 
+d)  El promedio móvil de tres semanas proporciona un me-
+jor pronóstico, ya que éste tiene un CME inferior
+ 
+e)  CME  39.79
+ 
+ 
+ El pronóstico de suavizamiento exponencial que utiliza 
+α  0.4 proporciona un mejor pronóstico que el que 
+utiliza α  0.2, ya que éste tiene un CME menor
+ 8. a)
+ 
+b)  CME  11.49
+ 
+ 
+ Prefiere el promedio móvil no ponderado; éste tiene un 
+CME menor
+ 
+c)  Siempre se puede determinar un promedio ponderado 
+en movimiento al menos tan bueno como el no ponde-
+rado; en realidad el promedio no ponderado en movi-
+miento es un caso especial de los ponderados donde los 
+pesos son iguales
+10. b)  Los datos más recientes reciben el mayor peso o im-
+portancia al determinar el pronóstico; el método de 
+promedios en movimiento pondera el último valor del 
+dato n igualmente al determinar el pronóstico
+12. a)  Los datos parecen seguir un patrón horizontal
+ 
+b)  CME(3 meses)  0.12
+ 
+ 
+ CME(4meses)  0.14
+ 
+ 
+Utilice los promedios móviles a 3 meses
+ 
+c)  9.63
+ 
+a)  EAM  13.67
+5
+  2.73
+ 
+b)  CME  54.31
+5
+  10.86
+ 
+c) EPAM  105.89
+5
+  21.18
+ 
+d)  El pronóstico para la semana 7 es 
+ 18  13  16  11  17  14
+6
+  14.83
+ 4. a)  CME  363
+6  60.5
+ 
+ 
+El pronóstico para el mes 8 es 15
+ 
+b) CME  216.72
+6
+  36.12
+ 
+ 
+El pronóstico para el mes 8 es 18
+ 
+c)  El promedio de todos los valores anteriores es mejor 
+debido a que CME es menor
+ 5. a)  El dato parece seguir un patrón horizontal
+ 
+b) Promedio de tres semanas móviles.
+ 
+El pronóstico para la semana 7  (11  17  14)
+3
+  14
+ 
+c)  Una constante de suavizamiento  0.2
+ 
+ 
+ El pronóstico para la semana 7 es 0.2(14)  
+ 
+ 
+(1  0.2)15.91  15.53 
+ 
+ 
+Valor de 
+ 
+ 
+Error de
+ 
+ 
+la serie 
+ 
+Error de 
+pronóstico
+ 
+Semana de tiempo Pronóstico 
+pronóstico 
+cuadrado
+ 
+1 
+18
+ 
+2 
+13 
+ 
+ 
+ 
+3 
+16 
+ 
+ 
+ 
+4 
+11 
+15.67 
+4.67 
+21.78
+ 
+5 
+17 
+13.33 
+3.67 
+13.44
+ 
+6 
+14 
+14.67 
+0.67 
+0.44
+ 
+Total      35.67
+CME  35.67
+3
+  11.89
+ 
+ 
+Valor de 
+ 
+ 
+Error de
+ 
+ 
+la serie 
+ 
+Error de 
+pronóstico
+ 
+Semana de 

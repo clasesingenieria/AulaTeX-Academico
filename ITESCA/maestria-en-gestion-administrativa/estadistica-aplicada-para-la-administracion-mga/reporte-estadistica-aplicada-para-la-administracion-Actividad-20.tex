@@ -1,0 +1,111 @@
+% Plantilla y base conceptual generada con AulaTeX (Amazon Nova Pro) para Actividad 20 (A20).
+% Contrato AulaTeX: portada oficial ITESCA, Resumen con declaracion IA, Tabla de contenido y tres tiempos.
+\def\estadisticatitulo{Síntesis visual de los modelos de regresión lineal simple y múltiple en la gestión empresarial}
+\def\estadisticasubtitulo{Actividad 20: Infografía en equipo}
+\def\estadisticafecha{22 de noviembre de 2026}
+\def\estadisticaunidad{Regresión lineal}
+\def\portadaoficial{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/portada-oficial.png}
+\def\estadisticaextras{%
+  \usepackage{fontspec}
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+  \usepackage{longtable,booktabs,array}
+  \usetikzlibrary{babel}
+  \geometry{letterpaper,left=2.3cm,right=2.3cm,top=2.2cm,bottom=2.2cm}
+  \hypersetup{pdftitle={Síntesis visual de los modelos de regresión lineal simple y múltiple en la gestión empresarial},pdfsubject={Actividad 20 - Estadística aplicada para la administración}}
+  \setcitestyle{citesep={;}}
+  \renewcommand{\insertcoverwatermark}{}
+  \renewcommand{\insertcoverinstitutionalfooter}{}
+  \renewcommand{\templatePortrait}{%
+    \thispagestyle{empty}
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{\portadaoficial}};
+      \node[anchor=north west,text=white,text width=10.6cm,align=center,inner sep=0pt] at ([xshift=10.1cm,yshift=-19.4cm]current page.north west) {%
+        \setstretch{1}\fontsize{12}{15}\selectfont
+        {\fontsize{15}{18}\selectfont\bfseries Síntesis visual de los modelos de regresión lineal simple y múltiple en la gestión empresarial}\par\vspace{0.16cm}
+        Estadística aplicada para la administración\par
+        Actividad 20: Infografía en equipo\par\vspace{0.12cm}
+        Martín Jonathan de la Cruz Muñoz\par
+        Matrícula: 26130503\par
+        Dra. Yoana Elizeth Tauitmes Delgado\par
+        22 de noviembre de 2026
+      };
+    \end{tikzpicture}\null\clearpage
+  }
+  \renewcommand{\templatePagecfg}{}
+  \renewcommand{\templateFinalcfg}{%
+    \pagestyle{fancy}\fancyhf{}\fancyfoot[C]{\fontsize{10}{12}\selectfont\thepage}
+    \renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}
+    \setcounter{page}{2}\renewcommand{\thepage}{\arabic{page}}
+  }
+  \titleformat{\section}{\normalfont\fontsize{12}{15}\selectfont\bfseries\color{itescaRedDark}}{\thesection.}{0.5em}{}
+  \titleformat{\subsection}{\normalfont\fontsize{12}{15}\selectfont\bfseries}{\thesubsection.}{0.5em}{}
+  \titlespacing*{\section}{0pt}{8pt}{5pt}
+  \titlespacing*{\subsection}{0pt}{7pt}{4pt}
+  \renewcommand{\footnotesize}{\fontsize{12}{14.4}\selectfont}
+  \setlength{\parindent}{1.1cm}
+  \setlength{\parskip}{3pt}
+  \urlstyle{same}
+  \input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/investigacion-articulos/formato-fichas.tex}
+}
+\def\estadisticaresumen{Esta actividad académica se centra en la creación de una infografía que sintetice los fundamentos y aplicaciones de los modelos de regresión lineal simple y múltiple en el contexto empresarial. La regresión lineal es una técnica estadística que permite modelar la relación entre una variable dependiente y una o varias variables independientes. La actividad busca que los estudiantes comprendan tanto los aspectos teóricos como prácticos de la regresión lineal, incluyendo la estimación de parámetros, la interpretación económica de los coeficientes y la validación de los modelos mediante pruebas estadísticas. Esta síntesis visual no solo facilita la comprensión de conceptos clave, sino que también promueve la aplicación de estos modelos en la toma de decisiones gerenciales, permitiendo a los administradores predecir resultados y evaluar la.}
+\long\def\estadisticacontenido{%
+\fontsize{12}{14.4}\selectfont\setstretch{1.5}\justifying
+\estadisticapreliminares
+\section{Introducción}
+La regresión lineal es una técnica estadística fundamental en la administración que permite modelar y analizar la relación entre una variable dependiente y una o más variables independientes. Esta actividad se centra en la creación de una infografía que sintetice los conceptos clave de la regresión lineal simple y múltiple, incluyendo la estimación de parámetros, la interpretación económica de los coeficientes y la validación de los modelos mediante pruebas estadísticas. La comprensión de estos conceptos es esencial para los administradores, ya que les permite predecir resultados y evaluar la eficacia de diferentes estrategias, lo que es crucial para la toma de decisiones informadas en un entorno empresarial competitivo. \citep{anderson2012,lind2012,holmesBusiness2023}.
+
+\section{Fundamentos, modelado analítico y evidencia en regresión lineal}
+\subsection{Base conceptual autocontenida y formulación matemática}
+El modelo de regresión lineal simple se expresa como y = $\beta$0 + $\beta$1x + ε, donde $\beta$0 es el intercepto, $\beta$1 es la pendiente y ε es el término de error. La estimación de los parámetros se realiza mediante el método de mínimos cuadrados ordinarios (MCO), que minimiza la suma de los cuadrados de las diferencias entre los valores observados y los valores predichos. La correlación lineal de Pearson mide la fuerza y la dirección de la relación lineal entre dos variables, lo que es esencial para evaluar la relación entre variables en estudios estadísticos. El coeficiente de determinación R cuadrado (R$^2$) mide la proporción de la variabilidad en la variable dependiente que se explica por el modelo de regresión, lo que ayuda a evaluar la eficacia del modelo. El R cuadrado ajustado proporciona una medida más precisa de la bondad de ajuste del modelo, evitando la sobreajuste y permitiendo una comparación justa entre modelos con diferentes números de variables. El modelo de regresión lineal múltiple extiende el modelo de regresión lineal simple al incluir múltiples variables independientes, lo que permite analizar la relación entre una variable dependiente y varias variables independientes. \citep{wackerly2010,canavos1988,spiegel2009}.
+
+\textbf{1. concepto de regresión.} La regresión es un método estadístico que permite modelar y analizar la relación entre una variable dependiente y una o más variables independientes. Su objetivo principal es estimar la relación funcional que mejor describe los datos observados, facilitando la predicción y el análisis de tendencias. Expresión formal: $y = \beta_0 + \beta_1x + \epsilon$. En el ámbito gerencial, en administración, la regresión se utiliza para predecir variables de interés, como ventas, costos o rendimiento, en función de variables explicativas como publicidad, precio o volumen de producción. Esto permite a los gerentes tomar decisiones informadas basadas en análisis cuantitativos. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{2. correlación lineal de Pearson.} La correlación lineal de Pearson es una medida estadística que cuantifica la fuerza y la dirección de la relación lineal entre dos variables. Su valor varía entre -1 y 1, donde 1 indica una relación positiva perfecta, -1 una relación negativa perfecta y 0 ninguna relación lineal. Expresión formal: $r = \frac{n(\sum xy) - (\sum x)(\sum y)}{\sqrt{[n\sum x^2 - (\sum x)^2][n\sum y^2 - (\sum y)^2]}}$. En el ámbito gerencial, en administración, la correlación de Pearson ayuda a identificar relaciones entre variables, como la relación entre gastos en marketing y ventas, lo que puede guiar estrategias de inversión y optimización de recursos. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{3. ecuación del modelo de regresión lineal simple.} La ecuación del modelo de regresión lineal simple describe la relación lineal entre una variable dependiente y una variable independiente. La ecuación se expresa como y = $\beta$0 + $\beta$1x + ε, donde $\beta$0 es el intercepto, $\beta$1 es la pendiente y ε es el término de error. Expresión formal: $y = \beta_0 + \beta_1x + \epsilon$. En el ámbito gerencial, esta ecuación permite a los administradores predecir el valor de la variable dependiente en función de la variable independiente, lo que es útil para la planificación y la toma de decisiones estratégicas. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{4. método de mínimos cuadrados ordinarios.} El método de mínimos cuadrados ordinarios (MCO) es una técnica para estimar los parámetros de un modelo de regresión lineal. El objetivo es minimizar la suma de los cuadrados de las diferencias entre los valores observados y los valores predichos por el modelo. Expresión formal: $\min \sum_{i=1}^{n} (y_i - (\beta_0 + \beta_1x_i))^2$. En el ámbito gerencial, el MCO es ampliamente utilizado en administración para estimar modelos de regresión que ayudan a predecir variables clave, como ventas o costos, en función de variables explicativas. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{5. interpretación económica del intercepto.} El intercepto en un modelo de regresión lineal representa el valor esperado de la variable dependiente cuando todas las variables independientes son iguales a cero. En términos económicos, el intercepto puede interpretar la constante o el valor base de la variable dependiente en ausencia de influencias de las variables independientes. Expresión formal: $y = \beta_0 + \beta_1x$. En el ámbito gerencial, en administración, el intercepto puede representar el nivel base de ventas o costos cuando no hay inversión en marketing o cuando otras variables influyentes son cero, lo que ayuda a establecer un punto de referencia para las proyecciones. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{6. la pendiente marginal.} La pendiente marginal en un modelo de regresión lineal representa el cambio en la variable dependiente por cada unidad de cambio en la variable independiente. Es un indicador de la sensibilidad de la variable dependiente a cambios en la variable independiente. Expresión formal: $\frac{\Delta y}{\Delta x} = \beta_1$. En el ámbito gerencial, en administración, la pendiente marginal ayuda a entender cuánto cambia una variable dependiente, como las ventas, por cada unidad de cambio en una variable independiente, como el gasto en publicidad, lo que es crucial para la planificación de estrategias de marketing. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{7. descomposición de la suma de cuadrados.} La descomposición de la suma de cuadrados (STC = SCR + SCE) divide la variabilidad total en la variable dependiente en dos componentes: la suma de cuadrados debido a la regresión (SCR) y la suma de cuadrados debido al error (SCE). Esta descomposición ayuda a evaluar la bondad de ajuste del modelo de regresión. Expresión formal: $STC = SCR + SCE$. En el ámbito gerencial, en administración, esta descomposición permite evaluar cuánto de la variabilidad en la variable dependiente se explica por el modelo de regresión y cuánto se debe al error, lo que es esencial para validar la eficacia del modelo. \citep{anderson2012,lind2012,wackerly2010}.
+
+\textbf{8. coeficiente de determinación R cuadrado.} El coeficiente de determinación R cuadrado (R$^2$) mide la proporción de la variabilidad en la variable dependiente que se explica por el modelo de regresión. Su valor varía entre 0 y 1, donde 1 indica que el modelo explica toda la variabilidad y 0 indica que el modelo no explica nada. Expresión formal: $R^2 = \frac{SCR}{STC}$. En el ámbito gerencial, en administración, R$^2$ ayuda a evaluar la eficacia del modelo de regresión en explicar la variable dependiente, lo que es crucial para tomar decisiones informadas basadas en análisis cuantitativos. \citep{anderson2012,lind2012,wackerly2010}.
+
+
+\subsection{Arquitectura visual y síntesis comparativa para la infografía}
+Para realizar esta actividad, los estudiantes deben investigar los conceptos de regresión lineal simple y múltiple y crear una infografía que sintetice estos conceptos. La infografía debe incluir al menos tres fuentes de consulta en formato APA y debe ser entregada en equipo. Los estudiantes deben asegurarse de que la infografía incluya definiciones rigurosas de los conceptos clave, fórmulas matemáticas en LaTeX, explicaciones de la aplicación administrativa de estos conceptos y referencias a las fuentes principales del corpus bibliográfico. La infografía debe ser clara, concisa y visualmente atractiva, facilitando la comprensión de los conceptos y su aplicación en la toma de decisiones gerenciales.
+
+La arquitectura visual de la infografía se organiza en cuatro bloques analíticos que condensan las fórmulas, supuestos e interpretaciones gerenciales de la unidad \citep{anderson2012,hyndmanForecasting2021}:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{p{3.6cm}p{5.2cm}p{5.8cm}}
+\hline
+\textbf{Eje conceptual} & \textbf{Formulación y estructura técnica} & \textbf{Aplicación en decisiones administrativas}\\\hline
+concepto de regresión & La regresión es un método estadístico que permite modelar y analizar la relación entre una variable dependiente y una o más variables independientes. Su objetivo principa... & En administración, la regresión se utiliza para predecir variables de interés, como ventas, costos o rendimiento, en función de variables explicativas como publicidad, pr...\\\hline
+correlación lineal de Pearson & La correlación lineal de Pearson es una medida estadística que cuantifica la fuerza y la dirección de la relación lineal entre dos variables. Su valor varía entre -1 y 1,... & En administración, la correlación de Pearson ayuda a identificar relaciones entre variables, como la relación entre gastos en marketing y ventas, lo que puede guiar estra...\\\hline
+ecuación del modelo de regresión lineal simple & La ecuación del modelo de regresión lineal simple describe la relación lineal entre una variable dependiente y una variable independiente. La ecuación se expresa como y =... & Esta ecuación permite a los administradores predecir el valor de la variable dependiente en función de la variable independiente, lo que es útil para la planificación y l...\\\hline
+método de mínimos cuadrados ordinarios & El método de mínimos cuadrados ordinarios (MCO) es una técnica para estimar los parámetros de un modelo de regresión lineal. El objetivo es minimizar la suma de los cuadr... & El MCO es ampliamente utilizado en administración para estimar modelos de regresión que ayudan a predecir variables clave, como ventas o costos, en función de variables e...\\\hline
+interpretación económica del intercepto & El intercepto en un modelo de regresión lineal representa el valor esperado de la variable dependiente cuando todas las variables independientes son iguales a cero. En té... & En administración, el intercepto puede representar el nivel base de ventas o costos cuando no hay inversión en marketing o cuando otras variables influyentes son cero, lo...\\\hline
+la pendiente marginal & La pendiente marginal en un modelo de regresión lineal representa el cambio en la variable dependiente por cada unidad de cambio en la variable independiente. Es un indic... & En administración, la pendiente marginal ayuda a entender cuánto cambia una variable dependiente, como las ventas, por cada unidad de cambio en una variable independiente...\\\hline
+\end{tabular}
+\end{center}
+
+
+\subsection{Articulación administrativa y síntesis del desarrollo}
+La regresión lineal simple es un modelo estadístico que describe la relación lineal entre una variable dependiente y una variable independiente. Este modelo se utiliza para predecir el valor de la variable dependiente en función de la variable independiente. La ecuación del modelo se estima mediante el método de mínimos cuadrados ordinarios, que minimiza la suma de los cuadrados de las diferencias entre los valores observados y los valores predichos. \citep{holmesBusiness2023,nistHandbook}.
+La correlación lineal de Pearson mide la fuerza y la dirección de la relación lineal entre dos variables. Este coeficiente es esencial para evaluar la relación entre variables en estudios estadísticos y puede guiar decisiones en administración, como la asignación de recursos y la optimización de procesos. \citep{holmesBusiness2023,nistHandbook}.
+El método de mínimos cuadrados ordinarios (MCO) es una técnica para estimar los parámetros de un modelo de regresión lineal. El MCO minimiza la suma de los cuadrados de las diferencias entre los valores observados y los valores predichos, proporcionando estimadores insesgados y eficientes de los parámetros del modelo. \citep{holmesBusiness2023,nistHandbook}.
+El intercepto en un modelo de regresión lineal representa el valor esperado de la variable dependiente cuando todas las variables independientes son iguales a cero. En administración, el intercepto puede interpretar el nivel base de la variable dependiente en ausencia de influencias de las variables independientes, lo que ayuda a establecer un punto de referencia para las proyecciones. \citep{holmesBusiness2023,nistHandbook}.
+
+En síntesis dentro de este segundo tiempo, la articulación entre la teoría estadística de \textit{regresión lineal} y la práctica administrativa demuestra que ningún indicador cuantitativo opera en el vacío: la validez de la conclusión depende del cumplimiento de los supuestos distribucionales, de la representatividad de los datos recolectados y de la correspondencia entre el modelo matemático y el problema decisional de la organización \citep{anderson2012,nistHandbook,guarin2002}.
+
+\clearpage
+\section{Conclusiones}
+La actividad de creación de una infografía sobre regresión lineal simple y múltiple ha permitido a los estudiantes comprender y sintetizar los conceptos clave de la regresión lineal, incluyendo la estimación de parámetros, la interpretación económica de los coeficientes y la validación de los modelos mediante pruebas estadísticas. La comprensión de estos conceptos es esencial para los administradores, ya que les permite predecir resultados y evaluar la eficacia de diferentes estrategias, lo que es crucial para la toma de decisiones informadas en un entorno empresarial competitivo. Además, la actividad ha fomentado la colaboración en equipo y la habilidad de sintetizar información compleja en una presentación visual clara y concisa. \citep{anderson2012,lind2012,wackerly2010,diazRodriguez2022}.
+}
+\input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/reporte-estadistica-aplicada-para-la-administracion-plantilla-actividad.tex}

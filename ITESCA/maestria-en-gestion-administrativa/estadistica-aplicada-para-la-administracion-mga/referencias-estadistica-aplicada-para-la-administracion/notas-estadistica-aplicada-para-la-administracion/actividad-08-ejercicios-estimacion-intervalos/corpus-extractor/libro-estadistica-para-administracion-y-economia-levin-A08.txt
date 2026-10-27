@@ -1,0 +1,544 @@
+Fuente bibliográfica: Estadística para administración y economía - Levin y Rubin. 7.ª edición revisada.pdf
+Actividad: 8 (3.2 Ejercicios 5% Tarea)
+Palabras clave: intervalo de confianza, distribución t, grados de libertad, margen de error, tamaño de muestra, proporción muestral, gasto promedio
+
+[Bloque seleccionado #305 | relevancia=20]
+Pagina 304
+del área bajo la curva y, así, 0.4495 del área a ambos lados de la media en una distribución normal.
+De manera parecida, 2.58 errores estándar incluyen alrededor de 99% del área o 49.51% a cada 
+lado de la media.
+En estadística, la probabilidad que asociamos con una estimación de intervalo se conoce co-
+mo nivel de confianza. Esta probabilidad indica qué tanta confianza tenemos de que la estimación
+de intervalo incluya al parámetro de población. Una probabilidad más alta implica una mayor con-
+fianza. En la estimación, los niveles de confianza que se utilizan con más frecuencia son 90, 95 y
+99%, pero somos libres de aplicar cualquier nivel de confianza. En la figura 7-2, por ejemplo, utili-
+zamos un nivel de confianza del 95.5%.
+El intervalo de confianza es el rango de la estimación que estamos haciendo. Si informamos
+que tenemos el 90% de confianza de que la media de la población de ingresos de las personas que
+viven en una cierta comunidad está entre $8,000 y $24,000, entonces el rango $8,000-$24,000 es
+nuestro intervalo de confianza. A menudo, sin embargo, expresaremos el intervalo de confianza en
+términos de errores estándar, más que con valores numéricos. Así, expresaremos los intervalos de
+confianza de esta forma: x  1.64x, donde:
+x 
+ 1.64x  límite superior del intervalo de confianza
+x  1.64x  límite inferior del intervalo de confianza
+Entonces, los límites de confianza son los límites superior e inferior del intervalo de confianza. En
+este caso, x 
+ 1.64x se conoce como límite superior de confianza (LSC) y x  1.64x es el límite
+inferior de confianza (LIC).
+Relación entre nivel de confianza e intervalo de confianza
+Podría pensarse que deberíamos utilizar un alto nivel de confianza, como 99%, en todos los proble-
+mas sobre estimaciones. Después de todo, parece ser que un alto nivel de confianza significa un al-
+to grado de precisión en lo que a la estimación concierne. En la práctica, sin embargo, altos niveles
+de confianza producen intervalos de confianza grandes, y éstos, de hecho, dan estimaciones bastan-
+te imprecisas.
+Considere, por ejemplo, el caso de un cliente de una tienda de electrodomésticos que pregunta so-
+bre la entrega de una nueva lavadora de ropa. En la tabla 7-4 presentamos varias preguntas que
+el cliente podría hacer y las respuestas probables. Esta tabla indica la relación directa que existe en-
+tre el nivel de confianza y el intervalo de confianza de cualquier estimación. A medida que el cliente
+va estableciendo un intervalo de confianza cada vez más estrecho, el administrador de la tienda con-
+si
+
+[Bloque seleccionado #316 | relevancia=58]
+Pagina 315
+7.7
+Estimaciones de intervalos 
+con la distribución t
+En los tres ejemplos anteriores, los tamaños de la muestra eran todos mayores a 30. Muestreamos
+100 limpiadores de parabrisas, 50 familias residentes de una área de cuatro manzanas de una comu-
+nidad y 75 empleados de una empresa grande. En cada ejemplo, la distribución normal era la distri-
+bución de muestreo adecuada para determinar intervalos de confianza.
+Sin embargo, no siempre es éste el caso. ¿Cómo podríamos tratar estimaciones en las que la dis-
+tribución normal no es la distribución de muestreo adecuada, es decir, cuando se estima la desvia-
+ción estándar de la población y el tamaño de muestra es 30 o menos? Por ejemplo, en el problema con
+que abrimos el capítulo, referente al uso del carbón, tenemos datos que sólo comprenden 10 sema-
+nas. Afortunadamente, existe otra distribución que sí es apropiada para estos casos. Se conoce como
+distribución t.
+Los primeros trabajos teóricos sobre la distribución t fueron realizados por W. S. Gosset, a prin-
+cipios del siglo XX. Gosset era empleado de la Cervecería Guinness en Dublín, Irlanda; la empresa
+no permitía que los empleados publicaran sus hallazgos de investigación con su propio nombre. De
+modo que Gosset adoptó el seudónimo de Student para publicar. En consecuencia, la distribución t
+se conoce como distribución t de Student o simplemente distribución de Student.
+Debido a que se usa cuando el tamaño de la muestra es 30 o menos, los especialistas en estadís-
+tica, suelen asociar la distribución t con estadísticas de muestras pequeñas. Esto es una mala inter-
+pretación porque el tamaño de la muestra es sólo una de las condiciones que nos llevan a utilizar la
+distribución t; la segunda es que la desviación estándar de la población debe ser desconocida. El uso
+de la distribución t para hacer estimaciones se requiere siempre que el tamaño de la muestra
+sea menor o igual que 30 y la desviación estándar de la población no se conozca. Además, al
+utilizar la distribución t, suponemos que la distribución poblacional es normal o aproximada-
+mente normal.
+Características de la distribución t
+Sin derivar la distribución t de manera matemática, podemos entender en forma intuitiva la relación
+que existe entre la distribución t y la distribución normal. Ambas son simétricas. En general, la dis-
+tribución t es más plana que la distribución normal y hay una distribución t diferente para cada ta-
+maño posible de muestra. Aún así, conforme el tamaño de muestra se hace más grande, la forma de
+la distribución t deja de ser plana y se aproxima más a la dist
+
+[Bloque seleccionado #317 | relevancia=26]
+Pagina 316
+Suponga que incluye dos elementos, a y b en una muestra y sabemos que tiene una media de 18.
+En símbolos, la situación es:
+ 18
+¿Cómo podemos encontrar los valores que a y b pueden tomar en esta situación? La respuesta es que
+a y b pueden ser cualesquiera dos valores cuya suma sea 36, ya que 36  2  18.
+Suponga que sabemos que el valor de a es 10. Ahora b ya no es libre de tomar cualquier valor, si-
+no que debe ser 26, ya que:
+Si
+a  10
+entonces
+ 18
+de modo que
+10 
+ b  36
+por tanto
+b  26
+Este ejemplo nos muestra que cuando hay dos elementos en una muestra y conocemos la media
+muestral de esos dos elementos, entonces somos libres de especificar sólo uno de los elementos, por-
+que el otro estará determinado por el hecho de que los dos elementos suman el doble de la media de
+la muestra. En un lenguaje estadístico decimos que “tenemos un grado de libertad”.
+Veamos otro ejemplo. Existen siete elementos en nuestra muestra y sabemos que la media de es-
+tos elementos es 16. En símbolos tenemos la siguiente situación:
+ 16
+En este caso, los grados de libertad o el número de variables que podemos especificar libremente es
+7  1  6. Tenemos la libertad de asignar valores a seis variables, y luego ya no tenemos libertad
+de especificar el valor de la séptima variable; ésta queda determinada automáticamente.
+Con dos valores de muestra tenemos un grado de libertad (2  1  1), y con siete valores de
+muestra tenemos seis grados de libertad (7  1  6). Entonces, en cada uno de estos dos ejemplos
+tenemos n  1 grados de libertad, si n es el tamaño de la muestra. Similarmente, una muestra de 23
+elementos nos daría 22 grados de libertad.
+Utilizaremos los grados de libertad cuando elijamos una distribución t para estimar una media de
+población, y utilizaremos n  1 grados de libertad, cuando n es igual al tamaño de la muestra. Por
+ejemplo, si utilizamos una muestra de 20 para estimar una media de población, usaremos 19 grados
+de libertad para elegir la distribución t apropiada.
+Función de los 
+grados de libertad
+a 
+ b 
+ c 
+ d 
+ e 
+ f 
+ g
+
+7
+Otro ejemplo
+10 
+ b
+
+2
+a 
+ b
+
+2
+298
+Capítulo 7
+Estimación
+Distribución normal
+Distribución t
+para un tamaño
+de muestra n = 2
+Distribución t
+para un tamaño
+de muestra n = 15
+FIGURA 7-3
+Distribución 
+normal 
+y distribución t
+para una muestra
+n  15, y 
+distribución t para
+una muestra de 
+tamaño n  2
+
+[Bloque seleccionado #318 | relevancia=26]
+Pagina 317
+Uso de la tabla de distribución t
+La tabla de los valores de la distribución t (tabla 2 del apéndice) difiere en su construcción de la ta-
+bla z que usamos antes. La tabla t es más compacta y muestra áreas y valores de t sólo para al-
+gunos porcentajes (10, 5, 2 y 1%). Debido a que hay una distribución t diferente para cada número
+de grados de libertad, una tabla más completa sería bastante grande. A pesar de que nos damos cuen-
+ta de la necesidad de una tabla más completa, de hecho la tabla 2 del apéndice contiene todos los va-
+lores de la distribución t que más se utilizan.
+La segunda diferencia de la tabla t, según la presentamos, es que no se concentra en la pro-
+babilidad de que el parámetro de población que se está estimando se encuentre dentro del inter-
+valo de confianza. En lugar de ello, mide la probabilidad de que el parámetro de población que
+estamos estimando no esté dentro de nuestro intervalo de confianza (es decir, la probabilidad de
+que esté fuera). Si estamos haciendo una estimación a un nivel de confianza del 90%, buscaríamos
+en la tabla t en la columna de 0.10 (100%  90%  10%). Esta probabilidad de 0.10 del error se re-
+presenta con el símbolo , la letra griega alfa. Encontraríamos los valores t apropiados para interva-
+los de confianza del 95, 98 y 99% en las columnas  con títulos 0.05, 0.02 y 0.01, respectivamente.
+La tercera diferencia al utilizar la tabla t es que debemos especificar los grados de libertad
+que se manejan. Suponga que hacemos una estimación a un nivel de confianza del 90% con una
+muestra de tamaño 14, que tiene 13 grados de libertad. Busque en la tabla 2 del apéndice, en la co-
+lumna de 0.10, hasta que encuentre el renglón 13. Del mismo modo que el valor z, el valor t de 1.771
+indica que si señalamos una distancia de más menos 1.771ˆ x (errores estándar estimados de x) a am-
+bos lados de la media, el área bajo la curva que se encuentra entre estos dos límites será 90% del área
+total, y el área que se encuentra fuera de estos límites (la posibilidad de error) será 10% del área total
+(vea la figura 7-4).
+Recuerde que en el problema con que abrimos el capítulo, el administrador de la planta genera-
+dora de energía deseaba estimar la cantidad de carbón que requeriría este año, y tomó una muestra
+midiendo la cantidad de carbón utilizado durante 10 semanas. Los datos de la muestra son:
+n  10 semanas ←Tamaño de la muestra
+gl  9 ←Grados de libertad
+x  11,400 toneladas ←Media de la muestra
+s  700 toneladas ←Desviación estándar de la muestra
+El administrador de la planta desea una estimación de interva
+
+[Bloque seleccionado #366 | relevancia=18]
+Pagina 365
+8.7
+Pruebas de hipótesis de medias 
+cuando no se conoce la desviación 
+estándar de la población
+Cuando estimamos los intervalos de confianza en el capítulo 7, aprendimos que la diferencia de
+tamaño entre muestras grandes y pequeñas es importante cuando no se conoce la desviación están-
+dar de la población  y es necesario estimarla a partir de la desviación estándar de la muestra. Si el
+tamaño de la muestra n es 30 o menos y  se desconoce, debemos utilizar la distribución t. La dis-
+tribución t apropiada tiene n  1 grados de libertad. Estas reglas también se aplican a la prueba de
+hipótesis.
+Prueba de dos colas para medias usando la distribución t
+La especialista en recursos humanos de una importante corporación está reclutando un gran núme-
+ro de empleados para un proyecto en el extranjero. Durante el proceso de selección, la administra-
+ción le pregunta cómo van las cosas, y ella responde: “Bien. Creo que la puntuación promedio en la
+prueba de aptitudes será aproximadamente 90.” Cuando la administración revisa 20 de los resulta-
+dos de la prueba, encuentra que la puntuación media es 84, y la desviación estándar de esta puntua-
+ción es 11.
+H0  90 ←Valores hipotéticos de la media de población
+n  20 ←Tamaño de la muestra
+x  84 ←Media de la muestra
+s  11 ←Desviación estándar de la muestra
+Si la administración desea probar su hipótesis al nivel de significancia de 0.10, ¿cuál es el procedi-
+miento a seguir?
+H0:   90
+←Hipótesis nula: la puntuación media real de población es 90
+H1:  
+ 90
+←Hipótesis alternativa: la puntuación media no es 90
+  0.10 ←Nivel de significancia para probar esta hipótesis
+La figura 8-18 ilustra la gráfica de este problema. Puesto que la administración está interesada en
+saber si la puntuación media verdadera es mayor o menor que la puntuación hipotética, es apropia-
+do usar una prueba de dos colas. El nivel de significancia de 0.10 se indica en la figura 8-18 como
+las dos áreas sombreadas; cada una contiene 0.05 del área bajo la distribución t. Como el tamaño de
+muestra es 20, el número apropiado de grados de libertad es 19, es decir, 20  1. Entonces, busca-
+mos en la tabla de la distribución t del apéndice, en la columna de 0.10 y el renglón correspondien-
+te a 19 grados de libertad. Encontramos que el valor crítico de t es 1.729.
+Paso 2: Elija la
+distribución
+apropiada y
+encuentre el valor
+crítico
+Paso 1: Establezca
+sus hipótesis, tipo 
+de prueba y nivel de
+significancia
+Cuándo usar la
+distribución t
+8.7
+Pruebas de hipótesis de medias cuando no se conoce la desviación estándar de la población
+347
+FIGURA 8-18
+
+[Bloque seleccionado #493 | relevancia=32]
+Pagina 492
+La distribución F
+Como otros estadísticos que hemos estudiado, si la hipótesis nula es verdadera, entonces el estadísti-
+co F tiene una distribución de muestreo específica. Al igual que las distribuciones t y ji-cuadrada, la
+distribución F es en realidad una familia completa de distribuciones, tres de las cuales se observan
+en la figura 11-8. Note que cada una está identificada por un par de grados de libertad, a diferencia
+de las distribuciones t y ji-cuadrada, que solamente tienen un valor para el número de grados de li-
+bertad. La primera cantidad se refiere a los grados de libertad del numerador del cociente F;
+la segunda, a los grados de libertad del denominador.
+Como podemos ver en la figura 11-8, la distribución F tiene una sola moda. La forma específica
+de una distribución F depende del número de grados de libertad tanto del numerador como del
+denominador del cociente F. Pero, en general, la distribución está sesgada a la derecha y tiende a ha-
+cese más simétrica conforme aumenta el número de grados de libertad en el numerador y el deno-
+minador.
+Uso de la distribución F: grados de libertad
+Como se mencionó, cada distribución F tiene una par de grados de libertad, uno para el numerador
+del cociente F y el otro para el denominador. ¿Cómo podemos calcularlos?
+Primero, piense en el numerador, la varianza entre columnas. En la tabla 11-13 utilizamos tres va-
+lores de x  x, uno para cada muestra, para calcular 	nj(xj  x)2. Una vez conocidos dos de estos
+valores de x  x, el tercero queda automáticamente determinado y no se puede determinar libremen-
+te. Así, se pierde un grado de libertad cuando calculamos la varianza entre columnas, y el número de
+grados de libertad para el numerador del cociente F siempre es una unidad menor que el número
+de muestras. La regla, entonces, es:
+Búsqueda de los
+grados de libertad
+del numerador
+Cálculo de los grados
+de libertad
+Descripción de la
+distribución F
+474
+Capítulo 11
+Ji-cuadrada y análisis de varianza
+(2,1) grados de libertad
+(5,5) grados de libertad
+(25,25) grados de libertad
+FIGURA 11-8
+Tres distribuciones
+F (el primer valor
+entre paréntesis 
+es igual al número
+de grados de
+libertad del
+numerador del
+cociente F; el
+segundo, al
+número de grados
+de libertad del
+denominador)
+Grados de libertad del numerador
+ (número de muestras  1)
+[11-10]
+Número de grados de libertad en el
+numerador del cociente F
+Ahora, ¿qué pasa con el denominador? Observe un momento la tabla 11-14. Calculamos las
+varianzas dentro de las muestras, y utilizamos las tres muestras. Para la j-ésima muestra, usamos nj
+valore
+
+[Bloque seleccionado #494 | relevancia=22]
+Pagina 493
+4  4  5  13 grados de libertad (que también pueden calcularse como 5  5  6  3  13). Po-
+demos establecer la regla de la siguiente manera:
+11.4
+Análisis de varianza
+475
+Grados de libertad del denominador
+ 	(nj  1)  nT  k
+[11-11]
+Número de grados de libertad en
+el denominador del cociente F
+donde,
+• nj  tamaño de la j-ésima muestra
+• k  número de muestras
+• nT  	nj  tamaño de la muestra total
+Ahora vemos que el peso asignado a sj
+2 en la ecuación 11-7 es justo la fracción del número total de
+grados de libertad del denominador del cociente F.
+Uso de la tabla F
+Para llevar a cabo pruebas de hipótesis F debemos utilizar una tabla F, en la cual las columnas re-
+presentan el número de grados de libertad del numerador y los renglones el número de grados de li-
+bertad del denominador. Existen tablas separadas para cada nivel de significancia.
+Suponga que estamos probando una hipótesis al nivel de significancia de 0.01, usando la distri-
+bución F. Nuestros grados de libertad son 8 para el numerador y 11 para el denominador. En este
+caso, vamos a la tabla 6(b) del apéndice. En el cuerpo de dicha tabla, el valor apropiado para 8 y 11
+grados de libertad es 4.74. Si nuestro valor calculado de F excede este valor de la tabla, rechazamos
+la hipótesis nula. Si no es mayor, la aceptamos.
+Prueba de hipótesis
+Ahora podemos probar nuestra hipótesis de que los tres métodos de capacitación producen resul-
+tados idénticos, utilizando el material desarrollado hasta este punto. Empecemos por revisar cómo
+calcular el cociente F:
+primera estimación de la varianza de población
+basada en la varianza entre las medias muestrales
+F  
+[11-8]
+segunda estimación de la varianza de la población
+basada en las varianzas dentro de las muestras
+
+ 1.354 ←Estadístico F
+A continuación, calculamos el número de grados de libertad del numerador del cociente F, con la
+ecuación 11-10 como sigue:
+ (número de muestras  1)
+[11-10]
+ 3  1
+ 2 ←Grados de libertad en el numerador
+Y podemos calcular los grados de libertad del denominador del cociente F, utilizando la ecuación
+11-11:
+Número de grados de libertad
+en el numerador del cociente F
+20
+
+14.769
+Búsqueda de el esta-
+dístico F y los grados
+de libertad
+
+[Bloque seleccionado #519 | relevancia=18]
+Pagina 518
+Una segunda estimación de la varianza de la población (la varianza dentro de las columnas) se obtiene con
+esta ecuación. Esta ecuación utiliza un promedio ponderado de todas las varianzas muestrales. En esta
+formulación, nT  	nj, el tamaño de muestra total.
+■
+11-8
+F 
+Este cociente permite comparar las dos estimaciones de la varianza de la población, calculadas con las
+ecuaciones 11-6 y 11-7. En una prueba de hipótesis basada en una distribución F, tenemos más probabi-
+lidad de aceptar la hipótesis nula si este cociente F o estadístico F tiene un valor cercano a 1. Conforme
+el cociente F aumenta, es más probable que se rechace la hipótesis nula.
+■
+11-9
+F 
+
+Ésta es otra forma de plantear la ecuación 11-8, utilizando símbolos estadísticos para el numerador y el
+denominador del cociente F.
+■11-10
+Número de grados de libertad en el numerador del cociente F  (número de muestras  1)
+Para realizar un análisis de varianza, calculamos el número de grados de libertad en la varianza entre co-
+lumnas (el numerador del cociente F) restando 1 al número de muestras tomadas.
+■11-11
+Número de grados de libertad en el denominador del cociente F  	(nj  1)  nT  k
+Esta ecuación sirve para calcular el número de grados de libertad en el denominador del cociente F. Éste
+es igual al tamaño total de las muestras, nT, menos el número de muestras, k.
+■11-12
+2 
+Con una varianza de población 2, el estadístico 2 dado por esta ecuación tiene una distribución ji-cua-
+drada con n  1 grados de libertad. Este resultado es exacto si la población es normal, pero aun en mues-
+tras tomadas de poblaciones no normales, a menudo es una buena aproximación.
+■11-13
+2 
+Para obtener un intervalo de confianza para 2, se despeja 2 de la ecuación 11-12.
+■11-14
+2
+L 
+←Límite inferior de confianza
+2
+U 
+←Límite superior de confianza
+Estas fórmulas dan los límites de confianza inferior y superior de un intervalo de confianza para 2. (No-
+te que debido a que 2 aparece en el denominador, utilizamos 2
+U para encontrar 2
+L, y 2
+L para encontrar
+2
+U.)
+■11-15
+F 
+Este cociente tiene una distribución F con n1  1 grados de libertad en el numerador y n2  1 grados de
+libertad en el denominador. (Esto supone que las dos poblaciones están razonablemente bien descritas por
+distribuciones normales.) Se usa para probar hipótesis de dos varianzas de población.
+■11-16
+F(n, d, 
+) 
+La tabla 6 del apéndice sólo da valores de F para pruebas de hipótesis de extremo superior, pero esta ecua-
+ción permite encontrar los valores F apropiados para pruebas de cola inferior y de dos colas.
+1
+
+F
+
+[Bloque seleccionado #603 | relevancia=18]
+Pagina 602
+584
+Capítulo 13
+Regresión múltiple y modelado
+pezamos con n puntos y los usamos para estimar los dos coeficientes, a y b. Luego basamos nues-
+tras pruebas en la distribución t con n  2 grados de libertad.
+De manera similar, en la regresión múltiple también empezamos con n puntos, pero los usamos
+para estimar k  1 coeficientes: la ordenada, a, y k pendientes b1, b2, . . . , bk. Después, estos coefi-
+cientes se usan en la ecuación 13-6 para calcular se, que de nuevo es una estimación de e, la des-
+viación estándar de las variaciones de los datos (ecuación 13-7a). Luego se utiliza se (en una ecua-
+ción que está más allá del alcance de este libro) para encontrar sbi. Debido a lo anterior, basamos
+nuestras pruebas de hipótesis en la distribución t con n  k  1 ( n  (k  l)) grados de libertad.
+En nuestro ejemplo, el valor estandarizado del coeficiente de regresión es
+t 
+[13-8]
+
+ 2.432 ←Coeficiente de regresión estandarizado
+Suponga que estamos interesados en probar nuestras hipótesis al nivel de significancia de 10%.
+Como tenemos 10 observaciones en la muestra, y tres variables independientes, sabemos que hay
+n  k  1 o 10  3  1  6 grados de libertad. Buscamos en la tabla 2 del apéndice, en la colum-
+na de 10% y el renglón de 6 grados de libertad. Ahí, vemos que el valor apropiado de t es 1.943. Co-
+mo nos preocupa si b1 (la pendiente del plano de regresión de la muestra) es significativamente di-
+ferente de B1 (la pendiente hipotética del plano de regresión de la población), ésta es una prueba de
+dos colas y los valores críticos son 	1.943. El coeficiente de regresión estandarizado es 2.432, que
+se encuentra fuera de la región de aceptación de nuestra prueba de hipótesis. Por consiguiente, re-
+chazamos la hipótesis nula de que B1 todavía es igual a 0.400. En otras palabras, existe una diferen-
+cia suficientemente grande entre b1 y 0.400 para concluir que B1 ha cambiado respecto a su valor
+histórico. Por esto, sentimos que cada 100 horas adicionales de trabajo en auditorías de campo ya no
+aumentan la cantidad de descubrimientos de impuestos no pagados en $400,000 como lo hacían en
+el pasado.
+Además de la prueba de hipótesis, podemos construir un intervalo de confianza para cualquiera
+de los valores de Bi. Del mismo modo que bi es una estimación puntual de Bi, estos intervalos de con-
+fianza son estimaciones de intervalo de Bi. Para ilustrar el proceso de construcción de intervalos de
+confianza, encontremos un intervalo de confianza del 95% para B3 en el ejemplo del IRS. Los datos
+relevantes son:
+b3  0.405  de la figura 13-2
+sb3  0.0
+
+[Bloque seleccionado #840 | relevancia=18]
+Pagina 839
+Estadística con Excel
+821
+donde SCRes es la suma de los cuadrados de los residuos y SCT es la suma de los cuadrados totales.
+Error típico
+error típico  ˆ   13.1567
+donde SCR es la suma de los cuadrados de la regresión o de los residuos  
+n
+i1
+(Yi  Yˆi)2.
+Observaciones: n es el número de datos considerados para la realización del modelo de regresión.
+SCR
+
+n  k 1
+Análisis de varianza
+Tabla 5-3
+Grados de
+Suma de 
+Promedio de 
+Valor 
+libertad
+cuadrados
+cuadrados
+F
+crítico
+Regresión
+5
+38,378.58815
+7,675.717629
+44.33607012
+4.28958E-08
+Residuos
+14
+2,423.761207
+173.1258005
+Total
+19
+40,802.34935
+Resumen de los datos de la tabla 5-3
+Los grados de libertad de la regresión: son cinco debido a que estamos trabajando con cinco va-
+riables independientes y son iguales al valor “k” del denominador que aparece en la fórmula del error
+típico (n  k  1).
+Los grados de libertad de los residuos: son 14 y resultan de la diferencia n  k  1; en donde n 
+20 datos, k  5 variables independientes; por lo tanto, n  k  1  20  5 1  14.
+Los grados de libertad totales: son 19 y resultan de la suma de los grados de libertad anteriores;
+esto es: grados de libertad totales  grados de libertad de la regresión  grados de libertad de los
+residuos; por lo tanto, k  (n  k  1)  n  1  20  1  19.
+La suma de cuadrados de la regresión, la suma de cuadrados de los residuos y la suma de cua-
+drados totales.
+Suma de cuadrados de la regresión  SCR
+ 
+n
+i1
+(Yˆi  Y)2  38,378.58814
+Suma de cuadrados de los residuos  SCRes.  
+n
+i1
+(Yi  Yˆi)2  2,423.7612
+Suma de cuadrados totales
+ SCT
+ 
+n
+i1
+(Yi  Y)2  40,802.34935
+El promedio de los cuadrados de la regresión: resulta de dividir la suma de cuadrados de la regre-
+sión entre sus grados de libertad. 
+Promedio de los cuadrados de la regresión 
+
+ 7,675.7176
+El promedio de cuadrados de los residuos: resulta de dividir la suma de cuadrados de los residuos
+entre sus grados de libertad.
+Promedio de los cuadrados de los residuos 
+
+ 173.7176
+2,423.7612
+
+14
+SCRes.
+
+n  k  1
+38,378.5881
+
+5
+SCR
+
+k

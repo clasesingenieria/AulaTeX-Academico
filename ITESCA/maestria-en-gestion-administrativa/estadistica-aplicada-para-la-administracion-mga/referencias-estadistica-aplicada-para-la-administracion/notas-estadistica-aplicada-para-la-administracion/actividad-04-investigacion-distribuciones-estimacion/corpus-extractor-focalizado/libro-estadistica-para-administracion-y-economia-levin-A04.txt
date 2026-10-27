@@ -1,0 +1,514 @@
+Fuente bibliográfica: Estadística para administración y economía - Levin y Rubin. 7.ª edición revisada.pdf
+Actividad: 4 (2.1 Investigación documental y aplicada 5% Tarea)
+Palabras clave: estimador, estimación, insesgamiento, eficiencia, consistencia, intervalo de confianza, margen de error, distribución muestral
+
+[Bloque seleccionado #294 | relevancia=34]
+Pagina 293
+En este capítulo introducimos métodos que nos permiten estimar con precisión razonable la
+proporción de la población (la fracción de la población que posee una característica dada) y la me-
+dia de la población. Calcular la proporción exacta o la media exacta sería una meta imposible. Pe-
+ro, a pesar de ello, seremos capaces de hacer una estimación, establecer una afirmación respecto
+al error que tal vez acompañará a esta estimación, y poner en marcha algunos controles para evi-
+tar dicho error en la medida de lo posible. Como tomadores de decisiones, nos veremos forzados,
+en ocasiones, a confiar en nuestros presentimientos. Sin embargo, en otras situaciones, en las que
+dispongamos de información y podamos aplicar los conceptos de estadística, tendremos mejores
+resultados.
+Tipos de estimaciones
+Podemos hacer dos tipos de estimaciones concernientes a una población: una estimación puntual y
+una estimación de intervalo. Una estimación puntual es un solo número que se utiliza para esti-
+mar un parámetro de población desconocido. Si, mientras observa al primer integrante de un equipo
+de fútbol americano salir al campo de juego, se dice: “¡Caramba! Apuesto a que el peso promedio de
+los jugadores defensivos es de 125 kilogramos”, usted ha hecho una estimación puntual. El jefe
+de departamento de una universidad estaría haciendo una estimación puntual si afirmara: “Nuestros
+datos actuales indican que en esta materia tendremos 350 estudiantes el siguiente semestre.”
+A menudo, una estimación puntual es insuficiente debido a que sólo tienen dos opciones: es
+correcta o está equivocada. Si le dicen solamente que la afirmación sobre la inscripción está equivo-
+cada, no sabe qué tanto está mal y no puede tener la certeza de que la estimación es confiable. Si se
+entera de que sólo está errada por 10 estudiantes, podría aceptar a 350 estudiantes como una buena
+estimación de la inscripción futura. Pero si está equivocada en 90 estudiantes, la rechazaría como es-
+timación de la inscripción futura. Entonces, una estimación puntual es mucho más útil si viene acom-
+pañada por una estimación del error que podría estar implicado.
+Una estimación de intervalo es un conjunto de valores que se utiliza para estimar un pará-
+metro de la población. Una estimación de este tipo indica el error de dos maneras: por la extensión
+del intervalo y por la probabilidad de que el verdadero parámetro poblacional se encuentre dentro del
+intervalo. En este caso, el jefe de departamento diría algo como lo siguiente: “Estimo que la inscrip-
+ción real de este curso para el próximo semestre es
+
+[Bloque seleccionado #295 | relevancia=28]
+Pagina 294
+Criterios para seleccionar un buen estimador
+Algunos estadísticos son mejores estimadores que otros. Afortunadamente, podemos evaluar la ca-
+lidad de un estadístico como estimador mediante el uso de cuatro criterios:
+1. Insesgado. Ésta es una propiedad deseable para un buen estimador. El término insesgado se re-
+fiere al hecho de que una media de la muestra es un estimador no sesgado de una media de la
+población porque la media de la distribución muestral de las medias de las muestras toma-
+das de la misma población es igual a la media de la población misma. Podemos decir que
+un estadístico es un estimador insesgado (o no sesgado) si, en promedio, tiende a tomar valo-
+res que están arriba del parámetro de la población que se está estimando con la misma frecuen-
+cia y la misma extensión con la que tiende a asumir valores abajo del parámetro poblacional
+que se está estimando.
+2. Eficiencia. Otra propiedad deseable de un buen estimador es que sea eficiente. La eficiencia se
+refiere al tamaño del error estándar del estadístico. Si comparamos dos estadísticos de una
+muestra del mismo tamaño y tratamos de decidir cuál de ellas es un estimador más eficiente,
+escogeríamos la estadística que tuviera el menor error estándar o la menor desviación estándar de
+la distribución muestral. Suponga que escogemos una muestra de un tamaño determinado y
+debemos decidir si utilizamos la media de la muestra o la mediana de la muestra para estimar
+la media de la población. Si calculamos el error estándar de la media de la muestra y encontra-
+mos que es 1.05, y luego calculamos el error estándar de la mediana de la muestra y tenemos
+que éste es 1.6, diríamos que la media de la muestra es un estimador más eficiente de la media
+poblacional ya que su error estándar es menor. Tiene sentido pensar que un estimador con un
+error estándar menor (con menos variación) tendrá mayor oportunidad de producir una estima-
+ción más cercana al parámetro poblacional que se está considerando.
+3. Consistencia. Un estadístico es un estimador consistente de un parámetro de población si al
+aumentar el tamaño de la muestra, se tiene casi la certeza de que el valor del estadístico se
+aproxima bastante al valor del parámetro poblacional. Si un estimador es consistente, se vuel-
+ve más confiable al tener tamaños de muestra más grandes. Si usted se pregunta acerca de la
+posibilidad de aumentar el tamaño de la muestra para obtener más información sobre un pará-
+metro poblacional, averigüe primero si su estadístico es un estimador consistente o no. Si no lo
+es, desperdiciará tiempo y dinero al toma
+
+[Bloque seleccionado #296 | relevancia=21]
+Pagina 295
+Un estadístico de la muestra dado no siempre es el mejor estimador de su parámetro poblacional
+correspondiente. Considere una población con distribución simétrica, en la que los valores de la me-
+diana y de la media coinciden. En este caso, la media de la muestra sería un estimador imparcial de
+la mediana de la población. También, la media de la muestra sería un estimador consistente de la me-
+diana de la población puesto que, al aumentar el tamaño de la muestra, el valor de la media de la
+muestra tenderá a acercarse bastante a la mediana de la población. Y la media de la muestra sería un
+estimador más eficiente de la mediana de la población que la mediana de la muestra misma, ya que
+en muestras grandes, la media de la muestra tiene un error estándar menor que la de la mediana
+de la muestra. Al mismo tiempo, la mediana de la muestra de una población con distribución simé-
+trica sería un estimador imparcial y consistente de la media de la población, pero no el más eficien-
+te, porque en muestras grandes su error estándar es mayor que el de la media de la muestra.
+Búsqueda del mejor
+estimador
+7.2
+Estimaciones puntuales
+277
+Ejercicios 7.1
+■
+7-1
+¿Cuales son las dos herramientas básicas que se utilizan al hacer inferencias estadísticas?
+■
+7-2
+¿Por qué los que toman decisiones a menudo miden muestras en lugar de medir poblaciones completas?
+¿Cuál es la desventaja?
+■
+7-3
+Explique una limitación que se presenta al hacer una estimación puntual, pero que no se presenta al ha-
+cer una estimación de intervalo.
+■
+7-4
+¿Qué es un estimador? ¿En qué se diferencia un estimador de una estimación?
+■
+7-5
+Dé una lista de los criterios de un buen estimador y descríbalos brevemente.
+■
+7-6
+¿Qué papel juega la consistencia en la determinación del tamaño de la muestra?
+7.2
+Estimaciones puntuales
+La media de la muestra x es el mejor estimador de la media de la población . Es insesgada, consis-
+tente, el estimador más eficiente y, siempre y cuando la muestra sea suficientemente grande, su dis-
+tribución muestral puede ser aproximada por medio de la distribución normal.
+Si conocemos la distribución muestral de x, podemos obtener conclusiones respecto a cualquier
+estimación que podamos hacer a partir de la información muestral. Considere el caso de una com-
+pañía de suministros clínicos que produce jeringas desechables. Cada jeringa está cubierta por una
+envoltura estéril que a su vez se empaca en grandes cajas de cartón corrugado. Debido al proceso de
+empaque, las cajas de cartón contienen distintas cantidades de jeringas. Como las jeringas se venden
+por pieza, la comp
+
+[Bloque seleccionado #305 | relevancia=33]
+Pagina 304
+del área bajo la curva y, así, 0.4495 del área a ambos lados de la media en una distribución normal.
+De manera parecida, 2.58 errores estándar incluyen alrededor de 99% del área o 49.51% a cada 
+lado de la media.
+En estadística, la probabilidad que asociamos con una estimación de intervalo se conoce co-
+mo nivel de confianza. Esta probabilidad indica qué tanta confianza tenemos de que la estimación
+de intervalo incluya al parámetro de población. Una probabilidad más alta implica una mayor con-
+fianza. En la estimación, los niveles de confianza que se utilizan con más frecuencia son 90, 95 y
+99%, pero somos libres de aplicar cualquier nivel de confianza. En la figura 7-2, por ejemplo, utili-
+zamos un nivel de confianza del 95.5%.
+El intervalo de confianza es el rango de la estimación que estamos haciendo. Si informamos
+que tenemos el 90% de confianza de que la media de la población de ingresos de las personas que
+viven en una cierta comunidad está entre $8,000 y $24,000, entonces el rango $8,000-$24,000 es
+nuestro intervalo de confianza. A menudo, sin embargo, expresaremos el intervalo de confianza en
+términos de errores estándar, más que con valores numéricos. Así, expresaremos los intervalos de
+confianza de esta forma: x  1.64x, donde:
+x 
+ 1.64x  límite superior del intervalo de confianza
+x  1.64x  límite inferior del intervalo de confianza
+Entonces, los límites de confianza son los límites superior e inferior del intervalo de confianza. En
+este caso, x 
+ 1.64x se conoce como límite superior de confianza (LSC) y x  1.64x es el límite
+inferior de confianza (LIC).
+Relación entre nivel de confianza e intervalo de confianza
+Podría pensarse que deberíamos utilizar un alto nivel de confianza, como 99%, en todos los proble-
+mas sobre estimaciones. Después de todo, parece ser que un alto nivel de confianza significa un al-
+to grado de precisión en lo que a la estimación concierne. En la práctica, sin embargo, altos niveles
+de confianza producen intervalos de confianza grandes, y éstos, de hecho, dan estimaciones bastan-
+te imprecisas.
+Considere, por ejemplo, el caso de un cliente de una tienda de electrodomésticos que pregunta so-
+bre la entrega de una nueva lavadora de ropa. En la tabla 7-4 presentamos varias preguntas que
+el cliente podría hacer y las respuestas probables. Esta tabla indica la relación directa que existe en-
+tre el nivel de confianza y el intervalo de confianza de cualquier estimación. A medida que el cliente
+va estableciendo un intervalo de confianza cada vez más estrecho, el administrador de la tienda con-
+si
+
+[Bloque seleccionado #311 | relevancia=14]
+Pagina 310
+Aplicaciones
+■
+7-29
+La enfermera de la secundaria de Westview está interesada en conocer la estatura promedio de los estu-
+diantes del último año, pero no tiene suficiente tiempo para examinar los registros de los 430 estudiantes.
+Por ello, selecciona 48 al azar y encuentra que la media de la muestra es 64.5 pulgadas y la desviación es-
+tándar es 2.3 pulgadas.
+a)
+Encuentre la estimación del error estándar de la media.
+b) Construya un intervalo de confianza del 90% para la media.
+■
+7-30
+Jon Jackobsen, un pasante de posgrado muy dedicado, acaba de terminar una primera versión de su tesis
+de 700 páginas. Jon mecanografió el trabajo por sí mismo y está interesado en conocer el número prome-
+dio de errores tipográficos por página, pero no quiere leer todo el documento. Como sabe algo acerca de
+estadística para la administración, Jon leyó 40 páginas seleccionadas de manera aleatoria y encontró que el
+promedio de errores tipográficos por página fue 4.3 y la desviación estándar de la muestra fue 1.2 errores
+por página.
+a)
+Calcule el error estándar estimado de la media.
+b) Calcule un intervalo de confianza del 90% para el número promedio verdadero de errores por página
+en su trabajo.
+■
+7-31
+La Autoridad para la Televisión por Cable de Nebraska (ATCN) realizó una prueba para determinar el
+tiempo que las personas pasan frente al televisor por semana. La ATCN encuestó a 84 suscriptores y en-
+contró que el número promedio de horas que ven televisión por semana es 11.6 horas con una desviación
+estándar de 1.8 horas.
+a)
+¿Cuál es la desviación estándar de la población estimada para esta población? (Existen cerca de
+95,000 personas con televisión por cable en Nebraska.)
+b) Calcule el error estándar estimado de la media.
+c)
+Construya un intervalo de confianza del 98% para la media de la población.
+■
+7-32
+Joel Friedlander es un corredor de la Bolsa de Valores de Nueva York y tiene curiosidad acerca del tiem-
+po que transcurre entre la colocación de una orden de venta y su ejecución. Joel hizo un muestreo de 45
+órdenes y encontró que el tiempo medio para la ejecución fue 24.3 minutos, con una desviación estándar
+de 3.2 minutos. Ayude a Joel con la construcción de un intervalo de confianza del 95% para el tiempo me-
+dio para la ejecución de una orden.
+■
+7-33
+Oscar T. Grady es el gerente de producción de la compañía Citrus Groves, localizada justo al norte de Oca-
+la, Florida. Oscar está preocupado debido a que las heladas tardías de los últimos tres años han estado
+dañando los 2,500 naranjos que posee la Citrus Groves. Con el fin de determinar el grado del daño oc
+
+[Bloque seleccionado #315 | relevancia=13]
+Pagina 314
+■
+7-37
+La encargada de publicidad para el nuevo postre garapiñado de lima-limón de los productos Clear´n Light
+está intranquila por el mal desempeño del postre en el mercado y por su futuro en la empresa. Preocupa-
+da porque su estrategia de comercialización no ha producido una identificación apropiada de las caracte-
+rísticas del producto, tomó una muestra de 1,500 consumidores y encontró que 956 de éstos pensaban que
+el producto era una cera para pulir pisos.
+a)
+Estime el error estándar de la proporción de personas que tuvo esta grave interpretación errónea del
+postre.
+b) Construya un intervalo de confianza del 96% para la proporción verdadera de la población.
+■
+7-38
+Michael Gordon, un jugador profesional de básquetbol, lanzó 200 tiros de castigo y encestó 174 de ellos.
+a)
+Estime el error estándar de la proporción de todos los tiros que Michael falla.
+b) Construya un intervalo de confianza del 98% para la proporción de todos los tiros de castigo que Mi-
+chael falla.
+■
+7-39
+Hace poco SnackMore encuestó a 95 consumidores y encontró que el 80% compraba galletas sin grasa
+de SnackMore cada mes.
+a)
+Estime el error estándar de la proporción.
+b) Construya un intervalo del 95% de confianza para la proporción verdadera de personas que compran
+las galletas cada mes.
+■
+7-40
+El dueño de la empresa Home Loan Company investigó aleatoriamente 150 de las 3,000 cuentas de la
+compañía y determinó que 60% estaba en una posición excelente.
+a)
+Encuentre un intervalo de confianza del 95% para la proporción de cuentas que están en posición ex-
+celente.
+b) Con base en el inciso anterior, calcule el intervalo para el número absoluto de cuentas que cumplen
+con el requisito de excelencia, manteniendo el mismo nivel de confianza del 95%?
+■
+7-41
+Durante un año y medio las ventas han estado disminuyendo de manera consistente en las 1,500 sucursa-
+les de una cadena de comida rápida. Una empresa de asesores ha determinado que 31% de una muestra
+de 95 sucursales tiene claros signos de una mala administración. Construya un intervalo de confianza del
+98% para esta proporción.
+■
+7-42
+El consejo estudiantil de una universidad tomó una muestra de 45 libros de texto de la librería universita-
+ria y determinó que de ellos, 60% se vendía en más del 50% arriba de su costo al mayoreo. Dé un inter-
+valo de confianza del 96% para la proporción de libros cuyo precio sea más del 50% mayor que el costo
+al mayoreo.
+■
+7-43
+Barry Turnbull, el famoso analista de Wall Street, está interesado en conocer la proporción de accionistas
+individuales que planean vender al menos un cuarto del total de
+
+[Bloque seleccionado #331 | relevancia=20]
+Pagina 330
+312
+Capítulo 7
+Estimación
+60
+50
+40
+30
+20
+10
+ 0
+ 1
+ 3
+ 5
+ 7
+ 9
+11
+Distribución de Poisson
+(número de donaciones mensuales)
+Número de donaciones  
+Meses (empezando en julio)
+1982-1983
+1983-1984
+Límite superior
+Límite inferior
++
++
++
++
++
++
++
++
++
++
++
++
++
+FIGURA MR7-2
+Cuentas de las 
+donaciones 
+mensuales hechas
+por padres durante
+1983-1984 
+Distribución t de Student Familia de distribuciones de pro-
+babilidad que se distinguen por sus grados de libertad indivi-
+duales; es parecida, en forma, a la distribución normal y se
+utiliza cuando se desconoce la desviación estándar de la po-
+blación y el tamaño de la muestra es relativamente pequeño
+(n  30).
+Error estándar o desviación estándar Es un estadístico
+muestral usado como estimador de un parámetro de la
+población.
+Estimación Valor específico observado de un estimador.
+Estimación de intervalo Un rango de valores utilizado pa-
+ra estimar un parámetro de población desconocido.
+Estimación puntual Un solo número que se utiliza para es-
+timar un parámetro de población desconocido.
+Estimador Estadístico de muestra utilizada para estimar un
+parámetro de población.
+Estimador consistente Estimador que produce valores que
+se acercan más al parámetro de la población conforme au-
+menta el tamaño de la muestra.
+Estimador eficiente Estimador con un error estándar me-
+nor que algún otro estimador del parámetro de la población,
+esto es, cuanto más pequeño sea el error estándar de un esti-
+mador, más eficiente será.
+Estimador no sesgado Estimador de un parámetro de po-
+blación que, en promedio, toma valores mayores que el pará-
+metro de la población con la misma frecuencia, y al mismo
+grado, con que tiende a tomar valores menores que el pará-
+metro de la población.
+Estimador suficiente Estimador que utiliza toda la informa-
+ción disponible en los datos correspondientes a un parámetro.
+Grados de libertad Número de valores de una muestra que
+podemos especificar libremente, una vez que se sabe algo so-
+bre dicha muestra.
+Intervalo de confianza Un rango de valores que tiene de-
+signada una probabilidad de que incluya el valor verdadero
+del parámetro de la población.
+Límites de confianza Límites inferior y superior de un in-
+tervalo de confianza. 
+Nivel de confianza Probabilidad que los estadísticos aso-
+cian a una estimación de intervalo de un parámetro y que in-
+dica qué tan seguros están de que la estimación de intervalo
+incluirá al parámetro de la población.
+Repaso del capítulo
+●Términos introducidos en el capítulo 7
+
+[Bloque seleccionado #334 | relevancia=15]
+Pagina 333
+The Wall Street Journal proporciona información financiera diariamente respecto a más de 3,000 fondos de inver-
+sión mutua. La tabla MR7-1 da información de una muestra aleatoria de 35 de ellos y su desempeño al cierre del
+viernes 14 de mayo de 1993. Emplee esta información contestar los ejercicios del 7-73 al 7-76.
+7-73
+a)
+Estime el cambio promedio en el valor del activo neto (VAN) del 14 de mayo de 1993 para todos los
+fondos listados en The Wall Street Journal.
+b) Estime la desviación estándar del cambio en el valor del activo neto para todos los fondos del inciso a).
+c)
+Encuentre un intervalo de confianza del 95% para el cambio promedio en el valor del activo neto.
+¿Qué suposiciones necesita hacer acerca de la distribución del cambio individual en el valor del acti-
+vo neto, con el fin de derivar el intervalo de confianza?
+7-74
+a)
+Estime la desviación estándar del cambio porcentual actualizado en valor (%ACT), de todos los fon-
+dos listados.
+b) Suponiendo que la desviación estándar que estimó en el inciso a) es cercana a la desviación estándar
+real de la población, ¿qué tan grande deberá ser una muestra para estimar el cambio porcentual pro-
+medio actualizado en valor, dentro de 0.5% con 99% de confianza?
+7-75
+Los fondos para los cuales el precio de oferta (PO) es el mismo que el valor del activo neto (VAN) se co-
+nocen como fondos “no cargados”. Utilice la muestra de 35 fondos para estimar qué fracción de todos los
+fondos listados en The Wall Street Journal son fondos no cargados. Dé un intervalo de confianza del 98%
+para esta fracción.
+7-76
+Usted cree que los fondos no cargados no deberían agruparse con los demás. Suponiendo que los cambios
+porcentuales actualizados individuales en valor para los fondos no cargados tienen una distribución apro-
+ximadamente normal, encuentre un intervalo de confianza del 95% para su cambio porcentual promedio
+actualizado en valor. ¿Es necesario suponer la distribución normal? Explique su respuesta.
+■
+7-77
+Al evaluar la efectividad de un programa federal de rehabilitación, en una investigación de 52 de los 900
+internos de una prisión se encontró que 35% de éstos era reincidente.
+a)
+Estime el error estándar de la proporción de reincidentes.
+b) Construya un intervalo de confianza del 90% para la proporción de reincidentes entre los internos de
+esta prisión.
+■
+7-78
+Durante la cosecha de manzanas, se revisaron por separado 150 fanegas de la fruta en busca de manzanas
+en mal estado (debido, como usted sabe, a que una manzana mala puede echar a perder a todo el canasto)
+y se encontró que había un promedio de 3.2
+
+[Bloque seleccionado #545 | relevancia=16]
+Pagina 544
+El error estándar de la estimación
+El siguiente proceso que debemos aprender en nuestro estudio del análisis de regresión es cómo me-
+dir la confiabilidad de la ecuación de estimación desarrollada. Aludimos a este tema cuando intro-
+dujimos los diagramas de dispersión; en ese punto, nos dimos cuenta intuitivamente de que una lí-
+nea será más exacta como estimador cuando los datos puntuales caen cerca de la línea [como en la
+gráfica (a) de la figura 12-11] que cuando los puntos están alejados de la línea [como en la gráfica
+(b) de la figura 12-1l].
+Para medir la confiabilidad de la ecuación de estimación, los especialistas en estadística han de-
+sarrollado el error estándar de la estimación. Este error estándar se simboliza por se y es similar a
+la desviación estándar (que examinamos por primera vez en el capítulo 3), en cuanto a que ambas
+son medidas de dispersión. Recordará que la desviación estándar se utiliza para medir la dispersión
+de un conjunto de observaciones respecto a la media. El error estándar de la estimación, por otra
+parte, mide la variabilidad, o dispersión, de los valores observados alrededor de la recta de re-
+gresión. Aun así, verá la similitud entre el error estándar de la estimación y la desviación estándar
+si compara la ecuación 12-6, que define el error estándar de la estimación, con la ecuación 3-18, que
+define la desviación estándar:
+Definición y uso del
+error estándar de la
+estimación
+Medición de la con-
+fiabilidad de la ecua-
+ción de estimación
+526
+Capítulo 12
+Regresión simple y correlación
+Y
+X
+(a) Esta línea de regresión es un  
+     estimador más exacto de
+     la relación entre X y Y
+Y
+X
+(b) Esta línea de regresión es un  
+     estimador menos exacto de
+     la relación entre X y Y
+FIGURA 12-11
+Grados contrastan-
+tes de dispersión
+de datos puntuales
+y el efecto resul-
+tante en la preci-
+sión de la recta de
+regresión
+donde,
+• Y  valores de la variable dependiente
+• Yˆ  valores estimados con la ecuación de estimación que corresponden a cada valor de Y
+• n  número de puntos utilizados para ajustar la línea de regresión
+Observe que, en la ecuación 12-6, la suma de las desviaciones al cuadrado se divide entre n  2 y
+no entre n. Esto sucede porque perdimos dos grados de libertad al estimar la recta de regresión. Po-
+demos razonar que, dado que los valores de a y b se obtuvieron de una muestra de datos puntuales,
+perdemos dos grados de libertad cuando usamos estos puntos para estimar la recta de regresión.
+Ahora, nos referiremos de nuevo al ejemplo anterior de la directora del Departamento de Salubri-
+dad que relaci
+
+[Bloque seleccionado #548 | relevancia=15]
+Pagina 547
+Intervalos de confianza para la estimación (o el valor esperado)
+Podemos concebir al error estándar de la estimación como la herramienta estadística que podemos
+usar para hacer afirmaciones de probabilidad acerca del intervalo alrededor del valor estimado de Yˆ,
+dentro del cual cae el valor real de Y. En la figura 12-12 podemos ver, por ejemplo, que hay una se-
+guridad del 95.5% de que el valor real de Y caerá dentro de dos errores estándar del valor estimado
+de Yˆ. Llamamos a estos intervalos alrededor de la Yˆ estimada, intervalos de confianza para la esti-
+mación. Tienen la misma función que los intervalos de confianza en el capítulo 7.
+Ahora, aplicando el concepto de intervalos de confianza para la estimación al problema de la di-
+rectora del Departamento de Salubridad, sabemos que la ecuación de estimación usada para prede-
+cir el gasto anual de reparación es:
+Yˆ  3.75  0.75X
+Y sabemos que si el departamento tiene un camión de cuatro años de antigüedad, predecimos que
+tendrá un gasto de reparaciones anuales de $675:
+Yˆ  3.75  0.75(4)
+ 3.75  3.00
+ 6.75 ←Gasto anual de reparaciones esperado de $675
+Por último, recordará que calculamos el error estándar de la estimación como se  0.866 ($86.60).
+Ahora podemos combinar estas dos piezas de información y decir que estamos seguros aproximada-
+mente 68% del tiempo, de que el gasto real de reparaciones estará dentro de 1 error estándar de la
+estimación de Yˆ. Podemos calcular los límites superior e inferior de este intervalo de confianza para
+el gasto de reparación de la siguiente manera:
+Yˆ  1se  $675  (1)($86.60)
+ $761.40 ←Límite superior del intervalo de predicción
+y
+Yˆ  1se  $675  (1)($86.60)
+ $588.40 ←Límite inferior del intervalo de predicción
+Si, en lugar de esto, decimos que estamos seguros aproximadamente 95.5% del tiempo de que el 
+gasto real de reparaciones estará dentro de 2 errores estándar de la estimación de Yˆ, podríamos
+calcular los límites de este nuevo intervalo de confianza de la siguiente manera:
+Intervalo de confian-
+za para la estimación
+de dos errores 
+estándar
+Intervalo de confian-
+za para la estimación
+de un error estándar
+Aplicación de los in-
+tervalos de confianza
+para la estimación 
+(o valor esperado)
+Utilización de se para
+generar intervalos 
+de confianza
+12.2
+Estimación mediante la recta de regresión
+529
+Y
+X
+Variable independiente
+Variable dependiente
+se
+Y = a + bX + 3se
+Y = a + bX + 2se
+Y = a + bX + 1se
+Y = a + bX (línea de regresión)
+Y = a + bX – 1se
+Y = a + bX – 2se
+Y = a + bX – 3se
+^
+± 2se (95.5% de todos los puntos debe caer en esta región)
+± 3s

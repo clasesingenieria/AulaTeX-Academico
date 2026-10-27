@@ -1,0 +1,44 @@
+% Contenido condensado de cinco páginas para la entrega en Moodle (tarea 1754, Actividad 4).
+\fontsize{12}{14.4}\selectfont\setstretch{1.5}\justifying
+\begingroup
+\noindent\textbf{Resumen}\par
+Se distinguen parámetro, estimador y estimación, se explican insesgamiento, eficiencia y consistencia, y se comparan estimaciones puntuales e intervalares en la administración. Tres fichas analizan las propiedades en compras, los usos en áreas funcionales y el intervalo de ventas semanales entre \$18,000 y \$22,000 al 95\% de confianza.\footnote{\textbf{Declaración de uso de IA.} \estadisticadeclaracionia}
+\par\smallskip
+\renewcommand{\contentsname}{Tabla de contenido}
+\setcounter{tocdepth}{1}
+\setlength{\cftbeforetoctitleskip}{2pt}\setlength{\cftaftertoctitleskip}{2pt}
+\setlength{\cftbeforesecskip}{1pt}
+\renewcommand{\cfttoctitlefont}{\normalfont\fontsize{12}{14.4}\selectfont\bfseries\color{itescaRedDark}}
+\tableofcontents
+\endgroup
+\smallskip
+\section{Introducción}
+Planear compras, contratar personal o asignar un presupuesto exige decidir sin observar a toda la población. La estimación estadística aproxima parámetros mediante muestras y cuantifica su incertidumbre. Su utilidad administrativa depende tanto de las propiedades del estimador como de la representatividad de los datos: una cifra precisa puede orientar mal una decisión si el marco excluye sistemáticamente a parte del mercado \citep{holmesBusiness2023,bradley2021}.
+
+\section{De los estimadores a las decisiones administrativas bajo incertidumbre}
+Un parámetro $\theta$ describe una población, como el gasto medio de los clientes de un periodo. Un \textit{estimador} $\hat{\theta}$ es una regla o función de la muestra aleatoria que varía entre muestras; la \textit{estimación} es el valor numérico obtenido al evaluarla en datos observados. El \textit{insesgamiento} exige que la esperanza del estimador coincida con el parámetro, $E(\hat{\theta})=\theta$; el \textit{error cuadrático medio} suma varianza y sesgo al cuadrado, $\operatorname{ECM}(\hat{\theta})=\operatorname{Var}(\hat{\theta})+[B(\hat{\theta})]^2$ \citep[sec.~8.2]{wackerly2010}. La \textit{eficiencia relativa} compara varianzas de estimadores insesgados, y la \textit{consistencia} exige que la probabilidad de exceder cualquier tolerancia fija tienda a cero al crecer $n$ \citep[secs.~9.2--9.3]{wackerly2010}.
+
+La \textit{estimación puntual} resume el parámetro en una sola cifra pero no informa su precisión; la \textit{estimación por intervalos} añade límites calculados con el error estándar y un nivel de confianza $1-\alpha$. El \textit{nivel de confianza} describe la proporción de intervalos que contendrían el parámetro en repeticiones del muestreo bajo sus supuestos; el \textit{margen de error} mide la semiamplitud de un intervalo simétrico, crece con mayor confianza o dispersión y disminuye al aumentar $n$ \citep{holmesBusiness2023,nistHandbook}.
+
+\begin{fichainvestigacion}{Ficha 1. Propiedades del estimador en un caso de compras}
+\datoscasocorto{\textbf{Caso y fuentes:} Gasto medio por pedido en compras simuladas (\$180, \$200, \$220 y \$240) y ampliación de 100 a 400 registros \citep[secs.~8.2, 9.2 y 9.3]{wackerly2010}.}
+\textbf{Estimador y propiedades.} Promediar es el estimador $\bar{X}$ y \$210 es la estimación puntual, que aproxima pero no iguala necesariamente la media poblacional $\mu$. Con compras independientes de igual distribución, media $\mu$ y varianza finita $\sigma^2$, tanto $\bar{X}_4$ como la primera compra $X_1$ son insesgados. La varianza de $\bar{X}_4$ es $\sigma^2/4$ frente a $\sigma^2$ en $X_1$: el promedio es cuatro veces más eficiente ($\operatorname{ER}=4$) porque aprovecha las cuatro observaciones. Por la desigualdad de Chebyshev, $\bar{X}_n$ es consistente; pasar de 100 a 400 compras reduce el error estándar $\sigma/\sqrt{n}$ a la mitad, mientras que usar solo $X_1$ conserva varianza $\sigma^2$ y no converge al parámetro.
+\end{fichainvestigacion}
+
+\begin{fichainvestigacion}{Ficha 2. Estimación puntual e intervalar en áreas funcionales}
+\datoscasocorto{\textbf{Ámbito y fuentes:} Finanzas, recursos humanos y mercadotecnia \citep{holmesBusiness2023,bradley2021}.}
+\textbf{Aplicación comparada.} En \textit{finanzas}, el gasto medio estimado de \$210 sirve como escenario central de presupuesto maestro, mientras que el intervalo dimensiona reservas de liquidez y sensibilidad ante variaciones de ingresos. En \textit{recursos humanos}, la proporción puntual $\hat{p}$ de empleados que requieren capacitación orienta la programación inicial y su intervalo define el rango de instructores y aulas, sin atribuir esa proporción a cada trabajador ni omitir diferencias de respuesta entre turnos. En \textit{mercadotecnia}, la tasa puntual de conversión resume una campaña piloto y su intervalo evita escalar gastos publicitarios cuando la mejora no supera la variación muestral o excluye canales de venta.
+\end{fichainvestigacion}
+
+\begin{fichainvestigacion}{Ficha 3. Caso aplicado: intervalo de ventas semanales [\$18,000, \$22,000]}
+\datoscasocorto{\textbf{Planteamiento y fuente:} Media semanal de ventas estimada entre \$18,000 y \$22,000 con 95\% de confianza \citep[sec.~1.3.5.2]{nistHandbook}.}
+\textbf{Interpretación gerencial.} El intervalo simétrico tiene centro puntual de \$20,000 y margen de error de \$2,000 ($\pm 10\%$), sin inventar muestra ni desviación no declaradas. Describe valores plausibles para el \textit{promedio poblacional} de ventas semanales $\mu$ bajo el diseño y periodo estudiados; no garantiza que el 95\% de las semanas individuales venda dentro de ese rango ni asigna probabilidad frecuentista a un parámetro fijo ya calculado. Predecir la siguiente semana requeriría un intervalo de predicción y evaluar estacionalidad. Si el punto de equilibrio supera \$18,000, cae dentro del intervalo y la gerencia debe revisar costos, reservas o tamaño muestral antes de comprometer inventario.
+\end{fichainvestigacion}
+
+La estimación estadística es fundamental para la gestión administrativa, las finanzas, los recursos humanos y la mercadotecnia porque convierte registros parciales en decisiones con riesgo acotado: permite elegir reglas insesgadas, eficientes y consistentes, separar un escenario central de su margen de error y evitar que una muestra grande pero sesgada se confunda con evidencia concluyente \citep{wackerly2010,nistHandbook,bradley2021}.
+
+\section{Conclusiones}
+La estimación aporta soporte administrativo cuando articula población objetivo, propiedades del estimador y lectura rigurosa de la incertidumbre. Insesgamiento, eficiencia y consistencia cumplen funciones distintas y ninguna propiedad algebraica corrige por sí sola un marco incompleto. Sostengo que toda gerencia debe exigir junto con cada cifra puntual su población, supuestos y margen de error, porque decidir solo con un promedio oculta los riesgos trasladados a presupuestos, personal o campañas comerciales. La consecuencia profesional es formular planes con umbrales de revisión y reservas operativas acordes con la amplitud del intervalo estimado.
+
+\input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/investigacion-estimacion/referencias.tex}
+
