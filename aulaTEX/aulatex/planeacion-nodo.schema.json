@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Planeacion por nodo AulaTeX 1.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "plan_id", "revision", "node", "profile", "editorial_rules", "provenance", "review", "bindings"],
+  "properties": {
+    "schema_version": {"const": "1.0.0-node"},
+    "plan_id": {"type": "string", "pattern": "^nodo-[a-f0-9]{20}$"},
+    "revision": {"type": "integer", "minimum": 1},
+    "node": {
+      "type": "object", "additionalProperties": false,
+      "required": ["key", "level", "parent_key", "relative_path", "label"],
+      "properties": {
+        "key": {"type": "string", "minLength": 1},
+        "level": {"enum": ["interinstitucional", "institucion", "carrera", "materia", "actividad"]},
+        "parent_key": {"type": "string"},
+        "relative_path": {"type": "string", "minLength": 1},
+        "label": {"type": "string", "minLength": 1}
+      }
+    },
+    "profile": {"type": "object"},
+    "editorial_rules": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "citation_style": {"type": ["string", "null"], "minLength": 1},
+        "language": {"type": ["string", "null"], "minLength": 1},
+        "accessibility": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "source_quality": {"type": "array", "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "provenance": {"type": "array", "items": {"$ref": "planeacion-canonica.schema.json#/definitions/fieldStatus"}},
+    "review": {
+      "type": "object", "additionalProperties": false,
+      "required": ["state", "semantic_validation", "critical_gaps"],
+      "properties": {
+        "state": {"enum": ["draft", "needs_review", "ready", "superseded"]},
+        "semantic_validation": {"enum": ["not_run", "failed", "passed"]},
+        "critical_gaps": {"type": "array", "items": {"type": "string", "minLength": 1}}
+      },
+      "allOf": [{"if": {"properties": {"state": {"const": "ready"}}}, "then": {"properties": {"semantic_validation": {"const": "passed"}, "critical_gaps": {"maxItems": 0}}}}]
+    },
+    "bindings": {
+      "type": "object", "additionalProperties": false,
+      "required": ["parent_plan", "pedagogical_plan"],
+      "properties": {
+        "parent_plan": {"anyOf": [{"type": "null"}, {"$ref": "#/definitions/binding"}]},
+        "pedagogical_plan": {"anyOf": [{"type": "null"}, {"$ref": "#/definitions/binding"}]}
+      }
+    }
+  },
+  "definitions": {
+    "binding": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "sha256", "activity_id"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "activity_id": {"type": ["string", "null"], "minLength": 1}
+      }
+    },
+    "items": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "project": {"type": "object", "additionalProperties": false, "required": ["purpose", "editorial_principles", "quality_gates", "roadmap", "institution_keys"], "properties": {"purpose": {"type": ["string", "null"]}, "editorial_principles": {"$ref": "#/definitions/items"}, "quality_gates": {"$ref": "#/definitions/items"}, "roadmap": {"$ref": "#/definitions/items"}, "institution_keys": {"$ref": "#/definitions/items"}}},
+    "institution": {"type": "object", "additionalProperties": false, "required": ["mission", "academic_policies", "platforms", "calendar_framework", "program_keys", "subject_keys"], "properties": {"mission": {"type": ["string", "null"]}, "academic_policies": {"$ref": "#/definitions/items"}, "platforms": {"$ref": "#/definitions/items"}, "calendar_framework": {"type": ["string", "null"]}, "program_keys": {"$ref": "#/definitions/items"}, "subject_keys": {"$ref": "#/definitions/items"}}},
+    "career": {"type": "object", "additionalProperties": false, "required": ["graduate_profile", "competencies", "curriculum_map", "progression", "subject_keys"], "properties": {"graduate_profile": {"type": ["string", "null"]}, "competencies": {"$ref": "#/definitions/items"}, "curriculum_map": {"$ref": "#/definitions/items"}, "progression": {"$ref": "#/definitions/items"}, "subject_keys": {"$ref": "#/definitions/items"}}},
+    "subject": {"type": "object", "additionalProperties": false, "required": ["purpose", "outcomes", "units", "assessment_strategy", "offerings", "activity_keys"], "properties": {"purpose": {"type": ["string", "null"]}, "outcomes": {"$ref": "#/definitions/items"}, "units": {"$ref": "#/definitions/items"}, "assessment_strategy": {"type": ["string", "null"]}, "offerings": {"$ref": "#/definitions/items"}, "activity_keys": {"$ref": "#/definitions/items"}}},
+    "activity": {"type": "object", "additionalProperties": false, "required": ["activity_id", "offering_id", "purpose", "product_ids", "completion_checks"], "properties": {"activity_id": {"type": ["string", "null"], "minLength": 1}, "offering_id": {"type": ["string", "null"], "minLength": 1}, "purpose": {"type": ["string", "null"]}, "product_ids": {"$ref": "#/definitions/items"}, "completion_checks": {"$ref": "#/definitions/items"}}}
+  },
+  "allOf": [
+    {"if": {"properties": {"node": {"properties": {"level": {"const": "interinstitucional"}}}}}, "then": {"properties": {"profile": {"$ref": "#/definitions/project"}}}},
+    {"if": {"properties": {"node": {"properties": {"level": {"const": "institucion"}}}}}, "then": {"properties": {"profile": {"$ref": "#/definitions/institution"}}}},
+    {"if": {"properties": {"node": {"properties": {"level": {"const": "carrera"}}}}}, "then": {"properties": {"profile": {"$ref": "#/definitions/career"}}}},
+    {"if": {"properties": {"node": {"properties": {"level": {"const": "materia"}}}}}, "then": {"properties": {"profile": {"$ref": "#/definitions/subject"}}}},
+    {"if": {"properties": {"node": {"properties": {"level": {"const": "actividad"}}}}}, "then": {"properties": {"profile": {"$ref": "#/definitions/activity"}}}}
+  ]
+}

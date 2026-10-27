@@ -10,7 +10,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 
-INSTITUTIONS = ("UnADM", "UCNL", "UANL", "ITESCA", "IIIEPE", "UAS", "tecnmNL")
+INSTITUTIONS = ("UnADM", "UCNL", "UANL", "ITESCA", "IIIEPE", "UAS", "tecnmNL", "UAdeC")
 GENERATION_MARKER_FILENAME = ".aulatex-node.json"
 SKIP_DIR_NAMES = {
     ".git",
@@ -35,6 +35,7 @@ CAREER_PREFIXES = (
     "especialidad-",
     "tecnico-",
     "tsu-",
+    "medico-",
 )
 
 
@@ -160,9 +161,9 @@ class AulaTeXWorkspace:
     @staticmethod
     def _is_support_dir(path: Path) -> bool:
         name = path.name.casefold()
-        return name in {"assets", "img", "referencias", "planeaciones", "extractor-aulatex",
+        return name in {"assets", "img", "referencias", "planeaciones", "entregas", "extractor-aulatex",
                         "investigacion-aulatex", "retroalimentacion-aulatex", "actividades-generadas"} or name.startswith(
-                            ("assets-", "referencias-", "planeaciones-", "notas-"))
+                            ("assets-", "referencias-", "planeaciones-", "notas-", "entregas-"))
 
     def _is_subject_dir(self, path: Path) -> bool:
         marker = self._read_generation_marker(path)

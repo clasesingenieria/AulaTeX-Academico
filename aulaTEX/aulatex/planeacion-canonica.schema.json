@@ -1,0 +1,123 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Planeacion Canonica AulaTeX - propuesta 1.0.0",
+  "description": "Validacion estructural. No acredita fuente, completitud semantica ni autorizacion de envio.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "plan_id", "revision", "identity", "sources", "curriculum", "activities", "field_status", "review", "artifact_contract", "extensions"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "plan_id": {"$ref": "#/definitions/id"},
+    "revision": {"type": "integer", "minimum": 1},
+    "identity": {
+      "type": "object", "additionalProperties": false,
+      "required": ["institution", "program", "subject_id", "subject_title", "offering_id", "period", "modality"],
+      "properties": {
+        "institution": {"$ref": "#/definitions/nullableText"},
+        "program": {"$ref": "#/definitions/nullableText"},
+        "subject_id": {"$ref": "#/definitions/id"},
+        "subject_title": {"$ref": "#/definitions/nullableText"},
+        "offering_id": {"$ref": "#/definitions/id"},
+        "period": {"$ref": "#/definitions/nullableText"},
+        "modality": {"enum": [null, "online", "in_person", "hybrid", "self_study"]}
+      }
+    },
+    "sources": {"type": "array", "items": {"$ref": "#/definitions/source"}},
+    "curriculum": {
+      "type": "object", "additionalProperties": false,
+      "required": ["purpose", "competencies", "outcomes", "topics"],
+      "properties": {
+        "purpose": {"$ref": "#/definitions/nullableText"},
+        "competencies": {"type": "array", "items": {"$ref": "#/definitions/namedItem"}},
+        "outcomes": {"type": "array", "items": {"$ref": "#/definitions/namedItem"}},
+        "topics": {"type": "array", "items": {"$ref": "#/definitions/topic"}}
+      }
+    },
+    "activities": {"type": "array", "minItems": 1, "items": {"$ref": "#/definitions/activity"}},
+    "field_status": {"type": "array", "items": {"$ref": "#/definitions/fieldStatus"}},
+    "review": {
+      "type": "object", "additionalProperties": false,
+      "required": ["state", "reviewed_at", "reviewer_role", "critical_gaps", "semantic_validation"],
+      "properties": {
+        "state": {"enum": ["draft", "needs_review", "ready", "superseded"]},
+        "reviewed_at": {"$ref": "#/definitions/nullableText"},
+        "reviewer_role": {"$ref": "#/definitions/nullableText"},
+        "critical_gaps": {"$ref": "#/definitions/texts"},
+        "semantic_validation": {"enum": ["not_run", "failed", "passed"]}
+      },
+      "allOf": [{"if": {"properties": {"state": {"const": "ready"}}}, "then": {"properties": {"semantic_validation": {"const": "passed"}, "critical_gaps": {"maxItems": 0}, "reviewed_at": {"type": "string", "minLength": 1}, "reviewer_role": {"type": "string", "minLength": 1}}}}]
+    },
+    "artifact_contract": {"type": "object", "required": ["version", "paths_relative_to_subject", "deliverables_directory", "source_directory"], "properties": {"version": {"const": "1.1"}, "paths_relative_to_subject": {"type": "object"}, "deliverables_directory": {"type": "string"}, "source_directory": {"type": "string"}}},
+    "extensions": {"type": "object", "description": "Datos institucionales adicionales; no reemplazan el nucleo."}
+  },
+  "definitions": {
+    "id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"},
+    "nullableText": {"type": ["string", "null"], "minLength": 1},
+    "texts": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/definitions/id"}},
+    "namedItem": {"type": "object", "additionalProperties": false, "required": ["id", "text"], "properties": {"id": {"$ref": "#/definitions/id"}, "text": {"type": "string", "minLength": 1}}},
+    "topic": {"type": "object", "additionalProperties": false, "required": ["id", "text", "children"], "properties": {"id": {"$ref": "#/definitions/id"}, "text": {"type": "string", "minLength": 1}, "children": {"type": "array", "items": {"$ref": "#/definitions/topic"}}}},
+    "source": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "kind", "authority", "title", "url", "path", "sha256", "captured_at", "media_type"],
+      "properties": {
+        "id": {"$ref": "#/definitions/id"},
+        "kind": {"enum": ["pdf", "docx", "platform", "manual", "image", "other"]},
+        "authority": {"enum": ["instructional", "scholarly", "support", "editorial", "unknown"]},
+        "title": {"type": "string", "minLength": 1},
+        "url": {"$ref": "#/definitions/nullableText"},
+        "path": {"$ref": "#/definitions/nullableText"},
+        "sha256": {"type": ["string", "null"], "pattern": "^[a-fA-F0-9]{64}$"},
+        "captured_at": {"$ref": "#/definitions/nullableText"},
+        "media_type": {"$ref": "#/definitions/nullableText"}
+      }
+    },
+    "evidence": {"type": "object", "additionalProperties": false, "required": ["source_id", "locator", "quoted_text"], "properties": {"source_id": {"$ref": "#/definitions/id"}, "locator": {"type": "string", "minLength": 1}, "quoted_text": {"$ref": "#/definitions/nullableText"}}},
+    "fieldStatus": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "state", "reason", "evidence", "alternatives"],
+      "properties": {
+        "path": {"type": "string", "pattern": "^(/([^~/]|~[01])*)+$"},
+        "state": {"enum": ["confirmed", "inferred", "unknown", "not_applicable", "conflict"]},
+        "reason": {"$ref": "#/definitions/nullableText"},
+        "evidence": {"type": "array", "items": {"$ref": "#/definitions/evidence"}},
+        "alternatives": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["value", "evidence"], "properties": {"value": {}, "evidence": {"type": "array", "minItems": 1, "items": {"$ref": "#/definitions/evidence"}}}}}
+      },
+      "allOf": [
+        {"if": {"properties": {"state": {"const": "confirmed"}}}, "then": {"properties": {"evidence": {"minItems": 1}}}},
+        {"if": {"properties": {"state": {"enum": ["inferred", "not_applicable", "conflict"]}}}, "then": {"properties": {"reason": {"type": "string", "minLength": 1}}}},
+        {"if": {"properties": {"state": {"const": "conflict"}}}, "then": {"properties": {"alternatives": {"minItems": 2}}}}
+      ]
+    },
+    "activity": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "title", "role", "platform", "unit_id", "weeks", "outcome_ids", "topic_ids", "cognitive", "instruction", "requirements", "questions", "sequence", "resources", "assessment", "products", "calendar", "policies", "dependencies", "alignment", "bindings"],
+      "properties": {
+        "id": {"$ref": "#/definitions/id"},
+        "title": {"type": "string", "minLength": 1},
+        "role": {"enum": ["learning", "diagnostic", "assessment", "support", "self_study"]},
+        "platform": {"type": ["object", "null"], "additionalProperties": false, "required": ["name", "course_id", "module_ids"], "properties": {"name": {"type": "string", "minLength": 1}, "course_id": {"$ref": "#/definitions/nullableText"}, "module_ids": {"$ref": "#/definitions/texts"}}},
+        "unit_id": {"$ref": "#/definitions/nullableText"},
+        "weeks": {"type": "array", "uniqueItems": true, "items": {"type": "integer", "minimum": 1}},
+        "outcome_ids": {"$ref": "#/definitions/ids"},
+        "topic_ids": {"$ref": "#/definitions/ids"},
+        "cognitive": {"type": "object", "additionalProperties": false, "required": ["taxonomy", "level", "verb", "object", "conditions", "observable_evidence", "justification"], "properties": {"taxonomy": {"$ref": "#/definitions/nullableText"}, "level": {"$ref": "#/definitions/nullableText"}, "verb": {"$ref": "#/definitions/nullableText"}, "object": {"$ref": "#/definitions/nullableText"}, "conditions": {"$ref": "#/definitions/nullableText"}, "observable_evidence": {"$ref": "#/definitions/nullableText"}, "justification": {"$ref": "#/definitions/nullableText"}}},
+        "instruction": {"$ref": "#/definitions/nullableText"},
+        "requirements": {"type": "array", "items": {"$ref": "#/definitions/namedItem"}},
+        "questions": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["id", "context", "text", "requirement_ids"], "properties": {"id": {"$ref": "#/definitions/id"}, "context": {"$ref": "#/definitions/nullableText"}, "text": {"type": "string", "minLength": 1}, "requirement_ids": {"$ref": "#/definitions/ids"}}}},
+        "sequence": {"type": "array", "items": {"$ref": "#/definitions/step"}},
+        "resources": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["id", "source_id", "purpose", "required", "access", "rights"], "properties": {"id": {"$ref": "#/definitions/id"}, "source_id": {"$ref": "#/definitions/id"}, "purpose": {"type": "string", "minLength": 1}, "required": {"type": "boolean"}, "access": {"enum": ["local", "public", "authenticated", "unavailable", "unknown"]}, "rights": {"$ref": "#/definitions/nullableText"}}}},
+        "assessment": {"type": "object", "additionalProperties": false, "required": ["kind", "scale_total", "weight", "weight_unit", "criteria", "editorial_checks"], "properties": {"kind": {"enum": [null, "diagnostic", "formative", "summative", "not_assessed"]}, "scale_total": {"type": ["number", "null"], "exclusiveMinimum": 0}, "weight": {"type": ["number", "null"], "minimum": 0}, "weight_unit": {"$ref": "#/definitions/nullableText"}, "criteria": {"type": "array", "items": {"$ref": "#/definitions/criterion"}}, "editorial_checks": {"$ref": "#/definitions/texts"}}},
+        "products": {"type": "array", "items": {"$ref": "#/definitions/product"}},
+        "calendar": {"type": "object", "additionalProperties": false, "required": ["opens_at", "expected_at", "due_at", "closes_at", "timezone", "literal"], "properties": {"opens_at": {"$ref": "#/definitions/nullableText"}, "expected_at": {"$ref": "#/definitions/nullableText"}, "due_at": {"$ref": "#/definitions/nullableText"}, "closes_at": {"$ref": "#/definitions/nullableText"}, "timezone": {"$ref": "#/definitions/nullableText"}, "literal": {"$ref": "#/definitions/nullableText"}}},
+        "policies": {"type": "object", "additionalProperties": false, "required": ["ai", "integrity", "collaboration", "citation", "attempts", "late_submission", "accessibility", "privacy", "exceptions"], "properties": {"ai": {"$ref": "#/definitions/nullableText"}, "integrity": {"$ref": "#/definitions/nullableText"}, "collaboration": {"$ref": "#/definitions/nullableText"}, "citation": {"$ref": "#/definitions/nullableText"}, "attempts": {"type": ["integer", "null"], "minimum": 1}, "late_submission": {"$ref": "#/definitions/nullableText"}, "accessibility": {"$ref": "#/definitions/nullableText"}, "privacy": {"$ref": "#/definitions/nullableText"}, "exceptions": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["scope", "authority", "reason", "evidence"], "properties": {"scope": {"type": "string", "minLength": 1}, "authority": {"type": "string", "minLength": 1}, "reason": {"type": "string", "minLength": 1}, "evidence": {"type": "array", "minItems": 1, "items": {"$ref": "#/definitions/evidence"}}}}}}},
+        "dependencies": {"$ref": "#/definitions/ids"},
+        "alignment": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["outcome_id", "requirement_ids", "step_ids", "product_ids", "criterion_ids"], "properties": {"outcome_id": {"$ref": "#/definitions/id"}, "requirement_ids": {"$ref": "#/definitions/ids"}, "step_ids": {"$ref": "#/definitions/ids"}, "product_ids": {"$ref": "#/definitions/ids"}, "criterion_ids": {"$ref": "#/definitions/ids"}}}},
+        "bindings": {"type": "object", "additionalProperties": false, "required": ["extractor_directory", "notes_directory", "research_directory"], "properties": {"extractor_directory": {"$ref": "#/definitions/nullableText"}, "notes_directory": {"$ref": "#/definitions/nullableText"}, "research_directory": {"$ref": "#/definitions/nullableText"}}}
+      }
+    },
+    "step": {"type": "object", "additionalProperties": false, "required": ["id", "order", "phase", "action", "inputs", "output", "completion_check", "requirement_ids", "depends_on"], "properties": {"id": {"$ref": "#/definitions/id"}, "order": {"type": "integer", "minimum": 1}, "phase": {"enum": ["preparation", "construction", "review"]}, "action": {"type": "string", "minLength": 1}, "inputs": {"$ref": "#/definitions/texts"}, "output": {"type": "string", "minLength": 1}, "completion_check": {"type": "string", "minLength": 1}, "requirement_ids": {"$ref": "#/definitions/ids"}, "depends_on": {"$ref": "#/definitions/ids"}}},
+    "criterion": {"type": "object", "additionalProperties": false, "required": ["id", "text", "points", "descriptors", "requirement_ids"], "properties": {"id": {"$ref": "#/definitions/id"}, "text": {"type": "string", "minLength": 1}, "points": {"type": ["number", "null"], "minimum": 0}, "descriptors": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["level", "description", "points"], "properties": {"level": {"type": "string", "minLength": 1}, "description": {"type": "string", "minLength": 1}, "points": {"type": ["number", "null"], "minimum": 0}}}}, "requirement_ids": {"$ref": "#/definitions/ids"}}},
+    "product": {"type": "object", "additionalProperties": false, "required": ["id", "kind", "recipient", "editable_format", "submission_format", "structure", "length", "filename_pattern", "accessibility", "requirement_ids", "paths"], "properties": {"id": {"$ref": "#/definitions/id"}, "kind": {"type": "string", "minLength": 1}, "recipient": {"$ref": "#/definitions/nullableText"}, "editable_format": {"$ref": "#/definitions/nullableText"}, "submission_format": {"$ref": "#/definitions/nullableText"}, "structure": {"$ref": "#/definitions/texts"}, "length": {"$ref": "#/definitions/nullableText"}, "filename_pattern": {"$ref": "#/definitions/nullableText"}, "accessibility": {"$ref": "#/definitions/nullableText"}, "requirement_ids": {"$ref": "#/definitions/ids"}, "paths": {"type": "object", "additionalProperties": false, "required": ["editable", "delivery"], "properties": {"editable": {"$ref": "#/definitions/nullableText"}, "delivery": {"$ref": "#/definitions/nullableText"}}}}}
+  }
+}

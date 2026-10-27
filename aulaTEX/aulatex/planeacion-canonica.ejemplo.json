@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "plan_id": "plan-materia-ejemplo-oferta-ejemplo",
+  "revision": 1,
+  "identity": {
+    "institution": null,
+    "program": null,
+    "subject_id": "materia-ejemplo",
+    "subject_title": "Materia ficticia para demostrar el modelo",
+    "offering_id": "oferta-ejemplo",
+    "period": null,
+    "modality": "self_study"
+  },
+  "sources": [
+    {
+      "id": "src-001", "kind": "manual", "authority": "editorial",
+      "title": "Instruccion ficticia incluida en este ejemplo; no es una consigna institucional",
+      "url": null, "path": null, "sha256": null, "captured_at": null,
+      "media_type": "text/plain"
+    }
+  ],
+  "curriculum": {
+    "purpose": null,
+    "competencies": [],
+    "outcomes": [{"id": "ra-001", "text": "Distinguir afirmaciones sustentadas de opiniones mediante el examen de evidencia."}],
+    "topics": [{"id": "tema-001", "text": "Afirmacion y evidencia", "children": []}]
+  },
+  "activities": [
+    {
+      "id": "act-001", "title": "Comparacion razonada", "role": "self_study",
+      "platform": null, "unit_id": null, "weeks": [],
+      "outcome_ids": ["ra-001"], "topic_ids": ["tema-001"],
+      "cognitive": {
+        "taxonomy": "Bloom revisada", "level": "analizar", "verb": "comparar",
+        "object": "sustento de dos afirmaciones",
+        "conditions": "Con el mismo criterio de suficiencia de evidencia",
+        "observable_evidence": "Comparacion que explica diferencias y justifica la conclusion",
+        "justification": "La tarea exige relacionar afirmaciones con evidencias, no solo repetir definiciones. Interpretacion editorial del ejemplo."
+      },
+      "instruction": "Elige dos afirmaciones sobre un mismo tema, registra la evidencia disponible para cada una y explica cual esta mejor sustentada y por que. Es un ejercicio de autoestudio sin envio ni calificacion.",
+      "requirements": [
+        {"id": "req-001", "text": "Registrar las dos afirmaciones y sus evidencias sin inventar fuentes."},
+        {"id": "req-002", "text": "Comparar el sustento y justificar una conclusion."}
+      ],
+      "questions": [],
+      "sequence": [
+        {"id": "paso-001", "order": 1, "phase": "preparation", "action": "Seleccionar y registrar dos afirmaciones sobre el mismo tema.", "inputs": ["Tema elegido"], "output": "Dos afirmaciones identificadas", "completion_check": "Ambas se refieren al mismo tema y se identifica su procedencia.", "requirement_ids": ["req-001"], "depends_on": []},
+        {"id": "paso-002", "order": 2, "phase": "construction", "action": "Examinar la evidencia, comparar su suficiencia y redactar la conclusion.", "inputs": ["Dos afirmaciones", "Fuentes de evidencia verificadas"], "output": "Comparacion razonada", "completion_check": "Cada conclusion remite a evidencia identificable o declara que esta falta.", "requirement_ids": ["req-001", "req-002"], "depends_on": ["paso-001"]},
+        {"id": "paso-003", "order": 3, "phase": "review", "action": "Revisar que no se confunda opinion con evidencia y registrar limites.", "inputs": ["Comparacion razonada"], "output": "Nota local revisada", "completion_check": "Los dos requisitos quedan cubiertos y los limites estan declarados.", "requirement_ids": ["req-001", "req-002"], "depends_on": ["paso-002"]}
+      ],
+      "resources": [],
+      "assessment": {
+        "kind": "not_assessed", "scale_total": null, "weight": null, "weight_unit": null,
+        "criteria": [],
+        "editorial_checks": ["Cubrir ambos requisitos", "No presentar evidencia inexistente como verificada"]
+      },
+      "products": [
+        {"id": "prod-001", "kind": "study_note", "recipient": "Estudiante", "editable_format": "markdown", "submission_format": null, "structure": ["Afirmaciones", "Evidencias", "Comparacion y limites"], "length": null, "filename_pattern": null, "accessibility": null, "requirement_ids": ["req-001", "req-002"], "paths": {"editable": null, "delivery": null}}
+      ],
+      "calendar": {"opens_at": null, "expected_at": null, "due_at": null, "closes_at": null, "timezone": null, "literal": null},
+      "policies": {"ai": null, "integrity": null, "collaboration": null, "citation": null, "attempts": null, "late_submission": null, "accessibility": null, "privacy": null, "exceptions": []},
+      "dependencies": [],
+      "alignment": [{"outcome_id": "ra-001", "requirement_ids": ["req-001", "req-002"], "step_ids": ["paso-001", "paso-002", "paso-003"], "product_ids": ["prod-001"], "criterion_ids": []}],
+      "bindings": {"extractor_directory": null, "notes_directory": null, "research_directory": null}
+    }
+  ],
+  "field_status": [
+    {"path": "/identity", "state": "inferred", "reason": "Identidad ficticia; institucion, programa y periodo no aplican al ejemplo y no identifican una oferta real.", "evidence": [], "alternatives": []},
+    {"path": "/sources/0", "state": "not_applicable", "reason": "Fuente ficticia embebida en el ejemplo; no hay archivo capturado, URL, fecha ni hash de un original externo.", "evidence": [], "alternatives": []},
+    {"path": "/curriculum/purpose", "state": "unknown", "reason": "No hay proposito curricular institucional documentado.", "evidence": [], "alternatives": []},
+    {"path": "/curriculum/competencies", "state": "unknown", "reason": "No se inventan competencias de una materia real.", "evidence": [], "alternatives": []},
+    {"path": "/curriculum/outcomes", "state": "inferred", "reason": "Operacionalizacion editorial ficticia, no resultado docente verificado.", "evidence": [], "alternatives": []},
+    {"path": "/curriculum/topics", "state": "inferred", "reason": "Tema deducido del ejercicio ficticio.", "evidence": [], "alternatives": []},
+    {"path": "/activities/0/platform", "state": "not_applicable", "reason": "Autoestudio ficticio sin plataforma.", "evidence": [], "alternatives": []},
+    {"path": "/activities/0/unit_id", "state": "unknown", "reason": "No hay unidad curricular documentada.", "evidence": [], "alternatives": []},
+    {"path": "/activities/0/weeks", "state": "not_applicable", "reason": "Ejemplo sin organizacion semanal.", "evidence": [], "alternatives": []},
+    {"path": "/activities/0/instruction", "state": "inferred", "reason": "Texto creado exclusivamente para demostrar la estructura; no atribuir a una institucion.", "evidence": [{"source_id": "src-001", "locator": "/activities/0/instruction en este ejemplo", "quoted_text": null}], "alternatives": []},
+    {"path": "/activities/0/requirements", "state": "inferred", "reason": "Descomposicion editorial de la instruccion ficticia.", "evidence": [], "alternatives": []},
+    {"path": "/activities/0/cognitive", "state": "inferred", "reason": "Analisis de la demanda propuesto, pendiente de revision para cualquier aplicacion real.", "evidence": [], "alternatives": []},
+    {"path": "/activities/0/sequence", "state": "inferred", "reason": "Procedimiento editorial propuesto.", "evidence": [], "alternatives": []},
+    {"path": "/activities/0/questions", "state": "not_applicable", "reason": "La instruccion ficticia no incluye reactivos adicionales.", "evidence": [], "alternatives": []},
+    {"path": "/activities/0/resources", "state": "unknown", "reason": "Fuentes disciplinares aun no elegidas; el ejemplo no acredita investigacion.", "evidence": [], "alternatives": []},
+    {"path": "/activities/0/assessment", "state": "not_applicable", "reason": "Sin calificacion, escala ni ponderacion; controles editoriales propuestos, no rubrica docente.", "evidence": [], "alternatives": []},
+    {"path": "/activities/0/products", "state": "inferred", "reason": "Nota local propuesta; extension, nombre, accesibilidad y rutas por definir; no hay entrega.", "evidence": [], "alternatives": []},
+    {"path": "/activities/0/calendar", "state": "not_applicable", "reason": "Ejemplo de autoestudio sin fechas ni envio.", "evidence": [], "alternatives": []},
+    {"path": "/activities/0/policies", "state": "unknown", "reason": "No se aportaron politicas institucionales ni excepciones.", "evidence": [], "alternatives": []},
+    {"path": "/activities/0/dependencies", "state": "not_applicable", "reason": "Ejemplo con una sola actividad independiente.", "evidence": [], "alternatives": []},
+    {"path": "/activities/0/alignment", "state": "inferred", "reason": "Alineacion propuesta; no requiere criterios de calificacion por ser autoestudio.", "evidence": [], "alternatives": []},
+    {"path": "/activities/0/bindings", "state": "unknown", "reason": "No hay materia real ni rutas de derivados creadas.", "evidence": [], "alternatives": []},
+    {"path": "/review", "state": "unknown", "reason": "Ejemplo no revisado para ejecucion; faltan fecha y rol de revision.", "evidence": [], "alternatives": []},
+    {"path": "/extensions", "state": "not_applicable", "reason": "Ejemplo sin datos institucionales adicionales.", "evidence": [], "alternatives": []}
+  ],
+  "review": {
+    "state": "draft", "reviewed_at": null, "reviewer_role": null,
+    "critical_gaps": ["Ejemplo ficticio: no usar como planeacion real", "Validacion semantica y fuentes disciplinares pendientes"],
+    "semantic_validation": "not_run"
+  },
+  "artifact_contract": {
+    "version": "1.1", "academic_materials_versioned": true,
+    "paths_relative_to_subject": {
+      "plans": "planeaciones-materia-ejemplo",
+      "references": "referencias-materia-ejemplo",
+      "notes": "referencias-materia-ejemplo/notas-materia-ejemplo",
+      "assets": "assets-materia-ejemplo", "deliveries": "entregas-materia-ejemplo",
+      "extractions": "extractor-aulatex", "research": "investigacion-aulatex"
+    },
+    "deliverables_directory": "entregas-materia-ejemplo", "source_directory": "."
+  },
+  "extensions": {}
+}

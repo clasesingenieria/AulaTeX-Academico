@@ -129,6 +129,47 @@ def build_parser() -> argparse.ArgumentParser:
     planning.add_argument("--source", required=True, help="Modelo JSON revisado con activity o activities y sus fuentes.")
     planning.add_argument("--index-name", default="README.md", help="Nombre del índice generado; permite conservar un README por unidades.")
 
+    node_planning = sub.add_parser("planeacion-nodos", help="Preparar, validar o publicar planeaciones por nodo; no ejecuta actividades.")
+    node_planning.add_argument("--root", default=str(Path.cwd()))
+    node_planning.add_argument("--mode", choices=("prepare", "validate", "publish"), default="prepare")
+    node_planning.add_argument("--output", default="", help="Carpeta nueva para el manifiesto JSON y Markdown de preparacion.")
+    node_planning.add_argument("--source", default="", help="JSON por nodo, dentro del proyecto.")
+    node_planning.add_argument("--scope-key", default="", help="Identidad exacta del nodo para validar/publicar.")
+
+    convert_planning = sub.add_parser("convertir-planeaciones", help="Convertir fuentes locales a PCA needs_review y generar cotejo; no aprueba ni ejecuta actividades.")
+    convert_planning.add_argument("--root", default=str(Path.cwd()))
+    convert_planning.add_argument("--target", default=".", help="Institucion, carrera o materia que se va a convertir.")
+    convert_planning.add_argument("--output", required=True, help="Carpeta nueva para el manifiesto del lote.")
+    convert_planning.add_argument("--publish-node-bindings", action="store_true", help="Publicar cadenas de nodo needs_review solo para correspondencias documentadas y unicas.")
+
+    review_planning = sub.add_parser("cotejar-planeaciones", help="Cotejar cada actividad del lote y publicar indice JSON y Markdown sin ejecutar.")
+    review_planning.add_argument("--root", default=str(Path.cwd()))
+    review_planning.add_argument("--batch", required=True)
+    review_planning.add_argument("--output", required=True)
+    review_planning.add_argument("--revision", action="append", default=[], help="PCA publicada que sustituye explicitamente una revision del lote en el cotejo.")
+
+    diagnostic_planning = sub.add_parser("monitor-planeaciones", help="Observar hashes y bloqueos de un cotejo en una instantanea JSON y Markdown; no ejecuta actividades.")
+    diagnostic_planning.add_argument("--root", default=str(Path.cwd()))
+    diagnostic_planning.add_argument("--review", required=True)
+    diagnostic_planning.add_argument("--output", required=True)
+
+    publish_review = sub.add_parser("publicar-revision-planeacion", help="Publicar una PCA revisada e inmutable; ready requiere evidencia y validacion.")
+    publish_review.add_argument("--root", default=str(Path.cwd()))
+    publish_review.add_argument("--scope-key", required=True)
+    publish_review.add_argument("--source", required=True)
+
+    pilot_planning = sub.add_parser("campana-planeaciones", help="Preparar admision piloto de revisiones validadas; no ejecuta ni envia.")
+    pilot_planning.add_argument("--root", default=str(Path.cwd()))
+    pilot_planning.add_argument("--review", required=True)
+    pilot_planning.add_argument("--output", required=True)
+    pilot_planning.add_argument("--max-activities", type=int, default=1)
+    pilot_planning.add_argument("--max-cycles", type=int, default=1)
+
+    run_pilot = sub.add_parser("ejecutar-campana-planeaciones", help="Revalidar y ejecutar un piloto admitido, sin aplicar parches ni enviar a plataforma.")
+    run_pilot.add_argument("--root", default=str(Path.cwd()))
+    run_pilot.add_argument("--campaign", required=True)
+    run_pilot.add_argument("--output", required=True)
+
     catalog = sub.add_parser("catalogo-plantillas", help="Auditar plantillas, estructura y temporales sin regenerar ni borrar documentos.")
     catalog.add_argument("--root", default=str(Path.cwd()), help="Raiz del repositorio que se va a revisar.")
     catalog.add_argument("--export", action="store_true", help="Actualizar catalogo-plantillas-aulatex.json y la auditoria en README.md.")
@@ -180,6 +221,7 @@ def build_parser() -> argparse.ArgumentParser:
     agent.add_argument("--extractor-probe", action="store_true", help="Run extractor adapter in probe/configuration mode.")
     agent.add_argument("--extractor-fuentes", default="")
     agent.add_argument("--extractor-planeacion", default="")
+    agent.add_argument("--node-plan", default="", help="Planeacion por nodo relativa al proyecto; realizar-actividad exige perfiles validados.")
     agent.add_argument("--extractor-conceptos", default="")
     agent.add_argument("--extractor-salida", default="")
     agent.add_argument("--extractor-motor", default="anthropicfoundry", choices=EXTRACTOR_MOTORS)
@@ -264,6 +306,7 @@ def build_parser() -> argparse.ArgumentParser:
     activity_monitor = sub.add_parser("activity-monitor", help="Run a monitored recursive activity loop with bounded retries.")
     activity_monitor.add_argument("--target", required=True)
     activity_monitor.add_argument("--activity", type=int, default=1)
+    activity_monitor.add_argument("--node-plan", default="", help="Revision JSON de nodo ready; revalida consigna y hashes antes del monitor.")
     activity_monitor.add_argument("--output", default="")
     activity_monitor.add_argument("--max-cycles", type=int, default=2)
     activity_monitor.add_argument("--compile-check", action="store_true")
@@ -452,6 +495,71 @@ def main(argv: list[str] | None = None) -> None:
             parser.error(str(exc))
         return
 
+    if args.command in {"cotejar-planeaciones", "publicar-revision-planeacion", "campana-planeaciones", "ejecutar-campana-planeaciones", "monitor-planeaciones"}:
+        from .planning_conversion import publish_conversion
+        from .planning_review import observe_planning, prepare_campaign, review_batch, run_campaign
+        from jsonschema import ValidationError
+
+        workspace = AulaTeXWorkspace(args.root)
+        try:
+            if args.command == "cotejar-planeaciones":
+                result = review_batch(workspace, args.batch, workspace.resolve_target(args.output), revisions=tuple(args.revision))
+                result = {"counts": result["counts"], "automatic_execution": False}
+            elif args.command == "campana-planeaciones":
+                result = prepare_campaign(workspace, args.review, workspace.resolve_target(args.output), max_activities=args.max_activities, max_cycles=args.max_cycles)
+            elif args.command == "ejecutar-campana-planeaciones":
+                result = run_campaign(workspace, args.campaign, workspace.resolve_target(args.output))
+            elif args.command == "monitor-planeaciones":
+                result = observe_planning(workspace, args.review, workspace.resolve_target(args.output))
+                result = {"mode": result["mode"], "counts": result["counts"], "editorial_execution": False}
+            else:
+                scopes, _children = workspace.editorial_scope_index()
+                scope = scopes[args.scope_key]
+                if scope.level != "materia":
+                    raise ValueError("publication_requires_subject")
+                document = json.loads(workspace.resolve_target(args.source).read_text(encoding="utf-8-sig"))
+                result = publish_conversion(workspace, scope, document)
+        except (OSError, ValueError, KeyError, ValidationError) as error:
+            parser.error(type(error).__name__ + ": operacion bloqueada; revisar evidencia, identidad y revision.")
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return
+
+    if args.command == "convertir-planeaciones":
+        from .planning_conversion import convert_local_batch
+
+        workspace = AulaTeXWorkspace(args.root)
+        try:
+            result = convert_local_batch(workspace, workspace.resolve_target(args.output), args.target, publish_bindings=args.publish_node_bindings)
+        except (OSError, ValueError) as error:
+            parser.error(str(error))
+        print(json.dumps({key: value for key, value in result.items() if key != "records"}, ensure_ascii=False, indent=2))
+        return
+
+    if args.command == "planeacion-nodos":
+        from .node_planning import NodePlanLoader, prepare_propagation, publish_plan, write_propagation
+        from jsonschema import ValidationError
+
+        workspace = AulaTeXWorkspace(args.root)
+        try:
+            if args.mode == "prepare":
+                if args.output:
+                    artifacts = write_propagation(workspace, workspace.resolve_target(args.output))
+                    print(json.dumps({"mode": "prepare_only", "artifacts": [workspace.relative(path) for path in artifacts]}, ensure_ascii=False, indent=2))
+                else:
+                    print(json.dumps(prepare_propagation(workspace), ensure_ascii=False, indent=2))
+            else:
+                by_key, _children = workspace.editorial_scope_index()
+                if not args.source or args.scope_key not in by_key:
+                    raise ValueError("Se requieren --source y --scope-key del catalogo.")
+                scope = by_key[args.scope_key]
+                source = workspace.relative(workspace.resolve_target(args.source))
+                resolved = NodePlanLoader(workspace).load(source, scope)
+                artifacts = publish_plan(workspace, scope, resolved.plan) if args.mode == "publish" else ()
+                print(json.dumps({"mode": args.mode, "node": scope.key, "review_state": resolved.plan["review"]["state"], "artifacts": [workspace.relative(path) for path in artifacts]}, ensure_ascii=False, indent=2))
+        except (OSError, ValueError, ValidationError) as error:
+            parser.error(str(error))
+        return
+
     if args.command == "generar-planeaciones":
         from .planning_layout import generate_plans
 
@@ -561,6 +669,7 @@ def main(argv: list[str] | None = None) -> None:
             extractor_probe_only=bool(args.extractor_probe),
             extractor_fuentes=args.extractor_fuentes,
             extractor_planeacion=args.extractor_planeacion,
+            node_plan=args.node_plan,
             extractor_conceptos=args.extractor_conceptos,
             extractor_salida=args.extractor_salida,
             extractor_motor=args.extractor_motor,
@@ -898,6 +1007,7 @@ def main(argv: list[str] | None = None) -> None:
                 output=args.output,
                 max_cycles=args.max_cycles,
                 compile_check=bool(args.compile_check),
+                node_plan=args.node_plan,
                 run_extractor=bool(args.run_extractor),
                 extractor_motors=tuple(args.extractor_motor or ["anthropicfoundry", "tfidf"]),
                 apply_bibliography_repair=bool(args.apply_bibliography_repair),

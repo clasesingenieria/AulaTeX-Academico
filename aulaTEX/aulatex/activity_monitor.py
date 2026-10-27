@@ -38,6 +38,7 @@ class ActivityMonitorRequest:
     workflow_backend: Literal["langgraph", "classic"] = "langgraph"
     run_detail_planner: bool = True
     detail_planner_max_scopes: int = 6
+    node_plan: str = ""
 
 
 @dataclass(frozen=True)
@@ -71,9 +72,21 @@ class ActivityMonitor:
         self.root.mkdir(parents=True, exist_ok=True)
 
     def run(self, request: ActivityMonitorRequest) -> ActivityMonitorResult:
+        resolved_plan = None
+        if request.node_plan:
+            from .node_planning import NodePlanLoader
+
+            scopes, _children = self.workspace.editorial_scope_index()
+            scope = self.workspace.find_scope_for_target(request.target, activity_number=request.activity_number)
+            if scope is None or scope.level != "actividad" or scope.key not in scopes:
+                raise ValueError("El monitor validado requiere un nodo de actividad existente.")
+            resolved_plan = NodePlanLoader(self.workspace).load(request.node_plan, scope, require_ready=True)
         run_id = f"{self.workspace.timestamp()}-activity-{int(request.activity_number):02d}-monitor"
         run_dir = self._resolve_run_dir(request, run_id)
         run_dir.mkdir(parents=True, exist_ok=True)
+        if resolved_plan is not None:
+            (run_dir / "planeacion-resuelta.json").write_text(json.dumps({"node": resolved_plan.plan, "chain": list(resolved_plan.chain), "pedagogical_plan": resolved_plan.pedagogical_plan, "selected_activity_id": resolved_plan.selected_activity_id}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            (run_dir / "planeacion-extractor.md").write_text(resolved_plan.extractor_markdown(), encoding="utf-8")
 
         detail_plan_result: DetailPlannerResult | None = None
         if bool(request.run_detail_planner):
@@ -103,6 +116,7 @@ class ActivityMonitor:
             cycle_dir.mkdir(parents=True, exist_ok=True)
             cycle_record, evaluation = self._observe_cycle(request, cycle_dir, cycle_index)
             cycles.append(cycle_record)
+            next_action = cycle_record["next_action"]
 
             if evaluation.get("passed"):
                 final_ok = True
@@ -160,6 +174,7 @@ class ActivityMonitor:
                         ExtractorRequest(
                             target=request.target,
                             activity_number=request.activity_number,
+                            planeacion=str(run_dir / "planeacion-extractor.md") if request.node_plan else "",
                             motor=motor,
                         )
                     )
@@ -297,6 +312,7 @@ class ActivityMonitor:
                     ExtractorRequest(
                         target=request.target,
                         activity_number=request.activity_number,
+                        planeacion=str(run_dir / "planeacion-extractor.md") if request.node_plan else "",
                         motor=motor,
                     )
                 )
@@ -446,6 +462,7 @@ class ActivityMonitor:
         manifest = {
             "run_id": run_id,
             "kind": "activity-monitor",
+            "node_plan": request.node_plan,
             "workflow_backend": request.workflow_backend if StateGraph is not None else "classic",
             "target": self.workspace.relative(self.workspace.resolve_target(request.target)),
             "activity_number": int(request.activity_number),

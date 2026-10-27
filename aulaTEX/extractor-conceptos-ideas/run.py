@@ -8,10 +8,14 @@ if str(SRC) not in sys.path:
 
 from fichador.cli import main as cli_main
 from fichador.gui import main as gui_main
+from fichador.nova_activity_extractor import main as nova_batch_main
 
 if __name__ == "__main__":
     if "--gui" in sys.argv:
         sys.argv.remove("--gui")
         gui_main()
+    elif "--batch-nova" in sys.argv:
+        sys.argv.remove("--batch-nova")
+        nova_batch_main()
     else:
         cli_main()

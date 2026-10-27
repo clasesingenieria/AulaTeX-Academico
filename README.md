@@ -4,6 +4,22 @@ Entorno academico en LaTeX organizado por institucion, con una base comun de
 plantillas Pizarror y puntos de entrada canonicos para reportes, actividades,
 presentaciones y bibliografias.
 
+## Planeaciones interinstitucionales
+
+La [auditoria y propuesta de Planeacion Canonica AulaTeX](aulaTEX/aulatex/AUDITORIA-PLANEACIONES-2026-10-25.md)
+documenta las vinculaciones actuales, los riesgos de seleccion y un modelo
+pedagogico y procedimental comun, con esquema JSON y ejemplo. Es una propuesta;
+no implica migracion, cotejo completo de plataformas ni cambios al motor.
+
+La [definicion jerarquica por nodo](aulaTEX/aulatex/MODELO-PLANEACION-POR-NODO.md)
+extiende el modelo a proyecto, institucion, carrera, materia y actividad.
+Incluye lector opcional del agente, publicacion JSON/Markdown y un manifiesto
+de propagacion preparado; no convierte fuentes ni ejecuta actividades.
+
+La [fase de conversion y cotejo local](aulaTEX/aulatex/CONVERSION-PLANEACIONES-2026-10-26.md)
+publica PCA JSON/Markdown, fuentes preservadas, nodos vinculados y cola de revision.
+Los resultados permanecen needs_review; no habilitan campañas ni envios.
+
 La raiz conserva fuentes de ejemplo: [bibliografia](AulaTeX-Academico.bib),
 [reporte](reporte-AulaTeX-Academico.tex),
 [reporte de la actividad 1](reporte-AulaTeX-Academico-Actividad-1.tex),

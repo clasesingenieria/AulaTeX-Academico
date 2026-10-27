@@ -10,6 +10,47 @@ from pathlib import Path
 CONTRACT_VERSION = "1.1"
 
 
+def catalogued_plan_paths(target: Path) -> tuple[Path, ...] | None:
+    target = target.resolve()
+    folder = subject_layout(target)["plans"]
+    catalog_path = folder / "catalogo-editorial.json"
+    if not catalog_path.exists():
+        return None
+    catalog = json.loads(catalog_path.read_text(encoding="utf-8-sig"))
+    if not isinstance(catalog, dict) or not isinstance(catalog.get("activities"), list):
+        raise ValueError("invalid_editorial_catalog")
+    excluded = {str(item["module_id"]) for item in catalog.get("antecedents", []) if item.get("module_id") is not None}
+    paths = []
+    numbers = set()
+    modules = set()
+    for item in catalog["activities"]:
+        number = item["number"]
+        module = str(item["module_id"]) if item.get("module_id") is not None else None
+        path = _safe_child(target, item["json"])
+        if type(number) is not int or number < 1 or number in numbers or (module is not None and (module in modules or module in excluded)):
+            raise ValueError("duplicate_or_excluded_editorial_activity")
+        if path.parent != folder or path.suffix != ".json" or not path.is_file() or path in paths:
+            raise ValueError("invalid_editorial_plan_path")
+        numbers.add(number)
+        if module is not None:
+            modules.add(module)
+        paths.append(path)
+    complementary = catalog.get("complementary_plans", [])
+    if not isinstance(complementary, list):
+        raise ValueError("invalid_complementary_catalog")
+    for item in complementary:
+        module = str(item["module_id"]) if item.get("module_id") is not None else None
+        path = _safe_child(target, item["json"])
+        if item.get("number") is not None or (module is not None and (module in modules or module in excluded)):
+            raise ValueError("duplicate_or_excluded_editorial_activity")
+        if path.parent != folder or path.suffix != ".json" or not path.is_file() or path in paths:
+            raise ValueError("invalid_editorial_plan_path")
+        if module is not None:
+            modules.add(module)
+        paths.append(path)
+    return tuple(paths)
+
+
 def subject_layout(target: Path) -> dict[str, Path]:
     target = target.resolve()
     slug = re.sub(r"-(lde|lad|mga|isc|imtc)$", "", target.name, flags=re.IGNORECASE)

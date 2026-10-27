@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import json
 import re
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from pathlib import Path
 
 from .agentic_patterns import (
@@ -71,6 +71,7 @@ class AgentRequest:
     run_semantic_audit: bool = True
     semantic_fail_closed: bool = True
     semantic_feedback_path: str = ""
+    node_plan: str = ""
 
 
 @dataclass
@@ -123,10 +124,21 @@ class AulaTeXAgent:
     def run(self, request: AgentRequest) -> AgentRunResult:
         target_ctx = self._resolve_target_context(request)
         target = target_ctx.target_path
+        resolved_node_plan = self._resolve_node_plan(request, target_ctx)
         run_id = self.workspace.timestamp()
         safe_action = request.action.lower().replace(" ", "-")
         run_dir = self.workspace.feedback_root / "runs" / f"{run_id}-{safe_action}"
         run_dir.mkdir(parents=True, exist_ok=True)
+
+        if resolved_node_plan is not None:
+            (run_dir / "planeacion-resuelta.json").write_text(
+                json.dumps({"plan": resolved_node_plan.plan, "chain": list(resolved_node_plan.chain), "editorial_rules": resolved_node_plan.editorial_rules, "rule_origins": resolved_node_plan.rule_origins, "pedagogical_plan": resolved_node_plan.pedagogical_plan, "selected_activity_id": resolved_node_plan.selected_activity_id}, ensure_ascii=False, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            if resolved_node_plan.pedagogical_plan is not None:
+                projection = run_dir / "planeacion-extractor.md"
+                projection.write_text(resolved_node_plan.extractor_markdown(), encoding="utf-8")
+                request = replace(request, extractor_planeacion=str(projection))
 
         detail_plan_result: DetailPlannerResult | None = None
         if self._should_run_detail_planner(request, target_ctx):
@@ -143,6 +155,8 @@ class AulaTeXAgent:
         workflow = AgenticStateMachine()
         memory = SharedMemory()
         context = self.workspace.context_summary(target_ctx.context_path)
+        if resolved_node_plan is not None:
+            context += "\n\n" + resolved_node_plan.context_markdown()
         if detail_plan_result is not None:
             context += "\n\n" + self._detail_planner_context(detail_plan_result)
         if target_ctx.generation_mode == "downward":
@@ -235,6 +249,7 @@ class AulaTeXAgent:
             "level": request.level,
             "action": request.action,
             "activity_number": request.activity_number,
+            "node_planning": {"enabled": resolved_node_plan is not None, "chain": list(resolved_node_plan.chain) if resolved_node_plan else []},
             "cycle_mode": cycle_mode,
             "requested_iterations": int(request.iterations),
             "expanded_task_count": len(selected_tasks),
@@ -561,6 +576,7 @@ class AulaTeXAgent:
                     target=str(target_ctx.target_path),
                     activity_number=request.activity_number,
                     output=str(run_dir / "post-monitor"),
+                    node_plan=request.node_plan,
                     max_cycles=max(1, int(request.monitor_max_cycles)),
                     compile_check=True,
                     apply_bibliography_repair=True,
@@ -853,7 +869,8 @@ class AulaTeXAgent:
     def _resolve_target_context(self, request: AgentRequest) -> AgentTargetContext:
         target = self.workspace.resolve_target(request.target)
         if request.generation_mode != "downward":
-            scope = self.workspace.find_scope_for_target(target, activity_number=request.activity_number)
+            activity = request.activity_number if not request.node_plan or request.level == "actividad" else None
+            scope = self.workspace.find_scope_for_target(target, activity_number=activity)
             return AgentTargetContext(
                 target_path=target,
                 context_path=target,
@@ -881,6 +898,22 @@ class AulaTeXAgent:
             child_name=child_name,
             child_preview=child_preview,
         )
+
+    def _resolve_node_plan(self, request: AgentRequest, target_ctx: AgentTargetContext):
+        if not request.node_plan:
+            return None
+        from .node_planning import NodePlanLoader
+
+        by_key, _children = self.workspace.editorial_scope_index()
+        scope = by_key.get(target_ctx.scope_key)
+        if scope is None or scope.level != request.level:
+            raise ValueError("El nivel solicitado no corresponde al nodo de la planeacion.")
+        if request.action == "realizar-actividad" and (scope.level != "actividad" or target_ctx.generation_mode != "direct"):
+            raise ValueError("realizar-actividad requiere un nodo de actividad existente.")
+        target_activity = re.search(r"actividad[-_\s]*(\d+)", target_ctx.target_path.stem, re.IGNORECASE) if target_ctx.target_path.is_file() else None
+        if target_activity and int(target_activity.group(1)) != request.activity_number:
+            raise ValueError("El archivo objetivo y el numero de actividad no coinciden.")
+        return NodePlanLoader(self.workspace).load(request.node_plan, scope, require_ready=request.action == "realizar-actividad")
 
     def _preview_child(self, parent_scope, child_level: str, child_name: str, activity_number: int) -> str:
         parent_rel = parent_scope.relative_path.rstrip("/")

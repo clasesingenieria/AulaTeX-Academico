@@ -12,7 +12,7 @@ from .config import load_aulatex_env
 from .workspace import AulaTeXWorkspace, EditorialScope
 
 
-EXTRACTOR_MOTORS = ("tfidf", "tfhub", "azure", "openai", "anthropicfoundry")
+EXTRACTOR_MOTORS = ("tfidf", "tfhub", "azure", "openai", "anthropicfoundry", "novapro")
 CORE_EXTRACTOR_ARTIFACTS = {
     "fichas_json": "fichas_conceptos.json",
     "conceptos": "conceptos_detectados.json",
@@ -259,6 +259,26 @@ class ExtractorAdapter:
         # Cuando el target es un .tex de reporte, NO usar el propio .tex como planeacion:
         # subir al directorio de la materia y localizar por numero de actividad/semana.
         base_dir = target_path.parent if target_path.is_file() else target_path
+        from .planning_layout import catalogued_plan_paths, subject_layout
+
+        active_paths = catalogued_plan_paths(base_dir)
+        if active_paths is not None:
+            catalog = json.loads((subject_layout(base_dir)["plans"] / "catalogo-editorial.json").read_text(encoding="utf-8-sig"))
+            entries = [item for item in catalog["activities"] if item["number"] == activity_number]
+            if len(entries) != 1 or entries[0].get("execution_allowed") is not True:
+                return None
+            entry = entries[0]
+            from .planning_validation import validate_pedagogical
+
+            document = json.loads((base_dir / entry["json"]).read_text(encoding="utf-8-sig"))
+            if document["review"]["state"] != "ready" or document.get("extensions", {}).get("editorial", {}).get("already_completed_evidence"):
+                return None
+            if not validate_pedagogical(document, base_dir, str(entry["module_id"]))["passed"]:
+                return None
+            candidate = (base_dir / entry["markdown"]).resolve()
+            if not candidate.is_relative_to(base_dir.resolve()) or not candidate.is_file():
+                return None
+            return candidate
         if activity_number > 0 and base_dir.is_dir():
             act_pat = re.compile(rf"(actividad|semana|[\bsS])[-_\s]*0?{int(activity_number)}\b", re.IGNORECASE)
             s_pat = re.compile(rf"\bs{int(activity_number)}\b", re.IGNORECASE)

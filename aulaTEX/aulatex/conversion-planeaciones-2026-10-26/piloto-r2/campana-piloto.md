@@ -1,0 +1,30 @@
+# Campana piloto JSON y Markdown
+
+Estado: blocked. Actividades admitidas: 0.
+
+Sin envios a plataforma. Monitor sin modificaciones ni extractor; ejecucion explicita y revalidacion requerida.
+
+```json
+{
+  "kind": "validated-planning-pilot",
+  "version": "1.0",
+  "state": "blocked",
+  "review_path": "aulaTEX/aulatex/conversion-planeaciones-2026-10-26/cotejo-r3/cotejo-actividades.json",
+  "review_sha256": "4fcf16d8efb6e3779ccb29bec304e9a14d9f7207e6b33f650527066e1721b27b",
+  "max_activities": 1,
+  "max_cycles": 1,
+  "activities": [],
+  "diagnostic_monitor": {
+    "enabled": true,
+    "mode": "observe_only"
+  },
+  "monitor": {
+    "enabled": false,
+    "apply_revision_patches": false,
+    "apply_bibliography_repair": false,
+    "run_extractor": false
+  },
+  "automatic_execution": false,
+  "platform_submission": false
+}
+```

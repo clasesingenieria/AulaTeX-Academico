@@ -3,7 +3,9 @@
   "terminal.integrated.profiles.linux": {
     "AulaTeX Linux": {
       "path": "/bin/bash",
-      "args": ["--norc"],
+      "args": [
+        "--norc"
+      ],
       "env": {
         "VIRTUAL_ENV": "${workspaceFolder}/.venv-linux",
         "PATH": "${workspaceFolder}/.venv-linux/bin:${env:PATH}"
@@ -57,5 +59,6 @@
     "UnADM/reporte-unadm.tex",
     "UnADM/filosofia-del-derecho/reporte-filosofia-del-derecho-Actividad-5.tex",
     "IIIEPE/temas-selectos-de-matematicas-I/reporte-temas-selectos-de-matematicas-I.tex"
-  ]
+  ],
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe"
 }
