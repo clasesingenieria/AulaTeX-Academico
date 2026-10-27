@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-23",
+  "subject": "Derecho penal especial mexicano",
+  "activity": 5,
+  "pipeline_contract": "aulaTEX/aulatex/activity_contract.py::REALIZAR_ACTIVIDAD_PIPELINE_CONTRACT",
+  "orchestration": "fases observables coordinadas; no se atribuye ejecución del comando agent realizar-actividad",
+  "why_no_monolithic_agent": "El contrato iterative_improvement_rules.prefer_observable_monitor admite orquestador dedicado; los insumos, redacción, observación, compilación y revisión visual se registran por separado.",
+  "not_modified": [
+    "activity_contract.py",
+    "activity_observer.py",
+    "activity_optimizer.py",
+    "didactic_catalog.py",
+    "puntuadores"
+  ],
+  "contract_code_sha256": {
+    "activity_contract.py": "389755e7b712783bda8a678a839196565e8670901db47a259dce5cc8c0b71496",
+    "activity_observer.py": "b280c536397b479a27563a970b962c2fe6f4b6158200865f8b21e98df4a70c2b",
+    "activity_optimizer.py": "3b5d681532b22b1c4fad9287d53689baf01c15ba42c6fe85cb052ede7766792a",
+    "didactic_catalog.py": "8c5c21eb22625a32e656e172748c6bd9c025a5b8018c30f11ba3d0b0fe532b27"
+  },
+  "pre_authoring_phases": {
+    "discover_node": true,
+    "consult_local_ancestor_related_memories": true,
+    "teacher_inputs_downloaded_and_transcribed": true,
+    "sources_researched_and_inventory_created": true,
+    "didactic_contracts_selected": true,
+    "normalized_planning_prepared": true,
+    "extractor_run_real": true,
+    "detail_planner_run_real": true
+  },
+  "extractor_runs": [
+    {
+      "manifest": "aulaTEX\\retroalimentacion-editorial\\aulatex\\extractor\\runs\\20261023-174937-extractor\\manifest.json",
+      "ok": false,
+      "reason": "Interrumpido sólo el subproceso de esta tarea después de varios minutos de CPU con gacetas completas irrelevantes; se conservan fuentes, inventario y manifiesto. Se reemplazó el corpus por selección jurídica trazable, sin cambiar el extractor."
+    },
+    {
+      "manifest": "aulaTEX\\retroalimentacion-editorial\\aulatex\\extractor\\runs\\20261023-175408-extractor\\manifest.json",
+      "ok": true,
+      "reason": "Primera corrida focalizada; el parser absorbió un relato de ficha en conceptos. Salidas e input conservados en revisiones/extractor-lectura-inicial."
+    },
+    {
+      "manifest": "aulaTEX\\retroalimentacion-editorial\\aulatex\\extractor\\runs\\20261023-175539-extractor\\manifest.json",
+      "ok": true,
+      "reason": "Corrida definitiva con encabezados reconocibles y conceptos al final del input; no se editaron salidas ni algoritmo."
+    }
+  ],
+  "final_concepts": [
+    "agravantes",
+    "agravantes y atenuantes",
+    "atenuantes",
+    "autorización apoyo o aquiescencia",
+    "consentimiento",
+    "custodia",
+    "desaparición cometida por particulares",
+    "desaparición forzada",
+    "guarda",
+    "guarda y custodia",
+    "interés superior de la niñez",
+    "libertad personal",
+    "ocultamiento",
+    "presunción de inocencia",
+    "privación de libertad",
+    "rescate",
+    "retención",
+    "retención sustracción",
+    "retención y sustracción",
+    "secuestro",
+    "sustracción",
+    "tipicidad",
+    "tráfico de menores"
+  ],
+  "concepts_count": 23,
+  "teacher_technique_parsed": "Simulación.",
+  "final_artifacts": [
+    {
+      "file": "UnADM\\licenciatura-en-derecho-unadm\\derecho-penal-especial-mexicano-lde\\extractor-aulatex\\conceptos-derecho-penal-especial-mexicano-actividad-5\\fichas_conceptos.json",
+      "bytes": 243037,
+      "sha256": "95fec3bf3d47b23b6933be0fbc7f0a690390bf161de505aea184f5f19fca2c14",
+      "valid_json": true,
+      "type": "list",
+      "records_or_keys": 135
+    },
+    {
+      "file": "UnADM\\licenciatura-en-derecho-unadm\\derecho-penal-especial-mexicano-lde\\extractor-aulatex\\conceptos-derecho-penal-especial-mexicano-actividad-5\\conceptos_detectados.json",
+      "bytes": 565,
+      "sha256": "6f9ba0c1b60657214ca43616df55af0cf36e1aa04cd78282517adee05891ba01",
+      "valid_json": true,
+      "type": "list",
+      "records_or_keys": 23
+    },
+    {
+      "file": "UnADM\\licenciatura-en-derecho-unadm\\derecho-penal-especial-mexicano-lde\\extractor-aulatex\\conceptos-derecho-penal-especial-mexicano-actividad-5\\ideas_detectadas.json",
+      "bytes": 21447,
+      "sha256": "51885c2325c9c81ddecf8089082bea090e8af66bde51e4cc1833605cc9b65f10",
+      "valid_json": true,
+      "type": "list",
+      "records_or_keys": 22
+    },
+    {
+      "file": "UnADM\\licenciatura-en-derecho-unadm\\derecho-penal-especial-mexicano-lde\\extractor-aulatex\\conceptos-derecho-penal-especial-mexicano-actividad-5\\trazabilidad_fuentes.json",
+      "bytes": 147141,
+      "sha256": "abeea07e22af7a12de39409ab3d5ef19555d1e27c2f08d445ef21bb429154e8d",
+      "valid_json": true,
+      "type": "list",
+      "records_or_keys": 135
+    },
+    {
+      "file": "UnADM\\licenciatura-en-derecho-unadm\\derecho-penal-especial-mexicano-lde\\extractor-aulatex\\conceptos-derecho-penal-especial-mexicano-actividad-5\\resumen_planeacion.json",
+      "bytes": 6736,
+      "sha256": "c95dacc45f3a41761ceb48f2e64ca82fa1036769e1310ca81650822307f7297d",
+      "valid_json": true,
+      "type": "dict",
+      "records_or_keys": 13
+    }
+  ],
+  "planner": {
+    "manifest": "UnADM\\licenciatura-en-derecho-unadm\\derecho-penal-especial-mexicano-lde\\referencias-derecho-penal-especial-mexicano\\notas-derecho-penal-especial-mexicano\\actividad-05-delitos-contra-libertad-personal\\revisiones\\planeacion-editorial\\20261023-175620-detail-planner\\manifest.json",
+    "ok": true,
+    "activity_detected_technique": "simulacion",
+    "seed_scope": {
+      "scope_key": "UnADM/licenciatura-en-derecho-unadm/derecho-penal-especial-mexicano-lde/actividad-5",
+      "scope_level": "actividad",
+      "label": "Actividad 5",
+      "relative_path": "UnADM/licenciatura-en-derecho-unadm/derecho-penal-especial-mexicano-lde",
+      "institution": "UnADM",
+      "career": "licenciatura-en-derecho-unadm",
+      "subject": "derecho-penal-especial-mexicano-lde",
+      "activity": "Actividad 5",
+      "parent_key": "UnADM/licenciatura-en-derecho-unadm/derecho-penal-especial-mexicano-lde"
+    },
+    "processed_count": 1,
+    "backtrack_to_ancestors": false
+  },
+  "limits": "El extractor genera coincidencias y fichas de apoyo, no acredita hechos ni validez jurídica automática. La selección normativa, jurisprudencial y citas debe cotejarse en fuentes primarias; evaluación/compilación/revisión visual del reporte corresponden a fases posteriores."
+}

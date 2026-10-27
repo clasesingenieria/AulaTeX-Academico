@@ -1,0 +1,42 @@
+\newcommand{\actividadtitulo}{Fundamentos y verificación de operaciones en Excel}
+\newcommand{\actividadtipo}{Preparación de la práctica de Excel básico S2}
+\newcommand{\uasfecha}{22 de octubre de 2026}
+\newcommand{\actividadpreliminares}{%
+\section*{Resumen}\addcontentsline{toc}{section}{Resumen}
+Se revisan libros, hojas, celdas, rangos y fórmulas de Excel mediante un ejemplo didáctico de importes. Se distinguen valores, formatos y referencias relativas y absolutas. La verificación utiliza operaciones independientes para detectar errores y no depende únicamente de que una fórmula pueda ejecutarse.
+\clearpage\tableofcontents\clearpage}
+\newcommand{\actividadcontenido}{%
+\section{Introducción}
+Una hoja de cálculo organiza datos y relaciona celdas mediante fórmulas. Su utilidad depende de que los datos estén definidos, las operaciones correspondan al problema y los resultados sean revisados. El formato monetario puede mejorar la lectura, pero no corrige una fórmula o un dato equivocado.
+\section{Estructura del libro}
+El libro contiene hojas; cada hoja se organiza en filas y columnas. La referencia B2 identifica una celda y B2:B4 un rango. Antes de calcular, se asignan encabezados y unidades, se distinguen entradas de resultados y se evita mezclar totales con registros individuales. La documentación de Microsoft reúne formación sobre fórmulas, funciones y formato de datos \parencite{microsoftExcel}.
+\section{Ejemplo didáctico de importes}
+Los siguientes datos son hipotéticos y no se atribuyen a los ejercicios del profesor. El propósito es comprobar multiplicación, suma y referencias.
+\par\medskip
+\noindent\begin{tabularx}{\textwidth}{@{}Xrrr@{}}\toprule
+Concepto & Cantidad & Precio unitario & Importe\\\midrule
+Cuadernos & 3 & 40.00 & 120.00\\
+Carpetas & 2 & 25.00 & 50.00\\
+Lápices & 5 & 8.00 & 40.00\\\midrule
+Total & & & 210.00\\\bottomrule
+\end{tabularx}
+\par
+Si cantidad y precio están en B2 y C2, el importe en D2 se obtiene con \texttt{=B2*C2}. Al copiar hacia abajo, las referencias relativas cambian a B3 y C3 y después a B4 y C4. El total puede expresarse como \texttt{=SUMA(D2:D4)} en una instalación con nombres de funciones en español; la configuración regional puede cambiar nombres o separadores.
+\section{Referencias relativas y absolutas}
+Para un descuento didáctico uniforme de 10\%, se coloca 0.10 en F2 y se calcula en E2 \texttt{=D2*(1-\$F\$2)}. La referencia absoluta mantiene la tasa al copiar la fórmula; D2 continúa siendo relativa. Los resultados esperados son 108.00, 45.00 y 36.00, con total de 189.00. Esta tasa no representa un impuesto ni una condición comercial real.
+\section{Comprobación independiente}
+\begin{enumerate}
+\item Verificar manualmente los productos: $3(40)=120$, $2(25)=50$ y $5(8)=40$.
+\item Sumar los importes: $120+50+40=210$.
+\item Comprobar el descuento total: $210(0.10)=21$ y $210-21=189$.
+\item Revisar las fórmulas de las filas copiadas para confirmar que la tasa permanece en F2.
+\item Comprobar que los valores son numéricos y que el rango del total no incluye su propia celda.
+\end{enumerate}
+\section{Organización de los ejercicios de clase}
+Los ejercicios realizados durante la clase y los propuestos por el docente deben integrarse en el mismo libro según las instrucciones de la sesión. Cada hoja necesita un nombre claro, encabezados, datos de entrada y resultados comprobables. El ejemplo de este reporte sirve para preparación; no reemplaza la lista de ejercicios asignados ni acredita que el libro requerido ya esté terminado.
+}
+\newcommand{\actividadcierre}{%
+\section{Conclusiones}
+La confiabilidad de una hoja de cálculo depende de la relación entre datos, referencias y operaciones. Las referencias absolutas permiten conservar parámetros al copiar fórmulas, mientras que una comprobación independiente ayuda a detectar errores de rango o de interpretación. La presentación debe facilitar la revisión sin ocultar las operaciones que originan el resultado.\footnote{Se utilizó el chat de GitHub Copilot como apoyo para la redacción, organización documental y comprobación del ejemplo didáctico.}
+\clearpage}
+\input{reporte-herramientas-digitales-plantilla-actividad.tex}

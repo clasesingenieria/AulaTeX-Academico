@@ -1,0 +1,142 @@
+# Referencias y materiales
+
+El catalogo conserva URL, origen, estado, tamanio y SHA-256. Descarga no equivale a lectura o verificacion bibliografica.
+
+- [Programa](https://virtual.uas.edu.mx/fca/mod/resource/view.php?id=50084): No descargado; requiere revision.
+- [Unidad 4. Introducción (1. Fundamentos de Excel)](https://virtual.uas.edu.mx/fca/mod/resource/view.php?id=50119): No descargado; requiere revision.
+- [Unidad 4. Introducción (2. Trabajar con Excel)](https://virtual.uas.edu.mx/fca/mod/resource/view.php?id=50120): No descargado; requiere revision.
+- [Unidad 4. Fórmulas y funciones(3. Fórmulas y funciones)](https://virtual.uas.edu.mx/fca/mod/resource/view.php?id=50121): No descargado; requiere revision.
+- [Unidad 4. Fórmulas y funciones (4. Funciones que cuentan y suma)](https://virtual.uas.edu.mx/fca/mod/resource/view.php?id=50122): No descargado; requiere revision.
+- [Unidad 4. Fórmulas y Funciones (6. Trabajar con Textos)](https://virtual.uas.edu.mx/fca/mod/resource/view.php?id=50123): No descargado; requiere revision.
+- [Unidad 4. Fórmulas y funciones (7. Trabajar con fechas y horas)](https://virtual.uas.edu.mx/fca/mod/resource/view.php?id=50124): No descargado; requiere revision.
+- [Unidad 5. Funciones (Lógicas) (5. Condiciones)](https://virtual.uas.edu.mx/fca/mod/resource/view.php?id=50134): No descargado; requiere revision.
+- [Unidad 5. Busquedas (8. Funciones Busqueda y Referencias)](https://virtual.uas.edu.mx/fca/mod/resource/view.php?id=50135): No descargado; requiere revision.
+- [Unidad 5. Tablas y tablas dinámicas (9. Tablas y tablas dinámicas)](https://virtual.uas.edu.mx/fca/mod/resource/view.php?id=50136): No descargado; requiere revision.
+- [Unidad 5 Filtros-Formato condicional (11. Administrar datos)](https://virtual.uas.edu.mx/fca/mod/resource/view.php?id=50137): No descargado; requiere revision.
+- [Unidad 4 Gráficos (10. Gráficos)](https://virtual.uas.edu.mx/fca/mod/resource/view.php?id=50138): No descargado; requiere revision.
+- [www.wix.com](http://www.wix.com): Enlace del aula; contenido externo pendiente de cotejo.
+- [01_ListaProductos.xlsx](materiales-aula/816cf47add-01_ListaProductos.xlsx): Descargado; SHA-256 `816cf47addfce3ec443e8d7edebfe65b6a92512dfd7337b50b1fee7fc2bd3756`.
+- [02_Ventas.xlsx](materiales-aula/236e9c1bd9-02_Ventas.xlsx): Descargado; SHA-256 `236e9c1bd99b29158c25aa2f8efe77122626779667d7715843113c083f219b53`.
+- [03_Participantes.xlsx](materiales-aula/189f0bc71e-03_Participantes.xlsx): Descargado; SHA-256 `189f0bc71ed13b2251225c9f3a1ce35ad92189a46b318efed093ffa5efdd1b85`.
+- [04_Impresión.xlsx](materiales-aula/326d77c9f1-04_Impresión.xlsx): Descargado; SHA-256 `326d77c9f1a0139fe319a1fe22cd9c9fe7ae76bb001980a9687ce5bde89bf274`.
+- [05_Area de impresión.xlsx](materiales-aula/61d372fd22-05_Area%20de%20impresión.xlsx): Descargado; SHA-256 `61d372fd22d282871a387b01d7337f211fcf8a589c6bd5bc37e72fcc86b9ed1c`.
+- [06_Imprimir Títulos.xlsx](materiales-aula/db0f1606d4-06_Imprimir%20Títulos.xlsx): Descargado; SHA-256 `db0f1606d485a6c17f10a69bb0e4259ac9d9da96cfe6d0ad4650477f4a9bf354`.
+- [mapa.png](materiales-aula/b23566d99b-mapa.png): Descargado; SHA-256 `b23566d99bed86f3b24a58cf50045042625d55608fa340aa26444add429174f5`.
+- [01_Mapas.xlsx](materiales-aula/3adbfdd343-01_Mapas.xlsx): Descargado; SHA-256 `3adbfdd3438ec4a672457245ccfee30f1bbc9b2dbd2fde0ca128cf599e5622e5`.
+- [02_ResumenGanancias.xlsx](materiales-aula/de0b8752a5-02_ResumenGanancias.xlsx): Descargado; SHA-256 `de0b8752a5e1e62702883e63ccf686136f4aee953d2f149c8b2a130d01102cc1`.
+- [03_Ventas.xlsx](materiales-aula/6496edc5d9-03_Ventas.xlsx): Descargado; SHA-256 `6496edc5d92913ea8f89149fd85642a6c03b531888b7379d1fca1e8f971bf9ae`.
+- [04_Vendedores.xlsx](materiales-aula/af65d432ab-04_Vendedores.xlsx): Descargado; SHA-256 `af65d432aba2e57606bbf87164c03b24bc627016f2b153f391ce08d804150ade`.
+- [05_Consolidado.xlsx](materiales-aula/de08ac8fea-05_Consolidado.xlsx): Descargado; SHA-256 `de08ac8fea9afd6f599196c52b79d0a31d89020d48b7db666fa31e71d4fbabda`.
+- [06_DiseñoConsolidado.xlsx](materiales-aula/08cb869f55-06_DiseñoConsolidado.xlsx): Descargado; SHA-256 `08cb869f55e0f6853266604638d39818faf91c0ebbf319a7155396912d909835`.
+- [07_FormatosNúmero.xlsx](materiales-aula/e1dd5c7805-07_FormatosNúmero.xlsx): Descargado; SHA-256 `e1dd5c78054fe343ee488698c9706fc2a62e2c5b676faea71be3b826d643837e`.
+- [08_AjustarFilasColumnas.xlsx](materiales-aula/344ae8ac6e-08_AjustarFilasColumnas.xlsx): Descargado; SHA-256 `344ae8ac6e84a56d3633c90dcdc54600cae77381c49c7949963d86b6dd953ae0`.
+- [09_BordesBásicos.xlsx](materiales-aula/d1744b4d6a-09_BordesBásicos.xlsx): Descargado; SHA-256 `d1744b4d6a5e578bfcba5ec79692f479d5b8f2bd0b12f5e69e43f3904ce705f0`.
+- [10_Alinear.xlsx](materiales-aula/88cae570f5-10_Alinear.xlsx): Descargado; SHA-256 `88cae570f528ba3b787420be8a52cc69b837e10d1046b1019b7f668c3febbf6a`.
+- [ResumenGanancias_Compartido.xlsx](materiales-aula/99f912e340-ResumenGanancias_Compartido.xlsx): Descargado; SHA-256 `99f912e340b0538d73be3c34212b4a93e14f30a16c132ad0204fc79f0e710f13`.
+- [ResumenGanancias_Finalizado - copia.xlsx](materiales-aula/43a4bae76a-ResumenGanancias_Finalizado%20-%20copia.xlsx): Descargado; SHA-256 `43a4bae76a344b048c953b72cdd9ee70257b192ccf4c3a86e8c149cc2885eb47`.
+- [ResumenGanancias_Finalizado.xlsx](materiales-aula/8d0ed8855e-ResumenGanancias_Finalizado.xlsx): Descargado; SHA-256 `8d0ed8855e354f4899b4e4e108821c2440807842c46055177cd9aafda42b876c`.
+- [01_Proyectos.xlsx](materiales-aula/ccbbeb1b7b-01_Proyectos.xlsx): Descargado; SHA-256 `ccbbeb1b7b28d092339d0cea7f7432b3f9b50d8a5671e84e5cc10f418760ce29`.
+- [02_Referencias.xlsx](materiales-aula/5a8d0def2a-02_Referencias.xlsx): Descargado; SHA-256 `5a8d0def2ae05569a03f2ae299b9af99f26336fd58f61b19e2dbcb607f0e6829`.
+- [03_ResumenGanancias.xlsx](materiales-aula/a656f07655-03_ResumenGanancias.xlsx): Descargado; SHA-256 `a656f0765529996d1b60c30538290fbd7cf072e88e7cca0bf7eeb254f2ac29e0`.
+- [04_Descargas.xlsx](materiales-aula/f08804abc2-04_Descargas.xlsx): Descargado; SHA-256 `f08804abc2b904c29d4d99e2090dbf29705c9eed2d1e55b2075ec5f95929c041`.
+- [Alquiler.xlsx](materiales-aula/70f7f47fe1-Alquiler.xlsx): Descargado; SHA-256 `70f7f47fe101a3518bc1bd69cdb93ed8da0fabb8a96c5da37ccf406d5a8c21b5`.
+- [Hoteles.xlsx](materiales-aula/9298f6d930-Hoteles.xlsx): Descargado; SHA-256 `9298f6d930a200ac55a5cc6bd60d41e9f5f177ccd16e5e9844281a14d27eaf69`.
+- [Corporación_Televisiva.xlsx](materiales-aula/25928ee8f2-Corporación_Televisiva.xlsx): Descargado; SHA-256 `25928ee8f2670dc3cfb41306f7957a3e9232a7a2445588f00deec5d6c8a9596f`.
+- [Estaturas.xlsx](materiales-aula/6c4158736e-Estaturas.xlsx): Descargado; SHA-256 `6c4158736e3975ecd9c8859451151dad32533d85e7501cc6ced279f03139ec90`.
+- [VentaMaquillaje.xlsx](materiales-aula/ce7faeb208-VentaMaquillaje.xlsx): Descargado; SHA-256 `ce7faeb208ab925d3a645423e13acf7981b24896ab5b3537dce47abe4a3e72b9`.
+- [VentasPorPedido.xlsx](materiales-aula/75ff6b4cf0-VentasPorPedido.xlsx): Descargado; SHA-256 `75ff6b4cf075ce6f04dec5b9a406a40e12b3cd04bcf16cb180af9062b729fd45`.
+- [01_FunciónLogica.xlsx](materiales-aula/a232d31dd8-01_FunciónLogica.xlsx): Descargado; SHA-256 `a232d31dd8a4d7508298d2a35fa2c0580d9b242798e0e73b56330f70fc8da681`.
+- [02_SIAnidado.xlsx](materiales-aula/7686b2b039-02_SIAnidado.xlsx): Descargado; SHA-256 `7686b2b0391804c1c428f30083c83ad5249e0b337ab2938f4d6a7abe217b13aa`.
+- [03_Certificaciones.xlsx](materiales-aula/2f17f1fb03-03_Certificaciones.xlsx): Descargado; SHA-256 `2f17f1fb033fd92bbfa6c64a654b18cae24462fe2fded96132c60a4d431832fc`.
+- [Alumnos - resuelto.xlsx](materiales-aula/7c4c5c47be-Alumnos%20-%20resuelto.xlsx): Descargado; SHA-256 `7c4c5c47bebe14c6cb629c8eb502f2c379bc91d1119ac66bbfba9744f87d193e`.
+- [Alumnos.xlsx](materiales-aula/70debcc256-Alumnos.xlsx): Descargado; SHA-256 `70debcc2567f3e96035d2873ef26d61edd7a0b1fb3893864fd88bd3380069688`.
+- [EstadosMaquillaje.xlsx](materiales-aula/0b46df3377-EstadosMaquillaje.xlsx): Descargado; SHA-256 `0b46df33773f94f4416d4c5b796bb1ade86941518087d690f91ee69d716da144`.
+- [Gastos - resuelto.xlsx](materiales-aula/dde2afd41a-Gastos%20-%20resuelto.xlsx): Descargado; SHA-256 `dde2afd41ad61d0c215079e05a47497adf3e5c44e05e08a9f9849ef1d93d1145`.
+- [Gastos.xlsx](materiales-aula/71f623e337-Gastos.xlsx): Descargado; SHA-256 `71f623e337dc15c28572ce5811dd3f858fd891290d0dd22228790c8f7b10d8e1`.
+- [Plantilla.xlsx](materiales-aula/200d974869-Plantilla.xlsx): Descargado; SHA-256 `200d974869d9b9ea3279e45410eb844d6fafdf0e3cb665ad692be25efe9887f1`.
+- [01_TextoColumnas.xlsx](materiales-aula/88bcc8bf6e-01_TextoColumnas.xlsx): Descargado; SHA-256 `88bcc8bf6ea7d3816037deac985ffb055a695c7a0c0dd66aff7c0aa877b7d891`.
+- [02_RellenoRápido.xlsx](materiales-aula/595a8a7e3e-02_RellenoRápido.xlsx): Descargado; SHA-256 `595a8a7e3e90588a46ae09ed52a039c1a080d70c6917e1eb7e91033356ac26a8`.
+- [Ejemplo_Cuenta.xlsx](materiales-aula/13f9f11308-Ejemplo_Cuenta.xlsx): Descargado; SHA-256 `13f9f11308b0ea1d342566fe837bb7a6c35bab0c6117134b824149280cbf30e4`.
+- [FuncionesTexto.xlsx](materiales-aula/e72c79a42b-FuncionesTexto.xlsx): Descargado; SHA-256 `e72c79a42b49098883f2a8a98e8587582da88b69c09230a29f4f69146a3cb722`.
+- [ParticipantesCódigo.xlsx](materiales-aula/075ec346e8-ParticipantesCódigo.xlsx): Descargado; SHA-256 `075ec346e81b4a056526864ce7d63471930c74213c292c19e2ca1dfd702189ac`.
+- [Funciones de Fecha.xlsx](materiales-aula/0e29cf445d-Funciones%20de%20Fecha.xlsx): Descargado; SHA-256 `0e29cf445dfadc53c86e40e5faa01227bf3b262af706093bad121d10e5a2b7e1`.
+- [Interés Moratorio.xlsx](materiales-aula/7901270eeb-Interés%20Moratorio.xlsx): Descargado; SHA-256 `7901270eeb31a0c75ca7a571b41d27a49cee52f8a20b78490398425309854701`.
+- [Mundial Qatar.xlsx](materiales-aula/f8586f6d65-Mundial%20Qatar.xlsx): Descargado; SHA-256 `f8586f6d65630d91c187073b38dbae8c3e35613453201525c47f493ff4e87e59`.
+- [PlanProyecto.xlsx](materiales-aula/c73ecf42af-PlanProyecto.xlsx): Descargado; SHA-256 `c73ecf42af18610119ee90d600eee026643e9e502bafc5a17257509fbe658bfe`.
+- [01_Elegir.xlsx](materiales-aula/845b75ba26-01_Elegir.xlsx): Descargado; SHA-256 `845b75ba268e6200bc35f9b84cb951865a9ca37916aab7d6e92562ba36dadb36`.
+- [02_BuscarV.xlsx](materiales-aula/478b6ef1d8-02_BuscarV.xlsx): Descargado; SHA-256 `478b6ef1d82dc0075c128fdda96d97a0b81f7c42805ef9d44b1be14a29ccb2b6`.
+- [03_RangoAproximado.xlsx](materiales-aula/49fdd10c33-03_RangoAproximado.xlsx): Descargado; SHA-256 `49fdd10c332e2dcb7e40eee5398a6914893577c9e4e437dc9b4c36eb8a287c42`.
+- [04_BuscarH.xlsx](materiales-aula/9769fe6698-04_BuscarH.xlsx): Descargado; SHA-256 `9769fe66980a439711fca3b936f0f5921ceb3677178fa43d8ab37ef7b7dbfe87`.
+- [Letras_Alfabeto.xlsx](materiales-aula/4816be8557-Letras_Alfabeto.xlsx): Descargado; SHA-256 `4816be8557f86b67baecf86ef496d3b283ef7f01da083a8643e8e2a769f9b08c`.
+- [Puntaje.xlsx](materiales-aula/cd849b5f38-Puntaje.xlsx): Descargado; SHA-256 `cd849b5f38d877a11ff420642380682c671a0db3d0b412a50c01e29050a88df4`.
+- [Referencias.xlsx](materiales-aula/4fbcbaa317-Referencias.xlsx): Descargado; SHA-256 `4fbcbaa3172a1231598f23c6b18d9b072e6faa16b17479db58bb06e4e8fb8362`.
+- [SelecciónCódigo.xlsx](materiales-aula/9f4890c5fe-SelecciónCódigo.xlsx): Descargado; SHA-256 `9f4890c5fe231da44c049bb12cc6a7b775b00e6510eb106a16cb2ac6cec33b6a`.
+- [01_ListaInmobiliaria.xlsx](materiales-aula/82119b3322-01_ListaInmobiliaria.xlsx): Descargado; SHA-256 `82119b33229c90873de397cb6e3503b56020a3323505ae5a330a6eac0cec791f`.
+- [02_EstilosTablas.xlsx](materiales-aula/97372781cc-02_EstilosTablas.xlsx): Descargado; SHA-256 `97372781cc5f446018f49a70c37659516e0dce6b986b8a68a69065040573b2c1`.
+- [03_Ordenar y Filtrar.xlsx](materiales-aula/657f53fc38-03_Ordenar%20y%20Filtrar.xlsx): Descargado; SHA-256 `657f53fc38a4504eae10193ff330afd7d7a4b87ef0e1e2cc0ae15159d1011647`.
+- [04_ Tabla Dinámica Recomendada.xlsx](materiales-aula/3cf6d4c179-04_%20Tabla%20Dinámica%20Recomendada.xlsx): Descargado; SHA-256 `3cf6d4c1796b31605937dc8746346702080847d0be467a9982fc02b5bfee74a9`.
+- [05_Tablas Dinámicas.xlsx](materiales-aula/3cf6d4c179-05_Tablas%20Dinámicas.xlsx): Descargado; SHA-256 `3cf6d4c1796b31605937dc8746346702080847d0be467a9982fc02b5bfee74a9`.
+- [Exportación.xlsx](materiales-aula/b8f75dbeda-Exportación.xlsx): Descargado; SHA-256 `b8f75dbedac7ebc4d9cba368f24bee60a75d8e19386783702960cdd41c98e595`.
+- [Mis Estilos_Finalizado.xlsx](materiales-aula/ccdd072bd5-Mis%20Estilos_Finalizado.xlsx): Descargado; SHA-256 `ccdd072bd55c18bcb676c0269261fece22f8cf9aeb01d57be5666225398b2af1`.
+- [Tabla Inmobiliaria.xlsx](materiales-aula/bf5e72a5da-Tabla%20Inmobiliaria.xlsx): Descargado; SHA-256 `bf5e72a5da8533695e057074f2269300098e3c4525d75fdbeb1ab06c572f5908`.
+- [01_Crear Gráficos.xlsx](materiales-aula/47aa355fc0-01_Crear%20Gráficos.xlsx): Descargado; SHA-256 `47aa355fc022a7639d86d4e308d50b0d14f792917341e1d9d46f0eb40a6eaa98`.
+- [02_Estilos Diseños.xlsx](materiales-aula/fa42cbad2d-02_Estilos%20Diseños.xlsx): Descargado; SHA-256 `fa42cbad2d63e65a14d22c517f0c45a8a49d88b62351aaad58040d7b66446dcb`.
+- [03_FlujoCaja.xlsx](materiales-aula/2d4233619f-03_FlujoCaja.xlsx): Descargado; SHA-256 `2d4233619f051dde32419d11855e4ee303724774e425483de6214e5506af5246`.
+- [04_Censo2007.xlsx](materiales-aula/434758a4f5-04_Censo2007.xlsx): Descargado; SHA-256 `434758a4f511cd577a9e4cedbc48d005c6ab20317ec59d59475b869d134e5306`.
+- [05_Mapas.xlsx](materiales-aula/0afdbd51ea-05_Mapas.xlsx): Descargado; SHA-256 `0afdbd51ea9a76473e04336e12b721df894fb4cf59b201c865bb4726d77ea52d`.
+- [Ingresos.xlsx](materiales-aula/f95eb6354a-Ingresos.xlsx): Descargado; SHA-256 `f95eb6354ae814020682eff19eebedb37b37d5fcd9ecab236c888e7b54986d50`.
+- [01_Listas de datos.xlsx](materiales-aula/ab86520367-01_Listas%20de%20datos.xlsx): Descargado; SHA-256 `ab86520367984697f90ae8331045b57c75e9617552ad6edcadc64810a1b8fe12`.
+- [02_Subtotales.xlsx](materiales-aula/5a3e363f0c-02_Subtotales.xlsx): Descargado; SHA-256 `5a3e363f0cd2ea3c488362546c397b8c0c7618777632a15ed6b029f1a1abee27`.
+- [03_Esquemas.xlsx](materiales-aula/a66b9b3bf1-03_Esquemas.xlsx): Descargado; SHA-256 `a66b9b3bf1cd7d6128a81e8cb2f447e2dcb6b2a14d806de572862a2ff55fbc7a`.
+- [04_Validación.xlsx](materiales-aula/9d5f0244e5-04_Validación.xlsx): Descargado; SHA-256 `9d5f0244e5e5bac0adfad1bdca07e8e99f55f04a40f158534143005cbdb4534f`.
+- [05_Listas.xlsx](materiales-aula/267565a04d-05_Listas.xlsx): Descargado; SHA-256 `267565a04da10b5d60f501c26acc2058dbf38c058d4084ee158d0218ea7bd45b`.
+- [06_Formato Prestablecido.xlsx](materiales-aula/3fc997fcbf-06_Formato%20Prestablecido.xlsx): Descargado; SHA-256 `3fc997fcbf6bfc46a3c673a86c1a422eeed6b88fc172b8f9c9fc02451dd4cc6e`.
+- [07_Crear reglas.xlsx](materiales-aula/4c6bb17365-07_Crear%20reglas.xlsx): Descargado; SHA-256 `4c6bb17365b35ba43b1a85b082af11813dbd932e778e6762e6785701be8aefbe`.
+- [08_Sombreado.xlsx](materiales-aula/3247c2d18d-08_Sombreado.xlsx): Descargado; SHA-256 `3247c2d18ddea880fd4ea8a39bbd59f11bd858ebdd2f66f57e487b558fca07db`.
+- [Excel 2021  365 Paso a Paso.pdf](materiales-aula/065fdafd31-Excel%202021%20%20365%20Paso%20a%20Paso.pdf): Descargado; SHA-256 `065fdafd31968cc242dabddeb4b959eb69b2f8b350491feb5557d7348d42969d`.
+- [Excel-2019-Paso-a-Paso-Valentinbook-Publishing.pdf](materiales-aula/a4ea4613fc-Excel-2019-Paso-a-Paso-Valentinbook-Publishing.pdf): Descargado; SHA-256 `a4ea4613fc1a6db0840d731dedd92c48a0c1dcb1c3dcee40a074ebdeadffa380`.
+- [Referencias Relativas y Referencias Absolutas.xlsx](materiales-aula/d2bc03cc91-Referencias%20Relativas%20y%20Referencias%20Absolutas.xlsx): Descargado; SHA-256 `d2bc03cc91a9e8ed24bb1bc8d030a02013387decc74d482447cd6fa69049bd35`.
+- [https://aws.amazon.com/es/what-is/quantum-computing/](https://aws.amazon.com/es/what-is/quantum-computing/): Enlace del aula; contenido externo pendiente de cotejo.
+- [https://www.arbentia.com/blog/nuevas-tecnologias-tendencias-energias-renovables-2023/](https://www.arbentia.com/blog/nuevas-tecnologias-tendencias-energias-renovables-2023/): Enlace del aula; contenido externo pendiente de cotejo.
+- [https://www.santander.com/es/stories/guia-para-saber-que-son-las-criptomonedas](https://www.santander.com/es/stories/guia-para-saber-que-son-las-criptomonedas): Enlace del aula; contenido externo pendiente de cotejo.
+- [http://www.us.es/pixelbit/art94.htm](http://www.us.es/pixelbit/art94.htm): Enlace del aula; contenido externo pendiente de cotejo.
+- [https://www.cisco.com/c/es_mx/solutions/what-is-5g.html](https://www.cisco.com/c/es_mx/solutions/what-is-5g.html): Enlace del aula; contenido externo pendiente de cotejo.
+- [https://openaccess.uoc.edu/bitstream/10609/3234/1/dans.pdf](https://openaccess.uoc.edu/bitstream/10609/3234/1/dans.pdf): Enlace del aula; contenido externo pendiente de cotejo.
+- [http://www.enriquedans.com/2011/10/big-data-una-pequena-introduccion.html](http://www.enriquedans.com/2011/10/big-data-una-pequena-introduccion.html): Enlace del aula; contenido externo pendiente de cotejo.
+- [https://comunica-web.com/blog/marketing-digital/plataformas-elearning/](https://comunica-web.com/blog/marketing-digital/plataformas-elearning/): Enlace del aula; contenido externo pendiente de cotejo.
+- [https://www.ibm.com/mx-es/topics/blockchain](https://www.ibm.com/mx-es/topics/blockchain): Enlace del aula; contenido externo pendiente de cotejo.
+- [https://www.sistemas-catalunya.com/herramientas-colaborativas/](https://www.sistemas-catalunya.com/herramientas-colaborativas/): Enlace del aula; contenido externo pendiente de cotejo.
+- [https://www.oracle.com/mx/internet-of-things/what-is-iot/](https://www.oracle.com/mx/internet-of-things/what-is-iot/): Enlace del aula; contenido externo pendiente de cotejo.
+- [watch](https://www.youtube.com/watch?v=rhYlTG8CtMY): Enlace del aula; contenido externo pendiente de cotejo.
+- [BOI4hiP93fQ](https://www.youtube.com/embed/BOI4hiP93fQ): Enlace del aula; contenido externo pendiente de cotejo.
+- [DataScience ForBusiness](https://www.youtube.com/@DataScienceForBusiness): Enlace del aula; contenido externo pendiente de cotejo.
+- [V9Kr2SujqHw](https://www.youtube.com/embed/V9Kr2SujqHw): Enlace del aula; contenido externo pendiente de cotejo.
+- [Dpt CSV](https://www.youtube.com/@DotCSV): Enlace del aula; contenido externo pendiente de cotejo.
+- [pKiOnUXp7hA](https://www.youtube.com/embed/pKiOnUXp7hA): Enlace del aula; contenido externo pendiente de cotejo.
+- [Simplificando](https://www.youtube.com/@Simplif): Enlace del aula; contenido externo pendiente de cotejo.
+- [¿Qúe es el Bog Data?](https://www.oracle.com/mx/big-data/what-is-big-data/): Enlace del aula; contenido externo pendiente de cotejo.
+- [¿Qué es la mineria de datos?](https://aws.amazon.com/es/what-is/data-mining/#:~:text=La%20miner%C3%ADa%20de%20datos%20es,relaciones%20ocultas%20en%20sus%20datos.): Enlace del aula; contenido externo pendiente de cotejo.
+- [¿Qué es el Internet de las cosas?](https://aws.amazon.com/es/what-is/iot/): Enlace del aula; contenido externo pendiente de cotejo.
+- [https://google.com](https://google.com.mx/): Enlace del aula; contenido externo pendiente de cotejo.
+- [KLaM3DtoSvU](https://www.youtube.com/embed/KLaM3DtoSvU): Enlace del aula; contenido externo pendiente de cotejo.
+- [Cristina García](https://www.youtube.com/@cristinagarcia6717): Enlace del aula; contenido externo pendiente de cotejo.
+- [jmAUii6Htog](https://www.youtube.com/embed/jmAUii6Htog): Enlace del aula; contenido externo pendiente de cotejo.
+- [A2 Capacitación: Excel](https://www.youtube.com/@A2CapacitacionExcel): Enlace del aula; contenido externo pendiente de cotejo.
+- [3GFaMhhxi58](https://www.youtube.com/embed/3GFaMhhxi58): Enlace del aula; contenido externo pendiente de cotejo.
+- [Microsoft Excel a Tono Nivel](https://www.youtube.com/@METN): Enlace del aula; contenido externo pendiente de cotejo.
+- [tULxe5JbVMY](https://www.youtube.com/embed/tULxe5JbVMY): Enlace del aula; contenido externo pendiente de cotejo.
+- [El Tio Tech](https://www.youtube.com/@ElTioTech): Enlace del aula; contenido externo pendiente de cotejo.
+- [oGKgP8zSPKw](https://www.youtube.com/embed/oGKgP8zSPKw): Enlace del aula; contenido externo pendiente de cotejo.
+- [Aula en la nube](https://www.youtube.com/@aulaenlanube): Enlace del aula; contenido externo pendiente de cotejo.
+- [sites.google.com](https://sites.google.com/): Enlace del aula; contenido externo pendiente de cotejo.
+
+## Cotejo externo inicial
+
+- Oracle, Michael Chen, 23/09/2024: Que es el big data. Titulo, autor y contenido cotejados; divulgacion corporativa, no investigacion arbitrada.
+- IBM: Que es blockchain. Titulo y contenido cotejados; divulgacion corporativa. Fecha no acreditada.
+- AWS, computacion cuantica: la herramienta no pudo extraer contenido; enlace conservado, cotejo pendiente.
+- Videos: enlaces registrados, sin afirmar reproduccion ni transcripcion.
+
+## Biblioteca local
+
+Se localizaron candidatos en `C:/Users/Sysx/Documents/Libros/Sistemas computacionales/Alberto Prieto Espinosa/`: Introduccion a la informatica y Conceptos de informatica. No se copiaron originales ni se verificaron edicion o paginas. El aula ya proporciona dos manuales de Excel y ejercicios; consultar la biblioteca para lagunas conceptuales concretas.

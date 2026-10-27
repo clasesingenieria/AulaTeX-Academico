@@ -1,0 +1,187 @@
+\documentclass[spanish,letterpaper,oneside]{article}
+\def\documenttitle {Delitos de peligro efectivo y presunto}
+\def\documentsubtitle {Riesgo, cuidado y responsabilidad penal}
+\def\documentsubject {Actividad 4 - Derecho penal especial mexicano}
+\def\documentauthor {Martín Jonathan de la Cruz}
+\def\coursename {Derecho penal especial mexicano}
+\def\coursecode {020}
+\def\universityname {Universidad Abierta y a Distancia de México}
+\def\universityfaculty {Licenciatura en Derecho}
+\def\universitydepartment {Derecho penal especial mexicano}
+\def\universitydepartmentimage {departamentos/UnADM}
+\def\universitydepartmentimagecfg {height=1.57cm}
+\def\universitylocation {Roma Norte, Ciudad de México}
+\def\authortable {
+  \begin{tabular}{ll}
+    \textbf{Alumno:} & Martín Jonathan de la Cruz \\
+    Matrícula: & ES2611202040 \\
+    Figura docente: & Verónica Ortiz López \\
+    Grupo: & 020 \\
+    Semestre/Bloque: & 2 / 2 \\
+    Semana: & 4 \\
+    \multicolumn{2}{l}{Fecha: 23 de octubre de 2026} \\
+    \multicolumn{2}{l}{\universitylocation}
+  \end{tabular}
+}
+\input{template}
+\def\indexstyle{}
+\def\nameltcont{Tabla de contenido}
+\setcounter{tocdepth}{2}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[most]{tcolorbox}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usetikzlibrary{babel}
+\definecolor{casoverde}{HTML}{174A3A}
+\definecolor{casopapel}{HTML}{F6F7F2}
+\setcitestyle{authoryear,open={(},close={)},citesep={;}}
+\def\pagemargintop{2.3}
+\def\pagemarginbottom{2.3}
+\def\predocpageromannumber{true}
+\def\predocresetpagenumber{true}
+\newcommand{\insertcoverwatermark}{%
+  \AddToShipoutPictureBG*{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[opacity=0.13,inner sep=0pt,yshift=-0.35cm]
+        at (current page.center) {\includegraphics[width=0.72\paperwidth]{img/departamentos/UnADM.pdf}};
+    \end{tikzpicture}%
+  }%
+}
+\newtcolorbox{casoestudio}[1]{
+  enhanced,colback=casopapel,colframe=casoverde,
+  boxrule=0pt,leftrule=2.4pt,arc=1mm,
+  left=2.4mm,right=2.4mm,top=1.7mm,bottom=1.7mm,
+  title={#1},colbacktitle=casoverde,coltitle=white,
+  fonttitle=\bfseries,fontupper=\fontsize{12}{13.8}\selectfont,
+  before skip=5pt,after skip=5pt
+}
+\newcommand{\fichacaso}[1]{%
+  \begin{tcolorbox}[colback=white,colframe=casoverde!25,
+    boxrule=0.4pt,arc=0.6mm,left=1.6mm,right=1.6mm,top=1mm,bottom=1mm,
+    before skip=0pt,after skip=3pt]
+    #1
+  \end{tcolorbox}%
+}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.08}
+\begin{document}
+\insertcoverwatermark
+\templatePortrait
+\templatePagecfg
+\hypersetup{urlcolor=casoverde,citecolor=black,linkcolor=casoverde,linktoc=all}
+\phantomsection\addcontentsline{toc}{section}{Resumen}
+\begin{abstractd}
+Los delitos de peligro protegen la vida, la salud y la subsistencia sin exigir una lesión, siempre que se acrediten los elementos del tipo aplicable. Frente al disparo y al ataque peligroso deben distinguirse ejecución, capacidad lesiva e intención; en el abandono y la omisión de auxilio, el deber y la posibilidad de actuar. El peligro de contagio requiere comprobar la exposición típica, sin confundir diagnóstico con delito. Las diferencias entre los códigos federal, capitalino y de Nuevo León impiden trasladar figuras o recuperar preceptos derogados. La decisión sobre Ana prioriza el interés superior de la niñez y condiciona cualquier condena a prueba suficiente.
+
+\textbf{Palabras clave:} peligro; tipicidad; omisión; deber de cuidado; presunción de inocencia.
+\end{abstractd}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+\templateIndex
+\templateFinalcfg
+\hypersetup{urlcolor=casoverde,citecolor=black,linkcolor=casoverde}
+\fontsize{12}{13.8}\selectfont
+\sectionfont{\color{casoverde}\fontsize{14}{16}\selectfont\bfseries}
+\subsectionfont{\color{casoverde}\fontsize{11.3}{13}\selectfont\bfseries}
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+\titlespacing*{\subsection}{0pt}{5pt}{3pt}
+\section{Introducción}
+\hypertarget{cuerpo-inicio}{}
+Disparar sin herir, dejar a alguien sin cuidado o exponerlo a contagio plantea un límite: prevenir daños sin castigar por intuición. Por ello, la legalidad exige una ``ley exactamente aplicable al delito de que se trata'' (CPEUM, art.~14) \citep{cpeumS4Vigente}. Como los casos no indican lugar ni fecha, los códigos federal (CPF), de Ciudad de México (CPDF) y de Nuevo León (CPNL) permiten contrastar hipótesis; su aplicación depende de competencia y vigencia, no de elegir la sanción más severa.
+
+\section{El riesgo penal y los deberes de protección}
+\subsection*{Elementos del peligro y regulación de las conductas}
+\phantomsection\addcontentsline{toc}{subsection}{Elementos del peligro y regulación de las conductas}
+La \textbf{tipicidad} exige que los hechos satisfagan todos los elementos del tipo; el \textbf{bien jurídico tutelado} es el interés protegido. El \textbf{peligro efectivo} exige exposición concreta; el \textbf{peligro presunto} anticipa la tutela frente a conductas legalmente consideradas peligrosas. Ninguno exige lesión. Sin embargo, la clasificación no elimina los requisitos de peligro expresamente previstos \citep[p.~279]{amuchateguiPenal2012}. La \textbf{omisión} incumple una acción debida y posible; la \textbf{posición de garante} es un deber especial de protección, distinto de la obligación ocasional del observador (CPDF, art.~16) \citep{cpdfS4Vigente}.
+
+% Técnica: valoración de decisiones. Organización: conducta, norma y aplicación a hechos.
+% Síntesis y juicio: distinguir elementos comprobados, alternativas y diligencias pertinentes.
+\begingroup\fontsize{10.5}{12}\selectfont
+\begin{tabularx}{\linewidth}{@{}p{3.1cm}X p{4.15cm}@{}}
+\toprule
+\textbf{Figura} & \textbf{Conducta y condición decisiva} & \textbf{Artículo y legislación} \\
+\midrule
+Disparo sobre persona & Accionar un arma sin causa justificada; el tipo local no exige lesión ni disparar contra alguien. & CPDF 211 Ter. CPF 306 derogado. \\
+Ataque peligroso & Atacar con capacidad de causar muerte por el arma, fuerza, destreza u otra circunstancia. & CPNL 332 y 334; no figura autónoma en CPF ni CPDF revisados. \\
+Abandono de niños y enfermos & Abandonar a niño incapaz de cuidarse o persona enferma, teniendo obligación de cuidado. & CPF 335; CPDF 156 (incapaz de valerse por sí). \\
+Abandono de atropellados & Tras atropellar culposa o fortuitamente, omitir auxilio o asistencia pudiendo prestarlos. & CPF 341; CPDF 157 comprende lesión previa. \\
+Abandono de cónyuge o hijos & Abandonar sin justificación y sin recursos de subsistencia; en CDMX, incumplir alimentos. & CPF 336; equivalente local: CPDF 193; insolvencia deliberada, 194. \\
+Omisión de socorro / cuidado & Socorro: no avisar o auxiliar a persona abandonada en peligro, sin riesgo propio. Cuidado: abandono por obligado. & CPF 340 / 335; CPDF 156 para cuidado, sin identidad con socorro general. \\
+Peligro de contagio & Sabiéndose enfermo en el supuesto legal y período infectante, exponer mediante un medio transmisible. & CPF 199 Bis, vigente; CPDF 159 derogado desde 2024. \\
+\bottomrule
+\end{tabularx}
+\par\vspace{2pt}\textit{Fuentes:} textos oficiales CPF, CPDF y CPNL \citep{cpfS4Vigente,cpdfS4Vigente,cpnlS4Vigente}. La derogación del CPDF 159 corrige la referencia aún incluida en el material docente \citep[p.~8]{unadmPenalS4Material}.
+\endgroup
+
+\clearpage
+\phantomsection\addcontentsline{toc}{subsection}{Caso 1. Disparo de Roberto y agresión de Miguel}
+\begin{casoestudio}{Caso 1. Disparo de Roberto y agresión de Miguel}
+\fichacaso{\textbf{Hechos y problema.} Roberto dispara un arma de fuego hacia Carlos sin lesionarlo; Miguel intenta agredir con un objeto peligroso, pero lo detienen antes de alcanzarlo. ¿Existe delito aunque no haya daño?}
+\textbf{Análisis.} Para Roberto, el CPDF 211 Ter permite investigar el disparo injustificado; comprobar arma, autoría, trayectoria, distancia y una posible causa de justificación. La tentativa de homicidio exige además intención de matar, actos ejecutivos idóneos y falta de consumación ajena a su voluntad (CPDF, arts.~20 y 123); no surge automáticamente de disparar. En cambio, para Miguel, el CPNL 332 exige un ataque con capacidad mortal; el objeto por sí solo no lo acredita. Reconstruir movimientos, zona corporal, fuerza y momento de la intervención: si ya ejecutó el ataque, puede consumarse sin impacto; si no, distinguir preparación de tentativa (CPNL, art.~31). El CPF 306 derogado no fundamenta una imputación actual. \textbf{Conclusión:} ambas hipótesis requieren prueba y ley territorialmente aplicable \citep{cpdfS4Vigente,cpnlS4Vigente,cpfS4Vigente}.
+\end{casoestudio}
+
+\phantomsection\addcontentsline{toc}{subsection}{Caso 2. Ana, el conductor y Pedro}
+\begin{casoestudio}{Caso 2. Ana, el conductor y Pedro}
+\fichacaso{\textbf{Hechos y problema.} Ana deja solo varias horas al menor a su cargo; un conductor atropella y se retira sin pedir ayuda; Pedro omite alimentos indispensables para sus hijos. Son tres hechos independientes.}
+\textbf{Análisis.} La protección de vida, salud y subsistencia depende de deberes diferentes. Para decidir fundadamente, comprobar:
+\begin{itemize}[leftmargin=*,topsep=1pt,itemsep=1pt,parsep=0pt]
+\item \textbf{Ana:} edad, autonomía del menor, condiciones de desamparo y obligación de cuidado; entrevistar y documentar la custodia. Varias horas sin compañía no bastan por sí solas para abandono (CPF 335; CPDF 156).
+\item \textbf{Conductor:} atropellamiento culposo o fortuito, necesidad de asistencia y posibilidad efectiva de auxiliar o pedirla; revisar video, llamadas y peritaje vial. CPF 341 distingue la omisión del atropellamiento; CPDF 157 exige lesión previa.
+\item \textbf{Pedro:} filiación, obligación alimentaria, recursos, pagos e impedimentos reales. CPF 336 exige abandono injustificado sin subsistencia; CPDF 193 sanciona incumplimiento alimentario aun si terceros cubren las necesidades. No consta insolvencia deliberada para aplicar CPDF 194.
+\end{itemize}
+\textbf{Conclusión:} investigar cada omisión y atender a las personas dependientes, sin equiparar incapacidad económica con evasión voluntaria ni sumar automáticamente delitos \citep{cpfS4Vigente,cpdfS4Vigente}.
+\end{casoestudio}
+
+\clearpage
+\subsection*{Socorro, cuidado y exposición al contagio}
+\phantomsection\addcontentsline{toc}{subsection}{Socorro, cuidado y exposición al contagio}
+\phantomsection\addcontentsline{toc}{subsection}{Caso 3. Socorro, cuidado y contagio}
+\begin{casoestudio}{Caso 3. Socorro, cuidado y contagio}
+\fichacaso{\textbf{Hechos y problema.} Un observador no pide ayuda; una cuidadora abandona a un enfermo dependiente; otra persona conoce una enfermedad transmisible y realiza una conducta de posible riesgo.}
+\textbf{Análisis.} La \textbf{omisión de socorro} (CPF 340) exige encontrar abandonada a una persona en las condiciones del tipo, conocer su necesidad y poder avisar de inmediato a la autoridad o auxiliar sin peligro personal; observar cualquier riesgo no basta. La \textbf{omisión de cuidado} presupone obligación previa: respecto de la cuidadora, acreditar encargo aceptado, dependencia, abandono y posibilidad de actuar (CPF 335; CPDF 156). El CPDF 157 no se aplica al mero espectador: exige haber lesionado previamente culposa o fortuitamente.
+
+El \textbf{peligro de contagio} del CPF 199 Bis exige mal venéreo u otra enfermedad grave en período infectante, conocimiento y exposición por relaciones sexuales u otro medio transmisible. Solicitar peritaje médico sobre diagnóstico, infectividad y vía concreta; no basta el diagnóstico ni se exige infección consumada. En CDMX, el art.~159 está derogado: no puede recuperarse por analogía. \textbf{Conclusión:} por tanto, diferenciar ayuda ocasional, cuidado debido y riesgo de transmisión; comprobar cada presupuesto y la competencia antes de atribuir delito \citep{cpfS4Vigente,cpdfS4Vigente}.
+\end{casoestudio}
+
+\subsection*{Decisión fundamentada}
+\phantomsection\addcontentsline{toc}{subsection}{Decisión fundamentada}
+\begin{casoestudio}{Decisión sobre el caso 2: protección del menor y prueba del abandono}
+Considero prioritario proteger al menor por el ``interés superior de la niñez'' (CPEUM, art.~4) e investigar a Ana por posible abandono (CPDF 156), si fuera competente CDMX. Verificaría custodia, edad, autonomía y desamparo con documentos y testimonios. La jurisprudencia 1a./J.~26/2014 exige ``pruebas de cargo suficientes'' para condenar; la protección inmediata no anticipa culpabilidad \citep{cpeumS4Vigente,cpdfS4Vigente,scjnPresuncionS4}.
+\end{casoestudio}
+
+\clearpage
+\section{Conclusiones}
+La ausencia de lesión no vuelve lícita una conducta peligrosa, pero tampoco reemplaza los elementos del delito. Sostengo que proteger a quien depende de otros exige actuar ante el riesgo y probar la responsabilidad por separado. La Constitución manda que ``se presuma su inocencia'' (art.~20, B, I): ni una sospecha ni un artículo derogado justifican castigar \citep{cpeumS4Vigente}.\footnote{Se utilizó ChatGPT como apoyo de inteligencia artificial para la organización del texto y la preparación de un borrador. El autor asume la revisión crítica y la responsabilidad académica de los análisis, el desarrollo y las conclusiones.}
+\hypertarget{cuerpo-fin}{}
+
+\clearpage
+\begingroup\fontsize{10}{11.5}\selectfont
+\setlength{\bibsep}{4pt}
+\phantomsection
+\begin{thebibliography}{8}
+\bibitem[Amuchategui Requena(2012)]{amuchateguiPenal2012}
+Amuchategui Requena, I.~G. (2012). \emph{Derecho penal} (4.ª ed.). Oxford University Press México.
+
+\bibitem[Cámara de Diputados(2026a)]{cpfS4Vigente}
+Cámara de Diputados del H. Congreso de la Unión. (2026a). \emph{Código Penal Federal} (reforma DOF 13 de marzo de 2026). \url{https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf}
+
+\bibitem[Cámara de Diputados(2026b)]{cpeumS4Vigente}
+Cámara de Diputados del H. Congreso de la Unión. (2026b). \emph{Constitución Política de los Estados Unidos Mexicanos} (reforma DOF 7 de octubre de 2026). \url{https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf}
+
+\bibitem[Congreso de la Ciudad de México(2026)]{cpdfS4Vigente}
+Congreso de la Ciudad de México. (2026). \emph{Código Penal para el Distrito Federal} (reforma GOCDMX 26 de agosto de 2026). \url{https://www.congresocdmx.gob.mx/archivo-deae456e36ecb11eac420f0f1839cc70e9ea4685.pdf}
+
+\bibitem[Congreso de Nuevo León(2026)]{cpnlS4Vigente}
+Congreso del Estado de Nuevo León. (2026). \emph{Código Penal para el Estado de Nuevo León} (reforma PO 15 de junio de 2026). \url{https://www.hcnl.gob.mx/trabajo_legislativo/leyes/codigos/codigo_penal_para_el_estado_de_nuevo_leon/}
+
+\bibitem[Suprema Corte de Justicia de la Nación(2014)]{scjnPresuncionS4}
+Suprema Corte de Justicia de la Nación. (2014). \emph{Presunción de inocencia como estándar de prueba} [Jurisprudencia 1a./J. 26/2014 (10a.), Primera Sala; registro digital 2006091]. \emph{Gaceta del Semanario Judicial de la Federación}, libro 5, tomo I, 476. \url{https://sjf2.scjn.gob.mx/detalle/tesis/2006091}
+
+\bibitem[UnADM(2026)]{unadmPenalS4Material}
+Universidad Abierta y a Distancia de México. (2026). \emph{Material de apoyo S4: Delitos de peligro efectivo y presunto} [Material de curso]. Aula virtual. \url{https://aulavirtual.unadmexico.mx/mod/resource/view.php?id=217986}
+\end{thebibliography}
+\endgroup
+\end{document}

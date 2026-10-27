@@ -1,0 +1,828 @@
+# Planeacion: interaprendizaje-en-ambientes-virtuales-lde
+
+Estado: needs_review. Conversion local, no aprobacion docente ni autorizacion de envio.
+
+## Identificacion
+
+```json
+{
+  "institution": "UnADM",
+  "program": "licenciatura-en-derecho-unadm",
+  "subject_id": "interaprendizaje-en-ambientes-virtuales-lde",
+  "subject_title": "interaprendizaje-en-ambientes-virtuales-lde",
+  "offering_id": "oferta-c9126a541b93659f",
+  "period": null,
+  "modality": null
+}
+```
+
+## Actividad source-6cecf959abbf962d: Planificacion de actividades S9 - Interaprendizaje en ambientes v
+
+### Consigna importada
+
+[page:1]
+                               Planificación de actividades
+
+                            Datos de identificación
+
+
+
+Registro Federal de Contribuyentes
+
+
+
+
+Clave Única de Registro de Población
+
+
+
+
+Matrícula/Folio                      DL25SARJ00033
+
+
+
+
+Nombre de prestador de servicios
+                                     Janeth Santana Ramírez
+profesionales en el ámbito de docencia
+
+
+
+                 Datos de identificación de la asignatura/materia
+
+
+
+Año                  2026
+
+
+
+
+Semestre              2
+
+
+
+
+Bloque                          1
+
+
+
+
+Dirección divisional      Ciencias Sociales y Administrativas
+
+
+
+
+Programa educativo    Derecho
+
+
+
+
+
+                                          Página 1 de 10
+
+[page:2]
+Asignatura/materia      Interaprendizajes en ambientes virtuales
+
+
+
+
+Datos de identificación del objetivo de la asignatura/materia
+                              ASIGNATURA:
+
+Fechas de inicio y conclusión del
+                                     Del 06 de julio al 13 de septiembre de 2026
+periodo educativo (diez semanas)
+
+
+
+                                  Formar profesionales altamente competentes y
+Objetivo general del programa de       comprometidos, capaces de abordar situaciones
+educativo                                legales complejas con integridad y desempeñarse
+                                     exitosamente en una variedad de roles dentro del
+                                   ámbito  jurídico, promoviendo  la  justicia  y  el
+                                           desarrollo de la sociedad.
+
+                                         Construir  estrategias  para  el  interaprendizaje
+Objetivo general de la asignatura          virtual analizando las prácticas culturales como
+                                        estudiantes en  línea,  la  reflexión  del uso de
+                                        recursos digitales y las experiencias de evaluación,
+                                       autoevaluación y coevaluación a  fin de lograr
+                                         interacciones dialógicas, creativas, comprensivas y
+                                          autogestivas,  como  parte  de   la  formación
+                                          profesional y laboral en el marco de la diversidad
+                                            cultural y lingüística.
+
+                                               •  Analizar   las   concepciones  de   cultura,
+Objetivos específicos de la                    diversidad         cultural-lingüística       e
+asignatura/materia                           interaprendizaje mediante el reconocimiento
+                                    de las prácticas culturales a fin de valorarlas en
+                                                      la formación profesional y laboral.
+                                               •  Examinar los interaprendizajes desarrollados
+                                    en los entornos virtuales mediante la revisión
+                                             del cómo se ha aprendido a ser estudiante en
+                                                     línea, las actitudes asumidas y el aprendizaje
+                                        ubicuo a fin de reconocer la relación entre el
+                                       uso de las TICCAD y el diálogo intercultural.
+                                               •  Diseñar un conjunto de estrategias para el
+                                             interaprendizaje virtual mediante la reflexión
+                                             del uso de recursos digitales en los procesos de
+                                           construcción  del  conocimiento,  evaluación
+                                          autoevaluación y con evaluación a  fin de
+
+
+
+                                          Página 2 de 10
+
+[page:3]
+                                           transformar las prácticas monológicas en otras
+                                              dialógicas y conversacionales para vivenciar la
+                                          atención a la diversidad cultural y lingüística
+
+                                           Al aprobar la asignatura se contará con los
+Aspectos que fortalecen del perfil de     conocimientos, habilidades y actitudes para
+egreso del programa educativo           incorporar la perspectiva de atención a la
+                                         diversidad cultural y lingüística en los procesos de
+                                         interaprendizaje fortaleciendo el sentido de
+                                      pertenencia y el respeto desde la
+                                            interculturalidad.
+
+
+
+Datos para la planificación de actividades
+
+Semana 9 (Del 31 de agosto al 6 de septiembre)
+
+Fecha de entrega (actividad): 6 de septiembre
+
+Fecha de sesión sincrónica: 2 de septiembre     Hora: 21:00 hrs (Centro de México)
+
+
+
+                                III. Diseño de herramientas para desarrollar interaprendizajes en los
+Contenido      ambientes virtuales.
+temático a
+desarrollar        3.2 La evaluación en la educación virtual como posibilidad de acción
+                   colectiva.
+
+
+                  Analizar su proceso de aprendizaje individual y colaborativo mediante la
+Objetivo
+                  interpretación crítica de evidencias formativas y la reflexión estructurada
+específico que
+                sobre su participación, a través de la elaboración de una bitácora de
+se desarrolla
+                 interaprendizaje que permita valorar su autonomía, corresponsabilidad,
+del contenido
+               comunicación profesional y aportes al trabajo en equipo en entornos
+temático
+                    virtuales.
+
+
+
+Técnica
+didáctica que
+                             #94 Portafolio de evidencias digitalse utiliza (100
+                                      (Bitácora de interaprendizaje)técnicas de
+enseñanza y
+aprendizaje)
+
+
+
+
+
+                                          Página 3 de 10
+
+[page:4]
+Bibliografía      General:
+propuesta para
+consulta          Bautista, G., Borges, F., & Forés, A. (2016). Didáctica universitaria en
+                      entornos virtuales de enseñanza-aprendizaje. Narcea Ediciones.(tomada de
+biblioteca       Boud, D., y Falchikov, N. (2006). Alineando la evaluación con el aprendizaje a
+digital, elibro)          largo plazo. Assessment & Evaluation in Higher Education , 31 (4),
+                        399–413. https://doi.org/10.1080/02602930600679050
+
+                Consejo Nacional de Normalización y Certificación de Competencias
+                        Laborales. (2025). EC0554.01: Trabajo en equipo [Estándar de
+                      competencia]. CONOCER.
+                      https://www.conocer.gob.mx/contenido/publicaciones_dof/2025/EC
+                        0554_01.pdf.
+              Cushpa Inchiglema, R. C. (2022). Metodología PACIE en el interaprendizaje
+                   de la asignatura TICS del Instituto Superior Riobamba [Tesis de
+                        maestría, Pontificia Universidad Católica del Ecuador, Sede
+                     Ambato].
+                    Nicol, DJ y Macfarlane-Dick, D. (2006). Evaluación formativa y aprendizaje
+                       autorregulado: un modelo y siete principios de buenas prácticas de
+                        retroalimentación. Studies  in  Higher  Education , 31 (2),  199-218.
+                       https://doi.org/10.1080/03075070600572090
+                 Zambrano-Pilay, E., Chiriboga-Dávalos, J., & Chiriboga-Mendoza, F. (2020).
+                       Tecnologías educativas para el interaprendizaje. Yachasun. Revista
+                          Científica Multidisciplinaria Arbitrada, 4(7), 200–216.
+                         https://doi.org/10.46296/yc.v4i7.0043
+
+
+               Complementaria:
+
+                  Bertely Busquets, M. (Coord.). (2011). Interaprendizajes entre indígenas: De
+                 cómo las y los educadores pescan conocimientos y significados
+                      comunitarios en contextos interculturales. CIESAS-UPN.
+                Cangas-Oña, L. X., Viteri-Naranjo, B. C., & Cangas-Oña, V. E. (2020). El
+                       proceso de interaprendizaje en la carrera de derecho. Dominio de
+                           las Ciencias, 6(1), 109–129. https://doi.org/10.23857/dc.v6i1.1348
+
+
+
+                 Optativa:
+                 López, A. (2022). Portafolio de evidencias digital. En López, A. 100 Técnicas
+                      Didácticas de Enseñanza y Aprendizaje. Universidad Abierta y a
+                       Distancia de México.
+                       https://100tecnicasdidacticas.unadmexico.mx/index.html
+
+
+
+Normatividad    Constitución Política de los Estados Unidos Mexicanos. (1917). Diario Oficial
+                   de la Federación, 5 de febrero de 1917. Últimas reformas publicadasgubernamental
+                            el 2 de junio de 2026.
+                       https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf
+
+
+
+                                          Página 4 de 10
+
+[page:5]
+relacionada con
+la asignatura     Ley General de Derechos Lingüísticos de los Pueblos Indígenas. (2003).
+                        Diario Oficial de la Federación, 13 de marzo de 2003. Última reforma
+                      publicada el 18 de octubre de 2023.
+                       https://www.diputados.gob.mx/LeyesBiblio/pdf/LGDLPI.pdf
+
+                Ley Federal de Protección de Datos Personales en Posesión de los
+                          Particulares. (2025). Diario Oficial de la Federación, 20 de marzo de
+                        2025.
+
+                Naciones Unidas. (2001). Conferencia Mundial contra el Racismo, la
+                       Discriminación Racial, la Xenofobia y las Formas Conexas de
+                         Intolerancia: Declaración y Programa de Acción.
+                       https://www.un.org/es/events/pastevents/cmcr/durban_sp.pdf
+
+                Organización Internacional del Trabajo. (1989). Convenio 169 sobre pueblos
+                      indígenas y tribales en países independientes. Gobierno de México.
+                       https://www.gob.mx/cms/uploads/attachment/file/30118/Convenio16
+                         9.pdf
+
+              UNESCO. (1998). Declaración mundial sobre la educación superior en el
+                          siglo XXI: Visión y acción.
+                       https://unesdoc.unesco.org/ark:/48223/pf0000113878_spa
+
+
+
+
+Tipo de
+evaluación que                             Sumativa
+se utiliza
+
+
+
+Actividad para   Actividad:
+                 Bitácora de interaprendizajerealizar la
+              Fecha de entrega: 6 de septiembre, 23:55 hrs.evaluación
+                  Valor: 15 puntos
+(basada en la
+técnica de                Propósito
+enseñanza y
+aprendizaje      Esta semana integrarás tu proceso de aprendizaje vivido durante  la
+utilizada y la      asignatura. A través de la construcción de tu bitácora de interaprendizaje,
+                 recuperarás como punto de partida la autoevaluación realizada en labibliografía
+             semana 4, analizarás tu participación individual y colaborativa, interpretarás
+consultada)                 evidencias  formativas,  reconocerás  tus  avances  y  transformarás  tu
+                 experiencia en estrategias transferibles a futuros entornos académicos y
+                  profesionales.
+                 Esta actividad te permitirá cerrar tu proceso formativo desde una mirada
+                      crítica, ética y profesional, articulando:
+                          •  Tu desarrollo contigo misma/o.
+                          •  Tu participación con tu equipo.
+                          •  Tu aporte para el aprendizaje de otras personas.
+
+
+
+                                          Página 5 de 10
+
+[page:6]
+    •  La evolución de los compromisos de mejora que estableciste durante
+        la asignatura.
+
+
+Instrucciones para el desarrollo
+
+1.  Revisa el documento disponible en el aula virtual: “Orientaciones
+   para elaborar la Bitácora de interaprendizaje”.
+   Este contiene  la explicación completa de  la actividad, su sentido
+   formativo, las instrucciones paso a paso y ejemplos para su desarrollo.
+
+   Antes de comenzar, recupera también la autoevaluación que realizaste
+   en la semana 4, especialmente los compromisos de mejora personal y
+   colaborativa que estableciste. Estos te servirán como punto de partida
+   para reconocer cambios, avances  y aspectos que aún  necesitas
+    fortalecer.
+
+  A partir de estas orientaciones trabajarás en 4 secciones integradas en
+  un solo archivo:
+
+   A. Mapa de interaprendizaje
+   Reflexionas sobre tu desempeño contigo, con otras personas y para
+   otras personas: cómo aprendiste, cómo colaboraste y cómo aportaste al
+   equipo. Recuperas tu autoevaluación de la semana 4 para identificar
+   qué cambió en tu manera de aprender y participar a lo largo del curso.
+   B. Evidencias reales que sustentan mi reflexión
+   Seleccionas tres evidencias reales de distintos momentos de tu proceso
+   y explicas qué revelan sobre tu aprendizaje. Entre ellas recuperarás una
+   evidencia de tu punto de partida en la semana 4 y evidencias
+   posteriores que permitan observar tu evolución.
+   C. Lecciones aprendidas (“el cómo sí”)
+   Identificas situaciones reales, analizas cómo las enfrentaste y sintetizas
+   qué aprendizajes te llevas para futuros trabajos colaborativos. Retomas
+    los compromisos planteados en la semana 4 para valorar cuáles pusiste
+   en práctica, cuáles requieren continuidad y qué modificarías a partir de
+    la experiencia vivida.
+   D. Cierre profesional del proceso
+   Redactas un mensaje profesional para tu equipo y registras la evidencia.
+   Reflexionas brevemente sobre lo que significó cerrar el trabajo en
+   conjunto.
+
+   Estas cuatro secciones te permitirán reconstruir tu experiencia de
+  manera integral, reflexionando acerca de:
+    •  Cómo aprendiste.
+    •  Cómo colaboraste.
+    •  Cómo aportaste a otras personas.
+    •  Qué cambió respecto de los compromisos que estableciste en la
+     semana 4.
+    •  Qué evidencias sustentan tu proceso.
+    •  Cómo convertir ese aprendizaje en estrategias para tu futuro
+       profesional.
+
+
+
+
+                        Página 6 de 10
+
+[page:7]
+                     2. Descarga el documento “Formato Bitácora de interaprendizaje”.
+                También se encuentra disponible en el aula virtual. Este es el formato
+                  cuyas secciones deberás completar con tus reflexiones y evidencias, con
+                  base en las instrucciones marcadas en el documento “Orientaciones
+                  para elaborar la Bitácora de interaprendizaje”.
+
+                   Este es  el único formato válido para  la entrega. No se aceptarán
+                    presentaciones, diapositivas ni documentos con estructura modificada.
+
+                       3. Mantén la escritura profesional, argumentada y basada en tu proceso
+                       real.
+                     Evita  divagar,  improvisar o responder de manera  superficial. Las
+                  preguntas guía del documento de orientación te ayudarán a analizar tu
+                    experiencia y relacionar lo que te propusiste, lo que ocurrió durante el
+                  proceso y los aprendizajes que identificas al cierre.
+
+                    4. Guarda tu documento en formato Word, nombrándolo de la siguiente
+                 manera:
+                   Nombre_ApellidoPaterno_Bitacorainteraprendizaje_Semana9
+
+
+
+Evidencia de la   Archivo “Bitácora de interaprendizaje”
+evaluación
+
+
+
+Porcentaje de
+calificación que                                      (15/100)
+aporta (--/100)
+
+
+
+Observaciones
+                                 Lineamientos
+Con base en lo señalado en los siguientes artículos del Reglamento Universitario de la
+Universidad Abierta y a Distancia de México:
+
+Artículo 27. La calificación representa la valoración numérica del aprovechamiento que la o el
+estudiante logró en cada unidad didáctica. La escala de calificaciones comprende del 0 (cero)
+al 100 (cien), y la calificación mínima aprobatoria será 60 (sesenta).
+
+En ningún caso procederá la renuncia a la calificación obtenida. Las actividades y evidencias
+de aprendizaje en las que se identifique falta de integridad académica serán evaluadas
+con 0 (cero).
+
+Artículo 76. Son obligaciones de las y los estudiantes:
+
+V. Realizar, con integridad académica, las actividades que están señaladas en el aula virtual
+del programa educativo en el que están inscritos, conforme a las fechas establecidas en el
+calendario de aula.
+
+
+
+
+                                          Página 7 de 10
+
+[page:8]
+                  Lineamientos para la evaluación del aprendizaje
+
+     •  La entrega de actividades se realizará de acuerdo con el calendario proporcionado por
+      su Figura Académica y marcado en el presente documento.
+     •  La entrega corresponde a un solo intento.
+     •  Las entregas extemporáneas tendrán una penalización equivalente al 20% del valor de
+        la actividad. La recepción extemporánea será únicamente hasta el martes de cada
+     semana (no aplica para semanas 9 y 10).
+     •  La persona estudiante entregará sus actividades debidamente citadas en formato
+     APA 7ª edición.
+     •  La aplicación o uso de las herramientas de IA se debe apegar a los Lineamientos para
+       el uso ético y responsable de la IA. Escala de evaluación para actividades con IA.
+     •   El uso de herramientas de inteligencia artificial está permitido como apoyo para
+      organizar ideas, revisar redacción, comprender instrucciones o fortalecer el proceso de
+      aprendizaje. Sin embargo, no sustituye el análisis propio, la reflexión personal, la
+      participación en equipo ni la elaboración de las actividades solicitadas.
+
+     Cuando se utilice IA para apoyar una actividad, deberá declararse brevemente al final
+      del trabajo, indicando la herramienta utilizada y el propósito de uso.
+
+                         Criterio                    Sanción / Penalización
+      50% a 100%, NO declaró uso de IA.             3 puntos menos
+      50% en adelante, declarado.        No se penaliza, pero se evalúa en
+                                                 función del contenido
+                                                                              1 puntos menos
+      0 a 49%, NO declarado
+
+      0 al 49%, se declara el uso de IA.      No se penaliza, pero se evalúa en
+                                                 función del contenido
+
+
+    •  La declaración del uso de IA no implica penalización automática. La actividad será
+      evaluada conforme a los criterios establecidos: pertinencia, comprensión, análisis,
+       participación, colaboración y cumplimiento de instrucciones.
+    •  La persona estudiante perderá su intento de envío de la actividad cuando entregue o
+       realice una o más de las condiciones enunciadas en Los Lineamientos para la
+      evaluación del aprendizaje: CAPÍTULO II, SECCIÓN TERCERA, DE LA ELABORACIÓN Y
+     ENTREGA DE ACTIVIDADES, apartado décimo octavo.
+
+     •  La entrega de actividades, recepción y evaluación se rige por dichos lineamientos y el
+     RUUADM, por lo tanto, no se reciben por otros medios distintos a aula ni posterior al
+       cierre de la misma.
+
+Criterios de examen:
+
+    •  Un intento
+    •  Método de calificación: el último intento.
+
+
+
+
+
+                                          Página 8 de 10
+
+[page:9]
+                               Criterios de evaluación
+
+Criterio                          Excelente (3 pts)         Aceptable (2 pts)     Deficiente (1 pt)       0 pts
+     A.  Mapa de           Completa las 9 casillas con                        Responde solo       El apartado
+        interaprendizaje     reflexiones basadas en su       Responde todas o    algunas casillas o    está
+                               experiencia. Analiza cómo          la mayoría de las       lo hace mediante    incompleto, no
+                             aprendió, colaboró y aportó a      casillas y reconoce    afirmaciones        desarrollado o
+                               otras personas, y reconoce       aspectos de su        generales, sin      no se entregó.
+                         cambios respecto de su punto    aprendizaje y          analizar
+                        de partida y compromisos de     colaboración,         suficientemente
+                                    la semana 4.                 aunque algunas      su experiencia ni
+                                                                   reflexiones son         los cambios
+                                                            generales o la         ocurridos durante
+                                                                 relación con su         el curso.
+                                                         proceso de cambio
+                                                           es limitada.
+
+     B.  Evidencias reales    Presenta 3 evidencias reales,     Presenta 3           Presenta menos   No presenta
+       que sustentan mi    pertinentes y verificables de      evidencias reales,     de 3 evidencias,     evidencias o el
+         reflexión             distintos momentos de su       pero alguna tiene     son poco           apartado está
+                              proceso. Incluye una evidencia   poca relación con la   pertinentes o se      vacío.
+                             relacionada con su                reflexión o su         incorporan sin
+                            autoevaluación o                explicación es          explicar
+                         compromisos de la semana 4 y   general. La relación    suficientemente
+                             evidencias posteriores que       entre el punto de     qué muestran
+                          permiten reconocer su           partida y el proceso   sobre su proceso.
+                               evolución. Explica qué muestra   posterior se
+                          cada evidencia y la relaciona     reconoce
+                         con su aprendizaje.              parcialmente.
+     C.  Lecciones           Analiza 3 situaciones reales de   Presenta 3           Presenta menos   No presenta el
+        aprendidas y mi     su proceso. Explica qué          situaciones y        de 3 situaciones o   apartado o no
+      “cómo sí”             ocurrió, cómo actuó y qué       reconoce             sus reflexiones       desarrolla las
+                             aprendizaje obtiene para        aprendizajes         son generales y      situaciones
+                              futuras experiencias. Recupera   derivados de ellas,    muestran poca       solicitadas.
+                            sus compromisos de la        aunque algunas       relación entre la
+                       semana 4 y valora qué pudo     explicaciones son      experiencia vivida
+                          poner en práctica, qué          generales o la         y los aprendizajes
+                              necesita seguir trabajando o     relación con sus      que plantea.
+                        qué modificaría a partir de lo    compromisos y
+                                   vivido.                           futuras acciones
+                                                              está poco
+                                                                  desarrollada.
+    D.  Cierre profesional   Mensaje respetuoso,             Realiza el cierre y       El cierre es muy    No realiza el
+        del proceso          profesional, concreto y          presenta evidencia,    breve, poco          cierre o no
+                                   reflexivo; evidencia real del      pero su reflexión es    reflexivo o la        presenta la
+                             canal del equipo.               general o desarrolla   evidencia           evidencia
+                         Se basa en el trabajo realizado   poco los             presentada no        solicitada.
+                           durante las semanas 6 a 8.       aprendizajes         permite verificar
+                                                            derivados de la       adecuadamente
+                                                                 experiencia.          su realización.
+     E.  Presentación       Respeta el formato solicitado,    Presenta el archivo    Modifica la         Entrega un
+        profesional del     mantiene la estructura         completo y            estructura          archivo distinto
+       documento         establecida y presenta la        conserva la             solicitada, mezcla    al solicitado o
+                            información de manera          estructura general,    instrucciones con   no presenta el
+                          ordenada y legible. La escritura  aunque tiene         sus respuestas o    documento.
+                            es profesional y comprensible.   algunos problemas    presenta
+                                                   de organización,      problemas
+                                                           redacción o formato   frecuentes de
+                                                  que dificultan         organización y
+                                                          parcialmente su       escritura que
+                                                                      lectura.                 dificultan la
+                                                                                               lectura.
+
+
+
+
+
+                                          Página 9 de 10
+
+[page:10]
+               Concentrado de calificaciones
+
+Semana              Actividad(es)              Porcentaje de
+                                                   calificación (--/100)
+     1                  Diagnóstica                 0
+                 Foro: Diversidad cultural y
+   2                                                   10
+                   lingüística en el derecho.
+               Interaprendizaje: comprender,
+   3                                                   10
+                   construir y distinguir.
+            Mi compromiso personal como
+   4                                        0
+             estudiante en entornos virtuales
+             Construcción de un ecosistema
+           TICCAD para el trabajo jurídico   5                                                       15
+                                virtual.
+
+             Documento colaborativo:
+   6          Organización del despacho            20
+                        jurídico digital.
+                Brief profesional del despacho
+   7                                        0
+                        jurídico digital.
+               Propuesta profesional del
+   8                                          30
+              despacho jurídico digital
+   9          Bitácora de interaprendizaje               15
+   10               Autoevaluación                0
+                                                  100
+
+
+
+
+
+                             Página 10 de 10
+
+### Requisitos
+
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[]
+```
+
+### products
+
+```json
+[]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": []
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": null
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## sources
+
+```json
+[
+  {
+    "id": "src-local",
+    "kind": "pdf",
+    "authority": "unknown",
+    "title": "Planificacion de actividades S9 - Interaprendizaje en ambientes v.pdf",
+    "url": null,
+    "path": "planeaciones-interaprendizaje-en-ambientes-virtuales/Planificacion de actividades S9 - Interaprendizaje en ambientes v.pdf",
+    "sha256": "6cecf959abbf962dda87be950d92d0def7e7c1a03f14193481193854e528a077",
+    "captured_at": null,
+    "media_type": "application/pdf"
+  }
+]
+```
+
+## field_status
+
+```json
+[
+  {
+    "path": "/identity",
+    "state": "inferred",
+    "reason": "Identidad editorial del catalogo; oferta interna, periodo y modalidad no acreditados cuando faltan.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/sources",
+    "state": "confirmed",
+    "reason": "Archivo local preservado; su huella no acredita autoria ni vigencia docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "local-file",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum",
+    "state": "unknown",
+    "reason": "No se deducen competencias, resultados ni temario que no esten documentados.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "document",
+        "quoted_text": "[page:1]\n                               Planificación de actividades\n\n                            Datos de identificación\n\n\n\nRegistro Federal de Contribuyentes\n\n\n\n\nClave Única de Registro de Población\n\n\n\n\nMatrícula/Folio                      DL25SARJ00033\n\n\n\n\nNombre de prestador de servicios\n                                     Janeth Santana Ramírez\nprofesionales en el ámbito de docencia\n\n\n\n                 Datos de identificación de la asignatura/materia\n\n\n\nAño                  2026\n\n\n\n\nSemestre              2\n\n\n\n\nBloque                          1\n\n\n\n\nDirección divisional      Ciencias Sociales y Administrativas\n\n\n\n\nPrograma educativo    Derecho\n\n\n\n\n\n                                          Página 1 de 10\n\n[page:2]\nAsignatura/materia      Interaprendizajes en ambientes virtuales\n\n\n\n\nDatos de identificación del objetivo de la asignatura/materia\n                              ASIGNATURA:\n\nFechas de inicio y conclusión del\n                                     Del 06 de julio al 13 de septiembre de 2026\nperiodo educativo (diez semanas)\n\n\n\n                                  Formar profesionales altamente competentes y\nObjetivo general del programa de       comprometidos, capaces de abordar situaciones\neducativo                                legales complejas con integridad y desempeñarse\n                                     exitosamente en una variedad de roles dentro del\n                                   ámbito  jurídico, promoviendo  la  justicia  y  el\n                                           desarrollo de la sociedad.\n\n                                         Construir  estrategias  para  el  interaprendizaje\nObjetivo general de la asignatura          virtual analizando las prácticas culturales como\n                                        estudiantes en  línea,  la  reflexión  del uso de\n                                        recursos digitales y las experiencias de evaluación,\n                                       autoevaluación y coevaluación a  fin de lograr\n                                         interacciones dialógicas, creativas, comprensivas y\n                                          autogestivas,  como  parte  de   la  formación\n                                          profesional y laboral en el marco de la diversidad\n                                            cultural y lingüística.\n\n                                               •  Analizar   las   concepciones  de   cultura,\nObjetivos específicos de la                    diversidad         cultural-lingüística       e\nasignatura/materia                           interaprendizaje mediante el reconocimiento\n                                    de las prácticas culturales a fin de valorarlas en\n                                                      la formación profesional y laboral.\n                                               •  Examinar los interaprendizajes desarrollados\n                                    en los entornos virtuales mediante la revisión\n                                             del cómo se ha aprendido a ser estudiante en\n                                                     línea, las actitudes asumidas y el aprendizaje\n                                        ubicuo a fin de reconocer la relación entre el\n                                       uso de las TICCAD y el diálogo intercultural.\n                                               •  Diseñar un conjunto de estrategias para el\n                                             interaprendizaje virtual mediante la reflexión\n                                             del uso de recursos digitales en los procesos de\n                                           construcción  del  conocimiento,  evaluación\n                                          autoevaluación y con evaluación a  fin de\n\n\n\n                                          Página 2 de 10\n\n[page:3]\n                                           transformar las prácticas monológicas en otras\n                                              dialógicas y conversacionales para vivenciar la\n                                          atención a la diversidad cultural y lingüística\n\n                                           Al aprobar la asignatura se contará con los\nAspectos que fortalecen del perfil de     conocimientos, habilidades y actitudes para\negreso del programa educativo           incorporar la perspectiva de atención a la\n                                         diversidad cultural y lingüística en los procesos de\n                                         interaprendizaje fortaleciendo el sentido de\n                                      pertenencia y el respeto desde la\n                                            interculturalidad.\n\n\n\nDatos para la planificación de actividades\n\nSemana 9 (Del 31 de agosto al 6 de septiembre)\n\nFecha de entrega (actividad): 6 de septiembre\n\nFecha de sesión sincrónica: 2 de septiembre     Hora: 21:00 hrs (Centro de México)\n\n\n\n                                III. Diseño de herramientas para desarrollar interaprendizajes en los\nContenido      ambientes virtuales.\ntemático a\ndesarrollar        3.2 La evaluación en la educación virtual como posibilidad de acción\n                   colectiva.\n\n\n                  Analizar su proceso de aprendizaje individual y colaborativo mediante la\nObjetivo\n                  interpretación crítica de evidencias formativas y la reflexión estructurada\nespecífico que\n                sobre su participación, a través de la elaboración de una bitácora de\nse desarrolla\n                 interaprendizaje que permita valorar su autonomía, corresponsabilidad,\ndel contenido\n               comunicación profesional y aportes al trabajo en equipo en entornos\ntemático\n                    virtuales.\n\n\n\nTécnica\ndidáctica que\n                             #94 Portafolio de evidencias digitalse utiliza (100\n                                      (Bitácora de interaprendizaje)técnicas de\nenseñanza y\naprendizaje)\n\n\n\n\n\n                                          Página 3 de 10\n\n[page:4]\nBibliografía      General:\npropuesta para\nconsulta          Bautista, G., Borges, F., & Forés, A. (2016). Didáctica universitaria en\n                      entornos virtuales de enseñanza-aprendizaje. Narcea Ediciones.(tomada de\nbiblioteca       Boud, D., y Falchikov, N. (2006). Alineando la evaluación con el aprendizaje a\ndigital, elibro)          largo plazo. Assessment & Evaluation in Higher Education , 31 (4),\n                        399–413. https://doi.org/10.1080/02602930600679050\n\n                Consejo Nacional de Normalización y Certificación de Competencias\n                        Laborales. (2025). EC0554.01: Trabajo en equipo [Estándar de\n                      competencia]. CONOCER.\n                      https://www.conocer.gob.mx/contenido/publicaciones_dof/2025/EC\n                        0554_01.pdf.\n              Cushpa Inchiglema, R. C. (2022). Metodología PACIE en el interaprendizaje\n                   de la asignatura TICS del Instituto Superior Riobamba [Tesis de\n                        maestría, Pontificia Universidad Católica del Ecuador, Sede\n                     Ambato].\n                    Nicol, DJ y Macfarlane-Dick, D. (2006). Evaluación formativa y aprendizaje\n                       autorregulado: un modelo y siete principios de buenas prácticas de\n                        retroalimentación. Studies  in  Higher  Education , 31 (2),  199-218.\n                       https://doi.org/10.1080/03075070600572090\n                 Zambrano-Pilay, E., Chiriboga-Dávalos, J., & Chiriboga-Mendoza, F. (2020).\n                       Tecnologías educativas para el interaprendizaje. Yachasun. Revista\n                          Científica Multidisciplinaria Arbitrada, 4(7), 200–216.\n                         https://doi.org/10.46296/yc.v4i7.0043\n\n\n               Complementaria:\n\n                  Bertely Busquets, M. (Coord.). (2011). Interaprendizajes entre indígenas: De\n                 cómo las y los educadores pescan conocimientos y significados\n                      comunitarios en contextos interculturales. CIESAS-UPN.\n                Cangas-Oña, L. X., Viteri-Naranjo, B. C., & Cangas-Oña, V. E. (2020). El\n                       proceso de interaprendizaje en la carrera de derecho. Dominio de\n                           las Ciencias, 6(1), 109–129. https://doi.org/10.23857/dc.v6i1.1348\n\n\n\n                 Optativa:\n                 López, A. (2022). Portafolio de evidencias digital. En López, A. 100 Técnicas\n                      Didácticas de Enseñanza y Aprendizaje. Universidad Abierta y a\n                       Distancia de México.\n                       https://100tecnicasdidacticas.unadmexico.mx/index.html\n\n\n\nNormatividad    Constitución Política de los Estados Unidos Mexicanos. (1917). Diario Oficial\n                   de la Federación, 5 de febrero de 1917. Últimas reformas publicadasgubernamental\n                            el 2 de junio de 2026.\n                       https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf\n\n\n\n                                          Página 4 de 10\n\n[page:5]\nrelacionada con\nla asignatura     Ley General de Derechos Lingüísticos de los Pueblos Indígenas. (2003).\n                        Diario Oficial de la Federación, 13 de marzo de 2003. Última reforma\n                      publicada el 18 de octubre de 2023.\n                       https://www.diputados.gob.mx/LeyesBiblio/pdf/LGDLPI.pdf\n\n                Ley Federal de Protección de Datos Personales en Posesión de los\n                          Particulares. (2025). Diario Oficial de la Federación, 20 de marzo de\n                        2025.\n\n                Naciones Unidas. (2001). Conferencia Mundial contra el Racismo, la\n                       Discriminación Racial, la Xenofobia y las Formas Conexas de\n                         Intolerancia: Declaración y Programa de Acción.\n                       https://www.un.org/es/events/pastevents/cmcr/durban_sp.pdf\n\n                Organización Internacional del Trabajo. (1989). Convenio 169 sobre pueblos\n                      indígenas y tribales en países independientes. Gobierno de México.\n                       https://www.gob.mx/cms/uploads/attachment/file/30118/Convenio16\n                         9.pdf\n\n              UNESCO. (1998). Declaración mundial sobre la educación superior en el\n                          siglo XXI: Visión y acción.\n                       https://unesdoc.unesco.org/ark:/48223/pf0000113878_spa\n\n\n\n\nTipo de\nevaluación que                             Sumativa\nse utiliza\n\n\n\nActividad para   Actividad:\n                 Bitácora de interaprendizajerealizar la\n              Fecha de entrega: 6 de septiembre, 23:55 hrs.evaluación\n                  Valor: 15 puntos\n(basada en la\ntécnica de                Propósito\nenseñanza y\naprendizaje      Esta semana integrarás tu proceso de aprendizaje vivido durante  la\nutilizada y la      asignatura. A través de la construcción de tu bitácora de interaprendizaje,\n                 recuperarás como punto de partida la autoevaluación realizada en labibliografía\n             semana 4, analizarás tu participación individual y colaborativa, interpretarás\nconsultada)                 evidencias  formativas,  reconocerás  tus  avances  y  transformarás  tu\n                 experiencia en estrategias transferibles a futuros entornos académicos y\n                  profesionales.\n                 Esta actividad te permitirá cerrar tu proceso formativo desde una mirada\n                      crítica, ética y profesional, articulando:\n                          •  Tu desarrollo contigo misma/o.\n                          •  Tu participación con tu equipo.\n                          •  Tu aporte para el aprendizaje de otras personas.\n\n\n\n                                          Página 5 de 10\n\n[page:6]\n    •  La evolución de los compromisos de mejora que estableciste durante\n        la asignatura.\n\n\nInstrucciones para el desarrollo\n\n1.  Revisa el documento disponible en el aula virtual: “Orientaciones\n   para elaborar la Bitácora de interaprendizaje”.\n   Este contiene  la explicación completa de  la actividad, su sentido\n   formativo, las instrucciones paso a paso y ejemplos para su desarrollo.\n\n   Antes de comenzar, recupera también la autoevaluación que realizaste\n   en la semana 4, especialmente los compromisos de mejora personal y\n   colaborativa que estableciste. Estos te servirán como punto de partida\n   para reconocer cambios, avances  y aspectos que aún  necesitas\n    fortalecer.\n\n  A partir de estas orientaciones trabajarás en 4 secciones integradas en\n  un solo archivo:\n\n   A. Mapa de interaprendizaje\n   Reflexionas sobre tu desempeño contigo, con otras personas y para\n   otras personas: cómo aprendiste, cómo colaboraste y cómo aportaste al\n   equipo. Recuperas tu autoevaluación de la semana 4 para identificar\n   qué cambió en tu manera de aprender y participar a lo largo del curso.\n   B. Evidencias reales que sustentan mi reflexión\n   Seleccionas tres evidencias reales de distintos momentos de tu proceso\n   y explicas qué revelan sobre tu aprendizaje. Entre ellas recuperarás una\n   evidencia de tu punto de partida en la semana 4 y evidencias\n   posteriores que permitan observar tu evolución.\n   C. Lecciones aprendidas (“el cómo sí”)\n   Identificas situaciones reales, analizas cómo las enfrentaste y sintetizas\n   qué aprendizajes te llevas para futuros trabajos colaborativos. Retomas\n    los compromisos planteados en la semana 4 para valorar cuáles pusiste\n   en práctica, cuáles requieren continuidad y qué modificarías a partir de\n    la experiencia vivida.\n   D. Cierre profesional del proceso\n   Redactas un mensaje profesional para tu equipo y registras la evidencia.\n   Reflexionas brevemente sobre lo que significó cerrar el trabajo en\n   conjunto.\n\n   Estas cuatro secciones te permitirán reconstruir tu experiencia de\n  manera integral, reflexionando acerca de:\n    •  Cómo aprendiste.\n    •  Cómo colaboraste.\n    •  Cómo aportaste a otras personas.\n    •  Qué cambió respecto de los compromisos que estableciste en la\n     semana 4.\n    •  Qué evidencias sustentan tu proceso.\n    •  Cómo convertir ese aprendizaje en estrategias para tu futuro\n       profesional.\n\n\n\n\n                        Página 6 de 10\n\n[page:7]\n                     2. Descarga el documento “Formato Bitácora de interaprendizaje”.\n                También se encuentra disponible en el aula virtual. Este es el formato\n                  cuyas secciones deberás completar con tus reflexiones y evidencias, con\n                  base en las instrucciones marcadas en el documento “Orientaciones\n                  para elaborar la Bitácora de interaprendizaje”.\n\n                   Este es  el único formato válido para  la entrega. No se aceptarán\n                    presentaciones, diapositivas ni documentos con estructura modificada.\n\n                       3. Mantén la escritura profesional, argumentada y basada en tu proceso\n                       real.\n                     Evita  divagar,  improvisar o responder de manera  superficial. Las\n                  preguntas guía del documento de orientación te ayudarán a analizar tu\n                    experiencia y relacionar lo que te propusiste, lo que ocurrió durante el\n                  proceso y los aprendizajes que identificas al cierre.\n\n                    4. Guarda tu documento en formato Word, nombrándolo de la siguiente\n                 manera:\n                   Nombre_ApellidoPaterno_Bitacorainteraprendizaje_Semana9\n\n\n\nEvidencia de la   Archivo “Bitácora de interaprendizaje”\nevaluación\n\n\n\nPorcentaje de\ncalificación que                                      (15/100)\naporta (--/100)\n\n\n\nObservaciones\n                                 Lineamientos\nCon base en lo señalado en los siguientes artículos del Reglamento Universitario de la\nUniversidad Abierta y a Distancia de México:\n\nArtículo 27. La calificación representa la valoración numérica del aprovechamiento que la o el\nestudiante logró en cada unidad didáctica. La escala de calificaciones comprende del 0 (cero)\nal 100 (cien), y la calificación mínima aprobatoria será 60 (sesenta).\n\nEn ningún caso procederá la renuncia a la calificación obtenida. Las actividades y evidencias\nde aprendizaje en las que se identifique falta de integridad académica serán evaluadas\ncon 0 (cero).\n\nArtículo 76. Son obligaciones de las y los estudiantes:\n\nV. Realizar, con integridad académica, las actividades que están señaladas en el aula virtual\ndel programa educativo en el que están inscritos, conforme a las fechas establecidas en el\ncalendario de aula.\n\n\n\n\n                                          Página 7 de 10\n\n[page:8]\n                  Lineamientos para la evaluación del aprendizaje\n\n     •  La entrega de actividades se realizará de acuerdo con el calendario proporcionado por\n      su Figura Académica y marcado en el presente documento.\n     •  La entrega corresponde a un solo intento.\n     •  Las entregas extemporáneas tendrán una penalización equivalente al 20% del valor de\n        la actividad. La recepción extemporánea será únicamente hasta el martes de cada\n     semana (no aplica para semanas 9 y 10).\n     •  La persona estudiante entregará sus actividades debidamente citadas en formato\n     APA 7ª edición.\n     •  La aplicación o uso de las herramientas de IA se debe apegar a los Lineamientos para\n       el uso ético y responsable de la IA. Escala de evaluación para actividades con IA.\n     •   El uso de herramientas de inteligencia artificial está permitido como apoyo para\n      organizar ideas, revisar redacción, comprender instrucciones o fortalecer el proceso de\n      aprendizaje. Sin embargo, no sustituye el análisis propio, la reflexión personal, la\n      participación en equipo ni la elaboración de las actividades solicitadas.\n\n     Cuando se utilice IA para apoyar una actividad, deberá declararse brevemente al final\n      del trabajo, indicando la herramienta utilizada y el propósito de uso.\n\n                         Criterio                    Sanción / Penalización\n      50% a 100%, NO declaró uso de IA.             3 puntos menos\n      50% en adelante, declarado.        No se penaliza, pero se evalúa en\n                                                 función del contenido\n                                                                              1 puntos menos\n      0 a 49%, NO declarado\n\n      0 al 49%, se declara el uso de IA.      No se penaliza, pero se evalúa en\n                                                 función del contenido\n\n\n    •  La declaración del uso de IA no implica penalización automática. La actividad será\n      evaluada conforme a los criterios establecidos: pertinencia, comprensión, análisis,\n       participación, colaboración y cumplimiento de instrucciones.\n    •  La persona estudiante perderá su intento de envío de la actividad cuando entregue o\n       realice una o más de las condiciones enunciadas en Los Lineamientos para la\n      evaluación del aprendizaje: CAPÍTULO II, SECCIÓN TERCERA, DE LA ELABORACIÓN Y\n     ENTREGA DE ACTIVIDADES, apartado décimo octavo.\n\n     •  La entrega de actividades, recepción y evaluación se rige por dichos lineamientos y el\n     RUUADM, por lo tanto, no se reciben por otros medios distintos a aula ni posterior al\n       cierre de la misma.\n\nCriterios de examen:\n\n    •  Un intento\n    •  Método de calificación: el último intento.\n\n\n\n\n\n                                          Página 8 de 10\n\n[page:9]\n                               Criterios de evaluación\n\nCriterio                          Excelente (3 pts)         Aceptable (2 pts)     Deficiente (1 pt)       0 pts\n     A.  Mapa de           Completa las 9 casillas con                        Responde solo       El apartado\n        interaprendizaje     reflexiones basadas en su       Responde todas o    algunas casillas o    está\n                               experiencia. Analiza cómo          la mayoría de las       lo hace mediante    incompleto, no\n                             aprendió, colaboró y aportó a      casillas y reconoce    afirmaciones        desarrollado o\n                               otras personas, y reconoce       aspectos de su        generales, sin      no se entregó.\n                         cambios respecto de su punto    aprendizaje y          analizar\n                        de partida y compromisos de     colaboración,         suficientemente\n                                    la semana 4.                 aunque algunas      su experiencia ni\n                                                                   reflexiones son         los cambios\n                                                            generales o la         ocurridos durante\n                                                                 relación con su         el curso.\n                                                         proceso de cambio\n                                                           es limitada.\n\n     B.  Evidencias reales    Presenta 3 evidencias reales,     Presenta 3           Presenta menos   No presenta\n       que sustentan mi    pertinentes y verificables de      evidencias reales,     de 3 evidencias,     evidencias o el\n         reflexión             distintos momentos de su       pero alguna tiene     son poco           apartado está\n                              proceso. Incluye una evidencia   poca relación con la   pertinentes o se      vacío.\n                             relacionada con su                reflexión o su         incorporan sin\n                            autoevaluación o                explicación es          explicar\n                         compromisos de la semana 4 y   general. La relación    suficientemente\n                             evidencias posteriores que       entre el punto de     qué muestran\n                          permiten reconocer su           partida y el proceso   sobre su proceso.\n                               evolución. Explica qué muestra   posterior se\n                          cada evidencia y la relaciona     reconoce\n                         con su aprendizaje.              parcialmente.\n     C.  Lecciones           Analiza 3 situaciones reales de   Presenta 3           Presenta menos   No presenta el\n        aprendidas y mi     su proceso. Explica qué          situaciones y        de 3 situaciones o   apartado o no\n      “cómo sí”             ocurrió, cómo actuó y qué       reconoce             sus reflexiones       desarrolla las\n                             aprendizaje obtiene para        aprendizajes         son generales y      situaciones\n                              futuras experiencias. Recupera   derivados de ellas,    muestran poca       solicitadas.\n                            sus compromisos de la        aunque algunas       relación entre la\n                       semana 4 y valora qué pudo     explicaciones son      experiencia vivida\n                          poner en práctica, qué          generales o la         y los aprendizajes\n                              necesita seguir trabajando o     relación con sus      que plantea.\n                        qué modificaría a partir de lo    compromisos y\n                                   vivido.                           futuras acciones\n                                                              está poco\n                                                                  desarrollada.\n    D.  Cierre profesional   Mensaje respetuoso,             Realiza el cierre y       El cierre es muy    No realiza el\n        del proceso          profesional, concreto y          presenta evidencia,    breve, poco          cierre o no\n                                   reflexivo; evidencia real del      pero su reflexión es    reflexivo o la        presenta la\n                             canal del equipo.               general o desarrolla   evidencia           evidencia\n                         Se basa en el trabajo realizado   poco los             presentada no        solicitada.\n                           durante las semanas 6 a 8.       aprendizajes         permite verificar\n                                                            derivados de la       adecuadamente\n                                                                 experiencia.          su realización.\n     E.  Presentación       Respeta el formato solicitado,    Presenta el archivo    Modifica la         Entrega un\n        profesional del     mantiene la estructura         completo y            estructura          archivo distinto\n       documento         establecida y presenta la        conserva la             solicitada, mezcla    al solicitado o\n                            información de manera          estructura general,    instrucciones con   no presenta el\n                          ordenada y legible. La escritura  aunque tiene         sus respuestas o    documento.\n                            es profesional y comprensible.   algunos problemas    presenta\n                                                   de organización,      problemas\n                                                           redacción o formato   frecuentes de\n                                                  que dificultan         organización y\n                                                          parcialmente su       escritura que\n                                                                      lectura.                 dificultan la\n                                                                                               lectura.\n\n\n\n\n\n                                          Página 9 de 10\n\n[page:10]\n               Concentrado de calificaciones\n\nSemana              Actividad(es)              Porcentaje de\n                                                   calificación (--/100)\n     1                  Diagnóstica                 0\n                 Foro: Diversidad cultural y\n   2                                                   10\n                   lingüística en el derecho.\n               Interaprendizaje: comprender,\n   3                                                   10\n                   construir y distinguir.\n            Mi compromiso personal como\n   4                                        0\n             estudiante en entornos virtuales\n             Construcción de un ecosistema\n           TICCAD para el trabajo jurídico   5                                                       15\n                                virtual.\n\n             Documento colaborativo:\n   6          Organización del despacho            20\n                        jurídico digital.\n                Brief profesional del despacho\n   7                                        0\n                        jurídico digital.\n               Propuesta profesional del\n   8                                          30\n              despacho jurídico digital\n   9          Bitácora de interaprendizaje               15\n   10               Autoevaluación                0\n                                                  100\n\n\n\n\n\n                             Página 10 de 10"
+      }
+    ],
+    "alternatives": []
+  }
+]
+```
+
+## review
+
+```json
+{
+  "state": "needs_review",
+  "reviewed_at": null,
+  "reviewer_role": null,
+  "critical_gaps": [
+    "Cotejar consigna y procedencia docente; conversion local no equivale a aprobacion",
+    "Documento sin segmentar: identificar actividades, requisitos, preguntas y rubrica antes de ejecutar"
+  ],
+  "semantic_validation": "failed"
+}
+```
+
+## extensions
+
+```json
+{
+  "conversion": {
+    "version": "1.0",
+    "source_format": ".pdf",
+    "source_sha256": "6cecf959abbf962dda87be950d92d0def7e7c1a03f14193481193854e528a077",
+    "source_payload": null,
+    "source_blocks": [
+      {
+        "locator": "page:1",
+        "text": "                               Planificación de actividades\n\n                            Datos de identificación\n\n\n\nRegistro Federal de Contribuyentes\n\n\n\n\nClave Única de Registro de Población\n\n\n\n\nMatrícula/Folio                      DL25SARJ00033\n\n\n\n\nNombre de prestador de servicios\n                                     Janeth Santana Ramírez\nprofesionales en el ámbito de docencia\n\n\n\n                 Datos de identificación de la asignatura/materia\n\n\n\nAño                  2026\n\n\n\n\nSemestre              2\n\n\n\n\nBloque                          1\n\n\n\n\nDirección divisional      Ciencias Sociales y Administrativas\n\n\n\n\nPrograma educativo    Derecho\n\n\n\n\n\n                                          Página 1 de 10"
+      },
+      {
+        "locator": "page:2",
+        "text": "Asignatura/materia      Interaprendizajes en ambientes virtuales\n\n\n\n\nDatos de identificación del objetivo de la asignatura/materia\n                              ASIGNATURA:\n\nFechas de inicio y conclusión del\n                                     Del 06 de julio al 13 de septiembre de 2026\nperiodo educativo (diez semanas)\n\n\n\n                                  Formar profesionales altamente competentes y\nObjetivo general del programa de       comprometidos, capaces de abordar situaciones\neducativo                                legales complejas con integridad y desempeñarse\n                                     exitosamente en una variedad de roles dentro del\n                                   ámbito  jurídico, promoviendo  la  justicia  y  el\n                                           desarrollo de la sociedad.\n\n                                         Construir  estrategias  para  el  interaprendizaje\nObjetivo general de la asignatura          virtual analizando las prácticas culturales como\n                                        estudiantes en  línea,  la  reflexión  del uso de\n                                        recursos digitales y las experiencias de evaluación,\n                                       autoevaluación y coevaluación a  fin de lograr\n                                         interacciones dialógicas, creativas, comprensivas y\n                                          autogestivas,  como  parte  de   la  formación\n                                          profesional y laboral en el marco de la diversidad\n                                            cultural y lingüística.\n\n                                               •  Analizar   las   concepciones  de   cultura,\nObjetivos específicos de la                    diversidad         cultural-lingüística       e\nasignatura/materia                           interaprendizaje mediante el reconocimiento\n                                    de las prácticas culturales a fin de valorarlas en\n                                                      la formación profesional y laboral.\n                                               •  Examinar los interaprendizajes desarrollados\n                                    en los entornos virtuales mediante la revisión\n                                             del cómo se ha aprendido a ser estudiante en\n                                                     línea, las actitudes asumidas y el aprendizaje\n                                        ubicuo a fin de reconocer la relación entre el\n                                       uso de las TICCAD y el diálogo intercultural.\n                                               •  Diseñar un conjunto de estrategias para el\n                                             interaprendizaje virtual mediante la reflexión\n                                             del uso de recursos digitales en los procesos de\n                                           construcción  del  conocimiento,  evaluación\n                                          autoevaluación y con evaluación a  fin de\n\n\n\n                                          Página 2 de 10"
+      },
+      {
+        "locator": "page:3",
+        "text": "                                           transformar las prácticas monológicas en otras\n                                              dialógicas y conversacionales para vivenciar la\n                                          atención a la diversidad cultural y lingüística\n\n                                           Al aprobar la asignatura se contará con los\nAspectos que fortalecen del perfil de     conocimientos, habilidades y actitudes para\negreso del programa educativo           incorporar la perspectiva de atención a la\n                                         diversidad cultural y lingüística en los procesos de\n                                         interaprendizaje fortaleciendo el sentido de\n                                      pertenencia y el respeto desde la\n                                            interculturalidad.\n\n\n\nDatos para la planificación de actividades\n\nSemana 9 (Del 31 de agosto al 6 de septiembre)\n\nFecha de entrega (actividad): 6 de septiembre\n\nFecha de sesión sincrónica: 2 de septiembre     Hora: 21:00 hrs (Centro de México)\n\n\n\n                                III. Diseño de herramientas para desarrollar interaprendizajes en los\nContenido      ambientes virtuales.\ntemático a\ndesarrollar        3.2 La evaluación en la educación virtual como posibilidad de acción\n                   colectiva.\n\n\n                  Analizar su proceso de aprendizaje individual y colaborativo mediante la\nObjetivo\n                  interpretación crítica de evidencias formativas y la reflexión estructurada\nespecífico que\n                sobre su participación, a través de la elaboración de una bitácora de\nse desarrolla\n                 interaprendizaje que permita valorar su autonomía, corresponsabilidad,\ndel contenido\n               comunicación profesional y aportes al trabajo en equipo en entornos\ntemático\n                    virtuales.\n\n\n\nTécnica\ndidáctica que\n                             #94 Portafolio de evidencias digitalse utiliza (100\n                                      (Bitácora de interaprendizaje)técnicas de\nenseñanza y\naprendizaje)\n\n\n\n\n\n                                          Página 3 de 10"
+      },
+      {
+        "locator": "page:4",
+        "text": "Bibliografía      General:\npropuesta para\nconsulta          Bautista, G., Borges, F., & Forés, A. (2016). Didáctica universitaria en\n                      entornos virtuales de enseñanza-aprendizaje. Narcea Ediciones.(tomada de\nbiblioteca       Boud, D., y Falchikov, N. (2006). Alineando la evaluación con el aprendizaje a\ndigital, elibro)          largo plazo. Assessment & Evaluation in Higher Education , 31 (4),\n                        399–413. https://doi.org/10.1080/02602930600679050\n\n                Consejo Nacional de Normalización y Certificación de Competencias\n                        Laborales. (2025). EC0554.01: Trabajo en equipo [Estándar de\n                      competencia]. CONOCER.\n                      https://www.conocer.gob.mx/contenido/publicaciones_dof/2025/EC\n                        0554_01.pdf.\n              Cushpa Inchiglema, R. C. (2022). Metodología PACIE en el interaprendizaje\n                   de la asignatura TICS del Instituto Superior Riobamba [Tesis de\n                        maestría, Pontificia Universidad Católica del Ecuador, Sede\n                     Ambato].\n                    Nicol, DJ y Macfarlane-Dick, D. (2006). Evaluación formativa y aprendizaje\n                       autorregulado: un modelo y siete principios de buenas prácticas de\n                        retroalimentación. Studies  in  Higher  Education , 31 (2),  199-218.\n                       https://doi.org/10.1080/03075070600572090\n                 Zambrano-Pilay, E., Chiriboga-Dávalos, J., & Chiriboga-Mendoza, F. (2020).\n                       Tecnologías educativas para el interaprendizaje. Yachasun. Revista\n                          Científica Multidisciplinaria Arbitrada, 4(7), 200–216.\n                         https://doi.org/10.46296/yc.v4i7.0043\n\n\n               Complementaria:\n\n                  Bertely Busquets, M. (Coord.). (2011). Interaprendizajes entre indígenas: De\n                 cómo las y los educadores pescan conocimientos y significados\n                      comunitarios en contextos interculturales. CIESAS-UPN.\n                Cangas-Oña, L. X., Viteri-Naranjo, B. C., & Cangas-Oña, V. E. (2020). El\n                       proceso de interaprendizaje en la carrera de derecho. Dominio de\n                           las Ciencias, 6(1), 109–129. https://doi.org/10.23857/dc.v6i1.1348\n\n\n\n                 Optativa:\n                 López, A. (2022). Portafolio de evidencias digital. En López, A. 100 Técnicas\n                      Didácticas de Enseñanza y Aprendizaje. Universidad Abierta y a\n                       Distancia de México.\n                       https://100tecnicasdidacticas.unadmexico.mx/index.html\n\n\n\nNormatividad    Constitución Política de los Estados Unidos Mexicanos. (1917). Diario Oficial\n                   de la Federación, 5 de febrero de 1917. Últimas reformas publicadasgubernamental\n                            el 2 de junio de 2026.\n                       https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf\n\n\n\n                                          Página 4 de 10"
+      },
+      {
+        "locator": "page:5",
+        "text": "relacionada con\nla asignatura     Ley General de Derechos Lingüísticos de los Pueblos Indígenas. (2003).\n                        Diario Oficial de la Federación, 13 de marzo de 2003. Última reforma\n                      publicada el 18 de octubre de 2023.\n                       https://www.diputados.gob.mx/LeyesBiblio/pdf/LGDLPI.pdf\n\n                Ley Federal de Protección de Datos Personales en Posesión de los\n                          Particulares. (2025). Diario Oficial de la Federación, 20 de marzo de\n                        2025.\n\n                Naciones Unidas. (2001). Conferencia Mundial contra el Racismo, la\n                       Discriminación Racial, la Xenofobia y las Formas Conexas de\n                         Intolerancia: Declaración y Programa de Acción.\n                       https://www.un.org/es/events/pastevents/cmcr/durban_sp.pdf\n\n                Organización Internacional del Trabajo. (1989). Convenio 169 sobre pueblos\n                      indígenas y tribales en países independientes. Gobierno de México.\n                       https://www.gob.mx/cms/uploads/attachment/file/30118/Convenio16\n                         9.pdf\n\n              UNESCO. (1998). Declaración mundial sobre la educación superior en el\n                          siglo XXI: Visión y acción.\n                       https://unesdoc.unesco.org/ark:/48223/pf0000113878_spa\n\n\n\n\nTipo de\nevaluación que                             Sumativa\nse utiliza\n\n\n\nActividad para   Actividad:\n                 Bitácora de interaprendizajerealizar la\n              Fecha de entrega: 6 de septiembre, 23:55 hrs.evaluación\n                  Valor: 15 puntos\n(basada en la\ntécnica de                Propósito\nenseñanza y\naprendizaje      Esta semana integrarás tu proceso de aprendizaje vivido durante  la\nutilizada y la      asignatura. A través de la construcción de tu bitácora de interaprendizaje,\n                 recuperarás como punto de partida la autoevaluación realizada en labibliografía\n             semana 4, analizarás tu participación individual y colaborativa, interpretarás\nconsultada)                 evidencias  formativas,  reconocerás  tus  avances  y  transformarás  tu\n                 experiencia en estrategias transferibles a futuros entornos académicos y\n                  profesionales.\n                 Esta actividad te permitirá cerrar tu proceso formativo desde una mirada\n                      crítica, ética y profesional, articulando:\n                          •  Tu desarrollo contigo misma/o.\n                          •  Tu participación con tu equipo.\n                          •  Tu aporte para el aprendizaje de otras personas.\n\n\n\n                                          Página 5 de 10"
+      },
+      {
+        "locator": "page:6",
+        "text": "    •  La evolución de los compromisos de mejora que estableciste durante\n        la asignatura.\n\n\nInstrucciones para el desarrollo\n\n1.  Revisa el documento disponible en el aula virtual: “Orientaciones\n   para elaborar la Bitácora de interaprendizaje”.\n   Este contiene  la explicación completa de  la actividad, su sentido\n   formativo, las instrucciones paso a paso y ejemplos para su desarrollo.\n\n   Antes de comenzar, recupera también la autoevaluación que realizaste\n   en la semana 4, especialmente los compromisos de mejora personal y\n   colaborativa que estableciste. Estos te servirán como punto de partida\n   para reconocer cambios, avances  y aspectos que aún  necesitas\n    fortalecer.\n\n  A partir de estas orientaciones trabajarás en 4 secciones integradas en\n  un solo archivo:\n\n   A. Mapa de interaprendizaje\n   Reflexionas sobre tu desempeño contigo, con otras personas y para\n   otras personas: cómo aprendiste, cómo colaboraste y cómo aportaste al\n   equipo. Recuperas tu autoevaluación de la semana 4 para identificar\n   qué cambió en tu manera de aprender y participar a lo largo del curso.\n   B. Evidencias reales que sustentan mi reflexión\n   Seleccionas tres evidencias reales de distintos momentos de tu proceso\n   y explicas qué revelan sobre tu aprendizaje. Entre ellas recuperarás una\n   evidencia de tu punto de partida en la semana 4 y evidencias\n   posteriores que permitan observar tu evolución.\n   C. Lecciones aprendidas (“el cómo sí”)\n   Identificas situaciones reales, analizas cómo las enfrentaste y sintetizas\n   qué aprendizajes te llevas para futuros trabajos colaborativos. Retomas\n    los compromisos planteados en la semana 4 para valorar cuáles pusiste\n   en práctica, cuáles requieren continuidad y qué modificarías a partir de\n    la experiencia vivida.\n   D. Cierre profesional del proceso\n   Redactas un mensaje profesional para tu equipo y registras la evidencia.\n   Reflexionas brevemente sobre lo que significó cerrar el trabajo en\n   conjunto.\n\n   Estas cuatro secciones te permitirán reconstruir tu experiencia de\n  manera integral, reflexionando acerca de:\n    •  Cómo aprendiste.\n    •  Cómo colaboraste.\n    •  Cómo aportaste a otras personas.\n    •  Qué cambió respecto de los compromisos que estableciste en la\n     semana 4.\n    •  Qué evidencias sustentan tu proceso.\n    •  Cómo convertir ese aprendizaje en estrategias para tu futuro\n       profesional.\n\n\n\n\n                        Página 6 de 10"
+      },
+      {
+        "locator": "page:7",
+        "text": "                     2. Descarga el documento “Formato Bitácora de interaprendizaje”.\n                También se encuentra disponible en el aula virtual. Este es el formato\n                  cuyas secciones deberás completar con tus reflexiones y evidencias, con\n                  base en las instrucciones marcadas en el documento “Orientaciones\n                  para elaborar la Bitácora de interaprendizaje”.\n\n                   Este es  el único formato válido para  la entrega. No se aceptarán\n                    presentaciones, diapositivas ni documentos con estructura modificada.\n\n                       3. Mantén la escritura profesional, argumentada y basada en tu proceso\n                       real.\n                     Evita  divagar,  improvisar o responder de manera  superficial. Las\n                  preguntas guía del documento de orientación te ayudarán a analizar tu\n                    experiencia y relacionar lo que te propusiste, lo que ocurrió durante el\n                  proceso y los aprendizajes que identificas al cierre.\n\n                    4. Guarda tu documento en formato Word, nombrándolo de la siguiente\n                 manera:\n                   Nombre_ApellidoPaterno_Bitacorainteraprendizaje_Semana9\n\n\n\nEvidencia de la   Archivo “Bitácora de interaprendizaje”\nevaluación\n\n\n\nPorcentaje de\ncalificación que                                      (15/100)\naporta (--/100)\n\n\n\nObservaciones\n                                 Lineamientos\nCon base en lo señalado en los siguientes artículos del Reglamento Universitario de la\nUniversidad Abierta y a Distancia de México:\n\nArtículo 27. La calificación representa la valoración numérica del aprovechamiento que la o el\nestudiante logró en cada unidad didáctica. La escala de calificaciones comprende del 0 (cero)\nal 100 (cien), y la calificación mínima aprobatoria será 60 (sesenta).\n\nEn ningún caso procederá la renuncia a la calificación obtenida. Las actividades y evidencias\nde aprendizaje en las que se identifique falta de integridad académica serán evaluadas\ncon 0 (cero).\n\nArtículo 76. Son obligaciones de las y los estudiantes:\n\nV. Realizar, con integridad académica, las actividades que están señaladas en el aula virtual\ndel programa educativo en el que están inscritos, conforme a las fechas establecidas en el\ncalendario de aula.\n\n\n\n\n                                          Página 7 de 10"
+      },
+      {
+        "locator": "page:8",
+        "text": "                  Lineamientos para la evaluación del aprendizaje\n\n     •  La entrega de actividades se realizará de acuerdo con el calendario proporcionado por\n      su Figura Académica y marcado en el presente documento.\n     •  La entrega corresponde a un solo intento.\n     •  Las entregas extemporáneas tendrán una penalización equivalente al 20% del valor de\n        la actividad. La recepción extemporánea será únicamente hasta el martes de cada\n     semana (no aplica para semanas 9 y 10).\n     •  La persona estudiante entregará sus actividades debidamente citadas en formato\n     APA 7ª edición.\n     •  La aplicación o uso de las herramientas de IA se debe apegar a los Lineamientos para\n       el uso ético y responsable de la IA. Escala de evaluación para actividades con IA.\n     •   El uso de herramientas de inteligencia artificial está permitido como apoyo para\n      organizar ideas, revisar redacción, comprender instrucciones o fortalecer el proceso de\n      aprendizaje. Sin embargo, no sustituye el análisis propio, la reflexión personal, la\n      participación en equipo ni la elaboración de las actividades solicitadas.\n\n     Cuando se utilice IA para apoyar una actividad, deberá declararse brevemente al final\n      del trabajo, indicando la herramienta utilizada y el propósito de uso.\n\n                         Criterio                    Sanción / Penalización\n      50% a 100%, NO declaró uso de IA.             3 puntos menos\n      50% en adelante, declarado.        No se penaliza, pero se evalúa en\n                                                 función del contenido\n                                                                              1 puntos menos\n      0 a 49%, NO declarado\n\n      0 al 49%, se declara el uso de IA.      No se penaliza, pero se evalúa en\n                                                 función del contenido\n\n\n    •  La declaración del uso de IA no implica penalización automática. La actividad será\n      evaluada conforme a los criterios establecidos: pertinencia, comprensión, análisis,\n       participación, colaboración y cumplimiento de instrucciones.\n    •  La persona estudiante perderá su intento de envío de la actividad cuando entregue o\n       realice una o más de las condiciones enunciadas en Los Lineamientos para la\n      evaluación del aprendizaje: CAPÍTULO II, SECCIÓN TERCERA, DE LA ELABORACIÓN Y\n     ENTREGA DE ACTIVIDADES, apartado décimo octavo.\n\n     •  La entrega de actividades, recepción y evaluación se rige por dichos lineamientos y el\n     RUUADM, por lo tanto, no se reciben por otros medios distintos a aula ni posterior al\n       cierre de la misma.\n\nCriterios de examen:\n\n    •  Un intento\n    •  Método de calificación: el último intento.\n\n\n\n\n\n                                          Página 8 de 10"
+      },
+      {
+        "locator": "page:9",
+        "text": "                               Criterios de evaluación\n\nCriterio                          Excelente (3 pts)         Aceptable (2 pts)     Deficiente (1 pt)       0 pts\n     A.  Mapa de           Completa las 9 casillas con                        Responde solo       El apartado\n        interaprendizaje     reflexiones basadas en su       Responde todas o    algunas casillas o    está\n                               experiencia. Analiza cómo          la mayoría de las       lo hace mediante    incompleto, no\n                             aprendió, colaboró y aportó a      casillas y reconoce    afirmaciones        desarrollado o\n                               otras personas, y reconoce       aspectos de su        generales, sin      no se entregó.\n                         cambios respecto de su punto    aprendizaje y          analizar\n                        de partida y compromisos de     colaboración,         suficientemente\n                                    la semana 4.                 aunque algunas      su experiencia ni\n                                                                   reflexiones son         los cambios\n                                                            generales o la         ocurridos durante\n                                                                 relación con su         el curso.\n                                                         proceso de cambio\n                                                           es limitada.\n\n     B.  Evidencias reales    Presenta 3 evidencias reales,     Presenta 3           Presenta menos   No presenta\n       que sustentan mi    pertinentes y verificables de      evidencias reales,     de 3 evidencias,     evidencias o el\n         reflexión             distintos momentos de su       pero alguna tiene     son poco           apartado está\n                              proceso. Incluye una evidencia   poca relación con la   pertinentes o se      vacío.\n                             relacionada con su                reflexión o su         incorporan sin\n                            autoevaluación o                explicación es          explicar\n                         compromisos de la semana 4 y   general. La relación    suficientemente\n                             evidencias posteriores que       entre el punto de     qué muestran\n                          permiten reconocer su           partida y el proceso   sobre su proceso.\n                               evolución. Explica qué muestra   posterior se\n                          cada evidencia y la relaciona     reconoce\n                         con su aprendizaje.              parcialmente.\n     C.  Lecciones           Analiza 3 situaciones reales de   Presenta 3           Presenta menos   No presenta el\n        aprendidas y mi     su proceso. Explica qué          situaciones y        de 3 situaciones o   apartado o no\n      “cómo sí”             ocurrió, cómo actuó y qué       reconoce             sus reflexiones       desarrolla las\n                             aprendizaje obtiene para        aprendizajes         son generales y      situaciones\n                              futuras experiencias. Recupera   derivados de ellas,    muestran poca       solicitadas.\n                            sus compromisos de la        aunque algunas       relación entre la\n                       semana 4 y valora qué pudo     explicaciones son      experiencia vivida\n                          poner en práctica, qué          generales o la         y los aprendizajes\n                              necesita seguir trabajando o     relación con sus      que plantea.\n                        qué modificaría a partir de lo    compromisos y\n                                   vivido.                           futuras acciones\n                                                              está poco\n                                                                  desarrollada.\n    D.  Cierre profesional   Mensaje respetuoso,             Realiza el cierre y       El cierre es muy    No realiza el\n        del proceso          profesional, concreto y          presenta evidencia,    breve, poco          cierre o no\n                                   reflexivo; evidencia real del      pero su reflexión es    reflexivo o la        presenta la\n                             canal del equipo.               general o desarrolla   evidencia           evidencia\n                         Se basa en el trabajo realizado   poco los             presentada no        solicitada.\n                           durante las semanas 6 a 8.       aprendizajes         permite verificar\n                                                            derivados de la       adecuadamente\n                                                                 experiencia.          su realización.\n     E.  Presentación       Respeta el formato solicitado,    Presenta el archivo    Modifica la         Entrega un\n        profesional del     mantiene la estructura         completo y            estructura          archivo distinto\n       documento         establecida y presenta la        conserva la             solicitada, mezcla    al solicitado o\n                            información de manera          estructura general,    instrucciones con   no presenta el\n                          ordenada y legible. La escritura  aunque tiene         sus respuestas o    documento.\n                            es profesional y comprensible.   algunos problemas    presenta\n                                                   de organización,      problemas\n                                                           redacción o formato   frecuentes de\n                                                  que dificultan         organización y\n                                                          parcialmente su       escritura que\n                                                                      lectura.                 dificultan la\n                                                                                               lectura.\n\n\n\n\n\n                                          Página 9 de 10"
+      },
+      {
+        "locator": "page:10",
+        "text": "               Concentrado de calificaciones\n\nSemana              Actividad(es)              Porcentaje de\n                                                   calificación (--/100)\n     1                  Diagnóstica                 0\n                 Foro: Diversidad cultural y\n   2                                                   10\n                   lingüística en el derecho.\n               Interaprendizaje: comprender,\n   3                                                   10\n                   construir y distinguir.\n            Mi compromiso personal como\n   4                                        0\n             estudiante en entornos virtuales\n             Construcción de un ecosistema\n           TICCAD para el trabajo jurídico   5                                                       15\n                                virtual.\n\n             Documento colaborativo:\n   6          Organización del despacho            20\n                        jurídico digital.\n                Brief profesional del despacho\n   7                                        0\n                        jurídico digital.\n               Propuesta profesional del\n   8                                          30\n              despacho jurídico digital\n   9          Bitácora de interaprendizaje               15\n   10               Autoevaluación                0\n                                                  100\n\n\n\n\n\n                             Página 10 de 10"
+      }
+    ],
+    "unsegmented_document": true,
+    "period_pending": true,
+    "activity_mapping": [
+      {
+        "activity_id": "source-6cecf959abbf962d",
+        "local_number": null,
+        "source_locator": "document",
+        "source_is_summary": false
+      }
+    ]
+  }
+}
+```

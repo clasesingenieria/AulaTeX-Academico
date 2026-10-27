@@ -1,0 +1,282 @@
+# Planeacion: calculo-integral
+
+Estado: needs_review. Conversion local, no aprobacion docente ni autorizacion de envio.
+
+## Identificacion
+
+```json
+{
+  "institution": "UANL",
+  "program": "ingeniero-agronomo",
+  "subject_id": "calculo-integral",
+  "subject_title": "calculo-integral",
+  "offering_id": "oferta-f7c524166f48fd47",
+  "period": null,
+  "modality": null
+}
+```
+
+## Actividad source-c0663562e486d345: consigna-PIA
+
+### Consigna importada
+
+[document]
+# Consigna de Evaluación: Producto Integrador de Aprendizaje (PIA)
+## Unidad de Aprendizaje: Cálculo Integral (REF#261013755131)
+### Facultad de Agronomía — Universidad Autónoma de Nuevo León
+
+- **Valor porcentual:** 30% (30 puntos sobre 100)
+- **Modalidad:** Trabajo individual o parejas
+- **Formato del producto:**
+  1. Reporte formal en formato institucional UANL (`reporte-calculo-integral-PIA.pdf`).
+  2. Presentación ejecutiva Beamer 16:9 (`presentacion-calculo-integral-PIA.pdf`).
+
+---
+
+## 1. Propósito y Contextualización
+Diseñar y modelar analíticamente un sistema integral de aprovechamiento hídrico y balance volumétrico para un distrito de riego agrícola empleando cálculo integral. 
+
+El estudiante deberá resolver un problema de ingeniería agronómica que integre:
+1. Determinación de perfiles de área superficial de parcelas irregulares mediante integración definida numérica y analítica:
+   $$A = \int_{a}^{b} [f(x) - g(x)]\,dx$$
+2. Modelación volumétrica de tanques australianos y reservorios de almacenamiento hídrico con paredes de revolución mediante cascarones y discos:
+   $$V = \pi \int_{a}^{b} [R(x)]^2\,dx \quad \text{o} \quad V = 2\pi \int_{a}^{b} x \cdot f(x)\,dx$$
+3. Cálculo del trabajo mecánico $W = \int F\,ds$ requerido para el bombeo de fluidos fertilizantes y dinámica de sedimentación mediante integrales impropias.
+
+---
+
+## 2. Requisitos de Estructura Institucional (AulaTeX)
+
+1. **Carátula Oficial UANL / Agronomía:**
+   - Logotipos institucionales normalizados.
+   - Matrícula del estudiante (Carlos Mauricio Carvajal Coronado - 1977875).
+   - Datos de la unidad y fecha de entrega.
+2. **Resumen y Abstracción del Modelo:**
+   - Planteamiento formal del modelo matemático y justificación agronómica.
+3. **Desarrollo Matemático y Demostraciones:**
+   - Graficación de fronteras y recintos de integración.
+   - Demostración de convergencia en integrales impropias.
+   - Obtención paso a paso de antiderivadas y evaluación analítica por el Teorema Fundamental del Cálculo.
+4. **Validación y Aplicación Práctica:**
+   - Discusión de capacidad de almacenaje hídrico, tasa de recarga y horas de bombeo.
+5. **Referencias Bibliográficas:**
+   - Citación estricta en APA 7 (Larson, Stewart, Thomas, manuales de riego de SAGARPA/CONAGUA).
+
+---
+
+## 3. Rúbrica de Evaluación del PIA (100 puntos = 30% final)
+
+| Criterio | Excelente (100-90%) | Satisfactorio (89-75%) | Básico (74-60%) | No Aprobatorio (<60%) | Ponderación |
+| :--- | :--- | :--- | :--- | :--- | :---: |
+| **Modelación y Planteamiento de Integrales** | Definición impecable de diferenciales, límites de integración y funciones seccionadas para modelar el reservorio y parcela. | Planteamiento correcto con ligeras omisiones en la justificación de límites. | Planteamiento básico con imprecisiones en el elemento diferencial $dx$ o $dy$. | Errores en la formulación de las integrales que invalidan el cálculo. | **30%** |
+| **Rigor en la Integración y Procedimiento** | Métodos analíticos avanzados empleados con pulcritud; cálculo exacto de volúmenes y trabajo de bombeo. | Procedimiento correcto con errores aritméticos menores que no afectan la lógica. | Aplicación mecánica de fórmulas con pasos omitidos. | Procedimiento algebraico inconsistente o resultados ficticios. | **35%** |
+| **Interpretación y Viabilidad Agronómica** | Vinculación sobresaliente entre el resultado volumétrico y la lámina de riego para los cultivos. | Explicación correcta de la utilidad técnica de las curvas y volúmenes calculados. | Análisis meramente numérico sin contextualizar el sector agrícola. | Cero vinculación profesional con la agronomía. | **20%** |
+| **Formato Institucional y Bibliografía APA 7** | Adherencia total al estándar AulaTeX UANL, compilación limpia en XeLaTeX, figuras nítidas y citas canónicas. | Formato general adecuado con detalles tipográficos menores. | Omisiones en el aparato crítico o tipografía no institucional. | Formato no oficial o sin bibliografía. | **15%** |
+
+
+
+### Requisitos
+
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[]
+```
+
+### products
+
+```json
+[]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": []
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": null
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## sources
+
+```json
+[
+  {
+    "id": "src-local",
+    "kind": "other",
+    "authority": "unknown",
+    "title": "consigna-PIA.md",
+    "url": null,
+    "path": "planeaciones-calculo-integral/consigna-PIA.md",
+    "sha256": "c0663562e486d34597826592ac70c78523b04f1beec93ee1f148499f4bbd77a9",
+    "captured_at": null,
+    "media_type": "text/plain"
+  }
+]
+```
+
+## field_status
+
+```json
+[
+  {
+    "path": "/identity",
+    "state": "inferred",
+    "reason": "Identidad editorial del catalogo; oferta interna, periodo y modalidad no acreditados cuando faltan.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/sources",
+    "state": "confirmed",
+    "reason": "Archivo local preservado; su huella no acredita autoria ni vigencia docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "local-file",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum",
+    "state": "unknown",
+    "reason": "No se deducen competencias, resultados ni temario que no esten documentados.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "document",
+        "quoted_text": "[document]\n# Consigna de Evaluación: Producto Integrador de Aprendizaje (PIA)\n## Unidad de Aprendizaje: Cálculo Integral (REF#261013755131)\n### Facultad de Agronomía — Universidad Autónoma de Nuevo León\n\n- **Valor porcentual:** 30% (30 puntos sobre 100)\n- **Modalidad:** Trabajo individual o parejas\n- **Formato del producto:**\n  1. Reporte formal en formato institucional UANL (`reporte-calculo-integral-PIA.pdf`).\n  2. Presentación ejecutiva Beamer 16:9 (`presentacion-calculo-integral-PIA.pdf`).\n\n---\n\n## 1. Propósito y Contextualización\nDiseñar y modelar analíticamente un sistema integral de aprovechamiento hídrico y balance volumétrico para un distrito de riego agrícola empleando cálculo integral. \n\nEl estudiante deberá resolver un problema de ingeniería agronómica que integre:\n1. Determinación de perfiles de área superficial de parcelas irregulares mediante integración definida numérica y analítica:\n   $$A = \\int_{a}^{b} [f(x) - g(x)]\\,dx$$\n2. Modelación volumétrica de tanques australianos y reservorios de almacenamiento hídrico con paredes de revolución mediante cascarones y discos:\n   $$V = \\pi \\int_{a}^{b} [R(x)]^2\\,dx \\quad \\text{o} \\quad V = 2\\pi \\int_{a}^{b} x \\cdot f(x)\\,dx$$\n3. Cálculo del trabajo mecánico $W = \\int F\\,ds$ requerido para el bombeo de fluidos fertilizantes y dinámica de sedimentación mediante integrales impropias.\n\n---\n\n## 2. Requisitos de Estructura Institucional (AulaTeX)\n\n1. **Carátula Oficial UANL / Agronomía:**\n   - Logotipos institucionales normalizados.\n   - Matrícula del estudiante (Carlos Mauricio Carvajal Coronado - 1977875).\n   - Datos de la unidad y fecha de entrega.\n2. **Resumen y Abstracción del Modelo:**\n   - Planteamiento formal del modelo matemático y justificación agronómica.\n3. **Desarrollo Matemático y Demostraciones:**\n   - Graficación de fronteras y recintos de integración.\n   - Demostración de convergencia en integrales impropias.\n   - Obtención paso a paso de antiderivadas y evaluación analítica por el Teorema Fundamental del Cálculo.\n4. **Validación y Aplicación Práctica:**\n   - Discusión de capacidad de almacenaje hídrico, tasa de recarga y horas de bombeo.\n5. **Referencias Bibliográficas:**\n   - Citación estricta en APA 7 (Larson, Stewart, Thomas, manuales de riego de SAGARPA/CONAGUA).\n\n---\n\n## 3. Rúbrica de Evaluación del PIA (100 puntos = 30% final)\n\n| Criterio | Excelente (100-90%) | Satisfactorio (89-75%) | Básico (74-60%) | No Aprobatorio (<60%) | Ponderación |\n| :--- | :--- | :--- | :--- | :--- | :---: |\n| **Modelación y Planteamiento de Integrales** | Definición impecable de diferenciales, límites de integración y funciones seccionadas para modelar el reservorio y parcela. | Planteamiento correcto con ligeras omisiones en la justificación de límites. | Planteamiento básico con imprecisiones en el elemento diferencial $dx$ o $dy$. | Errores en la formulación de las integrales que invalidan el cálculo. | **30%** |\n| **Rigor en la Integración y Procedimiento** | Métodos analíticos avanzados empleados con pulcritud; cálculo exacto de volúmenes y trabajo de bombeo. | Procedimiento correcto con errores aritméticos menores que no afectan la lógica. | Aplicación mecánica de fórmulas con pasos omitidos. | Procedimiento algebraico inconsistente o resultados ficticios. | **35%** |\n| **Interpretación y Viabilidad Agronómica** | Vinculación sobresaliente entre el resultado volumétrico y la lámina de riego para los cultivos. | Explicación correcta de la utilidad técnica de las curvas y volúmenes calculados. | Análisis meramente numérico sin contextualizar el sector agrícola. | Cero vinculación profesional con la agronomía. | **20%** |\n| **Formato Institucional y Bibliografía APA 7** | Adherencia total al estándar AulaTeX UANL, compilación limpia en XeLaTeX, figuras nítidas y citas canónicas. | Formato general adecuado con detalles tipográficos menores. | Omisiones en el aparato crítico o tipografía no institucional. | Formato no oficial o sin bibliografía. | **15%** |\n\n"
+      }
+    ],
+    "alternatives": []
+  }
+]
+```
+
+## review
+
+```json
+{
+  "state": "needs_review",
+  "reviewed_at": null,
+  "reviewer_role": null,
+  "critical_gaps": [
+    "Cotejar consigna y procedencia docente; conversion local no equivale a aprobacion",
+    "Documento sin segmentar: identificar actividades, requisitos, preguntas y rubrica antes de ejecutar"
+  ],
+  "semantic_validation": "failed"
+}
+```
+
+## extensions
+
+```json
+{
+  "conversion": {
+    "version": "1.0",
+    "source_format": ".md",
+    "source_sha256": "c0663562e486d34597826592ac70c78523b04f1beec93ee1f148499f4bbd77a9",
+    "source_payload": null,
+    "source_blocks": [
+      {
+        "locator": "document",
+        "text": "# Consigna de Evaluación: Producto Integrador de Aprendizaje (PIA)\n## Unidad de Aprendizaje: Cálculo Integral (REF#261013755131)\n### Facultad de Agronomía — Universidad Autónoma de Nuevo León\n\n- **Valor porcentual:** 30% (30 puntos sobre 100)\n- **Modalidad:** Trabajo individual o parejas\n- **Formato del producto:**\n  1. Reporte formal en formato institucional UANL (`reporte-calculo-integral-PIA.pdf`).\n  2. Presentación ejecutiva Beamer 16:9 (`presentacion-calculo-integral-PIA.pdf`).\n\n---\n\n## 1. Propósito y Contextualización\nDiseñar y modelar analíticamente un sistema integral de aprovechamiento hídrico y balance volumétrico para un distrito de riego agrícola empleando cálculo integral. \n\nEl estudiante deberá resolver un problema de ingeniería agronómica que integre:\n1. Determinación de perfiles de área superficial de parcelas irregulares mediante integración definida numérica y analítica:\n   $$A = \\int_{a}^{b} [f(x) - g(x)]\\,dx$$\n2. Modelación volumétrica de tanques australianos y reservorios de almacenamiento hídrico con paredes de revolución mediante cascarones y discos:\n   $$V = \\pi \\int_{a}^{b} [R(x)]^2\\,dx \\quad \\text{o} \\quad V = 2\\pi \\int_{a}^{b} x \\cdot f(x)\\,dx$$\n3. Cálculo del trabajo mecánico $W = \\int F\\,ds$ requerido para el bombeo de fluidos fertilizantes y dinámica de sedimentación mediante integrales impropias.\n\n---\n\n## 2. Requisitos de Estructura Institucional (AulaTeX)\n\n1. **Carátula Oficial UANL / Agronomía:**\n   - Logotipos institucionales normalizados.\n   - Matrícula del estudiante (Carlos Mauricio Carvajal Coronado - 1977875).\n   - Datos de la unidad y fecha de entrega.\n2. **Resumen y Abstracción del Modelo:**\n   - Planteamiento formal del modelo matemático y justificación agronómica.\n3. **Desarrollo Matemático y Demostraciones:**\n   - Graficación de fronteras y recintos de integración.\n   - Demostración de convergencia en integrales impropias.\n   - Obtención paso a paso de antiderivadas y evaluación analítica por el Teorema Fundamental del Cálculo.\n4. **Validación y Aplicación Práctica:**\n   - Discusión de capacidad de almacenaje hídrico, tasa de recarga y horas de bombeo.\n5. **Referencias Bibliográficas:**\n   - Citación estricta en APA 7 (Larson, Stewart, Thomas, manuales de riego de SAGARPA/CONAGUA).\n\n---\n\n## 3. Rúbrica de Evaluación del PIA (100 puntos = 30% final)\n\n| Criterio | Excelente (100-90%) | Satisfactorio (89-75%) | Básico (74-60%) | No Aprobatorio (<60%) | Ponderación |\n| :--- | :--- | :--- | :--- | :--- | :---: |\n| **Modelación y Planteamiento de Integrales** | Definición impecable de diferenciales, límites de integración y funciones seccionadas para modelar el reservorio y parcela. | Planteamiento correcto con ligeras omisiones en la justificación de límites. | Planteamiento básico con imprecisiones en el elemento diferencial $dx$ o $dy$. | Errores en la formulación de las integrales que invalidan el cálculo. | **30%** |\n| **Rigor en la Integración y Procedimiento** | Métodos analíticos avanzados empleados con pulcritud; cálculo exacto de volúmenes y trabajo de bombeo. | Procedimiento correcto con errores aritméticos menores que no afectan la lógica. | Aplicación mecánica de fórmulas con pasos omitidos. | Procedimiento algebraico inconsistente o resultados ficticios. | **35%** |\n| **Interpretación y Viabilidad Agronómica** | Vinculación sobresaliente entre el resultado volumétrico y la lámina de riego para los cultivos. | Explicación correcta de la utilidad técnica de las curvas y volúmenes calculados. | Análisis meramente numérico sin contextualizar el sector agrícola. | Cero vinculación profesional con la agronomía. | **20%** |\n| **Formato Institucional y Bibliografía APA 7** | Adherencia total al estándar AulaTeX UANL, compilación limpia en XeLaTeX, figuras nítidas y citas canónicas. | Formato general adecuado con detalles tipográficos menores. | Omisiones en el aparato crítico o tipografía no institucional. | Formato no oficial o sin bibliografía. | **15%** |\n\n"
+      }
+    ],
+    "unsegmented_document": true,
+    "period_pending": true,
+    "activity_mapping": [
+      {
+        "activity_id": "source-c0663562e486d345",
+        "local_number": null,
+        "source_locator": "document",
+        "source_is_summary": false
+      }
+    ]
+  }
+}
+```

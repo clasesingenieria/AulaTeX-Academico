@@ -1,0 +1,79 @@
+# Investigación guiada y cotejo jurídico S5
+
+Consulta: 23 de octubre de 2026. Consigna contrastada con `../CONSIGNA-OFICIAL-S5.md`, planificación S5 y material de apoyo docente. Este archivo conserva la investigación extensa y las salvedades; el reporte presenta su aplicación breve.
+
+## Fuentes y alcance
+
+Se consultaron las versiones oficiales descargadas del Código Penal Federal (CPF, reforma DOF 13 de marzo de 2026), Código Penal para el Distrito Federal (CPDF, consolidado del Congreso CDMX con reforma de 26 de agosto de 2026), Constitución (DOF 7 de octubre de 2026), Ley General de Secuestro (LGS, DOF 20 de mayo de 2021), Ley General en Materia de Desaparición (LGD, DOF 16 de julio de 2025) y Ley General de Trata (LGT, DOF 14 de noviembre de 2025). CPF, CPDF y Constitución de S4 se volvieron a descargar para cotejar su hash: son idénticos. Se reutilizan sin crear copias redundantes; sus rutas y hashes están en `inventario-fuentes-juridicas-S5.json`.
+
+La copia del CPDF que el aula proporciona está actualizada solo al 29 de julio de 2020. Se conserva como material docente, pero el análisis usa el texto oficial más reciente disponible. El material de estudio orienta; la norma vigente determina los elementos. Los casos no fijan lugar ni fecha de los hechos: el CPDF funciona como referencia local expresamente solicitada, condicionada a que CDMX sea la jurisdicción aplicable. El CPF no se aplica automáticamente por ser un código federal. Las leyes generales distribuyen competencia entre Federación y entidades: LGS 23; LGD 24 y 25.
+
+La Constitución, artículo 14, exige una "ley exactamente aplicable al delito de que se trata". Esta exigencia impide completar los hechos con suposiciones o usar por analogía tipos parecidos. El interés superior de la niñez (art. 4) orienta la protección; no sustituye la acreditación de los elementos ni la presunción de inocencia (art. 20, apartado B, fracción I).
+
+## Tabla de investigación: contenido contrastado
+
+| Figura | Ley y artículo | Conducta legal relevante | Diferencia decisiva y reserva |
+|---|---|---|---|
+| Privación de libertad personal | CPF 364, fracción I; CPDF 160 | Un particular priva de libertad a otra persona. CPDF exige que no persiga lucro, daño o perjuicio. | No requiere más de 24 horas para existir; rebasarlas modifica la pena. El encierro, bloqueo o intimidación deben impedir realmente abandonar el lugar, sin causa jurídica justificante. El encierro no demuestra por sí mismo secuestro. |
+| Secuestro | LGS 9, fracción I, inciso a; 10, fracción I, incisos b y c | Privación con propósito de obtener rescate o cualquier beneficio, entre otras finalidades expresas del artículo 9. | Finalidad específica, además de restricción. Dos o más autores y violencia son agravantes distintas si se prueban. El cobro efectivo del rescate no forma parte de la descripción del propósito. CPF 366 y 366 Bis están derogados desde 2010. Para hechos actuales, los artículos locales históricos 163 y siguientes no sustituyen la ley general. |
+| Desaparición forzada | LGD 27 y 28; como alternativa, 34 | El 27 exige privación por servidor público o particular con autorización, apoyo o aquiescencia de servidor público, seguida de abstención o negativa a reconocerla o proporcionar información. El 28 sanciona también ocultación o negativa de información en la forma que especifica. | El vínculo estatal y la conducta de ocultación/negativa deben investigarse; personas armadas no equivalen a servidores públicos. El 34 sanciona privación con finalidad de ocultar a la víctima, su suerte o paradero por particulares: tampoco se configura automáticamente al faltar prueba del vínculo estatal. |
+| Tráfico de menores | CPDF 169; comparación CPF 366 Ter y 366 Quáter | En CPDF: entrega ilegal a tercero para custodia definitiva con consentimiento de ascendiente que ejerza patria potestad o de quien tenga la custodia, a cambio de beneficio económico; contempla además modalidades sin consentimiento o sin beneficio y consecuencias específicas. CPF 366 Ter: traslado o entrega ilícita de menor de 16 años para beneficio económico indebido, con supuestos detallados de ilicitud. | Dinero y entrega son indicios, no todos los elementos. Verificar edad, identidad y posición de quien entrega, carácter definitivo, consentimiento y legalidad. El último párrafo del 366 Ter contempla también traslado/entrega dentro de México; no afirmar que el cruce de frontera es siempre indispensable. El 366 Quáter tiene modalidades y reducción de pena, incluida una hipótesis parental internacional sin lucro. |
+| Retención o sustracción de menores o incapaces | CPDF 171, 172 y 173 | El 171 se refiere a quien no tiene el parentesco del 173 ni tutela, retiene sin consentimiento de custodia/guarda legítima o sustrae de ella. El 173 regula al familiar que sustrae, retiene u oculta bajo sus condiciones sobre patria potestad, tutela y resolución judicial de guarda/custodia. | Retener es mantener al menor sin devolución; sustraer implica apartarlo de su custodia/guarda. Parentesco y título de cuidado determinan la hipótesis: no aplicar indistintamente 171 a un progenitor. El 172 agrava el supuesto del artículo anterior cuando la víctima es menor de 12 años. |
+
+## Ficha 1: encierro y comerciante
+
+Hechos diferenciados: una persona impide a otra abandonar una habitación durante horas; en otro evento, varias personas trasladan por la fuerza al comerciante y exigen dinero para liberarlo. Son eventos independientes.
+
+En el primer hecho, la hipótesis es privación de libertad si se acredita impedimento real y ausencia de autorización o justificación. Bajo CPDF 160 debe verificarse también la ausencia del propósito de lucro, daño o perjuicio. No superar 24 horas no excluye el delito. Deben identificarse autor y víctima, mecanismo, duración, voluntad de salir, amenazas, posibles lesiones y finalidad. Son útiles testimonios, video y condiciones de cierre; no basta la expresión genérica "estuvo en una habitación".
+
+En el segundo, la exigencia de dinero a cambio de liberar al comerciante proporciona un dato directo de la finalidad de rescate, por lo que cabe proponer secuestro (LGS 9.I.a). Pluralidad de dos o más personas y violencia permiten examinar LGS 10.I.b y c, sin inventar armas, lesiones, relación de confianza ni lugar solitario. Se deben preservar y autenticar exigencias de rescate, mensajes/llamadas, videos, declaraciones y datos de intervención de cada persona. La consumación no depende de que la familia haya pagado.
+
+La jurisprudencia II.2o.P. J/9 P (11a.), registro 2028646, exige la finalidad específica: no basta la privación material. Es jurisprudencia del Segundo Tribunal Colegiado en Materia Penal del Segundo Circuito; su obligatoriedad territorial no equivale a una regla nacional emitida por la Suprema Corte. Es orientación interpretativa pertinente para distinguir los dos hechos.
+
+## Ficha 2: persona llevada por personas armadas
+
+Se conoce la falta de noticias de la familia y existe el relato de un testigo sobre traslado por personas armadas. Debe distinguirse el hecho narrado de su corroboración y la identidad o calidad de sus autores.
+
+La desaparición forzada del artículo 27 requiere: privación de libertad; servidor público o particular con autorización, apoyo o aquiescencia estatal; y la abstención o negativa posterior que describe la ley. El artículo 28 contempla la ocultación o negativa de información en sus supuestos. Ni portar armas ni el desconocimiento familiar del paradero demuestran, aisladamente, el vínculo con el poder público o todos los elementos restantes.
+
+Faltan identificación y calidad de participantes, vehículos, órdenes de servicio, bitácoras/registros de detención, cámaras, comunicaciones, testimonios complementarios y conducta posterior de reconocimiento/ocultación/información. Deben verificarse las líneas de intervención estatal y no estatal. Si se acredita una privación por particulares con finalidad de ocultar, debe examinarse el artículo 34, sin usarlo como una clasificación automática por descarte.
+
+La clasificación por desaparición forzada es provisional e información insuficiente es una respuesta jurídicamente fundada. Esta reserva no justifica esperar para buscar. La jurisprudencia 1a./J. 35/2021 (11a.), registro 2023814, reconoce el derecho a la búsqueda, incluso de oficio, sin dilación y con presunción de vida. La LGD 79 exige agotar los mecanismos hasta determinar suerte o paradero. Buscar e investigar responsabilidades son deberes paralelos; no se exige confirmar primero qué tipo de desaparición ocurrió.
+
+La tesis XII.P.3 P (11a.), registro 2029879, ayuda a comprender la finalidad de ocultación del artículo 34. Es **aislada**, y su propia nota señala que no es obligatoria ni apta para integrar jurisprudencia. No debe presentarse como jurisprudencia vinculante.
+
+## Ficha 3: entrega onerosa y progenitor
+
+Primer hecho: entrega de un menor a terceros a cambio de dinero, sin datos de contexto. Es compatible con una línea de investigación por tráfico de menores; no confirma por sí sola el CPDF 169. Se requieren edad, parentesco/posición de quien entrega, patria potestad y custodia, alcance del consentimiento, carácter definitivo de la custodia, legalidad y naturaleza del beneficio. En CPF 366 Ter se debe probar que la víctima tiene menos de 16 años y el supuesto de ilicitud correspondiente. La entrega nacional está contemplada; no presumir traslado internacional. Si las condiciones del CPDF 169 o CPF 366 Ter no se prueban, debe mantenerse la reserva.
+
+Tráfico de menores y trata no son sinónimos. La trata del artículo 10 LGT exige fines de explotación. El dinero no prueba por sí solo esa finalidad. Si se documentan circunstancias de adopción onerosa ilegal, se examina también el supuesto particular del artículo 27 LGT; no afirmar de forma absoluta que todos los delitos de esa ley exigen un hecho consumado de explotación. El artículo 26 regula entrega/recepción ilegal con fin de abuso o explotación. El consentimiento de la víctima no excluye responsabilidad conforme al artículo 40, pero no debe confundirse con el consentimiento y la posición jurídica que el CPDF 169 incorpora a sus modalidades.
+
+Segundo hecho: progenitor se lleva a su hija y no la devuelve a quien tiene legalmente su cuidado. Se investiga retención y/o sustracción de familiar conforme al CPDF 173 si CDMX es competente y concurren sus condiciones. El artículo 171 no debe atribuirse al progenitor como si fuera un tercero sin parentesco. Se requieren acta y edad, resoluciones de guarda/custodia, alcance de patria potestad/tutela, vigencia de convenios y régimen de visitas, autorización inicial y vencimiento del deber de devolución, lugar de salida/permanencia, ocultamiento o amenazas y posibles razones protectoras. El parentesco no da licencia para desatender una resolución, pero tampoco constituye prueba automática del delito. No presumir lucro, explotación ni cruce de fronteras.
+
+## Conclusión personal: propuesta de enfoque
+
+Conviene elegir la ficha 2 para una conclusión de 5 a 7 líneas: dar prioridad a búsqueda y vida; mantener provisional la clasificación por falta de prueba del vínculo estatal y de la conducta posterior; fundar en LGD 27, 28, 34 y jurisprudencia 1a./J. 35/2021; indicar como dato indispensable la identificación y vinculación de quienes privaron de libertad. La voz puede ser directa: "Yo daría prioridad a localizar a la persona..." y "No confirmaría desaparición forzada...". No añadir un expediente inventado, sentenciar culpabilidad ni reiterar toda la tabla en la conclusión.
+
+## Jurisprudencia y citas breves verificadas
+
+Los textos íntegros se cotejaron con las publicaciones descargadas. Los metadatos y verificación de cada cita están en `fichas-jurisprudencia-S5.json`. Se consultó la ficha oficial de cada registro; no muestra aviso de sustitución o interrupción al momento de consulta. Esta comprobación no constituye una auditoría exhaustiva de todos los posibles precedentes posteriores.
+
+| Registro | Naturaleza y publicación | Cita utilizable | Función |
+|---|---|---|---|
+| 2028646 | Jurisprudencia II.2o.P. J/9 P (11a.); Gaceta, Libro 36, abril 2024, Tomo V, p. 4397; publicada 19-04-2024, obligatoria desde 22-04-2024 en su ámbito. | "ante la indemostración de dicho elemento subjetivo no puede tenerse por probada la conducta típica de secuestro" (17 palabras). | Evitar equiparar cualquier encierro con secuestro. |
+| 2023814 | Jurisprudencia 1a./J. 35/2021 (11a.); Gaceta, Libro 7, noviembre 2021, Tomo II, p. 1198; publicada 19-11-2021, obligatoria desde 22-11-2021. | "bajo la presunción de que está viva" (7 palabras). | No condicionar la búsqueda a probar de antemano quién cometió el hecho. |
+| 2029879 | Tesis aislada XII.P.3 P (11a.); publicada 07-02-2025, expresamente no obligatoria. | "con la finalidad de ocultar a la víctima o su suerte o paradero" (13 palabras). | Distinguir desaparición por particulares de mera ausencia y de otros tipos. |
+
+No sumar citas adicionales que excedan 25 palabras de cada ficha jurisprudencial en el reporte. Las paráfrasis deben conservar la referencia.
+
+## Bibliografía propuesta
+
+- Cámara de Diputados del H. Congreso de la Unión. (2021). *Ley General para Prevenir y Sancionar los Delitos en Materia de Secuestro, Reglamentaria de la Fracción XXI del Artículo 73 de la Constitución Política de los Estados Unidos Mexicanos* (última reforma DOF 20-05-2021). https://www.diputados.gob.mx/LeyesBiblio/pdf/LGPSDMS_200521.pdf
+- Cámara de Diputados del H. Congreso de la Unión. (2025). *Ley General en Materia de Desaparición Forzada de Personas, Desaparición Cometida por Particulares y del Sistema Nacional de Búsqueda de Personas* (última reforma DOF 16-07-2025). https://www.diputados.gob.mx/LeyesBiblio/pdf/LGMDFP.pdf
+- Cámara de Diputados del H. Congreso de la Unión. (2025). *Ley General para Prevenir, Sancionar y Erradicar los Delitos en Materia de Trata de Personas y para la Protección y Asistencia a las Víctimas de estos Delitos* (última reforma DOF 14-11-2025). https://www.diputados.gob.mx/LeyesBiblio/pdf/LGPSEDMTP.pdf
+- Segundo Tribunal Colegiado en Materia Penal del Segundo Circuito. (2024). *Secuestro. No se configura este delito ante la ausencia del elemento subjetivo específico de finalidad que lo rige* [Jurisprudencia II.2o.P. J/9 P (11a.), registro 2028646]. *Gaceta del Semanario Judicial de la Federación*, Libro 36, Tomo V, 4397. https://sjf2.scjn.gob.mx/detalle/tesis/2028646
+- Suprema Corte de Justicia de la Nación, Primera Sala. (2021). *Desaparición forzada de personas. El derecho a no ser víctima de desaparición forzada comprende el derecho a la búsqueda como parte de su núcleo esencial* [Jurisprudencia 1a./J. 35/2021 (11a.), registro 2023814]. *Gaceta del Semanario Judicial de la Federación*, Libro 7, Tomo II, 1198. https://sjf2.scjn.gob.mx/detalle/tesis/2023814
+- Tribunal Colegiado en Materia Penal del Décimo Segundo Circuito. (2025). *Delito de desaparición cometida por particulares. El artículo 34 de la ley general de la materia que lo prevé, respeta el principio de legalidad en su vertiente de taxatividad* [Tesis aislada XII.P.3 P (11a.), registro 2029879]. *Semanario Judicial de la Federación*. https://sjf2.scjn.gob.mx/detalle/tesis/2029879
+- Tapia Olivares, L. E. (Coord.). (2022). *Manual sobre desaparición de personas* (1.ª reimpresión, 2023). Suprema Corte de Justicia de la Nación. https://www.scjn.gob.mx/derechos-humanos/sites/default/files/Publicaciones/archivos/2024-01/Manual%20sobre%20desaparicio%CC%81n%20de%20personas.pdf
+
+Complementar con CPF, CPDF, Constitución y material UnADM usando los registros oficiales de la materia. El manual se guardó en la carpeta de libros: la catalogación confirma edición 2022, reimpresión 2023, ISBN 978-607-552-303-3. Es doctrina especializada, no legislación ni jurisprudencia.

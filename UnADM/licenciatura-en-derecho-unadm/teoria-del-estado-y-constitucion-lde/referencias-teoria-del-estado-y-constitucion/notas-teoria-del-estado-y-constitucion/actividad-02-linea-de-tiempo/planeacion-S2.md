@@ -3,8 +3,8 @@
 Actualizacion 11 octubre: enviada al modulo 214812, ultima modificacion 22:04
 hora del aula, Enviado para calificar, no calificado. PDF de cuatro paginas
 en formato docente; el reporte interno LaTeX de ocho paginas es diferente.
-[PDF docente S2-S3](../../../planeaciones-teoria-del-estado-y-constitucion/Planificacion-de-actividades-S2-S3-Teoria-del-Estado-y-Constitucion.pdf)
-y [TXT de apoyo](../../../planeaciones-teoria-del-estado-y-constitucion/Planificacion-de-actividades-S2-S3-Teoria-del-Estado-y-Constitucion.txt).
+[PDF docente S2-S3](../actividad-02-linea-de-tiempo/Planificacion-de-actividades-S2-S3-Teoria-del-Estado-y-Constitucion.pdf)
+y [TXT de apoyo](../actividad-02-linea-de-tiempo/Planificacion-de-actividades-S2-S3-Teoria-del-Estado-y-Constitucion.txt).
 La rubrica recuperada el 11 octubre tiene: hechos/fechas/pensadores (3),
 cinco etapas (2), estructura y legibilidad (2), opinion critica (2), APA (1).
 Total 10; no es autocalificacion. Las advertencias siguientes sobre formato

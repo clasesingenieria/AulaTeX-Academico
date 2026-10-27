@@ -1,0 +1,1383 @@
+# Planeacion: antecedentes-de-los-derechos-humanos-lde
+
+Estado: needs_review. Conversion local, no aprobacion docente ni autorizacion de envio.
+
+## Identificacion
+
+```json
+{
+  "institution": "UnADM",
+  "program": "licenciatura-en-derecho-unadm",
+  "subject_id": "antecedentes-de-los-derechos-humanos-lde",
+  "subject_title": "antecedentes-de-los-derechos-humanos-lde",
+  "offering_id": "oferta-927a5ccf34809e93",
+  "period": null,
+  "modality": null
+}
+```
+
+## Actividad source-53dc130afcd5a2c9: Planificación de actividades S3 - Antecedentes de los Derechos Humanos
+
+### Consigna importada
+
+[page:1]
+                     Planificación de actividades
+
+
+                            Datos de identificación
+
+
+
+Registro Federal de Contribuyentes
+
+
+
+
+Clave Única de Registro de Población
+
+
+
+Matrícula/Folio                      FA2611LOOD00054
+
+
+
+
+Nombre de prestador de servicios
+                                       Daniel Alexis Lozano Ortega
+profesionales en el ámbito de docencia
+
+
+
+                 Datos de identificación de la asignatura/materia
+
+
+
+Año                  2026
+
+
+
+
+Semestre              2
+
+
+
+
+Bloque                2
+
+
+
+
+Dirección divisional      Ciencias Sociales y Administrativas
+
+
+
+
+Programa educativo    Derecho
+
+
+
+
+
+                                          Página 1 de 21
+
+[page:2]
+Asignatura/materia     Antecedentes de los Derechos Humanos
+
+
+
+
+Datos de identificación del objetivo de la asignatura/materia
+             ASIGNATURA: Antecedentes de los Derechos Humanos
+
+Fechas de inicio y conclusión del
+                                     28 DE SEPTIEMBRE AL 06 DE DICIEMBRE
+periodo educativo (diez semanas)
+
+
+
+                                  Formar profesionales altamente competentes y
+Objetivo general del programa de       comprometidos, capaces de abordar situaciones
+educativo                                legales complejas con integridad y desempeñarse
+                                     exitosamente en una variedad de roles dentro del
+                                   ámbito  jurídico, promoviendo  la  justicia  y  el
+                                           desarrollo de la sociedad.
+
+                                   Conocer las bases teóricas, históricas y normativas
+Objetivo general de la asignatura       que fundamentan  los derechos humanos en
+                                    México
+                                        ⎯ Reconoce las bases teóricas básicas relacionadas
+Objetivos específicos de la             con los derechos
+asignatura/materia                 humanos en México.                                        ⎯ Identifica aspectos relevantes del desarrollo
+                                            histórico de los
+                                     derechos humanos en México.                                        ⎯ Analiza los documentos normativos nacionales e
+                                         internacionales
+                                que fundamentan los valores de los derechos
+                               humanos en México.
+
+                                           Al aprobar la asignatura, reconoce las principales
+Aspectos que fortalecen del perfil de     bases  teóricas,  históricas y normativas de  los
+egreso del programa educativo         derechos humanos en México.
+
+
+
+Datos para la planificación de actividades
+
+Semana 2 (Del día 12 del mes de octubre al día 18 de mes octubre)
+
+Fecha de entrega (actividad): 18 de octubre
+
+
+
+
+                                          Página 2 de 21
+
+[page:3]
+Fecha de sesión sincrónica: martes Hora: 8:00 p.m.
+
+
+
+
+                               Unidad 2. Reconoce las bases teóricas básicas relacionadasContenido temático a
+                             con los derechos humanos en México.
+desarrollar                                         1.2. Teoría de las tres generaciones de los derechos humanos.
+
+
+                                  Analizar  las  principales  teorías que fundamentan  los
+Objetivo específico que se       derechos humanos en México mediante el estudio de sus
+                              bases filosóficas, jurídicas e históricas, a fin de comprenderdesarrolla del contenido
+                              su influencia en el reconocimiento, protección y garantíatemático
+                           de  los derechos humanos dentro  del orden  jurídico
+                              mexicano.
+
+
+Técnica didáctica que se utiliza
+(100 técnicas de enseñanza y           Resumen de fracción de libro y Foro
+aprendizaje)
+
+
+
+
+Bibliografía propuesta para       Bibliografía básica
+consulta (tomada de biblioteca   Arteaga Nava, E. (2022). Garantías individuales y derechos
+digital, elibro)               humanos (9.ª ed.). Oxford University Press.
+                                  Carbonell, M. (2021). Los derechos fundamentales en
+                             México (8.ª ed.). Porrúa.
+                              Corcuera Cabezut, S. (2020). Derecho constitucional y
+                              derechos humanos. Oxford University Press.
+                                Fix-Zamudio, H., & Valencia Carmona, S. (2020). Derecho
+                                  constitucional mexicano y comparado (10.ª ed.). Porrúa.
+                              Peces-Barba Martínez, G. (2018). Curso de derechos
+                              fundamentales: Teoría general. Universidad Carlos III de
+                                Madrid.
+                                Nikken, P. (2010). La protección internacional de los
+                              derechos humanos: Su desarrollo progresivo. Instituto
+                               Interamericano de Derechos Humanos.
+                                  Bibliografía complementaria
+                                    Alexy, R. (2017). Teoría de los derechos fundamentales (2.ª
+                                          ed.). Centro de Estudios Políticos y Constitucionales.
+                               Bobbio, N. (2017). El tiempo de los derechos. Sistema.
+                                        Ferrajoli, L. (2019). Derechos y garantías. La ley del más
+                                   débil (8.ª ed.). Trotta.
+                               Hunt, L. (2009). La invención de los derechos humanos.
+                              Tusquets Editores.
+
+
+
+
+                                          Página 3 de 21
+
+[page:4]
+                              Pérez Luño, A. E. (2014). Los derechos fundamentales (11.ª
+                                          ed.). Tecnos.
+                                 Vasak, K. (1984). Las dimensiones internacionales de los
+                              derechos humanos. UNESCO.
+                                Legislación y documentos oficiales
+                                Constitución Política de los Estados Unidos Mexicanos.
+                                Declaración Universal de los Derechos Humanos (1948).
+                                Declaración Americana de los Derechos y Deberes del
+                         Hombre (1948).
+                              Pacto Internacional de Derechos Civiles y Políticos (1966).
+                              Pacto Internacional de Derechos Económicos, Sociales y
+                                  Culturales (1966).
+                             Convención Americana sobre Derechos Humanos (1969).
+                              Ley de la Comisión Nacional de los Derechos Humanos.
+                              Ley General de Víctimas.
+                              Ley Federal para Prevenir y Eliminar la Discriminación.
+                             Recursos electrónicos
+                             Comisión Nacional de los Derechos Humanos (CNDH)
+                          Suprema Corte de Justicia de la Nación (SCJN)
+                                  Oficina del Alto Comisionado de las Naciones Unidas para
+                                     los Derechos Humanos (ACNUDH)
+                               Organización de los Estados Americanos (OEA) – Sistema
+                               Interamericano de Derechos Humanos
+                                   Diario Oficial de la Federación (DOF)
+
+
+
+                                Constitución Política de los Estados Unidos Mexicanos
+Normatividad gubernamental    Ley de Amparo, Reglamentaria de los artículos 103 y 107
+relacionada con la asignatura    de la Constitución Política de los Estados Unidos
+                             Mexicanos
+                              Ley de la Comisión Nacional de los Derechos Humanos
+                              Ley General de Víctimas
+                              Ley Federal para Prevenir y Eliminar la Discriminación
+                              Ley General para la Igualdad entre Mujeres y Hombres
+                              Ley General de Acceso de las Mujeres a una Vida Libre de
+                                  Violencia
+                              Ley General de los Derechos de Niñas, Niños y
+                               Adolescentes
+                              Ley General para la Inclusión de las Personas con
+                               Discapacidad
+                              Ley General para Prevenir, Investigar y Sancionar la
+                                 Tortura y otros Tratos o Penas Crueles, Inhumanos o
+                             Degradantes
+                              Ley General en Materia de Desaparición Forzada de
+                              Personas
+
+
+
+                                          Página 4 de 21
+
+[page:5]
+Reglamento Interno de la Comisión Nacional de los
+Derechos Humanos
+Declaración Universal de los Derechos Humanos
+Declaración Americana de los Derechos y Deberes del
+Hombre
+Pacto Internacional de Derechos Civiles y Políticos
+Pacto Internacional de Derechos Económicos, Sociales y
+Culturales
+Convención Americana sobre Derechos Humanos
+Protocolo de San Salvador
+Convención sobre los Derechos del Niño
+Convención sobre la Eliminación de Todas las Formas de
+Discriminación contra la Mujer (CEDAW)
+Convención sobre los Derechos de las Personas con
+Discapacidad
+Convención contra la Tortura y Otros Tratos o Penas
+Crueles, Inhumanos o Degradantes
+Convención Internacional sobre la Eliminación de todas
+las Formas de Discriminación Racial
+Convención Internacional para la Protección de Todas las
+Personas contra las Desapariciones Forzadas
+Estatuto de Roma de la Corte Penal Internacional
+Carta de las Naciones Unidas
+Carta Internacional de Derechos Humanos
+Carta Magna (1215)
+Petition of Right (1628)
+Habeas Corpus Act (1679)
+Bill of Rights (1689)
+Declaración de Independencia de los Estados Unidos
+(1776)
+Constitución de los Estados Unidos de América (1787)
+Declaración de los Derechos del Hombre y del Ciudadano
+(1789)
+Constitución de Cádiz (1812)
+Constitución Federal de los Estados Unidos Mexicanos de
+1824
+Constitución Federal de los Estados Unidos Mexicanos de
+1857
+Constitución Política de los Estados Unidos Mexicanos de
+1917
+Reforma Constitucional en materia de Derechos
+Humanos de 2011
+Jurisprudencia de la Suprema Corte de Justicia de la
+Nación en materia de derechos humanos
+
+
+
+
+
+      Página 5 de 21
+
+[page:6]
+                                 Jurisprudencia de la Corte Interamericana de Derechos
+                         Humanos
+                            Recomendaciones de la Comisión Nacional de los
+                             Derechos Humanos
+                               Observaciones Generales de los Comités de las Naciones
+                              Unidas
+                                   Principios de París relativos al estatuto de las instituciones
+                                nacionales de derechos humanos
+
+
+
+Tipo de evaluación que se utiliza                Sumativa
+
+
+                             Actividad 3: Resumen de lectura – El concepto de
+Actividad para realizar la        generaciones de los derechos humanos
+evaluación (basada en la técnica  Propósito de la actividad:
+de enseñanza y aprendizaje       Identificar   y   comprender    el   concepto  de
+utilizada y la bibliografía        generaciones de los derechos humanos, así como sus
+consultada)                  antecedentes históricos, mediante la elaboración de
+                        un resumen académico que permita reconocer las
+                                principales ideas desarrolladas por  los autores y
+                                 fortalecer la capacidad de síntesis y análisis jurídico.
+                               Material:
+                                             •  Libro:  Rey  Cantor,  Ernesto;  Rey  Anaya,
+                               Giovanna Alejandra y Rey Anaya, Ángela
+                                   Margarita. Las generaciones de los Derechos
+                            Humanos. Libertad, Igualdad y Fraternidad
+                              (Décima edición, 2022).
+                                             •  Lectura asignada: páginas 72 a 76 y página 83
+                                   del archivo PDF.
+                              Indicaciones:
+                        Con base en la lectura asignada, elabora un resumen
+                         académico en el que identifiques las principales ideas
+                               desarrolladas por  los autores respecto  al origen
+                                 histórico de la primera generación de los derechos
+                       humanos y la importancia de la Carta Magna como
+                           antecedente de su reconocimiento.
+                                  El resumen deberá integrar los siguientes elementos:
+                                             •  Identificación de las ideas principales del texto.
+                                             •  Explicación del contexto histórico presentado
+                                 por los autores.
+                                             •  Descripción de la relevancia de la Carta Magna
+                          como antecedente histórico de los derechos
+                              humanos.
+                                             •  Reflexión personal sobre  la importancia del
+                                   estudio de  los antecedentes históricos para
+
+
+
+                                          Página 6 de 21
+
+[page:7]
+     comprender  la  evolución de  los  derechos
+     humanos.
+Elementos  académicos  que  debe  cumplir  el
+resumen
+1. Estructura
+    •  Portada.
+    •  Introducción (breve).
+    •  Desarrollo del resumen.
+    •  Conclusión.
+    •  Referencias.
+2. Contenido
+    •  Sintetizar las ideas principales de la lectura sin
+      copiar textualmente el contenido del libro.
+    •  Explicar   con    claridad    los   conceptos
+      desarrollados por los autores.
+    •  Relacionar  la  lectura  con  los  contenidos
+     abordados en la Unidad 1.
+    •  Incluir  una   reflexión  personal  sobre   la
+     importancia del tema.
+3. Redacción
+    •   Utilizar lenguaje formal y académico.
+    •  Mantener coherencia y secuencia lógica de las
+      ideas.
+    •  Cuidar la ortografía, gramática y puntuación.
+4. Formato
+    •  Extensión de 1 a 3 cuartillas (sin contar portada
+      ni referencias).
+    •  Letra Arial 12.
+    •  Interlineado 1.5.
+    •  Márgenes de 2.5 cm.
+    •  Texto justificado.
+5. Referencias
+    •  Citar el libro conforme a los criterios del Manual
+    APA 7.ª edición.
+    •  Incluir cualquier otra fuente consultada, en caso
+     de utilizarla.
+Entrega
+Entrega el archivo únicamente en formato PDF.
+Antes de finalizar el envío, verifica que el archivo
+quede en estatus "Enviado" y no como "Borrador", ya
+que   únicamente    las   actividades   enviadas
+correctamente  podrán   ser  consideradas  para
+evaluación.
+
+Tiempo estimado de entrega
+Entrega ordinaria (Rúbrica verde): del 12 al 18 de
+octubre, hasta las 23:55 horas.
+
+
+
+
+      Página 7 de 21
+
+[page:8]
+Entrega extemporánea (Rúbrica naranja): 19 de
+octubre,  hasta  las  23:55  horas,  aplicándose  los
+criterios de evaluación correspondientes a la rúbrica
+naranja.
+Actividad 4. Foro de participación y debate.
+
+Propósito de la actividad
+
+Analizar la utilidad y vigencia de la teoría de las
+generaciones de  los  derechos humanos  en  la
+actualidad, mediante  la participación en un foro
+académico que promueva el intercambio de ideas, el
+análisis jurídico y el respeto por las opiniones de los
+demás participantes.
+
+Indicaciones
+
+Con base en los contenidos revisados en la Unidad, la
+lectura asignada  y, en su caso, la sesión de clase
+grabada,  participa en  el  foro respondiendo a  la
+siguiente pregunta detonadora:
+
+¿Cuál consideras que es el objetivo actual de las
+generaciones de los derechos humanos y cuál es su
+utilidad para comprender la protección y garantía
+de  los  derechos humanos  en  la  actualidad?
+Fundamenta tu respuesta.
+
+Tu participación deberá demostrar análisis y reflexión
+jurídica,  sustentando  tus  argumentos  en   los
+contenidos de la unidad y, cuando sea pertinente, en
+otras fuentes académicas confiables.
+
+Una vez publicada tu aportación inicial, deberás leer
+las participaciones de tus compañeros y realizar al
+menos una retroalimentación a un compañero
+diferente, aportando comentarios que enriquezcan el
+debate académico, preferentemente a un compañero
+que aún no tenga una retroalimentación.
+
+La   retroalimentación  deberá   ser   respetuosa,
+argumentada y orientada al intercambio de ideas. No
+será  suficiente  expresar  frases como  "Estoy de
+acuerdo", "Excelente trabajo" o comentarios similares
+más la aportación que nuestra la aportación inicial de
+sus compañeros justificación.
+
+
+
+
+      Página 8 de 21
+
+[page:9]
+Requisitos de la participación inicial
+
+La publicación deberá cumplir con las siguientes
+características:
+
+   •  Responder de manera  clara a  la pregunta
+     detonadora.
+   •  Fundamentar  la respuesta con argumentos
+      jurídicos y académicos.
+   •  Relacionar   el  tema  con   los  contenidos
+     estudiados en la Unidad.
+   •  Expresar una postura personal debidamente
+     argumentada.
+   •  Utilizar lenguaje formal y académico.
+   •  Mantener una redacción clara, coherente y con
+     buena ortografía.
+   •  Tener una extensión mínima de 300 palabras y
+    máxima de 500 palabras.
+
+Requisitos de la retroalimentación
+
+La retroalimentación deberá:
+
+   •  Dirigirse a  la participación de  al menos un
+     compañero.
+   •  Tener una extensión mínima de 100 palabras.
+   •  Aportar  comentarios  que  complementen,
+      analicen o cuestionen respetuosamente  las
+      ideas presentadas.
+   •  Fundamentar  las observaciones cuando sea
+      posible.
+   •  Mantener en todo momento una comunicación
+      respetuosa, cordial y académica.
+
+Criterios de participación
+
+Se  espera que  las  intervenciones fomenten un
+ambiente  de  diálogo  académico,  demostrando
+respeto hacia  las opiniones de  los compañeros,
+capacidad  de   análisis,  pensamiento   crítico  y
+disposición   para   enriquecer    el   aprendizaje
+colaborativo.
+
+No  se  permitirá  el  uso de  lenguaje  ofensivo,
+discriminatorio   o   cualquier   conducta   que
+
+
+
+
+      Página 9 de 21
+
+[page:10]
+                           contravenga  las normas de convivencia del aula
+                                      virtual.
+
+                           Entrega
+
+                           La actividad se realizará directamente en el foro de
+                                   la plataforma, por  lo que no deberá adjuntarse
+                          ningún archivo.
+
+                            Es importante verificar que tanto la participación
+                                      inicial  como   la  retroalimentación  hayan  sido
+                             publicadas correctamente antes de la fecha de cierre
+                               del foro.
+
+                        Tiempo estimado de entrega
+
+                           Entrega ordinaria (Rúbrica verde): del 12 al 18 de
+                             octubre, hasta las 23:55 horas.
+
+                           Entrega extemporánea (Rúbrica naranja): 19 de
+                             octubre,  hasta  las  23:55  horas,  aplicándose  los
+                                    criterios de evaluación correspondientes a la rúbrica
+                               naranja.
+
+
+
+
+
+Evidencia de la evaluación              •  Documento en formato PDF que contenga un
+                             resumen académico de  la lectura asignada,
+                                  integrado por portada, introducción, desarrollo,
+                                   conclusión y referencias en formato APA 7. El
+                             resumen deberá elaborarse conforme a  las
+                                       características establecidas en las indicaciones
+                             de  la  actividad, sintetizando  las  principales
+                                    ideas de los autores, explicando el contexto
+                                       histórico de  la primera generación de  los
+                                 derechos humanos, la relevancia de la Carta
+                           Magna como antecedente  histórico  y una
+                                       reflexión personal sobre  la importancia del
+                                   estudio de  los antecedentes históricos para
+                              comprender  la  evolución de  los  derechos
+                              humanos, atendiendo al estándar establecido
+                              en la rúbrica de evaluación.
+
+                                             •  Participación realizada directamente en el foro
+                             de la plataforma, integrada por una aportación
+                                             inicial y, al menos, una retroalimentación a un
+
+
+
+                                          Página 10 de 21
+
+[page:11]
+                               compañero.  La  aportación   inicial  deberá
+                                 responder de manera fundamentada a  la
+                                pregunta detonadora, desarrollando un análisis
+                                           crítico  sobre   el  objetivo  actual  de   las
+                                 generaciones de los derechos humanos y su
+                                       utilidad  para comprender  la  protección  y
+                                    garantía de  los derechos humanos en  la
+                                      actualidad, con una extensión de 300 a 500
+                                      palabras.  Asimismo,  deberá   incluir  una
+                                    retroalimentación argumentada, respetuosa y
+                                    constructiva  a   la   participación  de  un
+                               compañero, con una extensión mínima de 100
+                                      palabras,   elaborada   conforme   a    las
+                                       características establecidas en las indicaciones
+                             de  la  actividad  y  atendiendo  al  estándar
+                                     previsto en la rúbrica de evaluación.
+
+
+
+Porcentaje de calificación que
+                                                                (11/100)
+aporta (--/100)
+
+
+Observaciones                         •  Actividad 3: Resumen de libro
+                                      •  El resumen académico deberá elaborarse con
+                                base en  la  lectura asignada  del  libro Las
+                                 generaciones  de  los  Derechos  Humanos.
+                                      Libertad, Igualdad y Fraternidad y, en su caso,
+                              con la sesión de clase grabada.
+                                      •  Se  valorará especialmente  la capacidad de
+                                           síntesis, análisis y comprensión de las ideas
+                                     desarrolladas por los autores, evitando limitarse
+                                a copiar o transcribir textualmente el contenido
+                             de la lectura.
+                                      •  El resumen deberá presentar una estructura
+                                      lógica y coherente, integrando los apartados
+                                       solicitados en las indicaciones de la actividad:
+                                     introducción,    desarrollo,    conclusión    y
+                                       referencias.
+                                      •  Es indispensable que el documento sea una
+                                   elaboración original del estudiante; por lo tanto,
+                             no deberá copiarse textualmente el contenido
+                                    del libro ni de otras fuentes de consulta.
+                                      •  Se evaluará la correcta identificación de las
+                                      principales ideas relacionadas con el origen
+                                       histórico de  la primera generación de  los
+                                 derechos humanos  y  la  explicación de  la
+
+
+
+                                          Página 11 de 21
+
+[page:12]
+   importancia  de   la  Carta  Magna  como
+   antecedente de su reconocimiento.
+•  El desarrollo del trabajo deberá explicar de
+  manera clara el contexto histórico expuesto por
+   los  autores,  utilizando terminología  jurídica
+  adecuada y demostrando comprensión de los
+   conceptos abordados.
+•  La  reflexión personal deberá  expresar, con
+  argumentos propios, la importancia del estudio
+  de    los   antecedentes    históricos   para
+  comprender la evolución y consolidación de los
+   derechos humanos.
+•  Todas las fuentes consultadas deberán citarse
+  conforme   al  formato  APA   7.ª   edición,
+   incluyendo como mínimo la referencia del libro
+   utilizado    y    cualquier    otra    fuente
+   complementaria que haya sido consultada.
+•  El trabajo deberá entregarse únicamente en
+   formato PDF, respetando la extensión, formato
+   y   especificaciones   establecidas  en   las
+   indicaciones de la actividad.
+•  Antes de enviar la evidencia, verifica que el
+   archivo se encuentre correctamente adjunto y
+  que el envío quede en estatus "Enviado" y no
+  como  "Borrador",  ya que  los  trabajos en
+   borrador no podrán ser evaluados.
+
+•  Actividad 4: Foro de participación y debate
+
+•  La participación en el foro deberá elaborarse
+  con base en los contenidos revisados en  la
+   Unidad, la lectura asignada y, en su caso, la
+   sesión de clase grabada.
+•  Se  valorará especialmente  la capacidad de
+   análisis,  reflexión  jurídica  y argumentación
+    crítica, evitando limitarse a expresar opiniones
+   sin fundamento o reproducir textualmente el
+   contenido de las fuentes de consulta.
+•  La participación inicial deberá responder de
+  manera clara y fundamentada a la pregunta
+   detonadora,   desarrollando   una   postura
+   personal sustentada en los contenidos de la
+   unidad  y, cuando sea pertinente, en  otras
+   fuentes académicas confiables.
+•  Es indispensable que la publicación sea una
+   elaboración original del estudiante; por lo tanto,
+  no deberá copiarse total o parcialmente  el
+   contenido de  libros,  artículos,  páginas de
+
+
+  Página 12 de 21
+
+[page:13]
+   internet o de las participaciones realizadas por
+   otros compañeros.
+•  Se  evaluará  la  capacidad para  explicar  el
+   objetivo  actual de  las generaciones de  los
+   derechos humanos y argumentar su utilidad
+   para comprender la protección y garantía de los
+   derechos  humanos   en    la   actualidad,
+  empleando terminología jurídica adecuada.
+•  La aportación  inicial deberá mantener una
+   estructura lógica y coherente, con ideas claras,
+  argumentos sólidos y una redacción formal,
+   respetando  la  extensión  mínima  de  300
+   palabras y máxima de 500 palabras.
+•  La  retroalimentación  deberá  realizarse,  al
+  menos, a la participación de un compañero,
+   procurando comentar preferentemente una
+   publicación  que  aún  no  haya  recibido
+   retroalimentación.
+•  La    retroalimentación    deberá    aportar
+   observaciones, comentarios o argumentos que
+  complementen,  analicen  o  enriquezcan  la
+   participación del compañero, evitando limitarse
+   a  expresiones como  "Estoy  de  acuerdo",
+   "Excelente trabajo" o comentarios similares que
+  no aporten valor al debate académico.
+•  La retroalimentación deberá elaborarse con
+   respeto, lenguaje académico y una extensión
+  mínima de 100 palabras, favoreciendo el diálogo
+   constructivo y el aprendizaje colaborativo.
+•  Cuando  se   utilicen   ideas,  conceptos  o
+   información provenientes de  otras  fuentes,
+   estas deberán citarse conforme a los criterios
+   del Manual APA 7.ª edición.
+•  La actividad deberá realizarse directamente en
+   el foro de la plataforma, por lo que no deberá
+   adjuntarse ningún archivo.
+•  Antes del cierre del foro, verifica que tanto tu
+   participación inicial como la retroalimentación
+  hayan sido publicadas correctamente, ya que
+  únicamente  las  intervenciones  registradas
+   dentro  del periodo  establecido podrán  ser
+   consideradas para su evaluación.
+
+
+
+
+ Lineamientos
+
+
+
+
+  Página 13 de 21
+
+[page:14]
+Con base en lo señalado en los siguientes artículos del Reglamento Universitario de la
+Universidad Abierta y a Distancia de México:
+
+Artículo 27. La calificación representa la valoración numérica del aprovechamiento que la o el
+estudiante logró en cada unidad didáctica. La escala de calificaciones comprende del 0 (cero)
+al 100 (cien), y la calificación mínima aprobatoria será 60 (sesenta).
+
+En ningún caso procederá la renuncia a la calificación obtenida. Las actividades y evidencias
+de aprendizaje en las que se identifique falta de integridad académica serán evaluadas
+con 0 (cero).
+
+Artículo 76. Son obligaciones de las y los estudiantes:
+
+V. Realizar, con integridad académica, las actividades que están señaladas en el aula virtual
+del programa educativo en el que están inscritos, conforme a las fechas establecidas en el
+calendario de aula.
+
+               Lineamientos para la evaluación del aprendizaje
+
+    •  La entrega de actividades se realizará de acuerdo con el calendario
+     proporcionado por su Figura Académica y marcado en el presente documento.
+    •  La entrega corresponde a un solo intento.
+    •  Las entregas extemporáneas estarán sujeta a una penalización de 2 a 3 puntos.
+     La recepción será únicamente hasta el martes de cada semana (no aplica para
+    semana 9 y 10).
+    •  La persona estudiante entregará sus actividades debidamente citadas en
+     formato APA 7ª edición.
+    •  La aplicación o uso de las herramientas de IA se debe apegar a los
+     Lineamientos para el uso ético y responsable de la IA. Escala de evaluación
+     para actividades con IA.
+
+
+
+
+
+                      Criterio                 Sanción / Penalización
+      50% a 100%, NO declaró uso de         4 puntos menos
+          IA.
+      50% en adelante, declarado.     No se penaliza, pero se evalúa en
+                                            función del contenido
+                                             2 puntos menos
+      0 a 49%, NO declarado
+      0 al 49%, se declara el uso de IA.  No se penaliza, pero se evalúa en
+                                            función del contenido
+
+
+   •  La persona estudiante perderá su intento de envío de la actividad cuando
+     entregue o realice una o más de las condiciones enunciadas en Los
+
+
+
+                                          Página 14 de 21
+
+[page:15]
+     Lineamientos para la evaluación del aprendizaje: CAPÍTULO II, SECCIÓN
+     TERCERA, DE LA ELABORACIÓN Y ENTREGA DE ACTIVIDADES, apartado
+     décimo octavo.
+
+    •  La entrega de actividades, recepción y evaluación se rige por dichos
+     lineamientos y el RUUADM, por lo tanto, no se reciben por otros medios
+      distintos a aula ni posterior al cierre de la misma.
+
+Criterios de examen:
+
+   • Un intento
+   •  Método de calificación: automático.
+
+
+
+
+
+                                          Página 15 de 21
+
+[page:16]
+Rubrica de Evaluación Ordinaria – Actividad 3:(Puntaje Máximo 7)
+
+ Criterio        Excelente      Bueno             Suficiente        Insuficiente     Puntaje
+                                                                  máxim
+                                                                         o
+
+ Identificación   Identifica      y  Identifica         la  Identifica    solo No identifica las  2
+ y  síntesis de  sintetiza    de  mayoría  de   las  algunas    ideas  ideas
+ las      ideas  manera    clara,  ideas  principales  principales,  con  principales   o
+ principales     precisa        y  con         ligeras  síntesis limitada  presenta   un
+               completa     las  omisiones      o  o poco clara.     resumen
+                 ideas             imprecisiones.                         incorrecto    o
+                  principales de la                                  basado     en
+                    lectura,                                               copias
+               demostrando                                               textuales.
+               comprensión
+                  del contenido.
+
+ Análisis     y  Explica           Desarrolla      los  El  desarrollo es No   desarrolla  2
+ desarrollo del  adecuadament   aspectos            superficial     y  los  elementos
+ contenido     e   el  contexto  solicitados,        aborda           requeridos   o
+                    histórico,       la  aunque      con  parcialmente los  presenta
+                  relevancia de la  menor            elementos        información
+                 Carta Magna y  profundidad    o  solicitados.        incorrecta.
+                presenta   una  fundamentación.
+                   reflexión
+                 personal   bien
+               fundamentada,
+                 relacionando  el
+              tema  con   la
+                Unidad.
+
+ Redacción  y  Presenta         Presenta         la  Presenta       No presenta  la   1
+ estructura      portada,          estructura          deficiencias en la  estructura
+                  introducción,      solicitada    con  estructura    o  solicitada o  la
+                   desarrollo,       pequeños errores  numerosos       redacción
+                 conclusión    y  de     redacción,  errores      de  impide
+                   referencias;       organización   u  redacción  que  comprender  el
+               mantiene          ortografía.           dificultan       la  trabajo.
+                 excelente                          comprensión.
+                  organización,
+                 coherencia,
+                  ortografía     y
+                 lenguaje
+                académico.
+
+ Referencias y  Cita             Presenta          Presenta       No      incluye   1
+ formato APA  correctamente   pequeños errores  referencias        referencias o no
+ 7                 las  fuentes  y  en   las   citas  o  incompletas   o  utiliza          el
+                presenta      las  referencias    en  con        varios  formato APA 7.
+                  referencias     APA 7.
+
+
+
+
+                                           Página 16 de 21
+
+[page:17]
+               conforme      al                       errores      de
+                formato APA 7.                       formato.
+
+ Cumplimient   Entrega        el  Cumple           Presenta  varios No cumple con   1
+ o   de    los  trabajo     en  parcialmente con  incumplimiento   los requisitos de
+ requisitos de  formato   PDF,  alguno  de   los  s  en  formato,  entrega  o   la
+ entrega        dentro del plazo  requisitos     de  extensión     o  actividad   no
+                  establecido,      formato       o  presentación.    puede       ser
+                respetando    la  presentación   sin                   evaluada   por
+                 extensión     y  afectar                            incumplimient
+                  especificaciones  significativament                  o    de     las
+              de     formato  e la evaluación.                         indicaciones.
+                  indicadas.
+
+
+
+
+Rubrica de Evaluación Extraordinaria – Actividad 3:(Puntaje Máximo 5)
+
+ Criterio        Excelente         Bueno              Suficiente       Insuficiente    Puntaje
+                                                                 máximo
+
+ Identificación  Identifica        y  Identifica       la  Identifica solo No identifica  2
+ y  síntesis de  sintetiza      de  mayoría de  las  algunas ideas  las     ideas
+ las     ideas  manera      clara,  ideas principales  principales,     principales o
+ principales     precisa          y  con        ligeras  con    síntesis  presenta un
+              completa las ideas  omisiones     o  limitada   o  resumen
+                 principales de  la  imprecisiones.    poco clara.    incorrecto o
+                  lectura,                                      basado  en
+              demostrando                                      copias
+              comprensión   del                                       textuales.
+               contenido.
+
+ Análisis    y  Explica              Desarrolla      los   El   desarrollo No desarrolla  1
+ desarrollo del  adecuadamente   aspectos          es  superficial  los
+ contenido      el       contexto  solicitados,        y    aborda  elementos
+                   histórico,         la aunque    con  parcialmente  requeridos o
+                relevancia de  la  menor               los elementos  presenta
+               Carta  Magna  y  profundidad   o  solicitados.     información
+               presenta     una  fundamentación.                  incorrecta.
+                  reflexión  personal
+              fundamentada,
+               relacionando    el
+             tema   con    la
+               Unidad.
+
+ Redacción y  Presenta portada,  Presenta          Presenta     No presenta  1
+ estructura      introducción,      pequeños errores  deficiencias    la estructura
+                  desarrollo,                            importantes    solicitada  o
+
+
+
+                                           Página 17 de 21
+
+[page:18]
+                conclusión       y de redacción o  en          la  la redacción
+                 referencias;          estructura.        organización   impide
+              mantiene                       o redacción.  comprender
+                organización,                                                 el trabajo.
+               coherencia,
+                 ortografía       y
+               lenguaje
+             académico.
+
+ Referencias y  Presenta           Presenta          Presenta     No   incluye  1
+ cumplimiento  correctamente las  pequeños errores  referencias     referencias o
+ de         los  referencias        en las referencias  incompletas   incumple los
+ requisitos de  conforme a APA 7  o   en   algún  o   incumple  requisitos
+ entrega       y    entrega     el  requisito     de  varios          esenciales
+                trabajo en formato  entrega.            requisitos  de de entrega.
+                PDF, respetando la                   formato   o
+                extensión   y   las                    presentación.
+                especificaciones
+                establecidas.
+
+
+
+
+
+Rubrica de Evaluación Ordinaria – Actividad 4: Foro de participación y debate (Puntaje
+Máximo 4)
+
+ Criterio          Excelente       Bueno            Suficiente        Insuficiente      Puntaj
+                                                                    e
+                                                                 máxim
+                                                                    o
+
+ Participación    Responde  de  Responde      La respuesta es No responde a  2
+ inicial: análisis y  manera clara y adecuadamen  superficial   o  la pregunta o
+ argumentación  completa a  la  te    a      la poco             la
+                pregunta        pregunta,      fundamentada  participación
+                detonadora,    aunque      la  y     desarrolla  carece    de
+               fundamentand  fundamentaci   parcialmente     análisis       y
+              o            sus  ón o el análisis  la    pregunta  fundamentaci
+                argumentos     presentan      detonadora.    ón.
+              con           los  ligeras   áreas
+                 contenidos de de
+                     la      unidad,  oportunidad.
+                demuestra
+                      análisis   crítico,
+
+
+
+                                           Página 18 de 21
+
+[page:19]
+                   reflexión
+                    jurídica  y una
+                 postura
+                 personal   bien
+                 sustentada.
+
+Retroalimentaci  Realiza    una  La             La           No  realiza  la  1
+ón   a    un  retroalimentaci   retroalimentaci  retroalimentaci  retroalimentaci
+compañero     ón  respetuosa,  ón     aporta  ón es limitada,  ón o  esta  se
+              argumentada y  comentarios    poco              limita      a
+                  constructiva,     pertinentes,     argumentada   comentarios sin
+                enriqueciendo   aunque   con o     apenas  aportar       al
+                    el debate con poca         cumple con los  debate
+                aportaciones    profundidad o  requisitos       académico.
+                 relevantes    y  fundamentaci   mínimos.
+              una   extensión  ón.
+               mínima de 100
+                 palabras.
+
+Redacción   y   Utiliza lenguaje  Presenta        Presenta varios No cumple con  1
+cumplimiento    formal        y  algunos errores  errores    de  las
+de           las  académico,    menores   de  redacción,      indicaciones,
+indicaciones     presenta        redacción,       ortografía   o  la    extensión
+                excelente        ortografía   o  incumple       requerida o la
+                   ortografía,      incumple        diversos         calidad
+               coherencia   y  parcialmente    requisitos de la  mínima    de
+                respeta       la  alguna          actividad.       redacción.
+                 extensión        indicación.
+                establecida
+               para          la
+                 participación
+                      inicial   y    la
+                  retroalimentaci
+                 ón,  así como
+                todas         las
+                 indicaciones de
+                    la actividad.
+
+
+
+
+
+                                          Página 19 de 21
+
+[page:20]
+Rubrica de Evaluación Extraordinaria – Actividad 4: Foro de participación y debate
+(Puntaje Máximo 3)
+
+ Criterio          Excelente      Bueno            Suficiente        Insuficiente      Puntaj
+                                                                    e
+                                                                 máxim
+                                                                    o
+
+ Participación    Responde  de  Responde      La respuesta es No responde a  1
+ inicial: análisis y  manera clara y adecuadamen  superficial,        la    pregunta
+ argumentación  fundamentada  te    a      la  desarrolla      detonadora o
+              a  la pregunta  pregunta,       parcialmente    la
+                detonadora,    aunque       el  la pregunta o  participación
+                demuestra        análisis  o   la  presenta       carece    de
+                      análisis  crítico,  fundamentaci   escasa            análisis       y
+                    reflexión       ón   presentan  fundamentaci   argumentació
+                     jurídica       y  algunas  áreas  ón.                n.
+                   sustenta     sus de
+                argumentos     oportunidad.
+              con           los
+                 contenidos de
+                     la Unidad.
+
+ Retroalimentaci  Realiza   una  La             La           No  realiza  la  1
+ ón    a    un  retroalimentaci  retroalimentaci  retroalimentaci  retroalimentaci
+ compañero     ón respetuosa,  ón     aporta  ón es limitada,  ón o  esta  se
+               argumentada   comentarios    poco              limita      a
+                 y  constructiva  pertinentes,     argumentada   comentarios sin
+              que enriquece  aunque   con o  no  cumple  aportar       al
+                      el     debate poca          completament  intercambio
+              académico  y  profundidad o  e   con     los  académico.
+               cumple con la  fundamentaci    requisitos
+                  extensión        ón.              establecidos.
+                mínima
+                  requerida.
+
+ Redacción   y   Utiliza lenguaje  Presenta        Presenta varios No cumple con  1
+ cumplimiento    formal       y  algunos errores  errores     de  las
+ de           las  académico,    menores   de  redacción   o  indicaciones, la
+ indicaciones    mantiene       redacción,      incumple        extensión
+              buena           ortografía   o  diversos         requerida o la
+                    ortografía,      incumple         requisitos de la  calidad mínima
+                coherencia   y  parcialmente    actividad.     de redacción.
+               cumple con la  alguna
+                  extensión     y  indicación.
+                 todas        las
+                  indicaciones
+
+
+
+                                           Página 20 de 21
+
+[page:21]
+        de            la
+          actividad.
+
+
+
+
+
+              Concentrado de calificaciones
+
+
+Semana               Actividades                  Porcentaje de
+
+                                                           calificación (--/100)
+     1     Foro diagnóstico / Introducción a la Unidad        0
+                Actividad 1: Reseña de Video
+   2                                                                                 11
+               Actividad 2: Publicación en Foro
+                   Actividad 3: Resumen
+   3                                                                                 11
+               Actividad 4: Publicación en Foro
+              Actividad 5: Cuadro comparativo   4                                                           10
+           Examen parcial (semanas 2, 3 y 4)                                                         5
+
+   5             Actividad 7: Mapa Mental                   10
+
+   6           Actividad 8: Cuadro sinóptico                  13
+
+   7            Actividad 9: Mapa de cajas                  10
+           Examen parcial (semanas 5, 6 y 7)              5
+   8           Actividad 11: Estudio de Caso                 10
+
+                    Actividad 12: Ensayo                       15   9
+
+   10                Autoevaluación                   0
+                                                          100
+
+
+
+
+
+                                  Página 21 de 21
+
+### Requisitos
+
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[]
+```
+
+### products
+
+```json
+[]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": []
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": null
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## sources
+
+```json
+[
+  {
+    "id": "src-local",
+    "kind": "pdf",
+    "authority": "unknown",
+    "title": "Planificación de actividades S3 - Antecedentes de los Derechos Humanos.pdf",
+    "url": null,
+    "path": "planeaciones-antecedentes-de-los-derechos-humanos/Planificación de actividades S3 - Antecedentes de los Derechos Humanos.pdf",
+    "sha256": "53dc130afcd5a2c940e503a5b5bce685173d7054cb42bff93344c9aa92b38c7c",
+    "captured_at": null,
+    "media_type": "application/pdf"
+  }
+]
+```
+
+## field_status
+
+```json
+[
+  {
+    "path": "/identity",
+    "state": "inferred",
+    "reason": "Identidad editorial del catalogo; oferta interna, periodo y modalidad no acreditados cuando faltan.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/sources",
+    "state": "confirmed",
+    "reason": "Archivo local preservado; su huella no acredita autoria ni vigencia docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "local-file",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum",
+    "state": "unknown",
+    "reason": "No se deducen competencias, resultados ni temario que no esten documentados.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "document",
+        "quoted_text": "[page:1]\n                     Planificación de actividades\n\n\n                            Datos de identificación\n\n\n\nRegistro Federal de Contribuyentes\n\n\n\n\nClave Única de Registro de Población\n\n\n\nMatrícula/Folio                      FA2611LOOD00054\n\n\n\n\nNombre de prestador de servicios\n                                       Daniel Alexis Lozano Ortega\nprofesionales en el ámbito de docencia\n\n\n\n                 Datos de identificación de la asignatura/materia\n\n\n\nAño                  2026\n\n\n\n\nSemestre              2\n\n\n\n\nBloque                2\n\n\n\n\nDirección divisional      Ciencias Sociales y Administrativas\n\n\n\n\nPrograma educativo    Derecho\n\n\n\n\n\n                                          Página 1 de 21\n\n[page:2]\nAsignatura/materia     Antecedentes de los Derechos Humanos\n\n\n\n\nDatos de identificación del objetivo de la asignatura/materia\n             ASIGNATURA: Antecedentes de los Derechos Humanos\n\nFechas de inicio y conclusión del\n                                     28 DE SEPTIEMBRE AL 06 DE DICIEMBRE\nperiodo educativo (diez semanas)\n\n\n\n                                  Formar profesionales altamente competentes y\nObjetivo general del programa de       comprometidos, capaces de abordar situaciones\neducativo                                legales complejas con integridad y desempeñarse\n                                     exitosamente en una variedad de roles dentro del\n                                   ámbito  jurídico, promoviendo  la  justicia  y  el\n                                           desarrollo de la sociedad.\n\n                                   Conocer las bases teóricas, históricas y normativas\nObjetivo general de la asignatura       que fundamentan  los derechos humanos en\n                                    México\n                                        ⎯ Reconoce las bases teóricas básicas relacionadas\nObjetivos específicos de la             con los derechos\nasignatura/materia                 humanos en México.                                        ⎯ Identifica aspectos relevantes del desarrollo\n                                            histórico de los\n                                     derechos humanos en México.                                        ⎯ Analiza los documentos normativos nacionales e\n                                         internacionales\n                                que fundamentan los valores de los derechos\n                               humanos en México.\n\n                                           Al aprobar la asignatura, reconoce las principales\nAspectos que fortalecen del perfil de     bases  teóricas,  históricas y normativas de  los\negreso del programa educativo         derechos humanos en México.\n\n\n\nDatos para la planificación de actividades\n\nSemana 2 (Del día 12 del mes de octubre al día 18 de mes octubre)\n\nFecha de entrega (actividad): 18 de octubre\n\n\n\n\n                                          Página 2 de 21\n\n[page:3]\nFecha de sesión sincrónica: martes Hora: 8:00 p.m.\n\n\n\n\n                               Unidad 2. Reconoce las bases teóricas básicas relacionadasContenido temático a\n                             con los derechos humanos en México.\ndesarrollar                                         1.2. Teoría de las tres generaciones de los derechos humanos.\n\n\n                                  Analizar  las  principales  teorías que fundamentan  los\nObjetivo específico que se       derechos humanos en México mediante el estudio de sus\n                              bases filosóficas, jurídicas e históricas, a fin de comprenderdesarrolla del contenido\n                              su influencia en el reconocimiento, protección y garantíatemático\n                           de  los derechos humanos dentro  del orden  jurídico\n                              mexicano.\n\n\nTécnica didáctica que se utiliza\n(100 técnicas de enseñanza y           Resumen de fracción de libro y Foro\naprendizaje)\n\n\n\n\nBibliografía propuesta para       Bibliografía básica\nconsulta (tomada de biblioteca   Arteaga Nava, E. (2022). Garantías individuales y derechos\ndigital, elibro)               humanos (9.ª ed.). Oxford University Press.\n                                  Carbonell, M. (2021). Los derechos fundamentales en\n                             México (8.ª ed.). Porrúa.\n                              Corcuera Cabezut, S. (2020). Derecho constitucional y\n                              derechos humanos. Oxford University Press.\n                                Fix-Zamudio, H., & Valencia Carmona, S. (2020). Derecho\n                                  constitucional mexicano y comparado (10.ª ed.). Porrúa.\n                              Peces-Barba Martínez, G. (2018). Curso de derechos\n                              fundamentales: Teoría general. Universidad Carlos III de\n                                Madrid.\n                                Nikken, P. (2010). La protección internacional de los\n                              derechos humanos: Su desarrollo progresivo. Instituto\n                               Interamericano de Derechos Humanos.\n                                  Bibliografía complementaria\n                                    Alexy, R. (2017). Teoría de los derechos fundamentales (2.ª\n                                          ed.). Centro de Estudios Políticos y Constitucionales.\n                               Bobbio, N. (2017). El tiempo de los derechos. Sistema.\n                                        Ferrajoli, L. (2019). Derechos y garantías. La ley del más\n                                   débil (8.ª ed.). Trotta.\n                               Hunt, L. (2009). La invención de los derechos humanos.\n                              Tusquets Editores.\n\n\n\n\n                                          Página 3 de 21\n\n[page:4]\n                              Pérez Luño, A. E. (2014). Los derechos fundamentales (11.ª\n                                          ed.). Tecnos.\n                                 Vasak, K. (1984). Las dimensiones internacionales de los\n                              derechos humanos. UNESCO.\n                                Legislación y documentos oficiales\n                                Constitución Política de los Estados Unidos Mexicanos.\n                                Declaración Universal de los Derechos Humanos (1948).\n                                Declaración Americana de los Derechos y Deberes del\n                         Hombre (1948).\n                              Pacto Internacional de Derechos Civiles y Políticos (1966).\n                              Pacto Internacional de Derechos Económicos, Sociales y\n                                  Culturales (1966).\n                             Convención Americana sobre Derechos Humanos (1969).\n                              Ley de la Comisión Nacional de los Derechos Humanos.\n                              Ley General de Víctimas.\n                              Ley Federal para Prevenir y Eliminar la Discriminación.\n                             Recursos electrónicos\n                             Comisión Nacional de los Derechos Humanos (CNDH)\n                          Suprema Corte de Justicia de la Nación (SCJN)\n                                  Oficina del Alto Comisionado de las Naciones Unidas para\n                                     los Derechos Humanos (ACNUDH)\n                               Organización de los Estados Americanos (OEA) – Sistema\n                               Interamericano de Derechos Humanos\n                                   Diario Oficial de la Federación (DOF)\n\n\n\n                                Constitución Política de los Estados Unidos Mexicanos\nNormatividad gubernamental    Ley de Amparo, Reglamentaria de los artículos 103 y 107\nrelacionada con la asignatura    de la Constitución Política de los Estados Unidos\n                             Mexicanos\n                              Ley de la Comisión Nacional de los Derechos Humanos\n                              Ley General de Víctimas\n                              Ley Federal para Prevenir y Eliminar la Discriminación\n                              Ley General para la Igualdad entre Mujeres y Hombres\n                              Ley General de Acceso de las Mujeres a una Vida Libre de\n                                  Violencia\n                              Ley General de los Derechos de Niñas, Niños y\n                               Adolescentes\n                              Ley General para la Inclusión de las Personas con\n                               Discapacidad\n                              Ley General para Prevenir, Investigar y Sancionar la\n                                 Tortura y otros Tratos o Penas Crueles, Inhumanos o\n                             Degradantes\n                              Ley General en Materia de Desaparición Forzada de\n                              Personas\n\n\n\n                                          Página 4 de 21\n\n[page:5]\nReglamento Interno de la Comisión Nacional de los\nDerechos Humanos\nDeclaración Universal de los Derechos Humanos\nDeclaración Americana de los Derechos y Deberes del\nHombre\nPacto Internacional de Derechos Civiles y Políticos\nPacto Internacional de Derechos Económicos, Sociales y\nCulturales\nConvención Americana sobre Derechos Humanos\nProtocolo de San Salvador\nConvención sobre los Derechos del Niño\nConvención sobre la Eliminación de Todas las Formas de\nDiscriminación contra la Mujer (CEDAW)\nConvención sobre los Derechos de las Personas con\nDiscapacidad\nConvención contra la Tortura y Otros Tratos o Penas\nCrueles, Inhumanos o Degradantes\nConvención Internacional sobre la Eliminación de todas\nlas Formas de Discriminación Racial\nConvención Internacional para la Protección de Todas las\nPersonas contra las Desapariciones Forzadas\nEstatuto de Roma de la Corte Penal Internacional\nCarta de las Naciones Unidas\nCarta Internacional de Derechos Humanos\nCarta Magna (1215)\nPetition of Right (1628)\nHabeas Corpus Act (1679)\nBill of Rights (1689)\nDeclaración de Independencia de los Estados Unidos\n(1776)\nConstitución de los Estados Unidos de América (1787)\nDeclaración de los Derechos del Hombre y del Ciudadano\n(1789)\nConstitución de Cádiz (1812)\nConstitución Federal de los Estados Unidos Mexicanos de\n1824\nConstitución Federal de los Estados Unidos Mexicanos de\n1857\nConstitución Política de los Estados Unidos Mexicanos de\n1917\nReforma Constitucional en materia de Derechos\nHumanos de 2011\nJurisprudencia de la Suprema Corte de Justicia de la\nNación en materia de derechos humanos\n\n\n\n\n\n      Página 5 de 21\n\n[page:6]\n                                 Jurisprudencia de la Corte Interamericana de Derechos\n                         Humanos\n                            Recomendaciones de la Comisión Nacional de los\n                             Derechos Humanos\n                               Observaciones Generales de los Comités de las Naciones\n                              Unidas\n                                   Principios de París relativos al estatuto de las instituciones\n                                nacionales de derechos humanos\n\n\n\nTipo de evaluación que se utiliza                Sumativa\n\n\n                             Actividad 3: Resumen de lectura – El concepto de\nActividad para realizar la        generaciones de los derechos humanos\nevaluación (basada en la técnica  Propósito de la actividad:\nde enseñanza y aprendizaje       Identificar   y   comprender    el   concepto  de\nutilizada y la bibliografía        generaciones de los derechos humanos, así como sus\nconsultada)                  antecedentes históricos, mediante la elaboración de\n                        un resumen académico que permita reconocer las\n                                principales ideas desarrolladas por  los autores y\n                                 fortalecer la capacidad de síntesis y análisis jurídico.\n                               Material:\n                                             •  Libro:  Rey  Cantor,  Ernesto;  Rey  Anaya,\n                               Giovanna Alejandra y Rey Anaya, Ángela\n                                   Margarita. Las generaciones de los Derechos\n                            Humanos. Libertad, Igualdad y Fraternidad\n                              (Décima edición, 2022).\n                                             •  Lectura asignada: páginas 72 a 76 y página 83\n                                   del archivo PDF.\n                              Indicaciones:\n                        Con base en la lectura asignada, elabora un resumen\n                         académico en el que identifiques las principales ideas\n                               desarrolladas por  los autores respecto  al origen\n                                 histórico de la primera generación de los derechos\n                       humanos y la importancia de la Carta Magna como\n                           antecedente de su reconocimiento.\n                                  El resumen deberá integrar los siguientes elementos:\n                                             •  Identificación de las ideas principales del texto.\n                                             •  Explicación del contexto histórico presentado\n                                 por los autores.\n                                             •  Descripción de la relevancia de la Carta Magna\n                          como antecedente histórico de los derechos\n                              humanos.\n                                             •  Reflexión personal sobre  la importancia del\n                                   estudio de  los antecedentes históricos para\n\n\n\n                                          Página 6 de 21\n\n[page:7]\n     comprender  la  evolución de  los  derechos\n     humanos.\nElementos  académicos  que  debe  cumplir  el\nresumen\n1. Estructura\n    •  Portada.\n    •  Introducción (breve).\n    •  Desarrollo del resumen.\n    •  Conclusión.\n    •  Referencias.\n2. Contenido\n    •  Sintetizar las ideas principales de la lectura sin\n      copiar textualmente el contenido del libro.\n    •  Explicar   con    claridad    los   conceptos\n      desarrollados por los autores.\n    •  Relacionar  la  lectura  con  los  contenidos\n     abordados en la Unidad 1.\n    •  Incluir  una   reflexión  personal  sobre   la\n     importancia del tema.\n3. Redacción\n    •   Utilizar lenguaje formal y académico.\n    •  Mantener coherencia y secuencia lógica de las\n      ideas.\n    •  Cuidar la ortografía, gramática y puntuación.\n4. Formato\n    •  Extensión de 1 a 3 cuartillas (sin contar portada\n      ni referencias).\n    •  Letra Arial 12.\n    •  Interlineado 1.5.\n    •  Márgenes de 2.5 cm.\n    •  Texto justificado.\n5. Referencias\n    •  Citar el libro conforme a los criterios del Manual\n    APA 7.ª edición.\n    •  Incluir cualquier otra fuente consultada, en caso\n     de utilizarla.\nEntrega\nEntrega el archivo únicamente en formato PDF.\nAntes de finalizar el envío, verifica que el archivo\nquede en estatus \"Enviado\" y no como \"Borrador\", ya\nque   únicamente    las   actividades   enviadas\ncorrectamente  podrán   ser  consideradas  para\nevaluación.\n\nTiempo estimado de entrega\nEntrega ordinaria (Rúbrica verde): del 12 al 18 de\noctubre, hasta las 23:55 horas.\n\n\n\n\n      Página 7 de 21\n\n[page:8]\nEntrega extemporánea (Rúbrica naranja): 19 de\noctubre,  hasta  las  23:55  horas,  aplicándose  los\ncriterios de evaluación correspondientes a la rúbrica\nnaranja.\nActividad 4. Foro de participación y debate.\n\nPropósito de la actividad\n\nAnalizar la utilidad y vigencia de la teoría de las\ngeneraciones de  los  derechos humanos  en  la\nactualidad, mediante  la participación en un foro\nacadémico que promueva el intercambio de ideas, el\nanálisis jurídico y el respeto por las opiniones de los\ndemás participantes.\n\nIndicaciones\n\nCon base en los contenidos revisados en la Unidad, la\nlectura asignada  y, en su caso, la sesión de clase\ngrabada,  participa en  el  foro respondiendo a  la\nsiguiente pregunta detonadora:\n\n¿Cuál consideras que es el objetivo actual de las\ngeneraciones de los derechos humanos y cuál es su\nutilidad para comprender la protección y garantía\nde  los  derechos humanos  en  la  actualidad?\nFundamenta tu respuesta.\n\nTu participación deberá demostrar análisis y reflexión\njurídica,  sustentando  tus  argumentos  en   los\ncontenidos de la unidad y, cuando sea pertinente, en\notras fuentes académicas confiables.\n\nUna vez publicada tu aportación inicial, deberás leer\nlas participaciones de tus compañeros y realizar al\nmenos una retroalimentación a un compañero\ndiferente, aportando comentarios que enriquezcan el\ndebate académico, preferentemente a un compañero\nque aún no tenga una retroalimentación.\n\nLa   retroalimentación  deberá   ser   respetuosa,\nargumentada y orientada al intercambio de ideas. No\nserá  suficiente  expresar  frases como  \"Estoy de\nacuerdo\", \"Excelente trabajo\" o comentarios similares\nmás la aportación que nuestra la aportación inicial de\nsus compañeros justificación.\n\n\n\n\n      Página 8 de 21\n\n[page:9]\nRequisitos de la participación inicial\n\nLa publicación deberá cumplir con las siguientes\ncaracterísticas:\n\n   •  Responder de manera  clara a  la pregunta\n     detonadora.\n   •  Fundamentar  la respuesta con argumentos\n      jurídicos y académicos.\n   •  Relacionar   el  tema  con   los  contenidos\n     estudiados en la Unidad.\n   •  Expresar una postura personal debidamente\n     argumentada.\n   •  Utilizar lenguaje formal y académico.\n   •  Mantener una redacción clara, coherente y con\n     buena ortografía.\n   •  Tener una extensión mínima de 300 palabras y\n    máxima de 500 palabras.\n\nRequisitos de la retroalimentación\n\nLa retroalimentación deberá:\n\n   •  Dirigirse a  la participación de  al menos un\n     compañero.\n   •  Tener una extensión mínima de 100 palabras.\n   •  Aportar  comentarios  que  complementen,\n      analicen o cuestionen respetuosamente  las\n      ideas presentadas.\n   •  Fundamentar  las observaciones cuando sea\n      posible.\n   •  Mantener en todo momento una comunicación\n      respetuosa, cordial y académica.\n\nCriterios de participación\n\nSe  espera que  las  intervenciones fomenten un\nambiente  de  diálogo  académico,  demostrando\nrespeto hacia  las opiniones de  los compañeros,\ncapacidad  de   análisis,  pensamiento   crítico  y\ndisposición   para   enriquecer    el   aprendizaje\ncolaborativo.\n\nNo  se  permitirá  el  uso de  lenguaje  ofensivo,\ndiscriminatorio   o   cualquier   conducta   que\n\n\n\n\n      Página 9 de 21\n\n[page:10]\n                           contravenga  las normas de convivencia del aula\n                                      virtual.\n\n                           Entrega\n\n                           La actividad se realizará directamente en el foro de\n                                   la plataforma, por  lo que no deberá adjuntarse\n                          ningún archivo.\n\n                            Es importante verificar que tanto la participación\n                                      inicial  como   la  retroalimentación  hayan  sido\n                             publicadas correctamente antes de la fecha de cierre\n                               del foro.\n\n                        Tiempo estimado de entrega\n\n                           Entrega ordinaria (Rúbrica verde): del 12 al 18 de\n                             octubre, hasta las 23:55 horas.\n\n                           Entrega extemporánea (Rúbrica naranja): 19 de\n                             octubre,  hasta  las  23:55  horas,  aplicándose  los\n                                    criterios de evaluación correspondientes a la rúbrica\n                               naranja.\n\n\n\n\n\nEvidencia de la evaluación              •  Documento en formato PDF que contenga un\n                             resumen académico de  la lectura asignada,\n                                  integrado por portada, introducción, desarrollo,\n                                   conclusión y referencias en formato APA 7. El\n                             resumen deberá elaborarse conforme a  las\n                                       características establecidas en las indicaciones\n                             de  la  actividad, sintetizando  las  principales\n                                    ideas de los autores, explicando el contexto\n                                       histórico de  la primera generación de  los\n                                 derechos humanos, la relevancia de la Carta\n                           Magna como antecedente  histórico  y una\n                                       reflexión personal sobre  la importancia del\n                                   estudio de  los antecedentes históricos para\n                              comprender  la  evolución de  los  derechos\n                              humanos, atendiendo al estándar establecido\n                              en la rúbrica de evaluación.\n\n                                             •  Participación realizada directamente en el foro\n                             de la plataforma, integrada por una aportación\n                                             inicial y, al menos, una retroalimentación a un\n\n\n\n                                          Página 10 de 21\n\n[page:11]\n                               compañero.  La  aportación   inicial  deberá\n                                 responder de manera fundamentada a  la\n                                pregunta detonadora, desarrollando un análisis\n                                           crítico  sobre   el  objetivo  actual  de   las\n                                 generaciones de los derechos humanos y su\n                                       utilidad  para comprender  la  protección  y\n                                    garantía de  los derechos humanos en  la\n                                      actualidad, con una extensión de 300 a 500\n                                      palabras.  Asimismo,  deberá   incluir  una\n                                    retroalimentación argumentada, respetuosa y\n                                    constructiva  a   la   participación  de  un\n                               compañero, con una extensión mínima de 100\n                                      palabras,   elaborada   conforme   a    las\n                                       características establecidas en las indicaciones\n                             de  la  actividad  y  atendiendo  al  estándar\n                                     previsto en la rúbrica de evaluación.\n\n\n\nPorcentaje de calificación que\n                                                                (11/100)\naporta (--/100)\n\n\nObservaciones                         •  Actividad 3: Resumen de libro\n                                      •  El resumen académico deberá elaborarse con\n                                base en  la  lectura asignada  del  libro Las\n                                 generaciones  de  los  Derechos  Humanos.\n                                      Libertad, Igualdad y Fraternidad y, en su caso,\n                              con la sesión de clase grabada.\n                                      •  Se  valorará especialmente  la capacidad de\n                                           síntesis, análisis y comprensión de las ideas\n                                     desarrolladas por los autores, evitando limitarse\n                                a copiar o transcribir textualmente el contenido\n                             de la lectura.\n                                      •  El resumen deberá presentar una estructura\n                                      lógica y coherente, integrando los apartados\n                                       solicitados en las indicaciones de la actividad:\n                                     introducción,    desarrollo,    conclusión    y\n                                       referencias.\n                                      •  Es indispensable que el documento sea una\n                                   elaboración original del estudiante; por lo tanto,\n                             no deberá copiarse textualmente el contenido\n                                    del libro ni de otras fuentes de consulta.\n                                      •  Se evaluará la correcta identificación de las\n                                      principales ideas relacionadas con el origen\n                                       histórico de  la primera generación de  los\n                                 derechos humanos  y  la  explicación de  la\n\n\n\n                                          Página 11 de 21\n\n[page:12]\n   importancia  de   la  Carta  Magna  como\n   antecedente de su reconocimiento.\n•  El desarrollo del trabajo deberá explicar de\n  manera clara el contexto histórico expuesto por\n   los  autores,  utilizando terminología  jurídica\n  adecuada y demostrando comprensión de los\n   conceptos abordados.\n•  La  reflexión personal deberá  expresar, con\n  argumentos propios, la importancia del estudio\n  de    los   antecedentes    históricos   para\n  comprender la evolución y consolidación de los\n   derechos humanos.\n•  Todas las fuentes consultadas deberán citarse\n  conforme   al  formato  APA   7.ª   edición,\n   incluyendo como mínimo la referencia del libro\n   utilizado    y    cualquier    otra    fuente\n   complementaria que haya sido consultada.\n•  El trabajo deberá entregarse únicamente en\n   formato PDF, respetando la extensión, formato\n   y   especificaciones   establecidas  en   las\n   indicaciones de la actividad.\n•  Antes de enviar la evidencia, verifica que el\n   archivo se encuentre correctamente adjunto y\n  que el envío quede en estatus \"Enviado\" y no\n  como  \"Borrador\",  ya que  los  trabajos en\n   borrador no podrán ser evaluados.\n\n•  Actividad 4: Foro de participación y debate\n\n•  La participación en el foro deberá elaborarse\n  con base en los contenidos revisados en  la\n   Unidad, la lectura asignada y, en su caso, la\n   sesión de clase grabada.\n•  Se  valorará especialmente  la capacidad de\n   análisis,  reflexión  jurídica  y argumentación\n    crítica, evitando limitarse a expresar opiniones\n   sin fundamento o reproducir textualmente el\n   contenido de las fuentes de consulta.\n•  La participación inicial deberá responder de\n  manera clara y fundamentada a la pregunta\n   detonadora,   desarrollando   una   postura\n   personal sustentada en los contenidos de la\n   unidad  y, cuando sea pertinente, en  otras\n   fuentes académicas confiables.\n•  Es indispensable que la publicación sea una\n   elaboración original del estudiante; por lo tanto,\n  no deberá copiarse total o parcialmente  el\n   contenido de  libros,  artículos,  páginas de\n\n\n  Página 12 de 21\n\n[page:13]\n   internet o de las participaciones realizadas por\n   otros compañeros.\n•  Se  evaluará  la  capacidad para  explicar  el\n   objetivo  actual de  las generaciones de  los\n   derechos humanos y argumentar su utilidad\n   para comprender la protección y garantía de los\n   derechos  humanos   en    la   actualidad,\n  empleando terminología jurídica adecuada.\n•  La aportación  inicial deberá mantener una\n   estructura lógica y coherente, con ideas claras,\n  argumentos sólidos y una redacción formal,\n   respetando  la  extensión  mínima  de  300\n   palabras y máxima de 500 palabras.\n•  La  retroalimentación  deberá  realizarse,  al\n  menos, a la participación de un compañero,\n   procurando comentar preferentemente una\n   publicación  que  aún  no  haya  recibido\n   retroalimentación.\n•  La    retroalimentación    deberá    aportar\n   observaciones, comentarios o argumentos que\n  complementen,  analicen  o  enriquezcan  la\n   participación del compañero, evitando limitarse\n   a  expresiones como  \"Estoy  de  acuerdo\",\n   \"Excelente trabajo\" o comentarios similares que\n  no aporten valor al debate académico.\n•  La retroalimentación deberá elaborarse con\n   respeto, lenguaje académico y una extensión\n  mínima de 100 palabras, favoreciendo el diálogo\n   constructivo y el aprendizaje colaborativo.\n•  Cuando  se   utilicen   ideas,  conceptos  o\n   información provenientes de  otras  fuentes,\n   estas deberán citarse conforme a los criterios\n   del Manual APA 7.ª edición.\n•  La actividad deberá realizarse directamente en\n   el foro de la plataforma, por lo que no deberá\n   adjuntarse ningún archivo.\n•  Antes del cierre del foro, verifica que tanto tu\n   participación inicial como la retroalimentación\n  hayan sido publicadas correctamente, ya que\n  únicamente  las  intervenciones  registradas\n   dentro  del periodo  establecido podrán  ser\n   consideradas para su evaluación.\n\n\n\n\n Lineamientos\n\n\n\n\n  Página 13 de 21\n\n[page:14]\nCon base en lo señalado en los siguientes artículos del Reglamento Universitario de la\nUniversidad Abierta y a Distancia de México:\n\nArtículo 27. La calificación representa la valoración numérica del aprovechamiento que la o el\nestudiante logró en cada unidad didáctica. La escala de calificaciones comprende del 0 (cero)\nal 100 (cien), y la calificación mínima aprobatoria será 60 (sesenta).\n\nEn ningún caso procederá la renuncia a la calificación obtenida. Las actividades y evidencias\nde aprendizaje en las que se identifique falta de integridad académica serán evaluadas\ncon 0 (cero).\n\nArtículo 76. Son obligaciones de las y los estudiantes:\n\nV. Realizar, con integridad académica, las actividades que están señaladas en el aula virtual\ndel programa educativo en el que están inscritos, conforme a las fechas establecidas en el\ncalendario de aula.\n\n               Lineamientos para la evaluación del aprendizaje\n\n    •  La entrega de actividades se realizará de acuerdo con el calendario\n     proporcionado por su Figura Académica y marcado en el presente documento.\n    •  La entrega corresponde a un solo intento.\n    •  Las entregas extemporáneas estarán sujeta a una penalización de 2 a 3 puntos.\n     La recepción será únicamente hasta el martes de cada semana (no aplica para\n    semana 9 y 10).\n    •  La persona estudiante entregará sus actividades debidamente citadas en\n     formato APA 7ª edición.\n    •  La aplicación o uso de las herramientas de IA se debe apegar a los\n     Lineamientos para el uso ético y responsable de la IA. Escala de evaluación\n     para actividades con IA.\n\n\n\n\n\n                      Criterio                 Sanción / Penalización\n      50% a 100%, NO declaró uso de         4 puntos menos\n          IA.\n      50% en adelante, declarado.     No se penaliza, pero se evalúa en\n                                            función del contenido\n                                             2 puntos menos\n      0 a 49%, NO declarado\n      0 al 49%, se declara el uso de IA.  No se penaliza, pero se evalúa en\n                                            función del contenido\n\n\n   •  La persona estudiante perderá su intento de envío de la actividad cuando\n     entregue o realice una o más de las condiciones enunciadas en Los\n\n\n\n                                          Página 14 de 21\n\n[page:15]\n     Lineamientos para la evaluación del aprendizaje: CAPÍTULO II, SECCIÓN\n     TERCERA, DE LA ELABORACIÓN Y ENTREGA DE ACTIVIDADES, apartado\n     décimo octavo.\n\n    •  La entrega de actividades, recepción y evaluación se rige por dichos\n     lineamientos y el RUUADM, por lo tanto, no se reciben por otros medios\n      distintos a aula ni posterior al cierre de la misma.\n\nCriterios de examen:\n\n   • Un intento\n   •  Método de calificación: automático.\n\n\n\n\n\n                                          Página 15 de 21\n\n[page:16]\nRubrica de Evaluación Ordinaria – Actividad 3:(Puntaje Máximo 7)\n\n Criterio        Excelente      Bueno             Suficiente        Insuficiente     Puntaje\n                                                                  máxim\n                                                                         o\n\n Identificación   Identifica      y  Identifica         la  Identifica    solo No identifica las  2\n y  síntesis de  sintetiza    de  mayoría  de   las  algunas    ideas  ideas\n las      ideas  manera    clara,  ideas  principales  principales,  con  principales   o\n principales     precisa        y  con         ligeras  síntesis limitada  presenta   un\n               completa     las  omisiones      o  o poco clara.     resumen\n                 ideas             imprecisiones.                         incorrecto    o\n                  principales de la                                  basado     en\n                    lectura,                                               copias\n               demostrando                                               textuales.\n               comprensión\n                  del contenido.\n\n Análisis     y  Explica           Desarrolla      los  El  desarrollo es No   desarrolla  2\n desarrollo del  adecuadament   aspectos            superficial     y  los  elementos\n contenido     e   el  contexto  solicitados,        aborda           requeridos   o\n                    histórico,       la  aunque      con  parcialmente los  presenta\n                  relevancia de la  menor            elementos        información\n                 Carta Magna y  profundidad    o  solicitados.        incorrecta.\n                presenta   una  fundamentación.\n                   reflexión\n                 personal   bien\n               fundamentada,\n                 relacionando  el\n              tema  con   la\n                Unidad.\n\n Redacción  y  Presenta         Presenta         la  Presenta       No presenta  la   1\n estructura      portada,          estructura          deficiencias en la  estructura\n                  introducción,      solicitada    con  estructura    o  solicitada o  la\n                   desarrollo,       pequeños errores  numerosos       redacción\n                 conclusión    y  de     redacción,  errores      de  impide\n                   referencias;       organización   u  redacción  que  comprender  el\n               mantiene          ortografía.           dificultan       la  trabajo.\n                 excelente                          comprensión.\n                  organización,\n                 coherencia,\n                  ortografía     y\n                 lenguaje\n                académico.\n\n Referencias y  Cita             Presenta          Presenta       No      incluye   1\n formato APA  correctamente   pequeños errores  referencias        referencias o no\n 7                 las  fuentes  y  en   las   citas  o  incompletas   o  utiliza          el\n                presenta      las  referencias    en  con        varios  formato APA 7.\n                  referencias     APA 7.\n\n\n\n\n                                           Página 16 de 21\n\n[page:17]\n               conforme      al                       errores      de\n                formato APA 7.                       formato.\n\n Cumplimient   Entrega        el  Cumple           Presenta  varios No cumple con   1\n o   de    los  trabajo     en  parcialmente con  incumplimiento   los requisitos de\n requisitos de  formato   PDF,  alguno  de   los  s  en  formato,  entrega  o   la\n entrega        dentro del plazo  requisitos     de  extensión     o  actividad   no\n                  establecido,      formato       o  presentación.    puede       ser\n                respetando    la  presentación   sin                   evaluada   por\n                 extensión     y  afectar                            incumplimient\n                  especificaciones  significativament                  o    de     las\n              de     formato  e la evaluación.                         indicaciones.\n                  indicadas.\n\n\n\n\nRubrica de Evaluación Extraordinaria – Actividad 3:(Puntaje Máximo 5)\n\n Criterio        Excelente         Bueno              Suficiente       Insuficiente    Puntaje\n                                                                 máximo\n\n Identificación  Identifica        y  Identifica       la  Identifica solo No identifica  2\n y  síntesis de  sintetiza      de  mayoría de  las  algunas ideas  las     ideas\n las     ideas  manera      clara,  ideas principales  principales,     principales o\n principales     precisa          y  con        ligeras  con    síntesis  presenta un\n              completa las ideas  omisiones     o  limitada   o  resumen\n                 principales de  la  imprecisiones.    poco clara.    incorrecto o\n                  lectura,                                      basado  en\n              demostrando                                      copias\n              comprensión   del                                       textuales.\n               contenido.\n\n Análisis    y  Explica              Desarrolla      los   El   desarrollo No desarrolla  1\n desarrollo del  adecuadamente   aspectos          es  superficial  los\n contenido      el       contexto  solicitados,        y    aborda  elementos\n                   histórico,         la aunque    con  parcialmente  requeridos o\n                relevancia de  la  menor               los elementos  presenta\n               Carta  Magna  y  profundidad   o  solicitados.     información\n               presenta     una  fundamentación.                  incorrecta.\n                  reflexión  personal\n              fundamentada,\n               relacionando    el\n             tema   con    la\n               Unidad.\n\n Redacción y  Presenta portada,  Presenta          Presenta     No presenta  1\n estructura      introducción,      pequeños errores  deficiencias    la estructura\n                  desarrollo,                            importantes    solicitada  o\n\n\n\n                                           Página 17 de 21\n\n[page:18]\n                conclusión       y de redacción o  en          la  la redacción\n                 referencias;          estructura.        organización   impide\n              mantiene                       o redacción.  comprender\n                organización,                                                 el trabajo.\n               coherencia,\n                 ortografía       y\n               lenguaje\n             académico.\n\n Referencias y  Presenta           Presenta          Presenta     No   incluye  1\n cumplimiento  correctamente las  pequeños errores  referencias     referencias o\n de         los  referencias        en las referencias  incompletas   incumple los\n requisitos de  conforme a APA 7  o   en   algún  o   incumple  requisitos\n entrega       y    entrega     el  requisito     de  varios          esenciales\n                trabajo en formato  entrega.            requisitos  de de entrega.\n                PDF, respetando la                   formato   o\n                extensión   y   las                    presentación.\n                especificaciones\n                establecidas.\n\n\n\n\n\nRubrica de Evaluación Ordinaria – Actividad 4: Foro de participación y debate (Puntaje\nMáximo 4)\n\n Criterio          Excelente       Bueno            Suficiente        Insuficiente      Puntaj\n                                                                    e\n                                                                 máxim\n                                                                    o\n\n Participación    Responde  de  Responde      La respuesta es No responde a  2\n inicial: análisis y  manera clara y adecuadamen  superficial   o  la pregunta o\n argumentación  completa a  la  te    a      la poco             la\n                pregunta        pregunta,      fundamentada  participación\n                detonadora,    aunque      la  y     desarrolla  carece    de\n               fundamentand  fundamentaci   parcialmente     análisis       y\n              o            sus  ón o el análisis  la    pregunta  fundamentaci\n                argumentos     presentan      detonadora.    ón.\n              con           los  ligeras   áreas\n                 contenidos de de\n                     la      unidad,  oportunidad.\n                demuestra\n                      análisis   crítico,\n\n\n\n                                           Página 18 de 21\n\n[page:19]\n                   reflexión\n                    jurídica  y una\n                 postura\n                 personal   bien\n                 sustentada.\n\nRetroalimentaci  Realiza    una  La             La           No  realiza  la  1\nón   a    un  retroalimentaci   retroalimentaci  retroalimentaci  retroalimentaci\ncompañero     ón  respetuosa,  ón     aporta  ón es limitada,  ón o  esta  se\n              argumentada y  comentarios    poco              limita      a\n                  constructiva,     pertinentes,     argumentada   comentarios sin\n                enriqueciendo   aunque   con o     apenas  aportar       al\n                    el debate con poca         cumple con los  debate\n                aportaciones    profundidad o  requisitos       académico.\n                 relevantes    y  fundamentaci   mínimos.\n              una   extensión  ón.\n               mínima de 100\n                 palabras.\n\nRedacción   y   Utiliza lenguaje  Presenta        Presenta varios No cumple con  1\ncumplimiento    formal        y  algunos errores  errores    de  las\nde           las  académico,    menores   de  redacción,      indicaciones,\nindicaciones     presenta        redacción,       ortografía   o  la    extensión\n                excelente        ortografía   o  incumple       requerida o la\n                   ortografía,      incumple        diversos         calidad\n               coherencia   y  parcialmente    requisitos de la  mínima    de\n                respeta       la  alguna          actividad.       redacción.\n                 extensión        indicación.\n                establecida\n               para          la\n                 participación\n                      inicial   y    la\n                  retroalimentaci\n                 ón,  así como\n                todas         las\n                 indicaciones de\n                    la actividad.\n\n\n\n\n\n                                          Página 19 de 21\n\n[page:20]\nRubrica de Evaluación Extraordinaria – Actividad 4: Foro de participación y debate\n(Puntaje Máximo 3)\n\n Criterio          Excelente      Bueno            Suficiente        Insuficiente      Puntaj\n                                                                    e\n                                                                 máxim\n                                                                    o\n\n Participación    Responde  de  Responde      La respuesta es No responde a  1\n inicial: análisis y  manera clara y adecuadamen  superficial,        la    pregunta\n argumentación  fundamentada  te    a      la  desarrolla      detonadora o\n              a  la pregunta  pregunta,       parcialmente    la\n                detonadora,    aunque       el  la pregunta o  participación\n                demuestra        análisis  o   la  presenta       carece    de\n                      análisis  crítico,  fundamentaci   escasa            análisis       y\n                    reflexión       ón   presentan  fundamentaci   argumentació\n                     jurídica       y  algunas  áreas  ón.                n.\n                   sustenta     sus de\n                argumentos     oportunidad.\n              con           los\n                 contenidos de\n                     la Unidad.\n\n Retroalimentaci  Realiza   una  La             La           No  realiza  la  1\n ón    a    un  retroalimentaci  retroalimentaci  retroalimentaci  retroalimentaci\n compañero     ón respetuosa,  ón     aporta  ón es limitada,  ón o  esta  se\n               argumentada   comentarios    poco              limita      a\n                 y  constructiva  pertinentes,     argumentada   comentarios sin\n              que enriquece  aunque   con o  no  cumple  aportar       al\n                      el     debate poca          completament  intercambio\n              académico  y  profundidad o  e   con     los  académico.\n               cumple con la  fundamentaci    requisitos\n                  extensión        ón.              establecidos.\n                mínima\n                  requerida.\n\n Redacción   y   Utiliza lenguaje  Presenta        Presenta varios No cumple con  1\n cumplimiento    formal       y  algunos errores  errores     de  las\n de           las  académico,    menores   de  redacción   o  indicaciones, la\n indicaciones    mantiene       redacción,      incumple        extensión\n              buena           ortografía   o  diversos         requerida o la\n                    ortografía,      incumple         requisitos de la  calidad mínima\n                coherencia   y  parcialmente    actividad.     de redacción.\n               cumple con la  alguna\n                  extensión     y  indicación.\n                 todas        las\n                  indicaciones\n\n\n\n                                           Página 20 de 21\n\n[page:21]\n        de            la\n          actividad.\n\n\n\n\n\n              Concentrado de calificaciones\n\n\nSemana               Actividades                  Porcentaje de\n\n                                                           calificación (--/100)\n     1     Foro diagnóstico / Introducción a la Unidad        0\n                Actividad 1: Reseña de Video\n   2                                                                                 11\n               Actividad 2: Publicación en Foro\n                   Actividad 3: Resumen\n   3                                                                                 11\n               Actividad 4: Publicación en Foro\n              Actividad 5: Cuadro comparativo   4                                                           10\n           Examen parcial (semanas 2, 3 y 4)                                                         5\n\n   5             Actividad 7: Mapa Mental                   10\n\n   6           Actividad 8: Cuadro sinóptico                  13\n\n   7            Actividad 9: Mapa de cajas                  10\n           Examen parcial (semanas 5, 6 y 7)              5\n   8           Actividad 11: Estudio de Caso                 10\n\n                    Actividad 12: Ensayo                       15   9\n\n   10                Autoevaluación                   0\n                                                          100\n\n\n\n\n\n                                  Página 21 de 21"
+      }
+    ],
+    "alternatives": []
+  }
+]
+```
+
+## review
+
+```json
+{
+  "state": "needs_review",
+  "reviewed_at": null,
+  "reviewer_role": null,
+  "critical_gaps": [
+    "Cotejar consigna y procedencia docente; conversion local no equivale a aprobacion",
+    "Documento sin segmentar: identificar actividades, requisitos, preguntas y rubrica antes de ejecutar"
+  ],
+  "semantic_validation": "failed"
+}
+```
+
+## extensions
+
+```json
+{
+  "conversion": {
+    "version": "1.0",
+    "source_format": ".pdf",
+    "source_sha256": "53dc130afcd5a2c940e503a5b5bce685173d7054cb42bff93344c9aa92b38c7c",
+    "source_payload": null,
+    "source_blocks": [
+      {
+        "locator": "page:1",
+        "text": "                     Planificación de actividades\n\n\n                            Datos de identificación\n\n\n\nRegistro Federal de Contribuyentes\n\n\n\n\nClave Única de Registro de Población\n\n\n\nMatrícula/Folio                      FA2611LOOD00054\n\n\n\n\nNombre de prestador de servicios\n                                       Daniel Alexis Lozano Ortega\nprofesionales en el ámbito de docencia\n\n\n\n                 Datos de identificación de la asignatura/materia\n\n\n\nAño                  2026\n\n\n\n\nSemestre              2\n\n\n\n\nBloque                2\n\n\n\n\nDirección divisional      Ciencias Sociales y Administrativas\n\n\n\n\nPrograma educativo    Derecho\n\n\n\n\n\n                                          Página 1 de 21"
+      },
+      {
+        "locator": "page:2",
+        "text": "Asignatura/materia     Antecedentes de los Derechos Humanos\n\n\n\n\nDatos de identificación del objetivo de la asignatura/materia\n             ASIGNATURA: Antecedentes de los Derechos Humanos\n\nFechas de inicio y conclusión del\n                                     28 DE SEPTIEMBRE AL 06 DE DICIEMBRE\nperiodo educativo (diez semanas)\n\n\n\n                                  Formar profesionales altamente competentes y\nObjetivo general del programa de       comprometidos, capaces de abordar situaciones\neducativo                                legales complejas con integridad y desempeñarse\n                                     exitosamente en una variedad de roles dentro del\n                                   ámbito  jurídico, promoviendo  la  justicia  y  el\n                                           desarrollo de la sociedad.\n\n                                   Conocer las bases teóricas, históricas y normativas\nObjetivo general de la asignatura       que fundamentan  los derechos humanos en\n                                    México\n                                        ⎯ Reconoce las bases teóricas básicas relacionadas\nObjetivos específicos de la             con los derechos\nasignatura/materia                 humanos en México.                                        ⎯ Identifica aspectos relevantes del desarrollo\n                                            histórico de los\n                                     derechos humanos en México.                                        ⎯ Analiza los documentos normativos nacionales e\n                                         internacionales\n                                que fundamentan los valores de los derechos\n                               humanos en México.\n\n                                           Al aprobar la asignatura, reconoce las principales\nAspectos que fortalecen del perfil de     bases  teóricas,  históricas y normativas de  los\negreso del programa educativo         derechos humanos en México.\n\n\n\nDatos para la planificación de actividades\n\nSemana 2 (Del día 12 del mes de octubre al día 18 de mes octubre)\n\nFecha de entrega (actividad): 18 de octubre\n\n\n\n\n                                          Página 2 de 21"
+      },
+      {
+        "locator": "page:3",
+        "text": "Fecha de sesión sincrónica: martes Hora: 8:00 p.m.\n\n\n\n\n                               Unidad 2. Reconoce las bases teóricas básicas relacionadasContenido temático a\n                             con los derechos humanos en México.\ndesarrollar                                         1.2. Teoría de las tres generaciones de los derechos humanos.\n\n\n                                  Analizar  las  principales  teorías que fundamentan  los\nObjetivo específico que se       derechos humanos en México mediante el estudio de sus\n                              bases filosóficas, jurídicas e históricas, a fin de comprenderdesarrolla del contenido\n                              su influencia en el reconocimiento, protección y garantíatemático\n                           de  los derechos humanos dentro  del orden  jurídico\n                              mexicano.\n\n\nTécnica didáctica que se utiliza\n(100 técnicas de enseñanza y           Resumen de fracción de libro y Foro\naprendizaje)\n\n\n\n\nBibliografía propuesta para       Bibliografía básica\nconsulta (tomada de biblioteca   Arteaga Nava, E. (2022). Garantías individuales y derechos\ndigital, elibro)               humanos (9.ª ed.). Oxford University Press.\n                                  Carbonell, M. (2021). Los derechos fundamentales en\n                             México (8.ª ed.). Porrúa.\n                              Corcuera Cabezut, S. (2020). Derecho constitucional y\n                              derechos humanos. Oxford University Press.\n                                Fix-Zamudio, H., & Valencia Carmona, S. (2020). Derecho\n                                  constitucional mexicano y comparado (10.ª ed.). Porrúa.\n                              Peces-Barba Martínez, G. (2018). Curso de derechos\n                              fundamentales: Teoría general. Universidad Carlos III de\n                                Madrid.\n                                Nikken, P. (2010). La protección internacional de los\n                              derechos humanos: Su desarrollo progresivo. Instituto\n                               Interamericano de Derechos Humanos.\n                                  Bibliografía complementaria\n                                    Alexy, R. (2017). Teoría de los derechos fundamentales (2.ª\n                                          ed.). Centro de Estudios Políticos y Constitucionales.\n                               Bobbio, N. (2017). El tiempo de los derechos. Sistema.\n                                        Ferrajoli, L. (2019). Derechos y garantías. La ley del más\n                                   débil (8.ª ed.). Trotta.\n                               Hunt, L. (2009). La invención de los derechos humanos.\n                              Tusquets Editores.\n\n\n\n\n                                          Página 3 de 21"
+      },
+      {
+        "locator": "page:4",
+        "text": "                              Pérez Luño, A. E. (2014). Los derechos fundamentales (11.ª\n                                          ed.). Tecnos.\n                                 Vasak, K. (1984). Las dimensiones internacionales de los\n                              derechos humanos. UNESCO.\n                                Legislación y documentos oficiales\n                                Constitución Política de los Estados Unidos Mexicanos.\n                                Declaración Universal de los Derechos Humanos (1948).\n                                Declaración Americana de los Derechos y Deberes del\n                         Hombre (1948).\n                              Pacto Internacional de Derechos Civiles y Políticos (1966).\n                              Pacto Internacional de Derechos Económicos, Sociales y\n                                  Culturales (1966).\n                             Convención Americana sobre Derechos Humanos (1969).\n                              Ley de la Comisión Nacional de los Derechos Humanos.\n                              Ley General de Víctimas.\n                              Ley Federal para Prevenir y Eliminar la Discriminación.\n                             Recursos electrónicos\n                             Comisión Nacional de los Derechos Humanos (CNDH)\n                          Suprema Corte de Justicia de la Nación (SCJN)\n                                  Oficina del Alto Comisionado de las Naciones Unidas para\n                                     los Derechos Humanos (ACNUDH)\n                               Organización de los Estados Americanos (OEA) – Sistema\n                               Interamericano de Derechos Humanos\n                                   Diario Oficial de la Federación (DOF)\n\n\n\n                                Constitución Política de los Estados Unidos Mexicanos\nNormatividad gubernamental    Ley de Amparo, Reglamentaria de los artículos 103 y 107\nrelacionada con la asignatura    de la Constitución Política de los Estados Unidos\n                             Mexicanos\n                              Ley de la Comisión Nacional de los Derechos Humanos\n                              Ley General de Víctimas\n                              Ley Federal para Prevenir y Eliminar la Discriminación\n                              Ley General para la Igualdad entre Mujeres y Hombres\n                              Ley General de Acceso de las Mujeres a una Vida Libre de\n                                  Violencia\n                              Ley General de los Derechos de Niñas, Niños y\n                               Adolescentes\n                              Ley General para la Inclusión de las Personas con\n                               Discapacidad\n                              Ley General para Prevenir, Investigar y Sancionar la\n                                 Tortura y otros Tratos o Penas Crueles, Inhumanos o\n                             Degradantes\n                              Ley General en Materia de Desaparición Forzada de\n                              Personas\n\n\n\n                                          Página 4 de 21"
+      },
+      {
+        "locator": "page:5",
+        "text": "Reglamento Interno de la Comisión Nacional de los\nDerechos Humanos\nDeclaración Universal de los Derechos Humanos\nDeclaración Americana de los Derechos y Deberes del\nHombre\nPacto Internacional de Derechos Civiles y Políticos\nPacto Internacional de Derechos Económicos, Sociales y\nCulturales\nConvención Americana sobre Derechos Humanos\nProtocolo de San Salvador\nConvención sobre los Derechos del Niño\nConvención sobre la Eliminación de Todas las Formas de\nDiscriminación contra la Mujer (CEDAW)\nConvención sobre los Derechos de las Personas con\nDiscapacidad\nConvención contra la Tortura y Otros Tratos o Penas\nCrueles, Inhumanos o Degradantes\nConvención Internacional sobre la Eliminación de todas\nlas Formas de Discriminación Racial\nConvención Internacional para la Protección de Todas las\nPersonas contra las Desapariciones Forzadas\nEstatuto de Roma de la Corte Penal Internacional\nCarta de las Naciones Unidas\nCarta Internacional de Derechos Humanos\nCarta Magna (1215)\nPetition of Right (1628)\nHabeas Corpus Act (1679)\nBill of Rights (1689)\nDeclaración de Independencia de los Estados Unidos\n(1776)\nConstitución de los Estados Unidos de América (1787)\nDeclaración de los Derechos del Hombre y del Ciudadano\n(1789)\nConstitución de Cádiz (1812)\nConstitución Federal de los Estados Unidos Mexicanos de\n1824\nConstitución Federal de los Estados Unidos Mexicanos de\n1857\nConstitución Política de los Estados Unidos Mexicanos de\n1917\nReforma Constitucional en materia de Derechos\nHumanos de 2011\nJurisprudencia de la Suprema Corte de Justicia de la\nNación en materia de derechos humanos\n\n\n\n\n\n      Página 5 de 21"
+      },
+      {
+        "locator": "page:6",
+        "text": "                                 Jurisprudencia de la Corte Interamericana de Derechos\n                         Humanos\n                            Recomendaciones de la Comisión Nacional de los\n                             Derechos Humanos\n                               Observaciones Generales de los Comités de las Naciones\n                              Unidas\n                                   Principios de París relativos al estatuto de las instituciones\n                                nacionales de derechos humanos\n\n\n\nTipo de evaluación que se utiliza                Sumativa\n\n\n                             Actividad 3: Resumen de lectura – El concepto de\nActividad para realizar la        generaciones de los derechos humanos\nevaluación (basada en la técnica  Propósito de la actividad:\nde enseñanza y aprendizaje       Identificar   y   comprender    el   concepto  de\nutilizada y la bibliografía        generaciones de los derechos humanos, así como sus\nconsultada)                  antecedentes históricos, mediante la elaboración de\n                        un resumen académico que permita reconocer las\n                                principales ideas desarrolladas por  los autores y\n                                 fortalecer la capacidad de síntesis y análisis jurídico.\n                               Material:\n                                             •  Libro:  Rey  Cantor,  Ernesto;  Rey  Anaya,\n                               Giovanna Alejandra y Rey Anaya, Ángela\n                                   Margarita. Las generaciones de los Derechos\n                            Humanos. Libertad, Igualdad y Fraternidad\n                              (Décima edición, 2022).\n                                             •  Lectura asignada: páginas 72 a 76 y página 83\n                                   del archivo PDF.\n                              Indicaciones:\n                        Con base en la lectura asignada, elabora un resumen\n                         académico en el que identifiques las principales ideas\n                               desarrolladas por  los autores respecto  al origen\n                                 histórico de la primera generación de los derechos\n                       humanos y la importancia de la Carta Magna como\n                           antecedente de su reconocimiento.\n                                  El resumen deberá integrar los siguientes elementos:\n                                             •  Identificación de las ideas principales del texto.\n                                             •  Explicación del contexto histórico presentado\n                                 por los autores.\n                                             •  Descripción de la relevancia de la Carta Magna\n                          como antecedente histórico de los derechos\n                              humanos.\n                                             •  Reflexión personal sobre  la importancia del\n                                   estudio de  los antecedentes históricos para\n\n\n\n                                          Página 6 de 21"
+      },
+      {
+        "locator": "page:7",
+        "text": "     comprender  la  evolución de  los  derechos\n     humanos.\nElementos  académicos  que  debe  cumplir  el\nresumen\n1. Estructura\n    •  Portada.\n    •  Introducción (breve).\n    •  Desarrollo del resumen.\n    •  Conclusión.\n    •  Referencias.\n2. Contenido\n    •  Sintetizar las ideas principales de la lectura sin\n      copiar textualmente el contenido del libro.\n    •  Explicar   con    claridad    los   conceptos\n      desarrollados por los autores.\n    •  Relacionar  la  lectura  con  los  contenidos\n     abordados en la Unidad 1.\n    •  Incluir  una   reflexión  personal  sobre   la\n     importancia del tema.\n3. Redacción\n    •   Utilizar lenguaje formal y académico.\n    •  Mantener coherencia y secuencia lógica de las\n      ideas.\n    •  Cuidar la ortografía, gramática y puntuación.\n4. Formato\n    •  Extensión de 1 a 3 cuartillas (sin contar portada\n      ni referencias).\n    •  Letra Arial 12.\n    •  Interlineado 1.5.\n    •  Márgenes de 2.5 cm.\n    •  Texto justificado.\n5. Referencias\n    •  Citar el libro conforme a los criterios del Manual\n    APA 7.ª edición.\n    •  Incluir cualquier otra fuente consultada, en caso\n     de utilizarla.\nEntrega\nEntrega el archivo únicamente en formato PDF.\nAntes de finalizar el envío, verifica que el archivo\nquede en estatus \"Enviado\" y no como \"Borrador\", ya\nque   únicamente    las   actividades   enviadas\ncorrectamente  podrán   ser  consideradas  para\nevaluación.\n\nTiempo estimado de entrega\nEntrega ordinaria (Rúbrica verde): del 12 al 18 de\noctubre, hasta las 23:55 horas.\n\n\n\n\n      Página 7 de 21"
+      },
+      {
+        "locator": "page:8",
+        "text": "Entrega extemporánea (Rúbrica naranja): 19 de\noctubre,  hasta  las  23:55  horas,  aplicándose  los\ncriterios de evaluación correspondientes a la rúbrica\nnaranja.\nActividad 4. Foro de participación y debate.\n\nPropósito de la actividad\n\nAnalizar la utilidad y vigencia de la teoría de las\ngeneraciones de  los  derechos humanos  en  la\nactualidad, mediante  la participación en un foro\nacadémico que promueva el intercambio de ideas, el\nanálisis jurídico y el respeto por las opiniones de los\ndemás participantes.\n\nIndicaciones\n\nCon base en los contenidos revisados en la Unidad, la\nlectura asignada  y, en su caso, la sesión de clase\ngrabada,  participa en  el  foro respondiendo a  la\nsiguiente pregunta detonadora:\n\n¿Cuál consideras que es el objetivo actual de las\ngeneraciones de los derechos humanos y cuál es su\nutilidad para comprender la protección y garantía\nde  los  derechos humanos  en  la  actualidad?\nFundamenta tu respuesta.\n\nTu participación deberá demostrar análisis y reflexión\njurídica,  sustentando  tus  argumentos  en   los\ncontenidos de la unidad y, cuando sea pertinente, en\notras fuentes académicas confiables.\n\nUna vez publicada tu aportación inicial, deberás leer\nlas participaciones de tus compañeros y realizar al\nmenos una retroalimentación a un compañero\ndiferente, aportando comentarios que enriquezcan el\ndebate académico, preferentemente a un compañero\nque aún no tenga una retroalimentación.\n\nLa   retroalimentación  deberá   ser   respetuosa,\nargumentada y orientada al intercambio de ideas. No\nserá  suficiente  expresar  frases como  \"Estoy de\nacuerdo\", \"Excelente trabajo\" o comentarios similares\nmás la aportación que nuestra la aportación inicial de\nsus compañeros justificación.\n\n\n\n\n      Página 8 de 21"
+      },
+      {
+        "locator": "page:9",
+        "text": "Requisitos de la participación inicial\n\nLa publicación deberá cumplir con las siguientes\ncaracterísticas:\n\n   •  Responder de manera  clara a  la pregunta\n     detonadora.\n   •  Fundamentar  la respuesta con argumentos\n      jurídicos y académicos.\n   •  Relacionar   el  tema  con   los  contenidos\n     estudiados en la Unidad.\n   •  Expresar una postura personal debidamente\n     argumentada.\n   •  Utilizar lenguaje formal y académico.\n   •  Mantener una redacción clara, coherente y con\n     buena ortografía.\n   •  Tener una extensión mínima de 300 palabras y\n    máxima de 500 palabras.\n\nRequisitos de la retroalimentación\n\nLa retroalimentación deberá:\n\n   •  Dirigirse a  la participación de  al menos un\n     compañero.\n   •  Tener una extensión mínima de 100 palabras.\n   •  Aportar  comentarios  que  complementen,\n      analicen o cuestionen respetuosamente  las\n      ideas presentadas.\n   •  Fundamentar  las observaciones cuando sea\n      posible.\n   •  Mantener en todo momento una comunicación\n      respetuosa, cordial y académica.\n\nCriterios de participación\n\nSe  espera que  las  intervenciones fomenten un\nambiente  de  diálogo  académico,  demostrando\nrespeto hacia  las opiniones de  los compañeros,\ncapacidad  de   análisis,  pensamiento   crítico  y\ndisposición   para   enriquecer    el   aprendizaje\ncolaborativo.\n\nNo  se  permitirá  el  uso de  lenguaje  ofensivo,\ndiscriminatorio   o   cualquier   conducta   que\n\n\n\n\n      Página 9 de 21"
+      },
+      {
+        "locator": "page:10",
+        "text": "                           contravenga  las normas de convivencia del aula\n                                      virtual.\n\n                           Entrega\n\n                           La actividad se realizará directamente en el foro de\n                                   la plataforma, por  lo que no deberá adjuntarse\n                          ningún archivo.\n\n                            Es importante verificar que tanto la participación\n                                      inicial  como   la  retroalimentación  hayan  sido\n                             publicadas correctamente antes de la fecha de cierre\n                               del foro.\n\n                        Tiempo estimado de entrega\n\n                           Entrega ordinaria (Rúbrica verde): del 12 al 18 de\n                             octubre, hasta las 23:55 horas.\n\n                           Entrega extemporánea (Rúbrica naranja): 19 de\n                             octubre,  hasta  las  23:55  horas,  aplicándose  los\n                                    criterios de evaluación correspondientes a la rúbrica\n                               naranja.\n\n\n\n\n\nEvidencia de la evaluación              •  Documento en formato PDF que contenga un\n                             resumen académico de  la lectura asignada,\n                                  integrado por portada, introducción, desarrollo,\n                                   conclusión y referencias en formato APA 7. El\n                             resumen deberá elaborarse conforme a  las\n                                       características establecidas en las indicaciones\n                             de  la  actividad, sintetizando  las  principales\n                                    ideas de los autores, explicando el contexto\n                                       histórico de  la primera generación de  los\n                                 derechos humanos, la relevancia de la Carta\n                           Magna como antecedente  histórico  y una\n                                       reflexión personal sobre  la importancia del\n                                   estudio de  los antecedentes históricos para\n                              comprender  la  evolución de  los  derechos\n                              humanos, atendiendo al estándar establecido\n                              en la rúbrica de evaluación.\n\n                                             •  Participación realizada directamente en el foro\n                             de la plataforma, integrada por una aportación\n                                             inicial y, al menos, una retroalimentación a un\n\n\n\n                                          Página 10 de 21"
+      },
+      {
+        "locator": "page:11",
+        "text": "                               compañero.  La  aportación   inicial  deberá\n                                 responder de manera fundamentada a  la\n                                pregunta detonadora, desarrollando un análisis\n                                           crítico  sobre   el  objetivo  actual  de   las\n                                 generaciones de los derechos humanos y su\n                                       utilidad  para comprender  la  protección  y\n                                    garantía de  los derechos humanos en  la\n                                      actualidad, con una extensión de 300 a 500\n                                      palabras.  Asimismo,  deberá   incluir  una\n                                    retroalimentación argumentada, respetuosa y\n                                    constructiva  a   la   participación  de  un\n                               compañero, con una extensión mínima de 100\n                                      palabras,   elaborada   conforme   a    las\n                                       características establecidas en las indicaciones\n                             de  la  actividad  y  atendiendo  al  estándar\n                                     previsto en la rúbrica de evaluación.\n\n\n\nPorcentaje de calificación que\n                                                                (11/100)\naporta (--/100)\n\n\nObservaciones                         •  Actividad 3: Resumen de libro\n                                      •  El resumen académico deberá elaborarse con\n                                base en  la  lectura asignada  del  libro Las\n                                 generaciones  de  los  Derechos  Humanos.\n                                      Libertad, Igualdad y Fraternidad y, en su caso,\n                              con la sesión de clase grabada.\n                                      •  Se  valorará especialmente  la capacidad de\n                                           síntesis, análisis y comprensión de las ideas\n                                     desarrolladas por los autores, evitando limitarse\n                                a copiar o transcribir textualmente el contenido\n                             de la lectura.\n                                      •  El resumen deberá presentar una estructura\n                                      lógica y coherente, integrando los apartados\n                                       solicitados en las indicaciones de la actividad:\n                                     introducción,    desarrollo,    conclusión    y\n                                       referencias.\n                                      •  Es indispensable que el documento sea una\n                                   elaboración original del estudiante; por lo tanto,\n                             no deberá copiarse textualmente el contenido\n                                    del libro ni de otras fuentes de consulta.\n                                      •  Se evaluará la correcta identificación de las\n                                      principales ideas relacionadas con el origen\n                                       histórico de  la primera generación de  los\n                                 derechos humanos  y  la  explicación de  la\n\n\n\n                                          Página 11 de 21"
+      },
+      {
+        "locator": "page:12",
+        "text": "   importancia  de   la  Carta  Magna  como\n   antecedente de su reconocimiento.\n•  El desarrollo del trabajo deberá explicar de\n  manera clara el contexto histórico expuesto por\n   los  autores,  utilizando terminología  jurídica\n  adecuada y demostrando comprensión de los\n   conceptos abordados.\n•  La  reflexión personal deberá  expresar, con\n  argumentos propios, la importancia del estudio\n  de    los   antecedentes    históricos   para\n  comprender la evolución y consolidación de los\n   derechos humanos.\n•  Todas las fuentes consultadas deberán citarse\n  conforme   al  formato  APA   7.ª   edición,\n   incluyendo como mínimo la referencia del libro\n   utilizado    y    cualquier    otra    fuente\n   complementaria que haya sido consultada.\n•  El trabajo deberá entregarse únicamente en\n   formato PDF, respetando la extensión, formato\n   y   especificaciones   establecidas  en   las\n   indicaciones de la actividad.\n•  Antes de enviar la evidencia, verifica que el\n   archivo se encuentre correctamente adjunto y\n  que el envío quede en estatus \"Enviado\" y no\n  como  \"Borrador\",  ya que  los  trabajos en\n   borrador no podrán ser evaluados.\n\n•  Actividad 4: Foro de participación y debate\n\n•  La participación en el foro deberá elaborarse\n  con base en los contenidos revisados en  la\n   Unidad, la lectura asignada y, en su caso, la\n   sesión de clase grabada.\n•  Se  valorará especialmente  la capacidad de\n   análisis,  reflexión  jurídica  y argumentación\n    crítica, evitando limitarse a expresar opiniones\n   sin fundamento o reproducir textualmente el\n   contenido de las fuentes de consulta.\n•  La participación inicial deberá responder de\n  manera clara y fundamentada a la pregunta\n   detonadora,   desarrollando   una   postura\n   personal sustentada en los contenidos de la\n   unidad  y, cuando sea pertinente, en  otras\n   fuentes académicas confiables.\n•  Es indispensable que la publicación sea una\n   elaboración original del estudiante; por lo tanto,\n  no deberá copiarse total o parcialmente  el\n   contenido de  libros,  artículos,  páginas de\n\n\n  Página 12 de 21"
+      },
+      {
+        "locator": "page:13",
+        "text": "   internet o de las participaciones realizadas por\n   otros compañeros.\n•  Se  evaluará  la  capacidad para  explicar  el\n   objetivo  actual de  las generaciones de  los\n   derechos humanos y argumentar su utilidad\n   para comprender la protección y garantía de los\n   derechos  humanos   en    la   actualidad,\n  empleando terminología jurídica adecuada.\n•  La aportación  inicial deberá mantener una\n   estructura lógica y coherente, con ideas claras,\n  argumentos sólidos y una redacción formal,\n   respetando  la  extensión  mínima  de  300\n   palabras y máxima de 500 palabras.\n•  La  retroalimentación  deberá  realizarse,  al\n  menos, a la participación de un compañero,\n   procurando comentar preferentemente una\n   publicación  que  aún  no  haya  recibido\n   retroalimentación.\n•  La    retroalimentación    deberá    aportar\n   observaciones, comentarios o argumentos que\n  complementen,  analicen  o  enriquezcan  la\n   participación del compañero, evitando limitarse\n   a  expresiones como  \"Estoy  de  acuerdo\",\n   \"Excelente trabajo\" o comentarios similares que\n  no aporten valor al debate académico.\n•  La retroalimentación deberá elaborarse con\n   respeto, lenguaje académico y una extensión\n  mínima de 100 palabras, favoreciendo el diálogo\n   constructivo y el aprendizaje colaborativo.\n•  Cuando  se   utilicen   ideas,  conceptos  o\n   información provenientes de  otras  fuentes,\n   estas deberán citarse conforme a los criterios\n   del Manual APA 7.ª edición.\n•  La actividad deberá realizarse directamente en\n   el foro de la plataforma, por lo que no deberá\n   adjuntarse ningún archivo.\n•  Antes del cierre del foro, verifica que tanto tu\n   participación inicial como la retroalimentación\n  hayan sido publicadas correctamente, ya que\n  únicamente  las  intervenciones  registradas\n   dentro  del periodo  establecido podrán  ser\n   consideradas para su evaluación.\n\n\n\n\n Lineamientos\n\n\n\n\n  Página 13 de 21"
+      },
+      {
+        "locator": "page:14",
+        "text": "Con base en lo señalado en los siguientes artículos del Reglamento Universitario de la\nUniversidad Abierta y a Distancia de México:\n\nArtículo 27. La calificación representa la valoración numérica del aprovechamiento que la o el\nestudiante logró en cada unidad didáctica. La escala de calificaciones comprende del 0 (cero)\nal 100 (cien), y la calificación mínima aprobatoria será 60 (sesenta).\n\nEn ningún caso procederá la renuncia a la calificación obtenida. Las actividades y evidencias\nde aprendizaje en las que se identifique falta de integridad académica serán evaluadas\ncon 0 (cero).\n\nArtículo 76. Son obligaciones de las y los estudiantes:\n\nV. Realizar, con integridad académica, las actividades que están señaladas en el aula virtual\ndel programa educativo en el que están inscritos, conforme a las fechas establecidas en el\ncalendario de aula.\n\n               Lineamientos para la evaluación del aprendizaje\n\n    •  La entrega de actividades se realizará de acuerdo con el calendario\n     proporcionado por su Figura Académica y marcado en el presente documento.\n    •  La entrega corresponde a un solo intento.\n    •  Las entregas extemporáneas estarán sujeta a una penalización de 2 a 3 puntos.\n     La recepción será únicamente hasta el martes de cada semana (no aplica para\n    semana 9 y 10).\n    •  La persona estudiante entregará sus actividades debidamente citadas en\n     formato APA 7ª edición.\n    •  La aplicación o uso de las herramientas de IA se debe apegar a los\n     Lineamientos para el uso ético y responsable de la IA. Escala de evaluación\n     para actividades con IA.\n\n\n\n\n\n                      Criterio                 Sanción / Penalización\n      50% a 100%, NO declaró uso de         4 puntos menos\n          IA.\n      50% en adelante, declarado.     No se penaliza, pero se evalúa en\n                                            función del contenido\n                                             2 puntos menos\n      0 a 49%, NO declarado\n      0 al 49%, se declara el uso de IA.  No se penaliza, pero se evalúa en\n                                            función del contenido\n\n\n   •  La persona estudiante perderá su intento de envío de la actividad cuando\n     entregue o realice una o más de las condiciones enunciadas en Los\n\n\n\n                                          Página 14 de 21"
+      },
+      {
+        "locator": "page:15",
+        "text": "     Lineamientos para la evaluación del aprendizaje: CAPÍTULO II, SECCIÓN\n     TERCERA, DE LA ELABORACIÓN Y ENTREGA DE ACTIVIDADES, apartado\n     décimo octavo.\n\n    •  La entrega de actividades, recepción y evaluación se rige por dichos\n     lineamientos y el RUUADM, por lo tanto, no se reciben por otros medios\n      distintos a aula ni posterior al cierre de la misma.\n\nCriterios de examen:\n\n   • Un intento\n   •  Método de calificación: automático.\n\n\n\n\n\n                                          Página 15 de 21"
+      },
+      {
+        "locator": "page:16",
+        "text": "Rubrica de Evaluación Ordinaria – Actividad 3:(Puntaje Máximo 7)\n\n Criterio        Excelente      Bueno             Suficiente        Insuficiente     Puntaje\n                                                                  máxim\n                                                                         o\n\n Identificación   Identifica      y  Identifica         la  Identifica    solo No identifica las  2\n y  síntesis de  sintetiza    de  mayoría  de   las  algunas    ideas  ideas\n las      ideas  manera    clara,  ideas  principales  principales,  con  principales   o\n principales     precisa        y  con         ligeras  síntesis limitada  presenta   un\n               completa     las  omisiones      o  o poco clara.     resumen\n                 ideas             imprecisiones.                         incorrecto    o\n                  principales de la                                  basado     en\n                    lectura,                                               copias\n               demostrando                                               textuales.\n               comprensión\n                  del contenido.\n\n Análisis     y  Explica           Desarrolla      los  El  desarrollo es No   desarrolla  2\n desarrollo del  adecuadament   aspectos            superficial     y  los  elementos\n contenido     e   el  contexto  solicitados,        aborda           requeridos   o\n                    histórico,       la  aunque      con  parcialmente los  presenta\n                  relevancia de la  menor            elementos        información\n                 Carta Magna y  profundidad    o  solicitados.        incorrecta.\n                presenta   una  fundamentación.\n                   reflexión\n                 personal   bien\n               fundamentada,\n                 relacionando  el\n              tema  con   la\n                Unidad.\n\n Redacción  y  Presenta         Presenta         la  Presenta       No presenta  la   1\n estructura      portada,          estructura          deficiencias en la  estructura\n                  introducción,      solicitada    con  estructura    o  solicitada o  la\n                   desarrollo,       pequeños errores  numerosos       redacción\n                 conclusión    y  de     redacción,  errores      de  impide\n                   referencias;       organización   u  redacción  que  comprender  el\n               mantiene          ortografía.           dificultan       la  trabajo.\n                 excelente                          comprensión.\n                  organización,\n                 coherencia,\n                  ortografía     y\n                 lenguaje\n                académico.\n\n Referencias y  Cita             Presenta          Presenta       No      incluye   1\n formato APA  correctamente   pequeños errores  referencias        referencias o no\n 7                 las  fuentes  y  en   las   citas  o  incompletas   o  utiliza          el\n                presenta      las  referencias    en  con        varios  formato APA 7.\n                  referencias     APA 7.\n\n\n\n\n                                           Página 16 de 21"
+      },
+      {
+        "locator": "page:17",
+        "text": "               conforme      al                       errores      de\n                formato APA 7.                       formato.\n\n Cumplimient   Entrega        el  Cumple           Presenta  varios No cumple con   1\n o   de    los  trabajo     en  parcialmente con  incumplimiento   los requisitos de\n requisitos de  formato   PDF,  alguno  de   los  s  en  formato,  entrega  o   la\n entrega        dentro del plazo  requisitos     de  extensión     o  actividad   no\n                  establecido,      formato       o  presentación.    puede       ser\n                respetando    la  presentación   sin                   evaluada   por\n                 extensión     y  afectar                            incumplimient\n                  especificaciones  significativament                  o    de     las\n              de     formato  e la evaluación.                         indicaciones.\n                  indicadas.\n\n\n\n\nRubrica de Evaluación Extraordinaria – Actividad 3:(Puntaje Máximo 5)\n\n Criterio        Excelente         Bueno              Suficiente       Insuficiente    Puntaje\n                                                                 máximo\n\n Identificación  Identifica        y  Identifica       la  Identifica solo No identifica  2\n y  síntesis de  sintetiza      de  mayoría de  las  algunas ideas  las     ideas\n las     ideas  manera      clara,  ideas principales  principales,     principales o\n principales     precisa          y  con        ligeras  con    síntesis  presenta un\n              completa las ideas  omisiones     o  limitada   o  resumen\n                 principales de  la  imprecisiones.    poco clara.    incorrecto o\n                  lectura,                                      basado  en\n              demostrando                                      copias\n              comprensión   del                                       textuales.\n               contenido.\n\n Análisis    y  Explica              Desarrolla      los   El   desarrollo No desarrolla  1\n desarrollo del  adecuadamente   aspectos          es  superficial  los\n contenido      el       contexto  solicitados,        y    aborda  elementos\n                   histórico,         la aunque    con  parcialmente  requeridos o\n                relevancia de  la  menor               los elementos  presenta\n               Carta  Magna  y  profundidad   o  solicitados.     información\n               presenta     una  fundamentación.                  incorrecta.\n                  reflexión  personal\n              fundamentada,\n               relacionando    el\n             tema   con    la\n               Unidad.\n\n Redacción y  Presenta portada,  Presenta          Presenta     No presenta  1\n estructura      introducción,      pequeños errores  deficiencias    la estructura\n                  desarrollo,                            importantes    solicitada  o\n\n\n\n                                           Página 17 de 21"
+      },
+      {
+        "locator": "page:18",
+        "text": "                conclusión       y de redacción o  en          la  la redacción\n                 referencias;          estructura.        organización   impide\n              mantiene                       o redacción.  comprender\n                organización,                                                 el trabajo.\n               coherencia,\n                 ortografía       y\n               lenguaje\n             académico.\n\n Referencias y  Presenta           Presenta          Presenta     No   incluye  1\n cumplimiento  correctamente las  pequeños errores  referencias     referencias o\n de         los  referencias        en las referencias  incompletas   incumple los\n requisitos de  conforme a APA 7  o   en   algún  o   incumple  requisitos\n entrega       y    entrega     el  requisito     de  varios          esenciales\n                trabajo en formato  entrega.            requisitos  de de entrega.\n                PDF, respetando la                   formato   o\n                extensión   y   las                    presentación.\n                especificaciones\n                establecidas.\n\n\n\n\n\nRubrica de Evaluación Ordinaria – Actividad 4: Foro de participación y debate (Puntaje\nMáximo 4)\n\n Criterio          Excelente       Bueno            Suficiente        Insuficiente      Puntaj\n                                                                    e\n                                                                 máxim\n                                                                    o\n\n Participación    Responde  de  Responde      La respuesta es No responde a  2\n inicial: análisis y  manera clara y adecuadamen  superficial   o  la pregunta o\n argumentación  completa a  la  te    a      la poco             la\n                pregunta        pregunta,      fundamentada  participación\n                detonadora,    aunque      la  y     desarrolla  carece    de\n               fundamentand  fundamentaci   parcialmente     análisis       y\n              o            sus  ón o el análisis  la    pregunta  fundamentaci\n                argumentos     presentan      detonadora.    ón.\n              con           los  ligeras   áreas\n                 contenidos de de\n                     la      unidad,  oportunidad.\n                demuestra\n                      análisis   crítico,\n\n\n\n                                           Página 18 de 21"
+      },
+      {
+        "locator": "page:19",
+        "text": "                   reflexión\n                    jurídica  y una\n                 postura\n                 personal   bien\n                 sustentada.\n\nRetroalimentaci  Realiza    una  La             La           No  realiza  la  1\nón   a    un  retroalimentaci   retroalimentaci  retroalimentaci  retroalimentaci\ncompañero     ón  respetuosa,  ón     aporta  ón es limitada,  ón o  esta  se\n              argumentada y  comentarios    poco              limita      a\n                  constructiva,     pertinentes,     argumentada   comentarios sin\n                enriqueciendo   aunque   con o     apenas  aportar       al\n                    el debate con poca         cumple con los  debate\n                aportaciones    profundidad o  requisitos       académico.\n                 relevantes    y  fundamentaci   mínimos.\n              una   extensión  ón.\n               mínima de 100\n                 palabras.\n\nRedacción   y   Utiliza lenguaje  Presenta        Presenta varios No cumple con  1\ncumplimiento    formal        y  algunos errores  errores    de  las\nde           las  académico,    menores   de  redacción,      indicaciones,\nindicaciones     presenta        redacción,       ortografía   o  la    extensión\n                excelente        ortografía   o  incumple       requerida o la\n                   ortografía,      incumple        diversos         calidad\n               coherencia   y  parcialmente    requisitos de la  mínima    de\n                respeta       la  alguna          actividad.       redacción.\n                 extensión        indicación.\n                establecida\n               para          la\n                 participación\n                      inicial   y    la\n                  retroalimentaci\n                 ón,  así como\n                todas         las\n                 indicaciones de\n                    la actividad.\n\n\n\n\n\n                                          Página 19 de 21"
+      },
+      {
+        "locator": "page:20",
+        "text": "Rubrica de Evaluación Extraordinaria – Actividad 4: Foro de participación y debate\n(Puntaje Máximo 3)\n\n Criterio          Excelente      Bueno            Suficiente        Insuficiente      Puntaj\n                                                                    e\n                                                                 máxim\n                                                                    o\n\n Participación    Responde  de  Responde      La respuesta es No responde a  1\n inicial: análisis y  manera clara y adecuadamen  superficial,        la    pregunta\n argumentación  fundamentada  te    a      la  desarrolla      detonadora o\n              a  la pregunta  pregunta,       parcialmente    la\n                detonadora,    aunque       el  la pregunta o  participación\n                demuestra        análisis  o   la  presenta       carece    de\n                      análisis  crítico,  fundamentaci   escasa            análisis       y\n                    reflexión       ón   presentan  fundamentaci   argumentació\n                     jurídica       y  algunas  áreas  ón.                n.\n                   sustenta     sus de\n                argumentos     oportunidad.\n              con           los\n                 contenidos de\n                     la Unidad.\n\n Retroalimentaci  Realiza   una  La             La           No  realiza  la  1\n ón    a    un  retroalimentaci  retroalimentaci  retroalimentaci  retroalimentaci\n compañero     ón respetuosa,  ón     aporta  ón es limitada,  ón o  esta  se\n               argumentada   comentarios    poco              limita      a\n                 y  constructiva  pertinentes,     argumentada   comentarios sin\n              que enriquece  aunque   con o  no  cumple  aportar       al\n                      el     debate poca          completament  intercambio\n              académico  y  profundidad o  e   con     los  académico.\n               cumple con la  fundamentaci    requisitos\n                  extensión        ón.              establecidos.\n                mínima\n                  requerida.\n\n Redacción   y   Utiliza lenguaje  Presenta        Presenta varios No cumple con  1\n cumplimiento    formal       y  algunos errores  errores     de  las\n de           las  académico,    menores   de  redacción   o  indicaciones, la\n indicaciones    mantiene       redacción,      incumple        extensión\n              buena           ortografía   o  diversos         requerida o la\n                    ortografía,      incumple         requisitos de la  calidad mínima\n                coherencia   y  parcialmente    actividad.     de redacción.\n               cumple con la  alguna\n                  extensión     y  indicación.\n                 todas        las\n                  indicaciones\n\n\n\n                                           Página 20 de 21"
+      },
+      {
+        "locator": "page:21",
+        "text": "        de            la\n          actividad.\n\n\n\n\n\n              Concentrado de calificaciones\n\n\nSemana               Actividades                  Porcentaje de\n\n                                                           calificación (--/100)\n     1     Foro diagnóstico / Introducción a la Unidad        0\n                Actividad 1: Reseña de Video\n   2                                                                                 11\n               Actividad 2: Publicación en Foro\n                   Actividad 3: Resumen\n   3                                                                                 11\n               Actividad 4: Publicación en Foro\n              Actividad 5: Cuadro comparativo   4                                                           10\n           Examen parcial (semanas 2, 3 y 4)                                                         5\n\n   5             Actividad 7: Mapa Mental                   10\n\n   6           Actividad 8: Cuadro sinóptico                  13\n\n   7            Actividad 9: Mapa de cajas                  10\n           Examen parcial (semanas 5, 6 y 7)              5\n   8           Actividad 11: Estudio de Caso                 10\n\n                    Actividad 12: Ensayo                       15   9\n\n   10                Autoevaluación                   0\n                                                          100\n\n\n\n\n\n                                  Página 21 de 21"
+      }
+    ],
+    "unsegmented_document": true,
+    "period_pending": true,
+    "activity_mapping": [
+      {
+        "activity_id": "source-53dc130afcd5a2c9",
+        "local_number": null,
+        "source_locator": "document",
+        "source_is_summary": false
+      }
+    ]
+  }
+}
+```

@@ -1,0 +1,978 @@
+# Planeacion: Administración II
+
+Estado: needs_review. Conversion local, no aprobacion docente ni autorizacion de envio.
+
+## Identificacion
+
+```json
+{
+  "institution": "UCNL",
+  "program": "licenciatura-en-administracion",
+  "subject_id": "administracion-ii-lad",
+  "subject_title": "Administración II",
+  "offering_id": "oferta-13c53aa8e96c680e",
+  "period": "2026-3",
+  "modality": null
+}
+```
+
+## Actividad preparatoria-1: Selección, desempeño y desarrollo
+
+### Consigna importada
+
+Leer los materiales de los capítulos 11 a 13 y registrar páginas pertinentes.
+Diseñar un caso hipotético identificado como tal y comparar las decisiones de selección, evaluación y formación.
+Separar las preguntas que exigen experiencia personal; no responderlas inventando antecedentes del estudiante.
+
+### Requisitos
+
+1. Leer los materiales de los capítulos 11 a 13 y registrar páginas pertinentes.
+2. Diseñar un caso hipotético identificado como tal y comparar las decisiones de selección, evaluación y formación.
+3. Separar las preguntas que exigen experiencia personal; no responderlas inventando antecedentes del estudiante.
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[
+  {
+    "id": "step-001",
+    "order": 1,
+    "phase": "construction",
+    "action": "Leer los materiales de los capítulos 11 a 13 y registrar páginas pertinentes.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-002",
+    "order": 2,
+    "phase": "construction",
+    "action": "Diseñar un caso hipotético identificado como tal y comparar las decisiones de selección, evaluación y formación.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-003",
+    "order": 3,
+    "phase": "construction",
+    "action": "Separar las preguntas que exigen experiencia personal; no responderlas inventando antecedentes del estudiante.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  }
+]
+```
+
+### products
+
+```json
+[
+  {
+    "id": "product-001",
+    "kind": "unspecified",
+    "recipient": null,
+    "editable_format": null,
+    "submission_format": null,
+    "structure": [
+      "Matriz comparativa con propósito, criterio, evidencia, decisión y riesgo por proceso."
+    ],
+    "length": null,
+    "filename_pattern": null,
+    "accessibility": null,
+    "requirement_ids": [],
+    "paths": {
+      "editable": null,
+      "delivery": null
+    }
+  }
+]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": [
+    "Cada proceso tiene una función diferenciada y una fuente con localizador.",
+    "Los indicadores se definen de manera observable, no como adjetivos generales.",
+    "El caso se reconoce como práctica, no como diagnóstico real de una empresa."
+  ]
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": null
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## Actividad preparatoria-2: Motivación, liderazgo y equipos
+
+### Consigna importada
+
+Revisar las presentaciones de los capítulos 14 a 16.
+Contrastar dos respuestas posibles a un problema hipotético de coordinación.
+Justificar la propuesta y señalar una condición en la que podría no funcionar.
+
+### Requisitos
+
+1. Revisar las presentaciones de los capítulos 14 a 16.
+2. Contrastar dos respuestas posibles a un problema hipotético de coordinación.
+3. Justificar la propuesta y señalar una condición en la que podría no funcionar.
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[
+  {
+    "id": "step-001",
+    "order": 1,
+    "phase": "construction",
+    "action": "Revisar las presentaciones de los capítulos 14 a 16.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-002",
+    "order": 2,
+    "phase": "construction",
+    "action": "Contrastar dos respuestas posibles a un problema hipotético de coordinación.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-003",
+    "order": 3,
+    "phase": "construction",
+    "action": "Justificar la propuesta y señalar una condición en la que podría no funcionar.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  }
+]
+```
+
+### products
+
+```json
+[
+  {
+    "id": "product-001",
+    "kind": "unspecified",
+    "recipient": null,
+    "editable_format": null,
+    "submission_format": null,
+    "structure": [
+      "Cuadro de situaciones, enfoque elegido, actuación propuesta y límites."
+    ],
+    "length": null,
+    "filename_pattern": null,
+    "accessibility": null,
+    "requirement_ids": [],
+    "paths": {
+      "editable": null,
+      "delivery": null
+    }
+  }
+]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": [
+    "La propuesta explica por qué se elige un enfoque.",
+    "No se equipara liderazgo con autoridad formal.",
+    "Las afirmaciones se vinculan con la lectura, sin atribuir resultados no observados."
+  ]
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": null
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## Actividad preparatoria-3: Comunicación, control y productividad
+
+### Consigna importada
+
+Localizar en el índice del libro los capítulos 17 a 20 y seleccionar los apartados pertinentes.
+Proponer un proceso sencillo y distinguir indicador, meta y resultado.
+Registrar dudas para contrastarlas con las actividades cuando el aula vuelva a estar disponible.
+
+### Requisitos
+
+1. Localizar en el índice del libro los capítulos 17 a 20 y seleccionar los apartados pertinentes.
+2. Proponer un proceso sencillo y distinguir indicador, meta y resultado.
+3. Registrar dudas para contrastarlas con las actividades cuando el aula vuelva a estar disponible.
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[
+  {
+    "id": "step-001",
+    "order": 1,
+    "phase": "construction",
+    "action": "Localizar en el índice del libro los capítulos 17 a 20 y seleccionar los apartados pertinentes.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-002",
+    "order": 2,
+    "phase": "construction",
+    "action": "Proponer un proceso sencillo y distinguir indicador, meta y resultado.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-003",
+    "order": 3,
+    "phase": "construction",
+    "action": "Registrar dudas para contrastarlas con las actividades cuando el aula vuelva a estar disponible.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  }
+]
+```
+
+### products
+
+```json
+[
+  {
+    "id": "product-001",
+    "kind": "unspecified",
+    "recipient": null,
+    "editable_format": null,
+    "submission_format": null,
+    "structure": [
+      "Esquema de proceso con información de entrada, control, indicador y retroalimentación."
+    ],
+    "length": null,
+    "filename_pattern": null,
+    "accessibility": null,
+    "requirement_ids": [],
+    "paths": {
+      "editable": null,
+      "delivery": null
+    }
+  }
+]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": [
+    "El esquema relaciona decisiones y evidencias.",
+    "Las metas propuestas no se presentan como resultados.",
+    "No se trasladan las fechas históricas del temario a un calendario nuevo."
+  ]
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": null
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## sources
+
+```json
+[
+  {
+    "id": "src-local",
+    "kind": "other",
+    "authority": "editorial",
+    "title": "ruta-preparatoria-2026-09-24.json",
+    "url": null,
+    "path": "planeaciones-administracion-ii/ruta-preparatoria-2026-09-24.json",
+    "sha256": "9e42573ce026d796b06d1a75852a60cf2cba395390366ed7bd6ba1480ac6b995",
+    "captured_at": null,
+    "media_type": "application/json"
+  }
+]
+```
+
+## field_status
+
+```json
+[
+  {
+    "path": "/identity",
+    "state": "inferred",
+    "reason": "Identidad editorial del catalogo; oferta interna, periodo y modalidad no acreditados cuando faltan.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/sources",
+    "state": "confirmed",
+    "reason": "Archivo local preservado; su huella no acredita autoria ni vigencia docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "local-file",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum",
+    "state": "unknown",
+    "reason": "No se deducen competencias, resultados ni temario que no esten documentados.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/blocks/0",
+        "quoted_text": "Leer los materiales de los capítulos 11 a 13 y registrar páginas pertinentes.\nDiseñar un caso hipotético identificado como tal y comparar las decisiones de selección, evaluación y formación.\nSeparar las preguntas que exigen experiencia personal; no responderlas inventando antecedentes del estudiante."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/outcomes/0",
+    "state": "inferred",
+    "reason": "Objetivo preservado del modelo local; oficialidad y propuesta no se equiparan.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/blocks/0/objective_proposed",
+        "quoted_text": "Distinguir selección, evaluación del desempeño y desarrollo de personal."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/requirements",
+    "state": "inferred",
+    "reason": "Coinciden con la entrada local; no se acredita que sean requisitos docentes integros.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/blocks/0/requirements",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/sequence",
+    "state": "inferred",
+    "reason": "Secuencia propuesta preservada; fases, insumos, salidas y controles necesitan revision.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/blocks/0/sequence",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/products",
+    "state": "inferred",
+    "reason": "Descripcion original preservada; no convierte examen o foro en informe LaTeX.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/blocks/0/product",
+        "quoted_text": "Matriz comparativa con propósito, criterio, evidencia, decisión y riesgo por proceso."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/1",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/1/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/1/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/blocks/1",
+        "quoted_text": "Revisar las presentaciones de los capítulos 14 a 16.\nContrastar dos respuestas posibles a un problema hipotético de coordinación.\nJustificar la propuesta y señalar una condición en la que podría no funcionar."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/outcomes/1",
+    "state": "inferred",
+    "reason": "Objetivo preservado del modelo local; oficialidad y propuesta no se equiparan.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/blocks/1/objective_proposed",
+        "quoted_text": "Relacionar mecanismos de motivación, liderazgo y decisiones grupales."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/1/requirements",
+    "state": "inferred",
+    "reason": "Coinciden con la entrada local; no se acredita que sean requisitos docentes integros.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/blocks/1/requirements",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/1/sequence",
+    "state": "inferred",
+    "reason": "Secuencia propuesta preservada; fases, insumos, salidas y controles necesitan revision.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/blocks/1/sequence",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/1/products",
+    "state": "inferred",
+    "reason": "Descripcion original preservada; no convierte examen o foro en informe LaTeX.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/blocks/1/product",
+        "quoted_text": "Cuadro de situaciones, enfoque elegido, actuación propuesta y límites."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/2",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/2/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/2/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/blocks/2",
+        "quoted_text": "Localizar en el índice del libro los capítulos 17 a 20 y seleccionar los apartados pertinentes.\nProponer un proceso sencillo y distinguir indicador, meta y resultado.\nRegistrar dudas para contrastarlas con las actividades cuando el aula vuelva a estar disponible."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/outcomes/2",
+    "state": "inferred",
+    "reason": "Objetivo preservado del modelo local; oficialidad y propuesta no se equiparan.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/blocks/2/objective_proposed",
+        "quoted_text": "Preparar el estudio de comunicación, control y operaciones previstos en la programación."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/2/requirements",
+    "state": "inferred",
+    "reason": "Coinciden con la entrada local; no se acredita que sean requisitos docentes integros.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/blocks/2/requirements",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/2/sequence",
+    "state": "inferred",
+    "reason": "Secuencia propuesta preservada; fases, insumos, salidas y controles necesitan revision.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/blocks/2/sequence",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/2/products",
+    "state": "inferred",
+    "reason": "Descripcion original preservada; no convierte examen o foro en informe LaTeX.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/blocks/2/product",
+        "quoted_text": "Esquema de proceso con información de entrada, control, indicador y retroalimentación."
+      }
+    ],
+    "alternatives": []
+  }
+]
+```
+
+## review
+
+```json
+{
+  "state": "needs_review",
+  "reviewed_at": null,
+  "reviewer_role": null,
+  "critical_gaps": [
+    "Cotejar consigna y procedencia docente; conversion local no equivale a aprobacion"
+  ],
+  "semantic_validation": "failed"
+}
+```
+
+## extensions
+
+```json
+{
+  "conversion": {
+    "version": "1.0",
+    "source_format": ".json",
+    "source_sha256": "9e42573ce026d796b06d1a75852a60cf2cba395390366ed7bd6ba1480ac6b995",
+    "source_payload": {
+      "prepared_on": "2026-09-24",
+      "source_consultation_date": "2026-09-23",
+      "institution": "UCNL",
+      "course_id": 20297,
+      "subject": "Administración II",
+      "group": "D",
+      "period": "2026-3",
+      "mode": "ruta_preparatoria_no_oficial",
+      "official_assignments_generated": false,
+      "access_observation": {
+        "checked_on": "2026-09-24",
+        "url": "https://licenciatura.ucnl.edu.mx/login/index.php",
+        "http_status": 500,
+        "scope": "Observado desde la sesión actual antes del formulario; no se probó ni modificó la contraseña."
+      },
+      "blocks": [
+        {
+          "order": 1,
+          "title": "Selección, desempeño y desarrollo",
+          "objective_proposed": "Distinguir selección, evaluación del desempeño y desarrollo de personal.",
+          "work_minutes_estimated": 120,
+          "practice_product_proposed": "Matriz comparativa con propósito, criterio, evidencia, decisión y riesgo por proceso.",
+          "tasks_proposed": [
+            "Leer los materiales de los capítulos 11 a 13 y registrar páginas pertinentes.",
+            "Diseñar un caso hipotético identificado como tal y comparar las decisiones de selección, evaluación y formación.",
+            "Separar las preguntas que exigen experiencia personal; no responderlas inventando antecedentes del estudiante."
+          ],
+          "review_criteria_proposed": [
+            "Cada proceso tiene una función diferenciada y una fuente con localizador.",
+            "Los indicadores se definen de manera observable, no como adjetivos generales.",
+            "El caso se reconoce como práctica, no como diagnóstico real de una empresa."
+          ],
+          "sources": [
+            {
+              "role": "material_aula_consultado_2026_09_23",
+              "module_id": 825057,
+              "title": "LIBRO ADMINISTRACION UNA PERSPECTIVA GLOBAL Y EMPRESARIAL  Archivo",
+              "url": "https://licenciatura.ucnl.edu.mx/mod/resource/view.php?id=825057",
+              "local_path": "referencias-administracion-ii/2026-3/consulta-2026-09-23/modulo-825057.pdf"
+            },
+            {
+              "role": "material_aula_consultado_2026_09_23",
+              "module_id": 825099,
+              "title": "PRESENTACION SESION SINCRONA CAPITULO 11  Archivo",
+              "url": "https://licenciatura.ucnl.edu.mx/mod/resource/view.php?id=825099",
+              "local_path": "referencias-administracion-ii/2026-3/consulta-2026-09-23/modulo-825099.pdf"
+            },
+            {
+              "role": "material_aula_consultado_2026_09_23",
+              "module_id": 825101,
+              "title": "PRESENTACION SESION SINCRONA CAPITULO 12  Archivo",
+              "url": "https://licenciatura.ucnl.edu.mx/mod/resource/view.php?id=825101",
+              "local_path": "referencias-administracion-ii/2026-3/consulta-2026-09-23/modulo-825101.pdf"
+            },
+            {
+              "role": "material_aula_consultado_2026_09_23",
+              "module_id": 825106,
+              "title": "PREGUNTAS DE AUTOEVALUACION DE DESEMPEÑO LABORAL CAPITULO 12  Archivo",
+              "url": "https://licenciatura.ucnl.edu.mx/mod/resource/view.php?id=825106",
+              "local_path": "referencias-administracion-ii/2026-3/consulta-2026-09-23/modulo-825106.pdf"
+            },
+            {
+              "role": "material_aula_consultado_2026_09_23",
+              "module_id": 825110,
+              "title": "PRESENTACION SESION SINCRONA CAPITULO 13  Archivo",
+              "url": "https://licenciatura.ucnl.edu.mx/mod/resource/view.php?id=825110",
+              "local_path": "referencias-administracion-ii/2026-3/consulta-2026-09-23/modulo-825110.pdf"
+            }
+          ],
+          "official_activity_id": null,
+          "official_due_date": null
+        },
+        {
+          "order": 2,
+          "title": "Motivación, liderazgo y equipos",
+          "objective_proposed": "Relacionar mecanismos de motivación, liderazgo y decisiones grupales.",
+          "work_minutes_estimated": 105,
+          "practice_product_proposed": "Cuadro de situaciones, enfoque elegido, actuación propuesta y límites.",
+          "tasks_proposed": [
+            "Revisar las presentaciones de los capítulos 14 a 16.",
+            "Contrastar dos respuestas posibles a un problema hipotético de coordinación.",
+            "Justificar la propuesta y señalar una condición en la que podría no funcionar."
+          ],
+          "review_criteria_proposed": [
+            "La propuesta explica por qué se elige un enfoque.",
+            "No se equipara liderazgo con autoridad formal.",
+            "Las afirmaciones se vinculan con la lectura, sin atribuir resultados no observados."
+          ],
+          "sources": [
+            {
+              "role": "material_aula_consultado_2026_09_23",
+              "module_id": 825150,
+              "title": "PRESENTACION SESION SINCRONA CAPITULO 14  Archivo",
+              "url": "https://licenciatura.ucnl.edu.mx/mod/resource/view.php?id=825150",
+              "local_path": "referencias-administracion-ii/2026-3/consulta-2026-09-23/modulo-825150.pdf"
+            },
+            {
+              "role": "material_aula_consultado_2026_09_23",
+              "module_id": 825155,
+              "title": "PRESENTACION SESION SINCRONA CAPITULO 15  Archivo",
+              "url": "https://licenciatura.ucnl.edu.mx/mod/resource/view.php?id=825155",
+              "local_path": "referencias-administracion-ii/2026-3/consulta-2026-09-23/modulo-825155.pdf"
+            },
+            {
+              "role": "material_aula_consultado_2026_09_23",
+              "module_id": 825171,
+              "title": "PRESENTACION SESION SINCRONA CAPITULO 16  Archivo",
+              "url": "https://licenciatura.ucnl.edu.mx/mod/resource/view.php?id=825171",
+              "local_path": "referencias-administracion-ii/2026-3/consulta-2026-09-23/modulo-825171.pdf"
+            }
+          ],
+          "official_activity_id": null,
+          "official_due_date": null
+        },
+        {
+          "order": 3,
+          "title": "Comunicación, control y productividad",
+          "objective_proposed": "Preparar el estudio de comunicación, control y operaciones previstos en la programación.",
+          "work_minutes_estimated": 120,
+          "practice_product_proposed": "Esquema de proceso con información de entrada, control, indicador y retroalimentación.",
+          "tasks_proposed": [
+            "Localizar en el índice del libro los capítulos 17 a 20 y seleccionar los apartados pertinentes.",
+            "Proponer un proceso sencillo y distinguir indicador, meta y resultado.",
+            "Registrar dudas para contrastarlas con las actividades cuando el aula vuelva a estar disponible."
+          ],
+          "review_criteria_proposed": [
+            "El esquema relaciona decisiones y evidencias.",
+            "Las metas propuestas no se presentan como resultados.",
+            "No se trasladan las fechas históricas del temario a un calendario nuevo."
+          ],
+          "sources": [
+            {
+              "role": "material_aula_consultado_2026_09_23",
+              "module_id": 825057,
+              "title": "LIBRO ADMINISTRACION UNA PERSPECTIVA GLOBAL Y EMPRESARIAL  Archivo",
+              "url": "https://licenciatura.ucnl.edu.mx/mod/resource/view.php?id=825057",
+              "local_path": "referencias-administracion-ii/2026-3/consulta-2026-09-23/modulo-825057.pdf"
+            },
+            {
+              "role": "material_aula_consultado_2026_09_23",
+              "module_id": 802324,
+              "title": "Programación del curso",
+              "url": "https://licenciatura.ucnl.edu.mx/mod/page/view.php?id=802324",
+              "local_path": "referencias-administracion-ii/2026-3/consulta-2026-09-23/inventario-materiales.json"
+            }
+          ],
+          "official_activity_id": null,
+          "official_due_date": null
+        }
+      ],
+      "awaiting_platform_verification": [
+        {
+          "module_id": 802325,
+          "type": "scorm",
+          "title": "Scorm 1  Paquete SCORM",
+          "url": "https://licenciatura.ucnl.edu.mx/mod/scorm/view.php?id=802325",
+          "status": "consigna_y_condiciones_pendientes_no_iniciado"
+        }
+      ],
+      "limitations": "La programación contiene fechas de febrero a abril de 2026 que no se adoptan como calendario vigente de 2026-3. Las presentaciones visibles abarcan capítulos 11 a 16; el libro contiene capítulos posteriores. No se ejecutó SCORM.",
+      "reading_note": "Se proponen lecturas y práctica; no se afirma haber realizado todos los productos o leído íntegramente los libros.",
+      "template_entrypoints": {
+        "report": "reporte-administracion-ii-plantilla-2026-3.tex",
+        "activity": "actividad-administracion-ii-plantilla-2026-3.tex",
+        "presentation": "presentacion-administracion-ii-plantilla-2026-3.tex",
+        "configuration": "config-materia-2026-3.tex",
+        "bibliography": "referencias-verificadas-2026-3.bib"
+      }
+    },
+    "source_blocks": [],
+    "unsegmented_document": false,
+    "period_pending": false,
+    "activity_mapping": [
+      {
+        "activity_id": "preparatoria-1",
+        "local_number": null,
+        "source_locator": "/blocks/0",
+        "source_is_summary": true
+      },
+      {
+        "activity_id": "preparatoria-2",
+        "local_number": null,
+        "source_locator": "/blocks/1",
+        "source_is_summary": true
+      },
+      {
+        "activity_id": "preparatoria-3",
+        "local_number": null,
+        "source_locator": "/blocks/2",
+        "source_is_summary": true
+      }
+    ]
+  }
+}
+```

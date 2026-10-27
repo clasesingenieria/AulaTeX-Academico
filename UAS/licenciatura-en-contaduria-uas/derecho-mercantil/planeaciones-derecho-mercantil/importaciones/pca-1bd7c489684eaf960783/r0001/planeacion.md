@@ -1,0 +1,365 @@
+# Planeacion: derecho-mercantil
+
+Estado: needs_review. Conversion local, no aprobacion docente ni autorizacion de envio.
+
+## Identificacion
+
+```json
+{
+  "institution": "UAS",
+  "program": "licenciatura-en-contaduria-uas",
+  "subject_id": "derecho-mercantil",
+  "subject_title": "derecho-mercantil",
+  "offering_id": "oferta-213b6798b65c6b04",
+  "period": null,
+  "modality": null
+}
+```
+
+## Actividad source-a047ed5ea7cab8dd: planeacion-modulo-49861
+
+### Consigna importada
+
+[document]
+# Planeación - Encuesta de Satisfacción
+
+Modelo aportado; no implica aprobación docente ni entrega.
+
+## schema_version
+
+```json
+"1.0-uas-planeacion"
+```
+
+## consulted_on
+
+```json
+"2026-09-22"
+```
+
+## institution
+
+```json
+"UAS"
+```
+
+## program
+
+```json
+"Licenciatura en Contaduría Pública"
+```
+
+## subject
+
+```json
+"Derecho mercantil"
+```
+
+## course_id
+
+```json
+632
+```
+
+## course_name_literal
+
+```json
+"2026_I_Derecho mercantil_LCP"
+```
+
+## course_url
+
+```json
+"https://virtual.uas.edu.mx/fca/course/view.php?id=632"
+```
+
+## scope
+
+```json
+"Consignas verificadas y propuestas de planeación; no resolución, entrega ni validación docente."
+```
+
+## source_dates_note
+
+```json
+"El periodo se conserva como aparece en el nombre del curso. No se utiliza la fecha técnica de inicio del curso para inferir el calendario de actividades."
+```
+
+## activity
+
+```json
+{
+  "id": 49861,
+  "title": "Encuesta de Satisfacción",
+  "type": "feedback",
+  "week": 0,
+  "topic": "Conocimientos previos, dudas y valoración personal del curso",
+  "requirements": [
+    "Con el propósito de mejorar nuestros procesos académicos, le pedimos que califique de manera honesta los siguientes aspectos, a fin de valorar su grado de satisfacción y detectar oportunidades de mejora.    Estamos evaluando tres aspectos fundamentales:Facilitador(a):Los Contenidos del Curso: Derecho MercantilLos Servicios Administrativos: Plataforma educativaEsto nos permitirá evaluar por separado la calidad del desempeño y servicio de cada uno.Solicitamos, lea detenidamente la pregunta y asigne la puntuación que más se acerque a la realidad, de acuerdo a su experiencia en este Curso.Las preguntas tendrán la escala siguiente : Excelente Bueno Regular No Suficiente Recuerde que esta encuesta es totalmente ANÓNIMA."
+  ],
+  "calendar": {
+    "literal": "Sin fechas visibles en la consulta",
+    "deadline": null,
+    "timezone": null,
+    "status_on_2026_09_22": "Sin cierre verificado",
+    "note": "Fecha Esperada no se interpreta como cierre. No se infiere entrega, prórroga ni zona horaria."
+  },
+  "sources": [
+    {
+      "id": "49861",
+      "title": "Encuesta de Satisfacción",
+      "url": "https://virtual.uas.edu.mx/fca/mod/feedback/view.php?id=49861",
+      "locator": "Introducción y fechas visibles del módulo",
+      "consulted_on": "2026-09-22"
+    }
+  ],
+  "weekly_resources": [
+    {
+      "id": "49856",
+      "title": "Competencias a Desarrollar",
+      "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49856"
+    }
+  ],
+  "proposed_objective": "Demostrar comprensión de conocimientos previos, dudas y valoración personal del curso mediante Encuesta de Satisfacción.",
+  "proposed_sequence": [
+    "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+    "Leer el aviso de anonimato y responder personalmente según los conocimientos o la experiencia reales; no delegar respuestas subjetivas."
+  ],
+  "proposed_review_criteria": [
+    "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+    "No se inventan respuestas personales; no se conservan respuestas a la encuesta en el repositorio."
+  ],
+  "pending": [
+    "Confirmar datos de portada, grupo y asesor antes de elaborar un entregable.",
+    "Fecha de cierre no visible: consultar el calendario o al asesor; no se inventa un vencimiento."
+  ],
+  "existing_local_product": null,
+  "existing_product_note": "No se generó un entregable en esta fase de planeación."
+}
+```
+
+## artifact_contract
+
+```json
+{
+  "version": "1.0",
+  "academic_materials_versioned": true,
+  "paths_relative_to_subject": {
+    "plans": "planeaciones-derecho-mercantil",
+    "references": "referencias-derecho-mercantil",
+    "notes": "referencias-derecho-mercantil/notas-derecho-mercantil",
+    "assets": "assets-derecho-mercantil",
+    "extractions": "extractor-aulatex",
+    "research": "investigacion-aulatex"
+  },
+  "deliverables_directory": ".",
+  "mode": "normalizar_modelo_aportado"
+}
+```
+
+
+### Requisitos
+
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[]
+```
+
+### products
+
+```json
+[]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": []
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": null
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## sources
+
+```json
+[
+  {
+    "id": "src-local",
+    "kind": "other",
+    "authority": "unknown",
+    "title": "planeacion-modulo-49861.md",
+    "url": null,
+    "path": "planeaciones-derecho-mercantil/planeacion-modulo-49861.md",
+    "sha256": "a047ed5ea7cab8ddcd69b25871db965a60ef9b0ceff2b125835c4be43f122a68",
+    "captured_at": null,
+    "media_type": "text/plain"
+  }
+]
+```
+
+## field_status
+
+```json
+[
+  {
+    "path": "/identity",
+    "state": "inferred",
+    "reason": "Identidad editorial del catalogo; oferta interna, periodo y modalidad no acreditados cuando faltan.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/sources",
+    "state": "confirmed",
+    "reason": "Archivo local preservado; su huella no acredita autoria ni vigencia docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "local-file",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum",
+    "state": "unknown",
+    "reason": "No se deducen competencias, resultados ni temario que no esten documentados.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "document",
+        "quoted_text": "[document]\n# Planeación - Encuesta de Satisfacción\n\nModelo aportado; no implica aprobación docente ni entrega.\n\n## schema_version\n\n```json\n\"1.0-uas-planeacion\"\n```\n\n## consulted_on\n\n```json\n\"2026-09-22\"\n```\n\n## institution\n\n```json\n\"UAS\"\n```\n\n## program\n\n```json\n\"Licenciatura en Contaduría Pública\"\n```\n\n## subject\n\n```json\n\"Derecho mercantil\"\n```\n\n## course_id\n\n```json\n632\n```\n\n## course_name_literal\n\n```json\n\"2026_I_Derecho mercantil_LCP\"\n```\n\n## course_url\n\n```json\n\"https://virtual.uas.edu.mx/fca/course/view.php?id=632\"\n```\n\n## scope\n\n```json\n\"Consignas verificadas y propuestas de planeación; no resolución, entrega ni validación docente.\"\n```\n\n## source_dates_note\n\n```json\n\"El periodo se conserva como aparece en el nombre del curso. No se utiliza la fecha técnica de inicio del curso para inferir el calendario de actividades.\"\n```\n\n## activity\n\n```json\n{\n  \"id\": 49861,\n  \"title\": \"Encuesta de Satisfacción\",\n  \"type\": \"feedback\",\n  \"week\": 0,\n  \"topic\": \"Conocimientos previos, dudas y valoración personal del curso\",\n  \"requirements\": [\n    \"Con el propósito de mejorar nuestros procesos académicos, le pedimos que califique de manera honesta los siguientes aspectos, a fin de valorar su grado de satisfacción y detectar oportunidades de mejora.    Estamos evaluando tres aspectos fundamentales:Facilitador(a):Los Contenidos del Curso: Derecho MercantilLos Servicios Administrativos: Plataforma educativaEsto nos permitirá evaluar por separado la calidad del desempeño y servicio de cada uno.Solicitamos, lea detenidamente la pregunta y asigne la puntuación que más se acerque a la realidad, de acuerdo a su experiencia en este Curso.Las preguntas tendrán la escala siguiente : Excelente Bueno Regular No Suficiente Recuerde que esta encuesta es totalmente ANÓNIMA.\"\n  ],\n  \"calendar\": {\n    \"literal\": \"Sin fechas visibles en la consulta\",\n    \"deadline\": null,\n    \"timezone\": null,\n    \"status_on_2026_09_22\": \"Sin cierre verificado\",\n    \"note\": \"Fecha Esperada no se interpreta como cierre. No se infiere entrega, prórroga ni zona horaria.\"\n  },\n  \"sources\": [\n    {\n      \"id\": \"49861\",\n      \"title\": \"Encuesta de Satisfacción\",\n      \"url\": \"https://virtual.uas.edu.mx/fca/mod/feedback/view.php?id=49861\",\n      \"locator\": \"Introducción y fechas visibles del módulo\",\n      \"consulted_on\": \"2026-09-22\"\n    }\n  ],\n  \"weekly_resources\": [\n    {\n      \"id\": \"49856\",\n      \"title\": \"Competencias a Desarrollar\",\n      \"url\": \"https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49856\"\n    }\n  ],\n  \"proposed_objective\": \"Demostrar comprensión de conocimientos previos, dudas y valoración personal del curso mediante Encuesta de Satisfacción.\",\n  \"proposed_sequence\": [\n    \"Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.\",\n    \"Leer el aviso de anonimato y responder personalmente según los conocimientos o la experiencia reales; no delegar respuestas subjetivas.\"\n  ],\n  \"proposed_review_criteria\": [\n    \"El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.\",\n    \"No se inventan respuestas personales; no se conservan respuestas a la encuesta en el repositorio.\"\n  ],\n  \"pending\": [\n    \"Confirmar datos de portada, grupo y asesor antes de elaborar un entregable.\",\n    \"Fecha de cierre no visible: consultar el calendario o al asesor; no se inventa un vencimiento.\"\n  ],\n  \"existing_local_product\": null,\n  \"existing_product_note\": \"No se generó un entregable en esta fase de planeación.\"\n}\n```\n\n## artifact_contract\n\n```json\n{\n  \"version\": \"1.0\",\n  \"academic_materials_versioned\": true,\n  \"paths_relative_to_subject\": {\n    \"plans\": \"planeaciones-derecho-mercantil\",\n    \"references\": \"referencias-derecho-mercantil\",\n    \"notes\": \"referencias-derecho-mercantil/notas-derecho-mercantil\",\n    \"assets\": \"assets-derecho-mercantil\",\n    \"extractions\": \"extractor-aulatex\",\n    \"research\": \"investigacion-aulatex\"\n  },\n  \"deliverables_directory\": \".\",\n  \"mode\": \"normalizar_modelo_aportado\"\n}\n```\n"
+      }
+    ],
+    "alternatives": []
+  }
+]
+```
+
+## review
+
+```json
+{
+  "state": "needs_review",
+  "reviewed_at": null,
+  "reviewer_role": null,
+  "critical_gaps": [
+    "Cotejar consigna y procedencia docente; conversion local no equivale a aprobacion",
+    "Documento sin segmentar: identificar actividades, requisitos, preguntas y rubrica antes de ejecutar"
+  ],
+  "semantic_validation": "failed"
+}
+```
+
+## extensions
+
+```json
+{
+  "conversion": {
+    "version": "1.0",
+    "source_format": ".md",
+    "source_sha256": "a047ed5ea7cab8ddcd69b25871db965a60ef9b0ceff2b125835c4be43f122a68",
+    "source_payload": null,
+    "source_blocks": [
+      {
+        "locator": "document",
+        "text": "# Planeación - Encuesta de Satisfacción\n\nModelo aportado; no implica aprobación docente ni entrega.\n\n## schema_version\n\n```json\n\"1.0-uas-planeacion\"\n```\n\n## consulted_on\n\n```json\n\"2026-09-22\"\n```\n\n## institution\n\n```json\n\"UAS\"\n```\n\n## program\n\n```json\n\"Licenciatura en Contaduría Pública\"\n```\n\n## subject\n\n```json\n\"Derecho mercantil\"\n```\n\n## course_id\n\n```json\n632\n```\n\n## course_name_literal\n\n```json\n\"2026_I_Derecho mercantil_LCP\"\n```\n\n## course_url\n\n```json\n\"https://virtual.uas.edu.mx/fca/course/view.php?id=632\"\n```\n\n## scope\n\n```json\n\"Consignas verificadas y propuestas de planeación; no resolución, entrega ni validación docente.\"\n```\n\n## source_dates_note\n\n```json\n\"El periodo se conserva como aparece en el nombre del curso. No se utiliza la fecha técnica de inicio del curso para inferir el calendario de actividades.\"\n```\n\n## activity\n\n```json\n{\n  \"id\": 49861,\n  \"title\": \"Encuesta de Satisfacción\",\n  \"type\": \"feedback\",\n  \"week\": 0,\n  \"topic\": \"Conocimientos previos, dudas y valoración personal del curso\",\n  \"requirements\": [\n    \"Con el propósito de mejorar nuestros procesos académicos, le pedimos que califique de manera honesta los siguientes aspectos, a fin de valorar su grado de satisfacción y detectar oportunidades de mejora.    Estamos evaluando tres aspectos fundamentales:Facilitador(a):Los Contenidos del Curso: Derecho MercantilLos Servicios Administrativos: Plataforma educativaEsto nos permitirá evaluar por separado la calidad del desempeño y servicio de cada uno.Solicitamos, lea detenidamente la pregunta y asigne la puntuación que más se acerque a la realidad, de acuerdo a su experiencia en este Curso.Las preguntas tendrán la escala siguiente : Excelente Bueno Regular No Suficiente Recuerde que esta encuesta es totalmente ANÓNIMA.\"\n  ],\n  \"calendar\": {\n    \"literal\": \"Sin fechas visibles en la consulta\",\n    \"deadline\": null,\n    \"timezone\": null,\n    \"status_on_2026_09_22\": \"Sin cierre verificado\",\n    \"note\": \"Fecha Esperada no se interpreta como cierre. No se infiere entrega, prórroga ni zona horaria.\"\n  },\n  \"sources\": [\n    {\n      \"id\": \"49861\",\n      \"title\": \"Encuesta de Satisfacción\",\n      \"url\": \"https://virtual.uas.edu.mx/fca/mod/feedback/view.php?id=49861\",\n      \"locator\": \"Introducción y fechas visibles del módulo\",\n      \"consulted_on\": \"2026-09-22\"\n    }\n  ],\n  \"weekly_resources\": [\n    {\n      \"id\": \"49856\",\n      \"title\": \"Competencias a Desarrollar\",\n      \"url\": \"https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49856\"\n    }\n  ],\n  \"proposed_objective\": \"Demostrar comprensión de conocimientos previos, dudas y valoración personal del curso mediante Encuesta de Satisfacción.\",\n  \"proposed_sequence\": [\n    \"Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.\",\n    \"Leer el aviso de anonimato y responder personalmente según los conocimientos o la experiencia reales; no delegar respuestas subjetivas.\"\n  ],\n  \"proposed_review_criteria\": [\n    \"El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.\",\n    \"No se inventan respuestas personales; no se conservan respuestas a la encuesta en el repositorio.\"\n  ],\n  \"pending\": [\n    \"Confirmar datos de portada, grupo y asesor antes de elaborar un entregable.\",\n    \"Fecha de cierre no visible: consultar el calendario o al asesor; no se inventa un vencimiento.\"\n  ],\n  \"existing_local_product\": null,\n  \"existing_product_note\": \"No se generó un entregable en esta fase de planeación.\"\n}\n```\n\n## artifact_contract\n\n```json\n{\n  \"version\": \"1.0\",\n  \"academic_materials_versioned\": true,\n  \"paths_relative_to_subject\": {\n    \"plans\": \"planeaciones-derecho-mercantil\",\n    \"references\": \"referencias-derecho-mercantil\",\n    \"notes\": \"referencias-derecho-mercantil/notas-derecho-mercantil\",\n    \"assets\": \"assets-derecho-mercantil\",\n    \"extractions\": \"extractor-aulatex\",\n    \"research\": \"investigacion-aulatex\"\n  },\n  \"deliverables_directory\": \".\",\n  \"mode\": \"normalizar_modelo_aportado\"\n}\n```\n"
+      }
+    ],
+    "unsegmented_document": true,
+    "period_pending": true,
+    "activity_mapping": [
+      {
+        "activity_id": "source-a047ed5ea7cab8dd",
+        "local_number": null,
+        "source_locator": "document",
+        "source_is_summary": false
+      }
+    ]
+  }
+}
+```

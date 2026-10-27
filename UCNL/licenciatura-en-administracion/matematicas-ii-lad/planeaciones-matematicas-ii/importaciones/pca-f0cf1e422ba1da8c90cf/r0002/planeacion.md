@@ -1,0 +1,692 @@
+# Planeacion: Matemáticas II
+
+Estado: needs_review. Conversion local, no aprobacion docente ni autorizacion de envio.
+
+## Identificacion
+
+```json
+{
+  "institution": "UCNL",
+  "program": "licenciatura-en-administracion",
+  "subject_id": "matematicas-ii-lad",
+  "subject_title": "Matemáticas II",
+  "offering_id": "oferta-07abe85435e21f5d",
+  "period": "2026-3",
+  "modality": null
+}
+```
+
+## Actividad preparatoria-1: Aclaración del temario
+
+### Consigna importada
+
+Registrar que la programación tiene temas vacíos salvo las menciones a exámenes.
+Preparar preguntas sobre temario, bibliografía, ejercicios, rúbricas y calendario de 2026-3.
+Conservar los IDs de los cuestionarios para consultar sus condiciones cuando vuelva el acceso, sin iniciarlos.
+
+### Requisitos
+
+1. Registrar que la programación tiene temas vacíos salvo las menciones a exámenes.
+2. Preparar preguntas sobre temario, bibliografía, ejercicios, rúbricas y calendario de 2026-3.
+3. Conservar los IDs de los cuestionarios para consultar sus condiciones cuando vuelva el acceso, sin iniciarlos.
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[
+  {
+    "id": "step-001",
+    "order": 1,
+    "phase": "construction",
+    "action": "Registrar que la programación tiene temas vacíos salvo las menciones a exámenes.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-002",
+    "order": 2,
+    "phase": "construction",
+    "action": "Preparar preguntas sobre temario, bibliografía, ejercicios, rúbricas y calendario de 2026-3.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-003",
+    "order": 3,
+    "phase": "construction",
+    "action": "Conservar los IDs de los cuestionarios para consultar sus condiciones cuando vuelva el acceso, sin iniciarlos.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  }
+]
+```
+
+### products
+
+```json
+[
+  {
+    "id": "product-001",
+    "kind": "unspecified",
+    "recipient": null,
+    "editable_format": null,
+    "submission_format": null,
+    "structure": [
+      "Ficha de aclaración preparada, no enviada."
+    ],
+    "length": null,
+    "filename_pattern": null,
+    "accessibility": null,
+    "requirement_ids": [],
+    "paths": {
+      "editable": null,
+      "delivery": null
+    }
+  }
+]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": [
+    "No se deduce el temario a partir del nombre Matemáticas II.",
+    "Las fechas históricas no se convierten en fechas de entrega.",
+    "No se generan respuestas a preguntas desconocidas."
+  ]
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": null
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## Actividad preparatoria-2: Repaso general opcional
+
+### Consigna importada
+
+Consultar la ficha y el extracto inicial del apoyo OpenStax.
+Usar el enlace del libro completo para repaso sólo si resulta pertinente; el extracto local no contiene toda la obra.
+Revisar la selección con el temario oficial cuando se confirme.
+
+### Requisitos
+
+1. Consultar la ficha y el extracto inicial del apoyo OpenStax.
+2. Usar el enlace del libro completo para repaso sólo si resulta pertinente; el extracto local no contiene toda la obra.
+3. Revisar la selección con el temario oficial cuando se confirme.
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[
+  {
+    "id": "step-001",
+    "order": 1,
+    "phase": "construction",
+    "action": "Consultar la ficha y el extracto inicial del apoyo OpenStax.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-002",
+    "order": 2,
+    "phase": "construction",
+    "action": "Usar el enlace del libro completo para repaso sólo si resulta pertinente; el extracto local no contiene toda la obra.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-003",
+    "order": 3,
+    "phase": "construction",
+    "action": "Revisar la selección con el temario oficial cuando se confirme.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  }
+]
+```
+
+### products
+
+```json
+[
+  {
+    "id": "product-001",
+    "kind": "unspecified",
+    "recipient": null,
+    "editable_format": null,
+    "submission_format": null,
+    "structure": [
+      "Lista personal de temas por revisar y fuentes disponibles."
+    ],
+    "length": null,
+    "filename_pattern": null,
+    "accessibility": null,
+    "requirement_ids": [],
+    "paths": {
+      "editable": null,
+      "delivery": null
+    }
+  }
+]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": [
+    "Se identifica el material como complementario provisional.",
+    "No se afirma haber leído capítulos ausentes del extracto.",
+    "El repaso no se cuenta como actividad evaluada del curso."
+  ]
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": null
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## sources
+
+```json
+[
+  {
+    "id": "src-local",
+    "kind": "other",
+    "authority": "editorial",
+    "title": "ruta-preparatoria-2026-09-24.json",
+    "url": null,
+    "path": "planeaciones-matematicas-ii/ruta-preparatoria-2026-09-24.json",
+    "sha256": "e38c3df01b491115013fd00e2247b44b50aadf2c89b6efc43bc8d7a9c0393025",
+    "captured_at": null,
+    "media_type": "application/json"
+  }
+]
+```
+
+## field_status
+
+```json
+[
+  {
+    "path": "/identity",
+    "state": "inferred",
+    "reason": "Identidad editorial del catalogo; oferta interna, periodo y modalidad no acreditados cuando faltan.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/sources",
+    "state": "confirmed",
+    "reason": "Archivo local preservado; su huella no acredita autoria ni vigencia docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "local-file",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum",
+    "state": "unknown",
+    "reason": "No se deducen competencias, resultados ni temario que no esten documentados.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/blocks/0",
+        "quoted_text": "Registrar que la programación tiene temas vacíos salvo las menciones a exámenes.\nPreparar preguntas sobre temario, bibliografía, ejercicios, rúbricas y calendario de 2026-3.\nConservar los IDs de los cuestionarios para consultar sus condiciones cuando vuelva el acceso, sin iniciarlos."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/outcomes/0",
+    "state": "inferred",
+    "reason": "Objetivo preservado del modelo local; oficialidad y propuesta no se equiparan.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/blocks/0/objective_proposed",
+        "quoted_text": "Identificar la información faltante antes de planear contenido disciplinar."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/requirements",
+    "state": "inferred",
+    "reason": "Coinciden con la entrada local; no se acredita que sean requisitos docentes integros.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/blocks/0/requirements",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/sequence",
+    "state": "inferred",
+    "reason": "Secuencia propuesta preservada; fases, insumos, salidas y controles necesitan revision.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/blocks/0/sequence",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/products",
+    "state": "inferred",
+    "reason": "Descripcion original preservada; no convierte examen o foro en informe LaTeX.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/blocks/0/product",
+        "quoted_text": "Ficha de aclaración preparada, no enviada."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/1",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/1/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/1/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/blocks/1",
+        "quoted_text": "Consultar la ficha y el extracto inicial del apoyo OpenStax.\nUsar el enlace del libro completo para repaso sólo si resulta pertinente; el extracto local no contiene toda la obra.\nRevisar la selección con el temario oficial cuando se confirme."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/outcomes/1",
+    "state": "inferred",
+    "reason": "Objetivo preservado del modelo local; oficialidad y propuesta no se equiparan.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/blocks/1/objective_proposed",
+        "quoted_text": "Identificar necesidades de repaso sin sustituir el temario pendiente."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/1/requirements",
+    "state": "inferred",
+    "reason": "Coinciden con la entrada local; no se acredita que sean requisitos docentes integros.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/blocks/1/requirements",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/1/sequence",
+    "state": "inferred",
+    "reason": "Secuencia propuesta preservada; fases, insumos, salidas y controles necesitan revision.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/blocks/1/sequence",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/1/products",
+    "state": "inferred",
+    "reason": "Descripcion original preservada; no convierte examen o foro en informe LaTeX.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/blocks/1/product",
+        "quoted_text": "Lista personal de temas por revisar y fuentes disponibles."
+      }
+    ],
+    "alternatives": []
+  }
+]
+```
+
+## review
+
+```json
+{
+  "state": "needs_review",
+  "reviewed_at": null,
+  "reviewer_role": null,
+  "critical_gaps": [
+    "Cotejar consigna y procedencia docente; conversion local no equivale a aprobacion"
+  ],
+  "semantic_validation": "failed"
+}
+```
+
+## extensions
+
+```json
+{
+  "conversion": {
+    "version": "1.0",
+    "source_format": ".json",
+    "source_sha256": "e38c3df01b491115013fd00e2247b44b50aadf2c89b6efc43bc8d7a9c0393025",
+    "source_payload": {
+      "prepared_on": "2026-09-24",
+      "source_consultation_date": "2026-09-23",
+      "institution": "UCNL",
+      "course_id": 20328,
+      "subject": "Matemáticas II",
+      "group": "C",
+      "period": "2026-3",
+      "mode": "ruta_preparatoria_no_oficial",
+      "official_assignments_generated": false,
+      "access_observation": {
+        "checked_on": "2026-09-24",
+        "url": "https://licenciatura.ucnl.edu.mx/login/index.php",
+        "http_status": 500,
+        "scope": "Observado desde la sesión actual antes del formulario; no se probó ni modificó la contraseña."
+      },
+      "blocks": [
+        {
+          "order": 1,
+          "title": "Aclaración del temario",
+          "objective_proposed": "Identificar la información faltante antes de planear contenido disciplinar.",
+          "work_minutes_estimated": 35,
+          "practice_product_proposed": "Ficha de aclaración preparada, no enviada.",
+          "tasks_proposed": [
+            "Registrar que la programación tiene temas vacíos salvo las menciones a exámenes.",
+            "Preparar preguntas sobre temario, bibliografía, ejercicios, rúbricas y calendario de 2026-3.",
+            "Conservar los IDs de los cuestionarios para consultar sus condiciones cuando vuelva el acceso, sin iniciarlos."
+          ],
+          "review_criteria_proposed": [
+            "No se deduce el temario a partir del nombre Matemáticas II.",
+            "Las fechas históricas no se convierten en fechas de entrega.",
+            "No se generan respuestas a preguntas desconocidas."
+          ],
+          "sources": [
+            {
+              "role": "material_aula_consultado_2026_09_23",
+              "module_id": 811773,
+              "title": "Presentación general",
+              "url": "https://licenciatura.ucnl.edu.mx/mod/page/view.php?id=811773",
+              "local_path": "referencias-matematicas-ii/2026-3/consulta-2026-09-23/inventario-materiales.json"
+            },
+            {
+              "role": "material_aula_consultado_2026_09_23",
+              "module_id": 811774,
+              "title": "Programación del curso",
+              "url": "https://licenciatura.ucnl.edu.mx/mod/page/view.php?id=811774",
+              "local_path": "referencias-matematicas-ii/2026-3/consulta-2026-09-23/inventario-materiales.json"
+            }
+          ],
+          "official_activity_id": null,
+          "official_due_date": null
+        },
+        {
+          "order": 2,
+          "title": "Repaso general opcional",
+          "objective_proposed": "Identificar necesidades de repaso sin sustituir el temario pendiente.",
+          "work_minutes_estimated": 45,
+          "practice_product_proposed": "Lista personal de temas por revisar y fuentes disponibles.",
+          "tasks_proposed": [
+            "Consultar la ficha y el extracto inicial del apoyo OpenStax.",
+            "Usar el enlace del libro completo para repaso sólo si resulta pertinente; el extracto local no contiene toda la obra.",
+            "Revisar la selección con el temario oficial cuando se confirme."
+          ],
+          "review_criteria_proposed": [
+            "Se identifica el material como complementario provisional.",
+            "No se afirma haber leído capítulos ausentes del extracto.",
+            "El repaso no se cuenta como actividad evaluada del curso."
+          ],
+          "sources": [
+            {
+              "role": "complementario_no_asignado",
+              "title": "Algebra and Trigonometry 2e",
+              "url": "https://openstax.org/details/books/algebra-and-trigonometry-2e",
+              "local_path": "referencias-matematicas-ii/complementarios/openstax-algebra-trigonometry-2e-extracto-inicial.pdf"
+            }
+          ],
+          "official_activity_id": null,
+          "official_due_date": null
+        }
+      ],
+      "awaiting_platform_verification": [
+        {
+          "module_id": 811775,
+          "type": "forum",
+          "title": "Foro de presentación",
+          "url": "https://licenciatura.ucnl.edu.mx/mod/forum/view.php?id=811775",
+          "status": "consigna_y_condiciones_pendientes_no_iniciado"
+        },
+        {
+          "module_id": 811776,
+          "type": "quiz",
+          "title": "Seccion I  Examen",
+          "url": "https://licenciatura.ucnl.edu.mx/mod/quiz/view.php?id=811776",
+          "status": "consigna_y_condiciones_pendientes_no_iniciado"
+        },
+        {
+          "module_id": 811778,
+          "type": "quiz",
+          "title": "Examen Parcial",
+          "url": "https://licenciatura.ucnl.edu.mx/mod/quiz/view.php?id=811778",
+          "status": "consigna_y_condiciones_pendientes_no_iniciado"
+        },
+        {
+          "module_id": 811777,
+          "type": "quiz",
+          "title": "Seccion II  Examen",
+          "url": "https://licenciatura.ucnl.edu.mx/mod/quiz/view.php?id=811777",
+          "status": "consigna_y_condiciones_pendientes_no_iniciado"
+        }
+      ],
+      "limitations": "La programación tiene fechas de enero a abril y temas vacíos. No se deduce si el curso corresponde a cálculo, álgebra o matemáticas financieras. OpenStax se incorpora sólo como repaso general provisional; requiere validación de pertinencia por el docente. Los cuestionarios no se abrieron.",
+      "reading_note": "Se proponen lecturas y práctica; no se afirma haber realizado todos los productos o leído íntegramente los libros.",
+      "template_entrypoints": {
+        "report": "reporte-matematicas-ii-plantilla-2026-3.tex",
+        "activity": "actividad-matematicas-ii-plantilla-2026-3.tex",
+        "presentation": "presentacion-matematicas-ii-plantilla-2026-3.tex",
+        "configuration": "config-materia-2026-3.tex",
+        "bibliography": "referencias-verificadas-2026-3.bib"
+      }
+    },
+    "source_blocks": [],
+    "unsegmented_document": false,
+    "period_pending": false,
+    "activity_mapping": [
+      {
+        "activity_id": "preparatoria-1",
+        "local_number": null,
+        "source_locator": "/blocks/0",
+        "source_is_summary": true
+      },
+      {
+        "activity_id": "preparatoria-2",
+        "local_number": null,
+        "source_locator": "/blocks/1",
+        "source_is_summary": true
+      }
+    ]
+  }
+}
+```

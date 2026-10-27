@@ -1,0 +1,15 @@
+# Preparación, productos y extractor S5
+
+La técnica docente **Simulación** se conserva. Se integran tabla de investigación comparativa, tres fichas tabuladas y conclusión breve, dentro del reporte UnADM de esta materia. La tabla y las fichas mantienen las cuatro columnas exactas de la consigna. Las razones de composición vertical, las fuentes del catálogo y la voz prudente documentada se explican en `TECNICAS-PRODUCTOS-Y-VOZ-S5.md` y en la planeación estructurada.
+
+El extractor real produjo **23 conceptos pertinentes** y sus cinco JSON nucleares válidos. La corrida definitiva es `20261023-175539-extractor`: motor TF-IDF original, sin API necesaria para similitud, sobre seis archivos de corpus focalizado que representan material docente, seis textos normativos y tres criterios de SCJN. Se conservan PDF y textos completos primarios, inventarios y SHA-256. La selección acotada reúne artículos literales con su procedencia; no añade resúmenes sin fuente. El criterio 2029879 es tesis aislada y su inclusión como insumo no exige presentarlo como jurisprudencia.
+
+La primera selección de diez textos incluía gacetas completas; se interrumpió su proceso propio tras varios minutos. La primera corrida focalizada terminó correctamente, pero el parser interpretó un relato de ficha como concepto debido a un encabezado no reconocido. Sus resultados e input se preservaron. Se normalizaron solamente los encabezados de la planeación —sin cambiar fuentes primarias, código ni puntuadores— y se ejecutó de nuevo. La salida canónica final no contiene ese relato espurio. Las descomposiciones agravantes/atenuantes, guarda/custodia y retención/sustracción son variantes automáticas reales del parser, no fuentes adicionales.
+
+El planeador incremental original se ejecutó y persistió memoria. Identifica la técnica **simulacion** en el scope actividad 5. La cola de retroceso actualiza memorias ascendentes como parte de su comportamiento normal; no se aplicaron cambios al reporte ni a la bibliografía durante esta preparación. El manifiesto final es `20261023-175620-detail-planner`.
+
+El flujo de realizar-actividad se verifica por fases y artefactos observables. Su regla incremental admite un orquestador dedicado; no se declara una ejecución monolítica inexistente del comando agente. Las fases posteriores deben registrar redacción, observer, calidad original, cotejo jurídico, wrapper de compilación, frescura, ausencia de indefinidos y revisión visual. Los puntajes internos no sustituyen la rúbrica oficial. El contrato y los puntuadores permanecen sin modificación.
+
+La ficha Simulación del catálogo tiene campos contaminados con Juego de roles. El cotejo del fascículo 1, páginas impresas 197–207, recupera su estructura y siete pasos verdaderos; se conserva la evidencia y no se cambia el catálogo para obtener puntaje.
+
+Detalles verificables: `preparacion-editorial-extractor-S5.json`, `tecnicas-productos-S5.json`, `consulta-memorias-S5.json`, `cotejo-fasciculo-simulacion.json`, inventarios del corpus y manifiestos originales de cada corrida.

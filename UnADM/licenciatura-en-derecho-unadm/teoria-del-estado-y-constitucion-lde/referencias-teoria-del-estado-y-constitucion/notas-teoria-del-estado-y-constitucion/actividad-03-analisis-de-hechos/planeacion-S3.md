@@ -1,8 +1,8 @@
 # Planeacion de trabajo S3: analisis de hechos
 
 UnADM, Derecho, grupo 020, curso 3432. Ficha derivada, no documento emitido
-por la institucion. Fuente: [PDF docente S2-S3](../../../planeaciones-teoria-del-estado-y-constitucion/Planificacion-de-actividades-S2-S3-Teoria-del-Estado-y-Constitucion.pdf),
-paginas 5-6, recurso Moodle 214928; [TXT de apoyo](../../../planeaciones-teoria-del-estado-y-constitucion/Planificacion-de-actividades-S2-S3-Teoria-del-Estado-y-Constitucion.txt).
+por la institucion. Fuente: [PDF docente S2-S3](../actividad-02-linea-de-tiempo/Planificacion-de-actividades-S2-S3-Teoria-del-Estado-y-Constitucion.pdf),
+paginas 5-6, recurso Moodle 214928; [TXT de apoyo](../actividad-02-linea-de-tiempo/Planificacion-de-actividades-S2-S3-Teoria-del-Estado-y-Constitucion.txt).
 Consulta historica: 4 de octubre de 2026; reorganizar no acredita reconsulta.
 
 ## Proposito y evidencia

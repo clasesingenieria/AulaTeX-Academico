@@ -1,0 +1,375 @@
+# Planeacion: algebra-lineal
+
+Estado: needs_review. Conversion local, no aprobacion docente ni autorizacion de envio.
+
+## Identificacion
+
+```json
+{
+  "institution": "UANL",
+  "program": "ingeniero-agronomo",
+  "subject_id": "algebra-lineal",
+  "subject_title": "algebra-lineal",
+  "offering_id": "oferta-968aa123692c8060",
+  "period": null,
+  "modality": null
+}
+```
+
+## Actividad source-ac9b18ce258016c7: consigna-PIA-algebra-lineal-2026
+
+### Consigna importada
+
+[page:1]
+                            Álgebra Lineal
+                  Producto Integrador de Aprendizaje
+
+
+Indicaciones para la entrega del PIA de la unidad de aprendizaje de Álgebra Lineal de los
+programas educativos Ingeniero Agrónomo, Industrias Alimentarias y Biotecnología
+
+Semestre Agosto - Diciembre 2026
+
+Objetivo: en equipos de máximo 4 integrantes, los estudiantes deber realizar la
+recolección de datos, sobre un problema aplicado a su área profesional, mediante los
+cuales establecerán un sistema de al menos 3 ecuaciones con 3 incógnitas al que
+deberán dar solución por alguno de los métodos vistos en clase.
+
+El PIA debe entregarse el día 11 de noviembre del 2026 y consta de 2 partes:
+
+    a) Reporte escrito
+       Estructura del reporte:
+            1.  Portada
+            2.  Introducción:
+                    a.  Justificación
+                    b.  Planteamiento del problema
+            3.  Recolección de datos
+            4.  Metodología (cómo trabajaron)
+                    a.  Planteamiento del sistema de ecuaciones
+                    b.  Justificación del método visto en clase que se usara en la solución
+            5.  Procedimientos
+                    a.  Mostrar claramente la solución del sistema
+                    b.  Herramientas utilizadas para elaborar el proyecto
+            6.  Resultados
+            7.  Análisis de resultados
+            8.  Conclusión
+            9.  Referencias
+
+         Formato del documento:
+
+               -   Sin límite máximo o mínimo de hojas
+               -   Acorde a la normativa APA 7ma edición
+               -  Debe ser un documento 100 por ciento digital y todas las ecuaciones
+            deben elaborarse con el editor de ecuaciones.
+
+           Indicaciones para la entrega del PIA:
+
+        Un integrante de cada equipo debe cargar el archivo en la plataforma Nexus,
+         en formato pdf comprimido. Si algún integrante no aparece en la portada se
+          considera que no entrego la actividad.
+
+          Comentario: tener cuidado con la ortografía y la gramática.
+
+
+    b) Video
+
+
+Deberán realizar un video en el que den solución al problema de principio a fin y
+debe cumplir con los siguientes lineamientos:
+
+[page:2]
+                            Álgebra Lineal
+                  Producto Integrador de Aprendizaje
+
+
+     En el video deben aparecer todos los integrantes del equipo, de cuerpo
+      completo (cintura hacia arriba).
+     El problema debe ser resuelto de principio a fin, sin omitir pasos, o
+      procedimiento, si secciones del problema aparecen repentinamente se
+      bajan puntos.
+     La solución del problema debe ser legible (Con tamaño de letra adecuado)
+     No debe haber problemas con el audio. (Debe escucharse toda la
+       explicación)
+     No debe haber problemas con la imagen. (Debe verse bien todo el video)
+     Duración máxima del video 20 minutos.
+     Deberán publicar el video o el enlace al mismo en un documento de Word o
+      anexarlo directamente a Nexus.
+     En caso de que el video no se pueda reproducir o falle el sitio, se considera
+     que la actividad no fue entregada, si hay tiempo se harán las correcciones,
+      pero perderá puntos de calificación. (Si mi sistema de antivirus indica que el
+        sitio es peligroso se les dará tiempo de correcciones sin penalizaciones)
+
+Sobre la entrega del video
+
+     El video debe ser subido a algún sitio público, en el cual pueda ser visto sin
+      necesidad de suscripción.
+     En el apartado de la tarea deberá incluir un documento (pdf o docx) con el
+      enlace al sitio del video.
+
+Sobre la exposición
+
+     Al inicio de su exposición deben presentarse, mencionar su nombre
+      completo, grupo y carrera.
+     No se permite ningún tipo de presentación en forma electrónica o en
+        rotafolio. (Donde el problema ya esté resuelto)
+     El problema debe ser resuelto explicando paso a paso la solución, SIN
+    ACORDEÓN NI COPIAR NADA DE NINGÚN PAPEL.
+     Se deben mencionar fórmulas, conceptos, definiciones y/o métodos vistos
+     en clase.
+      Deben ser ordenados en la solución.
+
+
+
+      Cualquier duda o aclaración, en hora de clase.
+
+
+
+
+
+      Los puntajes para cada parte del proyecto son:
+       a) Documento (15 puntos)
+
+[page:3]
+                       Álgebra Lineal
+             Producto Integrador de Aprendizaje
+
+
+b) Video (10 puntos)
+
+Los criterios para evaluar cada parte son:
+
+        Documento                      Puntos (15 puntos)
+         Portada                        1
+          Estructura                      2
+          Análisis de datos                 3
+       Uso del editor de ecuaciones       3
+          Justificación del método a emplear   3
+         Aplicación del método            3
+         Video                           Puntos (10)
+         Calidad Audio                   1
+         Calidad Imagen                 1
+        Volumen de Voz                 1
+        Aparecen todos los integrantes      2
+         Procedimiento Completo          2
+         Solución correcta                3
+
+
+
+
+
+Las evidencias deben ser cargadas en un archivo independiente en la plataforma
+Nexus.
+
+### Requisitos
+
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[]
+```
+
+### products
+
+```json
+[]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": []
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": null
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## sources
+
+```json
+[
+  {
+    "id": "src-local",
+    "kind": "pdf",
+    "authority": "unknown",
+    "title": "consigna-PIA-algebra-lineal-2026.pdf",
+    "url": null,
+    "path": "planeaciones-algebra-lineal/originales-docentes/consigna-PIA-algebra-lineal-2026.pdf",
+    "sha256": "ac9b18ce258016c701bd1cc30d28d49244d1751419b7c2aba8d51b8ad7d7053f",
+    "captured_at": null,
+    "media_type": "application/pdf"
+  }
+]
+```
+
+## field_status
+
+```json
+[
+  {
+    "path": "/identity",
+    "state": "inferred",
+    "reason": "Identidad editorial del catalogo; oferta interna, periodo y modalidad no acreditados cuando faltan.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/sources",
+    "state": "confirmed",
+    "reason": "Archivo local preservado; su huella no acredita autoria ni vigencia docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "local-file",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum",
+    "state": "unknown",
+    "reason": "No se deducen competencias, resultados ni temario que no esten documentados.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "document",
+        "quoted_text": "[page:1]\n                            Álgebra Lineal\n                  Producto Integrador de Aprendizaje\n\n\nIndicaciones para la entrega del PIA de la unidad de aprendizaje de Álgebra Lineal de los\nprogramas educativos Ingeniero Agrónomo, Industrias Alimentarias y Biotecnología\n\nSemestre Agosto - Diciembre 2026\n\nObjetivo: en equipos de máximo 4 integrantes, los estudiantes deber realizar la\nrecolección de datos, sobre un problema aplicado a su área profesional, mediante los\ncuales establecerán un sistema de al menos 3 ecuaciones con 3 incógnitas al que\ndeberán dar solución por alguno de los métodos vistos en clase.\n\nEl PIA debe entregarse el día 11 de noviembre del 2026 y consta de 2 partes:\n\n    a) Reporte escrito\n       Estructura del reporte:\n            1.  Portada\n            2.  Introducción:\n                    a.  Justificación\n                    b.  Planteamiento del problema\n            3.  Recolección de datos\n            4.  Metodología (cómo trabajaron)\n                    a.  Planteamiento del sistema de ecuaciones\n                    b.  Justificación del método visto en clase que se usara en la solución\n            5.  Procedimientos\n                    a.  Mostrar claramente la solución del sistema\n                    b.  Herramientas utilizadas para elaborar el proyecto\n            6.  Resultados\n            7.  Análisis de resultados\n            8.  Conclusión\n            9.  Referencias\n\n         Formato del documento:\n\n               -   Sin límite máximo o mínimo de hojas\n               -   Acorde a la normativa APA 7ma edición\n               -  Debe ser un documento 100 por ciento digital y todas las ecuaciones\n            deben elaborarse con el editor de ecuaciones.\n\n           Indicaciones para la entrega del PIA:\n\n        Un integrante de cada equipo debe cargar el archivo en la plataforma Nexus,\n         en formato pdf comprimido. Si algún integrante no aparece en la portada se\n          considera que no entrego la actividad.\n\n          Comentario: tener cuidado con la ortografía y la gramática.\n\n\n    b) Video\n\n\nDeberán realizar un video en el que den solución al problema de principio a fin y\ndebe cumplir con los siguientes lineamientos:\n\n[page:2]\n                            Álgebra Lineal\n                  Producto Integrador de Aprendizaje\n\n\n     En el video deben aparecer todos los integrantes del equipo, de cuerpo\n      completo (cintura hacia arriba).\n     El problema debe ser resuelto de principio a fin, sin omitir pasos, o\n      procedimiento, si secciones del problema aparecen repentinamente se\n      bajan puntos.\n     La solución del problema debe ser legible (Con tamaño de letra adecuado)\n     No debe haber problemas con el audio. (Debe escucharse toda la\n       explicación)\n     No debe haber problemas con la imagen. (Debe verse bien todo el video)\n     Duración máxima del video 20 minutos.\n     Deberán publicar el video o el enlace al mismo en un documento de Word o\n      anexarlo directamente a Nexus.\n     En caso de que el video no se pueda reproducir o falle el sitio, se considera\n     que la actividad no fue entregada, si hay tiempo se harán las correcciones,\n      pero perderá puntos de calificación. (Si mi sistema de antivirus indica que el\n        sitio es peligroso se les dará tiempo de correcciones sin penalizaciones)\n\nSobre la entrega del video\n\n     El video debe ser subido a algún sitio público, en el cual pueda ser visto sin\n      necesidad de suscripción.\n     En el apartado de la tarea deberá incluir un documento (pdf o docx) con el\n      enlace al sitio del video.\n\nSobre la exposición\n\n     Al inicio de su exposición deben presentarse, mencionar su nombre\n      completo, grupo y carrera.\n     No se permite ningún tipo de presentación en forma electrónica o en\n        rotafolio. (Donde el problema ya esté resuelto)\n     El problema debe ser resuelto explicando paso a paso la solución, SIN\n    ACORDEÓN NI COPIAR NADA DE NINGÚN PAPEL.\n     Se deben mencionar fórmulas, conceptos, definiciones y/o métodos vistos\n     en clase.\n      Deben ser ordenados en la solución.\n\n\n\n      Cualquier duda o aclaración, en hora de clase.\n\n\n\n\n\n      Los puntajes para cada parte del proyecto son:\n       a) Documento (15 puntos)\n\n[page:3]\n                       Álgebra Lineal\n             Producto Integrador de Aprendizaje\n\n\nb) Video (10 puntos)\n\nLos criterios para evaluar cada parte son:\n\n        Documento                      Puntos (15 puntos)\n         Portada                        1\n          Estructura                      2\n          Análisis de datos                 3\n       Uso del editor de ecuaciones       3\n          Justificación del método a emplear   3\n         Aplicación del método            3\n         Video                           Puntos (10)\n         Calidad Audio                   1\n         Calidad Imagen                 1\n        Volumen de Voz                 1\n        Aparecen todos los integrantes      2\n         Procedimiento Completo          2\n         Solución correcta                3\n\n\n\n\n\nLas evidencias deben ser cargadas en un archivo independiente en la plataforma\nNexus."
+      }
+    ],
+    "alternatives": []
+  }
+]
+```
+
+## review
+
+```json
+{
+  "state": "needs_review",
+  "reviewed_at": null,
+  "reviewer_role": null,
+  "critical_gaps": [
+    "Cotejar consigna y procedencia docente; conversion local no equivale a aprobacion",
+    "Documento sin segmentar: identificar actividades, requisitos, preguntas y rubrica antes de ejecutar"
+  ],
+  "semantic_validation": "failed"
+}
+```
+
+## extensions
+
+```json
+{
+  "conversion": {
+    "version": "1.0",
+    "source_format": ".pdf",
+    "source_sha256": "ac9b18ce258016c701bd1cc30d28d49244d1751419b7c2aba8d51b8ad7d7053f",
+    "source_payload": null,
+    "source_blocks": [
+      {
+        "locator": "page:1",
+        "text": "                            Álgebra Lineal\n                  Producto Integrador de Aprendizaje\n\n\nIndicaciones para la entrega del PIA de la unidad de aprendizaje de Álgebra Lineal de los\nprogramas educativos Ingeniero Agrónomo, Industrias Alimentarias y Biotecnología\n\nSemestre Agosto - Diciembre 2026\n\nObjetivo: en equipos de máximo 4 integrantes, los estudiantes deber realizar la\nrecolección de datos, sobre un problema aplicado a su área profesional, mediante los\ncuales establecerán un sistema de al menos 3 ecuaciones con 3 incógnitas al que\ndeberán dar solución por alguno de los métodos vistos en clase.\n\nEl PIA debe entregarse el día 11 de noviembre del 2026 y consta de 2 partes:\n\n    a) Reporte escrito\n       Estructura del reporte:\n            1.  Portada\n            2.  Introducción:\n                    a.  Justificación\n                    b.  Planteamiento del problema\n            3.  Recolección de datos\n            4.  Metodología (cómo trabajaron)\n                    a.  Planteamiento del sistema de ecuaciones\n                    b.  Justificación del método visto en clase que se usara en la solución\n            5.  Procedimientos\n                    a.  Mostrar claramente la solución del sistema\n                    b.  Herramientas utilizadas para elaborar el proyecto\n            6.  Resultados\n            7.  Análisis de resultados\n            8.  Conclusión\n            9.  Referencias\n\n         Formato del documento:\n\n               -   Sin límite máximo o mínimo de hojas\n               -   Acorde a la normativa APA 7ma edición\n               -  Debe ser un documento 100 por ciento digital y todas las ecuaciones\n            deben elaborarse con el editor de ecuaciones.\n\n           Indicaciones para la entrega del PIA:\n\n        Un integrante de cada equipo debe cargar el archivo en la plataforma Nexus,\n         en formato pdf comprimido. Si algún integrante no aparece en la portada se\n          considera que no entrego la actividad.\n\n          Comentario: tener cuidado con la ortografía y la gramática.\n\n\n    b) Video\n\n\nDeberán realizar un video en el que den solución al problema de principio a fin y\ndebe cumplir con los siguientes lineamientos:"
+      },
+      {
+        "locator": "page:2",
+        "text": "                            Álgebra Lineal\n                  Producto Integrador de Aprendizaje\n\n\n     En el video deben aparecer todos los integrantes del equipo, de cuerpo\n      completo (cintura hacia arriba).\n     El problema debe ser resuelto de principio a fin, sin omitir pasos, o\n      procedimiento, si secciones del problema aparecen repentinamente se\n      bajan puntos.\n     La solución del problema debe ser legible (Con tamaño de letra adecuado)\n     No debe haber problemas con el audio. (Debe escucharse toda la\n       explicación)\n     No debe haber problemas con la imagen. (Debe verse bien todo el video)\n     Duración máxima del video 20 minutos.\n     Deberán publicar el video o el enlace al mismo en un documento de Word o\n      anexarlo directamente a Nexus.\n     En caso de que el video no se pueda reproducir o falle el sitio, se considera\n     que la actividad no fue entregada, si hay tiempo se harán las correcciones,\n      pero perderá puntos de calificación. (Si mi sistema de antivirus indica que el\n        sitio es peligroso se les dará tiempo de correcciones sin penalizaciones)\n\nSobre la entrega del video\n\n     El video debe ser subido a algún sitio público, en el cual pueda ser visto sin\n      necesidad de suscripción.\n     En el apartado de la tarea deberá incluir un documento (pdf o docx) con el\n      enlace al sitio del video.\n\nSobre la exposición\n\n     Al inicio de su exposición deben presentarse, mencionar su nombre\n      completo, grupo y carrera.\n     No se permite ningún tipo de presentación en forma electrónica o en\n        rotafolio. (Donde el problema ya esté resuelto)\n     El problema debe ser resuelto explicando paso a paso la solución, SIN\n    ACORDEÓN NI COPIAR NADA DE NINGÚN PAPEL.\n     Se deben mencionar fórmulas, conceptos, definiciones y/o métodos vistos\n     en clase.\n      Deben ser ordenados en la solución.\n\n\n\n      Cualquier duda o aclaración, en hora de clase.\n\n\n\n\n\n      Los puntajes para cada parte del proyecto son:\n       a) Documento (15 puntos)"
+      },
+      {
+        "locator": "page:3",
+        "text": "                       Álgebra Lineal\n             Producto Integrador de Aprendizaje\n\n\nb) Video (10 puntos)\n\nLos criterios para evaluar cada parte son:\n\n        Documento                      Puntos (15 puntos)\n         Portada                        1\n          Estructura                      2\n          Análisis de datos                 3\n       Uso del editor de ecuaciones       3\n          Justificación del método a emplear   3\n         Aplicación del método            3\n         Video                           Puntos (10)\n         Calidad Audio                   1\n         Calidad Imagen                 1\n        Volumen de Voz                 1\n        Aparecen todos los integrantes      2\n         Procedimiento Completo          2\n         Solución correcta                3\n\n\n\n\n\nLas evidencias deben ser cargadas en un archivo independiente en la plataforma\nNexus."
+      }
+    ],
+    "unsegmented_document": true,
+    "period_pending": true,
+    "activity_mapping": [
+      {
+        "activity_id": "source-ac9b18ce258016c7",
+        "local_number": null,
+        "source_locator": "document",
+        "source_is_summary": false
+      }
+    ]
+  }
+}
+```

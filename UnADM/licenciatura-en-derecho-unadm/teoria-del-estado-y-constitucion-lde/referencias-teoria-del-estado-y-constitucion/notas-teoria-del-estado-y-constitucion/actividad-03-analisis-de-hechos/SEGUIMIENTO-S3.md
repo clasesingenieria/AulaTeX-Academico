@@ -11,7 +11,7 @@ Verificar personalmente el juicio critico y el formato antes de una eventual ent
   2026-10-13 00:07 UTC y actualizada en la misma sesion. Curso 3432;
   recursos 214928 y 214930, ambos con nombre original
   `PA 2_3 Teoria del Estado y Constitución.pdf`, destino canonico
-  `../../../planeaciones-teoria-del-estado-y-constitucion/Planificacion-de-actividades-S2-S3-Teoria-del-Estado-y-Constitucion.pdf`;
+  [PDF compartido en la nota 02](../actividad-02-linea-de-tiempo/Planificacion-de-actividades-S2-S3-Teoria-del-Estado-y-Constitucion.pdf);
   SHA256 `27B05F61193E5C83408C54F87B80D28A3224464B6DA05742181127883C78C8B0`.
   La copia en Downloads y la local coinciden en tamano (613662 bytes).
 - El PDF docente, pp. 3, 5--7, fija 18/10/2026 23:55 HC, Word como
@@ -33,7 +33,7 @@ Verificar personalmente el juicio critico y el formato antes de una eventual ent
   pero no se usa como editor ni se genera un Word entregable. Su rotulo
   generico `(Resena)` no sustituye `Analisis de hechos` de la consigna.
   La estructura se materializo en LaTeX como introduccion, desarrollo
-  tematico, conclusiones y referencias. La [ficha S3](../../../planeaciones-teoria-del-estado-y-constitucion/planeacion-S3-normalizada.md)
+  tematico, conclusiones y referencias. La [planeacion S3 consolidada](../../../planeaciones-teoria-del-estado-y-constitucion/planeacion-teoria-del-estado-y-constitucion-Actividad-3.md#precisiones-absorbidas)
   registra el conflicto y los localizadores del original.
 
 ## Fuentes y limites de la investigacion

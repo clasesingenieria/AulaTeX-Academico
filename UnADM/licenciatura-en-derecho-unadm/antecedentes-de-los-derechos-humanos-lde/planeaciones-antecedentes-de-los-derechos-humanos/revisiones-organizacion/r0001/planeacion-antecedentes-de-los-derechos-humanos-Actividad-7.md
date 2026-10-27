@@ -1,0 +1,758 @@
+# Planeacion: antecedentes-de-los-derechos-humanos-lde
+
+Estado: needs_review. Revision local; no autoriza envios a plataforma.
+
+## Identificacion
+
+```json
+{
+  "institution": "UnADM",
+  "program": "licenciatura-en-derecho-unadm",
+  "subject_id": "antecedentes-de-los-derechos-humanos-lde",
+  "subject_title": "antecedentes-de-los-derechos-humanos-lde",
+  "offering_id": "oferta-927a5ccf34809e93",
+  "period": null,
+  "modality": null
+}
+```
+
+## Actividad interna-7: Cuadro comparativo
+
+### Consigna importada
+
+Actividad    5:    Cuadro    comparativo    –
+Actividad para realizar la   Antecedentes sociales y contexto político de
+evaluación (basada en la     los derechos humanos en México
+técnica de enseñanza y      Propósito de la actividad
+aprendizaje utilizada y la
+bibliografía consultada)     Analizar  los  antecedentes  sociales  y  el
+                           contexto  político  que  dieron  origen  al
+                           desarrollo histórico de los derechos humanos
+                           en  México,  mediante  la  elaboración  de  un
+                           cuadro  comparativo  que  permita  identificar
+                           las principales características, semejanzas,
+                           diferencias y aportaciones de los procesos
+                           históricos   estudiados,   fortaleciendo   la
+                           capacidad    de    análisis,    síntesis    y
+                           organización de la información jurídica.
+
+                           Material:
+                           Contenidos de la Unidad 3. Identifica aspectos
+                           relevantes del desarrollo histórico de los
+                           derechos humanos en México.
+                           Tema 2.1. Antecedentes sociales  y contexto
+                           político de los derechos humanos en México.
+                           Materiales de estudio disponibles en el aula
+                           virtual.
+
+
+
+                                        Página 6 de 21
+
+Sesión  sincrónica  (grabación),  en  caso  de
+consultarla.
+Fuentes académicas adicionales,  en caso de
+utilizarlas.
+
+Indicaciones:
+Con base en los contenidos de la Unidad 3,
+elabora  un  cuadro  comparativo  en  el  que
+analices    los    principales    antecedentes
+sociales   y   el   contexto   político   que
+contribuyeron al reconocimiento y evolución
+de los derechos humanos en México.
+
+El   cuadro   comparativo   deberá   permitir
+identificar  las  semejanzas,  diferencias  y
+aportaciones    de    los    acontecimientos
+históricos     analizados,     estableciendo
+relaciones  entre  los  factores  sociales,
+políticos y jurídicos que influyeron en el
+desarrollo de los derechos humanos.
+
+Como  mínimo,  el  cuadro  comparativo  deberá
+considerar los siguientes aspectos:
+
+   Contexto histórico.
+   Antecedentes sociales.
+   Contexto político.
+   Principales acontecimientos.
+   Derechos o principios impulsados.
+   Aportaciones   al   desarrollo   de   los
+     derechos humanos en México.
+   Reflexión personal sobre la importancia
+     del estudio de estos antecedentes para
+     comprender   el   sistema   actual   de
+     protección de los derechos humanos.
+
+Elementos  académicos  que  debe  cumplir  el
+cuadro comparativo:
+1. Estructura
+       Portada.
+       Introducción (breve).
+       Cuadro comparativo.
+       Conclusión.
+       Referencias.
+2. Contenido
+
+El trabajo deberá:
+Comparar de manera objetiva los antecedentes
+sociales y políticos estudiados.
+
+
+
+
+
+     Página 7 de 21
+
+Identificar  las  principales  semejanzas  y
+diferencias  entre  los  procesos  históricos
+analizados.
+Explicar la influencia de cada acontecimiento
+en la construcción de los derechos humanos en
+México.
+Relacionar  el  contenido  con   los  temas
+abordados en la Unidad 3.
+Presentar  una  conclusión  que  refleje  el
+aprendizaje obtenido.
+Incluir  una  reflexión  personal  debidamente
+argumentada.
+
+3. Redacción
+Utilizar lenguaje formal y académico.
+Mantener coherencia y organización lógica de
+la información.
+Emplear conceptos jurídicos correctamente.
+Cuidar la ortografía, gramática y puntuación.
+
+4. Formato
+Extensión libre, de acuerdo con el diseño del
+cuadro  comparativo  (sin  contar  portada  ni
+referencias).
+Elaborar  el  cuadro  utilizando  tablas  o
+columnas claramente identificadas.
+Letra Arial 12.
+Interlineado 1.5 (excepto dentro del cuadro,
+donde podrá utilizarse interlineado sencillo
+para   favorecer   la   organización   de   la
+información).
+Márgenes de 2.5 cm.
+Texto    justificado    en    los    apartados
+correspondientes.
+5. Referencias
+Citar los materiales de estudio conforme al
+Manual APA, 7.ª edición.
+Incluir  cualquier  otra  fuente  académica
+consultada.
+
+Entrega:
+
+Entrega el archivo únicamente en formato PDF.
+
+Antes de finalizar el envío, verifica que el
+archivo quede en estatus "Enviado" y no como
+"Borrador", ya que únicamente las actividades
+enviadas     correctamente     podrán     ser
+consideradas para evaluación.
+
+Tiempo estimado de entrega:
+
+
+
+
+     Página 8 de 21
+
+Entrega ordinaria (Rúbrica verde): del 19 de
+octubre  al 25 de octubre, hasta  las 23:55
+horas.
+
+Entrega extemporánea (Rúbrica naranja): 26 de
+octubre, hasta las 23:55 horas, aplicándose
+los criterios de evaluación correspondientes
+a la rúbrica naranja.
+
+
+
+### Requisitos
+
+1. Actividad    5:    Cuadro    comparativo    –
+Actividad para realizar la   Antecedentes sociales y contexto político de
+evaluación (basada en la     los derechos humanos en México
+técnica de enseñanza y      Propósito de la actividad
+aprendizaje utilizada y la
+bibliografía consultada)     Analizar  los  antecedentes  sociales  y  el
+                           contexto  político  que  dieron  origen  al
+                           desarrollo histórico de los derechos humanos
+                           en  México,  mediante  la  elaboración  de  un
+                           cuadro  comparativo  que  permita  identificar
+                           las principales características, semejanzas,
+                           diferencias y aportaciones de los procesos
+                           históricos   estudiados,   fortaleciendo   la
+                           capacidad    de    análisis,    síntesis    y
+                           organización de la información jurídica.
+
+                           Material:
+                           Contenidos de la Unidad 3. Identifica aspectos
+                           relevantes del desarrollo histórico de los
+                           derechos humanos en México.
+                           Tema 2.1. Antecedentes sociales  y contexto
+                           político de los derechos humanos en México.
+                           Materiales de estudio disponibles en el aula
+                           virtual.
+
+
+
+                                        Página 6 de 21
+
+Sesión  sincrónica  (grabación),  en  caso  de
+consultarla.
+Fuentes académicas adicionales,  en caso de
+utilizarlas.
+
+Indicaciones:
+Con base en los contenidos de la Unidad 3,
+elabora  un  cuadro  comparativo  en  el  que
+analices    los    principales    antecedentes
+sociales   y   el   contexto   político   que
+contribuyeron al reconocimiento y evolución
+de los derechos humanos en México.
+
+El   cuadro   comparativo   deberá   permitir
+identificar  las  semejanzas,  diferencias  y
+aportaciones    de    los    acontecimientos
+históricos     analizados,     estableciendo
+relaciones  entre  los  factores  sociales,
+políticos y jurídicos que influyeron en el
+desarrollo de los derechos humanos.
+
+Como  mínimo,  el  cuadro  comparativo  deberá
+considerar los siguientes aspectos:
+
+   Contexto histórico.
+   Antecedentes sociales.
+   Contexto político.
+   Principales acontecimientos.
+   Derechos o principios impulsados.
+   Aportaciones   al   desarrollo   de   los
+     derechos humanos en México.
+   Reflexión personal sobre la importancia
+     del estudio de estos antecedentes para
+     comprender   el   sistema   actual   de
+     protección de los derechos humanos.
+
+Elementos  académicos  que  debe  cumplir  el
+cuadro comparativo:
+1. Estructura
+       Portada.
+       Introducción (breve).
+       Cuadro comparativo.
+       Conclusión.
+       Referencias.
+2. Contenido
+
+El trabajo deberá:
+Comparar de manera objetiva los antecedentes
+sociales y políticos estudiados.
+
+
+
+
+
+     Página 7 de 21
+
+Identificar  las  principales  semejanzas  y
+diferencias  entre  los  procesos  históricos
+analizados.
+Explicar la influencia de cada acontecimiento
+en la construcción de los derechos humanos en
+México.
+Relacionar  el  contenido  con   los  temas
+abordados en la Unidad 3.
+Presentar  una  conclusión  que  refleje  el
+aprendizaje obtenido.
+Incluir  una  reflexión  personal  debidamente
+argumentada.
+
+3. Redacción
+Utilizar lenguaje formal y académico.
+Mantener coherencia y organización lógica de
+la información.
+Emplear conceptos jurídicos correctamente.
+Cuidar la ortografía, gramática y puntuación.
+
+4. Formato
+Extensión libre, de acuerdo con el diseño del
+cuadro  comparativo  (sin  contar  portada  ni
+referencias).
+Elaborar  el  cuadro  utilizando  tablas  o
+columnas claramente identificadas.
+Letra Arial 12.
+Interlineado 1.5 (excepto dentro del cuadro,
+donde podrá utilizarse interlineado sencillo
+para   favorecer   la   organización   de   la
+información).
+Márgenes de 2.5 cm.
+Texto    justificado    en    los    apartados
+correspondientes.
+5. Referencias
+Citar los materiales de estudio conforme al
+Manual APA, 7.ª edición.
+Incluir  cualquier  otra  fuente  académica
+consultada.
+
+Entrega:
+
+Entrega el archivo únicamente en formato PDF.
+
+Antes de finalizar el envío, verifica que el
+archivo quede en estatus "Enviado" y no como
+"Borrador", ya que únicamente las actividades
+enviadas     correctamente     podrán     ser
+consideradas para evaluación.
+
+Tiempo estimado de entrega:
+
+
+
+
+     Página 8 de 21
+
+Entrega ordinaria (Rúbrica verde): del 19 de
+octubre  al 25 de octubre, hasta  las 23:55
+horas.
+
+Entrega extemporánea (Rúbrica naranja): 26 de
+octubre, hasta las 23:55 horas, aplicándose
+los criterios de evaluación correspondientes
+a la rúbrica naranja.
+
+
+
+### platform
+
+```json
+null
+```
+
+### role
+
+```json
+"learning"
+```
+
+### unit_id
+
+```json
+null
+```
+
+### weeks
+
+```json
+[
+  4
+]
+```
+
+### outcome_ids
+
+```json
+[]
+```
+
+### topic_ids
+
+```json
+[]
+```
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[]
+```
+
+### products
+
+```json
+[
+  {
+    "id": "producto-documental",
+    "kind": "report",
+    "recipient": null,
+    "editable_format": null,
+    "submission_format": null,
+    "structure": [
+      "Cuadro comparativo"
+    ],
+    "length": null,
+    "filename_pattern": null,
+    "accessibility": null,
+    "requirement_ids": [],
+    "paths": {
+      "editable": null,
+      "delivery": null
+    }
+  }
+]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": []
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+### dependencies
+
+```json
+[]
+```
+
+### alignment
+
+```json
+[]
+```
+
+### bindings
+
+```json
+{
+  "extractor_directory": "extractor-aulatex",
+  "notes_directory": "referencias-antecedentes-de-los-derechos-humanos/notas-antecedentes-de-los-derechos-humanos",
+  "research_directory": "investigacion-aulatex"
+}
+```
+
+### calendar
+
+| Campo operativo | Valor |
+| --- | --- |
+| opens_at |  |
+| expected_at |  |
+| due_at |  |
+| closes_at |  |
+| timezone |  |
+
+## curriculum
+
+```json
+{
+  "purpose": null,
+  "competencies": [],
+  "outcomes": [],
+  "topics": []
+}
+```
+
+## artifact_contract
+
+```json
+{
+  "version": "1.1",
+  "academic_materials_versioned": true,
+  "paths_relative_to_subject": {
+    "plans": "planeaciones-antecedentes-de-los-derechos-humanos",
+    "references": "referencias-antecedentes-de-los-derechos-humanos",
+    "notes": "referencias-antecedentes-de-los-derechos-humanos/notas-antecedentes-de-los-derechos-humanos",
+    "assets": "assets-antecedentes-de-los-derechos-humanos",
+    "deliveries": "entregas-antecedentes-de-los-derechos-humanos",
+    "extractions": "extractor-aulatex",
+    "research": "investigacion-aulatex"
+  },
+  "deliverables_directory": "entregas-antecedentes-de-los-derechos-humanos",
+  "source_directory": "."
+}
+```
+
+## sources
+
+```json
+[
+  {
+    "id": "src-local",
+    "kind": "pdf",
+    "authority": "unknown",
+    "title": "Planificacion de actividades S4 - Antecedentes de los derechos humanos.pdf",
+    "url": null,
+    "path": "planeaciones-antecedentes-de-los-derechos-humanos/Planificacion de actividades S4 - Antecedentes de los derechos humanos.pdf",
+    "sha256": "fdb42b8461b7522d9094dc28dd3554a3eefc682118808bf50bfbaf907d5099fa",
+    "captured_at": null,
+    "media_type": "application/pdf"
+  },
+  {
+    "id": "src-control-actual",
+    "kind": "other",
+    "authority": "editorial",
+    "title": "Readme - Antecedentes de los derechos humanos.md",
+    "url": null,
+    "path": "Readme - Antecedentes de los derechos humanos.md",
+    "sha256": "13004cba222be86c9ee10174cac128ce5e270adf750a2799f3f9a404f6a7f6d8",
+    "captured_at": "2026-10-26",
+    "media_type": "text/markdown"
+  }
+]
+```
+
+## field_status
+
+```json
+[
+  {
+    "path": "/activities/0/instruction",
+    "state": "inferred",
+    "reason": "Texto archivado preservado; verificar integridad, preguntas, tablas y limites antes de aprobar.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "document",
+        "quoted_text": "Actividad    5:    Cuadro    comparativo    –\nActividad para realizar la   Antecedentes sociales y contexto político de\nevaluación (basada en la     los derechos humanos en México\ntécnica de enseñanza y      Propósito de la actividad\naprendizaje utilizada y la\nbibliografía consultada)     Analizar  los  antecedentes  sociales  y  el\n                           contexto  político  que  dieron  origen  al\n                           desarrollo histórico de los derechos humanos\n                           en  México,  mediante  la  elaboración  de  un\n                           cuadro  comparativo  que  permita  identificar\n                           las principales características, semejanzas,\n                           diferencias y aportaciones de los procesos\n                           históricos   estudiados,   fortaleciendo   la\n                           capacidad    de    análisis,    síntesis    y\n                           organización de la información jurídica.\n\n                           Material:\n                           Contenidos de la Unidad 3. Identifica aspectos\n                           relevantes del desarrollo histórico de los\n                           derechos humanos en México.\n                           Tema 2.1. Antecedentes sociales  y contexto\n                           político de los derechos humanos en México.\n                           Materiales de estudio disponibles en el aula\n                           virtual.\n\n\n\n                                        Página 6 de 21\n\nSesión  sincrónica  (grabación),  en  caso  de\nconsultarla.\nFuentes académicas adicionales,  en caso de\nutilizarlas.\n\nIndicaciones:\nCon base en los contenidos de la Unidad 3,\nelabora  un  cuadro  comparativo  en  el  que\nanalices    los    principales    antecedentes\nsociales   y   el   contexto   político   que\ncontribuyeron al reconocimiento y evolución\nde los derechos humanos en México.\n\nEl   cuadro   comparativo   deberá   permitir\nidentificar  las  semejanzas,  diferencias  y\naportaciones    de    los    acontecimientos\nhistóricos     analizados,     estableciendo\nrelaciones  entre  los  factores  sociales,\npolíticos y jurídicos que influyeron en el\ndesarrollo de los derechos humanos.\n\nComo  mínimo,  el  cuadro  comparativo  deberá\nconsiderar los siguientes aspectos:\n\n   Contexto histórico.\n   Antecedentes sociales.\n   Contexto político.\n   Principales acontecimientos.\n   Derechos o principios impulsados.\n   Aportaciones   al   desarrollo   de   los\n     derechos humanos en México.\n   Reflexión personal sobre la importancia\n     del estudio de estos antecedentes para\n     comprender   el   sistema   actual   de\n     protección de los derechos humanos.\n\nElementos  académicos  que  debe  cumplir  el\ncuadro comparativo:\n1. Estructura\n       Portada.\n       Introducción (breve).\n       Cuadro comparativo.\n       Conclusión.\n       Referencias.\n2. Contenido\n\nEl trabajo deberá:\nComparar de manera objetiva los antecedentes\nsociales y políticos estudiados.\n\n\n\n\n\n     Página 7 de 21\n\nIdentificar  las  principales  semejanzas  y\ndiferencias  entre  los  procesos  históricos\nanalizados.\nExplicar la influencia de cada acontecimiento\nen la construcción de los derechos humanos en\nMéxico.\nRelacionar  el  contenido  con   los  temas\nabordados en la Unidad 3.\nPresentar  una  conclusión  que  refleje  el\naprendizaje obtenido.\nIncluir  una  reflexión  personal  debidamente\nargumentada.\n\n3. Redacción\nUtilizar lenguaje formal y académico.\nMantener coherencia y organización lógica de\nla información.\nEmplear conceptos jurídicos correctamente.\nCuidar la ortografía, gramática y puntuación.\n\n4. Formato\nExtensión libre, de acuerdo con el diseño del\ncuadro  comparativo  (sin  contar  portada  ni\nreferencias).\nElaborar  el  cuadro  utilizando  tablas  o\ncolumnas claramente identificadas.\nLetra Arial 12.\nInterlineado 1.5 (excepto dentro del cuadro,\ndonde podrá utilizarse interlineado sencillo\npara   favorecer   la   organización   de   la\ninformación).\nMárgenes de 2.5 cm.\nTexto    justificado    en    los    apartados\ncorrespondientes.\n5. Referencias\nCitar los materiales de estudio conforme al\nManual APA, 7.ª edición.\nIncluir  cualquier  otra  fuente  académica\nconsultada.\n\nEntrega:\n\nEntrega el archivo únicamente en formato PDF.\n\nAntes de finalizar el envío, verifica que el\narchivo quede en estatus \"Enviado\" y no como\n\"Borrador\", ya que únicamente las actividades\nenviadas     correctamente     podrán     ser\nconsideradas para evaluación.\n\nTiempo estimado de entrega:\n\n\n\n\n     Página 8 de 21\n\nEntrega ordinaria (Rúbrica verde): del 19 de\noctubre  al 25 de octubre, hasta  las 23:55\nhoras.\n\nEntrega extemporánea (Rúbrica naranja): 26 de\noctubre, hasta las 23:55 horas, aplicándose\nlos criterios de evaluación correspondientes\na la rúbrica naranja.\n\n"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0",
+    "state": "unknown",
+    "reason": "Modelo documental bloqueado: no inferir oficialidad ni integracion completa.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/calendar",
+    "state": "unknown",
+    "reason": "Sin programacion temporal acreditada al 26/10/2026: fechas pasadas, desconocidas o sin hora/zona verificable. Los literales originales no prueban prorroga, reapertura ni disponibilidad actual.",
+    "evidence": [],
+    "alternatives": []
+  }
+]
+```
+
+## review
+
+```json
+{
+  "state": "needs_review",
+  "reviewed_at": "2026-10-26",
+  "reviewer_role": "organizacion-documental-local-no-aprobacion-academica",
+  "semantic_validation": "failed",
+  "critical_gaps": [
+    "Cotejar consigna y procedencia docente; conversion local no equivale a aprobacion",
+    "Documento sin segmentar: identificar actividades, requisitos, preguntas y rubrica antes de ejecutar",
+    "Completar segmentacion fina de requisitos, preguntas, objetivos, temas, secuencia y alineacion con evidencia por campo.",
+    "Cotejar visualmente las filas y descriptores de la rubrica del producto; no trasladar puntuaciones de otra actividad.",
+    "Conservar ocho reportes, entregas y comprobantes existentes; no repetir publicaciones ni intentos. La excepcion de foros ITESCA no aplica.",
+    "Revision academica/personal no acreditada; la organizacion no equivale a aprobacion.",
+    "Completar recursos, politicas, rutas de producto y alineacion por consigna antes de admitir un unico ciclo."
+  ]
+}
+```
+
+## extensions
+
+```json
+{
+  "conversion": {
+    "version": "1.0",
+    "source_format": ".pdf",
+    "source_sha256": "fdb42b8461b7522d9094dc28dd3554a3eefc682118808bf50bfbaf907d5099fa",
+    "source_payload": null,
+    "source_blocks": [
+      {
+        "locator": "page:1",
+        "text": "                 Planificación de actividades\n\n\n                           Datos de identificación\n\n\n\nRegistro Federal de\nContribuyentes\n\n\n\n\nClave Única de Registro de\nPoblación\n\n\n\nMatrícula/Folio                  FA2611LOOD00054\n\n\n\n\nNombre de prestador de servicios\nprofesionales en el ámbito de      Daniel Alexis Lozano Ortega\ndocencia\n\n\n\n               Datos de identificación de la asignatura/materia\n\n\n\nAño                  2026\n\n\n\n\nSemestre             2\n\n\n\n\nBloque                 2\n\n\n\n\nDirección\n                     Ciencias Sociales y Administrativas\ndivisional\n\n\n\n\nPrograma educativo   Derecho\n\n\n\n\n\n                                        Página 1 de 21"
+      },
+      {
+        "locator": "page:2",
+        "text": "Asignatura/materia   Antecedentes de los Derechos Humanos\n\n\n\n\nDatos de identificación del objetivo de la asignatura/materia\n               ASIGNATURA: Antecedentes de los Derechos Humanos\n\n\nFechas de inicio y conclusión del\n                                   28 DE SEPTIEMBRE AL 06 DE DICIEMBRE\nperiodo educativo (diez semanas)\n\n\n\n                                   Formar profesionales altamente competentes\nObjetivo general del programa de   y   comprometidos,   capaces   de   abordar\neducativo                          situaciones    legales    complejas    con\n                                   integridad y desempeñarse exitosamente en\n                                   una  variedad de  roles  dentro  del ámbito\n                                   jurídico,  promoviendo  la  justicia  y  el\n                                   desarrollo de la sociedad.\n\n\n                                   Conocer las bases teóricas, históricas y\nObjetivo general de la asignatura  normativas  que  fundamentan  los  derechos\n                                   humanos en México\n\n\n                                        ⎯ Reconoce las bases teóricas básicas\nObjetivos específicos de la        relacionadas con los derechos\nasignatura/materia                 humanos en México.\n                                        ⎯ Identifica aspectos relevantes del\n                                   desarrollo histórico de los\n                                   derechos humanos en México.\n                                        ⎯ Analiza los documentos normativos\n                                   nacionales e internacionales\n                                   que fundamentan los valores de los\n                                   derechos humanos en México.\n\n\n                                   Al  aprobar  la  asignatura,  reconoce  las\nAspectos que fortalecen del        principales  bases  teóricas,  históricas y\nperfil de egreso del programa      normativas  de  los  derechos  humanos  en\neducativo                          México.\n\n\n\nDatos para la planificación de actividades\n\nSemana 4 (Del día 19 de octubre al día 25 d octubre)\nFecha de entrega (actividad): 25 de octubre\nFecha de entrega extraordinaria (actividad):  26 de octubre\n\n\n\n\n\n                                        Página 2 de 21"
+      },
+      {
+        "locator": "page:3",
+        "text": "Fecha de sesión sincrónica: martes Hora: 8:00 p.m.\n\n\n\n                               Unidad  3.  Identifica  aspectos  relevantes  del  desarrollo\nContenido temático a           histórico de los derechos humanos en México.\ndesarrollar                          2.1. Antecedentes sociales y contexto político de los derechos\n                             humanos en México.\n\n\n\n                             Analizar los antecedentes sociales y el contexto\nObjetivo específico que se   político que influyeron en el desarrollo de los\n                             derechos humanos en México, mediante el estudiodesarrolla del contenido\n                             de   los   principales   procesos   históricos   y\ntemático\n                             jurídicos, a fin de comprender su impacto en la\n                             conformación    del    sistema    mexicano    de\n                             reconocimiento,  protección  y  garantía  de  los\n                             derechos humanos.\n\n\n\nTécnica didáctica que se\nutiliza (100 técnicas de           Cuadro Comparativo y Examen Parcial I\nenseñanza y aprendizaje)\n\n\n\n\nBibliografía propuesta para  Bibliografía básica\nconsulta (tomada de          Arteaga Nava, E. (2022). Garantías individuales\nbiblioteca digital, elibro)  y derechos humanos (9.ª ed.). Oxford University\n                             Press.\n                             Carbonell, M. (2021). Los derechos fundamentales\n                             en México (8.ª ed.). Porrúa.\n                             Corcuera Cabezut, S. (2020). Derecho\n                             constitucional y derechos humanos. Oxford\n                             University Press.\n                             Fix-Zamudio, H., & Valencia Carmona, S. (2020).\n                             Derecho constitucional mexicano y comparado\n                             (10.ª ed.). Porrúa.\n                             Peces-Barba Martínez, G. (2018). Curso de\n                             derechos fundamentales: Teoría general.\n                             Universidad Carlos III de Madrid.\n                             Nikken, P. (2010). La protección internacional\n                             de los derechos humanos: Su desarrollo\n                             progresivo. Instituto Interamericano de Derechos\n                             Humanos.\n                             Bibliografía complementaria\n                             Alexy, R. (2017). Teoría de los derechos\n                             fundamentales (2.ª ed.). Centro de Estudios\n                             Políticos y Constitucionales.\n\n\n\n\n\n                                        Página 3 de 21"
+      },
+      {
+        "locator": "page:4",
+        "text": "                             Bobbio, N. (2017). El tiempo de los derechos.\n                             Sistema.\n                             Ferrajoli, L. (2019). Derechos y garantías. La\n                             ley del más débil (8.ª ed.). Trotta.\n                             Hunt, L. (2009). La invención de los derechos\n                             humanos. Tusquets Editores.\n                             Pérez Luño, A. E. (2014). Los derechos\n                             fundamentales (11.ª ed.). Tecnos.\n                             Vasak, K. (1984). Las dimensiones\n                             internacionales de los derechos humanos. UNESCO.\n                             Legislación y documentos oficiales\n                             Constitución Política de los Estados Unidos\n                             Mexicanos.\n                             Declaración Universal de los Derechos Humanos\n                             (1948).\n                             Declaración Americana de los Derechos y Deberes\n                             del Hombre (1948).\n                             Pacto Internacional de Derechos Civiles y\n                             Políticos (1966).\n                             Pacto Internacional de Derechos Económicos,\n                             Sociales y Culturales (1966).\n                             Convención Americana sobre Derechos Humanos\n                             (1969).\n                             Ley de la Comisión Nacional de los Derechos\n                             Humanos.\n                             Ley General de Víctimas.\n                             Ley Federal para Prevenir y Eliminar la\n                             Discriminación.\n                             Recursos electrónicos\n                             Comisión Nacional de los Derechos Humanos (CNDH)\n                             Suprema Corte de Justicia de la Nación (SCJN)\n                             Oficina del Alto Comisionado de las Naciones\n                             Unidas para los Derechos Humanos (ACNUDH)\n                             Organización de los Estados Americanos (OEA) –\n                             Sistema Interamericano de Derechos Humanos\n                             Diario Oficial de la Federación (DOF)\n\n\n\n                             Constitución Política de los Estados Unidos\nNormatividad gubernamental   Mexicanos\nrelacionada con la           Ley de Amparo, Reglamentaria de los artículos\nasignatura                   103 y 107 de la Constitución Política de los\n                             Estados Unidos Mexicanos\n                             Ley de la Comisión Nacional de los Derechos\n                             Humanos\n                             Ley General de Víctimas\n                             Ley Federal para Prevenir y Eliminar la\n                             Discriminación\n\n\n\n\n\n                                        Página 4 de 21"
+      },
+      {
+        "locator": "page:5",
+        "text": "Ley General para la Igualdad entre Mujeres y\nHombres\nLey General de Acceso de las Mujeres a una Vida\nLibre de Violencia\nLey General de los Derechos de Niñas, Niños y\nAdolescentes\nLey General para la Inclusión de las Personas\ncon Discapacidad\nLey General para Prevenir, Investigar y\nSancionar la Tortura y otros Tratos o Penas\nCrueles, Inhumanos o Degradantes\nLey General en Materia de Desaparición Forzada\nde Personas\nReglamento Interno de la Comisión Nacional de\nlos Derechos Humanos\nDeclaración Universal de los Derechos Humanos\nDeclaración Americana de los Derechos y Deberes\ndel Hombre\nPacto Internacional de Derechos Civiles y\nPolíticos\nPacto Internacional de Derechos Económicos,\nSociales y Culturales\nConvención Americana sobre Derechos Humanos\nProtocolo de San Salvador\nConvención sobre los Derechos del Niño\nConvención sobre la Eliminación de Todas las\nFormas de Discriminación contra la Mujer (CEDAW)\nConvención sobre los Derechos de las Personas\ncon Discapacidad\nConvención contra la Tortura y Otros Tratos o\nPenas Crueles, Inhumanos o Degradantes\nConvención Internacional sobre la Eliminación de\ntodas las Formas de Discriminación Racial\nConvención Internacional para la Protección de\nTodas las Personas contra las Desapariciones\nForzadas\nEstatuto de Roma de la Corte Penal Internacional\nCarta de las Naciones Unidas\nCarta Internacional de Derechos Humanos\nCarta Magna (1215)\nPetition of Right (1628)\nHabeas Corpus Act (1679)\nBill of Rights (1689)\nDeclaración de Independencia de los Estados\nUnidos (1776)\nConstitución de los Estados Unidos de América\n(1787)\nDeclaración de los Derechos del Hombre y del\nCiudadano (1789)\n\n\n\n     Página 5 de 21"
+      },
+      {
+        "locator": "page:6",
+        "text": "                             Constitución de Cádiz (1812)\n                             Constitución Federal de los Estados Unidos\n                             Mexicanos de 1824\n                             Constitución Federal de los Estados Unidos\n                             Mexicanos de 1857\n                             Constitución Política de los Estados Unidos\n                             Mexicanos de 1917\n                             Reforma Constitucional en materia de Derechos\n                             Humanos de 2011\n                             Jurisprudencia de la Suprema Corte de Justicia\n                             de la Nación en materia de derechos humanos\n                             Jurisprudencia de la Corte Interamericana de\n                             Derechos Humanos\n                             Recomendaciones de la Comisión Nacional de los\n                             Derechos Humanos\n                             Observaciones Generales de los Comités de las\n                             Naciones Unidas\n                             Principios de París relativos al estatuto de las\n                             instituciones nacionales de derechos humanos\n\n\n\n\nTipo de evaluación que se\n                                      Sumativa\nutiliza\n\n\n\n                           Actividad    5:    Cuadro    comparativo    –\nActividad para realizar la   Antecedentes sociales y contexto político de\nevaluación (basada en la     los derechos humanos en México\ntécnica de enseñanza y      Propósito de la actividad\naprendizaje utilizada y la\nbibliografía consultada)     Analizar  los  antecedentes  sociales  y  el\n                           contexto  político  que  dieron  origen  al\n                           desarrollo histórico de los derechos humanos\n                           en  México,  mediante  la  elaboración  de  un\n                           cuadro  comparativo  que  permita  identificar\n                           las principales características, semejanzas,\n                           diferencias y aportaciones de los procesos\n                           históricos   estudiados,   fortaleciendo   la\n                           capacidad    de    análisis,    síntesis    y\n                           organización de la información jurídica.\n\n                           Material:\n                           Contenidos de la Unidad 3. Identifica aspectos\n                           relevantes del desarrollo histórico de los\n                           derechos humanos en México.\n                           Tema 2.1. Antecedentes sociales  y contexto\n                           político de los derechos humanos en México.\n                           Materiales de estudio disponibles en el aula\n                           virtual.\n\n\n\n                                        Página 6 de 21"
+      },
+      {
+        "locator": "page:7",
+        "text": "Sesión  sincrónica  (grabación),  en  caso  de\nconsultarla.\nFuentes académicas adicionales,  en caso de\nutilizarlas.\n\nIndicaciones:\nCon base en los contenidos de la Unidad 3,\nelabora  un  cuadro  comparativo  en  el  que\nanalices    los    principales    antecedentes\nsociales   y   el   contexto   político   que\ncontribuyeron al reconocimiento y evolución\nde los derechos humanos en México.\n\nEl   cuadro   comparativo   deberá   permitir\nidentificar  las  semejanzas,  diferencias  y\naportaciones    de    los    acontecimientos\nhistóricos     analizados,     estableciendo\nrelaciones  entre  los  factores  sociales,\npolíticos y jurídicos que influyeron en el\ndesarrollo de los derechos humanos.\n\nComo  mínimo,  el  cuadro  comparativo  deberá\nconsiderar los siguientes aspectos:\n\n   Contexto histórico.\n   Antecedentes sociales.\n   Contexto político.\n   Principales acontecimientos.\n   Derechos o principios impulsados.\n   Aportaciones   al   desarrollo   de   los\n     derechos humanos en México.\n   Reflexión personal sobre la importancia\n     del estudio de estos antecedentes para\n     comprender   el   sistema   actual   de\n     protección de los derechos humanos.\n\nElementos  académicos  que  debe  cumplir  el\ncuadro comparativo:\n1. Estructura\n       Portada.\n       Introducción (breve).\n       Cuadro comparativo.\n       Conclusión.\n       Referencias.\n2. Contenido\n\nEl trabajo deberá:\nComparar de manera objetiva los antecedentes\nsociales y políticos estudiados.\n\n\n\n\n\n     Página 7 de 21"
+      },
+      {
+        "locator": "page:8",
+        "text": "Identificar  las  principales  semejanzas  y\ndiferencias  entre  los  procesos  históricos\nanalizados.\nExplicar la influencia de cada acontecimiento\nen la construcción de los derechos humanos en\nMéxico.\nRelacionar  el  contenido  con   los  temas\nabordados en la Unidad 3.\nPresentar  una  conclusión  que  refleje  el\naprendizaje obtenido.\nIncluir  una  reflexión  personal  debidamente\nargumentada.\n\n3. Redacción\nUtilizar lenguaje formal y académico.\nMantener coherencia y organización lógica de\nla información.\nEmplear conceptos jurídicos correctamente.\nCuidar la ortografía, gramática y puntuación.\n\n4. Formato\nExtensión libre, de acuerdo con el diseño del\ncuadro  comparativo  (sin  contar  portada  ni\nreferencias).\nElaborar  el  cuadro  utilizando  tablas  o\ncolumnas claramente identificadas.\nLetra Arial 12.\nInterlineado 1.5 (excepto dentro del cuadro,\ndonde podrá utilizarse interlineado sencillo\npara   favorecer   la   organización   de   la\ninformación).\nMárgenes de 2.5 cm.\nTexto    justificado    en    los    apartados\ncorrespondientes.\n5. Referencias\nCitar los materiales de estudio conforme al\nManual APA, 7.ª edición.\nIncluir  cualquier  otra  fuente  académica\nconsultada.\n\nEntrega:\n\nEntrega el archivo únicamente en formato PDF.\n\nAntes de finalizar el envío, verifica que el\narchivo quede en estatus \"Enviado\" y no como\n\"Borrador\", ya que únicamente las actividades\nenviadas     correctamente     podrán     ser\nconsideradas para evaluación.\n\nTiempo estimado de entrega:\n\n\n\n\n     Página 8 de 21"
+      },
+      {
+        "locator": "page:9",
+        "text": "Entrega ordinaria (Rúbrica verde): del 19 de\noctubre  al 25 de octubre, hasta  las 23:55\nhoras.\n\nEntrega extemporánea (Rúbrica naranja): 26 de\noctubre, hasta las 23:55 horas, aplicándose\nlos criterios de evaluación correspondientes\na la rúbrica naranja.\n\nActividad 6: Examen Parcial 1\nPropósito de la actividad\nEvaluar el nivel de comprensión, análisis e\nidentificación  de  los  contenidos  abordados\ndurante las semanas 2, 3 y 4, verificando el\nlogro   de   los   aprendizajes   esperados\nrelacionados con los fundamentos teóricos e\nhistóricos de los derechos humanos mediante\nla resolución de un examen en línea.\nIndicaciones\nEl Examen Parcial 1 comprende los contenidos\nestudiados durante las semanas 2, 3 y 4 del\ncurso y deberá responderse directamente en la\nplataforma.\nAntes  de  iniciar,  lee  cuidadosamente  las\nsiguientes indicaciones:\n      El  examen  está  integrado  por  cinco\n     reactivos.\n      Cuatro reactivos son de opción múltiple.\n      Un  reactivo  consiste  en  escribir  una\n     palabra o concepto específico. En este\n     caso,  la  respuesta  deberá  escribirse\n     respetando   las   reglas   ortográficas,\n     incluyendo    el    uso    correcto    de\n     mayúsculas, minúsculas, acentos y signos\n     ortográficos,  ya  que  la  plataforma\n     calificará automáticamente la respuesta\n     y cualquier diferencia en la escritura\n     podrá considerarse incorrecta.\nTiempo de realización\n      El examen tendrá una duración máxima de\n     10 minutos.\n      El  tiempo  comenzará  a  correr  en  el\n     momento  en  que  selecciones  la  opción\n     \"Comenzar intento\".\n      Una vez transcurridos los 10 minutos, el\n     examen   se   cerrará   automáticamente,\n     enviando   las   respuestas   registradas\n     hasta ese momento.\nCondiciones de aplicación\n\n\n\n\n\n     Página 9 de 21"
+      },
+      {
+        "locator": "page:10",
+        "text": "      Únicamente dispondrás de un intento para\n     realizar el examen.\n      Una  vez  iniciado  el  intento,  no  será\n     posible     reiniciarlo,     repetirlo,\n     modificarlo   o   solicitar   una   nueva\n     oportunidad,   salvo   en   los   casos\n     previstos     por     la     normatividad\n     institucional.\n      Antes de comenzar, verifica que cuentas\n     con:\n         o  Una conexión estable a internet.\n         o  Energía eléctrica suficiente en tu\n          equipo.\n         o  Un     dispositivo     en     buenas\n          condiciones de funcionamiento.\n         o  Un espacio libre de interrupciones\n          que te permita concluir el examen\n          dentro del tiempo establecido.\nSe recomienda no abandonar el examen una vez\niniciado, ya que cualquier interrupción en la\nconexión, cierre accidental del navegador o\nvencimiento  del  tiempo  podrá  afectar  el\nregistro de tus respuestas.\nCalificación\nLa  calificación  del  examen  será  asignada\nautomáticamente  por  la  plataforma  una  vez\nconcluido  el  intento,  con  base  en  las\nrespuestas registradas al momento del cierre\ndel examen.\nRecomendaciones\nAntes de presentar el examen:\n      Repasa los contenidos correspondientes a\n     las semanas 2, 3 y 4.\n      Lee cuidadosamente cada reactivo antes\n     de seleccionar o escribir tu respuesta.\n      Administra   adecuadamente   el   tiempo\n     disponible.\n      En  la  pregunta  de  respuesta  abierta,\n     verifica  la  ortografía,  acentuación  y\n     escritura correcta del concepto antes de\n     finalizar el examen.\nImportante\nLa  apertura  y  cierre  del  examen  estarán\nsujetos al calendario establecido en el aula\nvirtual.  Una  vez  concluido  el  periodo  de\naplicación, no será posible habilitar nuevos\nintentos ni reabrir el examen, por lo que se\nrecomienda  realizarlo  con  anticipación  y\nevitar  esperar  a  los  últimos  minutos  del\nperiodo de entrega.\n\n\n\n\n\n    Página 10 de 21"
+      },
+      {
+        "locator": "page:11",
+        "text": "                           Entrega  ordinaria  19  de  octubre  al  26  de\n                           octubre, hasta las 23:55 horas.\n\n\n\nEvidencia de la evaluación\n                                               Documento  en  formato  PDF  que contenga  un\n                                  cuadro  comparativo  integrado  por  portada,\n                                  introducción,    desarrollo    del    cuadro\n                                  comparativo,  conclusión  y  referencias  en\n                                  formato APA 7.ª edición. El trabajo deberá\n                                  elaborarse  conforme  a  las  características\n                                  establecidas  en  las  indicaciones  de  la\n                                  actividad,   comparando   los   principales\n                                  antecedentes sociales y el contexto político\n                                  que influyeron en el desarrollo histórico de\n                                  los    derechos    humanos    en    México,\n                                  identificando sus semejanzas, diferencias,\n                                  principales  aportaciones  e  impacto  en  la\n                                  consolidación  de  los  derechos  humanos,\n                                  incorporando una reflexión personal sobre la\n                                  importancia del estudio de estos procesos\n                                  históricos para comprender el sistema actual\n                                  de  protección  de  los  derechos  humanos,\n                                  atendiendo  al  estándar  establecido  en  la\n                                  rúbrica de evaluación.\n                                               Examen parcial realizado directamente en la\n                                  plataforma del aula virtual, integrado por\n                                  cinco  reactivos  correspondientes  a  los\n                                  contenidos abordados durante las semanas 2,\n                                  3 y 4 del curso. El examen deberá responderse\n                                  conforme a las características establecidas\n                                  en  las  indicaciones  de  la  actividad,\n                                  resolviendo  cuatro  preguntas  de  opción\n                                  múltiple y un reactivo de respuesta abierta,\n                                  en el que deberá escribirse correctamente el\n                                  término solicitado, respetando las reglas de\n                                  ortografía, acentuación, uso de mayúsculas\n                                  y   minúsculas.   La   evaluación   deberá\n                                  completarse dentro del tiempo máximo de 10\n                                  minutos y en un único intento, ya que la\n                                  plataforma cerrará automáticamente el examen\n                                  al concluir el tiempo establecido y asignará\n                                  la calificación correspondiente con base en\n                                  las  respuestas  registradas,  atendiendo al\n                                  estándar   previsto   en   la   rúbrica   de\n                                  evaluación.\n\n\n\nPorcentaje de calificación\n                                                                (15/100)\nque aporta (--/100)\n\n\nObservaciones                        Actividad 5: Cuadro comparativo\n\n\n\n\n\n                                        Página 11 de 21"
+      },
+      {
+        "locator": "page:12",
+        "text": "  El cuadro comparativo deberá elaborarse\n  con base en los contenidos de la Unidad\n  3, el material de estudio disponible en\n  el aula virtual y, en su caso, la sesión\n  de clase grabada.\n  Se valorará especialmente la capacidad\n  de análisis, síntesis y organización de\n  la  información,  evitando  limitarse  a\n  copiar  o  transcribir  textualmente  el\n  contenido de los materiales de estudio.\n  El   trabajo   deberá   presentar   una\n  estructura    lógica    y    coherente,\n  integrando los apartados solicitados en\n  las   indicaciones   de   la   actividad:\n  portada,      introducción,      cuadro\n  comparativo, conclusión y referencias.\n  Es indispensable que el documento sea una\n  elaboración original del estudiante; por\n  lo  tanto,  no  deberá  copiarse  total  o\n  parcialmente   el   contenido   de   los\n  materiales   de   estudio,   páginas   de\n  internet  o  cualquier  otra  fuente  de\n  consulta  sin  el  debido  reconocimiento\n  académico.\n  Se evaluará la correcta identificación\n  de los principales antecedentes sociales\n  y del contexto político que dieron origen\n  al desarrollo histórico de los derechos\n  humanos    en    México,    estableciendo\n  comparaciones   objetivas   entre   los\n  acontecimientos estudiados.\n  El cuadro comparativo deberá explicar de\n  manera     clara     las     semejanzas,\n  diferencias,      características      y\n  aportaciones de cada proceso histórico,\n  empleando terminología jurídica adecuada\n  y   demostrando   comprensión   de   los\n  conceptos abordados en la unidad.\n  La conclusión deberá expresar, mediante\n  argumentos  propios,  la  importancia  de\n  conocer  los  antecedentes  sociales  y\n  políticos para comprender la evolución,\n  protección y garantía de los  derechos\n  humanos en el Estado mexicano.\n  Todas  las  fuentes  consultadas  deberán\n  citarse  conforme  a  los  criterios  del\n  Manual APA 7.ª edición, incluyendo el\n  material de estudio proporcionado en el\n  aula  virtual  y  cualquier  otra  fuente\n\n\n\n\n\n Página 12 de 21"
+      },
+      {
+        "locator": "page:13",
+        "text": "     académica complementaria que haya sido\n     utilizada.\n      El trabajo deberá entregarse únicamente\n     en   formato   PDF,   respetando   las\n     especificaciones de formato establecidas\n     en las indicaciones de la actividad.\n      Antes de enviar la evidencia, verifica\n     que    el    archivo    se    encuentre\n     correctamente  adjunto  y  que  el  envío\n     quede  en  estatus  \"Enviado\"  y  no  como\n     \"Borrador\",   ya   que   únicamente   los\n     trabajos  enviados  correctamente podrán\n     ser considerados para evaluación.\n\nActividad 6: Examen Parcial 1\n\n      El examen parcial deberá realizarse con\n     base en los contenidos correspondientes\n     a las semanas 2, 3 y 4, así como en el\n     material de estudio disponible en el aula\n     virtual y, en su caso, en las sesiones\n     sincrónicas grabadas.\n      Se  valorará  el  nivel  de  comprensión,\n     análisis   e   identificación   de   los\n     conceptos, acontecimientos históricos y\n     fundamentos  teóricos  abordados  durante\n     las unidades evaluadas.\n      El  examen  está  integrado  por  cinco\n     reactivos,   de   los   cuales   cuatro\n     corresponden  a  preguntas  de  opción\n     múltiple y uno consiste en escribir una\n     palabra o concepto específico.\n      En la pregunta de respuesta abierta, el\n     estudiante deberá escribir la respuesta\n     respetando   las   reglas   ortográficas,\n     incluyendo    el    uso    correcto    de\n     mayúsculas,  minúsculas,  acentuación  y\n     escritura del término solicitado, ya que\n     la plataforma calificará automáticamente\n     la   respuesta   y   cualquier   error\n     ortográfico podrá afectar el resultado\n     obtenido.\n      El examen tendrá una duración máxima de\n     10  minutos,  tiempo  que  comenzará  a\n     contabilizarse  al  iniciar  el  intento.\n     Una vez concluido el tiempo establecido,\n     la plataforma cerrará automáticamente el\n     examen,   registrando   únicamente   las\n     respuestas capturadas hasta ese momento.\n      Únicamente se dispondrá de un  intento\n     para realizar el examen; por lo tanto,\n\n\n\n\n    Página 13 de 21"
+      },
+      {
+        "locator": "page:14",
+        "text": "                                no  será  posible  reiniciar,  repetir,\n                                modificar   o   solicitar   una   nueva\n                                oportunidad una vez iniciado el intento,\n                                salvo  en  los  casos  previstos  por  la\n                                normatividad institucional.\n                                               Antes de iniciar el examen, verifica que\n                                cuentas  con  una  conexión  estable  a\n                                internet,    suministro    de    energía\n                                eléctrica  y  un  equipo  de  cómputo  en\n                                condiciones adecuadas de funcionamiento,\n                                ya que cualquier interrupción durante el\n                                desarrollo      del      examen      será\n                                responsabilidad del estudiante.\n                                               Se recomienda leer cuidadosamente cada\n                                reactivo    antes    de    responder    y\n                                administrar   adecuadamente   el  tiempo\n                                disponible  para  concluir  el  examen\n                                dentro del periodo establecido.\n                                               La     calificación     será     asignada\n                                automáticamente por la plataforma, con\n                                base en las respuestas registradas al\n                                momento  de  finalizar  el  intento  o  al\n                                concluir el tiempo límite.\n                                               Una vez enviado el examen o vencido el\n                                tiempo de aplicación,  no será  posible\n                                realizar modificaciones a las respuestas\n                                registradas, por lo que se  recomienda\n                                revisar  cuidadosamente  cada  respuesta\n                                antes de finalizar el intento.\n                                               El examen deberá realizarse dentro del\n                                periodo establecido en el calendario del\n                                curso. Los intentos realizados fuera del\n                                periodo  de  aplicación  no  podrán  ser\n                                habilitados ni recuperados, por lo que\n                                se  recomienda  no  esperar  al  último\n                                momento para presentar la evaluación.\n\n\n\n                                 Lineamientos\nCon base en lo señalado en los siguientes artículos del Reglamento Universitario\nde la Universidad Abierta y a Distancia de México:\n\nArtículo  27.  La  calificación  representa  la  valoración  numérica  del\naprovechamiento que la o el estudiante logró en cada unidad didáctica. La escala\nde calificaciones comprende del 0 (cero) al 100 (cien), y la calificación mínima\naprobatoria será 60 (sesenta).\n\nEn ningún caso procederá la renuncia a la calificación obtenida. Las actividades\ny evidencias de aprendizaje en las que se identifique falta de integridad\nacadémica serán evaluadas con 0 (cero).\n\n\n\n\n\n                                        Página 14 de 21"
+      },
+      {
+        "locator": "page:15",
+        "text": "Artículo 76. Son obligaciones de las y los estudiantes:\n\nV. Realizar, con integridad académica, las actividades que están señaladas en\nel aula virtual del programa educativo en el que están inscritos, conforme a\nlas fechas establecidas en el calendario de aula.\n\n            Lineamientos para la evaluación del aprendizaje\n\n    •  La entrega de actividades se realizará de acuerdo con el\n     calendario proporcionado por su Figura Académica y marcado en el\n     presente documento.\n    •  La entrega corresponde a un solo intento.\n    •  Las entregas extemporáneas estarán sujeta a una penalización de 2\n     a 3 puntos. La recepción será únicamente hasta el martes de cada\n     semana (no aplica para semana 9 y 10).\n    •  La persona estudiante entregará sus actividades debidamente\n     citadas en formato APA 7ª edición.\n    •  La aplicación o uso de las herramientas de IA se debe apegar a los\n     Lineamientos para el uso ético y responsable de la IA.  Escala de\n     evaluación para actividades con IA.\n\n\n\n\n\n                Criterio              Sanción / Penalización\n       50% a 100%, NO declaró uso          4 puntos menos\n       de IA.\n       50% en adelante,                No se penaliza, pero se\n       declarado.                       evalúa en función del\n                                             contenido\n                                          2 puntos menos\n       0 a 49%, NO declarado\n\n       0 al 49%, se declara el uso     No se penaliza, pero se\n       de IA.                           evalúa en función del\n                                            contenido\n\n\n     La persona estudiante perderá su intento de envío de la actividad\n     cuando entregue o realice una o más de las condiciones enunciadas\n     en Los Lineamientos para la evaluación del aprendizaje: CAPÍTULO\n     II, SECCIÓN TERCERA, DE LA ELABORACIÓN Y ENTREGA DE ACTIVIDADES,\n     apartado décimo octavo.\n\n    •  La entrega de actividades, recepción y evaluación se rige por\n     dichos lineamientos y el RUUADM, por lo tanto, no se reciben por\n     otros medios distintos a aula ni posterior al cierre de la misma.\n\nCriterios de examen:\n\n\n\n\n                                        Página 15 de 21"
+      },
+      {
+        "locator": "page:16",
+        "text": "  Un intento\n  Método de calificación: automático.\n\n\n\n\n\n                                    Página 16 de 21"
+      },
+      {
+        "locator": "page:17",
+        "text": "Rubrica de Evaluación Ordinaria – Actividad 5: Cuadro comparativo (Puntaje\nMáximo 10)\n\n Criterio de   Excelente (10  Bueno (8       Suficiente (6  Puede mejorar (4\n evaluación    puntos)        puntos)        puntos)        puntos)\n\n 1. Análisis   Compara de     Compara        Realiza una    Presenta una\n y             manera         adecuadamente  comparación    comparación\n comparación   crítica los    los            básica,        insuficiente o\n de los        antecedentes   antecedentes   identificando  poco relacionada\n antecedentes  sociales y el  sociales y el  solo algunos   con el tema, sin\n sociales y    contexto       contexto       elementos      identificar\n del contexto  político,      político,      relevantes y   claramente los\n político.     identificando  aunque         con escaso     elementos\n               claramente     presenta       análisis.      solicitados.\n               semejanzas,    algunas\n               diferencias y  omisiones o\n               su impacto en  el análisis\n               el desarrollo  es\n               de los         parcialmente\n               derechos       desarrollado.\n               humanos en\n               México.\n\n 2.            El cuadro      El cuadro      El cuadro      El cuadro carece\n Organización  comparativo    incluye la     presenta       de organización,\n y contenido   integra todos  mayoría de     información    presenta\n del cuadro    los elementos  los elementos  incompleta o   información\n comparativo.  solicitados,   solicitados y  con            insuficiente o no\n               presenta       mantiene una   deficiencias   cumple con los\n               información    organización   de             elementos\n               organizada,    adecuada,      organización   solicitados.\n               clara y        aunque con     que\n               facilita la    algunos        dificultan\n               comprensión    aspectos       parcialmente\n               del tema.      mejorables.    su\n                                             comprensión.\n\n 3.            Presenta una   Presenta una   Presenta una   No presenta\n Conclusión y  conclusión     conclusión y   conclusión     conclusión o esta\n reflexión     crítica y una  reflexión      general con    carece de relación\n personal.     reflexión      pertinentes,   escasa         con el contenido\n               personal bien  aunque con un  argumentación  desarrollado.\n               argumentada    nivel de       o una\n               sobre la       análisis       reflexión\n               importancia    limitado.      superficial.\n               de los\n               antecedentes\n               históricos en\n               el desarrollo\n\n\n\n\n                                         Página 17 de 21"
+      },
+      {
+        "locator": "page:18",
+        "text": "               de los\n               derechos\n               humanos.\n\n 4.            Redacción      La redacción   La redacción   La redacción\n Redacción,    clara,         es clara y     presenta       presenta numerosos\n ortografía y  coherente y    utiliza        diversos       errores de\n lenguaje      precisa;       lenguaje       errores de     ortografía,\n académico.    utiliza        académico;     ortografía o   gramática o\n               lenguaje       presenta       sintaxis que   coherencia que\n               jurídico y     pocos errores  afectan        dificultan\n               académico      de ortografía  parcialmente   significativamente\n               adecuado, sin  o gramática    la             la comprensión.\n               errores de     que no         comprensión\n               ortografía ni  afectan la     del trabajo.\n               gramática.     comprensión.\n\n 5. Formato,   Cumple         Cumple con la  Cumple         No cumple con la\n estructura y  totalmente     mayoría de     parcialmente   estructura\n referencias   con la         los            con la         solicitada, el\n (APA 7.ª      estructura     requisitos de  estructura o   formato\n edición).     solicitada     formato y      presenta       establecido o las\n               (portada,      estructura,    deficiencias   referencias\n               introducción,  presentando    importantes    conforme a APA 7.ª\n               cuadro         únicamente     en el formato  edición.\n               comparativo,   errores        o en las\n               conclusión y   menores en     referencias.\n               referencias),  APA o en la\n               entrega en     presentación.\n               PDF y aplica\n               correctamente\n               las normas\n               APA 7.ª\n               edición.\n\n\n\n\n\nRubrica de Evaluación Extraordinaria – Actividad 5: Cuadro comparativo\n(Puntaje Máximo 7)\n\n Criterio de   Excelente (7   Bueno (5       Suficiente (3  Puede mejorar (1\n evaluación    puntos)        puntos)        puntos)        punto)\n\n 1. Análisis   Compara de     Compara        Realiza una    Presenta una\n y             manera         adecuadamente  comparación    comparación\n comparación   crítica los    los            básica,        insuficiente o\n de los        antecedentes   antecedentes   identificando  poco relacionada\n antecedentes  sociales y el  sociales y el  solo algunos   con el tema, sin\n sociales y    contexto       contexto       elementos      identificar\n               político,      político,      relevantes y   claramente los\n               identificando  aunque\n\n\n\n                                         Página 18 de 21"
+      },
+      {
+        "locator": "page:19",
+        "text": "del contexto  claramente     presenta       con escaso     elementos\npolítico.     semejanzas,    algunas        análisis.      solicitados.\n              diferencias y  omisiones o\n              su impacto en  el análisis\n              el desarrollo  es\n              de los         parcialmente\n              derechos       desarrollado.\n              humanos en\n              México.\n\n2.            El cuadro      El cuadro      El cuadro      El cuadro carece\nOrganización  comparativo    incluye la     presenta       de organización,\ny contenido   integra todos  mayoría de     información    presenta\ndel cuadro    los elementos  los elementos  incompleta o   información\ncomparativo.  solicitados,   solicitados y  con            insuficiente o no\n              presenta       mantiene una   deficiencias   cumple con los\n              información    organización   de             elementos\n              organizada,    adecuada,      organización   solicitados.\n              clara y        aunque con     que\n              facilita la    algunos        dificultan\n              comprensión    aspectos       parcialmente\n              del tema.      mejorables.    su\n                                            comprensión.\n\n3.            Presenta una   Presenta una   Presenta una   No presenta una\nConclusión y  conclusión     conclusión y   conclusión     conclusión\nreflexión     crítica y una  reflexión      general con    relacionada con el\npersonal.     reflexión      pertinentes,   escasa         contenido o la\n              personal bien  aunque con un  argumentación  reflexión es\n              argumentada    nivel de       o una          insuficiente.\n              sobre la       análisis       reflexión\n              importancia    limitado.      superficial.\n              de los\n              antecedentes\n              históricos en\n              el desarrollo\n              de los\n              derechos\n              humanos.\n\n4.            Redacción      La redacción   La redacción   La redacción\nRedacción,    clara,         es clara y     presenta       presenta numerosos\nortografía y  coherente y    utiliza        diversos       errores de\nlenguaje      precisa;       lenguaje       errores de     ortografía,\nacadémico.    utiliza        académico;     ortografía o   gramática o\n              lenguaje       presenta       sintaxis que   coherencia que\n              jurídico y     pocos errores  afectan        dificultan\n              académico      de ortografía  parcialmente   significativamente\n              adecuado, sin  o gramática    la             la comprensión.\n              errores de     que no         comprensión\n              ortografía ni  afectan la     del trabajo.\n              gramática.     comprensión.\n\n\n\n\n\n                                        Página 19 de 21"
+      },
+      {
+        "locator": "page:20",
+        "text": "5. Formato,   Cumple         Cumple con la  Cumple         No cumple con la\nestructura y  totalmente     mayoría de     parcialmente   estructura\nreferencias   con la         los            con la         solicitada, el\n(APA 7.ª      estructura     requisitos de  estructura o   formato\nedición).     solicitada     formato y      presenta       establecido o las\n              (portada,      estructura,    deficiencias   referencias\n              introducción,  presentando    importantes    conforme a APA 7.ª\n              cuadro         únicamente     en el formato  edición.\n              comparativo,   errores        o en las\n              conclusión y   menores en     referencias.\n              referencias),  APA o en la\n              entrega en     presentación.\n              PDF y aplica\n              correctamente\n              las normas\n              APA 7.ª\n              edición.\n\n\n\n\n\n                     Concentrado de calificaciones\n\n\n       Semana                Actividades                 Porcentaje de\n\n                                                       calificación (--\n                                                            /100)\n\n                Foro diagnóstico / Introducción a la\n         1                                                    0\n                               Unidad\n\n                    Actividad 1: Reseña de Video\n         2                                                    11\n                  Actividad 2: Publicación en Foro\n\n                        Actividad 3: Resumen\n         3                                                    11\n                  Actividad 4: Publicación en Foro\n\n         4         Actividad 5: Cuadro comparativo            10\n\n                  Examen parcial (semanas 2, 3 y 4)            5\n\n         5            Actividad 7: Mapa Mental                10\n\n         6          Actividad 8: Cuadro sinóptico             13\n\n         7           Actividad 9: Mapa de cajas               10\n\n                  Examen parcial (semanas 5, 6 y 7)            5\n\n         8          Actividad 11: Estudio de Caso             10\n\n\n\n\n\n                                        Página 20 de 21"
+      },
+      {
+        "locator": "page:21",
+        "text": " 9              Actividad 12: Ensayo                  15\n\n10                 Autoevaluación                     0\n\n                                                    100\n\n\n\n\n\n                             Página 21 de 21"
+      }
+    ],
+    "unsegmented_document": true,
+    "period_pending": true,
+    "activity_mapping": [
+      {
+        "activity_id": "interna-7",
+        "local_number": 7,
+        "official_number": 5,
+        "source_locator": "explicit_documentary_correspondence",
+        "source_is_summary": true
+      }
+    ]
+  },
+  "organizacion_interna": {
+    "documentary_date": "2026-10-26",
+    "internal_number": 7,
+    "official_number": 5,
+    "week": 4,
+    "task_module_id": "212010",
+    "task_module_current_verified": false,
+    "identity_evidence": {
+      "source_id": "src-control-actual",
+      "locator": "tabla vigente e identidad interior de reporte",
+      "number_is_not_inferred_from_week": true
+    },
+    "previous_revision": {
+      "path": "planeaciones-antecedentes-de-los-derechos-humanos/importaciones/pca-0562c6e0508cce181aa6/r0001/planeacion.json",
+      "sha256": "d410a5f18cba656cccf8fa30a1a8724484ede04029b26166ae643918f0575530",
+      "plan_id": "pca-0562c6e0508cce181aa6",
+      "revision": 1
+    },
+    "original_calendar": {
+      "opens_at": null,
+      "expected_at": null,
+      "due_at": null,
+      "closes_at": null,
+      "timezone": null,
+      "literal": null
+    },
+    "calendar_reason": "Sin programacion temporal acreditada al 26/10/2026: fechas pasadas, desconocidas o sin hora/zona verificable. Los literales originales no prueban prorroga, reapertura ni disponibilidad actual.",
+    "historical_control": {
+      "text": "# Antecedentes de los derechos humanos: control interno y entregas\n\nDocumento unico de la materia: integra el contenido util del README anterior, retirado tras la consolidacion del 10 de octubre de 2026. Los estados obsoletos no se trasladan como vigentes.\n\n## Organizacion vigente: ocho reportes\n\n### Consulta autenticada del 23 de octubre de 2026\n\n- Resumen oficial 3, modulo 211999: sin envio, no calificado, cierre publicado\n\t18 octubre, 23:55. La pagina consultada no muestra control para anadir envio.\n\tSolicitar al docente una posible reapertura; no asumir recepcion extemporanea.\n- Cuadro oficial 5, modulo 212010: sin envio, no calificado, control\n\t\"ANADIR ENVIO\" disponible; cierre 25 octubre, 23:55. PDF local y fuente\n\tdel reporte 7 sincronizados. Pendiente revision personal y entrega.\n- Foro oficial 4, modulo 212000: requisitos de publicacion y respuesta aun\n\tpendientes. Esta consulta no acredita permiso de publicacion extemporanea\n\tni cotejo actualizado del hilo destinatario de la replica.\n- Parcial I, modulo 212011: apertura 19 octubre, 00:00; cierre 26 octubre,\n\t23:55; cinco reactivos (cuatro de opcion multiple y uno verdadero/falso),\n\tdiez minutos y un unico intento. No se inicio el examen. Condiciones\n\tincorporadas al reporte 8; no se conocen respuestas ni resultados.\n- Fechas reproducidas como aparecen en el aula, sin zona horaria verificada.\n\tConsulta de solo lectura: no se enviaron archivos ni publicaron mensajes.\n\nActualizacion del 22 de octubre de 2026, basada en las cuatro capturas del\ncurso aportadas por el estudiante. Esta tabla sustituye las equivalencias\ny estados de las secciones historicas siguientes. Los numeros de los\nreportes son internos: dos productos por semana, no la numeracion Moodle.\n\n| Semana | Reporte interno | Producto del aula | Entrega | Estado visible en las capturas |\n| --- | --- | --- | --- | --- |\n| 1 | [1](reporte-antecedentes-de-los-derechos-humanos-Actividad-1.tex) | Examen Diagnostico | Intento en plataforma; sin archivo | Hecho; reporte conserva revision del intento aportada previamente |\n| 1 | [2](reporte-antecedentes-de-los-derechos-humanos-Actividad-2.tex) | Foro diagnostico | Publicacion en plataforma; sin archivo | Hecho; indicador no acredita por si solo coincidencia con el TXT local |\n| 2 | [3](reporte-antecedentes-de-los-derechos-humanos-Actividad-3.tex) | Actividad 1: Resena Critica de Video | PDF, numero oficial 1 | Hecho: Hacer un envio; entrega anterior preservada |\n| 2 | [4](reporte-antecedentes-de-los-derechos-humanos-Actividad-4.tex) | Actividad 2: Foro de participacion | Publicacion en plataforma | Hecho: Hacer publicaciones en foro: 1 |\n| 3 | [5](reporte-antecedentes-de-los-derechos-humanos-Actividad-5.tex) | Actividad 3: Resumen de lectura | PDF, numero oficial 3 | Por hacer: Hacer un envio; plazo conocido vencido, acceso actual a envio no comprobado |\n| 3 | [6](reporte-antecedentes-de-los-derechos-humanos-Actividad-6.tex) | Actividad 4: Foro de participacion y debate | Publicacion y replica en plataforma | Por hacer: Publicar respuestas: 1 y Hacer publicaciones en foro: 1 |\n| 4 | [7](reporte-antecedentes-de-los-derechos-humanos-Actividad-7.tex) | Actividad 5: Cuadro comparativo | PDF, numero oficial 5 | Por hacer: Hacer un envio |\n| 4 | [8](reporte-antecedentes-de-los-derechos-humanos-Actividad-8.tex) | Examen Parcial I | Intento en plataforma; sin archivo | Hecho: Ver; Por hacer: Hacer intentos: 1 |\n\nEl reporte 5 vuelve a contener el resumen; el cuadro se traslado al reporte\n7 con sus bytes intactos. El reporte 8 es un registro documental pendiente\nde la revision del intento, no un examen resuelto. No se iniciaron intentos,\nno se publicaron mensajes y no se enviaron archivos en esta reorganizacion.\nEl tramite de preferencia de reunion sincronica no se cuenta como producto.\n\nFuentes canonicas: los ocho reportes TEX de la raiz. Los PDF de entrega se\ncopian de los reportes 3, 5 y 7 con los numeros oficiales 1, 3 y 5.\nEl PDF ya enviado de la resena no se sobrescribe con una version local.\nLos TXT de foro son recursos para publicar texto, no archivos para adjuntar\ncomo tareas; las copias S3 disponibles en entregas no prueban publicacion.\nVer el [indice vigente de entregas](entregas-antecedentes-de-los-derechos-humanos/README.md).\n\n## Historial anterior\n\nLas equivalencias, conteos y estados siguientes conservan el contexto de\nsu fecha. No sustituyen la tabla vigente ni acreditan el estado actual.\n\n### Correccion editorial del 19 de octubre de 2026\n\nReportes canonicos: S1 = 1 (cuestionario diagnostico) y 2 (foro); S2 = 3 (resena) y 4 (foro); S3 = 5 (resumen) y 6 (foro). No se renumeran las actividades oficiales de Moodle. Esta correccion abarca los reportes 2, 5 y 6; no modifica trabajos ni publicaciones previas de S2.\n\nEl antiguo informe `reporte-antecedentes-de-los-derechos-humanos-Foro-S1.tex` se absorbio en el reporte 2: sus tres respuestas se conservaron, se corrigio ortografia y se incluyeron desde el TXT canonico para impedir divergencias. El [original historico](referencias-antecedentes-de-los-derechos-humanos/notas-antecedentes-de-los-derechos-humanos/actividad-2-foro-diagnostico/historico/reporte-antecedentes-de-los-derechos-humanos-Foro-S1.tex.txt) conserva exactamente sus bytes, SHA-256 `c34dca2ec04cc69c5c29a3a34c15e7ad68454a58bf7ec2a174296e90564b5a35`; deja de ser un reporte activo. La [consigna S1](referencias-antecedentes-de-los-derechos-humanos/notas-antecedentes-de-los-derechos-humanos/actividad-2-foro-diagnostico/modulo-6.txt) exige conocimientos previos, tres preguntas y una unica publicacion, sin investigar ni responder a pares. Por eso no se insertan citas investigadas ni preguntas adicionales al grupo en esa intervencion: excepcion expresa respecto al contrato generico de foro. No se inventan edad, residencia ni experiencia personal. La version local no acredita una publicacion pasada.\n\nLos PDF ya no deben narrar preparacion, borradores, conteos o estados de plataforma. El resumen conserva introduccion, desarrollo tematico y conclusion en tercera persona. El foro S3 contiene la aportacion y la replica completas con apertura, argumento, cita literal, cierre y referencias propias, en lugar de describirlas. Sus TXT son las fuentes exactas de los bloques del PDF. Los conteos antiguos de 394/142 palabras son historicos y quedan sustituidos por la version contractual actual. Las notas de IA se conservan breves al pie por requisito del contrato; no afirman revision personal inexistente. Detalles en el [contrato actualizado](planeaciones-antecedentes-de-los-derechos-humanos/CONTRATO-RESUMEN-Y-FORO-S3.md).\n\nEstado: correccion local, sin nuevos envios ni publicaciones. Las advertencias retiradas de los PDF se conservan aqui; no equivalen a una validacion docente o del estudiante. La replica S3 se refiere al hilo 273812, consultado el 18 de octubre, y requiere reconsulta antes de publicar.\n\n## Semana 3: preparacion manual, 18 de octubre de 2026\n\nLa planeacion S3 ya estaba descargada en `planeaciones-antecedentes-de-los-derechos-humanos`. El cuadernillo (Moodle 212003) y las diapositivas (212005) se descargaron a `referencias-antecedentes-de-los-derechos-humanos/notas-antecedentes-de-los-derechos-humanos/actividad-5-resumen-de-lectura/`; SHA-256: `f334dfad56c250b8710260915d740932de54ce59e58eb0c1696bf065e498e093` y `9073943d1b694b27247c4328694ce983788b286317fb189bbbe6f95c56067016` respectivamente. El libro de Rey Cantor y coautoras ya estaba en la biblioteca local; se cotejaron las paginas PDF 72-76 y 83. La Carta Magna se contrasto por separado con UK Parliament, sin atribuir su desarrollo a esas paginas.\n\nLa tarea oficial 3 (Moodle 211999) corresponde al [reporte interno 5](reporte-antecedentes-de-los-derechos-humanos-Actividad-5.pdf): PDF compilado, portada, dos cuartillas de contenido y referencias. El foro oficial 4 (212000) corresponde al [reporte interno 6](reporte-antecedentes-de-los-derechos-humanos-Actividad-6.pdf) y los borradores de [aportacion](foro-participacion-Actividad-6.txt) y [replica](foro-replica-Actividad-6.txt); 394 y 142 palabras de contenido, respectivamente. La replica se preparo para el hilo 273812, consultado cuando no tenia respuestas; reconsultar antes de publicarla. Ambos reportes compilaron con LuaLaTeX; no se enviaron PDF ni mensajes S3 porque la revision personal del estudiante no estuvo disponible. El estado autenticado de la tarea era \"Aun no se ha hecho ninguna tarea\" en la consulta, sin presumir que permanezca igual.\n\n[Contrato de tecnica Resumen y foro S3](planeaciones-antecedentes-de-los-derechos-humanos/CONTRATO-RESUMEN-Y-FORO-S3.md): la planeacion dice 1-3 cuartillas y la tarea vigente dice 2-3; se aplico el requisito de la tarea. El motor con Amazon Nova Pro termino con incidencias: sus compuertas de monitor, optimizacion y compilacion no quedaron aprobadas; la compilacion y revision de los PDFs se completaron manualmente. `entregas-antecedentes-de-los-derechos-humanos` queda sin copia S3 hasta la validacion personal requerida por su propia convencion.\n\nActualizacion del foro S2: reporte interno 4 con marco conceptual, seis fuentes citadas, participacion y dos replicas en cajas, TXT extraibles y conclusiones tematicas. [Texto y comprobantes](referencias-antecedentes-de-los-derechos-humanos/notas-antecedentes-de-los-derechos-humanos/actividad-4-foro-de-participacion/participacion-foro-S2.md): participacion de 82 palabras y replicas de 72 y 76, contando asunto, saludo, despedida y referencia. Las declaraciones de IA quedan fuera de las cajas. Las tres publicaciones se confirmaron el 10 de octubre; no se acredita calificacion. La cita textual exigida por el contrato generico no se incorpora: se documenta la adaptacion a la consigna especifica, sin afirmar cumplimiento integral del motor.\n\nActualizacion del cuestionario S1: reporte interno 1 completado con los tres reactivos de la revision proporcionada por el usuario, respuestas y justificaciones documentales posteriores. [Registro del intento y mapa de soporte](referencias-antecedentes-de-los-derechos-humanos/notas-antecedentes-de-los-derechos-humanos/actividad-1-cuestionario-diagnostico/revision-cuestionario-S1.md). Intento terminado el 3 de octubre de 2026, 00:27-00:29, duracion indicada 1 min 32 segundos; reactivos no calificados. Respuestas b), c) y Verdadero; la tercera no tiene marca visual original en el texto recibido. Esta actualizacion sustituye las menciones a respuestas pendientes del cuestionario en el historial siguiente. No se inicio ni envio otro intento.\n\nActualizado: 10 de octubre de 2026. UnADM, Licenciatura en Derecho, grupo 005, curso Moodle 3441, ciclo 2026-2, bloque 2.\n\n## Sistema de identificacion\n\nLos reportes internos se numeran consecutivamente por producto: actividades 1 y 2 para semana 1; actividades 3 y 4 para semana 2; actividades 5 y 6 para semana 3. La numeracion interna no sustituye el nombre ni el numero oficial de la plataforma. Los archivos de envio se preparan en `entregas-antecedentes-de-los-derechos-humanos` con la identificacion, formato y nombre que exija cada docente.\n\n| Reporte interno acordado | Semana y producto | Identificacion oficial | Modulo Moodle | Modalidad | Archivo para adjuntar |\n| --- | --- | --- | --- | --- | --- |\n| Actividad 1 | S1: cuestionario diagnostico | Examen Diagnostico | [210552](https://aulavirtual.unadmexico.mx/mod/quiz/view.php?id=210552) | Resolver en plataforma | No previsto por la consigna conocida |\n| Actividad 2 | S1: foro diagnostico | Foro diagnostico | [211991](https://aulavirtual.unadmexico.mx/mod/forum/view.php?id=211991) | Publicar en foro | No previsto por la consigna conocida |\n| Actividad 3 | S2: resena critica de video | Actividad 1: Resena Critica de Video | [211993](https://aulavirtual.unadmexico.mx/mod/assign/view.php?id=211993) | Adjuntar PDF | Si, cuando cumpla requisitos |\n| Actividad 4 | S2: foro de participacion | Actividad 2: Foro de participacion | [211997](https://aulavirtual.unadmexico.mx/mod/forum/view.php?id=211997) | Una publicacion de 50-100 palabras | No previsto por la consigna conocida |\n| Actividad 5 | S3: resumen de lectura | Actividad 3: Resumen de lectura | [211999](https://aulavirtual.unadmexico.mx/mod/assign/view.php?id=211999) | Adjuntar PDF tras revision personal | Pendiente de validacion |\n| Actividad 6 | S3: foro de debate | Actividad 4: Foro de participacion y debate | [212000](https://aulavirtual.unadmexico.mx/mod/forum/view.php?id=212000) | Publicacion y replica en plataforma | No adjuntar archivo |\n\nEl registro de preferencia de reunion sincrona visible en semana 1 se controla como tramite complementario, no como uno de estos seis productos academicos.\n\n## Reportes internos implementados\n\nLa migracion 1-4 se aplico el 10 de octubre. Los registros pendientes no se presentan como respuestas o publicaciones confirmadas.\n\n| Producto | Archivo actual | Situacion respecto al esquema 1-6 |\n| --- | --- | --- |\n| Cuestionario S1 | [TEX](reporte-antecedentes-de-los-derechos-humanos-Actividad-1.tex) y [PDF](reporte-antecedentes-de-los-derechos-humanos-Actividad-1.pdf) | Registro interno 1 completado con la revision aportada; intento terminado, reactivos no calificados |\n| Foro diagnostico S1 | [TEX](reporte-antecedentes-de-los-derechos-humanos-Actividad-2.tex), [PDF](reporte-antecedentes-de-los-derechos-humanos-Actividad-2.pdf) y [TXT extraible](foro-diagnostico-Actividad-2.txt) | Canonico 2: absorbio Foro-S1, conserva tres respuestas en bloque copiable; tres paginas, sin apendice de estado. Publicacion no cotejada |\n| Resena S2 | [TEX](reporte-antecedentes-de-los-derechos-humanos-Actividad-3.tex) y [PDF](reporte-antecedentes-de-los-derechos-humanos-Actividad-3.pdf) | Reporte interno 3; version ampliada, no apta por extension |\n| Foro de participacion S2 | [TEX](reporte-antecedentes-de-los-derechos-humanos-Actividad-4.tex), [PDF](reporte-antecedentes-de-los-derechos-humanos-Actividad-4.pdf) y [texto y comprobantes](referencias-antecedentes-de-los-derechos-humanos/notas-antecedentes-de-los-derechos-humanos/actividad-4-foro-de-participacion/participacion-foro-S2.md) | Reporte interno 4; participacion y dos replicas publicadas y verificadas el 10 de octubre |\n| Resumen S3 | [TEX](reporte-antecedentes-de-los-derechos-humanos-Actividad-5.tex) y [PDF](reporte-antecedentes-de-los-derechos-humanos-Actividad-5.pdf) | Canonico 5: sintesis tripartita en tercera persona, dos paginas de contenido, portada y referencias. Sin relato de elaboracion; no enviado |\n| Foro de debate S3 | [TEX](reporte-antecedentes-de-los-derechos-humanos-Actividad-6.tex) y [PDF](reporte-antecedentes-de-los-derechos-humanos-Actividad-6.pdf) | Canonico 6: dos bloques copiables desde TXT, referencias propias y conclusiones tematicas. Aportacion 461 palabras y replica 248 contando referencias y firma; no publicado |\n\nLa resena se movio primero de 2 a 3 y el foro de 1 a 2 sin sobrescribirlos. Se corrigieron identificaciones interiores e indices vigentes. Las evidencias y evaluaciones historicas conservan sus datos originales y no certifican la nueva numeracion. El registro del cuestionario procede de la revision aportada; no se inicio otro intento. Las publicaciones confirmadas son las del foro S2; no se envio la resena.\n\n## Estado y evidencia\n\n| Producto | Evidencia disponible | Que acredita | Pendiente |\n| --- | --- | --- | --- |\n| Cuestionario S1 | Captura y revision del intento aportadas; [mapa de soporte](referencias-antecedentes-de-los-derechos-humanos/notas-antecedentes-de-los-derechos-humanos/actividad-1-cuestionario-diagnostico/revision-cuestionario-S1.md) | Intento terminado y tres reactivos documentados, sin calificacion numerica | Conservar la salvedad sobre la marca original de la tercera respuesta |\n| Foro diagnostico S1 | Captura del usuario: indicador \"Hecho\"; reporte local con propuesta | Indicador visible y existencia de texto preparado | Cotejar publicacion propia y guardar enlace o comprobante; no asumir que coincide con la propuesta local |\n| Resena S2 | TEX/PDF, video, SRT, cuadernillo, libros, contrato local; captura con \"Por hacer: Hacer un envio\" | Producto local elaborado y envio pendiente en la captura | Ajustar version de envio al limite docente y revisar contenido personalmente |\n| Foro de participacion S2 | [Bitacora y tres comprobantes](referencias-antecedentes-de-los-derechos-humanos/notas-antecedentes-de-los-derechos-humanos/actividad-4-foro-de-participacion/participacion-foro-S2.md) | Mensajes 1081012, 1081013 y 1081014 publicados; autoria propia y texto verificados | Consultar calificacion cuando este disponible |\n\nLas capturas aportadas no equivalen a una nueva consulta autenticada ni contienen por si solas la calificacion o las respuestas del cuestionario. La consulta guardada del 9 de octubre es evidencia historica; la verificacion autenticada de las publicaciones del foro S2 corresponde al 10 de octubre. Esta consolidacion documental no realiza nuevos envios.\n\nEstados de control: `pendiente`, `en elaboracion`, `revisado localmente`, `preparado para enviar`, `enviado confirmado` y `calificado`. Registrar fechas y evidencia antes de avanzar de estado; compilacion correcta no significa entrega confirmada.\n\n## Carpeta Entregas\n\n`entregas-antecedentes-de-los-derechos-humanos` contiene exclusivamente versiones para adjuntar, no los reportes internos de todos los productos. En este conjunto solo la resena, actividad interna 3 y oficial 1, requiere un archivo de envio. Cuestionario y foros se realizan en la plataforma; sus reportes internos documentan el trabajo, no se adjuntan salvo nueva instruccion docente.\n\n- Conservar TEX y PDF internos en la carpeta de materia con la numeracion propia.\n- Preparar en `entregas-antecedentes-de-los-derechos-humanos` el PDF o Word exigido, usando el numero oficial en su identificacion y la nomenclatura docente comprobada. No inventar un nombre obligatorio si no esta documentado.\n- No convertir a Word por defecto: LaTeX sigue siendo la fuente principal. Crear una version Word solo cuando se solicite.\n- Estar en `entregas-antecedentes-de-los-derechos-humanos` significa preparado para adjuntar, NO enviado. No colocar aqui una version que incumpla un requisito conocido sin identificarla expresamente como no apta.\n- Antes de enviar: verificar modulo, nombre, formato, identidad, extension, contenido y correspondencia con la fuente interna. Registrar hash y fecha del archivo final para identificar exactamente la version enviada.\n- Conservar comprobantes en referencias del producto, separados de los archivos preparados; nunca guardar credenciales o cookies.\n\nPor solicitud del usuario, se copio la resena interna 3 a [Actividad-1-Resena-critica-de-video-Martin-Jonathan-de-la-Cruz.pdf](entregas-antecedentes-de-los-derechos-humanos/Actividad-1-Resena-critica-de-video-Martin-Jonathan-de-la-Cruz.pdf). La copia se verifico por SHA-256 y no se envio. El nombre distingue la Actividad 1 oficial; es una nomenclatura descriptiva local, no un nombre obligatorio docente acreditado. Renombrar no cambia la identificacion interior, que conserva Actividad 3 del reporte interno.\n\nEstado: copia disponible, pendiente de adecuacion, NO certificada apta. Tiene seis paginas totales: portada, cuatro de contenido y referencias; excede el maximo docente de tres paginas de contenido. Antes de enviar deben ajustarse extension e identificacion interior oficial, conservando aparte el original interno.\n\n## Requisitos de semana 2\n\nPlaneaciones oficiales descargadas nuevamente de la plataforma el 10 de octubre y nombradas como en Filosofia del Derecho, directamente en la carpeta de planeaciones:\n\n- [Planificacion S2](planeaciones-antecedentes-de-los-derechos-humanos/Planificación%20de%20actividades%20S2%20-%20Antecedentes%20de%20los%20Derechos%20Humanos.pdf), recurso Moodle 215006.\n- [Planificacion S3](planeaciones-antecedentes-de-los-derechos-humanos/Planificación%20de%20actividades%20S3%20-%20Antecedentes%20de%20los%20Derechos%20Humanos.pdf), recurso Moodle 212002.\n- [Inventario de planeaciones](planeaciones-antecedentes-de-los-derechos-humanos/inventario-planeaciones.json): URLs, fecha, semana y SHA256 de cada descarga. Son las dos planeaciones enlazadas en el curso durante esta consulta; no se presume disponibilidad de otras semanas. Los archivos de `originales-aula` se conservan como capturas historicas, no como ubicacion principal de los PDF actuales.\n\nFuente: [planeacion S2](planeaciones-antecedentes-de-los-derechos-humanos/planeacion-S2.md) y [evidencia de plataforma del 9 de octubre](referencias-antecedentes-de-los-derechos-humanos/notas-antecedentes-de-los-derechos-humanos/materiales-generales/auditorias/semana-2-2026-10-09/Estado%20de%20plataforma%20-%20S2%20-%202026-10-09.json).\n\nResena: PDF; 1-3 cuartillas de contenido, sin portada ni referencias; Arial 12, interlineado 1.5, margenes de 2.5 cm y texto justificado. Debe identificar el video, sintetizar sus ideas, explicar sus fundamentaciones, relacionarlas con Mexico y cerrar con valoracion personal. Rubrica de 7 puntos.\n\nForo S2: una participacion principal de 50-100 palabras basada en Unidad 1; no se requieren respuestas a companeros. Rubrica de 4 puntos. La suma de ambas actividades es 11 puntos; no asignar 11 a cada producto.\n\nEntrega ordinaria: 11 de octubre de 2026, 23:55. Extemporanea especifica: 12 de octubre, 23:55, con rubrica distinta. Zona no explicitada en la consigna guardada; no convertirla ni asumir prorroga. No usar las actividades con fechas antiguas de julio/agosto como tareas vigentes de esta semana.\n\n## Fuentes y contratos\n\n- [Bibliografia de la materia](antecedentes-de-los-derechos-humanos.bib): fuentes del contenido, no pruebas de envio.\n- [Contrato individual de resena audiovisual](planeaciones-antecedentes-de-los-derechos-humanos/CONTRATO-RESENA-VIDEO-S2.md): tecnica 37 cotejada con el fasciculo original, con ajustes editoriales posteriores.\n- Video de Canal UNED: https://canal.uned.es/video/671b6728e0637d00c70d7b80 . Es la referencia audiovisual; Subtitle Edit y el SRT son auxiliares internos, no una fuente sustitutiva.\n- Referencias de la materia: bibliografia basica, libros y evidencia historica. Los materiales didacticos y consignas TXT estan en [notas por actividad](referencias-antecedentes-de-los-derechos-humanos/notas-antecedentes-de-los-derechos-humanos/README.md), siguiendo el ejemplo de Interaprendizaje; las planeaciones oficiales actuales estan directamente en su carpeta y las copias historicas en `originales-aula`. Una presentacion no acredita visionado de la sesion grabada. [Trazabilidad de la reorganizacion](referencias-antecedentes-de-los-derechos-humanos/notas-antecedentes-de-los-derechos-humanos/materiales-generales/registros-organizacion/organizacion-materiales.json): 45 archivos, hashes conservados y rutas de inventarios actualizadas. Los TXT de libros permanecen con sus PDF.\n- Las citas jurisprudenciales se cotejaron mediante doctrina; no se certifica su aplicabilidad actual exhaustiva ni consulta directa de fichas que estuvieron bloqueadas.\n\nLos tiempos de las citas audiovisuales corresponden al video, no al archivo SRT. Los metadatos, el contraste con Unidad 1 y las ideas pertinentes del borrador previo se incorporaron a la resena; los borradores MD/PDF reemplazados se retiraron. Los originales docentes, libros y evidencias historicas se conservaron sin renumerarlos. El inventario de aula en referencias vincula las descargas con su origen.\n\nLa resena interna 3 tiene seis paginas totales y cuatro de contenido: contexto, caja en dos paginas y conclusiones propias. Esta distribucion editorial fue solicitada para el reporte interno; no cumple el maximo docente de tres cuartillas. El registro anterior de cinco paginas totales y tres de contenido corresponde a una version reemplazada, no al PDF actual.\n\n## Compilacion\n\nEjecutar desde la raiz del proyecto:\n\n```powershell\n.\\aulaTEX\\latexmk-build.ps1 .\\UnADM\\licenciatura-en-derecho-unadm\\antecedentes-de-los-derechos-humanos-lde\\reporte-antecedentes-de-los-derechos-humanos-Actividad-1.tex\n.\\aulaTEX\\latexmk-build.ps1 .\\UnADM\\licenciatura-en-derecho-unadm\\antecedentes-de-los-derechos-humanos-lde\\reporte-antecedentes-de-los-derechos-humanos-Actividad-2.tex\n.\\aulaTEX\\latexmk-build.ps1 .\\UnADM\\licenciatura-en-derecho-unadm\\antecedentes-de-los-derechos-humanos-lde\\reporte-antecedentes-de-los-derechos-humanos-Actividad-3.tex -lualatex\n.\\aulaTEX\\latexmk-build.ps1 .\\UnADM\\licenciatura-en-derecho-unadm\\antecedentes-de-los-derechos-humanos-lde\\reporte-antecedentes-de-los-derechos-humanos-Actividad-4.tex\n```\n\nLa resena requiere LuaLaTeX y Arial instalada en Windows; utiliza los archivos de fuente de `C:/Windows/Fonts`. No compilarla con pdfLaTeX. La compilacion e inspeccion visual no acreditan calificacion docente ni observacion personal completa del video.\n\n## Privacidad e integridad\n\nLa autenticacion utiliza la boveda local de AulaTeX. No guardar usuario, contrasena, PIN, cookies ni sesiones en la materia. Los originales pueden contener datos de docentes; no redistribuirlos automaticamente. La asistencia de IA se declara fuera de las cajas y no sustituye la reflexion personal ni acredita conocimientos previos. No se infieren creditos ni ubicacion curricular adicionales a los datos comprobados del curso.\n\n## Proximos pasos\n\n1. Cotejar la publicacion propia del foro S1 sin duplicarla y conservar el registro ya completado del cuestionario.\n2. Preparar una version de envio de la resena que cumpla tres cuartillas e identificacion oficial, conservando aparte el reporte interno ampliado.\n3. Consultar la calificacion del foro S2 cuando este disponible y registrar solo resultados confirmados.\n4. Registrar las versiones preparadas y, solo tras confirmacion real, nuevos envios y calificaciones.",
+      "current_platform_status": null
+    },
+    "report_paths": {
+      "tex": "reporte-antecedentes-de-los-derechos-humanos-Actividad-7.tex",
+      "pdf": "reporte-antecedentes-de-los-derechos-humanos-Actividad-7.pdf",
+      "internal_support_only": false
+    },
+    "editorial_policy": {
+      "template": "UnADM",
+      "preserve_specific_format": true,
+      "preserve_three_part_structure_when_applicable": true,
+      "declare_ai_as_required_without_claiming_personal_review": true,
+      "teaching_material_is_not_legal_authority": true
+    },
+    "temporal_state": "unprogrammed",
+    "platform_operations": [],
+    "editorial_cycle": "blocked",
+    "integration_complete": false,
+    "rubric_visual_verified": false
+  }
+}
+```

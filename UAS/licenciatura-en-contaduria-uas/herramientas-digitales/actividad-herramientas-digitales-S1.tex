@@ -1,0 +1,66 @@
+\newcommand{\actividadtitulo}{Carpeta compartida de trabajo}
+\newcommand{\actividadtipo}{Evidencia de la práctica S1}
+\newcommand{\uasestudiante}{Martín Jonathan de la Cruz Muñoz}
+\newcommand{\uasgrupo}{GPO103 LCP}
+\newcommand{\uasfecha}{22 de octubre de 2026}
+\newcommand{\actividadpaquetes}{\usepackage{tikz}\usetikzlibrary{calc,arrows.meta,babel}}
+\newcommand{\actividadpreliminares}{%
+  \section*{Resumen}\addcontentsline{toc}{section}{Resumen}
+  Se presenta la creación de una carpeta de trabajo en Google Drive, identificada con el grupo y el nombre del estudiante. Trece capturas documentan el acceso al servicio, la asignación del nombre, la apertura del panel Compartir y la configuración del acceso mediante vínculo. Los recuadros y las flechas ubican los controles empleados; las explicaciones describen la secuencia de operación. El estado final visible corresponde a acceso general por enlace con permiso de editor.
+  \clearpage\tableofcontents\clearpage
+}
+\newcounter{pasocaptura}
+\newcommand{\capturarequerida}[7]{%
+  \stepcounter{pasocaptura}
+  \noindent\begin{minipage}[t][.43\textheight][t]{\textwidth}
+  \subsection{#2}
+  {\small\setstretch{1.05}#3\par}\smallskip
+  \begin{center}
+  \begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (captura) at (0,0) {\includegraphics[width=.88\textwidth,height=.29\textheight,keepaspectratio]{assets-herramientas-digitales/semana-01/msedge_#1-pdf.png}};
+    \begin{scope}[x={(captura.south east)},y={(captura.north west)}]
+      \draw[red!75!black,line width=1.1pt] (#4,#5) rectangle (#6,#7);
+      \draw[-{Stealth[length=2mm]},red!75!black,line width=1.1pt] ($(#4,#7)+(-.045,.035)$) -- (#4,#7);
+    \end{scope}
+  \end{tikzpicture}
+  \par{\footnotesize Figura \thepasocaptura. #2.}
+  \end{center}
+  \end{minipage}\par
+  \ifodd\value{pasocaptura}\smallskip\else\clearpage\fi
+}
+\newcommand{\actividadcierre}{%
+  \section{Conclusiones}
+  La carpeta \textbf{GPO103 LCP - Martín Jonathan de la Cruz} quedó creada y configurada para el acceso mediante enlace. Su nombre identifica el espacio de trabajo, mientras que el panel Compartir determina quién puede acceder y qué puede hacer.
+  \par
+  El acceso visible permite editar a cualquier persona que tenga el vínculo. Esto facilita la colaboración, pero también permite modificar el contenido y exige revisar a quién se distribuye el enlace. Compartir mediante vínculo no equivale a añadir una persona concreta al listado de usuarios autorizados. La conservación de las capturas permite distinguir el estado restringido inicial de la configuración final sin suponer acciones que no aparecen en ellas.\footnote{Se utilizó el chat de GitHub Copilot como apoyo para la corrección y organización documental. Las ideas y el análisis son de realización propia del estudiante.}
+  \par\medskip
+  \begin{center}
+  \href{https://drive.google.com/drive/folders/11t7MGMNuMRCMJnfmcp_XAnmjFHO5qkWH?usp=sharing}{\colorbox{uasBlue}{\makebox[.9\textwidth]{\rule[-5mm]{0pt}{18mm}\textcolor{white}{\shortstack{\textbf{ABRIR CARPETA COMPARTIDA}\\GPO103 LCP - Martín Jonathan de la Cruz}}}}}
+  \end{center}
+  \clearpage
+}
+\newcommand{\actividadcontenido}{%
+  \section{Introducción}
+  El almacenamiento en la nube permite acceder a documentos desde distintos dispositivos y organizar un espacio de colaboración. En Google Drive, los permisos de una carpeta regulan el acceso a su contenido: el rol de lector permite consultar y el de editor permite modificar, incorporar o mover archivos. Las carpetas también transmiten permisos a su contenido, por lo que la elección del alcance de acceso debe revisarse antes de distribuir un vínculo \parencite{googleDriveCompartir}.
+  \par
+  La práctica documenta la creación de una carpeta de trabajo y la configuración de sus permisos en Google Drive.
+  \clearpage
+  \section{Procedimiento en Google Drive}
+  \capturarequerida{9A1AN2xxG3}{Acceso a Google}{Se escribe la dirección de Google en la barra del navegador y se abre el sitio. Este punto permite acceder al menú de aplicaciones de la cuenta utilizada.}{.13}{.90}{.71}{.96}
+  \capturarequerida{lsIaquUguc}{Menú de aplicaciones}{Desde la página de Google se abre el menú de aplicaciones situado junto al perfil. El panel presenta los servicios disponibles para la cuenta.}{.87}{.91}{.93}{.96}
+  \capturarequerida{wsJoCholWD}{Selección del servicio Drive}{En el panel de aplicaciones se selecciona el icono Drive. Esta acción abre el servicio de almacenamiento asociado a la cuenta.}{.71}{.74}{.80}{.84}
+  \capturarequerida{SqVnC94oLo}{Pantalla inicial de Drive}{La pantalla inicial muestra carpetas y archivos sugeridos. Para iniciar la creación de un nuevo recurso se localiza el botón Nuevo de la barra lateral.}{.025}{.83}{.14}{.89}
+  \capturarequerida{BnJRzCRFAh}{Creación de una carpeta}{Se abre Nuevo y se selecciona Carpeta nueva. La opción se encuentra al inicio del menú y abre el cuadro para asignar el nombre.}{.01}{.86}{.29}{.905}
+  \capturarequerida{MjwSGCEult}{Asignación del nombre}{En Carpeta nueva se introduce el grupo, las iniciales de la carrera y el nombre del estudiante. Se confirma con Crear para registrar la carpeta.}{.27}{.42}{.73}{.53}
+  \capturarequerida{aEuHJMX5DV}{Verificación de la carpeta creada}{En Mi unidad se localiza la carpeta GPO103 LCP - Martín Jonathan de la Cruz. Su presencia permite comprobar que el recurso fue creado con el nombre solicitado.}{.21}{.67}{.98}{.72}
+  \capturarequerida{HsB6EU9P4d}{Selección del recurso}{Se selecciona la fila de la carpeta. El resaltado de la fila identifica el recurso sobre el cual se aplicarán las acciones posteriores.}{.21}{.67}{.98}{.72}
+  \capturarequerida{5j2GG8JahP}{Apertura de opciones}{Con la carpeta seleccionada se abre su menú contextual. La opción Compartir conduce a las acciones para gestionar acceso o copiar el vínculo.}{.30}{.58}{.66}{.62}
+  \capturarequerida{B2ZfRcALgw}{Panel de uso compartido}{Se despliega Compartir y se selecciona Compartir en el submenú. Esta opción abre el panel que reúne usuarios autorizados y acceso general.}{.40}{.525}{.72}{.565}
+  \capturarequerida{X10ieLLASo}{Estado inicial restringido}{El panel muestra al propietario y el acceso general Restringido. En esta configuración solo pueden abrir la carpeta las personas que hayan recibido permiso; copiar el enlace por sí solo no cambia ese alcance \parencite{googleDriveCompartir}.}{.36}{.36}{.49}{.405}
+  \capturarequerida{8czKo5Qq8B}{Elección del permiso de acceso}{Después de seleccionar acceso para cualquier usuario con el vínculo, se abre el menú del rol. Las opciones permiten distinguir consulta, comentario y edición; la elección determina las facultades de quienes accedan.}{.57}{.14}{.86}{.37}
+  \capturarequerida{UP20ZKOoBC}{Confirmación del vínculo y rol}{El acceso general queda configurado para cualquier usuario con el vínculo, con el rol Editor. Se pulsa Copiar vínculo para obtener la dirección de acceso a la carpeta.}{.21}{.30}{.79}{.435}
+  \noindent\textbf{Vínculo de la carpeta:}\par
+  \noindent\url{https://drive.google.com/drive/folders/11t7MGMNuMRCMJnfmcp_XAnmjFHO5qkWH?usp=sharing}
+  \clearpage
+}
+\input{reporte-herramientas-digitales-plantilla-actividad.tex}

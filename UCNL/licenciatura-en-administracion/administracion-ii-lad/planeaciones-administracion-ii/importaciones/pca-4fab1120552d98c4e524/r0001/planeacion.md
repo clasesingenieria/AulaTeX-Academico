@@ -1,0 +1,454 @@
+# Planeacion: administracion-ii-lad
+
+Estado: needs_review. Conversion local, no aprobacion docente ni autorizacion de envio.
+
+## Identificacion
+
+```json
+{
+  "institution": "UCNL",
+  "program": "licenciatura-en-administracion",
+  "subject_id": "administracion-ii-lad",
+  "subject_title": "administracion-ii-lad",
+  "offering_id": "oferta-920ed7c07ea3f112",
+  "period": null,
+  "modality": null
+}
+```
+
+## Actividad source-01ac74c38605aa73: planeacion-G-S06-cuestionario-comites-equipos
+
+### Consigna importada
+
+[page:1]
+Planeación individual: cuestionario de comités y equipos
+
+Estado: BORRADOR / REQUIERE ACLARACIÓN. Revisión documental: 15 de septiembre de 2026. Documento
+derivado, no emitido ni aprobado por UCNL. No contiene respuestas ni inicia un cuestionario.
+
+
+1. Datos de identificación
+
+      Institución: Universidad Ciudadana de Nuevo León (UCNL).
+     Programa: Licenciatura en Administración con Acentuación en Empresas.
+     Docencia: identidad y datos de contacto omitidos por privacidad.
+     Año: 2026. Trayecto: 2do tetramestre. Periodo: 2026-3. Grupo: D.
+     Alcance: una actividad; identificación y contexto extraídos de la nota documental local.
+
+
+2. Datos de identificación de asignatura
+
+     Asignatura: Administración II (D). Curso Moodle: 20297.
+     Actividad anunciada en G: Cuestionario 1, semana 6, asociado al capítulo 16.
+     ID local: G-S06; no es identificador Moodle ni numeración oficial de actividad.
+     Modalidad de trabajo propuesta: preparación individual y respuesta digital cuando se habilite el módulo.
+      Disponibilidad: sin módulo verificable; nombre temático de esta ficha derivado de la asociación con capítulo
+     16.
+     Unidad institucional y clave curricular de asignatura: pendientes; semana y capítulo no acreditan unidad
+       oficial.
+
+
+3. Objetivos y contexto
+
+Objetivos oficiales no acreditados: los insumos no acreditan objetivos oficiales de actividad, asignatura o pro-
+grama; la descripción de carrera en P no se adopta como objetivo oficial. Resumen de P, separado del objetivo:
+la presentación promueve aprendizaje activo, reflexión y actividades basadas en preguntas; no informa reactivos,
+modalidad de respuesta ni reglas del cuestionario. Objetivo operativo propuesto: distinguir comités y equipos y
+analizar su relación con la toma grupal de decisiones mediante preparación conceptual y respuesta razonada a
+preguntas de estudio.
+
+Resultados observables propuestos:
+
+     R1: distinguir comités y equipos atendiendo a su finalidad y organización.
+     R2: relacionar una situación de trabajo con una forma pertinente de organización grupal.
+     R3: reconocer ventajas y dificultades de la toma grupal de decisiones.
+     R4: justificar o revisar una elección conceptual con apoyo en el contenido estudiado.
+
+El capítulo 16 y su asociación con Cuestionario 1 están documentados en C/G; la cobertura real de reactivos sigue
+pendiente. Los resultados no anticipan respuestas del aula ni constituyen una tabla oficial de especificaciones.
+
+
+4. Datos para planificación
+
+Diez campos de organización tomados del modelo estructural UnADM; no se trasladan sus políticas.
+
+
+Campo                                                 Desarrollo para esta actividad
+
+1. Contenido                                           Capítulo 16: comités, equipos y toma grupal de
+                                                        decisiones, según C; alcance efectivo del cuestionario
+                                                       pendiente.
+2. Técnica didáctica                               Comparación conceptual, análisis de situaciones y
+                                                        autoexplicación propuestos para preparar la actividad.
+3. Bibliografía y recursos                               B, capítulo 16 como lectura propuesta según C/G;
+                                                         cuestionario aún no verificable. Enlaces en bloque 8.
+
+
+
+
+                                             1
+
+[page:2]
+Campo                                                 Desarrollo para esta actividad
+
+4. Tiempo                                      120 minutos propuestos de preparación; duración
+                                                            efectiva del cuestionario pendiente y no incluida.
+5. Normatividad                                     Consigna, condiciones de respuesta y reglas de
+                                                      evaluación pendientes; ninguna política UnADM
+                                                              transferida.
+6. Tipo de evaluación                                 Preparación formativa propuesta; modalidad y
+                                             mecanismo de calificación del cuestionario pendientes.
+7. Actividad                                             Estudiar diferencias y decisiones grupales; preparar la
+                                                           participación sin elaborar respuestas a reactivos
+                                                            reales.
+8. Evidencia                                      Respuestas registradas en el módulo cuando se
+                                                                   habilite; notas preparatorias privadas, sin PDF exigido.
+9. Porcentaje                                   Peso individual pendiente dentro del bloque conjunto
+                                              de 30 % según E; no se infiere reparto igual.
+10. Observaciones                                Número, formato y cobertura de preguntas no
+                                                 documentados; no confundir el anuncio con un módulo
+                                                           disponible.
+
+
+
+Calendario literal de G: 22.02 2026, conservado sin reinterpretación; fecha antigua en conflicto con 2026-3.
+Apertura y vencimiento vigente: pendientes. Zona horaria: pendiente. No se transforma la fecha en un cierre de
+octubre. Sesión anunciada en C para capítulo 16: 12/10/2026, 14:00–15:00; es sesión, no apertura ni cierre del
+cuestionario.
+
+Secuencia de preparación propuesta; la aplicación institucional será una fase posterior con duración todavía des-
+conocida.
+
+Paso                     Acción del estudiante      Min                      Papel docente propuesto
+
+1. Delimitar                Revisar C/G y listar lo que  10                          Aclarar cobertura y
+                                  falta confirmar del                                           localizar el módulo
+                             cuestionario.                                              vigente.
+2. Estudiar                 Consultar capítulo 16 e     30                          Orientar lectura y
+                                 identificar conceptos                                      distinciones relevantes.
+                              centrales.
+3. Comparar                Contrastar comités y       25                        Revisar relaciones sin
+                          equipos en notas de                                    proporcionar respuestas.
+                             estudio.
+4. Aplicar                   Analizar situaciones de     30                       Proponer preguntas de
+                             práctica ajenas a                                    razonamiento formativo.
+                             reactivos reales.
+5. Revisar                  Autoexplicar decisiones y   15                         Retroalimentar
+                            detectar conceptos                                 argumentos durante
+                            inseguros.                                             preparación.
+6. Preparar acceso         Organizar dudas y revisar  10                        Confirmar condiciones
+                             instrucciones disponibles.                             antes de la aplicación.
+
+
+
+Total propuesto: 10 + 30 + 25 + 30 + 15 + 10 = 120 minutos. No incluye sesión anunciada ni tiempo de aplicación
+oficial. Después de la aclaración, leer la consigna vigente, responder en el módulo y comprobar el registro según
+sus indicaciones. Esta fase posterior no se cronometra aquí; si no hay módulo, conservar la preparación sin simular
+una entrega.
+
+
+5. Lineamientos
+
+     Confirmar enlace, cobertura, calendario y condiciones de aplicación antes de acceder a la actividad evaluada.
+
+
+                                             2
+
+[page:3]
+     Usar comparación y autoexplicación para estudiar; no asumir que el instrumento será de opción múltiple.
+    La ayuda docente descrita corresponde a preparación; no presupone asistencia durante la evaluación.
+     Evidencia digital prevista: respuestas registradas en el cuestionario; acuse o revisión dependerán de su
+      configuración.
+    No se exige PDF, captura, archivo de notas ni envío por correo; formato de reactivos y retroalimentación
+     pendientes.
+      Intentos, límites oficiales, navegación, consulta de materiales, colaboración e IA no constan; no se declaran
+     permitidos ni prohibidos.
+    Apoyo propuesto: solicitar condiciones accesibles antes de la aplicación; no atribuir ajustes ya concedidos
+      ni sanciones.
+
+
+6. Instrumento evaluación
+
+Lista de cotejo propuesta, sin puntuación ni pesos internos. Sirve para preparación, no para reconstruir la
+nota automática. Registro sugerido: observado / por revisar / no observable; las respuestas del módulo solo se
+revisarán si su configuración lo permite.
+
+
+Criterio alineado                                      Evidencia y momento de revisión
+
+R1. Distingue finalidad y organización de comités y      Comparación en notas de estudio; pasos 2–3.
+equipos.
+R2. Relaciona una situación con una forma de trabajo   Razonamiento de práctica, no reactivo real; paso 4.
+grupal.
+R3. Reconoce ventajas y dificultades de decidir en       Análisis preparatorio de decisiones; pasos 2 y 4.
+grupo.
+R4. Fundamenta o revisa una elección conceptual.       Autoexplicación y dudas detectadas; paso 5.
+
+
+
+Retroalimentación propuesta: indicar el concepto que conviene revisar y una pregunta orientadora; no calificar las
+notas personales.
+
+
+7. Concentrado
+
+Categorías del curso ordinario según E; no es distribución por semanas ni asignación por cuestionario.
+
+
+              Categoría                                        Peso sobre el curso
+
+               Actividades, cuestionarios, SCORM y foros, conjuntamente  30 %
+           Examen parcial                                     35 %
+           Examen final                                       35 %
+                Total ordinario                                      100 %
+
+
+
+G-S06 se ubica por tipo en el bloque colectivo; su peso individual no está acreditado ni equivale a todo el 30 %.
+Regularización y video de aprendizaje no se agregan al 100 %: su operación no está aclarada.
+
+
+8. Fuentes y pendientes
+
+    Base de esta revisión: fuentes-aula.md, Contenidos y sesiones, Actividades anunciadas y Evaluación insti-
+      tucional visible; nota derivada.
+     C: Portada del curso 20297, capítulo 16 y sesión de semana 6; referencia temática, no vencimiento.
+     P: Presentación general 802323, Introducción, Metodología y Forma de evaluar; orientación general.
+     G: Programación 802324, fila semana 6, Cuestionario 1 y fecha literal 22.02 2026; calendario en conflicto.
+     E: Esquema de evaluación, Calificación ordinaria; fuente de categorías y porcentajes.
+     B: Koontz, H., Weihrich, H. y Cannice, M. (2012). Administración: una perspectiva global y empresarial (14.ª
+      ed.). McGraw-Hill/Interamericana. Libro base. ISBN 978-607-15-0759-4; metadatos comprobados en la nota,
+      sin lectura integral acreditada.
+
+
+                                             3
+
+[page:4]
+Pendientes críticos: módulo, consigna, cobertura, calendario vigente, zona horaria, condiciones de aplicación,
+instrumento y peso individual; requieren aclaración docente.
+Revisión limitada a los dos documentos autorizados; no se consultaron URLs ni binarios en esta elaboración.
+Estado final: borrador / requiere aclaración.
+
+
+
+
+
+                                        4
+
+### Requisitos
+
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[]
+```
+
+### products
+
+```json
+[]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": []
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": null
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## sources
+
+```json
+[
+  {
+    "id": "src-local",
+    "kind": "pdf",
+    "authority": "unknown",
+    "title": "planeacion-G-S06-cuestionario-comites-equipos.pdf",
+    "url": null,
+    "path": "planeaciones-generadas/2026-3/revision-2026-09-15/planeacion-G-S06-cuestionario-comites-equipos.pdf",
+    "sha256": "01ac74c38605aa73cef25c9cdfa30311461344c096c8184afacfcc1081ea61ca",
+    "captured_at": null,
+    "media_type": "application/pdf"
+  }
+]
+```
+
+## field_status
+
+```json
+[
+  {
+    "path": "/identity",
+    "state": "inferred",
+    "reason": "Identidad editorial del catalogo; oferta interna, periodo y modalidad no acreditados cuando faltan.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/sources",
+    "state": "confirmed",
+    "reason": "Archivo local preservado; su huella no acredita autoria ni vigencia docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "local-file",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum",
+    "state": "unknown",
+    "reason": "No se deducen competencias, resultados ni temario que no esten documentados.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "document",
+        "quoted_text": "[page:1]\nPlaneación individual: cuestionario de comités y equipos\n\nEstado: BORRADOR / REQUIERE ACLARACIÓN. Revisión documental: 15 de septiembre de 2026. Documento\nderivado, no emitido ni aprobado por UCNL. No contiene respuestas ni inicia un cuestionario.\n\n\n1. Datos de identificación\n\n      Institución: Universidad Ciudadana de Nuevo León (UCNL).\n     Programa: Licenciatura en Administración con Acentuación en Empresas.\n     Docencia: identidad y datos de contacto omitidos por privacidad.\n     Año: 2026. Trayecto: 2do tetramestre. Periodo: 2026-3. Grupo: D.\n     Alcance: una actividad; identificación y contexto extraídos de la nota documental local.\n\n\n2. Datos de identificación de asignatura\n\n     Asignatura: Administración II (D). Curso Moodle: 20297.\n     Actividad anunciada en G: Cuestionario 1, semana 6, asociado al capítulo 16.\n     ID local: G-S06; no es identificador Moodle ni numeración oficial de actividad.\n     Modalidad de trabajo propuesta: preparación individual y respuesta digital cuando se habilite el módulo.\n      Disponibilidad: sin módulo verificable; nombre temático de esta ficha derivado de la asociación con capítulo\n     16.\n     Unidad institucional y clave curricular de asignatura: pendientes; semana y capítulo no acreditan unidad\n       oficial.\n\n\n3. Objetivos y contexto\n\nObjetivos oficiales no acreditados: los insumos no acreditan objetivos oficiales de actividad, asignatura o pro-\ngrama; la descripción de carrera en P no se adopta como objetivo oficial. Resumen de P, separado del objetivo:\nla presentación promueve aprendizaje activo, reflexión y actividades basadas en preguntas; no informa reactivos,\nmodalidad de respuesta ni reglas del cuestionario. Objetivo operativo propuesto: distinguir comités y equipos y\nanalizar su relación con la toma grupal de decisiones mediante preparación conceptual y respuesta razonada a\npreguntas de estudio.\n\nResultados observables propuestos:\n\n     R1: distinguir comités y equipos atendiendo a su finalidad y organización.\n     R2: relacionar una situación de trabajo con una forma pertinente de organización grupal.\n     R3: reconocer ventajas y dificultades de la toma grupal de decisiones.\n     R4: justificar o revisar una elección conceptual con apoyo en el contenido estudiado.\n\nEl capítulo 16 y su asociación con Cuestionario 1 están documentados en C/G; la cobertura real de reactivos sigue\npendiente. Los resultados no anticipan respuestas del aula ni constituyen una tabla oficial de especificaciones.\n\n\n4. Datos para planificación\n\nDiez campos de organización tomados del modelo estructural UnADM; no se trasladan sus políticas.\n\n\nCampo                                                 Desarrollo para esta actividad\n\n1. Contenido                                           Capítulo 16: comités, equipos y toma grupal de\n                                                        decisiones, según C; alcance efectivo del cuestionario\n                                                       pendiente.\n2. Técnica didáctica                               Comparación conceptual, análisis de situaciones y\n                                                        autoexplicación propuestos para preparar la actividad.\n3. Bibliografía y recursos                               B, capítulo 16 como lectura propuesta según C/G;\n                                                         cuestionario aún no verificable. Enlaces en bloque 8.\n\n\n\n\n                                             1\n\n[page:2]\nCampo                                                 Desarrollo para esta actividad\n\n4. Tiempo                                      120 minutos propuestos de preparación; duración\n                                                            efectiva del cuestionario pendiente y no incluida.\n5. Normatividad                                     Consigna, condiciones de respuesta y reglas de\n                                                      evaluación pendientes; ninguna política UnADM\n                                                              transferida.\n6. Tipo de evaluación                                 Preparación formativa propuesta; modalidad y\n                                             mecanismo de calificación del cuestionario pendientes.\n7. Actividad                                             Estudiar diferencias y decisiones grupales; preparar la\n                                                           participación sin elaborar respuestas a reactivos\n                                                            reales.\n8. Evidencia                                      Respuestas registradas en el módulo cuando se\n                                                                   habilite; notas preparatorias privadas, sin PDF exigido.\n9. Porcentaje                                   Peso individual pendiente dentro del bloque conjunto\n                                              de 30 % según E; no se infiere reparto igual.\n10. Observaciones                                Número, formato y cobertura de preguntas no\n                                                 documentados; no confundir el anuncio con un módulo\n                                                           disponible.\n\n\n\nCalendario literal de G: 22.02 2026, conservado sin reinterpretación; fecha antigua en conflicto con 2026-3.\nApertura y vencimiento vigente: pendientes. Zona horaria: pendiente. No se transforma la fecha en un cierre de\noctubre. Sesión anunciada en C para capítulo 16: 12/10/2026, 14:00–15:00; es sesión, no apertura ni cierre del\ncuestionario.\n\nSecuencia de preparación propuesta; la aplicación institucional será una fase posterior con duración todavía des-\nconocida.\n\nPaso                     Acción del estudiante      Min                      Papel docente propuesto\n\n1. Delimitar                Revisar C/G y listar lo que  10                          Aclarar cobertura y\n                                  falta confirmar del                                           localizar el módulo\n                             cuestionario.                                              vigente.\n2. Estudiar                 Consultar capítulo 16 e     30                          Orientar lectura y\n                                 identificar conceptos                                      distinciones relevantes.\n                              centrales.\n3. Comparar                Contrastar comités y       25                        Revisar relaciones sin\n                          equipos en notas de                                    proporcionar respuestas.\n                             estudio.\n4. Aplicar                   Analizar situaciones de     30                       Proponer preguntas de\n                             práctica ajenas a                                    razonamiento formativo.\n                             reactivos reales.\n5. Revisar                  Autoexplicar decisiones y   15                         Retroalimentar\n                            detectar conceptos                                 argumentos durante\n                            inseguros.                                             preparación.\n6. Preparar acceso         Organizar dudas y revisar  10                        Confirmar condiciones\n                             instrucciones disponibles.                             antes de la aplicación.\n\n\n\nTotal propuesto: 10 + 30 + 25 + 30 + 15 + 10 = 120 minutos. No incluye sesión anunciada ni tiempo de aplicación\noficial. Después de la aclaración, leer la consigna vigente, responder en el módulo y comprobar el registro según\nsus indicaciones. Esta fase posterior no se cronometra aquí; si no hay módulo, conservar la preparación sin simular\nuna entrega.\n\n\n5. Lineamientos\n\n     Confirmar enlace, cobertura, calendario y condiciones de aplicación antes de acceder a la actividad evaluada.\n\n\n                                             2\n\n[page:3]\n     Usar comparación y autoexplicación para estudiar; no asumir que el instrumento será de opción múltiple.\n    La ayuda docente descrita corresponde a preparación; no presupone asistencia durante la evaluación.\n     Evidencia digital prevista: respuestas registradas en el cuestionario; acuse o revisión dependerán de su\n      configuración.\n    No se exige PDF, captura, archivo de notas ni envío por correo; formato de reactivos y retroalimentación\n     pendientes.\n      Intentos, límites oficiales, navegación, consulta de materiales, colaboración e IA no constan; no se declaran\n     permitidos ni prohibidos.\n    Apoyo propuesto: solicitar condiciones accesibles antes de la aplicación; no atribuir ajustes ya concedidos\n      ni sanciones.\n\n\n6. Instrumento evaluación\n\nLista de cotejo propuesta, sin puntuación ni pesos internos. Sirve para preparación, no para reconstruir la\nnota automática. Registro sugerido: observado / por revisar / no observable; las respuestas del módulo solo se\nrevisarán si su configuración lo permite.\n\n\nCriterio alineado                                      Evidencia y momento de revisión\n\nR1. Distingue finalidad y organización de comités y      Comparación en notas de estudio; pasos 2–3.\nequipos.\nR2. Relaciona una situación con una forma de trabajo   Razonamiento de práctica, no reactivo real; paso 4.\ngrupal.\nR3. Reconoce ventajas y dificultades de decidir en       Análisis preparatorio de decisiones; pasos 2 y 4.\ngrupo.\nR4. Fundamenta o revisa una elección conceptual.       Autoexplicación y dudas detectadas; paso 5.\n\n\n\nRetroalimentación propuesta: indicar el concepto que conviene revisar y una pregunta orientadora; no calificar las\nnotas personales.\n\n\n7. Concentrado\n\nCategorías del curso ordinario según E; no es distribución por semanas ni asignación por cuestionario.\n\n\n              Categoría                                        Peso sobre el curso\n\n               Actividades, cuestionarios, SCORM y foros, conjuntamente  30 %\n           Examen parcial                                     35 %\n           Examen final                                       35 %\n                Total ordinario                                      100 %\n\n\n\nG-S06 se ubica por tipo en el bloque colectivo; su peso individual no está acreditado ni equivale a todo el 30 %.\nRegularización y video de aprendizaje no se agregan al 100 %: su operación no está aclarada.\n\n\n8. Fuentes y pendientes\n\n    Base de esta revisión: fuentes-aula.md, Contenidos y sesiones, Actividades anunciadas y Evaluación insti-\n      tucional visible; nota derivada.\n     C: Portada del curso 20297, capítulo 16 y sesión de semana 6; referencia temática, no vencimiento.\n     P: Presentación general 802323, Introducción, Metodología y Forma de evaluar; orientación general.\n     G: Programación 802324, fila semana 6, Cuestionario 1 y fecha literal 22.02 2026; calendario en conflicto.\n     E: Esquema de evaluación, Calificación ordinaria; fuente de categorías y porcentajes.\n     B: Koontz, H., Weihrich, H. y Cannice, M. (2012). Administración: una perspectiva global y empresarial (14.ª\n      ed.). McGraw-Hill/Interamericana. Libro base. ISBN 978-607-15-0759-4; metadatos comprobados en la nota,\n      sin lectura integral acreditada.\n\n\n                                             3\n\n[page:4]\nPendientes críticos: módulo, consigna, cobertura, calendario vigente, zona horaria, condiciones de aplicación,\ninstrumento y peso individual; requieren aclaración docente.\nRevisión limitada a los dos documentos autorizados; no se consultaron URLs ni binarios en esta elaboración.\nEstado final: borrador / requiere aclaración.\n\n\n\n\n\n                                        4"
+      }
+    ],
+    "alternatives": []
+  }
+]
+```
+
+## review
+
+```json
+{
+  "state": "needs_review",
+  "reviewed_at": null,
+  "reviewer_role": null,
+  "critical_gaps": [
+    "Cotejar consigna y procedencia docente; conversion local no equivale a aprobacion",
+    "Documento sin segmentar: identificar actividades, requisitos, preguntas y rubrica antes de ejecutar"
+  ],
+  "semantic_validation": "failed"
+}
+```
+
+## extensions
+
+```json
+{
+  "conversion": {
+    "version": "1.0",
+    "source_format": ".pdf",
+    "source_sha256": "01ac74c38605aa73cef25c9cdfa30311461344c096c8184afacfcc1081ea61ca",
+    "source_payload": null,
+    "source_blocks": [
+      {
+        "locator": "page:1",
+        "text": "Planeación individual: cuestionario de comités y equipos\n\nEstado: BORRADOR / REQUIERE ACLARACIÓN. Revisión documental: 15 de septiembre de 2026. Documento\nderivado, no emitido ni aprobado por UCNL. No contiene respuestas ni inicia un cuestionario.\n\n\n1. Datos de identificación\n\n      Institución: Universidad Ciudadana de Nuevo León (UCNL).\n     Programa: Licenciatura en Administración con Acentuación en Empresas.\n     Docencia: identidad y datos de contacto omitidos por privacidad.\n     Año: 2026. Trayecto: 2do tetramestre. Periodo: 2026-3. Grupo: D.\n     Alcance: una actividad; identificación y contexto extraídos de la nota documental local.\n\n\n2. Datos de identificación de asignatura\n\n     Asignatura: Administración II (D). Curso Moodle: 20297.\n     Actividad anunciada en G: Cuestionario 1, semana 6, asociado al capítulo 16.\n     ID local: G-S06; no es identificador Moodle ni numeración oficial de actividad.\n     Modalidad de trabajo propuesta: preparación individual y respuesta digital cuando se habilite el módulo.\n      Disponibilidad: sin módulo verificable; nombre temático de esta ficha derivado de la asociación con capítulo\n     16.\n     Unidad institucional y clave curricular de asignatura: pendientes; semana y capítulo no acreditan unidad\n       oficial.\n\n\n3. Objetivos y contexto\n\nObjetivos oficiales no acreditados: los insumos no acreditan objetivos oficiales de actividad, asignatura o pro-\ngrama; la descripción de carrera en P no se adopta como objetivo oficial. Resumen de P, separado del objetivo:\nla presentación promueve aprendizaje activo, reflexión y actividades basadas en preguntas; no informa reactivos,\nmodalidad de respuesta ni reglas del cuestionario. Objetivo operativo propuesto: distinguir comités y equipos y\nanalizar su relación con la toma grupal de decisiones mediante preparación conceptual y respuesta razonada a\npreguntas de estudio.\n\nResultados observables propuestos:\n\n     R1: distinguir comités y equipos atendiendo a su finalidad y organización.\n     R2: relacionar una situación de trabajo con una forma pertinente de organización grupal.\n     R3: reconocer ventajas y dificultades de la toma grupal de decisiones.\n     R4: justificar o revisar una elección conceptual con apoyo en el contenido estudiado.\n\nEl capítulo 16 y su asociación con Cuestionario 1 están documentados en C/G; la cobertura real de reactivos sigue\npendiente. Los resultados no anticipan respuestas del aula ni constituyen una tabla oficial de especificaciones.\n\n\n4. Datos para planificación\n\nDiez campos de organización tomados del modelo estructural UnADM; no se trasladan sus políticas.\n\n\nCampo                                                 Desarrollo para esta actividad\n\n1. Contenido                                           Capítulo 16: comités, equipos y toma grupal de\n                                                        decisiones, según C; alcance efectivo del cuestionario\n                                                       pendiente.\n2. Técnica didáctica                               Comparación conceptual, análisis de situaciones y\n                                                        autoexplicación propuestos para preparar la actividad.\n3. Bibliografía y recursos                               B, capítulo 16 como lectura propuesta según C/G;\n                                                         cuestionario aún no verificable. Enlaces en bloque 8.\n\n\n\n\n                                             1"
+      },
+      {
+        "locator": "page:2",
+        "text": "Campo                                                 Desarrollo para esta actividad\n\n4. Tiempo                                      120 minutos propuestos de preparación; duración\n                                                            efectiva del cuestionario pendiente y no incluida.\n5. Normatividad                                     Consigna, condiciones de respuesta y reglas de\n                                                      evaluación pendientes; ninguna política UnADM\n                                                              transferida.\n6. Tipo de evaluación                                 Preparación formativa propuesta; modalidad y\n                                             mecanismo de calificación del cuestionario pendientes.\n7. Actividad                                             Estudiar diferencias y decisiones grupales; preparar la\n                                                           participación sin elaborar respuestas a reactivos\n                                                            reales.\n8. Evidencia                                      Respuestas registradas en el módulo cuando se\n                                                                   habilite; notas preparatorias privadas, sin PDF exigido.\n9. Porcentaje                                   Peso individual pendiente dentro del bloque conjunto\n                                              de 30 % según E; no se infiere reparto igual.\n10. Observaciones                                Número, formato y cobertura de preguntas no\n                                                 documentados; no confundir el anuncio con un módulo\n                                                           disponible.\n\n\n\nCalendario literal de G: 22.02 2026, conservado sin reinterpretación; fecha antigua en conflicto con 2026-3.\nApertura y vencimiento vigente: pendientes. Zona horaria: pendiente. No se transforma la fecha en un cierre de\noctubre. Sesión anunciada en C para capítulo 16: 12/10/2026, 14:00–15:00; es sesión, no apertura ni cierre del\ncuestionario.\n\nSecuencia de preparación propuesta; la aplicación institucional será una fase posterior con duración todavía des-\nconocida.\n\nPaso                     Acción del estudiante      Min                      Papel docente propuesto\n\n1. Delimitar                Revisar C/G y listar lo que  10                          Aclarar cobertura y\n                                  falta confirmar del                                           localizar el módulo\n                             cuestionario.                                              vigente.\n2. Estudiar                 Consultar capítulo 16 e     30                          Orientar lectura y\n                                 identificar conceptos                                      distinciones relevantes.\n                              centrales.\n3. Comparar                Contrastar comités y       25                        Revisar relaciones sin\n                          equipos en notas de                                    proporcionar respuestas.\n                             estudio.\n4. Aplicar                   Analizar situaciones de     30                       Proponer preguntas de\n                             práctica ajenas a                                    razonamiento formativo.\n                             reactivos reales.\n5. Revisar                  Autoexplicar decisiones y   15                         Retroalimentar\n                            detectar conceptos                                 argumentos durante\n                            inseguros.                                             preparación.\n6. Preparar acceso         Organizar dudas y revisar  10                        Confirmar condiciones\n                             instrucciones disponibles.                             antes de la aplicación.\n\n\n\nTotal propuesto: 10 + 30 + 25 + 30 + 15 + 10 = 120 minutos. No incluye sesión anunciada ni tiempo de aplicación\noficial. Después de la aclaración, leer la consigna vigente, responder en el módulo y comprobar el registro según\nsus indicaciones. Esta fase posterior no se cronometra aquí; si no hay módulo, conservar la preparación sin simular\nuna entrega.\n\n\n5. Lineamientos\n\n     Confirmar enlace, cobertura, calendario y condiciones de aplicación antes de acceder a la actividad evaluada.\n\n\n                                             2"
+      },
+      {
+        "locator": "page:3",
+        "text": "     Usar comparación y autoexplicación para estudiar; no asumir que el instrumento será de opción múltiple.\n    La ayuda docente descrita corresponde a preparación; no presupone asistencia durante la evaluación.\n     Evidencia digital prevista: respuestas registradas en el cuestionario; acuse o revisión dependerán de su\n      configuración.\n    No se exige PDF, captura, archivo de notas ni envío por correo; formato de reactivos y retroalimentación\n     pendientes.\n      Intentos, límites oficiales, navegación, consulta de materiales, colaboración e IA no constan; no se declaran\n     permitidos ni prohibidos.\n    Apoyo propuesto: solicitar condiciones accesibles antes de la aplicación; no atribuir ajustes ya concedidos\n      ni sanciones.\n\n\n6. Instrumento evaluación\n\nLista de cotejo propuesta, sin puntuación ni pesos internos. Sirve para preparación, no para reconstruir la\nnota automática. Registro sugerido: observado / por revisar / no observable; las respuestas del módulo solo se\nrevisarán si su configuración lo permite.\n\n\nCriterio alineado                                      Evidencia y momento de revisión\n\nR1. Distingue finalidad y organización de comités y      Comparación en notas de estudio; pasos 2–3.\nequipos.\nR2. Relaciona una situación con una forma de trabajo   Razonamiento de práctica, no reactivo real; paso 4.\ngrupal.\nR3. Reconoce ventajas y dificultades de decidir en       Análisis preparatorio de decisiones; pasos 2 y 4.\ngrupo.\nR4. Fundamenta o revisa una elección conceptual.       Autoexplicación y dudas detectadas; paso 5.\n\n\n\nRetroalimentación propuesta: indicar el concepto que conviene revisar y una pregunta orientadora; no calificar las\nnotas personales.\n\n\n7. Concentrado\n\nCategorías del curso ordinario según E; no es distribución por semanas ni asignación por cuestionario.\n\n\n              Categoría                                        Peso sobre el curso\n\n               Actividades, cuestionarios, SCORM y foros, conjuntamente  30 %\n           Examen parcial                                     35 %\n           Examen final                                       35 %\n                Total ordinario                                      100 %\n\n\n\nG-S06 se ubica por tipo en el bloque colectivo; su peso individual no está acreditado ni equivale a todo el 30 %.\nRegularización y video de aprendizaje no se agregan al 100 %: su operación no está aclarada.\n\n\n8. Fuentes y pendientes\n\n    Base de esta revisión: fuentes-aula.md, Contenidos y sesiones, Actividades anunciadas y Evaluación insti-\n      tucional visible; nota derivada.\n     C: Portada del curso 20297, capítulo 16 y sesión de semana 6; referencia temática, no vencimiento.\n     P: Presentación general 802323, Introducción, Metodología y Forma de evaluar; orientación general.\n     G: Programación 802324, fila semana 6, Cuestionario 1 y fecha literal 22.02 2026; calendario en conflicto.\n     E: Esquema de evaluación, Calificación ordinaria; fuente de categorías y porcentajes.\n     B: Koontz, H., Weihrich, H. y Cannice, M. (2012). Administración: una perspectiva global y empresarial (14.ª\n      ed.). McGraw-Hill/Interamericana. Libro base. ISBN 978-607-15-0759-4; metadatos comprobados en la nota,\n      sin lectura integral acreditada.\n\n\n                                             3"
+      },
+      {
+        "locator": "page:4",
+        "text": "Pendientes críticos: módulo, consigna, cobertura, calendario vigente, zona horaria, condiciones de aplicación,\ninstrumento y peso individual; requieren aclaración docente.\nRevisión limitada a los dos documentos autorizados; no se consultaron URLs ni binarios en esta elaboración.\nEstado final: borrador / requiere aclaración.\n\n\n\n\n\n                                        4"
+      }
+    ],
+    "unsegmented_document": true,
+    "period_pending": true,
+    "activity_mapping": [
+      {
+        "activity_id": "source-01ac74c38605aa73",
+        "local_number": null,
+        "source_locator": "document",
+        "source_is_summary": false
+      }
+    ]
+  }
+}
+```

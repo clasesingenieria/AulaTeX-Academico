@@ -1,0 +1,1006 @@
+# Planeacion: derecho-penal-especial-mexicano-lde
+
+Estado: needs_review. Revision local; no autoriza envios a plataforma.
+
+## Identificacion
+
+```json
+{
+  "institution": "UnADM",
+  "program": "licenciatura-en-derecho-unadm",
+  "subject_id": "derecho-penal-especial-mexicano-lde",
+  "subject_title": "derecho-penal-especial-mexicano-lde",
+  "offering_id": "oferta-53154ab54c520110",
+  "period": null,
+  "modality": null
+}
+```
+
+## Actividad s4-valoracion-decisiones: Valoración de decisiones
+
+### Consigna importada
+
+enseñanza y
+Aplicar  los elementos de  los  delitos de  peligro  efectivo y presunto mediante  laaprendizaje utilizada y
+investigación jurídica dirigida y la valoración de situaciones hipotéticas, para identificar
+la bibliografía                        conductas de riesgo penalmente relevantes y fundamentar su posible clasificación jurídica.
+consultada)
+Actividad: Valoración de decisiones
+
+Semana 4. Delitos de peligro efectivo y presunto
+
+Propósito de la actividad
+
+Material de consulta
+
+I.    Contenido de estudio de la Unidad 3.
+II.   Código Penal Federal.
+III.   Código Penal para el Distrito Federal.
+IV.    Procesador de textos (Word o equivalente).
+
+Indicaciones
+
+1. Investigación jurídica
+
+Consulta  el contenido de  la Unidad 3 y los códigos penales señalados. Investiga
+brevemente las siguientes figuras:
+
+I.    Disparo de arma de fuego sobre persona y ataque peligroso.
+II.   Abandono de niños y enfermos.
+III.   Abandono de atropellados.
+IV.   Abandono de cónyuge, hijos o ambos.
+V.   Omisión de socorro y omisión de cuidado.
+VI.    Peligro de contagio.
+
+Elabora una tabla donde señales, para cada figura, en qué consiste la conducta y en qué
+artículo y legislación se encuentra regulada. Si alguna figura no aparece con esa
+denominación o ya no se encuentra vigente, indícalo.
+
+No es necesario copiar definiciones ni artículos completos. Explica brevemente lo que
+comprendiste y fundaméntalo.
+
+2. Valoración de decisiones
+
+Lee  las siguientes situaciones y responde  las preguntas. Utiliza los conceptos que
+investigaste y fundamenta tus respuestas con la legislación consultada.
+
+Caso 1. Conductas peligrosas
+
+Durante una discusión, Roberto dispara un arma de fuego en dirección a Carlos, sin
+lesionarlo. En otro hecho, Miguel intenta agredir a una persona con un objeto peligroso,
+pero es detenido antes de alcanzarla.
+
+Responde:
+
+a) ¿Qué figuras delictivas podrían relacionarse con estas conductas?
+
+
+
+
+
+b) ¿Qué elementos necesitarías comprobar antes de determinar si existe un delito?
+
+Caso 2. Abandono y deberes de cuidado
+
+Ana deja solo durante varias horas a un menor que está bajo su responsabilidad. En otra
+situación, un conductor atropella a una persona y abandona el lugar sin solicitar ayuda. Por
+separado, Pedro deja de proporcionar los alimentos indispensables a sus hijos.
+
+Responde:
+
+a) ¿Qué figuras delictivas podrían analizarse en cada situación?
+
+b) ¿Qué obligaciones y circunstancias deben considerarse para determinar la posible
+responsabilidad penal?
+
+Caso 3. Omisión de auxilio y peligro de contagio
+
+Una persona observa a alguien en una situación de peligro y decide no solicitar ayuda. En
+otro hecho, una cuidadora abandona a una persona enferma que depende de su atención.
+
+Por separado, alguien que conoce una enfermedad transmisible realiza una conducta que
+podría representar un riesgo para otra persona.
+
+Responde:
+
+a) ¿Qué diferencias existen entre la omisión de socorro, la omisión de cuidado y el
+peligro de contagio?
+
+b) ¿Qué circunstancias deben comprobarse antes de considerar que alguna de estas
+conductas constituye un delito?
+
+3. Decisión fundamentada
+
+Selecciona uno de los tres casos y explica en un párrafo de cinco a siete líneas qué decisión
+jurídica tomarías, qué artículo utilizarías para fundamentarla y qué información adicional
+necesitarías para confirmarla.
+
+4. Entrega
+
+Integra en un solo documento:
+
+I.    Portada con tus datos académicos.
+II.    Tabla breve de investigación jurídica.
+III.    Respuestas a los tres casos.
+IV.    Decisión fundamentada.
+V.    Referencias consultadas en formato APA 7.
+
+Extensión máxima: cuatro cuartillas, incluyendo portada y referencias.
+
+Modalidad: individual.
+
+Formato de entrega: PDF.
+
+
+
+
+
+
+Evidencia de la                                      Actividad ponderable.
+evaluación                                        Valoración de decisiones
+
+
+
+Porcentaje de
+calificación que aporta                                         (10/100)
+(--/100)
+
+
+
+Observaciones                      I.   La actividad se realizará individualmente.
+II.    Investiga solo los conceptos necesarios y aplica lo encontrado directamente a las
+situaciones.
+III.   Fundamenta tus valoraciones en las disposiciones jurídicas que realmente
+consultes y distingue entre conductas reguladas, posibles equivalencias y figuras
+no localizadas en el código revisado.
+IV.   No supongas hechos no descritos. Utiliza lenguaje propio y referencias APA 7.
+V.    Extensión máxima: seis cuartillas, incluyendo portada, tabla y bibliografía.
+VI.   Se valora la calidad del razonamiento, no la cantidad de texto.
+
+Lineamientos
+Con base en lo señalado en los siguientes artículos del Reglamento Universitario de la Universidad Abierta y a
+Distancia de México:
+
+Artículo 27. La calificación representa la valoración numérica del aprovechamiento que la o el estudiante logró en
+cada unidad didáctica. La escala de calificaciones comprende del 0 (cero) al 100 (cien), y la calificación mínima
+aprobatoria será 60 (sesenta).
+
+En ningún caso procederá la renuncia a la calificación obtenida. Las actividades y evidencias de aprendizaje en las
+que se identifique falta de integridad académica serán evaluadas con 0 (cero).
+
+Artículo 76. Son obligaciones de las y los estudiantes:
+
+V. Realizar, con integridad académica, las actividades que están señaladas en el aula virtual del programa educativo
+en el que están inscritos, conforme a las fechas establecidas en el calendario de aula.
+
+Lineamientos para la evaluación del aprendizaje
+
+•  La entrega de actividades se realizará de acuerdo con el calendario proporcionado por su Figura
+Académica y marcado en el presente documento.
+•  La entrega corresponde a un solo intento.
+•  Las entregas extemporáneas a la fecha límite estarán sujeta a una penalización de 20% menos,
+aplicable y de acuerdo a tabla. La recepción de actividades será hasta el día de cierre de aula, 02 de
+diciembre.
+•  La persona estudiante entregará sus actividades debidamente citadas en formato APA 7ª edición.
+•  La aplicación o uso de las herramientas de IA se debe apegar a los Lineamientos para el uso
+ético y responsable de la IA. Escala de evaluación para actividades con IA.
+
+Criterio                         Sanción / Penalización
+50% a 99%, NO declaró uso de IA.                 5 puntos menos
+
+
+
+
+
+
+
+### Requisitos
+
+1. Tabla de investigación jurídica: para cada figura, conducta, artículo y legislación; indicar figuras no localizadas o no vigentes. No transcribir definiciones ni artículos completos.
+2. Caso 1. Conductas peligrosas: aplicar los cuestionamientos docentes y fundamentar la clasificación sin suponer hechos.
+3. Caso 2. Abandono y deberes de cuidado: aplicar los cuestionamientos docentes y fundamentar la clasificación sin suponer hechos.
+4. Caso 3. Omisión de auxilio y peligro de contagio: aplicar los cuestionamientos docentes y fundamentar la clasificación sin suponer hechos.
+5. Elegir un caso o ficha y redactar una decisión o conclusión de cinco a siete líneas, con fundamento consultado e información adicional indispensable.
+6. PDF individual con portada, tabla de investigación, respuestas o fichas, cierre y referencias APA 7. Los límites de extensión contradictorios se conservan en el cotejo.
+
+### platform
+
+```json
+null
+```
+
+### role
+
+```json
+"learning"
+```
+
+### unit_id
+
+```json
+"3"
+```
+
+### weeks
+
+```json
+[
+  4
+]
+```
+
+### outcome_ids
+
+```json
+[
+  "resultado-s4"
+]
+```
+
+### topic_ids
+
+```json
+[]
+```
+
+### questions
+
+```json
+[
+  {
+    "id": "pregunta-1-1",
+    "context": "Durante una discusión, Roberto dispara un arma de fuego en dirección a Carlos, sin\nlesionarlo. En otro hecho, Miguel intenta agredir a una persona con un objeto peligroso,\npero es detenido antes de alcanzarla.",
+    "text": "¿Qué figuras delictivas podrían relacionarse con estas conductas?",
+    "requirement_ids": [
+      "req-caso-1"
+    ]
+  },
+  {
+    "id": "pregunta-1-2",
+    "context": "Durante una discusión, Roberto dispara un arma de fuego en dirección a Carlos, sin\nlesionarlo. En otro hecho, Miguel intenta agredir a una persona con un objeto peligroso,\npero es detenido antes de alcanzarla.",
+    "text": "¿Qué elementos necesitarías comprobar antes de determinar si existe un delito?",
+    "requirement_ids": [
+      "req-caso-1"
+    ]
+  },
+  {
+    "id": "pregunta-2-1",
+    "context": "Ana deja solo durante varias horas a un menor que está bajo su responsabilidad. En otra\nsituación, un conductor atropella a una persona y abandona el lugar sin solicitar ayuda. Por\nseparado, Pedro deja de proporcionar los alimentos indispensables a sus hijos.",
+    "text": "¿Qué figuras delictivas podrían analizarse en cada situación?",
+    "requirement_ids": [
+      "req-caso-2"
+    ]
+  },
+  {
+    "id": "pregunta-2-2",
+    "context": "Ana deja solo durante varias horas a un menor que está bajo su responsabilidad. En otra\nsituación, un conductor atropella a una persona y abandona el lugar sin solicitar ayuda. Por\nseparado, Pedro deja de proporcionar los alimentos indispensables a sus hijos.",
+    "text": "¿Qué obligaciones y circunstancias deben considerarse para determinar la posible responsabilidad penal?",
+    "requirement_ids": [
+      "req-caso-2"
+    ]
+  },
+  {
+    "id": "pregunta-3-1",
+    "context": "Una persona observa a alguien en una situación de peligro y decide no solicitar ayuda. En\notro hecho, una cuidadora abandona a una persona enferma que depende de su atención.\n\nPor separado, alguien que conoce una enfermedad transmisible realiza una conducta que\npodría representar un riesgo para otra persona.",
+    "text": "¿Qué diferencias existen entre la omisión de socorro, la omisión de cuidado y el peligro de contagio?",
+    "requirement_ids": [
+      "req-caso-3"
+    ]
+  },
+  {
+    "id": "pregunta-3-2",
+    "context": "Una persona observa a alguien en una situación de peligro y decide no solicitar ayuda. En\notro hecho, una cuidadora abandona a una persona enferma que depende de su atención.\n\nPor separado, alguien que conoce una enfermedad transmisible realiza una conducta que\npodría representar un riesgo para otra persona.",
+    "text": "¿Qué circunstancias deben comprobarse antes de considerar que alguna de estas conductas constituye un delito?",
+    "requirement_ids": [
+      "req-caso-3"
+    ]
+  }
+]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[]
+```
+
+### products
+
+```json
+[
+  {
+    "id": "producto-documento",
+    "kind": "report",
+    "recipient": null,
+    "editable_format": "Procesador de textos",
+    "submission_format": "PDF",
+    "structure": [
+      "Portada",
+      "Tabla de investigación",
+      "Respuestas a tres casos",
+      "Decisión fundamentada de cinco a siete líneas",
+      "Referencias APA 7"
+    ],
+    "length": "Límite de extensión en conflicto; consultar alternativas y fuentes.",
+    "filename_pattern": null,
+    "accessibility": null,
+    "requirement_ids": [
+      "req-investigacion",
+      "req-caso-1",
+      "req-caso-2",
+      "req-caso-3",
+      "req-cierre",
+      "req-integracion"
+    ],
+    "paths": {
+      "editable": null,
+      "delivery": null
+    }
+  }
+]
+```
+
+### assessment
+
+```json
+{
+  "kind": "summative",
+  "scale_total": 10,
+  "weight": 10,
+  "weight_unit": "percent",
+  "criteria": [
+    {
+      "id": "criterio-1",
+      "text": "Investigación jurídica: Identifica las figuras delictivas, sus conductas y fundamentos legales.",
+      "points": 2,
+      "descriptors": [],
+      "requirement_ids": [
+        "req-investigacion"
+      ]
+    },
+    {
+      "id": "criterio-2",
+      "text": "Caso 1: Identifica los posibles delitos y los elementos necesarios para su configuración.",
+      "points": 2,
+      "descriptors": [],
+      "requirement_ids": [
+        "req-caso-1"
+      ]
+    },
+    {
+      "id": "criterio-3",
+      "text": "Caso 2: Reconoce las figuras delictivas, obligaciones y circunstancias relevantes.",
+      "points": 2,
+      "descriptors": [],
+      "requirement_ids": [
+        "req-caso-2"
+      ]
+    },
+    {
+      "id": "criterio-4",
+      "text": "Caso 3: Distingue las conductas y los elementos jurídicos aplicables.",
+      "points": 2,
+      "descriptors": [],
+      "requirement_ids": [
+        "req-caso-3"
+      ]
+    },
+    {
+      "id": "criterio-5",
+      "text": "Decisión fundamentada: Presenta una conclusión coherente y sustentada jurídicamente.",
+      "points": 1,
+      "descriptors": [],
+      "requirement_ids": [
+        "req-cierre"
+      ]
+    },
+    {
+      "id": "criterio-6",
+      "text": "Integración y presentación: Organiza el trabajo e incluye las referencias en APA 7.",
+      "points": 1,
+      "descriptors": [],
+      "requirement_ids": [
+        "req-integracion"
+      ]
+    }
+  ],
+  "editorial_checks": []
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": "Individual",
+  "citation": "APA 7",
+  "attempts": 1,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+### dependencies
+
+```json
+[]
+```
+
+### alignment
+
+```json
+[
+  {
+    "outcome_id": "resultado-s4",
+    "requirement_ids": [
+      "req-investigacion",
+      "req-caso-1",
+      "req-caso-2",
+      "req-caso-3",
+      "req-cierre",
+      "req-integracion"
+    ],
+    "step_ids": [],
+    "product_ids": [
+      "producto-documento"
+    ],
+    "criterion_ids": [
+      "criterio-1",
+      "criterio-2",
+      "criterio-3",
+      "criterio-4",
+      "criterio-5",
+      "criterio-6"
+    ]
+  }
+]
+```
+
+### bindings
+
+```json
+{
+  "extractor_directory": "extractor-aulatex",
+  "notes_directory": "referencias-derecho-penal-especial-mexicano/notas-derecho-penal-especial-mexicano",
+  "research_directory": "investigacion-aulatex"
+}
+```
+
+### calendar
+
+| Campo operativo | Valor |
+| --- | --- |
+| opens_at |  |
+| expected_at |  |
+| due_at |  |
+| closes_at |  |
+| timezone |  |
+
+Evidencia historica del calendario (no programacion operativa):
+
+delitos  destinados  a   la   tutela  de   la  correcta
+administración y poder  distinguir y  encuadrar de
+manera adecuada las diferentes conductas delictivas en
+que pueden incurrir los servidores públicos.
+
+Fortalece  las  competencias  de  análisis,  interpretación  y
+Aspectos que fortalecen del perfil de egreso del     aplicación de  la  legislación penal mexicana,  así como  el
+programa educativo                             razonamiento crítico, la argumentación jurídica y la resolución
+de casos concretos, promoviendo un ejercicio profesional ético,
+responsable y comprometido con la legalidad, la justicia y la
+protección de los derechos de las personas.
+
+
+
+Datos para la planificación de actividades
+
+Semana 4 (Del 19 al 25 de octubre de 2026)
+
+Fecha de entrega (actividad): 25 de Octubre
+
+Fecha de sesión sincrónica: Martes 20 de Octubre de 2026         Hora: 21:00 Hrs (HC)
+
+3.- Delitos de peligro efectivo y presunto.
+Contenido temático a     3.1 Disparo de arma de fuego sobre persona, noción legal.
+3.1.2 Conducta, formas y medios de ejecución.desarrollar
+3.2 Ataque peligroso, noción del delito.
+3.2.1 Conducta formas y medios de ejecución.
+3.3 Abandono de niños y enfermos, noción del delito.
+3.4 Abandono de atropellados.
+3.5 Abandono de cónyuge, hijos o ambos, noción del delito.
+3.5.1 Conducta formas y medios de ejecución.
+3.6 Omisión de socorro y omisión de cuidado, noción de los ilícitos.
+3.7 Peligro de contagio, noción legal del delito.
+3.7.1 Conducta formas y medios de ejecución.
+
+
+
+Objetivo específico que  Aplicar los elementos de los delitos de peligro efectivo y presunto mediante la resolución
+se desarrolla del         guiada de situaciones jurídicas, para distinguir cuándo una conducta genera un peligro
+penalmente relevante y determinar el posible tipo penal aplicable.contenido temático
+
+
+
+
+Técnica didáctica que
+se utiliza (100 técnicas                                                 Valoración de decisiones
+de enseñanza y
+aprendizaje)
+
+
+
+
+General:
+
+
+
+
+
+
+## curriculum
+
+```json
+{
+  "purpose": null,
+  "competencies": [],
+  "outcomes": [
+    {
+      "id": "resultado-s4",
+      "text": "Identificar elementos legales, distinguir hechos de inferencias y fundamentar una clasificación jurídica preliminar."
+    }
+  ],
+  "topics": []
+}
+```
+
+## artifact_contract
+
+```json
+{
+  "version": "1.1",
+  "academic_materials_versioned": true,
+  "paths_relative_to_subject": {
+    "plans": "planeaciones-derecho-penal-especial-mexicano",
+    "references": "referencias-derecho-penal-especial-mexicano",
+    "notes": "referencias-derecho-penal-especial-mexicano/notas-derecho-penal-especial-mexicano",
+    "assets": "assets-derecho-penal-especial-mexicano",
+    "deliveries": "entregas-derecho-penal-especial-mexicano",
+    "extractions": "extractor-aulatex",
+    "research": "investigacion-aulatex"
+  },
+  "deliverables_directory": "entregas-derecho-penal-especial-mexicano",
+  "source_directory": "."
+}
+```
+
+## sources
+
+```json
+[
+  {
+    "id": "src-local",
+    "kind": "pdf",
+    "authority": "instructional",
+    "title": "Planificacion-S4-delitos-de-peligro-docente.pdf",
+    "url": null,
+    "path": "planeaciones-derecho-penal-especial-mexicano/originales-docentes/Planificacion-S4-delitos-de-peligro-docente.pdf",
+    "sha256": "a2c980ee24094ac5fd1540426610374115f9a92c1ad029bdd5055d2e6b652add",
+    "captured_at": null,
+    "media_type": "application/pdf"
+  },
+  {
+    "id": "src-editorial",
+    "kind": "other",
+    "authority": "editorial",
+    "title": "Nota local S4: discrepancias documentales",
+    "url": null,
+    "path": "planeaciones-derecho-penal-especial-mexicano/planeacion-S4-estructurada.md",
+    "sha256": "cd6643fdfadca9cc669e502ef764e396ebed84cbda8872808c3d35fd42eff483",
+    "captured_at": null,
+    "media_type": "text/markdown"
+  },
+  {
+    "id": "src-control-actual",
+    "kind": "other",
+    "authority": "editorial",
+    "title": "README.md",
+    "url": null,
+    "path": "README.md",
+    "sha256": "e6623543ca07c4bbdee55fef897f43c5e9bcfe49f778ba65a9560c2c131f8f27",
+    "captured_at": "2026-10-26",
+    "media_type": "text/markdown"
+  }
+]
+```
+
+## field_status
+
+```json
+[
+  {
+    "path": "/activities/0/instruction",
+    "state": "confirmed",
+    "reason": "Segmentacion local del PDF docente; vigencia de plataforma y fidelidad visual pendientes.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "page:6",
+        "quoted_text": "enseñanza y\n                         Aplicar  los elementos de  los  delitos de  peligro  efectivo y presunto mediante  laaprendizaje utilizada y\n                          investigación jurídica dirigida y la valoración de situaciones hipotéticas, para identificar\nla bibliografía                        conductas de riesgo penalmente relevantes y fundamentar su posible clasificación jurídica.\nconsultada)\n                       Actividad: Valoración de decisiones\n\n                   Semana 4. Delitos de peligro efectivo y presunto\n\n                       Propósito de la actividad\n\n                       Material de consulta\n\n                                            I.    Contenido de estudio de la Unidad 3.\n                                         II.   Código Penal Federal.\n                                       III.   Código Penal para el Distrito Federal.\n                            IV.    Procesador de textos (Word o equivalente).\n\n                        Indicaciones\n\n                            1. Investigación jurídica\n\n                        Consulta  el contenido de  la Unidad 3 y los códigos penales señalados. Investiga\n                       brevemente las siguientes figuras:\n\n                                            I.    Disparo de arma de fuego sobre persona y ataque peligroso.\n                                         II.   Abandono de niños y enfermos.\n                                       III.   Abandono de atropellados.\n                            IV.   Abandono de cónyuge, hijos o ambos.\n                          V.   Omisión de socorro y omisión de cuidado.\n                            VI.    Peligro de contagio.\n\n                        Elabora una tabla donde señales, para cada figura, en qué consiste la conducta y en qué\n                            artículo y legislación se encuentra regulada. Si alguna figura no aparece con esa\n                      denominación o ya no se encuentra vigente, indícalo.\n\n                 No es necesario copiar definiciones ni artículos completos. Explica brevemente lo que\n                       comprendiste y fundaméntalo.\n\n                            2. Valoración de decisiones\n\n                     Lee  las siguientes situaciones y responde  las preguntas. Utiliza los conceptos que\n                           investigaste y fundamenta tus respuestas con la legislación consultada.\n\n                    Caso 1. Conductas peligrosas\n\n                       Durante una discusión, Roberto dispara un arma de fuego en dirección a Carlos, sin\n                            lesionarlo. En otro hecho, Miguel intenta agredir a una persona con un objeto peligroso,\n                        pero es detenido antes de alcanzarla.\n\n                     Responde:\n\n                           a) ¿Qué figuras delictivas podrían relacionarse con estas conductas?\n\n\n\n\n                                                        Página 6 de 10"
+      },
+      {
+        "source_id": "src-local",
+        "locator": "page:7",
+        "quoted_text": "b) ¿Qué elementos necesitarías comprobar antes de determinar si existe un delito?\n\nCaso 2. Abandono y deberes de cuidado\n\nAna deja solo durante varias horas a un menor que está bajo su responsabilidad. En otra\nsituación, un conductor atropella a una persona y abandona el lugar sin solicitar ayuda. Por\nseparado, Pedro deja de proporcionar los alimentos indispensables a sus hijos.\n\nResponde:\n\na) ¿Qué figuras delictivas podrían analizarse en cada situación?\n\nb) ¿Qué obligaciones y circunstancias deben considerarse para determinar la posible\nresponsabilidad penal?\n\nCaso 3. Omisión de auxilio y peligro de contagio\n\nUna persona observa a alguien en una situación de peligro y decide no solicitar ayuda. En\notro hecho, una cuidadora abandona a una persona enferma que depende de su atención.\n\nPor separado, alguien que conoce una enfermedad transmisible realiza una conducta que\npodría representar un riesgo para otra persona.\n\nResponde:\n\na) ¿Qué diferencias existen entre la omisión de socorro, la omisión de cuidado y el\npeligro de contagio?\n\nb) ¿Qué circunstancias deben comprobarse antes de considerar que alguna de estas\nconductas constituye un delito?\n\n3. Decisión fundamentada\n\nSelecciona uno de los tres casos y explica en un párrafo de cinco a siete líneas qué decisión\njurídica tomarías, qué artículo utilizarías para fundamentarla y qué información adicional\nnecesitarías para confirmarla.\n\n4. Entrega\n\nIntegra en un solo documento:\n\n    I.    Portada con tus datos académicos.\n   II.    Tabla breve de investigación jurídica.\n  III.    Respuestas a los tres casos.\n IV.    Decisión fundamentada.\n  V.    Referencias consultadas en formato APA 7.\n\nExtensión máxima: cuatro cuartillas, incluyendo portada y referencias.\n\nModalidad: individual.\n\nFormato de entrega: PDF.\n\n\n\n\n\n                            Página 7 de 10"
+      },
+      {
+        "source_id": "src-local",
+        "locator": "page:8",
+        "quoted_text": "Evidencia de la                                      Actividad ponderable.\nevaluación                                        Valoración de decisiones\n\n\n\nPorcentaje de\ncalificación que aporta                                         (10/100)\n(--/100)\n\n\n\nObservaciones                      I.   La actividad se realizará individualmente.\n                                         II.    Investiga solo los conceptos necesarios y aplica lo encontrado directamente a las\n                                   situaciones.\n                                       III.   Fundamenta tus valoraciones en las disposiciones jurídicas que realmente\n                                 consultes y distingue entre conductas reguladas, posibles equivalencias y figuras\n                            no localizadas en el código revisado.\n                            IV.   No supongas hechos no descritos. Utiliza lenguaje propio y referencias APA 7.\n                          V.    Extensión máxima: seis cuartillas, incluyendo portada, tabla y bibliografía.\n                              VI.   Se valora la calidad del razonamiento, no la cantidad de texto.\n\n                                          Lineamientos\nCon base en lo señalado en los siguientes artículos del Reglamento Universitario de la Universidad Abierta y a\nDistancia de México:\n\nArtículo 27. La calificación representa la valoración numérica del aprovechamiento que la o el estudiante logró en\ncada unidad didáctica. La escala de calificaciones comprende del 0 (cero) al 100 (cien), y la calificación mínima\naprobatoria será 60 (sesenta).\n\nEn ningún caso procederá la renuncia a la calificación obtenida. Las actividades y evidencias de aprendizaje en las\nque se identifique falta de integridad académica serán evaluadas con 0 (cero).\n\nArtículo 76. Son obligaciones de las y los estudiantes:\n\nV. Realizar, con integridad académica, las actividades que están señaladas en el aula virtual del programa educativo\nen el que están inscritos, conforme a las fechas establecidas en el calendario de aula.\n\n                       Lineamientos para la evaluación del aprendizaje\n\n    •  La entrega de actividades se realizará de acuerdo con el calendario proporcionado por su Figura\n      Académica y marcado en el presente documento.\n    •  La entrega corresponde a un solo intento.\n    •  Las entregas extemporáneas a la fecha límite estarán sujeta a una penalización de 20% menos,\n        aplicable y de acuerdo a tabla. La recepción de actividades será hasta el día de cierre de aula, 02 de\n       diciembre.\n    •  La persona estudiante entregará sus actividades debidamente citadas en formato APA 7ª edición.\n    •  La aplicación o uso de las herramientas de IA se debe apegar a los Lineamientos para el uso\n        ético y responsable de la IA. Escala de evaluación para actividades con IA.\n\n                           Criterio                         Sanción / Penalización\n      50% a 99%, NO declaró uso de IA.                 5 puntos menos\n\n\n\n\n\n                                                        Página 8 de 10"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/requirements",
+    "state": "confirmed",
+    "reason": "Segmentacion local del PDF docente; vigencia de plataforma y fidelidad visual pendientes.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "page:6",
+        "quoted_text": "enseñanza y\n                         Aplicar  los elementos de  los  delitos de  peligro  efectivo y presunto mediante  laaprendizaje utilizada y\n                          investigación jurídica dirigida y la valoración de situaciones hipotéticas, para identificar\nla bibliografía                        conductas de riesgo penalmente relevantes y fundamentar su posible clasificación jurídica.\nconsultada)\n                       Actividad: Valoración de decisiones\n\n                   Semana 4. Delitos de peligro efectivo y presunto\n\n                       Propósito de la actividad\n\n                       Material de consulta\n\n                                            I.    Contenido de estudio de la Unidad 3.\n                                         II.   Código Penal Federal.\n                                       III.   Código Penal para el Distrito Federal.\n                            IV.    Procesador de textos (Word o equivalente).\n\n                        Indicaciones\n\n                            1. Investigación jurídica\n\n                        Consulta  el contenido de  la Unidad 3 y los códigos penales señalados. Investiga\n                       brevemente las siguientes figuras:\n\n                                            I.    Disparo de arma de fuego sobre persona y ataque peligroso.\n                                         II.   Abandono de niños y enfermos.\n                                       III.   Abandono de atropellados.\n                            IV.   Abandono de cónyuge, hijos o ambos.\n                          V.   Omisión de socorro y omisión de cuidado.\n                            VI.    Peligro de contagio.\n\n                        Elabora una tabla donde señales, para cada figura, en qué consiste la conducta y en qué\n                            artículo y legislación se encuentra regulada. Si alguna figura no aparece con esa\n                      denominación o ya no se encuentra vigente, indícalo.\n\n                 No es necesario copiar definiciones ni artículos completos. Explica brevemente lo que\n                       comprendiste y fundaméntalo.\n\n                            2. Valoración de decisiones\n\n                     Lee  las siguientes situaciones y responde  las preguntas. Utiliza los conceptos que\n                           investigaste y fundamenta tus respuestas con la legislación consultada.\n\n                    Caso 1. Conductas peligrosas\n\n                       Durante una discusión, Roberto dispara un arma de fuego en dirección a Carlos, sin\n                            lesionarlo. En otro hecho, Miguel intenta agredir a una persona con un objeto peligroso,\n                        pero es detenido antes de alcanzarla.\n\n                     Responde:\n\n                           a) ¿Qué figuras delictivas podrían relacionarse con estas conductas?\n\n\n\n\n                                                        Página 6 de 10"
+      },
+      {
+        "source_id": "src-local",
+        "locator": "page:7",
+        "quoted_text": "b) ¿Qué elementos necesitarías comprobar antes de determinar si existe un delito?\n\nCaso 2. Abandono y deberes de cuidado\n\nAna deja solo durante varias horas a un menor que está bajo su responsabilidad. En otra\nsituación, un conductor atropella a una persona y abandona el lugar sin solicitar ayuda. Por\nseparado, Pedro deja de proporcionar los alimentos indispensables a sus hijos.\n\nResponde:\n\na) ¿Qué figuras delictivas podrían analizarse en cada situación?\n\nb) ¿Qué obligaciones y circunstancias deben considerarse para determinar la posible\nresponsabilidad penal?\n\nCaso 3. Omisión de auxilio y peligro de contagio\n\nUna persona observa a alguien en una situación de peligro y decide no solicitar ayuda. En\notro hecho, una cuidadora abandona a una persona enferma que depende de su atención.\n\nPor separado, alguien que conoce una enfermedad transmisible realiza una conducta que\npodría representar un riesgo para otra persona.\n\nResponde:\n\na) ¿Qué diferencias existen entre la omisión de socorro, la omisión de cuidado y el\npeligro de contagio?\n\nb) ¿Qué circunstancias deben comprobarse antes de considerar que alguna de estas\nconductas constituye un delito?\n\n3. Decisión fundamentada\n\nSelecciona uno de los tres casos y explica en un párrafo de cinco a siete líneas qué decisión\njurídica tomarías, qué artículo utilizarías para fundamentarla y qué información adicional\nnecesitarías para confirmarla.\n\n4. Entrega\n\nIntegra en un solo documento:\n\n    I.    Portada con tus datos académicos.\n   II.    Tabla breve de investigación jurídica.\n  III.    Respuestas a los tres casos.\n IV.    Decisión fundamentada.\n  V.    Referencias consultadas en formato APA 7.\n\nExtensión máxima: cuatro cuartillas, incluyendo portada y referencias.\n\nModalidad: individual.\n\nFormato de entrega: PDF.\n\n\n\n\n\n                            Página 7 de 10"
+      },
+      {
+        "source_id": "src-local",
+        "locator": "page:8",
+        "quoted_text": "Evidencia de la                                      Actividad ponderable.\nevaluación                                        Valoración de decisiones\n\n\n\nPorcentaje de\ncalificación que aporta                                         (10/100)\n(--/100)\n\n\n\nObservaciones                      I.   La actividad se realizará individualmente.\n                                         II.    Investiga solo los conceptos necesarios y aplica lo encontrado directamente a las\n                                   situaciones.\n                                       III.   Fundamenta tus valoraciones en las disposiciones jurídicas que realmente\n                                 consultes y distingue entre conductas reguladas, posibles equivalencias y figuras\n                            no localizadas en el código revisado.\n                            IV.   No supongas hechos no descritos. Utiliza lenguaje propio y referencias APA 7.\n                          V.    Extensión máxima: seis cuartillas, incluyendo portada, tabla y bibliografía.\n                              VI.   Se valora la calidad del razonamiento, no la cantidad de texto.\n\n                                          Lineamientos\nCon base en lo señalado en los siguientes artículos del Reglamento Universitario de la Universidad Abierta y a\nDistancia de México:\n\nArtículo 27. La calificación representa la valoración numérica del aprovechamiento que la o el estudiante logró en\ncada unidad didáctica. La escala de calificaciones comprende del 0 (cero) al 100 (cien), y la calificación mínima\naprobatoria será 60 (sesenta).\n\nEn ningún caso procederá la renuncia a la calificación obtenida. Las actividades y evidencias de aprendizaje en las\nque se identifique falta de integridad académica serán evaluadas con 0 (cero).\n\nArtículo 76. Son obligaciones de las y los estudiantes:\n\nV. Realizar, con integridad académica, las actividades que están señaladas en el aula virtual del programa educativo\nen el que están inscritos, conforme a las fechas establecidas en el calendario de aula.\n\n                       Lineamientos para la evaluación del aprendizaje\n\n    •  La entrega de actividades se realizará de acuerdo con el calendario proporcionado por su Figura\n      Académica y marcado en el presente documento.\n    •  La entrega corresponde a un solo intento.\n    •  Las entregas extemporáneas a la fecha límite estarán sujeta a una penalización de 20% menos,\n        aplicable y de acuerdo a tabla. La recepción de actividades será hasta el día de cierre de aula, 02 de\n       diciembre.\n    •  La persona estudiante entregará sus actividades debidamente citadas en formato APA 7ª edición.\n    •  La aplicación o uso de las herramientas de IA se debe apegar a los Lineamientos para el uso\n        ético y responsable de la IA. Escala de evaluación para actividades con IA.\n\n                           Criterio                         Sanción / Penalización\n      50% a 99%, NO declaró uso de IA.                 5 puntos menos\n\n\n\n\n\n                                                        Página 8 de 10"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/questions",
+    "state": "confirmed",
+    "reason": "Segmentacion local del PDF docente; vigencia de plataforma y fidelidad visual pendientes.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "page:6",
+        "quoted_text": "enseñanza y\n                         Aplicar  los elementos de  los  delitos de  peligro  efectivo y presunto mediante  laaprendizaje utilizada y\n                          investigación jurídica dirigida y la valoración de situaciones hipotéticas, para identificar\nla bibliografía                        conductas de riesgo penalmente relevantes y fundamentar su posible clasificación jurídica.\nconsultada)\n                       Actividad: Valoración de decisiones\n\n                   Semana 4. Delitos de peligro efectivo y presunto\n\n                       Propósito de la actividad\n\n                       Material de consulta\n\n                                            I.    Contenido de estudio de la Unidad 3.\n                                         II.   Código Penal Federal.\n                                       III.   Código Penal para el Distrito Federal.\n                            IV.    Procesador de textos (Word o equivalente).\n\n                        Indicaciones\n\n                            1. Investigación jurídica\n\n                        Consulta  el contenido de  la Unidad 3 y los códigos penales señalados. Investiga\n                       brevemente las siguientes figuras:\n\n                                            I.    Disparo de arma de fuego sobre persona y ataque peligroso.\n                                         II.   Abandono de niños y enfermos.\n                                       III.   Abandono de atropellados.\n                            IV.   Abandono de cónyuge, hijos o ambos.\n                          V.   Omisión de socorro y omisión de cuidado.\n                            VI.    Peligro de contagio.\n\n                        Elabora una tabla donde señales, para cada figura, en qué consiste la conducta y en qué\n                            artículo y legislación se encuentra regulada. Si alguna figura no aparece con esa\n                      denominación o ya no se encuentra vigente, indícalo.\n\n                 No es necesario copiar definiciones ni artículos completos. Explica brevemente lo que\n                       comprendiste y fundaméntalo.\n\n                            2. Valoración de decisiones\n\n                     Lee  las siguientes situaciones y responde  las preguntas. Utiliza los conceptos que\n                           investigaste y fundamenta tus respuestas con la legislación consultada.\n\n                    Caso 1. Conductas peligrosas\n\n                       Durante una discusión, Roberto dispara un arma de fuego en dirección a Carlos, sin\n                            lesionarlo. En otro hecho, Miguel intenta agredir a una persona con un objeto peligroso,\n                        pero es detenido antes de alcanzarla.\n\n                     Responde:\n\n                           a) ¿Qué figuras delictivas podrían relacionarse con estas conductas?\n\n\n\n\n                                                        Página 6 de 10"
+      },
+      {
+        "source_id": "src-local",
+        "locator": "page:7",
+        "quoted_text": "b) ¿Qué elementos necesitarías comprobar antes de determinar si existe un delito?\n\nCaso 2. Abandono y deberes de cuidado\n\nAna deja solo durante varias horas a un menor que está bajo su responsabilidad. En otra\nsituación, un conductor atropella a una persona y abandona el lugar sin solicitar ayuda. Por\nseparado, Pedro deja de proporcionar los alimentos indispensables a sus hijos.\n\nResponde:\n\na) ¿Qué figuras delictivas podrían analizarse en cada situación?\n\nb) ¿Qué obligaciones y circunstancias deben considerarse para determinar la posible\nresponsabilidad penal?\n\nCaso 3. Omisión de auxilio y peligro de contagio\n\nUna persona observa a alguien en una situación de peligro y decide no solicitar ayuda. En\notro hecho, una cuidadora abandona a una persona enferma que depende de su atención.\n\nPor separado, alguien que conoce una enfermedad transmisible realiza una conducta que\npodría representar un riesgo para otra persona.\n\nResponde:\n\na) ¿Qué diferencias existen entre la omisión de socorro, la omisión de cuidado y el\npeligro de contagio?\n\nb) ¿Qué circunstancias deben comprobarse antes de considerar que alguna de estas\nconductas constituye un delito?\n\n3. Decisión fundamentada\n\nSelecciona uno de los tres casos y explica en un párrafo de cinco a siete líneas qué decisión\njurídica tomarías, qué artículo utilizarías para fundamentarla y qué información adicional\nnecesitarías para confirmarla.\n\n4. Entrega\n\nIntegra en un solo documento:\n\n    I.    Portada con tus datos académicos.\n   II.    Tabla breve de investigación jurídica.\n  III.    Respuestas a los tres casos.\n IV.    Decisión fundamentada.\n  V.    Referencias consultadas en formato APA 7.\n\nExtensión máxima: cuatro cuartillas, incluyendo portada y referencias.\n\nModalidad: individual.\n\nFormato de entrega: PDF.\n\n\n\n\n\n                            Página 7 de 10"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/products",
+    "state": "confirmed",
+    "reason": "Segmentacion local del PDF docente; vigencia de plataforma y fidelidad visual pendientes.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "page:7",
+        "quoted_text": "b) ¿Qué elementos necesitarías comprobar antes de determinar si existe un delito?\n\nCaso 2. Abandono y deberes de cuidado\n\nAna deja solo durante varias horas a un menor que está bajo su responsabilidad. En otra\nsituación, un conductor atropella a una persona y abandona el lugar sin solicitar ayuda. Por\nseparado, Pedro deja de proporcionar los alimentos indispensables a sus hijos.\n\nResponde:\n\na) ¿Qué figuras delictivas podrían analizarse en cada situación?\n\nb) ¿Qué obligaciones y circunstancias deben considerarse para determinar la posible\nresponsabilidad penal?\n\nCaso 3. Omisión de auxilio y peligro de contagio\n\nUna persona observa a alguien en una situación de peligro y decide no solicitar ayuda. En\notro hecho, una cuidadora abandona a una persona enferma que depende de su atención.\n\nPor separado, alguien que conoce una enfermedad transmisible realiza una conducta que\npodría representar un riesgo para otra persona.\n\nResponde:\n\na) ¿Qué diferencias existen entre la omisión de socorro, la omisión de cuidado y el\npeligro de contagio?\n\nb) ¿Qué circunstancias deben comprobarse antes de considerar que alguna de estas\nconductas constituye un delito?\n\n3. Decisión fundamentada\n\nSelecciona uno de los tres casos y explica en un párrafo de cinco a siete líneas qué decisión\njurídica tomarías, qué artículo utilizarías para fundamentarla y qué información adicional\nnecesitarías para confirmarla.\n\n4. Entrega\n\nIntegra en un solo documento:\n\n    I.    Portada con tus datos académicos.\n   II.    Tabla breve de investigación jurídica.\n  III.    Respuestas a los tres casos.\n IV.    Decisión fundamentada.\n  V.    Referencias consultadas en formato APA 7.\n\nExtensión máxima: cuatro cuartillas, incluyendo portada y referencias.\n\nModalidad: individual.\n\nFormato de entrega: PDF.\n\n\n\n\n\n                            Página 7 de 10"
+      },
+      {
+        "source_id": "src-local",
+        "locator": "page:8",
+        "quoted_text": "Evidencia de la                                      Actividad ponderable.\nevaluación                                        Valoración de decisiones\n\n\n\nPorcentaje de\ncalificación que aporta                                         (10/100)\n(--/100)\n\n\n\nObservaciones                      I.   La actividad se realizará individualmente.\n                                         II.    Investiga solo los conceptos necesarios y aplica lo encontrado directamente a las\n                                   situaciones.\n                                       III.   Fundamenta tus valoraciones en las disposiciones jurídicas que realmente\n                                 consultes y distingue entre conductas reguladas, posibles equivalencias y figuras\n                            no localizadas en el código revisado.\n                            IV.   No supongas hechos no descritos. Utiliza lenguaje propio y referencias APA 7.\n                          V.    Extensión máxima: seis cuartillas, incluyendo portada, tabla y bibliografía.\n                              VI.   Se valora la calidad del razonamiento, no la cantidad de texto.\n\n                                          Lineamientos\nCon base en lo señalado en los siguientes artículos del Reglamento Universitario de la Universidad Abierta y a\nDistancia de México:\n\nArtículo 27. La calificación representa la valoración numérica del aprovechamiento que la o el estudiante logró en\ncada unidad didáctica. La escala de calificaciones comprende del 0 (cero) al 100 (cien), y la calificación mínima\naprobatoria será 60 (sesenta).\n\nEn ningún caso procederá la renuncia a la calificación obtenida. Las actividades y evidencias de aprendizaje en las\nque se identifique falta de integridad académica serán evaluadas con 0 (cero).\n\nArtículo 76. Son obligaciones de las y los estudiantes:\n\nV. Realizar, con integridad académica, las actividades que están señaladas en el aula virtual del programa educativo\nen el que están inscritos, conforme a las fechas establecidas en el calendario de aula.\n\n                       Lineamientos para la evaluación del aprendizaje\n\n    •  La entrega de actividades se realizará de acuerdo con el calendario proporcionado por su Figura\n      Académica y marcado en el presente documento.\n    •  La entrega corresponde a un solo intento.\n    •  Las entregas extemporáneas a la fecha límite estarán sujeta a una penalización de 20% menos,\n        aplicable y de acuerdo a tabla. La recepción de actividades será hasta el día de cierre de aula, 02 de\n       diciembre.\n    •  La persona estudiante entregará sus actividades debidamente citadas en formato APA 7ª edición.\n    •  La aplicación o uso de las herramientas de IA se debe apegar a los Lineamientos para el uso\n        ético y responsable de la IA. Escala de evaluación para actividades con IA.\n\n                           Criterio                         Sanción / Penalización\n      50% a 99%, NO declaró uso de IA.                 5 puntos menos\n\n\n\n\n\n                                                        Página 8 de 10"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/assessment",
+    "state": "confirmed",
+    "reason": "Segmentacion local del PDF docente; vigencia de plataforma y fidelidad visual pendientes.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "page:8",
+        "quoted_text": "Evidencia de la                                      Actividad ponderable.\nevaluación                                        Valoración de decisiones\n\n\n\nPorcentaje de\ncalificación que aporta                                         (10/100)\n(--/100)\n\n\n\nObservaciones                      I.   La actividad se realizará individualmente.\n                                         II.    Investiga solo los conceptos necesarios y aplica lo encontrado directamente a las\n                                   situaciones.\n                                       III.   Fundamenta tus valoraciones en las disposiciones jurídicas que realmente\n                                 consultes y distingue entre conductas reguladas, posibles equivalencias y figuras\n                            no localizadas en el código revisado.\n                            IV.   No supongas hechos no descritos. Utiliza lenguaje propio y referencias APA 7.\n                          V.    Extensión máxima: seis cuartillas, incluyendo portada, tabla y bibliografía.\n                              VI.   Se valora la calidad del razonamiento, no la cantidad de texto.\n\n                                          Lineamientos\nCon base en lo señalado en los siguientes artículos del Reglamento Universitario de la Universidad Abierta y a\nDistancia de México:\n\nArtículo 27. La calificación representa la valoración numérica del aprovechamiento que la o el estudiante logró en\ncada unidad didáctica. La escala de calificaciones comprende del 0 (cero) al 100 (cien), y la calificación mínima\naprobatoria será 60 (sesenta).\n\nEn ningún caso procederá la renuncia a la calificación obtenida. Las actividades y evidencias de aprendizaje en las\nque se identifique falta de integridad académica serán evaluadas con 0 (cero).\n\nArtículo 76. Son obligaciones de las y los estudiantes:\n\nV. Realizar, con integridad académica, las actividades que están señaladas en el aula virtual del programa educativo\nen el que están inscritos, conforme a las fechas establecidas en el calendario de aula.\n\n                       Lineamientos para la evaluación del aprendizaje\n\n    •  La entrega de actividades se realizará de acuerdo con el calendario proporcionado por su Figura\n      Académica y marcado en el presente documento.\n    •  La entrega corresponde a un solo intento.\n    •  Las entregas extemporáneas a la fecha límite estarán sujeta a una penalización de 20% menos,\n        aplicable y de acuerdo a tabla. La recepción de actividades será hasta el día de cierre de aula, 02 de\n       diciembre.\n    •  La persona estudiante entregará sus actividades debidamente citadas en formato APA 7ª edición.\n    •  La aplicación o uso de las herramientas de IA se debe apegar a los Lineamientos para el uso\n        ético y responsable de la IA. Escala de evaluación para actividades con IA.\n\n                           Criterio                         Sanción / Penalización\n      50% a 99%, NO declaró uso de IA.                 5 puntos menos\n\n\n\n\n\n                                                        Página 8 de 10"
+      },
+      {
+        "source_id": "src-local",
+        "locator": "page:9",
+        "quoted_text": "      50% en adelante, declarado.          No se penaliza, pero se evalúa en función\n                                                                  del contenido\n                                                     3 puntos menos\n        0 a 49%, NO declarado\n        0 al 49%, se declara el uso de IA.       No se penaliza, pero se evalúa en función\n                                                                  del contenido\n\n\n     La persona estudiante perderá su intento de envío de la actividad cuando entregue o realice una o\n      más de las condiciones enunciadas en Los Lineamientos para la evaluación del aprendizaje:\n     CAPÍTULO II, SECCIÓN TERCERA, DE LA ELABORACIÓN Y ENTREGA DE\n     ACTIVIDADES, apartado décimo octavo.\n\n    •  La entrega de actividades, recepción y evaluación se rige por dichos lineamientos y el RUUADM,\n       por lo tanto, no se reciben por otros medios distintos a aula ni posterior al cierre de la misma.\n\nCriterios de examen:\n\n     Un intento\n     Método de calificación: el último intento.\n\n\n\n\n                                 Rúbrica de evaluación\n\n\n                  Criterio                               Descripción                    Puntaje\n\n                                           Identifica las figuras delictivas, sus conductas y\n       Investigación jurídica                                                       2\n                                   fundamentos legales.\n                                           Identifica los posibles delitos y los elementos\n      Caso 1. Conductas peligrosas                                                2\n                                       necesarios para su configuración.\n      Caso 2. Abandono y deberes   Reconoce las figuras delictivas, obligaciones y\n                                                                               2\n      de cuidado                      circunstancias relevantes.\n      Caso 3. Omisión de auxilio y   Distingue las conductas y los elementos jurídicos\n                                                                               2\n       peligro de contagio              aplicables.\n                                       Presenta una conclusión coherente y sustentada\n      Decisión fundamentada                                                     1\n                                        jurídicamente.\n       Integración y presentación     Organiza el trabajo e incluye las referencias en APA 7.  1\n\n      Total                                                                     10\n\n\n\n\n\n                                                        Página 9 de 10"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/policies",
+    "state": "confirmed",
+    "reason": "Segmentacion local del PDF docente; vigencia de plataforma y fidelidad visual pendientes.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "page:8",
+        "quoted_text": "Evidencia de la                                      Actividad ponderable.\nevaluación                                        Valoración de decisiones\n\n\n\nPorcentaje de\ncalificación que aporta                                         (10/100)\n(--/100)\n\n\n\nObservaciones                      I.   La actividad se realizará individualmente.\n                                         II.    Investiga solo los conceptos necesarios y aplica lo encontrado directamente a las\n                                   situaciones.\n                                       III.   Fundamenta tus valoraciones en las disposiciones jurídicas que realmente\n                                 consultes y distingue entre conductas reguladas, posibles equivalencias y figuras\n                            no localizadas en el código revisado.\n                            IV.   No supongas hechos no descritos. Utiliza lenguaje propio y referencias APA 7.\n                          V.    Extensión máxima: seis cuartillas, incluyendo portada, tabla y bibliografía.\n                              VI.   Se valora la calidad del razonamiento, no la cantidad de texto.\n\n                                          Lineamientos\nCon base en lo señalado en los siguientes artículos del Reglamento Universitario de la Universidad Abierta y a\nDistancia de México:\n\nArtículo 27. La calificación representa la valoración numérica del aprovechamiento que la o el estudiante logró en\ncada unidad didáctica. La escala de calificaciones comprende del 0 (cero) al 100 (cien), y la calificación mínima\naprobatoria será 60 (sesenta).\n\nEn ningún caso procederá la renuncia a la calificación obtenida. Las actividades y evidencias de aprendizaje en las\nque se identifique falta de integridad académica serán evaluadas con 0 (cero).\n\nArtículo 76. Son obligaciones de las y los estudiantes:\n\nV. Realizar, con integridad académica, las actividades que están señaladas en el aula virtual del programa educativo\nen el que están inscritos, conforme a las fechas establecidas en el calendario de aula.\n\n                       Lineamientos para la evaluación del aprendizaje\n\n    •  La entrega de actividades se realizará de acuerdo con el calendario proporcionado por su Figura\n      Académica y marcado en el presente documento.\n    •  La entrega corresponde a un solo intento.\n    •  Las entregas extemporáneas a la fecha límite estarán sujeta a una penalización de 20% menos,\n        aplicable y de acuerdo a tabla. La recepción de actividades será hasta el día de cierre de aula, 02 de\n       diciembre.\n    •  La persona estudiante entregará sus actividades debidamente citadas en formato APA 7ª edición.\n    •  La aplicación o uso de las herramientas de IA se debe apegar a los Lineamientos para el uso\n        ético y responsable de la IA. Escala de evaluación para actividades con IA.\n\n                           Criterio                         Sanción / Penalización\n      50% a 99%, NO declaró uso de IA.                 5 puntos menos\n\n\n\n\n\n                                                        Página 8 de 10"
+      },
+      {
+        "source_id": "src-local",
+        "locator": "page:9",
+        "quoted_text": "      50% en adelante, declarado.          No se penaliza, pero se evalúa en función\n                                                                  del contenido\n                                                     3 puntos menos\n        0 a 49%, NO declarado\n        0 al 49%, se declara el uso de IA.       No se penaliza, pero se evalúa en función\n                                                                  del contenido\n\n\n     La persona estudiante perderá su intento de envío de la actividad cuando entregue o realice una o\n      más de las condiciones enunciadas en Los Lineamientos para la evaluación del aprendizaje:\n     CAPÍTULO II, SECCIÓN TERCERA, DE LA ELABORACIÓN Y ENTREGA DE\n     ACTIVIDADES, apartado décimo octavo.\n\n    •  La entrega de actividades, recepción y evaluación se rige por dichos lineamientos y el RUUADM,\n       por lo tanto, no se reciben por otros medios distintos a aula ni posterior al cierre de la misma.\n\nCriterios de examen:\n\n     Un intento\n     Método de calificación: el último intento.\n\n\n\n\n                                 Rúbrica de evaluación\n\n\n                  Criterio                               Descripción                    Puntaje\n\n                                           Identifica las figuras delictivas, sus conductas y\n       Investigación jurídica                                                       2\n                                   fundamentos legales.\n                                           Identifica los posibles delitos y los elementos\n      Caso 1. Conductas peligrosas                                                2\n                                       necesarios para su configuración.\n      Caso 2. Abandono y deberes   Reconoce las figuras delictivas, obligaciones y\n                                                                               2\n      de cuidado                      circunstancias relevantes.\n      Caso 3. Omisión de auxilio y   Distingue las conductas y los elementos jurídicos\n                                                                               2\n       peligro de contagio              aplicables.\n                                       Presenta una conclusión coherente y sustentada\n      Decisión fundamentada                                                     1\n                                        jurídicamente.\n       Integración y presentación     Organiza el trabajo e incluye las referencias en APA 7.  1\n\n      Total                                                                     10\n\n\n\n\n\n                                                        Página 9 de 10"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/outcomes/0",
+    "state": "inferred",
+    "reason": "Sintesis editorial del proposito; el literal se conserva en la consigna.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "page:6",
+        "quoted_text": "enseñanza y\n                         Aplicar  los elementos de  los  delitos de  peligro  efectivo y presunto mediante  laaprendizaje utilizada y\n                          investigación jurídica dirigida y la valoración de situaciones hipotéticas, para identificar\nla bibliografía                        conductas de riesgo penalmente relevantes y fundamentar su posible clasificación jurídica.\nconsultada)\n                       Actividad: Valoración de decisiones\n\n                   Semana 4. Delitos de peligro efectivo y presunto\n\n                       Propósito de la actividad\n\n                       Material de consulta\n\n                                            I.    Contenido de estudio de la Unidad 3.\n                                         II.   Código Penal Federal.\n                                       III.   Código Penal para el Distrito Federal.\n                            IV.    Procesador de textos (Word o equivalente).\n\n                        Indicaciones\n\n                            1. Investigación jurídica\n\n                        Consulta  el contenido de  la Unidad 3 y los códigos penales señalados. Investiga\n                       brevemente las siguientes figuras:\n\n                                            I.    Disparo de arma de fuego sobre persona y ataque peligroso.\n                                         II.   Abandono de niños y enfermos.\n                                       III.   Abandono de atropellados.\n                            IV.   Abandono de cónyuge, hijos o ambos.\n                          V.   Omisión de socorro y omisión de cuidado.\n                            VI.    Peligro de contagio.\n\n                        Elabora una tabla donde señales, para cada figura, en qué consiste la conducta y en qué\n                            artículo y legislación se encuentra regulada. Si alguna figura no aparece con esa\n                      denominación o ya no se encuentra vigente, indícalo.\n\n                 No es necesario copiar definiciones ni artículos completos. Explica brevemente lo que\n                       comprendiste y fundaméntalo.\n\n                            2. Valoración de decisiones\n\n                     Lee  las siguientes situaciones y responde  las preguntas. Utiliza los conceptos que\n                           investigaste y fundamenta tus respuestas con la legislación consultada.\n\n                    Caso 1. Conductas peligrosas\n\n                       Durante una discusión, Roberto dispara un arma de fuego en dirección a Carlos, sin\n                            lesionarlo. En otro hecho, Miguel intenta agredir a una persona con un objeto peligroso,\n                        pero es detenido antes de alcanzarla.\n\n                     Responde:\n\n                           a) ¿Qué figuras delictivas podrían relacionarse con estas conductas?\n\n\n\n\n                                                        Página 6 de 10"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/products/0/length",
+    "state": "conflict",
+    "reason": "PDF con limites contradictorios y preferencia editorial distinta; conservar las tres versiones.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "page:7",
+        "quoted_text": "b) ¿Qué elementos necesitarías comprobar antes de determinar si existe un delito?\n\nCaso 2. Abandono y deberes de cuidado\n\nAna deja solo durante varias horas a un menor que está bajo su responsabilidad. En otra\nsituación, un conductor atropella a una persona y abandona el lugar sin solicitar ayuda. Por\nseparado, Pedro deja de proporcionar los alimentos indispensables a sus hijos.\n\nResponde:\n\na) ¿Qué figuras delictivas podrían analizarse en cada situación?\n\nb) ¿Qué obligaciones y circunstancias deben considerarse para determinar la posible\nresponsabilidad penal?\n\nCaso 3. Omisión de auxilio y peligro de contagio\n\nUna persona observa a alguien en una situación de peligro y decide no solicitar ayuda. En\notro hecho, una cuidadora abandona a una persona enferma que depende de su atención.\n\nPor separado, alguien que conoce una enfermedad transmisible realiza una conducta que\npodría representar un riesgo para otra persona.\n\nResponde:\n\na) ¿Qué diferencias existen entre la omisión de socorro, la omisión de cuidado y el\npeligro de contagio?\n\nb) ¿Qué circunstancias deben comprobarse antes de considerar que alguna de estas\nconductas constituye un delito?\n\n3. Decisión fundamentada\n\nSelecciona uno de los tres casos y explica en un párrafo de cinco a siete líneas qué decisión\njurídica tomarías, qué artículo utilizarías para fundamentarla y qué información adicional\nnecesitarías para confirmarla.\n\n4. Entrega\n\nIntegra en un solo documento:\n\n    I.    Portada con tus datos académicos.\n   II.    Tabla breve de investigación jurídica.\n  III.    Respuestas a los tres casos.\n IV.    Decisión fundamentada.\n  V.    Referencias consultadas en formato APA 7.\n\nExtensión máxima: cuatro cuartillas, incluyendo portada y referencias.\n\nModalidad: individual.\n\nFormato de entrega: PDF.\n\n\n\n\n\n                            Página 7 de 10"
+      },
+      {
+        "source_id": "src-local",
+        "locator": "page:8",
+        "quoted_text": "Evidencia de la                                      Actividad ponderable.\nevaluación                                        Valoración de decisiones\n\n\n\nPorcentaje de\ncalificación que aporta                                         (10/100)\n(--/100)\n\n\n\nObservaciones                      I.   La actividad se realizará individualmente.\n                                         II.    Investiga solo los conceptos necesarios y aplica lo encontrado directamente a las\n                                   situaciones.\n                                       III.   Fundamenta tus valoraciones en las disposiciones jurídicas que realmente\n                                 consultes y distingue entre conductas reguladas, posibles equivalencias y figuras\n                            no localizadas en el código revisado.\n                            IV.   No supongas hechos no descritos. Utiliza lenguaje propio y referencias APA 7.\n                          V.    Extensión máxima: seis cuartillas, incluyendo portada, tabla y bibliografía.\n                              VI.   Se valora la calidad del razonamiento, no la cantidad de texto.\n\n                                          Lineamientos\nCon base en lo señalado en los siguientes artículos del Reglamento Universitario de la Universidad Abierta y a\nDistancia de México:\n\nArtículo 27. La calificación representa la valoración numérica del aprovechamiento que la o el estudiante logró en\ncada unidad didáctica. La escala de calificaciones comprende del 0 (cero) al 100 (cien), y la calificación mínima\naprobatoria será 60 (sesenta).\n\nEn ningún caso procederá la renuncia a la calificación obtenida. Las actividades y evidencias de aprendizaje en las\nque se identifique falta de integridad académica serán evaluadas con 0 (cero).\n\nArtículo 76. Son obligaciones de las y los estudiantes:\n\nV. Realizar, con integridad académica, las actividades que están señaladas en el aula virtual del programa educativo\nen el que están inscritos, conforme a las fechas establecidas en el calendario de aula.\n\n                       Lineamientos para la evaluación del aprendizaje\n\n    •  La entrega de actividades se realizará de acuerdo con el calendario proporcionado por su Figura\n      Académica y marcado en el presente documento.\n    •  La entrega corresponde a un solo intento.\n    •  Las entregas extemporáneas a la fecha límite estarán sujeta a una penalización de 20% menos,\n        aplicable y de acuerdo a tabla. La recepción de actividades será hasta el día de cierre de aula, 02 de\n       diciembre.\n    •  La persona estudiante entregará sus actividades debidamente citadas en formato APA 7ª edición.\n    •  La aplicación o uso de las herramientas de IA se debe apegar a los Lineamientos para el uso\n        ético y responsable de la IA. Escala de evaluación para actividades con IA.\n\n                           Criterio                         Sanción / Penalización\n      50% a 99%, NO declaró uso de IA.                 5 puntos menos\n\n\n\n\n\n                                                        Página 8 de 10"
+      }
+    ],
+    "alternatives": [
+      {
+        "value": "Cuatro cuartillas incluyendo portada y referencias.",
+        "evidence": [
+          {
+            "source_id": "src-local",
+            "locator": "page:7",
+            "quoted_text": "b) ¿Qué elementos necesitarías comprobar antes de determinar si existe un delito?\n\nCaso 2. Abandono y deberes de cuidado\n\nAna deja solo durante varias horas a un menor que está bajo su responsabilidad. En otra\nsituación, un conductor atropella a una persona y abandona el lugar sin solicitar ayuda. Por\nseparado, Pedro deja de proporcionar los alimentos indispensables a sus hijos.\n\nResponde:\n\na) ¿Qué figuras delictivas podrían analizarse en cada situación?\n\nb) ¿Qué obligaciones y circunstancias deben considerarse para determinar la posible\nresponsabilidad penal?\n\nCaso 3. Omisión de auxilio y peligro de contagio\n\nUna persona observa a alguien en una situación de peligro y decide no solicitar ayuda. En\notro hecho, una cuidadora abandona a una persona enferma que depende de su atención.\n\nPor separado, alguien que conoce una enfermedad transmisible realiza una conducta que\npodría representar un riesgo para otra persona.\n\nResponde:\n\na) ¿Qué diferencias existen entre la omisión de socorro, la omisión de cuidado y el\npeligro de contagio?\n\nb) ¿Qué circunstancias deben comprobarse antes de considerar que alguna de estas\nconductas constituye un delito?\n\n3. Decisión fundamentada\n\nSelecciona uno de los tres casos y explica en un párrafo de cinco a siete líneas qué decisión\njurídica tomarías, qué artículo utilizarías para fundamentarla y qué información adicional\nnecesitarías para confirmarla.\n\n4. Entrega\n\nIntegra en un solo documento:\n\n    I.    Portada con tus datos académicos.\n   II.    Tabla breve de investigación jurídica.\n  III.    Respuestas a los tres casos.\n IV.    Decisión fundamentada.\n  V.    Referencias consultadas en formato APA 7.\n\nExtensión máxima: cuatro cuartillas, incluyendo portada y referencias.\n\nModalidad: individual.\n\nFormato de entrega: PDF.\n\n\n\n\n\n                            Página 7 de 10"
+          }
+        ]
+      },
+      {
+        "value": "Seis cuartillas incluyendo portada, tabla y bibliografia.",
+        "evidence": [
+          {
+            "source_id": "src-local",
+            "locator": "page:8",
+            "quoted_text": "Evidencia de la                                      Actividad ponderable.\nevaluación                                        Valoración de decisiones\n\n\n\nPorcentaje de\ncalificación que aporta                                         (10/100)\n(--/100)\n\n\n\nObservaciones                      I.   La actividad se realizará individualmente.\n                                         II.    Investiga solo los conceptos necesarios y aplica lo encontrado directamente a las\n                                   situaciones.\n                                       III.   Fundamenta tus valoraciones en las disposiciones jurídicas que realmente\n                                 consultes y distingue entre conductas reguladas, posibles equivalencias y figuras\n                            no localizadas en el código revisado.\n                            IV.   No supongas hechos no descritos. Utiliza lenguaje propio y referencias APA 7.\n                          V.    Extensión máxima: seis cuartillas, incluyendo portada, tabla y bibliografía.\n                              VI.   Se valora la calidad del razonamiento, no la cantidad de texto.\n\n                                          Lineamientos\nCon base en lo señalado en los siguientes artículos del Reglamento Universitario de la Universidad Abierta y a\nDistancia de México:\n\nArtículo 27. La calificación representa la valoración numérica del aprovechamiento que la o el estudiante logró en\ncada unidad didáctica. La escala de calificaciones comprende del 0 (cero) al 100 (cien), y la calificación mínima\naprobatoria será 60 (sesenta).\n\nEn ningún caso procederá la renuncia a la calificación obtenida. Las actividades y evidencias de aprendizaje en las\nque se identifique falta de integridad académica serán evaluadas con 0 (cero).\n\nArtículo 76. Son obligaciones de las y los estudiantes:\n\nV. Realizar, con integridad académica, las actividades que están señaladas en el aula virtual del programa educativo\nen el que están inscritos, conforme a las fechas establecidas en el calendario de aula.\n\n                       Lineamientos para la evaluación del aprendizaje\n\n    •  La entrega de actividades se realizará de acuerdo con el calendario proporcionado por su Figura\n      Académica y marcado en el presente documento.\n    •  La entrega corresponde a un solo intento.\n    •  Las entregas extemporáneas a la fecha límite estarán sujeta a una penalización de 20% menos,\n        aplicable y de acuerdo a tabla. La recepción de actividades será hasta el día de cierre de aula, 02 de\n       diciembre.\n    •  La persona estudiante entregará sus actividades debidamente citadas en formato APA 7ª edición.\n    •  La aplicación o uso de las herramientas de IA se debe apegar a los Lineamientos para el uso\n        ético y responsable de la IA. Escala de evaluación para actividades con IA.\n\n                           Criterio                         Sanción / Penalización\n      50% a 99%, NO declaró uso de IA.                 5 puntos menos\n\n\n\n\n\n                                                        Página 8 de 10"
+          }
+        ]
+      },
+      {
+        "value": "Cuatro paginas solo del cuerpo; preferencia editorial, no confirmacion docente.",
+        "evidence": [
+          {
+            "source_id": "src-editorial",
+            "locator": "Criterios de evaluacion docente",
+            "quoted_text": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/activities/0/calendar",
+    "state": "unknown",
+    "reason": "Sin programacion temporal acreditada al 26/10/2026: fechas pasadas, desconocidas o sin hora/zona verificable. Los literales originales no prueban prorroga, reapertura ni disponibilidad actual.",
+    "evidence": [],
+    "alternatives": []
+  }
+]
+```
+
+## review
+
+```json
+{
+  "state": "needs_review",
+  "reviewed_at": "2026-10-26",
+  "reviewer_role": "organizacion-documental-local-no-aprobacion-academica",
+  "semantic_validation": "failed",
+  "critical_gaps": [
+    "Resolver limites de extension contradictorios con la figura docente.",
+    "Acreditar correspondencia entre tarea, nodo local y oferta; no usar ID de recurso como ID de tarea.",
+    "Verificar recursos obligatorios, vigencia de plataforma y rubrica visual.",
+    "Verificar legislacion, reformas y jurisprudencia en fuentes oficiales antes del ciclo; no inventar hechos, competencia, pruebas ni diligencias realizadas.",
+    "Revision academica/personal no acreditada; la organizacion no equivale a aprobacion.",
+    "Completar recursos, politicas, rutas de producto y alineacion por consigna antes de admitir un unico ciclo."
+  ]
+}
+```
+
+## extensions
+
+```json
+{
+  "conversion": {
+    "version": "1.0",
+    "source_format": ".pdf",
+    "source_sha256": "a2c980ee24094ac5fd1540426610374115f9a92c1ad029bdd5055d2e6b652add",
+    "source_payload": null,
+    "source_blocks": [
+      {
+        "locator": "page:1",
+        "text": "                             Planificación de actividades\n\n\n                                      Datos de identificación\n\n\n\nRegistro Federal de Contribuyentes\n\n\n\n\nClave Única de Registro de Población\n\n\n\n\nMatrícula/Folio                                           FA2611OILV00091\n\n\n\n\nNombre de prestador de servicios profesionales en\n                                           VERÓNICA ORTIZ LÓPEZ\nel ámbito de docencia\n\n\n\n                           Datos de identificación de la asignatura/materia\n\n\n\nAño                      2026\n\n\n\n\nSemestre                  2\n\n\n\n\nBloque                    2\n\n\n\n\nDirección divisional           Ciencias Sociales y Administrativas\n\n\n\n\nPrograma educativo          Derecho\n\n\n\n\n\n                                                        Página 1 de 10"
+      },
+      {
+        "locator": "page:2",
+        "text": "Asignatura/materia\n\n\n\n\nDatos de identificación del objetivo de la asignatura/materia\n                               ASIGNATURA:\n\nFechas de inicio y conclusión del periodo\n                                            Del 28 de septiembre al 06 de diciembre de 2026\neducativo (diez semanas)\n\n\n\n                                           Formar profesionales altamente competentes y comprometidos,\nObjetivo general del programa de educativo        capaces de abordar situaciones legales complejas con integridad\n                                          y desempeñarse exitosamente en una variedad de roles dentro\n                                                    del ámbito jurídico, promoviendo la justicia, y el desarrollo de\n                                                          la sociedad.\n\n                                           Comprender el contenido de los diferentes delitos que protegen\nObjetivo general de la asignatura                    los bienes jurídicos más importantes, que tutelan los principales\n                                                   valores sociales y desglosar sus modalidades partiendo de la\n                                                    aplicación de la teoría general del delito, para conocer las\n                                                     figuras típicas, aprender a analizarlas y saber encuadrar las\n                                                conductas antijurídicas al tipo penal que corresponda en los\n                                                 casos concretos que le sean planteados, analizando el delito\n                                              según los criterios de conducta (forma y fines), por el número\n                                             de sujetos, por su efectos, por su ordenación metodológica, su\n                                                      estructura y el bien jurídico tutelado, además de identificar los\n                                                  aspectos  colaterales como  el  desarrollo  del  delito y  la\n                                                     participación delictiva (autoría) y las penas aplicables, con el\n                                                   propósito de que en la práctica profesional esté preparado para\n                                                    asesorar con eficiencia y sepa identificar cuando la conducta\n                                                desplegada sea: típica, antijurídica y culpable, por consiguiente,\n                                                  sea constitutiva de un delito.\n\n                                                                               I.    Identificar  la  introducción a  la  parte  especial  del\nObjetivos específicos de la asignatura/materia              derecho penal analizando la estructura y contenido de\n                                                               los tipos penales que protegen los bienes jurídicos\n                                                       fundamentales de la persona, comparando el Derecho\n                                                        penal federal con el estatal, para tener la capacidad de\n                                                              recordar, expresar, distinguir y debatir sobre los tipos\n                                                            penales, las coincidencias y diferencias entre el código\n                                                        penal federal y el estatal, así como los sujetos, las\n                                                       conductas e identificar el bien jurídico tutelado.\n                                                                         II.   Reconocer la estructura y contenido de los tipos penales\n                                                   que protegen el bien jurídico de la vida y la integridad\n                                                           corporal conociendo los elementos constitutivos de los\n                                                                        ilícitos que están previstos en el código penal para\n\n\n\n\n                                                        Página 2 de 10"
+      },
+      {
+        "locator": "page:3",
+        "text": "          distinguir  los  sujetos  del  delito,  las  circunstancias\n         modificativas, la penalidad aplicable, siendo capaz de\n        encuadrar las conductas al tipo penal que corresponda.\n   III.    Analizar la estructura y contenido de los tipos penales\n        que establecen delitos de peligro efectivo y presunto\n        estudiando las figuras previstas en la legislación penal\n        que lo prevén para poder diferenciar los supuestos del\n          delito,  la  posición  de  los  sujetos  del  delito,  la\n         punibilidad  y   ser   capaz   de   identificar   los\n        comportamientos al tipo penal correspondiente.\n  IV.    Analizar los elementos que integran los delitos que\n        protegen la libertad personal estudiando los delitos que\n        para tal fin se prevén en el código penal para tener un\n       panorama más amplio de las diferentes circunstancias\n         modificativas, la gravedad de los delitos respecto de su\n        penalidad y su relación con las formas de ejecución y\n        consumación,  siendo   estas  también  un   factor\n        importante en la definición de cada delito y penalidad.\n  V.    Analizar los elementos que integran los delitos que\n        protegen  la  libertad, seguridad sexual y  el normal\n         desarrollo psicosexual estudiando los delitos que para\n           tal fin se prevén en el código penal para identificar los\n          delitos de estas diferentes índoles, así como sus sujetos,\n         sus  circunstancias  modificativas,  la  penalidad que\n         aplica y encuadrar y diferenciar las conductas al tipo\n        penal que se tipifique, considerando también la forma\n        de ejecución y consumación para encuadrar de forma\n         precisa la conducta delictiva.\n  VI.    Identificar las conductas que prevén los delitos que\n         afectan el patrimonio de las personas analizando las\n         figuras típicas que están previstas en la legislación\n        penal para analizar los delitos destinados a la tutela del\n        patrimonio y saber distinguir y encuadrar de manera\n        adecuada  las  diferentes  conductas  delictivas  que\n         afectan el patrimonio.\n VII.    Analizar los elementos que integran los delitos que\n        protegen la paz, la seguridad y la inviolabilidad del\n         domicilio de las personas estudiando los delitos que\n        para tal fin se prevén en el código penal para diferenciar\n         los sujetos de este tipo de delitos, sus circunstancias\n         modificativas, la penalidad aplicable para cada uno,\n        siendo capaz de encuadrar las conductas al tipo penal\n        que  corresponda,  de  acuerdo con  las  formas  de\n         ejecución y consumación, lo anterior de forma precisa.\nVIII.    Identificar  las  conductas  que  prevén  los  delitos\n        cometidos por servidores públicos que tutela la buena\n         administración analizando las figuras típicas que están\n         previstas en la legislación penal para saber analizar los\n\n\n\n\nPágina 3 de 10"
+      },
+      {
+        "locator": "page:4",
+        "text": "                                                                delitos  destinados  a   la   tutela  de   la  correcta\n                                                          administración y poder  distinguir y  encuadrar de\n                                                  manera adecuada las diferentes conductas delictivas en\n                                                   que pueden incurrir los servidores públicos.\n\n                                                   Fortalece  las  competencias  de  análisis,  interpretación  y\nAspectos que fortalecen del perfil de egreso del     aplicación de  la  legislación penal mexicana,  así como  el\nprograma educativo                             razonamiento crítico, la argumentación jurídica y la resolución\n                                             de casos concretos, promoviendo un ejercicio profesional ético,\n                                                 responsable y comprometido con la legalidad, la justicia y la\n                                                  protección de los derechos de las personas.\n\n\n\nDatos para la planificación de actividades\n\nSemana 4 (Del 19 al 25 de octubre de 2026)\n\nFecha de entrega (actividad): 25 de Octubre\n\nFecha de sesión sincrónica: Martes 20 de Octubre de 2026         Hora: 21:00 Hrs (HC)\n\n                             3.- Delitos de peligro efectivo y presunto.\nContenido temático a     3.1 Disparo de arma de fuego sobre persona, noción legal.\n                          3.1.2 Conducta, formas y medios de ejecución.desarrollar\n                         3.2 Ataque peligroso, noción del delito.\n                          3.2.1 Conducta formas y medios de ejecución.\n                         3.3 Abandono de niños y enfermos, noción del delito.\n                         3.4 Abandono de atropellados.\n                         3.5 Abandono de cónyuge, hijos o ambos, noción del delito.\n                          3.5.1 Conducta formas y medios de ejecución.\n                         3.6 Omisión de socorro y omisión de cuidado, noción de los ilícitos.\n                         3.7 Peligro de contagio, noción legal del delito.\n                          3.7.1 Conducta formas y medios de ejecución.\n\n\n\nObjetivo específico que  Aplicar los elementos de los delitos de peligro efectivo y presunto mediante la resolución\nse desarrolla del         guiada de situaciones jurídicas, para distinguir cuándo una conducta genera un peligro\n                       penalmente relevante y determinar el posible tipo penal aplicable.contenido temático\n\n\n\n\nTécnica didáctica que\nse utiliza (100 técnicas                                                 Valoración de decisiones\nde enseñanza y\naprendizaje)\n\n\n\n\n                      General:\n\n\n\n\n                                                        Página 4 de 10"
+      },
+      {
+        "locator": "page:5",
+        "text": "Bibliografía propuesta\npara consulta (tomada         I.   Asamblea Legislativa del Distrito Federal. (2002). Código Penal para el Distrito\nde biblioteca digital,              Federal. Gaceta Oficial del Distrito Federal.\n                                 https://data.consejeria.cdmx.gob.mx/index.php/leyes/codigos/34-codigo-penal-elibro)\n                                     para-el-distrito-federal\n                                  II.   Cámara de Diputados del H. Congreso de la Unión. (1931). Código Penal\n                                  Federal. Diario Oficial de la Federación.\n                                https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf\n                                III.   Cámara de Diputados del H. Congreso de la Unión. (1917). Constitución Política\n                             de los Estados Unidos Mexicanos. Diario Oficial de la Federación.\n                               https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf\n\n\n\nNormatividad                  1.  Constitución Política de los Estados Unidos Mexicanos. D.O.F. Diario Oficial de\ngubernamental                      la Federación (1917) Constitución Política de los Estados Unidos Mexicanos\nrelacionada con la           [CPEUM] (última reforma 10 de julio de 2015) 05 de febrero de 1917 (México).\nasignatura                      Disponible en\n                                 https://www.gob.mx/cms/uploads/attachment/file/30436/constitucion_politica_1_\n                                   .pdf\n                                2.  Código Penal Federal. D.O.F. Diario Oficial de la Federación (1931) Código Penal\n                                Federal [CPF] (última reforma 18 de octubre de 2023) 14 de agosto de 1931\n                               (México). Disponible en\n                                https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf\n                                3.  Código Penal para la Ciudad de México. Asamblea Legislativa del Distrito\n                                  Federal, II Legislatura (2002) Código Penal para el Distrito Federal [CPDF]\n                                  (última reforma 29 de julio de 2020) 16 de julio de 2002 (Ciudad de México,\n                              México). Disponible en\n                              https://www.congresocdmx.gob.mx/media/documentos/9cd0cdef5d5adba1c8e2\n                              5b34751cccfdcca80e2c.pdf\n                                4.  Código Nacional de Procedimientos Penales. Coordinación Académica y de\n                                 Investigación D.O.F. Diario Oficial de la Federación (2014) Código Nacional de\n                               Procedimientos Penales [CNPP] (última reforma 25 de abril de 2023) 05 de marzo\n                             de 2014 (México). Disponible en\n                                https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf\n                                5.  Ley General de Víctimas. D.O.F. Diario Oficial de la Federación (2013) Ley\n                               General de Víctimas [LGV] (última reforma 25 de abril de 2023) 09 de enero de\n                            2013 (México). Disponible en\n                               https://www.diputados.gob.mx/LeyesBiblio/pdf/LGV.pdf\n\n\n\nTipo de evaluación que\n                                  SUMATIVA\nse utiliza\n\n\n\n                       Actividad: Valoración de decisiones\nActividad para realizar\n                                - Propósito de la actividad:la evaluación (basada\nen la técnica de\n\n\n\n\n                                                        Página 5 de 10"
+      },
+      {
+        "locator": "page:6",
+        "text": "enseñanza y\n                         Aplicar  los elementos de  los  delitos de  peligro  efectivo y presunto mediante  laaprendizaje utilizada y\n                          investigación jurídica dirigida y la valoración de situaciones hipotéticas, para identificar\nla bibliografía                        conductas de riesgo penalmente relevantes y fundamentar su posible clasificación jurídica.\nconsultada)\n                       Actividad: Valoración de decisiones\n\n                   Semana 4. Delitos de peligro efectivo y presunto\n\n                       Propósito de la actividad\n\n                       Material de consulta\n\n                                            I.    Contenido de estudio de la Unidad 3.\n                                         II.   Código Penal Federal.\n                                       III.   Código Penal para el Distrito Federal.\n                            IV.    Procesador de textos (Word o equivalente).\n\n                        Indicaciones\n\n                            1. Investigación jurídica\n\n                        Consulta  el contenido de  la Unidad 3 y los códigos penales señalados. Investiga\n                       brevemente las siguientes figuras:\n\n                                            I.    Disparo de arma de fuego sobre persona y ataque peligroso.\n                                         II.   Abandono de niños y enfermos.\n                                       III.   Abandono de atropellados.\n                            IV.   Abandono de cónyuge, hijos o ambos.\n                          V.   Omisión de socorro y omisión de cuidado.\n                            VI.    Peligro de contagio.\n\n                        Elabora una tabla donde señales, para cada figura, en qué consiste la conducta y en qué\n                            artículo y legislación se encuentra regulada. Si alguna figura no aparece con esa\n                      denominación o ya no se encuentra vigente, indícalo.\n\n                 No es necesario copiar definiciones ni artículos completos. Explica brevemente lo que\n                       comprendiste y fundaméntalo.\n\n                            2. Valoración de decisiones\n\n                     Lee  las siguientes situaciones y responde  las preguntas. Utiliza los conceptos que\n                           investigaste y fundamenta tus respuestas con la legislación consultada.\n\n                    Caso 1. Conductas peligrosas\n\n                       Durante una discusión, Roberto dispara un arma de fuego en dirección a Carlos, sin\n                            lesionarlo. En otro hecho, Miguel intenta agredir a una persona con un objeto peligroso,\n                        pero es detenido antes de alcanzarla.\n\n                     Responde:\n\n                           a) ¿Qué figuras delictivas podrían relacionarse con estas conductas?\n\n\n\n\n                                                        Página 6 de 10"
+      },
+      {
+        "locator": "page:7",
+        "text": "b) ¿Qué elementos necesitarías comprobar antes de determinar si existe un delito?\n\nCaso 2. Abandono y deberes de cuidado\n\nAna deja solo durante varias horas a un menor que está bajo su responsabilidad. En otra\nsituación, un conductor atropella a una persona y abandona el lugar sin solicitar ayuda. Por\nseparado, Pedro deja de proporcionar los alimentos indispensables a sus hijos.\n\nResponde:\n\na) ¿Qué figuras delictivas podrían analizarse en cada situación?\n\nb) ¿Qué obligaciones y circunstancias deben considerarse para determinar la posible\nresponsabilidad penal?\n\nCaso 3. Omisión de auxilio y peligro de contagio\n\nUna persona observa a alguien en una situación de peligro y decide no solicitar ayuda. En\notro hecho, una cuidadora abandona a una persona enferma que depende de su atención.\n\nPor separado, alguien que conoce una enfermedad transmisible realiza una conducta que\npodría representar un riesgo para otra persona.\n\nResponde:\n\na) ¿Qué diferencias existen entre la omisión de socorro, la omisión de cuidado y el\npeligro de contagio?\n\nb) ¿Qué circunstancias deben comprobarse antes de considerar que alguna de estas\nconductas constituye un delito?\n\n3. Decisión fundamentada\n\nSelecciona uno de los tres casos y explica en un párrafo de cinco a siete líneas qué decisión\njurídica tomarías, qué artículo utilizarías para fundamentarla y qué información adicional\nnecesitarías para confirmarla.\n\n4. Entrega\n\nIntegra en un solo documento:\n\n    I.    Portada con tus datos académicos.\n   II.    Tabla breve de investigación jurídica.\n  III.    Respuestas a los tres casos.\n IV.    Decisión fundamentada.\n  V.    Referencias consultadas en formato APA 7.\n\nExtensión máxima: cuatro cuartillas, incluyendo portada y referencias.\n\nModalidad: individual.\n\nFormato de entrega: PDF.\n\n\n\n\n\n                            Página 7 de 10"
+      },
+      {
+        "locator": "page:8",
+        "text": "Evidencia de la                                      Actividad ponderable.\nevaluación                                        Valoración de decisiones\n\n\n\nPorcentaje de\ncalificación que aporta                                         (10/100)\n(--/100)\n\n\n\nObservaciones                      I.   La actividad se realizará individualmente.\n                                         II.    Investiga solo los conceptos necesarios y aplica lo encontrado directamente a las\n                                   situaciones.\n                                       III.   Fundamenta tus valoraciones en las disposiciones jurídicas que realmente\n                                 consultes y distingue entre conductas reguladas, posibles equivalencias y figuras\n                            no localizadas en el código revisado.\n                            IV.   No supongas hechos no descritos. Utiliza lenguaje propio y referencias APA 7.\n                          V.    Extensión máxima: seis cuartillas, incluyendo portada, tabla y bibliografía.\n                              VI.   Se valora la calidad del razonamiento, no la cantidad de texto.\n\n                                          Lineamientos\nCon base en lo señalado en los siguientes artículos del Reglamento Universitario de la Universidad Abierta y a\nDistancia de México:\n\nArtículo 27. La calificación representa la valoración numérica del aprovechamiento que la o el estudiante logró en\ncada unidad didáctica. La escala de calificaciones comprende del 0 (cero) al 100 (cien), y la calificación mínima\naprobatoria será 60 (sesenta).\n\nEn ningún caso procederá la renuncia a la calificación obtenida. Las actividades y evidencias de aprendizaje en las\nque se identifique falta de integridad académica serán evaluadas con 0 (cero).\n\nArtículo 76. Son obligaciones de las y los estudiantes:\n\nV. Realizar, con integridad académica, las actividades que están señaladas en el aula virtual del programa educativo\nen el que están inscritos, conforme a las fechas establecidas en el calendario de aula.\n\n                       Lineamientos para la evaluación del aprendizaje\n\n    •  La entrega de actividades se realizará de acuerdo con el calendario proporcionado por su Figura\n      Académica y marcado en el presente documento.\n    •  La entrega corresponde a un solo intento.\n    •  Las entregas extemporáneas a la fecha límite estarán sujeta a una penalización de 20% menos,\n        aplicable y de acuerdo a tabla. La recepción de actividades será hasta el día de cierre de aula, 02 de\n       diciembre.\n    •  La persona estudiante entregará sus actividades debidamente citadas en formato APA 7ª edición.\n    •  La aplicación o uso de las herramientas de IA se debe apegar a los Lineamientos para el uso\n        ético y responsable de la IA. Escala de evaluación para actividades con IA.\n\n                           Criterio                         Sanción / Penalización\n      50% a 99%, NO declaró uso de IA.                 5 puntos menos\n\n\n\n\n\n                                                        Página 8 de 10"
+      },
+      {
+        "locator": "page:9",
+        "text": "      50% en adelante, declarado.          No se penaliza, pero se evalúa en función\n                                                                  del contenido\n                                                     3 puntos menos\n        0 a 49%, NO declarado\n        0 al 49%, se declara el uso de IA.       No se penaliza, pero se evalúa en función\n                                                                  del contenido\n\n\n     La persona estudiante perderá su intento de envío de la actividad cuando entregue o realice una o\n      más de las condiciones enunciadas en Los Lineamientos para la evaluación del aprendizaje:\n     CAPÍTULO II, SECCIÓN TERCERA, DE LA ELABORACIÓN Y ENTREGA DE\n     ACTIVIDADES, apartado décimo octavo.\n\n    •  La entrega de actividades, recepción y evaluación se rige por dichos lineamientos y el RUUADM,\n       por lo tanto, no se reciben por otros medios distintos a aula ni posterior al cierre de la misma.\n\nCriterios de examen:\n\n     Un intento\n     Método de calificación: el último intento.\n\n\n\n\n                                 Rúbrica de evaluación\n\n\n                  Criterio                               Descripción                    Puntaje\n\n                                           Identifica las figuras delictivas, sus conductas y\n       Investigación jurídica                                                       2\n                                   fundamentos legales.\n                                           Identifica los posibles delitos y los elementos\n      Caso 1. Conductas peligrosas                                                2\n                                       necesarios para su configuración.\n      Caso 2. Abandono y deberes   Reconoce las figuras delictivas, obligaciones y\n                                                                               2\n      de cuidado                      circunstancias relevantes.\n      Caso 3. Omisión de auxilio y   Distingue las conductas y los elementos jurídicos\n                                                                               2\n       peligro de contagio              aplicables.\n                                       Presenta una conclusión coherente y sustentada\n      Decisión fundamentada                                                     1\n                                        jurídicamente.\n       Integración y presentación     Organiza el trabajo e incluye las referencias en APA 7.  1\n\n      Total                                                                     10\n\n\n\n\n\n                                                        Página 9 de 10"
+      },
+      {
+        "locator": "page:10",
+        "text": "                  Concentrado de calificaciones\n\n\nSemana                   Actividad(es)               Porcentaje de calificación\n                                                                        (--/100)\n   1                       Diagnóstico                         0\n\n   2                 Cuadro comparativo                     10\n\n   3                     Estudio de casos                       15\n\n   4                 Valoración de decisiones                   10\n\n   5                       Simulación                         15\n\n   6                    Video cápsula                       10\n\n   7                      Análisis de hechos                      10\n\n   8                     Juego de roles                       10\n\n   9                       Simulación                         20\n\n  10                    Autoevaluación                       0\n\n             TOTAL                                 100\n\n\n\n\n\n                                      Página 10 de 10"
+      }
+    ],
+    "unsegmented_document": false,
+    "period_pending": true,
+    "activity_mapping": [
+      {
+        "activity_id": "s4-valoracion-decisiones",
+        "local_number": 4,
+        "official_number": null,
+        "source_locator": "explicit_documentary_correspondence",
+        "source_is_summary": false
+      }
+    ]
+  },
+  "cotejo": {
+    "method": "segmentacion PDF por localizadores",
+    "resource_module_id": "218336",
+    "resource_is_activity_id": false,
+    "cases": [
+      {
+        "id": "req-caso-1",
+        "title": "Conductas peligrosas",
+        "context": "Durante una discusión, Roberto dispara un arma de fuego en dirección a Carlos, sin\nlesionarlo. En otro hecho, Miguel intenta agredir a una persona con un objeto peligroso,\npero es detenido antes de alcanzarla.",
+        "question_ids": [
+          "pregunta-1-1",
+          "pregunta-1-2"
+        ]
+      },
+      {
+        "id": "req-caso-2",
+        "title": "Abandono y deberes de cuidado",
+        "context": "Ana deja solo durante varias horas a un menor que está bajo su responsabilidad. En otra\nsituación, un conductor atropella a una persona y abandona el lugar sin solicitar ayuda. Por\nseparado, Pedro deja de proporcionar los alimentos indispensables a sus hijos.",
+        "question_ids": [
+          "pregunta-2-1",
+          "pregunta-2-2"
+        ]
+      },
+      {
+        "id": "req-caso-3",
+        "title": "Omisión de auxilio y peligro de contagio",
+        "context": "Una persona observa a alguien en una situación de peligro y decide no solicitar ayuda. En\notro hecho, una cuidadora abandona a una persona enferma que depende de su atención.\n\nPor separado, alguien que conoce una enfermedad transmisible realiza una conducta que\npodría representar un riesgo para otra persona.",
+        "question_ids": [
+          "pregunta-3-1",
+          "pregunta-3-2"
+        ]
+      }
+    ],
+    "question_count": 6,
+    "rubric_points": 10,
+    "printed_total": 10,
+    "duplicate_criterion_preserved": false,
+    "platform_current_verified": false,
+    "visual_rubric_verified": false
+  },
+  "organizacion_interna": {
+    "documentary_date": "2026-10-26",
+    "internal_number": 4,
+    "official_number": null,
+    "week": 4,
+    "task_module_id": null,
+    "task_module_current_verified": false,
+    "identity_evidence": {
+      "source_id": "src-control-actual",
+      "locator": "tabla vigente e identidad interior de reporte",
+      "number_is_not_inferred_from_week": true
+    },
+    "previous_revision": {
+      "path": "planeaciones-derecho-penal-especial-mexicano/importaciones/pca-4dd40f72de8af2db1526/r0003/planeacion.json",
+      "sha256": "443bdba17feb0ad665a6076f50f7cde32759571f2c8a5f010661171bda1d8d1d",
+      "plan_id": "pca-4dd40f72de8af2db1526",
+      "revision": 3
+    },
+    "original_calendar": {
+      "opens_at": null,
+      "expected_at": null,
+      "due_at": null,
+      "closes_at": null,
+      "timezone": null,
+      "literal": "delitos  destinados  a   la   tutela  de   la  correcta\nadministración y poder  distinguir y  encuadrar de\nmanera adecuada las diferentes conductas delictivas en\nque pueden incurrir los servidores públicos.\n\nFortalece  las  competencias  de  análisis,  interpretación  y\nAspectos que fortalecen del perfil de egreso del     aplicación de  la  legislación penal mexicana,  así como  el\nprograma educativo                             razonamiento crítico, la argumentación jurídica y la resolución\nde casos concretos, promoviendo un ejercicio profesional ético,\nresponsable y comprometido con la legalidad, la justicia y la\nprotección de los derechos de las personas.\n\n\n\nDatos para la planificación de actividades\n\nSemana 4 (Del 19 al 25 de octubre de 2026)\n\nFecha de entrega (actividad): 25 de Octubre\n\nFecha de sesión sincrónica: Martes 20 de Octubre de 2026         Hora: 21:00 Hrs (HC)\n\n3.- Delitos de peligro efectivo y presunto.\nContenido temático a     3.1 Disparo de arma de fuego sobre persona, noción legal.\n3.1.2 Conducta, formas y medios de ejecución.desarrollar\n3.2 Ataque peligroso, noción del delito.\n3.2.1 Conducta formas y medios de ejecución.\n3.3 Abandono de niños y enfermos, noción del delito.\n3.4 Abandono de atropellados.\n3.5 Abandono de cónyuge, hijos o ambos, noción del delito.\n3.5.1 Conducta formas y medios de ejecución.\n3.6 Omisión de socorro y omisión de cuidado, noción de los ilícitos.\n3.7 Peligro de contagio, noción legal del delito.\n3.7.1 Conducta formas y medios de ejecución.\n\n\n\nObjetivo específico que  Aplicar los elementos de los delitos de peligro efectivo y presunto mediante la resolución\nse desarrolla del         guiada de situaciones jurídicas, para distinguir cuándo una conducta genera un peligro\npenalmente relevante y determinar el posible tipo penal aplicable.contenido temático\n\n\n\n\nTécnica didáctica que\nse utiliza (100 técnicas                                                 Valoración de decisiones\nde enseñanza y\naprendizaje)\n\n\n\n\nGeneral:\n\n\n\n\n"
+    },
+    "calendar_reason": "Sin programacion temporal acreditada al 26/10/2026: fechas pasadas, desconocidas o sin hora/zona verificable. Los literales originales no prueban prorroga, reapertura ni disponibilidad actual.",
+    "historical_control": {
+      "text": "# Derecho penal especial mexicano\n\nControl principal de la materia. UnADM, Licenciatura en Derecho, semestre 2,\nbloque 2, grupo 020, curso Moodle 3482. Creditos historicos registrados: 8;\nfuente curricular compartida: ../../assets-unadm/malla-curricular-derecho-unadm.pdf.\nNo confundir la numeracion interna de reportes con una numeracion oficial adicional.\n\n## Estado vigente y alcance\n\nRevision documental S2: 11 de octubre de 2026; preparacion documental S3:\n12 de octubre de 2026. La consulta autenticada de esta\nsesion confirma S2 sin entrega y sin calificar, cierre 11 de octubre de 2026,\n23:59. El usuario autorizo posteriormente realizar las entregas S2 de tres\nmaterias; la carga de Teoria del Estado fallo antes de guardar. No se envio\nPenal ni se publico el foro S1. La presencia de archivos en Entregas no es\ncomprobante de envio.\n\n| Actividad | Producto y archivos | Verificaciones | Pendientes concretos |\n| --- | --- | --- | --- |\n| S1, foro diagnostico, modulo 213541 | [Planeacion](planeaciones-derecho-penal-especial-mexicano/planeacion-S1.md), [TEX interno](reporte-derecho-penal-especial-mexicano-Actividad-1.tex), [PDF interno](reporte-derecho-penal-especial-mexicano-Actividad-1.pdf), [propuesta de replica real](referencias-derecho-penal-especial-mexicano/notas-derecho-penal-especial-mexicano/actividad-01-foro-diagnostico/propuestas/replica-y-pendientes.md) | Consigna en imagen: siete respuestas, lectura y al menos dos replicas; sin valor sumativo. Aula muestra publicacion pendiente | Revisar personalmente respuestas e intereses; segunda replica requiere otra participacion real. No publicar S1 por la autorizacion limitada a S2 |\n| S2, cuadro comparativo y celular, modulo 215277 | [Planeacion](planeaciones-derecho-penal-especial-mexicano/planeacion-S2.md), [TEX activo](reporte-derecho-penal-especial-mexicano-Actividad-2.tex), [PDF activo](reporte-derecho-penal-especial-mexicano-Actividad-2.pdf), [PDF para adjuntar](entregas-derecho-penal-especial-mexicano/Actividad-S2-Cuadro-comparativo-robo-Martin-Jonathan-de-la-Cruz.pdf) | Siete rubros, transcripcion de ambos supuestos, dos coincidencias, dos diferencias de formulacion, respuestas a-e, tres referencias y declaracion IA. Compilacion y revision visual: ocho paginas totales. Cotejo oficial de arts. 367/369 CPF y 220/222 CPDF | Envio autorizado pero NO realizado; consultar estado antes de reintentar. Revision personal no certificada. No afirmar calificacion ni competencia/culpabilidad probadas |\n| S3, estudio de casos, modulo 216751 | [Planeacion S3](planeaciones-derecho-penal-especial-mexicano/planeacion-S3.md), [notas analiticas](referencias-derecho-penal-especial-mexicano/notas-derecho-penal-especial-mexicano/actividad-03-estudio-caso-vida-integridad/notas-analiticas-S3.md), [TEX](reporte-derecho-penal-especial-mexicano-Actividad-3.tex) y [PDF](reporte-derecho-penal-especial-mexicano-Actividad-3.pdf) | Cinco PDF del aula conservados: plan, apoyo en notas y tres codigos en referencias. Cinco cajas de caso (15 respuestas), cinco subtemas en el indice, siete ejes conceptuales, cuadro horizontal, siete fuentes verificadas (incluido CNPP) y declaracion IA. PDF de 12 paginas: ocho de cuerpo (4-11). Observador AulaTeX: 100/100 en run 20261012-175650-activity-03-observer, sin advertencias; puntuacion automatica, no calificacion docente | Fecha docente 18/10/2026; SIN envio en aula. El limite literal docente incluye identificacion y referencias; el criterio posterior del estudiante excluye preliminares y referencias. Confirmar extension con docente y revisar personalmente antes del unico envio; Audiotex no publicado |\n| Semanas posteriores | La planificacion general enumera actividades posteriores | No se ha consultado su consigna detallada | No elaborar por analogia |\n\n## Organizacion y procedencia\n\n- [Inventario de aula actualizado](referencias-derecho-penal-especial-mexicano/inventario-aula.json): URLs de origen, nombres originales y destinos actuales.\n- [Libros e inventario](referencias-derecho-penal-especial-mexicano/libros-derecho-penal-especial-mexicano/inventario-libros.json): Atienza y Garcia Maynez con nombres legibles, TXT junto a PDF; no acreditar lectura completa por disponer de extraccion.\n- [Materiales originales S2](planeaciones-derecho-penal-especial-mexicano/originales-docentes/Planificacion-S2-docente.pdf) y TXT adyacente: originales docentes sin alteracion.\n- Notas separadas en actividad-01-foro-diagnostico y actividad-02-cuadro-comparativo-robo. Las normas y auditorias comunes estan en materiales-generales.\n- [Inventario inicial clasificado](referencias-derecho-penal-especial-mexicano/notas-derecho-penal-especial-mexicano/materiales-generales/registros-organizacion/inventario-inicial-2026-10-11.json), [38 movimientos](referencias-derecho-penal-especial-mexicano/notas-derecho-penal-especial-mexicano/materiales-generales/registros-organizacion/movimientos-2026-10-11.json) y [13 pares PDF/TXT](referencias-derecho-penal-especial-mexicano/notas-derecho-penal-especial-mexicano/materiales-generales/registros-organizacion/extracciones-2026-10-11.json): hashes verificados; cero originales docentes modificados y cero materiales unicos eliminados.\n- Se conservaron las copias docente y oficial historica del CPDF aunque son identicas por SHA256: procedencias distintas. No deducir fecha de vigencia del nombre de archivo.\n- Borrador S2 MD/PDF en propuestas; seguimiento, compilacion y programa editorial anteriores en historico-control. Conservan texto y enlaces historicos, no son entradas vigentes.\n- Las extracciones, capturas de revision y auxiliares de compilacion son regenerables; los originales, comprobantes y versiones enviadas no se eliminan por ese criterio. Memoria/extractor y bases existentes se conservaron sin acreditar calidad academica.\n\n## Fuentes juridicas\n\n[Bibliografia](derecho-penal-especial-mexicano.bib). El CPF oficial declara ultima\nreforma DOF 13-03-2026; arts. 367 y 369 en paginas 120-121. La consolidacion\nde Consejeria del CPDF declara texto vigente y ultima reforma G.O. CDMX\n21-08-2026; arts. 220 y 222 en paginas 84-85. [Registro del cotejo](referencias-derecho-penal-especial-mexicano/notas-derecho-penal-especial-mexicano/actividad-02-cuadro-comparativo-robo/investigacion/cotejo-juridico-2026-10-11.md).\nLa copia docente CPDF y la copia historica del Congreso se preservan separadas.\nNo se fijan penas: faltan valor, circunstancias y analisis procesal; comparar\ndos tipos no decide jurisdiccion ni responsabilidad. La transcripcion de\narticulos es la solicitada, no sustituto del razonamiento.\n\n## Compilacion y plantilla\n\nDesde la raiz del repositorio:\n\n```powershell\n.\\aulaTEX\\latexmk-build.ps1 .\\UnADM\\licenciatura-en-derecho-unadm\\derecho-penal-especial-mexicano-lde\\reporte-derecho-penal-especial-mexicano-Actividad-2.tex\n```\n\nLos reportes activos reutilizan el nucleo compartido mediante input template\ny emblema img/departamentos/UnADM.pdf. No tienen marcas ITESCA, UAS o UAdeC.\nLa fecha S2 es revision documental historica (9 de octubre), no fecha de envio.\nPersisten preambulos locales duplicados y la fecha dinamica del reporte interno\nS1: su normalizacion queda pendiente y no se certifica terminada. Las bases y\npresentacion existentes son soportes editoriales, no productos solicitados S2.\nNo se crearon presentaciones ni Word para entregar Penal.\n\nEl PDF de envio usa nombre descriptivo local: no hay nombre obligatorio ni\nWord exigido en la consigna conservada; se comprobo aceptacion PDF en el\nflujo de aula de Teoria, no se infiere de ello una nueva consigna de Penal.\nAntes de enviar Penal verificar restricciones del selector, nombre, modulo,\nestado y SHA256 247260c59fdb334ffd90dce6f1fe210a4d50d6c074a5f030f418a994e6b6ba67.\n\n## Historial y limites\n\nEl seguimiento del 9 de octubre y la primera consulta del 4 de octubre son\nevidencias historicas: diciembre era cierre tecnico anterior, no plazo\nordinario vigente. [Control historico](referencias-derecho-penal-especial-mexicano/notas-derecho-penal-especial-mexicano/materiales-generales/historico-control/SEGUIMIENTO-2026-2-B2.md).\nLa evidencia actual se conserva en materiales-generales/auditorias/semana2-2026-10-11.\nLa asistencia de GitHub Copilot se declara; no se estima un porcentaje de IA\nni se afirma revision personal ya realizada. No hubo nuevos envios,\npublicaciones, examenes, commits o push durante esta reorganizacion.",
+      "current_platform_status": null
+    },
+    "report_paths": {
+      "tex": "reporte-derecho-penal-especial-mexicano-Actividad-4.tex",
+      "pdf": "reporte-derecho-penal-especial-mexicano-Actividad-4.pdf",
+      "internal_support_only": false
+    },
+    "editorial_policy": {
+      "template": "UnADM",
+      "preserve_specific_format": true,
+      "preserve_three_part_structure_when_applicable": true,
+      "declare_ai_as_required_without_claiming_personal_review": true,
+      "teaching_material_is_not_legal_authority": true
+    },
+    "temporal_state": "unprogrammed",
+    "platform_operations": [],
+    "editorial_cycle": "blocked",
+    "integration_complete": false,
+    "rubric_visual_verified": false
+  }
+}
+```

@@ -1,0 +1,4547 @@
+# Planeacion: Derecho mercantil
+
+Estado: needs_review. Conversion local, no aprobacion docente ni autorizacion de envio.
+
+## Identificacion
+
+```json
+{
+  "institution": "UAS",
+  "program": "Licenciatura en Contaduría Pública",
+  "subject_id": "derecho-mercantil",
+  "subject_title": "Derecho mercantil",
+  "offering_id": "oferta-213b6798b65c6b04",
+  "period": null,
+  "modality": null
+}
+```
+
+## Actividad 49859: Foro de dudas
+
+### Consigna importada
+
+Estimados alumnos y alumnas.
+En este foro podrás plantear tus dudas académicas relacionadas con las actividades y materiales del Curso.
+
+### Requisitos
+
+1. Estimados alumnos y alumnas.
+2. En este foro podrás plantear tus dudas académicas relacionadas con las actividades y materiales del Curso.
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[
+  {
+    "id": "step-001",
+    "order": 1,
+    "phase": "construction",
+    "action": "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-002",
+    "order": 2,
+    "phase": "construction",
+    "action": "Redactar una duda concreta sólo si existe, citando la actividad y el requisito que necesitan aclaración.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  }
+]
+```
+
+### products
+
+```json
+[]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": [
+    "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+    "Es un canal de apoyo; no se inventa una intervención obligatoria ni ponderación."
+  ]
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": "Sin fechas visibles en la consulta"
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## Actividad 49860: Evaluación Diagnóstica
+
+### Consigna importada
+
+Estimados(as) Estudiantes.
+En esta actividad deberás responder de acuerdo a tus conocimientos previos sobre Derecho Mercantil, tales como Actos de Comercio, Contratos y Obligaciones.
+Debes leer detenidamente la pregunta, y responder honestamente, esto no formará parte de tu calificación, sin embargo nos será de gran ayuda para conocer tus conocimientos previos al ingresar a este curso.
+Esta encuesta es totalmente anónima.
+Adelante!
+
+### Requisitos
+
+1. Estimados(as) Estudiantes.
+En esta actividad deberás responder de acuerdo a tus conocimientos previos sobre Derecho Mercantil, tales como Actos de Comercio, Contratos y Obligaciones.
+Debes leer detenidamente la pregunta, y responder honestamente, esto no formará parte de tu calificación, sin embargo nos será de gran ayuda para conocer tus conocimientos previos al ingresar a este curso.
+2. Esta encuesta es totalmente anónima.
+3. Adelante!
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[
+  {
+    "id": "step-001",
+    "order": 1,
+    "phase": "construction",
+    "action": "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-002",
+    "order": 2,
+    "phase": "construction",
+    "action": "Leer el aviso de anonimato y responder personalmente según los conocimientos o la experiencia reales; no delegar respuestas subjetivas.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  }
+]
+```
+
+### products
+
+```json
+[]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": [
+    "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+    "No se inventan respuestas personales; no se conservan respuestas a la encuesta en el repositorio."
+  ]
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": "Sin fechas visibles en la consulta"
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## Actividad 49861: Encuesta de Satisfacción
+
+### Consigna importada
+
+Con el propósito de mejorar nuestros procesos académicos, le pedimos que califique de manera honesta los siguientes aspectos, a fin de valorar su grado de satisfacción y detectar oportunidades de mejora.    Estamos evaluando tres aspectos fundamentales:Facilitador(a):Los Contenidos del Curso: Derecho MercantilLos Servicios Administrativos: Plataforma educativaEsto nos permitirá evaluar por separado la calidad del desempeño y servicio de cada uno.Solicitamos, lea detenidamente la pregunta y asigne la puntuación que más se acerque a la realidad, de acuerdo a su experiencia en este Curso.Las preguntas tendrán la escala siguiente : Excelente Bueno Regular No Suficiente Recuerde que esta encuesta es totalmente ANÓNIMA.
+
+### Requisitos
+
+1. Con el propósito de mejorar nuestros procesos académicos, le pedimos que califique de manera honesta los siguientes aspectos, a fin de valorar su grado de satisfacción y detectar oportunidades de mejora.    Estamos evaluando tres aspectos fundamentales:Facilitador(a):Los Contenidos del Curso: Derecho MercantilLos Servicios Administrativos: Plataforma educativaEsto nos permitirá evaluar por separado la calidad del desempeño y servicio de cada uno.Solicitamos, lea detenidamente la pregunta y asigne la puntuación que más se acerque a la realidad, de acuerdo a su experiencia en este Curso.Las preguntas tendrán la escala siguiente : Excelente Bueno Regular No Suficiente Recuerde que esta encuesta es totalmente ANÓNIMA.
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[
+  {
+    "id": "step-001",
+    "order": 1,
+    "phase": "construction",
+    "action": "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-002",
+    "order": 2,
+    "phase": "construction",
+    "action": "Leer el aviso de anonimato y responder personalmente según los conocimientos o la experiencia reales; no delegar respuestas subjetivas.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  }
+]
+```
+
+### products
+
+```json
+[]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": [
+    "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+    "No se inventan respuestas personales; no se conservan respuestas a la encuesta en el repositorio."
+  ]
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": "Sin fechas visibles en la consulta"
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## Actividad 49870: Foro_S1
+
+### Consigna importada
+
+Foro de Discusión #1
+Te invitamos a que escribas tú aportación sobre el tema de discusión y posteriormente, retroalimentes al menos a una participación de tus compañeros. Te recomiendo que revises detenidamente la Guía de Evaluación de los Foros (Haz clic aquí).
+Debes recordar que sólo se podrán evaluar tus aportaciones al foro que estén dentro del período indicado por el mismo (ni antes ni después).
+
+### Requisitos
+
+1. Foro de Discusión #1
+2. Te invitamos a que escribas tú aportación sobre el tema de discusión y posteriormente, retroalimentes al menos a una participación de tus compañeros. Te recomiendo que revises detenidamente la Guía de Evaluación de los Foros (Haz clic aquí).
+Debes recordar que sólo se podrán evaluar tus aportaciones al foro que estén dentro del período indicado por el mismo (ni antes ni después).
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[
+  {
+    "id": "step-001",
+    "order": 1,
+    "phase": "construction",
+    "action": "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-002",
+    "order": 2,
+    "phase": "construction",
+    "action": "Preparar una aportación razonada sobre Introducción al Derecho: antecedentes, acepciones, fuentes, normas y Estado, con postura, explicación y apoyo en los materiales.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-003",
+    "order": 3,
+    "phase": "construction",
+    "action": "Leer una participación real y redactar al menos una retroalimentación específica y respetuosa.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  }
+]
+```
+
+### products
+
+```json
+[]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": [
+    "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+    "Hay aportación principal y réplica a una persona real; no se generan interacciones ficticias."
+  ]
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": "Sin fechas visibles en la consulta"
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## Actividad 49871: Reporte de Lectura_S1
+
+### Consigna importada
+
+Estimado(a) Estudiante.
+En esta actividad, debes realizar un Reporte de Lectura sobre la Introducción al Derecho por cada subtema, los cuales son los siguientes:
+a) Antecedentes Históricos Del Derecho
+b) Acepciones de la Palabra Derecho
+c) Fuentes del Derecho
+d) Normas Jurídicas 
+e) El Estado
+Las lecturas también están localizadas en los recursos de esta semana, será necesario los leas con detenimiento.
+Para esta actividad recuerda que debes añadir una portada con los siguientes datos:
+Nombre de la Institución; de la Escuela y del Programa
+Logos de la Institución y de la Escuela
+Nombre de la Materia
+Título del Trabajo
+Nombres del Asesor y del Estudiante
+Lugar y Fecha de realización
+Referencias en Formato APA
+Recuerde que el Reporte deberá ser escrito (puño y letra), con buena gramática, ortografía. Debe contener 2 cuartillas como máximo y 1 cuartilla como mínimo.
+Asigna al archivo resultante un nombre con la siguiente estructura:
+ReporteLectura_S1_NombreApellido.pdf
+Ejemplo:
+ReporteLectura_S1_PedroNolasco.pdf
+Envía tu tarea en las fechas indicadas en esta plataforma.
+NOTA: Tu archivo no debe ser mayor a 2Mb.
+En caso de que tu archivo sea mayor a 2Mb, puedes subir tu archivo a la nube y compartirlo, por lo tanto debes ingresar la URL en este espacio.
+¡Adelante !
+
+### Requisitos
+
+1. Estimado(a) Estudiante.
+En esta actividad, debes realizar un Reporte de Lectura sobre la Introducción al Derecho por cada subtema, los cuales son los siguientes:
+2. a) Antecedentes Históricos Del Derecho
+b) Acepciones de la Palabra Derecho
+c) Fuentes del Derecho
+d) Normas Jurídicas 
+e) El Estado
+3. Las lecturas también están localizadas en los recursos de esta semana, será necesario los leas con detenimiento.
+Para esta actividad recuerda que debes añadir una portada con los siguientes datos:
+4. Nombre de la Institución; de la Escuela y del Programa
+Logos de la Institución y de la Escuela
+Nombre de la Materia
+Título del Trabajo
+Nombres del Asesor y del Estudiante
+Lugar y Fecha de realización
+Referencias en Formato APA
+5. Recuerde que el Reporte deberá ser escrito (puño y letra), con buena gramática, ortografía. Debe contener 2 cuartillas como máximo y 1 cuartilla como mínimo.
+Asigna al archivo resultante un nombre con la siguiente estructura:
+ReporteLectura_S1_NombreApellido.pdf
+Ejemplo:
+ReporteLectura_S1_PedroNolasco.pdf
+Envía tu tarea en las fechas indicadas en esta plataforma.
+NOTA: Tu archivo no debe ser mayor a 2Mb.
+6. En caso de que tu archivo sea mayor a 2Mb, puedes subir tu archivo a la nube y compartirlo, por lo tanto debes ingresar la URL en este espacio.
+¡Adelante !
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[
+  {
+    "id": "step-001",
+    "order": 1,
+    "phase": "construction",
+    "action": "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-002",
+    "order": 2,
+    "phase": "construction",
+    "action": "Preparar un reporte que desarrolle cada subtema de Introducción al Derecho: antecedentes, acepciones, fuentes, normas y Estado, con síntesis y análisis propio.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-003",
+    "order": 3,
+    "phase": "construction",
+    "action": "Realizar personalmente la versión manuscrita de una a dos cuartillas; digitalizar con buena legibilidad y organizar el PDF con portada y referencias.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-004",
+    "order": 4,
+    "phase": "construction",
+    "action": "Añadir portada institucional y fuentes; revisar legibilidad, ortografía, nombre exigido y tamaño del PDF antes de una entrega personal autorizada.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  }
+]
+```
+
+### products
+
+```json
+[]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": [
+    "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+    "El cuerpo solicitado es manuscrito: una maqueta LaTeX no lo sustituye.",
+    "El PDF cumple la nomenclatura publicada y el límite indicado de 2 Mb; comprobar el tamaño real.",
+    "Las citas corresponden a referencias consultadas; no se atribuyen resultados, experiencia o autoría inexistentes."
+  ]
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": "Abrió: lunes, 21 de septiembre de 2026, 01:00 Cierre: domingo, 27 de septiembre de 2026, 23:59"
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## Actividad 49879: Lección Semana 2.- Sujetos del Derecho
+
+### Consigna importada
+
+Estimados alumnos y alumnas.
+En esta actividad debes realizar las lecturas incluidas, así mismo para poder avanzar debes responder correctamente las preguntas.
+Adelante!
+
+### Requisitos
+
+1. Estimados alumnos y alumnas.
+En esta actividad debes realizar las lecturas incluidas, así mismo para poder avanzar debes responder correctamente las preguntas.
+Adelante!
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[
+  {
+    "id": "step-001",
+    "order": 1,
+    "phase": "construction",
+    "action": "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-002",
+    "order": 2,
+    "phase": "construction",
+    "action": "Repasar Sujetos del Derecho, personas físicas y morales, sanción, hechos y actos jurídicos y preparar un esquema de conceptos y dudas sin intentar reconstruir preguntas no consultadas.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-003",
+    "order": 3,
+    "phase": "construction",
+    "action": "Verificar personalmente apertura, duración e intentos en el aula antes de comenzar; resolver la actividad personalmente.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  }
+]
+```
+
+### products
+
+```json
+[]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": [
+    "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+    "La ficha organiza la preparación; no acredita evaluación contestada ni resultados."
+  ]
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": "Abre: lunes, 28 de septiembre de 2026, 01:00 Cierra: domingo, 4 de octubre de 2026, 23:59"
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## Actividad 49883: Autoevaluación_S2
+
+### Consigna importada
+
+Estimados(as) estudiantes.
+Por medio de esta actividad podrás medir tus aprendizajes, verificar lo aprendido y a su vez podrás reforzarlos. Vas a realizar una vez esta actividad de manera obligatoria.
+
+### Requisitos
+
+1. Estimados(as) estudiantes.
+Por medio de esta actividad podrás medir tus aprendizajes, verificar lo aprendido y a su vez podrás reforzarlos. Vas a realizar una vez esta actividad de manera obligatoria.
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[
+  {
+    "id": "step-001",
+    "order": 1,
+    "phase": "construction",
+    "action": "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-002",
+    "order": 2,
+    "phase": "construction",
+    "action": "Repasar Sujetos del Derecho, personas físicas y morales, sanción, hechos y actos jurídicos y preparar un esquema de conceptos y dudas sin intentar reconstruir preguntas no consultadas.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-003",
+    "order": 3,
+    "phase": "construction",
+    "action": "Verificar personalmente apertura, duración e intentos en el aula antes de comenzar; resolver la actividad personalmente.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  }
+]
+```
+
+### products
+
+```json
+[]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": [
+    "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+    "La ficha organiza la preparación; no acredita evaluación contestada ni resultados."
+  ]
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": "Abre: lunes, 28 de septiembre de 2026, 02:18 Cierra: domingo, 4 de octubre de 2026, 22:59"
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## Actividad 49881: Foro_S2
+
+### Consigna importada
+
+Foro de Discusión S2
+Te invitamos a que escribas tú aportación sobre el tema de discusión y posteriormente, retroalimentes al menos a una participación de tus compañeros. Te recomiendo que revises detenidamente la Guía de Evaluación de los Foros (Haz clic aquí).
+Debes recordar que sólo se podrán evaluar tus aportaciones al foro que estén dentro del período indicado por el mismo (ni antes ni después).
+
+### Requisitos
+
+1. Foro de Discusión S2
+2. Te invitamos a que escribas tú aportación sobre el tema de discusión y posteriormente, retroalimentes al menos a una participación de tus compañeros. Te recomiendo que revises detenidamente la Guía de Evaluación de los Foros (Haz clic aquí).
+Debes recordar que sólo se podrán evaluar tus aportaciones al foro que estén dentro del período indicado por el mismo (ni antes ni después).
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[
+  {
+    "id": "step-001",
+    "order": 1,
+    "phase": "construction",
+    "action": "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-002",
+    "order": 2,
+    "phase": "construction",
+    "action": "Preparar una aportación razonada sobre Sujetos del Derecho, personas físicas y morales, sanción, hechos y actos jurídicos, con postura, explicación y apoyo en los materiales.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-003",
+    "order": 3,
+    "phase": "construction",
+    "action": "Leer una participación real y redactar al menos una retroalimentación específica y respetuosa.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  }
+]
+```
+
+### products
+
+```json
+[]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": [
+    "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+    "Hay aportación principal y réplica a una persona real; no se generan interacciones ficticias."
+  ]
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": "Sin fechas visibles en la consulta"
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## Actividad 49882: Diagrama de Ishikawa_S2
+
+### Consigna importada
+
+Estimado(a) Estudiante.
+En esta actividad debes realizar un Diagrama de Ishikawa sobre los Sujetos del Derecho por cada subtema. Los cuales son los siguientes:
+a) Personas Físicas
+b) Personas Morales
+c) Sanción
+d) Hechos y Actos Jurídicos
+Las lecturas están localizadas en los recursos de esta semana, será necesario los leas con detenimiento.
+Para esta actividad recuerda que debes añadir una portada con los siguientes datos:
+Nombre de la Institución; de la Escuela y del Programa
+Logos de la Institución y de la Escuela
+Nombre de la Materia
+Título del Trabajo
+Nombres del Asesor y del Estudiante
+Lugar y Fecha de Realización.
+Referencias en Formato Apa
+Recuerde que el Reporte deberá ser escrito (puño y letra), con buena gramática, ortografía y un máximo 2 mínimo 1 cuartillas.
+Asigna al archivo resultante un nombre con la siguiente estructura:
+TI_S2_NombreApellido.pdf
+Ejemplo:
+TI_S2_PedroNolasco.pdf
+Envía tu tarea en las fechas indicadas en esta plataforma.
+NOTA: Tu archivo no debe ser mayor a 2Mb.
+En caso de que tu archivo sea mayor a 2Mb, puedes subir tu archivo a la nube y compartirlo, por lo tanto debes ingresar la URL en este espacio.
+¡Adelante !
+
+### Requisitos
+
+1. Estimado(a) Estudiante.
+En esta actividad debes realizar un Diagrama de Ishikawa sobre los Sujetos del Derecho por cada subtema. Los cuales son los siguientes:
+2. a) Personas Físicas
+b) Personas Morales
+c) Sanción
+d) Hechos y Actos Jurídicos
+3. Las lecturas están localizadas en los recursos de esta semana, será necesario los leas con detenimiento.
+4. Para esta actividad recuerda que debes añadir una portada con los siguientes datos:
+5. Nombre de la Institución; de la Escuela y del Programa
+Logos de la Institución y de la Escuela
+Nombre de la Materia
+Título del Trabajo
+Nombres del Asesor y del Estudiante
+Lugar y Fecha de Realización.
+Referencias en Formato Apa
+Recuerde que el Reporte deberá ser escrito (puño y letra), con buena gramática, ortografía y un máximo 2 mínimo 1 cuartillas.
+6. Asigna al archivo resultante un nombre con la siguiente estructura:
+TI_S2_NombreApellido.pdf
+Ejemplo:
+TI_S2_PedroNolasco.pdf
+Envía tu tarea en las fechas indicadas en esta plataforma.
+NOTA: Tu archivo no debe ser mayor a 2Mb.
+7. En caso de que tu archivo sea mayor a 2Mb, puedes subir tu archivo a la nube y compartirlo, por lo tanto debes ingresar la URL en este espacio.
+¡Adelante !
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[
+  {
+    "id": "step-001",
+    "order": 1,
+    "phase": "construction",
+    "action": "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-002",
+    "order": 2,
+    "phase": "construction",
+    "action": "Definir el eje Sujetos del Derecho y distribuir personas físicas, personas morales, sanción, hechos y actos jurídicos en ramas diferenciadas.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-003",
+    "order": 3,
+    "phase": "construction",
+    "action": "Explicar el criterio de relación del diagrama; no inventar relaciones causales para forzar una clasificación jurídica.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-004",
+    "order": 4,
+    "phase": "construction",
+    "action": "Realizar personalmente la versión manuscrita de una a dos cuartillas; digitalizar con buena legibilidad y organizar el PDF con portada y referencias.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-005",
+    "order": 5,
+    "phase": "construction",
+    "action": "Añadir portada institucional y fuentes; revisar legibilidad, ortografía, nombre exigido y tamaño del PDF antes de una entrega personal autorizada.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  }
+]
+```
+
+### products
+
+```json
+[]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": [
+    "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+    "El cuerpo solicitado es manuscrito: una maqueta LaTeX no lo sustituye.",
+    "El PDF cumple la nomenclatura publicada y el límite indicado de 2 Mb; comprobar el tamaño real.",
+    "Las citas corresponden a referencias consultadas; no se atribuyen resultados, experiencia o autoría inexistentes."
+  ]
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": "Apertura: lunes, 28 de septiembre de 2026, 01:00 Cierre: domingo, 4 de octubre de 2026, 23:59"
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## Actividad 49892: Foro_S3
+
+### Consigna importada
+
+Foro de Discusión S3
+Te invitamos a que escribas tú aportación sobre el tema de discusión y posteriormente, retroalimentes al menos a una participación de tus compañeros. Te recomiendo que revises detenidamente la Guía de Evaluación de los Foros (Haz clic aquí).
+Debes recordar que sólo se podrán evaluar tus aportaciones al foro que estén dentro del período indicado por el mismo (ni antes ni después).
+
+### Requisitos
+
+1. Foro de Discusión S3
+2. Te invitamos a que escribas tú aportación sobre el tema de discusión y posteriormente, retroalimentes al menos a una participación de tus compañeros. Te recomiendo que revises detenidamente la Guía de Evaluación de los Foros (Haz clic aquí).
+Debes recordar que sólo se podrán evaluar tus aportaciones al foro que estén dentro del período indicado por el mismo (ni antes ni después).
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[
+  {
+    "id": "step-001",
+    "order": 1,
+    "phase": "construction",
+    "action": "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-002",
+    "order": 2,
+    "phase": "construction",
+    "action": "Preparar una aportación razonada sobre Obligaciones: fuentes, modalidades, transmisión, efectos y extinción, con postura, explicación y apoyo en los materiales.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-003",
+    "order": 3,
+    "phase": "construction",
+    "action": "Leer una participación real y redactar al menos una retroalimentación específica y respetuosa.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  }
+]
+```
+
+### products
+
+```json
+[]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": [
+    "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+    "Hay aportación principal y réplica a una persona real; no se generan interacciones ficticias."
+  ]
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": "Sin fechas visibles en la consulta"
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## Actividad 49893: Mapa Conceptual_S3
+
+### Consigna importada
+
+Estimado(a) Estudiante.
+En esta actividad debes realizar un Mapa Conceptual de Las Obligaciones, por cada subtema, los cuales son los siguientes:
+a) Fuentes de las obligaciones;
+b) Modalidades de las obligaciones;
+c) Transmisión de las obligaciones;
+d) Efectos de las obligaciones y,
+e) Extinción de las obligaciones.
+Las lecturas están localizadas en los recursos de esta semana, será necesario los leas con detenimiento.
+Para esta actividad recuerda que debes añadir una portada con los siguientes datos:
+Nombre de la Institución; de la Escuela y del Programa
+Logos de la Institución y de la Escuela
+Nombre de la Materia
+Título del Trabajo
+Nombres del Asesor y del Estudiante
+Lugar y Fecha de Realización
+Referencias en Formato Apa
+Recuerde que el Reporte deberá ser escrito (puño y letra), con buena gramática, ortografía y un máximo 2 mínimo 1 cuartillas.
+Asigna al archivo resultante un nombre con la siguiente estructura:
+TI_S3_NombreApellido.pdf
+Ejemplo:
+TI_S3_PedroNolasco.pdf
+Envía tu tarea en las fechas indicadas en esta plataforma.
+NOTA: Tu archivo no debe ser mayor a 2Mb.
+En caso de que tu archivo sea mayor a 2Mb, puedes subir tu archivo a la nube y compartirlo, por lo tanto debes ingresar la URL en este espacio.
+¡Adelante!
+
+### Requisitos
+
+1. Estimado(a) Estudiante.
+En esta actividad debes realizar un Mapa Conceptual de Las Obligaciones, por cada subtema, los cuales son los siguientes:
+2. a) Fuentes de las obligaciones;
+b) Modalidades de las obligaciones;
+c) Transmisión de las obligaciones;
+d) Efectos de las obligaciones y,
+e) Extinción de las obligaciones.
+3. Las lecturas están localizadas en los recursos de esta semana, será necesario los leas con detenimiento.
+Para esta actividad recuerda que debes añadir una portada con los siguientes datos:
+4. Nombre de la Institución; de la Escuela y del Programa
+Logos de la Institución y de la Escuela
+Nombre de la Materia
+Título del Trabajo
+Nombres del Asesor y del Estudiante
+Lugar y Fecha de Realización
+Referencias en Formato Apa
+Recuerde que el Reporte deberá ser escrito (puño y letra), con buena gramática, ortografía y un máximo 2 mínimo 1 cuartillas.
+5. Asigna al archivo resultante un nombre con la siguiente estructura:
+TI_S3_NombreApellido.pdf
+Ejemplo:
+TI_S3_PedroNolasco.pdf
+Envía tu tarea en las fechas indicadas en esta plataforma.
+NOTA: Tu archivo no debe ser mayor a 2Mb.
+6. En caso de que tu archivo sea mayor a 2Mb, puedes subir tu archivo a la nube y compartirlo, por lo tanto debes ingresar la URL en este espacio.
+¡Adelante!
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[
+  {
+    "id": "step-001",
+    "order": 1,
+    "phase": "construction",
+    "action": "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-002",
+    "order": 2,
+    "phase": "construction",
+    "action": "Jerarquizar los conceptos de Obligaciones: fuentes, modalidades, transmisión, efectos y extinción; redactar palabras de enlace que formen proposiciones comprensibles.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-003",
+    "order": 3,
+    "phase": "construction",
+    "action": "Verificar que el mapa no sea sólo una lista o un resumen; incluir todos los subtemas solicitados.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-004",
+    "order": 4,
+    "phase": "construction",
+    "action": "Realizar personalmente la versión manuscrita de una a dos cuartillas; digitalizar con buena legibilidad y organizar el PDF con portada y referencias.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-005",
+    "order": 5,
+    "phase": "construction",
+    "action": "Añadir portada institucional y fuentes; revisar legibilidad, ortografía, nombre exigido y tamaño del PDF antes de una entrega personal autorizada.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  }
+]
+```
+
+### products
+
+```json
+[]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": [
+    "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+    "El cuerpo solicitado es manuscrito: una maqueta LaTeX no lo sustituye.",
+    "El PDF cumple la nomenclatura publicada y el límite indicado de 2 Mb; comprobar el tamaño real.",
+    "Las citas corresponden a referencias consultadas; no se atribuyen resultados, experiencia o autoría inexistentes."
+  ]
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": "Apertura: lunes, 5 de octubre de 2026, 01:00 Cierre: domingo, 11 de octubre de 2026, 23:59"
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## Actividad 49902: Lección Semana 4: Los Contratos Civiles
+
+### Consigna importada
+
+Estimados alumnos y alumnas.
+En esta actividad debes realizar las lecturas incluidas sobre Las obligaciones y los Contratos Civiles, así mismo para poder avanzar debes responder correctamente las preguntas.
+Adelante!
+
+### Requisitos
+
+1. Estimados alumnos y alumnas.
+En esta actividad debes realizar las lecturas incluidas sobre Las obligaciones y los Contratos Civiles, así mismo para poder avanzar debes responder correctamente las preguntas.
+Adelante!
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[
+  {
+    "id": "step-001",
+    "order": 1,
+    "phase": "construction",
+    "action": "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-002",
+    "order": 2,
+    "phase": "construction",
+    "action": "Repasar Obligaciones y contratos civiles en la Contaduría Pública y preparar un esquema de conceptos y dudas sin intentar reconstruir preguntas no consultadas.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-003",
+    "order": 3,
+    "phase": "construction",
+    "action": "Verificar personalmente apertura, duración e intentos en el aula antes de comenzar; resolver la actividad personalmente.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  }
+]
+```
+
+### products
+
+```json
+[]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": [
+    "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+    "La ficha organiza la preparación; no acredita evaluación contestada ni resultados."
+  ]
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": "Abre: lunes, 12 de octubre de 2026, 01:00 Cierra: domingo, 18 de octubre de 2026, 23:59"
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## Actividad 49904: Foro_S4
+
+### Consigna importada
+
+Foro de Discusión S4
+Te invitamos a que escribas tú aportación sobre el tema de discusión y posteriormente, retroalimentes al menos a una participación de tus compañeros. Te recomiendo que revises detenidamente la Guía de Evaluación de los Foros (Haz clic aquí).
+Debes recordar que sólo se podrán evaluar tus aportaciones al foro que estén dentro del período indicado por el mismo (ni antes ni después).
+
+### Requisitos
+
+1. Foro de Discusión S4
+2. Te invitamos a que escribas tú aportación sobre el tema de discusión y posteriormente, retroalimentes al menos a una participación de tus compañeros. Te recomiendo que revises detenidamente la Guía de Evaluación de los Foros (Haz clic aquí).
+Debes recordar que sólo se podrán evaluar tus aportaciones al foro que estén dentro del período indicado por el mismo (ni antes ni después).
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[
+  {
+    "id": "step-001",
+    "order": 1,
+    "phase": "construction",
+    "action": "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-002",
+    "order": 2,
+    "phase": "construction",
+    "action": "Preparar una aportación razonada sobre Obligaciones y contratos civiles en la Contaduría Pública, con postura, explicación y apoyo en los materiales.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-003",
+    "order": 3,
+    "phase": "construction",
+    "action": "Leer una participación real y redactar al menos una retroalimentación específica y respetuosa.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  }
+]
+```
+
+### products
+
+```json
+[]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": [
+    "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+    "Hay aportación principal y réplica a una persona real; no se generan interacciones ficticias."
+  ]
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": "Fecha Esperada: lunes, 12 de octubre de 2026, 10:54"
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## Actividad 49905: Autoevaluación_S4
+
+### Consigna importada
+
+Estimados(as) estudiantes.
+Por medio de esta actividad podrás medir tus aprendizajes, verificar lo aprendido y a su vez podrás reforzarlos. Vas a realizar una vez esta actividad de manera obligatoria.
+
+### Requisitos
+
+1. Estimados(as) estudiantes.
+Por medio de esta actividad podrás medir tus aprendizajes, verificar lo aprendido y a su vez podrás reforzarlos. Vas a realizar una vez esta actividad de manera obligatoria.
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[
+  {
+    "id": "step-001",
+    "order": 1,
+    "phase": "construction",
+    "action": "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-002",
+    "order": 2,
+    "phase": "construction",
+    "action": "Repasar Obligaciones y contratos civiles en la Contaduría Pública y preparar un esquema de conceptos y dudas sin intentar reconstruir preguntas no consultadas.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-003",
+    "order": 3,
+    "phase": "construction",
+    "action": "Verificar personalmente apertura, duración e intentos en el aula antes de comenzar; resolver la actividad personalmente.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  }
+]
+```
+
+### products
+
+```json
+[]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": [
+    "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+    "La ficha organiza la preparación; no acredita evaluación contestada ni resultados."
+  ]
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": "Abre: lunes, 12 de octubre de 2026, 01:00 Cierra: domingo, 18 de octubre de 2026, 23:59"
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## Actividad 49906: Producto Integrador del Curso-Ensayo S4
+
+### Consigna importada
+
+Estimado(a) Estudiante.
+El proyecto integrador del curso "Derecho Mercantil" consiste en elaborar un: Ensayo sobre las Obligaciones y los Contratos Civiles.
+Utilice las lecturas de las obligaciones y contratos civiles, será necesario las leas con detenimiento.
+Instrucciones: 
+1. El alumno tomando en cuenta el material de la sesión 3 y 4, elaborará un ensayo considerando la siguiente pregunta: ¿Cuál es la importancia de las obligaciones y los contratos civiles en la Contaduría Pública?
+2. El ensayo deberá tener el siguiente cuerpo:
+Portada; 
+Introducción (una cuartilla); 
+Desarrollo (tres cuartillas); 
+Conclusiones (una cuartilla) y 
+Referencias (en formato APA)
+3. Recuerde que el ensayo deberá ser escrito con buena gramática, ortografía y respetando el derecho de autor incorporando en cada cita bibliográfica el autor y respetando las reglas de formato APA dentro del texto y en las referencias. 
+Para esta actividad recuerda que debes añadir una portada con los siguientes datos:
+Nombre de la Institución; de la Escuela y del Programa
+Logos de la Institución y de la Escuela
+Nombre de la Materia
+Título del Trabajo
+Nombres del Asesor y del Estudiante
+Lugar y Fecha de realización.
+Asigna al archivo resultante un nombre con la siguiente estructura:
+PI_MOD_NombreApellido.pdf
+Ejemplo:
+PI_MOD_PedroNolasco.pdf
+Envía tu tarea en las fechas indicadas en esta plataforma.
+NOTA: Tu archivo no debe ser mayor a 2Mb.
+En caso de que tu archivo sea mayor a 2Mb, puedes subir tu archivo a la nube y compartirlo, por lo tanto debes ingresar la URL en este espacio.
+¡Adelante !
+
+### Requisitos
+
+1. Estimado(a) Estudiante.
+El proyecto integrador del curso "Derecho Mercantil" consiste en elaborar un: Ensayo sobre las Obligaciones y los Contratos Civiles.
+Utilice las lecturas de las obligaciones y contratos civiles, será necesario las leas con detenimiento.
+Instrucciones: 
+1. El alumno tomando en cuenta el material de la sesión 3 y 4, elaborará un ensayo considerando la siguiente pregunta: ¿Cuál es la importancia de las obligaciones y los contratos civiles en la Contaduría Pública?
+2. El ensayo deberá tener el siguiente cuerpo:
+2. Portada; 
+Introducción (una cuartilla); 
+Desarrollo (tres cuartillas); 
+Conclusiones (una cuartilla) y 
+Referencias (en formato APA)
+3. 3. Recuerde que el ensayo deberá ser escrito con buena gramática, ortografía y respetando el derecho de autor incorporando en cada cita bibliográfica el autor y respetando las reglas de formato APA dentro del texto y en las referencias. 
+Para esta actividad recuerda que debes añadir una portada con los siguientes datos:
+4. Nombre de la Institución; de la Escuela y del Programa
+Logos de la Institución y de la Escuela
+Nombre de la Materia
+Título del Trabajo
+Nombres del Asesor y del Estudiante
+Lugar y Fecha de realización.
+5. Asigna al archivo resultante un nombre con la siguiente estructura:
+PI_MOD_NombreApellido.pdf
+Ejemplo:
+PI_MOD_PedroNolasco.pdf
+Envía tu tarea en las fechas indicadas en esta plataforma.
+NOTA: Tu archivo no debe ser mayor a 2Mb.
+6. En caso de que tu archivo sea mayor a 2Mb, puedes subir tu archivo a la nube y compartirlo, por lo tanto debes ingresar la URL en este espacio.
+¡Adelante !
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[
+  {
+    "id": "step-001",
+    "order": 1,
+    "phase": "construction",
+    "action": "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-002",
+    "order": 2,
+    "phase": "construction",
+    "action": "Formular una tesis sobre la importancia de las obligaciones y los contratos civiles para la Contaduría Pública.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-003",
+    "order": 3,
+    "phase": "construction",
+    "action": "Redactar introducción de una cuartilla, desarrollo de tres y conclusiones de una; separar portada y referencias APA.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-004",
+    "order": 4,
+    "phase": "construction",
+    "action": "Relacionar argumentos con las lecturas S3 y S4 y con ejemplos profesionales; distinguir norma, interpretación y ejemplo.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  },
+  {
+    "id": "step-005",
+    "order": 5,
+    "phase": "construction",
+    "action": "Añadir portada institucional y fuentes; revisar legibilidad, ortografía, nombre exigido y tamaño del PDF antes de una entrega personal autorizada.",
+    "inputs": [],
+    "output": "Salida pendiente de precisar",
+    "completion_check": "Cotejar criterio observable antes de ejecutar",
+    "requirement_ids": [],
+    "depends_on": []
+  }
+]
+```
+
+### products
+
+```json
+[]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": [
+    "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+    "El PDF cumple la nomenclatura publicada y el límite indicado de 2 Mb; comprobar el tamaño real.",
+    "Las citas corresponden a referencias consultadas; no se atribuyen resultados, experiencia o autoría inexistentes."
+  ]
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": "Apertura: lunes, 12 de octubre de 2026, 01:00 Cierre: domingo, 18 de octubre de 2026, 23:59"
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## sources
+
+```json
+[
+  {
+    "id": "src-local",
+    "kind": "other",
+    "authority": "editorial",
+    "title": "modelo-planeacion-2026-09-22.json",
+    "url": null,
+    "path": "planeaciones-derecho-mercantil/modelo-planeacion-2026-09-22.json",
+    "sha256": "902f0f50a5c06e64be994c75662d3a248b33d9e9c8d38c3f501e168c3fdf515b",
+    "captured_at": "2026-09-22",
+    "media_type": "application/json"
+  }
+]
+```
+
+## field_status
+
+```json
+[
+  {
+    "path": "/identity",
+    "state": "inferred",
+    "reason": "Identidad editorial del catalogo; oferta interna, periodo y modalidad no acreditados cuando faltan.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/sources",
+    "state": "confirmed",
+    "reason": "Archivo local preservado; su huella no acredita autoria ni vigencia docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "local-file",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum",
+    "state": "unknown",
+    "reason": "No se deducen competencias, resultados ni temario que no esten documentados.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/0",
+        "quoted_text": "Estimados alumnos y alumnas.\nEn este foro podrás plantear tus dudas académicas relacionadas con las actividades y materiales del Curso."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/outcomes/0",
+    "state": "inferred",
+    "reason": "Objetivo preservado del modelo local; oficialidad y propuesta no se equiparan.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/0/proposed_objective",
+        "quoted_text": "Demostrar comprensión de conocimientos previos, dudas y valoración personal del curso mediante Foro de dudas."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/topics/0",
+    "state": "confirmed",
+    "reason": "Tema o seccion explicitamente registrado en el modelo local.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/0/topic",
+        "quoted_text": "Conocimientos previos, dudas y valoración personal del curso"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/requirements",
+    "state": "confirmed",
+    "reason": "Coinciden con la entrada local; no se acredita que sean requisitos docentes integros.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/0/requirements",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/sequence",
+    "state": "inferred",
+    "reason": "Secuencia propuesta preservada; fases, insumos, salidas y controles necesitan revision.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/0/sequence",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/1",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/1/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/1/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/1",
+        "quoted_text": "Estimados(as) Estudiantes.\nEn esta actividad deberás responder de acuerdo a tus conocimientos previos sobre Derecho Mercantil, tales como Actos de Comercio, Contratos y Obligaciones.\nDebes leer detenidamente la pregunta, y responder honestamente, esto no formará parte de tu calificación, sin embargo nos será de gran ayuda para conocer tus conocimientos previos al ingresar a este curso.\nEsta encuesta es totalmente anónima.\nAdelante!"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/outcomes/1",
+    "state": "inferred",
+    "reason": "Objetivo preservado del modelo local; oficialidad y propuesta no se equiparan.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/1/proposed_objective",
+        "quoted_text": "Demostrar comprensión de conocimientos previos, dudas y valoración personal del curso mediante Evaluación Diagnóstica."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/topics/1",
+    "state": "confirmed",
+    "reason": "Tema o seccion explicitamente registrado en el modelo local.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/1/topic",
+        "quoted_text": "Conocimientos previos, dudas y valoración personal del curso"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/1/requirements",
+    "state": "confirmed",
+    "reason": "Coinciden con la entrada local; no se acredita que sean requisitos docentes integros.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/1/requirements",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/1/sequence",
+    "state": "inferred",
+    "reason": "Secuencia propuesta preservada; fases, insumos, salidas y controles necesitan revision.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/1/sequence",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/2",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/2/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/2/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/2",
+        "quoted_text": "Con el propósito de mejorar nuestros procesos académicos, le pedimos que califique de manera honesta los siguientes aspectos, a fin de valorar su grado de satisfacción y detectar oportunidades de mejora.    Estamos evaluando tres aspectos fundamentales:Facilitador(a):Los Contenidos del Curso: Derecho MercantilLos Servicios Administrativos: Plataforma educativaEsto nos permitirá evaluar por separado la calidad del desempeño y servicio de cada uno.Solicitamos, lea detenidamente la pregunta y asigne la puntuación que más se acerque a la realidad, de acuerdo a su experiencia en este Curso.Las preguntas tendrán la escala siguiente : Excelente Bueno Regular No Suficiente Recuerde que esta encuesta es totalmente ANÓNIMA."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/outcomes/2",
+    "state": "inferred",
+    "reason": "Objetivo preservado del modelo local; oficialidad y propuesta no se equiparan.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/2/proposed_objective",
+        "quoted_text": "Demostrar comprensión de conocimientos previos, dudas y valoración personal del curso mediante Encuesta de Satisfacción."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/topics/2",
+    "state": "confirmed",
+    "reason": "Tema o seccion explicitamente registrado en el modelo local.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/2/topic",
+        "quoted_text": "Conocimientos previos, dudas y valoración personal del curso"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/2/requirements",
+    "state": "confirmed",
+    "reason": "Coinciden con la entrada local; no se acredita que sean requisitos docentes integros.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/2/requirements",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/2/sequence",
+    "state": "inferred",
+    "reason": "Secuencia propuesta preservada; fases, insumos, salidas y controles necesitan revision.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/2/sequence",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/3",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/3/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/3/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/3",
+        "quoted_text": "Foro de Discusión #1\nTe invitamos a que escribas tú aportación sobre el tema de discusión y posteriormente, retroalimentes al menos a una participación de tus compañeros. Te recomiendo que revises detenidamente la Guía de Evaluación de los Foros (Haz clic aquí).\nDebes recordar que sólo se podrán evaluar tus aportaciones al foro que estén dentro del período indicado por el mismo (ni antes ni después)."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/outcomes/3",
+    "state": "inferred",
+    "reason": "Objetivo preservado del modelo local; oficialidad y propuesta no se equiparan.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/3/proposed_objective",
+        "quoted_text": "Demostrar comprensión de introducción al derecho: antecedentes, acepciones, fuentes, normas y estado mediante Foro_S1."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/topics/3",
+    "state": "confirmed",
+    "reason": "Tema o seccion explicitamente registrado en el modelo local.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/3/topic",
+        "quoted_text": "Introducción al Derecho: antecedentes, acepciones, fuentes, normas y Estado"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/3/requirements",
+    "state": "confirmed",
+    "reason": "Coinciden con la entrada local; no se acredita que sean requisitos docentes integros.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/3/requirements",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/3/sequence",
+    "state": "inferred",
+    "reason": "Secuencia propuesta preservada; fases, insumos, salidas y controles necesitan revision.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/3/sequence",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/4",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/4/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/4/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/4",
+        "quoted_text": "Estimado(a) Estudiante.\nEn esta actividad, debes realizar un Reporte de Lectura sobre la Introducción al Derecho por cada subtema, los cuales son los siguientes:\na) Antecedentes Históricos Del Derecho\nb) Acepciones de la Palabra Derecho\nc) Fuentes del Derecho\nd) Normas Jurídicas \ne) El Estado\nLas lecturas también están localizadas en los recursos de esta semana, será necesario los leas con detenimiento.\nPara esta actividad recuerda que debes añadir una portada con los siguientes datos:\nNombre de la Institución; de la Escuela y del Programa\nLogos de la Institución y de la Escuela\nNombre de la Materia\nTítulo del Trabajo\nNombres del Asesor y del Estudiante\nLugar y Fecha de realización\nReferencias en Formato APA\nRecuerde que el Reporte deberá ser escrito (puño y letra), con buena gramática, ortografía. Debe contener 2 cuartillas como máximo y 1 cuartilla como mínimo.\nAsigna al archivo resultante un nombre con la siguiente estructura:\nReporteLectura_S1_NombreApellido.pdf\nEjemplo:\nReporteLectura_S1_PedroNolasco.pdf\nEnvía tu tarea en las fechas indicadas en esta plataforma.\nNOTA: Tu archivo no debe ser mayor a 2Mb.\nEn caso de que tu archivo sea mayor a 2Mb, puedes subir tu archivo a la nube y compartirlo, por lo tanto debes ingresar la URL en este espacio.\n¡Adelante !"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/outcomes/4",
+    "state": "inferred",
+    "reason": "Objetivo preservado del modelo local; oficialidad y propuesta no se equiparan.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/4/proposed_objective",
+        "quoted_text": "Demostrar comprensión de introducción al derecho: antecedentes, acepciones, fuentes, normas y estado mediante Reporte de Lectura_S1."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/topics/4",
+    "state": "confirmed",
+    "reason": "Tema o seccion explicitamente registrado en el modelo local.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/4/topic",
+        "quoted_text": "Introducción al Derecho: antecedentes, acepciones, fuentes, normas y Estado"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/4/requirements",
+    "state": "confirmed",
+    "reason": "Coinciden con la entrada local; no se acredita que sean requisitos docentes integros.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/4/requirements",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/4/sequence",
+    "state": "inferred",
+    "reason": "Secuencia propuesta preservada; fases, insumos, salidas y controles necesitan revision.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/4/sequence",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/5",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/5/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/5/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/5",
+        "quoted_text": "Estimados alumnos y alumnas.\nEn esta actividad debes realizar las lecturas incluidas, así mismo para poder avanzar debes responder correctamente las preguntas.\nAdelante!"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/outcomes/5",
+    "state": "inferred",
+    "reason": "Objetivo preservado del modelo local; oficialidad y propuesta no se equiparan.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/5/proposed_objective",
+        "quoted_text": "Demostrar comprensión de sujetos del derecho, personas físicas y morales, sanción, hechos y actos jurídicos mediante Lección Semana 2.- Sujetos del Derecho."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/topics/5",
+    "state": "confirmed",
+    "reason": "Tema o seccion explicitamente registrado en el modelo local.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/5/topic",
+        "quoted_text": "Sujetos del Derecho, personas físicas y morales, sanción, hechos y actos jurídicos"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/5/requirements",
+    "state": "confirmed",
+    "reason": "Coinciden con la entrada local; no se acredita que sean requisitos docentes integros.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/5/requirements",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/5/sequence",
+    "state": "inferred",
+    "reason": "Secuencia propuesta preservada; fases, insumos, salidas y controles necesitan revision.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/5/sequence",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/6",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/6/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/6/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/6",
+        "quoted_text": "Estimados(as) estudiantes.\nPor medio de esta actividad podrás medir tus aprendizajes, verificar lo aprendido y a su vez podrás reforzarlos. Vas a realizar una vez esta actividad de manera obligatoria."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/outcomes/6",
+    "state": "inferred",
+    "reason": "Objetivo preservado del modelo local; oficialidad y propuesta no se equiparan.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/6/proposed_objective",
+        "quoted_text": "Demostrar comprensión de sujetos del derecho, personas físicas y morales, sanción, hechos y actos jurídicos mediante Autoevaluación_S2."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/topics/6",
+    "state": "confirmed",
+    "reason": "Tema o seccion explicitamente registrado en el modelo local.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/6/topic",
+        "quoted_text": "Sujetos del Derecho, personas físicas y morales, sanción, hechos y actos jurídicos"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/6/requirements",
+    "state": "confirmed",
+    "reason": "Coinciden con la entrada local; no se acredita que sean requisitos docentes integros.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/6/requirements",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/6/sequence",
+    "state": "inferred",
+    "reason": "Secuencia propuesta preservada; fases, insumos, salidas y controles necesitan revision.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/6/sequence",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/7",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/7/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/7/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/7",
+        "quoted_text": "Foro de Discusión S2\nTe invitamos a que escribas tú aportación sobre el tema de discusión y posteriormente, retroalimentes al menos a una participación de tus compañeros. Te recomiendo que revises detenidamente la Guía de Evaluación de los Foros (Haz clic aquí).\nDebes recordar que sólo se podrán evaluar tus aportaciones al foro que estén dentro del período indicado por el mismo (ni antes ni después)."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/outcomes/7",
+    "state": "inferred",
+    "reason": "Objetivo preservado del modelo local; oficialidad y propuesta no se equiparan.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/7/proposed_objective",
+        "quoted_text": "Demostrar comprensión de sujetos del derecho, personas físicas y morales, sanción, hechos y actos jurídicos mediante Foro_S2."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/topics/7",
+    "state": "confirmed",
+    "reason": "Tema o seccion explicitamente registrado en el modelo local.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/7/topic",
+        "quoted_text": "Sujetos del Derecho, personas físicas y morales, sanción, hechos y actos jurídicos"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/7/requirements",
+    "state": "confirmed",
+    "reason": "Coinciden con la entrada local; no se acredita que sean requisitos docentes integros.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/7/requirements",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/7/sequence",
+    "state": "inferred",
+    "reason": "Secuencia propuesta preservada; fases, insumos, salidas y controles necesitan revision.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/7/sequence",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/8",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/8/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/8/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/8",
+        "quoted_text": "Estimado(a) Estudiante.\nEn esta actividad debes realizar un Diagrama de Ishikawa sobre los Sujetos del Derecho por cada subtema. Los cuales son los siguientes:\na) Personas Físicas\nb) Personas Morales\nc) Sanción\nd) Hechos y Actos Jurídicos\nLas lecturas están localizadas en los recursos de esta semana, será necesario los leas con detenimiento.\nPara esta actividad recuerda que debes añadir una portada con los siguientes datos:\nNombre de la Institución; de la Escuela y del Programa\nLogos de la Institución y de la Escuela\nNombre de la Materia\nTítulo del Trabajo\nNombres del Asesor y del Estudiante\nLugar y Fecha de Realización.\nReferencias en Formato Apa\nRecuerde que el Reporte deberá ser escrito (puño y letra), con buena gramática, ortografía y un máximo 2 mínimo 1 cuartillas.\nAsigna al archivo resultante un nombre con la siguiente estructura:\nTI_S2_NombreApellido.pdf\nEjemplo:\nTI_S2_PedroNolasco.pdf\nEnvía tu tarea en las fechas indicadas en esta plataforma.\nNOTA: Tu archivo no debe ser mayor a 2Mb.\nEn caso de que tu archivo sea mayor a 2Mb, puedes subir tu archivo a la nube y compartirlo, por lo tanto debes ingresar la URL en este espacio.\n¡Adelante !"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/outcomes/8",
+    "state": "inferred",
+    "reason": "Objetivo preservado del modelo local; oficialidad y propuesta no se equiparan.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/8/proposed_objective",
+        "quoted_text": "Demostrar comprensión de sujetos del derecho, personas físicas y morales, sanción, hechos y actos jurídicos mediante Diagrama de Ishikawa_S2."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/topics/8",
+    "state": "confirmed",
+    "reason": "Tema o seccion explicitamente registrado en el modelo local.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/8/topic",
+        "quoted_text": "Sujetos del Derecho, personas físicas y morales, sanción, hechos y actos jurídicos"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/8/requirements",
+    "state": "confirmed",
+    "reason": "Coinciden con la entrada local; no se acredita que sean requisitos docentes integros.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/8/requirements",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/8/sequence",
+    "state": "inferred",
+    "reason": "Secuencia propuesta preservada; fases, insumos, salidas y controles necesitan revision.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/8/sequence",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/9",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/9/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/9/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/9",
+        "quoted_text": "Foro de Discusión S3\nTe invitamos a que escribas tú aportación sobre el tema de discusión y posteriormente, retroalimentes al menos a una participación de tus compañeros. Te recomiendo que revises detenidamente la Guía de Evaluación de los Foros (Haz clic aquí).\nDebes recordar que sólo se podrán evaluar tus aportaciones al foro que estén dentro del período indicado por el mismo (ni antes ni después)."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/outcomes/9",
+    "state": "inferred",
+    "reason": "Objetivo preservado del modelo local; oficialidad y propuesta no se equiparan.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/9/proposed_objective",
+        "quoted_text": "Demostrar comprensión de obligaciones: fuentes, modalidades, transmisión, efectos y extinción mediante Foro_S3."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/topics/9",
+    "state": "confirmed",
+    "reason": "Tema o seccion explicitamente registrado en el modelo local.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/9/topic",
+        "quoted_text": "Obligaciones: fuentes, modalidades, transmisión, efectos y extinción"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/9/requirements",
+    "state": "confirmed",
+    "reason": "Coinciden con la entrada local; no se acredita que sean requisitos docentes integros.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/9/requirements",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/9/sequence",
+    "state": "inferred",
+    "reason": "Secuencia propuesta preservada; fases, insumos, salidas y controles necesitan revision.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/9/sequence",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/10",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/10/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/10/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/10",
+        "quoted_text": "Estimado(a) Estudiante.\nEn esta actividad debes realizar un Mapa Conceptual de Las Obligaciones, por cada subtema, los cuales son los siguientes:\na) Fuentes de las obligaciones;\nb) Modalidades de las obligaciones;\nc) Transmisión de las obligaciones;\nd) Efectos de las obligaciones y,\ne) Extinción de las obligaciones.\nLas lecturas están localizadas en los recursos de esta semana, será necesario los leas con detenimiento.\nPara esta actividad recuerda que debes añadir una portada con los siguientes datos:\nNombre de la Institución; de la Escuela y del Programa\nLogos de la Institución y de la Escuela\nNombre de la Materia\nTítulo del Trabajo\nNombres del Asesor y del Estudiante\nLugar y Fecha de Realización\nReferencias en Formato Apa\nRecuerde que el Reporte deberá ser escrito (puño y letra), con buena gramática, ortografía y un máximo 2 mínimo 1 cuartillas.\nAsigna al archivo resultante un nombre con la siguiente estructura:\nTI_S3_NombreApellido.pdf\nEjemplo:\nTI_S3_PedroNolasco.pdf\nEnvía tu tarea en las fechas indicadas en esta plataforma.\nNOTA: Tu archivo no debe ser mayor a 2Mb.\nEn caso de que tu archivo sea mayor a 2Mb, puedes subir tu archivo a la nube y compartirlo, por lo tanto debes ingresar la URL en este espacio.\n¡Adelante!"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/outcomes/10",
+    "state": "inferred",
+    "reason": "Objetivo preservado del modelo local; oficialidad y propuesta no se equiparan.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/10/proposed_objective",
+        "quoted_text": "Demostrar comprensión de obligaciones: fuentes, modalidades, transmisión, efectos y extinción mediante Mapa Conceptual_S3."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/topics/10",
+    "state": "confirmed",
+    "reason": "Tema o seccion explicitamente registrado en el modelo local.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/10/topic",
+        "quoted_text": "Obligaciones: fuentes, modalidades, transmisión, efectos y extinción"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/10/requirements",
+    "state": "confirmed",
+    "reason": "Coinciden con la entrada local; no se acredita que sean requisitos docentes integros.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/10/requirements",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/10/sequence",
+    "state": "inferred",
+    "reason": "Secuencia propuesta preservada; fases, insumos, salidas y controles necesitan revision.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/10/sequence",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/11",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/11/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/11/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/11",
+        "quoted_text": "Estimados alumnos y alumnas.\nEn esta actividad debes realizar las lecturas incluidas sobre Las obligaciones y los Contratos Civiles, así mismo para poder avanzar debes responder correctamente las preguntas.\nAdelante!"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/outcomes/11",
+    "state": "inferred",
+    "reason": "Objetivo preservado del modelo local; oficialidad y propuesta no se equiparan.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/11/proposed_objective",
+        "quoted_text": "Demostrar comprensión de obligaciones y contratos civiles en la contaduría pública mediante Lección Semana 4: Los Contratos Civiles."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/topics/11",
+    "state": "confirmed",
+    "reason": "Tema o seccion explicitamente registrado en el modelo local.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/11/topic",
+        "quoted_text": "Obligaciones y contratos civiles en la Contaduría Pública"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/11/requirements",
+    "state": "confirmed",
+    "reason": "Coinciden con la entrada local; no se acredita que sean requisitos docentes integros.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/11/requirements",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/11/sequence",
+    "state": "inferred",
+    "reason": "Secuencia propuesta preservada; fases, insumos, salidas y controles necesitan revision.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/11/sequence",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/12",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/12/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/12/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/12",
+        "quoted_text": "Foro de Discusión S4\nTe invitamos a que escribas tú aportación sobre el tema de discusión y posteriormente, retroalimentes al menos a una participación de tus compañeros. Te recomiendo que revises detenidamente la Guía de Evaluación de los Foros (Haz clic aquí).\nDebes recordar que sólo se podrán evaluar tus aportaciones al foro que estén dentro del período indicado por el mismo (ni antes ni después)."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/outcomes/12",
+    "state": "inferred",
+    "reason": "Objetivo preservado del modelo local; oficialidad y propuesta no se equiparan.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/12/proposed_objective",
+        "quoted_text": "Demostrar comprensión de obligaciones y contratos civiles en la contaduría pública mediante Foro_S4."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/topics/12",
+    "state": "confirmed",
+    "reason": "Tema o seccion explicitamente registrado en el modelo local.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/12/topic",
+        "quoted_text": "Obligaciones y contratos civiles en la Contaduría Pública"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/12/requirements",
+    "state": "confirmed",
+    "reason": "Coinciden con la entrada local; no se acredita que sean requisitos docentes integros.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/12/requirements",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/12/sequence",
+    "state": "inferred",
+    "reason": "Secuencia propuesta preservada; fases, insumos, salidas y controles necesitan revision.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/12/sequence",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/13",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/13/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/13/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/13",
+        "quoted_text": "Estimados(as) estudiantes.\nPor medio de esta actividad podrás medir tus aprendizajes, verificar lo aprendido y a su vez podrás reforzarlos. Vas a realizar una vez esta actividad de manera obligatoria."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/outcomes/13",
+    "state": "inferred",
+    "reason": "Objetivo preservado del modelo local; oficialidad y propuesta no se equiparan.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/13/proposed_objective",
+        "quoted_text": "Demostrar comprensión de obligaciones y contratos civiles en la contaduría pública mediante Autoevaluación_S4."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/topics/13",
+    "state": "confirmed",
+    "reason": "Tema o seccion explicitamente registrado en el modelo local.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/13/topic",
+        "quoted_text": "Obligaciones y contratos civiles en la Contaduría Pública"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/13/requirements",
+    "state": "confirmed",
+    "reason": "Coinciden con la entrada local; no se acredita que sean requisitos docentes integros.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/13/requirements",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/13/sequence",
+    "state": "inferred",
+    "reason": "Secuencia propuesta preservada; fases, insumos, salidas y controles necesitan revision.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/13/sequence",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/14",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/14/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/14/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/14",
+        "quoted_text": "Estimado(a) Estudiante.\nEl proyecto integrador del curso \"Derecho Mercantil\" consiste en elaborar un: Ensayo sobre las Obligaciones y los Contratos Civiles.\nUtilice las lecturas de las obligaciones y contratos civiles, será necesario las leas con detenimiento.\nInstrucciones: \n1. El alumno tomando en cuenta el material de la sesión 3 y 4, elaborará un ensayo considerando la siguiente pregunta: ¿Cuál es la importancia de las obligaciones y los contratos civiles en la Contaduría Pública?\n2. El ensayo deberá tener el siguiente cuerpo:\nPortada; \nIntroducción (una cuartilla); \nDesarrollo (tres cuartillas); \nConclusiones (una cuartilla) y \nReferencias (en formato APA)\n3. Recuerde que el ensayo deberá ser escrito con buena gramática, ortografía y respetando el derecho de autor incorporando en cada cita bibliográfica el autor y respetando las reglas de formato APA dentro del texto y en las referencias. \nPara esta actividad recuerda que debes añadir una portada con los siguientes datos:\nNombre de la Institución; de la Escuela y del Programa\nLogos de la Institución y de la Escuela\nNombre de la Materia\nTítulo del Trabajo\nNombres del Asesor y del Estudiante\nLugar y Fecha de realización.\nAsigna al archivo resultante un nombre con la siguiente estructura:\nPI_MOD_NombreApellido.pdf\nEjemplo:\nPI_MOD_PedroNolasco.pdf\nEnvía tu tarea en las fechas indicadas en esta plataforma.\nNOTA: Tu archivo no debe ser mayor a 2Mb.\nEn caso de que tu archivo sea mayor a 2Mb, puedes subir tu archivo a la nube y compartirlo, por lo tanto debes ingresar la URL en este espacio.\n¡Adelante !"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/outcomes/14",
+    "state": "inferred",
+    "reason": "Objetivo preservado del modelo local; oficialidad y propuesta no se equiparan.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/14/proposed_objective",
+        "quoted_text": "Demostrar comprensión de obligaciones y contratos civiles en la contaduría pública mediante Producto Integrador del Curso-Ensayo S4."
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum/topics/14",
+    "state": "confirmed",
+    "reason": "Tema o seccion explicitamente registrado en el modelo local.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/14/topic",
+        "quoted_text": "Obligaciones y contratos civiles en la Contaduría Pública"
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/14/requirements",
+    "state": "confirmed",
+    "reason": "Coinciden con la entrada local; no se acredita que sean requisitos docentes integros.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/14/requirements",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/14/sequence",
+    "state": "inferred",
+    "reason": "Secuencia propuesta preservada; fases, insumos, salidas y controles necesitan revision.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "/activities/14/sequence",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  }
+]
+```
+
+## review
+
+```json
+{
+  "state": "needs_review",
+  "reviewed_at": null,
+  "reviewer_role": null,
+  "critical_gaps": [
+    "Cotejar consigna y procedencia docente; conversion local no equivale a aprobacion",
+    "Confirmar datos de portada, grupo y asesor antes de elaborar un entregable.",
+    "Fecha de cierre no visible: consultar el calendario o al asesor; no se inventa un vencimiento.",
+    "Confirmar el periodo habilitado del foro y la guía de evaluación enlazada; no asignar la fecha de la tarea al foro.",
+    "Preguntas, intentos y duración no consultados en esta revisión; no se abrió ni respondió un intento.",
+    "Discrepancia: la guía S2 dice Las Obligaciones; el módulo 49882 pide Sujetos del Derecho. Priorizar la consigna específica para el borrador y consultar al asesor."
+  ],
+  "semantic_validation": "failed"
+}
+```
+
+## extensions
+
+```json
+{
+  "conversion": {
+    "version": "1.0",
+    "source_format": ".json",
+    "source_sha256": "902f0f50a5c06e64be994c75662d3a248b33d9e9c8d38c3f501e168c3fdf515b",
+    "source_payload": {
+      "schema_version": "1.0-uas-planeacion",
+      "consulted_on": "2026-09-22",
+      "institution": "UAS",
+      "program": "Licenciatura en Contaduría Pública",
+      "subject": "Derecho mercantil",
+      "course_id": 632,
+      "course_name_literal": "2026_I_Derecho mercantil_LCP",
+      "course_url": "https://virtual.uas.edu.mx/fca/course/view.php?id=632",
+      "scope": "Consignas verificadas y propuestas de planeación; no resolución, entrega ni validación docente.",
+      "source_dates_note": "El periodo se conserva como aparece en el nombre del curso. No se utiliza la fecha técnica de inicio del curso para inferir el calendario de actividades.",
+      "activities": [
+        {
+          "id": 49859,
+          "title": "Foro de dudas",
+          "type": "forum",
+          "week": 0,
+          "topic": "Conocimientos previos, dudas y valoración personal del curso",
+          "requirements": [
+            "Estimados alumnos y alumnas.",
+            "En este foro podrás plantear tus dudas académicas relacionadas con las actividades y materiales del Curso."
+          ],
+          "calendar": {
+            "literal": "Sin fechas visibles en la consulta",
+            "deadline": null,
+            "timezone": null,
+            "status_on_2026_09_22": "Sin cierre verificado",
+            "note": "Fecha Esperada no se interpreta como cierre. No se infiere entrega, prórroga ni zona horaria."
+          },
+          "sources": [
+            {
+              "id": "49859",
+              "title": "Foro de dudas",
+              "url": "https://virtual.uas.edu.mx/fca/mod/forum/view.php?id=49859",
+              "locator": "Introducción y fechas visibles del módulo",
+              "consulted_on": "2026-09-22"
+            }
+          ],
+          "weekly_resources": [
+            {
+              "id": "49856",
+              "title": "Competencias a Desarrollar",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49856"
+            }
+          ],
+          "proposed_objective": "Demostrar comprensión de conocimientos previos, dudas y valoración personal del curso mediante Foro de dudas.",
+          "proposed_sequence": [
+            "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+            "Redactar una duda concreta sólo si existe, citando la actividad y el requisito que necesitan aclaración."
+          ],
+          "proposed_review_criteria": [
+            "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+            "Es un canal de apoyo; no se inventa una intervención obligatoria ni ponderación."
+          ],
+          "pending": [
+            "Confirmar datos de portada, grupo y asesor antes de elaborar un entregable.",
+            "Fecha de cierre no visible: consultar el calendario o al asesor; no se inventa un vencimiento."
+          ],
+          "existing_local_product": null,
+          "existing_product_note": "No se generó un entregable en esta fase de planeación."
+        },
+        {
+          "id": 49860,
+          "title": "Evaluación Diagnóstica",
+          "type": "feedback",
+          "week": 0,
+          "topic": "Conocimientos previos, dudas y valoración personal del curso",
+          "requirements": [
+            "Estimados(as) Estudiantes.\nEn esta actividad deberás responder de acuerdo a tus conocimientos previos sobre Derecho Mercantil, tales como Actos de Comercio, Contratos y Obligaciones.\nDebes leer detenidamente la pregunta, y responder honestamente, esto no formará parte de tu calificación, sin embargo nos será de gran ayuda para conocer tus conocimientos previos al ingresar a este curso.",
+            "Esta encuesta es totalmente anónima.",
+            "Adelante!"
+          ],
+          "calendar": {
+            "literal": "Sin fechas visibles en la consulta",
+            "deadline": null,
+            "timezone": null,
+            "status_on_2026_09_22": "Sin cierre verificado",
+            "note": "Fecha Esperada no se interpreta como cierre. No se infiere entrega, prórroga ni zona horaria."
+          },
+          "sources": [
+            {
+              "id": "49860",
+              "title": "Evaluación Diagnóstica",
+              "url": "https://virtual.uas.edu.mx/fca/mod/feedback/view.php?id=49860&forceview=1",
+              "locator": "Introducción y fechas visibles del módulo",
+              "consulted_on": "2026-09-22"
+            }
+          ],
+          "weekly_resources": [
+            {
+              "id": "49856",
+              "title": "Competencias a Desarrollar",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49856"
+            }
+          ],
+          "proposed_objective": "Demostrar comprensión de conocimientos previos, dudas y valoración personal del curso mediante Evaluación Diagnóstica.",
+          "proposed_sequence": [
+            "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+            "Leer el aviso de anonimato y responder personalmente según los conocimientos o la experiencia reales; no delegar respuestas subjetivas."
+          ],
+          "proposed_review_criteria": [
+            "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+            "No se inventan respuestas personales; no se conservan respuestas a la encuesta en el repositorio."
+          ],
+          "pending": [
+            "Confirmar datos de portada, grupo y asesor antes de elaborar un entregable.",
+            "Fecha de cierre no visible: consultar el calendario o al asesor; no se inventa un vencimiento."
+          ],
+          "existing_local_product": null,
+          "existing_product_note": "No se generó un entregable en esta fase de planeación."
+        },
+        {
+          "id": 49861,
+          "title": "Encuesta de Satisfacción",
+          "type": "feedback",
+          "week": 0,
+          "topic": "Conocimientos previos, dudas y valoración personal del curso",
+          "requirements": [
+            "Con el propósito de mejorar nuestros procesos académicos, le pedimos que califique de manera honesta los siguientes aspectos, a fin de valorar su grado de satisfacción y detectar oportunidades de mejora.    Estamos evaluando tres aspectos fundamentales:Facilitador(a):Los Contenidos del Curso: Derecho MercantilLos Servicios Administrativos: Plataforma educativaEsto nos permitirá evaluar por separado la calidad del desempeño y servicio de cada uno.Solicitamos, lea detenidamente la pregunta y asigne la puntuación que más se acerque a la realidad, de acuerdo a su experiencia en este Curso.Las preguntas tendrán la escala siguiente : Excelente Bueno Regular No Suficiente Recuerde que esta encuesta es totalmente ANÓNIMA."
+          ],
+          "calendar": {
+            "literal": "Sin fechas visibles en la consulta",
+            "deadline": null,
+            "timezone": null,
+            "status_on_2026_09_22": "Sin cierre verificado",
+            "note": "Fecha Esperada no se interpreta como cierre. No se infiere entrega, prórroga ni zona horaria."
+          },
+          "sources": [
+            {
+              "id": "49861",
+              "title": "Encuesta de Satisfacción",
+              "url": "https://virtual.uas.edu.mx/fca/mod/feedback/view.php?id=49861",
+              "locator": "Introducción y fechas visibles del módulo",
+              "consulted_on": "2026-09-22"
+            }
+          ],
+          "weekly_resources": [
+            {
+              "id": "49856",
+              "title": "Competencias a Desarrollar",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49856"
+            }
+          ],
+          "proposed_objective": "Demostrar comprensión de conocimientos previos, dudas y valoración personal del curso mediante Encuesta de Satisfacción.",
+          "proposed_sequence": [
+            "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+            "Leer el aviso de anonimato y responder personalmente según los conocimientos o la experiencia reales; no delegar respuestas subjetivas."
+          ],
+          "proposed_review_criteria": [
+            "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+            "No se inventan respuestas personales; no se conservan respuestas a la encuesta en el repositorio."
+          ],
+          "pending": [
+            "Confirmar datos de portada, grupo y asesor antes de elaborar un entregable.",
+            "Fecha de cierre no visible: consultar el calendario o al asesor; no se inventa un vencimiento."
+          ],
+          "existing_local_product": null,
+          "existing_product_note": "No se generó un entregable en esta fase de planeación."
+        },
+        {
+          "id": 49870,
+          "title": "Foro_S1",
+          "type": "forum",
+          "week": 1,
+          "topic": "Introducción al Derecho: antecedentes, acepciones, fuentes, normas y Estado",
+          "requirements": [
+            "Foro de Discusión #1",
+            "Te invitamos a que escribas tú aportación sobre el tema de discusión y posteriormente, retroalimentes al menos a una participación de tus compañeros. Te recomiendo que revises detenidamente la Guía de Evaluación de los Foros (Haz clic aquí).\nDebes recordar que sólo se podrán evaluar tus aportaciones al foro que estén dentro del período indicado por el mismo (ni antes ni después)."
+          ],
+          "calendar": {
+            "literal": "Sin fechas visibles en la consulta",
+            "deadline": null,
+            "timezone": null,
+            "status_on_2026_09_22": "Sin cierre verificado",
+            "note": "Fecha Esperada no se interpreta como cierre. No se infiere entrega, prórroga ni zona horaria."
+          },
+          "sources": [
+            {
+              "id": "49870",
+              "title": "Foro_S1",
+              "url": "https://virtual.uas.edu.mx/fca/mod/forum/view.php?id=49870",
+              "locator": "Introducción y fechas visibles del módulo",
+              "consulted_on": "2026-09-22"
+            }
+          ],
+          "weekly_resources": [
+            {
+              "id": "49863",
+              "title": "Competencias-S1",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49863"
+            },
+            {
+              "id": "49865",
+              "title": "GUÍA ACADÉMICA_S1",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49865"
+            },
+            {
+              "id": "49866",
+              "title": "Videos_S1",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49866"
+            },
+            {
+              "id": "49867",
+              "title": "Lecturas_S1",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49867&forceview=1"
+            },
+            {
+              "id": "49871",
+              "title": "Reporte de Lectura_S1",
+              "url": "https://virtual.uas.edu.mx/fca/mod/assign/view.php?id=49871"
+            }
+          ],
+          "proposed_objective": "Demostrar comprensión de introducción al derecho: antecedentes, acepciones, fuentes, normas y estado mediante Foro_S1.",
+          "proposed_sequence": [
+            "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+            "Preparar una aportación razonada sobre Introducción al Derecho: antecedentes, acepciones, fuentes, normas y Estado, con postura, explicación y apoyo en los materiales.",
+            "Leer una participación real y redactar al menos una retroalimentación específica y respetuosa."
+          ],
+          "proposed_review_criteria": [
+            "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+            "Hay aportación principal y réplica a una persona real; no se generan interacciones ficticias."
+          ],
+          "pending": [
+            "Confirmar datos de portada, grupo y asesor antes de elaborar un entregable.",
+            "Confirmar el periodo habilitado del foro y la guía de evaluación enlazada; no asignar la fecha de la tarea al foro.",
+            "Fecha de cierre no visible: consultar el calendario o al asesor; no se inventa un vencimiento."
+          ],
+          "existing_local_product": null,
+          "existing_product_note": "No se generó un entregable en esta fase de planeación."
+        },
+        {
+          "id": 49871,
+          "title": "Reporte de Lectura_S1",
+          "type": "assign",
+          "week": 1,
+          "topic": "Introducción al Derecho: antecedentes, acepciones, fuentes, normas y Estado",
+          "requirements": [
+            "Estimado(a) Estudiante.\nEn esta actividad, debes realizar un Reporte de Lectura sobre la Introducción al Derecho por cada subtema, los cuales son los siguientes:",
+            "a) Antecedentes Históricos Del Derecho\nb) Acepciones de la Palabra Derecho\nc) Fuentes del Derecho\nd) Normas Jurídicas \ne) El Estado",
+            "Las lecturas también están localizadas en los recursos de esta semana, será necesario los leas con detenimiento.\nPara esta actividad recuerda que debes añadir una portada con los siguientes datos:",
+            "Nombre de la Institución; de la Escuela y del Programa\nLogos de la Institución y de la Escuela\nNombre de la Materia\nTítulo del Trabajo\nNombres del Asesor y del Estudiante\nLugar y Fecha de realización\nReferencias en Formato APA",
+            "Recuerde que el Reporte deberá ser escrito (puño y letra), con buena gramática, ortografía. Debe contener 2 cuartillas como máximo y 1 cuartilla como mínimo.\nAsigna al archivo resultante un nombre con la siguiente estructura:\nReporteLectura_S1_NombreApellido.pdf\nEjemplo:\nReporteLectura_S1_PedroNolasco.pdf\nEnvía tu tarea en las fechas indicadas en esta plataforma.\nNOTA: Tu archivo no debe ser mayor a 2Mb.",
+            "En caso de que tu archivo sea mayor a 2Mb, puedes subir tu archivo a la nube y compartirlo, por lo tanto debes ingresar la URL en este espacio.\n¡Adelante !"
+          ],
+          "calendar": {
+            "literal": "Abrió: lunes, 21 de septiembre de 2026, 01:00 Cierre: domingo, 27 de septiembre de 2026, 23:59",
+            "deadline": "2026-09-27T23:59:00",
+            "timezone": null,
+            "status_on_2026_09_22": "Plazo vigente o futuro",
+            "note": "Fecha Esperada no se interpreta como cierre. No se infiere entrega, prórroga ni zona horaria."
+          },
+          "sources": [
+            {
+              "id": "49871",
+              "title": "Reporte de Lectura_S1",
+              "url": "https://virtual.uas.edu.mx/fca/mod/assign/view.php?id=49871",
+              "locator": "Introducción y fechas visibles del módulo",
+              "consulted_on": "2026-09-22"
+            }
+          ],
+          "weekly_resources": [
+            {
+              "id": "49863",
+              "title": "Competencias-S1",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49863"
+            },
+            {
+              "id": "49865",
+              "title": "GUÍA ACADÉMICA_S1",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49865"
+            },
+            {
+              "id": "49866",
+              "title": "Videos_S1",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49866"
+            },
+            {
+              "id": "49867",
+              "title": "Lecturas_S1",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49867&forceview=1"
+            },
+            {
+              "id": "49871",
+              "title": "Reporte de Lectura_S1",
+              "url": "https://virtual.uas.edu.mx/fca/mod/assign/view.php?id=49871"
+            }
+          ],
+          "proposed_objective": "Demostrar comprensión de introducción al derecho: antecedentes, acepciones, fuentes, normas y estado mediante Reporte de Lectura_S1.",
+          "proposed_sequence": [
+            "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+            "Preparar un reporte que desarrolle cada subtema de Introducción al Derecho: antecedentes, acepciones, fuentes, normas y Estado, con síntesis y análisis propio.",
+            "Realizar personalmente la versión manuscrita de una a dos cuartillas; digitalizar con buena legibilidad y organizar el PDF con portada y referencias.",
+            "Añadir portada institucional y fuentes; revisar legibilidad, ortografía, nombre exigido y tamaño del PDF antes de una entrega personal autorizada."
+          ],
+          "proposed_review_criteria": [
+            "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+            "El cuerpo solicitado es manuscrito: una maqueta LaTeX no lo sustituye.",
+            "El PDF cumple la nomenclatura publicada y el límite indicado de 2 Mb; comprobar el tamaño real.",
+            "Las citas corresponden a referencias consultadas; no se atribuyen resultados, experiencia o autoría inexistentes."
+          ],
+          "pending": [
+            "Confirmar datos de portada, grupo y asesor antes de elaborar un entregable."
+          ],
+          "existing_local_product": null,
+          "existing_product_note": "No se generó un entregable en esta fase de planeación."
+        },
+        {
+          "id": 49879,
+          "title": "Lección Semana 2.- Sujetos del Derecho",
+          "type": "lesson",
+          "week": 2,
+          "topic": "Sujetos del Derecho, personas físicas y morales, sanción, hechos y actos jurídicos",
+          "requirements": [
+            "Estimados alumnos y alumnas.\nEn esta actividad debes realizar las lecturas incluidas, así mismo para poder avanzar debes responder correctamente las preguntas.\nAdelante!"
+          ],
+          "calendar": {
+            "literal": "Abre: lunes, 28 de septiembre de 2026, 01:00 Cierra: domingo, 4 de octubre de 2026, 23:59",
+            "deadline": "2026-10-04T23:59:00",
+            "timezone": null,
+            "status_on_2026_09_22": "Plazo vigente o futuro",
+            "note": "Fecha Esperada no se interpreta como cierre. No se infiere entrega, prórroga ni zona horaria."
+          },
+          "sources": [
+            {
+              "id": "49879",
+              "title": "Lección Semana 2.- Sujetos del Derecho",
+              "url": "https://virtual.uas.edu.mx/fca/mod/lesson/view.php?id=49879",
+              "locator": "Introducción y fechas visibles del módulo",
+              "consulted_on": "2026-09-22"
+            }
+          ],
+          "weekly_resources": [
+            {
+              "id": "49873",
+              "title": "Competencias-S2",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49873"
+            },
+            {
+              "id": "49875",
+              "title": "GUÍA ACADÉMICA_S2",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49875"
+            },
+            {
+              "id": "49876",
+              "title": "Videos_S2",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49876"
+            },
+            {
+              "id": "49877",
+              "title": "Lecturas_S2",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49877"
+            }
+          ],
+          "proposed_objective": "Demostrar comprensión de sujetos del derecho, personas físicas y morales, sanción, hechos y actos jurídicos mediante Lección Semana 2.- Sujetos del Derecho.",
+          "proposed_sequence": [
+            "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+            "Repasar Sujetos del Derecho, personas físicas y morales, sanción, hechos y actos jurídicos y preparar un esquema de conceptos y dudas sin intentar reconstruir preguntas no consultadas.",
+            "Verificar personalmente apertura, duración e intentos en el aula antes de comenzar; resolver la actividad personalmente."
+          ],
+          "proposed_review_criteria": [
+            "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+            "La ficha organiza la preparación; no acredita evaluación contestada ni resultados."
+          ],
+          "pending": [
+            "Confirmar datos de portada, grupo y asesor antes de elaborar un entregable.",
+            "Preguntas, intentos y duración no consultados en esta revisión; no se abrió ni respondió un intento."
+          ],
+          "existing_local_product": null,
+          "existing_product_note": "No se generó un entregable en esta fase de planeación."
+        },
+        {
+          "id": 49883,
+          "title": "Autoevaluación_S2",
+          "type": "quiz",
+          "week": 2,
+          "topic": "Sujetos del Derecho, personas físicas y morales, sanción, hechos y actos jurídicos",
+          "requirements": [
+            "Estimados(as) estudiantes.\nPor medio de esta actividad podrás medir tus aprendizajes, verificar lo aprendido y a su vez podrás reforzarlos. Vas a realizar una vez esta actividad de manera obligatoria."
+          ],
+          "calendar": {
+            "literal": "Abre: lunes, 28 de septiembre de 2026, 02:18 Cierra: domingo, 4 de octubre de 2026, 22:59",
+            "deadline": "2026-10-04T22:59:00",
+            "timezone": null,
+            "status_on_2026_09_22": "Plazo vigente o futuro",
+            "note": "Fecha Esperada no se interpreta como cierre. No se infiere entrega, prórroga ni zona horaria."
+          },
+          "sources": [
+            {
+              "id": "49883",
+              "title": "Autoevaluación_S2",
+              "url": "https://virtual.uas.edu.mx/fca/mod/quiz/view.php?id=49883",
+              "locator": "Introducción y fechas visibles del módulo",
+              "consulted_on": "2026-09-22"
+            }
+          ],
+          "weekly_resources": [
+            {
+              "id": "49873",
+              "title": "Competencias-S2",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49873"
+            },
+            {
+              "id": "49875",
+              "title": "GUÍA ACADÉMICA_S2",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49875"
+            },
+            {
+              "id": "49876",
+              "title": "Videos_S2",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49876"
+            },
+            {
+              "id": "49877",
+              "title": "Lecturas_S2",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49877"
+            }
+          ],
+          "proposed_objective": "Demostrar comprensión de sujetos del derecho, personas físicas y morales, sanción, hechos y actos jurídicos mediante Autoevaluación_S2.",
+          "proposed_sequence": [
+            "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+            "Repasar Sujetos del Derecho, personas físicas y morales, sanción, hechos y actos jurídicos y preparar un esquema de conceptos y dudas sin intentar reconstruir preguntas no consultadas.",
+            "Verificar personalmente apertura, duración e intentos en el aula antes de comenzar; resolver la actividad personalmente."
+          ],
+          "proposed_review_criteria": [
+            "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+            "La ficha organiza la preparación; no acredita evaluación contestada ni resultados."
+          ],
+          "pending": [
+            "Confirmar datos de portada, grupo y asesor antes de elaborar un entregable.",
+            "Preguntas, intentos y duración no consultados en esta revisión; no se abrió ni respondió un intento."
+          ],
+          "existing_local_product": null,
+          "existing_product_note": "No se generó un entregable en esta fase de planeación."
+        },
+        {
+          "id": 49881,
+          "title": "Foro_S2",
+          "type": "forum",
+          "week": 2,
+          "topic": "Sujetos del Derecho, personas físicas y morales, sanción, hechos y actos jurídicos",
+          "requirements": [
+            "Foro de Discusión S2",
+            "Te invitamos a que escribas tú aportación sobre el tema de discusión y posteriormente, retroalimentes al menos a una participación de tus compañeros. Te recomiendo que revises detenidamente la Guía de Evaluación de los Foros (Haz clic aquí).\nDebes recordar que sólo se podrán evaluar tus aportaciones al foro que estén dentro del período indicado por el mismo (ni antes ni después)."
+          ],
+          "calendar": {
+            "literal": "Sin fechas visibles en la consulta",
+            "deadline": null,
+            "timezone": null,
+            "status_on_2026_09_22": "Sin cierre verificado",
+            "note": "Fecha Esperada no se interpreta como cierre. No se infiere entrega, prórroga ni zona horaria."
+          },
+          "sources": [
+            {
+              "id": "49881",
+              "title": "Foro_S2",
+              "url": "https://virtual.uas.edu.mx/fca/mod/forum/view.php?id=49881",
+              "locator": "Introducción y fechas visibles del módulo",
+              "consulted_on": "2026-09-22"
+            }
+          ],
+          "weekly_resources": [
+            {
+              "id": "49873",
+              "title": "Competencias-S2",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49873"
+            },
+            {
+              "id": "49875",
+              "title": "GUÍA ACADÉMICA_S2",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49875"
+            },
+            {
+              "id": "49876",
+              "title": "Videos_S2",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49876"
+            },
+            {
+              "id": "49877",
+              "title": "Lecturas_S2",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49877"
+            }
+          ],
+          "proposed_objective": "Demostrar comprensión de sujetos del derecho, personas físicas y morales, sanción, hechos y actos jurídicos mediante Foro_S2.",
+          "proposed_sequence": [
+            "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+            "Preparar una aportación razonada sobre Sujetos del Derecho, personas físicas y morales, sanción, hechos y actos jurídicos, con postura, explicación y apoyo en los materiales.",
+            "Leer una participación real y redactar al menos una retroalimentación específica y respetuosa."
+          ],
+          "proposed_review_criteria": [
+            "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+            "Hay aportación principal y réplica a una persona real; no se generan interacciones ficticias."
+          ],
+          "pending": [
+            "Confirmar datos de portada, grupo y asesor antes de elaborar un entregable.",
+            "Confirmar el periodo habilitado del foro y la guía de evaluación enlazada; no asignar la fecha de la tarea al foro.",
+            "Fecha de cierre no visible: consultar el calendario o al asesor; no se inventa un vencimiento."
+          ],
+          "existing_local_product": null,
+          "existing_product_note": "No se generó un entregable en esta fase de planeación."
+        },
+        {
+          "id": 49882,
+          "title": "Diagrama de Ishikawa_S2",
+          "type": "assign",
+          "week": 2,
+          "topic": "Sujetos del Derecho, personas físicas y morales, sanción, hechos y actos jurídicos",
+          "requirements": [
+            "Estimado(a) Estudiante.\nEn esta actividad debes realizar un Diagrama de Ishikawa sobre los Sujetos del Derecho por cada subtema. Los cuales son los siguientes:",
+            "a) Personas Físicas\nb) Personas Morales\nc) Sanción\nd) Hechos y Actos Jurídicos",
+            "Las lecturas están localizadas en los recursos de esta semana, será necesario los leas con detenimiento.",
+            "Para esta actividad recuerda que debes añadir una portada con los siguientes datos:",
+            "Nombre de la Institución; de la Escuela y del Programa\nLogos de la Institución y de la Escuela\nNombre de la Materia\nTítulo del Trabajo\nNombres del Asesor y del Estudiante\nLugar y Fecha de Realización.\nReferencias en Formato Apa\nRecuerde que el Reporte deberá ser escrito (puño y letra), con buena gramática, ortografía y un máximo 2 mínimo 1 cuartillas.",
+            "Asigna al archivo resultante un nombre con la siguiente estructura:\nTI_S2_NombreApellido.pdf\nEjemplo:\nTI_S2_PedroNolasco.pdf\nEnvía tu tarea en las fechas indicadas en esta plataforma.\nNOTA: Tu archivo no debe ser mayor a 2Mb.",
+            "En caso de que tu archivo sea mayor a 2Mb, puedes subir tu archivo a la nube y compartirlo, por lo tanto debes ingresar la URL en este espacio.\n¡Adelante !"
+          ],
+          "calendar": {
+            "literal": "Apertura: lunes, 28 de septiembre de 2026, 01:00 Cierre: domingo, 4 de octubre de 2026, 23:59",
+            "deadline": "2026-10-04T23:59:00",
+            "timezone": null,
+            "status_on_2026_09_22": "Plazo vigente o futuro",
+            "note": "Fecha Esperada no se interpreta como cierre. No se infiere entrega, prórroga ni zona horaria."
+          },
+          "sources": [
+            {
+              "id": "49882",
+              "title": "Diagrama de Ishikawa_S2",
+              "url": "https://virtual.uas.edu.mx/fca/mod/assign/view.php?id=49882",
+              "locator": "Introducción y fechas visibles del módulo",
+              "consulted_on": "2026-09-22"
+            }
+          ],
+          "weekly_resources": [
+            {
+              "id": "49873",
+              "title": "Competencias-S2",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49873"
+            },
+            {
+              "id": "49875",
+              "title": "GUÍA ACADÉMICA_S2",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49875"
+            },
+            {
+              "id": "49876",
+              "title": "Videos_S2",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49876"
+            },
+            {
+              "id": "49877",
+              "title": "Lecturas_S2",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49877"
+            }
+          ],
+          "proposed_objective": "Demostrar comprensión de sujetos del derecho, personas físicas y morales, sanción, hechos y actos jurídicos mediante Diagrama de Ishikawa_S2.",
+          "proposed_sequence": [
+            "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+            "Definir el eje Sujetos del Derecho y distribuir personas físicas, personas morales, sanción, hechos y actos jurídicos en ramas diferenciadas.",
+            "Explicar el criterio de relación del diagrama; no inventar relaciones causales para forzar una clasificación jurídica.",
+            "Realizar personalmente la versión manuscrita de una a dos cuartillas; digitalizar con buena legibilidad y organizar el PDF con portada y referencias.",
+            "Añadir portada institucional y fuentes; revisar legibilidad, ortografía, nombre exigido y tamaño del PDF antes de una entrega personal autorizada."
+          ],
+          "proposed_review_criteria": [
+            "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+            "El cuerpo solicitado es manuscrito: una maqueta LaTeX no lo sustituye.",
+            "El PDF cumple la nomenclatura publicada y el límite indicado de 2 Mb; comprobar el tamaño real.",
+            "Las citas corresponden a referencias consultadas; no se atribuyen resultados, experiencia o autoría inexistentes."
+          ],
+          "pending": [
+            "Confirmar datos de portada, grupo y asesor antes de elaborar un entregable.",
+            "Discrepancia: la guía S2 dice Las Obligaciones; el módulo 49882 pide Sujetos del Derecho. Priorizar la consigna específica para el borrador y consultar al asesor."
+          ],
+          "existing_local_product": null,
+          "existing_product_note": "No se generó un entregable en esta fase de planeación."
+        },
+        {
+          "id": 49892,
+          "title": "Foro_S3",
+          "type": "forum",
+          "week": 3,
+          "topic": "Obligaciones: fuentes, modalidades, transmisión, efectos y extinción",
+          "requirements": [
+            "Foro de Discusión S3",
+            "Te invitamos a que escribas tú aportación sobre el tema de discusión y posteriormente, retroalimentes al menos a una participación de tus compañeros. Te recomiendo que revises detenidamente la Guía de Evaluación de los Foros (Haz clic aquí).\nDebes recordar que sólo se podrán evaluar tus aportaciones al foro que estén dentro del período indicado por el mismo (ni antes ni después)."
+          ],
+          "calendar": {
+            "literal": "Sin fechas visibles en la consulta",
+            "deadline": null,
+            "timezone": null,
+            "status_on_2026_09_22": "Sin cierre verificado",
+            "note": "Fecha Esperada no se interpreta como cierre. No se infiere entrega, prórroga ni zona horaria."
+          },
+          "sources": [
+            {
+              "id": "49892",
+              "title": "Foro_S3",
+              "url": "https://virtual.uas.edu.mx/fca/mod/forum/view.php?id=49892",
+              "locator": "Introducción y fechas visibles del módulo",
+              "consulted_on": "2026-09-22"
+            }
+          ],
+          "weekly_resources": [
+            {
+              "id": "49885",
+              "title": "Competencias-S3",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49885"
+            },
+            {
+              "id": "49887",
+              "title": "GUÍA ACADÉMICA_S3",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49887"
+            },
+            {
+              "id": "49888",
+              "title": "Videos_S3",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49888"
+            },
+            {
+              "id": "49889",
+              "title": "Lecturas_S3",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49889"
+            }
+          ],
+          "proposed_objective": "Demostrar comprensión de obligaciones: fuentes, modalidades, transmisión, efectos y extinción mediante Foro_S3.",
+          "proposed_sequence": [
+            "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+            "Preparar una aportación razonada sobre Obligaciones: fuentes, modalidades, transmisión, efectos y extinción, con postura, explicación y apoyo en los materiales.",
+            "Leer una participación real y redactar al menos una retroalimentación específica y respetuosa."
+          ],
+          "proposed_review_criteria": [
+            "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+            "Hay aportación principal y réplica a una persona real; no se generan interacciones ficticias."
+          ],
+          "pending": [
+            "Confirmar datos de portada, grupo y asesor antes de elaborar un entregable.",
+            "Confirmar el periodo habilitado del foro y la guía de evaluación enlazada; no asignar la fecha de la tarea al foro.",
+            "Fecha de cierre no visible: consultar el calendario o al asesor; no se inventa un vencimiento."
+          ],
+          "existing_local_product": null,
+          "existing_product_note": "No se generó un entregable en esta fase de planeación."
+        },
+        {
+          "id": 49893,
+          "title": "Mapa Conceptual_S3",
+          "type": "assign",
+          "week": 3,
+          "topic": "Obligaciones: fuentes, modalidades, transmisión, efectos y extinción",
+          "requirements": [
+            "Estimado(a) Estudiante.\nEn esta actividad debes realizar un Mapa Conceptual de Las Obligaciones, por cada subtema, los cuales son los siguientes:",
+            "a) Fuentes de las obligaciones;\nb) Modalidades de las obligaciones;\nc) Transmisión de las obligaciones;\nd) Efectos de las obligaciones y,\ne) Extinción de las obligaciones.",
+            "Las lecturas están localizadas en los recursos de esta semana, será necesario los leas con detenimiento.\nPara esta actividad recuerda que debes añadir una portada con los siguientes datos:",
+            "Nombre de la Institución; de la Escuela y del Programa\nLogos de la Institución y de la Escuela\nNombre de la Materia\nTítulo del Trabajo\nNombres del Asesor y del Estudiante\nLugar y Fecha de Realización\nReferencias en Formato Apa\nRecuerde que el Reporte deberá ser escrito (puño y letra), con buena gramática, ortografía y un máximo 2 mínimo 1 cuartillas.",
+            "Asigna al archivo resultante un nombre con la siguiente estructura:\nTI_S3_NombreApellido.pdf\nEjemplo:\nTI_S3_PedroNolasco.pdf\nEnvía tu tarea en las fechas indicadas en esta plataforma.\nNOTA: Tu archivo no debe ser mayor a 2Mb.",
+            "En caso de que tu archivo sea mayor a 2Mb, puedes subir tu archivo a la nube y compartirlo, por lo tanto debes ingresar la URL en este espacio.\n¡Adelante!"
+          ],
+          "calendar": {
+            "literal": "Apertura: lunes, 5 de octubre de 2026, 01:00 Cierre: domingo, 11 de octubre de 2026, 23:59",
+            "deadline": "2026-10-11T23:59:00",
+            "timezone": null,
+            "status_on_2026_09_22": "Plazo vigente o futuro",
+            "note": "Fecha Esperada no se interpreta como cierre. No se infiere entrega, prórroga ni zona horaria."
+          },
+          "sources": [
+            {
+              "id": "49893",
+              "title": "Mapa Conceptual_S3",
+              "url": "https://virtual.uas.edu.mx/fca/mod/assign/view.php?id=49893",
+              "locator": "Introducción y fechas visibles del módulo",
+              "consulted_on": "2026-09-22"
+            }
+          ],
+          "weekly_resources": [
+            {
+              "id": "49885",
+              "title": "Competencias-S3",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49885"
+            },
+            {
+              "id": "49887",
+              "title": "GUÍA ACADÉMICA_S3",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49887"
+            },
+            {
+              "id": "49888",
+              "title": "Videos_S3",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49888"
+            },
+            {
+              "id": "49889",
+              "title": "Lecturas_S3",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49889"
+            }
+          ],
+          "proposed_objective": "Demostrar comprensión de obligaciones: fuentes, modalidades, transmisión, efectos y extinción mediante Mapa Conceptual_S3.",
+          "proposed_sequence": [
+            "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+            "Jerarquizar los conceptos de Obligaciones: fuentes, modalidades, transmisión, efectos y extinción; redactar palabras de enlace que formen proposiciones comprensibles.",
+            "Verificar que el mapa no sea sólo una lista o un resumen; incluir todos los subtemas solicitados.",
+            "Realizar personalmente la versión manuscrita de una a dos cuartillas; digitalizar con buena legibilidad y organizar el PDF con portada y referencias.",
+            "Añadir portada institucional y fuentes; revisar legibilidad, ortografía, nombre exigido y tamaño del PDF antes de una entrega personal autorizada."
+          ],
+          "proposed_review_criteria": [
+            "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+            "El cuerpo solicitado es manuscrito: una maqueta LaTeX no lo sustituye.",
+            "El PDF cumple la nomenclatura publicada y el límite indicado de 2 Mb; comprobar el tamaño real.",
+            "Las citas corresponden a referencias consultadas; no se atribuyen resultados, experiencia o autoría inexistentes."
+          ],
+          "pending": [
+            "Confirmar datos de portada, grupo y asesor antes de elaborar un entregable."
+          ],
+          "existing_local_product": null,
+          "existing_product_note": "No se generó un entregable en esta fase de planeación."
+        },
+        {
+          "id": 49902,
+          "title": "Lección Semana 4: Los Contratos Civiles",
+          "type": "lesson",
+          "week": 4,
+          "topic": "Obligaciones y contratos civiles en la Contaduría Pública",
+          "requirements": [
+            "Estimados alumnos y alumnas.\nEn esta actividad debes realizar las lecturas incluidas sobre Las obligaciones y los Contratos Civiles, así mismo para poder avanzar debes responder correctamente las preguntas.\nAdelante!"
+          ],
+          "calendar": {
+            "literal": "Abre: lunes, 12 de octubre de 2026, 01:00 Cierra: domingo, 18 de octubre de 2026, 23:59",
+            "deadline": "2026-10-18T23:59:00",
+            "timezone": null,
+            "status_on_2026_09_22": "Plazo vigente o futuro",
+            "note": "Fecha Esperada no se interpreta como cierre. No se infiere entrega, prórroga ni zona horaria."
+          },
+          "sources": [
+            {
+              "id": "49902",
+              "title": "Lección Semana 4: Los Contratos Civiles",
+              "url": "https://virtual.uas.edu.mx/fca/mod/lesson/view.php?id=49902",
+              "locator": "Introducción y fechas visibles del módulo",
+              "consulted_on": "2026-09-22"
+            }
+          ],
+          "weekly_resources": [
+            {
+              "id": "49895",
+              "title": "Competencias-S4",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49895"
+            },
+            {
+              "id": "49897",
+              "title": "GUÍA ACADÉMICA_S4",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49897"
+            },
+            {
+              "id": "49898",
+              "title": "Videos_S4",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49898"
+            },
+            {
+              "id": "49899",
+              "title": "Lecturas_S4",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49899"
+            }
+          ],
+          "proposed_objective": "Demostrar comprensión de obligaciones y contratos civiles en la contaduría pública mediante Lección Semana 4: Los Contratos Civiles.",
+          "proposed_sequence": [
+            "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+            "Repasar Obligaciones y contratos civiles en la Contaduría Pública y preparar un esquema de conceptos y dudas sin intentar reconstruir preguntas no consultadas.",
+            "Verificar personalmente apertura, duración e intentos en el aula antes de comenzar; resolver la actividad personalmente."
+          ],
+          "proposed_review_criteria": [
+            "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+            "La ficha organiza la preparación; no acredita evaluación contestada ni resultados."
+          ],
+          "pending": [
+            "Confirmar datos de portada, grupo y asesor antes de elaborar un entregable.",
+            "Preguntas, intentos y duración no consultados en esta revisión; no se abrió ni respondió un intento."
+          ],
+          "existing_local_product": null,
+          "existing_product_note": "No se generó un entregable en esta fase de planeación."
+        },
+        {
+          "id": 49904,
+          "title": "Foro_S4",
+          "type": "forum",
+          "week": 4,
+          "topic": "Obligaciones y contratos civiles en la Contaduría Pública",
+          "requirements": [
+            "Foro de Discusión S4",
+            "Te invitamos a que escribas tú aportación sobre el tema de discusión y posteriormente, retroalimentes al menos a una participación de tus compañeros. Te recomiendo que revises detenidamente la Guía de Evaluación de los Foros (Haz clic aquí).\nDebes recordar que sólo se podrán evaluar tus aportaciones al foro que estén dentro del período indicado por el mismo (ni antes ni después)."
+          ],
+          "calendar": {
+            "literal": "Fecha Esperada: lunes, 12 de octubre de 2026, 10:54",
+            "deadline": null,
+            "timezone": null,
+            "status_on_2026_09_22": "Sin cierre verificado",
+            "note": "Fecha Esperada no se interpreta como cierre. No se infiere entrega, prórroga ni zona horaria."
+          },
+          "sources": [
+            {
+              "id": "49904",
+              "title": "Foro_S4",
+              "url": "https://virtual.uas.edu.mx/fca/mod/forum/view.php?id=49904",
+              "locator": "Introducción y fechas visibles del módulo",
+              "consulted_on": "2026-09-22"
+            }
+          ],
+          "weekly_resources": [
+            {
+              "id": "49895",
+              "title": "Competencias-S4",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49895"
+            },
+            {
+              "id": "49897",
+              "title": "GUÍA ACADÉMICA_S4",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49897"
+            },
+            {
+              "id": "49898",
+              "title": "Videos_S4",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49898"
+            },
+            {
+              "id": "49899",
+              "title": "Lecturas_S4",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49899"
+            }
+          ],
+          "proposed_objective": "Demostrar comprensión de obligaciones y contratos civiles en la contaduría pública mediante Foro_S4.",
+          "proposed_sequence": [
+            "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+            "Preparar una aportación razonada sobre Obligaciones y contratos civiles en la Contaduría Pública, con postura, explicación y apoyo en los materiales.",
+            "Leer una participación real y redactar al menos una retroalimentación específica y respetuosa."
+          ],
+          "proposed_review_criteria": [
+            "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+            "Hay aportación principal y réplica a una persona real; no se generan interacciones ficticias."
+          ],
+          "pending": [
+            "Confirmar datos de portada, grupo y asesor antes de elaborar un entregable.",
+            "Confirmar el periodo habilitado del foro y la guía de evaluación enlazada; no asignar la fecha de la tarea al foro.",
+            "Fecha de cierre no visible: consultar el calendario o al asesor; no se inventa un vencimiento."
+          ],
+          "existing_local_product": null,
+          "existing_product_note": "No se generó un entregable en esta fase de planeación."
+        },
+        {
+          "id": 49905,
+          "title": "Autoevaluación_S4",
+          "type": "quiz",
+          "week": 4,
+          "topic": "Obligaciones y contratos civiles en la Contaduría Pública",
+          "requirements": [
+            "Estimados(as) estudiantes.\nPor medio de esta actividad podrás medir tus aprendizajes, verificar lo aprendido y a su vez podrás reforzarlos. Vas a realizar una vez esta actividad de manera obligatoria."
+          ],
+          "calendar": {
+            "literal": "Abre: lunes, 12 de octubre de 2026, 01:00 Cierra: domingo, 18 de octubre de 2026, 23:59",
+            "deadline": "2026-10-18T23:59:00",
+            "timezone": null,
+            "status_on_2026_09_22": "Plazo vigente o futuro",
+            "note": "Fecha Esperada no se interpreta como cierre. No se infiere entrega, prórroga ni zona horaria."
+          },
+          "sources": [
+            {
+              "id": "49905",
+              "title": "Autoevaluación_S4",
+              "url": "https://virtual.uas.edu.mx/fca/mod/quiz/view.php?id=49905",
+              "locator": "Introducción y fechas visibles del módulo",
+              "consulted_on": "2026-09-22"
+            }
+          ],
+          "weekly_resources": [
+            {
+              "id": "49895",
+              "title": "Competencias-S4",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49895"
+            },
+            {
+              "id": "49897",
+              "title": "GUÍA ACADÉMICA_S4",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49897"
+            },
+            {
+              "id": "49898",
+              "title": "Videos_S4",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49898"
+            },
+            {
+              "id": "49899",
+              "title": "Lecturas_S4",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49899"
+            }
+          ],
+          "proposed_objective": "Demostrar comprensión de obligaciones y contratos civiles en la contaduría pública mediante Autoevaluación_S4.",
+          "proposed_sequence": [
+            "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+            "Repasar Obligaciones y contratos civiles en la Contaduría Pública y preparar un esquema de conceptos y dudas sin intentar reconstruir preguntas no consultadas.",
+            "Verificar personalmente apertura, duración e intentos en el aula antes de comenzar; resolver la actividad personalmente."
+          ],
+          "proposed_review_criteria": [
+            "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+            "La ficha organiza la preparación; no acredita evaluación contestada ni resultados."
+          ],
+          "pending": [
+            "Confirmar datos de portada, grupo y asesor antes de elaborar un entregable.",
+            "Preguntas, intentos y duración no consultados en esta revisión; no se abrió ni respondió un intento."
+          ],
+          "existing_local_product": null,
+          "existing_product_note": "No se generó un entregable en esta fase de planeación."
+        },
+        {
+          "id": 49906,
+          "title": "Producto Integrador del Curso-Ensayo S4",
+          "type": "assign",
+          "week": 4,
+          "topic": "Obligaciones y contratos civiles en la Contaduría Pública",
+          "requirements": [
+            "Estimado(a) Estudiante.\nEl proyecto integrador del curso \"Derecho Mercantil\" consiste en elaborar un: Ensayo sobre las Obligaciones y los Contratos Civiles.\nUtilice las lecturas de las obligaciones y contratos civiles, será necesario las leas con detenimiento.\nInstrucciones: \n1. El alumno tomando en cuenta el material de la sesión 3 y 4, elaborará un ensayo considerando la siguiente pregunta: ¿Cuál es la importancia de las obligaciones y los contratos civiles en la Contaduría Pública?\n2. El ensayo deberá tener el siguiente cuerpo:",
+            "Portada; \nIntroducción (una cuartilla); \nDesarrollo (tres cuartillas); \nConclusiones (una cuartilla) y \nReferencias (en formato APA)",
+            "3. Recuerde que el ensayo deberá ser escrito con buena gramática, ortografía y respetando el derecho de autor incorporando en cada cita bibliográfica el autor y respetando las reglas de formato APA dentro del texto y en las referencias. \nPara esta actividad recuerda que debes añadir una portada con los siguientes datos:",
+            "Nombre de la Institución; de la Escuela y del Programa\nLogos de la Institución y de la Escuela\nNombre de la Materia\nTítulo del Trabajo\nNombres del Asesor y del Estudiante\nLugar y Fecha de realización.",
+            "Asigna al archivo resultante un nombre con la siguiente estructura:\nPI_MOD_NombreApellido.pdf\nEjemplo:\nPI_MOD_PedroNolasco.pdf\nEnvía tu tarea en las fechas indicadas en esta plataforma.\nNOTA: Tu archivo no debe ser mayor a 2Mb.",
+            "En caso de que tu archivo sea mayor a 2Mb, puedes subir tu archivo a la nube y compartirlo, por lo tanto debes ingresar la URL en este espacio.\n¡Adelante !"
+          ],
+          "calendar": {
+            "literal": "Apertura: lunes, 12 de octubre de 2026, 01:00 Cierre: domingo, 18 de octubre de 2026, 23:59",
+            "deadline": "2026-10-18T23:59:00",
+            "timezone": null,
+            "status_on_2026_09_22": "Plazo vigente o futuro",
+            "note": "Fecha Esperada no se interpreta como cierre. No se infiere entrega, prórroga ni zona horaria."
+          },
+          "sources": [
+            {
+              "id": "49906",
+              "title": "Producto Integrador del Curso-Ensayo S4",
+              "url": "https://virtual.uas.edu.mx/fca/mod/assign/view.php?id=49906",
+              "locator": "Introducción y fechas visibles del módulo",
+              "consulted_on": "2026-09-22"
+            }
+          ],
+          "weekly_resources": [
+            {
+              "id": "49895",
+              "title": "Competencias-S4",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49895"
+            },
+            {
+              "id": "49897",
+              "title": "GUÍA ACADÉMICA_S4",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49897"
+            },
+            {
+              "id": "49898",
+              "title": "Videos_S4",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49898"
+            },
+            {
+              "id": "49899",
+              "title": "Lecturas_S4",
+              "url": "https://virtual.uas.edu.mx/fca/mod/page/view.php?id=49899"
+            }
+          ],
+          "proposed_objective": "Demostrar comprensión de obligaciones y contratos civiles en la contaduría pública mediante Producto Integrador del Curso-Ensayo S4.",
+          "proposed_sequence": [
+            "Leer la consigna y los materiales de la semana; registrar conceptos y fuentes en las notas de la materia.",
+            "Formular una tesis sobre la importancia de las obligaciones y los contratos civiles para la Contaduría Pública.",
+            "Redactar introducción de una cuartilla, desarrollo de tres y conclusiones de una; separar portada y referencias APA.",
+            "Relacionar argumentos con las lecturas S3 y S4 y con ejemplos profesionales; distinguir norma, interpretación y ejemplo.",
+            "Añadir portada institucional y fuentes; revisar legibilidad, ortografía, nombre exigido y tamaño del PDF antes de una entrega personal autorizada."
+          ],
+          "proposed_review_criteria": [
+            "El contenido responde a los temas y requisitos de la consigna, no sólo al título de la actividad.",
+            "El PDF cumple la nomenclatura publicada y el límite indicado de 2 Mb; comprobar el tamaño real.",
+            "Las citas corresponden a referencias consultadas; no se atribuyen resultados, experiencia o autoría inexistentes."
+          ],
+          "pending": [
+            "Confirmar datos de portada, grupo y asesor antes de elaborar un entregable."
+          ],
+          "existing_local_product": null,
+          "existing_product_note": "No se generó un entregable en esta fase de planeación."
+        }
+      ]
+    },
+    "source_blocks": [],
+    "unsegmented_document": false,
+    "period_pending": true,
+    "activity_mapping": [
+      {
+        "activity_id": "49859",
+        "local_number": null,
+        "source_locator": "/activities/0",
+        "source_is_summary": true
+      },
+      {
+        "activity_id": "49860",
+        "local_number": null,
+        "source_locator": "/activities/1",
+        "source_is_summary": true
+      },
+      {
+        "activity_id": "49861",
+        "local_number": null,
+        "source_locator": "/activities/2",
+        "source_is_summary": true
+      },
+      {
+        "activity_id": "49870",
+        "local_number": null,
+        "source_locator": "/activities/3",
+        "source_is_summary": true
+      },
+      {
+        "activity_id": "49871",
+        "local_number": null,
+        "source_locator": "/activities/4",
+        "source_is_summary": true
+      },
+      {
+        "activity_id": "49879",
+        "local_number": null,
+        "source_locator": "/activities/5",
+        "source_is_summary": true
+      },
+      {
+        "activity_id": "49883",
+        "local_number": null,
+        "source_locator": "/activities/6",
+        "source_is_summary": true
+      },
+      {
+        "activity_id": "49881",
+        "local_number": null,
+        "source_locator": "/activities/7",
+        "source_is_summary": true
+      },
+      {
+        "activity_id": "49882",
+        "local_number": null,
+        "source_locator": "/activities/8",
+        "source_is_summary": true
+      },
+      {
+        "activity_id": "49892",
+        "local_number": null,
+        "source_locator": "/activities/9",
+        "source_is_summary": true
+      },
+      {
+        "activity_id": "49893",
+        "local_number": null,
+        "source_locator": "/activities/10",
+        "source_is_summary": true
+      },
+      {
+        "activity_id": "49902",
+        "local_number": null,
+        "source_locator": "/activities/11",
+        "source_is_summary": true
+      },
+      {
+        "activity_id": "49904",
+        "local_number": null,
+        "source_locator": "/activities/12",
+        "source_is_summary": true
+      },
+      {
+        "activity_id": "49905",
+        "local_number": null,
+        "source_locator": "/activities/13",
+        "source_is_summary": true
+      },
+      {
+        "activity_id": "49906",
+        "local_number": null,
+        "source_locator": "/activities/14",
+        "source_is_summary": true
+      }
+    ]
+  }
+}
+```

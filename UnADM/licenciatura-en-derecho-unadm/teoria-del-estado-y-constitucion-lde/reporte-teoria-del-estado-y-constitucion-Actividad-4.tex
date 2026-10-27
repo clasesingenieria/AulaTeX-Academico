@@ -1,0 +1,187 @@
+\documentclass[12pt,spanish,letterpaper,oneside]{article}
+\def\documenttitle {Estado, representaci\'on y l\'imites al poder}
+\def\documentsubtitle {Concepciones del Estado y protecci\'on de la libertad}
+\def\documentsubject {Concepciones del Estado y Estado de Derecho}
+\def\documentauthor {Martin Jonathan de la Cruz}
+\def\coursename {Teor\'ia del Estado y Constituci\'on}
+\def\coursecode {020}
+\def\universityname {Universidad Abierta y a Distancia de M\'exico}
+\def\universityfaculty {Licenciatura en Derecho}
+\def\universitydepartment {Teor\'ia del Estado y Constituci\'on}
+\def\universitydepartmentimage {departamentos/UnADM}
+\def\universitydepartmentimagecfg {height=1.57cm}
+\def\universitylocation {Ciudad de M\'exico}
+\def\authortable {\begin{tabular}{ll}
+Alumno: & Martin Jonathan de la Cruz \\
+Matricula: & ES2611202040 \\
+Figura docente: & Ana Lilian Sanchez Chavez \\
+Semestre/Bloque: & 2 / 2 \\
+Semana: & 4 \\
+Fecha: & 23 de octubre de 2026
+\end{tabular}}
+\usepackage{iftex}
+\ifLuaTeX
+\let\pdfpagewidth\pagewidth
+\let\pdfpageheight\pageheight
+\fi
+\input{template}
+\usepackage{fontspec}
+\setmainfont{arial.ttf}[Path=C:/Windows/Fonts/,BoldFont=arialbd.ttf,ItalicFont=ariali.ttf,BoldItalicFont=arialbi.ttf]
+\setsansfont{arial.ttf}[Path=C:/Windows/Fonts/,BoldFont=arialbd.ttf,ItalicFont=ariali.ttf,BoldItalicFont=arialbi.ttf]
+\renewcommand{\familydefault}{\sfdefault}
+\setcitestyle{authoryear,open={(},close={)}}
+\usepackage[most]{tcolorbox}
+\usepackage{fvextra}
+\usepackage{attachfile2}
+\usepackage{tikz}
+\usepackage{eso-pic}
+\definecolor{unadmGreen}{HTML}{5F8F3A}
+\definecolor{unadmGreenDark}{HTML}{174A3A}
+\definecolor{unadmPaper}{HTML}{F6F7F2}
+\newtcolorbox{forobox}[1][]{enhanced,breakable,colback=unadmPaper,
+colframe=unadmGreen,boxrule=0pt,leftrule=3pt,arc=1.2mm,
+left=4mm,right=4mm,top=3mm,bottom=3mm,fonttitle=\bfseries,
+coltitle=white,colbacktitle=unadmGreenDark,
+attach boxed title to top left={xshift=4mm,yshift=-2mm},
+boxed title style={colframe=unadmGreenDark,arc=0.6mm},#1}
+\newcommand{\foroTextButton}[1]{\textattachfile[appearance={},description={Texto del foro},mimetype=text/plain]{#1}{\colorbox{unadmGreen}{\small\textcolor{white}{Abrir texto}}}}
+\setlength{\emergencystretch}{3em}
+% Foro: preguntas guia, participacion completa, lectura, replica real y cierre.
+% TXT preparados localmente: no se identifican como mensajes publicados.
+\begin{document}
+\AddToShipoutPictureBG*{\begin{tikzpicture}[remember picture,overlay]
+\node[opacity=0.16,inner sep=0pt] at (current page.center)
+{\includegraphics[width=0.72\paperwidth]{img/departamentos/UnADM.pdf}};
+\end{tikzpicture}}
+\templatePortrait
+\templatePagecfg
+\onehalfspacing
+\begin{abstractd}
+El Estado organiza la convivencia, pero su capacidad de imponer orden no
+demuestra por s\'i sola representaci\'on social ni legitimidad. El contraste
+entre Maquiavelo, Hobbes, Locke, Rousseau y Montesquieu permite distinguir
+autonom\'ia de la pol\'itica, seguridad, consentimiento, soberan\'ia y control
+del poder. La distribuci\'on de funciones es relevante para proteger la
+libertad, aunque requiere legalidad y garant\'ias efectivas. En el orden
+constitucional mexicano, soberan\'ia popular, derechos humanos y divisi\'on
+de poderes ofrecen criterios concurrentes para valorar la actuaci\'on estatal.
+\end{abstractd}
+\templateIndex
+\templateFinalcfg
+\newgeometry{margin=2.5cm}
+\fontsize{12}{14.5}\selectfont
+\onehalfspacing
+\section{Introducci\'on}
+El Estado puede producir orden sin representar adecuadamente a la sociedad
+y puede invocar representaci\'on sin respetar los l\'imites del poder. Esa
+tensi\'on exige distinguir la capacidad de organizar la convivencia de las
+razones que legitiman el gobierno y las instituciones que controlan sus
+decisiones. El Estado de Derecho no se reduce a la existencia de normas:
+implica la sujeci\'on del poder estatal al Derecho \citep[p.~21]{ricciS4}.
+Las concepciones de los cinco autores permiten examinar respuestas
+hist\'oricamente distintas, no una doctrina uniforme del Estado moderno.
+
+\section{Orden social, soberan\'ia y control constitucional}
+\subsection{Concepciones del poder y fundamento del Estado}
+La autonom\'ia del pensamiento pol\'itico frente a la teolog\'ia permite
+estudiar el gobierno desde sus condiciones humanas e institucionales.
+Andrade sit\'ua a Maquiavelo en ese cambio y vincula la reflexi\'on sobre
+el Estado con la necesidad de justificar racionalmente la autoridad
+\citep[p.~152]{andradeS4}. Esa autonom\'ia no debe convertirse en una
+justificaci\'on autom\'atica de cualquier medio empleado para conservar el poder.
+
+Hobbes explica el pacto y la autoridad soberana desde la inseguridad;
+Locke rechaza que la protecci\'on de las personas requiera un poder absoluto
+e ilimitado. Ambos emplean argumentos contractualistas, pero difieren
+en las consecuencias pol\'iticas del consentimiento
+\citep[pp.~161--164]{andradeS4}. La diferencia importa: una explicaci\'on
+del origen humano del poder no equivale por s\'i sola a gobierno democr\'atico.
+
+Rousseau distingue soberan\'ia y voluntad general de la voluntad particular.
+La soberan\'ia no se reduce al mandato ocasional de un gobernante ni a
+una suma de intereses privados \citep[libro II, caps.~1--2]{rousseauS4}.
+Montesquieu, por su parte, examina el riesgo de concentrar funciones
+legislativas, ejecutivas y judiciales y lo relaciona con la libertad
+pol\'itica \citep[libro XI, cap.~6]{montesquieuS4}. Sus aportaciones
+responden a problemas relacionados, pero no intercambiables: fundamento
+del poder, legitimidad del gobierno y prevenci\'on del abuso.
+
+La pregunta sobre los enciclopedistas se interpreta dentro del debate
+ilustrado, sin convertir a todos los pensadores mencionados en integrantes
+del equipo editor de la Enciclopedia. La preferencia por Montesquieu
+se justifica por un criterio expl\'icito: el dise\~no de l\'imites institucionales.
+No se afirma que sea el \'unico fundamento del Estado de Derecho.
+
+\subsection{Preguntas sobre orden, representaci\'on y libertad}
+\begin{enumerate}
+\item \textbf{\textquestiondown El Estado establece un orden en la sociedad o es una representaci\'on de ella?}
+Ambas dimensiones pueden relacionarse, pero deben evaluarse por separado:
+orden institucional no garantiza participaci\'on ni representaci\'on efectiva.
+\item \textbf{\textquestiondown Cu\'al fue la aportaci\'on principal de Maquiavelo, Hobbes, Locke, Rousseau y Montesquieu?}
+Autonom\'ia del an\'alisis pol\'itico, seguridad mediante autoridad soberana,
+consentimiento y l\'imites, voluntad general y distribuci\'on del poder,
+respectivamente; no son una teor\'ia \'unica \citep{andradeS4,rousseauS4,montesquieuS4}.
+\item \textbf{\textquestiondown Cu\'al de los enciclopedistas realiz\'o una mayor aportaci\'on al Estado de Derecho?}
+Desde el criterio de prevenir la concentraci\'on del poder, Montesquieu
+ofrece una aportaci\'on especialmente relevante; necesita complementarse
+con legalidad, derechos y garant\'ias \citep[p.~21]{ricciS4}.
+\end{enumerate}
+
+\subsection{Estado, representaci\'on y l\'imites al poder}
+\begin{forobox}[title={Orden institucional y legitimidad}]
+\hfill\foroTextButton{UnADM/licenciatura-en-derecho-unadm/teoria-del-estado-y-constitucion-lde/foro-participacion-Actividad-4.txt}\par\medskip
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\footnotesize,baselinestretch=1,breakindent=1.27cm,breaksymbolleft={},breaksymbolright={}]{foro-participacion-Actividad-4.txt}
+\end{forobox}
+La distinci\'on evita identificar obediencia y consentimiento. Los art\'iculos
+39 y 49 permiten situar soberan\'ia y distribuci\'on de competencias; el
+art\'iculo 1 agrega deberes de protecci\'on a todas las autoridades
+\citep[arts.~1, 39 y 49]{constitucionS4}. Una decisi\'on debe valorarse
+tanto por su origen institucional como por los derechos que afecta.
+
+\subsection{Representaci\'on social y controles efectivos}
+La intervenci\'on consultada sostiene que orden y representaci\'on van
+de la mano y destaca la divisi\'on de poderes. La respuesta distingue
+esas funciones y propone evaluar los controles de las actuaciones,
+sin identificar a la interlocutora en el encuadre anal\'itico.
+\begin{forobox}[title={Legalidad y protecci\'on frente al abuso}]
+\hfill\foroTextButton{UnADM/licenciatura-en-derecho-unadm/teoria-del-estado-y-constitucion-lde/foro-replica-Actividad-4.txt}\par\medskip
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\footnotesize,baselinestretch=1,breakindent=1.27cm,breaksymbolleft={},breaksymbolright={}]{foro-replica-Actividad-4.txt}
+\end{forobox}
+La retroalimentaci\'on no niega la relaci\'on entre sociedad y Estado:
+precisa que esa relaci\'on puede fallar en la pr\'actica. Un control
+efectivo requiere identificar autoridad, norma, derecho afectado y
+consecuencia jur\'idica, en vez de considerar suficiente la existencia
+formal de poderes separados \citep[p.~21]{ricciS4}.
+
+\clearpage
+\section{Conclusiones}
+Las concepciones estudiadas distinguen problemas de seguridad, consentimiento,
+soberan\'ia, libertad y organizaci\'on del gobierno. Su aporte no consiste
+en justificar un poder ilimitado ni en establecer una secuencia de autores
+con respuestas id\'enticas. La diferencia entre Hobbes y Locke y la
+distinci\'on entre voluntad general y voluntad particular muestran que
+el fundamento del Estado admite desacuerdos sustantivos.
+
+Considero que Montesquieu ofrece una aportaci\'on decisiva al control del
+poder, siempre que la distribuci\'on de funciones se examine junto con
+legalidad y derechos. El Estado debe organizar la convivencia y responder
+a la sociedad, pero ambas exigencias necesitan controles verificables.
+La representaci\'on no se presume por el mero ejercicio de autoridad y
+la libertad no queda asegurada con una divisi\'on exclusivamente formal.
+\footnote{GitHub Copilot apoy\'o la organizaci\'on conceptual y el contraste
+documental. La postura personal requiere revisi\'on del estudiante.}
+
+\clearpage
+\begin{thebibliography}{5}
+\bibitem[Andrade S\'anchez(2003)]{andradeS4}
+Andrade S\'anchez, E. (2003). \emph{Teor\'ia general del Estado} (2.\textsuperscript{a} ed.). Oxford University Press.
+\bibitem[C\'amara de Diputados(2026)]{constitucionS4}
+C\'amara de Diputados del H. Congreso de la Uni\'on. (2026). \emph{Constituci\'on Pol\'itica de los Estados Unidos Mexicanos} (\'ultima reforma DOF 7 de octubre de 2026). \url{https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf}
+\bibitem[Garc\'ia Ricci(2011)]{ricciS4}
+Garc\'ia Ricci, D. (2011). \emph{Estado de derecho y principio de legalidad}. Comisi\'on Nacional de los Derechos Humanos.
+\bibitem[Montesquieu(s.~f.)]{montesquieuS4}
+Montesquieu. (s.~f.). \emph{Del esp\'iritu de las leyes}.
+\bibitem[Rousseau(1999)]{rousseauS4}
+Rousseau, J.-J. (1999). \emph{El contrato social o principios de derecho pol\'itico}. elaleph.com.
+\end{thebibliography}
+\end{document}

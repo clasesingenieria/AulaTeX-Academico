@@ -1,0 +1,281 @@
+# Planeacion: algebra-lineal
+
+Estado: needs_review. Conversion local, no aprobacion docente ni autorizacion de envio.
+
+## Identificacion
+
+```json
+{
+  "institution": "UANL",
+  "program": "ingeniero-agronomo",
+  "subject_id": "algebra-lineal",
+  "subject_title": "algebra-lineal",
+  "offering_id": "oferta-968aa123692c8060",
+  "period": null,
+  "modality": null
+}
+```
+
+## Actividad source-e9f3149046144ae7: consigna-Actividad-1
+
+### Consigna importada
+
+[document]
+# Actividad 1 — Fase 1
+
+## Título
+
+Mapa cognitivo de telaraña sobre aplicaciones del álgebra lineal en la vida cotidiana.
+
+## Instrucciones extraídas de la guía
+
+1. Organizar las actividades y el tiempo considerando la fecha de asignación y la fecha límite.
+2. Investigar en varias fuentes confiables las aplicaciones del álgebra lineal; revisar al menos tres fuentes escritas.
+3. Escribir el nombre del tema en el círculo central de la telaraña.
+4. Colocar alrededor del círculo, sobre las líneas radiales, las áreas consideradas relevantes.
+5. Anotar aplicaciones específicas del álgebra lineal sobre las líneas curvas que asemejan una telaraña.
+6. Revisar que la información sea congruente con el pensamiento del equipo.
+7. Convertir el documento a PDF.
+8. Subir el PDF a Nexus antes de la fecha límite.
+
+## Requisitos
+
+- Investigar aplicaciones del álgebra lineal en la vida cotidiana.
+- Clasificar correctamente la información.
+- Respetar el formato de mapa cognitivo de telaraña.
+- Incluir al menos seis aplicaciones.
+- Indicar el campo de aplicación y qué se estudia desde el punto de vista del álgebra lineal.
+- Elaborar el mapa en formato digital con software de libre elección.
+- Trabajar en equipos de dos a tres personas.
+- Crear un producto original, sin copia parcial ni total de otro equipo.
+- Entregar en tiempo y forma.
+
+## Información general
+
+- Valor indicado: 10 puntos.
+- Forma de trabajo: en equipo.
+- Medio de entrega: plataforma Nexus.
+
+## Lista de cotejo de la guía (100 puntos)
+
+| Criterio | Sí cumple | Cumple parcialmente | No cumple |
+| --- | ---: | ---: | ---: |
+| Investiga aplicaciones del álgebra lineal en la vida cotidiana | 15 | 7 | 0 |
+| Clasifica correctamente la información | 10 | 5 | 0 |
+| Ubica tema central, subtemas radiales y características en líneas curvas | 5 | 3 | 0 |
+| Incluye seis aplicaciones | 20 | 10 | 0 |
+| Indica campo de aplicación y objeto de estudio algebraico | 20 | 10 | 0 |
+| Elabora digitalmente el mapa | 5 | 3 | 0 |
+| Trabaja en equipo de dos a tres personas | 12 | N/A | 0 |
+| Entrega el PDF en la plataforma indicada | 3 | N/A | 0 |
+| Presenta un mapa original | 5 | N/A | 0 |
+| Entrega en tiempo y forma | 5 | 3 | 0 |
+
+> La guía expresa un valor general de 10 puntos y una lista de cotejo que suma 100 puntos; se conservan ambos datos tal como aparecen en el anexo.
+
+
+### Requisitos
+
+
+### questions
+
+```json
+[]
+```
+
+### cognitive
+
+```json
+{
+  "taxonomy": null,
+  "level": null,
+  "verb": null,
+  "object": null,
+  "conditions": null,
+  "observable_evidence": null,
+  "justification": null
+}
+```
+
+### sequence
+
+```json
+[]
+```
+
+### products
+
+```json
+[]
+```
+
+### assessment
+
+```json
+{
+  "kind": null,
+  "scale_total": null,
+  "weight": null,
+  "weight_unit": null,
+  "criteria": [],
+  "editorial_checks": []
+}
+```
+
+### calendar
+
+```json
+{
+  "opens_at": null,
+  "expected_at": null,
+  "due_at": null,
+  "closes_at": null,
+  "timezone": null,
+  "literal": null
+}
+```
+
+### policies
+
+```json
+{
+  "ai": null,
+  "integrity": null,
+  "collaboration": null,
+  "citation": null,
+  "attempts": null,
+  "late_submission": null,
+  "accessibility": null,
+  "privacy": null,
+  "exceptions": []
+}
+```
+
+### resources
+
+```json
+[]
+```
+
+## sources
+
+```json
+[
+  {
+    "id": "src-local",
+    "kind": "other",
+    "authority": "unknown",
+    "title": "consigna-Actividad-1.md",
+    "url": null,
+    "path": "planeaciones-algebra-lineal/consigna-Actividad-1.md",
+    "sha256": "e9f3149046144ae7cd846abc4c18af056918d326faed6c18688a4fd6f7fa1fbd",
+    "captured_at": null,
+    "media_type": "text/plain"
+  }
+]
+```
+
+## field_status
+
+```json
+[
+  {
+    "path": "/identity",
+    "state": "inferred",
+    "reason": "Identidad editorial del catalogo; oferta interna, periodo y modalidad no acreditados cuando faltan.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/sources",
+    "state": "confirmed",
+    "reason": "Archivo local preservado; su huella no acredita autoria ni vigencia docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "local-file",
+        "quoted_text": null
+      }
+    ],
+    "alternatives": []
+  },
+  {
+    "path": "/curriculum",
+    "state": "unknown",
+    "reason": "No se deducen competencias, resultados ni temario que no esten documentados.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0",
+    "state": "unknown",
+    "reason": "Campos sin datos no se completan por inferencia; la consigna puede estar resumida o sin segmentar.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/role",
+    "state": "inferred",
+    "reason": "Clasificacion operativa provisional a partir del tipo original; no impone obligatoriedad.",
+    "evidence": [],
+    "alternatives": []
+  },
+  {
+    "path": "/activities/0/instruction",
+    "state": "inferred",
+    "reason": "Texto completo importado o requisitos del modelo local; pendiente cotejo con consigna docente.",
+    "evidence": [
+      {
+        "source_id": "src-local",
+        "locator": "document",
+        "quoted_text": "[document]\n# Actividad 1 — Fase 1\n\n## Título\n\nMapa cognitivo de telaraña sobre aplicaciones del álgebra lineal en la vida cotidiana.\n\n## Instrucciones extraídas de la guía\n\n1. Organizar las actividades y el tiempo considerando la fecha de asignación y la fecha límite.\n2. Investigar en varias fuentes confiables las aplicaciones del álgebra lineal; revisar al menos tres fuentes escritas.\n3. Escribir el nombre del tema en el círculo central de la telaraña.\n4. Colocar alrededor del círculo, sobre las líneas radiales, las áreas consideradas relevantes.\n5. Anotar aplicaciones específicas del álgebra lineal sobre las líneas curvas que asemejan una telaraña.\n6. Revisar que la información sea congruente con el pensamiento del equipo.\n7. Convertir el documento a PDF.\n8. Subir el PDF a Nexus antes de la fecha límite.\n\n## Requisitos\n\n- Investigar aplicaciones del álgebra lineal en la vida cotidiana.\n- Clasificar correctamente la información.\n- Respetar el formato de mapa cognitivo de telaraña.\n- Incluir al menos seis aplicaciones.\n- Indicar el campo de aplicación y qué se estudia desde el punto de vista del álgebra lineal.\n- Elaborar el mapa en formato digital con software de libre elección.\n- Trabajar en equipos de dos a tres personas.\n- Crear un producto original, sin copia parcial ni total de otro equipo.\n- Entregar en tiempo y forma.\n\n## Información general\n\n- Valor indicado: 10 puntos.\n- Forma de trabajo: en equipo.\n- Medio de entrega: plataforma Nexus.\n\n## Lista de cotejo de la guía (100 puntos)\n\n| Criterio | Sí cumple | Cumple parcialmente | No cumple |\n| --- | ---: | ---: | ---: |\n| Investiga aplicaciones del álgebra lineal en la vida cotidiana | 15 | 7 | 0 |\n| Clasifica correctamente la información | 10 | 5 | 0 |\n| Ubica tema central, subtemas radiales y características en líneas curvas | 5 | 3 | 0 |\n| Incluye seis aplicaciones | 20 | 10 | 0 |\n| Indica campo de aplicación y objeto de estudio algebraico | 20 | 10 | 0 |\n| Elabora digitalmente el mapa | 5 | 3 | 0 |\n| Trabaja en equipo de dos a tres personas | 12 | N/A | 0 |\n| Entrega el PDF en la plataforma indicada | 3 | N/A | 0 |\n| Presenta un mapa original | 5 | N/A | 0 |\n| Entrega en tiempo y forma | 5 | 3 | 0 |\n\n> La guía expresa un valor general de 10 puntos y una lista de cotejo que suma 100 puntos; se conservan ambos datos tal como aparecen en el anexo.\n"
+      }
+    ],
+    "alternatives": []
+  }
+]
+```
+
+## review
+
+```json
+{
+  "state": "needs_review",
+  "reviewed_at": null,
+  "reviewer_role": null,
+  "critical_gaps": [
+    "Cotejar consigna y procedencia docente; conversion local no equivale a aprobacion",
+    "Documento sin segmentar: identificar actividades, requisitos, preguntas y rubrica antes de ejecutar"
+  ],
+  "semantic_validation": "failed"
+}
+```
+
+## extensions
+
+```json
+{
+  "conversion": {
+    "version": "1.0",
+    "source_format": ".md",
+    "source_sha256": "e9f3149046144ae7cd846abc4c18af056918d326faed6c18688a4fd6f7fa1fbd",
+    "source_payload": null,
+    "source_blocks": [
+      {
+        "locator": "document",
+        "text": "# Actividad 1 — Fase 1\n\n## Título\n\nMapa cognitivo de telaraña sobre aplicaciones del álgebra lineal en la vida cotidiana.\n\n## Instrucciones extraídas de la guía\n\n1. Organizar las actividades y el tiempo considerando la fecha de asignación y la fecha límite.\n2. Investigar en varias fuentes confiables las aplicaciones del álgebra lineal; revisar al menos tres fuentes escritas.\n3. Escribir el nombre del tema en el círculo central de la telaraña.\n4. Colocar alrededor del círculo, sobre las líneas radiales, las áreas consideradas relevantes.\n5. Anotar aplicaciones específicas del álgebra lineal sobre las líneas curvas que asemejan una telaraña.\n6. Revisar que la información sea congruente con el pensamiento del equipo.\n7. Convertir el documento a PDF.\n8. Subir el PDF a Nexus antes de la fecha límite.\n\n## Requisitos\n\n- Investigar aplicaciones del álgebra lineal en la vida cotidiana.\n- Clasificar correctamente la información.\n- Respetar el formato de mapa cognitivo de telaraña.\n- Incluir al menos seis aplicaciones.\n- Indicar el campo de aplicación y qué se estudia desde el punto de vista del álgebra lineal.\n- Elaborar el mapa en formato digital con software de libre elección.\n- Trabajar en equipos de dos a tres personas.\n- Crear un producto original, sin copia parcial ni total de otro equipo.\n- Entregar en tiempo y forma.\n\n## Información general\n\n- Valor indicado: 10 puntos.\n- Forma de trabajo: en equipo.\n- Medio de entrega: plataforma Nexus.\n\n## Lista de cotejo de la guía (100 puntos)\n\n| Criterio | Sí cumple | Cumple parcialmente | No cumple |\n| --- | ---: | ---: | ---: |\n| Investiga aplicaciones del álgebra lineal en la vida cotidiana | 15 | 7 | 0 |\n| Clasifica correctamente la información | 10 | 5 | 0 |\n| Ubica tema central, subtemas radiales y características en líneas curvas | 5 | 3 | 0 |\n| Incluye seis aplicaciones | 20 | 10 | 0 |\n| Indica campo de aplicación y objeto de estudio algebraico | 20 | 10 | 0 |\n| Elabora digitalmente el mapa | 5 | 3 | 0 |\n| Trabaja en equipo de dos a tres personas | 12 | N/A | 0 |\n| Entrega el PDF en la plataforma indicada | 3 | N/A | 0 |\n| Presenta un mapa original | 5 | N/A | 0 |\n| Entrega en tiempo y forma | 5 | 3 | 0 |\n\n> La guía expresa un valor general de 10 puntos y una lista de cotejo que suma 100 puntos; se conservan ambos datos tal como aparecen en el anexo.\n"
+      }
+    ],
+    "unsegmented_document": true,
+    "period_pending": true,
+    "activity_mapping": [
+      {
+        "activity_id": "source-e9f3149046144ae7",
+        "local_number": null,
+        "source_locator": "document",
+        "source_is_summary": false
+      }
+    ]
+  }
+}
+```

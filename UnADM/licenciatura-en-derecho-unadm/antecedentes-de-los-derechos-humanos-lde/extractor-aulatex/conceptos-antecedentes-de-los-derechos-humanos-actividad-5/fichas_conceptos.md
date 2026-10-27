@@ -1,0 +1,1453 @@
+# Fichas de conceptos
+
+Las citas textuales se extrajeron de las fuentes de entrada. La búsqueda puede agrupar referencias del mismo concepto aunque estén en archivos distintos.
+
+## Ficha 01. constitución
+
+**Calidad estimada:** alta
+**Mejor similitud:** 0.3193
+**Similitud promedio:** 0.2392
+**Fuentes:** Derecho constitucional - Elisur Arteaga.pdf; Derechos humanos, teorias y doctrinas - Luis Manuel Marcano Salazar.pdf; Diccionario analitico de derechos humanos e integracion juridica.pdf; Interpretacion constitucional.pdf; Las generaciones de los derechos humanos - Ernesto Rey Cantor y coautoras.pdf; derechoshumanos--ea51a76b10.pdf
+**Ubicaciones:** Derecho constitucional - Elisur Arteaga.pdf, p. 693; Derechos humanos, teorias y doctrinas - Luis Manuel Marcano Salazar.pdf, p. 59; Diccionario analitico de derechos humanos e integracion juridica.pdf, p. 221; Interpretacion constitucional.pdf, p. 82; Las generaciones de los derechos humanos - Ernesto Rey Cantor y coautoras.pdf, p. 210; derechoshumanos--ea51a76b10.pdf, p. 59
+
+### Interpretacion constitucional.pdf — p. 82 — similitud 0.3193
+
+**Detalle de puntaje:** tfidf=0.2493; bonus=0.0700
+
+> Argumentación y Constitución
+
+### Diccionario analitico de derechos humanos e integracion juridica.pdf — p. 221 — similitud 0.2503
+
+**Detalle de puntaje:** tfidf=0.1803; bonus=0.0700
+
+> En las Constituciones se pone especial hin- capié en el deber del Estado de garantizar los servicios sanitarios (véase en Italia el art. 32, apartado 2, de la Constitución) y los ser- vicios sociales. Con respecto a estos últimos, en las Cartas fundamentales se obliga al Estado a proteger a los niños, a los jóvenes, a los ancianos (ver art.
+
+### Diccionario analitico de derechos humanos e integracion juridica.pdf — p. 221 — similitud 0.2480
+
+**Detalle de puntaje:** tfidf=0.1780; bonus=0.0700
+
+> art. 145 de la Constitución de Weimar; art. 24 Constitución de España; art.
+
+### Diccionario analitico de derechos humanos e integracion juridica.pdf — p. 221 — similitud 0.2358
+
+**Detalle de puntaje:** tfidf=0.1658; bonus=0.0700
+
+> e: art. 24 de la Constitución de Grecia; art. 115 de la Constitución de Letonia; art.
+
+### Derechos humanos, teorias y doctrinas - Luis Manuel Marcano Salazar.pdf — p. 59 — similitud 0.2258
+
+**Detalle de puntaje:** tfidf=0.1558; bonus=0.0700
+
+> Luis Manuel Marcano Salazar 2.3.5.4.1- Declaraciones del siglo XIX: • Constitución francesa, de 1848. • Constitución de Cádiz, de 1812. • Constitución de la Monarquía Española, de l 18 de junio de 1837. • Constitución Española, del 23 de mayo de 1845. • Constitución de la Monarquía Española, de 1856. • Constitución de la Nación Española, del 01 de junio de 1869. • Proyecto de Constitución Federal de la República Española, del 17 de julio de 1873. • Constitución de la Monarquía Española, de 1876.
+
+### derechoshumanos--ea51a76b10.pdf — p. 59 — similitud 0.2258
+
+**Detalle de puntaje:** tfidf=0.1558; bonus=0.0700
+
+> Luis Manuel Marcano Salazar 2.3.5.4.1- Declaraciones del siglo XIX: • Constitución francesa, de 1848. • Constitución de Cádiz, de 1812. • Constitución de la Monarquía Española, de l 18 de junio de 1837. • Constitución Española, del 23 de mayo de 1845. • Constitución de la Monarquía Española, de 1856. • Constitución de la Nación Española, del 01 de junio de 1869. • Proyecto de Constitución Federal de la República Española, del 17 de julio de 1873. • Constitución de la Monarquía Española, de 1876.
+
+### Las generaciones de los derechos humanos - Ernesto Rey Cantor y coautoras.pdf — p. 210 — similitud 0.2111
+
+**Detalle de puntaje:** tfidf=0.1411; bonus=0.0700
+
+> Ernesto Rey Cantor • Giovanna Alejandra Rey Anaya • Ángela Margarita Rey Anaya 210 Como se expuso, las trece colonias que lucharon por el reconocimiento de los derechos civiles y políticos se trans- formaron en Estados soberanos, como se expresó, cada uno con su respectiva Constitución precedida de una Declaración de Derechos, técnica conocida como “la constitucionalización de los derechos, o sea, la transformación de estos derechos, en derechos protegidos jurídicamente, es decir, en verdaderos y propios derechos positivos”404. Dichas Constituciones siguieron vigentes a la fecha de la aprobación de la gran Constitución sin derechos; ¿Qué había que hacer?
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 693 — similitud 0.1981
+
+**Detalle de puntaje:** tfidf=0.1281; bonus=0.0700
+
+> No siempre se tra- taba de miembros del ayuntamiento. En la constitución de Cádiz al representante se le denominó procurador síndico, funcionario que era parte del ayuntamiento (art. 309), era de elección popular (art.
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 02. derechos humanos
+
+**Calidad estimada:** alta
+**Mejor similitud:** 0.3387
+**Similitud promedio:** 0.3374
+**Fuentes:** Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf; Derechos humanos, teorias y doctrinas - Luis Manuel Marcano Salazar.pdf; derechoshumanos--ea51a76b10.pdf
+**Ubicaciones:** Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf, p. 4; Derechos humanos, teorias y doctrinas - Luis Manuel Marcano Salazar.pdf, p. 114; Derechos humanos, teorias y doctrinas - Luis Manuel Marcano Salazar.pdf, p. 78; Derechos humanos, teorias y doctrinas - Luis Manuel Marcano Salazar.pdf, p. 82; derechoshumanos--ea51a76b10.pdf, p. 114; derechoshumanos--ea51a76b10.pdf, p. 78; derechoshumanos--ea51a76b10.pdf, p. 82
+
+### Derechos humanos, teorias y doctrinas - Luis Manuel Marcano Salazar.pdf — p. 78 — similitud 0.3387
+
+**Detalle de puntaje:** tfidf=0.2587; bonus=0.0800
+
+> Derechos humanos. Teorías y doctrinas
+
+### Derechos humanos, teorias y doctrinas - Luis Manuel Marcano Salazar.pdf — p. 82 — similitud 0.3387
+
+**Detalle de puntaje:** tfidf=0.2587; bonus=0.0800
+
+> Derechos humanos. Teorías y doctrinas
+
+### Derechos humanos, teorias y doctrinas - Luis Manuel Marcano Salazar.pdf — p. 114 — similitud 0.3387
+
+**Detalle de puntaje:** tfidf=0.2587; bonus=0.0800
+
+> Derechos humanos. Teorías y doctrinas
+
+### derechoshumanos--ea51a76b10.pdf — p. 78 — similitud 0.3387
+
+**Detalle de puntaje:** tfidf=0.2587; bonus=0.0800
+
+> Derechos humanos. Teorías y doctrinas
+
+### derechoshumanos--ea51a76b10.pdf — p. 82 — similitud 0.3387
+
+**Detalle de puntaje:** tfidf=0.2587; bonus=0.0800
+
+> Derechos humanos. Teorías y doctrinas
+
+### derechoshumanos--ea51a76b10.pdf — p. 114 — similitud 0.3387
+
+**Detalle de puntaje:** tfidf=0.2587; bonus=0.0800
+
+> Derechos humanos. Teorías y doctrinas
+
+### Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf — p. 4 — similitud 0.3376
+
+**Detalle de puntaje:** tfidf=0.2576; bonus=0.0800
+
+> DERECHOS HUMANOS Y JUSTICIA PENAL índice de Contenidos Presentación……………………………………………………………………………………………………………………………….. 5 Abreviaturas………………………………………………………………………………………………………………………………..
+
+### Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf — p. 4 — similitud 0.3293
+
+**Detalle de puntaje:** tfidf=0.2493; bonus=0.0800
+
+> 92 1.5. Generaciones de derechos humanos ………………………………………………………………………….. 95 1.6.
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 03. constitucional
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2476
+**Similitud promedio:** 0.1944
+**Fuentes:** Derecho constitucional - Elisur Arteaga.pdf; Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf; El neoconstitucionalismo y la constitucionalizacion del derecho - Luis Roberto Barroso.pdf; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt
+**Ubicaciones:** Derecho constitucional - Elisur Arteaga.pdf, p. 21; Derecho constitucional - Elisur Arteaga.pdf, p. 8; Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf, p. 169; Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf, p. 172; Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf, p. 187; Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf, p. 188; El neoconstitucionalismo y la constitucionalizacion del derecho - Luis Roberto Barroso.pdf, p. 17; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt, bloque 135
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 8 — similitud 0.2476
+
+**Detalle de puntaje:** tfidf=0.1776; bonus=0.0700
+
+> vi Derecho constitucional
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 21 — similitud 0.2057
+
+**Detalle de puntaje:** tfidf=0.1357; bonus=0.0700
+
+> libroPrimero eoríaT eoría constitucional y política 1. Teoría constitucional El título de teoría constitucional comprende, entre otros temas, qué es una constitución, cuáles son sus elementos, qué es la sobera- nía, cuál es su función en el derecho constitucional moderno, las for- mas de estado, la supremacía constitucional, la jerarquía de las leyes y la división de poderes.
+
+### El neoconstitucionalismo y la constitucionalizacion del derecho - Luis Roberto Barroso.pdf — p. 17 — similitud 0.1887
+
+**Detalle de puntaje:** tfidf=0.1187; bonus=0.0700
+
+> CAPÍTULO PRIMERO EL NEOCONSTITUCIONALISMO Y LAS TRANSFORMACIONES DEL DERECHO CONSTITUCIONAL CONTEMPORÁNEO I. Marco histórico . . . . . . . . . . . . . . . . . . . .
+
+### Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf — p. 172 — similitud 0.1862
+
+**Detalle de puntaje:** tfidf=0.1162; bonus=0.0700
+
+> El artículo 48 de la Constitución Política, conforme a la reforma supra- citada introducida en 1989, establece que puede reclamarse a través de un recurso de amparo la violación de (…) los instrumentos internacionales sobre derechos humanos, aplicables en la República (…) (el subrayado no es del origi- nal). El artículo 1 de la Ley de la Jurisdicción Constitucional establece entre el objeto de la jurisdicción constitucional, garantizar la supremacía y uniforme 43 Mora Mora, Hernández (1996, pp. 74-78).
+
+### Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf — p. 169 — similitud 0.1852
+
+**Detalle de puntaje:** tfidf=0.1152; bonus=0.0700
+
+> DERECHOS HUMANOS Y JUSTICIA PENAL (…) tienen, no solo el rango superior a la ley ordinaria que les confiere el artículo 7 de la Constitución, sino también un amparo constitucional directo que prácticamente los equipara a los consagrados expresamente por la propia Carta Fundamental, al tenor del artículo 48 de la misma. Esto lo dedujo la Sala Constitucional de la reforma al artículo 48 de la Constitución Política, introducida por Ley 7128 del 18 de agosto de 1989, en cuanto estableció la posibilidad de que a través de un recurso de amparo se reclame la violación de los instrumentos internacionales sobre derechos humanos, aplicables en la república.
+
+### Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf — p. 188 — similitud 0.1821
+
+**Detalle de puntaje:** tfidf=0.1121; bonus=0.0700
+
+> En resumen, pues, los jueces del orden común, en el sistema de justicia constitucional costarricense actual, no pueden desaplicar para el caso concreto nin- gún acto o norma que estimen inconstitucional, pues si al momento de decidir, y por tanto de aplicar una norma cualquiera, llegaren a cuestio- narse su constitucionalidad, deberán formular la consulta motivada ante la Sala Constitucional. Excepto, como se dijo, que existan precedentes o jurisprudencia que enmarquen el caso bajo examen en los términos, supuestos y criterios con que actuó la Sala Constitucional en aquellos, pues entonces allí encuentra el juez del orden común un margen de decisión vinculante.
+
+### Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf — p. 187 — similitud 0.1810
+
+**Detalle de puntaje:** tfidf=0.1110; bonus=0.0700
+
+> Esto es así, además, por virtud de que el artículo 13 de la Ley de la Jurisdicción Constitucional establece que ‘la jurisprudencia y los precedentes de la jurisdicción constitucional son vinculantes erga omnes’, dado que ofrecen la forma en que los actos sujetos al derecho público y la normativa en general, pueden entenderse conforme con el Derecho de la Constitución. Además, esta misma norma, en principio, se aplica a la propia Sala Constitucional, por virtud de lo dispuesto en el artículo 9 de la Ley de la Jurisdicción Constitucional, ya para inadmitir o para resolver por el fondo cualquier acción o gestión ante ella intentada, 186 -
+
+### Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt — bloque 135 — similitud 0.1790
+
+**Detalle de puntaje:** tfidf=0.1090; bonus=0.0700
+
+> La Ley orgánica constitucional definió lo que debe entenderse por “suspensión” y “restricción” del ejercicio de un derecho. Al efecto pun- tualiza, con una terminología inapropiada: Entiéndase que se suspende una garantía constitucional cuando temporal- mente se impide del todo su ejercicio durante la vigencia de un estado de excepción constitucional.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 04. protección
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2251
+**Similitud promedio:** 0.1851
+**Fuentes:** Curso de derechos humanos - Ana Maria Ibarra Olguin.pdf; Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf; Diccionario analitico de derechos humanos e integracion juridica.pdf; Garantias constitucionales - Roberto Carlos Fonseca Lujan.pdf; Sobre la dignidad y los principios - M. Casado.pdf; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt
+**Ubicaciones:** Curso de derechos humanos - Ana Maria Ibarra Olguin.pdf, p. 806; Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf, p. 125; Diccionario analitico de derechos humanos e integracion juridica.pdf, p. 560; Diccionario analitico de derechos humanos e integracion juridica.pdf, p. 566; Garantias constitucionales - Roberto Carlos Fonseca Lujan.pdf, p. 121; Sobre la dignidad y los principios - M. Casado.pdf, p. 306; Sobre la dignidad y los principios - M. Casado.pdf, p. 421; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt, bloque 61
+
+### Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf — p. 125 — similitud 0.2251
+
+**Detalle de puntaje:** tfidf=0.1551; bonus=0.0700
+
+> DERECHOS HUMANOS Y JUSTICIA PENAL 1.9. Universalismo y regionalismo de los sistemas de protección de los derechos humanos Debe anotarse que actualmente el sistema de protección de los dere- chos humanos es dual, puesto que, por un lado, existen los instrumentos internacionales de protección de los derechos humanos aprobados en el marco de la ONU; o sea, en un contexto universal, lo mismo que los órganos de protección de los derechos humanos propios de la ONU, tales como el Comité de Derechos Humanos y la Comisión de Derechos Humanos.
+
+### Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt — bloque 61 — similitud 0.1873
+
+**Detalle de puntaje:** tfidf=0.1173; bonus=0.0700
+
+> El sistema interamericano de protección de los derechos humanos El sistema americano de protección de los derechos humanos se en- cuentra en el marco de la Organización de Estados Americanos, cuya 128 HUMBERTO NOGUEIRA ALCALÁ
+
+### Curso de derechos humanos - Ana Maria Ibarra Olguin.pdf — p. 806 — similitud 0.1816
+
+**Detalle de puntaje:** tfidf=0.1116; bonus=0.0700
+
+> no sólo sería contrario a dicho principio modificar el régimen de protección ambien- tal decretado originalmente y establecer uno nuevo que implique menos protección al entorno natural, sino que —dentro del régimen originalmente establecido— tampoco podría disminuirse el área geográfica de protección o los servicios ambientales, ni mo- dificarse el uso de suelo controlado por las autoridades ambientales o permitirse el otor- gamiento de licencias para actividades incompatibles con los objetivos de conservación, pues todo lo anterior se traduciría en una disminución del nivel de protección medioam- biental y, consecuentemente, en vulneración a la prohibición de no regresión.115 Principio...
+
+### Garantias constitucionales - Roberto Carlos Fonseca Lujan.pdf — p. 121 — similitud 0.1814
+
+**Detalle de puntaje:** tfidf=0.1114; bonus=0.0700
+
+> En términos afines, el PACADESC (Tmx 324963) establece en su artículo 15.1 la protección de la familia, adicionando que el Estado “deberá velar por el mejo­ ramiento de su situación moral y material”. Una protección similar se prevé en el PIDCP (Tmx 323994) en su artículo 23, y en el PIDESC (Tmx 1158561) en su artículo 10.1, según el cual la “más amplia protección y asistencia posibles” para la familia, ha de darse “especialmente para su constitución y mientras sea responsable del cuidado y la educación de los hijos”.
+
+### Diccionario analitico de derechos humanos e integracion juridica.pdf — p. 560 — similitud 0.1788
+
+**Detalle de puntaje:** tfidf=0.1088; bonus=0.0700
+
+> En esta época, esta decisión se debe a la falta de protección de los derechos fundamentales en el ordenamiento jurídico supranacional. Transcurrido doce años des- pués, en 1988, el TCF constata en la deci- sión Solange II que la protección de los de- rechos fundamentales ha sido desarrollada por la jurisprudencia del Tribunal de Justicia bajo la forma de los principios generales del Derecho comunitario (12).
+
+### Sobre la dignidad y los principios - M. Casado.pdf — p. 421 — similitud 0.1766
+
+**Detalle de puntaje:** tfidf=0.1066; bonus=0.0700
+
+> Artículo 17. Protección del medio ambiente, la biosfera y la biodiversidad 6. PAPEL DE LOS SERES HUMANOS EN LA PROTECCIÓN AMBIENTAL:  SOBRE EL LUGAR DEL SER HUMANO EN EL COSMOS Aunque conservacionismo es un término general (sinónimo entonces de pro- teccionismo en el sentido más amplio de movimiento de protección de la natura- leza), en el mundo anglosajón adquirió históricamente un sentido algo más estrecho, dentro de la oposición conservacionista/preservacionista.
+
+### Diccionario analitico de derechos humanos e integracion juridica.pdf — p. 566 — similitud 0.1756
+
+**Detalle de puntaje:** tfidf=0.1056; bonus=0.0700
+
+> 565 Protección del Medio Ambiente funcional de la protección del individuo exi- ge que se limite la intervención del legislador para restringir los derechos. En consecuencia, el núcleo intangible del contenido esencial de los derechos fundamentales y el principio de proporcionalidad debe ser estrictamente ob- servado para garantizar la eficacia funcional de la protección del individuo.
+
+### Sobre la dignidad y los principios - M. Casado.pdf — p. 306 — similitud 0.1744
+
+**Detalle de puntaje:** tfidf=0.1044; bonus=0.0700
+
+> La mayor protección de los datos genéticos se justifica por la especial natura- leza de la información genética de la que se deriva que la infracción del derecho a la «intimidad genética» no sólo lesiona el derecho a la intimidad del titular de los datos sino también el derecho a la intimidad de terceros. Es por ello que, si bien en relación con cualquier otro dato que afecte a la intimidad, en principio, su titular puede disponer libremente respecto de la información genética no pueda afirmarse lo mismo.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 05. principios
+
+**Calidad estimada:** alta
+**Mejor similitud:** 0.5057
+**Similitud promedio:** 0.2546
+**Fuentes:** Garantias constitucionales del proceso.pdf; Interpretacion constitucional.pdf; Principio pro persona - Ximena Medellin Urquiaga.pdf; Sobre la dignidad y los principios - M. Casado.pdf
+**Ubicaciones:** Garantias constitucionales del proceso.pdf, p. 98; Interpretacion constitucional.pdf, p. 173; Interpretacion constitucional.pdf, p. 97; Principio pro persona - Ximena Medellin Urquiaga.pdf, p. 73; Sobre la dignidad y los principios - M. Casado.pdf, p. 429; Sobre la dignidad y los principios - M. Casado.pdf, p. 529; Sobre la dignidad y los principios - M. Casado.pdf, p. 568; Sobre la dignidad y los principios - M. Casado.pdf, p. 586
+
+### Sobre la dignidad y los principios - M. Casado.pdf — p. 586 — similitud 0.5057
+
+**Detalle de puntaje:** tfidf=0.4357; bonus=0.0700
+
+> Sobre la dignidad y los principios
+
+### Interpretacion constitucional.pdf — p. 97 — similitud 0.2530
+
+**Detalle de puntaje:** tfidf=0.1830; bonus=0.0700
+
+> Interpretación Constitucional forma, los jueces, y en particular los jueces constitucionales, no sólo aplican reglas, sino también principios. Tienen que recurrir a principios, básicamente, cuando no existe una regla aplicable a la situación, o cuando sí que existe una regla, pero ella es incompatible con los valores y principios del sistema; en estos últimos supuestos, la pretensión de la regla de servir como razón concluyente y excluyente falla, porque el aspecto directivo de la misma se separa del justificativo.
+
+### Interpretacion constitucional.pdf — p. 173 — similitud 0.2262
+
+**Detalle de puntaje:** tfidf=0.1562; bonus=0.0700
+
+> Interpretación Constitucional doble articulación de los principios (en directrices y principios en sentido estricto) es preferible al modelo uniformizador alexiano pero, en realidad, las dos posturas, la de Alexy y la nuestra, son bastante similares a efectos prácticos.
+
+### Principio pro persona - Ximena Medellin Urquiaga.pdf — p. 73 — similitud 0.2241
+
+**Detalle de puntaje:** tfidf=0.1541; bonus=0.0700
+
+> Cuando dos principios entran en colisión […] uno de los dos principios tiene que ceder ante el otro. Sin embargo, esto no significa declarar inválido al principio desplazado ni que en el principio desplazado haya que introducir una cláusula de excepción.
+
+### Sobre la dignidad y los principios - M. Casado.pdf — p. 529 — similitud 0.2110
+
+**Detalle de puntaje:** tfidf=0.1410; bonus=0.0700
+
+> Artículo 26. Interrelación y complementariedad de los principios La presente Declaración debe entenderse como un todo y los principios deben entenderse como complementarios y relacionados unos con otros. Cada principio debe considerarse en el contexto de los demás principios, según proceda y corresponda a las circunstancias.
+
+### Garantias constitucionales del proceso.pdf — p. 98 — similitud 0.2074
+
+**Detalle de puntaje:** tfidf=0.1374; bonus=0.0700
+
+> Son los  principios inspiradores de nuestro derecho positivo a los que se refería  Demófilo de Buen; los principios rectores de un sistema jurídico determi-  nado, que indicaba Raúl Ortiz Urquidi. 2.
+
+### Sobre la dignidad y los principios - M. Casado.pdf — p. 429 — similitud 0.2050
+
+**Detalle de puntaje:** tfidf=0.1350; bonus=0.0700
+
+> ALBERT ROYES Secretario de la Comisión de Bioética de la Universitat de Barcelona y de la Asociación de Bioética y Derecho 1. PRINCIPIOS Y APLICACIÓN DE LOS PRINCIPIOS Este artículo 18 abre la parte de la Declaración que, bajo la rúbrica general de «aplicación de los principios», describe qué deberían hacer los estados miem- bros de la UNESCO para aplicar en su contexto propio los principios enumera- dos en los artículos anteriores, así como los aspectos de procedimiento que con- viene seguir, de acuerdo con las directrices de la Declaración, para la adopción de decisiones en el ámbito de la bioética.
+
+### Sobre la dignidad y los principios - M. Casado.pdf — p. 568 — similitud 0.2048
+
+**Detalle de puntaje:** tfidf=0.1348; bonus=0.0700
+
+> Sobre la dignidad y los principios países concretos. Efectivamente, la naturaleza universal del documento y la espe- cificidad de su contenido (con una gran disparidad legislativa en algunos países del mundo o simplemente una total ausencia de regulación en otros lugares) hacían muy difícil su articulación a través de un catálogo formal de derechos fun- damentales.
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 06. internacional
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2491
+**Similitud promedio:** 0.2271
+**Fuentes:** Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf; Derechos humanos, teorias y doctrinas - Luis Manuel Marcano Salazar.pdf; Los derechos humanos en Mexico - Emilio Alvarez Icaza Longoria.pdf; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.pdf; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt; derechoshumanos--ea51a76b10.pdf
+**Ubicaciones:** Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf, p. 22; Derechos humanos, teorias y doctrinas - Luis Manuel Marcano Salazar.pdf, p. 108; Los derechos humanos en Mexico - Emilio Alvarez Icaza Longoria.pdf, p. 26; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.pdf, p. 342; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.pdf, p. 359; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.pdf, p. 360; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt, bloque 164; derechoshumanos--ea51a76b10.pdf, p. 108
+
+### Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.pdf — p. 342 — similitud 0.2491
+
+**Detalle de puntaje:** tfidf=0.1791; bonus=0.0700
+
+> Verdross autocalifica a su doctrina de monismo moderado, ya que la primacía del derecho internacional que sostiene no produce la nulidad de las leyes internas de un Estado opuesto a él, pero ante el derecho inter- nacional tienen la consideración de meros hechos, que pueden ser con- formes o contrarios al derecho internacional, y, en el caso de que sean contrarios a este último, dan lugar a una responsabilidad del Estado que las estableció.312 Para Kunz, la unidad entre el derecho internacional y el derecho in- terno no elimina la posibilidad de contradicciones, sino que ella implica la posibilidad de superar el conflicto por normas superiores. “En el de- recho internacional general vigente...
+
+### Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf — p. 22 — similitud 0.2391
+
+**Detalle de puntaje:** tfidf=0.1691; bonus=0.0700
+
+> Se señaló que el derecho internacional de los derechos humanos es de- recho positivo y no derecho natural. Se trata de una rama del derecho inter- nacional que ha surgido especialmente a partir del término de la Segunda Guerra Mundial.
+
+### Derechos humanos, teorias y doctrinas - Luis Manuel Marcano Salazar.pdf — p. 108 — similitud 0.2282
+
+**Detalle de puntaje:** tfidf=0.1582; bonus=0.0700
+
+> También se puede apreciar la influencia de del ius naturalismo en la admisión positiva Latinoamericana del Derecho Internacional, así se tiene que las bases del sistema jurídico está en el hecho de que el ser humano es, ante todo, un ser racional y social, de allí que este enfoque extrapolado a la sociedad internacional que está constituida por seres humanos, también tiende hacia la racionalidad y que los mismos actores establecen ciertas normas para la vida social internacional; así lo expone Toro Jiménez (2004), “La fundamentación del Derecho Internacional Público, como Derecho Positivo, en el Derecho Natural, reside en el mandato, originario de este último, de que los sujetos del Derecho...
+
+### derechoshumanos--ea51a76b10.pdf — p. 108 — similitud 0.2282
+
+**Detalle de puntaje:** tfidf=0.1582; bonus=0.0700
+
+> También se puede apreciar la influencia de del ius naturalismo en la admisión positiva Latinoamericana del Derecho Internacional, así se tiene que las bases del sistema jurídico está en el hecho de que el ser humano es, ante todo, un ser racional y social, de allí que este enfoque extrapolado a la sociedad internacional que está constituida por seres humanos, también tiende hacia la racionalidad y que los mismos actores establecen ciertas normas para la vida social internacional; así lo expone Toro Jiménez (2004), “La fundamentación del Derecho Internacional Público, como Derecho Positivo, en el Derecho Natural, reside en el mandato, originario de este último, de que los sujetos del Derecho...
+
+### Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt — bloque 164 — similitud 0.2213
+
+**Detalle de puntaje:** tfidf=0.1513; bonus=0.0700
+
+> perativas de derecho internacional general (ius cogens), que constituyen límites a la soberanía estatal, las cuales han sido definidas positivamente como aceptadas y reconocidas “por la comunidad internacional de Esta- dos en su conjunto como norma que no admite acuerdo en contrario y que sólo puede ser modificada por otra ulterior de derecho internacional general que tenga el mismo valor”.322 Por otra parte, la afirmación de la dignidad de la persona y sus dere- chos fundamentales en el derecho internacional positivo contemporáneo constituye desde la perspectiva jurídica, una transformación profunda del derecho internacional ya que implica reconocer en el plano de los estados que junto al...
+
+### Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.pdf — p. 359 — similitud 0.2184
+
+**Detalle de puntaje:** tfidf=0.1484; bonus=0.0700
+
+> 342 HUMBERTO NOGUEIRA ALCALÁ perativas de derecho internacional general (ius cogens), que constituyen límites a la soberanía estatal, las cuales han sido definidas positivamente como aceptadas y reconocidas “por la comunidad internacional de Esta- dos en su conjunto como norma que no admite acuerdo en contrario y que sólo puede ser modificada por otra ulterior de derecho internacional general que tenga el mismo valor”.322 Por otra parte, la afirmación de la dignidad de la persona y sus dere- chos fundamentales en el derecho internacional positivo contemporáneo constituye desde la perspectiva jurídica, una transformación profunda del derecho internacional ya que implica reconocer en el plano...
+
+### Los derechos humanos en Mexico - Emilio Alvarez Icaza Longoria.pdf — p. 26 — similitud 0.2168
+
+**Detalle de puntaje:** tfidf=0.1468; bonus=0.0700
+
+> Por un lado, se ana- lizan los sistemas internacional y regionales, así como los principales instrumentos de defensa y protección de los derechos humanos en cada uno de ellos. Por otro, se presenta la historia, características y funcionamiento del sistema Ombudsman, y se aborda el trabajo que realizan algunas osc para la defensa de los derechos humanos a nivel internacional.
+
+### Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.pdf — p. 360 — similitud 0.2161
+
+**Detalle de puntaje:** tfidf=0.1461; bonus=0.0700
+
+> Esta perspectiva ha implicado una profunda transformación de la dog- mática del derecho constitucional y del derecho internacional público en las últimas décadas: el principio clásico de no intervención que consiste en la prohibición de intervenir en los asuntos de la exclusiva jurisdicción doméstica de otros estados, se relativiza por la posibilidad de interven- ción colectiva de la comunidad internacional organizada, además de ser el propio derecho internacional el que define cuales son las materias que quedan fuera de la exclusividad de la potestad estatal; las cortes interna- cionales, principalmente la Corte Internacional de Justicia de La Haya, ha impuesto progresivamente a los...
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 07. presidente
+
+**Calidad estimada:** alta
+**Mejor similitud:** 0.3335
+**Similitud promedio:** 0.2548
+**Fuentes:** Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf; Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf; Constitucion Politica de los Estados Unidos Mexicanos comentada - Eduardo Andrade Sanchez.pdf; Derecho constitucional - Elisur Arteaga.pdf; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.pdf; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt
+**Ubicaciones:** Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf, p. 87; Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf, p. 89; Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf, p. 87; Constitucion Politica de los Estados Unidos Mexicanos comentada - Eduardo Andrade Sanchez.pdf, p. 254; Derecho constitucional - Elisur Arteaga.pdf, p. 470; Derecho constitucional - Elisur Arteaga.pdf, p. 9; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.pdf, p. 293; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt, bloque 132
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 9 — similitud 0.3335
+
+**Detalle de puntaje:** tfidf=0.2635; bonus=0.0700
+
+> 421  8.10 No reelección . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 423  8.11 Requisitos para ser presidente de la república. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 423  8.12 Suplencia del presidente. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 470 — similitud 0.2680
+
+**Detalle de puntaje:** tfidf=0.1980; bonus=0.0700
+
+> Para el caso de que falte, en forma absoluta, el presidente de la república al comenzar el periodo constitucional de seis años, debe asumir el cargo el presidente de la cámara de senadores, mientras el congreso designa al presidente interino. En este caso, por no existir norma que establezca una salvedad, la cámara de senadores, al designar a su presidente, debe elegir a alguien que reúna los requisitos que para ser presidente de la república exige el art.
+
+### Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.pdf — p. 293 — similitud 0.2643
+
+**Detalle de puntaje:** tfidf=0.1943; bonus=0.0700
+
+> De esta manera, en relación a la Carta de 1925, el presidente de la República tiene un control inter órgano que limita su poder en la materia, ya que la denegación del acuerdo del Consejo de Seguridad Nacional, impide al presidente el establecimiento del respectivo Estado de excep- ción constitucional.
+
+### Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt — bloque 132 — similitud 0.2521
+
+**Detalle de puntaje:** tfidf=0.1821; bonus=0.0700
+
+> En los casos del Estado de Asamblea, de emergencia y de Catástrofe, el presidente de la República sólo puede establecerlos con el acuerdo del Consejo de Seguridad Nacional.280 De esta manera, en relación a la Carta de 1925, el presidente de la República tiene un control inter órgano que limita su poder en la materia, ya que la denegación del acuerdo del Consejo de Seguridad Nacional, impide al presidente el establecimiento del respectivo Estado de excep- ción constitucional.
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf — p. 87 — similitud 0.2328
+
+**Detalle de puntaje:** tfidf=0.1628; bonus=0.0700
+
+> Se deposita el ejercicio del Supremo Poder Ejecutivo de la Unión en un solo individuo, que se denominará “Presidente de los Estados Unidos Mexicanos.” Artículo original DOF 05-02-1917 Artículo 81. La elección del presidente será directa y en los términos que disponga la ley electoral.
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf — p. 87 — similitud 0.2302
+
+**Detalle de puntaje:** tfidf=0.1602; bonus=0.0700
+
+> Se deposita el ejercicio del Supremo Poder Ejecutivo de la Unión en un solo individuo, que se denominará “Presidente de los Estados Unidos Mexicanos.” Artículo original DOF 05-02-1917 Artículo 81. La elección del presidente será directa y en los términos que disponga la ley electoral.
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf — p. 89 — similitud 0.2300
+
+**Detalle de puntaje:** tfidf=0.1600; bonus=0.0700
+
+> Si antes de iniciar un periodo constitucional la elección no estuviese hecha o declarada válida, cesará el Presidente cuyo periodo haya concluido y será presidente interino el que haya designado el Congreso, en los términos del artículo anterior. Párrafo reformado DOF 13-11-2007, 09-08-2012 Si al comenzar el periodo constitucional hubiese falta absoluta del Presidente de la República, asumirá provisionalmente el cargo el Presidente de la Cámara de Senadores, en tanto el Congreso designa al presidente interino, conforme al artículo anterior.
+
+### Constitucion Politica de los Estados Unidos Mexicanos comentada - Eduardo Andrade Sanchez.pdf — p. 254 — similitud 0.2274
+
+**Detalle de puntaje:** tfidf=0.1574; bonus=0.0700
+
+> a) Si el Congreso se encuentra en sesiones, designará un presidente sustituto que deberá concluir el periodo. Las reglas de elección son las mismas previstas para nombrar al presidente interino. b) Si el Congreso no estuviere en sesiones, la Comisión Permanente deberá convocar al Congreso de la Unión a sesiones extraordinarias para que se erija en Colegio Electoral y haga la elección del presi- dente sustituto.
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 08. declaración
+
+**Calidad estimada:** alta
+**Mejor similitud:** 0.3611
+**Similitud promedio:** 0.2659
+**Fuentes:** Curso de derechos humanos - Ana Maria Ibarra Olguin.pdf; Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf; Derechos humanos, teorias y doctrinas - Luis Manuel Marcano Salazar.pdf; Sobre la dignidad y los principios - M. Casado.pdf; derechoshumanos--ea51a76b10.pdf
+**Ubicaciones:** Curso de derechos humanos - Ana Maria Ibarra Olguin.pdf, p. 826; Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf, p. 196; Derechos humanos, teorias y doctrinas - Luis Manuel Marcano Salazar.pdf, p. 54; Derechos humanos, teorias y doctrinas - Luis Manuel Marcano Salazar.pdf, p. 77; Sobre la dignidad y los principios - M. Casado.pdf, p. 389; Sobre la dignidad y los principios - M. Casado.pdf, p. 542; derechoshumanos--ea51a76b10.pdf, p. 54; derechoshumanos--ea51a76b10.pdf, p. 77
+
+### Derechos humanos, teorias y doctrinas - Luis Manuel Marcano Salazar.pdf — p. 77 — similitud 0.3611
+
+**Detalle de puntaje:** tfidf=0.2911; bonus=0.0700
+
+> raza y los prejuicios raciales • Declaración sobre los derechos de las personas pertenecientes a minorías nacionales o étnicas, religiosas y lingüísticas • Declaración sobre la eliminación de la discriminación contra la mujer • Declaración sobre la protección de la mujer y el niño en estados de emergencia o de conflicto armado • Declaración de los Derechos del Niño • Declaración sobre el Progreso y el Desarrollo en lo Social • Declaración sobre el Derecho de los Pueblos a la Paz • Declaración sobre el derecho al desarrollo • Declaración sobre la Protección de Todas las Personas contra la Tortura y Otros Tratos o Penas Crueles, Inhumanos o Degradantes • Declaración sobre la protección de...
+
+### derechoshumanos--ea51a76b10.pdf — p. 77 — similitud 0.3611
+
+**Detalle de puntaje:** tfidf=0.2911; bonus=0.0700
+
+> raza y los prejuicios raciales • Declaración sobre los derechos de las personas pertenecientes a minorías nacionales o étnicas, religiosas y lingüísticas • Declaración sobre la eliminación de la discriminación contra la mujer • Declaración sobre la protección de la mujer y el niño en estados de emergencia o de conflicto armado • Declaración de los Derechos del Niño • Declaración sobre el Progreso y el Desarrollo en lo Social • Declaración sobre el Derecho de los Pueblos a la Paz • Declaración sobre el derecho al desarrollo • Declaración sobre la Protección de Todas las Personas contra la Tortura y Otros Tratos o Penas Crueles, Inhumanos o Degradantes • Declaración sobre la protección de...
+
+### Sobre la dignidad y los principios - M. Casado.pdf — p. 389 — similitud 0.2495
+
+**Detalle de puntaje:** tfidf=0.1795; bonus=0.0700
+
+> Estas preocupaciones ya habían sido tra- bajadas previamente por la UNESCO y consideradas en tres declaraciones secto- riales: la Declaración Universal sobre el Genoma Humano y los Derechos Humanos, la Declaración sobre las Responsabilidades de las Generaciones Actuales para con las Generaciones Futuras (ambas de 1997) y la Declaración Internacional sobre Datos Genéticos Humanos (2003). Tanto la primera como la tercera Declaración buscaron hacer recomendaciones de acuerdo al grado de desarrollo de la práctica científico- tecnológica de entonces, que hoy se ve superada y llamada a nuevos desafíos con sus consiguientes implicaciones bioéticas.
+
+### Sobre la dignidad y los principios - M. Casado.pdf — p. 542 — similitud 0.2345
+
+**Detalle de puntaje:** tfidf=0.1645; bonus=0.0700
+
+> Dignidad frente a barbarie. La Declaración Universal de Derechos humanos,  cincuenta años después, Trotta, Madrid, 1999. La cursiva es del propio autor (pg.
+
+### Curso de derechos humanos - Ana Maria Ibarra Olguin.pdf — p. 826 — similitud 0.2341
+
+**Detalle de puntaje:** tfidf=0.1641; bonus=0.0700
+
+> Convención Marco de las Naciones Unidas sobre el Cambio Climático. Declaración de Brasilia de Jueces sobre Justicia del Agua (Declaración de Brasilia). Declaración de las Naciones Unidas sobre el Medio Ambiente Humano (Declaración de Estocolmo).
+
+### Derechos humanos, teorias y doctrinas - Luis Manuel Marcano Salazar.pdf — p. 54 — similitud 0.2300
+
+**Detalle de puntaje:** tfidf=0.1600; bonus=0.0700
+
+> Teorías y doctrinas redactada por el agricultor y abogado George Mason y sirvió de modelo para la Declaración de Derechos de otros Estados; de la posterior Declaración de Derechos Federal de 1791 y de la Declaración adoptada por la Francia revolucionaria de 1789; la Declaración de los derechos del Hombre y del Ciudadano. • La Constitución Americana, escrita en Filadelfia en 1787, en sus siete concisos artículo establece una serie de garantías, como la garantía para la libertad personal apoyado por el hábeas corpus, la seguridad de ser juzgado mediante un juicio con jurado y la prohibición de los mandamientos de confiscación y leyes ex post facto. • La Declaración de Derechos aprobada en...
+
+### derechoshumanos--ea51a76b10.pdf — p. 54 — similitud 0.2300
+
+**Detalle de puntaje:** tfidf=0.1600; bonus=0.0700
+
+> Teorías y doctrinas redactada por el agricultor y abogado George Mason y sirvió de modelo para la Declaración de Derechos de otros Estados; de la posterior Declaración de Derechos Federal de 1791 y de la Declaración adoptada por la Francia revolucionaria de 1789; la Declaración de los derechos del Hombre y del Ciudadano. • La Constitución Americana, escrita en Filadelfia en 1787, en sus siete concisos artículo establece una serie de garantías, como la garantía para la libertad personal apoyado por el hábeas corpus, la seguridad de ser juzgado mediante un juicio con jurado y la prohibición de los mandamientos de confiscación y leyes ex post facto. • La Declaración de Derechos aprobada en...
+
+### Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf — p. 196 — similitud 0.2267
+
+**Detalle de puntaje:** tfidf=0.1567; bonus=0.0700
+
+> Al igual que otros derechos humanos, el derecho al desarrollo contiene atribuciones específicas, como el derecho “a participar en un desarrollo económico, social, cultural y político (…), a contribuir a ese desarrollo y a disfrutar de él”. La Declaración establece los elementos de este derecho y los medios para realizarlo. Los principios fundamentales son los siguientes: • Un desarrollo centrado en las personas: la Declaración identifica a “la persona humana” como el sujeto central, el participante y el beneficiario del desarrollo (art.
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 09. fundamentales
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2339
+**Similitud promedio:** 0.2051
+**Fuentes:** Curso de derechos humanos - Ana Maria Ibarra Olguin.pdf; Epistemologia juridica y garantismo - Luigi Ferrajoli.pdf; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.pdf; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt
+**Ubicaciones:** Curso de derechos humanos - Ana Maria Ibarra Olguin.pdf, p. 622; Epistemologia juridica y garantismo - Luigi Ferrajoli.pdf, p. 275; Epistemologia juridica y garantismo - Luigi Ferrajoli.pdf, p. 278; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.pdf, p. 181; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.pdf, p. 20; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt, bloque 2; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt, bloque 30; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt, bloque 49
+
+### Epistemologia juridica y garantismo - Luigi Ferrajoli.pdf — p. 275 — similitud 0.2339
+
+**Detalle de puntaje:** tfidf=0.1639; bonus=0.0700
+
+> DERECHOS FUNDAMENTALES y CRíTICA DEL DERECHO’ 1. CUATRO SIGNIFICADOS DEL “FUNDAMENTO”  DE LOS DERECHOS FUNDAMENTALES El problema del fundamento de los derechos fundamentales, quizá más que cualquier otro problema teórico, ofrece la posi- bilidad de establecer una clara distinción entre Jos diversos tipos de discurso en los que se puede articular la reflexión so- bre el derecho.
+
+### Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt — bloque 30 — similitud 0.2170
+
+**Detalle de puntaje:** tfidf=0.1470; bonus=0.0700
+
+> LOS DERECHOS FUNDAMENTALES  O DERECHOS CONSTITUCIONALES El concepto de derechos fundamentales o derechos constitucionales se reserva generalmente a los derechos de la persona, que se encuentran reconocidos por el ordenamiento jurídico de un Estado en la carta fun- damental, aunque autores como Peces-Barba asumen que la expresión “derechos fundamentales” comprende tanto los presupuestos éticos como los componentes jurídicos.130 Por regla general, se entiende por derechos fundamentales, como seala Hernández Valle, el “conjunto de derechos y libertades jurídicas e institucionalmente reconocidos y garantizados por el derecho positivo”.131 En todo caso, los conceptos de derechos humanos...
+
+### Curso de derechos humanos - Ana Maria Ibarra Olguin.pdf — p. 622 — similitud 0.2141
+
+**Detalle de puntaje:** tfidf=0.1441; bonus=0.0700
+
+> 4.  De intereses fundamentales a derechos fundamentales: justificación y peso Desde una perspectiva estrictamente dogmática, la identificación de estos inte- reses fundamentales es una etapa indispensable, aunque insuficiente, para afirmar que niñas, niños y adolescentes son titulares de derechos fundamentales. Si bien resulta relativamente intuitivo sostener que niñas, niños y adolescentes tienen una serie de intereses fundamentales, no seimpre resulta claro que, de tales intereses, se deriven (necesariamente) derechos fundamentales.
+
+### Epistemologia juridica y garantismo - Luigi Ferrajoli.pdf — p. 278 — similitud 0.2043
+
+**Detalle de puntaje:** tfidf=0.1343; bonus=0.0700
+
+> 1.4. Por último, en un cUaJ10 significado, el “fundamento de los derechos fundamentales” designa la razón o el fundamento teórico de la noción de “derechos fundamentales”, es decir. el fundamento de la definición del concepto de derechos fundamen- tales. que es la respuesta a la pregunta “¿qué son los derechos fundamentales?”, dada por la teoría del derecho. Aunque apun- tada al final. ésta es una cuestión “prejudicial” a todas las demás.
+
+### Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt — bloque 49 — similitud 0.1951
+
+**Detalle de puntaje:** tfidf=0.1251; bonus=0.0700
+
+> Las garantías normativas Las garantías normativas de los derechos fundamentales o esenciales hacen referencia al principio de legalidad en sentido amplio, concentran- do su significado en los derechos fundamentales, regulando su desarrollo y aplicación, como su reforma.160 Las principales en nuestro ordenamien- to constitucional son: el principio de reserva legal, el respeto al contenido esencial de los derechos, la vinculación de los poderes constituidos por los derechos fundamentales; la limitación del legislador delegado, los PROTECCIÓN DE LOS DERECHOS FUNDAMENTALES 103 160 Peces-Barba, Gregorio, Curso..., op. cit., p.
+
+### Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt — bloque 2 — similitud 0.1936
+
+**Detalle de puntaje:** tfidf=0.1236; bonus=0.0700
+
+> El deber de los órganos del Estado de promover los derechos fun- damentales . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 91 La interpretación e integración del sistema constitucional de dere- chos fundamentales . . . . . . . . . . . . . . . . . . . . . . . . 93 La titularidad de los derechos fundamentales . . . . . . . . . . . .
+
+### Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.pdf — p. 20 — similitud 0.1929
+
+**Detalle de puntaje:** tfidf=0.1229; bonus=0.0700
+
+> La fundamentación de los derechos esenciales, fundamentales o hu- manos y su concepto . . . . . . . . . . . . . . . . . . . . . . . . 9 I.
+
+### Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.pdf — p. 181 — similitud 0.1897
+
+**Detalle de puntaje:** tfidf=0.1197; bonus=0.0700
+
+> LOS MODELOS DE INTERPRETACIÓN DE LOS DERECHOS FUNDAMENTALES Bockenforde distingue cinco modelos teóricos de interpretación de los derechos fundamentales: la teoría liberal, la teoría democrático-funcional; la teoría institucional; la teoría axiológica y la teoría socio-estatal. I.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 10. interpretación
+
+**Calidad estimada:** alta
+**Mejor similitud:** 0.2924
+**Similitud promedio:** 0.2643
+**Fuentes:** Derecho constitucional - Elisur Arteaga.pdf; Garantias constitucionales - Roberto Carlos Fonseca Lujan.pdf; Interpretacion constitucional.pdf; Principio pro persona - Ximena Medellin Urquiaga.pdf
+**Ubicaciones:** Derecho constitucional - Elisur Arteaga.pdf, p. 49; Garantias constitucionales - Roberto Carlos Fonseca Lujan.pdf, p. 238; Interpretacion constitucional.pdf, p. 126; Interpretacion constitucional.pdf, p. 23; Interpretacion constitucional.pdf, p. 58; Principio pro persona - Ximena Medellin Urquiaga.pdf, p. 33; Principio pro persona - Ximena Medellin Urquiaga.pdf, p. 34
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 49 — similitud 0.2924
+
+**Detalle de puntaje:** tfidf=0.2224; bonus=0.0700
+
+> 4. La interpretación constitucional 29 5. La interpretación constitucional 4.1 Introducción Los problemas medulares de la interpretación constitucional son: qué debe enten- derse por constitución, qué es la interpretación constitucional, cómo debe hacerse y quién puede llevarla a cabo.44 Lo demás, aunque importante, es secundario.
+
+### Interpretacion constitucional.pdf — p. 126 — similitud 0.2858
+
+**Detalle de puntaje:** tfidf=0.2158; bonus=0.0700
+
+> Los límites de la interpretación constitucional. De nuevo sobre los casos trágicos 1.
+
+### Interpretacion constitucional.pdf — p. 58 — similitud 0.2748
+
+**Detalle de puntaje:** tfidf=0.2048; bonus=0.0700
+
+> Hermenéutica y filosofía analítica en la interpretación del Derecho En resumidas cuentas, la concepción de la interpretación jurídica de Guastini se caracterizaría por: 1) el esfuerzo en establecer distinciones y en separar niveles distintos del lenguaje; 2) la caracterización de la interpretación como el paso de las disposiciones a las normas a través de los enunciados interpretativos; 3) el énfasis que pone en el carácter decisionista, valorativo y no cognoscitivo (o no meramente cognoscitivo) de la interpretación; 4) la pretensión de construir una teoría de la interpretación puramente conceptual y descriptiva; y 5), como consecuencia de lo anterior, el rechazo de cualquier teoría (en el...
+
+### Interpretacion constitucional.pdf — p. 23 — similitud 0.2700
+
+**Detalle de puntaje:** tfidf=0.2000; bonus=0.0700
+
+> 3.1 Si limitamos el problema de la interpretación jurídica a la interpretación de textos (lo que dejaría fuera, pero sólo parcialmente, la “interpretación” de las costumbres y de los hechos: sólo parcialmente, pues por “interpretación de la costumbre” (Guastini 1996, p. 171) se entiende también la interpretación de los documentos en los que se recogen los usos, las prácticas en cuestión; y por “interpretación de los hechos” debe entenderse también la de los documentos que constituyen pruebas), cabría ver la interpretación como una operación consistente en pasar de unos enunciados a otros, y un enunciado interpretativo como lo que permite ese paso.
+
+### Principio pro persona - Ximena Medellin Urquiaga.pdf — p. 34 — similitud 0.2552
+
+**Detalle de puntaje:** tfidf=0.1852; bonus=0.0700
+
+> Principio pro persona Cuadro 10. Criterios establecidos en jurisprudencia y doctrina internacional sobre la interpretación de normas se- cundarias Dimensiones del principio: interpretación de los derechos humanos, sus limitaciones y las obligaciones estatales Criterio Desarrollo Fuente Interpretación de los derechos humanos La interpretación de los derechos humanos siempre debe ser expansiva. Por ende, existe una presunción de máximo goce, máximo ejercicio y máxima exigibilidad de los derechos.
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 49 — similitud 0.2531
+
+**Detalle de puntaje:** tfidf=0.1831; bonus=0.0700
+
+> Bidart Campos, La interpretación y el control constitucionales en la jurisdicción constitucional, Ediar, Buenos Aires, 1987; Luis Recaséns Siches, Nueva ﬁ losofía de la interpretación del derecho, Porrúa, México, 1980; R. J.
+
+### Principio pro persona - Ximena Medellin Urquiaga.pdf — p. 33 — similitud 0.2490
+
+**Detalle de puntaje:** tfidf=0.1790; bonus=0.0700
+
+> Principio pro persona Diagrama 3. Criterios establecidos por la scjn sobre la interpretación conforme de las normas secundarias Interpretación 1: la norma no El análisis no se eleva a un tema requiere interpretación. de constitucionalidad. Interpretación 2: resulta en la constitucionalidad de la norma desde la perspectiva de la eficacia de las obligaciones impuestas a las La norma –en tanto sentido del enunciado normativo– aplicable es la que resulte del ejercicio de Enunciado normativo sujeto a interpretación interpretación 3: el que más empresas transportistas. favorezca la protección Pueden ser el fundamento de de la persona la actuación de la autoridad.
+
+### Garantias constitucionales - Roberto Carlos Fonseca Lujan.pdf — p. 238 — similitud 0.2340
+
+**Detalle de puntaje:** tfidf=0.1640; bonus=0.0700
+
+> De este modo, la garantía queda mejor entendida si se sigue un modelo que exige la justificación de la interpretación, de modo que toda decisión sobre el signi­ ficado o contenido de una norma, ha de involucrar que se haga uso justificado de alguno de los cánones de la interpretación jurídica, como son las formas de interpretación literal, teleológica, sistemática, etcétera. Esto se vuelve crucial en el sistema constitucional contemporáneo, atendiendo a que los principios de los derechos humanos previstos en el artículo 1º obligan a realizar en todo caso la interpretación conforme y pro persona de las normas relativas a dere­ chos humanos.
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 11. naturaleza
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2046
+**Similitud promedio:** 0.1665
+**Fuentes:** Como se hicieron los derechos humanos - Volumen I - Ricardo Rabinovich Berkman.pdf; Derecho constitucional - Elisur Arteaga.pdf; Derechos humanos, teorias y doctrinas - Luis Manuel Marcano Salazar.pdf; Diccionario analitico de derechos humanos e integracion juridica.pdf; Sobre la dignidad y los principios - M. Casado.pdf; derechoshumanos--ea51a76b10.pdf
+**Ubicaciones:** Como se hicieron los derechos humanos - Volumen I - Ricardo Rabinovich Berkman.pdf, p. 239; Derecho constitucional - Elisur Arteaga.pdf, p. 633; Derechos humanos, teorias y doctrinas - Luis Manuel Marcano Salazar.pdf, p. 71; Diccionario analitico de derechos humanos e integracion juridica.pdf, p. 205; Sobre la dignidad y los principios - M. Casado.pdf, p. 124; Sobre la dignidad y los principios - M. Casado.pdf, p. 416; Sobre la dignidad y los principios - M. Casado.pdf, p. 499; derechoshumanos--ea51a76b10.pdf, p. 71
+
+### Sobre la dignidad y los principios - M. Casado.pdf — p. 416 — similitud 0.2046
+
+**Detalle de puntaje:** tfidf=0.1346; bonus=0.0700
+
+> 4. Philippe DESCOLA, catedrático de Antropología de la Naturaleza en el Collège de France, seña-  la que la separación del hombre con respecto a la naturaleza se fue haciendo por etapas den-  tro de la cultura occidental. «La primera se remonta a los antiguos griegos, con la invención  de la naturaleza como physis: un objeto de investigación que no está sometido a caprichos divi-  nos, sino a leyes que vuelven previsible la naturaleza. El cristianismo marca la segunda etapa  de la trascendencia, que supone, a la vez, la exterioridad con respecto al mundo del Creador  y del hombre, puesto que Dios le ha reservado un status especial.
+
+### Diccionario analitico de derechos humanos e integracion juridica.pdf — p. 205 — similitud 0.1721
+
+**Detalle de puntaje:** tfidf=0.1021; bonus=0.0700
+
+> (14) John Locke (1632-1704) pensaba, a diferencia de  Hobbes, que el estado de naturaleza era un estado  que efectivamente los pueblos vivían en algún mo-  mento de su devenir y en el cual no existía un estado  de guerra sino que era un ámbito en donde privaba  la ley natural, una ley a la que, de modo similar al de  Hobbes, cabría identificar con la razón. Respecto de  la idea de estado de naturaleza como una cuestión  fáctica el propio Locke escribió: «Suele plantearse con  frecuencia como poderosa objeción la siguiente pre-  gunta: ¿Existen o existieron alguna vez hombres en  ese estado de naturaleza?
+
+### Sobre la dignidad y los principios - M. Casado.pdf — p. 124 — similitud 0.1662
+
+**Detalle de puntaje:** tfidf=0.0962; bonus=0.0700
+
+> La caracterización de la dignidad humana que hemos desarrollado a lo largo de este artículo nos lleva a admitir que tenemos buenas razones para suponer como correcta la afirmación de que no cabe inferir gran cosa acerca de la dignidad humana a partir de enunciados meramente lógico-for- males, filosóficos o normativos. La investigación de la dignidad está vinculada de forma estrecha a la noción de la naturaleza humana, que, a su vez, es una cues- tión tan fáctica como la medida del perihelio de Mercurio (MOSTERÍN, 2006).
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 633 — similitud 0.1618
+
+**Detalle de puntaje:** tfidf=0.0918; bonus=0.0700
+
+> Todos los actos de los particulares se presume que son legales, salvo que vayan contra lo dispuesto por una norma de naturaleza prohibitiva (art. 2º, constitución de Sonora) y que así lo declare una autoridad competente a través de las vías que señale la ley.
+
+### Como se hicieron los derechos humanos - Volumen I - Ricardo Rabinovich Berkman.pdf — p. 239 — similitud 0.1607
+
+**Detalle de puntaje:** tfidf=0.0907; bonus=0.0700
+
+> Pero el esclavo no es sólo esclavo de su amo: es suyo completamente. De allí, por cierto, es evidente la naturaleza [“jysis”] del esclavo y su cualidad: pues el ser humano que, por naturaleza, no es de sí mismo sino de otro, es esclavo por naturaleza [“fysei doulós”]” (1254.a).
+
+### Derechos humanos, teorias y doctrinas - Luis Manuel Marcano Salazar.pdf — p. 71 — similitud 0.1559
+
+**Detalle de puntaje:** tfidf=0.0859; bonus=0.0700
+
+> Sólo así se puede explicar por qué, en el momento mismo en que el reconocimiento internacional de los derechos humanos se ha convertido en una parte sustancial en el derecho positivo para hacer más eficaz el reconocimiento, no hay ninguna inclinación a desechar los derechos naturales del hombre y la ley de la naturaleza concebida como la justificación y la medida de todas las leyes hechas por el hombre. 3.1- Afrentas a la naturaleza humana que propiciaron la protección internacional de los derechos humanos
+
+### derechoshumanos--ea51a76b10.pdf — p. 71 — similitud 0.1559
+
+**Detalle de puntaje:** tfidf=0.0859; bonus=0.0700
+
+> Sólo así se puede explicar por qué, en el momento mismo en que el reconocimiento internacional de los derechos humanos se ha convertido en una parte sustancial en el derecho positivo para hacer más eficaz el reconocimiento, no hay ninguna inclinación a desechar los derechos naturales del hombre y la ley de la naturaleza concebida como la justificación y la medida de todas las leyes hechas por el hombre. 3.1- Afrentas a la naturaleza humana que propiciaron la protección internacional de los derechos humanos
+
+### Sobre la dignidad y los principios - M. Casado.pdf — p. 499 — similitud 0.1553
+
+**Detalle de puntaje:** tfidf=0.0853; bonus=0.0700
+
+> Con carácter previo y centrando nuestro interés en establecer la naturaleza jurídica internacional del texto, cabe recordar que en este comentario se parte de la «noción» de lo «jurídico» no circunscrito al carácter de «obligatorio» o «vincu- lante» y que tenga como corolario la imposición de sanciones. La noción de la que se parte es más amplia y se encuadra en el denominado «soft law»5 que se nutre de las características específicas del ordenamiento jurídico internacional, por naturaleza condicionadas por la descentralización de los centros de poder.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 12. federación
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2009
+**Similitud promedio:** 0.1884
+**Fuentes:** Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf; Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf; Constitucion Politica de los Estados Unidos Mexicanos comentada - Eduardo Andrade Sanchez.pdf; Derecho constitucional - Elisur Arteaga.pdf; Diccionario analitico de derechos humanos e integracion juridica.pdf; Garantias constitucionales del proceso.pdf
+**Ubicaciones:** Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf, p. 364; Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf, p. 365; Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf, p. 365; Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf, p. 366; Constitucion Politica de los Estados Unidos Mexicanos comentada - Eduardo Andrade Sanchez.pdf, p. 300; Derecho constitucional - Elisur Arteaga.pdf, p. 935; Diccionario analitico de derechos humanos e integracion juridica.pdf, p. 536; Garantias constitucionales del proceso.pdf, p. 215
+
+### Garantias constitucionales del proceso.pdf — p. 215 — similitud 0.2009
+
+**Detalle de puntaje:** tfidf=0.1309; bonus=0.0700
+
+> ORIGINARON”, en Semanario Judicial de la Federación y su Gaceta, t. XII, septiembre de 2000, p.
+
+### Diccionario analitico de derechos humanos e integracion juridica.pdf — p. 536 — similitud 0.1978
+
+**Detalle de puntaje:** tfidf=0.1278; bonus=0.0700
+
+> Actualmente el código fiscal de la Federación contempla un Título II, De los Derechos y Obligaciones de los Contribuyentes, que considera como derechos de los contribuyentes los siguientes: A que se le prevenga para subsanar las omi- siones de las promociones que se presentan ante la autoridad hacendaria (arts. 18 y 18-A del código fiscal de la Federación); A devolver las cantidades pagadas indebidamente y las que procedan conforme a las leyes fiscales (art.
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 935 — similitud 0.1943
+
+**Detalle de puntaje:** tfidf=0.1243; bonus=0.0700
+
+> Es cierto que en el art. 121 no se obliga a la federación a dar entera fe y crédito a los títulos profesionales expedidos por los estados y que tampoco en dicho precepto se obliga a las autoridades de los estados a dar reconocimiento a los títulos expedidos por instituciones educativas que dependen de la federación; esto no podía consignarse en el indicado artículo ni es técnicamente necesario, ya que la validez de los títulos y la obligación de reconocer dicho valor, tanto para la federación como para los es- tados, deriva del art.
+
+### Constitucion Politica de los Estados Unidos Mexicanos comentada - Eduardo Andrade Sanchez.pdf — p. 300 — similitud 0.1934
+
+**Detalle de puntaje:** tfidf=0.1234; bonus=0.0700
+
+> Corresponde al Poder Judicial de la Federación, en los términos de la ley respectiva, dirimir las controversias que, por razón de competencia, se susciten entre los Tribunales de la Federación, entre éstos y los de las entidades federativas o entre los de una entidad federativa y otra.
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf — p. 364 — similitud 0.1817
+
+**Detalle de puntaje:** tfidf=0.1117; bonus=0.0700
+
+> CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Últimas Reformas DOF 02-06-2026 DECRETO por el que se reforma el artículo 43 de la Constitución Política de los Estados Unidos Mexicanos (Michoacán de Ocampo). Publicado en el Diario Oficial de la Federación el 17 de mayo de 2021 Artículo Único. Se reforma el artículo 43 de la Constitución Política de los Estados Unidos Mexicanos, para quedar como sigue: ……..
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf — p. 365 — similitud 0.1815
+
+**Detalle de puntaje:** tfidf=0.1115; bonus=0.0700
+
+> CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Última Reforma DOF 07-10-2026 DECRETO por el que se reforma el artículo 43 de la Constitución Política de los Estados Unidos Mexicanos (Michoacán de Ocampo). Publicado en el Diario Oficial de la Federación el 17 de mayo de 2021 Artículo Único. Se reforma el artículo 43 de la Constitución Política de los Estados Unidos Mexicanos, para quedar como sigue: ……..
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf — p. 365 — similitud 0.1789
+
+**Detalle de puntaje:** tfidf=0.1089; bonus=0.0700
+
+> CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Últimas Reformas DOF 02-06-2026 DECRETO por el que se reforma el artículo 43 de la Constitución Política de los Estados Unidos Mexicanos (Veracruz de Ignacio de la Llave). Publicado en el Diario Oficial de la Federación el 17 de mayo de 2021 Artículo Único. Se reforma el artículo 43 de la Constitución Política de los Estados Unidos Mexicanos, para quedar como sigue: ……..
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf — p. 366 — similitud 0.1787
+
+**Detalle de puntaje:** tfidf=0.1087; bonus=0.0700
+
+> CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Última Reforma DOF 07-10-2026 DECRETO por el que se reforma el artículo 43 de la Constitución Política de los Estados Unidos Mexicanos (Veracruz de Ignacio de la Llave). Publicado en el Diario Oficial de la Federación el 17 de mayo de 2021 Artículo Único. Se reforma el artículo 43 de la Constitución Política de los Estados Unidos Mexicanos, para quedar como sigue: ……..
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 13. estados unidos
+
+**Calidad estimada:** alta
+**Mejor similitud:** 0.3304
+**Similitud promedio:** 0.2951
+**Fuentes:** Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf; Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf
+**Ubicaciones:** Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf, p. 230; Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf, p. 236; Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf, p. 258; Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf, p. 265; Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf, p. 231; Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf, p. 237; Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf, p. 259; Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf, p. 266
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf — p. 230 — similitud 0.3304
+
+**Detalle de puntaje:** tfidf=0.2504; bonus=0.0800
+
+> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Últimas Reformas DOF 02-06-2026 DECRETO por el que se reforman los artículos 29, 73, 90, 92, 93, 95, 110 y 111 de la Constitución Política de los Estados Unidos Mexicanos.
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf — p. 231 — similitud 0.3300
+
+**Detalle de puntaje:** tfidf=0.2500; bonus=0.0800
+
+> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Última Reforma DOF 07-10-2026 DECRETO por el que se reforman los artículos 29, 73, 90, 92, 93, 95, 110 y 111 de la Constitución Política de los Estados Unidos Mexicanos.
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf — p. 258 — similitud 0.2932
+
+**Detalle de puntaje:** tfidf=0.2132; bonus=0.0800
+
+> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Últimas Reformas DOF 02-06-2026 DECRETO por el que se reforman los artículos 71, 72 y 78 de la Constitución Política de los Estados Unidos Mexicanos.
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf — p. 259 — similitud 0.2927
+
+**Detalle de puntaje:** tfidf=0.2127; bonus=0.0800
+
+> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Última Reforma DOF 07-10-2026 DECRETO por el que se reforman los artículos 71, 72 y 78 de la Constitución Política de los Estados Unidos Mexicanos.
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf — p. 236 — similitud 0.2810
+
+**Detalle de puntaje:** tfidf=0.2010; bonus=0.0800
+
+> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Últimas Reformas DOF 02-06-2026 DECRETO que reforma, adiciona y deroga diversas disposiciones de la Constitución Política de los Estados Unidos Mexicanos.
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf — p. 237 — similitud 0.2803
+
+**Detalle de puntaje:** tfidf=0.2003; bonus=0.0800
+
+> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Última Reforma DOF 07-10-2026 DECRETO que reforma, adiciona y deroga diversas disposiciones de la Constitución Política de los Estados Unidos Mexicanos.
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf — p. 266 — similitud 0.2769
+
+**Detalle de puntaje:** tfidf=0.1969; bonus=0.0800
+
+> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Última Reforma DOF 07-10-2026 DECRETO por el que se reforman y adicionan diversas disposiciones de la Constitución Política de los Estados Unidos Mexicanos, en materia política.
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf — p. 265 — similitud 0.2767
+
+**Detalle de puntaje:** tfidf=0.1967; bonus=0.0800
+
+> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Últimas Reformas DOF 02-06-2026 DECRETO por el que se reforman y adicionan diversas disposiciones de la Constitución Política de los Estados Unidos Mexicanos, en materia política.
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 14. autoridades
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2601
+**Similitud promedio:** 0.2069
+**Fuentes:** Derecho constitucional - Elisur Arteaga.pdf; Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf; Diccionario analitico de derechos humanos e integracion juridica.pdf
+**Ubicaciones:** Derecho constitucional - Elisur Arteaga.pdf, p. 1006; Derecho constitucional - Elisur Arteaga.pdf, p. 154; Derecho constitucional - Elisur Arteaga.pdf, p. 156; Derecho constitucional - Elisur Arteaga.pdf, p. 181; Derecho constitucional - Elisur Arteaga.pdf, p. 231; Derecho constitucional - Elisur Arteaga.pdf, p. 624; Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf, p. 35; Diccionario analitico de derechos humanos e integracion juridica.pdf, p. 251
+
+### Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf — p. 35 — similitud 0.2601
+
+**Detalle de puntaje:** tfidf=0.1901; bonus=0.0700
+
+> Proteger Las autoridades adoptarán medidas legislativas y de otro tipo contra la violencia doméstica. Cumplir Las autoridades capacitarán a agentes de policía en métodos aceptables de interrogatorio.
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 181 — similitud 0.2266
+
+**Detalle de puntaje:** tfidf=0.1566; bonus=0.0700
+
+> 7. El sistema federal 161 greso de la unión; el segundo, la aplicación de las leyes del trabajo corresponde de manera genérica a las autoridades de los estados, pero excepcionalmente, respecto de rubros determinados pueden conocer sólo las autoridades federales. El Distrito Federal y sus autoridades, no aparecen mencionados en la fracc. xxxi, A, del art.
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 154 — similitud 0.1971
+
+**Detalle de puntaje:** tfidf=0.1271; bonus=0.0700
+
+> 134 libroPrimero Teoría constitucional y teoría política privar a las autoridades del Distrito Federal de las facultades y atribuciones que les ha confi ado la constitución legislar respecto de los rubros conferidos a la asamblea legislativa del Distrito Federal asumir la totalidad de la función legislativa ni depositar la facultad ejecutiva en una sola persona pretender extender el ejercicio de la facultad reglamentaria que corresponde al presidente de la república, a las leyes que emite la asamblea legislativa establecer supuestos adicionales a los previstos en el inc. F del art.
+
+### Diccionario analitico de derechos humanos e integracion juridica.pdf — p. 251 — similitud 0.1970
+
+**Detalle de puntaje:** tfidf=0.1270; bonus=0.0700
+
+> En el caso de que se compruebe que las autoridades o servidores han violado los de- rechos del contribuyente quejoso, al haber incurrido en actos u omisiones ilegales, la recomendación que se emita señalará a las autoridades involucradas, las prácticas en que hubieren incurrido y propondrá, en su caso, la adopción de las medidas correctivas necesarias, además de denunciar ante las autoridades competentes la posible comisión de delitos y de actos que puedan dar lugar a responsabilidad civil o administrativa de las autoridades responsables.
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 231 — similitud 0.1964
+
+**Detalle de puntaje:** tfidf=0.1264; bonus=0.0700
+
+> El sistema federal 211 La creación del Distrito Federal derivó de un mandamiento de la carta funda- mental; ésta, en cambio, por lo que toca a los estados, parte del supuesto de que son preexistentes a la federación. El Distrito Federal tiene autoridades (art. 122, párrs.
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 624 — similitud 0.1954
+
+**Detalle de puntaje:** tfidf=0.1254; bonus=0.0700
+
+> Fue una facultad común. En la actualidad, en virtud de la reforma constitucional de 1978, existe una norma que dispone que la aplicación general de las leyes del trabajo corresponde a las autoridades de los estados en materias que no son de la competencia exclusiva de las autoridades federales. Se parte del mismo supuesto del art.
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 156 — similitud 0.1931
+
+**Detalle de puntaje:** tfidf=0.1231; bonus=0.0700
+
+> 136 libroPrimero Teoría constitucional y teoría política Lo que no tienen conferido los poderes y autoridades centrales, debe entenderse, por ese simple hecho, que lo tienen prohibido. Lo conferido a los poderes federales puede ser expreso o tácito, de ahí la existencia de las facultades implícitas.
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 1006 — similitud 0.1894
+
+**Detalle de puntaje:** tfidf=0.1194; bonus=0.0700
+
+> Al dejar al margen de la actuación de las autoridades judiciales federales a de- terminados funcionarios locales, se pretende evitar que mediante un trámite judicial común se deje sin autoridades principales a las entidades federativas. La constitución
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 15. aplicación
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2197
+**Similitud promedio:** 0.1701
+**Fuentes:** Curso de derechos humanos - Ana Maria Ibarra Olguin.pdf; Derecho constitucional - Elisur Arteaga.pdf; Principio pro persona - Ximena Medellin Urquiaga.pdf; Sobre la dignidad y los principios - M. Casado.pdf
+**Ubicaciones:** Curso de derechos humanos - Ana Maria Ibarra Olguin.pdf, p. 378; Derecho constitucional - Elisur Arteaga.pdf, p. 1045; Derecho constitucional - Elisur Arteaga.pdf, p. 131; Derecho constitucional - Elisur Arteaga.pdf, p. 631; Derecho constitucional - Elisur Arteaga.pdf, p. 819; Derecho constitucional - Elisur Arteaga.pdf, p. 913; Principio pro persona - Ximena Medellin Urquiaga.pdf, p. 9; Sobre la dignidad y los principios - M. Casado.pdf, p. 535
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 819 — similitud 0.2197
+
+**Detalle de puntaje:** tfidf=0.1497; bonus=0.0700
+
+> En virtud del decreto de suspensión de garantías, cesa en forma temporal y limitada la efi cacia o aplicación de los derechos señalados en aquél; se suspende transitoriamente su aplicación, por un tiempo cesa de ser barrera a la acción de la autoridad; siguen en vigor, sólo que se paraliza su aplicación.
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 131 — similitud 0.1930
+
+**Detalle de puntaje:** tfidf=0.1230; bonus=0.0700
+
+> Al respecto hay un principio general: facultad o atribución que es arrebatada a los estados, no vuelve nunca a ellos, salvo que se trate de una carga. En estos casos, la federación se reserva su regulación y a los estados se deja su aplicación y cargar con los costos, económicos y políticos, que su aplicación implica; entre éstas están la aplicación de las leyes federales y los
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 1045 — similitud 0.1628
+
+**Detalle de puntaje:** tfidf=0.0928; bonus=0.0700
+
+> Los tribunales federales gozan de una doble jurisdicción: una, la ordinaria, en virtud de la cual conocen de todas las controversias que se susciten acerca del cumplimiento y la aplicación de las leyes federales o de los tratados internacionales (art. 104, fracc. ii); y la otra, la de amparo, por la que les corresponde conocer de las controversias que se susciten por la aplicación de leyes o realización de actos de autoridad que violen los
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 631 — similitud 0.1617
+
+**Detalle de puntaje:** tfidf=0.0917; bonus=0.0700
+
+> A pesar de ello, la escasa normatividad y la casi nula aplicación hacen que el de la defensa, por el momento, siga siendo un problema teórico. El marco normativo fundamental vigente no ha tenido aplicación práctica; las leyes reglamentarias no se han expedido y no existe jurisprudencia.
+
+### Curso de derechos humanos - Ana Maria Ibarra Olguin.pdf — p. 378 — similitud 0.1568
+
+**Detalle de puntaje:** tfidf=0.0868; bonus=0.0700
+
+> La Corte ha precisado que el ámbito de aplicación material del principio de irretroactividad de la ley penal recae, por regla general, en normas sustantivas, no así en las procesales.43 Para la Suprema Corte, los actos procesales se rigen necesariamente por las normas vigentes en la época de su aplicación, por lo que no pueden tener aplicación retroactiva.44 Por tanto, si antes de que se realice una etapa del procedimiento, el legislador cambia su tramitación modificando, por ejemplo, la valoración de pruebas o suprimiendo un recurso, no existirá aplica- ción retroactiva, siempre que tales situaciones aún no se hubieren llevado a cabo.
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 913 — similitud 0.1557
+
+**Detalle de puntaje:** tfidf=0.0857; bonus=0.0700
+
+> Facultades de los poderes en materia de comercio 893 Comercio exterior Marco normativo tributario vigente. Por mandato constitucional, el gravar el comercio exterior es facultad privativa de la federación.215 5.7 Aplicación judicial de las leyes mercantiles De acuerdo con la fracc. ii del art. 104, corresponde a los tribunales de la federación conocer de las controversias del orden civil y mercantil que se susciten sobre el cum- plimiento y la aplicación de las leyes federales o los tratados internacionales que cele- bre el estado mexicano.
+
+### Principio pro persona - Ximena Medellin Urquiaga.pdf — p. 9 — similitud 0.1555
+
+**Detalle de puntaje:** tfidf=0.0855; bonus=0.0700
+
+> De manera concreta, el segundo aborda- rá el estudio de la operación de este principio en el marco de la interpretación de normas secundarias. Por su parte, en el tercero se discutirá la aplicación del principio pro persona en la construcción del parámetro de control de las normas secundarias y actos de aplicación. Como complemento del estudio del concepto, contenido y alcance de dicho principio, en el cuarto subapartado se analiza su relación con la ponderación de derechos humanos.
+
+### Sobre la dignidad y los principios - M. Casado.pdf — p. 535 — similitud 0.1555
+
+**Detalle de puntaje:** tfidf=0.0855; bonus=0.0700
+
+> Interrelación y Artículo 27. Limitaciones a la aplicación Declaración, situándolos en un terreno en el que se proporcionan criterios para valorar su legitimidad. Esto es lo que hace en efecto el artículo 27: establecer criterios y condiciones que deben cumplir, desde la perspectiva de la Declaración (a la que deberán sumarse otras perspectivas, entre ellas la constitucional interna de los Estados) las posibles limitaciones a las que se someta la aplicación de los principios que con- tiene.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 16. tribunales
+
+**Calidad estimada:** alta
+**Mejor similitud:** 0.3229
+**Similitud promedio:** 0.2491
+**Fuentes:** Derecho constitucional - Elisur Arteaga.pdf; Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf; Garantias constitucionales del proceso.pdf
+**Ubicaciones:** Derecho constitucional - Elisur Arteaga.pdf, p. 546; Derecho constitucional - Elisur Arteaga.pdf, p. 554; Derecho constitucional - Elisur Arteaga.pdf, p. 565; Derecho constitucional - Elisur Arteaga.pdf, p. 916; Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf, p. 152; Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf, p. 245; Garantias constitucionales del proceso.pdf, p. 35
+
+### Garantias constitucionales del proceso.pdf — p. 35 — similitud 0.3229
+
+**Detalle de puntaje:** tfidf=0.2529; bonus=0.0700
+
+> Contra lo que pudiera parecer, dentro de la expresión tribunales espe- ciales no quedan incluidos los tribunales que tienen competencia en deter- minadas materias, como los tribunales administrativos y los tribunales de trabajo, ya que todos ellos son tribunales creados por ley para conocer de un número indeterminado de asuntos, es decir, de todos aquellos que queden comprendidos dentro de su competencia específica.
+
+### Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf — p. 152 — similitud 0.2828
+
+**Detalle de puntaje:** tfidf=0.2128; bonus=0.0700
+
+> Éstos deben quedar excluidos para proteger la integridad del procedimiento y, en definitiva, el Estado de Derecho en sí mismo”. Tribunales especiales y tribunales militares En muchos países se han establecido tribunales especiales, extraordinarios o militares para enjuiciar determinados tipos de delitos. Con frecuencia esos tribunales ofrecen menos garantías de un juicio imparcial que los tribunales ordinarios, como ha señalado el Comité de Derechos Humanos en su Observación general N° 32 (2007).
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 565 — similitud 0.2734
+
+**Detalle de puntaje:** tfidf=0.2034; bonus=0.0700
+
+> También son competentes para conocer de los impedimentos y excusas que se susciten entre los jueces de distrito de su jurisdicción, en los juicios de amparo que se presentan ante ellos y en cualquier materia entre los magistrados de los tribunales de circuito; en amparo de los impedimentos y excusas que se den entre los magistrados de los tribunales superiores de los estados y del Distrito Federal (arts. 37, fracc. vii, lopjf, y 37, ley de amparo).
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 916 — similitud 0.2496
+
+**Detalle de puntaje:** tfidf=0.1796; bonus=0.0700
+
+> 896 libroQuinto Facultades de los poderes federales y estatales una competencia limitada: aplicaban exclusivamente la Ley de responsabilidades de los altos funcionarios locales. En la actualidad, por mandamiento constitucional, existen en los estados otros tribunales como los contencioso administrativos, las juntas locales de conciliación y arbitraje, los tribunales burocráticos, los tribunales electorales y otros; lo que es más, algunos aplican leyes federales, como las juntas locales de conciliación y arbitraje (art. 123, A, fracc. xxxi).
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 554 — similitud 0.2292
+
+**Detalle de puntaje:** tfidf=0.1592; bonus=0.0700
+
+> 534 libroSegundo Los poderes federales La jurisprudencia que establezca la suprema corte es obligatoria para las salas, los tribunales de circuito, jueces de distrito, los tribunales militares y tribunales y jueces del orden común de los estados y del Distrito Federal, tribunales contenciosos administrativos, juntas y tribunales de conciliación federales y locales (art. 192, ley de amparo, y arts.
+
+### Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf — p. 245 — similitud 0.2215
+
+**Detalle de puntaje:** tfidf=0.1515; bonus=0.0700
+
+> Relación entre la CPI y otros tribunales La CPI y los tribunales nacionales: los tribunales nacionales tienen competencia en todos los casos pertinentes y, con arreglo al principio de “complementariedad”, la CPI sólo puede actuar cuando los tribunales nacionales no sean capaces de actuar genuinamente para realizar una investigación o procesamiento o no estén dispuestos a hacerlo; La CPI y la Corte Internacional de Justicia: la Corte Internacional de Justicia se ocupa exclusivamente de diferencias entre Estados, no de crímenes cometidos por individuos; La CPI y los tribunales internacionales especiales (TPIY, TPIR, TESL, TEL, SETC, las Salas de Crímenes de Guerra en Bosnia y Herzegovina)...
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 546 — similitud 0.2092
+
+**Detalle de puntaje:** tfidf=0.1392; bonus=0.0700
+
+> 526 libroSegundo Los poderes federales federal, confi ada a diversos tribunales, unos con jurisdicción amplia y otros restrin- gida; la otra, la local, depositada en diversos tribunales, cuya existencia, en algunos casos, está prevista en la constitución, y en otros son de creación particular en cada entidad. En el ámbito federal, la constitución ha depositado, en principio, el ejercicio de la función jurisdiccional en un conjunto de tribunales a los que ha denominado poder judicial de la federación.
+
+### Garantias constitucionales del proceso.pdf — p. 35 — similitud 0.2042
+
+**Detalle de puntaje:** tfidf=0.1342; bonus=0.0700
+
+> f 13 Artículo 13 que se viole esa garantía constitucional es preciso que se aplique o trate de aplicarse una disposición que sólo se refiera a determinada persona es- pecialmente”.25 1.3. Tribunales especiales Por tribunales especiales se entiende aquellos órganos jurisdiccionales creados exclusivamente para conocer de determinados hechos y perso- nas, por lo que una vez que realizan el juzgamiento que les ha sido enco- mendado, se extinguen.
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 17. condiciones
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.1953
+**Similitud promedio:** 0.1694
+**Fuentes:** Curso de derechos humanos - Ana Maria Ibarra Olguin.pdf; Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf; Historia minima del neoliberalismo - Fernando Escalante Gonzalbo.pdf; Historia minima del neoliberalismo - Fernando Escalante Gonzalbo.txt; Sobre la dignidad y los principios - M. Casado.pdf
+**Ubicaciones:** Curso de derechos humanos - Ana Maria Ibarra Olguin.pdf, p. 853; Curso de derechos humanos - Ana Maria Ibarra Olguin.pdf, p. 854; Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf, p. 204; Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf, p. 214; Historia minima del neoliberalismo - Fernando Escalante Gonzalbo.pdf, p. 30; Historia minima del neoliberalismo - Fernando Escalante Gonzalbo.txt, bloque 24; Sobre la dignidad y los principios - M. Casado.pdf, p. 127; Sobre la dignidad y los principios - M. Casado.pdf, p. 83
+
+### Curso de derechos humanos - Ana Maria Ibarra Olguin.pdf — p. 854 — similitud 0.1953
+
+**Detalle de puntaje:** tfidf=0.1253; bonus=0.0700
+
+> En cuanto a lo equitativo, el autor aclara que ese concepto tiende a la igualdad entre todas las personas trabajadoras que se encuentren en las mismas circunstancias, si bien reconoce que los términos de igualdad y equi- dad no son equivalentes. Por otra parte, el carácter de justas, precisa, “remite a la justicia social que determina que los trabajadores tengan condiciones de trabajo dignas en consideración a la clase y calidad del trabajo realizado, y no sólo en condiciones de salud, seguridad y de tiempo de prestación de servicios, sino tam- bién, inevitablemente, de condiciones retributivas”.104 102 Comité de Derechos Económicos, Sociales y Culturales. Observación general núm.
+
+### Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf — p. 204 — similitud 0.1806
+
+**Detalle de puntaje:** tfidf=0.1106; bonus=0.0700
+
+> El Estado debe velar por que se establezcan programas de orientación y capacitación técnica y profesional accesibles al público, general y gratuitos, o de precio razonable, y de que se pongan a disposición de todos los trabajadores servicios de empleo gratuitos. Derechos laborales El artículo 7 del PIDESC garantiza el derecho de toda persona a condiciones de trabajo equitativas y satisfactorias.
+
+### Historia minima del neoliberalismo - Fernando Escalante Gonzalbo.pdf — p. 30 — similitud 0.1677
+
+**Detalle de puntaje:** tfidf=0.0977; bonus=0.0700
+
+> En breve, dice lo siguiente. En un modelo económico, para obtener un óptimo de Pareto deben cumplirse simultáneamente toda una serie de condiciones (información perfecta, competencia perfecta, etcétera). Ahora bien, si resulta imposible cumplir una cualquiera de las condiciones, entonces todas las demás, aunque pudieran mantenerse, no serían ya deseables.
+
+### Historia minima del neoliberalismo - Fernando Escalante Gonzalbo.txt — bloque 24 — similitud 0.1677
+
+**Detalle de puntaje:** tfidf=0.0977; bonus=0.0700
+
+> En breve, dice lo siguiente. En un modelo económico, para obtener un óptimo de Pareto deben cumplirse simultáneamente toda una serie de condiciones (información perfecta, competencia perfecta, etcétera). Ahora bien, si resulta imposible cumplir una cualquiera de las condiciones, entonces todas las demás, aunque pudieran mantenerse, no serían ya deseables.
+
+### Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf — p. 214 — similitud 0.1643
+
+**Detalle de puntaje:** tfidf=0.0943; bonus=0.0700
+
+> En su Observación general N° 14 (2000) sobre el derecho a la salud, el Comité DESC afirma: “…el derecho a la salud abarca una amplia gama de factores socioeconómicos que promueven las condiciones merced a las cuales las personas pueden llevar una vida sana, y hace ese derecho extensivo a los factores determinantes básicos de la salud, como la alimentación y la nutrición, la vivienda, el acceso a agua limpia potable y a condiciones sanitarias adecuadas, condiciones de trabajo seguras y sanas y un medio 220
+
+### Sobre la dignidad y los principios - M. Casado.pdf — p. 83 — similitud 0.1623
+
+**Detalle de puntaje:** tfidf=0.0923; bonus=0.0700
+
+> Veámoslo con un poco de detalle, teniendo en cuenta la distinción que antes introducía entre las condiciones y las consecuencias de la dignidad. Por lo que hace a las condiciones de la dignidad, la tesis T1 («la adscripción de la dignidad depende exclusivamente de la pertenencia a la especie humana») parece realmente discutible, es decir, no se ve por qué la personalidad moral 83
+
+### Sobre la dignidad y los principios - M. Casado.pdf — p. 127 — similitud 0.1586
+
+**Detalle de puntaje:** tfidf=0.0886; bonus=0.0700
+
+> Esas tres virtudes, que componen el contenido de la justicia, sólo son diferentes aspectos de la misma actitud humanista fundamen- tal destinada a garantizar el respeto sin condiciones de la dignidad humana. No se puede realizar en la práctica el principio de la dignidad de la persona si éste no se materializa en las condiciones de vida de cada ciudadano, garantizándole liber- tad e igualdad de oportunidades en una sociedad solidaria.
+
+### Curso de derechos humanos - Ana Maria Ibarra Olguin.pdf — p. 853 — similitud 0.1584
+
+**Detalle de puntaje:** tfidf=0.0884; bonus=0.0700
+
+> De acuerdo con el doctor Mario de la Cueva, las condiciones de trabajo son “las normas que fijan los requisitos para la defensa de la salud y la vida de los trabajadores en los establecimientos y lugares de trabajo y las que determinan las prestaciones mínimas que deben percibir los hombres por su trabajo”.99 Los tratados internacionales en que se reconoce este derecho contienen una lista no exhaustiva de elementos básicos para garantizar condiciones de trabajo equita- tivas y satisfactorias.100 Estas condiciones no se limitan a la salud y seguridad de los trabajadores, sino que también se refieren a la retribución, y sobre todo a la protección de la dignidad, que remite a su vez al respeto...
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 18. convención
+
+**Calidad estimada:** alta
+**Mejor similitud:** 0.3696
+**Similitud promedio:** 0.2904
+**Fuentes:** Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf; Derechos humanos, teorias y doctrinas - Luis Manuel Marcano Salazar.pdf; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.pdf; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt; derechoshumanos--ea51a76b10.pdf
+**Ubicaciones:** Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf, p. 90; Derechos humanos, teorias y doctrinas - Luis Manuel Marcano Salazar.pdf, p. 89; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.pdf, p. 176; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.pdf, p. 18; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.pdf, p. 373; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.pdf, p. 94; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt, bloque 171; derechoshumanos--ea51a76b10.pdf, p. 89
+
+### Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.pdf — p. 18 — similitud 0.3696
+
+**Detalle de puntaje:** tfidf=0.2996; bonus=0.0700
+
+> Las convenciones internacionales sectoriales o específicas son principal- mente las siguientes: la Convención Internacional para la Represión de la Trata de Mujeres y Niños, adoptada en 1921; la Convención sobre Con- dición de los Extranjeros, adoptada en 1928; la Convención sobre Nacio- nalidad de la Mujer, adoptada en 1933; la Convención para la Prevención y Sanción del Delito de Genocidio, adoptada en 1948; la Convención so- bre Estatuto de los Refugiados, adoptada en 1951; la Convención sobre De- rechos Políticos de la Mujer, adoptada en 1953; la Convención sobre el Es- tatuto de los Apástridas, adoptado en 1954; la Convención sobre la Imprescriptibilidad de los Crímenes de Guerra y de...
+
+### Derechos humanos, teorias y doctrinas - Luis Manuel Marcano Salazar.pdf — p. 89 — similitud 0.3023
+
+**Detalle de puntaje:** tfidf=0.2323; bonus=0.0700
+
+> • Declaración Americana de los Derechos Deberes del Hombre • Convención Americana sobre Derechos Humanos • Carta de la OEA • Protocolo a la Convención Americana sobre Derechos Humanos relativo a la Abolición de la Pena de Muerte • Convención Interamericana para Prevenir y Sancionar la Tortura • Convención Interamericana sobre Desaparición Forzada de Personas • Protocolo Adicional a la Convención Americana sobre Derechos Humanos en Materia de Derechos Económicos, Sociales y Culturales “Protocolo de San Salvador” • Convención Interamericana para la Eliminación de todas las Formas de Discriminación contra las Personas con Discapacidad • Estatuto de la Comisión Interamericana de Derechos...
+
+### derechoshumanos--ea51a76b10.pdf — p. 89 — similitud 0.3023
+
+**Detalle de puntaje:** tfidf=0.2323; bonus=0.0700
+
+> • Declaración Americana de los Derechos Deberes del Hombre • Convención Americana sobre Derechos Humanos • Carta de la OEA • Protocolo a la Convención Americana sobre Derechos Humanos relativo a la Abolición de la Pena de Muerte • Convención Interamericana para Prevenir y Sancionar la Tortura • Convención Interamericana sobre Desaparición Forzada de Personas • Protocolo Adicional a la Convención Americana sobre Derechos Humanos en Materia de Derechos Económicos, Sociales y Culturales “Protocolo de San Salvador” • Convención Interamericana para la Eliminación de todas las Formas de Discriminación contra las Personas con Discapacidad • Estatuto de la Comisión Interamericana de Derechos...
+
+### Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt — bloque 171 — similitud 0.2879
+
+**Detalle de puntaje:** tfidf=0.2179; bonus=0.0700
+
+> Para los efectos de esta convención, persona es todo ser humano. SOBERANÍA, CONSTITUCIONES Y TRATADOS 355 Así todos los preceptos de la Convención Americana de Derechos Hu- manos son de autoejecutividad directa, a menos que exista una estipula- ción expresa en la norma que condiciona el cumplimiento de la norma al desarrollo de leyes subsecuentes.
+
+### Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf — p. 90 — similitud 0.2786
+
+**Detalle de puntaje:** tfidf=0.2086; bonus=0.0700
+
+> Convenio del Consejo de Europa sobre Prevención y Lucha contra la Violencia contra la Mujer y la Violencia Doméstica (Convenio de Estambul) (2011-2014) Organización de los Estados Americanos Convención Americana sobre Derechos Humanos (1969-1978) y Protocolos Adicionales (sobre los derechos económicos, sociales y culturales y la abolición de la pena de muerte) Convención Interamericana para Prevenir y Sancionar la Tortura (1985-1987) Convención Interamericana para Prevenir, Sancionar y Erradicar la Violencia contra la Mujer (1994-1995) Convención Interamericana sobre la Desaparición Forzada de Personas (1994‑1996) Convención Interamericana sobre Tráfico Internacional de Menores (1994-1997)...
+
+### Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.pdf — p. 94 — similitud 0.2634
+
+**Detalle de puntaje:** tfidf=0.1934; bonus=0.0700
+
+> la Declaración Americana de los Derechos y Deberes del Hombre, la De- claración Universal de Derechos Humanos; la Convención Americana so- bre Derechos Humanos; el Pacto Internacional de Derechos Económicos, Sociales y Culturales; el Pacto Internacional de Derechos Civiles y Políti- cos y su protocolo Facultativo; la Convención sobre la Prevención y la Sanción del Delito de Genocidio; la Convención Internacional sobre la Eli- minación de Todas las Formas de Discriminación Racial; la Convención sobre la Eliminación de Todas las Formas de Discriminación contra la Mu- jer; la Convención contra la Tortura y otros Tratos o Penas Crueles, Inhu- manas o Degradantes; la Convención sobre los...
+
+### Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.pdf — p. 373 — similitud 0.2604
+
+**Detalle de puntaje:** tfidf=0.1904; bonus=0.0700
+
+> 356 HUMBERTO NOGUEIRA ALCALÁ Así todos los preceptos de la Convención Americana de Derechos Hu- manos son de autoejecutividad directa, a menos que exista una estipula- ción expresa en la norma que condiciona el cumplimiento de la norma al desarrollo de leyes subsecuentes.
+
+### Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.pdf — p. 176 — similitud 0.2582
+
+**Detalle de puntaje:** tfidf=0.1882; bonus=0.0700
+
+> 162 HUMBERTO NOGUEIRA ALCALÁ la Declaración Americana de los Derechos y Deberes del Hombre, la De- claración Universal de Derechos Humanos; la Convención Americana so- bre Derechos Humanos; el Pacto Internacional de Derechos Económicos, Sociales y Culturales; el Pacto Internacional de Derechos Civiles y Políti- cos y su protocolo Facultativo; la Convención sobre la Prevención y la Sanción del delito de Genocidio; la Convención Internacional sobre Eli- minación de Todas las Formas de Discriminación Racial; la Convención sobre la Eliminación de Todas las Formas de Discriminación contra la Mu- jer; la Convención contra la Tortura y otros Tratos o Penas crueles, Inhu- manas o Degradantes, la...
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 19. internacionales
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2206
+**Similitud promedio:** 0.1954
+**Fuentes:** Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf; Las generaciones de los derechos humanos - Ernesto Rey Cantor y coautoras.pdf; Principio pro persona - Ximena Medellin Urquiaga.pdf; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt
+**Ubicaciones:** Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf, p. 107; Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf, p. 13; Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf, p. 169; Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf, p. 173; Las generaciones de los derechos humanos - Ernesto Rey Cantor y coautoras.pdf, p. 437; Principio pro persona - Ximena Medellin Urquiaga.pdf, p. 54; Principio pro persona - Ximena Medellin Urquiaga.pdf, p. 61; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt, bloque 60
+
+### Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf — p. 107 — similitud 0.2206
+
+**Detalle de puntaje:** tfidf=0.1506; bonus=0.0700
+
+> a. las convenciones internacionales, sean generales o particulares,  que establezcan reglas expresamente reconocidas por los Estados  litigantes; b. la costumbre internacional como prueba de una práctica general-  mente aceptada como derecho; c. los principios generales del derecho reconocidos por las naciones  civilizadas; d. las decisiones judiciales y las doctrinas de los publicistas de mayor  competencia de las distintas naciones, como medio auxiliar para la  determinación de las reglas de derecho, sin perjuicio de lo dispues-  to en el Artículo 59 (…)258 La fuente de obligaciones del derecho internacional de los derechos hu- manos es, por antonomasia, los tratados internacionales, que...
+
+### Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt — bloque 60 — similitud 0.2082
+
+**Detalle de puntaje:** tfidf=0.1382; bonus=0.0700
+
+> En todo caso, cuando intervienen los organismos internacionales verifican la conformidad de todas las normas estatales, todo el derecho interno (desde la Constitución, pasando por las leyes, actos administrati- vos hasta llegar a las sentencias de los tribunales internos), a fin de ve- rificar su conformidad con las obligaciones internacionales asumidas por el Estado, especialmente en materia de pactos internacionales o tratados en materia de derechos humanos.
+
+### Principio pro persona - Ximena Medellin Urquiaga.pdf — p. 61 — similitud 0.2022
+
+**Detalle de puntaje:** tfidf=0.1322; bonus=0.0700
+
+> Principio pro persona Diagrama 5. Principales argumentos sobre la conformación del parámetro de control Parámetro segmentado Parámetro integrado El control de constitucionalidad y el control de convencionalidad implican dos ejercicios normativos autónomos a A partir de la reforma constitucional en materia de derechos humanos, con la integración al orden constitucional los que corresponden parámetros de de los derechos reconocidos en los control distintos, por lo que pueden diferenciarse en los casos concretos. tados internacionales, se establece un solo parámetro, de conformación compleja, para interpretar y aplicar todas las normas del sistema.
+
+### Las generaciones de los derechos humanos - Ernesto Rey Cantor y coautoras.pdf — p. 437 — similitud 0.1997
+
+**Detalle de puntaje:** tfidf=0.1297; bonus=0.0700
+
+> Capítulo Tercero - Derechos Humanos de Tercera Generación 437 se han adoptado Declaraciones, sin que exista voluntad política de los Estados Miembros de la Naciones Unidas para celebrar y ratificar tratados internacionales y, por consiguiente, adquirir obligaciones internacionales de respetar y garantizar el libre y pleno ejercicio de los derechos, que sería el paso siguiente a la adopción de las Declaraciones internacionales, esto es, la codificación como tratados internacionales, por lo que presentaremos una somera y breve descripción expositiva.
+
+### Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf — p. 13 — similitud 0.1911
+
+**Detalle de puntaje:** tfidf=0.1211; bonus=0.0700
+
+> Mientras que en el primer capítulo se hace referencia, en general, al derecho internacional de los derechos humanos, en el segundo se menciona, en particular, la aplicación de los instrumentos internacionales en Costa Rica, tratándose las dificultades para el reconocimiento del carácter self-executing de los tratados internacionales de derechos humanos relacionados con la justicia penal, lo mismo que las discusiones sobre el valor jurídico de los instrumentos internacionales de derechos humanos en Costa Rica, específi- camente a partir del desarrollo realizado por la Sala Constitucional costarri- 12 -
+
+### Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf — p. 169 — similitud 0.1810
+
+**Detalle de puntaje:** tfidf=0.1110; bonus=0.0700
+
+> (…) garantizar la supremacía de las normas y principios constitucio- nales y del Derecho Internacional o Comunitario vigente en la República, su uniforme interpretación y aplicación, así como los derechos y liberta- des fundamentales consagrados en la Constitución o en los instrumen- tos internacionales de derechos humanos vigentes en Costa Rica. Con posterioridad, la Sala Constitucional llegó a afirmar, incluso, la supraconstitucionalidad de los instrumentos internacionales de derechos humanos vigentes en Costa Rica, con fundamento en el artículo 48 de la Constitución Política, arriba mencionado.
+
+### Principio pro persona - Ximena Medellin Urquiaga.pdf — p. 54 — similitud 0.1807
+
+**Detalle de puntaje:** tfidf=0.1107; bonus=0.0700
+
+> Antes de proponer las bases para el análisis crítico del caso es importante destacar que, si bien para efectos de este ejercicio nos limitaremos al análisis de las normas internacionales ya trascritas, la práctica del arraigo puede llevar a la vulneración de otros derechos reconocidos tanto en nuestro texto constitucional como en los tratados internacionales relevantes. De la misma forma, un análisis integral sobre la cuestión indiscutiblemente requeriría del estudio de los criterios de interpretación relevantes emitidos tanto por el pjf como por la Corte idh u otros organismos internacionales de dere- chos humanos, y no sólo de los enunciados normativos mencionados.
+
+### Derechos humanos y justicia penal - Javier Llobet Rodriguez.pdf — p. 173 — similitud 0.1800
+
+**Detalle de puntaje:** tfidf=0.1100; bonus=0.0700
+
+> DERECHOS HUMANOS Y JUSTICIA PENAL interpretación y aplicación de (…) los instrumentos internacionales de derechos humanos vigentes en Costa Rica (el subrayado no es del original). Resalta al respecto la utilización del término instrumentos internacionales de derechos humanos, en vez del de tratados internacionales, por lo que se discute si incluso declaraciones de derechos humanos, directrices, códigos de conducta o reglas mínimas sobre los mismos, tienen un carácter vinculante en Costa Rica, adquiriendo un rango constitucional e incluso supraconstitucional.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 20. facultades
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2517
+**Similitud promedio:** 0.2244
+**Fuentes:** Derecho constitucional - Elisur Arteaga.pdf
+**Ubicaciones:** Derecho constitucional - Elisur Arteaga.pdf, p. 14; Derecho constitucional - Elisur Arteaga.pdf, p. 158; Derecho constitucional - Elisur Arteaga.pdf, p. 171; Derecho constitucional - Elisur Arteaga.pdf, p. 185; Derecho constitucional - Elisur Arteaga.pdf, p. 554; Derecho constitucional - Elisur Arteaga.pdf, p. 71; Derecho constitucional - Elisur Arteaga.pdf, p. 849
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 14 — similitud 0.2517
+
+**Detalle de puntaje:** tfidf=0.1817; bonus=0.0700
+
+> xii Derecho constitucional 5.2 Naturaleza y alcance de las facultades del congreso de la unión en relación con el comercio . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 882 5.3 Facultades de los poderes federales en relación con el comercio internacional . . . . . . . . . .
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 849 — similitud 0.2317
+
+**Detalle de puntaje:** tfidf=0.1617; bonus=0.0700
+
+> 3. Facultades de los poderes en relación con la restricción o suspensión de derechos y garantías… 829 constitucional, el presidente Juárez, en 1861 y en 1862, reformó la carta magna; para ello recurrió al expediente de “en uso de las amplias facultades de que me hallo investido”; y así modifi có, entre otros, el art. 124.
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 158 — similitud 0.2294
+
+**Detalle de puntaje:** tfidf=0.1594; bonus=0.0700
+
+> Se viola la constitución política, se priva al presidente de una facultad que ella le confi ere y se atribuye a un órgano con autonomía técnica y operativa una respon- sabilidad que no es delegable. Facultades y atribuciones del poder judicial de la federación y de sus órganos. Las facultades de los tribunales que integran el poder judicial son, preferentemente, de naturaleza jurisdiccional, están previstas en los arts.
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 158 — similitud 0.2283
+
+**Detalle de puntaje:** tfidf=0.1583; bonus=0.0700
+
+> 138 libroPrimero Teoría constitucional y teoría política La reglamentación por parte del congreso de la unión y el ejercicio de parte del presidente de la república de sus facultades y atribuciones, están sujeto a los princi- pios siguientes: No puede incrementar o disminuir sus facultades y atribuciones; el congreso de la unión, salvo los casos previstos en los arts.
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 185 — similitud 0.2229
+
+**Detalle de puntaje:** tfidf=0.1529; bonus=0.0700
+
+> 7. El sistema federal 165 Facultades coincidentes Las facultades coincidentes son aquellas que pueden ser ejercidas válidamente por los poderes federales y los de los estados, sin que exista invasión de competencias. Las facultades coincidentes pueden estar referidas a dos tipos de actividades que tienen asignadas los poderes federales y locales: las legislativas y las ejecutivas.
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 71 — similitud 0.2112
+
+**Detalle de puntaje:** tfidf=0.1412; bonus=0.0700
+
+> La interpretación constitucional 51 de Cádiz y de los intentos secesionistas durante 1823,80 los constituyentes mexicanos han partido del supuesto de que la federación mexicana se formó por la voluntad expresa de estados preexistentes que renunciaron a su soberanía y a parte de su competencia para atribuirla a los poderes centrales.81 En ese contexto, si bien los estados renunciaron a un cúmulo de facultades, lo hicieron con el fi n de que la federación las ejercitara; pero cuando dicha federación no actúa, habiendo necesidad de que lo haga y en virtud de que originalmente esas facultades les correspondían a los estados, éstos, en uso de facultades residuales, pueden actuar mientras aquélla...
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 554 — similitud 0.2104
+
+**Detalle de puntaje:** tfidf=0.1404; bonus=0.0700
+
+> La lopjf (art. 11) alude a las facultades anteriores, las califi ca como atribuciones; entra a detalle. Facultades jurisdiccionales de la corte Las facultades jurisdiccionales que por mandamiento constitucional le han sido con- fi adas a la suprema corte de justicia son numerosas, de diversa naturaleza y se refi eren a materias variadas; se hace referencia a algunas.
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 171 — similitud 0.2098
+
+**Detalle de puntaje:** tfidf=0.1398; bonus=0.0700
+
+> 7. El sistema federal 151 a las facultades que tiene el poder legislativo para dar su ley orgánica y reglamento interior (art. 70), las de naturaleza ejecutiva, como la de hacer nombramientos y ejercer su presupuesto; las jurisdiccionales para constituirse en jurado de sen- tencia o cuerpo para emitir una declaración de procedencia a las atribuciones confi adas a la comisión permanente, entidad de fi scalización, o entes como el banco de México, instituto federal electoral, comisión nacional de derechos humanos u otros a las facultades ejecutivas del presidente de la república: no pueden hacer nom- bramientos, celebrar tratados, reglamentar leyes.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon varias referencias dentro de la misma fuente.
+
+## Ficha 21. competencia
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2678
+**Similitud promedio:** 0.2146
+**Fuentes:** Derecho constitucional - Elisur Arteaga.pdf; Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf; Garantias constitucionales - Roberto Carlos Fonseca Lujan.pdf; Garantias constitucionales del proceso.pdf
+**Ubicaciones:** Derecho constitucional - Elisur Arteaga.pdf, p. 553; Derecho constitucional - Elisur Arteaga.pdf, p. 948; Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf, p. 244; Garantias constitucionales - Roberto Carlos Fonseca Lujan.pdf, p. 248; Garantias constitucionales del proceso.pdf, p. 112; Garantias constitucionales del proceso.pdf, p. 113; Garantias constitucionales del proceso.pdf, p. 114; Garantias constitucionales del proceso.pdf, p. 115
+
+### Garantias constitucionales - Roberto Carlos Fonseca Lujan.pdf — p. 248 — similitud 0.2678
+
+**Detalle de puntaje:** tfidf=0.1978; bonus=0.0700
+
+> 248 Roberto Carlos Fonseca Luján definen esta circunstancia, como es la de materia, fuero o territorio de las au­ toridades. La cuestión de la competencia supone la existencia de fundamento jurídico que señale expresamente que esa autoridad puede emitir dicho acto. Un acto emitido por autoridad incompetente, además de ir en contra del principio de legalidad, carece de existencia jurídica formal.
+
+### Garantias constitucionales del proceso.pdf — p. 114 — similitud 0.2351
+
+**Detalle de puntaje:** tfidf=0.1651; bonus=0.0700
+
+> e 92 Garantías constitucionales del proceso de afirmar que esta competencia es la única protegida por las garantías individuales, por lo que implícitamente se acepta que también la compe- tencia fundada en la ley puede estar garantizada por el art. 16.
+
+### Garantias constitucionales del proceso.pdf — p. 112 — similitud 0.2190
+
+**Detalle de puntaje:** tfidf=0.1490; bonus=0.0700
+
+> La segunda cuestión que abordaron los comentaristas de la Constitu- ción de 1857 fue la concerniente a si la competencia exigida en el art. 16 comprendía sólo las atribuciones otorgadas en la Constitución (la llama- da competencia constitucional) o si incluía, más ampliamente, las confe- ridas en la ley (la denominada competencia jurisdiccional, que en reali- dad equivaldría a la competencia legal).
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 948 — similitud 0.2101
+
+**Detalle de puntaje:** tfidf=0.1401; bonus=0.0700
+
+> De los demás delitos, ofi ciales y comunes, son competentes para conocer las autoridades locales: jurado de sentencia o rama judicial locales, en los términos que dispongan las leyes; éstos gozan de una competencia genérica. Competencia por razón del tiempo.
+
+### Garantias constitucionales del proceso.pdf — p. 113 — similitud 0.2044
+
+**Detalle de puntaje:** tfidf=0.1344; bonus=0.0700
+
+> f 91 Artículo 16 do… Cuando estos poderes (legislativo, ejecutivo y judicial) obran dentro de los límites constitucionales de sus funciones, son competentes…”24 En cambio, para Lozano la llamada competencia jurisdiccional era “propia de la ley secundaria que fija a cada tribunal los límites de su ju- risdicción, tanto en relación con la materia del juicio, como con el territo- rio en que debe ejercerse y algunas veces con las personas que le están so- metidas”.25 Esta competencia, para nuestro autor, no estaba garantizada por el art.
+
+### Garantias constitucionales del proceso.pdf — p. 115 — similitud 0.1987
+
+**Detalle de puntaje:** tfidf=0.1287; bonus=0.0700
+
+> En similar sentido, véase el mismo tomo, julio de 1953, p. 1580, “COMPETENCIA, ESTUDIO DE LAS CUESTIONES DE, EN EL AMPARO”. 33 Semanario Judicial de la Federación, octava época, t.
+
+### Derecho constitucional - Elisur Arteaga.pdf — p. 553 — similitud 0.1914
+
+**Detalle de puntaje:** tfidf=0.1214; bonus=0.0700
+
+> Fija, mediante acuerdos generales, los días y horas en que debe sesionar de manera ordinaria; determina mediante acuerdos generales la competencia por materia de cada sala; de la misma forma remite para su resolución a las salas y a los tribunales colegiados los asuntos que sean de su competencia; aprueba su proyecto de presu- puesto anual de egresos y dicta los reglamentos y acuerdos generales en las materias de su competencia (art. 11, fraccs. iii, iv, v, vi, xvi y xxi, lopjf).
+
+### Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf — p. 244 — similitud 0.1904
+
+**Detalle de puntaje:** tfidf=0.1204; bonus=0.0700
+
+> ¿Cómo se define la jurisdicción de la CPI en el Estatuto de Roma? Artículo 5: Los crímenes de la competencia de la Corte son el genocidio2, los crímenes de lesa humanidad3, los crímenes de guerra4 y el crimen de agresión5; Artículo 25: La persona (natural) que cometa un crimen de la competencia de la Corte será responsable individualmente si, por sí sola, con otro o por conducto de otro, cometa, ordena, propone o induce ese crimen o si es cómplice, encubre o colabora de algún modo en la comisión del crimen; Artículos 11 a 13: La Corte tendrá competencia únicamente respecto de crímenes cometidos después de la entrada en vigor del Estatuto (1 de julio de 2002).
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 22. constitucionales
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2099
+**Similitud promedio:** 0.1833
+**Fuentes:** Constitucion Politica de los Estados Unidos Mexicanos comentada - Eduardo Andrade Sanchez.pdf; Garantias constitucionales - Rafael Martinez Morales.pdf; Garantias constitucionales - Roberto Carlos Fonseca Lujan.pdf; Garantias constitucionales del proceso.pdf; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt
+**Ubicaciones:** Constitucion Politica de los Estados Unidos Mexicanos comentada - Eduardo Andrade Sanchez.pdf, p. 299; Garantias constitucionales - Rafael Martinez Morales.pdf, p. 2; Garantias constitucionales - Rafael Martinez Morales.pdf, p. 20; Garantias constitucionales - Roberto Carlos Fonseca Lujan.pdf, p. 30; Garantias constitucionales del proceso.pdf, p. 237; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt, bloque 29; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt, bloque 53; Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt, bloque 94
+
+### Garantias constitucionales del proceso.pdf — p. 237 — similitud 0.2099
+
+**Detalle de puntaje:** tfidf=0.1399; bonus=0.0700
+
+> Más recientemente, Héctor Fix-Zamudio ha abordado el estudio sis- temático de las normas constitucionales sobre el proceso civil de Améri- ca Latina.20 En esta obra, el procesalista y comparatista mexicano escla- rece el concepto de “garantías constitucionales”, precisando sus diversos significados: como derechos del hombre, como instrumentos para la pro- tección de las disposiciones constitucionales, y finalmente, “como dere- chos subjetivos públicos conferidos expresa o implícitamente a los justi- ciables por las normas constitucionales, con el objeto de que puedan obtener las condiciones necesarias para la resolución justa y eficaz de las controversias en las cuales intervienen”.21 Es...
+
+### Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt — bloque 94 — similitud 0.1864
+
+**Detalle de puntaje:** tfidf=0.1164; bonus=0.0700
+
+> 1) Cuando haya cesado la violación o amenaza de algún derecho o garantía constitucionales, que hubiesen podido causarle. 2) Cuando la amenaza contra el derecho o la garantía constitucionales no sea inmediata, posible y realizable por el imputado.
+
+### Garantias constitucionales - Rafael Martinez Morales.pdf — p. 2 — similitud 0.1855
+
+**Detalle de puntaje:** tfidf=0.1155; bonus=0.0700
+
+> Garantías constitucionales Copyright © 2017. IURE Editores.
+
+### Garantias constitucionales - Rafael Martinez Morales.pdf — p. 20 — similitud 0.1855
+
+**Detalle de puntaje:** tfidf=0.1155; bonus=0.0700
+
+> Garantías constitucionales Copyright © 2017. IURE Editores.
+
+### Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt — bloque 29 — similitud 0.1757
+
+**Detalle de puntaje:** tfidf=0.1057; bonus=0.0700
+
+> Consideraciones sobre la denominación de los derechos como “de- rechos subjetivos públicos”, “libertades públicas”, “derechos humanos”, “derechos constitucionales” o “derechos funda- mentales” . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 55 I.
+
+### Constitucion Politica de los Estados Unidos Mexicanos comentada - Eduardo Andrade Sanchez.pdf — p. 299 — similitud 0.1754
+
+**Detalle de puntaje:** tfidf=0.1054; bonus=0.0700
+
+> La acción de inconstitucionalidad permite a las minorías parlamenta- rias oponerse a una decisión mayoritaria que puede haberse impuesto en razón del número, pero que atropella principios constitucionales. El consejero jurídico del gobierno está legitimado para iniciarlas en representación del Poder Ejecutivo, en una función de vigilancia de la preservación del orden constitucional.
+
+### Teoria y dogmatica de los derechos fundamentales - Humberto Nogueira Alcala.txt — bloque 53 — similitud 0.1744
+
+**Detalle de puntaje:** tfidf=0.1044; bonus=0.0700
+
+> Como sostiene Konrad Hesse, la “presunta contradicción entre normas constitucionales se puede soluccionar de dos modos: esta- PROTECCIÓN DE LOS DERECHOS FUNDAMENTALES 111 blecer una decisión de jerarquía o preferencia en la aplicación de una de las normas constitucionales sobre la otra o intentar conseguir una optimiza- ción de forma que se apliquen ambas normas constitucionales a la vez”.167 Este planteamiento lleva a señalar que en ningún caso puede afectarse un derecho fundamental en forma mayor de lo que sea necesario para la protección de bienes jurídicos constitucionales de igual o mayor rango.
+
+### Garantias constitucionales - Roberto Carlos Fonseca Lujan.pdf — p. 30 — similitud 0.1737
+
+**Detalle de puntaje:** tfidf=0.1037; bonus=0.0700
+
+> En la perspectiva contemporánea, es un lugar común denominar garantías constitucionales al conjunto de mecanismos que aseguran la vigencia y fuerza normativa del texto de la constitución, dentro de la cual se incluyen los dere­ chos humanos, junto con el resto de principios y mandatos constitucionales.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 23. información
+
+**Calidad estimada:** alta
+**Mejor similitud:** 0.2905
+**Similitud promedio:** 0.2457
+**Fuentes:** Constitucion Politica de los Estados Unidos Mexicanos comentada - Eduardo Andrade Sanchez.pdf; Curso de derechos humanos - Ana Maria Ibarra Olguin.pdf; Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf; Garantias constitucionales - Roberto Carlos Fonseca Lujan.pdf; Interpretacion constitucional.pdf
+**Ubicaciones:** Constitucion Politica de los Estados Unidos Mexicanos comentada - Eduardo Andrade Sanchez.pdf, p. 52; Curso de derechos humanos - Ana Maria Ibarra Olguin.pdf, p. 245; Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf, p. 170; Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf, p. 171; Garantias constitucionales - Roberto Carlos Fonseca Lujan.pdf, p. 144; Interpretacion constitucional.pdf, p. 180; Interpretacion constitucional.pdf, p. 95
+
+### Interpretacion constitucional.pdf — p. 95 — similitud 0.2905
+
+**Detalle de puntaje:** tfidf=0.2205; bonus=0.0700
+
+> Interpretación Constitucional explicación del carácter “recurrente” de estos tipos de argumentos es, en mi opinión, la siguiente. Si se parte de considerar la argumentación en términos informativos, como el paso de la información contenida en las premisas a la información de la conclusión, cabe distinguir tres estados informativos en que se pueden encontrar las premisas: a) En las premisas se cuenta ya con toda la información necesaria y suficiente para llegar a la conclusión. Argumentar consiste entonces en reordenar de cierta forma la información, en deducir (silogismo subsuntivo). b) En las premisas existe una información insuficiente para llegar a la conclusión.
+
+### Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf — p. 170 — similitud 0.2753
+
+**Detalle de puntaje:** tfidf=0.2053; bonus=0.0700
+
+> Libertad para recabar y recibir información “Los organismos públicos disponen de información no para sí mismos sino en cuanto custodios del bien público, y toda persona tiene derecho de acceso a esa información, con arreglo a normas claramente definidas y establecidas por la ley”. Declaración de Principios sobre la Libertad de Expresión en África, art.
+
+### Constitucion Politica de los Estados Unidos Mexicanos comentada - Eduardo Andrade Sanchez.pdf — p. 52 — similitud 0.2450
+
+**Detalle de puntaje:** tfidf=0.1750; bonus=0.0700
+
+> Capítulo I. De los Derechos Humanos y sus Garantías Toda persona tiene derecho al libre acceso a información plural y oportuna, así como a buscar, recibir y difundir información e ideas de toda índole por cualquier medio de expresión. El Estado garantizará el derecho de acceso a las tecnologías de la información y comunicación, así como a los servicios de radiodifusión y telecomunicaciones, incluido el de banda ancha e internet.
+
+### Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf — p. 171 — similitud 0.2384
+
+**Detalle de puntaje:** tfidf=0.1684; bonus=0.0700
+
+> Recuadro 69 El acceso a la información en relación con las violaciones de los derechos humanos Como se ha mencionado anteriormente, el artículo 19 del PIDCP exige que los Estados Partes procedan activamente a poner en el dominio público la información gubernamental que sea de interés público, entre otros, promulgando leyes relativas a la libertad de la información y adoptando otras medidas (Comité de Derechos Humanos, Observación general N° 34 [2011], párr. 19).
+
+### Curso de derechos humanos - Ana Maria Ibarra Olguin.pdf — p. 245 — similitud 0.2319
+
+**Detalle de puntaje:** tfidf=0.1619; bonus=0.0700
+
+> Derecho a la libertad de expresión e información 245 Generalmente, cuando se habla de transmisión de hechos, la manera de acre- ditar los perjuicios ocasionados por su difusión se realizan a partir del criterio de veracidad; es decir, la falsedad de la información acredita en estos casos si la información publicada fue realizada con la intención de dañar, de acuerdo con la doctrina de la “real malicia” o “malicia efectiva”. Sin embargo, este criterio resulta irrelevante en los casos de conflicto entre libertad de información y dere- cho a la intimidad.
+
+### Derechos humanos - Manual para parlamentarios numero 26 - UIP y ONU.pdf — p. 170 — similitud 0.2303
+
+**Detalle de puntaje:** tfidf=0.1603; bonus=0.0700
+
+> Esto exige que los Estados deberían “proceder activamente a la incorporación al dominio público de la información del gobierno que sea de interés público …[y]… hacer todo lo posible para garantizar un acceso fácil, rápido, efectivo y práctico a esa información” (Comité de Derechos Humanos de las Naciones Unidas, Observación general N° 34 (2011), párr. 19).
+
+### Garantias constitucionales - Roberto Carlos Fonseca Lujan.pdf — p. 144 — similitud 0.2278
+
+**Detalle de puntaje:** tfidf=0.1578; bonus=0.0700
+
+> INFORMACIÓN E IDEAS DE TODA ÍNDOLE La reforma en materia de telecomunicaciones de junio de 2013 adicionó al artículo 6º el párrafo segundo, que prevé la libertad de información. Según este: “toda persona tiene derecho al libre acceso a información plural y oportu­ na, así como a buscar, recibir y difundir información e ideas de toda índole por cualquier medio de expresión”.
+
+### Interpretacion constitucional.pdf — p. 180 — similitud 0.2268
+
+**Detalle de puntaje:** tfidf=0.1568; bonus=0.0700
+
+> En mi opinión, el método utilizado por el Tribunal Constitucional podía caracterizarse mediante dos pasos. El primero consistía en la construcción de una taxonomía que permitiera ubicar cada caso dentro de una determinada categoría: por ejemplo, podía tratarse de una contraposición entre la libertad de información y el honor, entre la libertad de información y la intimidad, etc. En el segundo paso, se elaboraban “reglas de prioridad”, como la siguiente: “Cuando existe una contraposición entre la libertad de información y el derecho a la intimidad: 1.
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 24. constitución política
+
+**Calidad estimada:** alta
+**Mejor similitud:** 0.3201
+**Similitud promedio:** 0.2936
+**Fuentes:** Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf; Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf
+**Ubicaciones:** Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf, p. 230; Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf, p. 236; Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf, p. 258; Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf, p. 265; Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf, p. 231; Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf, p. 237; Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf, p. 259; Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf, p. 266
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf — p. 230 — similitud 0.3201
+
+**Detalle de puntaje:** tfidf=0.2401; bonus=0.0800
+
+> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Últimas Reformas DOF 02-06-2026 DECRETO por el que se reforman los artículos 29, 73, 90, 92, 93, 95, 110 y 111 de la Constitución Política de los Estados Unidos Mexicanos.
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf — p. 231 — similitud 0.3197
+
+**Detalle de puntaje:** tfidf=0.2397; bonus=0.0800
+
+> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Última Reforma DOF 07-10-2026 DECRETO por el que se reforman los artículos 29, 73, 90, 92, 93, 95, 110 y 111 de la Constitución Política de los Estados Unidos Mexicanos.
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf — p. 266 — similitud 0.2983
+
+**Detalle de puntaje:** tfidf=0.2183; bonus=0.0800
+
+> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Última Reforma DOF 07-10-2026 DECRETO por el que se reforman y adicionan diversas disposiciones de la Constitución Política de los Estados Unidos Mexicanos, en materia política.
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf — p. 265 — similitud 0.2981
+
+**Detalle de puntaje:** tfidf=0.2181; bonus=0.0800
+
+> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Últimas Reformas DOF 02-06-2026 DECRETO por el que se reforman y adicionan diversas disposiciones de la Constitución Política de los Estados Unidos Mexicanos, en materia política.
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf — p. 258 — similitud 0.2844
+
+**Detalle de puntaje:** tfidf=0.2044; bonus=0.0800
+
+> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Últimas Reformas DOF 02-06-2026 DECRETO por el que se reforman los artículos 71, 72 y 78 de la Constitución Política de los Estados Unidos Mexicanos.
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf — p. 259 — similitud 0.2839
+
+**Detalle de puntaje:** tfidf=0.2039; bonus=0.0800
+
+> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Última Reforma DOF 07-10-2026 DECRETO por el que se reforman los artículos 71, 72 y 78 de la Constitución Política de los Estados Unidos Mexicanos.
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf — p. 236 — similitud 0.2727
+
+**Detalle de puntaje:** tfidf=0.1927; bonus=0.0800
+
+> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Últimas Reformas DOF 02-06-2026 DECRETO que reforma, adiciona y deroga diversas disposiciones de la Constitución Política de los Estados Unidos Mexicanos.
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf — p. 237 — similitud 0.2720
+
+**Detalle de puntaje:** tfidf=0.1920; bonus=0.0800
+
+> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Última Reforma DOF 07-10-2026 DECRETO que reforma, adiciona y deroga diversas disposiciones de la Constitución Política de los Estados Unidos Mexicanos.
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 25. unidos mexicanos
+
+**Calidad estimada:** alta
+**Mejor similitud:** 0.3639
+**Similitud promedio:** 0.3239
+**Fuentes:** Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf; Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf
+**Ubicaciones:** Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf, p. 230; Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf, p. 236; Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf, p. 258; Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf, p. 265; Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf, p. 231; Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf, p. 237; Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf, p. 259; Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf, p. 266
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf — p. 230 — similitud 0.3639
+
+**Detalle de puntaje:** tfidf=0.2839; bonus=0.0800
+
+> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Últimas Reformas DOF 02-06-2026 DECRETO por el que se reforman los artículos 29, 73, 90, 92, 93, 95, 110 y 111 de la Constitución Política de los Estados Unidos Mexicanos.
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf — p. 231 — similitud 0.3634
+
+**Detalle de puntaje:** tfidf=0.2834; bonus=0.0800
+
+> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Última Reforma DOF 07-10-2026 DECRETO por el que se reforman los artículos 29, 73, 90, 92, 93, 95, 110 y 111 de la Constitución Política de los Estados Unidos Mexicanos.
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf — p. 258 — similitud 0.3217
+
+**Detalle de puntaje:** tfidf=0.2417; bonus=0.0800
+
+> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Últimas Reformas DOF 02-06-2026 DECRETO por el que se reforman los artículos 71, 72 y 78 de la Constitución Política de los Estados Unidos Mexicanos.
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf — p. 259 — similitud 0.3212
+
+**Detalle de puntaje:** tfidf=0.2412; bonus=0.0800
+
+> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Última Reforma DOF 07-10-2026 DECRETO por el que se reforman los artículos 71, 72 y 78 de la Constitución Política de los Estados Unidos Mexicanos.
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf — p. 236 — similitud 0.3078
+
+**Detalle de puntaje:** tfidf=0.2278; bonus=0.0800
+
+> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Últimas Reformas DOF 02-06-2026 DECRETO que reforma, adiciona y deroga diversas disposiciones de la Constitución Política de los Estados Unidos Mexicanos.
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf — p. 237 — similitud 0.3071
+
+**Detalle de puntaje:** tfidf=0.2271; bonus=0.0800
+
+> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Última Reforma DOF 07-10-2026 DECRETO que reforma, adiciona y deroga diversas disposiciones de la Constitución Política de los Estados Unidos Mexicanos.
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Consulta 2026-10-09.pdf — p. 266 — similitud 0.3033
+
+**Detalle de puntaje:** tfidf=0.2233; bonus=0.0800
+
+> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Última Reforma DOF 07-10-2026 DECRETO por el que se reforman y adicionan diversas disposiciones de la Constitución Política de los Estados Unidos Mexicanos, en materia política.
+
+### Constitucion Politica de los Estados Unidos Mexicanos - Camara de Diputados.pdf — p. 265 — similitud 0.3030
+
+**Detalle de puntaje:** tfidf=0.2230; bonus=0.0800
+
+> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Últimas Reformas DOF 02-06-2026 DECRETO por el que se reforman y adicionan diversas disposiciones de la Constitución Política de los Estados Unidos Mexicanos, en materia política.
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
