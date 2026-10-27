@@ -44,7 +44,7 @@ Revisión estructural: 22 de septiembre de 2026. Preparación local no equivale 
 - [Base reutilizable de actividad](reporte-seminario-i-plantilla-actividad.tex): portada ITESCA, marca de agua, pie institucional, metadatos y contenido parametrizable. No compilar directamente.
 - [Notas unificadas](Readme%20-%20Seminario%20I.md): apuntes por unidad e histórico del reporte base anterior.
 - [Referencias](Readme%20-%20Seminario%20I.md): materiales y guía breve oficial APA incorporados localmente.
-- [Trece planeaciones normalizadas](planeaciones-seminario-i/INDICE-GENERADAS.md), sin reemplazar las fichas originales ni las planeaciones por unidad.
+- [Planeaciones vigentes JSON/Markdown](planeaciones-seminario-i/README.md): 18 actividades y un foro de presentacion; la normalizacion documental no altera los estados de entrega registrados aqui.
 - [Inventario](estructura-aulatex.json) y [compilación](COMPILACION-seminario-i.md) actualizados.
 
 ## Límites académicos

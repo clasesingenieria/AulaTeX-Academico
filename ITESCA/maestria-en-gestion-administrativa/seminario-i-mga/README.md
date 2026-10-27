@@ -17,7 +17,7 @@ Espacio de trabajo para construir el anteproyecto de titulación de la MGA del I
 - [Notas de T12](referencias-seminario-i/notas-seminario-i/actividad-12-hipotesis/README.md): consignas, fuentes, pasajes, generador, respaldo y comprobaciones. No son el reporte ni el archivo de entrega.
 - [Contrato de compilación y plantillas](COMPILACION-seminario-i.md).
 - [Estado de entregables y revisión estructural](ESTADO-ENTREGABLES.md).
-- [Planeaciones normalizadas por módulo](planeaciones-seminario-i/INDICE-GENERADAS.md): trece fichas, sin reemplazar las planeaciones por unidad.
+- [Planeaciones JSON y Markdown visual](planeaciones-seminario-i/README.md): 18 pares numerados y un foro de presentacion sin numero. Las fichas anteriores y sus importaciones estan absorbidas; no hay planeaciones paralelas ni habilitacion automatica.
 - `programa-analitico-seminario-i.md`: objetivo, temario, evaluación y calendario.
 - `planeaciones-seminario-i/`: control de las 18 actividades.
 - [Notas por actividad](referencias-seminario-i/notas-seminario-i/README.md): materiales docentes, formatos, consignas y revisiones; apuntes transversales en materiales generales y versiones historicas identificadas.
