@@ -5,7 +5,13 @@ Fuente editable: `../../../reporte-teoria-del-estado-y-constitucion-Actividad-3.
 PDF compilado: `../../../entregas-teoria-del-estado-y-constitucion/2026_TeoriaEstado_S3_Martin Jonathan de la Cruz.pdf`.
 Verificar personalmente el juicio critico y el formato antes de una eventual entrega.
 
-## Planificacion y aula
+## Evidencia de consulta del aula
+
+Consigna, rubrica, formato, secuencia y controles editoriales estan en la
+[planeacion S3](../../../planeaciones-teoria-del-estado-y-constitucion/planeacion-teoria-del-estado-y-constitucion-Actividad-3.md)
+y su [modelo JSON](../../../planeaciones-teoria-del-estado-y-constitucion/planeacion-teoria-del-estado-y-constitucion-Actividad-3.json).
+Este seguimiento conserva investigacion y evidencia historica, no una
+planeacion paralela.
 
 - [Consulta autenticada](consulta-plataforma-S3.json): registrada el
   2026-10-13 00:07 UTC y actualizada en la misma sesion. Curso 3432;
@@ -14,27 +20,11 @@ Verificar personalmente el juicio critico y el formato antes de una eventual ent
   [PDF compartido en la nota 02](../actividad-02-linea-de-tiempo/Planificacion-de-actividades-S2-S3-Teoria-del-Estado-y-Constitucion.pdf);
   SHA256 `27B05F61193E5C83408C54F87B80D28A3224464B6DA05742181127883C78C8B0`.
   La copia en Downloads y la local coinciden en tamano (613662 bytes).
-- El PDF docente, pp. 3, 5--7, fija 18/10/2026 23:55 HC, Word como
-  elaboracion y PDF como entrega, un intento, APA 7 y rubrica
-  5+5+2+2+1=15. No fija un limite de paginas S3.
-- Por instruccion posterior del estudiante, el trabajo se elabora
-  exclusivamente en LaTeX y el PDF es el unico artefacto de entrega.
-  La observacion docente de "elaboracion en Word" permanece documentada
-  como diferencia de procedimiento; no se afirma que la plataforma haya
-  dispensado formalmente ese requisito.
 - En la reconsulta el curso solo mostraba tarea S2 (214812), no tarea
   S3. Una captura aportada por el estudiante muestra el enlace S3
   bloqueado con el aviso "Disponible a partir de 13 de octubre de 2026";
-  no acredita acceso a su consigna interna. Pendientes: confirmar cierre
-  tecnico, texto/rubrica de la tarea,
-  grafia exacta del nombre y estado de recepcion una vez publicada.
-  La fecha docente no es prueba del cierre tecnico de Moodle.
-- El formato docente DOCX se consulto como referencia institucional,
-  pero no se usa como editor ni se genera un Word entregable. Su rotulo
-  generico `(Resena)` no sustituye `Analisis de hechos` de la consigna.
-  La estructura se materializo en LaTeX como introduccion, desarrollo
-  tematico, conclusiones y referencias. La [planeacion S3 consolidada](../../../planeaciones-teoria-del-estado-y-constitucion/planeacion-teoria-del-estado-y-constitucion-Actividad-3.md#precisiones-absorbidas)
-  registra el conflicto y los localizadores del original.
+  no acredita acceso a su consigna interna ni disponibilidad actual.
+  Las confirmaciones pendientes estan en el par de planeacion.
 
 ## Fuentes y limites de la investigacion
 

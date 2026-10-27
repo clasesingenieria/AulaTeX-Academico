@@ -171,3 +171,26 @@ Antecedentes de la ficha normalizada S3, incorporados el 27 de octubre de 2026. 
 - El rotulo generico `(Resena)` del DOCX no sustituye el producto especifico `Analisis de hechos`. Conservar identificacion y secuencia I. Desarrollo, II. Opinion, III. Bibliografia, nombrando el producto conforme a la consigna S3.
 - Fecha documental: 18 de octubre de 2026, 23:55 HC; restricciones en paginas 3, 5 y 6. Cierre tecnico Moodle y grafia exacta del nombre del PDF pendientes de confirmacion en la tarea S3, aun no visible en aquella consulta. No se documenta un maximo de paginas.
 - Rubrica en pagina 7: hechos historicos 5, relacion entre pensadores y Sentimientos 5, estructura y forma 2, opinion critica 2, APA 7 un punto; total 15. La puntuacion automatica de AulaTeX no equivale a calificacion docente. Se mantienen un intento, penalizaciones y declaracion de IA ya documentados.
+
+### Planeacion integrada desde notas
+
+La ficha de trabajo registraba una consulta historica del 4 de octubre de 2026 y una sesion el 12 de octubre, 7:00 HC. Son antecedentes documentales, no una reconsulta ni programacion actual; no convertir zona sin verificar aula.
+
+Distribucion local propuesta de las cuatro horas docentes:
+
+| Fase editorial | Minutos | Resultado esperado |
+| --- | --- | --- |
+| Lectura primaria y contexto | 90 | Notas con localizadores y contexto de ambos procesos |
+| Matriz de tesis y puntos de Sentimientos de la Nacion | 45 | Relaciones y diferencias, separando semejanza de influencia probada |
+| Redaccion del analisis y conclusion critica | 60 | Argumentos sobre ambos procesos y autores, no una cronologia sustitutiva |
+| Contraste de fuentes, revision y exportacion | 45 | Citas, formato, nombre y PDF cotejados |
+
+Controles locales, no rubrica adicional:
+
+- Comprobar ambos procesos y autores, puntos localizables de Sentimientos, diferencias, conclusion, citas, formato y nombre.
+- Cotejar ediciones primarias y revisar personalmente los argumentos. Ninguna puntuacion automatica equivale a calificacion docente.
+- Declarar la asistencia real de IA en organizacion, redaccion, busqueda, contraste y maquetacion, sin atribuir investigacion independiente no acreditada.
+- No imponer un cuadro horizontal ni limites de extension de otras materias; preservar el producto analisis de hechos.
+- La nota historica sobre Word aplazado no revoca la instruccion posterior de LaTeX exclusivo. El conflicto docente de formato permanece abierto.
+
+La investigacion, el estado historico del borrador y los controles de las versiones realizadas permanecen en el [seguimiento S3](../referencias-teoria-del-estado-y-constitucion/notas-teoria-del-estado-y-constitucion/actividad-03-analisis-de-hechos/SEGUIMIENTO-S3.md).

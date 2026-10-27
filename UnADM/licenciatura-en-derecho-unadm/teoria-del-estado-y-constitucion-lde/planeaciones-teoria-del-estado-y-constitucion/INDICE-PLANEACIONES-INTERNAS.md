@@ -23,4 +23,11 @@ La consigna puede sustentarse con un documento docente archivado; Moodle no es o
 
 Integracion documental: cinco preguntas diagnosticas, linea de tiempo, analisis de hechos y tres preguntas del foro S4; rubricas de 10, 15 y 4 puntos, respectivamente. El diagnostico no tiene rubrica numerica acreditada. Se distinguen consigna docente, secuencia editorial y campos desconocidos.
 
+Organizacion de notas completada el 27 de octubre: fichas derivadas S2/S3
+retiradas tras conservar sus textos y hashes en `extensions.note_absorption`
+de sus modelos. S3 incorpora la distribucion editorial de 240 minutos; S4
+incorpora pautas de intervencion y reporte interno sin hacerlas requisitos
+docentes. Los seguimientos conservan investigacion y comprobantes y remiten
+al par. No se eliminan originales docentes ni resultados automaticos historicos.
+
 Pendiente: revision personal, cotejo primario y confirmacion del conflicto Word/LaTeX. No se admite un ciclo por borrar fechas ni por una puntuacion automatica. Se preservan los comprobantes S2 y S4; no repetir entrega ni publicacion.

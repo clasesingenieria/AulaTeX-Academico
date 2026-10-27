@@ -1,8 +1,11 @@
 # Notas por actividad
 
-Planeaciones de trabajo absorbidas: [S2](actividad-02-linea-de-tiempo/planeacion-S2.md)
-y [S3](actividad-03-analisis-de-hechos/planeacion-S3.md). El indice de
-planeaciones anterior esta preservado en materiales-generales/historico-control.
+Las fichas derivadas S2 y S3 quedaron absorbidas en sus pares de planeacion:
+[S2](../../planeaciones-teoria-del-estado-y-constitucion/planeacion-teoria-del-estado-y-constitucion-Actividad-2.md)
+y [S3](../../planeaciones-teoria-del-estado-y-constitucion/planeacion-teoria-del-estado-y-constitucion-Actividad-3.md).
+Los JSON conservan sus textos historicos completos y hashes; ya no hay
+fichas de planeacion paralelas en las notas de actividad. El indice anterior
+esta preservado en materiales-generales/historico-control.
 El [indice vigente de planeaciones](../../planeaciones-teoria-del-estado-y-constitucion/INDICE-PLANEACIONES-INTERNAS.md)
 enlaza los cuatro pares editoriales JSON/Markdown. Los PDF/TXT docentes
 estan directamente en la raiz de las notas de actividad:
@@ -14,6 +17,11 @@ Los originales no se dividen ni se duplican. Sus erratas, fechas y politicas
 son evidencia documental; no certifican vigencia juridica ni disponibilidad
 actual de plataforma. El [registro de reubicaciones](../../planeaciones-teoria-del-estado-y-constitucion/reubicaciones-documentales.json)
 conserva los movimientos y hashes.
+
+Las notas conservan fuentes, argumentos del estudiante, borradores, consultas,
+comprobantes y resultados automaticos historicos. Los requisitos, rubricas,
+secuencias y pautas editoriales pertenecen al par Markdown/JSON; los
+seguimientos S3 y S4 enlazan al par sin repetir una planeacion independiente.
 
 Organizacion del 11 de octubre de 2026 siguiendo el patron de Antecedentes,
 sin copiar consignas ni identidades de otras materias.

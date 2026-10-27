@@ -141,3 +141,20 @@ Existe comprobante historico de entrega o publicacion principal. No repetirla; n
 
 - Cotejar fuentes primarias y revision personal antes de aprobar; no se certifica vigencia juridica por el material docente.
 - El PDF S4/S5 conserva etiquetas S2/S3 y una sesion con ano 2025; no se corrigen los originales ni se usan esas fechas como programacion.
+
+### Planeacion integrada desde notas
+
+Antecedente documental: recurso 218022, PDF S4/S5, paginas 3-6. La fecha docente del foro era el 25 de octubre de 2026, 23:55 HC; no acredita reapertura ni disponibilidad actual.
+
+Pautas editoriales locales, no requisitos docentes adicionales:
+
+- Preparar intervenciones completas copiables con respuestas argumentadas a las tres preguntas, citas cotejadas, referencias propias y pregunta de cierre.
+- No importar limites de palabras ni numeros de replicas de otras materias: el PDF consultado no fija extension ni replicas obligatorias.
+- Una replica opcional debe responder a una intervencion real y reconsultada. No inventar texto de companeros ni publicar automaticamente.
+- Interpretar "enciclopedistas" en el debate ilustrado, sin afirmar que los cinco autores fueran miembros del equipo editor de la Enciclopedia.
+- Reporte interno: portada UnADM con marca centrada, resumen, indice, introduccion, un desarrollo tematico con marco conceptual, preguntas, textos y lectura posterior, conclusiones en pagina propia y referencias. Esta estructura no es un formato obligatorio de la intervencion en plataforma.
+- Preservar etiquetas S2/S3 y la sesion S5 con ano 2025 como erratas documentales, no como calendario operativo.
+
+Artefactos locales: [reporte interno](../reporte-teoria-del-estado-y-constitucion-Actividad-4.tex), [participacion](../foro-participacion-Actividad-4.txt) y [replica opcional](../foro-replica-Actividad-4.txt). Su disponibilidad no autoriza otra publicacion.
+
+Los comprobantes, el estado de publicacion y los localizadores de la investigacion permanecen en el [seguimiento S4](../referencias-teoria-del-estado-y-constitucion/notas-teoria-del-estado-y-constitucion/actividad-04-foro-estado/SEGUIMIENTO-S4.md).
