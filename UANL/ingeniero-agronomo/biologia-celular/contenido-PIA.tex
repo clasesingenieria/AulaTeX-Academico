@@ -1,25 +1,6 @@
-\begin{center}
-	{\fontsize{16}{20}\selectfont\bfseries\color{uanlblue} Ultraestructura, dinámica biosintética y reprogramación molecular de la célula plasmática: de la respuesta inmune humoral a la fisiología celular especializada}\\[0.25cm]
-	{\fontsize{13}{16}\selectfont\itshape Artículo de revisión científica sobre los mecanismos de diferenciación, compartimentación de endomembranas, secreción constitutiva de inmunoglobulinas y señalización en nichos de supervivencia}\\[0.4cm]
-	{\fontsize{11}{14}\selectfont\textbf{Carlos Mauricio Carvajal Coronado}\quad (Matrícula: 1977875)}\\[0.15cm]
-	{\fontsize{10}{13}\selectfont Facultad de Agronomía, Universidad Autónoma de Nuevo León, Campus Ciencias Agropecuarias, General Escobedo / Marín, N.L.}\\[0.15cm]
-	{\fontsize{10}{13}\selectfont Unidad de Aprendizaje: Biología Celular \textbar\ Docente: Dr. Miguel Ángel Dector Carrillo}
-\end{center}
-
-\vspace{0.4cm}
-
-\begin{abstract}
-\noindent\textbf{Resumen:} La célula plasmática (o plasmocito) representa el estadio de diferenciación terminal más altamente especializado del linaje de linfocitos B, adaptada morfológica y metabólicamente para operar como una biofábrica macromolecular dedicada a la síntesis y secreción masiva de inmunoglobulinas (anticuerpos). El presente artículo de revisión examina exhaustivamente la biología estructural, fisiológica y molecular de la célula plasmática. Se analiza su ontogenia a partir del encuentro antigénico en centros germinales o focos extrafoliculares, gobernada por una red de represión y activación transcripcional que silencia la identidad proliferativa de célula B (mediante la inactivación de PAX5 y BCL6) e induce el eje maestro de diferenciación integrado por IRF4, PRDM1/Blimp-1 y la forma empalmada de XBP-1 (XBP-1s). Ultraestructuralmente, la célula experimenta una expansión geométrica de su sistema de endomembranas: el retículo endoplásmico rugoso (RER) se hipertrofia hasta ocupar más del 50\% del volumen citoplasmático en densas cisternas lamelares, coordinado con un aparato de Golgi perinuclear prominente y una reorganización de la heterocromatina nuclear en el patrón clásico de ``rueda de carreta''. Esta intensa carga proteica exige la activación permanente pero controlada de la Respuesta a Proteínas Desplegadas (UPR) mediante los sensores IRE1$\alpha$, PERK y ATF6, junto con chaperonas moleculares (BiP/GRP78, PDI), evitando la muerte por estrés proteotóxico. Finalmente, se abordan las vías de exocitosis constitutiva, el recableado metabólico impulsado por la importación mitocondrial de piruvato y los circuitos de señalización por quimiocinas (pérdida de CXCR5/CCR7 y ganancia de CXCR4) que guían el anclaje de células plasmáticas de larga vida (LLPC) en nichos estromales de médula ósea mediados por CXCL12, APRIL e IL-6, discutiendo sus implicaciones en la inmunología veterinaria y la biotecnología agropecuaria.
-\vspace{0.25cm}
-
-\noindent\textbf{Palabras clave:} Célula plasmática; inmunoglobulinas; retículo endoplásmico rugoso; diferenciación celular; Blimp-1; XBP-1; respuesta a proteínas desplegadas; exocitosis constitutiva; nicho estromal.
-\end{abstract}
-
-\vspace{0.3cm}
-
 \section{Introducción y contexto biológico}
 
-La inmunidad humoral en los vertebrados mandibulados representa una de las adaptaciones evolutivas más complejas para neutralizar agentes patógenos en los fluidos extracelulares \parencite{alberts2022molecular,abbas2022cellular}. En el núcleo funcional de este sistema se encuentra la \textbf{célula plasmática} (plasmocito), descrita seminalmente por Astrid Fagraeus a mediados del siglo XX como el efector celular exclusivo responsable de la producción y liberación sostenida de anticuerpos específicos \parencite{nutt2015generation}.
+La inmunidad humoral en los vertebrados mandibulados representa una de las adaptaciones evolutivas más complejas para neutralizar agentes patógenos en los fluidos extracelulares \parencite{alberts2022molecular,abbas2022cellular}. En el núcleo funcional de este sistema se encuentra la \textbf{célula plasmática} (plasmocito), descrita seminalmente por Astrid Fagraeus a mediados del siglo XX como el efector celular exclusivo responsable de la producción y liberación sostenida de anticuerpos específicos~\parencite{nutt2015generation}.
 
 A diferencia de su precursor, el linfocito B virgen en reposo —cuya morfología quiescente se caracteriza por una relación núcleo-citoplasma elevada y un metabolismo basal orientado a la vigilancia inmune—, la célula plasmática experimenta una metamorfosis fisiológica radical. Al comprometerse con la diferenciación terminal, abandona permanentemente el ciclo celular mitótico (permaneciendo en fase $G_0$) y se transforma en una biofábrica celular especializada, capaz de traducir, procesar, plegar y secretar entre $10^3$ y $10^4$ moléculas de anticuerpo por segundo por célula \parencite{cenci2008progressive,shapiroshelef2005regulation}.
 
@@ -42,12 +23,12 @@ La transición de una célula B que presenta antígeno a una célula secretora i
 
 \begin{figure}[htbp]
 \centering
-\begin{tikzpicture}[node distance=2.2cm, auto]
-\node[draw=uanlblue, thick, rounded corners, fill=uanlblue!10, text width=5cm, align=center, font=\small\bfseries] (bcell) {Programa Linfocito B:\\ PAX5 \textbar\ BCL6 \textbar\ BACH2};
-\node[draw=red!70!black, thick, rounded corners, fill=red!10, text width=5cm, align=center, font=\small\bfseries, right of=bcell, xshift=5cm] (plasma) {Programa Plasmocítico:\\ IRF4 \textbar\ Blimp-1 \textbar\ XBP-1s};
+\begin{tikzpicture}[node distance=1.0cm, auto, >=Latex]
+\node[draw=uanlblue, thick, rounded corners=3pt, fill=uanlblue!10, text width=6.2cm, align=center, font=\scriptsize\bfseries] (bcell) {Programa Linfocito B:\\ PAX5 \textbar\ BCL6 \textbar\ BACH2};
+\node[draw=red!70!black, thick, rounded corners=3pt, fill=red!10, text width=6.2cm, align=center, font=\scriptsize\bfseries, below=0.9cm of bcell] (plasma) {Programa Plasmocítico:\\ IRF4 \textbar\ Blimp-1 \textbar\ XBP-1s};
 
-\draw[->, ultra thick, red!80!black] (plasma) to [bend right=30] node[above, font=\footnotesize\bfseries, text=red!80!black] {Represión transcripcional directa} (bcell);
-\draw[->, ultra thick, uanlblue] (bcell) to [bend right=30] node[below, font=\footnotesize\bfseries, text=uanlblue] {Inhibición basal en reposo} (plasma);
+\draw[->, thick, red!80!black] ([xshift=10pt]plasma.north) -- ([xshift=10pt]bcell.south) node[midway, right, font=\tiny\bfseries, text=red!80!black] {Represión directa};
+\draw[->, thick, uanlblue] ([xshift=-10pt]bcell.south) -- ([xshift=-10pt]plasma.north) node[midway, left, font=\tiny\bfseries, text=uanlblue] {Inhibición basal};
 \end{tikzpicture}
 \caption{Circuito recíproco de interruptor genético en la diferenciación de células B hacia células plasmáticas.}
 \label{fig:circuito_transcripcional}
@@ -73,7 +54,7 @@ Al microscopio óptico con tinción de Wright-Giemsa, la célula plasmática pre
 	\item \textbf{Mitocondrias alargadas y bioenergética:} Dispersas entre las cisternas del RER se localizan numerosas mitocondrias con crestas densas. Estas proveen el suministro continuo de trifosfato de adenosina (ATP) necesario para energizar la translocasa Sec61, la acción de las chaperonas ATPasas de la familia Hsp70 (BiP) y el tráfico vesicular motorizado por dineínas y cinesinas \parencite{lam2018metabolic}.
 \end{enumerate}
 
-\begin{table}[htbp]
+\begin{table*}[t]
 \centering
 \caption{Comparación morfológica, ultraestructural y funcional entre el linfocito B virgen quiescente y la célula plasmática madura.}
 \label{tab:comparacion_b_plasma}
@@ -93,7 +74,7 @@ Marcadores de superficie & $\text{CD19}^+$, $\text{CD20}^+$, $\text{CXCR5}^+$, $
 Sensores de estrés UPR & Basales, inactivos & Altamente inducidos y sintonizados \\
 \bottomrule
 \end{tabularx}
-\end{table}
+\end{table*}
 
 \section{Dinámica biosintética, ensamblaje de anticuerpos y estrés reticular}
 
@@ -113,7 +94,7 @@ En el interior del retículo:
 \subsection{La Respuesta a Proteínas Desplegadas (UPR) como adaptación fisiológica}
 Dado que un plasmocito produce millones de enlaces disulfuro y polipéptidos por minuto, el potencial de desbalance y acumulación de intermediarios mal plegados es colosal. Para evitar la toxicidad proteica, la célula plasmática integra de manera permanente la \textbf{Respuesta a Proteínas Desplegadas} (UPR, por sus siglas en inglés) \parencite{walter2011unfolded,cenci2008progressive}:
 
-\begin{figure}[htbp]
+\begin{figure*}[t]
 \centering
 \begin{tikzpicture}[node distance=2.8cm, auto]
 \node[draw=uanlblue, thick, rounded corners, fill=uanlblue!15, text width=3.8cm, align=center, font=\small\bfseries] (stress) {Carga Biosintética Masiva en el RER\\ (Inmunoglobulinas nascentes)};
@@ -135,7 +116,7 @@ Dado que un plasmocito produce millones de enlaces disulfuro y polipéptidos por
 \end{tikzpicture}
 \caption{Los tres brazos efectores de la Respuesta a Proteínas Desplegadas (UPR) operando como un circuito homeostático en la célula plasmática.}
 \label{fig:upr}
-\end{figure}
+\end{figure*}
 
 \begin{itemize}
 	\item \textbf{Sensor IRE1$\alpha$ (Inositol-requiring enzyme 1$\alpha$):} Es una endoribonucleasa y quinasa transmembranal del RER. La sobrecarga proteica disocia a BiP de IRE1$\alpha$, permitiendo su oligomerización y autofosforilación. La enzima corta dos sitios específicos en el ARNm inmaduro de \emph{Xbp1}, eliminando un intrón de 26 nucleótidos. Esta alteración del marco de lectura genera el factor de transcripción \textbf{XBP-1s}, el cual transloca al núcleo e induce genes de fosfolípidos (fosfatidilcolina) para expandir la superficie de la bicapa del RER y codifica componentes de degradación asociada al retículo (ERAD) \parencite{todd2009xbp1}.
@@ -158,7 +139,7 @@ Las vesículas COPII pierden su cubierta y se fusionan homotípicamente para con
 \end{enumerate}
 
 \subsection{Vía secretora constitutiva independiente de gránulos}
-A diferencia de las células glandulares endocrinas o exocrinas (como los acinos pancreáticos), que almacenan sus productos en gránulos secretores densos para liberarlos únicamente tras una despolarización o estímulo hormonal (secreción regulada), la célula plasmática madura exhibe una **exocitosis constitutiva continua y no regulada** \parencite{alberts2022molecular}:
+A diferencia de las células glandulares endocrinas o exocrinas (como los acinos pancreáticos), que almacenan sus productos en gránulos secretores densos para liberarlos únicamente tras una despolarización o estímulo hormonal (secreción regulada), la célula plasmática madura exhibe una \textbf{exocitosis constitutiva continua y no regulada} \parencite{alberts2022molecular}:
 \begin{itemize}
 	\item Desde la red del \emph{trans}-Golgi (TGN), los anticuerpos procesados son segregados continuamente en vesículas secretoras pos-Golgi sin marcador de retención ni almacenamiento en reservorios intracelulares.
 	\item Las vesículas son transportadas a lo largo de filamentos de actina y microtúbulos por proteínas motoras hasta la membrana plasmática.
@@ -172,17 +153,17 @@ Las células plasmáticas se clasifican funcionalmente en dos subpoblaciones dis
 \subsection{Recableado de receptores de quimiocinas (Homing a Médula Ósea)}
 Para transitar de un plasmablasto migratorio generado en un ganglio linfoide periférico o bazo a una célula residente estable, la célula experimenta una reprogramación estricta de sus receptores de migración (\emph{homing}):
 \begin{itemize}
-	\item **Pérdida de receptores foliculares:** La supresión de PAX5 apaga la expresión de **CXCR5** (receptor para CXCL13, necesario para la retención en folículos) y **CCR7** (receptor para CCL19/CCL21, que retiene a las células en zonas de linfocitos T).
-	\item **Sobreexpresión de CXCR4:** En contraste, la célula incrementa drásticamente la densidad del receptor de quimiocina **CXCR4**. Las células del estroma de la médula ósea y del bazo sintetizan y secretan constitutivamente el ligando quimiotáctico **CXCL12** (SDF-1$\alpha$). El gradiente quimiotáctico de CXCL12 dirige la entrada y arresto de los plasmablastos a través del endotelio vascular hacia los cordones hematopoyéticos de la médula ósea \parencite{radbruch2006competence,tellier2019plasma}.
+	\item \textbf{Pérdida de receptores foliculares:} La supresión de PAX5 apaga la expresión de \textbf{CXCR5} (receptor para CXCL13, necesario para la retención en folículos) y \textbf{CCR7} (receptor para CCL19/CCL21, que retiene a las células en zonas de linfocitos T).
+	\item \textbf{Sobreexpresión de CXCR4:} En contraste, la célula incrementa drásticamente la densidad del receptor de quimiocina \textbf{CXCR4}. Las células del estroma de la médula ósea y del bazo sintetizan y secretan constitutivamente el ligando quimiotáctico \textbf{CXCL12} (SDF-1$\alpha$). El gradiente quimiotáctico de CXCL12 dirige la entrada y arresto de los plasmablastos a través del endotelio vascular hacia los cordones hematopoyéticos de la médula ósea \parencite{radbruch2006competence,tellier2019plasma}.
 \end{itemize}
 
 \subsection{Mecanismos moleculares del nicho estromal medular}
-En la médula ósea, las células plasmáticas compiten por un número finito de microambientes protectores especializados denominados **nichos multicelulares de supervivencia**, conformados por células estromales reticulares, osteoblastos y eosinófilos residentes \parencite{radbruch2006competence}:
+En la médula ósea, las células plasmáticas compiten por un número finito de microambientes protectores especializados denominados \textbf{nichos multicelulares de supervivencia}, conformados por células estromales reticulares, osteoblastos y eosinófilos residentes \parencite{radbruch2006competence}:
 
 \begin{enumerate}
-	\item **Señalización por factores de supervivencia (APRIL y BAFF):** Las células estromales y eosinófilos secretan \textbf{APRIL} (\emph{A Proliferation-Inducing Ligand}) y \textbf{BAFF} (\emph{B-Cell Activating Factor}). La célula plasmática expresa con avidez el receptor **BCMA** (antígeno de maduración de células B / TNFRSF17). La unión de APRIL a BCMA activa la cascada de señalización intracelular dependiente de NF-$\kappa$B, la cual promueve la transcripción continua del gen antiapoptótico **Mcl-1** (de la familia Bcl-2), bloqueando la formación de poros mitocondriales por Bax/Bak y permitiendo la longevidad celular por décadas \parencite{tellier2019plasma}.
-	\item **Señalización por Interleucina-6 (IL-6):** La IL-6 liberada en el estroma se une a su receptor heteromérico (IL-6R / gp130), activando la vía de transducción JAK-STAT3, la cual potencia de manera sinérgica la actividad promotora de Blimp-1 y refuerza la maquinaria secretora.
-	\item **Adhesión a la matriz extracelular:** La interacción mecánica con la matriz estromal está mediada por la integrina $\alpha_4\beta_1$ (VLA-4) presente en el plasmocito, la cual se ancla fuertemente a la molécula de adhesión celular vascular 1 (\textbf{VCAM-1}) expresada en fibroblastos estromales y a fragmentos de fibronectina tisular. Adicionalmente, el proteoglicano de superficie **CD138** (sindecano-1) secuestra ligandos solubles de heparán sulfato, estabilizando el anclaje físico.
+	\item \textbf{Señalización por factores de supervivencia (APRIL y BAFF):} Las células estromales y eosinófilos secretan \textbf{APRIL} (\emph{A Proliferation-Inducing Ligand}) y \textbf{BAFF} (\emph{B-Cell Activating Factor}). La célula plasmática expresa con avidez el receptor \textbf{BCMA} (antígeno de maduración de células B / TNFRSF17). La unión de APRIL a BCMA activa la cascada de señalización intracelular dependiente de NF-$\kappa$B, la cual promueve la transcripción continua del gen antiapoptótico \textbf{Mcl-1} (de la familia Bcl-2), bloqueando la formación de poros mitocondriales por Bax/Bak y permitiendo la longevidad celular por décadas \parencite{tellier2019plasma}.
+	\item \textbf{Señalización por Interleucina-6 (IL-6):} La IL-6 liberada en el estroma se une a su receptor heteromérico (IL-6R / gp130), activando la vía de transducción JAK-STAT3, la cual potencia de manera sinérgica la actividad promotora de Blimp-1 y refuerza la maquinaria secretora.
+	\item \textbf{Adhesión a la matriz extracelular:} La interacción mecánica con la matriz estromal está mediada por la integrina $\alpha_4\beta_1$ (VLA-4) presente en el plasmocito, la cual se ancla fuertemente a la molécula de adhesión celular vascular 1 (\textbf{VCAM-1}) expresada en fibroblastos estromales y a fragmentos de fibronectina tisular. Adicionalmente, el proteoglicano de superficie \textbf{CD138} (sindecano-1) secuestra ligandos solubles de heparán sulfato, estabilizando el anclaje físico.
 \end{enumerate}
 
 \subsection{Bioenergética mitocondrial y transporte de piruvato}
@@ -201,5 +182,3 @@ En el contexto laboral y profesional de la ingeniería agronómica y la producci
 	\item \textbf{Biotecnología de anticuerpos recombinantes para la sanidad vegetal:} La ingeniería molecular de líneas celulares derivadas de plasmocitos (mielomas e hibridomas) constituye la piedra angular para sintetizar anticuerpos monoclonales con especificidad antigénica estricta. Estos reactivos biológicos se emplean hoy en pruebas de inmunoensayo ligadas a enzimas (ELISA) y tiras reactivas de flujo lateral para la detección temprana de virus fitopatógenos (como el virus del mosaico del tabaco o el virus de la tristeza de los cítricos) y bacterias cuarentenarias en semillas y plántulas comerciales.
 	\item \textbf{Modelado del estrés celular en biofactorías:} La resiliencia del retículo endoplásmico de la célula plasmática frente a la sobrecarga proteica mediante la vía IRE1$\alpha$--XBP-1s ofrece lecciones bioingenieriles directas para diseñar plantas transgénicas y líneas de biofermentación capaces de producir proteínas heterólogas con alto rendimiento sin activar mecanismos celulares apoptóticos.
 \end{enumerate}
-
-\newpage
