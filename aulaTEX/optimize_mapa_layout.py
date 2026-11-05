@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import argparse
 import math
+import os
 import pathlib
 import re
 import subprocess
@@ -208,7 +209,11 @@ def bbox(n: Node):
         return (n.x - w / 2 - pad, n.y - h / 2 - pad, n.x + w / 2 + pad, n.y + h / 2 + pad)
     pad = 0.10
     hw = STYLE_W.get(n.style, 2.8) / 2 + pad
-    hh = STYLE_H.get(n.style, 1.0) / 2 + pad
+    num_breaks = n.text.count(r"\\")
+    clean_txt = re.sub(r"\[a-zA-Z]+", "", n.text)
+    raw_lines = max(1, num_breaks + 1, len(clean_txt) // 30 + 1)
+    est_h = max(STYLE_H.get(n.style, 1.0), raw_lines * 0.42 + 0.3)
+    hh = est_h / 2 + pad
     return (n.x - hw, n.y - hh, n.x + hw, n.y + hh)
 
 
@@ -334,10 +339,10 @@ def _box_overlap_area(bx, ny):
 def place_labels(block: str, nodes) -> str:
     r"""HEURÍSTICA EFECTIVA anti-empalme de etiquetas: para cada \draw ... node[mclabel]{txt},
     prueba varias posiciones (pos) a lo largo de la arista Y desplazamientos perpendiculares,
-    elige la que MENOS solapa con las cajas de TODOS los nodos y emite
-    node[mclabel, pos=P, xshift=..pt, yshift=..pt]. Así la posición real en TikZ coincide con
-    una zona libre (no queda 'comida' sobre un nodo)."""
+    elige la que MENOS solapa con las cajas de TODOS los nodos Y con otras etiquetas ya colocadas,
+    y emite node[mclabel, pos=P, xshift=..pt, yshift=..pt]."""
     node_boxes = [bbox(n) for n in nodes.values() if not n.is_label]
+    placed_labels: list[tuple[float, float, float, float]] = []
 
     positions = [0.5, 0.44, 0.56, 0.38, 0.62, 0.32, 0.68, 0.26, 0.74, 0.20, 0.80, 0.15, 0.85]
     # desplazamientos perpendiculares (cm) a evaluar (mayores para sacar la etiqueta del nodo)
@@ -361,11 +366,21 @@ def place_labels(block: str, nodes) -> str:
                 cy = ly + py * off
                 lb = _label_box_at(cx, cy, text)
                 area = sum(_box_overlap_area(lb, nb_) for nb_ in node_boxes)
+                # Penalizar también solapamiento con etiquetas ya colocadas
+                area += sum(_box_overlap_area(lb, pl) * 4.0 for pl in placed_labels)
                 # penalizar alejarse mucho del midpoint y del centro de la arista
                 penalty = abs(pos - 0.5) * 0.15 + abs(off) * 0.05
                 score = area + penalty
                 if best is None or score < best[0]:
-                    best = (score, pos, off, px, py)
+                    best = (score, pos, off, px, py, lb, cx, cy)
+        if best is not None:
+            placed_labels.append(best[5])
+            # actualizar pseudo-nodo si existe
+            for n in nodes.values():
+                if n.is_label and n.a == na and n.b == nb and n.text.strip() == text.strip():
+                    n.x = best[6]
+                    n.y = best[7]
+                    break
         return best
 
     def repl(m):
@@ -375,7 +390,7 @@ def place_labels(block: str, nodes) -> str:
         best = best_for_edge(na, nb, text)
         if best is None:
             return m.group(0)
-        _, pos, off, px, py = best
+        _, pos, off, px, py = best[:5]
         xsh = px * off * 28.4527  # cm -> pt
         ysh = py * off * 28.4527
         extra = f"pos={pos:.2f}"
@@ -410,12 +425,23 @@ def render(preview_tex: str, out_dir: pathlib.Path, idx: int) -> bool:
     tp = out_dir / f"it_{idx:03d}.tex"
     pp = out_dir / f"it_{idx:03d}.pdf"
     tp.write_text(preview_tex, encoding="utf8")
+    env = os.environ.copy()
+    if sys.platform == "win32" and "C:\\texlive\\2026\\bin\\windows" not in env.get("PATH", ""):
+        env["PATH"] = "C:\\texlive\\2026\\bin\\windows;" + env.get("PATH", "")
     r = subprocess.run(
         ["pdflatex", "-interaction=nonstopmode", "-halt-on-error", "-output-directory", str(out_dir), str(tp)],
-        capture_output=True, text=True,
+        env=env, capture_output=True, text=True,
     )
     if not pp.exists():
         return False
+    try:
+        import pymupdf
+        doc = pymupdf.open(pp)
+        pix = doc[0].get_pixmap(dpi=130)
+        pix.save(str(out_dir / f"it_{idx:03d}.png"))
+        return True
+    except Exception:
+        pass
     subprocess.run(["pdftocairo", "-png", "-singlefile", "-r", "130", str(pp), str(out_dir / f"it_{idx:03d}")],
                    capture_output=True, text=True)
     return True

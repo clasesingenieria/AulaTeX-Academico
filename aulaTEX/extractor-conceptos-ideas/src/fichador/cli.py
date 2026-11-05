@@ -37,7 +37,8 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--salida", default=env_str("OUTPUT_DIR", "output"), help="Carpeta de salida. Puede venir de OUTPUT_DIR.")
     parser.add_argument("--recursivo", action=argparse.BooleanOptionalAction, default=env_bool("RECURSIVO", True), help="Busca fuentes en subcarpetas. Default desde RECURSIVO.")
     parser.add_argument("--extensiones", default=env_str("EXTENSIONES", ",".join(sorted(SUPPORTED_EXTENSIONS))), help="Extensiones separadas por coma.")
-    parser.add_argument("--motor", choices=["tfidf", "tfhub", "azure", "openai", "anthropicfoundry"], default=env_str("MOTOR", "azure"), help="Motor: tfidf, tfhub, azure, openai o anthropicfoundry.")
+    parser.add_argument("--motor", choices=["tfidf", "tfhub", "azure", "openai", "anthropicfoundry", "aulatex"], default=env_str("MOTOR", "azure"), help="Motor de recuperacion; aulatex usa chat del motor seleccionado y busqueda local TF-IDF.")
+    parser.add_argument("--aulatex-engine", default=env_str("AULATEX_REQUIRED_ENGINE") or env_str("AULATEX_LLM_ENGINE"), help="Motor de chat de AulaTeX, por ejemplo GPT-5.6-SOL; sin fallback.")
     parser.add_argument("--tfhub-model", default=env_str("TFHUB_MODEL", DEFAULT_TFHUB_MODEL), help="Nombre/ruta del modelo de sentence-transformers.")
     parser.add_argument("--top-k", type=int, default=env_int("TOP_K", 12))
     parser.add_argument("--max-citas", type=int, default=env_int("MAX_CITAS", 8))
@@ -92,6 +93,7 @@ def _build_api_config(args, provider: str):
         openai_api_key=args.openai_api_key,
         openai_embedding_model=args.openai_embedding_model,
         openai_chat_model=args.openai_chat_model,
+        aulatex_engine=args.aulatex_engine,
     )
 
 
@@ -149,20 +151,20 @@ def _load_concepts(args, fragments) -> tuple[list[str], PlaneacionAnalizada | No
         print(f"      Conceptos tras filtro heurístico por materia: {len(filtered)}")
         concepts = filtered
 
-        if args.motor == "anthropicfoundry":
+        if args.motor in {"anthropicfoundry", "aulatex"}:
             concept_curation = curate_concepts_for_subject_with_chat(
                 concepts,
                 subject_slug=subject_slug,
-                config=_build_api_config(args, "anthropicfoundry"),
+            config=_build_api_config(args, args.motor),
                 top_n=args.conceptos_por_materia_top,
             )
             curated = unique_preserve_order(concept_curation.get("kept", []))
             if curated:
-                print(f"      Conceptos tras depuración Anthropic por materia: {len(curated)}")
+                print(f"      Conceptos tras depuración {args.motor} por materia: {len(curated)}")
                 concepts = curated
 
     if concepts and args.normalizar_conceptos_con_chat:
-        provider = "azure" if args.motor == "azure" else "openai" if args.motor == "openai" else "anthropicfoundry" if args.motor == "anthropicfoundry" else "azure"
+        provider = args.motor if args.motor in {"azure", "openai", "anthropicfoundry", "aulatex"} else "azure"
         print(f"      Normalizando conceptos con chat vía {provider}")
         concepts = normalize_concepts_with_chat(concepts, _build_api_config(args, provider), max_items=len(concepts))
 
@@ -302,13 +304,13 @@ def main(argv: list[str] | None = None) -> None:
         print(f"      {concept}: {len(hits)} cita(s) en {source_count} fuente(s)")
 
     refinement_diagnostics = None
-    if args.refinar_fichas_iterativamente and args.motor == "anthropicfoundry":
-        print("      Refinando fichas iterativamente con Anthropic Foundry + recuperación local")
+    if args.refinar_fichas_iterativamente and args.motor in {"anthropicfoundry", "aulatex"}:
+        print(f"      Refinando fichas iterativamente con {args.motor} + recuperación local")
         hits_by_concept, refinement_diagnostics = refine_hits_by_concept(
             concepts,
             hits_by_concept,
             engine,
-            config=_build_api_config(args, "anthropicfoundry"),
+            config=_build_api_config(args, args.motor),
             threshold=threshold,
             max_rounds=args.rondas_refinamiento,
             max_queries=args.consultas_expansion,

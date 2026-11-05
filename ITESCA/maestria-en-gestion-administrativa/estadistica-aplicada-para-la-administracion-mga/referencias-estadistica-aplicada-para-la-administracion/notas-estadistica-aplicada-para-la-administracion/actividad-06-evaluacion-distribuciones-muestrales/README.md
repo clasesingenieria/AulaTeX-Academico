@@ -17,3 +17,15 @@
 - `material-docente/`: copias locales y extracciones `.txt` de los recursos docentes del aula.
 - `corpus-extractor/` y `corpus-extractor-focalizado/`: extractos bibliográficos focalizados de la biblioteca de la materia con localizadores trazables.
 - `investigacion/`: base conceptual e insumos de extracción generados con **Amazon Nova Pro** (`AulaTeX`).
+
+
+## Registro de Resolución en Plataforma y Evidencias
+
+- **Intento Moodle**: `6841` (Módulo `1756`, Curso `209`).
+- **Estado**: **Finalizado** el 1 de noviembre de 2026 (Duración: 10 min 39 s).
+- **Reactivos resueltos**: 14 / 14 preguntas contestadas y confirmadas con rigor matemático y citas APA 7.ª edición.
+- **Carpeta de evidencias y capturas**: [`../cuestionario-2026-11-01/`](../cuestionario-2026-11-01/)
+  - `respuestas-validadas.json`: registro íntegro de las 14 preguntas, opciones, respuestas seleccionadas y justificaciones.
+  - `resumen_preguntas_guardadas.png` y `revision_calificacion_final.png`.
+  - Capturas paso a paso de cada reactivo en plataforma.
+- **Reporte académico compilado**: [`../../../reporte-estadistica-aplicada-para-la-administracion-Actividad-6.pdf`](../../../reporte-estadistica-aplicada-para-la-administracion-Actividad-6.pdf) (15 páginas, XeLaTeX).

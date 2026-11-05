@@ -4,6 +4,8 @@ from dataclasses import dataclass
 import json
 import os
 import re
+import sys
+from pathlib import Path
 from typing import Any, Iterable
 
 from .env_config import load_env
@@ -84,9 +86,15 @@ def get_api_config(
     openai_api_key: str | None = None,
     openai_embedding_model: str | None = None,
     openai_chat_model: str | None = None,
+    aulatex_engine: str | None = None,
 ) -> ApiConfig:
     load_env()
     provider = provider.lower().strip()
+    if provider == "aulatex":
+        engine = aulatex_engine or os.getenv("AULATEX_REQUIRED_ENGINE") or os.getenv("AULATEX_LLM_ENGINE")
+        if not engine:
+            raise RuntimeError("Falta seleccionar --aulatex-engine para el extractor.")
+        return ApiConfig(provider="aulatex", api_key="", base_url=None, embedding_model="", chat_model=engine)
     if provider == "azure":
         raw_base = azure_base_url or os.getenv("AZURE_OPENAI_BASE_URL") or os.getenv("AZURE_OPENAI_ENDPOINT") or os.getenv("OPENAI_BASE_URL")
         key = azure_api_key or os.getenv("AZURE_OPENAI_API_KEY") or os.getenv("OPENAI_API_KEY")
@@ -124,6 +132,13 @@ def get_api_config(
 
 
 def create_client(config: ApiConfig) -> Any:
+    if config.provider == "aulatex":
+        scripts_root = str(Path(__file__).resolve().parents[3])
+        if scripts_root not in sys.path:
+            sys.path.insert(0, scripts_root)
+        from aulatex.llm_bridge import AulaTeXLLMClient
+
+        return AulaTeXLLMClient()
     if config.provider == "anthropicfoundry":
         try:
             from anthropic import AnthropicFoundry  # type: ignore
@@ -170,7 +185,24 @@ def embed_texts(client: Any, model: str, texts: list[str], batch_size: int = 64)
 
 
 def chat_json_data(client: Any, config: ApiConfig, system: str, user: str) -> Any:
-    if config.provider == "anthropicfoundry":
+    if config.provider == "aulatex":
+        result = client.call(
+            config.chat_model,
+            system + "\n\n" + user,
+            max_tokens=4096,
+            timeout_seconds=300,
+        )
+        if not result.ok:
+            raise RuntimeError("El motor AulaTeX seleccionado fallo; no se ejecutara otro proveedor.")
+        print("LLM_RECEIPT " + json.dumps({
+            "engine": result.engine,
+            "requested_deployment": result.requested_deployment,
+            "provider_model": result.provider_model,
+            "finish_reason": result.finish_reason,
+            "usage": result.usage,
+        }, ensure_ascii=True), flush=True)
+        content = result.text.strip()
+    elif config.provider == "anthropicfoundry":
         response = client.messages.create(
             model=config.chat_model,
             system=system,
@@ -184,7 +216,8 @@ def chat_json_data(client: Any, config: ApiConfig, system: str, user: str) -> An
             temperature=0,
         )
 
-    content = extract_text_from_chat_response(response, config.provider)
+    if config.provider != "aulatex":
+        content = extract_text_from_chat_response(response, config.provider)
     fence = re.search(r"```(?:json)?\s*(.*?)```", content, flags=re.S | re.I)
     if fence:
         content = fence.group(1).strip()
@@ -192,6 +225,8 @@ def chat_json_data(client: Any, config: ApiConfig, system: str, user: str) -> An
     try:
         return json.loads(content)
     except json.JSONDecodeError:
+        if config.provider == "aulatex":
+            raise ValueError("El motor AulaTeX no devolvio JSON valido; extraccion detenida.") from None
         obj_match = re.search(r"\{.*\}", content, flags=re.S)
         list_match = re.search(r"\[.*\]", content, flags=re.S)
         for match in (obj_match, list_match):

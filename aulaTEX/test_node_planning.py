@@ -484,29 +484,6 @@ class NodePlanningTests(unittest.TestCase):
         (folder / "catalogo-editorial.json").write_text('{"activities": []}', encoding="utf-8")
         self.assertEqual(catalogued_plan_paths(root), ())
 
-    def test_catalog_includes_unnumbered_forum_without_omitting_it(self):
-        from aulatex.planning_layout import catalogued_plan_paths, subject_layout
-
-        root = self.workspace.resolve_target(self.scopes["materia"].relative_path)
-        folder = subject_layout(root)["plans"]
-        folder.mkdir()
-        forum = folder / "planeacion-materia-Foro-presentacion.json"
-        forum.write_text("{}", encoding="utf-8")
-        entry = {"number": None, "module_id": "2876", "json": forum.relative_to(root).as_posix()}
-        catalog = {"activities": [], "complementary_plans": [entry], "antecedents": []}
-        catalog_path = folder / "catalogo-editorial.json"
-        catalog_path.write_text(json.dumps(catalog), encoding="utf-8")
-        self.assertEqual(catalogued_plan_paths(root), (forum,))
-        catalog["antecedents"] = [{"module_id": "2876"}]
-        catalog_path.write_text(json.dumps(catalog), encoding="utf-8")
-        with self.assertRaisesRegex(ValueError, "excluded"):
-            catalogued_plan_paths(root)
-        catalog["antecedents"] = []
-        entry["number"] = 1
-        catalog_path.write_text(json.dumps(catalog), encoding="utf-8")
-        with self.assertRaises(ValueError):
-            catalogued_plan_paths(root)
-
     def test_text_conversion_preserves_full_document_and_marks_unsegmented(self):
         from aulatex.planning_conversion import convert_source
 

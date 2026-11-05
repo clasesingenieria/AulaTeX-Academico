@@ -10,18 +10,19 @@ Estado: pendiente de revision academica. Cero actividades aprobadas, cero ciclos
 | 2 |  | 2 | Linea de tiempo | [JSON](planeacion-teoria-del-estado-y-constitucion-Actividad-2.json) | [Markdown](planeacion-teoria-del-estado-y-constitucion-Actividad-2.md) |
 | 3 |  | 3 | Analisis de hechos | [JSON](planeacion-teoria-del-estado-y-constitucion-Actividad-3.json) | [Markdown](planeacion-teoria-del-estado-y-constitucion-Actividad-3.md) |
 | 4 |  | 4 | Foro | [JSON](planeacion-teoria-del-estado-y-constitucion-Actividad-4.json) | [Markdown](planeacion-teoria-del-estado-y-constitucion-Actividad-4.md) |
+| 5 | S5 | 5 | Valoracion de decisiones | [JSON](planeacion-teoria-del-estado-y-constitucion-Actividad-5.json) | [Markdown](planeacion-teoria-del-estado-y-constitucion-Actividad-5.md) |
 
 Los reportes, notas y entregas no se renombran. Los numeros oficiales desconocidos no se deducen de la semana.
 
 Los originales estan directamente en la raiz de las notas de las actividades 02 (S2/S3) y 04 (S4/S5), enlazados desde el [indice de notas por actividad](../referencias-teoria-del-estado-y-constitucion/notas-teoria-del-estado-y-constitucion/README.md). Las cinco importaciones, las revisiones 1 a 4 y las fichas S2 y S3 quedaron absorbidas en un [registro historico consolidado](../referencias-teoria-del-estado-y-constitucion/notas-teoria-del-estado-y-constitucion/materiales-generales/registros-organizacion/planeaciones-absorbidas-2026-10-27.json): 69 archivos, 55 contenidos unicos, con texto completo, rutas de origen y SHA256. Las precisiones de las fichas se integraron en los modelos y vistas de las actividades 2 y 3.
 
-El registro deduplica contenido sin perder bytes: `entries` relaciona cada ruta historica con su hash y `contents` conserva el texto UTF-8 correspondiente. Los punteros del catalogo y de la revision anterior remiten a ese contenido; los hashes de las copias activas se actualizan por separado. Las rutas de origen dentro del historial no son enlaces vigentes. Los antecedentes multisemana S4-S5 se preservan completos sin crear ni aprobar automaticamente una actividad S5.
+El registro deduplica contenido sin perder bytes: `entries` relaciona cada ruta historica con su hash y `contents` conserva el texto UTF-8 correspondiente. Los punteros del catalogo y de la revision anterior remiten a ese contenido; los hashes de las copias activas se actualizan por separado. Las rutas de origen dentro del historial no son enlaces vigentes. La actividad 5 se creo el 27 de octubre de 2026 tras cotejo autentificado en aula del modulo 218026 y del recurso 218022; la revision sigue pendiente.
 
 Fechas operativas no acreditadas: null en JSON y en blanco en la vista. Las fechas documentales y los literales originales permanecen como evidencia.
 
 La consigna puede sustentarse con un documento docente archivado; Moodle no es obligatorio. Un recurso documental no es una tarea.
 
-Integracion documental: cinco preguntas diagnosticas, linea de tiempo, analisis de hechos y tres preguntas del foro S4; rubricas de 10, 15 y 4 puntos, respectivamente. El diagnostico no tiene rubrica numerica acreditada. Se distinguen consigna docente, secuencia editorial y campos desconocidos.
+Integracion documental: cinco preguntas diagnosticas, linea de tiempo, analisis de hechos, tres preguntas del foro S4 y valoracion de decisiones S5; rubricas de 10, 15, 4 y 21 puntos, respectivamente. El diagnostico no tiene rubrica numerica acreditada. Se distinguen consigna docente, secuencia editorial y campos desconocidos.
 
 Organizacion de notas completada el 27 de octubre: fichas derivadas S2/S3
 retiradas tras conservar sus textos y hashes en `extensions.note_absorption`
