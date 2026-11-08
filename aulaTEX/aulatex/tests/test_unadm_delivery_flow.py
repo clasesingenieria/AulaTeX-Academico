@@ -427,7 +427,7 @@ class UnadmWeek6DetectionAndStagingTests(unittest.TestCase):
     def test_15_teoria_estado_s6_forum_draft_content_and_safety(self) -> None:
         """Verifica que el borrador de participacion para el foro de la Actividad 6 exista, responda las 3 preguntas detonantes y no filtre credenciales."""
         draft_path = Path(
-            self.workspace.root
+            self.workspace.repo_root
             / "UnADM"
             / "licenciatura-en-derecho-unadm"
             / "teoria-del-estado-y-constitucion-lde"
@@ -439,15 +439,15 @@ class UnadmWeek6DetectionAndStagingTests(unittest.TestCase):
         self.assertTrue(draft_path.is_file(), f"El borrador de foro no existe en {draft_path}")
         content = draft_path.read_text(encoding="utf-8")
         self.assertGreater(len(content), 1000)
-        self.assertIn("Pregunta 1", content)
-        self.assertIn("Pregunta 2", content)
-        self.assertIn("Pregunta 3", content)
+        self.assertIn("son los derechos humanos", content)
+        self.assertIn("más importante", content)
+        self.assertIn("Estado de Derecho", content)
         assert_no_credential_leak(content, str(draft_path))
 
     def test_16_penal_s6_video_script_deliverable_and_safety(self) -> None:
         """Verifica que el guion textual del video para la Actividad 6 de Penal exista, cubra el Caso A y no filtre credenciales."""
         script_path = Path(
-            self.workspace.root
+            self.workspace.repo_root
             / "UnADM"
             / "licenciatura-en-derecho-unadm"
             / "derecho-penal-especial-mexicano-lde"
@@ -468,7 +468,7 @@ class UnadmWeek6DetectionAndStagingTests(unittest.TestCase):
         """Verifica que el entregable de Actividad 8 tenga suprimidos los encabezados/pies en la pagina apaisada del cuadro sinoptico."""
         import fitz
         pdf_path = Path(
-            self.workspace.root
+            self.workspace.repo_root
             / "UnADM"
             / "licenciatura-en-derecho-unadm"
             / "antecedentes-de-los-derechos-humanos-lde"
@@ -491,7 +491,7 @@ class UnadmWeek6DetectionAndStagingTests(unittest.TestCase):
         import fitz
         import re
         pdf_path = Path(
-            self.workspace.root
+            self.workspace.repo_root
             / "UnADM"
             / "licenciatura-en-derecho-unadm"
             / "antecedentes-de-los-derechos-humanos-lde"
