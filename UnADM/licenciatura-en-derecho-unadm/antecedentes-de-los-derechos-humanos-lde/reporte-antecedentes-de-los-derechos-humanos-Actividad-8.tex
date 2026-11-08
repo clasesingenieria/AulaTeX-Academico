@@ -1,6 +1,6 @@
 \documentclass[12pt,spanish,letterpaper,oneside]{article}
 \def\documenttitle {Actividad 8: Cuadro sin\'optico\\[6pt]Orden jur\'idico nacional en torno a los derechos humanos}
-\def\documentsubtitle {Estructura, principios, garant\'ias y efectividad en el sistema constitucional mexicano}
+\def\documentsubtitle {Estructura y garant\'ias del orden jur\'idico}
 \def\documenttitlehf {Orden jur\'idico en derechos humanos}
 \def\hfwidthwrap {true}
 \def\hfwidthtitle {0.48}
@@ -77,6 +77,8 @@ El art\'iculo 1.º constitucional transforma el reconocimiento tradicional de de
 
 \templateIndex
 \templateFinalcfg
+\renewcommand{\footrulewidth}{0pt}
+\def\documenttitlehf {Orden jur\'idico en derechos humanos}
 
 \section{Introducci\'on}
 
@@ -92,80 +94,74 @@ El presente estudio profundiza en los componentes estructurales de dicho orden: 
 
 La representaci\'on gr\'afica del orden jur\'idico nacional sintetiza de manera jer\'arquica y multidimensional las fuentes, los principios y las instancias de garant\'ia que articulan el r\'egimen mexicano. La s\'intesis parte del concepto matriz del ordenamiento, se ramifica en los mandatos constitucionales supremos y desemboca en las v\'ias procesales e institucionales destinadas a materializar la tutela de la persona.
 
-\bigskip
+\begin{landscape}
+\thispagestyle{fancy}
+\subsection*{Esquema sin\'optico multidimensional del orden jur\'idico nacional}
+\phantomsection\addcontentsline{toc}{subsection}{Esquema sin\'optico multidimensional del orden jur\'idico nacional}
+
 \begin{center}
 \begin{tikzpicture}[
+  x=1.0cm, y=1.0cm,
   raiz/.style={
-    draw=azul,fill=azul,text=white,rounded corners=4pt,
-    text width=3.0cm,align=center,inner sep=8pt,
+    draw=azul,fill=azul,text=white,rounded corners=5pt,
+    text width=3.8cm,align=center,inner sep=9pt,
     font=\small\bfseries,drop shadow
   },
   rama/.style={
-    draw=verde,fill=suave,rounded corners=3pt,
-    text width=2.8cm,align=left,inner sep=6pt,
+    draw=verde,fill=suave,rounded corners=4pt,
+    text width=3.2cm,align=left,inner sep=7pt,
     font=\small\bfseries
   },
   detalle/.style={
-    draw=linea,fill=white,rounded corners=3pt,
-    text width=7.2cm,align=left,inner sep=6pt,
+    draw=linea,fill=white,rounded corners=4pt,
+    text width=14.0cm,align=left,inner sep=7pt,
     font=\footnotesize
   },
-  enlace/.style={draw=verde,line width=1pt}
+  enlace/.style={draw=verde,line width=1.1pt}
 ]
-\node[raiz] (r) at (0,0) {ORDEN JUR\'IDICO\\NACIONAL EN\\DERECHOS HUMANOS\\[4pt]
+\node[raiz] (r) at (0,0) {ORDEN JUR\'IDICO\\NACIONAL EN\\DERECHOS HUMANOS\\[5pt]
 \footnotesize Sistema articulado de fuentes, principios y garant\'ias};
 
-\node[rama] (a) at (4.0, 7.5) {1. Concepto y fines};
-\node[detalle] (ad) at (9.6, 7.5) {
-\textbf{Concepto:} Conjunto arm\'onico de normas y competencias.\\
-\textbf{Finalidad:} Tutelar la dignidad intr\'inseca y regular el poder.\\
-\textbf{Fuerza vinculante:} Par\'ametro de validez de todo acto p\'ublico.
+\node[rama] (a) at (4.5, 4.5) {1. Concepto y fines};
+\node[detalle] (ad) at (13.8, 4.5) {
+\textbf{Concepto:} Conjunto arm\'onico de normas y competencias constitucionales y convencionales.\\
+\textbf{Finalidad y eficacia:} Tutelar la dignidad intr\'inseca y regular el poder p\'ublico como par\'ametro vinculante de validez.
 };
 
-\node[rama] (b) at (4.0, 4.5) {2. Fundamento constitucional};
-\node[detalle] (bd) at (9.6, 4.5) {
-\textbf{Art. 1.º CPEUM:} Bloque de derechos y cl\'ausula de apertura.\\
-\textbf{Art. 133 CPEUM:} Supremac\'ia y articulaci\'on de tratados.\\
-\textbf{Art. 103 y 107 CPEUM:} Bases del juicio de amparo judicial.\\
-\textbf{Art. 102, Ap. B:} Sistema ombudsperson no jurisdiccional.
+\node[rama] (b) at (4.5, 2.7) {2. Fundamento constitucional};
+\node[detalle] (bd) at (13.8, 2.7) {
+\textbf{Bloque constitucional (Art. 1.º):} Cl\'ausula de apertura internacional y obligaciones para todas las autoridades.\\
+\textbf{Supremac\'ia y garant\'ias (Arts. 102 Ap. B, 103, 107 y 133):} Juicio de amparo y sistema ombudsperson no jurisdiccional.
 };
 
-\node[rama] (c) at (4.0, 1.5) {3. Principios rectores};
-\node[detalle] (cd) at (9.6, 1.5) {
-\textbf{Universalidad:} Titularidad incondicional de toda persona.\\
-\textbf{Interdependencia:} Nexo e impacto rec\'iproco entre derechos.\\
-\textbf{Indivisibilidad:} Integridad indivisible del haz de prerrogativas.\\
-\textbf{Progresividad y no regresividad:} Avance continuo y prohibici\'on de retrocesos.
+\node[rama] (c) at (4.5, 0.9) {3. Principios rectores};
+\node[detalle] (cd) at (13.8, 0.9) {
+\textbf{Universalidad e interdependencia:} Titularidad incondicional de toda persona e impacto rec\'iproco entre derechos.\\
+\textbf{Indivisibilidad y progresividad:} Integridad del haz de prerrogativas, avance continuo y prohibici\'on de retroceso.
 };
 
-\node[rama] (d) at (4.0, -1.5) {4. Fuentes internacionales};
-\node[detalle] (dd) at (9.6, -1.5) {
-\textbf{Convenci\'on Americana (Pacto de San Jos\'e):} Corte IDH.\\
-\textbf{Pactos de la ONU (1966):} PIDCP y PIDESC.\\
-\textbf{Tratados tem\'aticos:} Bel\'em do Par\'a, Tortura, Discapacidad.\\
-\textbf{DUDH (1948):} Criterio de interpretaci\'on dogm\'atica general.
+\node[rama] (d) at (4.5, -0.9) {4. Fuentes internacionales};
+\node[detalle] (dd) at (13.8, -0.9) {
+\textbf{Sistemas internacional y regional:} Convenci\'on Americana (Corte IDH), Pactos ONU 1966 (PIDCP y PIDESC).\\
+\textbf{Tratados tem\'aticos y DUDH:} Protecci\'on frente a tortura, discriminaci\'on y directrices hermen\'euticas universales.
 };
 
-\node[rama] (e) at (4.0, -4.5) {5. Legislaci\'on de desarrollo};
-\node[detalle] (ed) at (9.6, -4.5) {
-\textbf{Ley de Amparo:} Proceso constitucional tutelar prioritario.\\
-\textbf{Ley General de V\'ictimas:} Reparaci\'on integral y asesor\'ia.\\
-\textbf{Leyes de no discriminaci\'on y acceso a la informaci\'on:}\\
-Normas federales y estatales que operativizan est\'andares sustantivos.
+\node[rama] (e) at (4.5, -2.7) {5. Legislaci\'on de desarrollo};
+\node[detalle] (ed) at (13.8, -2.7) {
+\textbf{Leyes reglamentarias:} Ley de Amparo, Ley de la CNDH y Ley General de V\'ictimas (reparaci\'on integral y asesor\'ia).\\
+\textbf{Leyes transversales:} Normas de no discriminaci\'on, igualdad de g\'enero y acceso a la informaci\'on p\'ublica.
 };
 
-\node[rama] (f) at (4.0, -7.5) {6. Instancias de garant\'ia};
-\node[detalle] (fd) at (9.6, -7.5) {
-\textbf{Jurisdiccional:} SCJN, Tribunales Colegiados y Jueces de Distrito.\\
-\textbf{No jurisdiccional:} CNDH y Comisiones Estatales de DH.\\
-\textbf{Autoridades en general:} Deberes de control difuso e investigaci\'on.\\
-\textbf{Subsidiaria externa:} Comisi\'on y Corte Interamericana de DH.
+\node[rama] (f) at (4.5, -4.5) {6. Instancias de garant\'ia};
+\node[detalle] (fd) at (13.8, -4.5) {
+\textbf{Jurisdiccional y ombudsperson:} Poder Judicial de la Federaci\'on (SCJN, TCC, Juzgados de Distrito) y CNDH/CEDH.\\
+\textbf{Control difuso y sede subsidiaria:} Deber de todas las autoridades locales y recurso ante la Comisi\'on y Corte IDH.
 };
 
-\draw[enlace] (r.east) -- (2.0,0);
-\draw[enlace] (2.0, -7.5) -- (2.0, 7.5);
+\draw[enlace] (r.east) -- (2.6,0);
+\draw[enlace] (2.6, -4.5) -- (2.6, 4.5);
 \foreach \n in {a,b,c,d,e,f}{
-  \draw[enlace] (2.0,0 |- \n.west) -- (\n.west);
+  \draw[enlace] (2.6,0 |- \n.west) -- (\n.west);
 }
 \foreach \n/\m in {a/ad,b/bd,c/cd,d/dd,e/ed,f/fd}{
   \draw[enlace] (\n.east) -- (\m.west);
@@ -173,10 +169,11 @@ Normas federales y estatales que operativizan est\'andares sustantivos.
 \end{tikzpicture}
 \end{center}
 
-\vspace{0.3cm}
+\vspace{0.2cm}
 \noindent{\footnotesize\textbf{Fuente:} Elaboraci\'on propia con base en el texto de la \citep{cpeumADH2026}, la jurisprudencia de la \citep{scjnParametro2014ADH} y la doctrina constitucional de \citep{carbonellDerechosHumanos2019}.}
 
-\bigskip
+\end{landscape}
+
 \subsection{Matriz anal\'itica de componentes y consecuencias jur\'idicas}
 
 Para complementar la s\'intesis gr\'afica, la tabla~\ref{tab:dimensiones} examina la articulaci\'on entre los niveles del ordenamiento, sus funciones normativas y las consecuencias directas sobre la validez de los actos p\'ublicos.

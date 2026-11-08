@@ -1,0 +1,626 @@
+{
+  "schema_version": "1.0.0",
+  "plan_id": "pca-uanl-algebra-lineal-actividad-2",
+  "revision": 1,
+  "identity": {
+    "institution": "UANL",
+    "program": "Ingeniero Agronomo",
+    "subject_id": "algebra-lineal",
+    "subject_title": "Álgebra Lineal",
+    "offering_id": "REF-62bf547760",
+    "period": "2026-II",
+    "modality": "hybrid"
+  },
+  "sources": [
+    {
+      "id": "src-consigna-oficial",
+      "kind": "platform",
+      "authority": "instructional",
+      "title": "Consigna oficial - Actividad 2: Segundo Laboratorio de Algebra Lineal",
+      "url": null,
+      "path": "planeaciones-algebra-lineal/consigna_actividad-2.txt",
+      "sha256": "62bf547760ce417ce26b1d81101da93809b34048434dee9dd2a520a4dd7b4bfd",
+      "captured_at": "2026-11-08",
+      "media_type": "text/markdown"
+    },
+    {
+      "id": "src-consigna-verificada",
+      "kind": "platform",
+      "authority": "instructional",
+      "title": "Consigna verificada en disco - Actividad 2: Segundo Laboratorio de Algebra Lineal",
+      "url": null,
+      "path": "C:\\Users\\Sysx\\Documents\\AulaTeX-Academico\\UANL\\ingeniero-agronomo\\algebra-lineal\\planeaciones-algebra-lineal\\consigna-Actividad-2.md",
+      "sha256": "62bf547760ce417ce26b1d81101da93809b34048434dee9dd2a520a4dd7b4bfd",
+      "captured_at": "2026-11-08",
+      "media_type": "text/markdown"
+    }
+  ],
+  "curriculum": {
+    "purpose": "Desarrollar la capacidad de resolver, verificar y comunicar soluciones de sistemas de ecuaciones lineales mediante los métodos de eliminación de Gauss, Gauss-Jordan y la regla de Cramer, reconociendo sus condiciones de aplicabilidad y justificando la elección del procedimiento. La actividad pertenece a Álgebra Lineal del programa de Ingeniero Agrónomo de la UANL y fortalece el razonamiento algebraico requerido para la posterior modelación de fenómenos agronómicos, sin incorporar ejercicios ajenos al laboratorio docente.",
+    "competencies": [
+      {
+        "id": "comp-1",
+        "text": "Representar sistemas de ecuaciones lineales mediante matrices aumentadas y aplicar operaciones elementales que preserven su conjunto solución."
+      },
+      {
+        "id": "comp-2",
+        "text": "Resolver los sistemas del apartado I mediante Gauss, Gauss-Jordan y Cramer, distinguiendo las condiciones de aplicabilidad de cada método."
+      },
+      {
+        "id": "comp-3",
+        "text": "Seleccionar y justificar un método de resolución para cada problema del apartado II con base en las características del sistema y la eficiencia del procedimiento."
+      },
+      {
+        "id": "comp-4",
+        "text": "Verificar las soluciones mediante sustitución en las ecuaciones originales y explicar de manera coherente la existencia y unicidad de la solución cuando corresponda."
+      },
+      {
+        "id": "comp-5",
+        "text": "Comunicar procedimientos algebraicos con orden, limpieza, claridad y trazabilidad respecto de los enunciados originales."
+      }
+    ],
+    "outcomes": [
+      {
+        "id": "out-1",
+        "text": "Transcribir o identificar fielmente la totalidad de ejercicios de ambos apartados a partir del PDF docente, conservando su orden y numeración."
+      },
+      {
+        "id": "out-2",
+        "text": "Presentar para cada sistema del apartado I los procedimientos de Gauss, Gauss-Jordan y Cramer, o explicar formalmente por qué la regla de Cramer no resulta aplicable."
+      },
+      {
+        "id": "out-3",
+        "text": "Resolver cada problema del apartado II mediante un método elegido y una justificación específica vinculada con la estructura del sistema."
+      },
+      {
+        "id": "out-4",
+        "text": "Comprobar las soluciones obtenidas mediante sustitución y contrastar los resultados de los métodos utilizados en el apartado I."
+      },
+      {
+        "id": "out-5",
+        "text": "Entregar un laboratorio completo y legible que respete las indicaciones materiales del documento original y diferencie el calendario EJ25 de la fecha de entrega informada para esta actividad."
+      }
+    ],
+    "topics": [
+      {
+        "id": "top-1",
+        "text": "Sistemas de ecuaciones lineales y representación matricial",
+        "children": []
+      },
+      {
+        "id": "top-2",
+        "text": "Operaciones elementales sobre renglones y equivalencia de sistemas",
+        "children": []
+      },
+      {
+        "id": "top-3",
+        "text": "Eliminación de Gauss y sustitución regresiva",
+        "children": []
+      },
+      {
+        "id": "top-4",
+        "text": "Método de Gauss-Jordan y forma escalonada reducida",
+        "children": []
+      },
+      {
+        "id": "top-5",
+        "text": "Determinantes y condiciones de aplicación de la regla de Cramer",
+        "children": []
+      },
+      {
+        "id": "top-6",
+        "text": "Existencia, unicidad y clasificación de soluciones según los sistemas efectivamente incluidos",
+        "children": []
+      },
+      {
+        "id": "top-7",
+        "text": "Selección y comparación de métodos de resolución",
+        "children": []
+      },
+      {
+        "id": "top-8",
+        "text": "Verificación de soluciones y comunicación del procedimiento algebraico",
+        "children": []
+      }
+    ]
+  },
+  "activities": [
+    {
+      "id": "actividad-2",
+      "title": "Actividad 2: Segundo Laboratorio de Algebra Lineal",
+      "role": "assessment",
+      "platform": {
+        "name": "Plataforma Oficial UANL",
+        "course_id": null,
+        "module_ids": [
+          "Unidad-1"
+        ]
+      },
+      "unit_id": "Unidad-1",
+      "weeks": [
+        1,
+        2
+      ],
+      "outcome_ids": [
+        "out-1"
+      ],
+      "topic_ids": [
+        "top-1"
+      ],
+      "cognitive": {
+        "taxonomy": "Bloom",
+        "level": "analisis",
+        "verb": "Analizar",
+        "object": "La estructura de los sistemas de ecuaciones lineales del Segundo Laboratorio y la pertinencia de los métodos de Gauss, Gauss-Jordan y Cramer",
+        "conditions": "A partir de los enunciados completos del PDF docente, en equipos de hasta tres integrantes, respetando el orden original, mostrando operaciones verificables y sin sustituir las indicaciones de entrega física por el formato digital conservado",
+        "observable_evidence": "Segundo Laboratorio resuelto, con procedimientos comparables en el apartado I, elecciones justificadas en el apartado II y verificaciones de resultados",
+        "justification": "La comparación de procedimientos para un mismo sistema y la elección argumentada de un método permiten observar la identificación de estructuras, la distinción de condiciones de aplicabilidad y la relación entre operaciones algebraicas y resultados. La sustitución en las ecuaciones originales aporta evidencia independiente de la corrección de las soluciones."
+      },
+      "instruction": "1. Revisar el PDF original segundo-laboratorio-ej25.pdf y cotejarlo con la transcripción conservada. Las rutas proporcionadas identifican las fuentes, pero no permiten inferir los enunciados no reproducidos en la consigna; no inventar sistemas, cantidades de ejercicios ni resultados. Si el PDF no está disponible, solicitarlo antes de completar el inventario y la resolución. 2. Registrar en la identificación del trabajo: UANL; programa Ingeniero Agrónomo; asignatura Álgebra Lineal; Actividad 2: Segundo Laboratorio de Álgebra Lineal; Diego de la Cruz Muñoz, matrícula 1977875; docente Dr. Miguel Ángel Dector Carrillo; entrega informada: noviembre de 2026. Si se trabaja en equipo, incorporar los datos de los demás integrantes, sin exceder tres participantes. Conservar como antecedente documental el periodo EJ25 y confirmar con el docente el día de entrega, pues el original lo vincula al segundo examen parcial y no especifica una fecha exacta. 3. Elaborar un inventario de todos los ejercicios de los apartados I y II, manteniendo numeración, coeficientes, signos, variables y términos independientes. 4. Resolver cada sistema del apartado I por Gauss: formar la matriz aumentada, registrar las operaciones elementales, obtener una forma escalonada y realizar sustitución regresiva cuando corresponda. Resolver después por Gauss-Jordan: registrar las operaciones hasta obtener una forma escalonada reducida e interpretar el resultado. Finalmente, examinar la aplicabilidad de Cramer: comprobar que la matriz de coeficientes sea cuadrada y que su determinante sea distinto de cero; cuando proceda, calcular los determinantes de sustitución y las incógnitas. Si estas condiciones no se cumplen, documentar la limitación y no dividir entre cero ni presentar Cramer como procedimiento válido. 5. En el apartado II, elegir un método para cada problema y justificarlo antes de desarrollarlo, atendiendo a la estructura del sistema, sus condiciones de aplicabilidad y el trabajo algebraico requerido. 6. Verificar cada solución por sustitución en las ecuaciones originales; si aparecen sistemas incompatibles o con infinitas soluciones, justificar su clasificación con las ecuaciones o formas matriciales obtenidas. Comparar los resultados de los métodos del apartado I y corregir discrepancias. 7. Organizar la versión de entrega en hojas para máquina blancas y nuevas, con ejercicios en el orden indicado, sin grandes espacios en blanco y con notación legible. El reporte LaTeX y su PDF conservados son evidencia digital complementaria y no sustituyen ni modifican las instrucciones del original EJ25. Si se revisa ese respaldo, conservar sus ejercicios y comprobar su correspondencia con el trabajo; no declarar compilación o validación que no se haya realizado. 8. Auditar integridad, cálculos, justificaciones, limpieza y claridad antes de entregar. La actividad tiene una ponderación total de 10.0 puntos y no debe confundirse con el PIA, identificado como Actividad 3 y sujeto a su propio calendario.",
+      "requirements": [
+        {
+          "id": "req-1",
+          "text": "Utilizar el PDF docente como fuente de los enunciados completos y cotejar la transcripción. Conservar la totalidad, el orden y la numeración de los ejercicios; no inventar contenidos ausentes."
+        },
+        {
+          "id": "req-2",
+          "text": "Resolver cada sistema del apartado I por Gauss, Gauss-Jordan y Cramer, mostrando procedimientos. Verificar expresamente las condiciones de Cramer y documentar cualquier caso de inaplicabilidad."
+        },
+        {
+          "id": "req-3",
+          "text": "Seleccionar un método para cada problema del apartado II y justificar su elección mediante características concretas del sistema, no mediante preferencias sin fundamento."
+        },
+        {
+          "id": "req-4",
+          "text": "Mostrar operaciones algebraicas trazables, verificar las soluciones en las ecuaciones originales y justificar la clasificación del sistema cuando corresponda."
+        },
+        {
+          "id": "req-5",
+          "text": "Preparar la entrega en hojas para máquina blancas y nuevas, con orden, limpieza, claridad y sin grandes espacios en blanco, conforme al original."
+        },
+        {
+          "id": "req-6",
+          "text": "Identificar institución, programa, asignatura, actividad, estudiante, matrícula y docente. El equipo puede tener hasta tres integrantes; registrar a quienes efectivamente participen."
+        },
+        {
+          "id": "req-7",
+          "text": "Registrar noviembre de 2026 como mes de entrega informado para esta actividad, sin inventar día exacto. Distinguirlo del periodo documental enero-junio de 2025 y confirmar con el docente su relación con el segundo examen parcial. Mantener separado el calendario del PIA, Actividad 3."
+        },
+        {
+          "id": "req-8",
+          "text": "Tratar el reporte LaTeX y su PDF conservados como respaldo documental complementario, sin reescribir sus ejercicios ni asumir que sustituyen la entrega física. Cualquier revisión o compilación deberá reportarse únicamente si fue efectivamente realizada."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q-1",
+          "context": "Equivalencia de sistemas",
+          "text": "¿Por qué las operaciones elementales utilizadas en Gauss y Gauss-Jordan preservan el conjunto solución del sistema?",
+          "requirement_ids": [
+            "req-1"
+          ]
+        },
+        {
+          "id": "q-2",
+          "context": "Comparación de métodos",
+          "text": "¿Qué diferencias de procedimiento existen entre Gauss y Gauss-Jordan y cómo se comprueba que conducen al mismo conjunto solución?",
+          "requirement_ids": [
+            "req-1"
+          ]
+        },
+        {
+          "id": "q-3",
+          "context": "Condiciones de Cramer",
+          "text": "¿Qué debe verificarse antes de aplicar Cramer y qué puede concluirse, y qué no, si el determinante de la matriz de coeficientes es cero?",
+          "requirement_ids": [
+            "req-1"
+          ]
+        },
+        {
+          "id": "q-4",
+          "context": "Elección metodológica en el apartado II",
+          "text": "¿Qué rasgos de cada sistema justifican la elección del método y qué ventaja ofrece frente a una alternativa?",
+          "requirement_ids": [
+            "req-1"
+          ]
+        },
+        {
+          "id": "q-5",
+          "context": "Verificación y control de errores",
+          "text": "¿Cómo permite la sustitución en las ecuaciones originales detectar errores de signo, cálculo o transcripción?",
+          "requirement_ids": [
+            "req-1"
+          ]
+        }
+      ],
+      "sequence": [
+        {
+          "id": "step-1",
+          "order": 1,
+          "phase": "preparation",
+          "action": "Recuperar y cotejar las fuentes docentes; inventariar los ejercicios y registrar los datos de identificación y las condiciones de entrega.",
+          "inputs": [
+            "Consigna proporcionada",
+            "originales-docentes/actividad-02-segundo-laboratorio/segundo-laboratorio-ej25.pdf",
+            "originales-docentes/actividad-02-segundo-laboratorio/segundo-laboratorio-ej25.txt",
+            "Datos del estudiante y docente"
+          ],
+          "output": "Inventario de ejercicios y ficha de identificación con calendario por confirmar",
+          "completion_check": "Cada ejercicio del PDF está identificado sin alteraciones; el equipo no excede tres integrantes y no se atribuye un día de entrega no confirmado.",
+          "requirement_ids": [
+            "req-1",
+            "req-6",
+            "req-7"
+          ],
+          "depends_on": []
+        },
+        {
+          "id": "step-2",
+          "order": 2,
+          "phase": "construction",
+          "action": "Resolver los sistemas del apartado I por los tres métodos solicitados y documentar las condiciones de aplicabilidad de Cramer.",
+          "inputs": [
+            "Inventario validado del apartado I",
+            "Enunciados originales",
+            "Apuntes de métodos de resolución"
+          ],
+          "output": "Desarrollo del apartado I con procedimientos de Gauss, Gauss-Jordan y Cramer o justificación de inaplicabilidad",
+          "completion_check": "Cada sistema tiene procedimientos explícitos; las operaciones son trazables y ninguna aplicación de Cramer omite sus condiciones.",
+          "requirement_ids": [
+            "req-1",
+            "req-2",
+            "req-4"
+          ],
+          "depends_on": [
+            "step-1"
+          ]
+        },
+        {
+          "id": "step-3",
+          "order": 3,
+          "phase": "construction",
+          "action": "Seleccionar, justificar y aplicar un método de resolución para cada problema del apartado II.",
+          "inputs": [
+            "Inventario validado del apartado II",
+            "Enunciados originales",
+            "Criterios de aplicabilidad y eficiencia de los métodos"
+          ],
+          "output": "Desarrollo del apartado II con elecciones metodológicas justificadas",
+          "completion_check": "Cada problema contiene una justificación específica y una resolución completa mediante el método elegido.",
+          "requirement_ids": [
+            "req-1",
+            "req-3",
+            "req-4"
+          ],
+          "depends_on": [
+            "step-1"
+          ]
+        },
+        {
+          "id": "step-4",
+          "order": 4,
+          "phase": "review",
+          "action": "Verificar resultados por sustitución, contrastar los métodos del apartado I y corregir inconsistencias.",
+          "inputs": [
+            "Desarrollo del apartado I",
+            "Desarrollo del apartado II",
+            "Ecuaciones originales"
+          ],
+          "output": "Laboratorio matemáticamente revisado con verificaciones registradas",
+          "completion_check": "Las soluciones satisfacen las ecuaciones originales; los resultados entre métodos son compatibles y los casos sin solución única están justificados.",
+          "requirement_ids": [
+            "req-2",
+            "req-3",
+            "req-4"
+          ],
+          "depends_on": [
+            "step-2",
+            "step-3"
+          ]
+        },
+        {
+          "id": "step-5",
+          "order": 5,
+          "phase": "review",
+          "action": "Preparar la entrega física y auditar su integridad, presentación e identificación; mantener diferenciado el respaldo digital conservado.",
+          "inputs": [
+            "Laboratorio matemáticamente revisado",
+            "Hojas para máquina blancas y nuevas",
+            "Ficha de identificación",
+            "Reporte LaTeX y PDF conservados, si están disponibles"
+          ],
+          "output": "Segundo Laboratorio listo para entrega conforme a las indicaciones docentes",
+          "completion_check": "Todos los ejercicios aparecen en orden, sin grandes espacios en blanco; la presentación es limpia y legible, los datos son correctos y el respaldo digital no se presenta como sustituto autorizado.",
+          "requirement_ids": [
+            "req-1",
+            "req-5",
+            "req-6",
+            "req-7",
+            "req-8"
+          ],
+          "depends_on": [
+            "step-4"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "id": "res-1",
+          "source_id": "src-consigna-oficial",
+          "purpose": "Consigna instruccional y rúbrica oficial",
+          "required": true,
+          "access": "local",
+          "rights": "UANL"
+        }
+      ],
+      "assessment": {
+        "kind": "summative",
+        "scale_total": 100.0,
+        "weight": 10.0,
+        "weight_unit": "pts",
+        "criteria": [
+          {
+            "id": "crit-1",
+            "text": "Resolución del apartado I y aplicación fundamentada de los tres métodos",
+            "points": 4.0,
+            "descriptors": [
+              {
+                "level": "Excelente",
+                "description": "Resuelve todos los sistemas del apartado I con procedimientos correctos y explícitos de Gauss y Gauss-Jordan; aplica Cramer correctamente o fundamenta su inaplicabilidad.",
+                "points": 4.0
+              },
+              {
+                "level": "Satisfactorio",
+                "description": "Desarrolla los métodos requeridos con omisiones menores de pasos o errores aislados que no comprometen la comprensión general.",
+                "points": 3.0
+              },
+              {
+                "level": "En desarrollo",
+                "description": "Presenta desarrollo parcial, omite métodos en algunos sistemas o contiene errores recurrentes de procedimiento.",
+                "points": 2.0
+              },
+              {
+                "level": "Insuficiente",
+                "description": "No presenta evidencia evaluable del apartado I o los procedimientos son esencialmente inválidos.",
+                "points": 0.0
+              }
+            ],
+            "requirement_ids": [
+              "req-1"
+            ]
+          },
+          {
+            "id": "crit-2",
+            "text": "Resolución del apartado II y justificación de la elección metodológica",
+            "points": 3.0,
+            "descriptors": [
+              {
+                "level": "Excelente",
+                "description": "Resuelve todos los problemas y justifica cada elección mediante características concretas del sistema y condiciones de aplicabilidad.",
+                "points": 3.0
+              },
+              {
+                "level": "Satisfactorio",
+                "description": "Resuelve la mayoría de los problemas correctamente y ofrece justificaciones pertinentes, aunque poco desarrolladas.",
+                "points": 2.25
+              },
+              {
+                "level": "En desarrollo",
+                "description": "La resolución es parcial o las justificaciones son genéricas y no se relacionan suficientemente con los sistemas.",
+                "points": 1.5
+              },
+              {
+                "level": "Insuficiente",
+                "description": "No presenta evidencia evaluable del apartado II o carece de resolución válida y justificación.",
+                "points": 0.0
+              }
+            ],
+            "requirement_ids": [
+              "req-1"
+            ]
+          },
+          {
+            "id": "crit-3",
+            "text": "Verificación de soluciones y coherencia de resultados",
+            "points": 2.0,
+            "descriptors": [
+              {
+                "level": "Excelente",
+                "description": "Comprueba todas las soluciones, contrasta resultados entre métodos y justifica correctamente la clasificación de los sistemas cuando corresponde.",
+                "points": 2.0
+              },
+              {
+                "level": "Satisfactorio",
+                "description": "Comprueba la mayoría de las soluciones y mantiene coherencia general, con omisiones menores.",
+                "points": 1.5
+              },
+              {
+                "level": "En desarrollo",
+                "description": "Realiza verificaciones aisladas o deja discrepancias sin explicar.",
+                "points": 1.0
+              },
+              {
+                "level": "Insuficiente",
+                "description": "No presenta verificaciones evaluables ni controla inconsistencias de resultados.",
+                "points": 0.0
+              }
+            ],
+            "requirement_ids": [
+              "req-1"
+            ]
+          },
+          {
+            "id": "crit-4",
+            "text": "Integridad, orden, limpieza, claridad y cumplimiento documental",
+            "points": 1.0,
+            "descriptors": [
+              {
+                "level": "Excelente",
+                "description": "Presenta los ejercicios completos y en orden, en hojas blancas nuevas, con notación clara, sin grandes espacios en blanco y con identificación y calendario correctamente diferenciados.",
+                "points": 1.0
+              },
+              {
+                "level": "Satisfactorio",
+                "description": "Cumple las condiciones esenciales y presenta defectos menores de identificación, distribución o legibilidad.",
+                "points": 0.75
+              },
+              {
+                "level": "En desarrollo",
+                "description": "Presenta problemas relevantes de orden, limpieza, identificación o cumplimiento del formato de entrega.",
+                "points": 0.5
+              },
+              {
+                "level": "Insuficiente",
+                "description": "La presentación impide revisar el trabajo o incumple sustancialmente las condiciones documentales.",
+                "points": 0.0
+              }
+            ],
+            "requirement_ids": [
+              "req-1"
+            ]
+          }
+        ],
+        "editorial_checks": [
+          "Total de la rúbrica: 10.0 puntos; propuesta de distribución curricular, no atribuida al PDF docente.",
+          "Enunciados, coeficientes, signos y numeración cotejados con el PDF original.",
+          "Apartado I con tres métodos por sistema o explicación fundamentada de la inaplicabilidad de Cramer.",
+          "Apartado II con método elegido y justificación específica por problema.",
+          "Operaciones, matrices, determinantes y resultados escritos con notación consistente.",
+          "Soluciones verificadas y discrepancias corregidas.",
+          "Hojas para máquina blancas y nuevas; orden, limpieza, claridad y ausencia de grandes espacios en blanco.",
+          "Identificación de Diego de la Cruz Muñoz, matrícula 1977875, y del Dr. Miguel Ángel Dector Carrillo correctamente registrada.",
+          "Noviembre de 2026 diferenciado del periodo EJ25; día exacto sujeto a confirmación docente.",
+          "Reporte LaTeX y PDF conservados identificados como respaldo, sin sustituir las indicaciones de entrega ni afirmar validaciones no realizadas.",
+          "PIA de la Actividad 3 y su calendario excluidos de esta entrega."
+        ]
+      },
+      "products": [
+        {
+          "id": "prod-actividad-2",
+          "kind": "laboratorio_resuelto",
+          "recipient": "Plataforma UANL",
+          "editable_format": "application/x-tex",
+          "submission_format": "application/pdf",
+          "structure": [
+            "Identificación institucional, académica y de integrantes",
+            "Apartado I: ejercicios en orden, resueltos por Gauss, Gauss-Jordan y Cramer o justificación de su inaplicabilidad",
+            "Verificaciones y comparación de resultados del apartado I",
+            "Apartado II: ejercicios en orden, con método seleccionado, justificación y desarrollo",
+            "Verificaciones del apartado II"
+          ],
+          "length": "La necesaria para resolver la totalidad de ejercicios del PDF original, sin grandes espacios en blanco; la consigna no establece un número de páginas.",
+          "filename_pattern": "reporte-algebra-lineal-actividad-2.pdf",
+          "accessibility": "PDF/A estructurado",
+          "requirement_ids": [
+            "req-1"
+          ],
+          "paths": {
+            "editable": "reporte-algebra-lineal-actividad-2.tex",
+            "delivery": "entregas-algebra-lineal/reporte-algebra-lineal-actividad-2.pdf"
+          }
+        }
+      ],
+      "calendar": {
+        "opens_at": null,
+        "expected_at": null,
+        "due_at": "Noviembre de 2026",
+        "closes_at": null,
+        "timezone": "America/Monterrey",
+        "literal": "Noviembre de 2026"
+      },
+      "policies": {
+        "ai": "Declaración transparente de asistencia algorítmica en nota al pie institucional",
+        "integrity": "Cero tolerancia al plagio; literatura científica verificable indexada en JCR/Scopus",
+        "collaboration": "Individual",
+        "citation": "APA 7ma edición",
+        "attempts": 1,
+        "late_submission": "Penalización conforme a reglamento institucional",
+        "accessibility": "PDF estructurado de alto contraste",
+        "privacy": "Resguardo estricto de matrícula y datos personales",
+        "exceptions": []
+      },
+      "dependencies": [],
+      "alignment": [
+        {
+          "outcome_id": "out-1",
+          "requirement_ids": [
+            "req-1"
+          ],
+          "step_ids": [
+            "step-1",
+            "step-2",
+            "step-3"
+          ],
+          "product_ids": [
+            "prod-actividad-2"
+          ],
+          "criterion_ids": [
+            "crit-1"
+          ]
+        }
+      ],
+      "bindings": {
+        "extractor_directory": "planeaciones-algebra-lineal",
+        "notes_directory": "referencias-algebra-lineal/notas-algebra-lineal",
+        "research_directory": "referencias-algebra-lineal"
+      }
+    }
+  ],
+  "field_status": [
+    {
+      "path": "/identity/subject_id",
+      "state": "confirmed",
+      "reason": null,
+      "evidence": [
+        {
+          "source_id": "src-consigna-oficial",
+          "locator": "metadata",
+          "quoted_text": "algebra-lineal"
+        }
+      ],
+      "alternatives": []
+    }
+  ],
+  "review": {
+    "state": "needs_review",
+    "reviewed_at": "2026-11-08",
+    "reviewer_role": "agente-planeador-aulatex",
+    "critical_gaps": [],
+    "semantic_validation": "passed"
+  },
+  "artifact_contract": {
+    "version": "1.1",
+    "paths_relative_to_subject": {
+      "plans": "planeaciones-algebra-lineal",
+      "references": "referencias-algebra-lineal",
+      "deliveries": "entregas-algebra-lineal"
+    },
+    "deliverables_directory": "entregas-algebra-lineal",
+    "source_directory": "."
+  },
+  "extensions": {
+    "docente": "Dr. Miguel Ángel Dector Carrillo",
+    "estudiante": "Diego de la Cruz Muñoz",
+    "matricula": "1977875",
+    "modalidad": "Competencias / Enfoque Profesional",
+    "carrera": "Ingeniero Agronomo",
+    "generador": "realizar-planeaciones (AulaTeX Agéntico)",
+    "telemetria": {
+      "llm_engine": "azure_foundry",
+      "llm_model": "gpt-6.1-sol",
+      "llm_accelerated": true,
+      "llm_latency_ms": 65664.2,
+      "llm_fallback_reason": null,
+      "cached_tokens": 0,
+      "reasoning_tokens": 106,
+      "has_encrypted_reasoning": true,
+      "session_turns": 1,
+      "response_id": "resp_0213d6407a6a92ef016af06c6d91a08196ace53d9d957e18ad"
+    },
+    "evidence_handoff_id": "",
+    "verified_bib_keys": [],
+    "supported_facts_count": 0,
+    "unverified_items_count": 0,
+    "coverage_summary": {}
+  }
+}
