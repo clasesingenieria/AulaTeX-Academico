@@ -1,0 +1,743 @@
+{
+  "schema_version": "1.0.0",
+  "plan_id": "pca-uanl-algebra-lineal-actividad-5",
+  "revision": 1,
+  "identity": {
+    "institution": "UANL",
+    "program": "Ingeniero Agronomo",
+    "subject_id": "algebra-lineal",
+    "subject_title": "Álgebra Lineal",
+    "offering_id": "REF-a30bbfeee2",
+    "period": "2026-II",
+    "modality": "hybrid"
+  },
+  "sources": [
+    {
+      "id": "src-consigna-oficial",
+      "kind": "platform",
+      "authority": "instructional",
+      "title": "Consigna oficial - Consigna Oficial: Actividad 5 — Producto Integrador de Aprendizaje (PIA)",
+      "url": null,
+      "path": "planeaciones-algebra-lineal/consigna_actividad-5.txt",
+      "sha256": "a30bbfeee2cd365be7c4698031efd0e03c5c41ba664fbc46bfbf7f278d5034d8",
+      "captured_at": "2026-11-08",
+      "media_type": "text/markdown"
+    },
+    {
+      "id": "src-consigna-verificada",
+      "kind": "platform",
+      "authority": "instructional",
+      "title": "Consigna verificada en disco - Consigna Oficial: Actividad 5 — Producto Integrador de Aprendizaje (PIA)",
+      "url": null,
+      "path": "C:\\Users\\Sysx\\Documents\\AulaTeX-Academico\\UANL\\ingeniero-agronomo\\algebra-lineal\\planeaciones-algebra-lineal\\consigna-Actividad-5.md",
+      "sha256": "a30bbfeee2cd365be7c4698031efd0e03c5c41ba664fbc46bfbf7f278d5034d8",
+      "captured_at": "2026-11-08",
+      "media_type": "text/markdown"
+    }
+  ],
+  "curriculum": {
+    "purpose": "Integrar los conocimientos de matrices y determinantes, sistemas de ecuaciones lineales y valores y vectores propios mediante la construcción, resolución y evaluación de un caso agronómico documentado que articule balances de masa o nutrientes con la dinámica poblacional o la distribución de flujos. El Producto Integrador de Aprendizaje de Álgebra Lineal, del programa de Ingeniero Agrónomo de la Facultad de Agronomía de la UANL, deberá sustentar decisiones técnicamente viables mediante un reporte formal y una presentación ejecutiva, distinguiendo la validez matemática del modelo de su pertinencia agronómica.",
+    "competencies": [
+      {
+        "id": "comp-1",
+        "text": "Formular modelos matriciales de balances de masa o nutrientes mediante variables, parámetros, unidades y supuestos explícitos, con trazabilidad hacia un caso agronómico documentado."
+      },
+      {
+        "id": "comp-2",
+        "text": "Determinar la existencia y unicidad de soluciones de sistemas lineales mediante rangos, determinantes cuando procedan y criterios de compatibilidad, y resolverlos mediante eliminación gaussiana o Gauss-Jordan."
+      },
+      {
+        "id": "comp-3",
+        "text": "Analizar modelos de transición mediante autovalores, autovectores y radio espectral, diferenciando matrices de Leslie de matrices estocásticas y sus respectivas interpretaciones."
+      },
+      {
+        "id": "comp-4",
+        "text": "Evaluar la factibilidad física, la estabilidad y las limitaciones de los resultados para fundamentar decisiones de fertilización, manejo de poblaciones o distribución hídrica."
+      },
+      {
+        "id": "comp-5",
+        "text": "Comunicar y defender procedimientos, resultados y recomendaciones mediante documentos académicos reproducibles, con formato institucional UANL y referencias APA 7."
+      }
+    ],
+    "outcomes": [
+      {
+        "id": "out-1",
+        "text": "Construir un sistema Ax = b para un balance agronómico, identificando dimensiones, unidades, fuentes de datos y significado de cada coeficiente."
+      },
+      {
+        "id": "out-2",
+        "text": "Clasificar el sistema como compatible determinado, compatible indeterminado o incompatible mediante la comparación de los rangos de A y de la matriz aumentada [A|b]."
+      },
+      {
+        "id": "out-3",
+        "text": "Resolver el sistema por eliminación gaussiana o Gauss-Jordan y comprobar la solución mediante sustitución y cálculo del residuo Ax - b."
+      },
+      {
+        "id": "out-4",
+        "text": "Calcular det(A) cuando A sea cuadrada y obtener A inversa únicamente cuando sea invertible, explicando las implicaciones de cada resultado."
+      },
+      {
+        "id": "out-5",
+        "text": "Construir una matriz de transición T apropiada al fenómeno seleccionado y justificar si corresponde a un modelo de Leslie o a un modelo estocástico."
+      },
+      {
+        "id": "out-6",
+        "text": "Obtener el polinomio característico, los autovalores y los autovectores relevantes de T, y verificar Tv = lambda v mediante evidencia analítica y computacional."
+      },
+      {
+        "id": "out-7",
+        "text": "Interpretar el comportamiento de largo plazo a partir del radio espectral y de las propiedades del modelo, sin confundir distribución estable, estado estacionario y estabilidad del equilibrio."
+      },
+      {
+        "id": "out-8",
+        "text": "Formular recomendaciones agronómicas sustentadas en los resultados, su factibilidad y un análisis de sensibilidad."
+      },
+      {
+        "id": "out-9",
+        "text": "Entregar un reporte PDF y una presentación Beamer 16:9 consistentes entre sí, con fuentes citadas y archivos que permitan reproducir los cálculos y la compilación."
+      }
+    ],
+    "topics": [
+      {
+        "id": "top-1",
+        "text": "Modelación matricial de balances de masa y nutrientes en suelos agrícolas.",
+        "children": []
+      },
+      {
+        "id": "top-2",
+        "text": "Variables de decisión, unidades, restricciones físicas y trazabilidad de datos.",
+        "children": []
+      },
+      {
+        "id": "top-3",
+        "text": "Operaciones matriciales, determinantes y condiciones de invertibilidad.",
+        "children": []
+      },
+      {
+        "id": "top-4",
+        "text": "Rango de matrices y teorema de Rouché-Capelli.",
+        "children": []
+      },
+      {
+        "id": "top-5",
+        "text": "Eliminación gaussiana, Gauss-Jordan y comprobación de soluciones.",
+        "children": []
+      },
+      {
+        "id": "top-6",
+        "text": "Matrices de Leslie y modelos poblacionales estructurados por etapas.",
+        "children": []
+      },
+      {
+        "id": "top-7",
+        "text": "Matrices estocásticas y conservación en modelos de transición o distribución hídrica.",
+        "children": []
+      },
+      {
+        "id": "top-8",
+        "text": "Polinomio característico, autovalores, autovectores y radio espectral.",
+        "children": []
+      },
+      {
+        "id": "top-9",
+        "text": "Distribuciones estables, estados estacionarios y comportamiento de largo plazo.",
+        "children": []
+      },
+      {
+        "id": "top-10",
+        "text": "Sensibilidad paramétrica, factibilidad agronómica y límites del modelo.",
+        "children": []
+      },
+      {
+        "id": "top-11",
+        "text": "Documentación reproducible en LaTeX, presentación Beamer y referencias APA 7.",
+        "children": []
+      }
+    ]
+  },
+  "activities": [
+    {
+      "id": "actividad-5",
+      "title": "Consigna Oficial: Actividad 5 — Producto Integrador de Aprendizaje (PIA)",
+      "role": "assessment",
+      "platform": {
+        "name": "Plataforma Oficial UANL",
+        "course_id": null,
+        "module_ids": [
+          "Unidad-1"
+        ]
+      },
+      "unit_id": "Unidad-1",
+      "weeks": [
+        1,
+        2
+      ],
+      "outcome_ids": [
+        "out-1"
+      ],
+      "topic_ids": [
+        "top-1"
+      ],
+      "cognitive": {
+        "taxonomy": "Bloom",
+        "level": "creacion",
+        "verb": "Modelar",
+        "object": "Un caso agronómico integrado de balance de masa o nutrientes y dinámica poblacional o distribución de flujos mediante sistemas lineales y análisis espectral",
+        "conditions": "Trabajo individual o en equipo de dos a tres estudiantes, con datos documentados, supuestos explícitos, resolución analítica paso a paso, verificación computacional y comunicación mediante reporte institucional UANL y presentación Beamer 16:9.",
+        "observable_evidence": "Producto Integrador de Aprendizaje: reporte técnico reproducible y presentación ejecutiva de un caso agronómico integrado",
+        "justification": "La evidencia requiere crear una representación matemática coherente a partir de un fenómeno agronómico, integrar contenidos de las tres fases del curso, verificar procedimientos y evaluar sus consecuencias prácticas. La correspondencia entre datos, ecuaciones, cálculos y recomendaciones permite observar la competencia más allá de la ejecución mecánica de algoritmos."
+      },
+      "instruction": "1. Revisar la consigna, seleccionar la modalidad individual o de equipo de dos a tres integrantes y delimitar un caso agronómico que conecte un balance de masa o nutrientes con una dinámica poblacional o una distribución de flujos. 2. Registrar como datos de esta planeación a Diego de la Cruz Muñoz, matrícula 1977875, y al Dr. Miguel Ángel Dector Carrillo; señalar que el texto de la consigna contiene nombres diferentes y solicitar confirmación antes de emitir la portada definitiva. La entrega se ubica en noviembre de 2026; no asignar un día no proporcionado. 3. Recuperar fuentes académicas y técnicas verificables para los fundamentos y parámetros del caso. Diferenciar datos observados, datos de literatura y valores hipotéticos; si no se dispone de información real suficiente, declarar la simulación y confirmar su aceptación con el docente. 4. Definir variables, unidades, fronteras del sistema, supuestos y restricciones físicas. Formular Ax = b y mostrar la correspondencia entre cada ecuación y el balance agronómico. 5. Determinar rango(A) y rango([A|b]); clasificar la compatibilidad y unicidad. Si A es cuadrada, calcular det(A); si además es invertible, obtener A inversa como comprobación adicional. Si no es invertible o no es cuadrada, justificar por qué la inversa ordinaria no procede. 6. Resolver por eliminación gaussiana o Gauss-Jordan, documentando operaciones elementales y resultados intermedios. Verificar por sustitución, residuo y consistencia dimensional, distinguiendo exactitud simbólica de aproximación numérica. 7. Formular una matriz de transición T para evitar confundirla con la matriz A del balance. Si se adopta Leslie, identificar fecundidades, supervivencias, clases y paso temporal; no imponerle carácter estocástico, pues una matriz de Leslie no es necesariamente estocástica. Si se adopta una matriz estocástica, declarar la convención por filas o columnas y comprobar no negatividad y sumas unitarias; para vectores columna con z(t+1) = Tz(t), utilizar la convención por columnas. Si existen pérdidas hídricas, incorporarlas mediante un estado explícito o justificar un modelo subestocástico. 8. Desarrollar det(T - lambda I) = 0, obtener los autovalores y los autovectores relevantes y verificar Tv = lambda v. Presentar procedimientos analíticos y contrastarlos con software, sin sustituir las deducciones por capturas de pantalla. 9. Analizar la evolución z(t+1) = Tz(t) a partir de un estado inicial documentado. Interpretar el radio espectral y las condiciones de convergencia; en Leslie, distinguir crecimiento o decrecimiento de la población y distribución estable de clases; en matrices estocásticas, verificar las condiciones de existencia, unicidad y convergencia al estado estacionario. 10. Examinar la factibilidad del balance y la sensibilidad a variaciones justificadas de al menos un parámetro relevante. Identificar qué vínculos conectan los dos modelos y no afirmar un acoplamiento matemático inexistente. 11. Redactar el reporte con la estructura oficial, tablas legibles, ecuaciones numeradas cuando se referencien, figuras preferentemente vectoriales y citas APA 7 gestionadas con un archivo .bib. Elaborar una presentación Beamer 16:9 que sintetice problema, metodología, resultados, interpretación y recomendaciones. 12. Compilar ambos productos, comprobar referencias y correspondencia de cifras, corregir advertencias editoriales y preparar la sustentación. La rúbrica se aplica sobre 100 puntos y su contribución a la calificación final se obtiene multiplicando el resultado por 0.25; el máximo de esta actividad es 25 puntos.",
+      "requirements": [
+        {
+          "id": "req-1",
+          "text": "Delimitar un caso del sector agronómico que integre balance de masa o nutrientes y dinámica poblacional o distribución de flujos, explicando su relación y la decisión que se pretende fundamentar."
+        },
+        {
+          "id": "req-2",
+          "text": "Documentar fuentes, datos, parámetros, unidades, supuestos, estado inicial y restricciones físicas; identificar explícitamente cualquier información simulada."
+        },
+        {
+          "id": "req-3",
+          "text": "Formular Ax = b con dimensiones compatibles y significado agronómico explícito de variables, coeficientes y términos independientes."
+        },
+        {
+          "id": "req-4",
+          "text": "Comparar rango(A) y rango([A|b]), calcular el determinante cuando proceda y justificar la existencia de la inversa; no calcular una inversa ordinaria para matrices singulares o no cuadradas."
+        },
+        {
+          "id": "req-5",
+          "text": "Resolver el sistema mediante eliminación gaussiana o Gauss-Jordan, mostrar operaciones elementales y verificar la solución por sustitución y residuo, indicando tolerancia si se utilizan aproximaciones."
+        },
+        {
+          "id": "req-6",
+          "text": "Construir y justificar una matriz de transición T; distinguir Leslie de matriz estocástica y verificar las propiedades estructurales y la convención de actualización seleccionadas."
+        },
+        {
+          "id": "req-7",
+          "text": "Desarrollar el cálculo espectral mediante det(T - lambda I) = 0, obtener autovalores y autovectores relevantes, verificar sus ecuaciones y analizar el comportamiento de largo plazo bajo condiciones explícitas."
+        },
+        {
+          "id": "req-8",
+          "text": "Interpretar los resultados agronómicamente, comprobar factibilidad y examinar sensibilidad a por lo menos un parámetro, indicando limitaciones y recomendaciones derivadas del modelo."
+        },
+        {
+          "id": "req-9",
+          "text": "Generar el reporte PDF en la plantilla institucional UANL proporcionada o validada, con escudo UANL y emblema de la Facultad de Agronomía obtenidos de fuentes institucionales autorizadas y con todas las secciones de la consigna."
+        },
+        {
+          "id": "req-10",
+          "text": "Mantener citas y referencias APA 7 sincronizadas con el archivo .bib mediante una configuración compatible de BibTeX o Biber, sin fuentes inventadas ni citas huérfanas."
+        },
+        {
+          "id": "req-11",
+          "text": "Elaborar una presentación ejecutiva Beamer 16:9 para sustentación, consistente con el reporte y centrada en decisiones, procedimientos y evidencias verificables."
+        },
+        {
+          "id": "req-12",
+          "text": "Entregar fuentes LaTeX y archivos auxiliares de datos o cálculo, documentar la compilación reproducible y verificar metadatos: Diego de la Cruz Muñoz, matrícula 1977875, Dr. Miguel Ángel Dector Carrillo y noviembre de 2026, sujetos a confirmación de la discrepancia nominal de la consigna."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q-1",
+          "context": "Delimitación y articulación del caso",
+          "text": "¿Qué decisión agronómica exige integrar el balance de nutrientes con la dinámica poblacional o hídrica, y qué relación verificable existe entre ambos modelos?",
+          "requirement_ids": [
+            "req-1"
+          ]
+        },
+        {
+          "id": "q-2",
+          "context": "Datos y validez del modelo",
+          "text": "¿Qué datos sustentan cada coeficiente y qué supuestos permiten aproximar el fenómeno mediante relaciones lineales?",
+          "requirement_ids": [
+            "req-1"
+          ]
+        },
+        {
+          "id": "q-3",
+          "context": "Compatibilidad del sistema",
+          "text": "¿Qué revelan los rangos de A y [A|b] sobre la existencia y unicidad de la solución, y cómo se interpreta ese resultado en el caso agronómico?",
+          "requirement_ids": [
+            "req-1"
+          ]
+        },
+        {
+          "id": "q-4",
+          "context": "Verificación y factibilidad",
+          "text": "¿La solución satisface los balances, las unidades y las restricciones físicas, y qué implican componentes negativas o residuos superiores a la tolerancia establecida?",
+          "requirement_ids": [
+            "req-1"
+          ]
+        },
+        {
+          "id": "q-5",
+          "context": "Estructura de la transición",
+          "text": "¿Por qué corresponde utilizar una matriz de Leslie, una matriz estocástica u otra estructura justificada, y qué magnitud se conserva o cambia en cada paso temporal?",
+          "requirement_ids": [
+            "req-1"
+          ]
+        },
+        {
+          "id": "q-6",
+          "context": "Análisis espectral",
+          "text": "¿Qué indica el autovalor dominante y bajo qué condiciones su autovector describe una distribución estable o un estado estacionario?",
+          "requirement_ids": [
+            "req-1"
+          ]
+        },
+        {
+          "id": "q-7",
+          "context": "Sensibilidad y decisiones",
+          "text": "¿Cómo cambia la recomendación al modificar un parámetro relevante y qué incertidumbres impiden extrapolar los resultados?",
+          "requirement_ids": [
+            "req-1"
+          ]
+        },
+        {
+          "id": "q-8",
+          "context": "Sustentación y reproducibilidad",
+          "text": "¿Qué evidencia permite al docente reconstruir el modelo, verificar los cálculos y comprobar que las recomendaciones se desprenden de los resultados?",
+          "requirement_ids": [
+            "req-1"
+          ]
+        }
+      ],
+      "sequence": [
+        {
+          "id": "step-1",
+          "order": 1,
+          "phase": "preparation",
+          "action": "Revisar la consigna, registrar discrepancias de metadatos, seleccionar modalidad y delimitar el caso y la decisión agronómica.",
+          "inputs": [
+            "Consigna oficial",
+            "Datos académicos proporcionados",
+            "Opciones de caso agronómico"
+          ],
+          "output": "Ficha de alcance del PIA y registro de datos pendientes de confirmación",
+          "completion_check": "Caso con dos componentes relacionados, modalidad definida y discrepancia de nombres señalada sin mezclar identidades.",
+          "requirement_ids": [
+            "req-1",
+            "req-12"
+          ],
+          "depends_on": []
+        },
+        {
+          "id": "step-2",
+          "order": 2,
+          "phase": "preparation",
+          "action": "Revisar literatura y fuentes técnicas; organizar datos, parámetros, unidades, supuestos y restricciones.",
+          "inputs": [
+            "Ficha de alcance",
+            "Literatura académica",
+            "Datos de campo o fuentes técnicas disponibles"
+          ],
+          "output": "Diccionario de variables, tabla de parámetros y biblioteca bibliográfica .bib",
+          "completion_check": "Cada parámetro tiene unidad y procedencia; los valores simulados están identificados y las referencias son verificables.",
+          "requirement_ids": [
+            "req-2",
+            "req-10"
+          ],
+          "depends_on": [
+            "step-1"
+          ]
+        },
+        {
+          "id": "step-3",
+          "order": 3,
+          "phase": "construction",
+          "action": "Formular y resolver el balance Ax = b; analizar compatibilidad, determinante e inversa cuando procedan y verificar los resultados.",
+          "inputs": [
+            "Diccionario de variables",
+            "Tabla de parámetros",
+            "Supuestos y restricciones"
+          ],
+          "output": "Desarrollo analítico del sistema y archivo de verificación computacional",
+          "completion_check": "Dimensiones correctas, clasificación por rangos, operaciones elementales documentadas y solución comprobada con residuo y factibilidad.",
+          "requirement_ids": [
+            "req-3",
+            "req-4",
+            "req-5"
+          ],
+          "depends_on": [
+            "step-2"
+          ]
+        },
+        {
+          "id": "step-4",
+          "order": 4,
+          "phase": "construction",
+          "action": "Construir T, justificar su estructura, desarrollar el cálculo espectral y analizar trayectorias desde un estado inicial.",
+          "inputs": [
+            "Tabla de parámetros",
+            "Estado inicial",
+            "Resultados y vínculo con el balance"
+          ],
+          "output": "Modelo de transición, deducciones espectrales y gráficas de evolución",
+          "completion_check": "Estructura matricial validada, pares propios verificados y afirmaciones de largo plazo condicionadas a las propiedades del modelo.",
+          "requirement_ids": [
+            "req-6",
+            "req-7"
+          ],
+          "depends_on": [
+            "step-3"
+          ]
+        },
+        {
+          "id": "step-5",
+          "order": 5,
+          "phase": "construction",
+          "action": "Integrar ambos componentes, examinar sensibilidad y traducir los resultados en recomendaciones y límites de aplicación.",
+          "inputs": [
+            "Solución del balance",
+            "Análisis espectral",
+            "Restricciones operativas"
+          ],
+          "output": "Discusión técnica y matriz de recomendaciones sustentadas",
+          "completion_check": "Cada recomendación remite a un resultado; se documentan factibilidad, sensibilidad y límites, sin afirmar vínculos causales no modelados.",
+          "requirement_ids": [
+            "req-1",
+            "req-8"
+          ],
+          "depends_on": [
+            "step-3",
+            "step-4"
+          ]
+        },
+        {
+          "id": "step-6",
+          "order": 6,
+          "phase": "construction",
+          "action": "Redactar el reporte institucional y diseñar la presentación Beamer 16:9 con aparato crítico sincronizado.",
+          "inputs": [
+            "Desarrollos analíticos",
+            "Discusión técnica",
+            "Archivo .bib",
+            "Plantilla UANL validada",
+            "Recursos gráficos institucionales autorizados"
+          ],
+          "output": "Fuentes LaTeX del reporte y de la presentación",
+          "completion_check": "Secciones oficiales completas, metadatos consistentes, citas APA 7 y resultados coincidentes en ambos productos.",
+          "requirement_ids": [
+            "req-9",
+            "req-10",
+            "req-11",
+            "req-12"
+          ],
+          "depends_on": [
+            "step-5"
+          ]
+        },
+        {
+          "id": "step-7",
+          "order": 7,
+          "phase": "review",
+          "action": "Recalcular resultados, compilar ambos documentos, auditar calidad editorial y ensayar la sustentación.",
+          "inputs": [
+            "Fuentes .tex",
+            "Archivo .bib",
+            "Datos y archivos de cálculo",
+            "Rúbrica analítica"
+          ],
+          "output": "Reporte PDF, presentación PDF 16:9 y paquete reproducible revisado",
+          "completion_check": "Compilación con código de retorno 0, referencias resueltas, ausencia de desbordes visibles y defensa sustentada en evidencias verificadas.",
+          "requirement_ids": [
+            "req-5",
+            "req-7",
+            "req-8",
+            "req-9",
+            "req-10",
+            "req-11",
+            "req-12"
+          ],
+          "depends_on": [
+            "step-6"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "id": "res-1",
+          "source_id": "src-consigna-oficial",
+          "purpose": "Consigna instruccional y rúbrica oficial",
+          "required": true,
+          "access": "local",
+          "rights": "UANL"
+        }
+      ],
+      "assessment": {
+        "kind": "summative",
+        "scale_total": 100.0,
+        "weight": 25.0,
+        "weight_unit": "pts",
+        "criteria": [
+          {
+            "id": "crit-1",
+            "text": "Modelado Matemático",
+            "points": 30.0,
+            "descriptors": [
+              {
+                "level": "Excelente",
+                "description": "90–100%: planteamiento riguroso de matrices y sistemas relacionados, con significado agronómico explícito, dimensiones consistentes y supuestos justificados.",
+                "points": 30.0
+              },
+              {
+                "level": "Satisfactorio",
+                "description": "75–89%: planteamiento matricial correcto con descripciones agronómicas parciales o justificación incompleta de algunos supuestos.",
+                "points": 26.7
+              },
+              {
+                "level": "Básico",
+                "description": "60–74%: planteamiento formal con inconsistencias menores en dimensiones, variables o articulación de los componentes.",
+                "points": 22.2
+              },
+              {
+                "level": "No Aprobatorio",
+                "description": "Menos de 60%: errores sustantivos en las matrices, ausencia de balances verificables o modelo inadecuado para el caso. El puntaje debe ser menor que 18 puntos; 17.7 corresponde al 59% cuando se emplean porcentajes enteros.",
+                "points": 17.7
+              }
+            ],
+            "requirement_ids": [
+              "req-1"
+            ]
+          },
+          {
+            "id": "crit-2",
+            "text": "Resolución Analítica y Algorítmica",
+            "points": 30.0,
+            "descriptors": [
+              {
+                "level": "Excelente",
+                "description": "90–100%: procedimiento analítico completo y correcto; rangos, determinante e inversa cuando procedan, autovalores y autovectores calculados y verificados, con exactitud simbólica cuando sea viable y aproximaciones justificadas.",
+                "points": 30.0
+              },
+              {
+                "level": "Satisfactorio",
+                "description": "75–89%: procedimiento mayormente correcto con ligeras omisiones de pasos intermedios que no comprometen los resultados principales.",
+                "points": 26.7
+              },
+              {
+                "level": "Básico",
+                "description": "60–74%: errores de cálculo numérico o verificaciones incompletas que no invalidan la lógica global.",
+                "points": 22.2
+              },
+              {
+                "level": "No Aprobatorio",
+                "description": "Menos de 60%: procedimiento erróneo o ausencia de deducciones analíticas y comprobaciones. El puntaje debe ser menor que 18 puntos; 17.7 corresponde al 59% cuando se emplean porcentajes enteros.",
+                "points": 17.7
+              }
+            ],
+            "requirement_ids": [
+              "req-1"
+            ]
+          },
+          {
+            "id": "crit-3",
+            "text": "Interpretación Agronómica",
+            "points": 20.0,
+            "descriptors": [
+              {
+                "level": "Excelente",
+                "description": "90–100%: interpretación profunda de soluciones, autovalores y distribuciones de largo plazo; decisiones agrícolas fundamentadas, con factibilidad, sensibilidad y limitaciones explícitas.",
+                "points": 20.0
+              },
+              {
+                "level": "Satisfactorio",
+                "description": "75–89%: discusión acertada de los resultados con análisis agronómico general y recomendaciones pertinentes, aunque parcialmente justificadas.",
+                "points": 17.8
+              },
+              {
+                "level": "Básico",
+                "description": "60–74%: interpretación superficial, principalmente restringida a valores numéricos, con escasa evaluación de viabilidad.",
+                "points": 14.8
+              },
+              {
+                "level": "No Aprobatorio",
+                "description": "Menos de 60%: ausencia de conexión agronómica o conclusiones vacías o incompatibles con el modelo. El puntaje debe ser menor que 12 puntos; 11.8 corresponde al 59% cuando se emplean porcentajes enteros.",
+                "points": 11.8
+              }
+            ],
+            "requirement_ids": [
+              "req-1"
+            ]
+          },
+          {
+            "id": "crit-4",
+            "text": "Calidad Editorial y Normativa UANL",
+            "points": 20.0,
+            "descriptors": [
+              {
+                "level": "Excelente",
+                "description": "90–100%: cumplimiento total de la plantilla UANL validada, tipografía, estructura, figuras vectoriales cuando corresponda, citas APA 7 y ausencia de erratas; reporte y presentación consistentes y reproducibles.",
+                "points": 20.0
+              },
+              {
+                "level": "Satisfactorio",
+                "description": "75–89%: cumplimiento adecuado del formato con detalles menores de espaciado, legibilidad o citación.",
+                "points": 17.8
+              },
+              {
+                "level": "Básico",
+                "description": "60–74%: desapego parcial a la estructura institucional, inconsistencias editoriales o documentación reproducible incompleta.",
+                "points": 14.8
+              },
+              {
+                "level": "No Aprobatorio",
+                "description": "Menos de 60%: formato deficiente, ausencia de citas, desorganización o productos incompletos. El puntaje debe ser menor que 12 puntos; 11.8 corresponde al 59% cuando se emplean porcentajes enteros.",
+                "points": 11.8
+              }
+            ],
+            "requirement_ids": [
+              "req-1"
+            ]
+          }
+        ],
+        "editorial_checks": [
+          "Portada con identidad UANL y Facultad de Agronomía mediante recursos institucionales autorizados.",
+          "Discrepancia entre nombres de la consigna y datos del encargo registrada y sometida a confirmación antes de la entrega definitiva.",
+          "Fecha expresada como noviembre de 2026, sin inventar un día de entrega.",
+          "Todas las secciones oficiales presentes y jerarquía de títulos consistente.",
+          "Sin citas huérfanas; citas y referencias sincronizadas con el archivo .bib y normalizadas en APA 7.",
+          "Subtítulo entre 28 y 68 caracteres, si se utiliza como control editorial AulaTeX; no presentarlo como requisito oficial adicional de la consigna.",
+          "Ecuaciones, tablas y figuras legibles, referenciadas y consistentes en unidades y notación.",
+          "Figuras vectoriales cuando corresponda y ausencia de desbordes hbox visibles.",
+          "Presentación Beamer con relación de aspecto 16:9 y cifras coincidentes con el reporte.",
+          "Compilación reproducible de ambos documentos con código de retorno 0 y sin referencias pendientes."
+        ]
+      },
+      "products": [
+        {
+          "id": "prod-actividad-5",
+          "kind": "reporte_academico",
+          "recipient": "Plataforma UANL",
+          "editable_format": "application/x-tex",
+          "submission_format": "application/pdf",
+          "structure": [
+            "Portada institucional",
+            "Resumen y palabras clave",
+            "Introducción y marco teórico",
+            "Metodología y desarrollo del caso de estudio",
+            "Resultados y discusión técnica",
+            "Conclusiones y recomendaciones",
+            "Referencias",
+            "Anexos de cálculos, datos y reproducibilidad, cuando sean necesarios"
+          ],
+          "length": "Extensión no especificada en la consigna; como orientación de planeación, 6 a 10 páginas de cuerpo principal, sin contar portada, referencias y anexos, sujeta a validación docente.",
+          "filename_pattern": "reporte-algebra-lineal-actividad-5.pdf",
+          "accessibility": "PDF/A estructurado",
+          "requirement_ids": [
+            "req-1"
+          ],
+          "paths": {
+            "editable": "reporte-algebra-lineal-actividad-5.tex",
+            "delivery": "entregas-algebra-lineal/reporte-algebra-lineal-actividad-5.pdf"
+          }
+        }
+      ],
+      "calendar": {
+        "opens_at": null,
+        "expected_at": null,
+        "due_at": "Noviembre de 2026",
+        "closes_at": null,
+        "timezone": "America/Monterrey",
+        "literal": "Noviembre de 2026"
+      },
+      "policies": {
+        "ai": "Declaración transparente de asistencia algorítmica en nota al pie institucional",
+        "integrity": "Cero tolerancia al plagio; literatura científica verificable indexada en JCR/Scopus",
+        "collaboration": "Individual",
+        "citation": "APA 7ma edición",
+        "attempts": 1,
+        "late_submission": "Penalización conforme a reglamento institucional",
+        "accessibility": "PDF estructurado de alto contraste",
+        "privacy": "Resguardo estricto de matrícula y datos personales",
+        "exceptions": []
+      },
+      "dependencies": [],
+      "alignment": [
+        {
+          "outcome_id": "out-1",
+          "requirement_ids": [
+            "req-1"
+          ],
+          "step_ids": [
+            "step-1",
+            "step-2",
+            "step-3"
+          ],
+          "product_ids": [
+            "prod-actividad-5"
+          ],
+          "criterion_ids": [
+            "crit-1"
+          ]
+        }
+      ],
+      "bindings": {
+        "extractor_directory": "planeaciones-algebra-lineal",
+        "notes_directory": "referencias-algebra-lineal/notas-algebra-lineal",
+        "research_directory": "referencias-algebra-lineal"
+      }
+    }
+  ],
+  "field_status": [
+    {
+      "path": "/identity/subject_id",
+      "state": "confirmed",
+      "reason": null,
+      "evidence": [
+        {
+          "source_id": "src-consigna-oficial",
+          "locator": "metadata",
+          "quoted_text": "algebra-lineal"
+        }
+      ],
+      "alternatives": []
+    }
+  ],
+  "review": {
+    "state": "needs_review",
+    "reviewed_at": "2026-11-08",
+    "reviewer_role": "agente-planeador-aulatex",
+    "critical_gaps": [
+      "Discrepancia semántica en rúbrica: suma de criterios (100.0 pts) no coincide con ponderación oficial (25.0 pts)"
+    ],
+    "semantic_validation": "failed"
+  },
+  "artifact_contract": {
+    "version": "1.1",
+    "paths_relative_to_subject": {
+      "plans": "planeaciones-algebra-lineal",
+      "references": "referencias-algebra-lineal",
+      "deliveries": "entregas-algebra-lineal"
+    },
+    "deliverables_directory": "entregas-algebra-lineal",
+    "source_directory": "."
+  },
+  "extensions": {
+    "docente": "Dr. Miguel Ángel Dector Carrillo",
+    "estudiante": "Diego de la Cruz Muñoz",
+    "matricula": "1977875",
+    "modalidad": "Competencias / Enfoque Profesional",
+    "carrera": "Ingeniero Agronomo",
+    "generador": "realizar-planeaciones (AulaTeX Agéntico)",
+    "telemetria": {
+      "llm_engine": "azure_foundry",
+      "llm_model": "gpt-6.1-sol",
+      "llm_accelerated": true,
+      "llm_latency_ms": 99233.2,
+      "llm_fallback_reason": null,
+      "cached_tokens": 0,
+      "reasoning_tokens": 319,
+      "has_encrypted_reasoning": true,
+      "session_turns": 1,
+      "response_id": "resp_09d5f48877b4fc23016af06caf4b1c8193882379a5d9abd9e4"
+    },
+    "evidence_handoff_id": "",
+    "verified_bib_keys": [],
+    "supported_facts_count": 0,
+    "unverified_items_count": 0,
+    "coverage_summary": {}
+  }
+}
