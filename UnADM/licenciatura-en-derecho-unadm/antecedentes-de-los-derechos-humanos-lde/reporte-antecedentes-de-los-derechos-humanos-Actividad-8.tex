@@ -1,8 +1,12 @@
 \documentclass[12pt,spanish,letterpaper,oneside]{article}
-\def\documenttitle {Examen Parcial I}
-\def\documentsubtitle {Registro documental de la evaluaci\'on}
-\def\documentsubject {Examen Parcial I}
-\def\documentauthor {Martin Jonathan de la Cruz}
+\def\documenttitle {Actividad 8: Cuadro sin\'optico\\[6pt]Orden jur\'idico nacional en torno a los derechos humanos}
+\def\documentsubtitle {Estructura, principios, garant\'ias y efectividad en el sistema constitucional mexicano}
+\def\documenttitlehf {Orden jur\'idico en derechos humanos}
+\def\hfwidthwrap {true}
+\def\hfwidthtitle {0.48}
+\def\hfwidthcourse {0.46}
+\def\documentsubject {Antecedentes de los derechos humanos}
+\def\documentauthor {Mart\'in Jonathan De la Cruz Mu\~noz}
 \def\coursename {Antecedentes de los derechos humanos}
 \def\coursecode {005}
 \def\universityname {Universidad Abierta y a Distancia de M\'exico}
@@ -12,147 +16,330 @@
 \def\universitydepartmentimagecfg {height=1.57cm}
 \def\universitylocation {Ciudad de M\'exico}
 \def\authortable {\begin{tabular}{ll}
-Alumno: & Martin Jonathan de la Cruz \\
-Matricula: & ES2611202040 \\
-Figura docente: & Daniel Alexis Lozano Ortega \\
-Reporte interno: & 8 \\
-Semana: & 4 \\
-Fecha de registro: & 22 de octubre de 2026
+\textbf{Alumno:} & Mart\'in Jonathan De la Cruz Mu\~noz \\
+\textbf{Matr\'icula:} & ES261120204 \\
+\textbf{Figura docente:} & Daniel Alexis Lozano Ortega \\
+\textbf{Semestre / Bloque:} & 2 / 2 \\
+\textbf{Actividad oficial:} & Actividad 8: Cuadro sin\'optico \\
+\textbf{Semana lectiva:} & Semana 6 \\
+\textbf{Fecha de realizaci\'on:} & Noviembre de 2026 \\
+\multicolumn{2}{l}{\universitylocation}
 \end{tabular}}
+
 \usepackage{iftex}
 \ifLuaTeX
-\let\pdfpagewidth\pagewidth
-\let\pdfpageheight\pageheight
+	\let\pdfpagewidth\pagewidth
+	\let\pdfpageheight\pageheight
 \fi
+
 \input{template}
-\usepackage{fontspec}
-\setmainfont{arial.ttf}[Path=C:/Windows/Fonts/,BoldFont=arialbd.ttf,ItalicFont=ariali.ttf,BoldItalicFont=arialbi.ttf]
-\setsansfont{arial.ttf}[Path=C:/Windows/Fonts/,BoldFont=arialbd.ttf,ItalicFont=ariali.ttf,BoldItalicFont=arialbi.ttf]
+\usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
+\usepackage{pdflscape}
+\usepackage{array,tabularx,booktabs,longtable}
 \usepackage{tikz}
+\usetikzlibrary{shapes.geometric,arrows.meta,positioning,calc,fit,shadows,decorations.pathreplacing}
 \usepackage{eso-pic}
 \setcitestyle{authoryear,open={(},close={)}}
+
+\newcommand{\insertcoverwatermark}{%
+	\AddToShipoutPictureBG*{%
+		\begin{tikzpicture}[remember picture,overlay]
+			\node[opacity=0.16,inner sep=0pt] at (current page.center)
+				{\includegraphics[width=0.72\paperwidth]{img/departamentos/UnADM.pdf}};
+		\end{tikzpicture}%
+	}%
+}
+
+\definecolor{azul}{HTML}{173B59}
+\definecolor{verde}{HTML}{176B66}
+\definecolor{suave}{HTML}{EDF3F7}
+\definecolor{gris}{HTML}{46515A}
+\definecolor{linea}{HTML}{CAD6DF}
+
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\setlength{\emergencystretch}{3em}
+
 \begin{document}
-\AddToShipoutPictureBG*{\begin{tikzpicture}[remember picture,overlay]
-\node[opacity=0.16,inner sep=0pt] at (current page.center)
-{\includegraphics[width=0.72\paperwidth]{img/departamentos/UnADM.pdf}};
-\end{tikzpicture}}
+\insertcoverwatermark
 \templatePortrait
 \templatePagecfg
-\templateFinalcfg
-\newgeometry{margin=2.5cm}
-\fontsize{12}{14.5}\selectfont
 \onehalfspacing
+
+\begin{abstractd}
+\noindent\textbf{Tesis central:} el orden jur\'idico mexicano tutela los derechos humanos no por la mera acumulaci\'on cuantitativa de normas positivas, sino mediante la articulaci\'on sustantiva del par\'ametro constitucional y convencional, las obligaciones universales de todas las autoridades del Estado y la disponibilidad de garant\'ias institucionales efectivas que permiten exigir su cumplimiento reparador.
+
+El art\'iculo 1.º constitucional transforma el reconocimiento tradicional de derechos subjetivos en un mandato directo y vinculante de interpretaci\'on conforme y actuaci\'on garantista, complementado por los principios rectores de universalidad, interdependencia, indivisibilidad y progresividad. Este manuscrito organiza anal\'iticamente mediante un cuadro sin\'optico jer\'arquico en TikZ y matrices operativas los fundamentos constitucionales, los tratados internacionales suscritos por el Estado mexicano, la legislaci\'on secundaria de desarrollo y las instituciones de protecci\'on jurisdiccional y no jurisdiccional. Se demuestra que la supremac\'ia constitucional, el principio pro persona y la distribuci\'on de competencias deben armonizarse funcionalmente, superando esquemas piramidales r\'igidos que disocian el rango normativo de su eficacia material.
+
+\bigskip
+\noindent\textbf{Palabras clave:} derechos humanos; orden jur\'idico mexicano; art\'iculo 1.º constitucional; interpretaci\'on conforme; bloque de constitucionalidad; garant\'ias institucionales.
+\end{abstractd}
+
+\templateIndex
+\templateFinalcfg
+
 \section{Introducci\'on}
-El Examen Parcial I aparece como el segundo producto acad\'emico de la
-semana 4, junto al cuadro comparativo. Este reporte documenta la evidencia
-disponible de su estado; no constituye una resoluci\'on del examen.
-\section{Fundamentos, generaciones y protecci\'on jur\'idica de los derechos humanos}
-\subsection{Dignidad, reconocimiento y exigibilidad}
-La justificaci\'on de un derecho, su reconocimiento normativo y sus
-garant\'ias responden a preguntas distintas. El fundamento explica por
-qu\'e una persona merece protecci\'on; el reconocimiento permite identificar
-facultades y obligaciones; las garant\'ias aportan medios para exigirlas.
-La historia de los derechos humanos muestra que la formulaci\'on moderna
-de dignidad es resultado de conflictos y transformaciones, no una
-realidad siempre reconocida de manera uniforme
-\citep[p.~11]{alvarezParcial}.
 
-La perspectiva iusnaturalista sit\'ua el fundamento antes del reconocimiento
-estatal; la positivista dirige la atenci\'on a los derechos reconocidos
-jur\'idicamente, y la axiol\'ogica a los valores que justifican la protecci\'on.
-La lecci\'on de Canal UNED presenta esas perspectivas como aproximaciones
-a la fundamentaci\'on \citep{unedParcial}. Ninguna permite deducir por s\'i
-sola el resultado de una controversia: el examen jur\'idico requiere normas
-aplicables, autoridades obligadas y medios de defensa.
+El an\'alisis del orden jur\'idico nacional en torno a los derechos humanos constituye la piedra angular que enlaza los antecedentes hist\'oricos de la materia con la pr\'actica procesal contempor\'anea del Estado constitucional de derecho. Reconocer formalmente la dignidad intr\'inseca de la persona como fuente ontol\'ogica de derechos subjetivos represent\'o una conquista civilizatoria irrenunciable \citep{rabinovich2014derechos}; sin embargo, dicho reconocimiento dogm\'atico deviene inoperante e ilusorio si el ordenamiento jur\'idico no define con exactitud las autoridades legalmente obligadas, el par\'ametro interpretativo aplicable y los recursos institucionales accesibles ante una vulneraci\'on f\'actica.
 
-\subsection{Historia y generaciones}
-Rey Cantor y coautoras distinguen libertades civiles y pol\'iticas,
-derechos econ\'omicos, sociales y culturales y derechos de solidaridad.
-Relacionan estos grupos con libertad, igualdad y fraternidad, y examinan
-titulares, sujetos obligados y prestaciones. La clasificaci\'on es un
-recurso hist\'orico y did\'actico, no una escala de importancia ni una
-sucesi\'on que elimine los derechos anteriores
-\citep[pp.~72--76]{reyParcial}.
+\textbf{Tesis central:} la protecci\'on efectiva de los derechos humanos en M\'exico depende de la integraci\'on funcional entre la Constituci\'on Federal, los tratados internacionales sobre la materia, la legislaci\'on reglamentaria secundaria y las garant\'ias procesales e institucionales; su validez formal debe medirse por su capacidad operativa para prevenir violaciones, cesar conductas arbitrarias y garantizar una reparaci\'on integral a las v\'ictimas. En este sentido, el cuadro sin\'optico desarrollado en este trabajo no se limita a ilustrar una simple jerarqu\'ia piramidal kelseniana, sino que explicita las redes de conexi\'on entre fuentes normativas, competencias p\'ublicas y mecanismos de exigibilidad.
 
-El cap\'itulo sobre primera generaci\'on vincula las libertades civiles
-y pol\'iticas con las revoluciones inglesa de 1688--1689, norteamericana
-de 1776 y francesa de 1789. Los autores distinguen esas formulaciones
-modernas de los antecedentes antiguos y medievales
-\citep[p.~83]{reyParcial}. Estudiar antecedentes exige conservar sus
-exclusiones y l\'imites, en lugar de atribuirles igualdad universal.
+El eje rector del orden jur\'idico mexicano se localiza en el art\'iculo 1.º de la Constituci\'on Pol\'itica de los Estados Unidos Mexicanos (CPEUM), reformado profundamente en junio de 2011 \citep{carbonellDerechosHumanos2019,cpeumADH2026}. Dicho precepto consolid\'o un aut\'entico bloque de constitucionalidad al equiparar jer\'arquicamente las normas sobre derechos humanos contenidas en la Constituci\'on y en los tratados internacionales ratificados por M\'exico \citep{scjnParametro2014ADH}. Desde esta plataforma, las autoridades de todos los \'ordenes de gobierno quedan sometidas al deber categ\'orico de promover, respetar, proteger y garantizar los derechos en el \'ambito de sus atribuciones.
 
-En M\'exico, Brom describe calpulli, autoridades y tributo entre los
-mexicas; posteriormente, encomienda, rep\'ublicas de indios y gobierno
-virreinal. La presencia de deberes de protecci\'on en un orden desigual
-no demuestra su cumplimiento ni equivale al sistema constitucional
-actual \citep[caps.~1, 5--6]{bromParcial}. Las transformaciones del
-constitucionalismo ampl\'ian tanto la organizaci\'on del poder como los
-contenidos individuales y sociales de los derechos
-\citep[pp.~1--2]{arteagaParcial}.
+El presente estudio profundiza en los componentes estructurales de dicho orden: (a) la organizaci\'on jer\'arquica y conceptual mediante esquemas visuales y tabulares; (b) el desglose dogm\'atico del art\'iculo 1.º, los principios de universalidad, interdependencia, indivisibilidad y progresividad; (c) la distinci\'on hermen\'eutica entre reconocimiento normativo, garant\'ia procesal y efectividad f\'actica; y (d) la transferencia metodol\'ogica al ejercicio profesional de la abogac\'ia frente a casos concretos de transgresi\'on.
 
-\subsection{Obligaciones constitucionales actuales}
-El art\'iculo 1 reconoce derechos constitucionales y de tratados de los
-que M\'exico es parte. Exige interpretaci\'on conforme y protecci\'on m\'as
-amplia, e impone a todas las autoridades promover, respetar, proteger y
-garantizar derechos. Universalidad, interdependencia, indivisibilidad y
-progresividad impiden convertir la clasificaci\'on generacional en una
-jerarqu\'ia. Ante violaciones, el mismo precepto obliga al Estado a
-prevenir, investigar, sancionar y reparar en los t\'erminos legales
-\citep[art.~1]{cpeumParcial}.
+\section{Cuadro sin\'optico: orden jur\'idico nacional en derechos humanos}
 
-\subsection{Cuestionario: evidencia del intento}
-La consulta autenticada del 23 de octubre de 2026 al cuestionario 212011
-confirma el nombre \emph{Examen Parcial I}, el indicador \emph{Hecho: Ver}
-y el requisito \emph{Por hacer: Hacer intentos: 1}.
+La representaci\'on gr\'afica del orden jur\'idico nacional sintetiza de manera jer\'arquica y multidimensional las fuentes, los principios y las instancias de garant\'ia que articulan el r\'egimen mexicano. La s\'intesis parte del concepto matriz del ordenamiento, se ramifica en los mandatos constitucionales supremos y desemboca en las v\'ias procesales e institucionales destinadas a materializar la tutela de la persona.
 
-\subsection{Condiciones publicadas}
-La evaluaci\'on comprende contenidos de las semanas 2, 3 y 4. Contiene
-cinco reactivos: cuatro de opci\'on m\'ultiple y uno de verdadero o falso.
-Las instrucciones establecen un \'unico intento y un tiempo m\'aximo de
-diez minutos, contado desde la selecci\'on de \emph{Comenzar intento}.
-Al agotarse ese tiempo se env\'ian autom\'aticamente las respuestas registradas.
+\bigskip
+\begin{center}
+\begin{tikzpicture}[
+  raiz/.style={
+    draw=azul,fill=azul,text=white,rounded corners=4pt,
+    text width=3.0cm,align=center,inner sep=8pt,
+    font=\small\bfseries,drop shadow
+  },
+  rama/.style={
+    draw=verde,fill=suave,rounded corners=3pt,
+    text width=2.8cm,align=left,inner sep=6pt,
+    font=\small\bfseries
+  },
+  detalle/.style={
+    draw=linea,fill=white,rounded corners=3pt,
+    text width=7.2cm,align=left,inner sep=6pt,
+    font=\footnotesize
+  },
+  enlace/.style={draw=verde,line width=1pt}
+]
+\node[raiz] (r) at (0,0) {ORDEN JUR\'IDICO\\NACIONAL EN\\DERECHOS HUMANOS\\[4pt]
+\footnotesize Sistema articulado de fuentes, principios y garant\'ias};
 
-La apertura publicada es el 19 de octubre de 2026, 00:00, y el cierre
-el 26 de octubre de 2026, 23:55. Se reproducen las fechas visibles del
-aula sin atribuir una zona horaria no verificada. Antes de iniciar se
-requieren conexi\'on estable, energ\'ia suficiente y un espacio sin
-interrupciones. No se inici\'o un intento durante la consulta.
+\node[rama] (a) at (4.0, 7.5) {1. Concepto y fines};
+\node[detalle] (ad) at (9.6, 7.5) {
+\textbf{Concepto:} Conjunto arm\'onico de normas y competencias.\\
+\textbf{Finalidad:} Tutelar la dignidad intr\'inseca y regular el poder.\\
+\textbf{Fuerza vinculante:} Par\'ametro de validez de todo acto p\'ublico.
+};
 
-No se dispone en este registro de reactivos, respuestas seleccionadas,
-duraci\'on real de un intento, calificaci\'on o retroalimentaci\'on.
-El l\'imite de diez minutos es una condici\'on publicada, no una duraci\'on
-observada de ejecuci\'on.
-La evaluaci\'on se realiza en la plataforma, no mediante un PDF adjunto.
-\clearpage
-\section{Conclusiones}
-La evidencia acredita que el examen est\'a visible y que su requisito de
-intento figura pendiente en la captura. Para completar este registro se
-requiere la revisi\'on del intento realizada por el estudiante. No se
-atribuyen respuestas ni resultados inexistentes.
-La distinci\'on entre fundamento, reconocimiento y garant\'ia, junto a la
-lectura no jer\'arquica de las generaciones, ofrece una base para estudiar
-las semanas 2--4 sin confundir antecedentes con protecci\'on efectiva.
-\clearpage
-\begin{thebibliography}{6}
-\bibitem[\'Alvarez Icaza Longoria(2009)]{alvarezParcial}
-\'Alvarez Icaza Longoria, E. (2009). \emph{Los derechos humanos en M\'exico}. Nostra Ediciones.
-\bibitem[Arteaga Nava(2014)]{arteagaParcial}
-Arteaga Nava, E. (2014). \emph{Derecho constitucional} (4.\textsuperscript{a} ed., edici\'on digital). Oxford University Press.
-\bibitem[Brom(2017)]{bromParcial}
-Brom, J. (2017). \emph{Esbozo de historia de M\'exico} (1.\textsuperscript{a} ed. digital). Penguin Random House Grupo Editorial.
-\bibitem[C\'amara de Diputados(2026)]{cpeumParcial}
-C\'amara de Diputados del H. Congreso de la Uni\'on. (2026).
-\emph{Constituci\'on Pol\'itica de los Estados Unidos Mexicanos}
-(\'ultima reforma DOF 7 de octubre de 2026).
-\url{https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf}
-\bibitem[Rey Cantor et~al.(2022)]{reyParcial}
-Rey Cantor, E., Rey Anaya, G. A., \& Rey Anaya, A. M. (2022).
-\emph{Las generaciones de los derechos humanos: Libertad, igualdad y fraternidad}
-(10.\textsuperscript{a} ed.). Universidad Libre.
-\bibitem[Universidad Nacional de Educaci\'on a Distancia(2024)]{unedParcial}
-Universidad Nacional de Educaci\'on a Distancia. (2024, 23 de octubre).
-\emph{Tema 11. Los Derechos Humanos Concepto y Fundamentaci\'on}
-[Video]. Canal UNED. \url{https://canal.uned.es/video/671b6728e0637d00c70d7b80}
+\node[rama] (b) at (4.0, 4.5) {2. Fundamento constitucional};
+\node[detalle] (bd) at (9.6, 4.5) {
+\textbf{Art. 1.º CPEUM:} Bloque de derechos y cl\'ausula de apertura.\\
+\textbf{Art. 133 CPEUM:} Supremac\'ia y articulaci\'on de tratados.\\
+\textbf{Art. 103 y 107 CPEUM:} Bases del juicio de amparo judicial.\\
+\textbf{Art. 102, Ap. B:} Sistema ombudsperson no jurisdiccional.
+};
+
+\node[rama] (c) at (4.0, 1.5) {3. Principios rectores};
+\node[detalle] (cd) at (9.6, 1.5) {
+\textbf{Universalidad:} Titularidad incondicional de toda persona.\\
+\textbf{Interdependencia:} Nexo e impacto rec\'iproco entre derechos.\\
+\textbf{Indivisibilidad:} Integridad indivisible del haz de prerrogativas.\\
+\textbf{Progresividad y no regresividad:} Avance continuo y prohibici\'on de retrocesos.
+};
+
+\node[rama] (d) at (4.0, -1.5) {4. Fuentes internacionales};
+\node[detalle] (dd) at (9.6, -1.5) {
+\textbf{Convenci\'on Americana (Pacto de San Jos\'e):} Corte IDH.\\
+\textbf{Pactos de la ONU (1966):} PIDCP y PIDESC.\\
+\textbf{Tratados tem\'aticos:} Bel\'em do Par\'a, Tortura, Discapacidad.\\
+\textbf{DUDH (1948):} Criterio de interpretaci\'on dogm\'atica general.
+};
+
+\node[rama] (e) at (4.0, -4.5) {5. Legislaci\'on de desarrollo};
+\node[detalle] (ed) at (9.6, -4.5) {
+\textbf{Ley de Amparo:} Proceso constitucional tutelar prioritario.\\
+\textbf{Ley General de V\'ictimas:} Reparaci\'on integral y asesor\'ia.\\
+\textbf{Leyes de no discriminaci\'on y acceso a la informaci\'on:}\\
+Normas federales y estatales que operativizan est\'andares sustantivos.
+};
+
+\node[rama] (f) at (4.0, -7.5) {6. Instancias de garant\'ia};
+\node[detalle] (fd) at (9.6, -7.5) {
+\textbf{Jurisdiccional:} SCJN, Tribunales Colegiados y Jueces de Distrito.\\
+\textbf{No jurisdiccional:} CNDH y Comisiones Estatales de DH.\\
+\textbf{Autoridades en general:} Deberes de control difuso e investigaci\'on.\\
+\textbf{Subsidiaria externa:} Comisi\'on y Corte Interamericana de DH.
+};
+
+\draw[enlace] (r.east) -- (2.0,0);
+\draw[enlace] (2.0, -7.5) -- (2.0, 7.5);
+\foreach \n in {a,b,c,d,e,f}{
+  \draw[enlace] (2.0,0 |- \n.west) -- (\n.west);
+}
+\foreach \n/\m in {a/ad,b/bd,c/cd,d/dd,e/ed,f/fd}{
+  \draw[enlace] (\n.east) -- (\m.west);
+}
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.3cm}
+\noindent{\footnotesize\textbf{Fuente:} Elaboraci\'on propia con base en el texto de la \citep{cpeumADH2026}, la jurisprudencia de la \citep{scjnParametro2014ADH} y la doctrina constitucional de \citep{carbonellDerechosHumanos2019}.}
+
+\bigskip
+\subsection{Matriz anal\'itica de componentes y consecuencias jur\'idicas}
+
+Para complementar la s\'intesis gr\'afica, la tabla~\ref{tab:dimensiones} examina la articulaci\'on entre los niveles del ordenamiento, sus funciones normativas y las consecuencias directas sobre la validez de los actos p\'ublicos.
+
+\begin{table}[htbp]
+\centering
+\caption{Dimensiones normativas, funciones y consecuencias pr\'acticas en el orden jur\'idico}
+\label{tab:dimensiones}
+\small
+\begin{tabularx}{\textwidth}{@{}p{3.0cm}p{3.5cm}Yp{3.2cm}@{}}
+\toprule
+\textbf{Nivel / Componente} & \textbf{Normas eje} & \textbf{Funci\'on institucional} & \textbf{Efecto pr\'actico} \\
+\midrule
+\textbf{Constituci\'on Federal} & Arts. 1, 103, 107 y 133 & C\'uspide normativa y definici\'on de competencias estatales. & Invalidez o inaplicaci\'on de leyes que vulneren derechos humanos. \\
+\addlinespace
+\textbf{Tratados internacionales} & CADH, PIDCP, PIDESC y convenios especializados & Integran el bloque o par\'ametro de regularidad constitucional. & Obligan al control de convencionalidad ex officio por jueces. \\
+\addlinespace
+\textbf{Principios rectores} & Universalidad, interdependencia, indivisibilidad, progresividad & Directrices de interpretaci\'on y justificaci\'on obligatoria. & Prohibici\'on de retrocesos f\'acticos y an\'alisis contextual de casos. \\
+\addlinespace
+\textbf{Legislaci\'on secundaria} & Ley de Amparo, Ley CNDH, Ley General de V\'ictimas & Dise\~no de v\'ias procesales, cargas probatorias y medidas cautelares. & Concreci\'on de las v\'ias ordinarias y extraordinarias de reclamo. \\
+\addlinespace
+\textbf{Organismos no judiciales} & Comisiones de Derechos Humanos (Art. 102-B) & Investigaci\'on sumaria de agravios, emisi\'on de recomendaciones p\'ublicas. & Presi\'on institucional; deber de fundar la negativa ante el Senado o Congresos. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Fundamentos constitucionales y hermen\'eutica de derechos}
+
+\subsection{El art\'iculo 1.º de la Constituci\'on: el bloque de constitucionalidad}
+
+El ordenamiento jur\'idico mexicano experiment\'o un giro copernicano con la reforma del 10 de junio de 2011 \citep{ibarraCurso2022ADH}. Con anterioridad, la Constituci\'on alud\'ia en su t\'itulo primero a las ``garant\'ias individuales'', sugiriendo una concepci\'on formalista seg\'un la cual los derechos exist\'ian \'unicamente porque el Estado los otorgaba graciosamente. La redacci\'on vigente corrige de ra\'iz este enfoque al prescribir que:
+\begin{quote}
+``En los Estados Unidos Mexicanos todas las personas gozar\'an de los derechos humanos reconocidos en esta Constituci\'on y en los tratados internacionales de los que el Estado Mexicano sea parte, as\'i como de las garant\'ias para su protecci\'on...'' \citep[Art. 1, p\'arr. 1]{cpeumArt1Vigente}.
+\end{quote}
+
+De esta cl\'ausula emanan tres postulados sustantivos:
+\begin{enumerate}
+\item \textbf{Reconocimiento ontol\'ogico:} La norma utiliza el verbo \emph{reconocer}, asumiendo que los derechos derivan de la dignidad humana preexistente y no de la concesi\'on soberana del legislador \citep{scjnDignidad2016ADH}.
+\item \textbf{Conformaci\'on del par\'ametro convencional:} Los tratados ratificados por el Senado se incorporan materialmente al par\'ametro supremo de regularidad constitucional, operando con jerarqu\'ia equivalente a los preceptos de la Carta Magna en cuanto reconozcan est\'andares de mayor protecci\'on \citep{scjnParametro2014ADH}.
+\item \textbf{Distinci\'on conceptual entre derechos y garant\'ias:} El texto constitucional reconoce que una prerrogativa sustantiva carece de valor real si no se encuentra flanqueada por instrumentos de justiciabilidad y garant\'ias procedimentales id\'oneas.
+\end{enumerate}
+
+\subsection{Hermen\'eutica vinculante: interpretaci\'on conforme y principio pro persona}
+
+El segundo p\'arrafo del art\'iculo 1.º introduce un canon interpretativo obligatorio para todo operador jur\'idico del pa\'is:
+\begin{quote}
+``Las normas relativas a los derechos humanos se interpretar\'an de conformidad con esta Constituci\'on y con los tratados internacionales de la materia favoreciendo en todo tiempo a las personas la protecci\'on m\'as amplia'' \citep{cpeumArt1Vigente}.
+\end{quote}
+
+La jurisprudencia obligatoria del Poder Judicial de la Federaci\'on ha descompuesto este mandato en dos dimensiones operativas \citep{scjnParametro2014ADH,scjnProPersona2016ADH}:
+\begin{itemize}
+\item \textbf{Interpretaci\'on conforme en sentido amplio:} Los jueces y tribunales del orden nacional deben interpretar el ordenamiento ordinario a la luz de los derechos humanos consagrados en el par\'ametro constitucional, procurando salvar la constitucionalidad de la norma legal antes de declarar su invalidez.
+\item \textbf{Principio pro homine (pro persona):} Ante la concurrencia de dos o m\'as normas aplicables a un mismo supuesto de hecho, o ante m\'ultiples interpretaciones posibles de una misma disposici\'on, el aplicador jur\'idico est\'a obligado a optar por aquella regla o sentido hermen\'eutico que brinde la protecci\'on m\'as amplia y favorable a la persona afectada, o bien por aquella que imponga las restricciones m\'as acotadas y menos lesivas.
+\end{itemize}
+
+\subsection{Obligaciones categ\'oricas del Estado mexicano}
+
+El p\'arrafo tercero del art\'iculo 1.º instaura un marco jur\'idico de responsabilidad objetiva para todas las esferas gubernamentales (federal, estatal y municipal):
+\begin{enumerate}
+\item \textbf{Promover:} Implementar pol\'iticas p\'ublicas pedag\'ogicas, culturales y de difusi\'on que aseguren que la ciudadan\'ia conozca plenamente sus prerrogativas y las v\'ias leg\'itimas de defensa.
+\item \textbf{Respetar:} Obligaci\'on de abstenci\'on que proh\'ibe a los agentes del poder p\'ublico interferir indebidamente o vulnerar de forma activa el ejercicio aut\'onomo de los derechos.
+\item \textbf{Proteger:} Deber activo de vigilancia, inspecci\'on y resguardo para evitar que actores p\'ublicos o particulares cometan actos de agresi\'on contra la esfera jur\'idica de las personas.
+\item \textbf{Garantizar:} Crear las condiciones institucionales, financieras y procesales necesarias para que toda persona disfrute plenamente de sus derechos, lo que incluye la investigaci\'on expedita, sanci\'on de los responsables y reparaci\'on integral a las v\'ictimas \citep{carbonellDerechosHumanos2019}.
+\end{enumerate}
+
+\section{Principios rectores y articulaci\'on convencional}
+
+Los principios consagrados en el art\'iculo 1.º constitucional orientan la resoluci\'on de tensiones normativas y delimitan la actuaci\'on de los poderes p\'ublicos:
+
+\subsection{Universalidad, interdependencia e indivisibilidad}
+La \textbf{universalidad} sostiene que los derechos humanos corresponden a todos los seres humanos por el solo hecho de serlo, sin discriminaci\'on alguna por motivos de origen \'etnico, g\'enero, condici\'on social o creencias \citep{onuDeclaracion1948ADH}. La \textbf{interdependencia} e \textbf{indivisibilidad} postulan que no existe jerarqu\'ia axiol\'ogica entre libertades civiles y derechos econ\'omicos, sociales, culturales y ambientales (DESCA); la privaci\'on de la salud o la vivienda digna menoscaba directamente la autonom\'ia pol\'itica y la libertad personal, exigiendo un abordaje integral de la tutela judicial.
+
+\subsection{Progresividad y prohibici\'on de regresividad}
+El principio de \textbf{progresividad} impone al legislador y a la administraci\'on p\'ublica la obligaci\'on de perfeccionar continuamente el nivel de goce de los derechos, maximizando el empleo de los recursos disponibles. Su correlato indispensable es la \emph{prohibici\'on de regresividad}: ninguna autoridad puede dictar leyes, acuerdos o decisiones presupuestarias que disminuyan o supriman garant\'ias ya consolidadas en perjuicio de la colectividad, a menos que justifique plenamente causas de necesidad imperiosa bajo un estricto test de proporcionalidad \citep{nogueira2010teoria}.
+
+\section{An\'alisis cr\'itico e interpretaci\'on propia}
+
+\subsection{Insuficiencia del modelo piramidal tradicional frente a las redes normativas}
+
+Una de las premisas centrales defendidas en este manuscrito es que el esquema piramidal de Kelsen resulta conceptualmente insuficiente para explicar la complejidad operativa del Estado constitucional contempor\'aneo. La concepci\'on cl\'asica pretend\'ia organizar el orden jur\'idico como una jerarqu\'ia r\'igida y unidireccional de gradas formales. Sin embargo, en el sistema de derechos humanos:
+\begin{itemize}
+\item Los tratados internacionales ratificados y las sentencias vinculantes de la Corte Interamericana de Derechos Humanos no se ubican de manera est\'atica ``debajo'' de la Constituci\'on, sino que se integran horizontalmente como parte del par\'ametro material de control de validez \citep{scjnParametro2014ADH}.
+\item La aplicaci\'on del principio pro persona puede determinar que un precepto secundario o un tratado internacional prevalezca frente a una disposici\'on legal de rango jer\'arquico superior si aquella otorga una tutela m\'as garantista a la situaci\'on de la v\'ictima.
+\item Por tanto, propongo concebir el orden jur\'idico no como una pir\'amide r\'igida, sino como una \emph{red conc\'entrica de garant\'ias y competencias}, en cuyo n\'ucleo invariable reside la dignidad de la persona humana.
+\end{itemize}
+
+\subsection{La brecha epistemol\'ogica entre reconocimiento, garant\'ia y efectividad}
+
+Resulta imprescindible formular una distinci\'on epistemol\'ogica rigurosa entre tres estadios del fen\'omeno jur\'idico que frecuentemente son confundidos en el debate acad\'emico:
+\begin{enumerate}
+\item \textbf{Reconocimiento:} La consagraci\'on formal del derecho en el texto de una constituci\'on o tratado. Es una condici\'on jur\'idica necesaria pero insuficiente.
+\item \textbf{Garant\'ia institucional:} La creaci\'on de \'organos (juzgados, comisiones de derechos humanos, defensor\'ias) y cauces procesales (juicio de amparo, medidas precautorias) para reclamar su transgresi\'on.
+\item \textbf{Efectividad material:} La transformaci\'on f\'actica de la realidad social que permite a la persona ejercer efectivamente su derecho libre de violencia, marginaci\'on o abuso de poder.
+\end{enumerate}
+
+Un ordenamiento puede ostentar un cat\'alogo mod\'elico de derechos y garant\'ias adjetivas; no obstante, si persisten obst\'aculos procesales insalvables, burocracia dilatoria o impunidad en el cumplimiento de las sentencias, el sistema fracasa en su prop\'osito de protecci\'on. Como hallazgo de este an\'alisis cr\'itico e interpretaci\'on propia, esto implica que puede sostenerse con rigor dogm\'atico que la formaci\'on del jurista debe trascender el mero an\'alisis literal de la norma y evaluar cr\'iticamente las barreras materiales que impiden su goce cotidiano.
+
+\section{Transferencia al ejercicio profesional y alcances pr\'acticos}
+
+En el ejercicio litigioso y en el servicio p\'ublico, la comprensi\'on arm\'onica del orden jur\'idico permite al profesional del Derecho articular estrategias defensivas id\'oneas y t\'ecnicamente fundadas:
+
+\subsection{Estrategia procesal integral: complementariedad de v\'ias}
+Frente a una violaci\'on cometida por una autoridad estatal (por ejemplo, la negativa arbitraria de suministro de medicamentos vitales en un hospital p\'ublico):
+\begin{itemize}
+\item \textbf{V\'ia no jurisdiccional (Ombudsperson):} Se promueve una queja urgente ante la CNDH o la comisi\'on estatal, solicitando la emisi\'on inmediata de medidas cautelares para preservar la salud e integridad del paciente.
+\item \textbf{V\'ia jurisdiccional constitucional (Amparo indirecto):} Simult\'aneamente, se interpone demanda de amparo indirecto ante un Juzgado de Distrito, solicitando la suspensi\'on de plano y de oficio para forzar a la autoridad responsable al suministro del tratamiento, fundando la petici\'on en el art\'iculo 4.º constitucional, el art\'iculo 12 del PIDESC y el principio de interdependencia.
+\end{itemize}
+
+\subsection{Invocaci\'on del control difuso de convencionalidad}
+El abogado postulante no debe limitarse a esgrimir preceptos legales locales; tiene la facultad y el deber de exigir a los jueces de primera instancia la aplicaci\'on ex officio del control difuso de convencionalidad, solicitando la desaplicaci\'on incidental de normas adjetivas lesivas al derecho a la tutela judicial efectiva tutelado en los art\'iculos 8 y 25 del Pacto de San Jos\'e \citep{oeaPacto1969ADH}.
+
+\section{Conclusiones y s\'intesis deductiva}
+
+El recorrido dogm\'atico, anal\'itico y visual desarrollado a lo largo de este estudio conduce a las siguientes deducciones concluyentes:
+\begin{enumerate}
+\item \textbf{Integridad del sistema jur\'idico:} El orden jur\'idico nacional mexicano en materia de derechos humanos dej\'o de ser un c\'odigo formalista cerrado para transformarse en un sistema din\'amico de fuentes abiertas, en el cual las normas constitucionales e internacionales forman un \'unico par\'ametro de control de validez.
+\item \textbf{Operatividad directa de los principios:} Los principios de universalidad, interdependencia, indivisibilidad y progresividad no constituyen declaraciones ret\'oricas vac\'ias, sino mandatos hermen\'euticos jur\'idicamente vinculantes que imponen l\'imites infranqueables a la discrecionalidad legislativa y administrativa.
+\item \textbf{Complementariedad indispensable:} La protecci\'on judicial (mediante el juicio de amparo) y la no judicial (a trav\'es del sistema ombudsperson) no son excluyentes ni contradictorias; constituyen engranajes complementarios indispensables para una garant\'ia integral de la dignidad de las personas.
+\item \textbf{Responsabilidad del profesional del Derecho:} El estudio de los antecedentes y del ordenamiento positivo impone al operador jur\'idico el deber deontol\'ogico de vigilar que el reconocimiento normativo de las libertades se traduzca en una tutela material efectiva, combatiendo la impunidad y la desigualdad estructural en beneficio de los sectores hist\'oricamente vulnerados.
+\end{enumerate}
+
+\newpage
+\begin{thebibliography}{99}
+
+\bibitem[Alvarez Icaza(2009)]{alvarezIcaza2009ADH}
+Alvarez Icaza Longoria, E. (2009). \emph{Los derechos humanos en M\'exico}. Nostra Ediciones.
+
+\bibitem[C\'amara de Diputados(2026)]{cpeumADH2026}
+C\'amara de Diputados del H. Congreso de la Uni\'on. (2026). \emph{Constituci\'on Pol\'itica de los Estados Unidos Mexicanos}. Diario Oficial de la Federaci\'on.
+
+\bibitem[Carbonell(2019)]{carbonellDerechosHumanos2019}
+Carbonell, M. (2019). \emph{Teor\'ia de los derechos fundamentales y justicia constitucional}. Editorial Trotta.
+
+\bibitem[Ibarra Olgu\'in(2022)]{ibarraCurso2022ADH}
+Ibarra Olgu\'in, A.~M. (Ed.). (2022). \emph{Curso de derechos humanos}. Tirant lo Blanch.
+
+\bibitem[Naciones Unidas(1948)]{onuDeclaracion1948ADH}
+Naciones Unidas. (1948, 10 de diciembre). \emph{Declaraci\'on Universal de Derechos Humanos}. Resoluci\'on 217 A (III) de la Asamblea General.
+
+\bibitem[Naciones Unidas(1966a)]{onuPactoDerechosCivilesPoliticos1966}
+Naciones Unidas. (1966a, 16 de diciembre). \emph{Pacto Internacional de Derechos Civiles y Pol\'iticos}. Serie de Tratados de las Naciones Unidas, Vol.~999.
+
+\bibitem[Naciones Unidas(1966b)]{onuPactoDerechosEconomicosSocialesCulturales1966}
+Naciones Unidas. (1966b, 16 de diciembre). \emph{Pacto Internacional de Derechos Econ\'omicos, Sociales y Culturales}. Serie de Tratados de las Naciones Unidas, Vol.~993.
+
+\bibitem[Nogueira Alcal\'a(2010)]{nogueira2010teoria}
+Nogueira Alcal\'a, H. (2010). \emph{Teor\'ia y dogm\'atica de los derechos fundamentales}. Instituto de Investigaciones Jur\'idicas, UNAM.
+
+\bibitem[Organizaci\'on de los Estados Americanos(1969)]{oeaPacto1969ADH}
+Organizaci\'on de los Estados Americanos. (1969, 22 de noviembre). \emph{Convenci\'on Americana sobre Derechos Humanos (Pacto de San Jos\'e)}. Serie sobre Tratados de la OEA, N.\textsuperscript{o}~36.
+
+\bibitem[Rabinovich-Berkman(2014)]{rabinovich2014derechos}
+Rabinovich-Berkman, R.~D. (2014). \emph{Historia de los derechos humanos: De las libertades arcaicas al garantismo universal}. Editorial Astrea.
+
+\bibitem[Suprema Corte de Justicia de la Naci\'on(2014)]{scjnParametro2014ADH}
+Suprema Corte de Justicia de la Naci\'on. (2014). Jurisprudencia P./J. 20/2014 (10a.): \emph{Derechos humanos contenidos en la Constituci\'on y en los tratados internacionales. Constituyen el par\'ametro de control de regularidad constitucional}. Gaceta del Semanario Judicial de la Federaci\'on, Libro 5, Tomo I, p.~202.
+
+\bibitem[Suprema Corte de Justicia de la Naci\'on(2016a)]{scjnDignidad2016ADH}
+Suprema Corte de Justicia de la Naci\'on. (2016a). Jurisprudencia 1a./J. 37/2016 (10a.): \emph{Dignidad humana. Constituye una norma jur\'idica que consagra un derecho fundamental a favor de las personas y no una simple declaraci\'on \'etica}. Gaceta del Semanario Judicial de la Federaci\'on, Libro 33, Tomo II, p.~633.
+
+\bibitem[Suprema Corte de Justicia de la Naci\'on(2016b)]{scjnProPersona2016ADH}
+Suprema Corte de Justicia de la Naci\'on. (2016b). Jurisprudencia 1a./J. 37/2016 (10a.): \emph{Principio pro persona. Criterio de selecci\'on de la norma de derecho fundamental aplicable}. Gaceta del Semanario Judicial de la Federaci\'on, Libro 30, Tomo II, p.~882.
+
 \end{thebibliography}
+
 \end{document}

@@ -66,6 +66,13 @@ def subject_layout(target: Path) -> dict[str, Path]:
     }
 
 
+def slugify_text(text: str, max_len: int = 40) -> str:
+    import unicodedata
+    clean = "".join(c for c in unicodedata.normalize("NFKD", str(text)) if not unicodedata.combining(c))
+    clean = re.sub(r"[^\w\s-]", "", clean).strip().lower()
+    return re.sub(r"[-\s]+", "-", clean)[:max_len]
+
+
 def subject_artifact_contract(target: Path) -> dict[str, object]:
     target = target.resolve()
     layout = subject_layout(target)
@@ -78,6 +85,9 @@ def subject_artifact_contract(target: Path) -> dict[str, object]:
         "deliverables_directory": layout["deliveries"].relative_to(target).as_posix(),
         "source_directory": ".",
     }
+
+
+artifact_contract = subject_artifact_contract
 
 
 def ensure_delivery_directory(target: Path) -> Path:

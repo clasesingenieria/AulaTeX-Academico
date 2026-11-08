@@ -37,3 +37,5 @@
 - Se prohíbe el uso de sitios informales, blogs o páginas web no arbitradas.
 - La versión definitiva de estas fuentes se integra en el archivo `UANL/ingeniero-agronomo/biologia-celular/biologia-celular.bib` para garantizar la compilación automatizada sin alertas de BibTeX ni claves huérfanas.
 
+
+

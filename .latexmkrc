@@ -25,6 +25,13 @@ sub prepend_env_paths {
         : "$prefix$path_sep";
 }
 
+my @source_tex_paths = defined $ENV{AULATEX_SOURCE_DIR} && length $ENV{AULATEX_SOURCE_DIR}
+    ? (aulatex_path($ENV{AULATEX_SOURCE_DIR}, 1))
+    : ();
+my @source_bib_paths = defined $ENV{AULATEX_SOURCE_DIR} && length $ENV{AULATEX_SOURCE_DIR}
+    ? (aulatex_path($ENV{AULATEX_SOURCE_DIR}, 0))
+    : ();
+
 $pdf_mode = 1;
 $recorder = 1;
 $interaction = 'nonstopmode';
@@ -38,6 +45,7 @@ $pdflatex = 'pdflatex -halt-on-error -interaction=nonstopmode -file-line-error %
 $bibtex = 'bibtex %O %B';
 
 prepend_env_paths('TEXINPUTS',
+    @source_tex_paths,
     aulatex_path('.', 0),
     aulatex_path('aulaTEX/base/Plantilla-Informe', 1),
     aulatex_path('aulaTEX/base/Plantilla-Informe/src', 1),
@@ -55,6 +63,7 @@ prepend_env_paths('TEXINPUTS',
 # Keep bibliography lookup explicit enough to avoid stale archived copies
 # (for example other templates with the same jobname `main` or `library.bib`).
 prepend_env_paths('BIBINPUTS',
+    @source_bib_paths,
     aulatex_path('.', 0),
     aulatex_path('aulaTEX/base/Plantilla-Informe', 1),
     aulatex_path('UnADM', 1),

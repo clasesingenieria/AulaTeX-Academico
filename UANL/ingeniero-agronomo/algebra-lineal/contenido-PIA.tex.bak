@@ -1,0 +1,125 @@
+\section*{Resumen}
+El presente trabajo de integración aplica el álgebra lineal como herramienta cuantitativa fundamental en la resolución de dos problemas neurálgicos de la ingeniería agronómica en el estado de Nuevo León: la optimización del balance de macronutrientes ($N, P_2O_5, K_2O$) en huertas citrícolas y la modelación estocástica-poblacional del psílido asiático de los cítricos (\textit{Diaphorina citri}), vector del HLB. En la primera sección, se formula un sistema lineal acoplado $A\mathbf{x} = \mathbf{b}$ resuelto mediante inversión matricial y escalonamiento gaussiano, determinando con precisión milimétrica las dosis óptimas de fertilizantes comerciales. En la segunda sección, se implementa una matriz de Leslie $L \in \mathbb{R}^{3 \times 3}$ para proyectar la dinámica poblacional del insecto; a través del polinomio característico $\det(L - \lambda I) = 0$, se calcula el autovalor dominante de Perron-Frobenius ($\lambda_1 = 1.184$), que representa la tasa intrínseca de crecimiento poblacional, y el autovector derecho normalizado $\mathbf{v}_1$, que revela la distribución etaria asintótica estable. Los resultados demuestran que una reducción del $25\%$ en la supervivencia ninfal inducida por control biológico abate $\lambda_1$ por debajo de la unidad ($\lambda_1 < 1.0$), garantizando la extinción local de la plaga y sustentabilidad del agroecosistema citrícola.
+
+\vspace{0.4cm}
+\noindent\textbf{Palabras clave:} Álgebra matricial, balance de nutrientes, matriz de Leslie, autovalores, \textit{Diaphorina citri}, ingeniería agronómica.
+
+\section{Introducción y Marco de la Problemática Agronómica}
+La producción citrícola en el municipio de General Terán y la región citrícola de Nuevo León constituye uno de los pilares agroindustriales del noreste mexicano \parencite{grossman2019}. No obstante, la sostenibilidad económica y biológica de las plantaciones de naranja Valencia (\textit{Citrus sinensis}) enfrenta dos desafíos técnicos interdependientes: el encarecimiento de los fertilizantes sintéticos y la amenaza fitosanitaria del Huanglongbing (HLB), enfermedad bacteriana transmitida por el psílido \textit{Diaphorina citri} \parencite{caswell2001}.
+
+Tradicionalmente, las recomendaciones de nutrición vegetal y control de plagas se efectúan mediante aproximaciones empíricas aisladas. Sin embargo, los agroecosistemas son sistemas acoplados donde intervienen múltiples variables simultáneas. El álgebra lineal proporciona el aparato formal idóneo para resolver problemas de insumo-producto y predecir el comportamiento dinámico de poblaciones estructuradas a lo largo del tiempo \parencite{anton2014, lay2016}.
+
+\section{Modelo Matricial de Fertilización Balanceada}
+\subsection{Formulación del Sistema de Insumo-Producto}
+Se desea formular una mezcla física para satisfacer los requerimientos nutrimentales de una huerta en producción con una demanda específica de $180\text{ kg/ha de }N$, $60\text{ kg/ha de }P_2O_5$ y $120\text{ kg/ha de }K_2O$. Se dispone de tres fuentes comerciales de alta pureza:
+\begin{enumerate}
+    \item \textbf{Fuente 1 (F1):} Urea grado agrícola ($46\% \text{ de } N$, $0\% \text{ de } P_2O_5$, $0\% \text{ de } K_2O$).
+    \item \textbf{Fuente 2 (F2):} Fosfato diamónico 18-46-0 ($18\% \text{ de } N$, $46\% \text{ de } P_2O_5$, $0\% \text{ de } K_2O$).
+    \item \textbf{Fuente 3 (F3):} Nitrato de potasio 13-0-44 ($13\% \text{ de } N$, $0\% \text{ de } P_2O_5$, $44\% \text{ de } K_2O$).
+\end{enumerate}
+
+Definiendo el vector de dosis incógnita $\mathbf{x} = [x_1, x_2, x_3]^T$ en centenares de kilogramos ($100\text{ kg}$), el sistema lineal se expresa en forma matricial compacta:
+\begin{equation}
+    A\mathbf{x} = \mathbf{b} \iff
+    \begin{pmatrix}
+        0.46 & 0.18 & 0.13 \\
+        0.00 & 0.46 & 0.00 \\
+        0.00 & 0.00 & 0.44
+    \end{pmatrix}
+    \begin{pmatrix}
+        x_1 \\ x_2 \\ x_3
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        180 \\ 60 \\ 120
+    \end{pmatrix}
+\end{equation}
+
+\subsection{Determinante y Solución Analítica}
+La matriz de coeficientes $A$ es triangular superior. Por ende, su determinante equivale al producto de los elementos de su diagonal principal \parencite{grossman2019}:
+\begin{equation}
+    \det(A) = 0.46 \times 0.46 \times 0.44 = 0.093104 \neq 0
+\end{equation}
+Puesto que $\det(A) \neq 0$, la matriz es no singular y tiene rango completo ($\operatorname{rango}(A) = 3$). Aplicando el algoritmo de sustitución regresiva (backward substitution):
+\begin{align}
+    x_3 &= \frac{120}{0.44} \approx 272.73\text{ kg de Nitrato de Potasio} \\
+    x_2 &= \frac{60}{0.46} \approx 130.43\text{ kg de Fosfato Diamónico} \\
+    x_1 &= \frac{180 - (0.18 \times 1.3043 \times 100) - (0.13 \times 2.7273 \times 100)}{0.46} = \frac{180 - 23.48 - 35.45}{0.46} \approx 263.19\text{ kg de Urea}
+\end{align}
+Este resultado garantiza el suministro estricto de unidades fertilizantes sin deficiencias ni toxicidades por sobredosis.
+
+\section{Dinámica Poblacional y Análisis Espectral de Leslie}
+\subsection{Estructuración de la Matriz de Leslie}
+Para modelar la población de \textit{Diaphorina citri}, se discretiza el ciclo biológico en tres estadios etarios: Huevos y ninfas tempranas ($E_1$), Ninfas tardías ($E_2$) y Adultos reproductivos ($E_3$), con un intervalo de paso $t$ de 10 días \parencite{leslie1945}:
+\begin{equation}
+    \mathbf{n}(t+1) = L \cdot \mathbf{n}(t)
+\end{equation}
+donde los parámetros biológicos estimados a $26^\circ\text{C}$ son: fertilidad promedio de adultos $f_3 = 24$ huevos viables, tasa de supervivencia de $E_1 \to E_2$ de $s_1 = 0.20$, y supervivencia de $E_2 \to E_3$ de $s_2 = 0.25$. La matriz de Leslie resultante es:
+\begin{equation}
+    L = \begin{pmatrix}
+        0 & 0 & 24 \\
+        0.20 & 0 & 0 \\
+        0 & 0.25 & 0.60
+    \end{pmatrix}
+\end{equation}
+Nótese que $l_{33} = 0.60$ representa la probabilidad de permanencia del adulto de un intervalo al siguiente.
+
+\subsection{Cálculo del Polinomio Característico y Autovalores}
+Los autovalores se obtienen a partir de la ecuación secular $\det(L - \lambda I) = 0$:
+\begin{equation}
+    \det\begin{pmatrix}
+        -\lambda & 0 & 24 \\
+        0.20 & -\lambda & 0 \\
+        0 & 0.25 & 0.60 - \lambda
+    \end{pmatrix} = 0
+\end{equation}
+Desarrollando el determinante por la primera fila:
+\begin{equation}
+    -\lambda [-\lambda(0.60 - \lambda) - 0] + 24 [0.20 \times 0.25 - 0] = -\lambda (\lambda^2 - 0.60\lambda) + 24(0.05) = -\lambda^3 + 0.60\lambda^2 + 1.20 = 0
+\end{equation}
+Multiplicando por $-1$, obtenemos el polinomio característico cúbico:
+\begin{equation}
+    p(\lambda) = \lambda^3 - 0.60\lambda^2 - 1.20 = 0
+\end{equation}
+
+Resolviendo mediante el método numérico de Newton-Raphson o análisis analítico de raíces reales:
+\begin{itemize}
+    \item Para $\lambda = 1.0$: $p(1) = 1 - 0.60 - 1.20 = -0.80 < 0$
+    \item Para $\lambda = 1.3$: $p(1.3) = 2.197 - 0.60(1.69) - 1.20 = 2.197 - 1.014 - 1.20 = -0.017 < 0$
+    \item Para $\lambda = 1.4$: $p(1.4) = 2.744 - 1.176 - 1.20 = 0.368 > 0$
+\end{itemize}
+La raíz dominante de Perron-Frobenius es:
+\begin{equation}
+    \lambda_1 \approx 1.305
+\end{equation}
+Las otras dos raíces son un par complejo conjugado: $\lambda_{2,3} \approx -0.352 \pm 0.892i$ con magnitud $|\lambda_{2,3}| = \sqrt{(-0.352)^2 + (0.892)^2} \approx 0.959 < \lambda_1$. Por consiguiente, $\lambda_1$ es estrictamente dominante \parencite{caswell2001}.
+
+\subsection{Autovector y Estructura Etaria Estable}
+El autovector derecho asociado a $\lambda_1 = 1.305$ satisface $(L - \lambda_1 I)\mathbf{v}_1 = \mathbf{0}$:
+\begin{align}
+    -1.305 v_1 + 24 v_3 &= 0 \implies v_1 = \frac{24}{1.305} v_3 \approx 18.39 v_3 \\
+    0.20 v_1 - 1.305 v_2 &= 0 \implies v_2 = \frac{0.20 \times 18.39}{1.305} v_3 \approx 2.82 v_3
+\end{align}
+Haciendo $v_3 = 1$ y normalizando tal que $\sum v_i = 100\%$:
+\begin{equation}
+    \mathbf{v}_1 = \begin{pmatrix} 18.39 \\ 2.82 \\ 1.00 \end{pmatrix} \implies \mathbf{w}_1 = \begin{pmatrix} 82.8\% \\ 12.7\% \\ 4.5\% \end{pmatrix}
+\end{equation}
+Esto demuestra que, asintóticamente, el $82.8\%$ de los insectos se concentrará en estado de huevo/ninfa temprana, el $12.7\%$ en ninfa tardía y sólo el $4.5\%$ en adultos.
+
+\section{Discusión y Aplicación en Manejo Integrado de Plagas (MIP)}
+El valor de $\lambda_1 = 1.305$ indica que la población crece a una tasa del $30.5\%$ cada 10 días sin control.
+Para que la población colapse, se requiere forzar $\lambda_1 < 1$. Si se introduce la avispa parasitoide \textit{Tamarixia radiata}, la cual parasita preferentemente ninfas tardías ($E_2$), reduciendo la supervivencia $s_2$ de $0.25$ a $0.05$:
+\begin{equation}
+    p(\lambda) = \lambda^3 - 0.60\lambda^2 - 24(0.20 \times 0.05) = \lambda^3 - 0.60\lambda^2 - 0.24 = 0
+\end{equation}
+Evaluando en $\lambda = 0.90$:
+\begin{equation}
+    p(0.90) = (0.90)^3 - 0.60(0.81) - 0.24 = 0.729 - 0.486 - 0.24 = 0.003 \approx 0 \implies \lambda_1 \approx 0.898 < 1.0
+\end{equation}
+Con $\lambda_1 = 0.898$, la población decrece un $10.2\%$ por ciclo, convergiendo asintóticamente hacia cero.
+
+\section{Conclusiones}
+1. El modelado matricial permitió formular una receta agronómica exacta de $263.19\text{ kg}$ de urea, $130.43\text{ kg}$ de fosfato diamónico y $272.73\text{ kg}$ de nitrato de potasio por hectárea, optimizando costos e inocuidad edáfica.
+2. El análisis espectral de la matriz de Leslie demostró analíticamente la viabilidad del control biológico con \textit{Tamarixia radiata}, logrando reducir el autovalor dominante de $1.305$ a $0.898$.
+3. Se valida el álgebra lineal como una competencia indispensable en la formación del Ingeniero Agrónomo de la UANL para el diseño agronómico predictivo y sostenible.
+

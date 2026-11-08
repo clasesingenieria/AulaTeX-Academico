@@ -1,0 +1,71 @@
+% Contenido condensado de cinco páginas para la entrega en Moodle (tarea 1761, Actividad 7).
+% Cumple estrictamente con la consigna: Arial 11, interlineado 1.5, texto justificado, exactamente 3 páginas de cuerpo y 5 páginas totales.
+\newgeometry{letterpaper,left=2.0cm,right=2.0cm,top=1.85cm,bottom=1.85cm}
+\fontsize{11}{14}\selectfont\justifying
+\titlespacing*{\section}{0pt}{3pt}{1pt}
+\titlespacing*{\subsection}{0pt}{2pt}{1pt}
+\setlength{\parskip}{1pt}
+\setlength{\parindent}{0.55cm}
+
+\begingroup
+\noindent\textbf{Resumen}\par
+La inferencia estadística vincula observaciones muestrales con parámetros poblacionales para fundamentar decisiones gerenciales bajo incertidumbre. Este trabajo analiza los estimadores puntuales ($\bar{X}$, $\hat{p}$, $s^2$) y sus propiedades matemáticas de insesgamiento, eficiencia relativa y consistencia, contrastando la estimación puntual frente a la construcción de intervalos de confianza. Se modelan formalmente y se resuelven ejemplos numéricos para medias, proporciones y varianzas, explicitando la interpretación frecuentista del nivel de confianza, la dinámica del margen de error y sus implicaciones estratégicas en finanzas, operaciones y mercadotecnia.\footnote{\textbf{Declaración de uso de IA.} \estadisticadeclaracionia}
+\par\smallskip
+\renewcommand{\contentsname}{Tabla de contenido}
+\setcounter{tocdepth}{2}
+\setlength{\cftbeforetoctitleskip}{0pt}\setlength{\cftaftertoctitleskip}{1pt}
+\setlength{\cftbeforesecskip}{0.5pt}
+\renewcommand{\cfttoctitlefont}{\normalfont\fontsize{11}{12}\selectfont\bfseries\color{itescaRedDark}}
+\tableofcontents
+\endgroup
+\smallskip
+
+\section{Introducción}
+La dirección de organizaciones contemporáneas demanda tomar decisiones sobre liquidez, inventarios de seguridad, procesos de manufactura y captación de clientes a partir de información incompleta. En dichos entornos, recurrir a censos permanentes resulta inviable por costos y tiempo. La estimación estadística provee las herramientas analíticas para deducir características poblacionales desconocidas mediante muestras representativas y expresar formalmente el margen de incertidumbre que acompaña a toda inferencia \citep{holmesBusiness2023,wackerly2010}. El objetivo de este informe es delimitar las propiedades matemáticas de los estimadores, contrastar la estimación puntual frente a la intervalar, estructurar los modelos de confianza para medias, proporciones y varianzas con casos aplicados, y sintetizar su impacto en la gobernanza directiva \citep{anderson2012,lind2012}.
+
+\section{Fundamentos, modelos analíticos y evidencia en estimación}
+\subsection{Estimadores estadísticos: propiedades de calidad y estimadores comunes}
+Un \textit{parámetro} $\theta$ es una constante numérica fija de la población (ej. $\mu$, $p$, $\sigma^2$). Un \textit{estadístico} es cualquier función de las observaciones muestrales $X_1, \dots, X_n$. Cuando un estadístico se diseña para inferir un parámetro, constituye un \textit{estimador} y opera como variable aleatoria $\hat{\theta} = g(X_1, \dots, X_n)$ con distribución muestral \citep{wackerly2010}. La \textit{estimación} es el valor numérico obtenido en una muestra particular. La teoría define tres propiedades de calidad:
+\begin{enumerate}\setlength{\itemsep}{0.5pt}\setlength{\parsep}{0pt}\setlength{\topsep}{0.5pt}
+  \item \textbf{Insesgamiento:} $E(\hat{\theta}) = \theta$. El sesgo es $B(\hat{\theta}) = E(\hat{\theta}) - \theta$. La media muestral satisface $E(\bar{X}) = \mu$, y la varianza muestral $s^2 = \frac{1}{n-1}\sum (X_i - \bar{X})^2$ cumple $E(s^2) = \sigma^2$ con corrección de Bessel \citep{wackerly2010}.
+  \item \textbf{Eficiencia relativa:} Para dos estimadores insesgados, $\operatorname{ER}(\hat{\theta}_1, \hat{\theta}_2) = \operatorname{Var}(\hat{\theta}_2)/\operatorname{Var}(\hat{\theta}_1)$. Si $\operatorname{ER} > 1$, $\hat{\theta}_1$ concentra mayor probabilidad con menor costo de muestreo.
+  \item \textbf{Consistencia:} $\hat{\theta}_n$ converge en probabilidad a $\theta$: $\lim_{n \to \infty} P(|\hat{\theta}_n - \theta| < \varepsilon) = 1$. Condición suficiente: $\lim_{n\to\infty} \operatorname{ECM}(\hat{\theta}_n) = 0$, donde $\operatorname{ECM}(\hat{\theta}) = \operatorname{Var}(\hat{\theta}) + [B(\hat{\theta})]^2$.
+\end{enumerate}
+Los estimadores directivos canónicos son: la media $\bar{X}$ (insesgada y consistente para $\mu$), la proporción $\hat{p} = X/n$ (varianza mínima para procesos Bernoulli) y la varianza $s^2$ para $\sigma^2$.
+
+\subsection{Estimación puntual versus estimación por intervalos de confianza}
+La \textit{estimación puntual} proporciona un valor único. Aunque es útil en cálculos preliminares, carece de información sobre su precisión: una estimación puntual de venta media de \$320,000 oculta si el error admisible es de \$5,000 o de \$90,000 \citep{holmesBusiness2023}. La \textit{estimación por intervalos} delimita una banda $[L_{\text{inf}}, L_{\text{sup}}]$ combinando el estimador, su error estándar y un nivel de confianza $1-\alpha$, mitigando el riesgo gerencial al proveer márgenes verificables para planeación financiera y operativa \citep{anderson2012}.
+
+\subsection{Intervalos de confianza para medias, proporciones y varianzas: formulación y aplicaciones}
+El Cuadro~\ref{tab:intervalos} formaliza las cuatro cantidades pivotales analizadas y sintetiza su resolución numérica en casos aplicados a la administración:
+\begin{table}[!htbp]\centering\fontsize{8.5}{10.5}\selectfont\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{0.9}
+\caption{Modelos analíticos de intervalos de confianza y evidencia numérica aplicada.}\label{tab:intervalos}
+\begin{tabular}{p{3.1cm}p{3.4cm}p{4.3cm}p{4.7cm}}
+\toprule
+\textbf{Parámetro y supuesto} & \textbf{Modelo analítico} & \textbf{Datos del caso} & \textbf{Resultado e interpretación} \\
+\midrule
+\textbf{Media ($\sigma$ conocida)}\newline Normalidad o $n \ge 30$ & $\bar{x} \pm z_{\alpha/2} \frac{\sigma}{\sqrt{n}}$ & Auditoría compras: $n = 50$, $\sigma = \$6.00$, $\bar{x} = \$32.00$, conf. 95\% ($z = 1.96$). & $E = 1.96(6/\sqrt{50}) = 1.66$.\newline $\operatorname{IC}_{95\%} = [\$30.34, \$33.66]$. Gasto medio por orden acotado para compras. \\
+\addlinespace[1.5pt]
+\textbf{Media ($\sigma$ desconocida)}\newline Varianza estimada con $s$ & $\bar{x} \pm t_{\alpha/2, n-1} \frac{s}{\sqrt{n}}$ & Consumo adultos mayores: $n = 80$, $s = \$550$, $\bar{x} = \$1,873$, $df = 79$, $t_{0.025} = 1.9905$. & $E = 1.9905(550/\sqrt{80}) = 122.40$.\newline $\operatorname{IC}_{95\%} = [\$1,750.60, \$1,995.40]$. Banda de gasto para líneas de crédito. \\
+\addlinespace[1.5pt]
+\textbf{Proporción ($p$)}\newline $n\hat{p} \ge 5$, $n(1-\hat{p}) \ge 5$ & $\hat{p} \pm z_{\alpha/2} \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$ & Tarjetas activas: $n = 800$, $\hat{p} = 0.70$, conf. 95\% ($z = 1.96$, $\sigma_{\hat{p}} = 0.0162$). & $E = 1.96(0.0162) = 0.0318$.\newline $\operatorname{IC}_{95\%} = [66.82\%, 73.18\%]$. Demanda estimada con saldo revolvente. \\
+\addlinespace[1.5pt]
+\textbf{Varianza ($\sigma^2$)}\newline Distribución ji-cuadrada & $\left[ \frac{(n-1)s^2}{\chi^2_{\alpha/2}}, \frac{(n-1)s^2}{\chi^2_{1-\alpha/2}} \right]$ & Tiempos ciclo: $n = 20$, $s^2 = 12.50\text{ min}^2$, $\chi^2_{0.025,19} = 32.852$, $\chi^2_{0.975,19} = 8.907$. & $\operatorname{IC}_{95\%}(\sigma^2) = [7.23, 26.66]\text{ min}^2$.\newline $\sigma \in [2.69, 5.16]$ min. Alerta de dispersión superior a tolerancia de planta. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Nivel de confianza, dinámica del margen de error y toma de decisiones}
+El \textit{nivel de confianza} $1-\alpha$ denota la proporción de intervalos calculados que abarcarían el parámetro verdadero al reiterar el muestreo idénticamente. Bajo rigor frecuentista, una vez computados los límites numéricos, el parámetro objetivo $\theta$ (fijo) está o no dentro de la banda; la confiabilidad corresponde al algoritmo productor \citep{wackerly2010}. El \textit{margen de error} $E$ mide la semiamplitud del intervalo y varía de modo inversamente proporcional a $\sqrt{n}$. En consecuencia, reducir el error al 50\% conservando la confianza exige cuadruplicar las observaciones ($n' = 4n$).
+En la gestión gerencial:
+\begin{itemize}\setlength{\itemsep}{0.5pt}\setlength{\parsep}{0pt}\setlength{\topsep}{0.5pt}
+  \item En \textit{finanzas}, los intervalos permiten blindar tesorería contra caídas extremas en retornos esperados.
+  \item En \textit{operaciones}, la estimación de varianza anticipa desajustes de línea antes de que generen mermas.
+  \item En \textit{mercadotecnia}, los intervalos de proporciones evalúan si el lanzamiento superará el punto de equilibrio.
+\end{itemize}
+
+\section{Conclusiones}
+La inferencia estadística demuestra que las decisiones ejecutivas no deben basarse en intuición o promedios aislados. Un estimador insesgado pero ineficiente desperdicia presupuesto, mientras que un dato puntual sin intervalo traslada incertidumbre crítica a la estrategia empresarial. Sostengo que todo informe de gestión sustentado en muestras debe reportar obligatoriamente el tamaño muestral, los supuestos de distribución, el estimador adoptado y la banda de confianza resultante. La consecuencia administrativa es robustecer la gobernanza corporativa, mitigando riesgos operativos y fundamentando las directrices organizacionales en evidencia verificable.
+
+\clearpage
+\input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/investigacion-estimacion-intervalos/referencias.tex}

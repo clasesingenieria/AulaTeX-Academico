@@ -1,0 +1,45 @@
+# Compilación Canónica — Álgebra Lineal
+
+La compilación y validación editorial de todos los reportes y presentaciones de Álgebra Lineal se realiza mediante el agente canónico **`latexmk`** integrado en AulaTeX y LEX, sin requerir scripts auxiliares locales (`compilar.ps1`).
+
+---
+
+## 1. Comandos de Compilación con el Agente `latexmk`
+
+Desde la raíz de `c:\ahk-Autohokey` (o mediante la herramienta MCP `aulatex_latexmk`):
+
+```powershell
+# Compilar toda la materia (reportes y presentaciones con auto-detección de motor y aislamiento de auxiliares)
+python aulatex/cli.py latexmk "UANL/ingeniero-agronomo/algebra-lineal" --documento todos
+
+# Compilar actividades individuales:
+python aulatex/cli.py latexmk "UANL/ingeniero-agronomo/algebra-lineal/reporte-algebra-lineal-Actividad-1.tex"
+python aulatex/cli.py latexmk "UANL/ingeniero-agronomo/algebra-lineal/reporte-algebra-lineal-Actividad-2.tex"
+python aulatex/cli.py latexmk "UANL/ingeniero-agronomo/algebra-lineal/reporte-algebra-lineal-Actividad-2-6.tex"
+python aulatex/cli.py latexmk "UANL/ingeniero-agronomo/algebra-lineal/reporte-algebra-lineal-Actividad-3-6.tex"
+python aulatex/cli.py latexmk "UANL/ingeniero-agronomo/algebra-lineal/reporte-algebra-lineal-PIA.tex"
+python aulatex/cli.py latexmk "UANL/ingeniero-agronomo/algebra-lineal/presentacion-algebra-lineal-PIA.tex"
+python aulatex/cli.py latexmk "UANL/ingeniero-agronomo/algebra-lineal/reporte-algebra-lineal.tex"
+```
+
+---
+
+## 2. Mapa de Actividades y Correspondencia Editorial
+
+- **Actividad 1 (Fase 1):** `reporte-algebra-lineal-Actividad-1.tex` — Mapa cognitivo de telaraña sobre aplicaciones del álgebra lineal. Motor: `pdflatex`.
+- **Actividad 2 (Fase 2):** `reporte-algebra-lineal-Actividad-2.tex` — Segundo Laboratorio de Álgebra Lineal (sistemas $3\times 3$ y $4\times 4$). Motor: `pdflatex`.
+- **Actividad 2.6 (Evidencia 2):** `reporte-algebra-lineal-Actividad-2-6.tex` (y alias `reporte-algebra-lineal-Evidencia-2-6.tex`) — Solución paso a paso del Sistema 11 y mapa cognitivo de algoritmo. Motor: `pdflatex`.
+- **Actividad 3.6 (Evidencia 3):** `reporte-algebra-lineal-Actividad-3-6.tex` (y alias `reporte-algebra-lineal-Evidencia-3-6.tex`) — Valores y vectores propios aplicados a dinámicas de poblaciones (Sistema 11). Motor: `pdflatex`.
+- **Producto Integrador de Aprendizaje (PIA):**
+  - Reporte formal: `reporte-algebra-lineal-PIA.tex` (con `contenido-PIA.tex`) — Modelación matricial y matrices de Leslie con *Diaphorina citri*. Motor: `xelatex`.
+  - Presentación ejecutiva: `presentacion-algebra-lineal-PIA.tex` — Diapositivas Beamer 16:9 con paleta UANL. Motor: `xelatex`.
+- **Portafolio General:** `reporte-algebra-lineal.tex` — Portafolio curricular completo de la materia. Motor: `pdflatex`.
+
+---
+
+## 3. Garantías de Gobernanza y Aislamiento
+
+1. **Aislamiento en `AHK-Trabajo`:** Todos los residuos de compilación (`.aux`, `.bcf`, `.bbl`, `.log`, `.toc`, `.fls`, `.fdb_latexmk`) se confinan en `AHK-Trabajo\latex\.build`, manteniendo la carpeta académica libre de efímeros.
+2. **Detección Automática de Motor:** `latexmk` selecciona automáticamente `xelatex` para documentos con `fontspec` (como el PIA y la presentación Beamer) y `pdflatex` para documentos estándar.
+3. **Memoria de Reaprendizaje:** Las resoluciones se registran en `AHK-Trabajo\cache\aulatex\latexmk_learning.json`.
+4. **Entregables Sincronizados:** Los PDFs finales y formatos Word oficiales se publican en `entregas-algebra-lineal/` con manifiesto SHA-256.

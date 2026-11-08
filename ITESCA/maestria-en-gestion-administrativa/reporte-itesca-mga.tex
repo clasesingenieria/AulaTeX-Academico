@@ -238,6 +238,22 @@
 \usepackage{array}
 \usepackage{longtable}
 \usepackage{pdflscape}
+
+% ENTORNO CANONICO INSTITUCIONAL PARA TABLAS Y ESQUEMAS APAISADOS
+% Garantiza aislamiento estricto sin encabezados ni pies de pagina (pagestyle empty)
+% y regreso seguro al formato institucional (fancy) al cerrarse.
+\newenvironment{aulatexlandscape}{%
+  \clearpage
+  \begingroup
+  \thispagestyle{empty}%
+  \pagestyle{empty}%
+  \begin{landscape}%
+}{%
+  \end{landscape}%
+  \clearpage
+  \endgroup
+  \pagestyle{fancy}%
+}
 \usepackage{tikz}
 \usetikzlibrary{
 	arrows.meta,

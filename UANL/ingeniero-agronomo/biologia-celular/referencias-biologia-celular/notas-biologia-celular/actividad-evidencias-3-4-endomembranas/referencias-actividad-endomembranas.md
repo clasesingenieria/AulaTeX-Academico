@@ -119,3 +119,5 @@ Para dar cumplimiento estricto al requerimiento de investigación documental en 
 ### 6. Integración Final y Vínculo Agronómico
 El sistema de endomembranas es una red dinámica autoorganizada donde el flujo unidireccional de vesículas asegura la compartimentación de procesos incompatibles. En el ámbito agronómico y de la biotecnología vegetal, este mismo sistema rige la síntesis y depósito de proteínas de almacenamiento de reserva (globulinas, glutelinas) en las vacuolas proteicas de semillas de leguminosas y cereales, la biosíntesis y secreción de pectinas y hemicelulosas que integran la pared celular primaria, así como la exocitosis de compuestos defensivos antimicrobianos ante patógenos fitopatógenos. Comprender la logística de endomembranas es la base molecular para modular la translocación de asimilados y la resistencia vegetal al estrés biótico y abiótico.
 
+
+

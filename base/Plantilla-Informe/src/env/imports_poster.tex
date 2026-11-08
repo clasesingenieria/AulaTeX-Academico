@@ -1,0 +1,234 @@
+% Template:     Poster LaTeX
+% Documento:    Importación de librerías
+% Versión:      DEV
+% Codificación: UTF-8
+%
+% Autor: Pablo Pizarro R.
+%        pablo@ppizarror.com
+%
+% Manual template: [https://latex.ppizarror.com/poster]
+% Licencia MIT:    [https://opensource.org/licenses/MIT]
+
+% Se guardan variables antes de cargar librerías
+\let\RE\Re
+\let\IM\Im
+
+% Parches de librerías
+\let\counterwithout\relax
+\let\counterwithin\relax
+\let\underbar\relax
+\let\underline\relax
+
+% Si se desactiva el idioma
+\def\unaccentedoperators {}
+\def\decimalpoint {}
+\def\bibname {}
+
+\makeatletter
+\def\underline#1{\relax\ifmmode\@@underline{#1}\else $\@@underline{\hbox{#1}}\m@th$\relax\fi}
+\def\underbar#1{\underline{\sbox\tw@{#1}\dp\tw@\z@\box\tw@}}
+\makeatother
+
+% -----------------------------------------------------------------------------
+% Librerías del núcleo
+% -----------------------------------------------------------------------------
+\usepackage{iftex}
+\usepackage{ifthen}
+
+% Verifica el tipo de compilador
+\ifPDFTeX
+	\def\compilertype {pdf2latex}
+\else\ifXeTeX
+	\def\compilertype {xelatex}
+\else\ifLuaTeX
+	\def\compilertype {lualatex}
+\else
+	\errmessage{Compilador no soportado}
+	\stop
+	\fi\fi
+\fi
+
+% Carga el idioma
+\usepackage{tracklang}
+\IfTrackedLanguage{spanish}{
+	\usepackage[es-nosectiondot,es-lcroman,es-noquoting,noconfigs]{babel}
+}{
+	\usepackage[noconfigs]{babel}
+}
+
+% Codificación
+\ifthenelse{\equal{\compilertype}{pdf2latex}}{
+	\usepackage[utf8]{inputenc}}{
+}
+
+% Lanza un mensaje de error indicando mala configuración
+\newcommand{\throwbadconfig}[4][]{
+	\ifthenelse{\equal{#1}{noheader}}{
+		\errmessage{LaTeX Warning: #4}
+	}{
+		\ifthenelse{\equal{#1}{noheader-nostop}}{
+			\errmessage{LaTeX Warning: #4}
+		}{
+			\errmessage{LaTeX Warning: #2 (\noexpand #3= #3). Valores esperados: #4}
+		}
+	}
+	\ifthenelse{\equal{#1}{nostop}}{}{
+		\ifthenelse{\equal{#1}{noheader-nostop}}{}{
+			\stop
+		}
+	}
+}
+
+% Librerías matemáticas
+\ifthenelse{\equal{\equationleftalign}{true}}{
+	\usepackage[fleqn]{amsmath}
+}{
+	\usepackage{amsmath}
+}
+
+% Tamaño de la fuente del documento
+\usepackage{scrextend}
+\usepackage{anyfontsize}
+\changefontsizes{\documentfontsize pt}
+
+% Evita error "Too many alphabets used in version normal"
+\newcommand\hmmax {0}
+\newcommand\bmmax {0}
+
+% -----------------------------------------------------------------------------
+% Librerías independientes
+% -----------------------------------------------------------------------------
+\usepackage{amsbsy}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{animate}
+\usepackage{array}
+\usepackage{atbegshi}
+\usepackage{bigstrut}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{chngcntr}
+\usepackage{color}
+\usepackage{datetime}
+\usepackage{floatrow}
+\usepackage{framed}
+\usepackage{gensymb}
+\usepackage{lipsum}
+\usepackage{listings}
+\usepackage{longtable}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{needspace}
+\usepackage{pdflscape}
+\usepackage{pdfpages}
+\usepackage{physics}
+\usepackage{ragged2e}
+\usepackage{realboxes}
+\usepackage{rotating}
+\usepackage{selinput}
+\usepackage{setspace}
+\usepackage{soul}
+\usepackage{subcaption}
+\usepackage{textcomp}
+\usepackage{wrapfig}
+\usepackage{xspace}
+\usepackage{xurl}
+
+% -----------------------------------------------------------------------------
+% Librerías con parámetros
+% -----------------------------------------------------------------------------
+\usepackage[export]{adjustbox}
+\usepackage[makeroom]{cancel}
+\usepackage[inline]{enumitem}
+\usepackage[figure,table,lstlisting]{totalcount}
+\usepackage[normalem]{ulem}
+\usepackage[nointegrals]{wasysym}
+
+% -----------------------------------------------------------------------------
+% Librerías condicionales
+% -----------------------------------------------------------------------------
+\ifthenelse{\equal{\graphicxdraft}{true}}{
+	\usepackage[
+		allfiguresdraft,
+		filename,
+		size={scriptsize},
+		style={tt}
+	]{draftfigure}}{
+}
+
+\ifthenelse{\equal{\compilertype}{pdf2latex}}{
+	\usepackage{listingsutf8}}{
+}
+
+\ifthenelse{\equal{\footnotetwocolumn}{true}}{
+	\usepackage{dblfnote}}{
+}
+
+\ifthenelse{\equal{\footnoterulepage}{true}}{
+	\usepackage[bottom,hang]{footmisc}
+}{
+	\usepackage[bottom,norule,hang]{footmisc}
+}
+
+\def\showappendixsecindex {false}
+\ifthenelse{\equal{\showappendixsecindex}{true}}{}{
+	\usepackage{appendix}
+}
+
+\ifthenelse{\equal{\tablenotesameline}{true}}{
+	\usepackage[para]{threeparttable}
+}{
+	\usepackage{threeparttable}
+}
+
+% -----------------------------------------------------------------------------
+% Librerías dependientes
+% -----------------------------------------------------------------------------
+\usepackage{bookmark}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{hyperxmp}
+\usepackage{multirow}
+
+% -----------------------------------------------------------------------------
+% Tipografía del documento
+% -----------------------------------------------------------------------------
+\ifthenelse{\equal{\fontdocument}{lmodern}}{
+	\usepackage{lmodern}
+}{
+	\ifthenelse{\equal{\fontdocument}{helvet}}{
+		\renewcommand{\familydefault}{\sfdefault}
+		\usepackage[scaled=0.95]{helvet}
+		\usepackage[helvet]{sfmath}
+	}{
+		\ifthenelse{\equal{\fontdocument}{ralewaylight}}{
+			\usepackage[light]{raleway}
+		}{
+			\ifthenelse{\equal{\fontdocument}{raleway}}{
+				\usepackage{raleway}
+			}{
+				\usepackage{lmodern}
+			}
+		}
+	}
+}
+
+\ifthenelse{\equal{\fonttypewriter}{tmodern}}{
+	\usepackage{tcolorbox}
+	\usepackage{tgtermes}
+}{
+}
+
+% -----------------------------------------------------------------------------
+% PDF y enlaces
+% -----------------------------------------------------------------------------
+\makeatletter
+\@ifpackageloaded{hyperref}{}{\usepackage[pdfencoding=auto,psdextra]{hyperref}}
+\makeatother
+
+% -----------------------------------------------------------------------------
+% Gráficos
+% -----------------------------------------------------------------------------
+\usepackage{graphicx}

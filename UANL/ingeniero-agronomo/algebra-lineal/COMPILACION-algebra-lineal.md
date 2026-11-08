@@ -1,57 +1,45 @@
-# Compilación — Álgebra Lineal
+# Compilación Canónica — Álgebra Lineal
 
-Ejecutar desde la raíz del repositorio:
+La compilación y validación editorial de todos los reportes y presentaciones de Álgebra Lineal se realiza mediante el agente canónico **`latexmk`** integrado en AulaTeX y LEX, sin requerir scripts auxiliares locales (`compilar.ps1`).
 
-```powershell
-.\aulaTEX\latexmk-build.ps1 .\UANL\ingeniero-agronomo\algebra-lineal\reporte-algebra-lineal-Actividad-1.tex
-```
+---
 
-## Contrato
+## 1. Comandos de Compilación con el Agente `latexmk`
 
-- Evidencia principal: `reporte-algebra-lineal-Actividad-1.tex`.
-- Bibliografía: `algebra-lineal.bib`.
-- Consigna: `planeaciones-algebra-lineal/consigna-Actividad-1.md`.
-- Guía original: `planeaciones-algebra-lineal/originales-docentes/guia-Actividad-1-mapa-cognitivo.ppsx`.
-- El PDF final se genera junto al archivo `.tex`.
-
-## Segundo Laboratorio: Actividad 2
+Desde la raíz de `c:\ahk-Autohokey` (o mediante la herramienta MCP `aulatex_latexmk`):
 
 ```powershell
-.\aulaTEX\latexmk-build.ps1 .\UANL\ingeniero-agronomo\algebra-lineal\reporte-algebra-lineal-Actividad-2.tex -CleanMode none -gg
+# Compilar toda la materia (reportes y presentaciones con auto-detección de motor y aislamiento de auxiliares):
+c:\ahk-Autohokey\.venv\Scripts\python.exe aulatex/cli.py latexmk "UANL/ingeniero-agronomo/algebra-lineal" --documento todos
+
+# Compilar actividades individuales bajo numeración editorial secuencial (1..5):
+c:\ahk-Autohokey\.venv\Scripts\python.exe aulatex/cli.py latexmk "UANL/ingeniero-agronomo/algebra-lineal/reporte-algebra-lineal-Actividad-1.tex"
+c:\ahk-Autohokey\.venv\Scripts\python.exe aulatex/cli.py latexmk "UANL/ingeniero-agronomo/algebra-lineal/reporte-algebra-lineal-Actividad-2.tex"
+c:\ahk-Autohokey\.venv\Scripts\python.exe aulatex/cli.py latexmk "UANL/ingeniero-agronomo/algebra-lineal/reporte-algebra-lineal-Actividad-3.tex"
+c:\ahk-Autohokey\.venv\Scripts\python.exe aulatex/cli.py latexmk "UANL/ingeniero-agronomo/algebra-lineal/reporte-algebra-lineal-Actividad-4.tex"
+c:\ahk-Autohokey\.venv\Scripts\python.exe aulatex/cli.py latexmk "UANL/ingeniero-agronomo/algebra-lineal/reporte-algebra-lineal-Actividad-5.tex"
+c:\ahk-Autohokey\.venv\Scripts\python.exe aulatex/cli.py latexmk "UANL/ingeniero-agronomo/algebra-lineal/presentacion-algebra-lineal-Actividad-5.tex"
+c:\ahk-Autohokey\.venv\Scripts\python.exe aulatex/cli.py latexmk "UANL/ingeniero-agronomo/algebra-lineal/reporte-algebra-lineal.tex"
 ```
 
-La opción `-gg` fuerza una reconstrucción del objetivo, descartando sus
-auxiliares anteriores: el nombre Actividad 2 identificaba antes al PIA y sus
-archivos auxiliares de BibLaTeX no corresponden al laboratorio. No borra los
-originales docentes ni las notas conservadas.
+---
 
-Se conserva la fuente y el formato del laboratorio EJ25 existente. El cambio
-de número y ubicación no constituye una revisión matemática ni una nueva
-adaptación de su maquetación. Su DOCX y auxiliares previos se conservan bajo
-las notas de la Actividad 2; el TEX y PDF canónicos están en la raíz.
+## 2. Mapa de Actividades y Correspondencia Editorial Secuencial
 
-## PIA: Actividad 3
+| Núm. Editorial | Identificador Académico Original | Título y Propósito Formativo | Entregables Canónicos | Motor TeX | Puntos |
+|:---:|:---|:---|:---|:---:|:---:|
+| **Actividad 1** | Fase 1 / Evidencia 1 (Nexus 1.6) | Mapa cognitivo de telaraña sobre aplicaciones del álgebra lineal | `reporte-algebra-lineal-Actividad-1.tex` | `pdflatex` | 10 pts |
+| **Actividad 2** | Fase 2 / Laboratorio 2 (Nexus 2.1) | Segundo Laboratorio de Álgebra Lineal (Gauss, Gauss-Jordan, Cramer) | `reporte-algebra-lineal-Actividad-2.tex` | `pdflatex` | 3 pts |
+| **Actividad 3** | Fase 2 / Evidencia 2 (Nexus 2.6) | Mapa cognitivo de algoritmo: Solución del Sistema 11 | `reporte-algebra-lineal-Actividad-3.tex`<br>*(alias: Actividad-2-6)* | `pdflatex` | 10 pts |
+| **Actividad 4** | Fase 3 / Evidencia 3 (Nexus 3.6) | Reporte de solución de un caso de valores y vectores propios (Sistema 11) | `reporte-algebra-lineal-Actividad-4.tex`<br>*(alias: Actividad-3-6)* | `pdflatex` | 10 pts |
+| **Actividad 5** | Producto Integrador de Aprendizaje (PIA) | Modelación matricial y matrices de Leslie aplicadas a la dinámica poblacional | `reporte-algebra-lineal-Actividad-5.tex`<br>`presentacion-algebra-lineal-Actividad-5.tex` | `xelatex` | 25 pts |
+| **Portafolio** | Cierre curricular global | Portafolio consolidado de evidencias de la materia | `reporte-algebra-lineal.tex` | `pdflatex` | — |
 
-Desde la raíz del repositorio:
+---
 
-```powershell
-.\aulaTEX\latexmk-build.ps1 .\UANL\ingeniero-agronomo\algebra-lineal\reporte-algebra-lineal-Actividad-3.tex -CleanMode none
-.\aulaTEX\latexmk-build.ps1 .\UANL\ingeniero-agronomo\algebra-lineal\reporte-algebra-lineal-Actividad-3-video.tex -CleanMode none
-```
+## 3. Garantías de Gobernanza y Aislamiento
 
-- La plantilla se resuelve mediante la configuración raíz de latexmk, como en la Actividad 1.
-- El reporte usa BibLaTeX `style=apa`, Biber y la bibliografía local. El hook
-	`file/config.tex/after` selecciona referencias `custom` antes de que la
-	plantilla cargue paquetes; no se edita la configuración compartida.
-- Los comandos `\citep` se conservan mediante la compatibilidad `natbib=true`
-	de BibLaTeX; no se carga el paquete natbib en el reporte del PIA.
-- La figura se genera con PGFPlots y `\usetikzlibrary{babel}`; no requiere Python.
-- El reporte activa compresión PDF de objetos y flujos y conserva texto y ecuaciones vectoriales.
-- Los PDF se generan junto a sus fuentes; los auxiliares quedan en `.build/latex/`.
-- `-CleanMode none` evita que el compilador elimine auxiliares históricos de
-	otros trabajos que ya estaban en la materia. No confundirlos con las entregas del PIA.
-- La ficha del video se recompila después de completar la URL y los datos del equipo.
-
-La bibliografía sigue APA 7; la portada y la maquetación conservan AulaTeX.
-Esto no equivale a certificar cumplimiento total de formato APA ni aceptación
-docente del editor LaTeX. Véanse los pendientes en las notas de integración.
+1. **Aislamiento en `AHK-Trabajo`:** Todos los residuos de compilación (`.aux`, `.bcf`, `.bbl`, `.log`, `.toc`, `.fls`, `.fdb_latexmk`) se confinan en `AHK-Trabajo\latex\.build`, manteniendo la carpeta académica libre de efímeros.
+2. **Detección Automática de Motor:** `latexmk` selecciona automáticamente `xelatex` para documentos con `fontspec` (como Actividad 5 y sus diapositivas Beamer) y `pdflatex` para los reportes 1 a 4 y el portafolio.
+3. **Memoria de Reaprendizaje:** Las resoluciones se registran en `AHK-Trabajo\cache\aulatex\latexmk_learning.json`.
+4. **Entregables Sincronizados:** Los PDFs finales y formatos Word oficiales se publican en `entregas-algebra-lineal/` con manifiesto SHA-256.

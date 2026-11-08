@@ -1,62 +1,64 @@
-# Inventario Integral de Actividades y Planeación Académica
-## Unidad de Aprendizaje: Álgebra Lineal (REF#261013755137)
+# Inventario Integral y Normalizado de Actividades y Planeaciones
+## Unidad de Aprendizaje: Álgebra Lineal (`REF#261013755137`)
 
 - **Institución:** Universidad Autónoma de Nuevo León (UANL)
-- **Dependencia:** Facultad de Agronomía
+- **Dependencia:** Facultad de Agronomía (Campus Escobedo / Marín)
 - **Programa Educativo:** Ingeniero Agrónomo
-- **Docente Titular:** Miranda Vázquez José de Jesús
+- **Docente Titular:** M.C. Miranda Vázquez José de Jesús
+- **Estudiante Autor:** Carlos Mauricio Carvajal Coronado (Matrícula: 1977875)
 - **Periodo Semestral:** 03 de agosto de 2026 al 18 de diciembre de 2026
-- **Modalidad:** Modelo Basado en Competencias / Mixta (Nexus UANL)
+- **Modalidad:** Modelo Basado en Competencias / Mixta (Plataforma Nexus UANL)
 
 ---
 
-## 1. Esquema Ponderal y Estructura por Fases
+## 1. Esquema Ponderal por Fases y Actividades (100 Puntos)
 
-| Fase | Denominación y Propósito Formativo | Actividades | Ponderación |
-| :--- | :--- | :---: | :---: |
-| **Fase 1** | **Matrices y determinantes**<br>*Clasificar las aplicaciones del álgebra lineal en la vida cotidiana, mediante la identificación del concepto central y el campo de estudio en que se aplica, con la finalidad de establecer la importancia del uso de matrices y determinantes como herramienta matemática para un ingeniero.* | 6 | 25 pts |
-| **Fase 2** | **Sistemas de ecuaciones lineales**<br>*Resolver sistemas de ecuaciones lineales mediante el uso de teoría básica de matrices identificando la independencia lineal del sistema para establecer las bases de comprensión y modelación de fenómenos del sector agronómico.* | 6 | 25 pts |
-| **Fase 3** | **Valores y vectores propios**<br>*Mostrar la aplicación de los conceptos de autovalores y autovectores en la resolución de problemas del sector agronómico, con la finalidad de validar la importancia del álgebra lineal en la optimización y sistemas dinámicos.* | 6 | 25 pts |
-| **PIA** | **Producto Integrador de Aprendizaje**<br>*Reporte integral de solución de un caso agronómico aplicado mediante álgebra matricial, sistemas lineales y diagonalización de autovalores.* | 1 | 25 pts |
-| **Total** | **Evaluación Sumativa Continua** | **19** | **100 pts** |
-
----
-
-## 2. Desglose Pormenorizado de Actividades
-
-### Fase 1: Matrices y Determinantes
-1. **Actividad 1.1:** Laboratorio de ejercicios 1 (Operaciones matriciales, escalonamiento y determinantes) — `3 pts`
-2. **Actividad 1.2:** Sesión de retroalimentación del laboratorio 1 — `1 pts`
-3. **Actividad 1.3:** Sesión de dudas previo a la prueba objetiva — `3 pts`
-4. **Actividad 1.4:** Prueba objetiva Fase 1 — `7 pts`
-5. **Actividad 1.5:** Sesión de retroalimentación de prueba objetiva — `1 pts`
-6. **Actividad 1.6 (Evidencia 1):** Mapa cognitivo de telaraña sobre aplicaciones del álgebra lineal en la vida cotidiana y agronomía — `10 pts` (Entregable formal: Documento técnico / infografía estructurada).
-
-### Fase 2: Sistemas de Ecuaciones Lineales
-1. **Actividad 2.1:** Laboratorio de ejercicios 2 (Eliminación de Gauss-Jordan, regla de Cramer, matriz inversa) — `3 pts`
-2. **Actividad 2.2:** Sesión de retroalimentación del laboratorio 2 — `1 pts`
-3. **Actividad 2.3:** Sesión de dudas previo a la prueba objetiva — `3 pts`
-4. **Actividad 2.4:** Prueba objetiva Fase 2 — `7 pts`
-5. **Actividad 2.5:** Sesión de retroalimentación de prueba objetiva — `1 pts`
-6. **Actividad 2.6 (Evidencia 2):** Mapa cognitivo de algoritmo de la solución de un problema de modelos de sistemas de ecuaciones lineales aplicados al balance de nutrientes/riego — `10 pts`.
-
-### Fase 3: Valores y Vectores Propios
-1. **Actividad 3.1:** Laboratorio de ejercicios 3 (Polinomio característico, espectro, espacios propios) — `3 pts`
-2. **Actividad 3.2:** Sesión de retroalimentación del laboratorio 3 — `1 pts`
-3. **Actividad 3.3:** Sesión de dudas previo a la prueba objetiva — `3 pts`
-4. **Actividad 3.4:** Prueba objetiva Fase 3 — `7 pts`
-5. **Actividad 3.5:** Sesión de retroalimentación de prueba objetiva — `1 pts`
-6. **Actividad 3.6 (Evidencia 3):** Reporte de la solución de un caso de aplicación de los conceptos de valores y vectores propios en dinámicas de poblaciones o dispersión agronómica — `10 pts`.
-
-### Producto Integrador de Aprendizaje (PIA)
-- **Actividad PIA:** Reporte técnico de la solución de un caso agronómico integral y modelación matricial computacional — `25 pts`.
-  - Entregables requeridos:
-    1. Reporte formal en formato institucional UANL (`reporte-algebra-lineal-PIA.pdf`).
-    2. Presentación ejecutiva de defensa oral (`presentacion-algebra-lineal-PIA.pdf`).
+| Fase | Denominación y Propósito Formativo | Actividades | Ponderación | Estado |
+| :--- | :--- | :---: | :---: | :---: |
+| **Fase 1** | **Matrices y determinantes**<br>*Clasificar las aplicaciones del álgebra lineal en la vida cotidiana y agronomía.* | 6 | 25 pts | Normalizado / Validado |
+| **Fase 2** | **Sistemas de ecuaciones lineales**<br>*Resolver sistemas lineales mediante teoría de matrices e independencia lineal.* | 6 | 25 pts | Normalizado / Validado |
+| **Fase 3** | **Valores y vectores propios**<br>*Mostrar la aplicación de autovalores y autovectores en el sector agronómico.* | 6 | 25 pts | Normalizado / Validado |
+| **PIA** | **Producto Integrador de Aprendizaje**<br>*Modelación matricial, sistemas dinámicos y matrices de Leslie con autovalores.* | 1 | 25 pts | Normalizado / Validado |
+| **Total** | **Evaluación Sumativa Continua** | **19** | **100 pts** | **100% Cobertura** |
 
 ---
 
-## 3. Estado de Recursos y Enlaces
-- Libros base: Grossman (Álgebra Lineal), Anton & Rorres (Elementary Linear Algebra), Lay (Álgebra lineal y sus aplicaciones).
-- Plataforma de entrega: Nexus UANL / Evaluaciones síncronas programadas.
+## 2. Catálogo de Actividades Editoriales Secuenciales (1..5)
 
+Cada actividad cuenta con entregables y consignas normalizadas conforme al estándar AulaTeX:
+
+1. **Actividad 1 (Evidencia 1 / Nexus 1.6 — 10 pts):**
+   - Título: *Mapa cognitivo de telaraña sobre aplicaciones del álgebra lineal en la vida cotidiana*
+   - Consigna: [`consigna-Actividad-1.md`](consigna-Actividad-1.md)
+   - Reporte TeX / PDF: `reporte-algebra-lineal-Actividad-1.tex` | `reporte-algebra-lineal-Actividad-1.pdf`
+
+2. **Actividad 2 (Laboratorio 2 / Nexus 2.1 — 3 pts):**
+   - Título: *Segundo Laboratorio de Álgebra Lineal: Solución de sistemas por Gauss, Gauss-Jordan y Cramer*
+   - Consigna: [`consigna-Actividad-2.md`](consigna-Actividad-2.md)
+   - Reporte TeX / PDF: `reporte-algebra-lineal-Actividad-2.tex` | `reporte-algebra-lineal-Actividad-2.pdf`
+
+3. **Actividad 3 (Evidencia 2 / Nexus 2.6 — 10 pts):**
+   - Título: *Mapa cognitivo de algoritmo de la solución del Sistema 11*
+   - Consigna: [`consigna-Actividad-3.md`](consigna-Actividad-3.md)
+   - Reporte TeX / PDF: `reporte-algebra-lineal-Actividad-3.tex` | `reporte-algebra-lineal-Actividad-3.pdf`
+   - Alias históricos preservados: `reporte-algebra-lineal-Actividad-2-6.tex`, `reporte-algebra-lineal-Evidencia-2-6.tex`
+
+4. **Actividad 4 (Evidencia 3 / Nexus 3.6 — 10 pts):**
+   - Título: *Reporte de la solución de un caso de aplicación de valores y vectores propios (Sistema 11)*
+   - Par canónico: [`planeacion-algebra-lineal-actividad-4.json`](planeacion-algebra-lineal-actividad-4.json) | [`planeacion-algebra-lineal-actividad-4.md`](planeacion-algebra-lineal-actividad-4.md)
+   - Consigna: [`consigna-Actividad-4.md`](consigna-Actividad-4.md)
+   - Reporte TeX / PDF: `reporte-algebra-lineal-Actividad-4.tex` | `reporte-algebra-lineal-Actividad-4.pdf`
+   - Alias históricos preservados: `reporte-algebra-lineal-Actividad-3-6.tex`, `reporte-algebra-lineal-Evidencia-3-6.tex`
+
+5. **Actividad 5 (Producto Integrador de Aprendizaje - PIA — 25 pts):**
+   - Título: *Modelación matricial de fertilización y dinámica poblacional de vectores citrícolas mediante matrices de Leslie*
+   - Consigna: [`consigna-Actividad-5.md`](consigna-Actividad-5.md)
+   - Reportes TeX / PDF: `reporte-algebra-lineal-Actividad-5.tex` | `reporte-algebra-lineal-Actividad-5.pdf`
+   - Presentación Beamer: `presentacion-algebra-lineal-Actividad-5.tex` | `presentacion-algebra-lineal-Actividad-5.pdf`
+   - Alias históricos preservados: `reporte-algebra-lineal-PIA.tex`, `presentacion-algebra-lineal-PIA.tex`
+
+---
+
+## 3. Matriz de Entregables e Identidad Criptográfica
+
+Todos los PDFs en la raíz de la materia se encuentran sincronizados en `entregas-algebra-lineal/`, garantizando integridad SHA-256. Consulte `entregas-algebra-lineal/delivery_manifest.json`.

@@ -113,3 +113,5 @@ Pérdida de turgencia y Cierre Estomático Rápido
    - Activación de adenilato ciclasa transmembranal $\rightarrow$ producción de AMP cíclico (AMPc).
    - Activación de Proteína Cinasa A (PKA) $\rightarrow$ fosforilación de fosforilasa cinasa $\rightarrow$ activación de glucógeno fosforilasa, liberando glucosa-1-fosfato para sostener la glucemia en sangre.
 
+
+

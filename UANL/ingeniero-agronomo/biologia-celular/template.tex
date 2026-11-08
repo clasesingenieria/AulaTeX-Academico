@@ -29,3 +29,134 @@
 \input{aulaTEX/base/Plantilla-Informe/template.tex}
 \RemoveFromHook{file/config.tex/after}[aulatex-biologia-celular]
 
+% -----------------------------------------------------------------------------
+% Control de composición anti-huecos, paginación de cierres (Conclusiones y
+% Referencias en página nueva independiente) y entorno reutilizable AulatexTable
+% (modo encapsulado [\linewidth] y modo multipágina [breakable] con xltabular).
+% Requisito editorial del usuario (alcance: materia biologia-celular / carrera).
+% -----------------------------------------------------------------------------
+\hfuzz=0.5pt
+\vfuzz=0.5pt
+\renewcommand{\topfraction}{0.90}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.85}
+\renewcommand{\dbltopfraction}{0.90}
+\renewcommand{\dblfloatpagefraction}{0.85}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\widowpenalty=10000
+\clubpenalty=10000
+\raggedbottom
+
+\RequirePackage{etoolbox}
+\RequirePackage{placeins}
+\RequirePackage{needspace}
+\RequirePackage{array}
+\RequirePackage{ragged2e}
+\RequirePackage{tabularx}
+\RequirePackage{longtable}
+\RequirePackage{xltabular}
+\RequirePackage{booktabs}
+\RequirePackage{adjustbox}
+
+\ExplSyntaxOn
+\cs_if_exist:NF \aulatexCheckSectionPagebreak
+  {
+    \cs_new_protected:Npn \aulatexCheckSectionPagebreak #1
+      {
+        \exp_args:Nnx \regex_match:nnTF { (?i) \A \s* conclusi } { \tl_to_str:n {#1} }
+          { \clearpage }
+          { \FloatBarrier \needspace{5\baselineskip} }
+      }
+  }
+\ExplSyntaxOff
+
+\makeatletter
+\TX@delta=0.5pt
+\@ifundefined{NC@rewrite@Z}{%
+  \newcolumntype{Z}{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}X}%
+}{}
+\@ifundefined{ifaulatexbreakabletable}{\newif\ifaulatexbreakabletable}{}
+\@ifundefined{aulatextablewidth}{\newlength{\aulatextablewidth}}{}
+\@ifundefined{AulatexTable}{%
+  \newenvironment{AulatexTable}[1][\linewidth]{%
+    \par\addvspace{0.20cm}%
+    \setlength{\emergencystretch}{2em}%
+    \TX@delta=0.5pt%
+    \ifstrequal{#1}{breakable}{%
+      \aulatexbreakabletabletrue%
+      \setlength{\aulatextablewidth}{\linewidth}%
+      \setlength{\linewidth}{\aulatextablewidth}%
+      \setlength{\hsize}{\aulatextablewidth}%
+      \setlength{\LTleft}{0pt}%
+      \setlength{\LTright}{\fill}%
+      \setlength{\LTcapwidth}{\linewidth}%
+      \setlength{\LTpre}{0.15cm}%
+      \setlength{\LTpost}{0.15cm}%
+    }{%
+      \aulatexbreakabletablefalse%
+      \setlength{\aulatextablewidth}{#1}%
+      \centering%
+      \adjustbox{max width=\aulatextablewidth,center}\bgroup%
+      \setlength{\linewidth}{\aulatextablewidth}%
+      \setlength{\hsize}{\aulatextablewidth}%
+    }%
+  }{%
+    \ifaulatexbreakabletable%
+      \par\addvspace{0.20cm}%
+    \else%
+      \egroup\par\addvspace{0.20cm}%
+    \fi%
+  }%
+}{}
+
+\pretocmd{\subsection}{\needspace{4\baselineskip}}{}{}
+
+\AtBeginDocument{%
+  \@ifundefined{aulatexSectionHookInstalled}{%
+    \gdef\aulatexSectionHookInstalled{1}%
+    \NewCommandCopy{\aulatexOrigSection}{\section}%
+    \RenewDocumentCommand{\section}{s o m}{%
+      \aulatexCheckSectionPagebreak{#3}%
+      \IfBooleanTF{#1}{%
+        \aulatexOrigSection*{#3}%
+      }{%
+        \IfValueTF{#2}{%
+          \aulatexOrigSection[#2]{#3}%
+        }{%
+          \aulatexOrigSection{#3}%
+        }%
+      }%
+    }%
+    \@ifundefined{printbibliography}{}{%
+      \preto{\printbibliography}{\clearpage}%
+    }%
+    \BeforeBeginEnvironment{thebibliography}{\clearpage}%
+  }{}%
+}
+\makeatother
+
+% -----------------------------------------------------------------------------
+% Marca de Agua Institucional en Portada para Ingeniero Agrónomo (Facultad de Agronomía UANL)
+% Recurso de mayor resolución oficial disponible: UANL/assets-uanl/logo-agronomia.png (313x300px RGBA)
+% -----------------------------------------------------------------------------
+\RequirePackage{eso-pic}
+\providecommand{\careerwatermarkimage}{UANL/assets-uanl/logo-agronomia.png}
+\providecommand{\institutionalWatermark}[2][0.08]{%
+  \AddToShipoutPictureBG*{%
+    \put(0,0){%
+      \parbox[b][\paperheight]{\paperwidth}{%
+        \vfill
+        \centering
+        \begin{tikzpicture}[remember picture,overlay]
+          \node[opacity=#1,inner sep=0pt] at (current page.center) {%
+            \includegraphics[width=0.56\paperwidth]{#2}%
+          };
+        \end{tikzpicture}%
+        \vfill
+      }%
+    }%
+  }%
+}

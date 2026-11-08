@@ -41,3 +41,5 @@
    - *¿Cómo se distingue la bioenergética de la célula oclusiva frente a una célula del mesófilo?*  
      **R:** La célula oclusiva tiene baja actividad fijadora de $\text{CO}_2$ por Rubisco; su fotofosforilación plastídica y respiración mitocondrial están orientadas primordialmente a energizar la $H^+$-ATPasa de membrana plasmática y degradar almidón a intermediarios fosforilados para sintetizar osmolitos (malato).
 
+
+

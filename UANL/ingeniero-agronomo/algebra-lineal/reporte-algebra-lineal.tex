@@ -1,32 +1,35 @@
 \documentclass[spanish,letterpaper,oneside]{article}
 
-\def\documenttitle {Álgebra Lineal}
+\def\documenttitle {\'{A}lgebra Lineal}
 \def\documentsubtitle {Portafolio de evidencias}
-\def\documentsubject {Ingeniero Agrónomo}
-\def\documentauthor {Integrantes por registrar}
-\def\coursename {Álgebra Lineal}
-\def\coursecode {Clave por registrar}
-\def\universityname {Universidad Autónoma de Nuevo León}
-\def\universityfaculty {Facultad de Agronomía}
-\def\universitydepartment {Ingeniero Agrónomo}
+\def\documentsubject {Ingeniero Agr\'{o}nomo}
+\def\documentauthor {Carlos Mauricio Carvajal Coronado}
+\def\coursename {\'{A}lgebra Lineal}
+\def\coursecode {REF\#261013755137}
+\def\universityname {Universidad Aut\'{o}noma de Nuevo Le\'{o}n}
+\def\universityfaculty {Facultad de Agronom\'{i}a}
+\def\universitydepartment {Ingeniero Agr\'{o}nomo}
 \def\universitydepartmentimage {UANL/assets-uanl/logo-uanl.png}
 \def\universitydepartmentimagecfg {width=3.2cm}
-\def\universitylocation {General Escobedo, Nuevo León, México}
+\def\universitylocation {General Escobedo, Nuevo Le\'{o}n, M\'{e}xico}
 \def\authortable {
   \begin{tabular}{ll}
-    \textbf{Integrantes:} & Por registrar \\
-    Matrículas: & Por registrar \\
-    Grupo: & Por registrar \\
-    Programa: & Ingeniero Agrónomo \\
-    Unidad de aprendizaje: & \coursename \\
-    Docente: & Por registrar \\
+    \textbf{Estudiante:} & Carlos Mauricio Carvajal Coronado \\
+    \textbf{Matr\'{i}cula:} & 1977875 \\
+    \textbf{Docente Titular:} & M.C. Jos\'{e} de Jes\'{u}s Miranda V\'{a}zquez \\
+    \textbf{Programa:} & Ingeniero Agr\'{o}nomo \\
+    \textbf{Unidad de aprendizaje:} & \coursename \\
+    \textbf{C\'{o}digo:} & \coursecode \\
     & \\
-    \multicolumn{2}{l}{Fecha de realización: \today} \\
+    \multicolumn{2}{l}{Fecha de compilaci\'{o}n: \today} \\
     \multicolumn{2}{l}{\universitylocation}
   \end{tabular}
 }
 
+\AddToHook{file/config.tex/after}{\def\stylecitereferences{custom}}
 \input{template}
+\usepackage[backend=biber,style=apa,natbib=true]{biblatex}
+\addbibresource{UANL/ingeniero-agronomo/algebra-lineal/algebra-lineal.bib}
 
 \begin{document}
 \templatePortrait
@@ -34,16 +37,37 @@
 \onehalfspacing
 
 \begin{abstractd}
-Este portafolio reúne las evidencias de la unidad de aprendizaje Álgebra Lineal en el programa de Ingeniero Agrónomo de la UANL. Cada actividad documenta su consigna, sustento teórico, producto, análisis y fuentes.
+Este portafolio formal re\'{u}ne las evidencias y productos acad\'{e}micos de la unidad de aprendizaje \'{A}lgebra Lineal del programa educativo Ingeniero Agr\'{o}nomo de la Facultad de Agronom\'{i}a de la Universidad Aut\'{o}noma de Nuevo Le\'{o}n. En \'{e}l se integran las competencias desarrolladas a lo largo de las tres fases del curso y el Producto Integrador de Aprendizaje (PIA): representaci\'{o}n matricial y determinantes, resoluci\'{o}n y an\'{a}lisis de sistemas de ecuaciones lineales aplicados a balances de nutrientes y fen\'{o}menos biol\'{o}gicos, teor\'{i}a espectral con autovalores y autovectores en matrices de Leslie, y modelaci\'{o}n matem\'{a}tica cuantitativa orientada al sector agron\'{o}mico.
 \end{abstractd}
 
 \templateIndex
 \templateFinalcfg
 
-\section{Evidencias}
+\section{Estructura Curricular y Portafolio de Evidencias}
+
+\subsection{Fase 1: Matrices y Determinantes}
 \begin{itemize}
-  \item Actividad 1, Fase 1: mapa cognitivo de telaraña sobre aplicaciones del álgebra lineal en la vida cotidiana.
+  \item \textbf{Actividad 1 (Evidencia 1 / Actividad 1.6):} Mapa cognitivo de telara\~{n}a sobre aplicaciones del \'{a}lgebra lineal en la vida cotidiana y agronom\'{i}a. Ponderaci\'{o}n: 10 pts.
 \end{itemize}
 
-\bibliography{algebra-lineal}
+\subsection{Fase 2: Sistemas de Ecuaciones Lineales}
+\begin{itemize}
+  \item \textbf{Actividad 2 (Laboratorio 2):} Segundo Laboratorio de \'Algebra Lineal. Resoluci\'on completa de sistemas lineales de $3\times 3$ y $4\times 4$ mediante m\'etodos de eliminaci\'on de Gauss, Gauss-Jordan y regla de Cramer. Ponderaci\'on: 3 pts.
+  \item \textbf{Actividad 2.6 (Evidencia 2):} Mapa cognitivo de algoritmo y resoluci\'{o}n paso a paso del Sistema 11 con verificaci\'{o}n de independencia lineal y comprobaci\'{o}n por Cramer. Ponderaci\'{o}n: 10 pts.
+\end{itemize}
+
+\subsection{Fase 3: Valores y Vectores Propios}
+\begin{itemize}
+  \item \textbf{Actividad 3.6 (Evidencia 3):} Reporte t\'{e}cnico de la soluci\'{o}n de un caso de aplicaci\'{o}n de los conceptos de valores y vectores propios en din\'{a}micas poblacionales y dispersi\'{o}n agron\'{o}mica (Sistema 11). Ponderaci\'{o}n: 10 pts.
+\end{itemize}
+
+\subsection{Producto Integrador de Aprendizaje (PIA)}
+\begin{itemize}
+  \item \textbf{Reporte T\'{e}cnico Institucional del PIA:} Modelaci\'{o}n matricial de fertilizaci\'{o}n balanceada N-P-K y din\'{a}mica poblacional de vectores citr\'{i}colas (\textit{Diaphorina citri}) mediante matrices de Leslie y an\'{a}lisis espectral. Ponderaci\'{o}n: 25 pts.
+  \item \textbf{Presentaci\'{o}n Ejecutiva Beamer (16:9):} Sustentaci\'{o}n oral institucional para defensa del PIA ante la comisi\'{o}n docente.
+\end{itemize}
+
+\nocite{*}
+\newpage
+\printbibliography[title={Bibliograf\'{i}a General del Curso}]
 \end{document}

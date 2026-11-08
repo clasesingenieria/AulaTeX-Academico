@@ -1,0 +1,79 @@
+% ==============================================================================
+% ADAPTACIÓN INSTITUCIONAL CENTRALIZADA - UANL (Ingeniería en Mecatrónica)
+% AulaTeX / Facultad de Ingeniería Mecánica y Eléctrica (FIME)
+% ==============================================================================
+% Plantilla centralizada para el programa educativo de Ingeniería en Mecatrónica.
+% Enlaza directamente con el núcleo oficial de AulaTeX:
+% aulaTEX/base/Plantilla-Informe/template.tex (Pablo Pizarro R. Template-Informe).
+%
+% Referencias integradas:
+% - UnADM: Desacoplamiento riguroso de metadatos, checklist académico y APA 7.
+% - IIIEPE: Capa cromática e identidad visual de portada y encabezados.
+% - ITESCA: Restricción estricta de metadatos operativos en entregables visibles.
+% ==============================================================================
+
+\AddToHook{file/config.tex/after}[aulatex-uanl-imtc]{%
+  \def\documentfontsize{12}
+  \def\documentinterline{1.15}
+  \def\documentparindent{0}
+  \def\documentparskip{5}
+  \def\fontdocument{custom}
+  \def\fonttypewriter{custom}
+  % Configuración bibliográfica autor-año (APA 7) vía natbib nativo
+  \def\stylecitereferences{natbib}
+  \def\natbibrefstyle{plainnat}
+  \def\natbibrefcitetype{authoryear}
+  \def\natbibrefcitecharopen{(}
+  \def\natbibrefcitecharclose{)}
+  \def\natbibrefcitesepcomma{true}
+  \def\natbibrefsep{5}
+  % Estilos visuales
+  \def\portraitstyle{style1}
+  \def\hfstyle{style1}
+  \def\hfwidthwrap{true}
+  \def\hfwidthtitle{0.48}
+  \def\hfwidthcourse{0.48}
+  \def\predocpageromannumber{false}
+  \def\pagemarginleft{2.5}
+  \def\pagemarginright{2.5}
+  \def\pagemargintop{2.5}
+  \def\pagemarginbottom{2.5}
+  \def\firstpagemargintop{3.8}
+  \def\sectionfontsize{\large}
+  \def\sectionspacingtop{8}
+  \def\sectionspacingbottom{4}
+  \def\ssectionfontsize{\normalsize}
+  \def\ssectionspacingtop{6}
+  \def\ssectionspacingbottom{3}
+  \def\usepdfmetadata{false}
+}
+
+% Carga del núcleo centralizado de AulaTeX
+\input{aulaTEX/base/Plantilla-Informe/template.tex}
+\RemoveFromHook{file/config.tex/after}[aulatex-uanl-imtc]
+
+% ==============================================================================
+% RUTAS DE BÚSQUEDA DE IMÁGENES Y LOGOS INSTITUCIONALES
+% ==============================================================================
+\graphicspath{%
+  {./img/}%
+  {./}%
+  {../../UANL/assets-uanl/}%
+  {../../../UANL/assets-uanl/}%
+  {UANL/assets-uanl/}%
+}
+
+% ==============================================================================
+% IDENTIDAD CROMÁTICA INSTITUCIONAL UANL / FIME
+% ==============================================================================
+\definecolor{uanlBlue}{HTML}{00376C}
+\definecolor{uanlGold}{HTML}{D4AF37}
+\definecolor{fimeGreen}{HTML}{005A36}
+\definecolor{uanlDark}{HTML}{1A2421}
+\definecolor{uanlPaper}{HTML}{F6F8F7}
+\definecolor{tableblue}{RGB}{233,240,247}
+
+% Elementos estructurales asociados a la paleta universitaria
+\def\portraittitlecolor{uanlBlue}
+\def\sectioncolor{uanlBlue}
+\def\ssectioncolor{fimeGreen}

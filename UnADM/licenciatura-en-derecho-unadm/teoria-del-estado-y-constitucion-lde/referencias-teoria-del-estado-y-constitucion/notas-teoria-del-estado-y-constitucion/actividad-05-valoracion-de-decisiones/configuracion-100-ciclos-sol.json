@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "activity": 5,
+  "subject": "teoria-del-estado-y-constitucion-lde",
+  "action": "realizar-actividad",
+  "engine": "GPT-5.6-SOL",
+  "deployment": "gpt-5.6-sol",
+  "iterations": 100,
+  "cycle_mode": "full",
+  "automatic_start": false,
+  "platform_submission": false,
+  "status": "extraction_completed_pending_review_and_node_plan",
+  "planning_output": "planeacion-Actividad-5-GPT-5.6-SOL.json",
+  "extraction_receipt": "recibo-extraccion-sol.json",
+  "completed_cycles": 0,
+  "environment": {
+    "AULATEX_REQUIRED_ENGINE": "GPT-5.6-SOL",
+    "AULATEX_MODEL_ROUTER_ONLY": "0",
+    "AULATEX_LLM_ENGINE": "GPT-5.6-SOL",
+    "AULATEX_LLM_TIMEOUT_SECONDS": "300",
+    "AULATEX_LLM_MAX_TOKENS": "12000",
+    "PYTHONUTF8": "1"
+  },
+  "cli_entry_relative_to_repository": "aulaTEX/aulatex_agent.py",
+  "cli_arguments": [
+    "agent",
+    "--target", "UnADM/licenciatura-en-derecho-unadm/teoria-del-estado-y-constitucion-lde/reporte-teoria-del-estado-y-constitucion-Actividad-5.tex",
+    "--level", "actividad",
+    "--action", "realizar-actividad",
+    "--activity", "5",
+    "--engine", "GPT-5.6-SOL",
+    "--iterations", "100",
+    "--cycle-mode", "full",
+    "--apply-feedback",
+    "--no-extractor",
+    "--monitor-max-cycles", "1",
+    "--optimize-cycles", "1"
+  ],
+  "node_plan": null,
+  "execution_notes": "Configuracion preparatoria, no ejecutada. Crear y verificar el destino exclusivo de actividad 5 y agregar --node-plan con una planeacion por nodo validada antes de ejecutar. Los 100 ciclos corresponden al ciclo full de roles; monitor y optimizacion posteriores tienen limites propios. No activar un extractor secundario con otro proveedor.",
+  "requirements_before_start": [
+    "Validar la extraccion de la semana 5 contra el PDF docente y la consigna del aula.",
+    "Resolver y validar la planeacion por nodo requerida por realizar-actividad, sin omitir bloqueos.",
+    "Confirmar el uso de la plantilla docente 2026_Teoria del Estado.- Formato de Actividades.",
+    "Preparar un destino exclusivo de la actividad 5; no modificar actividades anteriores.",
+    "Mantener GPT-5.6-SOL como unico motor, sin fallback a otros proveedores.",
+    "Revisar evidencia y resultados entre ciclos; no contar como completados los ciclos fallidos."
+  ],
+  "source_policy": "Las notas y salidas LLM son apoyo interno, no autoridades citables. Verificar cada afirmacion con fuentes primarias o academicas y APA 7."
+}

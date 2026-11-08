@@ -2,20 +2,16 @@
 
 ## Comando de la materia
 
-Desde la carpeta de la materia:
-
-```powershell
-.\compilar.ps1
-```
-
 Desde la raíz del repositorio:
 
 ```powershell
-.\UANL\ingeniero-agronomo\responsabilidad-social-y-desarrollo-sustentable\compilar.ps1
+powershell -ExecutionPolicy Bypass -File .\aulaTEX\latexmk-build.ps1 .\UANL\ingeniero-agronomo\responsabilidad-social-y-desarrollo-sustentable\reporte-responsabilidad-social-y-desarrollo-sustentable-Actividad-1.tex
+powershell -ExecutionPolicy Bypass -File .\aulaTEX\latexmk-build.ps1 .\UANL\ingeniero-agronomo\responsabilidad-social-y-desarrollo-sustentable\presentacion-responsabilidad-social-y-desarrollo-sustentable-Actividad-1.tex
 ```
 
-Para un solo documento, añadir `-Documento reporte` o `-Documento presentacion`.
-La tarea de VS Code **Compilar entrega UANL RSDS** ejecuta el mismo script.
+El motor se detecta desde la directiva `% !TeX program` o la presencia de
+`fontspec`. Biber se ejecuta automáticamente mediante latexmk cuando el documento
+usa `biblatex`.
 
 ## Requisitos
 
@@ -29,12 +25,12 @@ Se utiliza XeLaTeX para cumplir la tipografía de la consigna; no pdfLaTeX.
 - Logotipos: `img/departamentos/`.
 - Contenido del reporte: `contenido-actividad-1.tex`.
 - PDF finales: junto a los TEX de la actividad, en la raíz de la materia.
-- Auxiliares y registros: `.build/latex/uanl-rsds/`, desde la raíz del repositorio.
+- Auxiliares y registros: `.build/latex/`, aislados por ruta y nombre del documento.
 - Verificación: `retroalimentacion-aulatex/verificacion-actividad-1.json`.
 
-El script usa `-norc` y rutas explícitas para evitar la configuración global
-recursiva que interrumpía XeLaTeX. Los cambios de entorno son locales al proceso
-y se restauran al terminar. No se eliminan fuentes ni respaldos.
+El wrapper común carga la configuración del repositorio, prioriza la bibliografía
+de la materia y deja los pasos de compilación y bibliografía a cargo de latexmk.
+No se eliminan fuentes ni respaldos.
 
 ## Criterios de validación
 

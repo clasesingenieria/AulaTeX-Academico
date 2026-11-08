@@ -20,3 +20,5 @@ El conjunto incluye seis guías conceptuales Markdown con definiciones, mecanism
 - **Base bibliográfica unificada:** [`biologia-celular.bib`](file:///c:/Users/Sysx/Documents/AulaTeX-Academico/UANL/ingeniero-agronomo/biologia-celular/biologia-celular.bib)
 
 Abre los archivos Markdown en la vista previa del editor para visualizar las imágenes. Mantén la carpeta `referencias` junto a las guías para conservar sus enlaces relativos.
+
+

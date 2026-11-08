@@ -1,180 +1,57 @@
-# Actividad 9 · 3.3 Evaluación 5% Cuestionario
+# Planeación Académica — 3.3 Evaluación 5%
 
-Estadística aplicada para la administración
+## 1. Identificación verificada
+- **Institución:** ITESCA (`ITESCA Virtual`)
+- **Programa:** Maestría en Gestión Administrativa
+- **Asignatura:** Estadística aplicada para la administración (`GGEA01`)
+- **Docente:** Dra. Yoana Elizeth Tauitmes Delgado
+- **Periodo:** 2026-II
+- **Actividad local:** Actividad 9 (Módulo Moodle `1763`)
+- **Calendario publicado:** `Abrió: viernes, 6 de noviembre de 2026, 02:00 | Cierra: domingo, 8 de noviembre de 2026, 23:59`
+- **Validación semántica (`validate_pedagogical`):** `failed`
 
-> **Pendiente de revision academica.** Revision editorial 5. Sin autorizacion de ejecucion ni envio.
+## 2. Consigna oficial extraída (`extraido` / `confirmed`)
 
-## 1. Identidad y correspondencia
+Nombre de la Actividad	 	Evaluación unidad 
+Descripción	 	
 
-| Dato | Valor |
-| --- | --- |
-| Institucion | ITESCA |
-| Programa | maestria-en-gestion-administrativa |
-| Actividad | 9 |
-| Modulo de origen | 1763 |
-| Periodo | No documentado |
-| Modalidad | No documentado |
+Deberás contestar las siguientes preguntas referentes al tema de la unidad. 
 
-## 2. Consigna docente
-
-La transcripcion conserva el texto de la fuente; no resuelve sus contradicciones ni acredita el estado actual de la plataforma.
-
-<details>
-<summary>Consultar consigna y captura literal completas</summary>
-
-Requisitos de finalización
-Abre:
-viernes, 6 de noviembre de 2026, 02:00
-Cierra:
-domingo, 8 de noviembre de 2026, 23:59
-Nombre de la Actividad
-Evaluación unidad
-Descripción
-Deberás contestar las siguientes preguntas referentes al tema de la unidad.
 Debes contestar la pregunta antes de pasar a la siguiente, recuerda que no te puedes regresar
-Valor
-5%
-Formato de Entrega
-Linea
-Tipo de entrega
-individual
-Intentos permitidos: 1
-Límite de tiempo: 1 hora
-Este cuestionario no está disponible en este momento
-Volver al curso
 
-</details>
 
-## 3. Objetivos y temas
+Valor	 	5%
+Formato de Entrega	 	Linea
+Tipo de entrega	 	individual
 
-Objetivo pendiente de cotejo con la fuente docente.
+## 3. Requisitos segmentados
 
-### Resultados de aprendizaje
+- **req-001:** Nombre de la Actividad Evaluación unidad
+- **req-002:** Deberás contestar las siguientes preguntas referentes al tema de la unidad.
+- **req-003:** Debes contestar la pregunta antes de pasar a la siguiente, recuerda que no te puedes regresar
+- **req-004:** Valor 5%
+- **req-005:** Formato de Entrega Linea
+- **req-006:** Tipo de entrega individual
 
-Pendiente de documentar y cotejar.
+## 4. Contrato del entregable y rutas del proyecto
+- **Tipo de producto:** `quiz_preparation_report`
+- **Formato editable:** LaTeX (.tex) (`reporte-estadistica-aplicada-para-la-administracion-Actividad-9.tex`)
+- **Formato de entrega:** Plataforma Moodle en línea (solo lectura para agentes)
+- **Ruta de entrega local:** `Solo reporte raíz (sin archivo en entregas)`
+- **Extensión y tipografía:** Sin archivo en carpeta de entregas; cuestionario en línea de 1 intento
+- **Carpeta de notas de la actividad:** `referencias-estadistica-aplicada-para-la-administracion/notas-estadistica-aplicada-para-la-administracion/actividad-09-evaluacion-estimacion-intervalos`
+- **Carpeta de extracción sincronizada:** `extractor-aulatex/conceptos-estadistica-aplicada-para-la-administracion-actividad-9`
 
-### Temas
+## 5. Criterios de evaluación y rúbrica
 
-1. 3.Estimación
+- Ponderación declarada: `5.0%` (sin rúbrica tabular adicional en plataforma).
 
-## 4. Requisitos y preguntas
+## 7. Bloqueos y límites operativos declarados
 
-1. Nombre de la Actividad Evaluación unidad Descripción Deberás contestar las siguientes preguntas referentes al tema de la unidad. Debes contestar la pregunta antes de pasar a la siguiente, recuerda que no te puedes regresar Valor 5% Formato de Entrega Linea Tipo de entrega individual
+- **BLOQUEO:** Cuestionario en línea abierto sin intentos previos concluidos; navegación-itesca opera en modo solo lectura y no inicia startattempt.php para no consumir el intento cronometrado del estudiante.
 
-### Preguntas documentadas
-
-No hay preguntas segmentadas en el modelo. Consultar la consigna; no asumir su inexistencia.
-
-## 5. Secuencia editorial propuesta
-
-Organizacion de trabajo propuesta; no sustituye instrucciones docentes ni habilita la ejecucion.
-
-Secuencia pendiente de integracion.
-
-## 6. Recursos
-
-Recursos pendientes de segmentacion o verificacion. Las fuentes documentales se identifican al final.
-
-## 7. Productos y reportes
-
-Producto pendiente de definicion y alineacion. El reporte existente no sustituye esta comprobacion.
-
-**Reporte institucional:** Introduccion, desarrollo tematico y conclusiones. Se conserva la plantilla y los archivos establecidos.
-
-**Cuestionario:** conserva reporte documental, pero no genera PDF de entrega por defecto.
-
-## 8. Evaluacion y rubrica
-
-| Dato | Valor documentado |
-| --- | --- |
-| Ponderacion | No documentado |
-| Escala total oficial | No documentado |
-
-Rubrica pendiente de segmentacion y cotejo. Consultar la captura docente sin inferir criterios ni puntajes.
-
-Los puntajes y descriptores transcritos no acreditan una calificacion oficial. No se corrigen inconsistencias por inferencia.
-
-## 9. Politicas
-
-| Politica | Texto documentado |
-| --- | --- |
-| Uso de IA | No documentado |
-| Integridad academica | No documentado |
-| Colaboracion | No documentado |
-| Citacion | No documentado |
-| Intentos | No documentado |
-| Entrega tardia | No documentado |
-| Accesibilidad | No documentado |
-| Privacidad | No documentado |
-| Excepciones | No documentado |
-
-## 10. Calendario operativo
-
-| Apertura | Prevista | Limite | Cierre | Zona horaria |
-| --- | --- | --- | --- | --- |
-|  |  |  |  |  |
-
-Sin programacion verificada. Moodle es opcional como integracion. Una fecha vacia no acredita apertura ni autoriza envios.
-
-## 11. Alineacion editorial
-
-Alineacion pendiente. No hay una relacion validada entre objetivos, requisitos, productos y evaluacion.
-
-## 12. Archivos de trabajo
-
-- **Notas:** [referencias-estadistica-aplicada-para-la-administracion/notas-estadistica-aplicada-para-la-administracion/actividad-09-evaluacion-estimacion](../referencias-estadistica-aplicada-para-la-administracion/notas-estadistica-aplicada-para-la-administracion/actividad-09-evaluacion-estimacion)
-- **Extraccion:** [extractor-aulatex/conceptos-estadistica-aplicada-para-la-administracion-actividad-9](../extractor-aulatex/conceptos-estadistica-aplicada-para-la-administracion-actividad-9)
-- **Investigacion:** [referencias-estadistica-aplicada-para-la-administracion/notas-estadistica-aplicada-para-la-administracion/actividad-09-evaluacion-estimacion/investigacion](../referencias-estadistica-aplicada-para-la-administracion/notas-estadistica-aplicada-para-la-administracion/actividad-09-evaluacion-estimacion/investigacion)
-- **Reporte TEX:** [reporte-estadistica-aplicada-para-la-administracion-Actividad-9.tex](../reporte-estadistica-aplicada-para-la-administracion-Actividad-9.tex)
-- **Reporte PDF:** [reporte-estadistica-aplicada-para-la-administracion-Actividad-9.pdf](../reporte-estadistica-aplicada-para-la-administracion-Actividad-9.pdf)
-- **Entrega existente:** sin archivo asociado.
-
-## 13. Evidencias y revision
-
-### Bloqueos pendientes
-
-1. Consigna integra archivada; falta segmentar requisitos, productos, rubrica y alineacion por cotejo academico.
-2. Estado de planeacion independiente de reportes y entregas existentes.
-
-### Fuentes
-
-- **planeacion-modulo-1763.json**. Autoridad: Editorial. Captura: 2026-10-18T07:37:59.685281+00:00. Contenido integro absorbido en el modelo; sin archivo suelto.
-- **Estadística aplicada para la administración.md**. Autoridad: Editorial. Captura: No documentado. [Consultar fuente](../Estadística%20aplicada%20para%20la%20administración.md).
-- **modulo-1763.txt**. Autoridad: Docente. Captura: 2026-10-18T07:37:59.685281+00:00. [Consultar fuente](../referencias-estadistica-aplicada-para-la-administracion/notas-estadistica-aplicada-para-la-administracion/materiales-aula/2026-10-18/modulo-1763.txt).
-- **planeacion-modulo-1763.md**. Autoridad: Editorial. Captura: No documentado. Contenido integro absorbido en el modelo; sin archivo suelto.
-
-### Captura historica: no operativa
-
-Los estados, plazos y mensajes siguientes son evidencia de una captura pasada, no datos vigentes.
-
-<details>
-<summary>Consultar literal historico</summary>
-
-Abre: viernes, 6 de noviembre de 2026, 02:00 Cierra: domingo, 8 de noviembre de 2026, 23:59
-Intentos permitidos: 1 Límite de tiempo: 1 hora
-
-</details>
-
-### Integridad documental
-
-Los dos documentos originales se absorbieron completos y se verificaron por SHA-256 antes de eliminar los archivos sueltos. Esta integracion no constituye aprobacion academica.
-
-### Contenido de importaciones integrado
-
-Se absorbieron 4 revisiones y 12 archivos, conservados como 11 documentos distintos dentro del modelo. No se requieren carpetas auxiliares ni archivos de revision separados.
-
-Las observaciones anteriores se conservan como evidencia de conversion; no sustituyen el dictamen actual ni agregan requisitos docentes.
-
-| Revision de origen | Estado registrado | Hallazgos de conversion |
-| --- | --- | --- |
-| 1 | Pendiente de revision | 5 |
-| 2 | Pendiente de revision | 5 |
-| 3 | Pendiente de revision | 5 |
-| 1 | Pendiente de revision | 4 |
-
-**Observaciones documentales previas:**
-
-1. Cotejar consigna y procedencia docente; conversion local no equivale a aprobacion
-2. Consigna integra archivada; falta segmentar requisitos, productos, rubrica y alineacion por cotejo academico.
-3. Estado de planeacion independiente de reportes y entregas existentes.
-4. Documento sin segmentar: identificar actividades, requisitos, preguntas y rubrica antes de ejecutar
+## 8. Secuencia de ejecución bajo coordinación `aulatex`
+1. `realizar-planeación`: consolidación de consigna, rúbrica y trazabilidad documental.
+2. `encontrar-recursos`: descarga autenticada y organización de adjuntos docentes y biblioteca verificada.
+3. `extraer-conceptos`: generación de conceptos e ideas en la carpeta de notas de la actividad.
+4. `realizar-actividad` + `estilo-escribir`: elaboración con plantillas institucionales, refinamiento de estilo y ciclos de calidad.

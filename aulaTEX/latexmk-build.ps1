@@ -2,6 +2,9 @@ param(
     [Parameter(Mandatory = $true, Position = 0)]
     [string]$TexFile,
 
+    [ValidateSet('auto', 'pdflatex', 'xelatex', 'lualatex')]
+    [string]$Engine = 'auto',
+
     [ValidateSet('none', 'safe', 'full')]
     [string]$CleanMode = 'safe',
 
@@ -112,32 +115,31 @@ function Resolve-TexFile {
 function Invoke-BuildCleanup {
     param(
         [string]$Mode,
-        [string]$Root
+        [string]$BuildDirectory
     )
 
-    if ($Mode -eq 'none') {
-        return
-    }
-
-    $buildRoot = Join-Path $Root '.build/latex'
-    if (-not (Test-Path -LiteralPath $buildRoot -PathType Container)) {
+    if ($Mode -eq 'none' -or -not (Test-Path -LiteralPath $BuildDirectory -PathType Container)) {
         return
     }
 
     if ($Mode -eq 'full') {
-        Get-ChildItem -LiteralPath $buildRoot -Recurse -File -Force -ErrorAction SilentlyContinue |
+        Get-ChildItem -LiteralPath $BuildDirectory -Recurse -File -Force -ErrorAction SilentlyContinue |
             Remove-Item -Force -ErrorAction SilentlyContinue
         return
     }
 
+    Get-ChildItem -LiteralPath $BuildDirectory -Recurse -Filter '*.log' -File -Force -ErrorAction SilentlyContinue |
+        Where-Object { $_.Length -eq 0 } |
+        Remove-Item -Force -ErrorAction SilentlyContinue
+
     # Limpieza segura: elimina auxiliares temporales y conserva .log para diagnostico.
     $ephemeralExtensions = @(
-        '.aux', '.bbl', '.blg', '.fdb_latexmk', '.fls',
+        '.aux', '.bbl', '.bcf', '.blg', '.fdb_latexmk', '.fls',
         '.lof', '.lot', '.nav', '.out', '.run.xml', '.snm',
         '.synctex.gz', '.toc', '.vrb', '.xdv'
     )
 
-    Get-ChildItem -LiteralPath $buildRoot -Recurse -File -Force -ErrorAction SilentlyContinue |
+    Get-ChildItem -LiteralPath $BuildDirectory -Recurse -File -Force -ErrorAction SilentlyContinue |
         Where-Object {
             $ext = $_.Extension.ToLowerInvariant()
             if ($ext -eq '.gz' -and $_.Name.ToLowerInvariant().EndsWith('.synctex.gz')) {
@@ -149,11 +151,8 @@ function Invoke-BuildCleanup {
 }
 
 function Remove-SourceDirResidues {
-    # Barre residuos de compilacion HUERFANOS que quedaron JUNTO al .tex (fruto de
-    # compilaciones manuales pdflatex/bibtex antiguas). El flujo canonico con
-    # latexmk aisla todo en .build/latex, asi que la carpeta de la materia debe
-    # contener SOLO fuentes (.tex/.bib/.md/.json) + el PDF final. Contractualizado
-    # en activity_contract.compilation_rules.no_build_residues.
+    # Barre solo residuos del job actual dejados por compilaciones manuales previas.
+    # Las fuentes, respaldos y auxiliares de otros documentos se conservan.
     param(
         [string]$SourceDir,
         [string]$BaseName
@@ -167,10 +166,11 @@ function Remove-SourceDirResidues {
         Where-Object {
             $name = $_.Name.ToLowerInvariant()
             $ext = $_.Extension.ToLowerInvariant()
-            # Respaldo del optimizador ya aplicado (obsoleto) y auxiliares del jobname.
-            ($name.EndsWith('.synctex.gz')) -or
-            ($name.EndsWith('.tex.activity-optimize.bak')) -or
-            ($residueExtensions -contains $ext)
+            $jobPrefix = $BaseName.ToLowerInvariant() + '.'
+            $name.StartsWith($jobPrefix) -and (
+                $name.EndsWith('.synctex.gz') -or
+                ($residueExtensions -contains $ext)
+            )
         } |
         Remove-Item -Force -ErrorAction SilentlyContinue
 }
@@ -187,21 +187,58 @@ if ($LatexmkBin) {
     $env:PATH = (@($LatexmkBin) + $pathParts) -join ';'
 }
 $ResolvedTex = Resolve-TexFile $TexFile
+$SourceDir = Split-Path -Parent $ResolvedTex
+$BaseName = [System.IO.Path]::GetFileNameWithoutExtension($ResolvedTex)
+$ProjectRootPrefix = $ProjectRoot.TrimEnd('\') + '\'
+if ($ResolvedTex.StartsWith($ProjectRootPrefix, [System.StringComparison]::OrdinalIgnoreCase)) {
+    $LatexmkTexArg = $ResolvedTex.Substring($ProjectRootPrefix.Length).Replace('\', '/')
+} else {
+    $LatexmkTexArg = $ResolvedTex
+}
+$HashProvider = [System.Security.Cryptography.SHA256]::Create()
+try {
+    $HashBytes = $HashProvider.ComputeHash([System.Text.Encoding]::UTF8.GetBytes($ResolvedTex.ToLowerInvariant()))
+} finally {
+    $HashProvider.Dispose()
+}
+$BuildKey = ([System.BitConverter]::ToString($HashBytes) -replace '-', '').Substring(0, 16).ToLowerInvariant()
 $BuildRoot = Join-Path $ProjectRoot '.build'
 $LatexRoot = Join-Path $BuildRoot 'latex'
 # AUX es un nombre de dispositivo reservado en Windows, incluso como segmento.
 # Un nombre descriptivo evita WinError 267 y funciona también en Linux/macOS.
-$AuxRoot = Join-Path $LatexRoot 'aux-files'
-foreach ($directory in @($BuildRoot, $LatexRoot, $AuxRoot)) {
+$BuildDir = Join-Path $LatexRoot "$BaseName-$BuildKey"
+foreach ($directory in @($BuildRoot, $LatexRoot, $BuildDir)) {
     if ((Test-Path -LiteralPath $directory) -and -not (Test-Path -LiteralPath $directory -PathType Container)) {
         throw "Bloqueador de entorno: la ruta de compilación existe pero no es un directorio: $directory"
     }
     New-Item -ItemType Directory -Force -Path $directory | Out-Null
-    if (-not (Test-Path -LiteralPath $directory -PathType Container)) {
-        throw "Bloqueador de entorno: no fue posible crear el directorio de compilación: $directory"
+}
+Invoke-BuildCleanup -Mode $CleanMode -BuildDirectory $BuildDir
+
+$PreviousBuildEnvironment = @{
+    AULATEX_SOURCE_DIR = $env:AULATEX_SOURCE_DIR
+}
+$SourceDirTeX = $SourceDir.Replace('\', '/')
+$env:AULATEX_SOURCE_DIR = $SourceDirTeX
+
+$EngineToUse = $Engine
+if ($EngineToUse -eq 'auto') {
+    $SourceText = Get-Content -LiteralPath $ResolvedTex -Raw
+    $EngineDirective = [regex]::Match($SourceText, '(?im)^\s*%\s*!TeX\s+program\s*=\s*(xelatex|lualatex|pdflatex)\b')
+    if ($EngineDirective.Success) {
+        $EngineToUse = $EngineDirective.Groups[1].Value.ToLowerInvariant()
+    } elseif ($SourceText -match '(?i)\\usepackage(?:\[[^\]]*\])?\{[^}]*fontspec|\\set(?:main|sans|monofont)') {
+        $EngineToUse = 'xelatex'
+    } else {
+        $EngineToUse = 'pdflatex'
     }
 }
-Invoke-BuildCleanup -Mode $CleanMode -Root $ProjectRoot
+$EngineOption = switch ($EngineToUse) {
+    'xelatex' { '-xelatex' }
+    'lualatex' { '-lualatex' }
+    default { '-pdf' }
+}
+Write-Host "Motor TeX: $EngineToUse"
 
 Push-Location $ProjectRoot
 try {
@@ -214,7 +251,7 @@ try {
     # ONLY around the native latexmk call and rely on $LASTEXITCODE for success.
     $PreviousEAP = $ErrorActionPreference
     $ErrorActionPreference = 'Continue'
-    & $LatexmkExe -f -pdf -interaction=nonstopmode -file-line-error "-outdir=$LatexRoot" "-auxdir=$AuxRoot" @LatexmkArgs $ResolvedTex 2>&1 |
+    & $LatexmkExe -norc -r (Join-Path $ProjectRoot '.latexmkrc') $EngineOption -interaction=nonstopmode -file-line-error -halt-on-error "-outdir=$BuildDir" "-auxdir=$BuildDir" @LatexmkArgs $LatexmkTexArg 2>&1 |
         ForEach-Object { Write-Host ($_ | Out-String).TrimEnd() }
     $LatexmkExitCode = $LASTEXITCODE
     $ErrorActionPreference = $PreviousEAP
@@ -222,10 +259,8 @@ try {
         exit $LatexmkExitCode
     }
 
-    $BaseName = [System.IO.Path]::GetFileNameWithoutExtension($ResolvedTex)
     $GeneratedPdfCandidates = @(
-        (Join-Path $LatexRoot ("{0}.pdf" -f $BaseName)),
-        (Join-Path $AuxRoot ("{0}.pdf" -f $BaseName))
+        (Join-Path $BuildDir ("{0}.pdf" -f $BaseName))
     )
     $GeneratedPdf = $GeneratedPdfCandidates | Where-Object {
         Test-Path -LiteralPath $_ -PathType Leaf
@@ -236,16 +271,37 @@ try {
         Write-Error "No se encontro el PDF generado en las rutas esperadas: $($GeneratedPdfCandidates -join ', ')"
         exit 1
     }
+    $GeneratedPdfInfo = Get-Item -LiteralPath $GeneratedPdf
+    if ($GeneratedPdfInfo.Length -eq 0 -or $GeneratedPdfInfo.LastWriteTimeUtc -lt (Get-Item -LiteralPath $ResolvedTex).LastWriteTimeUtc) {
+        throw "El PDF está vacío o es anterior a su fuente: $GeneratedPdf"
+    }
+
+    $BcfPath = Join-Path $BuildDir "$BaseName.bcf"
+    $BblPath = Join-Path $BuildDir "$BaseName.bbl"
+    if ((Test-Path -LiteralPath $BcfPath) -and
+        (-not (Test-Path -LiteralPath $BblPath -PathType Leaf) -or (Get-Item -LiteralPath $BblPath).Length -eq 0)) {
+        throw "latexmk no produjo una bibliografía Biber válida para $ResolvedTex"
+    }
+    $LogPath = Join-Path $BuildDir "$BaseName.log"
+    if (Test-Path -LiteralPath $LogPath) {
+        $UnresolvedCitations = Select-String -LiteralPath $LogPath -Pattern '(?im)^LaTeX Warning: Citation .+ undefined'
+        if ($UnresolvedCitations) {
+            throw "El PDF conserva citas bibliográficas sin resolver; consulta $LogPath"
+        }
+    }
 
     Copy-Item -LiteralPath $GeneratedPdf -Destination $FinalPdf -Force
-    Invoke-BuildCleanup -Mode $CleanMode -Root $ProjectRoot
+    Invoke-BuildCleanup -Mode $CleanMode -BuildDirectory $BuildDir
     if ($CleanMode -ne 'none') {
         # Barrer residuos huerfanos junto al .tex (compilaciones manuales antiguas)
         # para garantizar que la carpeta de la materia quede limpia. latexmk por si
         # mismo NO deja residuos ahi (usa .build/latex), esto solo limpia herencia.
-        Remove-SourceDirResidues -SourceDir (Split-Path -Parent $ResolvedTex) -BaseName $BaseName
+        Remove-SourceDirResidues -SourceDir $SourceDir -BaseName $BaseName
     }
     Write-Host "PDF final: $FinalPdf"
+    foreach ($name in $PreviousBuildEnvironment.Keys) {
+        [Environment]::SetEnvironmentVariable($name, $PreviousBuildEnvironment[$name], 'Process')
+    }
     exit 0
 }
 finally {

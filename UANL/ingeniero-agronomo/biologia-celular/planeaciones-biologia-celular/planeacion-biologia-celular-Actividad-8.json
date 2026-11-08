@@ -1,0 +1,358 @@
+{
+  "schema_version": "1.0.0",
+  "plan_id": "pca-uanl-biocel-pia",
+  "revision": 1,
+  "identity": {
+    "institution": "UANL",
+    "program": "Ingeniero Agrónomo",
+    "subject_id": "biologia-celular",
+    "subject_title": "Biología Celular",
+    "offering_id": "REF-261013755061",
+    "period": "03/AGOSTO/2026 al 18/DICIEMBRE/2026",
+    "modality": "hybrid"
+  },
+  "sources": [
+    {
+      "id": "src-nexus-extraccion",
+      "kind": "platform",
+      "authority": "instructional",
+      "title": "extraccion_nexus.json",
+      "url": "https://plataformanexus.uanl.mx",
+      "path": "planeaciones-biologia-celular/extraccion_nexus.json",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "captured_at": "2026-10-18",
+      "media_type": "application/json"
+    }
+  ],
+  "curriculum": {
+    "purpose": "Distinguir la estructura y fisiología de células en homeostasis para fundamentar tejidos y órganos en agronomía.",
+    "competencies": [
+      {
+        "id": "comp-1",
+        "text": "Reconocer las bases moleculares y celulares de los organismos vivos."
+      }
+    ],
+    "outcomes": [
+      {
+        "id": "out-1",
+        "text": "Diferenciar sistemas celulares y acelulares con relevancia agronómica."
+      }
+    ],
+    "topics": [
+      {
+        "id": "top-1",
+        "text": "Producto Integrador de Aprendizaje. Artículo de revisión bibliográfica y presentación ejecutiva Beamer",
+        "children": []
+      }
+    ]
+  },
+  "activities": [
+    {
+      "id": "actividad-8",
+      "title": "Producto Integrador de Aprendizaje. Artículo de revisión bibliográfica y presentación ejecutiva Beamer",
+      "role": "assessment",
+      "platform": {
+        "name": "Nexus UANL",
+        "course_id": "REF#261013755061",
+        "module_ids": [
+          "PIA"
+        ]
+      },
+      "unit_id": "PIA",
+      "weeks": [
+        14,
+        15,
+        16
+      ],
+      "outcome_ids": [
+        "out-1"
+      ],
+      "topic_ids": [
+        "top-1"
+      ],
+      "cognitive": {
+        "taxonomy": "Bloom",
+        "level": "creacion",
+        "verb": "Formular",
+        "object": "artículo de revisión científica y presentación Beamer sobre ultraestructura y dinámica de la célula plasmática",
+        "conditions": "bajo formato institucional AulaTeX y APA 7",
+        "observable_evidence": "reporte-biologia-celular-Actividad-8.pdf",
+        "justification": "Evidencia integradora final de competencias de la unidad de aprendizaje."
+      },
+      "instruction": "Redactar un Review Paper de 6 a 10 páginas sobre ultraestructura, dinámica biosintética y reprogramación de la célula plasmática vegetal, complementado con presentación Beamer de 12 láminas.",
+      "requirements": [
+        {
+          "id": "req-1",
+          "text": "Profundidad fisiológica y molecular con fundamentación JCR/Scopus"
+        },
+        {
+          "id": "req-2",
+          "text": "Presentación Beamer 16:9 de 12 diapositivas"
+        },
+        {
+          "id": "req-3",
+          "text": "Declaración ética sobre el uso supervisado de IA en nota al pie"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q-1",
+          "context": "PIA",
+          "text": "¿Cuáles son los mecanismos de transducción y reprogramación metabólica que regulan la célula plasmática vegetal en condiciones de estrés?",
+          "requirement_ids": [
+            "req-1"
+          ]
+        }
+      ],
+      "sequence": [
+        {
+          "id": "step-1",
+          "order": 1,
+          "phase": "preparation",
+          "action": "Revisión bibliográfica de fuentes indexadas y planeación Nexus",
+          "inputs": [
+            "extraccion_nexus.json",
+            "bibliografia-ampliada.bib"
+          ],
+          "output": "Fichas conceptuales y parámetros de rúbrica",
+          "completion_check": "Fichas completadas y validadas",
+          "requirement_ids": [
+            "req-1"
+          ],
+          "depends_on": []
+        },
+        {
+          "id": "step-2",
+          "order": 2,
+          "phase": "construction",
+          "action": "Redacción técnica en LaTeX y maquetación con XeLaTeX",
+          "inputs": [
+            "Fichas conceptuales",
+            "template.tex"
+          ],
+          "output": "Fuente .tex y compendio tipográfico",
+          "completion_check": "Documento LaTeX estructurado",
+          "requirement_ids": [
+            "req-1"
+          ],
+          "depends_on": [
+            "step-1"
+          ]
+        },
+        {
+          "id": "step-3",
+          "order": 3,
+          "phase": "review",
+          "action": "Compilación reproducible y verificación de citas APA 7",
+          "inputs": [
+            "Fuente .tex",
+            "biologia-celular.bib"
+          ],
+          "output": "PDF certificado y verificado",
+          "completion_check": "Compilación limpia con rc=0",
+          "requirement_ids": [
+            "req-1"
+          ],
+          "depends_on": [
+            "step-2"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "id": "res-1",
+          "source_id": "src-nexus-extraccion",
+          "purpose": "Consigna instruccional y rúbrica oficial de Nexus",
+          "required": true,
+          "access": "local",
+          "rights": "UANL"
+        }
+      ],
+      "assessment": {
+        "kind": "summative",
+        "scale_total": 100.0,
+        "weight": 35.0,
+        "weight_unit": "pts",
+        "criteria": [
+          {
+            "id": "crit-1",
+            "text": "Rigor conceptual y fundamentación biológica",
+            "points": 50.0,
+            "descriptors": [
+              {
+                "level": "Excelente",
+                "description": "Dominio exhaustivo del proceso celular",
+                "points": 50.0
+              }
+            ],
+            "requirement_ids": [
+              "req-1"
+            ]
+          },
+          {
+            "id": "crit-2",
+            "text": "Calidad editorial y aparato crítico APA 7",
+            "points": 50.0,
+            "descriptors": [
+              {
+                "level": "Excelente",
+                "description": "Formato institucional AulaTeX sin erratas",
+                "points": 50.0
+              }
+            ],
+            "requirement_ids": [
+              "req-1"
+            ]
+          }
+        ],
+        "editorial_checks": [
+          "Sin citas huérfanas",
+          "Subtítulo entre 28 y 68 caracteres",
+          "Sin desbordes hbox"
+        ]
+      },
+      "products": [
+        {
+          "id": "prod-pia-rep",
+          "kind": "review_paper",
+          "recipient": "Nexus UANL",
+          "editable_format": "application/x-tex",
+          "submission_format": "application/pdf",
+          "structure": [
+            "Abstract estructurado",
+            "Ultraestructura",
+            "Fisiología",
+            "Aparato crítico"
+          ],
+          "length": "6 a 10 páginas",
+          "filename_pattern": "reporte-biologia-celular-Actividad-8.pdf",
+          "accessibility": "PDF/A conforme",
+          "requirement_ids": [
+            "req-1",
+            "req-3"
+          ],
+          "paths": {
+            "editable": "reporte-biologia-celular-Actividad-8.tex",
+            "delivery": "entregas-biologia-celular/reporte-biologia-celular-Actividad-8.pdf"
+          }
+        },
+        {
+          "id": "prod-pia-pres",
+          "kind": "presentacion",
+          "recipient": "Nexus UANL",
+          "editable_format": "application/x-tex",
+          "submission_format": "application/pdf",
+          "structure": [
+            "Portada",
+            "Objetivos",
+            "Estructura",
+            "Metabolismo",
+            "Conclusión"
+          ],
+          "length": "12 diapositivas",
+          "filename_pattern": "presentacion-biologia-celular-Actividad-8.pdf",
+          "accessibility": "PDF/A conforme",
+          "requirement_ids": [
+            "req-2"
+          ],
+          "paths": {
+            "editable": "presentacion-biologia-celular-Actividad-8.tex",
+            "delivery": "entregas-biologia-celular/presentacion-biologia-celular-Actividad-8.pdf"
+          }
+        }
+      ],
+      "calendar": {
+        "opens_at": "2026-08-10",
+        "expected_at": "2026-11-01",
+        "due_at": "2026-11-20",
+        "closes_at": "2026-12-05",
+        "timezone": "America/Monterrey",
+        "literal": "Semanas [14, 15, 16]"
+      },
+      "policies": {
+        "ai": "Declaración transparente de asistencia tecnológica en nota al pie",
+        "integrity": "Cero plagio; estricta verificación de literatura científica indexada",
+        "collaboration": "Individual",
+        "citation": "APA 7ma edición",
+        "attempts": 1,
+        "late_submission": "Penalización conforme a reglamento general de evaluaciones UANL",
+        "accessibility": "PDF estructurado de alto contraste",
+        "privacy": "Resguardo estricto de matrícula y datos personales",
+        "exceptions": []
+      },
+      "dependencies": [],
+      "alignment": [
+        {
+          "outcome_id": "out-1",
+          "requirement_ids": [
+            "req-1"
+          ],
+          "step_ids": [
+            "step-1",
+            "step-2",
+            "step-3"
+          ],
+          "product_ids": [
+            "prod-pia-rep",
+            "prod-pia-pres"
+          ],
+          "criterion_ids": [
+            "crit-1",
+            "crit-2"
+          ]
+        }
+      ],
+      "bindings": {
+        "extractor_directory": "planeaciones-biologia-celular",
+        "notes_directory": "referencias-biologia-celular/notas-biologia-celular",
+        "research_directory": "referencias-biologia-celular"
+      }
+    }
+  ],
+  "field_status": [
+    {
+      "path": "/identity/subject_id",
+      "state": "confirmed",
+      "reason": null,
+      "evidence": [
+        {
+          "source_id": "src-nexus-extraccion",
+          "locator": "slug",
+          "quoted_text": "biologia-celular"
+        }
+      ],
+      "alternatives": []
+    }
+  ],
+  "review": {
+    "state": "ready",
+    "reviewed_at": "2026-11-06",
+    "reviewer_role": "docente-titular",
+    "critical_gaps": [],
+    "semantic_validation": "passed"
+  },
+  "artifact_contract": {
+    "version": "1.1",
+    "paths_relative_to_subject": {
+      "plans": "planeaciones-biologia-celular",
+      "references": "referencias-biologia-celular",
+      "notes": "referencias-biologia-celular/notas-biologia-celular",
+      "assets": "assets-biologia-celular",
+      "deliveries": "entregas-biologia-celular",
+      "extractions": "extractor-aulatex",
+      "research": "investigacion-aulatex"
+    },
+    "deliverables_directory": "entregas-biologia-celular",
+    "source_directory": "."
+  },
+  "extensions": {
+    "codigo_referencia": "REF#261013755061",
+    "docente": "Dr. Miguel Ángel Dector Carrillo",
+    "estudiante": "Diego de la Cruz",
+    "modalidad": "Competencias / Mixta",
+    "fase_curricular": "Producto Integrador de Aprendizaje (PIA)"
+  }
+}
+
+
+

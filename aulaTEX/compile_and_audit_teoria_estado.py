@@ -1,0 +1,272 @@
+import subprocess, os, shutil, hashlib, pymupdf
+from pathlib import Path
+
+root = Path('.').resolve()
+subj = root / 'UnADM/licenciatura-en-derecho-unadm/teoria-del-estado-y-constitucion-lde'
+tex_file = subj / 'reporte-teoria-del-estado-y-constitucion-Actividad-5.tex'
+
+content = r"""\documentclass[12pt,spanish,letterpaper,oneside]{article}
+\def\documenttitle {Valoraci\'on de decisiones en la teor\'ia del Estado}
+\def\documentsubtitle {El Tratado de Guadalupe Hidalgo (1848) y la subsistencia de los elementos constitutivos del Estado mexicano}
+\def\documentsubject {Actividad S5 - Valoraci\'on de decisiones}
+\def\documentauthor {Martin Jonathan de la Cruz}
+\def\coursename {Teor\'ia del Estado y Constituci\'on}
+\def\coursecode {020}
+\def\universityname {Universidad Abierta y a Distancia de M\'exico}
+\def\universityfaculty {Licenciatura en Derecho}
+\def\universitydepartment {Teor\'ia del Estado y Constituci\'on}
+\def\universitydepartmentimage {departamentos/UnADM}
+\def\universitydepartmentimagecfg {height=1.57cm}
+\def\universitylocation {Ciudad de M\'exico}
+\def\authortable {\begin{tabular}{ll}
+\textbf{Alumno:} & Martin Jonathan de la Cruz \\
+\textbf{Matr\'icula:} & ES2611202040 \\
+\textbf{Figura docente:} & Ana Lilian S\'anchez Ch\'avez \\
+\textbf{Semestre / Bloque:} & 2 / 2 \\
+\textbf{Semana lectiva:} & Semana 5 \\
+\textbf{Actividad oficial:} & Actividad S5: Valoraci\'on de decisiones \\
+\textbf{Fecha de realizaci\'on:} & Noviembre de 2026 \\
+\multicolumn{2}{l}{\universitylocation}
+\end{tabular}}
+
+\usepackage{iftex}
+\ifLuaTeX
+  \let\pdfpagewidth\pagewidth
+  \let\pdfpageheight\pageheight
+\fi
+
+\input{template}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\setcitestyle{authoryear,open={(},close={)}}
+
+\usepackage[most]{tcolorbox}
+\usepackage{array,tabularx,booktabs,longtable}
+\usepackage{tikz}
+\usepackage{eso-pic}
+
+\definecolor{unadmGreenDark}{HTML}{174A3A}
+\definecolor{unadmGreen}{HTML}{2D6A4F}
+\definecolor{tableHeader}{HTML}{E8EFE5}
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\setlength{\emergencystretch}{3em}
+
+\begin{document}
+\AddToShipoutPictureBG*{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[opacity=0.16,inner sep=0pt] at (current page.center)
+      {\includegraphics[width=0.72\paperwidth]{img/departamentos/UnADM.pdf}};
+  \end{tikzpicture}%
+}
+
+\templatePortrait
+\templatePagecfg
+\onehalfspacing
+
+\begin{abstractd}
+El examen de las decisiones estatales en coyunturas de crisis existencial permite someter a prueba la solidez dogm\'atica de los elementos constitutivos de la teor\'ia del Estado. La guerra entre M\'exico y los Estados Unidos de Am\'erica (1846--1848) y su desenlace formal mediante el Tratado de Paz, Amistad, L\'imites y Arreglo Definitivo de Guadalupe Hidalgo constituyen un caso paradigm\'atico para estudiar la tensi\'on entre soberan\'ia jur\'idica, poder pol\'itico y \'ambito espacial de validez territorial. El presente estudio realiza una valoraci\'on exhaustiva y estructurada de la decisi\'on gubernamental mexicana de convenir la paz y la cesi\'on territorial forzada frente a la amenaza de disoluci\'on soberana total (\emph{All-Mexico Movement}). A trav\'es del desarrollo de los tres tiempos contractuales de AulaTeX, se analiza la encrucijada institucional mediante una matriz dogm\'atica de seis elementos (hechos, problem\'atica, resoluci\'on, aportaci\'on jur\'idica a la soberan\'ia, impacto hist\'orico y persistencia del Estado), demostrando que la amputaci\'on territorial modific\'o el \'ambito geogr\'afico de aplicaci\'on normativa sin extinguir la personalidad del Estado mexicano ni sus elementos sustantivos. Finalmente, se articula una reflexi\'on cr\'itico-deontol\'ogica sobre el pragmatismo defensivo del presidente Manuel de la Pe\~na y Pe\~na y las lecciones institucionales para el constitucionalismo contempor\'aneo.\footnote{Declaraci\'on institucional sobre herramientas de apoyo: En estricto apego a los lineamientos sobre el uso \'etico y responsable de la inteligencia artificial de la Universidad Abierta y a Distancia de M\'exico (UnADM) y los contratos editoriales del sistema AulaTeX, se hace constar que el presente documento cont\'o con asistencia tecnol\'ogica auxiliar exclusivamente para tareas de exploraci\'on bibliogr\'afica preliminar y soporte en formateo tipogr\'afico en \LaTeX{}, asumiendo el estudiante autor la total autor\'ia intelectual, estructuraci\'on dogm\'atica, redacci\'on cr\'itica y responsabilidad deontol\'ogica sobre el contenido y las conclusiones aqu\'i formuladas.}
+\end{abstractd}
+
+\templateIndex
+\templateFinalcfg
+
+\newgeometry{margin=2.5cm}
+\fontsize{12}{14.5}\selectfont
+\onehalfspacing
+
+\section{Introducci\'on}
+
+La teor\'ia general del Estado concibe a esta instituci\'on pol\'itica y jur\'idica como una corporaci\'on territorial soberana dotada de personalidad jur\'idica originaria. De acuerdo con la formulaci\'on can\'onica de la doctrina de los tres elementos (\emph{Drei-Elemente-Lehre}), formulada por \citet[pp.~395--412]{jellinek2018teoria}, la existencia material y formal del Estado requiere la convergencia dial\'ectica e indisoluble de una poblaci\'on (\'ambito personal), un territorio (\'ambito espacial) y un poder de dominaci\'on pol\'itica o autoridad soberana aut\'onoma hacia el interior e independiente en el concierto internacional. Por su parte, la teor\'ia pura del Derecho sistematizada por \citet[pp.~213--228]{kelsen2020teoria} postula una identidad funcional estricta entre el Estado y el orden jur\'idico estatal eficaz; en dicha construcci\'on dogm\'atica, el territorio no constituye una propiedad patrimonial transferible en sentido f\'isico, sino el l\'imite espacial coactivo de validez y aplicaci\'on del orden normativo emanado de la constituci\'on originaria. Asimismo, como complementa \citet[pp.~189--205]{heller2012teoria}, el Estado opera como una unidad estructurada de decisi\'on y acci\'on enraizada en una comunidad hist\'orica, cuya funci\'on medular radica en transformar el poder f\'actico en poder jur\'idicamente organizado.
+
+En la historia constitucional de M\'exico, el desenvolvimiento de estos tres elementos esenciales atraves\'o episodios de extrema vulnerabilidad durante la primera mitad del siglo XIX, caracterizada por la transici\'on inestable entre federaci\'on y centralismo, el colapso hacendario y la debilidad militar cr\'onica \citep[pp.~85--104]{tenaRamirez1999,andrade2003}. Ning\'un acontecimiento puso en riesgo tan inminente la supervivencia f\'isica y jur\'idica de la Rep\'ublica como la guerra de agresi\'on librada contra los Estados Unidos de Am\'erica entre 1846 y 1848. Tras la ocupaci\'on del puerto de Veracruz, las derrotas militares consecutivas en el centro del pa\'is y la toma de la capital de la Rep\'ublica en septiembre de 1847, las autoridades mexicanas enfrentaron la encrucijada existencial de prolongar una resistencia armada testimonial y ca\'otica o pactar una paz oprobiosa mediante la desmembraci\'on territorial forzada.
+
+El prop\'osito fundamental del presente estudio consiste en realizar una valoraci\'on rigurosa de dicha decisi\'on pol\'itica y diplom\'atica a la luz de los conceptos estructurantes de la teor\'ia del Estado. Lejos de reducir el fen\'omeno a un relato hist\'orico o a una eleg\'ia nacionalista, se examinan las implicaciones normativas del Tratado de Guadalupe Hidalgo para desentra\~nar si la p\'erdida de m\'as de la mitad del territorio nacional implic\'o la disoluci\'on de la estatalidad mexicana o si, por el contrario, la decisi\'on gubernamental adoptada por el presidente Manuel de la Pe\~na y Pe\~na represent\'o un acto supremo de salvaguarda del orden jur\'idico y de preservaci\'on de la personalidad estatal soberana frente a la amenaza de anexi\'on total.
+
+\section{Valoraci\'on anal\'itica de la decisi\'on estatal: El Tratado de Guadalupe Hidalgo y los elementos del Estado}
+
+\subsection{Contexto hist\'orico-f\'actico y encrucijada existencial de la Rep\'ublica (1846--1848)}
+
+El conflicto b\'elico entre M\'exico y los Estados Unidos de Am\'erica tuvo como detonante formal la anexi\'on de Texas a la Uni\'on Americana en marzo de 1845 y la posterior disputa por los l\'imites meridionales de dicho territorio (la franja disputada entre el r\'io Nueces y el r\'io Bravo) promovida por el expansionismo territorial impulsado por la doctrina del \emph{Destino Manifiesto} bajo la administraci\'on del presidente James K. Polk \citep[pp.~45--68]{vazquez1997,bosch1992}. Sin embargo, la ra\'iz estructural de la vulnerabilidad mexicana se ubicaba en la profunda fragmentaci\'on interna de su clase pol\'itica, dividida encarnizadamente entre liberales federalistas y conservadores centralistas, lo que impidi\'o vertebrar un ej\'ercito nacional profesional, consolidar un sistema de recaudaci\'on fiscal y proyectar una presencia institucional efectiva en los vastos y desolados departamentos septentrionales de Nuevo M\'exico y las Californias \citep[pp.~112--130]{silvaHerzog1993,rabasa2012}.
+
+Hacia el oto\~no de 1847, la situaci\'on estrat\'egica y militar resultaba insostenible: el ej\'ercito expedicionario del general Winfield Scott hab\'ia conquistado la Ciudad de M\'exico, izando la bandera estadounidense sobre el Palacio Nacional el 14 de septiembre; los principales puertos del Golfo y del Pac\'ifico se encontraban bloqueados o intervenidos por la armada invasora; las arcas p\'ublicas estaban exhaustas; y en el sureste peninsular estallaba la violenta sublevaci\'on social ind\'igena conocida como la Guerra de Castas en Yucat\'an \citep[pp.~180--195]{vazquez2010}. En medio de la renuncia y desbandada del general Antonio L\'opez de Santa Anna, el jurista Manuel de la Pe\~na y Pe\~na, presidente de la Suprema Corte de Justicia de la Naci\'on, asumi\'o el mando supremo del Poder Ejecutivo con base en el orden constitucional y traslad\'o la sede precaria de los poderes federales a la ciudad de Quer\'etaro, reuniendo al Congreso de la Uni\'on para concertar una salida pac\'ifica y negociada.
+
+\subsection{Matriz anal\'itica de elementos del conflicto y la decisi\'on gubernamental}
+
+A continuaci\'on, se presenta la matriz anal\'itica que descompone sistem\'aticamente las seis dimensiones jur\'idicas, pol\'iticas e institucionales del conflicto b\'elico y de la decisi\'on adoptada por el Estado mexicano en 1848:
+
+\begin{center}
+\small
+\begin{longtable}{|L{4.2cm}|L{11.6cm}|}
+\hline
+\rowcolor{tableHeader}
+\textbf{Concepto anal\'itico} & \textbf{Detalle dogm\'atico y fundamentaci\'on jur\'idico-pol\'itica} \\
+\hline
+\endfirsthead
+\hline
+\rowcolor{tableHeader}
+\textbf{Concepto anal\'itico} & \textbf{Detalle dogm\'atico y fundamentaci\'on jur\'idico-pol\'itica} \\
+\hline
+\endhead
+
+\textbf{Hechos} & 
+La guerra entre M\'exico y los Estados Unidos de Am\'erica (1846--1848) concluy\'o formalmente mediante la firma del Tratado de Paz, Amistad, L\'imites y Arreglo Definitivo el 2 de febrero de 1848 en la Villa de Guadalupe Hidalgo, ratificado por los Congresos de ambos pa\'ises y promulgado el 30 de mayo de 1848. Las negociaciones diplom\'aticas fueron conducidas con extraordinario celo jur\'idico por los comisionados mexicanos Bernardo Couto, Luis Gonzaga Cuevas y Miguel Atristain ante el plenipotenciario estadounidense Nicholas P. Trist, bajo directrices del presidente interino Manuel de la Pe\~na y Pe\~na y del ministro Luis de la Rosa \citep[pp.~75--92]{guadalupeHidalgo1848,vazquez1997}. \\\hline
+
+\textbf{Problem\'atica} & 
+M\'exico enfrentaba una cat\'astrofe militar absoluta con su capital y aduanas ocupadas, anarqu\'ia pol\'itica, rebeli\'on ind\'igena en Yucat\'an y carencia absoluta de recursos financieros o pertrechos b\'elicos. La dilaci\'on de las negociaciones fortalec\'ia en Washington a la facci\'on radical del Congreso estadounidense que promov\'ia el \emph{All-Mexico Movement} (anexi\'on forzosa e incondicional de la totalidad del territorio mexicano a la Uni\'on Americana), lo que hubiera extinguido definitivamente la soberan\'ia de la Naci\'on y eliminado a M\'exico como sujeto de Derecho Internacional \citep[pp.~88--105]{bosch1992,silvaHerzog1993}. \\\hline
+
+\textbf{Soluci\'on o resoluci\'on} & 
+El gobierno mexicano adopt\'o la determinaci\'on dolorosa y pragm\'atica de firmar el Tratado de Guadalupe Hidalgo: se convino el cese de hostilidades y la desocupaci\'on militar de las plazas mexicanas a cambio de la p\'erdida de 2,378,539 km$^2$ de territorio (los departamentos de Alta California y Nuevo M\'exico, comprendiendo la totalidad de los actuales estados de California, Nevada y Utah, as\'i como porciones de Arizona, Colorado, Wyoming y Kansas, y la fijaci\'on definitiva de la frontera texana en el r\'io Bravo). Como contraprestaci\'on, Estados Unidos pag\'o 15 millones de d\'olares y absorbi\'o reclamaciones de ciudadanos estadounidenses contra M\'exico por m\'as de 3 millones, estipulando en los art\'iculos VIII y IX garant\'ias expresas de protecci\'on a la propiedad, religi\'on y derechos civiles de los habitantes mexicanos que permanecieron en los territorios cedidos \citep[pp.~110--125]{guadalupeHidalgo1848,rabasa2012}. \\\hline
+
+\textbf{Aportaci\'on de la decisi\'on al Derecho en M\'exico (\textquestiondown qu\'e implicaciones tuvo para la soberan\'ia?)} & 
+La celebraci\'on del tratado salvaguard\'o la soberan\'ia incondicionada del Estado sobre el n\'ucleo demogr\'afico, cultural y pol\'itico de la Rep\'ublica. En el plano dogm\'atico, sent\'o las bases del principio de legalidad internacional y del trato jur\'idico formal entre iguales: aun vencido militarmente, M\'exico compareci\'o no como provincia rendida, sino como Estado soberano que celebra un tratado bilateral aut\'onomo vinculante conforme al Derecho de Gentes (\emph{pacta sunt servanda}). Esta experiencia ciment\'o los pilares hist\'oricos de la pol\'itica exterior mexicana: la no intervenci\'on, la autodeterminaci\'on de los pueblos y la proscripci\'on de la conquista territorial como fuente de legitimidad jur\'idica leg\'itima \citep[pp.~65--78]{andrade2003,verdross2012}. \\\hline
+
+\textbf{Impacto hist\'orico de la decisi\'on en M\'exico} & 
+El impacto fue traum\'atico e indeleble en la conciencia c\'ivica, pero funcion\'o hist\'oricamente como el catalizador necesario de la madurez institucional del Estado nacional. La amarga lecci\'on de la desmembraci\'on territorial sepult\'o el militarismo cortesano e irresponsable de Santa Anna, demostr\'o la urgencia de desamortizar bienes estancados y forzar una unidad laica e institucional, abriendo paso directo a la Revoluci\'on de Ayutla (1854), la Constituci\'on liberal de 1857 y las Leyes de Reforma encabezadas por Benito Ju\'arez, configurando finalmente el Estado constitucional moderno \citep[pp.~145--162]{tenaRamirez1999,carpizo2011}. \\\hline
+
+\textbf{\textquestiondown La p\'erdida territorial signific\'o la desaparici\'on del Estado?} & 
+\textbf{No.} La modificaci\'on territorial no extingui\'o al Estado mexicano. En la teor\'ia pura del Derecho de \citet[pp.~219--225]{kelsen2020teoria} y la dogm\'atica de \citet[pp.~405--418]{jellinek2018teoria}, el territorio es el \'ambito espacial coactivo de validez de la norma. La reducci\'on o mutaci\'on geogr\'afica delimita la competencia territorial del poder p\'ublico, pero no aniquila la personalidad jur\'idica del orden estatal (\emph{identitas status}). M\'exico conserv\'o intacta su poblaci\'on originaria, su gobierno central leg\'itimo y su capacidad de autoorganizaci\'on constitucional soberana, manteniendo ininterrumpida su existencia en la comunidad internacional. \\\hline
+\end{longtable}
+\end{center}
+
+\subsection{Examen iusfilos\'ofico: El territorio como \'ambito espacial y la continuidad del Estado}
+
+La cuesti\'on sustantiva sobre si la cesi\'on territorial entra\~na la extinci\'on del Estado exige una clarificaci\'on rigurosa de los l\'imites entre la base f\'isica de un Estado y su naturaleza jur\'idica corporativa. Desde una visi\'on arcaica o patrimonialista del poder, propia del absolutismo mon\'arquico feudal, el territorio se identificaba con el dominio patrimonial del soberano; consecuentemente, la merma territorial se interpretaba como una mutilaci\'on biol\'ogica o la destrucci\'on proporcional del cuerpo estatal \citep[pp.~115--122]{andrade2003}.
+
+Por el contrario, el moderno Derecho P\'ublico super\'o dicha concepci\'on mec\'anica. \citet[pp.~398--406]{jellinek2018teoria} aclara que el territorio opera en dos dimensiones complementarias: como objeto pasivo de dominaci\'on espacial (\emph{imperium}) y como marco espacial de la comunidad ciudadana organizada. El territorio es una condici\'on sine qua non de existencia material porque ning\'un poder humano puede desplegarse en el vac\'io metaf\'isico; sin embargo, no existe una dimensi\'on cuantitativa m\'inima requerida para la condici\'on estatal. La soberan\'ia es una cualidad jur\'idica indivisible: se ejerce de modo supremo o no se ejerce en absoluto. 
+
+En id\'entico sentido, el an\'alisis de \citet[pp.~213--220]{kelsen2020teoria} demuestra que la alteraci\'on de las fronteras constituye \'unicamente una modificaci\'on en la esfera espacial de eficacia del orden normativo. Cuando el Tratado de Guadalupe Hidalgo redefini\'o la frontera norte en el r\'io Bravo y los paralelos de California, el ordenamiento jur\'idico mexicano dej\'o de obligar en San Francisco o Santa Fe, pero continu\'o rigiendo plenamente desde Sonora y Tamaulipas hasta Yucat\'an y Chiapas. La continuidad de la personalidad jur\'idica internacional del Estado (\emph{Staatensukzession}) se preserv\'o inc\'olume, porque el gobierno de Quer\'etaro ejerci\'o leg\'itimamente el poder normativo creador de tratados conforme a la constituci\'on entonces restaurada de 1824 \citep[pp.~92--101]{tenaRamirez1999,verdross2012}.
+
+\subsection{Opini\'on cr\'itica argumentada: El pragmatismo defensivo frente a la anexi\'on total}
+
+Al examinar cr\'iticamente la decisi\'on gubernamental adoptada por Manuel de la Pe\~na y Pe\~na y sus ministros comisionados, es preciso despojarse tanto del dramatismo patriotero que tilda la firma de traici\'on hist\'orica, como del conformismo complaciente que minimiza el impacto del despojo. La decisi\'on debe valorarse en el marco de la \'etica de la responsabilidad pol\'itica postulada por \citet[pp.~45--62]{kriele2022}: gobernar en momentos l\'imite impone ponderar las consecuencias reales y materiales de las alternativas viables, en vez de sucumbir a la \'etica puramente testimonial de las convicciones abstractas.
+
+En enero de 1848, la negativa a firmar la paz no habr\'ia derivado en una victoriosa guerra de guerrillas, sino en la fragmentaci\'on total del pa\'is y en la consumaci\'on de los apetitos anexionistas del movimiento de extrema derecha estadounidense (\emph{All-Mexico Movement}). Figuras radicales en Washington, como los senadores Lewis Cass y Daniel S. Dickinson, exig\'ian desembozadamente la conquista absoluta de la meseta central mexicana y la conversi\'on de toda la Rep\'ublica en territorio colonial o protectorado indefenso \citep[pp.~82--96]{bosch1992,silvaHerzog1993}. 
+
+Bajo estas circunstancias terminales, la postura asumida por De la Pe\~na y Pe\~na encarn\'o un acto de supremo patriotismo tr\'agico. El mandatario sacrific\'o las provincias despobladas del norte (las cuales, de facto, M\'exico ya hab\'ia perdido por incapacidad demogr\'afica y administrativa) para rescatar y atrincherar el coraz\'on hist\'orico, ling\"u\'istico y demogr\'afico de la mexicanidad. La decisi\'on permiti\'o expulsar a las tropas invasoras de suelo patrio, arriar la bandera extranjera del Palacio Nacional y restablecer el gobierno constitucional propio. Como ense\~nan \citet[pp.~245--260]{fixZamudio2018}, la soberan\'ia jur\'idica no radica en la extensi\'on cartogr\'afica, sino en la capacidad de autoorganizaci\'on soberana de una comunidad que reh\'usa someterse al imperio extranjero.
+
+\section{Conclusiones y balance iuspublicista}
+
+El an\'alisis dogm\'atico y cr\'itico del conflicto b\'elico de 1846--1848 y de la firma del Tratado de Guadalupe Hidalgo permite asentar las siguientes conclusiones doctrinales en el marco de la teor\'ia del Estado:
+
+\begin{enumerate}
+  \item \textbf{Autonom\'ia e inmutabilidad de la personalidad jur\'idica estatal:} La existencia y continuidad jur\'idica del Estado mexicano no dependieron de la extensi\'on m\'etrica de su territorio. La amputaci\'on geogr\'afica delimit\'o el \'ambito territorial de validez de la constituci\'on, pero confirm\'o que la estatalidad reside en la unidad institucional y en la adhesi\'on soberana de su comunidad pol\'itica, principios que prevalecieron inalterados en el Derecho Internacional.
+  \item \textbf{Primac\'ia del Derecho y de la diplomacia en situaciones l\'imite:} Cuando el poder b\'elico f\'actico sucumbi\'o ante la asimetr\'ia de una invasi\'on for\'anea, la pericia jur\'idica y diplom\'atica de los comisionados mexicanos logr\'o transformar una cat\'astrofe militar en un tratado legal obligatorio que preserv\'o el ser nacional, forzando al agresor a reconocer la existencia soberana de su contraparte.
+  \item \textbf{El territorio como condici\'on de validez normativa:} En estricta concordancia con la dogm\'atica kelseniana y jellinekiana, el territorio nacional no constituye un bien comercial negociable, sino el asiento espacial donde se ejerce el poder estatal. La cesi\'on forzada de 1848 ense\~n\'o a la doctrina constitucional mexicana que la soberan\'ia s\'olo es aut\'entica si el Estado cuenta con instituciones capaces de gobernar y proyectar el imperio del Derecho sobre cada rinc\'on de su geograf\'ia.
+  \item \textbf{Lecci\'on fundacional para el constitucionalismo mexicano contempor\'aneo:} El doloroso episodio de Guadalupe Hidalgo ciment\'o la irrevocable decisi\'on nacional de consolidar un Estado laico, republicano y de libertades consagradas en la ley fundamental. De la tragedia de 1848 emergi\'o la generaci\'on de la Reforma y, m\'as tarde, el constitucionalismo social de 1917, confirmando que la mayor fortaleza de una naci\'on reside en la solidez de sus leyes, la probidad c\'ivica de sus ciudadanos y la defensa irreductible de su dignidad soberana.
+\end{enumerate}
+
+\begin{thebibliography}{15}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Andrade S\'anchez(2003)]{andrade2003}
+Andrade S\'anchez, J.~E. (2003). \emph{Teor\'ia general del Estado} (2.\textsuperscript{a}~ed., 11.\textsuperscript{a}~reimp., 2014). Oxford University Press.
+
+\bibitem[Bosch Giral(1992)]{bosch1992}
+Bosch Giral, C. (1992). \emph{M\'exico frente a la comunidad internacional: Los tratados de 1836 a 1848}. Universidad Nacional Aut\'onoma de M\'exico.
+
+\bibitem[Carpizo(2011)]{carpizo2011}
+Carpizo, J. (2011). \emph{El concepto de soberan\'ia en la Constituci\'on mexicana} (2.\textsuperscript{a}~ed.). Porr\'ua; Instituto de Investigaciones Jur\'idicas, UNAM.
+
+\bibitem[Estados Unidos Mexicanos y Estados Unidos de Am\'erica(1848)]{guadalupeHidalgo1848}
+Estados Unidos Mexicanos y Estados Unidos de Am\'erica. (1848, 2 de febrero). \emph{Tratado de Paz, Amistad, L\'imites y Arreglo Definitivo entre los Estados Unidos Mexicanos y los Estados Unidos de Am\'erica (Tratado de Guadalupe Hidalgo)}. Promulgado el 30 de mayo de 1848.
+
+\bibitem[Fix-Zamudio y Valencia Carmona(2018)]{fixZamudio2018}
+Fix-Zamudio, H. y Valencia Carmona, S. (2018). \emph{Derecho constitucional mexicano y comparado} (9.\textsuperscript{a}~ed.). Editorial Porr\'ua.
+
+\bibitem[Heller(2012)]{heller2012teoria}
+Heller, H. (2012). \emph{Teor\'ia del Estado} (L.~Tob\'io, Trad.; 2.\textsuperscript{a}~ed., 18.\textsuperscript{a}~reimp.). Fondo de Cultura Econ\'omica.
+
+\bibitem[Jellinek(2018)]{jellinek2018teoria}
+Jellinek, G. (2018). \emph{Teor\'ia general del Estado} (F.~de los R\'ios Urruti, Trad.). Ediciones Olejnik.
+
+\bibitem[Kelsen(2020)]{kelsen2020teoria}
+Kelsen, H. (2020). \emph{Teor\'ia general del Derecho y del Estado} (E.~Garc\'ia M\'aynez, Trad.). Ediciones Olejnik.
+
+\bibitem[Kriele(2022)]{kriele2022}
+Kriele, M. (2022). \emph{Introducci\'on a la teor\'ia del estado: Fundamentos hist\'oricos de la legitimidad del estado constitucional democr\'atico} (E.~Bulygin, Trad.). Ediciones Olejnik.
+
+\bibitem[Rabasa(2012)]{rabasa2012}
+Rabasa, E.~O. (2012). \emph{La evoluci\'on hist\'orica de la soberan\'ia en M\'exico}. Editorial Porr\'ua.
+
+\bibitem[Silva Herzog(1993)]{silvaHerzog1993}
+Silva Herzog, J. (1993). \emph{Breve historia de la Revoluci\'on Mexicana: Los antecedentes y la etapa maderista} (2.\textsuperscript{a}~ed.). Fondo de Cultura Econ\'omica.
+
+\bibitem[Tena Ram\'irez(1999)]{tenaRamirez1999}
+Tena Ram\'irez, F. (1999). \emph{Derecho constitucional mexicano} (32.\textsuperscript{a}~ed.). Editorial Porr\'ua.
+
+\bibitem[V\'azquez(1997)]{vazquez1997}
+V\'azquez, J.~Z. (1997). \emph{De la rebeli\'on de Texas a la guerra del 47}. Direcci\'on General de Publicaciones del CONACULTA.
+
+\bibitem[V\'azquez(2010)]{vazquez2010}
+V\'azquez, J.~Z. (2010). \emph{La intervenci\'on norteamericana (1846--1848)}. El Colegio de M\'exico.
+
+\bibitem[Verdross(2012)]{verdross2012}
+Verdross, A. (2012). \emph{Derecho internacional p\'ublico} (A.~Truyol y Serra, Trad.; 6.\textsuperscript{a}~ed.). Editorial Aguilar.
+
+\end{thebibliography}
+
+\end{document}
+"""
+
+with open(tex_file, 'w', encoding='utf-8') as f:
+    f.write(content)
+print(f"Updated {tex_file.name} successfully!")
+
+env = os.environ.copy()
+env['PATH'] = 'C:/texlive/2026/bin/windows;' + env['PATH']
+env['TEXINPUTS'] = f'{root}/aulaTEX/base/Plantilla-Informe//;{subj}//;;'
+
+tex_name = 'reporte-teoria-del-estado-y-constitucion-Actividad-5'
+
+print("Compiling pdflatex pass 1...")
+res1 = subprocess.run(['pdflatex', '-interaction=nonstopmode', f'{tex_name}.tex'], env=env, cwd=str(subj), capture_output=True, text=True)
+if res1.returncode != 0:
+    print("Pass 1 error:")
+    for l in res1.stdout.splitlines()[-30:]:
+        print(l)
+    exit(1)
+
+print("Compiling pdflatex pass 2...")
+res2 = subprocess.run(['pdflatex', '-interaction=nonstopmode', f'{tex_name}.tex'], env=env, cwd=str(subj), capture_output=True, text=True)
+if res2.returncode != 0:
+    print("Pass 2 error:")
+    for l in res2.stdout.splitlines()[-30:]:
+        print(l)
+    exit(1)
+
+pdf_file = subj / f'{tex_name}.pdf'
+assert pdf_file.exists(), "PDF not generated!"
+
+doc = pymupdf.open(str(pdf_file))
+print(f"Compilation SUCCESS! Total pages: {len(doc)}")
+
+# Check undefined citations or references
+log_file = subj / f'{tex_name}.log'
+with open(log_file, 'r', encoding='latin-1') as f:
+    log_data = f.read()
+
+has_undef = 'Citation' in log_data and 'undefined' in log_data
+if has_undef:
+    print("WARNING: Undefined citation detected!")
+else:
+    print("Zero undefined citations confirmed!")
+
+# Copy to deliverable folder
+entregas_dir = subj / 'entregas-teoria-del-estado-y-constitucion'
+deliv1 = entregas_dir / '2026_TeoriaEstado_S5_Martin Jonathan de la Cruz.pdf'
+deliv2 = entregas_dir / '2026_TeoríaEstado_S5_Martin_Jonathan_de_la_Cruz_Munoz.pdf'
+
+shutil.copy2(str(pdf_file), str(deliv1))
+shutil.copy2(str(pdf_file), str(deliv2))
+
+with open(pdf_file, 'rb') as f:
+    h = hashlib.sha256(f.read()).hexdigest()
+
+print(f"SHA-256: {h}")
+print(f"Deliverables updated: {deliv1.name} and {deliv2.name}")

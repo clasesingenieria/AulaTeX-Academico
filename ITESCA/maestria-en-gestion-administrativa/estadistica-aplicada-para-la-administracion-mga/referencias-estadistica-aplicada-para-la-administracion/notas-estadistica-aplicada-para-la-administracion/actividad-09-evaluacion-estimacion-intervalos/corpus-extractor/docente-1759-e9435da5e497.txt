@@ -1,0 +1,642 @@
+Pagina 1
+ 
+ 
+ 
+ 
+Estadística para la administración 
+Tema 3. Estimación 
+
+
+Pagina 2
+  
+ 
+                                                                                   Página 1 de 15 
+ 
+La estimación estadística es el proceso de utilizar datos de una muestra para inferir valores 
+desconocidos de una población. Por ejemplo, en lugar de medir la longitud de 10,000 tornillos, se 
+puede medir una muestra de 100 y usar esa información para estimar la longitud promedio de todos 
+los tornillos. 
+ 
+3.1 Estimadores: Definición y Propiedades 
+Un estimador es una regla o fórmula matemática (un estadístico) que se utiliza para estimar un 
+parámetro desconocido de una población a partir de los datos de una muestra. Por ejemplo, la media 
+aritmética de una muestra es un estimador de la media de la población. 
+Por ejemplo: 
+La media muestral (𝑥̅) es un estimador de la media poblacional (μ). 
+La proporción muestral (𝑝̂ )es un estimador de la proporción poblacional (𝑝). 
+La varianza muestral (𝑠2) es un estimador de la varianza poblacional (𝜎2). 
+ 
+Las propiedades deseables de un buen estimador son: 
+Insesgamiento (o Insesgadez): Se dice que un estimador es insesgado si su valor esperado (la 
+media de su distribución muestral) es igual al verdadero valor del parámetro que se está 
+estimando. En otras palabras, el estimador no tiende a sobrestimar ni a subestimar 
+sistemáticamente el parámetro. La media muestral, por ejemplo, es un estimador insesgado de la 
+media poblacional. 𝐸(𝜃̂) = 𝜃 
+ 
+Eficiencia: Un estimador es más eficiente si tiene una varianza menor en comparación con otros 
+estimadores insesgados. Una menor varianza significa que las estimaciones son más precisas y se 
+concentran más cerca del valor real del parámetro. 
+ 
+Consistencia: Un estimador es consistente si, a medida que aumenta el tamaño de la muestra, el 
+valor del estimador se acerca cada vez más al valor real del parámetro poblacional lim
+𝑛→∝𝜃̂ = 𝜃 
+ 
+3.2 Estimación puntal, estimación por intervalos (intervalos de confianza) 
+Existen dos enfoques principales para la estimación de parámetros: 
+Estimación Puntual: Consiste en usar un único valor, extraído de la muestra, para estimar el 
+parámetro poblacional. Por ejemplo, si la media de una muestra de tornillos es de 5.2 cm, ese valor 
+es una estimación puntual de la media de toda la población de tornillos. 
+Estimación por Intervalos (Intervalos de Confianza): En lugar de un solo valor, este método 
+proporciona un rango o intervalo dentro del cual es probable que se encuentre el verdadero valor del 
+parámetro poblacional, junto con un nivel de confianza. Por ejemplo, podríamos decir que la longitud 
+
+
+Pagina 3
+  
+ 
+                                                                                   Página 2 de 15 
+media de los tornillos está entre 5.1 cm y 5.3 cm con un 95% de confianza. Este enfoque es a menudo 
+preferido porque da una idea de la precisión de la estimación 
+ 
+3.3 Intervalos de confianza para medias, proporciones y varianzas  
+Para analizar este tema lo vamos a trabajar con un ejemplo que se ira resolviendo de acuerdo a los 
+puntos que se vean en este tema se dijo que un estimador puntual es un estadístico muestral que 
+se usa para estimar un parámetro poblacional. Por ejemplo, la media muestral es un estimador 
+puntual de la media poblacional μ y la proporción muestral es un estimador puntual de la proporción 
+poblacional p. Como no se puede esperar que un estimador puntual suministre el valor exacto del 
+parámetro poblacional, se suele calcular una estimación por intervalo al sumar y restar al estimador 
+puntual una cantidad llamada margen de error. La fórmula general de una estimación por intervalo 
+es Estimación puntual ± Margen de error. 
+El objetivo de la estimación por intervalo es aportar información de qué tan cerca se encuentra la 
+estimación puntual, obtenida de la muestra, del valor del parámetro poblacional. En este capítulo se 
+muestra cómo obtener una estimación por intervalo para la media poblacional μ y para la proporción 
+poblacional p. La fórmula general para obtener una estimación por intervalo para la media 
+poblacional es  
+𝑥̅ ± Margen de error 
+De manera similar, la fórmula general para obtener una estimación por intervalo para la proporción 
+poblacional es  
+ 𝑝̅ ±Margen de error 
+Las distribuciones muestrales de y de son clave para calcular estas estimaciones por intervalo. 
+ 
+Media poblacional: σ conocida  
+Con objeto de obtener una estimación por intervalo para la media poblacional, se necesita la 
+desviación estándar poblacional σ o la desviación estándar muestral s para calcular el margen de 
+error. En la mayor parte de los casos, no se conoce σ y para calcular el margen de error se emplea 
+s. Sin embargo, en algunas ocasiones, se cuenta con una gran cantidad de datos anteriores 
+(históricos) que se pueden usar para calcular la desviación estándar poblacional antes de tomar la 
+muestra. También, en aplicaciones al control de calidad, en las que se supone que el proceso se 
+desarrolla correctamente “en control”, se considera que se conoce la desviación estándar. A tales 
+casos se les conoce como casos de σ conocida. En esta ocasión se presenta un caso en el que es 
+razonable considerar que se conoce σ y se muestra cómo obtener una estimación por intervalo. 
+Cada semana, la empresa Lloyd’s Department Store selecciona una muestra aleatoria simple de 100 
+clientes con objeto de conseguir información acerca de la cantidad que gastan en cada visita a la 
+tienda. Si x representa la cantidad gastada en cada visita a la tienda, la media muestral es una 
+
+
+Pagina 4
+  
+ 
+                                                                                   Página 3 de 15 
+estimación puntual de μ, la cantidad media gastada en cada visita a la tienda por la población formada 
+por los clientes de Lloyd’s Department Store. Lloyd’s ha estado realizando estos estudios semanales 
+durante varios años.  
+Con base en sus datos anteriores, Lloyd´s supone que el valor conocido de la desviación estándar 
+poblacional es σ = $20. Los datos anteriores (históricos) indican también que la población tiene una 
+distribución normal. En la última semana, en su estudio de 100 clientes (n = 100), Lloyd’s obtuvo 
+como media muestral 𝑥̅ = $82.  
+La media muestral de la cantidad gastada permite una estimación puntual de la media poblacional 
+de la cantidad gastada en cada visita, μ.  
+ 
+Margen de error y estimación por intervalo  
+La distribución muestral de 𝑥̅ sirve para calcular la probabilidad de que  𝑥̅ esté dentro de una distancia 
+dada de μ.  
+En el ejemplo de Lloyd´s, los datos históricos muestran que la población constituida por las 
+cantidades gastadas está distribuida normalmente y que su desviación estándar es σ = 20. De 
+manera que, se puede concluir que la distribución muestral de  𝑥̅ es una distribución normal con error 
+estándar de 𝜎𝑥̅ = 𝜎√𝑛
+⁄
+ = 20 √100
+⁄
+ = 2.  
+En la siguiente figura se muestra esta distribución muestral. Puesto que la distribución muestral 
+indica cómo están distribuidos los valores de en torno a la media poblacional μ, la distribución 
+muestral de  𝑥̅  proporciona información acerca de la posible diferencia entre y μ. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figura. Distribución de muestreo de la media muestral de las cantidades gastadas para 
+muestras aleatorias simples de 100 clientes 
+ 
+En la tabla de probabilidad normal estándar se encuentra que 95% de los valores de cualquier 
+variable aleatoria distribuida normalmente aparecen dentro de ± 1.96 desviaciones estándar de la 
+media. Por tanto, si la distribución muestral se encuentra distribuida normalmente, 95% de los valores 
+de  𝑥̅  deben estar dentro de ± 1.96 𝜎𝑥̅ de la media μ.  
+En el ejemplo de Lloyd´s, se sabe que la distribución muestral de 𝑥̅   está distribuida normalmente y 
+que el error estándar es 𝜎𝑥̅  =2. Como  ± 1.96 𝜎𝑥̅  = 1.96(2) =  3.92, se puede concluir que 95% de 
+
+
+Pagina 5
+  
+ 
+                                                                                   Página 4 de 15 
+los valores de  𝑥̅  obtenidos usando muestras de n =100 estarán dentro de ± 3.92 de la media 
+poblacional, como se puede ver en la figura siguiente. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figura. Distribución de muestreo de 𝒙̅   que ilustra la ubicación de la media muestral que 
+está dentro de 3,92 de μ 
+ 
+La fórmula general para estimar un intervalo de la media poblacional μ es  𝑥̅   ± margen de error. En 
+el ejemplo de Lloyd’s, suponga que se establece 3.92 como margen de error y se calcula una 
+estimación por intervalo para μ usando  𝑥̅   ± 3.92.  
+Para ver cómo se interpreta dicha estimación por intervalo, considere los valores de que podrían 
+obtenerse si se tomaran tres muestras aleatorias simples diferentes, cada una de 100 clientes de 
+Lloyd´s. La primera media muestral puede que dé el valor 𝑥̅1 de la siguiente figura.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FIGURA  Intervalos obtenidos a partir de algunas medias muestrales localizadas en 𝑥̅1, 𝑥̅2  y 𝑥̅3 
+En este caso, como se ve en la figura, el intervalo que se obtiene restando 3.92 de 𝑥̅1  y sumando 
+3.92 a 𝑥̅1 abarca a la media poblacional μ. Ahora razone lo que pasa si la segunda media muestral 
+resulta tener el valor 𝑥̅2 que se muestra en la figura. Aunque esta media muestral difiere de la primera 
+media muestral, el intervalo obtenido restando 3.92 de 𝑥̅2 y sumando 3.92 a 𝑥̅2 también abarca a la 
+media poblacional μ. Pero, considere lo que pasa si la tercera media muestral resulta tener el valor 
+𝑥̅3 que se muestra en la figura. En este caso el intervalo obtenido restando 3.92 de 𝑥̅3 y sumando 
+3.92 a 𝑥̅3 no abarca a la media poblacional μ. Como 𝑥̅3 cae en la cola superior de la distribución 
+
+
+Pagina 6
+  
+ 
+                                                                                   Página 5 de 15 
+muestral y dista más de 3.92 de μ, restando y sumando 3.92 de 𝑥̅3 se obtiene un intervalo que no 
+abarca a μ.  
+Con cualquier media muestral 𝑥̅   que se encuentre dentro de la región sombreada en la figura, se 
+obtendrá un intervalo que contenga a la media poblacional μ. Como 95% de todas las posibles 
+medias muestrales se encuentran en la región sombreada, 95% de todos los intervalos que se 
+obtengan restando 3.92 de 𝑥̅  y sumando 3.92 a 𝑥̅   abarcarán a la media poblacional μ. Recuerde 
+que en la última semana el equipo encargado del aseguramiento de la calidad de Lloyd´s encuestó 
+a 100 clientes y obtuvo una media muestral de 𝑥̅  = 82. Usando 𝑥̅ ± 3.92 para obtener la estimación 
+por intervalo, se obtiene 82± 3.92. Por tanto, la estimación por intervalo que se basa en los datos de 
+la última semana es el intervalo que va de 82 - 3.92 = 78.08 a 82 + 3.92 = 85.92. Como 95% de todos 
+los intervalos construidos usando 𝑥̅ ± 3.92 contendrán a la media poblacional se tiene 95% de 
+confianza de que el intervalo 78.08 a 85.92 contenga a la media poblacional μ. Entonces dicho 
+intervalo tiene un nivel de confianza de 95%. Al valor 0.95 se le conoce como coeficiente de 
+confianza y al intervalo 78.08 a 85.92 como el intervalo de confianza de 95%.  
+Como el margen de error está dado por  𝑧𝛼2
+⁄ (𝜎√𝑛
+⁄
+), la fórmula general de una estimación por 
+intervalo de la media poblacional con σ conocida, es la siguiente: 
+ 
+ 
+ 
+ 
+ 
+ 
+En el ejemplo de Lloyd´s, mediante la expresión anterior, se construye un intervalo de confianza de 
+95% con un coeficiente de confianza (1 - α) = 0.95 y, por tanto, 𝛼 = 0.05. En la tabla de la distribución 
+normal estándar aparece que un área de α/2 = 0.05/2 = 0.025 en la cola superior corresponde a 𝑧0.025 
+= 1.96. Como en el ejemplo de Lloyd´s, la media muestral es 𝑥̅ = 82, σ = 20 y el tamaño de la muestra 
+es n = 100, se obtiene 
+ 
+ 
+ 
+ 
+ 
+Por tanto, empleando la expresión arriba mencionada, el margen de error es 3.92 y el intervalo de 
+confianza de 95% va de 82 - 3.92 = 78.08 a 82 + 3.92 = 85.92. Aunque a menudo se usa un nivel de 
+confianza de 95%, también suelen usarse otros niveles de confianza como 90% y 99%. A partir de 
+estos valores y de la expresión anterior, el intervalo de confianza de 90% en el ejemplo de Lloyd´s 
+
+
+Pagina 7
+  
+ 
+                                                                                   Página 6 de 15 
+Por tanto, para 90% de confianza, el margen de error es 3.29 y el intervalo de confianza es 82 - 3.29 
+= 78.71 a 82 + 3.29 = 85.29. De manera similar, el intervalo de confianza de 99% es: 
+ 
+ 
+ 
+ 
+ 
+ 
+Entonces, para 99% de confianza el margen de error es 5.15 y el intervalo de confianza es 82 - 5.15 
+= 76.85 a 82 + 5.15 = 87.15. Al comparar los resultados para los niveles de 90%, 95% y 99% de 
+confianza, es claro que, para tener mayor grado de confianza, el margen de error y con esto la 
+amplitud del intervalo de confianza debe ser mayor. En la tabla se muestran los valores de zα/2  
+correspondientes a los niveles de confianza más utilizados. 
+ 
+ 
+ 
+ 
+ 
+ 
+TABLA Valores de zα/2 para los niveles de confianza más utilizados 
+Nivel de confianza 
+𝜶 
+𝜶
+𝟐 
+𝒛𝜶
+𝟐 
+90% 
+0.10 
+0.05 
+1.645 
+95% 
+0.05 
+0.025 
+1.960 
+99% 
+0.01 
+0.005 
+2.576 
+ 
+ 
+Media poblacional: σ desconocida  
+Cuando se calcula un intervalo de confianza para la media poblacional, suele no contarse con una 
+buena estimación de la desviación estándar poblacional. En tales casos se usa la misma muestra 
+para estimar μ y σ. Esta situación es el caso que se conoce como σ desconocida. Cuando se usa 
+s para estimar σ, el margen de error y la estimación por intervalo de la media poblacional se basan 
+en una distribución de probabilidad conocida como distribución t. Aunque la elaboración 
+matemática de la distribución t parte de la suposición de que la población de la que se muestrea 
+tiene una distribución normal, las investigaciones han demostrado que la distribución t se aplica en 
+muchas situaciones en que la población se desvía significantemente de una población normal. Más 
+adelante, en esta misma sección, se proporcionan lineamientos para usar la distribución t cuando la 
+población no está distribuida normalmente.  
+
+
+Pagina 8
+  
+ 
+                                                                                   Página 7 de 15 
+La distribución t es una familia de distribuciones de probabilidad similares; cada distribución t 
+depende de un parámetro conocido como grados de libertad. La distribución t para un grado de 
+libertad es única, como lo es la distribución t para dos grados de libertad, para tres grados de libertad, 
+etc. A medida que el número de grados de libertad aumenta, la diferencia entre la distribución t y la 
+distribución normal estándar se va reduciendo. En la figura se muestran las distribuciones t para 10 
+y 20 grados de libertad y su relación con la distribución de probabilidad normal estándar.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Observe que una distribución t para más grados de libertad exhibe menos variabilidad y un mayor 
+parecido con la distribución normal estándar, también que la media de toda distribución t es cero. 
+Para indicar el área en la cola superior de la distribución t, a la t se le pone un subíndice. Por ejemplo, 
+así como se usó  𝑧0.025 para indicar el valor de z que deja en la cola superior de la distribución normal 
+estándar un área de 0.025, se usará 𝑡0.025 para indicar el valor de t que deja en la cola superior de la 
+distribución t un área de 0.025. En general se usará la notación  𝑡𝜎2
+⁄ para representar el valor de t 
+que deja un área de α/2 en la cola superior de la distribución t, como se muestra en la figura. 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+Pagina 9
+  
+ 
+                                                                                   Página 8 de 15 
+La siguiente tabla contiene los valores de una distribución t.  
+ 
+ 
+Cada renglón de la tabla corresponde a una distribución t distinta con los grados de libertad que se 
+indican. Por ejemplo, en la distribución t con 9 grados de libertad, 𝑡0.025 = 2.262. De manera similar 
+en la distribución t con 60 grados de libertad, 𝑡0.025 = 2.000. A medida que los grados de libertad 
+aumentan, 𝑡0.025se aproxima a 𝑧0.025 = 1.96. En efecto, el valor z de la distribución normal estándar 
+se encuentra en el renglón correspondiente a infinitos grados de libertad (cuyo encabezado es ∞) 
+de la tabla de las distribuciones t. Si los grados de libertad son más de 100, se puede usar el renglón 
+correspondiente a infinitos grados de libertad para aproximar el verdadero valor de t; en otras 
+palabras, para más de 100 grados de libertad, el valor z normal estándar proporciona una buena 
+aproximación al valor t.  
+ 
+Margen de error en estimación por intervalo  
+La estimación por intervalo de la media poblacional cuando σ es conocida es 
+ 
+ 
+ 
+
+
+Pagina 10
+  
+ 
+                                                                                   Página 9 de 15 
+Para calcular una estimación por intervalo para μ en el caso en que no se conoce σ se usa la 
+desviación estándar muestral s para estimar σ, y 𝑧𝜎2
+⁄ se sustituye por el valor y 𝑡𝜎2
+⁄ de la distribución 
+t. 
+El margen de error está dado, entonces, por 𝑡𝜎2
+⁄ 𝑠√𝑛
+⁄
+ . Con este margen de error, la expresión 
+general para una estimación por intervalo de la media poblacional cuando σ no se conoce es la 
+siguiente. 
+ 
+ 
+ 
+ 
+ 
+ 
+La razón de que el número de grados de libertad para el valor de t en la expresión (anterior) sea n - 
+1 se debe al uso de s como estimación de la desviación estándar poblacional σ. La expresión para 
+calcular la desviación estándar muestral es 
+ 
+Los grados de libertad se refieren al número de valores independientes en el cálculo de ∑(𝑥𝑖−𝑥̅)2. 
+Los n valores en el cálculo de ∑(𝑥𝑖−𝑥̅)2 son los siguientes: 𝑥1 −𝑥̅, 𝑥2 −𝑥̅,…, 𝑥𝑛−𝑥̅. Cualquier 
+conjunto de datos   ∑(𝑥𝑖−𝑥̅) = 0. Por tanto, únicamente n - 1 de los valores 𝑥𝑖−𝑥̅ son 
+independientes; es decir, si se conocen n - 1 de estos valores, el valor restante puede determinarse 
+exactamente usando el hecho de que los valores 𝑥𝑖−𝑥̅ deben sumar 0. Entonces, n - 1 es el número 
+de grados de libertad en la suma ∑(𝑥𝑖−𝑥̅)2 y de ahí el número de grados de libertad para la 
+distribución t.  
+ 
+Para ilustrar la estimación por intervalo en el caso σ desconocida, se verá un estudio realizado para 
+estimar la media del adeudo en las tarjetas de crédito en la población de familias de Estados Unidos. 
+En la tabla siguiente se presentan los saldos en las tarjetas de crédito de una muestra de n = 70 
+familias. En esta ocasión no se cuenta con una estimación previa de la desviación estándar 
+poblacional σ. De manera que los datos muestrales deberán usarse para estimar tanto la media 
+poblacional como la desviación estándar poblacional.  
+ 
+ 
+ 
+ 
+ 
+
+
+Pagina 11
+  
+ 
+                                                                                   Página 10 de 15 
+Tabla Saldos en las tarjetas de crédito de una muestra de 70 familias 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Con los datos de la tabla  se calcula la media muestral 𝑥̅ = $9,312 y la desviación estándar muestral 
+s = $4,007. Ahora se usa la tabla de la t student, para obtener el valor de 𝑡0.025 correspondiente a 
+95% de confianza y n - 1 = 69 grados de libertad. El valor de t que se necesita está en el renglón 
+correspondiente a 69 grados de libertad y en la columna correspondiente a 0.025 en la cola superior. 
+El valor que se encuentra es 𝑡0.025 = 1.995.  
+La estimación por intervalo de la media poblacional de los saldos en las tarjetas de crédito, da 
+como resultado lo siguiente:  
+ 
+ 
+ 
+ 
+La estimación puntual de la media poblacional es $9,312, el margen de error es $955 y el intervalo 
+de confianza de 95% va de 9312 - 955 = $8,357 a 9312 - 955 = $10,267. En consecuencia, 95% de 
+confianza de la media de los saldos en las tarjetas de crédito de la población de todas las familias 
+está ente $8357 y $10 267.  
+Con la muestra de 70 familias se obtiene una media muestral de $9,312 para los saldos en las tarjetas 
+de crédito, una desviación estándar muestral de $4,007, una estimación del error estándar de la 
+media de $479 (valor redondeado) y un intervalo de confianza de 95% que va de $8,357 a $10,267 
+ 
+Determinación del tamaño de la muestra  
+Se puede determinar el tamaño de la muestra para obtener una buena aproximación a los intervalos 
+de confianza en los casos en que la población no tiene una distribución normal, ahora bien, se debe 
+determinar cómo elegir un tamaño de muestra suficientemente grande para obtener un margen de 
+error deseado. Para explicar esto, seguiremos con el caso que se ha estado analizando en el que se 
+tenía una σ conocida. La expresión, el intervalo de estimación está dado por: 
+ 
+ 
+
+
+Pagina 12
+  
+ 
+                                                                                   Página 11 de 15 
+La cantidad 𝑧𝜎2
+⁄ (𝑛zα/2) es el margen de error. De manera que, como se ve, 𝑧𝜎2
+⁄ , la desviación 
+estándar poblacional σ, y el tamaño de la muestra n se combinan para determinar el margen de error. 
+Una vez que se selecciona el coeficiente de confianza 1-α, se determina 𝑧𝜎2
+⁄ . Por tanto, si se tiene 
+el valor de σ, es posible encontrar el tamaño de muestra n necesario para proporcionar cualquier 
+margen de error deseado. A continuación, se presenta la fórmula que se usa para calcular el tamaño 
+n de muestra deseado.  
+ 
+ 
+ 
+ 
+ 
+Este tamaño de muestra proporciona el margen de error deseado al nivel de confianza elegido. En 
+la ecuación anterior E es el margen de error que el usuario está dispuesto a aceptar, y el valor 𝑧𝜎2
+⁄ es 
+consecuencia directa del nivel de confianza que se va usar para calcular la estimación por intervalo. 
+A reserva de la decisión del usuario, 95% de confianza es el valor más usado (𝑧𝜎2
+⁄ = 1.96).  
+Por último, para usar la ecuación anterior es necesario contar con el valor de la desviación estándar 
+poblacional σ. Sin embargo, aun cuando este valor no se conozca, puede usarse la ecuación anterior 
+siempre que se tenga un valor preliminar o un valor planeado de σ. En la práctica, se suele usar 
+alguno de los procedimientos siguientes para obtener este valor planeado de σ.  
+1. Usar como valor planeado de σ una estimación de la desviación estándar poblacional 
+calculada a partir de datos de estudios anteriores. 
+ 2. Emplear un estudio piloto seleccionando una muestra preliminar. La desviación estándar 
+muestral obtenida de la muestra preliminar puede usarse como valor planeado de σ.  
+3. Use su juicio para el valor de σ. Por ejemplo, se puede empezar por estimar el mayor y el 
+menor valor en los datos de la población. Esta diferencia entre el mayor y el menor valor 
+proporciona una estimación del rango de los datos. Por último, este valor dividido entre 4 suele 
+considerarse como una aproximación burda a la desviación estándar y tomarse como un valor 
+planeado aceptable de σ.  
+Para demostrar el uso de la fórmula para el tamaño de la muestra, se considera el ejemplo siguiente. 
+En un estudio previo para investigar el costo de la renta de automóviles en Estados Unidos se 
+encontró que el costo medio de la renta de un automóvil mediano era aproximadamente $55 por día. 
+Suponga que la organización que realizó dicho estudio quiere realizar un nuevo estudio para estimar 
+la media poblacional de las rentas por día de automóviles medianos en Estados Unidos. Antes de 
+iniciar, especificó que la media poblacional de las rentas por día debe estimarse con un margen de 
+error de $2 y que se desea un nivel de 95% de confianza.  
+El margen de error especificado es E = 2, el nivel 95% de confianza indica que 𝑧𝜎2
+⁄ = 1.96. Por tanto, 
+sólo falta un valor planeado de la desviación estándar poblacional σ para calcular el tamaño de 
+
+
+Pagina 13
+  
+ 
+                                                                                   Página 12 de 15 
+muestra deseado. El analista revisó los datos muestrales del estudio anterior y encontró que la 
+desviación estándar poblacional del costo de la renta diaria era $9.65. Usando $9.65 como valor 
+planeado de σ, se tiene 
+ 
+ 
+ 
+De esta manera, el tamaño de la muestra necesario para obtener un margen de error de $2 debe ser 
+de por lo menos 89.43 rentas de automóviles medianos. En casos como éste, en los que el valor de 
+n no es un número entero, se redondea al siguiente valor entero; así que el tamaño de muestra que 
+se aconseja es 90 rentas de automóvil. 
+ 
+Proporción poblacional  
+Para obtener una estimación por intervalo de la proporción poblacional p, la fórmula general es: 
+𝑝̅ ± margen de error 
+La distribución de muestreo de 𝑝̅ desempeña un papel clave en el cálculo del margen de error 
+de esta estimación por intervalo. 
+En el cálculo de esta estimación por intervalo la distribución muestral es importante. Anteriormente 
+se dijo que la distribución de muestreo 𝑝̅  de se aproxima mediante una distribución normal siempre 
+que np   ≥ 5 y n(1 - p) ≥  5. En la siguiente figura se muestra una aproximación normal a la distribución 
+muestral de 𝑝̅. 
+Figura Aproximación normal a la distribución de muestreo de 𝑝̅ 
+ 
+ La media de la distribución muestral de 𝑝̅ es la proporción poblacional p y el error estándar de es 𝑝̅. 
+ 
+ 
+ 
+ 
+
+
+Pagina 14
+  
+ 
+                                                                                   Página 13 de 15 
+Como la distribución muestral de 𝑝̅ es una distribución normal, si en la estimación por intervalo de la 
+proporción poblacional se elige como margen de error 𝑧𝜎2
+⁄ 𝜎𝑝̅, entonces 100(1 -α)% de los intervalos 
+que se obtengan contendrán la verdadera proporción poblacional. Pero para calcular el margen de 
+error no se puede usar 𝜎𝑝̅; ya que no se conoce p; p es lo que se está tratando de estimar. Lo que 
+se hace, es que p se sustituye por 𝑝̅  y de esta manera se calcula el margen de error y la estimación 
+por intervalo de la proporción poblacional queda dada por 
+ 
+ 
+En el siguiente ejemplo se ilustra el cálculo del margen de error y de la estimación por intervalo para 
+una proporción muestral. Un estudio en Estados Unidos encuestó a 900 golfistas para conocer su 
+opinión acerca de cómo se les trataba en los cursos de golf. En el estudio se encontró que 396 
+golfistas estaban satisfechas con la disponibilidad de horarios de salida. Por tanto, la estimación 
+puntual de la proporción poblacional de golfistas satisfechas con la disponibilidad de horarios de 
+salida es 396/900 = 0.44. Usando la expresión anterior y el nivel de 95% de confianza se obtiene lo 
+siguiente: 
+ 
+ 
+ 
+ 
+ 
+En consecuencia, el margen de error es 0.0324 y la estimación por intervalo de confianza de 95% 
+de la proporción poblacional es 0.4076 a 0.4724. Empleando porcentajes, los resultados de la 
+investigación permiten decir con 95% de confianza que entre 40.76 y 47.24% de las golfistas están 
+satisfechas con la disponibilidad de horarios de Salida. 
+ 
+ 
+Determinación del tamaño de la muestra  
+Ahora se considera cuál debe ser el tamaño de la muestra para obtener una estimación de la 
+proporción poblacional con una precisión determinada. La función que tiene el tamaño de la muestra 
+en la determinación de la estimación por intervalo de p es semejante a la que tiene en la estimación 
+de la media poblacional. El margen de error se basa en el valor de 𝑧𝜎2 
+⁄ √𝑝̅(1 −𝑝̅) 𝑛
+⁄ , en la proporción 
+muestral 𝑝̅, y en el tamaño de la muestra n. Muestras mayores proporcionan márgenes de error 
+menores y mejor precisión.  
+
+
+Pagina 15
+  
+ 
+                                                                                   Página 14 de 15 
+Sea E el margen de error deseado 
+ 
+ 
+Despejando n de esta fórmula se obtiene la fórmula para calcular el tamaño de la muestra con el que 
+se tendrá el margen de error deseado, E 
+ 
+Sin embargo, debido a que no se conocerá sino hasta que se tome la muestra, no es posible usar 
+esta fórmula para calcular el tamaño de la muestra con el que se obtendrá el margen de error 
+deseado. Lo que se necesita, entonces, es un valor planeado de útil para hacer este cálculo. Con p* 
+como valor planeado de 𝑝̅ la fórmula para calcular el tamaño de la muestra con el que se obtendrá 
+el error E queda como se presenta a continuación. 
+ 
+ 
+ 
+ 
+ 
+En la práctica, el valor planeado p* se determina mediante alguno de los métodos siguientes.  
+1. Utilizar la proporción poblacional de una muestra previa de las mismas unidades o de 
+unidades similares. 
+2. Utilizar un estudio piloto y elegir una muestra preliminar. La proporción muestral de esta 
+muestra se usa como valor planeado, p*.  
+3. Proponer una “mejor aproximación” para el valor de p*.  
+4. Si no aplica ninguna de las alternativas anteriores, emplear como valor planeado p* = 0.50.  
+De regreso al estudio con mujeres golfistas, suponga que la empresa desea llevar a cabo otro estudio 
+para determinar la proporción en la población de golfistas que está satisfecha con la disponibilidad 
+de horarios de salida. ¿De qué tamaño deberá ser la muestra si se desea que en la estimación de la 
+proporción poblacional el margen de error sea 0.025 a 95% de confianza? Como E = .025 y 𝑧𝜎2
+⁄ zα/2 
+= 1.96, se necesita un valor planeado p* para responder esta pregunta sobre el tamaño de la 
+muestra. Utilizando como valor planeado p*, el resultado del estudio anterior, 𝑝̅= 0.44, y se obtiene 
+ 
+ 
+ 
+ 
+
+
+Pagina 16
+  
+ 
+                                                                                   Página 15 de 15 
+Así, el tamaño de la muestra debe ser por lo menos 1514.5 golfistas para tener el margen de error 
+requerido. Redondeando al valor entero siguiente, se tiene que se necesitan 1515 golfistas para 
+obtener el margen de error deseado.  
+Otra alternativa sugerida para seleccionar un valor planeado p* es elegir p* = 0.50. Cuando no se 
+cuenta con ninguna otra información suele usarse este valor. La razón de lo anterior es porque, el 
+tamaño de la muestra es proporcional a la cantidad p*(1 - p*). Si el valor de p*(1 - p*) es grande, el 
+tamaño de la muestra será grande. El mayor valor de p*(1 - p*) se presenta cuando p*= 0.50. De 
+esta manera, en caso de duda acerca del valor planeado apropiado, se sabe que p* = 0.50 dará el 
+mayor tamaño de muestra que se puede recomendar. En efecto, recomendando el mayor tamaño 
+de muestra posible se va a lo seguro. Si resulta que la proporción muestral es diferente del valor 
+planeado, el margen de error será menor que el deseado. De manera que al usar p* = 0.50, se 
+garantiza que el tamaño de la muestra será suficiente para obtener el margen de error deseado.  
+ 
+En el ejemplo del estudio de las golfistas, si se usa como valor planeado p* = 0.50, el tamaño de 
+muestra que se obtiene es 
+ 
+ 
+ 
+ 
+Es decir, una muestra ligeramente mayor, 1537 golfistas. 
+ 
+ 
+ 
+ 
+ 
+Resumen general 
+ 
+Nota material extraído del libro de: 
+Anderson, D. R., Sweeney, D. J., Williams, T. A., (2008), Estadística para administración y economía, (10ª edición) 
+CENGAGE learning. 
+ 
+Referencias 
+Anderson, D. R., Sweeney, D. J., & Williams, T. A. (2020). Estadística para administración 
+y economía (13ª ed.). Cengage Learning. 
+Levin, R. I., & Rubin, D. S. (2017). Estadística para administración y economía (8ª ed.). 
+Pearson Educación. 
+ 

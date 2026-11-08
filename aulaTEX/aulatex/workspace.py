@@ -557,6 +557,44 @@ class AulaTeXWorkspace:
                 f"{self.relative(tex)} con {script.name}."
             )
             return CommandResult(False, 124, (stdout or "") + "\n" + message + "\n", stderr or "")
+        if proc.returncode != 0 and os.name == "nt":
+            latexmk_exe = Path(r"C:\texlive\2026\bin\windows\latexmk.exe")
+            if latexmk_exe.is_file() and Path(r"C:\Strawberry\perl\bin").is_dir():
+                env = os.environ.copy()
+                env["PATH"] = "C:/texlive/2026/bin/windows;C:/Strawberry/perl/bin;" + env.get("PATH", "")
+                env["TEXINPUTS"] = f".;{self.repo_root.as_posix()}/aulaTEX/base/Plantilla-Informe//;"
+                env["BSTINPUTS"] = env["TEXINPUTS"]
+                tex_text = tex.read_text(encoding="utf-8", errors="replace") if tex.is_file() else ""
+                engine_opt = "-xelatex" if ("fontspec" in tex_text or "xelatex" in tex_text or "Plantilla-Informe" in tex_text) else "-pdf"
+                out_dir = self.repo_root / ".build" / "latex" / f"{tex.stem}-fallback"
+                out_dir.mkdir(parents=True, exist_ok=True)
+                fb_cmd = [
+                    str(latexmk_exe),
+                    "-norc",
+                    engine_opt,
+                    "-halt-on-error",
+                    "-interaction=nonstopmode",
+                    "-outdir=" + out_dir.relative_to(self.repo_root).as_posix(),
+                    tex.relative_to(self.repo_root).as_posix(),
+                ]
+                try:
+                    fb_proc = subprocess.run(
+                        fb_cmd,
+                        cwd=str(self.repo_root),
+                        capture_output=True,
+                        text=True,
+                        env=env,
+                        timeout=timeout_seconds,
+                    )
+                    if fb_proc.returncode == 0:
+                        gen_pdf = out_dir / f"{tex.stem}.pdf"
+                        final_pdf = tex.with_suffix(".pdf")
+                        if gen_pdf.is_file():
+                            import shutil
+                            shutil.copyfile(gen_pdf, final_pdf)
+                            return CommandResult(True, 0, (stdout or "") + "\n" + (fb_proc.stdout or ""), stderr or "")
+                except Exception as fb_exc:
+                    pass
         return CommandResult(proc.returncode == 0, proc.returncode, stdout, stderr)
 
     def append_bitacora(self, run_id: str, title: str, data: dict) -> None:

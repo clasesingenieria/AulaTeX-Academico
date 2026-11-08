@@ -458,6 +458,135 @@ def build_parser() -> argparse.ArgumentParser:
     mapa_layout.add_argument("--out-dir", default=".aulatex-temp/opt-mapa2")
     mapa_layout.add_argument("--write", action="store_true", help="Write the optimized absolute coordinates back into the .tex.")
 
+    flujo_uas = sub.add_parser("flujo-uas", help="Ejecutar el flujo de trabajo académico secuencial para UAS orquestado por aulatex.")
+    flujo_uas.add_argument("--subject", default="derecho-mercantil", help="Slug o nombre de la materia UAS.")
+    flujo_uas.add_argument("--course-id", type=int, default=632, help="ID del curso en la plataforma virtual UAS.")
+    flujo_uas.add_argument("--module-id", type=int, default=49882, help="ID del módulo / actividad en UAS.")
+    flujo_uas.add_argument("--activity", type=int, default=2, help="Número de actividad.")
+    flujo_uas.add_argument("--week", type=int, default=2, help="Semana curricular.")
+    flujo_uas.add_argument("--topic", default="Sujetos del Derecho, personas físicas y morales, sanción, hechos y actos jurídicos")
+    flujo_uas.add_argument("--student-name", default="Martín Jonathan De La Cruz Muñoz")
+    flujo_uas.add_argument("--student-id", default="26031061")
+    flujo_uas.add_argument("--advisor", default="Por confirmar")
+    flujo_uas.add_argument("--group", default="LCP-2026-I")
+    flujo_uas.add_argument("--city", default="Culiacán, Sinaloa, México")
+    flujo_uas.add_argument("--engine", default="xelatex", choices=("xelatex", "pdflatex", "latexmk"))
+    flujo_uas.add_argument("--no-download", action="store_true", help="No intentar descarga remota; usar fuentes locales.")
+    flujo_uas.add_argument("--output", default="", help="Directorio personalizado de salida.")
+    flujo_uas.add_argument("--check-only", action="store_true", help="Solo verificar precondiciones y credenciales.")
+    flujo_uas.add_argument("--json", action="store_true", help="Emitir resultado completo en JSON.")
+    flujo_uas.add_argument("--pending", action="store_true", help="Ejecutar monitor-uas y secuencialmente realizar entregas pendientes.")
+    flujo_uas.add_argument("--inspect", action="store_true", help="Inspeccionar plataforma UAS en vivo.")
+    flujo_uas.add_argument("--no-compile", action="store_true", help="No compilar manuscritos TeX.")
+
+    itesca_wf = sub.add_parser("itesca-workflow", help="Ejecutar el flujo de trabajo académico para ITESCA orquestado por aulatex.")
+    itesca_wf.add_argument("--snapshot", default="", help="Ruta al snapshot JSON sanitizado de navegación ITESCA.")
+    itesca_wf.add_argument("--activity", type=int, default=0, help="Filtrar por número de actividad específico (7, 8, 9, 15).")
+    itesca_wf.add_argument("--no-download", action="store_true", help="No intentar descarga remota; usar material docente ya descargado.")
+    itesca_wf.add_argument("--force-reextract", action="store_true", help="Forzar re-ejecución del extractor de conceptos.")
+    itesca_wf.add_argument("--use-llm-style", action="store_true", help="Permitir refinamiento de voz con LLM en estilo-escribir.")
+    itesca_wf.add_argument("--stage", action="append", default=[], help="Etapas a ejecutar (planeacion, recopilacion_y_organizacion_de_recursos, extraccion_de_conceptos, realizacion_de_actividades_y_ciclos_de_calidad).")
+
+    nav_it = sub.add_parser("navegacion-itesca", help="Inspeccionar plataforma ITESCA Virtual de forma autenticada y solo lectura.")
+    nav_it.add_argument("--course-id", action="append", type=int, default=[], help="ID de curso Moodle (ej. 209, 215).")
+    nav_it.add_argument("--module-id", action="append", type=int, default=[], help="ID de módulo Moodle (ej. 1761, 1762, 1763, 2915).")
+    nav_it.add_argument("--output", default="", help="Ruta de salida para el snapshot JSON sanitizado.")
+
+    plan_it = sub.add_parser("realizar-planeacion-itesca", help="Generar planeación canónica ITESCA desde evidencia verificada.")
+    plan_it.add_argument("--target", required=True, help="Carpeta de la materia objetivo.")
+    plan_it.add_argument("--activity", type=int, required=True, help="Número de actividad.")
+    plan_it.add_argument("--snapshot", required=True, help="Ruta al snapshot JSON de navegación.")
+
+    rec_it = sub.add_parser("encontrar-recursos-itesca", help="Localizar, descargar y organizar recursos de actividad ITESCA.")
+    rec_it.add_argument("--target", required=True, help="Carpeta de la materia objetivo.")
+    rec_it.add_argument("--activity", type=int, required=True, help="Número de actividad.")
+    rec_it.add_argument("--plan", default="", help="Ruta al archivo JSON de planeación.")
+    rec_it.add_argument("--no-download", action="store_true")
+
+    conc_it = sub.add_parser("extraer-conceptos-itesca", help="Extraer conceptos académicos para actividad ITESCA.")
+    conc_it.add_argument("--target", required=True)
+    conc_it.add_argument("--activity", type=int, required=True)
+    conc_it.add_argument("--plan", default="")
+    conc_it.add_argument("--motor", default="novapro")
+    conc_it.add_argument("--force", action="store_true")
+
+    act_it = sub.add_parser("realizar-actividad-itesca", help="Desarrollar actividad ITESCA con plantillas y ciclos de calidad.")
+    act_it.add_argument("--target", required=True)
+    act_it.add_argument("--activity", type=int, required=True)
+    act_it.add_argument("--plan", default="")
+    act_it.add_argument("--delivery-source", default="")
+    act_it.add_argument("--delivery-target", default="")
+    act_it.add_argument("--expected-pages", type=int, default=0)
+    act_it.add_argument("--expected-arial", type=float, default=0.0)
+    act_it.add_argument("--docx-deliverable", default="")
+
+    estilo_it = sub.add_parser("estilo-escribir-eval", help="Auditar estilo académico en archivos .tex o .docx.")
+    estilo_it.add_argument("--tex", default="")
+    estilo_it.add_argument("--docx", default="")
+    estilo_it.add_argument("--bib", default="")
+    estilo_it.add_argument("--apply", action="store_true")
+
+    uas_pending = sub.add_parser("uas-pending", aliases=["monitor-uas"], help="Auditar y realizar entregas pendientes en UAS orquestadas por aulatex.")
+    uas_pending.add_argument("--subject", default="derecho-mercantil", help="Slug de la materia UAS (o 'all'/'todas').")
+    uas_pending.add_argument("--course-id", type=int, default=None, help="ID del curso en UAS.")
+    uas_pending.add_argument("--inspect", action="store_true", help="Inspeccionar plataforma en vivo.")
+    uas_pending.add_argument("--download", action="store_true", help="Descargar recursos remotos.")
+    uas_pending.add_argument("--no-compile", action="store_true", help="No compilar manuscritos TeX.")
+    uas_pending.add_argument("--output", default="", help="Directorio de salida.")
+    uas_pending.add_argument("--json", action="store_true", help="Emitir salida en JSON.")
+
+    uas_entrega = sub.add_parser("uas-entrega", aliases=["entregar-uas"], help="Envio autenticado de entregables a UAS tras autorizacion explicita.")
+    uas_entrega.add_argument("--subject", required=True, help="Slug de la materia UAS.")
+    uas_entrega.add_argument("--activity", type=int, required=True, help="Numero de actividad.")
+    uas_entrega.add_argument("--artifact", required=True, help="Ruta del entregable local (.pdf/.xlsx).")
+    uas_entrega.add_argument("--user-validated", action="store_true", help="Autorizacion explicita obligatoria del usuario.")
+    uas_entrega.add_argument("--sha256", default=None, help="SHA-256 esperado.")
+    uas_entrega.add_argument("--course-id", type=int, default=None, help="ID del curso en UAS.")
+    uas_entrega.add_argument("--module-id", type=int, default=None, help="ID del modulo en UAS.")
+    uas_entrega.add_argument("--finalize", action="store_true", help="Marcar como envio definitivo.")
+    uas_entrega.add_argument("--live", dest="dry_run", action="store_false", help="Envio en vivo (por defecto dry_run=True).")
+    uas_entrega.set_defaults(dry_run=True)
+    uas_entrega.add_argument("--output", default="", help="Directorio de comprobantes.")
+    uas_entrega.add_argument("--json", action="store_true", help="Emitir salida en JSON.")
+
+    unadm_wf = sub.add_parser("unadm-workflow", help="Ejecutar el flujo de trabajo académico secuencial para UnADM orquestado por aulatex.")
+    unadm_wf.add_argument("--subject", default="derecho-penal-especial-mexicano", help="Slug o nombre de la materia UnADM.")
+    unadm_wf.add_argument("--activity", type=int, default=1, help="Número de actividad (ej. 1, 2, 3).")
+    unadm_wf.add_argument("--course-id", type=int, default=None, help="ID del curso en la plataforma virtual UnADM (ej. 3482, 3432, 3441).")
+    unadm_wf.add_argument("--module-id", type=int, default=None, help="ID del módulo / asignación en UnADM.")
+    unadm_wf.add_argument("--no-inspect", action="store_true", help="No inspeccionar la plataforma en línea; usar planeaciones/recursos locales.")
+    unadm_wf.add_argument("--no-download", action="store_true", help="No intentar descarga remota; usar material docente ya descargado.")
+    unadm_wf.add_argument("--no-compile", action="store_true", help="No compilar el PDF final con LaTeX.")
+    unadm_wf.add_argument("--use-llm-style", action="store_true", help="Permitir refinamiento de voz con LLM en estilo-escribir.")
+    unadm_wf.add_argument("--pending", action="store_true", help="Ejecutar monitor-unadm y posteriormente realizar-actividad para todas las entregas pendientes identificadas.")
+    unadm_wf.add_argument("--submit-to-platform", action="store_true", help="Solicitar el envío a la plataforma UnADM al finalizar.")
+    unadm_wf.add_argument("--user-validated", action="store_true", help="Validación explícita del usuario requerida para enviar a plataforma.")
+    unadm_wf.add_argument("--output", default="", help="Directorio personalizado de salida para la corrida.")
+
+    nav_unadm = sub.add_parser("navegacion-unadm", help="Inspeccionar plataforma UnADM Virtual (aulavirtual.unadmexico.mx) de forma autenticada y solo lectura.")
+    nav_unadm.add_argument("--course-id", action="append", type=int, default=[], help="ID de curso Moodle UnADM (ej. 3482, 3432, 3441).")
+    nav_unadm.add_argument("--output", default="", help="Ruta de salida para el snapshot JSON sanitizado.")
+
+    mon_unadm = sub.add_parser("monitor-unadm", help="Monitorear entregas pendientes y recomendaciones en UnADM.")
+    mon_unadm.add_argument("--subject", default="derecho-penal-especial-mexicano", help="Slug de la materia UnADM.")
+    mon_unadm.add_argument("--activity", type=int, default=None, help="Número de actividad a monitorear.")
+    mon_unadm.add_argument("--course-id", type=int, default=None, help="ID de curso en UnADM.")
+    mon_unadm.add_argument("--module-id", type=int, default=None, help="ID del módulo en UnADM.")
+    mon_unadm.add_argument("--inspect", action="store_true", help="Inspeccionar plataforma en línea si faltan datos.")
+    mon_unadm.add_argument("--output", default="", help="Directorio de salida.")
+
+    ent_unadm = sub.add_parser("entregar-unadm", help="Enviar actividad formalmente a UnADM (requiere validación explícita).")
+    ent_unadm.add_argument("--subject", default="derecho-penal-especial-mexicano", help="Slug de la materia UnADM.")
+    ent_unadm.add_argument("--activity", type=int, default=1, help="Número de actividad.")
+    ent_unadm.add_argument("--artifact", default="", help="Ruta al artefacto PDF.")
+    ent_unadm.add_argument("--sha256", default="", help="Hash SHA-256 esperado.")
+    ent_unadm.add_argument("--course-id", type=int, default=None, help="ID de curso en UnADM.")
+    ent_unadm.add_argument("--module-id", type=int, default=None, help="ID de tarea en UnADM.")
+    ent_unadm.add_argument("--user-validated", action="store_true", help="Validación explícita del usuario (OBLIGATORIA para permitir envío).")
+    ent_unadm.add_argument("--finalize", action="store_true", help="Enviar definitivamente para calificar en vez de borrador.")
+    ent_unadm.add_argument("--live", action="store_true", help="Ejecutar en vivo con navegador en vez de simulación dry-run.")
+    ent_unadm.add_argument("--output", default="", help="Directorio de salida.")
+
     return parser
 
 
@@ -1391,6 +1520,405 @@ def main(argv: list[str] | None = None) -> None:
         if args.write:
             _cmd.append("--write")
         raise SystemExit(_sp.run(_cmd).returncode)
+
+    if args.command in ("flujo-uas", "uas-pending", "monitor-uas"):
+        from .flujo_uas import FlujoUasOrchestrator, FlujoUasRequest
+
+        orchestrator = FlujoUasOrchestrator(AulaTeXWorkspace())
+        if getattr(args, "check_only", False):
+            prereqs = orchestrator.verify_prerequisites()
+            print(json.dumps(prereqs, ensure_ascii=False, indent=2))
+            return
+
+        if getattr(args, "pending", False) or args.command in ("uas-pending", "monitor-uas"):
+            batch_res = orchestrator.run_pending_deliveries(
+                subject_slug=getattr(args, "subject", "derecho-mercantil"),
+                course_id=getattr(args, "course_id", None),
+                inspect_platform=getattr(args, "inspect", False),
+                download_resources=getattr(args, "download", False) if hasattr(args, "download") else (not getattr(args, "no_download", False)),
+                compile_pdf=not getattr(args, "no_compile", False),
+                output_dir=getattr(args, "output", ""),
+            )
+            print(json.dumps(batch_res, ensure_ascii=False, indent=2))
+            return
+
+
+        from .flujo_uas import FlujoUasOrchestrator, FlujoUasRequest
+
+        orchestrator = FlujoUasOrchestrator(AulaTeXWorkspace())
+        if args.check_only:
+            prereqs = orchestrator.verify_prerequisites()
+            print(json.dumps(prereqs, ensure_ascii=False, indent=2))
+            return
+
+        req = FlujoUasRequest(
+            subject_slug=args.subject,
+            course_id=args.course_id,
+            module_id=args.module_id,
+            activity_number=args.activity,
+            week=args.week,
+            topic=args.topic,
+            student_name=args.student_name,
+            student_id=args.student_id,
+            advisor_name=args.advisor,
+            group_name=args.group,
+            city=args.city,
+            engine=args.engine,
+            download_online=not args.no_download,
+            output_dir=args.output,
+        )
+        res = orchestrator.execute_workflow(req)
+        if getattr(args, "json", False):
+            print(json.dumps(res.to_dict(), ensure_ascii=False, indent=2))
+        else:
+            print(res.summary)
+        return
+
+    if args.command == "itesca-workflow":
+        from .itesca_workflow import (
+            AulaTeXItescaOrchestrator,
+            DEFAULT_ITESCA_ACTIVE_SPECS,
+            ItescaWorkflowRequest,
+            PIPELINE_STAGE_ORDER,
+        )
+
+        ws = AulaTeXWorkspace()
+        orch = AulaTeXItescaOrchestrator(ws)
+        specs = DEFAULT_ITESCA_ACTIVE_SPECS
+        if args.activity > 0:
+            specs = tuple(s for s in specs if s.activity_number == args.activity)
+        stages = tuple(args.stage) if args.stage else PIPELINE_STAGE_ORDER
+        res = orch.run(
+            ItescaWorkflowRequest(
+                specs=specs,
+                snapshot_path=args.snapshot,
+                stages=stages,
+                download_from_platform=not args.no_download,
+                force_reextract_concepts=bool(args.force_reextract),
+                use_llm_style_refinement=bool(args.use_llm_style),
+            )
+        )
+        print(json.dumps({
+            "ok": res.ok,
+            "run_id": res.run_id,
+            "manifest": ws.relative(res.manifest_path),
+            "report": ws.relative(res.report_path),
+            "activities": [
+                {
+                    "subject": a["subject"],
+                    "activity_number": a["activity_number"],
+                    "ok": a["ok"],
+                    "stages": list(a["stages_executed"].keys()),
+                }
+                for a in res.activities
+            ],
+            "global_blockers": list(res.global_blockers),
+        }, ensure_ascii=False, indent=2))
+        return
+
+    if args.command == "navegacion-itesca":
+        from .navegacion_itesca import NavegacionItescaAgent, ItescaNavigationRequest
+
+        ws = AulaTeXWorkspace()
+        nav = NavegacionItescaAgent(ws)
+        c_ids = tuple(args.course_id) if args.course_id else (209, 215)
+        m_ids = tuple(args.module_id) if args.module_id else (1761, 1762, 1763, 2915)
+        out = nav.inspect(ItescaNavigationRequest(course_ids=c_ids, module_ids=m_ids))
+        print(json.dumps({
+            "agent_id": out.agent_id,
+            "run_id": out.run_id,
+            "snapshot_path": ws.relative(out.snapshot_path),
+            "courses_discovered": out.courses_discovered,
+            "modules_discovered": out.modules_discovered,
+            "timeline_events": out.timeline_events,
+            "blockers": list(out.blockers),
+        }, ensure_ascii=False, indent=2))
+        return
+
+    if args.command == "realizar-planeacion-itesca":
+        from .realizar_planeacion import RealizarPlaneacionAgent, RealizarPlaneacionRequest
+
+        ws = AulaTeXWorkspace()
+        snap_doc = json.loads(Path(args.snapshot).read_text(encoding="utf-8"))
+        mod_snap = next((m for m in snap_doc.get("modules", []) if int(m.get("module_id", 0)) == int(args.activity)), None)
+        if mod_snap is None and snap_doc.get("modules"):
+            mod_snap = snap_doc["modules"][0]
+        res = RealizarPlaneacionAgent(ws).run(
+            RealizarPlaneacionRequest(
+                target=args.target,
+                activity_number=args.activity,
+                module_snapshot=mod_snap or {},
+            )
+        )
+        print(json.dumps({
+            "agent_id": res.agent_id,
+            "plan_json": ws.relative(res.plan_json_path),
+            "plan_md": ws.relative(res.plan_md_path),
+            "notes_dir": ws.relative(res.notes_dir),
+            "ready_eligible": res.semantic_validation.get("ready_eligible"),
+        }, ensure_ascii=False, indent=2))
+        return
+
+    if args.command == "encontrar-recursos-itesca":
+        from .encontrar_recursos import EncontrarRecursosAgent, EncontrarRecursosRequest
+
+        ws = AulaTeXWorkspace()
+        res = EncontrarRecursosAgent(ws).run(
+            EncontrarRecursosRequest(
+                target=args.target,
+                activity_number=args.activity,
+                plan_json_path=args.plan,
+                download_from_platform=not args.no_download,
+            )
+        )
+        print(json.dumps({
+            "agent_id": res.agent_id,
+            "manifest": ws.relative(res.manifest_path),
+            "downloaded": res.downloaded_count,
+            "organized": res.organized_files_count,
+        }, ensure_ascii=False, indent=2))
+        return
+
+    if args.command == "extraer-conceptos-itesca":
+        from .extraer_conceptos import ExtraerConceptosAgent, ExtraerConceptosRequest
+
+        ws = AulaTeXWorkspace()
+        res = ExtraerConceptosAgent(ws).run(
+            ExtraerConceptosRequest(
+                target=args.target,
+                activity_number=args.activity,
+                plan_json_path=args.plan,
+                motors=(args.motor, "tfidf"),
+                force_rerun=bool(args.force),
+            )
+        )
+        print(json.dumps({
+            "agent_id": res.agent_id,
+            "motor": res.selected_motor,
+            "concepts_count": res.concepts_count,
+            "notes_concepts_dir": ws.relative(res.notes_concepts_dir),
+        }, ensure_ascii=False, indent=2))
+        return
+
+    if args.command == "realizar-actividad-itesca":
+        from .realizar_actividad import RealizarActividadAgent, RealizarActividadRequest
+
+        ws = AulaTeXWorkspace()
+        res = RealizarActividadAgent(ws).run(
+            RealizarActividadRequest(
+                target=args.target,
+                activity_number=args.activity,
+                plan_json_path=args.plan,
+                delivery_source_tex=args.delivery_source,
+                delivery_target_rel=args.delivery_target,
+                expected_delivery_pages=args.expected_pages if args.expected_pages > 0 else None,
+                expected_arial_pt=args.expected_arial if args.expected_arial > 0 else None,
+                docx_deliverable_rel=args.docx_deliverable,
+            )
+        )
+        print(json.dumps({
+            "agent_id": res.agent_id,
+            "ok": res.ok,
+            "status": res.stage_status,
+            "report_pdf": ws.relative(res.report_pdf_path) if res.report_pdf_path else None,
+            "delivery_artifact": ws.relative(res.delivery_artifact_path) if res.delivery_artifact_path else None,
+            "manifest": ws.relative(res.manifest_path),
+        }, ensure_ascii=False, indent=2))
+        return
+
+    if args.command == "estilo-escribir-eval":
+        from .estilo_escribir import EstiloEscribirAgent
+
+        ws = AulaTeXWorkspace()
+        agent = EstiloEscribirAgent(ws)
+        if args.tex:
+            collab = agent.collaborate_on_tex(args.tex, bib_path=args.bib, apply=bool(args.apply))
+            print(json.dumps({
+                "agent_id": collab.agent_id,
+                "passed": collab.after.passed,
+                "score_before": collab.before.score,
+                "score_after": collab.after.score,
+                "applied_changes": list(collab.applied_changes),
+            }, ensure_ascii=False, indent=2))
+        elif args.docx:
+            from docx import Document
+            doc = Document(args.docx)
+            text = "\n".join(p.text for p in doc.paragraphs if p.text.strip())
+            ev = agent.evaluate_plain_prose(text)
+            print(json.dumps({
+                "agent_id": agent.agent_id,
+                "passed": ev.passed,
+                "score": ev.score,
+                "critical": list(ev.critical_issues),
+                "warnings": list(ev.style_warnings),
+            }, ensure_ascii=False, indent=2))
+        return
+
+    if args.command in ("uas-entrega", "entregar-uas"):
+        from .flujo_uas import FlujoUasOrchestrator
+
+        orchestrator = FlujoUasOrchestrator(AulaTeXWorkspace())
+        res = orchestrator.submit_authorized_delivery(
+            subject_slug=args.subject,
+            activity_number=args.activity,
+            artifact_path=args.artifact,
+            user_validated=getattr(args, "user_validated", False),
+            expected_sha256=getattr(args, "sha256", None),
+            course_id=getattr(args, "course_id", None),
+            module_id=getattr(args, "module_id", None),
+            finalize=getattr(args, "finalize", False),
+            dry_run=getattr(args, "dry_run", True),
+            output_dir=getattr(args, "output", ""),
+        )
+        print(json.dumps({
+            "ok": res.ok,
+            "status": res.status,
+            "receipt_path": str(res.receipt_path) if res.receipt_path else None,
+            "blockers": list(res.blockers),
+            "manifest_path": str(res.manifest_path) if res.manifest_path else None,
+            "summary": res.summary,
+        }, ensure_ascii=False, indent=2))
+        return
+
+    if args.command == "unadm-workflow":
+        from .unadm_workflow import UnadmWorkflowOrchestrator, UnadmWorkflowRequest
+
+        ws = AulaTeXWorkspace()
+        orch = UnadmWorkflowOrchestrator(ws)
+
+        if getattr(args, "pending", False):
+            pending_res = orch.run_pending_deliveries(
+                subject_slug=args.subject,
+                course_id=args.course_id,
+                inspect_platform=not args.no_inspect,
+                download_online_resources=not args.no_download,
+                compile_pdf=not args.no_compile,
+                use_llm_style=bool(args.use_llm_style),
+                output_dir=args.output,
+            )
+            print(json.dumps(pending_res, ensure_ascii=False, indent=2))
+            return
+
+        req = UnadmWorkflowRequest(
+            subject_slug=args.subject,
+            activity_number=args.activity,
+            course_id=args.course_id,
+            module_id=args.module_id,
+            inspect_platform=not args.no_inspect,
+            download_online_resources=not args.no_download,
+            compile_pdf=not args.no_compile,
+            use_llm_style=bool(args.use_llm_style),
+            submit_to_platform=bool(getattr(args, "submit_to_platform", False)),
+            user_validated=bool(getattr(args, "user_validated", False)),
+            output_dir=args.output,
+        )
+        res = orch.run(req)
+        print(json.dumps({
+            "ok": res.ok,
+            "run_id": res.run_id,
+            "subject": res.subject_slug,
+            "activity": res.activity_number,
+            "manifest": ws.relative(res.manifest_path),
+            "summary_md": ws.relative(res.summary_md_path),
+            "proposed_delivery": res.proposed_delivery,
+            "stages": [
+                {
+                    "stage": s.stage_name,
+                    "agent": s.agent_id,
+                    "ok": s.ok,
+                    "summary": s.summary,
+                    "blockers": list(s.blockers),
+                }
+                for s in res.stages
+            ],
+            "global_blockers": list(res.blockers),
+        }, ensure_ascii=False, indent=2))
+        return
+
+    if args.command == "navegacion-unadm":
+        from .navegacion_unadm import NavegacionUnadmAgent, UnadmNavigationRequest
+
+        ws = AulaTeXWorkspace()
+        nav = NavegacionUnadmAgent(ws)
+        c_ids = tuple(args.course_id) if args.course_id else (3432, 3482, 3441)
+        out = nav.inspect(UnadmNavigationRequest(course_ids=c_ids, output_dir=args.output))
+        print(json.dumps({
+            "agent_id": out.agent_id,
+            "run_id": out.run_id,
+            "snapshot_path": ws.relative(out.snapshot_path) if out.snapshot_path else "",
+            "courses_discovered": out.courses_discovered,
+            "assignments_discovered": out.assignments_discovered,
+            "forums_discovered": out.forums_discovered,
+            "resources_discovered": out.resources_discovered,
+            "blockers": list(out.blockers),
+        }, ensure_ascii=False, indent=2))
+        return
+
+    if args.command == "monitor-unadm":
+        from .monitor_unadm import MonitorUnadmAgent, MonitorUnadmRequest
+
+        ws = AulaTeXWorkspace()
+        mon = MonitorUnadmAgent(ws)
+        req = MonitorUnadmRequest(
+            subject_slug=args.subject,
+            activity_number=args.activity,
+            course_id=args.course_id,
+            module_id=args.module_id,
+            inspect_platform=bool(args.inspect),
+            output_dir=args.output,
+        )
+        report = mon.monitor_deliveries(req)
+        print(json.dumps({
+            "ok": report.ok,
+            "run_id": report.run_id,
+            "institution": report.institution,
+            "manifest": ws.relative(report.manifest_path) if report.manifest_path else "",
+            "summary_md": ws.relative(report.summary_md_path) if report.summary_md_path else "",
+            "pending_count": len(report.pending_deliveries),
+            "recommendations": [
+                {
+                    "activity": r.activity_number,
+                    "action": r.recommended_action,
+                    "prerequisites_satisfied": list(r.prerequisites_satisfied),
+                    "rationale": r.rationale,
+                    "proposed_artifact": r.proposed_delivery_artifact,
+                }
+                for r in report.recommendations
+            ],
+            "blockers": list(report.blockers),
+        }, ensure_ascii=False, indent=2))
+        return
+
+    if args.command == "entregar-unadm":
+        from .entregar_unadm import EntregarUnadmAgent, EntregarUnadmRequest
+
+        ws = AulaTeXWorkspace()
+        agent = EntregarUnadmAgent(ws)
+        req = EntregarUnadmRequest(
+            subject_slug=args.subject,
+            activity_number=args.activity,
+            artifact_path=args.artifact,
+            expected_sha256=args.sha256 if args.sha256 else None,
+            course_id=args.course_id,
+            module_id=args.module_id,
+            user_validated=bool(args.user_validated),
+            finalize=bool(args.finalize),
+            dry_run=not bool(args.live),
+            output_dir=args.output,
+        )
+        res = agent.submit(req)
+        print(json.dumps({
+            "ok": res.ok,
+            "status": res.status,
+            "run_id": res.run_id,
+            "artifact": res.artifact_path,
+            "sha256": res.sha256,
+            "platform_url": res.platform_url,
+            "receipt": ws.relative(res.receipt_path) if res.receipt_path else "",
+            "manifest": ws.relative(res.manifest_path) if res.manifest_path else "",
+            "blockers": list(res.blockers),
+        }, ensure_ascii=False, indent=2))
+        return
 
     parser.error(f"Unknown command: {args.command}")
 

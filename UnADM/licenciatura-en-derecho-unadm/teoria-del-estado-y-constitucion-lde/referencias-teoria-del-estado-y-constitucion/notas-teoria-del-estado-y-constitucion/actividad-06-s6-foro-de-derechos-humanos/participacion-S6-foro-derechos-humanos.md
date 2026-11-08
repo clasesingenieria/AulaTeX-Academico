@@ -1,0 +1,49 @@
+# S6. Foro de Derechos Humanos - Participación Académica
+**Asignatura:** Teoría del Estado y Constitución (Curso 3432, Grupo 020)  
+**Semana:** Semana 6 (2 al 8 de noviembre de 2026)  
+**Estudiante:** Martín Jonathan De la Cruz Muñoz (Matrícula: ES261120204)  
+**Destino en UnADM:** https://aulavirtual.unadmexico.mx/mod/forum/view.php?id=221688  
+**Requisito de la plataforma:** Por hacer: Hacer publicaciones en foro: 1  
+
+---
+
+### Título de la intervención:
+**Dignidad ontológica, interdependencia de derechos fundamentales y legitimidad sustantiva del Estado constitucional de Derecho**
+
+---
+
+### Estimada docente titular y compañeros de grupo:
+
+Comparto mi aportación reflexiva y dogmática a las preguntas detonadoras planteadas para esta Semana 6:
+
+#### 1. ¿Qué son los derechos humanos?
+Desde una perspectiva iusfundamental y garantista contemporánea (Ferrajoli, 2001; Bobbio, 1991), los derechos humanos son aquellas facultades, libertades y prerrogativas inherentes a la condición ontológica de toda persona humana por el mero hecho de existir, cuya titularidad universal no depende de concesiones graciosas del poder estatal, sino que antecede y limita a la autoridad política.
+
+En el ordenamiento jurídico mexicano, a partir de la paradigmática reforma constitucional de 10 de junio de 2011 al artículo 1.º de la CPEUM, los derechos humanos han dejado de concebirse como simples "garantías individuales otorgadas" para ser formalmente **reconocidos** e integrados en un bloque de regularidad constitucional supremo (compuesto por la Constitución y los tratados internacionales de los que el Estado mexicano sea parte, conforme a la Jurisprudencia P./J. 20/2014 de la SCJN). Asimismo, están regidos de manera inexcusable por los principios de **universalidad, interdependencia, indivisibilidad y progresividad**, imponiendo a todas las autoridades del Estado la obligación categórica de promoverlos, respetarlos, protegerlos y garantizarlos.
+
+#### 2. ¿Cuál de los derechos humanos es el más importante?
+Desde el punto de vista de la dogmática constitucional estricta y del principio de **indivisibilidad e interdependencia** (CPEUM, art. 1.º, párrafo tercero), no existe una jerarquía cuantitativa entre derechos humanos: la privación o menoscabo de los derechos civiles o políticos frustra el ejercicio de los derechos económicos, sociales, culturales y ambientales, y viceversa.
+
+Sin embargo, si se analiza la estructura axiológica del sistema, la **Dignidad Humana** constituye el núcleo fundacional, principio matriz y derecho sustantivo supremo del cual dimanan todos los demás derechos fundamentales (SCJN, Jurisprudencia 1a./J. 37/2016). En armonía con la dignidad, el **derecho a la vida** opera como presupuesto fáctico y ontológico indispensable, pues sin la existencia biológica y digna de la persona ningún otro derecho puede ser ejercido. En síntesis, más que hablar de un derecho "más importante" en sentido excluyente, la dignidad de la persona opera como la premisa axiológica inderogable que da sentido y coherencia a la totalidad del catálogo iusfundamental.
+
+#### 3. ¿Cuál es la relación de los derechos humanos con el Estado de Derecho?
+La relación entre los derechos humanos y el Estado de Derecho es de **co-originariedad, recíproca necesidad y justificación sustantiva**. 
+
+Históricamente, el Estado de Derecho surgió en su vertiente formal o legalista como el "gobierno de las leyes" frente al arbitrio de los gobernantes (*rule of law*). No obstante, en la teoría constitucional moderna (el Estado constitucional y democrático de Derecho), el Estado no se legitima meramente por el respeto a los procedimientos formales de creación normativa, sino por su contenido sustantivo: **un Estado sólo es verdaderamente de Derecho en la medida en que somete todo el ejercicio de sus poderes a la protección y garantía efectiva de los derechos humanos**.
+
+Los derechos humanos operan simultáneamente como:
+1. **Límite negativo infranqueable** al poder estatal, vedando cualquier actuación arbitraria que lesione la esfera de autonomía de la persona (la "esfera de lo indecidible" de Ferrajoli).
+2. **Mandato positivo y directriz funcional** para las políticas públicas y la administración de justicia, obligando al Estado a remover los obstáculos fácticos que impiden la igualdad real.
+3. **Criterio de legitimidad política y democrática**, puesto que la soberanía popular no puede transgredir los derechos fundamentales sin desvirtuar su propia naturaleza democrática.
+
+---
+
+### Referencias:
+- Bobbio, N. (1991). *El tiempo de los derechos*. Editorial Sistema.
+- Carbonell, M. (2019). *Teoría de los derechos fundamentales y justicia constitucional*. Editorial Trotta.
+- Ferrajoli, L. (2001). *Derechos y garantías: La ley del más débil*. Editorial Trotta.
+- Suprema Corte de Justicia de la Nación. (2014). Jurisprudencia P./J. 20/2014 (10a.): *Derechos humanos contenidos en la Constitución y en los tratados internacionales. Constituyen el parámetro de control de regularidad constitucional*. Gaceta del Semanario Judicial de la Federación, Libro 5, Tomo I, p. 202.
+- Suprema Corte de Justicia de la Nación. (2016). Jurisprudencia 1a./J. 37/2016 (10a.): *Dignidad humana. Constituye una norma jurídica que consagra un derecho fundamental*. Gaceta del Semanario Judicial de la Federación, Libro 33, Tomo II, p. 633.
+
+---
+*Nota de soberanía institucional: Documento elaborado bajo el principio de soberanía del usuario. Pendiente de validación explícita para su publicación en el aula virtual.*

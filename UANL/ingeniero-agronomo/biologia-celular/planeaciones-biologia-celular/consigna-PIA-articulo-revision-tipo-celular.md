@@ -7,7 +7,7 @@
 - **Unidad de Aprendizaje:** Biología celular.
 - **Clave de plataforma:** REF#261013755061 (Plataforma Nexus UANL).
 - **Docente titular:** Dr. Miguel Ángel Dector Carrillo.
-- **Estudiante matriculado:** Carlos Mauricio Carvajal Coronado (Matrícula: 1977875).
+- **Estudiante matriculado:** Diego de la Cruz.
 - **Fechas de disponibilidad en Nexus:** Desde 2026/FEB/04 08:00 A. M. hasta 2026/JUL/06 07:59 A. M.
 - **Ponderación oficial:** 35 puntos (35% de la evaluación sumativa global del curso).
 - **Modalidad reglamentaria:** En equipo (equipos de 6 a 9 estudiantes) con exposición oral síncrona mediante Microsoft Teams.
@@ -112,9 +112,11 @@ El producto principal consiste en un artículo formal de revisión bibliográfic
 ## Reglas de no-invención y estado de equipo en Nexus
 
 1. **Estado en Nexus:**
-   La consulta síncrona en Nexus indica expresamente: *"No has sido asignado a un Equipo"*. Para preservar la veracidad documental y no inventar integrantes ficticios, el reporte se identifica formalmente con la matrícula y nombre del estudiante matriculado: **Carlos Mauricio Carvajal Coronado (1977875)**, consignando en el membrete: `Equipo: Por confirmar / Célula Base`, preparado para anexar coautores en caso de integración por parte del docente.
+   La consulta síncrona en Nexus indica expresamente: *"No has sido asignado a un Equipo"*. Para preservar la veracidad documental y no inventar integrantes ficticios, el reporte se identifica formalmente con la matrícula y nombre del estudiante matriculado: **Diego de la Cruz **, consignando en el membrete: `Equipo: Por confirmar / Célula Base`, preparado para anexar coautores en caso de integración por parte del docente.
 2. **Modelo celular desarrollado:**
    Conforme a la consigna general del curso orientada a plantas, animales domésticos y microorganismos en homeostasis, y considerando el perfil de la Ingeniería en Agronomía, se adopta como tipo celular designado la **Célula Oclusiva o Guarda del Estoma (*Guard Cell*)**, una de las células más especializadas y cruciales en la fisiología vegetal, transporte iónico, homeostasis hídrica y transducción de señales por fitohormonas ($ABA$). Como complemento comparativo transversal para el cumplimiento del estándar de tejidos animales, se incorpora el contraste ultraestructural con el **Hepatocito de mamífero doméstico**.
 3. **Trazabilidad:**
    Todas las referencias primarias y libros de consulta deben radicarse en `referencias-biologia-celular/` y registrarse en el archivo bibliográfico `biologia-celular.bib`.
+
+
 

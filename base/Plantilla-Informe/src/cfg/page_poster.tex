@@ -1,0 +1,40 @@
+% Template:     Poster LaTeX
+% Documento:    Configuración de página
+% Versión:      DEV
+% Codificación: UTF-8
+%
+% Autor: Pablo Pizarro R.
+%        pablo@ppizarror.com
+%
+% Manual template: [https://latex.ppizarror.com/poster]
+% Licencia MIT:    [https://opensource.org/licenses/MIT]
+
+\newcommand{\templatePagecfg}{%
+	% -------------------------------------------------------------------------
+	% Numeración de páginas
+	% -------------------------------------------------------------------------
+	\setcounter{page}{1}
+	\setcounter{footnote}{0}
+
+	% -------------------------------------------------------------------------
+	% Márgenes de tablas
+	% -------------------------------------------------------------------------
+	\resettablecellpadding
+	
+	% -------------------------------------------------------------------------
+	% Se define el punto decimal
+	% -------------------------------------------------------------------------
+	\ifthenelse{\equal{\pointdecimal}{true}}{%
+		\decimalpoint}{%
+	}
+	
+	% -------------------------------------------------------------------------
+	% Definición de nombres de objetos
+	% -------------------------------------------------------------------------
+	\renewcommand{\appendixname}{\nameltappendixsection}
+	\renewcommand{\figurename}{\nameltwfigure}
+	\renewcommand{\lstlistingname}{\nameltwsrc}
+	\renewcommand{\refname}{\namereferences}
+	\renewcommand{\bibname}{\namereferences}
+	\renewcommand{\tablename}{\nameltwtable}
+}

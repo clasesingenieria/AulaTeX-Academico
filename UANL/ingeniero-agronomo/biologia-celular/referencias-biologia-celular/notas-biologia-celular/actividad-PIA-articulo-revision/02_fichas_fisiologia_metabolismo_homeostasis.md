@@ -75,3 +75,5 @@ $$\Psi_w = \Psi_s + \Psi_p$$
 | **Metabolismo de reserva** | Conversión diurna reversible de almidón $\leftrightarrow$ sacarosa/malato. | Biosíntesis y degradación de glucógeno mediante glucógeno sintasa y glucógeno fosforilasa. |
 | **Destoxificación metabólica** | Conjugación vacuolar vía glutatión S-transferasas (GST) y secuestro en vacuola. | Fase I (citocromo P450 monooxigenasas) y Fase II (glucuronidación, sulfatación) en REL. |
 
+
+

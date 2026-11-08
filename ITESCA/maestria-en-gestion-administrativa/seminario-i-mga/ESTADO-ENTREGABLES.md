@@ -1,3 +1,22 @@
+## Tarea 15 preparada el 07/11/2026 (Vencimiento: 8 de noviembre de 2026)
+
+- **Word acumulativo oficial:** [Tarea15_DeLaCruzMunoz.docx](entregas-seminario-i/Tarea15_DeLaCruzMunoz.docx), 1.3 MB, generado y validado con `generar_t15_2026-11-07.py`. Incorpora:
+  - **Capítulo 8 completo:** *Métodos o procedimientos* (8.1 Tipo y diseño explicativo-descriptivo no experimental de estudio de caso único documental; 8.2 Población de corpus normativo y muestra de 42 expedientes indispensables y 18 complementarios; 8.3 Instrumentos CAVN-MGA con $CVC = 0.91$ y GAD-CT con confiabilidad intercodificador Kappa $= 0.84$; 8.4 Procedimiento en 5 fases secuenciales; 8.5 Consideraciones éticas con NDA, LFPDPPP y anonimización).
+  - **Correcciones retroalimentación docente (T12, T13, T14):**
+    - En 5.4: Regla explícita de contraste documental no causal mediante matrices de cotejo, análisis de brechas frente al IMA y triangulaciones de concordancia.
+    - En 6.2: Diferenciación neta entre documentación indispensable (contratos de adhesión, pólizas de seguro de pasajeros, manuales tarifarios, constancias del IMA) y documentación secundaria (prensa, foros gremiales).
+    - En 7.1: Demarcación territorial del municipio de Monterrey como sede corporativa frente a los 18 municipios del Área Metropolitana de Monterrey.
+    - En 7.4: Clasificación del art. 82 establecida como propuesta técnica sujeta a la determinación administrativa definitiva del IMA.
+    - Referencias añadidas en APA 7: Baena Paz (2017), Cerda (1998), Ley General de Movilidad (2022), LFPDPPP (2010), Rojas Soriano (2013), Tamayo (2002), Teece (2007), Williamson (1985), Yin (2018).
+  - **Anexos actualizados:** Anexo 1 (Matriz de consistencia metodológica) y Anexo 2 (Círculo de Covey).
+  - **Portada oficial:** Actualizada con fecha 8 de noviembre de 2026 y título oficial.
+- **Reporte institucional LaTeX/PDF sincronizado:** [reporte-seminario-i-Actividad-15.pdf](reporte-seminario-i-Actividad-15.pdf) (640 KB), 27 páginas acumulativas compiladas limpiamente con XeLaTeX (`RC: 0`).
+- **PDF de entrega de respaldo:** [Tarea15_DeLaCruzMunoz.pdf](entregas-seminario-i/Tarea15_DeLaCruzMunoz.pdf).
+
+## Tarea 14 acumulativa (1 de noviembre de 2026)
+
+[Word acumulativo T14](entregas-seminario-i/Tarea14_DeLaCruzMunoz.docx) y [reporte PDF](reporte-seminario-i-Actividad-14.pdf). Capítulo 7 de Marco Teórico incorporado con 1,600 palabras.
+
 ## Tarea 12 enviada el 18/10/2026
 
 [Word acumulativo T12](entregas-seminario-i/Tarea12_DeLaCruzMunoz.docx), 34 paginas, **Enviado para calificar**, sin calificar. Entregado el 18/10/2026 a las 00:04, hora del aula, 23 horas 54 minutos antes del cierre. Un unico Word; descarga remota coincidente por SHA-256. Incorpora las observaciones de T11 (6.70/7.00), delimita Monterrey, refuerza fundamento y originalidad con un antecedente mexicano verificado y precisa permisos de acceso. Hipotesis, matrices y Covey coherentes. [Cotejo y recibo](referencias-seminario-i/notas-seminario-i/actividad-12-hipotesis/README.md). PDF de Word de 34 paginas y reporte de raiz de 27 paginas: solo revision local, no enviados.

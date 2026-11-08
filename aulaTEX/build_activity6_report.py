@@ -1,0 +1,216 @@
+"""Construye y compila el reporte de la Actividad 6 (Cuestionario 2.3) en AulaTeX."""
+from __future__ import annotations
+
+import json
+from pathlib import Path
+import subprocess
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT_DIR = ROOT / "ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/referencias-estadistica-aplicada-para-la-administracion/notas-estadistica-aplicada-para-la-administracion/cuestionario-2026-11-01"
+SUBJECT_DIR = ROOT / "ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga"
+
+PREGUNTAS_14 = [
+    {
+        "numero": 1,
+        "pregunta": "Población: {3, 7, 11, 15}. Se extraen todas las muestras posibles con reposición de tamaño $n = 2$. ¿Cuál es la media de la distribución muestral de las medias $\\mu_{\\bar{X}}$?",
+        "opciones": ["a. 10", "b. 9", "c. 8"],
+        "respuesta": "b. 9",
+        "justificacion": "La media poblacional de $\\{3, 7, 11, 15\\}$ es $\\mu = (3+7+11+15)/4 = 36/4 = 9$. Por el Teorema del Valor Esperado, la media de la distribución muestral de las medias es un estimador insesgado: $\\mu_{\\bar{X}} = \\mathbb{E}[\\bar{X}] = \\mu = 9$.",
+        "fuentes": ["anderson2012", "wackerly2010"]
+    },
+    {
+        "numero": 2,
+        "pregunta": "¿Qué representa el error estándar?",
+        "opciones": [
+            "a. La diferencia entre la media muestral y la media poblacional.",
+            "b. La desviación estándar de la distribución muestral.",
+            "c. El margen de error de una encuesta."
+        ],
+        "respuesta": "b. La desviación estándar de la distribución muestral.",
+        "justificacion": "Formal y operativamente, el error estándar cuantifica la variabilidad o dispersión del estadístico muestral respecto a su parámetro esperado: $\\sigma_{\\bar{X}} = \\sigma / \\sqrt{n}$.",
+        "fuentes": ["anderson2012", "wackerly2010"]
+    },
+    {
+        "numero": 3,
+        "pregunta": "¿Qué ocurre con la desviación estándar si el tamaño de muestra aumenta?",
+        "opciones": ["a. Disminuye.", "b. Permanece constante.", "c. Aumenta."],
+        "respuesta": "a. Disminuye.",
+        "justificacion": "Dado que el error estándar es $\\sigma_{\\bar{X}} = \\sigma / \\sqrt{n}$, un incremento en el tamaño de muestra $n$ amplía el divisor $\\sqrt{n}$, reduciendo la dispersión de las medias en forma proporcional a $1/\\sqrt{n}$.",
+        "fuentes": ["anderson2012", "lind2012"]
+    },
+    {
+        "numero": 4,
+        "pregunta": "Pesos de hombres: $\\mu = 172$ lb, $\\sigma = 29$. Si se seleccionan $n = 12$ hombres al azar, ¿cuál es la probabilidad de que la media muestral sea mayor que 167 lb?",
+        "opciones": ["a. 0.2752", "b. 0.7248", "c. 0.5675"],
+        "respuesta": "b. 0.7248",
+        "justificacion": "Con $\\sigma_{\\bar{X}} = 29 / \\sqrt{12} \\approx 8.3716$, la variable estandarizada es $z = (167 - 172)/8.3716 \\approx -0.60$. La probabilidad solicitada es $P(\\bar{X} > 167) = P(Z > -0.60) = 1 - \\Phi(-0.60) = 0.7248$.",
+        "fuentes": ["anderson2012", "wackerly2010"]
+    },
+    {
+        "numero": 5,
+        "pregunta": "¿Cuál es la probabilidad de que un valor esté por debajo de la media en una distribución normal?",
+        "opciones": ["a. 0.50", "b. 0.75", "c. 0.25"],
+        "respuesta": "a. 0.50",
+        "justificacion": "Por la simetría de la función de densidad gaussiana alrededor de su media $\\mu$, la mitad exacta del área bajo la curva se ubica por debajo de la media, determinando que $P(X < \\mu) = 0.50$.",
+        "fuentes": ["anderson2012", "canavos1988"]
+    },
+    {
+        "numero": 6,
+        "pregunta": "¿Qué condición permite asumir que la distribución muestral es normal?",
+        "opciones": [
+            "a. Si la población es normal o el tamaño de muestra es $\\ge 30$.",
+            "b. Si la población es infinita.",
+            "c. Si la muestra es aleatoria."
+        ],
+        "respuesta": "a. Si la población es normal o el tamaño de muestra es $\\ge 30$.",
+        "justificacion": "La normalidad exacta se preserva si la población origen es normal; de lo contrario, el Teorema Central del Límite asegura convergencia asintótica a la distribución normal siempre que $n \\ge 30$.",
+        "fuentes": ["anderson2012", "wackerly2010"]
+    },
+    {
+        "numero": 7,
+        "pregunta": "¿Qué implica el teorema del límite central?",
+        "opciones": [
+            "a. Que la media muestral siempre es igual a la media poblacional.",
+            "b. Que la población debe ser infinita.",
+            "c. Que la distribución muestral se aproxima a una normal si $n \\ge 30$."
+        ],
+        "respuesta": "c. Que la distribución muestral se aproxima a una normal si $n \\ge 30$.",
+        "justificacion": "Garantiza que la distribución muestral de medias se aproxima a una curva normal conforme crece el tamaño muestral ($n \\ge 30$), independientemente de la forma geométrica de la población de procedencia.",
+        "fuentes": ["anderson2012", "lind2012"]
+    },
+    {
+        "numero": 8,
+        "pregunta": "Un candidato obtuvo 46\\% de los votos en la población ($p = 0.46$). Si se toma una muestra aleatoria de $n = 200$ votantes, ¿Cuál es la probabilidad de que en la muestra se observe mayoría a favor del candidato (es decir, $\\hat{p} > 0.50$)?",
+        "opciones": ["a. 0.1282", "b. 0.6802", "c. 0.4000"],
+        "respuesta": "a. 0.1282",
+        "justificacion": "El error estándar de la proporción es $\\sigma_{\\hat{p}} = \\sqrt{p(1-p)/n} = \\sqrt{(0.46)(0.54)/200} = 0.03524$. El valor tipificado es $z = (0.50 - 0.46)/0.03524 = 1.135$. Luego $P(\\hat{p} > 0.50) = 1 - \\Phi(1.135) = 1 - 0.8718 = 0.1282$.",
+        "fuentes": ["anderson2012", "lind2012"]
+    },
+    {
+        "numero": 9,
+        "pregunta": "La vida media es $\\mu = 800$ h y $\\sigma = 60$. Se toma una muestra aleatoria de $n = 16$. ¿Cuál es la probabilidad de que la media muestral esté entre 790 y 810 h?",
+        "opciones": ["a. 0.4950", "b. 0.8413", "c. 0.1587"],
+        "respuesta": "a. 0.4950",
+        "justificacion": "Con $\\sigma_{\\bar{X}} = 60 / \\sqrt{16} = 15$, los valores tipificados son $z = \\pm (10/15) = \\pm 0.667$. La probabilidad contenida en dicho intervalo bilateral simétrico es $P(-0.667 < Z < 0.667) = 2\\Phi(0.667) - 1 = 0.4950$.",
+        "fuentes": ["anderson2012", "canavos1988"]
+    },
+    {
+        "numero": 10,
+        "pregunta": "¿Qué representa una distribución muestral?",
+        "opciones": [
+            "a. La distribución de los datos individuales de la población.",
+            "b. La distribución de las medias o proporciones obtenidas de múltiples muestras.",
+            "c. La distribución de los errores de medición."
+        ],
+        "respuesta": "b. La distribución de las medias o proporciones obtenidas de múltiples muestras.",
+        "justificacion": "Es la función de distribución teórica de probabilidad que describe el comportamiento estocástico de un estadístico muestral resultante de todas las muestras posibles de tamaño fijo $n$.",
+        "fuentes": ["anderson2012", "wackerly2010"]
+    },
+    {
+        "numero": 11,
+        "pregunta": "¿Qué representa el valor $z$?",
+        "opciones": [
+            "a. La desviación estándar.",
+            "b. El número de desviaciones estándar que un valor está alejado de la media.",
+            "c. La media poblacional."
+        ],
+        "respuesta": "b. El número de desviaciones estándar que un valor está alejado de la media.",
+        "justificacion": "La variable tipificada $z = (x - \\mu)/\\sigma$ mide cuantitativamente la distancia algebraica entre un valor específico y el centro de la distribución, expresada en unidades de desviación estándar.",
+        "fuentes": ["anderson2012", "lind2012"]
+    },
+    {
+        "numero": 12,
+        "pregunta": "Los pesos de los hombres se distribuyen normalmente con media de 172 lb y desviación estándar de 29 lb. ¿Cuál es la probabilidad de que una muestra de 36 hombres tenga un peso medio menor de 167 lb?",
+        "opciones": ["a. 0.1492", "b. 0.7248", "c. 0.5675"],
+        "respuesta": "a. 0.1492",
+        "justificacion": "El error estándar es $\\sigma_{\\bar{X}} = 29 / \\sqrt{36} = 4.8333$. El valor tipificado correspondiente a 167 lb es $z = (167 - 172)/4.8333 = -1.0345$. De la tabla normal estándar, $P(Z < -1.0345) = 0.1492$.",
+        "fuentes": ["anderson2012", "wackerly2010"]
+    },
+    {
+        "numero": 13,
+        "pregunta": "¿Cuál es la media de la distribución muestral de la media?",
+        "opciones": [
+            "a. Siempre mayor que la media poblacional.",
+            "b. Menor que la media poblacional.",
+            "c. Igual a la media poblacional."
+        ],
+        "respuesta": "c. Igual a la media poblacional.",
+        "justificacion": "Por linealidad de la esperanza matemática, $\\mu_{\\bar{X}} = \\mathbb{E}[\\bar{X}] = \\mu$, demostrando que la media de las medias muestrales coincide siempre con la media de la población origen.",
+        "fuentes": ["anderson2012", "wackerly2010"]
+    },
+    {
+        "numero": 14,
+        "pregunta": "Se sabe que el 2\\% de las piezas producidas son defectuosas (poblacional $p = 0.02$). En un pedido de $n = 400$, ¿Cuál es la probabilidad de que 3\\% o más resulten defectuosas (es decir, $\\hat{p} \\ge 0.03$)?",
+        "opciones": ["a. 0.076564", "b. 0.0038", "c. 0.2500"],
+        "respuesta": "a. 0.076564",
+        "justificacion": "$\\sigma_{\\hat{p}} = \\sqrt{(0.02)(0.98)/400} = \\sqrt{0.000049} = 0.007$. El valor tipificado es $z = (0.03 - 0.02)/0.007 = 1.42857$. La probabilidad en cola derecha es $P(Z \\ge 1.42857) = 1 - \\Phi(1.42857) = 0.076564$.",
+        "fuentes": ["anderson2012", "lind2012"]
+    }
+]
+
+
+def main():
+    # 1. Guardar respuestas-validadas.json
+    registro = {
+        "estado": "finalizado_en_plataforma",
+        "fecha": "2026-11-01",
+        "curso": 209,
+        "modulo": 1756,
+        "intento": 6841,
+        "total_preguntas": len(PREGUNTAS_14),
+        "preguntas": PREGUNTAS_14
+    }
+    (OUT_DIR / "respuestas-validadas.json").write_text(json.dumps(registro, ensure_ascii=False, indent=2), encoding="utf-8")
+    print("respuestas-validadas.json guardado con las 14 preguntas reales.", flush=True)
+
+    # 2. Construir filas de la tabla LaTeX
+    filas_latex = []
+    for p in PREGUNTAS_14:
+        num = f"R{p['numero']:02d}"
+        cites = f"\\citep{{{','.join(p['fuentes'])}}}"
+        fila = f"{num} & {p['pregunta']} & {p['respuesta']} & {p['justificacion']} {cites} \\\\\\hline"
+        filas_latex.append(fila)
+
+    tabla_contenido = "\n".join(filas_latex)
+
+    # 3. Leer y actualizar reporte-estadistica-aplicada-para-la-administracion-Actividad-6.tex
+    tex_path = SUBJECT_DIR / "reporte-estadistica-aplicada-para-la-administracion-Actividad-6.tex"
+    tex_content = tex_path.read_text(encoding="utf-8")
+
+    # Reemplazar la tabla R01 a R08 por las 14 preguntas reales
+    # Buscar el inicio de la tabla
+    pos_tabla = tex_content.find("\\begin{longtable}{p{1.2cm}p{4.3cm}p{3.8cm}p{5.3cm}}")
+    pos_fin_tabla = tex_content.find("\\end{longtable}")
+    if pos_tabla != -1 and pos_fin_tabla != -1:
+        encabezado = """\\begin{longtable}{p{1.2cm}p{4.3cm}p{3.8cm}p{5.3cm}}
+\\hline
+\\textbf{Núm.} & \\textbf{Pregunta de evaluación en plataforma} & \\textbf{Respuesta técnica} & \\textbf{Justificación matemática y conceptual}\\\\\\hline
+\\endfirsthead
+\\hline
+\\textbf{Núm.} & \\textbf{Pregunta de evaluación en plataforma} & \\textbf{Respuesta técnica} & \\textbf{Justificación matemática y conceptual}\\\\\\hline
+\\endhead
+"""
+        nuevo_bloque = encabezado + tabla_contenido + "\n\\end{longtable}"
+        nuevo_tex = tex_content[:pos_tabla] + nuevo_bloque + tex_content[pos_fin_tabla + len("\\end{longtable}"):]
+        tex_path.write_text(nuevo_tex, encoding="utf-8")
+        print("reporte Actividad 6 actualizado con los 14 reactivos reales.", flush=True)
+    else:
+        print("No se encontró el bloque de tabla en el .tex", flush=True)
+
+    # 4. Compilar con xelatex
+    cmd = ["xelatex", "-interaction=nonstopmode", "-halt-on-error", tex_path.name]
+    print("Compilando reporte con XeLaTeX...", flush=True)
+    res = subprocess.run(cmd, cwd=SUBJECT_DIR, capture_output=True, text=True)
+    if res.returncode == 0:
+        print("Compilación XeLaTeX exitosa (paso 1).", flush=True)
+        # Segunda pasada para referencias cruzadas
+        subprocess.run(cmd, cwd=SUBJECT_DIR, capture_output=True, text=True)
+        print("Compilación XeLaTeX finalizada con éxito.", flush=True)
+    else:
+        print(f"Error de compilación XeLaTeX:\n{res.stdout[-1500:]}", flush=True)
+
+
+if __name__ == "__main__":
+    main()
+

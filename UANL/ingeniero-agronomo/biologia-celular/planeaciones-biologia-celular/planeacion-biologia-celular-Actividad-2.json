@@ -1,0 +1,325 @@
+{
+  "schema_version": "1.0.0",
+  "plan_id": "pca-uanl-biocel-actividad-2",
+  "revision": 1,
+  "identity": {
+    "institution": "UANL",
+    "program": "Ingeniero Agrónomo",
+    "subject_id": "biologia-celular",
+    "subject_title": "Biología Celular",
+    "offering_id": "REF-261013755061",
+    "period": "03/AGOSTO/2026 al 18/DICIEMBRE/2026",
+    "modality": "hybrid"
+  },
+  "sources": [
+    {
+      "id": "src-nexus-extraccion",
+      "kind": "platform",
+      "authority": "instructional",
+      "title": "extraccion_nexus.json",
+      "url": "https://plataformanexus.uanl.mx",
+      "path": "planeaciones-biologia-celular/extraccion_nexus.json",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "captured_at": "2026-10-18",
+      "media_type": "application/json"
+    }
+  ],
+  "curriculum": {
+    "purpose": "Distinguir la estructura y fisiología de células en homeostasis para fundamentar tejidos y órganos en agronomía.",
+    "competencies": [
+      {
+        "id": "comp-1",
+        "text": "Reconocer las bases moleculares y celulares de los organismos vivos."
+      }
+    ],
+    "outcomes": [
+      {
+        "id": "out-1",
+        "text": "Diferenciar sistemas celulares y acelulares con relevancia agronómica."
+      }
+    ],
+    "topics": [
+      {
+        "id": "top-1",
+        "text": "Evidencia 2. Atlas de tipos celulares y acelulares",
+        "children": []
+      }
+    ]
+  },
+  "activities": [
+    {
+      "id": "actividad-2",
+      "title": "Evidencia 2. Atlas de tipos celulares y acelulares",
+      "role": "assessment",
+      "platform": {
+        "name": "Nexus UANL",
+        "course_id": "REF#261013755061",
+        "module_ids": [
+          "Fase-2"
+        ]
+      },
+      "unit_id": "Fase-2",
+      "weeks": [
+        4,
+        5
+      ],
+      "outcome_ids": [
+        "out-1"
+      ],
+      "topic_ids": [
+        "top-1"
+      ],
+      "cognitive": {
+        "taxonomy": "Bloom",
+        "level": "aplicacion",
+        "verb": "Interpretar",
+        "object": "micrografías ópticas y electrónicas de tejidos vegetales y animales",
+        "conditions": "mediante atlas morfológico estructurado",
+        "observable_evidence": "reporte-biologia-celular-Actividad-2.pdf",
+        "justification": "Desarrolla habilidades diagnósticas en histología vegetal y animal."
+      },
+      "instruction": "Desarrollar un atlas descriptivo con micrografías anotadas de microscopía óptica y electrónica, contrastando tipos celulares y acelulares.",
+      "requirements": [
+        {
+          "id": "req-1",
+          "text": "Incorporación de micrografías de alta resolución con escalas métricas"
+        },
+        {
+          "id": "req-2",
+          "text": "Identificación de organelos y estructuras celulares clave"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q-1",
+          "context": "Microscopía",
+          "text": "¿Cómo se diferencian las estructuras observadas con microscopía de campo claro frente a transmisión electrónica?",
+          "requirement_ids": [
+            "req-1"
+          ]
+        }
+      ],
+      "sequence": [
+        {
+          "id": "step-1",
+          "order": 1,
+          "phase": "preparation",
+          "action": "Revisión bibliográfica de fuentes indexadas y planeación Nexus",
+          "inputs": [
+            "extraccion_nexus.json",
+            "bibliografia-ampliada.bib"
+          ],
+          "output": "Fichas conceptuales y parámetros de rúbrica",
+          "completion_check": "Fichas completadas y validadas",
+          "requirement_ids": [
+            "req-1"
+          ],
+          "depends_on": []
+        },
+        {
+          "id": "step-2",
+          "order": 2,
+          "phase": "construction",
+          "action": "Redacción técnica en LaTeX y maquetación con XeLaTeX",
+          "inputs": [
+            "Fichas conceptuales",
+            "template.tex"
+          ],
+          "output": "Fuente .tex y compendio tipográfico",
+          "completion_check": "Documento LaTeX estructurado",
+          "requirement_ids": [
+            "req-1"
+          ],
+          "depends_on": [
+            "step-1"
+          ]
+        },
+        {
+          "id": "step-3",
+          "order": 3,
+          "phase": "review",
+          "action": "Compilación reproducible y verificación de citas APA 7",
+          "inputs": [
+            "Fuente .tex",
+            "biologia-celular.bib"
+          ],
+          "output": "PDF certificado y verificado",
+          "completion_check": "Compilación limpia con rc=0",
+          "requirement_ids": [
+            "req-1"
+          ],
+          "depends_on": [
+            "step-2"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "id": "res-1",
+          "source_id": "src-nexus-extraccion",
+          "purpose": "Consigna instruccional y rúbrica oficial de Nexus",
+          "required": true,
+          "access": "local",
+          "rights": "UANL"
+        }
+      ],
+      "assessment": {
+        "kind": "summative",
+        "scale_total": 100.0,
+        "weight": 6.0,
+        "weight_unit": "pts",
+        "criteria": [
+          {
+            "id": "crit-1",
+            "text": "Rigor conceptual y fundamentación biológica",
+            "points": 50.0,
+            "descriptors": [
+              {
+                "level": "Excelente",
+                "description": "Dominio exhaustivo del proceso celular",
+                "points": 50.0
+              }
+            ],
+            "requirement_ids": [
+              "req-1"
+            ]
+          },
+          {
+            "id": "crit-2",
+            "text": "Calidad editorial y aparato crítico APA 7",
+            "points": 50.0,
+            "descriptors": [
+              {
+                "level": "Excelente",
+                "description": "Formato institucional AulaTeX sin erratas",
+                "points": 50.0
+              }
+            ],
+            "requirement_ids": [
+              "req-1"
+            ]
+          }
+        ],
+        "editorial_checks": [
+          "Sin citas huérfanas",
+          "Subtítulo entre 28 y 68 caracteres",
+          "Sin desbordes hbox"
+        ]
+      },
+      "products": [
+        {
+          "id": "prod-act2",
+          "kind": "atlas",
+          "recipient": "Nexus UANL",
+          "editable_format": "application/x-tex",
+          "submission_format": "application/pdf",
+          "structure": [
+            "Introducción metodológica",
+            "Láminas histológicas",
+            "Conclusiones"
+          ],
+          "length": "4 páginas",
+          "filename_pattern": "reporte-biologia-celular-Actividad-2.pdf",
+          "accessibility": "PDF/A conforme",
+          "requirement_ids": [
+            "req-1"
+          ],
+          "paths": {
+            "editable": "reporte-biologia-celular-Actividad-2.tex",
+            "delivery": "entregas-biologia-celular/reporte-biologia-celular-Actividad-2.pdf"
+          }
+        }
+      ],
+      "calendar": {
+        "opens_at": "2026-08-10",
+        "expected_at": "2026-11-01",
+        "due_at": "2026-11-20",
+        "closes_at": "2026-12-05",
+        "timezone": "America/Monterrey",
+        "literal": "Semanas [4, 5]"
+      },
+      "policies": {
+        "ai": "Declaración transparente de asistencia tecnológica en nota al pie",
+        "integrity": "Cero plagio; estricta verificación de literatura científica indexada",
+        "collaboration": "Individual",
+        "citation": "APA 7ma edición",
+        "attempts": 1,
+        "late_submission": "Penalización conforme a reglamento general de evaluaciones UANL",
+        "accessibility": "PDF estructurado de alto contraste",
+        "privacy": "Resguardo estricto de matrícula y datos personales",
+        "exceptions": []
+      },
+      "dependencies": [],
+      "alignment": [
+        {
+          "outcome_id": "out-1",
+          "requirement_ids": [
+            "req-1"
+          ],
+          "step_ids": [
+            "step-1",
+            "step-2",
+            "step-3"
+          ],
+          "product_ids": [
+            "prod-act2"
+          ],
+          "criterion_ids": [
+            "crit-1",
+            "crit-2"
+          ]
+        }
+      ],
+      "bindings": {
+        "extractor_directory": "planeaciones-biologia-celular",
+        "notes_directory": "referencias-biologia-celular/notas-biologia-celular",
+        "research_directory": "referencias-biologia-celular"
+      }
+    }
+  ],
+  "field_status": [
+    {
+      "path": "/identity/subject_id",
+      "state": "confirmed",
+      "reason": null,
+      "evidence": [
+        {
+          "source_id": "src-nexus-extraccion",
+          "locator": "slug",
+          "quoted_text": "biologia-celular"
+        }
+      ],
+      "alternatives": []
+    }
+  ],
+  "review": {
+    "state": "ready",
+    "reviewed_at": "2026-11-06",
+    "reviewer_role": "docente-titular",
+    "critical_gaps": [],
+    "semantic_validation": "passed"
+  },
+  "artifact_contract": {
+    "version": "1.1",
+    "paths_relative_to_subject": {
+      "plans": "planeaciones-biologia-celular",
+      "references": "referencias-biologia-celular",
+      "notes": "referencias-biologia-celular/notas-biologia-celular",
+      "assets": "assets-biologia-celular",
+      "deliveries": "entregas-biologia-celular",
+      "extractions": "extractor-aulatex",
+      "research": "investigacion-aulatex"
+    },
+    "deliverables_directory": "entregas-biologia-celular",
+    "source_directory": "."
+  },
+  "extensions": {
+    "codigo_referencia": "REF#261013755061",
+    "docente": "Dr. Miguel Ángel Dector Carrillo",
+    "estudiante": "Diego de la Cruz",
+    "modalidad": "Competencias / Mixta",
+    "fase_curricular": "Fase 2: La célula a través del microscopio"
+  }
+}
+
+

@@ -2,6 +2,7 @@
 
 \def\documenttitle {Aplicaciones del álgebra lineal}
 \def\documentsubtitle {Actividad 1, Fase 1: mapa cognitivo de telaraña}
+\def\documenttitlehf {Mapa cognitivo de telaraña: aplicaciones del álgebra lineal}
 \def\documentsubject {Actividad 1 - Álgebra Lineal}
 \def\documentauthor {Equipo de Álgebra Lineal}
 \def\coursename {Álgebra Lineal}
@@ -25,8 +26,12 @@
   \end{tabular}
 }
 
+\AddToHook{file/config.tex/after}{\def\stylecitereferences{custom}}
 \input{template}
+\usepackage[backend=biber,style=apa,natbib=true]{biblatex}
+\addbibresource{UANL/ingeniero-agronomo/algebra-lineal/algebra-lineal.bib}
 \usepackage{pdflscape}
+\usepackage{adjustbox}
 \usepackage{tikz}
 \usetikzlibrary{calc,positioning,shapes.geometric}
 
@@ -38,14 +43,15 @@
   webline/.style={draw=agrogreen!58,line width=0.75pt},
   spoke/.style={draw=soilbrown!75,line width=1.05pt},
   center/.style={circle,draw=agrogreen!90,fill=agrogreen,text=white,
-    font=\bfseries\small,align=center,minimum size=2.6cm,text width=2.15cm},
+    font=\bfseries\small,align=center,minimum size=2.8cm,text width=2.40cm},
   field/.style={rounded corners=4pt,draw=webblue!90,fill=webblue!10,
-    font=\bfseries\scriptsize,align=center,text width=2.45cm,inner sep=4pt},
+    font=\bfseries\scriptsize,align=center,text width=2.65cm,inner sep=4pt},
   detail/.style={rounded corners=3pt,draw=agrogreen!85,fill=agrolight,
-    font=\scriptsize,align=center,text width=3.05cm,inner sep=4pt}
+    font=\scriptsize,align=center,text width=3.40cm,inner sep=4pt}
 }
 
 \begin{document}
+\institutionalWatermark[0.08]{\careerwatermarkimage}
 \templatePortrait
 \templatePagecfg
 \onehalfspacing
@@ -73,42 +79,42 @@ Los vectores reúnen magnitudes ordenadas y las matrices organizan conjuntos de 
 \begin{center}
 {\Large\bfseries Mapa cognitivo de telaraña\par}
 \vspace{0.15cm}
-\begin{adjustbox}{max totalsize={0.94\linewidth}{0.72\textheight},center}
-\begin{tikzpicture}[x=1cm,y=1cm]
-  % Red compacta de tres niveles hexagonales unidos por radios.
-  \foreach \r in {2.7,5.0,7.4}{
+\begin{adjustbox}{max totalsize={0.96\linewidth}{0.74\textheight},center}
+\begin{tikzpicture}[x=1.28cm,y=0.92cm]
+  % Red optimizada de tres niveles hexagonales con balance landscape y cero solapamientos.
+  \foreach \r in {2.9,5.2,7.6}{
     \draw[webline,rounded corners=8pt]
       (90:\r) -- (30:\r) -- (-30:\r) -- (-90:\r) -- (-150:\r) -- (150:\r) -- cycle;
   }
   \foreach \a in {90,30,-30,-90,-150,150}{
-    \draw[spoke] (0,0) -- (\a:7.75);
+    \draw[spoke] (0,0) -- (\a:7.95);
   }
 
   \node[center] at (0,0) {Aplicaciones del\\álgebra lineal\\en la vida cotidiana};
 
-  \node[field] at (90:2.7) {1. Agricultura\\de precisión};
-  \node[detail] at (90:5.0) {Aplicación: estimación de rendimiento y dosis de insumos.};
-  \node[detail] at (90:7.4) {Estudia matrices de datos de suelo, clima y cultivo; ajusta modelos por mínimos cuadrados.};
+  \node[field] at (90:2.9) {1. Agricultura\\de precisión};
+  \node[detail] at (90:5.2) {Aplicación: estimación de rendimiento y dosis de insumos.};
+  \node[detail] at (90:7.6) {Estudia matrices de datos de suelo, clima y cultivo; ajusta modelos por mínimos cuadrados.};
 
-  \node[field] at (30:2.7) {2. Gráficos\\digitales};
-  \node[detail] at (30:5.0) {Aplicación: imágenes, videojuegos, mapas y diseño asistido.};
-  \node[detail] at (30:7.4) {Estudia transformaciones matriciales para rotar, escalar, proyectar y cambiar coordenadas.};
+  \node[field] at (30:2.9) {2. Gráficos\\digitales};
+  \node[detail] at (30:5.2) {Aplicación: imágenes, videojuegos, mapas y diseño asistido.};
+  \node[detail] at (30:7.6) {Estudia transformaciones matriciales para rotar, escalar, proyectar y cambiar coordenadas.};
 
-  \node[field] at (-30:2.7) {3. Navegación y\\posicionamiento};
-  \node[detail] at (-30:5.0) {Aplicación: localización GPS y cálculo de trayectorias.};
-  \node[detail] at (-30:7.4) {Resuelve sistemas de ecuaciones y aproximaciones para estimar posición a partir de mediciones.};
+  \node[field] at (-30:2.9) {3. Navegación y\\posicionamiento};
+  \node[detail] at (-30:5.2) {Aplicación: localización GPS y cálculo de trayectorias.};
+  \node[detail] at (-30:7.6) {Resuelve sistemas de ecuaciones y aproximaciones para estimar posición a partir de mediciones.};
 
-  \node[field] at (-90:2.7) {4. Buscadores y\\recomendaciones};
-  \node[detail] at (-90:5.0) {Aplicación: ordenar páginas y sugerir contenido o productos.};
-  \node[detail] at (-90:7.4) {Estudia matrices de relaciones, vectores propios y factorizaciones para hallar relevancia y similitud.};
+  \node[field] at (-90:2.9) {4. Buscadores y\\recomendaciones};
+  \node[detail] at (-90:5.2) {Aplicación: ordenar páginas y sugerir contenido o productos.};
+  \node[detail] at (-90:7.6) {Estudia matrices de relaciones, vectores propios y factorizaciones para hallar relevancia y similitud.};
 
-  \node[field] at (-150:2.7) {5. Imágenes\\médicas};
-  \node[detail] at (-150:5.0) {Aplicación: reconstrucción y mejora de tomografías e imágenes digitales.};
-  \node[detail] at (-150:7.4) {Modela píxeles y mediciones como vectores; aplica transformaciones y sistemas inversos.};
+  \node[field] at (-150:2.9) {5. Imágenes\\médicas};
+  \node[detail] at (-150:5.2) {Aplicación: reconstrucción y mejora de tomografías e imágenes digitales.};
+  \node[detail] at (-150:7.6) {Modela píxeles y mediciones como vectores; aplica transformaciones y sistemas inversos.};
 
-  \node[field] at (150:2.7) {6. Economía y\\planeación};
-  \node[detail] at (150:5.0) {Aplicación: presupuestos, producción y distribución de recursos.};
-  \node[detail] at (150:7.4) {Representa restricciones y flujos mediante matrices y resuelve combinaciones de variables desconocidas.};
+  \node[field] at (150:2.9) {6. Economía y\\planeación};
+  \node[detail] at (150:5.2) {Aplicación: presupuestos, producción y distribución de recursos.};
+  \node[detail] at (150:7.6) {Representa restricciones y flujos mediante matrices y resuelve combinaciones de variables desconocidas.};
 \end{tikzpicture}
 \end{adjustbox}
 \vspace{0.1cm}
@@ -148,5 +154,8 @@ Vectores y matrices permiten representar información, mientras que los sistemas
 
 Sostengo que el mayor valor del álgebra lineal para la agronomía no radica únicamente en producir resultados numéricos, sino en hacer explícitas las relaciones entre mediciones, recursos y decisiones. Esta postura se apoya en que todo modelo obliga a definir variables y supuestos; como consecuencia, una recomendación de riego, nutrición o manejo debe interpretarse junto con la calidad de los datos y el conocimiento del sistema productivo.
 
-\bibliography{algebra-lineal}
+\newpage\footnote{En la elaboración de este trabajo se utilizaron herramientas de inteligencia artificial como apoyo para la organización estructural y revisión de estilo del texto, conforme a los lineamientos de integridad y ética académica institucional. El análisis conceptual, la verificación de fuentes primarias y la postura sostenida son de autoría del estudiante.}
+
+\clearpage
+\printbibliography[title={Referencias bibliográficas}]
 \end{document}

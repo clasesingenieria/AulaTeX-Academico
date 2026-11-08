@@ -1,0 +1,144 @@
+% !TeX program = xelatex
+\documentclass[10pt,spanish,letterpaper,twocolumn]{article}
+\PassOptionsToPackage{es-noshorthands}{babel}
+\usepackage{babel}
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\usepackage[letterpaper,top=2.0cm,bottom=2.2cm,left=1.8cm,right=1.8cm,headheight=14pt,headsep=18pt,footskip=24pt]{geometry}
+\setlength{\columnsep}{0.65cm}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{babel,arrows.meta,positioning,shapes.geometric}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
+\usepackage{csquotes}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\definecolor{uanlblue}{RGB}{0,55,108}
+\definecolor{uanlgold}{RGB}{184,134,11}
+\definecolor{abstractboxbg}{RGB}{253,248,242}
+\definecolor{abstractboxborder}{RGB}{210,170,130}
+\definecolor{resumenboxbg}{RGB}{246,249,253}
+\definecolor{resumenboxborder}{RGB}{170,195,225}
+\definecolor{citabg}{RGB}{245,245,248}
+\definecolor{citaframe}{RGB}{200,205,215}
+\definecolor{tableblue}{RGB}{233,240,247}
+\definecolor{algogreen}{RGB}{30,100,60}
+\definecolor{algoblue}{RGB}{25,75,130}
+
+\def\documenttitle{Ultraestructura, dinámica biosintética y reprogramación molecular de la célula plasmática}
+\def\documentauthor{Diego de la Cruz}
+\def\universityname{Universidad Autónoma de Nuevo León}
+\def\universityfaculty{Facultad de Agronomía}
+\def\universitydepartment{Ingeniero Agrónomo}
+\def\universitylocation{General Escobedo / Marín, Nuevo León, México}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\fontsize{8}{10}\selectfont\color{gray!80!black}\textit{Biología Celular UANL}}
+\fancyhead[R]{\fontsize{8}{10}\selectfont\color{gray!80!black}\textit{Diego de la Cruz \textbar\ Célula plasmática y reprogramación molecular}}
+\fancyfoot[L]{\fontsize{8}{10}\selectfont\color{gray!80!black}\textbf{Facultad de Agronomía} \textbar\ Universidad Autónoma de Nuevo León}
+\fancyfoot[R]{\fontsize{8}{10}\selectfont\color{gray!80!black}\textbf{\thepage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\fancypagestyle{firstpage}{
+  \fancyhf{}
+  \fancyfoot[L]{\fontsize{8}{10}\selectfont\color{gray!80!black}\textbf{Facultad de Agronomía} \textbar\ Universidad Autónoma de Nuevo León}
+  \fancyfoot[R]{\fontsize{8}{10}\selectfont\color{gray!80!black}\textbf{\thepage}}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0.4pt}
+}
+
+\titleformat{\section}{\fontsize{11}{13.5}\selectfont\bfseries\color{uanlblue}}{\thesection.}{0.45em}{}
+\titleformat{\subsection}{\fontsize{9.5}{11.5}\selectfont\bfseries\color{uanlblue!90!black}}{\thesubsection.}{0.4em}{}
+\titleformat{\subsubsection}{\fontsize{9}{11}\selectfont\bfseries\itshape}{\thesubsubsection.}{0.3em}{}
+\titlespacing*{\section}{0pt}{9pt plus 2pt minus 2pt}{3pt plus 1pt minus 1pt}
+\titlespacing*{\subsection}{0pt}{7pt plus 2pt minus 2pt}{2.5pt plus 1pt minus 1pt}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=uanlblue,
+  urlcolor=uanlblue,
+  citecolor=uanlblue,
+  pdfauthor={Diego de la Cruz},
+  pdftitle={Ultraestructura, dinámica biosintética y reprogramación molecular de la célula plasmática},
+  pdfsubject={Producto Integrador de Aprendizaje - Biología Celular UANL}
+}
+
+\addbibresource{biologia-celular.bib}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\setlength{\emergencystretch}{2.5em}
+
+\begin{document}
+\thispagestyle{firstpage}
+
+\twocolumn[{%
+  \noindent\begin{minipage}[b]{0.65\textwidth}
+    {\color{uanlblue}\fontsize{11}{13}\selectfont\bfseries Inmunología y Biología Celular \textbar\ Artículo de Revisión (Review)}\\[0.08cm]
+    {\color{gray!90!black}\fontsize{8}{10}\selectfont Unidad de Aprendizaje: Biología Celular}
+  \end{minipage}\hfill
+  \begin{minipage}[b]{0.32\textwidth}\raggedleft
+    \includegraphics[height=1.15cm]{UANL/ingeniero-agronomo/biologia-celular/img/departamentos/logo-uanl.png}\hspace{0.35cm}
+    \includegraphics[height=1.15cm]{UANL/ingeniero-agronomo/biologia-celular/img/departamentos/logo-agronomia.png}
+  \end{minipage}
+  \par\vspace{0.12cm}
+  {\color{uanlblue}\rule{\linewidth}{1.4pt}}\par\vspace{0.25cm}
+
+  {\fontsize{15}{18.5}\selectfont\bfseries\color{uanlblue} Ultrastructure, biosynthetic dynamics, and molecular reprogramming of the plasma cell: from humoral immune response to specialized cell physiology}\par\vspace{0.18cm}
+  {\fontsize{12}{15}\selectfont\bfseries Ultraestructura, dinámica biosintética y reprogramación molecular de la célula plasmática: de la respuesta inmune humoral a la fisiología celular especializada}\par\vspace{0.25cm}
+
+  {\fontsize{10.5}{13}\selectfont\textbf{Diego de la Cruz}}\par\vspace{0.06cm}
+  {\fontsize{8.5}{11}\selectfont Facultad de Agronomía, Universidad Autónoma de Nuevo León, Campus Ciencias Agropecuarias, General Escobedo / Marín, N.L., México.}\par
+  {\fontsize{8}{10}\selectfont Estudiante: Diego de la Cruz \textbar\ Docente: Dr. Miguel Ángel Dector Carrillo}\par\vspace{0.22cm}
+
+  \noindent\begin{minipage}[t]{0.485\textwidth}
+  \begin{tcolorbox}[colback=abstractboxbg, colframe=abstractboxborder, boxrule=0.6pt, arc=1.5mm, left=6pt, right=6pt, top=5pt, bottom=5pt]
+  {\fontsize{7.8}{9.8}\selectfont
+  \textbf{Abstract:}\enspace The plasma cell is the terminally differentiated effector of the B lymphocyte lineage responsible for sustained immunoglobulin synthesis and secretion. This review describes its ontogeny, the antagonistic transcriptional switch between PAX5/BCL6 and IRF4/Blimp-1/XBP-1s, rough endoplasmic reticulum hypertrophy, quality control via the unfolded protein response (IRE1$\alpha$, PERK, and ATF6 pathways), constitutive exocytosis, and long-term survival in bone marrow stromal niches mediated by CXCR4, CXCL12, APRIL, and IL-6, highlighting applications in animal health and plant pathogen diagnosis.
+  \par\vspace{0.08cm}
+  \textbf{Keywords:}\enspace Plasma cell; immunoglobulins; rough endoplasmic reticulum; cell differentiation; Blimp-1; XBP-1; unfolded protein response; constitutive exocytosis; stromal survival niche; agricultural biotechnology.
+  }
+  \end{tcolorbox}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.485\textwidth}
+  \begin{tcolorbox}[colback=resumenboxbg, colframe=resumenboxborder, boxrule=0.6pt, arc=1.5mm, left=6pt, right=6pt, top=5pt, bottom=5pt]
+  {\fontsize{7.8}{9.8}\selectfont
+  \textbf{Resumen:}\enspace La célula plasmática es el efector terminal del linaje de linfocitos B responsable de la síntesis y secreción continua de inmunoglobulinas. En esta revisión se analiza su ontogenia, el interruptor transcripcional antagónico entre PAX5/BCL6 e IRF4/Blimp-1/XBP-1s, la hipertrofia del retículo endoplásmico rugoso, el control de calidad por la respuesta a proteínas desplegadas (UPR mediante IRE1$\alpha$, PERK y ATF6), la exocitosis constitutiva no regulada y los mecanismos de supervivencia en nichos estromales de médula ósea dependientes de CXCR4, CXCL12, APRIL e IL-6, integrando sus aplicaciones en sanidad animal y diagnóstico fitopatológico.
+  \par\vspace{0.08cm}
+  \textbf{Palabras clave:}\enspace Célula plasmática; inmunoglobulinas; retículo endoplásmico rugoso; diferenciación celular; Blimp-1; XBP-1; respuesta a proteínas desplegadas; exocitosis constitutiva; nicho estromal; biotecnología agropecuaria.
+  }
+  \end{tcolorbox}
+  \end{minipage}
+  \vspace{0.12cm}
+
+  {\fontsize{8.5}{10.5}\selectfont\bfseries\color{uanlblue} Abreviaturas y siglas}\\[0.04cm]
+  {\fontsize{7.5}{9.5}\selectfont
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll@{}}
+  \textbf{AID}: citidina desaminasa inducida por activación & \textbf{LLPC}: células plasmáticas de larga vida (\emph{long-lived plasma cells})\\
+  \textbf{ATF4/6}: factor de transcripción activador 4/6 & \textbf{Mcl-1}: proteína mieloide de leucemia celular 1\\
+  \textbf{BCMA}: antígeno de maduración de célula B & \textbf{MPC1/2}: transportador mitocondrial de piruvato 1/2\\
+  \textbf{BiP/GRP78}: proteína de unión a inmunoglobulina & \textbf{PDI}: proteína disulfuro isomerasa\\
+  \textbf{Blimp-1}: proteína 1 inductora de maduración de linfocitos B & \textbf{RER}: retículo endoplásmico rugoso\\
+  \textbf{COPII}: complejo de cubierta proteica tipo II & \textbf{UPR}: respuesta a proteínas desplegadas (\emph{unfolded protein response})\\
+  \textbf{ERAD}: degradación asociada al retículo endoplásmico & \textbf{XBP-1s}: proteína de unión a caja X 1 (forma empalmada)
+  \end{tabular*}
+  }
+  \vspace{0.15cm}
+}]
+
+\input{contenido-Actividad-8.tex}
+
+\newpage
+\printbibliography[title={Referencias bibliográficas}]
+
+\end{document}

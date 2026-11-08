@@ -1,0 +1,150 @@
+% ==============================================================================
+% PLANTILLA UNIFICADA DE REPORTE ACADÉMICO - UANL (INGENIERÍA EN MECATRÓNICA)
+% Universidad Autónoma de Nuevo León | Facultad de Ingeniería Mecánica y Eléctrica (FIME)
+% Archivo principal: reporte-ingenieria-en-mecatronica.tex -> reporte-ingenieria-en-mecatronica.pdf
+% ==============================================================================
+% Arquitectura centralizada de AulaTeX:
+% - Núcleo central: aulaTEX/base/Plantilla-Informe/template.tex (Pablo Pizarro R.)
+% - Adaptación institucional: UANL/ingenieria-en-mecatronica/template.tex
+%
+% Principios de diseño derivados de referencias verificadas:
+% 1. Patrón UnADM: Desacoplamiento total entre metadatos y cuerpo del informe; APA 7.
+% 2. Patrón IIIEPE: Identidad visual institucional y jerarquía equilibrada.
+% 3. Patrón ITESCA: Separación estricta de metadatos operativos en entregables visibles.
+%
+% Flujo de compilación oficial:
+%    powershell -ExecutionPolicy Bypass -File .\aulaTEX\latexmk-build.ps1 .\UANL\ingenieria-en-mecatronica\reporte-ingenieria-en-mecatronica.tex
+% ==============================================================================
+
+\documentclass[
+	spanish,
+	letterpaper,
+	oneside
+]{article}
+
+% ==============================================================================
+% 1. METADATOS ACADÉMICOS Y VARIABLES DEL DOCUMENTO
+% ==============================================================================
+\def\documenttitle {Título de la Evidencia de Aprendizaje}
+\def\documentsubtitle {Reporte Técnico y Análisis Disciplinar}
+\def\documentsubject {Unidad de Aprendizaje Curricular}
+
+% Datos del estudiante y cátedra
+\def\documentauthor {Carlos Mauricio Carvajal Coronado}
+\def\studentmatricula {1977875}
+\def\coursename {Nombre de la Unidad de Aprendizaje}
+\def\coursecode {REF\#261013755000}
+\def\professortitle {Docente Titular:}
+\def\professorname {Nombre del Docente Titular}
+\def\academicperiod {Semestre Agosto -- Diciembre 2026}
+\def\academicgroup {Grupo Curricular}
+
+% Configuración bibliográfica institucional UANL
+\def\defaultbibliography {bibliografia-uanl}
+\def\universityname {Universidad Autónoma de Nuevo León}
+\def\universityfaculty {Facultad de Ingeniería Mecánica y Eléctrica}
+\def\universitydepartment {Programa Educativo de Ingeniería en Mecatrónica}
+\def\universitydepartmentimage {departamentos/logo-fime}
+\def\universitydepartmentimagecfg {height=1.65cm}
+\def\universitylocation {Ciudad Universitaria, San Nicolás de los Garza, Nuevo León}
+
+% ==============================================================================
+% 2. TABLA DE AUTORÍA Y DATOS ACADÉMICOS (SIN METADATOS OPERATIVOS)
+% ==============================================================================
+\def\authortable {
+	\begin{tabular}{ll}
+		\textbf{Estudiante:} & \documentauthor \\
+		\textbf{Matrícula:}  & \studentmatricula \\
+		\textbf{\professortitle} & \professorname \\
+		\textbf{Asignatura:} & \coursename \\
+		\textbf{Periodo / Grupo:} & \academicperiod\ (\academicgroup) \\
+		& \\
+		\multicolumn{2}{l}{Fecha de realización: \today} \\
+		\multicolumn{2}{l}{\universitylocation}
+	\end{tabular}
+}
+
+% ==============================================================================
+% 3. CARGA DE LA ADAPTACIÓN INSTITUCIONAL CENTRALIZADA
+% ==============================================================================
+\input{template}
+
+% ==============================================================================
+% 4. COMPATIBILIDAD TIPOGRÁFICA MOTOR-AGNOSTIC
+% ==============================================================================
+\usepackage{ifxetex}
+\ifxetex
+  \usepackage{fontspec}
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+\else
+  \usepackage[scaled=.96]{helvet}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Paquetes complementarios para maquetación técnica y científica
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,positioning,shapes.geometric,shadows.blur}
+
+% ==============================================================================
+% 5. INICIO DEL DOCUMENTO FORMAL
+% ==============================================================================
+\begin{document}
+
+% Portada institucional normalizada
+\templatePortrait
+
+% Resumen Ejecutivo
+\begin{abstract}
+El presente informe documenta el desarrollo riguroso de la evidencia de aprendizaje correspondiente al programa educativo de Ingeniería en Mecatrónica en la Facultad de Ingeniería Mecánica y Eléctrica de la Universidad Autónoma de Nuevo León. Conforme a las directrices de calidad de AulaTeX, el trabajo aborda la formulación del problema técnico, el modelado y análisis riguroso de variables, la comprobación experimental o analítica y la transferencia directa al campo profesional, excluyendo cualquier residuo de metadatos operativos o plataformas de gestión.
+\end{abstract}
+
+\newpage
+
+% ==============================================================================
+% 6. DESARROLLO TEMÁTICO Y ESTRUCTURA DISCIPLINAR
+% ==============================================================================
+
+\section{Introducción y Fundamentación del Problema}
+La formación en Ingeniería en Mecatrónica exige articular sólidas bases teóricas y metodológicas con la resolución práctica de desafíos en el sector productivo e industrial. El abordaje sistemático parte de la caracterización precisa de restricciones operativas, requerimientos funcionales y objetivos de optimización.
+
+\subsection{Alcance y Justificación Técnica}
+Se identifican los factores críticos de desempeño asociados al sistema objeto de estudio. La metodología aplicada asegura coherencia formal, trazabilidad de resultados y reproducibilidad técnica según los estándares de acreditación de la UANL.
+
+\section{Metodología y Modelado de Ingeniería}
+Para garantizar robustez metodológica, el desarrollo integra diseño analítico, modelado matemático y contraste de soluciones viables.
+
+\begin{table}[h!]
+\centering
+\caption{Matriz de requerimientos, variables de ingeniería y criterios de validación.}
+\label{tab:requerimientos}
+\small
+\begin{tabular}{p{0.28\linewidth} p{0.38\linewidth} p{0.26\linewidth}}
+\toprule
+\textbf{Dimensión del Sistema} & \textbf{Variable Operativa} & \textbf{Criterio de Validación} \\
+\midrule
+Arquitectura funcional & Configuración de subsistemas y flujo & Análisis de consistencia formal \\
+Modelado matemático & Ecuaciones constitutivas y balance & Simulación y ajuste analítico \\
+Control y optimización & Estabilidad, rendimiento y error en régimen & Márgenes de tolerancia industrial \\
+Transferencia técnica & Factibilidad técnica y costo-beneficio & Indicadores de impacto sectorial \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Resultados y Análisis Crítico}
+Los resultados obtenidos demuestran convergencia satisfactoria respecto a los criterios de diseño estipulados. Se contrastan los datos simulados o empíricos frente al marco conceptual de referencia.
+
+\section{Conclusiones y Transferencia Profesional}
+Se consolida la solución propuesta evidenciando el dominio disciplinar en Ingeniería en Mecatrónica. Las competencias desarrolladas permiten transferir de forma inmediata estos criterios a entornos profesionales e industriales, promoviendo la innovación y la eficiencia en los procesos de ingeniería.
+
+% ==============================================================================
+% 7. APARATO CRÍTICO Y BIBLIOGRAFÍA FORMAL (APA 7)
+% ==============================================================================
+\newpage
+\bibliography{bibliografia-uanl}
+
+\end{document}

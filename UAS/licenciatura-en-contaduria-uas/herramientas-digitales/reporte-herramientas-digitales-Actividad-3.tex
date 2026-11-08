@@ -1,1 +1,70 @@
-\input{reporte-herramientas-digitales-plantilla-Actividad-3.tex}
+\newcommand{\actividadpaquetes}{\usepackage{amsmath,amssymb}}
+\newcommand{\actividadtitulo}{Libro de Excel aplicado a la gestión contable}
+\newcommand{\actividadtipo}{Actividad práctica S3: ejercicios de clase y propuestos}
+\newcommand{\uasfecha}{8 de noviembre de 2026}
+\newcommand{\actividadpreliminares}{%
+\section*{Resumen}\addcontentsline{toc}{section}{Resumen}
+El presente trabajo documenta y fundamenta analíticamente la resolución del libro de trabajo multipestaña correspondiente a la tercera sesión de Herramientas digitales en la Licenciatura en Contaduría Pública de la Universidad Autónoma de Sinaloa. Se analizan de forma sistemática las referencias relativas, absolutas y mixtas, las estructuras lógicas condicionales simples y anidadas, las funciones de búsqueda matricial en catálogos contables (\texttt{BUSCARV} y \texttt{BUSCARH}), los algoritmos de consolidación y subtotales automáticos, y la agregación multidimensional mediante tablas dinámicas. Se evalúa el impacto del modelado electrónico en el control interno, la fiabilidad de las balanzas de comprobación y la reducción de riesgos de auditoría conforme a las Normas de Información Financiera.
+\clearpage\tableofcontents\clearpage}
+\newcommand{\actividadcontenido}{%
+\section{Identificación y propósito}
+En el ejercicio profesional de la contaduría pública contemporánea, la hoja de cálculo representa la herramienta informática fundamental para el procesamiento, modelación y verificación analítica de la información financiera. La actividad académica del Módulo 50130, enmarcada en la semana 3 de la unidad de aprendizaje, exige la integración rigurosa de los ejercicios desarrollados en clase junto con las prácticas propuestas por el docente en un único libro de trabajo formal denominado institucionalmente \texttt{GPO103LCP\_EXCEL\_APLICADO\_MartinJonathan\_DeLaCruzMunoz.xlsx}.
+
+El propósito de esta memoria técnica radica en fundamentar conceptual y normativamente la arquitectura de fórmulas implementadas en cada una de las ocho hojas que constituyen el entregable, examinando su pertinencia práctica en la determinación impositiva, la gestión de carteras de crédito, la clasificación de costos departamentales y la revelación financiera conforme a las Normas de Información Financiera (NIF A-1 y NIF A-3) \parencite{uasHerramientas635}.
+
+\section{Desarrollo temático y análisis conceptual}
+
+\subsection{Arquitectura celular y operadores de referencia}
+La distinción matemática entre referencias relativas, absolutas y mixtas determina la estabilidad computacional de cualquier modelo financiero. Una referencia relativa varía sus coordenadas de fila y columna al replicarse en la matriz bidimensional de la hoja de cálculo, lo que resulta idóneo para cálculos homólogos a nivel de renglón como el producto del precio unitario por la cantidad física:
+\begin{equation}
+\mathrm{Subtotal}_i = C_i \times D_i
+\end{equation}
+Por el contrario, cuando un cálculo requiere vincularse de manera unívoca a un parámetro normativo inmutable ---tal como la tasa general del Impuesto al Valor Agregado del 16\% o la tasa de retención del ISR---, el uso de referencias absolutas mediante el operador de fijación (\texttt{\$C\$4}) evita el desplazamiento del puntero en la memoria de Excel \parencite{walkenbachExcel2019}:
+\begin{equation}
+\mathrm{IVA}_i = \mathrm{Subtotal}_i \times \$C\$4
+\end{equation}
+En la hoja \texttt{Referencias\_Rel\_Abs\_Mix}, implementé adicionalmente matrices de descuento por volumen mediante referencias mixtas fijando la columna base y la fila del porcentaje (\texttt{=\$A10*B\$8}), posibilitando la proyección dinámica bidireccional sin duplicar fórmulas.
+
+\subsection{Estructuras de decisión booleana y condicionales anidados}
+En la práctica contable y crediticia, la automatización de políticas de control interno exige evaluar simultáneamente múltiples premisas de riesgo. La conjunción lógica \texttt{Y} y la disyunción \texttt{O} operan como filtros booleanos rigurosos:
+\par\medskip
+\noindent\texttt{=SI(Y(Antiguedad>=3, VentasAnuales>=500000, Historial="SI"), "APROBADO", "RECHAZADO")}
+\par\medskip
+Para la discriminación multivariable de compensaciones laborales y escalas fiscales en la hoja \texttt{SI\_Anidado\_Escalas}, recurrí al anidamiento escalonado de la función condicional en el argumento de falsedad. Esta estructura emula fielmente la progresividad de las tarifas del Artículo 96 de la Ley del Impuesto sobre la Renta, garantizando que cada registro reciba la ponderación exacta sin solapamientos lógicos:
+\begin{equation}
+f(x) = \begin{cases} 
+\text{Sobresaliente (Bono 20\%)}, & \text{si } x \ge 90 \\
+\text{Notable (Bono 12\%)}, & \text{si } 80 \le x < 90 \\
+\text{Aceptable (Bono 5\%)}, & \text{si } 70 \le x < 80 \\
+\text{En Mejora (Bono 0\%)}, & \text{si } x < 70 
+\end{cases}
+\end{equation}
+
+\subsection{Búsqueda relacional en catálogos de cuentas (BUSCARV y BUSCARH)}
+El cumplimiento del Artículo 28 del Código Fiscal de la Federación en materia de contabilidad electrónica impone la correspondencia estricta entre el catálogo general de cuentas y los registros analíticos de pólizas. En la hoja \texttt{BuscarV\_BuscarH}, estructuré una matriz maestra indexada por código contable. Al emitir una póliza de diario, la función \texttt{BUSCARV} extrae automáticamente la denominación técnica y el rubro financiero:
+\par\medskip
+\noindent\texttt{=BUSCARV(CodigoCapturado, \$A\$5:\$D\$14, 2, FALSO)}
+\par\medskip
+El cuarto argumento booleano (\texttt{FALSO} o \texttt{0}) resulta innegociable en la disciplina contable: prohíbe la búsqueda aproximada por interpolación, previniendo imputaciones erróneas en el balance general ante errores tipográficos \parencite{microsoftExcel}.
+
+\subsection{Consolidación jerárquica y esquemas con subtotales}
+A diferencia de la función aritmética elemental \texttt{SUMA}, la función \texttt{SUBTOTAL} implementada en la hoja \texttt{Subtotales\_Esquemas} permite auditar centros de costos y sucursales (Culiacán, Mazatlán, Los Mochis) con total transparencia. El código de función \texttt{9} ejecuta la adición ignorando registros filtrados o subtotales anidados previos, impidiendo la duplicidad contable en las pruebas sustantivas de auditoría interna (NIA 520) \parencite{valentinExcelPasoAPaso}.
+
+\subsection{Síntesis comparativa de funciones desarrolladas}
+\noindent\begin{tabularx}{\textwidth}{@{}p{.26\textwidth}p{.32\textwidth}X@{}}\toprule
+Módulo / Función & Sintaxis implementada & Impacto y utilidad contable\\\midrule
+Referencias mixtas & \texttt{=\$A10*B\$8} & Tabulación matricial de descuentos y tarifas impositivas.\\
+Condicional \texttt{SI(Y())} & \texttt{=SI(Y(C5>=3, D5>=5e5), ...)} & Autorización estandarizada de líneas de crédito comercial.\\
+\texttt{SI} anidado & \texttt{=SI(E5>=90, 0.2, SI(E5>=80, ...))} & Cálculo de bonos y retención progresiva de salarios.\\
+\texttt{BUSCARV} exacto & \texttt{=BUSCARV(B18, \$A\$5:\$D\$14, 2, 0)} & Integración automática de pólizas contra catálogo SAT.\\
+\texttt{SUBTOTAL(9)} & \texttt{=SUBTOTAL(9, E4:E15)} & Auditoría departamental sin riesgo de duplicar partidas.\\
+Tablas dinámicas & Matriz \texttt{SUMIFS} cruzada & Segmentación de rentabilidad y margen por zona operativa.\\\bottomrule
+\end{tabularx}
+}
+\newcommand{\actividadcierre}{%
+\section{Conclusiones y postura académica}
+A partir del desarrollo exhaustivo y la validación de las ocho hojas de trabajo que integran esta práctica, considero que el dominio avanzado de las funciones lógicas, matriciales y de esquematización en Excel no constituye un simple complemento técnico, sino una competencia estructural indispensable para el contador público moderno. Sostengo que la correcta parametrización celular mediante referencias absolutas y la verificación de coincidencia exacta en búsquedas relacionales blindan los sistemas contables contra errores materiales que comprometerían la fe pública institucional.
+
+Concluyo que la separación metodológica entre datos transaccionales, tablas maestras y reportes consolidados permite construir modelos financieros auditables, escalables y plenamente transparentes, satisfaciendo las exigencias normativas del Código Fiscal de la Federación y las Normas Internacionales de Auditoría.\footnote{Se utilizó el chat de GitHub Copilot para la corrección y organización documental a partir del registro de trabajo proporcionado por el estudiante. En la preparación de este trabajo académico se utilizaron herramientas de asistencia computacional e inteligencia artificial exclusivamente como apoyo para la maquetación y revisión de estilo, de conformidad con los lineamientos de ética e integridad de la UAS. El análisis conceptual y las conclusiones son de autoría del estudiante.}
+\clearpage}
+\input{reporte-herramientas-digitales-plantilla-actividad.tex}

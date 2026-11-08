@@ -64,3 +64,5 @@
 - **Retículo Endoplásmico Rugoso (RER):** Hipertrofiado, ocupando hasta el 25% del citoplasma, especializado en la biosíntesis de albúmina, fibrinógeno, transferrina y lipoproteínas plasmáticas.
 - **Retículo Endoplásmico Liso (REL):** Rico en la superfamilia citocromo P450 (CYP) para biotransformación xenobiótica, hidroxilación de esteroides y glucogenólisis.
 
+
+

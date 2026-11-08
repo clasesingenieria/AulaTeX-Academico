@@ -8,9 +8,9 @@
   \def\stylecitereferences{custom}
   \def\portraitstyle{style1}
   \def\hfstyle{style1}
-  \def\hfwidthwrap{true}
-  \def\hfwidthtitle{0.44}
-  \def\hfwidthcourse{0.52}
+  \def\hfwidthwrap{false}
+  \def\hfwidthtitle{0.62}
+  \def\hfwidthcourse{0.36}
   \def\predocpageromannumber{false}
   \def\pagemarginleft{2.5}
   \def\pagemarginright{2.5}
@@ -23,9 +23,120 @@
   \def\ssectionfontsize{\normalsize}
   \def\ssectionspacingtop{6}
   \def\ssectionspacingbottom{3}
-  \def\defaultimagefolder{UANL/img/}
+  \def\defaultimagefolder{UANL/assets-uanl/}
   \def\usepdfmetadata{false}
 }
 \input{aulaTEX/base/Plantilla-Informe/template.tex}
 \RemoveFromHook{file/config.tex/after}[aulatex-algebra-lineal]
 
+% Rutas de búsqueda de imágenes y logos institucionales
+\graphicspath{%
+  {./img/}%
+  {./}%
+  {../../assets-uanl/}%
+  {../../../UANL/assets-uanl/}%
+  {UANL/assets-uanl/}%
+}
+
+% Control de composición anti-huecos y paginación
+\hfuzz=0.5pt
+\vfuzz=0.5pt
+\renewcommand{\topfraction}{0.90}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.85}
+\renewcommand{\dbltopfraction}{0.90}
+\renewcommand{\dblfloatpagefraction}{0.85}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\widowpenalty=10000
+\clubpenalty=10000
+\raggedbottom
+
+\RequirePackage{etoolbox}
+\RequirePackage{placeins}
+\RequirePackage{needspace}
+\RequirePackage{array}
+\RequirePackage{ragged2e}
+\RequirePackage{tabularx}
+\RequirePackage{longtable}
+\RequirePackage{xltabular}
+\RequirePackage{booktabs}
+\RequirePackage{adjustbox}
+\RequirePackage{eso-pic}
+
+% Entorno universal AulatexTable para tablas sin desbordamiento
+\makeatletter
+\TX@delta=0.5pt
+\@ifundefined{NC@rewrite@Z}{%
+  \newcolumntype{Z}{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}X}%
+}{}
+\@ifundefined{ifaulatexbreakabletable}{\newif\ifaulatexbreakabletable}{}
+\@ifundefined{aulatextablewidth}{\newlength{\aulatextablewidth}}{}
+\@ifundefined{AulatexTable}{%
+  \newenvironment{AulatexTable}[1][\linewidth]{%
+    \par\addvspace{0.20cm}%
+    \setlength{\emergencystretch}{2em}%
+    \TX@delta=0.5pt%
+    \ifstrequal{#1}{breakable}{%
+      \aulatexbreakabletabletrue%
+      \setlength{\aulatextablewidth}{\linewidth}%
+      \setlength{\linewidth}{\aulatextablewidth}%
+      \setlength{\hsize}{\aulatextablewidth}%
+      \setlength{\LTleft}{0pt}%
+      \setlength{\LTright}{\fill}%
+      \setlength{\LTcapwidth}{\linewidth}%
+      \setlength{\LTpre}{0.15cm}%
+      \setlength{\LTpost}{0.15cm}%
+    }{%
+      \aulatexbreakabletablefalse%
+      \setlength{\aulatextablewidth}{#1}%
+      \centering%
+      \adjustbox{max width=\aulatextablewidth,center}\bgroup%
+      \setlength{\linewidth}{\aulatextablewidth}%
+      \setlength{\hsize}{\aulatextablewidth}%
+    }%
+  }{%
+    \ifaulatexbreakabletable%
+      \par\addvspace{0.20cm}%
+    \else%
+      \egroup\par\addvspace{0.20cm}%
+    \fi%
+  }%
+}{}
+
+% Marca de Agua Institucional en Portada (Facultad de Agronomía UANL)
+\providecommand{\careerwatermarkimage}{UANL/assets-uanl/logo-agronomia.png}
+\providecommand{\institutionalWatermark}[2][0.08]{%
+  \global\let\aulatexWatermarkApplied\relax
+  \AddToShipoutPictureBG*{%
+    \put(0,0){%
+      \parbox[b][\paperheight]{\paperwidth}{%
+        \vfill
+        \centering
+        \begin{tikzpicture}[remember picture,overlay]
+          \node[opacity=#1,inner sep=0pt] at (current page.center) {%
+            \includegraphics[width=0.56\paperwidth]{#2}%
+          };
+        \end{tikzpicture}%
+        \vfill
+      }%
+    }%
+  }%
+}
+
+% Auto-inserción contractual de marca de agua en portada
+\pretocmd{\templatePortrait}{%
+  \@ifundefined{aulatexWatermarkApplied}{%
+    \institutionalWatermark[0.08]{\careerwatermarkimage}%
+  }{}%
+}{}{}
+
+% Composición estrictamente unilineal de pie de página (sin saltos de línea ni minipages desbordadas)
+\AtBeginDocument{%
+  \def\hfwidthwrap{false}%
+  \fancyfoot[L]{\small\textit{\adjustbox{max width=0.62\linewidth}{\documenttitlehf}}}%
+  \fancyfoot[R]{\small\textit{\adjustbox{max width=0.36\linewidth}{\coursecode\ \coursename}}}%
+}
+\makeatother

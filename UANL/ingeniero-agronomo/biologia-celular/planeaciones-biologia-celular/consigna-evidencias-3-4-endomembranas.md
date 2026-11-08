@@ -78,3 +78,5 @@ Párrafo de síntesis (8–10 líneas) explicando por qué el sistema de endomem
 | **Claridad y organización editorial** | Estructura impecable en formato institucional AulaTeX/UANL, tablas sin desbordes, inclusión del esquema rotulado y bibliografía normalizada APA 7ma edición. | **15%** |
 | **Total** | **Calificación de Evidencias 3 y 4** | **100%** |
 
+
+

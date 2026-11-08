@@ -1,0 +1,74 @@
+\newcommand{\actividadpaquetes}{\usepackage{amsmath,amssymb}}
+\newcommand{\actividadtitulo}{Examen práctico en clase de Excel aplicado}
+\newcommand{\actividadtipo}{Evaluación práctica S3: resolución y sustentación metodológica}
+\newcommand{\uasfecha}{8 de noviembre de 2026}
+\newcommand{\actividadpreliminares}{%
+\section*{Resumen}\addcontentsline{toc}{section}{Resumen}
+El presente documento contiene la memoria de sustentación técnica y metodológica correspondiente al Examen Práctico en Clase de Excel de la tercera sesión (Módulo 50131) de Herramientas digitales en la Facultad de Contaduría y Administración de la Universidad Autónoma de Sinaloa. Se detallan los modelos matemáticos y financieros formulados en el libro de examen entregable \texttt{Examen-Excel-S3\_MartinJonathanDeLaCruzMunoz.xlsx}, abarcando la agregación condicional de volúmenes de venta y comisiones de agentes mercantiles (\texttt{SUMIF} y \texttt{COUNTIF}), la liquidación actuarial de penalizaciones por mora contractual mediante funciones cronológicas de días transcurridos (\texttt{DAYS}), y la jerarquización de baremos académicos mediante lógica condicional.
+\clearpage\tableofcontents\clearpage}
+\newcommand{\actividadcontenido}{%
+\section{Identificación y propósito}
+La evaluación práctica en clase del Módulo 50131 constituye una prueba de madurez computacional orientada a medir la destreza del estudiante de Contaduría Pública en la formulación, parametrización y auditoría de modelos cuantitativos en Microsoft Excel. Conforme a las directrices de la plataforma UAS, el estudiante debe resolver de manera exhaustiva los casos prácticos alojados en la Carpeta de Apoyo del aula virtual, asegurando que cada resultado numérico provenga de fórmulas dinámicas auditables y no de valores constantes estáticos.
+
+El propósito de este reporte es sustentar la validez matemática, financiera y contable de los algoritmos implementados en las cuatro hojas del libro de examen: \texttt{Auditoria\_Identificacion}, \texttt{Evaluacion\_Ventas}, \texttt{Interes\_Moratorio} y \texttt{Escala\_Calificaciones}, fundamentando su concordancia con las Normas de Información Financiera y el Código de Comercio \parencite{uasHerramientas635}.
+
+\section{Desarrollo temático y resolución del examen}
+
+\subsection{Sección I: Agregación condicional de transacciones y comisiones}
+En la hoja \texttt{Evaluacion\_Ventas}, la problemática financiera consiste en consolidar un libro diario de transacciones comerciales atomizadas por agente, calculando el volumen monetario devengado, las unidades físicas desplazadas y la comisión mercantil devengada del 5\%.
+
+A fin de evitar la vulnerabilidad que implicaría un filtrado manual propenso a omisiones, utilicé la función analítica \texttt{SUMIF} (\texttt{SUMAR.SI}) indexada a la columna de agentes:
+\begin{equation}
+V_j = \sum_{k=1}^{N} \left[ \text{Importe}_k \cdot \mathbb{I}(\text{Agente}_k = A_j) \right]
+\end{equation}
+donde $\mathbb{I}$ es la función indicatriz booleana. En la sintaxis de Excel, la fórmula implementada para el volumen total de cada vendedor fue:
+\par\medskip
+\noindent\texttt{=SUMIF(\$I\$5:\$I\$44, A5, \$K\$5:\$K\$44)}
+\par\medskip
+La comisión variable por intermediación mercantil se derivó de manera proporcional aplicando la tasa del 5\% sobre el volumen neto:
+\begin{equation}
+\text{Comisión}_j = V_j \times 0.05
+\end{equation}
+Este procedimiento garantiza que la adición total de comisiones coincida de forma exacta con el balance de egresos del período contable.
+
+\subsection{Sección II: Liquidación financiera de mora contractual}
+La hoja \texttt{Interes\_Moratorio} evalúa la aplicación del Artículo 362 del Código de Comercio, el cual establece la obligación del deudor de resarcir los perjuicios financieros derivados del retraso en el cumplimiento de obligaciones mercantiles. Para determinar con exactitud el lapso de morosidad, recurrí a la función cronológica \texttt{DAYS}:
+\begin{equation}
+\Delta t = \text{FechaLiquidación} - \text{FechaVencimiento}
+\end{equation}
+expresada computacionalmente como:
+\par\medskip
+\noindent\texttt{=DAYS(FechaPago, FechaVencimiento)}
+\par\medskip
+Posteriormente, el importe de la mora devengada se liquida mediante interés simple diario aplicado al capital financiado insoluto:
+\begin{equation}
+I_{\text{mora}} = C_0 \times (i_{\text{diario}} \times \Delta t)
+\end{equation}
+\noindent\texttt{=Capital * (TasaDiaria * DíasMora)}
+\par\medskip
+Este diseño paramétrico permite que cualquier modificación en las fechas de amortización actualice instantáneamente el saldo exigible sin intervención manual.
+
+\subsection{Sección III: Baremos de escala y evaluación de rendimiento}
+En la hoja \texttt{Escala\_Calificaciones}, integré una tabla maestra de baremos de puntajes (0 a 100 puntos) con rangos ordinales de acreditación. Para evaluar la condición final de los estudiantes, implementé pruebas lógicas excluyentes:
+\par\medskip
+\noindent\texttt{=SI(PromedioFinal >= 70, "APROBADO", "REPROBADO")}
+\par\medskip
+La segmentación jerárquica no presenta saltos ni vacíos numéricos, asegurando certidumbre en las determinaciones emitidas.
+
+\subsection{Matriz de auditoría de fórmulas del examen}
+\noindent\begin{tabularx}{\textwidth}{@{}p{.22\textwidth}p{.34\textwidth}X@{}}\toprule
+Sección evaluada & Fórmulas y funciones & Criterio de validación contable\\\midrule
+Ventas / Comisiones & \texttt{=SUMIF(\$I\$5:\$I\$44, A5, \$K\$5:\$K\$44)} & Consolidación unívoca sin doble cómputo.\\
+Frecuencia comercial & \texttt{=COUNTIF(\$I\$5:\$I\$44, A5)} & Verificación de volumen transaccional.\\
+Días moratorios & \texttt{=DAYS(FechaPago, FechaVenc)} & Cómputo cronológico exacto de plazos.\\
+Mora financiera & \texttt{=C5*(F5*G5)} & Liquidación conforme a Art. 362 C.Com.\\
+Acreditación & \texttt{=SI(F5>=70, "APROBADO", "REPROBADO")} & Regla binaria de cumplimiento mínimo.\\\bottomrule
+\end{tabularx}
+}
+\newcommand{\actividadcierre}{%
+\section{Conclusiones y postura académica}
+Al concluir la formulación integral del examen práctico en clase, considero que la estructuración analítica de hojas de cálculo bajo parámetros dinámicos no solo optimiza los tiempos de procesamiento operativo, sino que constituye una garantía indispensable de integridad probatoria para la profesión contable. Sostengo que la eliminación sistemática de cifras fijas o manuales dentro de las fórmulas de agregación y liquidación financiera previene discrepancias fiscales e inconsistencias materiales que comprometerían los estados financieros de la entidad.
+
+Advierto que el contador público debe dominar la combinación de funciones de fecha, agregación matricial y lógica booleana como un estándar de control interno y aseguramiento de la información en concordancia con las normas profesionales vigentes.\footnote{Se utilizó el chat de GitHub Copilot para la corrección y organización documental a partir del registro de trabajo proporcionado por el estudiante. En la preparación de este trabajo académico se utilizaron herramientas de asistencia computacional e inteligencia artificial exclusivamente como apoyo para la maquetación y revisión de estilo, de conformidad con los lineamientos de ética e integridad de la UAS. El análisis conceptual y las conclusiones son de autoría del estudiante.}
+\clearpage}
+\input{reporte-herramientas-digitales-plantilla-actividad.tex}

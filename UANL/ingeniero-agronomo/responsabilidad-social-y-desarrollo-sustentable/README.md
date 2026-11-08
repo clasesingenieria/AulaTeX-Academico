@@ -112,10 +112,10 @@ Las URLs, dimensiones y hashes están en la verificación técnica.
 ## Compilación reproducible
 
 Consultar [la guía de compilación de la materia](COMPILACION-responsabilidad-social-y-desarrollo-sustentable.md).
-Desde esta carpeta:
+Desde la raíz del repositorio:
 
 ```powershell
-.\compilar.ps1
+powershell -ExecutionPolicy Bypass -File .\aulaTEX\latexmk-build.ps1 .\UANL\ingeniero-agronomo\responsabilidad-social-y-desarrollo-sustentable\reporte-responsabilidad-social-y-desarrollo-sustentable-Actividad-1.tex
 ```
 
 Usar `-Documento reporte` o `-Documento presentacion` para compilar solo uno.

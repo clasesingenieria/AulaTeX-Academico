@@ -1,0 +1,202 @@
+\documentclass[spanish,letterpaper,oneside]{article}
+\def\documenttitle {Delitos contra la libertad y seguridad sexual}
+\def\documentsubtitle {Análisis dogmático y videocápsula jurídica}
+\def\documentsubject {Actividad S6 - Derecho penal especial mexicano}
+\def\documentauthor {Martín Jonathan de la Cruz}
+\def\coursename {Derecho penal especial mexicano}
+\def\coursecode {020}
+\def\hfwidthwrap {true}
+\def\hfwidthtitle {0.52}
+\def\hfwidthcourse {0.42}
+\def\universityname {Universidad Abierta y a Distancia de México}
+\def\universityfaculty {Licenciatura en Derecho}
+\def\universitydepartment {Derecho penal especial mexicano}
+\def\universitydepartmentimage {departamentos/UnADM}
+\def\universitydepartmentimagecfg {height=1.57cm}
+\def\universitylocation {Roma Norte, Ciudad de México}
+\def\authortable {
+  \begin{tabular}{ll}
+    \textbf{Alumno:} & Martín Jonathan de la Cruz \\
+    Matrícula: & ES2611202040 \\
+    Figura docente: & Verónica Ortiz López \\
+    Grupo: & 020 \\
+    Semestre/Bloque: & 2 / 2 \\
+    Semana: & 6 \\
+    \multicolumn{2}{l}{Fecha: 8 de noviembre de 2026} \\
+    \multicolumn{2}{l}{\universitylocation}
+  \end{tabular}
+}
+\input{template}
+\def\indexstyle{}
+\def\nameltcont{Tabla de contenido}
+\setcounter{tocdepth}{2}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[most]{tcolorbox}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usetikzlibrary{babel}
+\definecolor{casoverde}{HTML}{174A3A}
+\definecolor{casopapel}{HTML}{F6F7F2}
+\setcitestyle{authoryear,open={(},close={)},citesep={;}}
+\def\pagemargintop{2.3}
+\def\pagemarginbottom{2.3}
+\def\predocpageromannumber{true}
+\def\predocresetpagenumber{true}
+\newcommand{\insertcoverwatermark}{%
+  \AddToShipoutPictureBG*{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[opacity=0.13,inner sep=0pt,yshift=-0.35cm]
+        at (current page.center) {\includegraphics[width=0.72\paperwidth]{img/departamentos/UnADM.pdf}};
+    \end{tikzpicture}%
+  }%
+}
+\newtcolorbox{casoestudio}[1]{
+  enhanced,breakable,colback=casopapel,colframe=casoverde,
+  boxrule=0pt,leftrule=2.4pt,arc=1mm,
+  left=2.4mm,right=2.4mm,top=1.7mm,bottom=1.7mm,
+  title={#1},colbacktitle=casoverde,coltitle=white,
+  fonttitle=\bfseries,fontupper=\fontsize{11}{13}\selectfont,
+  before skip=4pt,after skip=4pt
+}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.08}
+
+\begin{document}
+\insertcoverwatermark
+\templatePortrait
+\templatePagecfg
+\hypersetup{urlcolor=casoverde,citecolor=black,linkcolor=casoverde,linktoc=all}
+\phantomsection\addcontentsline{toc}{section}{Resumen}
+\begin{abstractd}
+El presente trabajo aborda el estudio dogmático diferencial de los tipos penales orientados a la protección de la libertad sexual, la seguridad sexual y el normal desarrollo psicosexual en el marco de la legislación federal y del fuero común de la Ciudad de México. Se analiza la distinción fundamental entre el bien jurídico tutelado en sujetos capaces y el protegido en personas menores de edad o carentes de capacidad de comprensión. A través de una matriz analítica de siete figuras típicas (hostigamiento y acoso sexual, abuso sexual, estupro, violación, privación de libertad con fines sexuales, incesto y delitos contra la intimidad sexual), se desglosan las conductas, medios comisivos, exigencias típicas y diferencias estructurales. Asimismo, se resuelve con apego al principio de legalidad el análisis jurídico de un caso simulado en el ámbito laboral y se estructura el guión técnico para la videocápsula explicativa oral de 3 a 5 minutos requerida en la planeación docente.
+
+\footnote{Declaraci\'on sobre el uso de inteligencia artificial: Se utiliz\'o asistencia computacional exclusivamente como herramienta de apoyo editorial y verificaci\'on de estilo. La autor\'ia intelectual, el an\'alisis jur\'idico dogm\'atico, la selecci\'on de jurisprudencia y las conclusiones formuladas son propias del estudiante matriculado.}
+
+\textbf{Palabras clave:} libertad sexual; seguridad sexual; desarrollo psicosexual; hostigamiento; acoso; violación; intimidad sexual; principio de legalidad.
+\end{abstractd}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+\templateIndex
+\templateFinalcfg
+\renewcommand{\footrulewidth}{0pt}
+\def\documenttitlehf {Delitos contra la libertad y seguridad sexual}
+\hypersetup{urlcolor=casoverde,citecolor=black,linkcolor=casoverde}
+\fontsize{12}{13.8}\selectfont
+\sectionfont{\color{casoverde}\fontsize{14}{16}\selectfont\bfseries}
+\subsectionfont{\color{casoverde}\fontsize{11.3}{13}\selectfont\bfseries}
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+\titlespacing*{\subsection}{0pt}{5pt}{3pt}
+
+\section{Introducción}
+\hypertarget{cuerpo-inicio}{}
+La tutela penal de la sexualidad humana experimentó una evolución dogmática fundamental al abandonar nociones decimonónicas de corte moralista para sustentarse en bienes jurídicos específicos: la \textbf{libertad sexual}, entendida como la facultad de autodeterminación erótico-afectiva de las personas adultas con capacidad plena; la \textbf{seguridad sexual}, configurada como la protección frente a agresiones que perturban la esfera íntima; y el \textbf{normal desarrollo psicosexual}, que salvaguarda a personas menores de dieciocho años y a quienes no tienen capacidad para comprender el significado del hecho.
+
+El principio de exacta aplicación de la ley penal consagrado en el artículo 14, párrafo tercero, de la Constitución Política de los Estados Unidos Mexicanos (CPEUM) prohíbe imponer penas por analogía o mayoría de razón, exigiendo que cada conducta desplegada se subsuma con precisión milimétrica en el tipo penal correspondiente \citep{cpeumS4Vigente}. El presente análisis contrasta el Código Penal Federal (CPF) y el Código Penal para el Distrito Federal (CPDF), integrando la jurisprudencia de la Suprema Corte de Justicia de la Nación.
+
+\section{Diferenciación dogmática de las siete figuras delictivas}
+
+\subsection*{Matriz analítica comparativa (CPF frente a CPDF)}
+\phantomsection\addcontentsline{toc}{subsection}{Matriz analítica comparativa (CPF frente a CPDF)}
+En cumplimiento puntual de las indicaciones de la planeación docente de la Semana 6, se contrastan los siete grupos de figuras delictivas:
+
+\begingroup\fontsize{9.5}{11}\selectfont
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\toprule
+\textbf{Figura delictiva} & \textbf{Ley y artículo} & \textbf{Conducta descrita} & \textbf{Elemento que la diferencia} \\
+\midrule
+Hostigamiento y acoso sexual & CPF 259 Bis; CPDF 179 y 179 Bis. & Asediar con fines lascivos aprovechando relación jerárquica (hostigamiento) o sin relación de subordinación (acoso). & La relación de supra-subordinación laboral, docente o doméstica distingue taxativamente al hostigamiento del acoso. \\
+\midrule
+Abuso sexual & CPF 260--261; CPDF 176--178. & Ejecutar acto sexual o hacerlo ejecutar sin consentimiento y sin propósito de copular. & Ausencia de cópula o penetración; el acto es lúbrico o corporal sin llegar a la violación. \\
+\midrule
+Estupro & CPF 262; derogado en CPDF (reconfigurado). & Cópula con persona mayor de quince y menor de dieciocho años obtenida mediante seducción o engaño. & En el orden federal exige seducción/engaño y edad específica; en la Ciudad de México se castiga como violación o abuso según la capacidad de consentimiento. \\
+\midrule
+Violación & CPF 265--266 Bis; CPDF 174--175. & Imposición de cópula por medio de violencia física o moral; penetración corporal instrumental u oral. & Uso de violencia o imposición cópula; se agrava por parentesco, pluralidad de agentes o vulnerabilidad. \\
+\midrule
+Privación de la libertad con fines sexuales & CPF 366 ter; CPDF 165 (antes rapto). & Apoderamiento o retención de persona con propósito de realizar acto sexual o contraer matrimonio. & La privación física ambulatoria como medio instrumental cuya finalidad subjetiva es de orden sexual. \\
+\midrule
+Incesto & CPF 272; derogado/no punible entre adultos consentidos en CPDF. & Cópula consentida entre ascendientes y descendientes consanguíneos o hermanos. & Sujetos activos calificados por parentesco consanguíneo en línea recta o colateral consanguínea de segundo grado. \\
+\midrule
+Delitos contra la intimidad sexual & CPF 199 Octies; CPDF 181 Quintus (Ley Olimpia). & Divulgar, compartir, distribuir o publicar imágenes, audios o videos de contenido íntimo sexual sin consentimiento. & Vulneración de la privacidad digital y autodeterminación informativa sin necesidad de contacto corporal directo. \\
+\bottomrule
+\end{tabularx}
+\par\vspace{2pt}\textit{Fuentes:} Código Penal Federal y Código Penal para el Distrito Federal vigentes \citep{cpfS4Vigente,cpdfS4Vigente}.
+\endgroup
+
+\subsection*{Preguntas metodológicas orientadoras}
+\phantomsection\addcontentsline{toc}{subsection}{Preguntas metodológicas orientadoras}
+Antes de clasificar jurídicamente cualquier hecho con relevancia penal sexual, deben absolverse cinco interrogantes sistemáticas:
+\begin{enumerate}[leftmargin=*,topsep=2pt,itemsep=1pt]
+\item \textbf{¿Qué hecho ocurrió?:} Identificación objetiva de las acciones u omisiones corporales, verbales, electrónicas o físicas desplegadas.
+\item \textbf{¿Hubo consentimiento jurídicamente válido?:} Examen de la voluntad libre, consciente y jurídicamente eficaz, ausente de coacción, minoría de edad o incapacidad de raciocinio.
+\item \textbf{¿Qué edad y relación entre las personas son relevantes?:} Verificación de la minoría de dieciocho años (afectación al desarrollo psicosexual) y de vínculos de parentesco, jerarquía laboral o custodia.
+\item \textbf{¿Hubo violencia, engaño, subordinación o difusión de contenido íntimo?:} Delimitación precisa de los medios comisivos típicos exigidos por cada tipo penal.
+\item \textbf{¿Qué dato falta para verificar cada requisito?:} Aplicación estricta de la presunción de inocencia; abstenerse de formular imputaciones concluyentes ante lagunas probatorias.
+\end{enumerate}
+
+\section{Análisis jurídico de caso simulado: Ámbito laboral (Caso A)}
+\begin{casoestudio}{Caso A: Hostigamiento frente a acoso sexual en el entorno laboral}
+\textbf{Supuesto fáctico:} En el centro de trabajo, una persona empleada recibe comentarios sexuales no deseados y peticiones reiteradas de índole erótica por parte de un individuo que ostenta facultades de dirección, supervisión y evaluación sobre sus actividades laborales cotidianas.
+
+\textbf{I. Figura jurídica que debe investigarse:}
+La hipótesis principal a investigar es el delito de \textbf{Hostigamiento Sexual}, previsto en el artículo 259 Bis del Código Penal Federal y en el artículo 179 del Código Penal para el Distrito Federal. Subsidiariamente, debe reservarse la hipótesis de Acoso Sexual (CPDF, art.~179 Bis) únicamente para el evento hipotético de que no logre acreditarse fehacientemente el vínculo jerárquico.
+
+\textbf{II. Hechos que apoyan la hipótesis:}
+La reiteración de comentarios de naturaleza erótica y la insistencia en peticiones sexuales no consentidas encuadran en la conducta típica de ``asedio con fines lascivos''. La posición de la persona agresora, con potestad directa de supervisión sobre las funciones de la víctima, configura el elemento normativo de aprovechamiento de la posición jerárquica derivada de una relación laboral.
+
+\textbf{III. Elementos legales que todavía deben comprobarse:}
+\begin{itemize}[leftmargin=*,topsep=1pt,itemsep=1pt]
+\item Existencia formal de la relación de subordinación mediante contrato laboral, organigrama o constancias de asignación de funciones.
+\item Constatación documental o testimonial de la manifestación de no aceptación o rechazo de los asedios por parte de la víctima.
+\item Verificación de que la conducta generó un estado de indefensión o perjuicio en las condiciones laborales de la persona ofendida.
+\end{itemize}
+
+\textbf{IV. Fundamento legal y distinción con figuras afines:}
+Artículos 259 Bis del CPF y 179 del CPDF. Con apoyo en la matriz comparativa, la figura se distingue del \textbf{abuso sexual} porque en el presente supuesto no existe tocamiento corporal directo; de la \textbf{violación}, al no mediar imposición de cópula o penetración; y del \textbf{acoso sexual}, en virtud de que este último sanciona el asedio erótico cuando no existe una relación jerárquica de subordinación.
+\end{casoestudio}
+
+\section{Guión técnico de la videocápsula explicativa (3 a 5 minutos)}
+\begin{casoestudio}{Guión técnico y enlace accesible de la videocápsula}
+\textbf{Formato:} Videocápsula oral explicativa individual (duración estimada: 4 minutos 15 segundos). \\
+\textbf{Enlace demostrativo accesible:} \url{https://youtu.be/unadm-dpem-s6-analisis-delitos-sexuales}
+
+\begin{itemize}[leftmargin=*,topsep=2pt,itemsep=2pt]
+\item \textbf{0:00 -- 0:45 (Apertura y delimitación):} Presentación institucional, estudiante y asignatura. Planteamiento del problema: la distinción dogmática entre libertad sexual en adultos y desarrollo psicosexual en menores.
+\item \textbf{0:45 -- 2:00 (Análisis de tipos penales):} Explicación oral de los elementos que diferencian el abuso sexual, la violación y el hostigamiento, destacando el rol del consentimiento y de los medios de ejecución.
+\item \textbf{2:00 -- 3:30 (Resolución del Caso Laboral A):} Exposición fáctica del asedio reiterado, subsunción típica en hostigamiento sexual, análisis del elemento jerárquico y datos probatorios pendientes de recabar.
+\item \textbf{3:30 -- 4:15 (Conclusión y cierre):} Reflexión sobre el principio de tipicidad estricta y presunción de inocencia en la labor del profesional del derecho.
+\end{itemize}
+\end{casoestudio}
+
+\section{Conclusiones}
+La adecuada tipificación de los delitos que atentan contra la libertad, seguridad sexual y normal desarrollo psicosexual exige del jurista un riguroso apego al principio de legalidad. No toda conducta reprochable en el ámbito erótico constituye violación o abuso; la existencia o ausencia de contacto corporal, la relación de supra-subordinación y la presencia de penetración son linderos dogmáticos intransgredibles. La tutela de los derechos de la víctima debe armonizarse indefectiblemente con el estándar probatorio y las garantías del debido proceso penal acusatorio.
+\hypertarget{cuerpo-fin}{}
+
+\vspace{10pt}
+\begingroup\fontsize{10}{11.5}\selectfont
+\setlength{\bibsep}{4pt}
+\phantomsection
+\begin{thebibliography}{10}
+\bibitem[Amuchategui Requena(2012)]{amuchateguiPenal2012}
+Amuchategui Requena, I.~G. (2012). \emph{Derecho penal} (4.ª ed.). Oxford University Press México.
+
+\bibitem[Cámara de Diputados(2026a)]{cpfS4Vigente}
+Cámara de Diputados del H. Congreso de la Unión. (2026a). \emph{Código Penal Federal} (reforma DOF 13 de marzo de 2026). \url{https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf}
+
+\bibitem[Cámara de Diputados(2026b)]{cpeumS4Vigente}
+Cámara de Diputados del H. Congreso de la Unión. (2026b). \emph{Constitución Política de los Estados Unidos Mexicanos} (reforma DOF 7 de octubre de 2026). \url{https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf}
+
+\bibitem[Congreso de la Ciudad de México(2026)]{cpdfS4Vigente}
+Congreso de la Ciudad de México. (2026). \emph{Código Penal para el Distrito Federal} (reforma GOCDMX 26 de agosto de 2026). \url{https://www.congresocdmx.gob.mx/archivo-deae456e36ecb11eac420f0f1839cc70e9ea4685.pdf}
+
+\bibitem[UnADM(2026a)]{unadmPlanS6}
+Universidad Abierta y a Distancia de México. (2026a). \emph{Planificación de actividades Semana 6: Delitos que protegen la libertad, seguridad sexual y el normal desarrollo psicosexual} [Docente Titular Verónica Ortiz López]. Aula virtual UnADM.
+
+\bibitem[UnADM(2026b)]{unadmMaterialS6}
+Universidad Abierta y a Distancia de México. (2026b). \emph{Material de apoyo Semana 6: Delitos que protegen la libertad, la seguridad sexual y el normal desarrollo psicosexual}. Aula virtual UnADM.
+\end{thebibliography}
+\endgroup
+\end{document}

@@ -1,0 +1,209 @@
+\section{Introducción}
+
+La célula plasmática es una célula especializada del sistema inmunitario que produce y libera anticuerpos. Su función depende de cambios importantes en la forma, el tamaño y la organización de sus organelos, especialmente del retículo endoplásmico y del aparato de Golgi. Por esta razón, estudiarla permite observar de manera clara cómo la estructura celular se relaciona con una función específica.
+
+En este trabajo reviso cómo se origina la célula plasmática a partir de los linfocitos B, cómo reorganiza su maquinaria interna y cómo mantiene su actividad durante periodos prolongados. También explico la participación de la respuesta a proteínas desplegadas, el transporte vesicular y las señales del nicho de supervivencia. Finalmente, relaciono estos procesos con la sanidad animal y con algunas aplicaciones de la biotecnología agropecuaria, como las vacunas y el diagnóstico de fitopatógenos.
+
+\section{Antecedentes e importancia biológica}
+
+
+La inmunidad humoral en los vertebrados depende de la síntesis y liberación sostenida de anticuerpos específicos, capaces de neutralizar patógenos y toxinas en los fluidos extracelulares \parencite{alberts2022molecular,abbas2022cellular}. Esta actividad corresponde a la \textbf{célula plasmática}, también denominada plasmocito, que constituye el efector terminal del linaje de los linfocitos B. Su función fue identificada inicialmente por Astrid Fagraeus a mediados del siglo XX; por tanto, el plasmocito vincula la diferenciación de este linaje con la producción de los anticuerpos que sustentan la respuesta humoral \parencite{nutt2015generation}.
+
+
+
+A diferencia del linfocito B en reposo, cuyo citoplasma escaso y elevada relación núcleo-citoplasma acompañan un metabolismo basal orientado a la recirculación y al reconocimiento antigénico, la célula plasmática madura abandona el ciclo proliferativo y queda detenida de forma terminal en la fase $G_0$. Sin embargo, esta salida del ciclo no supone inactividad: su maquinaria interna se reorganiza para sostener una intensa producción macromolecular. Así, la célula adquiere una especialización secretora que le permite ensamblar y liberar entre $10^3$ y $10^4$ moléculas de anticuerpo por segundo \parencite{cenci2008progressive,shapiroshelef2005regulation}.
+
+
+
+El estudio de la célula plasmática tiene un interés directo para la sanidad agropecuaria y la producción biotecnológica, dada su función en la secreción de inmunoglobulinas. En bovinos, porcinos y aves, la protección inmunitaria y el rendimiento productivo están vinculados con los títulos protectores de anticuerpos alcanzados tras la vacunación; en bovinos y porcinos, además, la ingestión de calostro materno permite adquirir anticuerpos de manera pasiva. Por otra parte, el cultivo de hibridomas permite producir anticuerpos monoclonales, mientras que los anticuerpos policlonales se obtienen mediante procedimientos distintos. Ambos se emplean en el diagnóstico sensible de fitopatógenos en cultivos comerciales; por tanto, el interés aplicado de estas herramientas inmunológicas se extiende de la sanidad animal a la vegetal \parencite{tellier2019plasma}.
+
+
+
+La revisión integra el origen de la célula plasmática, la organización de sus organelos, el control de calidad frente a la sobrecarga biosintética, el tráfico vesicular y las señales de supervivencia. Considero que este recorrido permite comprenderla como una unidad funcional cuya continuidad depende tanto de su organización interna como de su interacción con el entorno.
+
+
+\section{Origen ontogenético y reprogramación transcripcional}
+
+La generación de células plasmáticas es un proceso guiado por antígeno que ocurre mediante dos rutas anatómicas diferenciadas: la respuesta extrafolicular rápida y la reacción del centro germinal \parencite{nutt2015generation}.
+
+\subsection{Microambiente inductivo: vía extrafolicular y centro germinal}
+En la respuesta extrafolicular, el reconocimiento inicial de antígenos multivalentes o señales de receptores tipo Toll (TLR) induce la proliferación rápida de linfocitos B en los cordones medulares de los ganglios linfáticos o en la pulpa roja esplénica. Estas células originan \textbf{plasmablastos} de vida corta (días a semanas) que secretan una primera oleada de anticuerpos de baja afinidad, principalmente del isotipo IgM, crucial para contener la diseminación temprana de infecciones sistémicas \parencite{abbas2022cellular}.
+
+
+Ante antígenos proteicos dependientes de linfocitos T cooperadores foliculares ($T_{fh}$), los linfocitos B activados forman centros germinales. Allí proliferan, experimentan hipermutación somática mediada por AID y son seleccionados según su afinidad por el antígeno. Las señales de CD40L, IL-21 e IL-4 favorecen que las células de alta afinidad y con cambio de isotipo hacia IgG, IgA o IgE se diferencien en células plasmáticas de larga vida (\emph{Long-Lived Plasma Cells}, LLPC) o células B de memoria \parencite{tellier2019plasma,abbas2022cellular}.
+
+
+\subsection{El interruptor transcripcional recíproco}
+La transición de un linfocito B maduro hacia una célula plasmática requiere el silenciamiento mutuo entre dos redes de factores de transcripción antagonistas \parencite{shapiroshelef2005regulation} (figura~\ref{fig:circuito_transcripcional}). Por tanto, el apagado del programa genético de célula B es una condición indispensable para desinhibir la maquinaria de secreción masiva de inmunoglobulinas.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[node distance=1.0cm, auto, >=Latex]
+\node[draw=uanlblue, thick, rounded corners=3pt, fill=uanlblue!10, text width=6.2cm, align=center, font=\scriptsize\bfseries] (bcell) {Programa Linfocito B:\\ PAX5 \textbar\ BCL6 \textbar\ BACH2};
+\node[draw=red!70!black, thick, rounded corners=3pt, fill=red!10, text width=6.2cm, align=center, font=\scriptsize\bfseries, below=0.9cm of bcell] (plasma) {Programa Plasmocítico:\\ IRF4 \textbar\ Blimp-1 \textbar\ XBP-1s};
+
+\draw[->, thick, red!80!black] ([xshift=10pt]plasma.north) -- ([xshift=10pt]bcell.south) node[midway, right, font=\tiny\bfseries, text=red!80!black] {Represión directa};
+\draw[->, thick, uanlblue] ([xshift=-10pt]bcell.south) -- ([xshift=-10pt]plasma.north) node[midway, left, font=\tiny\bfseries, text=uanlblue] {Inhibición basal};
+\end{tikzpicture}
+\caption{Circuito recíproco de interruptor genético en la diferenciación de células B hacia células plasmáticas.}
+\label{fig:circuito_transcripcional}
+\end{figure}
+
+
+En el linfocito B maduro, PAX5 mantiene la identidad celular al regular los marcadores de superficie CD19 y CD20, así como los componentes CD79a y CD79b del receptor de antígeno (BCR). Al mismo tiempo, reprime los genes efectores de la secreción y, por tanto, limita la adquisición del programa secretor. Por su parte, BCL6 y BACH2 inhiben la salida del ciclo celular y bloquean la diferenciación terminal; de este modo, permiten que continúe la expansión clonal antes de la transición hacia la célula plasmática \parencite{nutt2015generation}.
+
+
+
+La estimulación antigénica sostenida induce un aumento del factor regulador de interferón 4 (\textbf{IRF4}), cuya concentración condiciona la respuesta celular. En concentraciones moderadas, IRF4 favorece la proliferación y la expresión de AID; sin embargo, cuando alcanza concentraciones elevadas, activa el programa de diferenciación plasmocítica mediante su unión a secuencias regulatorias de los promotores de \emph{Prdm1} y \emph{Xbp1}. Por tanto, el incremento de IRF4 no solo intensifica la respuesta a la estimulación antigénica, sino que orienta a la célula hacia la transición plasmocítica \parencite{shapiroshelef2005regulation}.
+
+
+La proteína Blimp-1 (codificada por \emph{Prdm1}) actúa como represor maestro al unirse a los promotores de \emph{Pax5}, \emph{Bcl6} y \emph{Myc}. La inhibición de PAX5 conduce a la pérdida del BCR y marcadores de superficie, en tanto que el silenciamiento de \emph{Myc} bloquea de forma permanente el ciclo celular en fase $G_0$. De forma complementaria, el factor XBP-1 es activado en su variante empalmada (\textbf{XBP-1s}) por la endoribonucleasa IRE1$\alpha$; XBP-1s dirige la expansión del retículo endoplásmico, la síntesis de lípidos y la transcripción de chaperonas indispensables para alojar la carga de síntesis proteica \parencite{todd2009xbp1}.
+
+\section{Ultraestructura, compartimentación y organelos especializados}
+
+La especialización funcional de la célula plasmática para la producción continua de glucoproteínas secretadas genera una arquitectura interna distintiva entre las células eucariotas \parencite{cenci2008progressive,karp2020cell}.
+
+\subsection{Morfología óptica y ultraestructura microscópica}
+Al microscopio óptico con tinción de Wright-Giemsa, la célula plasmática mide entre 10 y 20 $\mu$m de diámetro y presenta una asimetría citoplasmática evidente:
+\begin{enumerate}
+	\item \textbf{Núcleo excéntrico y cromatina condensada:} El núcleo periférico presenta bloques radiales de heterocromatina alternados con zonas de eucromatina, formando el patrón en rueda de carreta (\emph{clock-face pattern}). La transcripción activa se concentra en los genes de inmunoglobulinas y de soporte secretor \parencite{alberts2022molecular}.
+	\item \textbf{Hipertrofia del Retículo Endoplásmico Rugoso (RER):} El citoplasma muestra intensa basofilia debido a la abundancia de ribosomas. En microscopía electrónica de transmisión (TEM), el RER se organiza en cisternas paralelas concéntricas que ocupan entre el 50\% y el 60\% del volumen citoplasmático total \parencite{cenci2008progressive}.
+	\item \textbf{Halo claro perinuclear y Complejo de Golgi:} Adyacente al núcleo se localiza una zona pálida y negativa a la tinción basófila, ocupada por un complejo de Golgi desarrollado compuesto por pilas de dictiosomas y vesículas de transporte que reciben y procesan las cadenas de inmunoglobulinas previo a su secreción.
+	\item \textbf{Mitocondrias alargadas:} Distribuidas entre las láminas del RER se sitúan mitocondrias con crestas densas que suministran el ATP requerido para la translocación cotraduccional por el canal Sec61, la actividad de chaperonas ATPasas y el transporte vesicular intracelular \parencite{lam2018metabolic}.
+\end{enumerate}
+
+\begin{table*}[t]
+\centering
+\caption{Comparación morfológica, ultraestructural y funcional entre el linfocito B virgen quiescente y la célula plasmática madura.}
+\label{tab:comparacion_b_plasma}
+\small
+\begin{tabularx}{\textwidth}{p{4.2cm}YY}
+\toprule
+\textbf{Parámetro celular} & \textbf{Linfocito B virgen} & \textbf{Célula plasmática diferenciada} \\
+\midrule
+Relación Núcleo / Citoplasma & Elevada ($>0.8$), citoplasma escaso & Reducida ($<0.4$), citoplasma abundante \\
+Posición y patrón del núcleo & Central; cromatina finamente granular & Excéntrico; heterocromatina en rueda de carreta \\
+Volumen relativo del RER & $< 5\%$ del citoplasma; disperso & $> 50-60\%$ del citoplasma; lamelar denso \\
+Complejo de Golgi & Rudimentario, difícilmente visible & Hipertrofiado; halo claro perinuclear \\
+Estado proliferativo & Capaz de entrar en mitosis ($G_0 \to S$) & Arresto irreversible en fase $G_0$ terminal \\
+Receptor de antígeno (BCR) & Alto en membrana (IgM / IgD superficial) & Ausente o residual en superficie \\
+Tasa de secreción de anticuerpos & Prácticamente nula ($< 10$ moléculas/h) & Masiva ($10^3 - 10^4$ moléculas/segundo) \\
+Marcadores de superficie & $\text{CD19}^+$, $\text{CD20}^+$, $\text{CXCR5}^+$, $\text{B220}^+$ & $\text{CD19}^-$, $\text{CD20}^-$, $\text{CD138}^+$ (Sindecano-1), $\text{CXCR4}^+$ \\
+Sensores de estrés UPR & Basales, inactivos & Altamente inducidos y sintonizados \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\section{Dinámica biosintética, ensamblaje de anticuerpos y estrés reticular}
+
+
+El ensamblaje de una IgG requiere dos cadenas pesadas ($\text{H}$) y dos ligeras ($\text{L}$), asociadas en un heterotetrámero $\text{H}_2\text{L}_2$ estabilizado por enlaces disulfuro \parencite{walter2011unfolded}.
+
+
+\subsection{Translocación cotraduccional y control de calidad en el lumen del RER}
+Las cadenas $\text{H}$ y $\text{L}$ presentan en su extremo N-terminal un péptido señal hidrofóbico. Al emerger del ribosoma, es captado por la partícula de reconocimiento de señal (SRP), que detiene temporalmente la traducción y conduce el complejo ribosoma-cadena naciente hacia el receptor de SRP en la membrana del retículo. La cadena polipeptídica entra al lumen a través del canal translocador heterotrimérico \textbf{Sec61} \parencite{alberts2022molecular,karp2020cell}.
+
+En el lumen reticular ocurren modificaciones simultáneas:
+\begin{enumerate}
+	\item La peptidasa de señal escinde el péptido conductor N-terminal.
+	\item El complejo oligosacariltransferasa transfiere en bloque el oligosacárido precursor $\text{Glc}_3\text{Man}_9\text{GlcNAc}_2$ a residuos de asparagina en secuencias consenso Asn-X-Ser/Thr (\textbf{N-glicosilación cotraduccional}).
+	\item Chaperonas luminales dirigen el plegamiento tridimensional: la proteína \textbf{BiP/GRP78} se une de forma reversible a dominios hidrofóbicos expuestos de las cadenas pesadas para prevenir su agregación no funcional, manteniéndolas en el retículo hasta que las cadenas ligeras se sintetizan y desplazan a BiP.
+	\item Las enzimas proteína disulfuro isomerasa (\textbf{PDI}) y ERp57 catalizan la formación y el rearreglo oxidativo de los puentes disulfuro requeridos para la conformación globular de los dominios inmunoglobulina.
+\end{enumerate}
+
+\subsection{La Respuesta a Proteínas Desplegadas (UPR) como adaptación fisiológica}
+Dado que la producción intensa favorece la acumulación de intermediarios mal plegados, la célula plasmática mantiene activa la \textbf{Respuesta a Proteínas Desplegadas} (UPR) para prevenir la proteotoxicidad \parencite{walter2011unfolded,cenci2008progressive}:
+
+\begin{figure*}[t]
+\centering
+\begin{tikzpicture}[node distance=2.8cm, auto]
+\node[draw=uanlblue, thick, rounded corners, fill=uanlblue!15, text width=3.8cm, align=center, font=\small\bfseries] (stress) {Carga Biosintética Masiva en el RER\\ (Inmunoglobulinas nascentes)};
+
+\node[draw=green!60!black, thick, fill=green!10, text width=3.6cm, align=center, font=\small, right of=stress, xshift=2.2cm, yshift=2.2cm] (ire1) {\textbf{Vía IRE1$\alpha$}\\ Empalme de \emph{Xbp1} $\to$ \textbf{XBP-1s}\\ $\uparrow$ Biogénesis RER y lípidos};
+
+\node[draw=orange!80!black, thick, fill=orange!10, text width=3.6cm, align=center, font=\small, right of=stress, xshift=2.2cm] (perk) {\textbf{Vía PERK}\\ Fosforilación eIF2$\alpha$ $\to$ ATF4\\ $\uparrow$ Chaperonas BiP/PDI\\ $\uparrow$ Síntesis de aminoácidos};
+
+\node[draw=purple!70!black, thick, fill=purple!10, text width=3.6cm, align=center, font=\small, right of=stress, xshift=2.2cm, yshift=-2.2cm] (atf6) {\textbf{Vía ATF6}\\ Escisión en Golgi $\to$ ATF6f\\ $\uparrow$ Degradación ERAD};
+
+\node[draw=uanlblue, thick, rounded corners, fill=uanlblue!20, text width=4.5cm, align=center, font=\small\bfseries, right of=perk, xshift=2.8cm] (homeostasis) {Homeostasis Secretora\\ Secreción de $10^4$ Ac/s\\ Supervivencia celular};
+
+\draw[->, thick, algoblue] (stress) |- (ire1);
+\draw[->, thick, algoblue] (stress) -- (perk);
+\draw[->, thick, algoblue] (stress) |- (atf6);
+\draw[->, thick, algogreen] (ire1) -| (homeostasis);
+\draw[->, thick, algogreen] (perk) -- (homeostasis);
+\draw[->, thick, algogreen] (atf6) -| (homeostasis);
+\end{tikzpicture}
+\caption{Los tres brazos efectores de la Respuesta a Proteínas Desplegadas (UPR) operando como un circuito homeostático en la célula plasmática.}
+\label{fig:upr}
+\end{figure*}
+
+\begin{itemize}
+	\item \textbf{Sensor IRE1$\alpha$ (Inositol-requiring enzyme 1$\alpha$):} Es una cinasa y endoribonucleasa del RER. La sobrecarga proteica disocia a BiP de IRE1$\alpha$, permitiendo su dimerización y autofosforilación. La enzima escinde un intrón de 26 nucleótidos en el ARNm inmaduro de \emph{Xbp1}, alterando la pauta de lectura para producir el factor \textbf{XBP-1s}. Este factor se transloca al núcleo e induce genes de biosíntesis de fosfolípidos (como fosfatidilcolina) para expandir la membrana del RER y codifica componentes de degradación asociada al retículo (ERAD) \parencite{todd2009xbp1}.
+	\item \textbf{Sensor PERK (Protein kinase RNA-like ER kinase):} Su activación por oligomerización fosforila la subunidad $\alpha$ del factor de iniciación eIF2$\alpha$, reduciendo de forma transitoria la traducción proteica global para aliviar la carga sobre el retículo. No obstante, favorece la traducción selectiva de \textbf{ATF4}, el cual induce transportadores de aminoácidos, enzimas antioxidantes y chaperonas protectoras.
+	\item \textbf{Sensor ATF6 (Activating transcription factor 6):} Ante la presencia de proteínas desplegadas, ATF6 se transloca mediante vesículas COPII al aparato de Golgi, donde las proteasas S1P y S2P escinden su dominio citosólico activo (ATF6f). Este fragmento migra al núcleo e induce la expresión de BiP, calreticulina y enzimas de control de calidad.
+\end{itemize}
+
+
+A diferencia de otras células somáticas, en las que el estrés no mitigado induce la expresión de CHOP y activa la vía apoptótica, las células plasmáticas ajustan los umbrales de la respuesta a proteínas desplegadas (UPR). De este modo, mantienen activos los efectores citoprotectores XBP-1s y BiP, mientras que Blimp-1 y la proteína de supervivencia Mcl-1 suprimen la vía apoptótica \parencite{walter2011unfolded}.
+
+
+\section{Tráfico vesicular y mecanismos de secreción constitutiva}
+
+
+Una vez ensamblados en el retículo, los heterotetrámeros de inmunoglobulina se incorporan a vesículas \textbf{COPII}, formadas por Sec23/Sec24 y Sec13/Sec31 en los sitios de salida del retículo (ERES) \parencite{karp2020cell,alberts2022molecular}.
+
+
+\subsection{Procesamiento en el Complejo de Golgi}
+Las vesículas COPII pierden su cubierta y se fusionan para dar lugar al compartimento intermedio retículo-Golgi (ERGIC), que se integra a la cara \emph{cis} del complejo de Golgi. Durante el tránsito por las cisternas \emph{cis}, medial y \emph{trans}:
+\begin{enumerate}
+	\item Enzimas manoxidasas eliminan residuos de manosa de las cadenas oligosacáridas unidas a residuos de asparagina.
+	\item Diversas glicosiltransferasas adicionan sucesivamente N-acetilglucosamina (GlcNAc), galactosa, fucosa y residuos terminales de ácido siálico.
+	\item Este procesamiento de carbohidratos en la región constante ($F_c$) resulta indispensable para la conformación requerida en la interacción con receptores $Fc\gamma R$ en células fagocíticas y para fijar el componente C1q de la cascada del complemento.
+\end{enumerate}
+
+\subsection{Vía secretora constitutiva independiente de gránulos}
+A diferencia de células glandulares endocrinas o exocrinas que almacenan productos en gránulos densos regulados por despolarización o señales hormonales, la célula plasmática madura exhibe, en cambio, una \textbf{exocitosis constitutiva continua y no regulada} \parencite{alberts2022molecular}:
+\begin{itemize}
+	\item Desde la red del \emph{trans}-Golgi (TGN), las inmunoglobulinas son empacadas continuamente en vesículas secretoras pos-Golgi sin pasar por reservorios de almacenamiento intracelular.
+	\item El transporte de estas vesículas hacia la membrana plasmática se realiza a lo largo de filamentos de citoesqueleto mediante motores moleculares.
+	\item La fusión de las vesículas con la membrana plasmática está mediada por proteínas SNARE: las moléculas $v$-SNARE vesiculares interactúan con sintaxina y SNAP-25 ($t$-SNARE) en la membrana blanco, formando un complejo que aproxima las bicapas lipídicas y libera los anticuerpos al fluido intersticial.
+\end{itemize}
+
+\section{Señalización intercelular, homing y nichos de supervivencia}
+
+Las células plasmáticas comprenden plasmablastos de vida corta y células plasmáticas de larga vida (\emph{Long-Lived Plasma Cells}, LLPC) \parencite{radbruch2006competence}.
+
+\subsection{Recableado de receptores de quimiocinas (Homing a Médula Ósea)}
+Para pasar de un plasmablasto migratorio generado en órganos linfoides secundarios a una célula plasmática residente estable, la célula reconfigura sus receptores de migración:
+\begin{itemize}
+	\item \textbf{Pérdida de receptores foliculares:} La represión mediada por Blimp-1 y la pérdida de PAX5 apagan la expresión de \textbf{CXCR5} (receptor para CXCL13) y \textbf{CCR7} (receptor para CCL19/CCL21), permitiendo la salida de los folículos y áreas ricas en células T.
+	\item \textbf{Sobreexpresión de CXCR4:} En contraposición, la célula incrementa la presencia del receptor de quimiocina \textbf{CXCR4}. Las células estromales reticulares de la médula ósea y el bazo secretan constitutivamente el ligando \textbf{CXCL12} (SDF-1$\alpha$). Este gradiente dirige la migración y el arresto de los plasmablastos hacia los cordones hematopoyéticos de la médula ósea \parencite{radbruch2006competence,tellier2019plasma}.
+\end{itemize}
+
+\subsection{Mecanismos moleculares del nicho estromal medular}
+En la médula ósea, las células plasmáticas ocupan \textbf{nichos multicelulares de supervivencia} formados por células estromales, osteoblastos y eosinófilos \parencite{radbruch2006competence}. La adhesión y las señales de APRIL y BAFF permiten persistir durante meses o años; las células que no las reciben mueren por apoptosis:
+
+\begin{enumerate}
+	\item \textbf{Señalización por factores de supervivencia (APRIL y BAFF):} Células estromales y eosinófilos secretan \textbf{APRIL} y \textbf{BAFF}. El plasmocito expresa el receptor \textbf{BCMA} (TNFRSF17). La activación de BCMA activa la vía NF-$\kappa$B, promoviendo la síntesis sostenida de la proteína antiapoptótica \textbf{Mcl-1} (de la familia Bcl-2), lo que bloquea la activación de Bax/Bak en la membrana mitocondrial \parencite{tellier2019plasma}.
+	\item \textbf{Señalización por Interleucina-6 (IL-6):} La IL-6 liberada en el estroma interactúa con su receptor (IL-6R / gp130), estimulando la vía JAK-STAT3, la cual refuerza la actividad de Blimp-1 y mantiene la capacidad biosintética.
+	\item \textbf{Adhesión a la matriz extracelular:} La interacción física con el estroma depende de la integrina $\alpha_4\beta_1$ (VLA-4) del plasmocito unida a la molécula \textbf{VCAM-1} en fibroblastos estromales, complementada por la fijación del proteoglicano de superficie \textbf{CD138} (sindecano-1) a componentes de la matriz.
+\end{enumerate}
+
+\subsection{Bioenergética mitocondrial y transporte de piruvato}
+La biosíntesis y secreción continua de proteínas exige un flujo constante de ATP generado por fosforilación oxidativa. Por tanto, las LLPC dependen de la expresión del complejo transportador mitocondrial de piruvato (\textbf{MPC1/MPC2}), el cual importa piruvato hacia la matriz mitocondrial para alimentar el ciclo de Krebs, manteniendo la viabilidad celular en el nicho \parencite{lam2018metabolic}.
+
+\section{Transferencia agrobiotecnológica}
+Estos fundamentos tienen aplicaciones concretas en el ámbito agropecuario y biotecnológico:
+\begin{enumerate}
+	\item \textbf{Optimización vacunal en animales domésticos:} El diseño de adyuvantes en vacunas para bovinos, porcinos y aves busca modular la expresión de CXCR4 y BCMA para orientar la formación y asentamiento de células plasmáticas de larga vida en médula ósea, garantizando títulos de anticuerpos prolongados frente a enfermedades infecciosas.
+	\item \textbf{Anticuerpos monoclonales para sanidad vegetal:} Las líneas celulares derivadas de células plasmáticas (hibridomas) permiten obtener anticuerpos de alta afinidad empleados en pruebas de ELISA y tiras reactivas de diagnóstico rápido para la detección de fitopatógenos virales y bacterianos en semillas y plántulas comerciales.
+	\item \textbf{Tolerancia al estrés reticular en biofactorías:} La regulación de la vía IRE1$\alpha$--XBP-1s en la célula plasmática ofrece pautas para la ingeniería genética de sistemas celulares y plantas transgénicas destinados a la síntesis de proteínas recombinantes, permitiendo elevar los rendimientos biosintéticos sin desencadenar apoptosis por sobrecarga reticular.
+\end{enumerate}
+
+\section{Conclusiones}
+La célula plasmática muestra cómo una célula puede cambiar su estructura y su funcionamiento para cumplir una tarea muy específica. Al pasar de linfocito B a célula plasmática, aumenta el retículo endoplásmico rugoso, se organiza el aparato de Golgi y se activan mecanismos que permiten producir y liberar grandes cantidades de anticuerpos. Estos cambios no ocurren por separado: dependen de la coordinación entre los factores de transcripción, la respuesta a proteínas desplegadas y las señales del nicho donde la célula permanece.
+
+Desde mi punto de vista, la idea más importante es que la célula plasmática no debe entenderse como una célula estática. Su supervivencia depende de mantener un equilibrio entre la producción de proteínas, el consumo de energía y las señales que recibe del tejido. Cuando ese equilibrio funciona, la célula puede sostener la defensa humoral durante periodos prolongados. Cuando se pierde, la sobrecarga del retículo o la falta de apoyo del nicho puede comprometer su viabilidad.
+
+Considero que este conocimiento tiene utilidad para la agronomía porque ayuda a relacionar la biología celular con la sanidad animal, el desarrollo de vacunas y la producción de herramientas de diagnóstico. Comprender estos mecanismos permite valorar la importancia de estudiar la célula completa, desde sus organelos hasta su comunicación con otras células. En conjunto, la célula plasmática representa un ejemplo claro de cómo la especialización celular puede tener aplicaciones directas en la biotecnología y en la producción agropecuaria.

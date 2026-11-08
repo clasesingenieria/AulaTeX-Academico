@@ -6,8 +6,8 @@
 - **Valor porcentual:** 35% (35 puntos sobre 100)
 - **Modalidad:** Trabajo de investigación individual o parejas
 - **Formato del producto:**
-  1. Artículo de revisión bibliográfica formal (Review Paper) en formato institucional UANL (`reporte-biologia-celular-PIA.pdf`).
-  2. Presentación ejecutiva Beamer 16:9 (`presentacion-biologia-celular-PIA.pdf`).
+  1. Artículo de revisión bibliográfica formal (Review Paper) en formato institucional UANL (`reporte-biologia-celular-Actividad-8.pdf`).
+  2. Presentación ejecutiva Beamer 16:9 (`presentacion-biologia-celular-Actividad-8.pdf`).
 
 ---
 
@@ -26,7 +26,7 @@ El artículo debe cubrir:
 
 1. **Encabezado Institucional:**
    - Emblema UANL y escudo heráldico de la Facultad de Agronomía.
-   - Datos del autor (Carlos Mauricio Carvajal Coronado - 1977875).
+   - Datos del autor (Diego de la Cruz).
 2. **Resumen Estructurado y Abstract en Inglés:**
    - Objetivos, metodología de revisión, hallazgos clave y palabras clave (Keywords).
 3. **Introducción y Relevancia Agronómica:**
@@ -51,4 +51,7 @@ El artículo debe cubrir:
 | **Vinculación Agronómica** | Articulación ejemplar entre la biofísica celular y la resiliencia de cultivos a sequía y salinidad. | Vinculación adecuada con la productividad vegetal. | Mención aislada sin conexión funcional. | Ausencia de contexto agronómico. | **25%** |
 | **Aparato Crítico y Literatura Científica** | Más de 20 fuentes indexadas de alto impacto (JCR/Scopus) citadas rigurosamente según APA 7. | Fuentes académicas adecuadas con citación correcta. | Citas escasas o desactualizadas. | Sin referencias o fuentes dudosas. | **20%** |
 | **Calidad Editorial UANL** | Formato XeLaTeX impecable, figuras vectoriales de alta resolución, diagramas metabólicos y cero erratas. | Buen formato con ligeros desajustes tipográficos. | Formato deficiente o descuidado. | No cumple con los estándares institucionales. | **20%** |
+
+
+
 

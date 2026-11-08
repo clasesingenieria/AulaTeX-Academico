@@ -34,6 +34,42 @@ inside AulaTeX so the suite remains autonomous.
 - Editable source files keep their editorial location; the delivery directory contains the files selected for submission.
 - Full specification: [CONTRATO-ESTRUCTURA-MATERIAS.md](CONTRATO-ESTRUCTURA-MATERIAS.md).
 
+## ITESCA Academic Workflow Architecture
+
+Orchestrated by the `aulatex` master agent (`AulaTeXItescaOrchestrator`), this workflow integrates specialized autonomous agents following a strict sequential pipeline:
+
+```mermaid
+flowchart LR
+    A[aulatex: Maquetas y Nodos] --> B[navegación-itesca: Moodle Read-Only]
+    B --> C[realizar-planeación: Planeación Canónica]
+    C --> D[encontrar-recursos: Materiales y Corpus]
+    D --> E[extraer-conceptos: Fichas y Trazabilidad]
+    E --> F[realizar-actividad: TeX/Docx + Calidad]
+    F <--> G[estilo-escribir: Auditoría de Voz]
+```
+
+### Agent Roles & Contracts
+
+1. **`aulatex` (Orquestador Maestro)**:
+   - Coordinates template generation, platform navigation, editorial nodes (`IncrementalDetailPlanner`), plannings, activity generation, and multi-stage quality verification.
+2. **`navegación-itesca` (Tipo: `navegación-plataforma`)**:
+   - Specialized read-only navigation agent for ITESCA Virtual (`https://cursos3.e-itesca.edu.mx`).
+   - Resolves credentials securely from `PlatformCredentialVault` (`account=itesca`) via `AULATEX_MASTER_PIN` without exposing passwords, cookies, session keys or PINs in any log or manifest.
+   - Origin-locked to HTTPS ITESCA host, blocks mutating operations, strips `sesskey`, and enforces `live_quiz_attempt_protected` boundaries for active online quizzes.
+3. **`realizar-planeación`**:
+   - Consumes sanitized platform snapshots and verified local template metadata to create validated canonical plannings (`planeaciones-<slug>/planeacion-<slug>-Actividad-<N>.json`).
+   - Separates confirmed teacher criteria, inferred parameters, and operational blockers. Validated against `planeacion-canonica.schema.json` and `validate_pedagogical`.
+4. **`encontrar-recursos`**:
+   - Downloads official teacher attachments and unit resources into `referencias-<slug>/notas-<slug>/<actividad>/material-docente/`.
+   - Extracts page-tagged text (`Pagina N`) with PyMuPDF/python-docx and builds the activity `corpus-extractor/`.
+5. **`extraer-conceptos`**:
+   - Generates core extractor artifacts (`fichas_conceptos.json`, `.md`, `conceptos_detectados.json`, `ideas_detectadas.json`, `trazabilidad_fuentes.json`, `resumen_planeacion.json`) directly in `referencias-<slug>/notas-<slug>/<actividad>/conceptos/` and syncs them to `extractor-aulatex/conceptos-<slug>-actividad-<N>/`.
+6. **`realizar-actividad`**:
+   - Materializes and refines deliverables adhering strictly to subject templates and institutional covers.
+   - Collaborates with `estilo-escribir`, audits typography (e.g. Arial 11/12), verifies margin bounds and citations, renders page contact sheets, and promotes verified files to `entregas-<slug>/`.
+7. **`estilo-escribir`**:
+   - Audits `.tex` and `.docx` prose against fourth-wall ruptures, consigna metadiscourse, robotic AI clichés, unescaped prose dollar pairs (`$100 y $120`), and unreferenced citations, enforcing an acceptable score threshold >= 88.0.
+
 ## Runtime outputs
 
 Each agent run writes:

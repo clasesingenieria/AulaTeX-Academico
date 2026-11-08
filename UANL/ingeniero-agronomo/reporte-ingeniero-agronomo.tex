@@ -1,0 +1,186 @@
+% ==============================================================================
+% PLANTILLA UNIFICADA DE REPORTE ACADÉMICO - UANL (INGENIERO AGRÓNOMO)
+% Universidad Autónoma de Nuevo León | Facultad de Agronomía
+% Archivo principal: reporte-ingeniero-agronomo.tex -> reporte-ingeniero-agronomo.pdf
+% ==============================================================================
+% Arquitectura centralizada de AulaTeX:
+% - Núcleo central: aulaTEX/base/Plantilla-Informe/template.tex (Pablo Pizarro R.)
+% - Adaptación institucional: UANL/ingeniero-agronomo/template.tex
+%
+% Principios de diseño derivados de referencias verificadas:
+% 1. Patrón UnADM:
+%    - Desacoplamiento total entre metadatos institucionales y cuerpo del informe.
+%    - Criterio de cumplimiento didáctico: problema -> análisis -> transferencia.
+%    - Integración de citas autor-año y bibliografía académica en formato APA 7.
+% 2. Patrón IIIEPE:
+%    - Identidad visual institucional mediante paleta cromática coordinada.
+%    - Portada y encabezados formales con jerarquía visual equilibrada.
+% 3. Patrón ITESCA:
+%    - Separación estricta entre información académica y metadatos operativos.
+%    - Prohibición de imprimir en el PDF visible: IDs de plataforma (Nexus/Moodle),
+%      códigos de runner, marcas de automatización o fechas de preparación interna.
+%
+% Flujo de compilación oficial:
+%    latexmk -pdf -outdir=.build reporte-ingeniero-agronomo.tex
+%    (Gestión de auxiliares en .build para mantener el directorio limpio de residuos)
+% ==============================================================================
+
+\documentclass[
+	spanish,
+	letterpaper,
+	oneside
+]{article}
+
+% ==============================================================================
+% 1. METADATOS ACADÉMICOS Y VARIABLES DEL DOCUMENTO
+% ==============================================================================
+\def\documenttitle {Título de la Evidencia de Aprendizaje}
+\def\documentsubtitle {Reporte Técnico y Análisis Disciplinar}
+\def\documentsubject {Unidad de Aprendizaje Curricular}
+
+% Datos del estudiante y cátedra
+\def\documentauthor {Carlos Mauricio Carvajal Coronado}
+\def\studentmatricula {1977875}
+\def\coursename {Nombre de la Unidad de Aprendizaje}
+\def\coursecode {}
+\def\professortitle {Docente Titular:}
+\def\professorname {Nombre del Docente Titular}
+\def\academicperiod {Semestre Agosto -- Diciembre 2026}
+\def\academicgroup {Grupo Curricular}
+
+% Configuración bibliográfica institucional UANL
+\def\defaultbibliography {bibliografia-uanl}
+\def\universityname {Universidad Autónoma de Nuevo León}
+\def\universityfaculty {Facultad de Agronomía}
+\def\universitydepartment {Programa Educativo de Ingeniero Agrónomo}
+\def\universitydepartmentimage {departamentos/logo-agronomia}
+\def\universitydepartmentimagecfg {height=1.65cm}
+\def\universitylocation {General Escobedo / Marín, Nuevo León, México}
+
+% ==============================================================================
+% 2. TABLA DE AUTORÍA Y DATOS ACADÉMICOS (SIN METADATOS OPERATIVOS)
+% ==============================================================================
+\def\authortable {
+	\begin{tabular}{ll}
+		\textbf{Estudiante:} & \documentauthor \\
+		\textbf{Matrícula:}  & \studentmatricula \\
+		\textbf{\professortitle} & \professorname \\
+		\textbf{Asignatura:} & \coursename \\
+		\textbf{Periodo / Grupo:} & \academicperiod\ (\academicgroup) \\
+		& \\
+		\multicolumn{2}{l}{Fecha de realización: \today} \\
+		\multicolumn{2}{l}{\universitylocation}
+	\end{tabular}
+}
+
+% ==============================================================================
+% 3. CARGA DE LA ADAPTACIÓN INSTITUCIONAL CENTRALIZADA
+% ==============================================================================
+% Carga template.tex local que canaliza la configuración al núcleo de AulaTeX.
+\input{template}
+
+% ==============================================================================
+% 4. COMPATIBILIDAD TIPOGRÁFICA MOTOR-AGNOSTIC (XeLaTeX / pdfLaTeX)
+% ==============================================================================
+\usepackage{ifxetex}
+\ifxetex
+  \usepackage{fontspec}
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+\else
+  \usepackage[scaled=.96]{helvet}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Paquetes complementarios para maquetación agronómica y científica
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,positioning,shapes.geometric,shadows.blur}
+
+% ==============================================================================
+% 5. INICIO DEL DOCUMENTO FORMAL
+% ==============================================================================
+\begin{document}
+
+% Portada institucional normalizada con marca de agua de la Facultad de Agronomía UANL
+\institutionalWatermark[0.08]{\careerwatermarkimage}
+\templatePortrait
+
+% Configuración de página, encabezados y pies limpios
+\templatePagecfg
+
+% Resumen técnico / Abstract
+\begin{abstractd}
+El presente reporte unificado sintetiza el desarrollo metodológico, analítico y práctico de la actividad formativa, en apego estricto a las directrices académicas de la Facultad de Agronomía de la Universidad Autónoma de Nuevo León (UANL). La estructura integra fundamentos teóricos, caracterización técnica, evidencia cuantitativa o cualitativa, y transferencia profesional orientada al ejercicio agronómico sostenible y a la resolución de problemas productivos y ambientales del sector primario.
+\end{abstractd}
+
+% Índice de contenidos formal
+\templateIndex
+
+% Configuraciones de cierre de preliminares
+\templateFinalcfg
+
+% ==============================================================================
+% 6. SECCIONES DE CONTENIDO
+% ==============================================================================
+
+\section{Introducción y Justificación Académica}
+\label{sec:introduccion}
+
+El análisis de los procesos agrobiológicos y sistemas de producción agrícola demanda el dominio integrado de fundamentos científicos, habilidades de diagnóstico en campo y aplicación de criterios de sustentabilidad productiva \citep{uanlModeloEducativo2022}. En consonancia con la visión institucional de la UANL hacia la excelencia formativa y la vinculación con el sector primario \citep{uanlVision2030}, este trabajo examina los factores determinantes del problema seleccionado, delimitando su relevancia agronómica y los objetivos formativos que orientan su resolución.
+
+\section{Marco Conceptual y Metodología}
+\label{sec:marco-metodologico}
+
+La contextualización técnica del problema se sustenta en la consulta de fuentes científicas especializadas y en la sistematización de variables operativas. El diseño metodológico contempla las fases de diagnóstico inicial, recopilación de datos edafoclimáticos o de laboratorio, y tratamiento analítico conforme a los estándares vigentes de la disciplina.
+
+\section{Desarrollo Técnico y Evidencia Disciplinar}
+\label{sec:desarrollo}
+
+En esta sección se exponen los hallazgos técnicos, datos experimentales y formulaciones analíticas. A continuación se presenta un cuadro comparativo sintético que ilustra la matriz de evaluación agronómica:
+
+\begin{table}[!htb]
+	\centering
+	\caption{Matriz de variables agronómicas y criterios de evaluación técnica.}
+	\label{tab:variables-agronomicas}
+	\begin{AulatexTable}[\linewidth]
+	\begin{tabularx}{\linewidth}{lZl}
+		\toprule
+		\textbf{Parámetro Técnico} & \textbf{Descripción y Criterio Agronómico} & \textbf{Rango de Referencia} \\
+		\midrule
+		Calidad edáfica & Capacidad de intercambio catiónico y pH del suelo & 6.5 -- 7.5 \\
+		Eficiencia hídrica & Lámina de riego requerida según evapotranspiración & 450 -- 600 mm/ciclo \\
+		Sanidad vegetal & Incidencia fitopatógena monitoreada en muestreo & $< 5\%$ umbral económico \\
+		Viabilidad económica & Relación costo-beneficio del esquema de manejo & R B/C $> 1.35$ \\
+		\bottomrule
+	\end{tabularx}
+	\end{AulatexTable}
+\end{table}
+\FloatBarrier
+
+\section{Resultados y Discusión Crítica}
+\label{sec:discusion}
+
+El contraste entre los resultados obtenidos y la literatura científica permite identificar fortalezas técnicas y áreas de mejora agronómica. Se evita la mera repetición de instrucciones o descripción pasiva de datos; en su lugar, se argumenta el impacto biológico, productivo y ambiental de cada alternativa analizada.
+
+\clearpage
+\section{Conclusiones y Transferencia Profesional}
+\label{sec:conclusiones}
+
+Los aprendizajes consolidados en la presente evidencia de aprendizaje se traducen en recomendaciones concretas para la práctica agronómica profesional:
+\begin{enumerate}
+	\item \textbf{Precisión diagnóstica:} La toma de decisiones en campo debe sustentarse en muestreos representativos y correlación analítica de variables edáficas y meteorológicas.
+	\item \textbf{Sustentabilidad ambiental:} La adopción de buenas prácticas agrícolas minimiza el impacto ecológico y maximiza la eficiencia en el uso de insumos.
+	\item \textbf{Criterio transferible:} La metodología documentada provee un marco reproducible para la evaluación de ciclos agrícolas subsecuentes.
+\end{enumerate}
+
+% ==============================================================================
+% 7. REFERENCIAS BIBLIOGRÁFICAS (FORMATO APA 7)
+% ==============================================================================
+\clearpage
+\bibliography{\defaultbibliography}
+
+\end{document}

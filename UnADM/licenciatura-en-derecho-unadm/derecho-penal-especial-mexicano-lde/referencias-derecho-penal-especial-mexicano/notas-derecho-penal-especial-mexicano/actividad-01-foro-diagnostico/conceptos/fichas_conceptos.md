@@ -1,0 +1,771 @@
+# Fichas de conceptos
+
+Las citas textuales se extrajeron de las fuentes de entrada. La búsqueda puede agrupar referencias del mismo concepto aunque estén en archivos distintos.
+
+## Ficha 01. derecho penal
+
+**Calidad estimada:** alta
+**Mejor similitud:** 0.4497
+**Similitud promedio:** 0.3893
+**Fuentes:** ref-Criminologia fundamentos y principios - Antonio .txt; ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt; ref-Derecho penal Parte general - Jesus Maria Silva .txt
+**Ubicaciones:** ref-Criminologia fundamentos y principios - Antonio .txt, bloque 118; ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt, bloque 19; ref-Derecho penal Parte general - Jesus Maria Silva .txt, bloque 82; ref-Derecho penal Parte general - Jesus Maria Silva .txt, bloque 87; ref-Derecho penal Parte general - Jesus Maria Silva .txt, bloque 92
+
+### ref-Criminologia fundamentos y principios - Antonio .txt — bloque 118 — similitud 0.4497
+
+**Detalle de puntaje:** tfidf=0.3697; bonus=0.0800
+
+> Derecho Penal), Barcelona, Bosch (1972), págs. 5 a 14; MIR PUIG, S., Derecho Penal, P.
+
+### ref-Derecho penal Parte general - Jesus Maria Silva .txt — bloque 82 — similitud 0.4058
+
+**Detalle de puntaje:** tfidf=0.3258; bonus=0.0800
+
+> Mylonopoulos, Dogmática penal en un contexto internacional. Estudios sobre  la teoría del delito con el trasfondo del plea bargaining, el Derecho penal  europeo y el Derecho penal internacional, 2017. Naucke, Strafrecht als Teil politischer Macht.
+
+### ref-Derecho penal Parte general - Jesus Maria Silva .txt — bloque 92 — similitud 0.3801
+
+**Detalle de puntaje:** tfidf=0.3001; bonus=0.0800
+
+> Pues bien, a diferencia del Derecho penal estatal, el Derecho penal internacional no puede presuponer la existencia de una comunidad política de personas. En efecto, la comunidad internacional actual no constituye una comunidad de personas, sino que es, más bien, una —relativa— agrupación de Estados.
+
+### ref-Derecho penal Parte general - Jesus Maria Silva .txt — bloque 92 — similitud 0.3794
+
+**Detalle de puntaje:** tfidf=0.2994; bonus=0.0800
+
+> Sin embargo, resulta controvertida la medida en que lo ha hecho. 16 De ello dan cuenta el Derecho penal internacional, el Derecho penal europeizado y el Derecho supranacional de protección de los derechos humanos. Así, por un lado, está claro que el ámbito de incidencia del Derecho penal se ha extendido a la comunidad internacional.
+
+### ref-Derecho penal Parte general - Jesus Maria Silva .txt — bloque 87 — similitud 0.3743
+
+**Detalle de puntaje:** tfidf=0.2943; bonus=0.0800
+
+> Schreiber, Der Begriff der Rechtspflicht, 1966; Schünemann, Globalisierung als Meta- morphose oder Apokalypse des Rechts?, ARSP Beiheft 93 (2004), 133; Sicurella et al. (eds.), Principios generales del Derecho penal en la Unión Europea, 2020; Silva Sánchez, Aproxi- mación al Derecho penal contemporáneo, 1992 (2.ª, 2010); el mismo, La expansión del Derecho penal, 1999 (2.ª, 2001; 3.ª, 2011); el mismo, Normas y acciones en Derecho penal, 2003; el mismo, Los principios inspiradores de las propuestas de un Derecho penal europeo, RP 13 (2004), 139; el mismo, Constitución europea, legalidad y Derecho penal económico, en: Bajo Fernández (ed.), Constitución europea y Derecho penal económico, 2006...
+
+### ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt — bloque 19 — similitud 0.3466
+
+**Detalle de puntaje:** tfidf=0.2666; bonus=0.0800
+
+> Para los fines de esta obra y para evitar la repetición innecesaria de nociones expresadas por diversos autores, cabe puntualizar lo siguiente: Noción El derecho penal es el conjunto normativo perteneciente al derecho público interno, que tiene por objeto al delito, al delincuente y la pena o medida de seguridad, para mantener el orden social mediante el respeto de los bienes jurídicos tutelados por la ley. De la noción anterior se colige que el derecho penal pretende preservar un equilibrio que dé seguridad a los miembros de la sociedad.
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 02. derecho penal especial
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2070
+**Similitud promedio:** 0.1483
+**Fuentes:** ref-Criminologia fundamentos y principios - Antonio .txt; ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt; ref-Derecho penal Parte general - Jesus Maria Silva .txt
+**Ubicaciones:** ref-Criminologia fundamentos y principios - Antonio .txt, bloque 118; ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt, bloque 23; ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt, bloque 71; ref-Derecho penal Parte general - Jesus Maria Silva .txt, bloque 114; ref-Derecho penal Parte general - Jesus Maria Silva .txt, bloque 82; ref-Derecho penal Parte general - Jesus Maria Silva .txt, bloque 87; ref-Derecho penal Parte general - Jesus Maria Silva .txt, bloque 92
+
+### ref-Derecho penal Parte general - Jesus Maria Silva .txt — bloque 114 — similitud 0.2070
+
+**Detalle de puntaje:** tfidf=0.1170; bonus=0.0900
+
+> En efecto, en este último caso el Derecho positivo deja de poseer autoridad moral —o la tiene limitada a la que se deriva de la función de proporcionar orden y seguridad— quedando reducido por lo demás a mero mecanismo de coacción. Una posición históricamente muy relevante sostuvo la procedencia de un 114 Derecho penal especial para los autores por conciencia. En concreto, sostenía que lo único procedente era su inocuización mediante un internamiento de naturaleza muy distinta de la pena y próxima a la condición de los prisione- ros de guerra.
+
+### ref-Criminologia fundamentos y principios - Antonio .txt — bloque 118 — similitud 0.1709
+
+**Detalle de puntaje:** tfidf=0.1409; bonus=0.0300
+
+> Derecho Penal), Barcelona, Bosch (1972), págs. 5 a 14; MIR PUIG, S., Derecho Penal, P.
+
+### ref-Criminologia fundamentos y principios - Antonio .txt — bloque 118 — similitud 0.1630
+
+**Detalle de puntaje:** tfidf=0.1330; bonus=0.0300
+
+> 9 y ss.; GIMBERNAT, E., ¿Tiene un futuro la dogmática jurídico-penal? (en: Estudios  de Derecho Penal, 2ª ed., 1981, págs. 105 y ss.); COBO DEL ROSAL, M., y VIVES ANTÓN, M., Derecho  Penal, P. G., 1984 (Valencia), págs.
+
+### ref-Derecho penal Parte general - Jesus Maria Silva .txt — bloque 82 — similitud 0.1442
+
+**Detalle de puntaje:** tfidf=0.1242; bonus=0.0200
+
+> Mylonopoulos, Dogmática penal en un contexto internacional. Estudios sobre  la teoría del delito con el trasfondo del plea bargaining, el Derecho penal  europeo y el Derecho penal internacional, 2017. Naucke, Strafrecht als Teil politischer Macht.
+
+### ref-Derecho penal Parte general - Jesus Maria Silva .txt — bloque 92 — similitud 0.1344
+
+**Detalle de puntaje:** tfidf=0.1144; bonus=0.0200
+
+> Pues bien, a diferencia del Derecho penal estatal, el Derecho penal internacional no puede presuponer la existencia de una comunidad política de personas. En efecto, la comunidad internacional actual no constituye una comunidad de personas, sino que es, más bien, una —relativa— agrupación de Estados.
+
+### ref-Derecho penal Parte general - Jesus Maria Silva .txt — bloque 92 — similitud 0.1341
+
+**Detalle de puntaje:** tfidf=0.1141; bonus=0.0200
+
+> Sin embargo, resulta controvertida la medida en que lo ha hecho. 16 De ello dan cuenta el Derecho penal internacional, el Derecho penal europeizado y el Derecho supranacional de protección de los derechos humanos. Así, por un lado, está claro que el ámbito de incidencia del Derecho penal se ha extendido a la comunidad internacional.
+
+### ref-Derecho penal Parte general - Jesus Maria Silva .txt — bloque 87 — similitud 0.1322
+
+**Detalle de puntaje:** tfidf=0.1122; bonus=0.0200
+
+> Schreiber, Der Begriff der Rechtspflicht, 1966; Schünemann, Globalisierung als Meta- morphose oder Apokalypse des Rechts?, ARSP Beiheft 93 (2004), 133; Sicurella et al. (eds.), Principios generales del Derecho penal en la Unión Europea, 2020; Silva Sánchez, Aproxi- mación al Derecho penal contemporáneo, 1992 (2.ª, 2010); el mismo, La expansión del Derecho penal, 1999 (2.ª, 2001; 3.ª, 2011); el mismo, Normas y acciones en Derecho penal, 2003; el mismo, Los principios inspiradores de las propuestas de un Derecho penal europeo, RP 13 (2004), 139; el mismo, Constitución europea, legalidad y Derecho penal económico, en: Bajo Fernández (ed.), Constitución europea y Derecho penal económico, 2006...
+
+### ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt — bloque 71 — similitud 0.1297
+
+**Detalle de puntaje:** tfidf=0.0897; bonus=0.0400
+
+> 12.1 Los principales sistemas doctrinales Para el estudio del derecho penal existen distintos sistemas o corrientes creados por la doctrina, esto es, por los estudiosos del derecho penal. Desde luego, indepen- dientemente del que cada quien elija o hacia el cual sienta afinidad, habrá que partir de la norma jurídico-penal (ley o código especial).
+
+### ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt — bloque 23 — similitud 0.1193
+
+**Detalle de puntaje:** tfidf=0.0893; bonus=0.0300
+
+> 12. ¿Por qué son importantes la psicología y la psiquiatría en el derecho penal? 2  Teoría de la ley penal Como se manifestó al inicio de este libro, los elementos fundamentales en torno a los que gravita el estudio del derecho penal son la ley, el delito, el delincuente y la pena. En este capítulo se estudiará la ley penal, constituida por las disposiciones o normas jurídicas que hacen posible la existencia de esta rama del derecho.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 03. especial mexicano
+
+**Calidad estimada:** baja
+**Mejor similitud:** 0.1068
+**Similitud promedio:** 0.0829
+**Fuentes:** ref-Curso de argumentacion juridica - Manuel Atienza.txt; ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt; ref-Derecho penal Parte general - Jesus Maria Silva .txt; ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt
+**Ubicaciones:** ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 226; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 26; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 357; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 408; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 410; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 461; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 518; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 61; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 73; ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt, bloque 158; ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt, bloque 20; ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt, bloque 24; ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt, bloque 82; ref-Derecho penal Parte general - Jesus Maria Silva .txt, bloque 75; ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt, bloque 145; ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt, bloque 149; ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt, bloque 155; ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt, bloque 164; ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt, bloque 165; ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt, bloque 43; ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt, bloque 80
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 61 — similitud 0.1068
+
+**Detalle de puntaje:** tfidf=0.0968; bonus=0.0100
+
+> 2) López Medina opone el modelo colombiano de funcionamiento del precedente al mexicano y crítica este último por formalista: «Una regla de reiteración estricta [para que el precedente sea vinculante] casi siempre exige, como en el caso mexicano, que haya un organismo que concentre jurídicamente la capacidad de anunciar que existe precedente vinculante (dado que ha corroborado la existencia de la reiteración legal- mente requerida). En el sistema mexicano, por tanto, la regla de reitera- ción se complementa con una «regla de acreditación oficial» de la jurispru- dencia.
+
+### ref-Derecho penal Parte general - Jesus Maria Silva .txt — bloque 75 — similitud 0.0944
+
+**Detalle de puntaje:** tfidf=0.0844; bonus=0.0100
+
+> 2. El proceso de la graduación del contenido delictivo del hecho . . . . . . . . . . . 4 1990  2.1.
+
+### ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt — bloque 164 — similitud 0.0917
+
+**Detalle de puntaje:** tfidf=0.0717; bonus=0.0200
+
+> --- PÁGINA 388 --- Manual sobre desaparición de personas 362 y el (v) proceso social agrario.4 Para Fix-Zamudio, el habeas corpus mexicano o  amparo de la libertad realizaba funciones similares al habeas corpus inglés, y fue  tomado de la legislación y jurisprudencia de los Estados Unidos.
+
+### ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt — bloque 165 — similitud 0.0901
+
+**Detalle de puntaje:** tfidf=0.0801; bonus=0.0100
+
+> A ese res­ pecto, el nuevo artícu­lo 1° constitucional “reconoce los derechos humanos  provenientes de dos fuentes: la Constitución y los tratados internacionales de  los que el Estado mexicano sea parte”.10 Este conjunto normativo ha sido deno­ minado por la SCJN como “normas de derechos humanos”,11 las cuales consti­ tuyen a su vez el “nuevo parámetro de control de regularidad o validez de las  normas del ordenamien­to jurídico mexicano”.12 En ese punto, es importante recordar lo sostenido por el Pleno de la SCJN en la  Contradicción de Tesis 293/2011 con relación a la forma en que los tribunales  deben abordar el estudio de las normas de derechos humanos provenientes de la  Constitución...
+
+### ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt — bloque 20 — similitud 0.0901
+
+**Detalle de puntaje:** tfidf=0.0701; bonus=0.0200
+
+> Derecho constitucional. En la Constitución Política de los Estados Unidos Mexica-  nos (CPEUM) se establecen las bases a que debe sujetarse el derecho penal (como  todo el derecho mexicano). Además, es la norma suprema de la que se derivan  los demás ordenamientos legales de nuestro país.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 26 — similitud 0.0881
+
+**Detalle de puntaje:** tfidf=0.0681; bonus=0.0200
+
+> El formalismo aquí es producto de una opción estratégica de naturaleza consecuencialista. De acuerdo con ella, los tribunales harían bien en adoptar una decisión de segundo orden de decidir los casos, cuando ello es posible, de acuerdo con las reglas mejor que de acuerdo con estándares, apegándose al sig- nificado más evidente de los textos legales y poniendo el énfasis en valores como la certeza jurídica y la adhesión al entendimiento usual de los mandatos legales y constitucionales.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 408 — similitud 0.0876
+
+**Detalle de puntaje:** tfidf=0.0676; bonus=0.0200
+
+> Quisiera distinguir entre dos tipos de coherencia, la coherencia fáctica [...] y la coherencia normativa. [...]  La coherencia fáctica resulta de la interacción de los mismos tipos de cohe- rencia que son relevantes en la justificación epistémica más un tipo de coherencia adicional, a saber, la coherencia deliberativa. [...] A los principios generales de la coherencia explicativa (repitamos: simetría, analogía, explicación, compatibilidad, contradicción, prioridad y aceptabilidad) es necesario añadir algunas restricciones derivadas de la necesidad de dar cuenta de la naturaleza institucional del razona- miento acerca de hechos en el contexto jurídico.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 73 — similitud 0.0871
+
+**Detalle de puntaje:** tfidf=0.0771; bonus=0.0100
+
+> CONTEXTO DE DESCUBRIMIENTO  Y CONTEXTO DE JUSTIFICACIÓN DE LAS DECISIONES La teoría estándar de la argumentación jurídica parte de la distin- ción entre el contexto de descubrimiento y el contexto de justifi- cación de las decisiones judiciales, y circunscribe el estudio de la argumentación jurídica a este último ámbito. O sea, una cosa sería dar cuenta de los motivos (en el sentido de los factores causales) de diverso tipo que llevan a un juez o a un tribunal a tomar una deter- mina decisión; y otra señalar las razones que permiten considerar esa decisión como algo aceptable, justificado.
+
+### ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt — bloque 158 — similitud 0.0857
+
+**Detalle de puntaje:** tfidf=0.0657; bonus=0.0200
+
+> Sin duda, el hombre y la mujer de hoy son distintos de los de hace varias décadas; su pensamiento, comportamiento, necesidades, etc., son totalmente diversos y, por tanto, no corresponden a principios éticos y fundamentos legales de otras épocas. Por cuanto hace a su terminología, la palabra estupro también representa confu- sión, a la fecha, sin que exista unanimidad en el criterio de cada tratadista.
+
+### ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt — bloque 149 — similitud 0.0849
+
+**Detalle de puntaje:** tfidf=0.0549; bonus=0.0300
+
+> Por ende, si el quejoso favoreció el ocul­ tamien­to de una persona bajo cualquier forma de detención, ello actualiza el anti­ jurídico, en términos de los artícu­los 9o., párrafo primero y 13, fracciones I y III  del Código Penal Federal. Además de mostrar de manera clara el extremo al que han llegado las violaciones  a derechos humanos en México dentro del contexto de la llamada “Guerra contra  las Drogas”, pues el criterio surge de un caso con participación activa del Ejército  Mexicano, la tesis transcrita da la razón a Ambos y Ontiveros sobre la factibilidad,  en el marco jurídico mexicano, de acudir a formas de impu­tación basadas en la  responsabilidad del mando o superior jerárquico.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 461 — similitud 0.0849
+
+**Detalle de puntaje:** tfidf=0.0749; bonus=0.0100
+
+> En el primero de los fragmentos que se reproducen a continuación, el autor arranca de la distinción entre el contexto del descubrimiento y el contexto de la justificación («la distinción de Reichenbach») y, al apli- carla al razonamiento judicial en materia de hechos, introduce un tercer contexto: el de la decisión que tiene lugar en la fase de enjuiciamiento. En el segundo de los fragmentos, da cuenta de manera más detenida del proceso inferencial del juez (de tipo inductivo) en este tercer contexto:
+
+### ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt — bloque 155 — similitud 0.0845
+
+**Detalle de puntaje:** tfidf=0.0645; bonus=0.0200
+
+> LA DECLARACIÓN  INTERPRETATIVA FORMULADA POR EL GOBIERNO  MEXICANO NO VIOLA EL PRINCIPIO DE IRRETROACTI­ VIDAD DE LA LEY CONSAGRADA EN EL ARTÍCULO 14  CONSTITUCIONAL. Tesis [J]; P./J.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 408 — similitud 0.0829
+
+**Detalle de puntaje:** tfidf=0.0629; bonus=0.0200
+
+> Esta estrategia, menos conocida quizá, es también muy útil en el contexto del razonamiento jurídico. [...]  Por último, otro modo de generar coherencia en el contexto del razonamien- to jurídico consiste en reinterpretar algunos de los elementos de manera que se reduzca el grado de incoherencia del conjunto. [...] 4. Coherencia, responsabilidad y virtud
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 410 — similitud 0.0824
+
+**Detalle de puntaje:** tfidf=0.0624; bonus=0.0200
+
+> En el contexto jurídico, por lo tanto, es posible aceptar creencias acerca de los hechos como probablemente verdaderas en virtud de su coherencia. [...]  En relación con la teoría de la justificación de las conclusiones acerca de cuestiones de Derecho, la relación entre la coherencia y la verdad plantea mu- chas menos dificultades, ya que las aproximaciones anti-realistas o construc- tivistas a la verdad encajan fácilmente con las teorías de la justificación como coherencia (de hecho, una estrategia común para resolver el problema de la co- herencia y la verdad ha sido la de rechazar la concepción de la verdad como correspondencia y definir la verdad en términos de coherencia) y las teorías...
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 518 — similitud 0.0818
+
+**Detalle de puntaje:** tfidf=0.0718; bonus=0.0100
+
+> Al igual que ocurre en los diálogos socráti- cos, el interrogatorio de un testigo está dirigido a mostrar que algo de lo que éste (el testigo o el interlocutor de turno de Sócrates) afirma lleva a contradicción; de la misma manera que en el debate dialéctico teorizado por Aristóteles, lo que tie- I X . CONTE X TOS DE L A ARGUMENTACIÓN JURÍDICA 748
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 61 — similitud 0.0804
+
+**Detalle de puntaje:** tfidf=0.0704; bonus=0.0100
+
+> 146). En opinión del autor, la manera de funcionar el sistema mexicano supone una pérdida de «la importancia del derecho judicial en el desarrollo del derecho mexicano». ¿Está de acuerdo con esa crítica? ¿Qué otros mode- los existen de funcionamiento del precedente vinculante? ¿Cuál le parece más adecuado?
+
+### ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt — bloque 145 — similitud 0.0791
+
+**Detalle de puntaje:** tfidf=0.0491; bonus=0.0300
+
+> Segundo, sobre la intervención de agentes estatales en los hechos, ya desde la  Declaración sobre la Protección de Todas las Personas contra las Desapariciones  Forzadas de 1992, que precedió en el ámbito universal al tratado que más arriba  se citó, se precisaba que los sujetos activos de una desaparición podían ser “agen­ tes gubernamentales de cualquier sector o nivel”.36 En este tema, adquiere espe­ cial relevancia la precisión hecha por la Corte IDH en el caso Alvarado, donde el  tribunal regional recordó la relevancia que tiene al analizar la intervención de  sujetos activos recordar lo siguiente: […] resulta de especial importancia el uso de la prueba circunstancial, los indicios  y...
+
+### ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt — bloque 82 — similitud 0.0772
+
+**Detalle de puntaje:** tfidf=0.0472; bonus=0.0300
+
+> Evidentemente, no pueden coincidir al mismo tiempo dos figuras antagónicas: por un lado una conducta atenuada y, por otro, una agravada. En el supuesto de ocurrir las hipótesis legales de causar lesiones u homicidio por infidelidad conyugal o por co- rrupción del descendiente, y si el delincuente (cónyuge o ascendiente) hubiere preme- ditado la conducta (reflexionado previamente), a pesar de existir los demás elementos del tipo, la sanción sería la correspondiente a las lesiones u homicidio agravados. 4 Cfr.
+
+### ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt — bloque 80 — similitud 0.0767
+
+**Detalle de puntaje:** tfidf=0.0667; bonus=0.0100
+
+> --- PÁGINA 201 --- La reparación integral del daño en casos de desaparición y ... 175 Las normas constitucionales antes citadas tienen su origen en el derecho interna­ cional de los derechos humanos y su incursión en el derecho constitucional  mexicano a partir de la reforma constitucional en materia de derechos humanos  de junio de 2011.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 226 — similitud 0.0733
+
+**Detalle de puntaje:** tfidf=0.0533; bonus=0.0200
+
+> En efecto, desde la primera perspectiva, el compromiso representado por la universalidad puede expresarse recurriendo a las palabras de Robert Alexy: «Si se aplica un predicado F a un he- cho (objeto u evento) a se debe estar dispuesto a aplicar F a cualquier otro hecho igual a a en todos los aspectos relevantes». Así, por ejemplo, puede decirse que una proposición como «X es rojo» implica la proposición «todo lo que es como X en los aspectos relevantes es rojo», porque, en otro caso, «rojo» no significaría nada y la comunicación devendría imposible. Desde la segunda perspectiva, la valorativa, el requisito de la universalidad se nos presenta como una condición de la igualdad formal.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 357 — similitud 0.0696
+
+**Detalle de puntaje:** tfidf=0.0396; bonus=0.0300
+
+> [2] el descubrimiento del sentido de los materiales relevantes Éste es un paso empírico, ya que, una vez decidido que los materiales relevantes deben interpretarse según la intención de sus autores, o de acuerdo al uso común V I . CÓMO ANA L I Z AR L AS ARGUMENTACIONES 524 del lenguaje empleado o en función de alguna alternativa intermedia, [...] el que aplica la norma a un caso concreto debe descubrir cuál fue, efectivamente, tal intención o cuáles son las convenciones lingüísticas pertinentes de la comunidad.
+
+### ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt — bloque 43 — similitud 0.0647
+
+**Detalle de puntaje:** tfidf=0.0347; bonus=0.0300
+
+> Por consiguiente, el Comité concluye que  el Estado parte ha violado los derechos que asisten a la autora en virtud del  artícu­lo 17 del Pacto.56 Sobre la base de las violaciones acreditadas en estos tres casos en los que se con­ cluye que existe una desaparición forzada, el Comité de Derechos Humanos ha  dispuesto que el Estado mexicano debe: i.  llevar a cabo una investigación exhaustiva, rigurosa, imparcial, inde­ pendiente y eficaz sobre las circunstancias de la desaparición; ii. poner en libertad de manera inmediata a la persona desaparecida, en  caso de que siga recluida en régimen de incomunicación; iii. en el supuesto de que la persona desaparecida haya fallecido, entregar  sus...
+
+### ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt — bloque 24 — similitud 0.0635
+
+**Detalle de puntaje:** tfidf=0.0335; bonus=0.0300
+
+> Las fuentes históricas son los medios objetivos en los cuales se con-  tienen las normas jurídicas, por ejemplo: los pergaminos o códices en que se  encuentran antiguas normas o los bloques de piedra en que se hallan labradas  las disposiciones legales correspondientes. Por la naturaleza especial y delicada del derecho penal, sólo la ley puede ser fuente  de él.
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 7 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 04. penal especial
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.1828
+**Similitud promedio:** 0.1264
+**Fuentes:** ref-Criminologia fundamentos y principios - Antonio .txt; ref-Curso de argumentacion juridica - Manuel Atienza.txt; ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt; ref-Derecho penal Parte general - Jesus Maria Silva .txt; ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt
+**Ubicaciones:** ref-Criminologia fundamentos y principios - Antonio .txt, bloque 118; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 242; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 80; ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt, bloque 58; ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt, bloque 73; ref-Derecho penal Parte general - Jesus Maria Silva .txt, bloque 114; ref-Derecho penal Parte general - Jesus Maria Silva .txt, bloque 82; ref-Derecho penal Parte general - Jesus Maria Silva .txt, bloque 90; ref-Derecho penal Parte general - Jesus Maria Silva .txt, bloque 92; ref-Derecho penal Parte general - Jesus Maria Silva .txt, bloque 95; ref-Derecho penal Parte general - Jesus Maria Silva .txt, bloque 97; ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt, bloque 218
+
+### ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt — bloque 218 — similitud 0.1828
+
+**Detalle de puntaje:** tfidf=0.1028; bonus=0.0800
+
+> A continuación, explicaré  la forma en que dicho proceso penal especial adoptó metodologías específicas  para la identificación y gestión judicial de patrones de macro criminalidad, luego  de varios años de debates y críticas asociadas a cómo debía operar la persecución  penal del paramilitarismo.22 Algunas de dichas críticas contra ese proceso penal transicional impactaron en el  diseño de la actual JEP creada con ocasión de los Acuerdos de Paz de La Habana  de 2016.
+
+### ref-Derecho penal Parte general - Jesus Maria Silva .txt — bloque 90 — similitud 0.1729
+
+**Detalle de puntaje:** tfidf=0.0929; bonus=0.0800
+
+> Además, en todos los países existen leyes  penales especiales —por razón de la materia— que pueden ser más o menos  numerosas. Así, por ejemplo, en España no existe apenas legislación penal  especial —por ejemplo, en materia electoral y de contrabando—, pues su  función la cumplen las múltiples leyes penales en blanco que existen en el  propio Código (cfr. infra capítulo 4/46).
+
+### ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt — bloque 58 — similitud 0.1629
+
+**Detalle de puntaje:** tfidf=0.1229; bonus=0.0400
+
+> 10.1 Generalidades No todos los textos de derecho penal incluyen un capítulo dedicado al estudio del de- lincuente; sin embargo, si se considera lo expuesto al inicio de este libro respecto de que el derecho penal gira en torno de la ley, el delito, el delincuente y la pena, no se podrá pasar por alto al protagonista del delito, esto es, a la persona física que lo comete. Sería absurdo tratar sólo el punto de vista jurídico como si el delito fuera una abstracción, cuando en realidad se trata de un acontecimiento que existe a causa del sujeto activo que lo realiza.
+
+### ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt — bloque 218 — similitud 0.1590
+
+**Detalle de puntaje:** tfidf=0.0790; bonus=0.0800
+
+> Colombia lleva más de 20 años de  discusiones sobre justicia transicional, asociadas a desmovilizaciones y procesos  de paz que se han intentado en las últimas épocas. Un importante aprendizaje  ocurrió en el proceso penal especial creado para el juzgamien­to de grupos para­ militares con quienes se negoció su desmovilización.
+
+### ref-Derecho penal Parte general - Jesus Maria Silva .txt — bloque 114 — similitud 0.1541
+
+**Detalle de puntaje:** tfidf=0.0741; bonus=0.0800
+
+> En efecto, en este último caso el Derecho positivo deja de poseer autoridad moral —o la tiene limitada a la que se deriva de la función de proporcionar orden y seguridad— quedando reducido por lo demás a mero mecanismo de coacción. Una posición históricamente muy relevante sostuvo la procedencia de un 114 Derecho penal especial para los autores por conciencia. En concreto, sostenía que lo único procedente era su inocuización mediante un internamiento de naturaleza muy distinta de la pena y próxima a la condición de los prisione- ros de guerra.
+
+### ref-Derecho penal Parte general - Jesus Maria Silva .txt — bloque 82 — similitud 0.1533
+
+**Detalle de puntaje:** tfidf=0.1233; bonus=0.0300
+
+> Mylonopoulos, Dogmática penal en un contexto internacional. Estudios sobre  la teoría del delito con el trasfondo del plea bargaining, el Derecho penal  europeo y el Derecho penal internacional, 2017. Naucke, Strafrecht als Teil politischer Macht.
+
+### ref-Derecho penal Parte general - Jesus Maria Silva .txt — bloque 92 — similitud 0.1467
+
+**Detalle de puntaje:** tfidf=0.1167; bonus=0.0300
+
+> Sin embargo, resulta controvertida la medida en que lo ha hecho. 16 De ello dan cuenta el Derecho penal internacional, el Derecho penal europeizado y el Derecho supranacional de protección de los derechos humanos. Así, por un lado, está claro que el ámbito de incidencia del Derecho penal se ha extendido a la comunidad internacional.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 80 — similitud 0.1105
+
+**Detalle de puntaje:** tfidf=0.0905; bonus=0.0200
+
+> En primer lugar, deben descri- birse las fases de una discusión jurídica y las contribuciones que son relevantes en esas fases. En segundo lugar, deben especificarse la estructura, los niveles y los II . ¿ Q U É ES ARGUMENTAR?
+
+### ref-Derecho penal Parte general - Jesus Maria Silva .txt — bloque 95 — similitud 0.0993
+
+**Detalle de puntaje:** tfidf=0.0693; bonus=0.0300
+
+> Las leyes penales y las normas de sanción  Las normas de sanción se infieren, asimismo, de las descripciones legales 33 de los delitos («El que matare a otro...»), así como de otras reglas y principios adicionales. 35 En efecto, lo peculiar del Derecho penal es que la vulneración de las normas de conducta, concurriendo determinados requisitos adicionales, determina que operen unas concretas normas de sanción cuya aplicación debe dar lugar a la imposición de una pena. En cambio, si no se constata aquella vulneración o no se dan los requisitos adicionales, las normas de sanción obligan a la absolución del sujeto.
+
+### ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt — bloque 218 — similitud 0.0945
+
+**Detalle de puntaje:** tfidf=0.0645; bonus=0.0300
+
+> --- PÁGINA 514 --- Manual sobre desaparición de personas 488 fáctico de la acusación y el derecho de defensa, pues fue por un delito doloso de  acción en concreto que el general fue acusado, y se defendió”.21 Sin perjuicio de esta decisión de la justicia ordinaria, los más importantes desa­ rrollos de las estrategias de investigación penal respecto a desaparición forzada  se concentran, en los últimos años, en las experiencias de justicia transicional. Dichos aspectos serán examinados en los siguientes apartados.
+
+### ref-Derecho penal Parte general - Jesus Maria Silva .txt — bloque 97 — similitud 0.0888
+
+**Detalle de puntaje:** tfidf=0.0588; bonus=0.0300
+
+> En el contexto de esta  opinión, la sanción penal no desempeña una función sustancialmente distin-  ta de la de los precios o los tributos. Una y otros siguen siendo expresión de  orientación y de coerción.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 242 — similitud 0.0866
+
+**Detalle de puntaje:** tfidf=0.0766; bonus=0.0100
+
+> Con esta distinción, la propuesta de Habermas permite a los ciudadanos en la esfera pública informal, expresar y justificar sus convicciones en un lenguaje religioso si no pueden encontrar traducciones seculares para ellas. De esta manera, Habermas solventa el problema de la deshonestidad y permi- te a los ciudadanos religiosos entender la deliberación pública como un proceso cognoscitivo genuino. ¿Pero hacer esta distinción tan radical entre ciudadanos religiosos y ciudadanos seculares no pondría en peligro los prerrequisitos de la deliberación pública en términos de simetría de los participantes?
+
+### ref-Criminologia fundamentos y principios - Antonio .txt — bloque 118 — similitud 0.0798
+
+**Detalle de puntaje:** tfidf=0.0598; bonus=0.0200
+
+> Derecho Penal), Barcelona, Bosch (1972), págs. 5 a 14; MIR PUIG, S., Derecho Penal, P.
+
+### ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt — bloque 73 — similitud 0.0790
+
+**Detalle de puntaje:** tfidf=0.0590; bonus=0.0200
+
+> Organice un debate en torno al tema “Derecho penal del enemigo” en el que se  comenten las ventajas, aciertos o desventajas e inconsistencias que tenga esta  corriente. 3.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 2 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 05. penal especial mexicano
+
+**Calidad estimada:** baja
+**Mejor similitud:** 0.1089
+**Similitud promedio:** 0.0910
+**Fuentes:** ref-Curso de argumentacion juridica - Manuel Atienza.txt; ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt; ref-Derecho penal Parte general - Jesus Maria Silva .txt; ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt
+**Ubicaciones:** ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 436; ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt, bloque 158; ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt, bloque 20; ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt, bloque 24; ref-Derecho penal Parte general - Jesus Maria Silva .txt, bloque 114; ref-Derecho penal Parte general - Jesus Maria Silva .txt, bloque 90; ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt, bloque 149; ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt, bloque 218
+
+### ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt — bloque 218 — similitud 0.1089
+
+**Detalle de puntaje:** tfidf=0.0889; bonus=0.0200
+
+> A continuación, explicaré  la forma en que dicho proceso penal especial adoptó metodologías específicas  para la identificación y gestión judicial de patrones de macro criminalidad, luego  de varios años de debates y críticas asociadas a cómo debía operar la persecución  penal del paramilitarismo.22 Algunas de dichas críticas contra ese proceso penal transicional impactaron en el  diseño de la actual JEP creada con ocasión de los Acuerdos de Paz de La Habana  de 2016.
+
+### ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt — bloque 158 — similitud 0.1039
+
+**Detalle de puntaje:** tfidf=0.0739; bonus=0.0300
+
+> Sin duda, el hombre y la mujer de hoy son distintos de los de hace varias décadas; su pensamiento, comportamiento, necesidades, etc., son totalmente diversos y, por tanto, no corresponden a principios éticos y fundamentos legales de otras épocas. Por cuanto hace a su terminología, la palabra estupro también representa confu- sión, a la fecha, sin que exista unanimidad en el criterio de cada tratadista.
+
+### ref-Derecho penal Parte general - Jesus Maria Silva .txt — bloque 90 — similitud 0.1004
+
+**Detalle de puntaje:** tfidf=0.0804; bonus=0.0200
+
+> Además, en todos los países existen leyes  penales especiales —por razón de la materia— que pueden ser más o menos  numerosas. Así, por ejemplo, en España no existe apenas legislación penal  especial —por ejemplo, en materia electoral y de contrabando—, pues su  función la cumplen las múltiples leyes penales en blanco que existen en el  propio Código (cfr. infra capítulo 4/46).
+
+### ref-Derecho penal Parte general - Jesus Maria Silva .txt — bloque 90 — similitud 0.0943
+
+**Detalle de puntaje:** tfidf=0.0643; bonus=0.0300
+
+> LAS LEYES Y EL DERECHO PENAL  3.1. Los códigos penales y las leyes especiales 13 Desde el siglo XIX, las disposiciones legales más importantes en materia  penal se contienen en el Código penal de cada país. Así, en España el Código  penal vigente desde 1995, aunque con muchas reformas, recoge la mayor  parte de la legislación penal vigente.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 436 — similitud 0.0908
+
+**Detalle de puntaje:** tfidf=0.0608; bonus=0.0300
+
+> 6. La Corte reconoce que las anteriores consideraciones [referidas a la afectación de la medida a intereses de terceros: disminución del bienestar general, atenciones médicas más costosas, menor contribución de las personas que sufren accidentes al interés general] son relevantes para el estudio de la constitucionalidad de la norma impugnada [...] Sin embargo, esta Corporación considera que esos efectos sobre terceros son muy indirectos y eventuales, por lo cual no son en sí mismos suficientes para autorizar la imposición de deberes por medio de amenazas de sanciones penales o pecuniarias.
+
+### ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt — bloque 218 — similitud 0.0883
+
+**Detalle de puntaje:** tfidf=0.0683; bonus=0.0200
+
+> Colombia lleva más de 20 años de  discusiones sobre justicia transicional, asociadas a desmovilizaciones y procesos  de paz que se han intentado en las últimas épocas. Un importante aprendizaje  ocurrió en el proceso penal especial creado para el juzgamien­to de grupos para­ militares con quienes se negoció su desmovilización.
+
+### ref-Derecho penal Parte general - Jesus Maria Silva .txt — bloque 114 — similitud 0.0840
+
+**Detalle de puntaje:** tfidf=0.0640; bonus=0.0200
+
+> En efecto, en este último caso el Derecho positivo deja de poseer autoridad moral —o la tiene limitada a la que se deriva de la función de proporcionar orden y seguridad— quedando reducido por lo demás a mero mecanismo de coacción. Una posición históricamente muy relevante sostuvo la procedencia de un 114 Derecho penal especial para los autores por conciencia. En concreto, sostenía que lo único procedente era su inocuización mediante un internamiento de naturaleza muy distinta de la pena y próxima a la condición de los prisione- ros de guerra.
+
+### ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt — bloque 20 — similitud 0.0835
+
+**Detalle de puntaje:** tfidf=0.0635; bonus=0.0200
+
+> Derecho constitucional. En la Constitución Política de los Estados Unidos Mexica-  nos (CPEUM) se establecen las bases a que debe sujetarse el derecho penal (como  todo el derecho mexicano). Además, es la norma suprema de la que se derivan  los demás ordenamientos legales de nuestro país.
+
+### ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt — bloque 149 — similitud 0.0798
+
+**Detalle de puntaje:** tfidf=0.0498; bonus=0.0300
+
+> --- PÁGINA 349 --- Notas sobre el papel del PJF frente a la investigación penal de las desapariciones 323 lícita, ya que no se justifica que se emitan o se cumplan órdenes constitutivas de un  delito, pues de otra manera tanto el superior que las emite, como el inferior que las  ejecuta, incurren en responsabilidad. Por ende, si el quejoso favoreció el ocul­ tamien­to de una persona bajo cualquier forma de detención, ello actualiza el anti­ jurídico, en términos de los artícu­los 9o., párrafo primero y 13, fracciones I y III  del Código Penal Federal.
+
+### ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt — bloque 24 — similitud 0.0759
+
+**Detalle de puntaje:** tfidf=0.0459; bonus=0.0300
+
+> Las fuentes históricas son los medios objetivos en los cuales se con-  tienen las normas jurídicas, por ejemplo: los pergaminos o códices en que se  encuentran antiguas normas o los bloques de piedra en que se hallan labradas  las disposiciones legales correspondientes. Por la naturaleza especial y delicada del derecho penal, sólo la ley puede ser fuente  de él.
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 2 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 06. asignatura derecho penal
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2163
+**Similitud promedio:** 0.1842
+**Fuentes:** ref-Criminologia fundamentos y principios - Antonio .txt; ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt; ref-Derecho penal Parte general - Jesus Maria Silva .txt
+**Ubicaciones:** ref-Criminologia fundamentos y principios - Antonio .txt, bloque 118; ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt, bloque 19; ref-Derecho penal Parte general - Jesus Maria Silva .txt, bloque 82; ref-Derecho penal Parte general - Jesus Maria Silva .txt, bloque 87; ref-Derecho penal Parte general - Jesus Maria Silva .txt, bloque 92
+
+### ref-Criminologia fundamentos y principios - Antonio .txt — bloque 118 — similitud 0.2163
+
+**Detalle de puntaje:** tfidf=0.1963; bonus=0.0200
+
+> Derecho Penal), Barcelona, Bosch (1972), págs. 5 a 14; MIR PUIG, S., Derecho Penal, P.
+
+### ref-Derecho penal Parte general - Jesus Maria Silva .txt — bloque 82 — similitud 0.1930
+
+**Detalle de puntaje:** tfidf=0.1730; bonus=0.0200
+
+> Mylonopoulos, Dogmática penal en un contexto internacional. Estudios sobre  la teoría del delito con el trasfondo del plea bargaining, el Derecho penal  europeo y el Derecho penal internacional, 2017. Naucke, Strafrecht als Teil politischer Macht.
+
+### ref-Derecho penal Parte general - Jesus Maria Silva .txt — bloque 92 — similitud 0.1793
+
+**Detalle de puntaje:** tfidf=0.1593; bonus=0.0200
+
+> Pues bien, a diferencia del Derecho penal estatal, el Derecho penal internacional no puede presuponer la existencia de una comunidad política de personas. En efecto, la comunidad internacional actual no constituye una comunidad de personas, sino que es, más bien, una —relativa— agrupación de Estados.
+
+### ref-Derecho penal Parte general - Jesus Maria Silva .txt — bloque 92 — similitud 0.1790
+
+**Detalle de puntaje:** tfidf=0.1590; bonus=0.0200
+
+> Sin embargo, resulta controvertida la medida en que lo ha hecho. 16 De ello dan cuenta el Derecho penal internacional, el Derecho penal europeizado y el Derecho supranacional de protección de los derechos humanos. Así, por un lado, está claro que el ámbito de incidencia del Derecho penal se ha extendido a la comunidad internacional.
+
+### ref-Derecho penal Parte general - Jesus Maria Silva .txt — bloque 87 — similitud 0.1762
+
+**Detalle de puntaje:** tfidf=0.1562; bonus=0.0200
+
+> Schreiber, Der Begriff der Rechtspflicht, 1966; Schünemann, Globalisierung als Meta- morphose oder Apokalypse des Rechts?, ARSP Beiheft 93 (2004), 133; Sicurella et al. (eds.), Principios generales del Derecho penal en la Unión Europea, 2020; Silva Sánchez, Aproxi- mación al Derecho penal contemporáneo, 1992 (2.ª, 2010); el mismo, La expansión del Derecho penal, 1999 (2.ª, 2001; 3.ª, 2011); el mismo, Normas y acciones en Derecho penal, 2003; el mismo, Los principios inspiradores de las propuestas de un Derecho penal europeo, RP 13 (2004), 139; el mismo, Constitución europea, legalidad y Derecho penal económico, en: Bajo Fernández (ed.), Constitución europea y Derecho penal económico, 2006...
+
+### ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt — bloque 19 — similitud 0.1615
+
+**Detalle de puntaje:** tfidf=0.1415; bonus=0.0200
+
+> Para los fines de esta obra y para evitar la repetición innecesaria de nociones expresadas por diversos autores, cabe puntualizar lo siguiente: Noción El derecho penal es el conjunto normativo perteneciente al derecho público interno, que tiene por objeto al delito, al delincuente y la pena o medida de seguridad, para mantener el orden social mediante el respeto de los bienes jurídicos tutelados por la ley. De la noción anterior se colige que el derecho penal pretende preservar un equilibrio que dé seguridad a los miembros de la sociedad.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 07. contexto institucional
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.1575
+**Similitud promedio:** 0.1033
+**Fuentes:** ref-Criminologia fundamentos y principios - Antonio .txt; ref-Curso de argumentacion juridica - Manuel Atienza.txt; ref-Derecho penal Parte general - Jesus Maria Silva .txt; ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt
+**Ubicaciones:** ref-Criminologia fundamentos y principios - Antonio .txt, bloque 109; ref-Criminologia fundamentos y principios - Antonio .txt, bloque 124; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 211; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 223; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 224; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 226; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 352; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 408; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 409; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 445; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 461; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 525; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 588; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 73; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 74; ref-Derecho penal Parte general - Jesus Maria Silva .txt, bloque 82; ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt, bloque 10; ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt, bloque 124; ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt, bloque 65
+
+### ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt — bloque 10 — similitud 0.1575
+
+**Detalle de puntaje:** tfidf=0.1275; bonus=0.0300
+
+> --- PÁGINA 27 --- Capítulo I Nociones generales de la desaparición  y la desaparición forzada de personas Karina Ansolabehere* --- PÁGINA 28 --- Doctora en Investigación en Ciencias Sociales con especialización en Ciencias Políticas por la Facultad  Latinoamericana de Ciencias Sociales —Flacso México—, investigadora titular del Instituto de Investi­ gaciones Jurídicas de la UNAM y profesora investigadora de tiempo parcial en Flacso México. --- PÁGINA 29 --- 3 Nociones generales de la desaparición y la desaparición forzada de personas. I.
+
+### ref-Derecho penal Parte general - Jesus Maria Silva .txt — bloque 82 — similitud 0.1393
+
+**Detalle de puntaje:** tfidf=0.1093; bonus=0.0300
+
+> Lampe, La dogmática jurídico-penal entre la ontología social y el funcionalismo,  2003 (La dogmática). Mylonopoulos, Dogmática penal en un contexto internacional. Estudios sobre  la teoría del delito con el trasfondo del plea bargaining, el Derecho penal  europeo y el Derecho penal internacional, 2017.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 409 — similitud 0.1256
+
+**Detalle de puntaje:** tfidf=0.1056; bonus=0.0200
+
+> Una posibilidad podría ser la de desarrollar una concepción híbrida. [...] 5. Coherencia y contexto [...] El proceso mediante el cual se construye la coherencia es, de manera princi- pal, un proceso de contextualización. [...]  No hay, desde luego, ninguna teoría generalmente aceptada que dé cuenta de una vez por todas de cuáles son los rasgos del contexto relevantes para de- terminar si una acción, enunciado, o cualquier otro objeto está o no justificado. Sin embargo, en la literatura contextualista, es posible identificar algunos rasgos que, me parece, juegan un papel importante en la justificación de los enunciados fácticos y normativos en el Derecho.
+
+### ref-Criminologia fundamentos y principios - Antonio .txt — bloque 124 — similitud 0.1195
+
+**Detalle de puntaje:** tfidf=0.0895; bonus=0.0300
+
+> Muy distinto es, por último, el modelo angloamericano. En el «vasto laboratorio» criminológico que son los Estados Unidos699, la Criminología nace y se establece entre las ciencias sociales y sociológicas, con clara independencia de las disciplinas jurídicas, desde un principio, logrando un reconocimiento y estabilidad institucional en todos los ámbitos del que careció en Europa.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 74 — similitud 0.1179
+
+**Detalle de puntaje:** tfidf=0.0879; bonus=0.0300
+
+> pero cuando se dice que los jueces tienen la obligación de motivar sus decisiones, lo que quiere decirse es que deben justificarlas. Cada uno de esos dos aspectos de las decisiones constituiría el objeto de estudio de disciplinas distintas: del contexto de descubrimiento ten- drían que ocuparse diversas ciencias sociales (psicología, sociología, etc.); mientras que la teoría del Derecho (y por tanto, la teoría de la argumentación jurídica) se situaría exclusivamente en el contexto de justificación.
+
+### ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt — bloque 124 — similitud 0.1082
+
+**Detalle de puntaje:** tfidf=0.0882; bonus=0.0200
+
+> El análisis de  contexto permite comprender de mejor manera el fenómeno de la desaparición  en un tiempo y lugar determinados y contar con mejores estrategias de búsqueda  y de investigación, mediante la identificación de elementos que permiten asociar  cierto grupo de desapariciones y estudiarlas en conjunto. Existen elementos del  contexto social, criminal, político, institucional o victimológico que pueden ayudar  218 Ansolabehere, De Pina et al., Situar, vincular y enmarcar.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 224 — similitud 0.1077
+
+**Detalle de puntaje:** tfidf=0.0877; bonus=0.0200
+
+> Y, en algunos casos, los prin- cipios institucionales pueden tener peso suficiente como para (justificadamente) modificarla (Atienza y Ruiz Manero 2009: 30-31). ¿Está de acuerdo con esta manera de ver la dimensión institucional del Derecho? ¿Se desprende de la misma algún criterio sobre qué peso debe atribuirse a las razones institucionales (en relación con las sustantivas)?
+
+### ref-Derecho penal Parte general - Jesus Maria Silva .txt — bloque 82 — similitud 0.1077
+
+**Detalle de puntaje:** tfidf=0.0977; bonus=0.0100
+
+> Beiträge von 1977-  2018, 2021. Gimbernat Ordeig, Estudios de Derecho penal, 1981; 3.ª, 1990 (Estudios). Gimbernat Ordeig, Ensayos penales,1999.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 223 — similitud 0.1065
+
+**Detalle de puntaje:** tfidf=0.0865; bonus=0.0200
+
+> Subrayan luego la posibilidad de que las exigencias institucionales se hallen en tensión con las de carácter sustantivo, y sostienen que, en tales casos, las razones institucionales pueden llegar a derrotar (aunque eso no quiere decir que derroten siempre) a las razones sustantivas: Esto [tomar en consideración la vertiente institucional del Derecho], natural- mente, implica una rectificación o (si se quiere decirlo en términos más benévo- los) un desarrollo de lo que sostuvimos en Las piezas del Derecho.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 223 — similitud 0.1055
+
+**Detalle de puntaje:** tfidf=0.0855; bonus=0.0200
+
+> 2) En un artículo de 2001, Manuel Atienza y Juan Ruiz Manero (2001; incorporado en Atienza y Ruiz Manero 2009) sostuvieron que la reconstrucción del razonamiento justificativo que habían llevado a cabo en su libro conjunto Las piezas del Derecho (en términos de reglas y de principios) presentaba algún déficit por el hecho de que no habían to- mado (suficientemente) en consideración la dimensión institucional del Derecho.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 588 — similitud 0.1023
+
+**Detalle de puntaje:** tfidf=0.0823; bonus=0.0200
+
+> Sobre el abuso del derecho, el fraude de ley y la  desviación de poder, Trotta, Madrid. — (2001), «La dimensión institucional del Derecho y la justificación jurídica»:  Doxa, 24. — (2003), «Seis acotaciones preliminares para una teoría de la validez jurídica»:  Doxa, 26. — (2009), Para una teoría post-positivista del Derecho, Palestra/Temis, Lima/Bogotá. Atria, Fernando (1999), «Del Derecho y el razonamiento jurídico»: Doxa, 22.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 73 — similitud 0.0984
+
+**Detalle de puntaje:** tfidf=0.0884; bonus=0.0100
+
+> CONTEXTO DE DESCUBRIMIENTO  Y CONTEXTO DE JUSTIFICACIÓN DE LAS DECISIONES La teoría estándar de la argumentación jurídica parte de la distin- ción entre el contexto de descubrimiento y el contexto de justifi- cación de las decisiones judiciales, y circunscribe el estudio de la argumentación jurídica a este último ámbito. O sea, una cosa sería dar cuenta de los motivos (en el sentido de los factores causales) de diverso tipo que llevan a un juez o a un tribunal a tomar una deter- mina decisión; y otra señalar las razones que permiten considerar esa decisión como algo aceptable, justificado.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 461 — similitud 0.0958
+
+**Detalle de puntaje:** tfidf=0.0858; bonus=0.0100
+
+> En el primero de los fragmentos que se reproducen a continuación, el autor arranca de la distinción entre el contexto del descubrimiento y el contexto de la justificación («la distinción de Reichenbach») y, al apli- carla al razonamiento judicial en materia de hechos, introduce un tercer contexto: el de la decisión que tiene lugar en la fase de enjuiciamiento. En el segundo de los fragmentos, da cuenta de manera más detenida del proceso inferencial del juez (de tipo inductivo) en este tercer contexto:
+
+### ref-Criminologia fundamentos y principios - Antonio .txt — bloque 109 — similitud 0.0925
+
+**Detalle de puntaje:** tfidf=0.0625; bonus=0.0300
+
+> Las diversas actitudes criminológicas oscilan, en consecuencia, desde la legitimación del status quo (conservadurismo) a la crítica directa de los fundamentos del orden social (criticismo). Se ha dicho, con frase muy gráfica, que el criminólogo, de hecho, o está a favor de la sociedad estatalmente organizada o bien opta a favor de determinadas minorías, pues, de algun modo, la politización que se acusa actualmente en las ciencias sociales afecta también a la Criminología y polariza el propio quehacer empírico608. Desde esta perspectiva funcional, cabe contraponer dos modelos 608  Como observa KAISER, G., Criminología, cit., pág.
+
+### ref-Manual-sobre-desaparicion-de-personas-SCJN-2022.txt — bloque 65 — similitud 0.0895
+
+**Detalle de puntaje:** tfidf=0.0695; bonus=0.0200
+
+> Si bien la  respuesta interamericana abre una puerta para entender las desapariciones de sec­ tores descuidados de la sociedad, todavía hace falta una mayor identificación de  las características de estas desapariciones y lo que ello significa en términos de debi­ lidad institucional. Se está frente a un tránsito que va de la noción de detenido­ desaparecido al reconocimien to de las desapariciones sociales.46 Finalmente, un reto procesal de la mayor trascendencia es la identificación de la  desaparición de una persona con independencia del contexto en donde ésta se da.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 211 — similitud 0.0894
+
+**Detalle de puntaje:** tfidf=0.0794; bonus=0.0100
+
+> Con independencia de su estructura, en los dos casos se pro- duce un resultado institucional como consecuencia de la aplicación de la pre- sunción. En el primer caso, que una persona sea considerada como padre del hijo concebido por la madre y en el segundo, que una persona sea considerada como inocente hasta en tanto se pronuncie una sentencia condenatoria en su contra.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 445 — similitud 0.0852
+
+**Detalle de puntaje:** tfidf=0.0752; bonus=0.0100
+
+> En términos generales, los problemas a los que debe hacer frente un juez están mejor estruc- turados que los que se les presentan a los abogados o a los legisladores. 3) Los problemas están dados en un medio institucional, lo cual condiciona todo el proceso de resolución: cómo plantear el problema, qué vale como una solución del mismo, qué método es aceptable uti- lizar, qué posición institucional ocupa quien se enfrenta al problema, etc. Eso quiere decir que los modelos y las estrategias generales de re- solución de problemas juegan en el Derecho un papel, pero limitado.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 352 — similitud 0.0826
+
+**Detalle de puntaje:** tfidf=0.0626; bonus=0.0200
+
+> Lo que entendemos por interpretación subjeti- va es en realidad la interpretación que alcanzamos cuando tomamos en consi- deración no sólo la expresión lingüística, sino todos los otros datos relevantes: el contexto y la situación, que incluye las opiniones políticas y filosóficas del autor, el propósito declarado y el propósito presumido que lo guió al formular la expresión, etcétera. [...]  La diferencia entre interpretación subjetiva y objetiva, por lo tanto, no ha de ser buscada en el contraste entre los propósitos de la interpretación (el significa- do intentado como cosa opuesta al significado comunicado).
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 525 — similitud 0.0810
+
+**Detalle de puntaje:** tfidf=0.0710; bonus=0.0100
+
+> El antecedente de hecho 2 describe ese anuncio y en los fundamentos deon- tológicos 1 a 4, el Jurado argumenta por qué no se trata de un caso de imitación publicitaria:
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 408 — similitud 0.0794
+
+**Detalle de puntaje:** tfidf=0.0494; bonus=0.0300
+
+> Quisiera distinguir entre dos tipos de coherencia, la coherencia fáctica [...] y la coherencia normativa. [...]  La coherencia fáctica resulta de la interacción de los mismos tipos de cohe- rencia que son relevantes en la justificación epistémica más un tipo de coherencia adicional, a saber, la coherencia deliberativa. [...] A los principios generales de la coherencia explicativa (repitamos: simetría, analogía, explicación, compatibilidad, contradicción, prioridad y aceptabilidad) es necesario añadir algunas restricciones derivadas de la necesidad de dar cuenta de la naturaleza institucional del razona- miento acerca de hechos en el contexto jurídico.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 226 — similitud 0.0776
+
+**Detalle de puntaje:** tfidf=0.0576; bonus=0.0200
+
+> En efecto, desde la primera perspectiva, el compromiso representado por la universalidad puede expresarse recurriendo a las palabras de Robert Alexy: «Si se aplica un predicado F a un he- cho (objeto u evento) a se debe estar dispuesto a aplicar F a cualquier otro hecho igual a a en todos los aspectos relevantes». Así, por ejemplo, puede decirse que una proposición como «X es rojo» implica la proposición «todo lo que es como X en los aspectos relevantes es rojo», porque, en otro caso, «rojo» no significaría nada y la comunicación devendría imposible.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 2 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 08. licenciatura derecho
+
+**Calidad estimada:** baja
+**Mejor similitud:** 0.1177
+**Similitud promedio:** 0.0600
+**Fuentes:** ref-Criminologia fundamentos y principios - Antonio .txt; ref-Curso de argumentacion juridica - Manuel Atienza.txt; ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt; ref-Derecho penal Parte general - Jesus Maria Silva .txt
+**Ubicaciones:** ref-Criminologia fundamentos y principios - Antonio .txt, bloque 118; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 357; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 425; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 552; ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt, bloque 13; ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt, bloque 20; ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt, bloque 22; ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt, bloque 85; ref-Derecho penal Parte general - Jesus Maria Silva .txt, bloque 75
+
+### ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt — bloque 13 — similitud 0.1177
+
+**Detalle de puntaje:** tfidf=0.0977; bonus=0.0200
+
+> Tales son los propósitos de esta obra, cuyos lineamientos generales responden a las aportaciones que en ese sentido hizo en su origen el sistema abierto de la Facultad de Derecho de la Universidad Nacional Autónoma de México (UNAM), las cuales han mostrado su bondad a lo largo de varios años de formación de diver- sas generaciones de estudiantes de la licenciatura en derecho. La sistemática del presente libro se funda en el desarrollo de la temática dividida en dos grandes partes: general y especial; en la primera se abarcan los temas relati- vos a las generalidades, antecedentes e introducción al derecho penal; dentro de la segunda se estudian los delitos en particular.
+
+### ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt — bloque 85 — similitud 0.0775
+
+**Detalle de puntaje:** tfidf=0.0575; bonus=0.0200
+
+> Tema a la fecha lamentablemente vigente, es una manifestación de  instintos primarios, más patológicos que normales. A lo largo del tiempo el 7 Francisco Fernando Jiménez Sánchez, Estudio dogmático sobre estupefacientes y psicotrópicos, tesis  de licenciatura, unam, México, 1987, pág. 34.
+
+### ref-Derecho penal Parte general - Jesus Maria Silva .txt — bloque 75 — similitud 0.0667
+
+**Detalle de puntaje:** tfidf=0.0567; bonus=0.0100
+
+> 4 1990  2.2. Los modelos legales y la práctica de la cuantificación . . . . . . . 5 1990  2.3.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 357 — similitud 0.0576
+
+**Detalle de puntaje:** tfidf=0.0376; bonus=0.0200
+
+> [2] el descubrimiento del sentido de los materiales relevantes Éste es un paso empírico, ya que, una vez decidido que los materiales relevantes deben interpretarse según la intención de sus autores, o de acuerdo al uso común V I . CÓMO ANA L I Z AR L AS ARGUMENTACIONES 524 del lenguaje empleado o en función de alguna alternativa intermedia, [...] el que aplica la norma a un caso concreto debe descubrir cuál fue, efectivamente, tal intención o cuáles son las convenciones lingüísticas pertinentes de la comunidad.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 425 — similitud 0.0543
+
+**Detalle de puntaje:** tfidf=0.0343; bonus=0.0200
+
+> motivaciones consideró que las normas jurídicas existentes tuvieran un valor de- terminante en relación a si el haber dado muerte a su hijo por parte de Repouille era o no compatible con tener un buen carácter moral. El hecho de que puedan ser relevantes fuentes más amplias no significa que sea irrelevante una discernible ordenación de valores dentro del Derecho. El De- recho suministra indicios [evidence] sustantivos acerca de la moralidad cultural y puede guiar el pensamiento de un juez acerca de la moralidad política justificada [sound].
+
+### ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt — bloque 22 — similitud 0.0503
+
+**Detalle de puntaje:** tfidf=0.0403; bonus=0.0100
+
+> Derecho mercantil Sociología  Derecho procesal  Biología  Derecho  constitucional  Psicología  Derecho DERECHO  administrativo Psiquiatría  PENAL  Derecho agrario  Medicina forense  Derecho  del trabajo  Criminalística  Derecho ﬁscal  Derecho Química  internacional  Criminología  Derecho  económico  Política  Derechos humanos criminológica  Parte general (Nociones básicas) Actividades 1. Caracterice cada etapa de evolución del derecho penal y dé un ejemplo en cada  caso, a ﬁn de distinguir los periodos de evolución por los que ha pasado.
+
+### ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt — bloque 20 — similitud 0.0391
+
+**Detalle de puntaje:** tfidf=0.0291; bonus=0.0100
+
+> El derecho romano es el antecedente directo del actual dere-  cho mexicano, de modo que diversas instituciones contemporáneas provienen de  aquél y ambos guardan una relación estrecha. Derecho civil.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 552 — similitud 0.0386
+
+**Detalle de puntaje:** tfidf=0.0286; bonus=0.0100
+
+> Si tengo dos hijos y uno se me está muriendo de una enfermedad que apenas sí llega a incomodar al otro, no muestro igual consi- deración si echo a cara o cruz la decisión de cuál ha de recibir la última dosis de medicina. Este ejemplo demuestra que el derecho a ser tratado como igual es fun- damental, y el derecho a igual tratamiento, derivado. En algunas circunstancias, el derecho a ser tratado como igual lleva consigo un derecho a igual tratamiento, pero esto no sucede, en modo alguno, en todas las circunstancias.
+
+### ref-Criminologia fundamentos y principios - Antonio .txt — bloque 118 — similitud 0.0381
+
+**Detalle de puntaje:** tfidf=0.0281; bonus=0.0100
+
+> Derecho Penal), Barcelona, Bosch (1972), págs. 5 a 14; MIR PUIG, S., Derecho Penal, P.
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 8 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 09. programa licenciatura
+
+**Calidad estimada:** baja
+**Mejor similitud:** 0.1242
+**Similitud promedio:** 0.0733
+**Fuentes:** ref-Criminologia fundamentos y principios - Antonio .txt; ref-Curso de argumentacion juridica - Manuel Atienza.txt; ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt
+**Ubicaciones:** ref-Criminologia fundamentos y principios - Antonio .txt, bloque 11; ref-Criminologia fundamentos y principios - Antonio .txt, bloque 79; ref-Criminologia fundamentos y principios - Antonio .txt, bloque 82; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 502; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 525; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 532; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 533; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 541; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 554; ref-Curso de argumentacion juridica - Manuel Atienza.txt, bloque 78; ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt, bloque 13; ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt, bloque 85
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 554 — similitud 0.1242
+
+**Detalle de puntaje:** tfidf=0.1142; bonus=0.0100
+
+> — Un programa de admisión a una universidad que da preferencia a los individuos pertenecientes a cierta raza está justificado (es constitu- cional) si respeta el derecho a ser tratado con la misma consideración y respeto, y contribuye a que la comunidad esté mejor en sentido idealista.  — El programa de admisión de la Facultad de Derecho de Washing- ton respeta esos criterios.  — Por lo tanto, el programa está justificado (es constitucional).  ¿Cuál sería, entonces, la «justificación externa» (de cada una de esas premisas)? ¿Y cómo quedaría todo el argumento usando un diagrama como el que se introdujo en el capítulo VI?
+
+### ref-Criminologia fundamentos y principios - Antonio .txt — bloque 11 — similitud 0.0946
+
+**Detalle de puntaje:** tfidf=0.0846; bonus=0.0100
+
+> Programas de prevención «victimal». 5.
+
+### ref-Criminologia fundamentos y principios - Antonio .txt — bloque 82 — similitud 0.0816
+
+**Detalle de puntaje:** tfidf=0.0616; bonus=0.0200
+
+> Tampoco consta influyan  significativamente en el desarrollo de la criminalidad, en los indicadores de  comportamiento de la víctima, ni en la frecuencia de las condenas. Por otra  parte, las prestaciones no han generado gastos preocupantes para el erario  público, ni la colosal burocratización que algunos sospechaban: entre otras  razones porque el índice de delitos violentos no es muy elevado, y porque las  víctimas carecen de la oportuna información sobre sus derechos y sobre tales  programas. Pero la importancia objetiva de estos programas de compensación a la  víctima con cargo a fondos públicos no es obstáculo para reconocer las  objeciones formuladas a los mismos.
+
+### ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt — bloque 85 — similitud 0.0757
+
+**Detalle de puntaje:** tfidf=0.0657; bonus=0.0100
+
+> Tema a la fecha lamentablemente vigente, es una manifestación de  instintos primarios, más patológicos que normales. A lo largo del tiempo el 7 Francisco Fernando Jiménez Sánchez, Estudio dogmático sobre estupefacientes y psicotrópicos, tesis  de licenciatura, unam, México, 1987, pág. 34.
+
+### ref-Criminologia fundamentos y principios - Antonio .txt — bloque 79 — similitud 0.0755
+
+**Detalle de puntaje:** tfidf=0.0555; bonus=0.0200
+
+> Sólo en los Estados Unidos, al parecer, existen más de quinientos programas distintos de ayuda y compensación a la víctima496, según la clase de víctima de que se trate, los servicios que se dispensan a ésta, fines perseguidos, institución que los financia, grado de autonomía que disfrutan respecto al sistema legal, etc. Cuatro de ellos merecen una mención particular: 1º.- Programas de asistencia inmediata.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 541 — similitud 0.0754
+
+**Detalle de puntaje:** tfidf=0.0554; bonus=0.0200
+
+> De este modo el Derecho deja de ser una ciencia autónoma (que reclama su aislamiento, tal como quiso el positivismo), no arbitrariamente o por convención de los dogmáticos, sino porque han cambiado los sistemas nor- mativos jurídicos. [...]  En particular, la perspectiva de género supone o incluye de algún modo los siguientes elementos transformadores [de la matriz del Derecho civil y de las pautas de trabajo académico de sus cultivadores]:  1. Práctica del razonamiento moral, basado en principios y valores.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 502 — similitud 0.0733
+
+**Detalle de puntaje:** tfidf=0.0533; bonus=0.0200
+
+> Su programa de conocimiento incluye (a) reglas sobre la doctrina de la oferta y la aceptación del Derecho de los Restatements, (b) una «red» para representar varios estados en los que pueden estar las partes en situaciones de oferta y aceptación, y transiciones entre esos estados, (c) conocimiento de sentido común relevante, y (d) modelos de hechos prototípicos (ejemplares) para ciertos conceptos clave3. Los ejemplares sirven como precedentes simplificados en cuanto que sus clasificaciones ya han sido de- terminadas y se usan para interpretar nuevos casos.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 502 — similitud 0.0715
+
+**Detalle de puntaje:** tfidf=0.0515; bonus=0.0200
+
+> Así, su programa usa ejemplares tanto en un modo prima- rio para derivar una respuesta, como en un modo secundario para comprobar la validez de una respuesta [...]» (pp. 1969-1970).  (3) Como ejemplo de modelización de razonamiento basado en casos, Rissland se refiere al proyecto HYPO, desarrollado por K.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 532 — similitud 0.0666
+
+**Detalle de puntaje:** tfidf=0.0566; bonus=0.0100
+
+> En su opinión, en la fase prelegislativa podrían distinguirse las si- guientes etapas: 1) el éxito de algún agente social en hacer creíble la existencia de una disfunción social necesitada de algún tipo de inter- vención penal; 2) la conversión de esa disfunción en un malestar social, en lo que juega un papel importante la preocupación y el miedo al de- lito; 3) la conformación de una opinión pública al respecto, en donde juegan un papel fundamental los medios de comunicación social; 4) la transformación de un estado de opinión en un programa de acción, con la intervención de grupos de expertos, pero también de grupos de presión mediáticos o de grupos de víctimas o de afectados; 5) la...
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 78 — similitud 0.0639
+
+**Detalle de puntaje:** tfidf=0.0539; bonus=0.0100
+
+> Argumentación es una actividad verbal, social y racional dirigida a convencer a un crítico razonable sobre la aceptabilidad de una tesis mediante la presentación de una constelación de proposiciones para justificar o rechazar la proposición expre- sada en la tesis. Esta definición general del término argumentación difiere —debido al uso de una jerga técnica— de la manera como se describiría la palabra «argumentación» en el lenguaje cotidiano. Aunque la definición está ciertamente en línea con la manera como se usa la palabra en el lenguaje ordinario, el significado del térmi- no técnico argumentación es más preciso, y se basa en un análisis conceptual de la noción teorética de argumentación.
+
+### ref-Derecho penal (4a edicion) - Griselda Amuchategu.txt — bloque 13 — similitud 0.0618
+
+**Detalle de puntaje:** tfidf=0.0518; bonus=0.0100
+
+> Tales son los propósitos de esta obra, cuyos lineamientos generales responden a las aportaciones que en ese sentido hizo en su origen el sistema abierto de la Facultad de Derecho de la Universidad Nacional Autónoma de México (UNAM), las cuales han mostrado su bondad a lo largo de varios años de formación de diver- sas generaciones de estudiantes de la licenciatura en derecho. La sistemática del presente libro se funda en el desarrollo de la temática dividida en dos grandes partes: general y especial; en la primera se abarcan los temas relati- vos a las generalidades, antecedentes e introducción al derecho penal; dentro de la segunda se estudian los delitos en particular.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 502 — similitud 0.0596
+
+**Detalle de puntaje:** tfidf=0.0396; bonus=0.0200
+
+> Aquí pone el siguiente ejemplo: El programa tiene dos modelos de hechos proto- típicos para el predicado jurídico «produce una manifestación con contenido»: hacer una preferencia con algún contenido, y enviar un documento con algún contenido. 727 1 , B ) INTE L IGENCIA ARTI F ICIA L , ARGUMENTACIÓN Y DEREC H O
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 554 — similitud 0.0590
+
+**Detalle de puntaje:** tfidf=0.0490; bonus=0.0100
+
+> Los criterios raciales no son necesariamente los estándares correctos para decidir qué aspirantes deben ser aceptados por las facultades de Derecho, pero tampoco lo son los criterios intelectuales9, ni —a la verdad— nin- gún otro conjunto de criterios. La equidad —y la constitucionalidad— de cual- quier programa de admisión debe ser medida con el mismo criterio. El programa se justifica si sirve a una política adecuada, que respete el derecho de todos los miembros de la comunidad a ser tratados como iguales, pero no en el caso con- trario.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 533 — similitud 0.0587
+
+**Detalle de puntaje:** tfidf=0.0487; bonus=0.0100
+
+> Pero no de cualesquiera, sino de aquellos que pueden hipostasiar su opinión sobre la de la so- ciedad, dada su capacidad, reiteradamente acreditada, para conseguir que una am- plia mayoría de ella comparta, aunque sea superficialmente, sus puntos de vista. [...]  En el primer sentido [de desconsideración de la pericia: la respetabilidad de un programa de acción no va ligada a un grupo de expertos] hay que señalar la frecuencia cada vez mayor con que una opinión pública favorable es capaz de desencadenar por sí sola respuestas legislativas penales. De este modo, los gru- pos de presión mediáticos anticipan y sustituyen la intervención de los grupos expertos stricto sensu.
+
+### ref-Curso de argumentacion juridica - Manuel Atienza.txt — bloque 525 — similitud 0.0586
+
+**Detalle de puntaje:** tfidf=0.0486; bonus=0.0100
+
+> El antecedente de hecho 2 describe ese anuncio y en los fundamentos deon- tológicos 1 a 4, el Jurado argumenta por qué no se trata de un caso de imitación publicitaria:
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 12 referencia(s) de baja similitud que podrían introducir ruido.

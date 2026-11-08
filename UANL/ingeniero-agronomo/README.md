@@ -25,43 +25,66 @@ Espacio académico curricular y suite de automatización integral para el progra
 
 ## 2. Convenciones y Arquitectura de AulaTeX
 
-Cada carpeta de materia implementa de forma estricta los contratos institucionales de AulaTeX:
+### 2.1 Plantilla Unificada de Carrera
+A nivel de carrera (`UANL/ingeniero-agronomo/`), se centraliza la maquetación y estructura de reportes:
+- `template.tex`: Adaptación institucional que canaliza estilos al núcleo de AulaTeX (`aulaTEX/base/Plantilla-Informe/template.tex`), configurando paleta cromática (`uanlBlue`, `uanlGold`, `uanlGreenAgro`), márgenes de 2.5 cm, tipografía Arial/Helvetica y formato autor-año natbib (APA 7).
+- `reporte-ingeniero-agronomo.tex`: Molde unificado oficial para evidencias y reportes técnicos de la carrera, que sintetiza:
+  - **UnADM:** Desacoplamiento de metadatos, checklist didáctico y citas APA 7.
+  - **IIIEPE:** Capa cromática formal e identidad visual de portada.
+  - **ITESCA:** Eliminación rigurosa de metadatos operativos en entregables visibles.
+- La compilación de reportes y presentaciones usa el wrapper común `aulaTEX/latexmk-build.ps1`, que detecta el motor declarado y aísla los auxiliares por documento en `.build/latex/`.
+
+### 2.2 Estructura por Materia
+Cada carpeta de materia implementa los contratos institucionales de AulaTeX:
 
 ```text
-UANL/ingeniero-agronomo/<materia>/
-├── .aulatex-node.json                                   # Contrato de metadatos de nodo curricular
-├── estructura-aulatex.json                              # Estructura del curso (actividades, entregables, memoria)
-├── README.md                                            # Dashboard académico de la materia
-├── <materia>.bib                                        # Bibliografía especializada (APA 7 / BibLaTeX)
-├── template.tex                                         # Hook modular de maquetación institucional
-├── compilar.ps1                                         # Script local de compilación (XeLaTeX + Biber)
-├── planeaciones-<materia>/
-│   ├── INVENTARIO.md                                    # Desglose de ponderaciones, fases y criterios
-│   ├── consigna-PIA.md                                  # Rúbrica y directrices oficiales del PIA
-│   ├── extraccion_nexus.json                            # Scraping exhaustivo crudo de plataforma
-│   └── recursos_listado.txt                             # Catálogo de recursos y enlaces de cátedra
-├── referencias-<materia>/
-│   └── notas-<materia>/
-│       └── actividad-PIA/
-│           └── 01_fichas_conceptuales_*.md              # Fichas conceptuales y soporte técnico
-├── recursos-<materia>/                                  # Archivos y materiales descargados de Nexus
-├── reporte-<materia>-PIA.tex / .pdf                     # Reporte técnico formal institucional
-└── presentacion-<materia>-PIA.tex / .pdf                # Presentación ejecutiva Beamer 16:9
+UANL/ingeniero-agronomo/
+├── template.tex                                         # Adaptación institucional centralizada
+├── reporte-ingeniero-agronomo.tex / .pdf                # Plantilla unificada de reportes
+└── <materia>/
+    ├── .aulatex-node.json                               # Contrato de metadatos de nodo curricular
+    ├── estructura-aulatex.json                          # Estructura del curso (actividades, entregables, memoria)
+    ├── README.md                                        # Dashboard académico de la materia
+    ├── <materia>.bib                                    # Bibliografía especializada (APA 7 / BibLaTeX)
+    ├── template.tex                                     # Hook modular de maquetación institucional
+    ├── planeaciones-<materia>/
+    │   ├── INVENTARIO.md                                # Desglose de ponderaciones, fases y criterios
+    │   ├── consigna-PIA.md                              # Rúbrica y directrices oficiales del PIA
+    │   ├── extraccion_nexus.json                        # Scraping exhaustivo crudo de plataforma
+    │   └── recursos_listado.txt                         # Catálogo de recursos y enlaces de cátedra
+    ├── referencias-<materia>/
+    │   └── notas-<materia>/
+    │       └── actividad-PIA/
+    │           └── 01_fichas_conceptuales_*.md          # Fichas conceptuales y soporte técnico
+    ├── recursos-<materia>/                              # Archivos y materiales descargados de Nexus
+    ├── reporte-<materia>-PIA.tex / .pdf                 # Reporte técnico formal institucional
+    └── presentacion-<materia>-PIA.tex / .pdf            # Presentación ejecutiva Beamer 16:9
 ```
 
 ---
 
 ## 3. Instrucciones de Compilación
 
+### 3.1 Reporte Unificado de Carrera (`reporte-ingeniero-agronomo`)
+Para compilar la plantilla unificada desde la raíz del repositorio:
+
+```powershell
+# Compilación común con detección automática del motor
+powershell -ExecutionPolicy Bypass -File .\aulaTEX\latexmk-build.ps1 .\UANL\ingeniero-agronomo\reporte-ingeniero-agronomo.tex
+```
+
+O bien directamente mediante el comando `latexmk`:
+```powershell
+powershell -ExecutionPolicy Bypass -File .\aulaTEX\latexmk-build.ps1 .\UANL\ingeniero-agronomo\reporte-ingeniero-agronomo.tex
+```
+
+### 3.2 Compilación por Materia
 Para compilar o regenerar los documentos de cualquiera de las materias desde la raíz del repositorio:
 
 ```powershell
-# Compilar ambos documentos (Reporte y Presentación)
-powershell -ExecutionPolicy Bypass -File .\UANL\ingeniero-agronomo\<materia>\compilar.ps1 -Documento todos
+# Compilar un reporte de materia (el motor se detecta desde el .tex)
+powershell -ExecutionPolicy Bypass -File .\aulaTEX\latexmk-build.ps1 .\UANL\ingeniero-agronomo\<materia>\reporte-<materia>.tex
 
-# Compilar únicamente el reporte técnico
-powershell -ExecutionPolicy Bypass -File .\UANL\ingeniero-agronomo\<materia>\compilar.ps1 -Documento reporte
-
-# Compilar únicamente la presentación Beamer
-powershell -ExecutionPolicy Bypass -File .\UANL\ingeniero-agronomo\<materia>\compilar.ps1 -Documento presentacion
+# Compilar una presentación Beamer
+powershell -ExecutionPolicy Bypass -File .\aulaTEX\latexmk-build.ps1 .\UANL\ingeniero-agronomo\<materia>\presentacion-<materia>.tex
 ```

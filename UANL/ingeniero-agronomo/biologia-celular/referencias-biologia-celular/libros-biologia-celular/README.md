@@ -19,3 +19,5 @@ Este directorio compendia las obras canónicas de consulta científica para la a
 - Toda referencia a estos textos en el artículo de revisión debe realizarse bajo el estándar APA 7ma edición.
 - Los esquemas, dimensiones de organelos y datos cuantitativos de transporte iónico deben confrontarse con artículos científicos de investigación primaria indexados (PubMed / NCBI / PMC) para asegurar la máxima vigencia y precisión.
 
+
+

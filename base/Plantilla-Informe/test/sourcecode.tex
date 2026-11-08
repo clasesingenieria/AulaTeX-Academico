@@ -1,0 +1,4309 @@
+\begin{sourcecode}{cobol}{Ejemplo en Cobol.}
+*> Terminator period ("implicit termination")
+IF invalid-record
+    IF no-more-records
+        NEXT SENTENCE
+    ELSE
+        READ record-file
+            AT END SET no-more-records TO TRUE.
+
+*> Scope terminators ("explicit termination")
+IF invalid-record
+    IF no-more-records
+        CONTINUE
+    ELSE
+        READ record-file
+            AT END SET no-more-records TO TRUE
+        END-READ
+    END-IF
+END-IF
+\end{sourcecode}
+
+\begin{sourcecode}{basic}{Ejemplo en Basic.}
+REM QuickBASIC example
+
+REM Forward declaration - allows the main code to call a
+REM    subroutine that is defined later in the source code
+DECLARE SUB PrintSomeStars (StarCount!)
+
+REM Main program follows
+INPUT "What is your name: ", UserName$
+PRINT "Hello "; UserName$
+DO
+   INPUT "How many stars do you want: ", NumStars
+   CALL PrintSomeStars(NumStars)
+   DO
+      INPUT "Do you want more stars? ", Answer$
+   LOOP UNTIL Answer$ <> ""
+   Answer$ = LEFT$(Answer$, 1)
+LOOP WHILE UCASE$(Answer$) = "Y"
+PRINT "Goodbye "; UserName$
+END
+
+REM subroutine definition
+SUB PrintSomeStars (StarCount)
+   REM This procedure uses a local variable called Stars$
+   Stars$ = STRING$(StarCount, "*")
+   PRINT Stars$
+END SUB
+\end{sourcecode}
+
+\begin{sourcecode}{postscript}{Ejemplo en PostScript.}
+%!PS
+ /Courier             % name the desired font
+ 20 selectfont        % choose the size in points and establish 
+                      % the font as the current one
+ 72 500 moveto        % position the current point at 
+                      % coordinates 72, 500 (the origin is at the 
+                      % lower-left corner of the page)
+ (Hello world!) show  % stroke the text in parentheses
+ showpage             % print all on the page
+\end{sourcecode}
+
+\begin{sourcecode}{gnuplot}{Ejemplo en Gnuplot.}
+set terminal epslatex   
+set output 'mplot.tex'   
+set xlabel "Avg. No. of demand duration (slot) "   
+set ylabel "Acceptence rate (%)"   
+set grid xtics ytics   
+set key right bottom   
+
+set style line 1 lw 1 lc 3 pt 7  
+set style line 2 lw 1 lc 1 pt 5  
+set style line 3 lw 1 lc 0 pt 9  
+set style line 4 lw 1 lc 4 pt 3  
+
+plot "AcceptanceRate_Ser.txt" using 2:4:5:6 title "NoMig" with errorlines linestyle 1,\ 
+     "AcceptanceRate_Ser.txt" using 2:7:8:9 title "FlowMig" with errorlines linestyle 2 ,\ 
+      "AcceptanceRate_Ser.txt" using 2:10:11:12 title "VMMig" with errorlines linestyle 3, \ 
+     "AcceptanceRate_Ser.txt" using 2:13:14:15 title "NoRis" with errorlines linestyle 4
+\end{sourcecode}
+
+\begin{sourcecode}{go}{Ejemplo en Go.}
+// Package main is, tautologically, the main package.
+package main
+
+import "fmt"
+
+type s struct{}
+
+func main() {
+	fmt.Println("Hello, world!")
+}
+\end{sourcecode}
+
+\begin{sourcecode}{swift}{Ejemplo en Swift.}
+// This function passes the result of the first closure or function to another and returns its result.
+func b(closure a: () -> Int, anotherClosure: (Int) -> Int) -> Int {
+    return anotherClosure(a())
+}
+
+// With no trailing closures
+a(closure: {return 1}, anotherClosure: {x in return x + 1})
+
+// With 1 trailing closure
+a(closure: {return 1}) {x in return x + 1})
+
+// With 2 trailing closures
+a {return 1} anotherClosure: {x in return x + 1}
+\end{sourcecode}
+
+\begin{sourcecode}{mathematica}{Ejemplo en Mathematica.}
+Block[
+ {region=DiscretizeRegion[Polygon[{{0,0},{-1/2,Sqrt[3]/2},{1/2,Sqrt[3]/2}}]]},
+ ContourPlot[
+  2 Cos[4 Pi x] Sin[(4 Pi y)/Sqrt[3]] - Sin[(8 Pi y)/Sqrt[3]],
+  {x,y} %*$\in$*) region,
+  PlotPoints ->70,
+  Contours ->10,
+  AspectRatio ->Automatic,
+  FrameLabel ->{"x","y"},
+  PlotLabel ->"Excited state of the equilateral triangle"
+ ]
+]
+\end{sourcecode}
+
+\begin{sourcecode}{racket}{Ejemplo en Racket.}
+#lang racket/gui
+
+;; let's play a guessing game
+
+(define frame (new frame% [label "Guess"]))
+
+(define secret (random 5))
+(define ((check i) btn evt)
+  (define found? (if (= i secret) "Yes" "No"))
+  (message-box "?" found?)
+  (when (= i secret)
+    (send frame show #false)))
+
+(for ([i (in-range 5)])
+   (new button%
+        [label (~a i)]
+        [parent frame]
+        [callback (check i)]))
+
+(send frame show #t)
+\end{sourcecode}
+
+Testeamos las ecuaciones:
+
+\insertequation[\label{CI2.1}]{Epic}
+\insertequation[\label{D.1}]{Epic}
+\insertequation[\label{T.1}]{Epic}
+\insertequation[\label{T.2}]{Epic}
+
+\begin{sourcecode}{pseudocode}{Algoritmo transporte de calor en sistemas geotermales.}
+Inicializar temperatura $T^0$ y velocidad $\textbf{u}^0$ según ecuaciones $\coderef{CI2.1}$.
+PARA k = 1, ..., n
+	Resolver la ecuación de Darcy (ec. $\codeeqref{D.1}$) con Backwards Euler para obtener $\Psi^{pr}$
+	Calcular  $u^{pr} = \frac{\partial \Psi}{\partial z}$ y $w^{pr} = -\frac{\partial \Psi}{\partial x}$
+	Resolver la ecuación de Transporte (ec. $\coderef{T.2}$) con Backwards Euler para obtener $T^{pr}$
+	Resolver la ecuación de Darcy (ec. $\coderef{D.1}$) con Backwards Euler para obtener $\Psi^{k+1}$
+	Calcular $u^{k+1} = \frac{\partial \Psi}{\partial z}$ y $w^{k+1} = -\frac{\partial \Psi}{\partial x}$
+	Resolver la ecuación de Transporte (ec. $\coderef{T.2}$) con Crank Nicolson para obtener $T^{k+1}$
+	Usar la condición de CFL para obtener $dt$
+FIN
+\end{sourcecode}
+
+
+\begin{sourcecode}{plaintext}{}
+Epicˢᵘᵖᵉʳˢᶜʳᶦᵖᵗ¹²³¹²αάγΓδΐόϋ
+\end{sourcecode}
+
+\begin{sourcecode}[\label{ejemplo-tcl}]{tcl}{Código en TCL.}
+	proc file'hexdump filename {
+		set fp [open $filename]
+		fconfigure $fp -translation binary
+		set n 0
+		while {![eof $fp]} {
+			set bytes [read $fp 16]
+			regsub -all {[^ -þ]} $bytes . ascii
+			puts [format "%04X %-48s %-16s" $n [hexdump $bytes] $ascii]
+			incr n 16
+		}
+		close $fp
+	}
+	
+	proc hexdump string {
+		binary scan $string H* hex
+		regexp -all -inline .. $hex
+	}
+\end{sourcecode}
+
+\begin{sourcecode}{rust}{Ejemplo en Rust.}
+use std::rc::Rc;
+
+/// upside-down tree with a designated position (the *stack pointer*)
+/// and *nodes* of type `A`.
+#[derive(Clone, Debug)]
+pub struct TreeStack<A> {
+	parent: Option<(usize, Rc<TreeStack<A>>)>,
+	value: A,
+	children: Vec<Option<Rc<TreeStack<A>>>>,
+}
+
+impl<A> TreeStack<A> {
+	/// Creates a new `TreeStack<A>` with root label `a`.
+	pub fn new(a: A) -> Self {
+		TreeStack { value: a, children: Vec::new(), parent: None }
+	}
+	
+	/// Applies a function `FnMut(&A) -> B` to every node in a `TreeStack<A>`.
+	pub fn map<F, B>(&self, f: &mut F) -> TreeStack<B>
+	where F: FnMut(&A) -> B,
+	{
+		let new_value = f(&self.value);
+		let new_parent = match self.parent {
+			Some((i, ref p)) => Some((i, Rc::new(p.map(f)))),
+			None => None,
+		};
+		let new_children = self.children
+		.iter()
+		.map(|o| o.clone().map(|v| Rc::new(v.map(f))))
+		.collect();
+		TreeStack {
+			parent: new_parent,
+			value: new_value,
+			children: new_children
+		}
+	}
+}
+\end{sourcecode}
+
+\begin{sourcecode}[]{opensees}{Programa en TCL+OpenSees.}
+# --------------------------------------------------------------------------------------------------
+# Example 6. 2D RC Frame
+#		Silvia Mazzoni & Frank McKenna, 2006
+# nonlinearBeamColumn element, inelastic fiber section
+#
+
+# SET UP ----------------------------------------------------------------------------
+wipe;				# clear memory of all past model definitions
+model BasicBuilder -ndm 2 -ndf 3;	# Define the model builder, ndm=#dimension, ndf=#dofs
+set dataDir Data;			# set up name of data directory (can remove this)
+file mkdir $dataDir; 			# create data directory
+set GMdir "../GMfiles/";			# ground-motion file directory
+source LibUnits.tcl;			# define units
+source DisplayPlane.tcl;		# procedure for displaying a plane in model
+source DisplayModel2D.tcl;		# procedure for displaying 2D perspective of model
+source BuildRCrectSection.tcl;		# procedure for definining RC fiber section
+
+# define GEOMETRY -------------------------------------------------------------
+# define structure-geometry paramters
+set LCol [expr 14*$ft];		# column height
+set LBeam [expr 24*$ft];		# beam length
+set NStory 3;			# number of stories above ground level -------------- you can change this.
+set NBay 3;			# number of bays (max 9) ------------------------------you can change this.
+
+# define NODAL COORDINATES
+for {set level 1} {$level <=[expr $NStory+1]} {incr level 1} {
+	set Y [expr ($level-1)*$LCol];
+	for {set pier 1} {$pier <= [expr $NBay+1]} {incr pier 1} {
+		set X [expr ($pier-1)*$LBeam];
+		set nodeID [expr $level*10+$pier]
+		node $nodeID $X $Y;		# actually define node
+	}
+}
+
+
+# determine support nodes where ground motions are input, for multiple-support excitation
+set iSupportNode ""
+set level 1
+for {set pier 1} {$pier <= [expr $NBay+1]} {incr pier 1} {
+	set nodeID [expr $level*10+$pier]
+	lappend iSupportNode $nodeID
+}
+
+
+# BOUNDARY CONDITIONS
+fixY 0.0 1 1 0;		# pin all Y=0.0 nodes
+
+# calculated MODEL PARAMETERS, particular to this model
+puts "Number of Stories: $NStory Number of bays: $NBay"
+# Set up parameters that are particular to the model for displacement control
+set IDctrlNode [expr ($NStory+1)*10+1];		# node where displacement is read for displacement control
+set IDctrlDOF 1;		# degree of freedom of displacement read for displacement control
+set LBuilding [expr $NStory*$LCol];	# total building height
+
+# Define SECTIONS -------------------------------------------------------------
+set SectionType FiberSection;		# options: Elastic FiberSection
+
+# define section tags:
+set ColSecTag 1
+set BeamSecTag 2
+
+# Section Properties:
+set HCol [expr 24*$in];		# square-Column width
+set BCol $HCol
+set HBeam [expr 42*$in];		# Beam depth -- perpendicular to bending axis
+set BBeam [expr 24*$in];		# Beam width -- parallel to bending axis
+
+if {$SectionType == "Elastic"} {
+	# material properties:
+	set fc 4000*$psi;			# concrete nominal compressive strength
+	set Ec [expr 57*$ksi*pow($fc/$psi,0.5)];	# concrete Young's Modulus
+	# column section properties:
+	set AgCol [expr $HCol*$BCol];		# rectuangular-Column cross-sectional area
+	set IzCol [expr 0.5*1./12*$BCol*pow($HCol,3)];	# about-local-z Rect-Column gross moment of inertial
+	# beam sections:
+	set AgBeam [expr $HBeam*$BBeam];		# rectuangular-Beam cross-sectional area
+	set IzBeam [expr 0.5*1./12*$BBeam*pow($HBeam,3)];	# about-local-z Rect-Beam cracked moment of inertial
+	
+	section Elastic $ColSecTag $Ec $AgCol $IzCol 
+	section Elastic $BeamSecTag $Ec $AgBeam $IzBeam 
+	
+} elseif {$SectionType == "FiberSection"} {
+	# MATERIAL parameters 
+	source LibMaterialsRC.tcl;	# define library of Reinforced-concrete Materials
+	
+	# FIBER SECTION properties 
+	# Column section geometry:
+	set cover [expr 2.5*$in];	# rectangular-RC-Column cover
+	set numBarsTopCol 8;		# number of longitudinal-reinforcement bars on top layer
+	set numBarsBotCol 8;		# number of longitudinal-reinforcement bars on bottom layer
+	set numBarsIntCol 6;		# TOTAL number of reinforcing bars on the intermediate layers
+	set barAreaTopCol [expr 1.*$in*$in];	# longitudinal-reinforcement bar area
+	set barAreaBotCol [expr 1.*$in*$in];	# longitudinal-reinforcement bar area
+	set barAreaIntCol [expr 1.*$in*$in];	# longitudinal-reinforcement bar area
+	
+	set numBarsTopBeam 6;		# number of longitudinal-reinforcement bars on top layer
+	set numBarsBotBeam 6;		# number of longitudinal-reinforcement bars on bottom layer
+	set numBarsIntBeam 2;		# TOTAL number of reinforcing bars on the intermediate layers
+	set barAreaTopBeam [expr 1.*$in*$in];	# longitudinal-reinforcement bar area
+	set barAreaBotBeam [expr 1.*$in*$in];	# longitudinal-reinforcement bar area
+	set barAreaIntBeam [expr 1.*$in*$in];	# longitudinal-reinforcement bar area
+	
+	set nfCoreY 20;		# number of fibers in the core patch in the y direction
+	set nfCoreZ 20;		# number of fibers in the core patch in the z direction
+	set nfCoverY 20;		# number of fibers in the cover patches with long sides in the y direction
+	set nfCoverZ 20;		# number of fibers in the cover patches with long sides in the z direction
+	# rectangular section with one layer of steel evenly distributed around the perimeter and a confined core.
+	BuildRCrectSection $ColSecTag $HCol $BCol $cover $cover $IDconcCore  $IDconcCover $IDSteel $numBarsTopCol $barAreaTopCol $numBarsBotCol $barAreaBotCol $numBarsIntCol $barAreaIntCol  $nfCoreY $nfCoreZ $nfCoverY $nfCoverZ
+	BuildRCrectSection $BeamSecTag $HBeam $BBeam $cover $cover $IDconcCore  $IDconcCover $IDSteel $numBarsTopBeam $barAreaTopBeam $numBarsBotBeam $barAreaBotBeam $numBarsIntBeam $barAreaIntBeam  $nfCoreY $nfCoreZ $nfCoverY $nfCoverZ
+	
+} else {
+	puts "No section has been defined"
+	return -1
+}
+
+
+# define ELEMENTS
+# set up geometric transformations of element
+#   separate columns and beams, in case of P-Delta analysis for columns
+set IDColTransf 1; # all columns
+set IDBeamTransf 2; # all beams
+set ColTransfType Linear ;			# options, Linear PDelta Corotational 
+geomTransf $ColTransfType $IDColTransf  ; 	# only columns can have PDelta effects (gravity effects)
+geomTransf Linear $IDBeamTransf
+
+# Define Beam-Column Elements
+set np 5;	# number of Gauss integration points for nonlinear curvature distribution-- np=2 for linear distribution ok
+# columns
+set N0col 100;	# column element numbers
+set level 0
+for {set level 1} {$level <=$NStory} {incr level 1} {
+	for {set pier 1} {$pier <= [expr $NBay+1]} {incr pier 1} {
+		set elemID [expr $N0col  + $level*10 +$pier]
+		set nodeI [expr  $level*10 + $pier]
+		set nodeJ  [expr  ($level+1)*10 + $pier]
+		element nonlinearBeamColumn $elemID $nodeI $nodeJ $np $ColSecTag $IDColTransf;		# columns
+	}
+}
+# beams
+set N0beam 200;	# beam element numbers
+set M0 0
+for {set level 2} {$level <=[expr $NStory+1]} {incr level 1} {
+	for {set bay 1} {$bay <= $NBay} {incr bay 1} {
+		set elemID [expr $N0beam + $level*10 +$bay]
+		set nodeI [expr  $M0 + $level*10 + $bay]
+		set nodeJ  [expr  $M0 + $level*10 + $bay+1]
+		element nonlinearBeamColumn $elemID $nodeI $nodeJ $np $BeamSecTag $IDBeamTransf;	# beams
+	}
+}
+
+# Define GRAVITY LOADS, weight and masses
+# calculate dead load of frame, assume this to be an internal frame (do LL in a similar manner)
+# calculate distributed weight along the beam length
+set GammaConcrete [expr 150*$pcf];   		# Reinforced-Concrete floor slabs
+set Tslab [expr 6*$in];			# 6-inch slab
+set Lslab [expr 2*$LBeam/2]; 			# assume slab extends a distance of $LBeam1/2 in/out of plane
+set Qslab [expr $GammaConcrete*$Tslab*$Lslab]; 
+set QdlCol [expr $GammaConcrete*$HCol*$BCol];	# self weight of Column, weight per length
+set QBeam [expr $GammaConcrete*$HBeam*$BBeam];	# self weight of Beam, weight per length
+set QdlBeam [expr $Qslab + $QBeam]; 	# dead load distributed along beam.
+set WeightCol [expr $QdlCol*$LCol];  		# total Column weight
+set WeightBeam [expr $QdlBeam*$LBeam]; 	# total Beam weight
+
+# assign masses to the nodes that the columns are connected to 
+# each connection takes the mass of 1/2 of each element framing into it (mass=weight/$g)
+set iFloorWeight ""
+set WeightTotal 0.0
+set sumWiHi 0.0;		# sum of storey weight times height, for lateral-load distribution
+for {set level 2} {$level <=[expr $NStory+1]} {incr level 1} { ;		
+	set FloorWeight 0.0
+	if {$level == [expr $NStory+1]}  {
+		set ColWeightFact 1;		# one column in top story
+	} else {
+		set ColWeightFact 2;		# two columns elsewhere
+	}
+	for {set pier 1} {$pier <= [expr $NBay+1]} {incr pier 1} {;
+		if {$pier == 1 || $pier == [expr $NBay+1]} {
+			set BeamWeightFact 1;	# one beam at exterior nodes
+		} else {;
+			set BeamWeightFact 2;	# two beams elewhere
+		}
+		set WeightNode [expr $ColWeightFact*$WeightCol/2 + $BeamWeightFact*$WeightBeam/2]
+		set MassNode [expr $WeightNode/$g];
+		set nodeID [expr $level*10+$pier]
+		mass $nodeID $MassNode 0.0 0.0 0.0 0.0 0.0;			# define mass
+		set FloorWeight [expr $FloorWeight+$WeightNode];
+	}
+	lappend iFloorWeight $FloorWeight
+	set WeightTotal [expr $WeightTotal+ $FloorWeight]
+	set sumWiHi [expr $sumWiHi+$FloorWeight*($level-1)*$LCol];		# sum of storey weight times height, for lateral-load distribution
+}
+set MassTotal [expr $WeightTotal/$g];						# total mass
+
+# LATERAL-LOAD distribution for static pushover analysis
+# calculate distribution of lateral load based on mass/weight distributions along building height
+# Fj = WjHj/sum(WiHi)  * Weight   at each floor j
+set iFj ""
+for {set level 2} {$level <=[expr $NStory+1]} {incr level 1} { ;	
+	set FloorWeight [lindex $iFloorWeight [expr $level-1-1]];
+	set FloorHeight [expr ($level-1)*$LCol];
+	set NodeFactor [expr $NBay+1];
+	lappend iFj [expr $FloorWeight*$FloorHeight/$sumWiHi/$NodeFactor*$WeightTotal];		# per node per floor
+}
+# create node and load vectors for lateral-load distribution in static analysis
+set iFPush ""
+set iNodePush ""
+for {set level 2} {$level <=[expr $NStory+1]} {incr level 1} {
+	set FPush [lindex $iFj [expr $level-1-1]];		# lateral load coefficient
+	for {set pier 1} {$pier <= [expr $NBay+1]} {incr pier 1} {
+		set nodeID [expr $level*10+$pier]
+		lappend iNodePush $nodeID
+		lappend iFPush $FPush
+	}
+}
+
+# Define RECORDERS -------------------------------------------------------------
+set FreeNodeID [expr ($NStory+1)*10+($NBay+1)];					# ID: free node
+set SupportNodeFirst [lindex $iSupportNode 0];						# ID: first support node
+set SupportNodeLast [lindex $iSupportNode [expr [llength $iSupportNode]-1]];			# ID: last support node
+set FirstColumn [expr $N0col+1*10+1];							# ID: first column
+recorder Node -file $dataDir/DFree.out -time -node $FreeNodeID  -dof 1 2 3 disp;				# displacements of free node
+recorder Node -file $dataDir/DBase.out -time -nodeRange $SupportNodeFirst $SupportNodeLast -dof 1 2 3 disp;	# displacements of support nodes
+
+
+# Define DISPLAY -------------------------------------------------------------
+DisplayModel2D NodeNumbers
+
+# define GRAVITY -------------------------------------------------------------
+# GRAVITY LOADS # define gravity load applied to beams and columns -- eleLoad applies loads in local coordinate axis
+pattern Plain 101 Linear {
+	for {set level 1} {$level <=$NStory} {incr level 1} {
+		for {set pier 1} {$pier <= [expr $NBay+1]} {incr pier 1} {
+			set elemID [expr $N0col  + $level*10 +$pier]
+			eleLoad -ele $elemID -type -beamUniform 0 -$QdlCol; 	# COLUMNS
+		}
+	}
+	for {set level 2} {$level <=[expr $NStory+1]} {incr level 1} {
+		for {set bay 1} {$bay <= $NBay} {incr bay 1} {
+			set elemID [expr $N0beam + $level*10 +$bay]
+			eleLoad -ele $elemID  -type -beamUniform -$QdlBeam; 	# BEAMS
+		}
+	}
+}
+# Gravity-analysis parameters -- load-controlled static analysis
+set Tol 1.0e-8;			# convergence tolerance for test
+variable constraintsTypeGravity Plain;		# default;
+if {  [info exists RigidDiaphragm] == 1} {
+	if {$RigidDiaphragm=="ON"} {
+		variable constraintsTypeGravity Lagrange;	#  large model: try Transformation
+	};	# if rigid diaphragm is on
+};	# if rigid diaphragm exists
+constraints $constraintsTypeGravity ;     		# how it handles boundary conditions
+numberer RCM;			# renumber dof's to minimize band-width (optimization), if you want to
+system BandGeneral ;		# how to store and solve the system of equations in the analysis (large model: try UmfPack)
+test NormDispIncr $Tol 6 ; 		# determine if convergence has been achieved at the end of an iteration step
+algorithm Newton;			# use Newton's solution algorithm: updates tangent stiffness at every iteration
+set NstepGravity 10;  		# apply gravity in 10 steps
+set DGravity [expr 1./$NstepGravity]; 	# first load increment;
+integrator LoadControl $DGravity;	# determine the next time step for an analysis
+analysis Static;			# define type of analysis static or transient
+analyze $NstepGravity;		# apply gravity
+
+# ------------------------------------------------- maintain constant gravity loads and reset time to zero
+loadConst -time 0.0
+
+puts "Model Built"
+\end{sourcecode}
+
+\begin{sourcecode}[]{opensees}{Otro de opensees}
+# SET UP MODEL ------------------------------------------------------------------------------------
+wipe
+
+# Define model builder
+# --------------------
+model basic -ndm 2 -ndf 3
+source MomentCurvature.tcl;         # Llama a la rutina de Momento-Curvatura
+
+# Define materials for nonlinear columns
+# ------------------------------------------
+# CONCRETE
+# Core and cover concrete (unconfined)
+
+set fc -25.0;      # MPa
+set eco -0.0025; 
+set fcu -0.00;     # MPa
+set ecu -0.005;
+set lambda 0.00001;
+set ft [expr 0.62*pow(25,0.5)]; #MPa
+set Ecs 1e10;      #MPa
+# uniaxialMaterial Concrete02 $matTag $fpc $epsc0 $fpcu $epsU $lambda $ft $Ets
+uniaxialMaterial Concrete02   1  $fc $eco $fcu $ecu $lambda $ft $Ecs ;
+
+# STEEL
+# Reinforcing steel 
+
+set fy 420.0;     # MPa
+set E 2e5;        # MPa
+set b 0.01;
+
+#uniaxialMaterial Steel02 $matTag $Fy $E $b $R0 $cR1 $cR2 <$a1 $a2 $a3 $a4 $sigInit>
+uniaxialMaterial Steel02  2  $fy $E $b 15.0 0.10 0.15;
+
+# Define cross-section for nonlinear columns
+# ------------------------------------------
+
+# set some paramaters
+set b  350.0;   #mm 
+set h  700.0;   #mm
+set b2 700.0;   #mm
+set d  645.0;   #mm
+set dp  55.0;   #mm
+set tf 110.0;   #mm
+set As  1050.0;  #mm²  area de cada barra
+set Asp 1050.0;  #mm²
+
+# some variables derived from the parameters
+set y1 [expr $h/2.0];
+set z1 [expr $b/2.0];
+set z2 [expr $b2/2.0];
+
+section Fiber 1 {
+	
+	# Create the concrete fibers
+	#Beam web
+	#patch rect $matTag $numSubdivY $numSubdivZ $yI $zI $yJ $zJ
+	patch rect 1 59 1 [expr -$y1+$tf] [expr -$z1] [expr $y1] [expr $z1];
+	
+	#Beam flange 
+	patch rect 1 11 1 [expr -$y1] [expr -$z2] [expr -$y1+$tf] [expr $z2];
+	
+	# Create the reinforcing fibers (left, right)
+	#layer straight $matTag $numFiber $areaFiber $yStart $zStart $yEnd $zEnd
+	layer straight 2 2 $As [expr $y1-$dp] [expr $z1-$dp] [expr $y1-$dp] [expr -$z1+$dp];
+	layer straight 2 2 $As [expr -$y1+$dp] [expr $z1-$dp] [expr -$y1+$dp] [expr -$z1+$dp];
+	
+}   
+
+# Estimate yield curvature
+# (Assuming no axial load and only top and bottom steel)
+set epsy [expr $fy/$E]  ;# steel yield strain
+set Ky [expr $epsy/(0.7*$d)];
+
+# Print estimate to standard output
+puts "Estimated yield curvature: $Ky"
+
+# Set axial load 
+set P -10e3;  # [N] 
+
+set mu 26;      # Target ductility for analysis
+set numIncr 500;    # Number of analysis increments
+
+# Call the section analysis procedure
+MomentCurvature 1 $P [expr $Ky*$mu] $numIncr
+
+puts "ANALISIS FINALIZADO"
+
+# SET UP MODEL ------------------------------------------------------------------------------------
+wipe                                                                                
+model BasicBuilder -ndm 2 -ndf 3;   # Model builder, ndm=#dims, ndf=#dofs, /2D 3GDL por nudo                                                                            
+set dataDir Data_P2_2c;             # Define una carpeta para guardar los archivos de salida
+file mkdir $dataDir;                # Crea la carpeta
+source lib_DisplayPlane.tcl;        # Opcional Rutina que despliega el modelo
+source lib_DisplayModel2D.tcl;      # Opcional Rutina que dibuja 
+
+#Creamos las constantes del problema 
+# Unidades m, kN
+set L 2.0;       #m
+set A 0.1;       #m2 
+set I 8e-3;
+set E 2e10;
+set k 10;      #kN*m
+set theta [expr -0.01*3.1416/180];
+
+puts "Constantes ...OK"
+
+#Coordenadas de nodos en m
+#node $nodeTag (ndm $coords) <-mass (ndf $massValues)>
+
+node 1 0.0 0.0; 
+node 2 [expr $L*sin($theta) ] $L;
+node 3 [expr 2*$L*sin($theta) ] [expr 2*$L];
+node 4 [expr 3*$L*sin($theta) ] [expr 3*$L];
+node 5 [expr 4*$L*sin($theta) ] [expr 4*$L];
+
+#Resortes
+node 11 0.0 0.0; 
+node 12 [expr $L*sin($theta) ] $L;
+node 13 [expr 2*$L*sin($theta) ] [expr 2*$L];
+node 14 [expr 3*$L*sin($theta) ] [expr 3*$L];
+
+puts "Nodos ...OK"
+
+#Condiciones de borde 
+fix 1 1 1 1;
+fix 11 1 1 0;
+
+#Resortes
+equalDOF 2 12 1 2;
+equalDOF 3 13 1 2;
+equalDOF 4 14 1 2;
+
+puts "Condiciones de borde ...OK"
+
+#Materiales 
+uniaxialMaterial Elastic 1 $k;
+
+#Matriz de transformación geométrica (NO LINEALIDAD GEOMÉTRICA)
+geomTransf Linear 1;          # No considera no linealidad geométrica
+geomTransf PDelta 2;          # Considera efectos P-delta
+geomTransf Corotational 3;    # Considera efectos P-delta y P-Delta
+
+#Creación de elementos
+# Barras Rígidas
+element elasticBeamColumn 1 11 2 $A $E $I 3;
+element elasticBeamColumn 2 12 3 $A $E $I 3;
+element elasticBeamColumn 3 13 4 $A $E $I 3;
+element elasticBeamColumn 4 14 5 $A $E $I 3;
+
+#Resortes
+element zeroLength 11 1 11 -mat 1 -dir 3;  # La dirección es 6 (3D) o 3 (2D) funciona con los 2
+element zeroLength 12 2 12 -mat 1 -dir 3;  
+element zeroLength 13 3 13 -mat 1 -dir 3;
+element zeroLength 14 4 14 -mat 1 -dir 3;
+
+puts "Materiales ...OK"
+
+# DISPLAY -----------------------------------------------------------------------------------------
+DisplayModel2D NodeNumbers
+
+#Creación del Patrón de cargas
+set P -1.0;
+
+pattern Plain 1 Linear {
+	load 5 0.0 $P 0.0;
+} 
+
+#RECORDERS
+recorder Node -file $dataDir/NodeReact.out -time -node 1 -dof 1 2 3 reaction;
+recorder Node -file $dataDir/Node2Disp.out -time -node 2 -dof 1 2 3 disp;
+recorder Node -file $dataDir/Node3Disp.out -time -node 3 -dof 1 2 3 disp;
+recorder Node -file $dataDir/Node4Disp.out -time -node 4 -dof 1 2 3 disp;
+recorder Node -file $dataDir/Node5Disp.out -time -node 5 -dof 1 2 3 disp;
+
+# Display Deformed Shape: (Opcional) Dibuja la deformada
+set ViewScale 0.1;               # amplify display of deformed shape
+DisplayModel2D DeformedShape $ViewScale ;   # display deformed shape, the scaling factor needs to be adjusted for each model
+
+#Definición del análisis
+#integrator DisplacementControl $node $dof $incr <$numIter $<math>\Delta U \text{min} </math> $<math>\Delta U \text{max}</math>>
+set dU -0.001;
+integrator DisplacementControl 5 2 $dU;
+# test de tolerancia
+set tol 1.0e-15;                # tolerance 
+set iter 5000;                 # max iterations
+set pFlag 0;                   # No desplega info de cada iteración
+set nType 2;                   # Tipo de 
+test EnergyIncr $tol $iter $pFlag $nType;
+algorithm KrylovNewton; 
+numberer Plain;
+constraints Plain;
+system SparseGeneral;
+analysis Static;
+analyze 4100;
+
+puts "Analysis...   OK"
+puts "End Time: [getTime]"
+
+# --------------------------------------------------------------------------------------------------
+# Example 1. portal frame in 2D
+# dynamic earthquake analysis of Portal Frame, with gravity.
+# all units are in kip, inch, second
+# elasticBeamColumn ELEMENT
+#		Silvia Mazzoni & Frank McKenna, 2006
+#
+#    ^Y
+#    |
+#    3_________(3)________4       __ 
+#    |                                    |          | 
+#    |                                    |          |
+#    |                                    |          |
+#  (1)                                 (2)       LCol
+#    |                                    |          |
+#    |                                    |          |
+#    |                                    |          |
+#  =1=                               =2=      _|_  -------->X
+#    |----------LBeam------------|
+#
+
+# SET UP ----------------------------------------------------------------------------
+wipe;						# clear opensees model
+model basic -ndm 2 -ndf 3;				# 2 dimensions, 3 dof per node
+file mkdir data; 					# create data directory
+
+# define GEOMETRY -------------------------------------------------------------
+# nodal coordinates:
+node 1 0 0;					# node#, X Y
+node 2 504 0
+node 3 0 432
+node 4 504 432 
+
+# Single point constraints -- Boundary Conditions
+fix 1 1 1 1; 			# node DX DY RZ
+fix 2 1 1 1; 			# node DX DY RZ
+fix 3 0 0 0
+fix 4 0 0 0
+
+# nodal masses:
+mass 3 5.18 0. 0.;					# node#, Mx My Mz, Mass=Weight/g.
+mass 4 5.18 0. 0.
+
+# Define ELEMENTS -------------------------------------------------------------
+# define geometric transformation: performs a linear geometric transformation of beam stiffness and resisting force from the basic system to the global-coordinate system
+geomTransf Linear 1;  		# associate a tag to transformation
+
+# connectivity: (make A very large, 10e6 times its actual value)
+element elasticBeamColumn 1 1 3 3600000000 4227 1080000 1;	# element elasticBeamColumn $eleTag $iNode $jNode $A $E $Iz $transfTag
+element elasticBeamColumn 2 2 4 3600000000 4227 1080000 1
+element elasticBeamColumn 3 3 4 5760000000 4227 4423680 1
+
+# Define RECORDERS -------------------------------------------------------------
+recorder Node -file Data/DFree.out -time -node 3 4 -dof 1 2 3 disp;			# displacements of free nodes
+recorder Node -file Data/DBase.out -time -node 1 2 -dof 1 2 3 disp;			# displacements of support nodes
+recorder Node -file Data/RBase.out -time -node 1 2 -dof 1 2 3 reaction;		# support reaction
+recorder Drift -file Data/Drift.out -time -iNode 1 2 -jNode 3 4 -dof 1  -perpDirn 2 ;	# lateral drift
+recorder Element -file Data/FCol.out -time -ele 1 2 globalForce;			# element forces -- column
+recorder Element -file Data/FBeam.out -time -ele 3 globalForce;			# element forces -- beam
+
+# define GRAVITY -------------------------------------------------------------
+pattern Plain 1 Linear {
+	eleLoad -ele 3 -type -beamUniform -7.94 ; # distributed superstructure-weight on beam
+}
+constraints Plain;     				# how it handles boundary conditions
+numberer Plain;					# renumber dof's to minimize band-width (optimization), if you want to
+system BandGeneral;				# how to store and solve the system of equations in the analysis
+test NormDispIncr 1.0e-8 6 ; 				# determine if convergence has been achieved at the end of an iteration step
+algorithm Newton;					# use Newton's solution algorithm: updates tangent stiffness at every iteration
+integrator LoadControl 0.1;				# determine the next time step for an analysis, # apply gravity in 10 steps
+analysis Static					# define type of analysis static or transient
+analyze 10;					# perform gravity analysis
+loadConst -time 0.0;				# hold gravity constant and restart time
+
+# DYNAMIC ground-motion analysis -------------------------------------------------------------
+# create load pattern
+set accelSeries "Series -dt 0.01 -filePath BM68elc.acc -factor 1";	# define acceleration vector from file (dt=0.01 is associated with the input file gm)
+pattern UniformExcitation 2 1 -accel $accelSeries;		# define where and how (pattern tag, dof) acceleration is applied
+rayleigh 0. 0. 0. [expr 2*0.02/pow([eigen 1],0.5)];		# set damping based on first eigen mode
+
+# create the analysis
+wipeAnalysis;					# clear previously-define analysis parameters
+constraints Plain;     				# how it handles boundary conditions
+numberer Plain;					# renumber dof's to minimize band-width (optimization), if you want to
+system BandGeneral;				# how to store and solve the system of equations in the analysis
+test NormDispIncr 1.0e-8 10;				# determine if convergence has been achieved at the end of an iteration step
+algorithm Newton;					# use Newton's solution algorithm: updates tangent stiffness at every iteration
+integrator Newmark 0.5 0.25 ;			# determine the next time step for an analysis
+analysis Transient;					# define type of analysis: time-dependent
+analyze 1000 0.02;					# apply 1000 0.02-sec time steps in analysis
+
+
+puts "Done!"
+
+set coverY [expr $HSec/2.0];		# The distance from the section z-axis to the edge of the cover concrete -- outer edge of cover concrete
+set coverZ [expr $BSec/2.0];		# The distance from the section y-axis to the edge of the cover concrete -- outer edge of cover concrete
+set coreY [expr $coverY-$coverH];		# The distance from the section z-axis to the edge of the core concrete --  edge of the core concrete/inner edge of cover concrete
+set coreZ [expr $coverZ-$coverB];		# The distance from the section y-axis to the edge of the core concrete --  edge of the core concrete/inner edge of cover concrete
+set numBarsInt [expr $numBarsIntTot/2];	# number of intermediate bars per side
+
+# Define the fiber section
+section fiberSec $id {
+	# Define the core patch
+	patch quadr $coreID $nfCoreZ $nfCoreY -$coreY $coreZ -$coreY -$coreZ $coreY -$coreZ $coreY $coreZ
+	
+	# Define the four cover patches
+	patch quadr $coverID 2 $nfCoverY -$coverY $coverZ -$coreY $coreZ $coreY $coreZ $coverY $coverZ
+	patch quadr $coverID 2 $nfCoverY -$coreY -$coreZ -$coverY -$coverZ $coverY -$coverZ $coreY -$coreZ
+	patch quadr $coverID $nfCoverZ 2 -$coverY $coverZ -$coverY -$coverZ -$coreY -$coreZ -$coreY $coreZ
+	patch quadr $coverID $nfCoverZ 2 $coreY $coreZ $coreY -$coreZ $coverY -$coverZ $coverY $coverZ	
+	
+	# define reinforcing layers
+	layer straight $steelID $numBarsInt $barAreaInt  -$coreY $coreZ $coreY $coreZ;	# intermediate skin reinf. +z
+	layer straight $steelID $numBarsInt $barAreaInt  -$coreY -$coreZ $coreY -$coreZ;	# intermediate skin reinf. -z
+	layer straight $steelID $numBarsTop $barAreaTop $coreY $coreZ $coreY -$coreZ;	# top layer reinfocement
+	layer straight $steelID $numBarsBot $barAreaBot  -$coreY $coreZ  -$coreY -$coreZ;	# bottom layer reinforcement
+	
+};	# end of fibersection definition
+
+wipe;				# clear memory of all past model definitions
+model BasicBuilder -ndm 3 -ndf 6;	# Define the model builder, ndm=#dimension, ndf=#dofs
+set dataDir Data;			# set up name of data directory
+file mkdir $dataDir; 			# create data directory
+set GMdir "../GMfiles";		# ground-motion file directory
+source LibUnits.tcl;			# define units
+source DisplayPlane.tcl;		# procedure for displaying a plane in model
+source DisplayModel3D.tcl;		# procedure for displaying 3D perspectives of model
+source BuildRCrectSection.tcl;		# procedure for definining RC fiber section
+
+# ------ frame configuration
+set NStory 2;			# number of stories above ground level
+set NBay 2;			# number of bays in X direction
+set NBayZ 2;			# number of bays in Z direction
+puts "Number of Stories in Y: $NStory Number of bays in X: $NBay Number of bays in Z: $NBayZ"
+set NFrame [expr $NBayZ + 1];	# actually deal with frames in Z direction, as this is an easy extension of the 2d model
+
+# define GEOMETRY -------------------------------------------------------------
+# define structure-geometry paramters
+set LCol [expr 14*$ft];		# column height (parallel to Y axis)
+set LBeam [expr 24*$ft];		# beam length (parallel to X axis)
+set LGird [expr 24*$ft];		# girder length (parallel to Z axis)
+
+# define NODAL COORDINATES
+set Dlevel 10000;	# numbering increment for new-level nodes
+set Dframe 100;	# numbering increment for new-frame nodes
+for {set frame 1} {$frame <=[expr $NFrame]} {incr frame 1} {
+	set Z [expr ($frame-1)*$LGird];
+	for {set level 1} {$level <=[expr $NStory+1]} {incr level 1} {
+		set Y [expr ($level-1)*$LCol];
+		for {set pier 1} {$pier <= [expr $NBay+1]} {incr pier 1} {
+			set X [expr ($pier-1)*$LBeam];
+			set nodeID [expr $level*$Dlevel+$frame*$Dframe+$pier]
+			node $nodeID $X $Y $Z;		# actually define node
+		}
+	}
+}
+
+# rigid diaphragm nodes
+set RigidDiaphragm ON ;		# options: ON, OFF. specify this before the analysis parameters are set the constraints are handled differently.
+set Xa [expr ($NBay*$LBeam)/2];		# mid-span coordinate for rigid diaphragm
+set Za [expr ($NFrame-1)*$LGird/2];
+set iMasterNode ""
+for {set level 2} {$level <=[expr $NStory+1]} {incr level 1} {
+	set Y [expr ($level-1)*$LCol];
+	# rigid-diaphragm nodes in center of each diaphram
+	set MasterNodeID [expr 9900+$level]
+	node $MasterNodeID $Xa $Y $Za;		# master nodes for rigid diaphragm
+	fix $MasterNodeID 0  1  0  1  0  1;		# constrain other dofs that don't belong to rigid diaphragm control
+	lappend iMasterNode $MasterNodeID
+	set perpDirn 2;				# perpendicular to plane of rigid diaphragm
+	for {set frame 1} {$frame <=[expr $NFrame]} {incr frame 1} {
+		for {set pier 1} {$pier <= [expr $NBay+1]} {incr pier 1} {
+			set nodeID [expr $level*$Dlevel+$frame*$Dframe+$pier]
+			rigidDiaphragm $perpDirn $MasterNodeID $nodeID; 	# define Rigid Diaphram,
+		}
+	}
+}
+
+# determine support nodes where ground motions are input, for multiple-support excitation
+set iSupportNode ""
+for {set frame 1} {$frame <=[expr $NFrame]} {incr frame 1} {
+	set level 1
+	for {set pier 1} {$pier <= [expr $NBay+1]} {incr pier 1} {
+		set nodeID [expr $level*$Dlevel+$frame*$Dframe+$pier]
+		lappend iSupportNode $nodeID
+	}
+}
+
+# BOUNDARY CONDITIONS
+fixY 0.0  1 1 1 0 1 0;		# pin all Y=0.0 nodes
+
+# calculated MODEL PARAMETERS, particular to this model
+# Set up parameters that are particular to the model for displacement control
+set IDctrlNode [expr int(($NStory+1)*$Dlevel+(1*$Dframe)+1)];		# node where displacement is read for displacement control
+set IDctrlDOF 1;					# degree of freedom of displacement read for displacement control
+set LBuilding [expr $NStory*$LCol];			# total building height
+
+# Define SECTIONS -------------------------------------------------------------
+set SectionType FiberSection;		# options: Elastic FiberSection
+
+# define section tags:
+set ColSecTag 1
+set BeamSecTag 2
+set GirdSecTag 3
+set ColSecTagFiber 4
+set BeamSecTagFiber 5
+set GirdSecTagFiber 6
+set SecTagTorsion 70
+
+# Section Properties:
+set HCol [expr 18*$in];		# square-Column width
+set BCol $HCol
+set HBeam [expr 24*$in];		# Beam depth -- perpendicular to bending axis
+set BBeam [expr 18*$in];		# Beam width -- parallel to bending axis
+set HGird [expr 24*$in];		# Girder depth -- perpendicular to bending axis
+set BGird [expr 18*$in];		# Girder width -- parallel to bending axis
+
+if {$SectionType == "Elastic"} {
+	# material properties:
+	set fc 4000*$psi;			# concrete nominal compressive strength
+	set Ec [expr 57*$ksi*pow($fc/$psi,0.5)];	# concrete Young's Modulus
+	set nu 0.2;			# Poisson's ratio
+	set Gc [expr $Ec/2./[expr 1+$nu]];  	# Torsional stiffness Modulus
+	set J $Ubig;			# set large torsional stiffness
+	# column section properties:
+	set AgCol [expr $HCol*$BCol];		# rectuangular-Column cross-sectional area
+	set IzCol [expr 0.5*1./12*$BCol*pow($HCol,3)];	# about-local-z Rect-Column gross moment of inertial
+	set IyCol [expr 0.5*1./12*$HCol*pow($BCol,3)];	# about-local-z Rect-Column gross moment of inertial
+	# beam sections:
+	set AgBeam [expr $HBeam*$BBeam];		# rectuangular-Beam cross-sectional area
+	set IzBeam [expr 0.5*1./12*$BBeam*pow($HBeam,3)];	# about-local-z Rect-Beam cracked moment of inertial
+	set IyBeam [expr 0.5*1./12*$HBeam*pow($BBeam,3)];	# about-local-y Rect-Beam cracked moment of inertial
+	# girder sections:
+	set AgGird [expr $HGird*$BGird];		# rectuangular-Girder cross-sectional area
+	set IzGird [expr 0.5*1./12*$BGird*pow($HGird,3)];	# about-local-z Rect-Girder cracked moment of inertial
+	set IyGird [expr 0.5*1./12*$HGird*pow($BGird,3)];	# about-local-y Rect-Girder cracked moment of inertial
+	
+	section Elastic $ColSecTag $Ec $AgCol $IzCol $IyCol $Gc $J
+	section Elastic $BeamSecTag $Ec $AgBeam $IzBeam $IyBeam $Gc $J
+	section Elastic $GirdSecTag $Ec $AgGird $IzGird $IyGird $Gc $J
+	
+	set IDconcCore  1;		# material numbers for recorder (this stressstrain recorder will be blank, as this is an elastic section)
+	set IDSteel  2;			# material numbers for recorder (this stressstrain recorder will be blank, as this is an elastic section)
+	
+} elseif {$SectionType == "FiberSection"} {
+	# MATERIAL parameters 
+	source LibMaterialsRC.tcl;	# define library of Reinforced-concrete Materials
+	# FIBER SECTION properties 
+	# Column section geometry:
+	set cover [expr 2.5*$in];	# rectangular-RC-Column cover
+	set numBarsTopCol 8;		# number of longitudinal-reinforcement bars on top layer
+	set numBarsBotCol 8;		# number of longitudinal-reinforcement bars on bottom layer
+	set numBarsIntCol 6;		# TOTAL number of reinforcing bars on the intermediate layers
+	set barAreaTopCol [expr 1.*$in*$in];	# longitudinal-reinforcement bar area
+	set barAreaBotCol [expr 1.*$in*$in];	# longitudinal-reinforcement bar area
+	set barAreaIntCol [expr 1.*$in*$in];	# longitudinal-reinforcement bar area
+	
+	set numBarsTopBeam 6;		# number of longitudinal-reinforcement bars on top layer
+	set numBarsBotBeam 6;		# number of longitudinal-reinforcement bars on bottom layer
+	set numBarsIntBeam 2;		# TOTAL number of reinforcing bars on the intermediate layers
+	set barAreaTopBeam [expr 1.*$in*$in];	# longitudinal-reinforcement bar area
+	set barAreaBotBeam [expr 1.*$in*$in];	# longitudinal-reinforcement bar area
+	set barAreaIntBeam [expr 1.*$in*$in];	# longitudinal-reinforcement bar area
+	
+	set numBarsTopGird 6;		# number of longitudinal-reinforcement bars on top layer
+	set numBarsBotGird 6;		# number of longitudinal-reinforcement bars on bottom layer
+	set numBarsIntGird 2;		# TOTAL number of reinforcing bars on the intermediate layers
+	set barAreaTopGird [expr 1.*$in*$in];	# longitudinal-reinforcement bar area
+	set barAreaBotGird [expr 1.*$in*$in];	# longitudinal-reinforcement bar area
+	set barAreaIntGird [expr 1.*$in*$in];	# longitudinal-reinforcement bar area
+	
+	set nfCoreY 12;		# number of fibers in the core patch in the y direction
+	set nfCoreZ 12;		# number of fibers in the core patch in the z direction
+	set nfCoverY 8;		# number of fibers in the cover patches with long sides in the y direction
+	set nfCoverZ 8;		# number of fibers in the cover patches with long sides in the z direction
+	# rectangular section with one layer of steel evenly distributed around the perimeter and a confined core.
+	BuildRCrectSection $ColSecTagFiber $HCol $BCol $cover $cover $IDconcCore  $IDconcCover $IDSteel $numBarsTopCol $barAreaTopCol $numBarsBotCol $barAreaBotCol $numBarsIntCol $barAreaIntCol  $nfCoreY $nfCoreZ $nfCoverY $nfCoverZ
+	BuildRCrectSection $BeamSecTagFiber $HBeam $BBeam $cover $cover $IDconcCore  $IDconcCover $IDSteel $numBarsTopBeam $barAreaTopBeam $numBarsBotBeam $barAreaBotBeam $numBarsIntBeam $barAreaIntBeam  $nfCoreY $nfCoreZ $nfCoverY $nfCoverZ
+	BuildRCrectSection $GirdSecTagFiber $HGird $BGird $cover $cover $IDconcCore  $IDconcCover $IDSteel $numBarsTopGird $barAreaTopGird $numBarsBotGird $barAreaBotGird $numBarsIntGird $barAreaIntGird  $nfCoreY $nfCoreZ $nfCoverY $nfCoverZ
+	
+	# assign torsional Stiffness for 3D Model
+	uniaxialMaterial Elastic $SecTagTorsion $Ubig
+	section Aggregator $ColSecTag $SecTagTorsion T -section $ColSecTagFiber
+	section Aggregator $BeamSecTag $SecTagTorsion T -section $BeamSecTagFiber
+	section Aggregator $GirdSecTag $SecTagTorsion T -section $GirdSecTagFiber
+} else {
+	puts "No section has been defined"
+	return -1
+}
+set GammaConcrete [expr 150*$pcf];
+set QdlCol [expr $GammaConcrete*$HCol*$BCol];	# self weight of Column, weight per length
+set QBeam [expr $GammaConcrete*$HBeam*$BBeam];	# self weight of Beam, weight per length
+set QGird [expr $GammaConcrete*$HGird*$BGird];	# self weight of Gird, weight per length
+
+# --------------------------------------------------------------------------------------------------------------------------------
+# define ELEMENTS
+# set up geometric transformations of element
+#   separate columns and beams, in case of P-Delta analysis for columns
+set IDColTransf 1; # all columns
+set IDBeamTransf 2; # all beams
+set IDGirdTransf 3; # all girds
+set ColTransfType Linear ;		# options for columns: Linear PDelta  Corotational 
+geomTransf $ColTransfType  $IDColTransf  0 0 1;			# orientation of column stiffness affects bidirectional response.
+geomTransf Linear $IDBeamTransf 0 0 1
+geomTransf Linear $IDGirdTransf 1 0 0
+
+# Define Beam-Column Elements
+set numIntgrPts 5;	# number of Gauss integration points for nonlinear curvature distribution
+# columns
+set N0col [expr 10000-1];	# column element numbers
+set level 0
+for {set frame 1} {$frame <=[expr $NFrame]} {incr frame 1} {
+	for {set level 1} {$level <=$NStory} {incr level 1} {
+		for {set pier 1} {$pier <= [expr $NBay+1]} {incr pier 1} {
+			set elemID [expr $N0col  +$level*$Dlevel + $frame*$Dframe+$pier]
+			set nodeI [expr  $level*$Dlevel + $frame*$Dframe+$pier]
+			set nodeJ  [expr  ($level+1)*$Dlevel + $frame*$Dframe+$pier]
+			element nonlinearBeamColumn $elemID $nodeI $nodeJ $numIntgrPts $ColSecTag $IDColTransf;		# columns
+		}
+	}
+}
+
+
+# beams -- parallel to X-axis
+set N0beam 1000000;	# beam element numbers
+for {set frame 1} {$frame <=[expr $NFrame]} {incr frame 1} {
+	for {set level 2} {$level <=[expr $NStory+1]} {incr level 1} {
+		for {set bay 1} {$bay <= $NBay} {incr bay 1} {
+			set elemID [expr $N0beam +$level*$Dlevel + $frame*$Dframe+ $bay]
+			set nodeI [expr $level*$Dlevel + $frame*$Dframe+ $bay]
+			set nodeJ  [expr $level*$Dlevel + $frame*$Dframe+ $bay+1]
+			element nonlinearBeamColumn $elemID $nodeI $nodeJ $numIntgrPts $BeamSecTag $IDBeamTransf;	# beams
+		}
+	}
+}
+
+# girders -- parallel to Z-axis
+set N0gird 2000000;	# gird element numbers
+for {set frame 1} {$frame <=[expr $NFrame-1]} {incr frame 1} {
+	for {set level 2} {$level <=[expr $NStory+1]} {incr level 1} {
+		for {set bay 1} {$bay <= $NBay+1} {incr bay 1} {
+			set elemID [expr $N0gird + $level*$Dlevel +$frame*$Dframe+ $bay]
+			set nodeI [expr   $level*$Dlevel + $frame*$Dframe+ $bay]
+			set nodeJ  [expr  $level*$Dlevel + ($frame+1)*$Dframe+ $bay]
+			element nonlinearBeamColumn $elemID $nodeI $nodeJ $numIntgrPts $GirdSecTag $IDGirdTransf;		# Girds
+		}
+	}
+}
+
+# --------------------------------------------------------------------------------------------------------------------------------
+# Define GRAVITY LOADS, weight and masses
+# calculate dead load of frame, assume this to be an internal frame (do LL in a similar manner)
+# calculate distributed weight along the beam length
+#set GammaConcrete [expr 150*$pcf];   		# Reinforced-Concrete floor slabs, defined above
+set Tslab [expr 6*$in];			# 6-inch slab
+set Lslab [expr $LGird/2]; 			# slab extends a distance of $LGird/2 in/out of plane
+set DLfactor 1.0;				# scale dead load up a little
+set Qslab [expr $GammaConcrete*$Tslab*$Lslab*$DLfactor]; 
+set QdlBeam [expr $Qslab + $QBeam]; 	# dead load distributed along beam (one-way slab)
+set QdlGird $QGird; 			# dead load distributed along girder
+set WeightCol [expr $QdlCol*$LCol];  		# total Column weight
+set WeightBeam [expr $QdlBeam*$LBeam]; 	# total Beam weight
+set WeightGird [expr $QdlGird*$LGird]; 	# total Beam weight
+
+# assign masses to the nodes that the columns are connected to 
+# each connection takes the mass of 1/2 of each element framing into it (mass=weight/$g)
+set iFloorWeight ""
+set WeightTotal 0.0
+set sumWiHi 0.0;		# sum of storey weight times height, for lateral-load distribution
+
+for {set frame 1} {$frame <=[expr $NFrame]} {incr frame 1} {
+	if {$frame == 1 || $frame == $NFrame}  {
+		set GirdWeightFact 1;		# 1x1/2girder on exterior frames
+	} else {
+		set GirdWeightFact 2;		# 2x1/2girder on interior frames
+	}
+	for {set level 2} {$level <=[expr $NStory+1]} {incr level 1} { ;		
+		set FloorWeight 0.0
+		if {$level == [expr $NStory+1]}  {
+			set ColWeightFact 1;		# one column in top story
+		} else {
+			set ColWeightFact 2;		# two columns elsewhere
+		}
+		for {set pier 1} {$pier <= [expr $NBay+1]} {incr pier 1} {;
+			if {$pier == 1 || $pier == [expr $NBay+1]} {
+				set BeamWeightFact 1;	# one beam at exterior nodes
+			} else {;
+				set BeamWeightFact 2;	# two beams elewhere
+			}
+			set WeightNode [expr $ColWeightFact*$WeightCol/2 + $BeamWeightFact*$WeightBeam/2 + $GirdWeightFact*$WeightGird/2]
+			set MassNode [expr $WeightNode/$g];
+			set nodeID [expr $level*$Dlevel+$frame*$Dframe+$pier]
+			mass $nodeID $MassNode 0. $MassNode 0. 0. 0.;			# define mass
+			set FloorWeight [expr $FloorWeight+$WeightNode];
+		}
+		lappend iFloorWeight $FloorWeight
+		set WeightTotal [expr $WeightTotal+ $FloorWeight]
+		set sumWiHi [expr $sumWiHi+$FloorWeight*($level-1)*$LCol];		# sum of storey weight times height, for lateral-load distribution
+	}
+}
+set MassTotal [expr $WeightTotal/$g];						# total mass
+
+# --------------------------------------------------------------------------------------------------------------------------------
+# LATERAL-LOAD distribution for static pushover analysis
+# calculate distribution of lateral load based on mass/weight distributions along building height
+# Fj = WjHj/sum(WiHi)  * Weight   at each floor j
+set iFj ""
+for {set level 2} {$level <=[expr $NStory+1]} {incr level 1} { ;	
+	set FloorWeight [lindex $iFloorWeight [expr $level-1-1]];
+	set FloorHeight [expr ($level-1)*$LCol];
+	lappend iFj [expr $FloorWeight*$FloorHeight/$sumWiHi*$WeightTotal];		# per floor
+}
+set iNodePush $iMasterNode;		# nodes for pushover/cyclic, vectorized
+set iFPush $iFj;				# lateral load for pushover, vectorized
+
+# Define RECORDERS -------------------------------------------------------------
+set FreeNodeID [expr $NFrame*$Dframe+($NStory+1)*$Dlevel+($NBay+1)];					# ID: free node
+set SupportNodeFirst [lindex $iSupportNode 0];						# ID: first support node
+set SupportNodeLast [lindex $iSupportNode [expr [llength $iSupportNode]-1]];			# ID: last support node
+set FirstColumn [expr $N0col  + 1*$Dframe+1*$Dlevel +1];							# ID: first column
+recorder Node -file $dataDir/DFree.out -time -node $FreeNodeID  -dof 1 2 3 disp;				# displacements of free node
+recorder Node -file $dataDir/DBase.out -time -nodeRange $SupportNodeFirst $SupportNodeLast -dof 1 2 3 disp;	# displacements of support nodes
+recorder Node -file $dataDir/RBase.out -time -nodeRange $SupportNodeFirst $SupportNodeLast -dof 1 2 3 reaction;	# support reaction
+recorder Drift -file $dataDir/DrNode.out -time -iNode $SupportNodeFirst  -jNode $FreeNodeID   -dof 1 -perpDirn 2;	# lateral drift
+recorder Element -file $dataDir/Fel1.out -time -ele $FirstColumn localForce;					# element forces in local coordinates
+recorder Element -file $dataDir/ForceEle1sec1.out -time -ele $FirstColumn section 1 force;			# section forces, axial and moment, node i
+recorder Element -file $dataDir/DefoEle1sec1.out -time -ele $FirstColumn section 1 deformation;			# section deformations, axial and curvature, node i
+recorder Element -file $dataDir/ForceEle1sec$numIntgrPts.out -time -ele $FirstColumn section $numIntgrPts force;			# section forces, axial and moment, node j
+recorder Element -file $dataDir/DefoEle1sec$numIntgrPts.out -time -ele $FirstColumn section $numIntgrPts deformation;		# section deformations, axial and curvature, node j
+set yFiber [expr $HCol/2-$cover];								# fiber location for stress-strain recorder, local coords
+set zFiber [expr $BCol/2-$cover];								# fiber location for stress-strain recorder, local coords
+recorder Element -file $dataDir/SSconcEle1sec1.out -time -ele $FirstColumn section $numIntgrPts fiber $yFiber $zFiber $IDconcCore  stressStrain;	# steel fiber stress-strain, node i
+recorder Element -file $dataDir/SSreinfEle1sec1.out -time -ele $FirstColumn section $numIntgrPts fiber $yFiber $zFiber $IDSteel  stressStrain;	# steel fiber stress-strain, node i
+
+# Define DISPLAY -------------------------------------------------------------
+DisplayModel3D DeformedShape ; # options: DeformedShape NodeNumbers ModeShape
+
+# GRAVITY -------------------------------------------------------------
+# define GRAVITY load applied to beams and columns -- eleLoad applies loads in local coordinate axis
+pattern Plain 101 Linear {
+	for {set frame 1} {$frame <=[expr $NFrame]} {incr frame 1} {
+		for {set level 1} {$level <=$NStory} {incr level 1} {
+			for {set pier 1} {$pier <= [expr $NBay+1]} {incr pier 1} {
+				set elemID [expr $N0col  + $level*$Dlevel +$frame*$Dframe+$pier]
+				eleLoad -ele $elemID -type -beamUniform 0. 0. -$QdlCol; 	# COLUMNS		}
+		}
+	}
+	for {set frame 1} {$frame <=[expr $NFrame]} {incr frame 1} {
+		for {set level 2} {$level <=[expr $NStory+1]} {incr level 1} {
+			for {set bay 1} {$bay <= $NBay} {incr bay 1} {
+				set elemID [expr $N0beam + $level*$Dlevel +$frame*$Dframe+ $bay]
+				eleLoad -ele $elemID  -type -beamUniform -$QdlBeam 0.; 	# BEAMS
+			}
+		}
+	}
+	for {set frame 1} {$frame <=[expr $NFrame-1]} {incr frame 1} {
+		for {set level 2} {$level <=[expr $NStory+1]} {incr level 1} {
+			for {set bay 1} {$bay <= $NBay+1} {incr bay 1} {
+				set elemID [expr $N0gird + $level*$Dlevel +$frame*$Dframe+ $bay]
+				eleLoad -ele $elemID  -type -beamUniform -$QdlGird 0.;	# GIRDS
+			}
+		}
+	}
+	
+}
+puts goGravity
+# Gravity-analysis parameters -- load-controlled static analysis
+set Tol 1.0e-8;			# convergence tolerance for test
+variable constraintsTypeGravity Plain;		# default;
+if {  [info exists RigidDiaphragm] == 1} {
+	if {$RigidDiaphragm=="ON"} {
+		variable constraintsTypeGravity Lagrange;	#  large model: try Transformation
+	};	# if rigid diaphragm is on
+};	# if rigid diaphragm exists
+constraints $constraintsTypeGravity ;     		# how it handles boundary conditions
+numberer RCM;			# renumber dof's to minimize band-width (optimization), if you want to
+system BandGeneral ;		# how to store and solve the system of equations in the analysis (large model: try UmfPack)
+test EnergyIncr $Tol 6 ; 		# determine if convergence has been achieved at the end of an iteration step
+algorithm Newton;			# use Newton's solution algorithm: updates tangent stiffness at every iteration
+set NstepGravity 10;  		# apply gravity in 10 steps
+set DGravity [expr 1./$NstepGravity]; 	# first load increment;
+integrator LoadControl $DGravity;	# determine the next time step for an analysis
+analysis Static;			# define type of analysis static or transient
+analyze $NstepGravity;		# apply gravity
+
+# ------------------------------------------------- maintain constant gravity loads and reset time to zero
+loadConst -time 0.0
+
+# -------------------------------------------------------------
+puts "Model Built"
+\end{sourcecode}
+
+\begin{sourcecode}[]{cuda}{Un poco de cuda.}
+__global__ void foo(){
+}
+
+__global__ void addKernel(int *c, const int *a, const int *b){
+	int i = threadIdx.x;
+	c[i] = a[i] + b[i];
+}
+
+foo<<<n,m>>>();
+\end{sourcecode}
+
+\begin{sourcecode}[]{bash}{Un poco de bash.}
+# Muestra toda la información de la batería
+function battr-info {
+	wrks-scripts
+	data=$(ioreg -l -w0 |grep Capacity)
+	python2.7 battery_info.py $data
+	cd - >> config/.empty
+}
+
+function qtest-java {
+	if [ -z "${1}" ]; then
+	echo-err 'Nombre fuente no definido'
+	else
+	vim $1
+	javac -encoding ISO-8859-1 $1 $2 $3
+	blankspace=""
+	first=$1
+	first=${first/.java/$blankspace}
+	java $first
+	fi
+}
+
+PATH=$PATH:"/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+PATH=$PATH:"/Applications/Utilities/Lynxlet.app/Contents/Resources/lynx/bin"
+export PATH
+
+alias ga='git add '
+dig +short myip.opendns.com @resolver1.opendns.com
+gcc "$@" -o $first
+
+::claramente esto no funcionará::
+sudo x, call y
+rem esto es un comentario en windows
+history -c rm a, ls -d killall e mv | grep | awk python 'hola'
+vim uwu printf 'have you seen him' -z
+git doge ssh cp cd
+\end{sourcecode}
+
+\begin{sourcecode}[]{c}{Ejemplo en C.}
+#include <stdio.h>
+int main(){
+	int i, j, rows;
+	
+	printf("Enter number of rows: ");
+	scanf("%d",&rows);
+	
+	for(i=1; i<=rows; ++i){
+		for(j=1; j<=i; ++j){
+			printf("* ");
+		}
+		printf("\n");
+	}
+	return 0;
+}
+\end{sourcecode}
+
+\begin{sourcecode}[]{csharp}{Ejemplo en C\#.}
+/*
+* C# Program to Get a Number and Display the Sum of the Digits 
+*/
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Program
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			int num, sum = 0, r;
+			Console.WriteLine("Enter a Number : ");
+			num = int.Parse(Console.ReadLine());
+			while (num != 0)
+			{
+				r = num % 10;
+				num = num / 10;
+				sum = sum + r;
+			}
+			Console.WriteLine("Sum of Digits of the Number : "+sum);
+			Console.ReadLine();
+			
+		}
+	}
+}
+\end{sourcecode}
+
+\begin{sourcecode}{cpp}{Suma en C++.}
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int n, sum = 0;
+	
+	cout << "Enter a positive integer: ";
+	cin >> n;
+	
+	for (int i = 1; i <= n; ++i) {
+		sum += i;
+	}
+	
+	cout << "Sum = " << sum;
+	return 0;
+}
+\end{sourcecode}
+
+\begin{sourcecode}{docker}{Docker.}
+version: '2'
+services:
+web:
+build: .
+ports:
+- "5000:5000"
+volumes:
+- .:/code
+- logvolume01:/var/log
+links:
+- redis
+redis:
+image: redis
+volumes:
+logvolume01: {}
+\end{sourcecode}
+
+\begin{sourcecode}{plaintext}{Resultado del análiis con TEFAME.}
+TEFAME - Toolbox para Elemento Finitos y Analisis
+Matricial de Estructuras en MATLAB
+
+Propiedades de entrada modelo:
+
+Nodos: 
+Numero de nodos: 4 
+Coordenadas nodo N1: 0 0
+Coordenadas nodo N2: 800 0
+Coordenadas nodo N3: 400 400
+Coordenadas nodo N4: 400 800
+
+Elementos: 
+Numero de elementos: 6 
+Elemento E1:	Largo: 800         Area: 20        Eo: 200000    
+Elemento E2:	Largo: 565.6854    Area: 20        Eo: 200000    
+Elemento E3:	Largo: 565.6854    Area: 20        Eo: 200000    
+Elemento E4:	Largo: 894.4272    Area: 20        Eo: 200000    
+Elemento E5:	Largo: 400         Area: 20        Eo: 200000    
+Elemento E6:	Largo: 894.4272    Area: 20        Eo: 200000    
+
+Resultados del analisis:
+
+Desplazamientos nodos: 
+Desplazamientos nodo N1: 0 0
+Desplazamientos nodo N2: 0.016 0
+Desplazamientos nodo N3: 0.008 -0.013
+Desplazamientos nodo N4: 0.053 -0.016
+
+Reacciones: 
+Reacciones nodo N1: -80 -20
+Reacciones nodo N2: 0 140
+Reacciones nodo N3: 0 0
+Reacciones nodo N4: 0 0
+
+Esfuerzos Elementos: 
+Elemento E1: -78.4273       TRACCION
+Elemento E2: 23.836         COMPRESION
+Elemento E3: 23.836         COMPRESION
+Elemento E4: -41.2047       TRACCION
+Elemento E5: 33.7093        COMPRESION
+Elemento E6: 137.6807       COMPRESION
+\end{sourcecode}
+
+\begin{sourcecode}[\label{codigo-html}]{html}{Ejemplo en HTML.}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Página</title>
+</head>
+<body>
+	<style>
+		.titulo {
+			color: #ff0000;
+		}
+	</style>
+	<div class="titulo">Hola</div>
+</body>
+</html>
+\end{sourcecode}
+
+\begin{sourcecode}[\label{codigo-matlab}]{matlab}{Ejemplo en Matlab.}
+% Se crea gráfico
+f = figure(1);
+hold on;
+movegui(f, 'center');
+xlabel('td/Tn'); ylabel('FAD=Umax/Uf0');
+title('Espectro de pulso de desplazamiento');
+
+for j = 1:length(BETA)
+	fad = ones(1, NDATOS); % Arreglo para el FAD, uno para cada r
+	for i = 1:NDATOS
+		[t, u_t, ~, ~] = main(BETA(j), r(i), M, K, F0, 0);
+		fad(i) = max(abs(u_t)) / uf0;
+	end
+mx = find(fad == max(fad(:)));
+fprintf('BETA=%.2f, MAX: FAD=%.3f, TD/TN=%.3f\n', BETA(j), fad(mx), tdtn(mx));
+plot(tdtn, fad, 'DisplayName', strcat('\beta=', sprintf('%.2f', BETA(j))));
+end	
+\end{sourcecode}
+
+\begin{sourcecode}[]{xml}{Ejemplo xml.}
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+xmlns:xs="https://www.w3.org/2001/XMLSchema">
+	<xs:element name="points">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" name="point">
+					<xs:complexType>
+						<xs:attribute name="x" type="xs:unsignedShort" use="required" />
+						<xs:attribute name="y" type="xs:unsignedShort" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
+\end{sourcecode}
+
+\begin{sourcecode}[\label{codigo-python}]{python}{Ejemplo en Python.}
+import numpy as np
+
+def incmatrix(genl1, genl2):
+m = len(genl1)
+n = len(genl2)
+M = None # Comentario 1
+VT = np.zeros((n*m, 1), int) # Comentario 2
+\end{sourcecode}
+
+\begin{sourcecode}[\label{codigo-java}]{java}{Ejemplo en Java.}
+import java.io.IOException; 
+import javax.servlet.*;
+
+// Hola mundo
+public class Hola extends GenericServlet {
+	public void service(ServletRequest request, ServletResponse response)
+	throws ServletException, IOException{
+		response.setContentType("text/html");
+		PrintWriter pw = response.getWriter();
+		pw.println("Hola, mundo!");
+		pw.close();
+	}
+}
+\end{sourcecode}
+
+\begin{sourcecode}{javascript}{Ejemplo en Javascript.}
+$.urlParam = function (name) {
+	let results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+	if (results == null) {
+		return null;
+	} else {
+		return decodeURI(results[1]) || 0;
+	}
+};
+\end{sourcecode}
+
+\begin{sourcecode}{json}{Un arreglo en JSON.}
+{"menu": {
+	"id": "file",
+	"value": "File",
+	"popup": {
+		"menuitem": [
+		{"value": "New", "onclick": "CreateNewDoc()"},
+		{"value": "Open", "onclick": "OpenDoc()"},
+		{"value": "Close", "onclick": "CloseDoc()"}
+		]
+	}
+}}
+\end{sourcecode}
+
+\begin{sourcecode}{latex}{Imágenes múltiples.}
+\begin{images}[\label{imagenmultiple}]{Ejemplo de imagen múltiple.}
+	\addimage{ejemplos/test-image}{width=6.5cm}{Ciudad}
+	\addimage{ejemplos/test-image-wrap}{width=5cm}{Apolo}
+	\addimage{ejemplos/test-image}{width=12cm}{Ciudad más grande}
+\end{images}
+\end{sourcecode}
+
+\begin{sourcecode}[\label{ejemplito-perl}]{perl}{Algo de perl.}
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+# first, create your message
+use Email::MIME;
+my $message = Email::MIME->create(
+  header_str => [
+    From    => 'you@example.com',
+    To      => 'friend@example.com',
+    Subject => 'Happy birthday!',
+  ],
+  attributes => {
+    encoding => 'quoted-printable',
+    charset  => 'ISO-8859-1',
+  },
+  body_str => "Happy birthday to you!\n",
+);
+
+# send the message
+use Email::Sender::Simple qw(sendmail);
+sendmail($message);
+\end{sourcecode}
+
+\begin{sourcecode}{php}{Ejemplo php.}
+<?php
+$target_dir = "uploads/";
+$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$uploadOk = 1;
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+// Check if image file is a actual image or fake image
+if(isset($_POST["submit"])) {
+    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+    if($check !== false) {
+        echo "File is an image - " . $check["mime"] . ".";
+        $uploadOk = 1;
+    } else {
+        echo "File is not an image.";
+        $uploadOk = 0;
+    }
+}
+?>
+\end{sourcecode}
+
+\begin{sourcecode}[]{ruby}{Ejemplo con ruby.}
+class DataFile < ActiveRecord::Base
+    attr_accessor :upload
+
+  def self.save_file(upload)   
+
+    file_name = upload['datafile'].original_filename  if  (upload['datafile'] !='')    
+    file = upload['datafile'].read    
+
+    file_type = file_name.split('.').last
+    new_name_file = Time.now.to_i
+    name_folder = new_name_file
+    new_file_name_with_type = "#{new_name_file}." + file_type
+
+    image_root = "#{RAILS_CAR_IMAGES}"
+
+
+    Dir.mkdir(image_root + "#{name_folder}");
+      File.open(image_root + "#{name_folder}/" + new_file_name_with_type, "wb")  do |f|  
+        f.write(file) 
+      end
+
+  end
+end
+\end{sourcecode}
+
+\begin{sourcecode}{sql}{Merge two tables.}
+SELECT ChargeNum, CategoryID, SUM(Hours)
+FROM KnownHours
+GROUP BY ChargeNum, CategoryID
+UNION ALL
+SELECT ChargeNum, 'Unknown' AS CategoryID, SUM(Hours)
+FROM UnknownHours
+GROUP BY ChargeNum
+\end{sourcecode}
+
+\begin{sourcecode}{scala}{Código en scala.}
+object Test {
+	def main(args: Array[String]) {
+		var a = 0;
+		// for loop execution with a range
+		for( a <- 1 to 10){
+			println( "Value of a: " + a );
+		}
+	}
+}
+\end{sourcecode}
+
+\begin{sourcecode}{kotlin}{Kotlin en acción.}
+/* Block comment */
+package hello
+import kotlin.collections.* // line comment
+
+/**
+* Doc comment here for `SomeClass`
+* @see Iterator#next()
+*/
+@Deprecated("Deprecated class")
+private class MyClass<out T : Iterable<T>>(var prop1 : Int) {
+	fun foo(nullable : String?, r : Runnable, f : () -> Int, 
+	fl : FunctionLike, dyn: dynamic) {
+		println("length\nis ${nullable?.length} \e")
+		val ints = java.util.ArrayList<Int?>(2)
+		ints[0] = 102 + f() + fl()
+		val myFun = { -> "" };
+		var ref = ints.size
+		ints.lastIndex + globalCounter
+		ints.forEach lit@ {
+			if (it == null) return@lit
+			println(it + ref)
+		}
+		dyn.dynamicCall()
+		dyn.dynamicProp = 5
+	}
+	
+	val test = """
+		hello
+		world
+		kotlin
+	"""
+	override fun hashCode(): Int {
+		return super.hashCode() * 31
+	}
+}
+fun Int?.bar() {
+	if (this != null) {
+		println(message = toString())
+	}
+	else {
+		println(this.toString())
+	}
+}
+var globalCounter : Int = 5
+get = field
+abstract class Abstract {
+}
+object Obj
+enum class E { A, B }
+interface FunctionLike {
+	operator fun invoke() = 1
+}
+\end{sourcecode}
+
+\begin{sourcecodep}{xml}{firstnumber=100, basicstyle={\fontsize{7}{10}\selectfont\ttfamily}}{}
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+   xmlns:xs="https://www.w3.org/2001/XMLSchema">
+  <xs:element name="points">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="point">
+          <xs:complexType>
+            <xs:attribute name="x" type="xs:unsignedShort" use="required" />
+            <xs:attribute name="y" type="xs:unsignedShort" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+\end{sourcecodep}
+
+\begin{sourcecode}{pseudocode}{Algoritmo.}
+input: int N, int D % Comentario
+output: int // Comentario 2
+begin # key
+	LET $\gets$ 0 /* comentario 1 */
+	while N $\geq$ D /** comentario 2 */
+		N $\gets$ N - D
+		res $\gets$ res + 1      
+	end
+	return res
+end    
+\end{sourcecode}
+
+\begin{sourcecode}{glsl}{Noise shader.}
+#ifdef GL_ES
+precision mediump float;
+#endif
+
+uniform vec2 u_resolution;
+uniform vec2 u_mouse;
+uniform float u_time;
+
+// 2D Random
+float random (in vec2 st) {
+	return fract(sin(dot(st.xy,
+	vec2(12.9898,78.233)))
+	* 43758.5453123);
+}
+
+// 2D Noise based on Morgan McGuire @morgan3d
+// https://www.shadertoy.com/view/4dS3Wd
+float noise (in vec2 st) {
+	vec2 i = floor(st);
+	vec2 f = fract(st);
+	
+	// Four corners in 2D of a tile
+	float a = random(i);
+	float b = random(i + vec2(1.0, 0.0));
+	float c = random(i + vec2(0.0, 1.0));
+	float d = random(i + vec2(1.0, 1.0));
+	
+	// Smooth Interpolation
+	
+	// Cubic Hermine Curve.  Same as SmoothStep()
+	vec2 u = f*f*(3.0-2.0*f);
+	// u = smoothstep(0.,1.,f);
+	
+	// Mix 4 coorners percentages
+	return mix(a, b, u.x) +
+	(c - a)* u.y * (1.0 - u.x) +
+	(d - b) * u.x * u.y;
+}
+
+void main() {
+	vec2 st = gl_FragCoord.xy/u_resolution.xy;
+	
+	// Scale the coordinate system to see
+	// some noise in action
+	vec2 pos = vec2(st*5.0);
+	
+	// Use the noise function
+	float n = noise(pos);
+	
+	gl_FragColor = vec4(vec3(n), 1.0);
+}
+\end{sourcecode}
+
+\begin{sourcecode}[]{matlab}{Ejemplo en Matlab.}
+% Se crea gráfico
+%% hola
+f = figure(1);
+hold on;
+movegui(f, 'center');
+xlabel('td/Tn'); ylabel('FAD=Umax/Uf0');
+title('Espectro de pulso de desplazamiento');
+
+for j = 1:length(BETA)
+	fad = ones(1, NDATOS); % Arreglo para el FAD, uno para cada r
+	for i = 1:NDATOS
+		[t, u_t, ~, ~] = main(BETA(j), r(i), M, K, F0, 0);
+		fad(i) = max(abs(u_t)) / uf0;
+	end
+mx = find(fad == max(fad(:)));
+fprintf('BETA=%.2f, MAX: FAD=%.3f, TD/TN=%.3f\n', BETA(j), fad(mx), tdtn(mx));
+plot(tdtn, fad, 'DisplayName', strcat('\beta=', sprintf('%.2f', BETA(j))));
+end	
+\end{sourcecode}
+
+\begin{sourcecode}{r}{Ejemplo en r.}
+#
+# Genera una correlacion de los generos con todas sus variables
+#
+corr_data_genre <- function(data, genre) {
+	num_genre <- data[data$genre == genre, -c(1:4)]
+	corr_genre <- cor(num_genre)
+	corrplot(corr_genre, type = "lower", order = "hclust", tl.col = "black", tl.srt = 30, main = toupper(genre), tl.cex = 0.7, mar=c(0,0,1,0))
+}
+
+#
+# Crea matriz de generos
+#
+create_track_genre_df <- function(df, title) {
+	# Obtiene la lista de generos ordenados
+	genre <- data.frame(genre=unique(df$genre))
+	track_ids <- unique(df$track_id)
+	df_genre <- df[, -c(2:3, 5:15)]
+	df_genre <- df_genre[order(df_genre$track_id), ]
+	track_genres <- data.frame(track_id=track_ids)
+	
+	# Crea un data frame indicando para cada tema si tiene cada genero o no
+	df_full <- data.frame(track_id=df_genre$track_id,
+	'_'=df_genre$genre==genre[1, 1],
+	'Opera'=df_genre$genre==genre[1, 1],
+	'A_Capella'=df_genre$genre==genre[2, 1],
+	'Alternative'=df_genre$genre==genre[3, 1],
+	'Blues'=df_genre$genre==genre[4, 1],
+	'Dance'=df_genre$genre==genre[5, 1],
+	'Pop'=df_genre$genre==genre[6, 1],
+	'Electronic'=df_genre$genre==genre[7, 1],
+	'RyB'=df_genre$genre==genre[8, 1],
+	'Children_Music'=df_genre$genre==genre[9, 1],
+	'Folk'=df_genre$genre==genre[10, 1],
+	'Anime'=df_genre$genre==genre[11, 1],
+	'Rap'=df_genre$genre==genre[12, 1],
+	'Classical'=df_genre$genre==genre[13, 1],
+	'Reggae'=df_genre$genre==genre[14, 1],
+	'Hip_Hop'=df_genre$genre==genre[15, 1],
+	'Comedy'=df_genre$genre==genre[16, 1],
+	'Country'=df_genre$genre==genre[17, 1],
+	'Reggaeton'=df_genre$genre==genre[18, 1],
+	'Ska'=df_genre$genre==genre[19, 1],
+	'Indie'=df_genre$genre==genre[20, 1],
+	'Rock'=df_genre$genre==genre[21, 1],
+	'Soul'=df_genre$genre==genre[22, 1],
+	'Soundtrack'=df_genre$genre==genre[23, 1],
+	'Jazz'=df_genre$genre==genre[24, 1],
+	'World'=df_genre$genre==genre[25, 1],
+	'Movie'=df_genre$genre==genre[26, 1])
+	cols <- sapply(df_full, is.logical)
+	df_full[,cols] <- lapply(df_full[,cols], as.numeric)
+	
+	# Fusiona
+	track_genres_df <- aggregate(.~track_id, df_full[,-c(2, 27)], sum)
+	
+	# Crea un grafico de correlacion
+	track_genres_df_noid <- track_genres_df[, -c(1)]
+	corr_genre <- cor(track_genres_df_noid)
+	corrplot(corr_genre, type = "lower", order = "hclust", tl.col = "black", tl.srt = 30, main = title, tl.cex = 0.7, mar=c(0,0,1,0))
+	
+	return(track_genres_df)
+}
+
+# Crea histograma con todas las variables del dataset
+create_hist_plot <- function(df, probability) {
+	select_plot <- function(data, tag){
+		hist(data,
+		col="#00AFBB",
+		border="#015f66",
+		ylab=NULL,
+		xlab=NULL,
+		prob=probability,
+		main=toupper(tag),
+		breaks=50
+		)
+	}
+	par(mfrow=c(3,4))
+	select_plot(df$popularity, "popularity")
+	select_plot(df$acousticness, "acousticness")
+	select_plot(datos_num$danceability, "danceability")
+	select_plot(datos_num$duration_ms, "duration_ms")
+	select_plot(datos_num$energy, "energy")
+	if (probability){
+		title(ylab="Probability")
+	}else{
+		title(ylab="Frequence") 
+	}
+	select_plot(datos_num$instrumentalness, "instrumentalness")
+	select_plot(datos_num$liveness, "liveness")
+	select_plot(datos_num$loudness, "loudness")
+	select_plot(datos_num$speechiness, "speechiness")
+	select_plot(datos_num$tempo, "tempo")
+	select_plot(datos_num$valence, "valence")
+}
+
+#
+# Genera un histograma de varios generos con una variable
+#
+create_hist_genre <- function(df, genres, var){
+	gi <- 0
+	colors <- c()
+	genr <- c()
+	for (g in genres) {
+		df_g <- df[df$genre == g, var] # elige el data
+		color <- rgb(runif(1), runif(1), runif(1), 0.5)
+		if (gi == 0) {
+			hist(df_g[[1]], col=color, xlab="", ylab="", main="", border=color, breaks=50)
+		} else {
+			hist(df_g[[1]], col=color, border=color, breaks=50, add=T, xlab=var)
+		}
+		colors <- c(colors, color)
+		gi <- gi + 1
+		genr <- c(genr, g)
+	}
+	title(main=toupper(var), sub="", xlab=var, ylab="Frecuency")
+	op <- par(cex = 0.75)
+	legend('topleft', genr, fill = colors, ncol=2)
+}
+
+#
+# Genera un histograma de varios generos con una variable
+#
+create_prob_genre <- function(df, genres, var, pos, ncols, fsize){
+	if (pos == "l") {
+		legp <- "topleft"
+	} else if(pos == "c") {
+		legp <- "top"
+	} else if(pos == "r") {
+		legp <- "topright"
+	} else if (pos == "bl") {
+		legp <- "bottomleft"
+	} else if(pos == "bc") {
+		legp <- "bottom"
+	} else if(pos == "br") {
+		legp <- "bottomright"
+	} else {
+		legp <- "center"
+	}
+	gi <- 0
+	tranp <- rgb(0, 0, 0, 0) # color transparente
+	colors <- c()
+	genr <- c()
+	for (g in genres) {
+		df_g <- df[df$genre == g, var] # elige el data
+		color <- rgb(runif(1), runif(1), runif(1), 1)
+		if (gi == 0) {
+			hist(df_g[[1]], col=tranp, xlab="", ylab="", main="", border=tranp, prob = TRUE, breaks=50)
+			lines(density(df_g[[1]]), col=color, xlab="", ylab="", main="", lw=2)
+		} else {
+			hist(df_g[[1]], col=tranp, border=tranp, breaks=50, prob = TRUE, add=T, xlab=var)
+			lines(density(df_g[[1]]), col=color, lw=2)
+		}
+		colors <- c(colors, color)
+		gi <- gi + 1
+		genr <- c(genr, g)
+	}
+	title(main=toupper(var), sub="", xlab=var, ylab="Density")
+	grid()
+	op <- par(cex = fsize)
+	legend(legp, genr, fill = colors, ncol=ncols)
+}
+
+# Tamaño normal
+create_prob_genre_normal <- function(df, genres, var, pos) {
+	create_prob_genre(df, genres, var, pos, 2, 0.75)
+}
+
+# Tamaño pequeño
+create_prob_genre_small <- function(df, genres, var, pos) {
+	create_prob_genre(df, genres, var, pos, 4, 0.6)
+}
+
+# Tamaño grande
+create_prob_genre_large <- function(df, genres, var, pos) {
+	create_prob_genre(df, genres, var, pos, 1, 1)
+}
+\end{sourcecode}
+
+\begin{sourcecode}{css}{Código CSS.}
+.fecha-estilo {
+	color: #819198;
+	font-size: 15px;
+	position: relative;
+	bottom: 0;
+}
+
+.btn {
+	-moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
+	background-color: rgba(100, 100, 100, 0.4);
+	border-radius: 0.3rem;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
+	color: rgba(255, 255, 255, 1);
+	display: inline-block;
+	margin-bottom: 1rem;
+	margin-left: 0;
+	margin-right: 0.5rem;
+	opacity: 1.0;
+	outline: none;
+	transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+}
+
+.btn:hover {
+	opacity: 1.0;
+}
+
+.btn-pro {
+	-moz-box-shadow: 0 0 5px 0 rgba(10, 10, 10, 0.75);
+	-webkit-box-shadow: 0 0 5px 0 rgba(10, 10, 10, 0.75);
+	background-color: rgba(210, 210, 210, 0.85);
+	border-radius: 0.3rem;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 5px 0 rgba(10, 10, 10, 0.75);
+	color: rgba(20, 20, 20, 1);
+	display: inline-block;
+	font-weight: bolder;
+	margin-bottom: 1rem;
+	margin-left: 0;
+	margin-right: 0.5rem;
+	opacity: 0.9;
+	outline: none;
+	transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+}
+\end{sourcecode}
+
+\begin{sourcecode}{haskell}{Ejemplo en Haskell.}
+-- Type annotation (optional)
+fib :: Int -> Integer
+
+-- With self-referencing data
+fib n = fibs !! n
+where fibs = 0 : scanl (+) 1 fibs
+-- 0,1,1,2,3,5,...
+
+-- Same, coded directly
+fib n = fibs !! n
+where fibs = 0 : 1 : next fibs
+next (a : t@(b:_)) = (a+b) : next t
+
+-- Similar idea, using zipWith
+fib n = fibs !! n
+where fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
+
+-- Using a generator function
+fib n = fibs (0,1) !! n
+where fibs (a,b) = a : fibs (b,a+b)
+\end{sourcecode}
+
+\begin{sourcecode}{pascal}{Ejemplo pascal.}
+PROGRAM NotasDeAlumnos;
+uses crt;
+Type
+vecalumnos = array [1..40] of string;
+var
+Nombre, Apellido: vecalumnos;
+Nota: array [1..40] of real;
+Begin
+clrscr; /*Limpia pantalla*/
+For i:= 1 to 40 do
+	begin
+		write('Ingrese Nombre: ');
+		readln(Nombre[i]);
+		write('Ingrese Apellido: ');
+		readln(Apellido[i]);
+		write('Ingrese Nota: ');
+		readln(Nota[i]);
+	end;
+For i:= 1 to 40 do
+	begin
+		write(Nombre[i], ' ',Apellido[i]);
+		if (Nota[i] >=7) then
+			writeln(' aprobó')
+		else
+			writeln(' no aprobó');
+	end;
+writeln('');
+Write ('Pulse [Intro] para finalizar...');
+Readln
+end.
+\end{sourcecode}
+
+\begin{sourcecode}{fortran}{Ejemplo en Fortran.}
+REGRESION LINEAL.FORTRANS
+APLICACION
+     DIMENSION TIEMPO(1000),PROD(1000)
+        OPEN(1,FILE='HISTORIA.txt')
+        I=0
+ 10     READ(1,*,END=80)T,P
+        I=I+1
+        TIEMPO(.l.)=T
+        PROD(I)=P
+        GO TO 10
+ 80     NDATOS=I
+        CALL AJULIN(TIEMPO,PROD,NDATOS,A,B)
+        WRITE(*,90)A,B
+ 90     FORMAT('LA ECUACION ES:Y=',F10.2,'+',F10.2,'X')
+ 20     FORMAT(20F10.0)
+        END
+
+
+        SUBROUTINE AJULIN(X,Y,N,A,B)
+         DIMENSION X(1),Y(1)
+          SUMX=0.
+          SUMY=0.
+          SUMX2=0.
+          SUMY2=0
+          SUMXY=0
+        DO 20 I=1,N
+         SUMX=SUMX+X(.l.)
+         SUMY=SUMY+Y(.l.)
+         SUMX2=SUMX2+(X(I)*X(.l.))
+         SUMY2=SUMY2+Y(I)**2
+         SUMXY=SUMXY+(X(I)*Y(I))
+ 20    CONTINUE
+        PROD=SUMX*SUMY
+        B=(SUMXY-PROD/N)/(SUMX2-SUMX**2/N)
+        A=(SUMY/N-B*SUMX/N)
+       RETURN
+       END
+\end{sourcecode}
+
+\begin{sourcecode}{octave}{Ejemplo en Octave.}
+function out = invar_table(n,m,N)
+if n>m, error('first number must be smaller than the second'), endif
+
+t = cputime;
+out = zeros(m-n+1,2);
+
+for i=n:m
+  out(i+1-n,1) = i;
+  out(i+1-n,2) = invar(braidmatrix(i),N);
+end
+
+printf('Total CPU time: %f seconds\n', cputime-t);
+end
+\end{sourcecode}
+
+\begin{sourcecode}{vbscript}{Ejemplo en Visual Basic.}
+Option Explicit
+
+Sub Signal(strSignalfolge As String, Optional lngTakt As Long = 100)
+'Prozedur erzeugt eine Serie von Warntönen.
+'Die optionale Variable lngTakt gibt den Takt in Millisekunden vor (Standard: 100 ms)
+'Das Muster kann über die String-Variable strSignalfolge beeinflusst werden:
+' Stern (*)     -> 1 Warnton
+' Ziffern 1..9  -> 1..9 Takte Pause
+' Leerzeichen   -> 1 Sekunde Pause
+' Minus (-)     -> 1.5 Sekunden Pause
+    Dim i As Integer
+    Dim b As String
+    For i = 1 To Len(strSignalfolge)
+        b = Mid(strSignalfolge, i, 1)
+        Select Case b
+            Case "*": beep
+            Case 1 To 9: DELAY CInt(b) * lngTakt
+            Case " ": DELAY 1000
+            Case "-": DELAY 1500
+        End Select
+        DELAY lngTakt
+    Next i
+
+End Sub
+
+Public Function strParse(Data As String, Trenn As String, Nr As Integer)
+'Funktion trennt die Zeichenkette <Data>
+    On Error Resume Next
+    Dim MainData() As String, SplitData() As String
+    MainData = Split(Data, Trenn)
+    SplitData = Split(MainData(Nr - 1), Trenn)
+    strParse = SplitData(0)
+End Function
+\end{sourcecode}
+
+\begin{sourcecode}{lisp}{Ejemplo en Lisp.}
+(defun find-symbol-between-sigma-sets (sigma-a sigma-b scan-node symbols g)
+	(let* ((scan-node-set-in-sigma-a (find-scan-node sigma-a scan-node))
+		(next-scan-node-set-in-sigma-b 
+			(get-next-node-set-from-scan-node-set 
+			scan-node-set-in-sigma-a sigma-b g))
+		(union-node-set-in-sigma-a 
+			(get-previous-nodes next-scan-node-set-in-sigma-b g)))
+	(if 
+		(and 
+		(memberp union-node-set-in-sigma-a scan-node-set-in-sigma-a)
+		(path-exists-between-set-a-and-set-b 
+		union-node-set-in-sigma-a next-scan-node-set-in-sigma-b g))
+		(car 
+		(unique-get-symbols 
+		union-node-set-in-sigma-a next-scan-node-set-in-sigma-b symbols))
+	nil)))
+\end{sourcecode}
+
+\begin{sourcecode}{scheme}{Ejemplo en Scheme.}
+;;; If the next character on p is a letter, get-word reads a word
+;;; from p and returns it in a string.  If the character is not a
+;;; letter, get-word returns the character (on eof, the eof-object).
+(define get-word
+	(lambda (p)
+	(let ((c (read-char p)))
+		(if (eq? (char-type c) 'letter)
+			(list->string
+			(let loop ((c c))
+				(cons c
+				(if (memq (char-type (peek-char p)) '(letter digit))
+					(loop (read-char p))
+					'()))))
+			c))))
+
+;;; char-type tests for the eof-object first, since the eof-object
+;;; may not be a valid argument to char-alphabetic? or char-numeric?
+;;; It returns the eof-object, the symbol letter, the symbol digit,
+;;; or the argument itself if it is not a letter or digit.
+(define char-type
+	(lambda (c)
+	(cond
+		((eof-object? c) c)
+		((char-alphabetic? c) 'letter)
+		((char-numeric? c) 'digit)
+		(else c))))
+
+;;; Trees are represented as vectors with four fields: word, left,
+;;; right, and count.  Only one field, word, is initialized by an
+;;; argument to the constructor procedure make-tree.  The remaining
+;;; fields are explicitly initialized and changed by subsequent
+;;; operations.  Most Scheme systems provide structure definition
+;;; facilities that automate creation of structure manipulation
+;;; procedures, but we simply define the procedures by hand here.
+(define make-tree
+	(lambda (word)
+	(vector word '() '() 1)))
+
+(define tree-word (lambda (tree) (vector-ref tree 0)))
+
+(define tree-left (lambda (tree) (vector-ref tree 1)))
+(define set-tree-left!
+	(lambda (tree new-left)
+	(vector-set! tree 1 new-left)))
+
+(define tree-right (lambda (tree) (vector-ref tree 2)))
+(define set-tree-right!
+	(lambda (tree new-right)
+	(vector-set! tree 2 new-right)))
+
+(define tree-count (lambda (tree) (vector-ref tree 3)))
+(define set-tree-count!
+	(lambda (tree new-count)
+	(vector-set! tree 3 new-count)))
+
+;;; If the word already exists in the tree, tree increments its
+;;; count.  Otherwise, a new tree node is created and put into the
+;;; tree.  In any case, the new or modified tree is returned.
+(define tree
+	(lambda (node word)
+	(cond
+		((null? node) (make-tree word))
+		((string=? word (tree-word node))
+		(set-tree-count! node (+ (tree-count node) 1))
+		node)
+		((string<? word (tree-word node))
+		(set-tree-left! node (tree (tree-left node) word))
+		node)
+		(else
+		(set-tree-right! node (tree (tree-right node) word))
+		node))))
+
+;;; tree-print prints the tree in "in-order," i.e., left subtree,
+;;; then node, then right subtree.  For each word, the count and the
+;;; word are printed on a single line.
+(define tree-print
+	(lambda (node p)
+	(if (not (null? node))
+		(begin
+			(tree-print (tree-left node) p)
+			(write (tree-count node) p)
+			(write-char #\space p)
+			(display (tree-word node) p)
+			(newline p)
+			(tree-print (tree-right node) p)))))
+
+;;; frequency is the driver routine.  It opens the files, reads the
+;;; words, and enters them into the tree.  When the input port
+;;; reaches end-of-file, it prints the tree and closes the ports.
+(define frequency
+	(lambda (infn outfn)
+	(let ((ip (open-input-file infn))
+			(op (open-output-file outfn)))
+		(let loop ((root '()))
+		(let ((w (get-word ip)))
+			(cond
+				((eof-object? w) (tree-print root op))
+				((string? w) (loop (tree root w)))
+				(else (loop root)))))
+		(close-input-port ip)
+		(close-output-port op))))
+\end{sourcecode}
+
+\begin{sourcecode}{maple}{Ejemplo en Maple.}
+restart:
+with(geom3d):
+eqS:=Equation(sphere(S,(x-1)^2 + (y-1)^2 +(z-1)^2 -121=0,[x,y,z],'centername'=T)):
+L:=[]:
+for x from -5 to 10  do
+for y from -5 to 10  do
+for z from -5 to 10  do  if  x<>xcoord(T) and y<>ycoord(T) and z <> zcoord(T) and   type(x,integer) and type(y,integer)and type(z,integer) and eqS then
+L:=[op(L), [x,y,z]] fi;
+od: od: od: 
+nops(L);  
+L;
+\end{sourcecode}
+
+\begin{sourcecode}{matlab}{Matlab 2.}
+	function [f, psd, fft, fftcomp, envFormaModal, tlocMean, tlocStd, locMean, ...
+    locStd, locFreq, maxlocs, pks, betaNodo, betaFreqNodo, fftmean, fftstd, ...
+    psdmean, psdstd] = PSD(a, fs, gdl, varargin)
+% PSD: Power Spectral Density. Calcula la FFT de un registro sismico
+% analizado para varios nodos con distintos grados de libertad. La funcion
+% permite calcular distintos tipos de periodos naturales, arrojando un
+% vector. Adicionalmente se calcula una razon de amortiguamiento con cada
+% modo.
+%
+% Input:
+%   a               Registro de aceleracion
+%   fs              Factor de muestreo del registro
+%   gdl             Vector con los grados de libertad de los nodos en el analisis
+%
+% Parametros opcionales:
+%   betaFFT         Realiza el calculo del amortiguamiento con FFT o PSD
+%   betaFFTMax      El amortiguamiento se calcula con el maximo FFT de todos los nodos
+%   peakFFT         Realiza el calculo de peaks con FFT o PSD
+%   peakMinDistance Distancia minima entre peaks requerida
+%   tukeywinr       Factor de la ventana de tukey
+%   zerofill        Indica relleno de ceros para FFT
+%
+% Output:
+%   f               Vector de frecuencias
+%   psd             Cell PSD de cada registro de los nodos
+%   fft             Cell FFT de cada registro de los nodos
+%   fftcomp         Registro completo (Re+Im)
+%   envFormaModal   Cell con formas modales para cada periodo
+%   tlocMean        Periodos medios de cada modo obtenidos de los peaks
+%   tlocStd         Desviacion estandar de cada modo obtenido de los peaks
+%   locMean         Frecuencia media de cada modo obtenido en los peaks
+%   locStd          Desviacion estandar de la frecuencia de cada modo
+%   locFreq         Posicion en el vector de frecuencias de cada modo
+%   maxlocs         Numero de modos encontrados en los peaks
+%   pks             Vector de peaks
+%   betaNodo        Vector de amortiguamientos por cada modo
+%   betaFreqNodo    Valor del FFT objetivo por cada amortiguamiento modal
+%   fftmean         Promedios FFT
+%   fftstd          Desviacion estandar FFT
+%   psdmean         Promedios PSD
+%   psdstd          Desviacion estandar PSD
+
+%% Parametros opcionales
+p = inputParser;
+p.KeepUnmatched = true;
+addOptional(p, 'betaFFT', true);
+addOptional(p, 'betaFFTMax', false); % Calcula el amortiguamiento con el maximo
+addOptional(p, 'peakFFT', true);
+addOptional(p, 'peakMinDistance', 0.5); % Requerido para el calculo
+addOptional(p, 'tmax', -1);
+addOptional(p, 'tmin', 0);
+addOptional(p, 'tukeywinr', 0.01);
+addOptional(p, 'zerofill', 0);
+parse(p, varargin{:});
+r = p.Results;
+
+if r.betaFFT
+    fprintf('\tSe calculan amortiguamientos con FFT\n');
+else
+    fprintf('\tSe calculan amortiguamientos con PSD\n');
+end
+if r.peakFFT
+    fprintf('\tSe calculan peaks periodos con FFT\n');
+else
+    fprintf('\tSe calculan peaks periodos con PSD\n');
+end
+
+% Numero de grados de libertad
+ng = length(gdl);
+
+% Se obtiene la ventana de tiempo
+c1 = 1;
+if r.tmin ~= 0
+    if r.tmin < 0
+        error('El tiempo inferior no puede ser cero');
+    end
+    c1 = fix(r.tmin*fs);
+end
+cend = false;
+if r.tmax ~= -1
+    if r.tmin >= r.tmax
+        error('El tiempo inferior tmin no puede ser mayor a tmax');
+    end
+    c2 = fix(r.tmax*fs);
+else
+    c2 = -1;
+    cend = true;
+end
+
+%% Calcula la FFT
+fft = cell(1, ng);
+psd = cell(1, ng);
+for k = 1:ng
+    
+    % Obtiene la aceleracion del grado de libertad analizado
+    acc = a(gdl(k), :);
+    
+    % Limita la ventana
+    if cend
+        c2 = length(acc);
+    end
+    if c1 > length(acc)
+        error('El tiempo inferior excede el largo del vector de aceleracion');
+    end
+    if c2 > length(acc)
+        error('El tiempo superior excede el largo del vector de aceleracion');
+    end
+    acc = acc(c1:c2);
+    
+    % Rellena con ceros
+    acc = [acc, zeros(1, floor(r.zerofill*length(acc)))]; %#ok<AGROW>
+    tuck = tukeywin(length(acc), r.tukeywinr)';
+    acctuck = acc .* tuck;
+    [f, fftt, ~] = DFT(fs, acctuck);
+    
+    % Solo conservo la mitad
+    tf = find(f == 0);
+    f = f(tf:end);
+    fftt = fftt(tf:end);
+    fftcomp{k} = fftt; %#ok<AGROW> % Guarda el registro complejo
+    fftt = abs(fftt); % O si no plot reclama
+    fft{k} = fftt; % Guarda el registro
+    
+    % Calcula el PSD
+    psd{k} = fftt.^2 / 2;
+    
+end % for k
+
+%% Calcula el promedio y la desviacion estandar de los fft
+fftmean = zeros(1, length(f));
+fftstd = zeros(1, length(f));
+fftdata = zeros(1, ng);
+fftmax = zeros(1, ng);
+for i = 1:length(f)
+    for j = 1:ng % Recorre cada grado de libertad
+        fftdata(j) = fft{j}(i);
+    end % for j
+    fftmean(i) = mean(fftdata);
+    fftstd(i) = std(fftdata);
+    fftmax(i) = max(fftdata);
+end % for i
+
+%% Calcula el promedio y la desviacion estandar de los psd
+psdmean = zeros(1, length(f));
+psdstd = zeros(1, length(f));
+psddata = zeros(1, ng);
+psdmax = zeros(1, ng);
+for i = 1:length(f)
+    for j = 1:ng % Recorre cada grado de libertad
+        psddata(j) = psd{j}(i);
+    end % for j
+    psdmean(i) = mean(psddata);
+    psdstd(i) = std(psddata);
+    psdmax(i) = max(psddata);
+end % for i
+
+%% Calcula los peaks
+locs = cell(1, ng);
+maxlocs = 0;
+for i = 1:ng
+    if r.peakFFT
+        [~, ploc] = findpeaks(fft{i}, f, ...
+            'MinPeakDistance', r.peakMinDistance);
+    else
+        [~, ploc] = findpeaks(psd{i}, f, ...
+            'MinPeakDistance', r.peakMinDistance);
+    end
+    % [maxtab, mintab] = peakdet(fft{i}, r.peakMinDistance, f);
+    locs{i} = ploc;
+    maxlocs = max(length(ploc), maxlocs);
+end % for i
+
+%% Calcula el promedio y la desviacion estandar de las frecuencias
+locMean = zeros(1, maxlocs);
+locStd = zeros(1, maxlocs);
+locFreq = zeros(1, maxlocs); % Frecuencias (posicion)
+
+% Calcula datos pero en periodos
+tlocMean = zeros(1, maxlocs);
+tlocStd = zeros(1, maxlocs);
+for i = 1:maxlocs
+    locData = []; % Datos para la posicion i
+    tlocData = [];
+    for k = 1:ng % Recorre cada nodo de analisis
+        if i <= length(locs{k})
+            locData = [locData, locs{k}(i)]; %#ok<AGROW>
+            tlocData = [tlocData, 1 / locs{k}(i)]; %#ok<AGROW>
+        end
+    end % for k
+    
+    locMean(i) = mean(locData);
+    locStd(i) = std(locData);
+    
+    % Estadistica para los periodos
+    tlocMean(i) = mean(tlocData);
+    tlocStd(i) = std(tlocData);
+end % for i
+
+%% Busca las posiciones de la frecuencia para locMean
+j = 1; % Indice a locMean
+for i = 1:length(f)
+    if f(i) >= locMean(j)
+        locFreq(j) = i;
+        j = j + 1; % Avanza
+        if j > maxlocs
+            break;
+        end
+    end
+end % for i
+
+% Peaks periodos
+if r.peakFFT
+    pks = fftmax(locFreq);
+else
+    pks = psdmax(locFreq);
+end
+
+%% Calcula los amortiguamientos por cada periodo de cada nodo registrado
+if r.betaFFT
+    pksBeta = fftmax(locFreq);
+else
+    pksBeta = psdmax(locFreq);
+end
+
+betaNodo = cell(1, ng);
+betaFreqNodo = cell(1, ng);
+
+% Recorre cada registro
+for k = 1:ng
+    
+    if ~r.betaFFTMax % Si se usan todos los registros
+        if r.betaFFT
+            ftNodo = fft{k};
+        else
+            ftNodo = psd{k};
+        end
+        pksNodo = ftNodo(locFreq);
+        pksObj = pksNodo ./ sqrt(2);
+    else % Si se usa solo el maximo
+        if r.betaFFT
+            ftNodo = fftmax;
+        else
+            ftNodo = psdmax;
+        end
+        pksObj = pksBeta ./ sqrt(2);
+    end
+    beta = zeros(1, maxlocs);
+    betaFreq = cell(1, maxlocs);
+    lastj = 1;
+    
+    % Recorre cada peak del nodo registrado
+    for i = 1:length(pks)
+        for j = lastj:length(f) - 1 % Al comenzar desde el punto anterior asegura que no se repitan frecuencias
+            if (ftNodo(j) - pksObj(i)) * (ftNodo(j+1) - pksObj(i)) < 0 % Cruzo el objetivo en i              
+                % Si el ultimo que cruzo fue superior a la frecuencia del peak
+                % objetivo entonces este corresponde a la frecuencia derecha, y
+                % el anterior a la izquierda
+                if j > locFreq(i)
+                    izq = f(lastj);
+                    der = f(j);
+                    lastj = j;
+                    if r.betaFFT
+                        beta(i) = (der - izq) / (der + izq);
+                    else
+                        beta(i) = (der^2 - izq^2) / (der^2 + izq^2);
+                    end
+                    betaFreq{i} = [izq, der, f(locFreq(i)), pksObj(i)];
+                    break;
+                end
+                lastj = j + 1; % Ultimo en atravesar
+            end
+        end % for j
+    end % for i
+    
+    % Guarda el resultado
+    betaNodo{k} = beta;
+    betaFreqNodo{k} = betaFreq;
+    
+    % Termina la ejecucion (k==1)
+    if r.betaFFTMax
+        betaNodo = betaNodo{1};
+    
+end % for k
+
+%% Calcula la envolvente de los peaks por cada una de las formas modales, usa FFT
+envFormaModal = cell(1, maxlocs);
+for k = 1:maxlocs
+    envModo = zeros(1, ng);
+    for i = 1:ng % Recorre cada nodo
+        % Obtiene la fft asociada al periodo k del registro i
+        envModo(i) = fft{i}(locFreq(k));
+    end % for i
+    envModo = envModo ./ max(envModo);
+    envFormaModal{k} = envModo;
+end % for k
+
+end % PSD function
+\end{sourcecode}
+
+\begin{sourcecode}{verilog}{Ejemplo en Verilog.}
+module Mixing {
+	///////// ADC /////////
+	inout              ADC_CS_N,
+	output             ADC_DIN,
+	input              ADC_DOUT,
+	output             ADC_SCLK,
+	
+	///////// ADC /////////
+	input              AUD_ADCDAT,
+	inout              AUD_ADCLRCK,
+	inout              AUD_BCLK,
+	output             AUD_DACDAT,
+	inout              AUD_DACLRCK,
+	output             AUD_XCK,
+	
+	///////// clocks /////////
+	input              clock2_50,
+	input              clock3_50,
+	input              clock4_50,
+	input              clock_50,
+	
+	///////// HEX /////////
+	output      [6:0]  HEX0,
+	output      [6:0]  HEX1,
+	output      [6:0]  HEX2,
+	output      [6:0]  HEX3,
+	output      [6:0]  HEX4,
+	output      [6:0]  HEX5,
+	
+	///////// FOO /////////
+	output      [2]    FOO,
+}
+\end{sourcecode}
+
+\begin{sourcecode}{vhdl}{Ejemplo en VHDL.}
+-- (this is a VHDL comment)
+
+-- import std_logic from the IEEE library
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+-- this is the entity
+entity ANDGATE is
+	port (
+		I1 : in std_logic;
+		I2 : in std_logic;
+		O  : out std_logic);
+end entity ANDGATE;
+
+-- this is the architecture
+architecture RTL of ANDGATE is
+begin
+	O <= I1 and I2;
+end architecture RTL;
+\end{sourcecode}
+
+\begin{sourcecode}{assemblerx64}{Assembler x64.}
+cdqe 1, r8
+push 1
+add rsp, 4
+push 1
+\end{sourcecode}
+
+\begin{sourcecode}{assemblerx86}{Assembler x86.}
+; ---------------------------------------------
+; Programa que imprime un string en la pantalla
+; ---------------------------------------------
+	.model small              ; modelo de memoria
+
+	.stack                    ; segmento del stack
+
+	.data                     ; segmento de datos
+	Cadena1 DB 'Hola Mundo.$' ; string a imprimir (finalizado en $)
+
+	.code                     ; segmento del código
+
+; ---------------------------------------------
+; Inicio del programa
+; ---------------------------------------------
+	programa:
+		; ------------------------------------
+		; inicia el segmento de datos
+		; ------------------------------------
+		MOV AX, @data          ; carga en AX la dirección del segmento de datos
+		MOV DS, AX             ; mueve la dirección al registro de segmento por medio de AX
+		
+		; ------------------------------------
+		; Imprime un string en pantalla
+		; ------------------------------------
+		MOV DX, offset Cadena1 ; mueve a DX la dirección del string a imprimir
+		MOV AH, 9              ; AH = código para indicar al MS DOS que imprima en la pantalla, el string en DS:DX
+		INT 21h                ; llamada al MS DOS para ejecutar la función (en este caso especificada en AH)
+		
+		; ------------------------------------
+		; Finaliza el programa
+		; ------------------------------------
+		INT 20h                ; llamada al MS DOS para finalizar el programa
+
+	end programa
+\end{sourcecode}
+
+\begin{sourcecode}{lua}{Ejemplo en Lua.}
+-- defines a factorial function
+function fact (n)
+	if n == 0 then
+		return 1
+	else
+		return n * fact(n-1)
+	end
+end
+
+print("enter a number:")
+a = io.read("*number")        -- read a number
+print(fact(a))
+\end{sourcecode}
+
+\begin{sourcecode}{ini}{Configuración de los anchors.}
+[anchor_parameters]
+# Sizes should correlate to how the network processes an image.
+sizes   = 32 64 128 256 512
+# Strides should correlate to how the network strides over an image.
+strides = 8 16 32 64 128
+# The different ratios to use per anchor location.
+ratios  = 0.5 1 2 3
+# The different scaling factors to use per anchor location.
+scales  = 1 1.2 1.6
+\end{sourcecode}
+
+\begin{sourcecode}{csv}{Archivo en csv.}
+orand-car-with-bbs/training/images/0001_5179655_46066.jpg,83,8,126,61,4
+orand-car-with-bbs/training/images/0001_5179655_46066.jpg,143,11,182,61,6
+orand-car-with-bbs/training/images/0001_5179655_46066.jpg,204,11,247,54,0
+orand-car-with-bbs/training/images/0001_5179655_46066.jpg,264,15,307,58,6
+orand-car-with-bbs/training/images/0001_5179655_46066.jpg,329,11,365,62,6
+orand-car-with-bbs/training/images/0002_5179657_53862.jpg,80,11,114,56,5
+orand-car-with-bbs/training/images/0002_5179657_53862.jpg,116,13,150,62,3
+orand-car-with-bbs/training/images/0002_5179657_53862.jpg,166,15,205,68,8
+\end{sourcecode}
+
+\begin{sourcecode}{make}{Ejemplo en make.}
+all: helloworld variables if_else while_for functions strings pointer reference complexv1 complexv1sep complexv2 complexv3 stack tests
+
+helloworld:
+g++ 01_helloworld.cpp -o 01_helloworld
+
+variables:
+g++ 02_variables.cpp -o 02_variables
+
+if_else:
+g++ 03_if_else.cpp -o 03_if_else
+
+while_for:
+g++ 04_while_for.cpp -o 04_while_for
+\end{sourcecode}
+
+\begin{sourcecode}{cmake}{Ejemplo en cmake.}
+# Propiedades del make
+cmake_minimum_required(VERSION 3.10)
+project(CC7515-AUX-1)
+set(CMAKE_CXX_STANDARD 11)
+
+# Crea un set, contiene varios archivos que permiten compilar al principal
+set(AUX1_EX10
+src/10_complex_v1_sep.cpp)
+
+set(AUX1_STACK
+src/13_stack.h
+src/12_complex_v3.cpp)
+
+# Define ejecutables
+add_executable(EX-1-HELLO-WORLD src/01_helloworld.cpp)
+add_executable(EX-2-VARIABLES src/02_variables.cpp)
+add_executable(EX-3-IF-ELSE src/03_if_else.cpp)
+add_executable(EX-4-WHILE-FOR src/04_while_for.cpp)
+...
+\end{sourcecode}
+
+\begin{sourcecode}{cmake}{Ejemplo en cmake.}
+# CMAKE project for openrct2
+cmake_minimum_required(VERSION 3.9)
+if (CMAKE_BINARY_DIR STREQUAL CMAKE_SOURCE_DIR)
+    message(FATAL_ERROR "Building in-source is not supported! Create a build dir and remove ${CMAKE_SOURCE_DIR}/CMakeCache.txt")
+endif()
+
+# Note: Searching for CCache must be before project() so project() can use CCache too
+# if it is available
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+
+find_package(CCache)
+
+if (CCache_FOUND)
+    option(OPENRCT2_USE_CCACHE "Use CCache to improve recompilation speed (optional)" ON)
+    if (OPENRCT2_USE_CCACHE)
+        # Use e.g. "ccache clang++" instead of "clang++"
+        set_property(GLOBAL PROPERTY RULE_LAUNCH_COMPILE "${CCache_EXECUTABLE}")
+        set_property(GLOBAL PROPERTY RULE_LAUNCH_LINK    "${CCache_EXECUTABLE}")
+    endif (OPENRCT2_USE_CCACHE)
+endif (CCache_FOUND)
+
+if (APPLE)
+    set(CMAKE_OSX_ARCHITECTURES "x86_64")
+    set(CMAKE_OSX_DEPLOYMENT_TARGET "10.14")
+endif ()
+
+project(openrct2 CXX)
+
+include(cmake/platform.cmake)
+include(CMakeDependentOption)
+
+# vcpkg includes its own copy of duktapeConfig.cmake; only include ours as needed.
+if (NOT MSVC)
+    include(FindPkgConfig)
+    set(CMAKE_PREFIX_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake;${CMAKE_MODULE_PATH}")
+endif ()
+include(CheckCXXCompilerFlag)
+include(GNUInstallDirs)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+set(ROOT_DIR "${CMAKE_CURRENT_LIST_DIR}")
+
+set(TITLE_SEQUENCE_VERSION "0.1.2c")
+set(TITLE_SEQUENCE_URL  "https://github.com/OpenRCT2/title-sequences/releases/download/v${TITLE_SEQUENCE_VERSION}/title-sequences.zip")
+set(TITLE_SEQUENCE_SHA1 "304d13a126c15bf2c86ff13b81a2f2cc1856ac8d")
+
+set(OBJECTS_VERSION "1.0.21")
+set(OBJECTS_URL  "https://github.com/OpenRCT2/objects/releases/download/v${OBJECTS_VERSION}/objects.zip")
+set(OBJECTS_SHA1 "c38af45d51a6e440386180feacf76c64720b6ac5")
+
+set(REPLAYS_VERSION "0.0.50")
+set(REPLAYS_URL  "https://github.com/OpenRCT2/replays/releases/download/v${REPLAYS_VERSION}/replays.zip")
+set(REPLAYS_SHA1 "C569C73147F1C1554807B6FBE74C39A4F0E20EAF")
+
+option(FORCE32 "Force 32-bit build. It will add `-m32` to compiler flags.")
+option(WITH_TESTS "Build tests")
+option(PORTABLE "Create a portable build (-rpath=$ORIGIN)" OFF)
+option(APPIMAGE "Create an appimage build (-rpath=$ORIGIN/../lib)" OFF)
+option(DOWNLOAD_TITLE_SEQUENCES "Download title sequences during installation." ON)
+option(DOWNLOAD_OBJECTS "Download objects during installation." ON)
+CMAKE_DEPENDENT_OPTION(DOWNLOAD_REPLAYS "Download replays during installation." ON
+    "WITH_TESTS" OFF)
+CMAKE_DEPENDENT_OPTION(MACOS_USE_DEPENDENCIES "Use OpenRCT2 dependencies instead of system libraries" ON
+    "APPLE" OFF)
+CMAKE_DEPENDENT_OPTION(MACOS_BUNDLE "Build macOS application bundle (OpenRCT2.app)" ON
+     "MACOS_USE_DEPENDENCIES; NOT DISABLE_GUI" OFF)
+
+# Options
+option(STATIC "Create a static build.")
+option(USE_MMAP "Use mmap to try loading rct2's data segment into memory.")
+
+option(DISABLE_DISCORD_RPC "Disable Discord-RPC support." OFF)
+option(DISABLE_GOOGLE_BENCHMARK "Disable Google Benchmarks support." OFF)
+option(DISABLE_HTTP "Disable HTTP support.")
+option(DISABLE_NETWORK "Disable multiplayer functionality. Mainly for testing.")
+option(DISABLE_TTF "Disable support for TTF provided by freetype2.")
+option(ENABLE_LIGHTFX "Enable lighting effects." ON)
+option(ENABLE_SCRIPTING "Enable script / plugin support." ON)
+if (MINGW)
+    option(MINGW_TARGET_NT5_1 "Use only NT5.1 APIs and libraries." OFF)
+endif ()
+
+option(DISABLE_GUI "Don't build GUI. (Headless only.)")
+
+if (FORCE32)
+    set(TARGET_M "-m32")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TARGET_M}")
+    set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} ${TARGET_M}")
+endif ()
+
+if (MINGW_TARGET_NT5_1)
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D_WIN32_WINNT=0x501")
+	if (STATIC)
+		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DCURL_STATICLIB=1 -DZIP_STATIC=1 -static")
+	endif ()
+endif ()
+
+if (PORTABLE OR WIN32)
+    set(CMAKE_INSTALL_LIBDIR "${CMAKE_INSTALL_BINDIR}")
+    set(CMAKE_INSTALL_RPATH "$ORIGIN")
+endif ()
+
+if (APPIMAGE)
+    set(CMAKE_INSTALL_RPATH "$ORIGIN/../lib")
+endif ()
+
+if (MACOS_USE_DEPENDENCIES)
+    # if we're building on macOS, then we need the dependencies
+    include(cmake/download.cmake)
+    
+    set(MACOS_DYLIBS_VERSION "28")
+    set(MACOS_DYLIBS_ZIPFILE "openrct2-libs-v${MACOS_DYLIBS_VERSION}-x64-macos-dylibs.zip")
+    set(MACOS_DYLIBS_SHA1 "29e5480376cf4ac5943f114387e32685204c8b78")
+    set(MACOS_DYLIBS_DIR "${ROOT_DIR}/lib/macos")
+    set(MACOS_DYLIBS_URL "https://github.com/OpenRCT2/Dependencies/releases/download/v${MACOS_DYLIBS_VERSION}/${MACOS_DYLIBS_ZIPFILE}")
+
+    download_openrct2_zip(
+        ZIP_VERSION ${MACOS_DYLIBS_VERSION}
+        DOWNLOAD_DIR ${MACOS_DYLIBS_DIR}
+        ZIP_URL ${MACOS_DYLIBS_URL}
+        SHA1 ${MACOS_DYLIBS_SHA1}
+    )
+
+    set(CMAKE_MACOSX_RPATH 1)
+    list(APPEND CMAKE_PREFIX_PATH "${MACOS_DYLIBS_DIR}")
+
+    # if we're making the OpenRCT2.app bundle, rpath will be handled by fixup_bundle
+    # if we're building the CLI executable, we need to do it ourselves
+    if (NOT MACOS_BUNDLE)
+        # the RPATH to be used when installing, but only if it's not a system directory
+        list(FIND CMAKE_PLATFORM_IMPLICIT_LINK_DIRECTORIES "${CMAKE_INSTALL_PREFIX}/lib" isSystemDir)
+        if("${isSystemDir}" STREQUAL "-1")
+            set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
+        endif("${isSystemDir}" STREQUAL "-1")
+
+        # if the DESTDIR env var is defined, use it in the install RPATH
+        if(DEFINED ENV{DESTDIR})
+            get_filename_component(destdirRealPath "$ENV{DESTDIR}" REALPATH BASE_DIR "${CMAKE_BINARY_DIR}")
+            set(CMAKE_INSTALL_RPATH "${destdirRealPath}${CMAKE_INSTALL_PREFIX}/lib")
+        endif()
+    endif ()
+endif ()
+
+# LIST of supported flags, use SET_CHECK_CXX_FLAGS() to apply to target.
+# Use ADD_CHECK_CXX_COMPILER_FLAG() to add to list.
+set(SUPPORTED_CHECK_CXX_COMPILER_FLAGS "")
+
+include(cmake/ipo.cmake)
+list(APPEND IPO_ENABLED_BUILDS RELEASE RELWITHDEBINFO MINSIZEREL)
+ipo_enable("${IPO_ENABLED_BUILDS}")
+
+# Describe current version in terms of closest tag
+execute_process(
+    COMMAND git describe HEAD
+    COMMAND sed -E "s/-g.+$//"
+    WORKING_DIRECTORY ${ROOT_DIR}
+    OUTPUT_VARIABLE OPENRCT2_VERSION_TAG
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+    ERROR_QUIET
+)
+
+# Define current git branch
+execute_process(
+    COMMAND git rev-parse --abbrev-ref HEAD
+    WORKING_DIRECTORY ${ROOT_DIR}
+    OUTPUT_VARIABLE OPENRCT2_BRANCH
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+    ERROR_QUIET
+)
+
+# Define short commit hash
+execute_process(
+    COMMAND git rev-parse --short HEAD
+    WORKING_DIRECTORY ${ROOT_DIR}
+    OUTPUT_VARIABLE OPENRCT2_COMMIT_SHA1_SHORT
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+    ERROR_QUIET
+)
+
+
+if (NOT DISABLE_DISCORD_RPC)
+    if (UNIX AND NOT APPLE)
+        find_package(DiscordRPC)
+        if(${DISCORDRPC_FOUND})
+            set(HAVE_DISCORD_RPC TRUE)
+            add_definitions(-D__ENABLE_DISCORD__)
+            include_directories(DISCORDRPC_PROCESS_INCLUDES)
+        endif()
+    elseif (MACOS_USE_DEPENDENCIES)
+        find_package(discordrpc CONFIG REQUIRED)
+        if(${DISCORDRPC_FOUND})
+            add_definitions(-D__ENABLE_DISCORD__)
+            set(HAVE_DISCORD_RPC TRUE)
+            message("Building with libdiscord-rpc.dylib")
+        endif()
+    elseif(NOT HAVE_DISCORD_RPC AND EXISTS "${ROOT_DIR}/discord-rpc")
+        # Don't build discord's examples, some of which are in C and do not honour
+        # the flags we set for C++. Also we don't use the provided examples.
+        set(BUILD_EXAMPLES OFF CACHE BOOL "Build example apps")
+        add_subdirectory("${ROOT_DIR}/discord-rpc")
+        add_definitions(-D__ENABLE_DISCORD__)
+        include_directories("${ROOT_DIR}/discord-rpc/include")
+        set(HAVE_DISCORD_RPC TRUE)
+        message("Building with discord-rpc support")
+    else()
+        message("No discord-rpc detected, to enable clone discord-rpc to root directory: ${ROOT_DIR}")
+    endif()
+endif()
+
+# Copied from https://github.com/opencv/opencv/blob/dcdd6af5a856826fe62c95322145731e702e54c5/cmake/OpenCVDetectCXXCompiler.cmake#L63-L70
+if(MSVC64 OR MINGW64)
+    set(X86_64 1)
+elseif(MINGW OR (MSVC AND NOT CMAKE_CROSSCOMPILING))
+    set(X86 1)
+elseif(CMAKE_SYSTEM_PROCESSOR MATCHES "amd64.*|x86_64.*|AMD64.*")
+    set(X86_64 1)
+elseif(CMAKE_SYSTEM_PROCESSOR MATCHES "i686.*|i386.*|x86.*|amd64.*|AMD64.*")
+    set(X86 1)
+endif()
+
+# Check if a flag exists and add it to the list of compiler (so, not linker) options
+function (ADD_CHECK_CXX_COMPILER_FLAG _CXXFLAGS _CACHE_VAR _FLAG)
+    CHECK_CXX_COMPILER_FLAG("${_FLAG}" "${_CACHE_VAR}")
+    if (${_CACHE_VAR})
+        set(SUPPORTED_CHECK_CXX_COMPILER_FLAGS ${SUPPORTED_CHECK_CXX_COMPILER_FLAGS} ${_FLAG} PARENT_SCOPE)
+    else ()
+        message(STATUS "Unsupported CXXFLAG: ${_FLAG}")
+    endif ()
+endfunction ()
+
+# Add check flags to a compile TARGET
+function (SET_CHECK_CXX_FLAGS _TARGET)
+    target_compile_options("${_TARGET}" PRIVATE "${SUPPORTED_CHECK_CXX_COMPILER_FLAGS}")
+endfunction()
+
+# Check if a flag exists and add it to the compiler and the linker options
+function (ADD_CHECK_CXX_FLAG _CXXFLAGS _CACHE_VAR _FLAG)
+    CHECK_CXX_COMPILER_FLAG("${_FLAG}" "${_CACHE_VAR}")
+    if (${_CACHE_VAR})
+        set(${_CXXFLAGS} "${${_CXXFLAGS}} ${_FLAG}" PARENT_SCOPE)
+    else ()
+        message(STATUS "Unsupported CXXFLAG: ${_FLAG}")
+    endif ()
+endfunction ()
+
+if (MSVC)
+    # CMAKE does not have a built-in option for setting the CRT, so override the default flags.
+    # NOTE: doing it this way avoids a linker warning about one directive overriding another
+    set(CMAKE_CXX_FLAGS_DEBUG "/MTd /Zi /Ob0 /Od /RTC1")
+    set(CMAKE_CXX_FLAGS_RELEASE "/MT /O2 /Ob2 /DNDEBUG")
+
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /utf-8 /permissive- /Zc:externConstexpr /EHsc /WX")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /wd4244") # C4244: 'conversion_type': conversion from 'type1' to 'type2', possible loss of data
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /wd4068") # C4068: unknown pragma
+
+    add_definitions(-D_CRT_SECURE_NO_WARNINGS)
+    add_definitions(-D_SCL_SECURE_NO_WARNINGS)
+    if (CMAKE_SIZEOF_VOID_P EQUAL 8 AND CMAKE_SYSTEM_PROCESSOR STREQUAL "AMD64")
+        add_definitions(-D__SSE4_1__)
+        add_definitions(-D__AVX2__)
+    endif ()
+    add_definitions(-DNOMINMAX)
+else ()
+    ADD_CHECK_CXX_COMPILER_FLAG(CMAKE_CXX_FLAGS CXX_WARN_SUGGEST_OVERRIDE -Wsuggest-override)
+    ADD_CHECK_CXX_COMPILER_FLAG(CMAKE_CXX_FLAGS CXX_WARN_DUPLICATED_COND -Wduplicated-cond)
+    ADD_CHECK_CXX_COMPILER_FLAG(CMAKE_CXX_FLAGS CXX_WARN_NON_VIRTUAL_DTOR -Wnon-virtual-dtor)
+    ADD_CHECK_CXX_COMPILER_FLAG(CMAKE_CXX_FLAGS CXX_WARN_MISSING_VARIABLE_DECLARATIONS -Wmissing-variable-declarations)
+    ADD_CHECK_CXX_COMPILER_FLAG(CMAKE_CXX_FLAGS CXX_WARN_DUPLICATED_BRANCHES -Wduplicated-branches)
+    ADD_CHECK_CXX_COMPILER_FLAG(CMAKE_CXX_FLAGS CXX_WARN_RESTRICT -Wrestrict)
+    ADD_CHECK_CXX_COMPILER_FLAG(CMAKE_CXX_FLAGS CXX_WARN_MISSING_FIELD_INITIALIZERS -Wmissing-field-initializers)
+    ADD_CHECK_CXX_COMPILER_FLAG(CMAKE_CXX_FLAGS CXX_WARN_UNREACHABLE_CODE_BREAK -Wunreachable-code-break)
+    ADD_CHECK_CXX_COMPILER_FLAG(CMAKE_CXX_FLAGS CXX_WARN_LOGICAL_OP -Wlogical-op)
+    ADD_CHECK_CXX_COMPILER_FLAG(CMAKE_CXX_FLAGS CXX_WARN_RANGE_LOOP_ANALYSIS -Wrange-loop-analysis)
+    ADD_CHECK_CXX_COMPILER_FLAG(CMAKE_CXX_FLAGS CXX_WARN_TAUTOLOGICAL_ZERO_COMPARE -Wtautological-unsigned-zero-compare)
+    ADD_CHECK_CXX_COMPILER_FLAG(CMAKE_CXX_FLAGS CXX_WARN_OLD_STYLE_CAST -Wold-style-cast)
+    # unused-const-variable=1 only checks main compilation unit
+    # unused-const-variable[=2] would check for unused values from headers as well
+    ADD_CHECK_CXX_COMPILER_FLAG(CMAKE_CXX_FLAGS CXX_WARN_UNUSED_CONST_VARIABLE -Wunused-const-variable=1)
+    ADD_CHECK_CXX_COMPILER_FLAG(CMAKE_CXX_FLAGS CXX_WNO_CLOBBERED -Wno-clobbered)
+    # Disabled due to problems compiling OpenSSL on macOS.
+    # ADD_CHECK_CXX_COMPILER_FLAG(CMAKE_CXX_FLAGS CXX_WARN_DOCUMENTATION -Wdocumentation)
+
+    # Items below are not supported by ICC
+    if (NOT MINGW)
+        # Do not enable for MinGW, as its headers contain redundant declarations of builtin functions
+        ADD_CHECK_CXX_COMPILER_FLAG(CMAKE_CXX_FLAGS CXX_WARN_REDUNDANT_DECLS -Wredundant-decls)
+
+        # Currently used MinGW w/GCC 7.2 doesn't provide sane error messages for this
+        ADD_CHECK_CXX_COMPILER_FLAG(CMAKE_CXX_FLAGS CXX_WARN_NULL_DEREFERENCE -Wnull-dereference)
+    endif ()
+    # These have no workarounds available when building with LTO
+    if (NOT IPO_BUILD_ENABLED)
+        ADD_CHECK_CXX_COMPILER_FLAG(CMAKE_CXX_FLAGS CXX_WARN_SUGGEST_FINAL_TYPES -Wsuggest-final-types)
+        ADD_CHECK_CXX_COMPILER_FLAG(CMAKE_CXX_FLAGS CXX_WARN_SUGGEST_FINAL_METHODS -Wsuggest-final-methods)
+    endif ()
+    ADD_CHECK_CXX_COMPILER_FLAG(CMAKE_CXX_FLAGS CXX_WARN_IGNORED_QUALIFIERS -Wignored-qualifiers)
+
+    # -Wstrict-overflow is only active when -fstrict-overflow is enabled, but -fstrict-overflow
+    # is enabled on -O2, -O3, -Os. This should help catch bugs locally before they reach Travis
+    # As of 2a435bf -Wstrict-overflow=1 passes, but higher values do not.
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fstrict-overflow")
+    ADD_CHECK_CXX_COMPILER_FLAG(CMAKE_CXX_FLAGS CXX_WARN_STRICT_OVERFLOW -Wstrict-overflow=1)
+
+    # Compiler flags
+    set(DEBUG_LEVEL 0 CACHE STRING "Select debug level for compilation. Use value in range 0–3.")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fstrict-aliasing -Werror -Wundef -Wmissing-declarations -Winit-self -Wall -Wextra -Wshadow")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-unknown-pragmas -Wno-missing-braces -Wno-comment -Wnonnull -Wno-unused-parameter")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DDEBUG=${DEBUG_LEVEL}")
+
+    if(APPLE)
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-error=objc-method-access")
+    endif()
+
+    # On mingw all code is already PIC, this will avoid compiler error on redefining this option
+    if (NOT MINGW)
+        set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+    endif ()
+
+    if (APPLE AND NOT USE_MMAP)
+        set(CMAKE_POSITION_INDEPENDENT_CODE OFF)
+    else ()
+        set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+    endif ()
+endif ()
+
+if (CXX_WARN_SUGGEST_FINAL_TYPES)
+    # Disable -Wsuggest-final-types via pragmas where due.
+   add_definitions(-D__WARN_SUGGEST_FINAL_TYPES__)
+endif ()
+
+if (CXX_WARN_SUGGEST_FINAL_METHODS)
+    # Disable -Wsuggest-final-methods via pragmas where due.
+   add_definitions(-D__WARN_SUGGEST_FINAL_METHODS__)
+endif ()
+
+if (MINGW)
+   add_definitions(-fstack-protector-strong)
+endif ()
+
+# Include sub-projects
+include("${ROOT_DIR}/src/openrct2/CMakeLists.txt" NO_POLICY_SCOPE)
+include("${ROOT_DIR}/src/openrct2-cli/CMakeLists.txt" NO_POLICY_SCOPE)
+if(NOT DISABLE_GUI)
+    include("${ROOT_DIR}/src/openrct2-ui/CMakeLists.txt" NO_POLICY_SCOPE)
+endif()
+
+# Defines
+if (USE_MMAP)
+    target_compile_options(libopenrct2 PUBLIC -DUSE_MMAP)
+endif ()
+if (DISABLE_NETWORK)
+    target_compile_options(libopenrct2 PUBLIC -DDISABLE_NETWORK)
+endif ()
+if (DISABLE_HTTP)
+    target_compile_options(libopenrct2 PUBLIC -DDISABLE_HTTP)
+endif ()
+if (DISABLE_TTF)
+    target_compile_options(libopenrct2 PUBLIC -DNO_TTF)
+endif ()
+if (ENABLE_LIGHTFX)
+    target_compile_options(libopenrct2 PUBLIC -D__ENABLE_LIGHTFX__)
+endif ()
+if (ENABLE_SCRIPTING)
+    target_compile_options(libopenrct2 PUBLIC -DENABLE_SCRIPTING)
+endif ()
+
+
+# g2
+add_custom_command(
+    OUTPUT g2.dat
+    COMMAND ./openrct2-cli sprite build \"${CMAKE_BINARY_DIR}/g2.dat\" \"${ROOT_DIR}/resources/g2/sprites.json\"
+    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+)
+add_custom_target(g2 DEPENDS ${PROJECT_NAME} g2.dat)
+
+project(openrct2 CXX)
+
+# Include tests
+if (WITH_TESTS)
+    enable_testing()
+    if (UNIX AND (NOT USE_MMAP))
+        include("${ROOT_DIR}/test/testpaint/CMakeLists.txt" NO_POLICY_SCOPE)
+    endif ()
+    include("${ROOT_DIR}/test/tests/CMakeLists.txt" NO_POLICY_SCOPE)
+endif ()
+
+# macOS bundle "install" is handled in src/openrct2-ui/CMakeLists.txt
+# This is because the openrct2 target is modified (and that is where that target is defined)
+if (NOT MACOS_BUNDLE OR (MACOS_BUNDLE AND WITH_TESTS))
+    # Install
+    # Don't recurse, grab all *.txt and *.md files
+    file(GLOB DOC_FILES "${ROOT_DIR}/distribution/*.txt")
+    list(APPEND DOC_FILES "${ROOT_DIR}/contributors.md"
+                        "${ROOT_DIR}/licence.txt"
+                        "${ROOT_DIR}/distribution/scripting.md"
+                        "${ROOT_DIR}/distribution/openrct2.d.ts")
+
+    # CMake does not allow specifying a dependency chain which includes built-in
+    # targets, like `install`, so we have to trick it and execute dependency ourselves.
+    install(CODE "execute_process(COMMAND \"${CMAKE_COMMAND}\" --build \"${CMAKE_CURRENT_BINARY_DIR}\" --target g2)")
+    if (DOWNLOAD_TITLE_SEQUENCES)
+        # Checks if this version of the title sequences are already installed, updates if necessary
+        # if /data/sequence exists, it will overwrite this anyways (see `install(DIRECTORY "data/" ...)` below)
+        # therefore, the existence of that directory will skip this download
+        install(CODE "
+            include(${ROOT_DIR}/cmake/download.cmake)
+            download_openrct2_zip(
+                ZIP_VERSION ${TITLE_SEQUENCE_VERSION}
+                DOWNLOAD_DIR \$ENV{DESTDIR}${CMAKE_INSTALL_FULL_DATADIR}/${PROJECT_NAME}/sequence/
+                SKIP_IF_EXISTS ${CMAKE_SOURCE_DIR}/data/sequence/
+                ZIP_URL ${TITLE_SEQUENCE_URL}
+                SHA1 ${TITLE_SEQUENCE_SHA1}
+            )")
+    endif ()
+    if (DOWNLOAD_OBJECTS)
+        # Checks if this version of the objects are already installed, updates if necessary
+        # if /data/object exists, it will overwrite this anyways (see `install(DIRECTORY "data/" ...)` below)
+        # therefore, the existence of that directory will skip this download
+        install(CODE "
+            include(${ROOT_DIR}/cmake/download.cmake)
+            download_openrct2_zip(
+                ZIP_VERSION ${OBJECTS_VERSION}
+                DOWNLOAD_DIR \$ENV{DESTDIR}${CMAKE_INSTALL_FULL_DATADIR}/${PROJECT_NAME}/object/
+                SKIP_IF_EXISTS ${CMAKE_SOURCE_DIR}/data/object/
+                ZIP_URL ${OBJECTS_URL}
+                SHA1 ${OBJECTS_SHA1}
+            )")
+    endif ()
+    if (DOWNLOAD_REPLAYS)
+        # Checks if this version of the replays are already installed, updates if necessary
+        install(CODE "
+            include(${ROOT_DIR}/cmake/download.cmake)
+            download_openrct2_zip(
+                ZIP_VERSION ${REPLAYS_VERSION}
+                DOWNLOAD_DIR \${CMAKE_CURRENT_BINARY_DIR}/testdata/replays/
+                ZIP_URL ${REPLAYS_URL}
+                SHA1 ${REPLAYS_SHA1}
+            )")
+    endif ()
+    install(FILES "${CMAKE_CURRENT_BINARY_DIR}/g2.dat" DESTINATION "${CMAKE_INSTALL_DATADIR}/openrct2")
+    install(DIRECTORY "data/" DESTINATION "${CMAKE_INSTALL_DATADIR}/openrct2")
+
+    # even when building WITH_TESTS, none of the below install steps are required for OpenRCT2.app
+    if (NOT MACOS_BUNDLE)
+        install(TARGETS "libopenrct2" LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}"
+                                    ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}")
+        if(NOT DISABLE_GUI)
+            install(TARGETS "openrct2" RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}")
+        endif()
+        install(TARGETS "openrct2-cli" OPTIONAL RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}")
+        install(FILES ${DOC_FILES} DESTINATION "${CMAKE_INSTALL_DOCDIR}")
+        install(FILES "distribution/linux/openrct2.appdata.xml" DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/metainfo")
+        if (NOT DISABLE_GUI)
+            install(FILES "resources/logo/icon_x16.png" DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/16x16/apps" RENAME "openrct2.png")
+            install(FILES "resources/logo/icon_x24.png" DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/24x24/apps" RENAME "openrct2.png")
+            install(FILES "resources/logo/icon_x32.png" DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/32x32/apps" RENAME "openrct2.png")
+            install(FILES "resources/logo/icon_x48.png" DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/48x48/apps" RENAME "openrct2.png")
+            install(FILES "resources/logo/icon_x64.png" DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/64x64/apps" RENAME "openrct2.png")
+            install(FILES "resources/logo/icon_x96.png" DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/96x96/apps" RENAME "openrct2.png")
+            install(FILES "resources/logo/icon_x128.png" DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/128x128/apps" RENAME "openrct2.png")
+            install(FILES "resources/logo/icon_x256.png" DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/256x256/apps" RENAME "openrct2.png")
+            install(FILES "resources/logo/icon_flag.svg" DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/scalable/apps" RENAME "openrct2.svg")
+            install(FILES "distribution/linux/openrct2.desktop" DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications")
+            install(FILES "distribution/linux/openrct2-savegame.desktop" DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications")
+            install(FILES "distribution/linux/openrct2-scenario.desktop" DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications")
+            install(FILES "distribution/linux/openrct2-uri.desktop" DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications")
+        endif()
+        install(FILES "distribution/linux/openrct2-mimeinfo.xml" DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/mime/packages/" RENAME "openrct2.xml")
+        install(DIRECTORY "distribution/man/" DESTINATION "${CMAKE_INSTALL_MANDIR}/man6" FILES_MATCHING PATTERN "*.6")
+
+        if (MACOS_USE_DEPENDENCIES)
+            # Note: dependencies may have the same names as system installed libraries
+            # (via homebrew). A local CMAKE_INSTALL_PREFIX is recommended to avoid issues
+            file(GLOB DYLIB_FILES "${MACOS_DYLIBS_DIR}/lib/*.dylib")
+            install(FILES ${DYLIB_FILES} DESTINATION "${CMAKE_INSTALL_LIBDIR}")
+        endif()
+    endif()
+endif()
+\end{sourcecode}
+
+\begin{sourcecode}{cmake}{Ejemplo en cmake 2.}
+cmake_minimum_required (VERSION 2.8)
+cmake_policy(VERSION 2.8)
+
+project (LearnOpenGL)
+
+IF(NOT CMAKE_BUILD_TYPE)
+  SET(CMAKE_BUILD_TYPE Debug CACHE STRING "Choose the type of build (Debug or Release)" FORCE)
+ENDIF(NOT CMAKE_BUILD_TYPE)
+
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/modules/")
+
+if(WIN32)
+	set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
+endif(WIN32)
+
+link_directories(${CMAKE_SOURCE_DIR}/lib)
+
+list(APPEND CMAKE_CXX_FLAGS "-std=c++11")
+
+# find the required packages
+find_package(GLM REQUIRED)
+message(STATUS "GLM included at ${GLM_INCLUDE_DIR}")
+find_package(GLFW3 REQUIRED)
+message(STATUS "Found GLFW3 in ${GLFW3_INCLUDE_DIR}")
+find_package(ASSIMP REQUIRED)
+message(STATUS "Found ASSIMP in ${ASSIMP_INCLUDE_DIR}")
+# find_package(SOIL REQUIRED)
+# message(STATUS "Found SOIL in ${SOIL_INCLUDE_DIR}")
+# find_package(GLEW REQUIRED)
+# message(STATUS "Found GLEW in ${GLEW_INCLUDE_DIR}")
+
+if(WIN32)
+  set(LIBS glfw3 opengl32 assimp freetype irrKlang)
+elseif(UNIX AND NOT APPLE)
+  set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall")
+  find_package(OpenGL REQUIRED)
+  add_definitions(${OPENGL_DEFINITIONS})
+  find_package(X11 REQUIRED)
+  # note that the order is important for setting the libs
+  # use pkg-config --libs $(pkg-config --print-requires --print-requires-private glfw3) in a terminal to confirm
+  set(LIBS ${GLFW3_LIBRARY} X11 Xrandr Xinerama Xi Xxf86vm Xcursor GL dl pthread freetype ${ASSIMP_LIBRARY})
+  set (CMAKE_CXX_LINK_EXECUTABLE "${CMAKE_CXX_LINK_EXECUTABLE} -ldl")
+elseif(APPLE)
+  INCLUDE_DIRECTORIES(/System/Library/Frameworks)
+  FIND_LIBRARY(COCOA_LIBRARY Cocoa)
+  FIND_LIBRARY(OpenGL_LIBRARY OpenGL)
+  FIND_LIBRARY(IOKit_LIBRARY IOKit)
+  FIND_LIBRARY(CoreVideo_LIBRARY CoreVideo)
+  MARK_AS_ADVANCED(COCOA_LIBRARY OpenGL_LIBRARY)
+  SET(APPLE_LIBS ${COCOA_LIBRARY} ${IOKit_LIBRARY} ${OpenGL_LIBRARY} ${CoreVideo_LIBRARY})
+  SET(APPLE_LIBS ${APPLE_LIBS} ${GLFW3_LIBRARY} ${ASSIMP_LIBRARY})
+  set(LIBS ${LIBS} ${APPLE_LIBS})
+else()
+  set(LIBS )
+endif(WIN32)
+
+set(CHAPTERS
+    1.getting_started
+    2.lighting
+    3.model_loading
+    4.advanced_opengl
+    5.advanced_lighting
+    6.pbr
+    7.in_practice
+)
+
+set(1.getting_started
+    1.1.hello_window
+    1.2.hello_window_clear
+    2.1.hello_triangle
+    2.2.hello_triangle_indexed
+    2.3.hello_triangle_exercise1
+    2.4.hello_triangle_exercise2
+    2.5.hello_triangle_exercise3
+    3.1.shaders_uniform
+    3.2.shaders_interpolation
+    3.3.shaders_class
+    4.1.textures
+    4.2.textures_combined
+    4.4.textures_exercise2
+    4.5.textures_exercise3
+    4.6.textures_exercise4
+    5.1.transformations
+    5.2.transformations_exercise2
+    6.1.coordinate_systems
+    6.2.coordinate_systems_depth
+    6.3.coordinate_systems_multiple
+    7.1.camera_circle
+    7.2.camera_keyboard_dt
+    7.3.camera_mouse_zoom
+    7.4.camera_class
+)
+
+set(2.lighting
+    1.colors
+    2.1.basic_lighting_diffuse
+    2.2.basic_lighting_specular
+    3.1.materials
+    3.2.materials_exercise1
+    4.1.lighting_maps_diffuse_map
+    4.2.lighting_maps_specular_map
+    4.4.lighting_maps_exercise4
+    5.1.light_casters_directional
+    5.2.light_casters_point
+    5.3.light_casters_spot
+    5.4.light_casters_spot_soft
+    6.multiple_lights
+)
+
+set(3.model_loading
+    1.model_loading
+)
+
+set(4.advanced_opengl
+    1.1.depth_testing
+    1.2.depth_testing_view
+    2.stencil_testing
+    3.1.blending_discard
+    3.2.blending_sort
+    5.1.framebuffers
+    5.2.framebuffers_exercise1
+    6.1.cubemaps_skybox
+    6.2.cubemaps_environment_mapping
+    8.advanced_glsl_ubo
+    9.1.geometry_shader_houses
+    9.2.geometry_shader_exploding
+    9.3.geometry_shader_normals
+    10.1.instancing_quads
+    10.2.asteroids
+    10.3.asteroids_instanced
+    11.1.anti_aliasing_msaa
+    11.2.anti_aliasing_offscreen
+)
+
+set(5.advanced_lighting
+    1.advanced_lighting
+    2.gamma_correction
+    3.1.1.shadow_mapping_depth
+    3.1.2.shadow_mapping_base
+    3.1.3.shadow_mapping
+    3.2.1.point_shadows
+    3.2.2.point_shadows_soft
+    4.normal_mapping
+    5.1.parallax_mapping
+    5.2.steep_parallax_mapping
+    5.3.parallax_occlusion_mapping
+    6.hdr
+    7.bloom
+    8.1.deferred_shading
+    8.2.deferred_shading_volumes
+    9.ssao
+)
+
+set(6.pbr
+    1.1.lighting
+    1.2.lighting_textured
+    2.1.1.ibl_irradiance_conversion
+    2.1.2.ibl_irradiance
+    2.2.1.ibl_specular
+    2.2.2.ibl_specular_textured
+)
+
+set(7.in_practice
+    1.debugging
+    2.text_rendering
+    #3.2d_game
+)
+
+
+
+configure_file(configuration/root_directory.h.in configuration/root_directory.h)
+include_directories(${CMAKE_BINARY_DIR}/configuration)
+
+# first create relevant static libraries requried for other projects
+add_library(STB_IMAGE "src/stb_image.cpp")
+set(LIBS ${LIBS} STB_IMAGE)
+
+add_library(GLAD "src/glad.c")
+set(LIBS ${LIBS} GLAD)
+
+macro(makeLink src dest target)
+  add_custom_command(TARGET ${target} POST_BUILD COMMAND ${CMAKE_COMMAND} -E create_symlink ${src} ${dest}  DEPENDS  ${dest} COMMENT "mklink ${src} -> ${dest}")
+endmacro()
+
+# then create a project file per tutorial
+foreach(CHAPTER ${CHAPTERS})
+    foreach(DEMO ${${CHAPTER}})
+        file(GLOB SOURCE
+            "src/${CHAPTER}/${DEMO}/*.h"
+            "src/${CHAPTER}/${DEMO}/*.cpp"
+            "src/${CHAPTER}/${DEMO}/*.vs"
+            "src/${CHAPTER}/${DEMO}/*.fs"
+            "src/${CHAPTER}/${DEMO}/*.gs"
+        )
+        set(NAME "${CHAPTER}__${DEMO}")
+        add_executable(${NAME} ${SOURCE})
+        target_link_libraries(${NAME} ${LIBS})
+        if(WIN32)
+            set_target_properties(${NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin/${CHAPTER}")
+            set_target_properties(${NAME} PROPERTIES VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}/bin/${CHAPTER}/Debug")
+        elseif(UNIX AND NOT APPLE)
+            set_target_properties(${NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin/${CHAPTER}")
+        elseif(APPLE)
+            set_target_properties(${NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin/${CHAPTER}")
+            set_target_properties(${NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY_DEBUG "${CMAKE_SOURCE_DIR}/bin/${CHAPTER}")
+            set_target_properties(${NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_SOURCE_DIR}/bin/${CHAPTER}")
+        endif(WIN32)
+        # copy shader files to build directory
+        file(GLOB SHADERS
+                 "src/${CHAPTER}/${DEMO}/*.vs"
+                 # "src/${CHAPTER}/${DEMO}/*.frag"
+                 "src/${CHAPTER}/${DEMO}/*.fs"
+                 "src/${CHAPTER}/${DEMO}/*.gs"
+        )
+        foreach(SHADER ${SHADERS})
+            if(WIN32)
+                # configure_file(${SHADER} "test")
+                add_custom_command(TARGET ${NAME} PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${SHADER} $<TARGET_FILE_DIR:${NAME}>)
+            elseif(UNIX AND NOT APPLE)
+                file(COPY ${SHADER} DESTINATION ${CMAKE_SOURCE_DIR}/bin/${CHAPTER})
+            elseif(APPLE)
+                # create symbolic link for *.vs *.fs *.gs
+                get_filename_component(SHADERNAME ${SHADER} NAME)
+                makeLink(${SHADER} ${CMAKE_SOURCE_DIR}/bin/${CHAPTER}/${SHADERNAME} ${NAME})
+            endif(WIN32)
+        endforeach(SHADER)
+        # if compiling for visual studio, also use configure file for each project (specifically to set up working directory)
+        if(MSVC)
+            configure_file(${CMAKE_SOURCE_DIR}/configuration/visualstudio.vcxproj.user.in ${CMAKE_CURRENT_BINARY_DIR}/${NAME}.vcxproj.user @ONLY)
+        endif(MSVC)
+    endforeach(DEMO)
+endforeach(CHAPTER)
+
+include_directories(${CMAKE_SOURCE_DIR}/includes)
+\end{sourcecode}
+
+\begin{sourcecode}{prolog}{Ejemplo en prolog.}
+somePredicate(_, B) :-
+    arbitraryPredicate(A, _variable, 1, 2),
+    predicateWithAtom(someAtom),
+    anotherPredicate(B, someAtom, myPredicate(A, _)),
+    findall(X, ('testString'(X), myPredicate(A, X)), L1),
+    member(A, L1),
+    !.
+    /*
+    block comment: blah blah blah
+    */
+    % to-end-of-line comment: blah blah blah
+\end{sourcecode}
+
+\begin{sourcecode}{scilab}{Ejemplo en scilab.}
+function y = f(x)
+	y = 1/sqrt(2*\%pi) * exp(-x^2/2)
+endfunction
+
+// A simple plot of z = f(x,y)
+t=[0:0.3:2*%pi]';
+z=sin(t) * cos(t');
+plot3d(t, t', z)
+\end{sourcecode}
+
+\begin{sourcecode}{promela}{Ejemplo promela.}
+mtype = {M_UP, M_DW};
+chan Chan_data_down = [0] of {mtype};
+chan Chan_data_up   = [0] of {mtype};
+proctype P1 (chan Chan_data_in, Chan_data_out)
+{
+    do
+    ::  Chan_data_in  ? M_UP -> skip;
+    ::  Chan_data_out ! M_DW -> skip;
+    od;
+};
+proctype P2 (chan Chan_data_in, Chan_data_out)
+{
+    do
+    ::  Chan_data_in  ? M_DW -> skip;
+    ::  Chan_data_out ! M_UP -> skip;
+    od;
+};
+init
+{
+    atomic
+    {
+        run P1 (Chan_data_up,   Chan_data_down);
+        run P2 (Chan_data_down, Chan_data_up);
+    }
+}
+\end{sourcecode}
+
+\begin{sourcecode}{simula}{Ejemplo en simula.}
+Real Procedure Sigma (k, m, n, u);
+   Name k, u;
+   Integer k, m, n; Real u;
+Begin
+   Real s;
+   k:= m;
+   While k <= n Do Begin s:= s + u; k:= k + 1; End;
+   Sigma:= s;
+End;
+\end{sourcecode}
+
+\begin{sourcecode}{elisp}{Ejemplo en elisp.}
+(defun my-split-window-func ()
+  (interactive)
+  (split-window-below)
+  (set-window-buffer (next-window) (other-buffer)))
+
+(global-set-key (kbd "C-x 2") #'my-split-window-func)
+\end{sourcecode}
+
+\begin{sourcecode}{sparql}{Ejemplo en SPARQL.}
+PREFIX ex: <https://example.com/exampleOntology#>
+SELECT ?capital
+       ?country
+WHERE
+  {
+    ?x  ex:cityname       ?capital   ;
+        ex:isCapitalOf    ?y         .
+    ?y  ex:countryname    ?country   ;
+        ex:isInContinent  ex:Africa  .
+  }
+\end{sourcecode}
+
+\begin{sourcecode}{llvm}{Ejemplo en LLVM.}
+target triple = "x86_64-unknown-linux-gnu"
+
+@s = private constant [13 x i8] c"hello world\0A\00"
+
+; main prints "hello world" to standard output.
+define i32 @main(i32 %argc, i8** %argv) {
+	%1 = getelementptr [13 x i8]* @s, i32 0, i32 0
+	call i32 (i8*, ...)* @printf(i8* %1)
+	ret i32 0
+}
+
+declare i32 @printf(i8*, ...)
+\end{sourcecode}
+
+\begin{sourcecode}{reil}{Ejemplo en REIL.}
+bisz t8, , ZF
+str t8, , esp
+ldm 16815620, , t0
+str t0, , eax
+sub esp, 4, esp
+and esp, 4294967295, esp
+stm esi, , esp
+sub esp, 4, esp
+and esp, 4294967295, esp
+stm t2, , esp
+add -4, ebp, t0
+and t0, 4294967295, t1
+stm eax, , t1
+sub esp, 4, t0
+and t0, 4294967295, esp
+stm 16805479, , esp
+jcc 1, , 16805367
+\end{sourcecode}
+
+\begin{sourcecode}{modula2}{Ejemplo en Modula-2.}
+type Day_type   is range    1 ..   31;
+type Month_type is range    1 ..   12;
+type Year_type  is range 1800 .. 2100;
+type Hours is mod 24;
+type Weekday is (Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday);
+
+type Date is
+   record
+     Day   : Day_type;
+     Month : Month_type;
+     Year  : Year_type;
+   end record;
+\end{sourcecode}
+
+\begin{sourcecode}{abap}{Ejemplo en ABAP.}
+* Primitive types:
+DATA: COUNTER      TYPE I,
+      VALIDITY     TYPE I VALUE 60,
+      TAXRATE(3)   TYPE P DECIMALS 1,
+      LASTNAME(20) TYPE C,
+      DESCRIPTION  TYPE STRING.
+
+* Dictionary types:
+DATA: ORIGIN       TYPE COUNTRY.
+
+* Internal table:
+DATA: T_FLIGHTS    TYPE TABLE OF FLIGHTINFO,
+      T_LOOKUP     TYPE HASHED TABLE OF FLT_LOOKUP.
+
+* Objects:
+DATA: BOOKING      TYPE REF TO CL_FLT_BOOKING.
+\end{sourcecode}
+
+\begin{sourcecode}{awk}{Ejemplo en Awk.}
+BEGIN {
+    FS="[^a-zA-Z]+"
+}
+{
+    for (i=1; i<=NF; i++)
+        words[tolower($i)]++
+}
+END {
+    for (i in words)
+        print i, words[i]
+}
+\end{sourcecode}
+
+\begin{sourcecode}{ada}{Ejemplo en Ada.}
+MODULE Hello;
+FROM STextIO IMPORT WriteString;
+BEGIN
+  WriteString("Hello World!");
+END Hello.
+\end{sourcecode}
+
+\begin{sourcecode}{caml}{Ejemplo en Caml.}
+# let haar l =
+   let rec aux l s d = 
+     match l, s, d with
+       [s], [], d -> s :: d
+     | [], s, d -> aux s [] d
+     | h1 :: h2 :: t, s, d -> aux t (h1 + h2 :: s) (h1 - h2 :: d)
+     | _ -> invalid_arg "haar" 
+     in aux l [] [];;
+val haar : int list -> int list = <fun>
+\end{sourcecode}
+
+\begin{sourcecode}{mercury}{Ejemplo en Mercury.}
+ :- module fib.
+ :- interface.
+ :- import_module io.
+ :- pred main(io::di, io::uo) is det.
+ 
+ :- implementation.
+ :- import_module int.
+
+ :- func fib(int) = int.
+ fib(N) = (if N =< 2 then 1 else fib(N - 1) + fib(N - 2)).
+
+ main(!IO) :-
+        io.write_string("fib(10) = ", !IO),
+        io.write_int(fib(10), !IO),
+        io.nl(!IO).
+        % Could instead use io.format("fib(10) = %d\n", [i(fib(10))], !IO).
+\end{sourcecode}
+
+\begin{sourcecode}{erlang}{Ejemplo en erlang.}
+% This is file 'listsort.erl' (the compiler is made this way)
+-module(listsort).
+% Export 'by_length' with 1 parameter (don't care about the type and name)
+-export([by_length/1]).
+
+by_length(Lists) -> % Use 'qsort/2' and provides an anonymous function as a parameter
+   qsort(Lists, fun(A,B) -> length(A) < length(B) end).
+
+qsort([], _)-> []; % If list is empty, return an empty list (ignore the second parameter)
+qsort([Pivot|Rest], Smaller) ->
+    % Partition list with 'Smaller' elements in front of 'Pivot' and not-'Smaller' elements
+    % after 'Pivot' and sort the sublists.
+    qsort([X || X <- Rest, Smaller(X,Pivot)], Smaller)
+    ++ [Pivot] ++
+    qsort([Y || Y <- Rest, not(Smaller(Y, Pivot))], Smaller).
+\end{sourcecode}
+
+\begin{sourcecode}{julia}{Ejemplo en Julia.}
+#= This is a code sample for the Julia language
+(adapted from https://julialang.org) =#
+function mandel(z)
+    c = z
+    maxiter = 80
+    for n = 1:maxiter
+        if abs(z) > 2
+            return n-1
+        end
+        z = z^2 + c
+    end
+    return maxiter
+end
+
+function helloworld()
+    println("Hello, World!") # Bye bye, MATLAB!
+end
+\end{sourcecode}
+
+\begin{sourcecode}{dart}{Ejemplo en Dart.}
+// Import the math library to get access to the sqrt function.
+// Imported with `math` as name, so accesses need to use `math.` as prefix.
+import 'dart:math' as math;
+
+// Create a class for Point.
+class Point {
+
+  // Final variables cannot be changed once they are assigned.
+  // Declare two instance variables.
+  final num x, y;
+
+  // A constructor, with syntactic sugar for setting instance variables.
+  // The constructor has two mandatory parameters.
+  Point(this.x, this.y);
+
+  // A named constructor with an initializer list.
+  Point.origin()
+      : x = 0,
+        y = 0;
+
+  // A method.
+  num distanceTo(Point other) {
+    var dx = x - other.x;
+    var dy = y - other.y;
+    return math.sqrt(dx * dx + dy * dy);
+  }
+  
+  // Example of a "getter".
+  // Acts the same as a final variable, but is computed on each access.
+  num get magnitude => math.sqrt(x * x + y * y);
+
+  // Example of operator overloading
+  Point operator +(Point other) => Point(x + other.x, y + other.y);
+  // When you instantiate a class such as Point in Dart 2+, new is 
+  // an optional word
+}
+
+// All Dart programs start with main().
+void main() {
+  // Instantiate point objects.
+  var p1 = Point(10, 10);
+  print(p1.magnitude);
+  var p2 = Point.origin();
+  var distance = p1.distanceTo(p2);
+  print(distance);
+}
+\end{sourcecode}
+
+\begin{sourcecode}{dart}{Ejemplo en Dart.}
+#import('dart:html');
+
+class Contacts {
+
+  Contacts() {
+  }
+
+  void run() {
+    write("Hello World!");
+  }
+
+  void write(String message) {
+    // the HTML library defines a global "document" variable
+    document.query('#status').innerHTML = message;
+  }
+}
+
+void main() {
+  new Contacts().run();
+}
+\end{sourcecode}
+
+\begin{sourcecode}{fsharp}{Ejemplo en F\#.}
+/// Fibonacci Number formula
+let fib n =
+    let rec g n f0 f1 =
+        match n with
+        | 0 -> f0
+        | 1 -> f1
+        | _ -> g (n - 1) f1 (f0 + f1)
+    g n 0 1
+
+/// Another approach - a lazy infinite sequence of Fibonacci numbers
+let fibSeq = Seq.unfold (fun (a,b) -> Some(a+b, (b, a+b))) (0,1)
+
+// Print even fibs
+[1 .. 10]
+|> List.map     fib
+|> List.filter  (fun n -> (n % 2) = 0)
+|> printList
+
+// Same thing, using a list expression
+[ for i in 1..10 do
+    let r = fib i
+    if r % 2 = 0 then yield r ]
+|> printList
+\end{sourcecode}
+
+\begin{sourcecode}{fsharp}{Ejemplo en F\#.}
+// Open the Windows Forms library
+open System.Windows.Forms
+
+// Create a window and set a few properties
+let form = new Form(Visible=true, TopMost=true, Text="Welcome to F#")
+
+// Create a label to show some text in the form
+let label =
+    let x = 3 + (4 * 5)
+    new Label(Text = sprintf "x = %d" x)
+
+// Add the label to the form
+form.Controls.Add(label)
+
+// Finally, run the form
+[<System.STAThread>]
+Application.Run(form)
+
+/// A simple prime number detector
+let isPrime (n:int) =
+   let bound = int (sqrt (float n))
+   seq {2 .. bound} |> Seq.forall (fun x -> n % x <> 0)
+
+// We are using async workflows
+let primeAsync n =
+    async { return (n, isPrime n) }
+
+/// Return primes between m and n using multiple threads
+let primes m n =
+    seq {m .. n}
+        |> Seq.map primeAsync
+        |> Async.Parallel
+        |> Async.RunSynchronously
+        |> Array.filter snd
+        |> Array.map fst
+
+// Run a test
+primes 1000000 1002000
+    |> Array.iter (printfn "%d")
+\end{sourcecode}
+
+\begin{sourcecode}{javascript}{Ejemplo en javascript ES6.}
+/* eslint-env es6 */
+/* eslint-disable no-unused-vars */
+
+import Axios from 'axios'
+import { BASE_URL } from './utils/api'
+import { getAPIToken } from './utils/helpers'
+
+export default class User {
+  constructor () {
+    this.id = null
+    this.username = null
+    this.email = ''
+    this.isActive = false
+    this.lastLogin = ''  // ISO 8601 formatted timestamp.
+    this.lastPWChange = ''  // ISO 8601 formatted timestamp.
+  }
+}
+
+const getUserProfile = async (id) => {
+  let user = new User()
+  await Axios.get(
+    `${BASE_URL}/users/${id}`,
+    {
+      headers: {
+        'Authorization': `Token ${getAPIToken()}`,
+      }
+    }
+  ).then{response => {
+    // ...
+  }).catch(error => {
+    // ...
+  })
+}
+\end{sourcecode}
+
+\begin{sourcecode}{qsharp}{Ejemplo en Q\#.}
+namespace Example {
+	open Microsoft.Quantum.Intrinsic;
+
+	/// # Summary
+	/// Prepares $(\ket{00} + \ket{11}) / \sqrt{2}$.
+	operation PrepareEntangledPair(left : Qubit, right : Qubit) : Unit
+		is Adj + Ctl {
+			H(left);
+			CNOT(left, right);
+		}
+}
+\end{sourcecode}
+
+\begin{sourcecode}{powershell}{Ejemplo en Powershell.}
+# comment
+
+<#
+multi
+line
+comment
+#>
+
+$tmp = 'string'
+$tmp = "string"
+
+$tmp = @'
+mutli
+"line"
+strings
+'@
+
+$tmp = @"
+multi
+'line'
+strings
+"@
+
+If (1 -lt 2) { Write-Output "Hello World!" }
+\end{sourcecode}
+
+\begin{sourcecode}{powershell}{Ejemplo en Powershell.}
+# Extracts PowerShell aliases, cmdlets and functions for the listings package (https://ctan.org/pkg/listings).
+
+$texfile = 'latex-listings-powershell.tex'
+
+$header = @"
+\lstdefinelanguage{PowerShell}{`n
+"@
+
+$footer = @'
+	morekeywords={Do,Else,For,ForEach,Function,If,In,Until,While},
+	alsodigit={-},
+	sensitive=false,
+	morecomment=[l]{\#},
+	morecomment=[n]{<\#}{\#>},
+	morestring=[b]{"},
+	morestring=[b]{'},
+	morestring=[s]{@'}{'@},
+	morestring=[s]{@"}{"@}
+}
+'@
+
+function convert($file) {
+    Get-Content -Path $file | Sort-Object -Unique | Set-Content $file
+    (Get-Content -Path $file) `
+        -replace '[A-Z]:', '' `
+        -replace 'cd(\.\.)?\\?', '' `
+        -replace '\s+$', '' `
+        | Where-Object {$_.trim() -ne "" } | Set-Content $file
+    (Get-Content -Path $file) -join ',' | Set-Content $file
+}
+
+Get-Command -Type Cmdlet | Sort-Object -Property Name -Unique | Format-Table -Property Name -HideTableHeaders > cmdlets.txt
+Get-Command -Type Function | Sort-Object -Property Name -Unique | Format-Table -Property Name -HideTableHeaders > functions.txt
+Get-Command -Type Alias | Select ResolvedCommand | Sort-Object -Property ResolvedCommand -Unique | Format-Table -Property ResolvedCommand -HideTableHeaders > aliases.txt
+
+convert('aliases.txt')
+convert('cmdlets.txt')
+convert('functions.txt')
+
+$aliases = Get-Content 'aliases.txt'
+$cmdlets = Get-Content 'cmdlets.txt'
+$functions = Get-Content 'functions.txt'
+
+$keywords = "`tmorekeywords={`n`t`t" + $aliases + "`n`t},`n"
+$keywords = $keywords + "`tmorekeywords={`n`t`t" + $cmdlets + "`n`t},`n"
+$keywords = $keywords + "`tmorekeywords={`n`t`t" + $functions + "`n`t},`n"
+
+$content = $header + $keywords + $footer
+
+Set-Content -Path $texfile -Value $content
+
+Remove-Item 'aliases.txt', 'cmdlets.txt', 'functions.txt'
+\end{sourcecode}
+
+\begin{sourcecode}{objectivec}{Ejemplo en Objective-C.}
+@interface classname : superclassname {
+    // instance variables
+}
++classMethod1;
++(return_type)classMethod2;
++(return_type)classMethod3:(param1_type)param1_varName;
+
+-(return_type)instanceMethod1:(param1_type)param1_varName :(param2_type)param2_varName;
+-(return_type)instanceMethod2WithParameter:(param1_type)param1_varName andOtherParameter:(param2_type)param2_varName;
+@end
+\end{sourcecode}
+
+\begin{sourcecode}{objectivec}{Ejemplo en Objective-C.}
+#import "Forwarder.h"
+
+@implementation Forwarder
+- (retval_t)forward:(SEL)sel args:(arglist_t)args {
+  /*
+  * Check whether the recipient actually responds to the message.
+  * This may or may not be desirable, for example, if a recipient
+  * in turn does not respond to the message, it might do forwarding
+  * itself.
+  */
+  if ([recipient respondsToSelector:sel]) {
+    return [recipient performv:sel args:args];
+  } else {
+    return [self error:"Recipient does not respond"];
+  }
+}
+
+- (id)setRecipient:(id)_recipient {
+  [recipient autorelease];
+  recipient = [_recipient retain];
+  return self;
+}
+
+- (id)recipient {
+  return recipient;
+}
+@end
+\end{sourcecode}
+
+\begin{sourcecode}{elixir}{Ejemplo en Elixir.}
+# A comment
+defmodule Foo do
+	def bar(x) do
+		string = "hello"
+
+		fc = fn x,y -> x + y end 
+		atom = fc.(!\elsymb{:imanatom}!)
+		atom = fc.(!\elsymb{:because_the_parser_is_not_good_enough}! )
+	end
+end
+\end{sourcecode}
+
+\begin{sourcecode}{cmake}{cmake}
+cmake_minimum_required(VERSION 3.9)
+project(libopenrct2 CXX)
+
+if (CMAKE_BINARY_DIR STREQUAL CMAKE_SOURCE_DIR)
+    message(FATAL_ERROR "Building in-source is not supported! Create a build dir and remove ${CMAKE_SOURCE_DIR}/CMakeCache.txt")
+endif ()
+
+file(GLOB_RECURSE OPENRCT2_CORE_SOURCES "${CMAKE_CURRENT_LIST_DIR}/*.cpp")
+file(GLOB_RECURSE OPENRCT2_CORE_HEADERS "${CMAKE_CURRENT_LIST_DIR}/*.h"
+                                        "${CMAKE_CURRENT_LIST_DIR}/*.hpp")
+list(REMOVE_ITEM OPENRCT2_CORE_HEADERS
+    "${CMAKE_CURRENT_LIST_DIR}/thirdparty/filesystem.hpp"
+    "${CMAKE_CURRENT_LIST_DIR}/thirdparty/linenoise.hpp"
+)
+
+if (APPLE)
+    file(GLOB_RECURSE OPENRCT2_CORE_MM_SOURCES "${CMAKE_CURRENT_LIST_DIR}/*.mm")
+    set_source_files_properties(${OPENRCT2_CORE_MM_SOURCES} PROPERTIES COMPILE_FLAGS "-x objective-c++ -fmodules")
+endif ()
+
+add_library(${PROJECT_NAME} ${OPENRCT2_CORE_SOURCES} ${OPENRCT2_CORE_MM_SOURCES})
+if (APPLE)
+    target_link_platform_libraries(${PROJECT_NAME})
+endif ()
+set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "")
+SET_CHECK_CXX_FLAGS(${PROJECT_NAME})
+
+# GCC / Clang likes us to pass the -lstdc++fs flag to link C++17 filesystem implementation.
+if (NOT MINGW AND NOT ${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD" AND NOT ${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD")
+    if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU" OR CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+        target_link_libraries(${PROJECT_NAME} stdc++fs)
+    endif()
+endif()
+
+if (NOT DISABLE_NETWORK OR NOT DISABLE_HTTP)
+    if (WIN32 AND NOT MINGW_TARGET_NT5_1)
+        target_link_libraries(${PROJECT_NAME} bcrypt)
+    else ()
+        if (APPLE AND NOT MACOS_USE_DEPENDENCIES)
+            # note - we are not yet compatible with openssl3, which is now default brew version
+            execute_process(COMMAND brew --prefix openssl@1.1 OUTPUT_VARIABLE HOMEBREW_PREFIX_OPENSSL OUTPUT_STRIP_TRAILING_WHITESPACE)
+            # Needed for linking with non-broken OpenSSL on Apple platforms
+            list(APPEND CMAKE_PREFIX_PATH "${HOMEBREW_PREFIX_OPENSSL}")
+        endif ()
+        find_package(OpenSSL 1.0.0 REQUIRED)
+
+        target_include_directories(${PROJECT_NAME} SYSTEM PUBLIC ${OPENSSL_INCLUDE_DIR})
+
+        if(STATIC)
+            target_link_libraries(${PROJECT_NAME} ${SSL_STATIC_LIBRARIES})
+        else ()
+            target_link_libraries(${PROJECT_NAME} ${OPENSSL_LIBRARIES})
+        endif()
+    endif()
+endif ()
+
+if (NOT DISABLE_NETWORK AND WIN32)
+    target_link_libraries(${PROJECT_NAME} ws2_32 crypt32 wldap32 version winmm imm32 advapi32 shell32 ole32)
+endif ()
+
+if (NOT DISABLE_HTTP)
+    if (WIN32 AND NOT MINGW_TARGET_NT5_1)
+        target_link_libraries(${PROJECT_NAME} winhttp)
+    else ()
+        PKG_CHECK_MODULES(LIBCURL REQUIRED libcurl)
+
+        target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE ${LIBCURL_INCLUDE_DIRS})
+
+        if (STATIC)
+            target_link_libraries(${PROJECT_NAME} ${LIBCURL_STATIC_LIBRARIES})
+        else ()
+            target_link_libraries(${PROJECT_NAME} ${LIBCURL_LIBRARIES})
+        endif ()
+    endif ()
+endif ()
+
+if (NOT DISABLE_TTF)
+    if (UNIX AND NOT APPLE AND NOT MSVC)
+        PKG_CHECK_MODULES(FONTCONFIG REQUIRED fontconfig)
+    endif ()
+        
+    if (MSVC)
+        find_package(freetype REQUIRED)
+    else ()
+        PKG_CHECK_MODULES(FREETYPE REQUIRED IMPORTED_TARGET freetype2)
+    endif ()
+        
+    target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE ${FREETYPE_INCLUDE_DIRS})
+        
+    if (UNIX AND NOT APPLE)
+        target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE ${FONTCONFIG_INCLUDE_DIRS})
+    endif ()
+endif ()
+
+if (NOT DISABLE_GOOGLE_BENCHMARK)
+    find_package(benchmark)
+    if (benchmark_FOUND)
+        message("Found Google benchmark, enabling support")
+        set_target_properties(${PROJECT_NAME} PROPERTIES COMPILE_DEFINITIONS USE_BENCHMARK)
+        target_link_libraries(${PROJECT_NAME} benchmark::benchmark)
+        target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE ${benchmark_INCLUDE_DIRS})
+    else ()
+        message("Google benchmark not found, disabling support")
+    endif ()
+endif ()
+
+if (ENABLE_SCRIPTING)
+    find_package(duktape CONFIG REQUIRED)
+    include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${DUKTAPE_INCLUDE_DIRS})
+    if (STATIC)
+        target_link_libraries(${PROJECT_NAME} ${DUKTAPE_LIBRARY} ${DUKTAPE_STATIC_LIBRARY})
+    else ()
+        target_link_libraries(${PROJECT_NAME} ${DUKTAPE_LIBRARY})
+    endif ()
+endif ()
+
+# Third party libraries
+if (MSVC)
+    find_package(png 1.6 REQUIRED)
+    find_package(zlib REQUIRED)
+
+    find_path(LIBZIP_INCLUDE_DIRS zip.h)
+    find_library(LIBZIP_LIBRARIES zip)
+else ()
+    PKG_CHECK_MODULES(LIBZIP REQUIRED IMPORTED_TARGET libzip>=1.0)
+    PKG_CHECK_MODULES(ZLIB REQUIRED IMPORTED_TARGET zlib)
+
+    PKG_CHECK_MODULES(PNG IMPORTED_TARGET libpng>=1.6)
+    if (NOT PNG_FOUND)
+        PKG_CHECK_MODULES(PNG IMPORTED_TARGET libpng16)
+        if (NOT PNG_FOUND)
+            PKG_CHECK_MODULES(PNG IMPORTED_TARGET libpng>=1.2)
+            if (NOT PNG_FOUND)
+                PKG_CHECK_MODULES(PNG REQUIRED IMPORTED_TARGET libpng12)
+            endif ()
+        endif ()
+    endif ()
+endif ()
+
+if (STATIC)
+    target_link_libraries(${PROJECT_NAME}
+                                     ${PNG_STATIC_LIBRARIES}
+                                     ${ZLIB_STATIC_LIBRARIES}
+                                     ${LIBZIP_STATIC_LIBRARIES})
+else ()
+    if (NOT MSVC)
+        target_link_libraries(${PROJECT_NAME}
+                                     PkgConfig::PNG
+                                     PkgConfig::ZLIB
+                                     PkgConfig::LIBZIP)
+    else ()
+        target_link_libraries(${PROJECT_NAME}
+                                     ${PNG_LIBRARIES}
+                                     ${ZLIB_LIBRARIES}
+                                     ${LIBZIP_LIBRARIES})
+    endif ()
+endif ()
+
+if (MINGW)
+    # Hardcode libraries used on mingw
+    target_link_libraries(${PROJECT_NAME} crypto ws2_32 tasn1 unistring iconv p11-kit hogweed gmp nettle)
+    # Link in libssp
+    target_link_libraries(${PROJECT_NAME} -fstack-protector-strong)
+endif()
+
+if (UNIX AND NOT ${CMAKE_SYSTEM_NAME} MATCHES "BSD")
+    # Include libdl for dlopen
+    target_link_libraries(${PROJECT_NAME} dl)
+endif ()
+
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+find_package(Threads REQUIRED)
+target_link_libraries(${PROJECT_NAME} Threads::Threads)
+
+if (NOT MINGW AND NOT MSVC)
+    if (APPLE AND NOT MACOS_USE_DEPENDENCIES)
+        execute_process(COMMAND brew --prefix icu4c OUTPUT_VARIABLE HOMEBREW_PREFIX_ICU OUTPUT_STRIP_TRAILING_WHITESPACE)
+        # Needed for linking with non-broken icu on Apple platforms
+        list(APPEND CMAKE_PREFIX_PATH "${HOMEBREW_PREFIX_ICU}")
+    endif ()
+    # For unicode code page conversion.
+    find_package(ICU 59.0 REQUIRED COMPONENTS uc)
+        
+    target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE ${ICU_INCLUDE_DIRS})
+        
+    if (STATIC)
+        target_link_libraries(${PROJECT_NAME} ${ICU_STATIC_LIBRARIES})
+    else ()
+        target_link_libraries(${PROJECT_NAME} ${ICU_LIBRARIES})
+    endif ()
+endif ()
+
+if (NOT DISABLE_TTF)
+    if (STATIC)
+        target_link_libraries(${PROJECT_NAME} ${FREETYPE_STATIC_LIBRARIES})
+            
+        if (UNIX AND NOT APPLE)
+            target_link_libraries(${PROJECT_NAME} ${FONTCONFIG_STATIC_LIBRARIES})
+        endif ()
+    else ()
+        if (NOT MSVC)
+            target_link_libraries(${PROJECT_NAME} PkgConfig::FREETYPE)
+        else ()
+            target_link_libraries(${PROJECT_NAME} ${FREETYPE_LIBRARIES})
+        endif ()
+            
+        if (UNIX AND NOT APPLE)
+            target_link_libraries(${PROJECT_NAME} ${FONTCONFIG_LIBRARIES})
+        endif ()
+    endif ()
+
+    if (${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD")
+        target_link_libraries(${PROJECT_NAME} -L${OPENBSD_X11BASE}/lib)
+    endif ()
+endif ()
+
+if (HAVE_DISCORD_RPC)
+    if(${DISCORDRPC_FOUND})
+        target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE ${DISCORDRPC_INCLUDE_DIR})
+        target_link_libraries(${PROJECT_NAME} ${DISCORDRPC_LIBRARY})
+    else()
+        target_link_libraries(libopenrct2 discord-rpc)
+    endif()
+endif()
+
+# Includes
+target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE ${LIBZIP_INCLUDE_DIRS})
+target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE ${PNG_INCLUDE_DIRS}
+                                                          ${ZLIB_INCLUDE_DIRS})
+include_directories(${PROJECT_NAME} SYSTEM ${CMAKE_CURRENT_LIST_DIR}/../thirdparty)
+
+# To avoid unnecessary rebuilds set the current branch and
+# short sha1 only for the two files that use these
+# definitions: Version.cpp and Crash/Platform.cpp
+if (NOT OPENRCT2_VERSION_TAG STREQUAL "")
+    set_property(SOURCE ${CMAKE_CURRENT_LIST_DIR}/Version.cpp ${CMAKE_CURRENT_LIST_DIR}/Crash/Platform.cpp
+        PROPERTY COMPILE_DEFINITIONS
+        OPENRCT2_VERSION_TAG="${OPENRCT2_VERSION_TAG}")
+endif()
+
+if (NOT OPENRCT2_BRANCH STREQUAL "master" AND NOT OPENRCT2_BRANCH STREQUAL "")
+    set_property(SOURCE ${CMAKE_CURRENT_LIST_DIR}/Version.cpp ${CMAKE_CURRENT_LIST_DIR}/Crash/Platform.cpp
+        APPEND PROPERTY COMPILE_DEFINITIONS
+        OPENRCT2_BRANCH="${OPENRCT2_BRANCH}")
+endif()
+
+if (NOT OPENRCT2_COMMIT_SHA1_SHORT STREQUAL "HEAD" AND NOT OPENRCT2_COMMIT_SHA1_SHORT STREQUAL "")
+    set_property(SOURCE ${CMAKE_CURRENT_LIST_DIR}/Version.cpp ${CMAKE_CURRENT_LIST_DIR}/Crash/Platform.cpp
+        APPEND PROPERTY COMPILE_DEFINITIONS
+        OPENRCT2_COMMIT_SHA1_SHORT="${OPENRCT2_COMMIT_SHA1_SHORT}")
+endif()
+
+if((X86 OR X86_64) AND NOT MSVC)
+    set_source_files_properties(${CMAKE_CURRENT_LIST_DIR}/drawing/SSE41Drawing.cpp PROPERTIES COMPILE_FLAGS -msse4.1)
+    set_source_files_properties(${CMAKE_CURRENT_LIST_DIR}/drawing/AVX2Drawing.cpp PROPERTIES COMPILE_FLAGS -mavx2)
+endif()
+
+# Add headers check to verify all headers carry their dependencies.
+# Only valid for Clang for now:
+# - GCC 8 does not support -Wno-pragma-once-outside-header
+# - Other compilers status unknown
+if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
+    add_library(${PROJECT_NAME}-headers-check OBJECT ${OPENRCT2_CORE_HEADERS})
+    set_target_properties(${PROJECT_NAME}-headers-check PROPERTIES LINKER_LANGUAGE CXX)
+    set_source_files_properties(${OPENRCT2_CORE_HEADERS} PROPERTIES LANGUAGE CXX)
+    add_definitions("-x c++ -Wno-pragma-once-outside-header -Wno-unused-const-variable")
+    get_target_property(LIBOPENRCT2_INCLUDE_DIRS ${PROJECT_NAME} INCLUDE_DIRECTORIES)
+    set_target_properties(${PROJECT_NAME}-headers-check PROPERTIES INCLUDE_DIRECTORIES "${LIBOPENRCT2_INCLUDE_DIRS}")
+else ()
+    # Dummy target to ease invocation
+    add_custom_target(${PROJECT_NAME}-headers-check)
+endif ()
+\end{sourcecode}
+
+% \importsourcecode{latex}{test/general.tex}{Carga código fuente archivo LaTeX.}
+% \importsourcecode{latex}{lib/etc/example.tex}{Carga código fuente ejemplo LaTeX.}
+% \importsourcecode{latex}{lib/cfg/init.tex}{Carga código fuente init LaTeX.}

@@ -2,203 +2,809 @@
 
 Las citas textuales se extrajeron de las fuentes de entrada. La búsqueda puede agrupar referencias del mismo concepto aunque estén en archivos distintos.
 
-## Ficha 01. estimadores puntuales comunes
+## Ficha 01. administrativa
 
-**Calidad estimada:** media
-**Mejor similitud:** 0.2197
-**Similitud promedio:** 0.1035
-**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt
-**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 5
+**Calidad estimada:** baja
+**Mejor similitud:** 0.1277
+**Similitud promedio:** 0.0989
+**Fuentes:** 00-consigna-y-planeacion-A07.txt
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1
 
-### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2197
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.1277
 
-**Detalle de puntaje:** tfidf=0.1297; bonus=0.0900
+**Detalle de puntaje:** tfidf=0.0577; bonus=0.0700
 
-> Valor 5% Formato de Entrega El documento deberá entregarse en formato PDF letra Arial 11, interlineado 1.5 texto justificado y portada oficial Tipo de entrega individual Portada Oficial Click aquí Conceptos nucleares de la actividad: estimadores puntuales comunes insesgamiento eficiencia y consistencia intervalo de confianza para la media con sigma conocida intervalo de confianza para la media con distribución t de Student intervalo de confianza para una proporción poblacional intervalo de confianza para la varianza con distribución ji-cuadrada grados de libertad en estimación nivel de confianza y riesgo alfa precisión y amplitud del intervalo aplicaciones de estimación...
+> Instrucciones Investiga y redacta un resumen claro y conciso (máximo 3 páginas) sobre los siguientes temas. Utiliza fuentes académicas confiables y, si es posible, ejemplos aplicados a la gestión administrativa o de negocios. Incluye definiciones, explicaciones y ejemplos para cada subtema.
 
-### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.0928
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.0700
 
-**Detalle de puntaje:** tfidf=0.0728; bonus=0.0200
+**Detalle de puntaje:** tfidf=0.0000; bonus=0.0700
 
-> Propiedades de los estimadores: insesgamiento, eficiencia y consistencia. Ejemplos de estimadores comunes (media muestral, proporción muestral, varianza muestral). 3.2 Estimación puntual y por intervalos ¿Qué es una estimación puntual? ¿Qué es una estimación por intervalos (intervalo de confianza)?
+> 3.4 Cálculo e interpretación de intervalos de confianza Pasos para calcular un intervalo de confianza. ¿Qué significa el nivel de confianza? ¿Cómo se interpreta un intervalo de confianza en la práctica? Importancia de los intervalos de confianza en la toma de decisiones administrativas. Recomendaciones Utiliza ejemplos relacionados con la administración, negocios o gestión pública.
 
-### libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt — bloque 2 — similitud 0.0920
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon varias referencias dentro de la misma fuente. Hay 1 referencia(s) de baja similitud que podrían introducir ruido.
 
-**Detalle de puntaje:** tfidf=0.0720; bonus=0.0200
-
-> En otras palabras, quisiéramos que la media o valor esperado de la  distribución de estimaciones fuera igual al parámetro estimado; esto es, E( )ˆu = u. Se dice  que los estimadores puntuales que satisfacen esta propiedad son insesgados. La distribución  muestral para un estimador puntual sesgado positivamente, para el que E( )ˆu > u, se muestra  en la Figura 8.2.
-
-### libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt — bloque 2 — similitud 0.0782
-
-**Detalle de puntaje:** tfidf=0.0582; bonus=0.0200
-
-> De acu [Bloque seleccionado #417 | relevancia=6] Pagina 416 392 Capítulo 8 Estimación 8.2 Sesgo y error cuadrático medio  de estimadores puntuales La estimación puntual es similar, en muchos aspectos, a disparar a un blanco con un revól- ver. El estimador, que genera estimaciones, es análogo al revólver; una estimación particular  es comparable a un tiro; y el parámetro de interés corresponde al centro del blanco o diana.
-
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 5 — similitud 0.0347
-
-**Detalle de puntaje:** tfidf=0.0247; bonus=0.0100
-
-> Louis Metro Bus Company de Estados Unidos  desea promover una imagen de conﬁ abilidad haciendo que sus conductores sean puntuales en  los horarios de llegada a las estaciones. La empresa desea que haya poca varianza en dichos  tiempos.
-
-**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 2 referencia(s) de baja similitud que podrían introducir ruido.
-
-## Ficha 02. insesgamiento eficiencia y consistencia
-
-**Calidad estimada:** media
-**Mejor similitud:** 0.2207
-**Similitud promedio:** 0.1569
-**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt
-**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 1
-
-### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2207
-
-**Detalle de puntaje:** tfidf=0.1307; bonus=0.0900
-
-> Valor 5% Formato de Entrega El documento deberá entregarse en formato PDF letra Arial 11, interlineado 1.5 texto justificado y portada oficial Tipo de entrega individual Portada Oficial Click aquí Conceptos nucleares de la actividad: estimadores puntuales comunes insesgamiento eficiencia y consistencia intervalo de confianza para la media con sigma conocida intervalo de confianza para la media con distribución t de Student intervalo de confianza para una proporción poblacional intervalo de confianza para la varianza con distribución ji-cuadrada grados de libertad en estimación nivel de confianza y riesgo alfa precisión y amplitud del intervalo aplicaciones de estimación...
-
-### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2193
-
-**Detalle de puntaje:** tfidf=0.1293; bonus=0.0900
-
-> Temas a desarrollar 3.1 Estimadores Definición de estimador. Propiedades de los estimadores: insesgamiento, eficiencia y consistencia. Ejemplos de estimadores comunes (media muestral, proporción muestral, varianza muestral).
-
-### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 1 — similitud 0.0307
-
-**Detalle de puntaje:** tfidf=0.0207; bonus=0.0100
-
-> Fuente bibliográfica: Estadística aplicada a los negocios y la economía - Lind, Marchal y Wathen. 15.ª edición.pdf Actividad: 7 (3.1 Investigación 5% Tarea) Palabras clave: estimación puntual, intervalo de confianza, distribución t, ji-cuadrada, varianza poblacional, proporción poblacional, insesgamiento [Bloque seleccionado #326 | relevancia=16] Pagina 325 Desviación estándar de la población conocida () Un intervalo de confianza se calcula con el empleo de dos estadísticos: la media muestral  y la desviación estándar.
-
-**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 1 referencia(s) de baja similitud que podrían introducir ruido.
-
-## Ficha 03. intervalo de confianza para la media con sigma conocida
+## Ficha 02. aplicaciones de estimación en finanzas y operaciones
 
 **Calidad estimada:** alta
-**Mejor similitud:** 0.3164
-**Similitud promedio:** 0.1439
+**Mejor similitud:** 0.2844
+**Similitud promedio:** 0.0804
 **Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt
-**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 2
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 3
 
-### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.3164
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2844
 
-**Detalle de puntaje:** tfidf=0.2164; bonus=0.1000
+**Detalle de puntaje:** tfidf=0.1844; bonus=0.1000
 
-> Valor 5% Formato de Entrega El documento deberá entregarse en formato PDF letra Arial 11, interlineado 1.5 texto justificado y portada oficial Tipo de entrega individual Portada Oficial Click aquí Conceptos nucleares de la actividad: estimadores puntuales comunes insesgamiento eficiencia y consistencia intervalo de confianza para la media con sigma conocida intervalo de confianza para la media con distribución t de Student intervalo de confianza para una proporción poblacional intervalo de confianza para la varianza con distribución ji-cuadrada grados de libertad en estimación nivel de confianza y riesgo alfa precisión y amplitud del intervalo aplicaciones de estimación...
+> Valor 5% Formato de Entrega El documento deberá entregarse en formato PDF letra Arial 11, interlineado 1.5 texto justificado y portada oficial Tipo de entrega individual Portada Oficial Click aquí Conceptos nucleares de la actividad: estimadores puntuales comunes insesgamiento eficiencia y consistencia intervalo de confianza para la media con sigma conocida intervalo de confianza para la media con distribución t de Student intervalo de confianza para una proporción poblacional intervalo de confianza para la varianza con distribución ji-cuadrada grados de libertad en estimación nivel de confianza y riesgo alfa precisión y amplitud del intervalo aplicaciones de estimación en finanzas y...
 
-### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.1221
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.0455
 
-**Detalle de puntaje:** tfidf=0.0821; bonus=0.0400
+**Detalle de puntaje:** tfidf=0.0255; bonus=0.0200
+
+> Estimación Actividad 7: 3.1 Investigación 5% Tarea — Métodos de estimación puntual y por intervalos para medias, proporciones y varianzas Subtítulo editorial: Actividad 7: Reporte de investigación Tipo de producto: investigacion_aplicada Requisitos e instrucciones de la actividad: Nombre de la Actividad Reporte de Investigación Descripción El estudiante iniciará el análisis y comprensión de los conceptos fundamentales relacionados con la estimación estadística, a través de la investigación y sistematización de información teórica y aplicada, que le permita comprender los métodos de estimación puntual y por intervalos, así como sus propiedades y aplicaciones.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 3 — similitud 0.0409
+
+**Detalle de puntaje:** tfidf=0.0209; bonus=0.0200
+
+> [Bloque seleccionado #367 | relevancia=36] Pagina 366 332  Capítulo 8 Estimación por intervalo 32. En una muestra aleatoria de 800 elementos se obtiene una proporción muestral, p  0.70. a) Proporcione un intervalo de 90% de confianza para la proporción poblacional. b) Proporcione un intervalo de confianza de 95% para la proporción poblacional.
+
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 2 — similitud 0.0389
+
+**Detalle de puntaje:** tfidf=0.0189; bonus=0.0200
+
+> [Bloque seleccionado #311 | relevancia=12] Pagina 310 Aplicaciones ■ 7-29 La enfermera de la secundaria de Westview está interesada en conocer la estatura promedio de los estu- diantes del último año, pero no tiene suficiente tiempo para examinar los registros de los 430 estudiantes. Por ello, selecciona 48 al azar y encuentra que la media de la muestra es 64.5 pulgadas y la desviación es- tándar es 2.3 pulgadas. a) Encuentre la estimación del error estándar de la media. b) Construya un intervalo de confianza del 90% para la media. ■ 7-30 Jon Jackobsen, un pasante de posgrado muy dedicado, acaba de terminar una primera versión de su tesis de 700 páginas.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 1 — similitud 0.0365
+
+**Detalle de puntaje:** tfidf=0.0165; bonus=0.0200
+
+> La desviación es- tándar poblacional es σ  15. a) Calcule el intervalo de confianza de 95% para la media poblacional. b) Suponga que la misma media muestral se obtuvo de una muestra de 120 artículos. Pro- porcione el intervalo de confianza de 95% para la media poblacional. c)  ¿Cuál es el efecto de una muestra de tamaño grande sobre la estimación por intervalo? 4.
+
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.0364
+
+**Detalle de puntaje:** tfidf=0.0264; bonus=0.0100
+
+> Tipos de estimaciones Podemos hacer dos tipos de estimaciones concernientes a una población: una estimación puntual y una estimación de intervalo. Una estimación puntual es un solo número que se utiliza para esti- mar un parámetro de población desconocido.
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 5 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 03. arial interlineado
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2035
+**Similitud promedio:** 0.2035
+**Fuentes:** 00-consigna-y-planeacion-A07.txt
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2035
+
+**Detalle de puntaje:** tfidf=0.1835; bonus=0.0200
+
+> Presenta la información de manera clara y estructurada. El formato  del ensayo es: Arial 11, Interlineado 1.5, Justificado El extenso del reporte es máximo 3 cuartillas sin considerar portada y fuentes.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita.
+
+## Ficha 04. arial interlineado justificado
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2571
+**Similitud promedio:** 0.2571
+**Fuentes:** 00-consigna-y-planeacion-A07.txt
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2571
+
+**Detalle de puntaje:** tfidf=0.2271; bonus=0.0300
+
+> Presenta la información de manera clara y estructurada. El formato  del ensayo es: Arial 11, Interlineado 1.5, Justificado El extenso del reporte es máximo 3 cuartillas sin considerar portada y fuentes.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita.
+
+## Ficha 05. construye intervalo
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2785
+**Similitud promedio:** 0.0767
+**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 5; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 2
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2785
+
+**Detalle de puntaje:** tfidf=0.2585; bonus=0.0200
 
 > Diferencias y ventajas de cada tipo de estimación. 3.3 Intervalos de confianza para medias, proporciones y varianzas ¿Cómo se construye un intervalo de confianza para la media? ¿Cómo se construye un intervalo de confianza para una proporción? ¿Cómo se construye un intervalo de confianza para la varianza? Ejemplos numéricos sencillos.
 
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 1 — similitud 0.1138
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 2 — similitud 0.0393
 
-**Detalle de puntaje:** tfidf=0.0738; bonus=0.0400
-
-> En una muestra aleatoria simple de 50 artículos de una población en la que σ  6, la media  muestral resultante es 32. a) Proporcione un intervalo de confianza de 90% para la media poblacional. b) Calcule un intervalo de confianza de 95% para la media poblacional. c)  Proporcione un intervalo de confianza de 99% para el mismo indicador. 3.
-
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 2 — similitud 0.1120
-
-**Detalle de puntaje:** tfidf=0.0720; bonus=0.0400
+**Detalle de puntaje:** tfidf=0.0293; bonus=0.0100
 
 > [Bloque seleccionado #351 | relevancia=24] Pagina 350 316  Capítulo 8 Estimación por intervalo a) Proporcione un intervalo de estimación de 90% de confianza para la media poblacional. b) Calcule un intervalo de 95%. c)  Proporcione ahora un intervalo de estimación de 99%. d) ¿Qué le sucede a la amplitud del intervalo de confianza a medida que el nivel de confianza  aumenta? ¿Parece esto razonable? Explique.
 
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 1 — similitud 0.1023
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 5 — similitud 0.0385
 
-**Detalle de puntaje:** tfidf=0.0623; bonus=0.0400
+**Detalle de puntaje:** tfidf=0.0285; bonus=0.0100
 
-> Con objeto de estimar la cantidad media que gasta un cliente en una comida en un importan- te restaurante de Atlanta, se recabaron los datos de una muestra de 49 comensales. Suponga que  la desviación estándar de la población es $5. a) ¿Cuál es el margen de error para 95% de confianza? b) Si la media poblacional es $24.80, ¿cuál es el intervalo de confianza de 95% para la media  poblacional? 6.
+> MSE es el error medio cuadrático que se obtuvo de la tabla ANOVA [SSE/(n – k)]. n1 es el número de observaciones en la primera muestra. n2 es el número de observaciones en la segunda muestra. ¿Cómo se decide si hay una diferencia entre las medias de tratamiento? Si el intervalo de confianza incluye cero, no existe diferencia entre ellas. Por ejemplo, si el punto extremo izquierdo del intervalo de confianza tiene signo negativo y el punto extremo derecho tiene signo positivo, el intervalo incluye cero, y las dos medias no difieren.
 
-### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.0970
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 1 — similitud 0.0377
 
-**Detalle de puntaje:** tfidf=0.0670; bonus=0.0300
+**Detalle de puntaje:** tfidf=0.0277; bonus=0.0100
 
-> Si informamos que tenemos el 90% de confianza de que la media de la población de ingresos de las personas que viven en una cierta comunidad está entre $8,000 y $24,000, entonces el rango $8,000-$24,000 es nuestro intervalo de confianza. A menudo, sin embargo, expresaremos el intervalo de confianza en términos de errores estándar, más que con valores numéricos.
+> En una muestra aleatoria simple de 50 artículos de una población en la que σ  6, la media  muestral resultante es 32. a) Proporcione un intervalo de confianza de 90% para la media poblacional. b) Calcule un intervalo de confianza de 95% para la media poblacional. c)  Proporcione un intervalo de confianza de 99% para el mismo indicador. 3.
 
-**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 1 — similitud 0.0347
 
-## Ficha 04. intervalo de confianza para la media con distribución t de Student
+**Detalle de puntaje:** tfidf=0.0247; bonus=0.0100
+
+> Fuente bibliográfica: Estadística aplicada a los negocios y la economía - Lind, Marchal y Wathen. 15.ª edición.pdf Actividad: 7 (3.1 Investigación 5% Tarea) Palabras clave: estimación puntual, intervalo de confianza, distribución t, ji-cuadrada, varianza poblacional, proporción poblacional, insesgamiento [Bloque seleccionado #326 | relevancia=16] Pagina 325 Desviación estándar de la población conocida () Un intervalo de confianza se calcula con el empleo de dos estadísticos: la media muestral  y la desviación estándar.
+
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.0314
+
+**Detalle de puntaje:** tfidf=0.0214; bonus=0.0100
+
+> En la figura 7-2, por ejemplo, utili- zamos un nivel de confianza del 95.5%. El intervalo de confianza es el rango de la estimación que estamos haciendo. Si informamos que tenemos el 90% de confianza de que la media de la población de ingresos de las personas que viven en una cierta comunidad está entre $8,000 y $24,000, entonces el rango $8,000-$24,000 es nuestro intervalo de confianza.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 5 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 06. construye intervalo confianza
 
 **Calidad estimada:** alta
-**Mejor similitud:** 0.3092
-**Similitud promedio:** 0.1640
-**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt; libro-estadistica-spiegel-y-stephens-4-a-edicion-A07.txt
-**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 3; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 1; libro-estadistica-spiegel-y-stephens-4-a-edicion-A07.txt, bloque 4
+**Mejor similitud:** 0.3803
+**Similitud promedio:** 0.1322
+**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 5; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 1
 
-### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.3092
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.3803
 
-**Detalle de puntaje:** tfidf=0.2092; bonus=0.1000
-
-> Valor 5% Formato de Entrega El documento deberá entregarse en formato PDF letra Arial 11, interlineado 1.5 texto justificado y portada oficial Tipo de entrega individual Portada Oficial Click aquí Conceptos nucleares de la actividad: estimadores puntuales comunes insesgamiento eficiencia y consistencia intervalo de confianza para la media con sigma conocida intervalo de confianza para la media con distribución t de Student intervalo de confianza para una proporción poblacional intervalo de confianza para la varianza con distribución ji-cuadrada grados de libertad en estimación nivel de confianza y riesgo alfa precisión y amplitud del intervalo aplicaciones de estimación...
-
-### libro-estadistica-spiegel-y-stephens-4-a-edicion-A07.txt — bloque 4 — similitud 0.1420
-
-**Detalle de puntaje:** tfidf=0.1120; bonus=0.0300
-
-> En la práctica, como  muestra 1 se considera la muestra que tenga la mayor varianza. El software para estadística permite encontrar las áreas bajo la distribución t de Student, la distribución ji cuadrada  y la distribución F. Este software también permite trazar las distintas distribuciones.
-
-### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 3 — similitud 0.1395
-
-**Detalle de puntaje:** tfidf=0.1095; bonus=0.0300
-
-> Gosset era empleado de la Cervecería Guinness en Dublín, Irlanda; la empresa no permitía que los empleados publicaran sus hallazgos de investigación con su propio nombre. De modo que Gosset adoptó el seudónimo de Student para publicar. En consecuencia, la distribución t se conoce como distribución t de Student o simplemente distribución de Student.
-
-### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 1 — similitud 0.1370
-
-**Detalle de puntaje:** tfidf=0.0970; bonus=0.0400
-
-> GRÁFICA 9-1 Distribución normal estándar y distribución t de Student 0 Distribución z Distribución t Las siguientes características de la distribución t se basan en el supuesto de que la pobla- ción de interés es de naturaleza normal, o casi normal. • Como en el caso de la distribución z, es una distribución continua. • Como en el caso de la distribución z, tiene forma de campana y es simétrica. • No existe una distribución t, sino una familia de distribuciones t. Todas las distribuciones t tienen una media de 0, y sus desviaciones estándares difieren de acuerdo con el tama- ño de la muestra, n.
-
-### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.1327
-
-**Detalle de puntaje:** tfidf=0.0927; bonus=0.0400
+**Detalle de puntaje:** tfidf=0.3503; bonus=0.0300
 
 > Diferencias y ventajas de cada tipo de estimación. 3.3 Intervalos de confianza para medias, proporciones y varianzas ¿Cómo se construye un intervalo de confianza para la media? ¿Cómo se construye un intervalo de confianza para una proporción? ¿Cómo se construye un intervalo de confianza para la varianza? Ejemplos numéricos sencillos.
 
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 1 — similitud 0.1234
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.0963
 
-**Detalle de puntaje:** tfidf=0.0834; bonus=0.0400
+**Detalle de puntaje:** tfidf=0.0763; bonus=0.0200
+
+> En la figura 7-2, por ejemplo, utili- zamos un nivel de confianza del 95.5%. El intervalo de confianza es el rango de la estimación que estamos haciendo. Si informamos que tenemos el 90% de confianza de que la media de la población de ingresos de las personas que viven en una cierta comunidad está entre $8,000 y $24,000, entonces el rango $8,000-$24,000 es nuestro intervalo de confianza.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 1 — similitud 0.0838
+
+**Detalle de puntaje:** tfidf=0.0638; bonus=0.0200
+
+> En una muestra aleatoria simple de 50 artículos de una población en la que σ  6, la media  muestral resultante es 32. a) Proporcione un intervalo de confianza de 90% para la media poblacional. b) Calcule un intervalo de confianza de 95% para la media poblacional. c)  Proporcione un intervalo de confianza de 99% para el mismo indicador. 3.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 1 — similitud 0.0831
+
+**Detalle de puntaje:** tfidf=0.0631; bonus=0.0200
+
+> Fuente bibliográfica: Estadística aplicada a los negocios y la economía - Lind, Marchal y Wathen. 15.ª edición.pdf Actividad: 7 (3.1 Investigación 5% Tarea) Palabras clave: estimación puntual, intervalo de confianza, distribución t, ji-cuadrada, varianza poblacional, proporción poblacional, insesgamiento [Bloque seleccionado #326 | relevancia=16] Pagina 325 Desviación estándar de la población conocida () Un intervalo de confianza se calcula con el empleo de dos estadísticos: la media muestral  y la desviación estándar.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 5 — similitud 0.0801
+
+**Detalle de puntaje:** tfidf=0.0601; bonus=0.0200
+
+> MSE es el error medio cuadrático que se obtuvo de la tabla ANOVA [SSE/(n – k)]. n1 es el número de observaciones en la primera muestra. n2 es el número de observaciones en la segunda muestra. ¿Cómo se decide si hay una diferencia entre las medias de tratamiento? Si el intervalo de confianza incluye cero, no existe diferencia entre ellas. Por ejemplo, si el punto extremo izquierdo del intervalo de confianza tiene signo negativo y el punto extremo derecho tiene signo positivo, el intervalo incluye cero, y las dos medias no difieren.
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.0696
+
+**Detalle de puntaje:** tfidf=0.0496; bonus=0.0200
+
+> Valor 5% Formato de Entrega El documento deberá entregarse en formato PDF letra Arial 11, interlineado 1.5 texto justificado y portada oficial Tipo de entrega individual Portada Oficial Click aquí Conceptos nucleares de la actividad: estimadores puntuales comunes insesgamiento eficiencia y consistencia intervalo de confianza para la media con sigma conocida intervalo de confianza para la media con distribución t de Student intervalo de confianza para una proporción poblacional intervalo de confianza para la varianza con distribución ji-cuadrada grados de libertad en estimación nivel de confianza y riesgo alfa precisión y amplitud del intervalo aplicaciones de estimación en finanzas y...
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 1 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 07. cómo construye
+
+**Calidad estimada:** alta
+**Mejor similitud:** 0.3033
+**Similitud promedio:** 0.3033
+**Fuentes:** 00-consigna-y-planeacion-A07.txt
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.3033
+
+**Detalle de puntaje:** tfidf=0.2833; bonus=0.0200
+
+> Diferencias y ventajas de cada tipo de estimación. 3.3 Intervalos de confianza para medias, proporciones y varianzas ¿Cómo se construye un intervalo de confianza para la media? ¿Cómo se construye un intervalo de confianza para una proporción? ¿Cómo se construye un intervalo de confianza para la varianza? Ejemplos numéricos sencillos.
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado.
+
+## Ficha 08. cómo construye intervalo
+
+**Calidad estimada:** alta
+**Mejor similitud:** 0.4135
+**Similitud promedio:** 0.1007
+**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 5; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 3; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 3; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 4
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.4135
+
+**Detalle de puntaje:** tfidf=0.3835; bonus=0.0300
+
+> Diferencias y ventajas de cada tipo de estimación. 3.3 Intervalos de confianza para medias, proporciones y varianzas ¿Cómo se construye un intervalo de confianza para la media? ¿Cómo se construye un intervalo de confianza para una proporción? ¿Cómo se construye un intervalo de confianza para la varianza? Ejemplos numéricos sencillos.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 5 — similitud 0.0507
+
+**Detalle de puntaje:** tfidf=0.0307; bonus=0.0200
+
+> MSE es el error medio cuadrático que se obtuvo de la tabla ANOVA [SSE/(n – k)]. n1 es el número de observaciones en la primera muestra. n2 es el número de observaciones en la segunda muestra. ¿Cómo se decide si hay una diferencia entre las medias de tratamiento? Si el intervalo de confianza incluye cero, no existe diferencia entre ellas.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 1 — similitud 0.0380
+
+**Detalle de puntaje:** tfidf=0.0180; bonus=0.0200
+
+> Por lo tanto, 95% y 99% son los niveles de confianza y se refieren al porcentaje de intervalos simi- larmente construidos que incluirían el parámetro a calcular, en este caso, . ¿Cómo se obtienen los valores de 1.96 y 2.58? En el caso del intervalo de confianza de 95%, vea el siguiente diagrama y consulte el apéndice B.1 para determinar los valores z ade- cuados.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 3 — similitud 0.0353
+
+**Detalle de puntaje:** tfidf=0.0153; bonus=0.0200
+
+> (8.6) donde 1  α es el coeficiente de confianza y zα/2 es el valor de z que deja un área α/2  en la cola superior de la distribución normal estándar. En el siguiente ejemplo se ilustra el cálculo del margen de error y de la estimación por  intervalo para una proporción poblacional. Un estudio en Estados Unidos encuestó a 900 mu- jeres golﬁ stas para conocer su opinión acerca de cómo se les trataba en los cursos de golf.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 4 — similitud 0.0337
+
+**Detalle de puntaje:** tfidf=0.0137; bonus=0.0200
+
+> Use Minitab o  Excel para contestar las preguntas siguientes. a) ¿Cuál es la media muestral del número de minutos que se requiere para programar por  teléfono los vuelos ganados? b) Proporcione el intervalo de confianza de 95% para la media poblacional del tiempo reque- rido para programar por teléfono los vuelos. c)  Suponga que un agente de boletos por teléfono trabaja 7.5 horas por día. ¿Cuántos vuelos  ganados se espera que atienda en un día? d) Diga cómo esta información apoya el plan de US Airways de usar un sistema en línea para  reducir costos. 49.
+
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 3 — similitud 0.0328
+
+**Detalle de puntaje:** tfidf=0.0128; bonus=0.0200
+
+> En cada ejemplo, la distribución normal era la distri- bución de muestreo adecuada para determinar intervalos de confianza. Sin embargo, no siempre es éste el caso. ¿Cómo podríamos tratar estimaciones en las que la dis- tribución normal no es la distribución de muestreo adecuada, es decir, cuando se estima la desvia- ción estándar de la población y el tamaño de muestra es 30 o menos? Por ejemplo, en el problema con que abrimos el capítulo, referente al uso del carbón, tenemos datos que sólo comprenden 10 sema- nas.
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 5 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 09. eficiencia consistencia
+
+**Calidad estimada:** baja
+**Mejor similitud:** 0.1229
+**Similitud promedio:** 0.1166
+**Fuentes:** 00-consigna-y-planeacion-A07.txt
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.1229
+
+**Detalle de puntaje:** tfidf=0.1029; bonus=0.0200
+
+> Valor 5% Formato de Entrega El documento deberá entregarse en formato PDF letra Arial 11, interlineado 1.5 texto justificado y portada oficial Tipo de entrega individual Portada Oficial Click aquí Conceptos nucleares de la actividad: estimadores puntuales comunes insesgamiento eficiencia y consistencia intervalo de confianza para la media con sigma conocida intervalo de confianza para la media con distribución t de Student intervalo de confianza para una proporción poblacional intervalo de confianza para la varianza con distribución ji-cuadrada grados de libertad en estimación nivel de confianza y riesgo alfa precisión y amplitud del intervalo aplicaciones de estimación en finanzas y...
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.1104
+
+**Detalle de puntaje:** tfidf=0.0904; bonus=0.0200
+
+> Temas a desarrollar 3.1 Estimadores Definición de estimador. Propiedades de los estimadores: insesgamiento, eficiencia y consistencia. Ejemplos de estimadores comunes (media muestral, proporción muestral, varianza muestral).
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon varias referencias dentro de la misma fuente.
+
+## Ficha 10. estimación
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2544
+**Similitud promedio:** 0.2004
+**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 2
+
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.2544
+
+**Detalle de puntaje:** tfidf=0.1844; bonus=0.0700
+
+> Tipos de estimaciones Podemos hacer dos tipos de estimaciones concernientes a una población: una estimación puntual y una estimación de intervalo. Una estimación puntual es un solo número que se utiliza para esti- mar un parámetro de población desconocido.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 2 — similitud 0.2238
+
+**Detalle de puntaje:** tfidf=0.1538; bonus=0.0700
+
+> [Bloque seleccionado #351 | relevancia=24] Pagina 350 316  Capítulo 8 Estimación por intervalo a) Proporcione un intervalo de estimación de 90% de confianza para la media poblacional. b) Calcule un intervalo de 95%. c)  Proporcione ahora un intervalo de estimación de 99%. d) ¿Qué le sucede a la amplitud del intervalo de confianza a medida que el nivel de confianza  aumenta? ¿Parece esto razonable? Explique.
+
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.2149
+
+**Detalle de puntaje:** tfidf=0.1449; bonus=0.0700
+
+> Pero si está equivocada en 90 estudiantes, la rechazaría como es- timación de la inscripción futura. Entonces, una estimación puntual es mucho más útil si viene acom- pañada por una estimación del error que podría estar implicado. Una estimación de intervalo es un conjunto de valores que se utiliza para estimar un pará- metro de la población.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 1 — similitud 0.1802
+
+**Detalle de puntaje:** tfidf=0.1102; bonus=0.0700
+
+> Use este conjunto de datos para efectuar lo que se solicita en los incisos siguientes. a) Calcule una estimación puntual de la proporción de fondos de inversión de BusinessWeek  que son fondos de cargo. b) Desarrolle una estimación puntual de la proporción de fondos clasificados como de alto  riesgo. c)   Calcule una estimación puntual de la proporción de fondos con una puntuación abajo del  promedio para el riesgo. 15.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 2 — similitud 0.1672
+
+**Detalle de puntaje:** tfidf=0.0972; bonus=0.0700
+
+> [Bloque seleccionado #364 | relevancia=24] Pagina 363 8.4 Proporción poblacional  329 ximación normal a la distribución de muestreo de p. La media de la distribución de muestreo de  p es la proporción poblacional p, y el error estándar de p es σp   p(1  p) n (8.4) Como la distribución de muestreo de p es una distribución normal, si en la estimación por inter- valo de la proporción poblacional se elige como margen de error zα/2σp , entonces 100(1  α)%  de los intervalos que se obtengan contendrán la verdadera proporción poblacional. Pero para  calcular el margen de error no se puede usar directamente σp, ya que no se conoce p, pues se  está tratando de estimarlo.
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.1621
+
+**Detalle de puntaje:** tfidf=0.0921; bonus=0.0700
+
+> Estimación Actividad 7: 3.1 Investigación 5% Tarea — Métodos de estimación puntual y por intervalos para medias, proporciones y varianzas Subtítulo editorial: Actividad 7: Reporte de investigación Tipo de producto: investigacion_aplicada Requisitos e instrucciones de la actividad: Nombre de la Actividad Reporte de Investigación Descripción El estudiante iniciará el análisis y comprensión de los conceptos fundamentales relacionados con la estimación estadística, a través de la investigación y sistematización de información teórica y aplicada, que le permita comprender los métodos de estimación puntual y por intervalos, así como sus propiedades y aplicaciones.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 11. estimación puntual
+
+**Calidad estimada:** alta
+**Mejor similitud:** 0.3638
+**Similitud promedio:** 0.2430
+**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 4
+
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.3638
+
+**Detalle de puntaje:** tfidf=0.2838; bonus=0.0800
+
+> Tipos de estimaciones Podemos hacer dos tipos de estimaciones concernientes a una población: una estimación puntual y una estimación de intervalo. Una estimación puntual es un solo número que se utiliza para esti- mar un parámetro de población desconocido.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 1 — similitud 0.3212
+
+**Detalle de puntaje:** tfidf=0.2412; bonus=0.0800
+
+> Use este conjunto de datos para efectuar lo que se solicita en los incisos siguientes. a) Calcule una estimación puntual de la proporción de fondos de inversión de BusinessWeek  que son fondos de cargo. b) Desarrolle una estimación puntual de la proporción de fondos clasificados como de alto  riesgo. c)   Calcule una estimación puntual de la proporción de fondos con una puntuación abajo del  promedio para el riesgo. 15.
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2018
+
+**Detalle de puntaje:** tfidf=0.1218; bonus=0.0800
+
+> Estimación Actividad 7: 3.1 Investigación 5% Tarea — Métodos de estimación puntual y por intervalos para medias, proporciones y varianzas Subtítulo editorial: Actividad 7: Reporte de investigación Tipo de producto: investigacion_aplicada Requisitos e instrucciones de la actividad: Nombre de la Actividad Reporte de Investigación Descripción El estudiante iniciará el análisis y comprensión de los conceptos fundamentales relacionados con la estimación estadística, a través de la investigación y sistematización de información teórica y aplicada, que le permita comprender los métodos de estimación puntual y por intervalos, así como sus propiedades y aplicaciones.
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2002
+
+**Detalle de puntaje:** tfidf=0.1202; bonus=0.0800
+
+> Ejemplos de estimadores comunes (media muestral, proporción muestral, varianza muestral). 3.2 Estimación puntual y por intervalos ¿Qué es una estimación puntual? ¿Qué es una estimación por intervalos (intervalo de confianza)? Diferencias y ventajas de cada tipo de estimación.
+
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.1880
+
+**Detalle de puntaje:** tfidf=0.1080; bonus=0.0800
+
+> Pero si está equivocada en 90 estudiantes, la rechazaría como es- timación de la inscripción futura. Entonces, una estimación puntual es mucho más útil si viene acom- pañada por una estimación del error que podría estar implicado. Una estimación de intervalo es un conjunto de valores que se utiliza para estimar un pará- metro de la población.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 4 — similitud 0.1832
+
+**Detalle de puntaje:** tfidf=0.1032; bonus=0.0800
+
+> A continuación aparece una muestra aleatoria de 30 firmas que cotizan en la  Bolsa de Valores de Nueva York (NYSE) (Barron’s, 19 de enero de 2004). a) Proporcione una estimación puntual para la razón poblacional P/E de las acciones que  cotizan en la Bolsa de Valores de Nueva York. Maneje un intervalo de confianza de  95%. b) Con base en su respuesta del inciso a), ¿considera usted que el mercado está sobrevaluado? c)  Proporcione una estimación puntual de la proporción de empresas en la NYSE que pagan  dividendos. ¿El tamaño de la muestra es suficientemente grande para justificar el empleo  de la distribución normal en el cálculo de un intervalo de confianza para esta proporción?  ¿Por qué?
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 12. estimación puntual intervalos
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2346
+**Similitud promedio:** 0.1540
+**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt, bloque 3; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 1
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2346
+
+**Detalle de puntaje:** tfidf=0.2046; bonus=0.0300
+
+> Estimación Actividad 7: 3.1 Investigación 5% Tarea — Métodos de estimación puntual y por intervalos para medias, proporciones y varianzas Subtítulo editorial: Actividad 7: Reporte de investigación Tipo de producto: investigacion_aplicada Requisitos e instrucciones de la actividad: Nombre de la Actividad Reporte de Investigación Descripción El estudiante iniciará el análisis y comprensión de los conceptos fundamentales relacionados con la estimación estadística, a través de la investigación y sistematización de información teórica y aplicada, que le permita comprender los métodos de estimación puntual y por intervalos, así como sus propiedades y aplicaciones.
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2129
+
+**Detalle de puntaje:** tfidf=0.1829; bonus=0.0300
+
+> Ejemplos de estimadores comunes (media muestral, proporción muestral, varianza muestral). 3.2 Estimación puntual y por intervalos ¿Qué es una estimación puntual? ¿Qué es una estimación por intervalos (intervalo de confianza)? Diferencias y ventajas de cada tipo de estimación.
+
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.1677
+
+**Detalle de puntaje:** tfidf=0.1477; bonus=0.0200
+
+> Tipos de estimaciones Podemos hacer dos tipos de estimaciones concernientes a una población: una estimación puntual y una estimación de intervalo. Una estimación puntual es un solo número que se utiliza para esti- mar un parámetro de población desconocido.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 1 — similitud 0.1456
+
+**Detalle de puntaje:** tfidf=0.1256; bonus=0.0200
+
+> Use este conjunto de datos para efectuar lo que se solicita en los incisos siguientes. a) Calcule una estimación puntual de la proporción de fondos de inversión de BusinessWeek  que son fondos de cargo. b) Desarrolle una estimación puntual de la proporción de fondos clasificados como de alto  riesgo. c)   Calcule una estimación puntual de la proporción de fondos con una puntuación abajo del  promedio para el riesgo. 15.
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt — bloque 3 — similitud 0.0868
+
+**Detalle de puntaje:** tfidf=0.0768; bonus=0.0100
+
+> Resumen de intervalos de confi anza de muestra pequeña para medias de distribu- ciones normales con varianza(s) desconocida(s) Cuando el tamaño (o tamaños) de la muestra se hace grande, el número de grados de liber- tad para la distribución t aumenta y la distribución t puede ser calculada en forma muy precisa  por la distribución normal estándar. En consecuencia, los intervalos de confi anza de una mues- tra pequeña de esta sección son casi indistinguibles respecto de los intervalos de confi anza de  muestra grande de la Sección 8.6 para n grande (o n1 y n2 grandes).
+
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.0762
+
+**Detalle de puntaje:** tfidf=0.0562; bonus=0.0200
+
+> Pero si está equivocada en 90 estudiantes, la rechazaría como es- timación de la inscripción futura. Entonces, una estimación puntual es mucho más útil si viene acom- pañada por una estimación del error que podría estar implicado. Una estimación de intervalo es un conjunto de valores que se utiliza para estimar un pará- metro de la población.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 1 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 13. estimadores puntuales comunes
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2318
+**Similitud promedio:** 0.1167
+**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt, bloque 2
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2318
+
+**Detalle de puntaje:** tfidf=0.1418; bonus=0.0900
+
+> Valor 5% Formato de Entrega El documento deberá entregarse en formato PDF letra Arial 11, interlineado 1.5 texto justificado y portada oficial Tipo de entrega individual Portada Oficial Click aquí Conceptos nucleares de la actividad: estimadores puntuales comunes insesgamiento eficiencia y consistencia intervalo de confianza para la media con sigma conocida intervalo de confianza para la media con distribución t de Student intervalo de confianza para una proporción poblacional intervalo de confianza para la varianza con distribución ji-cuadrada grados de libertad en estimación nivel de confianza y riesgo alfa precisión y amplitud del intervalo aplicaciones de estimación en finanzas y...
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.0903
+
+**Detalle de puntaje:** tfidf=0.0703; bonus=0.0200
+
+> Propiedades de los estimadores: insesgamiento, eficiencia y consistencia. Ejemplos de estimadores comunes (media muestral, proporción muestral, varianza muestral). 3.2 Estimación puntual y por intervalos ¿Qué es una estimación puntual? ¿Qué es una estimación por intervalos (intervalo de confianza)?
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt — bloque 2 — similitud 0.0749
+
+**Detalle de puntaje:** tfidf=0.0549; bonus=0.0200
+
+> En otras palabras, quisiéramos que la media o valor esperado de la  distribución de estimaciones fuera igual al parámetro estimado; esto es, E( )ˆu = u. Se dice  que los estimadores puntuales que satisfacen esta propiedad son insesgados. La distribución  muestral para un estimador puntual sesgado positivamente, para el que E( )ˆu > u, se muestra  en la Figura 8.2.
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt — bloque 2 — similitud 0.0699
+
+**Detalle de puntaje:** tfidf=0.0499; bonus=0.0200
+
+> 7.34  Suponga que W1 y W2 son variables aleatorias independientes y con distribución x2 con n1 y n2 grados  de libertad, respectivamente. De acu [Bloque seleccionado #417 | relevancia=6] Pagina 416 392 Capítulo 8 Estimación 8.2 Sesgo y error cuadrático medio  de estimadores puntuales La estimación puntual es similar, en muchos aspectos, a disparar a un blanco con un revól- ver.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 2 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 14. grados de libertad en estimación
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2322
+**Similitud promedio:** 0.2008
+**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt, bloque 2; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 5; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 2
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt — bloque 2 — similitud 0.2322
+
+**Detalle de puntaje:** tfidf=0.2122; bonus=0.0200
+
+> ii  ( ) V (T ) = n/(n −2), si > 2. n 7.31  a Use la Tabla 7, Apéndice 3, para hallar F.01 para variables aleatorias con distribución F, todas con  4 grados de libertad en el numerador, pero con grados de libertad en el denominador de 10, 15, 30,  60, 120 e q. b Consulte el inciso a. ¿Qué observa acerca de los valores de F.01 conforme aumenta el número de  grados de libertad del denominador? c ¿Cuál es χ 2 .01 para una variable aleatoria con distribución x2 y 4 grados de libertad? d Divida el valor de χ 2 .01 (4 grados de libertad) del inciso c entre el valor de F.01 (4 grados de libertad  en el numerador; grados de libertad = q en el denominador).
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt — bloque 2 — similitud 0.2248
+
+**Detalle de puntaje:** tfidf=0.1948; bonus=0.0300
+
+> d Compare el valor de F.10 hallado en el inciso c con el valor de t2 .05 de los incisos a y b. e En el Ejercicio 7.33 usted demostrará que si T tiene una distribución t con n grados de libertad,  entonces U = T 2 tiene una distribución F con 1 grado de libertad en el numerador y n grados del li- bertad del denominador. ¿Cómo explica esto la relación entre los valores de F.10 (1 grado de libertad  1 en el numerador, 5 grados de libertad en el denominador) y t2 .05 (5 grados de libertad) que observó  en el inciso d?
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2079
+
+**Detalle de puntaje:** tfidf=0.1179; bonus=0.0900
+
+> Valor 5% Formato de Entrega El documento deberá entregarse en formato PDF letra Arial 11, interlineado 1.5 texto justificado y portada oficial Tipo de entrega individual Portada Oficial Click aquí Conceptos nucleares de la actividad: estimadores puntuales comunes insesgamiento eficiencia y consistencia intervalo de confianza para la media con sigma conocida intervalo de confianza para la media con distribución t de Student intervalo de confianza para una proporción poblacional intervalo de confianza para la varianza con distribución ji-cuadrada grados de libertad en estimación nivel de confianza y riesgo alfa precisión y amplitud del intervalo aplicaciones de estimación en finanzas y...
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 2 — similitud 0.2076
+
+**Detalle de puntaje:** tfidf=0.1776; bonus=0.0300
+
+> De manera similar,  en la distribución t con 60 grados de libertad, t0.025  2.000. A medida que estos grados aumen- tan, t0.025 se aproxima a z0.025  1.96.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 2 — similitud 0.1942
+
+**Detalle de puntaje:** tfidf=0.1742; bonus=0.0200
+
+> Más adelante, en esta  misma sección se proporcionan lineamientos para usar la distribución t cuando la población no  está distribuida normalmente. La distribución t es una familia de distribuciones de probabilidad similar, y cada una de- pende de un parámetro conocido como grados de libertad. La distribución t para un grado de  libertad es única, como lo es para dos grados o tres grados de libertad, etc.
+
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 5 — similitud 0.1380
+
+**Detalle de puntaje:** tfidf=0.1180; bonus=0.0200
+
+> En la figura 11-1 se indican las tres diferentes distribuciones ji-cua- drada correspondientes a 1, 5 y 10 grados de libertad. Para un número muy pequeño de grados de libertad, la distribución ji-cuadrada está seriamente sesgada a la derecha.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 15. insesgamiento eficiencia
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.1791
+**Similitud promedio:** 0.1050
+**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 1
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.1791
+
+**Detalle de puntaje:** tfidf=0.0991; bonus=0.0800
+
+> Valor 5% Formato de Entrega El documento deberá entregarse en formato PDF letra Arial 11, interlineado 1.5 texto justificado y portada oficial Tipo de entrega individual Portada Oficial Click aquí Conceptos nucleares de la actividad: estimadores puntuales comunes insesgamiento eficiencia y consistencia intervalo de confianza para la media con sigma conocida intervalo de confianza para la media con distribución t de Student intervalo de confianza para una proporción poblacional intervalo de confianza para la varianza con distribución ji-cuadrada grados de libertad en estimación nivel de confianza y riesgo alfa precisión y amplitud del intervalo aplicaciones de estimación en finanzas y...
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.1670
+
+**Detalle de puntaje:** tfidf=0.0870; bonus=0.0800
+
+> Temas a desarrollar 3.1 Estimadores Definición de estimador. Propiedades de los estimadores: insesgamiento, eficiencia y consistencia. Ejemplos de estimadores comunes (media muestral, proporción muestral, varianza muestral).
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 1 — similitud 0.0372
+
+**Detalle de puntaje:** tfidf=0.0272; bonus=0.0100
+
+> Fuente bibliográfica: Estadística aplicada a los negocios y la economía - Lind, Marchal y Wathen. 15.ª edición.pdf Actividad: 7 (3.1 Investigación 5% Tarea) Palabras clave: estimación puntual, intervalo de confianza, distribución t, ji-cuadrada, varianza poblacional, proporción poblacional, insesgamiento [Bloque seleccionado #326 | relevancia=16] Pagina 325 Desviación estándar de la población conocida () Un intervalo de confianza se calcula con el empleo de dos estadísticos: la media muestral  y la desviación estándar.
+
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.0367
+
+**Detalle de puntaje:** tfidf=0.0267; bonus=0.0100
+
+> Fuente bibliográfica: Estadística para administración y economía - Levin y Rubin. 7.ª edición revisada.pdf Actividad: 7 (3.1 Investigación 5% Tarea) Palabras clave: estimación puntual, intervalo de confianza, distribución t, ji-cuadrada, varianza poblacional, proporción poblacional, insesgamiento [Bloque seleccionado #294 | relevancia=14] Pagina 293 En este capítulo introducimos métodos que nos permiten estimar con precisión razonable la proporción de la población (la fracción de la población que posee una característica dada) y la me- dia de la población. Calcular la proporción exacta o la media exacta sería una meta imposible.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 2 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 16. insesgamiento eficiencia consistencia
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.1729
+**Similitud promedio:** 0.1642
+**Fuentes:** 00-consigna-y-planeacion-A07.txt
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.1729
+
+**Detalle de puntaje:** tfidf=0.1429; bonus=0.0300
+
+> Valor 5% Formato de Entrega El documento deberá entregarse en formato PDF letra Arial 11, interlineado 1.5 texto justificado y portada oficial Tipo de entrega individual Portada Oficial Click aquí Conceptos nucleares de la actividad: estimadores puntuales comunes insesgamiento eficiencia y consistencia intervalo de confianza para la media con sigma conocida intervalo de confianza para la media con distribución t de Student intervalo de confianza para una proporción poblacional intervalo de confianza para la varianza con distribución ji-cuadrada grados de libertad en estimación nivel de confianza y riesgo alfa precisión y amplitud del intervalo aplicaciones de estimación en finanzas y...
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.1555
+
+**Detalle de puntaje:** tfidf=0.1255; bonus=0.0300
+
+> Temas a desarrollar 3.1 Estimadores Definición de estimador. Propiedades de los estimadores: insesgamiento, eficiencia y consistencia. Ejemplos de estimadores comunes (media muestral, proporción muestral, varianza muestral).
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon varias referencias dentro de la misma fuente.
+
+## Ficha 17. insesgamiento eficiencia y consistencia
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2329
+**Similitud promedio:** 0.2242
+**Fuentes:** 00-consigna-y-planeacion-A07.txt
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2329
+
+**Detalle de puntaje:** tfidf=0.1429; bonus=0.0900
+
+> Valor 5% Formato de Entrega El documento deberá entregarse en formato PDF letra Arial 11, interlineado 1.5 texto justificado y portada oficial Tipo de entrega individual Portada Oficial Click aquí Conceptos nucleares de la actividad: estimadores puntuales comunes insesgamiento eficiencia y consistencia intervalo de confianza para la media con sigma conocida intervalo de confianza para la media con distribución t de Student intervalo de confianza para una proporción poblacional intervalo de confianza para la varianza con distribución ji-cuadrada grados de libertad en estimación nivel de confianza y riesgo alfa precisión y amplitud del intervalo aplicaciones de estimación en finanzas y...
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2155
+
+**Detalle de puntaje:** tfidf=0.1255; bonus=0.0900
+
+> Temas a desarrollar 3.1 Estimadores Definición de estimador. Propiedades de los estimadores: insesgamiento, eficiencia y consistencia. Ejemplos de estimadores comunes (media muestral, proporción muestral, varianza muestral).
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon varias referencias dentro de la misma fuente.
+
+## Ficha 18. interlineado justificado
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2073
+**Similitud promedio:** 0.2073
+**Fuentes:** 00-consigna-y-planeacion-A07.txt
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2073
+
+**Detalle de puntaje:** tfidf=0.1873; bonus=0.0200
+
+> Presenta la información de manera clara y estructurada. El formato  del ensayo es: Arial 11, Interlineado 1.5, Justificado El extenso del reporte es máximo 3 cuartillas sin considerar portada y fuentes.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita.
+
+## Ficha 19. intervalo confianza
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2724
+**Similitud promedio:** 0.2301
+**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 5; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 1
+
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.2724
+
+**Detalle de puntaje:** tfidf=0.2524; bonus=0.0200
+
+> En la figura 7-2, por ejemplo, utili- zamos un nivel de confianza del 95.5%. El intervalo de confianza es el rango de la estimación que estamos haciendo. Si informamos que tenemos el 90% de confianza de que la media de la población de ingresos de las personas que viven en una cierta comunidad está entre $8,000 y $24,000, entonces el rango $8,000-$24,000 es nuestro intervalo de confianza.
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2450
+
+**Detalle de puntaje:** tfidf=0.2250; bonus=0.0200
+
+> Ejemplos de estimadores comunes (media muestral, proporción muestral, varianza muestral). 3.2 Estimación puntual y por intervalos ¿Qué es una estimación puntual? ¿Qué es una estimación por intervalos (intervalo de confianza)? Diferencias y ventajas de cada tipo de estimación.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 1 — similitud 0.2312
+
+**Detalle de puntaje:** tfidf=0.2112; bonus=0.0200
+
+> En una muestra aleatoria simple de 50 artículos de una población en la que σ  6, la media  muestral resultante es 32. a) Proporcione un intervalo de confianza de 90% para la media poblacional. b) Calcule un intervalo de confianza de 95% para la media poblacional. c)  Proporcione un intervalo de confianza de 99% para el mismo indicador. 3.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 1 — similitud 0.2288
+
+**Detalle de puntaje:** tfidf=0.2088; bonus=0.0200
+
+> Fuente bibliográfica: Estadística aplicada a los negocios y la economía - Lind, Marchal y Wathen. 15.ª edición.pdf Actividad: 7 (3.1 Investigación 5% Tarea) Palabras clave: estimación puntual, intervalo de confianza, distribución t, ji-cuadrada, varianza poblacional, proporción poblacional, insesgamiento [Bloque seleccionado #326 | relevancia=16] Pagina 325 Desviación estándar de la población conocida () Un intervalo de confianza se calcula con el empleo de dos estadísticos: la media muestral  y la desviación estándar.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 5 — similitud 0.2190
+
+**Detalle de puntaje:** tfidf=0.1990; bonus=0.0200
+
+> MSE es el error medio cuadrático que se obtuvo de la tabla ANOVA [SSE/(n – k)]. n1 es el número de observaciones en la primera muestra. n2 es el número de observaciones en la segunda muestra. ¿Cómo se decide si hay una diferencia entre las medias de tratamiento? Si el intervalo de confianza incluye cero, no existe diferencia entre ellas. Por ejemplo, si el punto extremo izquierdo del intervalo de confianza tiene signo negativo y el punto extremo derecho tiene signo positivo, el intervalo incluye cero, y las dos medias no difieren.
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.1842
+
+**Detalle de puntaje:** tfidf=0.1642; bonus=0.0200
+
+> Valor 5% Formato de Entrega El documento deberá entregarse en formato PDF letra Arial 11, interlineado 1.5 texto justificado y portada oficial Tipo de entrega individual Portada Oficial Click aquí Conceptos nucleares de la actividad: estimadores puntuales comunes insesgamiento eficiencia y consistencia intervalo de confianza para la media con sigma conocida intervalo de confianza para la media con distribución t de Student intervalo de confianza para una proporción poblacional intervalo de confianza para la varianza con distribución ji-cuadrada grados de libertad en estimación nivel de confianza y riesgo alfa precisión y amplitud del intervalo aplicaciones de estimación en finanzas y...
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 20. intervalo de confianza para la media con distribución t de Student
+
+**Calidad estimada:** alta
+**Mejor similitud:** 0.3291
+**Similitud promedio:** 0.1665
+**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt; libro-estadistica-spiegel-y-stephens-4-a-edicion-A07.txt
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 3; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 1; libro-estadistica-spiegel-y-stephens-4-a-edicion-A07.txt, bloque 4
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.3291
+
+**Detalle de puntaje:** tfidf=0.2291; bonus=0.1000
+
+> Valor 5% Formato de Entrega El documento deberá entregarse en formato PDF letra Arial 11, interlineado 1.5 texto justificado y portada oficial Tipo de entrega individual Portada Oficial Click aquí Conceptos nucleares de la actividad: estimadores puntuales comunes insesgamiento eficiencia y consistencia intervalo de confianza para la media con sigma conocida intervalo de confianza para la media con distribución t de Student intervalo de confianza para una proporción poblacional intervalo de confianza para la varianza con distribución ji-cuadrada grados de libertad en estimación nivel de confianza y riesgo alfa precisión y amplitud del intervalo aplicaciones de estimación en finanzas y...
+
+### libro-estadistica-spiegel-y-stephens-4-a-edicion-A07.txt — bloque 4 — similitud 0.1445
+
+**Detalle de puntaje:** tfidf=0.1145; bonus=0.0300
+
+> En la práctica, como  muestra 1 se considera la muestra que tenga la mayor varianza. El software para estadística permite encontrar las áreas bajo la distribución t de Student, la distribución ji cuadrada  y la distribución F. Este software también permite trazar las distintas distribuciones.
+
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 3 — similitud 0.1418
+
+**Detalle de puntaje:** tfidf=0.1118; bonus=0.0300
+
+> Gosset era empleado de la Cervecería Guinness en Dublín, Irlanda; la empresa no permitía que los empleados publicaran sus hallazgos de investigación con su propio nombre. De modo que Gosset adoptó el seudónimo de Student para publicar. En consecuencia, la distribución t se conoce como distribución t de Student o simplemente distribución de Student.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 1 — similitud 0.1340
+
+**Detalle de puntaje:** tfidf=0.0940; bonus=0.0400
+
+> En este artículo describió por primera vez las pro- piedades de la distribu- ción t. GRÁFICA 9-1 Distribución normal estándar y distribución t de Student 0 Distribución z Distribución t Las siguientes características de la distribución t se basan en el supuesto de que la pobla- ción de interés es de naturaleza normal, o casi normal. • Como en el caso de la distribución z, es una distribución continua. • Como en el caso de la distribución z, tiene forma de campana y es simétrica. • No existe una distribución t, sino una familia de distribuciones t. Todas las distribuciones t tienen una media de 0, y sus desviaciones estándares difieren de acuerdo con el tama- ño de la muestra, n.
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.1300
+
+**Detalle de puntaje:** tfidf=0.0900; bonus=0.0400
+
+> Diferencias y ventajas de cada tipo de estimación. 3.3 Intervalos de confianza para medias, proporciones y varianzas ¿Cómo se construye un intervalo de confianza para la media? ¿Cómo se construye un intervalo de confianza para una proporción? ¿Cómo se construye un intervalo de confianza para la varianza? Ejemplos numéricos sencillos.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 1 — similitud 0.1192
+
+**Detalle de puntaje:** tfidf=0.0792; bonus=0.0400
 
 > En una muestra aleatoria simple de 50 artículos de una población en la que σ  6, la media  muestral resultante es 32. a) Proporcione un intervalo de confianza de 90% para la media poblacional. b) Calcule un intervalo de confianza de 95% para la media poblacional. c)  Proporcione un intervalo de confianza de 99% para el mismo indicador. 3.
 
 **Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
 
-## Ficha 05. intervalo de confianza para una proporción poblacional
+## Ficha 21. intervalo de confianza para la media con sigma conocida
 
 **Calidad estimada:** alta
-**Mejor similitud:** 0.3105
-**Similitud promedio:** 0.2216
+**Mejor similitud:** 0.3369
+**Similitud promedio:** 0.1434
+**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 2
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.3369
+
+**Detalle de puntaje:** tfidf=0.2369; bonus=0.1000
+
+> Valor 5% Formato de Entrega El documento deberá entregarse en formato PDF letra Arial 11, interlineado 1.5 texto justificado y portada oficial Tipo de entrega individual Portada Oficial Click aquí Conceptos nucleares de la actividad: estimadores puntuales comunes insesgamiento eficiencia y consistencia intervalo de confianza para la media con sigma conocida intervalo de confianza para la media con distribución t de Student intervalo de confianza para una proporción poblacional intervalo de confianza para la varianza con distribución ji-cuadrada grados de libertad en estimación nivel de confianza y riesgo alfa precisión y amplitud del intervalo aplicaciones de estimación en finanzas y...
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.1198
+
+**Detalle de puntaje:** tfidf=0.0798; bonus=0.0400
+
+> Diferencias y ventajas de cada tipo de estimación. 3.3 Intervalos de confianza para medias, proporciones y varianzas ¿Cómo se construye un intervalo de confianza para la media? ¿Cómo se construye un intervalo de confianza para una proporción? ¿Cómo se construye un intervalo de confianza para la varianza? Ejemplos numéricos sencillos.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 1 — similitud 0.1103
+
+**Detalle de puntaje:** tfidf=0.0703; bonus=0.0400
+
+> En una muestra aleatoria simple de 50 artículos de una población en la que σ  6, la media  muestral resultante es 32. a) Proporcione un intervalo de confianza de 90% para la media poblacional. b) Calcule un intervalo de confianza de 95% para la media poblacional. c)  Proporcione un intervalo de confianza de 99% para el mismo indicador. 3.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 2 — similitud 0.1018
+
+**Detalle de puntaje:** tfidf=0.0618; bonus=0.0400
+
+> [Bloque seleccionado #351 | relevancia=24] Pagina 350 316  Capítulo 8 Estimación por intervalo a) Proporcione un intervalo de estimación de 90% de confianza para la media poblacional. b) Calcule un intervalo de 95%. c)  Proporcione ahora un intervalo de estimación de 99%. d) ¿Qué le sucede a la amplitud del intervalo de confianza a medida que el nivel de confianza  aumenta? ¿Parece esto razonable? Explique.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 1 — similitud 0.0975
+
+**Detalle de puntaje:** tfidf=0.0575; bonus=0.0400
+
+> Fuente bibliográfica: Estadística aplicada a los negocios y la economía - Lind, Marchal y Wathen. 15.ª edición.pdf Actividad: 7 (3.1 Investigación 5% Tarea) Palabras clave: estimación puntual, intervalo de confianza, distribución t, ji-cuadrada, varianza poblacional, proporción poblacional, insesgamiento [Bloque seleccionado #326 | relevancia=16] Pagina 325 Desviación estándar de la población conocida () Un intervalo de confianza se calcula con el empleo de dos estadísticos: la media muestral  y la desviación estándar.
+
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.0944
+
+**Detalle de puntaje:** tfidf=0.0644; bonus=0.0300
+
+> El intervalo de confianza es el rango de la estimación que estamos haciendo. Si informamos que tenemos el 90% de confianza de que la media de la población de ingresos de las personas que viven en una cierta comunidad está entre $8,000 y $24,000, entonces el rango $8,000-$24,000 es nuestro intervalo de confianza. A menudo, sin embargo, expresaremos el intervalo de confianza en términos de errores estándar, más que con valores numéricos.
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 22. intervalo de confianza para la varianza con distribución ji-cuadrada
+
+**Calidad estimada:** alta
+**Mejor similitud:** 0.2970
+**Similitud promedio:** 0.1704
+**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 5; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 5
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2970
+
+**Detalle de puntaje:** tfidf=0.1970; bonus=0.1000
+
+> Valor 5% Formato de Entrega El documento deberá entregarse en formato PDF letra Arial 11, interlineado 1.5 texto justificado y portada oficial Tipo de entrega individual Portada Oficial Click aquí Conceptos nucleares de la actividad: estimadores puntuales comunes insesgamiento eficiencia y consistencia intervalo de confianza para la media con sigma conocida intervalo de confianza para la media con distribución t de Student intervalo de confianza para una proporción poblacional intervalo de confianza para la varianza con distribución ji-cuadrada grados de libertad en estimación nivel de confianza y riesgo alfa precisión y amplitud del intervalo aplicaciones de estimación en finanzas y...
+
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 5 — similitud 0.1604
+
+**Detalle de puntaje:** tfidf=0.1304; bonus=0.0300
+
+> En la figura 11-1 se indican las tres diferentes distribuciones ji-cua- drada correspondientes a 1, 5 y 10 grados de libertad. Para un número muy pequeño de grados de libertad, la distribución ji-cuadrada está seriamente sesgada a la derecha. Conforme aumenta el nú- mero de grados de libertad, la curva hace cada vez más simétrica hasta que el número de grados de libertad alcanza valores grandes, en cuyo caso la distribución puede aproximarse con la normal.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 5 — similitud 0.1537
+
+**Detalle de puntaje:** tfidf=0.1137; bonus=0.0400
+
+> Si la población tiene una distribución normal, el estadístico de prueba es el siguiente. ESTIMACIÓN POR INTERVALO PARA UNA VARIANZA POBLACIONAL (n  1)s2  2 α/2   σ 2  (n  1)s2  2 (1α/2) (11.7) donde los valores  2 están basados en una distribución ji-cuadrada con n  1 grados de  libertad, y 1  α es el coeficiente de confianza. ESTADÍSTICO DE PRUEBA PARA PRUEBAS DE HIPÓTESIS ACERCA DE LA VARIANZA  POBLACIONAL  2  (n  1)s2 σ 2 0 (11.8) donde  2 tiene una distribución ji-cuadrada con n  1 grados de libertad.
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.1446
+
+**Detalle de puntaje:** tfidf=0.1046; bonus=0.0400
+
+> Diferencias y ventajas de cada tipo de estimación. 3.3 Intervalos de confianza para medias, proporciones y varianzas ¿Cómo se construye un intervalo de confianza para la media? ¿Cómo se construye un intervalo de confianza para una proporción? ¿Cómo se construye un intervalo de confianza para la varianza? Ejemplos numéricos sencillos.
+
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 5 — similitud 0.1360
+
+**Detalle de puntaje:** tfidf=0.1060; bonus=0.0300
+
+> La distribución ji-cuadrada Si la hipótesis nula es verdadera, entonces la distribución de muestreo del estadístico ji-cuadrada, 2, puede aproximarse bastante bien mediante una curva continua conocida como distribución ji-cua- drada. Como en el caso de la distribución t, existe una distribución ji-cuadrada diferente para cada número de grados de libertad.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 1 — similitud 0.1304
+
+**Detalle de puntaje:** tfidf=0.0904; bonus=0.0400
+
+> Fuente bibliográfica: Estadística aplicada a los negocios y la economía - Lind, Marchal y Wathen. 15.ª edición.pdf Actividad: 7 (3.1 Investigación 5% Tarea) Palabras clave: estimación puntual, intervalo de confianza, distribución t, ji-cuadrada, varianza poblacional, proporción poblacional, insesgamiento [Bloque seleccionado #326 | relevancia=16] Pagina 325 Desviación estándar de la población conocida () Un intervalo de confianza se calcula con el empleo de dos estadísticos: la media muestral  y la desviación estándar.
+
+**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 23. intervalo de confianza para una proporción poblacional
+
+**Calidad estimada:** alta
+**Mejor similitud:** 0.3223
+**Similitud promedio:** 0.2296
 **Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt
 **Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 3
 
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 2 — similitud 0.3105
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 2 — similitud 0.3223
 
-**Detalle de puntaje:** tfidf=0.2705; bonus=0.0400
+**Detalle de puntaje:** tfidf=0.2823; bonus=0.0400
 
 > Lo que se hace es que p se sustituye por p y de esta manera el mar- gen de error para la estimación por intervalo de la proporción poblacional queda dado por Margen de error  zα/2 p(1  p) n (8.5) Con este margen de error, la expresión general para la estimación por intervalo de la proporción  poblacional es la siguiente. El margen de error de un  intervalo de confianza para  la proporción poblacional  está dado por la cantidad  zα/2 p(1  p)n. ESTIMACIÓN POR INTERVALO DE UNA PROPORCIÓN POBLACIONAL p  zα/2 p(1  p) n
 
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 3 — similitud 0.2347
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2476
 
-**Detalle de puntaje:** tfidf=0.1947; bonus=0.0400
+**Detalle de puntaje:** tfidf=0.1476; bonus=0.1000
 
-> WEB archivo TeeTimes [Bloque seleccionado #367 | relevancia=36] Pagina 366 332  Capítulo 8 Estimación por intervalo 32. En una muestra aleatoria de 800 elementos se obtiene una proporción muestral, p  0.70. a) Proporcione un intervalo de 90% de confianza para la proporción poblacional. b) Proporcione un intervalo de confianza de 95% para la proporción poblacional. 33.
+> Valor 5% Formato de Entrega El documento deberá entregarse en formato PDF letra Arial 11, interlineado 1.5 texto justificado y portada oficial Tipo de entrega individual Portada Oficial Click aquí Conceptos nucleares de la actividad: estimadores puntuales comunes insesgamiento eficiencia y consistencia intervalo de confianza para la media con sigma conocida intervalo de confianza para la media con distribución t de Student intervalo de confianza para una proporción poblacional intervalo de confianza para la varianza con distribución ji-cuadrada grados de libertad en estimación nivel de confianza y riesgo alfa precisión y amplitud del intervalo aplicaciones de estimación en finanzas y...
 
-### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2342
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 3 — similitud 0.2445
 
-**Detalle de puntaje:** tfidf=0.1342; bonus=0.1000
-
-> Valor 5% Formato de Entrega El documento deberá entregarse en formato PDF letra Arial 11, interlineado 1.5 texto justificado y portada oficial Tipo de entrega individual Portada Oficial Click aquí Conceptos nucleares de la actividad: estimadores puntuales comunes insesgamiento eficiencia y consistencia intervalo de confianza para la media con sigma conocida intervalo de confianza para la media con distribución t de Student intervalo de confianza para una proporción poblacional intervalo de confianza para la varianza con distribución ji-cuadrada grados de libertad en estimación nivel de confianza y riesgo alfa precisión y amplitud del intervalo aplicaciones de estimación...
-
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 3 — similitud 0.1944
-
-**Detalle de puntaje:** tfidf=0.1544; bonus=0.0400
+**Detalle de puntaje:** tfidf=0.2045; bonus=0.0400
 
 > Los resultados mostraron que 1 760 de los encuestados afirmaron  que la salud futura es una de sus principales preocupaciones económicas. a) ¿Cuál es la estimación puntual de la proporción poblacional de adultos que piensan que la  salud futura es una de las principales preocupaciones económicas? b) A 90% de confianza, ¿cuál es el margen de error? c)  Proporcione el intervalo de 90% de confianza para la proporción poblacional de adultos  que piensan que la salud futura es una de las principales preocupaciones económicas. d) Proporcione el intervalo de 95% de confianza para esta proporción poblacional. 36.
 
-### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 2 — similitud 0.1893
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 3 — similitud 0.2332
 
-**Detalle de puntaje:** tfidf=0.1593; bonus=0.0300
+**Detalle de puntaje:** tfidf=0.1932; bonus=0.0400
 
-> Una muestra de 10 empleados que recurren al servicio de guardería revela las siguientes cantidades gastadas la semana pasada. 9.4 Intervalo de confianza de una proporción 313 OA5 Construir el intervalo de confianza de una p
+> [Bloque seleccionado #367 | relevancia=36] Pagina 366 332  Capítulo 8 Estimación por intervalo 32. En una muestra aleatoria de 800 elementos se obtiene una proporción muestral, p  0.70. a) Proporcione un intervalo de 90% de confianza para la proporción poblacional. b) Proporcione un intervalo de confianza de 95% para la proporción poblacional. 33.
 
 ### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 2 — similitud 0.1664
 
@@ -206,578 +812,326 @@ Las citas textuales se extrajeron de las fuentes de entrada. La búsqueda puede 
 
 > Interprete el resultado. 9.4 Intervalo de confianza de una proporción El material hasta ahora expuesto en este capítulo utiliza la escala de medición de razón. Es decir, se emplean varia- bles como ingresos, pesos, distancias y edades.
 
-**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.1636
 
-## Ficha 06. intervalo de confianza para la varianza con distribución ji-cuadrada
-
-**Calidad estimada:** media
-**Mejor similitud:** 0.2797
-**Similitud promedio:** 0.1656
-**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt
-**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 5; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 5
-
-### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2797
-
-**Detalle de puntaje:** tfidf=0.1797; bonus=0.1000
-
-> Valor 5% Formato de Entrega El documento deberá entregarse en formato PDF letra Arial 11, interlineado 1.5 texto justificado y portada oficial Tipo de entrega individual Portada Oficial Click aquí Conceptos nucleares de la actividad: estimadores puntuales comunes insesgamiento eficiencia y consistencia intervalo de confianza para la media con sigma conocida intervalo de confianza para la media con distribución t de Student intervalo de confianza para una proporción poblacional intervalo de confianza para la varianza con distribución ji-cuadrada grados de libertad en estimación nivel de confianza y riesgo alfa precisión y amplitud del intervalo aplicaciones de estimación...
-
-### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 5 — similitud 0.1617
-
-**Detalle de puntaje:** tfidf=0.1317; bonus=0.0300
-
-> Como en el caso de la distribución t, existe una distribución ji-cuadrada diferente para cada número de grados de libertad. En la figura 11-1 se indican las tres diferentes distribuciones ji-cua- drada correspondientes a 1, 5 y 10 grados de libertad.
-
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 5 — similitud 0.1612
-
-**Detalle de puntaje:** tfidf=0.1212; bonus=0.0400
-
-> Si la población tiene una distribución normal, el estadístico de prueba es el siguiente. ESTIMACIÓN POR INTERVALO PARA UNA VARIANZA POBLACIONAL (n  1)s2  2 α/2   σ 2  (n  1)s2  2 (1α/2) (11.7) donde los valores  2 están basados en una distribución ji-cuadrada con n  1 grados de  libertad, y 1  α es el coeficiente de confianza. ESTADÍSTICO DE PRUEBA PARA PRUEBAS DE HIPÓTESIS ACERCA DE LA VARIANZA  POBLACIONAL  2  (n  1)s2 σ 2 0 (11.8) donde  2 tiene una distribución ji-cuadrada con n  1 grados de libertad.
-
-### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.1485
-
-**Detalle de puntaje:** tfidf=0.1085; bonus=0.0400
+**Detalle de puntaje:** tfidf=0.1236; bonus=0.0400
 
 > Diferencias y ventajas de cada tipo de estimación. 3.3 Intervalos de confianza para medias, proporciones y varianzas ¿Cómo se construye un intervalo de confianza para la media? ¿Cómo se construye un intervalo de confianza para una proporción? ¿Cómo se construye un intervalo de confianza para la varianza? Ejemplos numéricos sencillos.
 
-### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 1 — similitud 0.1260
-
-**Detalle de puntaje:** tfidf=0.0860; bonus=0.0400
-
-> Fuente bibliográfica: Estadística aplicada a los negocios y la economía - Lind, Marchal y Wathen. 15.ª edición.pdf Actividad: 7 (3.1 Investigación 5% Tarea) Palabras clave: estimación puntual, intervalo de confianza, distribución t, ji-cuadrada, varianza poblacional, proporción poblacional, insesgamiento [Bloque seleccionado #326 | relevancia=16] Pagina 325 Desviación estándar de la población conocida () Un intervalo de confianza se calcula con el empleo de dos estadísticos: la media muestral  y la desviación estándar.
-
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 5 — similitud 0.1163
-
-**Detalle de puntaje:** tfidf=0.0763; bonus=0.0400
-
-> [Bloque seleccionado #489 | relevancia=17] Pagina 488 454  Capítulo 11 Inferencias acerca de varianzas poblacionales De esta manera se ha ilustrado el proceso del uso de la distribución ji-cuadrada para obtener  una estimación por intervalo de la varianza poblacional y la desviación estándar poblacional. Observe que, como se usaron  2 0.975 y  2 0.025, el coeﬁ ciente de conﬁ anza de la estimación por  intervalo es 0.95.
-
-**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
-
-## Ficha 07. grados de libertad en estimación
-
-**Calidad estimada:** media
-**Mejor similitud:** 0.2157
-**Similitud promedio:** 0.1788
-**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt
-**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt, bloque 2; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 5; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 2
-
-### libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt — bloque 2 — similitud 0.2157
-
-**Detalle de puntaje:** tfidf=0.1957; bonus=0.0200
-
-> ii  ( ) V (T ) = n/(n −2), si > 2. n 7.31  a Use la Tabla 7, Apéndice 3, para hallar F.01 para variables aleatorias con distribución F, todas con  4 grados de libertad en el numerador, pero con grados de libertad en el denominador de 10, 15, 30,  60, 120 e q. b Consulte el inciso a. ¿Qué observa acerca de los valores de F.01 conforme aumenta el número de  grados de libertad del denominador? c ¿Cuál es χ 2 .01 para una variable aleatoria con distribución x2 y 4 grados de libertad? d Divida el valor de χ 2 .01 (4 grados de libertad) del inciso c entre el valor de F.01 (4 grados de libertad  en el numerador; grados de libertad = q en el denominador).
-
-### libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt — bloque 2 — similitud 0.2147
-
-**Detalle de puntaje:** tfidf=0.1947; bonus=0.0200
-
-> c Encuentre F.10 para una variable aleatoria con distribución F con 1 grado de libertad en el numerador  y 5 grados de libertad en el denominador. d Compare el valor de F.10 hallado en el inciso c con el valor de t2 .05 de los incisos a y b. e En el Ejercicio 7.33 usted demostrará que si T tiene una distribución t con n grados de libertad,  entonces U = T 2 tiene una distribución F con 1 grado de libertad en el numerador y n grados del li- bertad del denominador. ¿Cómo explica esto la relación entre los valores de F.10 (1 grado de libertad  1 en el numerador, 5 grados de libertad en el denominador) y t2 .05 (5 grados de libertad) que observó  en el inciso d?
-
-### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.1971
-
-**Detalle de puntaje:** tfidf=0.1071; bonus=0.0900
-
-> Valor 5% Formato de Entrega El documento deberá entregarse en formato PDF letra Arial 11, interlineado 1.5 texto justificado y portada oficial Tipo de entrega individual Portada Oficial Click aquí Conceptos nucleares de la actividad: estimadores puntuales comunes insesgamiento eficiencia y consistencia intervalo de confianza para la media con sigma conocida intervalo de confianza para la media con distribución t de Student intervalo de confianza para una proporción poblacional intervalo de confianza para la varianza con distribución ji-cuadrada grados de libertad en estimación nivel de confianza y riesgo alfa precisión y amplitud del intervalo aplicaciones de estimación...
-
-### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 5 — similitud 0.1569
-
-**Detalle de puntaje:** tfidf=0.1369; bonus=0.0200
-
-> Como en el caso de la distribución t, existe una distribución ji-cuadrada diferente para cada número de grados de libertad. En la figura 11-1 se indican las tres diferentes distribuciones ji-cua- drada correspondientes a 1, 5 y 10 grados de libertad.
-
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 2 — similitud 0.1539
-
-**Detalle de puntaje:** tfidf=0.1239; bonus=0.0300
-
-> Si los grados de libertad son más de 100, se puede usar la ﬁ la corres- pondiente a inﬁ nitos grados para aproximar el verdadero valor de t; en otras palabras, para más  de 100 grados de libertad, el valor z normal estándar proporciona una buena aproximación del  valor t. Margen de error y estimación por intervalo En la sección 8.1 se mostró que la estimación por intervalo de la media poblacional cuando σ  es conocida es x  zα/2 σ n  Para calcular una estimación por intervalo de μ cuando no se conoce σ, se usa la desviación  estándar muestral s para estimar σ, y zα/2 se sustituye por el valor tα/2 de la distribución t.
-
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 2 — similitud 0.1348
-
-**Detalle de puntaje:** tfidf=0.1148; bonus=0.0200
-
-> Más adelante, en esta  misma sección se proporcionan lineamientos para usar la distribución t cuando la población no  está distribuida normalmente. La distribución t es una familia de distribuciones de probabilidad similar, y cada una de- pende de un parámetro conocido como grados de libertad. La distribución t para un grado de  libertad es única, como lo es para dos grados o tres grados de libertad, etc.
-
-**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
-
-## Ficha 08. nivel de confianza y riesgo alfa
-
-**Calidad estimada:** media
-**Mejor similitud:** 0.2585
-**Similitud promedio:** 0.1090
-**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt
-**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 5; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 4
-
-### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2585
-
-**Detalle de puntaje:** tfidf=0.1585; bonus=0.1000
-
-> Valor 5% Formato de Entrega El documento deberá entregarse en formato PDF letra Arial 11, interlineado 1.5 texto justificado y portada oficial Tipo de entrega individual Portada Oficial Click aquí Conceptos nucleares de la actividad: estimadores puntuales comunes insesgamiento eficiencia y consistencia intervalo de confianza para la media con sigma conocida intervalo de confianza para la media con distribución t de Student intervalo de confianza para una proporción poblacional intervalo de confianza para la varianza con distribución ji-cuadrada grados de libertad en estimación nivel de confianza y riesgo alfa precisión y amplitud del intervalo aplicaciones de estimación...
-
-### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 4 — similitud 0.1012
-
-**Detalle de puntaje:** tfidf=0.0712; bonus=0.0300
-
-> Si estamos haciendo una estimación a un nivel de confianza del 90%, buscaríamos en la tabla t en la columna de 0.10 (100%  90%  10%). Esta probabilidad de 0.10 del error se re- presenta con el símbolo , la letra griega alfa.
-
-### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.0874
-
-**Detalle de puntaje:** tfidf=0.0674; bonus=0.0200
-
-> De manera parecida, 2.58 errores estándar incluyen alrededor de 99% del área o 49.51% a cada  lado de la media. En estadística, la probabilidad que asociamos con una estimación de intervalo se conoce co- mo nivel de confianza. Esta probabilidad indica qué tanta confianza tenemos de que la estimación de intervalo incluya al parámetro de población.
-
-### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.0773
-
-**Detalle de puntaje:** tfidf=0.0573; bonus=0.0200
-
-> En este caso, x   1.64x se conoce como límite superior de confianza (LSC) y x  1.64x es el límite inferior de confianza (LIC). Relación entre nivel de confianza e intervalo de confianza Podría pensarse que deberíamos utilizar un alto nivel de confianza, como 99%, en todos los proble- mas sobre estimaciones.
-
-### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.0714
-
-**Detalle de puntaje:** tfidf=0.0514; bonus=0.0200
-
-> Después de todo, parece ser que un alto nivel de confianza significa un al- to grado de precisión en lo que a la estimación concierne. En la práctica, sin embargo, altos niveles de confianza producen intervalos de confianza grandes, y éstos, de hecho, dan estimaciones bastan- te imprecisas.
-
-### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 5 — similitud 0.0584
-
-**Detalle de puntaje:** tfidf=0.0384; bonus=0.0200
-
-> Usted planea llevar a cabo una encuesta para hallar la proporción de fuerza laboral con dos o más trabajos. Decide con base en un nivel de confianza de 95%, y establece que la proporción estima- da debe encontrarse en un margen de menos de 2% de la proporción poblacional. Una encuesta piloto revela que 5 de 50 de los entrevistados tenían dos o más trabajos. ¿A cuántos trabajadores debe entrevistar para satisfacer los requisitos?
-
-**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 3 referencia(s) de baja similitud que podrían introducir ruido.
-
-## Ficha 09. precisión y amplitud del intervalo
-
-**Calidad estimada:** media
-**Mejor similitud:** 0.2234
-**Similitud promedio:** 0.0863
-**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt
-**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 3
-
-### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2234
-
-**Detalle de puntaje:** tfidf=0.1334; bonus=0.0900
-
-> Valor 5% Formato de Entrega El documento deberá entregarse en formato PDF letra Arial 11, interlineado 1.5 texto justificado y portada oficial Tipo de entrega individual Portada Oficial Click aquí Conceptos nucleares de la actividad: estimadores puntuales comunes insesgamiento eficiencia y consistencia intervalo de confianza para la media con sigma conocida intervalo de confianza para la media con distribución t de Student intervalo de confianza para una proporción poblacional intervalo de confianza para la varianza con distribución ji-cuadrada grados de libertad en estimación nivel de confianza y riesgo alfa precisión y amplitud del intervalo aplicaciones de estimación...
-
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 2 — similitud 0.0988
-
-**Detalle de puntaje:** tfidf=0.0788; bonus=0.0200
-
-> [Bloque seleccionado #351 | relevancia=24] Pagina 350 316  Capítulo 8 Estimación por intervalo a) Proporcione un intervalo de estimación de 90% de confianza para la media poblacional. b) Calcule un intervalo de 95%. c)  Proporcione ahora un intervalo de estimación de 99%. d) ¿Qué le sucede a la amplitud del intervalo de confianza a medida que el nivel de confianza  aumenta? ¿Parece esto razonable? Explique.
-
-### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 1 — similitud 0.0593
-
-**Detalle de puntaje:** tfidf=0.0393; bonus=0.0200
-
-> De los capítulos anteriores, usted sabe que la desviación estándar es un estadístico importante, porque mide la dispersión, o la amplitud, de una población o de una muestra de distribución. Cuando se calcula un intervalo de confianza, se utiliza la desviación estándar para estimar el rango del intervalo de confianza. Para demostrar la idea del intervalo de confianza, se comienza con una suposición sim- ple: que conocemos el valor de la desviación estándar de la población, .
-
-### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.0489
-
-**Detalle de puntaje:** tfidf=0.0289; bonus=0.0200
-
-> Después de todo, parece ser que un alto nivel de confianza significa un al- to grado de precisión en lo que a la estimación concierne. En la práctica, sin embargo, altos niveles de confianza producen intervalos de confianza grandes, y éstos, de hecho, dan estimaciones bastan- te imprecisas.
-
-### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.0440
-
-**Detalle de puntaje:** tfidf=0.0240; bonus=0.0200
-
-> Fuente bibliográfica: Estadística para administración y economía - Levin y Rubin. 7.ª edición revisada.pdf Actividad: 7 (3.1 Investigación 5% Tarea) Palabras clave: estimación puntual, intervalo de confianza, distribución t, ji-cuadrada, varianza poblacional, proporción poblacional, insesgamiento [Bloque seleccionado #294 | relevancia=14] Pagina 293 En este capítulo introducimos métodos que nos permiten estimar con precisión razonable la proporción de la población (la fracción de la población que posee una característica dada) y la me- dia de la población. Calcular la proporción exacta o la media exacta sería una meta imposible.
-
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 3 — similitud 0.0433
-
-**Detalle de puntaje:** tfidf=0.0233; bonus=0.0200
-
-> Suponga que en este estudio participaron 1400 sujetos. ¿Cuáles son los márgenes de error y la  estimación por intervalo de la proporción poblacional de quienes consideran que este sitio es  el más popular? Use 95% de nivel de confianza.
-
-**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 4 referencia(s) de baja similitud que podrían introducir ruido.
-
-## Ficha 10. aplicaciones de estimación en finanzas y operaciones
-
-**Calidad estimada:** media
-**Mejor similitud:** 0.2687
-**Similitud promedio:** 0.0789
-**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt
-**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 3
-
-### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2687
-
-**Detalle de puntaje:** tfidf=0.1687; bonus=0.1000
-
-> Valor 5% Formato de Entrega El documento deberá entregarse en formato PDF letra Arial 11, interlineado 1.5 texto justificado y portada oficial Tipo de entrega individual Portada Oficial Click aquí Conceptos nucleares de la actividad: estimadores puntuales comunes insesgamiento eficiencia y consistencia intervalo de confianza para la media con sigma conocida intervalo de confianza para la media con distribución t de Student intervalo de confianza para una proporción poblacional intervalo de confianza para la varianza con distribución ji-cuadrada grados de libertad en estimación nivel de confianza y riesgo alfa precisión y amplitud del intervalo aplicaciones de estimación...
-
-### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.0482
-
-**Detalle de puntaje:** tfidf=0.0282; bonus=0.0200
-
-> Estimación Actividad 7: 3.1 Investigación 5% Tarea — Métodos de estimación puntual y por intervalos para medias, proporciones y varianzas Subtítulo editorial: Actividad 7: Reporte de investigación Tipo de producto: investigacion_aplicada Requisitos e instrucciones de la actividad: Nombre de la Actividad Reporte de Investigación Descripción El estudiante iniciará el análisis y comprensión de los conceptos fundamentales relacionados con la estimación estadística, a través de la investigación y sistematización de información teórica y aplicada, que le permita comprender los métodos de estimación puntual y por intervalos, así como sus propiedades y aplicaciones.
-
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 3 — similitud 0.0418
-
-**Detalle de puntaje:** tfidf=0.0218; bonus=0.0200
-
-> Empleando porcentajes, los resultados  de la investigación permiten decir con 95% de conﬁ anza que entre 40.76% y 47.24% de las  golﬁ stas están satisfechas con la disponibilidad de horarios de salida. WEB archivo TeeTimes [Bloque seleccionado #367 | relevancia=36] Pagina 366 332  Capítulo 8 Estimación por intervalo 32. En una muestra aleatoria de 800 elementos se obtiene una proporción muestral, p  0.70. a) Proporcione un intervalo de 90% de confianza para la proporción poblacional. b) Proporcione un intervalo de confianza de 95% para la proporción poblacional.
-
-### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 2 — similitud 0.0393
-
-**Detalle de puntaje:** tfidf=0.0193; bonus=0.0200
-
-> [Bloque seleccionado #311 | relevancia=12] Pagina 310 Aplicaciones ■ 7-29 La enfermera de la secundaria de Westview está interesada en conocer la estatura promedio de los estu- diantes del último año, pero no tiene suficiente tiempo para examinar los registros de los 430 estudiantes. Por ello, selecciona 48 al azar y encuentra que la media de la muestra es 64.5 pulgadas y la desviación es- tándar es 2.3 pulgadas. a) Encuentre la estimación del error estándar de la media. b) Construya un intervalo de confianza del 90% para la media. ■ 7-30 Jon Jackobsen, un pasante de posgrado muy dedicado, acaba de terminar una primera versión de su tesis de 700 páginas.
-
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 1 — similitud 0.0383
-
-**Detalle de puntaje:** tfidf=0.0183; bonus=0.0200
-
-> La desviación es- tándar poblacional es σ  15. a) Calcule el intervalo de confianza de 95% para la media poblacional. b) Suponga que la misma media muestral se obtuvo de una muestra de 120 artículos. Pro- porcione el intervalo de confianza de 95% para la media poblacional. c)  ¿Cuál es el efecto de una muestra de tamaño grande sobre la estimación por intervalo? 4.
-
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 2 — similitud 0.0369
-
-**Detalle de puntaje:** tfidf=0.0269; bonus=0.0100
-
-> [Bloque seleccionado #351 | relevancia=24] Pagina 350 316  Capítulo 8 Estimación por intervalo a) Proporcione un intervalo de estimación de 90% de confianza para la media poblacional. b) Calcule un intervalo de 95%. c)  Proporcione ahora un intervalo de estimación de 99%. d) ¿Qué le sucede a la amplitud del intervalo de confianza a medida que el nivel de confianza  aumenta? ¿Parece esto razonable? Explique.
-
-**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 5 referencia(s) de baja similitud que podrían introducir ruido.
-
-## Ficha 11. intervalo confianza
-
-**Calidad estimada:** alta
-**Mejor similitud:** 0.2816
-**Similitud promedio:** 0.2326
-**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt
-**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 2; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 5; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 1
-
-### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.2816
-
-**Detalle de puntaje:** tfidf=0.2616; bonus=0.0200
-
-> Si informamos que tenemos el 90% de confianza de que la media de la población de ingresos de las personas que viven en una cierta comunidad está entre $8,000 y $24,000, entonces el rango $8,000-$24,000 es nuestro intervalo de confianza. A menudo, sin embargo, expresaremos el intervalo de confianza en términos de errores estándar, más que con valores numéricos.
-
-### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2509
-
-**Detalle de puntaje:** tfidf=0.2309; bonus=0.0200
-
-> Ejemplos de estimadores comunes (media muestral, proporción muestral, varianza muestral). 3.2 Estimación puntual y por intervalos ¿Qué es una estimación puntual? ¿Qué es una estimación por intervalos (intervalo de confianza)? Diferencias y ventajas de cada tipo de estimación.
-
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 1 — similitud 0.2470
-
-**Detalle de puntaje:** tfidf=0.2270; bonus=0.0200
-
-> En una muestra aleatoria simple de 50 artículos de una población en la que σ  6, la media  muestral resultante es 32. a) Proporcione un intervalo de confianza de 90% para la media poblacional. b) Calcule un intervalo de confianza de 95% para la media poblacional. c)  Proporcione un intervalo de confianza de 99% para el mismo indicador. 3.
-
-### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 5 — similitud 0.2138
-
-**Detalle de puntaje:** tfidf=0.1938; bonus=0.0200
-
-> Por otro lado, si los puntos extremos del intervalo de confianza tienen el mismo signo, esto indica que las medias de tratamiento difieren. Por ejemplo, si  y el intervalo de confianza variará de 0.60 hasta 0.10.
-
-### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 1 — similitud 0.2078
-
-**Detalle de puntaje:** tfidf=0.1878; bonus=0.0200
-
-> Fuente bibliográfica: Estadística aplicada a los negocios y la economía - Lind, Marchal y Wathen. 15.ª edición.pdf Actividad: 7 (3.1 Investigación 5% Tarea) Palabras clave: estimación puntual, intervalo de confianza, distribución t, ji-cuadrada, varianza poblacional, proporción poblacional, insesgamiento [Bloque seleccionado #326 | relevancia=16] Pagina 325 Desviación estándar de la población conocida () Un intervalo de confianza se calcula con el empleo de dos estadísticos: la media muestral  y la desviación estándar.
-
-### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 2 — similitud 0.1945
-
-**Detalle de puntaje:** tfidf=0.1745; bonus=0.0200
-
-> Al desplazarse por el ren- glón con 19 grados de libertad a la columna del intervalo de confianza de 95%, el valor de esta intersección es de 2.093. Se sustituyen estos valores en la fórmula 9-2 para encontrar el inter- valo de confianza.
-
 **Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
 
-## Ficha 12. estimación
+## Ficha 24. intervalos
 
-**Calidad estimada:** media
-**Mejor similitud:** 0.2530
-**Similitud promedio:** 0.2107
-**Fuentes:** libro-estadistica-para-administracion-y-economia-levin-A07.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt
-**Ubicaciones:** libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 2
-
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 2 — similitud 0.2530
-
-**Detalle de puntaje:** tfidf=0.1830; bonus=0.0700
-
-> [Bloque seleccionado #351 | relevancia=24] Pagina 350 316  Capítulo 8 Estimación por intervalo a) Proporcione un intervalo de estimación de 90% de confianza para la media poblacional. b) Calcule un intervalo de 95%. c)  Proporcione ahora un intervalo de estimación de 99%. d) ¿Qué le sucede a la amplitud del intervalo de confianza a medida que el nivel de confianza  aumenta? ¿Parece esto razonable? Explique.
-
-### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.2290
-
-**Detalle de puntaje:** tfidf=0.1590; bonus=0.0700
-
-> Si le dicen solamente que la afirmación sobre la inscripción está equivo- cada, no sabe qué tanto está mal y no puede tener la certeza de que la estimación es confiable. Si se entera de que sólo está errada por 10 estudiantes, podría aceptar a 350 estudiantes como una buena estimación de la inscripción futura.
-
-### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.2276
-
-**Detalle de puntaje:** tfidf=0.1576; bonus=0.0700
-
-> Sin embargo, en otras situaciones, en las que dispongamos de información y podamos aplicar los conceptos de estadística, tendremos mejores resultados. Tipos de estimaciones Podemos hacer dos tipos de estimaciones concernientes a una población: una estimación puntual y una estimación de intervalo. Una estimación puntual es un solo número que se utiliza para esti- mar un parámetro de población desconocido.
-
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 2 — similitud 0.1873
-
-**Detalle de puntaje:** tfidf=0.1173; bonus=0.0700
-
-> σp   p(1  p) n (8.4) Como la distribución de muestreo de p es una distribución normal, si en la estimación por inter- valo de la proporción poblacional se elige como margen de error zα/2σp , entonces 100(1  α)%  de los intervalos que se obtengan contendrán la verdadera proporción poblacional. Pero para  calcular el margen de error no se puede usar directamente σp, ya que no se conoce p, pues se  está tratando de estimarlo.
-
-### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.1839
-
-**Detalle de puntaje:** tfidf=0.1139; bonus=0.0700
-
-> De manera parecida, 2.58 errores estándar incluyen alrededor de 99% del área o 49.51% a cada  lado de la media. En estadística, la probabilidad que asociamos con una estimación de intervalo se conoce co- mo nivel de confianza. Esta probabilidad indica qué tanta confianza tenemos de que la estimación de intervalo incluya al parámetro de población.
-
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 1 — similitud 0.1833
-
-**Detalle de puntaje:** tfidf=0.1133; bonus=0.0700
-
-> Use este conjunto de datos para efectuar lo que se solicita en los incisos siguientes. a) Calcule una estimación puntual de la proporción de fondos de inversión de BusinessWeek  que son fondos de cargo. b) Desarrolle una estimación puntual de la proporción de fondos clasificados como de alto  riesgo. c)   Calcule una estimación puntual de la proporción de fondos con una puntuación abajo del  promedio para el riesgo. 15.
-
-**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
-
-## Ficha 13. intervalos
-
-**Calidad estimada:** media
-**Mejor similitud:** 0.2704
-**Similitud promedio:** 0.1824
+**Calidad estimada:** alta
+**Mejor similitud:** 0.2809
+**Similitud promedio:** 0.1774
 **Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt; libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt
 **Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 1; libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt, bloque 3; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 3
 
-### libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt — bloque 3 — similitud 0.2704
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt — bloque 3 — similitud 0.2809
 
-**Detalle de puntaje:** tfidf=0.2004; bonus=0.0700
+**Detalle de puntaje:** tfidf=0.2109; bonus=0.0700
 
 > Resumen de intervalos de confi anza de muestra pequeña para medias de distribu- ciones normales con varianza(s) desconocida(s) Cuando el tamaño (o tamaños) de la muestra se hace grande, el número de grados de liber- tad para la distribución t aumenta y la distribución t puede ser calculada en forma muy precisa  por la distribución normal estándar. En consecuencia, los intervalos de confi anza de una mues- tra pequeña de esta sección son casi indistinguibles respecto de los intervalos de confi anza de  muestra grande de la Sección 8.6 para n grande (o n1 y n2 grandes).
 
-### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2425
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2440
 
-**Detalle de puntaje:** tfidf=0.1725; bonus=0.0700
+**Detalle de puntaje:** tfidf=0.1740; bonus=0.0700
 
 > Ejemplos de estimadores comunes (media muestral, proporción muestral, varianza muestral). 3.2 Estimación puntual y por intervalos ¿Qué es una estimación puntual? ¿Qué es una estimación por intervalos (intervalo de confianza)? Diferencias y ventajas de cada tipo de estimación.
 
-### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 1 — similitud 0.1494
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 3 — similitud 0.1451
 
-**Detalle de puntaje:** tfidf=0.0794; bonus=0.0700
-
-> Noventa y nueve por ciento de las medias muestrales se encontrará a 2.58 errores están- dares de la media poblacional. Los intervalos calculados de esta manera proporcionan ejemplos de los niveles de confianza y reciben el nombre de intervalo de confianza de 95% e intervalo de confianza de 99%. Por lo tanto, 95% y 99% son los niveles de confianza y se refieren al porcentaje de intervalos simi- larmente construidos que incluirían el parámetro a calcular, en este caso, . ¿Cómo se obtienen los valores de 1.96 y 2.58?
-
-### libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt — bloque 3 — similitud 0.1469
-
-**Detalle de puntaje:** tfidf=0.0769; bonus=0.0700
-
-> Si n1 ≈ n2, los intervalos de m1 − m2 también mantienen sus coefi cientes de confi anza nomina- les mientras las varianzas poblacionales sean aproximadamente iguales. La independencia de  las muestras es la suposición más crítica al usar los intervalos de confi anza desarrollados en  esta sección para comparar dos medias poblacionales.
-
-### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.1427
-
-**Detalle de puntaje:** tfidf=0.0727; bonus=0.0700
-
-> Estimación Actividad 7: 3.1 Investigación 5% Tarea — Métodos de estimación puntual y por intervalos para medias, proporciones y varianzas Subtítulo editorial: Actividad 7: Reporte de investigación Tipo de producto: investigacion_aplicada Requisitos e instrucciones de la actividad: Nombre de la Actividad Reporte de Investigación Descripción El estudiante iniciará el análisis y comprensión de los conceptos fundamentales relacionados con la estimación estadística, a través de la investigación y sistematización de información teórica y aplicada, que le permita comprender los métodos de estimación puntual y por intervalos, así como sus propiedades y aplicaciones.
-
-### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 3 — similitud 0.1426
-
-**Detalle de puntaje:** tfidf=0.0726; bonus=0.0700
+**Detalle de puntaje:** tfidf=0.0751; bonus=0.0700
 
 > [Bloque seleccionado #316 | relevancia=48] Pagina 315 7.7 Estimaciones de intervalos  con la distribución t En los tres ejemplos anteriores, los tamaños de la muestra eran todos mayores a 30. Muestreamos 100 limpiadores de parabrisas, 50 familias residentes de una área de cuatro manzanas de una comu- nidad y 75 empleados de una empresa grande.
 
-**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 1 — similitud 0.1447
 
-## Ficha 14. construye intervalo
+**Detalle de puntaje:** tfidf=0.0747; bonus=0.0700
 
-**Calidad estimada:** alta
-**Mejor similitud:** 0.2850
-**Similitud promedio:** 0.0774
-**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt
-**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 5; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 2
+> Recuerde también que este valor recibe el nombre de error estándar. Los resultados del teorema central del límite permiten afirmar lo siguiente con respecto a los intervalos de confianza utilizando el estadístico z: 1. Noventa y cinco por ciento de las medias muestrales seleccionadas de una población se encontrará dentro de 1.96 errores estándares (desviación estándar de las medias mues- trales de la media poblacional, .
 
-### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2850
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.1405
 
-**Detalle de puntaje:** tfidf=0.2650; bonus=0.0200
+**Detalle de puntaje:** tfidf=0.0705; bonus=0.0700
 
-> Diferencias y ventajas de cada tipo de estimación. 3.3 Intervalos de confianza para medias, proporciones y varianzas ¿Cómo se construye un intervalo de confianza para la media? ¿Cómo se construye un intervalo de confianza para una proporción? ¿Cómo se construye un intervalo de confianza para la varianza? Ejemplos numéricos sencillos.
+> Estimación Actividad 7: 3.1 Investigación 5% Tarea — Métodos de estimación puntual y por intervalos para medias, proporciones y varianzas Subtítulo editorial: Actividad 7: Reporte de investigación Tipo de producto: investigacion_aplicada Requisitos e instrucciones de la actividad: Nombre de la Actividad Reporte de Investigación Descripción El estudiante iniciará el análisis y comprensión de los conceptos fundamentales relacionados con la estimación estadística, a través de la investigación y sistematización de información teórica y aplicada, que le permita comprender los métodos de estimación puntual y por intervalos, así como sus propiedades y aplicaciones.
 
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 2 — similitud 0.0423
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 1 — similitud 0.1089
 
-**Detalle de puntaje:** tfidf=0.0323; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.0389; bonus=0.0700
 
-> [Bloque seleccionado #351 | relevancia=24] Pagina 350 316  Capítulo 8 Estimación por intervalo a) Proporcione un intervalo de estimación de 90% de confianza para la media poblacional. b) Calcule un intervalo de 95%. c)  Proporcione ahora un intervalo de estimación de 99%. d) ¿Qué le sucede a la amplitud del intervalo de confianza a medida que el nivel de confianza  aumenta? ¿Parece esto razonable? Explique.
-
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 1 — similitud 0.0387
-
-**Detalle de puntaje:** tfidf=0.0287; bonus=0.0100
-
-> En una muestra aleatoria simple de 50 artículos de una población en la que σ  6, la media  muestral resultante es 32. a) Proporcione un intervalo de confianza de 90% para la media poblacional. b) Calcule un intervalo de confianza de 95% para la media poblacional. c)  Proporcione un intervalo de confianza de 99% para el mismo indicador. 3.
-
-### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 5 — similitud 0.0336
-
-**Detalle de puntaje:** tfidf=0.0236; bonus=0.0100
-
-> Por otro lado, si los puntos extremos del intervalo de confianza tienen el mismo signo, esto indica que las medias de tratamiento difieren. Por ejemplo, si  y el intervalo de confianza variará de 0.60 hasta 0.10.
-
-### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 5 — similitud 0.0331
-
-**Detalle de puntaje:** tfidf=0.0231; bonus=0.0100
-
-> MSE es el error medio cuadrático que se obtuvo de la tabla ANOVA [SSE/(n – k)]. n1 es el número de observaciones en la primera muestra. n2 es el número de observaciones en la segunda muestra. ¿Cómo se decide si hay una diferencia entre las medias de tratamiento? Si el intervalo de confianza incluye cero, no existe diferencia entre ellas. Por ejemplo, si el punto extremo izquierdo del intervalo de confianza tiene signo negativo y el punto extremo derecho tiene signo positivo, el intervalo incluye cero, y las dos medias no difieren.
-
-### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.0319
-
-**Detalle de puntaje:** tfidf=0.0219; bonus=0.0100
-
-> Si informamos que tenemos el 90% de confianza de que la media de la población de ingresos de las personas que viven en una cierta comunidad está entre $8,000 y $24,000, entonces el rango $8,000-$24,000 es nuestro intervalo de confianza. A menudo, sin embargo, expresaremos el intervalo de confianza en términos de errores estándar, más que con valores numéricos.
-
-**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 5 referencia(s) de baja similitud que podrían introducir ruido.
-
-## Ficha 15. cómo construye
-
-**Calidad estimada:** alta
-**Mejor similitud:** 0.3121
-**Similitud promedio:** 0.1712
-**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt
-**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 3
-
-### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.3121
-
-**Detalle de puntaje:** tfidf=0.2921; bonus=0.0200
-
-> Diferencias y ventajas de cada tipo de estimación. 3.3 Intervalos de confianza para medias, proporciones y varianzas ¿Cómo se construye un intervalo de confianza para la media? ¿Cómo se construye un intervalo de confianza para una proporción? ¿Cómo se construye un intervalo de confianza para la varianza? Ejemplos numéricos sencillos.
-
-### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 3 — similitud 0.0303
-
-**Detalle de puntaje:** tfidf=0.0203; bonus=0.0100
-
-> Aún así, conforme el tamaño de muestra se hace más grande, la forma de la distribución t deja de ser plana y se aproxima más a la dist [Bloque seleccionado #317 | relevancia=12] Pagina 316 Suponga que incluye dos elementos, a y b en una muestra y sabemos que tiene una media de 18. En símbolos, la situación es:  18 ¿Cómo podemos encontrar los valores que a y b pueden tomar en esta situación? La respuesta es que a y b pueden ser cualesquiera dos valores cuya suma sea 36, ya que 36  2  18.
-
-**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 1 referencia(s) de baja similitud que podrían introducir ruido.
-
-## Ficha 16. construye intervalo confianza
-
-**Calidad estimada:** alta
-**Mejor similitud:** 0.3897
-**Similitud promedio:** 0.1338
-**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt
-**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 2; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 5; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 1
-
-### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.3897
-
-**Detalle de puntaje:** tfidf=0.3597; bonus=0.0300
-
-> Diferencias y ventajas de cada tipo de estimación. 3.3 Intervalos de confianza para medias, proporciones y varianzas ¿Cómo se construye un intervalo de confianza para la media? ¿Cómo se construye un intervalo de confianza para una proporción? ¿Cómo se construye un intervalo de confianza para la varianza? Ejemplos numéricos sencillos.
-
-### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.0984
-
-**Detalle de puntaje:** tfidf=0.0784; bonus=0.0200
-
-> Si informamos que tenemos el 90% de confianza de que la media de la población de ingresos de las personas que viven en una cierta comunidad está entre $8,000 y $24,000, entonces el rango $8,000-$24,000 es nuestro intervalo de confianza. A menudo, sin embargo, expresaremos el intervalo de confianza en términos de errores estándar, más que con valores numéricos.
-
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 1 — similitud 0.0881
-
-**Detalle de puntaje:** tfidf=0.0681; bonus=0.0200
-
-> En una muestra aleatoria simple de 50 artículos de una población en la que σ  6, la media  muestral resultante es 32. a) Proporcione un intervalo de confianza de 90% para la media poblacional. b) Calcule un intervalo de confianza de 95% para la media poblacional. c)  Proporcione un intervalo de confianza de 99% para el mismo indicador. 3.
-
-### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 5 — similitud 0.0781
-
-**Detalle de puntaje:** tfidf=0.0581; bonus=0.0200
-
-> Por otro lado, si los puntos extremos del intervalo de confianza tienen el mismo signo, esto indica que las medias de tratamiento difieren. Por ejemplo, si  y el intervalo de confianza variará de 0.60 hasta 0.10.
-
-### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 1 — similitud 0.0763
-
-**Detalle de puntaje:** tfidf=0.0563; bonus=0.0200
-
-> Fuente bibliográfica: Estadística aplicada a los negocios y la economía - Lind, Marchal y Wathen. 15.ª edición.pdf Actividad: 7 (3.1 Investigación 5% Tarea) Palabras clave: estimación puntual, intervalo de confianza, distribución t, ji-cuadrada, varianza poblacional, proporción poblacional, insesgamiento [Bloque seleccionado #326 | relevancia=16] Pagina 325 Desviación estándar de la población conocida () Un intervalo de confianza se calcula con el empleo de dos estadísticos: la media muestral  y la desviación estándar.
-
-### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 2 — similitud 0.0723
-
-**Detalle de puntaje:** tfidf=0.0523; bonus=0.0200
-
-> Al desplazarse por el ren- glón con 19 grados de libertad a la columna del intervalo de confianza de 95%, el valor de esta intersección es de 2.093. Se sustituyen estos valores en la fórmula 9-2 para encontrar el inter- valo de confianza.
-
-**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 3 referencia(s) de baja similitud que podrían introducir ruido.
-
-## Ficha 17. distribución
-
-**Calidad estimada:** alta
-**Mejor similitud:** 0.4091
-**Similitud promedio:** 0.3113
-**Fuentes:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt
-**Ubicaciones:** libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 3; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 5; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 2
-
-### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 1 — similitud 0.4091
-
-**Detalle de puntaje:** tfidf=0.3391; bonus=0.0700
-
-> GRÁFICA 9-1 Distribución normal estándar y distribución t de Student 0 Distribución z Distribución t Las siguientes características de la distribución t se basan en el supuesto de que la pobla- ción de interés es de naturaleza normal, o casi normal. • Como en el caso de la distribución z, es una distribución continua. • Como en el caso de la distribución z, tiene forma de campana y es simétrica. • No existe una distribución t, sino una familia de distribuciones t. Todas las distribuciones t tienen una media de 0, y sus desviaciones estándares difieren de acuerdo con el tama- ño de la muestra, n.
-
-### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 1 — similitud 0.3254
-
-**Detalle de puntaje:** tfidf=0.2554; bonus=0.0700
-
-> No obstante, al hacerlo no es posible utilizar la fórmu- la (9-1). Como no conoce , no puede utilizar la distribución z. Sin embargo, hay una solución: utilizar la desviación estándar de la media y sustituir la distribución z con la distribución t.
-
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 2 — similitud 0.3249
-
-**Detalle de puntaje:** tfidf=0.2549; bonus=0.0700
-
-> Observe que una distribución t con más  FIGURA 8.4 Comparación de la distribución normal estándar con las distribuciones t para 10  y 20 grados de libertad 0 z, t Distribución normal estándar Distribución t (20 grados de libertad) Distribución t (10 grados de libertad) William Sealy Gosset,  quien publicaba bajo el  seudónimo “Student” es el  creador de la distribución t. Gosset, que había estudiado  matemáticas en Oxford,  trabajaba para Guinness  Brewery en Dublín, Irlanda.
-
-### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 3 — similitud 0.2772
-
-**Detalle de puntaje:** tfidf=0.2072; bonus=0.0700
-
-> De modo que Gosset adoptó el seudónimo de Student para publicar. En consecuencia, la distribución t se conoce como distribución t de Student o simplemente distribución de Student. Debido a que se usa cuando el tamaño de la muestra es 30 o menos, los especialistas en estadís- tica, suelen asociar la distribución t con estadísticas de muestras pequeñas.
-
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 2 — similitud 0.2655
-
-**Detalle de puntaje:** tfidf=0.1955; bonus=0.0700
-
-> Aunque el desarrollo  matemático de esta última parte del supuesto de que la población muestreada tiene una distri- bución normal, las investigaciones han demostrado que la distribución t se aplica en muchas  situaciones en que la población se desvía signiﬁ cantemente de la normal. Más adelante, en esta  misma sección se proporcionan lineamientos para usar la distribución t cuando la población no  está distribuida normalmente.
-
-### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 5 — similitud 0.2654
-
-**Detalle de puntaje:** tfidf=0.1954; bonus=0.0700
-
-> Como en el caso de la distribución t, existe una distribución ji-cuadrada diferente para cada número de grados de libertad. En la figura 11-1 se indican las tres diferentes distribuciones ji-cua- drada correspondientes a 1, 5 y 10 grados de libertad.
+> Observe que la distribución t es más plana y que se extiende más que la distribución normal estándar. Esto se debe a que la desviación estándar de la distribución t es mayor que la distribución normal estándar. t  X   s1n 9.3 Intervalos de confianza de una media poblacional 307 Estadística en acción William Gosset nació en Inglaterra en 1876 y murió allí en 1937. Trabajó muchos años en Arthur Guinness, Sons and Company.
 
 **Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
 
-## Ficha 18. poblacional
+## Ficha 25. intervalos confianza
 
 **Calidad estimada:** media
-**Mejor similitud:** 0.2304
-**Similitud promedio:** 0.1923
-**Fuentes:** libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt
-**Ubicaciones:** libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 3; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 5
+**Mejor similitud:** 0.2662
+**Similitud promedio:** 0.1495
+**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt; libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 1; libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt, bloque 3; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 3
 
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 2 — similitud 0.2304
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2662
 
-**Detalle de puntaje:** tfidf=0.1604; bonus=0.0700
+**Detalle de puntaje:** tfidf=0.2462; bonus=0.0200
 
-> σp   p(1  p) n (8.4) Como la distribución de muestreo de p es una distribución normal, si en la estimación por inter- valo de la proporción poblacional se elige como margen de error zα/2σp , entonces 100(1  α)%  de los intervalos que se obtengan contendrán la verdadera proporción poblacional. Pero para  calcular el margen de error no se puede usar directamente σp, ya que no se conoce p, pues se  está tratando de estimarlo.
+> Ejemplos de estimadores comunes (media muestral, proporción muestral, varianza muestral). 3.2 Estimación puntual y por intervalos ¿Qué es una estimación puntual? ¿Qué es una estimación por intervalos (intervalo de confianza)? Diferencias y ventajas de cada tipo de estimación.
 
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 1 — similitud 0.2185
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt — bloque 3 — similitud 0.1432
 
-**Detalle de puntaje:** tfidf=0.1485; bonus=0.0700
+**Detalle de puntaje:** tfidf=0.1332; bonus=0.0100
 
-> En una muestra aleatoria simple de 50 artículos de una población en la que σ  6, la media  muestral resultante es 32. a) Proporcione un intervalo de confianza de 90% para la media poblacional. b) Calcule un intervalo de confianza de 95% para la media poblacional. c)  Proporcione un intervalo de confianza de 99% para el mismo indicador. 3.
+> Resumen de intervalos de confi anza de muestra pequeña para medias de distribu- ciones normales con varianza(s) desconocida(s) Cuando el tamaño (o tamaños) de la muestra se hace grande, el número de grados de liber- tad para la distribución t aumenta y la distribución t puede ser calculada en forma muy precisa  por la distribución normal estándar. En consecuencia, los intervalos de confi anza de una mues- tra pequeña de esta sección son casi indistinguibles respecto de los intervalos de confi anza de  muestra grande de la Sección 8.6 para n grande (o n1 y n2 grandes).
 
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 2 — similitud 0.2090
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.1392
 
-**Detalle de puntaje:** tfidf=0.1390; bonus=0.0700
+**Detalle de puntaje:** tfidf=0.1192; bonus=0.0200
+
+> A menudo, sin embargo, expresaremos el intervalo de confianza en términos de errores estándar, más que con valores numéricos. Así, expresaremos los intervalos de confianza de esta forma: x  1.64x, donde: x   1.64x  límite superior del intervalo de confianza x  1.64x  límite inferior del intervalo de confianza Entonces, los límites de confianza son los límites superior e inferior del intervalo de confianza. En este caso, x   1.64x se conoce como límite superior de confianza (LSC) y x  1.64x es el límite inferior de confianza (LIC).
+
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.1256
+
+**Detalle de puntaje:** tfidf=0.1056; bonus=0.0200
+
+> Después de todo, parece ser que un alto nivel de confianza significa un al- to grado de precisión en lo que a la estimación concierne. En la práctica, sin embargo, altos niveles de confianza producen intervalos de confianza grandes, y éstos, de hecho, dan estimaciones bastan- te imprecisas. Considere, por ejemplo, el caso de un cliente de una tienda de electrodomésticos que pregunta so- bre la entrega de una nueva lavadora de ropa.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 1 — similitud 0.1198
+
+**Detalle de puntaje:** tfidf=0.0998; bonus=0.0200
+
+> Recuerde también que este valor recibe el nombre de error estándar. Los resultados del teorema central del límite permiten afirmar lo siguiente con respecto a los intervalos de confianza utilizando el estadístico z: 1. Noventa y cinco por ciento de las medias muestrales seleccionadas de una población se encontrará dentro de 1.96 errores estándares (desviación estándar de las medias mues- trales de la media poblacional, .
+
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 3 — similitud 0.1032
+
+**Detalle de puntaje:** tfidf=0.0832; bonus=0.0200
+
+> Muestreamos 100 limpiadores de parabrisas, 50 familias residentes de una área de cuatro manzanas de una comu- nidad y 75 empleados de una empresa grande. En cada ejemplo, la distribución normal era la distri- bución de muestreo adecuada para determinar intervalos de confianza. Sin embargo, no siempre es éste el caso. ¿Cómo podríamos tratar estimaciones en las que la dis- tribución normal no es la distribución de muestreo adecuada, es decir, cuando se estima la desvia- ción estándar de la población y el tamaño de muestra es 30 o menos?
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 26. investigación
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2191
+**Similitud promedio:** 0.1312
+**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 3; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 3; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 4
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2191
+
+**Detalle de puntaje:** tfidf=0.1491; bonus=0.0700
+
+> Estimación Actividad 7: 3.1 Investigación 5% Tarea — Métodos de estimación puntual y por intervalos para medias, proporciones y varianzas Subtítulo editorial: Actividad 7: Reporte de investigación Tipo de producto: investigacion_aplicada Requisitos e instrucciones de la actividad: Nombre de la Actividad Reporte de Investigación Descripción El estudiante iniciará el análisis y comprensión de los conceptos fundamentales relacionados con la estimación estadística, a través de la investigación y sistematización de información teórica y aplicada, que le permita comprender los métodos de estimación puntual y por intervalos, así como sus propiedades y aplicaciones.
+
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 4 — similitud 0.1229
+
+**Detalle de puntaje:** tfidf=0.0529; bonus=0.0700
+
+> Explique su respuesta. ■ 7-77 Al evaluar la efectividad de un programa federal de rehabilitación, en una investigación de 52 de los 900 internos de una prisión se encontró que 35% de éstos era reincidente. a) Estime el error estándar de la proporción de reincidentes. b) Construya un intervalo de confianza del 90% para la proporción de reincidentes entre los internos de esta prisión. ■ 7-78 Durante la cosecha de manzanas, se revisaron por separado 150 fanegas de la fruta en busca de manzanas en mal estado (debido, como usted sabe, a que una manzana mala puede echar a perder a todo el canasto) y se encontró que había un promedio de 3.2
+
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 3 — similitud 0.1125
+
+**Detalle de puntaje:** tfidf=0.0425; bonus=0.0700
+
+> Gosset era empleado de la Cervecería Guinness en Dublín, Irlanda; la empresa no permitía que los empleados publicaran sus hallazgos de investigación con su propio nombre. De modo que Gosset adoptó el seudónimo de Student para publicar.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 3 — similitud 0.1119
+
+**Detalle de puntaje:** tfidf=0.0419; bonus=0.0700
+
+> Después de ver la comedia, 250 afirmaron que la verían y sugirieron reemplazar el programa de investigación criminal. a) Calcule el valor de la proporción de la población. b) Construya el intervalo de confianza de 99% de la proporción poblacional. c) Interprete los resultados que obtuvo. 18.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 1 — similitud 0.1109
+
+**Detalle de puntaje:** tfidf=0.0409; bonus=0.0700
+
+> Fuente bibliográfica: Estadística aplicada a los negocios y la economía - Lind, Marchal y Wathen. 15.ª edición.pdf Actividad: 7 (3.1 Investigación 5% Tarea) Palabras clave: estimación puntual, intervalo de confianza, distribución t, ji-cuadrada, varianza poblacional, proporción poblacional, insesgamiento [Bloque seleccionado #326 | relevancia=16] Pagina 325 Desviación estándar de la población conocida () Un intervalo de confianza se calcula con el empleo de dos estadísticos: la media muestral  y la desviación estándar.
+
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.1101
+
+**Detalle de puntaje:** tfidf=0.0401; bonus=0.0700
+
+> Fuente bibliográfica: Estadística para administración y economía - Levin y Rubin. 7.ª edición revisada.pdf Actividad: 7 (3.1 Investigación 5% Tarea) Palabras clave: estimación puntual, intervalo de confianza, distribución t, ji-cuadrada, varianza poblacional, proporción poblacional, insesgamiento [Bloque seleccionado #294 | relevancia=14] Pagina 293 En este capítulo introducimos métodos que nos permiten estimar con precisión razonable la proporción de la población (la fracción de la población que posee una característica dada) y la me- dia de la población. Calcular la proporción exacta o la media exacta sería una meta imposible.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+
+## Ficha 27. nivel de confianza y riesgo alfa
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2729
+**Similitud promedio:** 0.1041
+**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 5; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 4
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2729
+
+**Detalle de puntaje:** tfidf=0.1729; bonus=0.1000
+
+> Valor 5% Formato de Entrega El documento deberá entregarse en formato PDF letra Arial 11, interlineado 1.5 texto justificado y portada oficial Tipo de entrega individual Portada Oficial Click aquí Conceptos nucleares de la actividad: estimadores puntuales comunes insesgamiento eficiencia y consistencia intervalo de confianza para la media con sigma conocida intervalo de confianza para la media con distribución t de Student intervalo de confianza para una proporción poblacional intervalo de confianza para la varianza con distribución ji-cuadrada grados de libertad en estimación nivel de confianza y riesgo alfa precisión y amplitud del intervalo aplicaciones de estimación en finanzas y...
+
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.0979
+
+**Detalle de puntaje:** tfidf=0.0779; bonus=0.0200
+
+> Relación entre nivel de confianza e intervalo de confianza Podría pensarse que deberíamos utilizar un alto nivel de confianza, como 99%, en todos los proble- mas sobre estimaciones. Después de todo, parece ser que un alto nivel de confianza significa un al- to grado de precisión en lo que a la estimación concierne.
+
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.0731
+
+**Detalle de puntaje:** tfidf=0.0531; bonus=0.0200
+
+> Una probabilidad más alta implica una mayor con- fianza. En la estimación, los niveles de confianza que se utilizan con más frecuencia son 90, 95 y 99%, pero somos libres de aplicar cualquier nivel de confianza. En la figura 7-2, por ejemplo, utili- zamos un nivel de confianza del 95.5%.
+
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 4 — similitud 0.0708
+
+**Detalle de puntaje:** tfidf=0.0408; bonus=0.0300
+
+> La tercera diferencia al utilizar la tabla t es que debemos especificar los grados de libertad que se manejan. Suponga que hacemos una estimación a un nivel de confianza del 90% con una muestra de tamaño 14, que tiene 13 grados de libertad. Busque en la tabla 2 del apéndice, en la co- lumna de 0.10, hasta que encuentre el renglón 13.
+
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 5 — similitud 0.0564
+
+**Detalle de puntaje:** tfidf=0.0364; bonus=0.0200
+
+> Usted planea llevar a cabo una encuesta para hallar la proporción de fuerza laboral con dos o más trabajos. Decide con base en un nivel de confianza de 95%, y establece que la proporción estima- da debe encontrarse en un margen de menos de 2% de la proporción poblacional. Una encuesta piloto revela que 5 de 50 de los entrevistados tenían dos o más trabajos. ¿A cuántos trabajadores debe entrevistar para satisfacer los requisitos?
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.0537
+
+**Detalle de puntaje:** tfidf=0.0337; bonus=0.0200
+
+> Ejemplos numéricos sencillos. 3.4 Cálculo e interpretación de intervalos de confianza Pasos para calcular un intervalo de confianza. ¿Qué significa el nivel de confianza? ¿Cómo se interpreta un intervalo de confianza en la práctica? Importancia de los intervalos de confianza en la toma de decisiones administrativas.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 4 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 28. precisión y amplitud del intervalo
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.2366
+**Similitud promedio:** 0.0857
+**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt, bloque 1; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 2; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 3
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.2366
+
+**Detalle de puntaje:** tfidf=0.1466; bonus=0.0900
+
+> Valor 5% Formato de Entrega El documento deberá entregarse en formato PDF letra Arial 11, interlineado 1.5 texto justificado y portada oficial Tipo de entrega individual Portada Oficial Click aquí Conceptos nucleares de la actividad: estimadores puntuales comunes insesgamiento eficiencia y consistencia intervalo de confianza para la media con sigma conocida intervalo de confianza para la media con distribución t de Student intervalo de confianza para una proporción poblacional intervalo de confianza para la varianza con distribución ji-cuadrada grados de libertad en estimación nivel de confianza y riesgo alfa precisión y amplitud del intervalo aplicaciones de estimación en finanzas y...
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 2 — similitud 0.0890
+
+**Detalle de puntaje:** tfidf=0.0690; bonus=0.0200
 
 > [Bloque seleccionado #351 | relevancia=24] Pagina 350 316  Capítulo 8 Estimación por intervalo a) Proporcione un intervalo de estimación de 90% de confianza para la media poblacional. b) Calcule un intervalo de 95%. c)  Proporcione ahora un intervalo de estimación de 99%. d) ¿Qué le sucede a la amplitud del intervalo de confianza a medida que el nivel de confianza  aumenta? ¿Parece esto razonable? Explique.
 
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 3 — similitud 0.1669
+### libro-estadistica-aplicada-a-los-negocios-y-la-economi-A07.txt — bloque 1 — similitud 0.0595
 
-**Detalle de puntaje:** tfidf=0.0969; bonus=0.0700
+**Detalle de puntaje:** tfidf=0.0395; bonus=0.0200
 
-> WEB archivo TeeTimes [Bloque seleccionado #367 | relevancia=36] Pagina 366 332  Capítulo 8 Estimación por intervalo 32. En una muestra aleatoria de 800 elementos se obtiene una proporción muestral, p  0.70. a) Proporcione un intervalo de 90% de confianza para la proporción poblacional. b) Proporcione un intervalo de confianza de 95% para la proporción poblacional. 33.
+> De los capítulos anteriores, usted sabe que la desviación estándar es un estadístico importante, porque mide la dispersión, o la amplitud, de una población o de una muestra de distribución. Cuando se calcula un intervalo de confianza, se utiliza la desviación estándar para estimar el rango del intervalo de confianza. Para demostrar la idea del intervalo de confianza, se comienza con una suposición sim- ple: que conocemos el valor de la desviación estándar de la población, .
 
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 5 — similitud 0.1668
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.0479
 
-**Detalle de puntaje:** tfidf=0.0968; bonus=0.0700
+**Detalle de puntaje:** tfidf=0.0279; bonus=0.0200
 
-> En una prueba de hipótesis para la varianza poblacional se emplean el valor hipotético de la  varianza poblacional σ 2 0 y la varianza muestral s2 para calcular el valor del estadístico de prue- ba  2. Si la población tiene una distribución normal, el estadístico de prueba es el siguiente.
+> Relación entre nivel de confianza e intervalo de confianza Podría pensarse que deberíamos utilizar un alto nivel de confianza, como 99%, en todos los proble- mas sobre estimaciones. Después de todo, parece ser que un alto nivel de confianza significa un al- to grado de precisión en lo que a la estimación concierne.
 
-### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 5 — similitud 0.1621
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.0424
 
-**Detalle de puntaje:** tfidf=0.0921; bonus=0.0700
+**Detalle de puntaje:** tfidf=0.0224; bonus=0.0200
 
-> [Bloque seleccionado #489 | relevancia=17] Pagina 488 454  Capítulo 11 Inferencias acerca de varianzas poblacionales De esta manera se ha ilustrado el proceso del uso de la distribución ji-cuadrada para obtener  una estimación por intervalo de la varianza poblacional y la desviación estándar poblacional. Observe que, como se usaron  2 0.975 y  2 0.025, el coeﬁ ciente de conﬁ anza de la estimación por  intervalo es 0.95.
+> Fuente bibliográfica: Estadística para administración y economía - Levin y Rubin. 7.ª edición revisada.pdf Actividad: 7 (3.1 Investigación 5% Tarea) Palabras clave: estimación puntual, intervalo de confianza, distribución t, ji-cuadrada, varianza poblacional, proporción poblacional, insesgamiento [Bloque seleccionado #294 | relevancia=14] Pagina 293 En este capítulo introducimos métodos que nos permiten estimar con precisión razonable la proporción de la población (la fracción de la población que posee una característica dada) y la me- dia de la población. Calcular la proporción exacta o la media exacta sería una meta imposible.
 
-**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon varias referencias dentro de la misma fuente.
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 3 — similitud 0.0386
+
+**Detalle de puntaje:** tfidf=0.0286; bonus=0.0100
+
+> Suponga que el valor planeado es p*  0.50, con un nivel de confian- za de 95%. a) Si p*  0.50, ¿cuál fue el margen de error planeado en la encuesta de junio? b) Al acercarse la elección de noviembre se busca una mejor precisión y un menor margen de  error. Suponga que los márgenes de error que se piden son los que se muestran en la tabla  siguiente.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 4 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 29. propiedades estimadores
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.1573
+**Similitud promedio:** 0.0603
+**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt, bloque 2
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.1573
+
+**Detalle de puntaje:** tfidf=0.1373; bonus=0.0200
+
+> Temas a desarrollar 3.1 Estimadores Definición de estimador. Propiedades de los estimadores: insesgamiento, eficiencia y consistencia. Ejemplos de estimadores comunes (media muestral, proporción muestral, varianza muestral).
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.0407
+
+**Detalle de puntaje:** tfidf=0.0307; bonus=0.0100
+
+> Estimación Actividad 7: 3.1 Investigación 5% Tarea — Métodos de estimación puntual y por intervalos para medias, proporciones y varianzas Subtítulo editorial: Actividad 7: Reporte de investigación Tipo de producto: investigacion_aplicada Requisitos e instrucciones de la actividad: Nombre de la Actividad Reporte de Investigación Descripción El estudiante iniciará el análisis y comprensión de los conceptos fundamentales relacionados con la estimación estadística, a través de la investigación y sistematización de información teórica y aplicada, que le permita comprender los métodos de estimación puntual y por intervalos, así como sus propiedades y aplicaciones.
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.0369
+
+**Detalle de puntaje:** tfidf=0.0269; bonus=0.0100
+
+> Valor 5% Formato de Entrega El documento deberá entregarse en formato PDF letra Arial 11, interlineado 1.5 texto justificado y portada oficial Tipo de entrega individual Portada Oficial Click aquí Conceptos nucleares de la actividad: estimadores puntuales comunes insesgamiento eficiencia y consistencia intervalo de confianza para la media con sigma conocida intervalo de confianza para la media con distribución t de Student intervalo de confianza para una proporción poblacional intervalo de confianza para la varianza con distribución ji-cuadrada grados de libertad en estimación nivel de confianza y riesgo alfa precisión y amplitud del intervalo aplicaciones de estimación en finanzas y...
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt — bloque 2 — similitud 0.0344
+
+**Detalle de puntaje:** tfidf=0.0244; bonus=0.0100
+
+> En otras palabras, quisiéramos que la media o valor esperado de la  distribución de estimaciones fuera igual al parámetro estimado; esto es, E( )ˆu = u. Se dice  que los estimadores puntuales que satisfacen esta propiedad son insesgados. La distribución  muestral para un estimador puntual sesgado positivamente, para el que E( )ˆu > u, se muestra  en la Figura 8.2.
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt — bloque 2 — similitud 0.0322
+
+**Detalle de puntaje:** tfidf=0.0222; bonus=0.0100
+
+> 7.34  Suponga que W1 y W2 son variables aleatorias independientes y con distribución x2 con n1 y n2 grados  de libertad, respectivamente. De acu [Bloque seleccionado #417 | relevancia=6] Pagina 416 392 Capítulo 8 Estimación 8.2 Sesgo y error cuadrático medio  de estimadores puntuales La estimación puntual es similar, en muchos aspectos, a disparar a un blanco con un revól- ver.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 4 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 30. puntual intervalos
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.1729
+**Similitud promedio:** 0.1096
+**Fuentes:** 00-consigna-y-planeacion-A07.txt; libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt; libro-estadistica-para-administracion-y-economia-levin-A07.txt; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt
+**Ubicaciones:** 00-consigna-y-planeacion-A07.txt, bloque 1; libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt, bloque 2; libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt, bloque 3; libro-estadistica-para-administracion-y-economia-levin-A07.txt, bloque 1; libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt, bloque 1
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.1729
+
+**Detalle de puntaje:** tfidf=0.1529; bonus=0.0200
+
+> Ejemplos de estimadores comunes (media muestral, proporción muestral, varianza muestral). 3.2 Estimación puntual y por intervalos ¿Qué es una estimación puntual? ¿Qué es una estimación por intervalos (intervalo de confianza)? Diferencias y ventajas de cada tipo de estimación.
+
+### 00-consigna-y-planeacion-A07.txt — bloque 1 — similitud 0.1617
+
+**Detalle de puntaje:** tfidf=0.1417; bonus=0.0200
+
+> Estimación Actividad 7: 3.1 Investigación 5% Tarea — Métodos de estimación puntual y por intervalos para medias, proporciones y varianzas Subtítulo editorial: Actividad 7: Reporte de investigación Tipo de producto: investigacion_aplicada Requisitos e instrucciones de la actividad: Nombre de la Actividad Reporte de Investigación Descripción El estudiante iniciará el análisis y comprensión de los conceptos fundamentales relacionados con la estimación estadística, a través de la investigación y sistematización de información teórica y aplicada, que le permita comprender los métodos de estimación puntual y por intervalos, así como sus propiedades y aplicaciones.
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt — bloque 3 — similitud 0.1149
+
+**Detalle de puntaje:** tfidf=0.1049; bonus=0.0100
+
+> Resumen de intervalos de confi anza de muestra pequeña para medias de distribu- ciones normales con varianza(s) desconocida(s) Cuando el tamaño (o tamaños) de la muestra se hace grande, el número de grados de liber- tad para la distribución t aumenta y la distribución t puede ser calculada en forma muy precisa  por la distribución normal estándar. En consecuencia, los intervalos de confi anza de una mues- tra pequeña de esta sección son casi indistinguibles respecto de los intervalos de confi anza de  muestra grande de la Sección 8.6 para n grande (o n1 y n2 grandes).
+
+### libro-estadistica-para-administracion-y-economia-levin-A07.txt — bloque 1 — similitud 0.0794
+
+**Detalle de puntaje:** tfidf=0.0694; bonus=0.0100
+
+> Tipos de estimaciones Podemos hacer dos tipos de estimaciones concernientes a una población: una estimación puntual y una estimación de intervalo. Una estimación puntual es un solo número que se utiliza para esti- mar un parámetro de población desconocido.
+
+### libro-estadistica-para-negocios-y-economia-anderson-sw-A07.txt — bloque 1 — similitud 0.0764
+
+**Detalle de puntaje:** tfidf=0.0664; bonus=0.0100
+
+> Use este conjunto de datos para efectuar lo que se solicita en los incisos siguientes. a) Calcule una estimación puntual de la proporción de fondos de inversión de BusinessWeek  que son fondos de cargo. b) Desarrolle una estimación puntual de la proporción de fondos clasificados como de alto  riesgo. c)   Calcule una estimación puntual de la proporción de fondos con una puntuación abajo del  promedio para el riesgo. 15.
+
+### libro-estadistica-matematica-con-aplicaciones-wackerly-A07.txt — bloque 2 — similitud 0.0523
+
+**Detalle de puntaje:** tfidf=0.0423; bonus=0.0100
+
+> Como las estimaciones son números, evaluamos la bondad del  estimador puntual al construir una distribución de frecuencia de los valores de las estimacio- nes obtenidas en muestreo repetido y observar cómo se agrupa esta distribución alrededor del  parámetro objetivo. Suponga que deseamos especifi car una estimación puntual para un parámetro poblacional  al que llamaremos u.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 3 referencia(s) de baja similitud que podrían introducir ruido.

@@ -16,3 +16,5 @@ Carpeta para planeaciones, literatura científica, libros de texto especializado
 3. **Control de autenticidad:** Ningún texto extraído o resumido debe copiarse íntegro a los manuscritos; todo contenido debe ser sintetizado, analizado y parafraseado con vocabulario técnico de alto nivel.
 4. **Trazabilidad:** Conservar fecha, origen, actividad y rol de cada recurso utilizado.
 
+
+

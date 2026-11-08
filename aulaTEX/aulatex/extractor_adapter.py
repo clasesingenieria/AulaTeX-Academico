@@ -381,7 +381,10 @@ class ExtractorAdapter:
         if resolved.conceptos_path is not None:
             command.extend(["--conceptos", str(resolved.conceptos_path)])
         command.extend(["--salida", str(resolved.output_dir)])
-        command.extend(["--motor", request.motor])
+        motor_choice = "aulatex" if request.motor in {"novapro", "aulatex"} else request.motor
+        command.extend(["--motor", motor_choice])
+        if motor_choice == "aulatex":
+            command.extend(["--aulatex-engine", "Amazon Nova Pro"])
         command.extend(["--top-k", str(max(1, int(request.top_k)))])
         command.extend(["--max-citas", str(max(1, int(request.max_citas)))])
         command.append("--recursivo" if request.recursive else "--no-recursivo")
