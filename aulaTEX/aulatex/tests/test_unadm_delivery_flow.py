@@ -424,6 +424,106 @@ class UnadmWeek6DetectionAndStagingTests(unittest.TestCase):
         self.assertFalse(sub_res2.ok)
         self.assertEqual(sub_res2.status, "blocked_missing_user_validation")
 
+    def test_15_teoria_estado_s6_forum_draft_content_and_safety(self) -> None:
+        """Verifica que el borrador de participacion para el foro de la Actividad 6 exista, responda las 3 preguntas detonantes y no filtre credenciales."""
+        draft_path = Path(
+            self.workspace.root
+            / "UnADM"
+            / "licenciatura-en-derecho-unadm"
+            / "teoria-del-estado-y-constitucion-lde"
+            / "referencias-teoria-del-estado-y-constitucion"
+            / "notas-teoria-del-estado-y-constitucion"
+            / "actividad-06-s6-foro-de-derechos-humanos"
+            / "participacion-S6-foro-derechos-humanos.txt"
+        )
+        self.assertTrue(draft_path.is_file(), f"El borrador de foro no existe en {draft_path}")
+        content = draft_path.read_text(encoding="utf-8")
+        self.assertGreater(len(content), 1000)
+        self.assertIn("Pregunta 1", content)
+        self.assertIn("Pregunta 2", content)
+        self.assertIn("Pregunta 3", content)
+        assert_no_credential_leak(content, str(draft_path))
+
+    def test_16_penal_s6_video_script_deliverable_and_safety(self) -> None:
+        """Verifica que el guion textual del video para la Actividad 6 de Penal exista, cubra el Caso A y no filtre credenciales."""
+        script_path = Path(
+            self.workspace.root
+            / "UnADM"
+            / "licenciatura-en-derecho-unadm"
+            / "derecho-penal-especial-mexicano-lde"
+            / "referencias-derecho-penal-especial-mexicano"
+            / "notas-derecho-penal-especial-mexicano"
+            / "actividad-06-derecho-penal-especial-mexicano"
+            / "guion-video-actividad-6.txt"
+        )
+        self.assertTrue(script_path.is_file(), f"El guion de video no existe en {script_path}")
+        content = script_path.read_text(encoding="utf-8")
+        self.assertGreater(len(content), 2000)
+        self.assertIn("Caso A", content)
+        self.assertIn("259 Bis", content)
+        self.assertIn("179", content)
+        assert_no_credential_leak(content, str(script_path))
+
+    def test_17_antecedentes_dh_actividad_8_landscape_page_clean(self) -> None:
+        """Verifica que el entregable de Actividad 8 tenga suprimidos los encabezados/pies en la pagina apaisada del cuadro sinoptico."""
+        import fitz
+        pdf_path = Path(
+            self.workspace.root
+            / "UnADM"
+            / "licenciatura-en-derecho-unadm"
+            / "antecedentes-de-los-derechos-humanos-lde"
+            / "entregas-antecedentes-de-los-derechos-humanos"
+            / "Actividad-8-Cuadro-sinoptico-Martin-Jonathan-de-la-Cruz.pdf"
+        )
+        self.assertTrue(pdf_path.is_file(), f"El entregable PDF de Actividad 8 no existe en {pdf_path}")
+        doc = fitz.open(pdf_path)
+        self.assertGreaterEqual(len(doc), 10)
+        page6 = doc[5]
+        self.assertGreater(page6.rect.width, page6.rect.height)
+        blocks = page6.get_text("blocks")
+        for b in blocks:
+            txt = b[4].strip()
+            self.assertNotIn("UNIVERSIDAD", txt)
+            self.assertNotIn("Actividad", txt)
+
+    def test_18_antecedentes_dh_actividad_9_syllabus_and_three_times_contract(self) -> None:
+        """Verifica que el reporte de Actividad 9 responda al temario oficial (Semana 7 Mapa de cajas) y cumpla el contrato de Tres Tiempos con 0 solapamientos."""
+        import fitz
+        import re
+        pdf_path = Path(
+            self.workspace.root
+            / "UnADM"
+            / "licenciatura-en-derecho-unadm"
+            / "antecedentes-de-los-derechos-humanos-lde"
+            / "entregas-antecedentes-de-los-derechos-humanos"
+            / "reporte-antecedentes-de-los-derechos-humanos-Actividad-9.pdf"
+        )
+        self.assertTrue(pdf_path.is_file(), f"El reporte PDF de Actividad 9 no existe en {pdf_path}")
+        doc = fitz.open(pdf_path)
+        self.assertGreaterEqual(len(doc), 8)
+        
+        full_text = "\n".join(p.get_text() for p in doc)
+        leaks = re.findall(r"tiempo\s+[123]", full_text, re.IGNORECASE)
+        self.assertEqual(leaks, [], f"Se detectaron fugas literales de etiquetas internas: {leaks}")
+        
+        page4 = doc[3]
+        self.assertGreater(page4.rect.width, page4.rect.height)
+        blocks_p4 = page4.get_text("blocks")
+        for b in blocks_p4:
+            txt = b[4].strip()
+            self.assertNotIn("UNIVERSIDAD", txt)
+            self.assertNotIn("Actividad", txt)
+        
+        total_overlaps = 0
+        for p in doc:
+            tblocks = [b for b in p.get_text("blocks") if b[6] == 0 and b[4].strip()]
+            for j in range(len(tblocks)):
+                for k in range(j + 1, len(tblocks)):
+                    inter = fitz.Rect(tblocks[j][:4]).intersect(fitz.Rect(tblocks[k][:4]))
+                    if not inter.is_empty and inter.width > 2 and inter.height > 2:
+                        total_overlaps += 1
+        self.assertEqual(total_overlaps, 0, f"Se detectaron {total_overlaps} solapamientos de bloques en el documento")
+
 
 if __name__ == "__main__":
     unittest.main()
