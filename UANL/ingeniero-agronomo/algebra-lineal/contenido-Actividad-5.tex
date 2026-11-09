@@ -47,9 +47,9 @@ La caracterización porcentual de insumos y requerimientos se sintetiza en el Cu
 \caption{Matriz de concentración nutrimental de fuentes comerciales y demanda neta.}\label{tab:datos_fertilizacion}
 \begin{AulatexTable}[\linewidth]
 \small
-\begin{tabularx}{\linewidth}{lcccc}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}Xcccc@{}}
 \toprule
-\textbf{Nutriente objetivo} & \textbf{Fuente 1: NPK 20-10-10} & \textbf{Fuente 2: DAP 18-46-0} & \textbf{Fuente 3: 13-0-44} & \textbf{Demanda neta} \\
+\textbf{Nutriente objetivo} & \textbf{NPK 20-10-10} & \textbf{DAP 18-46-0} & \textbf{13-0-44} & \textbf{Demanda neta} \\
 & ($a_{i1}$) & ($a_{i2}$) & ($a_{i3}$) & ($\mathbf{b}$, kg/ha) \\
 \midrule
 Nitrógeno ($N$) & $0.20$ ($20\%$) & $0.18$ ($18\%$) & $0.13$ ($13\%$) & $175$ \\
@@ -348,14 +348,13 @@ Los resultados cuantitativos del modelo matricial de fertilización balanceada s
 \caption{Dosis físicas calculadas de fertilizantes y balance nutrimental por hectárea.}\label{tab:resultados_dosis}
 \begin{AulatexTable}[\linewidth]
 \small
-\begin{tabularx}{\linewidth}{lccccZ}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{3.5cm}ccccc@{}}
 \toprule
-\textbf{Fertilizante comercial} & \textbf{Dosis neta} & \textbf{Aporte $N$} & \textbf{Aporte $P_2O_5$} & \textbf{Aporte $K_2O$} & \textbf{Función agronómica principal} \\
-& (kg/ha) & (kg/ha) & (kg/ha) & (kg/ha) & \\
+\textbf{Fertilizante comercial} & \textbf{Dosis (kg/ha)} & \textbf{$N$ (kg/ha)} & \textbf{$P_2O_5$ (kg/ha)} & \textbf{$K_2O$ (kg/ha)} & \textbf{Función agronómica principal} \\
 \midrule
-Mezcla NPK 20-10-10 & $500$ & $100$ & $50$ & $50$ & Suministro balanceado de base vegetativa \\
-DAP 18-46-0 & $200$ & $36$ & $92$ & $0$ & Enraizamiento y diferenciación floral \\
-Nitrato de Potasio 13-0-44 & $300$ & $39$ & $0$ & $132$ & Calibre de fruto, sólidos solubles y osmorregulación \\
+Mezcla NPK 20-10-10 & $500$ & $100$ & $50$ & $50$ & Suministro balanceado de base \\
+DAP 18-46-0 & $200$ & $36$ & $92$ & $0$ & Enraizamiento y diferenciación \\
+Nitrato de Potasio 13-0-44 & $300$ & $39$ & $0$ & $132$ & Calibre y osmorregulación \\
 \midrule
 \textbf{Aporte Total} & $\mathbf{1000}$ & $\mathbf{175}$ & $\mathbf{142}$ & $\mathbf{182}$ & \textbf{Cumplimiento estricto: $100\%$} \\
 \textbf{Requerimiento Meta} & --- & $\mathbf{175}$ & $\mathbf{142}$ & $\mathbf{182}$ & \textbf{Diferencia residual: $0\text{ kg}$} \\
@@ -378,12 +377,14 @@ Los tres métodos aplicados exhiben propiedades matemáticas y operativas comple
 \caption{Comparación técnica y operativa de los métodos de solución analítica empleados.}\label{tab:comparacion_metodos}
 \begin{AulatexTable}[\linewidth]
 \small
-\begin{tabularx}{\linewidth}{p{2.2cm}Zp{2.6cm}Z}
+\begin{tabularx}{\linewidth}{@{}>{\bfseries\raggedright\arraybackslash}p{2.3cm} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{2.8cm} >{\raggedright\arraybackslash}X@{}}
 \toprule
 \textbf{Método} & \textbf{Mecanismo fundamental} & \textbf{Complejidad / Esfuerzo} & \textbf{Ventaja analítica en campo} \\
 \midrule
 Gauss-Jordan & Transformaciones elementales por renglón en $[A|\mathbf{b}]$. & $\mathcal{O}(n^3) \approx 27$ operaciones. & Muestra la transición y pivoteo en cada paso. \\
+\addlinespace
 Regla de Cramer & Cociente de determinantes $x_j = \det(A_j)/\det(A)$. & $4$ determinantes de orden 3. & Permite calcular una dosis aislada sin resolver todo. \\
+\addlinespace
 Matriz Inversa & Producto vectorial $\mathbf{x} = A^{-1}\mathbf{b}$. & Inversión + producto matriz-vector. & Permite recalcular dosis ante cambios de demanda $\mathbf{b}$. \\
 \bottomrule
 \end{tabularx}
