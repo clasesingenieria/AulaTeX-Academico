@@ -69,6 +69,48 @@ class EntregarUnadmRequest:
     output_dir: str = ""
 
 
+def parse_forum_post(content: str) -> tuple[str, str]:
+    """Extrae el asunto y el cuerpo limpio de una participación académica de foro."""
+    asunto = ""
+    lines = content.strip().splitlines()
+    body_lines: list[str] = []
+
+    for i, line in enumerate(lines):
+        line_s = line.strip()
+        if line_s.lower().startswith("asunto:"):
+            asunto = line_s.split(":", 1)[1].strip()
+            body_lines = lines[i + 1:]
+            break
+        elif "título de la intervención" in line_s.lower() or "titulo de la intervencion" in line_s.lower():
+            for next_line in lines[i + 1:]:
+                n_str = next_line.strip().strip("*").strip()
+                if n_str and not n_str.startswith("#") and not n_str.startswith("-"):
+                    asunto = n_str
+                    break
+
+    if not asunto:
+        asunto = "Participación académica en foro - S6"
+        body_lines = lines
+
+    cleaned_body: list[str] = []
+    in_header = True
+    for l in body_lines:
+        ls = l.strip()
+        if in_header:
+            if any(ls.startswith(p) for p in ("#", "**Asignatura:", "**Semana:", "**Estudiante:", "**Destino", "**Requisito", "---")):
+                continue
+            if ls.lower().startswith("asunto:"):
+                continue
+            if not ls:
+                continue
+            in_header = False
+        if "nota de soberanía" in ls.lower() or "nota de soberania" in ls.lower():
+            break
+        cleaned_body.append(l)
+
+    message = "\n".join(cleaned_body).strip()
+    return asunto, message
+
 class EntregarUnadmAgent(RealizarEntregaAgent):
     """Agente especializado en realizar entregas en UnADM tras validación explícita."""
 
@@ -194,10 +236,15 @@ class EntregarUnadmAgent(RealizarEntregaAgent):
             )
 
         artifact_bytes = artifact_file.read_bytes()
-        if not artifact_bytes.startswith(b"%PDF-"):
+        cat_info = UNADM_SUBJECTS_CATALOG.get(base_slug, {}).get("activities", {}).get(request.activity_number, {})
+        is_forum = (cat_info.get("kind") == "forum") or (artifact_file.suffix.lower() in (".txt", ".md"))
+        is_pdf = artifact_bytes.startswith(b"%PDF-")
+        is_text_forum = is_forum and (artifact_file.suffix.lower() in (".txt", ".md")) and len(artifact_bytes) >= 100
+
+        if not (is_pdf or is_text_forum):
             blocker = {
-                "code": "invalid_pdf_format",
-                "detail": f"El artefacto {artifact_file.name} no es un archivo PDF válido.",
+                "code": "invalid_format",
+                "detail": f"El artefacto {artifact_file.name} no es un PDF válido ni un texto de foro (.txt/.md).",
                 "blocking": True,
             }
             return DeliverySubmissionResult(
@@ -256,7 +303,10 @@ class EntregarUnadmAgent(RealizarEntregaAgent):
         # ------------------------------------------------------------------
         # MODO DRY-RUN: Simulación y validación de contrato sin mutar plataforma
         # ------------------------------------------------------------------
-        mod_url = f"{UNADM_BASE_URL}/mod/assign/view.php?id={mid}" if mid else f"{UNADM_BASE_URL}/course/view.php?id={cid}"
+        if is_forum:
+            mod_url = f"{UNADM_BASE_URL}/mod/forum/view.php?id={mid}" if mid else f"{UNADM_BASE_URL}/course/view.php?id={cid}"
+        else:
+            mod_url = f"{UNADM_BASE_URL}/mod/assign/view.php?id={mid}" if mid else f"{UNADM_BASE_URL}/course/view.php?id={cid}"
 
         if request.dry_run:
             manifest = {
@@ -380,14 +430,49 @@ class EntregarUnadmAgent(RealizarEntregaAgent):
             # Destruir credenciales de memoria inmediatamente
             del credentials
 
-            # 2. Navegar a la tarea
+            # 2. Navegar a la actividad (tarea o foro)
             page.goto(mod_url, wait_until="networkidle")
             ensure_same_https_host(page.url, UNADM_HOST, UNADM_BASE_URL)
-            main_sec = page.locator("#region-main, [role='main']")
+            main_sec = page.locator("#region-main, [role='main']").first
             before_text = main_sec.inner_text()
 
-            # Comprobar si ya está calificada o enviada
-            if "Enviado para calificar" in before_text and not request.finalize:
+            if is_forum:
+                asunto, mensaje = parse_forum_post(artifact_file.read_text(encoding="utf-8"))
+                post_titles = main_sec.locator(".discussionname, .topic.starter, .forumpost").all_inner_texts()
+                already_posted = any(asunto.lower()[:30] in pt.lower() for pt in post_titles)
+
+                if already_posted and not request.finalize:
+                    final_text = before_text
+                    status_str = "already_submitted"
+                else:
+                    add_topic_btn = page.locator('a:has-text("Añadir un nuevo tema de debate"), button:has-text("Añadir un nuevo tema"), [data-action="add-discussion-topic"], a[href*="post.php?forum="]').first
+                    if add_topic_btn.count():
+                        add_topic_btn.click()
+                        page.wait_for_load_state("networkidle")
+                        time.sleep(1)
+
+                        subject_input = page.locator('#id_subject, input[name="subject"]').first
+                        if subject_input.count():
+                            subject_input.fill(asunto)
+
+                        msg_editor = page.locator('#id_messageeditable, div[role="textbox"], textarea[name="message"]').first
+                        if msg_editor.count():
+                            msg_editor.fill(mensaje)
+
+                        submit_forum = page.locator('#id_submitbutton, button[name="submitbutton"], input[type="submit"][value*="foro"]').first
+                        if submit_forum.count() and request.finalize:
+                            submit_forum.click()
+                            page.wait_for_load_state("networkidle")
+                            time.sleep(2)
+                            status_str = "submitted_for_grading"
+                        else:
+                            status_str = "draft_saved"
+                    else:
+                        status_str = "draft_saved"
+
+                    final_text = main_sec.inner_text()
+                    submission_performed = True
+            elif "Enviado para calificar" in before_text and not request.finalize:
                 final_text = before_text
                 status_str = "already_submitted"
             else:

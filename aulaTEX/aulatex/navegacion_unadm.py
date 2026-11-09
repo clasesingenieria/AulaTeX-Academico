@@ -402,7 +402,7 @@ class NavegacionUnadmAgent(PlatformNavigationAgent):
         page.goto(mod_url, wait_until="domcontentloaded")
         ensure_same_https_host(page.url, UNADM_HOST, UNADM_BASE_URL)
 
-        main = page.locator("#region-main, [role='main']")
+        main = page.locator("#region-main, [role='main']").first
         if not main.count():
             blockers.append({"module_id": mid, "code": "module_main_region_missing"})
             return {"module_id": mid, "error": "main_region_missing"}
