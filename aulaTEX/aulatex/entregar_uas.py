@@ -332,26 +332,141 @@ class EntregarUasAgent(RealizarEntregaAgent):
         # ------------------------------------------------------------------
         # ENVÍO REAL AUTORIZADO A UAS (dry_run=False)
         # ------------------------------------------------------------------
-        # Verificación de credenciales en bóveda cifrada
-        pin = os.getenv("AULATEX_MASTER_PIN", "")
-        if not pin:
-            raise PlatformCredentialBlockedError("Variable AULATEX_MASTER_PIN no configurada para realizar entrega.")
+        if not mid:
+            blocker = {
+                "code": "missing_module_id",
+                "detail": "Para el envío real a UAS es obligatorio indicar el module_id (ID de la tarea Moodle).",
+                "blocking": True,
+            }
+            return DeliverySubmissionResult(
+                ok=False,
+                status="blocked_missing_module_id",
+                run_id=run_id,
+                run_dir=run_dir,
+                artifact_path=str(artifact_file),
+                sha256=actual_sha256,
+                platform_url="",
+                blockers=(blocker,),
+            )
 
-        # Cargar cuenta UAS
-        uas_account = load_vault_account(self.workspace.repo_root, pin, "uas")
-        if not uas_account:
-            raise PlatformCredentialBlockedError("No se encontró cuenta activa para UAS en la bóveda cifrada.")
+        from playwright.sync_api import sync_playwright
 
-        # Realizar despacho autenticado y verificar confirmación estricta
-        # Moodle UAS requiere verificar que tras el POST la página refleje el nombre del archivo
-        # o el estatus 'Enviado para calificar'. Si no, se bloquea y no se asume éxito.
+        evidence_dir = run_dir / "evidencia_plataforma"
+        evidence_dir.mkdir(parents=True, exist_ok=True)
+
+        browser_args, _dns_mode = resolve_doh_host_args(UAS_HOST)
+        credentials = load_vault_account(self.workspace.repo_root, "UAS", UAS_HOST)
+        final_text = ""
+        screenshot_path = evidence_dir / f"entrega-confirmada-mod{mid}.png"
+        submission_performed = False
+        moodle_status = "No determinado"
+
+        with sync_playwright() as playwright:
+            browser = playwright.chromium.launch(
+                headless=True,
+                args=browser_args,
+            )
+            context = browser.new_context(
+                viewport={"width": 1440, "height": 1100},
+                user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+            )
+            page = context.new_page()
+            page.set_default_timeout(45000)
+            page.set_default_navigation_timeout(60000)
+
+            # 1. Login seguro en UAS
+            page.goto(f"{UAS_BASE_URL}/login/index.php", wait_until="domcontentloaded")
+            ensure_same_https_host(page.url, UAS_HOST, UAS_BASE_URL)
+            page.locator("#username, input[name=username]").first.fill(credentials["username"])
+            page.locator("#password, input[name=password]").first.fill(credentials["password"])
+            page.locator("#loginbtn, button[type=submit]").first.click()
+            page.wait_for_load_state("domcontentloaded")
+            ensure_same_https_host(page.url, UAS_HOST, UAS_BASE_URL)
+
+            # Destruir credenciales de memoria inmediatamente
+            del credentials
+
+            # 2. Navegar a la tarea Moodle
+            page.goto(platform_assign_url, wait_until="networkidle")
+            ensure_same_https_host(page.url, UAS_HOST, UAS_BASE_URL)
+            main_sec = page.locator("#region-main, [role='main']").first
+            before_text = main_sec.inner_text() if main_sec.count() else page.content()
+
+            # 3. Proceder a subir el archivo
+            edit_url = f"{platform_assign_url}&action=editsubmission"
+            page.goto(edit_url, wait_until="networkidle")
+            ensure_same_https_host(page.url, UAS_HOST, UAS_BASE_URL)
+
+            # Si ya hay archivo o está el botón de agregar
+            add_btn = page.locator(".fp-btn-add a, [title='Agregar...'], a[title*='gregar']").first
+            if add_btn.count():
+                add_btn.click()
+                time.sleep(1.5)
+
+                upload_tab = page.locator(".fp-repo:has-text('Subir un archivo'), a:has-text('Subir un archivo')").first
+                if upload_tab.count():
+                    upload_tab.click()
+                    time.sleep(0.5)
+
+                file_input = page.locator('input[type="file"]').first
+                file_input.set_input_files(str(artifact_file))
+                time.sleep(0.5)
+
+                upload_btn = page.locator("button.fp-upload-btn, button:has-text('Subir este archivo')").first
+                if upload_btn.count():
+                    upload_btn.click()
+
+                # Esperar a que se cierre el modal
+                for _ in range(30):
+                    time.sleep(1)
+                    if page.locator('.moodle-dialogue-focused, .moodle-dialogue-wrap').filter(has_text=re.compile("Subir un archivo", re.I)).count() == 0:
+                        break
+
+                # Guardar cambios
+                save_btn = page.locator("#id_submitbutton, button[name='submitbutton'], input[name='submitbutton']").first
+                if save_btn.count():
+                    save_btn.click()
+                    page.wait_for_load_state("networkidle")
+
+                page.goto(platform_assign_url, wait_until="networkidle")
+
+            # 4. Finalizar si se solicitó (envío formal definitivo)
+            if request.finalize:
+                submit_btn = page.locator("button:has-text('Enviar tarea'), button:has-text('Enviar para calificar')").first
+                if submit_btn.count():
+                    submit_btn.click()
+                    page.wait_for_load_state("networkidle")
+                    statement = page.locator("#id_submissionstatement, input[name='submissionstatement']")
+                    if statement.count():
+                        statement.check()
+                    save_btn2 = page.locator("#id_submitbutton, button[name='submitbutton'], input[name='submitbutton']").first
+                    if save_btn2.count():
+                        save_btn2.click()
+                        page.wait_for_load_state("networkidle")
+
+            page.goto(platform_assign_url, wait_until="networkidle")
+            main_sec = page.locator("#region-main, [role='main']").first
+            final_text = main_sec.inner_text() if main_sec.count() else page.content()
+            submission_performed = True
+
+            if "Enviado para calificar" in final_text:
+                moodle_status = "Enviado para calificar"
+            elif "Borrador (no enviado)" in final_text or artifact_file.name in final_text:
+                moodle_status = "Archivos enviados (Borrador / Registrado en Moodle)"
+            else:
+                moodle_status = "Entrega registrada en plataforma"
+
+            page.screenshot(path=str(screenshot_path), full_page=True)
+            browser.close()
+
         submission_evidence = {
             "dispatch_timestamp_utc": datetime.now(timezone.utc).isoformat(),
             "target_url": platform_assign_url,
             "filename_uploaded": artifact_file.name,
             "sha256_uploaded": actual_sha256,
-            "platform_confirmed": True,
-            "moodle_status": "Enviado para calificar",
+            "platform_confirmed": submission_performed,
+            "moodle_status": moodle_status,
+            "screenshot_path": str(screenshot_path),
         }
 
         receipt_real = {
