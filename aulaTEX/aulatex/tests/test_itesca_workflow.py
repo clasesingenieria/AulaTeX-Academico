@@ -60,6 +60,18 @@ from aulaTEX.aulatex.realizar_planeacion import (
     RealizarPlaneacionAgent,
     RealizarPlaneacionRequest,
 )
+from aulaTEX.aulatex.monitor_itesca import (
+    AGENT_ID_MONITOR_ITESCA,
+    MonitorItescaAgent,
+    MonitorItescaRequest,
+)
+from aulaTEX.aulatex.entregar_itesca import (
+    AGENT_ID_ENTREGAR_ITESCA,
+    EntregarItescaAgent,
+    EntregarItescaRequest,
+)
+from aulaTEX.aulatex.monitor_entregas import get_delivery_monitor
+from aulaTEX.aulatex.realizar_entrega import get_delivery_agent
 from aulaTEX.aulatex.workspace import AulaTeXWorkspace
 
 
@@ -296,6 +308,108 @@ class TestMcpLexAgentIntegration(unittest.TestCase):
         self.assertIn("extraer-conceptos", agent_ids)
         self.assertIn("realizar-actividad", agent_ids)
         self.assertIn("estilo-escribir", agent_ids)
+
+
+class TestMonitorItescaAgent(unittest.TestCase):
+    """Pruebas del agente monitor-itesca (tipo monitor-entregas)."""
+
+    def setUp(self) -> None:
+        self.workspace = AulaTeXWorkspace()
+        self.agent = MonitorItescaAgent(self.workspace)
+
+    def test_registration(self) -> None:
+        registered = get_delivery_monitor("ITESCA", self.workspace)
+        self.assertIsInstance(registered, MonitorItescaAgent)
+        self.assertEqual(registered.agent_id, AGENT_ID_MONITOR_ITESCA)
+
+    def test_evaluate_assignment_and_quiz(self) -> None:
+        # Actividad 7 (Tarea)
+        item7, rec7 = self.agent.evaluate_activity("estadistica-aplicada-para-la-administracion", 7)
+        self.assertEqual(item7.module_id, 1761)
+        self.assertTrue(item7.local_deliverable_ready)
+        self.assertEqual(rec7.recommended_action, "esperar-autorizacion-entrega")
+
+        # Actividad 9 (Cuestionario) -> live_quiz_attempt_protected
+        item9, rec9 = self.agent.evaluate_activity("estadistica-aplicada-para-la-administracion", 9)
+        self.assertEqual(item9.module_id, 1763)
+        self.assertEqual(rec9.recommended_action, "preservar_guia_estudio_bloqueo_cuestionario")
+        blocker_codes = [b.get("code") for b in rec9.blockers]
+        self.assertIn("live_quiz_attempt_protected", blocker_codes)
+
+    def test_monitor_deliveries_report(self) -> None:
+        req = MonitorItescaRequest(subject_slug="all")
+        report = self.agent.monitor_deliveries(req)
+        self.assertTrue(report.ok)
+        self.assertEqual(report.institution, "ITESCA")
+        self.assertEqual(len(report.pending_deliveries), 4)
+
+
+class TestEntregarItescaAgent(unittest.TestCase):
+    """Pruebas de seguridad, compuertas fail-closed y comprobantes en entregar-itesca."""
+
+    def setUp(self) -> None:
+        self.workspace = AulaTeXWorkspace()
+        self.agent = EntregarItescaAgent(self.workspace)
+
+    def test_registration(self) -> None:
+        registered = get_delivery_agent("ITESCA", self.workspace)
+        self.assertIsInstance(registered, EntregarItescaAgent)
+        self.assertEqual(registered.agent_id, AGENT_ID_ENTREGAR_ITESCA)
+
+    def test_fail_closed_without_user_validation(self) -> None:
+        # Principio: "Autorizar la realización de una actividad no equivale a autorizar su envío."
+        req = EntregarItescaRequest(
+            subject_slug="estadistica-aplicada-para-la-administracion",
+            activity_number=7,
+            artifact_path="entregas-estadistica-aplicada-para-la-administracion/Actividad-7-Investigacion-estimacion-intervalos.pdf",
+            user_validated=False,
+            dry_run=True,
+        )
+        res = self.agent.submit(req)
+        self.assertFalse(res.ok)
+        self.assertEqual(res.status, "blocked_missing_user_validation")
+        self.assertTrue(any(b.get("code") == "missing_user_validation" for b in res.blockers))
+
+    def test_quiz_attempt_protected(self) -> None:
+        # Actividad 9 (Cuestionario en línea) jamás se resuelve desatendido
+        req = EntregarItescaRequest(
+            subject_slug="estadistica-aplicada-para-la-administracion",
+            activity_number=9,
+            artifact_path="reporte-estadistica-aplicada-para-la-administracion-Actividad-9.pdf",
+            user_validated=True,
+            dry_run=True,
+        )
+        res = self.agent.submit(req)
+        self.assertFalse(res.ok)
+        self.assertEqual(res.status, "blocked_live_quiz_protected")
+        self.assertTrue(any(b.get("code") == "live_quiz_attempt_protected" for b in res.blockers))
+
+    def test_dry_run_validation_pdf_and_docx(self) -> None:
+        # Actividad 8 (PDF de ejercicios)
+        req8 = EntregarItescaRequest(
+            subject_slug="estadistica-aplicada-para-la-administracion",
+            activity_number=8,
+            artifact_path="entregas-estadistica-aplicada-para-la-administracion/Actividad-8-Ejercicios-estimacion-intervalos.pdf",
+            user_validated=True,
+            dry_run=True,
+        )
+        res8 = self.agent.submit(req8)
+        self.assertTrue(res8.ok)
+        self.assertEqual(res8.status, "dry_run_validated")
+        self.assertTrue(res8.receipt_path and res8.receipt_path.is_file())
+
+        # Actividad 15 (DOCX de Seminario I)
+        req15 = EntregarItescaRequest(
+            subject_slug="seminario-i",
+            activity_number=15,
+            artifact_path="entregas-seminario-i/Tarea15_DeLaCruzMunoz.docx",
+            user_validated=True,
+            dry_run=True,
+        )
+        res15 = self.agent.submit(req15)
+        self.assertTrue(res15.ok)
+        self.assertEqual(res15.status, "dry_run_validated")
+        self.assertTrue(res15.receipt_path and res15.receipt_path.is_file())
 
 
 if __name__ == "__main__":
