@@ -39,7 +39,7 @@
     \fontsize{7}{9}\selectfont UANL \textbar\ Facultad de Agronomía
   \end{beamercolorbox}%
   \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.5ex,dp=1.1ex,center]{palette primary}%
-    \fontsize{7}{9}\selectfont Álgebra Lineal — PIA
+    \fontsize{7}{9}\selectfont Álgebra Lineal — Producto Integrador de Aprendizaje
   \end{beamercolorbox}%
   \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.5ex,dp=1.1ex,right,rightskip=1cm]{palette primary}%
     \fontsize{7}{9}\selectfont \insertframenumber{} / \inserttotalframenumber
@@ -49,6 +49,9 @@
 
 \begin{document}
 
+% -----------------------------------------------------------------------------
+% Diapositiva 1: Portada Institucional
+% -----------------------------------------------------------------------------
 \begin{frame}[plain]
   \begin{tikzpicture}[remember picture,overlay]
     \fill[uanlblue] (current page.south west) rectangle (current page.north east);
@@ -57,114 +60,273 @@
   \vspace{-0.5cm}
   \begin{center}
     \includegraphics[height=1.8cm]{UANL/assets-uanl/logos-institucionales.pdf}
-    \vspace{0.4cm}
+    \vspace{0.35cm}
     
     {\fontsize{10}{12}\selectfont \textbf{\color{uanlgold}UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN \textbar\ FACULTAD DE AGRONOMÍA}}\\[0.2cm]
-    {\fontsize{15}{18}\selectfont \textbf{\color{white}MODELACIÓN MATRICIAL DE FERTILIZACIÓN Y DINÁMICA POBLACIONAL CON MATRICES DE LESLIE}}\\[0.2cm]
-    {\fontsize{11}{13}\selectfont \color{white}Producto Integrador de Aprendizaje (PIA) \textbar\ 25 Puntos}\\[0.5cm]
+    {\fontsize{14}{17}\selectfont \textbf{\color{white}MODELACIÓN MATRICIAL DE FERTILIZACIÓN BALANCEADA Y SISTEMAS LINEALES EN CITRICULTURA}}\\[0.2cm]
+    {\fontsize{10}{12}\selectfont \color{white}Producto Integrador de Aprendizaje (PIA) \textbar\ 25 Puntos}\\[0.45cm]
 
     \begin{tabular}{rl}
       \textbf{\color{uanlgold}Estudiante:} & \color{white}Diego de la Cruz Muñoz (Matrícula: 1977875) \\
       \textbf{\color{uanlgold}Docente Titular:} & \color{white}Miranda Vázquez José de Jesús \\
-      \textbf{\color{uanlgold}Programa:} & \color{white}Ingeniero Agrónomo \textbar\ REF\#261013755137
+      \textbf{\color{uanlgold}Programa:} & \color{white}Ingeniero Agrónomo \textbar\ REF\#261013755137 \\
+      \textbf{\color{uanlgold}Fecha:} & \color{white}11 de noviembre de 2026 \textbar\ General Escobedo / Marín, N.L.
     \end{tabular}
   \end{center}
 \end{frame}
 
-\begin{frame}{1. Justificación y Objetivos de la Modelación}
+% -----------------------------------------------------------------------------
+% Diapositiva 2: Introducción y Justificación Agronómica
+% -----------------------------------------------------------------------------
+\begin{frame}{1. Introducción y Justificación Agronómica}
   \begin{columns}[T]
     \begin{column}{0.48\textwidth}
-      \textbf{\color{uanlblue}Desafíos en la Citricultura Regional:}
+      \textbf{\color{uanlblue}Problemática Regional en Citricultura:}
       \begin{itemize}
-        \item Alto costo de fertilizantes inorgánicos ($N, P, K$).
-        \item Riesgo epidemiológico del HLB transmitido por \textit{Diaphorina citri}.
-        \item Necesidad de modelos analíticos cuantitativos frente a recetas empíricas.
+        \item Región citrícola de Nuevo León (General Terán y Montemorelos): alta relevancia socioeconómica en naranja Valencia (\textit{Citrus sinensis}).
+        \item La fertilización representa del $30\%$ al $45\%$ de costos directos de operación.
+        \item Las fórmulas empíricas tradicionales provocan sobredosificación salina o deficiencias nutrimentales subclínicas.
       \end{itemize}
     \end{column}
     \begin{column}{0.48\textwidth}
       \textbf{\color{uanlblue}Aportación del Álgebra Lineal:}
       \begin{itemize}
-        \item \textbf{Sistemas Lineales ($A\mathbf{x} = \mathbf{b}$):} Solución exacta de dosis de mezcla física sin mermas ni excesos.
-        \item \textbf{Matriz de Leslie ($L$):} Proyección estocástica de poblaciones por cohortes etarias.
-        \item \textbf{Teorema Espectral:} Autovalor $\lambda_1$ para predecir colapso o explosión poblacional bajo control biológico.
+        \item \textbf{Modelación determinista:} Transforma el balance químico acoplado en un sistema lineal $A\mathbf{x} = \mathbf{b}$.
+        \item \textbf{Cero margen de error:} Permite obtener la dosis física exacta ($\text{kg/ha}$) sin excesos lixiviables ni déficit.
+        \item \textbf{Sustentabilidad y rentabilidad:} Protege los mantos freáticos y optimiza el costo financiero de los insumos.
       \end{itemize}
     \end{column}
   \end{columns}
 \end{frame}
 
-\begin{frame}{2. Formulación del Sistema de Fertilización ($A\mathbf{x}=\mathbf{b}$)}
-  \begin{block}{Sistema Matricial de Insumo-Producto}
+% -----------------------------------------------------------------------------
+% Diapositiva 3: Recolección de Datos
+% -----------------------------------------------------------------------------
+\begin{frame}{2. Recolección de Datos y Parámetros del Sistema}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Demanda Neta por Hectárea (Meta: $35\text{ t/ha}$):}
+      \begin{itemize}
+        \item \textbf{Nitrógeno ($N$):} $b_1 = 175\text{ kg/ha}$
+        \item \textbf{Fósforo ($P_2O_5$):} $b_2 = 142\text{ kg/ha}$
+        \item \textbf{Potasio ($K_2O$):} $b_3 = 182\text{ kg/ha}$
+      \end{itemize}
+      \vspace{0.2cm}
+      \textbf{\color{uanlblue}Insumos Comerciales Acoplados:}
+      \begin{itemize}
+        \item $x_1$: NPK 20-10-10 ($20\% N, 10\% P_2O_5, 10\% K_2O$).
+        \item $x_2$: DAP 18-46-0 ($18\% N, 46\% P_2O_5, 0\% K_2O$).
+        \item $x_3$: Nitrato Potásico 13-0-44 ($13\% N, 0\% P_2O_5, 44\% K_2O$).
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Matriz de Concentración Nutrimental:}
+      \vspace{0.15cm}
+      \small
+      \begin{tabular}{lccc}
+        \toprule
+        \textbf{Nutriente} & \textbf{NPK ($x_1$)} & \textbf{DAP ($x_2$)} & \textbf{KNO$_3$ ($x_3$)} \\
+        \midrule
+        $N$ & $0.20$ & $0.18$ & $0.13$ \\
+        $P_2O_5$ & $0.10$ & $0.46$ & $0.00$ \\
+        $K_2O$ & $0.10$ & $0.00$ & $0.44$ \\
+        \bottomrule
+      \end{tabular}
+      \vspace{0.3cm}
+      \begin{block}{Interdependencia Química}
+        Ninguna dosis puede ajustarse de forma aislada sin perturbar el balance total de macronutrientes.
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% -----------------------------------------------------------------------------
+% Diapositiva 4: Formulación y Compatibilidad Matricial
+% -----------------------------------------------------------------------------
+\begin{frame}{3. Formulación del Sistema y Criterio de Rouché-Capelli}
+  \begin{block}{Formulación Matricial Canónica: $A\mathbf{x} = \mathbf{b}$}
     $$\begin{pmatrix}
-        0.46 & 0.18 & 0.13 \\
-        0.00 & 0.46 & 0.00 \\
-        0.00 & 0.00 & 0.44
-    \end{pmatrix}
-    \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}
-    =
-    \begin{pmatrix} 180 \\ 60 \\ 120 \end{pmatrix}$$
+        0.20 & 0.18 & 0.13 \\
+        0.10 & 0.46 & 0.00 \\
+        0.10 & 0.00 & 0.44
+      \end{pmatrix}
+      \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}
+      =
+      \begin{pmatrix} 175 \\ 142 \\ 182 \end{pmatrix}$$
+  \end{block}
+  \vspace{0.15cm}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Cálculo del Determinante:}
+      $$\det(A) = 0.20(0.46 \times 0.44) - 0.18(0.10 \times 0.44) + 0.13(-0.046)$$
+      $$\det(A) = 0.04048 - 0.00792 - 0.00598 = \mathbf{0.02658} \neq 0$$
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Diagnóstico Estructural:}
+      \begin{itemize}
+        \item $\det(A) \neq 0 \implies A$ es regular e invertible.
+        \item $\operatorname{rango}(A) = \operatorname{rango}[A|\mathbf{b}] = n = 3$.
+        \item \textbf{Conclusión:} El sistema es \textit{compatible determinado}; existe una única solución física.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% -----------------------------------------------------------------------------
+% Diapositiva 5: Procedimiento 1: Gauss-Jordan
+% -----------------------------------------------------------------------------
+\begin{frame}{4. Resolución por Eliminación de Gauss-Jordan}
+  \begin{block}{Pivoteo sobre la Matriz Aumentada $[A|\mathbf{b}]$}
+    $$[A|\mathbf{b}]^{(0)} = \left(\begin{array}{ccc|c}
+      0.20 & 0.18 & 0.13 & 175 \\
+      0.10 & 0.46 & 0.00 & 142 \\
+      0.10 & 0.00 & 0.44 & 182
+    \end{array}\right)
+    \xrightarrow{R_1 \leftarrow 5R_1}
+    \left(\begin{array}{ccc|c}
+      1.00 & 0.90 & 0.65 & 875 \\
+      0.10 & 0.46 & 0.00 & 142 \\
+      0.10 & 0.00 & 0.44 & 182
+    \end{array}\right)$$
   \end{block}
   \begin{itemize}
-    \item \textbf{Determinante:} $\det(A) = 0.46 \times 0.46 \times 0.44 = 0.093104 \neq 0$ $\implies$ Rango completo ($r=3$), solución única.
-    \item \textbf{Dosis calculadas:}
-      \begin{itemize}
-        \item Nitrato de Potasio ($x_3$): $272.73\text{ kg/ha}$.
-        \item Fosfato Diamónico 18-46-0 ($x_2$): $130.43\text{ kg/ha}$.
-        \item Urea agrícola 46-0-0 ($x_1$): $263.19\text{ kg/ha}$.
-      \end{itemize}
+    \item \textbf{Anulación de columna 1:} $R_2 \leftarrow R_2 - 0.1R_1$, $R_3 \leftarrow R_3 - 0.1R_1 \implies [0, 0.37, -0.065 \mid 54.50]$ y $[0, -0.09, 0.375 \mid 94.50]$.
+    \item \textbf{Normalización de pivote 2 y eliminación:} $R_2 \leftarrow \frac{100}{37}R_2$, $R_1 \leftarrow R_1 - 0.9R_2$, $R_3 \leftarrow R_3 + 0.09R_2$.
+    \item \textbf{Pivote 3 y reducción regresiva:} $a_{33}' = \frac{1329}{3700}$, $b_3' = \frac{3987}{37} \implies x_3 = \frac{3987}{37} \times \frac{3700}{1329} = \mathbf{300\text{ kg/ha}}$.
+    \item Sustituyendo hacia arriba: $x_2 = \mathbf{200\text{ kg/ha}}$ y $x_1 = \mathbf{500\text{ kg/ha}}$.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{3. Dinámica Poblacional de Leslie: Formulación y Autovalores}
+% -----------------------------------------------------------------------------
+% Diapositiva 6: Procedimiento 2: Regla de Cramer
+% -----------------------------------------------------------------------------
+\begin{frame}{5. Corroboración por Regla de Cramer}
   \begin{columns}[T]
-    \begin{column}{0.45\textwidth}
-      \textbf{\color{uanlblue}Matriz de Leslie ($L$):}
-      $$L = \begin{pmatrix}
-        0 & 0 & 24 \\
-        0.20 & 0 & 0 \\
-        0 & 0.25 & 0.60
-      \end{pmatrix}$$
-      \vspace{0.2cm}
-      \textbf{Ecuación característica:}
-      $$\det(L - \lambda I) = \lambda^3 - 0.60\lambda^2 - 1.20 = 0$$
-    \end{column}
-    \begin{column}{0.51\textwidth}
-      \textbf{\color{uanlblue}Comportamiento sin Control:}
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Determinantes Modificados:}
       \begin{itemize}
-        \item \textbf{Autovalor Dominante:} $\lambda_1 \approx 1.305 > 1.0$.
-        \item \textbf{Tasa de crecimiento:} $30.5\%$ de incremento por ciclo de 10 días.
-        \item \textbf{Estructura etaria asintótica ($\mathbf{w}_1$):}
-          \begin{itemize}
-            \item Huevos / ninfas tempranas: $82.8\%$
-            \item Ninfas tardías: $12.7\%$
-            \item Adultos reproductivos: $4.5\%$
-          \end{itemize}
+        \item $\det(A) = 0.02658$
+        \item $\det(A_1) = \det\begin{pmatrix} 175 & 0.18 & 0.13 \\ 142 & 0.46 & 0.00 \\ 182 & 0.00 & 0.44 \end{pmatrix} = \mathbf{13.29}$
+        \item $\det(A_2) = \det\begin{pmatrix} 0.20 & 175 & 0.13 \\ 0.10 & 142 & 0.00 \\ 0.10 & 182 & 0.44 \end{pmatrix} = \mathbf{5.316}$
+        \item $\det(A_3) = \det\begin{pmatrix} 0.20 & 0.18 & 175 \\ 0.10 & 0.46 & 142 \\ 0.10 & 0.00 & 182 \end{pmatrix} = \mathbf{7.974}$
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Dosis Exactas Obtenidas:}
+      \begin{align*}
+        x_1 &= \frac{\det(A_1)}{\det(A)} = \frac{13.29}{0.02658} = \mathbf{500\text{ kg/ha}} \\[0.2cm]
+        x_2 &= \frac{\det(A_2)}{\det(A)} = \frac{5.316}{0.02658} = \mathbf{200\text{ kg/ha}} \\[0.2cm]
+        x_3 &= \frac{\det(A_3)}{\det(A)} = \frac{7.974}{0.02658} = \mathbf{300\text{ kg/ha}}
+      \end{align*}
+      \begin{block}{Coincidencia Total}
+        Cramer valida con exactitud analítica simbólica la solución de Gauss-Jordan.
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% -----------------------------------------------------------------------------
+% Diapositiva 7: Procedimiento 3: Matriz Inversa y Residuo
+% -----------------------------------------------------------------------------
+\begin{frame}{6. Matriz Inversa y Verificación de Residuo}
+  \begin{columns}[T]
+    \begin{column}{0.50\textwidth}
+      \textbf{\color{uanlblue}Inversión Matricial: $\mathbf{x} = A^{-1}\mathbf{b}$}
+      $$A^{-1} = \frac{1}{0.02658} \begin{pmatrix}
+        0.2024 & -0.0792 & -0.0598 \\
+        -0.0440 & 0.0750 & 0.0130 \\
+        -0.0460 & 0.0180 & 0.0740
+      \end{pmatrix}$$
+      $$\mathbf{x} = A^{-1} \begin{pmatrix} 175 \\ 142 \\ 182 \end{pmatrix} = \begin{pmatrix} \mathbf{500} \\ \mathbf{200} \\ \mathbf{300} \end{pmatrix}$$
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \textbf{\color{uanlblue}Comprobación del Residuo $\mathbf{r} = A\mathbf{x} - \mathbf{b}$:}
+      \begin{align*}
+        r_1 &= 0.20(500) + 0.18(200) + 0.13(300) - 175 \\
+            &= (100 + 36 + 39) - 175 = \mathbf{0} \\[0.15cm]
+        r_2 &= 0.10(500) + 0.46(200) + 0 - 142 \\
+            &= (50 + 92) - 142 = \mathbf{0} \\[0.15cm]
+        r_3 &= 0.10(500) + 0 + 0.44(300) - 182 \\
+            &= (50 + 132) - 182 = \mathbf{0}
+      \end{align*}
+      \textbf{Residuo nulo:} $\|\mathbf{r}\|_\infty = 0$.
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% -----------------------------------------------------------------------------
+% Diapositiva 8: Resultados y Dosificación Final
+% -----------------------------------------------------------------------------
+\begin{frame}{7. Resultados: Dosificación Agronómica de Campo}
+  \begin{table}[htbp]
+    \centering
+    \small
+    \begin{tabularx}{0.92\textwidth}{lcccc}
+      \toprule
+      \textbf{Fuente comercial} & \textbf{Dosis (kg/ha)} & \textbf{Aporte $N$} & \textbf{Aporte $P_2O_5$} & \textbf{Aporte $K_2O$} \\
+      \midrule
+      Mezcla NPK 20-10-10 & $500$ ($10$ sacos) & $100$ & $50$ & $50$ \\
+      Fosfato Diamónico (DAP) & $200$ ($4$ sacos) & $36$ & $92$ & $0$ \\
+      Nitrato de Potasio & $300$ ($6$ sacos) & $39$ & $0$ & $132$ \\
+      \midrule
+      \textbf{Total Suministrado} & $\mathbf{1000\text{ kg/ha}}$ & $\mathbf{175\text{ kg/ha}}$ & $\mathbf{142\text{ kg/ha}}$ & $\mathbf{182\text{ kg/ha}}$ \\
+      \textbf{Meta Nutrimental} & --- & $\mathbf{175\text{ kg/ha}}$ & $\mathbf{142\text{ kg/ha}}$ & $\mathbf{182\text{ kg/ha}}$ \\
+      \bottomrule
+    \end{tabularx}
+  \end{table}
+  \begin{center}
+    \textbf{\color{uanlblue}Balance exacto al $100\%$ sin desperdicio ni toxicidad edáfica.}
+  \end{center}
+\end{frame}
+
+% -----------------------------------------------------------------------------
+% Diapositiva 9: Análisis de Estabilidad y Fertirriego
+% -----------------------------------------------------------------------------
+\begin{frame}{8. Estabilidad Numérica y Plan de Fertirriego}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Número de Condición: $\kappa(A) \approx 5.86$}
+      \begin{itemize}
+        \item $\kappa(A) \ll 100 \implies$ Matriz \textit{bien condicionada}.
+        \item Inmune a variaciones menores en la ley comercial de los fertilizantes ($\pm 2\%$).
+        \item Estabilidad garantizada durante la aplicación práctica en campo.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Plan de Distribución Fenológica (36 semanas):}
+      \begin{itemize}
+        \item \textbf{Fase 1: Brotación floral (15\%):} $150\text{ kg/ha}$ (prioridad $P_2O_5$).
+        \item \textbf{Fase 2: Cuajado y división (50\%):} $500\text{ kg/ha}$ (equilibrio $N$-$P$).
+        \item \textbf{Fase 3: Llenado de fruto (35\%):} $350\text{ kg/ha}$ (prioridad $K_2O$).
       \end{itemize}
     \end{column}
   \end{columns}
 \end{frame}
 
-\begin{frame}{4. Control Biológico con \textit{Tamarixia radiata} y Conclusiones}
-  \begin{columns}[T]
-    \begin{column}{0.48\textwidth}
-      \textbf{\color{uanlblue}Simulación de Control Biológico:}
-      \begin{itemize}
-        \item Parasitismo selectivo reduce la supervivencia ninfal $s_2$ de $0.25$ a $0.05$.
-        \item Nuevo polinomio característico:
-          $$\lambda^3 - 0.60\lambda^2 - 0.24 = 0$$
-        \item \textbf{Nuevo autovalor dominante:} $\lambda_1 = 0.898 < 1.0$.
-        \item \textbf{Resultado:} La población decae a una tasa de $10.2\%$ por intervalo $\implies$ erradicación efectiva de la plaga.
-      \end{itemize}
-    \end{column}
-    \begin{column}{0.48\textwidth}
-      \textbf{\color{uanlblue}Conclusiones Clave:}
-      \begin{enumerate}
-        \item Se eliminó el desperdicio de fertilizantes mediante álgebra matricial.
-        \item Se fundamentó científicamente el control biológico sin recurrir al abuso de insecticidas organofosforados.
-        \item La matemática aplicada es una herramienta estratégica en la toma de decisiones agronómicas.
-      \end{enumerate}
-    \end{column}
-  \end{columns}
+% -----------------------------------------------------------------------------
+% Diapositiva 10: Conclusiones
+% -----------------------------------------------------------------------------
+\begin{frame}{9. Conclusiones y Transferencia Profesional}
+  \begin{enumerate}
+    \item \textbf{Rigor analítico:} El álgebra lineal elimina el error empírico en la fertilización de cítricos en Nuevo León mediante sistemas acoplados $3 \times 3$.
+    \item \textbf{Convergencia de métodos:} Gauss-Jordan, Cramer y la Matriz Inversa demostraron consistencia absoluta con residuo nulo ($\mathbf{r} = \mathbf{0}$).
+    \item \textbf{Sostenibilidad edáfica:} La dosificación de $500\text{ kg}$ de NPK, $200\text{ kg}$ de DAP y $300\text{ kg}$ de KNO$_3$ optimiza costos y previene la salinización secundaria.
+    \item \textbf{Competencia profesional:} La modelación matemática capacita al agrónomo de la UANL para liderar decisiones predictivas basadas en datos rigurosos.
+  \end{enumerate}
+\end{frame}
+
+% -----------------------------------------------------------------------------
+% Diapositiva 11: Referencias Bibliográficas
+% -----------------------------------------------------------------------------
+\begin{frame}{Referencias Bibliográficas}
+  \fontsize{8}{10}\selectfont
+  \begin{itemize}
+    \item Anton, H., \& Rorres, C. (2014). \textit{Elementary Linear Algebra: Applications Version} (11th ed.). John Wiley \& Sons.
+    \item Grossman, S. I., \& Flores Godoy, J. J. (2019). \textit{Álgebra lineal} (8va ed.). McGraw-Hill Education.
+    \item Lay, D. C., Lay, S. R., \& McDonald, J. J. (2016). \textit{Linear Algebra and Its Applications} (5th ed.). Pearson.
+    \item Strang, G. (2016). \textit{Introduction to Linear Algebra} (5th ed.). Wellesley-Cambridge Press.
+    \item University of Minnesota Extension. (2024). \textit{Nutrient Management and Commercial Fertilizer Recommendations}. UMN Extension Publications.
+  \end{itemize}
 \end{frame}
 
 \end{document}
-

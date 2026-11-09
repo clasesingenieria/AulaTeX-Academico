@@ -199,8 +199,8 @@ A_1 = \begin{pmatrix} 175 & 0.18 & 0.13 \\ 142 & 0.46 & 0.00 \\ 182 & 0.00 & 0.4
 Desarrollando por cofactores a lo largo de la tercera fila:
 \begin{align}
 \det(A_1) &= 182(0 - 0.46 \times 0.13) + 0.44(175 \times 0.46 - 142 \times 0.18) \\
-&= 182(-0.0598) + 0.44(80.50 - 25.56) = -10.8836 + 0.44(54.94) = -10.8836 + 24.1736 = 13.29 \\
-x_1 &= \frac{\det(A_1)}{\det(A)} = \frac{13.29}{0.02658} = \frac{1329 / 100}{1329 / 50000} = \frac{50000}{100} = \mathbf{500\text{ kg/ha}}
+&= -10.8836 + 0.44(54.94) = -10.8836 + 24.1736 = 13.29 \\[0.15cm]
+x_1 &= \frac{\det(A_1)}{\det(A)} = \frac{13.29}{0.02658} = \frac{1329 / 100}{1329 / 50000} = \mathbf{500\text{ kg/ha}}
 \end{align}
 
 \noindent\textbf{2. Cálculo de $x_2$:}
@@ -210,8 +210,8 @@ A_2 = \begin{pmatrix} 0.20 & 175 & 0.13 \\ 0.10 & 142 & 0.00 \\ 0.10 & 182 & 0.4
 Desarrollando por cofactores por la segunda fila:
 \begin{align}
 \det(A_2) &= -0.10(175 \times 0.44 - 182 \times 0.13) + 142(0.20 \times 0.44 - 0.10 \times 0.13) \\
-&= -0.10(77.00 - 23.66) + 142(0.0880 - 0.0130) = -0.10(53.34) + 142(0.0750) = -5.334 + 10.65 = 5.316 \\
-x_2 &= \frac{\det(A_2)}{\det(A)} = \frac{5.316}{0.02658} = \frac{5316 / 1000}{1329 / 50000} = \frac{4 \times 50000}{1000} = 4 \times 50 = \mathbf{200\text{ kg/ha}}
+&= -0.10(53.34) + 142(0.0750) = -5.334 + 10.65 = 5.316 \\[0.15cm]
+x_2 &= \frac{\det(A_2)}{\det(A)} = \frac{5.316}{0.02658} = \frac{5316 / 1000}{1329 / 50000} = \mathbf{200\text{ kg/ha}}
 \end{align}
 
 \noindent\textbf{3. Cálculo de $x_3$:}
@@ -221,8 +221,8 @@ A_3 = \begin{pmatrix} 0.20 & 0.18 & 175 \\ 0.10 & 0.46 & 142 \\ 0.10 & 0.00 & 18
 Desarrollando por cofactores por la tercera fila:
 \begin{align}
 \det(A_3) &= 0.10(0.18 \times 142 - 0.46 \times 175) + 182(0.20 \times 0.46 - 0.10 \times 0.18) \\
-&= 0.10(25.56 - 80.50) + 182(0.0920 - 0.0180) = 0.10(-54.94) + 182(0.0740) = -5.494 + 13.468 = 7.974 \\
-x_3 &= \frac{\det(A_3)}{\det(A)} = \frac{7.974}{0.02658} = \frac{7974 / 1000}{1329 / 50000} = \frac{6 \times 50000}{1000} = 6 \times 50 = \mathbf{300\text{ kg/ha}}
+&= 0.10(-54.94) + 182(0.0740) = -5.494 + 13.468 = 7.974 \\[0.15cm]
+x_3 &= \frac{\det(A_3)}{\det(A)} = \frac{7.974}{0.02658} = \frac{7974 / 1000}{1329 / 50000} = \mathbf{300\text{ kg/ha}}
 \end{align}
 
 Ambos procedimientos independientes conducen de forma unívoca e incontrovertible a la terna solución exacta:
@@ -278,7 +278,7 @@ El residuo nulo $\|\mathbf{r}\|_\infty = 0$ certifica la validez matemática y f
 \subsection{Herramientas Computacionales Utilizadas}
 Para el desarrollo, verificación simbólica y maquetación de este proyecto de ingeniería agronómica se utilizaron las siguientes herramientas digitales:
 \begin{itemize}
-    \item \textbf{Motor Editorial AulaTeX y \XeLaTeX:} Compilación tipográfica institucional de alta precisión, garantizando compatibilidad tipográfica Arial, tablas formales (`tabularx`, `booktabs`) y edición de ecuaciones con microtipografía avanzada.
+    \item \textbf{Motor Editorial AulaTeX y XeLaTeX:} Compilación tipográfica institucional de alta precisión, garantizando compatibilidad tipográfica Arial, tablas formales (`tabularx`, `booktabs`) y edición de ecuaciones con microtipografía avanzada.
     \item \textbf{BibLaTeX y Biber:} Gestión determinista del aparato crítico conforme a la normativa APA 7ma edición contra el archivo bibliográfico `algebra-lineal.bib`.
     \item \textbf{Python 3.13 con librerías SymPy y NumPy:} Entorno de álgebra computacional empleado para corroborar las reducciones por filas, determinantes simbólicos y condicionamiento espectral de matrices.
 \end{itemize}
