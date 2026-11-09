@@ -4,7 +4,7 @@
 **Programa Educativo:** Ingeniero Agrónomo
 **Institución:** UANL
 **Docente Titular:** M.C. José de Jesús Miranda Vázquez
-**Estudiante:** Carlos Mauricio Carvajal Coronado
+**Estudiante:** Diego de la Cruz Muñoz
 **Actividad Contractual:** actividad-3-6
 **Fase / Unidad:** Unidad-1
 **Ponderación:** 10.0 pts
@@ -33,7 +33,7 @@
 **Identificador institucional:** Actividad 3.6 (Evidencia de Aprendizaje de la Fase 3)  
 **Materia:** Álgebra Lineal (`algebra-lineal`), REF#261104755137  
 **Programa:** Ingeniero Agrónomo, Facultad de Agronomía, Universidad Autónoma de Nuevo León (UANL)  
-**Estudiante:** Carlos Mauricio Carvajal Coronado (Matrícula: 1977875)  
+**Estudiante:** Diego de la Cruz Muñoz (Matrícula: 1977875)  
 **Docente:** M.C. José de Jesús Miranda Vázquez  
 
 ---

@@ -5,7 +5,7 @@
 - **Dependencia:** Facultad de Agronomía (Campus Escobedo / Marín)
 - **Programa Educativo:** Ingeniero Agrónomo
 - **Docente Titular:** M.C. Miranda Vázquez José de Jesús
-- **Estudiante Autor:** Carlos Mauricio Carvajal Coronado (Matrícula: 1977875)
+- **Estudiante Autor:** Diego de la Cruz Muñoz (Matrícula: 1977875)
 - **Periodo Semestral:** 03 de agosto de 2026 al 18 de diciembre de 2026
 - **Modalidad:** Modelo Basado en Competencias / Mixta (Plataforma Nexus UANL)
 

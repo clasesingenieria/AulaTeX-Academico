@@ -27,7 +27,7 @@ El proyecto debe demostrar la aplicación cuantitativa de al menos dos de las si
 
 1. **Portada Institucional:**
    - Logotipos normalizados UANL y Agronomía.
-   - Datos del estudiante (Carlos Mauricio Carvajal Coronado - 1977875).
+   - Datos del estudiante (Diego de la Cruz Muñoz - 1977875).
    - Título técnico del prototipo.
 2. **Resumen Ejecutivo:**
    - Objetivos, principios físicos puestos a prueba, materiales y conclusiones empíricas.

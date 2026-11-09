@@ -25,7 +25,7 @@ El estudiante o equipo debe resolver un problema multidisciplinario que involucr
 
 1. **Portada Institucional:**
    - Escudo UANL y emblema heráldico de la Facultad de Agronomía.
-   - Datos del estudiante (Nombre y Matrícula: Carlos Mauricio Carvajal Coronado - 1977875).
+   - Datos del estudiante (Nombre y Matrícula: Diego de la Cruz Muñoz - 1977875).
    - Datos del docente (Miranda Vázquez José de Jesús) y unidad de aprendizaje.
 2. **Resumen y Palabras Clave:**
    - Planteamiento sintético, metodología matricial y conclusiones principales.

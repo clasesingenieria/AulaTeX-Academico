@@ -26,7 +26,7 @@ El estudiante deberá resolver un problema de ingeniería agronómica que integr
 
 1. **Carátula Oficial UANL / Agronomía:**
    - Logotipos institucionales normalizados.
-   - Matrícula del estudiante (Carlos Mauricio Carvajal Coronado - 1977875).
+   - Matrícula del estudiante (Diego de la Cruz Muñoz - 1977875).
    - Datos de la unidad y fecha de entrega.
 2. **Resumen y Abstracción del Modelo:**
    - Planteamiento formal del modelo matemático y justificación agronómica.

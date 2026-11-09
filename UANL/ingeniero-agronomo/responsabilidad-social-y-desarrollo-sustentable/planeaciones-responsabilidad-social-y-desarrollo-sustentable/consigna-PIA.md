@@ -25,7 +25,7 @@ El proyecto debe estructurarse conforme a la metodología de marco lógico:
 ## 2. Requisitos de Estructura Institucional (AulaTeX)
 
 1. **Carátula Institucional UANL / Facultad de Agronomía:**
-   - Logotipos canónicos, datos del estudiante (Carlos Mauricio Carvajal Coronado - 1977875).
+   - Logotipos canónicos, datos del estudiante (Diego de la Cruz Muñoz - 1977875).
 2. **Resumen Ejecutivo del Proyecto:**
    - Problema detectado, solución técnica propuesta, población beneficiaria y metas alcanzadas.
 3. **Diagnóstico Comunitario y Delimitación Territorial:**

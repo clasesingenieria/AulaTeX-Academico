@@ -3,7 +3,7 @@
 
 Espacio académico curricular y suite de automatización integral para el programa educativo de **Ingeniero Agrónomo** de la Universidad Autónoma de Nuevo León (UANL), impartido por la Facultad de Agronomía en sus campus de General Escobedo y Marín, Nuevo León.
 
-- **Estudiante:** Carlos Mauricio Carvajal Coronado
+- **Estudiante:** Diego de la Cruz Muñoz
 - **Matrícula:** 1977875
 - **Ciclo Lectivo:** Agosto — Diciembre 2026 (Semestre Mixto / Competencias)
 - **Plataforma Virtual:** Plataforma Nexus UANL / SIASE

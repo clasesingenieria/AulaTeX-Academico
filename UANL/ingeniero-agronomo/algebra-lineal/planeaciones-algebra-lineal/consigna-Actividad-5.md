@@ -1,57 +1,69 @@
-# Consigna Oficial: Actividad 5 — Producto Integrador de Aprendizaje (PIA)
+# Consigna Oficial: Producto Integrador de Aprendizaje (PIA) — Álgebra Lineal
 
-> **Identificador editorial:** Actividad 5.
-> **Identificador académico de origen:** Producto Integrador de Aprendizaje (Fase Cierre / 25 pts).
-
-### Facultad de Agronomía — Universidad Autónoma de Nuevo León
-
-- **Valor porcentual:** 25% (25 puntos sobre 100)
-- **Modalidad:** Equipo de 2 a 3 estudiantes / Individual
-- **Formato del producto:**
-  1. Reporte técnico formal en PDF generado bajo tipografía y plantilla institucional UANL.
-  2. Presentación ejecutiva Beamer 16:9 para sustentación ante el docente.
+> **Unidad de Aprendizaje:** Álgebra Lineal
+> **Programa Educativo:** Ingeniero Agrónomo (UANL - Facultad de Agronomía)
+> **Semestre:** Agosto - Diciembre 2026
+> **Fecha oficial de entrega:** 11 de noviembre de 2026
+> **Estudiante:** Diego de la Cruz Muñoz (Matrícula: 1977875)
+> **Docente Titular:** Miranda Vázquez José de Jesús
 
 ---
 
-## 1. Propósito y Contextualización de la Actividad
-Integrar las competencias adquiridas en las tres fases del curso (Matrices y determinantes, Sistemas de ecuaciones lineales, y Valores y vectores propios) mediante la modelación rigurosa de un caso real del sector agronómico. 
+## 1. Objetivo General
+En equipos o de manera individual, los estudiantes deben realizar la recolección de datos sobre un problema aplicado a su área profesional (Ingeniería Agronómica), mediante los cuales establecerán un sistema de al menos 3 ecuaciones con 3 incógnitas al que deberán dar solución rigurosa por los métodos analíticos vistos en clase.
 
-El estudiante o equipo debe resolver un problema multidisciplinario que involucre:
-1. Formulación de balance de masa/nutrientes en suelos agrícolas mediante sistemas lineales $A\mathbf{x} = \mathbf{b}$.
-2. Análisis de solvencia, rango y determinante $\det(A)$ del sistema estructural.
-3. Modelación de la transición poblacional de plagas/cultivos o distribución de flujo hídrico empleando matrices estocásticas de Leslie y análisis de autovalores ($\lambda$) y autovectores ($\mathbf{v}$) de la ecuación característica:
-   $$\det(A - \lambda I) = 0$$
+El entregable consta de dos partes complementarias:
+1. **Reporte escrito formal:** Documento en PDF elaborado con LaTeX y tipografía institucional, estructurado bajo la normativa APA 7ma edición y sin límite arbitrario de extensión.
+2. **Video y presentación ejecutiva:** Exposición oral apoyada en una presentación Beamer (relación de aspecto 16:9), en la que se expone el problema y su solución paso a paso de principio a fin, justificando fórmulas, conceptos y definiciones sin omitir pasos.
 
 ---
 
-## 2. Requisitos Estructurales del Reporte (AulaTeX UANL)
-
-1. **Portada Institucional:**
-   - Escudo UANL y emblema heráldico de la Facultad de Agronomía.
-   - Datos del estudiante (Nombre y Matrícula: Carlos Mauricio Carvajal Coronado - 1977875).
-   - Datos del docente (Miranda Vázquez José de Jesús) y unidad de aprendizaje.
-2. **Resumen y Palabras Clave:**
-   - Planteamiento sintético, metodología matricial y conclusiones principales.
-3. **Introducción y Marco Teórico:**
-   - Fundamentos de álgebra matricial aplicados a la ingeniería agronómica.
-4. **Metodología y Desarrollo del Caso de Estudio:**
-   - Definición de variables, matriz de coeficientes y vector de términos independientes.
-   - Algoritmo de resolución paso a paso (Eliminación gaussiana / Gauss-Jordan).
-   - Cálculo espectral de autovalores y estabilidad a largo plazo.
-5. **Resultados y Discusión Técnica:**
-   - Interpretación agronómica de los resultados cuantitativos.
-6. **Conclusiones y Recomendaciones:**
-   - Viabilidad operativa y toma de decisiones agronómicas basadas en el modelo.
-7. **Aparato Crítico y Bibliografía:**
-   - Citas normalizadas según el estándar APA 7ma edición procesadas vía BibTeX/Biber.
+## 2. Estructura Oficial del Reporte Escrito
+1. **Portada Institucional:** Emblemas de la UANL y la Facultad de Agronomía, datos de la unidad de aprendizaje, estudiante y docente.
+2. **Introducción:**
+   - *Justificación agronómica:* Relevancia económica, edáfica y productiva del problema modelado.
+   - *Planteamiento del problema:* Formulación del desafío de ingeniería (balance de masa, fertirrigación o dinámica de insumos).
+3. **Recolección de datos:** Parámetros edafológicos, curvas de extracción nutrimental y especificaciones comerciales de fertilizantes en Nuevo León.
+4. **Metodología:**
+   - *Planteamiento del sistema de ecuaciones:* Formulación matricial acoplada $A\mathbf{x} = \mathbf{b}$ de dimensión mínima $3 \times 3$.
+   - *Justificación del método:* Argumentación matemática del método analítico a emplear (Eliminación de Gauss-Jordan, Regla de Cramer e Inversión Matricial).
+5. **Procedimientos:**
+   - *Solución analítica clara:* Desarrollo minucioso paso a paso, mostrando cada operación elemental por fila y determinantes asociados.
+   - *Herramientas utilizadas:* Software y entornos computacionales empleados para soporte y validación (LaTeX/AulaTeX, Python/SymPy).
+6. **Resultados:** Solución vectorial exacta y dosis calculadas en unidades físicas pertinentes ($\text{kg/ha}$).
+7. **Análisis de resultados:** Contrastación de métodos, sensibilidad del sistema, análisis de residuo ($\mathbf{r} = A\mathbf{x} - \mathbf{b}$) e implicaciones agronómicas directas.
+8. **Conclusión:** Juicio crítico sobre la eficacia del álgebra lineal en la toma de decisiones profesionales agrícolas.
+9. **Referencias bibliográficas:** Formato APA 7ma edición gestionado con Biber/BibTeX a partir de literatura científica indexada.
 
 ---
 
-## 3. Rúbrica Analítica de Evaluación (Total: 100 puntos = 25% final)
+## 3. Lineamientos de la Presentación y Exposición en Video
+- **Formato:** Presentación Beamer (relación de aspecto 16:9) diseñada para la sustentación oral (10 a 20 minutos).
+- **Contenido:** Planteamiento del problema, recolección de datos, desarrollo paso a paso del sistema lineal, contrastación analítica de métodos, resultados agronómicos y conclusiones.
+- **Rigor expositivo:** Claridad visual, fórmulas legibles y explicación ordenada sin omitir deducciones matemáticas.
 
-| Criterio | Excelente (100-90%) | Satisfactorio (89-75%) | Básico (74-60%) | No Aprobatorio (<60%) | Ponderación |
-| :--- | :--- | :--- | :--- | :--- | :---: |
-| **Modelado Matemático** | Planteamiento riguroso de matrices y sistemas acoplados con significado agronómico explícito. | Planteamiento matricial correcto con descripciones agronómicas parciales. | Planteamiento formal con inconsistencias menores en dimensiones o variables. | Errores sustantivos en la matriz o modelo inadecuado. | **30%** |
-| **Resolución Analítica y Algorítmica** | Procedimiento analítico impecable, cálculos de determinante, matriz inversa y autovectores exactos. | Procedimiento mayormente correcto con ligeras omisiones de pasos intermedios. | Errores de cálculo numérico que no invalidan la lógica global. | Procedimiento erróneo o ausencia de deducciones analíticas. | **30%** |
-| **Interpretación Agronómica** | Interpretación profunda de los autovalores y estados estacionarios aplicados a la toma de decisiones agrícolas. | Discusión acertada de los resultados con análisis agronómico general. | Interpretación superficial restringida a valores numéricos. | Sin conexión agronómica o conclusiones vacías. | **20%** |
-| **Calidad Editorial y Normativa UANL** | Cumplimiento total de plantilla UANL, tipografía, figuras vectoriales, citas APA 7 y cero erratas. | Cumplimiento adecuado de formato con detalles menores de espaciado o citación. | Desapego parcial a la estructura institucional. | Formato deficiente, sin citas o desorganizado. | **20%** |
+---
+
+## 4. Rúbrica y Criterios de Evaluación Oficiales (Total: 25 puntos)
+
+### a) Documento Escrito (15 puntos)
+- **Portada:** 1 punto
+- **Estructura y coherencia técnica:** 2 puntos
+- **Análisis y recolección de datos:** 3 puntos
+- **Uso riguroso del editor de ecuaciones LaTeX:** 3 puntos
+- **Justificación del método analítico:** 3 puntos
+- **Aplicación correcta del método:** 3 puntos
+
+### b) Video y Sustentación con Diapositivas (10 puntos)
+- **Calidad de audio y vocalización:** 1 punto
+- **Calidad de imagen y composición de diapositivas:** 1 punto
+- **Volumen de voz y dicción expositiva:** 1 punto
+- **Presentación personal del estudiante:** 2 puntos
+- **Procedimiento completo paso a paso:** 2 puntos
+- **Solución matemática exacta:** 3 puntos
+
+---
+
+## 5. Directiva de Estilo y Voz Autoral (No-Metadiscurso)
+- Queda estrictamente prohibido el uso de metadiscurso pedagógico o etiquetas escolares tales como "actividad", "evidencia", "consigna", "Actividad 5" o "Tiempo 1/2/3" en títulos, subtítulos, encabezados, pies de página o párrafos del reporte y de la presentación.
+- Toda titulación y desarrollo debe mantener un enfoque estrictamente técnico, temático y sustantivo propio de la ingeniería agronómica profesional.

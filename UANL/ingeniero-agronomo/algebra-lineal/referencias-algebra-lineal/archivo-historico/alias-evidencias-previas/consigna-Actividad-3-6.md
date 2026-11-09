@@ -3,7 +3,7 @@
 **Identificador institucional:** Actividad 3.6 (Evidencia de Aprendizaje de la Fase 3)  
 **Materia:** Álgebra Lineal (`algebra-lineal`), REF#261104755137  
 **Programa:** Ingeniero Agrónomo, Facultad de Agronomía, Universidad Autónoma de Nuevo León (UANL)  
-**Estudiante:** Carlos Mauricio Carvajal Coronado (Matrícula: 1977875)  
+**Estudiante:** Diego de la Cruz Muñoz (Matrícula: 1977875)  
 **Docente:** M.C. José de Jesús Miranda Vázquez  
 
 ---

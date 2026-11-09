@@ -4,7 +4,7 @@
 **Programa Educativo:** Ingeniero Agrónomo
 **Institución:** UANL
 **Docente Titular:** M.C. José de Jesús Miranda Vázquez
-**Estudiante:** Carlos Mauricio Carvajal Coronado (Matrícula: 1977875)
+**Estudiante:** Diego de la Cruz Muñoz (Matrícula: 1977875)
 **Actividad Contractual:** actividad-4 (Nexus 3.6)
 **Fase / Unidad:** Fase 3: Valores y vectores propios
 **Ponderación:** 10.0 pts

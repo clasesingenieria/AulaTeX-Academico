@@ -25,7 +25,7 @@ El informe debe articular:
 
 1. **Portada Institucional:**
    - Logotipos UANL y Facultad de Agronomía.
-   - Datos del estudiante (Carlos Mauricio Carvajal Coronado - 1977875).
+   - Datos del estudiante (Diego de la Cruz Muñoz - 1977875).
    - Título del caso de estudio profesional.
 2. **Resumen Ejecutivo:**
    - Síntesis del problema, metodología de análisis y propuesta transformadora.

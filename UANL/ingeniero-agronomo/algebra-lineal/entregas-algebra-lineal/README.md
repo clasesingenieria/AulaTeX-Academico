@@ -2,7 +2,7 @@
 
 **Institución:** Universidad Autónoma de Nuevo León (UANL)  
 **Dependencia:** Facultad de Agronomía — Ingeniero Agrónomo  
-**Estudiante:** Carlos Mauricio Carvajal Coronado (1977875)  
+**Estudiante:** Diego de la Cruz Muñoz (1977875)  
 **Docente Titular:** M.C. José de Jesús Miranda Vázquez  
 **Plataforma de entrega:** Nexus UANL / Evaluaciones síncronas programadas  
 
