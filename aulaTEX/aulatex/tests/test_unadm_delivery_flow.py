@@ -525,5 +525,83 @@ class UnadmWeek6DetectionAndStagingTests(unittest.TestCase):
         self.assertEqual(total_overlaps, 0, f"Se detectaron {total_overlaps} solapamientos de bloques en el documento")
 
 
+    def test_19_estilo_escribir_blocks_tikz_and_artifact_metadiscourse(self) -> None:
+        """Verifica que estilo-escribir identifique y depure metadiscurso sobre TikZ y productos escolares."""
+        from aulaTEX.aulatex.estilo_escribir import EstiloEscribirAgent
+        agent = EstiloEscribirAgent(workspace=self.workspace)
+        
+        sample_dirty = (
+            "\\begin{document}\n"
+            "Este manuscrito organiza analíticamente mediante un cuadro sinóptico jerárquico en TikZ y matrices operativas.\n"
+            "El cuadro sinóptico desarrollado en este trabajo no se limita a ilustrar una simple jerarquía.\n"
+            "Se debe entregar el producto solicitado conforme a la rúbrica.\n"
+            "\\end{document}"
+        )
+        eval_before = agent.evaluate_tex(sample_dirty)
+        self.assertFalse(eval_before.passed)
+        critical_codes = {c["code"] for c in eval_before.critical_issues}
+        self.assertTrue(
+            any("tikz" in c or "producto" in c or "cuadro" in c or "manuscrito" in c for c in critical_codes),
+            f"No se detectaron códigos críticos de metadiscurso: {critical_codes}"
+        )
+
+        cleaned, applied = agent._apply_deterministic_refinements(sample_dirty)
+        self.assertNotIn("en TikZ", cleaned)
+        self.assertNotIn("el producto solicitado", cleaned)
+        self.assertNotIn("desarrollado en este trabajo", cleaned)
+
+    def test_20_actividad_8_no_metadiscourse_figure_caption_and_no_overflow(self) -> None:
+        """Verifica que el reporte de Actividad 8 carezca de metadiscurso TikZ, use Figura con caption y no desborde márgenes."""
+        import fitz
+        tex_path = Path(
+            self.workspace.repo_root
+            / "UnADM"
+            / "licenciatura-en-derecho-unadm"
+            / "antecedentes-de-los-derechos-humanos-lde"
+            / "reporte-antecedentes-de-los-derechos-humanos-Actividad-8.tex"
+        )
+        self.assertTrue(tex_path.is_file())
+        tex_content = tex_path.read_text(encoding="utf-8")
+        
+        # Cero metadiscurso técnico TikZ en prosa
+        self.assertNotIn("cuadro sinóptico jerárquico en TikZ", tex_content)
+        self.assertNotIn("desarrollado en este trabajo", tex_content)
+        self.assertIn("\\caption{Esquema sin", tex_content)
+        self.assertIn("\\label{fig:cuadro_sinoptico_orden_juridico}", tex_content)
+        
+        pdf_path = Path(
+            self.workspace.repo_root
+            / "UnADM"
+            / "licenciatura-en-derecho-unadm"
+            / "antecedentes-de-los-derechos-humanos-lde"
+            / "entregas-antecedentes-de-los-derechos-humanos"
+            / "Actividad-8-Cuadro-sinoptico-Martin-Jonathan-de-la-Cruz.pdf"
+        )
+        self.assertTrue(pdf_path.is_file())
+        doc = fitz.open(pdf_path)
+        page6 = doc[5]
+        self.assertGreater(page6.rect.width, page6.rect.height)
+        
+        # Verificar que ningún bloque de texto exceda los márgenes útiles
+        blocks = page6.get_text("blocks")
+        for b in blocks:
+            self.assertLessEqual(b[2], page6.rect.width + 1.0, f"Bloque desborda margen derecho: {b}")
+
+    def test_21_entregar_unadm_week6_deliveries_live_or_dryrun_success(self) -> None:
+        """Verifica que las entregas de semana 6 se encuentren registradas con comprobantes formales y sin fugas."""
+        runs_dir = self.workspace.feedback_root / "entregar-unadm" / "runs"
+        week6_manifests = [m for m in runs_dir.rglob("manifest.json") if "week6" in m.parent.name]
+        self.assertGreater(len(week6_manifests), 0, "No se encontraron manifiestos de entrega para semana 6")
+        
+        target_manifest = max(week6_manifests, key=lambda p: p.stat().st_mtime)
+        data = json.loads(target_manifest.read_text(encoding="utf-8"))
+        assert_no_credential_leak(data)
+        self.assertIn("deliveries", data)
+        self.assertEqual(len(data["deliveries"]), 3)
+        for d in data["deliveries"]:
+            self.assertIn(d["state"], ("submitted_to_forum", "draft_saved", "submitted_for_grading", "already_submitted"))
+            self.assertTrue(Path(d["screenshot"]).is_file(), f"Captura no encontrada: {d['screenshot']}")
+
+
 if __name__ == "__main__":
     unittest.main()

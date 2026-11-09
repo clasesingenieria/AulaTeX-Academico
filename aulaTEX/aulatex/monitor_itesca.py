@@ -128,6 +128,18 @@ VALID_LIFECYCLE_STATES = (
 )
 
 
+@dataclass(frozen=True)
+class MonitorItescaRequest:
+    """Solicitud de auditoría y monitoreo de entregas en ITESCA."""
+
+    subject_slug: str = "all"
+    course_id: int | None = None
+    inspect_platform: bool = False
+    nav_snapshot: dict[str, Any] | None = None
+    snapshot_path: str | Path = ""
+    output_dir: str = ""
+
+
 def _clean_slug(raw: str) -> str:
     clean = raw.strip().lower()
     for sfx in ("-mga", "-itesca", "-mga-itesca"):
@@ -279,12 +291,29 @@ class MonitorItescaAgent(MonitorEntregasAgent):
 
         platform_status = "No enviado (Pendiente de entrega)"
         if platform_snapshot:
-            # Si hay información de snapshot Moodle
-            p_mods = platform_snapshot.get("modules") or []
-            for pm in p_mods:
-                if pm.get("module_id") == mid:
-                    platform_status = pm.get("submission_state") or platform_status
-                    break
+            p_mods = platform_snapshot.get("modules")
+            mod_data = None
+            if isinstance(p_mods, dict):
+                mod_data = p_mods.get(str(mid)) or p_mods.get(mid)
+            elif isinstance(p_mods, list):
+                for pm in p_mods:
+                    if pm.get("module_id") == mid:
+                        mod_data = pm
+                        break
+            if mod_data:
+                sf = mod_data.get("submission_and_feedback") or {}
+                st_table = sf.get("status_table") or {}
+                if "Estado de la entrega" in st_table:
+                    platform_status = st_table["Estado de la entrega"]
+                elif mod_data.get("submission_state"):
+                    platform_status = mod_data["submission_state"]
+                elif mod_data.get("status"):
+                    platform_status = mod_data["status"]
+
+                if "Enviado para calificar" in platform_status:
+                    lifecycle = LIFECYCLE_ENTREGA_CONFIRMADA
+                    rec_action = "ya_entregado"
+                    rationale = f"Actividad ya enviada y registrada en plataforma ({platform_status})."
 
         item = PendingDeliveryItem(
             institution="ITESCA",
@@ -320,23 +349,92 @@ class MonitorItescaAgent(MonitorEntregasAgent):
 
         return item, rec
 
-    def monitor_all_active(self, snapshot_path: str | Path = "") -> PendingSubmissionsReport:
+    def monitor_deliveries(
+        self,
+        request: MonitorItescaRequest | None = None,
+        **kwargs: Any,
+    ) -> PendingSubmissionsReport:
+        """Inspecciona y compila el informe general de entregas de ITESCA."""
+        if request is None:
+            request = MonitorItescaRequest(**kwargs)
+        return self.monitor_all_active(
+            snapshot_path=request.snapshot_path,
+            target_subject=request.subject_slug,
+            inspect_platform=request.inspect_platform,
+            output_dir=request.output_dir,
+            nav_snapshot=request.nav_snapshot,
+        )
+
+    def monitor_all_active(
+        self,
+        snapshot_path: str | Path = "",
+        target_subject: str = "all",
+        inspect_platform: bool = False,
+        output_dir: str = "",
+        nav_snapshot: dict[str, Any] | None = None,
+    ) -> PendingSubmissionsReport:
         """Audita todas las asignaturas y actividades activas de ITESCA."""
         run_id = f"{self.workspace.timestamp()}-monitor-itesca"
-        run_dir = self.runs_root / run_id
+        run_dir = (
+            self.workspace.resolve_target(output_dir)
+            if output_dir.strip()
+            else self.runs_root / run_id
+        )
         run_dir.mkdir(parents=True, exist_ok=True)
 
-        snapshot_data: dict[str, Any] | None = None
-        if str(snapshot_path).strip():
+        global_blockers: list[dict[str, Any]] = []
+        snapshot_data: dict[str, Any] | None = nav_snapshot
+        if snapshot_data is None and str(snapshot_path).strip():
             p = Path(snapshot_path).resolve()
             if p.is_file():
                 snapshot_data = json.loads(p.read_text(encoding="utf-8"))
 
+        clean_target = _clean_slug(target_subject)
+        subjects_to_audit: dict[str, dict[str, Any]] = {}
+        if clean_target in ("all", "todas", "*", ""):
+            subjects_to_audit = dict(ITESCA_SUBJECTS_CATALOG)
+        else:
+            if clean_target in ITESCA_SUBJECTS_CATALOG:
+                subjects_to_audit = {clean_target: ITESCA_SUBJECTS_CATALOG[clean_target]}
+            else:
+                subjects_to_audit = dict(ITESCA_SUBJECTS_CATALOG)
+
+        if inspect_platform and snapshot_data is None:
+            try:
+                mod_targets = []
+                cids = set()
+                for s_key, s_data in subjects_to_audit.items():
+                    cid_val = s_data.get("course_id") or 209
+                    cids.add(cid_val)
+                    for a_num, a_info in s_data.get("activities", {}).items():
+                        mid_val = a_info.get("module_id")
+                        if mid_val:
+                            mod_targets.append(ItescaModuleTarget(
+                                module_id=mid_val,
+                                kind=a_info.get("kind", "assign"),
+                                course_id=cid_val,
+                                local_activity_number=a_num,
+                                subject_slug=s_key,
+                            ))
+                nav_req = ItescaNavigationRequest(
+                    course_ids=tuple(sorted(cids)),
+                    modules=tuple(mod_targets),
+                    inspect_dashboard=True,
+                    output_dir=str(run_dir / "navegacion_en_vivo"),
+                )
+                nav_res = self.nav_agent.inspect(nav_req)
+                snapshot_data = nav_res.snapshot
+            except Exception as exc:
+                global_blockers.append({
+                    "code": "platform_inspection_warning",
+                    "detail": f"No se pudo completar la inspección en vivo: {exc}. Se procede con evaluación local.",
+                    "blocking": False,
+                })
+
         pending_items: list[PendingDeliveryItem] = []
         recommendations: list[DeliveryRecommendation] = []
-        global_blockers: list[dict[str, Any]] = []
 
-        for sub_slug, sub_info in ITESCA_SUBJECTS_CATALOG.items():
+        for sub_slug, sub_info in subjects_to_audit.items():
             for act_num in sorted(sub_info.get("activities", {}).keys()):
                 item, rec = self.evaluate_activity(
                     subject_slug=sub_slug,
@@ -413,6 +511,7 @@ __all__ = [
     "AGENT_ID_MONITOR_ITESCA",
     "ITESCA_SUBJECTS_CATALOG",
     "MonitorItescaAgent",
+    "MonitorItescaRequest",
     "LIFECYCLE_PENDIENTE",
     "LIFECYCLE_EN_DESARROLLO",
     "LIFECYCLE_ENTREGABLE_GENERADO",

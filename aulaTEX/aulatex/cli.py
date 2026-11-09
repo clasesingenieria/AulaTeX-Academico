@@ -526,6 +526,28 @@ def build_parser() -> argparse.ArgumentParser:
     estilo_it.add_argument("--bib", default="")
     estilo_it.add_argument("--apply", action="store_true")
 
+    itesca_pending = sub.add_parser("itesca-pending", aliases=["monitor-itesca"], help="Auditar y validar entregas pendientes en ITESCA orquestadas por aulatex.")
+    itesca_pending.add_argument("--subject", default="all", help="Slug de la materia ITESCA ('all', 'estadistica-aplicada-para-la-administracion', 'seminario-i').")
+    itesca_pending.add_argument("--course-id", type=int, default=None, help="ID del curso en ITESCA.")
+    itesca_pending.add_argument("--snapshot", default="", help="Ruta al snapshot de navegación local.")
+    itesca_pending.add_argument("--inspect", action="store_true", help="Inspeccionar plataforma ITESCA en vivo.")
+    itesca_pending.add_argument("--output", default="", help="Directorio de salida.")
+    itesca_pending.add_argument("--json", action="store_true", help="Emitir salida en JSON.")
+
+    itesca_entrega = sub.add_parser("itesca-entrega", aliases=["entregar-itesca"], help="Envío autenticado de entregables a ITESCA tras autorización explícita.")
+    itesca_entrega.add_argument("--subject", required=True, help="Slug de la materia ITESCA.")
+    itesca_entrega.add_argument("--activity", type=int, required=True, help="Número de actividad.")
+    itesca_entrega.add_argument("--artifact", default="", help="Ruta del entregable local (.pdf/.docx). Si se omite, se infiere del catálogo.")
+    itesca_entrega.add_argument("--user-validated", action="store_true", help="Autorización explícita obligatoria del usuario (user_validated=True).")
+    itesca_entrega.add_argument("--sha256", default=None, help="SHA-256 esperado.")
+    itesca_entrega.add_argument("--course-id", type=int, default=None, help="ID del curso en ITESCA.")
+    itesca_entrega.add_argument("--module-id", type=int, default=None, help="ID del módulo en ITESCA.")
+    itesca_entrega.add_argument("--finalize", action="store_true", help="Marcar como envío definitivo ('Enviar para calificar').")
+    itesca_entrega.add_argument("--live", dest="dry_run", action="store_false", help="Envío en vivo a plataforma (por omisión --dry-run está activo).")
+    itesca_entrega.set_defaults(dry_run=True)
+    itesca_entrega.add_argument("--output", default="", help="Directorio de comprobantes.")
+    itesca_entrega.add_argument("--json", action="store_true", help="Emitir salida en JSON.")
+
     uas_pending = sub.add_parser("uas-pending", aliases=["monitor-uas"], help="Auditar y realizar entregas pendientes en UAS orquestadas por aulatex.")
     uas_pending.add_argument("--subject", default="derecho-mercantil", help="Slug de la materia UAS (o 'all'/'todas').")
     uas_pending.add_argument("--course-id", type=int, default=None, help="ID del curso en UAS.")
@@ -1905,6 +1927,94 @@ def main(argv: list[str] | None = None) -> None:
             finalize=bool(args.finalize),
             dry_run=not bool(args.live),
             output_dir=args.output,
+        )
+        res = agent.submit(req)
+        print(json.dumps({
+            "ok": res.ok,
+            "status": res.status,
+            "run_id": res.run_id,
+            "artifact": res.artifact_path,
+            "sha256": res.sha256,
+            "platform_url": res.platform_url,
+            "receipt": ws.relative(res.receipt_path) if res.receipt_path else "",
+            "manifest": ws.relative(res.manifest_path) if res.manifest_path else "",
+            "blockers": list(res.blockers),
+        }, ensure_ascii=False, indent=2))
+        return
+
+    if args.command in ("itesca-pending", "monitor-itesca"):
+        from .monitor_itesca import MonitorItescaAgent, MonitorItescaRequest
+
+        ws = AulaTeXWorkspace()
+        mon = MonitorItescaAgent(ws)
+        req = MonitorItescaRequest(
+            subject_slug=getattr(args, "subject", "all"),
+            course_id=getattr(args, "course_id", None),
+            snapshot_path=getattr(args, "snapshot", ""),
+            inspect_platform=bool(getattr(args, "inspect", False)),
+            output_dir=getattr(args, "output", ""),
+        )
+        report = mon.monitor_deliveries(req)
+        print(json.dumps({
+            "ok": report.ok,
+            "run_id": report.run_id,
+            "institution": report.institution,
+            "manifest": ws.relative(report.manifest_path) if report.manifest_path else "",
+            "summary_md": ws.relative(report.summary_md_path) if report.summary_md_path else "",
+            "pending_count": len(report.pending_deliveries),
+            "pending_deliveries": [
+                {
+                    "subject": it.subject_slug,
+                    "activity": it.activity_number,
+                    "title": it.activity_title,
+                    "module_id": it.module_id,
+                    "platform_status": it.platform_status,
+                    "deliverable_ready": it.local_deliverable_ready,
+                    "deliverable_path": ws.relative(Path(it.local_deliverable_path)) if it.local_deliverable_path else None,
+                    "sha256": it.local_deliverable_sha256,
+                }
+                for it in report.pending_deliveries
+            ],
+            "recommendations": [
+                {
+                    "subject": r.subject_slug,
+                    "activity": r.activity_number,
+                    "action": r.recommended_action,
+                    "prerequisites_satisfied": list(r.prerequisites_satisfied),
+                    "rationale": r.rationale,
+                    "proposed_artifact": ws.relative(Path(r.proposed_delivery_artifact)) if r.proposed_delivery_artifact else None,
+                }
+                for r in report.recommendations
+            ],
+            "blockers": list(report.blockers),
+        }, ensure_ascii=False, indent=2))
+        return
+
+    if args.command in ("itesca-entrega", "entregar-itesca"):
+        from .entregar_itesca import EntregarItescaAgent, EntregarItescaRequest
+        from .monitor_itesca import ITESCA_SUBJECTS_CATALOG, _clean_slug
+
+        ws = AulaTeXWorkspace()
+        agent = EntregarItescaAgent(ws)
+
+        clean_slug = _clean_slug(args.subject)
+        artifact_path = args.artifact.strip()
+        if not artifact_path:
+            cat_entry = ITESCA_SUBJECTS_CATALOG.get(clean_slug, {})
+            act_info = cat_entry.get("activities", {}).get(args.activity, {})
+            artifact_path = act_info.get("deliverable_rel", "")
+
+        req = EntregarItescaRequest(
+            subject_slug=clean_slug,
+            activity_number=args.activity,
+            artifact_path=artifact_path,
+            expected_sha256=getattr(args, "sha256", None),
+            course_id=getattr(args, "course_id", None),
+            module_id=getattr(args, "module_id", None),
+            user_validated=bool(getattr(args, "user_validated", False)),
+            finalize=bool(getattr(args, "finalize", False)),
+            dry_run=bool(getattr(args, "dry_run", True)),
+            output_dir=getattr(args, "output", ""),
         )
         res = agent.submit(req)
         print(json.dumps({

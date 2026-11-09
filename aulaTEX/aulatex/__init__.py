@@ -78,6 +78,16 @@ from .entregar_unadm import (
     EntregarUnadmAgent,
     EntregarUnadmRequest,
 )
+from .monitor_itesca import (
+    AGENT_ID_MONITOR_ITESCA,
+    MonitorItescaAgent,
+    MonitorItescaRequest,
+)
+from .entregar_itesca import (
+    AGENT_ID_ENTREGAR_ITESCA,
+    EntregarItescaAgent,
+    EntregarItescaRequest,
+)
 
 __all__ = [
     "ActivityObservationRequest",
@@ -182,4 +192,10 @@ __all__ = [
     "AGENT_ID_ENTREGAR_UNADM",
     "EntregarUnadmAgent",
     "EntregarUnadmRequest",
+    "AGENT_ID_MONITOR_ITESCA",
+    "MonitorItescaAgent",
+    "MonitorItescaRequest",
+    "AGENT_ID_ENTREGAR_ITESCA",
+    "EntregarItescaAgent",
+    "EntregarItescaRequest",
 ]

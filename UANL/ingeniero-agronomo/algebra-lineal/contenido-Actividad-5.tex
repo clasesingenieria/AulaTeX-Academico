@@ -1,6 +1,6 @@
 \section*{Resumen}
 
-El presente trabajo técnico aborda la optimización analítica de la fertilización balanceada en una plantación comercial de naranja Valencia (\textit{Citrus sinensis}) ubicada en la región citrícola de General Terán, Nuevo León. La formulación de planes de fertirrigación multi-nutricionales a partir de fuentes comerciales acopladas plantea un problema clásico de insumo-producto que no puede resolverse mediante recetas empíricas sin incurrir en sobredosificaciones contaminantes o deficiencias críticas. Para solventar este desafío, se recolectaron los requerimientos estacionales de macronutrientes ($175\text{ kg/ha}$ de Nitrógeno, $142\text{ kg/ha}$ de Fósforo y $182\text{ kg/ha}$ de Potasio) y se formularon como un sistema lineal acoplado $A\mathbf{x} = \mathbf{b}$ de dimensión $3 \times 3$, empleando tres fuentes comerciales comunes en el agro regional: una mezcla compleja NPK 20-10-10, fosfato diamónico (DAP 18-46-0) y nitrato de potasio (13-0-44). El sistema fue resuelto analíticamente paso a paso mediante eliminación de Gauss-Jordan sobre la matriz aumentada, corroborado de manera independiente a través de la Regla de Cramer y validado por el método de la matriz inversa. Se obtuvo una solución física única y exacta de $500\text{ kg/ha}$ de NPK 20-10-10, $200\text{ kg/ha}$ de DAP y $300\text{ kg/ha}$ de nitrato de potasio, satisfaciendo el balance estricto con un vector de residuo nulo ($\mathbf{r} = \mathbf{0}$). El análisis espectral y de condicionamiento numérico ($\kappa(A) \approx 5.86$) confirma la robustez operativa de la solución ante perturbaciones edafológicas, consolidando al álgebra lineal como una herramienta insustituible para la sustentabilidad económica y ambiental de la agricultura moderna.
+El presente trabajo técnico aborda la optimización analítica de la fertilización balanceada en una plantación comercial de naranja Valencia (\textit{Citrus sinensis}) ubicada en la región citrícola de General Terán, Nuevo León. La formulación de planes de fertirrigación multi-nutricionales a partir de fuentes comerciales acopladas plantea un problema clásico de insumo-producto que no puede resolverse mediante recetas empíricas sin incurrir en sobredosificaciones contaminantes o deficiencias críticas. Para solventar este desafío, se recolectaron los requerimientos estacionales de macronutrientes ($175\text{ kg/ha}$ de Nitrógeno, $142\text{ kg/ha}$ de Fósforo y $182\text{ kg/ha}$ de Potasio) y se formularon como un sistema lineal acoplado $A\mathbf{x} = \mathbf{b}$ de dimensión $3 \times 3$, empleando tres fuentes comerciales comunes en el agro regional: una mezcla compleja NPK 20-10-10, fosfato diamónico (DAP 18-46-0) y nitrato de potasio (13-0-44). El sistema fue resuelto analíticamente paso a paso mediante eliminación de Gauss-Jordan sobre la matriz aumentada, corroborado de manera independiente a través de la Regla de Cramer y validado por el método de la matriz inversa. Se obtuvo una solución física única y exacta de $500\text{ kg/ha}$ de NPK 20-10-10, $200\text{ kg/ha}$ de DAP y $300\text{ kg/ha}$ de nitrato de potasio, satisfaciendo el balance estricto con un vector de residuo nulo ($\mathbf{r} = \mathbf{0}$). El análisis espectral y de condicionamiento numérico ($\kappa(A) \approx 5.86$) confirma la robustez operativa de la solución ante perturbaciones edafológicas, consolidando al álgebra lineal como una disciplina metodológica insustituible para la sustentabilidad económica y ambiental de la agricultura moderna.
 
 \vspace{0.35cm}
 
@@ -360,20 +360,6 @@ Comprobamos el vector residual $\mathbf{r} = A\mathbf{x} - \mathbf{b}$:
 
 El residuo nulo $\|\mathbf{r}\|_\infty = 0$ certifica la validez matemática y física absoluta del modelo formulado.
 
-\subsection{Herramientas Computacionales Utilizadas}
-
-Para el desarrollo, verificación simbólica y maquetación de este proyecto de ingeniería agronómica se utilizaron las siguientes herramientas digitales:
-
-\begin{itemize}
-
-    \item \textbf{Motor Tipográfico XeLaTeX y LaTeX3:} Compilación tipográfica institucional de alta precisión, garantizando compatibilidad tipográfica Arial, tablas formales (`tabularx`, `booktabs`) y edición de ecuaciones con microtipografía avanzada.
-
-    \item \textbf{BibLaTeX y Biber:} Gestión determinista del aparato crítico conforme a la normativa APA 7ma edición contra el archivo bibliográfico `algebra-lineal.bib`.
-
-    \item \textbf{Python 3.13 con librerías SymPy y NumPy:} Entorno de álgebra computacional empleado para corroborar las reducciones por filas, determinantes simbólicos y condicionamiento espectral de matrices.
-
-\end{itemize}
-
 \section{Resultados}
 
 Los resultados cuantitativos del modelo matricial de fertilización balanceada se presentan en el Cuadro~\ref{tab:resultados_dosis}.
@@ -485,5 +471,5 @@ En conclusión, desde una perspectiva analítica propia, el presente estudio dem
     \item La aplicación conjunta de la eliminación de Gauss-Jordan, la Regla de Cramer y la matriz inversa proporciona un marco metodológico reproducible y pedagógicamente transparente, verificando la unicidad de la solución mediante residuo vectorial nulo. Por tanto, la convergencia analítica certifica certeza plena.
     \item Se obtuvo una receta de aplicación agronómica exacta de $500\text{ kg/ha}$ de NPK 20-10-10, $200\text{ kg/ha}$ de DAP 18-46-0 y $300\text{ kg/ha}$ de nitrato de potasio 13-0-44, garantizando el suministro neto estricto de $175\text{ kg de }N$, $142\text{ kg de }P_2O_5$ y $182\text{ kg de }K_2O$ sin excesos salinizantes. En consecuencia, se maximiza la asimilación vegetal de nutrientes.
     \item El bajo número de condición ($\kappa(A) \approx 5.86$) confirma que la formulación es sumamente estable ante las variaciones climáticas y edafológicas propias del noreste mexicano. En virtud de lo anterior, la formulación es robusta en campo.
-    \item En síntesis, el álgebra lineal se consolida como una competencia profesional medular en la formación del Ingeniero Agrónomo de la UANL, dotándolo de capacidades cuantitativas analíticas para el diseño agronómico predictivo y sustentable.\footnote{Declaración ética: El presente reporte técnico fue elaborado con el soporte de herramientas de asistencia algorítmica para la composición y verificación matemática, conforme a las directrices de integridad académica de la Universidad Autónoma de Nuevo León.}
+    \item En síntesis, el álgebra lineal se consolida como una competencia profesional medular en la formación del Ingeniero Agrónomo de la UANL, dotándolo de capacidades cuantitativas analíticas para el diseño agronómico predictivo y sustentable.
 \end{enumerate}
