@@ -50,7 +50,7 @@
 \onehalfspacing
 
 \begin{abstractd}
-El presente reporte aborda la solución rigurosa y el análisis espectral del Sistema 11 asignado en la hoja docente de Álgebra Lineal, articulando la resolución de sistemas de ecuaciones lineales de orden $3 \times 3$ con la teoría avanzada de valores y vectores propios correspondiente a la Fase 3 del programa de estudios. Se resuelve analíticamente el sistema mediante tres metodologías formales: eliminación de Gauss-Jordan, regla de Cramer y el método de la matriz inversa, obteniendo la solución racional única $x = -103/335$, $y = -74/335$ y $z = -379/335$, respaldada por un determinante principal $\det(A) = -670 \neq 0$. Posteriormente, se modela el procedimiento mediante un diagrama estructurado tipo algoritmo. A partir de la matriz de coeficientes $A$, se calcula su polinomio característico $P(\lambda) = -\lambda^3 + 9\lambda^2 - 26\lambda - 670$, se deducen sus valores propios y sus respectivos subespacios propios (autovectores), evaluando las condiciones de diagonalizabilidad en el cuerpo de los números reales y complejos. Asimismo, se expone la teoría del espectro en matrices simétricas asociadas y diagonalización ortogonal, vinculando estos fundamentos con la modelación dinámica de poblaciones biológicas y el balance de nutrientes en la ingeniería agronómica.
+El presente reporte aborda la solución rigurosa y el análisis espectral del Sistema 11 asignado en la hoja docente de Álgebra Lineal, articulando la resolución de sistemas de ecuaciones lineales de orden $3 \times 3$ con la teoría avanzada de valores y vectores propios correspondiente a la Fase 3 del programa de estudios. Se resuelve analíticamente el sistema mediante tres metodologías formales: eliminación de Gauss-Jordan, regla de Cramer y el método de la matriz inversa, obteniendo la solución racional única $x = -103/335$, $y = -74/335$ y $z = -379/335$, respaldada por un determinante principal $\det(A) = -670 \neq 0$. Posteriormente, se modela el procedimiento mediante un diagrama estructurado tipo algoritmo. A partir de la matriz de coeficientes $A$, se calcula su polinomio característico $P(\lambda) = -\lambda^3 + 9\lambda^2 - 26\lambda - 670$, se deducen sus valores propios y sus respectivos subespacios propios (autovectores), evaluando las condiciones de diagonalizabilidad en el cuerpo de los números reales y complejos. Asimismo, se vinculan estos fundamentos con la modelación dinámica de poblaciones biológicas (modelos matriciales de Leslie) y el desacoplamiento de ecuaciones de balance de nutrientes en la ingeniería agronómica.
 \end{abstractd}
 
 \templateIndex
@@ -62,7 +62,7 @@ La tesis central de este trabajo plantea que la formulación matricial de un sis
 
 Un sistema de ecuaciones lineales permite describir estados de equilibrio estático donde interactúan múltiples variables interdependientes. Sin embargo, para comprender el comportamiento asintótico, la estabilidad y la respuesta dinámica temporal de dichos sistemas, resulta imprescindible recurrir a la teoría espectral: el cálculo de valores propios (\emph{eigenvalores}) y vectores propios (\emph{eigenvectores}) \citep{anton2014,strang2016}. 
 
-La .6 tiene como objetivo primordial demostrar la aplicación conceptual y operativa de los valores y vectores propios, la diagonalización matricial y las matrices simétricas sobre un caso concreto. Para este fin, se toma la matriz de coeficientes asociada al \textbf{Sistema 11} asignado individualmente en la plataforma institucional Nexus, resolviendo primero el sistema compatible determinado por tres vías independientes y desarrollando ulteriormente su análisis espectral completo.
+La presente actividad académica tiene como objetivo primordial demostrar la aplicación conceptual y operativa de los valores y vectores propios y la diagonalización matricial sobre un caso concreto. Para este fin, se toma la matriz de coeficientes asociada al \textbf{Sistema 11} asignado individualmente en la plataforma institucional Nexus, resolviendo primero el sistema compatible determinado por tres vías independientes y desarrollando ulteriormente su análisis espectral completo.
 
 \section{Planteamiento del problema: Sistema 11}
 
@@ -281,137 +281,379 @@ A continuación, se representa el flujo formal del procedimiento algorítmico so
 
 \section{Valores y vectores propios de la matriz del sistema}
 
-% Requiere amsmath y amssymb en el preámbulo.
-\section*{1. Identificación del problema}
-Resolver el Sistema 11, analizar el espectro de $A$ y obtener la descomposición espectral ortogonal de su parte simétrica.
+El análisis espectral constituye la piedra angular para determinar la estructura geométrica, la estabilidad asintótica y el comportamiento dinámico de los operadores matriciales. En esta sección se desarrolla paso a paso, con riguroso detalle expositivo y exactitud analítica, el cálculo del espectro de la matriz de coeficientes $A$ del Sistema 11:
 \begin{equation}
-A=\begin{pmatrix}-4&2&6\\10&3&2\\-9&-7&10\end{pmatrix},\qquad
-\mathbf{b}=\begin{pmatrix}-6\\-6\\-7\end{pmatrix},\qquad
-A\mathbf{u}=\mathbf{b}.
+A = \begin{pmatrix} -4 & 2 & 6 \\ 10 & 3 & 2 \\ -9 & -7 & 10 \end{pmatrix}.
 \end{equation}
 
-\section*{2. Variables, hipótesis y dominio}
-Las incógnitas son $\mathbf{u}=(x,y,z)^T$, consideradas adimensionales. El sistema se resuelve sobre $\mathbb{R}$ y el espectro completo de $A$ sobre $\mathbb{C}$. No se asignan significados físicos ni restricciones de no negatividad que no estén especificados.
+\subsection{Ecuación característica y matriz secular}
 
-\section*{3. Ecuaciones gobernantes}
+Por definición, un escalar $\lambda \in \mathbb{C}$ es un \textbf{valor propio} (\emph{eigenvalor}) de la matriz $A$ y un vector no nulo $\mathbf{v} \in \mathbb{C}^3 \setminus \{\mathbf{0}\}$ es su correspondiente \textbf{vector propio} (\emph{eigenvector}) si satisfacen la ecuación fundamental:
+\begin{equation}\label{eq:eigen_def}
+A \mathbf{v} = \lambda \mathbf{v} \iff (A - \lambda I_3) \mathbf{v} = \mathbf{0},
+\end{equation}
+donde $I_3$ es la matriz identidad de orden 3. La existencia de soluciones no triviales para el sistema homogéneo \eqref{eq:eigen_def} exige, por el teorema de invertibilidad, que la matriz característica $(A - \lambda I_3)$ sea singular, lo que equivale a la anulación de su determinante:
+\begin{equation}\label{eq:secular}
+P(\lambda) = \det(A - \lambda I_3) = 0.
+\end{equation}
+
+Estructurando explícitamente la matriz secular:
+\begin{equation}
+A - \lambda I_3 = \begin{pmatrix}
+-4 - \lambda & 2 & 6 \\
+10 & 3 - \lambda & 2 \\
+-9 & -7 & 10 - \lambda
+\end{pmatrix}.
+\end{equation}
+
+\subsection{Deducción paso a paso del polinomio característico}
+
+El determinante de la matriz secular se calcula de forma exhaustiva mediante la expansión por cofactores a lo largo del primer renglón:
+\begin{equation}\label{eq:det_expansion}
+\det(A - \lambda I_3) = (-4 - \lambda) \begin{vmatrix} 3 - \lambda & 2 \\ -7 & 10 - \lambda \end{vmatrix} - 2 \begin{vmatrix} 10 & 2 \\ -9 & 10 - \lambda \end{vmatrix} + 6 \begin{vmatrix} 10 & 3 - \lambda \\ -9 & -7 \end{vmatrix}.
+\end{equation}
+
+Se evalúa de manera minuciosa cada uno de los tres menores principales de orden $2 \times 2$:
+
+\begin{enumerate}
+\item \textbf{Primer menor principal $M_{11}(\lambda)$:}
+\begin{equation}
+\begin{aligned}
+\begin{vmatrix} 3 - \lambda & 2 \\ -7 & 10 - \lambda \end{vmatrix} &= (3 - \lambda)(10 - \lambda) - (2)(-7) \\
+&= 30 - 10\lambda - 3\lambda + \lambda^2 + 14 \\
+&= \lambda^2 - 13\lambda + 44.
+\end{aligned}
+\end{equation}
+
+\item \textbf{Segundo menor $M_{12}(\lambda)$:}
+\begin{equation}
+\begin{aligned}
+\begin{vmatrix} 10 & 2 \\ -9 & 10 - \lambda \end{vmatrix} &= 10(10 - \lambda) - (2)(-9) \\
+&= 100 - 10\lambda + 18 \\
+&= 118 - 10\lambda.
+\end{aligned}
+\end{equation}
+
+\item \textbf{Tercer menor $M_{13}(\lambda)$:}
+\begin{equation}
+\begin{aligned}
+\begin{vmatrix} 10 & 3 - \lambda \\ -9 & -7 \end{vmatrix} &= (10)(-7) - (3 - \lambda)(-9) \\
+&= -70 - (-27 + 9\lambda) \\
+&= -70 + 27 - 9\lambda = -43 - 9\lambda.
+\end{aligned}
+\end{equation}
+\end{enumerate}
+
+Sustituyendo los tres menores en la expansión \eqref{eq:det_expansion} y efectuando los productos algebraicos:
+\begin{equation}
+\begin{aligned}
+(-4 - \lambda)(\lambda^2 - 13\lambda + 44) &= -4\lambda^2 + 52\lambda - 176 - \lambda^3 + 13\lambda^2 - 44\lambda \\
+&= -\lambda^3 + 9\lambda^2 + 8\lambda - 176, \\[0.2cm]
+-2(118 - 10\lambda) &= -236 + 20\lambda, \\[0.2cm]
++6(-43 - 9\lambda) &= -258 - 54\lambda.
+\end{aligned}
+\end{equation}
+
+Sumando algebraicamente las tres contribuciones y agrupando términos semejantes por potencias de $\lambda$:
+\begin{equation}
+\begin{aligned}
+P(\lambda) &= (-\lambda^3 + 9\lambda^2 + 8\lambda - 176) + (-236 + 20\lambda) + (-258 - 54\lambda) \\
+&= -\lambda^3 + 9\lambda^2 + (8 + 20 - 54)\lambda + (-176 - 236 - 258) \\
+&= -\lambda^3 + 9\lambda^2 - 26\lambda - 670.
+\end{aligned}
+\end{equation}
+
+Igualando a cero y multiplicando por $-1$, la ecuación característica canónica resulta:
+\begin{equation}\label{eq:poly_canonica}
+\lambda^3 - 9\lambda^2 + 26\lambda + 670 = 0.
+\end{equation}
+
+\subsubsection*{Comprobación estructural de invariantes del polinomio}
+De acuerdo con las propiedades de las matrices de orden 3, los coeficientes del polinomio característico $\lambda^3 - c_2 \lambda^2 + c_1 \lambda - c_0 = 0$ deben coincidir exactamente con los invariantes espectrales:
 \begin{align}
-P(\lambda)&=\det(A-\lambda I),& E_\lambda&=\ker(A-\lambda I),\\
-\sum_i\lambda_i&=\operatorname{tr}(A),&\prod_i\lambda_i&=\det(A),\\
-S&=\frac{A+A^T}{2},&S&=QDQ^T,\qquad Q^TQ=I.
+c_2 &= \operatorname{tr}(A) = -4 + 3 + 10 = 9, \quad \checkmark \\
+c_1 &= M_{11}(0) + M_{22}(0) + M_{33}(0) = 44 + \begin{vmatrix} -4 & 6 \\ -9 & 10 \end{vmatrix} + \begin{vmatrix} -4 & 2 \\ 10 & 3 \end{vmatrix} \nonumber \\
+    &= 44 + (-40 + 54) + (-12 - 20) = 44 + 14 - 32 = 26, \quad \checkmark \\
+c_0 &= \det(A) = -670. \quad \checkmark
 \end{align}
-La última identidad procede del teorema espectral para matrices reales simétricas.
+La consistencia del polinomio característico queda rigurosamente verificada.
 
-\section*{4. Derivación analítica}
-\subsection*{Determinante y solución}
+\subsection{Resolución paso a paso de la ecuación cúbica por el método de Cardano}
+
+Para resolver analíticamente la ecuación cúbica \eqref{eq:poly_canonica}, se aplica en primer lugar la \textbf{transformación de Tschirnhaus} para eliminar el término cuadrático $\lambda^2$:
 \begin{equation}
-\det(A)=-4(44)-2(118)+6(-43)=-670\ne0.
-\end{equation}
-El sistema tiene solución única. Eliminando $x$ mediante $2R_2+5R_1$ y $4R_3-9R_1$, se obtiene
-\begin{equation}
-8y+17z=-21,\qquad23y+7z=-13.
-\end{equation}
-Al restar $23$ veces la primera ecuación y $8$ veces la segunda,
-\begin{equation}
-335z=-379,\qquad y=-\frac{74}{335},\qquad x=-\frac{103}{335}.
+\lambda = t - \frac{a_2}{3} = t - \frac{-9}{3} = t + 3.
 \end{equation}
 
-\subsection*{Autovalores y autovectores de $A$}
-La traza es $9$ y los menores principales de orden dos suman $-32+14+44=26$. Por tanto,
+Sustituyendo $\lambda = t + 3$ en \eqref{eq:poly_canonica}:
 \begin{equation}
-P(\lambda)=-\lambda^3+9\lambda^2-26\lambda-670.
+(t + 3)^3 - 9(t + 3)^2 + 26(t + 3) + 670 = 0.
 \end{equation}
-Con $\lambda=t+3$, la ecuación característica se reduce a
-\begin{equation}
-t^3-t+694=0.
-\end{equation}
-Definimos
+Desarrollando las potencias de binomios paso a paso:
 \begin{align}
-D_C&=347^2-\frac1{27}>0,\\
-\rho&=\sqrt[3]{347+\sqrt{D_C}},\\
-r&=\rho+\frac1{3\rho},\qquad
-\beta=\frac{\sqrt3}{2}\left(\rho-\frac1{3\rho}\right).
+(t + 3)^3 &= t^3 + 9t^2 + 27t + 27, \nonumber \\
+-9(t + 3)^2 &= -9(t^2 + 6t + 9) = -9t^2 - 54t - 81, \nonumber \\
++26(t + 3) &= 26t + 78, \nonumber \\
++670 &= 670.
 \end{align}
-La fórmula de Cardano da
-\begin{equation}
-\lambda_1=3-r,\qquad\lambda_{2,3}=3+\frac r2\pm i\beta.
-\end{equation}
-El producto vectorial de las primeras dos filas de $A-\lambda I$ produce
-\begin{equation}
-\mathbf{v}(\lambda)=\begin{pmatrix}6\lambda-14\\2\lambda+68\\\lambda^2+\lambda-32\end{pmatrix},\qquad
-(A-\lambda I)\mathbf{v}(\lambda)=\begin{pmatrix}0\\0\\P(\lambda)\end{pmatrix}.
-\end{equation}
-Como este vector no es nulo y los autovalores son simples,
-\begin{equation}
-E_{\lambda_i}=\operatorname{span}_{\mathbb{C}}\{\mathbf{v}(\lambda_i)\}.
-\end{equation}
-Los tres autovalores distintos garantizan la diagonalizabilidad sobre $\mathbb{C}$:
-\begin{equation}
-V=[\mathbf{v}(\lambda_1)\ \mathbf{v}(\lambda_2)\ \mathbf{v}(\lambda_3)],\qquad
-A=V\operatorname{diag}(\lambda_1,\lambda_2,\lambda_3)V^{-1}.
-\end{equation}
-No es diagonalizable sobre $\mathbb{R}$, porque dos autovalores no son reales.
 
-\subsection*{Parte simétrica}
+Sumando todos los términos:
 \begin{equation}
-S=\begin{pmatrix}-4&6&-\frac32\\6&3&-\frac52\\-\frac32&-\frac52&10\end{pmatrix}.
+t^3 + (9 - 9)t^2 + (27 - 54 + 26)t + (27 - 81 + 78 + 670) = 0,
 \end{equation}
-Su polinomio característico es
+lo que produce la \textbf{ecuación cúbica deprimida}:
+\begin{equation}\label{eq:deprimida}
+t^3 - t + 694 = 0.
+\end{equation}
+En la notación canónica de Cardano $t^3 + pt + q = 0$, los coeficientes son:
 \begin{equation}
-\chi_S(\mu)=\mu^3-9\mu^2-\frac{133}{2}\mu+\frac{1667}{4}.
+p = -1, \quad q = 694.
 \end{equation}
-Con $\mu=t+3$ resulta $t^3-\frac{187}{2}t+\frac{653}{4}=0$. Definimos
+
+\subsubsection*{Cálculo del discriminante de Cardano}
+El discriminante de la ecuación cúbica deprimida se define como:
+\begin{equation}
+\Delta = \left(\frac{q}{2}\right)^2 + \left(\frac{p}{3}\right)^3 = \left(\frac{694}{2}\right)^2 + \left(-\frac{1}{3}\right)^3 = 347^2 - \frac{1}{27}.
+\end{equation}
+Efectuando el cálculo numérico y racional exacto:
+\begin{equation}
+\Delta = 120409 - \frac{1}{27} = \frac{3251042}{27} \approx 120408.962963.
+\end{equation}
+Puesto que $\Delta > 0$, el teorema fundamental del álgebra y la teoría de Cardano establecen de forma concluyente que la ecuación posee \textbf{una raíz real y dos raíces complejas conjugadas}.
+
+\subsubsection*{Deducción de las raíces en forma analítica cerrada}
+De acuerdo con las fórmulas de Cardano, las componentes radicales se definen mediante:
+\begin{equation}
+u = \sqrt[3]{-\frac{q}{2} + \sqrt{\Delta}} = \sqrt[3]{-347 + \sqrt{\frac{3251042}{27}}}, \quad
+v = \sqrt[3]{-\frac{q}{2} - \sqrt{\Delta}} = \sqrt[3]{-347 - \sqrt{\frac{3251042}{27}}}.
+\end{equation}
+Para evitar radicandos negativos en los reales, se define la constante positiva auxiliar $\rho$:
+\begin{equation}
+\rho = \sqrt[3]{347 + \sqrt{120409 - \frac{1}{27}}} \approx \sqrt[3]{347 + 346.9999466} = \sqrt[3]{693.9999466} \approx 8.85368541.
+\end{equation}
+Dado que el producto de las componentes debe cumplir $uv = -p/3 = 1/3$, se deduce que $v = -\rho$ y $u = \frac{1}{3\rho}$. Se define el parámetro real $r$:
+\begin{equation}
+r = \rho + \frac{1}{3\rho} \approx 8.85368541 + 0.03765099 = 8.89124775.
+\end{equation}
+
+La raíz real de la ecuación deprimida es:
+\begin{equation}
+t_1 = u + v = -r \approx -8.89124775.
+\end{equation}
+Por ende, el \textbf{primer valor propio} (único autovalor real) es:
+\begin{equation}\label{eq:lambda1}
+\lambda_1 = t_1 + 3 = 3 - r \approx 3 - 8.89124775 = -5.89124775.
+\end{equation}
+
+Para las raíces complejas conjugadas, se define el parámetro de dispersión imaginaria $\beta$:
+\begin{equation}
+\beta = \frac{\sqrt{3}}{2} \left(\rho - \frac{1}{3\rho}\right) \approx \frac{\sqrt{3}}{2} (8.85368541 - 0.03765099) = \frac{\sqrt{3}}{2}(8.81603442) \approx 7.63483562.
+\end{equation}
+Las soluciones complejas de la ecuación deprimida son:
+\begin{equation}
+t_{2,3} = -\frac{u + v}{2} \pm i \frac{\sqrt{3}}{2}(u - v) = \frac{r}{2} \pm i \beta \approx 4.44562388 \pm 7.63483562i.
+\end{equation}
+Restituyendo la variable original $\lambda = t + 3$, se obtienen los \textbf{dos valores propios complejos conjugados}:
+\begin{equation}\label{eq:lambda23}
+\lambda_{2,3} = 3 + \frac{r}{2} \pm i \beta \approx 7.44562388 \pm 7.63483562i.
+\end{equation}
+
+\subsection{Deducción paso a paso de los vectores propios (autovectores)}
+
+Para cada valor propio $\lambda_k$, el vector propio asociado $\mathbf{v}_k = (v_1, v_2, v_3)^T \neq \mathbf{0}$ pertenece al núcleo del operador singular $(A - \lambda_k I_3)$:
+\begin{equation}\label{eq:sistema_homogeneo}
+\begin{pmatrix}
+-4 - \lambda & 2 & 6 \\
+10 & 3 - \lambda & 2 \\
+-9 & -7 & 10 - \lambda
+\end{pmatrix}
+\begin{pmatrix} v_1 \\ v_2 \\ v_3 \end{pmatrix} =
+\begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}.
+\end{equation}
+
+Dado que los tres autovalores son simples (multiplicidad algebraica $m_a(\lambda_k) = 1$), el rango de $(A - \lambda_k I_3)$ es exactamente 2 y el subespacio propio $E_{\lambda_k} = \ker(A - \lambda_k I_3)$ es unidimensional. En consecuencia, el vector propio puede deducirse con absoluta elegancia analítica mediante el \textbf{producto vectorial formal entre los dos primeros renglones} de la matriz secular:
+\begin{equation}
+\mathbf{r}_1(\lambda) = (-4 - \lambda, 2, 6), \quad \mathbf{r}_2(\lambda) = (10, 3 - \lambda, 2).
+\end{equation}
+Calculando $\mathbf{v}(\lambda) = \mathbf{r}_1(\lambda) \times \mathbf{r}_2(\lambda)$:
+\begin{equation}
+\begin{aligned}
+v_1(\lambda) &= \begin{vmatrix} 2 & 6 \\ 3 - \lambda & 2 \end{vmatrix} = (2)(2) - 6(3 - \lambda) = 4 - 18 + 6\lambda = 6\lambda - 14, \\[0.2cm]
+v_2(\lambda) &= -\begin{vmatrix} -4 - \lambda & 6 \\ 10 & 2 \end{vmatrix} = -[2(-4 - \lambda) - 60] = -[-8 - 2\lambda - 60] = 2\lambda + 68, \\[0.2cm]
+v_3(\lambda) &= \begin{vmatrix} -4 - \lambda & 2 \\ 10 & 3 - \lambda \end{vmatrix} = (-4 - \lambda)(3 - \lambda) - (2)(10) = -12 + 4\lambda - 3\lambda + \lambda^2 - 20 = \lambda^2 + \lambda - 32.
+\end{aligned}
+\end{equation}
+
+Obteniéndose la \textbf{función vectorial espectral cerrada}:
+\begin{equation}\label{eq:v_lambda}
+\mathbf{v}(\lambda) = \begin{pmatrix}
+6\lambda - 14 \\
+2\lambda + 68 \\
+\lambda^2 + \lambda - 32
+\end{pmatrix}.
+\end{equation}
+
+\subsubsection*{Demostración formal de satisfacción en el tercer renglón}
+Multiplicando el tercer renglón de $A - \lambda I_3$ por $\mathbf{v}(\lambda)$:
+\begin{equation}
+\begin{aligned}
+(-9, -7, 10 - \lambda) \cdot \mathbf{v}(\lambda) &= -9(6\lambda - 14) - 7(2\lambda + 68) + (10 - \lambda)(\lambda^2 + \lambda - 32) \\
+&= (-54\lambda + 126) - (14\lambda + 476) + (10\lambda^2 + 10\lambda - 320 - \lambda^3 - \lambda^2 + 32\lambda) \\
+&= -\lambda^3 + (10 - 1)\lambda^2 + (-54 - 14 + 10 + 32)\lambda + (126 - 476 - 320) \\
+&= -\lambda^3 + 9\lambda^2 - 26\lambda - 670 = P(\lambda).
+\end{aligned}
+\end{equation}
+Dado que $\lambda$ satisface la ecuación característica $P(\lambda) = 0$, el producto escalar con el tercer renglón es idénticamente cero. Por tanto, $\mathbf{v}(\lambda)$ satisface exactamente las tres ecuaciones del sistema homogéneo para todo valor propio de $A$.
+
+\subsubsection*{1. Vector propio para el autovalor real $\lambda_1 \approx -5.89124775$}
+Sustituyendo $\lambda_1$ en la fórmula general \eqref{eq:v_lambda}:
 \begin{align}
-\theta&=\frac13\arccos\left[-\frac{653}{8}\left(\frac6{187}\right)^{3/2}\right],\\
-\mu_k&=3+2\sqrt{\frac{187}{6}}\cos\left(\theta-\frac{2\pi k}{3}\right),\qquad k=0,1,2,\\
-\mathbf{w}(\mu)&=\begin{pmatrix}-3\mu-21\\-5\mu-38\\2\mu^2+2\mu-96\end{pmatrix},\\
-\mathbf{q}_k&=\frac{\mathbf{w}(\mu_k)}{\|\mathbf{w}(\mu_k)\|_2},\qquad
-Q=[\mathbf{q}_0\ \mathbf{q}_1\ \mathbf{q}_2].
+v_1 &= 6(-5.89124775) - 14 = -35.34748650 - 14 = -49.34748650, \nonumber \\
+v_2 &= 2(-5.89124775) + 68 = -11.78249550 + 68 = 56.21750450, \nonumber \\
+v_3 &= (-5.89124775)^2 + (-5.89124775) - 32 = 34.70679997 - 5.89124775 - 32 = -3.18444778.
 \end{align}
-Los tres autovalores son reales distintos. Por simetría, los autovectores normalizados son ortogonales. Así,
+Normalizando para fijar la tercera componente en 1 dividiendo entre $v_3 = -3.18444778$:
+\begin{equation}\label{eq:v1_final}
+\mathbf{v}_1 = \begin{pmatrix}
+\frac{-49.34748650}{-3.18444778} \\[0.2cm]
+\frac{56.21750450}{-3.18444778} \\[0.2cm]
+1
+\end{pmatrix} \approx
+\begin{pmatrix}
+15.49640359 \\
+-17.65376922 \\
+1.00000000
+\end{pmatrix}.
+\end{equation}
+En norma euclídea unitaria $\|\mathbf{v}_1\|_2 \approx 23.511796$:
 \begin{equation}
-S=Q\operatorname{diag}(\mu_0,\mu_1,\mu_2)Q^T
-=\sum_{k=0}^2\mu_k\mathbf{q}_k\mathbf{q}_k^T.
+\hat{\mathbf{v}}_1 \approx \begin{pmatrix} 0.65909683 \\ -0.75085443 \\ 0.04253224 \end{pmatrix}.
 \end{equation}
 
-\section*{5. Resultados exactos y numéricos}
-\begin{equation}
-\mathbf{u}=\frac1{335}\begin{pmatrix}-103\\-74\\-379\end{pmatrix}
-\approx\begin{pmatrix}-0.307463\\-0.220896\\-1.131343\end{pmatrix}.
-\end{equation}
+\subsubsection*{2. Vectores propios para los autovalores complejos conjugados $\lambda_{2,3} \approx 7.44562388 \pm 7.63483562i$}
+Sustituyendo $\lambda_2 = 7.44562388 + 7.63483562i$ en \eqref{eq:v_lambda}:
 \begin{align}
-\lambda_1&\approx-5.891248,\\
-\lambda_{2,3}&\approx7.445624\pm7.634836i,\\
-(\mu_0,\mu_1,\mu_2)&\approx(11.637069,4.809335,-7.446404).
+v_1 &= 6(7.44562388 + 7.63483562i) - 14 = 30.67374328 + 45.80901372i, \nonumber \\
+v_2 &= 2(7.44562388 + 7.63483562i) + 68 = 82.89124776 + 15.26967124i, \nonumber \\
+v_3 &= (7.44562388 + 7.63483562i)^2 + (7.44562388 + 7.63483562i) - 32 \nonumber \\
+    &= (55.437315 - 58.290715 + 113.693452i) + (7.445624 + 7.634836i) - 32 \nonumber \\
+    &= -27.407776 + 121.328288i.
 \end{align}
-Todos los valores son adimensionales. La diagonalización de $A$ es compleja; la descomposición ortogonal corresponde a $S$.
+Dividiendo entre $v_3$ para normalizar la componente $z$ a 1:
+\begin{equation}\label{eq:v2_final}
+\mathbf{v}_2 \approx \begin{pmatrix}
+0.30489555 - 0.32169452i \\
+-0.02709769 - 0.67708356i \\
+1.00000000
+\end{pmatrix}.
+\end{equation}
+Por el teorema de conjugación compleja para matrices reales, el vector propio asociado a $\lambda_3 = \overline{\lambda_2}$ es exactamente el conjugado de $\mathbf{v}_2$:
+\begin{equation}\label{eq:v3_final}
+\mathbf{v}_3 = \overline{\mathbf{v}_2} \approx \begin{pmatrix}
+0.30489555 + 0.32169452i \\
+-0.02709769 + 0.67708356i \\
+1.00000000
+\end{pmatrix}.
+\end{equation}
 
-\section*{6. Verificación independiente}
-Sustituyendo la solución exacta,
-\begin{equation}
-A\mathbf{u}=\frac1{335}\begin{pmatrix}-2010\\-2010\\-2345\end{pmatrix}=\mathbf{b}.
-\end{equation}
-Como $r^3-r=694$ y $\beta^2=3r^2/4-1$,
-\begin{align}
-\sum_i\lambda_i&=(3-r)+2\left(3+\frac r2\right)=9,\\
-\lambda_2\lambda_3&=r^2+3r+8,\\
-\prod_i\lambda_i&=(3-r)(r^2+3r+8)=-r^3+r+24=-670,\\
-\sum_{i<j}\lambda_i\lambda_j&=(3-r)(6+r)+(r^2+3r+8)=26.
-\end{align}
-Para $S$, la identidad
-\begin{equation}
-(S-\mu I)\mathbf{w}(\mu)=(0,0,-2\chi_S(\mu))^T
-\end{equation}
-verifica los autovectores. Además, $Q^TQ=I$ y $SQ=Q\operatorname{diag}(\mu_0,\mu_1,\mu_2)$ verifican la descomposición.
-\noindent\fbox{\parbox{0.9\linewidth}{\textbf{Verificación:} La sustitución recupera exactamente el vector de términos independientes. La suma y el producto de los autovalores coinciden con la traza y el determinante. Los residuos propios se anulan y la base de $S$ es ortonormal.}}
+\subsection{Análisis de diagonalizabilidad en los cuerpos numéricos y descomposición espectral}
 
-\section*{7. Interpretación agronómica}
-En balances de nutrientes, los signos pueden describir aportes y extracciones. Las soluciones negativas pueden representar desviaciones respecto de una referencia, pero no cantidades absolutas necesariamente no negativas. Si las incógnitas exigieran no negatividad, este sistema no tendría una solución físicamente admisible.
-Una matriz de Leslie estándar es no negativa y tiene una estructura poblacional específica; por sus entradas negativas, $A$ no es directamente una matriz de Leslie. No se deben interpretar sus autovalores como tasas temporales sin definir un modelo dinámico.
-La parte simétrica tiene dos autovalores positivos y uno negativo, por lo que su forma cuadrática es indefinida. Para todo vector real $\mathbf{h}$,
+Con base en los autovalores y autovectores determinados, se formula el diagnóstico exhaustivo de diagonalizabilidad:
+
+\begin{enumerate}
+\item \textbf{Diagonalizabilidad en el cuerpo real $\mathbb{R}$:}
+La matriz $A \in \mathcal{M}_{3\times 3}(\mathbb{R})$ \textbf{NO es diagonalizable sobre $\mathbb{R}$}. La condición necesaria y suficiente para que una matriz real sea diagonalizable sobre $\mathbb{R}$ exige que todas las raíces de su polinomio característico pertenezcan a $\mathbb{R}$. En este caso, dos de sus tres autovalores son números complejos no reales con parte imaginaria no nula ($\operatorname{Im}(\lambda_{2,3}) = \pm \beta \approx \pm 7.6348 \neq 0$).
+
+\item \textbf{Diagonalizabilidad en el cuerpo complejo $\mathbb{C}$:}
+La matriz $A$ \textbf{SÍ es diagonalizable sobre $\mathbb{C}$}. Puesto que los tres autovalores son estrictamente distintos dos a dos ($\lambda_1 \neq \lambda_2 \neq \lambda_3$), el conjunto de sus correspondientes vectores propios $\{\mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3\}$ es linealmente independiente en $\mathbb{C}^3$ por teorema espectral fundamental.
+\end{enumerate}
+
+Por tanto, existe una matriz modal de cambio de base invertible $V \in \mathcal{M}_{3\times 3}(\mathbb{C})$ formada por los autovectores en columna:
 \begin{equation}
-\mathbf{h}^TA\mathbf{h}=\mathbf{h}^TS\mathbf{h}.
+V = \begin{pmatrix} \mathbf{v}_1 & \mathbf{v}_2 & \mathbf{v}_3 \end{pmatrix} =
+\begin{pmatrix}
+15.4964 & 0.3049 - 0.3217i & 0.3049 + 0.3217i \\
+-17.6538 & -0.0271 - 0.6771i & -0.0271 + 0.6771i \\
+1 & 1 & 1
+\end{pmatrix},
 \end{equation}
-Esto distingue las propiedades matemáticas demostradas de las interpretaciones físicas que requieren información adicional.
+y una matriz diagonal $D \in \mathcal{M}_{3\times 3}(\mathbb{C})$:
+\begin{equation}
+D = \operatorname{diag}(\lambda_1, \lambda_2, \lambda_3) =
+\begin{pmatrix}
+-5.8912 & 0 & 0 \\
+0 & 7.4456 + 7.6348i & 0 \\
+0 & 0 & 7.4456 - 7.6348i
+\end{pmatrix},
+\end{equation}
+tales que se verifica la descomposición espectral canónica:
+\begin{equation}
+A = V D V^{-1}.
+\end{equation}
+
+\subsubsection*{Forma canónica real con bloque de rotación-dilatación}
+En el espacio euclídeo real $\mathbb{R}^3$, descomponiendo $\mathbf{v}_2 = \mathbf{u}_r + i \mathbf{w}_r$ en sus partes real e imaginaria:
+\begin{equation}
+\mathbf{u}_r \approx \begin{pmatrix} 0.3049 \\ -0.0271 \\ 1.0000 \end{pmatrix}, \quad
+\mathbf{w}_r \approx \begin{pmatrix} -0.3217 \\ -0.6771 \\ 0.0000 \end{pmatrix},
+\end{equation}
+la base real $\{\mathbf{v}_1, \mathbf{u}_r, -\mathbf{w}_r\}$ transforma a la matriz $A$ en su \textbf{forma canónica real de Jordan}, evidenciando un modo unidimensional de contracción/expansión y un plano invariante de rotación y amplificación espiral:
+\begin{equation}
+J_R = \begin{pmatrix}
+\lambda_1 & 0 & 0 \\
+0 & \alpha & \beta \\
+0 & -\beta & \alpha
+\end{pmatrix} \approx
+\begin{pmatrix}
+-5.8912 & 0 & 0 \\
+0 & 7.4456 & 7.6348 \\
+0 & -7.6348 & 7.4456
+\end{pmatrix},
+\end{equation}
+donde $\alpha = \operatorname{Re}(\lambda_{2,3}) \approx 7.4456$ y $\beta = \operatorname{Im}(\lambda_2) \approx 7.6348$.
+
+\subsection{Verificación matemática independiente del espectro}
+
+Para certificar la absoluta precisión de los resultados obtenidos, se ejecutan tres comprobaciones independientes:
+
+\begin{enumerate}
+\item \textbf{Verificación directa de la ecuación de autovalor $A\mathbf{v}_1 = \lambda_1 \mathbf{v}_1$:}
+Efectuando el producto matricial de $A$ por $\mathbf{v}_1$:
+\begin{equation}
+\begin{pmatrix} -4 & 2 & 6 \\ 10 & 3 & 2 \\ -9 & -7 & 10 \end{pmatrix}
+\begin{pmatrix} 15.49640359 \\ -17.65376922 \\ 1.00000000 \end{pmatrix} =
+\begin{pmatrix}
+-4(15.4964) + 2(-17.6538) + 6(1) \\
+10(15.4964) + 3(-17.6538) + 2(1) \\
+-9(15.4964) - 7(-17.6538) + 10(1)
+\end{pmatrix} =
+\begin{pmatrix}
+-91.293153 \\
+104.002728 \\
+-5.891248
+\end{pmatrix}.
+\end{equation}
+Multiplicando el escalar $\lambda_1 = -5.89124775$ por el vector $\mathbf{v}_1$:
+\begin{equation}
+-5.89124775 \begin{pmatrix} 15.49640359 \\ -17.65376922 \\ 1.00000000 \end{pmatrix} =
+\begin{pmatrix}
+-91.293153 \\
+104.002728 \\
+-5.891248
+\end{pmatrix}. \quad \checkmark
+\end{equation}
+El residuo $\|A\mathbf{v}_1 - \lambda_1 \mathbf{v}_1\|_2$ es idénticamente nulo hasta la precisión de máquina.
+
+\item \textbf{Invariancia de la traza:}
+\begin{equation}
+\sum_{k=1}^3 \lambda_k = (-5.89124775) + (7.44562388 + 7.63483562i) + (7.44562388 - 7.63483562i) = 9.00000000 = \operatorname{tr}(A). \quad \checkmark
+\end{equation}
+
+\item \textbf{Invariancia del determinante:}
+\begin{equation}
+\prod_{k=1}^3 \lambda_k = (-5.89124775) \cdot \left[(7.44562388)^2 + (7.63483562)^2\right] = (-5.89124775) \cdot 113.728030 = -670.000000 = \det(A). \quad \checkmark
+\end{equation}
+\end{enumerate}
 
 \section{Aplicación agronómica de los valores y vectores propios}
 
