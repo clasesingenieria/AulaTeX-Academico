@@ -1,11 +1,3 @@
-\section*{Resumen}
-
-El presente trabajo técnico aborda la optimización analítica de la fertilización balanceada en una plantación comercial de naranja Valencia (\textit{Citrus sinensis}) ubicada en la región citrícola de General Terán, Nuevo León. La formulación de planes de fertirrigación multi-nutricionales a partir de fuentes comerciales acopladas plantea un problema clásico de insumo-producto que no puede resolverse mediante recetas empíricas sin incurrir en sobredosificaciones contaminantes o deficiencias críticas. Para solventar este desafío, se recolectaron los requerimientos estacionales de macronutrientes ($175\text{ kg/ha}$ de Nitrógeno, $142\text{ kg/ha}$ de Fósforo y $182\text{ kg/ha}$ de Potasio) y se formularon como un sistema lineal acoplado $A\mathbf{x} = \mathbf{b}$ de dimensión $3 \times 3$, empleando tres fuentes comerciales comunes en el agro regional: una mezcla compleja NPK 20-10-10, fosfato diamónico (DAP 18-46-0) y nitrato de potasio (13-0-44). El sistema fue resuelto analíticamente paso a paso mediante eliminación de Gauss-Jordan sobre la matriz aumentada, corroborado de manera independiente a través de la Regla de Cramer y validado por el método de la matriz inversa. Se obtuvo una solución física única y exacta de $500\text{ kg/ha}$ de NPK 20-10-10, $200\text{ kg/ha}$ de DAP y $300\text{ kg/ha}$ de nitrato de potasio, satisfaciendo el balance estricto con un vector de residuo nulo ($\mathbf{r} = \mathbf{0}$). El análisis espectral y de condicionamiento numérico ($\kappa(A) \approx 5.86$) confirma la robustez operativa de la solución ante perturbaciones edafológicas, consolidando al álgebra lineal como una disciplina metodológica insustituible para la sustentabilidad económica y ambiental de la agricultura moderna.
-
-\vspace{0.35cm}
-
-\noindent\textbf{Palabras clave:} Álgebra matricial, balance de fertirriego, eliminación de Gauss-Jordan, Regla de Cramer, nutrición citrícola, ingeniería agronómica.
-
 \section{Introducción}
 
 \subsection{Justificación Técnica y Agronómica}
@@ -50,37 +42,24 @@ Para cubrir estas demandas en la red de fertirrigación, el productor tiene disp
 
 La caracterización porcentual de insumos y requerimientos se sintetiza en el Cuadro~\ref{tab:datos_fertilizacion}.
 
-\begin{table}[htbp]
-
+\begin{table}[!htb]
 \centering
-
-\caption{Matriz de concentración nutrimental de fuentes comerciales y demanda neta.}
-
-\label{tab:datos_fertilizacion}
-
+\caption{Matriz de concentración nutrimental de fuentes comerciales y demanda neta.}\label{tab:datos_fertilizacion}
+\begin{AulatexTable}[\linewidth]
 \small
-
-\begin{tabularx}{\textwidth}{lcccc}
-
+\begin{tabularx}{\linewidth}{lcccc}
 \toprule
-
 \textbf{Nutriente objetivo} & \textbf{Fuente 1: NPK 20-10-10} & \textbf{Fuente 2: DAP 18-46-0} & \textbf{Fuente 3: 13-0-44} & \textbf{Demanda neta} \\
-
 & ($a_{i1}$) & ($a_{i2}$) & ($a_{i3}$) & ($\mathbf{b}$, kg/ha) \\
-
 \midrule
-
 Nitrógeno ($N$) & $0.20$ ($20\%$) & $0.18$ ($18\%$) & $0.13$ ($13\%$) & $175$ \\
-
 Fósforo ($P_2O_5$) & $0.10$ ($10\%$) & $0.46$ ($46\%$) & $0.00$ ($0\%$) & $142$ \\
-
 Potasio ($K_2O$) & $0.10$ ($10\%$) & $0.00$ ($0\%$) & $0.44$ ($44\%$) & $182$ \\
-
 \bottomrule
-
 \end{tabularx}
-
+\end{AulatexTable}
 \end{table}
+\FloatBarrier
 
 \section{Metodología}
 
@@ -364,41 +343,27 @@ El residuo nulo $\|\mathbf{r}\|_\infty = 0$ certifica la validez matemática y f
 
 Los resultados cuantitativos del modelo matricial de fertilización balanceada se presentan en el Cuadro~\ref{tab:resultados_dosis}.
 
-\begin{table}[htbp]
-
+\begin{table}[!htb]
 \centering
-
-\caption{Dosis físicas calculadas de fertilizantes y balance nutrimental por hectárea.}
-
-\label{tab:resultados_dosis}
-
-\begin{tabularx}{\textwidth}{lccccY}
-
+\caption{Dosis físicas calculadas de fertilizantes y balance nutrimental por hectárea.}\label{tab:resultados_dosis}
+\begin{AulatexTable}[\linewidth]
+\small
+\begin{tabularx}{\linewidth}{lccccZ}
 \toprule
-
 \textbf{Fertilizante comercial} & \textbf{Dosis neta} & \textbf{Aporte $N$} & \textbf{Aporte $P_2O_5$} & \textbf{Aporte $K_2O$} & \textbf{Función agronómica principal} \\
-
 & (kg/ha) & (kg/ha) & (kg/ha) & (kg/ha) & \\
-
 \midrule
-
 Mezcla NPK 20-10-10 & $500$ & $100$ & $50$ & $50$ & Suministro balanceado de base vegetativa \\
-
 DAP 18-46-0 & $200$ & $36$ & $92$ & $0$ & Enraizamiento y diferenciación floral \\
-
 Nitrato de Potasio 13-0-44 & $300$ & $39$ & $0$ & $132$ & Calibre de fruto, sólidos solubles y osmorregulación \\
-
 \midrule
-
 \textbf{Aporte Total} & $\mathbf{1000}$ & $\mathbf{175}$ & $\mathbf{142}$ & $\mathbf{182}$ & \textbf{Cumplimiento estricto: $100\%$} \\
-
 \textbf{Requerimiento Meta} & --- & $\mathbf{175}$ & $\mathbf{142}$ & $\mathbf{182}$ & \textbf{Diferencia residual: $0\text{ kg}$} \\
-
 \bottomrule
-
 \end{tabularx}
-
+\end{AulatexTable}
 \end{table}
+\FloatBarrier
 
 La masa total de fertilizantes formulada asciende a $1000\text{ kg/ha}$ (equivalente a 20 sacos comerciales estándar de $50\text{ kg}$). La partición porcentual de masa corresponde a $50\%$ de NPK 20-10-10, $20\%$ de DAP y $30\%$ de nitrato de potasio.
 
@@ -408,35 +373,23 @@ La masa total de fertilizantes formulada asciende a $1000\text{ kg/ha}$ (equival
 
 Los tres métodos aplicados exhiben propiedades matemáticas y operativas complementarias en el contexto de la ingeniería agronómica, como se resume en el Cuadro~\ref{tab:comparacion_metodos}.
 
-\begin{table}[htbp]
-
+\begin{table}[!htb]
 \centering
-
-\caption{Comparación técnica y operativa de los métodos de solución analítica empleados.}
-
-\label{tab:comparacion_metodos}
-
+\caption{Comparación técnica y operativa de los métodos de solución analítica empleados.}\label{tab:comparacion_metodos}
+\begin{AulatexTable}[\linewidth]
 \small
-
-\begin{tabularx}{\textwidth}{p{2.2cm}Xp{2.6cm}X}
-
+\begin{tabularx}{\linewidth}{p{2.2cm}Zp{2.6cm}Z}
 \toprule
-
 \textbf{Método} & \textbf{Mecanismo fundamental} & \textbf{Complejidad / Esfuerzo} & \textbf{Ventaja analítica en campo} \\
-
 \midrule
-
 Gauss-Jordan & Transformaciones elementales por renglón en $[A|\mathbf{b}]$. & $\mathcal{O}(n^3) \approx 27$ operaciones. & Muestra la transición y pivoteo en cada paso. \\
-
 Regla de Cramer & Cociente de determinantes $x_j = \det(A_j)/\det(A)$. & $4$ determinantes de orden 3. & Permite calcular una dosis aislada sin resolver todo. \\
-
 Matriz Inversa & Producto vectorial $\mathbf{x} = A^{-1}\mathbf{b}$. & Inversión + producto matriz-vector. & Permite recalcular dosis ante cambios de demanda $\mathbf{b}$. \\
-
 \bottomrule
-
 \end{tabularx}
-
+\end{AulatexTable}
 \end{table}
+\FloatBarrier
 
 \subsection{Estabilidad y Número de Condición del Sistema}
 
