@@ -29,6 +29,11 @@ _METADISCOURSE_CRITICAL_PATTERNS: tuple[tuple[str, re.Pattern[str]], ...] = (
     ("metadiscurso_estudiantes_deben", re.compile(r"\blos estudiantes (?:deben|ser[áa]n evaluados)\b", re.I)),
     ("metadiscurso_producto_solicitado", re.compile(r"\bel producto solicitado\b", re.I)),
     ("metadiscurso_se_deben_investigar", re.compile(r"\bse deben (?:investigar|incluir|citar|utilizar|consultar)\b", re.I)),
+    ("metadiscurso_artefacto_tikz", re.compile(r"\b(?:en|con|mediante|usando|diagrama|c[óo]digo|artefacto|cajas?)\s+TikZ\b", re.I)),
+    ("metadiscurso_cuadro_tikz", re.compile(r"\bcuadro\s+(?:sin[óo]ptico\s+)?(?:jer[áa]rquico\s+)?en\s+TikZ\b", re.I)),
+    ("metadiscurso_cuadro_desarrollado_en_este_trabajo", re.compile(r"\bel cuadro sin[óo]ptico desarrollado en este trabajo\b", re.I)),
+    ("metadiscurso_este_manuscrito_organiza", re.compile(r"\b(?:este manuscrito|el presente estudio|este documento|este trabajo)\s+(?:organiza anal[íi]ticamente|presenta|desarrolla)\s+mediante\b", re.I)),
+    ("metadiscurso_titulo_seccion_producto", re.compile(r"\\section\*?\{\s*(?:Cuadro\s+sin[óo]ptico|Mapa\s+conceptual|Mapa\s+de\s+cajas|Infograf[íi]a|Ensayo|Reporte|Desarrollo\s+del\s+foro)\b", re.I)),
 )
 
 _OPERATIONAL_LEAK_PATTERNS: tuple[tuple[str, re.Pattern[str]], ...] = (
@@ -289,6 +294,50 @@ class EstiloEscribirAgent:
             if candidate != updated:
                 updated = candidate
                 applied.append(f"limpieza_{code}")
+
+        # Limpieza de metadiscurso técnico y menciones a artefactos TikZ / consigna
+        metadiscourse_rewrites = [
+            (
+                re.compile(r"\bmediante un cuadro sin[óo]ptico jer[áa]rquico en TikZ y matrices operativas\b", re.I),
+                "mediante esquemas analíticos de articulación de fuentes y matrices operativas",
+                "remocion_metadiscurso_cuadro_tikz_abstract",
+            ),
+            (
+                re.compile(r"\bel cuadro sin[óo]ptico desarrollado en este trabajo no se limita a ilustrar una simple jerarqu[íi]a\b", re.I),
+                "el análisis estructural del ordenamiento no se limita a ilustrar una simple jerarquía",
+                "remocion_metadiscurso_cuadro_trabajo_intro",
+            ),
+            (
+                re.compile(r"\\section\*?\{\s*Cuadro sin[óo]ptico(?::\s*|\s*[-—]\s*)([^}]+)\}", re.I),
+                r"\\section{Estructura sistemática y garantías de \1}",
+                "normalizacion_titulo_seccion_cuadro_sinoptico",
+            ),
+            (
+                re.compile(r"\\section\*?\{\s*Desarrollo del foro\s*\}", re.I),
+                r"\\section{Articulación dogmática de derechos humanos}",
+                "normalizacion_titulo_seccion_desarrollo_foro",
+            ),
+            (
+                re.compile(r"\bel producto solicitado\b", re.I),
+                "el objeto de estudio",
+                "remocion_metadiscurso_producto_solicitado",
+            ),
+            (
+                re.compile(r"\b(?:diagrama|artefacto|c[óo]digo|cajas?)\s+TikZ\b", re.I),
+                "esquema analítico",
+                "remocion_mencion_artefacto_tikz",
+            ),
+            (
+                re.compile(r"\b(?:este manuscrito|el presente estudio|este trabajo)\s+organiza anal[íi]ticamente mediante\b", re.I),
+                "el análisis se articula mediante",
+                "remocion_metadiscurso_este_manuscrito_organiza",
+            ),
+        ]
+        for pat_m, repl_m, code_m in metadiscourse_rewrites:
+            candidate = pat_m.sub(repl_m, updated)
+            if candidate != updated:
+                updated = candidate
+                applied.append(f"refinamiento_{code_m}")
 
         return updated, applied
 
