@@ -42,7 +42,7 @@ Para cubrir estas demandas en la red de fertirrigación, el productor tiene disp
 
 La caracterización porcentual de insumos y requerimientos se sintetiza en el Cuadro~\ref{tab:datos_fertilizacion}.
 
-\begin{table}[!htb]
+\begin{table}[H]
 \centering
 \caption{Matriz de concentración nutrimental de fuentes comerciales y demanda neta.}\label{tab:datos_fertilizacion}
 \begin{AulatexTable}[\linewidth]
@@ -123,7 +123,10 @@ Para resolver el sistema~\eqref{eq:sistema_matricial}, se recurre a la teoría d
 \end{equation}
 
 \begin{equation}
-\det(A) = 0.20(0.2024) - 0.18(0.0440) + 0.13(-0.0460) = 0.04048 - 0.00792 - 0.00598 = 0.02658 \neq 0
+\begin{aligned}
+\det(A) &= 0.20(0.2024) - 0.18(0.0440) + 0.13(-0.0460) \\
+&= 0.04048 - 0.00792 - 0.00598 = 0.02658 \neq 0
+\end{aligned}
 \end{equation}
 
     Puesto que $\det(A) = 0.02658 \neq 0$, la matriz $A$ es regular (no singular), invertible y de rango completo ($\operatorname{rango}(A) = 3$). El sistema es estrictamente compatible determinado.
@@ -218,8 +221,8 @@ Nótese con precisión que $3987 = 3 \times 1329$. Por consiguiente:
 \noindent\textbf{Paso 6: Eliminación regresiva para despejar $x_1$ y $x_2$.} Sustituimos $x_3 = 300$ hacia arriba:
 
 \begin{align}
-x_2 &= b_2' - a_{23}' x_3 = \frac{5450}{37} - \left(-\frac{13}{74}\right)(300) = \frac{5450}{37} + \frac{3900}{74} = \frac{5450}{37} + \frac{1950}{37} = \frac{7400}{37} = \mathbf{200\text{ kg/ha}} \\
-x_1 &= b_1' - a_{13}' x_3 = \frac{27470}{37} - \left(\frac{299}{370}\right)(300) = \frac{27470}{37} - \frac{8970}{37} = \frac{18500}{37} = \mathbf{500\text{ kg/ha}}
+x_2 &= \frac{5450}{37} - \left(-\frac{13}{74}\right)(300) = \frac{5450}{37} + \frac{1950}{37} = \frac{7400}{37} = \mathbf{200\text{ kg/ha}}, \\
+x_1 &= \frac{27470}{37} - \left(\frac{299}{370}\right)(300) = \frac{27470}{37} - \frac{8970}{37} = \frac{18500}{37} = \mathbf{500\text{ kg/ha}}.
 \end{align}
 
 La forma escalonada reducida final de la matriz aumentada es:
@@ -294,18 +297,20 @@ Ambos procedimientos independientes conducen de forma unívoca e incontrovertibl
 La inversa de la matriz de coeficientes $A^{-1} = \frac{1}{\det(A)} \operatorname{Adj}(A)^T$ se calcula a partir de su matriz de cofactores transpuestos:
 
 \begin{equation}
-A^{-1} = \frac{1}{0.02658}
+\begin{aligned}
+A^{-1} &= \frac{1}{0.02658}
 \begin{pmatrix}
 0.2024 & -0.0792 & -0.0598 \\
 -0.0440 & 0.0750 & 0.0130 \\
 -0.0460 & 0.0180 & 0.0740
-\end{pmatrix}
-=
+\end{pmatrix} \\
+&=
 \begin{pmatrix}
-\frac{10120}{1329} & -\frac{1320}{443} & -\frac{2990}{1329} \\[0.15cm]
--\frac{2200}{1329} & \frac{1250}{443} & \frac{650}{1329} \\[0.15cm]
+\frac{10120}{1329} & -\frac{1320}{443} & -\frac{2990}{1329} \\[0.12cm]
+-\frac{2200}{1329} & \frac{1250}{443} & \frac{650}{1329} \\[0.12cm]
 -\frac{2300}{1329} & \frac{300}{443} & \frac{3700}{1329}
 \end{pmatrix}
+\end{aligned}
 \end{equation}
 
 Multiplicando $A^{-1}\mathbf{b}$:
@@ -317,13 +322,14 @@ Multiplicando $A^{-1}\mathbf{b}$:
 Comprobamos el vector residual $\mathbf{r} = A\mathbf{x} - \mathbf{b}$:
 
 \begin{equation}
-\mathbf{r} =
+\begin{aligned}
+\mathbf{r} &=
 \begin{pmatrix}
 0.20(500) + 0.18(200) + 0.13(300) - 175 \\
 0.10(500) + 0.46(200) + 0.00(300) - 142 \\
 0.10(500) + 0.00(200) + 0.44(300) - 182
-\end{pmatrix}
-=
+\end{pmatrix} \\
+&=
 \begin{pmatrix}
 (100 + 36 + 39) - 175 \\
 (50 + 92) - 142 \\
@@ -335,6 +341,7 @@ Comprobamos el vector residual $\mathbf{r} = A\mathbf{x} - \mathbf{b}$:
 \end{pmatrix}
 =
 \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}
+\end{aligned}
 \end{equation}
 
 El residuo nulo $\|\mathbf{r}\|_\infty = 0$ certifica la validez matemática y física absoluta del modelo formulado.
@@ -343,12 +350,13 @@ El residuo nulo $\|\mathbf{r}\|_\infty = 0$ certifica la validez matemática y f
 
 Los resultados cuantitativos del modelo matricial de fertilización balanceada se presentan en el Cuadro~\ref{tab:resultados_dosis}.
 
-\begin{table}[!htb]
+\begin{table}[H]
 \centering
 \caption{Dosis físicas calculadas de fertilizantes y balance nutrimental por hectárea.}\label{tab:resultados_dosis}
 \begin{AulatexTable}[\linewidth]
 \small
-\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{3.5cm}ccccc@{}}
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{2.8cm}cccc>{\raggedright\arraybackslash}X@{}}
 \toprule
 \textbf{Fertilizante comercial} & \textbf{Dosis (kg/ha)} & \textbf{$N$ (kg/ha)} & \textbf{$P_2O_5$ (kg/ha)} & \textbf{$K_2O$ (kg/ha)} & \textbf{Función agronómica principal} \\
 \midrule
@@ -372,7 +380,7 @@ La masa total de fertilizantes formulada asciende a $1000\text{ kg/ha}$ (equival
 
 Los tres métodos aplicados exhiben propiedades matemáticas y operativas complementarias en el contexto de la ingeniería agronómica, como se resume en el Cuadro~\ref{tab:comparacion_metodos}.
 
-\begin{table}[!htb]
+\begin{table}[H]
 \centering
 \caption{Comparación técnica y operativa de los métodos de solución analítica empleados.}\label{tab:comparacion_metodos}
 \begin{AulatexTable}[\linewidth]
