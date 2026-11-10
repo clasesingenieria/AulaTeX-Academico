@@ -16,7 +16,9 @@
 \usepackage{ragged2e}
 \usepackage{tabularx}
 \usepackage{amsmath,amssymb}
+\usepackage{siunitx}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc}
 \usepackage{hyperref}
 \newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
 
@@ -40,7 +42,7 @@
     \fontsize{7}{9}\selectfont UANL \textbar\ Facultad de Agronomía
   \end{beamercolorbox}%
   \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.5ex,dp=1.1ex,center]{palette primary}%
-    \fontsize{7}{9}\selectfont Física — PIA
+    \fontsize{7}{9}\selectfont Física (REF\#261013755808) — PIA (Actividad 4.1)
   \end{beamercolorbox}%
   \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.5ex,dp=1.1ex,right,rightskip=1cm]{palette primary}%
     \fontsize{7}{9}\selectfont \insertframenumber{} / \inserttotalframenumber
@@ -58,11 +60,11 @@
   \vspace{-0.5cm}
   \begin{center}
     \includegraphics[height=1.8cm]{UANL/assets-uanl/logos-institucionales.pdf}
-    \vspace{0.4cm}
+    \vspace{0.3cm}
     
     {\fontsize{10}{12}\selectfont \textbf{\color{uanlgold}UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN \textbar\ FACULTAD DE AGRONOMÍA}}\\[0.2cm]
-    {\fontsize{15}{18}\selectfont \textbf{\color{white}DISEÑO Y VALIDACIÓN EXPERIMENTAL DE PROTOTIPO VENTURI PARA FERTIRRIEGO}}\\[0.2cm]
-    {\fontsize{11}{13}\selectfont \color{white}Producto Integrador de Aprendizaje (PIA) \textbar\ 25 Puntos}\\[0.5cm]
+    {\fontsize{14}{17}\selectfont \textbf{\color{white}EXCAVADORA HIDRÁULICA ARTICULADA Y PRINCIPIO DE PASCAL}}\\[0.15cm]
+    {\fontsize{10}{12}\selectfont \color{white}Producto Integrador de Aprendizaje (Actividad 4.1) \textbar\ Prototipo Físico Tangible \textbar\ 25 Puntos}\\[0.4cm]
 
     \begin{tabular}{rl}
       \textbf{\color{uanlgold}Estudiante:} & \color{white}Diego de la Cruz Muñoz (Matrícula: 1977875) \\
@@ -72,98 +74,120 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{1. Justificación y Planteamiento del Problema}
+\begin{frame}{1. Justificación y Problemática Agronómica}
   \begin{columns}[T]
     \begin{column}{0.48\textwidth}
-      \textbf{\color{uanlblue}Retos de la Fertirrigación:}
+      \textbf{\color{uanlblue}El Reto del Manejo de Suelos Agrícolas:}
       \begin{itemize}
-        \item Alto costo de motobombas dosificadoras electromecánicas de importación.
-        \item Dependencia energética de la red eléctrica o generadores diésel en campo.
-        \item Necesidad de tecnologías pasivas basadas en leyes físicas universales.
+        \item Los suelos del norte de México demandan zanjado parcelario para evitar la anoxia radicular y salinización freática.
+        \item La apertura de zanjas para tendido de líneas presurizadas de fertirriego requiere maquinaria de alta potencia y precisión.
+        \item Toda maquinaria pesada de campo (retroexcavadoras, palas frontales) opera bajo circuitos de fluidos presurizados.
       \end{itemize}
     \end{column}
     \begin{column}{0.48\textwidth}
-      \textbf{\color{uanlblue}Solución Física: Efecto Venturi:}
+      \textbf{\color{uanlblue}Solución Física: Principio de Pascal:}
       \begin{itemize}
-        \item Aprovecha la energía cinética de la propia corriente presurizada de riego.
-        \item \textbf{Ecuación de Continuidad:} $A_1 v_1 = A_2 v_2$.
-        \item \textbf{Ecuación de Bernoulli:}
-          $$P_1 + \frac{1}{2}\rho v_1^2 = P_2 + \frac{1}{2}\rho v_2^2$$
-        \item Generación de vacío relativo ($P_2 < P_{\text{atm}}$) para inyección automática.
+        \item Transmisión isotrópica e instantánea de la presión hidrostática en fluidos incompresibles:
+          $$P = \frac{F_1}{A_1} = \frac{F_2}{A_2}$$
+        \item Multiplicación cuadrática de fuerza mediante émbolos diferenciales:
+          $$F_2 = F_1 \left(\frac{D_2}{D_1}\right)^2$$
+        \item Construcción física tangible basada en el plano industrial \textit{Science Technology Project Teaching -- Excavating machinery}.
       \end{itemize}
     \end{column}
   \end{columns}
 \end{frame}
 
-\begin{frame}{2. Diseño Geométrico y Deducción Teórica}
+\begin{frame}{2. Formulación Analítica y Leyes Fundamentales}
   \begin{columns}[T]
     \begin{column}{0.48\textwidth}
-      \textbf{\color{uanlblue}Parámetros Constructivos:}
+      \textbf{\color{uanlblue}1. Hidrostática y Continuidad Volumétrica:}
       \begin{itemize}
-        \item Tubería principal: $D_1 = 25.4\text{ mm}$ ($1''$).
-        \item Garganta de constricción: $D_2 = 9.5\text{ mm}$.
-        \item Relación de áreas: $A_1/A_2 \approx 7.15$.
-        \item Conos hidrodinámicos:
-          \begin{itemize}
-            \item Contracción convergente: $21^\circ$.
-            \item Difusor divergente: $7^\circ$.
-          \end{itemize}
+        \item Fluido incompresible ($\rho \approx \text{constante}$):
+          $$\Delta V_1 = \Delta V_2 \implies A_1 \Delta x_1 = A_2 \Delta x_2$$
+        \item Desplazamiento del émbolo de salida:
+          $$\Delta x_2 = \Delta x_1 \left(\frac{D_1}{D_2}\right)^2$$
+        \item Conservación del trabajo mecánico ideal:
+          $$W = F_1 \Delta x_1 = F_2 \Delta x_2$$
       \end{itemize}
     \end{column}
     \begin{column}{0.48\textwidth}
-      \textbf{\color{uanlblue}Deducción de la Depresión Hidrodinámica:}
-      $$\Delta P = P_1 - P_2 = \frac{1}{2}\rho v_1^2 \left[ \left( \frac{D_1}{D_2} \right)^4 - 1 \right]$$
+      \textbf{\color{uanlblue}2. Rendimiento Real y Momentos de Fuerza:}
       \begin{itemize}
-        \item Para $v_1 = 1.15\text{ m/s} \implies v_2 = 8.22\text{ m/s}$.
-        \item Depresión teórica: $\Delta P_{\text{teor}} = 33.1\text{ kPa}$.
-        \item Succión inducida: Capacidad de elevar solución nutritiva hasta $h = 1.5\text{ m}$.
+        \item Ventaja mecánica ideal vs real:
+          $$VM_{\text{ideal}} = \frac{A_2}{A_1} = 2.25, \quad VM_{\text{real}} = \frac{F_{2,\text{med}}}{F_1}$$
+        \item Eficiencia mecánica con fricción de sellos:
+          $$\eta_{\text{mec}} = \frac{VM_{\text{real}}}{VM_{\text{ideal}}} = 90.7\%$$
+        \item Equilibrio rotacional estático en pasadores:
+          $$\sum \tau_O = F_{\text{hid}} \cdot d_{\perp} - W_{\text{brazo}} r_{\text{cm}} - F_{\text{carga}} L = 0$$
       \end{itemize}
     \end{column}
   \end{columns}
 \end{frame}
 
-\begin{frame}{3. Validación Experimental y Análisis de Errores}
-  \begin{table}[h!]
-    \centering
-    \footnotesize
-    \begin{tabularx}{\textwidth}{cYYYY}
-      \toprule
-      \textbf{Ensayo} & \textbf{Caudal $Q$ (L/min)} & \textbf{$P_1$ Entrada (kPa)} & \textbf{$\Delta P$ Teórico (kPa)} & \textbf{$\Delta P$ Medido (kPa)} \\
-      \midrule
-      1 & 25.0 & 180.0 & 16.5 & 15.8 \\
-      2 & 30.0 & 195.0 & 23.8 & 22.9 \\
-      3 & 35.0 & 210.0 & 32.4 & 31.0 \\
-      4 & 40.0 & 230.0 & 42.3 & 40.5 \\
-      5 & 45.0 & 250.0 & 53.6 & 51.2 \\
-      \bottomrule
-    \end{tabularx}
-  \end{table}
-  \begin{itemize}
-    \item \textbf{Error relativo medio:} $4.3\%$, coherente con el coeficiente de pérdida por fricción viscosa ($K_L \approx 0.08$).
-    \item \textbf{Tasa de inyección útil:} $48.2\text{ L/h}$, suficiente para 3 hectáreas de fertirriego por goteo.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{4. Conclusiones y Escalabilidad Agrícola}
+\begin{frame}{3. Especificaciones del Prototipo Físico (Plano Técnico)}
   \begin{columns}[T]
     \begin{column}{0.48\textwidth}
-      \textbf{\color{uanlblue}Aportes del Prototipo:}
+      \textbf{\color{uanlblue}Despiece y Materiales Normalizados:}
       \begin{itemize}
-        \item Costo de construcción inferior al $10\%$ de un inyector importado comercial.
-        \item Cero consumo de energía eléctrica externa durante la dosificación.
-        \item Alta durabilidad y mantenimiento nulo por ausencia de partes mecánicas móviles.
+        \item \textbf{Tiras de base y chasis:} $10.5\text{ cm} \times 1.8\text{ cm}$ (soporte y giro).
+        \item \textbf{Tiras de cuadrilátero articulado:} $17.5\text{ cm} \times 1.8\text{ cm}$ (volteo).
+        \item \textbf{Pluma principal (Boom):} $26.0\text{ cm} \times 2.2\text{ cm}$ (elevación).
+        \item \textbf{Antebrazo (Stick/Dipper):} $36.0\text{ cm} \times 2.0\text{ cm}$ (alcance).
+        \item \textbf{Pala/Cuchara:} Madera ensamblada con dientes de ataque.
+        \item \textbf{Actuadores:} 4 cilindros maestros ($10\text{ mL}$) y 4 esclavos ($20\text{ mL}$).
       \end{itemize}
     \end{column}
     \begin{column}{0.48\textwidth}
-      \textbf{\color{uanlblue}Conclusiones Académicas:}
+      \textbf{\color{uanlblue}4 Grados de Libertad (GDL) Funcionales:}
       \begin{enumerate}
-        \item Se integraron los principios de continuidad y energía hidrodinámica de Bernoulli.
-        \item El método científico y el análisis de errores validaron con rigor el prototipo.
-        \item Se satisfacen con excelencia las competencias de la unidad de Física de la Facultad de Agronomía UANL.
+        \item \textbf{GDL 1 (Rotación de Base):} Giro azimutal sobre corona ($\Delta \theta = 180^\circ$).
+        \item \textbf{GDL 2 (Elevación de Pluma):} Inclinación vertical del aguilón ($\Delta \alpha = 65^\circ$).
+        \item \textbf{GDL 3 (Articulación Antebrazo):} Alcance y repliegue ($\Delta \beta = 85^\circ$).
+        \item \textbf{GDL 4 (Vuelco de Cuchara):} Penetración, desgarre y vaciado ($\Delta \gamma = 95^\circ$).
       \end{enumerate}
     \end{column}
   \end{columns}
 \end{frame}
 
-\end{document}
+\begin{frame}{4. Protocolo Experimental y Toma de Datos}
+  \centering
+  \small
+  \begin{tabularx}{0.92\textwidth}{cYYYY}
+    \toprule
+    \textbf{Ensayo} & \textbf{Fuerza Entrada $F_1$ (N)} & \textbf{Presión $P_{\text{med}}$ (kPa)} & \textbf{Fuerza Salida Med. $F_2$ (N)} & \textbf{Ventaja Mecánica $VM_{\text{real}}$} \\
+    \midrule
+    1 & $4.0 \pm 0.1$ & $24.2 \pm 1.0$ & $8.1 \pm 0.1$ & $2.03 \pm 0.06$ \\
+    2 & $6.0 \pm 0.1$ & $36.3 \pm 1.0$ & $12.2 \pm 0.1$ & $2.03 \pm 0.05$ \\
+    3 & $8.0 \pm 0.1$ & $48.5 \pm 1.0$ & $16.4 \pm 0.2$ & $2.05 \pm 0.05$ \\
+    4 & $10.0 \pm 0.1$ & $60.6 \pm 1.0$ & $20.5 \pm 0.2$ & $2.05 \pm 0.04$ \\
+    5 & $12.0 \pm 0.1$ & $72.7 \pm 1.0$ & $24.4 \pm 0.2$ & $2.03 \pm 0.04$ \\
+    6 & $14.0 \pm 0.1$ & $84.8 \pm 1.0$ & $28.6 \pm 0.3$ & $2.04 \pm 0.04$ \\
+    \bottomrule
+  \end{tabularx}
+  \vspace{0.3cm}
+  
+  \textbf{\color{uanlblue}Conclusión Cuantitativa:} Ventaja mecánica empírica media $\overline{VM}_{\text{real}} = 2.04 \pm 0.08$. Rendimiento mecánico $\eta = 90.7\%$ respecto a la predicción teórica ($2.25$).
+\end{frame}
 
+\begin{frame}{5. Transferencia Agronómica y Entrega Física Tangible}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Impacto en la Ingeniería Agronómica:}
+      \begin{itemize}
+        \item Simulación a escala de apertura de zanjas de drenaje superficial y subterráneo.
+        \item Fuerza de desgarre en cuchara de $18.3\text{ N}$, suficiente para excavar sustratos de densidad aparente $\SI{1150}{kg/m^3}$.
+        \item Aplicación directa en el diagnóstico y operación de retroexcavadoras agrícolas comerciales (John Deere 310, Case 580).
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Compromiso de Entrega Física:}
+      \begin{itemize}
+        \item \textbf{Prototipo tangible terminado:} Bastidor de madera, 4 circuitos de jeringas purgados con fluido coloreado y consola ergonómica.
+        \item \textbf{Entrega presencial:} Presentación física y demostración operativa ante la Mtra. Elizabeth Garza Valverde en la Facultad de Agronomía.
+        \item \textbf{Reporte Técnico:} Documento institucional completo de 13 páginas compilado bajo estándares AulaTeX.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\end{document}

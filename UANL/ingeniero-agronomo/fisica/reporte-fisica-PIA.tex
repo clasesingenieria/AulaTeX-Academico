@@ -1,9 +1,9 @@
 % !TeX program = xelatex
 \documentclass[12pt,spanish,letterpaper,oneside]{article}
 \PassOptionsToPackage{es-noshorthands}{babel}
-\def\documenttitle{Diseño, modelación física y construcción experimental de un inyector tipo Venturi para fertirriego agrícola}
-\def\documentsubtitle{Producto Integrador de Aprendizaje (PIA) - Prototipo funcional basado en el Principio de Bernoulli}
-\def\documentsubject{Física - Ingeniero Agrónomo}
+\def\documenttitle{Diseño, modelación física, construcción física y validación experimental de un prototipo de excavadora hidráulica articulada basada en el Principio de Pascal y transmisión de presiones}
+\def\documentsubtitle{Producto Integrador de Aprendizaje (PIA - Actividad 4.1) --- Prototipo físico-experimental tangible para movimiento de tierras y adecuación de zanjas de drenaje agrícola}
+\def\documentsubject{Física (REF\#261013755808) --- Ingeniero Agrónomo}
 \def\documentauthor{Diego de la Cruz Muñoz}
 \def\coursename{Física}
 \def\coursecode{REF\#261013755808}
@@ -19,8 +19,10 @@
 		\textbf{Estudiante:} & Diego de la Cruz Muñoz\\[0.35cm]
 		\textbf{Matrícula:} & 1977875\\[0.35cm]
 		\textbf{Docente Titular:} & Garza Valverde Elizabeth\\[0.35cm]
-		\textbf{Unidad de Aprendizaje:} & Física (25 Puntos)\\[0.5cm]
-		\multicolumn{2}{l}{Fecha de realización: 13 de octubre de 2026}\\
+		\textbf{Unidad de Aprendizaje:} & Física (Ponderación: 25\% / 25 Puntos)\\[0.35cm]
+		\textbf{Actividad Curricular:} & Producto Integrador de Aprendizaje (Actividad 4.1)\\[0.35cm]
+		\textbf{Modalidad de Entrega:} & Prototipo Físico Tangible y Reporte Técnico Monográfico\\[0.5cm]
+		\multicolumn{2}{l}{Fecha de entrega: 10 de noviembre de 2026}\\
 		\multicolumn{2}{l}{\universitylocation}
 	\end{tabular}
 	\end{Form}
@@ -33,14 +35,18 @@
 \usepackage{tabularx}
 \usepackage{booktabs}
 \usepackage{amsmath,amssymb}
+\usepackage{siunitx}
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,shapes.geometric,patterns}
 \usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
 \definecolor{uanlblue}{RGB}{0,55,108}
 \definecolor{tableblue}{RGB}{233,240,247}
 \def\portraittitlecolor{uanlblue}
 \def\sectioncolor{uanlblue}
 \def\ssectioncolor{uanlblue}
-\def\documenttitlehf{Física Agronómica: Prototipo Venturi y Principio de Bernoulli}
-\hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Diego de la Cruz Muñoz},pdftitle={Diseño y modelación física de inyector Venturi para fertirriego},pdfsubject={Producto Integrador de Aprendizaje - Física UANL}}
+\def\documenttitlehf{Física Agronómica: Prototipo Excavadora Hidráulica y Principio de Pascal}
+\hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Diego de la Cruz Muñoz},pdftitle={Diseño, modelación física y construcción de excavadora hidráulica articulada basada en Principio de Pascal},pdfsubject={Producto Integrador de Aprendizaje - Física UANL}}
 \addbibresource{UANL/ingeniero-agronomo/fisica/fisica.bib}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 \setlength{\emergencystretch}{2.5em}
@@ -63,4 +69,3 @@
 \newpage
 \printbibliography[title={Referencias bibliográficas}]
 \end{document}
-
