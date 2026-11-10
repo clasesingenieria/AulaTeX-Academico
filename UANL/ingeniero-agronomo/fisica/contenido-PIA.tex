@@ -3,7 +3,7 @@ En este Producto Integrador de Aprendizaje (PIA) para la materia de Física, com
 
 Para elaborar el prototipo utilicé materiales accesibles y fáciles de conseguir en casa y en la ferretería: tiras de madera reciclada cortadas con las medidas indicadas en el plano técnico (\SI{10.5}{cm}, \SI{17.5}{cm}, \SI{26.0}{cm} y \SI{36.0}{cm}), ocho jeringas plásticas conectadas por pares mediante mangueras delgadas transparentes, cinchos de plástico y agua de la llave pintada con colorante vegetal para detectar cualquier fuga o burbuja de aire. El prototipo cuenta con cuatro movimientos independientes controlados desde un panel manual: giro de la base, elevación de la pluma, articulación del brazo y apertura/cierre de la cuchara excavadora. Durante las pruebas caseras, comprobé que el sistema hidráulico transmite el movimiento de manera inmediata y permite levantar pequeñas cargas de tierra y sustrato agrícola sin esfuerzo, comprobando la importancia que tiene la hidráulica en la maquinaria que utilizamos en el campo, como retroexcavadoras y tractores con pala frontal. Se incluye la justificación, la memoria de construcción con fotografías, los resultados esperados y obtenidos, y el enlace del video explicativo de \SI{6}{minutos} y \SI{45}{segundos} grabado para la presentación grupal.
 
-\vspace{0.3cm}
+\vspace{0.25cm}
 \noindent\textbf{Palabras clave:} Principio de Pascal, presión en fluidos, excavadora hidráulica, prototipo casero, maquinaria agrícola, agronomía.
 
 \section{Justificación del Tema Elegido}
@@ -31,16 +31,12 @@ El científico francés Blaise Pascal descubrió en el siglo XVII un principio f
 \end{quote}
 Esto significa que si nosotros tenemos dos jeringas de distinto tamaño unidas por una manguera llena de agua y empujamos el émbolo de una de ellas con una fuerza $F_1$, esa presión se transmite a través del agua hasta llegar al émbolo de la segunda jeringa:
 \begin{equation}
-    P_1 = P_2 \implies \frac{F_1}{A_1} = \frac{F_2}{A_2}
+    P_1 = P_2 \implies \frac{F_1}{A_1} = \frac{F_2}{A_2} \implies F_2 = F_1 \times \left( \frac{A_2}{A_1} \right)
 \end{equation}
-Si despejamos la fuerza que obtenemos en la jeringa de salida ($F_2$):
-\begin{equation}
-    F_2 = F_1 \times \left( \frac{A_2}{A_1} \right)
-\end{equation}
-Esta sencilla fórmula nos enseña algo muy valioso: si el área del segundo émbolo ($A_2$) es el doble o el triple que el área del primer émbolo ($A_1$), la fuerza de salida $F_2$ será el doble o el triple de la fuerza que aplicamos con la mano. Así es como un agricultor puede levantar cientos de kilos de tierra en la pala del tractor simplemente accionando una palanca pequeña en la cabina \parencite{giancoli2008}.
+Esta sencilla fórmula nos enseña algo muy valioso: si el área del segundo émbolo ($A_2$) es mayor que la del primero ($A_1$), la fuerza de salida $F_2$ se multiplica. Así es como un agricultor puede levantar cientos de kilos de tierra en la pala del tractor simplemente accionando una palanca pequeña en la cabina \parencite{giancoli2008}.
 
 \subsection{La Incompresibilidad del Agua y el Volumen Desplazado}
-Un detalle que comprobé al armar el prototipo es que los líquidos como el agua son \textbf{incompresibles}: no se pueden aplastar fácilmente. Cuando empujamos la primera jeringa una distancia $\Delta x_1$, empujamos un volumen de agua que tiene que acomodarse en la segunda jeringa moviéndola una distancia $\Delta x_2$:
+Un detalle que comprobé al armar el prototipo es que los líquidos como el agua son \textbf{incompresibles}: no se pueden aplastar fácilmente. Cuando empujamos la primera jeringa una distancia $\Delta x_1$, empujamos un volumen de agua que se traslada íntegramente hacia la segunda jeringa:
 \begin{equation}
     \Delta V_1 = \Delta V_2 \implies A_1 \cdot \Delta x_1 = A_2 \cdot \Delta x_2
 \end{equation}
@@ -53,74 +49,70 @@ Para cumplir con la instrucción de utilizar materiales que se tengan en casa o 
     \item \textbf{Madera reciclada y listones de pino:} Para cortar las piezas del chasis, la pluma, el antebrazo y la cuchara, siguiendo las dimensiones del plano del proyecto (\SI{10.5}{cm}, \SI{17.5}{cm}, \SI{26.0}{cm} y \SI{36.0}{cm}).
     \item \textbf{8 jeringas plásticas sin aguja:} 4 jeringas de \SI{10}{mL} (para el panel de control manual) y 4 jeringas de \SI{20}{mL} (como actuadores en el brazo).
     \item \textbf{\SI{3}{metros} de manguera de plástico flexible transparente:} Manguera delgada de acuario de \SI{2.5}{mm} de diámetro interior.
-    \item \textbf{Agua de la llave con colorante vegetal comestible:} Se usó colorante azul y rojo para distinguir los circuitos y detectar si existía alguna gotera o burbuja.
-    \item \textbf{Cinchos de plástico (bridas de electricista):} Para amarrar y sujetar firmemente el cuerpo de las jeringas a la madera.
-    \item \textbf{Tornillos pequeños de 1/8 de pulgada con tuerca:} Utilizados como pasadores en las uniones para que los brazos puedan doblarse y girar libremente.
+    \item \textbf{Agua de la llave con colorante vegetal comestible:} Se usó colorante azul y rojo para distinguir los circuitos y detectar cualquier gotera o burbuja.
+    \item \textbf{Cinchos de plástico (bridas de electricista):} Para sujetar firmemente las jeringas a la madera.
+    \item \textbf{Tornillos pequeños de 1/8 de pulgada con tuerca:} Utilizados como pasadores en las uniones móviles.
     \item \textbf{Pegamento blanco para madera y silicón caliente:} Para reforzar uniones fijas y la base del prototipo.
 \end{itemize}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.92\textwidth]{UANL/ingeniero-agronomo/fisica/figuras-pia/figura1_esquema_general.jpg}
-    \caption{Esquema técnico general de diseño y ensamble del brazo excavador (\textit{Science Technology Project Teaching -- Excavating machinery}).}
-    \label{fig:esquema_general}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,height=4.6cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/figura1_esquema_general.jpg}
+        \caption{Plano técnico industrial de referencia.}
+        \label{fig:esquema_general}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,height=4.6cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/figura2_piezas_madera.jpg}
+        \caption{Piezas de madera trazadas y cortadas.}
+        \label{fig:piezas_madera}
+    \end{subfigure}
+    \caption{Etapa de diseño dimensional conforme al plano y preparación de los eslabones de madera.}
+    \label{fig:etapa_diseno}
 \end{figure}
 
 \subsection{Paso a Paso de la Construcción}
-La elaboración del prototipo en casa se llevó a cabo en cuatro etapas bien definidas:
+La elaboración del prototipo en casa se llevó a cabo en cuatro pasos prácticos:
 
-\subsubsection*{Paso 1: Medición, marcado y corte de las tiras de madera}
-Tomando como referencia el plano de la excavadora (Figura \ref{fig:esquema_general}), se marcaron y cortaron con segueta de mano las piezas de madera:
+\textbf{Paso 1: Medición, marcado y corte de las tiras de madera.}
+Tomando como base el plano de la excavadora (Figura \ref{fig:esquema_general}), se marcaron y cortaron con segueta de mano las piezas de madera: 4 tiras de \SI{10.5}{cm} para la base giratoria y el chasis; 4 tiras de \SI{17.5}{cm} para el mecanismo de articulación de la cuchara; 2 tiras de \SI{26.0}{cm} para la pluma principal; y 2 tiras de \SI{36.0}{cm} para el antebrazo. Además, se armó la cuchara en forma de cajón con dientes frontales.
+
+\textbf{Paso 2: Barrenado y ensamble de las articulaciones móviles.}
+Con un taladro casero y broca delgada de \SI{3}{mm}, se perforaron los centros de unión de cada tira de madera (Figura \ref{fig:piezas_madera}). Se ensamblaron los eslabones empleando los tornillos de 1/8 con tuerca, dejando el juego libre necesario para que los brazos giren sin atascarse. En la base se colocó un tornillo central con rondanas plásticas que permite que toda la máquina gire libremente hacia ambos lados.
+
+\textbf{Paso 3: Preparación, llenado y purga del circuito hidráulico.}
+Para garantizar que no quedara aire en el sistema:
 \begin{enumerate}
-    \item 4 tiras de \SI{10.5}{cm} para formar la base giratoria y el soporte del chasis.
-    \item 4 tiras de \SI{17.5}{cm} que forman el cuadrilátero articulado para hacer que la cuchara pueda abrir y cerrar.
-    \item 2 tiras de \SI{26.0}{cm} para la pluma principal (el brazo grueso que se levanta desde la base).
-    \item 2 tiras de \SI{36.0}{cm} para el antebrazo (la parte que le da alcance hacia adelante a la cuchara).
-    \item 1 cuchara recolectora armada con láminas de madera delgada en forma de cajón con dientes frontales.
+    \item Llené una cubeta limpia con agua de la llave y agregué unas gotas de colorante vegetal azul.
+    \item Sumergí completamente la manguera y las jeringas dentro de la cubeta de agua.
+    \item Conecté una jeringa de \SI{10}{mL} en un extremo y una de \SI{20}{mL} en el otro bajo el agua, empujando y jalando los émbolos varias veces hasta expulsar todas las burbujas de aire (Figura \ref{fig:ensamble_hidraulico}).
+    \item Aseguré las boquillas con una vuelta de teflón para evitar fugas bajo presión.
 \end{enumerate}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.72\textwidth]{UANL/ingeniero-agronomo/fisica/figuras-pia/figura2_piezas_madera.jpg}
-    \caption{Trazado, barrenado y armado inicial de las piezas estructurales de madera para el chasis y las articulaciones móviles.}
-    \label{fig:piezas_madera}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,height=4.8cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/figura3_ensamble_hidraulico.jpg}
+        \caption{Purga y montaje de jeringas y mangueras.}
+        \label{fig:ensamble_hidraulico}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,height=4.8cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/figura4_prototipo_terminado.jpg}
+        \caption{Prototipo ensamblado y funcional.}
+        \label{fig:prototipo_terminado}
+    \end{subfigure}
+    \caption{Etapa de montaje del circuito hidráulico y prototipo casero finalizado listo para operar.}
+    \label{fig:etapa_montaje}
 \end{figure}
 
-\subsubsection*{Paso 2: Barrenado y ensamble de las articulaciones móviles}
-Con un taladro casero y una broca delgada de \SI{3}{mm}, se perforaron los extremos de cada tira de madera asegurando que los agujeros quedaran centrados. Luego se unieron las piezas empleando los tornillos pequeños con tuerca (Figura \ref{fig:piezas_madera}). Las tuercas no se apretaron al tope; se dejaron con el juego exacto para que las maderas giraran suavemente sin tener juego flojo a los lados. En la base se colocó un tornillo central largo con rondanas de plástico para permitir que toda la máquina gire hacia la izquierda y hacia la derecha.
-
-\subsubsection*{Paso 3: Preparación, llenado y purga del circuito hidráulico}
-Esta fue la etapa más delicada de todo el proyecto. Para evitar que entrara aire:
-\begin{enumerate}
-    \item Llené una cubeta limpia con agua de la llave y le agregué unas gotas de colorante vegetal azul.
-    \item Sumergí completamente la manguera y las jeringas dentro de la cubeta.
-    \item Con la manguera sumergida, conecté una jeringa de \SI{10}{mL} en un extremo y una de \SI{20}{mL} en el otro, empujando y jalando el émbolo varias veces bajo el agua hasta que salieron todas las burbujas de aire (Figura \ref{fig:ensamble_hidraulico}).
-    \item Coloqué un poco de teflón y una gota de silicón en la boquilla de la jeringa para asegurar que no hubiera goteos de agua al hacer fuerza.
-\end{enumerate}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.72\textwidth]{UANL/ingeniero-agronomo/fisica/figuras-pia/figura3_ensamble_hidraulico.jpg}
-    \caption{Instalación de los cilindros (jeringas), ruteo de las mangueras flexibles y proceso de purga con agua coloreada.}
-    \label{fig:ensamble_hidraulico}
-\end{figure}
-
-\subsubsection*{Paso 4: Montaje de cilindros y panel de palancas de control}
-Una vez que las cuatro parejas de jeringas estuvieron llenas de agua y purgadas, se montaron sobre la estructura de madera sujetándolas fuertemente con cinchos de electricista (Figura \ref{fig:prototipo_terminado}):
-\begin{itemize}
-    \item \textbf{Cilindro 1 (Base):} Acoplado a la plataforma giratoria para dar un giro de casi \SI{180}{\degree}.
-    \item \textbf{Cilindro 2 (Pluma):} Colocado entre el soporte vertical y la pluma de \SI{26}{cm} para subir y bajar todo el brazo.
-    \item \textbf{Cilindro 3 (Antebrazo):} Montado sobre la pluma y conectado al brazo de \SI{36}{cm} para estirar y recoger la pala.
-    \item \textbf{Cilindro 4 (Cuchara):} Conectado a las tiras de \SI{17.5}{cm} para abrir y cerrar la pala y cargar tierra.
-\end{itemize}
-Las cuatro jeringas de mando se fijaron a una tabla vertical separada, formando una consola de control con cuatro palancas independientes muy cómoda para manejar el prototipo con una sola mano.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.72\textwidth]{UANL/ingeniero-agronomo/fisica/figuras-pia/figura4_prototipo_terminado.jpg}
-    \caption{Prototipo casero de excavadora hidráulica completamente terminado y funcional, listo para pruebas de excavación.}
-    \label{fig:prototipo_terminado}
-\end{figure}
+\textbf{Paso 4: Montaje de cilindros y panel de palancas de control.}
+Las parejas de jeringas llenas de agua se montaron sobre la estructura de madera sujetándolas con cinchos de electricista (Figura \ref{fig:prototipo_terminado}): Cilindro 1 para el giro de la base ($\SI{180}{\degree}$); Cilindro 2 para elevar la pluma; Cilindro 3 para extender el antebrazo; y Cilindro 4 para abrir y cerrar la cuchara excavadora. Las cuatro jeringas de mando se fijaron a un soporte vertical de madera, conformando una consola ergonómica con cuatro palancas independientes para operar el equipo con comodidad.
 
 \section{Resultados Esperados y Resultados Obtenidos}
 \subsection{Resultados Esperados}
@@ -133,9 +125,9 @@ Antes de iniciar la construcción, con base en lo visto en clase sobre el Princi
 \end{enumerate}
 
 \subsection{Resultados Obtenidos Durante las Pruebas}
-Al concluir el armado y realizar las pruebas en casa sobre una caja con tierra vegetal preparada, se obtuvieron los siguientes resultados:
+Al concluir el armado y realizar las pruebas en casa sobre una charola con tierra vegetal para macetas, se obtuvieron los siguientes resultados:
 \begin{itemize}
-    \item \textbf{Movilidad completa:} Los cuatro movimientos respondieron con total precisión. El brazo tiene un alcance hacia el frente de más de \SI{30}{cm} y puede elevarse hasta \SI{35}{cm} de altura sobre la mesa.
+    \item \textbf{Movilidad completa:} Los cuatro movimientos respondieron con suavidad y precisión. El brazo tiene un alcance hacia el frente de más de \SI{30}{cm} y puede elevarse hasta \SI{35}{cm} de altura sobre la mesa.
     \item \textbf{Efectividad de la multiplicación de fuerza:} Al usar jeringas de \SI{10}{mL} en el control y jeringas más anchas de \SI{20}{mL} en el brazo, se comprobó que con muy poca fuerza en el dedo se levanta el peso del brazo completo. En las pruebas de carga, la pala levantó hasta \SI{120}{gramos} de tierra húmeda de maceta sin que el sistema perdiera fuerza.
     \item \textbf{Comprobación de la incompresibilidad del agua:} En el primer intento de prueba, la manguera de la pluma tenía una pequeña burbuja de aire de aproximadamente \SI{1}{cm}. Al empujar la jeringa de control, el brazo no se levantaba de inmediato sino que tardaba medio segundo y se sentía un movimiento elástico y tembloroso. Al volver a purgar la manguera bajo agua y dejarla con agua al 100\%, la respuesta fue instantánea, rígida y firme, demostrando de forma contundente que los líquidos son incompresibles y el aire sí es compresible.
     \item \textbf{Estanqueidad:} Con la ayuda de cinta teflón en las conexiones y los cinchos bien apretados, no se presentó ninguna fuga de agua durante más de 30 ciclos continuos de excavación y volteo de tierra.

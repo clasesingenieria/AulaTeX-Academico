@@ -18,7 +18,6 @@
 \usepackage{amsmath,amssymb}
 \usepackage{siunitx}
 \usepackage{tikz}
-\usetikzlibrary{arrows.meta,calc}
 \usepackage{hyperref}
 \newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
 
@@ -42,7 +41,7 @@
     \fontsize{7}{9}\selectfont UANL \textbar\ Facultad de Agronomía
   \end{beamercolorbox}%
   \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.5ex,dp=1.1ex,center]{palette primary}%
-    \fontsize{7}{9}\selectfont Física (REF\#261013755808) — PIA (Actividad 4.1)
+    \fontsize{7}{9}\selectfont Física (2.º Semestre) — PIA (Prototipo Casero)
   \end{beamercolorbox}%
   \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.5ex,dp=1.1ex,right,rightskip=1cm]{palette primary}%
     \fontsize{7}{9}\selectfont \insertframenumber{} / \inserttotalframenumber
@@ -63,128 +62,130 @@
     \vspace{0.3cm}
     
     {\fontsize{10}{12}\selectfont \textbf{\color{uanlgold}UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN \textbar\ FACULTAD DE AGRONOMÍA}}\\[0.2cm]
-    {\fontsize{14}{17}\selectfont \textbf{\color{white}EXCAVADORA HIDRÁULICA ARTICULADA Y PRINCIPIO DE PASCAL}}\\[0.15cm]
-    {\fontsize{10}{12}\selectfont \color{white}Producto Integrador de Aprendizaje (Actividad 4.1) \textbar\ Prototipo Físico Tangible \textbar\ 25 Puntos}\\[0.4cm]
+    {\fontsize{15}{18}\selectfont \textbf{\color{white}PROTOTIPO CASERO DE EXCAVADORA HIDRÁULICA ARTICULADA}}\\[0.15cm]
+    {\fontsize{11}{13}\selectfont \color{white}Demostración del Principio de Pascal en Maquinaria Agrícola \textbar\ PIA 2.º Semestre}\\[0.4cm]
 
     \begin{tabular}{rl}
       \textbf{\color{uanlgold}Estudiante:} & \color{white}Diego de la Cruz Muñoz (Matrícula: 1977875) \\
-      \textbf{\color{uanlgold}Docente Titular:} & \color{white}Garza Valverde Elizabeth \\
-      \textbf{\color{uanlgold}Programa:} & \color{white}Ingeniero Agrónomo \textbar\ REF\#261013755808
+      \textbf{\color{uanlgold}Docente Titular:} & \color{white}Mtra. Elizabeth Garza Valverde \\
+      \textbf{\color{uanlgold}Programa y Materia:} & \color{white}Ingeniero Agrónomo \textbar\ Física (REF\#261013755808) \textbar\ 25 Puntos
     \end{tabular}
   \end{center}
 \end{frame}
 
-\begin{frame}{1. Justificación y Problemática Agronómica}
+\begin{frame}{1. Justificación del Proyecto en la Agronomía}
   \begin{columns}[T]
     \begin{column}{0.48\textwidth}
-      \textbf{\color{uanlblue}El Reto del Manejo de Suelos Agrícolas:}
+      \textbf{\color{uanlblue}¿Por qué una excavadora para un agrónomo?}
       \begin{itemize}
-        \item Los suelos del norte de México demandan zanjado parcelario para evitar la anoxia radicular y salinización freática.
-        \item La apertura de zanjas para tendido de líneas presurizadas de fertirriego requiere maquinaria de alta potencia y precisión.
-        \item Toda maquinaria pesada de campo (retroexcavadoras, palas frontales) opera bajo circuitos de fluidos presurizados.
+        \item \textbf{Zanjas de drenaje parcelario:} Para evitar encharcamientos y asfixia de raíces en suelos arcillosos de Nuevo León.
+        \item \textbf{Instalación de riego por goteo:} Para enterrar las mangueras maestras protegiéndolas del sol y maquinaria.
+        \item \textbf{Movimiento de composta y abonos:} Cargar y voltear sustratos pesados sin esfuerzo manual excesivo.
       \end{itemize}
     \end{column}
     \begin{column}{0.48\textwidth}
-      \textbf{\color{uanlblue}Solución Física: Principio de Pascal:}
+      \textbf{\color{uanlblue}El Principio Físico en el Campo:}
       \begin{itemize}
-        \item Transmisión isotrópica e instantánea de la presión hidrostática en fluidos incompresibles:
-          $$P = \frac{F_1}{A_1} = \frac{F_2}{A_2}$$
-        \item Multiplicación cuadrática de fuerza mediante émbolos diferenciales:
-          $$F_2 = F_1 \left(\frac{D_2}{D_1}\right)^2$$
-        \item Construcción física tangible basada en el plano industrial \textit{Science Technology Project Teaching -- Excavating machinery}.
+        \item Toda retroexcavadora o pala frontal de tractor opera con cilindros y fluido a presión.
+        \item El prototipo demuestra que con leyes físicas sencillas podemos multiplicar la fuerza aplicada con los dedos.
+        \item Se diseñó como un prototipo funcional construido con materiales caseros y reciclados.
       \end{itemize}
     \end{column}
   \end{columns}
 \end{frame}
 
-\begin{frame}{2. Formulación Analítica y Leyes Fundamentales}
+\begin{frame}{2. Fundamento Físico: El Principio de Pascal}
   \begin{columns}[T]
     \begin{column}{0.48\textwidth}
-      \textbf{\color{uanlblue}1. Hidrostática y Continuidad Volumétrica:}
+      \textbf{\color{uanlblue}Definición de Presión:}
+      $$P = \frac{F}{A} \quad \left[\frac{\text{N}}{\text{m}^2} = \text{Pa}\right]$$
       \begin{itemize}
-        \item Fluido incompresible ($\rho \approx \text{constante}$):
-          $$\Delta V_1 = \Delta V_2 \implies A_1 \Delta x_1 = A_2 \Delta x_2$$
-        \item Desplazamiento del émbolo de salida:
-          $$\Delta x_2 = \Delta x_1 \left(\frac{D_1}{D_2}\right)^2$$
-        \item Conservación del trabajo mecánico ideal:
-          $$W = F_1 \Delta x_1 = F_2 \Delta x_2$$
+        \item La fuerza aplicada se distribuye sobre el área del émbolo.
+        \item Los líquidos son \textbf{incompresibles}: no se reducen de volumen al presionarlos.
       \end{itemize}
     \end{column}
     \begin{column}{0.48\textwidth}
-      \textbf{\color{uanlblue}2. Rendimiento Real y Momentos de Fuerza:}
+      \textbf{\color{uanlblue}Principio de Pascal (Prensa Hidráulica):}
+      $$P_1 = P_2 \implies \frac{F_1}{A_1} = \frac{F_2}{A_2} \implies F_2 = F_1 \left(\frac{A_2}{A_1}\right)$$
       \begin{itemize}
-        \item Ventaja mecánica ideal vs real:
-          $$VM_{\text{ideal}} = \frac{A_2}{A_1} = 2.25, \quad VM_{\text{real}} = \frac{F_{2,\text{med}}}{F_1}$$
-        \item Eficiencia mecánica con fricción de sellos:
-          $$\eta_{\text{mec}} = \frac{VM_{\text{real}}}{VM_{\text{ideal}}} = 90.7\%$$
-        \item Equilibrio rotacional estático en pasadores:
-          $$\sum \tau_O = F_{\text{hid}} \cdot d_{\perp} - W_{\text{brazo}} r_{\text{cm}} - F_{\text{carga}} L = 0$$
+        \item Al empujar una jeringa chica ($10\text{ mL}$), la jeringa grande ($20\text{ mL}$) genera una fuerza mayor para levantar tierra.
+        \item \textbf{Purga obligatoria:} Si queda aire, el aire se comprime y la máquina pierde fuerza y firmeza.
       \end{itemize}
     \end{column}
   \end{columns}
 \end{frame}
 
-\begin{frame}{3. Especificaciones del Prototipo Físico (Plano Técnico)}
+\begin{frame}{3. Materiales Caseros y Proceso de Construcción}
   \begin{columns}[T]
     \begin{column}{0.48\textwidth}
-      \textbf{\color{uanlblue}Despiece y Materiales Normalizados:}
+      \textbf{\color{uanlblue}Materiales Empleados (Disponibles en Casa):}
       \begin{itemize}
-        \item \textbf{Tiras de base y chasis:} $10.5\text{ cm} \times 1.8\text{ cm}$ (soporte y giro).
-        \item \textbf{Tiras de cuadrilátero articulado:} $17.5\text{ cm} \times 1.8\text{ cm}$ (volteo).
-        \item \textbf{Pluma principal (Boom):} $26.0\text{ cm} \times 2.2\text{ cm}$ (elevación).
-        \item \textbf{Antebrazo (Stick/Dipper):} $36.0\text{ cm} \times 2.0\text{ cm}$ (alcance).
-        \item \textbf{Pala/Cuchara:} Madera ensamblada con dientes de ataque.
-        \item \textbf{Actuadores:} 4 cilindros maestros ($10\text{ mL}$) y 4 esclavos ($20\text{ mL}$).
+        \item Listones de madera reciclada cortados al plano:
+          \begin{itemize}
+            \item Base y chasis: $10.5\text{ cm}$.
+            \item Mecanismo de cuchara: $17.5\text{ cm}$.
+            \item Pluma principal: $26.0\text{ cm}$.
+            \item Antebrazo de alcance: $36.0\text{ cm}$.
+          \end{itemize}
+        \item 8 jeringas plásticas ($4$ de $10\text{ mL}$ y $4$ de $20\text{ mL}$).
+        \item $3\text{ m}$ de manguera flexible delgada transparente.
+        \item Agua de la llave teñida con colorante vegetal.
+        \item Cinchos de plástico y tornillos pequeños con tuerca.
       \end{itemize}
     \end{column}
     \begin{column}{0.48\textwidth}
-      \textbf{\color{uanlblue}4 Grados de Libertad (GDL) Funcionales:}
+      \textbf{\color{uanlblue}4 Grados de Libertad (Movimientos):}
       \begin{enumerate}
-        \item \textbf{GDL 1 (Rotación de Base):} Giro azimutal sobre corona ($\Delta \theta = 180^\circ$).
-        \item \textbf{GDL 2 (Elevación de Pluma):} Inclinación vertical del aguilón ($\Delta \alpha = 65^\circ$).
-        \item \textbf{GDL 3 (Articulación Antebrazo):} Alcance y repliegue ($\Delta \beta = 85^\circ$).
-        \item \textbf{GDL 4 (Vuelco de Cuchara):} Penetración, desgarre y vaciado ($\Delta \gamma = 95^\circ$).
+        \item \textbf{Giro de base ($\approx 170^\circ$):} Mueve la máquina hacia los lados para descargar.
+        \item \textbf{Elevación de pluma ($60^\circ$):} Sube y baja todo el brazo de madera.
+        \item \textbf{Extensión de antebrazo ($80^\circ$):} Acerca o aleja la pala del suelo.
+        \item \textbf{Cuchara excavadora ($90^\circ$):} Abre y cierra la pala para atrapar la tierra.
       \end{enumerate}
     \end{column}
   \end{columns}
 \end{frame}
 
-\begin{frame}{4. Protocolo Experimental y Toma de Datos}
-  \centering
-  \small
-  \begin{tabularx}{0.92\textwidth}{cYYYY}
-    \toprule
-    \textbf{Ensayo} & \textbf{Fuerza Entrada $F_1$ (N)} & \textbf{Presión $P_{\text{med}}$ (kPa)} & \textbf{Fuerza Salida Med. $F_2$ (N)} & \textbf{Ventaja Mecánica $VM_{\text{real}}$} \\
-    \midrule
-    1 & $4.0 \pm 0.1$ & $24.2 \pm 1.0$ & $8.1 \pm 0.1$ & $2.03 \pm 0.06$ \\
-    2 & $6.0 \pm 0.1$ & $36.3 \pm 1.0$ & $12.2 \pm 0.1$ & $2.03 \pm 0.05$ \\
-    3 & $8.0 \pm 0.1$ & $48.5 \pm 1.0$ & $16.4 \pm 0.2$ & $2.05 \pm 0.05$ \\
-    4 & $10.0 \pm 0.1$ & $60.6 \pm 1.0$ & $20.5 \pm 0.2$ & $2.05 \pm 0.04$ \\
-    5 & $12.0 \pm 0.1$ & $72.7 \pm 1.0$ & $24.4 \pm 0.2$ & $2.03 \pm 0.04$ \\
-    6 & $14.0 \pm 0.1$ & $84.8 \pm 1.0$ & $28.6 \pm 0.3$ & $2.04 \pm 0.04$ \\
-    \bottomrule
-  \end{tabularx}
-  \vspace{0.3cm}
-  
-  \textbf{\color{uanlblue}Conclusión Cuantitativa:} Ventaja mecánica empírica media $\overline{VM}_{\text{real}} = 2.04 \pm 0.08$. Rendimiento mecánico $\eta = 90.7\%$ respecto a la predicción teórica ($2.25$).
-\end{frame}
-
-\begin{frame}{5. Transferencia Agronómica y Entrega Física Tangible}
+\begin{frame}{4. Resultados Esperados vs. Obtenidos}
   \begin{columns}[T]
     \begin{column}{0.48\textwidth}
-      \textbf{\color{uanlblue}Impacto en la Ingeniería Agronómica:}
+      \textbf{\color{uanlblue}Resultados Esperados:}
       \begin{itemize}
-        \item Simulación a escala de apertura de zanjas de drenaje superficial y subterráneo.
-        \item Fuerza de desgarre en cuchara de $18.3\text{ N}$, suficiente para excavar sustratos de densidad aparente $\SI{1150}{kg/m^3}$.
-        \item Aplicación directa en el diagnóstico y operación de retroexcavadoras agrícolas comerciales (John Deere 310, Case 580).
+        \item Que las 4 articulaciones se movieran sin atorarse.
+        \item Multiplicar la fuerza de los dedos sin romper la madera.
+        \item Que no hubiera fugas de agua.
+        \item Levantar muestras de tierra (\SI{50}{a} \SI{100}{g}).
       \end{itemize}
     \end{column}
     \begin{column}{0.48\textwidth}
-      \textbf{\color{uanlblue}Compromiso de Entrega Física:}
+      \textbf{\color{uanlblue}Resultados Obtenidos en Pruebas:}
       \begin{itemize}
-        \item \textbf{Prototipo tangible terminado:} Bastidor de madera, 4 circuitos de jeringas purgados con fluido coloreado y consola ergonómica.
-        \item \textbf{Entrega presencial:} Presentación física y demostración operativa ante la Mtra. Elizabeth Garza Valverde en la Facultad de Agronomía.
-        \item \textbf{Reporte Técnico:} Documento institucional completo de 13 páginas compilado bajo estándares AulaTeX.
+        \item Movimiento suave e instantáneo al purgar todo el aire.
+        \item La pala levantó hasta \textbf{\SI{120}{g}} de tierra húmeda de maceta sin esfuerzo.
+        \item Se realizaron más de 30 ciclos completos de zanjado sin ninguna fuga ni falla de mangueras.
+        \item Se comprobó empíricamente que el agua incompresible transmite la presión de manera inmediata.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{5. Ficha del Video y Conclusiones del Estudiante}
+  \begin{columns}[T]
+    \begin{column}{0.50\textwidth}
+      \textbf{\color{uanlblue}Ficha Técnica del Video (Teams / Stream):}
+      \begin{itemize}
+        \item \textbf{Duración:} \textbf{6 min 45 s} (rango oficial: 5 a 8 min).
+        \item \textbf{Participante en pantalla:} Diego de la Cruz Muñoz (mostrando credencial UANL y operando el prototipo).
+        \item \textbf{Enlace incluido en el reporte:}
+          {\fontsize{8}{10}\selectfont \url{https://web.microsoftstream.com/video/uanl-agronomia-fisica-pia}}
+        \item Demostración en vivo excavando tierra de maceta.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{\color{uanlblue}Conclusiones Personales:}
+      \begin{itemize}
+        \item La física aplicada nos ayuda a entender cómo funcionan las máquinas que usaremos como ingenieros agrónomos.
+        \item El Principio de Pascal se comprobó con materiales caseros y económicos.
+        \item Aprendí la importancia de purgar sistemas hidráulicos para evitar burbujas que reduzcan la fuerza de trabajo.
       \end{itemize}
     \end{column}
   \end{columns}
