@@ -2,17 +2,19 @@
 \documentclass[12pt,spanish,letterpaper,oneside]{article}
 \PassOptionsToPackage{es-noshorthands}{babel}
 \def\documenttitle{Prototipo Casero de Excavadora Hidráulica Articulada: Aplicación del Principio de Pascal en la Maquinaria Agrícola}
-\def\documentsubtitle{Producto Integrador de Aprendizaje (PIA) --- Unidad de Aprendizaje: Física}
-\def\documentsubject{Física (REF\#261013755808) --- 2.º Semestre}
+\def\documentsubtitle{Actividad-PIA: Producto Integrador de Aprendizaje --- Unidad de Aprendizaje: Física}
+\def\documentsubject{Física --- Licenciatura en Ingeniero Agrónomo}
 \def\documentauthor{Diego de la Cruz Muñoz}
-\def\coursename{Física}
-\def\coursecode{REF\#261013755808}
+\def\coursename{Física --- Facultad de Agronomía}
+\def\coursecode{}
 \def\universityname{Universidad Autónoma de Nuevo León}
 \def\universityfaculty{Facultad de Agronomía}
 \def\universitydepartment{Licenciatura en Ingeniero Agrónomo}
 \def\universitydepartmentimage{departamentos/logos-institucionales.pdf}
 \def\universitydepartmentimagecfg{height=2.1cm}
 \def\universitylocation{General Escobedo / Marín, Nuevo León, México}
+\def\documenttitlehf{Actividad-PIA: Excavadora Hidráulica}
+
 \def\authortable{%
 	\begin{Form}
 	\begin{tabular}{@{}ll@{}}
@@ -21,7 +23,7 @@
 		\textbf{Semestre y Grupo:} & 2.º Semestre --- Licenciatura en Ingeniero Agrónomo\\[0.30cm]
 		\textbf{Docente Titular:} & Mtra. Elizabeth Garza Valverde\\[0.30cm]
 		\textbf{Unidad de Aprendizaje:} & Física (Ponderación: 25 Puntos)\\[0.30cm]
-		\textbf{Actividad Curricular:} & Producto Integrador de Aprendizaje (Actividad 4.1)\\[0.30cm]
+		\textbf{Actividad Curricular:} & Actividad-PIA (Producto Integrador de Aprendizaje)\\[0.30cm]
 		\textbf{Modalidad de Trabajo:} & Individual\\[0.30cm]
 		\textbf{Fecha de Entrega en Plataforma:} & 13 de noviembre de 2026\\[0.45cm]
 		\multicolumn{2}{l}{\universitylocation}
@@ -33,6 +35,9 @@
 \setmainfont{Arial}
 \setsansfont{Arial}
 \input{template}
+\def\documenttitlehf{Actividad-PIA: Excavadora Hidráulica}
+\def\coursecode{}
+\def\coursename{Física --- Facultad de Agronomía}
 \usepackage{tabularx}
 \usepackage{booktabs}
 \usepackage{amsmath,amssymb}
@@ -41,6 +46,7 @@
 \usepackage{graphicx}
 \usepackage{subcaption}
 \usepackage{tcolorbox}
+\tcbuselibrary{breakable}
 \usepackage{setspace}
 \setstretch{1.15}
 \usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
@@ -49,8 +55,7 @@
 \def\portraittitlecolor{uanlblue}
 \def\sectioncolor{uanlblue}
 \def\ssectioncolor{uanlblue}
-\def\documenttitlehf{Física (2.º Semestre): Prototipo Casero de Excavadora Hidráulica}
-\hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Diego de la Cruz Muñoz},pdftitle={Prototipo Casero de Excavadora Hidraulica Articulada - PIA Fisica UANL},pdfsubject={Producto Integrador de Aprendizaje - Fisica Agronomia UANL}}
+\hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Diego de la Cruz Muñoz},pdftitle={Actividad-PIA: Prototipo Casero de Excavadora Hidraulica Articulada - Fisica UANL},pdfsubject={Actividad-PIA - Fisica Agronomia UANL}}
 \addbibresource{UANL/ingeniero-agronomo/fisica/fisica.bib}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 \setlength{\emergencystretch}{2.5em}
@@ -66,9 +71,14 @@
 \endgroup
 \hypersetup{pageanchor=true}
 \templatePagecfg
+
+\templateIndex
+\clearpage
+\templateFinalcfg
 \setlength{\tabcolsep}{8pt}
 \renewcommand{\arraystretch}{1.15}
-\input{UANL/ingeniero-agronomo/fisica/contenido-PIA.tex}
+\input{UANL/ingeniero-agronomo/fisica/contenido-Actividad-PIA.tex}
 \vspace{0.4cm}
+\clearpage
 \printbibliography[title={Referencias bibliográficas}]
 \end{document}
