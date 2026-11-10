@@ -49,20 +49,20 @@ De esta manera, el principio de conservación de la energía mecánica se cumple
 \section{Componentes, Dimensionamiento y Esquema General}
 
 \subsection{Esquema General del Modelo y Distribución de Piezas}
-El mecanismo reproduce a escala el tren cinemático de una excavadora pesada sobre chasis fijo de madera. En la Figura \ref{fig:diagramas_kit} se presentan el inventario estructurado de componentes del kit y la perspectiva general del modelo ensamblado, indicando la ubicación relativa de las jeringas de mando y los cilindros actuadores.
+El mecanismo reproduce a escala el tren cinemático de una excavadora pesada sobre chasis fijo de madera. En la Figura \ref{fig:diagramas_kit} se presentan el inventario estructurado de componentes del kit y la vista general del manipulador articulado.
 
 \begin{figure}[!htb]
     \centering
-    \begin{subfigure}[b]{0.48\textwidth}
+    \begin{subfigure}[b]{0.485\textwidth}
         \centering
-        \includegraphics[width=\textwidth,height=4.8cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/kit_piezas_materiales.png}
+        \includegraphics[width=\linewidth]{UANL/ingeniero-agronomo/fisica/figuras-pia/kit_piezas_materiales.png}
         \caption{Diagrama de piezas de madera numeradas y materiales del kit.}
         \label{fig:piezas_kit}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.48\textwidth}
+    \begin{subfigure}[b]{0.485\textwidth}
         \centering
-        \includegraphics[width=\textwidth,height=4.8cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/modelo_vista_general.png}
+        \includegraphics[width=\linewidth]{UANL/ingeniero-agronomo/fisica/figuras-pia/modelo_vista_general.png}
         \caption{Excavadora hidráulica montada: vista general del mecanismo.}
         \label{fig:modelo_general}
     \end{subfigure}
@@ -83,74 +83,78 @@ El manipulador opera mediante cuatro movimientos articulares desacoplados:
 \section{Proceso de Construcción y Montaje Metodológico}
 
 \subsection{Secuencia de Ensamble Mecánico y Circuitos Hidráulicos}
-En la Figura \ref{fig:secuencia_construccion} se sintetizan visualmente las etapas clave del ensamble del prototipo, organizadas cronológicamente en cuatro filas sucesivas de dos fases por renglón.
+En la Figura \ref{fig:secuencia_construccion} se sintetizan visualmente las etapas clave del ensamble del prototipo, organizadas cronológicamente en dos bloques continuos de dos fases por renglón ampliadas al ancho de columna para asegurar máxima legibilidad de detalles y textos.
 
 \begin{figure}[!htb]
     \centering
     % Renglón 1: Base giratoria y pivote azimutal
-    \begin{subfigure}[b]{0.48\textwidth}
+    \begin{subfigure}[b]{0.485\textwidth}
         \centering
-        \includegraphics[width=\textwidth,height=3.15cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_01_armado_giro.png}
+        \includegraphics[width=\linewidth]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_01_armado_giro.png}
         \caption{Paso 1: Jeringa y soporte de giro azimutal.}
         \label{fig:paso1}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.48\textwidth}
+    \begin{subfigure}[b]{0.485\textwidth}
         \centering
-        \includegraphics[width=\textwidth,height=3.15cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_03_placa_giratoria.png}
+        \includegraphics[width=\linewidth]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_03_placa_giratoria.png}
         \caption{Paso 3: Articulación de la placa giratoria.}
         \label{fig:paso3}
     \end{subfigure}
-    \vspace{0.10cm}
+    \vspace{0.20cm}
 
     % Renglón 2: Actuadores hidráulicos y pluma principal
-    \begin{subfigure}[b]{0.48\textwidth}
+    \begin{subfigure}[b]{0.485\textwidth}
         \centering
-        \includegraphics[width=\textwidth,height=3.15cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_05_tres_cilindros.png}
+        \includegraphics[width=\linewidth]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_05_tres_cilindros.png}
         \caption{Paso 5: Armado de los tres cilindros hidráulicos.}
         \label{fig:paso5}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.48\textwidth}
+    \begin{subfigure}[b]{0.485\textwidth}
         \centering
-        \includegraphics[width=\textwidth,height=3.15cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_07_brazo_principal.png}
+        \includegraphics[width=\linewidth]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_07_brazo_principal.png}
         \caption{Paso 7: Ensamble del brazo principal (pluma).}
         \label{fig:paso7}
     \end{subfigure}
-    \vspace{0.10cm}
+    \caption{Secuencia metodológica de construcción (Parte I: subensambles mecánicos y actuadores).}
+    \label{fig:secuencia_construccion}
+\end{figure}
 
+\begin{figure}[!htb]
+    \ContinuedFloat
+    \centering
     % Renglón 3: Articulación mecánica de brazos y cucharón
-    \begin{subfigure}[b]{0.48\textwidth}
+    \begin{subfigure}[b]{0.485\textwidth}
         \centering
-        \includegraphics[width=\textwidth,height=3.15cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_09_union_brazos.png}
+        \includegraphics[width=\linewidth]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_09_union_brazos.png}
         \caption{Paso 9: Articulación de pluma, brazo y cilindros.}
         \label{fig:paso9}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.48\textwidth}
+    \begin{subfigure}[b]{0.485\textwidth}
         \centering
-        \includegraphics[width=\textwidth,height=3.15cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_10_cucharon.png}
+        \includegraphics[width=\linewidth]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_10_cucharon.png}
         \caption{Paso 10: Ensamblaje del cucharón dentado.}
         \label{fig:paso10}
     \end{subfigure}
-    \vspace{0.10cm}
+    \vspace{0.20cm}
 
     % Renglón 4: Conexionado de mangueras y consola de control
-    \begin{subfigure}[b]{0.48\textwidth}
+    \begin{subfigure}[b]{0.485\textwidth}
         \centering
-        \includegraphics[width=\textwidth,height=3.15cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_12_mangueras.png}
+        \includegraphics[width=\linewidth]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_12_mangueras.png}
         \caption{Paso 12: Tendido de mangueras hidráulicas.}
         \label{fig:paso12}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.48\textwidth}
+    \begin{subfigure}[b]{0.485\textwidth}
         \centering
-        \includegraphics[width=\textwidth,height=3.15cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_14_panel_purga.png}
+        \includegraphics[width=\linewidth]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_14_panel_purga.png}
         \caption{Paso 14: Consola de control y purga de aire.}
         \label{fig:paso14}
     \end{subfigure}
-    \caption{Secuencia metodológica de construcción en ocho etapas (dos por renglón): subensambles mecánicos, articulación cinemática, conexionado hidráulico y purga final de la consola.}
-    \label{fig:secuencia_construccion}
+    \caption{Secuencia metodológica de construcción (Parte II: articulación cinemática, conexionado y purga final).}
 \end{figure}
 
 \subsection{Purga Hidrostática y Confiabilidad Operativa}
