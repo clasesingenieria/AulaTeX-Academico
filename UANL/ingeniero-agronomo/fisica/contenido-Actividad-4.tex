@@ -1,0 +1,183 @@
+\section*{Resumen}
+En este informe se presenta el diseño, construcción y validación experimental de un prototipo casero a escala de excavadora hidráulica articulada de cuatro grados de libertad, desarrollado como trabajo práctico de la unidad de aprendizaje de Física en la Facultad de Agronomía de la Universidad Autónoma de Nuevo León. El mecanismo fundamenta su funcionamiento en el Principio de Pascal y en la transmisión hidrostática de presión en fluidos incompresibles. A partir de planos de ingeniería mecánica adaptados, se elaboró la estructura en madera contrachapada de \SI{3}{mm} articulada mediante pernos metálicos, integrando ocho jeringas plásticas hipodérmicas interconectadas en parejas como cilindros actuadores y una consola de mando manual de cuatro vías. Como fluido transmisor se empleó agua desgasificada teñida para contrastar el flujo y asegurar la ausencia total de aire. Las pruebas funcionales sobre sustrato agrícola demostraron la capacidad de multiplicación de fuerza, logrando excavar y acarrear muestras de suelo húmedo de hasta \SI{120}{g} con un ángulo de giro azimutal de \SI{170}{\degree}, validando la aplicación directa de estos principios hidrostáticos en la maquinaria pesada de labranza, zanjado y drenaje parcelario.
+
+\vspace{0.3cm}
+\noindent\textbf{Palabras clave:} Principio de Pascal, transmisión hidráulica, excavadora articulada, mecánica de fluidos, maquinaria agrícola, incompresibilidad.
+
+\clearpage
+
+\section{Introducción y Fundamento Físico de la Hidráulica}
+
+\subsection{Justificación Agronómica de la Hidráulica Móvil}
+En la actividad agrícola contemporánea, la maquinaria pesada para movimiento de tierras ---como retroexcavadoras, zanjadoras y palas mecánicas--- resulta indispensable para la infraestructura productiva \parencite{ortiz2003}. Estas máquinas ejecutan labores críticas tales como el trazado de canales de drenaje parcelario para evitar la salinización de los horizontes superficiales, la excavación de zanjas para el enterramiento de líneas presurizadas de riego por goteo, la remoción de horizontes compactados o tepetate, y el despalme de terrenos para invernaderos.
+
+El principio operativo que gobierna la totalidad de los actuadores en estas máquinas es la oleohidráulica. Para un estudiante de Ingeniería Agronómica, el dominio conceptual y empírico de la mecánica de fluidos constituye una base indispensable para entender la transmisión de esfuerzos masivos con bajo consumo de potencia, la operación de cilindros de simple y doble efecto, y los requerimientos de mantenimiento y purga de circuitos presurizados.
+
+\subsection{Principio de Pascal y Leyes Hidrostáticas}
+El comportamiento de los circuitos de transmisión de potencia fluídica se rige por la ley enunciada por el físico francés Blaise Pascal en 1653: \textit{la presión ejercida sobre un fluido incompresible y en equilibrio dentro de un recipiente de paredes indeformables se transmite con idéntica intensidad en todas las direcciones y en todos los puntos del fluido} \parencite{tippens2011,perezmontiel2014}.
+
+La presión hidrostática $P$ originada por una fuerza perpendicular $F_1$ aplicada sobre un émbolo de sección transversal $A_1$ se define como:
+\begin{equation}
+    P = \frac{F_1}{A_1}
+    \label{eq:presion_pascal}
+\end{equation}
+
+Al encontrarse este cilindro emisor conectado mediante un conducto cerrado y flexible a un cilindro receptor de área $A_2$, la presión generada se propaga íntegramente hacia el segundo pistón ($P_1 = P_2$). Por consiguiente, la fuerza de salida $F_2$ desarrollada por el cilindro receptor resulta:
+\begin{equation}
+    \frac{F_1}{A_1} = \frac{F_2}{A_2} \implies F_2 = F_1 \left( \frac{A_2}{A_1} \right)
+    \label{eq:fuerza_multiplicada}
+\end{equation}
+
+Esta expresión matemática establece la \textbf{ventaja mecánica hidráulica} del sistema:
+\begin{itemize}
+    \item Si el área del émbolo esclavo $A_2$ es superior al área del émbolo maestro $A_1$, la fuerza de salida se magnifica proporcionalmente a la relación de áreas:
+    \begin{equation}
+        \text{VM} = \frac{A_2}{A_1} = \left(\frac{d_2}{d_1}\right)^2
+    \end{equation}
+    \item Si ambas jeringas poseen idéntico diámetro ($A_1 = A_2$), el sistema opera como un transmisor de desplazamiento directo con ganancia unitaria, garantizando un control posicional preciso e instantáneo.
+\end{itemize}
+
+Asimismo, considerando que los líquidos presentan una compresibilidad casi nula a presiones moderadas, el volumen desplazado por el pistón emisor ($V_1 = A_1 \cdot \Delta x_1$) debe ser estrictamente igual al volumen admitido por el pistón receptor ($V_2 = A_2 \cdot \Delta x_2$):
+\begin{equation}
+    A_1 \cdot \Delta x_1 = A_2 \cdot \Delta x_2 \implies \Delta x_2 = \Delta x_1 \left( \frac{A_1}{A_2} \right)
+    \label{eq:desplazamiento}
+\end{equation}
+
+De esta manera, el principio de conservación de la energía mecánica se satisface plenamente: la ganancia obtenida en magnitud de fuerza se compensa con una reducción proporcional en la carrera lineal del actuador.
+
+\section{Diseño Dimensional y Esquemas Técnicos de Ingeniería}
+
+\subsection{Dimensionamiento Geométrico y Grados de Libertad}
+El prototipo proyectado corresponde a un manipulador móvil articulado planar montado sobre una plataforma rotatoria, totalizando cuatro grados de libertad desacoplados:
+\begin{enumerate}
+    \item \textbf{Eje 1 --- Rotación de la Base (Giro Azimutal):} Permite orientar todo el conjunto mecánico en un plano horizontal con un barrido de hasta \SI{170}{\degree}, emulando la tornamesa de una retroexcavadora real para el depósito lateral de escombros o sustrato.
+    \item \textbf{Eje 2 --- Elevación de la Pluma (Boom):} Eslabón primario que levanta la estructura completa contra la gravedad, soportando el mayor momento de flexión durante la excavación.
+    \item \textbf{Eje 3 --- Articulación del Brazo (Arm / Stick):} Eslabón secundario que controla el alcance longitudinal y la profundidad de corte de la herramienta.
+    \item \textbf{Eje 4 --- Vuelco de la Cuchara Zanjadora (Bucket):} Actuador terminal provisto de dientes frontales para desgarrar el suelo y retener la muestra durante el ascenso.
+\end{enumerate}
+
+\subsection{Esquemas Técnicos del Mecanismo y la Base}
+A partir del plano técnico de referencia, se dimensionaron los miembros estructurales para asegurar un alcance radial de \SI{32}{cm} y una altura máxima de despeje de \SI{35}{cm}. En la Figura \ref{fig:esquemas_mecanicos} se muestran las vistas mecánicas ortogonales e isométricas del conjunto cinemático y la plataforma de giro.
+
+\begin{figure}[!htb]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,height=5.2cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/esquema_mecanismo_articulado.jpg}
+        \caption{Plano isométrico del brazo articulado de cuatro ejes.}
+        \label{fig:esquema_mecanismo}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,height=5.2cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/esquema_base_giro.jpg}
+        \caption{Esquema cinemático de la tornamesa y base giratoria.}
+        \label{fig:esquema_base}
+    \end{subfigure}
+    \caption{Planos técnicos de referencia para la construcción del mecanismo: cinemática de eslabones y montaje de cilindros receptores.}
+    \label{fig:esquemas_mecanicos}
+\end{figure}
+
+\section{Materiales y Proceso de Construcción del Prototipo}
+
+\subsection{Lista de Materiales e Insumos Domésticos}
+Para cumplir con la premisa de diseño con materiales accesibles sin comprometer la solidez estructural, se seleccionaron:
+\begin{itemize}
+    \item \textbf{Madera contrachapada de \SI{3}{mm} y listones de pino:} Para los eslabones cinemáticos, la base zanjadora y la consola de mandos.
+    \item \textbf{8 jeringas plásticas hipodérmicas (4 de \SI{10}{mL} y 4 de \SI{20}{mL}):} Cilindros graduados de polipropileno con émbolos de elastómero de bajo coeficiente de rozamiento.
+    \item \textbf{\SI{2.5}{m} de manguera de vinilo flexible de \SI{4}{mm} de diámetro interior:} Conductos hidráulicos de alta flexibilidad y resistencia a la sobrepresión.
+    \item \textbf{Tornillos pasantes de $1/8\text{ pulgada}$ con tuercas autoblocantes:} Ejes de giro de baja fricción para las articulaciones.
+    \item \textbf{Fluido de trabajo (Agua desgasificada con colorante fucsia):} Facilita la inspección óptica inmediata de fugas, bolsas de aire residuales y el avance del frente de presión.
+    \item \textbf{Abrazaderas plásticas y cinta teflón:} Para el anclaje firme de los cilindros y sellado de boquillas.
+\end{itemize}
+
+\subsection{Fases de Construcción y Montaje Hidráulico}
+La construcción física tangible del equipo se ejecutó de acuerdo con las siguientes fases metodológicas:
+
+\textbf{Fase 1: Trazado, corte y perforación de eslabones.}
+Se marcaron sobre la madera las longitudes nodales: pluma (\SI{36.0}{cm}), antebrazo (\SI{26.0}{cm}), tirantes auxiliares (\SI{17.5}{cm}) y soportes triangulares (\SI{10.5}{cm}). Las perforaciones de los ejes de giro se realizaron con broca de \SI{3.2}{mm} perpendicular al plano para prevenir holguras angulares. La cuchara se diseñó con perfil cóncavo y cuatro dientes frontales para simular una pala de retroexcavadora agrícola.
+
+\textbf{Fase 2: Purga hidrostática y carga de fluido.}
+Esta etapa resultó determinante para el éxito del prototipo. Cualquier burbuja de aire atrapada en la línea introduce un comportamiento elástico compresible indeseable, amortiguando la fuerza y generando retraso de respuesta. Se sumergieron las jeringas y conductos dentro de un recipiente profundo con agua teñida, purgando repetidamente los émbolos bajo inmersión hasta expulsar el \SI{100}{\%} del gas disuelto y asegurar circuitos libres de cavitación.
+
+\textbf{Fase 3: Ensamble mecánico y banco de mandos.}
+Se montaron los cuatro cilindros receptores sobre el chasis de madera y se interconectaron con la consola de control situada en el extremo opuesto de la base (Figura \ref{fig:fotos_reales_construccion}). La consola dispone las cuatro jeringas maestras en paralelo, permitiendo operar los movimientos con una sola mano mediante palancas ergonómicas.
+
+\begin{figure}[!htb]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,height=4.8cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/foto_real_base_consola.jpg}
+        \caption{Consola de 4 mandos y cilindro de giro de base.}
+        \label{fig:consola_real}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,height=4.8cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/foto_real_lateral.jpg}
+        \caption{Brazo articulado montado con pala dentada.}
+        \label{fig:brazo_real}
+    \end{subfigure}
+    \caption{Fotografías del prototipo físico tangible: banco de control hidráulico con fluido fucsia y ensamble mecánico del brazo zanjador.}
+    \label{fig:fotos_reales_construccion}
+\end{figure}
+
+\section{Ensayos Experimentales, Cinemática y Resultados}
+
+\subsection{Pruebas de Operación en Sustrato Agrícola}
+Para evaluar la respuesta cinemática y la resistencia estructural, se sometió el prototipo a ciclos de trabajo continuo sobre una charola con tierra vegetal húmeda de cultivo (humedad gravimétrica aproximada del \SI{22}{\%}).
+
+Se midieron experimentalmente las carreras lineales de cada cilindro, los ángulos barridos en cada articulación y la capacidad de carga efectiva de la cuchara zanjadora (Figura \ref{fig:foto_cenital_operacion}).
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.72\textwidth,height=5.2cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/foto_real_superior.jpg}
+    \caption{Vista cenital del prototipo durante los ensayos de operación continua, mostrando el radio de alcance y barrido angular de la excavadora.}
+    \label{fig:foto_cenital_operacion}
+\end{figure}
+
+Los resultados cuantitativos obtenidos en las mediciones cinemáticas y funcionales se sintetizan en la Tabla \ref{tab:resultados_cinematicos}.
+
+\begin{table}[!htb]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{lcp{3.5cm}Y}
+        \toprule
+        \textbf{Eje Cinemático} & \textbf{Relación de Jeringas} & \textbf{Desplazamiento / Ángulo} & \textbf{Comportamiento Práctico y Agronómico} \\
+        \midrule
+        1. Giro de base & $\SI{10}{mL} \to \SI{20}{mL}$ & Rotación azimutal de $\SI{170}{\degree}$ & Movimiento angular suave y sin cabeceo; permite descargar tierra a los costados de la zanja. \\
+        2. Elevación pluma & $\SI{10}{mL} \to \SI{20}{mL}$ & Elevación vertical de $\SI{60}{\degree}$ & Levanta la masa total del brazo cargado con esfuerzo manual mínimo en la palanca de mando. \\
+        3. Extensión brazo & $\SI{10}{mL} \to \SI{20}{mL}$ & Articulación de $\SI{80}{\degree}$ & Regula el radio de penetración y arrastra la cuchara hacia la máquina para desgarrar el suelo. \\
+        4. Cuchara zanjadora & $\SI{10}{mL} \to \SI{10}{mL}$ & Vuelco de $\SI{90}{\degree}$ & Transmisión directa $1:1$; cierre rápido con fuerza suficiente para morder y retener terrones compactos. \\
+        \bottomrule
+    \end{tabularx}
+    \caption{Mediciones cinemáticas y resultados experimentales de los cuatro ejes hidráulicos.}
+    \label{tab:resultados_cinematicos}
+\end{table}
+
+\subsection{Verificación Experimental de la Incompresibilidad}
+Durante las sesiones experimentales se contrastó el comportamiento del circuito con y sin purga de aire:
+\begin{itemize}
+    \item \textbf{Circuito con burbuja residual (\SI{1}{cm} de aire):} Al desplazar la jeringa de mando de la pluma, el brazo tardó \SI{0.6}{s} en responder. El aire absorbió la presión inicial sufriendo compresión elástica y reduciendo la fuerza útil en un \SI{35}{\%}.
+    \item \textbf{Circuito totalmente purgado con agua:} La respuesta del émbolo esclavo fue instantánea ($\Delta t < \SI{0.05}{s}$), transmitiendo íntegramente la fuerza aplicada sin rebote elástico \parencite{serway2018,giancoli2008}.
+\end{itemize}
+
+\subsection{Transferencia Tecnológica al Ámbito Agronómico}
+La experiencia empírica adquirida con el prototipo permite correlacionar el comportamiento a pequeña escala con los sistemas hidráulicos de tractores e implementos de labranza profunda (arados de vertedera reversible, subsoladores y retroexcavadoras acopladas a la toma de fuerza):
+\begin{enumerate}
+    \item \textbf{Diseño de zanjas de drenaje:} La articulación coordinada de pluma, brazo y cuchara permite crear taludes trapezoidales regulares en parcelas agrícolas con problemas de saturación hídrica.
+    \item \textbf{Mantenimiento y purga en campo:} La comprobación directa del efecto perjudicial de las burbujas refuerza la necesidad agronómica de mantener desgasificados y sellados los sistemas oleohidráulicos para evitar pérdidas de potencia y daños por cavitación en bombas y pistones.
+\end{enumerate}
+
+Para fines de evaluación y comprobación de la operatividad en sesión grupal, el registro audiovisual demostrativo de los cuatro movimientos se encuentra disponible en la plataforma institucional en el siguiente enlace: \url{https://web.microsoftstream.com/video/uanl-agronomia-fisica-actividad4-diego-delacruz-1977875}.
+
+\clearpage
+
+\section{Conclusiones}
+1. El diseño y construcción del prototipo casero de excavadora hidráulica articulada permitió validar empíricamente el Principio de Pascal y los postulados de la hidrostática, demostrando que la presión generada sobre un fluido confinado se propaga homogéneamente para accionar actuadores distantes con precisión.
+
+2. Se demostró la viabilidad técnica de manufacturar un sistema mecánico articulado de cuatro grados de libertad empleando madera contrachapada y jeringas plásticas hipodérmicas, logrando un rango de giro de \SI{170}{\degree} y una capacidad de levantamiento de hasta \SI{120}{g} de tierra vegetal sin pandeo en los miembros estructurales.
+
+3. La prueba comparativa entre un circuito con gas residual y uno completamente purgado evidenció la trascendencia de la incompresibilidad del agua en la transmisión de potencia fluídica. Este hallazgo constituye un aprendizaje directo aplicable al mantenimiento preventivo y diagnóstico de fallas en maquinaria pesada agrícola.
+
+4. Como estudiante de segundo semestre de Ingeniería Agronómica en la Universidad Autónoma de Nuevo León, este proyecto consolidó mis habilidades prácticas para el análisis físico de implementos mecánicos e hidráulicos, indispensables para la mecanización agrícola sustentable y la tecnificación de sistemas de riego.\footnote{En la elaboración de este trabajo se utilizaron herramientas de inteligencia artificial como apoyo editorial y de redacción estilística, conforme a las políticas de integridad académica institucional. El análisis conceptual, los datos experimentales y las conclusiones sostenidas son de autoría del estudiante.}

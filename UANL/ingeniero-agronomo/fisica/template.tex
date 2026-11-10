@@ -1,3 +1,8 @@
+% ==============================================================================
+% ADAPTACIÓN INSTITUCIONAL - UANL (FACULTAD DE AGRONOMÍA) - FÍSICA
+% AulaTeX / Licenciatura en Ingeniero Agrónomo
+% ==============================================================================
+
 \AddToHook{file/config.tex/after}[aulatex-fisica]{%
   \def\documentfontsize{12}
   \def\documentinterline{1.15}
@@ -9,8 +14,8 @@
   \def\portraitstyle{style1}
   \def\hfstyle{style1}
   \def\hfwidthwrap{false}
-  \def\hfwidthtitle{0.44}
-  \def\hfwidthcourse{0.52}
+  \def\hfwidthtitle{0.60}
+  \def\hfwidthcourse{0.38}
   \def\predocpageromannumber{false}
   \def\pagemarginleft{2.5}
   \def\pagemarginright{2.5}
@@ -26,5 +31,85 @@
   \def\defaultimagefolder{UANL/assets-uanl/}
   \def\usepdfmetadata{false}
 }
+
+% Carga del núcleo oficial de AulaTeX
 \input{aulaTEX/base/Plantilla-Informe/template.tex}
 \RemoveFromHook{file/config.tex/after}[aulatex-fisica]
+
+% Rutas de búsqueda de imágenes
+\graphicspath{%
+  {./figuras-pia/}%
+  {./}%
+  {UANL/assets-uanl/}%
+  {../../UANL/assets-uanl/}%
+  {../../../UANL/assets-uanl/}%
+}
+
+% Paleta institucional UANL / Agronomía
+\definecolor{uanlblue}{RGB}{0,55,108}
+\definecolor{uanlgreen}{RGB}{27,94,32}
+\definecolor{tableblue}{RGB}{233,240,247}
+\def\portraittitlecolor{uanlblue}
+\def\sectioncolor{uanlblue}
+\def\ssectioncolor{uanlgreen}
+
+% Control de composición anti-huecos y balance de flotantes
+\hfuzz=0.5pt
+\vfuzz=0.5pt
+\renewcommand{\topfraction}{0.90}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.85}
+\renewcommand{\dbltopfraction}{0.90}
+\renewcommand{\dblfloatpagefraction}{0.85}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\widowpenalty=10000
+\clubpenalty=10000
+\raggedbottom
+
+\RequirePackage{etoolbox}
+\RequirePackage{placeins}
+\RequirePackage{needspace}
+\RequirePackage{array}
+\RequirePackage{ragged2e}
+\RequirePackage{tabularx}
+\RequirePackage{booktabs}
+\RequirePackage{adjustbox}
+\RequirePackage{eso-pic}
+\RequirePackage{tikz}
+
+% Marca de agua institucional oficial de la Facultad de Agronomía UANL en Portada
+\makeatletter
+\providecommand{\careerwatermarkimage}{UANL/assets-uanl/logo-agronomia.png}
+\providecommand{\institutionalWatermark}[2][0.08]{%
+  \global\let\aulatexWatermarkApplied\relax
+  \AddToShipoutPictureBG*{%
+    \put(0,0){%
+      \parbox[b][\paperheight]{\paperwidth}{%
+        \vfill
+        \centering
+        \begin{tikzpicture}[remember picture,overlay]
+          \node[opacity=#1,inner sep=0pt] at (current page.center) {%
+            \includegraphics[width=0.56\paperwidth]{#2}%
+          };
+        \end{tikzpicture}%
+        \vfill
+      }%
+    }%
+  }%
+}
+\pretocmd{\templatePortrait}{%
+  \@ifundefined{aulatexWatermarkApplied}{%
+    \institutionalWatermark[0.08]{\careerwatermarkimage}%
+  }{}%
+}{}{}
+
+% Regla contractual: Pie de página bilateral estrictamente unilineal sin saltos
+\AtBeginDocument{%
+  \def\hfwidthwrap{false}%
+  \fancyfoot[L]{\small\textit{\adjustbox{max width=0.60\linewidth}{\documenttitlehf}}}%
+  \fancyfoot[R]{\small\textit{\adjustbox{max width=0.38\linewidth}{\coursename}}}%
+}
+\makeatother
