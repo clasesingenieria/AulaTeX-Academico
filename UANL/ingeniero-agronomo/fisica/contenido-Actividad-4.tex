@@ -1,5 +1,5 @@
 \section*{Resumen}
-En este informe se presenta el diseño, construcción y validación experimental de un prototipo casero de excavadora hidráulica articulada de cuatro grados de libertad, desarrollado como trabajo práctico de la unidad de aprendizaje de Física en la Facultad de Agronomía de la Universidad Autónoma de Nuevo León. El mecanismo fundamenta su funcionamiento en el Principio de Pascal y en la transmisión hidrostática de presión en fluidos incompresibles. A partir del diagrama de piezas prefabricadas en madera de \SI{3}{mm}, se integraron ocho cilindros hipodérmicos interconectados en parejas mediante mangueras flexibles y una consola manual de mando. Como fluido de transmisión se empleó agua desgasificada con trazador fucsia para asegurar la eliminación absoluta de burbujas de aire. Las pruebas cinemáticas sobre sustrato de cultivo validaron la ventaja mecánica del sistema, alcanzando un barrido angular de \SI{170}{\degree} y levantando cargas de suelo de hasta \SI{120}{g}, demostrando empíricamente los principios hidrostáticos aplicados en la maquinaria pesada de zanjado y drenaje parcelario.
+En este informe se presenta el diseño, construcción y validación experimental de un prototipo casero de excavadora hidráulica articulada de cuatro grados de libertad, desarrollado como trabajo práctico de la unidad de aprendizaje de Física en la Facultad de Agronomía de la Universidad Autónoma de Nuevo León. El mecanismo fundamenta su funcionamiento en el Principio de Pascal y en la transmisión hidrostática de presión en fluidos incompresibles. A partir del diagrama de piezas prefabricadas en madera de \SI{3}{mm}, se integraron ocho cilindros hipodérmicos interconectados en parejas mediante mangueras flexibles y una consola manual de mando. Como fluido de transmisión se empleó agua desgasificada con trazador fucsia para asegurar la eliminación absoluta de burbujas de aire. Las pruebas cinemáticas y de operación continua validaron la respuesta y estabilidad del sistema, alcanzando un barrido angular de \SI{170}{\degree} y un desplazamiento articular fluido en todos sus ejes, demostrando empíricamente los principios hidrostáticos y la transmisión de presiones aplicados en los mecanismos de la maquinaria pesada.
 
 \vspace{0.3cm}
 \noindent\textbf{Palabras clave:} Principio de Pascal, transmisión hidráulica, excavadora articulada, mecánica de fluidos, maquinaria agrícola, incompresibilidad.
@@ -76,64 +76,80 @@ El manipulador opera mediante cuatro movimientos articulares desacoplados:
     \item \textbf{Eje 1 (Giro Azimutal de la Base):} Articulación pivotante gobernada por el Cilindro 0 alojado sobre la placa base, con capacidad de rotación horizontal de hasta \SI{170}{\degree} para vaciado lateral.
     \item \textbf{Eje 2 (Elevación de la Pluma):} Cilindro 1 fijado en la base del soporte vertical que vence el mayor momento flector contra la gravedad para elevar el brazo completo.
     \item \textbf{Eje 3 (Extensión del Brazo / Pilar):} Cilindro 2 montado sobre el lomo de la pluma que aproxima o aleja la herramienta de excavación.
-    \item \textbf{Eje 4 (Vuelco del Cucharón Zanjador):} Cilindro 3 vinculado a la cuchara dentada para efectuar el desgarre, carga y descarga de terrones.
+    \item \textbf{Eje 4 (Vuelco del Cucharón):} Cilindro 3 vinculado a la cuchara dentada para articular el movimiento angular de apertura, cierre y volteo de la pala.
 \end{enumerate}
 
 
 \section{Proceso de Construcción y Montaje Metodológico}
 
 \subsection{Secuencia de Ensamble Mecánico y Circuitos Hidráulicos}
-Dado que las fichas de construcción integran sus propias especificaciones de piezas y notas operativas, en la Figura \ref{fig:secuencia_construccion} se sintetizan visualmente las etapas clave del ensamble organizadas cronológicamente en tres líneas de proceso.
+En la Figura \ref{fig:secuencia_construccion} se sintetizan visualmente las etapas clave del ensamble del prototipo, organizadas cronológicamente en cuatro filas sucesivas de dos fases por renglón.
 
 \begin{figure}[!htb]
     \centering
-    % Renglón 1: Base giratoria y actuadores
+    % Renglón 1: Base giratoria y pivote azimutal
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth,height=3.9cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_01_armado_giro.png}
+        \includegraphics[width=\textwidth,height=3.15cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_01_armado_giro.png}
         \caption{Paso 1: Jeringa y soporte de giro azimutal.}
         \label{fig:paso1}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth,height=3.9cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_05_tres_cilindros.png}
+        \includegraphics[width=\textwidth,height=3.15cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_03_placa_giratoria.png}
+        \caption{Paso 3: Articulación de la placa giratoria.}
+        \label{fig:paso3}
+    \end{subfigure}
+    \vspace{0.10cm}
+
+    % Renglón 2: Actuadores hidráulicos y pluma principal
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,height=3.15cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_05_tres_cilindros.png}
         \caption{Paso 5: Armado de los tres cilindros hidráulicos.}
         \label{fig:paso5}
     \end{subfigure}
-    \vspace{0.20cm}
-
-    % Renglón 2: Articulación mecánica de brazos y cucharón
+    \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth,height=3.9cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_09_union_brazos.png}
+        \includegraphics[width=\textwidth,height=3.15cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_07_brazo_principal.png}
+        \caption{Paso 7: Ensamble del brazo principal (pluma).}
+        \label{fig:paso7}
+    \end{subfigure}
+    \vspace{0.10cm}
+
+    % Renglón 3: Articulación mecánica de brazos y cucharón
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,height=3.15cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_09_union_brazos.png}
         \caption{Paso 9: Articulación de pluma, brazo y cilindros.}
         \label{fig:paso9}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth,height=3.9cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_10_cucharon.png}
-        \caption{Paso 10: Ensamblaje del cucharón zanjador.}
+        \includegraphics[width=\textwidth,height=3.15cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_10_cucharon.png}
+        \caption{Paso 10: Ensamblaje del cucharón dentado.}
         \label{fig:paso10}
     \end{subfigure}
-    \vspace{0.20cm}
+    \vspace{0.10cm}
 
-    % Renglón 3: Conexionado de mangueras y consola de control
+    % Renglón 4: Conexionado de mangueras y consola de control
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth,height=3.9cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_12_mangueras.png}
+        \includegraphics[width=\textwidth,height=3.15cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_12_mangueras.png}
         \caption{Paso 12: Tendido de mangueras hidráulicas.}
         \label{fig:paso12}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth,height=3.9cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_14_panel_purga.png}
+        \includegraphics[width=\textwidth,height=3.15cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/paso_14_panel_purga.png}
         \caption{Paso 14: Consola de control y purga de aire.}
         \label{fig:paso14}
     \end{subfigure}
-    \caption{Secuencia metodológica de construcción (dos fases por renglón): subensambles mecánicos, conexionado hidráulico acotado y purga final de la consola.}
+    \caption{Secuencia metodológica de construcción en ocho etapas (dos por renglón): subensambles mecánicos, articulación cinemática, conexionado hidráulico y purga final de la consola.}
     \label{fig:secuencia_construccion}
 \end{figure}
 
@@ -142,45 +158,36 @@ La desgasificación del fluido constituyó la fase más crítica del montaje. Se
 
 
 \subsection{Prototipo Físico Tangible Terminado}
-En la Figura \ref{fig:foto_real_terminada} se aprecia la fotografía real del prototipo físico manufacturado, donde se constatan la adecuada tensión de las mangueras flexibles, el líquido fucsia uniforme en todos los actuadores y la robustez de los pernos de sujeción.
+En la Figura \ref{fig:foto_real_terminada} se aprecia la fotografía real del prototipo físico terminado y operativo, donde se constatan la adecuada disposición de las mangueras flexibles, el líquido fucsia uniforme en todos los actuadores y la firmeza de las uniones articuladas.
 
 \begin{figure}[!htb]
     \centering
-    \includegraphics[width=0.82\textwidth,height=4.2cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/foto_real_lateral.jpg}
+    \includegraphics[width=0.82\textwidth,height=4.4cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/foto_real_lateral.jpg}
     \caption{Prototipo físico terminado y operativo: vista lateral completa mostrando la consola de mando de cuatro vías, el tendido hidráulico con fluido teñido y la cuchara zanjadora dentada montada.}
     \label{fig:foto_real_terminada}
 \end{figure}
 
 \section{Ensayos Experimentales, Cinemática y Resultados}
 
-\subsection{Pruebas de Operación en Sustrato Agrícola}
-Para evaluar la respuesta cinemática y la resistencia estructural, se sometió el prototipo a ciclos de trabajo continuo sobre una charola con tierra vegetal húmeda de cultivo (humedad gravimétrica aproximada del \SI{22}{\%}).
+\subsection{Pruebas de Operación y Funcionamiento Cinemático}
+Para verificar la respuesta cinemática, la hermeticidad del circuito cerrado y la estabilidad mecánica del prototipo manufacturado, se realizaron pruebas sistemáticas de operación continua accionando los cuatro mandos de la consola de control.
 
-Se midieron experimentalmente las carreras lineales de cada cilindro, los ángulos barridos en cada articulación y la capacidad de carga efectiva de la cuchara zanjadora (Figura \ref{fig:foto_cenital_operacion}).
-
-\begin{figure}[!htb]
-    \centering
-    \includegraphics[width=0.72\textwidth,height=4.2cm,keepaspectratio]{UANL/ingeniero-agronomo/fisica/figuras-pia/foto_real_superior.jpg}
-    \caption{Vista cenital del prototipo durante los ensayos de operación continua, mostrando el radio de alcance y barrido angular de la excavadora.}
-    \label{fig:foto_cenital_operacion}
-\end{figure}
-
-Los resultados cuantitativos obtenidos en las mediciones cinemáticas y funcionales se sintetizan en la Tabla \ref{tab:resultados_cinematicos}.
+Durante los ensayos se evaluaron de manera individual y coordinada las carreras lineales de cada émbolo, los arcos de rotación angular y la firmeza de posicionamiento de las articulaciones. El circuito con fluido teñido permitió supervisar visualmente la ausencia de fugas y la respuesta inmediata de los actuadores sin retardo elástico. En la Tabla \ref{tab:resultados_cinematicos} se detallan las mediciones cuantitativas registradas en cada eje.
 
 \begin{table}[!htb]
     \centering
     \small
     \begin{tabularx}{\textwidth}{lcp{3.5cm}Y}
         \toprule
-        \textbf{Eje Cinemático} & \textbf{Relación de Jeringas} & \textbf{Desplazamiento / Ángulo} & \textbf{Comportamiento Práctico y Agronómico} \\
+        \textbf{Eje Cinemático} & \textbf{Relación de Jeringas} & \textbf{Desplazamiento / Ángulo} & \textbf{Respuesta y Operación Funcional} \\
         \midrule
-        1. Giro de base & $\SI{10}{mL} \to \SI{20}{mL}$ & Rotación azimutal de $\SI{170}{\degree}$ & Movimiento angular suave y sin cabeceo; permite descargar tierra a los costados de la zanja. \\
-        2. Elevación pluma & $\SI{10}{mL} \to \SI{20}{mL}$ & Elevación vertical de $\SI{60}{\degree}$ & Levanta la masa total del brazo cargado con esfuerzo manual mínimo en la palanca de mando. \\
-        3. Extensión brazo & $\SI{10}{mL} \to \SI{20}{mL}$ & Articulación de $\SI{80}{\degree}$ & Regula el radio de penetración y arrastra la cuchara hacia la máquina para desgarrar el suelo. \\
-        4. Cuchara zanjadora & $\SI{10}{mL} \to \SI{10}{mL}$ & Vuelco de $\SI{90}{\degree}$ & Transmisión directa $1:1$; cierre rápido con fuerza suficiente para morder y retener terrones compactos. \\
+        1. Giro de base & $\SI{2.5}{mL} \to \SI{5.0}{mL}$ & Rotación azimutal de $\SI{170}{\degree}$ & Movimiento angular suave, continuo y sin cabeceo lateral. \\
+        2. Elevación pluma & $\SI{2.5}{mL} \to \SI{5.0}{mL}$ & Elevación vertical de $\SI{60}{\degree}$ & Vence con soltura el peso propio del brazo mediante esfuerzo manual mínimo. \\
+        3. Extensión brazo & $\SI{2.5}{mL} \to \SI{5.0}{mL}$ & Articulación de $\SI{80}{\degree}$ & Regula con precisión el radio de alcance y aproximación del mecanismo. \\
+        4. Cuchara zanjadora & $\SI{2.5}{mL} \to \SI{2.5}{mL}$ & Vuelco angular de $\SI{90}{\degree}$ & Transmisión directa 1:1; articulación ágil de apertura y cierre de la pala dentada. \\
         \bottomrule
     \end{tabularx}
-    \caption{Mediciones cinemáticas y resultados experimentales de los cuatro ejes hidráulicos.}
+    \caption{Mediciones cinemáticas y resultados de las pruebas de operación de los cuatro ejes hidráulicos.}
     \label{tab:resultados_cinematicos}
 \end{table}
 
@@ -205,7 +212,7 @@ Para fines de evaluación y comprobación de la operatividad en sesión grupal, 
 \section{Conclusiones}
 1. El diseño y construcción del prototipo casero de excavadora hidráulica articulada permitió validar empíricamente el Principio de Pascal y los postulados de la hidrostática, demostrando que la presión generada sobre un fluido confinado se propaga homogéneamente para accionar actuadores distantes con precisión.
 
-2. Se demostró la viabilidad técnica de manufacturar un sistema mecánico articulado de cuatro grados de libertad empleando madera contrachapada y jeringas plásticas hipodérmicas, logrando un rango de giro de \SI{170}{\degree} y una capacidad de levantamiento de hasta \SI{120}{g} de tierra vegetal sin pandeo en los miembros estructurales.
+2. Se demostró la viabilidad técnica de manufacturar un sistema mecánico articulado de cuatro grados de libertad empleando madera contrachapada y jeringas plásticas, logrando un rango de giro de \SI{170}{\degree} y un desplazamiento articular fluido y estable sin deformaciones ni holguras en los miembros estructurales.
 
 3. La prueba comparativa entre un circuito con gas residual y uno completamente purgado evidenció la trascendencia de la incompresibilidad del agua en la transmisión de potencia fluídica. Este hallazgo constituye un aprendizaje directo aplicable al mantenimiento preventivo y diagnóstico de fallas en maquinaria pesada agrícola.
 
