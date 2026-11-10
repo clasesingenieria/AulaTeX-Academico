@@ -1,28 +1,29 @@
 % !TeX program = xelatex
 \documentclass[12pt,spanish,letterpaper,oneside]{article}
 \PassOptionsToPackage{es-noshorthands}{babel}
-\def\documenttitle{Diseño, modelación física, construcción física y validación experimental de un prototipo de excavadora hidráulica articulada basada en el Principio de Pascal y transmisión de presiones}
-\def\documentsubtitle{Producto Integrador de Aprendizaje (PIA - Actividad 4.1) --- Prototipo físico-experimental tangible para movimiento de tierras y adecuación de zanjas de drenaje agrícola}
-\def\documentsubject{Física (REF\#261013755808) --- Ingeniero Agrónomo}
+\def\documenttitle{Prototipo Casero de Excavadora Hidráulica Articulada: Aplicación del Principio de Pascal en la Maquinaria Agrícola}
+\def\documentsubtitle{Producto Integrador de Aprendizaje (PIA) --- Unidad de Aprendizaje: Física}
+\def\documentsubject{Física (REF\#261013755808) --- 2.º Semestre}
 \def\documentauthor{Diego de la Cruz Muñoz}
 \def\coursename{Física}
 \def\coursecode{REF\#261013755808}
 \def\universityname{Universidad Autónoma de Nuevo León}
 \def\universityfaculty{Facultad de Agronomía}
-\def\universitydepartment{Ingeniero Agrónomo}
+\def\universitydepartment{Licenciatura en Ingeniero Agrónomo}
 \def\universitydepartmentimage{departamentos/logos-institucionales.pdf}
 \def\universitydepartmentimagecfg{height=2.1cm}
 \def\universitylocation{General Escobedo / Marín, Nuevo León, México}
 \def\authortable{%
 	\begin{Form}
 	\begin{tabular}{@{}ll@{}}
-		\textbf{Estudiante:} & Diego de la Cruz Muñoz\\[0.35cm]
-		\textbf{Matrícula:} & 1977875\\[0.35cm]
-		\textbf{Docente Titular:} & Garza Valverde Elizabeth\\[0.35cm]
-		\textbf{Unidad de Aprendizaje:} & Física (Ponderación: 25\% / 25 Puntos)\\[0.35cm]
-		\textbf{Actividad Curricular:} & Producto Integrador de Aprendizaje (Actividad 4.1)\\[0.35cm]
-		\textbf{Modalidad de Entrega:} & Prototipo Físico Tangible y Reporte Técnico Monográfico\\[0.5cm]
-		\multicolumn{2}{l}{Fecha de entrega: 10 de noviembre de 2026}\\
+		\textbf{Estudiante:} & Diego de la Cruz Muñoz\\[0.30cm]
+		\textbf{Matrícula:} & 1977875\\[0.30cm]
+		\textbf{Semestre y Grupo:} & 2.º Semestre --- Licenciatura en Ingeniero Agrónomo\\[0.30cm]
+		\textbf{Docente Titular:} & Mtra. Elizabeth Garza Valverde\\[0.30cm]
+		\textbf{Unidad de Aprendizaje:} & Física (Ponderación: 25 Puntos)\\[0.30cm]
+		\textbf{Actividad Curricular:} & Producto Integrador de Aprendizaje (Actividad 4.1)\\[0.30cm]
+		\textbf{Modalidad de Trabajo:} & Individual\\[0.30cm]
+		\textbf{Fecha de Entrega en Plataforma:} & 13 de noviembre de 2026\\[0.45cm]
 		\multicolumn{2}{l}{\universitylocation}
 	\end{tabular}
 	\end{Form}
@@ -37,16 +38,17 @@
 \usepackage{amsmath,amssymb}
 \usepackage{siunitx}
 \usepackage{float}
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta,calc,shapes.geometric,patterns}
+\usepackage{graphicx}
+\usepackage{setspace}
+\setstretch{1.15}
 \usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
 \definecolor{uanlblue}{RGB}{0,55,108}
 \definecolor{tableblue}{RGB}{233,240,247}
 \def\portraittitlecolor{uanlblue}
 \def\sectioncolor{uanlblue}
 \def\ssectioncolor{uanlblue}
-\def\documenttitlehf{Física Agronómica: Prototipo Excavadora Hidráulica y Principio de Pascal}
-\hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Diego de la Cruz Muñoz},pdftitle={Diseño, modelación física y construcción de excavadora hidráulica articulada basada en Principio de Pascal},pdfsubject={Producto Integrador de Aprendizaje - Física UANL}}
+\def\documenttitlehf{Física (2.º Semestre): Prototipo Casero de Excavadora Hidráulica}
+\hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Diego de la Cruz Muñoz},pdftitle={Prototipo Casero de Excavadora Hidraulica Articulada - PIA Fisica UANL},pdfsubject={Producto Integrador de Aprendizaje - Fisica Agronomia UANL}}
 \addbibresource{UANL/ingeniero-agronomo/fisica/fisica.bib}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 \setlength{\emergencystretch}{2.5em}
@@ -62,9 +64,8 @@
 \endgroup
 \hypersetup{pageanchor=true}
 \templatePagecfg
-\singlespacing
 \setlength{\tabcolsep}{8pt}
-\renewcommand{\arraystretch}{1.18}
+\renewcommand{\arraystretch}{1.15}
 \input{UANL/ingeniero-agronomo/fisica/contenido-PIA.tex}
 \newpage
 \printbibliography[title={Referencias bibliográficas}]

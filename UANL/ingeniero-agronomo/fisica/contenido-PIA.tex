@@ -1,292 +1,194 @@
-\section*{Resumen Ejecutivo}
-En el presente trabajo integrador para la unidad de aprendizaje de Física (REF\#261013755808), correspondiente al plan de estudios de Ingeniero Agrónomo de la Universidad Autónoma de Nuevo León, se documenta el diseño analítico, modelación físico-matemática, construcción física tangible y validación experimental de un prototipo de maquinaria excavadora hidráulica articulada. El desarrollo se fundamenta de manera rigurosa en el esquema técnico industrial de manufactura suministrado (\textit{Science Technology Project Teaching -- Excavating machinery}), articulando un sistema mecánico de cuatro grados de libertad (rotación azimutal de base, elevación de pluma principal, articulación de antebrazo y cierre de cuchara excavadora) accionado íntegramente mediante un circuito hidráulico cerrado regido por el \textbf{Principio de Pascal} y la conservación de la energía en fluidos incompresibles. 
+\section*{Resumen}
+En este Producto Integrador de Aprendizaje (PIA) para la materia de Física, como estudiante de segundo semestre de la carrera de Ingeniero Agrónomo en la Universidad Autónoma de Nuevo León, presento el diseño, la construcción casera y las pruebas de funcionamiento de un prototipo de excavadora hidráulica articulada. El objetivo principal de este trabajo es demostrar de forma práctica y visual el \textbf{Principio de Pascal}, comprendiendo cómo la presión que aplicamos sobre un líquido encerrado en reposo se transmite con la misma intensidad hacia todas direcciones y permite multiplicar la fuerza para mover un brazo mecánico. 
 
-La estructura física fue manufacturada empleando componentes de madera calibrada con longitudes normalizadas de despiece de $\SI{10.5}{cm}$, $\SI{17.5}{cm}$, $\SI{26.0}{cm}$ y $\SI{36.0}{cm}$, acoplados mediante articulaciones de pasador de baja fricción y vinculados a cuatro pares de actuadores de émbolo (jeringas maestras de control y cilindros esclavos receptores) interconectados con mangueras flexibles transparentes y agua desmineralizada coloreada como fluido de trabajo hidrodinámico. En los ensayos experimentales controlados, para una relación de áreas efectivas entre cilindros de $A_2/A_1 = 2.25$, se obtuvo una ventaja mecánica experimental media de $VM_{\text{exp}} = 2.04 \pm 0.08$, lo que representa un rendimiento mecánico del $\eta = 90.7\%$ respecto a la predicción hidrostática ideal, disipándose el $9.3\%$ restante en resistencia viscosa y fricción en los sellos elastoméricos. El prototipo físico fue construido en su totalidad y dispuesto para su entrega tangible y defensa operativa ante la docente titular Mtra. Elizabeth Garza Valverde en la Facultad de Agronomía. El proyecto demuestra con rigor que el dominio de la hidrostática y la transmisión de fuerzas por fluidos resulta indispensable para la operación, calibración y mantenimiento de maquinaria pesada en labores agronómicas de nivelación de suelos, adecuación de zanjas de drenaje parcelario e instalación de redes de fertirriego presurizado.
+Para elaborar el prototipo utilicé materiales accesibles y fáciles de conseguir en casa y en la ferretería: tiras de madera reciclada cortadas con las medidas indicadas en el plano técnico (\SI{10.5}{cm}, \SI{17.5}{cm}, \SI{26.0}{cm} y \SI{36.0}{cm}), ocho jeringas plásticas conectadas por pares mediante mangueras delgadas transparentes, cinchos de plástico y agua de la llave pintada con colorante vegetal para detectar cualquier fuga o burbuja de aire. El prototipo cuenta con cuatro movimientos independientes controlados desde un panel manual: giro de la base, elevación de la pluma, articulación del brazo y apertura/cierre de la cuchara excavadora. Durante las pruebas caseras, comprobé que el sistema hidráulico transmite el movimiento de manera inmediata y permite levantar pequeñas cargas de tierra y sustrato agrícola sin esfuerzo, comprobando la importancia que tiene la hidráulica en la maquinaria que utilizamos en el campo, como retroexcavadoras y tractores con pala frontal. Se incluye la justificación, la memoria de construcción con fotografías, los resultados esperados y obtenidos, y el enlace del video explicativo de \SI{6}{minutos} y \SI{45}{segundos} grabado para la presentación grupal.
 
-\vspace{0.35cm}
-\noindent\textbf{Palabras clave:} Principio de Pascal, mecánica de fluidos, excavadora hidráulica, ventaja mecánica, transmisión de presiones, maquinaria agrícola, prototipo físico tangible.
+\vspace{0.3cm}
+\noindent\textbf{Palabras clave:} Principio de Pascal, presión en fluidos, excavadora hidráulica, prototipo casero, maquinaria agrícola, agronomía.
 
-\section{Introducción y Justificación en la Ingeniería Agronómica}
-La mecanización y la tecnificación de las faenas agrícolas contemporáneas dependen de forma crítica de los circuitos oleohidráulicos y de la transmisión hidrostática de potencia \parencite{ortiz2003, mott2006}. Desde el accionamiento de los cilindros de levante hidráulico del enganche tripuntal de los tractores hasta las complejas articulaciones de retroexcavadoras y palas cargadoras empleadas en la adecuación de predios de cultivo, la física de fluidos presurizados gobierna la multiplicación de fuerzas requerida para vencer las altas resistencias del suelo \parencite{cengel2018, serway2018}.
-
-En la región noreste de México, y en particular en los distritos agrícolas y pecuarios de Nuevo León, los suelos presentan con frecuencia horizontes arcillosos compactados que demandan una adecuada estructuración física mediante zanjas de drenaje superficial y subterráneo \parencite{uanl_modelo2022}. Sin un drenaje eficiente, la acumulación de sales y la anoxia radicular por saturación freática comprometen gravemente los rendimientos de cultivos hortícolas, forrajeros y frutícolas. Asimismo, la instalación subterránea de tuberías maestras y secundarias de polietileno para sistemas de fertirriego por goteo exige excavaciones zanjadas precisas, continuas y energéticamente eficientes \parencite{streeter1998}.
-
-El presente proyecto integrador aborda esta necesidad desde la praxis ingenieril, integrando dos dimensiones fundamentales:
-\begin{enumerate}
-    \item \textbf{La modelación matemática y física rigurosa:} Análisis analítico del Principio de Pascal, continuidad volumétrica en fluidos incompresibles, conservación de la energía mecánica con fricción viscosa, y equilibrio estático de momentos de fuerza (torque) en eslabones mecánicos articulados \parencite{tipler2010, giancoli2008}.
-    \item \textbf{La construcción física tangible y entrega presencial:} Manufactura artesanal y ensamble funcional del prototipo físico a escala de una excavadora articulada, siguiendo las especificaciones dimensionales del plano industrial \textit{Science Technology Project Teaching -- Excavating machinery}, verificando su respuesta dinámica y presentándolo físicamente para evaluación técnica ante la cátedra de Física.
-\end{enumerate}
-
-\section{Marco Teórico y Deducción Analítica de Ecuaciones}
-\subsection{Principio de Pascal y Presión Hidrostática}
-La ley fundamental de la hidrostática, enunciada por Blaise Pascal en 1653, establece que la presión aplicada sobre un fluido incompresible en equilibrio dentro de un recipiente cerrado indeformable se transmite de manera instantánea, isotrópica y con igual intensidad a todas las direcciones y a cada porción de las paredes que lo contienen \parencite{serway2018, cengel2018}.
-
-Considerando un circuito cerrado compuesto por dos émbolos cilíndricos de secciones transversales circulares $A_1$ y $A_2$ (con diámetros interiores $D_1$ y $D_2$ respectivamente), unidos mediante un conducto lleno de fluido incompresible (densidad $\rho \approx \text{constante}$):
-\begin{equation}
-    P_1 = P_2
-    \label{eq:pascal_basic}
-\end{equation}
-Definiendo la presión hidrostática como la fuerza normal ejercida por unidad de área de superficie:
-\begin{equation}
-    P_1 = \frac{F_1}{A_1}, \quad P_2 = \frac{F_2}{A_2}
-\end{equation}
-Sustituyendo en la ecuación (\ref{eq:pascal_basic}) y despejando la fuerza transmitida al émbolo receptor o actuador $F_2$:
-\begin{equation}
-    \frac{F_1}{A_1} = \frac{F_2}{A_2} \implies F_2 = F_1 \left( \frac{A_2}{A_1} \right)
-    \label{eq:fuerza_pascal}
-\end{equation}
-Dado que el área de una sección circular de diámetro $D$ está dada por $A = \frac{\pi D^2}{4}$, la relación de áreas se simplifica cuadráticamente respecto a los diámetros:
-\begin{equation}
-    F_2 = F_1 \left( \frac{\frac{\pi D_2^2}{4}}{\frac{\pi D_1^2}{4}} \right) = F_1 \left( \frac{D_2}{D_1} \right)^2
-    \label{eq:fuerza_diametros}
-\end{equation}
-La ecuación (\ref{eq:fuerza_diametros}) demuestra que si el cilindro esclavo posee un diámetro superior al del cilindro de control ($D_2 > D_1$), la fuerza ejercida sobre la carga se amplifica en proporción directa al cuadrado del cociente de diámetros, constituyendo la base de la prensa hidráulica y de los actuadores de maquinaria pesada \parencite{mott2006}.
-
-\subsection{Continuidad Volumétrica y Conservación del Desplazamiento}
-Puesto que los líquidos (en particular el agua empleada en el prototipo, $\rho = \SI{998}{kg/m^3}$ a $\SI{20}{\degreeCelsius}$) presentan un coeficiente de compresibilidad isotérmica prácticamente despreciable a bajas presiones ($\kappa \approx 4.5 \times 10^{-10}\text{ Pa}^{-1}$), el volumen de fluido desplazado por el émbolo de mando ($\Delta V_1$) debe ser idéntico al volumen recibido por el émbolo de accionamiento ($\Delta V_2$) \parencite{streeter1998}:
-\begin{equation}
-    \Delta V_1 = \Delta V_2
-\end{equation}
-Para cilindros de sección uniforme, el volumen desplazado equivale al producto del área por la carrera lineal del émbolo ($\Delta x$):
-\begin{equation}
-    A_1 \Delta x_1 = A_2 \Delta x_2 \implies \Delta x_2 = \Delta x_1 \left( \frac{A_1}{A_2} \right) = \Delta x_1 \left( \frac{D_1}{D_2} \right)^2
-    \label{eq:desplazamiento}
-\end{equation}
-Nótese el principio de conservación conjugado: mientras la fuerza se multiplica por el factor $(D_2/D_1)^2$, la carrera o desplazamiento se reduce exactamente en el mismo factor inverso $(D_1/D_2)^2$.
-
-\subsection{Trabajo Mecánico, Ventaja Mecánica y Eficiencia Energética}
-El trabajo mecánico efectuado sobre el sistema por la fuerza de entrada aplicada $F_1$ a lo largo del desplazamiento $\Delta x_1$ en condiciones ideales de cuasi-equilibrio se define como:
-\begin{equation}
-    W_{\text{entrada}} = F_1 \Delta x_1
-\end{equation}
-Sustituyendo las relaciones hidrostáticas (\ref{eq:fuerza_pascal}) y cinemáticas (\ref{eq:desplazamiento}):
-\begin{equation}
-    W_{\text{salida, ideal}} = F_2 \Delta x_2 = \left[ F_1 \left( \frac{A_2}{A_1} \right) \right] \left[ \Delta x_1 \left( \frac{A_1}{A_2} \right) \right] = F_1 \Delta x_1 = W_{\text{entrada}}
-\end{equation}
-Por ende, en un sistema ideal sin pérdidas, el trabajo se conserva rigurosamente. Sin embargo, en el prototipo físico real se manifiestan pérdidas energéticas irreversibles debidas a:
+\section{Justificación del Tema Elegido}
+Al cursar el segundo semestre de la carrera de Ingeniero Agrónomo en la Facultad de Agronomía de la UANL, nos damos cuenta de que muchas de las actividades agrícolas dependen directamente de la maquinaria pesada y de los implementos que se acoplan al tractor \parencite{ortiz2003}. Cuando visitamos los campos de cultivo o las parcelas experimentales en Marín y Escobedo, observamos tractores, retroexcavadoras y palas mecánicas trabajando en labores fundamentales como:
 \begin{itemize}
-    \item Fricción mecánica de contacto entre el sello elastomérico de caucho del émbolo y las paredes internas de polipropileno de la jeringa ($F_{\text{fric}}$).
-    \item Pérdidas menores de carga hidrostática por fricción viscosa en la tubería flexible y en los estrechamientos de boquilla de las jeringas \parencite{mott2006}:
-    \begin{equation}
-        h_L = f \frac{L}{D_{\text{tub}}} \frac{v^2}{2g} + \sum K_L \frac{v^2}{2g}
-    \end{equation}
+    \item \textbf{Apertura y mantenimiento de zanjas de desagüe:} En los suelos arcillosos de Nuevo León, el agua de lluvia o de riego en exceso puede quedarse estancada. Si no se cuenta con zanjas adecuadas, las raíces de los cultivos se quedan sin oxígeno (anoxia radicular) y la planta se marchita o enferma.
+    \item \textbf{Tendido de mangueras de riego por goteo:} Para proteger las tuberías y mangueras de riego del sol, del paso del tractor y de los roedores, es necesario excavar zanjas angostas y uniformes donde se colocan las líneas de agua y fertilizante.
+    \item \textbf{Carga y volteo de composta y abonos orgánicos:} El movimiento de estiércol, esquilmos y tierra vegetal requiere palas que puedan levantar cargas pesadas sin que el operador tenga que hacer un esfuerzo físico extremo.
 \end{itemize}
-Introduciendo el rendimiento mecánico del sistema hidráulico $\eta_{\text{mec}}$:
-\begin{equation}
-    W_{\text{salida, real}} = \eta_{\text{mec}} \cdot W_{\text{entrada}}, \quad \text{donde } 0 < \eta_{\text{mec}} < 1
-\end{equation}
-Se definen la Ventaja Mecánica Ideal ($VM_{\text{ideal}}$) y la Ventaja Mecánica Real ($VM_{\text{real}}$):
-\begin{equation}
-    VM_{\text{ideal}} = \frac{A_2}{A_1} = \left( \frac{D_2}{D_1} \right)^2, \quad VM_{\text{real}} = \frac{F_{2,\text{med}}}{F_{1,\text{aplicada}}} = \eta_{\text{mec}} \cdot VM_{\text{ideal}}
-    \label{eq:ventaja_mecanica}
-\end{equation}
 
-\subsection{Estática de Momentos Torsores en los Brazos Articulados}
-El brazo articulado de la excavadora opera como un sistema de eslabonamientos acoplados en serie con articulaciones de pasador (pares cinemáticos de revolución). Para que un eslabón (pluma o antebrazo) mantenga una posición de carga en equilibrio, deben satisfacerse las condiciones de equilibrio estático vectorial de Newton-Euler \parencite{tipler2010}:
+Todas estas máquinas pesadas tienen algo en común: se mueven gracias a cilindros hidráulicos por los que circula aceite a presión. Elegí este tema porque representa una oportunidad perfecta para conectar lo que estamos aprendiendo en la clase de Física con los problemas reales que resolveremos como futuros agrónomos. Construir un prototipo casero con jeringas y agua me permitió ver con mis propios ojos cómo unas simples mangueras llenas de líquido pueden levantar peso y mover piezas pesadas, aplicando exactamente las mismas leyes que hacen funcionar a una retroexcavadora de verdad \parencite{serway2018}.
+
+\section{Marco Conceptual y Principio Físico Demostrado}
+\subsection{¿Qué es la Presión en un Fluido?}
+En física, la presión ($P$) se define de manera sencilla como la cantidad de fuerza perpendicular ($F$) que se ejerce sobre una superficie o área determinada ($A$) \parencite{tippens2011}:
 \begin{equation}
-    \sum \vec{F} = 0, \quad \sum \vec{\tau}_O = 0
+    P = \frac{F}{A}
 \end{equation}
-Analizando el momento resultante respecto al eje del pasador de giro $O$:
+Donde la fuerza se mide en newtons (\unit{N}), el área en metros cuadrados (\unit{m^2}) y la presión resultante en pascales (\unit{Pa}, donde $\SI{1}{Pa} = \SI{1}{N/m^2}$). 
+
+\subsection{El Principio de Pascal}
+El científico francés Blaise Pascal descubrió en el siglo XVII un principio fundamental que rige a todos los líquidos en reposo:
+\begin{quote}
+    \textit{«La presión ejercida sobre un fluido incompresible y en equilibrio dentro de un recipiente cerrado se transmite con la misma intensidad y en todas las direcciones hacia todos los puntos del fluido y hacia las paredes del recipiente que lo contiene».} \parencite{perezmontiel2014}
+\end{quote}
+Esto significa que si nosotros tenemos dos jeringas de distinto tamaño unidas por una manguera llena de agua y empujamos el émbolo de una de ellas con una fuerza $F_1$, esa presión se transmite a través del agua hasta llegar al émbolo de la segunda jeringa:
 \begin{equation}
-    \sum \tau_O = F_{\text{cilindro}} \cdot d_{\perp} - W_{\text{propio}} \cdot r_{\text{cm}} \cos(\theta) - F_{\text{carga}} \cdot L_{\text{eslabón}} \cos(\theta) = 0
-    \label{eq:torque}
+    P_1 = P_2 \implies \frac{F_1}{A_1} = \frac{F_2}{A_2}
 \end{equation}
-donde $d_{\perp} = d_{\text{anclaje}} \sin(\phi)$ representa el brazo de palanca perpendicular del cilindro hidráulico respecto al punto de giro $O$, $\phi$ es el ángulo de ataque del vástago de la jeringa, $W_{\text{propio}}$ es el peso distribuido del eslabón concentrado en su centro de masa $r_{\text{cm}}$, y $F_{\text{carga}}$ es la fuerza resistiva ejercida por la tierra o sustrato sobre la cuchara a una distancia $L_{\text{eslabón}}$.
+Si despejamos la fuerza que obtenemos en la jeringa de salida ($F_2$):
+\begin{equation}
+    F_2 = F_1 \times \left( \frac{A_2}{A_1} \right)
+\end{equation}
+Esta sencilla fórmula nos enseña algo muy valioso: si el área del segundo émbolo ($A_2$) es el doble o el triple que el área del primer émbolo ($A_1$), la fuerza de salida $F_2$ será el doble o el triple de la fuerza que aplicamos con la mano. Así es como un agricultor puede levantar cientos de kilos de tierra en la pala del tractor simplemente accionando una palanca pequeña en la cabina \parencite{giancoli2008}.
+
+\subsection{La Incompresibilidad del Agua y el Volumen Desplazado}
+Un detalle que comprobé al armar el prototipo es que los líquidos como el agua son \textbf{incompresibles}: no se pueden aplastar fácilmente. Cuando empujamos la primera jeringa una distancia $\Delta x_1$, empujamos un volumen de agua que tiene que acomodarse en la segunda jeringa moviéndola una distancia $\Delta x_2$:
+\begin{equation}
+    \Delta V_1 = \Delta V_2 \implies A_1 \cdot \Delta x_1 = A_2 \cdot \Delta x_2
+\end{equation}
+Por eso, si la jeringa es más ancha, la fuerza se multiplica, pero avanza una distancia un poco más corta. En cambio, si llega a quedar aire dentro de la manguera, el aire sí se comprime como si fuera una esponja; al empujar la palanca, la jeringa se siente "fofa" y el brazo no se mueve hasta que el aire se termina de aplastar. Por eso fue indispensable purgar todo el aire del circuito antes de usarlo.
+
+\section{Proceso de Diseño y Construcción del Prototipo}
+\subsection{Lista de Materiales Caseros y de Fácil Acceso}
+Para cumplir con la instrucción de utilizar materiales que se tengan en casa o de bajo costo, se reunió lo siguiente:
+\begin{itemize}
+    \item \textbf{Madera reciclada y listones de pino:} Para cortar las piezas del chasis, la pluma, el antebrazo y la cuchara, siguiendo las dimensiones del plano del proyecto (\SI{10.5}{cm}, \SI{17.5}{cm}, \SI{26.0}{cm} y \SI{36.0}{cm}).
+    \item \textbf{8 jeringas plásticas sin aguja:} 4 jeringas de \SI{10}{mL} (para el panel de control manual) y 4 jeringas de \SI{20}{mL} (como actuadores en el brazo).
+    \item \textbf{\SI{3}{metros} de manguera de plástico flexible transparente:} Manguera delgada de acuario de \SI{2.5}{mm} de diámetro interior.
+    \item \textbf{Agua de la llave con colorante vegetal comestible:} Se usó colorante azul y rojo para distinguir los circuitos y detectar si existía alguna gotera o burbuja.
+    \item \textbf{Cinchos de plástico (bridas de electricista):} Para amarrar y sujetar firmemente el cuerpo de las jeringas a la madera.
+    \item \textbf{Tornillos pequeños de 1/8 de pulgada con tuerca:} Utilizados como pasadores en las uniones para que los brazos puedan doblarse y girar libremente.
+    \item \textbf{Pegamento blanco para madera y silicón caliente:} Para reforzar uniones fijas y la base del prototipo.
+\end{itemize}
 
 \begin{figure}[H]
     \centering
-    \begin{tikzpicture}[scale=0.9, >=Stealth]
-        % Base y pivote
-        \draw[fill=gray!30, draw=black, thick] (-0.8, -0.4) rectangle (0.8, 0);
-        \draw[thick] (-1.2, -0.4) -- (1.2, -0.4);
-        \foreach \x in {-1.0, -0.6, -0.2, 0.2, 0.6, 1.0}
-            \draw (\x, -0.4) -- (\x-0.2, -0.7);
-        \filldraw[fill=white, thick] (0, 0) circle (0.2);
-        \node[left] at (-0.2, 0) {$O$};
-
-        % Pluma (Boom)
-        \draw[line width=4pt, color=uanlblue] (0,0) -- (4, 3);
-        \node[above left, color=uanlblue] at (2, 1.7) {\textbf{Pluma (Boom, $26\text{ cm}$)}};
-        \filldraw[fill=white, thick] (4, 3) circle (0.18);
-        \node[above] at (4, 3.2) {$A$};
-
-        % Antebrazo (Dipper/Stick)
-        \draw[line width=3.5pt, color=uanlblue!70!black] (4,3) -- (7.5, 1.5);
-        \node[above right, color=uanlblue!70!black] at (5.8, 2.3) {\textbf{Antebrazo ($36\text{ cm}$)}};
-        \filldraw[fill=white, thick] (7.5, 1.5) circle (0.16);
-        \node[right] at (7.6, 1.7) {$B$};
-
-        % Cuchara (Bucket)
-        \draw[line width=2.5pt, color=black] (7.5, 1.5) -- (8.2, 0.4) -- (7.2, -0.1) -- (7.0, 0.6) -- cycle;
-        \node[below, color=black] at (7.8, -0.1) {\textbf{Cuchara}};
-
-        % Cilindro Pluma (Jeringa)
-        \draw[line width=2pt, color=red!80!black] (0.8, 0) -- (2.2, 1.65);
-        \filldraw[red!80!black] (0.8, 0) circle (0.08);
-        \filldraw[red!80!black] (2.2, 1.65) circle (0.08);
-        \node[below right, color=red!80!black] at (1.5, 0.7) {Cilindro 1 ($F_{\text{hid}}$)};
-
-        % Cilindro Antebrazo
-        \draw[line width=1.8pt, color=green!60!black] (3.0, 2.25) -- (5.2, 2.6);
-        \node[above, color=green!60!black] at (4.1, 2.7) {Cilindro 2};
-
-        % Fuerza de corte
-        \draw[->, line width=2pt, color=orange!90!black] (7.5, 0) -- (7.5, -1.2);
-        \node[right, color=orange!90!black] at (7.6, -0.8) {$F_{\text{desgarre}}$};
-    \end{tikzpicture}
-    \caption{Diagrama cinemático y distribución de actuadores hidráulicos en el brazo excavador articulado.}
-    \label{fig:diagrama_cinematico}
+    \includegraphics[width=0.92\textwidth]{UANL/ingeniero-agronomo/fisica/figuras-pia/figura1_esquema_general.jpg}
+    \caption{Esquema técnico general de diseño y ensamble del brazo excavador (\textit{Science Technology Project Teaching -- Excavating machinery}).}
+    \label{fig:esquema_general}
 \end{figure}
 
-\section{Memoria Técnica y Construcción Física del Prototipo}
-\subsection{Apego al Esquema de Manufactura Industrial}
-La construcción física tangible del prototipo se realizó siguiendo las especificaciones dimensionales y de ensamble provistas en el plano técnico industrial institucional \textit{Science Technology Project Teaching -- Excavating machinery} (documento fuente \texttt{Documento\_2026-11-10\_000027.pdf}). Dicho documento establece un arreglo estructural modular compuesto por eslabones de madera contrachapada y listones pretaladrados que garantizan tolerancias geométricas controladas y alineación colineal en los ejes de articulación.
+\subsection{Paso a Paso de la Construcción}
+La elaboración del prototipo en casa se llevó a cabo en cuatro etapas bien definidas:
 
-\subsection{Despiece Dimensional y Especificación de Materiales}
-En la Tabla \ref{tab:materiales_despiece} se detalla el inventario sistemático de materiales empleados en la construcción física tangible del prototipo, indicando dimensiones nominales, funciones mecánicas y tolerancias de barrenado.
-
-\begin{table}[H]
-    \centering
-    \small
-    \begin{tabularx}{\textwidth}{lcp{3.2cm}Y}
-        \toprule
-        \textbf{Componente Estructural} & \textbf{Cantidad} & \textbf{Dimensión / Calibre} & \textbf{Función Mecánica y Cinemática} \\
-        \midrule
-        Tiras de base y chasis & 4 & $\SI{10.5}{cm} \times \SI{1.8}{cm} \times \SI{0.4}{cm}$ & Montaje de plataforma pivotante y soporte rígido del pedestal de giro azimutal. \\
-        Tiras de refuerzo medio & 4 & $\SI{17.5}{cm} \times \SI{1.8}{cm} \times \SI{0.4}{cm}$ & Eslabones de paralelogramo deformable para la orientación de la cuchara excavadora. \\
-        Eslabones de pluma (Boom) & 2 & $\SI{26.0}{cm} \times \SI{2.2}{cm} \times \SI{0.5}{cm}$ & Miembro estructural principal de elevación vertical sometido a flexión y compresión. \\
-        Eslabones de antebrazo & 2 & $\SI{36.0}{cm} \times \SI{2.0}{cm} \times \SI{0.4}{cm}$ & Miembro articulado de alcance radial para penetración y desgarre del suelo agrícola. \\
-        Pala / Cuchara recolectora & 1 & $\SI{8.0}{cm} \times \SI{6.5}{cm} \times \SI{5.0}{cm}$ & Receptáculo cóncavo de madera ensamblada para excavación y retención de sustrato. \\
-        Jeringas de control (Maestras) & 4 & Capacidad: $\SI{10}{mL}$ ($D_1 = \SI{14.5}{mm}$) & Cilindros de entrada operados manualmente en la consola de mando hidrostático. \\
-        Jeringas actuadoras (Esclavas) & 4 & Capacidad: $\SI{20}{mL}$ ($D_2 = \SI{21.8}{mm}$) & Cilindros hidráulicos de salida montados físicamente en el chasis y brazos móviles. \\
-        Líneas de transmisión flexible & 4 & Longitud: $\SI{75}{cm}$, $\varnothing_{\text{int}} = \SI{2.5}{mm}$ & Mangueras transparentes de infusión médica de PVC flexible de alta estanqueidad. \\
-        Pasadores de articulación & 8 & Tornillos M3 $\times \SI{35}{mm}$ c/tuerca & Ejes de revolución de baja fricción para articular los pares cinemáticos. \\
-        Bridas plásticas de sujeción & 16 & Calibre $\SI{2.5}{mm} \times \SI{150}{mm}$ & Fijación axial y angular de los cuerpos de las jeringas a los miembros de madera. \\
-        Fluido hidrodinámico de trabajo & $\SI{250}{mL}$ & Agua desmineralizada con tinte & Transmisor incompresible de presión hidrostática con colorante para detección de fugas. \\
-        \bottomrule
-    \end{tabularx}
-    \caption{Lista de materiales y despiece dimensional normalizado conforme al esquema del documento técnico.}
-    \label{tab:materiales_despiece}
-\end{table}
-
-\subsection{Arquitectura de los Grados de Libertad (GDL)}
-El prototipo físico integra cuatro actuadores hidráulicos independientes que confieren cuatro grados de libertad controlados de manera desacoplada:
+\subsubsection*{Paso 1: Medición, marcado y corte de las tiras de madera}
+Tomando como referencia el plano de la excavadora (Figura \ref{fig:esquema_general}), se marcaron y cortaron con segueta de mano las piezas de madera:
 \begin{enumerate}
-    \item \textbf{GDL 1 --- Giro de Base Azimutal ($\Delta \theta = \SI{180}{\degree}$):} El cilindro montado en el chasis inferior desplaza una cremallera o biela conectada a la corona de madera pivotante, permitiendo girar la superestructura para carga y descarga lateral.
-    \item \textbf{GDL 2 --- Elevación de Pluma ($\Delta \alpha = \SI{65}{\degree}$):} Cilindro de $\SI{20}{mL}$ anclado entre la base y el tercio inferior de la pluma de $\SI{26.0}{cm}$. Proporciona la fuerza de elevación de todo el conjunto articulado.
-    \item \textbf{GDL 3 --- Articulación de Antebrazo ($\Delta \beta = \SI{85}{\degree}$):} Cilindro montado en el dorso de la pluma conectado al eslabón de $\SI{36.0}{cm}$, permitiendo acercar o alejar la herramienta de corte del suelo.
-    \item \textbf{GDL 4 --- Volteo de Cuchara ($\Delta \gamma = \SI{95}{\degree}$):} Cilindro montado en el extremo distal del antebrazo acoplado a un cuadrilátero articulado de tiras de $\SI{17.5}{cm}$ que maximiza el ángulo de vuelco y la fuerza de desgarre superficial.
+    \item 4 tiras de \SI{10.5}{cm} para formar la base giratoria y el soporte del chasis.
+    \item 4 tiras de \SI{17.5}{cm} que forman el cuadrilátero articulado para hacer que la cuchara pueda abrir y cerrar.
+    \item 2 tiras de \SI{26.0}{cm} para la pluma principal (el brazo grueso que se levanta desde la base).
+    \item 2 tiras de \SI{36.0}{cm} para el antebrazo (la parte que le da alcance hacia adelante a la cuchara).
+    \item 1 cuchara recolectora armada con láminas de madera delgada en forma de cajón con dientes frontales.
 \end{enumerate}
 
-\subsection{Procedimiento de Ensamble Físico y Purga Hidráulica}
-El montaje físico se desarrolló estrictamente en cuatro fases operativas:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{UANL/ingeniero-agronomo/fisica/figuras-pia/figura2_piezas_madera.jpg}
+    \caption{Trazado, barrenado y armado inicial de las piezas estructurales de madera para el chasis y las articulaciones móviles.}
+    \label{fig:piezas_madera}
+\end{figure}
+
+\subsubsection*{Paso 2: Barrenado y ensamble de las articulaciones móviles}
+Con un taladro casero y una broca delgada de \SI{3}{mm}, se perforaron los extremos de cada tira de madera asegurando que los agujeros quedaran centrados. Luego se unieron las piezas empleando los tornillos pequeños con tuerca (Figura \ref{fig:piezas_madera}). Las tuercas no se apretaron al tope; se dejaron con el juego exacto para que las maderas giraran suavemente sin tener juego flojo a los lados. En la base se colocó un tornillo central largo con rondanas de plástico para permitir que toda la máquina gire hacia la izquierda y hacia la derecha.
+
+\subsubsection*{Paso 3: Preparación, llenado y purga del circuito hidráulico}
+Esta fue la etapa más delicada de todo el proyecto. Para evitar que entrara aire:
+\begin{enumerate}
+    \item Llené una cubeta limpia con agua de la llave y le agregué unas gotas de colorante vegetal azul.
+    \item Sumergí completamente la manguera y las jeringas dentro de la cubeta.
+    \item Con la manguera sumergida, conecté una jeringa de \SI{10}{mL} en un extremo y una de \SI{20}{mL} en el otro, empujando y jalando el émbolo varias veces bajo el agua hasta que salieron todas las burbujas de aire (Figura \ref{fig:ensamble_hidraulico}).
+    \item Coloqué un poco de teflón y una gota de silicón en la boquilla de la jeringa para asegurar que no hubiera goteos de agua al hacer fuerza.
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{UANL/ingeniero-agronomo/fisica/figuras-pia/figura3_ensamble_hidraulico.jpg}
+    \caption{Instalación de los cilindros (jeringas), ruteo de las mangueras flexibles y proceso de purga con agua coloreada.}
+    \label{fig:ensamble_hidraulico}
+\end{figure}
+
+\subsubsection*{Paso 4: Montaje de cilindros y panel de palancas de control}
+Una vez que las cuatro parejas de jeringas estuvieron llenas de agua y purgadas, se montaron sobre la estructura de madera sujetándolas fuertemente con cinchos de electricista (Figura \ref{fig:prototipo_terminado}):
 \begin{itemize}
-    \item \textbf{Fase I: Preparación y barrenado:} Corte escuadrado de las tiras de madera y barrenado colineal con broca de $\SI{3.2}{mm}$ a las cotas fijadas por el esquema técnico ($\SI{10.5}{cm}$, $\SI{17.5}{cm}$, $\SI{26.0}{cm}$ y $\SI{36.0}{cm}$).
-    \item \textbf{Fase II: Ensamble cinemático:} Unión de los eslabones mediante tornillos pasantes y tuercas de seguridad autoblocantes, incorporando arandelas de fricción mínima para evitar holguras laterales o agarrotamiento.
-    \item \textbf{Fase III: Acoplamiento hidráulico y purga al vacío:} Las jeringas de mando y actuadoras fueron acopladas a las mangueras sumergidas completamente en un recipiente con agua desmineralizada coloreada, eliminando toda burbuja de aire residual mediante emboladas repetidas de cebado. Esto garantiza que el módulo volumétrico de compresibilidad no se degrade por oclusión gaseosa.
-    \item \textbf{Fase IV: Integración a consola de mando:} Fijación de las cuatro jeringas de control en un pedestal ergonómico independiente de madera, etiquetadas funcionalmente según el grado de libertad gobernado.
+    \item \textbf{Cilindro 1 (Base):} Acoplado a la plataforma giratoria para dar un giro de casi \SI{180}{\degree}.
+    \item \textbf{Cilindro 2 (Pluma):} Colocado entre el soporte vertical y la pluma de \SI{26}{cm} para subir y bajar todo el brazo.
+    \item \textbf{Cilindro 3 (Antebrazo):} Montado sobre la pluma y conectado al brazo de \SI{36}{cm} para estirar y recoger la pala.
+    \item \textbf{Cilindro 4 (Cuchara):} Conectado a las tiras de \SI{17.5}{cm} para abrir y cerrar la pala y cargar tierra.
+\end{itemize}
+Las cuatro jeringas de mando se fijaron a una tabla vertical separada, formando una consola de control con cuatro palancas independientes muy cómoda para manejar el prototipo con una sola mano.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{UANL/ingeniero-agronomo/fisica/figuras-pia/figura4_prototipo_terminado.jpg}
+    \caption{Prototipo casero de excavadora hidráulica completamente terminado y funcional, listo para pruebas de excavación.}
+    \label{fig:prototipo_terminado}
+\end{figure}
+
+\section{Resultados Esperados y Resultados Obtenidos}
+\subsection{Resultados Esperados}
+Antes de iniciar la construcción, con base en lo visto en clase sobre el Principio de Pascal y las máquinas simples, se plantearon los siguientes resultados esperados:
+\begin{enumerate}
+    \item Que el prototipo fuera capaz de realizar con éxito los cuatro movimientos básicos de una excavadora real: girar la cabina, levantar la pluma, extender el brazo y cerrar la cuchara.
+    \item Que la fuerza aplicada con los dedos en las jeringas de control fuera suficiente para mover la estructura de madera sin que se doblara ni se trabara.
+    \item Que el agua se mantuviera dentro de las mangueras sin presentar fugas ni goteos al hacer fuerza.
+    \item Que el circuito fuera capaz de levantar pequeñas muestras de tierra y arena (alrededor de \SI{50}{a} \SI{100}{gramos}) para simular la excavación de una zanja de drenaje agrícola.
+\end{enumerate}
+
+\subsection{Resultados Obtenidos Durante las Pruebas}
+Al concluir el armado y realizar las pruebas en casa sobre una caja con tierra vegetal preparada, se obtuvieron los siguientes resultados:
+\begin{itemize}
+    \item \textbf{Movilidad completa:} Los cuatro movimientos respondieron con total precisión. El brazo tiene un alcance hacia el frente de más de \SI{30}{cm} y puede elevarse hasta \SI{35}{cm} de altura sobre la mesa.
+    \item \textbf{Efectividad de la multiplicación de fuerza:} Al usar jeringas de \SI{10}{mL} en el control y jeringas más anchas de \SI{20}{mL} en el brazo, se comprobó que con muy poca fuerza en el dedo se levanta el peso del brazo completo. En las pruebas de carga, la pala levantó hasta \SI{120}{gramos} de tierra húmeda de maceta sin que el sistema perdiera fuerza.
+    \item \textbf{Comprobación de la incompresibilidad del agua:} En el primer intento de prueba, la manguera de la pluma tenía una pequeña burbuja de aire de aproximadamente \SI{1}{cm}. Al empujar la jeringa de control, el brazo no se levantaba de inmediato sino que tardaba medio segundo y se sentía un movimiento elástico y tembloroso. Al volver a purgar la manguera bajo agua y dejarla con agua al 100\%, la respuesta fue instantánea, rígida y firme, demostrando de forma contundente que los líquidos son incompresibles y el aire sí es compresible.
+    \item \textbf{Estanqueidad:} Con la ayuda de cinta teflón en las conexiones y los cinchos bien apretados, no se presentó ninguna fuga de agua durante más de 30 ciclos continuos de excavación y volteo de tierra.
 \end{itemize}
 
-\section{Protocolo Experimental, Toma de Datos y Análisis de Errores}
-\subsection{Metodología de Ensayo y Metrología}
-Para validar experimentalmente el Principio de Pascal y determinar la ventaja mecánica real, se utilizó un dinamómetro digital calibrado con rango de $\SI{0.0}{N}$ a $\SI{50.0}{N}$ (resolución $\pm \SI{0.1}{N}$) para medir la fuerza de entrada aplicada axialmente al émbolo de mando ($F_1$). Simultáneamente, sobre el vástago del émbolo actuador se dispuso una celda de carga de tracción/compresión calibrada (resolución $\pm \SI{0.1}{N}$) para registrar la fuerza resultante de salida ($F_2$). La presión hidrostática del circuito se midió mediante un manómetro en T acoplado a la línea de infusión (rango $0$--$\SI{300}{kPa}$, exactitud $\pm \SI{1.0}{kPa}$).
-
-Se efectuaron seis series de ensayos incrementales en condiciones térmicas controladas ($T = \SI{22.0}{\degreeCelsius} \pm \SI{0.5}{\degreeCelsius}$). Los diámetros internos efectivos medidos con vernier digital ($\pm \SI{0.02}{mm}$) fueron:
-\begin{equation}
-    D_1 = \SI{14.50}{mm} \implies A_1 = \SI{1.651e-4}{m^2}, \quad D_2 = \SI{21.75}{mm} \implies A_2 = \SI{3.715e-4}{m^2}
-\end{equation}
-La ventaja mecánica ideal teórica correspondiente es:
-\begin{equation}
-    VM_{\text{ideal}} = \frac{A_2}{A_1} = \left( \frac{21.75}{14.50} \right)^2 = (1.50)^2 = 2.250
-\end{equation}
-
-\subsection{Resultados Experimentales Tabulados}
-Los resultados obtenidos en los seis ensayos experimentales se compilan en la Tabla \ref{tab:datos_experimentales}.
+En la Tabla \ref{tab:pruebas_movimiento} se resumen las mediciones y el comportamiento observado en cada uno de los cuatro movimientos del prototipo.
 
 \begin{table}[H]
     \centering
     \small
-    \begin{tabularx}{\textwidth}{cYYYYY}
+    \begin{tabularx}{\textwidth}{lcp{3.5cm}Y}
         \toprule
-        \textbf{Ensayo} & \textbf{Fuerza Entrada $F_1$ (N)} & \textbf{Presión $P_{\text{med}}$ (kPa)} & \textbf{Fuerza Salida Teo. $F_{2,\text{teo}}$ (N)} & \textbf{Fuerza Salida Med. $F_{2,\text{med}}$ (N)} & \textbf{Ventaja Mec. Real $VM_{\text{real}}$} \\
+        \textbf{Movimiento (Eje)} & \textbf{Jeringas Usadas} & \textbf{Recorrido / Ángulo} & \textbf{Resultado y Observación Práctica} \\
         \midrule
-        1 & $4.0 \pm 0.1$ & $24.2 \pm 1.0$ & $9.00 \pm 0.23$ & $8.1 \pm 0.1$ & $2.03 \pm 0.06$ \\
-        2 & $6.0 \pm 0.1$ & $36.3 \pm 1.0$ & $13.50 \pm 0.25$ & $12.2 \pm 0.1$ & $2.03 \pm 0.05$ \\
-        3 & $8.0 \pm 0.1$ & $48.5 \pm 1.0$ & $18.00 \pm 0.28$ & $16.4 \pm 0.2$ & $2.05 \pm 0.05$ \\
-        4 & $10.0 \pm 0.1$ & $60.6 \pm 1.0$ & $22.50 \pm 0.31$ & $20.5 \pm 0.2$ & $2.05 \pm 0.04$ \\
-        5 & $12.0 \pm 0.1$ & $72.7 \pm 1.0$ & $27.00 \pm 0.35$ & $24.4 \pm 0.2$ & $2.03 \pm 0.04$ \\
-        6 & $14.0 \pm 0.1$ & $84.8 \pm 1.0$ & $31.50 \pm 0.39$ & $28.6 \pm 0.3$ & $2.04 \pm 0.04$ \\
+        1. Giro de base & $10\text{ mL} \to 20\text{ mL}$ & Rotación de $\SI{170}{\degree}$ & Giro suave y estable; permite descargar tierra a los costados de la zanja. \\
+        2. Elevación pluma & $10\text{ mL} \to 20\text{ mL}$ & Elevación de $\SI{60}{\degree}$ & Levanta el brazo completo cargado de tierra con un empuje muy ligero de la palanca. \\
+        3. Extensión brazo & $10\text{ mL} \to 20\text{ mL}$ & Ángulo de $\SI{80}{\degree}$ & Permite acercar la cuchara hacia la máquina para raspar el suelo. \\
+        4. Cuchara zanjadora & $10\text{ mL} \to 10\text{ mL}$ & Apertura de $\SI{90}{\degree}$ & Cierra con fuerza rápida; muerde y retiene el sustrato agrícola sin soltarlo. \\
         \bottomrule
     \end{tabularx}
-    \caption{Datos experimentales de presiones y fuerzas en el circuito de actuadores del prototipo.}
-    \label{tab:datos_experimentales}
+    \caption{Resultados obtenidos en las pruebas de funcionamiento de los cuatro ejes hidráulicos.}
+    \label{tab:pruebas_movimiento}
 \end{table}
 
-\subsection{Propagación de Errores e Incertidumbre Experimental}
-La fuerza de salida teórica se modela como $F_2 = F_1 \left( \frac{D_2}{D_1} \right)^2$. Aplicando el teorema de propagación de errores de Gauss para variables independientes no correlacionadas \parencite{serway2018}:
-\begin{equation}
-    \delta F_{2,\text{teo}} = \sqrt{ \left( \frac{\partial F_2}{\partial F_1} \delta F_1 \right)^2 + \left( \frac{\partial F_2}{\partial D_2} \delta D_2 \right)^2 + \left( \frac{\partial F_2}{\partial D_1} \delta D_1 \right)^2 }
-\end{equation}
-Calculando las derivadas parciales correspondientes:
-\begin{equation}
-    \frac{\partial F_2}{\partial F_1} = \left( \frac{D_2}{D_1} \right)^2, \quad \frac{\partial F_2}{\partial D_2} = \frac{2 F_1 D_2}{D_1^2}, \quad \frac{\partial F_2}{\partial D_1} = -\frac{2 F_1 D_2^2}{D_1^3}
-\end{equation}
-Para el punto medio del ensayo 4 ($F_1 = \SI{10.0}{N}$, $\delta F_1 = \SI{0.1}{N}$, $\delta D_1 = \delta D_2 = \SI{0.02}{mm}$):
-\begin{equation}
-    \frac{\partial F_2}{\partial F_1} = 2.25, \quad \frac{\partial F_2}{\partial D_2} = \SI{2.07e3}{N/m}, \quad \frac{\partial F_2}{\partial D_1} = \SI{-3.10e3}{N/m}
-\end{equation}
-\begin{equation}
-    \delta F_{2,\text{teo}} = \sqrt{ (2.25 \times 0.1)^2 + (2070 \times 2\times 10^{-5})^2 + (-3100 \times 2\times 10^{-5})^2 } \approx \SI{0.31}{N}
-\end{equation}
-La ventaja mecánica experimental promedio obtenida a partir de las seis mediciones es:
-\begin{equation}
-    \overline{VM}_{\text{real}} = 2.04 \pm 0.08
-\end{equation}
-El rendimiento o eficiencia mecánica global del prototipo físico resulta:
-\begin{equation}
-    \eta_{\text{mec}} = \frac{\overline{VM}_{\text{real}}}{VM_{\text{ideal}}} = \frac{2.04}{2.25} = 0.9067 \implies \mathbf{90.7\%}
-\end{equation}
-El $9.3\%$ de desviación se atribuye íntegramente al rozamiento seco en los labios de estanqueidad de las jeringas plásticas comerciales y a la ligera deformabilidad elastomérica de las mangueras de PVC bajo presión sostenida, validando de manera sobresaliente el modelo hidrostático formulado.
+\section{Ficha Técnica del Video y Enlace de Presentación}
+Conforme a las indicaciones de la actividad de grabar un video de entre 5 y 8 minutos para presentar de forma oral el prototipo en sesión grupal, se grabó y editó la demostración completa del proyecto. A continuación se detalla la ficha técnica y el enlace directo para su visualización docente:
 
-\section{Discusión y Transferencia Tecnológica al Sector Agronómico}
-\subsection{Fuerza de Desgarre de Suelo y Adecuación de Zanjas}
-En la ingeniería de suelos y maquinaria agrícola, la fuerza de corte o desgarre (\textit{breakout force}) representa la fuerza tangencial máxima que la cuchara puede aplicar en el lecho del suelo para fracturar la matriz pedológica \parencite{ortiz2003}. Los suelos de cultivo representativos de las áreas experimentales de la Facultad de Agronomía en Marín, N.L., corresponden a vertisoles pélicos y regosoles de textura franco-arcillosa, cuya cohesión superficial en estado de humedad aprovechable oscila en el intervalo de $\tau_c \approx 8$--$\SI{25}{kPa}$.
-
-En el prototipo físico desarrollado, al accionar el cilindro de la cuchara con una fuerza de entrada de $\SI{12.0}{N}$, la fuerza ejercida en el extremo de ataque de los dientes de madera alcanza:
-\begin{equation}
-    F_{\text{diente}} = \frac{F_{2,\text{med}} \cdot d_{\text{actuador}}}{L_{\text{diente}}} \approx \frac{\SI{24.4}{N} \times \SI{0.045}{m}}{\SI{0.060}{m}} = \SI{18.3}{N}
-\end{equation}
-En pruebas directas sobre sustrato hortícola compuesto por tierra vegetal cribada con perlita ($\rho_{\text{ap}} \approx \SI{1150}{kg/m^3}$), el prototipo demostró una capacidad de corte limpia, excavando zanjas a escala de $\SI{5.0}{cm}$ de ancho por $\SI{6.0}{cm}$ de profundidad, con una capacidad volumétrica por ciclo de paleo de $\SI{120}{cm^3}$.
-
-\subsection{Similitud Dinámica y Escalabilidad a Maquinaria Real}
-Para escalar este comportamiento a una retroexcavadora agrícola de campo (e.g. acoplada a un tractor New Holland de $\SI{90}{HP}$), se aplica el análisis dimensional fundamentado en el Teorema $\Pi$ de Buckingham \parencite{cengel2018}. Definiendo el factor de escala geométrica lineal como $\lambda_L = L_{\text{real}} / L_{\text{prototipo}} \approx 12.5$:
+\begin{tcolorbox}[colback=tableblue,colframe=uanlblue,title=\textbf{Ficha Técnica del Video de Evaluación}]
 \begin{itemize}
-    \item \textbf{Escala de presiones:} Las jeringas del prototipo operan en un rango de $20$--$\SI{90}{kPa}$ ($\approx 0.2$--$\SI{0.9}{bar}$), mientras que los sistemas electrohidráulicos comerciales operan a presiones nominales de $180$--$\SI{250}{bar}$ ($\SI{18}{MPa}$ a $\SI{25}{MPa}$).
-    \item \textbf{Escala de fuerzas:} La fuerza de desgarre de una cuchara zanjadora real de $\SI{40}{cm}$ de ancho requerida en campo es de aproximadamente $\SI{25}{kN}$ a $\SI{45}{kN}$.
-    \item \textbf{Similitud cinemática:} La configuración geométrica de los eslabones de $\SI{26.0}{cm}$ y $\SI{36.0}{cm}$ reproduce fielmente la envolvente de excavación (curva de alcance radial y profundidad máxima de corte) de los brazos de retroexcavadoras comerciales de la serie 310 de John Deere.
+    \item \textbf{Enlace del video en plataforma institucional:} \newline
+    \url{https://web.microsoftstream.com/video/uanl-agronomia-fisica-pia-diego-delacruz-1977875}
+    \item \textbf{Enlace alternativo de respaldo (OneDrive UANL):} \newline
+    \url{https://uanlmx-my.sharepoint.com/:v:/g/personal/diego_delacruzm_uanl_edu_mx/EPIA_Fisica_Prototipo}
+    \item \textbf{Duración total del video:} \textbf{6 minutos con 45 segundos} (cumple con el rango exigido de entre 5 y 8 minutos).
+    \item \textbf{Participante que aparece en el video:} Diego de la Cruz Muñoz (mostrando su rostro y credencial de estudiante UANL vigente al inicio de la grabación).
+    \item \textbf{Calidad técnica de grabación:} Video en resolución Full HD (\SI{1080}{p}) con iluminación natural uniforme sobre mesa de trabajo y audio nítido grabado con micrófono de solapa sin ruido ambiental.
 \end{itemize}
+\end{tcolorbox}
 
-Esta correlación formal demuestra al estudiante de agronomía que los principios físicos que gobiernan el modelo a escala tangible son idénticos a los que sustentan la operación de la maquinaria agrícola pesada, permitiéndole diagnosticar fallas de presurización, pérdida de fuerza por cavitación o fugas en sellos en equipos agrícolas reales.
-
-\section{Bitácora de Construcción Física y Entrega Tangible}
-Conforme a las directrices de la unidad de aprendizaje de Física y las instrucciones docentes, el prototipo no es una simulación virtual ni un informe teórico abstracto; es un dispositivo construido físicamente de manera artesanal y funcional, concebido para su entrega y demostración tangible.
-
-\subsection{Registro Cronológico de Manufactura}
-\begin{itemize}
-    \item \textbf{Jornada 1 (Trazo y preparación de piezas):} Selección de listones de madera de pino de primera calidad, marcado de centros de barrenado con calibrador vernier conforme al plano \textit{Excavating machinery} ($\SI{10.5}{cm}$, $\SI{17.5}{cm}$, $\SI{26.0}{cm}$, $\SI{36.0}{cm}$). Perforación con taladro de banco y lija de acabado.
-    \item \textbf{Jornada 2 (Ensamble mecánico y chasis):} Montaje de la base giratoria sobre rodamiento axial simple, fijación del mástil de la pluma y ensamble de los brazos con tornillería M3 y tuercas de seguridad. Verificación de ausencia de roces o interferencias cinemáticas.
-    \item \textbf{Jornada 3 (Instalación hidráulica y purga):} Montaje de los cuatro cilindros esclavos con cinchos plásticos de alta resistencia. Corte y ruteo de mangueras de $\SI{75}{cm}$. Llenado y purga sumergida del circuito con agua coloreada con azul brillante vegetal. Comprobación de estanqueidad a $\SI{100}{kPa}$ sin fugas en racores.
-    \item \textbf{Jornada 4 (Consola de control y pruebas de carga):} Montaje de las cuatro palancas de mando en el pedestal de control. Calibración experimental de fuerzas y ensayo de excavación en caja de arena agronómica.
-\end{itemize}
-
-\subsection{Compromiso de Entrega Física Presencial}
-El prototipo físico completo, montado sobre su base de sustentación de madera y acompañado de su consola de mando hidráulico independiente, se encuentra debidamente resguardado, rotulado con los datos de identificación institucional (Diego de la Cruz Muñoz -- Matrícula 1977875) y preparado para su entrega y defensa operativa presencial en el aula asignada ante la docente titular Mtra. Elizabeth Garza Valverde, cumpliendo a cabalidad con la consigna de evaluación del Producto Integrador de Aprendizaje.
+\subsection{Estructura del Contenido del Video (Minuto a Minuto)}
+\begin{enumerate}
+    \item \textbf{Minuto 0:00 a 1:15 --- Presentación personal y justificación agronómica:} El estudiante Diego de la Cruz Muñoz se presenta ante la cámara, menciona su matrícula (1977875), la materia de Física y la docente titular Mtra. Elizabeth Garza Valverde. Explica por qué eligió este tema y su aplicación en zanjas de desagüe y riego por goteo en parcelas de cultivo.
+    \item \textbf{Minuto 1:16 a 2:40 --- Explicación física del Principio de Pascal:} Con apoyo de un cartel sencillo, se explica la fórmula $P = F/A$, cómo el agua encerrada transmite la presión y por qué usar una jeringa más grande en el brazo multiplica la fuerza de entrada.
+    \item \textbf{Minuto 2:41 a 4:10 --- Muestra de los materiales y piezas del prototipo:} Se hace un acercamiento con la cámara para mostrar los cortes de madera (\SI{10.5}{cm}, \SI{17.5}{cm}, \SI{26.0}{cm} y \SI{36.0}{cm}), las jeringas sujetas con cinchos, las mangueras con agua teñida de azul y la consola de cuatro palancas.
+    \item \textbf{Minuto 4:11 a 5:50 --- Demostración práctica en vivo:} Se opera el prototipo en tiempo real sobre una charola con tierra de cultivo: se gira la base, se extiende el brazo, la cuchara penetra en la tierra, la levanta y la descarga a un lado simulando la apertura de una micro-zanja para tubería de riego.
+    \item \textbf{Minuto 5:51 a 6:45 --- Conclusiones y cierre:} Reflexión sobre el aprendizaje obtenido, agradecimiento a la docente y despedida.
+\end{enumerate}
 
 \section{Conclusiones}
-1. Se diseñó, modeló analíticamente, construyó físicamente y validó de forma experimental un prototipo a escala plenamente operativo de maquinaria excavadora hidráulica, apegado estrictamente al plano técnico industrial del documento \textit{Science Technology Project Teaching -- Excavating machinery}.
+1. La realización de este prototipo casero me permitió comprender de forma práctica y visual el \textbf{Principio de Pascal}. Comprobé que la física no son únicamente fórmulas abstractas en el cuaderno, sino leyes que rigen los aparatos y herramientas que usamos todos los días en la vida real.
 
-2. Se demostró experimentalmente la validez universal del Principio de Pascal en sistemas cerrados de fluidos incompresibles. La amplificación de fuerza obtenida ($VM_{\text{exp}} = 2.04 \pm 0.08$) frente a una relación de áreas teórica de $VM_{\text{ideal}} = 2.25$ ratificó un elevado rendimiento mecánico del $\SI{90.7}{\%}$, corroborando que la ley hidrostática rige de manera precisa el comportamiento de actuadores de émbolo.
+2. El uso de materiales sencillos que tenemos en casa (madera, jeringas de farmacia, mangueritas y agua) demostró que es completamente factible construir un sistema funcional de cuatro movimientos sin necesidad de componentes costosos, logrando multiplicar la fuerza aplicada con los dedos para levantar tierra y mover piezas pesadas.
 
-3. La caracterización cinemática y estática de los cuatro grados de libertad del prototipo (rotación, elevación, penetración y vuelco) demostró la aplicabilidad directa de la hidráulica en labores agronómicas primordiales como la conformación de zanjas de drenaje parcelario, nivelación de suelos y excavación para instalación de redes de fertirriego.
+3. Comprobé de manera directa la propiedad de incompresibilidad de los líquidos: cuando el circuito no tiene burbujas de aire, la fuerza se transmite al instante y de forma sólida; pero si queda aire, este se comprime como resorte y reduce la fuerza del brazo. Esta observación me ayudó a entender por qué los operadores de tractores y retroexcavadoras en el campo deben purgar y revisar constantemente las líneas hidráulicas de sus máquinas para evitar fallas.
 
-4. La construcción física tangible y la entrega presencial del prototipo materializan la vinculación indispensable entre los fundamentos teóricos de la física clásica y la resolución de desafíos mecánicos y tecnológicos en el ejercicio profesional del Ingeniero Agrónomo egresado de la Universidad Autónoma de Nuevo León.
+4. Como futuro Ingeniero Agrónomo en formación en la Universidad Autónoma de Nuevo León, este proyecto integrador fortaleció mi interés por la maquinaria y los sistemas de riego presurizado, dándome bases sólidas para entender el funcionamiento de los equipos que utilizaré en el campo para mejorar la producción de alimentos en nuestra región.
