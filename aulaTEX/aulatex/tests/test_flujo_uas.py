@@ -234,7 +234,10 @@ class FlujoUasUnitTests(unittest.TestCase):
             self.assertGreaterEqual(res.style_score, 80.0)
 
             tex_content = res.tex_path.read_text(encoding="utf-8")
-            self.assertIn("\\def\\actividadtitulo{Diagrama de Ishikawa_S2}", tex_content)
+            self.assertTrue(
+                ("\\def\\actividadtitulo{Diagrama de Ishikawa_S2}" in tex_content)
+                or ("\\def\\actividadtitulo{Diagrama de Ishikawa\\_S2}" in tex_content)
+            )
             self.assertIn("UAS/plantilla-actividad-uas.tex", tex_content)
             self.assertIn("inteligencia artificial", tex_content)
 

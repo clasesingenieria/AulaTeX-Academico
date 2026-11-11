@@ -199,10 +199,13 @@ class RealizarActividadUasAgent:
 
         is_google_sites = "google sites" in title.lower() or "sites" in topic.lower() or "páginas web" in title.lower() or "web" in title.lower()
 
+        safe_title = title.replace("_", "\\_")
+        safe_topic = topic.replace("_", "\\_")
+
         if is_google_sites:
             content = (
                 f"\\section{{Identificación del estudiante y propósito del proyecto}}\n"
-                f"El presente entregable corresponde a la actividad \\textbf{{{title}}} de la semana {week} "
+                f"El presente entregable corresponde a la actividad \\textbf{{{safe_title}}} de la semana {week} "
                 f"en la unidad de aprendizaje de \\textbf{{Herramientas Digitales}} (Licenciatura en Contaduría Pública, Grupo 103 LCP). "
                 f"El propósito formativo consiste en diseñar, estructurar y publicar un portal web comercial funcional utilizando la plataforma "
                 f"\\textbf{{Google Sites}}, orientado a la difusión y prestación de servicios profesionales de contabilidad, auditoría y consultoría fiscal "
@@ -250,15 +253,15 @@ class RealizarActividadUasAgent:
             # Construir el contenido genérico fundamentado
             content = (
                 f"\\section{{Identificación y propósito}}\n"
-                f"El presente trabajo académico corresponde a la \\textbf{{{title}}}, "
+                f"El presente trabajo académico corresponde a la \\textbf{{{safe_title}}}, "
                 f"enmarcada en la semana {week} de la unidad de aprendizaje. "
-                f"El objetivo central radica en analizar y fundamentar sistemáticamente los postulados de \\textbf{{{topic}}}, "
+                f"El objetivo central radica en analizar y fundamentar sistemáticamente los postulados de \\textbf{{{safe_topic}}}, "
                 f"estableciendo su correlación directa con el marco normativo vigente y la práctica contable.\n\n"
                 f"\\section{{Desarrollo temático y análisis conceptual}}\n"
                 f"A continuación se presenta el desglose analítico fundamentado en las fuentes doctrinales y normativas recomendadas:\n\n"
                 f"{conceptos_body}\n\n"
                 f"\\section{{Conclusiones y postura académica}}\n"
-                f"Desde una perspectiva analítica y profesional, considero que el dominio riguroso de {topic} "
+                f"Desde una perspectiva analítica y profesional, considero que el dominio riguroso de {safe_topic} "
                 f"resulta indispensable para asegurar la certeza jurídica y la transparencia patrimonial en las organizaciones. "
                 f"El análisis realizado me lleva a sostener que la observancia de estos principios normativos previene contingencias "
                 f"financieras y fortalece la fe pública del profesional de la contaduría.\n"
@@ -266,7 +269,7 @@ class RealizarActividadUasAgent:
 
         # Envolver en la plantilla de actividad UAS
         manuscript = (
-            f"\\def\\actividadtitulo{{{title}}}\n"
+            f"\\def\\actividadtitulo{{{safe_title}}}\n"
             f"\\def\\actividadtipo{{Reporte Académico Semanal}}\n"
             f"\\def\\uasmateria{{{slug.replace('-', ' ').capitalize()}}}\n"
             f"\\def\\uasestudiante{{{student_name}}}\n"
@@ -334,8 +337,8 @@ class RealizarActividadUasAgent:
 
     def _compile_manuscript(self, tex_path: Path, engine: str = "xelatex") -> tuple[bool, Path | None, list[str]]:
         repo_root = self.workspace.repo_root
-        rel_target = tex_path.relative_to(repo_root)
-        out_dir = tex_path.parent
+        rel_target = tex_path.relative_to(repo_root).as_posix()
+        out_dir = tex_path.parent.as_posix()
         pdf_candidate = tex_path.with_suffix(".pdf")
         errors: list[str] = []
 
@@ -347,18 +350,18 @@ class RealizarActividadUasAgent:
                 pass
 
         try:
-            cmd = ["xelatex", "-interaction=nonstopmode", "-halt-on-error", f"-output-directory={out_dir}", str(rel_target)]
+            cmd = ["xelatex", "-interaction=nonstopmode", "-halt-on-error", f"-output-directory={out_dir}", rel_target]
             proc = subprocess.run(cmd, cwd=repo_root, capture_output=True, text=True, timeout=90)
             if proc.returncode == 0 and pdf_candidate.exists() and pdf_candidate.stat().st_size > 0:
                 return True, pdf_candidate, []
 
             # Intento de respaldo con latexmk
-            cmd_mk = ["latexmk", "-xelatex", "-interaction=nonstopmode", "-file-line-error", f"-outdir={out_dir}", str(rel_target)]
+            cmd_mk = ["latexmk", "-xelatex", "-interaction=nonstopmode", "-file-line-error", f"-outdir={out_dir}", rel_target]
             proc2 = subprocess.run(cmd_mk, cwd=repo_root, capture_output=True, text=True, timeout=120)
             if proc2.returncode == 0 and pdf_candidate.exists() and pdf_candidate.stat().st_size > 0:
                 return True, pdf_candidate, []
 
-            errors.append(f"Compilación fallida con código {proc.returncode}: {proc.stderr[:300]}")
+            errors.append(f"Compilación fallida con código {proc.returncode}: {proc.stderr[:300] or proc.stdout[-300:]}")
         except Exception as ex:
             errors.append(f"Excepción en compilador: {str(ex)}")
 
