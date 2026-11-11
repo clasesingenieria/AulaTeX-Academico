@@ -360,20 +360,33 @@ class MonitorUnadmAgent(MonitorEntregasAgent):
 
         if request.inspect_platform and nav_snapshot is None:
             try:
-                mod_targets = ()
+                mod_targets_list: list[UnadmModuleTarget] = []
                 if request.module_id and request.activity_number:
-                    mod_targets = (
+                    mod_targets_list.append(
                         UnadmModuleTarget(
                             module_id=request.module_id,
                             course_id=cid,
                             local_activity_number=request.activity_number,
                             subject_slug=base_slug,
-                        ),
+                        )
                     )
+                else:
+                    for act_k, act_info in catalog_entry.get("activities", {}).items():
+                        mid_val = act_info.get("module_id")
+                        if mid_val:
+                            mod_targets_list.append(
+                                UnadmModuleTarget(
+                                    module_id=int(mid_val),
+                                    kind=act_info.get("kind", "assign"),
+                                    course_id=cid,
+                                    local_activity_number=int(act_k),
+                                    subject_slug=base_slug,
+                                )
+                            )
                 nav_req = UnadmNavigationRequest(
                     inspect_dashboard=False,
                     course_ids=(cid,),
-                    modules=mod_targets,
+                    modules=tuple(mod_targets_list),
                     output_dir=str(run_dir / "navegacion"),
                 )
                 nav_res = self.nav_agent.inspect(nav_req)
@@ -459,14 +472,16 @@ class MonitorUnadmAgent(MonitorEntregasAgent):
 
         for act in activities_to_eval:
             mod_snap = None
-            if nav_snapshot and request.module_id and str(request.module_id) in nav_snapshot.get("modules", {}):
-                mod_snap = nav_snapshot["modules"][str(request.module_id)]
+            act_cat = catalog_entry.get("activities", {}).get(act, {})
+            act_mid = request.module_id or act_cat.get("module_id")
+            if nav_snapshot and act_mid and str(act_mid) in nav_snapshot.get("modules", {}):
+                mod_snap = nav_snapshot["modules"][str(act_mid)]
 
             rec = self.evaluate_activity(
                 subject_slug=base_slug,
                 activity_number=act,
                 course_id=cid,
-                module_id=request.module_id,
+                module_id=act_mid,
                 nav_snapshot=nav_snapshot,
                 module_snapshot=mod_snap,
             )
@@ -478,8 +493,8 @@ class MonitorUnadmAgent(MonitorEntregasAgent):
                 institution="UnADM",
                 subject_slug=base_slug,
                 activity_number=act,
-                activity_title=f"Actividad {act}",
-                module_id=request.module_id,
+                activity_title=act_cat.get("title", f"Actividad {act}"),
+                module_id=act_mid,
                 course_id=cid,
                 platform_status="Enviado para calificar" if rec.recommended_action == "ya_entregado" else "pendiente_o_borrador",
                 due_date=None,

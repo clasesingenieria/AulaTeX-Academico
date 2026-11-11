@@ -340,11 +340,14 @@ class NavegacionUnadmAgent(PlatformNavigationAgent):
         course_url = f"{UNADM_BASE_URL}/course/view.php?id={course_id}"
         page.goto(course_url, wait_until="domcontentloaded")
         ensure_same_https_host(page.url, UNADM_HOST, UNADM_BASE_URL)
-        course_title = page.locator(".page-header-headings h1, .course-header h1, h1").first.text_content() or f"Curso {course_id}"
+        header_nodes = page.locator(".page-header-headings h1, .course-header h1, .page-header-headings h2, .course-header h2, h1, h2").all_inner_texts()
+        non_empty = [h.strip() for h in header_nodes if h.strip()]
+        course_title = non_empty[0] if non_empty else (page.title() or f"Curso {course_id}")
         
         sections_data: list[dict[str, Any]] = []
         sections = page.locator(".course-section, li.section").all()
         for idx, sec in enumerate(sections, start=1):
+            sec_id = sec.get_attribute("id") or ""
             sec_title_nodes = sec.locator(".sectionname, .section-title, h3").all_inner_texts()
             sec_title = sec_title_nodes[0].strip() if sec_title_nodes else f"Sección {idx}"
             full_txt = sec.inner_text()
@@ -361,10 +364,12 @@ class NavegacionUnadmAgent(PlatformNavigationAgent):
                     })
             sections_data.append({
                 "section_index": idx,
+                "section_id": sec_id,
                 "title": sanitize_platform_text(sec_title, identities),
                 "links_count": len(clean_links),
                 "links": clean_links,
                 "has_week5": "semana 5" in sec_title.lower() or "semana 5" in full_txt.lower(),
+                "has_week6": "semana 6" in sec_title.lower() or "semana 6" in full_txt.lower() or sec_id == "section-7",
             })
 
         assign_links = page.locator('a[href*="/mod/assign/view.php"]').evaluate_all(
