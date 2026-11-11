@@ -1,133 +1,120 @@
-# Actividad 16 · Cronograma
+# Planeación Académica — 📅 Tarea 16: Cronograma de Actividades
 
-Seminario I · Maestria en Gestion Administrativa · ITESCA
+## 1. Identificación verificada
+- **Institución:** ITESCA (`ITESCA Virtual`)
+- **Programa:** Maestría en Gestión Administrativa
+- **Asignatura:** Seminario I (`GGS102`)
+- **Docente:** Dra. Carla Olimpya Zapuche Moreno
+- **Periodo:** 2026-II
+- **Actividad local:** Actividad 16 (Módulo Moodle `2916`)
+- **Calendario publicado:** `Apertura: lunes, 14 de septiembre de 2026, 00:00 | Cierre: domingo, 15 de noviembre de 2026, 23:59`
+- **Validación semántica (`validate_pedagogical`):** `passed`
 
-> **Pendiente de revision academica.** Sin habilitacion de ejecucion ni autorizacion de envio.
+## 2. Consigna oficial extraída (`extraido` / `confirmed`)
+
+📅 Tarea 16: Cronograma de Actividades
 
 
-## 1. Identidad y correspondencia
 
-| Dato | Valor |
-| --- | --- |
-| Identidad editorial | Actividad 16 |
-| Modulo documentado | No documentado |
-| Revision | 2 |
-| Correspondencia | Encabezado de ficha y numeracion del documento maestro; reportes existentes cotejados sin renombrar. |
 
-## 2. Consigna y alcance documental
+🎯 Objetivo
 
-**Origen:** Propuesta editorial; falta consigna docente integra.
+Elaborar el cronograma de actividades del anteproyecto de investigación, organizando las fases, actividades y productos esperados en orden lógico y temporal, conforme a la planeación metodológica del estudio.
 
-Producto previsto
-Cronograma que convierta objetivos y método en actividades, productos, responsables, dependencias y fechas.
+📖 Instrucciones
+Abre tu documento de anteproyecto (Tareas 8 a 15) y revisa que todos los apartados previos estén corregidos, coherentes y actualizados.
+Agrega el apartado 9. Cronograma de Actividades al final de tu anteproyecto. Este cronograma deberá:
+Reflejar las fases del proceso de investigación (planeación, fundamentación, diseño metodológico, trabajo de campo, análisis y redacción, revisión y defensa).
+Indicar las actividades específicas de cada fase.
+Precisar el periodo estimado de ejecución (mes o semestre).
+Definir el producto o resultado esperado de cada actividad.
 
-- [ ] Incluir revisión ética y permisos.
-- [ ] Asignar holgura a tareas críticas.
-- [ ] Vincular hitos con evidencias.
-- [ ] Verificar viabilidad con el calendario institucional.
+Puedes presentar tu cronograma en formato de tabla o diagrama de Gantt, elaborado en Word, Excel o cualquier software de gestión de proyectos (ej. Trello, ProjectLibre, Asana).
 
-## 3. Objetivos y temas
+Deberás adaptar las fases del ejemplo a los capítulos de la tesis que estaban en la tarea 6 y considerar los semestres establecidos (enero–junio 2026, agosto–noviembre 2026, enero–junio 2027).
 
-Objetivo docente no acreditado en la ficha disponible.
+Formato de entrega:
+UN SOLO ARCHIVO Word (.docx) que contenga:
+Portada institucional actualizada.
+Los apartados desarrollados y corregidos 1–9.
+Cronograma de actividades en tabla o diagrama.
+Anexos actualizados: Matriz de Consistencia y Círculo de Covey.
+Redacción clara y coherente, con formato formal e institucional (APA 7ª edición para citas, si aplica).
+👥 Modalidad
 
-Tema editorial: Cronograma.
+Individual.
 
-## 4. Requisitos y preguntas
 
-Los siguientes fragmentos se transcriben de la fuente; su organizacion no crea nuevas exigencias.
 
-- **req-001:** Cronograma que convierta objetivos y método en actividades, productos, responsables, dependencias y fechas.
 
-- **req-002:** - [ ] Incluir revisión ética y permisos.
+📊 Rúbrica de evaluación
+Criterio	Indicador de desempeño	Puntos
+Corrección de observaciones previas	Se evidencia la corrección de las tareas anteriores (especialmente 14 y 15) integradas al documento final.	1.0
+Organización de fases	Las etapas del proceso de investigación están ordenadas lógicamente y reflejan continuidad metodológica.	2.0
+Definición de actividades	Las actividades específicas son claras, medibles y congruentes con los apartados metodológicos del anteproyecto.	2.0
+Periodo y productos esperados	Cada actividad tiene un periodo realista y un producto claramente definido como evidencia de avance.	1.5
+Presentación y formato	UN SOLO ARCHIVO Word con portada institucional, tabla/diagrama claro, ortografía y coherencia visual.	0.5
+Total	7.0
 
-- **req-003:** - [ ] Asignar holgura a tareas críticas.
+✨ Consejo: Tu cronograma debe reflejar una planeación realista y ordenada. Verifica que los tiempos asignados sean factibles y que cada actividad esté alineada con los apartados metodológicos de tu anteproyecto. Este será un instrumento clave para tu seguimiento con el Comité de Posgrado. 🗓️📘
 
-- **req-004:** - [ ] Vincular hitos con evidencias.
+ 3.9 Cronograma de actividades.pdf
+7 de agosto de 2026, 16:12
 
-- **req-005:** - [ ] Verificar viabilidad con el calendario institucional.
+## 3. Requisitos segmentados
 
-## 5. Secuencia editorial propuesta
+- **req-001:** 📅 Tarea 16: Cronograma de Actividades
+- **req-002:** 🎯 Objetivo
+- **req-003:** Elaborar el cronograma de actividades del anteproyecto de investigación, organizando las fases, actividades y productos esperados en orden lógico y temporal, conforme a la planeación metodológica del estudio.
+- **req-004:** 📖 Instrucciones
+- **req-005:** Abre tu documento de anteproyecto (Tareas 8 a 15) y revisa que todos los apartados previos estén corregidos, coherentes y actualizados.
+- **req-006:** Agrega el apartado 9. Cronograma de Actividades al final de tu anteproyecto. Este cronograma deberá:
+- **req-007:** Reflejar las fases del proceso de investigación (planeación, fundamentación, diseño metodológico, trabajo de campo, análisis y redacción, revisión y defensa).
+- **req-008:** Indicar las actividades específicas de cada fase.
+- **req-009:** Precisar el periodo estimado de ejecución (mes o semestre).
+- **req-010:** Definir el producto o resultado esperado de cada actividad.
+- **req-011:** Puedes presentar tu cronograma en formato de tabla o diagrama de Gantt, elaborado en Word, Excel o cualquier software de gestión de proyectos (ej. Trello, ProjectLibre, Asana).
+- **req-012:** Deberás adaptar las fases del ejemplo a los capítulos de la tesis que estaban en la tarea 6 y considerar los semestres establecidos (enero–junio 2026, agosto–noviembre 2026, enero–junio 2027).
+- **req-013:** Formato de entrega:
+- **req-014:** UN SOLO ARCHIVO Word (.docx) que contenga:
+- **req-015:** Portada institucional actualizada.
+- **req-016:** Los apartados desarrollados y corregidos 1–9.
+- **req-017:** Cronograma de actividades en tabla o diagrama.
+- **req-018:** Anexos actualizados: Matriz de Consistencia y Círculo de Covey.
+- **req-019:** Redacción clara y coherente, con formato formal e institucional (APA 7ª edición para citas, si aplica).
+- **req-020:** 👥 Modalidad
+- **req-021:** Individual.
+- **req-022:** 📊 Rúbrica de evaluación
+- **req-023:** Criterio Indicador de desempeño Puntos
+- **req-024:** Corrección de observaciones previas Se evidencia la corrección de las tareas anteriores (especialmente 14 y 15) integradas al documento final. 1.0
+- **req-025:** Organización de fases Las etapas del proceso de investigación están ordenadas lógicamente y reflejan continuidad metodológica. 2.0
+- **req-026:** Definición de actividades Las actividades específicas son claras, medibles y congruentes con los apartados metodológicos del anteproyecto. 2.0
+- **req-027:** Periodo y productos esperados Cada actividad tiene un periodo realista y un producto claramente definido como evidencia de avance. 1.5
+- **req-028:** Presentación y formato UN SOLO ARCHIVO Word con portada institucional, tabla/diagrama claro, ortografía y coherencia visual. 0.5
+- **req-029:** Total 7.0
+- **req-030:** ✨ Consejo: Tu cronograma debe reflejar una planeación realista y ordenada. Verifica que los tiempos asignados sean factibles y que cada actividad esté alineada con los apartados metodológicos de tu anteproyecto. Este será un instrumento clave para tu seguimiento con el Comité de Posgrado. 🗓️📘
+- **req-031:** 3.9 Cronograma de actividades.pdf
+- **req-032:** 7 de agosto de 2026, 16:12
 
-| Paso | Accion | Resultado |
-| --- | --- | --- |
-| 1 | Cotejar consigna, fuentes y requisitos pendientes antes de elaborar. | Notas y fuentes verificadas |
-| 2 | Organizar el producto segun la consigna; distinguir evidencia y propuesta propia. | Borrador del producto solicitado |
-| 3 | Comprobar cobertura, formato, fuentes y conflictos; no enviar automaticamente. | Revision local con pendientes explicitos |
+## 4. Contrato del entregable y rutas del proyecto
+- **Tipo de producto:** `cumulative_word_and_latex_report`
+- **Formato editable:** Word (.docx) acumulativo + LaTeX (.tex) sincronizado (`reporte-seminario-i-Actividad-16.tex`)
+- **Formato de entrega:** DOCX único con apartados acumulados, Matriz de Consistencia y Círculo de Covey
+- **Ruta de entrega local:** `entregas-seminario-i/Tarea16_DeLaCruzMunoz.docx`
+- **Extensión y tipografía:** Documento acumulativo completo con apartado 8 desarrollado conforme a guía 3.8
+- **Carpeta de notas de la actividad:** `referencias-seminario-i/notas-seminario-i/actividad-16-cronograma-de-actividades`
+- **Carpeta de extracción sincronizada:** `extractor-aulatex/conceptos-seminario-i-actividad-16`
 
-## 6. Recursos y evidencias
+## 5. Criterios de evaluación y rúbrica
 
-Recursos pendientes de cotejo. No se presume disponibilidad ni vigencia por aparecer en una propuesta.
+- **Corrección de observaciones previas: Se evidencia la corrección de las tareas anteriores (especialmente 14 y 15) integradas al documento final.** (1.0 pts)
+- **Organización de fases: Las etapas del proceso de investigación están ordenadas lógicamente y reflejan continuidad metodológica.** (2.0 pts)
+- **Definición de actividades: Las actividades específicas son claras, medibles y congruentes con los apartados metodológicos del anteproyecto.** (2.0 pts)
+- **Periodo y productos esperados: Cada actividad tiene un periodo realista y un producto claramente definido como evidencia de avance.** (1.5 pts)
+- **Presentación y formato: UN SOLO ARCHIVO Word con portada institucional, tabla/diagrama claro, ortografía y coherencia visual.** (0.5 pts)
 
-## 7. Productos y formatos
-
-Contrato de producto pendiente de cotejo completo. No se genera un PDF de entrega por defecto.
-
-Formato docente no acreditado.
-
-Cronograma que convierta objetivos y método en actividades, productos, responsables, dependencias y fechas.
-
-- [ ] Incluir revisión ética y permisos.
-- [ ] Asignar holgura a tareas críticas.
-- [ ] Vincular hitos con evidencias.
-- [ ] Verificar viabilidad con el calendario institucional.
-
-Los reportes existentes mantienen su plantilla institucional y estructura de introduccion, desarrollo tematico y conclusiones; no se renumeran ni se recompilan en esta integracion.
-
-## 8. Evaluacion y rubrica
-
-Rubrica pendiente de segmentacion o recuperacion. La ausencia de una tabla no acredita ausencia de criterios docentes.
-
-Se conservan las ponderaciones y discrepancias originales. No se infiere una escala total ni se emite calificacion oficial.
-
-## 9. Politicas
-
-Las politicas docentes permanecen en la consigna literal; su segmentacion esta pendiente. No se presumen permisos de IA, prorroga, nuevos intentos o acceso a terceros.
-
-## 10. Calendario operativo
-
-| Apertura | Prevista | Limite | Cierre | Zona horaria |
-| --- | --- | --- | --- | --- |
-|  |  |  |  |  |
-
-Sin programacion verificable. Fechas vacias no acreditan apertura ni autorizan envios. Moodle es opcional como integracion.
-
-<details>
-<summary>Literales documentales previos, no operativos</summary>
-
-- **Cierre:** 15 de noviembre de 2026, 23:59.
-
-</details>
-
-## 11. Alineacion
-
-Propuesta editorial: contrastar cada requisito con el producto y su criterio de evaluacion; no equivale a validacion academica.
-| Bloque | Estado |
-| --- | --- |
-| Identidad correspondencias | cotejado |
-| Consigna | propuesta pendiente |
-| Objetivos temas | documentados parcialmente |
-| Requisitos preguntas | segmentados |
-| Secuencia | propuesta editorial |
-| Recursos | evidencias locales |
-| Productos | pendiente cotejo |
-| Evaluacion rubrica | pendiente |
-| Politicas | pendiente |
-| Calendario | sin programacion |
-| Alineacion | propuesta editorial |
-| Rutas | existencia verificada |
-| Evidencias revision | needs review |
-
-## 12. Archivos existentes
-
-- **Reporte TEX:** no existe archivo asociado; no se crea por inferencia.
-- **Reporte PDF:** no existe archivo asociado; no se crea por inferencia.
-
-## 13. Revision, estado y procedencia
-
-- Cotejar contrato de producto, politicas y alineacion academica antes de habilitar.
-- La integracion documental no acredita apertura de plataforma, realizacion ni aprobacion academica.
-- Consigna y rubrica docentes completas pendientes de recuperacion/cotejo; no se infieren de la propuesta editorial.
-
-Los estados anteriores se distinguen de las confirmaciones posteriores del maestro y del estado de entregables. No se actualiza la plataforma.
-
-La ficha anterior y sus conversiones se absorbieron completas, con sus SHA-256. No se conservan archivos paralelos ni carpetas de importacion.
+## 8. Secuencia de ejecución bajo coordinación `aulatex`
+1. `realizar-planeación`: consolidación de consigna, rúbrica y trazabilidad documental.
+2. `encontrar-recursos`: descarga autenticada y organización de adjuntos docentes y biblioteca verificada.
+3. `extraer-conceptos`: generación de conceptos e ideas en la carpeta de notas de la actividad.
+4. `realizar-actividad` + `estilo-escribir`: elaboración con plantillas institucionales, refinamiento de estilo y ciclos de calidad.

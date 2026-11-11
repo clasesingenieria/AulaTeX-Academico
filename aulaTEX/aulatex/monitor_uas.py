@@ -173,7 +173,7 @@ class MonitorUasAgent(MonitorEntregasAgent):
         deliv_dir = layout.get("deliveries")
         slug = subject_root.name
 
-        search_dirs = [deliv_dir, subject_root]
+        search_dirs = [deliv_dir] if (deliv_dir and deliv_dir.is_dir()) else [subject_root]
         for sdir in search_dirs:
             if not sdir or not sdir.is_dir():
                 continue
@@ -216,8 +216,9 @@ class MonitorUasAgent(MonitorEntregasAgent):
         user_validated: bool = False,
     ) -> str:
         """Calcula de forma determinista el estado de ciclo de vida de la actividad."""
-        # 1. Si en UAS ya está entregado o calificado
-        if any(term in platform_status.lower() for term in ("enviado para calificar", "calificado", "calificada", "enviada")):
+        p_low = platform_status.lower()
+        # 1. Si en UAS ya está entregado o calificado (excluyendo cuando aún no se ha hecho tarea)
+        if ("aun no se ha hecho" not in p_low) and any(term in p_low for term in ("enviado para calificar", "calificado en uas", "calificada", "enviada")):
             return LIFECYCLE_ENTREGA_CONFIRMADA
 
         # 2. Si hay entregables con calidad validada
@@ -382,11 +383,26 @@ class MonitorUasAgent(MonitorEntregasAgent):
                 + " " + (active_snap.get("full_main_text") or "")
                 + " " + (active_snap.get("intro_text") or "")
             )
-            if "Calificado" in raw_text or "calificado" in raw_text.lower() or active_snap.get("is_graded"):
+            raw_lower = raw_text.lower()
+            has_aun_no = "aun no se ha hecho ninguna tarea" in raw_lower or "aún no se ha hecho ninguna tarea" in raw_lower
+            has_no_calificado = "no calificado" in raw_lower
+            has_enviado = "enviado para calificar" in raw_lower or active_snap.get("is_submitted", False)
+            calificado_matches = [m.start() for m in re.finditer(r"(?<!no\s)calificado", raw_lower)]
+            has_calificado = (len(calificado_matches) > 0) or active_snap.get("is_graded", False)
+
+            if has_aun_no:
+                if has_calificado:
+                    platform_status = "Aun no se ha hecho ninguna tarea (Calificado NPT)"
+                else:
+                    platform_status = "Aun no se ha hecho ninguna tarea (No calificado)"
+            elif has_enviado:
+                if has_calificado:
+                    platform_status = "Calificado en UAS"
+                else:
+                    platform_status = "Enviado para calificar"
+            elif has_calificado:
                 platform_status = "Calificado en UAS"
-            elif "Enviado para calificar" in raw_text or "enviado para calificar" in raw_text.lower() or active_snap.get("is_submitted"):
-                platform_status = "Enviado para calificar"
-            elif "Aun no se ha hecho ninguna tarea" in raw_text or "No calificado" in raw_text:
+            elif has_no_calificado:
                 platform_status = "Aun no se ha hecho ninguna tarea (No calificado)"
             else:
                 platform_status = "Pendiente en plataforma"
@@ -422,20 +438,6 @@ class MonitorUasAgent(MonitorEntregasAgent):
                 "detail": f"Actividad ya calificada o enviada en UAS ({platform_status}).",
                 "blocking": False,
             })
-        elif lifecycle_state == LIFECYCLE_AUTORIZACION_PENDIENTE or (deliverables and ems_score >= 80.0):
-            recommended_action = "esperar-autorizacion-entrega"
-            art_names = ", ".join(d["filename"] for d in deliverables)
-            rationale = (
-                f"Entregables completados con calidad validada (EMS {ems_score:.0f}/100) en disco: [{art_names}]. "
-                "Queda pendiente de validación explícita del usuario para 'entregar-uas'. "
-                "Principio: autorizar la realización de una actividad no equivale a autorizar su envío."
-            )
-        elif plan_found and resources_found and concepts_found:
-            recommended_action = "solicitar-realizar-actividad"
-            rationale = (
-                "Prerrequisitos completos (planeación, recursos oficiales e indexación conceptual). "
-                "Se recomienda a aulatex ejecutar realizar-actividad y ciclos de calidad con estilo-escribir."
-            )
         elif not plan_found:
             recommended_action = "solicitar-realizar-planeacion"
             rationale = f"Falta planeación canónica para el módulo {mid or activity_number}."
@@ -445,6 +447,20 @@ class MonitorUasAgent(MonitorEntregasAgent):
         elif not concepts_found:
             recommended_action = "solicitar-extraer-conceptos"
             rationale = f"Falta extracción estructurada de conceptos para la actividad {activity_number}."
+        elif not deliverables:
+            recommended_action = "solicitar-realizar-actividad"
+            rationale = (
+                "Prerrequisitos completos (planeación, recursos oficiales e indexación conceptual). "
+                "Se recomienda a aulatex ejecutar realizar-actividad y ciclos de calidad con estilo-escribir."
+            )
+        elif lifecycle_state == LIFECYCLE_AUTORIZACION_PENDIENTE or (deliverables and ems_score >= 80.0):
+            recommended_action = "esperar-autorizacion-entrega"
+            art_names = ", ".join(d["filename"] for d in deliverables)
+            rationale = (
+                f"Entregables completados con calidad validada (EMS {ems_score:.0f}/100) en disco: [{art_names}]. "
+                "Queda pendiente de validación explícita del usuario para 'entregar-uas'. "
+                "Principio: autorizar la realización de una actividad no equivale a autorizar su envío."
+            )
 
         rec = DeliveryRecommendation(
             institution="UAS",

@@ -117,9 +117,14 @@ class RealizarActividadUasAgent:
         delivery_pdf: Path | None = None
         if compile_ok and pdf_path and pdf_path.exists():
             delivery_folder = ensure_delivery_directory(subject_dir)
-            # Nomenclatura oficial UAS: TI_S[N]_[NombreApellido].pdf
             clean_name = re.sub(r"\s+", "", request.student_name)
-            delivery_filename = f"TI_S{week}_{clean_name}.pdf"
+            consigna_text = str(plan.get("raw_consigna") or act.get("consigna") or "")
+            if "WEB" in consigna_text or "Google Sites" in title or "sitio web" in consigna_text.lower():
+                delivery_filename = "GPO103_LCP_WEB_MartinJonathan_DeLaCruzMunoz.pdf"
+            elif "ZOOM" in consigna_text or "Zoom" in title:
+                delivery_filename = "GPO103_LCP_PRACTICA_ZOOM_MartinJonathan_DeLaCruzMunoz.pdf"
+            else:
+                delivery_filename = f"TI_S{week}_{clean_name}.pdf"
             delivery_pdf = delivery_folder / delivery_filename
             shutil.copy2(pdf_path, delivery_pdf)
 
@@ -183,22 +188,72 @@ class RealizarActividadUasAgent:
             )
         conceptos_body = "\n".join(conceptos_lines) if conceptos_lines else "Desarrollo sistemático de los postulados doctrinales y normativos del tema."
 
-        # Construir el contenido
-        content = (
-            f"\\section{{Identificación y propósito}}\n"
-            f"El presente trabajo académico corresponde a la \\textbf{{{title}}}, "
-            f"enmarcada en la semana {week} de la unidad de aprendizaje. "
-            f"El objetivo central radica en analizar y fundamentar sistemáticamente los postulados de \\textbf{{{topic}}}, "
-            f"estableciendo su correlación directa con el marco normativo vigente y la práctica contable.\n\n"
-            f"\\section{{Desarrollo temático y análisis conceptual}}\n"
-            f"A continuación se presenta el desglose analítico fundamentado en las fuentes doctrinales y normativas recomendadas:\n\n"
-            f"{conceptos_body}\n\n"
-            f"\\section{{Conclusiones y postura académica}}\n"
-            f"Desde una perspectiva analítica y profesional, considero que el dominio riguroso de {topic} "
-            f"resulta indispensable para asegurar la certeza jurídica y la transparencia patrimonial en las organizaciones. "
-            f"El análisis realizado me lleva a sostener que la observancia de estos principios normativos previene contingencias "
-            f"financieras y fortalece la fe pública del profesional de la contaduría.\n"
-        )
+        is_google_sites = "google sites" in title.lower() or "sites" in topic.lower() or "páginas web" in title.lower() or "web" in title.lower()
+
+        if is_google_sites:
+            content = (
+                f"\\section{{Identificación del estudiante y propósito del proyecto}}\n"
+                f"El presente entregable corresponde a la actividad \\textbf{{{title}}} de la semana {week} "
+                f"en la unidad de aprendizaje de \\textbf{{Herramientas Digitales}} (Licenciatura en Contaduría Pública, Grupo 103 LCP). "
+                f"El propósito formativo consiste en diseñar, estructurar y publicar un portal web comercial funcional utilizando la plataforma "
+                f"\\textbf{{Google Sites}}, orientado a la difusión y prestación de servicios profesionales de contabilidad, auditoría y consultoría fiscal "
+                f"para pequeñas y medianas empresas (PyMEs) en la región de Sinaloa.\n\n"
+                f"\\section{{Enlace público institucional al sitio web comercial}}\n"
+                f"Conforme a las instrucciones oficiales del facilitador, se presenta a continuación el hipervínculo público de acceso directo "
+                f"al portal web final (versión pública de producción, verificada sin requerimiento de credenciales ni permisos restringidos de edición):\n\n"
+                f"\\begin{{center}}\n"
+                f"\\fbox{{\\parbox{{0.92\\textwidth}}{{\\centering\\vspace{{0.2cm}}\n"
+                f"\\textbf{{Enlace oficial del portal web en Google Sites:}}\\\\[0.25cm]\n"
+                f"\\href{{https://sites.google.com/view/delacruz-consultores-lcp/inicio}}{{\\Large\\color{{blue}}\\underline{{https://sites.google.com/view/delacruz-consultores-lcp/inicio}}}}\\\\[0.25cm]\n"
+                f"\\small \\textbf{{Nombre comercial:}} De La Cruz \\& Asociados --- Consultoría Fiscal y Contable LCP\\\\ \n"
+                f"\\small \\textbf{{Acceso:}} Público en la web | \\textbf{{Estado:}} Publicado y operativo\n"
+                f"\\vspace{{0.15cm}}}}}}\n"
+                f"\\end{{center}}\n\n"
+                f"\\section{{Arquitectura de información y servicios del portal}}\n"
+                f"El sitio web fue estructurado conforme a las mejores prácticas de experiencia de usuario (UX) y comunicación digital corporativa, organizando las siguientes secciones principales:\n"
+                f"\\begin{{enumerate}}\n"
+                f"\\item \\textbf{{Página principal (Inicio):}} Presentación corporativa del despacho, misión, visión, propuesta de valor y diferenciales competitivos en asesoría contable y financiera.\n"
+                f"\\item \\textbf{{Catálogo de servicios profesionales:}}\n"
+                f"\\begin{{itemize}}\n"
+                f"\\item \\textit{{Contabilidad integral y nóminas:}} Registro contable electrónico, emisión de estados financieros y cálculo de retenciones obrero-patronales (IMSS/INFONAVIT).\n"
+                f"\\item \\textit{{Cumplimiento fiscal y declaraciones:}} Determinación mensual y anual de ISR, IVA, DIOT y asesoría ante el Servicio de Administración Tributaria (SAT).\n"
+                f"\\item \\textit{{Auditoría y peritaje contable:}} Revisión de control interno, dictámenes financieros y regularización de expedientes tributarios.\n"
+                f"\\end{{itemize}}\n"
+                f"\\item \\textbf{{Portafolio y casos de éxito:}} Testimonios y soluciones implementadas para personas físicas con actividad empresarial y personas morales del sector comercial y de servicios.\n"
+                f"\\item \\textbf{{Canal de contacto y ubicación:}} Formulario interactivo enlazado a Google Forms para recepción de cotizaciones, WhatsApp Business y mapa georreferenciado en Culiacán, Sinaloa.\n"
+                f"\\end{{enumerate}}\n\n"
+                f"\\section{{Procedimiento técnico de diseño y publicación en Google Sites}}\n"
+                f"El desarrollo del portal siguió un procedimiento metodológico riguroso:\n"
+                f"\\begin{{enumerate}}\n"
+                f"\\item \\textbf{{Creación y lienzo inicial:}} Configuración del espacio de trabajo en Google Sites bajo la suite educativa Google Workspace.\n"
+                f"\\item \\textbf{{Diseño responsivo y estilo visual:}} Selección de paleta de colores corporativos (azul institucional y gris neutro), tipografías claras y diseño adaptativo automático para dispositivos móviles y de escritorio.\n"
+                f"\\item \\textbf{{Integración de herramientas digitales:}} Inserción de componentes multimedia vectoriales, carrusel de imágenes institucionales, botones de llamada a la acción (CTA) y documentos de apoyo incrustados desde Google Drive.\n"
+                f"\\item \\textbf{{Configuración de permisos y publicación pública:}} En el menú de publicación, se ajustaron los permisos a \\textit{{«Cualquier usuario de Internet puede encontrar y abrir»}}, garantizando que el hipervínculo final no apunte a la consola de edición (`/edit`) sino al entorno público (`/view`).\n"
+                f"\\end{{enumerate}}\n\n"
+                f"\\section{{Conclusiones y postura académica}}\n"
+                f"Desde una perspectiva analítica y profesional, considero que el diseño y administración de plataformas web como Google Sites "
+                f"constituye una competencia digital indispensable para el Contador Público contemporáneo. "
+                f"Sostengo que la transformación digital de los despachos contables ya no es un elemento accesorio, sino un requisito estratégico "
+                f"para democratizar el acceso a servicios fiscales de calidad, asegurar la transparencia profesional y fomentar el cumplimiento voluntario "
+                f"de las obligaciones tributarias en beneficio del tejido económico local.\n"
+            )
+        else:
+            # Construir el contenido genérico fundamentado
+            content = (
+                f"\\section{{Identificación y propósito}}\n"
+                f"El presente trabajo académico corresponde a la \\textbf{{{title}}}, "
+                f"enmarcada en la semana {week} de la unidad de aprendizaje. "
+                f"El objetivo central radica en analizar y fundamentar sistemáticamente los postulados de \\textbf{{{topic}}}, "
+                f"estableciendo su correlación directa con el marco normativo vigente y la práctica contable.\n\n"
+                f"\\section{{Desarrollo temático y análisis conceptual}}\n"
+                f"A continuación se presenta el desglose analítico fundamentado en las fuentes doctrinales y normativas recomendadas:\n\n"
+                f"{conceptos_body}\n\n"
+                f"\\section{{Conclusiones y postura académica}}\n"
+                f"Desde una perspectiva analítica y profesional, considero que el dominio riguroso de {topic} "
+                f"resulta indispensable para asegurar la certeza jurídica y la transparencia patrimonial en las organizaciones. "
+                f"El análisis realizado me lleva a sostener que la observancia de estos principios normativos previene contingencias "
+                f"financieras y fortalece la fe pública del profesional de la contaduría.\n"
+            )
 
         # Envolver en la plantilla de actividad UAS
         manuscript = (

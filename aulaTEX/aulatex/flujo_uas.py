@@ -637,6 +637,8 @@ class FlujoUasOrchestrator:
             elif rec.recommended_action == "bloqueado_falta_prerrequisitos":
                 # Si faltan planeación, recursos o entregable local, es candidata a realizarse por el flujo
                 pending_activities.append(rec.activity_number)
+            elif rec.recommended_action.startswith("solicitar-"):
+                pending_activities.append(rec.activity_number)
             elif rec.recommended_action in ("esperar-autorizacion-entrega", "ya_entregado"):
                 already_ready.append({
                     "activity": rec.activity_number,

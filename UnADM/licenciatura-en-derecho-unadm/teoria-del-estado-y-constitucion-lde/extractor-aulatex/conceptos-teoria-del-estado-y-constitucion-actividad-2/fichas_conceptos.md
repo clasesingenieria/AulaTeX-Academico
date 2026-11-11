@@ -2,898 +2,1714 @@
 
 Las citas textuales se extrajeron de las fuentes de entrada. La búsqueda puede agrupar referencias del mismo concepto aunque estén en archivos distintos.
 
-## Ficha 01. Absolutismo
+## Ficha 01. contexto institucional
 
 **Calidad estimada:** media
-**Mejor similitud:** 0.1691
-**Similitud promedio:** 0.1272
-**Fuentes:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf
-**Ubicaciones:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 21; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 19; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 24; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 30; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 31; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 33; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 34
+**Mejor similitud:** 0.1700
+**Similitud promedio:** 0.0834
+**Fuentes:** ref-En defensa del Estado de Derecho - Ignacio Campo.txt; ref-Introduccion a la teoria del Estado (Olejnik 202.txt; ref-Razon y voluntad en el Estado de Derecho - Franc.txt; ref-Teoria general del Estado (2a edicion) - Eduardo.txt; ref-Teoria pura del Derecho - Hans Kelsen.txt
+**Ubicaciones:** ref-En defensa del Estado de Derecho - Ignacio Campo.txt, bloque 65; ref-En defensa del Estado de Derecho - Ignacio Campo.txt, bloque 87; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 108; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 128; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 27; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 55; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 69; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 111; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 13; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 151; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 165; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 4; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 62; ref-Teoria general del Estado (2a edicion) - Eduardo.txt, bloque 17; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 237
 
-### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 19 — similitud 0.1691
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 108 — similitud 0.1700
 
-**Detalle de puntaje:** tfidf=0.0991; bonus=0.0700
+**Detalle de puntaje:** tfidf=0.0900; bonus=0.0800
 
-> Colección de Textos sobre Derechos Humanos Finalmente, otra institución creada durante el abso- lutismo fue la diplomacia, integrada por un cuerpo per- manente y especializado de funcionarios, quienes, al ac- tuar conforme a reglas precisas, dieron origen a un derecho público europeo y a un sistema internacional de Estados.30 Resulta importante reflexionar sobre la importancia que jugó el Estado absoluto en la consolidación de los mo- dernos Estados occidentales. El absolutismo introdujo modernidad jurídica, pues creó las instituciones “estatales” que persisten hasta nuestros días: ejército, burocracia, sis- temas nacionales de impuestos y un derecho codificado.
+> La suposición de que la historia de los derechos fundamentales comienza con la Declaración de los Derechos Humanos francesa de 1789 y que es la sedimentación política de la filosofía iluminista francesa es, conforme a lo expuesto, un error, y además un error con efectos lamentables: pues ha contribuido esencialmente a una concepción de los derechos humanos que los separó del contexto institucional del Estado constitucional, relegándolos al plano de las declamaciones. Esta concepción errónea de los derechos humanos conduce -allí donde es políticamente efectiva— al hecho de que si bien se reconocen los derechos humanos, no se los institucionaliza.
 
-### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 24 — similitud 0.1250
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 111 — similitud 0.1139
 
-**Detalle de puntaje:** tfidf=0.0550; bonus=0.0700
+**Detalle de puntaje:** tfidf=0.0939; bonus=0.0200
 
-> Frente al absolutismo de los reyes franceses, Juan Ja- cobo Rousseau, en El contrato social, propondrá un fun- damento racional, no divino, para el surgimiento del Es- tado. Rousseau señaló que frente al estado de naturaleza, los hombres voluntariamente pactan, consienten, convie- nen en renunciar a su fuerza y libertad originales para ase- gurar su conservación.
+> Sin embargo, si queremos explicar cómo se desenvuelven los mecanismos de pertenencia a los sistemas jurídicos, más allá del hecho de que nos encontremos ante un Ordenamiento constitucional o no, la separación kelseniana entre sistemas dinámicos y sistemas estáticos es difícilmente sostenible 457. Y ello, porque, más allá del sentido que dicha distinción tuviera en el contexto de la teoría pura, los sistemas jurídicos, incluyan los contenidos de los sistemas constitucionales u otros, confi- guran criterios de pertenencia que comparten y aúnan exigen- cias o rasgos de los sistemas dinámicos y de los sistemas está- ticos.
 
-### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 31 — similitud 0.1213
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 13 — similitud 0.1058
 
-**Detalle de puntaje:** tfidf=0.0513; bonus=0.0700
+**Detalle de puntaje:** tfidf=0.0858; bonus=0.0200
 
-> Del concepto racional normativo de constitución se derivó también la idea de la “despersonalización de la soberanía’”, pues si por ésta se entiende el poder de man- do absoluto, ahora la constitución será la soberana, al ser ella quien crea todos los poderes de mando, sin que al- gún otro poder esté por encima de ella.66 Además, el con- cepto también permitió terminar con todo el elemento personal histórico y socialmente particularizado –carac- terístico del absolutismo– del Estado, pues lo presenta como un ente racional y objetivo.67 La constitución es, pues, el instrumento a partir del cual el Estado se sujetará al Derecho, con lo que se crea entonces el Estado de Derecho.
+> Por tanto, una definición explicativa de ‘Estado de Derecho’ tiene en cuenta el uso que en la comunidad lingüística (tanto la académica como la no académica) se hace del término. Presen- ta una comprensión del mismo que intentará no estar en con-
 
-### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 34 — similitud 0.1209
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 165 — similitud 0.0962
 
-**Detalle de puntaje:** tfidf=0.0509; bonus=0.0700
+**Detalle de puntaje:** tfidf=0.0662; bonus=0.0300
 
-> Estado de Derecho y Principio de Legalidad de Derecho se requiere forzosamente que la ley sea el producto de la representación popular, por lo que se ex- cluye el derecho creado por una sola voluntad indivi- dual, como sucede en el caso de las dictaduras.74 b. División de poderes Como se señaló en el apartado anterior, la principal garan- tía para evitar el abuso del poder es evitar su concentra- ción en uno sólo, como ocurrió durante el absolutismo. En este sentido, un Estado de Derecho supone autoridades distintas en la creación y aplicación de la ley.
+> Constitucionalización del Ordena- Derecho natural: 76, 162, 163, 189,  miento: 232, 233, 241 213, 245, 247, 248, 294-299, 305 Contexto paramétrico: 179, 180, 349 — proceso de positivación: 43, 61, Contexto estratégico: 179, 180 68, 195, 208, 209, 214 Corrección estructural: 144 — proceso de subjetivización: Corrección funcional: 120, 144 221, 222 Coto vedado: 299-305, 322, 337 — constitucionalización del: 69, Crisis de la Ley: 186-190 212, 219 Cultura de la legalidad: 147 Derechos fundamentales:  — carácter sustantivo: 191-214 Debilidad de la voluntad: 311-314, — como límites al Poder: 31, 63,  317, 329, 339 204, 209, 210, 238, 272, 274 Decisiones: — como mínimo moral común:  — de primer...
 
-### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 21 — similitud 0.1208
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 55 — similitud 0.0843
 
-**Detalle de puntaje:** tfidf=0.0508; bonus=0.0700
+**Detalle de puntaje:** tfidf=0.0543; bonus=0.0300
 
-> Sin embargo, es sólo con la igualdad formal que se consiguió con la construcción del Estado de Derecho que se pudo superar esa pervivencia del modelo jurídico político medieval. Este ideal está expresamente señalado en la Declara- ción de los Derechos del Hombre y del Ciudadano, resultado fun- damental de la revolución francesa, que muy bien sirve para explicar la construcción del nuevo modelo frente al arrumbado absolutismo. Si ya en su primer artículo se dirá que «Los hom- bres nacen y permanecen libres e iguales en derechos», en el artículo 6 se establecerá que «La ley es la expresión de la «volun- tad general».
+> 394 y ss. 84  Introducción a la teoría del Estado ... Desde el punto de vista jurídico no interesan para la definición del concepto de Estado del derecho internacional todas las cuestiones relativas a las propiedades del poder estatal; no interesan, por ejemplo, los problemas de legitimidad, de la estructura constitucional, las condiciones históricas de su origen, los presupuestos sociológicos, etc.
 
-### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 33 — similitud 0.1203
+### ref-En defensa del Estado de Derecho - Ignacio Campo.txt — bloque 87 — similitud 0.0834
 
-**Detalle de puntaje:** tfidf=0.0503; bonus=0.0700
+**Detalle de puntaje:** tfidf=0.0634; bonus=0.0200
 
-> Ya la propia Declaración de los Derechos del Hombre y del Ciudadano, analizada en el apartado anterior, apuntó los primeros: 1) la división de poderes; 2) la garantía de los de- rechos fundamentales; 3) la primacía de ley por ser expre- sión de la voluntad general frente a las demás normas jurí- dicas, y 4) la soberanía nacional. A pesar de que el Estado de Derecho es el resultado de una doctrina económica, esto es, el liberalismo, y re- presenta el triunfo de la burguesía frente al absolutismo, se considera una conquista histórica irreversible.
+> En nuestros actuales sistemas políticos existe una crítica res- pecto a la falta de representación de la ciudadanía mediante la actuación de los partidos políticos, que, en este sentido, cada vez parece que representan antes a grupos de presión social que se mantienen ocultos o semiocultos ante el posible control de la opinión pública, que al conjunto de la ciudadanía o incluso a quienes les conceden su voto en las elecciones generales 309.
 
-### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 19 — similitud 0.1202
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 4 — similitud 0.0771
 
-**Detalle de puntaje:** tfidf=0.0502; bonus=0.0700
+**Detalle de puntaje:** tfidf=0.0471; bonus=0.0300
 
-> Además, al no haberse desplazado el poder político de los nobles, éstos siguieron dominando a las masas, cuyo descontento aumentaba progresivamente. Lo que sí fortaleció el absolutismo fue el desarrollo de los capitales mercantiles y manufactureros. Esto permitió la consolidación de la burguesía, que asumirá un papel pro- tagónico en el surgimiento del Estado moderno.
+> Irremediablemente, como se acaba de señalar, el teórico del Derecho se desenvuelve entre ambos extremos, lo cual no quiere decir que necesariamente tenga que situarse en alguno de ellos. Precisamente el constitucionalismo le permite al teórico del Derecho situarse en un punto cercano a la equidistancia, desde el momento en que la configuración efectiva de los sistemas jurídicos constitucionales provoca la discusión sobre cuestiones sumamente relevantes para la Teo- ría del Derecho desde una perspectiva generalizadora.
 
-### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 30 — similitud 0.1198
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 151 — similitud 0.0755
 
-**Detalle de puntaje:** tfidf=0.0498; bonus=0.0700
+**Detalle de puntaje:** tfidf=0.0555; bonus=0.0200
 
-> Esto pone a la asamblea en la misma posición de los monarcas absolutos. Para no incu- rrir en los mismos excesos del absolutismo, la asamblea ejercerá su soberanía en el mayor acto de supremacía, esto es, expedirá su Constitución, para dividir el poder público y establecer los derechos de los ciudadanos. Esto quedó reflejado en el artículo 16 de la Declaración: “Artículo 16.
+> Así, se ha propuesto una Constitución más flexible pero mejor garantizada 642, una clarificación de los criterios que determinan el «atrincheramiento» de los derechos en la Consti- tución 643, un constitucionalismo «débil», que vincule el diseño institucional adecuado a las circunstancias del contexto 644, un modelo en el que el control de constitucionalidad sea enervable a través de la mayoría parlamentaria ordinaria que se exige para la aprobación de las leyes 645o la imprescindible vinculación al Parlamento del último órgano competente para la atribución de significado a las normas de derechos fundamentales 646.
 
-**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+### ref-Teoria general del Estado (2a edicion) - Eduardo.txt — bloque 17 — similitud 0.0741
 
-## Ficha 02. Antiguedad
+**Detalle de puntaje:** tfidf=0.0541; bonus=0.0200
 
-**Calidad estimada:** sin hallazgos
-**Mejor similitud:** 0.0000
-**Similitud promedio:** 0.0000
-**Fuentes:** Sin fuentes detectadas
-**Ubicaciones:** Sin ubicaciones detectadas
+> Evans-Pritchard y Meyer Fortes.21 Su objeto de investigación era precisamente el aspecto antropo- lógico de la política, por lo que analizaron sociedades vivas del África colonizada —que todavía mantenían una gran cantidad de estructuras originales— para detec- tar las formas de organización política. En la obra compilada por ambos autores, Los sistemas políticos africanos, se estudian ocho sociedades de aquel continente, con diversa organización.
 
-No se localizaron citas textuales por encima del umbral configurado.
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 128 — similitud 0.0720
 
-**Observación automática:** No se localizaron fragmentos por encima del umbral configurado. Conviene revisar el concepto o ampliar el corpus.
+**Detalle de puntaje:** tfidf=0.0620; bonus=0.0100
 
-## Ficha 03. breve etapa
+> Conforme a esto, el liberalismo económico es un aliado del liberalismo constitucional cuando y solo en la medida en que junto con los derechos humanos y la división de poderes están garantizadas las seguridades jurídicas, influencias políticas y libertades relevantes para la economía. Pero esta alianza puede resultar poco segura cuando un régimen autoritario promete garantizar estas libertades económicamente relevantes. § 51.
 
-**Calidad estimada:** baja
-**Mejor similitud:** 0.0812
-**Similitud promedio:** 0.0622
-**Fuentes:** Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf; En defensa del estado de derech - Ignacio Campoy Cervera.pdf; Teoria pura del derecho - Hans Kelsen.pdf
-**Ubicaciones:** Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 18; Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 22; Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 379; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 18; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 22; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 59; Teoria pura del derecho - Hans Kelsen.pdf, p. 256; Teoria pura del derecho - Hans Kelsen.pdf, p. 53
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 27 — similitud 0.0680
 
-### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 22 — similitud 0.0812
+**Detalle de puntaje:** tfidf=0.0380; bonus=0.0300
 
-**Detalle de puntaje:** tfidf=0.0712; bonus=0.0100
+> La proposición “la verdad se va a imponer” no es a primera vista convincente, porque hay demasiados ejemplos en que la verdad lleva las de perder en un proceso político concreto. Pero ella tiene un efecto moral en profundidad, a largo plazo.
 
-> Éstas deberán ser proporcionales al hecho realizado y tendrán como fin la reinserción y la reintegración social y familiar del adolescente, así como el pleno desarrollo de su persona y capacidades. El internamiento se utilizará sólo como medida extrema y por el tiempo más breve que proceda, y podrá aplicarse únicamente a los adolescentes mayores de catorce años de edad, por la comisión o participación en un hecho que la ley señale como delito. Párrafo reformado DOF 02-07-2015 22 de 416
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 69 — similitud 0.0675
 
-### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 22 — similitud 0.0812
+**Detalle de puntaje:** tfidf=0.0575; bonus=0.0100
 
-**Detalle de puntaje:** tfidf=0.0712; bonus=0.0100
+> Estado constitucional con división de poderes: garantía institucional de la inde- pendencia personal y material del juez; división institucional entre el poder legisla- tivo y el ejecutivo; el principio de la reserva de la ley (limitaciones de la libertad y de la propiedad solo sobre la base de leyes formales), sistemas de limitaciones mutuas de los poderes para lograr la cooperación y el control al servicio de las garantías de la juridicidad formal y material (checks and balances); control judicial del legislador por medio de la jurisdicción constitucional; etc. 5.
 
-> Éstas deberán ser proporcionales al hecho realizado y tendrán como fin la reinserción y la reintegración social y familiar del adolescente, así como el pleno desarrollo de su persona y capacidades. El internamiento se utilizará sólo como medida extrema y por el tiempo más breve que proceda, y podrá aplicarse únicamente a los adolescentes mayores de catorce años de edad, por la comisión o participación en un hecho que la ley señale como delito. Párrafo reformado DOF 02-07-2015 22 de 414
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 237 — similitud 0.0575
 
-### Teoria pura del derecho - Hans Kelsen.pdf — p. 53 — similitud 0.0732
+**Detalle de puntaje:** tfidf=0.0475; bonus=0.0100
 
-**Detalle de puntaje:** tfidf=0.0632; bonus=0.0100
+> atribuida a la comunidad constituida mediante ese orden jurídico, el Estado. La terminología tradicional -como se mostro anteriormente en otro contexto- no se adecua a esto.
 
-> El derecho es un orden de la coacción, y en cuanto orden coactivo y conforme a su evolución, un sistema de seguridad y un orden de paz. Pero así como cabe concebir más estrictamente el concepto de seguridad colectiva, y considerar que se da sólo cuando aparece cierta centralización del monopolio de la coacción comunitaria, puede también admi- tirse que la pacificación de la comUi.idad jurídica sólo surge en una etapa superior de la evolución del derecho; en aquella etapa, pues, en que la defensa propia está, por lo menos en principio, prohibida y, en que, por ende, aparece la seguridad colectiva en un sentido más restringido.
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 62 — similitud 0.0528
 
-### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 18 — similitud 0.0542
+**Detalle de puntaje:** tfidf=0.0328; bonus=0.0200
 
-**Detalle de puntaje:** tfidf=0.0442; bonus=0.0100
+> En segundo lugar, el problema derivado de lo que podríamos con- siderar el valor moral del imperio de la ley. Pero antes de pasar a estas cuestiones, parece necesario efectuar una breve referencia a lo que podríamos considerar el contexto no institucionalizado del imperio de la ley. La alusión a la concepción formal del imperio de la ley necesariamente debe ser completada con una referencia a las condiciones del contexto en el que aquel va a desarrollar su virtualidad.
 
-> Los funcionarios y empleados públicos respetarán el ejercicio del derecho de petición, siempre que ésta se formule por escrito, de manera pacífica y respetuosa; pero en materia política sólo podrán hacer uso de ese derecho los ciudadanos de la República. A toda petición deberá recaer un acuerdo escrito de la autoridad a quien se haya dirigido, la cual tiene obligación de hacerlo conocer en breve término al peticionario. Artículo original DOF 05-02-1917 Artículo 9o.
+### ref-En defensa del Estado de Derecho - Ignacio Campo.txt — bloque 65 — similitud 0.0522
 
-### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 18 — similitud 0.0542
+**Detalle de puntaje:** tfidf=0.0422; bonus=0.0100
 
-**Detalle de puntaje:** tfidf=0.0442; bonus=0.0100
+> Pero se trastornan los con- ceptos de judicialidad y jurisdicción, como también la garantía institucional de la burocracia profesional alemana, cuando, en todos los casos en que por razones prácticas aparece como 236  Schmitt, Carl, «Estructura del Estado y Derrumbamiento del Segun- do Reich. «La Victoria del Burgués sobre el Soldado»», cit., pp. 82-83.
 
-> Los funcionarios y empleados públicos respetarán el ejercicio del derecho de petición, siempre que ésta se formule por escrito, de manera pacífica y respetuosa; pero en materia política sólo podrán hacer uso de ese derecho los ciudadanos de la República. A toda petición deberá recaer un acuerdo escrito de la autoridad a quien se haya dirigido, la cual tiene obligación de hacerlo conocer en breve término al peticionario. Artículo original DOF 05-02-1917 Artículo 9o.
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 9 referencia(s) de baja similitud que podrían introducir ruido.
 
-### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 59 — similitud 0.0535
-
-**Detalle de puntaje:** tfidf=0.0435; bonus=0.0100
-
-> En este último sentido, me parece bastante significativa la frase con la que abre sus propias conclusiones a ese libro suyo: «Sólo después de esta resumi- da y breve ojeada sobre la situación actual de la ciencia jurídica alemana, podrán reconocer los juristas la profunda y decisiva significación del nuevo concepto de jurista introducido en Alemania por el movimiento nacionalsocialista». (En Sch- mitt, Carl, Sobre los tres modos de pensar la ciencia jurídica, cit., p. 75).
-
-### Teoria pura del derecho - Hans Kelsen.pdf — p. 256 — similitud 0.0521
-
-**Detalle de puntaje:** tfidf=0.0421; bonus=0.0100
-
-> Desde el punto de vista de una consideración orientada a la dinámica del derecho, la implantación de una norma individual por el tribunal constituye una etapa intermedia en el proceso iniciado con la erección de la constitución, y que, pasando por la legislación y la costumbre, lIeva a la sentencia judicial y de ésta, a la ejecución de la sanción. Este proceso, en el cual el derecho se autorreproduce permanentemente, va de 10 general (o abstracto) a 10 indivi- dual (o concreto).
-
-### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 379 — similitud 0.0485
-
-**Detalle de puntaje:** tfidf=0.0385; bonus=0.0100
-
-> CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Última Reforma DOF 07-10-2026 e) Para Magistradas y Magistrados de Circuito y Juezas y Jueces de Distrito podrán elegir hasta  cinco mujeres y hasta cinco hombres. La etapa de preparación de la elección extraordinaria del año 2025 iniciará con la primera sesión que  el Consejo General del Instituto Nacional Electoral celebre dentro de los siete días posteriores a la  entrada en vigor del presente Decreto. La jornada electoral se celebrará el primer domingo de junio del año 2025.
-
-**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 6 referencia(s) de baja similitud que podrían introducir ruido.
-
-## Ficha 04. Edad Media
+## Ficha 02. teoría constitución
 
 **Calidad estimada:** media
-**Mejor similitud:** 0.2492
-**Similitud promedio:** 0.1549
-**Fuentes:** Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf; En defensa del estado de derech - Ignacio Campoy Cervera.pdf; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf; Teoria pura del derecho - Hans Kelsen.pdf
-**Ubicaciones:** Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 264; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 263; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 19; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 31; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 11; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 22; Teoria pura del derecho - Hans Kelsen.pdf, p. 170; Teoria pura del derecho - Hans Kelsen.pdf, p. 47
+**Mejor similitud:** 0.1682
+**Similitud promedio:** 0.1069
+**Fuentes:** ref-Constitucion Politica de los Estados Unidos Mexi.txt; ref-En defensa del Estado de Derecho - Ignacio Campo.txt; ref-Introduccion a la teoria del Estado (Olejnik 202.txt; ref-Razon y voluntad en el Estado de Derecho - Franc.txt; ref-Teoria general del Estado (2a edicion) - Eduardo.txt; ref-Teoria pura del Derecho - Hans Kelsen.txt
+**Ubicaciones:** ref-Constitucion Politica de los Estados Unidos Mexi.txt, bloque 1; ref-Constitucion Politica de los Estados Unidos Mexi.txt, bloque 93; ref-En defensa del Estado de Derecho - Ignacio Campo.txt, bloque 30; ref-En defensa del Estado de Derecho - Ignacio Campo.txt, bloque 54; ref-En defensa del Estado de Derecho - Ignacio Campo.txt, bloque 64; ref-En defensa del Estado de Derecho - Ignacio Campo.txt, bloque 67; ref-En defensa del Estado de Derecho - Ignacio Campo.txt, bloque 72; ref-En defensa del Estado de Derecho - Ignacio Campo.txt, bloque 73; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 159; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 100; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 107; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 111; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 118; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 150; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 152; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 164; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 3; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 41; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 43; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 51; ref-Teoria general del Estado (2a edicion) - Eduardo.txt, bloque 109; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 193; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 227
 
-### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 19 — similitud 0.2492
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 159 — similitud 0.1682
 
-**Detalle de puntaje:** tfidf=0.1692; bonus=0.0800
+**Detalle de puntaje:** tfidf=0.1382; bonus=0.0300
 
-> Frente a la poliarquía propia de la Edad Media, en la que los miembros de los diferentes estamentos sociales, gremios o ciudades existentes debían de regirse, más allá de las normas comunes, por las normas que les eran propias, el Estado moder- no se construyó sobre la base de la configuración de un poder 19
+> Si se habla de autogobierno de una comunidad política mediante leyes, se plantea la cuestión de saber si tal autogobierno es compatible con la imposición heterónoma de las leyes. La pregunta solo puede contestarse afirmativamente si 252 La Convención nacional decidió el 21/9/1792 que no puede haber una constitución  que no haya sido aceptada por el pueblo. Cfr. supra, § 71.
 
-### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 11 — similitud 0.2222
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 152 — similitud 0.1549
 
-**Detalle de puntaje:** tfidf=0.1422; bonus=0.0800
+**Detalle de puntaje:** tfidf=0.1349; bonus=0.0200
 
-> El Estado territorial representa, pues, el punto de par- tida sobre el cual se articularán los modelos de Estado desarrollados tanto en la Edad Media como en la Edad Moderna. A ellos se hará referencia en los siguientes apartados. iii.
+> Zimmerling, Centro de Estudios  Constitucionales, Madrid, 1991. AGUILÓ REGLA, J., «Sobre la Constitución del Estado Constitucio-  nal», Doxa, n.º 24, 2001. — «Sobre el constitucionalismo y la resistencia constitucional»,  Doxa, n.º 26, 2003. — «Cuatro pares de concepciones opuestas de la Constitución», en  AGUILÓ REGLA, J., ATIENZA, J., RUIZ MANERO, J, Fragmentos  para una teoría de la Constitución. -— «Sobre las contradicciones (tensiones) del constitucionalismo y las  concepciones de la Constitución» en CARBONELL, M., GARCÍA  JARAMILLO, L. (eds.), El canon neoconstitucional. AGUILÓ REGLA, J., ATIENZA, J., RUIZ MANERO, J, Fragmentos  para una teoría de la Constitución, Iustel, Madrid, 2007.
 
-### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 31 — similitud 0.1673
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 111 — similitud 0.1479
 
-**Detalle de puntaje:** tfidf=0.0873; bonus=0.0800
+**Detalle de puntaje:** tfidf=0.1179; bonus=0.0300
 
-> De esta manera, ese pluralismo social existente no puede dejar de ser un disvalor social, por lo que será duramente criti- cado por Schmitt en distintas ocasiones. Y es que cabe identifi- car detrás de ese pluralismo social a los poderes indirectos, que no son otros que los supervivientes desde la misma Edad Media, que siguen pugnando por hacer valer sus intereses par- ticulares frente al interés general.
+> Sin embargo, si queremos explicar cómo se desenvuelven los mecanismos de pertenencia a los sistemas jurídicos, más allá del hecho de que nos encontremos ante un Ordenamiento constitucional o no, la separación kelseniana entre sistemas dinámicos y sistemas estáticos es difícilmente sostenible 457. Y ello, porque, más allá del sentido que dicha distinción tuviera en el contexto de la teoría pura, los sistemas jurídicos, incluyan los contenidos de los sistemas constitucionales u otros, confi- guran criterios de pertenencia que comparten y aúnan exigen- cias o rasgos de los sistemas dinámicos y de los sistemas está- ticos.
 
-### Teoria pura del derecho - Hans Kelsen.pdf — p. 47 — similitud 0.1652
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 227 — similitud 0.1439
 
-**Detalle de puntaje:** tfidf=0.0852; bonus=0.0800
+**Detalle de puntaje:** tfidf=0.1039; bonus=0.0400
 
-> Así, leemos en la Biblia 21 que un buey que ha matado a un hombre, debe ser muerto. En la Antigüedad existla en Atenas un tribunal especial ante el cual se procesaba una piedra o una espada, o cualquier objeto que hubiera provocado la muerte de un hom- bre, hay que suponer que sin intención.” Y todavía en la Edad Media era posible querellar a un animal, por ejemplo, a un toro, que hubiera producido la muerte de un ser humano, o a la langosta que hubiera destruido la cosecha.
+> Si los tribunales están facultados para producir, no sólo normas jurídicas individuales, sino también generales, comienzan a competir con el órgano legislativo establecido por la constitución, lo cual significa una descentraliza· ción de la función legislativa. En este respecto, es decir, en lo tocante a la relación entre el órgano legislativo y los tribunales, cabe distinguir dos tipos técnicamente diferentes de sistemas jurídicos. Según uno de esos tipos, la 260 HANS KELSEN
 
-### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 22 — similitud 0.1615
+### ref-En defensa del Estado de Derecho - Ignacio Campo.txt — bloque 72 — similitud 0.1331
 
-**Detalle de puntaje:** tfidf=0.0815; bonus=0.0800
+**Detalle de puntaje:** tfidf=0.1131; bonus=0.0200
 
-> Estado de Derecho y Principio de Legalidad zar dicho protagonismo: derechos naturales derivados del examen racional de la naturaleza humana.37 El individualismo es una reacción a la “disolución del individuo en comunidades”, que existía en la Edad Media, pues propone al hombre burgués como protagonista de la Historia. Supone un interés en todos los aspectos y niveles de su vida, y, en consecuencia, reclamará libertad frente al Estado.
+> 259  Y eso aunque en su Teoría de la Constitución reconociese que «La Declaración solemne de derechos fundamentales significa el establecimiento de principios sobre los cuales se apoya la unidad política de un pueblo y cuya vigencia se reconoce como el supuesto más importante del surgimiento y for- mación incesante de esa unidad». (En Schmitt, Carl, Teoría de la Constitución, cit., p. 167).
 
-### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 263 — similitud 0.1028
+### ref-En defensa del Estado de Derecho - Ignacio Campo.txt — bloque 54 — similitud 0.1304
 
-**Detalle de puntaje:** tfidf=0.0828; bonus=0.0200
+**Detalle de puntaje:** tfidf=0.1104; bonus=0.0200
 
-> La obligatoriedad del Estado de garantizar la educación media superior, como deber del mismo de ofrecer un lugar para cursarla a quien teniendo la edad típica hubiera concluido la educación básica, se realizará de manera gradual y creciente a partir del ciclo escolar 2012-2013 y hasta lograr la cobertura total en sus diversas modalidades en el país a más tardar en el ciclo escolar 2021-2022, con la concurrencia presupuestal de la Federación y de las entidades federativas, y en los términos establecidos en los instrumentos del Sistema Nacional y los Sistemas Estatales de Planeación Democrática del Desarrollo. Tercero.
+> Hay que tener presente que Schmitt ahí no estaba refiriéndose con «pueblo» ni al «sujeto del Poder consti- tuyente», ni al «portador de la opinión pública y sujeto de aclamaciones», sino al pueblo como «entidad organizada y formada por ley constitucional, siendo de observar que aquí, en realidad, no es el pueblo el formado y organizado, sino que existe sólo un procedimiento para las elecciones o la votación, y la voluntad del pueblo surge sólo como resultado de un sistema de vigencias o acaso ficcio- nes». (Véanse las citas en Schmitt, Carl, Teoría de la Constitución, cit., pp. 333, 234 y 245, respectivamente).
 
-### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 264 — similitud 0.1028
+### ref-En defensa del Estado de Derecho - Ignacio Campo.txt — bloque 30 — similitud 0.1219
 
-**Detalle de puntaje:** tfidf=0.0828; bonus=0.0200
+**Detalle de puntaje:** tfidf=0.1019; bonus=0.0200
 
-> La obligatoriedad del Estado de garantizar la educación media superior, como deber del mismo de ofrecer un lugar para cursarla a quien teniendo la edad típica hubiera concluido la educación básica, se realizará de manera gradual y creciente a partir del ciclo escolar 2012-2013 y hasta lograr la cobertura total en sus diversas modalidades en el país a más tardar en el ciclo escolar 2021-2022, con la concurrencia presupuestal de la Federación y de las entidades federativas, y en los términos establecidos en los instrumentos del Sistema Nacional y los Sistemas Estatales de Planeación Democrática del Desarrollo. Tercero.
+> 12-13. 106  En Schmitt, Carl, Teoría de la Constitución, cit., p. 230.
 
-### Teoria pura del derecho - Hans Kelsen.pdf — p. 170 — similitud 0.0683
+### ref-En defensa del Estado de Derecho - Ignacio Campo.txt — bloque 73 — similitud 0.1180
 
-**Detalle de puntaje:** tfidf=0.0483; bonus=0.0200
+**Detalle de puntaje:** tfidf=0.0980; bonus=0.0200
 
-> Ya tenemos cierto mínimo de división del trabajo cuando el orden -por ejemplo, un orden jurídico primitivo- determina que ciertas funciones, como la comprobación del hecho delictuoso y la ejecución de las sanciones previs- tas, no puedan ser llevadas a cabo por cualquier individuo sometido a ese )rden, sino sólo por los hombres de cierta edad; o cuando, conforme al derecho :enido por válido, no se considera constituida una costumbre productora de ferecho por el comportamiento de todos los individuos sujetos al orden jurí- fico, sino por el comportamiento de la mayoría de los jurídicamente capaces; o cuando, según el derecho válido, sólo los hombres que han alcanzado cierta edad determinada...
+> Con esta biparti- ción se explica el esquema constituyente típicamente bipolar del Estado constitucional burgués, cuya Constitución, como es sabi- do, consistía en una parte de derecho fundamental, o sea dere- chos fundamentales y derechos de libertades de la sociedad, com- puesta por individuos libres y ella misma libre, es decir no estatal y sin «Constitución»; y una parte normativa organizativa, o sea vinculante y constituyente del Estado. La parte liberal de los 261  Schmitt, Carl, Teoría de la Constitución, cit., pp. 138-139.
 
-**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 1 referencia(s) de baja similitud que podrían introducir ruido.
+### ref-En defensa del Estado de Derecho - Ignacio Campo.txt — bloque 64 — similitud 0.1168
 
-## Ficha 05. Estado
+**Detalle de puntaje:** tfidf=0.0968; bonus=0.0200
+
+> Por eso, aunque Schmitt todavía señalase en su Teoría de la Constitución, antes del pleno desarrollo de sus planteamientos sobre el decisionismo judicial, que era posible la compatibili- dad entre el control judicial de las normas (en todo caso referi- do al modelo del control difuso de la Constitución) con el prin- cipio de la separación de poderes, dentro de la estructura del Estado de Derecho de la Constitución de Weimar; hay que entender que ese planteamiento estaba circunscrito, en todo caso, a la actividad del poder judicial, sin que pueda trasladar- se el mismo a un supuesto procedimiento jurisdiccional del Tribunal Constitucional.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 164 — similitud 0.1037
+
+**Detalle de puntaje:** tfidf=0.0937; bonus=0.0100
+
+> A propósito de un ensayo de Luigi Ferrajo-  li», en FERRAJOLI, L., Los fundamentos de los derechos funda-  mentales. — «Teoria e critica dello Stato di diritto», VVAA., Lo Stato di diritto. Storia, teoria, critica.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 41 — similitud 0.1036
+
+**Detalle de puntaje:** tfidf=0.0836; bonus=0.0200
+
+> 151  Vid. ZOLO, D., «Teoria e critica dello Stato di diritto», VVAA., Lo Stato di diritto. Storia, teoria, critica, cit., p.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 150 — similitud 0.1012
+
+**Detalle de puntaje:** tfidf=0.0712; bonus=0.0300
+
+> No lo creo. Al principio del libro llamé la atención sobre la necesidad de que la Filosofía del Derecho se ocupe de los problemas que se generan a partir de la práctica de los sistemas jurídicos. De la misma manera que no todos los sistemas jurídicos presentan la misma configura- ción, tampoco presentan los mismos problemas.
+
+### ref-Teoria general del Estado (2a edicion) - Eduardo.txt — bloque 109 — similitud 0.0984
+
+**Detalle de puntaje:** tfidf=0.0784; bonus=0.0200
+
+> Concepto de Estado constitucional La terminología que han manejado diversos autores para aludir a la forma de Esta- do nacional que sucedió al absolutismo, caracterizándola como Estado liberal bur- gués y de derecho puede resumirse en la expresión Estado constitucional.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 51 — similitud 0.0950
+
+**Detalle de puntaje:** tfidf=0.0750; bonus=0.0200
+
+> Esa conexión se presenta como una concreta manifestación de la relación entre el Derecho y el Poder, considerada como imprescindible desde diversos planteamientos (entre los que destaca el positivista) para entender no sólo la existencia, sino también el funcionamiento del sistema jurídico. Esta dimen- sión se observa claramente en diversos autores como Norberto Bobbio, Elías Díaz o Gregorio Peces-Barba.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 100 — similitud 0.0926
+
+**Detalle de puntaje:** tfidf=0.0626; bonus=0.0300
+
+> Creo que es a esta idea a la que han querido aludir diversos autores cuando han intentado caracterizar la presencia de la Constitución en el sistema jurídico. Mostraré algunos ejemplos.
+
+### ref-Constitucion Politica de los Estados Unidos Mexi.txt — bloque 93 — similitud 0.0871
+
+**Detalle de puntaje:** tfidf=0.0571; bonus=0.0300
+
+> El nombramiento deberá recaer en una persona que tenga capacidad y experiencia en  las materias de la competencia del organismo descentralizado; que no haya ocupado  un cargo en algún partido político, ni haya sido candidato a ocupar un cargo público de  elección popular en los tres años anteriores a la designación; y que goce de buena  reputación y no haya sido condenado por delito doloso. Asimismo, deberá cumplir los  requisitos que establezca la ley.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 107 — similitud 0.0865
+
+**Detalle de puntaje:** tfidf=0.0765; bonus=0.0100
+
+> Teoria del diritto e della democrazia, I, p. 531.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 3 — similitud 0.0859
+
+**Detalle de puntaje:** tfidf=0.0559; bonus=0.0300
+
+> En otro momento, señala: «… a diferencia del positivismo jurídico, que es una teoría del Derecho con pretensiones de universalidad, es decir, con pretensiones de ofrecer un concepto válido para todo Derecho posi- ble, el neoconstitucionalismo suele presentarse como una teoría expresamen- te particular, preocupada sólo por explicar los sistemas jurídicos del constitu- cionalismo democrático», «Sobre las relaciones entre el Derecho y la moral: una crítica del constitucionalismo ético», en ID., El constitucionalismo de los derechos, Trotta, Madrid, 2013, p. 111.
+
+### ref-En defensa del Estado de Derecho - Ignacio Campo.txt — bloque 67 — similitud 0.0853
+
+**Detalle de puntaje:** tfidf=0.0453; bonus=0.0400
+
+> 241  En Schmitt, Carl, La defensa de la Constitución. Estudio acerca de las diversas especies y posibilidades de salvaguardia de la Constitución, cit., p. 30.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 193 — similitud 0.0820
+
+**Detalle de puntaje:** tfidf=0.0520; bonus=0.0300
+
+> Tan pronto la constitución, y ello significa: el orden jurídico instaurado sobre esa base, pierde como un todo su eficacia, tanto el orden jurídico, como tamo bién cada una de sus normas, pierde su validez. Pero el orden jurídico no pierde su validez porque una norma jurídica ais- lada pierda su validez, es decir, porque no sea aplicada en general, o en casos particulares. Un orden jurídico es considerado válido, cuando sus normas, en términos generales y a grandes rasgos, son eficaces, es decir, son fácticamente acatadas y aplicadas.
+
+### ref-Constitucion Politica de los Estados Unidos Mexi.txt — bloque 1 — similitud 0.0681
+
+**Detalle de puntaje:** tfidf=0.0581; bonus=0.0100
+
+> CONSTITUCION POLITICA DE LOS ESTADOS UNIDOS MEXICANOS QUE REFORMA LA  DE 5 DE FEBRERO DE 1857 Título Primero Capítulo I  De los Derechos Humanos y sus Garantías  Denominación del Capítulo reformada DOF 10-06-2011 Artículo 1o. En los Estados Unidos Mexicanos todas las personas gozarán de los derechos humanos reconocidos en esta Constitución y en los tratados internacionales de los que el Estado Mexicano sea parte, así como de las garantías para su protección, cuyo ejercicio no podrá restringirse ni suspenderse, salvo en los casos y bajo las condiciones que esta Constitución establece.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 43 — similitud 0.0679
+
+**Detalle de puntaje:** tfidf=0.0579; bonus=0.0100
+
+> 162  Vid. ZOLO, D., «Teoria e critica dello Stato di diritto», cit., p. 34.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 118 — similitud 0.0651
+
+**Detalle de puntaje:** tfidf=0.0451; bonus=0.0200
+
+> FERRAJOLI, L., «Lo Stato di diritto fra passato e futuro», VVAA., Lo Stato di diritto. Storia, teoria, critica, p. 349.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 3 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 03. asignatura teoría constitución
 
 **Calidad estimada:** baja
-**Mejor similitud:** 0.0700
-**Similitud promedio:** 0.0700
-**Fuentes:** Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf
-**Ubicaciones:** Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 1; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 2; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 3; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 4; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 5
+**Mejor similitud:** 0.1390
+**Similitud promedio:** 0.0933
+**Fuentes:** ref-Constitucion Politica de los Estados Unidos Mexi.txt; ref-En defensa del Estado de Derecho - Ignacio Campo.txt; ref-Estado de derecho y principio de legalidad (2011.txt; ref-Introduccion a la teoria del Estado (Olejnik 202.txt; ref-Razon y voluntad en el Estado de Derecho - Franc.txt; ref-Teoria general del Estado (2a edicion) - Eduardo.txt; ref-Teoria pura del Derecho - Hans Kelsen.txt
+**Ubicaciones:** ref-Constitucion Politica de los Estados Unidos Mexi.txt, bloque 1; ref-En defensa del Estado de Derecho - Ignacio Campo.txt, bloque 30; ref-En defensa del Estado de Derecho - Ignacio Campo.txt, bloque 54; ref-En defensa del Estado de Derecho - Ignacio Campo.txt, bloque 72; ref-En defensa del Estado de Derecho - Ignacio Campo.txt, bloque 73; ref-Estado de derecho y principio de legalidad (2011.txt, bloque 10; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 6; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 96; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 107; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 118; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 13; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 152; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 156; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 164; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 43; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 86; ref-Teoria general del Estado (2a edicion) - Eduardo.txt, bloque 4; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 87
 
-### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 1 — similitud 0.0700
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 13 — similitud 0.1390
 
-**Detalle de puntaje:** tfidf=0.0000; bonus=0.0700
+**Detalle de puntaje:** tfidf=0.1290; bonus=0.0100
 
-> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Últimas Reformas DOF 02-06-2026 CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS Constitución publicada en el Diario Oficial de la Federación el 5 de febrero de 1917 TEXTO VIGENTE Últimas reformas publicadas DOF 02-06-2026 El C.
+> Scarpelli ofrece una definición de las mismas: «La definición explicativa busca, como la definición léxica, corres- ponder al uso; pero a diferencia de la definición léxica, no se esfuerza por recopilar todas las variedades y transformaciones del uso; más bien quiere captar los significados usuales y acotarlos y eventualmente reajustar y reelaborar el núcleo de mayor importancia y valor operativo, para llegar a un instrumento semántico eficiente y preciso capaz de ofrecer en la situación cultural en la que será empleado claridad y orientación» 18.
 
-### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 1 — similitud 0.0700
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 156 — similitud 0.1355
 
-**Detalle de puntaje:** tfidf=0.0000; bonus=0.0700
+**Detalle de puntaje:** tfidf=0.1155; bonus=0.0200
 
-> CONSTITUCION POLITICA DE LOS ESTADOS UNIDOS MEXICANOS QUE REFORMA LA DE 5 DE FEBRERO DE 1857 Título Primero Capítulo I De los Derechos Humanos y sus Garantías Denominación del Capítulo reformada DOF 10-06-2011 Artículo 1o. En los Estados Unidos Mexicanos todas las personas gozarán de los derechos humanos reconocidos en esta Constitución y en los tratados internacionales de los que el Estado Mexicano sea parte, así como de las garantías para su protección, cuyo ejercicio no podrá restringirse ni suspenderse, salvo en los casos y bajo las condiciones que esta Constitución establece.
+> P., LUTHER., (eds) Il futuro della costituzione. — «Lo Stato di diritto fra passato e futuro», VVAA., Lo Stato di  diritto. Storia, teoria, critica. — «Entrevista a L. Ferrajoli», (G.
 
-### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 1 — similitud 0.0700
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 86 — similitud 0.1183
 
-**Detalle de puntaje:** tfidf=0.0000; bonus=0.0700
+**Detalle de puntaje:** tfidf=0.1083; bonus=0.0100
 
-> En consecuencia, el Estado deberá prevenir, investigar, sancionar y reparar las violaciones a los derechos humanos, en los términos que establezca la ley. Párrafo adicionado DOF 10-06-2011 Está prohibida la esclavitud en los Estados Unidos Mexicanos.
+> El carácter teórico de la definición implica que la misma «prescinde de la circunstancia de hecho de que tales derechos se encuentren formulados en cartas constitucionales o leyes fundamentales, e incluso del hecho de que aparezcan enunciados en normas de derecho positivo» 355; en definitiva, su definición tiene un valor teórico «del todo independiente de los sistemas jurídicos concretos e incluso de la experiencia consti- tucional moderna» 356.
 
-### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 2 — similitud 0.0700
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 152 — similitud 0.1045
 
-**Detalle de puntaje:** tfidf=0.0000; bonus=0.0700
+**Detalle de puntaje:** tfidf=0.0845; bonus=0.0200
 
-> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Últimas Reformas DOF 02-06-2026 sexuales, el estado civil o cualquier otra que atente contra la dignidad humana y tenga por objeto anular o menoscabar los derechos y libertades de las personas. Párrafo reformado DOF 04-12-2006, 10-06-2011 Artículo reformado DOF 14-08-2001 Artículo 2o.
+> Zimmerling, Centro de Estudios  Constitucionales, Madrid, 1991. AGUILÓ REGLA, J., «Sobre la Constitución del Estado Constitucio-  nal», Doxa, n.º 24, 2001. — «Sobre el constitucionalismo y la resistencia constitucional»,  Doxa, n.º 26, 2003. — «Cuatro pares de concepciones opuestas de la Constitución», en  AGUILÓ REGLA, J., ATIENZA, J., RUIZ MANERO, J, Fragmentos  para una teoría de la Constitución. -— «Sobre las contradicciones (tensiones) del constitucionalismo y las  concepciones de la Constitución» en CARBONELL, M., GARCÍA  JARAMILLO, L. (eds.), El canon neoconstitucional. AGUILÓ REGLA, J., ATIENZA, J., RUIZ MANERO, J, Fragmentos  para una teoría de la Constitución, Iustel, Madrid, 2007.
 
-### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 3 — similitud 0.0700
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 164 — similitud 0.1037
 
-**Detalle de puntaje:** tfidf=0.0000; bonus=0.0700
+**Detalle de puntaje:** tfidf=0.0937; bonus=0.0100
 
-> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Últimas Reformas DOF 02-06-2026 condiciones de igualdad; así como a acceder y desempeñar los cargos públicos y de elección popular para los que hayan sido electos o designados, en un marco que respete el pacto federal, la soberanía de los Estados y la autonomía de la Ciudad de México.
+> A propósito de un ensayo de Luigi Ferrajo-  li», en FERRAJOLI, L., Los fundamentos de los derechos funda-  mentales. — «Teoria e critica dello Stato di diritto», VVAA., Lo Stato di diritto. Storia, teoria, critica.
 
-### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 3 — similitud 0.0700
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 87 — similitud 0.1019
 
-**Detalle de puntaje:** tfidf=0.0000; bonus=0.0700
+**Detalle de puntaje:** tfidf=0.0819; bonus=0.0200
 
-> Reformada y recorrida (antes fracción VII) DOF 30-09-2024 XI. Acceder plenamente a la jurisdicción del Estado.
+> El principio  de imputación afirma que, cuando se da A, B debe ser. Como ejemplo de  una aplicación del principio de causalidad en una ley natural concreta, baste  remitir a la ley ya enunciada que describe el efecto del calentamiento de los  metales.
 
-### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 4 — similitud 0.0700
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 96 — similitud 0.0961
 
-**Detalle de puntaje:** tfidf=0.0000; bonus=0.0700
+**Detalle de puntaje:** tfidf=0.0761; bonus=0.0200
 
-> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Últimas Reformas DOF 02-06-2026 Las personas indígenas tienen, en todo tiempo, el derecho a ser asistidas y asesoradas por personas intérpretes, traductoras, defensoras y peritas especializadas en derechos indígenas, pluralismo jurídico, perspectiva de género, y diversidad cultural y lingüística.
+> En vista de la literatura panfleta- ria difundida en aquella época, se exige también al teórico político la responsabilidad por los efectos prácticos previsibles de su teoría. Era previsible que la sustitución del derecho constitucional por el absolutismo conduciría a la guerra civil con métodos policiales y destruiría los presupuestos de la libertad jurídicamente protegida.
 
-### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 5 — similitud 0.0700
+### ref-En defensa del Estado de Derecho - Ignacio Campo.txt — bloque 72 — similitud 0.0909
 
-**Detalle de puntaje:** tfidf=0.0000; bonus=0.0700
+**Detalle de puntaje:** tfidf=0.0709; bonus=0.0200
 
-> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Últimas Reformas DOF 02-06-2026 II.
+> 259  Y eso aunque en su Teoría de la Constitución reconociese que «La Declaración solemne de derechos fundamentales significa el establecimiento de principios sobre los cuales se apoya la unidad política de un pueblo y cuya vigencia se reconoce como el supuesto más importante del surgimiento y for- mación incesante de esa unidad». (En Schmitt, Carl, Teoría de la Constitución, cit., p. 167).
 
-**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon varias referencias dentro de la misma fuente. Hay 8 referencia(s) de baja similitud que podrían introducir ruido.
+### ref-En defensa del Estado de Derecho - Ignacio Campo.txt — bloque 54 — similitud 0.0892
 
-## Ficha 06. Estado de derecho
+**Detalle de puntaje:** tfidf=0.0692; bonus=0.0200
 
-**Calidad estimada:** alta
-**Mejor similitud:** 0.3180
-**Similitud promedio:** 0.2630
-**Fuentes:** Teoria pura del derecho - Hans Kelsen.pdf
-**Ubicaciones:** Teoria pura del derecho - Hans Kelsen.pdf, p. 246; Teoria pura del derecho - Hans Kelsen.pdf, p. 252; Teoria pura del derecho - Hans Kelsen.pdf, p. 302; Teoria pura del derecho - Hans Kelsen.pdf, p. 327; Teoria pura del derecho - Hans Kelsen.pdf, p. 332; Teoria pura del derecho - Hans Kelsen.pdf, p. 334; Teoria pura del derecho - Hans Kelsen.pdf, p. 376
+> Hay que tener presente que Schmitt ahí no estaba refiriéndose con «pueblo» ni al «sujeto del Poder consti- tuyente», ni al «portador de la opinión pública y sujeto de aclamaciones», sino al pueblo como «entidad organizada y formada por ley constitucional, siendo de observar que aquí, en realidad, no es el pueblo el formado y organizado, sino que existe sólo un procedimiento para las elecciones o la votación, y la voluntad del pueblo surge sólo como resultado de un sistema de vigencias o acaso ficcio- nes». (Véanse las citas en Schmitt, Carl, Teoría de la Constitución, cit., pp. 333, 234 y 245, respectivamente).
 
-### Teoria pura del derecho - Hans Kelsen.pdf — p. 327 — similitud 0.3180
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 107 — similitud 0.0865
 
-**Detalle de puntaje:** tfidf=0.2380; bonus=0.0800
+**Detalle de puntaje:** tfidf=0.0765; bonus=0.0100
 
-> DERECHO Y ESTADO 315 Estado, existente independientemente del derecho como una realidad social, pri- meramente crea el derecho, para luego someterse, por decir así libremente, a ese derecho. Sólo entonces seria un Estado de derecho. Por de pronto debe establecerse que un Estado no sujeto a derecho es impensable.
+> Teoria del diritto e della democrazia, I, p. 531.
 
-### Teoria pura del derecho - Hans Kelsen.pdf — p. 376 — similitud 0.2966
+### ref-Estado de derecho y principio de legalidad (2011.txt — bloque 10 — similitud 0.0846
 
-**Detalle de puntaje:** tfidf=0.2166; bonus=0.0800
+**Detalle de puntaje:** tfidf=0.0546; bonus=0.0300
 
-> La identidad del Estado con el derecho  291 a) El Estado como orden jurídico  291 b) El Estado como persona jurídica  295 c) El Estado como sujeto activo; el 6rgano estatal  295 ~) Representación política 302 y) El Estado como sujeto de obligaciones y de derechos 305 c) La así llamada autoobligaci6n del Estado. El Estado de derecho 314 d) Centralizaci6n y descentralizaci6n 315 e) La disoluci6n del dualismo entre derecho y Estado 319 VII. Estado y derecho internacional 42.
+> 63  Carl Schmitt, Teoría de la Constitución, trad. de Francisco Ayala, pp. 71-72.
 
-### Teoria pura del derecho - Hans Kelsen.pdf — p. 332 — similitud 0.2650
+### ref-Teoria general del Estado (2a edicion) - Eduardo.txt — bloque 4 — similitud 0.0839
 
-**Detalle de puntaje:** tfidf=0.1850; bonus=0.0800
+**Detalle de puntaje:** tfidf=0.0639; bonus=0.0200
 
-> Así como es imposible justificar al derecho por el derecho mismo, cuando esta palabra no es empleada en un caso en el sentido de derecho positivo, y en el otro, en el de derecho justo, de justicia. Y entonces la tentativa de legitimar al Estado, como Estado de “derecho” se descubre como enteramente inade· cuada, porque, como ya se recalcó, todo Estado, en ese sentido, tiene que ser un Estado de derecho, puesto que todo Estado es un orden jurídico. Ello no representa, sin embargo, ningún juicio de valor político.
+> Cabría incluso cuestio- nar si es posible elaborar una teoría general acerca del Estado pero, de cualquier modo, ése es el nombre que la tradición germánica llegada hasta nosotros dio a la asignatura cuyos temas abordamos en estas páginas.
 
-### Teoria pura del derecho - Hans Kelsen.pdf — p. 302 — similitud 0.2630
+### ref-En defensa del Estado de Derecho - Ignacio Campo.txt — bloque 30 — similitud 0.0839
 
-**Detalle de puntaje:** tfidf=0.1830; bonus=0.0800
+**Detalle de puntaje:** tfidf=0.0639; bonus=0.0200
 
-> 290 ILl<ELSEN tinto, afirmándolo al mismo tiempo como un ente jurídico, lo hace en cuanto considera al Estado como sujeto de obligaciones jurídicas y facultades, es decir, en cuanto lo considera como una persona, y simultáneamente le atribuye una existencia independiente del orden jurídico. Así como la teoría del derecho privado originariamente partia de la persona- lidad jurídica del individuo, afirmando que lógica y temporalmente antecedía al derecho objetivo, es decir, al orden jurídico, de igual modo la teoría del estado de derecho silPone que el Estado, como unidad colectiva, como sujeto de una voluntad y de acción, aparece independiente e inclusive como existente antes del derecho.
+> 12-13. 106  En Schmitt, Carl, Teoría de la Constitución, cit., p. 230.
 
-### Teoria pura del derecho - Hans Kelsen.pdf — p. 252 — similitud 0.2506
+### ref-En defensa del Estado de Derecho - Ignacio Campo.txt — bloque 73 — similitud 0.0814
 
-**Detalle de puntaje:** tfidf=0.2306; bonus=0.0200
+**Detalle de puntaje:** tfidf=0.0614; bonus=0.0200
 
-> Con otras palabras: la constitución representa derecho de forma, derecho procesal, predominantemente, mientras que el esca· Ión inmediatamente subordinado de producción de derecho, representa tanto derecho de forma, como derecho de fondo (material). e) lAs llamadas “fuentes del derecho”. La legislación y la costumbre frecuen-  temente son designados como las dos “fuentes” del derecho, donde por “de·  recho” se entiende solamente las normas generales del derecho de un Estado. Pero también las normas jurídicas individuales pertenecen al derecho, son tan  parte integrante del orden jurídico como las normas generales con base en las  cuales han sido producidas.
+> Con esta biparti- ción se explica el esquema constituyente típicamente bipolar del Estado constitucional burgués, cuya Constitución, como es sabi- do, consistía en una parte de derecho fundamental, o sea dere- chos fundamentales y derechos de libertades de la sociedad, com- puesta por individuos libres y ella misma libre, es decir no estatal y sin «Constitución»; y una parte normativa organizativa, o sea vinculante y constituyente del Estado. La parte liberal de los 261  Schmitt, Carl, Teoría de la Constitución, cit., pp. 138-139.
 
-### Teoria pura del derecho - Hans Kelsen.pdf — p. 302 — similitud 0.2393
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 6 — similitud 0.0778
 
-**Detalle de puntaje:** tfidf=0.1593; bonus=0.0800
+**Detalle de puntaje:** tfidf=0.0578; bonus=0.0200
 
-> Y el derecho sólo puede justificar al Estado cuando es presupuesto como un orden esencialmente diferente del Estado, contrapuesto a la natura- leza originaria de éste: el poder, y de ahí, en algún sentido, como un -orden correcto o justo. Así, el Estado, como el puro hecho de la fuerza, se convierte en un Estado de derecho que se justifica en tanto produce derecho.
+> En él, la teoría del Estado es entendida como el intento de aclarar las condiciones efectivas de paz, libertad y justicia, aprovechando la historia del Estado constitucional democrático. 3.— Una teoría del Estado que trata de llegar a los fundamentos y el trasfondo político del Estado constitucional democrático no es empírico-descriptiva, ni tampo- co postulante de normas, es decir, no responde a la pregunta “¿cómo es de hecho el Estado?” (pregunta sociológica acerca de la realidad del Estado), ni tampoco a la pregunta: “¿cómo debe ser el Estado?” (pregunta ética o normativa acerca del ideal del Estado).
 
-### Teoria pura del derecho - Hans Kelsen.pdf — p. 246 — similitud 0.2374
+### ref-Constitucion Politica de los Estados Unidos Mexi.txt — bloque 1 — similitud 0.0681
 
-**Detalle de puntaje:** tfidf=0.2274; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.0581; bonus=0.0100
 
-> Cuando el derecho consuetudinario, así como el derecho legislado, es derecho positivo, esto es, un derecho impuesto, tiene que haber un acto de voluntad, individual o colectivo, cuyo sentido subjetivo sea un deber, que pueda ser interpretado como una norma válida objetivamen- te, como derecho consuetudinario. Como ya se subrayó anteriormente, el derecho consuetudinario sólo puede ser aplicado por los órganos de aplicación del derecho, cuando puede conside- rarse que esos órganos están facultados para ello.
+> CONSTITUCION POLITICA DE LOS ESTADOS UNIDOS MEXICANOS QUE REFORMA LA  DE 5 DE FEBRERO DE 1857 Título Primero Capítulo I  De los Derechos Humanos y sus Garantías  Denominación del Capítulo reformada DOF 10-06-2011 Artículo 1o. En los Estados Unidos Mexicanos todas las personas gozarán de los derechos humanos reconocidos en esta Constitución y en los tratados internacionales de los que el Estado Mexicano sea parte, así como de las garantías para su protección, cuyo ejercicio no podrá restringirse ni suspenderse, salvo en los casos y bajo las condiciones que esta Constitución establece.
 
-### Teoria pura del derecho - Hans Kelsen.pdf — p. 334 — similitud 0.2343
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 43 — similitud 0.0679
 
-**Detalle de puntaje:** tfidf=0.2143; bonus=0.0200
+**Detalle de puntaje:** tfidf=0.0579; bonus=0.0100
 
-> VII. Estado y derecho internacional 42. La esencia del derecho internacional  323 a) La naturaleza jurídica del derecho internacional  323 b) El derecho internacional como orden juridico primitivo  325 c) La construcci6n escalonada del derecho internacional  326 d) Obligaci6n y facultamiento meramente mediato por el derecho interna- cional 327 43.
+> 162  Vid. ZOLO, D., «Teoria e critica dello Stato di diritto», cit., p. 34.
 
-**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon varias referencias dentro de la misma fuente.
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 118 — similitud 0.0651
 
-## Ficha 07. Estado moderno
+**Detalle de puntaje:** tfidf=0.0451; bonus=0.0200
+
+> FERRAJOLI, L., «Lo Stato di diritto fra passato e futuro», VVAA., Lo Stato di diritto. Storia, teoria, critica, p. 349.
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 4 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 04. línea tiempo
 
 **Calidad estimada:** baja
-**Mejor similitud:** 0.1373
-**Similitud promedio:** 0.1293
-**Fuentes:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf; Teoria pura del derecho - Hans Kelsen.pdf
-**Ubicaciones:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 122; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 178; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 22; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 81; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 96; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 19; Teoria pura del derecho - Hans Kelsen.pdf, p. 284; Teoria pura del derecho - Hans Kelsen.pdf, p. 313
+**Mejor similitud:** 0.1261
+**Similitud promedio:** 0.0874
+**Fuentes:** ref-Constitucion Politica de los Estados Unidos Mexi.txt; ref-Del espiritu de las leyes - Montesquieu.txt; ref-Estado de derecho y principio de legalidad (2011.txt; ref-Introduccion a la teoria del Estado (Olejnik 202.txt; ref-Razon y voluntad en el Estado de Derecho - Franc.txt; ref-Teoria pura del Derecho - Hans Kelsen.txt
+**Ubicaciones:** ref-Constitucion Politica de los Estados Unidos Mexi.txt, bloque 2; ref-Del espiritu de las leyes - Montesquieu.txt, bloque 227; ref-Del espiritu de las leyes - Montesquieu.txt, bloque 251; ref-Del espiritu de las leyes - Montesquieu.txt, bloque 267; ref-Del espiritu de las leyes - Montesquieu.txt, bloque 287; ref-Del espiritu de las leyes - Montesquieu.txt, bloque 291; ref-Estado de derecho y principio de legalidad (2011.txt, bloque 4; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 112; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 115; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 126; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 13; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 42; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 55; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 156; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 135; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 171; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 195; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 292; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 44; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 46
 
-### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 81 — similitud 0.1373
+### ref-Del espiritu de las leyes - Montesquieu.txt — bloque 287 — similitud 0.1261
 
-**Detalle de puntaje:** tfidf=0.0573; bonus=0.0800
+**Detalle de puntaje:** tfidf=0.1061; bonus=0.0200
 
-> Sin embargo, la diferencia entre ambos autores es también aquí muy importante, porque mien- tras que Rousseau estaba pensando en una ciudad-estado, don- de el conjunto de la ciudadanía se podría reunir en el foro público para tomar las decisiones más importantes, Schmitt está pensando en un Estado moderno como Alemania, con unas dimensiones geográficas y poblacionales que hacen invia- ble esa reunión de lo ciudadanos en el foro público, por lo que no se entiende cómo pretende que se han de tomar esas deci- siones en el ámbito público si no es a través de manifestaciones públicas en las que, por multitudinarias que sean, finalmente nunca podrían estar presentes todos los ciudadanos.
+> VI. Segunda época del abatimiento de los reyes de la primera línea. VII.
 
-### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 122 — similitud 0.1359
+### ref-Del espiritu de las leyes - Montesquieu.txt — bloque 251 — similitud 0.1110
 
-**Detalle de puntaje:** tfidf=0.0559; bonus=0.0800
+**Detalle de puntaje:** tfidf=0.0910; bonus=0.0200
 
-> Las consideraciones a los derechos contrapuestos al consentimiento de un tercero que obstaculiza el camino, a los derechos legítimamente adquiridos, al trámite o procedimiento jurídico, pueden ser «imprácticas» y, por tanto, perjudiciales y equivocadas en un sentido técnico objetivo». Y es que, como a continuación expone, es precisamente el poder ejecutivo, regi- do por principios técnicos, el que había conseguido conformar el Estado moderno: «El ejército y el servicio civil burocrático adiestrado, los «ejecutivos», constituyen la médula de este Estado, el cual es por esencia ejecutivo» 184.
+> Estas fórmulas se hicieron, no sólo para las leyes de los Lombardos, sino también para las capitulares añadidas a las mismas leyes; por lo tanto, no puede ponerse en duda que ellas nos dan la práctica de la segunda línea. Es evidente que los abogados de la parte pública debieron extinguirse con esta segunda línea, así como los enviados del rey a las provincias, puesto que ya no hubo ni ley general, y porque, habiendo cesado los condes de decidir los pleitos, cesaron naturalmente en las provincias los oficiales subalternos cuya función consistía en mantener la autoridad del conde.
 
-### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 96 — similitud 0.1307
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 156 — similitud 0.1060
 
-**Detalle de puntaje:** tfidf=0.1207; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.0860; bonus=0.0200
 
-> Siempre depende de la «situación de las cosas»». (En Schmitt, Carl, La Dictadura. Desde los comienzos del pensamiento moderno de la soberanía hasta la lucha de clases proletaria, cit., p. 41).
+> Andrés Ibáñez  y A. Greppi, Trotta, Madrid, 1999. — «Garantías», Jueces para la Democracia, n.º 38, julio 2000. — «Derechos fundamentales», en FERRAJOLI, L., Los fundamentos  de los derechos fundamentales. — «Los derechos fundamentales en la teoría del Derecho», en  FERRAJOLI, L., Los fundamentos de los derechos fundamentales. — «Los fundamentos de los derechos fundamentales», en FERRAJO-  LI, L., Los fundamentos de los derechos fundamentales. — Los fundamentos de los derechos fundamentales, edic. de A. de  Cabo y G. Pisarello, Trotta, Madrid, 2001.
 
-### Teoria pura del derecho - Hans Kelsen.pdf — p. 284 — similitud 0.1280
+### ref-Del espiritu de las leyes - Montesquieu.txt — bloque 227 — similitud 0.1052
 
-**Detalle de puntaje:** tfidf=0.0480; bonus=0.0800
+**Detalle de puntaje:** tfidf=0.0952; bonus=0.0100
 
-> En la distinción tradicional no se expresa una diferencia de funciones, sino la distinción entre dos aparatos burocráticos -caracterizados como poder judicial y administración pública-, cuya constitución sólo puede ser históricamente explicada en e! Estado moderno, pero que no corresponde justificar desde el punto de vista de una sistemática jurídica. j) Conflicto entre nonnas de diverso nivel k) La sentencia contra ley. Puesto que e! ordeu jurídico representa una  construcción escalonada de normas entre sí en relación de supra y subordi-  nación, y dado que Una norma sólo pertenece a determinado orden jurídico  porque y en tanto su producción corresponde a una llOm1a supcrior dcter-
+> abandonara la que impedía la sucesión de los parientes por línea femenina. Estas leyes estaban en armonía con el espíritu de una buena República, en la que debe procurarse que las mujeres no lleguen a dominar por el lujo, las riquezas o la esperanza de alcanzarlas.
 
-### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 22 — similitud 0.1278
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 195 — similitud 0.0996
 
-**Detalle de puntaje:** tfidf=0.0478; bonus=0.0800
+**Detalle de puntaje:** tfidf=0.0796; bonus=0.0200
 
-> Pues el origen más inmediato de esa concepción habría que situarlo antes que con el surgimiento del Estado de Derecho en el continente, a finales del siglo XVIII y principios del siglo XIX, con el surgimiento del Estado moderno y los teóricos del mismo, en el tránsito a la Modernidad.
+> Puesto que el fundamento de validez de los órdenes jurí- dicos estatales particulares ya no se encontrará en una norma presup.uesta, sino en una norma jurídica positiva, implantada efectivamente, del derecho internacional; se plantea entonces la pregunta acerca del fundamento de validez de esa norma, y, también, la pregunta por el fundamento de validez del orden jurídico internacional, integrado por la norma en que reposa la autoridad del orden jurídico de cada Estado, la norma en que cada orden jurídico encuentra su fundamento de validez inmediato, aunque no último.
 
-### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 178 — similitud 0.1274
+### ref-Del espiritu de las leyes - Montesquieu.txt — bloque 227 — similitud 0.0970
 
-**Detalle de puntaje:** tfidf=0.0474; bonus=0.0800
+**Detalle de puntaje:** tfidf=0.0870; bonus=0.0100
 
-> Esa negación absoluta por Schmitt de los derechos funda- mentales tiene un claro desarrollo en las dos negaciones que antes apuntaba y que a continuación desarrollaré: la de un derecho político tan importante como es el del sufragio univer- sal y secreto, y la del derecho a la libertad de conciencia, que viene a entenderlo como incompatible con la estructura eficaz del Estado moderno; lo que en realidad supone la negación del núcleo básico de la fundamentación de los derechos. 275 Op. cit., pp.
+> Por último, Justiniano emperador hizo desaparecer los últimos restos del derecho antiguo en lo referente a sucesiones; estableció tres órdenes de herederos: los descendientes, los ascendientes y los colaterales, sin distinción entre varones y hembras, ni entre parientes por línea masculina y parientes por línea femenina. Creyó ajustarse a la naturaleza al derogar todo lo que él llamaba estorbos de la jurisprudencia consuetudinaria.
 
-### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 19 — similitud 0.1240
+### ref-Del espiritu de las leyes - Montesquieu.txt — bloque 267 — similitud 0.0943
 
-**Detalle de puntaje:** tfidf=0.0440; bonus=0.0800
+**Detalle de puntaje:** tfidf=0.0743; bonus=0.0200
 
-> Lo que sí fortaleció el absolutismo fue el desarrollo de los capitales mercantiles y manufactureros. Esto permitió la consolidación de la burguesía, que asumirá un papel pro- tagónico en el surgimiento del Estado moderno. 30 N.
+> LO que ha hecho creer que hubo un reglamento general del tiempo de la conquista, es el gran número de servidumbres que había en Francia al comienzo de la tercera línea; y como no se advertía la progresión continua de estas servidumbres, se imaginó la existencia de una ley general que no existió.
 
-### Teoria pura del derecho - Hans Kelsen.pdf — p. 313 — similitud 0.1235
+### ref-Del espiritu de las leyes - Montesquieu.txt — bloque 291 — similitud 0.0933
 
-**Detalle de puntaje:** tfidf=0.0435; bonus=0.0800
+**Detalle de puntaje:** tfidf=0.0733; bonus=0.0200
 
-> DER’ECIIQ Y BlTADO 301 col1 exclusi6n de otras actividades lucrativas y, por lo tanto, mediante una remuneraci6n. Son remunerados por el Estado, es decir, la contraprestación por sus servicios -que en el Estado moderno consiste en dinero- proviene del patrimonio estatal, el llamado “fisco”, que es un fondo central cuya constitu~ ción, utilizaci6n, entradas y salidas se encuentran jurídicamente reguladas. En lo esencial es constituido mediante contribuciones de los individuos sujetos al derecho, obligados por ley a cumplir esa contribución, y es administrado por funcionarios estatales.
+> El entusiasmo delirante de la nación por la familia de Pipino llegó hasta el punto de elegir mayordomo a su nieto, niño todavía; lo instituyó mayordomo de un Dagoberto, poniendo un fantasma al lado de otro fantasma1474. Capítulo VII De los feudos en tiempo de los mayordomos de palacio HE de hacer algunas reflexiones acerca de los feudos. Para mí, no ofrece duda que en tiempo de los mayordomos fue cuando los feudos se hicieron hereditarios.
 
-**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 135 — similitud 0.0924
 
-## Ficha 08. Formaciones politicas
+**Detalle de puntaje:** tfidf=0.0824; bonus=0.0100
 
-**Calidad estimada:** baja
-**Mejor similitud:** 0.0839
-**Similitud promedio:** 0.0839
-**Fuentes:** Teoria pura del derecho - Hans Kelsen.pdf
-**Ubicaciones:** Teoria pura del derecho - Hans Kelsen.pdf, p. 359
+> legislativo facultado por el orden jurídico para producir normas juridicas, y que las funciones de los órganos judiciales y administrativos, facultados por el orden juridico para producir, en aplicación de norma generales, normas jurídicas indi- viduales. En todos estos casos tenemos, como en el caso de la denominada capacid¡¡d juridica, una faoultad para producir normas juridicas; en todos estos casos, el orden juridico otorga un poder juridico a determinados individuos.
 
-### Teoria pura del derecho - Hans Kelsen.pdf — p. 359 — similitud 0.0839
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 55 — similitud 0.0852
 
-**Detalle de puntaje:** tfidf=0.0739; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.0552; bonus=0.0300
 
-> La decisión a favor o en contra de uno u otro escapa a la ciencia del derecho. Sólo puede alcanzársela por considera- ciones que no son científicas, sino que son politicas. Aquel que considere valio- sa la representación de la soberanía de su Estado, porque se identifica con su Estado en un acto de autoconciencia exaltado, pondrá por delante la prima- cía del orden jurídico estatal a la del orden jurídico internacional.
+> En la medida en que el concepto de Estado del derecho internacional deja afuera al Estado federal, no es, pues, un concepto totalmente abstracto-general; solo se acerca a un concepto de este tipo. Al concepto de Estado del derecho internacional subyace, por tanto, la llama- da doctrina de los tres elementos que reduce el concepto de Estado a sus elementos más generales.
 
-**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas.
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 115 — similitud 0.0830
 
-## Ficha 09. francesa moderno
+**Detalle de puntaje:** tfidf=0.0530; bonus=0.0300
 
-**Calidad estimada:** baja
-**Mejor similitud:** 0.0875
-**Similitud promedio:** 0.0664
-**Fuentes:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf; Teoria pura del derecho - Hans Kelsen.pdf
-**Ubicaciones:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 122; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 163; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 96; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 28; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 29; Teoria pura del derecho - Hans Kelsen.pdf, p. 173; Teoria pura del derecho - Hans Kelsen.pdf, p. 175; Teoria pura del derecho - Hans Kelsen.pdf, p. 64
+> Por tanto, es recomendable entender el concepto resumiendo del siguiente modo: las convicciones son ideológicas cuando:  1) se basan en intereses, y no en razones;  2) uno no está, por tanto, dispuesto a discutirlas;  3) se engaña a sí mismo respecto de su verdad;  4) son políticamente relevantes;  5) pretenden ser teórica o religiosamente relevantes;  6) se trasmiten y se conservan conforme a la psicología del grupo;  7) sirven tanto para la integración del grupo como para la justificación de  su comportamiento político.
 
-### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 96 — similitud 0.0875
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 13 — similitud 0.0826
 
-**Detalle de puntaje:** tfidf=0.0775; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.0526; bonus=0.0300
 
-> Siempre depende de la «situación de las cosas»». (En Schmitt, Carl, La Dictadura. Desde los comienzos del pensamiento moderno de la soberanía hasta la lucha de clases proletaria, cit., p. 41).
+> Desconoció el hecho de que el derecho constitucional no solo limitaba el poder, sino también lo fundamentaba: pues concedía al rey muy amplias competencias y prerrogativas. Carlos I declaró que el derecho no era obligatorio y quiso sustituirlo por la doctrina de soberanía, y de esta manera, destruyó el fundamento de su poder. Creyó a los teóricos que le habían enseñado que la proposición Lex facit regem era falsa o superada: la formula- ción correcta debía ser: Rex facit legem.
 
-### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 163 — similitud 0.0807
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 46 — similitud 0.0808
 
-**Detalle de puntaje:** tfidf=0.0707; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.0708; bonus=0.0100
 
-> 255 Como advierte Javier Dorado: «Podría por tanto pensarse que el Estado liberal surgido en Europa tras la revolución francesa se configuraba como un Estado constitucional que incluía las características del constitucionalismo actual […] Sin embargo, esto no fue lo que ocurrió en realidad, y puede afirmar- se que el constitucionalismo europeo no empezó a representar estas característi- 163
+> El orden juridico no puede ciertamente intentar evitar  todos los conflictos posibles. Lo que los órdenes Juridicos modernos prohíben,  casi sin excepción, es el impedir mediante la fuerza física la conducta no prohi-  bida del otro.
 
-### Teoria pura del derecho - Hans Kelsen.pdf — p. 173 — similitud 0.0667
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 42 — similitud 0.0805
 
-**Detalle de puntaje:** tfidf=0.0567; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.0505; bonus=0.0300
 
-> Representación La teoría tradicional denomina “capacidad de derecho” la capacidad de un hombre de tener derechos subjetivos y obligaciones jurídicas, O de ser sujeto de derechos y obligaciones. Según el derecho moderno, todo ser humano indi- vidual podría ~er sujeto de derechos y obligaciones. Los seres humanos inca- paces de derecho -como los esclavos- ya no existen en el derecho moderno.
+> Hasta dónde este principio puede cumplir, sin embargo, su función pacifica- dora, depende del concepto de Estado. En este principio el concepto de Estado es una variable, cuyas variaciones deciden sobre el alcance de la validez del derecho internacional. La teoría del Estado que define el concepto de Estado debe dar cuenta de este hecho: no hay una definición absoluta del Estado, derivada de algún tipo de premisas.
 
-### Teoria pura del derecho - Hans Kelsen.pdf — p. 175 — similitud 0.0667
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 292 — similitud 0.0782
 
-**Detalle de puntaje:** tfidf=0.0567; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.0582; bonus=0.0200
 
-> Representación La teoría tradicional denomina “capacidad de derecho” la capacidad de un hombre de tener derechos subjetivos y obligaciones jurídicas, O de ser sujeto de derechos y obligaciones. Según el derecho moderno, todo ser humano indi- vidual podría ~er sujeto de derechos y obligaciones. Los seres humanos inca- paces de derecho -como los esclavos- ya no existen en el derecho moderno.
+> tal en sentido estricto. Y nuevamente aquí, tenemos que el principio de efecti- vidad de este derecho internacional no es el último fundamento de validez de esa delimitación. Ese fundamento está dado por la norma fundante básica presupuesta de ese orden jurídico estatal, que contiene como parte integrante al derecho internacional.
 
-### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 122 — similitud 0.0656
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 171 — similitud 0.0764
 
-**Detalle de puntaje:** tfidf=0.0556; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.0564; bonus=0.0200
 
-> Desde los comienzos del pensamiento moderno de la soberanía hasta la lucha de clases proletaria, cit., pp. 27-28, 41-42 y 44, respectivamente.
+> 34. El fundamento de validez de un orden normativo: la norma fundante básica  201  d) Sentido de la pregunta por el tundamento de validez 201  b) El principio estático y el principio dinámico 203  e) El fundamento de validez de un orden jurídico 205  dl La norma fundante básica como presupuesto lógico-trascendental 208  e) La unidad lógica del orden jurídico. Conflictos normativos 214  f) Legitimidad y efectividad 217  g) Validez yeficacia 219  h) La norma fundante básica del derecho internacional 225  í) La teorla de la norma fundante básica y la doctrina del derecho natural  228  f} La norma fundante del derecho natural 230  V.
 
-### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 29 — similitud 0.0562
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 112 — similitud 0.0748
 
-**Detalle de puntaje:** tfidf=0.0462; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.0548; bonus=0.0200
 
-> Como ya se señaló líneas arriba, el surgimiento del Esta- do de Derecho requirió la ruptura del Estado absoluto. Dicha ruptura fue posible gracias a la Declaración, pues se convirtió en el documento fundacional de la Revolu- ción francesa. Adicionalmente, la Declaración tuvo un impacto muy importante en la construcción de la moderna Teoría de la Constitución, pues aportó los elementos para distinguir entre el acto a través del cual el pueblo se vuelve cons- ciente de su existencia política y se otorga una Constitu- ción (poder Constituyente), de la función del Estado mis- mo (poderes constituidos).
+> Fundamentos racionales no son nunca abstractos, sino referidos siempre a la realidad social; se trata de describir y explicar irregularidades, proponer remedios y sopesar sus efectos previsibles. La crítica de la ideología puede, por tanto, suministrar mejores fundamentos para un mejor derecho y ser así motor del progreso racional-iluminista del derecho. El aná- lisis sociológico-jurídico de las condiciones y efectos sociales del derecho no está ligado, pues, a una concepción voluntarista del derecho, sino que puede resultar de gran utilidad también dentro del contexto racionalista, tanto para la política jurídica como para la interpretación del derecho.
 
-### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 28 — similitud 0.0542
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 44 — similitud 0.0685
 
-**Detalle de puntaje:** tfidf=0.0442; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.0585; bonus=0.0100
 
-> Conforme a lo señalado en los párrafos precedentes, se puede decir que la Ilustración, a través de todos sus pensadores, sentó las bases sobre las cuales habrá de dar- se la construcción de un nuevo modelo de Estado. Todas las ideas de los ilustrados franceses aparecieron refleja- das en la Declaración de los Derechos del Hombre y del Ciudadano, la cual fue aprobada por la Asamblea Nacio- nal Constituyente francesa el 26 de agosto de 1789. 62 Ibid., pp.
+> Y ese acto coactivo, como sanción (en el sentido de consecuencia de una ilicitud), s610 puede distinguirse de otros actos coactivos estatuidos por el orden juridico, en cuanto el hecho condicionante de esos actos coactivos es una acci6n u omisión determinada por el orden juridico, comprobada jurídicamente, y socialmente indeseada, mientras que los actos coactivos que no constituyen sanciones en el sentido de consecuencias de una ilicitud, están condicionados por otros hechos. 3.
 
-### Teoria pura del derecho - Hans Kelsen.pdf — p. 64 — similitud 0.0535
+### ref-Constitucion Politica de los Estados Unidos Mexi.txt — bloque 2 — similitud 0.0676
 
-**Detalle de puntaje:** tfidf=0.0435; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.0476; bonus=0.0200
 
-> Pero el hecho de que el contenido de un orden coactivo eficaz sea juzgado como injusto, no constituye en todo caso fundamento para no aceptar ese orden coactivo como un orden jurídico . ..Luego del triunfo de la Revolu· ción Francesa, a fines del siglo xvrn, así como luego del triunfo de la Revolución Rusa a comienzos del siglo xx, apareció en los demás Estados la tendencia natural a no interpretar el orden jurídico establecido por la revolución como un orden jurídico, a no interpretar los actos de los gobiernos llegados revoluciD- nariamente al poder como actos jurídicos; el primero, porque lesionaba el prin- cipio monárquico de legitimidad; el segundo, porque eliminaba la propiedad...
+> 3 de 416  CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS  CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Última Reforma DOF 07-10-2026  Secretaría General  Secretaría de Servicios Parlamentarios Las personas indígenas tienen, en todo tiempo, el derecho a ser asistidas y asesoradas  por personas intérpretes, traductoras, defensoras y peritas especializadas en derechos  indígenas, pluralismo jurídico, perspectiva de género, y diversidad cultural y lingüística. Fracción reformada y recorrida (antes fracción VIII) DOF 30-09-2024 XII.
 
-**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 6 referencia(s) de baja similitud que podrían introducir ruido.
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 126 — similitud 0.0665
 
-## Ficha 10. la Constitucion
+**Detalle de puntaje:** tfidf=0.0565; bonus=0.0100
 
-**Calidad estimada:** baja
-**Mejor similitud:** 0.0800
-**Similitud promedio:** 0.0725
-**Fuentes:** Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf
-**Ubicaciones:** Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 1; Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 109; Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 116; Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 47; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 1; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 109; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 115; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 47
+> En realidad, se asemejan más bien a las reglas del proceso judicial y se reducen al respeto de los partidos y de las reglas de procedimiento del proceso democrático, y con ello el respeto de la base común de la constitución. Es importante que no se abuse por parte del gobierno del rótulo “no demo- crático” para no desgastarlo.
 
-### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 1 — similitud 0.0800
+### ref-Estado de derecho y principio de legalidad (2011.txt — bloque 4 — similitud 0.0659
 
-**Detalle de puntaje:** tfidf=0.0700; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.0459; bonus=0.0200
 
-> CONSTITUCION POLITICA DE LOS ESTADOS UNIDOS MEXICANOS QUE REFORMA LA DE 5 DE FEBRERO DE 1857 Título Primero Capítulo I De los Derechos Humanos y sus Garantías Denominación del Capítulo reformada DOF 10-06-2011 Artículo 1o. En los Estados Unidos Mexicanos todas las personas gozarán de los derechos humanos reconocidos en esta Constitución y en los tratados internacionales de los que el Estado Mexicano sea parte, así como de las garantías para su protección, cuyo ejercicio no podrá restringirse ni suspenderse, salvo en los casos y bajo las condiciones que esta Constitución establece.
-
-### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 1 — similitud 0.0800
-
-**Detalle de puntaje:** tfidf=0.0700; bonus=0.0100
-
-> CONSTITUCION POLITICA DE LOS ESTADOS UNIDOS MEXICANOS QUE REFORMA LA DE 5 DE FEBRERO DE 1857 Título Primero Capítulo I De los Derechos Humanos y sus Garantías Denominación del Capítulo reformada DOF 10-06-2011 Artículo 1o. En los Estados Unidos Mexicanos todas las personas gozarán de los derechos humanos reconocidos en esta Constitución y en los tratados internacionales de los que el Estado Mexicano sea parte, así como de las garantías para su protección, cuyo ejercicio no podrá restringirse ni suspenderse, salvo en los casos y bajo las condiciones que esta Constitución establece.
-
-### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 47 — similitud 0.0700
-
-**Detalle de puntaje:** tfidf=0.0000; bonus=0.0700
-
-> La Suprema Corte de Justicia de la Nación resolverá, previo a la convocatoria que realice el Congreso de la Unión, sobre la constitucionalidad de la materia de la consulta; Apartado reformado DOF 20-12-2019 4o.
-
-### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 109 — similitud 0.0700
-
-**Detalle de puntaje:** tfidf=0.0000; bonus=0.0700
-
-> De las controversias constitucionales que, sobre la constitucionalidad de las normas generales,  actos u omisiones, con excepción de las que se refieran a la materia electoral, se susciten entre: Párrafo reformado DOF 08-12-2005, 15-10-2012, 11-03-2021 a) La Federación y una entidad federativa; Inciso reformado DOF 29-01-2016 b) La Federación y un municipio; c) El Poder Ejecutivo y el Congreso de la Unión; aquél y cualquiera de las Cámaras de éste o, en su caso, la Comisión Permanente; Inciso reformado DOF 29-01-2016 d) Una entidad federativa y otra; Inciso reformado DOF 29-01-2016 e) Se deroga. Inciso derogado DOF 29-01-2016 f) Se deroga.
-
-### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 115 — similitud 0.0700
-
-**Detalle de puntaje:** tfidf=0.0000; bonus=0.0700
-
-> Fracción reformada DOF 25-10-1967, 08-10-1974, 10-08-1987 IX. En materia de amparo directo procede el recurso de revisión en contra de las sentencias que resuelvan sobre la constitucionalidad de normas generales, establezcan la interpretación directa de un precepto de esta Constitución u omitan decidir sobre tales cuestiones cuando hubieren sido planteadas, siempre que a juicio de la Suprema Corte de Justicia de la Nación el asunto revista un interés excepcional en materia constitucional o de derechos humanos. La materia del recurso se limitará a la decisión de las cuestiones propiamente constitucionales, sin poder comprender otras.
-
-### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 47 — similitud 0.0700
-
-**Detalle de puntaje:** tfidf=0.0000; bonus=0.0700
-
-> La Suprema Corte de Justicia de la Nación resolverá, previo a la convocatoria que realice el Congreso de la Unión, sobre la constitucionalidad de la materia de la consulta; Apartado reformado DOF 20-12-2019 4o.
-
-### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 109 — similitud 0.0700
-
-**Detalle de puntaje:** tfidf=0.0000; bonus=0.0700
-
-> La Suprema Corte de Justicia de la Nación conocerá, en los términos que señale la ley reglamentaria, de los asuntos siguientes: I. De las controversias constitucionales que, sobre la constitucionalidad de las normas generales,  actos u omisiones, con excepción de las que se refieran a la materia electoral, se susciten entre: Párrafo reformado DOF 08-12-2005, 15-10-2012, 11-03-2021 a) La Federación y una entidad federativa; Inciso reformado DOF 29-01-2016 b) La Federación y un municipio; c) El Poder Ejecutivo y el Congreso de la Unión; aquél y cualquiera de las Cámaras de éste o, en su caso, la Comisión Permanente; Inciso reformado DOF 29-01-2016 109 de 416
-
-### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 116 — similitud 0.0700
-
-**Detalle de puntaje:** tfidf=0.0000; bonus=0.0700
-
-> Fracción reformada DOF 25-10-1967, 08-10-1974, 10-08-1987 IX. En materia de amparo directo procede el recurso de revisión en contra de las sentencias que resuelvan sobre la constitucionalidad de normas generales, establezcan la interpretación directa de un precepto de esta Constitución u omitan decidir sobre tales cuestiones cuando hubieren sido planteadas, siempre que a juicio de la Suprema Corte de Justicia de la Nación el asunto revista un interés excepcional en materia constitucional o de derechos humanos. La materia del recurso se limitará a la decisión de las cuestiones propiamente constitucionales, sin poder comprender otras.
-
-**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 8 referencia(s) de baja similitud que podrían introducir ruido.
-
-## Ficha 11. la Declaracion de 1789
-
-**Calidad estimada:** baja
-**Mejor similitud:** 0.0760
-**Similitud promedio:** 0.0720
-**Fuentes:** Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf
-**Ubicaciones:** Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 28; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 32; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 43
-
-### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 28 — similitud 0.0760
-
-**Detalle de puntaje:** tfidf=0.0660; bonus=0.0100
-
-> Conforme a lo señalado en los párrafos precedentes, se puede decir que la Ilustración, a través de todos sus pensadores, sentó las bases sobre las cuales habrá de dar- se la construcción de un nuevo modelo de Estado. Todas las ideas de los ilustrados franceses aparecieron refleja- das en la Declaración de los Derechos del Hombre y del Ciudadano, la cual fue aprobada por la Asamblea Nacio- nal Constituyente francesa el 26 de agosto de 1789. 62 Ibid., pp.
-
-### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 32 — similitud 0.0711
-
-**Detalle de puntaje:** tfidf=0.0611; bonus=0.0100
-
-> Los méritos de la constitución escrita consisten, pues, en dar certeza y claridad. Este hecho ha resultado innegable, pues en la actualidad se ha alcanzado lo que el profesor alemán Karl Lowenstein llamó “universalismo de la constitución escrita”, que convierte a ésta en el “sím- bolo de la conciencia nacional y estatal, de la autodeter- minación de la independencia”.71 De esta forma, el legado de la Declaración de los De- rechos del Hombre y del Ciudadano de 1789 resulta más que evidente.
-
-### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 43 — similitud 0.0688
-
-**Detalle de puntaje:** tfidf=0.0488; bonus=0.0200
-
-> 691-714. FAURÉ, Christine, Las declaraciones de los derechos del hombre de 1789. México, Fondo de Cultura Económica, 2005.
-
-**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon varias referencias dentro de la misma fuente. Hay 3 referencia(s) de baja similitud que podrían introducir ruido.
-
-## Ficha 12. Los cinco periodos proceden de la consigna. Los conceptos adicionales son categorias de analisis respaldadas por Garcia Ricci
-
-**Calidad estimada:** baja
-**Mejor similitud:** 0.0816
-**Similitud promedio:** 0.0691
-**Fuentes:** Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf; Teoria pura del derecho - Hans Kelsen.pdf
-**Ubicaciones:** Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 130; Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 269; Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 349; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 130; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 268; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 348; Teoria pura del derecho - Hans Kelsen.pdf, p. 186
-
-### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 268 — similitud 0.0816
-
-**Detalle de puntaje:** tfidf=0.0616; bonus=0.0200
-
-> El Ejecutivo Federal someterá a la Cámara de Senadores las ternas para la designación de los integrantes de la Junta de Gobierno del Instituto Nacional para la Evaluación de la Educación, en un plazo máximo de sesenta días naturales a partir de la publicación del presente Decreto en el Diario Oficial de la Federación, que deberá recaer en personas con capacidad y experiencia en las materias de la competencia del Instituto. Para asegurar la renovación escalonada de los integrantes, los primeros nombramientos se realizarán por los periodos siguientes: I. Dos nombramientos por un periodo de cinco años; II.
-
-### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 269 — similitud 0.0816
-
-**Detalle de puntaje:** tfidf=0.0616; bonus=0.0200
-
-> El Ejecutivo Federal someterá a la Cámara de Senadores las ternas para la designación de los integrantes de la Junta de Gobierno del Instituto Nacional para la Evaluación de la Educación, en un plazo máximo de sesenta días naturales a partir de la publicación del presente Decreto en el Diario Oficial de la Federación, que deberá recaer en personas con capacidad y experiencia en las materias de la competencia del Instituto. Para asegurar la renovación escalonada de los integrantes, los primeros nombramientos se realizarán por los periodos siguientes: I. Dos nombramientos por un periodo de cinco años; II.
-
-### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 349 — similitud 0.0768
-
-**Detalle de puntaje:** tfidf=0.0568; bonus=0.0200
-
-> Para la integración de la primera Junta Directiva del organismo al que se refiere la fracción IX del artículo 3o. de la Constitución Política de los Estados Unidos Mexicanos, la Cámara de Senadores designará a sus cinco integrantes en un plazo de 30 días naturales contados a partir de la entrada en vigor de este Decreto, con una prórroga de hasta 15 días naturales. Con el fin de asegurar la renovación escalonada con motivo de los nombramientos que se realizarán, éstos se harán por los periodos siguientes: 1) Dos nombramientos por un periodo de cinco años; 2) Dos nombramientos por un periodo de seis años, y 3) Un nombramiento por un periodo de siete años.
-
-### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 348 — similitud 0.0768
-
-**Detalle de puntaje:** tfidf=0.0568; bonus=0.0200
-
-> Para la integración de la primera Junta Directiva del organismo al que se refiere la fracción IX del artículo 3o. de la Constitución Política de los Estados Unidos Mexicanos, la Cámara de Senadores designará a sus cinco integrantes en un plazo de 30 días naturales contados a partir de la entrada en vigor de este Decreto, con una prórroga de hasta 15 días naturales. Con el fin de asegurar la renovación escalonada con motivo de los nombramientos que se realizarán, éstos se harán por los periodos siguientes: 1) Dos nombramientos por un periodo de cinco años; 2) Dos nombramientos por un periodo de seis años, y 3) Un nombramiento por un periodo de siete años.
-
-### Teoria pura del derecho - Hans Kelsen.pdf — p. 186 — similitud 0.0614
-
-**Detalle de puntaje:** tfidf=0.0514; bonus=0.0100
-
-> Cuando se dice que un individuo, como órgano de dere- cho, produce derecho o 10 aplica, que un individuo, como sujeto de derecho, acata o viola el derecho, sólo se expresa así, en un lenguaje personalizado, la distinción funcional que aparece entre dos tipos diferentes de conducta humana determinados por el orden jurídico. Los conceptos personalizados de “sujeto de derecho” y “órgano de derecho”, ’.5 no son conceptos necesarios para la descripción del derecho. Se trata, a la postre, de couceptos auxiliares que, como el concepto de derecho reflejo, facilitan la exposición.
-
-### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 130 — similitud 0.0584
-
-**Detalle de puntaje:** tfidf=0.0384; bonus=0.0200
-
-> Reformado DOF 26-05-2015, 27-05-2015 El titular de la entidad de fiscalización de las entidades federativas será electo por las dos terceras partes de los miembros presentes en las legislaturas locales, por periodos no menores a siete años y deberá contar con experiencia de cinco años en materia de control, auditoría financiera y de responsabilidades. Párrafo adicionado DOF 07-05-2008 La cuenta pública del año anterior deberá ser enviada a la Legislatura del Estado, a más tardar el 30 de abril.
-
-### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 130 — similitud 0.0584
-
-**Detalle de puntaje:** tfidf=0.0384; bonus=0.0200
-
-> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Últimas Reformas DOF 02-06-2026 El titular de la entidad de fiscalización de las entidades federativas será electo por las dos terceras partes de los miembros presentes en las legislaturas locales, por periodos no menores a siete años y deberá contar con experiencia de cinco años en materia de control, auditoría financiera y de responsabilidades. Párrafo adicionado DOF 07-05-2008 La cuenta pública del año anterior deberá ser enviada a la Legislatura del Estado, a más tardar el 30 de abril.
-
-### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 348 — similitud 0.0579
-
-**Detalle de puntaje:** tfidf=0.0379; bonus=0.0200
-
-> Cuatro de ellos deberán ser representantes de los diversos tipos y modalidades de la educación. Para asegurar la renovación escalonada con motivo de los nombramientos que se realizarán, éstos se harán por los periodos siguientes: 1) Tres nombramientos por un periodo de tres años; 2) Tres nombramientos por un periodo de cuatro años, y 3) Un nombramiento por un periodo de cinco años. Para la designación de los integrantes de la Junta Directiva y del Consejo Técnico, el Senado de la  República emitirá convocatoria pública a fin de que las instituciones educativas, organismos de la  sociedad civil organizada y sociedad en general presenten propuestas.
-
-**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 6 referencia(s) de baja similitud que podrían introducir ruido.
-
-## Ficha 13. no se atribuyen como una lista literal docente
-
-**Calidad estimada:** baja
-**Mejor similitud:** 0.0976
-**Similitud promedio:** 0.0774
-**Fuentes:** Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf; Teoria pura del derecho - Hans Kelsen.pdf
-**Ubicaciones:** Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 270; Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 348; Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 9; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 106; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 269; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 347; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 9; Teoria pura del derecho - Hans Kelsen.pdf, p. 365
-
-### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 347 — similitud 0.0976
-
-**Detalle de puntaje:** tfidf=0.0876; bonus=0.0100
-
-> Segundo. A partir de la entrada en vigor de este Decreto se abroga la Ley General del Servicio Profesional Docente, se derogan todas las disposiciones contenidas en las leyes secundarias y quedan sin efectos los reglamentos, acuerdos y disposiciones de carácter general contrarias a este Decreto.
-
-### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 348 — similitud 0.0976
-
-**Detalle de puntaje:** tfidf=0.0876; bonus=0.0100
-
-> Segundo. A partir de la entrada en vigor de este Decreto se abroga la Ley General del Servicio Profesional Docente, se derogan todas las disposiciones contenidas en las leyes secundarias y quedan sin efectos los reglamentos, acuerdos y disposiciones de carácter general contrarias a este Decreto.
-
-### Teoria pura del derecho - Hans Kelsen.pdf — p. 365 — similitud 0.0800
-
-**Detalle de puntaje:** tfidf=0.0700; bonus=0.0100
-
-> Todos los métodos interpreta- tivos desarrollados hasta ahora llevan siempre a un resultado posible, y nunca a un único resultado correcto. Inclinarse a la voluntad supuesta del legislador, dejando a un lado el tenor literal, o bien atenerse estrictamente al tenor literal sin preocuparse por la voluntad -por lo general, problemática- del legislador, es, desde el punto de vista del derecho positivo, equivalente por entero. Si se presentara el casa de que dos normas de la misma ley se contra- dijeran, las posibilidades lógicas, antes recordadas, de aplicación del derecho se encontraría, desde el punto de vista del derecho positivo, en un pie de
-
-### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 269 — similitud 0.0745
-
-**Detalle de puntaje:** tfidf=0.0545; bonus=0.0200
-
-> El uso de la evaluación del desempeño docente para dar mayor pertinencia y capacidades al  sistema nacional de formación, actualización, capacitación y superación profesional para maestros, en el  marco de la creación de un servicio profesional docente. La evaluación de los maestros debe tener, como  primer propósito, el que ellos y el sistema educativo cuenten con referentes bien fundamentados para la  reflexión y el diálogo conducentes a una mejor práctica profesional. El sistema educativo deberá otorgar  los apoyos necesarios para que los docentes puedan, prioritariamente, desarrollar sus fortalezas y  superar sus debilidades, y III.
-
-### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 270 — similitud 0.0745
-
-**Detalle de puntaje:** tfidf=0.0545; bonus=0.0200
-
-> El uso de la evaluación del desempeño docente para dar mayor pertinencia y capacidades al  sistema nacional de formación, actualización, capacitación y superación profesional para maestros, en el  marco de la creación de un servicio profesional docente. La evaluación de los maestros debe tener, como  primer propósito, el que ellos y el sistema educativo cuenten con referentes bien fundamentados para la  reflexión y el diálogo conducentes a una mejor práctica profesional. El sistema educativo deberá otorgar  los apoyos necesarios para que los docentes puedan, prioritariamente, desarrollar sus fortalezas y  superar sus debilidades, y III.
-
-### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 9 — similitud 0.0656
-
-**Detalle de puntaje:** tfidf=0.0556; bonus=0.0100
-
-> Párrafo adicionado DOF 15-05-2019 La admisión, promoción y reconocimiento del personal que ejerza la función docente, directiva o de supervisión, se realizará a través de procesos de selección a los que concurran los aspirantes en igualdad de condiciones y establecidos en la ley prevista en el párrafo anterior, los cuales serán públicos, transparentes, equitativos e imparciales y considerarán los conocimientos, aptitudes y experiencia necesarios para el aprendizaje y el desarrollo integral de los educandos. Los nombramientos derivados de estos procesos sólo se otorgarán en términos de dicha ley.
-
-### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 9 — similitud 0.0656
-
-**Detalle de puntaje:** tfidf=0.0556; bonus=0.0100
-
-> Párrafo adicionado DOF 15-05-2019 La admisión, promoción y reconocimiento del personal que ejerza la función docente, directiva o de supervisión, se realizará a través de procesos de selección a los que concurran los aspirantes en igualdad de condiciones y establecidos en la ley prevista en el párrafo anterior, los cuales serán públicos, transparentes, equitativos e imparciales y considerarán los conocimientos, aptitudes y experiencia necesarios para el aprendizaje y el desarrollo integral de los educandos. Los nombramientos derivados de estos procesos sólo se otorgarán en términos de dicha ley.
-
-### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 106 — similitud 0.0641
-
-**Detalle de puntaje:** tfidf=0.0541; bonus=0.0100
-
-> CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Últimas Reformas DOF 02-06-2026 El Fiscal General durará en su encargo nueve años, y será designado y removido conforme a lo siguiente: I. A partir de la ausencia definitiva del Fiscal General, el Senado de la República contará con veinte días para integrar una lista de al menos diez candidatos al cargo, aprobada por las dos terceras partes de los miembros presentes, la cual enviará al Ejecutivo Federal.
-
-**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 6 referencia(s) de baja similitud que podrían introducir ruido.
-
-## Ficha 14. Principio de legalidad
-
-**Calidad estimada:** alta
-**Mejor similitud:** 0.2962
-**Similitud promedio:** 0.2148
-**Fuentes:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf
-**Ubicaciones:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 148; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 36; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 37; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 38; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 46; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 47; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 8
-
-### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 37 — similitud 0.2962
-
-**Detalle de puntaje:** tfidf=0.2162; bonus=0.0800
-
-> Colección de Textos sobre Derechos Humanos Éste es el principio de legalidad en su aspecto mera- mente formal.
-
-### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 38 — similitud 0.2371
-
-**Detalle de puntaje:** tfidf=0.1571; bonus=0.0800
-
-> Estado de Derecho y Principio de Legalidad a lo establecido por la ley. Adicionalmente, el artículo 133 establece el principio de supremacía constitucional, el cual supone una jerarquía normativa: los actos de au- toridad deben ajustarse a lo dispuesto por las leyes, y éstas, a su vez, a la constitución.
-
-### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 148 — similitud 0.2283
-
-**Detalle de puntaje:** tfidf=0.1483; bonus=0.0800
-
-> Una Constitución que coloca las leyes constitucionales de carácter jurídico-material por encima de las leyes ordinarias no solo modifica el principio fundamental de la voluntad de la mayoría del momento y el principio de legalidad basado sobre sí mismo; modifica radicalmente la estructura orgánica de semejante Estado legislati- vo». (En Schmitt, Carl, Legalidad y Legitimidad, cit., p. 73).
-
-### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 37 — similitud 0.2146
-
-**Detalle de puntaje:** tfidf=0.1346; bonus=0.0800
-
-> Pedro Salazar considera que se- rían: 1) la existencia de un cuerpo normativo emitido por una autoridad jurídicamente reconocida; 2) dicho cuerpo normativo debe estar integrado por normas estables, pros- pectivas, generales, claras y debidamente publicadas; 3) la aplicación de normas a los casos concretos debe ser eje- cutada por una institución imparcial, esto es, tribunales previamente establecidos, mediante procedimientos nor- mativos accesibles para todos, que garanticen que toda pena se encuentra debidamente fundada y motivada.81 El principio de legalidad en México El principio de legalidad se encuentra reconocido en la Constitución mexicana a través de diferentes disposicio- nes.
-
-### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 36 — similitud 0.2034
-
-**Detalle de puntaje:** tfidf=0.1234; bonus=0.0800
-
-> Estado de Derecho y Principio de Legalidad El autor elabora una crítica muy importante respecto del origen de dichos derechos, pues nos recuerda su surgimien- to como “derechos de la burguesía”, y que sólo de manera formal y parcial se conceden a los individuos de otras clases sociales.
-
-### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 8 — similitud 0.1851
-
-**Detalle de puntaje:** tfidf=0.1051; bonus=0.0800
-
-> Sin embargo, los países que han optado por el camino del constitucionalismo demo- crático han demostrado que sus sociedades cuentan con espacios de convivencia más ordenados y participativos en los diferentes ámbitos en los que se desarrolla la vida en comunidad: político, económico, social y cultural. El pilar fundamental del Estado de Derecho ha sido el principio de legalidad. Este principio sintetiza un profundo cambio en el pensamiento jurídico.
-
-### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 46 — similitud 0.1773
-
-**Detalle de puntaje:** tfidf=0.0973; bonus=0.0800
-
-> Estado de Derecho y Principio de Legalidad También se sugiere consultar la “Bibliografía general ‘El Estado de Derecho en la última década’”, elaborada por el señor Eugenio Hurtado Márquez, Director Editorial del Centro Nacional de Derechos Humanos, la cual apareció publicada en la Revista del Centro Nacional de Derechos Humanos, titulada Derechos Humanos México, núm. 15, año 5.
-
-### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 47 — similitud 0.1758
-
-**Detalle de puntaje:** tfidf=0.0958; bonus=0.0800
-
-> Estado de Derecho y Principio de Legalidad, editado por la Comisión Nacional de los Derechos Humanos, se ter- minó de imprimir en diciembre de 2011, en los talleres de Grupo Editorial Zeury, S. A. de C.
-
-**Observación automática:** La ficha presenta una coincidencia fuerte con el concepto buscado. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
-
-## Ficha 15. Razon de Estado
-
-**Calidad estimada:** sin hallazgos
-**Mejor similitud:** 0.0000
-**Similitud promedio:** 0.0000
-**Fuentes:** Sin fuentes detectadas
-**Ubicaciones:** Sin ubicaciones detectadas
-
-No se localizaron citas textuales por encima del umbral configurado.
-
-**Observación automática:** No se localizaron fragmentos por encima del umbral configurado. Conviene revisar el concepto o ampliar el corpus.
-
-## Ficha 16. Revolucion francesa
-
-**Calidad estimada:** baja
-**Mejor similitud:** 0.1022
-**Similitud promedio:** 0.0694
-**Fuentes:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf; Teoria pura del derecho - Hans Kelsen.pdf
-**Ubicaciones:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 160; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 163; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 21; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 28; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 29; Teoria pura del derecho - Hans Kelsen.pdf, p. 13; Teoria pura del derecho - Hans Kelsen.pdf, p. 64; Teoria pura del derecho - Hans Kelsen.pdf, p. 8
-
-### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 163 — similitud 0.1022
-
-**Detalle de puntaje:** tfidf=0.0922; bonus=0.0100
-
-> 255 Como advierte Javier Dorado: «Podría por tanto pensarse que el Estado liberal surgido en Europa tras la revolución francesa se configuraba como un Estado constitucional que incluía las características del constitucionalismo actual […] Sin embargo, esto no fue lo que ocurrió en realidad, y puede afirmar- se que el constitucionalismo europeo no empezó a representar estas característi- 163
-
-### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 29 — similitud 0.0703
-
-**Detalle de puntaje:** tfidf=0.0603; bonus=0.0100
-
-> Como ya se señaló líneas arriba, el surgimiento del Esta- do de Derecho requirió la ruptura del Estado absoluto. Dicha ruptura fue posible gracias a la Declaración, pues se convirtió en el documento fundacional de la Revolu- ción francesa. Adicionalmente, la Declaración tuvo un impacto muy importante en la construcción de la moderna Teoría de la Constitución, pues aportó los elementos para distinguir entre el acto a través del cual el pueblo se vuelve cons- ciente de su existencia política y se otorga una Constitu- ción (poder Constituyente), de la función del Estado mis- mo (poderes constituidos).
-
-### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 28 — similitud 0.0677
-
-**Detalle de puntaje:** tfidf=0.0577; bonus=0.0100
-
-> Conforme a lo señalado en los párrafos precedentes, se puede decir que la Ilustración, a través de todos sus pensadores, sentó las bases sobre las cuales habrá de dar- se la construcción de un nuevo modelo de Estado. Todas las ideas de los ilustrados franceses aparecieron refleja- das en la Declaración de los Derechos del Hombre y del Ciudadano, la cual fue aprobada por la Asamblea Nacio- nal Constituyente francesa el 26 de agosto de 1789. 62 Ibid., pp.
-
-### Teoria pura del derecho - Hans Kelsen.pdf — p. 64 — similitud 0.0667
-
-**Detalle de puntaje:** tfidf=0.0567; bonus=0.0100
-
-> Pero el hecho de que el contenido de un orden coactivo eficaz sea juzgado como injusto, no constituye en todo caso fundamento para no aceptar ese orden coactivo como un orden jurídico . ..Luego del triunfo de la Revolu· ción Francesa, a fines del siglo xvrn, así como luego del triunfo de la Revolución Rusa a comienzos del siglo xx, apareció en los demás Estados la tendencia natural a no interpretar el orden jurídico establecido por la revolución como un orden jurídico, a no interpretar los actos de los gobiernos llegados revoluciD- nariamente al poder como actos jurídicos; el primero, porque lesionaba el prin- cipio monárquico de legitimidad; el segundo, porque eliminaba la propiedad...
-
-### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 160 — similitud 0.0664
-
-**Detalle de puntaje:** tfidf=0.0564; bonus=0.0100
-
-> Ignacio Campoy Cervera La unión entre la construcción del modelo político de Esta- do de Derecho y la asunción de la ideología de los derechos fundamentales, se aprecia muy bien en la decisiva Declaración de los derechos del hombre y del ciudadano de la Revolución Francesa, que ya en las famosas palabras de su Preámbulo señalaba expresamente que «Los representantes del pueblo francés, constituidos en Asamblea Nacional, considerando que la ignorancia, el olvido o el desprecio de los derechos del hom- bre son las únicas causas de los males públicos y de la corrup- ción de los gobiernos, han decidido exponer, en una declara- ción solemne, los derechos naturales, inalienables y sagrados del...
-
-### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 21 — similitud 0.0632
-
-**Detalle de puntaje:** tfidf=0.0532; bonus=0.0100
-
-> Sin embargo, es sólo con la igualdad formal que se consiguió con la construcción del Estado de Derecho que se pudo superar esa pervivencia del modelo jurídico político medieval. Este ideal está expresamente señalado en la Declara- ción de los Derechos del Hombre y del Ciudadano, resultado fun- damental de la revolución francesa, que muy bien sirve para explicar la construcción del nuevo modelo frente al arrumbado absolutismo. Si ya en su primer artículo se dirá que «Los hom- bres nacen y permanecen libres e iguales en derechos», en el artículo 6 se establecerá que «La ley es la expresión de la «volun- tad general».
-
-### Teoria pura del derecho - Hans Kelsen.pdf — p. 8 — similitud 0.0599
-
-**Detalle de puntaje:** tfidf=0.0499; bonus=0.0100
-
-> Su obra es continuamente citada, pero en realidad apeTUlJl se estudia, apenas se conoce, como sucede con Iheríng, Savigny, Duguít, Gény, etcétera. Su obra es vulgarízada, mal reproducida, se la reduce a una serie de lugares comunes o, en el meior de los casos, se repiten algunas frases hechas. i Esto puede perfectamente verificarse con el hecho de que es la traducci6n española de la reducida versión francesa de la teoría pura la edición común.- mente mane;ada. En esta ocasión, pues, el Instituto de Investigaciones Jurí- dicas presenta la expresión más acabada del pensamiento de Hans Kelsen, tra- ducida directamente del alemán por el profesor Roberto J.
-
-### Teoria pura del derecho - Hans Kelsen.pdf — p. 13 — similitud 0.0589
-
-**Detalle de puntaje:** tfidf=0.0489; bonus=0.0100
-
-> Va de suyo que una teoría, cuyo primer esbozo se encuentra en mis Hauptpro. bleme der Staatsreehtslehre, aparecidos en 1911, no podía permanecer sin cambios durante tanto tiempo. Muchas modificaciones aparecen ya en mi General Theory of Law and State (Cambridge, Mass., 1945) yen mi Théorie PUTe du Droit (la traducción francesa efectuada por el profesor Henri Thévenaz de la Reine Rechtslehre, Neuchitel, 1953).
+> Esto se debió no sólo por su concepto de pro- piedad privada como absoluta e incondicional, sino, ade- más, por “sus tradiciones de equidad, sus cánones raciona- les de prueba y su hincapié en una judicatura profesional”, las cuales demostraban superioridad para la práctica mer- cantil.21 Así, el derecho romano le ofrecía a la burguesía instituciones jurídicas suficientes para desarrollar con se- guridad las transacciones comerciales. Al mismo tiempo, el derecho romano público tam- bién respondió a las exigencias de los Estados feudales que lentamente comenzaron a reorganizarse, pues ofre- ció un concepto de soberanía imperial capaz de regular las relaciones Estado-súbditos.
 
 **Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 7 referencia(s) de baja similitud que podrían introducir ruido.
 
-## Ficha 17. revolucion francesa moderno
+## Ficha 05. línea tiempo asignatura
 
 **Calidad estimada:** baja
-**Mejor similitud:** 0.0875
-**Similitud promedio:** 0.0664
-**Fuentes:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf; Teoria pura del derecho - Hans Kelsen.pdf
-**Ubicaciones:** En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 122; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 163; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 96; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 28; Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf, p. 29; Teoria pura del derecho - Hans Kelsen.pdf, p. 173; Teoria pura del derecho - Hans Kelsen.pdf, p. 175; Teoria pura del derecho - Hans Kelsen.pdf, p. 64
+**Mejor similitud:** 0.0881
+**Similitud promedio:** 0.0646
+**Fuentes:** ref-Constitucion Politica de los Estados Unidos Mexi.txt; ref-Del espiritu de las leyes - Montesquieu.txt; ref-Introduccion a la teoria del Estado (Olejnik 202.txt; ref-Razon y voluntad en el Estado de Derecho - Franc.txt; ref-Teoria general del Estado (2a edicion) - Eduardo.txt; ref-Teoria pura del Derecho - Hans Kelsen.txt
+**Ubicaciones:** ref-Constitucion Politica de los Estados Unidos Mexi.txt, bloque 138; ref-Constitucion Politica de los Estados Unidos Mexi.txt, bloque 3; ref-Del espiritu de las leyes - Montesquieu.txt, bloque 16; ref-Del espiritu de las leyes - Montesquieu.txt, bloque 227; ref-Del espiritu de las leyes - Montesquieu.txt, bloque 251; ref-Del espiritu de las leyes - Montesquieu.txt, bloque 267; ref-Del espiritu de las leyes - Montesquieu.txt, bloque 287; ref-Del espiritu de las leyes - Montesquieu.txt, bloque 291; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 112; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 115; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 126; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 128; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 55; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 6; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 156; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 46; ref-Teoria general del Estado (2a edicion) - Eduardo.txt, bloque 136; ref-Teoria general del Estado (2a edicion) - Eduardo.txt, bloque 165; ref-Teoria general del Estado (2a edicion) - Eduardo.txt, bloque 4; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 135; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 21; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 222; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 44; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 46; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 78
 
-### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 96 — similitud 0.0875
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 78 — similitud 0.0881
 
-**Detalle de puntaje:** tfidf=0.0775; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.0781; bonus=0.0100
 
-> Siempre depende de la «situación de las cosas»». (En Schmitt, Carl, La Dictadura. Desde los comienzos del pensamiento moderno de la soberanía hasta la lucha de clases proletaria, cit., p. 41).
+> Así como la ley natural es un enunciado que describe la naturaleza y no ella misma el objeto descrito, de igual suerte la ley juridica es el enunciado que describe él derecho, en cuanto enunciado jurídico fonnulado por la ciencia juridica, pero no ella misma el objeto descrito, el derecho, la nonna juridica. Esta última -aun cuando, de ser general, suela designársela como "ley"- no es ninguna ley, es decir, no es algo que, por algnna analogía con la ley natural, puede designarse como "ley" ..
 
-### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 163 — similitud 0.0807
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 156 — similitud 0.0821
 
-**Detalle de puntaje:** tfidf=0.0707; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.0721; bonus=0.0100
 
-> 255 Como advierte Javier Dorado: «Podría por tanto pensarse que el Estado liberal surgido en Europa tras la revolución francesa se configuraba como un Estado constitucional que incluía las características del constitucionalismo actual […] Sin embargo, esto no fue lo que ocurrió en realidad, y puede afirmar- se que el constitucionalismo europeo no empezó a representar estas característi- 163
+> Andrés Ibáñez  y A. Greppi, Trotta, Madrid, 1999. — «Garantías», Jueces para la Democracia, n.º 38, julio 2000. — «Derechos fundamentales», en FERRAJOLI, L., Los fundamentos  de los derechos fundamentales. — «Los derechos fundamentales en la teoría del Derecho», en  FERRAJOLI, L., Los fundamentos de los derechos fundamentales. — «Los fundamentos de los derechos fundamentales», en FERRAJO-  LI, L., Los fundamentos de los derechos fundamentales. — Los fundamentos de los derechos fundamentales, edic. de A. de  Cabo y G. Pisarello, Trotta, Madrid, 2001.
 
-### Teoria pura del derecho - Hans Kelsen.pdf — p. 173 — similitud 0.0667
+### ref-Del espiritu de las leyes - Montesquieu.txt — bloque 287 — similitud 0.0789
 
-**Detalle de puntaje:** tfidf=0.0567; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.0589; bonus=0.0200
 
-> Representación La teoría tradicional denomina “capacidad de derecho” la capacidad de un hombre de tener derechos subjetivos y obligaciones jurídicas, O de ser sujeto de derechos y obligaciones. Según el derecho moderno, todo ser humano indi- vidual podría ~er sujeto de derechos y obligaciones. Los seres humanos inca- paces de derecho -como los esclavos- ya no existen en el derecho moderno.
+> VI. Segunda época del abatimiento de los reyes de la primera línea. VII.
 
-### Teoria pura del derecho - Hans Kelsen.pdf — p. 175 — similitud 0.0667
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 135 — similitud 0.0763
 
-**Detalle de puntaje:** tfidf=0.0567; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.0663; bonus=0.0100
 
-> Representación La teoría tradicional denomina “capacidad de derecho” la capacidad de un hombre de tener derechos subjetivos y obligaciones jurídicas, O de ser sujeto de derechos y obligaciones. Según el derecho moderno, todo ser humano indi- vidual podría ~er sujeto de derechos y obligaciones. Los seres humanos inca- paces de derecho -como los esclavos- ya no existen en el derecho moderno.
+> legislativo facultado por el orden jurídico para producir normas juridicas, y que las funciones de los órganos judiciales y administrativos, facultados por el orden juridico para producir, en aplicación de norma generales, normas jurídicas indi- viduales. En todos estos casos tenemos, como en el caso de la denominada capacid¡¡d juridica, una faoultad para producir normas juridicas; en todos estos casos, el orden juridico otorga un poder juridico a determinados individuos.
 
-### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 122 — similitud 0.0656
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 21 — similitud 0.0716
 
-**Detalle de puntaje:** tfidf=0.0556; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.0616; bonus=0.0100
 
-> Desde los comienzos del pensamiento moderno de la soberanía hasta la lucha de clases proletaria, cit., pp. 27-28, 41-42 y 44, respectivamente.
+> Si la norma expone las circunstancias bajo las cuales una conducta es buena, no determina así cómo sea fácticamente una conducta, sino cómo debe ser. La norma no es un concepto o, como también dice Schlick, una definición. El concepto de algo expresa que, cuando algo posee las propiedades determinadas en la definición del concepto, cae bajo ese concepto.
 
-### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 29 — similitud 0.0562
+### ref-Del espiritu de las leyes - Montesquieu.txt — bloque 251 — similitud 0.0705
 
-**Detalle de puntaje:** tfidf=0.0462; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.0505; bonus=0.0200
 
-> Como ya se señaló líneas arriba, el surgimiento del Esta- do de Derecho requirió la ruptura del Estado absoluto. Dicha ruptura fue posible gracias a la Declaración, pues se convirtió en el documento fundacional de la Revolu- ción francesa. Adicionalmente, la Declaración tuvo un impacto muy importante en la construcción de la moderna Teoría de la Constitución, pues aportó los elementos para distinguir entre el acto a través del cual el pueblo se vuelve cons- ciente de su existencia política y se otorga una Constitu- ción (poder Constituyente), de la función del Estado mis- mo (poderes constituidos).
+> Estas fórmulas se hicieron, no sólo para las leyes de los Lombardos, sino también para las capitulares añadidas a las mismas leyes; por lo tanto, no puede ponerse en duda que ellas nos dan la práctica de la segunda línea. Es evidente que los abogados de la parte pública debieron extinguirse con esta segunda línea, así como los enviados del rey a las provincias, puesto que ya no hubo ni ley general, y porque, habiendo cesado los condes de decidir los pleitos, cesaron naturalmente en las provincias los oficiales subalternos cuya función consistía en mantener la autoridad del conde.
 
-### Estado%20de%20derecho%20y%20principio%20de%20legalidad%20(2011)%20-%20Diego%20Garcia%20Ricci.pdf — p. 28 — similitud 0.0542
+### ref-Teoria general del Estado (2a edicion) - Eduardo.txt — bloque 136 — similitud 0.0683
 
-**Detalle de puntaje:** tfidf=0.0442; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.0483; bonus=0.0200
 
-> Conforme a lo señalado en los párrafos precedentes, se puede decir que la Ilustración, a través de todos sus pensadores, sentó las bases sobre las cuales habrá de dar- se la construcción de un nuevo modelo de Estado. Todas las ideas de los ilustrados franceses aparecieron refleja- das en la Declaración de los Derechos del Hombre y del Ciudadano, la cual fue aprobada por la Asamblea Nacio- nal Constituyente francesa el 26 de agosto de 1789. 62 Ibid., pp.
+> El Estado capitalista desarrollado El Estado capitalista desarrollado al iniciarse la década de 1980 respondía a las características señaladas en el cuadrante superior derecho del esquema de dos ejes. La denominación de Estado capitalista desarrollado deriva de la mezcla de las categorías que empleamos en nuestro esquema; es decir, se trata de un tipo de Estado que responde, en general, a los rasgos atribuidos al capitalismo y al mismo tiempo disfruta de un alto índice de desarrollo económico.
 
-### Teoria pura del derecho - Hans Kelsen.pdf — p. 64 — similitud 0.0535
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 21 — similitud 0.0682
+
+**Detalle de puntaje:** tfidf=0.0582; bonus=0.0100
+
+> La norma no es un concepto o, como también dice Schlick, una definición. El concepto de algo expresa que, cuando algo posee las propiedades determinadas en la definición del concepto, cae bajo ese concepto. Es decir, es aquello que el concepto delimita; y cuando no posee esas propiedades, no encaja en ese concepto, lo que equivale a decir, que no es 10 que el concepto delimita.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 46 — similitud 0.0670
+
+**Detalle de puntaje:** tfidf=0.0570; bonus=0.0100
+
+> El orden juridico no puede ciertamente intentar evitar  todos los conflictos posibles. Lo que los órdenes Juridicos modernos prohíben,  casi sin excepción, es el impedir mediante la fuerza física la conducta no prohi-  bida del otro.
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 115 — similitud 0.0670
+
+**Detalle de puntaje:** tfidf=0.0470; bonus=0.0200
+
+> Por tanto, es recomendable entender el concepto resumiendo del siguiente modo: las convicciones son ideológicas cuando:  1) se basan en intereses, y no en razones;  2) uno no está, por tanto, dispuesto a discutirlas;  3) se engaña a sí mismo respecto de su verdad;  4) son políticamente relevantes;  5) pretenden ser teórica o religiosamente relevantes;  6) se trasmiten y se conservan conforme a la psicología del grupo;  7) sirven tanto para la integración del grupo como para la justificación de  su comportamiento político.
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 128 — similitud 0.0666
+
+**Detalle de puntaje:** tfidf=0.0566; bonus=0.0100
+
+> Conforme a esto, el liberalismo económico es un aliado del liberalismo constitucional cuando y solo en la medida en que junto con los derechos humanos y la división de poderes están garantizadas las seguridades jurídicas, influencias políticas y libertades relevantes para la economía. Pero esta alianza puede resultar poco segura cuando un régimen autoritario promete garantizar estas libertades económicamente relevantes. § 51.
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 55 — similitud 0.0650
+
+**Detalle de puntaje:** tfidf=0.0450; bonus=0.0200
+
+> En la medida en que el concepto de Estado del derecho internacional deja afuera al Estado federal, no es, pues, un concepto totalmente abstracto-general; solo se acerca a un concepto de este tipo. Al concepto de Estado del derecho internacional subyace, por tanto, la llama- da doctrina de los tres elementos que reduce el concepto de Estado a sus elementos más generales.
+
+### ref-Teoria general del Estado (2a edicion) - Eduardo.txt — bloque 165 — similitud 0.0648
+
+**Detalle de puntaje:** tfidf=0.0348; bonus=0.0300
+
+> Situación sociopolítica Estado y clase capitalista Por lo que toca a la relación teórica entre el sistema de clases y el Estado, parecería en un primer momento que la tesis de Mathias y Salama, al referirse al Estado como categoría económica a partir de las necesidades propias de acumulación del capital y no del esquema de dominación de clases —como ha sido clásico en las corrientes marxistas—, llegaría al punto de sostener la existencia de un Estado capitalista sin clase capitalista y, de algún modo, los autores dan esta connotación al Estado sub- desarrollado.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 222 — similitud 0.0639
+
+**Detalle de puntaje:** tfidf=0.0539; bonus=0.0100
+
+> Una norma juridica tiene fuerza retroactiva cuando el hecho al cual ella enlaza una sanción como consecuencia, fue establecido no después de su entrada en vigencia, sino que realizado anteriormente, es decir, por lo tanto, cuando en ese momento, el de la entrada en vigencia de la norma, no constituía una ilicitud, sino que sólo después fue convertido en tal cosa me- diante esa norma jurídica.
+
+### ref-Del espiritu de las leyes - Montesquieu.txt — bloque 227 — similitud 0.0628
+
+**Detalle de puntaje:** tfidf=0.0528; bonus=0.0100
+
+> abandonara la que impedía la sucesión de los parientes por línea femenina. Estas leyes estaban en armonía con el espíritu de una buena República, en la que debe procurarse que las mujeres no lleguen a dominar por el lujo, las riquezas o la esperanza de alcanzarlas.
+
+### ref-Teoria general del Estado (2a edicion) - Eduardo.txt — bloque 4 — similitud 0.0628
+
+**Detalle de puntaje:** tfidf=0.0528; bonus=0.0100
+
+> Sobre estas cuestiones existe una bibliografía profusa y se encuentran al alcan- ce del estudiante textos adecuadamente sistematizados. En cambio, por lo que toca al análisis de los Estados actuales, al examen de sus características económicas y sociopolíticas, así como a la ideología que los inspira, si bien el material bibliográfico es abundante no existen textos que pongan xviii ÍINDICE DE CONTENIDO  NTRODUCCIÓN
+
+### ref-Del espiritu de las leyes - Montesquieu.txt — bloque 267 — similitud 0.0612
+
+**Detalle de puntaje:** tfidf=0.0412; bonus=0.0200
+
+> LO que ha hecho creer que hubo un reglamento general del tiempo de la conquista, es el gran número de servidumbres que había en Francia al comienzo de la tercera línea; y como no se advertía la progresión continua de estas servidumbres, se imaginó la existencia de una ley general que no existió.
+
+### ref-Teoria general del Estado (2a edicion) - Eduardo.txt — bloque 4 — similitud 0.0611
+
+**Detalle de puntaje:** tfidf=0.0511; bonus=0.0100
+
+> Cabría incluso cuestio- nar si es posible elaborar una teoría general acerca del Estado pero, de cualquier modo, ése es el nombre que la tradición germánica llegada hasta nosotros dio a la asignatura cuyos temas abordamos en estas páginas.
+
+### ref-Del espiritu de las leyes - Montesquieu.txt — bloque 291 — similitud 0.0607
+
+**Detalle de puntaje:** tfidf=0.0407; bonus=0.0200
+
+> El entusiasmo delirante de la nación por la familia de Pipino llegó hasta el punto de elegir mayordomo a su nieto, niño todavía; lo instituyó mayordomo de un Dagoberto, poniendo un fantasma al lado de otro fantasma1474. Capítulo VII De los feudos en tiempo de los mayordomos de palacio HE de hacer algunas reflexiones acerca de los feudos. Para mí, no ofrece duda que en tiempo de los mayordomos fue cuando los feudos se hicieron hereditarios.
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 112 — similitud 0.0581
+
+**Detalle de puntaje:** tfidf=0.0381; bonus=0.0200
+
+> Las condiciones sociales son siempre condiciones necesarias del derecho. Pero en la literatura sociológico-jurídi- ca se encuentra no pocas veces el intento de explicar el derecho en forma exhaustiva y exclusiva a partir de hechos sociales, en la mayoría de los casos introducido mediante la fórmula “hay que superar los pretendidos fundamentos racionales del derecho para llegar a las «verdaderas condiciones» que están detrás de esas razones”. En estos casos se acepta sobre todo la variante ideológica del voluntarismo como algo obvio.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 44 — similitud 0.0571
+
+**Detalle de puntaje:** tfidf=0.0471; bonus=0.0100
+
+> Y ese acto coactivo, como sanción (en el sentido de consecuencia de una ilicitud), s610 puede distinguirse de otros actos coactivos estatuidos por el orden juridico, en cuanto el hecho condicionante de esos actos coactivos es una acci6n u omisión determinada por el orden juridico, comprobada jurídicamente, y socialmente indeseada, mientras que los actos coactivos que no constituyen sanciones en el sentido de consecuencias de una ilicitud, están condicionados por otros hechos. 3.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 46 — similitud 0.0570
+
+**Detalle de puntaje:** tfidf=0.0470; bonus=0.0100
+
+> En el primer caso, se exige que los poderes públi- cos actúen en relación con los individuos de acuerdo con reglas explícitamente establecidas en textos accesibles a todos, y que dichas reglas sean transformadas de acuerdo con los criterios establecidos en esos textos. Pero lo que interesa subrayar en este momento es que estamos ante una concepción que no esta- blece criterios en relación con el contenido de las normas que se incluyen en los textos.
+
+### ref-Constitucion Politica de los Estados Unidos Mexi.txt — bloque 3 — similitud 0.0564
+
+**Detalle de puntaje:** tfidf=0.0464; bonus=0.0100
+
+> a) La alfabetización y la educación en todos los niveles, gratuita, integral y con  pertinencia cultural y lingüística; b) La formación de profesionales indígenas y la implementación de la educación  comunitaria; c) El establecimiento de un sistema de becas para las personas indígenas que cursen  cualquier nivel educativo; d) La promoción de programas educativos bilingües, en concordancia con los métodos  de enseñanza y aprendizaje de los pueblos y comunidades indígenas, y e) La definición y desarrollo de programas educativos que reconozcan e impulsen la  herencia cultural de los pueblos y comunidades indígenas y su importancia para la  Nación; así como, la promoción de una relación...
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 78 — similitud 0.0557
+
+**Detalle de puntaje:** tfidf=0.0457; bonus=0.0100
+
+> 205. La causalidad afinoada en las normas jurídicas designadas como enunciados de derecho, es denominada por Zitel- mann, una "causalidad juridica". La coloca junto a la "causalidad natural'".
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 126 — similitud 0.0555
+
+**Detalle de puntaje:** tfidf=0.0455; bonus=0.0100
+
+> En realidad, se asemejan más bien a las reglas del proceso judicial y se reducen al respeto de los partidos y de las reglas de procedimiento del proceso democrático, y con ello el respeto de la base común de la constitución. Es importante que no se abuse por parte del gobierno del rótulo “no demo- crático” para no desgastarlo.
+
+### ref-Constitucion Politica de los Estados Unidos Mexi.txt — bloque 138 — similitud 0.0548
+
+**Detalle de puntaje:** tfidf=0.0348; bonus=0.0200
+
+> Las adecuaciones al marco jurídico para: a) Fortalecer la autonomía de gestión de las escuelas ante los órdenes de gobierno que corresponda con el objetivo de mejorar su infraestructura, comprar materiales educativos, resolver problemas de operación básicos y propiciar condiciones de participación para que alumnos, maestros y padres de familia, bajo el liderazgo del director, se involucren en la resolución de los retos que cada escuela enfrenta. b) Establecer en forma paulatina y conforme a la suficiencia presupuestal escuelas de tiempo completo con jornadas de entre 6 y 8 horas diarias, para aprovechar mejor el tiempo disponible para el desarrollo académico, deportivo y cultural.
+
+### ref-Del espiritu de las leyes - Montesquieu.txt — bloque 16 — similitud 0.0542
+
+**Detalle de puntaje:** tfidf=0.0342; bonus=0.0200
+
+> Pero que la idea provenga del hijo de Siam o del insular de Java, es original en Montesquieu por el desarrollo que le da y el atrevimiento con que la naturaliza en la capital de la nación francesa. Las Cartas Persas, con todos sus defectos, es un libro genial de los más singulares que ha producido nuestra literatura. Usbeck y Rica, dos amigos, dos Persas de distinción, emprenden un viaje a Europa.
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 6 — similitud 0.0539
+
+**Detalle de puntaje:** tfidf=0.0439; bonus=0.0100
+
+> En él, la teoría del Estado es entendida como el intento de aclarar las condiciones efectivas de paz, libertad y justicia, aprovechando la historia del Estado constitucional democrático. 3.— Una teoría del Estado que trata de llegar a los fundamentos y el trasfondo político del Estado constitucional democrático no es empírico-descriptiva, ni tampo- co postulante de normas, es decir, no responde a la pregunta “¿cómo es de hecho el Estado?” (pregunta sociológica acerca de la realidad del Estado), ni tampoco a la pregunta: “¿cómo debe ser el Estado?” (pregunta ética o normativa acerca del ideal del Estado).
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 26 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 06. programa licenciatura derecho
+
+**Calidad estimada:** baja
+**Mejor similitud:** 0.1387
+**Similitud promedio:** 0.0989
+**Fuentes:** ref-Constitucion Politica de los Estados Unidos Mexi.txt; ref-En defensa del Estado de Derecho - Ignacio Campo.txt; ref-Razon y voluntad en el Estado de Derecho - Franc.txt; ref-Teoria pura del Derecho - Hans Kelsen.txt
+**Ubicaciones:** ref-Constitucion Politica de los Estados Unidos Mexi.txt, bloque 144; ref-Constitucion Politica de los Estados Unidos Mexi.txt, bloque 177; ref-Constitucion Politica de los Estados Unidos Mexi.txt, bloque 61; ref-Constitucion Politica de los Estados Unidos Mexi.txt, bloque 65; ref-Constitucion Politica de los Estados Unidos Mexi.txt, bloque 67; ref-En defensa del Estado de Derecho - Ignacio Campo.txt, bloque 74; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 13; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 142; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 156; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 27; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 195
+
+### ref-Constitucion Politica de los Estados Unidos Mexi.txt — bloque 61 — similitud 0.1387
+
+**Detalle de puntaje:** tfidf=0.1187; bonus=0.0200
+
+> Tener ciudadanía mexicana por nacimiento, en pleno ejercicio de sus derechos civiles y  políticos; II. Contar el día de la publicación de la convocatoria señalada en la fracción I del artículo 96 de  esta Constitución con título de licenciatura en derecho expedido legalmente y haber obtenido un  promedio general de calificación de cuando menos ocho puntos o su equivalente y de nueve  puntos o equivalente en las materias relacionadas con el cargo al que se postula en la  licenciatura, especialidad, maestría o doctorado.
+
+### ref-Constitucion Politica de los Estados Unidos Mexi.txt — bloque 144 — similitud 0.1096
+
+**Detalle de puntaje:** tfidf=0.0896; bonus=0.0200
+
+> Un estudio pormenorizado que identifique el mayor número posible de sitios públicos federales, ductos, postería y derechos de vía que deberán ser puestos a disposición de los operadores de telecomunicaciones y radiodifusión para agilizar el despliegue de sus redes. El programa deberá incluir la contraprestación que los concesionarios deberán pagar por el aprovechamiento correspondiente, bajo principios de acceso no discriminatorio y precios que promuevan el cumplimiento del derecho a que se refiere el artículo 6o., párrafo tercero, de la Constitución, siempre y cuando el concesionario ofrezca las mismas condiciones en el acceso a su propia infraestructura; IV.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 13 — similitud 0.1029
+
+**Detalle de puntaje:** tfidf=0.0829; bonus=0.0200
+
+> Por tanto, una definición explicativa de ‘Estado de Derecho’ tiene en cuenta el uso que en la comunidad lingüística (tanto la académica como la no académica) se hace del término. Presen- ta una comprensión del mismo que intentará no estar en con-
+
+### ref-Constitucion Politica de los Estados Unidos Mexi.txt — bloque 177 — similitud 0.0988
+
+**Detalle de puntaje:** tfidf=0.0888; bonus=0.0100
+
+> presente Decreto, el diagnóstico y el programa para el fortalecimiento del estado de fuerza y las capacidades institucionales de sus respectivos cuerpos policiales estatales y municipales. Para la ejecución del programa, se establecerán las previsiones necesarias en los presupuestos de Egresos de la Federación y de las entidades federativas, sobre la base de la corresponsabilidad a partir del ejercicio fiscal de 2020.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 195 — similitud 0.0970
+
+**Detalle de puntaje:** tfidf=0.0770; bonus=0.0200
+
+> Puesto que el fundamento de validez de los órdenes jurí- dicos estatales particulares ya no se encontrará en una norma presup.uesta, sino en una norma jurídica positiva, implantada efectivamente, del derecho internacional; se plantea entonces la pregunta acerca del fundamento de validez de esa norma, y, también, la pregunta por el fundamento de validez del orden jurídico internacional, integrado por la norma en que reposa la autoridad del orden jurídico de cada Estado, la norma en que cada orden jurídico encuentra su fundamento de validez inmediato, aunque no último.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 156 — similitud 0.0958
+
+**Detalle de puntaje:** tfidf=0.0758; bonus=0.0200
+
+> Andrés Ibáñez  y A. Greppi, Trotta, Madrid, 1999. — «Garantías», Jueces para la Democracia, n.º 38, julio 2000. — «Derechos fundamentales», en FERRAJOLI, L., Los fundamentos  de los derechos fundamentales. — «Los derechos fundamentales en la teoría del Derecho», en  FERRAJOLI, L., Los fundamentos de los derechos fundamentales. — «Los fundamentos de los derechos fundamentales», en FERRAJO-  LI, L., Los fundamentos de los derechos fundamentales. — Los fundamentos de los derechos fundamentales, edic. de A. de  Cabo y G. Pisarello, Trotta, Madrid, 2001.
+
+### ref-Constitucion Politica de los Estados Unidos Mexi.txt — bloque 65 — similitud 0.0925
+
+**Detalle de puntaje:** tfidf=0.0725; bonus=0.0200
+
+> Quienes integren el Pleno del órgano de administración judicial deberán ser mexicanos por nacimiento, en pleno ejercicio de sus derechos civiles y políticos; contar con experiencia profesional mínima de cinco años; y contar con título de licenciatura en derecho, economía, actuaría, administración, contabilidad o cualquier título profesional relacionado con las actividades del órgano de administración judicial, con antigüedad mínima de cinco años; y no estar inhabilitados para desempeñar un empleo, cargo o comisión en el servicio público, ni haber sido condenados por delito doloso con sanción privativa de la libertad.
+
+### ref-Constitucion Politica de los Estados Unidos Mexi.txt — bloque 67 — similitud 0.0925
+
+**Detalle de puntaje:** tfidf=0.0725; bonus=0.0200
+
+> Para que una persona pueda ser titular de la Fiscalía General de la República se requiere: ser  ciudadana mexicana por nacimiento, en ejercicio de sus derechos; tener cuando menos treinta y  cinco años cumplidos el día de la designación; contar, con antigüedad mínima de diez años, con  título profesional de licenciatura en derecho; gozar de buena reputación, y no haber sido  condenada por la comisión de delito doloso. Párrafo reformado DOF 29-05-2023 El Fiscal General durará en su encargo nueve años, y será designado y removido conforme a lo  siguiente: I.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 142 — similitud 0.0914
+
+**Detalle de puntaje:** tfidf=0.0814; bonus=0.0100
+
+> Dahl también ha subrayado los problemas que se derivan de las políticas de omisión o de las reglas mordaza para la corrección de los procesos democráticos. En su opinión, los criterios que deben regir un proceso democrático son los siguientes: participación efectiva, igualdad de los votos en la etapa decisoria, comprensión esclarecida, y control final del programa de acción. Los procesos a través de los cuáles se toman decisiones en los sistemas democráticos incluyen dos etapas: por una parte, la que se refiere a la fijación del programa de acción; por otra, la que consiste en tomar la decisión.
+
+### ref-En defensa del Estado de Derecho - Ignacio Campo.txt — bloque 74 — similitud 0.0901
+
+**Detalle de puntaje:** tfidf=0.0601; bonus=0.0300
+
+> Posteriormente, en «Estructura del Estado y Derrumbamiento del Segundo Reich», Schmitt 170  El reconocimiento y la protección de los derechos fundamentales que para Schmitt, conforme a los ideales del Estado liberal de Derecho, los «auténticos» derechos fundamentales no son ni los políticos, ni los económicos, sociales y culturales, sino, simple- mente, aquellos derechos de libertad del individuo que se consi- deraban anteriores al Estado: «Los derechos fundamentales en sentido propio son, esencialmente derechos del hombre indivi- dual libre, y, por cierto, derechos que él tiene frente al Estado» 264; muy diferentes en estructura y contenido a los otros derechos, que sólo de forma...
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 27 — similitud 0.0791
+
+**Detalle de puntaje:** tfidf=0.0391; bonus=0.0400
+
+> Si se ha elegido a estos autores es por dos razones básicas: en primer lugar, han dedicado reflexiones al sentido del Estado de Derecho y del Estado constitucional; en segundo lugar, asumen la importancia de la presencia de contenidos morales en el Derecho, lo cual les sitúa en una relación de familiaridad con las notas distintivas del Estado de Derecho. A través del repaso de las aportaciones de ambos autores podremos observar la existencia de relaciones funcionales y prácticas entre el Dere- cho y la moral.
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 1 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 07. licenciatura derecho
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.1543
+**Similitud promedio:** 0.0868
+**Fuentes:** ref-Constitucion Politica de los Estados Unidos Mexi.txt; ref-Introduccion a la teoria del Estado (Olejnik 202.txt; ref-Teoria pura del Derecho - Hans Kelsen.txt
+**Ubicaciones:** ref-Constitucion Politica de los Estados Unidos Mexi.txt, bloque 59; ref-Constitucion Politica de los Estados Unidos Mexi.txt, bloque 61; ref-Constitucion Politica de los Estados Unidos Mexi.txt, bloque 65; ref-Constitucion Politica de los Estados Unidos Mexi.txt, bloque 67; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 128; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 195; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 205; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 231
+
+### ref-Constitucion Politica de los Estados Unidos Mexi.txt — bloque 61 — similitud 0.1543
+
+**Detalle de puntaje:** tfidf=0.1343; bonus=0.0200
+
+> Tener ciudadanía mexicana por nacimiento, en pleno ejercicio de sus derechos civiles y  políticos; II. Contar el día de la publicación de la convocatoria señalada en la fracción I del artículo 96 de  esta Constitución con título de licenciatura en derecho expedido legalmente y haber obtenido un  promedio general de calificación de cuando menos ocho puntos o su equivalente y de nueve  puntos o equivalente en las materias relacionadas con el cargo al que se postula en la  licenciatura, especialidad, maestría o doctorado.
+
+### ref-Constitucion Politica de los Estados Unidos Mexi.txt — bloque 65 — similitud 0.1021
+
+**Detalle de puntaje:** tfidf=0.0821; bonus=0.0200
+
+> Quienes integren el Pleno del órgano de administración judicial deberán ser mexicanos por nacimiento, en pleno ejercicio de sus derechos civiles y políticos; contar con experiencia profesional mínima de cinco años; y contar con título de licenciatura en derecho, economía, actuaría, administración, contabilidad o cualquier título profesional relacionado con las actividades del órgano de administración judicial, con antigüedad mínima de cinco años; y no estar inhabilitados para desempeñar un empleo, cargo o comisión en el servicio público, ni haber sido condenados por delito doloso con sanción privativa de la libertad.
+
+### ref-Constitucion Politica de los Estados Unidos Mexi.txt — bloque 67 — similitud 0.1021
+
+**Detalle de puntaje:** tfidf=0.0821; bonus=0.0200
+
+> Para que una persona pueda ser titular de la Fiscalía General de la República se requiere: ser  ciudadana mexicana por nacimiento, en ejercicio de sus derechos; tener cuando menos treinta y  cinco años cumplidos el día de la designación; contar, con antigüedad mínima de diez años, con  título profesional de licenciatura en derecho; gozar de buena reputación, y no haber sido  condenada por la comisión de delito doloso. Párrafo reformado DOF 29-05-2023 El Fiscal General durará en su encargo nueve años, y será designado y removido conforme a lo  siguiente: I.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 195 — similitud 0.0986
+
+**Detalle de puntaje:** tfidf=0.0786; bonus=0.0200
+
+> Puesto que el fundamento de validez de los órdenes jurí- dicos estatales particulares ya no se encontrará en una norma presup.uesta, sino en una norma jurídica positiva, implantada efectivamente, del derecho internacional; se plantea entonces la pregunta acerca del fundamento de validez de esa norma, y, también, la pregunta por el fundamento de validez del orden jurídico internacional, integrado por la norma en que reposa la autoridad del orden jurídico de cada Estado, la norma en que cada orden jurídico encuentra su fundamento de validez inmediato, aunque no último.
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 128 — similitud 0.0827
+
+**Detalle de puntaje:** tfidf=0.0627; bonus=0.0200
+
+> Conforme a esto, el liberalismo económico es un aliado del liberalismo constitucional cuando y solo en la medida en que junto con los derechos humanos y la división de poderes están garantizadas las seguridades jurídicas, influencias políticas y libertades relevantes para la economía. Pero esta alianza puede resultar poco segura cuando un régimen autoritario promete garantizar estas libertades económicamente relevantes. § 51.
+
+### ref-Constitucion Politica de los Estados Unidos Mexi.txt — bloque 59 — similitud 0.0621
+
+**Detalle de puntaje:** tfidf=0.0421; bonus=0.0200
+
+> Poseer el día de la publicación de la convocatoria señalada en la fracción I del artículo 96 de esta  Constitución título profesional de licenciado en derecho expedido legalmente, un promedio  general de calificación de cuando menos ocho puntos o su equivalente y de nueve puntos o su  equivalente en las materias relacionadas con el cargo al que se postula en la licenciatura,  especialidad, maestría o doctorado, y práctica profesional de cuando menos cinco años en el  ejercicio de la actividad jurídica;  Fracción reformada DOF 15-12-1934, 31-12-1994, 15-09-2024 IV.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 205 — similitud 0.0467
+
+**Detalle de puntaje:** tfidf=0.0367; bonus=0.0100
+
+> Cuando el derecho consuetudinario, así como el derecho legislado, es derecho positivo, esto es, un derecho impuesto, tiene que haber un acto de voluntad, individual o colectivo, cuyo sentido subjetivo sea un deber, que pueda ser interpretado como una norma válida objetivamen- te, como derecho consuetudinario. Como ya se subrayó anteriormente, el derecho consuetudinario sólo puede ser aplicado por los órganos de aplicación del derecho, cuando puede conside- rarse que esos órganos están facultados para ello.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 231 — similitud 0.0461
+
+**Detalle de puntaje:** tfidf=0.0361; bonus=0.0100
+
+> Bajo la impresión de la importancia predominante que el tribnnal tiene en un sistema de derecho consuetudinario y de precedentes, esta teoría pasa por alto la diferencia esencial que se da entre las "fuentes" del derecho jurídicamente obligatorias y las que no lo son. Se equivoca al 110 reconocer que fuente de derecho, es decir, origen del derecho, aqnello de donde el derecho proviene, aquello que produce derecho, sólo puede ser derecho, puesto que es e! derecho el que regula su propia producción.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 3 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 08. institucional curricular
+
+**Calidad estimada:** baja
+**Mejor similitud:** 0.1240
+**Similitud promedio:** 0.0759
+**Fuentes:** ref-Constitucion Politica de los Estados Unidos Mexi.txt; ref-Del espiritu de las leyes - Montesquieu.txt; ref-En defensa del Estado de Derecho - Ignacio Campo.txt; ref-Introduccion a la teoria del Estado (Olejnik 202.txt; ref-Razon y voluntad en el Estado de Derecho - Franc.txt; ref-Teoria general del Estado (2a edicion) - Eduardo.txt; ref-Teoria pura del Derecho - Hans Kelsen.txt
+**Ubicaciones:** ref-Constitucion Politica de los Estados Unidos Mexi.txt, bloque 118; ref-Constitucion Politica de los Estados Unidos Mexi.txt, bloque 5; ref-Constitucion Politica de los Estados Unidos Mexi.txt, bloque 77; ref-Del espiritu de las leyes - Montesquieu.txt, bloque 39; ref-Del espiritu de las leyes - Montesquieu.txt, bloque 42; ref-En defensa del Estado de Derecho - Ignacio Campo.txt, bloque 65; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 115; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 128; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 209; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 45; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 55; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 69; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 13; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 156; ref-Teoria general del Estado (2a edicion) - Eduardo.txt, bloque 127; ref-Teoria general del Estado (2a edicion) - Eduardo.txt, bloque 95; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 173; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 195; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 21
+
+### ref-Del espiritu de las leyes - Montesquieu.txt — bloque 39 — similitud 0.1240
+
+**Detalle de puntaje:** tfidf=0.1140; bonus=0.0100
+
+> Tampoco prueba que en toda monarquía reine el honor y que en cualquier estado despótico el temor impere, sino que será imperfecta la monarquía sin honor y lo será también, sin temor, el régimen despótico. LIBRO IV Las leyes de la educación deben ser relativas a los principios de gobierno I. De las leyes de la educación.
+
+### ref-Constitucion Politica de los Estados Unidos Mexi.txt — bloque 5 — similitud 0.1013
+
+**Detalle de puntaje:** tfidf=0.0913; bonus=0.0100
+
+> Apartado D adicionado DOF 30-09-2024  Artículo reformado DOF 14-08-2001 Artículo 3o. Toda persona tiene derecho a la educación. El Estado -Federación, Estados, Ciudad de México y Municipios- impartirá y garantizará la educación inicial, preescolar, primaria, secundaria, media superior y superior.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 13 — similitud 0.0981
+
+**Detalle de puntaje:** tfidf=0.0881; bonus=0.0100
+
+> Scarpelli ofrece una definición de las mismas: «La definición explicativa busca, como la definición léxica, corres- ponder al uso; pero a diferencia de la definición léxica, no se esfuerza por recopilar todas las variedades y transformaciones del uso; más bien quiere captar los significados usuales y acotarlos y eventualmente reajustar y reelaborar el núcleo de mayor importancia y valor operativo, para llegar a un instrumento semántico eficiente y preciso capaz de ofrecer en la situación cultural en la que será empleado claridad y orientación» 18.
+
+### ref-Del espiritu de las leyes - Montesquieu.txt — bloque 42 — similitud 0.0974
+
+**Detalle de puntaje:** tfidf=0.0874; bonus=0.0100
+
+> De la educación en el gobierno despótico EN las monarquías, la educación procura únicamente elevar el corazón; en los Estados despóticos, tiende a rebajarlo; es menester que sea servil. La educación servil es un bien en los Estados despóticos, aun para el mando, ya que nadie es tirano sin ser a la vez esclavo.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 156 — similitud 0.0926
+
+**Detalle de puntaje:** tfidf=0.0826; bonus=0.0100
+
+> Andrés Ibáñez  y A. Greppi, Trotta, Madrid, 1999. — «Garantías», Jueces para la Democracia, n.º 38, julio 2000. — «Derechos fundamentales», en FERRAJOLI, L., Los fundamentos  de los derechos fundamentales. — «Los derechos fundamentales en la teoría del Derecho», en  FERRAJOLI, L., Los fundamentos de los derechos fundamentales. — «Los fundamentos de los derechos fundamentales», en FERRAJO-  LI, L., Los fundamentos de los derechos fundamentales. — Los fundamentos de los derechos fundamentales, edic. de A. de  Cabo y G. Pisarello, Trotta, Madrid, 2001.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 195 — similitud 0.0911
+
+**Detalle de puntaje:** tfidf=0.0811; bonus=0.0100
+
+> Puesto que el fundamento de validez de los órdenes jurí- dicos estatales particulares ya no se encontrará en una norma presup.uesta, sino en una norma jurídica positiva, implantada efectivamente, del derecho internacional; se plantea entonces la pregunta acerca del fundamento de validez de esa norma, y, también, la pregunta por el fundamento de validez del orden jurídico internacional, integrado por la norma en que reposa la autoridad del orden jurídico de cada Estado, la norma en que cada orden jurídico encuentra su fundamento de validez inmediato, aunque no último.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 21 — similitud 0.0800
+
+**Detalle de puntaje:** tfidf=0.0700; bonus=0.0100
+
+> Si la norma expone las circunstancias bajo las cuales una conducta es buena, no determina así cómo sea fácticamente una conducta, sino cómo debe ser. La norma no es un concepto o, como también dice Schlick, una definición. El concepto de algo expresa que, cuando algo posee las propiedades determinadas en la definición del concepto, cae bajo ese concepto.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 21 — similitud 0.0798
+
+**Detalle de puntaje:** tfidf=0.0698; bonus=0.0100
+
+> La norma no es un concepto o, como también dice Schlick, una definición. El concepto de algo expresa que, cuando algo posee las propiedades determinadas en la definición del concepto, cae bajo ese concepto. Es decir, es aquello que el concepto delimita; y cuando no posee esas propiedades, no encaja en ese concepto, lo que equivale a decir, que no es 10 que el concepto delimita.
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 128 — similitud 0.0743
+
+**Detalle de puntaje:** tfidf=0.0643; bonus=0.0100
+
+> Conforme a esto, el liberalismo económico es un aliado del liberalismo constitucional cuando y solo en la medida en que junto con los derechos humanos y la división de poderes están garantizadas las seguridades jurídicas, influencias políticas y libertades relevantes para la economía. Pero esta alianza puede resultar poco segura cuando un régimen autoritario promete garantizar estas libertades económicamente relevantes. § 51.
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 69 — similitud 0.0736
+
+**Detalle de puntaje:** tfidf=0.0636; bonus=0.0100
+
+> Estado constitucional con división de poderes: garantía institucional de la inde- pendencia personal y material del juez; división institucional entre el poder legisla- tivo y el ejecutivo; el principio de la reserva de la ley (limitaciones de la libertad y de la propiedad solo sobre la base de leyes formales), sistemas de limitaciones mutuas de los poderes para lograr la cooperación y el control al servicio de las garantías de la juridicidad formal y material (checks and balances); control judicial del legislador por medio de la jurisdicción constitucional; etc. 5.
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 115 — similitud 0.0733
+
+**Detalle de puntaje:** tfidf=0.0533; bonus=0.0200
+
+> Por tanto, es recomendable entender el concepto resumiendo del siguiente modo: las convicciones son ideológicas cuando:  1) se basan en intereses, y no en razones;  2) uno no está, por tanto, dispuesto a discutirlas;  3) se engaña a sí mismo respecto de su verdad;  4) son políticamente relevantes;  5) pretenden ser teórica o religiosamente relevantes;  6) se trasmiten y se conservan conforme a la psicología del grupo;  7) sirven tanto para la integración del grupo como para la justificación de  su comportamiento político.
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 209 — similitud 0.0696
+
+**Detalle de puntaje:** tfidf=0.0596; bonus=0.0100
+
+> Por otra parte, en vista de las reglas procesales democráticas tal parcialidad es tolerable y puede contribuir al descubrimiento de la verdad, del mismo modo como el abogado polémico que representa solo una parte ante el tribunal puede contribuir a la comprobación de los hechos, siempre que la otra parte también pueda expre- sar su punto de vista sin limitaciones, porque el abogado aporta todos los aspectos relevantes para una parte.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 173 — similitud 0.0684
+
+**Detalle de puntaje:** tfidf=0.0584; bonus=0.0100
+
+> Puesto que todas las normas de un orden de este tipo están ya contenidas en el contenido de la norma presupuesta, puede deducírselas mediante una operación lógica, una inferencia de lo general a lo particular. Esa norma, presupuesta como norma fundante básica, presta tanto el fundamento de validez, como el contenido válido de las normas inferidas de ella mediante una operación lógica. Un sistema de normas, cuyo fundamento de validez y cuyo fundamento válido es derivado de una norma propuesta como norma fundante l¡ásica, es un sis- tema normativo estático.
+
+### ref-Teoria general del Estado (2a edicion) - Eduardo.txt — bloque 95 — similitud 0.0620
+
+**Detalle de puntaje:** tfidf=0.0420; bonus=0.0200
+
+> Esta línea de pensamiento no pretendía la supresión de la monarquía, sino la limitación de su poder. El concepto de soberanía El problema de la soberanía preocupaba especialmente a los teóricos.
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 55 — similitud 0.0610
+
+**Detalle de puntaje:** tfidf=0.0510; bonus=0.0100
+
+> En la medida en que el concepto de Estado del derecho internacional deja afuera al Estado federal, no es, pues, un concepto totalmente abstracto-general; solo se acerca a un concepto de este tipo. Al concepto de Estado del derecho internacional subyace, por tanto, la llama- da doctrina de los tres elementos que reduce el concepto de Estado a sus elementos más generales.
+
+### ref-Constitucion Politica de los Estados Unidos Mexi.txt — bloque 118 — similitud 0.0588
+
+**Detalle de puntaje:** tfidf=0.0488; bonus=0.0100
+
+> Primero.- El presente Decreto entrará en vigor al día siguiente de su publicación en el Diario Oficial de la Federación. Segundo.- La autoridad educativa federal deberá, a la entrada en vigor del presente Decreto, instalar comisiones técnicas y de consulta con las demás autoridades educativas del país que resulten pertinentes, para iniciar un proceso tendiente a la unificación estructural, curricular y laboral de los tres niveles constitucionales obligatorios, en un solo nivel de educación básica integrada.
+
+### ref-En defensa del Estado de Derecho - Ignacio Campo.txt — bloque 65 — similitud 0.0567
+
+**Detalle de puntaje:** tfidf=0.0467; bonus=0.0100
+
+> Pero se trastornan los con- ceptos de judicialidad y jurisdicción, como también la garantía institucional de la burocracia profesional alemana, cuando, en todos los casos en que por razones prácticas aparece como 236  Schmitt, Carl, «Estructura del Estado y Derrumbamiento del Segun- do Reich. «La Victoria del Burgués sobre el Soldado»», cit., pp. 82-83.
+
+### ref-Constitucion Politica de los Estados Unidos Mexi.txt — bloque 77 — similitud 0.0550
+
+**Detalle de puntaje:** tfidf=0.0450; bonus=0.0100
+
+> Derivado de este informe, podrá emitir recomendaciones no vinculantes a las autoridades,  con el objeto de que adopten medidas dirigidas al fortalecimiento institucional para la  prevención de faltas administrativas y hechos de corrupción, así como al mejoramiento de  su desempeño y del control interno. Las autoridades destinatarias de las  recomendaciones informarán al Comité sobre la atención que brinden a las mismas.
+
+### ref-Teoria general del Estado (2a edicion) - Eduardo.txt — bloque 127 — similitud 0.0535
 
 **Detalle de puntaje:** tfidf=0.0435; bonus=0.0100
 
-> Pero el hecho de que el contenido de un orden coactivo eficaz sea juzgado como injusto, no constituye en todo caso fundamento para no aceptar ese orden coactivo como un orden jurídico . ..Luego del triunfo de la Revolu· ción Francesa, a fines del siglo xvrn, así como luego del triunfo de la Revolución Rusa a comienzos del siglo xx, apareció en los demás Estados la tendencia natural a no interpretar el orden jurídico establecido por la revolución como un orden jurídico, a no interpretar los actos de los gobiernos llegados revoluciD- nariamente al poder como actos jurídicos; el primero, porque lesionaba el prin- cipio monárquico de legitimidad; el segundo, porque eliminaba la propiedad...
+> La vertiente ideológica y la económica se han potenciado activamente a par- tir de la década de 1980, y la desaparición del Estado socialista en Europa ha contribuido a acelerar los procedimientos para desmontar la estructura institucional del Estado benefactor mediante la universalización de políticas neoliberales (véase globalización en el capítulo 8). 21  Diccionario de política, op. cit.
 
-**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 6 referencia(s) de baja similitud que podrían introducir ruido.
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 45 — similitud 0.0479
 
-## Ficha 18. Separacion de poderes
+**Detalle de puntaje:** tfidf=0.0379; bonus=0.0100
+
+> Pues ahora la oposición política decisiva ya no es legitimidad republicana versus legitimidad monárquica, ni tam- poco democracia parlamentaria versus dictadura de partido único, sino más bien: seguridad institucional para los derechos humanos versus instrumentalización del hombre por el Estado. En estas circunstancias, si bien la paz sigue siendo muy im- portante, surge, sin embargo, la cuestión de saber si no hay situaciones en que la 72  Introducción a la teoría del Estado ...
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 14 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 09. contexto institucional curricular
+
+**Calidad estimada:** baja
+**Mejor similitud:** 0.1073
+**Similitud promedio:** 0.0681
+**Fuentes:** ref-Constitucion Politica de los Estados Unidos Mexi.txt; ref-Introduccion a la teoria del Estado (Olejnik 202.txt; ref-Razon y voluntad en el Estado de Derecho - Franc.txt; ref-Teoria pura del Derecho - Hans Kelsen.txt
+**Ubicaciones:** ref-Constitucion Politica de los Estados Unidos Mexi.txt, bloque 118; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 108; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 128; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 69; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 107; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 111; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 151; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 156; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 164; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 4; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 62; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 154; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 171; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 195; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 237; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 48
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 111 — similitud 0.1073
+
+**Detalle de puntaje:** tfidf=0.0873; bonus=0.0200
+
+> Sin embargo, si queremos explicar cómo se desenvuelven los mecanismos de pertenencia a los sistemas jurídicos, más allá del hecho de que nos encontremos ante un Ordenamiento constitucional o no, la separación kelseniana entre sistemas dinámicos y sistemas estáticos es difícilmente sostenible 457. Y ello, porque, más allá del sentido que dicha distinción tuviera en el contexto de la teoría pura, los sistemas jurídicos, incluyan los contenidos de los sistemas constitucionales u otros, confi- guran criterios de pertenencia que comparten y aúnan exigen- cias o rasgos de los sistemas dinámicos y de los sistemas está- ticos.
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 108 — similitud 0.0920
+
+**Detalle de puntaje:** tfidf=0.0720; bonus=0.0200
+
+> La suposición de que la historia de los derechos fundamentales comienza con la Declaración de los Derechos Humanos francesa de 1789 y que es la sedimentación política de la filosofía iluminista francesa es, conforme a lo expuesto, un error, y además un error con efectos lamentables: pues ha contribuido esencialmente a una concepción de los derechos humanos que los separó del contexto institucional del Estado constitucional, relegándolos al plano de las declamaciones. Esta concepción errónea de los derechos humanos conduce -allí donde es políticamente efectiva— al hecho de que si bien se reconocen los derechos humanos, no se los institucionaliza.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 48 — similitud 0.0812
+
+**Detalle de puntaje:** tfidf=0.0612; bonus=0.0200
+
+> El fundamento de validez de! orden jundico internacional, cuyo dominio de validez territorial no está limitado así, y la relación del orden jurídico internacional con los órdenes jurídicos estatales permanece aquí, por el momento, sin explicación."  Ya en un contexto anterior se sefialó que la validez de una norma -es decir, que uno deba comportarse como la norma determina- no debe ser confundida con el hecho de que uno fácticamente se comporte de esa manera; pero que, sin embargo, puede darse una relación esencial entre am
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 164 — similitud 0.0742
+
+**Detalle de puntaje:** tfidf=0.0542; bonus=0.0200
+
+> A propósito de un ensayo de Luigi Ferrajo-  li», en FERRAJOLI, L., Los fundamentos de los derechos funda-  mentales. — «Teoria e critica dello Stato di diritto», VVAA., Lo Stato di diritto. Storia, teoria, critica.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 156 — similitud 0.0737
+
+**Detalle de puntaje:** tfidf=0.0637; bonus=0.0100
+
+> Andrés Ibáñez  y A. Greppi, Trotta, Madrid, 1999. — «Garantías», Jueces para la Democracia, n.º 38, julio 2000. — «Derechos fundamentales», en FERRAJOLI, L., Los fundamentos  de los derechos fundamentales. — «Los derechos fundamentales en la teoría del Derecho», en  FERRAJOLI, L., Los fundamentos de los derechos fundamentales. — «Los fundamentos de los derechos fundamentales», en FERRAJO-  LI, L., Los fundamentos de los derechos fundamentales. — Los fundamentos de los derechos fundamentales, edic. de A. de  Cabo y G. Pisarello, Trotta, Madrid, 2001.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 195 — similitud 0.0733
+
+**Detalle de puntaje:** tfidf=0.0633; bonus=0.0100
+
+> Puesto que el fundamento de validez de los órdenes jurí- dicos estatales particulares ya no se encontrará en una norma presup.uesta, sino en una norma jurídica positiva, implantada efectivamente, del derecho internacional; se plantea entonces la pregunta acerca del fundamento de validez de esa norma, y, también, la pregunta por el fundamento de validez del orden jurídico internacional, integrado por la norma en que reposa la autoridad del orden jurídico de cada Estado, la norma en que cada orden jurídico encuentra su fundamento de validez inmediato, aunque no último.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 171 — similitud 0.0702
+
+**Detalle de puntaje:** tfidf=0.0502; bonus=0.0200
+
+> Que una norma que se refiere a la conducta de un hombre valga signi- fica que obliga, que el hombre debe comportarse de la manera determinada por la norma. Ya en un contexto anterior se expuso que la pregunta por la validez de la norma -es decir, la pregunta por qué nn hombre debe compor· tarse así-, no puede ser contestada mediante la verificación de un hecho empírico, ya que el fundamento de validez de una norma no puede ser seme· jante hecho. De que algo sea, no puede seguirse que algo deba ser; así como, de que algo sea debido, no puede seguirse, que algo sea.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 107 — similitud 0.0699
+
+**Detalle de puntaje:** tfidf=0.0499; bonus=0.0200
+
+> Teoria del diritto e della democrazia, I, p. 531.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 154 — similitud 0.0697
+
+**Detalle de puntaje:** tfidf=0.0497; bonus=0.0200
+
+> La contradicción, consistente en considerar a la libertad como concepto fundamental del derecho, que, según Puchta, es, según dice en el prólogo (op. cit., p. S), también nonna, y, por ende, relación obligatoria, se hace más aguda en cuanto esta teoria del derecho por libertad no entiende únicamente la autodeterminación empírica. sino, por sobre todo, la libertad metafísica de la voluntad. la libre voluntad humana fundada en su semejanza con la divinidad; pero al mismo tiempo representa esa volulltad humana como sometida a la voluntad divina. Así dice Puchta (op. cit., p.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 151 — similitud 0.0644
+
+**Detalle de puntaje:** tfidf=0.0444; bonus=0.0200
+
+> Así, se ha propuesto una Constitución más flexible pero mejor garantizada 642, una clarificación de los criterios que determinan el «atrincheramiento» de los derechos en la Consti- tución 643, un constitucionalismo «débil», que vincule el diseño institucional adecuado a las circunstancias del contexto 644, un modelo en el que el control de constitucionalidad sea enervable a través de la mayoría parlamentaria ordinaria que se exige para la aprobación de las leyes 645o la imprescindible vinculación al Parlamento del último órgano competente para la atribución de significado a las normas de derechos fundamentales 646.
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 128 — similitud 0.0597
+
+**Detalle de puntaje:** tfidf=0.0497; bonus=0.0100
+
+> Conforme a esto, el liberalismo económico es un aliado del liberalismo constitucional cuando y solo en la medida en que junto con los derechos humanos y la división de poderes están garantizadas las seguridades jurídicas, influencias políticas y libertades relevantes para la economía. Pero esta alianza puede resultar poco segura cuando un régimen autoritario promete garantizar estas libertades económicamente relevantes. § 51.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 4 — similitud 0.0578
+
+**Detalle de puntaje:** tfidf=0.0378; bonus=0.0200
+
+> bien está atento a las dimensiones positivas, corre el riesgo de carecer de capacidad y atractivo más allá del contexto en el que se articula la propuesta. Irremediablemente, como se acaba de señalar, el teórico del Derecho se desenvuelve entre ambos extremos, lo cual no quiere decir que necesariamente tenga que situarse en alguno de ellos.
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 69 — similitud 0.0560
+
+**Detalle de puntaje:** tfidf=0.0460; bonus=0.0100
+
+> Estado constitucional con división de poderes: garantía institucional de la inde- pendencia personal y material del juez; división institucional entre el poder legisla- tivo y el ejecutivo; el principio de la reserva de la ley (limitaciones de la libertad y de la propiedad solo sobre la base de leyes formales), sistemas de limitaciones mutuas de los poderes para lograr la cooperación y el control al servicio de las garantías de la juridicidad formal y material (checks and balances); control judicial del legislador por medio de la jurisdicción constitucional; etc. 5.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 237 — similitud 0.0480
+
+**Detalle de puntaje:** tfidf=0.0380; bonus=0.0100
+
+> atribuida a la comunidad constituida mediante ese orden jurídico, el Estado. La terminología tradicional -como se mostro anteriormente en otro contexto- no se adecua a esto.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 62 — similitud 0.0463
+
+**Detalle de puntaje:** tfidf=0.0263; bonus=0.0200
+
+> En segundo lugar, el problema derivado de lo que podríamos con- siderar el valor moral del imperio de la ley. Pero antes de pasar a estas cuestiones, parece necesario efectuar una breve referencia a lo que podríamos considerar el contexto no institucionalizado del imperio de la ley. La alusión a la concepción formal del imperio de la ley necesariamente debe ser completada con una referencia a las condiciones del contexto en el que aquel va a desarrollar su virtualidad.
+
+### ref-Constitucion Politica de los Estados Unidos Mexi.txt — bloque 118 — similitud 0.0453
+
+**Detalle de puntaje:** tfidf=0.0353; bonus=0.0100
+
+> Primero.- El presente Decreto entrará en vigor al día siguiente de su publicación en el Diario Oficial de la Federación. Segundo.- La autoridad educativa federal deberá, a la entrada en vigor del presente Decreto, instalar comisiones técnicas y de consulta con las demás autoridades educativas del país que resulten pertinentes, para iniciar un proceso tendiente a la unificación estructural, curricular y laboral de los tres niveles constitucionales obligatorios, en un solo nivel de educación básica integrada.
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 13 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 10. formal línea tiempo
 
 **Calidad estimada:** media
-**Mejor similitud:** 0.1814
-**Similitud promedio:** 0.1387
-**Fuentes:** Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf; En defensa del estado de derech - Ignacio Campoy Cervera.pdf
-**Ubicaciones:** Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 144; Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf, p. 330; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 143; Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf, p. 96; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 100; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 127; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 31; En defensa del estado de derech - Ignacio Campoy Cervera.pdf, p. 99
+**Mejor similitud:** 0.1460
+**Similitud promedio:** 0.1041
+**Fuentes:** ref-Del espiritu de las leyes - Montesquieu.txt; ref-Introduccion a la teoria del Estado (Olejnik 202.txt; ref-Razon y voluntad en el Estado de Derecho - Franc.txt; ref-Teoria general del Estado (2a edicion) - Eduardo.txt; ref-Teoria pura del Derecho - Hans Kelsen.txt
+**Ubicaciones:** ref-Del espiritu de las leyes - Montesquieu.txt, bloque 251; ref-Del espiritu de las leyes - Montesquieu.txt, bloque 287; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 53; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 54; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 111; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 14; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 150; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 156; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 40; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 49; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 59; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 61; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 62; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 77; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 83; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 87; ref-Teoria general del Estado (2a edicion) - Eduardo.txt, bloque 252; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 135; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 46
 
-### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 143 — similitud 0.1814
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 111 — similitud 0.1460
 
-**Detalle de puntaje:** tfidf=0.1714; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.1260; bonus=0.0200
 
-> El Gobierno de la Ciudad de México, dado su carácter de Capital de los Estados Unidos Mexicanos y sede de los Poderes de la Unión, garantizará, en todo tiempo y en los términos de este artículo, las condiciones necesarias para el ejercicio de las facultades constitucionales de los poderes federales.
+> Sin embargo, si queremos explicar cómo se desenvuelven los mecanismos de pertenencia a los sistemas jurídicos, más allá del hecho de que nos encontremos ante un Ordenamiento constitucional o no, la separación kelseniana entre sistemas dinámicos y sistemas estáticos es difícilmente sostenible 457. Y ello, porque, más allá del sentido que dicha distinción tuviera en el contexto de la teoría pura, los sistemas jurídicos, incluyan los contenidos de los sistemas constitucionales u otros, confi- guran criterios de pertenencia que comparten y aúnan exigen- cias o rasgos de los sistemas dinámicos y de los sistemas está- ticos.
 
-### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 144 — similitud 0.1759
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 14 — similitud 0.1362
 
-**Detalle de puntaje:** tfidf=0.1659; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.1062; bonus=0.0300
 
-> CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN Secretaría General Secretaría de Servicios Parlamentarios Última Reforma DOF 07-10-2026 El Gobierno de la Ciudad de México, dado su carácter de Capital de los Estados Unidos Mexicanos y sede de los Poderes de la Unión, garantizará, en todo tiempo y en los términos de este artículo, las condiciones necesarias para el ejercicio de las facultades constitucionales de los poderes federales.
+> En este sentido, sabemos que se habla de la posibilidad de defender conceptos más o menos amplios de Estado de Derecho; se habla, por ejemplo, de concepto formal y de concepto material. Lo que me interesa es detenerme —en el capítulo tercero— en esta cuestión: la de la distinción entre el concepto formal y el material de Estado de Derecho, y la de las ventajas que tiene el segundo sobre el pri- mero. Aunque el análisis de la distinción se deja para más adelan- te, me gustaría adelantar alguna apreciación.
 
-### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 100 — similitud 0.1594
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 156 — similitud 0.1325
 
-**Detalle de puntaje:** tfidf=0.1494; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.1225; bonus=0.0100
 
-> Como dice el propio Elías Díaz, la separación de poderes significa «que la creación de las leyes (función legislativa) corresponde al poder legislativo y que la aplicación de las leyes (funciones ejecutiva y judicial) corresponde bajo esas dos formas a los poderes eje- cutivo y judicial. […] Como es bien sabido, el principio de la separación de poderes no debe entenderse en forma absoluta y rígida como si las diferentes funciones y poderes de un mismo Estado constituyesen compartimentos aislados, totalmente incomunicables entre sí.
+> Andrés Ibáñez  y A. Greppi, Trotta, Madrid, 1999. — «Garantías», Jueces para la Democracia, n.º 38, julio 2000. — «Derechos fundamentales», en FERRAJOLI, L., Los fundamentos  de los derechos fundamentales. — «Los derechos fundamentales en la teoría del Derecho», en  FERRAJOLI, L., Los fundamentos de los derechos fundamentales. — «Los fundamentos de los derechos fundamentales», en FERRAJO-  LI, L., Los fundamentos de los derechos fundamentales. — Los fundamentos de los derechos fundamentales, edic. de A. de  Cabo y G. Pisarello, Trotta, Madrid, 2001.
 
-### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 127 — similitud 0.1287
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 54 — similitud 0.1087
 
-**Detalle de puntaje:** tfidf=0.1187; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.0787; bonus=0.0300
 
-> tucional de los diversos poderes y la Constitución misma, parece oportuno, en un Estado de Derecho que diferencia los poderes, no confiar la misión preci- tada a uno de los poderes existentes, porque en tal caso podría tener un pre- dominio sobre los demás y sustraerse a su vez a todo control, convirtiéndose como consecuencia en árbitro de la Constitución. Por esta causa es necesario estatuir un poder neutral específico junto a los demás poderes, y enlazarlo equilibrado con ellos mediante atribuciones especiales». (Op. cit., pp.
+> Las definiciones postuladas de esta manera deben distinguirse de los intentos de determinar un concepto de Estado “concreto-general” (Hegel). Tales conceptos de Estado tampoco pueden mantenerse consecuente y universalmente, pero pue- den ser apropiados en contextos jurídicos. De qué manera ha de entenderse esto, puede ser ilustrado con el ejemplo del problema de la soberanía del Estado.
 
-### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 99 — similitud 0.1256
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 62 — similitud 0.1087
 
-**Detalle de puntaje:** tfidf=0.1156; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.0987; bonus=0.0100
 
-> CAPÍTULO II LA SEPARACIÓN DE PODERES La segunda característica general con la que el profesor Elías Díaz identifica todo Estado de Derecho es la separación de poderes. Con ella se buscan dos fines fundamentales: la efi- cacia en la acción del poder y, sobre todo, la limitación y con- trol en el ejercicio del poder 152.
+> metodológica, procedimental, acomodativa y autorizacional. Cabe señalar que estos cuatro tipos no afectan por igual a todos y cada uno de los principios, y que cada uno de los cuatro tipos dependen en su significado de una determinada comprensión del concepto de «formal». Si se maneja el concepto de formal en el sentido de ‘perteneciente al método’, los principios son formales en sentido metodológico ya que muchos de ellos están relacionados con los modos y maneras en que se adquiere su propia forma.
 
-### En defensa del estado de derech - Ignacio Campoy Cervera.pdf — p. 31 — similitud 0.1224
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 49 — similitud 0.1078
 
-**Detalle de puntaje:** tfidf=0.1124; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.0778; bonus=0.0300
 
-> 26 Schmitt resulta muy contundente en el siguiente pasaje: «El pensa- miento de Hobbes penetra y actúa eficazmente en el Estado legal positivista del siglo XIX, pero sólo se realiza en forma que podríamos llamar apócrifa. Los antiguos adversarios, los poderes «indirectos» de la Iglesia y de las organiza- ciones de intereses, vuelven a entrar en escena transfigurados, como partidos políticos, sindicatos, asociaciones sociales; en una palabra, como «poderes de la sociedad». A través del Parlamento lograron apoderarse de la legislación y del Estado legal y hasta pudieron llegar a creer que habían conseguido engan- char al Leviathan a su carruaje.
+> 119  Francisco Javier Ansuátegui Roig 2.2. Sobre la insuficiencia del concepto formal 2.2.1. Algo más que un modelo de relación entre el Derecho  y el Poder
 
-### Constitucion Politica de los Es - Camara de Diputados del H. Cong.pdf — p. 96 — similitud 0.1132
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 77 — similitud 0.1072
 
-**Detalle de puntaje:** tfidf=0.1032; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.0972; bonus=0.0100
 
-> Para los efectos del párrafo anterior, cada uno de los Poderes de la Unión postulará dos  personas para cada cargo: el Poder Ejecutivo lo hará por conducto de la persona titular  de la Presidencia de la República; el Poder Legislativo postulará una persona por cada  Cámara mediante votación calificada de dos tercios de sus integrantes presentes; y el  Poder Judicial de la Federación, por conducto del Pleno de la Suprema Corte de Justicia  de la Nación, por mayoría de seis votos. Inciso reformado DOF 02-06-2026 III.
+> cho tiene mucho que decir a la hora de la configuración de los contextos de decisión como paramétricos o estratégicos. A tra- vés del imperio de la ley el Derecho constituye contextos para- métricos de decisión, ya que crea condiciones de estabilidad que le permiten al individuo adoptar decisiones en un marco de cretidumbre, previsibilidad y predecibilidad, no sólo de los ele- mentos del contexto, sino también de las consecuencias de sus decisiones y acciones.
 
-### Constitucion%20Politica%20de%20los%20Estados%20Unidos%20Mexicanos%20(consulta%202026-10-09)%20-%20Camara%20de%20Diputados.pdf — p. 330 — similitud 0.1031
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 83 — similitud 0.1059
 
-**Detalle de puntaje:** tfidf=0.0931; bonus=0.0100
+**Detalle de puntaje:** tfidf=0.0759; bonus=0.0300
 
-> ARTÍCULO DÉCIMO.- El Congreso de la Unión, en la expedición de las leyes a que se refiere el párrafo tercero del Apartado B y el primer párrafo del Apartado C del artículo 122, deberá prever que las mismas entren en vigor en la fecha en que inicie la vigencia de la Constitución Política de la Ciudad de México. ARTÍCULO DÉCIMO PRIMERO.- Todos los inmuebles ubicados en la Ciudad de México que estén destinados al servicio que prestan los poderes de la Federación, así como cualquier otro bien afecto a éstos, continuarán bajo la jurisdicción de los poderes federales. 330 de 416
+> sistema jurídico y, como consecuencia de ello, la insuficiencia de una comprensión exclusivamente formal del Estado de Derecho, centrada solamente en el imperio de la ley. La reflexión sobre la insuficiencia del concepto formal de Estado de Derecho a la hora de presentar los rasgos propios del Estado de Derecho en la cultura jurídica contemporánea y, sobre todo, a la hora de diferenciar y sustantivizar al Estado de Derecho como tal respecto a otros modelos de Estado, nos sitúa ante la necesidad de ir más allá y de completar la caracte- rización del Estado de Derecho, en sus dimensiones sustancia- les o materiales.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 150 — similitud 0.1058
+
+**Detalle de puntaje:** tfidf=0.0758; bonus=0.0300
+
+> No lo creo. Al principio del libro llamé la atención sobre la necesidad de que la Filosofía del Derecho se ocupe de los problemas que se generan a partir de la práctica de los sistemas jurídicos. De la misma manera que no todos los sistemas jurídicos presentan la misma configura- ción, tampoco presentan los mismos problemas.
+
+### ref-Del espiritu de las leyes - Montesquieu.txt — bloque 287 — similitud 0.1046
+
+**Detalle de puntaje:** tfidf=0.0846; bonus=0.0200
+
+> VI. Segunda época del abatimiento de los reyes de la primera línea. VII.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 135 — similitud 0.1046
+
+**Detalle de puntaje:** tfidf=0.0946; bonus=0.0100
+
+> legislativo facultado por el orden jurídico para producir normas juridicas, y que las funciones de los órganos judiciales y administrativos, facultados por el orden juridico para producir, en aplicación de norma generales, normas jurídicas indi- viduales. En todos estos casos tenemos, como en el caso de la denominada capacid¡¡d juridica, una faoultad para producir normas juridicas; en todos estos casos, el orden juridico otorga un poder juridico a determinados individuos.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 59 — similitud 0.1036
+
+**Detalle de puntaje:** tfidf=0.0836; bonus=0.0200
+
+> No obstante, no me voy a centrar en esta ocasión en una relec- tura de la propuesta de Fuller en relación con la moral interna del Derecho, que, por otra parte, ha sido convenientemente estudiada entre nosotros 231. Me interesa por el contrario subra- yar algunas dimensiones vinculadas a la naturaleza formal del Derecho, que considero básicas a la hora de comprender su sen- tido y su funcionamiento. Dichas dimensiones afectan de lleno a la idea de imperio de la ley que se mantiene en estas líneas.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 14 — similitud 0.1028
+
+**Detalle de puntaje:** tfidf=0.0828; bonus=0.0200
+
+> Por el contrario me interesa cen- trarme en este momento en la posible diferenciación entre las diversas comprensiones del concepto. En este sentido, sabemos que se habla de la posibilidad de defender conceptos más o menos amplios de Estado de Derecho; se habla, por ejemplo, de concepto formal y de concepto material. Lo que me interesa es detenerme —en el capítulo tercero— en esta cuestión: la de la distinción entre el concepto formal y el material de Estado de Derecho, y la de las ventajas que tiene el segundo sobre el pri- mero.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 87 — similitud 0.0998
+
+**Detalle de puntaje:** tfidf=0.0798; bonus=0.0200
+
+> En definitiva, nos estaríamos planteando si la complejidad de los derechos fundamentales puede reconducir- se a un esquema totalmente formal o estructural; en otros tér- minos si esta estrategia es capaz de recoger las diversas vertien- tes de la realidad de los derechos: es decir, si la definición formal es la más útil a la hora de saber qué se está diciendo cuando se habla de derechos fundamentales.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 14 — similitud 0.0992
+
+**Detalle de puntaje:** tfidf=0.0792; bonus=0.0200
+
+> El análisis de todas esas perspectivas no es esencial para los fines de esta investigación. Por el contrario me interesa cen- trarme en este momento en la posible diferenciación entre las diversas comprensiones del concepto. En este sentido, sabemos que se habla de la posibilidad de defender conceptos más o menos amplios de Estado de Derecho; se habla, por ejemplo, de concepto formal y de concepto material.
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 53 — similitud 0.0979
+
+**Detalle de puntaje:** tfidf=0.0779; bonus=0.0200
+
+> Cuando se lo caracteriza al hombre, por ejemplo, como homo sapiens o animal sociale no se pretende negar que los hombres sabios y los no sabios, sociales y antisociales también son “hombres”, ni tampoco que los hombres sabios, tontos, sociales y antisociales son todos iguales ante la ley y gozan de los derechos humanos. No queremos, por tanto, negar que la forma de expresarse de Küchenhoff sea en principio viable, sino tan solo señalar que las determinaciones fenomenológicas de esencias del tipo examinado no son apropiadas sin más para los contextos jurídicos. 42 Allgemeine Staatslehre, 6.ª ed., ps.
+
+### ref-Teoria general del Estado (2a edicion) - Eduardo.txt — bloque 252 — similitud 0.0960
+
+**Detalle de puntaje:** tfidf=0.0760; bonus=0.0200
+
+> también dejarse asentado que todos los autores que han abordado el problema, y nadie que lo intente puede dejar de hacerlo, están influidos por una idea política concreta. En Bodino esta idea era la necesidad de un poder central sólido capaz de hacer frente a las fuerzas que intentaban disgregar al Estado.
+
+### ref-Del espiritu de las leyes - Montesquieu.txt — bloque 251 — similitud 0.0926
+
+**Detalle de puntaje:** tfidf=0.0726; bonus=0.0200
+
+> Estas fórmulas se hicieron, no sólo para las leyes de los Lombardos, sino también para las capitulares añadidas a las mismas leyes; por lo tanto, no puede ponerse en duda que ellas nos dan la práctica de la segunda línea. Es evidente que los abogados de la parte pública debieron extinguirse con esta segunda línea, así como los enviados del rey a las provincias, puesto que ya no hubo ni ley general, y porque, habiendo cesado los condes de decidir los pleitos, cesaron naturalmente en las provincias los oficiales subalternos cuya función consistía en mantener la autoridad del conde.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 46 — similitud 0.0913
+
+**Detalle de puntaje:** tfidf=0.0813; bonus=0.0100
+
+> El orden juridico no puede ciertamente intentar evitar  todos los conflictos posibles. Lo que los órdenes Juridicos modernos prohíben,  casi sin excepción, es el impedir mediante la fuerza física la conducta no prohi-  bida del otro.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 49 — similitud 0.0894
+
+**Detalle de puntaje:** tfidf=0.0794; bonus=0.0100
+
+> En todo caso, sirve para distinguir a un Estado de otras instan- cias de toma de decisiones. La distinción, así entendida, entre el Estado de Derecho formal y el material permite comprender la afirmación de Michel Troper según la cual el Estado de Derecho es inevitable 190, que sólo tiene sentido si se está pen- sando en una concepción formal, de tipo kelseniano: afirmada la necesaria relación entre el Estado y el Derecho, el Estado de Derecho formal es inevitable, pero no lo es el Estado de Dere- cho material. 188  Vid.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 61 — similitud 0.0879
+
+**Detalle de puntaje:** tfidf=0.0779; bonus=0.0100
+
+> SUMMERS, R. S., La naturaleza formal del Derecho, cit., p. 80.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 40 — similitud 0.0848
+
+**Detalle de puntaje:** tfidf=0.0648; bonus=0.0200
+
+> Creo, también, que es posible llevar a cabo un análisis conjunto de ambas parejas de acepciones. En este sentido, y como detallaremos posterior- mente, tanto en el concepto amplio como en el concepto formal asistimos a una rebaja o disminución de las exigencias que deben concurrir para su correcta identificación. Así, si manejá- ramos tanto un concepto amplio como uno formal de Estado de Derecho, estaríamos obligados, si quisiéramos ser coheren- tes, a identificar como tales a Estados que de otra forma no serían comprendidos como Estados de Derecho.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 77 — similitud 0.0803
+
+**Detalle de puntaje:** tfidf=0.0703; bonus=0.0100
+
+> Laporta asume la distinción, desarrollada entre otros por J. Elster, entre dos contextos en los cuales se pueden adoptar decisiones: el contexto paramétrico y el contexto estratégico. El primero se caracteriza por su estabi- lidad, constancia y fijeza, mientras que en el segundo, los com- ponentes que lo configuran están sometidos a variaciones.
 
 **Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
 
-## Ficha 19. Soberania
+## Ficha 11. tiempo asignatura teoría
 
 **Calidad estimada:** baja
-**Mejor similitud:** 0.1356
-**Similitud promedio:** 0.1356
-**Fuentes:** Teoria pura del derecho - Hans Kelsen.pdf
-**Ubicaciones:** Teoria pura del derecho - Hans Kelsen.pdf, p. 349
+**Mejor similitud:** 0.1052
+**Similitud promedio:** 0.0727
+**Fuentes:** ref-Introduccion a la teoria del Estado (Olejnik 202.txt; ref-Razon y voluntad en el Estado de Derecho - Franc.txt; ref-Teoria general del Estado (2a edicion) - Eduardo.txt; ref-Teoria pura del Derecho - Hans Kelsen.txt
+**Ubicaciones:** ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 128; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 195; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 20; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 209; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 40; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 107; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 154; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 164; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 43; ref-Teoria general del Estado (2a edicion) - Eduardo.txt, bloque 100; ref-Teoria general del Estado (2a edicion) - Eduardo.txt, bloque 4; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 16; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 173; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 195; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 222; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 299; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 78
 
-### Teoria pura del derecho - Hans Kelsen.pdf — p. 349 — similitud 0.1356
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 78 — similitud 0.1052
 
-**Detalle de puntaje:** tfidf=0.0656; bonus=0.0700
+**Detalle de puntaje:** tfidf=0.0952; bonus=0.0100
 
-> Ello es tan posible como es posible -aunque hoy ya no sea usual- considerar como válido para el ser humano individual sólo al olden jurídico estatal que sea reconocido por ese ser humano. Si se ve en el reconocimiento de ese orden por parte del individuQ, para el cual ese orden estatal vale, el fundamento . de validez del orden jurídico estatal, se está partiendo de la soberanía del individuo, de su libertad; así como, si se ve en el reconocimiento por el Estado particular el fundamento de validez del derecho internacional, se parte de la soberania del Estado.
+> Así como la ley natural es un enunciado que describe la naturaleza y no ella misma el objeto descrito, de igual suerte la ley juridica es el enunciado que describe él derecho, en cuanto enunciado jurídico fonnulado por la ciencia juridica, pero no ella misma el objeto descrito, el derecho, la nonna juridica. Esta última -aun cuando, de ser general, suela designársela como "ley"- no es ninguna ley, es decir, no es algo que, por algnna analogía con la ley natural, puede designarse como "ley" ..
 
-**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas.
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 164 — similitud 0.0993
+
+**Detalle de puntaje:** tfidf=0.0893; bonus=0.0100
+
+> A propósito de un ensayo de Luigi Ferrajo-  li», en FERRAJOLI, L., Los fundamentos de los derechos funda-  mentales. — «Teoria e critica dello Stato di diritto», VVAA., Lo Stato di diritto. Storia, teoria, critica.
+
+### ref-Teoria general del Estado (2a edicion) - Eduardo.txt — bloque 4 — similitud 0.0932
+
+**Detalle de puntaje:** tfidf=0.0732; bonus=0.0200
+
+> Cabría incluso cuestio- nar si es posible elaborar una teoría general acerca del Estado pero, de cualquier modo, ése es el nombre que la tradición germánica llegada hasta nosotros dio a la asignatura cuyos temas abordamos en estas páginas.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 195 — similitud 0.0917
+
+**Detalle de puntaje:** tfidf=0.0817; bonus=0.0100
+
+> Puesto que el fundamento de validez de los órdenes jurí- dicos estatales particulares ya no se encontrará en una norma presup.uesta, sino en una norma jurídica positiva, implantada efectivamente, del derecho internacional; se plantea entonces la pregunta acerca del fundamento de validez de esa norma, y, también, la pregunta por el fundamento de validez del orden jurídico internacional, integrado por la norma en que reposa la autoridad del orden jurídico de cada Estado, la norma en que cada orden jurídico encuentra su fundamento de validez inmediato, aunque no último.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 107 — similitud 0.0829
+
+**Detalle de puntaje:** tfidf=0.0729; bonus=0.0100
+
+> Teoria del diritto e della democrazia, I, p. 531.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 299 — similitud 0.0806
+
+**Detalle de puntaje:** tfidf=0.0606; bonus=0.0200
+
+> La representación en que se funda la teoria tradicional de la interpretación, a saber: que la. determinación del acto jurídico por cumplirse, no efectuada  por la norma juridica por aplicar, pueda obtenerse mediante alguna especie de conocimiento del derecho ya existente, es un autoengaño lleno de contra- dicciones, en cuanto es contrario a los presupuestos de la posibilidad de una  interpretación. La pregunta de cuál sea la posibilidad "correcta", en el marco del derecho aplicable, no es -según los supuestos previos- ninguna pregunta dirigida al conocimiento del derecho positivo, no es una pregunta teórica-  juridica, sino que es un problema politico.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 222 — similitud 0.0757
+
+**Detalle de puntaje:** tfidf=0.0657; bonus=0.0100
+
+> Una norma juridica tiene fuerza retroactiva cuando el hecho al cual ella enlaza una sanción como consecuencia, fue establecido no después de su entrada en vigencia, sino que realizado anteriormente, es decir, por lo tanto, cuando en ese momento, el de la entrada en vigencia de la norma, no constituía una ilicitud, sino que sólo después fue convertido en tal cosa me- diante esa norma jurídica.
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 128 — similitud 0.0747
+
+**Detalle de puntaje:** tfidf=0.0647; bonus=0.0100
+
+> Conforme a esto, el liberalismo económico es un aliado del liberalismo constitucional cuando y solo en la medida en que junto con los derechos humanos y la división de poderes están garantizadas las seguridades jurídicas, influencias políticas y libertades relevantes para la economía. Pero esta alianza puede resultar poco segura cuando un régimen autoritario promete garantizar estas libertades económicamente relevantes. § 51.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 173 — similitud 0.0689
+
+**Detalle de puntaje:** tfidf=0.0589; bonus=0.0100
+
+> Puesto que todas las normas de un orden de este tipo están ya contenidas en el contenido de la norma presupuesta, puede deducírselas mediante una operación lógica, una inferencia de lo general a lo particular. Esa norma, presupuesta como norma fundante básica, presta tanto el fundamento de validez, como el contenido válido de las normas inferidas de ella mediante una operación lógica. Un sistema de normas, cuyo fundamento de validez y cuyo fundamento válido es derivado de una norma propuesta como norma fundante l¡ásica, es un sis- tema normativo estático.
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 209 — similitud 0.0681
+
+**Detalle de puntaje:** tfidf=0.0581; bonus=0.0100
+
+> Por otra parte, en vista de las reglas procesales democráticas tal parcialidad es tolerable y puede contribuir al descubrimiento de la verdad, del mismo modo como el abogado polémico que representa solo una parte ante el tribunal puede contribuir a la comprobación de los hechos, siempre que la otra parte también pueda expre- sar su punto de vista sin limitaciones, porque el abogado aporta todos los aspectos relevantes para una parte.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 43 — similitud 0.0652
+
+**Detalle de puntaje:** tfidf=0.0552; bonus=0.0100
+
+> 162  Vid. ZOLO, D., «Teoria e critica dello Stato di diritto», cit., p. 34.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 154 — similitud 0.0616
+
+**Detalle de puntaje:** tfidf=0.0516; bonus=0.0100
+
+> Saggi su Kelsen. — Diritto e Potere. Saggi su Kelsen, Edizioni Scientifiche Italiane,  1992. — «La regola di maggioranza: limiti e aporie», en ID., Teoria generale  della politica. — «Democrazia ed Europa», recogido en ID., Teoria generale della  politica, con el título «Dall’ideologia democratica agli universali  procedurali». — Teoria generale della politica, a cura di M. Bovero, Einaudi, Torino,  1999.
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 40 — similitud 0.0613
+
+**Detalle de puntaje:** tfidf=0.0413; bonus=0.0200
+
+> Una idea, por coherente que sea, es relativizada en la realidad por otras ideas distintas y aun contrarias que también son factores política- mente relevantes, aun cuando no sean lógicamente tan coherentes. La característica que distingue una buena teoría política de una mala, no es la buena o mala intención, ni tampoco la coherencia interna de la teoría, sino su eficacia en la realidad política. ¿Promueve ella la paz, la libertad y la justicia, o no? La pregunta no es: ¿Serviría ella para la paz, la libertad y la justicia, si se dieran cier- tas condiciones, por ejemplo, si todos los hombres aceptaran esta teoría?
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 20 — similitud 0.0527
+
+**Detalle de puntaje:** tfidf=0.0327; bonus=0.0200
+
+> Aboga por el tipo formal-racional de la creación y aplicación del derecho, a saber, por las regulaciones abstractas (leyes) y la aplicación estricta del derecho por medio de la subsunción y aboga al mismo tiempo contra la influencia de la racionalidad 38  Introducción a la teoría del Estado ...
+
+### ref-Teoria general del Estado (2a edicion) - Eduardo.txt — bloque 100 — similitud 0.0518
+
+**Detalle de puntaje:** tfidf=0.0318; bonus=0.0200
+
+> Con ópticas e interpretaciones di- ferentes dieron cuenta de lo que ocurría en su tiempo y elaboraron teorías al respecto, las cuales influirán en el desarrollo de las doctrinas políticas y en la futu- ra evolución de la organización del Estado. 162 TEORÍA GENERAL DEL ESTADO
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 195 — similitud 0.0513
+
+**Detalle de puntaje:** tfidf=0.0313; bonus=0.0200
+
+> Los humildes partidarios del Estado constitucional democrático tuvieron que doblar sus espaldas y siguieron dirigiendo peticiones a los príncipes, sabiendo que serían rechazadas, pero asegurando con tales peticiones la buena con- ciencia de ser progresistas. De tiempo en tiempo sentían la necesidad de estirar sus espaldas, se ponían “insolentes” —en el lenguaje de aquel tiempo—, así en especial en los años posteriores a la revolución francesa de julio de 1930.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 16 — similitud 0.0510
+
+**Detalle de puntaje:** tfidf=0.0410; bonus=0.0100
+
+> Que la norma valga significa siempre que vale para algún espacio y para algún tiempo; esto es, que ella se refiere a una conducta que sólo puede producirse en algún lugar y en algún momento (aun cuando quizás no se produzca en la realidad). La relación de la nOnna al espacio y al tiempo constituye el dominio de validez espacial y temporal de la norma.
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 11 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 12. tiempo asignatura
+
+**Calidad estimada:** baja
+**Mejor similitud:** 0.0987
+**Similitud promedio:** 0.0717
+**Fuentes:** ref-Constitucion Politica de los Estados Unidos Mexi.txt; ref-Del espiritu de las leyes - Montesquieu.txt; ref-Introduccion a la teoria del Estado (Olejnik 202.txt; ref-Razon y voluntad en el Estado de Derecho - Franc.txt; ref-Teoria general del Estado (2a edicion) - Eduardo.txt; ref-Teoria pura del Derecho - Hans Kelsen.txt
+**Ubicaciones:** ref-Constitucion Politica de los Estados Unidos Mexi.txt, bloque 35; ref-Del espiritu de las leyes - Montesquieu.txt, bloque 231; ref-Del espiritu de las leyes - Montesquieu.txt, bloque 286; ref-Del espiritu de las leyes - Montesquieu.txt, bloque 77; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 115; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 128; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 52; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 55; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 107; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 164; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 3; ref-Teoria general del Estado (2a edicion) - Eduardo.txt, bloque 4; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 135; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 16; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 173; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 195; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 21; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 44; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 46; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 68; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 86
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 195 — similitud 0.0987
+
+**Detalle de puntaje:** tfidf=0.0887; bonus=0.0100
+
+> Puesto que el fundamento de validez de los órdenes jurí- dicos estatales particulares ya no se encontrará en una norma presup.uesta, sino en una norma jurídica positiva, implantada efectivamente, del derecho internacional; se plantea entonces la pregunta acerca del fundamento de validez de esa norma, y, también, la pregunta por el fundamento de validez del orden jurídico internacional, integrado por la norma en que reposa la autoridad del orden jurídico de cada Estado, la norma en que cada orden jurídico encuentra su fundamento de validez inmediato, aunque no último.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 21 — similitud 0.0970
+
+**Detalle de puntaje:** tfidf=0.0870; bonus=0.0100
+
+> La norma no es un concepto o, como también dice Schlick, una definición. El concepto de algo expresa que, cuando algo posee las propiedades determinadas en la definición del concepto, cae bajo ese concepto. Es decir, es aquello que el concepto delimita; y cuando no posee esas propiedades, no encaja en ese concepto, lo que equivale a decir, que no es 10 que el concepto delimita.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 164 — similitud 0.0969
+
+**Detalle de puntaje:** tfidf=0.0769; bonus=0.0200
+
+> A propósito de un ensayo de Luigi Ferrajo-  li», en FERRAJOLI, L., Los fundamentos de los derechos funda-  mentales. — «Teoria e critica dello Stato di diritto», VVAA., Lo Stato di diritto. Storia, teoria, critica.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 135 — similitud 0.0924
+
+**Detalle de puntaje:** tfidf=0.0824; bonus=0.0100
+
+> legislativo facultado por el orden jurídico para producir normas juridicas, y que las funciones de los órganos judiciales y administrativos, facultados por el orden juridico para producir, en aplicación de norma generales, normas jurídicas indi- viduales. En todos estos casos tenemos, como en el caso de la denominada capacid¡¡d juridica, una faoultad para producir normas juridicas; en todos estos casos, el orden juridico otorga un poder juridico a determinados individuos.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 68 — similitud 0.0886
+
+**Detalle de puntaje:** tfidf=0.0586; bonus=0.0300
+
+> La tesis, rechazada por la Teoría pura del derecho, pero ampliamente corriente en la ciencia jurídica tradicional, de que el derecho tiene que ser, COn- forme a su naturaleza, moral; de que un orden social inmoral no constituye derecho, presupone una moral absoluta, es decir, una moral válida para todo tiempo y dondequiera. De otra manera no podría alcanzar su objetivo de esta- blecer un patrón firme, independiente de circunstancias temporales y locales, sobre qué sea lícito o ilícito, y aplicable a los sistemas sociales.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 3 — similitud 0.0809
+
+**Detalle de puntaje:** tfidf=0.0509; bonus=0.0300
+
+> referencia a la comprensión del Derecho «como sistema jurídi- co, es decir, como conjunto de reglas válidas y eficaces, y como el conjunto de conductas correspondientes»; el Derecho como concepto es «el conjunto de ideas sobre lo que es o debería ser el Derecho como institución» 1. Es evidente que ambas com- prensiones del Derecho no son, ni mucho menos, independien- tes entre sí.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 46 — similitud 0.0808
+
+**Detalle de puntaje:** tfidf=0.0708; bonus=0.0100
+
+> El orden juridico no puede ciertamente intentar evitar  todos los conflictos posibles. Lo que los órdenes Juridicos modernos prohíben,  casi sin excepción, es el impedir mediante la fuerza física la conducta no prohi-  bida del otro.
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 55 — similitud 0.0799
+
+**Detalle de puntaje:** tfidf=0.0599; bonus=0.0200
+
+> En la medida en que el concepto de Estado del derecho internacional deja afuera al Estado federal, no es, pues, un concepto totalmente abstracto-general; solo se acerca a un concepto de este tipo. Al concepto de Estado del derecho internacional subyace, por tanto, la llama- da doctrina de los tres elementos que reduce el concepto de Estado a sus elementos más generales.
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 52 — similitud 0.0773
+
+**Detalle de puntaje:** tfidf=0.0573; bonus=0.0200
+
+> Por eso, no puede participar, por razones de principio, en una conferencia  de los Estados europeos...”. 40 El permanente apoyo a la Ostpolitik por parte de nuestros amigos occidentales no  estaba basada en el supuesto hecho de que ellos fueron liberados de su obligación de  lograr la reunificación de Alemania por el art. 7 del tratado con Alemania.
+
+### ref-Teoria general del Estado (2a edicion) - Eduardo.txt — bloque 4 — similitud 0.0766
+
+**Detalle de puntaje:** tfidf=0.0566; bonus=0.0200
+
+> La soberanía y su dimensión contemporánea 417  Naturaleza y origen del concepto 417  Juan Bodino y su noción de soberanía 420  Desarrollos teóricos subsecuentes 423  La soberanía como síntesis dialéctica de poder y derecho 429  El doble aspecto de la titularidad de la soberanía 432  Problemas contemporáneos de la soberanía 438 Bibliografía 443 Índice onomástico 451 Índice analítico 455  ÍNDICE DE CONTENIDO xvii Introducción No es ésta una teoría general del Estado, lo cual constituiría una pretensión desco- munal, pero sí un libro de teoría general del Estado en cuanto constituye una mate- ria en nuestros planes de estudios de la carrera de Derecho.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 173 — similitud 0.0740
+
+**Detalle de puntaje:** tfidf=0.0640; bonus=0.0100
+
+> Puesto que todas las normas de un orden de este tipo están ya contenidas en el contenido de la norma presupuesta, puede deducírselas mediante una operación lógica, una inferencia de lo general a lo particular. Esa norma, presupuesta como norma fundante básica, presta tanto el fundamento de validez, como el contenido válido de las normas inferidas de ella mediante una operación lógica. Un sistema de normas, cuyo fundamento de validez y cuyo fundamento válido es derivado de una norma propuesta como norma fundante l¡ásica, es un sis- tema normativo estático.
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 128 — similitud 0.0739
+
+**Detalle de puntaje:** tfidf=0.0639; bonus=0.0100
+
+> Conforme a esto, el liberalismo económico es un aliado del liberalismo constitucional cuando y solo en la medida en que junto con los derechos humanos y la división de poderes están garantizadas las seguridades jurídicas, influencias políticas y libertades relevantes para la economía. Pero esta alianza puede resultar poco segura cuando un régimen autoritario promete garantizar estas libertades económicamente relevantes. § 51.
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 115 — similitud 0.0730
+
+**Detalle de puntaje:** tfidf=0.0530; bonus=0.0200
+
+> Por tanto, es recomendable entender el concepto resumiendo del siguiente modo: las convicciones son ideológicas cuando:  1) se basan en intereses, y no en razones;  2) uno no está, por tanto, dispuesto a discutirlas;  3) se engaña a sí mismo respecto de su verdad;  4) son políticamente relevantes;  5) pretenden ser teórica o religiosamente relevantes;  6) se trasmiten y se conservan conforme a la psicología del grupo;  7) sirven tanto para la integración del grupo como para la justificación de  su comportamiento político.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 107 — similitud 0.0728
+
+**Detalle de puntaje:** tfidf=0.0628; bonus=0.0100
+
+> Teoria del diritto e della democrazia, I, p. 531.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 44 — similitud 0.0685
+
+**Detalle de puntaje:** tfidf=0.0585; bonus=0.0100
+
+> Y ese acto coactivo, como sanción (en el sentido de consecuencia de una ilicitud), s610 puede distinguirse de otros actos coactivos estatuidos por el orden juridico, en cuanto el hecho condicionante de esos actos coactivos es una acci6n u omisión determinada por el orden juridico, comprobada jurídicamente, y socialmente indeseada, mientras que los actos coactivos que no constituyen sanciones en el sentido de consecuencias de una ilicitud, están condicionados por otros hechos. 3.
+
+### ref-Teoria general del Estado (2a edicion) - Eduardo.txt — bloque 4 — similitud 0.0674
+
+**Detalle de puntaje:** tfidf=0.0574; bonus=0.0100
+
+> Cabría incluso cuestio- nar si es posible elaborar una teoría general acerca del Estado pero, de cualquier modo, ése es el nombre que la tradición germánica llegada hasta nosotros dio a la asignatura cuyos temas abordamos en estas páginas.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 86 — similitud 0.0579
+
+**Detalle de puntaje:** tfidf=0.0479; bonus=0.0100
+
+> Aun cuando un orden juridico, que en términos generales es eficaz, pueda ser descrito en oraciones que, como las leyes naturales, enun- cien que bajo ciertas condiciones, efectivamente se producen determinadas consecuencias; que, cuando acontece algo, que según ese orden juridico es cali- ficado por los 6rganos de aplicaci6n del derecho como un delito, se produce la consecuencia sancionatoria determinada por el orden jurídico, con todo no es la ciencia del derecho la que aspira a esa descripci6n. Pues mediante los enunciados jurídicos que formula pretende mostrar, no las relaciones causales que se dan entre los elementos de su objeto, sino las relaciones imputativas que exhiba.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 16 — similitud 0.0529
+
+**Detalle de puntaje:** tfidf=0.0429; bonus=0.0100
+
+> Que la norma valga significa siempre que vale para algún espacio y para algún tiempo; esto es, que ella se refiere a una conducta que sólo puede producirse en algún lugar y en algún momento (aun cuando quizás no se produzca en la realidad). La relación de la nOnna al espacio y al tiempo constituye el dominio de validez espacial y temporal de la norma.
+
+### ref-Del espiritu de las leyes - Montesquieu.txt — bloque 77 — similitud 0.0455
+
+**Detalle de puntaje:** tfidf=0.0355; bonus=0.0100
+
+> Los gimnastas eran una institución admirable; tenían aplicación al arte de la guerra, en tiempo de Platón. Pero cuando los Griegos perdieron la virtud, degeneraron en todo y destruyeron hasta el arte militar: no bajaban a la palestra para adiestrarse, sino para corromperse211.
+
+### ref-Del espiritu de las leyes - Montesquieu.txt — bloque 231 — similitud 0.0418
+
+**Detalle de puntaje:** tfidf=0.0318; bonus=0.0100
+
+> LA ley de Gondebaldo se mantuvo entre los Borgoñones durante mucho tiempo, a la vez que la romana; aun se conservaba en tiempo de Ludovico Pío, pues la carta de Agobardo no deja la menor duda. Y aunque el edicto de Pistes llama al territorio ocupado por los Visigodos el país de la ley romana, coexistía con ella la ley de los Visigodos; testimonio de esto es el sínodo de Troyes, celebrado en tiempo de Luis el Tartamudo, el año 878, es decir, catorce años después de aquel edicto.
+
+### ref-Constitucion Politica de los Estados Unidos Mexi.txt — bloque 35 — similitud 0.0404
+
+**Detalle de puntaje:** tfidf=0.0304; bonus=0.0100
+
+> Cuando a juicio del Instituto Nacional Electoral el tiempo total en radio y televisión a que se  refieren este apartado y el anterior fuese insuficiente para sus propios fines, los de otras  autoridades electorales o para los candidatos independientes, determinará lo conducente  para cubrir el tiempo faltante, conforme a las facultades que la ley le confiera. Párrafo reformado DOF 10-02-2014 Apartado C.
+
+### ref-Del espiritu de las leyes - Montesquieu.txt — bloque 286 — similitud 0.0401
+
+**Detalle de puntaje:** tfidf=0.0301; bonus=0.0100
+
+> Eran familias que se distinguían por su dignidad de fieles y por su prerrogativa de poder recomendarse para un feudo. En el libro siguiente1450 se verá cómo, por las circunstancias de aquel tiempo, hubo hombres libres que fueron admitidos a gozar de esta prerrogativa y, como consecuencia, a ingresar en el orden de la nobleza. Esto no sucedió en tiempo de Gontrán ni en el de Childeberto su sobrino, pero sí en el de Carlomagno.
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 15 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 13. asignatura teoría
+
+**Calidad estimada:** baja
+**Mejor similitud:** 0.1355
+**Similitud promedio:** 0.0781
+**Fuentes:** ref-Introduccion a la teoria del Estado (Olejnik 202.txt; ref-Razon y voluntad en el Estado de Derecho - Franc.txt; ref-Teoria general del Estado (2a edicion) - Eduardo.txt; ref-Teoria pura del Derecho - Hans Kelsen.txt
+**Ubicaciones:** ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 128; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 209; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 37; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 6; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 8; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 107; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 154; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 156; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 164; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 4; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 41; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 43; ref-Teoria general del Estado (2a edicion) - Eduardo.txt, bloque 4; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 156; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 199; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 6; ref-Teoria pura del Derecho - Hans Kelsen.txt, bloque 84
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 156 — similitud 0.1355
+
+**Detalle de puntaje:** tfidf=0.1155; bonus=0.0200
+
+> P., LUTHER., (eds) Il futuro della costituzione. — «Lo Stato di diritto fra passato e futuro», VVAA., Lo Stato di  diritto. Storia, teoria, critica. — «Entrevista a L. Ferrajoli», (G.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 41 — similitud 0.1250
+
+**Detalle de puntaje:** tfidf=0.0850; bonus=0.0400
+
+> 149  En el Preámbulo se alude a la resolución de los gobiernos signatarios «en cuanto gobiernos de Estados europeos animados de un mismo espíritu y en posesión de un patrimonio común de ideales y de tradiciones políticas, de respeto a la libertad y de preeminencia del Derecho, a tomar las primeras medi- das adecuadas para asegurar la garantía colectiva de algunos de los derechos enunciados en la Declaración Universal». El texto del Convenio se puede con- sultar en PECES-BARBA G., (y otros), Textos básicos de derechos humanos, cit., pp. 570 y ss.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 41 — similitud 0.0992
+
+**Detalle de puntaje:** tfidf=0.0792; bonus=0.0200
+
+> El texto de la Declaración se puede consultar en PECES- BARBA G., (y otros), Textos básicos de derechos humanos, Aranzadi, Pamplo- na, 2001, pp. 283 y ss.
+
+### ref-Teoria general del Estado (2a edicion) - Eduardo.txt — bloque 4 — similitud 0.0978
+
+**Detalle de puntaje:** tfidf=0.0778; bonus=0.0200
+
+> Cabría incluso cuestio- nar si es posible elaborar una teoría general acerca del Estado pero, de cualquier modo, ése es el nombre que la tradición germánica llegada hasta nosotros dio a la asignatura cuyos temas abordamos en estas páginas.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 84 — similitud 0.0970
+
+**Detalle de puntaje:** tfidf=0.0870; bonus=0.0100
+
+> La diferencia esencial sólo se da entre las ciencias naturales y aquellas ciencias sociales que interpretan la interacción humana, no causalmente, sino confonne al principio de imputación, ciencias que no describen cómo se va desarrollando el comportamiento humano, determinado por leyes naturales en el dominio de la realidad natural, sino cómo debe producirse, determinado por normas positivas, esto es, por nonnas estable· cidas mediante actos humanos.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 164 — similitud 0.0945
+
+**Detalle de puntaje:** tfidf=0.0845; bonus=0.0100
+
+> A propósito de un ensayo de Luigi Ferrajo-  li», en FERRAJOLI, L., Los fundamentos de los derechos funda-  mentales. — «Teoria e critica dello Stato di diritto», VVAA., Lo Stato di diritto. Storia, teoria, critica.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 84 — similitud 0.0841
+
+**Detalle de puntaje:** tfidf=0.0741; bonus=0.0100
+
+> Ciencia social ctlUSal y ciencia social normativa  Una vez reconocido el principio de causalidad, cabe aplicarlo también a la condncta humana. La psicología, la etnología, la historia, la sociología, son ciencias cuyo objeto es el comportamiento humano en tanto está causalmente detenninado; es decir, en cuanto se desarrolla en el dominio de la naturaleza o de la realidad natural. Designar una ciencia como "ciencia social", porque apunta a la interacción recíproca de los hombres, y trata de explicar causalmente la conducta humana, no es suficiente para diferenciarla esencialmente, como ya se sefiaIó, de las ciencias naturales, como la física, la biología O la fisiología.
+
+### ref-Teoria general del Estado (2a edicion) - Eduardo.txt — bloque 4 — similitud 0.0793
+
+**Detalle de puntaje:** tfidf=0.0693; bonus=0.0100
+
+> Sobre estas cuestiones existe una bibliografía profusa y se encuentran al alcan- ce del estudiante textos adecuadamente sistematizados. En cambio, por lo que toca al análisis de los Estados actuales, al examen de sus características económicas y sociopolíticas, así como a la ideología que los inspira, si bien el material bibliográfico es abundante no existen textos que pongan xviii ÍINDICE DE CONTENIDO  NTRODUCCIÓN
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 107 — similitud 0.0790
+
+**Detalle de puntaje:** tfidf=0.0690; bonus=0.0100
+
+> Teoria del diritto e della democrazia, I, p. 531.
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 128 — similitud 0.0768
+
+**Detalle de puntaje:** tfidf=0.0668; bonus=0.0100
+
+> Conforme a esto, el liberalismo económico es un aliado del liberalismo constitucional cuando y solo en la medida en que junto con los derechos humanos y la división de poderes están garantizadas las seguridades jurídicas, influencias políticas y libertades relevantes para la economía. Pero esta alianza puede resultar poco segura cuando un régimen autoritario promete garantizar estas libertades económicamente relevantes. § 51.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 156 — similitud 0.0766
+
+**Detalle de puntaje:** tfidf=0.0566; bonus=0.0200
+
+> en este sentido, es decir, el orden que no garantiza el derecho subjetivo de propiedad, sería un orden que en ningún caso deberia ser considerado como orden juridico.  b) La persona como persona física. La teoria tradicional identifica el con- cepto de sujeto de derecho con el de persona. Define: persona es el hombre en cuanto sujeto de derechos y obligaciones.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 43 — similitud 0.0723
+
+**Detalle de puntaje:** tfidf=0.0523; bonus=0.0200
+
+> 162  Vid. ZOLO, D., «Teoria e critica dello Stato di diritto», cit., p. 34.
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 209 — similitud 0.0700
+
+**Detalle de puntaje:** tfidf=0.0600; bonus=0.0100
+
+> Por otra parte, en vista de las reglas procesales democráticas tal parcialidad es tolerable y puede contribuir al descubrimiento de la verdad, del mismo modo como el abogado polémico que representa solo una parte ante el tribunal puede contribuir a la comprobación de los hechos, siempre que la otra parte también pueda expre- sar su punto de vista sin limitaciones, porque el abogado aporta todos los aspectos relevantes para una parte.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 154 — similitud 0.0688
+
+**Detalle de puntaje:** tfidf=0.0488; bonus=0.0200
+
+> BÖCKENFORDE, E. W., «La democracia como principio constitucio-  nal» ID., Estudios sobre el Estado de Derecho y la democracia. — «Origen y cambio del concepto de estado de Derecho», ID., Estu-  dios sobre el Estado de Derecho y la democracia. — Estudios sobre el Estado de Derecho y la democracia, trad. de R. Agapito Serrano, Trotta, Madrid, 2000.
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 6 — similitud 0.0678
+
+**Detalle de puntaje:** tfidf=0.0578; bonus=0.0100
+
+> En él, la teoría del Estado es entendida como el intento de aclarar las condiciones efectivas de paz, libertad y justicia, aprovechando la historia del Estado constitucional democrático. 3.— Una teoría del Estado que trata de llegar a los fundamentos y el trasfondo político del Estado constitucional democrático no es empírico-descriptiva, ni tampo- co postulante de normas, es decir, no responde a la pregunta “¿cómo es de hecho el Estado?” (pregunta sociológica acerca de la realidad del Estado), ni tampoco a la pregunta: “¿cómo debe ser el Estado?” (pregunta ética o normativa acerca del ideal del Estado).
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 8 — similitud 0.0503
+
+**Detalle de puntaje:** tfidf=0.0403; bonus=0.0100
+
+> Se trató de presentar la esencia “general” del Estado o por lo menos del Estado europeo moderno. Ciertamente muy pronto se hizo sentir una corriente contraria que alcanzó su punto culminante en la teoría del Estado de Hermann Heller (Leiden, 1934). Pero entretanto el atrofiamiento del catálogo de temas y problemas de la “teoría general del Estado” de la ciencia jurídica ha creado una tradición que tuvo como consecuen- cia el surgimiento de la materia “Ciencia Política”, que se hizo cargo de la tarea no cumplida de integrar las diversas disciplinas de la ciencia del Estado.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 199 — similitud 0.0494
+
+**Detalle de puntaje:** tfidf=0.0394; bonus=0.0100
+
+> Dado que la teoría pura del derecho, como teoría positivista del derecho, no da con su norma fundante básica del derecho positivo ningún patrón para la justicia o injusticia de ese
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 4 — similitud 0.0471
+
+**Detalle de puntaje:** tfidf=0.0371; bonus=0.0100
+
+> En primer lugar, la reflexión sobre los Ordenamientos jurídicos del constitucionalismo nos demuestra la necesidad de superar aquellas propuestas defensoras de una Teoría del Derecho, absoluta y estrictamente formal, aislada de otras dimensiones del saber y de la realidad. Lo que se quiere expresar no es que no sea de ningún modo posible desarrollar una Teoría del Dere- cho formal, sino que en relación con el constitucionalismo, ésta no es útil: el constitucionalismo evidencia de manera clara las dificultades e insuficiencias de este tipo de teoría.
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 37 — similitud 0.0464
+
+**Detalle de puntaje:** tfidf=0.0364; bonus=0.0100
+
+> Si el soberano, una vez instalado, no tiene otra base de legitimidad que la teoría de soberanía, entonces la base de legitimidad es la protección de la vida contra la violencia. Pero entonces no se puede legítimamente, poner en juego la vida de cada uno.
+
+### ref-Teoria pura del Derecho - Hans Kelsen.txt — bloque 6 — similitud 0.0457
+
+**Detalle de puntaje:** tfidf=0.0357; bonus=0.0100
+
+> La Teoría pura del derecho constituye una teona sobre el derecho positivo; se trata de una teoría sobre el derecho positivo en general, y no de una teoría sobre un orden jurídico específico. Es una doctrina general sobre el derecho, y no la interpretación de normas jurídicas particulares, nacionales o internacio- nales.
+
+**Observación automática:** La ficha presenta coincidencias débiles; se recomienda validar manualmente las citas. Se agruparon referencias de múltiples fuentes para enriquecer el concepto. Hay 13 referencia(s) de baja similitud que podrían introducir ruido.
+
+## Ficha 14. formal línea
+
+**Calidad estimada:** media
+**Mejor similitud:** 0.1630
+**Similitud promedio:** 0.1100
+**Fuentes:** ref-Del espiritu de las leyes - Montesquieu.txt; ref-En defensa del Estado de Derecho - Ignacio Campo.txt; ref-Introduccion a la teoria del Estado (Olejnik 202.txt; ref-Razon y voluntad en el Estado de Derecho - Franc.txt
+**Ubicaciones:** ref-Del espiritu de las leyes - Montesquieu.txt, bloque 227; ref-Del espiritu de las leyes - Montesquieu.txt, bloque 251; ref-En defensa del Estado de Derecho - Ignacio Campo.txt, bloque 9; ref-Introduccion a la teoria del Estado (Olejnik 202.txt, bloque 20; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 14; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 165; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 40; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 49; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 59; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 61; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 62; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 83; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 85; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 87; ref-Razon y voluntad en el Estado de Derecho - Franc.txt, bloque 9
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 85 — similitud 0.1630
+
+**Detalle de puntaje:** tfidf=0.1330; bonus=0.0300
+
+> En definitiva estamos frente a una definición formal en un doble sentido: «en el sentido en que no dice nada sobre los con- tenidos de tales derechos, es decir sobre la naturaleza de los comportamientos que son objeto de las expectativas positivas o negativas en las que consisten; y en el sentido de que no dice nada sobre la extensión concreta de las clases de sujetos iden- tificados, en los diferentes ordenamientos jurídicos, por el sta- tus de persona, de ciudadano o de capaz de obrar, como titula- res de los correspondientes tipos de derechos» 348. A partir de una específica tipología de los derechos 349, se derivan algunas consecuencias de esta definición formal y
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 165 — similitud 0.1331
+
+**Detalle de puntaje:** tfidf=0.1031; bonus=0.0300
+
+> Constitucionalización del Ordena- Derecho natural: 76, 162, 163, 189,  miento: 232, 233, 241 213, 245, 247, 248, 294-299, 305 Contexto paramétrico: 179, 180, 349 — proceso de positivación: 43, 61, Contexto estratégico: 179, 180 68, 195, 208, 209, 214 Corrección estructural: 144 — proceso de subjetivización: Corrección funcional: 120, 144 221, 222 Coto vedado: 299-305, 322, 337 — constitucionalización del: 69, Crisis de la Ley: 186-190 212, 219 Cultura de la legalidad: 147 Derechos fundamentales:  — carácter sustantivo: 191-214 Debilidad de la voluntad: 311-314, — como límites al Poder: 31, 63,  317, 329, 339 204, 209, 210, 238, 272, 274 Decisiones: — como mínimo moral común:  — de primer...
+
+### ref-En defensa del Estado de Derecho - Ignacio Campo.txt — bloque 9 — similitud 0.1226
+
+**Detalle de puntaje:** tfidf=0.0826; bonus=0.0400
+
+> De esta manera, Schmitt pone de manifiesto que junto al concepto formal de ley existe, necesariamente, un concepto político de ley, que inevitablemente incorpora las dimensiones políticas, expresión del soberano —que necesariamente existen en todo Estado—, pues «Ley, en el sentido del concepto político de Ley, es voluntad y mandato concretos, y un acto de so - beranía» 24.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 14 — similitud 0.1224
+
+**Detalle de puntaje:** tfidf=0.0824; bonus=0.0400
+
+> En este sentido, sabemos que se habla de la posibilidad de defender conceptos más o menos amplios de Estado de Derecho; se habla, por ejemplo, de concepto formal y de concepto material. Lo que me interesa es detenerme —en el capítulo tercero— en esta cuestión: la de la distinción entre el concepto formal y el material de Estado de Derecho, y la de las ventajas que tiene el segundo sobre el pri- mero. Aunque el análisis de la distinción se deja para más adelan- te, me gustaría adelantar alguna apreciación.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 62 — similitud 0.1208
+
+**Detalle de puntaje:** tfidf=0.1108; bonus=0.0100
+
+> metodológica, procedimental, acomodativa y autorizacional. Cabe señalar que estos cuatro tipos no afectan por igual a todos y cada uno de los principios, y que cada uno de los cuatro tipos dependen en su significado de una determinada comprensión del concepto de «formal». Si se maneja el concepto de formal en el sentido de ‘perteneciente al método’, los principios son formales en sentido metodológico ya que muchos de ellos están relacionados con los modos y maneras en que se adquiere su propia forma.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 14 — similitud 0.1157
+
+**Detalle de puntaje:** tfidf=0.0957; bonus=0.0200
+
+> Por el contrario me interesa cen- trarme en este momento en la posible diferenciación entre las diversas comprensiones del concepto. En este sentido, sabemos que se habla de la posibilidad de defender conceptos más o menos amplios de Estado de Derecho; se habla, por ejemplo, de concepto formal y de concepto material. Lo que me interesa es detenerme —en el capítulo tercero— en esta cuestión: la de la distinción entre el concepto formal y el material de Estado de Derecho, y la de las ventajas que tiene el segundo sobre el pri- mero.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 14 — similitud 0.1140
+
+**Detalle de puntaje:** tfidf=0.0940; bonus=0.0200
+
+> El análisis de todas esas perspectivas no es esencial para los fines de esta investigación. Por el contrario me interesa cen- trarme en este momento en la posible diferenciación entre las diversas comprensiones del concepto. En este sentido, sabemos que se habla de la posibilidad de defender conceptos más o menos amplios de Estado de Derecho; se habla, por ejemplo, de concepto formal y de concepto material.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 59 — similitud 0.1139
+
+**Detalle de puntaje:** tfidf=0.0939; bonus=0.0200
+
+> No obstante, no me voy a centrar en esta ocasión en una relec- tura de la propuesta de Fuller en relación con la moral interna del Derecho, que, por otra parte, ha sido convenientemente estudiada entre nosotros 231. Me interesa por el contrario subra- yar algunas dimensiones vinculadas a la naturaleza formal del Derecho, que considero básicas a la hora de comprender su sen- tido y su funcionamiento. Dichas dimensiones afectan de lleno a la idea de imperio de la ley que se mantiene en estas líneas.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 83 — similitud 0.1100
+
+**Detalle de puntaje:** tfidf=0.0700; bonus=0.0400
+
+> sistema jurídico y, como consecuencia de ello, la insuficiencia de una comprensión exclusivamente formal del Estado de Derecho, centrada solamente en el imperio de la ley. La reflexión sobre la insuficiencia del concepto formal de Estado de Derecho a la hora de presentar los rasgos propios del Estado de Derecho en la cultura jurídica contemporánea y, sobre todo, a la hora de diferenciar y sustantivizar al Estado de Derecho como tal respecto a otros modelos de Estado, nos sitúa ante la necesidad de ir más allá y de completar la caracte- rización del Estado de Derecho, en sus dimensiones sustancia- les o materiales.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 85 — similitud 0.1065
+
+**Detalle de puntaje:** tfidf=0.0865; bonus=0.0200
+
+> Para él, esta definición se carac- teriza por ser formal y estructural, siendo éste un rasgo compar- tido por todas las definiciones ofrecidas en sede teórica, que no nos dicen ni cuáles son los derechos en un ordenamiento con- creto, ni cuáles, de hecho, son protegidos o garantizados, ni cuáles deben serlo, sino qué son los derechos fundamentales.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 87 — similitud 0.1065
+
+**Detalle de puntaje:** tfidf=0.0865; bonus=0.0200
+
+> En definitiva, nos estaríamos planteando si la complejidad de los derechos fundamentales puede reconducir- se a un esquema totalmente formal o estructural; en otros tér- minos si esta estrategia es capaz de recoger las diversas vertien- tes de la realidad de los derechos: es decir, si la definición formal es la más útil a la hora de saber qué se está diciendo cuando se habla de derechos fundamentales.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 9 — similitud 0.1010
+
+**Detalle de puntaje:** tfidf=0.0610; bonus=0.0400
+
+> En una de ellas, los contenidos de las normas tienen una mayor rele- vancia. Así, es posible defender un concepto formal de Estado de Derecho, o un concepto material o sustancial del mismo. En el primer caso, el Estado de Derecho se identifica exclusi- vamente con el imperio de la ley, con la presencia teórica de determinados elementos —que en ocasiones se han relaciona- do con una cierta comprensión del rule of law— y con la plas- mación práctica de esas exigencias en la actividad de los pode- res públicos y también en la de los ciudadanos.
+
+### ref-En defensa del Estado de Derecho - Ignacio Campo.txt — bloque 9 — similitud 0.0995
+
+**Detalle de puntaje:** tfidf=0.0595; bonus=0.0400
+
+> Frente al formalismo jurídico, que Schmitt apunta adecua- damente advirtiendo que «Para el concepto formal de Ley se da la definición siguiente: Ley es lo acordado por los órganos legislativos competentes, dentro del procedimiento legislativo prescrito» 22. Schmitt expone la convicción de que ese formalis- mo no es más que supuestamente neutral, pues en realidad el mismo sirve a unos valores muy concretos; de hecho, la vincu- lación histórica entre el positivismo formalista y la construc- ción del Estado de Derecho fue posible porque con el primero se permitía incorporar los valores y elementos políticos del segundo.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 49 — similitud 0.0991
+
+**Detalle de puntaje:** tfidf=0.0891; bonus=0.0100
+
+> En todo caso, sirve para distinguir a un Estado de otras instan- cias de toma de decisiones. La distinción, así entendida, entre el Estado de Derecho formal y el material permite comprender la afirmación de Michel Troper según la cual el Estado de Derecho es inevitable 190, que sólo tiene sentido si se está pen- sando en una concepción formal, de tipo kelseniano: afirmada la necesaria relación entre el Estado y el Derecho, el Estado de Derecho formal es inevitable, pero no lo es el Estado de Dere- cho material. 188  Vid.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 61 — similitud 0.0975
+
+**Detalle de puntaje:** tfidf=0.0875; bonus=0.0100
+
+> SUMMERS, R. S., La naturaleza formal del Derecho, cit., p. 80.
+
+### ref-En defensa del Estado de Derecho - Ignacio Campo.txt — bloque 9 — similitud 0.0973
+
+**Detalle de puntaje:** tfidf=0.0573; bonus=0.0400
+
+> Por lo que no hay que dejarse engañar por supues- tos formalismos y hay que buscar ese contenido material de la ley; y cómo en el Estado liberal de Derecho ese contenido res- ponde al interés histórico que tenía la clase social burguesa de protección de su libertad y propiedad, habrá que rechazarlo en una Democracia auténtica, donde la ley debe de contener sim- plemente la voluntad del pueblo: «El concepto democrático de Ley es un concepto político, no un concepto de ley propio del Estado de Derecho; arranca de la potestas del pueblo y procla- ma que ley es lo que el pueblo quiere; lex est quod populus jussit […] Frente a esa voluntad, no hay frenos ningunos según los principios...
+
+### ref-Introduccion a la teoria del Estado (Olejnik 202.txt — bloque 20 — similitud 0.0953
+
+**Detalle de puntaje:** tfidf=0.0553; bonus=0.0400
+
+> No la legalidad, sino la justificabilidad es lo esencial de la legitimidad racional. En el contexto de su doctrina de los tipos de la creación y la aplicación del derecho, Max Weber mismo ha usado un concepto de racionalidad más amplio: distinguía entre la racionalidad formal y material. La racionalidad formal se ca- racteriza, según él, por notas generales unívocas que se expresan o bien en una acción perceptible por los sentidos (firma, apretón de manos), o bien en regula- ciones abstractas (leyes).
+
+### ref-Del espiritu de las leyes - Montesquieu.txt — bloque 227 — similitud 0.0952
+
+**Detalle de puntaje:** tfidf=0.0852; bonus=0.0100
+
+> abandonara la que impedía la sucesión de los parientes por línea femenina. Estas leyes estaban en armonía con el espíritu de una buena República, en la que debe procurarse que las mujeres no lleguen a dominar por el lujo, las riquezas o la esperanza de alcanzarlas.
+
+### ref-Razon y voluntad en el Estado de Derecho - Franc.txt — bloque 40 — similitud 0.0949
+
+**Detalle de puntaje:** tfidf=0.0749; bonus=0.0200
+
+> Creo, también, que es posible llevar a cabo un análisis conjunto de ambas parejas de acepciones. En este sentido, y como detallaremos posterior- mente, tanto en el concepto amplio como en el concepto formal asistimos a una rebaja o disminución de las exigencias que deben concurrir para su correcta identificación. Así, si manejá- ramos tanto un concepto amplio como uno formal de Estado de Derecho, estaríamos obligados, si quisiéramos ser coheren- tes, a identificar como tales a Estados que de otra forma no serían comprendidos como Estados de Derecho.
+
+### ref-Del espiritu de las leyes - Montesquieu.txt — bloque 251 — similitud 0.0915
+
+**Detalle de puntaje:** tfidf=0.0815; bonus=0.0100
+
+> Estas fórmulas se hicieron, no sólo para las leyes de los Lombardos, sino también para las capitulares añadidas a las mismas leyes; por lo tanto, no puede ponerse en duda que ellas nos dan la práctica de la segunda línea. Es evidente que los abogados de la parte pública debieron extinguirse con esta segunda línea, así como los enviados del rey a las provincias, puesto que ya no hubo ni ley general, y porque, habiendo cesado los condes de decidir los pleitos, cesaron naturalmente en las provincias los oficiales subalternos cuya función consistía en mantener la autoridad del conde.
+
+**Observación automática:** La ficha presenta coincidencias útiles, pero conviene revisar la pertinencia de cada cita. Se agruparon referencias de múltiples fuentes para enriquecer el concepto.
