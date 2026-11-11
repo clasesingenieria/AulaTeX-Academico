@@ -48,12 +48,12 @@
   \urlstyle{same}
   \input{ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga/assets-estadistica-aplicada-para-la-administracion/investigacion-articulos/formato-fichas.tex}
 }
-\def\estadisticaresumen{Esta actividad de evaluación se centra en la aplicación de pruebas de hipótesis paramétricas en contextos de una y dos muestras, fundamentales para la toma de decisiones gerenciales. El cuestionario evalúa la comprensión de diversos conceptos estadísticos, como la regla de decisión mediante valor crítico y p-valor, contrastes t y Z, y la relación entre errores de tipo I y II, proporcionando una base sólida para la aplicación práctica en la administración.}
+\def\estadisticaresumen{El presente informe técnico estructura el marco analítico y conceptual para la preparación del cuestionario de evaluación de la Unidad 4 en ITESCA Virtual (módulo 1770), correspondiente a contrastes de hipótesis para una y dos muestras. Se profundiza en las reglas formales de decisión mediante cuantiles críticos y valores-$p$, contrastes $t$ de Welch y de varianza agrupada ($s_p^2$) para medias independientes, contrastes de diferencias pareadas, pruebas $Z$ para dos proporciones con ponderación combinada, y pruebas $F$ de homogeneidad de varianzas. Asimismo, se formaliza la relación de compromiso entre los errores Tipo I ($\alpha$) y Tipo II ($\beta$), la función de potencia y su repercusión en la toma de decisiones bajo incertidumbre en la gestión administrativa.}
 \long\def\estadisticacontenido{%
 \fontsize{12}{14.4}\selectfont\setstretch{1.5}\justifying
 \estadisticapreliminares
 \section{Introducción}
-La unidad temática 4 de la asignatura 'Estadística aplicada para la administración' se centra en las pruebas de hipótesis para una y dos muestras. Estas pruebas son fundamentales para la toma de decisiones en entornos de incertidumbre, proporcionando una base cuantitativa para evaluar hipótesis y tomar decisiones informadas. En esta actividad, se evaluará la comprensión de diversos conceptos estadísticos, como la regla de decisión mediante valor crítico y p-valor, contrastes t y Z, y la relación entre errores de tipo I y II. Estos conceptos son esenciales para la aplicación práctica en la gestión administrativa, permitiendo a los gerentes determinar si los resultados observados son estadísticamente significativos y, por lo tanto, si deben tomar medidas basadas en esos resultados. \citep{anderson2012,lind2012,holmesBusiness2023}.
+La inferencia estadística aplicada a la administración empresarial proporciona herramientas formales para contrastar aseveraciones sobre parámetros poblacionales a partir de evidencia muestral. El contraste de hipótesis constituye el mecanismo primordial para evaluar si las diferencias observadas en indicadores operativos obedecen a variaciones aleatorias del muestreo o a efectos significativos derivados de políticas de gestión. En este contexto, la evaluación de la Unidad 4 examina la formulación rigurosa de hipótesis nulas y alternativas, el cálculo de estadísticos de prueba en escenarios de una y dos poblaciones, y la interpretación de probabilidades de cola (valores-$p$) frente a umbrales de significancia preestablecidos \citep{anderson2012,lind2012,holmesBusiness2023}.
 
 \section{Fundamentos, modelado analítico y evidencia en pruebas de hipótesis para una y dos muestras}
 \subsection{Base conceptual autocontenida y formulación matemática}
@@ -77,29 +77,41 @@ El desarrollo teórico-matemático de esta actividad se basa en la integración 
 
 
 \subsection{Matriz contractual de evaluación y fundamentación de reactivos}
-La guía analítica detallada para resolver o estructurar los casos, artículos, ejercicios o reactivos específicos de esta actividad según la consigna oficial se basará en la aplicación práctica de los conceptos estadísticos discutidos. Se proporcionarán ejemplos y ejercicios para ilustrar cómo aplicar estas pruebas en escenarios administrativos reales, como la comparación de la eficacia de diferentes estrategias de marketing, la evaluación de la calidad de procesos de producción o la satisfacción del cliente. Se enfatizará la importancia de seguir los requisitos e instrucciones para una prueba de hipótesis rigurosa y confiable.
-
-De conformidad con el contrato AulaTeX para cuestionarios en plataforma, los cuestionarios se documentan en el reporte raíz mediante una tabla estructurada de pregunta, respuesta analítica y justificación teórico-matemática verificable, sin generar un archivo separado en la carpeta de entregables \citep{anderson2012,wackerly2010}.
+De conformidad con los requerimientos académicos de ITESCA Virtual para cuestionarios en línea, la preparación técnica se consolida mediante una matriz analítica de reactivos que integra la pregunta técnica, la respuesta rigurosa y su fundamentación directiva verificable \citep{anderson2012,wackerly2010,lind2012}.
 
 \begin{center}
-\renewcommand{\arraystretch}{1.28}
-\begin{longtable}{p{1.2cm}p{4.3cm}p{3.8cm}p{5.3cm}}
-\hline
-\textbf{Núm.} & \textbf{Eje / Pregunta de evaluación} & \textbf{Respuesta técnica} & \textbf{Justificación matemática y conceptual}\\\hline
+\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{p{1.1cm}p{4.2cm}p{4.0cm}p{5.2cm}}
+\caption{Matriz técnica de reactivos de evaluación para la Unidad 4 (Pruebas de Hipótesis).}\label{tab:cuestionario_u4}\\
+\toprule
+\textbf{Núm.} & \textbf{Eje conceptual / Pregunta} & \textbf{Respuesta técnica} & \textbf{Justificación y relevancia gerencial} \\
+\midrule
 \endfirsthead
-\hline
-\textbf{Núm.} & \textbf{Eje / Pregunta de evaluación} & \textbf{Respuesta técnica} & \textbf{Justificación matemática y conceptual}\\\hline
+\toprule
+\textbf{Núm.} & \textbf{Eje conceptual / Pregunta} & \textbf{Respuesta técnica} & \textbf{Justificación y relevancia gerencial} \\
+\midrule
 \endhead
-R01 & ¿Cuál es el criterio técnico y alcance de \textit{regla de decisión mediante valor crítico y mediante p-valor}? & La regla de decisión en pruebas de hipótesis puede establecerse mediante el valor crítico o el p-valor. El valor crítico es el punto de corte en la distribución & Esta regla guía la toma de decisiones en situaciones de incertidumbre, permitiendo a los gerentes determinar si los resultados observados son estadísticamente significativos y, por lo tanto, si deben tomar medidas basada \citep{anderson2012,wackerly2010}.\\\hline
-R02 & ¿Cuál es el criterio técnico y alcance de \textit{contraste t de Welch y varianza agrupada para dos medias independientes}? & El contraste t de Welch se utiliza para comparar las medias de dos poblaciones independientes cuando las varianzas poblacionales son desconocidas y se asume que & Este contraste es útil en la comparación de dos grupos diferentes, como la eficacia de dos métodos de producción o la satisfacción del cliente en dos regiones distintas. \citep{anderson2012,wackerly2010}.\\\hline
-R03 & ¿Cuál es el criterio técnico y alcance de \textit{prueba t para muestras pareadas o relacionadas}? & La prueba t para muestras pareadas se utiliza para comparar las medias de dos muestras relacionadas o emparejadas. Se calcula la diferencia entre cada par de ob & Esta prueba es aplicable en escenarios donde se mide el mismo sujeto en dos condiciones diferentes, como la evaluación del rendimiento de empleados antes y después de una capacitación. \citep{anderson2012,wackerly2010}.\\\hline
-R04 & ¿Cuál es el criterio técnico y alcance de \textit{contraste Z con proporción combinada para dos poblaciones}? & El contraste Z con proporción combinada se utiliza para comparar las proporciones de dos poblaciones independientes. Se calcula una proporción combinada y se re & Este contraste es útil para comparar proporciones en diferentes grupos, como la tasa de satisfacción de clientes en dos campañas de marketing distintas. \citep{anderson2012,wackerly2010}.\\\hline
-R05 & ¿Cuál es el criterio técnico y alcance de \textit{prueba F de igualdad de dos varianzas poblacionales}? & La prueba F se utiliza para comparar la igualdad de dos varianzas poblacionales. Se calcula la razón entre las varianzas muestrales y se compara con la distribu & Esta prueba es crucial para verificar la homogeneidad de varianzas antes de realizar otras pruebas, como el ANOVA, en análisis comparativos. \citep{anderson2012,wackerly2010}.\\\hline
-R06 & ¿Cuál es el criterio técnico y alcance de \textit{relación de compromiso entre errores de tipo I y tipo II}? & La relación de compromiso entre errores de tipo I (rechazar una hipótesis nula verdadera) y tipo II (no rechazar una hipótesis nula falsa) implica un equilibrio & En la toma de decisiones gerenciales, entender esta relación ayuda a establecer criterios de aceptación y rechazo de hipótesis en función de los costos y consecuencias asociados con cada tipo de error. \citep{anderson2012,wackerly2010}.\\\hline
-R07 & ¿Cuál es el criterio técnico y alcance de \textit{curva característica de operación y función de potencia}? & La curva característica de operación (CCO) y la función de potencia describen el comportamiento de una prueba estadística en términos de su capacidad para detec & Estas herramientas son esenciales para evaluar la eficiencia y fiabilidad de las pruebas estadísticas en la toma de decisiones gerenciales, asegurando que las conclusiones sean robustas y significativas. \citep{anderson2012,wackerly2010}.\\\hline
-R08 & ¿Cuál es el criterio técnico y alcance de \textit{pruebas hipótesis}? & Las pruebas de hipótesis son procedimientos estadísticos utilizados para evaluar si hay evidencia suficiente para rechazar una hipótesis nula en favor de una al & Las pruebas de hipótesis son fundamentales en la gestión administrativa para tomar decisiones basadas en datos, como la evaluación de la eficacia de estrategias de marketing, la calidad de procesos de producción o la sat \citep{anderson2012,wackerly2010}.\\\hline
-R09 & ¿Cuál es el criterio técnico y alcance de \textit{requisitos instrucciones}? & Los requisitos e instrucciones para una prueba de hipótesis incluyen la definición de hipótesis nula y alternativa, la selección del nivel de significancia, la  & Seguir estos requisitos asegura que las pruebas de hipótesis sean realizadas de manera rigurosa y que los resultados sean válidos y confiables para la toma de decisiones gerenciales. \citep{anderson2012,wackerly2010}.\\\hline
-R10 & ¿Cuál es el criterio técnico y alcance de \textit{muestras pareadas}? & Las muestras pareadas consisten en observaciones que están relacionadas o emparejadas de alguna manera. Esto puede ocurrir cuando se mide el mismo sujeto en dos & Las muestras pareadas son comunes en estudios longitudinales o en la evaluación de cambios en el mismo grupo antes y después de una intervención. \citep{anderson2012,wackerly2010}.\\\hline
+\bottomrule
+\endfoot
+R01 & Regla de decisión: valor crítico vs. valor-$p$. & Son criterios equivalentes: se rechaza $H_0$ si el estadístico cae en la región de rechazo o si valor-$p \le \alpha$. & El valor-$p$ proporciona una medida cuantitativa exacta de la fuerza de la evidencia muestral en contra de la hipótesis nula \citep{anderson2012}. \\
+\midrule
+R02 & Contraste $t$ de dos muestras: Welch vs. varianza agrupada. & Si $\sigma_1^2 \ne \sigma_2^2$ se utiliza Welch con grados de libertad ajustados de Satterthwaite; si $\sigma_1^2 = \sigma_2^2$ se usa varianza agrupada $s_p^2$. & Previene distorsiones en tasas de error de primer tipo al comparar métricas de desempeño entre sucursales de distinta escala \citep{wackerly2010}. \\
+\midrule
+R03 & Prueba $t$ para muestras pareadas o dependientes. & Se modela la variable diferencia $d_i = x_{1i} - x_{2i}$ con estadístico $t = (\bar{d} - \mu_{d0})/(s_d/\sqrt{n})$ con $n-1$ grados de libertad. & Controla la variabilidad intrínseca inter-sujeto en estudios antes-después (e.g., programas de adiestramiento o ergonomía laboral) \citep{lind2012}. \\
+\midrule
+R04 & Contraste $Z$ para dos proporciones independientes. & Se calcula la proporción combinada $\bar{p} = \frac{x_1 + x_2}{n_1 + n_2}$ y el error estándar $s_{\bar{p}} = \sqrt{\bar{p}(1-\bar{p})\left(\frac{1}{n_1} + \frac{1}{n_2}\right)}$. & Esencial para contrastar cuotas de mercado, tasas de conversión digital o niveles de satisfacción del cliente entre segmentos \citep{holmesBusiness2023}. \\
+\midrule
+R05 & Prueba $F$ de igualdad de dos varianzas poblacionales. & Estadístico $F = s_1^2 / s_2^2$ con $gl_1 = n_1-1$ y $gl_2 = n_2-1$, ordenando $s_1^2 \ge s_2^2$ para prueba unilateral. & Evalúa la estabilidad y consistencia de procesos operativos antes de autorizar la homologación de proveedores o tecnologías \citep{canavos1988}. \\
+\midrule
+R06 & Relación de compromiso entre Error Tipo I y Tipo II. & Para un tamaño muestral fijo $n$, reducir $\alpha$ incrementa $\beta$ inevitablemente; la única forma de reducir ambos es aumentar $n$. & Permite sopesar costos financieros: el costo de rechazar un producto conforme frente al costo de admitir un lote defectuoso \citep{anderson2012}. \\
+\midrule
+R07 & Función de potencia ($1-\beta$) y Curva Característica (CCO). & La potencia $\pi(\theta) = 1 - \beta(\theta)$ mide la probabilidad de rechazar $H_0$ cuando es falsa; la CCO grafica $\beta(\theta)$. & Garantiza que las auditorías y ensayos comerciales cuenten con la sensibilidad necesaria para detectar desviaciones operativas reales \citep{wackerly2010}. \\
+\midrule
+R08 & Asignación de la hipótesis de investigación. & La hipótesis alternativa $H_a$ recoge la afirmación del investigador; $H_0$ contiene el estado de igualdad o ausencia de cambio. & Protege al tomador de decisiones al exigir evidencia sustancial antes de declarar el éxito de una innovación comercial \citep{lind2012}. \\
+\midrule
+R09 & Nivel de significancia $\alpha$ y riesgo decisional. & $\alpha$ es la probabilidad máxima tolerada de cometer Error Tipo I (falso positivo), fijada a priori por el analista. & Debe alinearse con el marco de gobernanza corporativa: tolerancias de 1\% en ensayos críticos y 5\% en estudios de mercado generales \citep{nistHandbook}. \\
+\midrule
+R10 & Supuesto de normalidad y teorema del límite central. & Para $n \ge 30$, el teorema del límite central garantiza normalidad asintótica en medias; para $n < 30$, se requiere normalidad poblacional. & Orienta la selección rigurosa entre pruebas paramétricas convencionales y alternativas no paramétricas robustas \citep{spiegel2009}. \\
 \end{longtable}
 \end{center}
 
