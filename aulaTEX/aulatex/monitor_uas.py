@@ -492,6 +492,17 @@ class MonitorUasAgent(MonitorEntregasAgent):
                             subject_slug=clean_slug,
                         ),
                     )
+                else:
+                    mod_targets = tuple(
+                        UasModuleTarget(
+                            module_id=act["module_id"],
+                            course_id=cid,
+                            local_activity_number=act_num,
+                            subject_slug=clean_slug,
+                        )
+                        for act_num, act in sorted(catalog_entry.get("activities", {}).items())
+                        if act.get("module_id")
+                    )
                 nav_req = UasNavigationRequest(
                     inspect_dashboard=False,
                     course_ids=(cid,),

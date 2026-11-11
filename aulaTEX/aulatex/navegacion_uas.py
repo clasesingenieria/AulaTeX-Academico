@@ -324,14 +324,14 @@ class NavegacionUasAgent(PlatformNavigationAgent):
         self, page: Any, course_id: int, identities: tuple[str, ...]
     ) -> dict[str, Any]:
         course_url = f"{UAS_BASE_URL}/course/view.php?id={course_id}"
-        page.goto(course_url, wait_until="domcontentloaded")
+        page.goto(course_url, wait_until="networkidle")
         ensure_same_https_host(page.url, UAS_HOST, UAS_BASE_URL)
 
         heading_locator = page.locator("h1, .page-header-headings, .page-title").first
         raw_heading = heading_locator.inner_text().strip() if heading_locator.count() else f"Curso {course_id}"
         heading = sanitize_platform_text(raw_heading, identities)
 
-        links = page.locator("#region-main a[href], .course-content a[href]").evaluate_all(
+        links = page.locator("#region-main a[href], [role='main'] a[href], .course-content a[href]").evaluate_all(
             "els => els.map(e => ({href: e.href, text: e.innerText.trim()}))"
         )
         activities: list[dict[str, Any]] = []
@@ -457,6 +457,7 @@ class NavegacionUasAgent(PlatformNavigationAgent):
             "url": module_url,
             "raw_consigna": intro,
             "submission_status": status_text,
+            "full_main_text": sanitize_platform_text(main.inner_text(), identities),
             "deadline": deadline,
             "attachment_urls": attachment_urls,
             "local_activity_number": target.local_activity_number,
