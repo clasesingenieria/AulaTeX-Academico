@@ -66,22 +66,22 @@ En la etapa inicial se estableció el lienzo de trabajo bajo Google Workspace fo
 \end{figure}
 
 \subsection{Comparativa de despliegue y auditoría de publicación}
-La figura~\ref{fig:editor} documenta la interfaz de desarrollo avanzada en Google Sites. Se observa el comparador de versiones preliminares («Borrador» vs. «Versión actual»), donde se auditan los cambios antes de la propagación en los servidores perimetrales de Google, garantizando que el diseño contenga la paleta de colores institucional, los módulos de navegación y el marco responsivo completo de \textbf{Lex Contable}.
+La figura~\ref{fig:editor} documenta la interfaz de desarrollo avanzada en Google Sites. Se observa la barra de herramientas y la paleta de componentes nativos (\textit{Cuadro de texto, Bloques de contenido, Grupo que se puede contraer, Botón}), así como la confirmación oficial del sistema («Se publicó correctamente el sitio»), acreditando la maquetación nativa y la propagación en los servidores perimetrales de Google.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.92\textwidth]{evidencia-google-sites-editor.png}
-\caption{Consola de edición y panel de control de publicación en Google Sites, mostrando la arquitectura interactiva modular y el proceso de confirmación de cambios.}
+\caption{Consola de edición de Google Sites mostrando los bloques de contenido nativos, la paleta de diseño lateral y la confirmación de publicación exitosa.}
 \label{fig:editor}
 \end{figure}
 
 \subsection{Portal publicado y visualización en producción}
-La figura~\ref{fig:publicado} demuestra el sitio web plenamente publicado y accesible a nivel mundial en la URL pública asignada. Se constata la integración de la barra de navegación superior (\textit{Servicios, Cómo trabajamos, Preguntas frecuentes, Acceso al portal}), el encabezado principal con propuesta de valor clara y el catálogo dinámico de servicios para las empresas de la región de Sinaloa.
+La figura~\ref{fig:publicado} demuestra el sitio web comercial plenamente publicado y accesible a nivel mundial en la URL pública asignada. Se constata la integración del encabezado tipo \textit{Banner grande} con botón nativo de navegación (\textit{«Explorar servicios»}), la franja de proceso y el diseño de tres columnas correspondiente a las etapas del servicio (\textit{Regularización y revisión fiscal, Devoluciones y saldos a favor, Continuidad contable}).
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.92\textwidth]{evidencia-google-sites-publicado.png}
-\caption{Visualización pública en producción del portal comercial \textbf{Lex Contable} (\texttt{https://sites.google.com/view/delacruz-consultores-lcp}), verificado con renderizado fluido y protocolo seguro HTTPS.}
+\caption{Visualización pública en producción del portal comercial \textbf{Lex Contable} (\texttt{https://sites.google.com/view/delacruz-consultores-lcp}), verificado con maquetación 100\% nativa y protocolo seguro HTTPS.}
 \label{fig:publicado}
 \end{figure}
 
@@ -110,10 +110,10 @@ Para respaldar la prestación de servicios en el entorno digital, el portal inco
 El desarrollo técnico del portal siguió una metodología sistemática orientada a la calidad y robustez del entregable:
 
 \begin{enumerate}
-\item \textbf{Selección de plantilla y estilo temático:} Se configuró el tema institucional con estilo formal y sobrio, tipografía legible (\textit{Lato / Fraunces}) y contrastes cromáticos en gamas de verde azulado (\textit{teal}) y neutros, transmitiendo rigor, formalidad y seguridad financiera \parencite{googleSitesAyuda}.
-\item \textbf{Incrustación de componentes interactivos y código responsivo:} Mediante la herramienta de inserción avanzada de Google Sites (\textit{Embed / Insertar código}), se integró el motor visual de \textbf{Lex Contable}, dotando a la página de escalabilidad automática para pantallas de escritorio, tabletas y teléfonos móviles sin pérdida de legibilidad ni deformación de la retícula.
-\item \textbf{Eliminación de redundancias y optimización de UX:} Se purgó el texto plano de viñetas simples utilizado en pruebas tempranas, sustituyéndolo por contenedores modulares, botones de llamada a la acción (\textit{Call to Action}) y formularios directos para solicitud de asesorías.
-\item \textbf{Parámetros de gobernanza y publicación pública:} En el módulo de administración de accesos, se estableció la visibilidad como \textit{«Público en la web»}, impidiendo que el enlace genere pantallas de error 403 (acceso denegado) o solicitudes de inicio de sesión forzado.
+\item \textbf{Selección de plantilla y estilo temático:} Se configuró el tema institucional \textit{Diplomático} con estilo formal y sobrio, tipografía legible (\textit{Lato / Fraunces}) y contrastes cromáticos en gamas de verde azulado y neutros corporativos, transmitiendo rigor, formalidad y seguridad financiera \parencite{googleSitesAyuda}.
+\item \textbf{Maquetación modular con bloques 100\% nativos:} Prescindiendo en su totalidad de marcos incrustados o código externo (\textit{iframes}), el sitio se estructuró de forma íntegra con la biblioteca nativa de Google Sites: encabezado tipo \textit{Banner grande}, franja de proceso horizontal, bloques prediseñados de tres columnas con imagen y leyenda para las etapas operativas, catálogo estructurado de los seis servicios contables y fiscalización, y columnas analíticas para el método de trabajo.
+\item \textbf{Interactividad mediante botones y grupos colapsables:} Se incorporaron botones nativos de llamada a la acción (\textit{Call to Action}) como \textit{«Explorar servicios»} y \textit{«Preparar consulta»}, además de grupos que se pueden contraer (\textit{Collapsible groups}) para la sección de Preguntas Frecuentes, facilitando una navegación intuitiva y una lectura ágil de las dudas frecuentes sobre presentación de declaraciones y cotizaciones.
+\item \textbf{Parámetros de gobernanza y publicación pública:} En el módulo de administración de accesos, se estableció la visibilidad como \textit{«Público en la web»}, verificando mediante auditoría HTTP la total ausencia de pantallas de bloqueo (error 403) o redirecciones no autorizadas.
 \end{enumerate}
 
 \section{Conclusiones y postura académica}
