@@ -99,10 +99,12 @@ El PDF histórico `Actividad-4` corresponde al examen S1 50103; no es la entrega
 web. Las compilaciones y los archivos antiguos apartados se conservan en
 `.build/` y `archivo-reportes/`, respectivamente.
 
-Validación del reporte 50144: `latexmk` terminó con XeLaTeX y Biber; el PDF
-final tiene 10 páginas y 2 965 447 bytes. Se revisó visualmente la portada,
-el procedimiento, las capturas, la verificación y las referencias. Los PDF de
-la raíz y de `entregas-herramientas-digitales` tienen el mismo SHA-256.
+Validación del reporte 50144: `latexmk` terminó con XeLaTeX y Biber; la versión
+actual tiene 8 páginas y 3 462 458 bytes. Se revisaron visualmente las cuatro
+evidencias del proceso (lienzo inicial, borrador, composición en el editor y
+portada publicada), además de la portada del reporte, la verificación y las
+referencias. Los PDF de la raíz y de `entregas-herramientas-digitales` tienen
+el mismo SHA-256.
 Los auxiliares de esta compilación están en `.build/latex/actividad-50144`.
 
 La integridad SHA-256 de las 46 capturas y 81 descargas, 15 planeaciones y

@@ -10,7 +10,7 @@
 | 6: Acceso Zoom, 50118 | [Guía S2](Preparacion-Leccion-Zoom-S2_MartinJonathanDeLaCruzMunoz.pdf) | Preparación local; no es reporte de una práctica completada |
 | 7: Reunión Zoom, 50113 | [Plan previo S2](Plan-Reunion-Zoom-S2_MartinJonathanDeLaCruzMunoz.pdf) | [Reporte 7](../reporte-herramientas-digitales-Actividad-7.tex) |
 | 8: Excel básico, 50114 | [Preparación S2](Preparacion-Excel-Basico-S2_MartinJonathanDeLaCruzMunoz.pdf) | [Reporte 8](../reporte-herramientas-digitales-Actividad-8.tex) |
-| 50144: Página web con Google Sites | [Entrega web](GPO103_LNCI_WEB_Martin_DeLaCruz_Munoz.pdf) | [Reporte técnico y memoria gráfica](../reporte-herramientas-digitales-Actividad-50144.tex) |
+| 50144: Página web con Google Sites | [Entrega web](GPO103_LNCI_WEB_Martin_DeLaCruz_Munoz.pdf) | [Reporte técnico del proceso de elaboración](../reporte-herramientas-digitales-Actividad-50144.tex), con capturas del lienzo inicial, borrador, editor y publicación |
 
 Los PDF de lecciones y examen son productos documentales locales; no se
 realizaron ni enviaron las prácticas S2. [Contrato S2](../referencias-herramientas-digitales/notas-herramientas-digitales/semana-02/CONTRATO.md).
