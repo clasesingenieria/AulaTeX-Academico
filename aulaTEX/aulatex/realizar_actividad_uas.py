@@ -216,7 +216,7 @@ class RealizarActividadUasAgent:
                 f"\\begin{{center}}\n"
                 f"\\fbox{{\\parbox{{0.92\\textwidth}}{{\\centering\\vspace{{0.2cm}}\n"
                 f"\\textbf{{Enlace oficial del portal web en Google Sites:}}\\\\[0.25cm]\n"
-                f"\\href{{https://sites.google.com/view/delacruz-consultores-lcp/inicio}}{{\\Large\\color{{blue}}\\underline{{https://sites.google.com/view/delacruz-consultores-lcp/inicio}}}}\\\\[0.25cm]\n"
+                f"\\href{{https://sites.google.com/view/delacruz-consultores-lcp}}{{\\Large\\color{{blue}}\\underline{{https://sites.google.com/view/delacruz-consultores-lcp}}}}\\\\[0.25cm]\n"
                 f"\\small \\textbf{{Nombre comercial:}} De La Cruz \\& Asociados --- Consultoría Fiscal y Contable LCP\\\\ \n"
                 f"\\small \\textbf{{Acceso:}} Público en la web | \\textbf{{Estado:}} Publicado y operativo\n"
                 f"\\vspace{{0.15cm}}}}}}\n"
