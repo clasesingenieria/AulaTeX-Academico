@@ -479,6 +479,11 @@ def build_parser() -> argparse.ArgumentParser:
     flujo_uas.add_argument("--inspect", action="store_true", help="Inspeccionar plataforma UAS en vivo.")
     flujo_uas.add_argument("--no-compile", action="store_true", help="No compilar manuscritos TeX.")
 
+    sitio_lex = sub.add_parser("diseno-sitio-lex", aliases=["sitio-lex"], help="Auditar, verificar y sincronizar el portal nativo de Lex Contable en Google Sites.")
+    sitio_lex.add_argument("--url", default="", help="URL pública a auditar.")
+    sitio_lex.add_argument("--no-compile", action="store_true", help="No recompilar reporte TeX.")
+    sitio_lex.add_argument("--json", action="store_true", help="Emitir salida en formato JSON.")
+
     itesca_wf = sub.add_parser("itesca-workflow", help="Ejecutar el flujo de trabajo académico para ITESCA orquestado por aulatex.")
     itesca_wf.add_argument("--snapshot", default="", help="Ruta al snapshot JSON sanitizado de navegación ITESCA.")
     itesca_wf.add_argument("--activity", type=int, default=0, help="Filtrar por número de actividad específico (7, 8, 9, 15).")
@@ -1543,6 +1548,27 @@ def main(argv: list[str] | None = None) -> None:
         if args.write:
             _cmd.append("--write")
         raise SystemExit(_sp.run(_cmd).returncode)
+
+    if args.command in ("diseno-sitio-lex", "sitio-lex"):
+        from .agente_sitio_lex import AgenteSitioLex
+        agent = AgenteSitioLex(AulaTeXWorkspace())
+        audit = agent.audit_published_site(site_url=getattr(args, "url", None) or None)
+        exec_res = agent.synchronize_evidence_and_report(audit, compile_latex=not getattr(args, "no_compile", False))
+        payload = {
+            "ok": exec_res.ok,
+            "compliance_score": exec_res.audit.compliance_score,
+            "has_forbidden_iframes": exec_res.audit.has_forbidden_iframes,
+            "forbidden_iframe_sources": list(exec_res.audit.forbidden_iframe_sources),
+            "matched_sections": list(exec_res.audit.matched_sections),
+            "missing_sections": list(exec_res.audit.missing_sections),
+            "compile_ok": exec_res.compile_ok,
+            "pdf_sha256": exec_res.pdf_sha256,
+            "pdf_pages": exec_res.pdf_pages,
+            "deliverable_pdf": str(exec_res.deliverable_pdf) if exec_res.deliverable_pdf else None,
+            "errors": list(exec_res.errors),
+        }
+        print(json.dumps(payload, ensure_ascii=False, indent=2))
+        return
 
     if args.command in ("flujo-uas", "uas-pending", "monitor-uas"):
         from .flujo_uas import FlujoUasOrchestrator, FlujoUasRequest

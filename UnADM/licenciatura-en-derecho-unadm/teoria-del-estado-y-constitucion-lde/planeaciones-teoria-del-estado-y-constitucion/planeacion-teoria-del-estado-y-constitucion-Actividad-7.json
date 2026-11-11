@@ -1,0 +1,506 @@
+{
+  "schema_version": "1.0.0",
+  "plan_id": "pca-f6209b4e45134424a2ef",
+  "revision": 1,
+  "identity": {
+    "institution": "UnADM",
+    "program": "Licenciatura en Derecho",
+    "subject_id": "teoria-del-estado-y-constitucion-lde",
+    "subject_title": "Teoría del Estado y Constitución",
+    "offering_id": "oferta-unadm-teoria-del-estado-y-constitucion-2026-2-b2",
+    "period": "2026-2 B2",
+    "modality": "online"
+  },
+  "sources": [
+    {
+      "id": "src-unadm-consigna-s7",
+      "kind": "platform",
+      "authority": "instructional",
+      "title": "Consigna oficial UnADM: S7. Cuadro comparativo (Poder)",
+      "url": "https://aulavirtual.unadmexico.mx/course/view.php?id=3432",
+      "path": "referencias-teoria-del-estado-y-constitucion/notas-teoria-del-estado-y-constitucion/actividad-07-s7-cuadro-comparativo-poder/consigna-aula-S7.txt",
+      "sha256": "235c25dd86bb4ca480160986db8c4f24a89881d4998c3860e6bba35e6e522a53",
+      "captured_at": "2026-11-11T09:26:05.634588+00:00",
+      "media_type": "text/plain"
+    }
+  ],
+  "curriculum": {
+    "purpose": "Desarrollo de competencias y análisis jurídico-doctrinal para Teoría del Estado y Constitución.",
+    "competencies": [
+      {
+        "id": "comp-01",
+        "text": "Analiza el marco normativo y conceptual de Teoría del Estado y Constitución."
+      },
+      {
+        "id": "comp-02",
+        "text": "Aplica el razonamiento jurídico a casos concretos y productos argumentados."
+      }
+    ],
+    "outcomes": [
+      {
+        "id": "ra-001",
+        "text": "Comprende y sintetiza los postulados teóricos y prácticos de la S7. Cuadro comparativo (Poder)."
+      }
+    ],
+    "topics": [
+      {
+        "id": "topic-001",
+        "text": "Desarrollo académico formal de la S7. Cuadro comparativo (Poder) para la asignatura Teoría del Estado y Constitución.",
+        "children": []
+      }
+    ]
+  },
+  "activities": [
+    {
+      "id": "act-07",
+      "title": "S7. Cuadro comparativo (Poder)",
+      "role": "learning",
+      "platform": {
+        "name": "UnADM Virtual",
+        "course_id": "3432",
+        "module_ids": []
+      },
+      "unit_id": "unidad-07",
+      "weeks": [
+        7
+      ],
+      "outcome_ids": [
+        "ra-001"
+      ],
+      "topic_ids": [
+        "topic-001"
+      ],
+      "cognitive": {
+        "taxonomy": "Bloom",
+        "level": "analisis",
+        "verb": "Analizar",
+        "object": "Conceptos y problemas de S7. Cuadro comparativo (Poder)",
+        "conditions": "Conforme a plantilla institucional UnADM y fuentes verificables",
+        "observable_evidence": "Reporte académico en LaTeX/PDF con fuentes en APA 7",
+        "justification": "Demuestra apropiación conceptual y análisis crítico transferible"
+      },
+      "instruction": "Desarrollo académico formal de la S7. Cuadro comparativo (Poder) para la asignatura Teoría del Estado y Constitución.",
+      "requirements": [
+        {
+          "id": "req-001",
+          "text": "Desarrollo académico formal de la S7. Cuadro comparativo (Poder) para la asignatura Teoría del Estado y Constitución."
+        }
+      ],
+      "questions": [],
+      "sequence": [
+        {
+          "id": "step-01",
+          "order": 1,
+          "phase": "preparation",
+          "action": "Recopilar, descargar y organizar recursos docentes y bibliografía local con encontrar-recursos.",
+          "inputs": [
+            "referencias-teoria-del-estado-y-constitucion/notas-teoria-del-estado-y-constitucion/actividad-07-s7-cuadro-comparativo-poder/consigna-aula-S7.txt"
+          ],
+          "output": "referencias-teoria-del-estado-y-constitucion/notas-teoria-del-estado-y-constitucion/actividad-07-s7-cuadro-comparativo-poder/recursos-actividad.json",
+          "completion_check": "Hashes SHA-256 verificados y cero credenciales expuestas",
+          "requirement_ids": [
+            "req-001"
+          ],
+          "depends_on": []
+        },
+        {
+          "id": "step-02",
+          "order": 2,
+          "phase": "preparation",
+          "action": "Extraer fichas conceptuales e ideas trazables en la carpeta de notas de la actividad con extraer-conceptos.",
+          "inputs": [
+            "referencias-teoria-del-estado-y-constitucion/notas-teoria-del-estado-y-constitucion/actividad-07-s7-cuadro-comparativo-poder/recursos-actividad.json"
+          ],
+          "output": "referencias-teoria-del-estado-y-constitucion/notas-teoria-del-estado-y-constitucion/actividad-07-s7-cuadro-comparativo-poder/fichas_conceptos.json",
+          "completion_check": "Artefactos nucleares de conceptos presentes en notas y trazabilidad asegurada",
+          "requirement_ids": [
+            "req-001"
+          ],
+          "depends_on": [
+            "step-01"
+          ]
+        },
+        {
+          "id": "step-03",
+          "order": 3,
+          "phase": "construction",
+          "action": "Desarrollar entregable con plantillas UnADM y refinamiento de voz con estilo-escribir.",
+          "inputs": [
+            "referencias-teoria-del-estado-y-constitucion/notas-teoria-del-estado-y-constitucion/actividad-07-s7-cuadro-comparativo-poder/fichas_conceptos.json"
+          ],
+          "output": "reporte-teoria-del-estado-y-constitucion-Actividad-7.tex",
+          "completion_check": "Compilación limpia, estilo score >= 88.0 y gates de calidad aprobados",
+          "requirement_ids": [
+            "req-001"
+          ],
+          "depends_on": [
+            "step-02"
+          ]
+        },
+        {
+          "id": "step-04",
+          "order": 4,
+          "phase": "review",
+          "action": "Ejecutar ciclos de calidad, auditoría tipográfica y empaquetado seguro en entregas-.",
+          "inputs": [
+            "reporte-teoria-del-estado-y-constitucion-Actividad-7.tex"
+          ],
+          "output": "entregas-teoria-del-estado-y-constitucion/Actividad-7-Reporte.pdf",
+          "completion_check": "PDF compilado y verificado en entregas de la materia",
+          "requirement_ids": [
+            "req-001"
+          ],
+          "depends_on": [
+            "step-03"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "id": "res-01",
+          "source_id": "src-unadm-consigna-s7",
+          "purpose": "Consigna y lineamientos de S7. Cuadro comparativo (Poder)",
+          "required": true,
+          "access": "authenticated",
+          "rights": "Material docente de uso interno UnADM"
+        }
+      ],
+      "assessment": {
+        "kind": "summative",
+        "scale_total": 100.0,
+        "weight": 20.0,
+        "weight_unit": "percent",
+        "criteria": [
+          {
+            "id": "crit-01",
+            "text": "Dominio conceptual y rigor doctrinal",
+            "points": 35.0,
+            "descriptors": [
+              {
+                "level": "Excelente",
+                "description": "Sustento en literatura jurídica oficial",
+                "points": 35.0
+              }
+            ],
+            "requirement_ids": [
+              "req-001"
+            ]
+          },
+          {
+            "id": "crit-02",
+            "text": "Estructura del producto solicitado y aplicación",
+            "points": 45.0,
+            "descriptors": [
+              {
+                "level": "Excelente",
+                "description": "Producto didáctico visible completado",
+                "points": 45.0
+              }
+            ],
+            "requirement_ids": [
+              "req-001"
+            ]
+          },
+          {
+            "id": "crit-03",
+            "text": "Formato APA 7, redacción y estilo académico",
+            "points": 20.0,
+            "descriptors": [
+              {
+                "level": "Excelente",
+                "description": "Citas verificables en .bib y sin metadiscurso",
+                "points": 20.0
+              }
+            ],
+            "requirement_ids": [
+              "req-001"
+            ]
+          }
+        ],
+        "editorial_checks": [
+          "Cero exposición de credenciales o matrículas en texto visible",
+          "Citas verificables en bibliografía BibTeX local",
+          "Estilo académico formal auditado con estilo-escribir"
+        ]
+      },
+      "products": [
+        {
+          "id": "prod-01",
+          "kind": "academic_report_latex",
+          "recipient": "Plataforma UnADM",
+          "editable_format": "LaTeX (.tex)",
+          "submission_format": "PDF con plantilla oficial UnADM",
+          "structure": [
+            "Portada oficial UnADM con metadatos del estudiante",
+            "Introducción estructurada",
+            "Desarrollo con producto protagónico",
+            "Conclusiones con transferencia profesional y declaración ética de IA",
+            "Referencias en formato APA 7"
+          ],
+          "length": "Conforme a consigna (3 a 10 cuartillas con aparato crítico)",
+          "filename_pattern": "Actividad-7-Reporte.pdf",
+          "accessibility": null,
+          "requirement_ids": [
+            "req-001"
+          ],
+          "paths": {
+            "editable": "reporte-teoria-del-estado-y-constitucion-Actividad-7.tex",
+            "delivery": "entregas-teoria-del-estado-y-constitucion/Actividad-7-Reporte.pdf"
+          }
+        }
+      ],
+      "calendar": {
+        "opens_at": null,
+        "expected_at": null,
+        "due_at": null,
+        "closes_at": null,
+        "timezone": "America/Mexico_City",
+        "literal": "Conforme a calendario oficial del bloque"
+      },
+      "policies": {
+        "ai": "Declaración ética de IA en conclusiones conforme a lineamientos UnADM.",
+        "integrity": "Rigor académico, originalidad y citas verificables.",
+        "collaboration": "Trabajo individual independiente.",
+        "citation": "APA 7",
+        "attempts": 1,
+        "late_submission": "Conforme al calendario oficial del bloque.",
+        "accessibility": null,
+        "privacy": "Cero exposición de credenciales institucionales o matrículas.",
+        "exceptions": []
+      },
+      "dependencies": [],
+      "alignment": [
+        {
+          "outcome_id": "ra-001",
+          "requirement_ids": [
+            "req-001"
+          ],
+          "step_ids": [
+            "step-01",
+            "step-02",
+            "step-03",
+            "step-04"
+          ],
+          "product_ids": [
+            "prod-01"
+          ],
+          "criterion_ids": [
+            "crit-01",
+            "crit-02",
+            "crit-03"
+          ]
+        }
+      ],
+      "bindings": {
+        "extractor_directory": "extractor-aulatex/conceptos-teoria-del-estado-y-constitucion-actividad-7",
+        "notes_directory": "referencias-teoria-del-estado-y-constitucion/notas-teoria-del-estado-y-constitucion/actividad-07-s7-cuadro-comparativo-poder",
+        "research_directory": "investigacion-aulatex"
+      }
+    }
+  ],
+  "field_status": [
+    {
+      "path": "/identity",
+      "state": "confirmed",
+      "reason": "Identidad institucional UnADM verificada con el catálogo de materias.",
+      "evidence": [
+        {
+          "source_id": "src-unadm-consigna-s7",
+          "locator": "/identity",
+          "quoted_text": null
+        }
+      ],
+      "alternatives": []
+    },
+    {
+      "path": "/sources/0",
+      "state": "confirmed",
+      "reason": "Consigna capturada de la plataforma o repositorios locales verificados.",
+      "evidence": [
+        {
+          "source_id": "src-unadm-consigna-s7",
+          "locator": "/sources/0",
+          "quoted_text": null
+        }
+      ],
+      "alternatives": []
+    },
+    {
+      "path": "/curriculum/purpose",
+      "state": "inferred",
+      "reason": "Propósito curricular derivado de la disciplina.",
+      "evidence": [],
+      "alternatives": []
+    },
+    {
+      "path": "/curriculum/competencies",
+      "state": "inferred",
+      "reason": "Competencias derivadas del programa institucional.",
+      "evidence": [],
+      "alternatives": []
+    },
+    {
+      "path": "/curriculum/outcomes",
+      "state": "inferred",
+      "reason": "Resultados de aprendizaje operacionales de la actividad.",
+      "evidence": [],
+      "alternatives": []
+    },
+    {
+      "path": "/curriculum/topics",
+      "state": "inferred",
+      "reason": "Ejes temáticos identificados a partir de la consigna.",
+      "evidence": [],
+      "alternatives": []
+    },
+    {
+      "path": "/activities/0/instruction",
+      "state": "confirmed",
+      "reason": "Instrucción oficial de la actividad UnADM.",
+      "evidence": [
+        {
+          "source_id": "src-unadm-consigna-s7",
+          "locator": "/activities/0/instruction",
+          "quoted_text": null
+        }
+      ],
+      "alternatives": []
+    },
+    {
+      "path": "/activities/0/requirements",
+      "state": "confirmed",
+      "reason": "Requisitos específicos segmentados de la consigna.",
+      "evidence": [
+        {
+          "source_id": "src-unadm-consigna-s7",
+          "locator": "/activities/0/requirements",
+          "quoted_text": null
+        }
+      ],
+      "alternatives": []
+    },
+    {
+      "path": "/activities/0/cognitive",
+      "state": "inferred",
+      "reason": "Demanda cognitiva estimada para nivel licenciatura.",
+      "evidence": [],
+      "alternatives": []
+    },
+    {
+      "path": "/activities/0/sequence",
+      "state": "inferred",
+      "reason": "Secuencia operativa estructurada en fases preparation, construction, review.",
+      "evidence": [],
+      "alternatives": []
+    },
+    {
+      "path": "/activities/0/assessment",
+      "state": "confirmed",
+      "reason": "Criterios de evaluación y rúbrica pedagógica documentados en consigna.",
+      "evidence": [
+        {
+          "source_id": "src-unadm-consigna-s7",
+          "locator": "/activities/0/assessment",
+          "quoted_text": null
+        }
+      ],
+      "alternatives": []
+    },
+    {
+      "path": "/activities/0/products",
+      "state": "confirmed",
+      "reason": "Producto documental en formato LaTeX/PDF requerido por el estándar AulaTeX.",
+      "evidence": [
+        {
+          "source_id": "src-unadm-consigna-s7",
+          "locator": "/activities/0/products",
+          "quoted_text": null
+        }
+      ],
+      "alternatives": []
+    },
+    {
+      "path": "/activities/0/calendar",
+      "state": "inferred",
+      "reason": "Calendario operativo institucional.",
+      "evidence": [],
+      "alternatives": []
+    },
+    {
+      "path": "/activities/0/policies",
+      "state": "inferred",
+      "reason": "Políticas académicas y de uso ético de IA.",
+      "evidence": [],
+      "alternatives": []
+    },
+    {
+      "path": "/activities/0/alignment",
+      "state": "confirmed",
+      "reason": "Alineación constructiva completa.",
+      "evidence": [
+        {
+          "source_id": "src-unadm-consigna-s7",
+          "locator": "/activities/0/alignment",
+          "quoted_text": null
+        }
+      ],
+      "alternatives": []
+    },
+    {
+      "path": "/activities/0/bindings",
+      "state": "confirmed",
+      "reason": "Rutas de derivados en notas y extractor.",
+      "evidence": [
+        {
+          "source_id": "src-unadm-consigna-s7",
+          "locator": "/activities/0/bindings",
+          "quoted_text": null
+        }
+      ],
+      "alternatives": []
+    }
+  ],
+  "review": {
+    "state": "ready",
+    "reviewed_at": "2026-11-11T09:26:05.634588+00:00",
+    "reviewer_role": "realizar-planeación",
+    "critical_gaps": [],
+    "semantic_validation": "passed"
+  },
+  "artifact_contract": {
+    "version": "1.1",
+    "academic_materials_versioned": true,
+    "paths_relative_to_subject": {
+      "plans": "planeaciones-teoria-del-estado-y-constitucion",
+      "references": "referencias-teoria-del-estado-y-constitucion",
+      "notes": "referencias-teoria-del-estado-y-constitucion/notas-teoria-del-estado-y-constitucion",
+      "assets": "assets-teoria-del-estado-y-constitucion",
+      "deliveries": "entregas-teoria-del-estado-y-constitucion",
+      "extractions": "extractor-aulatex",
+      "research": "investigacion-aulatex"
+    },
+    "deliverables_directory": "entregas-teoria-del-estado-y-constitucion",
+    "source_directory": "."
+  },
+  "extensions": {
+    "unadm_workflow": {
+      "subject_slug": "teoria-del-estado-y-constitucion",
+      "activity_number": 7,
+      "course_id": 3432,
+      "group": "020",
+      "teacher": "Lic. Mtra. Titular UnADM",
+      "template_path": "UnADM/assets-unadm/plantilla-actividad-aulatex.tex"
+    },
+    "editorial_rules": {
+      "citation_style": "APA 7",
+      "language": "es-MX",
+      "accessibility": "screen-reader-safe",
+      "source_quality": "peer-reviewed-or-official"
+    },
+    "provenance": {
+      "created_by": "realizar-planeación",
+      "created_at": "2026-11-11T09:26:05.634588+00:00",
+      "mode": "authenticated_platform_inspection_and_synthesis"
+    }
+  }
+}
