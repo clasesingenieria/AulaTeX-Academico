@@ -169,7 +169,7 @@ class NavegacionUnadmAgent(PlatformNavigationAgent):
 
         browser = playwright.chromium.launch(headless=True, args=browser_args)
         context = browser.new_context(
-            accept_downloads=False,
+            accept_downloads=True,
             service_workers="block",
             viewport={"width": 1440, "height": 1100},
         )
