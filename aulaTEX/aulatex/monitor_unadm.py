@@ -136,6 +136,25 @@ class MonitorUnadmAgent(MonitorEntregasAgent):
 
         return None, None
 
+    def _check_delivered_in_manifests(self, subject_slug: str, activity_number: int) -> bool:
+        """Comprueba si la actividad ya fue enviada formalmente según los manifiestos de entregas previas."""
+        delivery_runs = self.workspace.feedback_root / "entregar-unadm" / "runs"
+        if not delivery_runs.is_dir():
+            return False
+        for m_file in delivery_runs.glob("**/manifest.json"):
+            try:
+                data = json.loads(m_file.read_text(encoding="utf-8"))
+                for d in data.get("deliveries", []):
+                    if (
+                        d.get("subject") == subject_slug
+                        and int(d.get("activity_number", -1)) == int(activity_number)
+                        and d.get("platform_submission_performed") is True
+                    ):
+                        return True
+            except Exception:
+                continue
+        return False
+
     def evaluate_activity(
         self,
         subject_slug: str,
@@ -276,22 +295,40 @@ class MonitorUnadmAgent(MonitorEntregasAgent):
                     pdf_path = forum_path
                     pdf_sha256 = forum_sha
 
-        # 5. Comprobar estado en plataforma si hay snapshot
+        # 5. Comprobar estado en plataforma y manifiestos de envíos previos
         platform_status = "sin_inspeccion_remota"
         active_snapshot = module_snapshot
         if active_snapshot is None and nav_snapshot is not None:
             active_snapshot = nav_snapshot.get("modules", {}).get(str(module_id))
 
+        already_delivered_manifest = self._check_delivered_in_manifests(base_slug, activity_number)
+
         if active_snapshot is not None:
             full_text = active_snapshot.get("full_main_text", "") + " " + active_snapshot.get("intro_text", "")
-            if "Enviado para calificar" in full_text:
-                platform_status = "Enviado para calificar"
-            elif "Borrador (no enviado)" in full_text:
+            lower_text = full_text.lower()
+            is_submitted = (
+                "enviado para calificar" in lower_text
+                or "calificado" in lower_text
+                or "hecho: hacer un envío" in lower_text
+                or "hecho: hacer publicaciones en foro" in lower_text
+                or "hecho: hacer publicaciones" in lower_text
+            )
+            is_draft = "borrador (no enviado)" in lower_text
+            is_pending = (
+                "por hacer: hacer un envío" in lower_text
+                or "por hacer: hacer publicaciones" in lower_text
+                or "aun no se ha hecho ninguna tarea" in lower_text
+                or "aún no se ha hecho ninguna tarea" in lower_text
+                or "no se ha entregado nada" in lower_text
+                or "añadir envío" in lower_text
+            )
+
+            if is_submitted and not is_draft:
+                platform_status = "entregado_en_plataforma"
+            elif is_draft:
                 platform_status = "Borrador (no enviado)"
-            elif "Aún no se ha hecho ninguna tarea" in full_text or "No se ha entregado nada" in full_text:
-                platform_status = "Aún no se ha hecho ninguna tarea"
-            elif "Hacer publicaciones en foro" in full_text:
-                platform_status = "Por hacer publicaciones en foro"
+            elif is_pending:
+                platform_status = "pendiente_de_envio"
             else:
                 platform_status = "pendiente_o_no_registrado"
 
@@ -301,7 +338,7 @@ class MonitorUnadmAgent(MonitorEntregasAgent):
         proposed_artifact = str(pdf_path) if pdf_path else None
         proposed_sha = pdf_sha256
 
-        if platform_status == "Enviado para calificar":
+        if platform_status in ("entregado_en_plataforma", "Enviado para calificar"):
             recommended_action = "ya_entregado"
             rationale = "La actividad ya fue enviada previamente y se encuentra en estado 'Enviado para calificar' en la plataforma UnADM."
             blockers.append({
@@ -310,6 +347,7 @@ class MonitorUnadmAgent(MonitorEntregasAgent):
                 "blocking": False,
             })
         elif "entregable_local_compilado" in satisfied or "borrador_foro_verificado" in satisfied:
+            # Si el entregable local está listo y no ha sido entregado a la plataforma, queda a la espera de autorización
             recommended_action = "esperar-autorizacion-entrega"
             rationale = (
                 f"El artefacto entregable está compilado en {pdf_path.name} (SHA-256: {pdf_sha256[:12]}...). "
@@ -456,13 +494,27 @@ class MonitorUnadmAgent(MonitorEntregasAgent):
                     if m_s:
                         discovered_acts.add(int(m_s.group(1)))
 
+            # 4. Secciones del curso en la plataforma (detectar semanas activas, ej. section-8 / Semana 7)
+            if nav_snapshot and "courses" in nav_snapshot and str(cid) in nav_snapshot["courses"]:
+                c_sections = nav_snapshot["courses"][str(cid)].get("sections", [])
+                for sec in c_sections:
+                    for ln in sec.get("links", []):
+                        lt = ln.get("title", "")
+                        m = re.search(r"[Aa]ctividad\s*(\d+)", lt)
+                        if m:
+                            discovered_acts.add(int(m.group(1)))
+                        m_s = re.search(r"[Ss](\d+)", lt)
+                        if m_s:
+                            discovered_acts.add(int(m_s.group(1)))
+
             if not discovered_acts:
-                discovered_acts = set(range(1, 9))
+                discovered_acts = set(range(1, 10))
             else:
-                # Asegurar evaluación al menos hasta la semana/actividad 6 si hay actividades detectadas
-                max_act = max(discovered_acts)
-                if max_act < 6:
-                    discovered_acts.add(6)
+                # Asegurar evaluación de la semana activa actual (Semana 7)
+                if base_slug == "antecedentes-de-los-derechos-humanos":
+                    discovered_acts.add(9)
+                elif base_slug in ("teoria-del-estado-y-constitucion", "derecho-penal-especial-mexicano"):
+                    discovered_acts.add(7)
 
             activities_to_eval = sorted(discovered_acts)
         pending_items: list[PendingDeliveryItem] = []

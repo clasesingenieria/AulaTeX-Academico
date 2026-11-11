@@ -35,7 +35,8 @@ UNADM_SUBJECTS_CATALOG: dict[str, dict[str, Any]] = {
             3: {"title": "Análisis de hechos", "kind": "report"},
             4: {"title": "Foro de debate", "kind": "forum"},
             5: {"title": "Valoración de decisiones", "kind": "report"},
-            6: {"title": "S6. Foro de Derechos Humanos", "kind": "forum", "module_id": 221688},
+            6: {"title": "S6. Foro de Derechos Humanos", "kind": "forum", "module_id": 221688, "week": 6},
+            7: {"title": "S7. Cuadro comparativo (Poder)", "kind": "report", "module_id": 221692, "week": 7},
         },
     },
     "derecho-penal-especial-mexicano": {
@@ -49,7 +50,8 @@ UNADM_SUBJECTS_CATALOG: dict[str, dict[str, Any]] = {
             3: {"title": "Estudio de casos", "kind": "report"},
             4: {"title": "Delitos de peligro", "kind": "report"},
             5: {"title": "Delitos contra la libertad personal", "kind": "report"},
-            6: {"title": "ACTIVIDAD S6 Tarea", "kind": "report", "module_id": 222951},
+            6: {"title": "ACTIVIDAD S6 Tarea", "kind": "report", "module_id": 222951, "week": 6},
+            7: {"title": "ACTIVIDAD S7 Tarea", "kind": "report", "module_id": 225086, "week": 7},
         },
     },
     "antecedentes-de-los-derechos-humanos": {
@@ -65,7 +67,8 @@ UNADM_SUBJECTS_CATALOG: dict[str, dict[str, Any]] = {
             5: {"title": "Resumen de lectura", "kind": "report"},
             6: {"title": "Foro de debate", "kind": "forum"},
             7: {"title": "Cuadro comparativo", "kind": "report"},
-            8: {"title": "Cuadro sinóptico – Orden jurídico nacional en torno a los derechos humanos", "kind": "report", "module_id": 212031},
+            8: {"title": "Cuadro sinóptico – Orden jurídico nacional en torno a los derechos humanos", "kind": "report", "module_id": 212031, "week": 6},
+            9: {"title": "Actividad 9. Esquema – Tratados internacionales en torno a los derechos humanos", "kind": "report", "module_id": 212042, "week": 7},
         },
     },
 }
