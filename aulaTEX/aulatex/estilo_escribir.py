@@ -33,7 +33,7 @@ _METADISCOURSE_CRITICAL_PATTERNS: tuple[tuple[str, re.Pattern[str]], ...] = (
     ("metadiscurso_cuadro_tikz", re.compile(r"\bcuadro\s+(?:sin[óo]ptico\s+)?(?:jer[áa]rquico\s+)?en\s+TikZ\b", re.I)),
     ("metadiscurso_cuadro_desarrollado_en_este_trabajo", re.compile(r"\bel cuadro sin[óo]ptico desarrollado en este trabajo\b", re.I)),
     ("metadiscurso_este_manuscrito_organiza", re.compile(r"\b(?:este manuscrito|el presente estudio|este documento|este trabajo)\s+(?:organiza anal[íi]ticamente|presenta|desarrolla)\s+mediante\b", re.I)),
-    ("metadiscurso_titulo_seccion_producto", re.compile(r"\\section\*?\{\s*(?:Cuadro\s+sin[óo]ptico|Mapa\s+conceptual|Mapa\s+de\s+cajas|Infograf[íi]a|Ensayo|Reporte|Desarrollo\s+del\s+foro)\b", re.I)),
+    ("metadiscurso_titulo_seccion_producto", re.compile(r"\\section\*?\{\s*(?:Cuadro\s+sin[óo]ptico|Cuadro\s+comparativo|Mapa\s+conceptual|Mapa\s+de\s+cajas|Infograf[íi]a|Ensayo|Reporte|Desarrollo\s+del\s+foro)\b", re.I)),
 )
 
 _OPERATIONAL_LEAK_PATTERNS: tuple[tuple[str, re.Pattern[str]], ...] = (
@@ -338,6 +338,68 @@ class EstiloEscribirAgent:
             if candidate != updated:
                 updated = candidate
                 applied.append(f"refinamiento_{code_m}")
+
+        # Reubicación de declaración ética de IA desde Resumen/abstractd a Conclusiones
+        ai_footnote_m = re.search(
+            r"(\\begin\{abstractd?\}[\s\S]*?)(\\footnote\{[^}]*(?:inteligencia\s+artificial|Lineamientos)[^}]*\})([\s\S]*?\\end\{abstractd?\})",
+            updated,
+            re.I,
+        )
+        if ai_footnote_m:
+            fn_text = ai_footnote_m.group(2)
+            updated = (
+                updated[:ai_footnote_m.start()]
+                + ai_footnote_m.group(1)
+                + ai_footnote_m.group(3)
+                + updated[ai_footnote_m.end():]
+            )
+            applied.append("reubicacion_declaracion_ia_abstract_a_conclusiones")
+            # Adherir como footnote a la última frase de la sección Conclusiones
+            concl_m = re.search(
+                r"(\\section\*?\{Conclusi[^}]*\}[\s\S]*?)([.\w\)]\s*)(\n\s*\\clearpage|\n\s*\\begin\{thebibliography\}|\n\s*\\printbibliography)",
+                updated,
+                re.I,
+            )
+            if concl_m and "inteligencia artificial" not in concl_m.group(1):
+                updated = (
+                    updated[:concl_m.start()]
+                    + concl_m.group(1)
+                    + concl_m.group(2).rstrip()
+                    + fn_text
+                    + "\n"
+                    + concl_m.group(3)
+                    + updated[concl_m.end():]
+                )
+
+        # Supresión de addcontentsline redundante tras \section (previene duplicados en TOC)
+        dup_toc = re.sub(
+            r"(\\section\{[^}]+\}\s*(?:\\label\{[^}]*\}\s*)?)\\phantomsection\s*\\addcontentsline\{toc\}\{section\}\{[^}]+\}\s*",
+            r"\1\n",
+            updated,
+        )
+        if dup_toc != updated:
+            updated = dup_toc
+            applied.append("remocion_addcontentsline_duplicado_tras_section")
+
+        # Corrección de hfwidthwrap true a false para garantizar pie unilineal sin colisiones
+        hf_wrap_m = re.search(r"\\def\\hfwidthwrap\s*\{\s*true\s*\}", updated)
+        if hf_wrap_m:
+            updated = re.sub(r"\\def\\hfwidthwrap\s*\{\s*true\s*\}", r"\\def\\hfwidthwrap{false}", updated)
+            applied.append("correccion_hfwidthwrap_unilineal")
+
+        # Supresión integral de encabezados y pies en páginas apaisadas (\begin{landscape})
+        if "\\begin{landscape}" in updated and "\\pagestyle{empty}" not in updated:
+            updated = re.sub(r"(\\begin\{landscape\})", r"\\clearpage\n\\pagestyle{empty}\n\1", updated)
+            updated = re.sub(r"(\\end\{landscape\})", r"\1\n\\clearpage\n\\pagestyle{fancy}", updated)
+            applied.append("supresion_encabezados_pies_en_landscape")
+
+        # Garantizar que Conclusiones inicie en página nueva
+        concl_sec_m = re.search(r"(?<!\\clearpage\n)(?<!\\clearpage\r\n)\\section\*?\{Conclusi", updated, re.I)
+        if concl_sec_m:
+            prefix_c = updated[max(0, concl_sec_m.start() - 60):concl_sec_m.start()]
+            if not re.search(r"\\(?:clearpage|cleardoublepage|newpage)\s*$", prefix_c):
+                updated = updated[:concl_sec_m.start()] + "\\clearpage\n" + updated[concl_sec_m.start():]
+                applied.append("salto_pagina_independiente_conclusiones")
 
         return updated, applied
 
