@@ -10,8 +10,9 @@ plan de reunión y fundamentos de Excel. [Contrato y pendientes S2](referencias-
 Son materiales de preparación, no prácticas completadas. Tareas Zoom y Excel:
 apertura 26/10, cierre 01/11; consignas completas aún no visibles el 22/10.
 
-Semana 1 organizada en cuatro reportes individuales TEX/PDF y entregables
-identificados, siguiendo la correspondencia local de UnADM.
+Semana 1 organizada por número local de actividad y módulo Moodle; el PDF
+histórico del examen 50103 se conserva, pero su fuente editable está pendiente
+de localizar. Los identificadores locales no sustituyen los IDs Moodle.
 [Contrato, resultados y pendientes S1](referencias-herramientas-digitales/notas-herramientas-digitales/semana-01/CIERRE.md).
 Lecciones manuales según el usuario: TIC 1.33/2 y Tópicos 4.50/5 en su captura;
 examen 10/10 con acuse previo. No se reabrieron intentos ni se enviaron archivos
@@ -26,7 +27,7 @@ por preguntas ni se enviaron respuestas.
 
 ## Organización
 
-- [Reporte 1: TIC](reporte-herramientas-digitales-Actividad-1.tex), [reporte 2: tópicos](reporte-herramientas-digitales-Actividad-2.tex), [reporte 3: carpeta](reporte-herramientas-digitales-Actividad-3.tex) y [reporte de la página web, actividad 50144](reporte-herramientas-digitales-Actividad-4.tex). El PDF del examen S1 50103 se conserva en [entregas](entregas-herramientas-digitales/Examen-Teorico-S1_MartinJonathanDeLaCruzMunoz.pdf).
+- Reportes locales 1–4 corresponden a los módulos S1 50100–50103; el PDF del examen 50103 se conserva en [entregas](entregas-herramientas-digitales/Examen-Teorico-S1_MartinJonathanDeLaCruzMunoz.pdf). La fuente editable de la actividad web se identifica por el ID inequívoco [50144](reporte-herramientas-digitales-Actividad-50144.tex), para no confundirla con el número local 4.
 - [Grabación de clase y transcripción](referencias-herramientas-digitales/grabaciones/clase-1NaR_KBkiiZRg3ioHxiSRJw_GMqCDf2rD/README.md): vídeo de 1 h 25 min 37 s, TXT con tiempos y SRT automático; fecha y semana sin acreditar. Salida recuperada tras código anómalo del motor, con cobertura temporal validada; revisión humana pendiente.
 - [Planeaciones](planeaciones-herramientas-digitales/README.md): 15 fichas de tareas, lecciones, examen y encuestas.
 - [Referencias y materiales](referencias-herramientas-digitales/README.md): archivos originales, enlaces y límites del cotejo.
@@ -79,10 +80,23 @@ ejercicios docentes o publicaciones de Google Sites.
 
 ## Compilación
 
-Desde esta carpeta: `latexmk -xelatex -interaction=nonstopmode -halt-on-error reporte-herramientas-digitales.tex`.
-El adaptador reutiliza la plantilla UAS compartida y logos existentes; usa Arial
-12 y Biber. Los reportes S1 usan matrícula 26031061, grupo 103 LCP y docente
-Dámaso Ruiz Gonzáles confirmado por el usuario.
+Para compilar la actividad web desde PowerShell, usa el Perl de TeX Live antes
+que cualquier otro Perl instalado y envía los auxiliares al directorio de
+compilación:
+
+```powershell
+$env:PATH = "C:\texlive\2026\tlpkg\tlperl\bin;$env:PATH"
+latexmk -xelatex -interaction=nonstopmode -halt-on-error `
+  -outdir=.build/latex/actividad-50144 `
+  reporte-herramientas-digitales-Actividad-50144.tex
+```
+
+El reporte reutiliza la plantilla UAS y sus logotipos; usa Arial 12, Biber e
+imágenes locales de `assets-herramientas-digitales`. El PDF identificado como
+`Actividad-50144` se conserva en esta raíz y en [entregas](entregas-herramientas-digitales/README.md).
+El PDF histórico `Actividad-4` corresponde al examen S1 50103; no es la entrega
+web. Las compilaciones y los archivos antiguos apartados se conservan en
+`.build/` y `archivo-reportes/`, respectivamente.
 
 Validación realizada: integridad SHA-256 de las 46 capturas y 81 descargas,
 15 planeaciones y enlaces locales comprobados. Reporte y presentación
@@ -90,8 +104,9 @@ compilaron con XeLaTeX; se ejecutó Biber para el reporte. Los PDF de prueba y
 auxiliares quedaron en `.build/latex/uas-herramientas-reporte`, no en entregas.
 La plantilla sin citas tiene bibliografía vacía; no se presenta como un trabajo
 académico terminado ni se ha inspeccionado visualmente como entrega final.
-La invocación de latexmk de esta terminal tuvo interferencia del entorno Perl
-y de los argumentos; la comprobación se realizó con los ejecutables de TeX Live.
+La invocación de latexmk requiere anteponer el Perl distribuido con TeX Live
+porque otro Perl del sistema puede ocultar sus módulos. Esta configuración solo
+se aplica a la terminal actual.
 
 Las referencias del aula se conservan como materiales y consignas, no como
 autoridad académica automática. Los enlaces externos requieren cotejo.

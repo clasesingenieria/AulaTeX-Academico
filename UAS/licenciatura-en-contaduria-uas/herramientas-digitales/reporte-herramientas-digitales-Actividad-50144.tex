@@ -1,0 +1,127 @@
+\def\actividadtitulo{Diseño de páginas web con Google Sites: Lex Contable}
+\def\actividadtipo{Reporte técnico y memoria gráfica del desarrollo}
+\def\uasmateria{Herramientas digitales}
+\def\uasestudiante{Martín Jonathan De La Cruz Muñoz}
+\def\uasmatricula{26031061}
+\def\uasasesor{Dámaso Ruiz Gonzáles}
+\def\uasgrupo{103 LCP}
+\def\uasfecha{11 de noviembre de 2026}
+\def\uaslugar{Culiacán, Sinaloa, México}
+\def\uasbibliografia{herramientas-digitales.bib}
+\def\uaslogo{../derecho-mercantil/assets-derecho-mercantil/escudo-uas.png}
+\def\uasfacultadlogo{../fcauas-logo.jpg}
+\def\actividadpaquetes{\graphicspath{{assets-herramientas-digitales/}}}
+
+\def\actividadpreliminares{%
+\section*{Resumen}
+\addcontentsline{toc}{section}{Resumen}
+Este reporte documenta, paso a paso, el diseño, la construcción y la comprobación del sitio público de Lex Contable en Google Sites. Explica las decisiones de contenido, estructura, componentes nativos, tratamiento visual del encabezado, navegación, privacidad y publicación. La memoria incorpora capturas del editor y de la versión publicada para distinguir el proceso de desarrollo de la verificación final. El sitio funciona como presentación informativa y mantiene el prototipo preexistente como recurso externo; no recibe documentación fiscal.
+\clearpage
+\tableofcontents
+\clearpage
+}
+
+\def\actividadcontenido{%
+\section{Introducción y alcance}
+La actividad Moodle 50144, \emph{Diseño de Páginas Web con Google Sites}, solicita presentar un producto o servicio mediante un sitio web y entregar un PDF con los datos académicos, los logotipos institucionales y el vínculo público. La consigna también implica revisar que la publicación sea accesible y que sus elementos principales se visualicen correctamente.\footnote{Universidad Autónoma de Sinaloa, curso 635, actividad 50144. Consigna consultada en Moodle: \url{https://virtual.uas.edu.mx/fca/mod/assign/view.php?id=50144}.}
+
+El objetivo de esta implementación fue comunicar con claridad la oferta de Lex Contable y facilitar que una persona interesada encuentre la información básica para preparar una consulta. Se trabajó sobre Google Sites como editor y plataforma de publicación nativos. El sitio de referencia del proyecto, \url{https://de2vaif4mldo0.cloudfront.net/}, se conservó como destino externo de un botón: no se insertó como marco incrustado ni se describió como una función integrada en Sites \parencite{googleSitesAyuda,lexContablePortal}.
+
+El alcance es informativo. No se construyeron formularios para recibir expedientes, automatizaciones fiscales ni una aplicación para presentar declaraciones. Las fotografías del sitio son ilustrativas y no representan instalaciones, clientes o casos reales.
+
+\section{Planeación de contenido y arquitectura}
+\subsection{Audiencia y necesidad de información}
+La página se dirige a personas físicas y negocios que buscan orientación contable o fiscal. Antes de redactar se priorizaron tres preguntas de navegación: qué servicios se presentan, cómo se organiza el trabajo y qué debe preparar una persona antes de solicitar información. Esta selección evita iniciar con tecnicismos tributarios y permite que el visitante identifique primero la oferta y el siguiente paso.
+
+\subsection{Jerarquía de la página}
+La información se ordenó de lo general a lo específico:
+\begin{enumerate}
+\item \textbf{Encabezado y propuesta inicial:} identidad «Lex Contable», imagen de contexto y acceso para explorar los servicios.
+\item \textbf{Servicios destacados:} tres bloques visuales para regularización y revisión fiscal, devoluciones y saldos a favor, y continuidad contable.
+\item \textbf{Catálogo y forma de trabajo:} descripción de servicios y pasos que permiten entender el proceso, las responsabilidades y los entregables.
+\item \textbf{Preguntas frecuentes y contacto:} respuestas breves, canal de contacto y límites del servicio.
+\item \textbf{Acceso al prototipo:} enlace separado para preparar una consulta, sin trasladar a Google Sites datos fiscales ni archivos.
+\end{enumerate}
+
+\subsection{Decisiones de diseño y sus motivos}
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}p{0.30\textwidth}X@{}}
+\toprule
+\textbf{Decisión} & \textbf{Elección aplicada} & \textbf{Motivo y efecto esperado}\\
+\midrule
+Plataforma & Componentes nativos de Google Sites & Mantener edición, publicación y estructura dentro de la herramienta solicitada, sin depender de código incrustado para presentar el contenido.\\
+Relación con el prototipo & Enlace externo en un botón & Preservar el prototipo existente sin sugerir que el sitio informativo procesa o almacena las consultas.\\
+Organización & Presentación, tarjetas, proceso, preguntas y contacto & Permitir lectura por secciones y que las personas encuentren la información en una secuencia comprensible.\\
+Imágenes & Fotografías ilustrativas vinculadas al contexto de los servicios & Dar apoyo visual sin exponer documentos, datos personales ni supuesta evidencia de clientes.\\
+Encabezado & Tipo «Banner» en lugar de «Portada» & Reducir la altura ocupada por la imagen; Sites ofrece tamaños predefinidos y no una altura CSS arbitraria.\\
+Limpieza visual & Retiro del mosaico de texto vacío del encabezado & Evitar un marco decorativo sin contenido que competía con la identidad y aparentaba un elemento incompleto.\\
+Privacidad & No solicitar RFC, e.firma, contraseñas ni expedientes en la página & Limitar el sitio a información pública y orientar la consulta por el canal definido, sin convertirlo en portal de recepción documental.\\
+\bottomrule
+\end{tabularx}
+\caption{Decisiones de implementación y criterios utilizados para resolverlas.}
+\label{tab:decisiones}
+\end{table}
+
+\section{Procedimiento de desarrollo en Google Sites}
+\subsection{Paso 1. Revisar el proyecto y delimitar el alcance}
+Se tomó Lex Contable y su prototipo como referencia de identidad y servicios. Antes de construir la página se separaron los objetivos: Google Sites debía explicar la oferta; el prototipo continuaría atendiendo su función externa. Esta división evitó duplicar sistemas y definió desde el inicio qué debía enlazarse y qué no debía prometerse.
+
+\subsection{Paso 2. Definir secciones y redactar el contenido}
+Se preparó una jerarquía corta con encabezado, servicios, proceso, preguntas frecuentes y contacto. Los nombres de los servicios se redactaron como categorías comprensibles, acompañadas de descripciones que explican el alcance general. Se evitó presentar resultados fiscales como garantizados y se incluyeron límites para distinguir información comercial de asesoría particular.
+
+\subsection{Paso 3. Construir el lienzo con elementos nativos}
+En el editor de Google Sites se configuró la página principal y se incorporaron texto, imágenes, bloques de contenido y botones desde las opciones de insertar. La retícula de tres columnas se utilizó para comparar los servicios destacados en una misma sección. Los encabezados jerarquizan el contenido y los bloques pueden reorganizarse desde el editor sin mantener una hoja de estilos externa.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.96\textwidth,height=0.42\textheight,keepaspectratio]{actividad-50144-01-editor-google-sites.png}
+\caption{Editor nativo de Google Sites: encabezado tipo banner, botón de navegación, sección de servicios y panel de inserción de bloques. Captura de la página en edición, con cambios guardados en Drive.}
+\label{fig:editor}
+\end{figure}
+
+\subsection{Paso 4. Incorporar imágenes y ajustar el encabezado}
+Las imágenes se añadieron como apoyo visual y se revisó su encuadre dentro de las proporciones disponibles en Sites. Durante la comprobación se observó que el encabezado tipo «Portada» ocupaba demasiada altura y que un recuadro de texto vacío parecía un bloque sin terminar. Como el editor no permite fijar libremente la altura con CSS, se cambió al tamaño «Banner» y se retiró el mosaico vacío. La decisión utiliza controles propios de Sites y reduce el espacio vertical antes del contenido.
+
+\subsection{Paso 5. Configurar navegación y límites de privacidad}
+Se enlazó el botón de exploración a la sección de servicios y se mantuvo el acceso al prototipo como enlace externo. Se revisó que los textos no invitaran a publicar credenciales ni documentos tributarios. La página no contiene campos para adjuntar expedientes y, por ello, no se presenta como canal de recepción o archivo de información fiscal.
+
+\subsection{Paso 6. Publicar y revisar la versión pública}
+Desde Google Sites se publicó la página con la dirección pública \url{https://sites.google.com/view/delacruz-consultores-lcp}. Después se abrió la URL publicada, separada de la dirección de edición, para comprobar el resultado que recibe un visitante. Se revisaron el encabezado, el botón de navegación, las imágenes de los servicios y la continuidad visual entre secciones.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.96\textwidth,height=0.42\textheight,keepaspectratio]{actividad-50144-02-portada-publicada.png}
+\caption{Vista pública del encabezado: la imagen queda dentro de un banner compacto y la identidad del sitio aparece sin el recuadro vacío que se retiró durante el ajuste.}
+\label{fig:portada}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.96\textwidth,height=0.42\textheight,keepaspectratio]{actividad-50144-03-servicios-publicados.png}
+\caption{Vista pública de la sección de servicios: título, botón «Explorar servicios» y tres imágenes ilustrativas organizadas en columnas.}
+\label{fig:servicios}
+\end{figure}
+
+\section{Verificación técnica y entrega}
+\subsection{Pruebas realizadas}
+La revisión se efectuó sobre la dirección pública en una ventana de navegador de escritorio, no sobre la URL de edición. Se confirmó que el sitio abre sin solicitar autenticación, que el encabezado ya no muestra el bloque vacío, que el botón «Explorar servicios» y la sección de tres servicios aparecen, y que las imágenes se cargan en la página publicada. Se comprobó también que el botón para preparar una consulta conserva como destino el prototipo externo del proyecto: \url{https://de2vaif4mldo0.cloudfront.net/}.
+
+Esta comprobación visual confirma el estado observado en la fecha de las capturas; no sustituye pruebas de accesibilidad automatizadas, pruebas de todos los tamaños de pantalla ni una auditoría de seguridad del prototipo externo. La publicación y el PDF tampoco acreditan por sí mismos que la tarea se haya enviado a Moodle.
+
+\subsection{Datos y archivos de la entrega}
+El sitio publicado es: \href{https://sites.google.com/view/delacruz-consultores-lcp}{Lex Contable en Google Sites}. El reporte conserva los datos de identificación académica y los logotipos institucionales requeridos. Se distribuye una copia del PDF en la raíz de la materia para consulta y otra en la carpeta de entregas con el nombre solicitado para la actividad web. Las dos copias deben corresponder al mismo archivo compilado.
+
+\section{Conclusiones}
+La construcción nativa en Google Sites permitió organizar una presentación pública sin confundirla con el prototipo externo ni añadir funciones que no existen en la página. La secuencia de portada, servicios, proceso y preguntas frecuentes responde a una decisión de navegación: exponer primero la propuesta y después los detalles para avanzar hacia una consulta. La revisión del encabezado mostró que el ajuste correcto debía hacerse con las opciones de tamaño y contenido de Sites, no simulando un control CSS que la plataforma no ofrece. Las capturas del editor y de la publicación documentan tanto las decisiones como el resultado observado. Como mejora posterior, conviene volver a verificar la lectura en móvil y revisar periódicamente que los enlaces públicos sigan vigentes.
+}
+
+\def\actividadcierre{}
+
+\def\actividaddeclaracionia{%
+\section*{Declaración de uso de herramientas de inteligencia artificial}
+Se utilizó un asistente de inteligencia artificial para apoyar la organización del procedimiento, la redacción técnica y la compilación del reporte, así como herramientas de navegador para capturar la vista del editor y de la página publicada. Las decisiones sobre el contenido, la comprobación de los datos académicos, la revisión de las capturas y la entrega final deben ser validadas por el estudiante.
+}
+
+\input{reporte-herramientas-digitales-plantilla-actividad.tex}

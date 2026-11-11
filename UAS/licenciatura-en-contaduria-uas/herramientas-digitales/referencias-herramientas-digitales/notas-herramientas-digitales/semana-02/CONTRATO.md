@@ -6,7 +6,7 @@ lecciones ni intentos y no se enviaron documentos en esta preparación.
 | Reporte local | Módulo | Producto y estado |
 | --- | --- | --- |
 | [Actividad 5](../../../reporte-herramientas-digitales-Actividad-5.tex) | 50117 | Comunicación sincrónica y asincrónica: material de estudio; resultado de lección pendiente. |
-| [Actividad 6](../../../reporte-herramientas-digitales-Actividad-6.tex) | 50118 | Instalación y acceso Zoom: guía; realización personal y resultado pendientes. |
+| Actividad 6 | 50118 | Instalación y acceso Zoom: guía; realización personal y resultado pendientes. No hay reporte de práctica completada. |
 | [Actividad 7](../../../reporte-herramientas-digitales-Actividad-7.tex) | 50113 | Reunión Zoom en equipo: plan previo; no hay reunión, asistentes ni capturas acreditados. |
 | [Actividad 8](../../../reporte-herramientas-digitales-Actividad-8.tex) | 50114 | Excel básico: fundamentos y ejemplo hipotético verificado; libro de ejercicios docentes pendiente. |
 

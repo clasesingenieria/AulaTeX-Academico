@@ -12,7 +12,7 @@ los identificadores de Moodle ni las unidades del programa.
 | 1: Introducción a las TIC | Lección 50100 | [Reporte](../../../reporte-herramientas-digitales-Actividad-1.tex), [PDF](../../../reporte-herramientas-digitales-Actividad-1.pdf), [entregable local](../../../entregas-herramientas-digitales/Leccion-1-TIC-S1_MartinJonathanDeLaCruzMunoz.pdf) |
 | 2: Tópicos selectos | Lección 50101 | [Reporte](../../../reporte-herramientas-digitales-Actividad-2.tex), [PDF](../../../reporte-herramientas-digitales-Actividad-2.pdf), [entregable local](../../../entregas-herramientas-digitales/Leccion-2-Topicos-TIC-S1_MartinJonathanDeLaCruzMunoz.pdf) |
 | 3: Carpeta compartida | Tarea 50102 | [Reporte](../../../reporte-herramientas-digitales-Actividad-3.tex), [archivo solicitado](../../../reporte-herramientas-digitales-plantilla-Actividad-3.tex), [entregable conservado](../../../entregas-herramientas-digitales/S1_MartinJonathanDeLaCruzMunoz.pdf) |
-| 4: Examen teórico | Cuestionario 50103 | [Reporte](../../../reporte-herramientas-digitales-Actividad-4.tex), [PDF](../../../reporte-herramientas-digitales-Actividad-4.pdf), [entregable local](../../../entregas-herramientas-digitales/Examen-Teorico-S1_MartinJonathanDeLaCruzMunoz.pdf) |
+| 4: Examen teórico | Cuestionario 50103 | [PDF histórico](../../../reporte-herramientas-digitales-Actividad-4.pdf), [entregable local](../../../entregas-herramientas-digitales/Examen-Teorico-S1_MartinJonathanDeLaCruzMunoz.pdf); fuente editable del examen por localizar |
 
 El archivo de Actividad 3 enlaza al contenido existente, sin duplicarlo. El PDF
 de reporte proviene de esa cadena de entradas; el entregable conserva la
@@ -67,12 +67,12 @@ fallida de Moodle ni la del Parlamento Europeo.
 
 ## Control de aceptación local
 
-- [x] Cuatro reportes individuales TEX/PDF en la raíz.
+- [ ] Fuente editable del reporte del examen 50103 por localizar; su PDF histórico y entregable se conservan.
 - [x] Entregable identificado por cada reporte en la carpeta de entregas.
 - [x] Archivo solicitado de Actividad 3 creado y contenido reutilizado.
 - [x] Originales conservados y 43 registros trazados.
-- [x] XeLaTeX y Biber ejecutados para los cuatro reportes.
-- [x] Datos de portada, secciones y ausencia de páginas sin texto comprobados.
+- [x] XeLaTeX y Biber ejecutados para las tres fuentes de reporte disponibles.
+- [x] Datos de portada, secciones y ausencia de páginas sin texto comprobados en esas fuentes.
 - [x] PDF de carpeta compartida conservado sin modificación.
 - [ ] Sustitución del PDF remoto de la tarea 50102, si aún procede.
 - [ ] Estado de lección de nube 50107 acreditado.
