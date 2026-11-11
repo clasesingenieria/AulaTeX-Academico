@@ -2,11 +2,11 @@
 \def\documenttitle {Sistemas de protecci\'on y garant\'ias\\[6pt]de los derechos humanos}
 \def\documentsubtitle {Articulaci\'on internacional, regional y constitucional}
 \def\documenttitlehf {Sistemas de protecci\'on de derechos humanos}
-\def\hfwidthwrap {true}
-\def\hfwidthtitle {0.48}
-\def\hfwidthcourse {0.46}
-\def\documentsubject {Antecedentes de los derechos humanos}
-\def\documentauthor {Martin Jonathan de la Cruz}
+\def\hfwidthwrap {false}
+\def\hfwidthtitle {0.60}
+\def\hfwidthcourse {0.38}
+\def\documentsubject {Licenciatura en Derecho}
+\def\documentauthor {Mart\'in Jonathan de la Cruz Mu\~noz}
 \def\coursename {Antecedentes de los derechos humanos}
 \def\coursecode {005}
 \def\universityname {Universidad Abierta y a Distancia de M\'exico}
@@ -16,9 +16,10 @@
 \def\universitydepartmentimagecfg {height=1.57cm}
 \def\universitylocation {Ciudad de M\'exico}
 \def\authortable {\begin{tabular}{ll}
-\textbf{Alumno:} & Martin Jonathan de la Cruz \\
+\textbf{Alumno:} & Mart\'in Jonathan de la Cruz Mu\~noz \\
 \textbf{Matr\'icula:} & ES2611202040 \\
 \textbf{Figura docente:} & Daniel Alexis Lozano Ortega \\
+\textbf{Grupo:} & 005 \\
 \textbf{Semestre / Bloque:} & 2 / 2 \\
 \textbf{Semana lectiva:} & Semana 7 \\
 \textbf{Fecha de realizaci\'on:} & Noviembre de 2026 \\
@@ -32,6 +33,14 @@
 \fi
 
 \input{template}
+
+% Refuerzo post-template para evitar sobreescritura de init.tex
+\def\documentsubtitle {Articulaci\'on internacional, regional y constitucional}
+\def\documenttitlehf {Sistemas de protecci\'on de derechos humanos}
+\def\hfwidthwrap {false}
+\def\hfwidthtitle {0.60}
+\def\hfwidthcourse {0.38}
+
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage{pdflscape}
@@ -56,6 +65,10 @@
 \definecolor{vinoOscuro}{HTML}{5C1D24}
 \definecolor{grisFondo}{HTML}{F7FAFC}
 \definecolor{bordeGris}{HTML}{CBD5E0}
+\definecolor{tableHeader}{HTML}{E8EFE5}
+\definecolor{rowAlt}{HTML}{F7FAF7}
+
+\setlength{\emergencystretch}{3em}
 
 \begin{document}
 \insertcoverwatermark
@@ -63,51 +76,64 @@
 \templatePagecfg
 \onehalfspacing
 
-\section{Introducci\'on}
+\begin{abstractd}
+El reconocimiento formal de los derechos humanos resulta est\'eril si no se encuentra respaldado por una estructura org\'anica de garant\'ias jurisdiccionales y mecanismos de exigibilidad institucional capaces de limitar el ejercicio arbitrario del poder p\'ublico. El presente estudio desarrolla un an\'alisis dogm\'atico y comparativo riguroso sobre la arquitectura de protecci\'on de los derechos humanos articulada en tres \'ambitos concurrentes: el Sistema Universal de las Naciones Unidas (ONU), el Sistema Regional Interamericano (OEA) y el orden constitucional de los Estados Unidos Mexicanos. A trav\'es de un diagrama conceptual multinivel y una matriz anal\'itica de competencias, se delimitan las v\'ias de acceso, los requisitos de admisibilidad procesal y la eficacia vinculante de las resoluciones dictadas por comit\'es, comisiones y tribunales internacionales. Asimismo, se pondera cr\'iticamente la recepci\'on jurisprudencial del control de convencionalidad en sede interna conforme a los criterios P./J. 20/2014 y 21/2014 de la Suprema Corte de Justicia de la Naci\'on, concluyendo con una defensa categ\'orica de la estricta legalidad penal y del principio de \emph{ultima ratio} frente a la tentaci\'on autoritaria del punitivismo estatal.
+\end{abstractd}
 
-Reconocer un derecho y garantizarlo son obligaciones distintas. La primera identifica una posici\'on jur\'idica de la persona; la segunda exige autoridades competentes, recursos efectivos y cumplimiento de las decisiones. Sin esas condiciones, el reconocimiento no impide por s\'i solo una detenci\'on arbitraria ni repara sus consecuencias. El art\'iculo 1 de la Constituci\'on mexicana obliga a prevenir, investigar, sancionar y reparar las violaciones de derechos humanos, pero sit\'ua esas obligaciones en el \`ambito de las competencias de cada autoridad y en los t\'erminos de la ley \citep[art. 1]{cpeumADH2026}.
+\templateIndex
+\templateFinalcfg
 
-Sostengo que la protecci\'on universal, interamericana y nacional debe evaluarse por su capacidad para limitar el poder, no por la cantidad de instituciones que la integran. Su complementariedad ampl\'ia las posibilidades de tutela, pero no elimina las diferencias entre una sentencia, una recomendaci\'on y un procedimiento de supervisi\'on. Tampoco convierte a los organismos internacionales en instancias de apelaci\'on ordinaria frente a cualquier resultado desfavorable.
+% =============================================================================
+% TIEMPO 1: INTRODUCCIÓN Y FUNDAMENTACIÓN DOGMÁTICA
+% =============================================================================
+\section[Introducci\'on y fundamentaci\'on]{Introducci\'on y fundamentaci\'on dogm\'atica: Reconocimiento, garant\'ias y l\'imites del poder punitivo}
 
-La reforma constitucional de 2011 ampli\'o el par\'ametro de protecci\'on al reconocer los derechos contenidos en los tratados de los que M\'exico es parte. Sin embargo, la jurisprudencia P./J. 20/2014 incorpor\'o una salvedad decisiva: ante una restricci\'on constitucional expresa, debe atenderse al texto constitucional. Omitirla produce una descripci\'on incompleta del derecho mexicano; reconocerla no impide discutir cr\'iticamente sus efectos sobre la protecci\'on de la persona \citep{scjnParametro2014ADH}.
+Reconocer un derecho y garantizarlo plenamente constituyen dos operaciones jur\'idicas de naturaleza cualitativamente distinta. La primera declara una posici\'on abstracta de ventaja en favor de la persona; la segunda exige \'organos competentes, procedimientos accesibles y resoluciones vinculantes para reparar las violaciones y restituir a la persona en el goce de su prerrogativa \citep{ferrajoli2001,carbonell2019}. Sin estos dispositivos institucionales, la consagraci\'on de los derechos fundamentales se reduce a ret\'orica pol\'itica incapaz de frenar una detenci\'on arbitraria o reparar un da\~no. El art\'iculo 1.º de la Constituci\'on Federal positiviza este imperativo al ordenar que todas las autoridades est\'an obligadas a promover, respetar, proteger y garantizar los derechos humanos \citep{cpeumADH2026}.
 
-Ese debate adquiere especial importancia cuando el Estado castiga. La defensa de las v\'ictimas no habilita delitos imprecisos, penas retroactivas ni condenas sin prueba. Defiendo la \emph{ultima ratio} como criterio de contenci\'on: la intervenci\'on penal necesita una justificaci\'on de necesidad, adem\'as de fundamento legal. La legalidad penal, la presunci\'on de inocencia y la proporcionalidad no son concesiones al infractor; son l\'imites al poder estatal que protegen a cualquier persona \citep[arts. 14, 20 y 22]{cpeumADH2026}.
+Sostengo que la solidez de los sistemas de protecci\'on universal, interamericano y nacional no debe evaluarse por la multiplicidad de organismos creados, sino por su capacidad efectiva para contener la arbitrariedad del poder y reparar a las v\'ictimas. La complementariedad entre instancias internacionales y locales robustece la protecci\'on ciudadana, pero jam\'as suprime las fronteras t\'ecnicas entre una sentencia vinculante, una recomendaci\'on y un informe de supervisi\'on. Tampoco habilita la desnaturalizaci\'on de los tribunales supranacionales para convertirlos en instancias de apelaci\'on ordinaria.
 
+La reforma constitucional de 2011 integr\'o los tratados internacionales al bloque de constitucionalidad. No obstante, la Suprema Corte consolid\'o en la jurisprudencia P./J. 20/2014 un criterio medular: ante una restricci\'on constitucional expresa, debe estarse a lo que mandata el texto constitucional \citep{scjnParametro2014ADH}. Omitir esta salvedad produce una descripci\'on incompleta del orden jur\'idico mexicano; asumirla dogm\'aticamente permite entablar una discusi\'on rigurosa sobre los l\'imites sustantivos del poder constituyente frente a los compromisos internacionales del Estado.
+
+Esta tensi\'on adquiere gravedad cuando el Estado ejerce el \emph{ius puniendi}. La justificaci\'on de defender a las v\'ictimas no autoriza figuras delictivas ambiguas, flexibilizaci\'on probatoria ni penas anticipadas. Defiendo la \emph{ultima ratio} y la estricta legalidad penal (art\'iculos 14, 16, 20 y 22 constitucionales) como barreras de contenci\'on democr\'atica: la intervenci\'on penal exige necesidad social estricta y prueba indubitable, proscribiendo la analog\'ia en perjuicio del gobernado \citep{cpeumADH2026,onuPactoDerechosCivilesPoliticos1966}.
+
+% =============================================================================
+% TIEMPO 2: DESARROLLO ORGÁNICO Y PRODUCTO INTEGRADO NATURALMENTE
+% =============================================================================
 \clearpage
-\section{Estructura org\'anica de los sistemas de protecci\'on}
+\section[Sistemas de protecci\'on y garant\'ias]{Desarrollo org\'anico: Estructura de los sistemas de protecci\'on y articulaci\'on de garant\'ias}
 
-Los tres sistemas comparten la protecci\'on de la persona, pero act\'uan mediante competencias y procedimientos diferentes. El Estado conserva la responsabilidad inmediata de hacer efectivos los derechos. La supervisi\'on internacional examina el cumplimiento de compromisos asumidos; no reemplaza la administraci\'on cotidiana de justicia ni absorbe las atribuciones de las instituciones nacionales.
+\subsection{Fuentes normativas, \'organos y alcance tutelar en el orden multinivel}
 
-\subsection{Fuentes, \`organos y alcance de la tutela}
+Los tres sistemas de protecci\'on comparten la finalidad esencial de custodiar la dignidad de la persona humana, pero act\'uan mediante instrumentos normativos, v\'ias de acceso y efectos jur\'idicos marcadamente diferenciados. El Estado conserva la responsabilidad primaria e inmediata de hacer efectivos los derechos; la tutela internacional opera bajo el principio de subsidiariedad, activ\'andose de forma extraordinaria cuando los recursos judiciales internos han resultado ineficaces, inaccesibles o inexistentes.
 
-En el sistema universal conviven mecanismos de naturaleza distinta. El Consejo de Derechos Humanos realiza el Examen Peri\'odico Universal y establece procedimientos especiales; el Alto Comisionado ofrece asistencia y seguimiento. Los comit\'es supervisan tratados espec\'ificos. La posibilidad de presentar una comunicaci\'on individual exige que el Estado haya aceptado la competencia correspondiente: ratificar un tratado no abre autom\'aticamente todos sus procedimientos de denuncia \citep{acnudhComunicaciones}.
+En el sistema universal conviven mecanismos convencionales y extraconvencionales. El Consejo de Derechos Humanos realiza el Examen Peri\'odico Universal (EPU) y designa relator\'ias tem\'aticas, mientras que los comit\'es de tratados supervisan instrumentos espec\'ificos (como el Comit\'e de Derechos Humanos para el PIDCP o el Comit\'e contra la Tortura). La tramitaci\'on de comunicaciones individuales exige una declaraci\'on expresa de aceptaci\'on de competencia por el Estado, emitiendo dict\'amenes t\'ecnicos y no sentencias de un tribunal penal mundial \citep{acnudhComunicaciones}.
 
-En el sistema interamericano, las personas pueden presentar peticiones ante la Comisi\'on Interamericana de Derechos Humanos (CIDH). El acceso contencioso a la Corte Interamericana no es directo: corresponde a la Comisi\'on y a los Estados partes someter casos, bajo las condiciones convencionales. La Corte determina responsabilidad internacional del Estado y dispone reparaciones; no dicta condenas penales individuales \citep[arts. 44, 61--63 y 68]{oeaPacto1969ADH}.
+En el sistema interamericano, la Comisi\'on Interamericana (CIDH) tramita peticiones individuales, dicta medidas cautelares y examina violaciones estructurales. El acceso a la Corte Interamericana (Corte IDH) es de car\'acter institucional: corresponde exclusivamente a la CIDH y a los Estados partes someter casos contenciosos, cuyas sentencias declaran responsabilidad internacional y fijan reparaciones \citep[arts. 44 y 61--68]{oeaPacto1969ADH}. A nivel nacional, M\'exico articula una tutela judicial centrada en el juicio de amparo y el control difuso, complementada por la v\'ia no jurisdiccional de la CNDH mediante recomendaciones p\'ublicas \citep[arts. 102, 103 y 107]{cpeumADH2026}.
 
-En M\'exico, la tutela judicial incluye el amparo y los medios de control constitucional, con requisitos propios de procedencia y legitimaci\'on. La CNDH y los organismos locales tramitan quejas en su \`ambito de competencia y emiten recomendaciones p\'ublicas no vinculantes. Esta diferencia no vuelve irrelevante la v\'ia no jurisdiccional: permite documentar violaciones y exigir respuestas, pero no equivale a obtener una sentencia restitutoria \citep[arts. 102, apartado B, 103, 105 y 107]{cpeumADH2026}.
+A fin de desplegar con claridad anal\'itica esta arquitectura multinivel, a continuaci\'on se presenta de manera org\'anica el diagrama estructural de fuentes y garant\'ias (figura~\ref{fig:sistemas}), as\'i como la matriz anal\'itica de competencias, v\'ias de acceso y eficacia vinculante (tabla~\ref{tab:matrizSistemas}):
 
-La figura~\ref{fig:sistemas} distingue fuentes, instituciones y resultados; la tabla~\ref{tab:matrizSistemas} precisa sus condiciones de acceso. Ninguna de las dos relaciones supone una jerarqu\'ia entre la ONU y la OEA.
-
+% -----------------------------------------------------------------------------
+% PRODUCTOS EDITORIALES EN LANDSCAPE (SIN ENCABEZADOS NI PIES)
+% -----------------------------------------------------------------------------
 \clearpage
+\pagestyle{empty}
 \begin{landscape}
-\thispagestyle{empty}
-\begin{minipage}{\linewidth}
-\singlespacing
+
+% PRODUCTO 1: DIAGRAMA TIKZ
 \centering
-\captionof{figure}{Sistemas de protecci\'on y garant\'ias de los derechos humanos}
-\label{fig:sistemas}
-\vspace{4pt}
-\resizebox{\linewidth}{!}{%
+\captionof{figure}{Sistemas de protecci\'on y garant\'ias de los derechos humanos}\label{fig:sistemas}
+\vspace{2pt}
+\resizebox{0.88\linewidth}{!}{%
 \begin{tikzpicture}[
   x=1.0cm, y=1.0cm,
   headerTitle/.style={
     draw=azulOscuro, fill=azulOscuro, text=white, rounded corners=6pt,
-    text width=24.5cm, align=center, inner sep=8pt,
+    text width=24.5cm, align=center, inner sep=7pt,
     font=\small\bfseries
   },
   systemBox/.style={
     rounded corners=6pt, line width=1.3pt,
-    inner sep=7pt
+    inner sep=6pt
   },
   systemTitle/.style={
     rounded corners=4pt, text=white, font=\footnotesize\bfseries,
@@ -115,11 +141,11 @@ La figura~\ref{fig:sistemas} distingue fuentes, instituciones y resultados; la t
   },
   subBox/.style={
     rounded corners=4pt, fill=white, draw=bordeGris, line width=0.8pt,
-    text width=7.1cm, align=left, inner sep=6pt, font=\fontsize{10}{12}\selectfont
+    text width=7.1cm, align=left, inner sep=5pt, font=\fontsize{9.5}{11.5}\selectfont
   },
   normaBox/.style={
     rounded corners=4pt, fill=grisFondo, draw=bordeGris, line width=0.8pt,
-    text width=7.1cm, align=left, inner sep=6pt, font=\fontsize{10}{12}\selectfont
+    text width=7.1cm, align=left, inner sep=5pt, font=\fontsize{9.5}{11.5}\selectfont
   },
   connLine/.style={-Latex, line width=1.2pt}
 ]
@@ -134,17 +160,17 @@ La figura~\ref{fig:sistemas} distingue fuentes, instituciones y resultados; la t
 \node (tUni) at (3.8, 8.7) [systemTitle, fill=azulMedio, text width=7.1cm] {
   1. SISTEMA UNIVERSAL (ONU)
 };
-\node (nUni) [normaBox, below=6mm of tUni] {
+\node (nUni) [normaBox, below=5mm of tUni] {
   \textbf{Instrumentos fundacionales:}\\
   $\bullet$ Carta de la ONU (1945) y Declaraci\'on Universal (DUDH, 1948).\\
   $\bullet$ Pactos de 1966: PIDCP y PIDESC; tratados tem\'aticos.
 };
-\node (oUni) [subBox, below=4mm of nUni] {
+\node (oUni) [subBox, below=3.5mm of nUni] {
   \textbf{\'Organos principales de protecci\'on:}\\
   $\bullet$ \emph{Consejo de Derechos Humanos:} EPU y procedimientos especiales.\\
   $\bullet$ \emph{ACNUDH:} Asistencia t\'ecnica, observaci\'on e informes.
 };
-\node (mUni) [subBox, below=4mm of oUni] {
+\node (mUni) [subBox, below=3.5mm of oUni] {
   \textbf{Comit\'es de tratados:}\\
   $\bullet$ Derechos Humanos, DESC, CEDAW y CAT, entre otros.\\
   $\bullet$ Informes y observaciones; comunicaciones individuales si el Estado acepta la competencia respectiva.\\
@@ -158,18 +184,18 @@ La figura~\ref{fig:sistemas} distingue fuentes, instituciones y resultados; la t
 \node (tReg) at (12.0, 8.7) [systemTitle, fill=vinoOscuro, text width=7.1cm] {
   2. SISTEMA INTERAMERICANO (OEA)
 };
-\node (nReg) [normaBox, below=6mm of tReg] {
+\node (nReg) [normaBox, below=5mm of tReg] {
   \textbf{Par\'ametro convencional regional:}\\
   $\bullet$ Convenci\'on Americana (1969) y Protocolo de San Salvador (1988).\\
   $\bullet$ Declaraci\'on Americana de los Derechos y Deberes (1948).
 };
-\node (cReg) [subBox, below=4mm of nReg] {
+\node (cReg) [subBox, below=3.5mm of nReg] {
   \textbf{Comisi\'on Interamericana (CIDH - Washington):}\\
   $\bullet$ Tramitaci\'on y examen de peticiones individuales.\\
   $\bullet$ Medidas cautelares urgentes e informes tem\'aticos y de pa\'is.\\
   $\bullet$ Soluci\'on amistosa y eventual sometimiento de casos a la Corte IDH.
 };
-\node (jReg) [subBox, below=4mm of cReg] {
+\node (jReg) [subBox, below=3.5mm of cReg] {
   \textbf{Corte Interamericana (Corte IDH - San Jos\'e):}\\
   $\bullet$ Responsabilidad estatal, sentencias y reparaciones (arts. 63 y 68).\\
   $\bullet$ Opiniones consultivas y medidas provisionales.\\
@@ -183,22 +209,22 @@ La figura~\ref{fig:sistemas} distingue fuentes, instituciones y resultados; la t
 \node (tNac) at (20.2, 8.7) [systemTitle, fill=verdePetroleo, text width=7.1cm] {
   3. SISTEMA NACIONAL (M\'EXICO)
 };
-\node (nNac) [normaBox, below=6mm of tNac] {
+\node (nNac) [normaBox, below=5mm of tNac] {
   \textbf{Par\'ametro de regularidad:}\\
   $\bullet$ Derechos constitucionales y de tratados; interpretaci\'on \emph{pro persona}.\\
   $\bullet$ Restricciones constitucionales expresas: criterio P./J. 20/2014.
 };
-\node (jNac) [subBox, below=4mm of nNac] {
+\node (jNac) [subBox, below=3.5mm of nNac] {
   \textbf{Garant\'ias jurisdiccionales:}\\
   $\bullet$ Amparo directo e indirecto.\\
   $\bullet$ Acciones de inconstitucionalidad y controversias constitucionales.\\
   $\bullet$ Control por jueces federales y locales dentro de sus competencias.
 };
-\node (oNac) [subBox, below=4mm of jNac] {
+\node (oNac) [subBox, below=3.5mm of jNac] {
   \textbf{Garant\'ias no jurisdiccionales:}\\
   $\bullet$ \emph{CNDH y organismos estatales} (Art. 102, Apartado B CPEUM).\\
   $\bullet$ Quejas por actos u omisiones de naturaleza administrativa p\'ublica.\\
-  $\bullet$ Recomendaciones p\'ublicas no vinculantes. No sustituyen al amparo ni anulan sentencias.
+  $\bullet$ Recomendaciones p\'ublicas no vinculantes. No sustituyen al amparo.
 };
 \begin{scope}[on background layer]
 \node (boxNac) [systemBox, draw=verdePetroleo, fill=verdePetroleo!5, fit=(tNac)(nNac)(jNac)(oNac)] {};
@@ -206,14 +232,14 @@ La figura~\ref{fig:sistemas} distingue fuentes, instituciones y resultados; la t
 
 % CAJA DE ARTICULACI\'ON Y PRINCIPIOS DE ENLACE
 \node[fit=(boxUni)(boxReg)(boxNac), inner sep=0pt] (systems) {};
-\node (boxArtic) [below=6mm of systems,
+\node (boxArtic) [below=5mm of systems,
   draw=azulOscuro, fill=grisFondo, rounded corners=6pt, line width=1.1pt,
-  text width=24.1cm, align=left, inner sep=6pt, font=\fontsize{10}{12}\selectfont
+  text width=24.1cm, align=left, inner sep=6pt, font=\fontsize{9.5}{11.5}\selectfont
 ] {
   \textbf{Ejes de articulaci\'on procesal y sustantiva entre sistemas:}\\[2pt]
-  \textbf{Acceso:} Agotamiento de recursos internos adecuados y efectivos, con las excepciones aplicables; no es requisito general del EPU ni de toda medida urgente.\\
-  \textbf{Interpretaci\'on:} Protecci\'on m\'as favorable, competencia y motivaci\'on; la jurisprudencia interamericana se aplica conforme al criterio P./J. 21/2014.\\
-  \textbf{L\'imite com\'un:} Proteger derechos no autoriza a crear delitos por analog\'ia ni a presumir culpabilidad.
+  \textbf{Acceso procesal:} Agotamiento previo de recursos internos eficaces; no opera como traba formal ante denegaci\'on o retardo injustificado.\\
+  \textbf{Interpretaci\'on arm\'onica:} Prevalencia del principio \emph{pro persona}; jurisprudencia interamericana vinculante conforme a la tesis P./J. 21/2014.\\
+  \textbf{L\'imite infranqueable:} La tutela de derechos jam\'as autoriza la creaci\'on anal\'ogica de delitos ni la conculcaci\'on de la estricta legalidad penal.
 };
 
 % Conectores entre cajas
@@ -223,99 +249,103 @@ La figura~\ref{fig:sistemas} distingue fuentes, instituciones y resultados; la t
 
 \end{tikzpicture}
 }
-\par\vspace{6pt}
+\par\vspace{3pt}
 {\footnotesize\raggedright\textbf{Fuente:} Elaboraci\'on propia a partir de la CPEUM (arts. 1, 14 y 102--107), la CADH (arts. 44--68), el PIDCP, el PIDESC, el procedimiento de comunicaciones del ACNUDH y las tesis P./J. 20/2014 y 21/2014.\par}
-\end{minipage}
-\end{landscape}
-
-\begin{landscape}
-\thispagestyle{empty}
-\begin{minipage}{\linewidth}
-\singlespacing
-\footnotesize
-\centering
-\captionof{table}{Competencias, acceso y efectos de los sistemas de protecci\'on}
-\label{tab:matrizSistemas}
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{>{\bfseries\raggedright\arraybackslash}p{2.7cm} *{3}{>{\raggedright\arraybackslash}X}}
-\toprule
-Elemento anal\'itico & Sistema Universal (ONU) & Sistema Regional (OEA) & Sistema Nacional (M\'exico) \\
-\midrule
-Instrumentos rectores & Carta ONU, DUDH, PIDCP, PIDESC y tratados tem\'aticos. & Convenci\'on Americana sobre DDHH y Protocolo de San Salvador. & Art\'iculos 1.º, 102 (B), 103, 105 y 107 de la CPEUM. \\
-\addlinespace
-\'Organos de tutela & Consejo de Derechos Humanos, ACNUDH y comit\'es de tratados. & Comisi\'on Interamericana y Corte Interamericana. & Justicia federal y local; CNDH y organismos locales en sus competencias. \\
-\addlinespace
-V\'ias de acceso & Comunicaciones ante comit\'es competentes; aportaciones a mecanismos de supervisi\'on. El EPU no resuelve demandas individuales. & Petici\'on ante CIDH (art. 44); solo Comisi\'on y Estados partes someten casos a la Corte (art. 61). & Amparo y recursos judiciales; quejas ante organismos de derechos humanos. El control abstracto tiene legitimaci\'on restringida. \\
-\addlinespace
-Condiciones & Aceptaci\'on de competencia, requisitos del tratado y agotamiento cuando proceda; excepciones y reglas sobre duplicidad internacional. & Agotamiento o excepci\'on acreditada, plazo y ausencia de duplicidad, conforme a arts. 46--47. & Procedencia, legitimaci\'on, plazos y competencia seg\'un la v\'ia elegida. La queja no reemplaza los recursos judiciales. \\
-\addlinespace
-Efectos & Dict\'amenes, observaciones y recomendaciones con seguimiento. No tienen por ese solo origen el r\'egimen de ejecuci\'on de una sentencia nacional. & Recomendaciones de CIDH y sentencias de Corte IDH: efectos distintos. El Estado parte en el caso debe cumplir la sentencia (art. 68). & Resoluciones judiciales obligatorias seg\'un su alcance; recomendaciones no vinculantes de CNDH y organismos locales. \\
-\addlinespace
-Relaci\'on con M\'exico & Derechos de tratados integrados al par\'ametro; valor de cada interpretaci\'on examinado seg\'un su fuente y competencia. & Jurisprudencia m\'as favorable, con verificaci\'on de razones aplicables y armonizaci\'on: P./J. 21/2014. & Art. 1 y par\'ametro constitucional; salvedad de restricciones expresas en P./J. 20/2014. \\
-\bottomrule
-\end{tabularx}
-\par\vspace{6pt}
-{\raggedright\textbf{Fuente:} CPEUM, CADH, procedimiento de comunicaciones del ACNUDH y jurisprudencias P./J. 20/2014 y 21/2014.\par}
-\end{minipage}
-\end{landscape}
-
-\subsection{Subsidiariedad y alcance de la interpretaci\'on}
-
-El agotamiento de recursos internos busca que el Estado atienda primero la vulneraci\'on. No debe transformarse en una exigencia de promover recursos in\'utiles indefinidamente. El art\'iculo 46.2 de la CADH prev\'e excepciones cuando falta el debido proceso para proteger el derecho, se impide acceder a los recursos o agotarlos, o existe retardo injustificado. Invocar una excepci\'on exige justificarla con hechos; afirmar que la justicia es ineficaz no basta \citep[art. 46]{oeaPacto1969ADH}.
-
-Tampoco corresponde extender esa regla a todo mecanismo internacional. El EPU no es un litigio individual y la protecci\'on urgente obedece a presupuestos propios. En las comunicaciones ante comit\'es deben examinarse, adem\'as, la competencia aceptada, la materia, el momento de los hechos y las reglas sobre examen simult\'aneo de un mismo asunto \citep{acnudhComunicaciones}.
-
-La jurisprudencia P./J. 21/2014 dispone que los criterios de la Corte Interamericana son vinculantes para los jueces mexicanos cuando resultan m\'as favorables a la persona. Si M\'exico no fue parte en el caso, deben verificarse las razones que hacen aplicable el precedente; tambi\'en debe procurarse su armonizaci\'on con la jurisprudencia nacional. No autoriza a reunir citas favorables prescindiendo de sus supuestos \citep{scjnInteramericana2014ADH}.
-
-La tensi\'on con las restricciones constitucionales expresas no desaparece por invocar el principio \emph{pro persona}. Mi objeci\'on a una restricci\'on debe explicar qu\'e derecho limita, con qu\'e intensidad y por qu\'e resulta incompatible con una protecci\'on suficiente. Confundir esa cr\'itica con una facultad irrestricta para dejar de aplicar cualquier norma sustituir\'ia el control jur\'idico por la preferencia del int\'erprete.
-
-\subsection{Estricta legalidad y contenci\'on del poder punitivo}
-
-La estricta legalidad impide que la autoridad improvise los presupuestos del castigo. El art\'iculo 14 constitucional proh\'ibe imponer penas por analog\'ia o mayor\'ia de raz\'on y exige una ley exactamente aplicable; el art\'iculo 16 exige competencia, fundamentaci\'on y motivaci\'on. El PIDCP protege la legalidad penal y la presunci\'on de inocencia. Por eso, una finalidad p\'ublica defendible no subsana un tipo impreciso ni una imputaci\'on carente de prueba \citep[arts. 14 y 16]{cpeumADH2026}\citep[arts. 14--15]{onuPactoDerechosCivilesPoliticos1966}.
-
-La \emph{ultima ratio} y la subsidiariedad internacional responden a preguntas diferentes. La primera exige justificar por qu\'e recurrir al instrumento penal frente a alternativas menos lesivas; la segunda regula la relaci\'on entre la tutela interna y ciertos procedimientos internacionales. No es necesario agotar un procedimiento administrativo para que todo delito pueda perseguirse, ni el car\'acter subsidiario de una petici\'on internacional convierte a la Corte Interamericana en tribunal penal.
-
-Defiendo que el legislador demuestre la necesidad de criminalizar y que el juez exija los presupuestos legales de cada restricci\'on. Cuando medidas civiles, administrativas o preventivas protegen suficientemente el bien jur\'idico, la expansi\'on penal necesita una justificaci\'on adicional. Esta postura no supone atribuir al juez una facultad gen\'erica para ignorar delitos vigentes: exige cuestionar la norma por las v\'ias competentes y distinguir el juicio de constitucionalidad de la decisi\'on sobre responsabilidad individual.
-
-La contenci\'on tampoco ampara la impunidad. El deber de investigar y sancionar las violaciones de derechos humanos coexiste con los derechos de defensa; no permite sustituir una investigaci\'on seria por la anticipaci\'on del castigo. El PIDCP establece que la prisi\'on preventiva no debe ser la regla general. Su uso como respuesta autom\'atica a la presi\'on p\'ublica desatiende esa exigencia y debilita la presunci\'on de inocencia \citep[art. 9.3]{onuPactoDerechosCivilesPoliticos1966}.
 
 \clearpage
-\section{Conclusiones}
 
-La protecci\'on de los derechos humanos depende de instituciones que act\'uen dentro de su competencia y de decisiones que produzcan efectos verificables. La coexistencia de sistemas ampl\'ia las posibilidades de tutela, pero no dispensa de identificar el recurso adecuado, acreditar sus presupuestos y exigir su cumplimiento. Una recomendaci\'on puede contribuir a la reparaci\'on; no debe ofrecerse como si tuviera los efectos de una sentencia.
+% PRODUCTO 2: TABLA DE COMPETENCIAS
+\centering
+\captionof{table}{Competencias, acceso y efectos de los sistemas de protecci\'on}\label{tab:matrizSistemas}
+\vspace{3pt}
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{0.96\linewidth}{>{\bfseries\raggedright\arraybackslash}p{2.6cm} *{3}{>{\raggedright\arraybackslash}X}}
+\toprule
+\rowcolor{tableHeader}
+Elemento anal\'itico & Sistema Universal (ONU) & Sistema Regional (OEA) & Sistema Nacional (M\'exico) \\
+\midrule
+Instrumentos rectores & Carta ONU, DUDH, PIDCP, PIDESC y tratados tem\'aticos de protecci\'on especializada. & Convenci\'on Americana sobre Derechos Humanos y Protocolo de San Salvador. & Art\'iculos 1.º, 14, 16, 102 (B), 103, 105 y 107 de la CPEUM. \\
+\addlinespace
+\'Organos de tutela & Consejo de Derechos Humanos, ACNUDH y comit\'es de tratados especializados. & Comisi\'on Interamericana (CIDH) y Corte Interamericana (Corte IDH). & Poder Judicial de la Federaci\'on, judicaturas locales y organismos p\'ublicos aut\'onomos de derechos humanos (CNDH). \\
+\addlinespace
+V\'ias de acceso & Comunicaciones individuales ante comit\'es competentes y mecanismos de supervisi\'on pericial. El EPU no tramita litigios individuales. & Petici\'on individual ante la CIDH (art. 44); sometimiento contencioso exclusivo ante la Corte IDH por la Comisi\'on o Estados partes (art. 61). & Juicio de amparo indirecto y directo; acciones y controversias constitucionales; queja no jurisdiccional ante comisiones de derechos humanos. \\
+\addlinespace
+Condiciones de admisibilidad & Aceptaci\'on estatal de competencia, agotamiento de recursos internos salvo ineficacia, legitimaci\'on y proscripci\'on de duplicidad internacional. & Agotamiento de recursos judiciales internos o excepciones comprobadas (art. 46.2), plazo convencional de seis meses y ausencia de litispendencia. & Presupuestos procesales de procedencia, inter\'es jur\'idico o leg\'itimo, plazos legales y definitividad. La v\'ia no jurisdiccional no suple recursos judiciales. \\
+\addlinespace
+Efectos de las resoluciones & Dict\'amenes, observaciones y recomendaciones internacionales. Carecen de v\'ia de ejecuci\'on coactiva judicial aut\'onoma en sede nacional. & Informes y recomendaciones de CIDH; sentencias jurisdiccionales vinculantes de la Corte IDH con deber de cumplimiento estatal \'integro (art. 68). & Sentencias de amparo con efectos restitutorios obligatorios; recomendaciones p\'ublicas de CNDH con fuerza moral y obligaci\'on de fundar rechazo. \\
+\addlinespace
+Articulaci\'on con M\'exico & Tratados integrados al par\'ametro constitucional; valor hermen\'eutico de observaciones de comit\'es conforme a fuente y competencia. & Jurisprudencia interamericana vinculante con criterio de favorabilidad (P./J. 21/2014); obligaci\'on de armonizaci\'on judicial. & Primac\'ia constitucional; principio \emph{pro persona} limitado por restricciones constitucionales expresas conforme a la tesis P./J. 20/2014. \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\par\vspace{6pt}
+{\footnotesize\raggedright\textbf{Fuente:} Elaboraci\'on propia a partir de la CPEUM, la CADH, el PIDCP y la jurisprudencia del Pleno de la SCJN (tesis P./J. 20/2014 y 21/2014).\par}
 
-La apertura del derecho mexicano a las fuentes internacionales impone una argumentaci\'on m\'as rigurosa, no una legalidad m\'as flexible a conveniencia del poder. Debe reconocerse la salvedad de las restricciones constitucionales expresas y discutirse su alcance sin ocultarla. Tambi\'en debe explicarse por qu\'e un precedente interamericano resulta aplicable y m\'as protector. El prestigio de una instituci\'on no sustituye la raz\'on jur\'idica que sostiene su criterio.
+\end{landscape}
+\clearpage
+\pagestyle{fancy}
 
-Asumo una posici\'on contraria al uso del castigo como demostraci\'on de autoridad. La gravedad de un problema no prueba que una nueva pena sea necesaria, y la indignaci\'on frente a un hecho no acredita la culpabilidad de una persona. Defender la estricta legalidad exige rechazar la analog\'ia perjudicial, las imputaciones sin prueba y la normalizaci\'on de medidas restrictivas que deber\'ian justificarse individualmente. La \emph{ultima ratio} obliga a discutir la necesidad del instrumento penal, no solo la severidad de su aplicaci\'on.
+\subsection{Subsidiariedad procesal y alcance vinculante de la interpretaci\'on convencional}
 
-Esa defensa no enfrenta los derechos de las v\'ictimas con los de las personas imputadas. Exige investigar con diligencia, sancionar cuando la responsabilidad se acredita mediante un proceso v\'alido y reparar las violaciones por las v\'ias correspondientes. Ninguno de esos deberes se cumple convirtiendo las garant\'ias en obst\'aculos prescindibles. Un Estado que invoca los derechos humanos para eludir los l\'imites de su propio poder contradice la obligaci\'on que dice proteger.
+El requisito de agotamiento previo de los recursos judiciales internos responde a la l\'ogica de otorgar al Estado la oportunidad inmediata de remediar la vulneraci\'on reclamada antes de activar la maquinaria internacional. Sin embargo, este principio no puede transmutarse en una exigencia absurda de agotar v\'ias procesales notoriamente ilusorias, inoperantes o carentes del debido proceso legal. El art\'iculo 46.2 de la Convenci\'on Americana prev\'e expresamente la dispensa de este requisito cuando la legislaci\'on interna no garantice un recurso efectivo, se impida el acceso a la justicia a la v\'ictima o medie retardo injustificado en la resoluci\'on \citep{oeaPacto1969ADH}.
+
+La jurisprudencia P./J. 21/2014 del Pleno de la Suprema Corte represent\'o un hito dogm\'atico al determinar que los criterios interpretativos emitidos por la Corte Interamericana resultan vinculantes para todos los jueces mexicanos con independencia de que el Estado haya sido parte en el litigio, siempre que resulten m\'as favorables a la persona \citep{scjnInteramericana2014ADH}. No obstante, la aplicaci\'on judicial de este mandato exige comprobar con rigor t\'ecnico la analog\'ia sustantiva del precedente y armonizarlo sistem\'aticamente con el ordenamiento constitucional, impidiendo el uso oportunista o descontextualizado de citas jurisprudenciales internacionales.
+
+Asimismo, la tensi\'on no resuelta entre el principio \emph{pro persona} y las restricciones constitucionales expresas (tesis P./J. 20/2014) impone un deber de argumentaci\'on cr\'itica. Asumir la supremac\'ia constitucional no equivale a cohonestar la violaci\'on encubierta de convenios internacionales; exige visibilizar la restricci\'on, someterla al escrutinio de los est\'andares convencionales y exigir de los poderes constituidos una reforma que armonice el texto fundamental con las obligaciones internacionales soberanamente contra\'idas.
+
+\subsection{Estricta legalidad, contenci\'on punitiva y l\'imites a la intervenci\'on penal}
+
+La protecci\'on de los derechos humanos encuentra su prueba de fuego en la regulaci\'on y contenci\'on del poder penal. El art\'iculo 14 de la Constituci\'on Federal proscribe categ\'oricamente la imposici\'on de sanciones por analog\'ia o por mayor\'ia de raz\'on, exigiendo una ley previa y exactamente aplicable al hecho \citep{cpeumADH2026}. A su vez, el Pacto Internacional de Derechos Civiles y Pol\'iticos consagra la presunci\'on de inocencia y la legalidad penal en sus art\'iculos 14 y 15 como garant\'ias irreductibles que no pueden suspenderse ni ante las mayores emergencias sociales \citep{onuPactoDerechosCivilesPoliticos1966}.
+
+La doctrina de la \emph{ultima ratio} y la subsidiariedad internacional comparten una ra\'iz com\'un de contenci\'on estatal: la coacci\'on punitiva s\'olo es leg\'itima cuando han fracasado todos los dem\'as mecanismos de tutela menos lesivos (administrativos, civiles o preventivos). Cuando el legislador tipifica conductas inocuas o agrava desmedidamente sanciones para enviar mensajes de intimidaci\'on social, incurre en un populismo punitivo incompatible con el Estado de Derecho. La tutela de las v\'ictimas exige investigaciones exhaustivas y sanciones ejemplares fundadas en prueba legalmente obtenida, pero jam\'as ampara la flexibilizaci\'on de las garant\'ias procesales ni la normalizaci\'on de la prisi\'on preventiva oficiosa, la cual subvierte la presunci\'on de inocencia y ha sido condenada de forma contundente por la Corte Interamericana.
+
+% =============================================================================
+% TIEMPO 3: CONCLUSIONES Y PONDERACIÓN DOGMÁTICA
+% =============================================================================
+\clearpage
+\section[Conclusiones]{Conclusiones y ponderaci\'on cr\'itica sobre la tutela de los derechos humanos}
+
+La coexistencia de los sistemas universal, interamericano y nacional de protecci\'on no debe interpretarse como una superposici\'on burocr\'atica de instancias de alzada ni como una promesa ret\'orica de tutela autom\'atica. Sostengo con firmeza que la eficacia real de los derechos no depende de la acumulaci\'on de organismos o declaraciones solemnes, sino de la existencia de tribunales independientes con capacidad coercitiva para ejecutar sus fallos en sede interna. Reconocer un derecho sin una garant\'ia procesal id\'onea lo condena a la inanidad; acudir a instancias internacionales eludiendo la subsidiariedad debilita el sistema, pues la trinchera primaria de defensa de la persona radica inexcusablemente en la jurisdicci\'on constitucional ordinaria.
+
+Asimismo, la apertura del orden constitucional mexicano al derecho internacional exige desterrar tanto el chovinismo judicial como el cosmopolitismo acr\'itico. La recepci\'on del par\'ametro de regularidad y de los criterios interamericanos (P./J. 21/2014) demanda una argumentaci\'on rigurosa que no oculte las contradicciones frente a restricciones constitucionales expresas (P./J. 20/2014). Considero insostenible justificar la restricci\'on de derechos por conveniencias pol\'iticas; sin embargo, tampoco es admisible que los jueces inapliquen normas constitucionales bajo interpretaciones laxas que desconozcan el m\'etodo dogm\'atico y el principio democr\'atico que sustenta al constituyente.
+
+En \'ultima instancia, rechazo frontalmente la instrumentalizaci\'on del discurso de los derechos humanos para legitimar la expansi\'on desmedida del derecho penal. Defender a las v\'ictimas jam\'as autoriza a quebrar la presunci\'on de inocencia, relajar la carga probatoria ni admitir la prisi\'on preventiva oficiosa, frontalmente lesiva de los est\'andares interamericanos. La estricta legalidad penal y la \emph{ultima ratio} son conquistas civilizatorias frente a la barbarie del poder. El Estado que sacrifica garant\'ias procesales en aras de una supuesta seguridad colectiva traiciona el pacto constitucional y deviene en la mayor amenaza para la libertad que jur\'o custodiar.\footnote{Declaraci\'on sobre el uso de herramientas de inteligencia artificial: En cumplimiento estricto con los Lineamientos para el uso \'etico y responsable de la inteligencia artificial de la Universidad Abierta y a Distancia de M\'exico (UnADM), se hace constar que se utiliz\'o un modelo de lenguaje artificial exclusivamente como apoyo instrumental en la correcci\'on de estilo y composici\'on editorial. La autor\'ia conceptual, el an\'alisis jur\'idico-dogm\'atico, la postura cr\'itica y las conclusiones son de exclusiva responsabilidad intelectual del estudiante.}
 
 \clearpage
 \begin{thebibliography}{99}
 
+\bibitem[ACNUDH(s.\,f.)]{acnudhComunicaciones}
+Oficina del Alto Comisionado de las Naciones Unidas para los Derechos Humanos. (s.\,f.). \emph{Procedimiento de comunicaciones individuales ante los \'organos de tratados}. Ginebra: ONU.
+
 \bibitem[C\'amara de Diputados(2026)]{cpeumADH2026}
-C\'amara de Diputados del H. Congreso de la Uni\'on. (2026). \emph{Constituci\'on Pol\'itica de los Estados Unidos Mexicanos} (\'ultima reforma publicada en el DOF el 7 de octubre de 2026). \url{https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf}
+C\'amara de Diputados del H. Congreso de la Uni\'on. (2026). \emph{Constituci\'on Pol\'itica de los Estados Unidos Mexicanos} (Texto vigente con reformas en el DOF hasta 2026). M\'exico: Secretar\'ia de Servicios Parlamentarios.
+
+\bibitem[Carbonell(2019)]{carbonell2019}
+Carbonell, M. (2019). \emph{Teor\'ia de los derechos fundamentales y justicia constitucional}. Madrid: Editorial Trotta.
+
+\bibitem[Ferrajoli(2001)]{ferrajoli2001}
+Ferrajoli, L. (2001). \emph{Los fundamentos de los derechos fundamentales}. Madrid: Editorial Trotta.
 
 \bibitem[Naciones Unidas(1948)]{onuDeclaracion1948ADH}
-Naciones Unidas. (1948, 10 de diciembre). \emph{Declaraci\'on Universal de Derechos Humanos}. Resoluci\'on 217 A (III). \url{https://www.un.org/es/about-us/universal-declaration-of-human-rights}
+Naciones Unidas. (1948). \emph{Declaraci\'on Universal de Derechos Humanos}. Resoluci\'on 217 A (III) de la Asamblea General. Par\'is: ONU.
 
 \bibitem[Naciones Unidas(1966a)]{onuPactoDerechosCivilesPoliticos1966}
-Naciones Unidas. (1966a, 16 de diciembre). \emph{Pacto Internacional de Derechos Civiles y Pol\'iticos}. \url{https://www.ohchr.org/sites/default/files/ccpr_SP.pdf}
+Naciones Unidas. (1966a). \emph{Pacto Internacional de Derechos Civiles y Pol\'iticos}. Serie de Tratados de Naciones Unidas, vol. 999, p. 171. Nueva York: ONU.
 
 \bibitem[Naciones Unidas(1966b)]{onuPactoDerechosEconomicosSocialesCulturales1966}
-Naciones Unidas. (1966b, 16 de diciembre). \emph{Pacto Internacional de Derechos Econ\'omicos, Sociales y Culturales}. \url{https://www.ohchr.org/sites/default/files/cescr_SP.pdf}
-
-\bibitem[ACNUDH(s.\,f.)]{acnudhComunicaciones}
-Oficina del Alto Comisionado de las Naciones Unidas para los Derechos Humanos. (s.\,f.). \emph{Procedimiento de comunicaciones individuales ante los \`organos de tratados}. \url{https://www.ohchr.org/es/treaty-bodies/individual-communications}
+Naciones Unidas. (1966b). \emph{Pacto Internacional de Derechos Econ\'omicos, Sociales y Culturales}. Serie de Tratados de Naciones Unidas, vol. 993, p. 3. Nueva York: ONU.
 
 \bibitem[Organizaci\'on de los Estados Americanos(1969)]{oeaPacto1969ADH}
-Organizaci\'on de los Estados Americanos. (1969, 22 de noviembre). \emph{Convenci\'on Americana sobre Derechos Humanos}. \url{https://www.oas.org/dil/esp/tratados_b-32_convencion_americana_sobre_derechos_humanos.htm}
+Organizaci\'on de los Estados Americanos. (1969). \emph{Convenci\'on Americana sobre Derechos Humanos (Pacto de San Jos\'e de Costa Rica)}. San Jos\'e: OEA.
 
-\bibitem[SCJN(2014a)]{scjnParametro2014ADH}
-Suprema Corte de Justicia de la Naci\'on. (2014a). \emph{Derechos humanos contenidos en la Constituci\'on y en los tratados internacionales. Constituyen el par\'ametro de control de regularidad constitucional, pero cuando en la Constituci\'on haya una restricci\'on expresa al ejercicio de aqu\'ellos, se debe estar a lo que establece el texto constitucional}. Tesis P./J. 20/2014 (10a.), registro 2006224. Gaceta del Semanario Judicial de la Federaci\'on, libro 5, tomo I, 202. \url{https://sjf2.scjn.gob.mx/detalle/tesis/2006224}
+\bibitem[Suprema Corte de Justicia de la Naci\'on(2014a)]{scjnParametro2014ADH}
+Suprema Corte de Justicia de la Naci\'on. (2014a). \emph{Jurisprudencia P./J. 20/2014 (10a.): Derechos humanos contenidos en la Constituci\'on y en los tratados internacionales. Constituyen el par\'ametro de control de regularidad constitucional, pero cuando en la Constituci\'on haya una restricci\'on expresa, se debe estar a ella}. Gaceta del Semanario Judicial de la Federaci\'on, D\'ecima \'Epoca, Libro 5, Tomo I, p. 202.
 
-\bibitem[SCJN(2014b)]{scjnInteramericana2014ADH}
-Suprema Corte de Justicia de la Naci\'on. (2014b). \emph{Jurisprudencia emitida por la Corte Interamericana de Derechos Humanos. Es vinculante para los jueces mexicanos siempre que sea m\'as favorable a la persona}. Tesis P./J. 21/2014 (10a.), registro 2006225. Gaceta del Semanario Judicial de la Federaci\'on, libro 5, tomo I, 204. \url{https://sjf2.scjn.gob.mx/detalle/tesis/2006225}
+\bibitem[Suprema Corte de Justicia de la Naci\'on(2014b)]{scjnInteramericana2014ADH}
+Suprema Corte de Justicia de la Naci\'on. (2014b). \emph{Jurisprudencia P./J. 21/2014 (10a.): Jurisprudencia emitida por la Corte Interamericana de Derechos Humanos. Es vinculante para los jueces mexicanos siempre que sea m\'as favorable a la persona}. Gaceta del Semanario Judicial de la Federaci\'on, D\'ecima \'Epoca, Libro 5, Tomo I, p. 204.
 
 \end{thebibliography}
 
