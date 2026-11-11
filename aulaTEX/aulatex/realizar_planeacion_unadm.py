@@ -15,7 +15,7 @@ from pathlib import Path
 import re
 from typing import Any
 
-from .navegacion_plataforma import assert_no_credential_leak
+from .navegacion_plataforma import assert_no_credential_leak, sanitize_platform_text
 from .node_planning import PEDAGOGICAL_SCHEMA_PATH, validate_schema
 from .planning_layout import artifact_contract, slugify_text, subject_layout
 from .planning_validation import validate_pedagogical
@@ -172,7 +172,7 @@ class RealizarPlaneacionUnadmAgent:
             # Buscar en el directorio de notas si ya existe consigna archivada
             for cand in notes_dir.glob("consigna*.*"):
                 if cand.is_file() and cand.suffix.lower() in {".txt", ".md", ".html"}:
-                    intro_text = cand.read_text(encoding="utf-8", errors="replace")
+                    intro_text = sanitize_platform_text(cand.read_text(encoding="utf-8", errors="replace"))
                     break
         if not intro_text:
             # Buscar en originales-docentes de la materia
@@ -180,7 +180,7 @@ class RealizarPlaneacionUnadmAgent:
             if orig_dir.is_dir():
                 for cand in orig_dir.glob(f"*S{request.activity_number}*.txt"):
                     if cand.is_file():
-                        intro_text = cand.read_text(encoding="utf-8", errors="replace")
+                        intro_text = sanitize_platform_text(cand.read_text(encoding="utf-8", errors="replace"))
                         break
         if not intro_text:
             intro_text = f"Desarrollo académico formal de la {title} para la asignatura {subject_title}."

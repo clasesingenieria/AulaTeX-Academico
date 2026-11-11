@@ -37,6 +37,7 @@ class RealizarActividadUasRequest:
     engine: str = "xelatex"
     max_rounds_style: int = 2
     output_dir: str = ""
+    activity_number: int | None = None
 
 
 @dataclass(frozen=True)
@@ -75,9 +76,17 @@ class RealizarActividadUasAgent:
         week = act.get("week", 1)
         title = act.get("title", f"Actividad {act_id}")
         topic = act.get("topic", title)
+        act_num = request.activity_number or act.get("activity_number") or act.get("activity") or week
 
         # 1. Definir rutas de destino para el manuscrito .tex
-        tex_filename = f"reporte-{slug}-Actividad-{week}.tex"
+        is_google_sites = "google sites" in title.lower() or "sites" in topic.lower() or "páginas web" in title.lower() or "web" in title.lower()
+        if is_google_sites:
+            tex_filename = f"reporte-{slug}-Actividad-6.tex"
+        elif "zoom" in title.lower():
+            tex_filename = f"reporte-{slug}-Actividad-2.tex"
+        else:
+            tex_filename = f"reporte-{slug}-Actividad-{act_num}.tex"
+
         target_tex = subject_dir / tex_filename
 
         # 2. Generar el borrador fundamentado en la plantilla institucional UAS
@@ -305,8 +314,10 @@ class RealizarActividadUasAgent:
             )
             # Colocar en la sección de Introducción
             intro_pos = tex.find(r"\section{Identificación y propósito}")
+            if intro_pos == -1:
+                intro_pos = tex.find(r"\section{Identificación")
             if intro_pos != -1:
-                end_p = tex.find("\n\n", intro_pos + 30)
+                end_p = tex.find("\n\n", intro_pos + 25)
                 if end_p != -1:
                     tex = tex[:end_p] + ai_fn + tex[end_p:]
                     transformations.append({
@@ -324,26 +335,43 @@ class RealizarActividadUasAgent:
     def _compile_manuscript(self, tex_path: Path, engine: str = "xelatex") -> tuple[bool, Path | None, list[str]]:
         repo_root = self.workspace.repo_root
         rel_target = tex_path.relative_to(repo_root)
+        out_dir = tex_path.parent
+        pdf_candidate = tex_path.with_suffix(".pdf")
         errors: list[str] = []
 
-        # Intentar compilación mediante latexmk si existe, o llamada directa a xelatex
+        # Eliminar binario previo para garantizar frescura
+        if pdf_candidate.exists():
+            try:
+                pdf_candidate.unlink()
+            except OSError:
+                pass
+
         try:
-            cmd = ["latexmk", "-xelatex", "-interaction=nonstopmode", "-file-line-error", str(rel_target)]
-            proc = subprocess.run(cmd, cwd=repo_root, capture_output=True, text=True, timeout=120)
-            pdf_candidate = tex_path.with_suffix(".pdf")
+            cmd = ["xelatex", "-interaction=nonstopmode", "-halt-on-error", f"-output-directory={out_dir}", str(rel_target)]
+            proc = subprocess.run(cmd, cwd=repo_root, capture_output=True, text=True, timeout=90)
             if proc.returncode == 0 and pdf_candidate.exists() and pdf_candidate.stat().st_size > 0:
                 return True, pdf_candidate, []
-            else:
-                # Fallback a xelatex directo
-                cmd_direct = ["xelatex", "-interaction=nonstopmode", "-halt-on-error", str(rel_target)]
-                proc2 = subprocess.run(cmd_direct, cwd=repo_root, capture_output=True, text=True, timeout=60)
-                if pdf_candidate.exists() and pdf_candidate.stat().st_size > 0:
-                    return True, pdf_candidate, []
-                errors.append(f"Compilación fallida con código {proc.returncode}: {proc.stderr[:300]}")
+
+            # Intento de respaldo con latexmk
+            cmd_mk = ["latexmk", "-xelatex", "-interaction=nonstopmode", "-file-line-error", f"-outdir={out_dir}", str(rel_target)]
+            proc2 = subprocess.run(cmd_mk, cwd=repo_root, capture_output=True, text=True, timeout=120)
+            if proc2.returncode == 0 and pdf_candidate.exists() and pdf_candidate.stat().st_size > 0:
+                return True, pdf_candidate, []
+
+            errors.append(f"Compilación fallida con código {proc.returncode}: {proc.stderr[:300]}")
         except Exception as ex:
             errors.append(f"Excepción en compilador: {str(ex)}")
 
-        pdf_candidate = tex_path.with_suffix(".pdf")
+        # También verificar si se generó en repo_root por comportamiento por defecto y moverlo
+        root_pdf = repo_root / tex_path.name.replace(".tex", ".pdf")
+        if root_pdf.exists() and root_pdf.stat().st_size > 0:
+            shutil.copy2(root_pdf, pdf_candidate)
+            try:
+                root_pdf.unlink()
+            except OSError:
+                pass
+            return True, pdf_candidate, errors
+
         if pdf_candidate.exists() and pdf_candidate.stat().st_size > 0:
             return True, pdf_candidate, errors
         return False, None, errors
@@ -353,9 +381,13 @@ class RealizarActividadUasAgent:
         # Criterios del Editorial Maturity Score (EMS)
         if compile_ok and pdf_path and pdf_path.exists():
             score += 35.0  # Compilabilidad y frescura del PDF
-        if "\\section{Identificación y propósito}" in tex_content:
+        if "\\section{Identificación y propósito}" in tex_content or "\\section{Identificación" in tex_content:
             score += 15.0  # Estructura inicial
-        if "\\section{Desarrollo temático" in tex_content:
+        if (
+            "\\section{Desarrollo temático" in tex_content
+            or "\\section{Arquitectura de información" in tex_content
+            or "\\section{Procedimiento técnico" in tex_content
+        ):
             score += 20.0  # Núcleo conceptual
         if "\\section{Conclusiones" in tex_content:
             score += 15.0  # Conclusiones fundamentadas

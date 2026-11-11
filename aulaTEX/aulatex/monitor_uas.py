@@ -164,7 +164,14 @@ class MonitorUasAgent(MonitorEntregasAgent):
                 return c
         return candidates[0]
 
-    def _locate_deliverables(self, subject_root: Path, activity_number: int, week: int | None = None) -> list[dict[str, Any]]:
+    def _locate_deliverables(
+        self,
+        subject_root: Path,
+        activity_number: int,
+        week: int | None = None,
+        title: str = "",
+        module_id: int | None = None,
+    ) -> list[dict[str, Any]]:
         """Localiza todos los artefactos entregables (.pdf, .xlsx) asociados a la actividad."""
         artifacts: list[dict[str, Any]] = []
         target_week = week or activity_number
@@ -174,10 +181,20 @@ class MonitorUasAgent(MonitorEntregasAgent):
         slug = subject_root.name
 
         search_dirs = [deliv_dir] if (deliv_dir and deliv_dir.is_dir()) else [subject_root]
-        for sdir in search_dirs:
-            if not sdir or not sdir.is_dir():
-                continue
+        t_low = title.lower()
 
+        if module_id == 50144 or "google sites" in t_low or "sitio web" in t_low or (activity_number == 6 and slug == "herramientas-digitales"):
+            patterns = [
+                "*WEB*.pdf",
+                "*Google_Sites*.pdf",
+                "*Sitio_Web*.pdf",
+            ]
+        elif module_id == 50113 or "zoom" in t_low:
+            patterns = [
+                "*Zoom*.pdf",
+                "*ZOOM*.pdf",
+            ]
+        else:
             patterns = [
                 f"*S{target_week}*.pdf",
                 f"*S{target_week}*.xlsx",
@@ -189,10 +206,20 @@ class MonitorUasAgent(MonitorEntregasAgent):
                 f"*Examen*S{target_week}*.xlsx",
                 f"*TI_S{target_week}*.pdf",
             ]
+
+        # Evitar falsos positivos con copias del examen teórico S1
+        s1_hash = "a1d7b5d8e37602a9d8dbdd6b86453eb5b17ff69f97d07e3bec59d05ca0e109e5"
+
+        for sdir in search_dirs:
+            if not sdir or not sdir.is_dir():
+                continue
+
             for pat in patterns:
                 for match in sdir.glob(pat):
                     if match.is_file() and match.stat().st_size > 0:
                         sha = hashlib.sha256(match.read_bytes()).hexdigest()
+                        if activity_number > 1 and sha == s1_hash and "Examen-Teorico-S1" not in match.name:
+                            continue
                         entry = {
                             "filename": match.name,
                             "path": str(match),
@@ -340,7 +367,9 @@ class MonitorUasAgent(MonitorEntregasAgent):
             })
 
         # 4. Comprobar entregables locales generados
-        deliverables = self._locate_deliverables(subject_root, activity_number, week=act_week)
+        deliverables = self._locate_deliverables(
+            subject_root, activity_number, week=act_week, title=act_info.get("title", ""), module_id=mid
+        )
         primary_pdf = next((d for d in deliverables if d["extension"] == ".pdf"), None)
         primary_xlsx = next((d for d in deliverables if d["extension"] == ".xlsx"), None)
 
@@ -568,7 +597,9 @@ class MonitorUasAgent(MonitorEntregasAgent):
             )
             recommendations.append(rec)
 
-            delivs = self._locate_deliverables(subject_root, act, week=act_week)
+            delivs = self._locate_deliverables(
+                subject_root, act, week=act_week, title=act_meta.get("title", ""), module_id=mid
+            )
             primary_deliv = delivs[0] if delivs else None
 
             pstatus = "Aun no se ha hecho ninguna tarea" if rec.recommended_action != "ya_entregado" else "Calificado o enviado en UAS"

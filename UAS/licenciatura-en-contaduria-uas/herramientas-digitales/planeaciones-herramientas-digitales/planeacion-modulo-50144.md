@@ -1,11 +1,11 @@
 # Planeación Pedagógica UAS: Diseño de Páginas Web con Google Sites
 
-**Materia:** Herramientas digitales (2026_I_Herramientas digitales_LCP)  
+**Materia:** Derecho mercantil (2026_I_Derecho mercantil_LCP)  
 **Semana / Módulo:** Semana 4 | ID Módulo: `50144`  
 **Fecha límite registrada:** Estado de la entrega  
 
 ## Objetivo Académico Propuesto
-Desarrollar y fundamentar analíticamente los contenidos de Google Sites conforme a los requerimientos de Diseño de Páginas Web con Google Sites en Herramientas digitales.
+Desarrollar y fundamentar analíticamente los contenidos de Diseño de Páginas Web con Google Sites conforme a los requerimientos de Diseño de Páginas Web con Google Sites en Derecho mercantil.
 
 ## Requisitos y Consigna Extraída
 - Esta actividad consiste en diseñar y construir un sitio web con Google Sites, el cual deberá mostrar un producto o servicio para comerciar o dar a conocer.
@@ -18,7 +18,7 @@ Desarrollar y fundamentar analíticamente los contenidos de Google Sites conform
 
 ## Secuencia de Realización
 1. Revisar la consigna oficial y cotejar con la guía didáctica semanal de UAS.
-2. Localizar y descargar los recursos bibliográficos correspondientes a Google Sites.
+2. Localizar y descargar los recursos bibliográficos correspondientes a Diseño de Páginas Web con Google Sites.
 3. Extraer los conceptos normativos, doctrinales y metodológicos clave en notas de estudio.
 4. Desarrollar el producto académico exigido utilizando la plantilla institucional UAS.
 5. Ejecutar ciclo de revisión editorial con estilo-escribir y compilar a PDF.

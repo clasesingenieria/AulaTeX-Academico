@@ -422,6 +422,7 @@ class FlujoUasOrchestrator:
             city=request.city,
             engine=request.engine,
             max_rounds_style=2,
+            activity_number=request.activity_number,
         )
         try:
             act_res = self.agent_actividad.run(act_req)

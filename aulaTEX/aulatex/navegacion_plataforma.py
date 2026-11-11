@@ -106,6 +106,8 @@ def sanitize_platform_text(text: str, identities: tuple[str, ...] = ()) -> str:
         for match in reversed(list(re.finditer(re.escape(folded_value), fold_text(result)))):
             result = result[: match.start()] + "[estudiante]" + result[match.end() :]
     result = _SECRET_KV_RE.sub("[dato omitido]", result)
+    result = re.sub(r"(?i)[?&](?:sesskey|access_token|token|api_key)=[^&\s\"'<>]*", "?[parametro_omitido]", result)
+    result = re.sub(r"(?i)\b(?:sesskey|access_token|token|api_key)\s*=\s*['\"]?[^&\s\"'<>;)]*", "[parametro_omitido]", result)
     result = re.sub(r"(?i)(matr[ií]cula\s*[:#]?\s*)[A-Z0-9-]+", r"\1[omitida]", result)
     return result
 
