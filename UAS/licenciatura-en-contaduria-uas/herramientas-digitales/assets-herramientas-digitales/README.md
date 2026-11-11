@@ -8,8 +8,8 @@ Capturas autenticas e imagenes de trabajo; no simular evidencia.
   los bloques de servicios.
 - `actividad-50144-02-portada-publicada.png`: encabezado de la versión pública
   consultada el 11/11/2026.
-- `actividad-50144-03-servicios-publicados.png`: botón y tarjetas de servicios
-  en la versión pública.
+- `actividad-50144-03-servicios-publicados.png`: descripciones, catálogo y
+  comienzo de la sección del método en la versión pública.
 
 Estas capturas corresponden a observaciones reales del editor y del sitio
 publicado; no son maquetas ni evidencias de entrega en Moodle.

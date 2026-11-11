@@ -5,8 +5,8 @@ Licenciatura en Contaduría Pública.
 
 ## Estado
 
-Semana 2 preparada en reportes 5 a 8: comunicación virtual, acceso a Zoom,
-plan de reunión y fundamentos de Excel. [Contrato y pendientes S2](referencias-herramientas-digitales/notas-herramientas-digitales/semana-02/CONTRATO.md).
+Semana 2 preparada en materiales locales 5–8: comunicación virtual, acceso a
+Zoom, plan de reunión y fundamentos de Excel. [Contrato y pendientes S2](referencias-herramientas-digitales/notas-herramientas-digitales/semana-02/CONTRATO.md).
 Son materiales de preparación, no prácticas completadas. Tareas Zoom y Excel:
 apertura 26/10, cierre 01/11; consignas completas aún no visibles el 22/10.
 
@@ -27,7 +27,7 @@ por preguntas ni se enviaron respuestas.
 
 ## Organización
 
-- Reportes locales 1–4 corresponden a los módulos S1 50100–50103; el PDF del examen 50103 se conserva en [entregas](entregas-herramientas-digitales/Examen-Teorico-S1_MartinJonathanDeLaCruzMunoz.pdf). La fuente editable de la actividad web se identifica por el ID inequívoco [50144](reporte-herramientas-digitales-Actividad-50144.tex), para no confundirla con el número local 4.
+- Reportes locales 1–4 corresponden a los módulos S1 50100–50103; el PDF del examen 50103 se conserva en [entregas](entregas-herramientas-digitales/Examen-Teorico-S1_MartinJonathanDeLaCruzMunoz.pdf). La fuente [50144](reporte-herramientas-digitales-Actividad-50144.tex) y su [PDF](reporte-herramientas-digitales-Actividad-50144.pdf) usan el ID de Moodle para no confundir la actividad web con el número local 4.
 - [Grabación de clase y transcripción](referencias-herramientas-digitales/grabaciones/clase-1NaR_KBkiiZRg3ioHxiSRJw_GMqCDf2rD/README.md): vídeo de 1 h 25 min 37 s, TXT con tiempos y SRT automático; fecha y semana sin acreditar. Salida recuperada tras código anómalo del motor, con cobertura temporal validada; revisión humana pendiente.
 - [Planeaciones](planeaciones-herramientas-digitales/README.md): 15 fichas de tareas, lecciones, examen y encuestas.
 - [Referencias y materiales](referencias-herramientas-digitales/README.md): archivos originales, enlaces y límites del cotejo.
@@ -87,26 +87,28 @@ compilación:
 ```powershell
 $env:PATH = "C:\texlive\2026\tlpkg\tlperl\bin;$env:PATH"
 latexmk -xelatex -interaction=nonstopmode -halt-on-error `
-  -outdir=.build/latex/actividad-50144 `
+  '-outdir=.build/latex/actividad-50144' `
   reporte-herramientas-digitales-Actividad-50144.tex
 ```
 
 El reporte reutiliza la plantilla UAS y sus logotipos; usa Arial 12, Biber e
 imágenes locales de `assets-herramientas-digitales`. El PDF identificado como
-`Actividad-50144` se conserva en esta raíz y en [entregas](entregas-herramientas-digitales/README.md).
+`Actividad-50144` se conserva en esta raíz y en [entregas](entregas-herramientas-digitales/README.md);
+ambas copias se verificaron como idénticas.
 El PDF histórico `Actividad-4` corresponde al examen S1 50103; no es la entrega
 web. Las compilaciones y los archivos antiguos apartados se conservan en
 `.build/` y `archivo-reportes/`, respectivamente.
 
-Validación realizada: integridad SHA-256 de las 46 capturas y 81 descargas,
-15 planeaciones y enlaces locales comprobados. Reporte y presentación
-compilaron con XeLaTeX; se ejecutó Biber para el reporte. Los PDF de prueba y
-auxiliares quedaron en `.build/latex/uas-herramientas-reporte`, no en entregas.
-La plantilla sin citas tiene bibliografía vacía; no se presenta como un trabajo
-académico terminado ni se ha inspeccionado visualmente como entrega final.
-La invocación de latexmk requiere anteponer el Perl distribuido con TeX Live
-porque otro Perl del sistema puede ocultar sus módulos. Esta configuración solo
-se aplica a la terminal actual.
+Validación del reporte 50144: `latexmk` terminó con XeLaTeX y Biber; el PDF
+final tiene 10 páginas y 2 965 447 bytes. Se revisó visualmente la portada,
+el procedimiento, las capturas, la verificación y las referencias. Los PDF de
+la raíz y de `entregas-herramientas-digitales` tienen el mismo SHA-256.
+Los auxiliares de esta compilación están en `.build/latex/actividad-50144`.
+
+La integridad SHA-256 de las 46 capturas y 81 descargas, 15 planeaciones y
+enlaces locales se comprobó previamente. La invocación de latexmk requiere
+anteponer el Perl distribuido con TeX Live porque otro Perl del sistema puede
+ocultar sus módulos. Esta configuración solo se aplica a la terminal actual.
 
 Las referencias del aula se conservan como materiales y consignas, no como
 autoridad académica automática. Los enlaces externos requieren cotejo.
