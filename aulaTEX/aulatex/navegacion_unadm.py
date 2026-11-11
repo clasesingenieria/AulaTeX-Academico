@@ -402,7 +402,7 @@ class NavegacionUnadmAgent(PlatformNavigationAgent):
         blockers: list[dict[str, Any]],
     ) -> dict[str, Any]:
         mid = target.module_id
-        kind = target.kind if target.kind != "auto" else "assign"
+        kind = target.kind if target.kind not in ("auto", "report", "platform_response") else "assign"
         mod_url = f"{UNADM_BASE_URL}/mod/{kind}/view.php?id={mid}"
         page.goto(mod_url, wait_until="domcontentloaded")
         ensure_same_https_host(page.url, UNADM_HOST, UNADM_BASE_URL)

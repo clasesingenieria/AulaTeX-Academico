@@ -306,14 +306,6 @@ class MonitorUnadmAgent(MonitorEntregasAgent):
         if active_snapshot is not None:
             full_text = active_snapshot.get("full_main_text", "") + " " + active_snapshot.get("intro_text", "")
             lower_text = full_text.lower()
-            is_submitted = (
-                "enviado para calificar" in lower_text
-                or "calificado" in lower_text
-                or "hecho: hacer un envío" in lower_text
-                or "hecho: hacer publicaciones en foro" in lower_text
-                or "hecho: hacer publicaciones" in lower_text
-            )
-            is_draft = "borrador (no enviado)" in lower_text
             is_pending = (
                 "por hacer: hacer un envío" in lower_text
                 or "por hacer: hacer publicaciones" in lower_text
@@ -322,8 +314,18 @@ class MonitorUnadmAgent(MonitorEntregasAgent):
                 or "no se ha entregado nada" in lower_text
                 or "añadir envío" in lower_text
             )
+            is_submitted = not is_pending and (
+                "enviado para calificar" in lower_text
+                or "estado de la calificación\tcalificado" in lower_text
+                or "estado de la calificación: calificado" in lower_text
+                or "hecho: hacer un envío" in lower_text
+                or "hecho: hacer publicaciones en foro" in lower_text
+                or "hecho: hacer publicaciones" in lower_text
+                or (already_delivered_manifest and "borrador (no enviado)" not in lower_text)
+            )
+            is_draft = "borrador (no enviado)" in lower_text
 
-            if is_submitted and not is_draft:
+            if is_submitted and not is_draft and not is_pending:
                 platform_status = "entregado_en_plataforma"
             elif is_draft:
                 platform_status = "Borrador (no enviado)"
@@ -412,10 +414,13 @@ class MonitorUnadmAgent(MonitorEntregasAgent):
                     for act_k, act_info in catalog_entry.get("activities", {}).items():
                         mid_val = act_info.get("module_id")
                         if mid_val:
+                            act_k_kind = act_info.get("kind", "assign")
+                            if act_k_kind in ("report", "platform_response", "auto"):
+                                act_k_kind = "assign"
                             mod_targets_list.append(
                                 UnadmModuleTarget(
                                     module_id=int(mid_val),
-                                    kind=act_info.get("kind", "assign"),
+                                    kind=act_k_kind,
                                     course_id=cid,
                                     local_activity_number=int(act_k),
                                     subject_slug=base_slug,
