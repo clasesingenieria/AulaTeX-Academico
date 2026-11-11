@@ -34,6 +34,8 @@ _METADISCOURSE_CRITICAL_PATTERNS: tuple[tuple[str, re.Pattern[str]], ...] = (
     ("metadiscurso_cuadro_desarrollado_en_este_trabajo", re.compile(r"\bel cuadro sin[óo]ptico desarrollado en este trabajo\b", re.I)),
     ("metadiscurso_este_manuscrito_organiza", re.compile(r"\b(?:este manuscrito|el presente estudio|este documento|este trabajo)\s+(?:organiza anal[íi]ticamente|presenta|desarrolla)\s+mediante\b", re.I)),
     ("metadiscurso_titulo_seccion_producto", re.compile(r"\\section\*?\{\s*(?:Cuadro\s+sin[óo]ptico|Cuadro\s+comparativo|Mapa\s+conceptual|Mapa\s+de\s+cajas|Infograf[íi]a|Ensayo|Reporte|Desarrollo\s+del\s+foro)\b", re.I)),
+    ("metadiscurso_actividad_oficial_portada", re.compile(r"\bActividad\s+oficial\b", re.I)),
+    ("metadiscurso_actividad_consigna_id", re.compile(r"\bActividad\s+S?\d+\b", re.I)),
 )
 
 _OPERATIONAL_LEAK_PATTERNS: tuple[tuple[str, re.Pattern[str]], ...] = (
@@ -338,6 +340,28 @@ class EstiloEscribirAgent:
             if candidate != updated:
                 updated = candidate
                 applied.append(f"refinamiento_{code_m}")
+
+        # Limpieza de fila redundante 'Actividad oficial:' en \authortable
+        authortable_clean = re.sub(
+            r"[ \t]*\\textbf\{Actividad\s+oficial:\}\s*&[^\\]*\\\\\r?\n?",
+            "",
+            updated,
+            flags=re.IGNORECASE,
+        )
+        if authortable_clean != updated:
+            updated = authortable_clean
+            applied.append("remocion_fila_actividad_oficial_authortable")
+
+        # Normalización de \documentsubject cuando contiene metadatos de consigna (Actividad S7...)
+        docsub_clean = re.sub(
+            r"(\\def\\documentsubject\s*\{)\s*(?:Actividad|Evidencia)\s+S?\d+[^}]*(\})",
+            r"\g<1>Licenciatura en Derecho\2",
+            updated,
+            flags=re.IGNORECASE,
+        )
+        if docsub_clean != updated:
+            updated = docsub_clean
+            applied.append("normalizacion_documentsubject_carrera")
 
         # Reubicación de declaración ética de IA desde Resumen/abstractd a Conclusiones
         ai_footnote_m = re.search(
