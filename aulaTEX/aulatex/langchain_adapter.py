@@ -4,9 +4,20 @@ from dataclasses import dataclass
 from typing import Any, Protocol
 from urllib.parse import urlsplit
 
-from langchain_anthropic import ChatAnthropic
-from langchain_core.messages import HumanMessage
-from langchain_openai import ChatOpenAI
+try:
+    from langchain_anthropic import ChatAnthropic
+except ImportError:
+    ChatAnthropic = None
+
+try:
+    from langchain_core.messages import HumanMessage
+except ImportError:
+    HumanMessage = None
+
+try:
+    from langchain_openai import ChatOpenAI
+except ImportError:
+    ChatOpenAI = None
 
 from .llm_bridge import (
     DEFAULT_MAX_TOKENS,
