@@ -26,7 +26,7 @@ por preguntas ni se enviaron respuestas.
 
 ## Organización
 
-- [Reporte 1: TIC](reporte-herramientas-digitales-Actividad-1.tex), [reporte 2: tópicos](reporte-herramientas-digitales-Actividad-2.tex), [reporte 3: carpeta](reporte-herramientas-digitales-Actividad-3.tex) y [reporte 4: examen](reporte-herramientas-digitales-Actividad-4.tex).
+- [Reporte 1: TIC](reporte-herramientas-digitales-Actividad-1.tex), [reporte 2: tópicos](reporte-herramientas-digitales-Actividad-2.tex), [reporte 3: carpeta](reporte-herramientas-digitales-Actividad-3.tex) y [reporte de la página web, actividad 50144](reporte-herramientas-digitales-Actividad-4.tex). El PDF del examen S1 50103 se conserva en [entregas](entregas-herramientas-digitales/Examen-Teorico-S1_MartinJonathanDeLaCruzMunoz.pdf).
 - [Grabación de clase y transcripción](referencias-herramientas-digitales/grabaciones/clase-1NaR_KBkiiZRg3ioHxiSRJw_GMqCDf2rD/README.md): vídeo de 1 h 25 min 37 s, TXT con tiempos y SRT automático; fecha y semana sin acreditar. Salida recuperada tras código anómalo del motor, con cobertura temporal validada; revisión humana pendiente.
 - [Planeaciones](planeaciones-herramientas-digitales/README.md): 15 fichas de tareas, lecciones, examen y encuestas.
 - [Referencias y materiales](referencias-herramientas-digitales/README.md): archivos originales, enlaces y límites del cotejo.
