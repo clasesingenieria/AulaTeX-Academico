@@ -1,40 +1,44 @@
 \documentclass[spanish,letterpaper,oneside]{article}
 \def\documenttitle {Delitos contra el patrimonio}
 \def\documentsubtitle {An\'alisis comparativo de figuras y subsunci\'on de hechos}
-\def\documentsubject {Actividad S7 - An\'alisis de hechos}
-\def\documentauthor {Mart\'in Jonathan de la Cruz}
+\def\documenttitlehf {Delitos contra el patrimonio}
+\def\hfwidthwrap {false}
+\def\hfwidthtitle {0.60}
+\def\hfwidthcourse {0.38}
+\def\documentsubject {Licenciatura en Derecho}
+\def\documentauthor {Mart\'in Jonathan de la Cruz Mu\~noz}
 \def\coursename {Derecho penal especial mexicano}
 \def\coursecode {020}
-\def\hfwidthwrap {true}
-\def\hfwidthtitle {0.52}
-\def\hfwidthcourse {0.42}
 \def\universityname {Universidad Abierta y a Distancia de M\'exico}
 \def\universityfaculty {Licenciatura en Derecho}
 \def\universitydepartment {Derecho penal especial mexicano}
 \def\universitydepartmentimage {departamentos/UnADM}
 \def\universitydepartmentimagecfg {height=1.57cm}
 \def\universitylocation {Ciudad de M\'exico}
-\def\authortable {
-  \begin{tabular}{ll}
-    \textbf{Alumno:} & Mart\'in Jonathan de la Cruz \\
-    Matr\'icula: & ES2611202040 \\
-    Figura docente: & Ver\'onica Ortiz L\'opez \\
-    Grupo: & 020 \\
-    Semestre/Bloque: & 2 / 2 \\
-    Semana: & 7 \\
-    \multicolumn{2}{l}{Fecha: 15 de noviembre de 2026} \\
-    \multicolumn{2}{l}{\universitylocation}
-  \end{tabular}
-}
+\def\authortable {\begin{tabular}{ll}
+\textbf{Alumno:} & Mart\'in Jonathan de la Cruz Mu\~noz \\
+\textbf{Matr\'icula:} & ES2611202040 \\
+\textbf{Figura docente:} & Ver\'onica Ortiz L\'opez \\
+\textbf{Grupo:} & 020 \\
+\textbf{Semestre / Bloque:} & 2 / 2 \\
+\textbf{Semana lectiva:} & Semana 7 \\
+\textbf{Fecha de realizaci\'on:} & Noviembre de 2026 \\
+\multicolumn{2}{l}{\universitylocation}
+\end{tabular}}
 
 \input{template}
-\def\indexstyle{}
-\def\nameltcont{Tabla de contenido}
-\setcounter{tocdepth}{2}
+
+% Refuerzo post-template para evitar sobreescritura de init.tex
+\def\documentsubtitle {An\'alisis comparativo de figuras y subsunci\'on de hechos}
+\def\documenttitlehf {Delitos contra el patrimonio}
+\def\hfwidthwrap {false}
+\def\hfwidthtitle {0.60}
+\def\hfwidthcourse {0.38}
+
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage[most]{tcolorbox}
-\usepackage{array,tabularx,booktabs,longtable}
+\usepackage{array,tabularx,booktabs,longtable,pdflscape}
 \usepackage{tikz}
 \usetikzlibrary{babel}
 \definecolor{casoverde}{HTML}{174A3A}
@@ -42,182 +46,223 @@
 \definecolor{tableHeader}{HTML}{E8EFE5}
 \definecolor{rowAlt}{HTML}{F7FAF7}
 \setcitestyle{authoryear,open={(},close={)},citesep={;}}
-\def\pagemargintop{2.2}
-\def\pagemarginbottom{2.2}
-\def\predocpageromannumber{true}
-\def\predocresetpagenumber{true}
 
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
-
-\newcommand{\insertcoverwatermark}{%
-  \AddToShipoutPictureBG*{%
-    \begin{tikzpicture}[remember picture,overlay]
-      \node[opacity=0.13,inner sep=0pt,yshift=-0.35cm]
-        at (current page.center) {\includegraphics[width=0.72\paperwidth]{img/departamentos/UnADM.pdf}};
-    \end{tikzpicture}%
-  }%
-}
+\setlength{\emergencystretch}{3em}
 
 \begin{document}
-\insertcoverwatermark
+\AddToShipoutPictureBG*{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[opacity=0.13,inner sep=0pt,yshift=-0.35cm]
+      at (current page.center) {\includegraphics[width=0.72\paperwidth]{img/departamentos/UnADM.pdf}};
+  \end{tikzpicture}%
+}
 \templatePortrait
 \templatePagecfg
 \onehalfspacing
 
 \begin{abstractd}
-El estudio dogm\'atico de los delitos contra el patrimonio exige un deslinde anal\'itico riguroso de sus elementos t\'ipicos objetivos, normativos y subjetivos, a fin de garantizar el principio de taxatividad y exacta aplicaci\'on de la ley penal (art\'iculo 14 de la Constituci\'on Pol\'itica de los Estados Unidos Mexicanos). Las figuras de robo, abuso de confianza, fraude, despojo y da\~no en propiedad ajena tutelan el acervo econ\'omico de las personas, pero difieren sustancialmente en la modalidad de afectaci\'on, el t\'itulo originario de tenencia del bien y el despliegue conductual del agente activo. El presente reporte desarrolla una investigaci\'on jur\'idica exhaustiva sustentada en el C\'odigo Penal Federal (CPF) y en el C\'odigo Penal para el Distrito Federal (CPDF), integrando una tabla comparativa con la delimitaci\'on descriptiva y el rasgo diferenciador de cada figura, acompa\~nada de la fundamentaci\'on de una circunstancia agravante del robo. Posteriormente, se realiza la subsunci\'on preliminar de cinco hechos f\'acticos agrupados en tres fichas, identificando con precisi\'on los elementos normativos acreditados, la informaci\'on f\'altante para una calificaci\'on definitiva y la hip\'otesis legal aplicable, concluyendo con una s\'intesis dogm\'atica en estricto apego a la extensi\'on m\'axima de siete cuartillas.\footnote{Declaraci\'on sobre el uso \'etico de inteligencia artificial: En cumplimiento de los lineamientos institucionales de la UnADM, se declara el uso instrumental de un modelo de lenguaje artificial \'unicamente para la revisi\'on de estilo y maquetaci\'on editorial. El razonamiento jur\'idico, la clasificaci\'on dogm\'atica y las conclusiones son de autor\'ia propia y exclusiva del estudiante.}
+El estudio dogm\'atico de los delitos contra el patrimonio exige un deslinde anal\'itico riguroso de sus elementos t\'ipicos objetivos, normativos y subjetivos, a fin de garantizar el principio de taxatividad y exacta aplicaci\'on de la ley penal (art\'iculo 14 de la Constituci\'on Pol\'itica de los Estados Unidos Mexicanos). Las figuras de robo, abuso de confianza, fraude, despojo y da\~no en propiedad ajena tutelan el acervo econ\'omico de las personas, pero difieren sustancialmente en la modalidad de afectaci\'on, el t\'itulo originario de tenencia del bien y el despliegue conductual del agente activo. El presente reporte desarrolla una investigaci\'on jur\'idica exhaustiva sustentada en el C\'odigo Penal Federal (CPF) y en el C\'odigo Penal para el Distrito Federal (CPDF), integrando una matriz comparativa con la delimitaci\'on descriptiva y el rasgo diferenciador de cada figura, acompa\~nada de la fundamentaci\'on de una circunstancia agravante del robo. Posteriormente, se realiza la subsunci\'on preliminar de cinco hechos f\'acticos agrupados en tres fichas, identificando con precisi\'on los elementos normativos acreditados, la informaci\'on faltante para una calificaci\'on definitiva y la hip\'otesis legal aplicable, concluyendo con una s\'intesis dogm\'atica en estricto apego al orden constitucional y a las exigencias de tipicidad penal.
 \end{abstractd}
 
 \templateIndex
 \templateFinalcfg
 
-\section{Investigaci\'on jur\'idica: Delitos contra el patrimonio}
+% =============================================================================
+% TIEMPO 1: INTRODUCCIÓN Y FUNDAMENTACIÓN DOGMÁTICA
+% =============================================================================
+\section[Fundamentaci\'on dogm\'atica]{Introducci\'on y fundamentaci\'on dogm\'atica: Bien jur\'idico patrimonial y exactitud t\'ipica}
 
-El patrimonio econ\'omico constituye un bien jur\'idico medular tutelado por el orden penal, concebido como el conjunto de derechos, bienes y obligaciones susceptibles de apreciaci\'on pecuniaria que pertenecen leg\'itimamente a una persona f\'isica o moral \citep{amuchateguiPenal2012,pavonVasconcelos2018}. Sin embargo, la lesi\'on patrimonial no opera de manera un\'ivoca; el legislador mexicano ha tipificado modalidades diferenciadas seg\'un el modo de acceso al objeto material y la posici\'on de la v\'ictima.
+El patrimonio econ\'omico constituye un bien jur\'idico medular tutelado por el orden punitivo del Estado, concebido como el conjunto unitario de derechos, bienes y obligaciones susceptibles de apreciaci\'on pecuniaria que pertenecen leg\'itimamente a una persona f\'isica o jur\'idico-colectiva \citep{amuchateguiPenal2012,pavonVasconcelos2018}. Su protecci\'on no responde a un enfoque meramente civilista o de tr\'afico mercantil, sino a la salvaguarda de las condiciones materiales m\'inimas indispensables para el desarrollo de la autonom\'ia personal en sociedad. En el marco del Estado constitucional y democr\'atico de Derecho, cualquier intervenci\'on penal sobre la esfera patrimonial est\'a sometida de forma inexcusable al mandato de exacta aplicaci\'on de la ley y taxatividad penal consagrado en el art\'iculo 14, p\'arrafo tercero, de la Constituci\'on Pol\'itica de los Estados Unidos Mexicanos \citep{cpeumAulaS3}.
 
-\subsection{Tabla de investigaci\'on de figuras patrimoniales}
+La afectaci\'on al acervo patrimonial no opera de manera un\'ivoca ni homog\'enea. El legislador federal y de la Ciudad de M\'exico han configurado figuras delictivas diferenciadas seg\'un el modo originario de acceso al objeto material, la posici\'on jur\'idica de la v\'ictima y la din\'amica conductual desplegada por el sujeto activo. Deslindar si existi\'o una ruptura material inconsentida de la custodia (robo), una traici\'on sobrevenida a un t\'itulo jur\'idico precario conferido de buena fe (abuso de confianza), un desplazamiento voluntario derivado de maquinaciones falaces determinantes (fraude), una v\'ia de hecho sobre derechos reales o inmuebles (despojo) o un menoscabo f\'isico carente de prop\'osito lucrativo (da\~no en propiedad ajena) constituye la premisa dogm\'atica insustituible para evitar recalificaciones arbitrarias y conculcaciones a la seguridad jur\'idica.
 
-En el cuadro \ref{tab:investigacion_patrimonial} se sintetizan las cinco figuras jur\'idicas requeridas, contrastando su fundamentaci\'on en el C\'odigo Penal Federal \citep{cpfOficial2026} y en el C\'odigo Penal para el Distrito Federal \citep{cpdfOficial2026}.
+% =============================================================================
+% TIEMPO 2: DESARROLLO DOGMÁTICO Y PRODUCTO INTEGRADO NATURALMENTE
+% =============================================================================
+\section[Delimitaci\'on de figuras y subsunci\'on]{Desarrollo dogm\'atico: Delimitaci\'on de figuras patrimoniales y subsunci\'on de hechos}
 
-\begin{table}[h!]
-\centering
-\caption{Delimitaci\'on dogm\'atica de las figuras t\'ipicas contra el patrimonio}
-\label{tab:investigacion_patrimonial}
+\subsection{Investigaci\'on dogm\'atica y deslinde de las figuras t\'ipicas patrimoniales}
+
+Para cimentar el an\'alisis operativo sobre una base normativa s\'olida, en el cuadro \ref{tab:investigacion_patrimonial} se contrastan las cinco figuras matrices reguladas en el C\'odigo Penal Federal \citep{cpfOficial2026} y en el C\'odigo Penal para el Distrito Federal \citep{cpdfOficial2026}, desglosando la conducta en lenguaje dogm\'atico propio y puntualizando el elemento diferenciador que delimita sus fronteras t\'ipicas.
+
+\begingroup
 \scriptsize
-\begin{tabularx}{\textwidth}{p{2.2cm} p{2.8cm} X p{3.6cm}}
+\setlength{\tabcolsep}{4.5pt}
+\renewcommand{\arraystretch}{1.18}
+\begin{longtable}{@{}p{2.2cm} p{2.8cm} p{6.2cm} p{4.6cm}@{}}
+\caption{Delimitaci\'on dogm\'atica de las figuras t\'ipicas contra el patrimonio}\label{tab:investigacion_patrimonial}\\
 \toprule
 \rowcolor{tableHeader}
 \textbf{Figura} & \textbf{Ley y art\'iculo} & \textbf{Conducta descrita con palabras propias} & \textbf{Dato que permite diferenciarla} \\
 \midrule
+\endfirsthead
+\toprule
+\rowcolor{tableHeader}
+\textbf{Figura} & \textbf{Ley y art\'iculo} & \textbf{Conducta descrita con palabras propias} & \textbf{Dato que permite diferenciarla} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+
 \textbf{Robo} & 
 CPF: Arts. 367, 368.\newline
 CPDF: Art. 220. & 
-Apoderarse materialmente de una cosa mueble ajena, traslad\'andola a la propia esfera de custodia, sin derecho y sin el consentimiento de quien legalmente puede disponer de ella. & 
+Apoderarse f\'isicamente de una cosa mueble ajena, traslad\'andola a la propia esfera de custodia, sin derecho y sin el consentimiento de quien legalmente puede disponer de ella. & 
 El sujeto activo \textbf{no tiene previamente la tenencia ni custodia} de la cosa; rompe la esfera de custodia ajena sin t\'itulo jur\'idico previo. \\
 \midrule
 \rowcolor{rowAlt}
 \textbf{Abuso de confianza} & 
 CPF: Art. 382.\newline
 CPDF: Art. 227. & 
-Disponer indebidamente de un bien mueble ajeno, en beneficio propio o de un tercero, habiendo recibido previamente s\'olo su tenencia material precaria (custodia, dep\'osito o pr\'estamo de uso), sin traslaci\'on de dominio. & 
-El sujeto activo \textbf{recibe l\'icitamente la tenencia precaria de buena fe} entregada por la v\'ictima; el delito surge cuando traiciona la confianza disponiendo del bien como due\~no. \\
+Disponer indebidamente de un bien mueble ajeno, en beneficio propio o ajeno, habiendo recibido leg\'itimamente su tenencia material precaria (custodia, dep\'osito o comodato), sin transmisi\'on de dominio. & 
+El sujeto activo \textbf{recibe l\'icitamente la tenencia precaria de buena fe} otorgada por la v\'ictima; el delito surge cuando traiciona esa confianza disponiendo del bien como due\~no. \\
 \midrule
 \textbf{Fraude} & 
 CPF: Art. 386.\newline
 CPDF: Art. 230. & 
-Obtener un lucro econ\'omico indebido para s\'i o para otro, enga\~nando a la v\'ictima mediante maquinaciones falaces o aprovech\'andose del error en que esta se halla. & 
-El desplazamiento patrimonial es \textbf{entregado voluntariamente por la v\'ictima}, pero su consentimiento se encuentra viciado por el enga\~no o maquinaci\'on previa del activo. \\
+Alcanzar un lucro econ\'omico indebido para s\'i o para otro, enga\~nando a la v\'ictima mediante maquinaciones falaces o aprovech\'andose del error en que esta se halla. & 
+El desplazamiento patrimonial es \textbf{entregado voluntariamente por la v\'ictima}, pero su consentimiento se encuentra viciado de origen por el enga\~no previo del activo. \\
 \midrule
 \rowcolor{rowAlt}
 \textbf{Despojo} & 
 CPF: Art. 395.\newline
 CPDF: Art. 237. & 
-Ocupar materialmente un inmueble ajeno o hacer uso de \'el o de un derecho real que no le pertenezca, de propia autoridad y mediante violencia, enga\~no o furtividad, desposeyendo a su leg\'itimo poseedor. & 
-Recae estrictamente sobre \textbf{bienes inmuebles o derechos reales} (no muebles), vulnerando la posesi\'on material o pac\'ifica a trav\'es de v\'ias de hecho no consentidas. \\
+Ocupar materialmente un inmueble ajeno o hacer uso de \'el o de un derecho real no propio, de propia autoridad y mediante violencia, enga\~no o furtividad, desposeyendo a su leg\'itimo titular. & 
+Recae estrictamente sobre \textbf{bienes inmuebles o derechos reales} (no muebles), vulnerando la posesi\'on material pac\'ifica mediante v\'ias de hecho no consentidas. \\
 \midrule
 \textbf{Da\~no en propiedad ajena} & 
 CPF: Arts. 397, 399.\newline
 CPDF: Art. 239. & 
-Destruir, deteriorar, quebrar o inutilizar un bien mueble o inmueble ajeno, por cualquier medio, mermando su integridad f\'isica o su valor econ\'omico. & 
-El m\'ovil delictivo es la \textbf{destrucci\'on o deterioro material} del bien, careciendo de \'animo de lucro, apropiaci\'on o transmisi\'on de posesi\'on para s\'i. \\
+Destruir, deteriorar, quebrar o inutilizar un bien mueble o inmueble ajeno, por cualquier medio, mermando su integridad f\'isica o menoscabando su valor de cambio. & 
+El m\'ovil delictivo es la \textbf{destrucci\'on o deterioro material} del bien, careciendo absolutamente de \'animo de lucro, apropiaci\'on o transmisi\'on de posesi\'on. \\
 \bottomrule
-\end{tabularx}
-\end{table}
+\end{longtable}
+\endgroup
 
-\subsection{Circunstancia agravante del robo y fundamento legal}
+\subsection{Circunstancia agravante del robo y fundamentaci\'on jur\'idica}
 
 \begin{tcolorbox}[colback=casopapel,colframe=casoverde,arc=1mm,left=3mm,right=3mm,top=2mm,bottom=2mm]
-\textbf{Circunstancia agravante investigada:} Comisi\'on del robo respecto de veh\'iculo automotriz o sus partes, o en v\'ia p\'ublica.\newline
+\textbf{Circunstancia agravante investigada:} Comisi\'on del delito de robo respecto de veh\'iculo automotriz o sus partes, o en v\'ia p\'ublica.\newline
 \textbf{Fundamentaci\'on legal:} 
 \begin{itemize}
   \item \textbf{C\'odigo Penal para el Distrito Federal (CPDF):} Art\'iculo 224, fracci\'on IX (cuando se cometa en v\'ia p\'ublica o respecto de veh\'iculo automotriz o partes de este) y fracci\'on III (por medio de la violencia f\'isica o moral).
   \item \textbf{C\'odigo Penal Federal (CPF):} Art\'iculo 381, fracci\'on VIII (cuando se cometa sobre veh\'iculo o en paraje solitario/lugar p\'ublico concurrido) y Art\'iculo 381 Bis (robo de veh\'iculo automotor).
 \end{itemize}
-\textbf{Criterio jurisprudencial:} Conforme a la jurisprudencia de la Suprema Corte de Justicia de la Naci\'on \citep{scjnRoboCalificado}, las calificativas no se presumen; exigen la comprobaci\'on plena de los datos objetivos normativos descritos en el tipo penal complementado, tales como el espacio f\'isico p\'ublico y la fractura de dispositivos de seguridad.
+\textbf{Criterio jurisprudencial aplicable:} De conformidad con el criterio reiterado por la Suprema Corte de Justicia de la Naci\'on \citep{scjnRoboCalificado}, las calificativas no pueden presumirse ni integrarse por analog\'ia; exigen la comprobaci\'on plena de los datos objetivos normativos descritos en el tipo penal complementado, tales como la naturaleza del espacio f\'isico p\'ublico, la vulneraci\'on de mecanismos de resguardo y la plena lesi\'on patrimonial.
 \end{tcolorbox}
 
-\section{An\'alisis comparativo de los cinco hechos (Fichas 1 a 3)}
+\subsection{Matriz anal\'itica de subsunci\'on t\'ipica de los hechos (Fichas 1 a 3)}
 
-La subsunci\'on penal exige confrontar los hechos estrictamente acreditados con los elementos t\'ipicos de la norma, distinguiendo con claridad entre datos comprobados, deducciones l\'ogicas y elementos pendientes de probanza \citep{pavonVasconcelos2018}. En el cuadro \ref{tab:analisis_hechos} se analiza la totalidad de los hechos contenidos en las tres fichas.
+La subsunci\'on penal no consiste en una apreciaci\'on intuitiva de reproche social, sino en la confrontaci\'on rigurosa e individualizada de los hechos emp\'iricos debidamente acreditados con cada uno de los elementos normativos, objetivos y subjetivos fijados por la ley \citep{pavonVasconcelos2018}. Cuando los datos f\'acticos resultan incompletos, el principio de presunci\'on de inocencia y la garant\'ia de tipicidad vedan toda agravaci\'on injustificada, obligando a calificar provisionalmente bajo el tipo b\'asico o a se\~nalar los elementos probatorios indispensables para un juicio definitivo.
 
-\begin{table}[h!]
-\centering
-\caption{Matriz de subsunci\'on t\'ipica y an\'alisis de elementos normativos}
-\label{tab:analisis_hechos}
+A continuaci\'on, se presenta de manera org\'anica la matriz anal\'itica que somete a juicio dogm\'atico los cinco hechos f\'acticos contenidos en las tres fichas de estudio:
+
+\clearpage
+\pagestyle{empty}
+\begin{landscape}
+\begingroup
 \scriptsize
-\begin{tabularx}{\textwidth}{p{2.3cm} p{3.2cm} p{3.4cm} p{3.8cm}}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.08}
+\setlength{\LTpre}{0pt}
+\setlength{\LTpost}{0pt}
+\begin{longtable}{@{}L{3.3cm} L{6.15cm} L{6.15cm} L{6.15cm}@{}}
+\caption{Matriz anal\'itica de subsunci\'on t\'ipica y an\'alisis de elementos normativos}\label{tab:analisis_hechos}\\
 \toprule
 \rowcolor{tableHeader}
-\textbf{Hechos conocidos} & \textbf{Elementos legales identificados} & \textbf{Datos que faltan} & \textbf{Posible figura y fundamento legal} \\
+\textbf{Hechos conocidos} & \textbf{Elementos legales identificados} & \textbf{Datos que faltan para tipificaci\'on plena} & \textbf{Posible figura y fundamento legal} \\
 \midrule
+\endfirsthead
+\toprule
+\rowcolor{tableHeader}
+\textbf{Hechos conocidos} & \textbf{Elementos legales identificados} & \textbf{Datos que faltan para tipificaci\'on plena} & \textbf{Posible figura y fundamento legal} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+
 \textbf{Hecho 1: Bicicleta}\newline
 (Ficha 1)\newline
 Una persona toma sin autorizaci\'on una bicicleta ajena que estaba estacionada. & 
 $\bullet$ Sujeto activo toma (apoderamiento material) una cosa mueble ajena (bicicleta).\newline
-$\bullet$ Ausencia de consentimiento de quien leg\'itimamente puede disponer del bien.\newline
-$\bullet$ Falta de derecho en la conducta. & 
+$\bullet$ Ausencia absoluta de consentimiento de quien leg\'itimamente puede disponer del bien.\newline
+$\bullet$ Falta de derecho y \'animo de apropiaci\'on patrimonial. & 
 \textbf{Para valorar agravante se requerir\'ia acreditar:} si estaba asegurada con candado o cadena (fractura/violencia sobre las cosas), el lugar exacto de estacionamiento (v\'ia p\'ublica, paraje solitario o inmueble habitado) y la hora (nocturnidad). Tambi\'en falta el \emph{valor comercial} del bien para fijar la penalidad aplicable. & 
 \textbf{Robo simple}\newline
 CPF: Arts. 367, 368 y 370.\newline
 CPDF: Art. 220.\newline
-\emph{(No procede agravar sin constancia objetiva del medio o lugar de comisi\'on)}. \\
+\emph{(No procede agravar sin constancia objetiva del medio comisivo o del espacio f\'isico de ejecuci\'on)}. \\
 \midrule
 \rowcolor{rowAlt}
 \textbf{Hecho 2: Computadora}\newline
 (Ficha 1)\newline
 Alguien recibe voluntariamente una computadora prestada y despu\'es la vende sin consentimiento. & 
-$\bullet$ Entrega voluntaria y leg\'itima de la tenencia material (pr\'estamo de uso/comodato).\newline
-$\bullet$ Objeto material: bien mueble ajeno.\newline
+$\bullet$ Entrega voluntaria y leg\'itima de la tenencia material (pr\'estamo de uso/comodato precario).\newline
+$\bullet$ Objeto material: bien mueble ajeno determinado.\newline
 $\bullet$ Acto posterior de disposici\'on ileg\'itima mediante venta no autorizada en perjuicio de la propietaria. & 
-Falta documentar el t\'itulo jur\'idico formal de transmisi\'on de tenencia (pr\'estamo verbal o escrito), la acreditaci\'on formal de la venta a un tercero y el aval\'uo comercial de la computadora para la cuantificaci\'on exacta de la pena. & 
+Falta documentar el t\'itulo jur\'idico formal de transmisi\'on de tenencia (pr\'estamo verbal o escrito), la acreditaci\'on formal de la enajenaci\'on a un tercero y el aval\'uo comercial de la computadora para la cuantificaci\'on exacta de la pena. & 
 \textbf{Abuso de confianza}\newline
 CPF: Art. 382.\newline
 CPDF: Art. 227.\newline
-\emph{(El activo ten\'ia la posesi\'on material leg\'itima; delinque al disponer del bien)}. \\
+\emph{(El activo ten\'ia la posesi\'on material leg\'itima; el delito nace al disponer del bien con \'animo de dominio)}. \\
 \midrule
 \textbf{Hecho 3: Venta internet}\newline
 (Ficha 2)\newline
 Anuncia por internet art\'iculo inexistente, recibe pago mediante enga\~no y no lo entrega. & 
-$\bullet$ Conducta falaz y maquinaci\'on previa (publicar art\'iculo ficticio).\newline
-$\bullet$ Enga\~no determinante que induce al error a la v\'ictima.\newline
-$\bullet$ Entrega voluntaria de dinero por la v\'ictima y obtenci\'on de un lucro indebido para el activo. & 
+$\bullet$ Conducta falaz y maquinaci\'on previa (publicar anuncio fraudulento de art\'iculo ficticio).\newline
+$\bullet$ Enga\~no determinante que induce al error viciando el consentimiento de la v\'ictima.\newline
+$\bullet$ Entrega voluntaria de numerario y obtenci\'on correlativa de un lucro indebido para el activo. & 
 Falta identificar el importe dinerario transferido, la titularidad registral de la cuenta bancaria receptora y si el agente oper\'o de forma individual o mediante estructura tecnol\'ogica reiterada. & 
 \textbf{Fraude gen\'erico}\newline
 CPF: Art. 386.\newline
 CPDF: Art. 230.\newline
-\emph{(Desplazamiento voluntario derivado de voluntad viciada por maquinaci\'on previa)}. \\
+\emph{(Desplazamiento voluntario derivado de voluntad viciada por ardid o maquinaci\'on previa)}. \\
 \midrule
 \rowcolor{rowAlt}
 \textbf{Hecho 4: Terreno}\newline
 (Ficha 2)\newline
 Alguien ocupa sin derecho un terreno que otra persona posee y le impide utilizarlo. & 
-$\bullet$ Inmueble ajeno determinado (terreno).\newline
+$\bullet$ Inmueble ajeno f\'isicamente determinado (terreno r\'ustico o urbano).\newline
 $\bullet$ Acci\'on de ocupaci\'on material f\'isica de propia autoridad.\newline
-$\bullet$ Turbaci\'on total que impide el uso y goce a su leg\'itimo poseedor. & 
-\textbf{Dato crucial faltante:} El medio de comisi\'on empleado para la ocupaci\'on (si medi\'o violencia f\'isica, moral/amenazas, enga\~no o furtividad/clandestinidad) y el t\'itulo jur\'idico que acredita la posesi\'on previa de la v\'ictima. & 
+$\bullet$ Turbaci\'on total que impide el uso y goce pac\'ifico a su leg\'itimo poseedor. & 
+\textbf{Dato crucial faltante:} El medio de comisi\'on empleado para la ocupaci\'on (si medi\'o violencia f\'isica, moral/amenazas, enga\~no o furtividad/clandestinidad) y el t\'itulo jur\'idico que acredita la posesi\'on originaria o derivada de la v\'ictima. & 
 \textbf{Despojo de inmueble}\newline
 CPF: Art. 395, fracci\'on I.\newline
 CPDF: Art. 237, fracci\'on I.\newline
-\emph{(Tutela la posesi\'on pac\'ifica de inmuebles frente a v\'ias de hecho)}. \\
+\emph{(Tutela la posesi\'on pac\'ifica de inmuebles frente a v\'ias de hecho inconsentidas)}. \\
 \midrule
 \textbf{Hecho 5: Cristal de auto}\newline
 (Ficha 3)\newline
 Rompe intencionalmente el cristal del autom\'ovil ajeno en discusi\'on en lugar p\'ublico. & 
-$\bullet$ Acci\'on destructiva intencional (dolo directo) provocada durante discusi\'on.\newline
+$\bullet$ Acci\'on destructiva intencional (dolo directo) provocada en el contexto de una discusi\'on.\newline
 $\bullet$ Objeto material: cristal de veh\'iculo automotor ajeno.\newline
-$\bullet$ Menoscabo econ\'omico e inutilizaci\'on de parte del bien, sin \'animo de apropiaci\'on. & 
+$\bullet$ Menoscabo econ\'omico e inutilizaci\'on del bien, sin prop\'osito alguno de apropiaci\'on. & 
 Falta el dictamen pericial de valuaci\'on del costo de reposici\'on del cristal; y verificar si el agresor sustrajo o intent\'o sustraer objetos del interior del veh\'iculo (lo que recalificar\'ia la conducta a tentativa de robo calificado). & 
-\textbf{Da\~no a la propiedad ajena}\newline
+\textbf{Da\~no en propiedad ajena}\newline
 CPF: Art. 399.\newline
 CPDF: Art. 239.\newline
-\emph{(Afectaci\'on destructiva al bien sin finalidad de lucro o apoderamiento)}. \\
+\emph{(Afectaci\'on destructiva f\'isica al bien ajeno sin finalidad de lucro patrimonial o apoderamiento)}. \\
 \bottomrule
-\end{tabularx}
-\end{table}
+\end{longtable}
+\endgroup
+\end{landscape}
+\clearpage
+\pagestyle{fancy}
 
-\section{Conclusi\'on jur\'idica breve}
+% =============================================================================
+% TIEMPO 3: CONCLUSIONES Y PONDERACIÓN DOGMÁTICA
+% =============================================================================
+\clearpage
+\section[Conclusiones]{Conclusiones y ponderaci\'on dogm\'atica sobre los delitos contra el patrimonio}
 
-El elemento dogm\'atico m\'as determinante para deslindar las figuras patrimoniales radica en el t\'itulo y modo originario de acceso al bien: mientras en el robo se fractura la custodia ajena mediante apoderamiento material directo sin consentimiento, en el abuso de confianza la v\'ictima transmite voluntariamente la tenencia precaria de buena fe, surgiendo el il\'icito s\'olo cuando el sujeto activo dispone indebidamente del objeto como propio; en contraste, en el fraude la entrega es voluntaria pero su consentimiento est\'a viciado de origen por maquinaciones enga\~nosas. Identificar con precisi\'on este elemento de acceso inicial resulta indispensable para impedir recalificaciones err\'oneas y garantizar la estricta tipicidad penal consagrada en el art\'iculo 14 de la Constituci\'on Federal.
+El an\'alisis dogm\'atico desarrollado a lo largo de este estudio permite formular tres conclusiones fundamentales para la pr\'actica y la teor\'ia del derecho penal especial:
+
+\begin{enumerate}
+  \item \textbf{La centralidad dogm\'atica del t\'itulo originario de acceso al bien:} El criterio determinante para el deslinde de las figuras patrimoniales radica en la forma de acceso al objeto material. Mientras en el robo se rompe la esfera de custodia ajena sin derecho ni consentimiento mediante una acci\'on f\'isica de apoderamiento directo, en el abuso de confianza la v\'ictima transfiere leg\'itimamente una tenencia precaria de buena fe, origin\'andose el delito cuando el agente desconoce dicho v\'inculo fiduciario y dispone del bien a t\'itulo de due\~no. Por su parte, en el fraude la entrega es formalmente voluntaria pero materialmente inv\'alida, al encontrarse viciada de origen por las maquinaciones falaces o el ardid desplegado por el sujeto activo.
+  \item \textbf{El mandato constitucional de tipicidad estricta y prohibici\'on de analog\'ia:} En observancia del art\'iculo 14 de la Constituci\'on Federal, las agravantes y calificativas penales (como el robo en v\'ia p\'ublica o respecto de veh\'iculos automotores) exigen la comprobaci\'on plena e indubitable de sus presupuestos objetivos normativos. La ausencia de datos probatorios sobre el medio comisivo, el valor del bien o el lugar espec\'ifico de ejecuci\'on obliga a las autoridades ministeriales y judiciales a sostener la imputaci\'on en el tipo b\'asico, proscribiendo cualquier integraci\'on anal\'ogica en perjuicio de la persona inculpada.
+  \item \textbf{La precisi\'on probatoria como garant\'ia contra la recalificaci\'on arbitraria:} La subsunci\'on preliminar de hechos demuestra que la labor jur\'idica no concluye con la identificaci\'on aparente de una figura penal, sino que requiere precisar con exactitud qu\'e evidencias y peritajes faltan (como el aval\'uo pericial en el da\~no en propiedad ajena o la verificaci\'on de furtividad en el despojo). Esta exigencia de rigor probatorio es la \'unica garant\'ia que salvaguarda el bien jur\'idico patrimonial de las v\'ictimas sin vulnerar el debido proceso y la seguridad jur\'idica en el sistema de justicia penal acusatorio.\footnote{Declaraci\'on sobre el uso de herramientas de inteligencia artificial: En cumplimiento estricto con los Lineamientos para el uso \'etico y responsable de la inteligencia artificial de la Universidad Abierta y a Distancia de M\'exico (UnADM), se hace constar que se utiliz\'o un modelo de lenguaje artificial exclusivamente como apoyo instrumental en la correcci\'on de estilo y composici\'on editorial. La autor\'ia conceptual, el an\'alisis jur\'idico-dogm\'atico, la postura cr\'itica y las conclusiones son de exclusiva responsabilidad intelectual del estudiante.}
+\end{enumerate}
 
 \clearpage
 \begin{thebibliography}{99}
