@@ -88,6 +88,34 @@ ITESCA_SUBJECTS_CATALOG: dict[str, dict[str, Any]] = {
                 "format": "quiz_study_guide",
                 "is_quiz": True,
             },
+            10: {
+                "title": "4.1 Ensayo 2%",
+                "kind": "assign",
+                "module_id": 1768,
+                "due_date": "2026-11-15T23:00:00",
+                "deliverable_rel": "entregas-estadistica-aplicada-para-la-administracion/Actividad-10-Ensayo-pruebas-hipotesis.pdf",
+                "format": "pdf",
+                "expected_pages": 5,
+                "is_quiz": False,
+            },
+            11: {
+                "title": "4.2 Ejercicios Equipo 4%",
+                "kind": "assign",
+                "module_id": 1769,
+                "due_date": "2026-11-15T23:00:00",
+                "deliverable_rel": "entregas-estadistica-aplicada-para-la-administracion/Actividad-11-Ejercicios-equipo-pruebas-hipotesis.pdf",
+                "format": "pdf",
+                "is_quiz": False,
+            },
+            12: {
+                "title": "4.3 Evaluación 5%",
+                "kind": "quiz",
+                "module_id": 1770,
+                "due_date": "2026-11-15T23:59:00",
+                "deliverable_rel": "reporte-estadistica-aplicada-para-la-administracion-Actividad-12.pdf",
+                "format": "quiz_study_guide",
+                "is_quiz": True,
+            },
         },
     },
     "seminario-i": {
@@ -104,6 +132,16 @@ ITESCA_SUBJECTS_CATALOG: dict[str, dict[str, Any]] = {
                 "due_date": "2026-11-08T23:59:00",
                 "deliverable_rel": "entregas-seminario-i/Tarea15_DeLaCruzMunoz.docx",
                 "companion_pdf_rel": "entregas-seminario-i/Tarea15_DeLaCruzMunoz.pdf",
+                "format": "docx",
+                "is_quiz": False,
+            },
+            16: {
+                "title": "Tarea 16: Cronograma de Actividades",
+                "kind": "assign",
+                "module_id": 2916,
+                "due_date": "2026-11-15T23:59:00",
+                "deliverable_rel": "entregas-seminario-i/Tarea16_DeLaCruzMunoz.docx",
+                "companion_pdf_rel": "entregas-seminario-i/Tarea16_DeLaCruzMunoz.pdf",
                 "format": "docx",
                 "is_quiz": False,
             },
@@ -138,6 +176,7 @@ class MonitorItescaRequest:
     nav_snapshot: dict[str, Any] | None = None
     snapshot_path: str | Path = ""
     output_dir: str = ""
+    run_workflow: bool = False
 
 
 def _clean_slug(raw: str) -> str:
@@ -363,6 +402,7 @@ class MonitorItescaAgent(MonitorEntregasAgent):
             inspect_platform=request.inspect_platform,
             output_dir=request.output_dir,
             nav_snapshot=request.nav_snapshot,
+            run_workflow=request.run_workflow,
         )
 
     def monitor_all_active(
@@ -372,8 +412,28 @@ class MonitorItescaAgent(MonitorEntregasAgent):
         inspect_platform: bool = False,
         output_dir: str = "",
         nav_snapshot: dict[str, Any] | None = None,
+        run_workflow: bool = False,
     ) -> PendingSubmissionsReport:
         """Audita todas las asignaturas y actividades activas de ITESCA."""
+        if run_workflow:
+            from .itesca_workflow import (
+                AulaTeXItescaOrchestrator,
+                DEFAULT_ITESCA_ACTIVE_SPECS,
+                ItescaWorkflowRequest,
+            )
+            orch = AulaTeXItescaOrchestrator(self.workspace)
+            specs = DEFAULT_ITESCA_ACTIVE_SPECS
+            clean_tgt = _clean_slug(target_subject)
+            if clean_tgt not in ("all", "todas", "*", ""):
+                specs = tuple(s for s in specs if clean_tgt in s.subject_target)
+            orch.run(
+                ItescaWorkflowRequest(
+                    specs=specs,
+                    snapshot_path=snapshot_path,
+                    download_from_platform=inspect_platform,
+                )
+            )
+
         run_id = f"{self.workspace.timestamp()}-monitor-itesca"
         run_dir = (
             self.workspace.resolve_target(output_dir)

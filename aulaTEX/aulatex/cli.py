@@ -533,6 +533,7 @@ def build_parser() -> argparse.ArgumentParser:
     itesca_pending.add_argument("--inspect", action="store_true", help="Inspeccionar plataforma ITESCA en vivo.")
     itesca_pending.add_argument("--output", default="", help="Directorio de salida.")
     itesca_pending.add_argument("--json", action="store_true", help="Emitir salida en JSON.")
+    itesca_pending.add_argument("--run-workflow", action="store_true", help="Ejecutar el flujo completo de agentes (consulta, planeaciones, recursos, conceptos, realizar-actividad) antes de compilar el informe.")
 
     itesca_entrega = sub.add_parser("itesca-entrega", aliases=["entregar-itesca"], help="Envío autenticado de entregables a ITESCA tras autorización explícita.")
     itesca_entrega.add_argument("--subject", required=True, help="Slug de la materia ITESCA.")
@@ -1953,6 +1954,7 @@ def main(argv: list[str] | None = None) -> None:
             snapshot_path=getattr(args, "snapshot", ""),
             inspect_platform=bool(getattr(args, "inspect", False)),
             output_dir=getattr(args, "output", ""),
+            run_workflow=bool(getattr(args, "run_workflow", False)),
         )
         report = mon.monitor_deliveries(req)
         print(json.dumps({

@@ -114,6 +114,41 @@ DEFAULT_ITESCA_ACTIVE_SPECS: tuple[ItescaActivitySpec, ...] = (
         extra_resource_urls=("https://cursos3.e-itesca.edu.mx/mod/resource/view.php?id=2902",),
         docx_deliverable_rel="entregas-seminario-i/Tarea15_DeLaCruzMunoz.docx",
     ),
+    ItescaActivitySpec(
+        subject_target="ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga",
+        activity_number=10,
+        moodle_module_id=1768,
+        moodle_course_id=209,
+        notes_subdir_hint="actividad-10-ensayo-pruebas-hipotesis",
+        delivery_target_rel="entregas-estadistica-aplicada-para-la-administracion/Actividad-10-Ensayo-pruebas-hipotesis.pdf",
+        expected_delivery_pages=5,
+        expected_arial_pt=12.0,
+    ),
+    ItescaActivitySpec(
+        subject_target="ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga",
+        activity_number=11,
+        moodle_module_id=1769,
+        moodle_course_id=209,
+        notes_subdir_hint="actividad-11-ejercicios-pruebas-hipotesis",
+        delivery_target_rel="entregas-estadistica-aplicada-para-la-administracion/Actividad-11-Ejercicios-equipo-pruebas-hipotesis.pdf",
+        expected_arial_pt=12.0,
+    ),
+    ItescaActivitySpec(
+        subject_target="ITESCA/maestria-en-gestion-administrativa/estadistica-aplicada-para-la-administracion-mga",
+        activity_number=12,
+        moodle_module_id=1770,
+        moodle_course_id=209,
+        notes_subdir_hint="actividad-12-evaluacion-pruebas-hipotesis",
+    ),
+    ItescaActivitySpec(
+        subject_target="ITESCA/maestria-en-gestion-administrativa/seminario-i-mga",
+        activity_number=16,
+        moodle_module_id=2916,
+        moodle_course_id=215,
+        notes_subdir_hint="actividad-16-cronograma-de-actividades",
+        prior_feedback_module_ids=(2912, 2913, 2914, 2915),
+        docx_deliverable_rel="entregas-seminario-i/Tarea16_DeLaCruzMunoz.docx",
+    ),
 )
 
 
