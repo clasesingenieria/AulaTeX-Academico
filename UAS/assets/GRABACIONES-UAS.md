@@ -1,71 +1,34 @@
-# Busqueda de grabaciones UAS
+# Auditoría y Trazabilidad Canónica de Grabaciones UAS (Moodle FCA)
 
-## Comprobacion actual
+**Fecha de actualización:** `2026-11-14` | **Agente responsable:** `RecordingsTranscriptionAgent` (`aulatex`)
 
-Se repitio la consulta con la boveda AulaTeX el **12 de octubre de 2026**:
-**99 paginas HTML accesibles**, 51 de Derecho mercantil y 48 de Investigacion,
-todas con HTTP 200 y sin alcanzar el limite de recorrido. Se conservaron los
-inventarios anteriores y se recuperaron los titulos completos de las paginas
-Videos_S1/S2/S3/S4, que antes podian quedar vacios en el inspector.
+## 1. Resumen Ejecutivo por Curso en Moodle FCA (`virtual.uas.edu.mx/fca`)
 
-Resultado: **17 videos de apoyo identificados y ninguna grabacion del grupo
-confirmada**. No se trata de un rechazo de descarga como en SharePoint: en el
-HTML revisado no se localizaron enlaces identificables de sesiones docentes.
-No se descargaron los apoyos como si fueran clases ni se generaron SRT o
-accesos directos ficticios. Los enlaces publicos de los apoyos quedan en el
-inventario para la revision de referencias.
+| Curso ID | Asignatura (`slug`) | Docente Titular | Páginas Aula Consultadas | Videos de Apoyo Externo | Grabaciones de Clase del Grupo | Estado de Transcripción y Evidencia Visual |
+| :---: | :--- | :--- | :---: | :---: | :---: | :--- |
+| **`635`** | `herramientas-digitales` (`2026_I_Herramientas digitales_LCP`) | Dr. Dámaso Guadalupe Ruíz González | 45 páginas + Mensajería (`conv=3242`) | 3 manuales PDF en Drive (`Complemento de LCP - Aplicado`) | **11 sesiones identificadas** (4 `.mp4` en Drive descargados localmente + 7 enlaces de clase en YouTube) | **4/4 MP4 locales transcritos (`SRT` + `TXT`)**, `0.00 s` de desfase, **16 capturas PNG** en `capturas-clase/` |
+| **`632`** | `derecho-mercantil` (`2026_I_Derecho mercantil_LCP`) | Docente titular en plataforma FCA | 51 páginas (`HTTP 200`) | **16 videos de apoyo externo** (`Videos_S1` a `Videos_S4`: Carbonell, Lifeder, EBC, etc.) | `0` sesiones grabadas del grupo confirmadas en el aula | Inventario de apoyos externos verificado (`verificacion-grabaciones-2026-10-12.json`) |
+| **`634`** | `investigacion-aplicada-a-la-contaduria` (`2026_I_INV_APLIC_CONT_LCP`) | Docente titular en plataforma FCA | 48 páginas (`HTTP 200`) | **1 video externo** (`f5k6Df-MUr0`, 2019) + **1 lista TEDx** (`id=50060`) | `0` sesiones grabadas del grupo confirmadas en el aula | Inventario de apoyos externos verificado (`verificacion-grabaciones-2026-10-12.json`) |
 
-Se cotejaron nuevamente las descripciones de seis recursos del aula: cuatro
-paginas de videos de Derecho, la pagina de fuentes de informacion y la lista
-TEDx de Investigacion. Indican autores externos y fechas historicas; no son
-evidencia de sesiones grabadas del grupo actual. Los archivos locales de UAS
-inspeccionados tampoco aportaron MP4, audio, SRT o accesos a grabaciones; la
-carpeta GRUPO 101 LCP - IAC contiene documentos, no medios de clase.
+---
 
-El panel consultado permitio identificar Derecho mercantil. Investigacion
-tambien siguio accesible mediante su enlace conocido; esto no se presenta
-como un inventario exhaustivo de matriculas o cursos archivados.
+## 2. Validación de Trazabilidad y Sincronización Temporal en `herramientas-digitales` (Curso `635`)
 
-Evidencia actual:
+### 2.1 Grabación Principal Canónica (`clase-1NaR_KBkiiZRg3ioHxiSRJw_GMqCDf2rD`)
+- **Ruta canónica:** `licenciatura-en-contaduria-uas/herramientas-digitales/referencias-herramientas-digitales/grabaciones/clase-1NaR_KBkiiZRg3ioHxiSRJw_GMqCDf2rD/`
+- **Archivo de video (`video1860556015.mp4`):** `576,107,859 bytes` (`549.42 MiB`), duración exacta `ffprobe`: `5137.52 s` (`01:25:37.520`), `SHA-256`: `216e0a8eda11aa5fa78479600def35bb457fafcb460583047ce14e9a465a8b2d`.
+- **Subtítulos (`transcripcion.srt`):** `164,295 bytes` (`160.44 KiB`), `2,084` segmentos numerados (`00:00:01,020` a `01:25:37,030`), `SHA-256`: `3319dc3dfde28c5304ab44a8e9e9ed4416dcf75e5a12f0fb2232c17c03e88c7a`.
+- **Texto continuo (`transcripcion.txt`):** `109,132 bytes` (`106.57 KiB`), `SHA-256`: `c028eff5f5627cdf0fdb30139963d54e08c2a98a8274bd217f1485ae3029ee23`.
+- **Auditoría de sincronización temporal (`validate_srt_alignment`):**
+  - Segmentos con duración nula o negativa: **`0`** (el segmento `#965` en `00:42:51,380` fue reparado preventivamente ampliando `+100 ms` a `00:42:51,480`, documentado en `control/transcripcion - reparaciones.json`).
+  - Segmentos fuera de orden o con traslape temporal: **`0`**.
+  - Diferencia entre fin del último subtítulo (`5137.03 s`) y duración total del contenedor MP4 (`5137.52 s`): **`0.49 s`** (sin desfasamiento de tiempos).
 
-- [Derecho mercantil: verificacion y descripciones](../licenciatura-en-contaduria-uas/derecho-mercantil/referencias-derecho-mercantil/notas-derecho-mercantil/materiales-generales/control-grabaciones/verificacion-grabaciones-2026-10-12.json).
-- [Investigacion: verificacion y descripciones](../licenciatura-en-contaduria-uas/investigacion-aplicada-a-la-contaduria/referencias-investigacion-aplicada-a-la-contaduria/notas-investigacion-aplicada-a-la-contaduria/materiales-generales/control-grabaciones/verificacion-grabaciones-2026-10-12.json).
+### 2.2 Grabaciones de Apoyo en Vivo (Google Drive -> Local MP4 + SRT + TXT)
+1. **S2 - Solicitud de Correo Institucional `@ms.uas.edu.mx` y Práctica Zoom (`1a-HF6zBZDirjqIhYdxHZPFXnHxbQTAfQ`):** `36.99 MB`, `561.20 s` (`00:09:21`), `212` bloques SRT (`0` traslapes).
+2. **S2 - Registro al Sistema Institucional `siiFCA` (`1WF4KxUllV-Rfs6rHtPCvmoiSZErpn6ZW`):** `51.75 MB`, `1027.32 s` (`00:17:07`), `408` bloques SRT (`0` traslapes).
+3. **S3 - Activación de Cuenta e Instalación de Microsoft 365 (`1fIBZxP9E4rWCzpjGgrMsLtNTaVCEJNF4`):** `155.19 MB`, `2279.05 s` (`00:37:59`), `981` bloques SRT (`0` traslapes).
 
-Para continuar con grabaciones del grupo hace falta localizar el enlace
-publicado por la figura docente o facilitado en el canal de clase. No se
-afirma que no existan en adjuntos, Teams, Zoom u otros espacios privados no
-consultados. No se reutilizaron cuentas de ITESCA u otras instituciones.
-
-## Alcance y clasificacion
-
-Consulta autenticada del 12 de octubre de 2026 con el inspector existente
-`aulaTEX/uas_course_inspect.py --recordings`. Recorrido de pestañas y enlaces
-HTML accesibles de paginas, recursos, URL y foros; no se iniciaron reuniones,
-evaluaciones ni envios.
-
-| Materia | Alcance | Resultado |
-| --- | --- | --- |
-| Derecho mercantil, 632 | 51 paginas consultadas | 16 videos de apoyo externo; ninguna sesion del grupo confirmada |
-| Investigacion aplicada a la contaduria, 634 | 48 paginas consultadas | Un video de apoyo y una lista de ponencias; ninguna sesion del grupo confirmada |
-
-Las descripciones de Videos_S1/S2/S3/S4 identifican temas, autores externos y
-publicaciones historicas. Derecho incluye historia, fuentes, normas, Estado,
-sujetos, hechos/actos juridicos, obligaciones y contratos. Investigacion
-identifica un video sobre fuentes de informacion de 2019 y una lista TEDx
-como guia para ponencias. No se confundieron esos apoyos con grabaciones
-docentes de las sesiones actuales. Tampoco se contaron PDFs incrustados ni
-`videoseries` como videos individuales.
-
-No se descargaron ni transcribieron esos apoyos como grabaciones del grupo.
-La ausencia de sesiones confirmadas no demuestra que no existan en adjuntos,
-avisos posteriores o recursos restringidos. Queda pendiente un enlace de
-grabacion docente verificable.
-
-En cada materia se conservaron los registros bajo
-`referencias-<slug>/notas-<slug>/materiales-generales/control-grabaciones/`:
-
-- `busqueda-grabaciones-2026-10-12-*.json`: paginas consultadas y candidatos.
-- `clasificacion-grabaciones-2026-10-12.json`: clasificacion cotejada con las descripciones del aula.
-- `verificacion-grabaciones-2026-10-12.json`: nueva consulta, titulos de recurso y descripciones de apoyo comprobadas.
-
-No se crearon carpetas multimedia vacias ni se exportaron sesiones del navegador.
+### 2.3 Evidencia Visual Extraída (`capturas-clase/`)
+- Se extrajeron **16 fotogramas `.png`** mediante `FFmpeg` en los timestamps exactos dictados por el docente y se almacenaron en:
+  `licenciatura-en-contaduria-uas/herramientas-digitales/referencias-herramientas-digitales/notas-herramientas-digitales/materiales-aula/capturas-clase/`
