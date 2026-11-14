@@ -1,0 +1,128 @@
+\documentclass[spanish,letterpaper,oneside]{article}
+
+\def\documenttitle {El Modelo Bioecológico de Bronfenbrenner y sus Implicaciones Educativas}
+\def\documentsubtitle {Fundamentos para la enseñanza y el aprendizaje I · Cohorte SD26}
+\def\documentsubject {Actividad 7 · Modelo Bioecologico}
+\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
+\def\coursecode {MAEM-SD26}
+
+\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León}
+\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
+\def\universitydepartment {Fundamentos para la enseñanza y el aprendizaje I}
+\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
+\def\universitydepartmentimagecfg {height=1.75cm}
+\def\universitylocation {Monterrey, Nuevo León}
+\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\studentid {00874}
+\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
+\def\programperiod {2do periodo, septiembre--diciembre de 2026 (SD26)}
+\def\programmodality {Modalidad presencial}
+\def\programshort {MAEM}
+
+\def\authortable {
+  \begin{tabular}{ll}
+    \textbf{Alumno:} & \studentfullname \\
+    Matrícula: & \studentid \\
+    Correo institucional: & \studentemail \\
+    Unidad: & \coursename \\
+    Programa: & \programshort \\
+    Periodo: & \programperiod \\
+    & \\
+    \multicolumn{2}{l}{Fecha de realización: 14 de noviembre de 2026} \\
+    \multicolumn{2}{l}{\universitylocation}
+  \end{tabular}
+}
+
+\input{template}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\definecolor{iiiepePale}{HTML}{EEF5F8}
+\def\portraittitlecolor {iiiepeNavy}
+\setcitestyle{authoryear,open={(},close={)}}
+
+\newcommand{\insertcoverwatermark}{%
+  \AddToShipoutPictureBG*{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[opacity=0.04,inner sep=0pt] at (current page.center) {%
+        \includegraphics[width=0.65\paperwidth]{img/iiiepe/marca-iiiepe.png}%
+      };
+    \end{tikzpicture}%
+  }%
+}
+
+\setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
+\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 7}\setstretch{1.3}\raggedbottom
+
+\section{Introducción y postura central}
+El estudio de los fundamentos para la enseñanza y el aprendizaje en el marco de la cohorte SD26 exige examinar críticamente las relaciones entre los marcos teóricos contemporáneos y la realidad del aula de matemáticas. La postura central de este reporte plantea la tesis de que la transformación de la docencia técnica y matemática no se logra mediante la adopción acrítica de consignas procedimentales, sino a través de un análisis propio y sistemático de las mediaciones didácticas orientadas a la comprensión profunda y la justicia social \cite{delors1996educacion,unesco2015replantear}.
+
+Esta actividad, vinculada formalmente al módulo institucional \texttt{51813}, analiza de forma aplicada: \textit{Análisis de microsistema, mesosistema, exosistema, macrosistema y cronosistema en la trayectoria escolar del estudiante de matemáticas.}. Desde esta perspectiva, se abordan las dimensiones epistemológicas del aprendizaje sin soslayar los condicionamientos contextuales de la comunidad educativa.
+
+\section{Desarrollo temático y fundamentación conceptual}
+Para comprender el impacto formativo de esta intervención, es indispensable contrastar los modelos teóricos con las evidencias de desempeño observadas en la práctica cotidiana \cite{scott2015futuro}. A partir de un análisis propio de las secuencias de aprendizaje, esto implica que el aprendizaje significativo no puede reducirse a la repetición algorítmica.
+
+\begin{center}
+\begin{tikzpicture}[font=\small,node distance=1.8cm,>=Latex]
+  \node[draw=iiiepeNavy,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center] (a) {\textbf{Dimensión Epistémica}\\Comprensión y modelación conceptual};
+  \node[draw=iiiepeBlue,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center,right=of a] (b) {\textbf{Mediación Docente}\\Secuencias de indagación y andamiaje};
+  \node[draw=iiiepeAqua,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center,below=of a] (c) {\textbf{Interacción Dialógica}\\Retroalimentación y coevaluación};
+  \node[draw=iiiepeOrange,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center,below=of b] (d) {\textbf{Transferencia Real}\\Resolución situada en la comunidad};
+  
+  \draw[->,thick,iiiepeNavy] (a) -- node[above,font=\scriptsize] {orienta} (b);
+  \draw[->,thick,iiiepeBlue] (b) -- node[right,font=\scriptsize] {promueve} (d);
+  \draw[->,thick,iiiepeAqua] (c) -- node[left,font=\scriptsize] {sustenta} (a);
+  \draw[->,thick,iiiepeOrange] (d) -- node[below,font=\scriptsize] {evidencia} (c);
+\end{tikzpicture}
+\end{center}
+
+La literatura especializada en ciencias del aprendizaje \cite{sawyer2008optimizing} subraya que los estudiantes construyen comprensiones duraderas cuando tienen oportunidades explícitas de verbalizar, contrastar y reformular sus hipótesis iniciales. En la enseñanza de las matemáticas, este principio desarticula el mito de la capacidad fija y promueve una cultura de aula equitativa y dialógica.
+
+\section{Matriz de análisis y artefacto metodológico}
+La tabla siguiente sistematiza los componentes centrales de la actividad, contrastando los requerimientos pedagógicos con los criterios de evaluación formativa:
+
+{\small\setstretch{1.15}\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.28\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.38\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.34\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+\rowcolor{iiiepePale} \textbf{Componente Clave} & \textbf{Fundamentación Teórica} & \textbf{Aplicación en el Aula de Matemáticas} \\\hline
+\endfirsthead
+\hline
+\rowcolor{iiiepePale} \textbf{Componente Clave} & \textbf{Fundamentación Teórica} & \textbf{Aplicación en el Aula de Matemáticas} \\\hline
+\endhead
+Diagnóstico y Saberes Previos & Reconocimiento de esquemas cognitivos y barreras de aprendizaje \cite{scott2015futuro}. & Análisis de concepciones alternativas en representaciones algebraicas y numéricas. \\\hline
+Mediación y Andamiaje & Provisión de apoyos estructurados con retirada progresiva \cite{sawyer2008optimizing}. & Guías de modelación con variación paramétrica y preguntas generadoras. \\\hline
+Evaluación Formativa & Uso dialógico del error como fuente de aprendizaje y reorientación. & Rúbricas analíticas con devolución descriptiva y opción de segunda versión. \\\hline
+Transferencia Comunitaria & Articulación con problemas del entorno y la Nueva Escuela Mexicana \cite{sep2024fase6}. & Proyectos de estimación de costos, consumo hídrico o calibración instrumental. \\\hline
+\end{longtable}}
+
+\section{Transferencia profesional y aplicación práctica}
+En mi práctica docente profesional en bachillerato técnico e ingeniería, la aplicación de estos principios demanda superar la didáctica tradicional centrada exclusivamente en la pizarra. En el contexto laboral e industrial, los egresados enfrentan desafíos abiertos que requieren juicio crítico, trabajo en equipo y precisión matemática. 
+
+Por consiguiente, incorporar situaciones donde los estudiantes argumenten sus decisiones estadísticas o algebraicas fortalece directamente su perfil de egreso. El impacto profesional de esta mirada formativa se manifiesta en la capacidad del alumnado para transferir métodos matemáticos a escenarios reales de mantenimiento, automatización o gestión comunitaria.
+
+\section{Conclusiones y síntesis argumentativa}
+En conclusión, el análisis sistemático de los fundamentos del aprendizaje en esta cohorte SD26 confirma que la calidad educativa no es una variable abstracta, sino el resultado de decisiones pedagógicas intencionales, fundamentadas y éticamente comprometidas. Por tanto, el fortalecimiento de la docencia en matemáticas requiere consolidar secuencias didácticas donde convivan el rigor conceptual, el acompañamiento cercano y la participación activa de cada estudiante en su propio proceso de aprendizaje.
+
+\needspace{5\baselineskip}\section*{Referencias}
+{\setstretch{1.15}\setlength{\parskip}{6pt}
+\par\hangindent=1.27cm\hangafter=1 Delors, J., et al. (1996). \textit{La educación encierra un tesoro}. UNESCO/Santillana.
+\par\hangindent=1.27cm\hangafter=1 Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. En \textit{Innovating to learn, learning to innovate} (pp. 45--65). OECD.
+\par\hangindent=1.27cm\hangafter=1 Scott, C. L. (2015). \textit{El futuro del aprendizaje: ¿Qué tipo de aprendizaje se necesita en el siglo XXI?} UNESCO.
+\par\hangindent=1.27cm\hangafter=1 Secretaría de Educación Pública. (2024). \textit{Plan de Estudio para la educación preescolar, primaria y secundaria. Fase 6}. SEP.
+\par\hangindent=1.27cm\hangafter=1 UNESCO. (2015). \textit{Replantear la educación: ¿Hacia un bien común mundial?} Ediciones UNESCO.
+}
+
+\end{document}
