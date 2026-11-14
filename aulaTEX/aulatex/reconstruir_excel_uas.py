@@ -583,11 +583,9 @@ def build_s3_examen_excel(mat_dir: Path, out_path: Path, backup_act_path: Path |
         ws_s6.cell(r, 7, f'=IF(YEAR(C{r})=2004,"ELIMINAR","PREPARAR INFORME")')
 
     ws_s7 = copy_sheet_exact(wb_em["Buena Venta (7)"], dst_wb, "Buena Venta (7)")
-    ws_s7["I1"] = "Mes"
     for r in range(2, ws_s7.max_row + 1):
         ws_s7.cell(r, 7, f"=YEAR(C{r})")
         ws_s7.cell(r, 8, f"=DAY(C{r})")
-        ws_s7.cell(r, 9, f"=MONTH(C{r})")
 
     ws_s8 = copy_sheet_exact(wb_em["Buena Venta (8)"], dst_wb, "Buena Venta (8)")
     for r in range(2, ws_s8.max_row + 1):
@@ -596,24 +594,24 @@ def build_s3_examen_excel(mat_dir: Path, out_path: Path, backup_act_path: Path |
     # 5. Interés Moratorio.xlsx -> hojas Mora y Promoción
     wb_mo = openpyxl.load_workbook(mat_dir / "7901270eeb-Interés Moratorio.xlsx")
     ws_mo = copy_sheet_exact(wb_mo["Mora"], dst_wb, "Mora")
-    ws_mo["F5"] = "=DAYS(C6,C5)"
-    ws_mo["F6"] = "=C4*(F4*F5)"
-    ws_mo["F7"] = "=C4+F6"
+    set_cell_safe(ws_mo, "F5", "=DAYS(C6,C5)")
+    set_cell_safe(ws_mo, "F6", "=C4*(F4*F5)")
+    set_cell_safe(ws_mo, "F7", "=C4+F6")
     ws_pr = copy_sheet_exact(wb_mo["Promoción"], dst_wb, "Promoción")
-    ws_pr["B4"] = "=DAYS(B3,B2)+1"
+    set_cell_safe(ws_pr, "B4", "=DAYS(B3,B2)+1")
 
     # 6. Puntaje.xlsx -> VLOOKUP aproximado
     wb_pu = openpyxl.load_workbook(mat_dir / "cd849b5f38-Puntaje.xlsx")
     ws_pu = copy_sheet_exact(wb_pu["PUNTAJE"], dst_wb, "Puntaje")
-    ws_pu["F2"] = 85
-    ws_pu["E8"] = "=VLOOKUP(F2,A4:C17,3,TRUE)"
+    set_cell_safe(ws_pu, "F2", 85)
+    set_cell_safe(ws_pu, "E8", "=VLOOKUP(F2,A4:C17,3,TRUE)")
 
     # 7. SelecciónCódigo.xlsx -> VLOOKUP exacto
     wb_sc = openpyxl.load_workbook(mat_dir / "9f4890c5fe-SelecciónCódigo.xlsx")
     ws_sc = copy_sheet_exact(wb_sc["PARTICIPANTES"], dst_wb, "SelecciónCódigo")
-    ws_sc["D5"] = "2016-03"
-    ws_sc["D7"] = "=VLOOKUP(D5,M4:O18,2,FALSE)"
-    ws_sc["D9"] = "=VLOOKUP(D5,M4:O18,3,FALSE)"
+    set_cell_safe(ws_sc, "D5", "2016-03")
+    set_cell_safe(ws_sc, "D7", "=VLOOKUP(D5,M4:O18,2,FALSE)")
+    set_cell_safe(ws_sc, "D9", "=VLOOKUP(D5,M4:O18,3,FALSE)")
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     dst_wb.save(out_path)
