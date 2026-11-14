@@ -42,3 +42,18 @@ NOTA: Tu archivo no debe ser mayor a 2Mb. En caso de que tu archivo sea mayor 
 - [ ] Consigna completa y criterios cotejados para ejecutar.
 - [ ] Producto realizado y revisado.
 - [ ] Envio confirmado.
+
+<!-- INICIO_REFERENCIAS_GRABACIONES_UAS -->
+## Referencias de Grabaciones de Clase y Puntos de Interés (Corrección Docente)
+
+- **Diagnóstico y directriz docente:** Calificación actual: `2.50 / 3.00`. Retroalimentación del Dr. Dámaso: *«MUY BIEN: ...su trabajo esta escelentemente estructurado, sólo que la carpeta se comparte con el docente NO DE FORMA pública...y no subio los archivos PDF y Word...»* Acción correctiva: Compartir la carpeta `GPO103 LCP - Martín Jonathan De La Cruz Muñoz` directamente con el correo del docente y subir dentro de ella los archivos Word y PDF.
+- **Grabaciones vinculadas a esta actividad:**
+  - `S1 - Clase 1` (2026-10-20): [Presentación del Curso, Diagnóstico, Carpeta Compartida en Drive y Lecciones TIC](https://drive.google.com/file/d/1NaR_KBkiiZRg3ioHxiSRJw_GMqCDf2rD/view?usp=sharing) — [Video MP4](../referencias-herramientas-digitales/grabaciones/clase-1NaR_KBkiiZRg3ioHxiSRJw_GMqCDf2rD/UAS - HERR_DIG - S1 - 2026-10-20 - Clase Martes 20 de Octubre [1NaR_KBkiiZRg3ioHxiSRJw_GMqCDf2rD].mp4) | [Transcripción TXT](../referencias-herramientas-digitales/grabaciones/clase-1NaR_KBkiiZRg3ioHxiSRJw_GMqCDf2rD/UAS - HERR_DIG - S1 - 2026-10-20 - Clase Martes 20 de Octubre [1NaR_KBkiiZRg3ioHxiSRJw_GMqCDf2rD].txt) | [Subtítulos SRT](../referencias-herramientas-digitales/grabaciones/clase-1NaR_KBkiiZRg3ioHxiSRJw_GMqCDf2rD/UAS - HERR_DIG - S1 - 2026-10-20 - Clase Martes 20 de Octubre [1NaR_KBkiiZRg3ioHxiSRJw_GMqCDf2rD].srt) — Cita BibTeX: `\cite{ruiz2026claseS1c1}`
+  - `S1 - Clase 2` (2026-10-22): [GPO103-LCP: Compartir Carpeta](https://www.youtube.com/watch?v=LdO5T2YGm6g) — Pendiente de archivo MP4 local — Cita BibTeX: `\cite{ruiz2026claseS1c2}`
+- **Capturas de puntos de interés en video:**
+  - `[00:05:10]` **Regla de cuenta @gmail.com y uso de vínculo en la nube solo al exceder límite de Moodle**: [Ver captura PNG](../referencias-herramientas-digitales/grabaciones/clase-1NaR_KBkiiZRg3ioHxiSRJw_GMqCDf2rD/capturas-interes/s1c1-poi-02-regla-gmail-y-limite-moodle.png) (`\cite{ruiz2026poiS1ReglaMoodleDrive}`)
+  - `[00:40:15]` **Canal de mensajería interna de Moodle UAS y código QR para Moodle Mobile**: [Ver captura PNG](../referencias-herramientas-digitales/grabaciones/clase-1NaR_KBkiiZRg3ioHxiSRJw_GMqCDf2rD/capturas-interes/s1c1-poi-06-mensajeria-plataforma-uas.png) (`\cite{ruiz2026poiS1MensajeriaUas}`)
+  - `[00:52:40]` **Indicaciones precisas de la Práctica S1: Compartir Carpeta de Trabajo (módulo 50102)**: [Ver captura PNG](../referencias-herramientas-digitales/grabaciones/clase-1NaR_KBkiiZRg3ioHxiSRJw_GMqCDf2rD/capturas-interes/s1c1-poi-08-practica-s1-compartir-carpeta.png) (`\cite{ruiz2026poiS1PracticaCarpeta}`)
+  - `[01:22:30]` **Guía paso a paso de U2-L3 Almacenamiento en la nube y uso de carpeta compartida**: [Ver captura PNG](../referencias-herramientas-digitales/grabaciones/clase-1NaR_KBkiiZRg3ioHxiSRJw_GMqCDf2rD/capturas-interes/s1c1-poi-10-leccion-almacenamiento-nube.png) (`\cite{ruiz2026poiS1LeccionNube}`)
+- **Análisis integral de indicaciones:** [analisis-indicaciones-grabaciones.md](../referencias-herramientas-digitales/grabaciones/analisis-indicaciones-grabaciones.md)
+<!-- FIN_REFERENCIAS_GRABACIONES_UAS -->
