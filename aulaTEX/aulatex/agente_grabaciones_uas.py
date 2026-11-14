@@ -100,6 +100,8 @@ class GrabacionesUasRequest:
     extract_keyframes: bool = True
     update_references: bool = True
     local_video_dir: str = ""
+    youtube_cookies_browser: str = ""
+    youtube_cookies_file: str = ""
     output_dir: str = ""
 
 
@@ -890,6 +892,51 @@ class AgenteGrabacionesUas:
                         "kind": "drive_video_download_failed",
                         "recording_id": rec_id,
                         "detail": type(err).__name__,
+                    }
+                )
+
+        if (
+            existing_mp4 is None
+            and spec["provider"] == "youtube"
+            and request.download_drive_media
+            and (request.youtube_cookies_browser.strip() or request.youtube_cookies_file.strip())
+        ):
+            import sys
+            yt_cmd = [
+                sys.executable,
+                "-m",
+                "yt_dlp",
+                "--no-playlist",
+                "-f",
+                "bestvideo[height<=1080][ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best",
+                "--merge-output-format",
+                "mp4",
+                "-o",
+                str(canonical_mp4),
+            ]
+            if request.youtube_cookies_file.strip():
+                yt_cmd.extend(["--cookies", request.youtube_cookies_file.strip()])
+            elif request.youtube_cookies_browser.strip():
+                yt_cmd.extend(["--cookies-from-browser", request.youtube_cookies_browser.strip()])
+            yt_cmd.append(spec["source_url"])
+            try:
+                proc = subprocess.run(yt_cmd, capture_output=True, text=True, check=False)
+                if proc.returncode == 0 and canonical_mp4.exists() and canonical_mp4.stat().st_size > 10000:
+                    existing_mp4 = canonical_mp4
+                else:
+                    blockers.append(
+                        {
+                            "kind": "youtube_authenticated_download_failed",
+                            "recording_id": rec_id,
+                            "detail": (proc.stderr or proc.stdout or f"returncode={proc.returncode}")[-400:],
+                        }
+                    )
+            except Exception as err:
+                blockers.append(
+                    {
+                        "kind": "youtube_authenticated_download_failed",
+                        "recording_id": rec_id,
+                        "detail": f"{type(err).__name__}: {err}",
                     }
                 )
 

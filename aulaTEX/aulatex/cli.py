@@ -497,6 +497,8 @@ def build_parser() -> argparse.ArgumentParser:
     grab_uas.add_argument("--no-transcribe", action="store_true", help="Omitir transcripción Whisper de videos nuevos.")
     grab_uas.add_argument("--no-keyframes", action="store_true", help="Omitir extracción de capturas de puntos de interés.")
     grab_uas.add_argument("--local-video-dir", default="", help="Directorio opcional con archivos MP4 descargados localmente.")
+    grab_uas.add_argument("--youtube-cookies-browser", default="", help="Navegador con sesión autorizada para descargar enlaces de YouTube (ej. firefox).")
+    grab_uas.add_argument("--youtube-cookies-file", default="", help="Archivo cookies.txt en formato Netscape para YouTube.")
     grab_uas.add_argument("--output", default="", help="Directorio de salida del manifiesto.")
     grab_uas.add_argument("--json", action="store_true", help="Emitir resultado en formato JSON.")
 
@@ -1600,6 +1602,8 @@ def main(argv: list[str] | None = None) -> None:
             extract_keyframes=not getattr(args, "no_keyframes", False),
             update_references=True,
             local_video_dir=getattr(args, "local_video_dir", ""),
+            youtube_cookies_browser=getattr(args, "youtube_cookies_browser", ""),
+            youtube_cookies_file=getattr(args, "youtube_cookies_file", ""),
             output_dir=getattr(args, "output", ""),
         )
         res = agent.execute(req)
