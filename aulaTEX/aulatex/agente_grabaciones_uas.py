@@ -572,7 +572,7 @@ class AgenteGrabacionesUas:
         )
         layout = subject_layout(subject_dir)
         ref_dir = layout["references"]
-        plan_dir = layout["planning"]
+        plan_dir = layout["plans"]
         assets_dir = subject_dir / f"assets-{request.subject_slug}" / "grabaciones"
         grabaciones_root = ref_dir / "grabaciones"
         grabaciones_root.mkdir(parents=True, exist_ok=True)
