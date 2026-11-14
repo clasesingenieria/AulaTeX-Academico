@@ -23,6 +23,7 @@ import time
 from typing import Any
 from urllib.parse import urlsplit
 
+from .agente_grabaciones_uas import AgenteGrabacionesUas, GrabacionesUasRequest, GrabacionesUasResult
 from .encontrar_recursos_uas import EncontrarRecursosRequest, EncontrarRecursosResult, EncontrarRecursosUasAgent
 from .entregar_uas import (
     AGENT_ID_ENTREGAR_UAS,
@@ -166,6 +167,7 @@ class FlujoUasOrchestrator:
         self.agent_actividad = RealizarActividadUasAgent(self.workspace)
         self.agent_monitor = MonitorUasAgent(self.workspace, nav_agent=self.agent_navegacion)
         self.agent_entrega = EntregarUasAgent(self.workspace)
+        self.agent_grabaciones = AgenteGrabacionesUas(self.workspace)
 
     def verify_prerequisites(self) -> dict[str, Any]:
         """Audita el estado de credenciales, red y motores TeX antes de la ejecución."""

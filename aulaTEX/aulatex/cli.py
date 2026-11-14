@@ -484,6 +484,21 @@ def build_parser() -> argparse.ArgumentParser:
     sitio_lex.add_argument("--no-compile", action="store_true", help="No recompilar reporte TeX.")
     sitio_lex.add_argument("--json", action="store_true", help="Emitir salida en formato JSON.")
 
+    grab_uas = sub.add_parser(
+        "grabaciones-uas",
+        aliases=["uas-grabaciones"],
+        help="Localizar, descargar, ubicar/renombrar, transcribir, capturar puntos de interés y analizar grabaciones de plataforma UAS.",
+    )
+    grab_uas.add_argument("--subject", default="herramientas-digitales", help="Slug de la materia UAS.")
+    grab_uas.add_argument("--course-id", type=int, default=635, help="ID del curso en UAS.")
+    grab_uas.add_argument("--no-inspect", action="store_true", help="Omitir inspección en vivo de plataforma.")
+    grab_uas.add_argument("--no-download", action="store_true", help="Omitir descarga de medios desde Google Drive.")
+    grab_uas.add_argument("--no-transcribe", action="store_true", help="Omitir transcripción Whisper de videos nuevos.")
+    grab_uas.add_argument("--no-keyframes", action="store_true", help="Omitir extracción de capturas de puntos de interés.")
+    grab_uas.add_argument("--local-video-dir", default="", help="Directorio opcional con archivos MP4 descargados localmente.")
+    grab_uas.add_argument("--output", default="", help="Directorio de salida del manifiesto.")
+    grab_uas.add_argument("--json", action="store_true", help="Emitir resultado en formato JSON.")
+
     itesca_wf = sub.add_parser("itesca-workflow", help="Ejecutar el flujo de trabajo académico para ITESCA orquestado por aulatex.")
     itesca_wf.add_argument("--snapshot", default="", help="Ruta al snapshot JSON sanitizado de navegación ITESCA.")
     itesca_wf.add_argument("--activity", type=int, default=0, help="Filtrar por número de actividad específico (7, 8, 9, 15).")
@@ -1568,6 +1583,25 @@ def main(argv: list[str] | None = None) -> None:
             "errors": list(exec_res.errors),
         }
         print(json.dumps(payload, ensure_ascii=False, indent=2))
+        return
+
+    if args.command in ("grabaciones-uas", "uas-grabaciones"):
+        from .agente_grabaciones_uas import AgenteGrabacionesUas, GrabacionesUasRequest
+
+        agent = AgenteGrabacionesUas(AulaTeXWorkspace())
+        req = GrabacionesUasRequest(
+            subject_slug=args.subject,
+            course_id=args.course_id,
+            inspect_live_platform=not getattr(args, "no_inspect", False),
+            download_drive_media=not getattr(args, "no_download", False),
+            transcribe_missing=not getattr(args, "no_transcribe", False),
+            extract_keyframes=not getattr(args, "no_keyframes", False),
+            update_references=True,
+            local_video_dir=getattr(args, "local_video_dir", ""),
+            output_dir=getattr(args, "output", ""),
+        )
+        res = agent.execute(req)
+        print(json.dumps(res.to_dict(), ensure_ascii=False, indent=2))
         return
 
     if args.command in ("flujo-uas", "uas-pending", "monitor-uas"):
