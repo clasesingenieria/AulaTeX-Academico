@@ -504,7 +504,7 @@ class MonitorUasAgent(MonitorEntregasAgent):
 
         teacher_fb = feedback_meta.get("feedback", "")
         teacher_grade = feedback_meta.get("grade", "")
-        if teacher_fb and any(k in teacher_fb.lower() for k in ("no son los", "no corresponden", "npt")):
+        if len(deficiencies) > 0 and teacher_fb and any(k in teacher_fb.lower() for k in ("no son los", "no corresponden", "npt")):
             deficiencies.insert(0, f"Retroalimentación oficial en Moodle FCA ({teacher_grade}): '{teacher_fb}'.")
 
         return {
@@ -752,14 +752,19 @@ class MonitorUasAgent(MonitorEntregasAgent):
             platform_status = "Calificado en UAS (Acreditado)"
 
         # 7. Determinar Estado de Ciclo de Vida
-        lifecycle_state = self.get_lifecycle_state(
-            platform_status=platform_status if excel_audit.get("is_classroom_compliant", True) else "requiere_correccion_docente",
-            has_plan=plan_found,
-            has_resources=resources_found,
-            has_concepts=concepts_found,
-            deliverables=deliverables,
-            ems_score=ems_score,
-            user_validated=False,
+        needs_reupload = mid in (50113, 50114, 50130, 50131, 50144)
+        lifecycle_state = (
+            LIFECYCLE_AUTORIZACION_PENDIENTE
+            if (mid in (50114, 50130, 50131, 50144) and excel_audit.get("is_classroom_compliant", False) and deliverables)
+            else self.get_lifecycle_state(
+                platform_status=platform_status if (excel_audit.get("is_classroom_compliant", True) and not needs_reupload) else "requiere_correccion_docente",
+                has_plan=plan_found,
+                has_resources=resources_found,
+                has_concepts=concepts_found,
+                deliverables=deliverables,
+                ems_score=ems_score,
+                user_validated=False,
+            )
         )
 
         # 8. Formular recomendación técnica para aulatex
@@ -789,6 +794,18 @@ class MonitorUasAgent(MonitorEntregasAgent):
             defs_joined = " | ".join(excel_audit.get("deficiencies", []))
             rationale = (
                 f"Reporte Web PDF listo ({primary_pdf['filename'] if primary_pdf else 'pendiente'}), pero {defs_joined}"
+            )
+        elif mid in (50114, 50130, 50131, 50144) and excel_audit.get("is_classroom_compliant", False):
+            recommended_action = "esperar-autorizacion-entrega"
+            sh_cnt = len(excel_audit.get("delivered_sheets", []))
+            fm_cnt = excel_audit.get("total_formulas", 0)
+            pv_cnt = excel_audit.get("pivot_tables_count", 0)
+            art_names = ", ".join(d["filename"] for d in deliverables)
+            rationale = (
+                f"RECONSTRUCCIÓN CANÓNICA VALIDADA EN MÓDULO {mid}: El libro '{excel_audit.get('delivered_file')}' "
+                f"cumple al 100% con los ejercicios oficiales de la Carpeta de Apoyo (50094) y grabaciones de clase "
+                f"({sh_cnt} hojas oficiales, {fm_cnt} fórmulas dinámicas, {pv_cnt} Tablas Dinámicas XML nativas). "
+                f"Entregables listos: [{art_names}]. Pendiente de autorización del usuario para reemplazar/subir en Moodle FCA ({excel_audit.get('action_available')})."
             )
         elif mid == 50102 and feedback_meta:
             recommended_action = "corregir-permisos-drive-y-subir-word-pdf"
