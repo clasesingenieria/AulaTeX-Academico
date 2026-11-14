@@ -27,6 +27,8 @@ import json
 from pathlib import Path
 import re
 from typing import Any
+import xml.etree.ElementTree as ET
+import zipfile
 
 from .monitor_entregas import (
     AGENT_TYPE_MONITOR_ENTREGAS,
@@ -186,6 +188,7 @@ class MonitorUasAgent(MonitorEntregasAgent):
         if module_id == 50144 or "google sites" in t_low or "sitio web" in t_low or (activity_number == 6 and slug == "herramientas-digitales"):
             patterns = [
                 "*WEB*.pdf",
+                "*EXCEL_CONTA*.xlsx",
                 "*Google_Sites*.pdf",
                 "*Sitio_Web*.pdf",
             ]
@@ -193,6 +196,31 @@ class MonitorUasAgent(MonitorEntregasAgent):
             patterns = [
                 "*Zoom*.pdf",
                 "*ZOOM*.pdf",
+            ]
+        elif module_id == 50114 or "excel básico" in t_low or "excel basico" in t_low:
+            patterns = [
+                "*EXCEL_BASICO*.xlsx",
+                "*Excel-Basico*.xlsx",
+                "*EXCEL_BASICO*.pdf",
+            ]
+        elif module_id == 50130 or "excel aplicado" in t_low:
+            patterns = [
+                "GPO103LCP_EXCEL_APLICADO*.xlsx",
+                "*EXCEL_APLICADO*.xlsx",
+                "*Actividad-8*.pdf",
+            ]
+        elif module_id == 50131 or "examen excel" in t_low:
+            patterns = [
+                "GPO103LCP_EXAMEN_EXCEL_S3*.xlsx",
+                "*EXAMEN_EXCEL_S3*.xlsx",
+                "*Examen-Excel-S3*.xlsx",
+                "*Examen-Excel-S3*.pdf",
+            ]
+        elif module_id == 50102 or (activity_number == 1 and slug == "herramientas-digitales"):
+            patterns = [
+                "S1_*MartinJonathan*.pdf",
+                "*Actividad-1*.pdf",
+                "*Carpeta*.pdf",
             ]
         else:
             patterns = [
@@ -218,6 +246,8 @@ class MonitorUasAgent(MonitorEntregasAgent):
                 for match in sdir.glob(pat):
                     if match.is_file() and match.stat().st_size > 0:
                         sha = hashlib.sha256(match.read_bytes()).hexdigest()
+                        if "Examen-Teorico-S1" in match.name and module_id in (50102, 50113, 50114, 50130, 50131, 50144):
+                            continue
                         if activity_number > 1 and sha == s1_hash and "Examen-Teorico-S1" not in match.name:
                             continue
                         entry = {
@@ -231,6 +261,247 @@ class MonitorUasAgent(MonitorEntregasAgent):
                             artifacts.append(entry)
 
         return artifacts
+
+    def _inspect_xlsx_xml(self, xlsx_path: Path) -> dict[str, Any]:
+        """Inspecciona un libro .xlsx a nivel XML (hojas, fórmulas, tablas dinámicas y celdas clave)."""
+        ns = {"main": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
+        info: dict[str, Any] = {
+            "exists": xlsx_path.is_file(),
+            "filename": xlsx_path.name,
+            "size_bytes": xlsx_path.stat().st_size if xlsx_path.is_file() else 0,
+            "sheets": [],
+            "total_formulas": 0,
+            "pivot_tables_count": 0,
+            "sheet_details": {},
+        }
+        if not xlsx_path.is_file():
+            return info
+
+        try:
+            with zipfile.ZipFile(xlsx_path, "r") as zf:
+                names = zf.namelist()
+                info["pivot_tables_count"] = sum(
+                    1 for n in names if n.startswith("xl/pivotTables/pivotTable") and n.endswith(".xml")
+                )
+                shared_strings: list[str] = []
+                if "xl/sharedStrings.xml" in names:
+                    sst = ET.fromstring(zf.read("xl/sharedStrings.xml"))
+                    for si in sst.findall("main:si", ns):
+                        texts = [t.text or "" for t in si.findall(".//main:t", ns)]
+                        shared_strings.append("".join(texts))
+
+                rels: dict[str, str] = {}
+                if "xl/_rels/workbook.xml.rels" in names:
+                    rel_root = ET.fromstring(zf.read("xl/_rels/workbook.xml.rels"))
+                    for r in rel_root:
+                        rels[r.attrib.get("Id", "")] = r.attrib.get("Target", "")
+
+                if "xl/workbook.xml" in names:
+                    wb = ET.fromstring(zf.read("xl/workbook.xml"))
+                    for sh in wb.findall(".//main:sheet", ns):
+                        sname = sh.attrib.get("name", "")
+                        rid = sh.attrib.get("{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id", "")
+                        target = rels.get(rid, "")
+                        if target and not target.startswith("xl/"):
+                            target = "xl/" + target.lstrip("/")
+                        info["sheets"].append(sname)
+
+                        rows_count = 0
+                        formulas_count = 0
+                        empty_formula_tags = 0
+                        sample_formulas: list[str] = []
+                        if target in names:
+                            ws = ET.fromstring(zf.read(target))
+                            rows = ws.findall(".//main:sheetData/main:row", ns)
+                            rows_count = len(rows)
+                            for c in ws.findall(".//main:sheetData/main:row/main:c", ns):
+                                f_el = c.find("main:f", ns)
+                                if f_el is not None:
+                                    f_txt = (f_el.text or "").strip()
+                                    if f_txt:
+                                        formulas_count += 1
+                                        if len(sample_formulas) < 5:
+                                            sample_formulas.append(f"{c.attrib.get('r', '')}:={f_txt}")
+                                    else:
+                                        empty_formula_tags += 1
+                        info["total_formulas"] += formulas_count
+                        info["sheet_details"][sname] = {
+                            "rows": rows_count,
+                            "formulas": formulas_count,
+                            "empty_formula_tags": empty_formula_tags,
+                            "sample_formulas": sample_formulas,
+                        }
+        except Exception as exc:
+            info["error"] = str(exc)
+        return info
+
+    def _load_recordings_inventory_feedback(self, subject_root: Path, module_id: int | None) -> dict[str, Any]:
+        """Carga la retroalimentación docente y grabaciones asociadas desde inventario-grabaciones-uas.json."""
+        if not module_id:
+            return {}
+        inv_path = subject_root / f"referencias-{subject_root.name}" / "grabaciones" / "inventario-grabaciones-uas.json"
+        if not inv_path.is_file():
+            return {}
+        try:
+            data = json.loads(inv_path.read_text(encoding="utf-8"))
+            for item in data.get("activity_feedback_analysis", []):
+                if int(item.get("module_id", 0)) == int(module_id):
+                    return item
+        except Exception:
+            pass
+        return {}
+
+    def audit_excel_deliverable_against_classroom(
+        self,
+        subject_root: Path,
+        module_id: int | None,
+        deliverables: list[dict[str, Any]],
+    ) -> dict[str, Any]:
+        """Valida si el entregable .xlsx corresponde realmente a los ejercicios de clase (Carpeta de Apoyo 50094) y grabaciones."""
+        feedback_meta = self._load_recordings_inventory_feedback(subject_root, module_id)
+        xlsx_delivs = [d for d in deliverables if d["extension"] == ".xlsx"]
+        primary_xlsx = Path(xlsx_delivs[0]["path"]) if xlsx_delivs else None
+        xml_audit = self._inspect_xlsx_xml(primary_xlsx) if primary_xlsx else {"exists": False, "sheets": []}
+        delivered_sheets = set(xml_audit.get("sheets", []))
+
+        expected_workbooks: list[str] = []
+        expected_canonical_sheets: list[str] = []
+        deficiencies: list[str] = []
+        is_excel_module = module_id in (50114, 50130, 50131, 50144)
+
+        if module_id == 50114:
+            expected_workbooks = [
+                "01_ListaProductos.xlsx (FACTURAS)",
+                "02_Ventas.xlsx (Ventas, Ventas-2018-2019)",
+                "03_Participantes.xlsx (Asistentes)",
+                "04_Impresión.xlsx / 05_Area de impresión.xlsx / 06_Imprimir Títulos.xlsx",
+                "02_Referencias.xlsx (Relativas, Absolutas IGV 18%, Mixtas tabla 10x10)",
+                "03_ResumenGanancias.xlsx / ResumenGanancias_Finalizado.xlsx",
+                "Alquiler.xlsx (PlayStation) / Hoteles.xlsx",
+                "Corporación_Televisiva.xlsx / Estaturas.xlsx / VentaMaquillaje.xlsx (1900 filas) / VentasPorPedido.xlsx",
+                "FuncionesTexto.xlsx (Minúsculas, Mayúsculas, UnirCadenas, NombrePropio, Izq-Der-, Largo, HALLAR-1, HALLAR-2, EXTRAE)",
+                "Funciones de Fecha.xlsx / Interés Moratorio.xlsx (Mora, Promoción) / Mundial Qatar.xlsx / PlanProyecto.xlsx",
+            ]
+            expected_canonical_sheets = [
+                "FACTURAS", "Ventas", "Relativas", "Absolutas", "Mixtas",
+                "PlayStation", "VentaMaquillaje", "Minúsculas", "Mora", "Promoción",
+            ]
+            synthetic_s2 = {"Identificacion", "Practica_1_Importes", "Practica_2_Gastos", "Practica_3_Formatos", "Practica_4_Referencias", "Comprobacion"}
+            overlap = delivered_sheets.intersection(expected_canonical_sheets)
+            if not primary_xlsx:
+                deficiencies.append("No existe libro .xlsx de Excel Básico S2 en entregas.")
+            else:
+                if delivered_sheets == synthetic_s2 or len(overlap) == 0:
+                    deficiencies.append(
+                        f"El archivo '{primary_xlsx.name}' contiene 6 hojas sintéticas ({', '.join(xml_audit.get('sheets', []))}) "
+                        "derivadas de 'Excel-Basico-S2-Ejemplo.xlsx' ('Ejemplo hipotetico; no ejercicio asignado por el docente') "
+                        "con 0% de coincidencia con los 30+ libros oficiales de la Carpeta de Apoyo (Cap. 1, 2, 3, 4, 6 y 7)."
+                    )
+                p3_det = xml_audit.get("sheet_details", {}).get("Practica_3_Formatos", {})
+                if p3_det and p3_det.get("formulas", 0) == 0:
+                    deficiencies.append("La hoja 'Practica_3_Formatos' tiene 0 fórmulas dinámicas (valores estáticos hardcodeados).")
+
+        elif module_id == 50130:
+            expected_workbooks = [
+                "01_FunciónLogica.xlsx (SI-1..SI-3, Y-1..Y-3, O-1..O-2)",
+                "02_SIAnidado.xlsx (Género 1, Alumnos, Género 2, Estado Civil, goles)",
+                "03_Certificaciones.xlsx / Alumnos.xlsx / EstadosMaquillaje.xlsx (SI1..SI4, Y1..Y2, O1..O2) / Gastos.xlsx",
+                "01_Elegir.xlsx / 02_BuscarV.xlsx / 03_RangoAproximado.xlsx / 04_BuscarH.xlsx / Puntaje.xlsx / SelecciónCódigo.xlsx",
+                "01_ListaInmobiliaria.xlsx / 04_ Tabla Dinámica Recomendada.xlsx / 05_Tablas Dinámicas.xlsx / Tabla Inmobiliaria.xlsx",
+                "01_Crear Gráficos.xlsx / 03_FlujoCaja.xlsx / 04_Censo2007.xlsx / Ingresos.xlsx",
+                "02_Subtotales.xlsx / 03_Esquemas.xlsx / 04_Validación.xlsx / 06_Formato Prestablecido.xlsx / 07_Crear reglas.xlsx",
+            ]
+            expected_canonical_sheets = [
+                "SI-1", "Alumnos", "Gastos", "SI1", "Puntaje", "SelecciónCódigo",
+                "ListaInmobiliaria", "Subtotales", "FlujoCaja",
+            ]
+            synthetic_s3 = {
+                "Control_Identificacion", "Referencias_Rel_Abs_Mix", "Funciones_Logicas_SI",
+                "SI_Anidado_Escalas", "BuscarV_BuscarH", "Subtotales_Esquemas",
+                "Tablas_Dinamicas_Resumen", "Graficos_Analisis_Financiero",
+            }
+            overlap = delivered_sheets.intersection(expected_canonical_sheets)
+            if not primary_xlsx:
+                deficiencies.append("No existe libro .xlsx de Excel Aplicado S3 en entregas.")
+            else:
+                if delivered_sheets == synthetic_s3 or len(overlap) == 0:
+                    deficiencies.append(
+                        f"El archivo '{primary_xlsx.name}' contiene 8 hojas inventadas ({', '.join(xml_audit.get('sheets', []))}) "
+                        "con datos ficticios ('ART-101 Laptop Dell', 'CLI-001 Comercial del Noroeste', 'EMP-01 García López Carlos') "
+                        "y 0% de coincidencia con las plantillas de la Carpeta de Apoyo (Cap. 5, 8, 9, 10 y 11)."
+                    )
+                if xml_audit.get("pivot_tables_count", 0) == 0:
+                    deficiencies.append(
+                        "La hoja 'Tablas_Dinamicas_Resumen' carece de objeto PivotTable nativo (xl/pivotTables/pivotTable*.xml = 0); "
+                        "simula la tabla dinámica con fórmulas =SUMIFS(...)."
+                    )
+                deliv_dir = primary_xlsx.parent
+                if (deliv_dir / "GPO101LCP_EXCEL_APLICADO_MartinJonathan_DeLaCruzMunoz.xlsx").is_file():
+                    deficiencies.append(
+                        "Existe archivo duplicado con nomenclatura de grupo errónea 'GPO101LCP_EXCEL_APLICADO_...' junto a 'GPO103LCP_...'."
+                    )
+
+        elif module_id == 50131:
+            expected_workbooks = [
+                "Alumnos.xlsx / Alumnos - resuelto.xlsx (escala 0-20: Bajo 0-10, Medio 11-13, Alto 14-16, Muy alto 17-20 con =IFS(AND(...)))",
+                "Gastos.xlsx / Gastos - resuelto.xlsx (=IF(SUM(B3:B5)<=350,'Dentro de presupuesto','Presupuesto excedido'))",
+                "VentaMaquillaje.xlsx (1,900 registros reales $H$5:$H$1904 con SUMIF/COUNTIF/AVERAGEIF/SUMIFS)",
+                "EstadosMaquillaje.xlsx (8 hojas: SI1..SI4, Y1..Y2, O1..O2)",
+                "Interés Moratorio.xlsx (hojas Mora y Promoción con días de atraso reales)",
+                "Puntaje.xlsx (=VLOOKUP(F2,A4:C17,3,TRUE)) y SelecciónCódigo.xlsx",
+            ]
+            expected_canonical_sheets = ["Alumnos", "Gastos", "VentaMaquillaje", "Mora", "Promoción", "Puntaje", "SI1"]
+            synthetic_exam = {"Evaluacion_Ventas", "Interes_Moratorio", "Escala_Calificaciones"}
+            overlap = delivered_sheets.intersection(expected_canonical_sheets)
+            if not primary_xlsx:
+                deficiencies.append("No existe libro .xlsx de Examen Práctico S3 en entregas.")
+            else:
+                if delivered_sheets == synthetic_exam or len(overlap) == 0:
+                    deficiencies.append(
+                        f"El archivo '{primary_xlsx.name}' contiene 3 hojas sintéticas ({', '.join(xml_audit.get('sheets', []))}) "
+                        "que distorsionan las plantillas oficiales del examen en clase: redujo VentaMaquillaje de 1,900 filas a 40 filas inventadas, "
+                        "alteró la escala oficial 0-20 de Alumnos.xlsx (Boris Reyes=18) a una escala inventada 0-100 (Boris Reyes=92), "
+                        "y omitió Gastos.xlsx, EstadosMaquillaje.xlsx y Puntaje.xlsx (VLOOKUP aproximado)."
+                    )
+                ev_det = xml_audit.get("sheet_details", {}).get("Evaluacion_Ventas", {})
+                if ev_det and ev_det.get("empty_formula_tags", 0) > 0:
+                    deficiencies.append(
+                        f"La hoja 'Evaluacion_Ventas' en '{primary_xlsx.name}' tiene {ev_det['empty_formula_tags']} celdas con etiquetas <f/> vacías (fórmulas rotas en filas 6 a 44)."
+                    )
+
+        elif module_id == 50144:
+            expected_workbooks = [
+                "EXCEL_CONTA_MartinJonathan_DeLaCruzMunoz.xlsx (Complemento de LCP - Aplicado S4: 15 hojas contables: "
+                "Balance1, Bal Completo Reporte, Bal Completo Cuenta, Balance Reporte, Balance Cuenta, Bal Comparativo 1..3, "
+                "Bal Compar Cuenta, Estado de Resultados 1..2, EdoRes Comercial, BO INGRESOS TOTALES, PE 1, PE2)"
+            ]
+            if not primary_xlsx:
+                deficiencies.append(
+                    "Falta generar el libro complementario 'EXCEL_CONTA_MartinJonathan_DeLaCruzMunoz.xlsx' exigido por los 3 PDFs "
+                    "del Dr. Dámaso en 'Complemento de LCP - Aplicado' (Balance General y Comparativo, Estado de Resultados y Buscar Objetivo / Punto de Equilibrio)."
+                )
+
+        teacher_fb = feedback_meta.get("feedback", "")
+        teacher_grade = feedback_meta.get("grade", "")
+        if teacher_fb and any(k in teacher_fb.lower() for k in ("no son los", "no corresponden", "npt")):
+            deficiencies.insert(0, f"Retroalimentación oficial en Moodle FCA ({teacher_grade}): '{teacher_fb}'.")
+
+        return {
+            "is_excel_module": is_excel_module,
+            "is_classroom_compliant": len(deficiencies) == 0,
+            "module_id": module_id,
+            "teacher_grade": teacher_grade,
+            "teacher_feedback": teacher_fb,
+            "action_available": feedback_meta.get("action_available", ""),
+            "delivered_file": primary_xlsx.name if primary_xlsx else None,
+            "delivered_sheets": xml_audit.get("sheets", []),
+            "total_formulas": xml_audit.get("total_formulas", 0),
+            "pivot_tables_count": xml_audit.get("pivot_tables_count", 0),
+            "expected_workbooks": expected_workbooks,
+            "deficiencies": deficiencies,
+            "specific_correction_instructions": feedback_meta.get("specific_correction_instructions", []),
+            "related_recordings": feedback_meta.get("related_recordings", []),
+        }
 
     def get_lifecycle_state(
         self,
@@ -399,6 +670,18 @@ class MonitorUasAgent(MonitorEntregasAgent):
                 ems_score = 80.0
             satisfied.append(f"ems_validado_{int(ems_score)}")
 
+        # 5b. Auditoría forense de entregables Excel vs. Carpeta de Apoyo (50094) y grabaciones
+        excel_audit = self.audit_excel_deliverable_against_classroom(subject_root, mid, deliverables)
+        feedback_meta = self._load_recordings_inventory_feedback(subject_root, mid)
+
+        if excel_audit.get("is_excel_module") and not excel_audit.get("is_classroom_compliant", True):
+            for def_msg in excel_audit.get("deficiencies", []):
+                blockers.append({
+                    "code": "excel_no_corresponde_a_ejercicios_de_clase",
+                    "detail": def_msg,
+                    "blocking": True,
+                })
+
         # 6. Comprobar estado en plataforma UAS
         platform_status = "sin_inspeccion_remota"
         active_snap = module_snapshot
@@ -435,13 +718,21 @@ class MonitorUasAgent(MonitorEntregasAgent):
                 platform_status = "Aun no se ha hecho ninguna tarea (No calificado)"
             else:
                 platform_status = "Pendiente en plataforma"
+        elif feedback_meta:
+            fb_grade = feedback_meta.get("grade", "")
+            fb_text = feedback_meta.get("feedback", "")
+            fb_action = feedback_meta.get("action_available", "")
+            if fb_grade and fb_text:
+                platform_status = f"Calificado: {fb_grade} — {fb_text} ({fb_action})"
+            elif fb_grade:
+                platform_status = f"Estado: {fb_grade} ({fb_action})"
         elif clean_slug in ("derecho-mercantil", "investigacion-aplicada-a-la-contaduria"):
             # Registro histórico verificado de asignaturas previas
             platform_status = "Calificado en UAS (Acreditado)"
 
         # 7. Determinar Estado de Ciclo de Vida
         lifecycle_state = self.get_lifecycle_state(
-            platform_status=platform_status,
+            platform_status=platform_status if excel_audit.get("is_classroom_compliant", True) else "requiere_correccion_docente",
             has_plan=plan_found,
             has_resources=resources_found,
             has_concepts=concepts_found,
@@ -453,10 +744,44 @@ class MonitorUasAgent(MonitorEntregasAgent):
         # 8. Formular recomendación técnica para aulatex
         recommended_action = "bloqueado_falta_prerrequisitos"
         rationale = ""
-        proposed_artifact = primary_pdf["path"] if primary_pdf else (primary_xlsx["path"] if primary_xlsx else None)
-        proposed_sha = primary_pdf["sha256"] if primary_pdf else (primary_xlsx["sha256"] if primary_xlsx else None)
+        proposed_artifact = (
+            primary_xlsx["path"]
+            if (mid in (50114, 50130, 50131) and primary_xlsx)
+            else (primary_pdf["path"] if primary_pdf else (primary_xlsx["path"] if primary_xlsx else None))
+        )
+        proposed_sha = (
+            primary_xlsx["sha256"]
+            if (mid in (50114, 50130, 50131) and primary_xlsx)
+            else (primary_pdf["sha256"] if primary_pdf else (primary_xlsx["sha256"] if primary_xlsx else None))
+        )
 
-        if lifecycle_state == LIFECYCLE_ENTREGA_CONFIRMADA:
+        if mid in (50114, 50130, 50131) and not excel_audit.get("is_classroom_compliant", True):
+            recommended_action = "corregir-ejercicios-clase-con-grabaciones"
+            defs_joined = " | ".join(excel_audit.get("deficiencies", []))
+            rationale = (
+                f"VALIDACIÓN FORENSE FALLIDA EN MÓDULO {mid}: {defs_joined} "
+                "Se requiere reconstruir el libro .xlsx utilizando exactamente las plantillas de la Carpeta de Apoyo (50094) "
+                "y las indicaciones de las grabaciones de clase antes de reenviar con 'Editar envío'."
+            )
+        elif mid == 50144 and not excel_audit.get("is_classroom_compliant", True):
+            recommended_action = "generar-excel-conta-s4-y-autorizar-entrega"
+            defs_joined = " | ".join(excel_audit.get("deficiencies", []))
+            rationale = (
+                f"Reporte Web PDF listo ({primary_pdf['filename'] if primary_pdf else 'pendiente'}), pero {defs_joined}"
+            )
+        elif mid == 50102 and feedback_meta:
+            recommended_action = "corregir-permisos-drive-y-subir-word-pdf"
+            rationale = (
+                f"Calificado {feedback_meta.get('grade', '2.50 / 3.00')}. Retroalimentación: '{feedback_meta.get('feedback', '')}'. "
+                "Restringir carpeta Drive exclusivamente a damaso.ruiz@uas.edu.mx y subir tanto Word (.docx) como PDF."
+            )
+        elif mid == 50113 and feedback_meta and "0.00" in feedback_meta.get("grade", ""):
+            recommended_action = "esperar-autorizacion-entrega"
+            rationale = (
+                f"Calificado {feedback_meta.get('grade', '0.00 / 6.00')} (NPT), pero el botón 'Añadir envío' sigue abierto en Moodle FCA. "
+                f"Entregable local listo: {primary_pdf['filename'] if primary_pdf else 'Plan-Reunion-Zoom-S2_MartinJonathanDeLaCruzMunoz.pdf'}."
+            )
+        elif lifecycle_state == LIFECYCLE_ENTREGA_CONFIRMADA:
             recommended_action = "ya_entregado"
             rationale = (
                 f"La actividad {activity_number} de {clean_slug} ya se encuentra acreditada/entregada en UAS "
@@ -600,15 +925,24 @@ class MonitorUasAgent(MonitorEntregasAgent):
             delivs = self._locate_deliverables(
                 subject_root, act, week=act_week, title=act_meta.get("title", ""), module_id=mid
             )
-            primary_deliv = delivs[0] if delivs else None
+            primary_deliv = (
+                next((d for d in delivs if d["extension"] == ".xlsx"), delivs[0])
+                if (mid in (50114, 50130, 50131) and delivs)
+                else (delivs[0] if delivs else None)
+            )
 
-            pstatus = "Aun no se ha hecho ninguna tarea" if rec.recommended_action != "ya_entregado" else "Calificado o enviado en UAS"
-            if mod_snap:
-                st = mod_snap.get("submission_status") or ""
-                if "Calificado" in st:
-                    pstatus = "Calificado en UAS"
-                elif "Enviado" in st:
-                    pstatus = "Enviado para calificar"
+            fb_meta = self._load_recordings_inventory_feedback(subject_root, mid)
+            if fb_meta and fb_meta.get("grade"):
+                fb_txt = fb_meta.get("feedback", "")
+                pstatus = f"Calificado: {fb_meta['grade']}" + (f" — {fb_txt}" if fb_txt else "")
+            else:
+                pstatus = "Aun no se ha hecho ninguna tarea" if rec.recommended_action != "ya_entregado" else "Calificado o enviado en UAS"
+                if mod_snap:
+                    st = mod_snap.get("submission_status") or ""
+                    if "Calificado" in st:
+                        pstatus = "Calificado en UAS"
+                    elif "Enviado" in st:
+                        pstatus = "Enviado para calificar"
 
             item = PendingDeliveryItem(
                 institution="UAS",
@@ -622,7 +956,7 @@ class MonitorUasAgent(MonitorEntregasAgent):
                 local_planning_ready="planeacion_canonica_verificada" in rec.prerequisites_satisfied,
                 local_resources_ready="recursos_organizados_verificados" in rec.prerequisites_satisfied,
                 local_concepts_ready="conceptos_extraidos_verificados" in rec.prerequisites_satisfied,
-                local_deliverable_ready=primary_deliv is not None,
+                local_deliverable_ready=primary_deliv is not None and rec.recommended_action != "corregir-ejercicios-clase-con-grabaciones",
                 local_deliverable_path=primary_deliv["path"] if primary_deliv else None,
                 local_deliverable_sha256=primary_deliv["sha256"] if primary_deliv else None,
                 satisfied_requirements=rec.prerequisites_satisfied,

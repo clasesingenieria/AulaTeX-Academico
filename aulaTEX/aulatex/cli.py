@@ -476,6 +476,7 @@ def build_parser() -> argparse.ArgumentParser:
     flujo_uas.add_argument("--check-only", action="store_true", help="Solo verificar precondiciones y credenciales.")
     flujo_uas.add_argument("--json", action="store_true", help="Emitir resultado completo en JSON.")
     flujo_uas.add_argument("--pending", action="store_true", help="Ejecutar monitor-uas y secuencialmente realizar entregas pendientes.")
+    flujo_uas.add_argument("--dialogue", action="store_true", help="Ejecutar auditoría forense de Excel y diálogo multi-agente con línea de acción.")
     flujo_uas.add_argument("--inspect", action="store_true", help="Inspeccionar plataforma UAS en vivo.")
     flujo_uas.add_argument("--no-compile", action="store_true", help="No compilar manuscritos TeX.")
 
@@ -576,6 +577,7 @@ def build_parser() -> argparse.ArgumentParser:
     uas_pending.add_argument("--download", action="store_true", help="Descargar recursos remotos.")
     uas_pending.add_argument("--no-compile", action="store_true", help="No compilar manuscritos TeX.")
     uas_pending.add_argument("--output", default="", help="Directorio de salida.")
+    uas_pending.add_argument("--dialogue", action="store_true", help="Ejecutar auditoría forense de Excel y diálogo multi-agente con línea de acción.")
     uas_pending.add_argument("--json", action="store_true", help="Emitir salida en JSON.")
 
     uas_entrega = sub.add_parser("uas-entrega", aliases=["entregar-uas"], help="Envio autenticado de entregables a UAS tras autorizacion explicita.")
@@ -1611,6 +1613,14 @@ def main(argv: list[str] | None = None) -> None:
         if getattr(args, "check_only", False):
             prereqs = orchestrator.verify_prerequisites()
             print(json.dumps(prereqs, ensure_ascii=False, indent=2))
+            return
+
+        if getattr(args, "dialogue", False):
+            diag_res = orchestrator.run_interagent_excel_dialogue(
+                subject_slug=getattr(args, "subject", "herramientas-digitales"),
+                course_id=getattr(args, "course_id", None) or 635,
+            )
+            print(json.dumps(diag_res, ensure_ascii=False, indent=2))
             return
 
         if getattr(args, "pending", False) or args.command in ("uas-pending", "monitor-uas"):

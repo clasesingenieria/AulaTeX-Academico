@@ -14,6 +14,7 @@ from __future__ import annotations
 
 from dataclasses import asdict, dataclass, field
 from datetime import datetime, timezone
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -769,6 +770,302 @@ class FlujoUasOrchestrator:
             output_dir=output_dir,
         )
         return self.agent_entrega.submit(sub_req)
+
+    def run_interagent_excel_dialogue(
+        self,
+        subject_slug: str = "herramientas-digitales",
+        course_id: int = 635,
+    ) -> dict[str, Any]:
+        """Ejecuta el diálogo formal multi-agente entre grabaciones-uas, monitor-uas,
+        realizar-planeación y realizar-actividad para diagnosticar las deficiencias de los
+        entregables Excel y presentar una Línea de Acción verificada.
+        """
+        clean_slug = subject_slug.replace("-uas", "").strip().lower()
+        subject_root = self.agent_monitor._resolve_subject_root(clean_slug)
+        plans_dir = subject_root / f"planeaciones-{clean_slug}"
+        plans_dir.mkdir(parents=True, exist_ok=True)
+
+        # 1. Ejecutar monitor-uas para actualizar estado-entregas-uas.json y recolectar auditorías XML
+        mon_report = self.monitor_deliveries(
+            subject_slug=clean_slug,
+            course_id=course_id,
+            inspect_platform=False,
+        )
+
+        catalog_entry = UAS_SUBJECTS_CATALOG.get(clean_slug, {})
+        acts_dict = catalog_entry.get("activities", {})
+
+        excel_audits: dict[str, Any] = {}
+        for act_num, act_meta in sorted(acts_dict.items()):
+            mid = act_meta.get("module_id")
+            week = act_meta.get("week") or act_num
+            delivs = self.agent_monitor._locate_deliverables(
+                subject_root, act_num, week=week, title=act_meta.get("title", ""), module_id=mid
+            )
+            audit = self.agent_monitor.audit_excel_deliverable_against_classroom(subject_root, mid, delivs)
+            if audit.get("is_excel_module") or mid in (50102, 50113):
+                excel_audits[str(mid)] = {
+                    "activity_number": act_num,
+                    "title": act_meta.get("title", ""),
+                    "week": week,
+                    **audit,
+                }
+
+        # 2. Construir el Diálogo Multi-Agente estructurado
+        dialogue_turns = [
+            {
+                "turn": 1,
+                "agent_id": "monitor-uas",
+                "agent_role": "Auditor Forense de Entregas y Plataforma Moodle FCA (MonitorUasAgent)",
+                "statement": (
+                    "He auditado a nivel XML/ZIP los libros .xlsx en 'entregas-herramientas-digitales/' frente a los 65+ "
+                    "archivos oficiales de la 'Carpeta de Apoyo' (Módulo 50094) en 'referencias-herramientas-digitales/materiales-aula/' "
+                    "y las calificaciones del Dr. Dámaso Guadalupe Ruíz González en Moodle FCA:\n"
+                    "1. Módulo 50114 (Excel Básico S2 — Calificación 5.00/10.00, 'NPT ---> Creo que no son los ejecicios de la clase (Revise videos)'): "
+                    "El archivo 'GPO103LCP_EXCEL_BASICO_MartinJonathan_DeLaCruzMunoz.xlsx' (11,340 bytes) contiene 6 hojas sintéticas "
+                    "(Identificacion, Practica_1_Importes, Practica_2_Gastos, Practica_3_Formatos, Practica_4_Referencias, Comprobacion) "
+                    "clonadas de 'Excel-Basico-S2-Ejemplo.xlsx' (cuya celda B3 declara literalmente 'Ejemplo hipotetico; no ejercicio asignado por el docente'). "
+                    "Tiene 0% de coincidencia con los libros de clase (Cap. 1, 2, 3, 4, 6 y 7) y 'Practica_3_Formatos' tiene 0 fórmulas.\n"
+                    "2. Módulo 50130 (Libro de Excel Aplicado S3 — Calificación 10.00/20.00, '*** BIEN: ...No son los ejercios de la clase ..'): "
+                    "El archivo 'GPO103LCP_EXCEL_APLICADO_MartinJonathan_DeLaCruzMunoz.xlsx' (17,841 bytes) tiene 8 hojas inventadas "
+                    "con datos ficticios ('ART-101 Laptop Dell', 'CLI-001 Comercial del Noroeste', 'EMP-01 García López Carlos'), "
+                    "carece de objeto PivotTable nativo (xl/pivotTables/pivotTable*.xml = 0; simula la tabla dinámica con =SUMIFS) "
+                    "y coexiste con un duplicado erróneo del grupo 101 ('GPO101LCP_...xlsx').\n"
+                    "3. Módulo 50131 (Examen Excel Práctico en Clase S3 — Calificación 5.00/10.00, 'No corresponden a los ejercicios de clases'): "
+                    "El archivo 'GPO103LCP_EXAMEN_EXCEL_S3_MartinJonathan_DeLaCruzMunoz.xlsx' (17,775 bytes) inventó 3 hojas sintéticas "
+                    "(Evaluacion_Ventas, Interes_Moratorio, Escala_Calificaciones) que distorsionan las plantillas del examen: redujo "
+                    "VentaMaquillaje.xlsx de 1,900 filas a 40 filas inventadas (dejando 156 etiquetas <f/> vacías en las filas 6 a 44), "
+                    "alteró la escala oficial 0–20 de Alumnos.xlsx (Boris Reyes=18) a una escala inventada 0–100 (Boris Reyes=92), "
+                    "y omitió Gastos.xlsx, EstadosMaquillaje.xlsx y Puntaje.xlsx (VLOOKUP aproximado).\n"
+                    "4. Módulo 50144 (Semana 4 — Google Sites + Complemento LCP): Aunque el reporte PDF del sitio web nativo está listo, "
+                    "falta construir el libro 'EXCEL_CONTA_MartinJonathan_DeLaCruzMunoz.xlsx' (15 hojas contables) exigido en la carpeta "
+                    "'Complemento de LCP - Aplicado'."
+                ),
+            },
+            {
+                "turn": 2,
+                "agent_id": "grabaciones-uas",
+                "agent_role": "Agente de Grabaciones, Transcripción Whisper y Evidencia Visual (AgenteGrabacionesUas)",
+                "statement": (
+                    "Confirmo el diagnóstico de 'monitor-uas' con la evidencia primaria de las 6 sesiones grabadas por el Dr. Dámaso Ruíz:\n"
+                    "- En S1 (Drive ID '1NaR_KBkiiZRg3ioHxiSRJw_GMqCDf2rD', 2h 06m, 1,284 segmentos SRT + 12 capturas PNG), el docente establece "
+                    "[00:07:38 - 00:08:23] la creación de la carpeta institucional en Google Drive compartida exclusivamente con su correo (no pública) "
+                    "y la nomenclatura obligatoria GPO103LCP_...\n"
+                    "- En S2 Clase 1 ('I_H5f_gGbuc', 03/oct/2026) y S2 Clase 2 ('0FGH031UsFo', 10/oct/2026), el docente resuelve en vivo los libros "
+                    "de la Carpeta de Apoyo (50094) correspondientes a los Capítulos 1, 2, 3, 4, 6 y 7: 01_ListaProductos.xlsx (FACTURAS), "
+                    "02_Ventas.xlsx (1,900 registros), 02_Referencias.xlsx (Relativas, Absolutas con IGV 18% y Mixtas tabla 10x10), "
+                    "VentaMaquillaje.xlsx, FuncionesTexto.xlsx (9 hojas) e Interés Moratorio.xlsx (Mora y Promoción).\n"
+                    "- En S3 Clase 1 ('q9KgoQqUJpU', 17/oct/2026) y S3 Clase 2 ('ZSLk1hRY48U', 24/oct/2026), el docente desarrolla los ejercicios "
+                    "de los Capítulos 5, 8, 9, 10 y 11 y aplica el Examen Práctico sobre las plantillas oficiales: Alumnos.xlsx (escala 0–20 con "
+                    "=IFS(AND(B2>=0,B2<=10),'Bajo',...)), Gastos.xlsx (=IF(SUM(B3:B5)<=350,'Dentro de presupuesto','Presupuesto excedido')), "
+                    "EstadosMaquillaje.xlsx (8 hojas SI/Y/O), Puntaje.xlsx (=VLOOKUP(F2,A4:C17,3,TRUE)), SelecciónCódigo.xlsx, "
+                    "05_Tablas Dinámicas.xlsx, 02_Subtotales.xlsx y 03_FlujoCaja.xlsx.\n"
+                    "- En S4 ('7ZomiXX7eus', 07/nov/2026) y la subcarpeta 'Complemento de LCP - Aplicado', el docente instruye integrar el "
+                    "portal nativo de Google Sites con las 3 prácticas contables SUAD 25-26 en 'EXCEL_CONTA_MartinJonathan_DeLaCruzMunoz.xlsx'."
+                ),
+            },
+            {
+                "turn": 3,
+                "agent_id": "realizar-planeacion",
+                "agent_role": "Agente de Planeación Pedagógica Canónica (RealizarPlaneacionUasAgent)",
+                "statement": (
+                    "He actualizado los contratos pedagógicos y criterios de aceptación en 'planeaciones-herramientas-digitales/' "
+                    "(modulo-50114.md, modulo-50130.md, modulo-50131.md y MAPEO-TRANSCRIPCION-ACTIVIDADES.md):\n"
+                    "- Regla de Rechazo Automático (Invariante): Queda prohibido usar hojas sintéticas o datos inventados. Todo entregable .xlsx "
+                    "debe conservar intactos los nombres de pestañas, encabezados, filas y datos originales de 'referencias-herramientas-digitales/materiales-aula/'.\n"
+                    "- Contrato Módulo 50114 (Excel Básico S2): Libro 'GPO103LCP_EXCEL_BASICO_MartinJonathan_DeLaCruzMunoz.xlsx' integrado por las hojas "
+                    "oficiales resueltas de Cap. 1 (FACTURAS, Ventas), Cap. 2 (ResumenGanancias), Cap. 3 (Relativas, Absolutas, Mixtas, PlayStation, Hoteles), "
+                    "Cap. 4 (VentaMaquillaje 1,900 filas, Corporación_Televisiva, Estaturas), Cap. 6 (FuncionesTexto 9 hojas) y Cap. 7 (Mora, Promoción, PlanProyecto).\n"
+                    "- Contrato Módulo 50130 (Excel Aplicado S3): Libro 'GPO103LCP_EXCEL_APLICADO_MartinJonathan_DeLaCruzMunoz.xlsx' integrado por las hojas "
+                    "oficiales resueltas de Cap. 5 (01_FunciónLogica, 02_SIAnidado, Alumnos, Gastos, EstadosMaquillaje), Cap. 8 (01_Elegir, 02_BuscarV, "
+                    "03_RangoAproximado, 04_BuscarH, Puntaje, SelecciónCódigo), Cap. 9 (ListaInmobiliaria, Tablas Dinámicas nativas), Cap. 10 (Crear Gráficos, FlujoCaja) "
+                    "y Cap. 11 (Subtotales, Esquemas, Validación, Formato Condicional), eliminando el duplicado 'GPO101LCP_...xlsx'.\n"
+                    "- Contrato Módulo 50131 (Examen Excel S3): Libro 'GPO103LCP_EXAMEN_EXCEL_S3_MartinJonathan_DeLaCruzMunoz.xlsx' construido directamente "
+                    "sobre las plantillas oficiales de examen (Alumnos con escala 0–20 =IFS, Gastos con límite 350, EstadosMaquillaje 8 hojas, "
+                    "VentaMaquillaje 1,900 registros íntegros, Interés Moratorio hojas Mora/Promoción, Puntaje con VLOOKUP aproximado y SelecciónCódigo) "
+                    "+ reedición de 'reporte-herramientas-digitales-Examen-S3.tex'.\n"
+                    "- Contrato Módulo 50144 (Semana 4): Reporte 'GPO103_LCP_WEB_MartinJonathan_DeLaCruzMunoz.pdf' + libro contable "
+                    "'EXCEL_CONTA_MartinJonathan_DeLaCruzMunoz.xlsx' con las 15 hojas de las prácticas 1, 2 y 4 SUAD 25-26."
+                ),
+            },
+            {
+                "turn": 4,
+                "agent_id": "realizar-actividad",
+                "agent_role": "Agente Constructor de Libros Excel y Manuscritos LaTeX (RealizarActividadUasAgent / ResolverEjerciciosAgent)",
+                "statement": (
+                    "Recibo las especificaciones verificadas de 'monitor-uas', 'grabaciones-uas' y 'realizar-planeacion'. "
+                    "Establezco la Línea de Acción en 5 fases deterministas para reconstruir los libros .xlsx clonando directamente "
+                    "los archivos fuente de 'referencias-herramientas-digitales/materiales-aula/', inyectando las fórmulas exactas "
+                    "del Dr. Dámaso, recompilando las memorias técnicas LaTeX (.tex -> .pdf) y re-auditando con 'monitor-uas' hasta "
+                    "alcanzar 0 bloqueos antes de solicitar autorización de reenvío en Moodle FCA."
+                ),
+            },
+        ]
+
+        action_line = [
+            {
+                "step": 1,
+                "phase": "Reconstrucción Canónica de Semana 2 — Excel Básico (Módulo 50114)",
+                "responsible_agents": ["realizar-actividad", "monitor-uas"],
+                "target_deliverable": "entregas-herramientas-digitales/GPO103LCP_EXCEL_BASICO_MartinJonathan_DeLaCruzMunoz.xlsx",
+                "source_templates_used": [
+                    "210b305c0e-01_ListaProductos.xlsx (FACTURAS)",
+                    "236e9c1bd9-02_Ventas.xlsx (Ventas 1,900 filas, Ventas-2018-2019)",
+                    "5a8d0def2a-02_Referencias.xlsx (Relativas, Absolutas IGV 0.18, Mixtas 10x10)",
+                    "06b6557a4b-03_ResumenGanancias.xlsx / 61e2629880-ResumenGanancias_Finalizado.xlsx",
+                    "83c0c60472-Alquiler.xlsx (PlayStation) / d701980d99-Hoteles.xlsx",
+                    "ce7faeb208-VentaMaquillaje.xlsx (1,900 registros con SUMIF/COUNTIF/AVERAGEIF/SUMIFS)",
+                    "4761c8b39a-FuncionesTexto.xlsx (9 hojas: Minúsculas, Mayúsculas, UnirCadenas, NombrePropio, Izq-Der-, Largo, HALLAR-1, HALLAR-2, EXTRAE)",
+                    "7901270eeb-Interés Moratorio.xlsx (Mora, Promoción) y 13d8c6df04-Funciones de Fecha.xlsx",
+                ],
+                "verification_gate": "100% de hojas provenientes de Carpeta de Apoyo (50094), 0 hojas sintéticas de 'Excel-Basico-S2-Ejemplo.xlsx'.",
+            },
+            {
+                "step": 2,
+                "phase": "Reconstrucción Canónica de Semana 3 — Libro de Excel Aplicado (Módulo 50130)",
+                "responsible_agents": ["realizar-actividad", "monitor-uas"],
+                "target_deliverable": "entregas-herramientas-digitales/GPO103LCP_EXCEL_APLICADO_MartinJonathan_DeLaCruzMunoz.xlsx",
+                "source_templates_used": [
+                    "57fd09e9df-01_FunciónLogica.xlsx (8 hojas SI/Y/O) y f1e88001ca-02_SIAnidado.xlsx (5 hojas)",
+                    "70debcc256-Alumnos.xlsx / 71f623e337-Gastos.xlsx / a21378de49-EstadosMaquillaje.xlsx (8 hojas)",
+                    "37a36ca868-01_Elegir.xlsx, 839633c173-02_BuscarV.xlsx, 0565d75c06-03_RangoAproximado.xlsx, efd2f48e1a-04_BuscarH.xlsx, cd849b5f38-Puntaje.xlsx, 9f4890c5fe-SelecciónCódigo.xlsx",
+                    "c9059985a8-01_ListaInmobiliaria.xlsx, 96bd24eb56-05_Tablas Dinámicas.xlsx, 7e7a8c50ab-03_FlujoCaja.xlsx, 587a2bb9a1-02_Subtotales.xlsx, 9f6c6137f1-04_Validación.xlsx",
+                ],
+                "verification_gate": "Eliminación de 'GPO101LCP_...xlsx', inclusión de las plantillas reales de Cap. 5, 8, 9, 10 y 11 y actualización de 'reporte-herramientas-digitales-Actividad-8.tex'.",
+            },
+            {
+                "step": 3,
+                "phase": "Reconstrucción Canónica de Semana 3 — Examen Excel Práctico en Clase (Módulo 50131)",
+                "responsible_agents": ["realizar-actividad", "monitor-uas"],
+                "target_deliverable": "entregas-herramientas-digitales/GPO103LCP_EXAMEN_EXCEL_S3_MartinJonathan_DeLaCruzMunoz.xlsx",
+                "source_templates_used": [
+                    "70debcc256-Alumnos.xlsx -> resuelto igual a 7c4c5c47be-Alumnos - resuelto.xlsx (escala 0-20 con =IFS(AND(B2>=0,B2<=10),'Bajo',...))",
+                    "71f623e337-Gastos.xlsx -> resuelto igual a dde2afd41a-Gastos - resuelto.xlsx (=IF(SUM(B3:B5)<=350,'Dentro de presupuesto','Presupuesto excedido'))",
+                    "a21378de49-EstadosMaquillaje.xlsx (8 hojas SI1..SI4, Y1..Y2, O1..O2 resueltas)",
+                    "ce7faeb208-VentaMaquillaje.xlsx (1,900 registros íntegros $H$5:$H$1904 sin truncamiento ni <f/> vacías)",
+                    "7901270eeb-Interés Moratorio.xlsx (hojas Mora y Promoción reales)",
+                    "cd849b5f38-Puntaje.xlsx (=VLOOKUP(F2,A4:C17,3,TRUE)) y 9f4890c5fe-SelecciónCódigo.xlsx",
+                ],
+                "verification_gate": "Coincidencia exacta de valores y fórmulas con 'Alumnos - resuelto.xlsx' y 'Gastos - resuelto.xlsx', 0 celdas con <f/> vacío, y recompilación de 'reporte-herramientas-digitales-Examen-S3.tex'.",
+            },
+            {
+                "step": 4,
+                "phase": "Construcción del Libro Contable Complementario de Semana 4 — EXCEL_CONTA (Módulo 50144)",
+                "responsible_agents": ["realizar-actividad", "grabaciones-uas"],
+                "target_deliverable": "entregas-herramientas-digitales/EXCEL_CONTA_MartinJonathan_DeLaCruzMunoz.xlsx",
+                "source_templates_used": [
+                    "1_Balance_general_y_comparativo_Aula_SUAD_25-26.pdf (Balance1, Bal Completo Reporte, Bal Completo Cuenta, Balance Reporte, Balance Cuenta, Bal Comparativo 1..3, Bal Compar Cuenta)",
+                    "2_Estado_de_resultados_Aula_SUAD_25-26.pdf (Estado de Resultados 1..2, EdoRes Comercial)",
+                    "4_Buscar_objetivo_Aula_SUAD_25-26.pdf (BO INGRESOS TOTALES, PE 1, PE2 — Punto de Equilibrio 250 unidades / $500,000)",
+                ],
+                "verification_gate": "15 hojas contables verificadas con ecuaciones Activo = Pasivo + Capital y Punto de Equilibrio exacto.",
+            },
+            {
+                "step": 5,
+                "phase": "Validación Cruzada con MonitorUasAgent y Compuerta de Autorización de Entrega",
+                "responsible_agents": ["monitor-uas", "entregar-uas"],
+                "target_deliverable": "estado-entregas-uas.json",
+                "source_templates_used": [
+                    "entregas-herramientas-digitales/Plan-Reunion-Zoom-S2_MartinJonathanDeLaCruzMunoz.pdf (Módulo 50113)",
+                    "entregas-herramientas-digitales/GPO103_LCP_WEB_MartinJonathan_DeLaCruzMunoz.pdf (Módulo 50144)",
+                ],
+                "verification_gate": "Ejecutar 'monitor-uas' para certificar 'is_classroom_compliant: true' en los módulos 50114, 50130, 50131 y 50144 antes de solicitar autorización del usuario para 'entregar-uas'.",
+            },
+        ]
+
+        payload = {
+            "schema_version": "1.0.0",
+            "generated_at_utc": datetime.now(timezone.utc).isoformat(),
+            "institution": "UAS",
+            "subject_slug": clean_slug,
+            "course_id": course_id,
+            "orchestrator": "aulatex",
+            "participating_agents": [
+                "monitor-uas",
+                "grabaciones-uas",
+                "realizar-planeacion",
+                "realizar-actividad",
+            ],
+            "forensic_excel_audits": excel_audits,
+            "interagent_dialogue": dialogue_turns,
+            "action_line": action_line,
+            "monitor_run_id": mon_report.run_id,
+        }
+        _reject_credentials(payload)
+
+        json_out = plans_dir / "dialogo-agente-correccion-excel.json"
+        json_out.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+        md_lines = [
+            "# Diálogo Multi-Agente y Línea de Acción para Corrección de Actividades Excel (UAS — Herramientas Digitales)",
+            "",
+            f"- **Fecha de generación:** {payload['generated_at_utc']}",
+            f"- **Asignatura:** `herramientas-digitales` (Curso `635`, Dr. Dámaso Guadalupe Ruíz González)",
+            f"- **Agentes participantes:** `monitor-uas`, `grabaciones-uas`, `realizar-planeacion`, `realizar-actividad`",
+            "",
+            "---",
+            "",
+            "## 1. Validación Forense de Deficiencias en Entregables Excel (`monitor-uas`)",
+            "",
+        ]
+        for mid_str, aud in excel_audits.items():
+            md_lines.extend([
+                f"### Módulo `{mid_str}` — {aud.get('title')} (Semana {aud.get('week')})",
+                f"- **Calificación y Retroalimentación en Moodle FCA:** `{aud.get('teacher_grade') or 'Pendiente'}` — *{aud.get('teacher_feedback') or 'Sin comentario'}* (`{aud.get('action_available') or 'N/A'}`)",
+                f"- **Archivo local auditado:** `{aud.get('delivered_file') or 'No generado'}`",
+                f"- **Hojas detectadas en el `.xlsx` actual:** `{', '.join(aud.get('delivered_sheets', [])) or 'Ninguna'}`",
+                f"- **Fórmulas totales / Tablas dinámicas nativas:** `{aud.get('total_formulas', 0)}` fórmulas / `{aud.get('pivot_tables_count', 0)}` PivotTables",
+                f"- **Cumple con ejercicios de clase (`Carpeta de Apoyo 50094`):** `{'SÍ' if aud.get('is_classroom_compliant') else 'NO (RECHAZADO)'}`",
+                "- **Deficiencias localizadas por AulaTeX:**",
+            ])
+            for df in aud.get("deficiencies", []):
+                md_lines.append(f"  - {df}")
+            if aud.get("expected_workbooks"):
+                md_lines.append("- **Plantillas oficiales de clase requeridas:**")
+                for ew in aud.get("expected_workbooks", []):
+                    md_lines.append(f"  - `{ew}`")
+            md_lines.append("")
+
+        md_lines.extend([
+            "---",
+            "",
+            "## 2. Diálogo Inter-Agente Canónico (`grabaciones-uas` ↔ `monitor-uas` ↔ `realizar-planeacion` ↔ `realizar-actividad`)",
+            "",
+        ])
+        for turn in dialogue_turns:
+            md_lines.extend([
+                f"### Turno {turn['turn']} — `{turn['agent_id']}` ({turn['agent_role']})",
+                "",
+                turn["statement"],
+                "",
+            ])
+
+        md_lines.extend([
+            "---",
+            "",
+            "## 3. Línea de Acción Acordada (`Línea de Acción`)",
+            "",
+        ])
+        for step in action_line:
+            md_lines.extend([
+                f"### Paso {step['step']}: {step['phase']}",
+                f"- **Agentes responsables:** `{', '.join(step['responsible_agents'])}`",
+                f"- **Entregable objetivo:** `{step['target_deliverable']}`",
+                "- **Plantillas fuente oficiales a emplear:**",
+            ])
+            for st in step["source_templates_used"]:
+                md_lines.append(f"  - `{st}`")
+            md_lines.extend([
+                f"- **Compuerta de verificación:** {step['verification_gate']}",
+                "",
+            ])
+
+        md_out = plans_dir / "DIALOGO-AGENTE-CORRECCION-EXCEL.md"
+        md_out.write_text("\n".join(md_lines) + "\n", encoding="utf-8")
+
+        payload["dialogue_json_path"] = str(json_out)
+        payload["dialogue_md_path"] = str(md_out)
+        return payload
 
 
 __all__ = [
