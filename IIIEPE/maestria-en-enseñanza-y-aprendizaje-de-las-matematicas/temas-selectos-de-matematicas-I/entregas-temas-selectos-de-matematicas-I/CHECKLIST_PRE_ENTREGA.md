@@ -5,7 +5,7 @@
 - **Asignatura:** Temas Selectos de Matemáticas I (Course ID: 996)
 - **Estudiante:** Mtro. Martín Jonathan de la Cruz Muñoz (Matrícula: 00874)
 - **Docente Titular:** Mtro. Oscar Zertuche Santos
-- **Fecha de sincronización:** 2026-11-11 10:05:55 UTC
+- **Fecha de sincronización:** 2026-11-14 03:27:16 UTC
 
 ## Invariantes Editoriales Verificados
 
@@ -35,7 +35,7 @@
 | `actividad-05-ecuaciones-lineales` | reporte | `reporte-temas-selectos-matematicas-i-act-05-ecuaciones-lineales_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 277.7 KB | `fdc3c774ffc9...` |
 | `actividad-05-ecuaciones-lineales` | presentacion | `presentacion-temas-selectos-matematicas-i-act-05-ecuaciones-lineales_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 360.7 KB | `df137983fc18...` |
 | `actividad-05-ecuaciones-lineales` | ficha_estudiante | `ficha-temas-selectos-matematicas-i-act-05-ecuaciones-lineales_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 203.6 KB | `2a9df6801754...` |
-| `actividad-06-estadistica` | reporte | `reporte-temas-selectos-matematicas-i-act-06-estadistica_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 232.6 KB | `2eddbb7678e7...` |
+| `actividad-06-estadistica` | reporte | `reporte-temas-selectos-matematicas-i-act-06-estadistica_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 232.6 KB | `6f7b3c4aa925...` |
 | `actividad-06-estadistica` | presentacion | `presentacion-temas-selectos-matematicas-i-act-06-estadistica_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 327.9 KB | `3c383e3045ca...` |
 | `actividad-06-estadistica` | ficha_estudiante | `ficha-temas-selectos-matematicas-i-act-06-estadistica_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 198.4 KB | `5b5530f416ec...` |
 | `actividad-07-geometria` | reporte | `reporte-temas-selectos-matematicas-i-act-07-geometria_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 249.8 KB | `86e6c0726002...` |
@@ -53,7 +53,7 @@
 | `actividad-11-algebra-y-robotica` | reporte | `reporte-temas-selectos-matematicas-i-act-11-algebra-y-robotica_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 255.0 KB | `946f41f0a5eb...` |
 | `actividad-11-algebra-y-robotica` | presentacion | `presentacion-temas-selectos-matematicas-i-act-11-algebra-y-robotica_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 366.2 KB | `bc548943f5f3...` |
 | `actividad-11-algebra-y-robotica` | ficha_estudiante | `ficha-temas-selectos-matematicas-i-act-11-algebra-y-robotica_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 173.6 KB | `5ecaa6aa410b...` |
-| `actividad-12-reflexion-pedagogica` | reporte | `reporte-temas-selectos-matematicas-i-act-12-reflexion-pedagogica_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 232.2 KB | `abb140d98577...` |
+| `actividad-12-reflexion-pedagogica` | reporte | `reporte-temas-selectos-matematicas-i-act-12-reflexion-pedagogica_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 232.4 KB | `b8decf97df65...` |
 | `actividad-12-reflexion-pedagogica` | presentacion | `presentacion-temas-selectos-matematicas-i-act-12-reflexion-pedagogica_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 304.0 KB | `e7243fb1fee9...` |
 
 > [!IMPORTANT]
