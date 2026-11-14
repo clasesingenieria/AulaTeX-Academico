@@ -187,8 +187,9 @@ class MonitorUasAgent(MonitorEntregasAgent):
 
         if module_id == 50144 or "google sites" in t_low or "sitio web" in t_low or (activity_number == 6 and slug == "herramientas-digitales"):
             patterns = [
-                "*WEB*.pdf",
+                "GPO103_LCP_WEB*.pdf",
                 "*EXCEL_CONTA*.xlsx",
+                "*WEB*.pdf",
                 "*Google_Sites*.pdf",
                 "*Sitio_Web*.pdf",
             ]
@@ -301,9 +302,9 @@ class MonitorUasAgent(MonitorEntregasAgent):
                     for sh in wb.findall(".//main:sheet", ns):
                         sname = sh.attrib.get("name", "")
                         rid = sh.attrib.get("{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id", "")
-                        target = rels.get(rid, "")
+                        target = rels.get(rid, "").lstrip("/")
                         if target and not target.startswith("xl/"):
-                            target = "xl/" + target.lstrip("/")
+                            target = "xl/" + target
                         info["sheets"].append(sname)
 
                         rows_count = 0
@@ -339,16 +340,36 @@ class MonitorUasAgent(MonitorEntregasAgent):
         """Carga la retroalimentación docente y grabaciones asociadas desde inventario-grabaciones-uas.json."""
         if not module_id:
             return {}
-        inv_path = subject_root / f"referencias-{subject_root.name}" / "grabaciones" / "inventario-grabaciones-uas.json"
-        if not inv_path.is_file():
-            return {}
-        try:
-            data = json.loads(inv_path.read_text(encoding="utf-8"))
-            for item in data.get("activity_feedback_analysis", []):
-                if int(item.get("module_id", 0)) == int(module_id):
-                    return item
-        except Exception:
-            pass
+        grab_dir = subject_root / f"referencias-{subject_root.name}" / "grabaciones"
+        for candidate in (grab_dir / "analisis-indicaciones-grabaciones.json", grab_dir / "inventario-grabaciones-uas.json"):
+            if not candidate.is_file():
+                continue
+            try:
+                data = json.loads(candidate.read_text(encoding="utf-8"))
+                for item in data.get("activity_feedback_analysis", []):
+                    if int(item.get("module_id", 0)) == int(module_id):
+                        return item
+                mod_fb = data.get("platform_verification", {}).get("module_feedback_summary", {}).get(str(module_id))
+                if mod_fb:
+                    comments = mod_fb.get("feedback_comments", [])
+                    clean_comment = comments[-1].replace("Comentario general", "").strip() if comments else ""
+                    action_map = {
+                        50102: "Editar envío (abierto)",
+                        50113: "Añadir envío (abierto)",
+                        50114: "Editar envío (abierto)",
+                        50130: "Editar envío (abierto)",
+                        50131: "Editar envío (abierto)",
+                        50144: "Añadir envío (abierto — cierra domingo 15 nov 2026)",
+                    }
+                    return {
+                        "module_id": module_id,
+                        "title": mod_fb.get("title", ""),
+                        "grade": mod_fb.get("grade", "").replace("\u00a0", " "),
+                        "feedback": clean_comment.replace("\u00a0", " "),
+                        "action_available": action_map.get(int(module_id), "Abierto"),
+                    }
+            except Exception:
+                pass
         return {}
 
     def audit_excel_deliverable_against_classroom(

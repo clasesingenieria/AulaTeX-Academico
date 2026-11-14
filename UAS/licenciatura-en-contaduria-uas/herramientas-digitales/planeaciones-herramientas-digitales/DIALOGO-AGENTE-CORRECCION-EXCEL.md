@@ -1,6 +1,6 @@
 # Diálogo Multi-Agente y Línea de Acción para Corrección de Actividades Excel (UAS — Herramientas Digitales)
 
-- **Fecha de generación:** 2026-11-14T11:15:10.977816+00:00
+- **Fecha de generación:** 2026-11-14T11:18:39.830358+00:00
 - **Asignatura:** `herramientas-digitales` (Curso `635`, Dr. Dámaso Guadalupe Ruíz González)
 - **Agentes participantes:** `monitor-uas`, `grabaciones-uas`, `realizar-planeacion`, `realizar-actividad`
 
@@ -9,7 +9,7 @@
 ## 1. Validación Forense de Deficiencias en Entregables Excel (`monitor-uas`)
 
 ### Módulo `50102` — Práctica: Compartir Carpeta de Trabajo (Semana 1)
-- **Calificación y Retroalimentación en Moodle FCA:** `Pendiente` — *Sin comentario* (`N/A`)
+- **Calificación y Retroalimentación en Moodle FCA:** `2.50 / 3.00` — *MUY BIEN: ...su trabajo esta escelentemente estructurado, sólo que la carpeta se comparte con el docente NO DE FORMA pública...y no subio los archivos PDF y Word...* (`Editar envío (abierto)`)
 - **Archivo local auditado:** `No generado`
 - **Hojas detectadas en el `.xlsx` actual:** `Ninguna`
 - **Fórmulas totales / Tablas dinámicas nativas:** `0` fórmulas / `0` PivotTables
@@ -17,20 +17,22 @@
 - **Deficiencias localizadas por AulaTeX:**
 
 ### Módulo `50113` — Práctica de reuniones virtuales en Zoom (Semana 2)
-- **Calificación y Retroalimentación en Moodle FCA:** `Pendiente` — *Sin comentario* (`N/A`)
+- **Calificación y Retroalimentación en Moodle FCA:** `0.00 / 6.00` — *NPT* (`Añadir envío (abierto)`)
 - **Archivo local auditado:** `No generado`
 - **Hojas detectadas en el `.xlsx` actual:** `Ninguna`
 - **Fórmulas totales / Tablas dinámicas nativas:** `0` fórmulas / `0` PivotTables
-- **Cumple con ejercicios de clase (`Carpeta de Apoyo 50094`):** `SÍ`
-- **Deficiencias localizadas por AulaTeX:**
-
-### Módulo `50114` — Práctica de ejercicios en Excel básico de la Sesión 2 (Semana 2)
-- **Calificación y Retroalimentación en Moodle FCA:** `Pendiente` — *Sin comentario* (`N/A`)
-- **Archivo local auditado:** `GPO103LCP_EXCEL_BASICO_MartinJonathan_DeLaCruzMunoz.xlsx`
-- **Hojas detectadas en el `.xlsx` actual:** `Identificacion, Practica_1_Importes, Practica_2_Gastos, Practica_3_Formatos, Practica_4_Referencias, Comprobacion`
-- **Fórmulas totales / Tablas dinámicas nativas:** `0` fórmulas / `0` PivotTables
 - **Cumple con ejercicios de clase (`Carpeta de Apoyo 50094`):** `NO (RECHAZADO)`
 - **Deficiencias localizadas por AulaTeX:**
+  - Retroalimentación oficial en Moodle FCA (0.00 / 6.00): 'NPT'.
+
+### Módulo `50114` — Práctica de ejercicios en Excel básico de la Sesión 2 (Semana 2)
+- **Calificación y Retroalimentación en Moodle FCA:** `5.00 / 10.00` — *NPT --->  Creo que no son los ejecicios de la clase (Revise videos)* (`Editar envío (abierto)`)
+- **Archivo local auditado:** `GPO103LCP_EXCEL_BASICO_MartinJonathan_DeLaCruzMunoz.xlsx`
+- **Hojas detectadas en el `.xlsx` actual:** `Identificacion, Practica_1_Importes, Practica_2_Gastos, Practica_3_Formatos, Practica_4_Referencias, Comprobacion`
+- **Fórmulas totales / Tablas dinámicas nativas:** `72` fórmulas / `0` PivotTables
+- **Cumple con ejercicios de clase (`Carpeta de Apoyo 50094`):** `NO (RECHAZADO)`
+- **Deficiencias localizadas por AulaTeX:**
+  - Retroalimentación oficial en Moodle FCA (5.00 / 10.00): 'NPT --->  Creo que no son los ejecicios de la clase (Revise videos)'.
   - El archivo 'GPO103LCP_EXCEL_BASICO_MartinJonathan_DeLaCruzMunoz.xlsx' contiene 6 hojas sintéticas (Identificacion, Practica_1_Importes, Practica_2_Gastos, Practica_3_Formatos, Practica_4_Referencias, Comprobacion) derivadas de 'Excel-Basico-S2-Ejemplo.xlsx' ('Ejemplo hipotetico; no ejercicio asignado por el docente') con 0% de coincidencia con los 30+ libros oficiales de la Carpeta de Apoyo (Cap. 1, 2, 3, 4, 6 y 7).
   - La hoja 'Practica_3_Formatos' tiene 0 fórmulas dinámicas (valores estáticos hardcodeados).
 - **Plantillas oficiales de clase requeridas:**
@@ -46,12 +48,13 @@
   - `Funciones de Fecha.xlsx / Interés Moratorio.xlsx (Mora, Promoción) / Mundial Qatar.xlsx / PlanProyecto.xlsx`
 
 ### Módulo `50130` — Libro de Excel Aplicado S3 (Semana 3)
-- **Calificación y Retroalimentación en Moodle FCA:** `Pendiente` — *Sin comentario* (`N/A`)
+- **Calificación y Retroalimentación en Moodle FCA:** `10.00 / 20.00` — **** BIEN: ...No son los ejercios de la clase ..* (`Editar envío (abierto)`)
 - **Archivo local auditado:** `GPO103LCP_EXCEL_APLICADO_MartinJonathan_DeLaCruzMunoz.xlsx`
 - **Hojas detectadas en el `.xlsx` actual:** `Control_Identificacion, Referencias_Rel_Abs_Mix, Funciones_Logicas_SI, SI_Anidado_Escalas, BuscarV_BuscarH, Subtotales_Esquemas, Tablas_Dinamicas_Resumen, Graficos_Analisis_Financiero`
-- **Fórmulas totales / Tablas dinámicas nativas:** `0` fórmulas / `0` PivotTables
+- **Fórmulas totales / Tablas dinámicas nativas:** `132` fórmulas / `0` PivotTables
 - **Cumple con ejercicios de clase (`Carpeta de Apoyo 50094`):** `NO (RECHAZADO)`
 - **Deficiencias localizadas por AulaTeX:**
+  - Retroalimentación oficial en Moodle FCA (10.00 / 20.00): '*** BIEN: ...No son los ejercios de la clase ..'.
   - El archivo 'GPO103LCP_EXCEL_APLICADO_MartinJonathan_DeLaCruzMunoz.xlsx' contiene 8 hojas inventadas (Control_Identificacion, Referencias_Rel_Abs_Mix, Funciones_Logicas_SI, SI_Anidado_Escalas, BuscarV_BuscarH, Subtotales_Esquemas, Tablas_Dinamicas_Resumen, Graficos_Analisis_Financiero) con datos ficticios ('ART-101 Laptop Dell', 'CLI-001 Comercial del Noroeste', 'EMP-01 García López Carlos') y 0% de coincidencia con las plantillas de la Carpeta de Apoyo (Cap. 5, 8, 9, 10 y 11).
   - La hoja 'Tablas_Dinamicas_Resumen' carece de objeto PivotTable nativo (xl/pivotTables/pivotTable*.xml = 0); simula la tabla dinámica con fórmulas =SUMIFS(...).
   - Existe archivo duplicado con nomenclatura de grupo errónea 'GPO101LCP_EXCEL_APLICADO_...' junto a 'GPO103LCP_...'.
@@ -65,12 +68,13 @@
   - `02_Subtotales.xlsx / 03_Esquemas.xlsx / 04_Validación.xlsx / 06_Formato Prestablecido.xlsx / 07_Crear reglas.xlsx`
 
 ### Módulo `50131` — Examen Excel Práctico en Clase S3 (Semana 3)
-- **Calificación y Retroalimentación en Moodle FCA:** `Pendiente` — *Sin comentario* (`N/A`)
+- **Calificación y Retroalimentación en Moodle FCA:** `5.00 / 10.00` — *No corresponden a los ejercicios de clases* (`Editar envío (abierto)`)
 - **Archivo local auditado:** `GPO103LCP_EXAMEN_EXCEL_S3_MartinJonathan_DeLaCruzMunoz.xlsx`
 - **Hojas detectadas en el `.xlsx` actual:** `Identificacion, Evaluacion_Ventas, Interes_Moratorio, Escala_Calificaciones`
 - **Fórmulas totales / Tablas dinámicas nativas:** `21` fórmulas / `0` PivotTables
 - **Cumple con ejercicios de clase (`Carpeta de Apoyo 50094`):** `NO (RECHAZADO)`
 - **Deficiencias localizadas por AulaTeX:**
+  - Retroalimentación oficial en Moodle FCA (5.00 / 10.00): 'No corresponden a los ejercicios de clases'.
   - El archivo 'GPO103LCP_EXAMEN_EXCEL_S3_MartinJonathan_DeLaCruzMunoz.xlsx' contiene 3 hojas sintéticas (Identificacion, Evaluacion_Ventas, Interes_Moratorio, Escala_Calificaciones) que distorsionan las plantillas oficiales del examen en clase: redujo VentaMaquillaje de 1,900 filas a 40 filas inventadas, alteró la escala oficial 0-20 de Alumnos.xlsx (Boris Reyes=18) a una escala inventada 0-100 (Boris Reyes=92), y omitió Gastos.xlsx, EstadosMaquillaje.xlsx y Puntaje.xlsx (VLOOKUP aproximado).
   - La hoja 'Evaluacion_Ventas' en 'GPO103LCP_EXAMEN_EXCEL_S3_MartinJonathan_DeLaCruzMunoz.xlsx' tiene 32 celdas con etiquetas <f/> vacías (fórmulas rotas en filas 6 a 44).
 - **Plantillas oficiales de clase requeridas:**
@@ -82,7 +86,7 @@
   - `Puntaje.xlsx (=VLOOKUP(F2,A4:C17,3,TRUE)) y SelecciónCódigo.xlsx`
 
 ### Módulo `50144` — Google Sites (Semana 4)
-- **Calificación y Retroalimentación en Moodle FCA:** `Pendiente` — *Sin comentario* (`N/A`)
+- **Calificación y Retroalimentación en Moodle FCA:** `Sin calificar` — *Sin comentario* (`Añadir envío (abierto — cierra domingo 15 nov 2026)`)
 - **Archivo local auditado:** `No generado`
 - **Hojas detectadas en el `.xlsx` actual:** `Ninguna`
 - **Fórmulas totales / Tablas dinámicas nativas:** `0` fórmulas / `0` PivotTables
