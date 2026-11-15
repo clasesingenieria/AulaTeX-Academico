@@ -397,7 +397,25 @@ class EntregarUasAgent(RealizarEntregaAgent):
             page.goto(edit_url, wait_until="networkidle")
             ensure_same_https_host(page.url, UAS_HOST, UAS_BASE_URL)
 
-            # Si ya hay archivo o está el botón de agregar
+            # 3. Eliminar archivos previos en el área de borrador para reemplazar limpiamente
+            for _ in range(10):
+                existing = page.locator(".fp-content .fp-file:visible")
+                if existing.count() == 0:
+                    break
+                before_cnt = existing.count()
+                existing.first.click()
+                del_btn = page.locator("button.fp-file-delete:visible, a.fp-file-delete:visible").first
+                if del_btn.count():
+                    del_btn.click()
+                    page.wait_for_timeout(400)
+                    confirm_btn = page.locator("button.fp-dlg-butconfirm:visible, .moodle-dialogue-confirm button:has-text('OK'):visible, .moodle-dialogue-confirm button:has-text('Sí'):visible").first
+                    if confirm_btn.count():
+                        confirm_btn.click()
+                    page.wait_for_timeout(800)
+                if page.locator(".fp-content .fp-file:visible").count() >= before_cnt:
+                    break
+
+            # 4. Proceder a subir el archivo
             add_btn = page.locator(".fp-btn-add a, [title='Agregar...'], a[title*='gregar']").first
             if add_btn.count():
                 add_btn.click()
@@ -416,9 +434,13 @@ class EntregarUasAgent(RealizarEntregaAgent):
                 if upload_btn.count():
                     upload_btn.click()
 
-                # Esperar a que se cierre el modal
+                # Esperar a que se cierre el modal (manejando posible diálogo de sobrescritura)
                 for _ in range(30):
                     time.sleep(1)
+                    overwrite_btn = page.locator("button.fp-dlg-butoverwrite:visible, button:has-text('Sobreescribir'):visible").first
+                    if overwrite_btn.count():
+                        overwrite_btn.click()
+                        continue
                     if page.locator('.moodle-dialogue-focused, .moodle-dialogue-wrap').filter(has_text=re.compile("Subir un archivo", re.I)).count() == 0:
                         break
 
