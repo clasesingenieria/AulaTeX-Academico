@@ -1413,18 +1413,24 @@ class AgenteSitioLex:
 
         if self._select_editor_page(page, "Inicio"):
             body_carousels = page.locator(
-                'article.UynGwb section:not([data-header="true"]):has([aria-roledescription="carousel"], [data-carousel-id])'
+                f'article.UynGwb section:not([data-header="true"]):has({self._CAROUSEL_SELECTOR})'
             )
-            while body_carousels.count() > 1:
+            max_trim = 8
+            while body_carousels.count() > 1 and max_trim > 0:
+                max_trim -= 1
                 extra_c = body_carousels.last
                 extra_c.scroll_into_view_if_needed()
                 extra_c.click(force=True)
-                page.wait_for_timeout(250)
-                del_c = extra_c.locator('[aria-label*="Borrar sección" i], [data-tooltip*="Borrar" i]').first
+                page.wait_for_timeout(300)
+                del_c = extra_c.locator(
+                    '[aria-label*="Borrar sección" i], [data-tooltip*="Borrar" i], [aria-label*="Delete section" i]'
+                ).first
+                if not del_c.count():
+                    del_c = page.locator('article.UynGwb [aria-label*="Borrar sección" i]:visible').last
                 if not del_c.count():
                     break
                 del_c.click(force=True)
-                page.wait_for_timeout(400)
+                page.wait_for_timeout(450)
             self._focus_body_canvas(page)
             actions.append({"step": "inicio_carousel", "status": self._insert_carousel_images(page, carousel_imgs)})
 
@@ -1704,10 +1710,10 @@ class AgenteSitioLex:
                         ).last
                         if confirm_btn.count():
                             confirm_btn.click()
-                            page.wait_for_timeout(6000)
+                            page.wait_for_timeout(15000)
                         elif page.locator(pub_sel).count() > 1:
                             page.locator(pub_sel).last.click()
-                            page.wait_for_timeout(6000)
+                            page.wait_for_timeout(15000)
                         published_action_status = "published"
                     else:
                         published_action_status = "publish_button_not_found"
@@ -1717,7 +1723,14 @@ class AgenteSitioLex:
                 page.screenshot(path=str(editor_screenshot), full_page=True)
 
                 pub_page = context.new_page()
-                pub_page.goto(clean_published_url, wait_until="domcontentloaded", timeout=60000)
+                try:
+                    cdp = context.new_cdp_session(pub_page)
+                    cdp.send("Network.setCacheDisabled", {"cacheDisabled": True})
+                except Exception:
+                    pass
+                cb_ts = int(time.time())
+                home_verify_url = f"{clean_published_url}?cb={cb_ts}"
+                pub_page.goto(home_verify_url, wait_until="domcontentloaded", timeout=60000)
                 pub_page.wait_for_timeout(3500)
                 rendered_iframe_sources: list[str] = []
                 public_checks: dict[str, Any] = {}
@@ -1732,11 +1745,14 @@ class AgenteSitioLex:
                     public_checks["home_footer_ok"] = "elaborado por martín jonathan de la cruz muñoz" in norm_home
                     public_checks["home_carousel_present"] = (
                         pub_page.locator(
-                            '[aria-roledescription="carousel"], [data-carousel-id], '
+                            f"{self._CAROUSEL_SELECTOR}, "
                             '[aria-label*="Diapositiva" i], [aria-label*="Siguiente" i], [aria-label*="Slide" i]'
                         ).count()
                         > 0
                     )
+                    public_checks["home_carousel_count"] = pub_page.locator(
+                        '[aria-label="Image carousel"], [aria-label^="Carrusel de im"]'
+                    ).count()
                     for item in pub_page.eval_on_selector_all(
                         'nav a[href], [role="navigation"] a[href]',
                         'els => els.map(e => ({txt: (e.innerText || "").trim(), href: e.getAttribute("href") || ""}))',
@@ -1767,7 +1783,8 @@ class AgenteSitioLex:
                                 target_url = resolved_href
                             else:
                                 target_url = f"{base_pub}/{default_slug}"
-                            pub_page.goto(target_url, wait_until="domcontentloaded", timeout=30000)
+                            sep = "&" if "?" in target_url else "?"
+                            pub_page.goto(f"{target_url}{sep}cb={cb_ts}", wait_until="domcontentloaded", timeout=30000)
                             pub_page.wait_for_timeout(2000)
                             srcs = pub_page.eval_on_selector_all("iframe", "els => els.map(e => e.src || '')")
                             rendered_iframe_sources.extend(
