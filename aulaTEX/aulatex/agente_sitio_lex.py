@@ -867,20 +867,67 @@ class AgenteSitioLex:
         return cls._read_editor_page_names(page) or existing, created
 
     @staticmethod
-    def _ensure_footer_author(page: Any, footer_text: str) -> str:
+    def _clean_footer_extra_sections(page: Any) -> int:
+        removed = 0
+        for _ in range(8):
+            secs = page.locator("article.LZiaFf section")
+            found_extra = False
+            for idx in range(secs.count() - 1, -1, -1):
+                sec = secs.nth(idx)
+                try:
+                    has_author = "elaborado" in (sec.inner_text(timeout=1500) or "").lower()
+                    has_media = sec.locator('[aria-roledescription="carousel"], [data-carousel-id], img').count() > 0
+                    if has_media or (secs.count() > 1 and not has_author):
+                        sec.scroll_into_view_if_needed()
+                        sec.hover()
+                        page.wait_for_timeout(250)
+                        del_btn = sec.locator('[aria-label*="Borrar sección" i], [aria-label*="Delete section" i]').first
+                        if not del_btn.count():
+                            del_btn = page.locator('article.LZiaFf [aria-label*="Borrar sección" i]:visible').last
+                        if del_btn.count():
+                            del_btn.click(force=True)
+                            page.wait_for_timeout(500)
+                            removed += 1
+                            found_extra = True
+                            break
+                except Exception:
+                    continue
+            if not found_extra:
+                break
+        return removed
+
+    @staticmethod
+    def _focus_body_canvas(page: Any) -> None:
         try:
-            body_text = page.locator("body").inner_text(timeout=3000)
+            body_sec = page.locator("article.UynGwb section").last
+            if body_sec.count():
+                body_sec.scroll_into_view_if_needed()
+                body_sec.click(force=True)
+                page.wait_for_timeout(250)
         except Exception:
-            body_text = ""
-        normalized_body = re.sub(r"\s+", " ", body_text).casefold()
+            pass
+
+    @staticmethod
+    def _ensure_footer_author(page: Any, footer_text: str) -> str:
+        footer_art = page.locator("article.LZiaFf")
+        try:
+            footer_text_now = (
+                footer_art.first.inner_text(timeout=3000)
+                if footer_art.count()
+                else page.locator("body").inner_text(timeout=3000)
+            )
+        except Exception:
+            footer_text_now = ""
+        normalized_footer = re.sub(r"\s+", " ", footer_text_now).casefold()
         normalized_target = re.sub(r"\s+", " ", footer_text).casefold()
-        if normalized_target in normalized_body:
+        if normalized_target in normalized_footer:
             return "already_present"
 
-        if "elaborado por mart" in normalized_body:
+        if footer_art.count() or "elaborado por mart" in normalized_footer:
             try:
-                page.evaluate("() => window.scrollTo(0, document.body.scrollHeight)")
-                page.wait_for_timeout(400)
+                target_box = footer_art.first if footer_art.count() else page.locator("text=/Elaborado por Mart/i").first
+                target_box.scroll_into_view_if_needed()
+                page.wait_for_timeout(300)
                 edit_footer = page.locator(
                     '[aria-label*="Editar pie de página" i]:visible, '
                     '[aria-label*="Edit footer" i]:visible'
@@ -888,26 +935,35 @@ class AgenteSitioLex:
                 if edit_footer.count():
                     edit_footer.click(force=True)
                     page.wait_for_timeout(400)
-                existing_loc = page.locator(
-                    'section[aria-label*="pie de página" i] [role="textbox"], '
-                    'section[aria-label*="footer" i] [role="textbox"], '
-                    'text=/Elaborado por Mart/i'
-                ).first
-                if existing_loc.count():
-                    existing_loc.scroll_into_view_if_needed()
-                    existing_loc.dblclick(force=True)
+
+                text_node = (
+                    footer_art.first.locator('[role="textbox"], p, span').first
+                    if footer_art.count()
+                    else page.locator("text=/Elaborado por Mart/i").first
+                )
+                if text_node.count():
+                    text_node.scroll_into_view_if_needed()
+                    text_node.dblclick(force=True)
                     page.wait_for_timeout(400)
-                footer_ce = page.locator(
-                    'section[aria-label*="pie de página" i] [contenteditable="true"]:visible, '
-                    'section[aria-label*="footer" i] [contenteditable="true"]:visible'
-                ).last
-                if footer_ce.count():
-                    footer_ce.click()
-                    page.wait_for_timeout(200)
+
+                is_ce = page.evaluate(
+                    "() => Boolean(document.activeElement && document.activeElement.getAttribute('contenteditable') === 'true')"
+                )
+                if not is_ce:
+                    ce_loc = page.locator('article.LZiaFf [contenteditable="true"]:visible').last
+                    if ce_loc.count():
+                        ce_loc.click(force=True)
+                        page.wait_for_timeout(250)
+
                 page.keyboard.press("Control+a")
                 page.keyboard.press("Backspace")
                 page.keyboard.insert_text(footer_text)
-                page.wait_for_timeout(500)
+                page.wait_for_timeout(350)
+                hdr = page.locator("article.UynGwb section").first
+                if hdr.count():
+                    hdr.scroll_into_view_if_needed()
+                    hdr.click(force=True)
+                    page.wait_for_timeout(400)
                 return "repaired"
             except Exception:
                 pass
@@ -924,9 +980,9 @@ class AgenteSitioLex:
         page.wait_for_timeout(800)
 
         editable = page.locator(
+            'article.LZiaFf [contenteditable="true"]:visible, '
             'section[aria-label*="pie de página" i] [contenteditable="true"]:visible, '
-            'footer [contenteditable="true"]:visible, '
-            '[contenteditable="true"]:visible'
+            'footer [contenteditable="true"]:visible'
         ).last
         if not editable.count():
             return "textbox_not_found"
@@ -936,22 +992,68 @@ class AgenteSitioLex:
         return "applied"
 
     @classmethod
+    def _clean_empty_body_placeholders(cls, page: Any, *, remove_text: str = "") -> int:
+        removed = 0
+        for _ in range(6):
+            secs = page.locator("article.UynGwb section")
+            hit = False
+            for idx in range(secs.count() - 1, 0, -1):
+                sec = secs.nth(idx)
+                try:
+                    txt = (sec.inner_text(timeout=1000) or "").strip()
+                    clean_txt = (
+                        txt.replace("Colores de sección", "")
+                        .replace("Duplicar sección", "")
+                        .replace("Borrar sección", "")
+                        .strip()
+                    )
+                    is_empty_ph = clean_txt in {"Haz clic para editar el texto", "Click to edit text", ""}
+                    has_widget = sec.locator("iframe, img, [aria-roledescription='carousel']").count() > 0
+                    matches_remove = bool(remove_text and remove_text.lower() in clean_txt.lower())
+                    if (is_empty_ph and not has_widget) or matches_remove:
+                        sec.scroll_into_view_if_needed()
+                        sec.hover()
+                        page.wait_for_timeout(200)
+                        del_btn = sec.locator('[aria-label*="Borrar sección" i], [aria-label*="Delete section" i]').first
+                        if del_btn.count():
+                            del_btn.click(force=True)
+                            page.wait_for_timeout(350)
+                            removed += 1
+                            hit = True
+                            break
+                except Exception:
+                    continue
+            if not hit:
+                break
+        return removed
+
+    @classmethod
     def _insert_text_block(cls, page: Any, marker_phrase: str, content_text: str) -> str:
+        body_art = page.locator("article.UynGwb").first
         try:
-            canvas_text = page.locator('[role="main"], main').first.inner_text(timeout=2000)
+            canvas_text = (
+                body_art.inner_text(timeout=2000)
+                if body_art.count()
+                else page.locator('[role="main"], main').first.inner_text(timeout=2000)
+            )
         except Exception:
             canvas_text = ""
         if cls._normalize_es(marker_phrase) in cls._normalize_es(canvas_text):
             return "already_present"
 
-        placeholder_sel = ':text("Haz clic para editar el texto"):visible, :text("Click to edit text"):visible'
+        scope_prefix = "article.UynGwb " if body_art.count() else ""
+        placeholder_sel = (
+            f'{scope_prefix}:text("Haz clic para editar el texto"):visible, '
+            f'{scope_prefix}:text("Click to edit text"):visible'
+        )
         existing_ph = page.locator(placeholder_sel)
         if existing_ph.count():
             target_ph = existing_ph.first
             target_ph.scroll_into_view_if_needed()
-            target_ph.click(force=True)
-            page.wait_for_timeout(400)
+            target_ph.click()
+            page.wait_for_timeout(450)
         else:
+            cls._focus_body_canvas(page)
             cls._open_sidebar_tab(page, "Insertar", "Insert")
             tb_btn = page.locator(
                 '[role="menuitem"][aria-label="Cuadro de texto"]:visible, '
@@ -965,15 +1067,35 @@ class AgenteSitioLex:
             new_ph = page.locator(placeholder_sel)
             if new_ph.count():
                 new_ph.last.scroll_into_view_if_needed()
-                new_ph.last.click(force=True)
-                page.wait_for_timeout(400)
+                new_ph.last.click()
+                page.wait_for_timeout(450)
 
-        box = page.locator('[role="textbox"][aria-label="Texto"][contenteditable="true"]:visible, [role="textbox"][contenteditable="true"]:visible').last
-        if not box.count():
-            return "textbox_not_found"
-        box.click()
-        page.keyboard.insert_text(content_text)
-        page.wait_for_timeout(500)
+        active_ok = page.evaluate(
+            "() => Boolean(document.activeElement && document.activeElement.getAttribute('contenteditable') === 'true' && !document.activeElement.closest('article.LZiaFf'))"
+        )
+        if not active_ok:
+            box = page.locator(
+                f'{scope_prefix}[role="textbox"][aria-label="Texto"][contenteditable="true"]:visible, '
+                f'{scope_prefix}[role="textbox"][contenteditable="true"]:visible'
+            ).first
+            if not box.count():
+                return "textbox_not_found"
+            box.click()
+            page.wait_for_timeout(200)
+
+        lines = content_text.splitlines()
+        for idx, line in enumerate(lines):
+            if line:
+                page.keyboard.insert_text(line)
+            if idx < len(lines) - 1:
+                page.keyboard.press("Enter")
+        page.wait_for_timeout(300)
+        hdr = page.locator("article.UynGwb section").first
+        if hdr.count():
+            hdr.scroll_into_view_if_needed()
+            hdr.click(force=True)
+            page.wait_for_timeout(400)
+        cls._clean_empty_body_placeholders(page, remove_text="Prueba Texto Servicios")
         return "applied"
 
     @classmethod
@@ -982,11 +1104,16 @@ class AgenteSitioLex:
         if len(existing_imgs) < 2:
             return "insufficient_local_images"
         try:
-            carousel_cnt = page.locator('[aria-roledescription="carousel"], [data-carousel-id]').count()
+            body_scope = "article.UynGwb " if page.locator("article.UynGwb").count() else ""
+            carousel_cnt = page.locator(
+                f'{body_scope}[aria-roledescription="carousel"], {body_scope}[data-carousel-id]'
+            ).count()
             if carousel_cnt > 0:
                 return "already_present"
         except Exception:
             pass
+
+        cls._focus_body_canvas(page)
 
         cls._open_sidebar_tab(page, "Insertar", "Insert")
         c_btn = page.locator('[role="menuitem"][aria-label="Carrusel de imágenes"]:visible').first
@@ -1234,9 +1361,46 @@ class AgenteSitioLex:
             sub_created = self._create_page_if_missing(page, child_p, parent_name=parent_p)
             actions.append({"step": f"subpage_{parent_p}_{child_p}", "status": "applied" if sub_created else "already_present"})
 
-        # Pie de página global (obligatorio S4-Clase-2 [01:34:09])
-        if self._select_editor_page(page, "Inicio"):
+        # Limpieza y reparación del pie de página global sobre Contacto (página compacta con footer inmediato)
+        if self._select_editor_page(page, "Contacto"):
+            cleaned_footer = self._clean_footer_extra_sections(page)
+            if cleaned_footer:
+                actions.append({"step": "clean_footer_carousels", "status": f"removed_{cleaned_footer}"})
             actions.append({"step": "footer_author", "status": self._ensure_footer_author(page, self.blueprint.footer_author)})
+            # Limpiar barras duplicadas de redes si existiera más de una en article.UynGwb
+            social_secs = page.locator("article.UynGwb section:has(img)")
+            while social_secs.count() > 2:
+                extra_s = social_secs.last
+                extra_s.scroll_into_view_if_needed()
+                extra_s.hover()
+                page.wait_for_timeout(200)
+                del_b = extra_s.locator('[aria-label*="Borrar sección" i], [aria-label*="Delete section" i]').first
+                if not del_b.count():
+                    break
+                del_b.click(force=True)
+                page.wait_for_timeout(400)
+            actions.append(
+                {
+                    "step": "contacto_intro",
+                    "status": self._insert_text_block(
+                        page,
+                        "Canales de Contacto y Redes",
+                        (
+                            "Canales de Contacto y Redes Sociales\n"
+                            "Despacho De La Cruz & Asociados — Horario de atención: Lunes a Viernes de 9:00 a 18:00 h (Culiacán, Sinaloa).\n"
+                            "Nota de privacidad: no compartas contraseñas ni e.firma en medios públicos."
+                        ),
+                    ),
+                }
+            )
+            has_existing_socials = page.locator("article.UynGwb section:has(img)").count() >= 2
+            if has_existing_socials:
+                actions.append({"step": "contacto_social_links", "status": "already_present"})
+            else:
+                actions.append({"step": "contacto_social_links", "status": self._insert_social_links(page, self.blueprint.social_links)})
+
+        if self._select_editor_page(page, "Inicio"):
+            self._focus_body_canvas(page)
             actions.append({"step": "inicio_carousel", "status": self._insert_carousel_images(page, carousel_imgs)})
 
         if self._select_editor_page(page, "Servicios"):
@@ -1306,23 +1470,6 @@ class AgenteSitioLex:
                 }
             )
             actions.append({"step": "ubicacion_map", "status": self._insert_google_map(page, self.blueprint.map_query)})
-
-        if self._select_editor_page(page, "Contacto"):
-            actions.append(
-                {
-                    "step": "contacto_intro",
-                    "status": self._insert_text_block(
-                        page,
-                        "Canales de Contacto y Redes",
-                        (
-                            "Canales de Contacto y Redes Sociales\n"
-                            "Despacho De La Cruz & Asociados — Horario de atención: Lunes a Viernes de 9:00 a 18:00 h (Culiacán, Sinaloa).\n"
-                            "Nota de privacidad: no compartas contraseñas ni e.firma en medios públicos."
-                        ),
-                    ),
-                }
-            )
-            actions.append({"step": "contacto_social_links", "status": self._insert_social_links(page, self.blueprint.social_links)})
 
         return actions
 
@@ -1534,33 +1681,55 @@ class AgenteSitioLex:
 
                 pub_page = context.new_page()
                 pub_page.goto(clean_published_url, wait_until="domcontentloaded", timeout=60000)
-                pub_page.wait_for_timeout(2500)
+                pub_page.wait_for_timeout(3000)
                 rendered_iframe_sources: list[str] = []
                 public_checks: dict[str, Any] = {}
+                nav_hrefs: dict[str, str] = {}
                 try:
                     home_iframes = pub_page.eval_on_selector_all("iframe", "els => els.map(e => e.src || '')")
                     rendered_iframe_sources.extend(
                         src for src in home_iframes if "cloudfront.net" in src or "de2vaif4mldo0" in src
                     )
                     home_text = pub_page.locator("body").inner_text(timeout=3000)
-                    public_checks["home_footer_ok"] = "elaborado por martín jonathan" in home_text.lower()
+                    public_checks["home_footer_ok"] = "elaborado por martín jonathan de la cruz muñoz" in home_text.lower()
                     public_checks["home_carousel_present"] = (
-                        pub_page.locator('[aria-roledescription="carousel"], [data-carousel-id]').count() > 0
+                        pub_page.locator(
+                            '[aria-roledescription="carousel"], [data-carousel-id], '
+                            '[aria-label*="Diapositiva" i], [aria-label*="Siguiente" i], [aria-label*="Slide" i]'
+                        ).count()
+                        > 0
                     )
+                    for item in pub_page.eval_on_selector_all(
+                        'nav a[href], [role="navigation"] a[href]',
+                        'els => els.map(e => ({txt: (e.innerText || "").trim(), href: e.getAttribute("href") || ""}))',
+                    ):
+                        norm_k = self._normalize_es(item.get("txt", ""))
+                        href = item.get("href", "")
+                        if norm_k and href and norm_k not in nav_hrefs:
+                            nav_hrefs[norm_k] = href
                 except Exception:
                     pass
                 pub_page.screenshot(path=str(published_screenshot), full_page=True)
 
                 if request.align_s4:
                     base_pub = clean_published_url.rstrip("/")
-                    for slug, check_key in (
-                        ("servicios", "servicios"),
-                        ("quienes-somos", "quienes_somos"),
-                        ("ubicacion", "ubicacion"),
-                        ("contacto", "contacto"),
+                    base_origin = f"{urlsplit(base_pub).scheme}://{urlsplit(base_pub).netloc}"
+                    for page_title, default_slug, check_key in (
+                        ("Servicios", "servicios", "servicios"),
+                        ("Defensa fiscal", "servicios/defensa-fiscal", "defensa_fiscal"),
+                        ("Quiénes Somos", "quiénes-somos", "quienes_somos"),
+                        ("Ubicación", "ubicación", "ubicacion"),
+                        ("Contacto", "contacto", "contacto"),
                     ):
                         try:
-                            pub_page.goto(f"{base_pub}/{slug}", wait_until="domcontentloaded", timeout=30000)
+                            resolved_href = nav_hrefs.get(self._normalize_es(page_title), "")
+                            if resolved_href.startswith("/"):
+                                target_url = f"{base_origin}{resolved_href}"
+                            elif resolved_href.startswith("https://"):
+                                target_url = resolved_href
+                            else:
+                                target_url = f"{base_pub}/{default_slug}"
+                            pub_page.goto(target_url, wait_until="domcontentloaded", timeout=30000)
                             pub_page.wait_for_timeout(2000)
                             srcs = pub_page.eval_on_selector_all("iframe", "els => els.map(e => e.src || '')")
                             rendered_iframe_sources.extend(
@@ -1569,12 +1738,13 @@ class AgenteSitioLex:
                             if check_key == "quienes_somos":
                                 public_checks["youtube_embed_present"] = any("youtube" in s or "youtu.be" in s for s in srcs)
                             elif check_key == "ubicacion":
-                                public_checks["maps_embed_present"] = any("google.com/maps" in s or "maps" in s for s in srcs)
+                                public_checks["maps_embed_present"] = any("maps" in s for s in srcs)
                             elif check_key == "contacto":
                                 public_checks["social_links_count"] = pub_page.locator(
                                     'a[href*="facebook.com"], a[href*="instagram.com"], a[href*="youtube.com"]'
                                 ).count()
-                            pub_page.screenshot(path=str(run_dir / f"publico-{slug}.png"), full_page=True)
+                            safe_slug = check_key.replace("_", "-")
+                            pub_page.screenshot(path=str(run_dir / f"publico-{safe_slug}.png"), full_page=True)
                         except Exception:
                             public_checks[f"{check_key}_error"] = True
                 rendered_iframe_sources = list(dict.fromkeys(rendered_iframe_sources))
