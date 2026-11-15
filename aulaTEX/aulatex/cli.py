@@ -634,6 +634,25 @@ def build_parser() -> argparse.ArgumentParser:
     ent_unadm.add_argument("--live", action="store_true", help="Ejecutar en vivo con navegador en vez de simulación dry-run.")
     ent_unadm.add_argument("--output", default="", help="Directorio de salida.")
 
+    sub_drive = sub.add_parser(
+        "subir-drive",
+        aliases=["drive-upload"],
+        help="Sube un archivo a Google Drive abriendo una ventana visible de navegador para autenticacion humana.",
+    )
+    sub_drive.add_argument("--folder-url", required=True, help="URL HTTPS de la carpeta compartida de Google Drive.")
+    sub_drive.add_argument("--artifact", required=True, help="Ruta local del archivo a subir.")
+    sub_drive.add_argument("--profile", default="google-drive", help="Nombre del perfil persistente de navegador.")
+    sub_drive.add_argument("--profile-dir", default="", help="Ruta explicita opcional para el perfil persistente.")
+    sub_drive.add_argument("--channel", default="chrome", choices=("chrome", "msedge", "chromium"), help="Canal Playwright.")
+    sub_drive.add_argument("--auth-timeout", type=int, default=300, help="Segundos maximos esperando login interactivo.")
+    sub_drive.add_argument("--upload-timeout", type=int, default=120, help="Segundos maximos esperando confirmacion de subida.")
+    sub_drive.add_argument("--sha256", default=None, help="SHA-256 esperado del archivo.")
+    sub_drive.add_argument("--user-validated", action="store_true", help="Autorizacion explicita obligatoria del usuario.")
+    sub_drive.add_argument("--live", dest="dry_run", action="store_false", help="Ejecucion en vivo con ventana visible (por defecto dry-run).")
+    sub_drive.set_defaults(dry_run=True)
+    sub_drive.add_argument("--output", default="", help="Directorio de comprobantes.")
+    sub_drive.add_argument("--json", action="store_true", help="Emitir salida en JSON.")
+
     return parser
 
 
@@ -1875,6 +1894,40 @@ def main(argv: list[str] | None = None) -> None:
             "manifest_path": str(res.manifest_path) if res.manifest_path else None,
             "summary_md_path": str(res.summary_md_path) if getattr(res, "summary_md_path", None) else None,
             "platform_evidence": getattr(res, "platform_evidence", {}),
+        }, ensure_ascii=False, indent=2))
+        return
+
+    if args.command in ("subir-drive", "drive-upload"):
+        from .subir_drive import DriveUploadRequest, GoogleDriveInteractiveUploader
+
+        uploader = GoogleDriveInteractiveUploader(AulaTeXWorkspace())
+        res = uploader.upload(
+            DriveUploadRequest(
+                folder_url=args.folder_url,
+                artifact_path=args.artifact,
+                user_validated=getattr(args, "user_validated", False),
+                dry_run=getattr(args, "dry_run", True),
+                profile_name=getattr(args, "profile", "google-drive"),
+                profile_dir=getattr(args, "profile_dir", ""),
+                channel=getattr(args, "channel", "chrome"),
+                auth_timeout_seconds=getattr(args, "auth_timeout", 300),
+                upload_timeout_seconds=getattr(args, "upload_timeout", 120),
+                expected_sha256=getattr(args, "sha256", None),
+                output_dir=getattr(args, "output", ""),
+            )
+        )
+        print(json.dumps({
+            "ok": res.ok,
+            "status": res.status,
+            "folder_url": res.folder_url,
+            "artifact_path": res.artifact_path,
+            "sha256": res.sha256,
+            "receipt_path": str(res.receipt_path) if res.receipt_path else None,
+            "manifest_path": str(res.manifest_path) if res.manifest_path else None,
+            "summary_md_path": str(res.summary_md_path) if res.summary_md_path else None,
+            "screenshot_path": str(res.screenshot_path) if res.screenshot_path else None,
+            "blockers": list(res.blockers),
+            "evidence": res.evidence,
         }, ensure_ascii=False, indent=2))
         return
 
