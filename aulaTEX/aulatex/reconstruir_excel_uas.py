@@ -168,14 +168,32 @@ def build_s2_excel_basico(mat_dir: Path, out_path: Path) -> dict[str, Any]:
     copy_sheet_contents(ws_fact_src, ws_fact)
     _style_header_cell(set_cell_safe(ws_fact, "G2", "Total Línea"), bg="1F4E78", size=10)
     last_fact_row = ws_fact.max_row
+    last_item_row = 3
     for r in range(3, last_fact_row + 1):
-        c_tot = set_cell_safe(ws_fact, r, 7, f"=D{r}*E{r}*(1-F{r})")
-        c_tot.number_format = _PESOS_FMT if r == 3 else _SIN_PESOS_FMT
+        qty_v = ws_fact.cell(r, 4).value
+        price_v = ws_fact.cell(r, 5).value
+        if isinstance(qty_v, (int, float)) and isinstance(price_v, (int, float)):
+            c_tot = set_cell_safe(ws_fact, r, 7, f"=D{r}*E{r}*(1-F{r})")
+            c_tot.number_format = _PESOS_FMT if r == 3 else _SIN_PESOS_FMT
+            last_item_row = r
+        elif isinstance(qty_v, str) and "alto" in qty_v.lower() and ws_fact.cell(r, 5).value is None:
+            c_max = set_cell_safe(ws_fact, r, 5, f"=MAX(E3:E{last_item_row})")
+            c_max.number_format = _PESOS_FMT
+        elif isinstance(qty_v, str) and "bajo" in qty_v.lower() and ws_fact.cell(r, 5).value is None:
+            c_min = set_cell_safe(ws_fact, r, 5, f"=MIN(E3:E{last_item_row})")
+            c_min.number_format = _PESOS_FMT
+    c_grand_lbl = set_cell_safe(ws_fact, last_item_row + 1, 6, "Total:")
+    c_grand_lbl.font = Font(bold=True)
+    c_grand = set_cell_safe(ws_fact, last_item_row + 1, 7, f"=SUM(G3:G{last_item_row})")
+    c_grand.font = Font(bold=True)
+    c_grand.number_format = _PESOS_FMT
     ws_fact.page_setup.orientation = ws_fact.ORIENTATION_LANDSCAPE
     ws_fact.page_setup.paperSize = ws_fact.PAPERSIZE_LETTER
     ws_fact.sheet_properties.pageSetUpPr.fitToPage = True
     ws_fact.page_setup.fitToWidth = 1
     ws_fact.page_setup.fitToHeight = 1
+    ws_fact.column_dimensions["B"].width = max(ws_fact.column_dimensions["B"].width or 0, 14)
+    ws_fact.column_dimensions["F"].width = max(ws_fact.column_dimensions["F"].width or 0, 13)
     ws_fact.column_dimensions["G"].width = 16
 
     # Tab 3: Participantes (=RANDBETWEEN(8,40) + Conditional Formatting per 0FGH031UsFo)
@@ -400,6 +418,8 @@ def _build_s3_workbook(mat_dir: Path, out_path: Path, solve_homework: bool) -> l
             set_cell_safe(ws_hot, r, 8, f"=AVERAGE(B{idx}:E{idx})").number_format = _EURO_FMT
         set_cell_safe(ws_hot, "H16", "=MAX(B3:E3)").number_format = _EURO_FMT
         set_cell_safe(ws_hot, "H17", "=MIN(B3:E3)").number_format = _EURO_FMT
+        for col_ltr in ("B", "C", "D", "E"):
+            ws_hot.column_dimensions[col_ltr].width = max(ws_hot.column_dimensions[col_ltr].width or 0, 16)
 
     # 7. 04-Maquillaje
     wb_maq = openpyxl.load_workbook(_find_material(mat_dir, "VentaMaquillaje.xlsx"))
@@ -443,6 +463,8 @@ def _build_s3_workbook(mat_dir: Path, out_path: Path, solve_homework: bool) -> l
     if solve_homework:
         set_cell_safe(ws_g2, "D2", "si.conjunto").font = Font(bold=True, color="FFFFFF")
         ws_g2["D2"].fill = PatternFill("solid", fgColor="833C0C")
+        ws_g2.column_dimensions["C"].width = max(ws_g2.column_dimensions["C"].width or 0, 19)
+        ws_g2.column_dimensions["D"].width = max(ws_g2.column_dimensions["D"].width or 0, 19)
         for r in range(3, 11):
             set_cell_safe(
                 ws_g2,
@@ -642,22 +664,24 @@ def _build_accounting_report_sheet(
     for fill_r in range(r, sig_top + 6):
         _style_ledger_row(fill_r)
 
-    ws.cell(sig_top, 4, "Autorizado por").alignment = Alignment(horizontal="center")
-    ws.merge_cells(start_row=sig_top, start_column=6, end_row=sig_top, end_column=7)
+    ws.merge_cells(start_row=sig_top, start_column=3, end_row=sig_top, end_column=4)
+    set_cell_safe(ws, sig_top, 3, "Autorizado por").alignment = Alignment(horizontal="center")
+    ws.merge_cells(start_row=sig_top, start_column=6, end_row=sig_top, end_column=8)
     set_cell_safe(ws, sig_top, 6, "Elaborado por").alignment = Alignment(horizontal="center")
 
     sig_line = sig_top + 3
-    ws.cell(sig_line, 4).border = Border(left=grid_side, right=grid_side, top=grid_side, bottom=cut_side)
-    for col in (6, 7):
+    for col in (3, 4, 6, 7, 8):
         ws.cell(sig_line, col).border = Border(left=grid_side, right=grid_side, top=grid_side, bottom=cut_side)
 
-    c_auth = set_cell_safe(ws, sig_line + 1, 4, authorized_by)
+    ws.row_dimensions[sig_line + 1].height = 28
+    ws.merge_cells(start_row=sig_line + 1, start_column=3, end_row=sig_line + 1, end_column=4)
+    c_auth = set_cell_safe(ws, sig_line + 1, 3, authorized_by)
     c_auth.font = Font(name="Aptos Display", size=10, bold=True)
-    c_auth.alignment = Alignment(horizontal="center")
-    ws.merge_cells(start_row=sig_line + 1, start_column=6, end_row=sig_line + 1, end_column=7)
+    c_auth.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
+    ws.merge_cells(start_row=sig_line + 1, start_column=6, end_row=sig_line + 1, end_column=8)
     c_elab = set_cell_safe(ws, sig_line + 1, 6, elaborated_by)
     c_elab.font = Font(name="Aptos Display", size=10, bold=True)
-    c_elab.alignment = Alignment(horizontal="center")
+    c_elab.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
 
     ws.page_setup.orientation = ws.ORIENTATION_PORTRAIT
     ws.page_setup.paperSize = ws.PAPERSIZE_LETTER

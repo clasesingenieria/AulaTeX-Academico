@@ -392,31 +392,21 @@ class MonitorUasAgent(MonitorEntregasAgent):
 
         if module_id == 50114:
             expected_workbooks = [
-                "01_ListaProductos.xlsx (FACTURAS)",
-                "02_Ventas.xlsx (Ventas, Ventas-2018-2019)",
-                "03_Participantes.xlsx (Asistentes)",
-                "04_Impresión.xlsx / 05_Area de impresión.xlsx / 06_Imprimir Títulos.xlsx",
-                "02_Referencias.xlsx (Relativas, Absolutas IGV 18%, Mixtas tabla 10x10)",
-                "03_ResumenGanancias.xlsx / ResumenGanancias_Finalizado.xlsx",
-                "Alquiler.xlsx (PlayStation) / Hoteles.xlsx",
-                "Corporación_Televisiva.xlsx / Estaturas.xlsx / VentaMaquillaje.xlsx (1900 filas) / VentasPorPedido.xlsx",
-                "FuncionesTexto.xlsx (Minúsculas, Mayúsculas, UnirCadenas, NombrePropio, Izq-Der-, Largo, HALLAR-1, HALLAR-2, EXTRAE)",
-                "Funciones de Fecha.xlsx / Interés Moratorio.xlsx (Mora, Promoción) / Mundial Qatar.xlsx / PlanProyecto.xlsx",
+                "Hoja portada personal (MARTÍN) con ejercicio de clase CELDAS = 16384*1048576 (17,179,869,184) — I_H5f_gGbuc [01:41:20]",
+                "04_Impresión.xlsx -> FACTURAS ajustada a 1 hoja horizontal en Diseño de página — 0FGH031UsFo [00:16:38]",
+                "03_Participantes.xlsx -> Participantes (=ALEATORIO.ENTRE(8,40) + Formato Condicional + rango Datos) — 0FGH031UsFo [00:46:30]",
+                "04_Vendedores.xlsx -> 02-Ventas (=SECUENCIA(CONTARA(B:B)-1)) y 02-Vendedores (Serie de Relleno 1..55 + totales) — 0FGH031UsFo [01:08:00, 01:25:15]",
             ]
-            expected_canonical_sheets = [
-                "FACTURAS", "Ventas", "Relativas", "Absolutas", "Mixtas",
-                "PlayStation", "VentaMaquillaje", "Minúsculas", "Mora", "Promoción",
-            ]
+            expected_canonical_sheets = ["MARTÍN", "FACTURAS", "Participantes", "02-Ventas", "02-Vendedores"]
             synthetic_s2 = {"Identificacion", "Practica_1_Importes", "Practica_2_Gastos", "Practica_3_Formatos", "Practica_4_Referencias", "Comprobacion"}
             overlap = delivered_sheets.intersection(expected_canonical_sheets)
             if not primary_xlsx:
                 deficiencies.append("No existe libro .xlsx de Excel Básico S2 en entregas.")
             else:
-                if delivered_sheets == synthetic_s2 or len(overlap) == 0:
+                if delivered_sheets == synthetic_s2 or len(overlap) < 4:
                     deficiencies.append(
-                        f"El archivo '{primary_xlsx.name}' contiene 6 hojas sintéticas ({', '.join(xml_audit.get('sheets', []))}) "
-                        "derivadas de 'Excel-Basico-S2-Ejemplo.xlsx' ('Ejemplo hipotetico; no ejercicio asignado por el docente') "
-                        "con 0% de coincidencia con los 30+ libros oficiales de la Carpeta de Apoyo (Cap. 1, 2, 3, 4, 6 y 7)."
+                        f"El archivo '{primary_xlsx.name}' ({', '.join(xml_audit.get('sheets', []))}) no coincide con las 5 pestañas "
+                        "vistas en las grabaciones I_H5f_gGbuc y 0FGH031UsFo (MARTÍN, FACTURAS, Participantes, 02-Ventas, 02-Vendedores)."
                     )
                 p3_det = xml_audit.get("sheet_details", {}).get("Practica_3_Formatos", {})
                 if p3_det and p3_det.get("formulas", 0) == 0:
@@ -424,17 +414,16 @@ class MonitorUasAgent(MonitorEntregasAgent):
 
         elif module_id == 50130:
             expected_workbooks = [
-                "01_FunciónLogica.xlsx (SI-1..SI-3, Y-1..Y-3, O-1..O-2)",
-                "02_SIAnidado.xlsx (Género 1, Alumnos, Género 2, Estado Civil, goles)",
-                "03_Certificaciones.xlsx / Alumnos.xlsx / EstadosMaquillaje.xlsx (SI1..SI4, Y1..Y2, O1..O2) / Gastos.xlsx",
-                "01_Elegir.xlsx / 02_BuscarV.xlsx / 03_RangoAproximado.xlsx / 04_BuscarH.xlsx / Puntaje.xlsx / SelecciónCódigo.xlsx",
-                "01_ListaInmobiliaria.xlsx / 04_ Tabla Dinámica Recomendada.xlsx / 05_Tablas Dinámicas.xlsx / Tabla Inmobiliaria.xlsx",
-                "01_Crear Gráficos.xlsx / 03_FlujoCaja.xlsx / 04_Censo2007.xlsx / Ingresos.xlsx",
-                "02_Subtotales.xlsx / 03_Esquemas.xlsx / 04_Validación.xlsx / 06_Formato Prestablecido.xlsx / 07_Crear reglas.xlsx",
+                "01_Proyectos.xlsx -> 03-Proyectos (pestaña verde, presupuestos y totales) — q9KgoQqUJpU [00:07:35]",
+                "02_Referencias.xlsx -> 03-Relativas, 03-Absolutas ($E$3 con F4), 03-Mixtas (=$A3*B$2) — q9KgoQqUJpU [00:24:30..00:40:54]",
+                "ResumenGanancias_Compartido.xlsx -> 03-Resumen (+ tabla K6:N10 con HOY() y SIFECHA) — q9KgoQqUJpU [01:16:00]",
+                "Hoteles.xlsx -> 03-Hoteles (pestaña roja de tarea) y VentaMaquillaje.xlsx -> 04-Maquillaje (pestaña roja, C16:C23) — q9KgoQqUJpU [01:27:00] / ZSLk1hRY48U [01:05:30]",
+                "01_FunciónLogica.xlsx y 02_SIAnidado.xlsx -> 05-Alumnos, 05-Estado Civil, 05-Género 1, 05-Goles [roja], 05-Género 2 [roja] — ZSLk1hRY48U [01:17:40..01:44:30]",
             ]
             expected_canonical_sheets = [
-                "SI-1", "Alumnos", "Gastos", "SI1", "Puntaje", "SelecciónCódigo",
-                "ListaInmobiliaria", "Subtotales", "FlujoCaja",
+                "03-Proyectos", "03-Relativas", "03-Absolutas", "03-Mixtas", "03-Resumen",
+                "03-Hoteles", "04-Maquillaje", "05-Alumnos", "05-Estado Civil",
+                "05-Género 1", "05-Goles", "05-Género 2",
             ]
             synthetic_s3 = {
                 "Control_Identificacion", "Referencias_Rel_Abs_Mix", "Funciones_Logicas_SI",
@@ -445,16 +434,10 @@ class MonitorUasAgent(MonitorEntregasAgent):
             if not primary_xlsx:
                 deficiencies.append("No existe libro .xlsx de Excel Aplicado S3 en entregas.")
             else:
-                if delivered_sheets == synthetic_s3 or len(overlap) == 0:
+                if delivered_sheets == synthetic_s3 or len(overlap) < 10:
                     deficiencies.append(
-                        f"El archivo '{primary_xlsx.name}' contiene 8 hojas inventadas ({', '.join(xml_audit.get('sheets', []))}) "
-                        "con datos ficticios ('ART-101 Laptop Dell', 'CLI-001 Comercial del Noroeste', 'EMP-01 García López Carlos') "
-                        "y 0% de coincidencia con las plantillas de la Carpeta de Apoyo (Cap. 5, 8, 9, 10 y 11)."
-                    )
-                if xml_audit.get("pivot_tables_count", 0) == 0:
-                    deficiencies.append(
-                        "La hoja 'Tablas_Dinamicas_Resumen' carece de objeto PivotTable nativo (xl/pivotTables/pivotTable*.xml = 0); "
-                        "simula la tabla dinámica con fórmulas =SUMIFS(...)."
+                        f"El archivo '{primary_xlsx.name}' ({', '.join(xml_audit.get('sheets', []))}) no coincide con las 12 pestañas "
+                        "de las grabaciones q9KgoQqUJpU y ZSLk1hRY48U (03-Proyectos..03-Hoteles, 04-Maquillaje, 05-Alumnos..05-Género 2)."
                     )
                 deliv_dir = primary_xlsx.parent
                 if (deliv_dir / "GPO101LCP_EXCEL_APLICADO_MartinJonathan_DeLaCruzMunoz.xlsx").is_file():
@@ -464,25 +447,25 @@ class MonitorUasAgent(MonitorEntregasAgent):
 
         elif module_id == 50131:
             expected_workbooks = [
-                "Alumnos.xlsx / Alumnos - resuelto.xlsx (escala 0-20: Bajo 0-10, Medio 11-13, Alto 14-16, Muy alto 17-20 con =IFS(AND(...)))",
-                "Gastos.xlsx / Gastos - resuelto.xlsx (=IF(SUM(B3:B5)<=350,'Dentro de presupuesto','Presupuesto excedido'))",
-                "VentaMaquillaje.xlsx (1,900 registros reales $H$5:$H$1904 con SUMIF/COUNTIF/AVERAGEIF/SUMIFS)",
-                "EstadosMaquillaje.xlsx (8 hojas: SI1..SI4, Y1..Y2, O1..O2)",
-                "Interés Moratorio.xlsx (hojas Mora y Promoción con días de atraso reales)",
-                "Puntaje.xlsx (=VLOOKUP(F2,A4:C17,3,TRUE)) y SelecciónCódigo.xlsx",
+                "Mismo libro de 12 pestañas que GPO103LCP_EXCEL_APLICADO, pero con TODAS las tareas rojas y pendientes resueltas (ZSLk1hRY48U [01:44:30])",
+                "03-Hoteles resuelta al 100% (totales trimestrales/semestrales, promedios, MAX/MIN)",
+                "04-Maquillaje resuelta al 100% (tablas vendedores/productos + 11 RESULTADOS C16:C26 completos con nombres definidos)",
+                "05-Goles (=SI ganador/empate) y 05-Género 2 (SI anidado + SI.CONJUNTO) resueltas al 100%",
             ]
-            expected_canonical_sheets = ["Alumnos", "Gastos", "VentaMaquillaje", "Mora", "Promoción", "Puntaje", "SI1"]
+            expected_canonical_sheets = [
+                "03-Proyectos", "03-Relativas", "03-Absolutas", "03-Mixtas", "03-Resumen",
+                "03-Hoteles", "04-Maquillaje", "05-Alumnos", "05-Estado Civil",
+                "05-Género 1", "05-Goles", "05-Género 2",
+            ]
             synthetic_exam = {"Evaluacion_Ventas", "Interes_Moratorio", "Escala_Calificaciones"}
             overlap = delivered_sheets.intersection(expected_canonical_sheets)
             if not primary_xlsx:
                 deficiencies.append("No existe libro .xlsx de Examen Práctico S3 en entregas.")
             else:
-                if delivered_sheets == synthetic_exam or len(overlap) == 0:
+                if delivered_sheets == synthetic_exam or len(overlap) < 10:
                     deficiencies.append(
-                        f"El archivo '{primary_xlsx.name}' contiene 3 hojas sintéticas ({', '.join(xml_audit.get('sheets', []))}) "
-                        "que distorsionan las plantillas oficiales del examen en clase: redujo VentaMaquillaje de 1,900 filas a 40 filas inventadas, "
-                        "alteró la escala oficial 0-20 de Alumnos.xlsx (Boris Reyes=18) a una escala inventada 0-100 (Boris Reyes=92), "
-                        "y omitió Gastos.xlsx, EstadosMaquillaje.xlsx y Puntaje.xlsx (VLOOKUP aproximado)."
+                        f"El archivo '{primary_xlsx.name}' ({', '.join(xml_audit.get('sheets', []))}) no coincide con el libro dual "
+                        "explicado en q9KgoQqUJpU [01:28:24] y ZSLk1hRY48U [01:44:30] (mismas 12 pestañas de Excel Aplicado con todas las tareas resueltas)."
                     )
                 ev_det = xml_audit.get("sheet_details", {}).get("Evaluacion_Ventas", {})
                 if ev_det and ev_det.get("empty_formula_tags", 0) > 0:
@@ -492,14 +475,19 @@ class MonitorUasAgent(MonitorEntregasAgent):
 
         elif module_id == 50144:
             expected_workbooks = [
-                "EXCEL_CONTA_MartinJonathan_DeLaCruzMunoz.xlsx (Complemento de LCP - Aplicado S4: 15 hojas contables: "
-                "Balance1, Bal Completo Reporte, Bal Completo Cuenta, Balance Reporte, Balance Cuenta, Bal Comparativo 1..3, "
-                "Bal Compar Cuenta, Estado de Resultados 1..2, EdoRes Comercial, BO INGRESOS TOTALES, PE 1, PE2)"
+                "EXCEL_CONTA_MartinJonathan_DeLaCruzMunoz.xlsx (7ZomiXX7eus 10/nov/2026: 2 hojas tipo tabla verde TablaContable: "
+                "BALANCE [La Comercial Mercantil S.A. de C.V. en clase] y REPORTE [Primer Ejercicio Propuesto PDF SUAD con Papelería/Seguros en Diferido]; "
+                "se sube a la carpeta compartida de Google Drive según rzici9Xi01Y [01:41:53], y PDF Google Sites a Moodle 50144)."
             ]
+            expected_canonical_sheets = ["BALANCE", "REPORTE"]
+            overlap = delivered_sheets.intersection(expected_canonical_sheets)
             if not primary_xlsx:
                 deficiencies.append(
-                    "Falta generar el libro complementario 'EXCEL_CONTA_MartinJonathan_DeLaCruzMunoz.xlsx' exigido por los 3 PDFs "
-                    "del Dr. Dámaso en 'Complemento de LCP - Aplicado' (Balance General y Comparativo, Estado de Resultados y Buscar Objetivo / Punto de Equilibrio)."
+                    "Falta generar el libro 'EXCEL_CONTA_MartinJonathan_DeLaCruzMunoz.xlsx' (hojas BALANCE y REPORTE) exigido en 7ZomiXX7eus y rzici9Xi01Y."
+                )
+            elif len(overlap) < 2:
+                deficiencies.append(
+                    f"El archivo '{primary_xlsx.name}' ({', '.join(xml_audit.get('sheets', []))}) debe contener las 2 hojas BALANCE y REPORTE vistas en 7ZomiXX7eus."
                 )
 
         teacher_fb = feedback_meta.get("feedback", "")
