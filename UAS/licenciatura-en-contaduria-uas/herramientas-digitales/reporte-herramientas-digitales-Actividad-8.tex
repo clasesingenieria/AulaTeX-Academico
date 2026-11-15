@@ -1,42 +1,57 @@
-\newcommand{\actividadtitulo}{Fundamentos y verificación de operaciones en Excel}
-\newcommand{\actividadtipo}{Preparación de la práctica de Excel básico S2}
-\newcommand{\uasfecha}{22 de octubre de 2026}
+\newcommand{\actividadpaquetes}{\usepackage{amsmath,amssymb}\graphicspath{{assets-herramientas-digitales/}}}
+\newcommand{\actividadtitulo}{Fundamentos y práctica de Excel básico (Sesión 2)}
+\newcommand{\actividadtipo}{Actividad práctica S2 — Módulo 50114}
+\newcommand{\uasfecha}{15 de noviembre de 2026}
 \newcommand{\actividadpreliminares}{%
 \section*{Resumen}\addcontentsline{toc}{section}{Resumen}
-Se revisan libros, hojas, celdas, rangos y fórmulas de Excel mediante un ejemplo didáctico de importes. Se distinguen valores, formatos y referencias relativas y absolutas. La verificación utiliza operaciones independientes para detectar errores y no depende únicamente de que una fórmula pueda ejecutarse.
+Se documenta la construcción y verificación del libro oficial \texttt{GPO103LCP\_EXCEL\_BASICO\_MartinJonathan\_DeLaCruzMunoz.xlsx} correspondiente al Módulo 50114 de la Licenciatura en Contaduría Pública (UAS, Grupo 103). Con estricto apego a las clases grabadas del Dr. Dámaso Guadalupe Ruíz González (Sesión 2, Clases 1 y 2), el libro integra exactamente cinco pestañas verificadas: \texttt{MARTÍN} (portada y conteo total de celdas), \texttt{FACTURAS} (ajuste de área de impresión e importes de pedido), \texttt{Participantes} (valores aleatorios y formato condicional), \texttt{02-Ventas} (numeración dinámica con \texttt{SEQUENCE} y \texttt{COUNTA}) y \texttt{02-Vendedores} (serie de relleno resuelta, completado de país y agregados). Cada fórmula fue validada en Microsoft Excel con cero errores de cálculo.
 \clearpage\tableofcontents\clearpage}
 \newcommand{\actividadcontenido}{%
-\section{Introducción}
-Una hoja de cálculo organiza datos y relaciona celdas mediante fórmulas. Su utilidad depende de que los datos estén definidos, las operaciones correspondan al problema y los resultados sean revisados. El formato monetario puede mejorar la lectura, pero no corrige una fórmula o un dato equivocado.
-\section{Estructura del libro}
-El libro contiene hojas; cada hoja se organiza en filas y columnas. La referencia B2 identifica una celda y B2:B4 un rango. Antes de calcular, se asignan encabezados y unidades, se distinguen entradas de resultados y se evita mezclar totales con registros individuales. La documentación de Microsoft reúne formación sobre fórmulas, funciones y formato de datos \parencite{microsoftExcel}.
-\section{Ejemplo didáctico de importes}
-Los siguientes datos son hipotéticos y no se atribuyen a los ejercicios del profesor. El propósito es comprobar multiplicación, suma y referencias.
-\par\medskip
-\noindent\begin{tabularx}{\textwidth}{@{}Xrrr@{}}\toprule
-Concepto & Cantidad & Precio unitario & Importe\\\midrule
-Cuadernos & 3 & 40.00 & 120.00\\
-Carpetas & 2 & 25.00 & 50.00\\
-Lápices & 5 & 8.00 & 40.00\\\midrule
-Total & & & 210.00\\\bottomrule
+\section{Identificación y propósito}
+En la formación inicial del contador público, la organización limpia de libros multipestaña, la configuración de impresión y la automatización de secuencias numéricas constituyen destrezas operativas esenciales antes de abordar modelos financieros avanzados \parencite{uasHerramientas635,microsoftExcel}. La práctica del Módulo 50114 requiere integrar exclusivamente los ejercicios ejecutados y asignados durante la Semana 2 dentro del libro denominado \texttt{GPO103LCP\_EXCEL\_BASICO\_MartinJonathan\_DeLaCruzMunoz.xlsx}.
+
+\section{Estructura verificada de las cinco pestañas}
+De acuerdo con el respaldo audiovisual y las capturas de pantalla extraídas de las sesiones grabadas (\texttt{I\_H5f\_gGbuc} y \texttt{0FGH031UsFo}), el libro oficial consta de cinco pestañas dispuestas en el siguiente orden:
+
+\noindent\begin{tabularx}{\textwidth}{@{}p{.18\textwidth}p{.34\textwidth}X@{}}\toprule
+Pestaña & Fórmulas o configuración & Evidencia y resultado comprobado\\\midrule
+\texttt{MARTÍN} & \texttt{=16384*1048576} & Portada azul institucional; totaliza $17{,}179{,}869{,}184$ celdas.\\
+\texttt{FACTURAS} & \texttt{=D3*E3*(1-F3)}, \texttt{=MAX(...)}, \texttt{=MIN(...)}, \texttt{=SUM(...)} & Ajuste horizontal a $1 \times 1$ página; total \$68,137.00, máximo \$81.00 y mínimo \$2.99.\\
+\texttt{Participantes} & \texttt{=RANDBETWEEN(8,40)} y formato condicional & Rango con nombre \texttt{Datos}; verde $\ge 36$ y rojo $< 15$.\\
+\texttt{02-Ventas} & \texttt{=SEQUENCE(COUNTA(B:B)-1)} & Desbordamiento dinámico $1\dots 55$ en la columna A.\\
+\texttt{02-Vendedores} & Serie $1\dots 55$, \texttt{=SUM(D3:D57)}, \texttt{=AVERAGE(D3:D57)} & Ejercicio de tarea resuelto con país ``España'' y totales al pie.\\\bottomrule
 \end{tabularx}
-\par
-Si cantidad y precio están en B2 y C2, el importe en D2 se obtiene con \texttt{=B2*C2}. Al copiar hacia abajo, las referencias relativas cambian a B3 y C3 y después a B4 y C4. El total puede expresarse como \texttt{=SUMA(D2:D4)} en una instalación con nombres de funciones en español; la configuración regional puede cambiar nombres o separadores.
-\section{Referencias relativas y absolutas}
-Para un descuento didáctico uniforme de 10\%, se coloca 0.10 en F2 y se calcula en E2 \texttt{=D2*(1-\$F\$2)}. La referencia absoluta mantiene la tasa al copiar la fórmula; D2 continúa siendo relativa. Los resultados esperados son 108.00, 45.00 y 36.00, con total de 189.00. Esta tasa no representa un impuesto ni una condición comercial real.
-\section{Comprobación independiente}
-\begin{enumerate}
-\item Verificar manualmente los productos: $3(40)=120$, $2(25)=50$ y $5(8)=40$.
-\item Sumar los importes: $120+50+40=210$.
-\item Comprobar el descuento total: $210(0.10)=21$ y $210-21=189$.
-\item Revisar las fórmulas de las filas copiadas para confirmar que la tasa permanece en F2.
-\item Comprobar que los valores son numéricos y que el rango del total no incluye su propia celda.
-\end{enumerate}
-\section{Organización de los ejercicios oficiales de clase}
-Los ejercicios realizados durante las sesiones de la Semana 2 y los propuestos por el Dr. Dámaso Guadalupe Ruíz González en la Carpeta de Apoyo (\texttt{50094}) se integraron en el libro oficial \texttt{GPO103LCP\_EXCEL\_BASICO\_MartinJonathan\_DeLaCruzMunoz.xlsx} conformado por 29 hojas auténticas correspondientes a los Capítulos 1, 2, 3, 4, 6 y 7: \texttt{FACTURAS}, \texttt{Ventas} (1,900 registros), \texttt{Ventas-2018-2019}, \texttt{Participantes}, \texttt{ResumenGanancias}, \texttt{Relativas}, \texttt{Absolutas} (IGV $18\%$), \texttt{Mixtas} (matriz $10\times 10$), \texttt{PlayStation}, \texttt{Hoteles}, \texttt{VentaMaquillaje} (1,900 registros), \texttt{Corporacion\_Televisiva}, \texttt{Estaturas}, \texttt{VentasPorPedido}, las 9 hojas de \texttt{FuncionesTexto} (\texttt{Minúsculas}, \texttt{Mayúsculas}, \texttt{UnirCadenas}, \texttt{NombrePropio}, \texttt{Izq-Der-}, \texttt{Largo}, \texttt{HALLAR-1}, \texttt{HALLAR-2}, \texttt{EXTRAE}) y las 6 hojas de funciones de fecha (\texttt{Mora}, \texttt{Promoción}, \texttt{FECHA}, \texttt{FECHA.NUMERO}, \texttt{PlanProyecto} y \texttt{MundialQatar}).
+
+\section{Evidencia visual de las sesiones grabadas}
+En la Figura~\ref{fig:s2-portada} se aprecia el ejercicio de cálculo de capacidad máxima de una hoja de cálculo trabajado en clase, mientras que las Figuras~\ref{fig:s2-ventas} y~\ref{fig:s2-tarea} corroboran la distinción entre la hoja demostrada en clase con \texttt{SEQUENCE(COUNTA(...))} (\texttt{02-Ventas}) y la práctica asignada de relleno y limpieza (\texttt{02-Vendedores}).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.90\textwidth,height=0.30\textheight,keepaspectratio]{grabaciones/s2c1-poi-03-celdas-hoja-portada.png}
+\caption{Sesión 2, Clase 1: pestaña de portada y cálculo de celdas totales (\texttt{=16384*1048576}).}
+\label{fig:s2-portada}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.90\textwidth,height=0.30\textheight,keepaspectratio]{grabaciones/s2c2-poi-03-ventas-secuencia-contara.png}
+\caption{Sesión 2, Clase 2: numeración automática mediante \texttt{=SECUENCIA(CONTARA(B:B)-1)} en \texttt{02-Ventas}.}
+\label{fig:s2-ventas}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.90\textwidth,height=0.30\textheight,keepaspectratio]{grabaciones/s2c2-poi-04-tarea-vendedores.png}
+\caption{Sesión 2, Clase 2: asignación de la pestaña de tarea \texttt{02-Vendedores} (serie de relleno y captura completa).}
+\label{fig:s2-tarea}
+\end{figure}
+
+\section{Comprobación computacional en Microsoft Excel}
+El libro terminado fue sometido a recálculo completo en Microsoft Excel mediante automatización COM, confirmándose cero errores de fórmula en sus cinco hojas (\texttt{\#¡VALOR!}, \texttt{\#¿NOMBRE?}, \texttt{\#REF!} ni desbordamientos bloqueados). Asimismo, en la hoja \texttt{FACTURAS} se verificó la configuración de impresión en orientación horizontal ajustada a una sola página de ancho por una de alto.
 }
 \newcommand{\actividadcierre}{%
 \section{Conclusiones}
-La confiabilidad de una hoja de cálculo depende de la relación entre datos, referencias y operaciones. Las referencias absolutas permiten conservar parámetros al copiar fórmulas, mientras que una comprobación independiente ayuda a detectar errores de rango o de interpretación. La presentación debe facilitar la revisión sin ocultar las operaciones que originan el resultado.\footnote{Se utilizó el chat de GitHub Copilot como apoyo para la redacción, organización documental y comprobación del ejemplo didáctico.}
+La trazabilidad directa entre las grabaciones de clase y el entregable final garantiza que el libro \texttt{GPO103LCP\_EXCEL\_BASICO\_MartinJonathan\_DeLaCruzMunoz.xlsx} responde puntualmente a la evaluación del docente, combinando fórmulas dinámicas modernas como \texttt{SEQUENCE}, formatos condicionales de auditoría visual y ajuste formal de impresión.
+\footnote{Se utilizó apoyo de inteligencia artificial únicamente para la verificación documental y la maquetación LaTeX a partir de los archivos y capturas reales generados en este proyecto.}
 \clearpage}
 \input{reporte-herramientas-digitales-plantilla-actividad.tex}

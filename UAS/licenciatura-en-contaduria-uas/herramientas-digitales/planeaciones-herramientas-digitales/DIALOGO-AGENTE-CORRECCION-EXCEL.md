@@ -1,6 +1,6 @@
 # Diálogo Multi-Agente y Línea de Acción para Corrección de Actividades Excel (UAS — Herramientas Digitales)
 
-- **Fecha de generación:** 2026-11-14T11:42:32.822806+00:00
+- **Fecha de generación:** 2026-11-15T06:09:29.616016+00:00
 - **Asignatura:** `herramientas-digitales` (Curso `635`, Dr. Dámaso Guadalupe Ruíz González)
 - **Agentes participantes:** `monitor-uas`, `grabaciones-uas`, `realizar-planeacion`, `realizar-actividad`
 
@@ -9,7 +9,7 @@
 ## 1. Validación Forense de Deficiencias en Entregables Excel (`monitor-uas`)
 
 ### Módulo `50102` — Práctica: Compartir Carpeta de Trabajo (Semana 1)
-- **Calificación y Retroalimentación en Moodle FCA:** `2.50 / 3.00` — *MUY BIEN: ...su trabajo esta escelentemente estructurado, sólo que la carpeta se comparte con el docente NO DE FORMA pública...y no subio los archivos PDF y Word...* (`Editar envío (abierto)`)
+- **Calificación y Retroalimentación en Moodle FCA:** `Pendiente` — *Sin comentario* (`N/A`)
 - **Archivo local auditado:** `No generado`
 - **Hojas detectadas en el `.xlsx` actual:** `Ninguna`
 - **Fórmulas totales / Tablas dinámicas nativas:** `0` fórmulas / `0` PivotTables
@@ -17,7 +17,7 @@
 - **Deficiencias localizadas por AulaTeX:**
 
 ### Módulo `50113` — Práctica de reuniones virtuales en Zoom (Semana 2)
-- **Calificación y Retroalimentación en Moodle FCA:** `0.00 / 6.00` — *NPT* (`Añadir envío (abierto)`)
+- **Calificación y Retroalimentación en Moodle FCA:** `Pendiente` — *Sin comentario* (`N/A`)
 - **Archivo local auditado:** `No generado`
 - **Hojas detectadas en el `.xlsx` actual:** `Ninguna`
 - **Fórmulas totales / Tablas dinámicas nativas:** `0` fórmulas / `0` PivotTables
@@ -25,64 +25,54 @@
 - **Deficiencias localizadas por AulaTeX:**
 
 ### Módulo `50114` — Práctica de ejercicios en Excel básico de la Sesión 2 (Semana 2)
-- **Calificación y Retroalimentación en Moodle FCA:** `5.00 / 10.00` — *NPT --->  Creo que no son los ejecicios de la clase (Revise videos)* (`Editar envío (abierto)`)
+- **Calificación y Retroalimentación en Moodle FCA:** `Pendiente` — *Sin comentario* (`N/A`)
 - **Archivo local auditado:** `GPO103LCP_EXCEL_BASICO_MartinJonathan_DeLaCruzMunoz.xlsx`
-- **Hojas detectadas en el `.xlsx` actual:** `FACTURAS, Ventas, Ventas-2018-2019, Participantes, ResumenGanancias, Relativas, Absolutas, Mixtas, PlayStation, Hoteles, VentaMaquillaje, Corporacion_Televisiva, Estaturas, VentasPorPedido, Minúsculas, Mayúsculas, UnirCadenas, NombrePropio, Izq-Der-, Largo, HALLAR-1, HALLAR-2, EXTRAE, Mora, Promoción, FECHA, FECHA.NUMERO, PlanProyecto, MundialQatar`
-- **Fórmulas totales / Tablas dinámicas nativas:** `4422` fórmulas / `0` PivotTables
+- **Hojas detectadas en el `.xlsx` actual:** `MARTÍN, FACTURAS, Participantes, 02-Ventas, 02-Vendedores`
+- **Fórmulas totales / Tablas dinámicas nativas:** `27` fórmulas / `0` PivotTables
 - **Cumple con ejercicios de clase (`Carpeta de Apoyo 50094`):** `SÍ`
 - **Deficiencias localizadas por AulaTeX:**
 - **Plantillas oficiales de clase requeridas:**
-  - `01_ListaProductos.xlsx (FACTURAS)`
-  - `02_Ventas.xlsx (Ventas, Ventas-2018-2019)`
-  - `03_Participantes.xlsx (Asistentes)`
-  - `04_Impresión.xlsx / 05_Area de impresión.xlsx / 06_Imprimir Títulos.xlsx`
-  - `02_Referencias.xlsx (Relativas, Absolutas IGV 18%, Mixtas tabla 10x10)`
-  - `03_ResumenGanancias.xlsx / ResumenGanancias_Finalizado.xlsx`
-  - `Alquiler.xlsx (PlayStation) / Hoteles.xlsx`
-  - `Corporación_Televisiva.xlsx / Estaturas.xlsx / VentaMaquillaje.xlsx (1900 filas) / VentasPorPedido.xlsx`
-  - `FuncionesTexto.xlsx (Minúsculas, Mayúsculas, UnirCadenas, NombrePropio, Izq-Der-, Largo, HALLAR-1, HALLAR-2, EXTRAE)`
-  - `Funciones de Fecha.xlsx / Interés Moratorio.xlsx (Mora, Promoción) / Mundial Qatar.xlsx / PlanProyecto.xlsx`
+  - `Hoja portada personal (MARTÍN) con ejercicio de clase CELDAS = 16384*1048576 (17,179,869,184) — I_H5f_gGbuc [01:41:20]`
+  - `04_Impresión.xlsx -> FACTURAS ajustada a 1 hoja horizontal en Diseño de página — 0FGH031UsFo [00:16:38]`
+  - `03_Participantes.xlsx -> Participantes (=ALEATORIO.ENTRE(8,40) + Formato Condicional + rango Datos) — 0FGH031UsFo [00:46:30]`
+  - `04_Vendedores.xlsx -> 02-Ventas (=SECUENCIA(CONTARA(B:B)-1)) y 02-Vendedores (Serie de Relleno 1..55 + totales) — 0FGH031UsFo [01:08:00, 01:25:15]`
 
 ### Módulo `50130` — Libro de Excel Aplicado S3 (Semana 3)
-- **Calificación y Retroalimentación en Moodle FCA:** `10.00 / 20.00` — **** BIEN: ...No son los ejercios de la clase ..* (`Editar envío (abierto)`)
+- **Calificación y Retroalimentación en Moodle FCA:** `Pendiente` — *Sin comentario* (`N/A`)
 - **Archivo local auditado:** `GPO103LCP_EXCEL_APLICADO_MartinJonathan_DeLaCruzMunoz.xlsx`
-- **Hojas detectadas en el `.xlsx` actual:** `SI-1, SI-2_Genero1, SI-3_EstadoCivil, SI_Comisiones, SI_Promociones, SI_NotasDeuda, SI_ComisionPorc, SIAnidado_Genero1, SIAnidado_Alumnos, SIAnidado_Genero2, SIAnidado_Goles, Alumnos, Gastos, SI1, SI2, SI3, SI4, Elegir_1, Elegir_3, BUSCARV, Valor_Aproximado, BUSCARH, Puntaje, SelecciónCódigo, ListaInmobiliaria, Origen de datos, Tabla_Dinamica_Banco, FlujoCaja, Subtotales, Validacion`
-- **Fórmulas totales / Tablas dinámicas nativas:** `8642` fórmulas / `1` PivotTables
+- **Hojas detectadas en el `.xlsx` actual:** `03-Proyectos, 03-Relativas, 03-Absolutas, 03-Mixtas, 03-Resumen, 03-Hoteles, 04-Maquillaje, 05-Alumnos, 05-Estado Civil, 05-Género 1, 05-Goles, 05-Género 2`
+- **Fórmulas totales / Tablas dinámicas nativas:** `42` fórmulas / `0` PivotTables
 - **Cumple con ejercicios de clase (`Carpeta de Apoyo 50094`):** `SÍ`
 - **Deficiencias localizadas por AulaTeX:**
 - **Plantillas oficiales de clase requeridas:**
-  - `01_FunciónLogica.xlsx (SI-1..SI-3, Y-1..Y-3, O-1..O-2)`
-  - `02_SIAnidado.xlsx (Género 1, Alumnos, Género 2, Estado Civil, goles)`
-  - `03_Certificaciones.xlsx / Alumnos.xlsx / EstadosMaquillaje.xlsx (SI1..SI4, Y1..Y2, O1..O2) / Gastos.xlsx`
-  - `01_Elegir.xlsx / 02_BuscarV.xlsx / 03_RangoAproximado.xlsx / 04_BuscarH.xlsx / Puntaje.xlsx / SelecciónCódigo.xlsx`
-  - `01_ListaInmobiliaria.xlsx / 04_ Tabla Dinámica Recomendada.xlsx / 05_Tablas Dinámicas.xlsx / Tabla Inmobiliaria.xlsx`
-  - `01_Crear Gráficos.xlsx / 03_FlujoCaja.xlsx / 04_Censo2007.xlsx / Ingresos.xlsx`
-  - `02_Subtotales.xlsx / 03_Esquemas.xlsx / 04_Validación.xlsx / 06_Formato Prestablecido.xlsx / 07_Crear reglas.xlsx`
+  - `01_Proyectos.xlsx -> 03-Proyectos (pestaña verde, presupuestos y totales) — q9KgoQqUJpU [00:07:35]`
+  - `02_Referencias.xlsx -> 03-Relativas, 03-Absolutas ($E$3 con F4), 03-Mixtas (=$A3*B$2) — q9KgoQqUJpU [00:24:30..00:40:54]`
+  - `ResumenGanancias_Compartido.xlsx -> 03-Resumen (+ tabla K6:N10 con HOY() y SIFECHA) — q9KgoQqUJpU [01:16:00]`
+  - `Hoteles.xlsx -> 03-Hoteles (pestaña roja de tarea) y VentaMaquillaje.xlsx -> 04-Maquillaje (pestaña roja, C16:C23) — q9KgoQqUJpU [01:27:00] / ZSLk1hRY48U [01:05:30]`
+  - `01_FunciónLogica.xlsx y 02_SIAnidado.xlsx -> 05-Alumnos, 05-Estado Civil, 05-Género 1, 05-Goles [roja], 05-Género 2 [roja] — ZSLk1hRY48U [01:17:40..01:44:30]`
 
 ### Módulo `50131` — Examen Excel Práctico en Clase S3 (Semana 3)
-- **Calificación y Retroalimentación en Moodle FCA:** `5.00 / 10.00` — *No corresponden a los ejercicios de clases* (`Editar envío (abierto)`)
+- **Calificación y Retroalimentación en Moodle FCA:** `Pendiente` — *Sin comentario* (`N/A`)
 - **Archivo local auditado:** `GPO103LCP_EXAMEN_EXCEL_S3_MartinJonathan_DeLaCruzMunoz.xlsx`
-- **Hojas detectadas en el `.xlsx` actual:** `Alumnos, Gastos, VentaMaquillaje, SI1, SI2, SI3, SI4, Buena Venta (5), Buena Venta (6), Buena Venta (7), Buena Venta (8), Mora, Promoción, Puntaje, SelecciónCódigo`
-- **Fórmulas totales / Tablas dinámicas nativas:** `17176` fórmulas / `0` PivotTables
+- **Hojas detectadas en el `.xlsx` actual:** `03-Proyectos, 03-Relativas, 03-Absolutas, 03-Mixtas, 03-Resumen, 03-Hoteles, 04-Maquillaje, 05-Alumnos, 05-Estado Civil, 05-Género 1, 05-Goles, 05-Género 2`
+- **Fórmulas totales / Tablas dinámicas nativas:** `60` fórmulas / `0` PivotTables
 - **Cumple con ejercicios de clase (`Carpeta de Apoyo 50094`):** `SÍ`
 - **Deficiencias localizadas por AulaTeX:**
 - **Plantillas oficiales de clase requeridas:**
-  - `Alumnos.xlsx / Alumnos - resuelto.xlsx (escala 0-20: Bajo 0-10, Medio 11-13, Alto 14-16, Muy alto 17-20 con =IFS(AND(...)))`
-  - `Gastos.xlsx / Gastos - resuelto.xlsx (=IF(SUM(B3:B5)<=350,'Dentro de presupuesto','Presupuesto excedido'))`
-  - `VentaMaquillaje.xlsx (1,900 registros reales $H$5:$H$1904 con SUMIF/COUNTIF/AVERAGEIF/SUMIFS)`
-  - `EstadosMaquillaje.xlsx (8 hojas: SI1..SI4, Y1..Y2, O1..O2)`
-  - `Interés Moratorio.xlsx (hojas Mora y Promoción con días de atraso reales)`
-  - `Puntaje.xlsx (=VLOOKUP(F2,A4:C17,3,TRUE)) y SelecciónCódigo.xlsx`
+  - `Mismo libro de 12 pestañas que GPO103LCP_EXCEL_APLICADO, pero con TODAS las tareas rojas y pendientes resueltas (ZSLk1hRY48U [01:44:30])`
+  - `03-Hoteles resuelta al 100% (totales trimestrales/semestrales, promedios, MAX/MIN)`
+  - `04-Maquillaje resuelta al 100% (tablas vendedores/productos + 11 RESULTADOS C16:C26 completos con nombres definidos)`
+  - `05-Goles (=SI ganador/empate) y 05-Género 2 (SI anidado + SI.CONJUNTO) resueltas al 100%`
 
 ### Módulo `50144` — Google Sites (Semana 4)
-- **Calificación y Retroalimentación en Moodle FCA:** `Sin calificar` — *Sin comentario* (`Añadir envío (abierto — cierra domingo 15 nov 2026)`)
+- **Calificación y Retroalimentación en Moodle FCA:** `Pendiente` — *Sin comentario* (`N/A`)
 - **Archivo local auditado:** `EXCEL_CONTA_MartinJonathan_DeLaCruzMunoz.xlsx`
-- **Hojas detectadas en el `.xlsx` actual:** `Balance1, Bal Completo Reporte, Bal Completo Cuenta, Balance Reporte, Balance Cuenta, Bal Comparativo 1, Bal Comparativo 2, Bal Compar Cuenta, Bal Comparativo 3, Estado de Resultados 1, Estado de resultados 2, EdoRes Comercial, BO INGRESOS TOTALES, PE 1, PE2`
-- **Fórmulas totales / Tablas dinámicas nativas:** `282` fórmulas / `0` PivotTables
+- **Hojas detectadas en el `.xlsx` actual:** `BALANCE, REPORTE`
+- **Fórmulas totales / Tablas dinámicas nativas:** `15` fórmulas / `0` PivotTables
 - **Cumple con ejercicios de clase (`Carpeta de Apoyo 50094`):** `SÍ`
 - **Deficiencias localizadas por AulaTeX:**
 - **Plantillas oficiales de clase requeridas:**
-  - `EXCEL_CONTA_MartinJonathan_DeLaCruzMunoz.xlsx (Complemento de LCP - Aplicado S4: 15 hojas contables: Balance1, Bal Completo Reporte, Bal Completo Cuenta, Balance Reporte, Balance Cuenta, Bal Comparativo 1..3, Bal Compar Cuenta, Estado de Resultados 1..2, EdoRes Comercial, BO INGRESOS TOTALES, PE 1, PE2)`
+  - `EXCEL_CONTA_MartinJonathan_DeLaCruzMunoz.xlsx (7ZomiXX7eus 10/nov/2026: 2 hojas tipo tabla verde TablaContable: BALANCE [La Comercial Mercantil S.A. de C.V. en clase] y REPORTE [Primer Ejercicio Propuesto PDF SUAD con Papelería/Seguros en Diferido]; se sube a la carpeta compartida de Google Drive según rzici9Xi01Y [01:41:53], y PDF Google Sites a Moodle 50144).`
 
 ---
 

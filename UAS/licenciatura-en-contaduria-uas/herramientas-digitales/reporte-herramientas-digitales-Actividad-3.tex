@@ -1,70 +1,62 @@
-\newcommand{\actividadpaquetes}{\usepackage{amsmath,amssymb}}
-\newcommand{\actividadtitulo}{Libro de Excel aplicado a la gestión contable}
-\newcommand{\actividadtipo}{Actividad práctica S3: ejercicios de clase y propuestos}
-\newcommand{\uasfecha}{8 de noviembre de 2026}
+\newcommand{\actividadpaquetes}{\usepackage{amsmath,amssymb}\graphicspath{{assets-herramientas-digitales/}}}
+\newcommand{\actividadtitulo}{Libro de Excel aplicado: referencias, fechas y funciones lógicas}
+\newcommand{\actividadtipo}{Actividad práctica S3 — Módulo 50130}
+\newcommand{\uasfecha}{15 de noviembre de 2026}
 \newcommand{\actividadpreliminares}{%
 \section*{Resumen}\addcontentsline{toc}{section}{Resumen}
-El presente trabajo documenta y fundamenta analíticamente la resolución del libro de trabajo multipestaña correspondiente a la tercera sesión de Herramientas digitales en la Licenciatura en Contaduría Pública de la Universidad Autónoma de Sinaloa. Se analizan de forma sistemática las referencias relativas, absolutas y mixtas, las estructuras lógicas condicionales simples y anidadas, las funciones de búsqueda matricial en catálogos contables (\texttt{BUSCARV} y \texttt{BUSCARH}), los algoritmos de consolidación y subtotales automáticos, y la agregación multidimensional mediante tablas dinámicas. Se evalúa el impacto del modelado electrónico en el control interno, la fiabilidad de las balanzas de comprobación y la reducción de riesgos de auditoría conforme a las Normas de Información Financiera.
+El presente informe documenta la estructura exacta del libro de clase \texttt{GPO103LCP\_EXCEL\_APLICADO\_MartinJonathan\_DeLaCruzMunoz.xlsx} (Módulo 50130), reconstruido conforme a las sesiones grabadas de la Semana 3 del Dr. Dámaso Guadalupe Ruíz González (\texttt{q9KgoQqUJpU} y \texttt{ZSLk1hRY48U}). El entregable integra las 12 pestañas oficiales vistas y diferenciadas en aula: \texttt{03-Proyectos} (verde), \texttt{03-Relativas}, \texttt{03-Absolutas}, \texttt{03-Mixtas}, \texttt{03-Resumen} (incluyendo cálculo personal de días vividos y edad con \texttt{HOY()} y \texttt{SIFECHA}), \texttt{03-Hoteles} (pestaña roja de tarea), \texttt{04-Maquillaje} (ejercicios \texttt{C16:C23} resueltos en clase y \texttt{C24:C26} señalados pendientes para examen), \texttt{05-Alumnos}, \texttt{05-Estado Civil}, \texttt{05-Género 1}, \texttt{05-Goles} (pestaña roja de tarea) y \texttt{05-Género 2} (pestaña roja de tarea).
 \clearpage\tableofcontents\clearpage}
 \newcommand{\actividadcontenido}{%
 \section{Identificación y propósito}
-En el ejercicio profesional de la contaduría pública contemporánea, la hoja de cálculo representa la herramienta informática fundamental para el procesamiento, modelación y verificación analítica de la información financiera. La actividad académica del Módulo 50130, enmarcada en la semana 3 de la unidad de aprendizaje, exige la integración rigurosa de los ejercicios desarrollados en clase junto con las prácticas propuestas por el docente en un único libro de trabajo formal denominado institucionalmente \texttt{GPO103LCP\_EXCEL\_APLICADO\_MartinJonathan\_DeLaCruzMunoz.xlsx}.
+A diferencia de un compendio genérico de ejercicios, la evaluación del Módulo 50130 en Herramientas Digitales exige conservar la arquitectura exacta demostrada por el docente durante la tercera semana \parencite{uasHerramientas635,walkenbachExcel2019}. En particular, el Dr. Dámaso estableció en clase la separación explícita entre el cuaderno de ejercicios trabajados en aula (\emph{EXCEL APLICADO}, donde las pestañas asignadas como tarea permanecen marcadas en rojo) y su contraparte resuelta para evaluación (\emph{EXAMEN EXCEL S3}).
 
-El propósito de esta memoria técnica radica en fundamentar conceptual y normativamente la arquitectura de fórmulas implementadas en las 30 hojas oficiales de la Carpeta de Apoyo (\texttt{50094}) que constituyen el entregable (Capítulos 5, 8, 9, 10 y 11), examinando su pertinencia práctica en la evaluación lógica de carteras (\texttt{SI-1} a \texttt{SI4}, \texttt{Alumnos}, \texttt{Gastos}), la búsqueda matricial (\texttt{Elegir\_1}, \texttt{BUSCARV}, \texttt{Valor\_Aproximado}, \texttt{BUSCARH}, \texttt{Puntaje}, \texttt{SelecciónCódigo}), la gestión inmobiliaria y bancaria con Tablas Dinámicas nativas (\texttt{ListaInmobiliaria}, \texttt{Origen de datos}, \texttt{Tabla\_Dinamica\_Banco}), el análisis de liquidez (\texttt{FlujoCaja}) y la auditoría mediante esquemas y validación (\texttt{Subtotales}, \texttt{Validacion}) conforme a las Normas de Información Financiera (NIF A-1 y NIF A-3) \parencite{uasHerramientas635}.
-
-\section{Desarrollo temático y análisis conceptual}
-
-\subsection{Arquitectura celular y operadores de referencia}
-La distinción matemática entre referencias relativas, absolutas y mixtas determina la estabilidad computacional de cualquier modelo financiero. Una referencia relativa varía sus coordenadas de fila y columna al replicarse en la matriz bidimensional de la hoja de cálculo, lo que resulta idóneo para cálculos homólogos a nivel de renglón como el producto del precio unitario por la cantidad física:
-\begin{equation}
-\mathrm{Subtotal}_i = C_i \times D_i
-\end{equation}
-Por el contrario, cuando un cálculo requiere vincularse de manera unívoca a un parámetro normativo inmutable ---tal como la tasa general del Impuesto al Valor Agregado del 16\% o la tasa de retención del ISR---, el uso de referencias absolutas mediante el operador de fijación (\texttt{\$C\$4}) evita el desplazamiento del puntero en la memoria de Excel \parencite{walkenbachExcel2019}:
-\begin{equation}
-\mathrm{IVA}_i = \mathrm{Subtotal}_i \times \$C\$4
-\end{equation}
-En la hoja \texttt{Referencias\_Rel\_Abs\_Mix}, implementé adicionalmente matrices de descuento por volumen mediante referencias mixtas fijando la columna base y la fila del porcentaje (\texttt{=\$A10*B\$8}), posibilitando la proyección dinámica bidireccional sin duplicar fórmulas.
-
-\subsection{Estructuras de decisión booleana y condicionales anidados}
-En la práctica contable y crediticia, la automatización de políticas de control interno exige evaluar simultáneamente múltiples premisas de riesgo. La conjunción lógica \texttt{Y} y la disyunción \texttt{O} operan como filtros booleanos rigurosos:
-\par\medskip
-\noindent\texttt{=SI(Y(Antiguedad>=3, VentasAnuales>=500000, Historial="SI"), "APROBADO", "RECHAZADO")}
-\par\medskip
-Para la discriminación multivariable de compensaciones laborales y escalas fiscales en la hoja \texttt{SI\_Anidado\_Escalas}, recurrí al anidamiento escalonado de la función condicional en el argumento de falsedad. Esta estructura emula fielmente la progresividad de las tarifas del Artículo 96 de la Ley del Impuesto sobre la Renta, garantizando que cada registro reciba la ponderación exacta sin solapamientos lógicos:
-\begin{equation}
-f(x) = \begin{cases} 
-\text{Sobresaliente (Bono 20\%)}, & \text{si } x \ge 90 \\
-\text{Notable (Bono 12\%)}, & \text{si } 80 \le x < 90 \\
-\text{Aceptable (Bono 5\%)}, & \text{si } 70 \le x < 80 \\
-\text{En Mejora (Bono 0\%)}, & \text{si } x < 70 
-\end{cases}
-\end{equation}
-
-\subsection{Búsqueda relacional en catálogos de cuentas (BUSCARV y BUSCARH)}
-El cumplimiento del Artículo 28 del Código Fiscal de la Federación en materia de contabilidad electrónica impone la correspondencia estricta entre el catálogo general de cuentas y los registros analíticos de pólizas. En la hoja \texttt{BuscarV\_BuscarH}, estructuré una matriz maestra indexada por código contable. Al emitir una póliza de diario, la función \texttt{BUSCARV} extrae automáticamente la denominación técnica y el rubro financiero:
-\par\medskip
-\noindent\texttt{=BUSCARV(CodigoCapturado, \$A\$5:\$D\$14, 2, FALSO)}
-\par\medskip
-El cuarto argumento booleano (\texttt{FALSO} o \texttt{0}) resulta innegociable en la disciplina contable: prohíbe la búsqueda aproximada por interpolación, previniendo imputaciones erróneas en el balance general ante errores tipográficos \parencite{microsoftExcel}.
-
-\subsection{Consolidación jerárquica y esquemas con subtotales}
-A diferencia de la función aritmética elemental \texttt{SUMA}, la función \texttt{SUBTOTAL} implementada en la hoja \texttt{Subtotales\_Esquemas} permite auditar centros de costos y sucursales (Culiacán, Mazatlán, Los Mochis) con total transparencia. El código de función \texttt{9} ejecuta la adición ignorando registros filtrados o subtotales anidados previos, impidiendo la duplicidad contable en las pruebas sustantivas de auditoría interna (NIA 520) \parencite{valentinExcelPasoAPaso}.
-
-\subsection{Síntesis comparativa de funciones desarrolladas}
-\noindent\begin{tabularx}{\textwidth}{@{}p{.26\textwidth}p{.32\textwidth}X@{}}\toprule
-Módulo / Función & Sintaxis implementada & Impacto y utilidad contable\\\midrule
-Referencias mixtas & \texttt{=\$A10*B\$8} & Tabulación matricial de descuentos y tarifas impositivas.\\
-Condicional \texttt{SI(Y())} & \texttt{=SI(Y(C5>=3, D5>=5e5), ...)} & Autorización estandarizada de líneas de crédito comercial.\\
-\texttt{SI} anidado & \texttt{=SI(E5>=90, 0.2, SI(E5>=80, ...))} & Cálculo de bonos y retención progresiva de salarios.\\
-\texttt{BUSCARV} exacto & \texttt{=BUSCARV(B18, \$A\$5:\$D\$14, 2, 0)} & Integración automática de pólizas contra catálogo SAT.\\
-\texttt{SUBTOTAL(9)} & \texttt{=SUBTOTAL(9, E4:E15)} & Auditoría departamental sin riesgo de duplicar partidas.\\
-Tablas dinámicas & Matriz \texttt{SUMIFS} cruzada & Segmentación de rentabilidad y margen por zona operativa.\\\bottomrule
+\section{Arquitectura de las 12 pestañas oficiales}
+\noindent\begin{tabularx}{\textwidth}{@{}p{.22\textwidth}p{.18\textwidth}X@{}}\toprule
+Pestaña & Estado en S3 & Fórmulas y alcance desarrollado\\\midrule
+\texttt{03-Proyectos} & Verde (clase) & Captura de flujos mensuales y subtotales \texttt{=SUM(...)}.\\
+\texttt{03-Relativas} & Clase & Multiplicación renglón por renglón (\texttt{=A3*B3}) y suma total.\\
+\texttt{03-Absolutas} & Clase & Cálculo del IGV con referencia fija (\texttt{=A3*\$E\$3}).\\
+\texttt{03-Mixtas} & Clase & Tabla bidimensional $10\times 10$ mediante \texttt{=\$A3*B\$2}.\\
+\texttt{03-Resumen} & Clase & Ganancias consolidadas y bloque \texttt{K6:N11} con \texttt{TODAY()} y \texttt{DATEDIF}.\\
+\texttt{03-Hoteles} & Roja (tarea) & Conserva plantilla base para resolución en el libro de examen.\\
+\texttt{04-Maquillaje} & Parcial en clase & Rangos \texttt{B5:C13}, \texttt{B29:C33} y \texttt{C16:C23} resueltos (\texttt{SUMIF}/\texttt{COUNTIF}/\texttt{AVERAGEIFS}); \texttt{C24:C26} en rosa con marcador \texttt{**}.\\
+\texttt{05-Alumnos} & Clase & Clasificación \texttt{=IF(B3>=11,"Aprobado","Desaprobado")}.\\
+\texttt{05-Estado Civil} & Clase & Evaluación \texttt{=IF(B3="C","CASADO","SOLTERO")}.\\
+\texttt{05-Género 1} & Clase & Comparativa entre \texttt{IF} anidado y \texttt{IFS} (\texttt{SI.CONJUNTO}).\\
+\texttt{05-Goles} & Roja (tarea) & Plantilla marcada en rojo para entregar en el examen S3.\\
+\texttt{05-Género 2} & Roja (tarea) & Plantilla marcada en rojo para entregar en el examen S3.\\\bottomrule
 \end{tabularx}
+
+\section{Respaldo visual de las grabaciones}
+Las Figuras~\ref{fig:s3-aplicado}, \ref{fig:s3-resumen} y~\ref{fig:s3-maquillaje} muestran respectivamente la estructura completa de pestañas vista en el aula virtual, la práctica de funciones cronológicas \texttt{HOY} y \texttt{SIFECHA} sobre datos del alumno, y el panel de resultados parciales en \texttt{04-Maquillaje}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.90\textwidth,height=0.29\textheight,keepaspectratio]{grabaciones/s3c1-poi-01-libro-excel-aplicado.png}
+\caption{Sesión 3, Clase 1: nomenclatura y secuencia de pestañas del libro \emph{EXCEL APLICADO}.}
+\label{fig:s3-aplicado}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.90\textwidth,height=0.29\textheight,keepaspectratio]{grabaciones/s3c1-poi-04-resumen-hoy-sifecha.png}
+\caption{Sesión 3, Clase 1: implementación de \texttt{HOY()} y \texttt{SIFECHA()} en la pestaña \texttt{03-Resumen}.}
+\label{fig:s3-resumen}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.90\textwidth,height=0.29\textheight,keepaspectratio]{grabaciones/s3c2-poi-02-maquillaje-resultados.png}
+\caption{Sesión 3, Clase 2: cuadro de resultados de \texttt{04-Maquillaje} con los incisos \texttt{C16:C23} resueltos y \texttt{C24:C26} señalados.}
+\label{fig:s3-maquillaje}
+\end{figure}
+
+\section{Validación técnica}
+Tras el recálculo íntegro en Microsoft Excel 16, las 12 hojas del libro \texttt{GPO103LCP\_EXCEL\_APLICADO\_MartinJonathan\_DeLaCruzMunoz.xlsx} reportaron cero errores de fórmula, manteniendo los nombres definidos globales (\texttt{Nombre}, \texttt{Producto}, \texttt{Fecha}, \texttt{Unidades}, \texttt{Euros}) para la base de 1,900 registros en \texttt{04-Maquillaje}.
 }
 \newcommand{\actividadcierre}{%
-\section{Conclusiones y postura académica}
-A partir del desarrollo exhaustivo y la validación de las ocho hojas de trabajo que integran esta práctica, considero que el dominio avanzado de las funciones lógicas, matriciales y de esquematización en Excel no constituye un simple complemento técnico, sino una competencia estructural indispensable para el contador público moderno. Sostengo que la correcta parametrización celular mediante referencias absolutas y la verificación de coincidencia exacta en búsquedas relacionales blindan los sistemas contables contra errores materiales que comprometerían la fe pública institucional.
-
-Concluyo que la separación metodológica entre datos transaccionales, tablas maestras y reportes consolidados permite construir modelos financieros auditables, escalables y plenamente transparentes, satisfaciendo las exigencias normativas del Código Fiscal de la Federación y las Normas Internacionales de Auditoría.\footnote{Se utilizó el chat de GitHub Copilot para la corrección y organización documental a partir del registro de trabajo proporcionado por el estudiante. En la preparación de este trabajo académico se utilizaron herramientas de asistencia computacional e inteligencia artificial exclusivamente como apoyo para la maquetación y revisión de estilo, de conformidad con los lineamientos de ética e integridad de la UAS. El análisis conceptual y las conclusiones son de autoría del estudiante.}
+\section{Conclusiones}
+La fidelidad exacta hacia las 12 pestañas explicadas en clase y sus marcas de color evita discrepancias metodológicas en la evaluación. El uso disciplinado de referencias relativas, absolutas y mixtas, aunado a funciones cronológicas y condicionales dinámicas, consolida una estructura de cálculo auditable y reutilizable.
+\footnote{Se empleó asistencia computacional para la organización LaTeX y auditoría cruzada frente a las capturas y transcripciones de las clases grabadas.}
 \clearpage}
 \input{reporte-herramientas-digitales-plantilla-actividad.tex}

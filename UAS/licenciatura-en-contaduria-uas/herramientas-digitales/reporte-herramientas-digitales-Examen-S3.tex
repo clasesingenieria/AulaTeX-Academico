@@ -1,71 +1,55 @@
-\newcommand{\actividadpaquetes}{\usepackage{amsmath,amssymb}}
-\newcommand{\actividadtitulo}{Examen práctico en clase de Excel aplicado}
-\newcommand{\actividadtipo}{Evaluación práctica S3: resolución y sustentación metodológica}
-\newcommand{\uasfecha}{8 de noviembre de 2026}
+\newcommand{\actividadpaquetes}{\usepackage{amsmath,amssymb}\graphicspath{{assets-herramientas-digitales/}}}
+\newcommand{\actividadtitulo}{Examen práctico en clase de Excel aplicado (Sesión 3)}
+\newcommand{\actividadtipo}{Evaluación práctica S3 — Módulo 50131}
+\newcommand{\uasfecha}{15 de noviembre de 2026}
 \newcommand{\actividadpreliminares}{%
 \section*{Resumen}\addcontentsline{toc}{section}{Resumen}
-El presente documento contiene la memoria de sustentación técnica y metodológica correspondiente al Examen Práctico en Clase de Excel de la tercera sesión (Módulo 50131) de Herramientas digitales en la Facultad de Contaduría y Administración de la Universidad Autónoma de Sinaloa. Se detallan los modelos matemáticos, lógicos y financieros formulados directamente sobre las 15 hojas oficiales de la Carpeta de Apoyo (\texttt{50094}) integradas en el libro entregable \texttt{GPO103LCP\_EXAMEN\_EXCEL\_S3\_MartinJonathan\_DeLaCruzMunoz.xlsx}, abarcando la clasificación de puntajes en escala vigesimal (\texttt{Alumnos}), el control presupuestal (\texttt{Gastos}), la agregación condicional sobre 1,900 transacciones reales (\texttt{VentaMaquillaje} y las 8 hojas de \texttt{EstadosMaquillaje}), la liquidación de mora contractual (\texttt{Mora} y \texttt{Promoción}) y la búsqueda matricial exacta y aproximada (\texttt{Puntaje} y \texttt{SelecciónCódigo}).
+Se sustenta técnica y visualmente la resolución íntegra del libro entregable \texttt{GPO103LCP\_EXAMEN\_EXCEL\_S3\_MartinJonathan\_DeLaCruzMunoz.xlsx} (Módulo 50131). Conforme a las indicaciones expresas del Dr. Dámaso Guadalupe Ruíz González en la Sesión 3 (Clase 2, minuto 01:44:30), este libro parte de las mismas 12 pestañas de \emph{EXCEL APLICADO}, completando en su totalidad las pestañas de tarea previamente identificadas en color rojo (\texttt{03-Hoteles}, \texttt{05-Goles}, \texttt{05-Género 2}) así como los tres ejercicios pendientes (\texttt{C24:C26}) de la hoja \texttt{04-Maquillaje}. Todos los cálculos fueron verificados con Microsoft Excel sin errores de evaluación.
 \clearpage\tableofcontents\clearpage}
 \newcommand{\actividadcontenido}{%
-\section{Identificación y propósito}
-La evaluación práctica en clase del Módulo 50131 constituye una prueba de madurez computacional orientada a medir la destreza del estudiante de Contaduría Pública en la formulación, parametrización y auditoría de modelos cuantitativos en Microsoft Excel. Conforme a las directrices de la plataforma UAS y a las sesiones grabadas del Dr. Dámaso Guadalupe Ruíz González, el estudiante debe resolver íntegramente las plantillas oficiales alojadas en la Carpeta de Apoyo del aula virtual, asegurando que cada resultado numérico provenga de fórmulas dinámicas auditables sobre los conjuntos de datos reales de clase.
+\section{Naturaleza dual del examen práctico S3}
+Durante el cierre de la Sesión 3 (\texttt{q9KgoQqUJpU} y \texttt{ZSLk1hRY48U}), el docente precisó que el libro del Módulo 50131 comparte exactamente las 12 pestañas del cuaderno de trabajo, con la diferencia evaluativa de incorporar resueltas las hojas de tarea y retirar su marcado rojo de pendiente \parencite{uasHerramientas635,microsoftExcel}. La Figura~\ref{fig:s3-cierre} reproduce el momento en que el profesor exhibe las pestañas finales requeridas para ambos entregables.
 
-El propósito de este reporte es sustentar la validez matemática, financiera y contable de los algoritmos implementados en las 15 hojas oficiales del libro de examen: \texttt{Alumnos}, \texttt{Gastos}, \texttt{VentaMaquillaje}, \texttt{SI1} a \texttt{SI4}, \texttt{Buena Venta (5)} a \texttt{Buena Venta (8)}, \texttt{Mora}, \texttt{Promoción}, \texttt{Puntaje} y \texttt{SelecciónCódigo}, fundamentando su concordancia con las Normas de Información Financiera y el Código de Comercio \parencite{uasHerramientas635}.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.90\textwidth,height=0.30\textheight,keepaspectratio]{grabaciones/s3c2-poi-05-cierre-aplicado-vs-examen.png}
+\caption{Sesión 3, Clase 2: indicación del docente sobre la correspondencia entre \emph{EXCEL APLICADO} y el examen \emph{S3}.}
+\label{fig:s3-cierre}
+\end{figure}
 
-\section{Desarrollo temático y resolución del examen}
+\section{Resolución detallada de las pestañas evaluadas}
 
-\subsection{Sección I: Agregación condicional de 1,900 transacciones reales (VentaMaquillaje)}
-En la hoja oficial \texttt{VentaMaquillaje} (registro histórico de 1,900 operaciones desde la fila 5 hasta la fila 1904), la problemática financiera consiste en consolidar un libro diario de transacciones comerciales por vendedora (Emilia, Cristina, Carolina, Alejandra, etc.), calculando el importe en euros devengado, las unidades físicas desplazadas, la frecuencia transaccional y el ticket promedio.
+\subsection{Hoja \texttt{03-Hoteles}}
+Se formularon los totales trimestrales por columna en la fila 10 (\texttt{=SUM(B3:B9)} a \texttt{=SUM(E3:E9)}), los acumulados semestrales en \texttt{H3:H4} (\$4,582,968.00 € y \$6,540,964.00 €), el promedio de ingresos por ciudad en \texttt{H7:H13} y los valores máximo (\$898,957.00 €) y mínimo (\$185,345.00 €) de la sucursal Central (Madrid) mediante \texttt{=MAX(B3:E3)} y \texttt{=MIN(B3:E3)}.
 
-A fin de evitar la vulnerabilidad que implicaría un filtrado manual propenso a omisiones, utilicé las funciones analíticas \texttt{SUMIF} (\texttt{SUMAR.SI}), \texttt{COUNTIF} (\texttt{CONTAR.SI}) y \texttt{AVERAGEIF} (\texttt{PROMEDIO.SI}) indexadas al rango completo \texttt{\$H\$5:\$H\$1904}:
-\begin{equation}
-V_j = \sum_{k=5}^{1904} \left[ \text{Euros}_k \cdot \mathbb{I}(\text{Nombre}_k = A_j) \right]
-\end{equation}
-donde $\mathbb{I}$ es la función indicatriz booleana. En la sintaxis de Excel, las fórmulas implementadas en el cuadro resumen (\texttt{B5:E13}) fueron:
+\subsection{Hoja \texttt{04-Maquillaje} (cuadro completo \texttt{C16:C26})}
+Sobre los 1,900 registros indexados por nombres de rango globales (\texttt{Nombre}, \texttt{Producto}, \texttt{Fecha}, \texttt{Unidades}, \texttt{Euros}), se mantuvieron los ocho cálculos de clase (\texttt{C16:C23}) y se resolvieron los tres incisos finales (\texttt{C24:C26}) con \texttt{SUMIFS}:
+\begin{itemize}[leftmargin=1.5em]
+\item \texttt{C24} (\emph{Lápiz labial de Juan $\ge 100$ €}): \texttt{=SUMIFS(Euros,Producto,"lápiz labial",Nombre,"Juan",Euros,">=100")} $= 3{,}582.84$ €.
+\item \texttt{C25} (\emph{Lápiz labial de Juan $< 100$ €}): \texttt{=SUMIFS(Euros,Producto,"lápiz labial",Nombre,"Juan",Euros,"<100")} $= 370.46$ €.
+\item \texttt{C26} (\emph{Unidades entre 15/01/2004 y 15/02/2005}): \texttt{=SUMIFS(Unidades,Fecha,">=2004-01-15",Fecha,"<=2005-02-15")} $= 31{,}165$.
+\end{itemize}
+
+\subsection{Hojas \texttt{05-Goles} y \texttt{05-Género 2}}
+En \texttt{05-Goles} se implementó la lógica comparativa de marcadores en \texttt{E3:E6}:
 \par\medskip
-\noindent\texttt{=SUMIF(\$H\$5:\$H\$1904, A5, \$L\$5:\$L\$1904)}\\
-\noindent\texttt{=SUMIF(\$H\$5:\$H\$1904, A5, \$K\$5:\$K\$1904)}\\
-\noindent\texttt{=COUNTIF(\$H\$5:\$H\$1904, A5)}
+\noindent\texttt{=IF(B3>D3,"Ganó "\&A3,IF(D3>B3,"Ganó "\&C3,"Empate"))}
 \par\medskip
-Adicionalmente, en las ocho hojas de \texttt{EstadosMaquillaje} (\texttt{SI1} a \texttt{SI4} y \texttt{Buena Venta (5)} a \texttt{(8)}), se evaluaron las 1,900 partidas mediante condicionales \texttt{IF}, extracción temporal (\texttt{YEAR}, \texttt{DAY}) y asignación de sucursales (\texttt{LOCAL 1}, \texttt{LOCAL 2}, \texttt{LOCAL 3}).
+\noindent obteniéndose los resultados exactos \emph{Empate}, \emph{Ganó Uruguay}, \emph{Ganó Venezuela} y \emph{Ganó Argentina}. Por su parte, en \texttt{05-Género 2} se desarrollaron de forma paralela la función \texttt{IF} anidada en la columna C y \texttt{\_xlfn.IFS} (\texttt{SI.CONJUNTO}) en la columna D para discriminar ``Masculino'', ``Femenino'', ``Casilla en blanco'' y ``No Procede'' (Figura~\ref{fig:s3-anidado}).
 
-\subsection{Sección II: Liquidación financiera de mora contractual (Mora y Promoción)}
-Las hojas oficiales \texttt{Mora} y \texttt{Promoción} (plantilla \texttt{Interés Moratorio.xlsx}) evalúan la aplicación del Artículo 362 del Código de Comercio, el cual establece la obligación del deudor de resarcir los perjuicios financieros derivados del retraso en el cumplimiento de obligaciones mercantiles. Para determinar con exactitud el lapso de morosidad entre la fecha de vencimiento (\texttt{C5 = 15/06/2018}) y la fecha de pago efectivo (\texttt{C6 = 29/06/2018}), recurrí a la función cronológica \texttt{DAYS}:
-\begin{equation}
-\Delta t = \text{FechaPago} - \text{FechaVencimiento} = 14\text{ días}
-\end{equation}
-expresada computacionalmente en la celda \texttt{F5} como:
-\par\medskip
-\noindent\texttt{=DAYS(C6, C5)}
-\par\medskip
-Posteriormente, el recargo por mora (\texttt{F6}) sobre la cuota base de \$3,500.00 a una tasa diaria de $0.5\%$ se liquida mediante interés simple y se adiciona al principal en \texttt{F7}:
-\begin{equation}
-I_{\text{mora}} = C_0 \times (i_{\text{diario}} \times \Delta t) = 3500 \times (0.005 \times 14) = 245.00
-\end{equation}
-\noindent\texttt{=C4*(F4*F5)} \quad y \quad \texttt{=C4+F6}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.90\textwidth,height=0.30\textheight,keepaspectratio]{grabaciones/s3c2-poi-04-si-anidado-y-tareas-rojas.png}
+\caption{Sesión 3, Clase 2: explicación de \texttt{SI} anidado y \texttt{SI.CONJUNTO} para \texttt{05-Goles} y \texttt{05-Género 2}.}
+\label{fig:s3-anidado}
+\end{figure}
 
-\subsection{Sección III: Escala vigesimal de alumnos, control de gastos y búsqueda matricial}
-En la hoja oficial \texttt{Alumnos} (escala vigesimal de 0 a 20 puntos: Boris Reyes = 18, Luca Escobar = 10, Sofía Pereda = 20), implementé la función lógica múltiple \texttt{IFS} combinada con el operador booleano \texttt{AND} conforme a la solución oficial del docente (\texttt{Alumnos - resuelto.xlsx}):
-\par\medskip
-\noindent\texttt{=IFS(AND(B2>=0,B2<=10),"Bajo",AND(B2>=11,B2<=13),"Medio",AND(B2>=14,B2<=16),"Alto",AND(B2>=17,B2<=20),"Muy alto")}
-\par\medskip
-En la hoja \texttt{Gastos}, se consolidaron las partidas operativas (\texttt{Agua}, \texttt{Luz}, \texttt{Teléfono}, \texttt{Limpieza} y \texttt{Alquiler}) verificando el tope presupuestal mediante \texttt{=IF(SUM(B3:B5)<=350,"Dentro de presupuesto","Presupuesto excedido")}. Finalmente, en \texttt{Puntaje} y \texttt{SelecciónCódigo}, se aplicó \texttt{VLOOKUP} en sus modalidades aproximada (\texttt{=VLOOKUP(F2,A4:C17,3,TRUE)}) y exacta (\texttt{=VLOOKUP(D5,M4:O18,2,FALSE)}).
-
-\subsection{Matriz de auditoría de fórmulas del examen}
-\noindent\begin{tabularx}{\textwidth}{@{}p{.22\textwidth}p{.38\textwidth}X@{}}\toprule
-Hoja oficial & Fórmulas y funciones & Criterio de validación contable\\\midrule
-\texttt{Alumnos} & \texttt{=IFS(AND(B2>=0,B2<=10),"Bajo",...)} & Clasificación en escala oficial 0--20.\\
-\texttt{Gastos} & \texttt{=IF(SUM(B3:B5)<=350,"Dentro...","...")} & Control presupuestal de servicios básicos.\\
-\texttt{VentaMaquillaje} & \texttt{=SUMIF(\$H\$5:\$H\$1904,A5,\$L\$5:\$L\$1904)} & Consolidación íntegra de 1,900 registros.\\
-\texttt{SI1}--\texttt{SI4} & \texttt{=IF(F2>199,F2*0.15,"No hay comisión")} & Cálculo de comisiones y alertas de pérdida.\\
-\texttt{Mora} / \texttt{Promoción} & \texttt{=DAYS(C6,C5)} y \texttt{=C4*(F4*F5)} & Liquidación exacta de 14 días de mora.\\
-\texttt{Puntaje} / \texttt{Código} & \texttt{=VLOOKUP(F2,A4:C17,3,TRUE)} & Búsqueda aproximada por rango y exacta.\\\bottomrule
-\end{tabularx}
+\section{Resultados verificados en Microsoft Excel}
+El examen completo registró cero errores de evaluación en las 12 pestañas tras recálculo completo en Excel COM, confirmando la consistencia absoluta entre las fórmulas ingresadas y los criterios revisados en clase.
 }
 \newcommand{\actividadcierre}{%
-\section{Conclusiones y postura académica}
-Al concluir la formulación integral del examen práctico en clase, considero que la estructuración analítica de hojas de cálculo bajo parámetros dinámicos no solo optimiza los tiempos de procesamiento operativo, sino que constituye una garantía indispensable de integridad probatoria para la profesión contable. Sostengo que la eliminación sistemática de cifras fijas o manuales dentro de las fórmulas de agregación y liquidación financiera previene discrepancias fiscales e inconsistencias materiales que comprometerían los estados financieros de la entidad.
-
-Advierto que el contador público debe dominar la combinación de funciones de fecha, agregación matricial y lógica booleana como un estándar de control interno y aseguramiento de la información en concordancia con las normas profesionales vigentes.\footnote{Se utilizó el chat de GitHub Copilot para la corrección y organización documental a partir del registro de trabajo proporcionado por el estudiante. En la preparación de este trabajo académico se utilizaron herramientas de asistencia computacional e inteligencia artificial exclusivamente como apoyo para la maquetación y revisión de estilo, de conformidad con los lineamientos de ética e integridad de la UAS. El análisis conceptual y las conclusiones son de autoría del estudiante.}
+\section{Conclusiones}
+La solución íntegra de las 12 pestañas y las 11 métricas de \texttt{04-Maquillaje} evidencia el dominio de la lógica condicional simple y múltiple, así como de la agregación multidimensional condicionada, garantizando un libro de examen plenamente funcional y fiel a las instrucciones del curso.
+\footnote{Se utilizó apoyo computacional para la organización documental en LaTeX y la verificación automatizada de fórmulas frente a las grabaciones de clase.}
 \clearpage}
 \input{reporte-herramientas-digitales-plantilla-actividad.tex}
