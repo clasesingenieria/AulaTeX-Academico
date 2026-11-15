@@ -656,13 +656,17 @@ class AgenteSitioLex:
 
     @staticmethod
     def _dismiss_open_dialogs(page: Any) -> None:
-        for _ in range(3):
-            overlay = page.locator('[role="dialog"]:visible, .llhEMd.iWO5td:visible')
+        overlay_sel = '[role="dialog"]:visible, .llhEMd.iWO5td:visible, .VfPpkd-Sx9Kwc-OWXEXe-FNFY6c:visible'
+        for _ in range(4):
+            overlay = page.locator(overlay_sel)
             if not overlay.count():
                 break
             close_btn = page.locator(
                 '[role="dialog"] button:has-text("Cancelar"):visible, '
                 '[role="dialog"] div[role="button"]:has-text("Cancelar"):visible, '
+                '.VfPpkd-Sx9Kwc-OWXEXe-FNFY6c button:has-text("Cancelar"):visible, '
+                '.VfPpkd-Sx9Kwc-OWXEXe-FNFY6c div[role="button"]:has-text("Cancelar"):visible, '
+                '.VfPpkd-Sx9Kwc-OWXEXe-FNFY6c button[aria-label*="Cerrar" i]:visible, '
                 '.llhEMd div[role="button"]:has-text("Cancelar"):visible, '
                 '[role="dialog"] [aria-label*="Cerrar" i]:visible'
             ).last
@@ -680,7 +684,7 @@ class AgenteSitioLex:
     def _click_dialog_button(page: Any, labels: tuple[str, ...]) -> bool:
         selectors: list[str] = []
         for lbl in labels:
-            for scope in ('div[role="dialog"]', ".llhEMd"):
+            for scope in ('div[role="dialog"]', ".llhEMd", ".VfPpkd-Sx9Kwc-OWXEXe-FNFY6c"):
                 selectors.append(f'{scope} button:has-text("{lbl}"):visible')
                 selectors.append(f'{scope} div[role="button"]:has-text("{lbl}"):visible')
                 selectors.append(f'{scope} [role="button"]:has-text("{lbl}"):visible')
@@ -877,26 +881,34 @@ class AgenteSitioLex:
             try:
                 page.evaluate("() => window.scrollTo(0, document.body.scrollHeight)")
                 page.wait_for_timeout(400)
-                existing_loc = page.locator("text=/Elaborado por Mart/i").first
-                if existing_loc.count():
-                    existing_loc.scroll_into_view_if_needed()
-                    existing_loc.click(force=True)
-                    page.wait_for_timeout(500)
                 edit_footer = page.locator(
                     '[aria-label*="Editar pie de página" i]:visible, '
                     '[aria-label*="Edit footer" i]:visible'
                 ).first
                 if edit_footer.count():
                     edit_footer.click(force=True)
-                    page.wait_for_timeout(500)
-                editable = page.locator('[contenteditable="true"]:visible').last
-                if editable.count():
-                    editable.click()
-                    page.keyboard.press("Control+a")
-                    page.keyboard.press("Backspace")
-                    page.keyboard.insert_text(footer_text)
-                    page.wait_for_timeout(500)
-                    return "repaired"
+                    page.wait_for_timeout(400)
+                existing_loc = page.locator(
+                    'section[aria-label*="pie de página" i] [role="textbox"], '
+                    'section[aria-label*="footer" i] [role="textbox"], '
+                    'text=/Elaborado por Mart/i'
+                ).first
+                if existing_loc.count():
+                    existing_loc.scroll_into_view_if_needed()
+                    existing_loc.dblclick(force=True)
+                    page.wait_for_timeout(400)
+                footer_ce = page.locator(
+                    'section[aria-label*="pie de página" i] [contenteditable="true"]:visible, '
+                    'section[aria-label*="footer" i] [contenteditable="true"]:visible'
+                ).last
+                if footer_ce.count():
+                    footer_ce.click()
+                    page.wait_for_timeout(200)
+                page.keyboard.press("Control+a")
+                page.keyboard.press("Backspace")
+                page.keyboard.insert_text(footer_text)
+                page.wait_for_timeout(500)
+                return "repaired"
             except Exception:
                 pass
 
@@ -911,7 +923,11 @@ class AgenteSitioLex:
         add_footer.click(force=True)
         page.wait_for_timeout(800)
 
-        editable = page.locator('footer [contenteditable="true"]:visible, [contenteditable="true"]:visible').last
+        editable = page.locator(
+            'section[aria-label*="pie de página" i] [contenteditable="true"]:visible, '
+            'footer [contenteditable="true"]:visible, '
+            '[contenteditable="true"]:visible'
+        ).last
         if not editable.count():
             return "textbox_not_found"
         editable.click()
@@ -928,17 +944,31 @@ class AgenteSitioLex:
         if cls._normalize_es(marker_phrase) in cls._normalize_es(canvas_text):
             return "already_present"
 
-        cls._open_sidebar_tab(page, "Insertar", "Insert")
-        tb_btn = page.locator(
-            '[role="menuitem"][aria-label="Cuadro de texto"]:visible, '
-            '[role="menuitem"]:has-text("Cuadro de texto"):visible, '
-            '[role="menuitem"][aria-label="Text box"]:visible'
-        ).first
-        if not tb_btn.count():
-            return "button_not_found"
-        tb_btn.click()
-        page.wait_for_timeout(800)
-        box = page.locator('[role="textbox"][contenteditable="true"]:visible, [contenteditable="true"]:visible').last
+        placeholder_sel = ':text("Haz clic para editar el texto"):visible, :text("Click to edit text"):visible'
+        existing_ph = page.locator(placeholder_sel)
+        if existing_ph.count():
+            target_ph = existing_ph.first
+            target_ph.scroll_into_view_if_needed()
+            target_ph.click(force=True)
+            page.wait_for_timeout(400)
+        else:
+            cls._open_sidebar_tab(page, "Insertar", "Insert")
+            tb_btn = page.locator(
+                '[role="menuitem"][aria-label="Cuadro de texto"]:visible, '
+                '[role="menuitem"]:has-text("Cuadro de texto"):visible, '
+                '[role="menuitem"][aria-label="Text box"]:visible'
+            ).first
+            if not tb_btn.count():
+                return "button_not_found"
+            tb_btn.click()
+            page.wait_for_timeout(800)
+            new_ph = page.locator(placeholder_sel)
+            if new_ph.count():
+                new_ph.last.scroll_into_view_if_needed()
+                new_ph.last.click(force=True)
+                page.wait_for_timeout(400)
+
+        box = page.locator('[role="textbox"][aria-label="Texto"][contenteditable="true"]:visible, [role="textbox"][contenteditable="true"]:visible').last
         if not box.count():
             return "textbox_not_found"
         box.click()
@@ -1079,18 +1109,27 @@ class AgenteSitioLex:
         m_btn.click()
         page.wait_for_timeout(1500)
 
-        search_inp = page.locator('[role="dialog"] input[aria-label*="Google Maps" i]:visible').first
+        search_inp = page.locator(
+            '.VfPpkd-Sx9Kwc-OWXEXe-FNFY6c input[aria-label*="Google Maps" i]:visible, '
+            '[role="dialog"] input[aria-label*="Google Maps" i]:visible, '
+            'input[aria-label*="Google Maps" i]:visible'
+        ).first
         if not search_inp.count():
             cls._dismiss_open_dialogs(page)
             return "map_input_not_found"
         search_inp.click()
         search_inp.fill(location_query)
-        page.wait_for_timeout(800)
+        page.wait_for_timeout(1200)
         suggestion = page.locator('.pac-item:visible, [role="listbox"] [role="option"]:visible, [role="dialog"] [role="option"]:visible').first
+        if not suggestion.count():
+            search_inp.press("End")
+            search_inp.type(" ", delay=30)
+            search_inp.press("Backspace")
+            page.wait_for_timeout(1200)
         if suggestion.count():
             try:
                 suggestion.click(timeout=5000)
-                page.wait_for_timeout(1200)
+                page.wait_for_timeout(1500)
             except Exception:
                 pass
         else:
@@ -1122,12 +1161,18 @@ class AgenteSitioLex:
         s_btn.click()
         page.wait_for_timeout(1000)
 
-        inputs = page.locator('[role="dialog"] input[type="text"]:visible').all()
+        inputs = page.locator(
+            '[role="dialog"] input[type="text"]:visible, '
+            '.VfPpkd-Sx9Kwc-OWXEXe-FNFY6c input[type="text"]:visible'
+        ).all()
         if not inputs:
+            cls._dismiss_open_dialogs(page)
             return "social_inputs_not_found"
         for idx, url in enumerate(urls[: len(inputs)]):
+            inputs[idx].click()
             inputs[idx].fill(url)
-        page.wait_for_timeout(400)
+            inputs[idx].press("Tab")
+        page.wait_for_timeout(600)
 
         if cls._click_dialog_button(page, ("Insertar", "Insert")):
             page.wait_for_timeout(1500)
@@ -1453,6 +1498,7 @@ class AgenteSitioLex:
                 )
 
                 if request.publish_changes:
+                    self._dismiss_open_dialogs(page)
                     try:
                         page.locator(
                             ':text("Se guardaron todos los cambios en Drive"), '
