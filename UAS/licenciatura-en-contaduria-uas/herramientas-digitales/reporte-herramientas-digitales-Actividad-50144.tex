@@ -162,11 +162,18 @@ El sitio de Google Sites presenta información y no recibe expedientes fiscales.
 La evidencia del editor muestra las etapas que el sitio final no deja ver por sí solo: el lienzo inicial, el armado con espacios pendientes, la integración de bloques y la corrección del encabezado antes de publicar. Las decisiones surgieron de revisar el efecto de cada elemento durante el trabajo. Usar bloques nativos permitió modificar la estructura desde el propio Sites; sustituir \emph{Portada} por \emph{Banner} redujo el espacio inicial; y quitar el marco vacío eliminó una señal visual de contenido faltante. Así, el resultado se entiende como consecuencia de una secuencia de elaboración y revisión, no solamente como una página presentada al final.
 }
 
-\def\actividadcierre{}
-
-\def\actividaddeclaracionia{%
-\section*{Declaración de uso de herramientas de inteligencia artificial}
-Se utilizó un asistente de inteligencia artificial para apoyar la redacción editorial y la estructuración técnica del reporte, así como herramientas de navegador para validar las vistas publicadas del sitio.
+\def\actividadcierre{%
+\par\vspace{1.0em}
+\noindent
+{\setlength{\fboxsep}{11pt}\setlength{\fboxrule}{1pt}%
+\fcolorbox{uasBlue}{uasBlue!5}{%
+\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}{\centering
+{\bfseries\color{uasBlue} Sitio web publicado en Google Sites — Lex Contable}\\[0.65em]
+\href{https://sites.google.com/view/delacruz-consultores-lcp}{\fcolorbox{uasBlue}{uasBlue}{\strut\enspace\color{white}\bfseries Visitar sitio web publicado \enspace}}\\[0.65em]
+{\small Enlace directo: \url{https://sites.google.com/view/delacruz-consultores-lcp}}
+}}}%
 }
+
+\def\actividaddeclaracionia{}
 
 \input{reporte-herramientas-digitales-plantilla-actividad.tex}
