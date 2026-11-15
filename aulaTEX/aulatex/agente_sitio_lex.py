@@ -499,61 +499,159 @@ class AgenteSitioLex:
             except Exception:
                 pass
 
+    @staticmethod
+    def _expand_sidebar_treeitems(page: Any) -> None:
+        try:
+            collapsed = page.locator('[role="complementary"] [role="treeitem"][aria-expanded="false"]:visible')
+            for idx in range(collapsed.count()):
+                item = collapsed.nth(idx)
+                try:
+                    chevron = item.locator('[role="button"]:visible').first
+                    if chevron.count():
+                        chevron.click(force=True)
+                    else:
+                        item.click()
+                        page.keyboard.press("ArrowRight")
+                    page.wait_for_timeout(300)
+                except Exception:
+                    continue
+        except Exception:
+            pass
+
     @classmethod
-    def _read_editor_page_names(cls, page: Any) -> list[str]:
-        cleaned: list[str] = []
+    def _read_editor_page_names(cls, page: Any, *, unique: bool = True) -> list[str]:
+        names: list[str] = []
+
+        def _push(raw_name: str) -> None:
+            clean = re.sub(r"[\ue000-\uf8ff]+", " ", raw_name or "").strip()
+            if not clean:
+                return
+            if unique and clean in names:
+                return
+            names.append(clean)
+
+        # 1. En Google Sites actual, cada fila del árbol "Páginas" contiene un input "Título de la página"
+        try:
+            input_values = page.eval_on_selector_all(
+                '[role="complementary"] input[aria-label="Título de la página"], '
+                '[role="complementary"] input[aria-label="Page title"], '
+                'input[aria-label="Título de la página"], '
+                'input[aria-label="Page title"]',
+                'els => els.map(e => (e.value || e.getAttribute("data-initial-value") || "").trim())',
+            )
+        except Exception:
+            input_values = []
+        for val in input_values:
+            _push(val)
+
+        if names:
+            return names
+
+        # 2. Respaldo por aria-label de nodos del árbol ("Página principal; título: ..." o "<Nombre>.")
         try:
             aria_labels = page.eval_on_selector_all(
-                '[aria-label*="; título:"], [aria-label*="; title:"]',
+                '[role="complementary"] [aria-label*="título:"], [role="complementary"] [aria-label*="title:"], [aria-label*="; título:"], [aria-label*="; title:"]',
                 'els => els.map(e => e.getAttribute("aria-label") || "")',
             )
         except Exception:
             aria_labels = []
         for raw_aria in aria_labels:
-            head = re.split(r";\s*(?:título|title):", raw_aria, maxsplit=1)[0].strip()
-            label = re.sub(r"[\ue000-\uf8ff]+", " ", head).strip()
-            if label and label not in cleaned:
-                cleaned.append(label)
-        if cleaned:
-            return cleaned
+            m = re.search(r"(?:título|title):\s*([^.;]+)", raw_aria, re.I)
+            candidate = m.group(1).strip() if m else re.split(r";\s*(?:título|title):", raw_aria, maxsplit=1)[0].strip()
+            _push(candidate)
 
         try:
-            items = page.locator('[role="treeitem"]:visible, [data-page-id]:visible').all_inner_texts()
+            panel_items = page.locator(
+                '[role="complementary"] [role="treeitem"]:visible, '
+                '[role="complementary"] [data-page-id]:visible'
+            ).all_inner_texts()
         except Exception:
-            items = []
-        for raw in items:
+            panel_items = []
+        if not panel_items:
+            try:
+                panel_items = page.locator('[role="treeitem"]:visible, [data-page-id]:visible').all_inner_texts()
+            except Exception:
+                panel_items = []
+        for raw in panel_items:
             for line in (raw or "").splitlines():
                 label = re.sub(r"[\ue000-\uf8ff]+", " ", line).strip()
-                if label and label not in cleaned:
-                    cleaned.append(label)
+                if label and (not unique or label not in names):
+                    names.append(label)
                     break
-        return cleaned
+        return names
+
+    @classmethod
+    def _find_sidebar_page_row(
+        cls,
+        page: Any,
+        page_name: str,
+        *,
+        prefer_last: bool = False,
+        exclude_home: bool = False,
+    ) -> Any:
+        target = cls._normalize_es(page_name)
+        matches: list[Any] = []
+
+        # 1. Coincidencia exacta vía input[aria-label="Título de la página"] dentro de [role="presentation"]/[data-treenode]
+        tree_nodes = page.locator(
+            '[role="complementary"] [data-treenode]:visible, '
+            '[data-treenode]:visible'
+        )
+        for idx in range(tree_nodes.count()):
+            node = tree_nodes.nth(idx)
+            try:
+                inp = node.locator('input[aria-label="Título de la página"], input[aria-label="Page title"]').first
+                if not inp.count():
+                    continue
+                val = (inp.input_value() or inp.get_attribute("data-initial-value") or "").strip()
+                if cls._normalize_es(val) != target:
+                    continue
+                if exclude_home:
+                    is_home = node.locator('[aria-label*="Página principal" i], [aria-label*="Home" i]').count() > 0
+                    if is_home:
+                        continue
+                row = node.locator('[role="treeitem"]').first
+                matches.append(row if row.count() else node)
+            except Exception:
+                continue
+        if matches:
+            return matches[-1] if prefer_last else matches[0]
+
+        # 2. Respaldo por aria-label (incluye "título: X" y "X.")
+        aria_loc = page.locator(
+            f'[role="complementary"] [aria-label*="título: {page_name}" i]:visible, '
+            f'[role="complementary"] [aria-label*="title: {page_name}" i]:visible'
+        )
+        if aria_loc.count() and not exclude_home:
+            return aria_loc.last if prefer_last else aria_loc.first
+
+        for cand in page.locator('[role="complementary"] [role="treeitem"]:visible, [role="complementary"] [data-page-id]:visible, [role="treeitem"]:visible').all():
+            try:
+                raw_aria = cand.get_attribute("aria-label") or ""
+                if exclude_home and ("página principal" in raw_aria.lower() or "home" in raw_aria.lower()):
+                    continue
+                text_clean = re.sub(r"[\ue000-\uf8ff]+", " ", raw_aria or cand.inner_text()).splitlines()[0].strip().rstrip(".")
+                if target == cls._normalize_es(text_clean) or f"titulo: {target}" in cls._normalize_es(raw_aria):
+                    matches.append(cand)
+            except Exception:
+                continue
+        if matches:
+            return matches[-1] if prefer_last else matches[0]
+        return None
 
     @classmethod
     def _select_editor_page(cls, page: Any, page_name: str) -> bool:
         cls._open_sidebar_tab(page, "Páginas", "Pages")
-        target = cls._normalize_es(page_name)
-        try:
-            loc = page.locator(
-                f'[aria-label*="{page_name}; título:" i]:visible, '
-                f'[aria-label*="{page_name}; title:" i]:visible'
-            ).first
-            if loc.count():
-                loc.click()
-                page.wait_for_timeout(1000)
-                return True
-        except Exception:
-            pass
-
-        for cand in page.locator('[role="treeitem"]:visible, [data-page-id]:visible').all():
+        cls._expand_sidebar_treeitems(page)
+        row = cls._find_sidebar_page_row(page, page_name)
+        if row is not None:
             try:
-                text_norm = cls._normalize_es(re.sub(r"[\ue000-\uf8ff]+", " ", cand.inner_text()))
-                if target in text_norm:
-                    cand.click()
-                    page.wait_for_timeout(1000)
-                    return True
+                row.scroll_into_view_if_needed()
+                row.click(force=True)
+                page.wait_for_timeout(1200)
+                return True
             except Exception:
-                continue
+                pass
         return False
 
     @staticmethod
@@ -656,6 +754,45 @@ class AgenteSitioLex:
         return cls._submit_page_name_dialog(page, new_name)
 
     @classmethod
+    def _delete_secondary_page(
+        cls,
+        page: Any,
+        page_name: str,
+        *,
+        prefer_last: bool = True,
+        exclude_home: bool = True,
+    ) -> bool:
+        cls._dismiss_open_dialogs(page)
+        row = cls._find_sidebar_page_row(
+            page,
+            page_name,
+            prefer_last=prefer_last,
+            exclude_home=exclude_home,
+        )
+        if row is None:
+            return False
+        row.scroll_into_view_if_needed()
+        row.hover()
+        page.wait_for_timeout(300)
+        act_btn = row.locator('[aria-label="Acciones de la página"]:visible, [aria-label="Page actions"]:visible').first
+        if not act_btn.count():
+            act_btn = page.locator('[role="complementary"] [aria-label="Acciones de la página"]:visible').last
+        if not act_btn.count():
+            return False
+        act_btn.click(force=True)
+        page.wait_for_timeout(400)
+        del_item = page.locator(
+            '[role="menuitem"]:has-text("Eliminar"):visible, [role="menuitem"]:has-text("Delete"):visible'
+        ).first
+        if not del_item.count():
+            page.keyboard.press("Escape")
+            return False
+        del_item.click()
+        page.wait_for_timeout(800)
+        cls._dismiss_open_dialogs(page)
+        return True
+
+    @classmethod
     def _create_page_if_missing(
         cls,
         page: Any,
@@ -668,12 +805,15 @@ class AgenteSitioLex:
 
         cls._dismiss_open_dialogs(page)
         if parent_name:
-            node = page.locator(f'[aria-label*="{parent_name};" i]:visible, [aria-label*="{parent_name}" i]:visible').first
-            if not node.count():
+            node = cls._find_sidebar_page_row(page, parent_name)
+            if node is None:
                 return False
+            node.scroll_into_view_if_needed()
             node.hover()
             page.wait_for_timeout(300)
-            act_btn = page.locator('[aria-label="Acciones de la página"]:visible').first
+            act_btn = node.locator('[aria-label="Acciones de la página"]:visible, [aria-label="Page actions"]:visible').first
+            if not act_btn.count():
+                act_btn = page.locator('[role="complementary"] [aria-label="Acciones de la página"]:visible').last
             if not act_btn.count():
                 return False
             act_btn.click(force=True)
@@ -688,11 +828,9 @@ class AgenteSitioLex:
             sub_item.click()
         else:
             add_btn = page.locator(
-                '[aria-label*="Página nueva" i]:visible, '
-                '[aria-label*="Nueva página" i]:visible, '
-                '[aria-label*="New page" i]:visible, '
-                '[data-tooltip*="Página nueva" i]:visible, '
-                '[data-tooltip*="Nueva página" i]:visible'
+                '[role="complementary"] [aria-label*="Página nueva" i]:visible, '
+                '[role="complementary"] [aria-label*="Nueva página" i]:visible, '
+                '[aria-label*="New page" i]:visible'
             ).first
             if not add_btn.count():
                 return False
@@ -730,8 +868,37 @@ class AgenteSitioLex:
             body_text = page.locator("body").inner_text(timeout=3000)
         except Exception:
             body_text = ""
-        if "elaborado por martín" in body_text.lower() or "elaborado por martin" in body_text.lower():
+        normalized_body = re.sub(r"\s+", " ", body_text).casefold()
+        normalized_target = re.sub(r"\s+", " ", footer_text).casefold()
+        if normalized_target in normalized_body:
             return "already_present"
+
+        if "elaborado por mart" in normalized_body:
+            try:
+                page.evaluate("() => window.scrollTo(0, document.body.scrollHeight)")
+                page.wait_for_timeout(400)
+                existing_loc = page.locator("text=/Elaborado por Mart/i").first
+                if existing_loc.count():
+                    existing_loc.scroll_into_view_if_needed()
+                    existing_loc.click(force=True)
+                    page.wait_for_timeout(500)
+                edit_footer = page.locator(
+                    '[aria-label*="Editar pie de página" i]:visible, '
+                    '[aria-label*="Edit footer" i]:visible'
+                ).first
+                if edit_footer.count():
+                    edit_footer.click(force=True)
+                    page.wait_for_timeout(500)
+                editable = page.locator('[contenteditable="true"]:visible').last
+                if editable.count():
+                    editable.click()
+                    page.keyboard.press("Control+a")
+                    page.keyboard.press("Backspace")
+                    page.keyboard.insert_text(footer_text)
+                    page.wait_for_timeout(500)
+                    return "repaired"
+            except Exception:
+                pass
 
         add_footer = page.locator(
             '[role="button"]:has-text("Agregar pie de página"), button:has-text("Agregar pie de página"), '
@@ -748,7 +915,7 @@ class AgenteSitioLex:
         if not editable.count():
             return "textbox_not_found"
         editable.click()
-        page.keyboard.type(footer_text, delay=8)
+        page.keyboard.insert_text(footer_text)
         page.wait_for_timeout(500)
         return "applied"
 
@@ -775,7 +942,7 @@ class AgenteSitioLex:
         if not box.count():
             return "textbox_not_found"
         box.click()
-        page.keyboard.type(content_text, delay=5)
+        page.keyboard.insert_text(content_text)
         page.wait_for_timeout(500)
         return "applied"
 
@@ -958,6 +1125,29 @@ class AgenteSitioLex:
         ]
 
         self._open_sidebar_tab(page, "Páginas", "Pages")
+        self._expand_sidebar_treeitems(page)
+
+        # Limpiar páginas duplicadas (dejando una sola instancia y protegiendo siempre Página principal)
+        all_names = self._read_editor_page_names(page, unique=False)
+        counts: dict[str, tuple[str, int]] = {}
+        for nm in all_names:
+            norm = self._normalize_es(nm)
+            display, c = counts.get(norm, (nm, 0))
+            counts[norm] = (display, c + 1)
+        for _norm, (display_name, cnt) in counts.items():
+            for _ in range(max(0, cnt - 1)):
+                if self._delete_secondary_page(page, display_name, prefer_last=True, exclude_home=True):
+                    actions.append({"step": f"dedupe_{display_name}", "status": "applied"})
+
+        home_has_sub = (
+            page.locator('[aria-label*="Página principal;" i][aria-label*="secundarias disponibles" i]').count() > 0
+            or page.locator('[aria-label*="Home;" i][aria-label*="subpages" i]').count() > 0
+        )
+        if home_has_sub:
+            self._expand_sidebar_treeitems(page)
+            if self._delete_secondary_page(page, "Defensa fiscal", prefer_last=True, exclude_home=True):
+                actions.append({"step": "relocate_defensa_fiscal_reset", "status": "applied"})
+
         renamed = self._rename_page_if_present(page, "Página principal", "Inicio")
         actions.append({"step": "rename_home_inicio", "status": "applied" if renamed else "skipped_or_done"})
 
