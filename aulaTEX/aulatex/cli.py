@@ -653,6 +653,26 @@ def build_parser() -> argparse.ArgumentParser:
     sub_drive.add_argument("--output", default="", help="Directorio de comprobantes.")
     sub_drive.add_argument("--json", action="store_true", help="Emitir salida en JSON.")
 
+    sub_sitio = sub.add_parser(
+        "subir-sitio",
+        aliases=["sitio-playwright", "sites-open"],
+        help="Abre Google Sites en ventana visible con perfil persistente para autenticar, auditar, sincronizar páginas y publicar.",
+    )
+    sub_sitio.add_argument("--editor-url", default="", help="URL del editor de Google Sites (/d/.../edit).")
+    sub_sitio.add_argument("--url", default="", help="URL pública de Google Sites (/view/...).")
+    sub_sitio.add_argument("--ensure-pages", default="", help="Lista separada por comas de páginas nativas a verificar/crear en el panel Páginas.")
+    sub_sitio.add_argument("--publish", action="store_true", help="Hacer clic en Publicar y confirmar cambios en vivo.")
+    sub_sitio.add_argument("--profile", default="google-drive", help="Nombre del perfil persistente de navegador (compartido por defecto con Google Drive).")
+    sub_sitio.add_argument("--profile-dir", default="", help="Ruta explícita opcional para el perfil persistente.")
+    sub_sitio.add_argument("--channel", default="chrome", choices=("chrome", "msedge", "chromium"), help="Canal Playwright.")
+    sub_sitio.add_argument("--auth-timeout", type=int, default=300, help="Segundos máximos esperando login interactivo.")
+    sub_sitio.add_argument("--action-timeout", type=int, default=90, help="Segundos máximos para acciones del editor.")
+    sub_sitio.add_argument("--user-validated", action="store_true", help="Autorización explícita obligatoria del usuario.")
+    sub_sitio.add_argument("--live", dest="dry_run", action="store_false", help="Ejecución en vivo con ventana visible (por defecto dry-run).")
+    sub_sitio.set_defaults(dry_run=True)
+    sub_sitio.add_argument("--output", default="", help="Directorio de comprobantes.")
+    sub_sitio.add_argument("--json", action="store_true", help="Emitir salida en JSON.")
+
     return parser
 
 
@@ -1926,6 +1946,51 @@ def main(argv: list[str] | None = None) -> None:
             "manifest_path": str(res.manifest_path) if res.manifest_path else None,
             "summary_md_path": str(res.summary_md_path) if res.summary_md_path else None,
             "screenshot_path": str(res.screenshot_path) if res.screenshot_path else None,
+            "blockers": list(res.blockers),
+            "evidence": res.evidence,
+        }, ensure_ascii=False, indent=2))
+        return
+
+    if args.command in ("subir-sitio", "sitio-playwright", "sites-open"):
+        from .agente_sitio_lex import (
+            AgenteSitioLex,
+            DEFAULT_EDITOR_URL,
+            DEFAULT_SITE_URL,
+            GoogleSitesInteractiveRequest,
+        )
+
+        agent = AgenteSitioLex(AulaTeXWorkspace())
+        ensure_pages = tuple(
+            p.strip() for p in (getattr(args, "ensure_pages", "") or "").split(",") if p.strip()
+        )
+        res = agent.run_interactive_session(
+            GoogleSitesInteractiveRequest(
+                editor_url=getattr(args, "editor_url", "") or DEFAULT_EDITOR_URL,
+                published_url=getattr(args, "url", "") or DEFAULT_SITE_URL,
+                user_validated=getattr(args, "user_validated", False),
+                dry_run=getattr(args, "dry_run", True),
+                publish_changes=getattr(args, "publish", False),
+                ensure_pages=ensure_pages,
+                profile_name=getattr(args, "profile", "google-drive"),
+                profile_dir=getattr(args, "profile_dir", ""),
+                channel=getattr(args, "channel", "chrome"),
+                auth_timeout_seconds=getattr(args, "auth_timeout", 300),
+                action_timeout_seconds=getattr(args, "action_timeout", 90),
+                output_dir=getattr(args, "output", ""),
+            )
+        )
+        print(json.dumps({
+            "ok": res.ok,
+            "status": res.status,
+            "editor_url": res.editor_url,
+            "published_url": res.published_url,
+            "compliance_score": res.compliance_score,
+            "has_forbidden_iframes": res.has_forbidden_iframes,
+            "editor_screenshot_path": str(res.editor_screenshot_path) if res.editor_screenshot_path else None,
+            "published_screenshot_path": str(res.published_screenshot_path) if res.published_screenshot_path else None,
+            "receipt_path": str(res.receipt_path) if res.receipt_path else None,
+            "manifest_path": str(res.manifest_path) if res.manifest_path else None,
+            "summary_md_path": str(res.summary_md_path) if res.summary_md_path else None,
             "blockers": list(res.blockers),
             "evidence": res.evidence,
         }, ensure_ascii=False, indent=2))

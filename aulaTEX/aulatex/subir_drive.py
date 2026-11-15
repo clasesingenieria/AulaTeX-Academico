@@ -130,7 +130,7 @@ def _is_authenticated_drive_folder(page: Any) -> bool:
     return False
 
 
-def _launch_persistent_headed_context(playwright: Any, user_data_dir: Path, preferred_channel: str) -> tuple[Any, str]:
+def launch_persistent_headed_context(playwright: Any, user_data_dir: Path, preferred_channel: str) -> tuple[Any, str]:
     """Lanza un contexto persistente con ventana visible usando el canal disponible."""
     candidates: list[str | None] = []
     pref = (preferred_channel or "chrome").strip().lower()
@@ -157,6 +157,9 @@ def _launch_persistent_headed_context(playwright: Any, user_data_dir: Path, pref
             last_exc = exc
             continue
     raise RuntimeError(f"No fue posible abrir la ventana de navegador Playwright: {last_exc}")
+
+
+_launch_persistent_headed_context = launch_persistent_headed_context
 
 
 class GoogleDriveInteractiveUploader:

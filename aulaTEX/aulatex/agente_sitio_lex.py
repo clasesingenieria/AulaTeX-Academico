@@ -21,14 +21,29 @@ import re
 import subprocess
 import time
 from typing import Any
+from urllib.parse import urlsplit
 import urllib.request
 import urllib.error
 
+from .navegacion_plataforma import assert_no_credential_leak
+from .subir_drive import launch_persistent_headed_context, resolve_drive_profile_dir
 from .workspace import AulaTeXWorkspace
 
 AGENT_ID_DISENO_SITIO_LEX = "diseno-sitio-lex"
+SITES_HOST = "sites.google.com"
+ALLOWED_SITES_AUTH_HOSTS = frozenset({"sites.google.com", "accounts.google.com"})
 DEFAULT_SITE_URL = "https://sites.google.com/view/delacruz-consultores-lcp"
 DEFAULT_EDITOR_URL = "https://sites.google.com/d/1l423JjQirXpiwhmtD5YqTptvDXx_lhtY/p/1a5_sx-_zIRDrzcX2DzkFkiv4wJoUJMGV/edit"
+
+_SITES_EDITOR_READY_SELECTORS = (
+    '[role="tab"]:has-text("Insertar"):visible',
+    '[role="tab"]:has-text("Insert"):visible',
+    '[role="tab"]:has-text("Páginas"):visible',
+    '[role="tab"]:has-text("Pages"):visible',
+    'div[role="button"]:has-text("Publicar"):visible',
+    'button:has-text("Publicar"):visible',
+    'button:has-text("Publish"):visible',
+)
 
 
 @dataclass(frozen=True)
@@ -156,12 +171,87 @@ class DisenoSitioLexExecutionResult:
     errors: tuple[str, ...] = field(default_factory=tuple)
 
 
+@dataclass(frozen=True)
+class GoogleSitesInteractiveRequest:
+    """Solicitud de sesión interactiva Playwright en Google Sites (autenticación + auditoría/publicación)."""
+
+    editor_url: str = DEFAULT_EDITOR_URL
+    published_url: str = DEFAULT_SITE_URL
+    user_validated: bool = False
+    dry_run: bool = True
+    publish_changes: bool = False
+    ensure_pages: tuple[str, ...] = ()
+    profile_name: str = "google-drive"
+    profile_dir: str = ""
+    channel: str = "chrome"
+    auth_timeout_seconds: int = 300
+    action_timeout_seconds: int = 90
+    output_dir: str = ""
+
+
+@dataclass(frozen=True)
+class GoogleSitesInteractiveResult:
+    """Resultado estructurado y auditado de una sesión Playwright en Google Sites."""
+
+    ok: bool
+    status: str
+    run_id: str
+    run_dir: Path
+    editor_url: str
+    published_url: str
+    compliance_score: float = 0.0
+    has_forbidden_iframes: bool = False
+    editor_screenshot_path: Path | None = None
+    published_screenshot_path: Path | None = None
+    manifest_path: Path | None = None
+    receipt_path: Path | None = None
+    summary_md_path: Path | None = None
+    blockers: tuple[dict[str, Any], ...] = ()
+    evidence: dict[str, Any] = field(default_factory=dict)
+
+
+def validate_google_sites_urls(editor_url: str, published_url: str) -> tuple[str, str]:
+    """Valida que tanto la URL de edición como la pública pertenezcan estrictamente a Google Sites por HTTPS."""
+    clean_editor = (editor_url or "").strip()
+    clean_public = (published_url or "").strip()
+
+    ed_parts = urlsplit(clean_editor)
+    if ed_parts.scheme.lower() != "https" or (ed_parts.hostname or "").lower() != SITES_HOST:
+        raise ValueError(f"URL de editor inválida para Google Sites: {clean_editor!r}")
+    if not ("/d/" in ed_parts.path or "/u/" in ed_parts.path or "/create" in ed_parts.path):
+        raise ValueError(f"La URL de editor no corresponde a un lienzo de Google Sites: {clean_editor!r}")
+
+    pub_parts = urlsplit(clean_public)
+    if pub_parts.scheme.lower() != "https" or (pub_parts.hostname or "").lower() != SITES_HOST:
+        raise ValueError(f"URL pública inválida para Google Sites: {clean_public!r}")
+    if not pub_parts.path.startswith("/view/"):
+        raise ValueError(f"La URL pública debe iniciar con /view/: {clean_public!r}")
+
+    return clean_editor, clean_public
+
+
+def _is_authenticated_sites_editor(page: Any) -> bool:
+    """Determina si la pestaña ya muestra el editor de Google Sites autenticado."""
+    host = (urlsplit(page.url).hostname or "").lower()
+    if host != SITES_HOST:
+        return False
+    for sel in _SITES_EDITOR_READY_SELECTORS:
+        try:
+            if page.locator(sel).count() > 0:
+                return True
+        except Exception:
+            continue
+    return False
+
+
 class AgenteSitioLex:
     """Agente de orquestación, verificación y auditoría del portal web Lex Contable."""
 
     def __init__(self, workspace: AulaTeXWorkspace | None = None) -> None:
         self.workspace = workspace or AulaTeXWorkspace()
         self.blueprint = DisenoSitioLexBlueprint()
+        self.runs_root = self.workspace.feedback_root / "subir-sitio" / "runs"
+        self.runs_root.mkdir(parents=True, exist_ok=True)
 
     def audit_published_site(self, site_url: str | None = None) -> DisenoSitioLexAuditResult:
         """Audita el sitio web publicado en vivo para verificar diseño nativo y ausencia de iframes."""
@@ -240,13 +330,18 @@ class AgenteSitioLex:
         audit_result: DisenoSitioLexAuditResult,
         compile_latex: bool = True,
     ) -> DisenoSitioLexExecutionResult:
-        """Sincroniza los artefactos, compila el manuscrito de la Actividad 6 y actualiza el estado de entrega."""
+        """Sincroniza los artefactos, compila el manuscrito del módulo 50144 y actualiza el estado de entrega."""
         repo_root = self.workspace.repo_root
         herramientas_dir = repo_root / "UAS" / "licenciatura-en-contaduria-uas" / "herramientas-digitales"
-        tex_path = herramientas_dir / "reporte-herramientas-digitales-Actividad-6.tex"
+        tex_50144 = herramientas_dir / "reporte-herramientas-digitales-Actividad-50144.tex"
+        tex_path = tex_50144 if tex_50144.exists() else (herramientas_dir / "reporte-herramientas-digitales-Actividad-6.tex")
         entregas_dir = herramientas_dir / "entregas-herramientas-digitales"
         entregas_dir.mkdir(parents=True, exist_ok=True)
-        pdf_dest = entregas_dir / "GPO103_LCP_WEB_MartinJonathan_DeLaCruzMunoz.pdf"
+        pdf_dest = entregas_dir / (
+            "GPO103_LNCI_WEB_Martin_DeLaCruz_Munoz.pdf"
+            if tex_path.name.endswith("50144.tex")
+            else "GPO103_LCP_WEB_MartinJonathan_DeLaCruzMunoz.pdf"
+        )
         
         compile_ok = False
         pdf_sha256 = None
@@ -258,7 +353,7 @@ class AgenteSitioLex:
             rel_target = tex_path.relative_to(repo_root).as_posix()
             try:
                 # 1. Biber
-                biber_cmd = ["biber", herramientas_dir / "reporte-herramientas-digitales-Actividad-6"]
+                biber_cmd = ["biber", tex_path.with_suffix("")]
                 subprocess.run(biber_cmd, cwd=repo_root, capture_output=True, text=True, timeout=60)
                 
                 # 2. XeLaTeX
@@ -315,4 +410,393 @@ class AgenteSitioLex:
             compile_ok=compile_ok,
             ok=(compile_ok and not audit_result.has_forbidden_iframes),
             errors=tuple(errors),
+        )
+
+    def _write_interactive_blocked_result(
+        self,
+        *,
+        run_id: str,
+        run_dir: Path,
+        status: str,
+        editor_url: str,
+        published_url: str,
+        blocker: dict[str, Any],
+        editor_screenshot_path: Path | None = None,
+    ) -> GoogleSitesInteractiveResult:
+        manifest = {
+            "schema_version": "1.0.0",
+            "run_id": run_id,
+            "agent_id": AGENT_ID_DISENO_SITIO_LEX,
+            "status": status,
+            "editor_url": editor_url,
+            "published_url": published_url,
+            "timestamp_utc": datetime.now(timezone.utc).isoformat(),
+            "blockers": [blocker],
+        }
+        assert_no_credential_leak(manifest)
+        m_path = run_dir / "manifest.json"
+        m_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+        summary_md = (
+            f"# Sesión Google Sites Bloqueada (`{status}`)\n\n"
+            f"- **Editor:** `{editor_url}`\n"
+            f"- **Sitio público:** `{published_url}`\n"
+            f"- **Motivo:** {blocker['detail']}\n"
+        )
+        assert_no_credential_leak(summary_md)
+        s_path = run_dir / "resumen-sites.md"
+        s_path.write_text(summary_md, encoding="utf-8")
+
+        return GoogleSitesInteractiveResult(
+            ok=False,
+            status=status,
+            run_id=run_id,
+            run_dir=run_dir,
+            editor_url=editor_url,
+            published_url=published_url,
+            editor_screenshot_path=editor_screenshot_path,
+            manifest_path=m_path,
+            summary_md_path=s_path,
+            blockers=(blocker,),
+        )
+
+    @staticmethod
+    def _inspect_and_sync_editor_pages(
+        page: Any,
+        ensure_pages: tuple[str, ...],
+    ) -> tuple[list[str], list[str]]:
+        """Inspecciona las páginas visibles del panel 'Páginas' y crea las faltantes si se solicita."""
+        pages_tab = page.locator(
+            '[role="tab"]:has-text("Páginas"):visible, [role="tab"]:has-text("Pages"):visible'
+        ).first
+        if pages_tab.count():
+            try:
+                pages_tab.click()
+                page.wait_for_timeout(800)
+            except Exception:
+                pass
+
+        def _read_page_names() -> list[str]:
+            try:
+                items = page.locator('[role="treeitem"]:visible, [data-page-id]:visible').all_inner_texts()
+            except Exception:
+                items = []
+            cleaned: list[str] = []
+            for raw in items:
+                first_line = (raw or "").splitlines()[0].strip()
+                if first_line and first_line not in cleaned:
+                    cleaned.append(first_line)
+            return cleaned
+
+        existing = _read_page_names()
+        created: list[str] = []
+        if not ensure_pages:
+            return existing, created
+
+        normalized_existing = {
+            p.lower().replace("á", "a").replace("é", "e").replace("í", "i").replace("ó", "o").replace("ú", "u")
+            for p in existing
+        }
+        for target_page in ensure_pages:
+            norm = (
+                target_page.strip()
+                .lower()
+                .replace("á", "a")
+                .replace("é", "e")
+                .replace("í", "i")
+                .replace("ó", "o")
+                .replace("ú", "u")
+            )
+            if not norm or norm in normalized_existing:
+                continue
+            add_btn = page.locator(
+                '[aria-label*="Nueva página" i]:visible, '
+                '[aria-label*="New page" i]:visible, '
+                '[data-tooltip*="Nueva página" i]:visible, '
+                '[data-tooltip*="New page" i]:visible'
+            ).first
+            if not add_btn.count():
+                continue
+            try:
+                add_btn.click()
+                page.wait_for_timeout(500)
+                name_input = page.locator('div[role="dialog"] input[type="text"]:visible').first
+                if name_input.count():
+                    name_input.fill(target_page.strip())
+                    done_btn = page.locator(
+                        'div[role="dialog"] button:has-text("Listo"):visible, '
+                        'div[role="dialog"] button:has-text("Done"):visible, '
+                        'div[role="dialog"] button:has-text("Aceptar"):visible'
+                    ).first
+                    if done_btn.count():
+                        done_btn.click()
+                        page.wait_for_timeout(900)
+                        created.append(target_page.strip())
+                        normalized_existing.add(norm)
+            except Exception:
+                continue
+
+        return _read_page_names() or existing, created
+
+    def run_interactive_session(
+        self,
+        request: GoogleSitesInteractiveRequest,
+    ) -> GoogleSitesInteractiveResult:
+        """Abre Google Sites en Chrome visible con perfil persistente para autenticar, auditar y opcionalmente publicar."""
+        run_id = f"{self.workspace.timestamp()}-subir-sitio"
+        run_dir = (
+            self.workspace.resolve_target(request.output_dir)
+            if request.output_dir.strip()
+            else self.runs_root / run_id
+        )
+        run_dir.mkdir(parents=True, exist_ok=True)
+
+        if not request.user_validated:
+            return self._write_interactive_blocked_result(
+                run_id=run_id,
+                run_dir=run_dir,
+                status="blocked_missing_user_validation",
+                editor_url=request.editor_url,
+                published_url=request.published_url,
+                blocker={
+                    "code": "missing_user_validation",
+                    "detail": (
+                        "Acceso interactivo a Google Sites bloqueado por seguridad: se requiere "
+                        "autorización explícita (`user_validated=True`)."
+                    ),
+                    "blocking": True,
+                },
+            )
+
+        try:
+            clean_editor_url, clean_published_url = validate_google_sites_urls(
+                request.editor_url,
+                request.published_url,
+            )
+        except ValueError as exc:
+            return self._write_interactive_blocked_result(
+                run_id=run_id,
+                run_dir=run_dir,
+                status="blocked_invalid_site_url",
+                editor_url=request.editor_url,
+                published_url=request.published_url,
+                blocker={"code": "invalid_site_url", "detail": str(exc), "blocking": True},
+            )
+
+        profile_dir = resolve_drive_profile_dir(request.profile_name, request.profile_dir)
+        public_audit = self.audit_published_site(site_url=clean_published_url)
+
+        if request.dry_run:
+            manifest = {
+                "schema_version": "1.0.0",
+                "run_id": run_id,
+                "agent_id": AGENT_ID_DISENO_SITIO_LEX,
+                "status": "dry_run_validated",
+                "dry_run": True,
+                "editor_url": clean_editor_url,
+                "published_url": clean_published_url,
+                "profile_dir": str(profile_dir),
+                "publish_changes": bool(request.publish_changes),
+                "ensure_pages": list(request.ensure_pages),
+                "public_audit": {
+                    "http_status": public_audit.http_status,
+                    "is_live": public_audit.is_live,
+                    "compliance_score": public_audit.compliance_score,
+                    "has_forbidden_iframes": public_audit.has_forbidden_iframes,
+                    "matched_sections": list(public_audit.matched_sections),
+                    "missing_sections": list(public_audit.missing_sections),
+                },
+                "timestamp_utc": datetime.now(timezone.utc).isoformat(),
+            }
+            assert_no_credential_leak(manifest)
+            m_path = run_dir / "manifest.json"
+            m_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+            r_path = run_dir / "receipt.json"
+            r_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+            summary_md = (
+                "# Prevalidación Google Sites (`dry-run`)\n\n"
+                f"- **Editor:** `{clean_editor_url}`\n"
+                f"- **Sitio público:** `{clean_published_url}`\n"
+                f"- **Perfil persistente:** `{profile_dir}`\n"
+                f"- **HTTP público:** `{public_audit.http_status}` (`compliance={public_audit.compliance_score}%`, iframes prohibidos={public_audit.has_forbidden_iframes})\n"
+                "- **Siguiente paso:** ejecutar con `--live` para abrir la ventana visible de Google Sites Editor.\n"
+            )
+            assert_no_credential_leak(summary_md)
+            s_path = run_dir / "resumen-sites.md"
+            s_path.write_text(summary_md, encoding="utf-8")
+
+            return GoogleSitesInteractiveResult(
+                ok=True,
+                status="dry_run_validated",
+                run_id=run_id,
+                run_dir=run_dir,
+                editor_url=clean_editor_url,
+                published_url=clean_published_url,
+                compliance_score=public_audit.compliance_score,
+                has_forbidden_iframes=public_audit.has_forbidden_iframes,
+                manifest_path=m_path,
+                receipt_path=r_path,
+                summary_md_path=s_path,
+                evidence={"dry_run": True, "profile_dir": str(profile_dir)},
+            )
+
+        from playwright.sync_api import sync_playwright
+
+        editor_screenshot = run_dir / "editor-google-sites.png"
+        published_screenshot = run_dir / "sitio-publicado.png"
+        authenticated_during_run = False
+        used_channel = request.channel
+        existing_pages: list[str] = []
+        created_pages: list[str] = []
+        published_action_status = "skipped"
+        rendered_iframe_sources: list[str] = []
+
+        with sync_playwright() as pw:
+            context, used_channel = launch_persistent_headed_context(pw, profile_dir, request.channel)
+            try:
+                page = context.pages[0] if context.pages else context.new_page()
+                page.goto(clean_editor_url, wait_until="domcontentloaded", timeout=60000)
+                page.wait_for_timeout(2000)
+
+                if not _is_authenticated_sites_editor(page):
+                    print(
+                        f"\n[subir-sitio] Ventana abierta ({used_channel}) para autenticación en Google Sites.\n"
+                        f"[subir-sitio] Inicia sesión en la ventana abierta; esperando hasta "
+                        f"{request.auth_timeout_seconds}s a que cargue el editor de Google Sites...",
+                        flush=True,
+                    )
+                    deadline = time.monotonic() + max(10, int(request.auth_timeout_seconds))
+                    while time.monotonic() < deadline:
+                        if _is_authenticated_sites_editor(page):
+                            authenticated_during_run = True
+                            break
+                        page.wait_for_timeout(1500)
+
+                if not _is_authenticated_sites_editor(page):
+                    try:
+                        page.screenshot(path=str(editor_screenshot), full_page=True)
+                    except Exception:
+                        pass
+                    return self._write_interactive_blocked_result(
+                        run_id=run_id,
+                        run_dir=run_dir,
+                        status="blocked_auth_timeout",
+                        editor_url=clean_editor_url,
+                        published_url=clean_published_url,
+                        editor_screenshot_path=editor_screenshot if editor_screenshot.exists() else None,
+                        blocker={
+                            "code": "auth_timeout",
+                            "detail": (
+                                f"No se completó la autenticación en Google Sites Editor dentro de "
+                                f"{request.auth_timeout_seconds}s (perfil conservado en {profile_dir})."
+                            ),
+                            "blocking": True,
+                        },
+                    )
+
+                existing_pages, created_pages = self._inspect_and_sync_editor_pages(
+                    page,
+                    tuple(request.ensure_pages or ()),
+                )
+
+                if request.publish_changes:
+                    pub_btn = page.locator(
+                        'div[role="button"]:has-text("Publicar"):visible, button:has-text("Publicar"):visible, '
+                        'div[role="button"]:has-text("Publish"):visible, button:has-text("Publish"):visible'
+                    ).first
+                    if pub_btn.count():
+                        pub_btn.click()
+                        page.wait_for_timeout(1500)
+                        confirm_btn = page.locator(
+                            'div[role="dialog"] button:has-text("Publicar"):visible, '
+                            'div[role="dialog"] div[role="button"]:has-text("Publicar"):visible, '
+                            'div[role="dialog"] button:has-text("Publish"):visible'
+                        ).last
+                        if confirm_btn.count():
+                            confirm_btn.click()
+                            page.wait_for_timeout(2500)
+                        published_action_status = "published"
+                    else:
+                        published_action_status = "publish_button_not_found"
+
+                page.screenshot(path=str(editor_screenshot), full_page=True)
+
+                pub_page = context.new_page()
+                pub_page.goto(clean_published_url, wait_until="domcontentloaded", timeout=60000)
+                pub_page.wait_for_timeout(2000)
+                try:
+                    rendered_iframe_sources = [
+                        src
+                        for src in pub_page.eval_on_selector_all(
+                            "iframe",
+                            "els => els.map(e => e.src || '')",
+                        )
+                        if "cloudfront.net" in src or "de2vaif4mldo0" in src
+                    ]
+                except Exception:
+                    rendered_iframe_sources = []
+                pub_page.screenshot(path=str(published_screenshot), full_page=True)
+            finally:
+                context.close()
+
+        refreshed_audit = self.audit_published_site(site_url=clean_published_url)
+        has_forbidden = refreshed_audit.has_forbidden_iframes or bool(rendered_iframe_sources)
+
+        manifest = {
+            "schema_version": "1.0.0",
+            "run_id": run_id,
+            "agent_id": AGENT_ID_DISENO_SITIO_LEX,
+            "status": "completed",
+            "editor_url": clean_editor_url,
+            "published_url": clean_published_url,
+            "browser_channel": used_channel,
+            "profile_dir": str(profile_dir),
+            "authenticated_during_run": authenticated_during_run,
+            "existing_pages": existing_pages,
+            "created_pages": created_pages,
+            "publish_action_status": published_action_status,
+            "compliance_score": refreshed_audit.compliance_score,
+            "has_forbidden_iframes": has_forbidden,
+            "rendered_forbidden_iframes": rendered_iframe_sources,
+            "editor_screenshot_path": str(editor_screenshot),
+            "published_screenshot_path": str(published_screenshot),
+            "timestamp_utc": datetime.now(timezone.utc).isoformat(),
+        }
+        assert_no_credential_leak(manifest)
+        m_path = run_dir / "manifest.json"
+        m_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+        r_path = run_dir / "receipt.json"
+        r_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+        summary_md = (
+            "# Sesión Interactiva Google Sites Completada\n\n"
+            f"- **Editor:** `{clean_editor_url}`\n"
+            f"- **Sitio público:** `{clean_published_url}`\n"
+            f"- **Páginas detectadas:** {', '.join(existing_pages) if existing_pages else 'Solo portada / sin árbol visible'}\n"
+            f"- **Páginas creadas:** {', '.join(created_pages) if created_pages else 'Ninguna'}\n"
+            f"- **Publicación:** `{published_action_status}`\n"
+            f"- **Cumplimiento nativo:** `{refreshed_audit.compliance_score}%` (iframes prohibidos={has_forbidden})\n"
+        )
+        assert_no_credential_leak(summary_md)
+        s_path = run_dir / "resumen-sites.md"
+        s_path.write_text(summary_md, encoding="utf-8")
+
+        return GoogleSitesInteractiveResult(
+            ok=not has_forbidden,
+            status="completed",
+            run_id=run_id,
+            run_dir=run_dir,
+            editor_url=clean_editor_url,
+            published_url=clean_published_url,
+            compliance_score=refreshed_audit.compliance_score,
+            has_forbidden_iframes=has_forbidden,
+            editor_screenshot_path=editor_screenshot,
+            published_screenshot_path=published_screenshot,
+            manifest_path=m_path,
+            receipt_path=r_path,
+            summary_md_path=s_path,
+            evidence=manifest,
         )
