@@ -1014,30 +1014,53 @@ class AgenteSitioLex:
         if picker_frame is None:
             return "picker_frame_not_found"
 
-        search_input = picker_frame.locator('input[aria-label*="YouTube" i], input[type="text"]').last
+        search_input = picker_frame.locator('input[aria-label*="YouTube" i], input[type="text"]:visible').last
         if not search_input.count():
+            cls._dismiss_open_dialogs(page)
             return "picker_input_not_found"
+        search_input.click()
         search_input.fill(query)
         search_input.press("Enter")
-        page.wait_for_timeout(2500)
+        search_btn = picker_frame.locator('[aria-label*="Buscar" i]:visible, button[type="submit"]:visible').first
+        if search_btn.count():
+            try:
+                search_btn.click(timeout=2000)
+            except Exception:
+                pass
+        page.wait_for_timeout(3000)
 
-        result_tile = picker_frame.locator('[role="option"], [role="listitem"], [data-id]').first
+        result_tile = picker_frame.locator(
+            'div[role="option"]:visible, '
+            'div[role="gridcell"]:visible, '
+            'div[role="listitem"]:visible, '
+            'div[data-id]:visible, '
+            'img[src*="ytimg"]:visible'
+        ).first
         if result_tile.count():
-            result_tile.click()
-            page.wait_for_timeout(800)
+            try:
+                result_tile.click(timeout=5000)
+                page.wait_for_timeout(1000)
+            except Exception:
+                pass
 
         select_btn = picker_frame.locator(
             'button:has-text("Seleccionar"):visible, button:has-text("Insertar"):visible, '
-            '[role="button"]:has-text("Seleccionar"):visible, [role="button"]:has-text("Insert"):visible'
+            'div[role="button"]:has-text("Seleccionar"):visible, div[role="button"]:has-text("Insertar"):visible, '
+            '[role="button"]:has-text("Select"):visible, [role="button"]:has-text("Insert"):visible'
         ).last
         if select_btn.count() and not select_btn.is_disabled():
             select_btn.click()
-            page.wait_for_timeout(1500)
+            page.wait_for_timeout(1800)
+            cls._dismiss_open_dialogs(page)
             return "applied"
 
-        close_b = picker_frame.locator('[aria-label*="Cerrar" i]').first
+        close_b = picker_frame.locator('[aria-label*="Cerrar" i]:visible').first
         if close_b.count():
-            close_b.click()
+            try:
+                close_b.click(timeout=2000)
+            except Exception:
+                pass
+        cls._dismiss_open_dialogs(page)
         return "select_button_not_enabled"
 
     @classmethod
@@ -1058,15 +1081,22 @@ class AgenteSitioLex:
 
         search_inp = page.locator('[role="dialog"] input[aria-label*="Google Maps" i]:visible').first
         if not search_inp.count():
+            cls._dismiss_open_dialogs(page)
             return "map_input_not_found"
+        search_inp.click()
         search_inp.fill(location_query)
-        search_inp.press("Enter")
-        page.wait_for_timeout(1800)
-
-        suggestion = page.locator('[role="dialog"] [role="option"]:visible, [role="dialog"] .pac-item:visible').first
+        page.wait_for_timeout(800)
+        suggestion = page.locator('.pac-item:visible, [role="listbox"] [role="option"]:visible, [role="dialog"] [role="option"]:visible').first
         if suggestion.count():
-            suggestion.click()
-            page.wait_for_timeout(1200)
+            try:
+                suggestion.click(timeout=5000)
+                page.wait_for_timeout(1200)
+            except Exception:
+                pass
+        else:
+            search_inp.press("ArrowDown")
+            search_inp.press("Enter")
+            page.wait_for_timeout(1500)
 
         if cls._click_dialog_button(page, ("Seleccionar", "Select")):
             page.wait_for_timeout(1500)
@@ -1423,7 +1453,15 @@ class AgenteSitioLex:
                 )
 
                 if request.publish_changes:
-                    page.wait_for_timeout(2000)
+                    try:
+                        page.locator(
+                            ':text("Se guardaron todos los cambios en Drive"), '
+                            '[aria-label*="Se guardaron todos los cambios" i], '
+                            ':text("All changes saved in Drive")'
+                        ).first.wait_for(timeout=12000)
+                    except Exception:
+                        pass
+                    page.wait_for_timeout(1500)
                     pub_sel = 'div[role="button"]:has-text("Publicar"):visible, button:has-text("Publicar"):visible, div[role="button"]:has-text("Publish"):visible, button:has-text("Publish"):visible'
                     pub_btn = page.locator(pub_sel).first
                     if pub_btn.count():
@@ -1436,32 +1474,64 @@ class AgenteSitioLex:
                         ).last
                         if confirm_btn.count():
                             confirm_btn.click()
-                            page.wait_for_timeout(3000)
+                            page.wait_for_timeout(4000)
                         elif page.locator(pub_sel).count() > 1:
                             page.locator(pub_sel).last.click()
-                            page.wait_for_timeout(3000)
+                            page.wait_for_timeout(4000)
                         published_action_status = "published"
                     else:
                         published_action_status = "publish_button_not_found"
 
                 self._open_sidebar_tab(page, "Páginas", "Pages")
+                self._expand_sidebar_treeitems(page)
                 page.screenshot(path=str(editor_screenshot), full_page=True)
 
                 pub_page = context.new_page()
                 pub_page.goto(clean_published_url, wait_until="domcontentloaded", timeout=60000)
                 pub_page.wait_for_timeout(2500)
+                rendered_iframe_sources: list[str] = []
+                public_checks: dict[str, Any] = {}
                 try:
-                    rendered_iframe_sources = [
-                        src
-                        for src in pub_page.eval_on_selector_all(
-                            "iframe",
-                            "els => els.map(e => e.src || '')",
-                        )
-                        if "cloudfront.net" in src or "de2vaif4mldo0" in src
-                    ]
+                    home_iframes = pub_page.eval_on_selector_all("iframe", "els => els.map(e => e.src || '')")
+                    rendered_iframe_sources.extend(
+                        src for src in home_iframes if "cloudfront.net" in src or "de2vaif4mldo0" in src
+                    )
+                    home_text = pub_page.locator("body").inner_text(timeout=3000)
+                    public_checks["home_footer_ok"] = "elaborado por martín jonathan" in home_text.lower()
+                    public_checks["home_carousel_present"] = (
+                        pub_page.locator('[aria-roledescription="carousel"], [data-carousel-id]').count() > 0
+                    )
                 except Exception:
-                    rendered_iframe_sources = []
+                    pass
                 pub_page.screenshot(path=str(published_screenshot), full_page=True)
+
+                if request.align_s4:
+                    base_pub = clean_published_url.rstrip("/")
+                    for slug, check_key in (
+                        ("servicios", "servicios"),
+                        ("quienes-somos", "quienes_somos"),
+                        ("ubicacion", "ubicacion"),
+                        ("contacto", "contacto"),
+                    ):
+                        try:
+                            pub_page.goto(f"{base_pub}/{slug}", wait_until="domcontentloaded", timeout=30000)
+                            pub_page.wait_for_timeout(2000)
+                            srcs = pub_page.eval_on_selector_all("iframe", "els => els.map(e => e.src || '')")
+                            rendered_iframe_sources.extend(
+                                s for s in srcs if "cloudfront.net" in s or "de2vaif4mldo0" in s
+                            )
+                            if check_key == "quienes_somos":
+                                public_checks["youtube_embed_present"] = any("youtube" in s or "youtu.be" in s for s in srcs)
+                            elif check_key == "ubicacion":
+                                public_checks["maps_embed_present"] = any("google.com/maps" in s or "maps" in s for s in srcs)
+                            elif check_key == "contacto":
+                                public_checks["social_links_count"] = pub_page.locator(
+                                    'a[href*="facebook.com"], a[href*="instagram.com"], a[href*="youtube.com"]'
+                                ).count()
+                            pub_page.screenshot(path=str(run_dir / f"publico-{slug}.png"), full_page=True)
+                        except Exception:
+                            public_checks[f"{check_key}_error"] = True
+                rendered_iframe_sources = list(dict.fromkeys(rendered_iframe_sources))
             finally:
                 context.close()
 
@@ -1481,6 +1551,7 @@ class AgenteSitioLex:
             "existing_pages": existing_pages,
             "created_pages": created_pages,
             "alignment_actions": alignment_actions,
+            "public_checks": public_checks,
             "publish_action_status": published_action_status,
             "compliance_score": refreshed_audit.compliance_score,
             "has_forbidden_iframes": has_forbidden,

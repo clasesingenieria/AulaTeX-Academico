@@ -127,3 +127,24 @@ def test_is_authenticated_sites_editor_and_page_inspection() -> None:
     )
     assert existing == ["Inicio", "Servicios", "Contacto"]
     assert created == []
+
+
+def test_read_editor_page_names_from_title_inputs_and_duplicates() -> None:
+    class _FakeInputPage:
+        def eval_on_selector_all(self, selector: str, _js: str) -> list[str]:
+            if "Título de la página" in selector:
+                return ["Inicio", "Servicios", "Contacto", "Servicios"]
+            return []
+
+    fake_page = _FakeInputPage()
+    assert AgenteSitioLex._read_editor_page_names(fake_page, unique=True) == [
+        "Inicio",
+        "Servicios",
+        "Contacto",
+    ]
+    assert AgenteSitioLex._read_editor_page_names(fake_page, unique=False) == [
+        "Inicio",
+        "Servicios",
+        "Contacto",
+        "Servicios",
+    ]
