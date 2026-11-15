@@ -483,9 +483,11 @@ class AgenteSitioLex:
                 items = []
             cleaned: list[str] = []
             for raw in items:
-                first_line = (raw or "").splitlines()[0].strip()
-                if first_line and first_line not in cleaned:
-                    cleaned.append(first_line)
+                for line in (raw or "").splitlines():
+                    label = re.sub(r"[\ue000-\uf8ff]+", " ", line).strip()
+                    if label and label not in cleaned:
+                        cleaned.append(label)
+                        break
             return cleaned
 
         existing = _read_page_names()
@@ -657,6 +659,10 @@ class AgenteSitioLex:
             context, used_channel = launch_persistent_headed_context(pw, profile_dir, request.channel)
             try:
                 page = context.pages[0] if context.pages else context.new_page()
+                try:
+                    page.bring_to_front()
+                except Exception:
+                    pass
                 page.goto(clean_editor_url, wait_until="domcontentloaded", timeout=60000)
                 page.wait_for_timeout(2000)
 

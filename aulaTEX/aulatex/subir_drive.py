@@ -147,6 +147,8 @@ def launch_persistent_headed_context(playwright: Any, user_data_dir: Path, prefe
             "headless": False,
             "viewport": {"width": 1360, "height": 900},
             "accept_downloads": True,
+            "ignore_default_args": ["--enable-automation"],
+            "args": ["--disable-blink-features=AutomationControlled"],
         }
         if ch is not None:
             kwargs["channel"] = ch
