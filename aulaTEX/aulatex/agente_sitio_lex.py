@@ -888,22 +888,34 @@ class AgenteSitioLex:
 
     @staticmethod
     def _write_rich_text_exec(page: Any, text: str, *, replace_all: bool = True) -> bool:
-        lines = text.splitlines()
-        if replace_all:
-            page.evaluate("() => document.execCommand('selectAll', false, null)")
-        ok_any = False
-        for idx, line in enumerate(lines):
-            if line:
-                ok = page.evaluate("txt => document.execCommand('insertText', false, txt)", line)
-                ok_any = ok_any or bool(ok)
-            if idx < len(lines) - 1:
-                page.keyboard.press("Enter")
-                page.wait_for_timeout(60)
-        page.wait_for_timeout(300)
-        page.evaluate("() => { if (document.activeElement) document.activeElement.blur(); }")
-        page.keyboard.press("Escape")
-        page.wait_for_timeout(500)
-        return ok_any
+        try:
+            page.evaluate("txt => navigator.clipboard.writeText(txt)", text)
+            if replace_all:
+                page.keyboard.press("Control+a")
+                page.wait_for_timeout(100)
+            page.keyboard.press("Control+v")
+            page.wait_for_timeout(600)
+            page.evaluate("() => { if (document.activeElement) document.activeElement.blur(); }")
+            page.keyboard.press("Escape")
+            page.wait_for_timeout(1200)
+            return True
+        except Exception:
+            lines = text.splitlines()
+            if replace_all:
+                page.evaluate("() => document.execCommand('selectAll', false, null)")
+            ok_any = False
+            for idx, line in enumerate(lines):
+                if line:
+                    ok = page.evaluate("txt => document.execCommand('insertText', false, txt)", line)
+                    ok_any = ok_any or bool(ok)
+                if idx < len(lines) - 1:
+                    page.keyboard.press("Enter")
+                    page.wait_for_timeout(60)
+            page.wait_for_timeout(300)
+            page.evaluate("() => { if (document.activeElement) document.activeElement.blur(); }")
+            page.keyboard.press("Escape")
+            page.wait_for_timeout(800)
+            return ok_any
 
     @staticmethod
     def _clean_footer_extra_sections(page: Any) -> int:
@@ -1053,7 +1065,13 @@ class AgenteSitioLex:
             cand = candidates.nth(idx)
             try:
                 t = (cand.inner_text(timeout=800) or "").strip()
-                if not t or "haz clic para editar" in t.lower() or "prueba texto" in t.lower():
+                first_line_norm = cls._normalize_es(content_text.splitlines()[0][:25]) if content_text else ""
+                if (
+                    not t
+                    or "haz clic para editar" in t.lower()
+                    or "prueba texto" in t.lower()
+                    or (first_line_norm and first_line_norm in cls._normalize_es(t))
+                ):
                     target_box = cand
                     break
             except Exception:
@@ -1087,6 +1105,11 @@ class AgenteSitioLex:
             return "applied"
         return "exec_insert_failed"
 
+    _CAROUSEL_SELECTOR = (
+        '[aria-label*="Carrusel" i], [aria-label*="Image carousel" i], '
+        '[aria-roledescription="carousel"], [data-carousel-id]'
+    )
+
     @classmethod
     def _insert_carousel_images(cls, page: Any, image_paths: list[Path]) -> str:
         existing_imgs = [p for p in image_paths if p.is_file()]
@@ -1095,7 +1118,7 @@ class AgenteSitioLex:
         try:
             body_scope = "article.UynGwb " if page.locator("article.UynGwb").count() else ""
             carousel_cnt = page.locator(
-                f'{body_scope}[aria-roledescription="carousel"], {body_scope}[data-carousel-id]'
+                ", ".join(f"{body_scope}{part.strip()}" for part in cls._CAROUSEL_SELECTOR.split(","))
             ).count()
             if carousel_cnt > 0:
                 return "already_present"
@@ -1419,7 +1442,7 @@ class AgenteSitioLex:
                     "step": "servicios_intro",
                     "status": self._insert_text_block(
                         page,
-                        "Catálogo de Servicios Contables",
+                        "conciliación bancaria/CFDI",
                         (
                             "Catálogo de Servicios Contables y Fiscales — Lex Contable\n"
                             "• Contabilidad mensual y conciliación bancaria/CFDI.\n"
@@ -1601,6 +1624,10 @@ class AgenteSitioLex:
         with sync_playwright() as pw:
             context, used_channel = launch_persistent_headed_context(pw, profile_dir, request.channel)
             try:
+                try:
+                    context.grant_permissions(["clipboard-read", "clipboard-write"], origin="https://sites.google.com")
+                except Exception:
+                    pass
                 page = context.pages[0] if context.pages else context.new_page()
                 try:
                     page.bring_to_front()
@@ -1677,10 +1704,10 @@ class AgenteSitioLex:
                         ).last
                         if confirm_btn.count():
                             confirm_btn.click()
-                            page.wait_for_timeout(4000)
+                            page.wait_for_timeout(6000)
                         elif page.locator(pub_sel).count() > 1:
                             page.locator(pub_sel).last.click()
-                            page.wait_for_timeout(4000)
+                            page.wait_for_timeout(6000)
                         published_action_status = "published"
                     else:
                         published_action_status = "publish_button_not_found"
@@ -1691,7 +1718,7 @@ class AgenteSitioLex:
 
                 pub_page = context.new_page()
                 pub_page.goto(clean_published_url, wait_until="domcontentloaded", timeout=60000)
-                pub_page.wait_for_timeout(3000)
+                pub_page.wait_for_timeout(3500)
                 rendered_iframe_sources: list[str] = []
                 public_checks: dict[str, Any] = {}
                 nav_hrefs: dict[str, str] = {}
@@ -1701,7 +1728,8 @@ class AgenteSitioLex:
                         src for src in home_iframes if "cloudfront.net" in src or "de2vaif4mldo0" in src
                     )
                     home_text = pub_page.locator("body").inner_text(timeout=3000)
-                    public_checks["home_footer_ok"] = "elaborado por martín jonathan de la cruz muñoz" in home_text.lower()
+                    norm_home = re.sub(r"\s+", " ", home_text).lower()
+                    public_checks["home_footer_ok"] = "elaborado por martín jonathan de la cruz muñoz" in norm_home
                     public_checks["home_carousel_present"] = (
                         pub_page.locator(
                             '[aria-roledescription="carousel"], [data-carousel-id], '
