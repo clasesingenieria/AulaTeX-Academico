@@ -2,7 +2,7 @@
 
 - **Asignatura:** Herramientas digitales (`2026_I_Herramientas digitales_LCP`, Curso `635`)
 - **Docente:** Dr. Dámaso Guadalupe Ruíz González
-- **Fecha de auditoría:** `2026-11-15 01:28 UTC`
+- **Fecha de auditoría:** `2026-11-15 05:51 UTC`
 
 ## 1. Inventario Completo de Grabaciones Localizadas en Plataforma UAS
 
@@ -11,14 +11,14 @@
 | S1 | S1 - Clase 1 | `2026-10-20` | `1NaR_KBkiiZRg3ioHxiSRJw_GMqCDf2rD` | `google_drive` | [Presentación del Curso, Diagnóstico, Carpeta Compartida en Drive y Lecciones TIC](https://drive.google.com/file/d/1NaR_KBkiiZRg3ioHxiSRJw_GMqCDf2rD/view?usp=sharing) | MP4 + SRT + TXT + Capturas OK | `ruiz2026claseS1c1` |
 | S1 | S1 - Clase 2 | `2026-10-22` | `LdO5T2YGm6g` | `youtube` | [GPO103-LCP: Compartir Carpeta](https://www.youtube.com/watch?v=LdO5T2YGm6g) | MP4 + SRT + TXT + Capturas OK | `ruiz2026claseS1c2` |
 | S2 | S2 - Clase 1 | `2026-10-27` | `I_H5f_gGbuc` | `youtube` | [GPO103-LCP: Zoom e Inicio de Excel](https://www.youtube.com/watch?v=I_H5f_gGbuc) | MP4 + SRT + TXT + Capturas OK | `ruiz2026claseS2c1` |
-| S2 | S2 - Clase 2 | `2026-10-29` | `0FGH031UsFo` | `youtube` | [GPO103-LCP: Ejercicios de Excel](https://www.youtube.com/watch?v=0FGH031UsFo) | Metadatos oEmbed OK (Requiere MP4 local) | `ruiz2026claseS2c2` |
+| S2 | S2 - Clase 2 | `2026-10-29` | `0FGH031UsFo` | `youtube` | [GPO103-LCP: Ejercicios de Excel](https://www.youtube.com/watch?v=0FGH031UsFo) | MP4 + SRT + TXT + Capturas OK | `ruiz2026claseS2c2` |
 | S2 | S2 - Tutorial 1 | `2026-10-29` | `1a-HF6zBZDirjqIhYdxHZPFXnHxbQTAfQ` | `google_drive` | [Solicitud de Correo Institucional @ms.uas.edu.mx](https://drive.google.com/file/d/1a-HF6zBZDirjqIhYdxHZPFXnHxbQTAfQ/view?usp=sharing) | MP4 + SRT + TXT + Capturas OK | `ruiz2026tutorialCorreoMS` |
 | S2 | S2 - Tutorial 2 | `2026-10-29` | `1WF4KxUllV-Rfs6rHtPCvmoiSZErpn6ZW` | `google_drive` | [Registro al Sistema Institucional siiFCA](https://drive.google.com/file/d/1WF4KxUllV-Rfs6rHtPCvmoiSZErpn6ZW/view?usp=sharing) | MP4 + SRT + TXT + Capturas OK | `ruiz2026tutorialSiiFCA` |
 | S3 | S3 - Tutorial 1 | `2026-11-02` | `1fIBZxP9E4rWCzpjGgrMsLtNTaVCEJNF4` | `google_drive` | [Activar Cuenta e Instalar Microsoft 365 Institucional](https://drive.google.com/file/d/1fIBZxP9E4rWCzpjGgrMsLtNTaVCEJNF4/view?usp=sharing) | MP4 + SRT + TXT + Capturas OK | `ruiz2026tutorialM365` |
-| S3 | S3 - Clase 1 | `2026-11-03` | `q9KgoQqUJpU` | `youtube` | [GPO103-LCP: Excel Aplicado.](https://www.youtube.com/watch?v=q9KgoQqUJpU) | Metadatos oEmbed OK (Requiere MP4 local) | `ruiz2026claseS3c1` |
-| S3 | S3 - Clase 2 | `2026-11-05` | `ZSLk1hRY48U` | `youtube` | [GPO103-LCP: Excel funciones que cuentan](https://www.youtube.com/watch?v=ZSLk1hRY48U) | Metadatos oEmbed OK (Requiere MP4 local) | `ruiz2026claseS3c2` |
-| S4 | S4 - Clase 1 | `2026-11-10` | `7ZomiXX7eus` | `youtube` | [GPO103-LCP: Excel y Balances Generales](https://www.youtube.com/watch?v=7ZomiXX7eus) | Metadatos oEmbed OK (Requiere MP4 local) | `ruiz2026claseS4c1` |
-| S4 | S4 - Clase 2 | `2026-11-12` | `rzici9Xi01Y` | `youtube` | [GPO103-LCP: Diseño de páginas Web](https://www.youtube.com/watch?v=rzici9Xi01Y) | Metadatos oEmbed OK (Requiere MP4 local) | `ruiz2026claseS4c2` |
+| S3 | S3 - Clase 1 | `2026-11-03` | `q9KgoQqUJpU` | `youtube` | [GPO103-LCP: Excel Aplicado.](https://www.youtube.com/watch?v=q9KgoQqUJpU) | MP4 + SRT + TXT + Capturas OK | `ruiz2026claseS3c1` |
+| S3 | S3 - Clase 2 | `2026-11-05` | `ZSLk1hRY48U` | `youtube` | [GPO103-LCP: Excel funciones que cuentan](https://www.youtube.com/watch?v=ZSLk1hRY48U) | MP4 + SRT + TXT + Capturas OK | `ruiz2026claseS3c2` |
+| S4 | S4 - Clase 1 | `2026-11-10` | `7ZomiXX7eus` | `youtube` | [GPO103-LCP: Excel y Balances Generales](https://www.youtube.com/watch?v=7ZomiXX7eus) | MP4 + SRT + TXT + Capturas OK | `ruiz2026claseS4c1` |
+| S4 | S4 - Clase 2 | `2026-11-12` | `rzici9Xi01Y` | `youtube` | [GPO103-LCP: Diseño de páginas Web](https://www.youtube.com/watch?v=rzici9Xi01Y) | MP4 + SRT + TXT + Capturas OK | `ruiz2026claseS4c2` |
 
 ## 2. Documentos Complementarios de Google Drive (`Complemento de LCP - Aplicado`)
 

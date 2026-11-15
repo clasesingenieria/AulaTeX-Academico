@@ -1756,7 +1756,7 @@ class AgenteGrabacionesUas:
                     re.escape(marker_start) + r".*?" + re.escape(marker_end),
                     re.DOTALL,
                 )
-                updated_md = pattern.sub(new_section, current_md)
+                updated_md = pattern.sub(lambda _m: new_section, current_md)
             else:
                 updated_md = current_md.rstrip() + "\n\n" + new_section + "\n"
             plan_file.write_text(updated_md, encoding="utf-8")
