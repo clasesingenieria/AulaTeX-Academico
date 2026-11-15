@@ -1873,7 +1873,8 @@ def main(argv: list[str] | None = None) -> None:
             "receipt_path": str(res.receipt_path) if res.receipt_path else None,
             "blockers": list(res.blockers),
             "manifest_path": str(res.manifest_path) if res.manifest_path else None,
-            "summary": res.summary,
+            "summary_md_path": str(res.summary_md_path) if getattr(res, "summary_md_path", None) else None,
+            "platform_evidence": getattr(res, "platform_evidence", {}),
         }, ensure_ascii=False, indent=2))
         return
 

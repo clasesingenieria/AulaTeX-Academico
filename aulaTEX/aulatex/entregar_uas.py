@@ -407,11 +407,18 @@ class EntregarUasAgent(RealizarEntregaAgent):
                 del_btn = page.locator("button.fp-file-delete:visible, a.fp-file-delete:visible").first
                 if del_btn.count():
                     del_btn.click()
-                    page.wait_for_timeout(400)
-                    confirm_btn = page.locator("button.fp-dlg-butconfirm:visible, .moodle-dialogue-confirm button:has-text('OK'):visible, .moodle-dialogue-confirm button:has-text('Sí'):visible").first
+                    page.wait_for_timeout(500)
+                    confirm_btn = page.locator(
+                        ".modal.show button[data-action='save']:visible, "
+                        ".modal.show button.btn-primary:visible, "
+                        "button.fp-dlg-butconfirm:visible"
+                    ).first
                     if confirm_btn.count():
                         confirm_btn.click()
-                    page.wait_for_timeout(800)
+                    for _w in range(15):
+                        page.wait_for_timeout(300)
+                        if page.locator(".modal.show").count() == 0 and page.locator(".fp-content .fp-file:visible").count() < before_cnt:
+                            break
                 if page.locator(".fp-content .fp-file:visible").count() >= before_cnt:
                     break
 
