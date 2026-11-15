@@ -12,6 +12,8 @@
 
 ## Capturas de Puntos de Interés Extraídas
 
-- `[00:15:59]` **GPO103-LCP: Excel funciones que cuentan — Acceso inicial y requisitos institucionales** — [Captura PNG](capturas-interes/s3-clase-2-poi-01-inicio.png) (`ruiz2026claseS3c2Poi1`)
-- `[00:53:16]` **GPO103-LCP: Excel funciones que cuentan — Configuración y llenado paso a paso** — [Captura PNG](capturas-interes/s3-clase-2-poi-02-procedimiento.png) (`ruiz2026claseS3c2Poi2`)
-- `[01:27:21]` **GPO103-LCP: Excel funciones que cuentan — Verificación final y activación** — [Captura PNG](capturas-interes/s3-clase-2-poi-03-confirmacion.png) (`ruiz2026claseS3c2Poi3`)
+- `[00:29:00]` **04-Maquillaje con nombres de rango (Nombre, Fecha, Producto, Unidades, Euros)** — [Captura PNG](capturas-interes/s3c2-poi-01-maquillaje-sumar-si.png) (`ruiz2026poiS3c2Maquillaje`)
+- `[01:05:30]` **Cuadro RESULTADOS de 04-Maquillaje y tareas pendientes C24:C26** — [Captura PNG](capturas-interes/s3c2-poi-02-maquillaje-resultados.png) (`ruiz2026poiS3c2Resultados`)
+- `[01:17:40]` **Hojas 05-Alumnos y 05-Estado Civil con función lógica SI** — [Captura PNG](capturas-interes/s3c2-poi-03-funcion-si-alumnos-estado.png) (`ruiz2026poiS3c2FuncionSi`)
+- `[01:37:00]` **05-Género 1 (SI anidado y SI.CONJUNTO) más pestañas rojas 05-Goles y 05-Género 2** — [Captura PNG](capturas-interes/s3c2-poi-04-si-anidado-y-tareas-rojas.png) (`ruiz2026poiS3c2SiAnidado`)
+- `[01:44:30]` **Cierre S3: 12 pestañas finales y distinción Aplicado (50130) vs Examen (50131)** — [Captura PNG](capturas-interes/s3c2-poi-05-cierre-aplicado-vs-examen.png) (`ruiz2026poiS3c2Cierre`)

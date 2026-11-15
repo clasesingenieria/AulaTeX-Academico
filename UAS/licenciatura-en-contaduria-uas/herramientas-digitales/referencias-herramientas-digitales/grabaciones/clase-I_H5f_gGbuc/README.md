@@ -12,6 +12,7 @@
 
 ## Capturas de Puntos de Interés Extraídas
 
-- `[00:17:39]` **GPO103-LCP: Zoom e Inicio de Excel — Acceso inicial y requisitos institucionales** — [Captura PNG](capturas-interes/s2-clase-1-poi-01-inicio.png) (`ruiz2026claseS2c1Poi1`)
-- `[00:58:49]` **GPO103-LCP: Zoom e Inicio de Excel — Configuración y llenado paso a paso** — [Captura PNG](capturas-interes/s2-clase-1-poi-02-procedimiento.png) (`ruiz2026claseS2c1Poi2`)
-- `[01:36:27]` **GPO103-LCP: Zoom e Inicio de Excel — Verificación final y activación** — [Captura PNG](capturas-interes/s2-clase-1-poi-03-confirmacion.png) (`ruiz2026claseS2c1Poi3`)
+- `[00:22:45]` **Requisitos de portada, participantes y chat compartido en Práctica Zoom (módulo 50113)** — [Captura PNG](capturas-interes/s2c1-poi-01-presentacion-zoom.png) (`ruiz2026poiS2c1Zoom`)
+- `[01:21:13]` **Creación y guardado del libro GPO103-LCP EXCEL BÁSICO (módulo 50114)** — [Captura PNG](capturas-interes/s2c1-poi-02-archivo-excel-basico.png) (`ruiz2026poiS2c1ArchivoBasico`)
+- `[01:41:20]` **Ejercicio en hoja de presentación: cálculo de celdas totales (=16384*1048576)** — [Captura PNG](capturas-interes/s2c1-poi-03-celdas-hoja-portada.png) (`ruiz2026poiS2c1Celdas`)
+- `[01:53:40]` **Integración de la hoja FACTURAS enseguida de la portada en EXCEL BÁSICO** — [Captura PNG](capturas-interes/s2c1-poi-04-mover-facturas.png) (`ruiz2026poiS2c1Facturas`)

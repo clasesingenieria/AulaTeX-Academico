@@ -12,6 +12,8 @@
 
 ## Capturas de Puntos de Interés Extraídas
 
-- `[00:14:30]` **GPO103-LCP: Excel Aplicado. — Acceso inicial y requisitos institucionales** — [Captura PNG](capturas-interes/s3-clase-1-poi-01-inicio.png) (`ruiz2026claseS3c1Poi1`)
-- `[00:48:20]` **GPO103-LCP: Excel Aplicado. — Configuración y llenado paso a paso** — [Captura PNG](capturas-interes/s3-clase-1-poi-02-procedimiento.png) (`ruiz2026claseS3c1Poi2`)
-- `[01:19:16]` **GPO103-LCP: Excel Aplicado. — Verificación final y activación** — [Captura PNG](capturas-interes/s3-clase-1-poi-03-confirmacion.png) (`ruiz2026claseS3c1Poi3`)
+- `[00:07:35]` **Guardado de GPO103-LCP EXCEL APLICADO e instrucción dual Aplicado vs Examen** — [Captura PNG](capturas-interes/s3c1-poi-01-libro-excel-aplicado.png) (`ruiz2026poiS3c1LibroAplicado`)
+- `[00:24:30]` **Hojas 03-Proyectos, 03-Relativas y 03-Absolutas ($)** — [Captura PNG](capturas-interes/s3c1-poi-02-proyectos-relativas-absolutas.png) (`ruiz2026poiS3c1Referencias`)
+- `[00:38:12]` **Referencias mixtas =$A3*B$2 en la hoja 03-Mixtas** — [Captura PNG](capturas-interes/s3c1-poi-03-mixtas-tabla-multiplicar.png) (`ruiz2026poiS3c1Mixtas`)
+- `[01:16:00]` **03-Resumen con totales trimestrales y cálculo de edades con HOY() y SIFECHA** — [Captura PNG](capturas-interes/s3c1-poi-04-resumen-hoy-sifecha.png) (`ruiz2026poiS3c1ResumenFechas`)
+- `[01:27:00]` **Hoja 03-Hoteles marcada con pestaña roja como tarea de Examen S3** — [Captura PNG](capturas-interes/s3c1-poi-05-tarea-hoteles-roja.png) (`ruiz2026poiS3c1Hoteles`)

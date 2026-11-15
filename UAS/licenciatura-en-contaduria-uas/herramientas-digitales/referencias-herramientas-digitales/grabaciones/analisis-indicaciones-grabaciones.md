@@ -2,7 +2,7 @@
 
 - **Asignatura:** Herramientas digitales (`2026_I_Herramientas digitales_LCP`, Curso `635`)
 - **Docente:** Dr. Dámaso Guadalupe Ruíz González
-- **Fecha de auditoría:** `2026-11-15 05:51 UTC`
+- **Fecha de auditoría:** `2026-11-15 05:58 UTC`
 
 ## 1. Inventario Completo de Grabaciones Localizadas en Plataforma UAS
 

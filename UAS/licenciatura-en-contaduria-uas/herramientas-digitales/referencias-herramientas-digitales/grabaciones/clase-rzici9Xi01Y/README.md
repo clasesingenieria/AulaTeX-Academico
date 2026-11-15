@@ -12,6 +12,6 @@
 
 ## Capturas de Puntos de Interés Extraídas
 
-- `[00:15:45]` **GPO103-LCP: Diseño de páginas Web — Acceso inicial y requisitos institucionales** — [Captura PNG](capturas-interes/s4-clase-2-poi-01-inicio.png) (`ruiz2026claseS4c2Poi1`)
-- `[00:52:31]` **GPO103-LCP: Diseño de páginas Web — Configuración y llenado paso a paso** — [Captura PNG](capturas-interes/s4-clase-2-poi-02-procedimiento.png) (`ruiz2026claseS4c2Poi2`)
-- `[01:26:08]` **GPO103-LCP: Diseño de páginas Web — Verificación final y activación** — [Captura PNG](capturas-interes/s4-clase-2-poi-03-confirmacion.png) (`ruiz2026claseS4c2Poi3`)
+- `[00:25:30]` **Diseño de Google Sites para Despacho Contable con paleta e identidad visual** — [Captura PNG](capturas-interes/s4c2-poi-01-diseno-sitio-google-sites.png) (`ruiz2026poiS4c2GoogleSites`)
+- `[01:03:35]` **Navegación (Inicio, Servicios, Contacto), mapa y formulario en Google Sites** — [Captura PNG](capturas-interes/s4c2-poi-02-paginas-y-contacto.png) (`ruiz2026poiS4c2Contacto`)
+- `[01:42:05]` **Cierre S4: PDF con enlace Web en Moodle 50144 y libro Excel Balance/Reporte en Drive** — [Captura PNG](capturas-interes/s4c2-poi-03-entrega-dual-s4.png) (`ruiz2026poiS4c2EntregaDual`)

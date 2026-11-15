@@ -12,6 +12,8 @@
 
 ## Capturas de Puntos de Interés Extraídas
 
-- `[00:13:46]` **GPO103-LCP: Ejercicios de Excel — Acceso inicial y requisitos institucionales** — [Captura PNG](capturas-interes/s2-clase-2-poi-01-inicio.png) (`ruiz2026claseS2c2Poi1`)
-- `[00:45:52]` **GPO103-LCP: Ejercicios de Excel — Configuración y llenado paso a paso** — [Captura PNG](capturas-interes/s2-clase-2-poi-02-procedimiento.png) (`ruiz2026claseS2c2Poi2`)
-- `[01:15:13]` **GPO103-LCP: Ejercicios de Excel — Verificación final y activación** — [Captura PNG](capturas-interes/s2-clase-2-poi-03-confirmacion.png) (`ruiz2026claseS2c2Poi3`)
+- `[00:16:38]` **Ajuste de vista Diseño de página e impresión horizontal de FACTURAS** — [Captura PNG](capturas-interes/s2c2-poi-01-ajuste-impresion-facturas.png) (`ruiz2026poiS2c2FacturasPrint`)
+- `[00:46:30]` **Hoja Participantes con ALEATORIO.ENTRE(8,40) y Formato Condicional** — [Captura PNG](capturas-interes/s2c2-poi-02-participantes-aleatorio-condicional.png) (`ruiz2026poiS2c2Participantes`)
+- `[01:08:00]` **Hoja 02-Ventas con fórmula desbordada =SECUENCIA(CONTARA(B:B)-1)** — [Captura PNG](capturas-interes/s2c2-poi-03-ventas-secuencia-contara.png) (`ruiz2026poiS2c2VentasSecuencia`)
+- `[01:25:15]` **Asignación de 02-Vendedores (04_Vendedores.xlsx) como tarea de EXCEL BÁSICO** — [Captura PNG](capturas-interes/s2c2-poi-04-tarea-vendedores.png) (`ruiz2026poiS2c2Vendedores`)
+- `[01:30:40]` **Nomenclatura oficial en Moodle FCA 50114: GPO999CARRERA_EXCEL_BASICO_Nombre_Apellido.xlsx** — [Captura PNG](capturas-interes/s2c2-poi-05-nomenclatura-moodle-50114.png) (`ruiz2026poiS2c2Moodle50114`)

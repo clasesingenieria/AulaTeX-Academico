@@ -12,6 +12,7 @@
 
 ## Capturas de Puntos de Interés Extraídas
 
-- `[00:17:46]` **GPO103-LCP: Excel y Balances Generales — Acceso inicial y requisitos institucionales** — [Captura PNG](capturas-interes/s4-clase-1-poi-01-inicio.png) (`ruiz2026claseS4c1Poi1`)
-- `[00:59:15]` **GPO103-LCP: Excel y Balances Generales — Configuración y llenado paso a paso** — [Captura PNG](capturas-interes/s4-clase-1-poi-02-procedimiento.png) (`ruiz2026claseS4c1Poi2`)
-- `[01:37:10]` **GPO103-LCP: Excel y Balances Generales — Verificación final y activación** — [Captura PNG](capturas-interes/s4-clase-1-poi-03-confirmacion.png) (`ruiz2026claseS4c1Poi3`)
+- `[00:39:25]` **Hoja BALANCE en GPO103-LCP CONTA APLICADO (La Comercial Mercantil S.A. de C.V.)** — [Captura PNG](capturas-interes/s4c1-poi-01-balance-tabla-contable.png) (`ruiz2026poiS4c1BalanceDiseno`)
+- `[01:26:45]` **Normas contables de signo $, celdas ACTIVO/PASIVO y firmas** — [Captura PNG](capturas-interes/s4c1-poi-02-balance-formulas-y-firmas.png) (`ruiz2026poiS4c1FormulasFirmas`)
+- `[01:43:15]` **Pestaña REPORTE duplicada para resolver el Primer Ejercicio Propuesto SUAD** — [Captura PNG](capturas-interes/s4c1-poi-03-tarea-reporte-duplicada.png) (`ruiz2026poiS4c1ReporteTarea`)
+- `[01:55:30]` **Verificación de clasificación contable: Papelería, Seguros y Preoperativos en Diferido** — [Captura PNG](capturas-interes/s4c1-poi-04-clasificacion-otros-activos.png) (`ruiz2026poiS4c1ClasificacionDiferido`)

@@ -422,6 +422,252 @@ CURATED_POINTS_OF_INTEREST: dict[str, tuple[dict[str, Any], ...]] = {
             "bib_key": "ruiz2026poiS1LeccionNube",
         },
     ),
+    "I_H5f_gGbuc": (
+        {
+            "poi_id": "s2c1-poi-01-presentacion-zoom",
+            "timestamp_hms": "00:22:45",
+            "seconds": 1365.0,
+            "title": "Requisitos de portada, participantes y chat compartido en Práctica Zoom (módulo 50113)",
+            "description": "El docente precisa los elementos obligatorios de la evidencia de reunión Zoom: portada con nombre, capturas de participantes y chat con archivo compartido.",
+            "related_module_ids": (50113,),
+            "bib_key": "ruiz2026poiS2c1Zoom",
+        },
+        {
+            "poi_id": "s2c1-poi-02-archivo-excel-basico",
+            "timestamp_hms": "01:21:13",
+            "seconds": 4873.0,
+            "title": "Creación y guardado del libro GPO103-LCP EXCEL BÁSICO (módulo 50114)",
+            "description": "Apertura de libro en blanco en Microsoft 365, guardado local previo a edición y creación de la hoja inicial de presentación personal.",
+            "related_module_ids": (50114,),
+            "bib_key": "ruiz2026poiS2c1ArchivoBasico",
+        },
+        {
+            "poi_id": "s2c1-poi-03-celdas-hoja-portada",
+            "timestamp_hms": "01:41:20",
+            "seconds": 6080.0,
+            "title": "Ejercicio en hoja de presentación: cálculo de celdas totales (=16384*1048576)",
+            "description": "Fórmula de total de celdas de una hoja de Excel (17,179,869,184) y demostración de celdas activas, rangos y autorrelleno en la primera pestaña del libro.",
+            "related_module_ids": (50114,),
+            "bib_key": "ruiz2026poiS2c1Celdas",
+        },
+        {
+            "poi_id": "s2c1-poi-04-mover-facturas",
+            "timestamp_hms": "01:53:40",
+            "seconds": 6820.0,
+            "title": "Integración de la hoja FACTURAS enseguida de la portada en EXCEL BÁSICO",
+            "description": "El Dr. Dámaso muestra cómo mover/copiar la hoja FACTURAS desde los materiales del Capítulo 01 dentro del libro único GPO103-LCP EXCEL BÁSICO.",
+            "related_module_ids": (50114,),
+            "bib_key": "ruiz2026poiS2c1Facturas",
+        },
+    ),
+    "0FGH031UsFo": (
+        {
+            "poi_id": "s2c2-poi-01-ajuste-impresion-facturas",
+            "timestamp_hms": "00:16:38",
+            "seconds": 998.0,
+            "title": "Ajuste de vista Diseño de página e impresión horizontal de FACTURAS",
+            "description": "Configuración de orientación horizontal y límites de salto de página para que FACTURAS quepa en una sola hoja impresa.",
+            "related_module_ids": (50114,),
+            "bib_key": "ruiz2026poiS2c2FacturasPrint",
+        },
+        {
+            "poi_id": "s2c2-poi-02-participantes-aleatorio-condicional",
+            "timestamp_hms": "00:46:30",
+            "seconds": 2790.0,
+            "title": "Hoja Participantes con ALEATORIO.ENTRE(8,40) y Formato Condicional",
+            "description": "Inmovilización de paneles, uso de rango B3:Y25 con números aleatorios y creación de reglas de formato condicional.",
+            "related_module_ids": (50114,),
+            "bib_key": "ruiz2026poiS2c2Participantes",
+        },
+        {
+            "poi_id": "s2c2-poi-03-ventas-secuencia-contara",
+            "timestamp_hms": "01:08:00",
+            "seconds": 4080.0,
+            "title": "Hoja 02-Ventas con fórmula desbordada =SECUENCIA(CONTARA(B:B)-1)",
+            "description": "Aplicación de fórmula matricial dinámica en A3 y formato contable/moneda en la columna Ventas de 02-Ventas.",
+            "related_module_ids": (50114,),
+            "bib_key": "ruiz2026poiS2c2VentasSecuencia",
+        },
+        {
+            "poi_id": "s2c2-poi-04-tarea-vendedores",
+            "timestamp_hms": "01:25:15",
+            "seconds": 5115.0,
+            "title": "Asignación de 02-Vendedores (04_Vendedores.xlsx) como tarea de EXCEL BÁSICO",
+            "description": "Copiado de la quinta pestaña 02-Vendedores para resolver con Serie de Relleno tradicional y subir el libro único .xlsx a Moodle 50114.",
+            "related_module_ids": (50114,),
+            "bib_key": "ruiz2026poiS2c2Vendedores",
+        },
+        {
+            "poi_id": "s2c2-poi-05-nomenclatura-moodle-50114",
+            "timestamp_hms": "01:30:40",
+            "seconds": 5440.0,
+            "title": "Nomenclatura oficial en Moodle FCA 50114: GPO999CARRERA_EXCEL_BASICO_Nombre_Apellido.xlsx",
+            "description": "El docente muestra en plataforma virtual la estructura obligatoria del nombre de archivo para la práctica de Excel Básico.",
+            "related_module_ids": (50114,),
+            "bib_key": "ruiz2026poiS2c2Moodle50114",
+        },
+    ),
+    "q9KgoQqUJpU": (
+        {
+            "poi_id": "s3c1-poi-01-libro-excel-aplicado",
+            "timestamp_hms": "00:07:35",
+            "seconds": 455.0,
+            "title": "Guardado de GPO103-LCP EXCEL APLICADO e instrucción dual Aplicado vs Examen",
+            "description": "El Dr. Dámaso define la regla clave de Semana 3: Excel Aplicado (50130) contiene las prácticas trabajadas en clase y Examen Excel S3 (50131) el mismo libro con todas las tareas resueltas.",
+            "related_module_ids": (50130, 50131),
+            "bib_key": "ruiz2026poiS3c1LibroAplicado",
+        },
+        {
+            "poi_id": "s3c1-poi-02-proyectos-relativas-absolutas",
+            "timestamp_hms": "00:24:30",
+            "seconds": 1470.0,
+            "title": "Hojas 03-Proyectos, 03-Relativas y 03-Absolutas ($)",
+            "description": "Resolución de operadores básicos y fijación de referencias absolutas mediante F4 en el capítulo 03.",
+            "related_module_ids": (50130, 50131),
+            "bib_key": "ruiz2026poiS3c1Referencias",
+        },
+        {
+            "poi_id": "s3c1-poi-03-mixtas-tabla-multiplicar",
+            "timestamp_hms": "00:38:12",
+            "seconds": 2292.0,
+            "title": "Referencias mixtas =$A3*B$2 en la hoja 03-Mixtas",
+            "description": "Construcción de matriz de multiplicación genérica combinando columna fija ($A3) y fila fija (B$2).",
+            "related_module_ids": (50130, 50131),
+            "bib_key": "ruiz2026poiS3c1Mixtas",
+        },
+        {
+            "poi_id": "s3c1-poi-04-resumen-hoy-sifecha",
+            "timestamp_hms": "01:16:00",
+            "seconds": 4560.0,
+            "title": "03-Resumen con totales trimestrales y cálculo de edades con HOY() y SIFECHA",
+            "description": "Uso de Autosuma, resta de fechas seriales, función oculta =SIFECHA(fecha,HOY(),\"y\") y formato Fecha larga en K6:N13.",
+            "related_module_ids": (50130, 50131),
+            "bib_key": "ruiz2026poiS3c1ResumenFechas",
+        },
+        {
+            "poi_id": "s3c1-poi-05-tarea-hoteles-roja",
+            "timestamp_hms": "01:27:00",
+            "seconds": 5220.0,
+            "title": "Hoja 03-Hoteles marcada con pestaña roja como tarea de Examen S3",
+            "description": "Incorporación de 03-Hoteles en color rojo para distinguirla como ejercicio de tarea a entregar resuelto en Examen Excel S3 (50131).",
+            "related_module_ids": (50130, 50131),
+            "bib_key": "ruiz2026poiS3c1Hoteles",
+        },
+    ),
+    "ZSLk1hRY48U": (
+        {
+            "poi_id": "s3c2-poi-01-maquillaje-sumar-si",
+            "timestamp_hms": "00:29:00",
+            "seconds": 1740.0,
+            "title": "04-Maquillaje con nombres de rango (Nombre, Fecha, Producto, Unidades, Euros)",
+            "description": "Creación de nombres definidos en Administrador de nombres y resolución de tablas por vendedor y producto con SUMAR.SI.",
+            "related_module_ids": (50130, 50131),
+            "bib_key": "ruiz2026poiS3c2Maquillaje",
+        },
+        {
+            "poi_id": "s3c2-poi-02-maquillaje-resultados",
+            "timestamp_hms": "01:05:30",
+            "seconds": 3930.0,
+            "title": "Cuadro RESULTADOS de 04-Maquillaje y tareas pendientes C24:C26",
+            "description": "Resolución en vivo de C16:C23 con SUMAR.SI, CONTAR.SI y PROMEDIO.SI.CONJUNTO, dejando C24:C26 marcadas con ** y formato rosado como tarea de Examen.",
+            "related_module_ids": (50130, 50131),
+            "bib_key": "ruiz2026poiS3c2Resultados",
+        },
+        {
+            "poi_id": "s3c2-poi-03-funcion-si-alumnos-estado",
+            "timestamp_hms": "01:17:40",
+            "seconds": 4660.0,
+            "title": "Hojas 05-Alumnos y 05-Estado Civil con función lógica SI",
+            "description": "Implementación de condicionales simples =SI(B3>=11,\"Aprobado\",\"Desaprobado\") y =SI(B3=\"C\",\"CASADO\",\"SOLTERO\").",
+            "related_module_ids": (50130, 50131),
+            "bib_key": "ruiz2026poiS3c2FuncionSi",
+        },
+        {
+            "poi_id": "s3c2-poi-04-si-anidado-y-tareas-rojas",
+            "timestamp_hms": "01:37:00",
+            "seconds": 5820.0,
+            "title": "05-Género 1 (SI anidado y SI.CONJUNTO) más pestañas rojas 05-Goles y 05-Género 2",
+            "description": "Resolución doble con SI anidado y SI.CONJUNTO (Microsoft 365) y asignación de 05-Goles y 05-Género 2 en rojo como tareas finales.",
+            "related_module_ids": (50130, 50131),
+            "bib_key": "ruiz2026poiS3c2SiAnidado",
+        },
+        {
+            "poi_id": "s3c2-poi-05-cierre-aplicado-vs-examen",
+            "timestamp_hms": "01:44:30",
+            "seconds": 6270.0,
+            "title": "Cierre S3: 12 pestañas finales y distinción Aplicado (50130) vs Examen (50131)",
+            "description": "Vista completa de las 12 pestañas del libro y reiteración de que Examen S3 es el mismo libro con todas las tareas rojas y pendientes resueltas.",
+            "related_module_ids": (50130, 50131),
+            "bib_key": "ruiz2026poiS3c2Cierre",
+        },
+    ),
+    "7ZomiXX7eus": (
+        {
+            "poi_id": "s4c1-poi-01-balance-tabla-contable",
+            "timestamp_hms": "00:39:25",
+            "seconds": 2365.0,
+            "title": "Hoja BALANCE en GPO103-LCP CONTA APLICADO (La Comercial Mercantil S.A. de C.V.)",
+            "description": "Diseño de TablaContable verde/blanco de 8 columnas (B:I) con encabezado, numeración de columnas 1..4 y estructura tipo reporte.",
+            "related_module_ids": (50144,),
+            "bib_key": "ruiz2026poiS4c1BalanceDiseno",
+        },
+        {
+            "poi_id": "s4c1-poi-02-balance-formulas-y-firmas",
+            "timestamp_hms": "01:26:45",
+            "seconds": 5205.0,
+            "title": "Normas contables de signo $, celdas ACTIVO/PASIVO y firmas",
+            "description": "Celdas nombradas ACTIVO y PASIVO, fórmula =ACTIVO-PASIVO para Capital contable, signo pesos solo al inicio/reinicio de columna y bloque de firmas.",
+            "related_module_ids": (50144,),
+            "bib_key": "ruiz2026poiS4c1FormulasFirmas",
+        },
+        {
+            "poi_id": "s4c1-poi-03-tarea-reporte-duplicada",
+            "timestamp_hms": "01:43:15",
+            "seconds": 6195.0,
+            "title": "Pestaña REPORTE duplicada para resolver el Primer Ejercicio Propuesto SUAD",
+            "description": "Instrucción de duplicar BALANCE a REPORTE y reordenar las 22 cuentas del primer ejercicio propuesto del PDF Balance General.",
+            "related_module_ids": (50144,),
+            "bib_key": "ruiz2026poiS4c1ReporteTarea",
+        },
+        {
+            "poi_id": "s4c1-poi-04-clasificacion-otros-activos",
+            "timestamp_hms": "01:55:30",
+            "seconds": 6930.0,
+            "title": "Verificación de clasificación contable: Papelería, Seguros y Preoperativos en Diferido",
+            "description": "El Dr. Dámaso advierte que la IA clasificó erróneamente Papelería y útiles en Circulante y muestra en el PDF oficial que pertenece a Diferido/Otros activos.",
+            "related_module_ids": (50144,),
+            "bib_key": "ruiz2026poiS4c1ClasificacionDiferido",
+        },
+    ),
+    "rzici9Xi01Y": (
+        {
+            "poi_id": "s4c2-poi-01-diseno-sitio-google-sites",
+            "timestamp_hms": "00:25:30",
+            "seconds": 1530.0,
+            "title": "Diseño de Google Sites para Despacho Contable con paleta e identidad visual",
+            "description": "Creación de portada, logotipo, personalización de tema de color y estructura profesional contable en Google Sites.",
+            "related_module_ids": (50144,),
+            "bib_key": "ruiz2026poiS4c2GoogleSites",
+        },
+        {
+            "poi_id": "s4c2-poi-02-paginas-y-contacto",
+            "timestamp_hms": "01:03:35",
+            "seconds": 3815.0,
+            "title": "Navegación (Inicio, Servicios, Contacto), mapa y formulario en Google Sites",
+            "description": "Configuración de páginas internas, ubicación geográfica de Culiacán (FCA UAS) y formulario de contacto embebido.",
+            "related_module_ids": (50144,),
+            "bib_key": "ruiz2026poiS4c2Contacto",
+        },
+        {
+            "poi_id": "s4c2-poi-03-entrega-dual-s4",
+            "timestamp_hms": "01:42:05",
+            "seconds": 6125.0,
+            "title": "Cierre S4: PDF con enlace Web en Moodle 50144 y libro Excel Balance/Reporte en Drive",
+            "description": "El docente aclara explícitamente al final de la última clase que a Moodle se sube el PDF del sitio Google Sites y a la carpeta compartida en Drive el Excel con BALANCE y REPORTE.",
+            "related_module_ids": (50144,),
+            "bib_key": "ruiz2026poiS4c2EntregaDual",
+        },
+    ),
 }
 
 
@@ -1688,21 +1934,24 @@ class AgenteGrabacionesUas:
             50114: (
                 "Calificación actual: `5.00 / 10.00`. Retroalimentación del Dr. Dámaso: "
                 "*«NPT ---> Creo que no son los ejecicios de la clase (Revise videos)»*. "
-                "Acción correctiva: Integrar en `GPO103LCP_EXCEL_BASICO_MartinJonathan_DeLaCruzMunoz.xlsx` los ejercicios reales de la `Carpeta de Apoyo` (`50094`, Capítulos 01, 02, 03, 04, 06 y 07 + `Referencias Relativas y Referencias Absolutas.xlsx`) resueltos en las grabaciones `I_H5f_gGbuc` y `0FGH031UsFo`."
+                "Acción correctiva (evidencia visual en `I_H5f_gGbuc` y `0FGH031UsFo`): Integrar en `GPO103LCP_EXCEL_BASICO_MartinJonathan_DeLaCruzMunoz.xlsx` las 5 pestañas exactas vistas en clase: "
+                "`MARTÍN` (portada con `CELDAS = 16384*1048576`), `FACTURAS` (configurada en horizontal a 1 página), `Participantes` (`ALEATORIO.ENTRE(8,40)` + Formato Condicional), `02-Ventas` (`=SECUENCIA(CONTARA(B:B)-1)`) y `02-Vendedores` (`04_Vendedores.xlsx`, Serie de Relleno)."
             ),
             50130: (
                 "Calificación actual: `10.00 / 20.00`. Retroalimentación del Dr. Dámaso: "
                 "*«*** BIEN: ...No son los ejercios de la clase ..»*. "
-                "Acción correctiva: Integrar en `GPO103LCP_EXCEL_APLICADO_MartinJonathan_DeLaCruzMunoz.xlsx` las prácticas oficiales de la `Carpeta de Apoyo` (`50094`, Capítulos 05, 08, 09, 10 y 11) desarrolladas en las grabaciones `q9KgoQqUJpU` y `ZSLk1hRY48U`."
+                "Acción correctiva (evidencia visual en `q9KgoQqUJpU` y `ZSLk1hRY48U`): Integrar en `GPO103LCP_EXCEL_APLICADO_MartinJonathan_DeLaCruzMunoz.xlsx` las 12 pestañas vistas en S3: "
+                "`03-Proyectos`, `03-Relativas`, `03-Absolutas`, `03-Mixtas`, `03-Resumen` (incluyendo `Nombre/fecha/Días/Edad` con `HOY()` y `SIFECHA`), `03-Hoteles` (pestaña roja de tarea), `04-Maquillaje` (pestaña roja con tablas y `C16:C23`), `05-Alumnos`, `05-Estado Civil`, `05-Género 1` y pestañas rojas `05-Goles` y `05-Género 2`."
             ),
             50131: (
                 "Calificación actual: `5.00 / 10.00`. Retroalimentación del Dr. Dámaso: "
                 "*«No corresponden a los ejercicios de clases»*. "
-                "Acción correctiva: Descargar el libro de examen práctico de la `Carpeta de Apoyo` (`50094`) indicado en las grabaciones `q9KgoQqUJpU` y `ZSLk1hRY48U` y resolverlo íntegramente."
+                "Acción correctiva (evidencia visual `q9KgoQqUJpU` [01:28:24] y `ZSLk1hRY48U` [01:44:30]): `Examen Excel S3` (`GPO103LCP_EXAMEN_EXCEL_S3_MartinJonathan_DeLaCruzMunoz.xlsx`) es el MISMO libro de 12 pestañas de `Excel Aplicado`, pero con TODAS las tareas pendientes (`03-Hoteles`, `04-Maquillaje` completo C16:C26 + colores, `05-Goles` y `05-Género 2`) íntegramente resueltas."
             ),
             50144: (
                 "Estado: Pendiente de envío (cierre domingo 15 de noviembre de 2026). "
-                "En la Semana 4 el docente impartió `7ZomiXX7eus` (*Excel y Balances Generales*, con los 3 PDFs de `Complemento de LCP - Aplicado`) y `rzici9Xi01Y` (*Diseño de páginas Web con Google Sites*). Verificar que el reporte PDF `GPO103_LCP_WEB_MartinJonathan_DeLaCruzMunoz.pdf` y el sitio nativo publicado cumplan cada criterio mostrado en `rzici9Xi01Y`."
+                "En `7ZomiXX7eus` (10/nov/2026) y `rzici9Xi01Y` (12/nov/2026), el docente precisó entrega dual: "
+                "en Moodle `50144` subir el PDF con enlace de Google Sites (`GPO103_LNCI_WEB_Martin_DeLaCruz_Munoz.pdf` / `GPO103_LCP_WEB_...pdf`) y en la carpeta compartida de Google Drive subir `EXCEL_CONTA_MartinJonathan_DeLaCruzMunoz.xlsx` con las hojas `BALANCE` (`La Comercial Mercantil S.A. de C.V.`) y `REPORTE` (Primer Ejercicio Propuesto del PDF SUAD con `Papelería y útiles`, `Primas de seguros` y `Gastos preoperativos/organización` en `Diferido`)."
             ),
         }
 
