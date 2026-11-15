@@ -867,39 +867,88 @@ class AgenteSitioLex:
         return cls._read_editor_page_names(page) or existing, created
 
     @staticmethod
+    @staticmethod
+    def _mouse_click_loc(page: Any, loc: Any, clicks: int = 2) -> bool:
+        try:
+            if not loc.count():
+                return False
+            loc.scroll_into_view_if_needed()
+            page.wait_for_timeout(200)
+            box = loc.bounding_box()
+            if not box:
+                return False
+            x = box["x"] + min(40.0, max(5.0, box["width"] / 2.0))
+            y = box["y"] + max(5.0, box["height"] / 2.0)
+            for _ in range(clicks):
+                page.mouse.click(x, y)
+                page.wait_for_timeout(250)
+            return True
+        except Exception:
+            return False
+
+    @staticmethod
+    def _write_rich_text_exec(page: Any, text: str, *, replace_all: bool = True) -> bool:
+        lines = text.splitlines()
+        if replace_all:
+            page.evaluate("() => document.execCommand('selectAll', false, null)")
+        ok_any = False
+        for idx, line in enumerate(lines):
+            if line:
+                ok = page.evaluate("txt => document.execCommand('insertText', false, txt)", line)
+                ok_any = ok_any or bool(ok)
+            if idx < len(lines) - 1:
+                page.keyboard.press("Enter")
+                page.wait_for_timeout(60)
+        page.wait_for_timeout(300)
+        page.evaluate("() => { if (document.activeElement) document.activeElement.blur(); }")
+        page.keyboard.press("Escape")
+        page.wait_for_timeout(500)
+        return ok_any
+
+    @staticmethod
     def _clean_footer_extra_sections(page: Any) -> int:
         removed = 0
         for _ in range(8):
             secs = page.locator("article.LZiaFf section")
-            found_extra = False
-            for idx in range(secs.count() - 1, -1, -1):
-                sec = secs.nth(idx)
+            cnt = secs.count()
+            if cnt <= 1:
+                break
+            extra_idx = cnt - 1
+            for idx in range(cnt - 1, -1, -1):
                 try:
-                    has_author = "elaborado" in (sec.inner_text(timeout=1500) or "").lower()
-                    has_media = sec.locator('[aria-roledescription="carousel"], [data-carousel-id], img').count() > 0
-                    if has_media or (secs.count() > 1 and not has_author):
-                        sec.scroll_into_view_if_needed()
-                        sec.hover()
-                        page.wait_for_timeout(250)
-                        del_btn = sec.locator('[aria-label*="Borrar sección" i], [aria-label*="Delete section" i]').first
-                        if not del_btn.count():
-                            del_btn = page.locator('article.LZiaFf [aria-label*="Borrar sección" i]:visible').last
-                        if del_btn.count():
-                            del_btn.click(force=True)
-                            page.wait_for_timeout(500)
-                            removed += 1
-                            found_extra = True
-                            break
+                    txt = (secs.nth(idx).inner_text(timeout=1000) or "").lower()
+                    if "elaborado" in txt:
+                        continue
+                    extra_idx = idx
+                    break
                 except Exception:
                     continue
-            if not found_extra:
-                break
+            sec = secs.nth(extra_idx)
+            try:
+                sec.scroll_into_view_if_needed()
+                sec.click(force=True)
+                page.wait_for_timeout(300)
+                del_btn = sec.locator(
+                    '[aria-label*="Borrar sección" i], [data-tooltip*="Borrar" i], [aria-label*="Delete section" i]'
+                ).first
+                if not del_btn.count():
+                    del_btn = page.locator('article.LZiaFf [aria-label*="Borrar sección" i]:visible').last
+                if del_btn.count():
+                    del_btn.click(force=True)
+                    page.wait_for_timeout(500)
+                    removed += 1
+                    continue
+            except Exception:
+                pass
+            break
         return removed
 
     @staticmethod
     def _focus_body_canvas(page: Any) -> None:
         try:
-            body_sec = page.locator("article.UynGwb section").last
+            body_sec = page.locator('article.UynGwb section:not([data-header="true"])').last
+            if not body_sec.count():
+                body_sec = page.locator("article.UynGwb section").last
             if body_sec.count():
                 body_sec.scroll_into_view_if_needed()
                 body_sec.click(force=True)
@@ -907,8 +956,8 @@ class AgenteSitioLex:
         except Exception:
             pass
 
-    @staticmethod
-    def _ensure_footer_author(page: Any, footer_text: str) -> str:
+    @classmethod
+    def _ensure_footer_author(cls, page: Any, footer_text: str) -> str:
         footer_art = page.locator("article.LZiaFf")
         try:
             footer_text_now = (
@@ -924,49 +973,15 @@ class AgenteSitioLex:
             return "already_present"
 
         if footer_art.count() or "elaborado por mart" in normalized_footer:
-            try:
-                target_box = footer_art.first if footer_art.count() else page.locator("text=/Elaborado por Mart/i").first
-                target_box.scroll_into_view_if_needed()
-                page.wait_for_timeout(300)
-                edit_footer = page.locator(
-                    '[aria-label*="Editar pie de página" i]:visible, '
-                    '[aria-label*="Edit footer" i]:visible'
-                ).first
-                if edit_footer.count():
-                    edit_footer.click(force=True)
-                    page.wait_for_timeout(400)
-
-                text_node = (
-                    footer_art.first.locator('[role="textbox"], p, span').first
-                    if footer_art.count()
-                    else page.locator("text=/Elaborado por Mart/i").first
-                )
-                if text_node.count():
-                    text_node.scroll_into_view_if_needed()
-                    text_node.dblclick(force=True)
-                    page.wait_for_timeout(400)
-
+            tb = page.locator('article.LZiaFf [role="textbox"]:visible').first
+            if not tb.count():
+                tb = page.locator('article.LZiaFf :text("Haz clic para editar el texto")').first
+            if cls._mouse_click_loc(page, tb, clicks=2):
                 is_ce = page.evaluate(
                     "() => Boolean(document.activeElement && document.activeElement.getAttribute('contenteditable') === 'true')"
                 )
-                if not is_ce:
-                    ce_loc = page.locator('article.LZiaFf [contenteditable="true"]:visible').last
-                    if ce_loc.count():
-                        ce_loc.click(force=True)
-                        page.wait_for_timeout(250)
-
-                page.keyboard.press("Control+a")
-                page.keyboard.press("Backspace")
-                page.keyboard.insert_text(footer_text)
-                page.wait_for_timeout(350)
-                hdr = page.locator("article.UynGwb section").first
-                if hdr.count():
-                    hdr.scroll_into_view_if_needed()
-                    hdr.click(force=True)
-                    page.wait_for_timeout(400)
-                return "repaired"
-            except Exception:
-                pass
+                if is_ce and cls._write_rich_text_exec(page, footer_text, replace_all=True):
+                    return "repaired"
 
         add_footer = page.locator(
             '[role="button"]:has-text("Agregar pie de página"), button:has-text("Agregar pie de página"), '
@@ -974,30 +989,21 @@ class AgenteSitioLex:
         ).last
         if not add_footer.count():
             return "button_not_found"
-        add_footer.scroll_into_view_if_needed()
-        page.wait_for_timeout(300)
-        add_footer.click(force=True)
-        page.wait_for_timeout(800)
+        cls._mouse_click_loc(page, add_footer, clicks=1)
+        page.wait_for_timeout(600)
 
-        editable = page.locator(
-            'article.LZiaFf [contenteditable="true"]:visible, '
-            'section[aria-label*="pie de página" i] [contenteditable="true"]:visible, '
-            'footer [contenteditable="true"]:visible'
-        ).last
-        if not editable.count():
-            return "textbox_not_found"
-        editable.click()
-        page.keyboard.insert_text(footer_text)
-        page.wait_for_timeout(500)
-        return "applied"
+        editable = page.locator('article.LZiaFf [contenteditable="true"]:visible, footer [contenteditable="true"]:visible').last
+        if cls._mouse_click_loc(page, editable, clicks=1) and cls._write_rich_text_exec(page, footer_text, replace_all=True):
+            return "applied"
+        return "textbox_not_found"
 
     @classmethod
     def _clean_empty_body_placeholders(cls, page: Any, *, remove_text: str = "") -> int:
         removed = 0
         for _ in range(6):
-            secs = page.locator("article.UynGwb section")
+            secs = page.locator('article.UynGwb section:not([data-header="true"])')
             hit = False
-            for idx in range(secs.count() - 1, 0, -1):
+            for idx in range(secs.count() - 1, -1, -1):
                 sec = secs.nth(idx)
                 try:
                     txt = (sec.inner_text(timeout=1000) or "").strip()
@@ -1012,9 +1018,9 @@ class AgenteSitioLex:
                     matches_remove = bool(remove_text and remove_text.lower() in clean_txt.lower())
                     if (is_empty_ph and not has_widget) or matches_remove:
                         sec.scroll_into_view_if_needed()
-                        sec.hover()
+                        sec.click(force=True)
                         page.wait_for_timeout(200)
-                        del_btn = sec.locator('[aria-label*="Borrar sección" i], [aria-label*="Delete section" i]').first
+                        del_btn = sec.locator('[aria-label*="Borrar sección" i], [data-tooltip*="Borrar" i], [aria-label*="Delete section" i]').first
                         if del_btn.count():
                             del_btn.click(force=True)
                             page.wait_for_timeout(350)
@@ -1029,30 +1035,31 @@ class AgenteSitioLex:
 
     @classmethod
     def _insert_text_block(cls, page: Any, marker_phrase: str, content_text: str) -> str:
-        body_art = page.locator("article.UynGwb").first
+        body_non_hdr = page.locator('article.UynGwb section:not([data-header="true"])')
         try:
-            canvas_text = (
-                body_art.inner_text(timeout=2000)
-                if body_art.count()
-                else page.locator('[role="main"], main').first.inner_text(timeout=2000)
-            )
+            canvas_text = "\n".join(body_non_hdr.all_inner_texts()) if body_non_hdr.count() else ""
         except Exception:
             canvas_text = ""
         if cls._normalize_es(marker_phrase) in cls._normalize_es(canvas_text):
             return "already_present"
 
-        scope_prefix = "article.UynGwb " if body_art.count() else ""
-        placeholder_sel = (
-            f'{scope_prefix}:text("Haz clic para editar el texto"):visible, '
-            f'{scope_prefix}:text("Click to edit text"):visible'
+        ph_sel = (
+            'article.UynGwb section:not([data-header="true"]) [role="textbox"]:visible, '
+            'article.UynGwb section:not([data-header="true"]) :text("Haz clic para editar el texto"):visible'
         )
-        existing_ph = page.locator(placeholder_sel)
-        if existing_ph.count():
-            target_ph = existing_ph.first
-            target_ph.scroll_into_view_if_needed()
-            target_ph.click()
-            page.wait_for_timeout(450)
-        else:
+        target_box = None
+        candidates = page.locator(ph_sel)
+        for idx in range(candidates.count()):
+            cand = candidates.nth(idx)
+            try:
+                t = (cand.inner_text(timeout=800) or "").strip()
+                if not t or "haz clic para editar" in t.lower() or "prueba texto" in t.lower():
+                    target_box = cand
+                    break
+            except Exception:
+                continue
+
+        if target_box is None:
             cls._focus_body_canvas(page)
             cls._open_sidebar_tab(page, "Insertar", "Insert")
             tb_btn = page.locator(
@@ -1064,39 +1071,21 @@ class AgenteSitioLex:
                 return "button_not_found"
             tb_btn.click()
             page.wait_for_timeout(800)
-            new_ph = page.locator(placeholder_sel)
-            if new_ph.count():
-                new_ph.last.scroll_into_view_if_needed()
-                new_ph.last.click()
-                page.wait_for_timeout(450)
+            target_box = page.locator(ph_sel).last
+
+        if not cls._mouse_click_loc(page, target_box, clicks=2):
+            return "textbox_not_found"
 
         active_ok = page.evaluate(
-            "() => Boolean(document.activeElement && document.activeElement.getAttribute('contenteditable') === 'true' && !document.activeElement.closest('article.LZiaFf'))"
+            "() => Boolean(document.activeElement && document.activeElement.getAttribute('contenteditable') === 'true' && !document.activeElement.closest('article.LZiaFf') && !document.activeElement.closest('section[data-header=\"true\"]'))"
         )
         if not active_ok:
-            box = page.locator(
-                f'{scope_prefix}[role="textbox"][aria-label="Texto"][contenteditable="true"]:visible, '
-                f'{scope_prefix}[role="textbox"][contenteditable="true"]:visible'
-            ).first
-            if not box.count():
-                return "textbox_not_found"
-            box.click()
-            page.wait_for_timeout(200)
+            return "textbox_not_focused"
 
-        lines = content_text.splitlines()
-        for idx, line in enumerate(lines):
-            if line:
-                page.keyboard.insert_text(line)
-            if idx < len(lines) - 1:
-                page.keyboard.press("Enter")
-        page.wait_for_timeout(300)
-        hdr = page.locator("article.UynGwb section").first
-        if hdr.count():
-            hdr.scroll_into_view_if_needed()
-            hdr.click(force=True)
-            page.wait_for_timeout(400)
-        cls._clean_empty_body_placeholders(page, remove_text="Prueba Texto Servicios")
-        return "applied"
+        if cls._write_rich_text_exec(page, content_text, replace_all=True):
+            cls._clean_empty_body_placeholders(page, remove_text="Prueba Texto Servicios")
+            return "applied"
+        return "exec_insert_failed"
 
     @classmethod
     def _insert_carousel_images(cls, page: Any, image_paths: list[Path]) -> str:
@@ -1400,10 +1389,31 @@ class AgenteSitioLex:
                 actions.append({"step": "contacto_social_links", "status": self._insert_social_links(page, self.blueprint.social_links)})
 
         if self._select_editor_page(page, "Inicio"):
+            body_carousels = page.locator(
+                'article.UynGwb section:not([data-header="true"]):has([aria-roledescription="carousel"], [data-carousel-id])'
+            )
+            while body_carousels.count() > 1:
+                extra_c = body_carousels.last
+                extra_c.scroll_into_view_if_needed()
+                extra_c.click(force=True)
+                page.wait_for_timeout(250)
+                del_c = extra_c.locator('[aria-label*="Borrar sección" i], [data-tooltip*="Borrar" i]').first
+                if not del_c.count():
+                    break
+                del_c.click(force=True)
+                page.wait_for_timeout(400)
             self._focus_body_canvas(page)
             actions.append({"step": "inicio_carousel", "status": self._insert_carousel_images(page, carousel_imgs)})
 
         if self._select_editor_page(page, "Servicios"):
+            hdr_tb = page.locator('article.UynGwb section[data-header="true"] [role="textbox"]:visible').first
+            try:
+                if hdr_tb.count() and self._normalize_es(hdr_tb.inner_text()) != "servicios":
+                    if self._mouse_click_loc(page, hdr_tb, clicks=2):
+                        self._write_rich_text_exec(page, "Servicios", replace_all=True)
+                        actions.append({"step": "restore_servicios_header", "status": "applied"})
+            except Exception:
+                pass
             actions.append(
                 {
                     "step": "servicios_intro",
