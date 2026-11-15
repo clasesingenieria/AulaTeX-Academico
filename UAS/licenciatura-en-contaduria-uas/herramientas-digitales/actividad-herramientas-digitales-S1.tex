@@ -2,11 +2,11 @@
 \newcommand{\actividadtipo}{Evidencia de la práctica S1}
 \newcommand{\uasestudiante}{Martín Jonathan de la Cruz Muñoz}
 \newcommand{\uasgrupo}{GPO103 LCP}
-\newcommand{\uasfecha}{22 de octubre de 2026}
+\newcommand{\uasfecha}{15 de noviembre de 2026}
 \newcommand{\actividadpaquetes}{\usepackage{tikz}\usetikzlibrary{calc,arrows.meta,babel}}
 \newcommand{\actividadpreliminares}{%
   \section*{Resumen}\addcontentsline{toc}{section}{Resumen}
-  Se presenta la creación de una carpeta de trabajo en Google Drive, identificada con el grupo y el nombre del estudiante. Trece capturas documentan el acceso al servicio, la asignación del nombre, la apertura del panel Compartir y la configuración del acceso mediante vínculo. Los recuadros y las flechas ubican los controles empleados; las explicaciones describen la secuencia de operación. El estado final visible corresponde a acceso general por enlace con permiso de editor.
+  Se presenta la creación de la carpeta de trabajo \textbf{GPO103 LCP - Martín Jonathan de la Cruz} en Google Drive y la configuración correcta de sus permisos de acceso. Las capturas documentan el acceso al servicio, la asignación del nombre, la apertura del panel Compartir, la incorporación directa del docente facilitador mediante su correo \texttt{damaso.ruiz@fca.uas.edu.mx} con rol de editor, el aseguramiento del acceso general en modo restringido (sin vínculo público abierto) y el resguardo de los entregables del curso dentro de la carpeta.
   \clearpage\tableofcontents\clearpage
 }
 \newcounter{pasocaptura}
@@ -28,14 +28,26 @@
   \end{minipage}\par
   \ifodd\value{pasocaptura}\smallskip\else\clearpage\fi
 }
+\newcommand{\capturadrive}[3]{%
+  \stepcounter{pasocaptura}
+  \noindent\begin{minipage}[t][.43\textheight][t]{\textwidth}
+  \subsection{#2}
+  {\small\setstretch{1.05}#3\par}\smallskip
+  \begin{center}
+  \includegraphics[width=.88\textwidth,height=.29\textheight,keepaspectratio]{assets-herramientas-digitales/semana-01/#1}
+  \par{\footnotesize Figura \thepasocaptura. #2.}
+  \end{center}
+  \end{minipage}\par
+  \ifodd\value{pasocaptura}\smallskip\else\clearpage\fi
+}
 \newcommand{\actividadcierre}{%
   \section{Conclusiones}
-  La carpeta \textbf{GPO103 LCP - Martín Jonathan de la Cruz} quedó creada y configurada para el acceso mediante enlace. Su nombre identifica el espacio de trabajo, mientras que el panel Compartir determina quién puede acceder y qué puede hacer.
+  La carpeta \textbf{GPO103 LCP - Martín Jonathan de la Cruz} quedó creada y configurada correctamente en Google Drive para el trabajo y respaldo semanal de la asignatura. El acceso se compartió de forma directa y específica con la cuenta del docente (\texttt{damaso.ruiz@fca.uas.edu.mx}) con permiso de \emph{Editor}, manteniendo el apartado de \emph{Acceso general} en estado \textbf{Restringido} para evitar la exposición pública mediante vínculo abierto.
   \par
-  El acceso visible permite editar a cualquier persona que tenga el vínculo. Esto facilita la colaboración, pero también permite modificar el contenido y exige revisar a quién se distribuye el enlace. Compartir mediante vínculo no equivale a añadir una persona concreta al listado de usuarios autorizados. La conservación de las capturas permite distinguir el estado restringido inicial de la configuración final sin suponer acciones que no aparecen en ellas.\footnote{Se utilizó el chat de GitHub Copilot como apoyo para la corrección y organización documental. Las ideas y el análisis son de realización propia del estudiante.}
+  Esta configuración garantiza que únicamente las personas autorizadas puedan consultar, revisar y evaluar los documentos editables (\texttt{.docx}), reportes en PDF (\texttt{.pdf}) y libros de cálculo (\texttt{.xlsx}) resguardados en la carpeta durante todo el curso.
   \par\medskip
   \begin{center}
-  \href{https://drive.google.com/drive/folders/11t7MGMNuMRCMJnfmcp_XAnmjFHO5qkWH?usp=sharing}{\colorbox{uasBlue}{\makebox[.9\textwidth]{\rule[-5mm]{0pt}{18mm}\textcolor{white}{\shortstack{\textbf{ABRIR CARPETA COMPARTIDA}\\GPO103 LCP - Martín Jonathan de la Cruz}}}}}
+  \href{https://drive.google.com/drive/folders/11t7MGMNuMRCMJnfmcp_XAnmjFHO5qkWH}{\colorbox{uasBlue}{\makebox[.9\textwidth]{\rule[-5mm]{0pt}{18mm}\textcolor{white}{\shortstack{\textbf{ABRIR CARPETA COMPARTIDA}\\GPO103 LCP - Martín Jonathan de la Cruz}}}}}
   \end{center}
   \clearpage
 }
@@ -57,10 +69,12 @@
   \capturarequerida{5j2GG8JahP}{Apertura de opciones}{Con la carpeta seleccionada se abre su menú contextual. La opción Compartir conduce a las acciones para gestionar acceso o copiar el vínculo.}{.30}{.58}{.66}{.62}
   \capturarequerida{B2ZfRcALgw}{Panel de uso compartido}{Se despliega Compartir y se selecciona Compartir en el submenú. Esta opción abre el panel que reúne usuarios autorizados y acceso general.}{.40}{.525}{.72}{.565}
   \capturarequerida{X10ieLLASo}{Estado inicial restringido}{El panel muestra al propietario y el acceso general Restringido. En esta configuración solo pueden abrir la carpeta las personas que hayan recibido permiso; copiar el enlace por sí solo no cambia ese alcance \parencite{googleDriveCompartir}.}{.36}{.36}{.49}{.405}
-  \capturarequerida{8czKo5Qq8B}{Elección del permiso de acceso}{Después de seleccionar acceso para cualquier usuario con el vínculo, se abre el menú del rol. Las opciones permiten distinguir consulta, comentario y edición; la elección determina las facultades de quienes accedan.}{.57}{.14}{.86}{.37}
-  \capturarequerida{UP20ZKOoBC}{Confirmación del vínculo y rol}{El acceso general queda configurado para cualquier usuario con el vínculo, con el rol Editor. Se pulsa Copiar vínculo para obtener la dirección de acceso a la carpeta.}{.21}{.30}{.79}{.435}
+  \capturadrive{drive_share_02_escribiendo_docente.png}{Incorporación del correo del docente}{En el campo \emph{Agregar personas, grupos, espacios y eventos de calendario} se escribe la dirección institucional del docente facilitador (\texttt{damaso.ruiz@fca.uas.edu.mx}) y se selecciona al destinatario.}
+  \capturadrive{drive_share_02_agregando_docente.png}{Asignación de permiso de edición y envío}{Se mantiene asignado el rol de \emph{Editor}, se habilita la notificación por correo y se pulsa \emph{Enviar} para registrar directamente al docente como colaborador autorizado.}
+  \capturadrive{drive_share_03_estado_final.png}{Verificación de acceso restringido con el docente}{Al reabrir el panel \emph{Compartir}, \texttt{damaso.ruiz@fca.uas.edu.mx} aparece listado bajo \emph{Personas que tienen acceso} como \emph{Editor} y \emph{Acceso general} permanece en \textbf{Restringido} (sin enlace público).}
+  \capturadrive{drive_share_04_carpeta_contenido.png}{Carpeta compartida con respaldos del curso}{Vista final de la carpeta \textbf{GPO103 LCP - Martín Jonathan de la Cruz} con el distintivo de compartida y los entregables semanales en formatos Word, PDF y Excel resguardados.}
   \noindent\textbf{Vínculo de la carpeta:}\par
-  \noindent\url{https://drive.google.com/drive/folders/11t7MGMNuMRCMJnfmcp_XAnmjFHO5qkWH?usp=sharing}
+  \noindent\url{https://drive.google.com/drive/folders/11t7MGMNuMRCMJnfmcp_XAnmjFHO5qkWH}
   \clearpage
 }
 \input{reporte-herramientas-digitales-plantilla-actividad.tex}
