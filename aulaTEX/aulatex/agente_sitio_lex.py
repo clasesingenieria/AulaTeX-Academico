@@ -62,6 +62,18 @@ class DisenoSitioLexBlueprint:
     editor_url: str = DEFAULT_EDITOR_URL
     theme: str = "Diplomático"
     accent_color: str = "#173b4c"
+    required_pages: tuple[str, ...] = ("Inicio", "Servicios", "Quiénes Somos", "Ubicación", "Contacto")
+    subpages: tuple[tuple[str, str], ...] = (("Servicios", "Defensa fiscal"),)
+    footer_author: str = (
+        "Elaborado por Martín Jonathan De La Cruz Muñoz · Grupo 103 LCP · FCA UAS · Culiacán, Sinaloa, México"
+    )
+    map_query: str = "Culiacán, Sinaloa, México"
+    youtube_query: str = "contabilidad fiscal SAT despacho contable mexico"
+    social_links: tuple[str, ...] = (
+        "https://www.facebook.com/",
+        "https://www.instagram.com/",
+        "https://www.youtube.com/",
+    )
     sections: tuple[NativeSectionSpec, ...] = (
         NativeSectionSpec(
             section_id="header",
@@ -180,6 +192,7 @@ class GoogleSitesInteractiveRequest:
     user_validated: bool = False
     dry_run: bool = True
     publish_changes: bool = False
+    align_s4: bool = False
     ensure_pages: tuple[str, ...] = ()
     profile_name: str = "google-drive"
     profile_dir: str = ""
@@ -461,84 +474,592 @@ class AgenteSitioLex:
         )
 
     @staticmethod
+    def _normalize_es(text: str) -> str:
+        return (
+            (text or "")
+            .strip()
+            .lower()
+            .replace("á", "a")
+            .replace("é", "e")
+            .replace("í", "i")
+            .replace("ó", "o")
+            .replace("ú", "u")
+            .replace("ü", "u")
+        )
+
+    @staticmethod
+    def _open_sidebar_tab(page: Any, tab_es: str, tab_en: str) -> None:
+        tab = page.locator(
+            f'[role="tab"]:has-text("{tab_es}"):visible, [role="tab"]:has-text("{tab_en}"):visible'
+        ).first
+        if tab.count():
+            try:
+                tab.click()
+                page.wait_for_timeout(700)
+            except Exception:
+                pass
+
+    @classmethod
+    def _read_editor_page_names(cls, page: Any) -> list[str]:
+        cleaned: list[str] = []
+        try:
+            aria_labels = page.eval_on_selector_all(
+                '[aria-label*="; título:"], [aria-label*="; title:"]',
+                'els => els.map(e => e.getAttribute("aria-label") || "")',
+            )
+        except Exception:
+            aria_labels = []
+        for raw_aria in aria_labels:
+            head = re.split(r";\s*(?:título|title):", raw_aria, maxsplit=1)[0].strip()
+            label = re.sub(r"[\ue000-\uf8ff]+", " ", head).strip()
+            if label and label not in cleaned:
+                cleaned.append(label)
+        if cleaned:
+            return cleaned
+
+        try:
+            items = page.locator('[role="treeitem"]:visible, [data-page-id]:visible').all_inner_texts()
+        except Exception:
+            items = []
+        for raw in items:
+            for line in (raw or "").splitlines():
+                label = re.sub(r"[\ue000-\uf8ff]+", " ", line).strip()
+                if label and label not in cleaned:
+                    cleaned.append(label)
+                    break
+        return cleaned
+
+    @classmethod
+    def _select_editor_page(cls, page: Any, page_name: str) -> bool:
+        cls._open_sidebar_tab(page, "Páginas", "Pages")
+        target = cls._normalize_es(page_name)
+        try:
+            loc = page.locator(
+                f'[aria-label*="{page_name}; título:" i]:visible, '
+                f'[aria-label*="{page_name}; title:" i]:visible'
+            ).first
+            if loc.count():
+                loc.click()
+                page.wait_for_timeout(1000)
+                return True
+        except Exception:
+            pass
+
+        for cand in page.locator('[role="treeitem"]:visible, [data-page-id]:visible').all():
+            try:
+                text_norm = cls._normalize_es(re.sub(r"[\ue000-\uf8ff]+", " ", cand.inner_text()))
+                if target in text_norm:
+                    cand.click()
+                    page.wait_for_timeout(1000)
+                    return True
+            except Exception:
+                continue
+        return False
+
+    @staticmethod
+    def _dismiss_open_dialogs(page: Any) -> None:
+        for _ in range(3):
+            overlay = page.locator('[role="dialog"]:visible, .llhEMd.iWO5td:visible')
+            if not overlay.count():
+                break
+            close_btn = page.locator(
+                '[role="dialog"] button:has-text("Cancelar"):visible, '
+                '[role="dialog"] div[role="button"]:has-text("Cancelar"):visible, '
+                '.llhEMd div[role="button"]:has-text("Cancelar"):visible, '
+                '[role="dialog"] [aria-label*="Cerrar" i]:visible'
+            ).last
+            if close_btn.count():
+                try:
+                    close_btn.click(force=True)
+                    page.wait_for_timeout(400)
+                    continue
+                except Exception:
+                    pass
+            page.keyboard.press("Escape")
+            page.wait_for_timeout(400)
+
+    @staticmethod
+    def _click_dialog_button(page: Any, labels: tuple[str, ...]) -> bool:
+        selectors: list[str] = []
+        for lbl in labels:
+            for scope in ('div[role="dialog"]', ".llhEMd"):
+                selectors.append(f'{scope} button:has-text("{lbl}"):visible')
+                selectors.append(f'{scope} div[role="button"]:has-text("{lbl}"):visible')
+                selectors.append(f'{scope} [role="button"]:has-text("{lbl}"):visible')
+        loc = page.locator(", ".join(selectors))
+        for idx in range(loc.count() - 1, -1, -1):
+            btn = loc.nth(idx)
+            try:
+                if btn.is_visible() and not btn.is_disabled():
+                    btn.click(force=True)
+                    return True
+            except Exception:
+                continue
+        return False
+
+    @classmethod
+    def _submit_page_name_dialog(cls, page: Any, value: str) -> bool:
+        page.wait_for_timeout(600)
+        inp = page.locator(
+            'div[role="dialog"] input[type="text"]:visible, '
+            '.llhEMd input[type="text"]:visible'
+        ).first
+        if not inp.count():
+            menu_opt = page.locator(
+                '[role="menuitem"]:has-text("Página nueva"):visible, '
+                '[role="menuitem"]:has-text("New page"):visible'
+            ).first
+            if menu_opt.count():
+                menu_opt.click(force=True)
+                page.wait_for_timeout(600)
+                inp = page.locator(
+                    'div[role="dialog"] input[type="text"]:visible, '
+                    '.llhEMd input[type="text"]:visible'
+                ).first
+        if not inp.count():
+            cls._dismiss_open_dialogs(page)
+            return False
+
+        inp.fill(value.strip())
+        page.wait_for_timeout(200)
+        if not cls._click_dialog_button(page, ("Listo", "Done", "Aceptar")):
+            inp.press("Enter")
+        page.wait_for_timeout(1000)
+        cls._dismiss_open_dialogs(page)
+        return True
+
+    @classmethod
+    def _rename_page_if_present(cls, page: Any, old_name: str, new_name: str) -> bool:
+        existing = [cls._normalize_es(p) for p in cls._read_editor_page_names(page)]
+        if cls._normalize_es(new_name) in existing:
+            return False
+        if cls._normalize_es(old_name) not in existing:
+            return False
+        cls._dismiss_open_dialogs(page)
+        node = page.locator(f'[aria-label*="{old_name}" i]:visible').first
+        if not node.count():
+            return False
+        node.hover()
+        page.wait_for_timeout(300)
+        act_btn = page.locator('[aria-label="Acciones de la página"]:visible').first
+        if not act_btn.count():
+            return False
+        act_btn.click(force=True)
+        page.wait_for_timeout(400)
+        prop_item = page.locator(
+            '[role="menuitem"]:has-text("Propiedades"):visible, [role="menuitem"]:has-text("Properties"):visible'
+        ).first
+        if not prop_item.count():
+            page.keyboard.press("Escape")
+            return False
+        prop_item.click()
+        return cls._submit_page_name_dialog(page, new_name)
+
+    @classmethod
+    def _create_page_if_missing(
+        cls,
+        page: Any,
+        name: str,
+        parent_name: str | None = None,
+    ) -> bool:
+        existing_norm = {cls._normalize_es(p) for p in cls._read_editor_page_names(page)}
+        if cls._normalize_es(name) in existing_norm:
+            return False
+
+        cls._dismiss_open_dialogs(page)
+        if parent_name:
+            node = page.locator(f'[aria-label*="{parent_name};" i]:visible, [aria-label*="{parent_name}" i]:visible').first
+            if not node.count():
+                return False
+            node.hover()
+            page.wait_for_timeout(300)
+            act_btn = page.locator('[aria-label="Acciones de la página"]:visible').first
+            if not act_btn.count():
+                return False
+            act_btn.click(force=True)
+            page.wait_for_timeout(400)
+            sub_item = page.locator(
+                '[role="menuitem"]:has-text("Agregar subpágina"):visible, '
+                '[role="menuitem"]:has-text("Add subpage"):visible'
+            ).first
+            if not sub_item.count():
+                page.keyboard.press("Escape")
+                return False
+            sub_item.click()
+        else:
+            add_btn = page.locator(
+                '[aria-label*="Página nueva" i]:visible, '
+                '[aria-label*="Nueva página" i]:visible, '
+                '[aria-label*="New page" i]:visible, '
+                '[data-tooltip*="Página nueva" i]:visible, '
+                '[data-tooltip*="Nueva página" i]:visible'
+            ).first
+            if not add_btn.count():
+                return False
+            add_btn.hover()
+            page.wait_for_timeout(300)
+            add_btn.click(force=True)
+
+        return cls._submit_page_name_dialog(page, name)
+
+    @classmethod
     def _inspect_and_sync_editor_pages(
+        cls,
         page: Any,
         ensure_pages: tuple[str, ...],
     ) -> tuple[list[str], list[str]]:
         """Inspecciona las páginas visibles del panel 'Páginas' y crea las faltantes si se solicita."""
-        pages_tab = page.locator(
-            '[role="tab"]:has-text("Páginas"):visible, [role="tab"]:has-text("Pages"):visible'
-        ).first
-        if pages_tab.count():
-            try:
-                pages_tab.click()
-                page.wait_for_timeout(800)
-            except Exception:
-                pass
-
-        def _read_page_names() -> list[str]:
-            try:
-                items = page.locator('[role="treeitem"]:visible, [data-page-id]:visible').all_inner_texts()
-            except Exception:
-                items = []
-            cleaned: list[str] = []
-            for raw in items:
-                for line in (raw or "").splitlines():
-                    label = re.sub(r"[\ue000-\uf8ff]+", " ", line).strip()
-                    if label and label not in cleaned:
-                        cleaned.append(label)
-                        break
-            return cleaned
-
-        existing = _read_page_names()
+        cls._open_sidebar_tab(page, "Páginas", "Pages")
+        existing = cls._read_editor_page_names(page)
         created: list[str] = []
         if not ensure_pages:
             return existing, created
 
-        normalized_existing = {
-            p.lower().replace("á", "a").replace("é", "e").replace("í", "i").replace("ó", "o").replace("ú", "u")
-            for p in existing
-        }
         for target_page in ensure_pages:
-            norm = (
-                target_page.strip()
-                .lower()
-                .replace("á", "a")
-                .replace("é", "e")
-                .replace("í", "i")
-                .replace("ó", "o")
-                .replace("ú", "u")
-            )
-            if not norm or norm in normalized_existing:
-                continue
-            add_btn = page.locator(
-                '[aria-label*="Nueva página" i]:visible, '
-                '[aria-label*="New page" i]:visible, '
-                '[data-tooltip*="Nueva página" i]:visible, '
-                '[data-tooltip*="New page" i]:visible'
-            ).first
-            if not add_btn.count():
-                continue
             try:
-                add_btn.click()
-                page.wait_for_timeout(500)
-                name_input = page.locator('div[role="dialog"] input[type="text"]:visible').first
-                if name_input.count():
-                    name_input.fill(target_page.strip())
-                    done_btn = page.locator(
-                        'div[role="dialog"] button:has-text("Listo"):visible, '
-                        'div[role="dialog"] button:has-text("Done"):visible, '
-                        'div[role="dialog"] button:has-text("Aceptar"):visible'
-                    ).first
-                    if done_btn.count():
-                        done_btn.click()
-                        page.wait_for_timeout(900)
-                        created.append(target_page.strip())
-                        normalized_existing.add(norm)
+                if cls._create_page_if_missing(page, target_page.strip()):
+                    created.append(target_page.strip())
             except Exception:
                 continue
 
-        return _read_page_names() or existing, created
+        return cls._read_editor_page_names(page) or existing, created
+
+    @staticmethod
+    def _ensure_footer_author(page: Any, footer_text: str) -> str:
+        try:
+            body_text = page.locator("body").inner_text(timeout=3000)
+        except Exception:
+            body_text = ""
+        if "elaborado por martín" in body_text.lower() or "elaborado por martin" in body_text.lower():
+            return "already_present"
+
+        add_footer = page.locator(
+            '[role="button"]:has-text("Agregar pie de página"), button:has-text("Agregar pie de página"), '
+            '[role="button"]:has-text("Add footer"), button:has-text("Add footer")'
+        ).last
+        if not add_footer.count():
+            return "button_not_found"
+        add_footer.scroll_into_view_if_needed()
+        page.wait_for_timeout(300)
+        add_footer.click(force=True)
+        page.wait_for_timeout(800)
+
+        editable = page.locator('footer [contenteditable="true"]:visible, [contenteditable="true"]:visible').last
+        if not editable.count():
+            return "textbox_not_found"
+        editable.click()
+        page.keyboard.type(footer_text, delay=8)
+        page.wait_for_timeout(500)
+        return "applied"
+
+    @classmethod
+    def _insert_text_block(cls, page: Any, marker_phrase: str, content_text: str) -> str:
+        try:
+            canvas_text = page.locator('[role="main"], main').first.inner_text(timeout=2000)
+        except Exception:
+            canvas_text = ""
+        if cls._normalize_es(marker_phrase) in cls._normalize_es(canvas_text):
+            return "already_present"
+
+        cls._open_sidebar_tab(page, "Insertar", "Insert")
+        tb_btn = page.locator(
+            '[role="menuitem"][aria-label="Cuadro de texto"]:visible, '
+            '[role="menuitem"]:has-text("Cuadro de texto"):visible, '
+            '[role="menuitem"][aria-label="Text box"]:visible'
+        ).first
+        if not tb_btn.count():
+            return "button_not_found"
+        tb_btn.click()
+        page.wait_for_timeout(800)
+        box = page.locator('[role="textbox"][contenteditable="true"]:visible, [contenteditable="true"]:visible').last
+        if not box.count():
+            return "textbox_not_found"
+        box.click()
+        page.keyboard.type(content_text, delay=5)
+        page.wait_for_timeout(500)
+        return "applied"
+
+    @classmethod
+    def _insert_carousel_images(cls, page: Any, image_paths: list[Path]) -> str:
+        existing_imgs = [p for p in image_paths if p.is_file()]
+        if len(existing_imgs) < 2:
+            return "insufficient_local_images"
+        try:
+            carousel_cnt = page.locator('[aria-roledescription="carousel"], [data-carousel-id]').count()
+            if carousel_cnt > 0:
+                return "already_present"
+        except Exception:
+            pass
+
+        cls._open_sidebar_tab(page, "Insertar", "Insert")
+        c_btn = page.locator('[role="menuitem"][aria-label="Carrusel de imágenes"]:visible').first
+        if not c_btn.count():
+            return "button_not_found"
+        c_btn.scroll_into_view_if_needed()
+        c_btn.click()
+        page.wait_for_timeout(1000)
+
+        add_img = page.locator('[role="dialog"] [aria-label="Agregar imagen"]:visible').first
+        if not add_img.count():
+            return "add_image_button_not_found"
+        add_img.click()
+        page.wait_for_timeout(500)
+
+        upload_item = page.locator(
+            '[role="menuitem"]:has-text("Subir imagen"):visible, [role="menuitem"]:has-text("Upload image"):visible'
+        ).first
+        if not upload_item.count():
+            return "upload_menuitem_not_found"
+
+        with page.expect_file_chooser(timeout=15000) as fc_info:
+            upload_item.click()
+        fc_info.value.set_files([str(p) for p in existing_imgs[:4]])
+        page.wait_for_timeout(4500)
+
+        if cls._click_dialog_button(page, ("Insertar", "Insert")):
+            page.wait_for_timeout(1500)
+            cls._dismiss_open_dialogs(page)
+            return "applied"
+        cls._dismiss_open_dialogs(page)
+        return "insert_disabled_or_upload_incomplete"
+
+    @classmethod
+    def _insert_youtube_video(cls, page: Any, query: str) -> str:
+        try:
+            if page.locator('iframe[src*="youtube"]').count() > 0:
+                return "already_present"
+        except Exception:
+            pass
+
+        cls._open_sidebar_tab(page, "Insertar", "Insert")
+        y_btn = page.locator('[role="menuitem"][aria-label="YouTube"]:visible').first
+        if not y_btn.count():
+            return "button_not_found"
+        y_btn.scroll_into_view_if_needed()
+        y_btn.click()
+        page.wait_for_timeout(2500)
+
+        picker_frame = None
+        for fr in page.frames:
+            if "docs.google.com/picker" in fr.url:
+                picker_frame = fr
+                break
+        if picker_frame is None:
+            return "picker_frame_not_found"
+
+        search_input = picker_frame.locator('input[aria-label*="YouTube" i], input[type="text"]').last
+        if not search_input.count():
+            return "picker_input_not_found"
+        search_input.fill(query)
+        search_input.press("Enter")
+        page.wait_for_timeout(2500)
+
+        result_tile = picker_frame.locator('[role="option"], [role="listitem"], [data-id]').first
+        if result_tile.count():
+            result_tile.click()
+            page.wait_for_timeout(800)
+
+        select_btn = picker_frame.locator(
+            'button:has-text("Seleccionar"):visible, button:has-text("Insertar"):visible, '
+            '[role="button"]:has-text("Seleccionar"):visible, [role="button"]:has-text("Insert"):visible'
+        ).last
+        if select_btn.count() and not select_btn.is_disabled():
+            select_btn.click()
+            page.wait_for_timeout(1500)
+            return "applied"
+
+        close_b = picker_frame.locator('[aria-label*="Cerrar" i]').first
+        if close_b.count():
+            close_b.click()
+        return "select_button_not_enabled"
+
+    @classmethod
+    def _insert_google_map(cls, page: Any, location_query: str) -> str:
+        try:
+            if page.locator('iframe[src*="maps"], [aria-label*="Mapa" i][role="region"]').count() > 0:
+                return "already_present"
+        except Exception:
+            pass
+
+        cls._open_sidebar_tab(page, "Insertar", "Insert")
+        m_btn = page.locator('[role="menuitem"][aria-label="Mapa"]:visible').first
+        if not m_btn.count():
+            return "button_not_found"
+        m_btn.scroll_into_view_if_needed()
+        m_btn.click()
+        page.wait_for_timeout(1500)
+
+        search_inp = page.locator('[role="dialog"] input[aria-label*="Google Maps" i]:visible').first
+        if not search_inp.count():
+            return "map_input_not_found"
+        search_inp.fill(location_query)
+        search_inp.press("Enter")
+        page.wait_for_timeout(1800)
+
+        suggestion = page.locator('[role="dialog"] [role="option"]:visible, [role="dialog"] .pac-item:visible').first
+        if suggestion.count():
+            suggestion.click()
+            page.wait_for_timeout(1200)
+
+        if cls._click_dialog_button(page, ("Seleccionar", "Select")):
+            page.wait_for_timeout(1500)
+            cls._dismiss_open_dialogs(page)
+            return "applied"
+
+        cls._dismiss_open_dialogs(page)
+        return "map_select_disabled"
+
+    @classmethod
+    def _insert_social_links(cls, page: Any, urls: tuple[str, ...]) -> str:
+        try:
+            if page.locator('a[href*="facebook.com"], a[href*="instagram.com"]').count() > 0:
+                return "already_present"
+        except Exception:
+            pass
+
+        cls._open_sidebar_tab(page, "Insertar", "Insert")
+        s_btn = page.locator('[role="menuitem"][aria-label="Vínculos a redes sociales"]:visible').first
+        if not s_btn.count():
+            return "button_not_found"
+        s_btn.scroll_into_view_if_needed()
+        s_btn.click()
+        page.wait_for_timeout(1000)
+
+        inputs = page.locator('[role="dialog"] input[type="text"]:visible').all()
+        if not inputs:
+            return "social_inputs_not_found"
+        for idx, url in enumerate(urls[: len(inputs)]):
+            inputs[idx].fill(url)
+        page.wait_for_timeout(400)
+
+        if cls._click_dialog_button(page, ("Insertar", "Insert")):
+            page.wait_for_timeout(1500)
+            cls._dismiss_open_dialogs(page)
+            return "applied"
+
+        cls._dismiss_open_dialogs(page)
+        return "social_insert_disabled"
+
+    def _align_site_to_class_spec(self, page: Any) -> list[dict[str, str]]:
+        """Alinea el sitio con la actividad UAS 50144 y la grabación S4-Clase-2 (rzici9Xi01Y)."""
+        actions: list[dict[str, str]] = []
+        assets_dir = (
+            self.workspace.repo_root
+            / "UAS"
+            / "licenciatura-en-contaduria-uas"
+            / "herramientas-digitales"
+            / "assets-herramientas-digitales"
+        )
+        carousel_imgs = [
+            assets_dir / "revision-documental.jpg",
+            assets_dir / "revision-expediente.jpg",
+            assets_dir / "analisis-financiero.jpg",
+            assets_dir / "planeacion-contable.jpg",
+        ]
+
+        self._open_sidebar_tab(page, "Páginas", "Pages")
+        renamed = self._rename_page_if_present(page, "Página principal", "Inicio")
+        actions.append({"step": "rename_home_inicio", "status": "applied" if renamed else "skipped_or_done"})
+
+        for req_page in self.blueprint.required_pages:
+            created = self._create_page_if_missing(page, req_page)
+            actions.append({"step": f"page_{req_page}", "status": "applied" if created else "already_present"})
+
+        for parent_p, child_p in self.blueprint.subpages:
+            sub_created = self._create_page_if_missing(page, child_p, parent_name=parent_p)
+            actions.append({"step": f"subpage_{parent_p}_{child_p}", "status": "applied" if sub_created else "already_present"})
+
+        # Pie de página global (obligatorio S4-Clase-2 [01:34:09])
+        if self._select_editor_page(page, "Inicio"):
+            actions.append({"step": "footer_author", "status": self._ensure_footer_author(page, self.blueprint.footer_author)})
+            actions.append({"step": "inicio_carousel", "status": self._insert_carousel_images(page, carousel_imgs)})
+
+        if self._select_editor_page(page, "Servicios"):
+            actions.append(
+                {
+                    "step": "servicios_intro",
+                    "status": self._insert_text_block(
+                        page,
+                        "Catálogo de Servicios Contables",
+                        (
+                            "Catálogo de Servicios Contables y Fiscales — Lex Contable\n"
+                            "• Contabilidad mensual y conciliación bancaria/CFDI.\n"
+                            "• Declaraciones mensuales y anuales ante el SAT.\n"
+                            "• Regularización de ejercicios anteriores y papeles de trabajo.\n"
+                            "• Solicitudes de devolución y compensación de saldos a favor."
+                        ),
+                    ),
+                }
+            )
+
+        if self._select_editor_page(page, "Defensa fiscal"):
+            actions.append(
+                {
+                    "step": "defensa_fiscal_intro",
+                    "status": self._insert_text_block(
+                        page,
+                        "Defensa y Atención de Requerimientos",
+                        (
+                            "Defensa y Atención de Requerimientos Fiscales\n"
+                            "Acompañamiento técnico y documental ante cartas invitación, "
+                            "auditorías electrónicas y revisión de comprobantes CFDI."
+                        ),
+                    ),
+                }
+            )
+
+        if self._select_editor_page(page, "Quiénes Somos"):
+            actions.append(
+                {
+                    "step": "quienes_somos_intro",
+                    "status": self._insert_text_block(
+                        page,
+                        "Despacho De La Cruz",
+                        (
+                            "Quiénes Somos — Despacho De La Cruz & Asociados (Lex Contable)\n"
+                            "Proyecto académico y profesional desarrollado por Martín Jonathan De La Cruz Muñoz "
+                            "(Grupo 103 LCP, Facultad de Contaduría y Administración, UAS — Culiacán, Sinaloa). "
+                            "A continuación compartimos material audiovisual sobre contabilidad y obligaciones fiscales:"
+                        ),
+                    ),
+                }
+            )
+            actions.append({"step": "quienes_somos_youtube", "status": self._insert_youtube_video(page, self.blueprint.youtube_query)})
+
+        if self._select_editor_page(page, "Ubicación"):
+            actions.append(
+                {
+                    "step": "ubicacion_intro",
+                    "status": self._insert_text_block(
+                        page,
+                        "Ubicación y Zona de Atención",
+                        (
+                            "Ubicación y Zona de Atención\n"
+                            "Culiacán Rosales, Sinaloa, México · Atención previa cita."
+                        ),
+                    ),
+                }
+            )
+            actions.append({"step": "ubicacion_map", "status": self._insert_google_map(page, self.blueprint.map_query)})
+
+        if self._select_editor_page(page, "Contacto"):
+            actions.append(
+                {
+                    "step": "contacto_intro",
+                    "status": self._insert_text_block(
+                        page,
+                        "Canales de Contacto y Redes",
+                        (
+                            "Canales de Contacto y Redes Sociales\n"
+                            "Despacho De La Cruz & Asociados — Horario de atención: Lunes a Viernes de 9:00 a 18:00 h (Culiacán, Sinaloa).\n"
+                            "Nota de privacidad: no compartas contraseñas ni e.firma en medios públicos."
+                        ),
+                    ),
+                }
+            )
+            actions.append({"step": "contacto_social_links", "status": self._insert_social_links(page, self.blueprint.social_links)})
+
+        return actions
 
     def run_interactive_session(
         self,
@@ -702,19 +1223,22 @@ class AgenteSitioLex:
                         },
                     )
 
+                alignment_actions: list[dict[str, str]] = []
+                if request.align_s4:
+                    alignment_actions = self._align_site_to_class_spec(page)
+
                 existing_pages, created_pages = self._inspect_and_sync_editor_pages(
                     page,
                     tuple(request.ensure_pages or ()),
                 )
 
                 if request.publish_changes:
-                    pub_btn = page.locator(
-                        'div[role="button"]:has-text("Publicar"):visible, button:has-text("Publicar"):visible, '
-                        'div[role="button"]:has-text("Publish"):visible, button:has-text("Publish"):visible'
-                    ).first
+                    page.wait_for_timeout(2000)
+                    pub_sel = 'div[role="button"]:has-text("Publicar"):visible, button:has-text("Publicar"):visible, div[role="button"]:has-text("Publish"):visible, button:has-text("Publish"):visible'
+                    pub_btn = page.locator(pub_sel).first
                     if pub_btn.count():
                         pub_btn.click()
-                        page.wait_for_timeout(1500)
+                        page.wait_for_timeout(2000)
                         confirm_btn = page.locator(
                             'div[role="dialog"] button:has-text("Publicar"):visible, '
                             'div[role="dialog"] div[role="button"]:has-text("Publicar"):visible, '
@@ -722,16 +1246,20 @@ class AgenteSitioLex:
                         ).last
                         if confirm_btn.count():
                             confirm_btn.click()
-                            page.wait_for_timeout(2500)
+                            page.wait_for_timeout(3000)
+                        elif page.locator(pub_sel).count() > 1:
+                            page.locator(pub_sel).last.click()
+                            page.wait_for_timeout(3000)
                         published_action_status = "published"
                     else:
                         published_action_status = "publish_button_not_found"
 
+                self._open_sidebar_tab(page, "Páginas", "Pages")
                 page.screenshot(path=str(editor_screenshot), full_page=True)
 
                 pub_page = context.new_page()
                 pub_page.goto(clean_published_url, wait_until="domcontentloaded", timeout=60000)
-                pub_page.wait_for_timeout(2000)
+                pub_page.wait_for_timeout(2500)
                 try:
                     rendered_iframe_sources = [
                         src
@@ -762,6 +1290,7 @@ class AgenteSitioLex:
             "authenticated_during_run": authenticated_during_run,
             "existing_pages": existing_pages,
             "created_pages": created_pages,
+            "alignment_actions": alignment_actions,
             "publish_action_status": published_action_status,
             "compliance_score": refreshed_audit.compliance_score,
             "has_forbidden_iframes": has_forbidden,

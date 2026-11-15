@@ -661,6 +661,7 @@ def build_parser() -> argparse.ArgumentParser:
     sub_sitio.add_argument("--editor-url", default="", help="URL del editor de Google Sites (/d/.../edit).")
     sub_sitio.add_argument("--url", default="", help="URL pública de Google Sites (/view/...).")
     sub_sitio.add_argument("--ensure-pages", default="", help="Lista separada por comas de páginas nativas a verificar/crear en el panel Páginas.")
+    sub_sitio.add_argument("--align-s4", action="store_true", help="Alinea el sitio Google Sites con la grabación S4-Clase-2 (páginas, pie, carrusel, YouTube, mapa y redes sociales).")
     sub_sitio.add_argument("--publish", action="store_true", help="Hacer clic en Publicar y confirmar cambios en vivo.")
     sub_sitio.add_argument("--profile", default="google-drive", help="Nombre del perfil persistente de navegador (compartido por defecto con Google Drive).")
     sub_sitio.add_argument("--profile-dir", default="", help="Ruta explícita opcional para el perfil persistente.")
@@ -1970,6 +1971,7 @@ def main(argv: list[str] | None = None) -> None:
                 user_validated=getattr(args, "user_validated", False),
                 dry_run=getattr(args, "dry_run", True),
                 publish_changes=getattr(args, "publish", False),
+                align_s4=getattr(args, "align_s4", False),
                 ensure_pages=ensure_pages,
                 profile_name=getattr(args, "profile", "google-drive"),
                 profile_dir=getattr(args, "profile_dir", ""),
