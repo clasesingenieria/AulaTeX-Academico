@@ -1,14 +1,13 @@
-﻿% Presentacion - PFM02 / Sesion 02
-% Suma y resta con fracciones
-
+﻿% Presentacion - PFM02 / Sesion 06 - Clase Muestra en Video
+% Estadistica y Medidas de Dispersion en Mantenimiento Industrial
 \pdfminorversion=7
 \documentclass[
 	spanish,
-	aspectratio=1610,
+	aspectratio=169,
 	xcolor={dvipsnames,table}
 ]{beamer}
 
-\geometry{paperwidth=19.2cm,paperheight=12cm}
+\geometry{paperwidth=16cm,paperheight=9cm}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -18,36 +17,41 @@
 \usepackage{array}
 \usepackage{graphicx}
 \usepackage{ragged2e}
+\usepackage{tabularx}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{amsmath,amssymb}
 \usepackage{tikz}
-\usetikzlibrary{arrows.meta,positioning,calc,decorations.pathreplacing,shapes.geometric,fit,backgrounds,overlay-beamer-styles}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes.geometric,fit,backgrounds}
 \usepackage{hyperref}
 
-% Datos del alumno y del programa
+% Datos institucionales y del estudiante
 \newcommand{\studentname}{Mtro. Martín Jonathan de la Cruz Muñoz}
-\newcommand{\studentshort}{M. de la Cruz Munoz}
+\newcommand{\studentshort}{M. de la Cruz Muñoz}
 \newcommand{\studentid}{00874}
 \newcommand{\studentemail}{martin.delacruz@campus.iiiepe.edu.mx}
-\newcommand{\programname}{Maestria en Aprendizaje y Ensenanza de las Matematicas}
+\newcommand{\programname}{Maestría en Aprendizaje y Enseñanza de las Matemáticas}
 \newcommand{\programshort}{MAEM}
 \newcommand{\coursecode}{PFM02}
-\newcommand{\coursename}{Temas selectos de matemáticas I}
-\newcommand{\coursegroup}{Grupo A}
+\newcommand{\coursename}{Temas Selectos de Matemáticas I}
+\newcommand{\coursedocente}{Profr. Carlos Hugo De León González}
 \newcommand{\courseperiod}{Marzo--julio 2026}
 \newcommand{\institutionname}{IIIEPE}
-\newcommand{\institutionlongname}{Instituto de Investigacion, Innovacion y Estudios de Posgrado para la Educacion del Estado de Nuevo Leon}
-\newcommand{\institutionplace}{Monterrey, Nuevo Leon}
+\newcommand{\institutionlongname}{Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León}
+\newcommand{\institutionplace}{Monterrey, Nuevo León}
 \newcommand{\iiiepelogo}{img/iiiepe/logo-iiiepe-blanco.png}
 \newcommand{\iiiepemark}{img/iiiepe/marca-iiiepe.png}
 \newcommand{\iiiepedots}{img/iiiepe/logo-puntos.png}
 
-% Paleta institucional
+% Paleta institucional IIIEPE
 \definecolor{iiiepeNavy}{HTML}{163B5C}
 \definecolor{iiiepeBlue}{HTML}{1F6F9F}
 \definecolor{iiiepeAqua}{HTML}{20B7A8}
 \definecolor{iiiepeOrange}{HTML}{F28C28}
 \definecolor{iiiepePaper}{HTML}{F6F8F7}
 \definecolor{iiiepeInk}{HTML}{1E2A32}
-\definecolor{iiiepeMuted}{HTML}{667085}
+\definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeGreen}{HTML}{2E7D32}
 
 \mode<presentation>{
 	\usetheme{default}
@@ -70,41 +74,40 @@
 \setbeamercolor{block title}{fg=white,bg=iiiepeBlue}
 \setbeamercolor{block body}{fg=iiiepeInk,bg=iiiepePaper}
 \setbeamercolor{alerted text}{fg=iiiepeOrange}
-\setbeamerfont{title}{size=\LARGE,series=\bfseries}
-\setbeamerfont{frametitle}{size=\fontsize{14}{18}\selectfont,series=\bfseries}
-\setbeamerfont{block title}{series=\bfseries}
-\setbeamertemplate{itemize item}{\textcolor{iiiepeAqua}{\fontsize{14}{18}\selectfont$\blacktriangleright$}}
+\setbeamerfont{title}{size=\Large,series=\bfseries}
+\setbeamerfont{frametitle}{size=\fontsize{12}{15}\selectfont,series=\bfseries}
+\setbeamertemplate{itemize item}{\textcolor{iiiepeAqua}{\small$\blacktriangleright$}}
 \setbeamertemplate{itemize subitem}{\textcolor{iiiepeOrange}{\scriptsize$\blacksquare$}}
 \setbeamertemplate{enumerate item}{\textcolor{iiiepeBlue}{\insertenumlabel.}}
 
 \newcommand{\localLogo}[1]{%
-	\IfFileExists{#1}{\includegraphics[height=0.58cm]{#1}}{\textbf{\institutionname}}%
+	\IfFileExists{#1}{\includegraphics[height=0.55cm]{#1}}{\textbf{\institutionname}}%
 }
 
 \setbeamertemplate{frametitle}{
 	\nointerlineskip
-	\begin{beamercolorbox}[wd=\textwidth,ht=1.05cm,dp=0.22cm,leftskip=0.35cm,rightskip=0.25cm]{frametitle}
-		\begin{minipage}[c]{0.72\textwidth}
+	\begin{beamercolorbox}[wd=\textwidth,ht=0.88cm,dp=0.20cm,leftskip=0.35cm,rightskip=0.25cm]{frametitle}
+		\begin{minipage}[c]{0.78\textwidth}
 			\insertframetitle
 		\end{minipage}
 		\hfill
-		\raisebox{-0.1cm}{\localLogo{\iiiepelogo}}
+		\raisebox{-0.05cm}{\localLogo{\iiiepelogo}}
 	\end{beamercolorbox}
 	\vspace{-0.04cm}
-	{\color{iiiepeOrange}\rule{\textwidth}{1.4pt}}
+	{\color{iiiepeOrange}\rule{\textwidth}{1.3pt}}
 }
 
 \setbeamertemplate{footline}{
 	\leavevmode
 	\hbox{%
-		\begin{beamercolorbox}[wd=.34\paperwidth,ht=2.7ex,dp=1ex,leftskip=1em]{author in head/foot}
-			\color{white}\studentshort
+		\begin{beamercolorbox}[wd=.33\paperwidth,ht=2.4ex,dp=0.8ex,leftskip=0.8em]{author in head/foot}
+			\color{white}\small\studentshort\ (\studentid)
 		\end{beamercolorbox}
-		\begin{beamercolorbox}[wd=.38\paperwidth,ht=2.7ex,dp=1ex,center]{title in head/foot}
-			\color{white}\programshort\ -- \coursecode
+		\begin{beamercolorbox}[wd=.45\paperwidth,ht=2.4ex,dp=0.8ex,center]{title in head/foot}
+			\color{white}\small\programshort\ -- \coursecode\ (Clase Muestra)
 		\end{beamercolorbox}
-		\begin{beamercolorbox}[wd=.20\paperwidth,ht=2.7ex,dp=1ex,rightskip=1em plus 1fil]{date in head/foot}
-			\color{white}Matricula \studentid\hfill\insertframenumber/\inserttotalframenumber
+		\begin{beamercolorbox}[wd=.22\paperwidth,ht=2.4ex,dp=0.8ex,rightskip=0.8em plus 1fil]{date in head/foot}
+			\color{white}\small\institutionname\hfill\insertframenumber/\inserttotalframenumber
 		\end{beamercolorbox}
 	}
 }
@@ -112,179 +115,298 @@
 \setbeamercolor{title in head/foot}{bg=iiiepeBlue}
 \setbeamercolor{date in head/foot}{bg=iiiepeNavy}
 
-\newcommand{\accentbar}{%
-	\begin{tikzpicture}[remember picture,overlay]
-		\path[use as bounding box] (0,0) rectangle (0,0);
-		\fill[iiiepeAqua] (current page.south west) rectangle ([xshift=0.42\paperwidth,yshift=0.08cm]current page.south west);
-		\fill[iiiepeOrange] ([xshift=0.42\paperwidth]current page.south west) rectangle ([xshift=\paperwidth,yshift=0.08cm]current page.south west);
-	\end{tikzpicture}
-}
+\title{Estadística Aplicada y Medidas de Dispersión}
+\subtitle{Toma de Decisiones en Procesos de Mantenimiento bajo Enfoque STEAM (NEM)}
+\author{\studentname}
+\institute{\institutionname}
+\date{Noviembre 2026}
 
-\newcommand{\DividirEntre}[2]{\ensuremath{#1\,\text{ entre }\,#2}}
+\begin{document}
 
-\tikzset{
-	cajaProc/.style={
-		draw=iiiepeBlue,
-		rounded corners=2mm,
-		align=center,
-		inner sep=4pt,
-		minimum height=8mm,
-		font=\small
-	},
-	cajaDato/.style={
-		cajaProc,
-		fill=iiiepeBlue!8
-	},
-	cajaOp/.style={
-		cajaProc,
-		fill=iiiepeOrange!12
-	},
-	cajaRes/.style={
-		cajaProc,
-		fill=iiiepeAqua!12
-	},
-	flechaProc/.style={
-		-{Latex[length=2.4mm]},
-		thick,
-		draw=iiiepeBlue
-	},
-	notaProc/.style={
-		draw=iiiepeOrange,
-		rounded corners=2mm,
-		fill=iiiepeOrange!12,
-		align=center,
-		inner sep=4pt,
-		font=\scriptsize
-	},
-	decisionProc/.style={
-		diamond,
-		aspect=2.1,
-		draw=iiiepeBlue,
-		fill=iiiepeAqua!10,
-		align=center,
-		inner sep=2pt,
-		font=\scriptsize
-	}
-}
-
-\newcommand{\RutaOperacion}[4]{%
-\begin{tikzpicture}[node distance=6mm]
-	\node[cajaDato,visible on=<1->] (a) {#1};
-	\node[cajaOp, right=of a,visible on=<2->] (b) {#2};
-	\node[cajaOp, right=of b,visible on=<3->] (c) {#3};
-	\node[cajaRes, right=of c,visible on=<4->] (d) {#4};
-	\draw[flechaProc,visible on=<1->] (a) -- (b);
-	\draw[flechaProc,visible on=<2->] (b) -- (c);
-	\draw[flechaProc,visible on=<3->] (c) -- (d);
-\end{tikzpicture}%
-}
-
-\newcommand{\sectionframe}[1]{%
-	\begin{frame}[plain]
-		\begin{tikzpicture}[remember picture,overlay]
-			\fill[iiiepeNavy] (current page.south west) rectangle (current page.north east);
-			\IfFileExists{\iiiepedots}{%
-				\node[opacity=0.13,anchor=east] at ([xshift=0.8cm]current page.east) {\includegraphics[height=9.4cm]{\iiiepedots}};
-			}{}
-			\fill[iiiepeAqua] ([xshift=0.85cm,yshift=2.1cm]current page.south west) rectangle ([xshift=1.05cm,yshift=6.3cm]current page.south west);
-			\fill[iiiepeOrange] ([xshift=1.15cm,yshift=2.1cm]current page.south west) rectangle ([xshift=1.35cm,yshift=5.35cm]current page.south west);
-		\end{tikzpicture}
-		\vspace{1.8cm}
-		\hspace{1.25cm}
-		\begin{minipage}{0.72\paperwidth}
-			{\color{white}\Huge\bfseries #1}\\[0.25cm]
-			{\color{white!75}Sesion 02 -- Suma y resta con fracciones}
-		\end{minipage}
-	\end{frame}
-}
-
-% Separadores automaticos desactivados para evitar diapositivas repetitivas.
-% \AtBeginSection[]{\sectionframe{\insertsectionhead}}
-
-\usepackage{tabularx,pgfplots,amssymb,adjustbox}\pgfplotsset{compat=1.18}\definecolor{iiiepePale}{HTML}{EEF5F8}
-\title{Estadística para comparar dos procesos de mantenimiento}\subtitle{Actividad 6}\begin{document}
-
+% SLIDE 01: PORTADA
 \begin{frame}[plain]
 \begin{tikzpicture}[remember picture,overlay]
-\fill[iiiepeNavy] (current page.south west) rectangle ([xshift=.56\paperwidth]current page.north west);
-\fill[iiiepeBlue] ([xshift=.56\paperwidth]current page.south west) rectangle (current page.north east);
-\node[anchor=north west] at ([xshift=.55cm,yshift=-.45cm]current page.north west) {\localLogo{\iiiepelogo}};
-\IfFileExists{\iiiepedots}{\node[opacity=.13,anchor=east] at (current page.east){\includegraphics[height=9cm]{\iiiepedots}};}{}
+	\fill[iiiepeNavy] (current page.south west) rectangle ([xshift=.58\paperwidth]current page.north west);
+	\fill[iiiepeBlue] ([xshift=.58\paperwidth]current page.south west) rectangle (current page.north east);
+	\node[anchor=north west] at ([xshift=.5cm,yshift=-.4cm]current page.north west) {\localLogo{\iiiepelogo}};
+	\IfFileExists{\iiiepedots}{\node[opacity=.12,anchor=east] at (current page.east){\includegraphics[height=8cm]{\iiiepedots}};}{}
 \end{tikzpicture}
-\vspace{1.2cm}
-\begin{minipage}{.50\paperwidth}
-{\color{white}\fontsize{23}{27}\selectfont\bfseries\raggedright\inserttitle\par}\vspace{.35cm}
-{\color{white!85}\fontsize{14}{18}\selectfont\insertsubtitle\par}\vspace{.5cm}
-{\color{iiiepeOrange}\rule{.82\linewidth}{1.3pt}}\par\vspace{.4cm}
-{\color{white}\studentname\par}\vspace{.1cm}
-{\color{white!80}\small Matrícula: \studentid\par}
+\vspace{0.8cm}
+\begin{minipage}{.52\paperwidth}
+	{\color{white}\fontsize{17}{21}\selectfont\bfseries\raggedright Estadística y Medidas de Dispersión en Procesos Técnicos\par}\vspace{.2cm}
+	{\color{white!85}\small Clase Muestra y Exposición (Actividad 6) -- Enfoque STEAM\par}\vspace{.3cm}
+	{\color{iiiepeOrange}\rule{.85\linewidth}{1.3pt}}\par\vspace{.25cm}
+	{\color{white}\bfseries\small \studentname\par}\vspace{.05cm}
+	{\color{white!80}\scriptsize Matrícula: \studentid\ \textbar\ \studentemail\par}
 \end{minipage}\hfill
-\begin{minipage}{.35\paperwidth}\raggedleft
-{\color{white}\Large\bfseries IIIEPE\par}\vspace{.25cm}
-{\color{white!85}\small\programname\par}\vspace{.5cm}
-{\color{white}\small\coursename\par}\vspace{.5cm}
-{\color{white!80}\small 13 de octubre de 2026\par Monterrey, Nuevo León\par}
+\begin{minipage}{.38\paperwidth}\raggedleft
+	{\color{white}\large\bfseries \institutionname\par}\vspace{.15cm}
+	{\color{white!85}\scriptsize \programname\par}\vspace{.3cm}
+	{\color{white}\scriptsize\bfseries Unidad: \coursename\par}\vspace{.1cm}
+	{\color{white!80}\scriptsize Docente: \coursedocente\par}\vspace{.3cm}
+	{\color{white!75}\tiny \institutionplace\ \textbar\ Periodo 2026\par}
 \end{minipage}
 \end{frame}
-\begin{frame}{Comparar dos procesos}
-\fontsize{14}{18}\selectfont\begin{itemize}\setlength{\itemsep}{.45cm}
-\item Dos equipos realizan seis ajustes de mantenimiento.
-\item Datos A: 8, 9, 10, 10, 11, 12 min.
-\item Datos B: 5, 7, 10, 10, 13, 15 min. Son datos simulados.
-\end{itemize}
-\end{frame}
-\begin{frame}{Medidas centrales}
-\small\renewcommand{\arraystretch}{1.45}\begin{tabularx}{\linewidth}{X|X|X}\toprule
-\textbf{Medida} & \textbf{Proceso A} & \textbf{Proceso B}\\\midrule
-Media & 10 min & 10 min\\\addlinespace
-Mediana & 10 min & 10 min\\\addlinespace
-Moda & 10 min & 10 min\\\addlinespace
-Rango & 4 min & 10 min\\\addlinespace
-Desviación media & 1 min & 8/3 $\approx$ 2.67 min\\\addlinespace
-\bottomrule\end{tabularx}\par\vspace{.4cm}\fontsize{14}{18}\selectfont ¿Qué dato necesitas además del promedio para decidir?
-\end{frame}
-\begin{frame}{Dispersión}
-\fontsize{14}{18}\selectfont\begin{itemize}\setlength{\itemsep}{.45cm}
-\item Rango A = 4 min; rango B = 10 min.
-\item Desviación media A = 1 min; B = 8/3 $\approx$ 2.67 min.
-\item La desviación media utiliza distancias absolutas a la media.
-\end{itemize}
-\end{frame}
-\begin{frame}{Decisión y límites}
-\fontsize{14}{18}\selectfont\begin{itemize}\setlength{\itemsep}{.45cm}
-\item Si se prioriza previsibilidad, el conjunto A es más regular.
-\item No puede afirmarse mayor calidad sin datos sobre resultados y condiciones.
-\item Seis observaciones didácticas no permiten generalizar a una industria.
-\end{itemize}
-\end{frame}
-\begin{frame}{Secuencia propuesta}
-\fontsize{14}{18}\selectfont\begin{itemize}\setlength{\itemsep}{.45cm}
-\item Estimar, ordenar datos, calcular y representar.
-\item Contrastar una primera decisión con las medidas obtenidas.
-\item Rotar registro, cálculo, representación y explicación.
-\end{itemize}
-\end{frame}
-\begin{frame}{Evaluación}
-\fontsize{14}{18}\selectfont\begin{itemize}\setlength{\itemsep}{.45cm}
-\item Valorar cálculo, lectura gráfica y justificación.
-\item Pedir un tercer conjunto con la misma media y otra dispersión.
-\item Conservar la explicación inicial y su revisión.
-\end{itemize}
-\end{frame}
-\begin{frame}{Representación y explicación}
-\centering\maxsizebox{.94\linewidth}{6.0cm}{\resizebox{.86\linewidth}{!}{\begin{tikzpicture}\begin{axis}[width=11cm,height=6cm,ybar,bar width=9pt,xlabel={Ajuste},ylabel={Tiempo (min)},symbolic x coords={1,2,3,4,5,6},xtick=data,ymin=0,legend pos=north west,grid=major]
-\addplot[fill=iiiepeBlue] coordinates {(1,8)(2,9)(3,10)(4,10)(5,11)(6,12)};\addplot[fill=iiiepeAqua] coordinates {(1,5)(2,7)(3,10)(4,10)(5,13)(6,15)};\legend{A,B}\end{axis}\end{tikzpicture}}}\par\vspace{.15cm}\small Explica qué relación matemática muestra la representación.
-\end{frame}
-\begin{frame}{Reto de transferencia}
-\fontsize{14}{18}\selectfont Reemplaza el 12 de A por 30; explica qué medidas cambian y qué información necesitas para decidir.\par\vspace{.5cm}Explica tu procedimiento, comprueba la respuesta y nombra una condición que podría cambiarla.
-\end{frame}
-\begin{frame}{Referencias}
-\fontsize{9}{11}\selectfont\raggedright 
-{\setlength{\parskip}{6pt}
-\par\hangindent=1.27cm\hangafter=1  IIIEPE. (2026). \textit{Sesión 6; estructura de la ficha de trabajo y rúbrica para expositores}. EVA posgrado.
-\par\hangindent=1.27cm\hangafter=1  Secretaría de Educación Pública. (2024). \textit{Programa de estudio para la educación secundaria: Programa sintético de la Fase 6}. SEP.
-}
 
-
+% SLIDE 02: FASE STEAM 1 - RETO DETONADOR
+\begin{frame}{Fase 1 STEAM · Saberes Comunitarios y Reto de Mantenimiento}
+\small
+\textbf{Contexto Operativo Industrial:} En una celda de manufactura, dos cuadrillas técnicas realizan $n=6$ ajustes preventivos a un mecanismo crítico. Se registran los tiempos (minutos):
+\vspace{0.25cm}
+\begin{columns}[T]
+	\begin{column}{0.48\textwidth}
+		\begin{block}{Cuadrilla A (Proceso Alfa)}
+			\centering \textbf{Datos:} 8, 9, 10, 10, 11, 12 min\\[0.1cm]
+			$\bar{x}_A = \frac{60}{6} = 10.0$ min
+		\end{block}
+	\end{column}
+	\begin{column}{0.48\textwidth}
+		\begin{block}{Cuadrilla B (Proceso Beta)}
+			\centering \textbf{Datos:} 5, 7, 10, 10, 13, 15 min\\[0.1cm]
+			$\bar{x}_B = \frac{60}{6} = 10.0$ min
+		\end{block}
+	\end{column}
+\end{columns}
+\vspace{0.35cm}
+\begin{alertblock}{Pregunta Detonadora para la Comunidad de Aprendizaje}
+	Si ambos equipos promedian exactamente \textbf{10 minutos por ajuste}, ¿basta el promedio aritmético para decidir qué cuadrilla ofrece mayor confiabilidad y menor riesgo operativo?
+\end{alertblock}
 \end{frame}
+
+% SLIDE 03: PARADOJA DE LA TENDENCIA CENTRAL
+\begin{frame}{Paradoja de la Tendencia Central}
+\small
+Al calcular exclusivamente las medidas de centralidad, observamos una coincidencia absoluta:
+\vspace{0.2cm}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\linewidth}{X|c|c|>{\raggedright\arraybackslash}X}
+\toprule
+\rowcolor{iiiepePale} \textbf{Medida Estadística} & \textbf{Cuadrilla A} & \textbf{Cuadrilla B} & \textbf{Interpretación Didáctica} \\
+\midrule
+\textbf{Media Aritmética ($\bar{x}$)} & 10.0 min & 10.0 min & Centro de gravedad idéntico en ambos grupos. \\
+\textbf{Mediana ($\tilde{x}$)} & 10.0 min & 10.0 min & El valor central de la serie ordenada es 10. \\
+\textbf{Moda ($\hat{x}$)} & 10.0 min & 10.0 min & La frecuencia máxima corresponde a 10 min. \\
+\bottomrule
+\end{tabularx}
+\vspace{0.3cm}
+\begin{itemize}\setlength{\itemsep}{0.15cm}
+	\item \textbf{Ilusión de Homogeneidad:} Quedarse solo en la tendencia central enmascara el comportamiento real de los procesos.
+	\item \textbf{Necesidad Epistémica:} Requerimos métricas que cuantifiquen la \textbf{separación o dispersión} respecto al valor central.
+\end{itemize}
+\end{frame}
+
+% SLIDE 04: MEDIDAS DE DISPERSION Y DESVIACION MEDIA
+\begin{frame}{Fases 2 y 3 STEAM · Medidas de Dispersión y Desviación Media}
+\small
+\begin{columns}[T]
+	\begin{column}{0.46\textwidth}
+		\textbf{Definición Formal de Desviación Media ($DM$):}
+		\begin{equation*}
+			DM = \frac{\sum_{i=1}^{n} |x_i - \bar{x}|}{n}
+		\end{equation*}
+		\vspace{-0.2cm}
+		\begin{itemize}\setlength{\itemsep}{0.1cm}
+			\item Distancia promedio de los datos a la media.
+			\item Emplea valor absoluto para evitar anulación.
+			\item No confundir con varianza ni desviación estándar.
+		\end{itemize}
+	\end{column}
+	\begin{column}{0.52\textwidth}
+		\renewcommand{\arraystretch}{1.15}
+		\begin{tabularx}{\linewidth}{l|c|c}
+			\toprule
+			\rowcolor{iiiepePale} \textbf{Parámetro} & \textbf{Proceso A} & \textbf{Proceso B} \\
+			\midrule
+			Rango ($x_{\max}-x_{\min}$) & $12 - 8 = \mathbf{4}$ min & $15 - 5 = \mathbf{10}$ min \\
+			Distancias $|x_i - 10|$ & $2, 1, 0, 0, 1, 2$ & $5, 3, 0, 0, 3, 5$ \\
+			Suma de distancias & $\sum = 6$ & $\sum = 16$ \\
+			\textbf{Desviación Media ($DM$)} & $\mathbf{1.0}$ \textbf{min} & $\frac{16}{6} = \mathbf{2.67}$ \textbf{min} \\
+			\bottomrule
+		\end{tabularx}
+	\end{column}
+\end{columns}
+\vspace{0.3cm}
+\centering
+\colorbox{iiiepePale}{\textbf{Hallazgo Matemático:} La variabilidad del Proceso B es casi el \textbf{triple} que la del Proceso A.}
+\end{frame}
+
+% SLIDE 05: FASE STEAM 4 - REPRESENTACION GRAFICA
+\begin{frame}{Fase 4 STEAM · Lectura e Interpretación Gráfica Comparativa}
+\begin{columns}[c]
+	\begin{column}{0.60\textwidth}
+		\centering
+		\begin{tikzpicture}
+			\begin{axis}[
+				width=9.5cm,height=5.2cm,
+				ybar=2pt,bar width=7pt,
+				xlabel={\footnotesize Número de Ajuste de Mantenimiento},
+				ylabel={\footnotesize Tiempo (minutos)},
+				symbolic x coords={1,2,3,4,5,6},
+				xtick=data,
+				ymin=0,ymax=18,
+				ytick={0,5,10,15},
+				legend pos=north west,
+				grid=major,
+				grid style={dashed,gray!30}
+			]
+				\addplot[fill=iiiepeBlue] coordinates {(1,8)(2,9)(3,10)(4,10)(5,11)(6,12)};
+				\addplot[fill=iiiepeAqua] coordinates {(1,5)(2,7)(3,10)(4,10)(5,13)(6,15)};
+				\draw[dashed,thick,red!80!black] (axis cs:1,10) -- (axis cs:6,10) node[right,pos=0.98,font=\tiny] {$\bar{x}=10$};
+				\legend{\scriptsize Proceso A (Compacto),\scriptsize Proceso B (Disperso)}
+			\end{axis}
+		\end{tikzpicture}
+	\end{column}
+	\begin{column}{0.38\textwidth}
+		\small
+		\textbf{Análisis de Lectura Gráfica:}
+		\begin{itemize}\setlength{\itemsep}{0.12cm}
+			\item \textbf{Proceso A:} Barras compactas ceñidas a la línea media (8 a 12 min).
+			\item \textbf{Proceso B:} Severa oscilación con valles en 5 min y picos en 15 min.
+			\item La gráfica confirma visualmente la magnitud del rango y la desviación media.
+		\end{itemize}
+	\end{column}
+\end{columns}
+\end{frame}
+
+% SLIDE 06: DECISION Y LIMITES
+\begin{frame}{Toma de Decisiones Técnicas y Límites de la Inferencia}
+\small
+\begin{columns}[T]
+	\begin{column}{0.48\textwidth}
+		\begin{block}{Criterio de Previsibilidad Operativa}
+			\begin{itemize}\setlength{\itemsep}{0.1cm}
+				\item En paros programados de planta, la \textbf{regularidad} es prioritaria para no detener la producción.
+				\item \textbf{Elección Fundada:} Se recomienda el \textbf{Proceso A} por su bajo rango (4 min) y mínima dispersión ($DM = 1.0$ min).
+			\end{itemize}
+		\end{block}
+	\end{column}
+	\begin{column}{0.48\textwidth}
+		\begin{block}{Límites Epistémicos de la Inferencia}
+			\begin{itemize}\setlength{\itemsep}{0.1cm}
+				\item Seis mediciones simuladas sirven para modelación didáctica, \textbf{no} para generalización industrial.
+				\item No puede inferirse mayor calidad intrínseca sin auditar desgaste, complejidad técnica y condiciones ambientales.
+			\end{itemize}
+		\end{block}
+	\end{column}
+\end{columns}
+\vspace{0.25cm}
+\centering \footnotesize \textcolor{iiiepeNavy}{\textbf{Principio Formativo:} Toda decisión estadística debe explicitar su criterio de optimización y sus supuestos límite.}
+\end{frame}
+
+% SLIDE 07: ESTRUCTURA EN 5 FASES STEAM NEM
+\begin{frame}{Estructura Didáctica por 5 Fases STEAM (Nueva Escuela Mexicana)}
+\footnotesize
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\linewidth}{p{2.3cm}|X|p{4.2cm}}
+\toprule
+\rowcolor{iiiepePale} \textbf{Fase STEAM} & \textbf{Acción Pedagógica y Mediación Docente} & \textbf{Evidencia de Aprendizaje} \\
+\midrule
+\textbf{1. Saberes Previos} & Presentación del reto detonador industrial; sondeo de intuición comunitaria. & Predicción individual escrita sin cálculo formal. \\
+\textbf{2. Plan de Indagación} & Definición de variables, unidad de medida (minutos) y selección de métricas. & Plan de trabajo en equipo y asignación de roles. \\
+\textbf{3. Organización y Cálculo} & Cálculo algebraico de medidas centrales, rango y fórmula formal de $DM$. & Tabla de distancias absolutas y algoritmos trazables. \\
+\textbf{4. Comunicación y Decisión} & Construcción del gráfico de barras y sustentación argumentada de la elección. & Gráfica comparativa y dictamen técnico justificado. \\
+\textbf{5. Metacognición} & Contraste entre la predicción inicial y el análisis con medidas de dispersión. & Ficha de autoevaluación y reflexión del cambio de postura. \\
+\bottomrule
+\end{tabularx}
+\end{frame}
+
+% SLIDE 08: EJES ARTICULADORES: CRITICO E INCLUSION
+\begin{frame}{Ejes Articuladores: Pensamiento Crítico e Inclusión}
+\small
+\begin{columns}[T]
+	\begin{column}{0.48\textwidth}
+		\begin{block}{Eje: Pensamiento Crítico}
+			\begin{itemize}\setlength{\itemsep}{0.12cm}
+				\item \textbf{Cuestionamiento del Promedio:} Desmitificar que un promedio idéntico garantiza procesos iguales.
+				\item \textbf{Argumentación con Evidencia:} Exigir datos de dispersión antes de tomar decisiones técnicas o pedagógicas.
+				\item \textbf{Detección de Sesgos:} Identificar riesgos de subestimación temporal en la operación.
+			\end{itemize}
+		\end{block}
+	\end{column}
+	\begin{column}{0.48\textwidth}
+		\begin{block}{Eje: Inclusión y Trabajo Colaborativo}
+			\begin{itemize}\setlength{\itemsep}{0.12cm}
+				\item \textbf{Roles Rotativos:} Registro de datos, cálculo algorítmico, trazado gráfico y vocería argumentativa.
+				\item \textbf{Diseño Universal (DUA):} Apoyos visuales graduados para estudiantes que requieran andamiaje numérico.
+				\item \textbf{Diversidad de Aportes:} Valoración equitativa de habilidades analíticas y comunicativas.
+			\end{itemize}
+		\end{block}
+	\end{column}
+\end{columns}
+\end{frame}
+
+% SLIDE 09: RETO DE TRANSFERENCIA Y SENSIBILIDAD
+\begin{frame}{Reto de Transferencia y Prueba de Sensibilidad ante Outliers}
+\small
+\textbf{Situación Imprevista:} En el Proceso A, una falla mecánica inesperada eleva el sexto ajuste de 12 a \textbf{30 minutos}. Datos nuevos: $8, 9, 10, 10, 11, \mathbf{30}$.
+\vspace{0.2cm}
+\begin{columns}[T]
+	\begin{column}{0.48\textwidth}
+		\renewcommand{\arraystretch}{1.15}
+		\begin{tabularx}{\linewidth}{l|c|c}
+			\toprule
+			\rowcolor{iiiepePale} \textbf{Medida} & \textbf{Antes ($x_6=12$)} & \textbf{Después ($x_6=30$)} \\
+			\midrule
+			Media ($\bar{x}$) & 10.0 min & $\mathbf{13.0}$ \textbf{min} ($+30\%$) \\
+			Mediana ($\tilde{x}$) & 10.0 min & $\mathbf{10.0}$ \textbf{min} (\textbf{Robusta}) \\
+			Rango ($R$) & 4.0 min & $\mathbf{22.0}$ \textbf{min} ($+450\%$) \\
+			Desv. Media ($DM$) & 1.0 min & $\mathbf{5.67}$ \textbf{min} ($\times 5.6$) \\
+			\bottomrule
+		\end{tabularx}
+	\end{column}
+	\begin{column}{0.48\textwidth}
+		\begin{alertblock}{Conclusión Matemática Crucial}
+			\begin{itemize}\setlength{\itemsep}{0.1cm}
+				\item La \textbf{mediana es robusta} ante valores atípicos; preserva la centralidad del conjunto.
+				\item La \textbf{media y la desviación media} son altamente sensibles a valores extremos (outliers).
+				\item Enseña al alumno a detectar eventos críticos en sistemas de mantenimiento.
+			\end{itemize}
+		\end{alertblock}
+	\end{column}
+\end{columns}
+\end{frame}
+
+% SLIDE 10: EVALUACION FORMATIVA Y FICHA DIDACTICA
+\begin{frame}{Estrategia de Evaluación Formativa y Ficha de Trabajo}
+\small
+\begin{columns}[T]
+	\begin{column}{0.50\textwidth}
+		\textbf{Rúbrica de Desempeño (4 Niveles):}
+		\begin{enumerate}\setlength{\itemsep}{0.1cm}
+			\item \textbf{Destacado:} Calcula medidas con precisión, vincula gráfica y tabla, justifica con criterios técnicos y evalúa outliers.
+			\item \textbf{Autónomo:} Obtiene medidas de centro y dispersión y argumenta su recomendación.
+			\item \textbf{Básico:} Calcula la media pero confunde dispersión con tendencia central.
+			\item \textbf{Inicial:} Requiere andamiaje en la sumatoria modular y el cálculo de la media.
+		\end{enumerate}
+	\end{column}
+	\begin{column}{0.46\textwidth}
+		\begin{block}{Ficha del Estudiante (3 Retos)}
+			\begin{itemize}\setlength{\itemsep}{0.1cm}
+				\item \textbf{Reto 1:} Cálculo completo de centro y dispersión para procesos A y B.
+				\item \textbf{Reto 2:} Elaboración gráfica e informe de recomendación técnica.
+				\item \textbf{Reto 3:} Prueba de sensibilidad con outlier de 30 min y justificación.
+				\item \textbf{Metacognición:} Dos preguntas de autorregulación y coevaluación entre pares.
+			\end{itemize}
+		\end{block}
+	\end{column}
+\end{columns}
+\end{frame}
+
+% SLIDE 11: CONCLUSIONES Y REFERENCIAS
+\begin{frame}{Conclusiones y Referencias Oficiales}
+\small
+\textbf{Reflexión Pedagógica Final:} La estadística formativa humanista no clasifica estudiantes ni procesos con promedios reductores; desentraña la variabilidad para acompañar su evolución, diagnosticar necesidades y tomar decisiones colegiadas informadas.
+\vspace{0.25cm}
+\begin{block}{Referencias Normativas y Bibliográficas (APA 7)}
+	\footnotesize
+	\begin{itemize}\setlength{\itemsep}{0.08cm}
+		\item Batanero, C. (2001). \textit{Didáctica de la Estadística}. Grupo de Investigación en Educación Estadística, Universidad de Granada.
+		\item IIIEPE. (2026). \textit{Temas Selectos de Matemáticas I: Programa de Asignatura y Rúbrica de Exposición}. Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León.
+		\item Secretaría de Educación Pública. (2024). \textit{Programa de estudio para la educación secundaria: Programa sintético de la Fase 6}. SEP.
+	\end{itemize}
+\end{block}
+\vspace{0.15cm}
+\centering \scriptsize \textcolor{iiiepeNavy}{\textbf{IIIEPE · MAEM · PFM02} \textbar\ Mtro. Martín Jonathan de la Cruz Muñoz (Matrícula 00874)}
+\end{frame}
+
 \end{document}
