@@ -1,17 +1,17 @@
 \documentclass[spanish,letterpaper,oneside]{article}
 
 % Datos del documento
-\def\documenttitle {Estadística para comparar dos procesos de mantenimiento}
-\def\documentsubtitle {Temas selectos de matemáticas I}
-\def\documentsubject {Actividad 6 · Ficha y secuencia para exposición}
+\def\documenttitle {Estadística y Medidas de Dispersión en Procesos de Mantenimiento}
+\def\documentsubtitle {Temas Selectos de Matemáticas I · PFM02}
+\def\documentsubject {Actividad 6 · Reporte Académico, Solución Matemática y Guion de Exposición}
 \def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
-\def\coursename {Temas selectos de matemáticas I}
+\def\coursename {Temas Selectos de Matemáticas I}
 \def\coursecode {PFM02}
 
 % Identidad institucional
 \def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León}
 \def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
-\def\universitydepartment {Temas selectos de matemáticas I}
+\def\universitydepartment {Temas Selectos de Matemáticas I}
 \def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
 \def\universitydepartmentimagecfg {height=1.75cm}
 \def\universitylocation {Monterrey, Nuevo León}
@@ -19,7 +19,7 @@
 \def\studentid {00874}
 \def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
 \def\programperiod {1er tetramestre, marzo--julio de 2026}
-\def\programmodality {Modalidad presencial}
+\def\programmodality {Modalidad presencial / EVA Posgrados}
 \def\programshort {MAEM}
 
 \def\authortable {
@@ -27,11 +27,12 @@
     \textbf{Alumno:} & \studentfullname \\
     Matrícula: & \studentid \\
     Correo institucional: & \studentemail \\
-    Unidad: & \coursename \\
-    Programa: & \programshort \\
+    Unidad Curricular: & \coursename\ (\coursecode) \\
+    Docente titular: & Profr. Carlos Hugo De León González \\
+    Programa: & \programshort\ (\universityfaculty) \\
     Periodo: & \programperiod \\
     & \\
-    \multicolumn{2}{l}{Fecha de realización: 13 de octubre de 2026} \\
+    \multicolumn{2}{l}{Fecha de realización: Noviembre de 2026} \\
     \multicolumn{2}{l}{\universitylocation}
   \end{tabular}
 }
@@ -43,6 +44,7 @@
 \usepackage{array}
 \usepackage{longtable}
 \usepackage{pdflscape}
+\usepackage{amsmath,amssymb}
 \usepackage{tikz}
 \usepackage[most]{tcolorbox}
 \usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
@@ -87,99 +89,202 @@
   colbacktitle=iiiepeAqua!7,
   title={Ficha de la lectura},#1}
 
-
-
-\usepackage{tabularx,colortbl,pgfplots,enumitem,needspace}\pgfplotsset{compat=1.18}\definecolor{iiiepePale}{HTML}{EEF5F8}
+\usepackage{tabularx,colortbl,pgfplots,enumitem,needspace}
+\pgfplotsset{compat=1.18}
+\definecolor{iiiepePale}{HTML}{EEF5F8}
 \setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
-\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 6}\setstretch{1.3}\raggedbottom
-\section{Problema y propósito de la secuencia}
-Comparar dos procesos de mantenimiento exige considerar tanto el tiempo típico como su variación. El propósito es leer, interpretar y comunicar datos, calcular media, mediana, moda, rango y desviación media, y justificar una decisión. La secuencia se dirige de manera propuesta a secundaria y se vincula con mis clases técnicas como contexto de transferencia; los datos siguientes son didácticos simulados, no registros de estudiantes o empresas.
-\section{Fase 1 · Saberes de nuestra comunidad}
-Dos equipos realizan seis ajustes de un mecanismo. ¿Cuál ofrece mayor regularidad si ambos tienen el mismo tiempo medio? Antes de calcular, se solicita anticipar si el promedio basta y explicar por qué.
 
+\begin{document}
+\insertcoverwatermark
+\templatePortrait
+\templatePagecfg
+\templateFinalcfg
+\fancyfoot{}
+\fancyfoot[L]{\scriptsize IIIEPE · MAEM · PFM02}
+\fancyfoot[C]{\scriptsize\thepage}
+\fancyfoot[R]{\scriptsize Actividad 6 · Clase Muestra}
+\setstretch{1.25}\raggedbottom
 
+\section{Problema, Propósito y Contexto de la Secuencia Didáctica}
+El análisis de procesos técnicos e industriales exige valorar tanto la tendencia central como el grado de variabilidad o dispersión de los datos observados. En el marco de la asignatura \textit{Temas Selectos de Matemáticas I} (PFM02), impartida por el profesor Carlos Hugo De León González, este trabajo aborda la planificación didáctica, solución matemática formal y diseño de la clase muestra en video correspondiente a la Actividad 6.
+
+El propósito central es modelar una experiencia de aprendizaje activo para estudiantes de educación secundaria y bachillerato técnico, basada en el enfoque STEAM y los campos formativos de la Nueva Escuela Mexicana (NEM). La secuencia sitúa a los estudiantes frente a un dilema de control de calidad: dos cuadrillas técnicas realizan ajustes preventivos a un mecanismo crítico con idéntico tiempo medio ($\bar{x} = 10.0$ min), demandando el cálculo riguroso de rango y desviación media para justificar una decisión operativa fundada.
+
+\section{Fase 1 STEAM · Saberes de Nuestra Comunidad y Reto Detonador}
+En una planta de manufactura, se cronometran $n=6$ ajustes de mantenimiento realizados por dos proveedores de servicio (Proceso Alfa y Proceso Beta). Los registros obtenidos (minutos) son:
+
+\begin{center}
 {\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
-\rowcolor{iiiepePale} \textbf{Proceso} & \textbf{Tiempos simulados (min)} \\\hline
+\begin{longtable}{|>{\raggedright\arraybackslash}p{3.5cm}|>{\raggedright\arraybackslash}p{6.5cm}|>{\raggedright\arraybackslash}p{4cm}|}\hline
+\rowcolor{iiiepePale} \textbf{Cuadrilla / Proceso} & \textbf{Tiempos observados (minutos)} & \textbf{Promedio aritmético ($\bar{x}$)} \\\hline
 \endfirsthead
 \hline
-\rowcolor{iiiepePale} \textbf{Proceso} & \textbf{Tiempos simulados (min)} \\\hline
+\rowcolor{iiiepePale} \textbf{Cuadrilla / Proceso} & \textbf{Tiempos observados (minutos)} & \textbf{Promedio aritmético ($\bar{x}$)} \\\hline
 \endhead
-A & 8, 9, 10, 10, 11, 12 \\\hline
-B & 5, 7, 10, 10, 13, 15 \\\hline
+Proceso A (Alfa) & $8,\, 9,\, 10,\, 10,\, 11,\, 12$ & $\bar{x}_A = 60/6 = 10.0$ min \\\hline
+Proceso B (Beta) & $5,\, 7,\, 10,\, 10,\, 13,\, 15$ & $\bar{x}_B = 60/6 = 10.0$ min \\\hline
 \end{longtable}}
+\end{center}
 
+\textbf{Pregunta detonadora inicial:} Si ambos procesos tienen exactamente el mismo promedio de diez minutos, ¿es indistinto contratar a cualquiera de las dos cuadrillas? ¿Qué información técnica o matemática hace falta para emitir una recomendación con garantía de predictibilidad?
 
-\section{Fase 2 · Plan e indagación}
-Se ordenan los datos, se identifica la variable cuantitativa y su unidad, y se acuerda comparar medidas centrales y dispersión. La desviación media se calcula como $DM=\sum|x_i-\bar{x}|/n$. No se confunde con varianza ni desviación estándar. Cada equipo asigna registro, cálculo, representación y revisión, rotando las tareas.
-\section{Fase 3 · Organización de respuestas}
-Para A, la suma es 60 y $\bar{x}=60/6=10$; la mediana es $(10+10)/2=10$; la moda es 10; el rango es $12-8=4$. Las desviaciones absolutas son $2,1,0,0,1,2$; $DM_A=6/6=1$ min. Para B, la suma también es 60; media, mediana y moda valen 10. El rango es $15-5=10$ y $DM_B=(5+3+0+0+3+5)/6=8/3\approx2.67$ min.
+\section{Fase 2 STEAM · Plan de Indagación y Marco Conceptual}
+La comunidad escolar acuerda definir la variable de estudio ($X$: tiempo de ajuste mecánico, en minutos), ordenar las series numéricas y contrastar medidas centrales con medidas de dispersión.
 
+Se establece con rigor conceptual la diferencia entre:
+\begin{enumerate}[label=\alph*)]
+	\item \textbf{Medidas de Tendencia Central:} Identifican la posición o centro de gravedad del conjunto (Media, Mediana, Moda).
+	\item \textbf{Medidas de Dispersión:} Cuantifican qué tan concentrados o alejados se encuentran los datos individuales respecto a la centralidad (Rango, Desviación Media).
+\end{enumerate}
 
+La fórmula matemática formal de la \textbf{Desviación Media ($DM$)} se explicita como:
+\begin{equation}
+	DM = \frac{\sum_{i=1}^{n} |x_i - \bar{x}|}{n}
+\end{equation}
+Se enfatiza pedagógicamente que la suma de desviaciones algebraicas simples $\sum (x_i - \bar{x})$ es siempre igual a cero por definición de la media aritmética; de ahí la necesidad epistémica de emplear el valor absoluto $|x_i - \bar{x}|$ para medir magnitudes físicas de distancia. No se confunde la desviación media con la varianza ni con la desviación estándar muestral.
+
+\section{Fase 3 STEAM · Organización de Respuestas y Demostración Matemática}
+El desarrollo cuantitativo detallado para ambas cuadrillas es el siguiente:
+
+\subsection{Cálculos para el Proceso A}
+\begin{itemize}
+	\item \textbf{Suma y Media:} $\sum x_i = 8+9+10+10+11+12 = 60 \implies \bar{x}_A = \frac{60}{6} = 10.0\text{ min}$.
+	\item \textbf{Mediana:} Posiciones centrales 3 y 4: $\tilde{x}_A = \frac{10+10}{2} = 10.0\text{ min}$.
+	\item \textbf{Moda:} Dato con mayor repetición: $\hat{x}_A = 10.0\text{ min}$.
+	\item \textbf{Rango:} $R_A = x_{\max} - x_{\min} = 12 - 8 = 4.0\text{ min}$.
+	\item \textbf{Distancias absolutas:} $|8-10|=2$, $|9-10|=1$, $|10-10|=0$, $|10-10|=0$, $|11-10|=1$, $|12-10|=2$.
+	\item \textbf{Suma de distancias:} $2 + 1 + 0 + 0 + 1 + 2 = 6.0$.
+	\item \textbf{Desviación Media:}
+	\begin{equation*}
+		DM_A = \frac{6.0}{6} = 1.0\text{ min}
+	\end{equation*}
+\end{itemize}
+
+\subsection{Cálculos para el Proceso B}
+\begin{itemize}
+	\item \textbf{Suma y Media:} $\sum x_i = 5+7+10+10+13+15 = 60 \implies \bar{x}_B = \frac{60}{6} = 10.0\text{ min}$.
+	\item \textbf{Mediana:} $\tilde{x}_B = \frac{10+10}{2} = 10.0\text{ min}$.
+	\item \textbf{Moda:} $\hat{x}_B = 10.0\text{ min}$.
+	\item \textbf{Rango:} $R_B = 15 - 5 = 10.0\text{ min}$.
+	\item \textbf{Distancias absolutas:} $|5-10|=5$, $|7-10|=3$, $|10-10|=0$, $|10-10|=0$, $|13-10|=3$, $|15-10|=5$.
+	\item \textbf{Suma de distancias:} $5 + 3 + 0 + 0 + 3 + 5 = 16.0$.
+	\item \textbf{Desviación Media:}
+	\begin{equation*}
+		DM_B = \frac{16.0}{6} = \frac{8}{3} \approx 2.6667\text{ min}
+	\end{equation*}
+\end{itemize}
+
+\begin{center}
 {\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.3\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.35\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.35\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
-\rowcolor{iiiepePale} \textbf{Medida} & \textbf{Proceso A} & \textbf{Proceso B} \\\hline
+\begin{longtable}{|>{\raggedright\arraybackslash}p{4cm}|>{\centering\arraybackslash}p{4cm}|>{\centering\arraybackslash}p{4cm}|}\hline
+\rowcolor{iiiepePale} \textbf{Medida Estadística} & \textbf{Proceso A (Alfa)} & \textbf{Proceso B (Beta)} \\\hline
 \endfirsthead
 \hline
-\rowcolor{iiiepePale} \textbf{Medida} & \textbf{Proceso A} & \textbf{Proceso B} \\\hline
+\rowcolor{iiiepePale} \textbf{Medida Estadística} & \textbf{Proceso A (Alfa)} & \textbf{Proceso B (Beta)} \\\hline
 \endhead
-Media & 10 min & 10 min \\\hline
-Mediana & 10 min & 10 min \\\hline
-Moda & 10 min & 10 min \\\hline
-Rango & 4 min & 10 min \\\hline
-Desviación media & 1 min & 2.67 min \\\hline
+Media Aritmética ($\bar{x}$) & 10.0 min & 10.0 min \\\hline
+Mediana ($\tilde{x}$) & 10.0 min & 10.0 min \\\hline
+Moda ($\hat{x}$) & 10.0 min & 10.0 min \\\hline
+Rango ($R$) & 4.0 min & 10.0 min \\\hline
+Desviación Media ($DM$) & \textbf{1.0 min} & \textbf{2.67 min} \\\hline
 \end{longtable}}
+\end{center}
 
+\section{Fase 4 STEAM · Comunicación, Lectura Gráfica y Toma de Decisiones}
+La representación gráfica en barras permite confrontar las dos distribuciones en el plano cartesiano:
 
-\section{Fase 4 · Comunicación y decisión}
-\begin{center}\begin{tikzpicture}\begin{axis}[width=11cm,height=6cm,ybar,bar width=9pt,xlabel={Ajuste},ylabel={Tiempo (min)},symbolic x coords={1,2,3,4,5,6},xtick=data,ymin=0,legend pos=north west,grid=major]
-\addplot[fill=iiiepeBlue] coordinates {(1,8)(2,9)(3,10)(4,10)(5,11)(6,12)};\addplot[fill=iiiepeAqua] coordinates {(1,5)(2,7)(3,10)(4,10)(5,13)(6,15)};\legend{A,B}\end{axis}\end{tikzpicture}\end{center}
-Si la prioridad es previsibilidad, elegiría A porque presenta menor dispersión con igual tiempo medio. No afirmaría mayor calidad o productividad sin información sobre resultados, complejidad y condiciones. Los datos de seis ajustes sirven para razonar; no justifican una generalización industrial.
-\section{Preguntas que convierten los datos en una decisión}
-Con el mismo promedio, la elección entre procesos depende de la necesidad. Para una cita con hora comprometida, la regularidad de A puede ser preferible; para un ajuste excepcional, haría falta conocer complejidad, calidad y condiciones. Por eso la recomendación debe incluir el criterio y la información que falta.
-Una prueba de sensibilidad reemplaza el último tiempo de A, 12, por 30. La nueva media es $78/6=13$, la mediana permanece en 10 y el rango aumenta a 22. Las desviaciones respecto de 13 son $5,4,3,3,2,17$ y la desviación media es $34/6=17/3\approx5.67$. Esta comparación muestra por qué un valor extremo puede alterar promedio y dispersión sin modificar la mediana.
-La gráfica de barras comunica diferencias de tiempos entre ajustes; no permite inferir por sí sola cómo ocurrió el proceso. Pediría identificar una característica que se observa en la gráfica y otra que requiere cálculo. El cierre individual solicitaría recomendar un proceso, justificar la elección con dos medidas y nombrar una condición que podría cambiarla.
-\section{Secuencia de aplicación y evaluación}
-Elegir entre procesos considerando centro y dispersión. La duración propuesta es de 90 minutos, ajustable al diagnóstico y a los recursos. Esta planeación sigue la progresión de los recursos institucionales (IIIEPE, 2026); los tiempos y apoyos son decisiones de codiseño, no datos de una aplicación ya realizada.
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+	width=11.5cm,height=5.8cm,
+	ybar=2pt,bar width=8pt,
+	xlabel={Número de Ajuste},ylabel={Tiempo (minutos)},
+	symbolic x coords={1,2,3,4,5,6},xtick=data,
+	ymin=0,ymax=18,ytick={0,5,10,15},
+	legend pos=north west,grid=major,grid style={dashed,gray!30}
+]
+\addplot[fill=iiiepeBlue] coordinates {(1,8)(2,9)(3,10)(4,10)(5,11)(6,12)};
+\addplot[fill=iiiepeAqua] coordinates {(1,5)(2,7)(3,10)(4,10)(5,13)(6,15)};
+\draw[dashed,thick,red!80!black] (axis cs:1,10) -- (axis cs:6,10) node[right,pos=0.98,font=\tiny] {$\bar{x}=10$};
+\legend{Proceso A (Compacto),Proceso B (Disperso)}
+\end{axis}
+\end{tikzpicture}
+\end{center}
 
-{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.23\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.49\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.28\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
-\rowcolor{iiiepePale} \textbf{Fase y tiempo} & \textbf{Actividad y mediación} & \textbf{Evidencia} \\\hline
+\textbf{Decisión Técnica Fundamentada:} Si la prioridad operativa es la \textbf{previsibilidad} (cumplimiento estricto de ventanas de paro para no retrasar líneas de ensamble continuas), se recomienda la contratación del \textbf{Proceso A}. Su desviación media de apenas 1.0 min y rango de 4 min garantizan estabilidad frente a la volatilidad del Proceso B ($DM = 2.67$ min, oscilación de 5 a 15 min).
+
+\textbf{Límites Epistémicos de la Inferencia:} Se explicita ante el grupo que una muestra de seis observaciones didácticas es un modelo pedagógico útil pero insuficiente para generalizar la capacidad de proceso industrial a largo plazo ($C_p, C_{pk}$); una conclusión definitiva exigiría muestreo estratificado y auditoría de condiciones de trabajo.
+
+\section{Fase 5 STEAM · Metacognición y Prueba de Sensibilidad ante Outliers}
+Para evaluar la comprensión conceptual y el sentido numérico, se plantea una prueba de estrés o sensibilidad: ¿Qué ocurre si en el Proceso A el último ajuste sufre una contingencia y dura \textbf{30 minutos}?
+
+Nuevo conjunto $A' = \{8, 9, 10, 10, 11, \mathbf{30}\}$:
+\begin{itemize}
+	\item \textbf{Nueva Media:} $\bar{x}_{A'} = \frac{8+9+10+10+11+30}{6} = \frac{78}{6} = 13.0\text{ min}$ (aumento del $30\%$).
+	\item \textbf{Nueva Mediana:} Sigue siendo $\tilde{x}_{A'} = \frac{10+10}{2} = 10.0\text{ min}$ (invariante).
+	\item \textbf{Nuevo Rango:} $R_{A'} = 30 - 8 = 22.0\text{ min}$.
+	\item \textbf{Nuevas desviaciones a 13:} $|8-13|=5$, $|9-13|=4$, $|10-13|=3$, $|10-13|=3$, $|11-13|=2$, $|30-13|=17$.
+	\item \textbf{Suma de distancias:} $5 + 4 + 3 + 3 + 2 + 17 = 34.0$.
+	\item \textbf{Nueva Desviación Media:}
+	\begin{equation*}
+		DM_{A'} = \frac{34}{6} = \frac{17}{3} \approx 5.6667\text{ min} \quad (\text{se quintuplica respecto al valor original de 1.0 min})
+	\end{equation*}
+\end{itemize}
+
+\textbf{Lección Formativa Crucial:} La mediana demuestra ser una medida estadística \textbf{robusta} ante valores atípicos (outliers), mientras que la media y la desviación media son altamente vulnerables. En contextos reales, esto enseña a no descartar un proveedor sin antes investigar si el retraso obedeció a una falla sistemática o a un evento fortuito aislado.
+
+\section{Guion Técnico y de Exposición en Video (Clase Muestra)}
+El video de clase muestra fue estructurado y producido en el estudio agéntico multimodal \textit{Video Studio AI} (`video-studio`) integrando voz neuronal de Amazon Polly (`Andres` - es-MX Neural), sincronización por marcas de habla y subtítulos SRT. A continuación se presenta el libreto de las 11 escenas clave:
+
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.2}
+\begin{longtable}{|p{2.2cm}|p{5.5cm}|p{6.8cm}|}\hline
+\rowcolor{iiiepePale} \textbf{Escena y Tiempo} & \textbf{Apoyo Visual y Gráficos} & \textbf{Parlamento de Locución (Mtro. Martín Jonathan de la Cruz Muñoz)} \\\hline
 \endfirsthead
 \hline
-\rowcolor{iiiepePale} \textbf{Fase y tiempo} & \textbf{Actividad y mediación} & \textbf{Evidencia} \\\hline
+\rowcolor{iiiepePale} \textbf{Escena y Tiempo} & \textbf{Apoyo Visual y Gráficos} & \textbf{Parlamento de Locución (Mtro. Martín Jonathan de la Cruz Muñoz)} \\\hline
 \endhead
-1. Reto y saberes (10 min) & Anticipar si un promedio basta para elegir un proceso. & Predicción individual y pregunta. \\\hline
-2. Plan de indagación (15 min) & Definir variable, unidad, medidas y criterio de decisión. & Plan explicado y criterios. \\\hline
-3. Construcción y análisis (30 min) & Calcular, representar y contrastar los dos conjuntos simulados. & Registro o procedimiento trazable. \\\hline
-4. Comunicación y aplicación (20 min) & Recomendar un proceso y analizar el efecto de un valor extremo. & Argumento con comprobación. \\\hline
-5. Metacognición (15 min) & Revisar el argumento inicial y declarar qué información falta. & Versión revisada y justificación. \\\hline
+01. Portada (00:00--00:28) & Diapositiva 1 con logo IIIEPE, datos MAEM, PFM02, expositor y docente. & Estimada comunidad académica del IIIEPE. Bienvenidos a esta clase muestra de Temas Selectos de Matemáticas I. Les saluda el maestro Martín Jonathan de la Cruz Muñoz (00874). Hoy abordaremos el análisis estadístico y las medidas de dispersión en la toma de decisiones técnicas bajo el enfoque STEAM de la NEM. \\\hline
+02. Reto Detonador (00:28--01:00) & Diapositiva 2 con celdas de manufactura y series de tiempos de cuadrillas A y B. & Iniciamos con la Fase Uno: Saberes comunitarios. Dos cuadrillas realizan seis ajustes preventivos a maquinaria crítica. El equipo A registra tiempos de 8 a 12 min; el equipo B de 5 a 15 min. Ambos promedian diez minutos. ¿Basta el promedio para elegir el mejor mantenimiento? \\\hline
+03. Tendencia Central (01:00--01:32) & Diapositiva 3 con tabla comparativa de medias, medianas y modas idénticas (10 min). & Al calcular medidas de centralidad descubrimos una paradoja: media, mediana y moda son idénticas en diez minutos. Si nos quedáramos solo con el promedio concluiríamos erróneamente que ambos procesos son iguales. Necesitamos cuantificar la variabilidad. \\\hline
+04. Medidas Dispersión (01:32--02:18) & Diapositiva 4 con la fórmula de Desviación Media y distancias absolutas paso a paso. & En las Fases Dos y Tres planificamos la indagación y calculamos la Desviación Media: la suma de distancias absolutas entre el número de datos. En el proceso A la desviación media es de un minuto exacto; en el proceso B es de dos punto sesenta y siete minutos: casi el triple de dispersión. \\\hline
+05. Lectura Gráfica (02:18--02:54) & Diapositiva 5 con gráfico pgfplots comparativo y línea de media horizontal. & En la Fase Cuatro comunicamos resultados. El gráfico de barras confirma lo que el álgebra demostró: las barras del proceso A son compactas y estables; las del proceso B oscilan bruscamente de 5 a 15 minutos. El alumno aprende a leer la fluctuación del proceso en la geometría del gráfico. \\\hline
+06. Decisión y Límites (02:54--03:26) & Diapositiva 6 con matriz de previsibilidad operativa y límites epistémicos. & Si una línea de ensamble exige previsibilidad para evitar paros críticos, el proceso A es contundentemente superior. Con rigor metodológico advertimos que seis datos didácticos modelan el fenómeno pero no permiten decretar calidad total sin auditar condiciones de trabajo. \\\hline
+07. Fases STEAM (03:26--03:58) & Diapositiva 7 con el ciclo interactivo de las cinco fases de la NEM. & El diseño didáctico sigue las cinco fases STEAM de la Nueva Escuela Mexicana: saberes comunitarios, plan de acción, cálculo algebraico, comunicación con datos empíricos y fase metacognitiva para contrastar predicciones intuitivas contra la evidencia matemática. \\\hline
+08. Ejes Articuladores (03:58--04:30) & Diapositiva 8 con Pensamiento Crítico (desmitificar promedios) e Inclusión (roles rotativos). & Articulamos dos ejes formativos: Pensamiento Crítico al dudar de un promedio simple y exigir métricas de variabilidad; e Inclusión mediante roles rotativos de registro, cálculo numérico, trazado y argumentación, garantizando participación equitativa. \\\hline
+09. Sensibilidad (04:30--05:08) & Diapositiva 9 con el impacto del dato atípico de 30 min (Mediana robusta vs Media). & Planteamos una prueba de sensibilidad: si el sexto ajuste sube a 30 minutos, la media sube a 13 y la desviación media a 5.67 minutos, pero la mediana permanece en 10 minutos. Demostramos la robustez de la mediana y la vulnerabilidad de la media ante valores extremos. \\\hline
+10. Evaluación (05:08--05:40) & Diapositiva 10 con la rúbrica holística de 4 niveles y ficha de 3 retos del alumno. & Nuestra evaluación es formativa y dialógica. Con una rúbrica cualitativa de cuatro niveles valoramos rigor, precisión gráfica y argumentación. La Ficha de Trabajo guía al alumno en tres retos e integra momentos de coevaluación entre pares. \\\hline
+11. Cierre y Referencias (05:40--06:12) & Diapositiva 11 con reflexión humanista, citas APA 7 y créditos institucionales IIIEPE. & Enseñar estadística desde el enfoque STEAM trasciende la memorización algorítmica: empodera a los alumnos para analizar críticamente su entorno. En el aula como en la industria, un promedio nunca cuenta toda la historia. Muchas gracias. \\\hline
 \end{longtable}}
-\subsection{Criterios observables y retroalimentación}
 
+\section{Estrategia de Evaluación Formativa y Rúbrica de Desempeño}
+La evaluación se orienta al acompañamiento del aprendizaje mediante el siguiente instrumento cualitativo:
+
+\begin{center}
 {\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.22\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.4\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.38\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
-\rowcolor{iiiepePale} \textbf{Criterio} & \textbf{Evidencia de logro} & \textbf{Acción si necesita apoyo} \\\hline
+\begin{longtable}{|>{\raggedright\arraybackslash}p{2.5cm}|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{3.5cm}|}\hline
+\rowcolor{iiiepePale} \textbf{Criterio} & \textbf{Nivel Destacado (10 pts)} & \textbf{Nivel Autónomo (8 pts)} & \textbf{Nivel en Desarrollo (6 pts)} \\\hline
 \endfirsthead
 \hline
-\rowcolor{iiiepePale} \textbf{Criterio} & \textbf{Evidencia de logro} & \textbf{Acción si necesita apoyo} \\\hline
+\rowcolor{iiiepePale} \textbf{Criterio} & \textbf{Nivel Destacado (10 pts)} & \textbf{Nivel Autónomo (8 pts)} & \textbf{Nivel en Desarrollo (6 pts)} \\\hline
 \endhead
-Medidas centrales & Calcula y diferencia media, mediana y moda en A y B. & Ordenar datos y mostrar qué operación define cada medida. \\\hline
-Dispersión & Obtiene rangos 4 y 10 y desviaciones medias 1 y 8/3. & Construir una fila de desviaciones absolutas antes de sumar. \\\hline
-Gráfica & Relaciona mayor amplitud de B con los cálculos, sin inferir causalidad. & Señalar dos puntos de la gráfica y vincularlos con sus distancias a la media. \\\hline
-Decisión & Recomienda según un criterio y nombra una limitación del conjunto. & Contrastar previsibilidad, calidad y tamaño del registro. \\\hline
+1. Rigor Conceptual & Diferencia categóricamente tendencia central y dispersión; define $DM$ sin confundir con varianza. & Calcula media y dispersión pero con justificación breve. & Confunde el promedio con la regularidad de los datos. \\\hline
+2. Procedimiento Matemático & Aplica la fórmula formal paso a paso con distancias absolutas trazables. & Obtiene los valores numéricos correctos omitiendo algunos pasos intermedios. & Errores en la sumatoria modular de desviaciones. \\\hline
+3. Lectura Gráfica & Conecta la amplitud de las barras con la dispersión sin atribuir causalidad infundada. & Interpreta las barras pero no vincula con la desviación media. & Lectura meramente descriptiva de alturas de barra. \\\hline
+4. Argumentación y Decisión & Recomienda con base en previsibilidad y declara explícitamente límites de la inferencia. & Elige la cuadrilla A pero sin mencionar condiciones operativas. & Decisión intuitiva sin sustento cuantitativo. \\\hline
+5. Metacognición y Outliers & Explica la robustez de la mediana frente a la sensibilidad de la media y $DM$. & Calcula los nuevos valores pero no contrasta la robustez de la mediana. & Dificultad para recalcular ante el valor extremo. \\\hline
 \end{longtable}}
-El instrumento es una propuesta docente. Cada criterio se registra como logrado con autonomía, logrado con apoyo o aún no demostrado; no se asigna una calificación observada sin aplicar la actividad. En la coevaluación, un compañero verifica un criterio y formula una pregunta; en la autoevaluación, el estudiante explica una corrección; el docente contrasta ambas evidencias y decide el siguiente apoyo.\subsection{Participación y apoyos}
-La inclusión se concreta en alternativas de representación y de acceso; el pensamiento crítico, en justificar y contrastar. Los roles de cálculo, registro y explicación se rotan para que todos produzcan una evidencia individual. Quien necesita apoyo dispone de un ejemplo parcial y preguntas graduadas; quien ya domina el procedimiento analiza un contraejemplo o cambia una condición. Estas acciones deben observarse durante la aplicación para valorar su funcionamiento.
+\end{center}
 
-\section{Conclusiones y reflexión pedagógica}
-En conclusión, el análisis estadístico demuestra que dos distribuciones con promedios idénticos pueden ocultar comportamientos radicalmente divergentes en dispersión y estabilidad de procesos. Por tanto, la toma de decisiones pedagógicas y didácticas no puede fundamentarse exclusivamente en medidas de tendencia central; requiere articular rango, desviación media y representaciones gráficas para diagnosticar necesidades individuales.
+\section{Conclusiones Pedagógicas}
+La integración de las medidas de dispersión en la educación matemática secundaria y de posgrado constituye un vehículo privilegiado para desarrollar el pensamiento crítico. La estadística formativa humanista no clasifica estudiantes mediante promedios homogeneizadores; indaga la variabilidad individual y grupal para proveer andamiajes específicos.
 
-En una perspectiva humanista, la estadística formativa evita etiquetar estudiantes mediante un promedio homogeneizador. Importa examinar qué circunstancias producen la variación y qué apoyos permiten consolidar el aprendizaje significativo. El instrumento de evaluación formativa propuesto valora el dominio conceptual, la conexión entre tabla y gráfica, la solidez de la argumentación técnica y la participación colaborativa distribuida.
+Este ejercicio, complementado con la producción audiovisual en \textit{Video Studio AI}, materializa el compromiso del IIIEPE y del programa MAEM con la innovación didáctica, el rigor disciplinar y el codiseño curricular contextualizado.
 
-\needspace{5\baselineskip}\section*{Referencias}
+\needspace{4\baselineskip}
+\section*{Referencias Normativas y Bibliográficas}
 {\setstretch{1.15}\setlength{\parskip}{6pt}
-\par\hangindent=1.27cm\hangafter=1  IIIEPE. (2026). \textit{Sesión 6; estructura de la ficha de trabajo y rúbrica para expositores}. EVA posgrado.
+\par\hangindent=1.27cm\hangafter=1  Batanero, C. (2001). \textit{Didáctica de la Estadística}. Grupo de Investigación en Educación Estadística, Departamento de Didáctica de la Matemática, Universidad de Granada.
+\par\hangindent=1.27cm\hangafter=1  IIIEPE. (2026). \textit{Temas Selectos de Matemáticas I (PFM02): Programa sintético y criterios generales de acreditación}. Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León.
 \par\hangindent=1.27cm\hangafter=1  Secretaría de Educación Pública. (2024). \textit{Programa de estudio para la educación secundaria: Programa sintético de la Fase 6}. SEP.
 }
 
