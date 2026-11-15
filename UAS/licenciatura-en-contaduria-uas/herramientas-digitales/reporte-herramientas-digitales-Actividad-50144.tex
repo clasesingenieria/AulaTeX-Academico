@@ -5,7 +5,7 @@
 \def\uasmatricula{26031061}
 \def\uasasesor{Dámaso Ruiz Gonzáles}
 \def\uasgrupo{103 LCP}
-\def\uasfecha{11 de noviembre de 2026}
+\def\uasfecha{15 de noviembre de 2026}
 \def\uaslugar{Culiacán, Sinaloa, México}
 \def\uasbibliografia{herramientas-digitales.bib}
 \def\uaslogo{../derecho-mercantil/assets-derecho-mercantil/escudo-uas.png}
@@ -22,8 +22,8 @@ Este reporte registra cómo se elaboró el sitio de Lex Contable en Google Sites
 }
 
 \def\actividadcontenido{%
-\section{Propósito de la actividad}
-La actividad Moodle 50144, \emph{Diseño de Páginas Web con Google Sites}, pide elaborar un sitio que presente un producto o servicio y entregar un PDF con los datos académicos y el enlace público. Este documento explica las acciones de construcción y revisión que llevaron de un lienzo vacío a la publicación; no es una descripción del origen del prototipo ni un catálogo exhaustivo de servicios.\footnote{Universidad Autónoma de Sinaloa, curso 635, actividad 50144: \url{https://virtual.uas.edu.mx/fca/mod/assign/view.php?id=50144}.}
+\section{Propósito}
+El proyecto \emph{Diseño de páginas web con Google Sites} tiene como propósito estructurar y publicar un sitio web funcional para presentar los servicios contables y fiscales de Lex Contable. Se documentan las acciones de construcción, ajuste y revisión realizadas desde un lienzo en blanco hasta su publicación en línea.
 
 El producto se desarrolló desde la interfaz de Google Sites, usando sus herramientas de inserción y diseño. Las decisiones se explican en el momento del procedimiento en que se tomaron, junto con el problema que resolvía cada cambio \parencite{googleSitesAyuda}.
 
@@ -77,10 +77,86 @@ Una vez integrados los bloques y aplicadas las correcciones, se comprobó en la 
 \label{fig:publicacion}
 \end{figure}
 
-\section{Comprobaciones posteriores a la elaboración}
-La revisión final se hizo sobre \url{https://sites.google.com/view/delacruz-consultores-lcp}, no sobre el editor. Se comprobó que la página abriera públicamente, que se vieran las tarjetas y las secciones, y que las imágenes cargaran. Se comprobó también que el botón \emph{Preparar consulta} conserve como destino externo \url{https://de2vaif4mldo0.cloudfront.net/}. Este enlace es una comprobación de navegación del resultado; no sustituye ni constituye el proceso de creación descrito arriba.
+\section{Elementos del sitio y evidencia de implementación}
+Para cumplir con la estructura solicitada para el portal web, el sitio de Lex Contable se organizó exclusivamente con componentes nativos de Google Sites distribuidos en cinco páginas principales (\emph{Inicio}, \emph{Servicios}, \emph{Quiénes Somos}, \emph{Ubicación} y \emph{Contacto}) y una subpágina anidada (\emph{Defensa fiscal}). En el cuadro~\ref{tab:elementos-sitio} se enumeran y describen los elementos integrados.
 
-El sitio de Google Sites presenta información y no recibe expedientes fiscales. La revisión documentada fue visual en navegador de escritorio; no se presenta como una auditoría automatizada de accesibilidad ni como prueba completa en todos los dispositivos. La publicación y este reporte tampoco equivalen al envío de la tarea a Moodle.
+\begin{table}[htbp]
+\centering
+\caption{Inventario y descripción de los elementos implementados en el sitio web.}
+\label{tab:elementos-sitio}
+\small
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{4.2cm}>{\raggedright\arraybackslash}p{3.0cm}X@{}}
+\toprule
+\textbf{Elemento} & \textbf{Ubicación} & \textbf{Descripción de la implementación} \\
+\midrule
+Menú de navegación superior y subpágina & Barra global y panel \emph{Páginas} & Estructura de cinco secciones principales con menú desplegable desde \emph{Servicios} hacia la subpágina \emph{Defensa fiscal}. \\
+Encabezado visual tipo banner & Todas las vistas & Portada compacta con el nombre \emph{Lex Contable} e identidad tipográfica uniforme. \\
+Carrusel de imágenes & Página \emph{Inicio} & Galería nativa interactiva con cuatro fotografías de respaldo contable y financiero cargadas directamente al sitio. \\
+Bloques de texto, tarjetas y acordeón FAQ & \emph{Inicio}, \emph{Servicios} y \emph{Defensa fiscal} & Tres tarjetas comparativas de servicio, catálogo estructurado en viñetas, método de atención en cuatro pasos y preguntas frecuentes desplegables. \\
+Video nativo de YouTube & Página \emph{Quiénes Somos} & Material audiovisual introductorio sobre contabilidad y cumplimiento de impuestos incrustado con el buscador nativo de Google Sites. \\
+Mapa interactivo de Google Maps & Página \emph{Ubicación} & Marcador geográfico interactivo en Culiacán Rosales, Sinaloa, México, acompañado de nota informativa sobre atención previa cita. \\
+Barra de vínculos a redes sociales & Página \emph{Contacto} & Íconos circulares nativos con enlace a Facebook, Instagram y YouTube, junto con horarios de atención y aviso de privacidad. \\
+Pie de página institucional & Todas las vistas & Pie común que acredita la autoría académica: «Elaborado por Martín Jonathan De La Cruz Muñoz · Grupo 103 LCP · FCA UAS · Culiacán, Sinaloa, México». \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+La evidencia visual de la implementación en el editor y en la versión pública se presenta en las figuras~\ref{fig:evidencia-editor} a~\ref{fig:evidencia-contacto}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.92\textwidth,height=0.38\textheight,keepaspectratio]{evidencia-50144-editor-final.png}
+\caption{Vista del editor de Google Sites con la jerarquía final de páginas (\emph{Inicio}, \emph{Servicios}, \emph{Defensa fiscal}, \emph{Quiénes Somos}, \emph{Ubicación} y \emph{Contacto}) guardada y publicada.}
+\label{fig:evidencia-editor}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.90\textwidth,height=0.68\textheight,keepaspectratio]{evidencia-50144-inicio-final.png}
+\caption{Página publicada \emph{Inicio}: barra superior de navegación, carrusel de cuatro imágenes, tarjetas de servicios, método de trabajo, preguntas frecuentes y pie de página institucional.}
+\label{fig:evidencia-inicio}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.88\textwidth,height=0.35\textheight,keepaspectratio]{evidencia-50144-servicios.png}
+\caption{Página publicada \emph{Servicios}: catálogo estructurado de servicios contables y fiscales en cuadro de texto nativo.}
+\label{fig:evidencia-servicios}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.88\textwidth,height=0.35\textheight,keepaspectratio]{evidencia-50144-defensa-fiscal.png}
+\caption{Subpágina publicada \emph{Defensa fiscal}: descripción de atención técnica ante requerimientos y auditorías electrónicas.}
+\label{fig:evidencia-defensa-fiscal}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.88\textwidth,height=0.36\textheight,keepaspectratio]{evidencia-50144-quienes-somos.png}
+\caption{Página publicada \emph{Quiénes Somos}: presentación institucional y reproductor nativo de YouTube sobre obligaciones fiscales.}
+\label{fig:evidencia-quienes-somos}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.88\textwidth,height=0.36\textheight,keepaspectratio]{evidencia-50144-ubicacion.png}
+\caption{Página publicada \emph{Ubicación}: zona de atención en Culiacán Rosales, Sinaloa, México, con mapa interactivo de Google Maps.}
+\label{fig:evidencia-ubicacion}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.88\textwidth,height=0.35\textheight,keepaspectratio]{evidencia-50144-contacto.png}
+\caption{Página publicada \emph{Contacto}: horario de atención, nota de privacidad y barra nativa con enlaces a redes sociales.}
+\label{fig:evidencia-contacto}
+\end{figure}
+
+\clearpage
+\section{Comprobaciones posteriores a la elaboración}
+La revisión final se efectuó directamente sobre las páginas publicadas en \url{https://sites.google.com/view/delacruz-consultores-lcp}. Se verificó la carga pública de las seis rutas de navegación, la visualización correcta del carrusel en \emph{Inicio}, la disponibilidad del video incrustado en \emph{Quiénes Somos}, la ubicación exacta del marcador de Google Maps en \emph{Ubicación}, la presencia de los vínculos a redes sociales en \emph{Contacto} y la consistencia del pie de página institucional en todo el sitio.
+
+El sitio de Google Sites presenta información y no recibe expedientes fiscales. La revisión documentada fue visual en navegador de escritorio; no se presenta como una auditoría automatizada de accesibilidad ni como prueba completa en todos los dispositivos.
 
 \section{Conclusión}
 La evidencia del editor muestra las etapas que el sitio final no deja ver por sí solo: el lienzo inicial, el armado con espacios pendientes, la integración de bloques y la corrección del encabezado antes de publicar. Las decisiones surgieron de revisar el efecto de cada elemento durante el trabajo. Usar bloques nativos permitió modificar la estructura desde el propio Sites; sustituir \emph{Portada} por \emph{Banner} redujo el espacio inicial; y quitar el marco vacío eliminó una señal visual de contenido faltante. Así, el resultado se entiende como consecuencia de una secuencia de elaboración y revisión, no solamente como una página presentada al final.
