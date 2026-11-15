@@ -63,3 +63,22 @@ Construir e integrar en un único libro de Excel multipestaña los ejercicios he
   \label{fig:uas-cap16-instalacion-m365}
 \end{figure}
 ```
+
+<!-- INICIO_REFERENCIAS_GRABACIONES_UAS -->
+## Referencias de Grabaciones de Clase y Puntos de Interés (Corrección Docente)
+
+- **Diagnóstico y directriz docente:** Calificación actual: `10.00 / 20.00`. Retroalimentación del Dr. Dámaso: *«*** BIEN: ...No son los ejercios de la clase ..»*. Acción correctiva: Integrar en `GPO103LCP_EXCEL_APLICADO_MartinJonathan_DeLaCruzMunoz.xlsx` las prácticas oficiales de la `Carpeta de Apoyo` (`50094`, Capítulos 05, 08, 09, 10 y 11) desarrolladas en las grabaciones `q9KgoQqUJpU` y `ZSLk1hRY48U`.
+- **Grabaciones vinculadas a esta actividad:**
+  - `S3 - Tutorial 1` (2026-11-02): [Activar Cuenta e Instalar Microsoft 365 Institucional](https://drive.google.com/file/d/1fIBZxP9E4rWCzpjGgrMsLtNTaVCEJNF4/view?usp=sharing) — [Video MP4](../referencias-herramientas-digitales/grabaciones/apoyo-1fIBZxP9E4rWCzpjGgrMsLtNTaVCEJNF4/UAS - HERR_DIG - S3 - 2026-11-02 - Activar Cuenta e Instalar Microsoft 365 [1fIBZxP9E4rWCzpjGgrMsLtNTaVCEJNF4].mp4) | [Transcripción TXT](../referencias-herramientas-digitales/grabaciones/apoyo-1fIBZxP9E4rWCzpjGgrMsLtNTaVCEJNF4/UAS - HERR_DIG - S3 - 2026-11-02 - Activar Cuenta e Instalar Microsoft 365 [1fIBZxP9E4rWCzpjGgrMsLtNTaVCEJNF4].txt) | [Subtítulos SRT](../referencias-herramientas-digitales/grabaciones/apoyo-1fIBZxP9E4rWCzpjGgrMsLtNTaVCEJNF4/UAS - HERR_DIG - S3 - 2026-11-02 - Activar Cuenta e Instalar Microsoft 365 [1fIBZxP9E4rWCzpjGgrMsLtNTaVCEJNF4].srt) — Cita BibTeX: `\cite{ruiz2026tutorialM365}`
+  - `S3 - Clase 1` (2026-11-03): [GPO103-LCP: Excel Aplicado.](https://www.youtube.com/watch?v=q9KgoQqUJpU) — Pendiente de archivo MP4 local — Cita BibTeX: `\cite{ruiz2026claseS3c1}`
+  - `S3 - Clase 2` (2026-11-05): [GPO103-LCP: Excel funciones que cuentan](https://www.youtube.com/watch?v=ZSLk1hRY48U) — Pendiente de archivo MP4 local — Cita BibTeX: `\cite{ruiz2026claseS3c2}`
+- **Capturas de puntos de interés en video:**
+  - `[00:05:10]` **Regla de cuenta @gmail.com y uso de vínculo en la nube solo al exceder límite de Moodle**: [Ver captura PNG](../referencias-herramientas-digitales/grabaciones/clase-1NaR_KBkiiZRg3ioHxiSRJw_GMqCDf2rD/capturas-interes/s1c1-poi-02-regla-gmail-y-limite-moodle.png) (`\cite{ruiz2026poiS1ReglaMoodleDrive}`)
+  - `[00:15:20]` **Revisión de evaluación diagnóstica y sintaxis obligatoria de fórmulas en Excel (=)**: [Ver captura PNG](../referencias-herramientas-digitales/grabaciones/clase-1NaR_KBkiiZRg3ioHxiSRJw_GMqCDf2rD/capturas-interes/s1c1-poi-03-diagnostico-y-formulas-excel.png) (`\cite{ruiz2026poiS1DiagnosticoFormulas}`)
+  - `[00:26:45]` **Criterios de evaluación (100%) y Carpeta de Apoyo con archivos base de prácticas**: [Ver captura PNG](../referencias-herramientas-digitales/grabaciones/clase-1NaR_KBkiiZRg3ioHxiSRJw_GMqCDf2rD/capturas-interes/s1c1-poi-04-evaluacion-y-carpeta-apoyo.png) (`\cite{ruiz2026poiS1EvaluacionCarpetaApoyo}`)
+  - `[00:31:50]` **Verificación de versión de Microsoft 365 (Archivo -> Cuenta) y correo @ms.uas.edu.mx**: [Ver captura PNG](../referencias-herramientas-digitales/grabaciones/clase-1NaR_KBkiiZRg3ioHxiSRJw_GMqCDf2rD/capturas-interes/s1c1-poi-05-version-microsoft-365.png) (`\cite{ruiz2026poiS1VersionM365}`)
+  - `[00:05:42]` **Activar Cuenta e Instalar Microsoft 365 Institucional — Acceso inicial y requisitos institucionales**: [Ver captura PNG](../referencias-herramientas-digitales/grabaciones/apoyo-1fIBZxP9E4rWCzpjGgrMsLtNTaVCEJNF4/capturas-interes/s3-tutorial-1-poi-01-inicio.png) (`\cite{ruiz2026tutorialM365Poi1}`)
+  - `[00:19:00]` **Activar Cuenta e Instalar Microsoft 365 Institucional — Configuración y llenado paso a paso**: [Ver captura PNG](../referencias-herramientas-digitales/grabaciones/apoyo-1fIBZxP9E4rWCzpjGgrMsLtNTaVCEJNF4/capturas-interes/s3-tutorial-1-poi-02-procedimiento.png) (`\cite{ruiz2026tutorialM365Poi2}`)
+  - `[00:31:10]` **Activar Cuenta e Instalar Microsoft 365 Institucional — Verificación final y activación**: [Ver captura PNG](../referencias-herramientas-digitales/grabaciones/apoyo-1fIBZxP9E4rWCzpjGgrMsLtNTaVCEJNF4/capturas-interes/s3-tutorial-1-poi-03-confirmacion.png) (`\cite{ruiz2026tutorialM365Poi3}`)
+- **Análisis integral de indicaciones:** [analisis-indicaciones-grabaciones.md](../referencias-herramientas-digitales/grabaciones/analisis-indicaciones-grabaciones.md)
+<!-- FIN_REFERENCIAS_GRABACIONES_UAS -->

@@ -588,7 +588,17 @@ class AgenteGrabacionesUas:
         # 2. DESCARGAR DOCUMENTOS COMPLEMENTARIOS DE DRIVE (Complemento de LCP - Aplicado)
         companion_docs = self._download_companion_drive_docs(ref_dir, request.download_drive_media, blockers)
 
-        # 3. PROCESAR CADA GRABACIÓN (Descargar / Ubicar / Renombrar / Transcribir / Capturar Puntos de Interés)
+        # 3. DESCARGAR / UBICAR TODOS LOS MEDIOS MP4 PRIMERO (evita caducidad de sesión durante Whisper)
+        if request.download_drive_media:
+            for spec in CANONICAL_UAS_635_RECORDINGS:
+                self._ensure_media_downloaded(
+                    spec=spec,
+                    grabaciones_root=grabaciones_root,
+                    request=request,
+                    blockers=blockers,
+                )
+
+        # 4. PROCESAR CADA GRABACIÓN (Validar / Renombrar / Transcribir / Capturar Puntos de Interés)
         processed_items: list[GrabacionUasItem] = []
         all_pois: list[PuntoInteresVideo] = []
 
@@ -839,6 +849,92 @@ class AgenteGrabacionesUas:
                     }
                 )
         return results
+
+    def _ensure_media_downloaded(
+        self,
+        spec: dict[str, Any],
+        grabaciones_root: Path,
+        request: GrabacionesUasRequest,
+        blockers: list[dict[str, Any]],
+    ) -> Path | None:
+        """Descarga o localiza el MP4 en su carpeta canónica antes de iniciar transcripciones largas."""
+        rec_id = spec["recording_id"]
+        folder = grabaciones_root / spec["folder_name"]
+        folder.mkdir(parents=True, exist_ok=True)
+        canonical_mp4 = folder / f"{spec['canonical_stem']}.mp4"
+        if canonical_mp4.exists() and canonical_mp4.stat().st_size > 10000:
+            return canonical_mp4
+        if (folder / "video1860556015.mp4").exists():
+            return folder / "video1860556015.mp4"
+        candidates = list(folder.glob("*.mp4"))
+        if candidates:
+            return candidates[0]
+        if request.local_video_dir:
+            ext_dir = Path(request.local_video_dir)
+            if ext_dir.exists():
+                matches = [p for p in ext_dir.rglob("*.mp4") if rec_id in p.name]
+                if matches:
+                    shutil.copy2(matches[0], canonical_mp4)
+                    return canonical_mp4
+        if spec["provider"] == "google_drive" and request.download_drive_media:
+            try:
+                url = f"https://drive.usercontent.google.com/download?id={rec_id}&export=download&confirm=t"
+                req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+                with urllib.request.urlopen(req, timeout=180) as resp:
+                    data = resp.read()
+                canonical_mp4.write_bytes(data)
+                return canonical_mp4
+            except Exception as err:
+                blockers.append(
+                    {
+                        "kind": "drive_video_download_failed",
+                        "recording_id": rec_id,
+                        "detail": type(err).__name__,
+                    }
+                )
+        if (
+            spec["provider"] == "youtube"
+            and request.download_drive_media
+            and (request.youtube_cookies_browser.strip() or request.youtube_cookies_file.strip())
+        ):
+            import sys
+            yt_cmd = [
+                sys.executable,
+                "-m",
+                "yt_dlp",
+                "--no-playlist",
+                "-f",
+                "bestvideo[height<=1080][ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best",
+                "--merge-output-format",
+                "mp4",
+                "-o",
+                str(canonical_mp4),
+            ]
+            if request.youtube_cookies_file.strip():
+                yt_cmd.extend(["--cookies", request.youtube_cookies_file.strip()])
+            elif request.youtube_cookies_browser.strip():
+                yt_cmd.extend(["--cookies-from-browser", request.youtube_cookies_browser.strip()])
+            yt_cmd.append(spec["source_url"])
+            try:
+                proc = subprocess.run(yt_cmd, capture_output=True, text=True, check=False)
+                if proc.returncode == 0 and canonical_mp4.exists() and canonical_mp4.stat().st_size > 10000:
+                    return canonical_mp4
+                blockers.append(
+                    {
+                        "kind": "youtube_authenticated_download_failed",
+                        "recording_id": rec_id,
+                        "detail": (proc.stderr or proc.stdout or f"returncode={proc.returncode}")[-400:],
+                    }
+                )
+            except Exception as err:
+                blockers.append(
+                    {
+                        "kind": "youtube_authenticated_download_failed",
+                        "recording_id": rec_id,
+                        "detail": f"{type(err).__name__}: {err}",
+                    }
+                )
+        return None
 
     def _process_single_recording(
         self,
