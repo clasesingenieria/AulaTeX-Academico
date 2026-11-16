@@ -1,0 +1,71 @@
+% !TeX program = xelatex
+\documentclass[12pt,spanish,letterpaper,oneside]{article}
+\PassOptionsToPackage{es-noshorthands}{babel}
+\def\documenttitle{Modelación matricial de fertilización balanceada y optimización de dosis nutrimentales en citricultura}
+\def\documentsubtitle{Balance de macronutrientes N-P-K mediante sistemas de ecuaciones lineales}
+\def\documentsubject{Álgebra Lineal - Ingeniería Agronómica}
+\def\documentauthor{Diego de la Cruz Muñoz}
+\def\coursename{Álgebra Lineal}
+\def\coursecode{}
+\def\universityname{Universidad Autónoma de Nuevo León}
+\def\universityfaculty{Facultad de Agronomía}
+\def\universitydepartment{Ingeniero Agrónomo}
+\def\universitydepartmentimage{departamentos/logos-institucionales.pdf}
+\def\universitydepartmentimagecfg{height=2.1cm}
+\def\universitylocation{General Escobedo / Marín, Nuevo León, México}
+\def\authortable{%
+	\begin{Form}
+	\begin{tabular}{@{}ll@{}}
+		\textbf{Estudiante:} & Diego de la Cruz Muñoz\\[0.35cm]
+		\textbf{Matrícula:} & 1977875\\[0.35cm]
+		\textbf{Docente Titular:} & Miranda Vázquez José de Jesús\\[0.35cm]
+		\textbf{Unidad de Aprendizaje:} & Álgebra Lineal\\[0.5cm]
+		\multicolumn{2}{l}{Fecha de realización: 11 de noviembre de 2026}\\
+		\multicolumn{2}{l}{\universitylocation}
+	\end{tabular}
+	\end{Form}
+}
+
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\input{template}
+\usepackage{microtype}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage{placeins}
+\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
+\definecolor{uanlblue}{RGB}{0,55,108}
+\definecolor{tableblue}{RGB}{233,240,247}
+\def\portraittitlecolor{uanlblue}
+\def\sectioncolor{uanlblue}
+\def\ssectioncolor{uanlblue}
+\def\documenttitlehf{Álgebra Lineal: Modelación Matricial de Fertirriego}
+\hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Diego de la Cruz Muñoz},pdftitle={Modelación matricial de fertilización balanceada en citricultura},pdfsubject={Álgebra Lineal - Facultad de Agronomía UANL}}
+\addbibresource{UANL/ingeniero-agronomo/algebra-lineal/algebra-lineal.bib}
+\setlength{\emergencystretch}{2.5em}
+
+\begin{document}
+\hypersetup{pageanchor=false}
+\templatePortrait
+\clearpage
+\hypersetup{pageanchor=true}
+\templatePagecfg
+
+\section*{Resumen}
+El presente trabajo técnico aborda la optimización analítica de la fertilización balanceada en una plantación comercial de naranja Valencia (\textit{Citrus sinensis}) ubicada en la región citrícola de General Terán, Nuevo León. La formulación de planes de fertirrigación multi-nutricionales a partir de fuentes comerciales acopladas plantea un problema clásico de insumo-producto que no puede resolverse mediante recetas empíricas sin incurrir en sobredosificaciones contaminantes o deficiencias críticas. Para solventar este desafío, se recolectaron los requerimientos estacionales de macronutrientes ($175\text{ kg/ha}$ de Nitrógeno, $142\text{ kg/ha}$ de Fósforo y $182\text{ kg/ha}$ de Potasio) y se formularon como un sistema lineal acoplado $A\mathbf{x} = \mathbf{b}$ de dimensión $3 \times 3$, empleando tres fuentes comerciales comunes en el agro regional: una mezcla compleja NPK 20-10-10, fosfato diamónico (DAP 18-46-0) y nitrato de potasio (13-0-44). El sistema fue resuelto analíticamente paso a paso mediante eliminación de Gauss-Jordan sobre la matriz aumentada, corroborado de manera independiente a través de la Regla de Cramer y validado por el método de la matriz inversa. Se obtuvo una solución física única y exacta de $500\text{ kg/ha}$ de NPK 20-10-10, $200\text{ kg/ha}$ de DAP y $300\text{ kg/ha}$ de nitrato de potasio, satisfaciendo el balance estricto con un vector de residuo nulo ($\mathbf{r} = \mathbf{0}$). El análisis espectral y de condicionamiento numérico ($\kappa(A) \approx 5.86$) confirma la robustez operativa de la solución ante perturbaciones edafológicas, consolidando al álgebra lineal como una disciplina metodológica insustituible para la sustentabilidad económica y ambiental de la agricultura moderna.
+
+\vspace{0.35cm}
+\noindent\textbf{Palabras clave:} Álgebra matricial, balance de fertirriego, eliminación de Gauss-Jordan, Regla de Cramer, nutrición citrícola, ingeniería agronómica.
+
+\clearpage
+\templateIndex
+\clearpage
+\templateFinalcfg
+\onehalfspacing
+
+\input{UANL/ingeniero-agronomo/algebra-lineal/contenido-Actividad-5.tex}
+\clearpage
+\printbibliography[title={Referencias bibliográficas}]
+\end{document}

@@ -1,0 +1,21 @@
+% ==============================================================================
+% AulaTeX · Wrapper institucional UANL  (canal unico hacia el nucleo canonico)
+% ------------------------------------------------------------------------------
+% Cubre las 99 carpetas de materia de UANL: los documentos invocan
+% \input{template} y el compilador de AulaTeX (core/compiler.py) resuelve
+% TEXINPUTS en orden documento -> carrera -> institucion -> Plantilla-Informe.
+% Con cwd = raiz del repositorio, la primera candidata aplica.
+% ==============================================================================
+\IfFileExists{aulaTEX/base/Plantilla-Informe/template.tex}{%
+  \input{aulaTEX/base/Plantilla-Informe/template.tex}%
+}{%
+  \IfFileExists{../../../../aulaTEX/base/Plantilla-Informe/template.tex}{%
+    \input{../../../../aulaTEX/base/Plantilla-Informe/template.tex}%
+  }{%
+    \IfFileExists{../../../aulaTEX/base/Plantilla-Informe/template.tex}{%
+      \input{../../../aulaTEX/base/Plantilla-Informe/template.tex}%
+    }{%
+      \errmessage{AulaTeX/UANL: nucleo canonico Plantilla-Informe no localizado.}%
+    }%
+  }%
+}

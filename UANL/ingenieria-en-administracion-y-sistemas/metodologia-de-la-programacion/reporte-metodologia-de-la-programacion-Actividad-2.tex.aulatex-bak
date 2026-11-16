@@ -1,0 +1,218 @@
+\documentclass[spanish,letterpaper,oneside]{article}
+
+\def\documenttitle {Entrada y salida de datos}
+\def\documentsubtitle {Actividad 2: fundamentos de programación en C++}
+\def\documentsubject {Análisis, algoritmos y codificación para Dev-C++}
+\def\documentauthor {Emilio Abraham Castillo Urdiales}
+\def\coursename {Aplicación práctica de la programación}
+\def\coursecode {Grupo 011 A2026}
+\def\universityname {Universidad Autónoma de Nuevo León}
+\def\universityfaculty {Facultad de Ingeniería Mecánica y Eléctrica}
+\def\universitydepartment {Ingeniería en Administración y Sistemas}
+\def\universitydepartmentimage {UANL/assets-uanl/logo-uanl.png}
+\def\universitydepartmentimagecfg {width=3.2cm}
+\def\universitylocation {San Nicolás de los Garza, Nuevo León, México}
+\def\authortable {
+  \begin{tabular}{ll}
+    \textbf{Alumno:} & Emilio Abraham Castillo Urdiales \\
+    Matrícula: & 2194561 \\
+    Grupo: & 011 A2026 \\
+    Programa: & Ingeniería en Administración y Sistemas \\
+    Materia: & \coursename \\
+    Docente: & Karla Patricia Uribe Sierra \\
+    Periodo: & Agosto--diciembre de 2026 \\
+    & \\
+    \multicolumn{2}{l}{Fecha de realización: \today} \\
+    \multicolumn{2}{l}{\universitylocation}
+  \end{tabular}
+}
+
+\input{template}
+\newcommand{\codepath}{UANL/ingenieria-en-administracion-y-sistemas/metodologia-de-la-programacion/programas-actividad-2}
+\definecolor{consolebg}{RGB}{28,30,34}
+\definecolor{consolefg}{RGB}{232,235,239}
+\lstdefinestyle{console}{
+  style=plaintext,
+  backgroundcolor=\color{consolebg},
+  basicstyle=\ttfamily\footnotesize\color{consolefg},
+  rulecolor=\color{black},
+  frame=single,
+  framerule=0.6pt,
+  breaklines=true,
+  showstringspaces=false
+}
+\newcommand{\consola}[1]{%
+  \lstinputlisting[style=console,caption={Salida de consola.}]{\codepath/#1.out}%
+}
+\newcommand{\programa}[5]{%
+  \section{#1}
+  \subsection{Instrucción}
+  #2
+  \subsection{Análisis del problema}
+  #3
+  \subsection{Algoritmo}
+  \begin{enumerate}
+    #4
+  \end{enumerate}
+  \subsection{Codificación del programa}
+  \importsourcecode{cpp}{\codepath/#5}{Código C++ compatible con Dev-C++.}
+  \subsection{Salida de consola}
+  \consola{#5}
+}
+
+\begin{document}
+\templatePortrait
+\templatePagecfg
+\setlength{\footskip}{28pt}
+\fancyfoot[L]{}
+\fancyfoot[C]{\footnotesize\thepage}
+\fancyfoot[R]{}
+\onehalfspacing
+
+\begin{abstractd}
+Se resuelven diecinueve problemas de entrada, proceso y salida en C++. Cada solución identifica datos, operación matemática, validaciones y resultado. Los archivos son independientes y compatibles con el compilador GNU C++ de Dev-C++. Los tipos \texttt{double} conservan la precisión decimal; las constantes identifican conversiones y magnitudes físicas; y los mensajes orientan la captura de datos.
+\end{abstractd}
+
+\templateIndex
+\templateFinalcfg
+
+\section{Introducción}
+El modelo entrada--proceso--salida organiza cada solución. La entrada reúne los valores del usuario, el proceso aplica fórmulas o conversiones y la salida comunica el resultado. El análisis previo determina datos, unidades, ecuaciones y condiciones de validez para problemas geométricos, físicos, de conversión y de administración.
+
+\programa{Programa 1. Área de un cuadrado}
+{Calcular e imprimir el área de un cuadrado a partir de la longitud de su lado.}
+{La entrada es el lado $l$, que debe ser positivo. El proceso aplica $A=l\times l$ y la salida es el área en unidades cuadradas.}
+{\item Solicitar el lado. \item Verificar que sea mayor que cero. \item Calcular $A=l\times l$. \item Mostrar el área con dos decimales.}
+{01_area_cuadrado.cpp}
+
+\programa{Programa 2. Área de un cuadrado con \texttt{pow}}
+{Calcular el área de un cuadrado mediante la función de potencia.}
+{Se recibe el lado $l$ y se eleva al cuadrado con \texttt{pow(lado, 2)}. El uso de \texttt{<cmath>} permite practicar funciones matemáticas de la biblioteca estándar.}
+{\item Leer el lado. \item Validar que sea positivo. \item Calcular $A=l^2$ con \texttt{pow}. \item Imprimir el resultado.}
+{02_area_cuadrado_pow.cpp}
+
+\programa{Programa 3. Área de un círculo}
+{Calcular e imprimir el área de un círculo.}
+{La entrada es el radio $r$. Se obtiene una aproximación portable de $\pi$ con $\operatorname{acos}(-1)$ y se aplica $A=\pi r^2$. Un radio no positivo se considera inválido.}
+{\item Solicitar el radio. \item Validar $r>0$. \item Calcular $A=\pi r^2$. \item Mostrar el área.}
+{03_area_circulo.cpp}
+
+\programa{Programa 4. Área de un triángulo}
+{Calcular el área de un triángulo a partir de su base y altura.}
+{Las entradas son base $b$ y altura $h$, ambas positivas. El proceso es $A=(b\times h)/2$.}
+{\item Leer base y altura. \item Comprobar que sean positivas. \item Calcular $A=bh/2$. \item Imprimir el área.}
+{04_area_triangulo.cpp}
+
+\programa{Programa 5. Hipotenusa}
+{Calcular la hipotenusa de un triángulo rectángulo.}
+{Los datos son los catetos $a$ y $b$. Por el teorema de Pitágoras, la hipotenusa es $c=\sqrt{a^2+b^2}$.}
+{\item Leer ambos catetos. \item Validar que sean positivos. \item Calcular $c=\sqrt{a^2+b^2}$. \item Mostrar la hipotenusa.}
+{05_hipotenusa.cpp}
+
+\programa{Programa 6. Nombre y semestre}
+{Ingresar el nombre del estudiante y el semestre que cursará, e imprimir ambos datos.}
+{La entrada combina una cadena de texto y un entero. \texttt{getline} conserva los espacios del nombre completo. Se rechaza un nombre vacío o un semestre no positivo.}
+{\item Leer el nombre completo. \item Leer el semestre. \item Validar los datos. \item Imprimir nombre y semestre.}
+{06_nombre_semestre.cpp}
+
+\programa{Programa 7. Fahrenheit a centígrados}
+{Convertir una temperatura de grados Fahrenheit a grados centígrados.}
+{La entrada es $F$ y el proceso utiliza $C=(F-32)\times 5/9$. Se emplean constantes decimales para impedir una división entera.}
+{\item Leer la temperatura Fahrenheit. \item Calcular $C=(F-32)5/9$. \item Mostrar Fahrenheit y centígrados.}
+{07_fahrenheit_centigrados.cpp}
+
+\programa{Programa 8. Pies a metros}
+{Convertir una longitud expresada en pies a metros.}
+{Se usa la equivalencia exacta indicada: un pie equivale a $0.3048$ metros. Por tanto, $m=p\times0.3048$.}
+{\item Leer la longitud en pies. \item Verificar que no sea negativa. \item Multiplicar por $0.3048$. \item Imprimir los metros.}
+{08_pies_metros.cpp}
+
+\programa{Programa 9. Libras a kilogramos}
+{Convertir un peso expresado en libras a kilogramos.}
+{La entrada son libras y se aplica $kg=lb\times0.45359237$. La salida conserva cuatro decimales para mostrar adecuadamente la conversión.}
+{\item Leer las libras. \item Validar que no sean negativas. \item Multiplicar por $0.45359237$. \item Mostrar los kilogramos.}
+{09_libras_kilogramos.cpp}
+
+\programa{Programa 10. Acres a hectáreas}
+{Introducir la extensión de un terreno en acres y calcularla en hectáreas, considerando $1$ acre $=4047\,m^2$ y $1$ hectárea $=10000\,m^2$.}
+{Primero se convierten acres a metros cuadrados y después se dividen entre los metros cuadrados de una hectárea: $ha=acres\times4047/10000$.}
+{\item Leer acres. \item Validar que no sean negativos. \item Convertir a metros cuadrados. \item Dividir entre $10000$. \item Imprimir hectáreas.}
+{10_acres_hectareas.cpp}
+
+\programa{Programa 11. Fuerza}
+{Calcular la fuerza aplicada a un cuerpo.}
+{De acuerdo con la segunda ley de Newton, $F=m\times a$. Se ingresan masa en kilogramos y aceleración en $m/s^2$; el resultado se expresa en newtons.}
+{\item Leer masa y aceleración. \item Validar que la masa no sea negativa. \item Calcular $F=ma$. \item Mostrar la fuerza en newtons.}
+{11_fuerza.cpp}
+
+\programa{Programa 12. Velocidad final de impacto}
+{Calcular la velocidad final de impacto de un cuerpo en caída libre desde el reposo.}
+{Sin resistencia del aire y con velocidad inicial cero, se aplica $v=\sqrt{2gh}$, con $g=9.81\,m/s^2$ y altura $h$ no negativa.}
+{\item Leer la altura. \item Verificar $h\geq0$. \item Calcular $v=\sqrt{2gh}$. \item Imprimir la velocidad en $m/s$.}
+{12_velocidad_impacto.cpp}
+
+\programa{Programa 13. Energía potencial}
+{Calcular la energía potencial de un cuerpo en caída libre.}
+{Las entradas son masa $m$ y altura $h$. Con $g=9.81\,m/s^2$, la energía potencial gravitatoria es $E_p=mgh$ y se expresa en joules.}
+{\item Leer masa y altura. \item Validar que no sean negativas. \item Calcular $E_p=mgh$. \item Mostrar joules.}
+{13_energia_potencial.cpp}
+
+\programa{Programa 14. Energía cinética}
+{Calcular la energía cinética de un cuerpo en movimiento.}
+{Se ingresan masa $m$ y velocidad $v$. El cálculo corresponde a $E_c=mv^2/2$. La velocidad puede tener signo, pero al elevarla al cuadrado la energía permanece no negativa.}
+{\item Leer masa y velocidad. \item Validar la masa. \item Calcular $E_c=mv^2/2$. \item Mostrar joules.}
+{14_energia_cinetica.cpp}
+
+\programa{Programa 15. Hipotenusa dados los catetos}
+{Dados los catetos de un triángulo rectángulo, calcular e imprimir su hipotenusa.}
+{Esta variante utiliza \texttt{hypot}, función estándar que calcula directamente $\sqrt{a^2+b^2}$ y mejora la claridad del código.}
+{\item Leer los catetos. \item Comprobar que sean positivos. \item Evaluar \texttt{hypot(a,b)}. \item Imprimir el resultado.}
+{15_hipotenusa_catetos.cpp}
+
+\programa{Programa 16. Volumen de una esfera}
+{Calcular e imprimir el volumen de una esfera.}
+{La entrada es el radio $r>0$. El volumen se obtiene con $V=(4/3)\pi r^3$. Se escribe \texttt{4.0/3.0} para conservar la parte decimal.}
+{\item Leer el radio. \item Validar que sea positivo. \item Calcular $V=(4/3)\pi r^3$. \item Mostrar unidades cúbicas.}
+{16_volumen_esfera.cpp}
+
+\programa{Programa 17. Recibo de la compañía de luz}
+{Generar el recibo de un cliente con su nombre, consumo en kilowatts y tarifa por kilowatt; el recibo debe mostrar el nombre y el pago.}
+{El pago se calcula como $P=consumo\times tarifa$. Se usa \texttt{getline} para aceptar nombres completos y se impiden consumo o tarifa negativos.}
+{\item Leer el nombre del cliente. \item Leer consumo y tarifa. \item Validar las entradas. \item Calcular el pago. \item Imprimir nombre y total con dos decimales.}
+{17_recibo_luz.cpp}
+
+\programa{Programa 18. Conversión conjunta de pies y libras}
+{Introducir longitud en pies y peso en libras, e imprimir metros y kilogramos.}
+{Se resuelven dos conversiones independientes: $m=pies\times0.3048$ y $kg=libras\times0.45359237$.}
+{\item Leer pies y libras. \item Verificar que no sean negativos. \item Convertir pies a metros. \item Convertir libras a kilogramos. \item Mostrar ambos resultados.}
+{18_pies_libras.cpp}
+
+\programa{Programa 19. Área mediante la fórmula de Herón}
+{Leer los tres lados de un triángulo y calcular su área con la fórmula de Herón.}
+{Antes del cálculo se valida la desigualdad triangular. Si los lados son válidos, el semiperímetro es $s=(a+b+c)/2$ y el área $A=\sqrt{s(s-a)(s-b)(s-c)}$.}
+{\item Leer $a$, $b$ y $c$. \item Verificar positividad y desigualdad triangular. \item Calcular $s=(a+b+c)/2$. \item Calcular la raíz de Herón. \item Imprimir el área.}
+{19_area_heron.cpp}
+
+\section{Pseudocódigo completo}
+Los diecinueve algoritmos reproducen la entrada, validación, cálculo y salida de cada programa en sintaxis PSeInt.
+\importsourcecode{plaintext}{\codepath/pseudocodigos-actividad-2.psc}{Pseudocódigo PSeInt de los 19 problemas.}
+
+% El script automatizado de compilación y pruebas se conserva como herramienta
+% interna del proyecto, pero no forma parte del contenido académico del reporte.
+% La sección de pruebas recomendadas también se omite.
+
+\section{Resumen}
+\begin{framed}
+\textbf{Entrada, proceso y salida.} La programación expresa procedimientos mediante instrucciones precisas y ordenadas. Cada solución inicia con el análisis de las entradas, continúa con una fórmula o transformación y termina con una salida comprensible. El tipo \texttt{double} conserva valores decimales y las constantes con nombre identifican factores como la gravedad y las equivalencias de unidades.
+
+\medskip
+\textbf{Bibliotecas y validación.} \texttt{iostream} administra la entrada y salida; \texttt{iomanip} controla los decimales; \texttt{cmath} proporciona potencias y raíces; y \texttt{string} almacena nombres completos. Las validaciones impiden cálculos con lados negativos, radios nulos o longitudes que no forman un triángulo.
+
+\medskip
+\textbf{Aplicación.} Formular el algoritmo antes del código reduce errores y permite verificar la unidad y el propósito de cada variable. Los programas se compilan por separado en Dev-C++ y sus salidas de consola confirman los resultados de los casos evaluados.
+\end{framed}
+
+\section{Conclusiones}
+Los diecinueve programas muestran que el modelo entrada--proceso--salida permite resolver problemas diversos con una estructura común. El análisis previo ayudó a seleccionar fórmulas, tipos de datos y validaciones. El uso de funciones de la biblioteca estándar hizo los cálculos más claros y portables. Como mejora posterior pueden añadirse ciclos para repetir cada operación y controles para detectar entradas que no sean numéricas; sin embargo, las versiones entregadas satisfacen el objetivo de practicar instrucciones básicas y pueden compilarse individualmente en Dev-C++.
+
+\end{document}

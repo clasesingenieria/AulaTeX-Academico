@@ -1,0 +1,70 @@
+% !TeX program = xelatex
+\documentclass[12pt]{article}
+\usepackage[paperwidth=28cm,paperheight=15.75cm,margin=1.2cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Arial}
+\usepackage[spanish,es-noshorthands]{babel}
+\usepackage{graphicx,xcolor,tabularx,array}
+\usepackage{hyperref}
+\definecolor{uanlblue}{RGB}{0,55,108}
+\hypersetup{colorlinks=true,urlcolor=uanlblue,pdftitle={Evidencia 1: agua, electricidad y envases}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{7pt}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\graphicspath{{UANL/ingeniero-agronomo/responsabilidad-social-y-desarrollo-sustentable/img/departamentos/}}
+\newcommand{\encabezado}[2]{%
+  {\fontsize{23}{27}\selectfont\color{uanlblue}\textbf{#1}}\hfill
+  \includegraphics[height=1cm]{logo-agronomia.png}\par
+  {\fontsize{11}{13}\selectfont UANL | Ingeniero Agrónomo | Responsabilidad Social y Desarrollo Sustentable | #2/3}\par
+  \textcolor{uanlblue}{\rule{\linewidth}{1pt}}\par
+}
+\begin{document}
+\fontsize{14}{17}\selectfont
+\encabezado{Agua: producir sin agotar la reserva}{1}
+\begin{tabularx}{\linewidth}{@{}Y@{\hspace{1cm}}Y@{}}
+\textbf{México: bombeo sin límites efectivos} & \textbf{Israel: reúso de efluentes tratados}\\[7pt]
+La OCDE documentó en 2013 cómo subsidiar el bombeo desincentivaba el ahorro y contribuía a la sobreexplotación. No es una descripción de todos los productores ni una cifra de 2026.
+& El reúso agrícola permite sustituir agua dulce, pero requiere tratamiento, vigilancia sanitaria y control de nutrientes. La OCDE también advierte contaminación persistente.\\
+\end{tabularx}
+\par\vspace{0.3cm}
+\textbf{ODS 6:} 6.4.1, cambio de eficiencia en el uso del agua; 6.4.2, estrés hídrico; 6.3.1, flujos de aguas residuales tratados de forma segura.
+
+\textbf{Aplicación agronómica:} medir extracción y calidad, ajustar riego al cultivo y evitar que la tecnificación se convierta en expansión del consumo total.
+
+\textbf{Idea central:} más producción por unidad de agua no garantiza menor extracción del acuífero.
+\vfill
+{\fontsize{10}{12}\selectfont Fuentes: OCDE, \emph{Environmental Performance Reviews: Mexico 2013}; OCDE, \emph{Israel 2023}; UNSD, repositorio de indicadores ODS. Referencias completas en el reporte.}
+
+\newpage
+\encabezado{Electricidad: sustituir combustibles y ahorrar}{2}
+\begin{tabularx}{\linewidth}{@{}Y@{\hspace{1cm}}Y@{}}
+\textbf{México: dependencia fósil} & \textbf{Alemania: expansión renovable}\\[7pt]
+La EIA describe el papel del gas y otros combustibles en la generación; la OCDE identifica obstáculos de redes e inversión para ampliar renovables.
+& Las renovables cubrieron 55.1\% del consumo eléctrico bruto en 2025, según UBA. La transición sigue necesitando redes, flexibilidad y gestión de impactos.\\
+\end{tabularx}
+\par\vspace{0.3cm}
+\textbf{ODS 7:} 7.2.1 mide renovables en el \emph{consumo final total de energía}, no solo electricidad. El 55.1\% eléctrico no equivale a ese indicador. El 7.3.1 mide intensidad de energía primaria respecto al PIB.
+
+\textbf{Aplicación agronómica:} eficiencia en bombeo y refrigeración, proyectos renovables adecuados al territorio y límites de extracción de agua incluso con bombeo solar.
+
+\textbf{Idea central:} electrificar o instalar paneles no resuelve por sí solo el uso insustentable de recursos.
+\vfill
+{\fontsize{10}{12}\selectfont Fuentes: EIA, \emph{Mexico: Country analysis} (2023); OCDE, \emph{Economic Surveys: Mexico 2024}; UBA, \emph{Renewable energies in figures} (2026); UNSD.}
+
+\newpage
+\encabezado{Envases: prevenir, separar y recuperar}{3}
+\begin{tabularx}{\linewidth}{@{}Y@{\hspace{1cm}}Y@{}}
+\textbf{México: descarte mezclado} & \textbf{Alemania: depósito y devolución}\\[7pt]
+SEMARNAT documenta en 2020 la importancia de la recolección selectiva y las limitaciones del aprovechamiento. No se debe inventar una tasa nacional de reciclaje de envases.
+& DPG organiza el retorno de envases de bebidas sujetos a un depósito de 0.25 euros. El reembolso incentiva su devolución y canalización al reciclaje.\\
+\end{tabularx}
+\par\vspace{0.3cm}
+\textbf{ODS 12:} 12.5.1 mide tasa nacional de reciclaje y toneladas recicladas. Tasa de retorno, material recogido y material efectivamente reciclado son medidas distintas.
+
+\textbf{Aplicación local:} puntos accesibles, trazabilidad, inclusión de recuperadores y prevención de envases innecesarios. Los envases de agroquímicos exigen otro manejo.
+
+\textbf{Conclusión:} la tecnología funciona mejor con regulación, incentivos y responsabilidad compartida; no basta con copiar otro país.
+\vfill
+{\fontsize{10}{12}\selectfont Fuentes: SEMARNAT, \emph{Diagnóstico básico para la gestión integral de los residuos} (2020); DPG, \emph{The DPG deposit process}; UNSD. Apoyo de redacción y revisión: AulaTeX y modelo de lenguaje.}
+\end{document}

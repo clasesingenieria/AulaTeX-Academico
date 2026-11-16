@@ -1,0 +1,56 @@
+% Plantilla editorial IMTC
+\documentclass[spanish,letterpaper,oneside]{article}
+
+\def\documenttitle {Maquinas Electricas}
+\def\documentsubtitle {Reporte integral - maquinas-electricas-imtc}
+\def\documentsubject {Ingenieria en Mecatronica}
+\def\documentauthor {Martin Jonathan de la Cruz}
+\def\coursename {Maquinas Electricas}
+\def\coursecode {IMTC}
+\def\universityname {Universidad Autonoma de Nuevo Leon}
+\def\universityfaculty {Facultad de Ingenieria Mecanica y Electrica}
+\def\universitydepartment {\coursename}
+\def\universitydepartmentimage {UANL/assets-uanl/logo-uanl.png}
+\def\universitydepartmentimagecfg {width=3.2cm}
+\def\universitylocation {San Nicolas de los Garza, Nuevo Leon}
+\def\authortable {
+  \begin{tabular}{ll}
+    \textbf{Alumno:} & Martin Jonathan de la Cruz \\
+    Matricula: & UANL-IMTC \\
+    Programa: & Ingenieria en Mecatronica \\
+    Asignatura: & \coursename \\
+    Codigo: & \coursecode \\
+    Figura docente: & Nombre por definir \\
+    & \\
+    \multicolumn{2}{l}{Fecha de realizacion: \today} \\
+    \multicolumn{2}{l}{\universitylocation}
+  \end{tabular}
+}
+
+\input{template}
+
+\begin{document}
+\templatePortrait
+\templatePagecfg
+\onehalfspacing
+
+\begin{abstractd}
+\textbf{Objetivo:} Documentar el avance academico y tecnico de la materia maquinas electricas.
+\end{abstractd}
+
+\templateIndex
+\templateFinalcfg
+
+\section{Introduccion}
+Describir el contexto de la actividad y su impacto en la formacion mecatronica.
+
+\section{Desarrollo}
+Agregar analisis, resultados, figuras y tablas segun la actividad.
+
+\section{Conclusiones}
+Sintetizar hallazgos y siguientes acciones de aprendizaje.
+
+\bibliographystyle{natnumurl}
+\bibliography{maquinas-electricas-imtc}
+
+\end{document}

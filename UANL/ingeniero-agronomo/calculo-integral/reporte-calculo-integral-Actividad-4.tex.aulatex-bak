@@ -1,0 +1,75 @@
+\documentclass[spanish,letterpaper,oneside]{article}
+
+\def\documenttitle {Modelos de ganancia de peso}
+\def\documentsubtitle {Actividad 4 --- Actividad ponderada 2.2}
+\def\documentsubject {Cálculo Integral}
+\def\documentauthor {Diego de la Cruz}
+\def\coursename {Cálculo Integral}
+\def\coursecode {Clave por registrar}
+\def\universityname {Universidad Autónoma de Nuevo León}
+\def\universityfaculty {Facultad de Agronomía}
+\def\universitydepartment {Ingeniero Agrónomo}
+\def\universitydepartmentimage {UANL/assets-uanl/logo-uanl.png}
+\def\universitydepartmentimagecfg {width=3.2cm}
+\def\universitylocation {General Escobedo, Nuevo León, México}
+\def\authortable {
+  \begin{tabular}{ll}
+    \textbf{Alumno:} & Diego de la Cruz \\
+    \textbf{Matrícula:} & Por registrar \\
+    \textbf{Grupo:} & Por registrar \\
+    \textbf{Docente:} & Por registrar \\
+    \textbf{Fecha:} & \today \\
+    \multicolumn{2}{l}{\universitylocation}
+  \end{tabular}
+}
+
+\input{template}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{framed}
+\usepackage{tikz}
+\setcitestyle{authoryear,open={(},close={)}}
+
+\definecolor{uanlblue}{RGB}{0,55,108}
+\newenvironment{examplebox}[1]{%
+  \def\FrameCommand{\fcolorbox{uanlblue}{blue!3}}%
+  \MakeFramed{\advance\hsize-2\width\FrameRestore}%
+  \noindent\textbf{#1}\par\smallskip
+}{\endMakeFramed}
+
+\begin{document}
+\begin{titlepage}
+  \thispagestyle{empty}
+  \begin{center}
+    \includegraphics[width=3.3cm]{UANL/assets-uanl/logo-uanl.png}\par
+    \vspace{0.5cm}
+    {\Large\bfseries Universidad Autónoma de Nuevo León\par}
+    \vspace{0.2cm}
+    {\large Facultad de Agronomía\par}
+    \vspace{0.8cm}\color{uanlblue}\rule{\textwidth}{1.2pt}\color{black}
+    \vfill
+    {\Large Ingeniero Agrónomo\par}
+    \vspace{0.7cm}
+    {\Huge\bfseries Modelos de ganancia de peso\par}
+    \vspace{0.45cm}
+    {\LARGE Actividad 4 --- Actividad ponderada 2.2\par}
+    \vspace{0.3cm}
+    {\large Valor: 6 puntos\par}
+    \vfill
+    \begin{tabular}{>{\bfseries}p{3.5cm}p{8cm}}
+      Alumno: & Diego de la Cruz\\[4mm]
+      Matrícula: & Por registrar\\[4mm]
+      Grupo: & Por registrar\\[4mm]
+      Docente: & Por registrar\\[4mm]
+      Fecha: & \today
+    \end{tabular}
+    \vfill
+    {General Escobedo, Nuevo León, México\par}
+  \end{center}
+\end{titlepage}
+
+\templatePagecfg
+\onehalfspacing
+\input{UANL/ingeniero-agronomo/calculo-integral/contenido-actividad-2-ponderada}
+\templateFinalcfg
+\end{document}
