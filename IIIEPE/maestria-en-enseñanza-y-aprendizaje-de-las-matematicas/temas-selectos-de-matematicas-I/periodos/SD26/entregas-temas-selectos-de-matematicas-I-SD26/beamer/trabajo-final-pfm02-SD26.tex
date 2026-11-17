@@ -1,0 +1,279 @@
+% !TeX program = pdflatex
+% Beamer 16:9 — Trabajo Final PFM02 · SD26
+% IIIEPE · Maestría en Enseñanza y Aprendizaje de las Matemáticas
+\documentclass[aspectratio=169,11pt]{beamer}
+\usetheme{Madrid}
+\usecolortheme{whale}
+
+% ── Paquetes ──
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{booktabs}
+
+% ── Colores institucionales IIIEPE ──
+\definecolor{iiiepeblue}{RGB}{0,51,102}
+\definecolor{iiiepegold}{RGB}{197,151,0}
+\definecolor{iiiepelight}{RGB}{230,240,250}
+\definecolor{errorred}{RGB}{200,30,30}
+\definecolor{correctgreen}{RGB}{0,140,60}
+
+% ── Tema personalizado ──
+\setbeamercolor{structure}{fg=iiiepeblue}
+\setbeamercolor{frametitle}{fg=white,bg=iiiepeblue}
+\setbeamercolor{title}{fg=white,bg=iiiepeblue}
+\setbeamercolor{block title}{fg=white,bg=iiiepeblue}
+\setbeamercolor{block body}{fg=black,bg=iiiepelight}
+\setbeamercolor{alerted text}{fg=errorred}
+\setbeamercolor{itemize item}{fg=iiiepegold}
+\setbeamercolor{itemize subitem}{fg=iiiepegold}
+\setbeamercolor{enumerate item}{fg=iiiepegold}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+% ── Logo en cabecera ──
+\logo{\includegraphics[height=0.6cm]{img/iiiepe/logo-puntos.png}}
+
+% ── Datos ──
+\title[Proporcionalidad Directa]{Proporcionalidad Directa en Sistemas Hidráulicos}
+\subtitle{Principio de Pascal y Ventaja Mecánica}
+\author[Martín de la Cruz]{Mtro. Martín Jonathan de la Cruz Muñoz \\ Matrícula: 00874}
+\institute[IIIEPE]{
+  IIIEPE · Maestría en Enseñanza y Aprendizaje de las Matemáticas \\
+  PFM02 Temas Selectos de Matemáticas I · SD26 \\
+  Nivel: Bachillerato CONALEP · MCCEMS Pensamiento Matemático
+}
+\date{Noviembre 2026}
+
+% ── Stepbeat macro para sincronización ──
+\newcommand{\stepbeat}[2]{}
+
+% ── Alert color para highlight ──
+\newcommand{\highlight}[1]{\textcolor{iiiepegold}{\textbf{#1}}}
+
+\begin{document}
+
+% ═══════════════════════════════════════
+% FRAME 1: PORTADA
+% ═══════════════════════════════════════
+\begin{frame}[plain]
+  \titlepage
+  \begin{center}
+    \includegraphics[height=1.2cm]{img/iiiepe/logo-iiiepe-blanco.png}
+  \end{center}
+  \only<1>{\stepbeat{frame_identidad}{id_portada}}
+\end{frame}
+
+% ═══════════════════════════════════════
+% FRAME 2: HABILIDAD + CONTENIDO + PDA
+% ═══════════════════════════════════════
+\begin{frame}{1. Habilidad Matemática, Contenido y PDA}
+  \begin{block}{Habilidad Matemática}
+    Modelar relaciones de \highlight{proporcionalidad directa} en sistemas físicos,
+    formulando ecuaciones $y = kx$ e interpretando $k$ como pendiente geométrica
+    y ventaja mecánica.
+  \end{block}
+  \only<1>{\stepbeat{frame_habilidad_pda}{hab_matematica}}
+
+  \begin{block}{Contenido}
+    Variación directamente proporcional:
+    $$F_2 = \frac{A_2}{A_1} \cdot F_1 = k \cdot F_1$$
+    donde $k = \frac{A_2}{A_1} = \left(\frac{d_2}{d_1}\right)^2$.
+  \end{block}
+  \only<2>{\stepbeat{frame_habilidad_pda}{contenido}}
+
+  \begin{alertblock}{PDA (Proceso de Desarrollo de Aprendizaje)}
+    Resuelve problemas de variación proporcional directa en contextos de física
+    e ingeniería, representando algebraicamente la relación fuerza-área en sistemas
+    hidráulicos, interpretando $k = A_2/A_1$ como factor de amplificación, y validando
+    el modelo con cálculo numérico y representación gráfica.
+  \end{alertblock}
+  \only<3>{\stepbeat{frame_habilidad_pda}{pda}}
+\end{frame}
+
+% ═══════════════════════════════════════
+% FRAME 3: EXPLICACIÓN — PRINCIPIO DE PASCAL
+% ═══════════════════════════════════════
+\begin{frame}{2. Explicación Matemática — Principio de Pascal}
+  \begin{block}{Principio de Pascal (1653)}
+    La presión en un fluido confinado se transmite con igual intensidad en todas
+    direcciones:
+    $$P_1 = P_2 \implies \frac{F_1}{A_1} = \frac{F_2}{A_2}$$
+  \end{block}
+  \only<1>{\stepbeat{frame_explicacion_1}{pascal_eq}}
+
+  \begin{block}{Despeje de $F_2$}
+    $$F_2 = \frac{A_2}{A_1} \cdot F_1 = k \cdot F_1$$
+    donde $k = \frac{A_2}{A_1}$ es la \alert{ventaja mecánica hidráulica}.
+  \end{block}
+  \only<2>{\stepbeat{frame_explicacion_1}{despeje_f2}}
+
+  \begin{alertblock}{Relación con diámetros}
+    Como $A = \pi r^2 = \frac{\pi d^2}{4}$:
+    $$k = \frac{A_2}{A_1} = \frac{\pi d_2^2/4}{\pi d_1^2/4} = \left(\frac{d_2}{d_1}\right)^2$$
+  \end{alertblock}
+  \only<3>{\stepbeat{frame_explicacion_1}{area_diametro}}
+\end{frame}
+
+% ═══════════════════════════════════════
+% FRAME 4: CASOS Y CONSERVACIÓN
+% ═══════════════════════════════════════
+\begin{frame}{2. Casos y Conservación de Volumen}
+  \begin{columns}[t]
+    \column{0.5\textwidth}
+    \begin{block}{Casos de $k$}
+      \begin{itemize}
+        \item $k > 1$: Amplificación de fuerza ($A_2 > A_1$)
+        \item $k = 1$: Transmisión directa 1:1
+        \item $k < 1$: Reducción, ganancia en desplazamiento
+      \end{itemize}
+    \end{block}
+    \only<1>{\stepbeat{frame_explicacion_2}{casos_k}}
+
+    \column{0.5\textwidth}
+    \begin{block}{Conservación de volumen}
+      $$A_1 \cdot \Delta x_1 = A_2 \cdot \Delta x_2$$
+      $$\implies \Delta x_2 = \frac{\Delta x_1}{k}$$
+      A mayor ventaja mecánica, menor desplazamiento.
+    \end{block}
+    \only<2>{\stepbeat{frame_explicacion_2}{conservacion}}
+  \end{columns}
+\end{frame}
+
+% ═══════════════════════════════════════
+% FRAME 5: DIFICULTADES FRECUENTES
+% ═══════════════════════════════════════
+\begin{frame}{3. Dificultades Frecuentes del Alumnado}
+  \begin{alertblock}{Error frecuente}
+    Usar $k = \dfrac{d_2}{d_1}$ en lugar de $k = \left(\dfrac{d_2}{d_1}\right)^2$.
+  \end{alertblock}
+
+  \begin{columns}[t]
+    \column{0.5\textwidth}
+    \begin{center}
+      \textcolor{errorred}{\textbf{Incorrecto}}
+    \end{center}
+    $$k = \frac{d_2}{d_1} = \frac{3.0}{1.5} = 2$$
+    $$F_2 = 2 \cdot 8 = 16 \text{ N}$$
+    \only<1>{\stepbeat{frame_dificultades}{error_comun}}
+
+    \column{0.5\textwidth}
+    \begin{center}
+      \textcolor{correctgreen}{\textbf{Correcto}}
+    \end{center}
+    $$k = \left(\frac{3.0}{1.5}\right)^2 = 4$$
+    $$F_2 = 4 \cdot 8 = 32 \text{ N}$$
+    \only<2>{\stepbeat{frame_dificultades}{remediacion}}
+  \end{columns}
+
+  \vspace{0.3cm}
+  \begin{block}{Remediación didáctica}
+    \begin{enumerate}
+      \item Derivar $A = \pi d^2/4$ explícitamente
+      \item Mostrar que $\pi/4$ se cancela en el cociente
+      \item Visualización: duplicar lado $\implies$ cuadruplicar área
+    \end{enumerate}
+  \end{block}
+\end{frame}
+
+% ═══════════════════════════════════════
+% FRAME 6: ESTRATEGIA DIDÁCTICA
+% ═══════════════════════════════════════
+\begin{frame}{4. Estrategia Didáctica}
+  \begin{block}{Aprendizaje Basado en Problemas (ABP) + Representación Múltiple}
+    \begin{enumerate}
+      \item Presentar \highlight{prototipo real} de excavadora hidráulica
+      \item Formular problema: ¿cómo amplificar fuerza con jeringas?
+      \item Construir 3 representaciones:
+        \begin{itemize}
+          \item \textbf{Numérica:} Tabla de valores $(F_1, F_2)$
+          \item \textbf{Algebraica:} Ecuación $F_2 = k \cdot F_1$
+          \item \textbf{Gráfica:} Recta con pendiente $k$
+        \end{itemize}
+      \item Generalizar modelo $y = kx$ e interpretación física
+    \end{enumerate}
+  \end{block}
+  \only<1>{\stepbeat{frame_estrategia}{abp}}
+\end{frame}
+
+% ═══════════════════════════════════════
+% FRAME 7: RETO MATEMÁTICO
+% ═══════════════════════════════════════
+\begin{frame}{5. Reto Matemático}
+  \begin{block}{Contexto: Excavadora Hidráulica Casera}
+    \begin{itemize}
+      \item Diámetro emisor: $d_1 = 1.5$ cm
+      \item Diámetro receptor: $d_2 = 3.0$ cm
+      \item Fuerza aplicada: $F_1 = 8$ N
+      \item Desplazamiento emisor: $\Delta x_1 = 4$ cm
+    \end{itemize}
+  \end{block}
+  \only<1>{\stepbeat{frame_reto}{reto_datos}}
+
+  \begin{exampleblock}{Calcula}
+    \begin{enumerate}[a)]
+      \item Presión transmitida al fluido
+      \item Fuerza resultante $F_2$ en el actuador
+      \item Desplazamiento $\Delta x_2$ del actuador
+      \item ¿Qué ocurre con la pendiente si $d_2 = 6$ cm?
+    \end{enumerate}
+  \end{exampleblock}
+  \only<2>{\stepbeat{frame_reto}{think_pause}}
+
+  \only<3>{
+    \begin{block}{Solución}
+      \begin{enumerate}[a)]
+        \item $P = \frac{F_1}{A_1} = \frac{8}{1.767} = 4.53$ N/cm²
+        \item $k = \left(\frac{3.0}{1.5}\right)^2 = 4 \implies F_2 = 32$ N
+        \item $\Delta x_2 = \frac{4}{4} = 1$ cm
+        \item $k' = \left(\frac{6}{1.5}\right)^2 = 16$: pendiente se \alert{cuadruplica}
+      \end{enumerate}
+    \end{block}
+  }
+  \only<3>{\stepbeat{frame_reto}{reto_solucion}}
+\end{frame}
+
+% ═══════════════════════════════════════
+% FRAME 8: INDICADOR Y EVIDENCIA
+% ═══════════════════════════════════════
+\begin{frame}{6. Indicador y Evidencia Observable}
+  \begin{block}{Indicador Observable}
+    El estudiante escribe $F_2 = k \cdot F_1$ con $k = (d_2/d_1)^2$
+    \alert{sin confundirlo} con $d_2/d_1$, y calcula $\Delta x_2$ usando
+    conservación de volumen.
+  \end{block}
+
+  \begin{exampleblock}{Evidencia Concreta}
+    \begin{enumerate}
+      \item Tabla con $\geq 3$ pares $(F_1, F_2)$ correctamente calculados
+      \item Gráfica $F_2$ vs $F_1$ en GeoGebra con pendiente identificada
+      \item Respuesta escrita al inciso d) con interpretación de nueva pendiente
+    \end{enumerate}
+  \end{exampleblock}
+  \only<1>{\stepbeat{frame_indicador}{indicador_evidencia}}
+\end{frame}
+
+% ═══════════════════════════════════════
+% FRAME 9: SÍNTESIS Y CRÉDITOS
+% ═══════════════════════════════════════
+\begin{frame}[plain]
+  \begin{center}
+    {\Large\bfseries Síntesis}\\[0.5cm]
+    \begin{tabular}{rl}
+      $F_2 = k \cdot F_1$ & $k = \left(\dfrac{d_2}{d_1}\right)^2$ \\[0.3cm]
+      $\Delta x_2 = \dfrac{\Delta x_1}{k}$ & Conservación de volumen
+    \end{tabular}\\[0.8cm]
+    \rule{0.6\textwidth}{0.4pt}\\[0.5cm]
+    {\small IIIEPE · PFM02 Temas Selectos de Matemáticas I · SD26}\\[0.2cm]
+    {\footnotesize Mtro. Martín Jonathan de la Cruz Muñoz · Matrícula 00874}\\[0.3cm]
+    {\scriptsize Referencias: SEP MCCEMS (2017) · Tippens (2011) · Çengel \& Cimbala (2018)}\\[0.5cm]
+    \includegraphics[height=1.0cm]{img/iiiepe/logo-iiiepe-blanco.png}
+  \end{center}
+  \only<1>{\stepbeat{frame_cierre}{sintesis_creditos}}
+\end{frame}
+
+\end{document}

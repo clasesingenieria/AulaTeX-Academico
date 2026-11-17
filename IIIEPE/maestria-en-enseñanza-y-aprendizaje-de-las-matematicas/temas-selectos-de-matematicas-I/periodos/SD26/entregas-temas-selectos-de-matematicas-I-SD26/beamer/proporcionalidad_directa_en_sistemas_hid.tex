@@ -1,0 +1,162 @@
+\documentclass[aspectratio=169,t,11pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usetheme{Madrid}
+\usecolortheme{default}
+\definecolor{StepNavy}{HTML}{0F172A}
+\definecolor{StepBlue}{HTML}{0369A1}
+\definecolor{StepAmber}{HTML}{B45309}
+\setbeamercolor{structure}{fg=StepNavy}
+\setbeamercolor{frametitle}{bg=StepNavy,fg=white}
+\setbeamercolor{alerted text}{fg=StepBlue}
+\setbeamertemplate{navigation symbols}{}
+
+% Marcador determinista de beats en tiempo de shipout PDF (sin saltos verticales)
+\newwrite\stepbeatout
+\AtBeginDocument{\immediate\openout\stepbeatout=\jobname.beats}
+\AtEndDocument{\closeout\stepbeatout}
+\newcommand{\stepbeat}[2]{\write\stepbeatout{#1|#2|\the\value{page}}}
+
+\title{Proporcionalidad Directa en Sistemas Hidráulicos — Trabajo Final PFM02}
+\subtitle{PFM02 Temas Selectos de Matemáticas I · SD26}
+\author{Martín Jonathan de la Cruz Muñoz}
+\institute{IIIEPE}
+\date{\today}
+\begin{document}
+
+\begin{frame}[plain]
+\titlepage
+\end{frame}
+
+% === FRAME: frame_identidad (hook) ===
+\begin{frame}[t]{TRABAJO FINAL — Una habilidad, un PDA, cinco minutos}
+\begin{itemize}
+  \item<1-> \only<1>{\stepbeat{frame_identidad}{id_portada}}\centering
+{\Large\bfseries Proporcionalidad Directa en Sistemas Hidráulicos}\\[0.3cm]
+{\normalsize Principio de Pascal y Ventaja Mecánica}\\[0.5cm]
+{\small IIIEPE · PFM02 Temas Selectos de Matemáticas I · SD26}\\[0.3cm]
+{\footnotesize Mtro. Martín Jonathan de la Cruz Muñoz · 00874}\\
+{\footnotesize Nivel: Bachillerato CONALEP · MCCEMS Pensamiento Matemático}
+\end{itemize}
+\end{frame}
+
+% === FRAME: frame_habilidad_pda (setup) ===
+\begin{frame}[t]{1. Habilidad Matemática, Contenido y PDA}
+\begin{itemize}
+  \item<1-> \only<1>{\stepbeat{frame_habilidad_pda}{hab_matematica}}\textbf{Habilidad matemática:} Modelar relaciones de proporcionalidad directa en sistemas físicos, formulando ecuaciones $y = kx$ e interpretando $k$ como pendiente geométrica y ventaja mecánica.
+  \item<2-> \only<2>{\stepbeat{frame_habilidad_pda}{contenido}}\textbf{Contenido:} Variación directamente proporcional.
+$F_2 = \frac{A_2}{A_1} \cdot F_1 = k \cdot F_1$, donde $k = \frac{A_2}{A_1} = \left(\frac{d_2}{d_1}\right)^2$.
+  \item<3-> \only<3>{\stepbeat{frame_habilidad_pda}{pda}}\alert<3>{\textbf{PDA:} Resuelve problemas de variación proporcional directa en contextos de física e ingeniería, representando algebraicamente la relación fuerza-área en sistemas hidráulicos, interpretando $k = A_2/A_1$ como factor de amplificación, y validando el modelo con cálculo numérico y representación gráfica.}
+\end{itemize}
+\end{frame}
+
+% === FRAME: frame_explicacion_1 (derivation) ===
+\begin{frame}[t]{2. Explicación Matemática — Principio de Pascal}
+\begin{itemize}
+  \item<1-> \only<1>{\stepbeat{frame_explicacion_1}{pascal_eq}}\textbf{Principio de Pascal:} La presión en un fluido confinado se transmite con igual intensidad en todas direcciones.
+$$P_1 = P_2 \implies \frac{F_1}{A_1} = \frac{F_2}{A_2}$$
+  \item<2-> \only<2>{\stepbeat{frame_explicacion_1}{despeje_f2}}Despejando $F_2$:
+$$F_2 = \frac{A_2}{A_1} \cdot F_1 = k \cdot F_1$$
+donde $k = \frac{A_2}{A_1}$ es la \alert{ventaja mecánica hidráulica}.
+  \item<3-> \only<3>{\stepbeat{frame_explicacion_1}{area_diametro}}\alert<3>{Como $A = \pi r^2 = \frac{\pi d^2}{4}$:
+$$k = \frac{A_2}{A_1} = \frac{\pi d_2^2/4}{\pi d_1^2/4} = \left(\frac{d_2}{d_1}\right)^2$$}
+\end{itemize}
+\end{frame}
+
+% === FRAME: frame_explicacion_2 (derivation) ===
+\begin{frame}[t]{2. Casos y Conservación de Volumen}
+\begin{itemize}
+  \item<1-> \only<1>{\stepbeat{frame_explicacion_2}{casos_k}}\textbf{Casos de la constante $k$:}
+\begin{itemize}
+\item $k > 1$: Amplificación de fuerza ($A_2 > A_1$)
+\item $k = 1$: Transmisión directa 1:1 ($A_2 = A_1$)
+\item $k < 1$: Reducción de fuerza, ganancia en desplazamiento
+\end{itemize}
+  \item<2-> \only<2>{\stepbeat{frame_explicacion_2}{conservacion}}\textbf{Conservación de volumen (fluido incompresible):}
+$$A_1 \cdot \Delta x_1 = A_2 \cdot \Delta x_2 \implies \Delta x_2 = \Delta x_1 \cdot \frac{A_1}{A_2} = \frac{\Delta x_1}{k}$$
+\end{itemize}
+\end{frame}
+
+% === FRAME: frame_dificultades (derivation) ===
+\begin{frame}[t]{3. Dificultades Frecuentes del Alumnado}
+\begin{itemize}
+  \item<1-> \only<1>{\stepbeat{frame_dificultades}{error_comun}}\alert<1>{\textbf{Error frecuente:} Usar $k = \frac{d_2}{d_1}$ en lugar de $k = \left(\frac{d_2}{d_1}\right)^2$.\\[0.2cm]
+\textbf{Ejemplo:} $d_1=1.5$ cm, $d_2=3.0$ cm, $F_1=8$ N\\
+\textcolor{red}{Incorrecto:} $k=2 \implies F_2=16$ N\\
+\textcolor{green!60!black}{Correcto:} $k=4 \implies F_2=32$ N\\
+El error subestima la fuerza en un \alert{50\%}.}
+  \item<2-> \only<2>{\stepbeat{frame_dificultades}{remediacion}}\textbf{Remediación didáctica:}
+\begin{enumerate}
+\item Derivar explícitamente $A = \pi d^2/4$ en clase
+\item Mostrar algebraicamente que $\pi/4$ se cancela en el cociente
+\item Visualización geométrica: duplicar lado $\implies$ cuadruplicar área
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+% === FRAME: frame_estrategia (derivation) ===
+\begin{frame}[t]{4. Estrategia Didáctica}
+\begin{itemize}
+  \item<1-> \only<1>{\stepbeat{frame_estrategia}{abp}}\textbf{Aprendizaje Basado en Problemas + Representación Múltiple:}
+\begin{enumerate}
+\item Presentar prototipo real de excavadora hidráulica
+\item Formular problema: ¿cómo amplificar fuerza con jeringas?
+\item Construir 3 representaciones: tabla, ecuación, gráfica
+\item Generalizar modelo $y = kx$ e interpretación física de $k$
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+% === FRAME: frame_reto (faded_pause) ===
+\begin{frame}[t]{5. Reto Matemático}
+\begin{itemize}
+  \item<1-> \only<1>{\stepbeat{frame_reto}{reto_datos}}\textbf{Contexto:} Excavadora hidráulica casera\\
+$d_1 = 1.5$ cm · $d_2 = 3.0$ cm · $F_1 = 8$ N · $\Delta x_1 = 4$ cm\\[0.2cm]
+\textbf{Calcula:}
+\begin{enumerate}[a)]
+\item Presión transmitida al fluido
+\item Fuerza resultante $F_2$ en el actuador
+\item Desplazamiento $\Delta x_2$ del actuador
+\item ¿Qué ocurre con la pendiente si $d_2 = 6$ cm?
+\end{enumerate}
+  \item<2-> \only<2>{\stepbeat{frame_reto}{think_pause}}\textcolor{StepAmber}{\centering
+{\Large\bfseries Tu turno}\\[0.5cm]
+{\normalsize Pausa el video y resuelve los incisos a, b y c}\\[0.3cm]
+{\small Recuerda: $k = (d_2/d_1)^2$ · $\Delta x_2 = \Delta x_1/k$}}
+  \item<3-> \only<3>{\stepbeat{frame_reto}{reto_solucion}}\alert<3>{\textbf{Solución:}
+a) $P = \frac{F_1}{A_1} = \frac{8}{1.767} = 4.53$ N/cm²\\
+b) $k = \left(\frac{3.0}{1.5}\right)^2 = 4 \implies F_2 = 32$ N\\
+c) $\Delta x_2 = \frac{4}{4} = 1$ cm\\
+d) $k' = \left(\frac{6}{1.5}\right)^2 = 16$: pendiente se \alert{cuadruplica}}
+\end{itemize}
+\end{frame}
+
+% === FRAME: frame_indicador (verification) ===
+\begin{frame}[t]{6. Indicador y Evidencia Observable}
+\begin{itemize}
+  \item<1-> \only<1>{\stepbeat{frame_indicador}{indicador_evidencia}}\textbf{Indicador observable:} El estudiante escribe $F_2 = k \cdot F_1$ con $k = (d_2/d_1)^2$ \alert{sin confundirlo} con $d_2/d_1$, y calcula $\Delta x_2$ usando conservación de volumen.\\[0.2cm]
+\textbf{Evidencia concreta:}
+\begin{enumerate}
+\item Tabla con $\geq 3$ pares $(F_1, F_2)$ correctos
+\item Gráfica $F_2$ vs $F_1$ en GeoGebra con pendiente identificada
+\item Respuesta escrita al inciso d) con interpretación
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+% === FRAME: frame_cierre (synthesis) ===
+\begin{frame}[t]{Síntesis y Créditos}
+\begin{itemize}
+  \item<1-> \only<1>{\stepbeat{frame_cierre}{sintesis_creditos}}\centering
+{\small $F_2 = k \cdot F_1$ · $k = (d_2/d_1)^2$ · $\Delta x_2 = \Delta x_1/k$}\\[0.5cm]
+{\small IIIEPE · PFM02 Temas Selectos de Matemáticas I · SD26}\\
+{\footnotesize Mtro. Martín Jonathan de la Cruz Muñoz · Matrícula 00874}\\[0.2cm]
+{\scriptsize Refs: SEP MCCEMS (2017) · Tippens (2011) · Çengel \& Cimbala (2018)}
+\end{itemize}
+\end{frame}
+
+\end{document}
