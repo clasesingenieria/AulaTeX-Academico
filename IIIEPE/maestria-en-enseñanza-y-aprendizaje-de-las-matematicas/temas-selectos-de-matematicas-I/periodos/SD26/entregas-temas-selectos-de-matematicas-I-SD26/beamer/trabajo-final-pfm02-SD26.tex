@@ -11,7 +11,7 @@
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
 \usepackage{tikz}
-\usepackage{enumitem}
+% enumitem incompatible con Beamer overlays; usar formato nativo
 \usepackage{xcolor}
 \usepackage{booktabs}
 
@@ -215,22 +215,24 @@
   \only<1>{\stepbeat{frame_reto}{reto_datos}}
 
   \begin{exampleblock}{Calcula}
-    \begin{enumerate}[a)]
-      \item Presión transmitida al fluido
-      \item Fuerza resultante $F_2$ en el actuador
-      \item Desplazamiento $\Delta x_2$ del actuador
-      \item ¿Qué ocurre con la pendiente si $d_2 = 6$ cm?
+    \begin{enumerate}
+      \item[a)] Presión transmitida al fluido
+      \item[b)] Fuerza resultante $F_2$ en el actuador
+      \item[c)] Desplazamiento $\Delta x_2$ del actuador
+      \item[d)] ¿Qué ocurre con la pendiente si $d_2 = 6$ cm?
     \end{enumerate}
   \end{exampleblock}
   \only<2>{\stepbeat{frame_reto}{think_pause}}
 
   \only<3>{
     \begin{block}{Solución}
-      \begin{enumerate}[a)]
-        \item $P = \frac{F_1}{A_1} = \frac{8}{1.767} = 4.53$ N/cm²
-        \item $k = \left(\frac{3.0}{1.5}\right)^2 = 4 \implies F_2 = 32$ N
-        \item $\Delta x_2 = \frac{4}{4} = 1$ cm
-        \item $k' = \left(\frac{6}{1.5}\right)^2 = 16$: pendiente se \alert{cuadruplica}
+      \begin{enumerate}
+        \item[a)] $P = \frac{F_1}{A_1} = \frac{8}{1.767} = 4.53$ N/cm²
+        \item[b)] $k = \left(\frac{3.0}{1.5}
+ight)^2 = 4 \implies F_2 = 32$ N
+        \item[c)] $\Delta x_2 = \frac{4}{4} = 1$ cm
+        \item[d)] $k' = \left(\frac{6}{1.5}
+ight)^2 = 16$: pendiente se \alert{cuadruplica}
       \end{enumerate}
     \end{block}
   }
