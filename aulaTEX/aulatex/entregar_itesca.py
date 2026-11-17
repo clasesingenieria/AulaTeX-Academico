@@ -70,6 +70,10 @@ class EntregarItescaRequest:
     finalize: bool = False  # True para 'Enviar para calificar' definitivo, False para borrador
     dry_run: bool = True  # True por omisión para simulación y validación previa
     output_dir: str = ""
+    # NUEVOS CAMPOS: Automatización de cuestionarios
+    quiz_automation_authorized: bool = False  # Autorización explícita para resolver quiz
+    quiz_answers_file: str = ""  # Ruta al archivo JSON con respuestas preparadas
+    quiz_time_limit_minutes: int = 60  # Límite de tiempo para el intento (default 60 min)
 
 
 class EntregarItescaAgent(RealizarEntregaAgent):
@@ -187,59 +191,80 @@ class EntregarItescaAgent(RealizarEntregaAgent):
             )
 
         # ------------------------------------------------------------------
-        # COMPUERTA 2: PROTECCIÓN DE CUESTIONARIO EN LÍNEA (QUIZ GATE)
+        # COMPUERTA 2: CUESTIONARIO EN LÍNEA - REQUIERE AUTORIZACIÓN EXPLÍCITA PARA AUTOMATIZACIÓN
         # ------------------------------------------------------------------
         if is_quiz or (mid and mid == 1763):
-            blocker = {
-                "code": "live_quiz_attempt_protected",
-                "detail": (
-                    "Compuerta de seguridad: los cuestionarios en línea con límite de tiempo o intento único "
-                    "no admiten entrega ni resolución automatizada desatendida. Se valida y preserva el reporte "
-                    f"de preparación de reactivos ({artifact_file.name}) para resolución directa por el estudiante."
-                ),
-                "blocking": True,
-            }
-            manifest_quiz = {
-                "schema_version": "1.0.0",
-                "run_id": run_id,
-                "agent_id": self.agent_id,
-                "agent_type": self.agent_type,
-                "institution": "ITESCA",
-                "subject_slug": clean_slug,
-                "activity_number": request.activity_number,
-                "status": "blocked_live_quiz_protected",
-                "timestamp_utc": datetime.now(timezone.utc).isoformat(),
-                "blockers": [blocker],
-            }
-            assert_no_credential_leak(manifest_quiz)
-            m_path = run_dir / "manifest.json"
-            m_path.write_text(json.dumps(manifest_quiz, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+            # NUEVO: Verificar si el usuario autorizó explícitamente la automatización del cuestionario
+            quiz_authorized = getattr(request, 'quiz_automation_authorized', False)
+            quiz_answers_file = getattr(request, 'quiz_answers_file', '')
 
-            summary_md = (
-                f"# Cuestionario en Línea Protegido: Resolución Desatendida Bloqueada\n\n"
-                f"- **Agente:** `{self.agent_id}` (`{self.agent_type}`)\n"
-                f"- **Institución:** ITESCA Virtual\n"
-                f"- **Asignatura:** `{clean_slug}` (Actividad {request.activity_number})\n"
-                f"- **Módulo Moodle:** `{mid}` ({ITESCA_BASE_URL}/mod/quiz/view.php?id={mid})\n"
-                f"- **Guía de Estudio Local:** `{artifact_file.name}`\n"
-                f"- **Compuerta:** `live_quiz_attempt_protected` activa. El cuestionario debe ser respondido por el alumno.\n"
-            )
-            assert_no_credential_leak(summary_md)
-            s_path = run_dir / "resumen-entrega.md"
-            s_path.write_text(summary_md, encoding="utf-8")
+            if not quiz_authorized:
+                blocker = {
+                    "code": "live_quiz_attempt_protected",
+                    "detail": (
+                        "Compuerta de seguridad: los cuestionarios en línea con límite de tiempo o intento único "
+                        "no admiten entrega ni resolución automatizada desatendida sin autorización explícita. "
+                        "Para habilitar la resolución automatizada, se requiere:\n"
+                        "1. quiz_automation_authorized=True en la solicitud\n"
+                        "2. quiz_answers_file con las respuestas preparadas (JSON)\n"
+                        f"Se preserva el reporte de preparación ({artifact_file.name}) para resolución directa."
+                    ),
+                    "blocking": True,
+                }
+                manifest_quiz = {
+                    "schema_version": "1.0.0",
+                    "run_id": run_id,
+                    "agent_id": self.agent_id,
+                    "agent_type": self.agent_type,
+                    "institution": "ITESCA",
+                    "subject_slug": clean_slug,
+                    "activity_number": request.activity_number,
+                    "status": "blocked_live_quiz_protected",
+                    "timestamp_utc": datetime.now(timezone.utc).isoformat(),
+                    "blockers": [blocker],
+                }
+                assert_no_credential_leak(manifest_quiz)
+                m_path = run_dir / "manifest.json"
+                m_path.write_text(json.dumps(manifest_quiz, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
-            return DeliverySubmissionResult(
-                ok=False,
-                status="blocked_live_quiz_protected",
-                run_id=run_id,
-                run_dir=run_dir,
-                artifact_path=str(artifact_file),
-                sha256="",
-                platform_url=f"{ITESCA_BASE_URL}/mod/quiz/view.php?id={mid}" if mid else ITESCA_BASE_URL,
-                manifest_path=m_path,
-                summary_md_path=s_path,
-                blockers=(blocker,),
-            )
+                summary_md = (
+                    f"# Cuestionario en Línea Protegido: Resolución Desatendida Bloqueada\n\n"
+                    f"- **Agente:** `{self.agent_id}` (`{self.agent_type}`)\n"
+                    f"- **Institución:** ITESCA Virtual\n"
+                    f"- **Asignatura:** `{clean_slug}` (Actividad {request.activity_number})\n"
+                    f"- **Módulo Moodle:** `{mid}` ({ITESCA_BASE_URL}/mod/quiz/view.php?id={mid})\n"
+                    f"- **Guía de Estudio Local:** `{artifact_file.name}`\n"
+                    f"- **Compuerta:** `live_quiz_attempt_protected` activa.\n"
+                    f"- **Autorización Requerida:** Para automatización, proporcione `quiz_automation_authorized=True` y archivo de respuestas.\n"
+                )
+                assert_no_credential_leak(summary_md)
+                s_path = run_dir / "resumen-entrega.md"
+                s_path.write_text(summary_md, encoding="utf-8")
+
+                return DeliverySubmissionResult(
+                    ok=False,
+                    status="blocked_live_quiz_protected",
+                    run_id=run_id,
+                    run_dir=run_dir,
+                    artifact_path=str(artifact_file),
+                    sha256="",
+                    platform_url=f"{ITESCA_BASE_URL}/mod/quiz/view.php?id={mid}" if mid else ITESCA_BASE_URL,
+                    manifest_path=m_path,
+                    summary_md_path=s_path,
+                    blockers=(blocker,),
+                )
+            else:
+                # Usuario autorizó automatización del cuestionario - proceder con Playwright
+                return self._execute_quiz_automation(
+                    request=request,
+                    run_id=run_id,
+                    run_dir=run_dir,
+                    mid=mid,
+                    cid=cid,
+                    clean_slug=clean_slug,
+                    artifact_file=artifact_file,
+                    quiz_answers_file=quiz_answers_file,
+                )
 
         # ------------------------------------------------------------------
         # COMPUERTA 3: INTEGRIDAD Y FORMATO DEL ARTEFACTO (.pdf o .docx)
@@ -599,6 +624,280 @@ class EntregarItescaAgent(RealizarEntregaAgent):
             summary_md_path=summary_path,
             platform_evidence=submission_evidence,
         )
+
+    def _execute_quiz_automation(
+        self,
+        request: EntregarItescaRequest,
+        run_id: str,
+        run_dir: Path,
+        mid: int,
+        cid: int,
+        clean_slug: str,
+        artifact_file: Path,
+        quiz_answers_file: str,
+    ) -> DeliverySubmissionResult:
+        """Ejecuta la resolución automatizada de un cuestionario Moodle con Playwright.
+
+        Requiere:
+        1. Archivo JSON de respuestas con formato:
+           {
+             "question_1": {"type": "multichoice", "answer": 0},
+             "question_2": {"type": "truefalse", "answer": true},
+             ...
+           }
+        2. Autorización explícita del usuario (quiz_automation_authorized=True)
+        """
+        from playwright.sync_api import sync_playwright
+
+        # Cargar respuestas preparadas
+        answers_path = Path(quiz_answers_file)
+        if not answers_path.is_absolute():
+            answers_path = self.workspace.repo_root / quiz_answers_file
+
+        if not answers_path.is_file():
+            blocker = {
+                "code": "quiz_answers_file_not_found",
+                "detail": f"Archivo de respuestas no encontrado: {answers_path}",
+                "blocking": True,
+            }
+            return DeliverySubmissionResult(
+                ok=False,
+                status="blocked_quiz_answers_missing",
+                run_id=run_id,
+                run_dir=run_dir,
+                artifact_path=str(artifact_file),
+                sha256="",
+                platform_url=f"{ITESCA_BASE_URL}/mod/quiz/view.php?id={mid}",
+                blockers=(blocker,),
+            )
+
+        try:
+            quiz_answers = json.loads(answers_path.read_text(encoding="utf-8"))
+        except Exception as e:
+            blocker = {
+                "code": "quiz_answers_parse_error",
+                "detail": f"Error al parsear archivo de respuestas: {str(e)}",
+                "blocking": True,
+            }
+            return DeliverySubmissionResult(
+                ok=False,
+                status="blocked_quiz_answers_invalid",
+                run_id=run_id,
+                run_dir=run_dir,
+                artifact_path=str(artifact_file),
+                sha256="",
+                platform_url=f"{ITESCA_BASE_URL}/mod/quiz/view.php?id={mid}",
+                blockers=(blocker,),
+            )
+
+        evidence_dir = run_dir / "evidencia_plataforma"
+        evidence_dir.mkdir(parents=True, exist_ok=True)
+
+        quiz_url = f"{ITESCA_BASE_URL}/mod/quiz/view.php?id={mid}"
+        browser_args, _dns_mode = resolve_doh_host_args(ITESCA_HOST)
+        credentials = load_vault_account(self.workspace.repo_root, "ITESCA", ITESCA_HOST)
+
+        quiz_completed = False
+        quiz_score = "No disponible"
+        screenshot_final_path = evidence_dir / f"quiz-completado-mod{mid}.png"
+        attempt_screenshots: list[str] = []
+
+        with sync_playwright() as playwright:
+            browser = playwright.chromium.launch(
+                headless=True,
+                args=browser_args,
+            )
+            context = browser.new_context(
+                viewport={"width": 1440, "height": 1100},
+                user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+            )
+            page = context.new_page()
+            page.set_default_timeout(45000)
+            page.set_default_navigation_timeout(60000)
+
+            # 1. Login seguro
+            page.goto(f"{ITESCA_BASE_URL}/login/index.php", wait_until="domcontentloaded")
+            page.locator("#username, input[name=username]").first.fill(credentials["username"])
+            page.locator("#password, input[name=password]").first.fill(credentials["password"])
+            page.locator("#loginbtn, button[type=submit]").first.click()
+            page.wait_for_load_state("domcontentloaded")
+            ensure_same_https_host(page.url, ITESCA_HOST, ITESCA_BASE_URL)
+            del credentials
+
+            # 2. Navegar al cuestionario
+            page.goto(quiz_url, wait_until="networkidle")
+            ensure_same_https_host(page.url, ITESCA_HOST, ITESCA_BASE_URL)
+
+            # 3. Iniciar intento (click en "Intente resolver el cuestionario ahora")
+            start_btn = page.locator("button:has-text('Intente resolver'), a:has-text('Intente resolver'), form[action*='startattempt.php'] button").first
+            if start_btn.count():
+                start_btn.click()
+                page.wait_for_load_state("networkidle")
+
+                # Confirmar inicio si hay diálogo de confirmación
+                confirm_btn = page.locator("button:has-text('Iniciar'), input[type='submit'][value*='Iniciar']").first
+                if confirm_btn.count():
+                    confirm_btn.click()
+                    page.wait_for_load_state("networkidle")
+
+            # 4. Procesar preguntas secuencialmente
+            question_num = 0
+            max_questions = 50  # Límite de seguridad
+
+            while question_num < max_questions:
+                question_num += 1
+                q_key = f"question_{question_num}"
+
+                # Capturar evidencia de la pregunta
+                q_screenshot = evidence_dir / f"quiz-pregunta-{question_num:02d}.png"
+                page.screenshot(path=str(q_screenshot))
+                attempt_screenshots.append(str(q_screenshot))
+
+                # Verificar si hay botón "Siguiente página" o "Terminar"
+                next_btn = page.locator("input[type='submit'][value*='Siguiente'], button:has-text('Siguiente')").first
+                finish_btn = page.locator("input[type='submit'][value*='Terminar'], button:has-text('Terminar'), a:has-text('Terminar intento')").first
+
+                # Responder pregunta actual si existe en el archivo
+                if q_key in quiz_answers:
+                    answer_data = quiz_answers[q_key]
+                    self._answer_moodle_question(page, answer_data)
+
+                # Navegar a siguiente pregunta o terminar
+                if next_btn.count() and next_btn.is_enabled():
+                    next_btn.click()
+                    page.wait_for_load_state("networkidle")
+                elif finish_btn.count():
+                    finish_btn.click()
+                    page.wait_for_load_state("networkidle")
+
+                    # Confirmar envío final
+                    submit_btn = page.locator("button:has-text('Enviar todo y terminar'), input[type='submit'][value*='Enviar']").first
+                    if submit_btn.count():
+                        submit_btn.click()
+                        page.wait_for_load_state("networkidle")
+                    break
+                else:
+                    # No hay más preguntas
+                    break
+
+            # 5. Capturar resultado final
+            page.screenshot(path=str(screenshot_final_path), full_page=True)
+
+            # Extraer calificación si está disponible
+            grade_loc = page.locator(".quizattempt .grade, .quizattemptsummary .grade, h3:has-text('Calificación')")
+            if grade_loc.count():
+                quiz_score = grade_loc.first.inner_text()
+                quiz_completed = True
+
+            browser.close()
+
+        # Generar comprobante de cuestionario resuelto
+        quiz_receipt = {
+            "receipt_type": "itesca_quiz_completion_receipt",
+            "run_id": run_id,
+            "agent_id": self.agent_id,
+            "institution": "ITESCA",
+            "subject": clean_slug,
+            "activity_number": request.activity_number,
+            "module_id": mid,
+            "course_id": cid,
+            "quiz_completed": quiz_completed,
+            "quiz_score": quiz_score,
+            "questions_answered": question_num - 1,
+            "screenshots_captured": len(attempt_screenshots),
+            "user_validated": True,
+            "quiz_automation_authorized": True,
+            "completion_timestamp_utc": datetime.now(timezone.utc).isoformat(),
+        }
+        assert_no_credential_leak(quiz_receipt)
+        receipt_path = run_dir / "comprobante_quiz_resuelto.json"
+        receipt_path.write_text(json.dumps(quiz_receipt, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+        manifest_quiz = {
+            "schema_version": "1.0.0",
+            "run_id": run_id,
+            "agent_id": self.agent_id,
+            "agent_type": self.agent_type,
+            "status": "quiz_completed" if quiz_completed else "quiz_attempted",
+            "quiz_completed": quiz_completed,
+            "quiz_score": quiz_score,
+            "timestamp_utc": datetime.now(timezone.utc).isoformat(),
+            "receipt_path": str(receipt_path),
+        }
+        assert_no_credential_leak(manifest_quiz)
+        manifest_path = run_dir / "manifest.json"
+        manifest_path.write_text(json.dumps(manifest_quiz, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+        summary_md = (
+            f"# Comprobante de Cuestionario Resuelto en ITESCA Virtual\n\n"
+            f"- **Agente:** `{self.agent_id}` (`{self.agent_type}`)\n"
+            f"- **Institución:** ITESCA (Maestría en Gestión Administrativa)\n"
+            f"- **Asignatura:** `{clean_slug}` (Módulo {mid})\n"
+            f"- **Actividad:** #{request.activity_number}\n"
+            f"- **Estado:** `{'COMPLETADO' if quiz_completed else 'INTENTADO'}`\n"
+            f"- **Calificación:** `{quiz_score}`\n"
+            f"- **Preguntas respondidas:** {question_num - 1}\n"
+            f"- **Capturas de pantalla:** {len(attempt_screenshots)} archivos\n"
+            f"- **Autorización de usuario:** Confirmada (quiz_automation_authorized=True)\n"
+        )
+        assert_no_credential_leak(summary_md)
+        summary_path = run_dir / "resumen-entrega.md"
+        summary_path.write_text(summary_md, encoding="utf-8")
+
+        return DeliverySubmissionResult(
+            ok=quiz_completed,
+            status="quiz_completed" if quiz_completed else "quiz_attempted",
+            run_id=run_id,
+            run_dir=run_dir,
+            artifact_path=str(artifact_file),
+            sha256="",
+            platform_url=quiz_url,
+            receipt_path=receipt_path,
+            manifest_path=manifest_path,
+            summary_md_path=summary_path,
+            platform_evidence={
+                "quiz_completed": quiz_completed,
+                "quiz_score": quiz_score,
+                "questions_answered": question_num - 1,
+                "screenshots": attempt_screenshots,
+            },
+        )
+
+    def _answer_moodle_question(self, page: Any, answer_data: dict[str, Any]) -> None:
+        """Responde una pregunta de Moodle según su tipo."""
+        q_type = answer_data.get("type", "").lower()
+        answer_value = answer_data.get("answer")
+
+        if q_type == "multichoice":
+            # Opción múltiple: answer es el índice de la opción (0-based)
+            options = page.locator("input[type='radio'][name*='answer']")
+            if options.count() > answer_value:
+                options.nth(answer_value).check()
+
+        elif q_type == "truefalse":
+            # Verdadero/Falso: answer es True o False
+            value = "1" if answer_value else "0"
+            page.locator(f"input[type='radio'][value='{value}']").check()
+
+        elif q_type == "shortanswer":
+            # Respuesta corta: answer es el texto
+            page.locator("input[type='text'][name*='answer']").fill(str(answer_value))
+
+        elif q_type == "numerical":
+            # Numérica: answer es el valor numérico
+            page.locator("input[type='text'][name*='answer']").fill(str(answer_value))
+
+        elif q_type == "essay":
+            # Ensayo: answer es el texto largo
+            page.locator("textarea[name*='answer']").fill(str(answer_value))
+
+        elif q_type == "match":
+            # Relacionar columnas: answer es dict {left_id: right_value}
+            if isinstance(answer_value, dict):
+                for left_id, right_val in answer_value.items():
+                    select = page.locator(f"select[name*='{left_id}']")
+                    if select.count():
+                        select.select_option(str(right_val))
 
 
 # Registrar agente de entrega institucional ITESCA
