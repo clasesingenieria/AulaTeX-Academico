@@ -341,7 +341,7 @@ class TestMonitorItescaAgent(unittest.TestCase):
         report = self.agent.monitor_deliveries(req)
         self.assertTrue(report.ok)
         self.assertEqual(report.institution, "ITESCA")
-        self.assertEqual(len(report.pending_deliveries), 8)
+        self.assertEqual(len(report.pending_deliveries), 20)  # 8 originales + 10 Estadística (U5-U7) + 2 Seminario (T17-T18)
 
 
 class TestEntregarItescaAgent(unittest.TestCase):
