@@ -1,0 +1,339 @@
+\documentclass[spanish,letterpaper,oneside]{article}
+
+% Datos del documento
+\def\documenttitle {¿Qué sabemos y cómo lo enseñamos?}
+\def\documentsubtitle {Temas selectos de matemáticas I}
+\def\documentsubject {Sesión 8 · Propuesta didáctica}
+\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\coursename {Temas selectos de matemáticas I}
+\def\coursecode {PFM02}
+
+% Identidad institucional
+\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León}
+\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
+\def\universitydepartment {Temas selectos de matemáticas I}
+\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
+\def\universitydepartmentimagecfg {height=1.75cm}
+\def\universitylocation {Monterrey, Nuevo León}
+\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\studentid {00874}
+\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
+\def\programperiod {1er tetramestre, marzo--julio de 2026}
+\def\programmodality {Modalidad presencial}
+\def\programshort {MAEM}
+
+\def\authortable {
+  \begin{tabular}{ll}
+    \textbf{Alumno:} & \studentfullname \\
+    Matrícula: & \studentid \\
+    Correo institucional: & \studentemail \\
+    Unidad: & \coursename \\
+    Programa: & \programshort \\
+    Periodo: & \programperiod \\
+    & \\
+    \multicolumn{2}{l}{Fecha de realización: 10 de octubre de 2026} \\
+    \multicolumn{2}{l}{\universitylocation}
+  \end{tabular}
+}
+
+\input{template}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\def\portraittitlecolor {iiiepeNavy}
+\setcitestyle{authoryear,open={(},close={)}}
+
+\newcommand{\insertcoverwatermark}{%
+  \AddToShipoutPictureBG*{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[opacity=.09,inner sep=0pt] at (current page.center)
+      {\includegraphics[width=.58\paperwidth]{img/iiiepe/logo-puntos.png}};
+    \end{tikzpicture}%
+  }%
+}
+
+\newtcolorbox{consignabox}[1][]{
+  enhanced,breakable,
+  colback=iiiepePaper,colframe=iiiepeNavy,
+  boxrule=1pt,leftrule=4pt,arc=2pt,
+  left=8pt,right=8pt,top=6pt,bottom=6pt,
+  before skip=6pt,after skip=10pt,
+  fonttitle=\bfseries\color{white},coltitle=white,
+  colbacktitle=iiiepeNavy,
+  attach boxed title to top left={xshift=8pt,yshift=-2pt},
+  boxed title style={colback=iiiepeNavy,colframe=iiiepeNavy,arc=1pt},
+  title={Consigna de la actividad},#1}
+
+\newtcolorbox{propuestabox}[1][]{
+  enhanced,breakable,
+  colback=iiiepePaper,colframe=iiiepeAqua,
+  boxrule=1pt,leftrule=4pt,arc=2pt,
+  left=8pt,right=8pt,top=6pt,bottom=6pt,
+  before skip=6pt,after skip=10pt,
+  fonttitle=\bfseries\color{white},coltitle=white,
+  colbacktitle=iiiepeAqua,
+  attach boxed title to top left={xshift=8pt,yshift=-2pt},
+  boxed title style={colback=iiiepeAqua,colframe=iiiepeAqua,arc=1pt},
+  title={Propuesta didáctica},#1}
+
+\newtcolorbox{rubricabox}[1][]{
+  enhanced,breakable,
+  colback=iiiepePaper,colframe=iiiepeOrange,
+  boxrule=1pt,leftrule=4pt,arc=2pt,
+  left=8pt,right=8pt,top=6pt,bottom=6pt,
+  before skip=6pt,after skip=10pt,
+  fonttitle=\bfseries\color{white},coltitle=white,
+  colbacktitle=iiiepeOrange,
+  attach boxed title to top left={xshift=8pt,yshift=-2pt},
+  boxed title style={colback=iiiepeOrange,colframe=iiiepeOrange,arc=1pt},
+  title={Rúbrica de evaluación},#1}
+
+\begin{document}
+
+\insertcoverwatermark
+
+% ============================================================
+% PORTADA
+% ============================================================
+\begin{titlepage}
+  \begin{center}
+    \vspace*{1cm}
+    
+    \includegraphics[height=2.5cm]{img/iiiepe/marca-iiiepe.png}
+    
+    \vspace{0.5cm}
+    
+    {\Large\bfseries \universityname\par}
+    
+    \vspace{0.3cm}
+    
+    {\large \universityfaculty\par}
+    
+    \vspace{2cm}
+    
+    {\Huge\bfseries\color{iiiepeNavy} \documenttitle\par}
+    
+    \vspace{0.5cm}
+    
+    {\Large\color{iiiepeBlue} \documentsubject\par}
+    
+    \vspace{1cm}
+    
+    {\large \coursename\par}
+    
+    \vspace{0.3cm}
+    
+    {\large Bloque II: Enseñar desde el desafío\par}
+    
+    \vspace{2cm}
+    
+    \authortable
+    
+    \vfill
+    
+    {\large Sábado 10 de octubre de 2026\par}
+    
+  \end{center}
+\end{titlepage}
+
+% ============================================================
+% CONSIGNA
+% ============================================================
+\section{Consigna de la actividad}
+
+\begin{consignabox}
+\textbf{Actividad 1. ¿Qué sabemos y cómo lo enseñamos?}
+
+\vspace{0.3cm}
+
+\textbf{Instrucciones presenciales:}
+\begin{enumerate}
+  \item Participa en el diagnóstico inicial para recuperar tus conocimientos previos sobre los contenidos que abordaremos.
+  \item Resuelve los desafíos matemáticos utilizando los materiales disponibles. Explora distintas posibilidades, registra tus procedimientos y justifica tus conclusiones.
+  \item Reflexiona sobre cada reto desde tu práctica docente. Identifica posibles dificultades de aprendizaje y plantea preguntas que ayuden a tus estudiantes a construir sus propias respuestas.
+\end{enumerate}
+
+\textbf{Instrucciones en línea:}
+
+Diseña una propuesta didáctica en CANVA para enseñar el \textbf{área y el perímetro} en el grado escolar de tu elección. Considera:
+\begin{itemize}
+  \item Una situación desafiante
+  \item Las estrategias y materiales que utilizarías
+  \item Tu intervención como docente
+  \item El aprendizaje que deseas promover
+\end{itemize}
+
+Comparte tu propuesta con el grupo y participa en el intercambio de ideas, reconociendo que un mismo contenido matemático puede enseñarse de distintas maneras.
+\end{consignabox}
+
+% ============================================================
+% PROPUESTA DIDÁCTICA
+% ============================================================
+\section{Propuesta didáctica: Enseñanza del área y perímetro}
+
+\begin{propuestabox}
+\subsection{Datos generales}
+
+\begin{itemize}
+  \item \textbf{Grado escolar:} 5° de primaria (10--11 años)
+  \item \textbf{Asignatura:} Matemáticas
+  \item \textbf{Tema:} Área y perímetro de figuras geométricas
+  \item \textbf{Duración estimada:} 3 sesiones de 50 minutos
+  \item \textbf{Modalidad:} Presencial con apoyo de materiales concretos
+\end{itemize}
+
+\subsection{Situación desafiante: ``El huerto escolar''}
+
+\textbf{Contexto:} La escuela ha decidido construir un huerto escolar en el patio. Los estudiantes de 5° grado han sido encargados de diseñar la distribución del espacio.
+
+\textbf{El reto:}
+\begin{quote}
+``El director nos ha asignado un terreno rectangular de 12 metros de largo por 8 metros de ancho para construir nuestro huerto. Necesitamos diseñar la distribución considerando que queremos cultivar tomates, lechugas y zanahorias. Cada tipo de cultivo necesita un espacio diferente. Además, necesitamos cercar el huerto para protegerlo. ¿Cuánto material necesitaremos para la cerca? ¿Cómo distribuimos el espacio para cada cultivo?''
+\end{quote}
+
+\subsection{Estrategias didácticas}
+
+\begin{enumerate}
+  \item \textbf{Aprendizaje basado en proyectos:} Los estudiantes trabajarán en equipos para diseñar su propuesta de huerto escolar.
+  \item \textbf{Uso de materiales concretos:} Geoplanos, cuerdas, reglas, papel cuadriculado y calculadoras.
+  \item \textbf{Modelación matemática:} Representarán el terreno a escala y calcularán áreas y perímetros.
+  \item \textbf{Discusión grupal:} Presentarán sus propuestas y justificarán sus decisiones.
+\end{enumerate}
+
+\subsection{Materiales}
+
+\begin{itemize}
+  \item Papel cuadriculado o cartulina
+  \item Reglas y escalímetros
+  \item Cuerdas o mecates
+  \item Geoplanos
+  \item Calculadoras
+  \item Computadora o tablet para elaborar la presentación en Canva
+\end{itemize}
+
+\subsection{Intervención docente}
+
+\textbf{Preguntas orientadoras (sin dar respuestas directas):}
+
+\begin{enumerate}
+  \item ``¿Qué información nos dan sobre el terreno? ¿Qué forma tiene?''
+  \item ``Si queremos cercar el huerto, ¿qué medida necesitamos calcular? ¿Cómo la calculamos?''
+  \item ``Si queremos saber cuánto espacio hay para cultivar, ¿qué medida necesitamos?''
+  \item ``¿Es lo mismo el espacio para cultivar que la distancia alrededor del terreno?''
+  \item ``¿Cómo podemos distribuir el espacio de manera equitativa para los tres cultivos?''
+  \item ``¿Qué estrategias podemos usar para verificar nuestros cálculos?''
+\end{enumerate}
+
+\textbf{Anticipación de dificultades:}
+\begin{itemize}
+  \item Confundir área con perímetro
+  \item No considerar las unidades de medida
+  \item Dificultad para visualizar el problema a escala
+  \item Errores en las operaciones con números decimales
+\end{itemize}
+
+\subsection{Aprendizaje esperado}
+
+\textbf{Al finalizar la actividad, los estudiantes:}
+
+\begin{itemize}
+  \item Distinguirán entre área y perímetro como medidas diferentes de una figura geométrica.
+  \item Calcularán el área y perímetro de rectángulos usando fórmulas matemáticas.
+  \item Aplicarán estos conceptos en situaciones contextualizadas y significativas.
+  \item Justificarán sus procedimientos y conclusiones usando el lenguaje matemático.
+  \item Trabajarán colaborativamente para resolver problemas.
+\end{itemize}
+
+\subsection{Evidencia de aprendizaje}
+
+\begin{itemize}
+  \item Diseño del huerto escolar con cálculos de área y perímetro
+  \item Presentación en Canva explicando su propuesta
+  \item Exposición oral justificando las decisiones tomadas
+\end{itemize}
+
+\subsection{Enlace a la propuesta en Canva}
+
+La propuesta didáctica visualizada en Canva está disponible en:
+\begin{center}
+  \url{https://www.canva.com/design/DAHXj5yH7Xg/QFhMML5K4wgghuVPSgpcaw/view}
+\end{center}
+
+\end{propuestabox}
+
+% ============================================================
+% RÚBRICA
+% ============================================================
+\section{Rúbrica de evaluación}
+
+\begin{rubricabox}
+
+\begin{longtable}{|p{3cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Criterio} & \textbf{Excelente (10)} & \textbf{Bueno (9)} & \textbf{Aceptable (8)} & \textbf{Necesita mejorar (7)} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{Criterio} & \textbf{Excelente (10)} & \textbf{Bueno (9)} & \textbf{Aceptable (8)} & \textbf{Necesita mejorar (7)} \\
+\hline
+\endhead
+
+1. Participación en los retos matemáticos & Participa activamente, explora distintas estrategias y justifica sus procedimientos y conclusiones. & Participa de manera constante, utiliza estrategias pertinentes y explica sus resultados. & Participa de forma limitada y resuelve los retos con explicaciones poco desarrolladas. & Muestra escasa participación y presenta dificultades para desarrollar o explicar sus procedimientos. \\
+\hline
+2. Reflexión pedagógica & Analiza críticamente los retos, anticipa dificultades de aprendizaje y propone intervenciones que favorecen el razonamiento autónomo. & Identifica dificultades de aprendizaje y plantea intervenciones docentes pertinentes. & Reconoce algunas dificultades, pero propone intervenciones generales o poco claras. & Presenta reflexiones superficiales, sin identificar dificultades ni estrategias de acompañamiento. \\
+\hline
+3. Grado escolar de la propuesta & Define claramente el grado escolar y adapta la actividad a las características y conocimientos de sus estudiantes. & Define el grado escolar y plantea una actividad generalmente adecuada a sus estudiantes. & Señala el grado escolar, pero la actividad muestra poca adaptación a sus características. & No precisa el grado escolar o plantea una actividad inadecuada para sus estudiantes. \\
+\hline
+4. Situación o reto matemático & Diseña una situación desafiante, contextualizada y clara que promueve la exploración y el razonamiento sobre área y perímetro. & Presenta un reto claro y pertinente que favorece el uso de conocimientos sobre área y perímetro. & Propone una situación relacionada con el contenido, pero centrada principalmente en aplicar procedimientos. & Plantea una actividad poco clara, descontextualizada o basada únicamente en ejercicios mecánicos. \\
+\hline
+5. Estrategia didáctica y materiales & Propone una estrategia creativa, viable y bien estructurada, con materiales que favorecen la participación y la construcción del aprendizaje. & Presenta una estrategia pertinente y materiales adecuados para desarrollar la actividad. & Describe una estrategia general, con materiales o procedimientos poco definidos. & No establece una estrategia clara o los materiales no contribuyen al propósito de aprendizaje. \\
+\hline
+6. Intervención docente & Anticipa dificultades específicas y formula preguntas orientadoras que promueven la autonomía, el análisis y la argumentación sin dar respuestas directas. & Reconoce posibles dificultades y propone preguntas o acciones pertinentes para orientar a los estudiantes. & Menciona dificultades generales, pero sus intervenciones ofrecen poca orientación para el razonamiento. & No anticipa dificultades o plantea intervenciones centradas en proporcionar directamente las respuestas. \\
+\hline
+7. Aprendizaje esperado & Establece con claridad qué comprensión matemática busca desarrollar y muestra coherencia entre el aprendizaje, el reto y la estrategia. & Define un aprendizaje pertinente y relacionado con la actividad propuesta. & Expresa un aprendizaje general o poco preciso, con una relación limitada con la actividad. & No define claramente el aprendizaje esperado o este no corresponde con la propuesta. \\
+\hline
+8. Entrega a tiempo & Entrega dentro del límite asignado posterior a la sesión. & Entrega un día posterior al límite asignado. & Entrega de 2 a 4 días posteriores al límite asignado. & Entrega de 5 días o más posteriores al límite asignado. \\
+\hline
+
+\end{longtable}
+
+\end{rubricabox}
+
+% ============================================================
+% RECURSOS
+% ============================================================
+\section{Recursos de la plataforma}
+
+\begin{itemize}
+  \item \textbf{Consigna de la actividad:} Actividad 1\_Nombre\_Apellido.pdf
+  \item \textbf{Rúbrica de evaluación:} Rúbrica Actividad 1.pdf
+  \item \textbf{Presentación Canva:} \url{https://www.canva.com/design/DAHXj5yH7Xg/QFhMML5K4wgghuVPSgpcaw/view}
+  \item \textbf{Plataforma:} \url{https://evaposgrados.iiiepe.edu.mx/aula/course/view.php?id=1049}
+\end{itemize}
+
+% ============================================================
+% REFERENCIAS
+% ============================================================
+\section{Referencias}
+
+\begin{itemize}
+  \item Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León. (2026). \textit{Temas Selectos de Matemáticas I: Guía de actividades}. IIIEPE.
+  \item SEP. (2023). \textit{Plan de Estudio para la Educación Primaria: Matemáticas}. Secretaría de Educación Pública.
+  \item Van de Walle, J. A. (2018). \textit{Elementary and Middle School Mathematics: Teaching Developmentally}. Pearson.
+\end{itemize}
+
+\end{document}
