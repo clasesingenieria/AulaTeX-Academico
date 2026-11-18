@@ -18,7 +18,6 @@
 \usetikzlibrary{babel,arrows.meta,positioning,shapes.geometric}
 \usepackage{fancyhdr}
 \usepackage{titlesec}
-\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
 \usepackage{csquotes}
 \usepackage{microtype}
 \usepackage{hyperref}
@@ -36,7 +35,7 @@
 \definecolor{algoblue}{RGB}{25,75,130}
 
 \def\documenttitle{Ultraestructura, dinámica biosintética y reprogramación molecular de la célula plasmática}
-\def\documentauthor{Diego de la Cruz, Emiliano Alejandro Maya López, Sergio Jonás Orozco Martínez}
+\def\documentauthor {Martin Jonathan de la Cruz}
 \def\universityname{Universidad Autónoma de Nuevo León}
 \def\universityfaculty{Facultad de Agronomía}
 \def\universitydepartment{Ingeniero Agrónomo}
@@ -75,7 +74,6 @@
   pdfsubject={Producto Integrador de Aprendizaje - Biología Celular UANL}
 }
 
-\addbibresource{biologia-celular.bib}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 \setlength{\emergencystretch}{2.5em}
 
@@ -140,6 +138,7 @@
 \input{contenido-Actividad-8.tex}
 
 \newpage
-\printbibliography[title={Referencias bibliográficas}]
+ibliographystyle{plainnat}
+ibliography{biologia-celular.bib}[title={Referencias bibliográficas}]
 
 \end{document}

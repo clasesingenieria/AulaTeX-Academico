@@ -33,7 +33,6 @@
 \usepackage{tabularx}
 \usepackage{booktabs}
 \usepackage{amsmath,amssymb}
-\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
 \definecolor{uanlblue}{RGB}{0,55,108}
 \definecolor{tableblue}{RGB}{233,240,247}
 \def\portraittitlecolor{uanlblue}
@@ -41,10 +40,10 @@
 \def\ssectioncolor{uanlblue}
 \def\documenttitlehf{Ética y Legalidad: Evidencia 2 --- Práctica Reflexiva Deontológica}
 \hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Diego de la Cruz Muñoz},pdftitle={Práctica reflexiva sobre dilemas éticos en agronomía},pdfsubject={Evidencia 2 - Ética y Legalidad UANL}}
-\addbibresource{UANL/ingeniero-agronomo/etica-y-cultura-de-la-legalidad/etica-y-cultura-de-la-legalidad.bib}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 \setlength{\emergencystretch}{2.5em}
 
+\bibliographystyle{apa}
 \begin{document}
 \hypersetup{pageanchor=false}
 \begingroup
@@ -113,6 +112,7 @@ Siguiendo el modelo deliberativo de \textcite{giusti2018}, se evalúan tres curs
 2. La formación ética universitaria dota al agrónomo de las herramientas reflexivas y argumentativas para liderar transiciones agroecológicas sustentables bajo la primacía del Estado de derecho.
 
 \newpage
-\printbibliography[title={Referencias bibliográficas}]
+ibliographystyle{plainnat}
+ibliography{UANL/ingeniero-agronomo/etica-y-cultura-de-la-legalidad/etica-y-cultura-de-la-legalidad.bib}[title={Referencias bibliográficas}]
 \end{document}
 

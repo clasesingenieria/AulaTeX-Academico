@@ -33,7 +33,6 @@
 \usepackage{tabularx}
 \usepackage{booktabs}
 \usepackage{amsmath,amssymb}
-\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
 \definecolor{uanlblue}{RGB}{0,55,108}
 \definecolor{tableblue}{RGB}{233,240,247}
 \def\portraittitlecolor{uanlblue}
@@ -41,10 +40,10 @@
 \def\ssectioncolor{uanlblue}
 \def\documenttitlehf{Álgebra Lineal: Modelación Matricial y Matrices de Leslie}
 \hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Diego de la Cruz Muñoz},pdftitle={Modelación matricial de fertilización y dinámica poblacional citrícola},pdfsubject={Producto Integrador de Aprendizaje - Álgebra Lineal UANL}}
-\addbibresource{UANL/ingeniero-agronomo/algebra-lineal/algebra-lineal.bib}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 \setlength{\emergencystretch}{2.5em}
 
+\bibliographystyle{apa}
 \begin{document}
 \hypersetup{pageanchor=false}
 \begingroup
@@ -61,6 +60,7 @@
 \renewcommand{\arraystretch}{1.18}
 \input{UANL/ingeniero-agronomo/algebra-lineal/contenido-PIA.tex}
 \newpage
-\printbibliography[title={Referencias bibliográficas}]
+ibliographystyle{plainnat}
+ibliography{UANL/ingeniero-agronomo/algebra-lineal/algebra-lineal.bib}[title={Referencias bibliográficas}]
 \end{document}
 

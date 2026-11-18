@@ -47,17 +47,16 @@
 \usepackage{subcaption}
 \usepackage{setspace}
 \setstretch{1.15}
-\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
 \definecolor{uanlblue}{RGB}{0,55,108}
 \definecolor{tableblue}{RGB}{233,240,247}
 \def\portraittitlecolor{uanlblue}
 \def\sectioncolor{uanlblue}
 \def\ssectioncolor{uanlblue}
 \hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Diego de la Cruz Muñoz},pdftitle={Excavadora Hidraulica Articulada - Fisica UANL},pdfsubject={Fisica Agronomia UANL}}
-\addbibresource{UANL/ingeniero-agronomo/fisica/fisica.bib}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 \setlength{\emergencystretch}{2.5em}
 
+\bibliographystyle{apa}
 \begin{document}
 \hypersetup{pageanchor=false}
 \begingroup
@@ -79,5 +78,6 @@
 \vspace{0.4cm}
 \nocite{*}
 \clearpage
-\printbibliography[title={Referencias bibliográficas}]
+ibliographystyle{plainnat}
+ibliography{UANL/ingeniero-agronomo/fisica/fisica.bib}[title={Referencias bibliográficas}]
 \end{document}

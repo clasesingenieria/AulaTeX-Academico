@@ -25,8 +25,6 @@
 }
 \AddToHook{file/config.tex/after}{\def\stylecitereferences{custom}}
 \input{template}
-\usepackage[backend=biber,style=apa,natbib=true]{biblatex}
-\addbibresource{UANL/ingeniero-agronomo/algebra-lineal/algebra-lineal.bib}
 \usepackage{pdflscape}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{tikz}
@@ -44,6 +42,7 @@
 
 
 
+\bibliographystyle{apa}
 \begin{document}
 \templatePortrait
 \templatePagecfg
@@ -458,6 +457,7 @@ En conclusión, el desarrollo analítico ejecutado permite formular las siguient
 \end{enumerate}
 
 \clearpage
-\printbibliography[heading=bibintoc,title={Referencias bibliográficas}]
+ibliographystyle{plainnat}
+ibliography{UANL/ingeniero-agronomo/algebra-lineal/algebra-lineal.bib}[heading=bibintoc,title={Referencias bibliográficas}]
 
 \end{document}

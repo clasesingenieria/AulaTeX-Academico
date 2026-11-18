@@ -36,7 +36,6 @@
 \usepackage{pdflscape}
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows.meta,positioning,calc,fit,backgrounds}
-\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
 \definecolor{uanlblue}{RGB}{0,55,108}
 \definecolor{tableblue}{RGB}{233,240,247}
 \definecolor{proccolor}{RGB}{15,115,55}
@@ -48,10 +47,10 @@
 \def\ssectioncolor{uanlblue}
 \def\documenttitlehf{Sistema de Endomembranas}
 \hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Diego de la Cruz},pdftitle={El sistema de endomembranas como red logística celular},pdfsubject={Actividad 6 --- Biología Celular UANL}}
-\addbibresource{UANL/ingeniero-agronomo/biologia-celular/biologia-celular.bib}
 \newcolumntype{Z}{>{\raggedright\arraybackslash}X}
 \setlength{\emergencystretch}{2.5em}
 
+\bibliographystyle{apa}
 \begin{document}
 \hypersetup{pageanchor=false}
 \templatePortrait
@@ -479,6 +478,7 @@ Como estudiante de agronomía en la Facultad de Agronomía de la UANL (Campus Es
 \textbf{Importancia en mi carrera de agronomía:} Para mí como futuro ingeniero agrónomo, entender las endomembranas no es solo teoría de examen. Es la base para comprender cómo los cultivos de maíz, frijol y soya acumulan proteínas en sus semillas, cómo las plantas levantan paredes celulares firmes para no caerse con el viento y cómo responden a nivel celular cuando son atacadas por hongos o bacterias. Conocer estos procesos me ayuda a ver a los cultivos como seres vivos que responden desde su interior a las condiciones del campo.
 
 \vspace{0.6cm}
-\printbibliography[heading=bibintoc,title={Referencias Bibliográficas}]
+ibliographystyle{plainnat}
+ibliography{UANL/ingeniero-agronomo/biologia-celular/biologia-celular.bib}[heading=bibintoc,title={Referencias Bibliográficas}]
 
 \end{document}

@@ -2,7 +2,7 @@
 \def\documenttitle {Solución del Sistema 11}
 \def\documentsubtitle {Evidencia 2.6: mapa cognitivo de algoritmo}
 \def\documentsubject {Eliminación de Gauss-Jordan}
-\def\documentauthor {Diego de la Cruz Muñoz}
+\def\documentauthor {Martin Jonathan de la Cruz}
 \def\coursename {Álgebra Lineal}
 \def\coursecode {Evidencia 2.6}
 \def\universityname {Universidad Autónoma de Nuevo León}
@@ -10,7 +10,7 @@
 \def\universitydepartment {Ingeniero Agrónomo}
 \def\universitydepartmentimage {UANL/assets-uanl/departamentos/logo-uanl.png}
 \def\universitydepartmentimagecfg {width=2.1cm}
-\def\universitylocation {General Escobedo, Nuevo León, México}
+\def\universitylocation {General Escobedo / Marín, Nuevo León, México}
 \def\authortable {
   \begin{tabular}{ll}
     Estudiante: & Diego de la Cruz Muñoz \\
@@ -24,8 +24,6 @@
 }
 \AddToHook{file/config.tex/after}{\def\stylecitereferences{custom}}
 \input{template}
-\usepackage[backend=biber,style=apa,natbib=true]{biblatex}
-\addbibresource{UANL/ingeniero-agronomo/algebra-lineal/algebra-lineal.bib}
 \usepackage{pdflscape}
 \usepackage{tikz}
 \usetikzlibrary{babel,arrows.meta,positioning}
@@ -190,5 +188,6 @@ con cada matriz resultante y permite seguir el procedimiento sin omitir las
 normalizaciones o la eliminación superior. La comprobación independiente
 por Cramer respalda la exactitud del resultado.
 
-\printbibliography[heading=bibintoc,title={Referencias}]
+ibliographystyle{plainnat}
+ibliography{UANL/ingeniero-agronomo/algebra-lineal/algebra-lineal.bib}[heading=bibintoc,title={Referencias}]
 \end{document}

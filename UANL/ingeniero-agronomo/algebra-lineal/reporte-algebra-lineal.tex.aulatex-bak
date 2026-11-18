@@ -28,9 +28,7 @@
 
 \AddToHook{file/config.tex/after}{\def\stylecitereferences{custom}}
 \input{template}
-\usepackage[backend=biber,style=apa,natbib=true]{biblatex}
-\addbibresource{UANL/ingeniero-agronomo/algebra-lineal/algebra-lineal.bib}
-
+\bibliographystyle{apa}
 \begin{document}
 \templatePortrait
 \templatePagecfg
@@ -69,5 +67,6 @@ Este portafolio formal re\'{u}ne las evidencias y productos acad\'{e}micos de la
 
 \nocite{*}
 \newpage
-\printbibliography[title={Bibliograf\'{i}a General del Curso}]
+ibliographystyle{plainnat}
+ibliography{UANL/ingeniero-agronomo/algebra-lineal/algebra-lineal.bib}[title={Bibliograf\'{i}a General del Curso}]
 \end{document}

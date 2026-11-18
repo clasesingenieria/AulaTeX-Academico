@@ -31,7 +31,6 @@
 \setsansfont{Arial}
 \input{template}
 \usepackage{tabularx}
-\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
 \definecolor{uanlblue}{RGB}{0,55,108}
 \definecolor{tableblue}{RGB}{233,240,247}
 \def\portraittitlecolor{uanlblue}
@@ -39,10 +38,10 @@
 \def\ssectioncolor{uanlblue}
 \def\documenttitlehf{Cuadro comparativo}
 \hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={},pdftitle={Cuadro comparativo de patrones de producción y consumo},pdfsubject={Actividad 1 - Responsabilidad Social y Desarrollo Sustentable}}
-\addbibresource{UANL/ingeniero-agronomo/responsabilidad-social-y-desarrollo-sustentable/responsabilidad-social-y-desarrollo-sustentable.bib}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 \setlength{\emergencystretch}{2em}
 
+\bibliographystyle{apa}
 \begin{document}
 \hypersetup{pageanchor=false}
 \begingroup
@@ -59,5 +58,6 @@
 \renewcommand{\arraystretch}{1.18}
 \input{UANL/ingeniero-agronomo/responsabilidad-social-y-desarrollo-sustentable/contenido-actividad-1.tex}
 \clearpage
-\printbibliography[title={Referencias}]
+ibliographystyle{plainnat}
+ibliography{UANL/ingeniero-agronomo/responsabilidad-social-y-desarrollo-sustentable/responsabilidad-social-y-desarrollo-sustentable.bib}[title={Referencias}]
 \end{document}

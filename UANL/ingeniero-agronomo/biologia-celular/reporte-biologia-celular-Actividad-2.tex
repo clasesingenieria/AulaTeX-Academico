@@ -4,7 +4,7 @@
 \def\documenttitle{Atlas descriptivo de tipos celulares y entidades acelulares: Microscopía óptica y electrónica}
 \def\documentsubtitle{Actividad 2 --- Atlas morfológico y ultraestructural comparativo (Fase 2)}
 \def\documentsubject{Biología Celular --- Ingeniero Agrónomo}
-\def\documentauthor{Diego de la Cruz}
+\def\documentauthor {Martin Jonathan de la Cruz}
 \def\coursename{Biología Celular}
 \def\coursecode{REF\#261013755061}
 \def\universityname{Universidad Autónoma de Nuevo León}
@@ -32,7 +32,6 @@
 \usepackage{tabularx}
 \usepackage{booktabs}
 \usepackage{amsmath,amssymb}
-\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
 \definecolor{uanlblue}{RGB}{0,55,108}
 \definecolor{tableblue}{RGB}{233,240,247}
 \def\portraittitlecolor{uanlblue}
@@ -40,7 +39,6 @@
 \def\ssectioncolor{uanlblue}
 \def\documenttitlehf{Biología Celular: Actividad 2 --- Atlas Microscópico y Ultraestructural}
 \hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Diego de la Cruz},pdftitle={Atlas descriptivo de tipos celulares y acelulares},pdfsubject={Evidencia 2 - Biología Celular UANL}}
-\addbibresource{UANL/ingeniero-agronomo/biologia-celular/biologia-celular.bib}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 \setlength{\emergencystretch}{2.5em}
 
@@ -108,7 +106,8 @@ Por el contrario, los microscopios electrónicos emplean un haz de electrones ac
 3. Este repertorio descriptivo aporta al estudiante de agronomía criterios analíticos de patología vegetal y zootecnia celular.
 
 \newpage
-\printbibliography[title={Referencias bibliográficas}]
+ibliographystyle{plainnat}
+ibliography{UANL/ingeniero-agronomo/biologia-celular/biologia-celular.bib}[title={Referencias bibliográficas}]
 \end{document}
 
 

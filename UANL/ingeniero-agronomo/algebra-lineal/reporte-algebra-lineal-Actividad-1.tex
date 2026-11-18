@@ -4,7 +4,7 @@
 \def\documentsubtitle {Actividad 1, Fase 1: mapa cognitivo de telaraña}
 \def\documenttitlehf {Mapa cognitivo de telaraña: aplicaciones del álgebra lineal}
 \def\documentsubject {Actividad 1 - Álgebra Lineal}
-\def\documentauthor {Equipo de Álgebra Lineal}
+\def\documentauthor {Martin Jonathan de la Cruz}
 \def\coursename {Álgebra Lineal}
 \def\coursecode {Fase 1}
 \def\universityname {Universidad Autónoma de Nuevo León}
@@ -12,7 +12,7 @@
 \def\universitydepartment {Ingeniero Agrónomo}
 \def\universitydepartmentimage {UANL/assets-uanl/departamentos/logo-uanl.png}
 \def\universitydepartmentimagecfg {width=3.2cm}
-\def\universitylocation {General Escobedo, Nuevo León, México}
+\def\universitylocation {General Escobedo / Marín, Nuevo León, México}
 \def\authortable {
   \begin{tabular}{ll}
     \textbf{Modalidad:} & Equipo de 2 a 3 estudiantes \\
@@ -28,8 +28,6 @@
 
 \AddToHook{file/config.tex/after}{\def\stylecitereferences{custom}}
 \input{template}
-\usepackage[backend=biber,style=apa,natbib=true]{biblatex}
-\addbibresource{UANL/ingeniero-agronomo/algebra-lineal/algebra-lineal.bib}
 \usepackage{pdflscape}
 \usepackage{adjustbox}
 \usepackage{tikz}
@@ -158,5 +156,6 @@ Sostengo que el mayor valor del álgebra lineal para la agronomía no radica ún
 \newpage\footnote{En la elaboración de este trabajo se utilizaron herramientas de inteligencia artificial como apoyo para la organización estructural y revisión de estilo del texto, conforme a los lineamientos de integridad y ética académica institucional. El análisis conceptual, la verificación de fuentes primarias y la postura sostenida son de autoría del estudiante.}
 
 \clearpage
-\printbibliography[title={Referencias bibliográficas}]
+ibliographystyle{plainnat}
+ibliography{UANL/ingeniero-agronomo/algebra-lineal/algebra-lineal.bib}[title={Referencias bibliográficas}]
 \end{document}

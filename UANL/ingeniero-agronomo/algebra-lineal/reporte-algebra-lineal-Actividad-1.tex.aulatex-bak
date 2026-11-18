@@ -28,8 +28,6 @@
 
 \AddToHook{file/config.tex/after}{\def\stylecitereferences{custom}}
 \input{template}
-\usepackage[backend=biber,style=apa,natbib=true]{biblatex}
-\addbibresource{UANL/ingeniero-agronomo/algebra-lineal/algebra-lineal.bib}
 \usepackage{pdflscape}
 \usepackage{adjustbox}
 \usepackage{tikz}
@@ -50,6 +48,7 @@
     font=\scriptsize,align=center,text width=3.40cm,inner sep=4pt}
 }
 
+\bibliographystyle{apa}
 \begin{document}
 \institutionalWatermark[0.08]{\careerwatermarkimage}
 \templatePortrait
@@ -157,5 +156,6 @@ Sostengo que el mayor valor del álgebra lineal para la agronomía no radica ún
 \newpage\footnote{En la elaboración de este trabajo se utilizaron herramientas de inteligencia artificial como apoyo para la organización estructural y revisión de estilo del texto, conforme a los lineamientos de integridad y ética académica institucional. El análisis conceptual, la verificación de fuentes primarias y la postura sostenida son de autoría del estudiante.}
 
 \clearpage
-\printbibliography[title={Referencias bibliográficas}]
+ibliographystyle{plainnat}
+ibliography{UANL/ingeniero-agronomo/algebra-lineal/algebra-lineal.bib}[title={Referencias bibliográficas}]
 \end{document}

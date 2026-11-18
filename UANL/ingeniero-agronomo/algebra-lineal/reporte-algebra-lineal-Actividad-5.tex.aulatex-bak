@@ -35,7 +35,6 @@
 \usepackage{booktabs}
 \usepackage{amsmath,amssymb}
 \usepackage{placeins}
-\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
 \definecolor{uanlblue}{RGB}{0,55,108}
 \definecolor{tableblue}{RGB}{233,240,247}
 \def\portraittitlecolor{uanlblue}
@@ -43,9 +42,9 @@
 \def\ssectioncolor{uanlblue}
 \def\documenttitlehf{Álgebra Lineal: Modelación Matricial de Fertirriego}
 \hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Diego de la Cruz Muñoz},pdftitle={Modelación matricial de fertilización balanceada en citricultura},pdfsubject={Álgebra Lineal - Facultad de Agronomía UANL}}
-\addbibresource{UANL/ingeniero-agronomo/algebra-lineal/algebra-lineal.bib}
 \setlength{\emergencystretch}{2.5em}
 
+\bibliographystyle{apa}
 \begin{document}
 \hypersetup{pageanchor=false}
 \templatePortrait
@@ -67,5 +66,6 @@ El presente trabajo técnico aborda la optimización analítica de la fertilizac
 
 \input{UANL/ingeniero-agronomo/algebra-lineal/contenido-Actividad-5.tex}
 \clearpage
-\printbibliography[title={Referencias bibliográficas}]
+ibliographystyle{plainnat}
+ibliography{UANL/ingeniero-agronomo/algebra-lineal/algebra-lineal.bib}[title={Referencias bibliográficas}]
 \end{document}

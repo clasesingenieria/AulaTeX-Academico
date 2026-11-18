@@ -33,7 +33,6 @@
 \usepackage{tabularx}
 \usepackage{booktabs}
 \usepackage{amsmath,amssymb}
-\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
 \definecolor{uanlblue}{RGB}{0,55,108}
 \definecolor{tableblue}{RGB}{233,240,247}
 \def\portraittitlecolor{uanlblue}
@@ -41,10 +40,10 @@
 \def\ssectioncolor{uanlblue}
 \def\documenttitlehf{Física Agronómica: Evidencia 2 --- Fluidos y Termodinámica en Invernaderos}
 \hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Diego de la Cruz Muñoz},pdftitle={Mecánica de fluidos y termodinámica en fertirriego e invernaderos},pdfsubject={Evidencia 2 - Física UANL}}
-\addbibresource{UANL/ingeniero-agronomo/fisica/fisica.bib}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 \setlength{\emergencystretch}{2.5em}
 
+\bibliographystyle{apa}
 \begin{document}
 \hypersetup{pageanchor=false}
 \begingroup
@@ -139,6 +138,7 @@ Por tanto, si la temperatura ambiental en Marín es de $32.0^\circ\text{C}$, el 
 2. La aplicación de las fórmulas de continuidad y pérdida de carga asegura una dosificación hídrica uniforme en el agroecosistema, reduciendo mermas energéticas en las estaciones de bombeo.
 
 \newpage
-\printbibliography[title={Referencias bibliográficas}]
+ibliographystyle{plainnat}
+ibliography{UANL/ingeniero-agronomo/fisica/fisica.bib}[title={Referencias bibliográficas}]
 \end{document}
 

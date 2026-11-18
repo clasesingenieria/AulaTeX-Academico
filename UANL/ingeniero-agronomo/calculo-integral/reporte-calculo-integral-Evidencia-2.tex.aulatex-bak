@@ -35,7 +35,6 @@
 \usepackage{amsmath,amssymb}
 \usepackage{framed}
 \usepackage{tcolorbox}
-\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
 \definecolor{uanlblue}{RGB}{0,55,108}
 \definecolor{tableblue}{RGB}{233,240,247}
 \def\portraittitlecolor{uanlblue}
@@ -43,7 +42,6 @@
 \def\ssectioncolor{uanlblue}
 \def\documenttitlehf{Cálculo Integral: Evidencia 2 --- Fracciones Parciales}
 \hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Diego de la Cruz Muñoz},pdftitle={Integración de funciones racionales mediante fracciones parciales},pdfsubject={Evidencia 2 - Cálculo Integral UANL}}
-\addbibresource{UANL/ingeniero-agronomo/calculo-integral/calculo-integral.bib}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 \setlength{\emergencystretch}{2.5em}
 
@@ -57,6 +55,7 @@
   \noindent\textbf{#1}\par\smallskip
 }{\end{tcolorbox}}
 
+\bibliographystyle{apa}
 \begin{document}
 \hypersetup{pageanchor=false}
 \begingroup
@@ -75,6 +74,7 @@
 \input{UANL/ingeniero-agronomo/calculo-integral/contenido-actividad-3}
 
 \newpage
-\printbibliography[title={Referencias bibliográficas}]
+ibliographystyle{plainnat}
+ibliography{UANL/ingeniero-agronomo/calculo-integral/calculo-integral.bib}[title={Referencias bibliográficas}]
 \end{document}
 

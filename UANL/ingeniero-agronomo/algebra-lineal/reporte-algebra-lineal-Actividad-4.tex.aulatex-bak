@@ -25,11 +25,10 @@
 }
 \AddToHook{file/config.tex/after}{\def\stylecitereferences{custom}}
 \input{template}
-\usepackage[backend=biber,style=apa,natbib=true]{biblatex}
-\addbibresource{UANL/ingeniero-agronomo/algebra-lineal/algebra-lineal.bib}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{booktabs,tabularx}
 
+\bibliographystyle{apa}
 \begin{document}
 \templatePortrait
 \templatePagecfg
@@ -258,6 +257,7 @@ Desde una perspectiva analítica propia, considero que la comprensión clara y a
 % REFERENCIAS BIBLIOGRÁFICAS
 % =============================================================================
 \clearpage
-\printbibliography[heading=bibintoc,title={Referencias bibliográficas}]
+ibliographystyle{plainnat}
+ibliography{UANL/ingeniero-agronomo/algebra-lineal/algebra-lineal.bib}[heading=bibintoc,title={Referencias bibliográficas}]
 
 \end{document}

@@ -24,8 +24,6 @@
 }
 \AddToHook{file/config.tex/after}{\def\stylecitereferences{custom}}
 \input{template}
-\usepackage[backend=biber,style=apa,natbib=true]{biblatex}
-\addbibresource{UANL/ingeniero-agronomo/algebra-lineal/algebra-lineal.bib}
 \usepackage{pdflscape}
 \usepackage{tikz}
 \usetikzlibrary{babel,arrows.meta,positioning}
@@ -40,6 +38,7 @@
 }
 \pdfcompresslevel=9
 \pdfobjcompresslevel=3
+\bibliographystyle{apa}
 \begin{document}
 \templatePortrait
 \templatePagecfg
@@ -189,5 +188,6 @@ con cada matriz resultante y permite seguir el procedimiento sin omitir las
 normalizaciones o la eliminación superior. La comprobación independiente
 por Cramer respalda la exactitud del resultado.
 
-\printbibliography[heading=bibintoc,title={Referencias}]
+ibliographystyle{plainnat}
+ibliography{UANL/ingeniero-agronomo/algebra-lineal/algebra-lineal.bib}[heading=bibintoc,title={Referencias}]
 \end{document}

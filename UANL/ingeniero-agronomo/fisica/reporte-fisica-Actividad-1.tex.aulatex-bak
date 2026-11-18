@@ -33,7 +33,6 @@
 \usepackage{tabularx}
 \usepackage{booktabs}
 \usepackage{amsmath,amssymb}
-\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
 \definecolor{uanlblue}{RGB}{0,55,108}
 \definecolor{tableblue}{RGB}{233,240,247}
 \def\portraittitlecolor{uanlblue}
@@ -41,10 +40,10 @@
 \def\ssectioncolor{uanlblue}
 \def\documenttitlehf{Física Agronómica: Evidencia 1 --- Leyes de Newton y Mecánica Agrícola}
 \hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Diego de la Cruz Muñoz},pdftitle={Leyes de Newton en maquinaria y tracción agrícola},pdfsubject={Evidencia 1 - Física UANL}}
-\addbibresource{UANL/ingeniero-agronomo/fisica/fisica.bib}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 \setlength{\emergencystretch}{2.5em}
 
+\bibliographystyle{apa}
 \begin{document}
 \hypersetup{pageanchor=false}
 \begingroup
@@ -117,6 +116,7 @@ Mantener $s$ entre $10\%$ y $15\%$ garantiza máxima eficiencia de tracción y m
 2. El análisis de fuerzas de acción y reacción demuestra la necesidad de lastrar adecuadamente el tractor para optimizar la adherencia y evitar el sobreconsumo de combustible.
 
 \newpage
-\printbibliography[title={Referencias bibliográficas}]
+ibliographystyle{plainnat}
+ibliography{UANL/ingeniero-agronomo/fisica/fisica.bib}[title={Referencias bibliográficas}]
 \end{document}
 

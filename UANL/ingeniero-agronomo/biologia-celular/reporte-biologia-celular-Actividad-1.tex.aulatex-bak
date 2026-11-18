@@ -32,7 +32,6 @@
 \usepackage{tabularx}
 \usepackage{booktabs}
 \usepackage{amsmath,amssymb}
-\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
 \definecolor{uanlblue}{RGB}{0,55,108}
 \definecolor{tableblue}{RGB}{233,240,247}
 \def\portraittitlecolor{uanlblue}
@@ -40,10 +39,10 @@
 \def\ssectioncolor{uanlblue}
 \def\documenttitlehf{Biología Celular: Actividad 1 --- Sistemas Celulares y Acelulares}
 \hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Diego de la Cruz},pdftitle={Sistemas celulares y acelulares en la agronomía},pdfsubject={Evidencia 1 - Biología Celular UANL}}
-\addbibresource{UANL/ingeniero-agronomo/biologia-celular/biologia-celular.bib}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 \setlength{\emergencystretch}{2.5em}
 
+\bibliographystyle{apa}
 \begin{document}
 \hypersetup{pageanchor=false}
 \begingroup
@@ -112,7 +111,8 @@ Los sistemas acelulares no cumplen los postulados de la teoría celular moderna 
 3. El dominio de estos fundamentos en el primer semestre de Ingeniero Agrónomo garantiza una sólida base biológica para las disciplinas subsecuentes de Fitopatología, Fisiología Vegetal y Genética.
 
 \newpage
-\printbibliography[title={Referencias bibliográficas}]
+ibliographystyle{plainnat}
+ibliography{UANL/ingeniero-agronomo/biologia-celular/biologia-celular.bib}[title={Referencias bibliográficas}]
 \end{document}
 
 

@@ -4,7 +4,7 @@
 \def\documenttitle{El sistema de endomembranas como red logística celular}
 \def\documentsubtitle{Actividad 6 --- Reporte técnico integrador de tránsito vesicular y clasificación proteica}
 \def\documentsubject{Biología Celular --- Ingeniero Agrónomo}
-\def\documentauthor{Diego de la Cruz}
+\def\documentauthor {Martin Jonathan de la Cruz}
 \def\coursename{Biología Celular}
 \def\coursecode{REF\#261013755061}
 \def\universityname{Universidad Autónoma de Nuevo León}
@@ -12,7 +12,7 @@
 \def\universitydepartment{Ingeniero Agrónomo}
 \def\universitydepartmentimage{UANL/assets-uanl/departamentos/logo-uanl.png}
 \def\universitydepartmentimagecfg{height=2.1cm}
-\def\universitylocation{General Escobedo, Nuevo León, México}
+\def\universitylocation {General Escobedo / Marín, Nuevo León, México}
 \def\authortable{%
 	\begin{tabular}{@{}ll@{}}
 		\textbf{Estudiante:} & Diego de la Cruz\\[0.35cm]
@@ -36,7 +36,6 @@
 \usepackage{pdflscape}
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows.meta,positioning,calc,fit,backgrounds}
-\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
 \definecolor{uanlblue}{RGB}{0,55,108}
 \definecolor{tableblue}{RGB}{233,240,247}
 \definecolor{proccolor}{RGB}{15,115,55}
@@ -48,7 +47,6 @@
 \def\ssectioncolor{uanlblue}
 \def\documenttitlehf{Sistema de Endomembranas}
 \hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Diego de la Cruz},pdftitle={El sistema de endomembranas como red logística celular},pdfsubject={Actividad 6 --- Biología Celular UANL}}
-\addbibresource{UANL/ingeniero-agronomo/biologia-celular/biologia-celular.bib}
 \newcolumntype{Z}{>{\raggedright\arraybackslash}X}
 \setlength{\emergencystretch}{2.5em}
 
@@ -480,6 +478,7 @@ Como estudiante de agronomía en la Facultad de Agronomía de la UANL (Campus Es
 \textbf{Importancia en mi carrera de agronomía:} Para mí como futuro ingeniero agrónomo, entender las endomembranas no es solo teoría de examen. Es la base para comprender cómo los cultivos de maíz, frijol y soya acumulan proteínas en sus semillas, cómo las plantas levantan paredes celulares firmes para no caerse con el viento y cómo responden a nivel celular cuando son atacadas por hongos o bacterias. Conocer estos procesos me ayuda a ver a los cultivos como seres vivos que responden desde su interior a las condiciones del campo.
 
 \vspace{0.6cm}
-\printbibliography[heading=bibintoc,title={Referencias Bibliográficas}]
+ibliographystyle{plainnat}
+ibliography{UANL/ingeniero-agronomo/biologia-celular/biologia-celular.bib}[heading=bibintoc,title={Referencias Bibliográficas}]
 
 \end{document}

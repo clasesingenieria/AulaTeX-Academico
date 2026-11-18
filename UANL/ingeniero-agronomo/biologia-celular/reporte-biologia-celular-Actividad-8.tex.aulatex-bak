@@ -18,7 +18,6 @@
 \usetikzlibrary{babel,arrows.meta,positioning,shapes.geometric}
 \usepackage{fancyhdr}
 \usepackage{titlesec}
-\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
 \usepackage{csquotes}
 \usepackage{microtype}
 \usepackage{hyperref}
@@ -75,10 +74,10 @@
   pdfsubject={Producto Integrador de Aprendizaje - Biología Celular UANL}
 }
 
-\addbibresource{biologia-celular.bib}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 \setlength{\emergencystretch}{2.5em}
 
+\bibliographystyle{apa}
 \begin{document}
 \thispagestyle{firstpage}
 
@@ -139,6 +138,7 @@
 \input{contenido-Actividad-8.tex}
 
 \newpage
-\printbibliography[title={Referencias bibliográficas}]
+ibliographystyle{plainnat}
+ibliography{biologia-celular.bib}[title={Referencias bibliográficas}]
 
 \end{document}

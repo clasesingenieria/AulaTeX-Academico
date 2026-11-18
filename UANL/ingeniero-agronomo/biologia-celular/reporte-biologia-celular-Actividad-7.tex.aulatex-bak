@@ -33,7 +33,6 @@
 \usepackage{csquotes}
 \usepackage{graphicx}
 \usepackage{amsmath,amssymb}
-\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
 \usepackage{tikz}
 \usetikzlibrary{positioning,arrows.meta,shapes.geometric}
 \definecolor{uanlblue}{RGB}{0,55,108}
@@ -53,15 +52,14 @@
 	pdftitle={Señalización de la Muerte Celular Programada: Eje Fas/FasL},
 	pdfsubject={Biología Celular --- Facultad de Agronomía UANL}
 }
-\addbibresource{UANL/ingeniero-agronomo/biologia-celular/biologia-celular.bib}
-
-% Control estricto de tipografía y prevención de Overfull/Underfull \hbox
+ Control estricto de tipografía y prevención de Overfull/Underfull \hbox
 \setlength{\emergencystretch}{3em}
 \tolerance=2000
 \hbadness=2000
 \newcommand{\optsep}{\unskip\hspace{0.55em}\textbar\allowbreak\hspace{0.55em}\ignorespaces}
 \newcommand{\selnum}[1]{\textbf{\large\textcircled{\normalsize\bfseries\color{uanlblue}#1}}}
 
+\bibliographystyle{apa}
 \begin{document}
 \hypersetup{pageanchor=false}
 % Marca de agua de portada para Ingeniero Agrónomo: Escudo oficial Facultad de Agronomía UANL
@@ -193,5 +191,5 @@ La caracterización de la vía de señalización Fas/FasL evidencia que la comun
 Desde una perspectiva analítica propia, considero que distinguir con precisión biofísica el ligando extracelular, el dominio intracelular de muerte y la cascada proteolítica de caspasas es indispensable para la comprensión integral de la fisiología moderna. El análisis realizado me lleva a sostener que estas conclusiones son directamente transferibles al ámbito de la agronomía y la fitopatología: en el reino vegetal, las respuestas de muerte celular programada análogas (como la reacción de hipersensibilidad o HR) constituyen la barrera primordial que confina las infecciones fúngicas y bacterianas, garantizando la sanidad vegetal y la productividad agrícola sostenible.\footnote{En la elaboración de este trabajo se utilizaron herramientas de inteligencia artificial como apoyo para la organización estructural y revisión de estilo del texto, conforme a los lineamientos de integridad y ética académica institucional. El análisis conceptual, la verificación de fuentes primarias y la postura sostenida son de autoría del estudiante.}
 
 \clearpage
-\printbibliography
-\end{document}
+ibliographystyle{plainnat}
+ibliography{}\end{document}

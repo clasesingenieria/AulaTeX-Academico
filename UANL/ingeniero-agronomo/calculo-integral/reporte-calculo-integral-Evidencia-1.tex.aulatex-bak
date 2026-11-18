@@ -37,7 +37,6 @@
 \usepackage{tcolorbox}
 \usepackage{pgffor}
 \usepackage{caption}
-\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
 \definecolor{uanlblue}{RGB}{0,55,108}
 \definecolor{tableblue}{RGB}{233,240,247}
 \def\portraittitlecolor{uanlblue}
@@ -45,7 +44,6 @@
 \def\ssectioncolor{uanlblue}
 \def\documenttitlehf{Cálculo Integral: Evidencia 1 --- Aprendizaje Basado en Problemas}
 \hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Diego de la Cruz Muñoz},pdftitle={Modelos de antiderivación y cambio de variable},pdfsubject={Evidencia 1 - Cálculo Integral UANL}}
-\addbibresource{UANL/ingeniero-agronomo/calculo-integral/calculo-integral.bib}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 \setlength{\emergencystretch}{2.5em}
 
@@ -65,6 +63,7 @@
   \noindent\textbf{#1}\par\smallskip
 }{\endMakeFramed}
 
+\bibliographystyle{apa}
 \begin{document}
 \hypersetup{pageanchor=false}
 \begingroup
@@ -83,5 +82,6 @@
 \input{UANL/ingeniero-agronomo/calculo-integral/contenido-actividad-2}
 
 \newpage
-\printbibliography[title={Referencias bibliográficas}]
+ibliographystyle{plainnat}
+ibliography{UANL/ingeniero-agronomo/calculo-integral/calculo-integral.bib}[title={Referencias bibliográficas}]
 \end{document}

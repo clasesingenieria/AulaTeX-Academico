@@ -32,7 +32,6 @@
 \usepackage{tabularx}
 \usepackage{booktabs}
 \usepackage{amsmath,amssymb}
-\usepackage[backend=biber,style=apa,sorting=nyt]{biblatex}
 \definecolor{uanlblue}{RGB}{0,55,108}
 \definecolor{tableblue}{RGB}{233,240,247}
 \def\portraittitlecolor{uanlblue}
@@ -40,10 +39,10 @@
 \def\ssectioncolor{uanlblue}
 \def\documenttitlehf{Biología Celular: Actividad 3 --- Expresión Génica de la RuBisCO}
 \hypersetup{colorlinks=true,linkcolor=uanlblue,urlcolor=uanlblue,citecolor=uanlblue,pdfauthor={Diego de la Cruz},pdftitle={Expresión génica coordinada de la enzima RuBisCO},pdfsubject={Evidencia 3 - Biología Celular UANL}}
-\addbibresource{UANL/ingeniero-agronomo/biologia-celular/biologia-celular.bib}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 \setlength{\emergencystretch}{2.5em}
 
+\bibliographystyle{apa}
 \begin{document}
 \hypersetup{pageanchor=false}
 \begingroup
@@ -99,7 +98,8 @@ El ensamblaje del octámero catalítico central $L_8$ no ocurre espontáneamente
 2. Los conocimientos sobre translocación TOC/TIC y chaperonas de plegamiento abren la puerta a la mejora genética de cultivos para incrementar la tasa fotosintética neta y eficiencia hídrica ante el cambio climático.
 
 \newpage
-\printbibliography[title={Referencias bibliográficas}]
+ibliographystyle{plainnat}
+ibliography{UANL/ingeniero-agronomo/biologia-celular/biologia-celular.bib}[title={Referencias bibliográficas}]
 \end{document}
 
 
