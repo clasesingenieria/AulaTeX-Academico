@@ -380,10 +380,22 @@ class AulaTeXItescaOrchestrator:
             mod_ids.update(spec.prior_feedback_module_ids)
 
         try:
+            from .navegacion_itesca import ItescaModuleTarget
+            # Convertir IDs de módulo a objetos ItescaModuleTarget
+            mod_targets = tuple(
+                ItescaModuleTarget(
+                    module_id=mid,
+                    kind="assign",
+                    course_id=next((s.moodle_course_id for s in request.specs if s.moodle_module_id == mid), None),
+                    local_activity_number=next((s.activity_number for s in request.specs if s.moodle_module_id == mid), None),
+                    subject_slug=next((s.subject_target.split("/")[-1] for s in request.specs if s.moodle_module_id == mid), ""),
+                )
+                for mid in sorted(mod_ids)
+            )
             nav_result = self.nav_agent.inspect(
                 ItescaNavigationRequest(
                     course_ids=course_ids,
-                    module_ids=tuple(sorted(mod_ids)),
+                    modules=mod_targets,
                 )
             )
             raw = nav_result.snapshot_path.read_text(encoding="utf-8")

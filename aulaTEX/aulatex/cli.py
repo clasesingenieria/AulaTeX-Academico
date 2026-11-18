@@ -1754,13 +1754,15 @@ def main(argv: list[str] | None = None) -> None:
         return
 
     if args.command == "navegacion-itesca":
-        from .navegacion_itesca import NavegacionItescaAgent, ItescaNavigationRequest
+        from .navegacion_itesca import NavegacionItescaAgent, ItescaNavigationRequest, ItescaModuleTarget
 
         ws = AulaTeXWorkspace()
         nav = NavegacionItescaAgent(ws)
         c_ids = tuple(args.course_id) if args.course_id else (209, 215)
         m_ids = tuple(args.module_id) if args.module_id else (1761, 1762, 1763, 2915)
-        out = nav.inspect(ItescaNavigationRequest(course_ids=c_ids, module_ids=m_ids))
+        # Convertir IDs de módulo a objetos ItescaModuleTarget
+        mod_targets = tuple(ItescaModuleTarget(module_id=mid, kind="assign") for mid in m_ids)
+        out = nav.inspect(ItescaNavigationRequest(course_ids=c_ids, modules=mod_targets))
         print(json.dumps({
             "agent_id": out.agent_id,
             "run_id": out.run_id,
