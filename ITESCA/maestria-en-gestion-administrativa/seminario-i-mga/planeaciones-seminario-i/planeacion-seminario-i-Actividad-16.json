@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "plan_id": "pca-2816c15229324ebb00f2",
-  "revision": 3,
+  "revision": 5,
   "identity": {
     "institution": "ITESCA",
     "program": "maestria-en-gestion-administrativa",
@@ -19,8 +19,8 @@
       "title": "Consigna autenticada ITESCA módulo 2916 (📅 Tarea 16: Cronograma de Actividades)",
       "url": "https://cursos3.e-itesca.edu.mx/mod/assign/view.php?id=2916",
       "path": "referencias-seminario-i/notas-seminario-i/actividad-16-cronograma-de-actividades/consigna-itesca-2916.txt",
-      "sha256": "7b31c88dbf9e7237979e803b06e9959ee30f1233989ad7c6dc19461d2de4c0b4",
-      "captured_at": "2026-11-11T05:48:11.170451+00:00",
+      "sha256": "f1a933512317b21b94de41ee606f55f88236bef05e3ff42859930017ed9519d9",
+      "captured_at": "2026-11-18T00:56:27.624643+00:00",
       "media_type": "text/plain"
     },
     {
@@ -31,8 +31,30 @@
       "url": null,
       "path": "reporte-seminario-i-plantilla-actividad.tex",
       "sha256": "2b414c02dddf3acfdf7cb29ce27410521f33d30e4e933db71220caa20d7977bc",
-      "captured_at": "2026-11-11T05:48:11.170451+00:00",
+      "captured_at": "2026-11-18T00:56:27.624643+00:00",
       "media_type": "text/x-tex"
+    },
+    {
+      "id": "src-prior-feedback",
+      "kind": "platform",
+      "authority": "instructional",
+      "title": "Retroalimentación docente previa verificada en ITESCA",
+      "url": null,
+      "path": "referencias-seminario-i/notas-seminario-i/actividad-16-cronograma-de-actividades/retroalimentacion-previa-itesca.json",
+      "sha256": "86b64694150b09fd2c2f089e29c489ca8734c7150e0d5b00dc648152fb347934",
+      "captured_at": "2026-11-18T00:56:27.624643+00:00",
+      "media_type": "application/json"
+    },
+    {
+      "id": "src-docente-01",
+      "kind": "pdf",
+      "authority": "instructional",
+      "title": "2916-3.9 Cronograma de actividades.pdf",
+      "url": null,
+      "path": "referencias-seminario-i/notas-seminario-i/actividad-16-cronograma-de-actividades/material-docente/2916-3.9 Cronograma de actividades.pdf",
+      "sha256": "e0528cc2aa482321044b63f7b4ea85fb53beeced607c9e208d9c0614b7cf4822",
+      "captured_at": "2026-11-18T00:56:28.061921+00:00",
+      "media_type": "application/pdf"
     }
   ],
   "curriculum": {
@@ -413,6 +435,22 @@
           "required": true,
           "access": "local",
           "rights": "Uso académico interno del estudiante inscrito"
+        },
+        {
+          "id": "res-feedback-previo",
+          "source_id": "src-prior-feedback",
+          "purpose": "Observaciones docentes previas de atención obligatoria según rúbrica",
+          "required": true,
+          "access": "local",
+          "rights": "Uso académico interno"
+        },
+        {
+          "id": "res-docente-01",
+          "source_id": "src-docente-01",
+          "purpose": "Material docente verificado (2916-3.9 Cronograma de actividades.pdf)",
+          "required": true,
+          "access": "local",
+          "rights": "Material docente institucional ITESCA"
         }
       ],
       "assessment": {
@@ -739,7 +777,7 @@
   ],
   "review": {
     "state": "needs_review",
-    "reviewed_at": "2026-11-11T05:48:11.170451+00:00",
+    "reviewed_at": "2026-11-18T00:56:27.624643+00:00",
     "reviewer_role": "realizar-planeación",
     "critical_gaps": [],
     "semantic_validation": "passed"
@@ -773,8 +811,8 @@
         }
       ],
       "related_links": [],
-      "prior_feedback_count": 0,
-      "updated_at_utc": "2026-11-11T05:48:11.170451+00:00"
+      "prior_feedback_count": 4,
+      "updated_at_utc": "2026-11-18T00:56:27.624643+00:00"
     }
   }
 }
