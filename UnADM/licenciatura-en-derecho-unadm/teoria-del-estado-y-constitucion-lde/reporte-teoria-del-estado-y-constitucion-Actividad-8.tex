@@ -1,78 +1,104 @@
-%!TEX encoding = UTF-8 Unicode
-%!TEX root = reporte-teoria-del-estado-y-constitucion-Actividad-8.tex
-% arara: xelatex: { interaction: nonstopmode, synctex: true }
-% arara: biber
-% arara: xelatex: { interaction: nonstopmode, synctex: true }
-% arara: xelatex: { interaction: nonstopmode, synctex: true }
+\documentclass[12pt,spanish,letterpaper,oneside]{article}
+\def\documenttitle {Foro de raz\'on de la existencia del Estado}
+\def\documentsubtitle {Fines del Estado, globalizaci\'on y tratados internacionales}
+\def\documenttitlehf {Foro de raz\'on de la existencia del Estado}
+\def\hfwidthwrap {false}
+\def\hfwidthtitle {0.60}
+\def\hfwidthcourse {0.38}
+\def\documentsubject {Licenciatura en Derecho}
+\def\documentauthor {Mart\'in Jonathan de la Cruz Mu\~noz}
+\def\coursename {Teor\'ia del Estado y Constituci\'on}
+\def\coursecode {}
+\def\universityname {Universidad Abierta y a Distancia de M\'exico}
+\def\universityfaculty {Licenciatura en Derecho}
+\def\universitydepartment {Teor\'ia del Estado y Constituci\'on}
+\def\universitydepartmentimage {departamentos/UnADM}
+\def\universitydepartmentimagecfg {height=1.57cm}
+\def\universitylocation {Ciudad de M\'exico}
+\def\authortable {\begin{tabular}{ll}
+\textbf{Alumno:} & Mart\'in Jonathan de la Cruz Mu\~noz \\
+\textbf{Matr\'icula:} & ES2611202040 \\
+\textbf{Figura docente:} & Ana Lilian S\'anchez Ch\'avez \\
+\textbf{Semestre / Bloque:} & 2 / 2 \\
+\textbf{Semana lectiva:} & Semana 8 \\
+\textbf{Fecha de realizaci\'on:} & Noviembre de 2026 \\
+\multicolumn{2}{l}{\universitylocation}
+\end{tabular}}
 
-\documentclass[12pt, a4paper, oneside]{article}
-\usepackage[aulatex]{template-unadm}
-\usepackage{template-unadm-ld}
-\usepackage{template-unadm-lex}
+\usepackage{iftex}
+\ifLuaTeX
+  \let\pdfpagewidth\pagewidth
+  \let\pdfpageheight\pageheight
+\fi
 
-% Datos canónicos del estudiante
-\def\documentauthor{Mart\'in Jonathan de la Cruz Mu\~noz}
-\author{Mart\'in Jonathan de la Cruz Mu\~noz}
-\def\documentauthorcanonico{Martín Jonathan de la Cruz Muñoz}  % UTF-8 para validación
-\def\documentsubject{Licenciatura en Derecho}
-\def\documenttitle{Foro de razón de la existencia del Estado}
-\def\documenttitlehf{Foro de razón de la existencia del Estado}
-\def\documentsubtitle{Reflexiones sobre los fines del Estado en la era de la globalización}
-\def\documentdate{Semana 8, 2026}
-\def\documentperiodo{2026-2 B2}
-\def\documentcareer{Licenciatura en Derecho}
-\def\documentinstitution{UnADM}
-\def\documentmatricula{ES2611202040}
-\def\documentgroup{020}
-\def\documentcourse{Teoría del Estado y Constitución}
-\def\documentteacher{}
-
-\hfwidthwrap{false}
-\hfwidthtitle{0.55}
-\hfwidthcourse{0.42}
-
-\begin{document}
 \input{template}
 
+\def\documentsubtitle {Fines del Estado, globalizaci\'on y tratados internacionales}
+\def\documenttitlehf {Foro de raz\'on de la existencia del Estado}
+\def\hfwidthwrap {false}
+\def\hfwidthtitle {0.60}
+\def\hfwidthcourse {0.38}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\setcitestyle{authoryear,open={(},close={)}}
+
+\usepackage{tikz}
+\usepackage{eso-pic}
+
+\definecolor{unadmGreenDark}{HTML}{174A3A}
+\definecolor{unadmGreen}{HTML}{2D6A4F}
+
+\setlength{\emergencystretch}{3em}
+
+\begin{document}
+\AddToShipoutPictureBG*{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[opacity=0.16,inner sep=0pt] at (current page.center)
+      {\includegraphics[width=0.72\paperwidth]{img/departamentos/UnADM.pdf}};
+  \end{tikzpicture}%
+}
+
+\templatePortrait
+\templatePagecfg
+\onehalfspacing
+
 \begin{abstractd}
-El presente documento responde al foro de la Semana 8 sobre la razón de la existencia del Estado, analizando los fines más relevantes del Estado moderno, el impacto de la globalización en su estructura y función, y la obligatoriedad de los tratados internacionales en México conforme al artículo 1° constitucional. Se adopta una postura crítica fundamentada en la doctrina jurídica y constitucional mexicana.
+El presente documento responde al foro de la Semana 8 sobre la raz\'on de la existencia del Estado, analizando los fines m\'as relevantes del Estado moderno, el impacto de la globalizaci\'on en su estructura y funci\'on, y la obligatoriedad de los tratados internacionales en M\'exico conforme al art\'iculo 1\textdegree{} constitucional. Se adopta una postura cr\'itica fundamentada en la doctrina jur\'idica y constitucional mexicana, privilegiando la perspectiva garantista y el Estado de Derecho.
 \end{abstractd}
 
 \templateIndex
+\templateFinalcfg
 
-\section{Los fines esenciales del Estado: una perspectiva garantista}
+\section{Introducci\'on: Los fines esenciales del Estado}
 
-El Estado, como entidad jurídico-política, encuentra su razón de ser en la necesidad de garantizar la convivencia pacífica, la seguridad jurídica y la protección de los derechos fundamentales de las personas. Desde una perspectiva garantista, el fin más relevante del Estado es la protección y promoción de los derechos humanos, entendidos como límites infranqueables al ejercicio del poder público.
+El Estado, como entidad jur\'idico-pol\'itica, encuentra su raz\'on de ser en la necesidad de garantizar la convivencia pac\'ifica, la seguridad jur\'idica y la protecci\'on de los derechos fundamentales de las personas. Desde una perspectiva garantista, sostengo con firmeza que el fin m\'as relevante del Estado es la protecci\'on y promoci\'on de los derechos humanos, entendidos como l\'imites infranqueables al ejercicio del poder p\'ublico.
 
-La Constitución Política de los Estados Unidos Mexicanos, en su artículo 1°, establece que todas las autoridades tienen la obligación de promover, respetar, proteger y garantizar los derechos humanos. Este mandato constitucional refleja la evolución del Estado mexicano hacia un modelo garantista, donde el respeto a la dignidad humana se erige como el fin último y primordial.
+La Constituci\'on Pol\'itica de los Estados Unidos Mexicanos, en su art\'iculo 1\textdegree, establece que todas las autoridades tienen la obligaci\'on de promover, respetar, proteger y garantizar los derechos humanos. Este mandato constitucional refleja la evoluci\'on del Estado mexicano hacia un modelo garantista, donde el respeto a la dignidad humana se erige como el fin \'ultimo y primordial del aparato estatal.
 
-\section{Impacto de la globalización en el Estado moderno}
+\section{La globalizaci\'on y su impacto en el Estado moderno}
 
-La globalización ha transformado radicalmente la estructura y funciones del Estado moderno. Este fenómeno ha generado una tensión dialéctica entre la soberanía estatal y la interdependencia global, obligando a los Estados a adaptar sus instituciones y marcos normativos.
+La globalizaci\'on ha transformado radicalmente la estructura y funciones del Estado contempor\'aneo. Este fen\'omeno ha generado una tensi\'on dial\'ectica entre la soberan\'ia estatal y la interdependencia global, obligando a los Estados a adaptar sus instituciones y marcos normativos. En el \'ambito jur\'idico, la globalizaci\'on ha impulsado la armonizaci\'on de legislaciones nacionales con est\'andares internacionales, especialmente en materia de derechos humanos y comercio.
 
-En el ámbito jurídico, la globalización ha impulsado la armonización de legislaciones nacionales con estándares internacionales, especialmente en materia de derechos humanos y comercio. Sin embargo, este proceso no está exento de desafíos. La soberanía estatal se ve limitada por la necesidad de cumplir con tratados internacionales y decisiones de organismos supranacionales, lo que genera debates sobre la legitimidad y el alcance de estas restricciones.
+Por ello, la soberan\'ia estatal se ve limitada por la necesidad de cumplir con tratados internacionales y decisiones de organismos supranacionales. Sin embargo, este proceso no est\'a exento de desaf\'ios. La reforma constitucional de derechos humanos de 2011 incorpor\'o el principio \emph{pro persona} y estableci\'o la obligatoriedad de los tratados internacionales en materia de derechos humanos, elev\'andolos a rango constitucional.
 
-En el contexto mexicano, la globalización ha tenido un impacto significativo en la reforma constitucional de derechos humanos de 2011. Esta reforma incorporó el principio pro persona y estableció la obligatoriedad de los tratados internacionales en materia de derechos humanos, elevándolos a rango constitucional.
+\section{La obligatoriedad de los tratados internacionales}
 
-\section{La obligatoriedad de los tratados internacionales en México}
+El art\'iculo 1\textdegree{} constitucional establece que los tratados internacionales en materia de derechos humanos son obligatorios para todas las autoridades mexicanas. Considero que la obligatoriedad de los tratados internacionales es un avance positivo, ya que permite una protecci\'on m\'as robusta de los derechos fundamentales. No obstante, es fundamental que esta incorporaci\'on se realice bajo un marco de control constitucional que garantice la supremac\'ia de la Constituci\'on y evite conflictos normativos.
 
-El artículo 1° constitucional establece que los tratados internacionales en materia de derechos humanos son obligatorios para todas las autoridades mexicanas. Esta disposición refleja un avance significativo en la protección de los derechos fundamentales, al incorporar estándares internacionales al orden jurídico nacional.
+La Suprema Corte de Justicia de la Naci\'on ha establecido criterios para resolver posibles contradicciones entre tratados internacionales y la Constituci\'on, privilegiando siempre la protecci\'on m\'as favorable a la persona. Este enfoque garantista es esencial para asegurar que la incorporaci\'on de tratados internacionales fortalezca la protecci\'on de los derechos humanos sin comprometer la coherencia del orden constitucional mexicano.
 
-Considero que la obligatoriedad de los tratados internacionales es un avance positivo, ya que permite una protección más robusta de los derechos humanos. Sin embargo, es fundamental que esta incorporación se realice bajo un marco de control constitucional que garantice la supremacía de la Constitución y evite conflictos normativos.
-
-La Suprema Corte de Justicia de la Nación ha establecido criterios para resolver posibles contradicciones entre tratados internacionales y la Constitución, privilegiando siempre la protección más favorable a la persona. Este enfoque garantista es esencial para asegurar que la incorporación de tratados internacionales no vulnere principios fundamentales del orden constitucional mexicano.
-
+\clearpage
 \section{Conclusiones}
-\clearpage
 
-Considero que el fin más relevante del Estado es la protección y promoción de los derechos humanos. Este fin no solo justifica la existencia del Estado, sino que también establece límites claros al ejercicio del poder público, garantizando que todas las acciones estatales se orienten hacia el respeto y la dignidad de las personas.
+Considero que el fin m\'as relevante del Estado es la protecci\'on y promoci\'on de los derechos humanos. Este fin no solo justifica la existencia del Estado, sino que establece l\'imites claros al ejercicio del poder p\'ublico, garantizando que todas las acciones estatales se orienten hacia el respeto y la dignidad de las personas. Por tanto, la globalizaci\'on ha impactado significativamente al Estado moderno, generando una tensi\'on entre la soberan\'ia estatal y la interdependencia global. Este fen\'omeno ha impulsado la armonizaci\'on de legislaciones nacionales con est\'andares internacionales, especialmente en materia de derechos humanos.
 
-La globalización ha impactado significativamente al Estado moderno, generando una tensión entre la soberanía estatal y la interdependencia global. Este fenómeno ha impulsado la armonización de legislaciones nacionales con estándares internacionales, especialmente en materia de derechos humanos. Sin embargo, es fundamental que este proceso se realice bajo un marco de control constitucional que garantice la supremacía de la Constitución y evite conflictos normativos.
-
-En cuanto a la obligatoriedad de los tratados internacionales en México, sostengo con firmeza que representa un avance significativo en la protección de los derechos fundamentales. No obstante, es crucial que esta incorporación se realice bajo un marco de control constitucional que garantice la supremacía de la Constitución y evite conflictos normativos. La postura de la Suprema Corte de Justicia de la Nación, que privilegia la protección más favorable a la persona, es un ejemplo de cómo el Estado mexicano puede adaptarse a los desafíos de la globalización sin renunciar a su soberanía constitucional.
-
-\footnote{Declaración: Este trabajo académico fue desarrollado por \documentauthorcanonico\ (matrícula \documentmatricula) como parte de las actividades de la asignatura \documentcourse\ de la \documentsubject\ en la \documentinstitution. Se utilizó apoyo tecnológico para la organización y redacción, pero el contenido, análisis y conclusiones son responsabilidad exclusiva del autor, conforme a los lineamientos institucionales de la UnADM sobre el uso de herramientas de asistencia académica.}
+En consecuencia, sostengo con firmeza que la obligatoriedad de los tratados internacionales en M\'exico representa un avance significativo en la protecci\'on de los derechos fundamentales. Es crucial que esta incorporaci\'on se realice bajo un marco de control constitucional que garantice la supremac\'ia de la Constituci\'on. La postura de la Suprema Corte de Justicia de la Naci\'on, que privilegia la protecci\'on m\'as favorable a la persona mediante el principio \emph{pro persona}, es un ejemplo de c\'omo el Estado mexicano puede adaptarse a los desaf\'ios de la globalizaci\'on sin renunciar a su soberan\'ia constitucional.\footnote{Declaraci\'on: Este trabajo acad\'emico fue desarrollado por Mart\'in Jonathan de la Cruz Mu\~noz (matr\'icula ES2611202040) como parte de las actividades de la asignatura Teor\'ia del Estado y Constituci\'on en la UnADM. Se utiliz\'o apoyo tecnol\'ogico para la organizaci\'on y redacci\'on, pero el contenido, an\'alisis y conclusiones son responsabilidad exclusiva del autor.}
 
 \clearpage
-\printbibliography
+\begin{thebibliography}{9}
+\bibitem[Ferrajoli(2001)]{ferrajoli2001}
+Ferrajoli, L. (2001). \textit{Derechos y garant\'ias: La ley del m\'as d\'ebil}. Trotta.
+\end{thebibliography}
+
 \end{document}
