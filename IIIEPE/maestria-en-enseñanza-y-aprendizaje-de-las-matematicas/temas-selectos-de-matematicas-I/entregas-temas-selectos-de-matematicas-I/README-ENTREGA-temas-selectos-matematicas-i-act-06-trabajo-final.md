@@ -1,4 +1,4 @@
-# Entrega — TRABAJO FINAL PFM02 · SD26
+# Entrega — TRABAJO FINAL PFM02 · Actividad 06
 ## "Una habilidad, un PDA, cinco minutos"
 
 ---
@@ -9,7 +9,8 @@
 | **Nombre** | Mtro. Martín Jonathan de la Cruz Muñoz |
 | **Matrícula** | 00874 |
 | **Asignatura** | PFM02 Temas Selectos de Matemáticas I |
-| **Periodo** | SD26 (Ago-Nov 2026 Grupo A) |
+| **Actividad** | 06 — TRABAJO FINAL |
+| **Periodo** | Ago-Nov 2026 Grupo A |
 | **Institución** | IIIEPE |
 | **Modalidad** | Individual |
 
@@ -31,14 +32,14 @@
 ---
 
 ### Archivos Entregables
-| Archivo | Descripción | Tamaño |
-|---------|-------------|--------|
-| `video-trabajo-final-pfm02-SD26.mp4` | Video didáctico (4:09 min) | 6.98 MB |
-| `subtitulos-trabajo-final-pfm02-SD26.srt` | Subtítulos sincronizados | 5.0 KB |
-| `presentacion-beamer-trabajo-final-pfm02-SD26.pdf` | Presentación Beamer 16:9 | 370 KB |
-| `audio-maestro-trabajo-final-pfm02-SD26.wav` | Audio maestro 48kHz | 45.6 MB |
-| `pedagogical-step-deck-SD26.json` | Contrato PedagogicalStepDeck | 17 KB |
-| `manifiesto-entrega-trabajo-final-pfm02-SD26.json` | Manifiesto de entrega | — |
+| Archivo | Descripción |
+|---------|-------------|
+| `video-temas-selectos-matematicas-i-act-06-trabajo-final_Martin-Jonathan-de-la-Cruz-Munoz.mp4` | Video didáctico (4:09 min) |
+| `subtitulos-temas-selectos-matematicas-i-act-06-trabajo-final_Martin-Jonathan-de-la-Cruz-Munoz.srt` | Subtítulos sincronizados |
+| `presentacion-temas-selectos-matematicas-i-act-06-trabajo-final_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | Presentación Beamer 16:9 |
+| `audio-maestro-temas-selectos-matematicas-i-act-06-trabajo-final_Martin-Jonathan-de-la-Cruz-Munoz.wav` | Audio maestro 48kHz |
+| `pedagogical-step-deck-temas-selectos-matematicas-i-act-06-trabajo-final.json` | Contrato StepDeck |
+| `manifiesto-entrega-temas-selectos-matematicas-i-act-06-trabajo-final.json` | Manifiesto de entrega |
 
 ---
 
@@ -56,11 +57,11 @@
 ---
 
 ### Instrucciones para Compartir
-1. Sube `video-trabajo-final-pfm02-SD26.mp4` a Google Drive o YouTube (no listado)
+1. Sube `video-temas-selectos-matematicas-i-act-06-trabajo-final_Martin-Jonathan-de-la-Cruz-Munoz.mp4` a Google Drive o YouTube (no listado)
 2. Verifica que el enlace tenga **permisos de reproducción sin solicitar acceso**
 3. Comparte el enlace en el assignment de Moodle `id=51758`
 4. Prepara socialización para **Sesión 13**
 
 ---
 
-*Generado por Hermes Agent / StepDeckStudio · 2026-11-17 14:47*
+*Generado por Hermes Agent / StepDeckStudio*
