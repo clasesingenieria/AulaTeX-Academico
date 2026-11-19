@@ -23,4 +23,4 @@ Leer reflexivamente 'Mejorando el aprendizaje: las implicaciones de las investig
 ## Requisitos de Entregable
 - Reporte académico en LaTeX/PDF con portada institucional IIIEPE, desarrollo analítico completo, recursos visuales TikZ, tablas comparativas, transferencia a la enseñanza matemática y referencias APA 7.
 - Presentación ejecutiva Beamer en PDF alineada al contenido del reporte.
-- Documento editable en Word (`Actividad_7_Martin_Jonathan_de_la_Cruz_Munoz.docx`) conforme a la nomenclatura indicada en `Rúbrica 3.docx`.
+- Lámina infográfica vectorial autónoma compilada desde LaTeX a PDF (`subproducto-09A-infografia-keith-sawyer-2008.pdf`).

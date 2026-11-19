@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "plan_id": "pca-iiiepe-fundamentos-para-la-ensenanza-y-el-aprendizaje-i-sd26-act-11",
-  "revision": 1,
+  "revision": 2,
   "identity": {
     "institution": "IIIEPE",
     "program": "Maestría en Enseñanza y Aprendizaje de las Matemáticas",
@@ -50,7 +50,7 @@
     "outcomes": [
       {
         "id": "out-1",
-        "text": "Produce mapa mental radial en TikZ, análisis reflexivo fundamentado en PDF, presentación Beamer y escrito editable en Word (.docx)."
+        "text": "Produce mapa mental radial en TikZ y escrito analítico fundamentado exclusivamente en LaTeX/PDF más presentación Beamer."
       }
     ],
     "topics": [
@@ -95,7 +95,7 @@
         "verb": "Fundamentar",
         "object": "estrategias concretas para desarrollar las siete habilidades de supervivencia en la clase de Matemáticas",
         "conditions": "integrando mapa mental radial en TikZ, problema matemático situado y documento Word",
-        "observable_evidence": "Reporte PDF con mapa mental TikZ, Beamer y documento reporte-siete-habilidades-SD26.docx",
+        "observable_evidence": "Reporte PDF con mapa mental TikZ y presentación Beamer compilados desde LaTeX",
         "justification": "Cubre la Sesión 4 visible en el programa de Moodle Curso 1048 (sección sin actividad mod/assign asignada)."
       },
       "instruction": "Construir un mapa mental de las Siete Habilidades Básicas de Tony Wagner y responder de manera fundamentada en un escrito (PDF y Word): ¿Cómo promueves el desarrollo de las habilidades de supervivencia con tus estudiantes en la clase de Matemáticas?",
@@ -110,7 +110,7 @@
         },
         {
           "id": "req-3",
-          "text": "Generar documento PDF, presentación Beamer y archivo Word editable reporte-siete-habilidades.docx."
+          "text": "Entregar documento analítico compilado desde LaTeX a PDF y presentación Beamer institucional."
         }
       ],
       "questions": [
@@ -255,12 +255,12 @@
           },
           {
             "id": "crit-4",
-            "text": "Entrega dual en PDF/Beamer y escrito Word editable",
+            "text": "Calidad editorial en LaTeX/PDF, coherencia argumentativa y aparato crítico APA 7",
             "points": 20.0,
             "descriptors": [
               {
                 "level": "Excelente",
-                "description": "Archivo Word formateado con tabla e historia de postura docente.",
+                "description": "Documento PDF estructurado en Plantilla IIIEPE con tablas, mapa mental y citas verificadas.",
                 "points": 20.0
               }
             ],
@@ -331,31 +331,6 @@
             "editable": "periodos/SD26/actividades-plataforma-SD26/actividad-11-siete-habilidades-basicas/presentacion.tex",
             "delivery": "periodos/SD26/entregas-fundamentos-para-la-enseñanza-y-el-aprendizaje-I-SD26/presentacion-fundamentos-ensenanza-aprendizaje-i-Actividad-11-SD26-siete-habilidades-basicas-Martin-Jonathan-de-la-Cruz-Munoz.pdf"
           }
-        },
-        {
-          "id": "prod-word-act-11",
-          "kind": "documento_word_editable",
-          "recipient": "Plataforma EVA Posgrados IIIEPE (Curso 1048)",
-          "editable_format": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-          "submission_format": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-          "structure": [
-            "Portada IIIEPE",
-            "Desarrollo analítico",
-            "Cuadro de síntesis",
-            "Referencias APA 7"
-          ],
-          "length": "Documento Word editable",
-          "filename_pattern": "reporte-fundamentos-ensenanza-aprendizaje-i-Actividad-11-SD26-siete-habilidades-basicas-Martin-Jonathan-de-la-Cruz-Munoz.docx",
-          "accessibility": "Documento Word con estilos jerárquicos y tablas",
-          "requirement_ids": [
-            "req-1",
-            "req-2",
-            "req-3"
-          ],
-          "paths": {
-            "editable": "periodos/SD26/actividades-plataforma-SD26/actividad-11-siete-habilidades-basicas/reporte-siete-habilidades.docx",
-            "delivery": "periodos/SD26/entregas-fundamentos-para-la-enseñanza-y-el-aprendizaje-I-SD26/reporte-fundamentos-ensenanza-aprendizaje-i-Actividad-11-SD26-siete-habilidades-basicas-Martin-Jonathan-de-la-Cruz-Munoz.docx"
-          }
         }
       ],
       "calendar": {
@@ -395,8 +370,7 @@
           ],
           "product_ids": [
             "prod-reporte-act-11",
-            "prod-presentacion-act-11",
-            "prod-word-act-11"
+            "prod-presentacion-act-11"
           ],
           "criterion_ids": [
             "crit-1",

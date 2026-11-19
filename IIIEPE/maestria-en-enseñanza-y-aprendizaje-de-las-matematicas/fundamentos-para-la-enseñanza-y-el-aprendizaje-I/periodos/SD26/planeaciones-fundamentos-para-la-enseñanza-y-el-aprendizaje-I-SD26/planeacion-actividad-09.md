@@ -28,12 +28,12 @@
 
 ## 2. Instrucción y Consigna Formativa
 
-Leer reflexivamente 'Mejorando el aprendizaje: las implicaciones de las investigaciones en las ciencias del aprendizaje' de Keith Sawyer (2008), diseñar una infografía visualmente equilibrada con título, cuerpo, fuentes y créditos, analizar sus implicaciones en matemáticas y generar el entregable editable en Word.
+Leer reflexivamente 'Mejorando el aprendizaje: las implicaciones de las investigaciones en las ciencias del aprendizaje' de Keith Sawyer (2008), diseñar en LaTeX/TikZ una infografía visualmente equilibrada con retratos, iconografía, tarjetas conceptuales, título, cuerpo, fuentes y créditos, y analizar sus implicaciones en matemáticas.
 
 ### Requisitos Contractuales
-- **req-1:** Elaborar infografía vectorial centrada en Keith Sawyer (2008) con título, cuerpo estructurado, fuentes y créditos.
+- **req-1:** Elaborar infografía vectorial en LaTeX/TikZ centrada en Keith Sawyer (2008) con tarjetas visuales, íconos, retrato y créditos.
 - **req-2:** Contrastación explícita entre instruccionismo tradicional, aprendizaje profundo, andamiaje y evaluación auténtica.
-- **req-3:** Entregar informe PDF, presentación Beamer y archivo Word Actividad_7_Martin_Jonathan_de_la_Cruz_Munoz.docx.
+- **req-3:** Entregar informe compilado en PDF (via LaTeX), lámina infográfica autónoma en PDF y presentación Beamer.
 
 ### Preguntas Guía de Investigación
 - **[Ciencias del aprendizaje] **¿Por qué fracasa el instruccionismo industrial ante las demandas cognitivas de la sociedad del conocimiento?
@@ -55,12 +55,6 @@ Leer reflexivamente 'Mejorando el aprendizaje: las implicaciones de las investig
 - **Formato de entrega:** `application/pdf` -> `periodos/SD26/entregas-fundamentos-para-la-enseñanza-y-el-aprendizaje-I-SD26/presentacion-fundamentos-ensenanza-aprendizaje-i-Actividad-9-SD26-infografia-sawyer-ciencias-aprendizaje-Martin-Jonathan-de-la-Cruz-Munoz.pdf`
 - **Extensión presupuestada:** 10 a 12 diapositivas
 - **Patrón de nomenclatura:** `presentacion-fundamentos-ensenanza-aprendizaje-i-Actividad-9-SD26-infografia-sawyer-ciencias-aprendizaje-Martin-Jonathan-de-la-Cruz-Munoz.pdf`
-### Producto: `prod-word-act-09`
-- **Denominación:** documento_word_editable
-- **Formato editable:** `application/vnd.openxmlformats-officedocument.wordprocessingml.document` -> `periodos/SD26/actividades-plataforma-SD26/actividad-09-infografia-sawyer-ciencias-aprendizaje/Actividad_7_Martin_Jonathan_de_la_Cruz_Munoz.docx`
-- **Formato de entrega:** `application/vnd.openxmlformats-officedocument.wordprocessingml.document` -> `periodos/SD26/entregas-fundamentos-para-la-enseñanza-y-el-aprendizaje-I-SD26/subproductos-independientes/Actividad_7_Martin_Jonathan_de_la_Cruz_Munoz.docx`
-- **Extensión presupuestada:** Documento Word editable
-- **Patrón de nomenclatura:** `Actividad_7_Martin_Jonathan_de_la_Cruz_Munoz.docx`
 
 ---
 
@@ -70,7 +64,7 @@ Leer reflexivamente 'Mejorando el aprendizaje: las implicaciones de las investig
 - **crit-1:** Organización de contenido de infografía (título, cuerpo, fuentes, créditos) (25.0 pts)
 - **crit-2:** Distribución espacial, paleta cromática y tipografía legible (25.0 pts)
 - **crit-3:** Rigor de conceptos clave de Keith Sawyer (2008) y transferencia matemática (25.0 pts)
-- **crit-4:** Entrega identificada y formato múltiple (PDF, Beamer y DOCX) (25.0 pts)
+- **crit-4:** Entrega identificada y compilación integral en LaTeX/PDF (Reporte, Lámina Infográfica y Beamer) (25.0 pts)
 - **Comprobaciones editoriales obligatorias:** Puntaje EMS >= 90 (meta 100.0 MAESTRO), Citas autor-año resueltas sin signos ??, Referencias APA 7ma edición verificables, Diagramas TikZ y tablas sin desbordamientos, Compilación reproducible con rc=0.
 
 ---

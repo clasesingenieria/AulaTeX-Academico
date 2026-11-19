@@ -33,7 +33,7 @@ Construir un mapa mental de las Siete Habilidades Básicas de Tony Wagner y resp
 ### Requisitos Contractuales
 - **req-1:** Incluir mapa mental claro con las 7 habilidades de Tony Wagner y nodos secundarios aplicados.
 - **req-2:** Fundamentar una estrategia didáctica en Matemáticas para cada una de las 7 habilidades con ejemplo de modelación.
-- **req-3:** Generar documento PDF, presentación Beamer y archivo Word editable reporte-siete-habilidades.docx.
+- **req-3:** Entregar documento analítico compilado desde LaTeX a PDF y presentación Beamer institucional.
 
 ### Preguntas Guía de Investigación
 - **[Clase de Matemáticas] **¿Cómo promueves el desarrollo de las siete habilidades de supervivencia con tus estudiantes en la clase de Matemáticas?
@@ -54,12 +54,6 @@ Construir un mapa mental de las Siete Habilidades Básicas de Tony Wagner y resp
 - **Formato de entrega:** `application/pdf` -> `periodos/SD26/entregas-fundamentos-para-la-enseñanza-y-el-aprendizaje-I-SD26/presentacion-fundamentos-ensenanza-aprendizaje-i-Actividad-11-SD26-siete-habilidades-basicas-Martin-Jonathan-de-la-Cruz-Munoz.pdf`
 - **Extensión presupuestada:** 10 a 12 diapositivas
 - **Patrón de nomenclatura:** `presentacion-fundamentos-ensenanza-aprendizaje-i-Actividad-11-SD26-siete-habilidades-basicas-Martin-Jonathan-de-la-Cruz-Munoz.pdf`
-### Producto: `prod-word-act-11`
-- **Denominación:** documento_word_editable
-- **Formato editable:** `application/vnd.openxmlformats-officedocument.wordprocessingml.document` -> `periodos/SD26/actividades-plataforma-SD26/actividad-11-siete-habilidades-basicas/reporte-siete-habilidades.docx`
-- **Formato de entrega:** `application/vnd.openxmlformats-officedocument.wordprocessingml.document` -> `periodos/SD26/entregas-fundamentos-para-la-enseñanza-y-el-aprendizaje-I-SD26/reporte-fundamentos-ensenanza-aprendizaje-i-Actividad-11-SD26-siete-habilidades-basicas-Martin-Jonathan-de-la-Cruz-Munoz.docx`
-- **Extensión presupuestada:** Documento Word editable
-- **Patrón de nomenclatura:** `reporte-fundamentos-ensenanza-aprendizaje-i-Actividad-11-SD26-siete-habilidades-basicas-Martin-Jonathan-de-la-Cruz-Munoz.docx`
 
 ---
 
@@ -69,7 +63,7 @@ Construir un mapa mental de las Siete Habilidades Básicas de Tony Wagner y resp
 - **crit-1:** Mapa mental completo de las 7 habilidades de Tony Wagner (25.0 pts)
 - **crit-2:** Desarrollo situado para las 7 habilidades en la clase de Matemáticas (35.0 pts)
 - **crit-3:** Diseño matemático demostrativo e indicadores de evaluación (20.0 pts)
-- **crit-4:** Entrega dual en PDF/Beamer y escrito Word editable (20.0 pts)
+- **crit-4:** Calidad editorial en LaTeX/PDF, coherencia argumentativa y aparato crítico APA 7 (20.0 pts)
 - **Comprobaciones editoriales obligatorias:** Puntaje EMS >= 90 (meta 100.0 MAESTRO), Citas autor-año resueltas sin signos ??, Referencias APA 7ma edición verificables, Diagramas TikZ y tablas sin desbordamientos, Compilación reproducible con rc=0.
 
 ---

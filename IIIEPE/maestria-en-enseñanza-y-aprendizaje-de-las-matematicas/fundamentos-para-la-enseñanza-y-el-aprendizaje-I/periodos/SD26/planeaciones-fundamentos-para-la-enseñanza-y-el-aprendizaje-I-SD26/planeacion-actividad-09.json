@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "plan_id": "pca-iiiepe-fundamentos-para-la-ensenanza-y-el-aprendizaje-i-sd26-act-09",
-  "revision": 1,
+  "revision": 2,
   "identity": {
     "institution": "IIIEPE",
     "program": "Maestría en Enseñanza y Aprendizaje de las Matemáticas",
@@ -72,7 +72,7 @@
     "outcomes": [
       {
         "id": "out-1",
-        "text": "Produce una infografía vectorial dedicada exclusivamente a Sawyer (2008), un informe crítico y el documento editable Actividad_7_Martin_Jonathan_de_la_Cruz_Munoz.docx."
+        "text": "Produce infografía vectorial monográfica dedicada a Sawyer (2008) en LaTeX/PDF, reporte analítico y presentación Beamer."
       }
     ],
     "topics": [
@@ -117,14 +117,14 @@
         "verb": "Sintetizar",
         "object": "las implicaciones de las ciencias del aprendizaje de Sawyer (2008) frente al modelo tradicional",
         "conditions": "mediante una infografía autónoma en TikZ, análisis situado en bachillerato técnico e ingeniería y entrega en Word",
-        "observable_evidence": "Infografía apaisada de Sawyer (2008), reporte analítico, Beamer y DOCX identificado",
+        "observable_evidence": "Infografía vectorial LaTeX/TikZ de Sawyer (2008), reporte analítico PDF y presentación Beamer",
         "justification": "Cubre íntegramente la segunda lectura solicitada en la consigna Rúbrica 3.docx (módulo 51440)."
       },
-      "instruction": "Leer reflexivamente 'Mejorando el aprendizaje: las implicaciones de las investigaciones en las ciencias del aprendizaje' de Keith Sawyer (2008), diseñar una infografía visualmente equilibrada con título, cuerpo, fuentes y créditos, analizar sus implicaciones en matemáticas y generar el entregable editable en Word.",
+      "instruction": "Leer reflexivamente 'Mejorando el aprendizaje: las implicaciones de las investigaciones en las ciencias del aprendizaje' de Keith Sawyer (2008), diseñar en LaTeX/TikZ una infografía visualmente equilibrada con retratos, iconografía, tarjetas conceptuales, título, cuerpo, fuentes y créditos, y analizar sus implicaciones en matemáticas.",
       "requirements": [
         {
           "id": "req-1",
-          "text": "Elaborar infografía vectorial centrada en Keith Sawyer (2008) con título, cuerpo estructurado, fuentes y créditos."
+          "text": "Elaborar infografía vectorial en LaTeX/TikZ centrada en Keith Sawyer (2008) con tarjetas visuales, íconos, retrato y créditos."
         },
         {
           "id": "req-2",
@@ -132,7 +132,7 @@
         },
         {
           "id": "req-3",
-          "text": "Entregar informe PDF, presentación Beamer y archivo Word Actividad_7_Martin_Jonathan_de_la_Cruz_Munoz.docx."
+          "text": "Entregar informe compilado en PDF (via LaTeX), lámina infográfica autónoma en PDF y presentación Beamer."
         }
       ],
       "questions": [
@@ -303,12 +303,12 @@
           },
           {
             "id": "crit-4",
-            "text": "Entrega identificada y formato múltiple (PDF, Beamer y DOCX)",
+            "text": "Entrega identificada y compilación integral en LaTeX/PDF (Reporte, Lámina Infográfica y Beamer)",
             "points": 25.0,
             "descriptors": [
               {
                 "level": "Ideal (10)",
-                "description": "Incluye DOCX con nomenclatura oficial de Rúbrica 3.",
+                "description": "Todos los entregables generados en LaTeX y compilados limpiamente a PDF.",
                 "points": 25.0
               }
             ],
@@ -378,31 +378,6 @@
             "editable": "periodos/SD26/actividades-plataforma-SD26/actividad-09-infografia-sawyer-ciencias-aprendizaje/presentacion.tex",
             "delivery": "periodos/SD26/entregas-fundamentos-para-la-enseñanza-y-el-aprendizaje-I-SD26/presentacion-fundamentos-ensenanza-aprendizaje-i-Actividad-9-SD26-infografia-sawyer-ciencias-aprendizaje-Martin-Jonathan-de-la-Cruz-Munoz.pdf"
           }
-        },
-        {
-          "id": "prod-word-act-09",
-          "kind": "documento_word_editable",
-          "recipient": "Plataforma EVA Posgrados IIIEPE (Curso 1048)",
-          "editable_format": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-          "submission_format": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-          "structure": [
-            "Portada IIIEPE",
-            "Desarrollo analítico",
-            "Cuadro de síntesis",
-            "Referencias APA 7"
-          ],
-          "length": "Documento Word editable",
-          "filename_pattern": "Actividad_7_Martin_Jonathan_de_la_Cruz_Munoz.docx",
-          "accessibility": "Documento Word con estilos jerárquicos y tablas",
-          "requirement_ids": [
-            "req-1",
-            "req-2",
-            "req-3"
-          ],
-          "paths": {
-            "editable": "periodos/SD26/actividades-plataforma-SD26/actividad-09-infografia-sawyer-ciencias-aprendizaje/Actividad_7_Martin_Jonathan_de_la_Cruz_Munoz.docx",
-            "delivery": "periodos/SD26/entregas-fundamentos-para-la-enseñanza-y-el-aprendizaje-I-SD26/subproductos-independientes/Actividad_7_Martin_Jonathan_de_la_Cruz_Munoz.docx"
-          }
         }
       ],
       "calendar": {
@@ -442,8 +417,7 @@
           ],
           "product_ids": [
             "prod-reporte-act-09",
-            "prod-presentacion-act-09",
-            "prod-word-act-09"
+            "prod-presentacion-act-09"
           ],
           "criterion_ids": [
             "crit-1",
