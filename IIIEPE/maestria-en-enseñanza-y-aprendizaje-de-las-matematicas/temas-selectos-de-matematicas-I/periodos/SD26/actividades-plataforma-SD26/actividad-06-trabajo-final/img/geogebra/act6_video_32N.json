@@ -1,0 +1,173 @@
+{
+  "id": "act6_video_32N",
+  "title": "Modelo Hidráulico del Guion: F1=8 N -> F2=32 N (k=4) vs Error Lineal (k=2) y d2=6 cm (k'=16)",
+  "commands": [
+    {
+      "cmd": "O = (0, 0)",
+      "ok": true
+    },
+    {
+      "cmd": "f(x) = 4 * x",
+      "ok": true
+    },
+    {
+      "cmd": "g(x) = 2 * x",
+      "ok": true
+    },
+    {
+      "cmd": "h(x) = 16 * x",
+      "ok": true
+    },
+    {
+      "cmd": "A_2 = (2, 8)",
+      "ok": true
+    },
+    {
+      "cmd": "B_4 = (4, 16)",
+      "ok": true
+    },
+    {
+      "cmd": "C_6 = (6, 24)",
+      "ok": true
+    },
+    {
+      "cmd": "P_real = (8, 32)",
+      "ok": true
+    },
+    {
+      "cmd": "P_err = (8, 16)",
+      "ok": true
+    },
+    {
+      "cmd": "P_cuad = (2.5, 40)",
+      "ok": true
+    },
+    {
+      "cmd": "seg_diff = Segment(P_err, P_real)",
+      "ok": true
+    },
+    {
+      "cmd": "seg_h = Segment((8, 0), P_real)",
+      "ok": true
+    },
+    {
+      "cmd": "seg_v32 = Segment((0, 32), P_real)",
+      "ok": true
+    },
+    {
+      "cmd": "seg_v16 = Segment((0, 16), P_err)",
+      "ok": true
+    },
+    {
+      "cmd": "txtCuad = Text(\"d2 = 6.0 cm -> k' = 16  [h(x) = 16x] en (2.5, 40)\", (2.85, 39.2))",
+      "ok": true
+    },
+    {
+      "cmd": "txtReal = Text(\"Modelo real: F2 = 4·F1  ->  (8 N, 32 N)\", (3.65, 34.8))",
+      "ok": true
+    },
+    {
+      "cmd": "txtGap = Text(\"Subestimación: -16 N (-50%)\", (8.25, 23.5))",
+      "ok": true
+    },
+    {
+      "cmd": "txtErr = Text(\"Error lineal: F2 = 2·F1  ->  (8 N, 16 N)\", (4.85, 6.0))",
+      "ok": true
+    }
+  ],
+  "objects": {
+    "O": {
+      "type": "point",
+      "val_str": "O = (0, 0)",
+      "def_str": "(0, 0)"
+    },
+    "f": {
+      "type": "function",
+      "val_str": "f(x) = 4x",
+      "def_str": ""
+    },
+    "g": {
+      "type": "function",
+      "val_str": "g(x) = 2x",
+      "def_str": ""
+    },
+    "h": {
+      "type": "function",
+      "val_str": "h(x) = 16x",
+      "def_str": ""
+    },
+    "A_2": {
+      "type": "point",
+      "val_str": "A_2 = (2, 8)",
+      "def_str": "(2, 8)"
+    },
+    "B_4": {
+      "type": "point",
+      "val_str": "B_4 = (4, 16)",
+      "def_str": "(4, 16)"
+    },
+    "C_6": {
+      "type": "point",
+      "val_str": "C_6 = (6, 24)",
+      "def_str": "(6, 24)"
+    },
+    "P_real": {
+      "type": "point",
+      "val_str": "P_real = (8, 32)",
+      "def_str": "(8, 32)"
+    },
+    "P_err": {
+      "type": "point",
+      "val_str": "P_err = (8, 16)",
+      "def_str": "(8, 16)"
+    },
+    "P_cuad": {
+      "type": "point",
+      "val_str": "P_cuad = (2.5, 40)",
+      "def_str": "(2.5, 40)"
+    },
+    "seg_diff": {
+      "type": "segment",
+      "val_str": "seg_diff = 16",
+      "def_str": "Segmento [P_err, P_real]"
+    },
+    "seg_h": {
+      "type": "segment",
+      "val_str": "seg_h = 32",
+      "def_str": "Segmento [(8, 0), P_real]"
+    },
+    "seg_v32": {
+      "type": "segment",
+      "val_str": "seg_v32 = 8",
+      "def_str": "Segmento [(0, 32), P_real]"
+    },
+    "seg_v16": {
+      "type": "segment",
+      "val_str": "seg_v16 = 8",
+      "def_str": "Segmento [(0, 16), P_err]"
+    },
+    "txtCuad": {
+      "type": "text",
+      "val_str": "d2 = 6.0 cm -> k' = 16  [h(x) = 16x] en (2.5, 40)",
+      "def_str": "Texto(\"d2 = 6.0 cm -> k' = 16  [h(x) = 16x] en (2.5, 40)\", (2.85, 39.2))"
+    },
+    "txtReal": {
+      "type": "text",
+      "val_str": "Modelo real: F2 = 4·F1  ->  (8 N, 32 N)",
+      "def_str": "Texto(\"Modelo real: F2 = 4·F1  ->  (8 N, 32 N)\", (3.65, 34.8))"
+    },
+    "txtGap": {
+      "type": "text",
+      "val_str": "Subestimación: -16 N (-50%)",
+      "def_str": "Texto(\"Subestimación: -16 N (-50%)\", (8.25, 23.5))"
+    },
+    "txtErr": {
+      "type": "text",
+      "val_str": "Error lineal: F2 = 2·F1  ->  (8 N, 16 N)",
+      "def_str": "Texto(\"Error lineal: F2 = 2·F1  ->  (8 N, 16 N)\", (4.85, 6))"
+    }
+  },
+  "out_png": "C:\\Users\\Sysx\\Documents\\AulaTeX-Academico\\IIIEPE\\maestria-en-enseñanza-y-aprendizaje-de-las-matematicas\\temas-selectos-de-matematicas-I\\periodos\\SD26\\actividades-plataforma-SD26\\actividad-06-trabajo-final\\img\\geogebra\\act6_video_32N.png",
+  "out_ui_png": "C:\\Users\\Sysx\\Documents\\AulaTeX-Academico\\IIIEPE\\maestria-en-enseñanza-y-aprendizaje-de-las-matematicas\\temas-selectos-de-matematicas-I\\periodos\\SD26\\actividades-plataforma-SD26\\actividad-06-trabajo-final\\img\\geogebra\\act6_video_32N_ui.png",
+  "out_ggb": "C:\\Users\\Sysx\\Documents\\AulaTeX-Academico\\IIIEPE\\maestria-en-enseñanza-y-aprendizaje-de-las-matematicas\\temas-selectos-de-matematicas-I\\periodos\\SD26\\actividades-plataforma-SD26\\actividad-06-trabajo-final\\img\\geogebra\\act6_video_32N.ggb"
+}
