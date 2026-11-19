@@ -1,66 +1,255 @@
-\documentclass[spanish,letterpaper,oneside]{article}
-
-\def\documenttitle {El Futuro del Aprendizaje y Transformación de la Práctica Docente}
-\def\documentsubtitle {Presentación Ejecutiva · Cohorte SD26}
-\def\documentsubject {Actividad 1 · Síntesis Visual}
-\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
-\def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
-\def\coursecode {MAEM-SD26}
-
-\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación}
-\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
-\def\universitydepartment {Fundamentos para la enseñanza y el aprendizaje I}
-\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
-\def\universitydepartmentimagecfg {height=1.75cm}
-\def\universitylocation {Monterrey, Nuevo León}
-\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
-\def\studentid {00874}
-\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
-\def\programperiod {2do periodo, septiembre--diciembre de 2026 (SD26)}
-\def\programmodality {Modalidad presencial}
-\def\programshort {MAEM}
-
-\def\authortable {
-  \begin{tabular}{ll}
-    \textbf{Alumno:} & \studentfullname \\
-    Matrícula: & \studentid \\
-    Unidad: & \coursename \\
-    Periodo: & \programperiod
-  \end{tabular}
-}
-
-\input{template}
-
+\documentclass[aspectratio=169,spanish,xcolor=table]{beamer}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+\fi
+\usepackage[spanish,es-tabla,es-noshorthands]{babel}
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
-\usepackage{tikz,longtable,array}
-\usetikzlibrary{arrows.meta,positioning}
+\usepackage{tikz,pgfplots,array,booktabs,ragged2e}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes.geometric,fit}
+
 \definecolor{iiiepeNavy}{HTML}{163B5C}
 \definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
 \definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
 
-\begin{document}\templatePortrait\templatePagecfg\templateFinalcfg\setstretch{1.25}
+\usetheme{default}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{normal text}{fg=iiiepeInk,bg=white}
+\setbeamercolor{structure}{fg=iiiepeNavy}
+\setbeamercolor{frametitle}{fg=white,bg=iiiepeNavy}
+\setbeamercolor{block title}{fg=white,bg=iiiepeBlue}
+\setbeamercolor{block body}{fg=iiiepeInk,bg=iiiepePale}
+\setbeamercolor{item}{fg=iiiepeOrange}
 
-\section*{Síntesis Ejecutiva · Actividad 1}
-\textbf{El Futuro del Aprendizaje y Transformación de la Práctica Docente}
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.95cm,dp=0.22cm,leftskip=0.45cm,rightskip=0.45cm]{frametitle}%
+    \usebeamerfont{frametitle}\insertframetitle%
+    \hfill\includegraphics[height=0.58cm]{img/iiiepe/logo-iiiepe-blanco.png}%
+  \end{beamercolorbox}%
+}
 
-\subsection*{1. Diagnóstico y Planteamiento Central}
-La presente exposición aborda la articulación de los marcos pedagógicos contemporáneos en el aula de matemáticas:
-\begin{itemize}
-  \item Eje temático: Diagnóstico de saberes y análisis de las tendencias del aprendizaje en el siglo XXI a partir del informe de la UNESCO..
-  \item Planteamiento central: La enseñanza matemática trasciende el adiestramiento mecánico cuando incorpora la indagación y la justificación argumentada \cite{delors1996educacion,scott2015futuro}.
-\end{itemize}
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.78\paperwidth,ht=0.5cm,dp=0.18cm,leftskip=0.45cm]{frametitle}%
+      \scriptsize\color{white}M. de la Cruz Muñoz · MAEM · Matrícula 00874 · SD26 · Actividad 1 · Sesión 1%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.22\paperwidth,ht=0.5cm,dp=0.18cm,rightskip=0.45cm]{frametitle}%
+      \hfill\scriptsize\color{white}\insertframenumber{} / \inserttotalframenumber%
+    \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
 
-\subsection*{2. Dimensiones y Artefacto de Aplicación}
-{\small\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|p{0.35\linewidth}|p{0.6\linewidth}|}\hline
-\rowcolor{iiiepePale} \textbf{Dimensión} & \textbf{Acción Didáctica en el Aula} \\\hline
-Fundamentación Teórica & Vinculación conceptual con las ciencias del aprendizaje \cite{sawyer2008optimizing}. \\\hline
-Mediación Matemática & Diseño de tareas abiertas con representaciones múltiples. \\\hline
-Impacto Profesional & Transferencia reflexiva al contexto laboral y comunitario. \\\hline
-\end{longtable}}
+\newcommand{\Pill}[2]{%
+  \tikz[baseline=(x.base)]{\node[rounded corners=3pt,fill=#1!14,draw=#1!75!black,thick,inner xsep=6pt,inner ysep=4pt,align=center] (x) {\scriptsize\bfseries #2};}%
+}
 
-\subsection*{3. Conclusión y Veredicto Pedagógico}
-En conclusión, la práctica docente se consolida al articular rigor disciplinar y enfoque humanista. Por tanto, esta propuesta formativa promueve la autonomía y equidad educativa en los estudiantes.
+\title{El Futuro del Aprendizaje y Diagnóstico Matemático}
+\subtitle{Actividad 1 · Sesión 1 · Módulo 50157}
+\author{Mtro. Martín Jonathan de la Cruz Muñoz · Matrícula 00874}
+\institute{IIIEPE · Maestría en Aprendizaje y Enseñanza de las Matemáticas · Grupo A}
+\date{19 de noviembre de 2026}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[iiiepeNavy] (current page.north west) rectangle ([xshift=10.3cm]current page.south west);
+    \fill[iiiepeBlue] ([xshift=10.3cm]current page.north west) rectangle (current page.south east);
+    \fill[iiiepeOrange] ([xshift=0.8cm,yshift=-6.45cm]current page.north west) rectangle ([xshift=9.3cm,yshift=-6.53cm]current page.north west);
+    \node[anchor=north west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=-1.15cm]current page.north west) {%
+      {\color{iiiepeAqua!45!white}\small\bfseries MAESTRÍA EN APRENDIZAJE Y ENSEÑANZA DE LAS MATEMÁTICAS · SD26\par}%
+      \vspace{0.35cm}
+      {\color{white}\Large\bfseries \inserttitle\par}%
+      \vspace{0.25cm}
+      {\color{white!90}\normalsize \insertsubtitle\par}%
+    };
+    \node[anchor=south west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=0.75cm]current page.south west) {%
+      {\color{white}\normalsize\bfseries Mtro. Martín Jonathan de la Cruz Muñoz\par}%
+      {\color{white!85}\scriptsize Matrícula 00874 · martin.delacruz@campus.iiiepe.edu.mx\par}%
+      {\color{iiiepeAqua!35!white}\scriptsize Monterrey, Nuevo León · 19 de noviembre de 2026\par}%
+    };
+    \node[anchor=center,text width=5.0cm,align=center] at ([xshift=13.15cm,yshift=-4.5cm]current page.north west) {%
+      \includegraphics[width=3.6cm]{img/iiiepe/logo-iiiepe-blanco.png}\par\vspace{0.45cm}%
+      {\color{white}\large\bfseries IIIEPE\par}%
+      \vspace{0.1cm}%
+      {\color{white!85}\scriptsize Fundamentos para la enseñanza\\y el aprendizaje I\par}%
+    };
+  \end{tikzpicture}
+\end{frame}
+\begin{frame}{Propósito y Tesis Central (Sesión 1)}
+  \begin{block}{Planteamiento de partida}
+    Enseñar matemáticas en bachillerato técnico e ingeniería exige superar la mecanización sin contexto para construir comprensión conceptual, pensamiento crítico y sentido humano \textbf{(Scott, 2015; UNESCO, 2015)}.
+  \end{block}
+  \vspace{0.3cm}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+      \textbf{\color{iiiepeNavy}Fuerzas de cambio (UNESCO):}
+      \begin{itemize}\scriptsize
+        \item Globalización y mutación del mercado laboral.
+        \item Transformación tecnológica acelerada.
+        \item Cambios demográficos y movilidad profesional.
+        \item Brechas económicas y urgencia ambiental.
+      \end{itemize}
+    \column{0.48\textwidth}
+      \textbf{\color{iiiepeBlue}Componentes de la Actividad 1:}
+      \begin{itemize}\scriptsize
+        \item Selección y análisis propio de 4 ideas centrales de Cynthia Luna Scott (2015).
+        \item Diagnóstico de cuatro conceptos clave: enseñanza, aprendizaje, paradigmas y matemáticas.
+        \item Ilustración matemática situada para docencia técnica.
+      \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Cuatro Ideas Relevantes de Cynthia Luna Scott (2015) · I}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+      \begin{block}{Idea 1 · Crisis del modelo transmisivo}
+        La memorización para exámenes estandarizados es insuficiente ante problemas reales complejos.\\[0.2cm]
+        \textbf{Comentario:} La agilidad al despejar $x$ puede ocultar incapacidad para identificar variables, tolerancias o supuestos físicos en taller.
+      \end{block}
+    \column{0.48\textwidth}
+      \begin{block}{Idea 2 · El nuevo aprendiz digital}
+        El acceso ubicuo a pantallas y redes no garantiza por sí solo aprendizaje crítico ni autorregulación.\\[0.2cm]
+        \textbf{Comentario:} Usar graficadores o software sin comprender tasas de cambio ni unidades acelera el error si falta mediación docente.
+      \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Cuatro Ideas Relevantes de Cynthia Luna Scott (2015) · II}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+      \begin{block}{Idea 3 · Brecha escuela--mundo laboral}
+        Las tareas rutinarias disminuyen; se demandan pensamiento experto y solución de problemas no estructurados.\\[0.2cm]
+        \textbf{Comentario:} En mantenimiento y mecatrónica los problemas llegan como síntomas reales; la matemática escolar debe habilitar el modelado bajo incertidumbre.
+      \end{block}
+    \column{0.48\textwidth}
+      \begin{block}{Idea 4 · Pedagogía 2.0 y ecosistemas}
+        Convergencia de los cuatro pilares de Delors (1996) en redes de aprendizaje formales e informales.\\[0.2cm]
+        \textbf{Comentario:} Digitalizar sin dialogar no cambia la escuela; conectar aula, taller y comunidad fortalece equidad y sentido.
+      \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Nexo Diagnóstico: Cuatro Conceptos Fundamentales}
+  \centering
+  \begin{tikzpicture}[
+    every node/.style={thick,rounded corners=4pt,text width=5.4cm,align=left,inner sep=6pt,font=\scriptsize},
+    arr/.style={->,thick,>=Latex,iiiepeNavy}
+  ]
+    \node[draw=iiiepeNavy,fill=iiiepeNavy!12] (a) at (0,2.4) {\textbf{Enseñanza:} Mediación intencional que genera preguntas, andamiajes y condiciones de participación equitativa.};
+    \node[draw=iiiepeBlue,fill=iiiepeBlue!12] (b) at (7.0,2.4) {\textbf{Aprendizaje:} Construcción activa y relacional que integra comprensión, diálogo y transferencia.};
+    \node[draw=iiiepeAqua!75!black,fill=iiiepeAqua!12] (c) at (0,0) {\textbf{Paradigmas:} Marcos epistemológicos sobre qué vale como conocimiento, cómo se trata el error y para qué se evalúa.};
+    \node[draw=iiiepeOrange!85!black,fill=iiiepeOrange!12] (d) at (7.0,0) {\textbf{Matemáticas:} Lenguaje de variación, estructura e inferencia para decidir con evidencia.};
+    \draw[arr] (a) -- (b);
+    \draw[arr] (c) -- (a);
+    \draw[arr] (c) -- (d);
+    \draw[arr] (d) -- (b);
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Del Paradigma Transmisivo al Enfoque Comprensivo}
+  \scriptsize\renewcommand{\arraystretch}{1.4}
+  \begin{tabular}{p{2.3cm}p{5.4cm}p{5.4cm}}
+    \toprule
+    \rowcolor{iiiepePale} \textbf{Eje} & \textbf{Práctica transmisiva tradicional} & \textbf{Horizonte formativo (SD26)} \\
+    \midrule
+    Enseñanza & Exposición de reglas aisladas y copia de ejercicios tipo. & Diseño de retos situados, indagación guiada y diálogo entre pares. \\
+    Aprendizaje & Memorización efímera para acreditar evaluaciones sumativas. & Apropiación conceptual capaz de explicar el porqué del procedimiento. \\
+    Error y evaluación & Penalización inmediata; enfoque puramente calificativo. & Evidencia diagnóstica para ajustar el andamiaje en el grupo. \\
+    Matemáticas & Manipulación simbólica desligada de unidades y realidad. & Modelación crítica aplicada a sistemas técnicos y vida comunitaria. \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Ejemplos Matemáticos: Lectura Relacional vs Mecanización}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+      \begin{block}{1. Cinemática lineal en taller}
+        $$d(t) = 0.65\,t + 1.4$$
+        \scriptsize
+        \begin{itemize}
+          \item \textbf{Cálculo:} $d(8) = 6.6\text{ m}$.
+          \item \textbf{Comprensión profunda:} Distinguir función afín vs proporcional ($d_0 = 1.4\text{ m}$), interpretar la pendiente ($0.65\text{ m/s}$) y verificar límites del riel físico.
+        \end{itemize}
+      \end{block}
+    \column{0.48\textwidth}
+      \begin{block}{2. Costos de servicio técnico}
+        $$C_A(h) = 250 + 80h, \quad C_B(h) = 100 + 110h$$
+        \scriptsize
+        \begin{itemize}
+          \item \textbf{Equilibrio:} $h = 5\text{ horas}$ (\$650).
+          \item \textbf{Decisión argumentada:} Por debajo de $5\text{ h}$ conviene $B$; para jornadas mayores a $5\text{ h}$ conviene $A$ por su menor costo marginal (\$80/h).
+        \end{itemize}
+      \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Delors (1996) y Ecosistemas en la Enseñanza Técnica}
+  \centering
+  \Pill{iiiepeNavy}{Aprender a conocer} \hspace{0.2cm}
+  \Pill{iiiepeBlue}{Aprender a hacer} \hspace{0.2cm}
+  \Pill{iiiepeAqua!75!black}{Aprender a convivir} \hspace{0.2cm}
+  \Pill{iiiepeOrange!85!black}{Aprender a ser}
+  \vspace{0.55cm}
+  \begin{block}{Puente con la docencia en CONALEP, CECyTE e Ingeniería}
+    \begin{itemize}\small
+      \item Vincular el aula de matemáticas con el taller de mantenimiento, el análisis de sensores y problemas de la comunidad.
+      \item Exigir justificación de unidades, validez del modelo y lectura crítica de gráficas generadas digitalmente.
+      \item Cuidar la equidad mediante apoyos graduados para estudiantes con trayectorias previas desiguales.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Ruta de Transformación de la Práctica Docente}
+  \centering
+  \begin{tikzpicture}[
+    node distance=0.8cm,
+    s/.style={draw=iiiepeNavy,fill=iiiepePale,rounded corners=4pt,text width=2.85cm,minimum height=1.7cm,align=center,font=\scriptsize},
+    arr/.style={->,very thick,iiiepeOrange,>=Latex}
+  ]
+    \node[s] (s1) {\textbf{1. Diagnóstico}\\Reconocer ideas previas y bloqueos reales.};
+    \node[s,right=of s1] (s2) {\textbf{2. Problematizar}\\Plantear retos técnicos o comunitarios auténticos.};
+    \node[s,right=of s2] (s3) {\textbf{3. Modelar}\\Conectar tablas, gráficas y álgebra con sentido.};
+    \node[s,right=of s3] (s4) {\textbf{4. Dialogar}\\Argumentar errores, límites y decisiones.};
+    \draw[arr] (s1) -- (s2);
+    \draw[arr] (s2) -- (s3);
+    \draw[arr] (s3) -- (s4);
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Conclusiones de la Sesión 1}
+  \begin{itemize}\normalsize
+    \item Las seis fuerzas de transformación obligan a abandonar la enseñanza centrada únicamente en memorizar algoritmos \textbf{(Scott, 2015)}.
+    \item Enseñar matemáticas en contextos técnicos requiere conjugar exactitud instrumental, modelación crítica y diálogo inclusivo.
+    \item La Tecnología solo potencia el aprendizaje cuando está gobernada por preguntas conceptuales e interpretación de evidencia.
+    \item Este diagnóstico establece la base reflexiva para examinar la propia identidad docente en la Sesión 2.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Referencias Principales (APA 7)}
+  \scriptsize\setlength{\parskip}{6pt}
+  \begin{itemize}
+    \item CONALEP. (2025). \textit{Perfil de egreso: Profesional Técnico-Bachiller en Mecatrónica}. Secretaría Académica.
+    \item Delors, J., et al. (1996). \textit{La educación encierra un tesoro}. Santillana/UNESCO.
+    \item Pimienta Prieto, J. H. (2012). \textit{Estrategias de enseñanza-aprendizaje}. Pearson Educación.
+    \item Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. En \textit{Innovating to learn, learning to innovate} (pp. 45--65). OECD.
+    \item Scott, C. L. (2015). \textit{El futuro del aprendizaje 1}. UNESCO.
+    \item SEP. (2023). \textit{Programa de estudios: Pensamiento Matemático I}. SEMS.
+    \item UNESCO. (2015). \textit{Replantear la educación: ¿Hacia un bien común mundial?} UNESCO.
+  \end{itemize}
+\end{frame}
 
 \end{document}

@@ -1,8 +1,8 @@
 \documentclass[spanish,letterpaper,oneside]{article}
 
-\def\documenttitle {El Aprendizaje Profundo y las Ciencias del Aprendizaje en Matemáticas}
+\def\documenttitle {Aprendizaje Profundo y Cultura Escolar en Matemáticas}
 \def\documentsubtitle {Fundamentos para la enseñanza y el aprendizaje I · Cohorte SD26}
-\def\documentsubject {Actividad 5 · Aprendizaje Profundo}
+\def\documentsubject {Actividad 5 · Bloque III (Módulo 51707)}
 \def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
 \def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
 \def\coursecode {MAEM-SD26}
@@ -29,7 +29,7 @@
     Programa: & \programshort \\
     Periodo: & \programperiod \\
     & \\
-    \multicolumn{2}{l}{Fecha de realización: 14 de noviembre de 2026} \\
+    \multicolumn{2}{l}{Fecha de realización: 19 de noviembre de 2026} \\
     \multicolumn{2}{l}{\universitylocation}
   \end{tabular}
 }
@@ -42,8 +42,10 @@
 \usepackage{longtable}
 \usepackage{pdflscape}
 \usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 \usepackage[most]{tcolorbox}
-\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,shapes.geometric}
 
 \definecolor{iiiepeNavy}{HTML}{163B5C}
 \definecolor{iiiepeBlue}{HTML}{1F6F9F}
@@ -52,8 +54,16 @@
 \definecolor{iiiepePaper}{HTML}{F6F8F7}
 \definecolor{iiiepeInk}{HTML}{1E2A32}
 \definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
 \def\portraittitlecolor {iiiepeNavy}
 \setcitestyle{authoryear,open={(},close={)}}
+\makeatletter
+\renewcommand{\@biblabel}[1]{}
+\makeatother
+\setlength{\bibhang}{1.27cm}
+\setlength{\bibsep}{6pt}
+\AtBeginDocument{\renewcommand{\refname}{Referencias}}
 
 \newcommand{\insertcoverwatermark}{%
   \AddToShipoutPictureBG*{%
@@ -66,63 +76,108 @@
 }
 
 \setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
-\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 5}\setstretch{1.3}\raggedbottom
-
+\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 5 · Aprendizaje Profundo}\setstretch{1.3}\raggedbottom
 \section{Introducción y postura central}
-El estudio de los fundamentos para la enseñanza y el aprendizaje en el marco de la cohorte SD26 exige examinar críticamente las relaciones entre los marcos teóricos contemporáneos y la realidad del aula de matemáticas. La postura central de este reporte plantea la tesis de que la transformación de la docencia técnica y matemática no se logra mediante la adopción acrítica de consignas procedimentales, sino a través de un análisis propio y sistemático de las mediaciones didácticas orientadas a la comprensión profunda y la justicia social \cite{delors1996educacion,unesco2015replantear}.
+El tránsito de una enseñanza matemática centrada en repetir algoritmos hacia comunidades escolares capaces de comprender, argumentar y transferir conocimientos constituye uno de los desafíos neurálgicos de la educación contemporánea. A partir del análisis crítico de \citet{quiroga2022aprendizaje} sobre el aprendizaje profundo como herramienta para transformar la cultura escolar, articulado con los planteamientos de las ciencias del aprendizaje de \citet{sawyer2008optimizing} y \citet{fullan2014rich}, sostengo la tesis de que el dominio técnico de procedimientos matemáticos resulta insuficiente si no integra simultáneamente las dimensiones cognitiva, interpersonal e intrapersonal dentro de nuevas relaciones pedagógicas en el aula.
 
-Esta actividad, vinculada formalmente al módulo institucional \texttt{51707}, analiza de forma aplicada: \textit{Fundamentación conceptual del aprendizaje profundo frente al aprendizaje superficial o memorístico, integrando la perspectiva de Sawyer (2008).}. Desde esta perspectiva, se abordan las dimensiones epistemológicas del aprendizaje sin soslayar los condicionamientos contextuales de la comunidad educativa.
+Mi postura es que las dificultades habituales observadas en bachillerato técnico e ingeniería —cuando el alumnado ejecuta reglas algebraicas mecánicas sin explicar su sentido físico ni adaptar sus estrategias ante situaciones nuevas— revelan el predominio de una cultura escolar orientada hacia el aprendizaje superficial. Por ello, este informe responde de manera fundamentada a las cinco preguntas solicitadas en el módulo \texttt{51707}, integrando un diagrama triádico en TikZ, un contraste formal entre destreza procedimental y comprensión profunda mediante un ejemplo matemático concreto, y orientaciones de transferencia docente en coherencia con las nuevas pedagogías.
 
-\section{Desarrollo temático y fundamentación conceptual}
-Para comprender el impacto formativo de esta intervención, es indispensable contrastar los modelos teóricos con las evidencias de desempeño observadas en la práctica cotidiana \cite{scott2015futuro}. A partir de un análisis propio de las secuencias de aprendizaje, esto implica que el aprendizaje significativo no puede reducirse a la repetición algorítmica.
+\section{Desarrollo argumentado de las cinco interrogantes centrales}
 
-\begin{center}
-\begin{tikzpicture}[font=\small,node distance=1.8cm,>=Latex]
-  \node[draw=iiiepeNavy,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center] (a) {\textbf{Dimensión Epistémica}\\Comprensión y modelación conceptual};
-  \node[draw=iiiepeBlue,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center,right=of a] (b) {\textbf{Mediación Docente}\\Secuencias de indagación y andamiaje};
-  \node[draw=iiiepeAqua,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center,below=of a] (c) {\textbf{Interacción Dialógica}\\Retroalimentación y coevaluación};
-  \node[draw=iiiepeOrange,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center,below=of b] (d) {\textbf{Transferencia Real}\\Resolución situada en la comunidad};
-  
-  \draw[->,thick,iiiepeNavy] (a) -- node[above,font=\scriptsize] {orienta} (b);
-  \draw[->,thick,iiiepeBlue] (b) -- node[right,font=\scriptsize] {promueve} (d);
-  \draw[->,thick,iiiepeAqua] (c) -- node[left,font=\scriptsize] {sustenta} (a);
-  \draw[->,thick,iiiepeOrange] (d) -- node[below,font=\scriptsize] {evidencia} (c);
+\subsection*{1. ¿Qué diferencias fundamentales existen entre el aprendizaje superficial y el aprendizaje profundo?}
+Retomando la distinción clásica de \citet{marton1976qualitative} analizada por \citet{quiroga2022aprendizaje}, el aprendizaje superficial consiste en abordar las tareas escolares con la intención mínima de cumplir requisitos externos mediante memorización mecánica, reproducción literal de definiciones y tratamiento aislado de contenidos sin buscar conexiones globales. En contraste, el aprendizaje profundo persigue comprender relaciones significativas, articular conceptos nuevos con saberes previos, examinar evidencias de manera crítica y transferir lo comprendido a problemas inéditos \citep{sawyer2008optimizing}.
+
+\begin{tcolorbox}[colback=iiiepePale,colframe=iiiepeNavy,title=\textbf{Síntesis comparativa · Enfoque superficial frente a aprendizaje profundo},breakable]
+{\small\renewcommand{\arraystretch}{1.28}
+\begin{tabular}{|p{0.23\linewidth}|p{0.35\linewidth}|p{0.35\linewidth}|}\hline
+\rowcolor{iiiepePale} \textbf{Criterio de análisis} & \textbf{Aprendizaje superficial} & \textbf{Aprendizaje profundo} \\\hline
+Intención estudiantil & Cumplir la tarea o aprobar la evaluación con mínimo esfuerzo cognitivo \citep{marton1976qualitative}. & Comprender causas, conexiones estructurales y significado aplicado \citep{quiroga2022aprendizaje}. \\\hline
+Tratamiento del saber & Fragmentado, memorístico y dependiente de señales literales del enunciado. & Relacional, crítico y transferible entre representaciones múltiples \citep{sawyer2008optimizing}. \\\hline
+Uso del error & Se oculta o penaliza sin análisis conceptual posterior. & Se analiza colectivamente para revisar supuestos y reconstruir argumentos \citep{eef2021feedback}. \\\hline
+\end{tabular}}
+\end{tcolorbox}
+
+\subsection*{2. ¿Qué características de la enseñanza tradicional de las matemáticas favorecen un aprendizaje superficial?}
+El análisis propio de la enseñanza tradicional en matemáticas muestra cuatro rasgos que inducen pasividad y mecanización: (a) presentar reglas y algoritmos acabados antes de permitir explorar el fenómeno o problema que les dio origen; (b) proponer listas extensas de ejercicios idénticos que premian la velocidad repetitiva por encima del razonamiento; (c) fragmentar los contenidos —tablas, gráficas, álgebra y contexto físico— como capítulos inconexos; y (d) concentrar la evaluación en respuestas numéricas únicas sin requerir justificación verbal o escrita de las decisiones tomadas \citep{star2015algebra,eef2017mathematics}.
+
+\subsection*{3. ¿Por qué el dominio de procedimientos y algoritmos matemáticos no garantiza aprendizaje profundo?}
+Ejecutar con destreza un algoritmo garantiza únicamente fluidez operatoria dentro de formatos rutinarios conocidos; sin embargo, no asegura comprender qué modelan las variables, bajo qué condiciones aplica el procedimiento ni cómo validar si la respuesta tiene sentido real \citep{sawyer2008optimizing}. Considérese un ejemplo representativo en bachillerato técnico e ingeniería: un estudiante puede resolver mecánicamente la ecuación lineal
+\[
+0.5x + 2 = 0.2x + 3.8 \implies 0.3x = 1.8 \implies x = 6
+\]
+aplicando correctamente reglas de transposición de términos. No obstante, cuando esa misma relación representa el punto en que dos sensores térmicos o dos planes de mantenimiento igualan su costo o lectura ($y_1 = 0.5x + 2$ frente a $y_2 = 0.2x + 3.8$), el aprendizaje superficial se evidencia si no distingue que $2$ y $3.8$ son condiciones iniciales (sesgos u ordenadas al origen), que ambas relaciones son afines y no proporcionales ($y=kx$), ni interpreta en qué intervalo conviene un esquema sobre otro \citep{conalep2025mecatronica}. Esto implica que la fluidez algorítmica es condición útil pero nunca suficiente para la comprensión matemática profunda.
+
+\subsection*{4. ¿Cómo se relacionan las dimensiones cognitiva, interpersonal e intrapersonal con las matemáticas?}
+Como sistematizan \citet{quiroga2022aprendizaje}, el aprendizaje profundo exige la convergencia inseparable de tres dimensiones formativas (Figura~\ref{fig:act5-triada}). En matemáticas, la dimensión \textbf{cognitiva} abarca la comprensión relacional, el pensamiento lógico, el uso estratégico de representaciones y la resolución de problemas no rutinarios; la dimensión \textbf{interpersonal} se activa al argumentar conjeturas frente a pares, escuchar estrategias alternativas y construir acuerdos verificables; finalmente, la dimensión \textbf{intrapersonal} involucra la autorregulación ante el bloqueo inicial, la autoeficacia y la mentalidad de crecimiento para asumir el error como insumo de mejora y no como incapacidad fija \citep{schunk2012teorias}.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[font=\scriptsize, >=Latex]
+  \node[draw=iiiepeNavy,fill=iiiepeNavy!12,very thick,circle,minimum size=2.45cm,align=center] (cen) at (0,0) {\textbf{\color{iiiepeNavy}APRENDIZAJE\\PROFUNDO EN\\MATEMÁTICAS}};
+
+  \node[draw=iiiepeNavy,fill=iiiepePale,thick,rounded corners=4pt,text width=5.6cm,align=left,inner sep=6pt] (cog) at (0,3.2) {%
+    \textbf{\color{iiiepeNavy}1. Dimensión Cognitiva}\\
+    Comprensión conceptual, pensamiento crítico, modelación algebraica/gráfica, análisis de límites de validez y transferencia a problemas auténticos \citep{sawyer2008optimizing}.
+  };
+
+  \node[draw=iiiepeBlue,fill=iiiepePale,thick,rounded corners=4pt,text width=5.2cm,align=left,inner sep=6pt] (inter) at (-4.8,-2.4) {%
+    \textbf{\color{iiiepeBlue}2. Dimensión Interpersonal}\\
+    Colaboración deliberada en equipos, comunicación matemática clara, defensa argumentada de hipótesis y escucha respetuosa de rutas distintas \citep{quiroga2022aprendizaje}.
+  };
+
+  \node[draw=iiiepeAqua!80!black,fill=iiiepeMint,thick,rounded corners=4pt,text width=5.2cm,align=left,inner sep=6pt] (intra) at (4.8,-2.4) {%
+    \textbf{\color{iiiepeAqua!75!black}3. Dimensión Intrapersonal}\\
+    Autorregulación metacognitiva, perseverancia ante tareas complejas, autoeficacia (Bandura) y mentalidad de crecimiento frente al error \citep{schunk2012teorias}.
+  };
+
+  \draw[<->,very thick,iiiepeNavy] (cog.south west) -- (inter.north east);
+  \draw[<->,very thick,iiiepeAqua!80!black] (cog.south east) -- (intra.north west);
+  \draw[<->,very thick,iiiepeOrange!85!black] (inter.east) -- (intra.west);
+  \draw[->,dashed,thick,iiiepeNavy] (cog.south) -- (cen.north);
+  \draw[->,dashed,thick,iiiepeBlue] (inter.north east) -- (cen.south west);
+  \draw[->,dashed,thick,iiiepeAqua!80!black] (intra.north west) -- (cen.south east);
 \end{tikzpicture}
-\end{center}
+\caption{Interdependencia de las dimensiones cognitiva, interpersonal e intrapersonal en el aprendizaje matemático.}
+\label{fig:act5-triada}
+\end{figure}
 
-La literatura especializada en ciencias del aprendizaje \cite{sawyer2008optimizing} subraya que los estudiantes construyen comprensiones duraderas cuando tienen oportunidades explícitas de verbalizar, contrastar y reformular sus hipótesis iniciales. En la enseñanza de las matemáticas, este principio desarticula el mito de la capacidad fija y promueve una cultura de aula equitativa y dialógica.
+\subsection*{5. ¿Qué transformaciones requiere la práctica docente para favorecer el aprendizaje profundo?}
+De acuerdo con \citet{quiroga2022aprendizaje} y \citet{fullan2014rich}, transformar la docencia exige actuar simultáneamente en tres niveles de la cultura escolar: (1) los \textbf{recursos} de trabajo, sustituyendo guías mecánicas por retos abiertos vinculados con el entorno; (2) la \textbf{didáctica}, transitando desde el control unidireccional hacia relaciones de asociación entre docente y estudiantes que habiliten progresivamente la autonomía; y (3) las \textbf{creencias pedagógicas} compartidas sobre qué significa una buena clase de matemáticas. En paralelo, requiere instalar evaluación formativa oportuna centrada en criterios transparentes de comprensión y revisión reflexiva \citep{eef2021feedback,bostrom2023formative}.
 
-\section{Matriz de análisis y artefacto metodológico}
-La tabla siguiente sistematiza los componentes centrales de la actividad, contrastando los requerimientos pedagógicos con los criterios de evaluación formativa:
-
-{\small\setstretch{1.15}\renewcommand{\arraystretch}{1.3}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.28\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.38\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.34\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
-\rowcolor{iiiepePale} \textbf{Componente Clave} & \textbf{Fundamentación Teórica} & \textbf{Aplicación en el Aula de Matemáticas} \\\hline
+{\small\setstretch{1.15}\renewcommand{\arraystretch}{1.32}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.22\linewidth}|>{\raggedright\arraybackslash}p{0.36\linewidth}|>{\raggedright\arraybackslash}p{0.36\linewidth}|}\hline
+\rowcolor{iiiepePale} \textbf{Eje de cambio docente} & \textbf{Inercia tradicional} & \textbf{Transformación hacia las nuevas pedagogías} \\\hline
 \endfirsthead
 \hline
-\rowcolor{iiiepePale} \textbf{Componente Clave} & \textbf{Fundamentación Teórica} & \textbf{Aplicación en el Aula de Matemáticas} \\\hline
+\rowcolor{iiiepePale} \textbf{Eje de cambio docente} & \textbf{Inercia tradicional} & \textbf{Transformación hacia las nuevas pedagogías} \\\hline
 \endhead
-Diagnóstico y Saberes Previos & Reconocimiento de esquemas cognitivos y barreras de aprendizaje \cite{scott2015futuro}. & Análisis de concepciones alternativas en representaciones algebraicas y numéricas. \\\hline
-Mediación y Andamiaje & Provisión de apoyos estructurados con retirada progresiva \cite{sawyer2008optimizing}. & Guías de modelación con variación paramétrica y preguntas generadoras. \\\hline
-Evaluación Formativa & Uso dialógico del error como fuente de aprendizaje y reorientación. & Rúbricas analíticas con devolución descriptiva y opción de segunda versión. \\\hline
-Transferencia Comunitaria & Articulación con problemas del entorno y la Nueva Escuela Mexicana \cite{sep2024fase6}. & Proyectos de estimación de costos, consumo hídrico o calibración instrumental. \\\hline
+Rol del docente & Expositor único de algoritmos y verificador final de respuestas. & Diseñador de desafíos, activador cognitivo y socio en la indagación \citep{fullan2014rich}. \\\hline
+Rol del estudiante & Ejecutor individual de pasos repetidos bajo instrucción cerrada. & Co-constructor de explicaciones, interlocutor crítico y agente autónomo \citep{quiroga2022aprendizaje}. \\\hline
+Evaluación en el aula & Calificación punitiva centrada en aciertos numéricos aislados. & Devolución formativa descriptiva sobre modelación, supuestos y errores \citep{bostrom2023formative}. \\\hline
+Cultura escolar & Trabajo docente aislado y cobertura acelerada del programa. & Indagación colegiada sobre evidencia de aprendizaje y creencias compartidas \citep{quiroga2022aprendizaje}. \\\hline
 \end{longtable}}
 
-\section{Transferencia profesional y aplicación práctica}
-En mi práctica docente profesional en bachillerato técnico e ingeniería, la aplicación de estos principios demanda superar la didáctica tradicional centrada exclusivamente en la pizarra. En el contexto laboral e industrial, los egresados enfrentan desafíos abiertos que requieren juicio crítico, trabajo en equipo y precisión matemática. 
+\section{Transferencia profesional al aula técnica e ingeniería}
+En mi práctica cotidiana en bachillerato técnico e ingeniería, favorecer el aprendizaje profundo implica reorganizar el tiempo de clase para que el algoritmo deje de ser el punto de partida y pase a ser una herramienta justificada al servicio de problemas reales de mantenimiento, circuitos o análisis de datos. Además, integrar roles colaborativos explícitos y preguntas metacognitivas en cada entrega fortalece la autoeficacia del alumnado y reduce el abandono silencioso ante la complejidad matemática \citep{conalep2025mecatronica}.
 
-Por consiguiente, incorporar situaciones donde los estudiantes argumenten sus decisiones estadísticas o algebraicas fortalece directamente su perfil de egreso. El impacto profesional de esta mirada formativa se manifiesta en la capacidad del alumnado para transferir métodos matemáticos a escenarios reales de mantenimiento, automatización o gestión comunitaria.
-
+\clearpage
 \section{Conclusiones y síntesis argumentativa}
-En conclusión, el análisis sistemático de los fundamentos del aprendizaje en esta cohorte SD26 confirma que la calidad educativa no es una variable abstracta, sino el resultado de decisiones pedagógicas intencionales, fundamentadas y éticamente comprometidas. Por tanto, el fortalecimiento de la docencia en matemáticas requiere consolidar secuencias didácticas donde convivan el rigor conceptual, el acompañamiento cercano y la participación activa de cada estudiante en su propio proceso de aprendizaje.
+En conclusión, el análisis de \citet{quiroga2022aprendizaje} demuestra que abandonar el aprendizaje superficial en matemáticas no se resuelve multiplicando tareas repetitivas ni modernizando únicamente herramientas de presentación. Requiere articular rigor cognitivo, diálogo interpersonal y autorregulación intrapersonal bajo una cultura docente dispuesta a revisar sus propias creencias sobre enseñar y evaluar.
 
-\needspace{5\baselineskip}\section*{Referencias}
-{\setstretch{1.15}\setlength{\parskip}{6pt}
-\par\hangindent=1.27cm\hangafter=1 Delors, J., et al. (1996). \textit{La educación encierra un tesoro}. UNESCO/Santillana.
-\par\hangindent=1.27cm\hangafter=1 Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. En \textit{Innovating to learn, learning to innovate} (pp. 45--65). OECD.
-\par\hangindent=1.27cm\hangafter=1 Scott, C. L. (2015). \textit{El futuro del aprendizaje: ¿Qué tipo de aprendizaje se necesita en el siglo XXI?} UNESCO.
-\par\hangindent=1.27cm\hangafter=1 Secretaría de Educación Pública. (2024). \textit{Plan de Estudio para la educación preescolar, primaria y secundaria. Fase 6}. SEP.
-\par\hangindent=1.27cm\hangafter=1 UNESCO. (2015). \textit{Replantear la educación: ¿Hacia un bien común mundial?} Ediciones UNESCO.
-}
+Por tanto, asumir el enfoque del aprendizaje profundo en esta cohorte SD26 compromete mi labor docente a diseñar secuencias basadas en asociación colaborativa, argumentación conceptual y evaluación formativa auténtica, sentando las bases directas para la propuesta de innovación didáctica que se diseña en la actividad siguiente.
+
+\clearpage
+\begin{thebibliography}{99}
+\bibitem[Boström y Palm(2023)]{bostrom2023formative} Boström, E., y Palm, T. (2023). Formative assessment practice in mathematics: Teachers' perceptions of prerequisite conditions. \textit{Frontiers in Education}, 8, Artículo 1101192.
+\bibitem[Collin y Quigley(2021)]{eef2021feedback} Collin, J., y Quigley, A. (2021). \textit{Teacher feedback to improve pupil learning}. Education Endowment Foundation.
+\bibitem[CONALEP(2025)]{conalep2025mecatronica} Colegio Nacional de Educación Profesional Técnica. (2025). \textit{Perfil de egreso: Profesional Técnico-Bachiller en Mecatrónica. Modelo Académico 2025}. Secretaría Académica.
+\bibitem[Fullan y Langworthy(2014)]{fullan2014rich} Fullan, M., y Langworthy, M. (2014). \textit{A rich seam: How new pedagogies find deep learning}. Pearson.
+\bibitem[Henderson et~al.(2017)]{eef2017mathematics} Henderson, P., Hodgen, J., Foster, C., y Kuchemann, D. (2017). \textit{Improving mathematics in Key Stages 2 and 3}. Education Endowment Foundation.
+\bibitem[Marton y Säljö(1976)]{marton1976qualitative} Marton, F., y Säljö, R. (1976). On qualitative differences in learning: I. Outcome and process. \textit{British Journal of Educational Psychology}, 46(1), 4--11.
+\bibitem[Quiroga Aguilar y Lara Órdenes(2022)]{quiroga2022aprendizaje} Quiroga Aguilar, L., y Lara Órdenes, E. (2022). El aprendizaje profundo como herramienta para cambio en la visión de aprendizaje de una cultura escolar. \textit{Revista Educación las Américas}, 12(1). \url{https://doi.org/10.35811/rea.v12i1.201}
+\bibitem[Sawyer(2008)]{sawyer2008optimizing} Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. OECD Publishing.
+\bibitem[Schunk(2012)]{schunk2012teorias} Schunk, D. H. (2012). \textit{Teorías del aprendizaje: Una perspectiva educativa} (6.ª ed.). Pearson Educación.
+\bibitem[Star et~al.(2015)]{star2015algebra} Star, J. R., Caronongan, P., Foegen, A., Furgeson, J., Keating, B., Larson, M. R., Lyskawa, J., McCallum, W. G., Porath, J., y Zbiek, R. M. (2015). \textit{Teaching strategies for improving algebra knowledge}. U.S. Department of Education.
+\end{thebibliography}
 
 \end{document}

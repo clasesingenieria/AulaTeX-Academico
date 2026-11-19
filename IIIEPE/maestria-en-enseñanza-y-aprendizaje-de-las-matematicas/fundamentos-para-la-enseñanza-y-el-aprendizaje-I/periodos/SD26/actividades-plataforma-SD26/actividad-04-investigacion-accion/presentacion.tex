@@ -1,66 +1,242 @@
-\documentclass[spanish,letterpaper,oneside]{article}
-
-\def\documenttitle {La Investigación-Acción como Estrategia para Transformar la Práctica de Enseñanza}
-\def\documentsubtitle {Presentación Ejecutiva · Cohorte SD26}
-\def\documentsubject {Actividad 4 · Síntesis Visual}
-\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
-\def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
-\def\coursecode {MAEM-SD26}
-
-\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación}
-\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
-\def\universitydepartment {Fundamentos para la enseñanza y el aprendizaje I}
-\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
-\def\universitydepartmentimagecfg {height=1.75cm}
-\def\universitylocation {Monterrey, Nuevo León}
-\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
-\def\studentid {00874}
-\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
-\def\programperiod {2do periodo, septiembre--diciembre de 2026 (SD26)}
-\def\programmodality {Modalidad presencial}
-\def\programshort {MAEM}
-
-\def\authortable {
-  \begin{tabular}{ll}
-    \textbf{Alumno:} & \studentfullname \\
-    Matrícula: & \studentid \\
-    Unidad: & \coursename \\
-    Periodo: & \programperiod
-  \end{tabular}
-}
-
-\input{template}
-
+\documentclass[aspectratio=169,spanish,xcolor=table]{beamer}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+\fi
+\usepackage[spanish,es-tabla,es-noshorthands]{babel}
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
-\usepackage{tikz,longtable,array}
-\usetikzlibrary{arrows.meta,positioning}
+\usepackage{tikz,pgfplots,array,booktabs,ragged2e}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes.geometric,fit}
+
 \definecolor{iiiepeNavy}{HTML}{163B5C}
 \definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
 \definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
 
-\begin{document}\templatePortrait\templatePagecfg\templateFinalcfg\setstretch{1.25}
+\usetheme{default}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{normal text}{fg=iiiepeInk,bg=white}
+\setbeamercolor{structure}{fg=iiiepeNavy}
+\setbeamercolor{frametitle}{fg=white,bg=iiiepeNavy}
+\setbeamercolor{block title}{fg=white,bg=iiiepeBlue}
+\setbeamercolor{block body}{fg=iiiepeInk,bg=iiiepePale}
+\setbeamercolor{item}{fg=iiiepeOrange}
 
-\section*{Síntesis Ejecutiva · Actividad 4}
-\textbf{La Investigación-Acción como Estrategia para Transformar la Práctica de Enseñanza}
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.95cm,dp=0.22cm,leftskip=0.45cm,rightskip=0.45cm]{frametitle}%
+    \usebeamerfont{frametitle}\insertframetitle%
+    \hfill\includegraphics[height=0.58cm]{img/iiiepe/logo-iiiepe-blanco.png}%
+  \end{beamercolorbox}%
+}
 
-\subsection*{1. Diagnóstico y Planteamiento Central}
-La presente exposición aborda la articulación de los marcos pedagógicos contemporáneos en el aula de matemáticas:
-\begin{itemize}
-  \item Eje temático: Ciclos de diagnóstico, planificación, acción, observación y reflexión crítica aplicados a problemas de comprensión matemática..
-  \item Planteamiento central: La enseñanza matemática trasciende el adiestramiento mecánico cuando incorpora la indagación y la justificación argumentada \cite{delors1996educacion,scott2015futuro}.
-\end{itemize}
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.78\paperwidth,ht=0.5cm,dp=0.18cm,leftskip=0.45cm]{frametitle}%
+      \scriptsize\color{white}M. de la Cruz Muñoz · MAEM · Matrícula 00874 · SD26 · Actividad 4 · Inv.-Acción%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.22\paperwidth,ht=0.5cm,dp=0.18cm,rightskip=0.45cm]{frametitle}%
+      \hfill\scriptsize\color{white}\insertframenumber{} / \inserttotalframenumber%
+    \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
 
-\subsection*{2. Dimensiones y Artefacto de Aplicación}
-{\small\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|p{0.35\linewidth}|p{0.6\linewidth}|}\hline
-\rowcolor{iiiepePale} \textbf{Dimensión} & \textbf{Acción Didáctica en el Aula} \\\hline
-Fundamentación Teórica & Vinculación conceptual con las ciencias del aprendizaje \cite{sawyer2008optimizing}. \\\hline
-Mediación Matemática & Diseño de tareas abiertas con representaciones múltiples. \\\hline
-Impacto Profesional & Transferencia reflexiva al contexto laboral y comunitario. \\\hline
-\end{longtable}}
+\newcommand{\Pill}[2]{%
+  \tikz[baseline=(x.base)]{\node[rounded corners=3pt,fill=#1!14,draw=#1!75!black,thick,inner xsep=6pt,inner ysep=4pt,align=center] (x) {\scriptsize\bfseries #2};}%
+}
 
-\subsection*{3. Conclusión y Veredicto Pedagógico}
-En conclusión, la práctica docente se consolida al articular rigor disciplinar y enfoque humanista. Por tanto, esta propuesta formativa promueve la autonomía y equidad educativa en los estudiantes.
+\title{Investigación-Acción y Transformación Docente}
+\subtitle{Actividad 4 · Bloque II · Módulo 51676}
+\author{Mtro. Martín Jonathan de la Cruz Muñoz · Matrícula 00874}
+\institute{IIIEPE · Maestría en Aprendizaje y Enseñanza de las Matemáticas · Grupo A}
+\date{19 de noviembre de 2026}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[iiiepeNavy] (current page.north west) rectangle ([xshift=10.3cm]current page.south west);
+    \fill[iiiepeBlue] ([xshift=10.3cm]current page.north west) rectangle (current page.south east);
+    \fill[iiiepeOrange] ([xshift=0.8cm,yshift=-6.45cm]current page.north west) rectangle ([xshift=9.3cm,yshift=-6.53cm]current page.north west);
+    \node[anchor=north west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=-1.15cm]current page.north west) {%
+      {\color{iiiepeAqua!45!white}\small\bfseries MAESTRÍA EN APRENDIZAJE Y ENSEÑANZA DE LAS MATEMÁTICAS · SD26\par}%
+      \vspace{0.35cm}
+      {\color{white}\Large\bfseries \inserttitle\par}%
+      \vspace{0.25cm}
+      {\color{white!90}\normalsize \insertsubtitle\par}%
+    };
+    \node[anchor=south west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=0.75cm]current page.south west) {%
+      {\color{white}\normalsize\bfseries Mtro. Martín Jonathan de la Cruz Muñoz\par}%
+      {\color{white!85}\scriptsize Matrícula 00874 · martin.delacruz@campus.iiiepe.edu.mx\par}%
+      {\color{iiiepeAqua!35!white}\scriptsize Monterrey, Nuevo León · 19 de noviembre de 2026\par}%
+    };
+    \node[anchor=center,text width=5.0cm,align=center] at ([xshift=13.15cm,yshift=-4.5cm]current page.north west) {%
+      \includegraphics[width=3.6cm]{img/iiiepe/logo-iiiepe-blanco.png}\par\vspace{0.45cm}%
+      {\color{white}\large\bfseries IIIEPE\par}%
+      \vspace{0.1cm}%
+      {\color{white!85}\scriptsize Fundamentos para la enseñanza\\y el aprendizaje I\par}%
+    };
+  \end{tikzpicture}
+\end{frame}
+\begin{frame}{La Investigación-Acción como Saber Pedagógico}
+  \begin{block}{Tesis metodológica (Restrepo Gómez, 2004)}
+    La investigación-acción educativa convierte el aula en un espacio de indagación reflexiva donde el docente deconstruye rutinas, planifica mejoras situadas, recoge evidencias y reconstruye su práctica con rigor.
+  \end{block}
+  \vspace{0.3cm}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+      \textbf{\color{iiiepeNavy}¿Qué la distingue?}
+      \begin{itemize}\scriptsize
+        \item No separa investigador de practicante.
+        \item Persigue transformar la enseñanza real, no solo describirla.
+        \item Integra ciclos abiertos de acción y crítica.
+      \end{itemize}
+    \column{0.48\textwidth}
+      \textbf{\color{iiiepeBlue}¿Por qué es clave en matemáticas?}
+      \begin{itemize}\scriptsize
+        \item Evita atribuir errores únicamente al estudiante.
+        \item Permite rastrear obstáculos conceptuales específicos.
+        \item Sostiene innovaciones verificables con evidencia.
+      \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Cinco Preguntas Fundamentales (1--3)}
+  \begin{itemize}\small
+    \item \textbf{\color{iiiepeNavy}1. Concepto y finalidad:} Indagación autorreflexiva orientada a transformar la práctica docente y mejorar los aprendizajes en su contexto real.
+    \vspace{0.22cm}
+    \item \textbf{\color{iiiepeBlue}2. Docente como investigador:} Quien enseña observa interacciones irrepetibles y puede contrastar sus supuestos con evidencias concretas de aula.
+    \vspace{0.22cm}
+    \item \textbf{\color{iiiepeAqua!75!black}3. Relación entre fases:} Deconstrucción/identificación $\rightarrow$ planificación $\rightarrow$ acción $\rightarrow$ observación $\rightarrow$ reflexión $\rightarrow$ nuevo ciclo mejorado.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Cinco Preguntas Fundamentales (4--5)}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+      \begin{block}{4. Evidencias, observación y reflexión}
+        \scriptsize Sin cuadernos, diarios de clase, listas de cotejo ni registros de diálogo, la mejora queda en impresión subjetiva. La evidencia muestra exactamente dónde se fractura la comprensión matemática.
+      \end{block}
+    \column{0.48\textwidth}
+      \begin{block}{5. Alternativa de transformación}
+        \scriptsize Rompe la repetición mecánica de programas año con año al instalar una cultura de ensayo pedagógico responsable, diálogo colegiado y mejora continua.
+      \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Espiral Helicoidal de la Investigación-Acción}
+  \centering
+  \begin{tikzpicture}[font=\scriptsize, >=Latex, scale=0.88, transform shape]
+    \node[draw=iiiepeNavy,fill=iiiepePale,thick,circle,minimum size=2.1cm,align=center] (c) at (0,0) {\textbf{Saber\\Pedagógico}};
+    \node[draw=iiiepeNavy,fill=white,thick,rounded corners=3pt,text width=3.4cm,align=center] (a) at (0,2.5) {\textbf{1. Identificación}\\Deconstruir con evidencias};
+    \node[draw=iiiepeBlue,fill=white,thick,rounded corners=3pt,text width=3.4cm,align=center] (b) at (4.3,0.9) {\textbf{2. Planificación}\\Diseñar intervención};
+    \node[draw=iiiepeAqua!80!black,fill=iiiepeMint,thick,rounded corners=3pt,text width=3.4cm,align=center] (d) at (2.8,-2.1) {\textbf{3. Acción}\\Aplicar en el grupo};
+    \node[draw=iiiepeOrange!90!black,fill=iiiepeWarm,thick,rounded corners=3pt,text width=3.4cm,align=center] (e) at (-2.8,-2.1) {\textbf{4. Observación}\\Registrar producciones};
+    \node[draw=iiiepeNavy,fill=iiiepePale,thick,rounded corners=3pt,text width=3.4cm,align=center] (f) at (-4.3,0.9) {\textbf{5. Reflexión}\\Decidir nuevo ciclo};
+    \draw[->,very thick,iiiepeNavy] (a) -- (b);
+    \draw[->,very thick,iiiepeBlue] (b) -- (d);
+    \draw[->,very thick,iiiepeAqua!80!black] (d) -- (e);
+    \draw[->,very thick,iiiepeOrange!90!black] (e) -- (f);
+    \draw[->,very thick,iiiepeNavy] (f) -- (a);
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Problemática Delimitada en Matemáticas}
+  \begin{block}{Foco observado en bachillerato técnico e ingeniería}
+    Manipulación algebraica mecánica de ecuaciones y modelos lineales sin interpretar el significado físico de las variables, unidades ni límites de validez.
+  \end{block}
+  \vspace{0.25cm}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+      \textbf{\color{iiiepeNavy}Evidencias iniciales:}
+      \begin{itemize}\scriptsize
+        \item Alumnado calcula pendientes correctamente de modo abstracto pero no interpreta unidades ($\text{m/s}$ o $\text{\$/h}$).
+        \item Confusión reiterada entre modelo proporcional $y=kx$ y afín $y=mx+b$.
+      \end{itemize}
+    \column{0.48\textwidth}
+      \textbf{\color{iiiepeOrange!85!black}Autocrítica docente:}
+      \begin{itemize}\scriptsize
+        \item Evitar culpar únicamente al rezago estudiantil.
+        \item Reconocer que el exceso de ejercicios descontextualizados indujo dicho hábito.
+      \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Abordaje por Fases: Identificación, Planificación y Acción}
+  \scriptsize\renewcommand{\arraystretch}{1.38}
+  \begin{tabular}{p{2.5cm}p{5.5cm}p{5.0cm}}
+    \toprule
+    \rowcolor{iiiepePale} \textbf{Fase} & \textbf{Estrategia diseñada} & \textbf{Evidencia asociada} \\
+    \midrule
+    1. Identificación & Revisión diagnóstica de producciones sobre función lineal y significado físico. & Muestreo de cuadernos y errores de interpretación dimensional. \\
+    2. Planificación & Secuencia de tres sesiones basada en tablas, gráficas y justificación escrita de parámetros. & Guía de retos contextualizados y matriz de valoración formativa. \\
+    3. Acción & Trabajo en binas con predicción previa al cálculo y discusión plenaria de supuestos. & Hojas de trabajo por equipo y registro cronológico de aula. \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Abordaje por Fases: Observación y Reflexión}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+      \begin{block}{4. Observación sistemática}
+        \begin{itemize}\scriptsize
+          \item Diario docente enfocado en preguntas que desbloquean la argumentación física.
+          \item Lista de cotejo sobre coherencia entre tabla, gráfica, ecuación y unidades.
+          \item Contraste de explicaciones iniciales frente a versiones revisadas.
+        \end{itemize}
+      \end{block}
+    \column{0.48\textwidth}
+      \begin{block}{5. Reflexión evaluativa}
+        \begin{itemize}\scriptsize
+          \item Evaluar en qué medida disminuyeron respuestas carentes de sentido físico.
+          \item Ajustar el grado de andamiaje escrito para el segundo ciclo.
+          \item Socializar hallazgos con academia de matemáticas del plantel.
+        \end{itemize}
+      \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Por Qué Sostiene la Innovación Educativa}
+  \centering
+  \Pill{iiiepeNavy}{Parte de problemas reales} \hspace{0.2cm}
+  \Pill{iiiepeBlue}{Articula teoría y evidencia} \hspace{0.2cm}
+  \Pill{iiiepeAqua!75!black}{Empodera al colectivo docente}
+  \vspace{0.45cm}
+  \begin{block}{Argumento integrador}
+    \small Innovar sin investigar la propia aula degenera en adopción superficial de modas. La investigación-acción garantiza que cada cambio didáctico tenga sentido contextual, control metodológico y compromiso ético con el aprendizaje de todos.
+  \end{block}
+\end{frame}
+
+\begin{frame}{Conclusiones de la Actividad 4}
+  \begin{itemize}\normalsize
+    \item La investigación-acción convierte al docente en autor crítico de saber pedagógico \textbf{(Restrepo Gómez, 2004)}.
+    \item Sus cinco fases mantienen una relación cíclica abierta orientada por evidencias observables.
+    \item Aplicar este ciclo al problema de la interpretación de modelos lineales establece la base metodológica directa del Bloque III sobre aprendizaje profundo.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Referencias Principales (APA 7)}
+  \scriptsize\setlength{\parskip}{5pt}
+  \begin{itemize}
+    \item Boström, E., y Palm, T. (2023). Formative assessment practice in mathematics. \textit{Frontiers in Education}, 8, 1101192.
+    \item Collin, J., y Quigley, A. (2021). \textit{Teacher feedback to improve pupil learning}. EEF.
+    \item Henderson, P., et al. (2017). \textit{Improving mathematics in Key Stages 2 and 3}. EEF.
+    \item Pimienta Prieto, J. H. (2012). \textit{Metodología constructivista: Guía para la planeación docente} (3.ª ed.). Pearson.
+    \item Quiroga Aguilar, L., y Lara Órdenes, E. (2022). El aprendizaje profundo como herramienta para cambio en la visión de aprendizaje de una cultura escolar. \textit{REA}, 12(1).
+    \item Restrepo Gómez, B. (2004). La investigación-acción educativa y la construcción de saber pedagógico. \textit{Educación y Educadores}, (7), 45--55.
+    \item Star, J. R., et al. (2015). \textit{Teaching strategies for improving algebra knowledge}. IES.
+  \end{itemize}
+\end{frame}
 
 \end{document}

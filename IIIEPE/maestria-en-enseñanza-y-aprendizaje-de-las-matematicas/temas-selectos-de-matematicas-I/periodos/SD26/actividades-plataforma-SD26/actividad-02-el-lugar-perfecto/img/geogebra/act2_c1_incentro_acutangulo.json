@@ -1,0 +1,134 @@
+{
+  "id": "act2_c1_incentro_acutangulo",
+  "title": "Actividad 2c: Bisectrices e incentro I en triángulo acutángulo",
+  "commands": [
+    {
+      "cmd": "A = (1, 6)",
+      "ok": true
+    },
+    {
+      "cmd": "B = (-3, -2)",
+      "ok": true
+    },
+    {
+      "cmd": "C = (6, 1)",
+      "ok": true
+    },
+    {
+      "cmd": "tri = Polygon(A, B, C)",
+      "ok": true
+    },
+    {
+      "cmd": "bA = AngleBisector(B, A, C)",
+      "ok": true
+    },
+    {
+      "cmd": "bB = AngleBisector(A, B, C)",
+      "ok": true
+    },
+    {
+      "cmd": "bC = AngleBisector(A, C, B)",
+      "ok": true
+    },
+    {
+      "cmd": "I = Intersect(bA, bB)",
+      "ok": true
+    },
+    {
+      "cmd": "pBC = PerpendicularLine(I, Line(B, C))",
+      "ok": true
+    },
+    {
+      "cmd": "T = Intersect(pBC, Line(B, C))",
+      "ok": true
+    },
+    {
+      "cmd": "c_ins = Circle(I, T)",
+      "ok": true
+    },
+    {
+      "cmd": "L1 = Text(\"Acutángulo: Incentro I SIEMPRE EN EL INTERIOR\", (-5.0, 6.8))",
+      "ok": true
+    }
+  ],
+  "objects": {
+    "A": {
+      "type": "point",
+      "val_str": "A = (1, 6)",
+      "def_str": "(1, 6)"
+    },
+    "B": {
+      "type": "point",
+      "val_str": "B = (-3, -2)",
+      "def_str": "(-3, -2)"
+    },
+    "C": {
+      "type": "point",
+      "val_str": "C = (6, 1)",
+      "def_str": "(6, 1)"
+    },
+    "tri": {
+      "type": "triangle",
+      "val_str": "tri = 30",
+      "def_str": "Polígono A, B, C"
+    },
+    "c": {
+      "type": "segment",
+      "val_str": "c = 8.94",
+      "def_str": "Segmento [A, B]"
+    },
+    "a": {
+      "type": "segment",
+      "val_str": "a = 9.49",
+      "def_str": "Segmento [B, C]"
+    },
+    "b": {
+      "type": "segment",
+      "val_str": "b = 7.07",
+      "def_str": "Segmento [C, A]"
+    },
+    "bA": {
+      "type": "line",
+      "val_str": "bA: 0.99x + 0.16y = 1.95",
+      "def_str": "Bisectriz de B, A, C"
+    },
+    "bB": {
+      "type": "line",
+      "val_str": "bB: -0.66x + 0.76y = 0.45",
+      "def_str": "Bisectriz de A, B, C"
+    },
+    "bC": {
+      "type": "line",
+      "val_str": "bC: -0.23x - 0.97y = -2.35",
+      "def_str": "Bisectriz de A, C, B"
+    },
+    "I": {
+      "type": "point",
+      "val_str": "I = (1.64, 2.03)",
+      "def_str": "Intersección de bA, bB"
+    },
+    "pBC": {
+      "type": "line",
+      "val_str": "pBC: -7.66x - 2.55y = -17.77",
+      "def_str": "Recta que pasa por I perpendicular a Recta(B, C)"
+    },
+    "T": {
+      "type": "point",
+      "val_str": "T = (2.39, -0.2)",
+      "def_str": "Intersección de pBC, Recta(B, C)"
+    },
+    "c_ins": {
+      "type": "circle",
+      "val_str": "c_ins: (x - 1.64)² + (y - 2.03)² = 5.54",
+      "def_str": "Circunferencia que pasa por T con centro I"
+    },
+    "L1": {
+      "type": "text",
+      "val_str": "Acutángulo: Incentro I SIEMPRE EN EL INTERIOR",
+      "def_str": "Texto(\"Acutángulo: Incentro I SIEMPRE EN EL INTERIOR\", (-5, 6.8))"
+    }
+  },
+  "out_png": "C:\\Users\\Sysx\\Documents\\AulaTeX-Academico\\IIIEPE\\maestria-en-enseñanza-y-aprendizaje-de-las-matematicas\\temas-selectos-de-matematicas-I\\periodos\\SD26\\actividades-plataforma-SD26\\actividad-02-el-lugar-perfecto\\img\\geogebra\\act2_c1_incentro_acutangulo.png",
+  "out_ui_png": null,
+  "out_ggb": null
+}

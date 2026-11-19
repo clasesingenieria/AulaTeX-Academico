@@ -1,0 +1,134 @@
+{
+  "id": "act2_c2_incentro_rectangulo",
+  "title": "Actividad 2c: Bisectrices e incentro I en triángulo rectángulo",
+  "commands": [
+    {
+      "cmd": "A = (-3, 4)",
+      "ok": true
+    },
+    {
+      "cmd": "B = (-3, -2)",
+      "ok": true
+    },
+    {
+      "cmd": "C = (5, -2)",
+      "ok": true
+    },
+    {
+      "cmd": "tri = Polygon(A, B, C)",
+      "ok": true
+    },
+    {
+      "cmd": "bA = AngleBisector(B, A, C)",
+      "ok": true
+    },
+    {
+      "cmd": "bB = AngleBisector(A, B, C)",
+      "ok": true
+    },
+    {
+      "cmd": "bC = AngleBisector(A, C, B)",
+      "ok": true
+    },
+    {
+      "cmd": "I = Intersect(bA, bB)",
+      "ok": true
+    },
+    {
+      "cmd": "pBC = PerpendicularLine(I, Line(B, C))",
+      "ok": true
+    },
+    {
+      "cmd": "T = Intersect(pBC, Line(B, C))",
+      "ok": true
+    },
+    {
+      "cmd": "c_ins = Circle(I, T)",
+      "ok": true
+    },
+    {
+      "cmd": "L1 = Text(\"Rectángulo: Incentro I EN EL INTERIOR (equidista de los 3 lados)\", (-5.0, 6.8))",
+      "ok": true
+    }
+  ],
+  "objects": {
+    "A": {
+      "type": "point",
+      "val_str": "A = (-3, 4)",
+      "def_str": "(-3, 4)"
+    },
+    "B": {
+      "type": "point",
+      "val_str": "B = (-3, -2)",
+      "def_str": "(-3, -2)"
+    },
+    "C": {
+      "type": "point",
+      "val_str": "C = (5, -2)",
+      "def_str": "(5, -2)"
+    },
+    "tri": {
+      "type": "triangle",
+      "val_str": "tri = 24",
+      "def_str": "Polígono A, B, C"
+    },
+    "c": {
+      "type": "segment",
+      "val_str": "c = 6",
+      "def_str": "Segmento [A, B]"
+    },
+    "a": {
+      "type": "segment",
+      "val_str": "a = 8",
+      "def_str": "Segmento [B, C]"
+    },
+    "b": {
+      "type": "segment",
+      "val_str": "b = 10",
+      "def_str": "Segmento [C, A]"
+    },
+    "bA": {
+      "type": "line",
+      "val_str": "bA: 0.89x + 0.45y = -0.89",
+      "def_str": "Bisectriz de B, A, C"
+    },
+    "bB": {
+      "type": "line",
+      "val_str": "bB: -0.71x + 0.71y = 0.71",
+      "def_str": "Bisectriz de A, B, C"
+    },
+    "bC": {
+      "type": "line",
+      "val_str": "bC: -0.32x - 0.95y = 0.32",
+      "def_str": "Bisectriz de A, C, B"
+    },
+    "I": {
+      "type": "point",
+      "val_str": "I = (-1, 0)",
+      "def_str": "Intersección de bA, bB"
+    },
+    "pBC": {
+      "type": "line",
+      "val_str": "pBC: x = -1",
+      "def_str": "Recta que pasa por I perpendicular a Recta(B, C)"
+    },
+    "T": {
+      "type": "point",
+      "val_str": "T = (-1, -2)",
+      "def_str": "Intersección de pBC, Recta(B, C)"
+    },
+    "c_ins": {
+      "type": "circle",
+      "val_str": "c_ins: (x + 1)² + y² = 4",
+      "def_str": "Circunferencia que pasa por T con centro I"
+    },
+    "L1": {
+      "type": "text",
+      "val_str": "Rectángulo: Incentro I EN EL INTERIOR (equidista de los 3 lados)",
+      "def_str": "Texto(\"Rectángulo: Incentro I EN EL INTERIOR (equidista de los 3 lados)\", (-5, 6.8))"
+    }
+  },
+  "out_png": "C:\\Users\\Sysx\\Documents\\AulaTeX-Academico\\IIIEPE\\maestria-en-enseñanza-y-aprendizaje-de-las-matematicas\\temas-selectos-de-matematicas-I\\periodos\\SD26\\actividades-plataforma-SD26\\actividad-02-el-lugar-perfecto\\img\\geogebra\\act2_c2_incentro_rectangulo.png",
+  "out_ui_png": null,
+  "out_ggb": null
+}

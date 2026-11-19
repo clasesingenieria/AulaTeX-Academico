@@ -1,66 +1,220 @@
-\documentclass[spanish,letterpaper,oneside]{article}
-
-\def\documenttitle {El Modelo Bioecológico de Bronfenbrenner y sus Implicaciones Educativas}
-\def\documentsubtitle {Presentación Ejecutiva · Cohorte SD26}
-\def\documentsubject {Actividad 7 · Síntesis Visual}
-\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
-\def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
-\def\coursecode {MAEM-SD26}
-
-\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación}
-\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
-\def\universitydepartment {Fundamentos para la enseñanza y el aprendizaje I}
-\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
-\def\universitydepartmentimagecfg {height=1.75cm}
-\def\universitylocation {Monterrey, Nuevo León}
-\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
-\def\studentid {00874}
-\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
-\def\programperiod {2do periodo, septiembre--diciembre de 2026 (SD26)}
-\def\programmodality {Modalidad presencial}
-\def\programshort {MAEM}
-
-\def\authortable {
-  \begin{tabular}{ll}
-    \textbf{Alumno:} & \studentfullname \\
-    Matrícula: & \studentid \\
-    Unidad: & \coursename \\
-    Periodo: & \programperiod
-  \end{tabular}
-}
-
-\input{template}
-
+\documentclass[aspectratio=169,spanish,xcolor=table]{beamer}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+\fi
+\usepackage[spanish,es-tabla,es-noshorthands]{babel}
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
-\usepackage{tikz,longtable,array}
-\usetikzlibrary{arrows.meta,positioning}
+\usepackage{tikz,pgfplots,array,booktabs,ragged2e}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes.geometric,fit}
+
 \definecolor{iiiepeNavy}{HTML}{163B5C}
 \definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
 \definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
 
-\begin{document}\templatePortrait\templatePagecfg\templateFinalcfg\setstretch{1.25}
+\usetheme{default}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{normal text}{fg=iiiepeInk,bg=white}
+\setbeamercolor{structure}{fg=iiiepeNavy}
+\setbeamercolor{frametitle}{fg=white,bg=iiiepeNavy}
+\setbeamercolor{block title}{fg=white,bg=iiiepeBlue}
+\setbeamercolor{block body}{fg=iiiepeInk,bg=iiiepePale}
+\setbeamercolor{item}{fg=iiiepeOrange}
 
-\section*{Síntesis Ejecutiva · Actividad 7}
-\textbf{El Modelo Bioecológico de Bronfenbrenner y sus Implicaciones Educativas}
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.95cm,dp=0.22cm,leftskip=0.45cm,rightskip=0.45cm]{frametitle}%
+    \usebeamerfont{frametitle}\insertframetitle%
+    \hfill\includegraphics[height=0.58cm]{img/iiiepe/logo-iiiepe-blanco.png}%
+  \end{beamercolorbox}%
+}
 
-\subsection*{1. Diagnóstico y Planteamiento Central}
-La presente exposición aborda la articulación de los marcos pedagógicos contemporáneos en el aula de matemáticas:
-\begin{itemize}
-  \item Eje temático: Análisis de microsistema, mesosistema, exosistema, macrosistema y cronosistema en la trayectoria escolar del estudiante de matemáticas..
-  \item Planteamiento central: La enseñanza matemática trasciende el adiestramiento mecánico cuando incorpora la indagación y la justificación argumentada \cite{delors1996educacion,scott2015futuro}.
-\end{itemize}
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.78\paperwidth,ht=0.5cm,dp=0.18cm,leftskip=0.45cm]{frametitle}%
+      \scriptsize\color{white}M. de la Cruz Muñoz · MAEM · Matrícula 00874 · SD26 · Actividad 7 · Modelo Bioecológico%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.22\paperwidth,ht=0.5cm,dp=0.18cm,rightskip=0.45cm]{frametitle}%
+      \hfill\scriptsize\color{white}\insertframenumber{} / \inserttotalframenumber%
+    \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
 
-\subsection*{2. Dimensiones y Artefacto de Aplicación}
-{\small\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|p{0.35\linewidth}|p{0.6\linewidth}|}\hline
-\rowcolor{iiiepePale} \textbf{Dimensión} & \textbf{Acción Didáctica en el Aula} \\\hline
-Fundamentación Teórica & Vinculación conceptual con las ciencias del aprendizaje \cite{sawyer2008optimizing}. \\\hline
-Mediación Matemática & Diseño de tareas abiertas con representaciones múltiples. \\\hline
-Impacto Profesional & Transferencia reflexiva al contexto laboral y comunitario. \\\hline
-\end{longtable}}
+\newcommand{\Pill}[2]{%
+  \tikz[baseline=(x.base)]{\node[rounded corners=3pt,fill=#1!14,draw=#1!75!black,thick,inner xsep=6pt,inner ysep=4pt,align=center] (x) {\scriptsize\bfseries #2};}%
+}
 
-\subsection*{3. Conclusión y Veredicto Pedagógico}
-En conclusión, la práctica docente se consolida al articular rigor disciplinar y enfoque humanista. Por tanto, esta propuesta formativa promueve la autonomía y equidad educativa en los estudiantes.
+\title{El Modelo Bioecológico en Matemáticas}
+\subtitle{Actividad 7 · Bloque III · Módulo 51813}
+\author{Mtro. Martín Jonathan de la Cruz Muñoz · Matrícula 00874}
+\institute{IIIEPE · Maestría en Aprendizaje y Enseñanza de las Matemáticas · Grupo A}
+\date{19 de noviembre de 2026}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[iiiepeNavy] (current page.north west) rectangle ([xshift=10.3cm]current page.south west);
+    \fill[iiiepeBlue] ([xshift=10.3cm]current page.north west) rectangle (current page.south east);
+    \fill[iiiepeOrange] ([xshift=0.8cm,yshift=-6.45cm]current page.north west) rectangle ([xshift=9.3cm,yshift=-6.53cm]current page.north west);
+    \node[anchor=north west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=-1.15cm]current page.north west) {%
+      {\color{iiiepeAqua!45!white}\small\bfseries MAESTRÍA EN APRENDIZAJE Y ENSEÑANZA DE LAS MATEMÁTICAS · SD26\par}%
+      \vspace{0.35cm}
+      {\color{white}\Large\bfseries \inserttitle\par}%
+      \vspace{0.25cm}
+      {\color{white!90}\normalsize \insertsubtitle\par}%
+    };
+    \node[anchor=south west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=0.75cm]current page.south west) {%
+      {\color{white}\normalsize\bfseries Mtro. Martín Jonathan de la Cruz Muñoz\par}%
+      {\color{white!85}\scriptsize Matrícula 00874 · martin.delacruz@campus.iiiepe.edu.mx\par}%
+      {\color{iiiepeAqua!35!white}\scriptsize Monterrey, Nuevo León · 19 de noviembre de 2026\par}%
+    };
+    \node[anchor=center,text width=5.0cm,align=center] at ([xshift=13.15cm,yshift=-4.5cm]current page.north west) {%
+      \includegraphics[width=3.6cm]{img/iiiepe/logo-iiiepe-blanco.png}\par\vspace{0.45cm}%
+      {\color{white}\large\bfseries IIIEPE\par}%
+      \vspace{0.1cm}%
+      {\color{white!85}\scriptsize Fundamentos para la enseñanza\\y el aprendizaje I\par}%
+    };
+  \end{tikzpicture}
+\end{frame}
+\begin{frame}{Modelo Bioecológico del Desarrollo Humano (PPCT)}
+  \begin{block}{Tesis de Bronfenbrenner y Morris (2006)}
+    El aprendizaje matemático emerge de interacciones continuas, recíprocas y progresivamente complejas entre una persona activa y contextos ecológicos anidados a través del tiempo.
+  \end{block}
+  \vspace{0.3cm}
+  \centering
+  \Pill{iiiepeNavy}{P · Proceso proximal} \hspace{0.2cm}
+  \Pill{iiiepeBlue}{P · Persona} \hspace{0.2cm}
+  \Pill{iiiepeAqua!75!black}{C · Contexto} \hspace{0.2cm}
+  \Pill{iiiepeOrange!85!black}{T · Tiempo}
+\end{frame}
+
+\begin{frame}{1--2. Interacción PPCT y Crítica al Determinismo Individual}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+      \begin{block}{1. Persona en contexto y experiencia vivida}
+        \scriptsize
+        \begin{itemize}
+          \item La persona aporta disposiciones generadoras/disruptivas, recursos cognitivos y demandas sociales.
+          \item Cuenta tanto el entorno objetivo como su vivencia fenomenológica (\textit{experiencing}).
+        \end{itemize}
+      \end{block}
+    \column{0.48\textwidth}
+      \begin{block}{2. Crítica al mérito aislado (Bronfenbrenner y Ceci)}
+        \scriptsize
+        \begin{itemize}
+          \item Los potenciales no se actualizan sin procesos proximales sostenidos.
+          \item Atribuir el fracaso únicamente a «capacidad o esfuerzo» oculta desigualdades de contexto y andamiaje.
+        \end{itemize}
+      \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{3--4. Comprender Contextos Reales en la Práctica Docente}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+      \textbf{\color{iiiepeNavy}3. ¿Por qué importa al docente?}
+      \begin{itemize}\scriptsize
+        \item Evita etiquetar cansancio, trabajo o falta de equipo como «apatía».
+        \item Orienta apoyos escolares realistas para proteger el derecho a aprender \textbf{(Tong y An, 2023)}.
+      \end{itemize}
+    \column{0.48\textwidth}
+      \textbf{\color{iiiepeBlue}4. Mi contexto en CONALEP/CECyTE e Ingeniería:}
+      \begin{itemize}\scriptsize
+        \item Estudiantes con traslados largos, empleo parcial y acceso dispar a cómputo.
+        \item Decisión: guías accesibles, contextos laborales auténticos y colaboración dentro del horario de clase.
+      \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{5. Interacciones de Aula y Procesos Proximales (Proposición I)}
+  \begin{block}{Condiciones para que la clase genere desarrollo matemático}
+    \begin{itemize}\small
+      \item \textbf{Actividad activa:} El estudiante manipula símbolos, datos y problemas; no solo escucha.
+      \item \textbf{Regularidad y complejidad creciente:} Secuencias continuas que avanzan más allá de la repetición mecánica.
+      \item \textbf{Reciprocidad bidireccional:} El docente escucha conjeturas y ajusta devoluciones en diálogo abierto.
+      \item \textbf{Interacción con objetos y símbolos:} Instrumentos, gráficas y modelos físicos reales.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{6. Sistemas Contextuales Concéntricos}
+  \centering
+  \begin{tikzpicture}[font=\tiny, scale=0.80, transform shape]
+    \draw[draw=iiiepeNavy,fill=iiiepePale,thick] (0,0) ellipse (6.5cm and 3.6cm);
+    \draw[draw=iiiepeBlue,fill=white,thick] (0,0) ellipse (5.1cm and 2.8cm);
+    \draw[draw=iiiepeAqua!80!black,fill=iiiepeMint,thick] (0,0) ellipse (3.7cm and 2.0cm);
+    \draw[draw=iiiepeOrange!90!black,fill=iiiepeWarm,thick] (0,0) ellipse (2.3cm and 1.25cm);
+    \node[fill=iiiepeNavy,text=white,rounded corners=2pt,align=center,inner sep=3pt] at (0,0)
+      {\textbf{PROCESOS PROXIMALES}\\Persona $\leftrightarrow$ Símbolos y Pares};
+    \node[iiiepeOrange!85!black,font=\tiny\bfseries] at (0,0.92) {Microsistema: Aula, taller, hogar};
+    \node[iiiepeAqua!75!black,font=\tiny\bfseries] at (0,1.68) {Mesosistema: Relación escuela--hogar--taller};
+    \node[iiiepeBlue,font=\tiny\bfseries] at (0,2.45) {Exosistema: Horarios, presupuesto, empleo};
+    \node[iiiepeNavy,font=\tiny\bfseries] at (0,3.22) {Macrosistema: Cultura matemática, NEM, equidad};
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Factores Concretos por Sistema en Matemáticas}
+  \scriptsize\renewcommand{\arraystretch}{1.35}
+  \begin{tabular}{p{2.3cm}p{5.5cm}p{5.2cm}}
+    \toprule
+    \rowcolor{iiiepePale} \textbf{Sistema} & \textbf{Ejemplo situado en plantel técnico} & \textbf{Impacto didáctico} \\
+    \midrule
+    Microsistema & Clima de respeto ante el error y diálogo en binas. & Activa participación y seguridad matemática. \\
+    Mesosistema & Vínculo entre matemáticas y taller de mecatrónica. & Da sentido y coherencia interdisciplinar. \\
+    Exosistema & Disponibilidad de instrumentos y horarios laborales. & Requiere alternativas accesibles en clase. \\
+    Macrosistema & Mitos sobre «talento innato» y políticas NEM. & Exige enfoque inclusivo contra exclusión. \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Cronosistema: Microtiempo, Mesotiempo y Macrotiempo}
+  \begin{itemize}\normalsize
+    \item \textbf{\color{iiiepeNavy}Microtiempo:} Continuidad dialógica dentro de cada secuencia de clase sin saltos bruscos ni interrupciones punitivas.
+    \item \textbf{\color{iiiepeBlue}Mesotiempo:} Seguimiento sistemático durante semanas del semestre para consolidar abstracción y modelación.
+    \item \textbf{\color{iiiepeAqua!75!black}Macrotiempo:} Transformaciones tecnológicas e industriales que exigen habilidades analíticas y adaptativas nuevas.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Decisiones Ecológicas para Transformar el Aula}
+  \begin{itemize}\normalsize
+    \item Cuidar la \textbf{reciprocidad} escuchando cómo justifica cada equipo su modelo lineal o medición.
+    \item Tejer el \textbf{mesosistema} vinculando ejercicios matemáticos con prácticas de taller e ingeniería.
+    \item Neutralizar barreras del \textbf{exosistema} evitando depender de dispositivos privados inaccesibles fuera del horario escolar.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusiones de la Actividad 7}
+  \begin{itemize}\normalsize
+    \item El modelo PPCT explica rigurosamente cómo persona, procesos proximales, contextos y tiempo configuran el aprendizaje matemático.
+    \item Cuestionar el determinismo individual compromete a diseñar entornos ecológicos equitativos.
+    \item Este marco se integra directamente en el proyecto final de la Actividad 8.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Referencias Principales (APA 7)}
+  \scriptsize\setlength{\parskip}{5pt}
+  \begin{itemize}
+    \item Bronfenbrenner, U. (1987). \textit{La ecología del desarrollo humano}. Paidós.
+    \item Bronfenbrenner, U., y Morris, P. A. (2006). The bioecological model of human development. En \textit{Handbook of child psychology} (pp. 793--828). Wiley.
+    \item Collin, J., y Quigley, A. (2021). \textit{Teacher feedback to improve pupil learning}. EEF.
+    \item CONALEP. (2025). \textit{Perfil de egreso: Profesional Técnico-Bachiller en Mecatrónica}. Secretaría Académica.
+    \item SEP. (2023). \textit{Programa de estudios: Pensamiento Matemático I}. SEMS.
+    \item Tong, X., y An, X. (2023). A review of empirical studies applying Bronfenbrenner's bioecological theory. \textit{Frontiers in Psychology}, 14, 1233925.
+    \item UNESCO. (2015). \textit{Replantear la educación: ¿Hacia un bien común mundial?} UNESCO.
+  \end{itemize}
+\end{frame}
 
 \end{document}

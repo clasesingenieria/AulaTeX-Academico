@@ -1,8 +1,8 @@
 \documentclass[spanish,letterpaper,oneside]{article}
 
-\def\documenttitle {El Futuro del Aprendizaje y Transformación de la Práctica Docente}
+\def\documenttitle {El Futuro del Aprendizaje y Diagnóstico de Saberes Matemáticos}
 \def\documentsubtitle {Fundamentos para la enseñanza y el aprendizaje I · Cohorte SD26}
-\def\documentsubject {Actividad 1 · Recursos Sesion 1}
+\def\documentsubject {Actividad 1 · Recursos Sesión 1 (Módulo 50157)}
 \def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
 \def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
 \def\coursecode {MAEM-SD26}
@@ -29,7 +29,7 @@
     Programa: & \programshort \\
     Periodo: & \programperiod \\
     & \\
-    \multicolumn{2}{l}{Fecha de realización: 14 de noviembre de 2026} \\
+    \multicolumn{2}{l}{Fecha de realización: 19 de noviembre de 2026} \\
     \multicolumn{2}{l}{\universitylocation}
   \end{tabular}
 }
@@ -42,8 +42,10 @@
 \usepackage{longtable}
 \usepackage{pdflscape}
 \usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 \usepackage[most]{tcolorbox}
-\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,shapes.geometric}
 
 \definecolor{iiiepeNavy}{HTML}{163B5C}
 \definecolor{iiiepeBlue}{HTML}{1F6F9F}
@@ -52,8 +54,16 @@
 \definecolor{iiiepePaper}{HTML}{F6F8F7}
 \definecolor{iiiepeInk}{HTML}{1E2A32}
 \definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
 \def\portraittitlecolor {iiiepeNavy}
 \setcitestyle{authoryear,open={(},close={)}}
+\makeatletter
+\renewcommand{\@biblabel}[1]{}
+\makeatother
+\setlength{\bibhang}{1.27cm}
+\setlength{\bibsep}{6pt}
+\AtBeginDocument{\renewcommand{\refname}{Referencias}}
 
 \newcommand{\insertcoverwatermark}{%
   \AddToShipoutPictureBG*{%
@@ -66,63 +76,109 @@
 }
 
 \setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
-\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 1}\setstretch{1.3}\raggedbottom
-
+\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 1 · Sesión 1}\setstretch{1.3}\raggedbottom
 \section{Introducción y postura central}
-El estudio de los fundamentos para la enseñanza y el aprendizaje en el marco de la cohorte SD26 exige examinar críticamente las relaciones entre los marcos teóricos contemporáneos y la realidad del aula de matemáticas. La postura central de este reporte plantea la tesis de que la transformación de la docencia técnica y matemática no se logra mediante la adopción acrítica de consignas procedimentales, sino a través de un análisis propio y sistemático de las mediaciones didácticas orientadas a la comprensión profunda y la justicia social \cite{delors1996educacion,unesco2015replantear}.
+El arranque de la unidad de aprendizaje \textit{Fundamentos para la enseñanza y el aprendizaje I} en la cohorte SD26 convoca a revisar los supuestos que sostienen nuestra labor cotidiana en el aula de matemáticas. Mi postura es que enseñar matemáticas en bachillerato técnico e ingeniería no consiste en transmitir definiciones cerradas ni automatizar algoritmos sin contexto, sino en construir experiencias intelectualmente exigentes y humanamente situadas donde el alumnado comprenda para qué modela, por qué justifica un procedimiento y qué alcance tienen sus conclusiones \citep{scott2015futuro,delors1996educacion}.
 
-Esta actividad, vinculada formalmente al módulo institucional \texttt{50157}, analiza de forma aplicada: \textit{Diagnóstico de saberes y análisis de las tendencias del aprendizaje en el siglo XXI a partir del informe de la UNESCO.}. Desde esta perspectiva, se abordan las dimensiones epistemológicas del aprendizaje sin soslayar los condicionamientos contextuales de la comunidad educativa.
+Considero que la tesis central que articula esta primera sesión reside en la necesidad de reequilibrar la formación técnica con una racionalidad pedagógica centrada en la comprensión y la justicia educativa \citep{unesco2015replantear}. Dado que el documento de trabajo del módulo \texttt{50157} solicita seleccionar cuatro ideas relevantes del texto \textit{El futuro del aprendizaje 1} de \citet{scott2015futuro} con su respectivo comentario analítico, este informe desarrolla primero esas cuatro elaboraciones articuladas con los vectores de cambio de la presentación introductoria, y posteriormente presenta un análisis diagnóstico propio de cuatro conceptos nucleares: enseñanza, aprendizaje, paradigmas educativos y matemáticas.
 
-\section{Desarrollo temático y fundamentación conceptual}
-Para comprender el impacto formativo de esta intervención, es indispensable contrastar los modelos teóricos con las evidencias de desempeño observadas en la práctica cotidiana \cite{scott2015futuro}. A partir de un análisis propio de las secuencias de aprendizaje, esto implica que el aprendizaje significativo no puede reducirse a la repetición algorítmica.
+\section{Cuatro ideas relevantes de Cynthia Luna Scott (2015) y comentario crítico}
+En la síntesis introductoria del bloque se destacan seis fuerzas transformadoras del entorno contemporáneo (globalización, transformación tecnológica, demografía, movilidad laboral, desigualdad económica y emergencia ambiental), las cuales interpelan directamente a los sistemas escolares diseñados bajo lógicas industriales. A partir de la lectura directa de \citet{scott2015futuro}, selecciono cuatro planteamientos estructurales junto con su análisis propio para el campo matemático:
 
-\begin{center}
-\begin{tikzpicture}[font=\small,node distance=1.8cm,>=Latex]
-  \node[draw=iiiepeNavy,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center] (a) {\textbf{Dimensión Epistémica}\\Comprensión y modelación conceptual};
-  \node[draw=iiiepeBlue,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center,right=of a] (b) {\textbf{Mediación Docente}\\Secuencias de indagación y andamiaje};
-  \node[draw=iiiepeAqua,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center,below=of a] (c) {\textbf{Interacción Dialógica}\\Retroalimentación y coevaluación};
-  \node[draw=iiiepeOrange,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center,below=of b] (d) {\textbf{Transferencia Real}\\Resolución situada en la comunidad};
-  
-  \draw[->,thick,iiiepeNavy] (a) -- node[above,font=\scriptsize] {orienta} (b);
-  \draw[->,thick,iiiepeBlue] (b) -- node[right,font=\scriptsize] {promueve} (d);
-  \draw[->,thick,iiiepeAqua] (c) -- node[left,font=\scriptsize] {sustenta} (a);
-  \draw[->,thick,iiiepeOrange] (d) -- node[below,font=\scriptsize] {evidencia} (c);
+\begin{tcolorbox}[colback=iiiepePale,colframe=iiiepeNavy,title=\textbf{Idea 1 · Crisis del modelo de transmisión y desajuste con las competencias del siglo XXI},breakable]
+\textbf{Planteamiento recuperado de \citet{scott2015futuro}:} Los sistemas escolares actuales, estructurados para memorizar contenidos estáticos y responder exámenes estandarizados, resultan insuficientes frente a un mundo complejo; aunque la educación formal no ha respondido con agilidad a estos cambios, la sociedad del conocimiento exige sustituir la reproducción acrítica por pensamiento crítico, comunicación, colaboración y resolución creativa de problemas reales.
+
+\medskip
+\textbf{Comentario analítico:} En la formación técnica (CONALEP y CECyTE) y universitaria en ingeniería es frecuente observar estudiantes capaces de resolver ecuaciones lineales aisladas cuando la instrucción explícita dice «despeja $x$», pero bloqueados ante la decisión de qué variable representa una tolerancia de maquinado o un costo energético. Esto implica que el modelo transmisivo genera una competencia ilusoria: la rapidez operatoria oculta la ausencia de comprensión relacional \citep{sawyer2008optimizing}. Por tanto, el currículo matemático debe migrar desde colecciones de ejercicios repetitivos hacia tareas abiertas que demanden modelar, argumentar y validar resultados en equipo.
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=iiiepeMint,colframe=iiiepeAqua!80!black,title=\textbf{Idea 2 · El nuevo aprendiz digital y la superación del mito del autodidactismo absoluto},breakable]
+\textbf{Planteamiento recuperado de \citet{scott2015futuro}:} Los jóvenes de la generación conectada procesan información en múltiples pantallas, acceden de manera ubicua a recursos digitales y prefieren tareas colaborativas; sin embargo, disponer de tecnología no equivale automáticamente a saber aprender en profundidad, por lo cual requieren orientación explícita para transformar el acceso informativo en conocimiento crítico y transferible.
+
+\medskip
+\textbf{Comentario analítico:} Sostengo que resulta engañoso confundir destreza operativa en teléfonos inteligentes o software comercial con alfabetización matemática y científica. Cuando un estudiante emplea una calculadora simbólica o un graficador sin comprender la pendiente como tasa de cambio ni el significado físico de una intersección, la herramienta acelera el error en lugar de evitarlo. En consecuencia, mi mediación docente en ingeniería y nivel medio superior debe enseñar a interrogar las salidas digitales: contrastar unidades, comprobar casos límite y exigir justificaciones verbales o escritas sobre lo que el algoritmo exhibe en pantalla.
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=iiiepeWarm,colframe=iiiepeOrange!90!black,title=\textbf{Idea 3 · Brecha entre escuela y mundo del trabajo: de habilidades rutinarias a tareas no estructuradas},breakable]
+\textbf{Planteamiento recuperado de \citet{scott2015futuro}:} La automatización y la economía global desplazan progresivamente las tareas cognitivas rutinarias y manuales predecibles, incrementando la demanda de capacidades analíticas avanzadas, pensamiento experto y comunicación compleja para afrontar problemas inéditos cuyo método de solución no está predeterminado.
+
+\medskip
+\textbf{Comentario analítico:} Esta tesis dialoga directamente con mi trayectoria en entornos industriales y docencia técnica. En una planta o taller mecatrónico nadie entrega al egresado una ecuación ya planteada para simplemente sustituir valores; el problema real emerge como un síntoma en un equipo o un cuello de botella en un proceso. Por ello, enseñar matemáticas exclusivamente como mecanización de recetas deja en desventaja al estudiante frente al mundo laboral \citep{conalep2025mecatronica}. Sin embargo, tampoco basta entrenar competencias instrumentales estrechas: la formación matemática debe habilitar criterios éticos, lectura crítica de datos y adaptabilidad intelectual ante incertidumbres técnicas y sociales.
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=iiiepePale,colframe=iiiepeBlue,title=\textbf{Idea 4 · Pedagogía 2.0 y ecosistemas de aprendizaje más allá del aula cerrada},breakable]
+\textbf{Planteamiento recuperado de \citet{scott2015futuro}:} El aprendizaje del siglo XXI exige transitar hacia la Pedagogía 2.0 y hacia ecosistemas de aprendizaje articulados —donde los cuatro pilares de \citet{delors1996educacion}: aprender a conocer, a hacer, a convivir y a ser, convergen con experiencias formales, no formales e informales mediadas por redes de colaboración y problemas auténticos.
+
+\medskip
+\textbf{Comentario analítico:} No obstante el atractivo retórico de los ecosistemas conectados, el análisis crítico muestra que su implementación fracasa si se reduce a digitalizar diapositivas sin modificar las relaciones de poder y diálogo dentro del aula. En nuestros planteles técnicos, articular el aula de matemáticas con el taller de mantenimiento, el entorno comunitario y los espacios de discusión entre pares transforma el sentido del saber matemático \citep{sep2023pensamiento}. Además, recuperar el equilibrio entre lo técnico y lo humano implica reconocer que la equidad educativa depende de brindar andamiajes accesibles a quienes cuentan con menor capital cultural previo \citep{unesco2015replantear}.
+\end{tcolorbox}
+
+\section{Análisis diagnóstico de cuatro conceptos fundamentales y articulación matemática}
+Desde mi práctica docente en bachillerato técnico e ingeniería, el análisis diagnóstico de los conceptos que orientan esta unidad de aprendizaje permite clarificar el tránsito personal desde una organización puramente técnica hacia una docencia reflexiva y humanista. La Figura~\ref{fig:act1-nexus} sintetiza la articulación dinámica entre enseñanza, aprendizaje, paradigmas y matemáticas.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  box/.style={draw=#1,fill=#1!10,thick,rounded corners=4pt,text width=4.65cm,minimum height=2.25cm,align=left,inner sep=7pt,font=\small},
+  arr/.style={->,very thick,>=Latex,iiiepeNavy}
+]
+  \node[box=iiiepeNavy] (ens) at (0,3.1) {\textbf{\color{iiiepeNavy}1. Enseñanza}\\Diseño intencional de mediaciones, preguntas y andamiajes que habilitan el acceso equitativo al sentido matemático.};
+  \node[box=iiiepeBlue] (apr) at (7.4,3.1) {\textbf{\color{iiiepeBlue}2. Aprendizaje}\\Construcción activa, situada y dialógica que integra comprensión conceptual, uso estratégico y transferencia.};
+  \node[box=iiiepeAqua!80!black] (par) at (0,0) {\textbf{\color{iiiepeAqua!75!black}3. Paradigmas educativos}\\Marcos epistemológicos que determinan qué cuenta como saber válido, cómo se concibe el error y cómo se evalúa.};
+  \node[box=iiiepeOrange!90!black] (mat) at (7.4,0) {\textbf{\color{iiiepeOrange!85!black}4. Matemáticas}\\Lenguaje de patrones, variación e inferencia para modelar fenómenos, tomar decisiones y argumentar con evidencia.};
+
+  \draw[arr] (ens) -- node[above,font=\scriptsize\bfseries] {provoca y acompaña} (apr);
+  \draw[arr] (par) -- node[left,font=\scriptsize\bfseries,align=right] {redefine\\metas} (ens);
+  \draw[arr] (mat) -- node[right,font=\scriptsize\bfseries,align=left] {desafía\\creencias} (apr);
+  \draw[arr] (par) -- node[below,font=\scriptsize\bfseries] {determina el enfoque didáctico} (mat);
+  \draw[->,dashed,thick,iiiepeBlue] (ens) -- (mat);
+  \draw[->,dashed,thick,iiiepeAqua!80!black] (apr) -- (par);
 \end{tikzpicture}
-\end{center}
+\caption{Nexo conceptual entre enseñanza, aprendizaje, paradigmas y matemáticas desde la docencia técnica y superior.}
+\label{fig:act1-nexus}
+\end{figure}
 
-La literatura especializada en ciencias del aprendizaje \cite{sawyer2008optimizing} subraya que los estudiantes construyen comprensiones duraderas cuando tienen oportunidades explícitas de verbalizar, contrastar y reformular sus hipótesis iniciales. En la enseñanza de las matemáticas, este principio desarticula el mito de la capacidad fija y promueve una cultura de aula equitativa y dialógica.
+El cuadro siguiente precisa el contraste entre el paradigma transmisivo habitual y el enfoque formativo que busco consolidar a lo largo de la maestría:
 
-\section{Matriz de análisis y artefacto metodológico}
-La tabla siguiente sistematiza los componentes centrales de la actividad, contrastando los requerimientos pedagógicos con los criterios de evaluación formativa:
-
-{\small\setstretch{1.15}\renewcommand{\arraystretch}{1.3}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.28\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.38\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.34\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
-\rowcolor{iiiepePale} \textbf{Componente Clave} & \textbf{Fundamentación Teórica} & \textbf{Aplicación en el Aula de Matemáticas} \\\hline
+{\small\setstretch{1.15}\renewcommand{\arraystretch}{1.35}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.20\linewidth}|>{\raggedright\arraybackslash}p{0.38\linewidth}|>{\raggedright\arraybackslash}p{0.36\linewidth}|}\hline
+\rowcolor{iiiepePale} \textbf{Concepto} & \textbf{Visión transmisiva o procedimental} & \textbf{Postura dialógica y comprensiva (SD26)} \\\hline
 \endfirsthead
 \hline
-\rowcolor{iiiepePale} \textbf{Componente Clave} & \textbf{Fundamentación Teórica} & \textbf{Aplicación en el Aula de Matemáticas} \\\hline
+\rowcolor{iiiepePale} \textbf{Concepto} & \textbf{Visión transmisiva o procedimental} & \textbf{Postura dialógica y comprensiva (SD26)} \\\hline
 \endhead
-Diagnóstico y Saberes Previos & Reconocimiento de esquemas cognitivos y barreras de aprendizaje \cite{scott2015futuro}. & Análisis de concepciones alternativas en representaciones algebraicas y numéricas. \\\hline
-Mediación y Andamiaje & Provisión de apoyos estructurados con retirada progresiva \cite{sawyer2008optimizing}. & Guías de modelación con variación paramétrica y preguntas generadoras. \\\hline
-Evaluación Formativa & Uso dialógico del error como fuente de aprendizaje y reorientación. & Rúbricas analíticas con devolución descriptiva y opción de segunda versión. \\\hline
-Transferencia Comunitaria & Articulación con problemas del entorno y la Nueva Escuela Mexicana \cite{sep2024fase6}. & Proyectos de estimación de costos, consumo hídrico o calibración instrumental. \\\hline
+Enseñanza & Exposición unidireccional de reglas, fórmulas y ejemplos modelo seguidos de ejercitación mecánica. & Mediación cognitiva que parte de problemas contextualizados, fomenta la conjetura y organiza el diálogo argumentado \citep{sawyer2008optimizing}. \\\hline
+Aprendizaje & Retención de corto plazo y reproducción fiel de algoritmos bajo consignas explícitas. & Apropiación relacional y metacognitiva capaz de explicar significados y transferir métodos a contextos nuevos \citep{scott2015futuro}. \\\hline
+Paradigmas & Racionalidad técnico-eficientista centrada en la cobertura programática y la sanción del error. & Racionalidad socioconstructivista y humanista donde el error orienta la retroalimentación y la equidad es irrenunciable \citep{unesco2015replantear}. \\\hline
+Matemáticas & Colección aislada de símbolos desvinculados de magnitudes físicas y decisiones ciudadanas. & Ciencia viva de modelación, argumentación lógica y análisis de incertidumbre en entornos técnicos y sociales \citep{sep2023pensamiento}. \\\hline
 \end{longtable}}
 
+\subsection*{Ejemplos matemáticos ilustrativos de lectura relacional frente a mecanización}
+Para concretar la transferencia al contexto laboral y docente de nivel técnico e ingeniería, considero dos ejemplos de trabajo en clase donde la interpretación supera al simple cálculo:
+\begin{enumerate}
+  \item \textbf{Modelo cinemático lineal en mantenimiento ($d = v t + d_0$):} En lugar de pedir únicamente despejar $t$ en una expresión abstracta, el estudiantado interpreta el movimiento uniforme de un carro transportador cuya posición inicial respecto a un sensor de referencia es $d_0 = 1.4\text{ m}$ y cuya velocidad constante es $v = 0.65\text{ m/s}$, es decir, $d(t) = 0.65\,t + 1.4$. El análisis no termina al calcular $d(8) = 6.6\text{ m}$; exige justificar por qué la relación es afín y no directamente proporcional cuando $d_0 \neq 0$, identificar las unidades de la pendiente ($\text{m/s}$) y discutir el límite físico del riel disponible.
+  \item \textbf{Comparación de costos energéticos o de servicio técnico ($C_A(h) = 250 + 80h$ frente a $C_B(h) = 100 + 110h$):} Al analizar dos esquemas de contratación de mantenimiento preventivo por horas de operación $h$, resolver el punto de equilibrio $250 + 80h = 100 + 110h \Rightarrow 150 = 30h \Rightarrow h = 5\text{ h}$ constituye apenas el inicio. La comprensión profunda emerge cuando los equipos argumentan que para jornadas menores a $5\text{ h}$ conviene el esquema $B$ por su costo fijo inicial menor, mientras que a partir de $h > 5\text{ h}$ conviene el esquema $A$ gracias a su menor tasa marginal por hora ($\text{\$80/h}$ frente a $\text{\$110/h}$), vinculando algebraicamente pendiente, ordenada al origen y toma de decisiones \citep{star2015algebra}.
+\end{enumerate}
+
 \section{Transferencia profesional y aplicación práctica}
-En mi práctica docente profesional en bachillerato técnico e ingeniería, la aplicación de estos principios demanda superar la didáctica tradicional centrada exclusivamente en la pizarra. En el contexto laboral e industrial, los egresados enfrentan desafíos abiertos que requieren juicio crítico, trabajo en equipo y precisión matemática. 
+En la práctica docente dentro de bachillerato tecnológico e ingeniería, esta articulación entre las tendencias propuestas por \citet{scott2015futuro} y una visión relacional de las matemáticas repercute directamente en el diseño didáctico. El impacto práctico esperado de reorganizar las secuencias iniciales en torno a representaciones múltiples (verbal, tabular, gráfica y simbólica) radica en hacer visible el pensamiento estudiantil desde los primeros días de clase. Además, al ubicar la matemática como herramienta para leer críticamente dispositivos técnicos, costos de operación y situaciones cotidianas, se tiende un puente auténtico entre el perfil técnico industrial y el compromiso formativo humanista \citep{delors1996educacion,pimienta2012estrategias}.
 
-Por consiguiente, incorporar situaciones donde los estudiantes argumenten sus decisiones estadísticas o algebraicas fortalece directamente su perfil de egreso. El impacto profesional de esta mirada formativa se manifiesta en la capacidad del alumnado para transferir métodos matemáticos a escenarios reales de mantenimiento, automatización o gestión comunitaria.
-
+\clearpage
 \section{Conclusiones y síntesis argumentativa}
-En conclusión, el análisis sistemático de los fundamentos del aprendizaje en esta cohorte SD26 confirma que la calidad educativa no es una variable abstracta, sino el resultado de decisiones pedagógicas intencionales, fundamentadas y éticamente comprometidas. Por tanto, el fortalecimiento de la docencia en matemáticas requiere consolidar secuencias didácticas donde convivan el rigor conceptual, el acompañamiento cercano y la participación activa de cada estudiante en su propio proceso de aprendizaje.
+En conclusión, el diagnóstico conceptual de esta primera actividad confirma que transformar el aprendizaje matemático en el siglo XXI no depende primordialmente de incorporar plataformas digitales aisladas, sino de cuestionar los paradigmas que reducen la enseñanza a transmisión mecánica y el aprendizaje a obediencia algorítmica. Por tanto, las cuatro ideas recuperadas de \citet{scott2015futuro} convergen en una exigencia clara: articular rigor disciplinar, competencias analíticas de alto orden y acompañamiento docente cercano dentro de ecosistemas educativos equitativos.
 
-\needspace{5\baselineskip}\section*{Referencias}
-{\setstretch{1.15}\setlength{\parskip}{6pt}
-\par\hangindent=1.27cm\hangafter=1 Delors, J., et al. (1996). \textit{La educación encierra un tesoro}. UNESCO/Santillana.
-\par\hangindent=1.27cm\hangafter=1 Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. En \textit{Innovating to learn, learning to innovate} (pp. 45--65). OECD.
-\par\hangindent=1.27cm\hangafter=1 Scott, C. L. (2015). \textit{El futuro del aprendizaje: ¿Qué tipo de aprendizaje se necesita en el siglo XXI?} UNESCO.
-\par\hangindent=1.27cm\hangafter=1 Secretaría de Educación Pública. (2024). \textit{Plan de Estudio para la educación preescolar, primaria y secundaria. Fase 6}. SEP.
-\par\hangindent=1.27cm\hangafter=1 UNESCO. (2015). \textit{Replantear la educación: ¿Hacia un bien común mundial?} Ediciones UNESCO.
-}
+En consecuencia, la síntesis personal de partida para esta unidad de aprendizaje orienta mi trayecto en la maestría hacia la consolidación de problemas auténticos, el aprovechamiento formativo del error y el equilibrio permanente entre precisión matemática y sentido humano en cada grupo técnico y universitario con el que trabajo.
+
+\clearpage
+\begin{thebibliography}{99}
+\bibitem[CONALEP(2025)]{conalep2025mecatronica} Colegio Nacional de Educación Profesional Técnica. (2025). \textit{Perfil de egreso: Profesional Técnico-Bachiller en Mecatrónica. Modelo Académico 2025}. Secretaría Académica, CONALEP. \url{https://www.conalep.edu.mx/sites/default/files/micrositios/perfil_egreso_2025/ElectyElectro/PE25_Mecatr%C3%B3nica.pdf}
+\bibitem[Delors et~al.(1996)]{delors1996educacion} Delors, J., Al Mufti, I., Amagi, I., Carneiro, R., Chung, F., Geremek, B., Gorham, W., Kornhauser, A., Manley, M., Padrón Quero, M., Savané, M.-A., Singh, K., Stavenhagen, R., Suhr, M. W., y Nanzhao, Z. (1996). \textit{La educación encierra un tesoro: Informe a la UNESCO de la Comisión Internacional sobre la Educación para el Siglo XXI}. Santillana/UNESCO.
+\bibitem[Pimienta Prieto(2012)]{pimienta2012estrategias} Pimienta Prieto, J. H. (2012). \textit{Estrategias de enseñanza-aprendizaje: Docencia universitaria basada en competencias}. Pearson Educación.
+\bibitem[Sawyer(2008)]{sawyer2008optimizing} Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. En OECD, \textit{Innovating to learn, learning to innovate} (pp. 45--65). OECD Publishing. \url{https://doi.org/10.1787/9789264039958-en}
+\bibitem[Scott(2015)]{scott2015futuro} Scott, C. L. (2015). \textit{El futuro del aprendizaje 1: ¿Por qué deben cambiar el contenido y los métodos de aprendizaje en el siglo XXI?} (Investigación y prospectiva en educación: contribuciones temáticas, núm. 13). UNESCO. \url{https://unesdoc.unesco.org/ark:/48223/pf0000234807_spa}
+\bibitem[SEP(2023)]{sep2023pensamiento} Secretaría de Educación Pública. (2023). \textit{Programa de estudios del recurso sociocognitivo Pensamiento Matemático I}. Subsecretaría de Educación Media Superior, SEP.
+\bibitem[Star et~al.(2015)]{star2015algebra} Star, J. R., Caronongan, P., Foegen, A., Furgeson, J., Keating, B., Larson, M. R., Lyskawa, J., McCallum, W. G., Porath, J., y Zbiek, R. M. (2015). \textit{Teaching strategies for improving algebra knowledge in middle and high school students} (NCEE 2015-4010). Institute of Education Sciences, U.S. Department of Education.
+\bibitem[UNESCO(2015)]{unesco2015replantear} UNESCO. (2015). \textit{Replantear la educación: ¿Hacia un bien común mundial?} Ediciones UNESCO. \url{https://unesdoc.unesco.org/ark:/48223/pf0000232697}
+\end{thebibliography}
 
 \end{document}

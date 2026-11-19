@@ -1,0 +1,179 @@
+{
+  "id": "act2_d_comparacion_circuncentro_incentro",
+  "title": "Actividad 2d: Comparación de Circuncentro O e Incentro I",
+  "commands": [
+    {
+      "cmd": "A = (-4, 1)",
+      "ok": true
+    },
+    {
+      "cmd": "B = (5, 1)",
+      "ok": true
+    },
+    {
+      "cmd": "C = (0.5, -1.5)",
+      "ok": true
+    },
+    {
+      "cmd": "tri = Polygon(A, B, C)",
+      "ok": true
+    },
+    {
+      "cmd": "ma = PerpendicularBisector(B, C)",
+      "ok": true
+    },
+    {
+      "cmd": "mb = PerpendicularBisector(A, C)",
+      "ok": true
+    },
+    {
+      "cmd": "mc = PerpendicularBisector(A, B)",
+      "ok": true
+    },
+    {
+      "cmd": "O = Intersect(ma, mb)",
+      "ok": true
+    },
+    {
+      "cmd": "bA = AngleBisector(B, A, C)",
+      "ok": true
+    },
+    {
+      "cmd": "bB = AngleBisector(A, B, C)",
+      "ok": true
+    },
+    {
+      "cmd": "bC = AngleBisector(A, C, B)",
+      "ok": true
+    },
+    {
+      "cmd": "I = Intersect(bA, bB)",
+      "ok": true
+    },
+    {
+      "cmd": "c_circ = Circle(O, A)",
+      "ok": true
+    },
+    {
+      "cmd": "pAB = PerpendicularLine(I, Line(A, B))",
+      "ok": true
+    },
+    {
+      "cmd": "T = Intersect(pAB, Line(A, B))",
+      "ok": true
+    },
+    {
+      "cmd": "c_ins = Circle(I, T)",
+      "ok": true
+    },
+    {
+      "cmd": "L1 = Text(\"Comparación en triángulo obtusángulo: O (exterior) vs I (interior)\", (-6.0, 6.8))",
+      "ok": true
+    }
+  ],
+  "objects": {
+    "A": {
+      "type": "point",
+      "val_str": "A = (-4, 1)",
+      "def_str": "(-4, 1)"
+    },
+    "B": {
+      "type": "point",
+      "val_str": "B = (5, 1)",
+      "def_str": "(5, 1)"
+    },
+    "C": {
+      "type": "point",
+      "val_str": "C = (0.5, -1.5)",
+      "def_str": "(0.5, -1.5)"
+    },
+    "tri": {
+      "type": "triangle",
+      "val_str": "tri = 11.25",
+      "def_str": "Polígono A, B, C"
+    },
+    "c": {
+      "type": "segment",
+      "val_str": "c = 9",
+      "def_str": "Segmento [A, B]"
+    },
+    "a": {
+      "type": "segment",
+      "val_str": "a = 5.15",
+      "def_str": "Segmento [B, C]"
+    },
+    "b": {
+      "type": "segment",
+      "val_str": "b = 5.15",
+      "def_str": "Segmento [C, A]"
+    },
+    "ma": {
+      "type": "line",
+      "val_str": "ma: 4.5x + 2.5y = 11.75",
+      "def_str": "Mediatriz de BC"
+    },
+    "mb": {
+      "type": "line",
+      "val_str": "mb: -4.5x + 2.5y = 7.25",
+      "def_str": "Mediatriz de AC"
+    },
+    "mc": {
+      "type": "line",
+      "val_str": "mc: x = 0.5",
+      "def_str": "Mediatriz de AB"
+    },
+    "O": {
+      "type": "point",
+      "val_str": "O = (0.5, 3.8)",
+      "def_str": "Intersección de ma, mb"
+    },
+    "bA": {
+      "type": "line",
+      "val_str": "bA: 0.25x + 0.97y = -0.04",
+      "def_str": "Bisectriz de B, A, C"
+    },
+    "bB": {
+      "type": "line",
+      "val_str": "bB: 0.25x - 0.97y = 0.29",
+      "def_str": "Bisectriz de A, B, C"
+    },
+    "bC": {
+      "type": "line",
+      "val_str": "bC: x = 0.5",
+      "def_str": "Bisectriz de A, C, B"
+    },
+    "I": {
+      "type": "point",
+      "val_str": "I = (0.5, -0.17)",
+      "def_str": "Intersección de bA, bB"
+    },
+    "c_circ": {
+      "type": "circle",
+      "val_str": "c_circ: (x - 0.5)² + (y - 3.8)² = 28.09",
+      "def_str": "Circunferencia que pasa por A con centro O"
+    },
+    "pAB": {
+      "type": "line",
+      "val_str": "pAB: x = 0.5",
+      "def_str": "Recta que pasa por I perpendicular a Recta(A, B)"
+    },
+    "T": {
+      "type": "point",
+      "val_str": "T = (0.5, 1)",
+      "def_str": "Intersección de pAB, Recta(A, B)"
+    },
+    "c_ins": {
+      "type": "circle",
+      "val_str": "c_ins: (x - 0.5)² + (y + 0.17)² = 1.36",
+      "def_str": "Circunferencia que pasa por T con centro I"
+    },
+    "L1": {
+      "type": "text",
+      "val_str": "Comparación en triángulo obtusángulo: O (exterior) vs I (interior)",
+      "def_str": "Texto(\"Comparación en triángulo obtusángulo: O (exterior) vs I (interior)\", (-6, 6.8))"
+    }
+  },
+  "out_png": "C:\\Users\\Sysx\\Documents\\AulaTeX-Academico\\IIIEPE\\maestria-en-enseñanza-y-aprendizaje-de-las-matematicas\\temas-selectos-de-matematicas-I\\periodos\\SD26\\actividades-plataforma-SD26\\actividad-02-el-lugar-perfecto\\img\\geogebra\\act2_d_comparacion_circuncentro_incentro.png",
+  "out_ui_png": "C:\\Users\\Sysx\\Documents\\AulaTeX-Academico\\IIIEPE\\maestria-en-enseñanza-y-aprendizaje-de-las-matematicas\\temas-selectos-de-matematicas-I\\periodos\\SD26\\actividades-plataforma-SD26\\actividad-02-el-lugar-perfecto\\img\\geogebra\\act2_d_comparacion_circuncentro_incentro_ui.png",
+  "out_ggb": "C:\\Users\\Sysx\\Documents\\AulaTeX-Academico\\IIIEPE\\maestria-en-enseñanza-y-aprendizaje-de-las-matematicas\\temas-selectos-de-matematicas-I\\periodos\\SD26\\actividades-plataforma-SD26\\actividad-02-el-lugar-perfecto\\img\\geogebra\\act2_d_comparacion_circuncentro_incentro.ggb"
+}

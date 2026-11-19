@@ -1,8 +1,8 @@
 \documentclass[spanish,letterpaper,oneside]{article}
 
-\def\documenttitle {La Investigación-Acción como Estrategia para Transformar la Práctica de Enseñanza}
+\def\documenttitle {La Investigación-Acción para Transformar la Práctica Matemática}
 \def\documentsubtitle {Fundamentos para la enseñanza y el aprendizaje I · Cohorte SD26}
-\def\documentsubject {Actividad 4 · Investigacion Accion}
+\def\documentsubject {Actividad 4 · Bloque II (Módulo 51676)}
 \def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
 \def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
 \def\coursecode {MAEM-SD26}
@@ -29,7 +29,7 @@
     Programa: & \programshort \\
     Periodo: & \programperiod \\
     & \\
-    \multicolumn{2}{l}{Fecha de realización: 14 de noviembre de 2026} \\
+    \multicolumn{2}{l}{Fecha de realización: 19 de noviembre de 2026} \\
     \multicolumn{2}{l}{\universitylocation}
   \end{tabular}
 }
@@ -42,8 +42,10 @@
 \usepackage{longtable}
 \usepackage{pdflscape}
 \usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 \usepackage[most]{tcolorbox}
-\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,shapes.geometric}
 
 \definecolor{iiiepeNavy}{HTML}{163B5C}
 \definecolor{iiiepeBlue}{HTML}{1F6F9F}
@@ -52,8 +54,16 @@
 \definecolor{iiiepePaper}{HTML}{F6F8F7}
 \definecolor{iiiepeInk}{HTML}{1E2A32}
 \definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
 \def\portraittitlecolor {iiiepeNavy}
 \setcitestyle{authoryear,open={(},close={)}}
+\makeatletter
+\renewcommand{\@biblabel}[1]{}
+\makeatother
+\setlength{\bibhang}{1.27cm}
+\setlength{\bibsep}{6pt}
+\AtBeginDocument{\renewcommand{\refname}{Referencias}}
 
 \newcommand{\insertcoverwatermark}{%
   \AddToShipoutPictureBG*{%
@@ -66,63 +76,90 @@
 }
 
 \setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
-\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 4}\setstretch{1.3}\raggedbottom
-
+\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 4 · Investigación-Acción}\setstretch{1.3}\raggedbottom
 \section{Introducción y postura central}
-El estudio de los fundamentos para la enseñanza y el aprendizaje en el marco de la cohorte SD26 exige examinar críticamente las relaciones entre los marcos teóricos contemporáneos y la realidad del aula de matemáticas. La postura central de este reporte plantea la tesis de que la transformación de la docencia técnica y matemática no se logra mediante la adopción acrítica de consignas procedimentales, sino a través de un análisis propio y sistemático de las mediaciones didácticas orientadas a la comprensión profunda y la justicia social \cite{delors1996educacion,unesco2015replantear}.
+La transformación sostenida de la enseñanza matemática exige superar la improvisación anecdótica y las reformas prescritas desde fuera del aula, colocando al profesorado como sujeto reflexivo capaz de indagar rigurosamente sobre su propio quehacer. En el marco del Bloque II (\textit{La investigación-acción como estrategia para transformar la práctica de enseñanza}, módulo \texttt{51676}) y a partir de los planteamientos de \citet{restrepo2004investigacion}, sostengo la tesis de que la investigación-acción educativa constituye el dispositivo metodológico más pertinente para producir saber pedagógico situado, porque articula en espiral la crítica de la rutina docente, la planificación fundada de mejoras y la lectura honesta de evidencias recogidas en el propio grupo.
 
-Esta actividad, vinculada formalmente al módulo institucional \texttt{51676}, analiza de forma aplicada: \textit{Ciclos de diagnóstico, planificación, acción, observación y reflexión crítica aplicados a problemas de comprensión matemática.}. Desde esta perspectiva, se abordan las dimensiones epistemológicas del aprendizaje sin soslayar los condicionamientos contextuales de la comunidad educativa.
+Mi postura es que, lejos de oponer la teoría académica a la práctica cotidiana del taller o del aula universitaria, la investigación-acción convierte los obstáculos reales de comprensión matemática en objetos sistemáticos de estudio. A continuación se responden de forma argumentada las cinco preguntas rectoras establecidas en la actividad, se delimita una problemática concreta extraída de mi enseñanza en bachillerato técnico e ingeniería, se desarrolla su abordaje a lo largo de las cinco fases metodológicas y se fundamenta por qué esta perspectiva sostiene toda innovación educativa genuina.
 
-\section{Desarrollo temático y fundamentación conceptual}
-Para comprender el impacto formativo de esta intervención, es indispensable contrastar los modelos teóricos con las evidencias de desempeño observadas en la práctica cotidiana \cite{scott2015futuro}. A partir de un análisis propio de las secuencias de aprendizaje, esto implica que el aprendizaje significativo no puede reducirse a la repetición algorítmica.
+\section{Fundamentos y fases de la investigación-acción educativa}
 
-\begin{center}
-\begin{tikzpicture}[font=\small,node distance=1.8cm,>=Latex]
-  \node[draw=iiiepeNavy,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center] (a) {\textbf{Dimensión Epistémica}\\Comprensión y modelación conceptual};
-  \node[draw=iiiepeBlue,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center,right=of a] (b) {\textbf{Mediación Docente}\\Secuencias de indagación y andamiaje};
-  \node[draw=iiiepeAqua,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center,below=of a] (c) {\textbf{Interacción Dialógica}\\Retroalimentación y coevaluación};
-  \node[draw=iiiepeOrange,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center,below=of b] (d) {\textbf{Transferencia Real}\\Resolución situada en la comunidad};
-  
-  \draw[->,thick,iiiepeNavy] (a) -- node[above,font=\scriptsize] {orienta} (b);
-  \draw[->,thick,iiiepeBlue] (b) -- node[right,font=\scriptsize] {promueve} (d);
-  \draw[->,thick,iiiepeAqua] (c) -- node[left,font=\scriptsize] {sustenta} (a);
-  \draw[->,thick,iiiepeOrange] (d) -- node[below,font=\scriptsize] {evidencia} (c);
+\subsection*{1. ¿Qué es la investigación-acción y cuál es su finalidad en el ámbito educativo?}
+De acuerdo con \citet{restrepo2004investigacion}, la investigación-acción educativa es una modalidad de indagación autorreflexiva, cíclica y participativa emprendida por los propios actores escolares para examinar críticamente su práctica, comprender las causas que limitan el aprendizaje y construir saber pedagógico transformador. Su finalidad no consiste en acumular descripciones neutrales externas al aula, sino en mejorar la enseñanza y las condiciones reales en que aprende el estudiantado mediante un diálogo continuo entre teoría educativa, contexto escolar y acción reflexiva \citep{medina2009didactica,unesco2015replantear}.
+
+\subsection*{2. ¿Por qué considera al docente como investigador de su propia práctica?}
+La investigación-acción reconoce al docente como investigador porque es quien habita cotidianamente las tensiones curriculares, escucha de primera mano las concepciones alternativas de sus alumnos y toma decisiones situadas minuto a minuto \citep{restrepo2004investigacion}. Ningún observador externo puede captar por sí solo el significado pedagógico completo de las interacciones en un grupo; cuando el profesorado documenta sus clases, contrasta sus supuestos implícitos y revisa las producciones estudiantiles con criterio sistemático, transita de aplicador pasivo de programas a constructor crítico de conocimiento didáctico \citep{sawyer2008optimizing}.
+
+\subsection*{3. ¿Cuáles son las fases de la investigación-acción y cómo se relacionan entre sí?}
+Retomando la tradición metodológica recuperada por \citet{restrepo2004investigacion} —deconstrucción de la práctica, reconstrucción planificada y validación efectiva— y la secuencia operativa trabajada en la sesión (identificación del problema, planificación, acción, observación y reflexión), las fases no operan como pasos burocráticos lineales sino como una espiral helicoidal abierta (Figura~\ref{fig:act4-espiral}). La identificación crítica alimenta el diseño de acciones; la acción en el aula genera registros durante la observación; y la reflexión sobre dichas evidencias da paso a un nuevo ciclo de ajuste cada vez mejor fundamentado \citep{pimienta2012metodologia}.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[font=\scriptsize, >=Latex]
+  \node[draw=iiiepeNavy,fill=iiiepeNavy!12,very thick,circle,minimum size=2.6cm,align=center] (center) at (0,0) {\textbf{\color{iiiepeNavy}SABER\\PEDAGÓGICO\\SITUADO}\\(Espiral crítica)};
+
+  \node[draw=iiiepeNavy,fill=iiiepePale,thick,rounded corners=4pt,text width=4.0cm,align=center,inner sep=5pt] (f1) at (0,3.2) {\textbf{1. Identificación / Deconstrucción}\\Delimitar el obstáculo con evidencias reales de aula.};
+  \node[draw=iiiepeBlue,fill=iiiepePale,thick,rounded corners=4pt,text width=4.0cm,align=center,inner sep=5pt] (f2) at (4.7,1.1) {\textbf{2. Planificación / Reconstrucción}\\Diseñar estrategias, andamiajes e instrumentos.};
+  \node[draw=iiiepeAqua!80!black,fill=iiiepeMint,thick,rounded corners=4pt,text width=4.0cm,align=center,inner sep=5pt] (f3) at (3.0,-2.65) {\textbf{3. Acción en el aula}\\Implementar la mediación en condiciones reales.};
+  \node[draw=iiiepeOrange!90!black,fill=iiiepeWarm,thick,rounded corners=4pt,text width=4.0cm,align=center,inner sep=5pt] (f4) at (-3.0,-2.65) {\textbf{4. Observación sistemática}\\Recoger producciones, diarios y registros de diálogo.};
+  \node[draw=iiiepeNavy,fill=iiiepePale,thick,rounded corners=4pt,text width=4.0cm,align=center,inner sep=5pt] (f5) at (-4.7,1.1) {\textbf{5. Reflexión evaluativa}\\Interpretar avances y abrir nuevo ciclo mejorado.};
+
+  \draw[->,very thick,iiiepeNavy] (f1.east) to[bend left=18] (f2.north);
+  \draw[->,very thick,iiiepeBlue] (f2.south) to[bend left=18] (f3.east);
+  \draw[->,very thick,iiiepeAqua!80!black] (f3.west) to[bend left=12] (f4.east);
+  \draw[->,very thick,iiiepeOrange!90!black] (f4.west) to[bend left=18] (f5.south);
+  \draw[->,very thick,iiiepeNavy] (f5.north) to[bend left=18] node[above left,font=\scriptsize\bfseries] {Nuevo ciclo} (f1.west);
 \end{tikzpicture}
-\end{center}
+\caption{Ciclo helicoidal de las cinco fases de la investigación-acción educativa y su convergencia en el saber pedagógico.}
+\label{fig:act4-espiral}
+\end{figure}
 
-La literatura especializada en ciencias del aprendizaje \cite{sawyer2008optimizing} subraya que los estudiantes construyen comprensiones duraderas cuando tienen oportunidades explícitas de verbalizar, contrastar y reformular sus hipótesis iniciales. En la enseñanza de las matemáticas, este principio desarticula el mito de la capacidad fija y promueve una cultura de aula equitativa y dialógica.
+\subsection*{4. ¿Qué importancia tienen la observación, la reflexión y la recopilación de evidencias?}
+Sin observación intencionada ni acopio de evidencias concretas (cuadernos, matrices de seguimiento, registros de discusión oral, soluciones erróneas comentadas), el análisis propio corre el riesgo de reducirse a opiniones subjetivas o a culpar al desinterés estudiantil \citep{restrepo2004investigacion}. Recopilar evidencias permite descubrir regularidades ocultas: por ejemplo, notar si los fallos ocurren al traducir un enunciado físico a símbolos o al interpretar un valor obtenido, orientando la reflexión hacia decisiones didácticas comprobables \citep{eef2021feedback,bostrom2023formative}.
 
-\section{Matriz de análisis y artefacto metodológico}
-La tabla siguiente sistematiza los componentes centrales de la actividad, contrastando los requerimientos pedagógicos con los criterios de evaluación formativa:
+\subsection*{5. ¿Por qué constituye una alternativa para transformar y mejorar la práctica docente?}
+A diferencia de las capacitaciones teóricas desconectadas de los planteles reales, la investigación-acción integra diagnóstico, ensayo pedagógico y evaluación continua en el escenario auténtico donde enseña cada profesor \citep{restrepo2004investigacion}. Este proceso rompe la inercia de repetir durante años las mismas secuencias ineficaces, fortalece el juicio profesional autónomo y consolida comunidades colegiadas comprometidas con la mejora educativa \citep{quiroga2022aprendizaje}.
 
-{\small\setstretch{1.15}\renewcommand{\arraystretch}{1.3}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.28\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.38\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.34\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
-\rowcolor{iiiepePale} \textbf{Componente Clave} & \textbf{Fundamentación Teórica} & \textbf{Aplicación en el Aula de Matemáticas} \\\hline
+\section{Aplicación a una problemática delimitada de la práctica matemática}
+En mi docencia de matemáticas para bachillerato técnico (mantenimiento industrial y mecatrónica) y primeros semestres de ingeniería, he identificado una problemática recurrente: \textbf{el predominio de la manipulación algebraica mecánica en modelos lineales sin interpretación física de las variables, unidades ni límites de validez}. Este hallazgo se fundamenta en evidencias concretas observadas en tareas de taller, evaluaciones diagnósticas y revisiones de cuadernos: numerosos estudiantes aplican correctamente la fórmula $m = (y_2-y_1)/(x_2-x_1)$ o despejan $x$ en $ax + b = c$, pero al preguntarles qué representa el número obtenido en un circuito o una curva de calibración no distinguen la tasa de cambio de la condición inicial ni detectan valores físicamente imposibles \citep{star2015algebra}. En coherencia con la crítica pedagógica, esta dificultad no puede atribuirse únicamente al alumnado; con frecuencia obedece a secuencias docentes que privilegian la rapidez algorítmica por encima de la modelación contextualizada.
+
+El cuadro siguiente sistematiza el desarrollo operativo por aplicar en un ciclo completo de investigación-acción de cinco fases:
+
+{\small\setstretch{1.15}\renewcommand{\arraystretch}{1.35}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.18\linewidth}|>{\raggedright\arraybackslash}p{0.41\linewidth}|>{\raggedright\arraybackslash}p{0.35\linewidth}|}\hline
+\rowcolor{iiiepePale} \textbf{Fase metodológica} & \textbf{Desarrollo situado en la problemática matemática} & \textbf{Evidencias e indicadores de rigor} \\\hline
 \endfirsthead
 \hline
-\rowcolor{iiiepePale} \textbf{Componente Clave} & \textbf{Fundamentación Teórica} & \textbf{Aplicación en el Aula de Matemáticas} \\\hline
+\rowcolor{iiiepePale} \textbf{Fase metodológica} & \textbf{Desarrollo situado en la problemática matemática} & \textbf{Evidencias e indicadores de rigor} \\\hline
 \endhead
-Diagnóstico y Saberes Previos & Reconocimiento de esquemas cognitivos y barreras de aprendizaje \cite{scott2015futuro}. & Análisis de concepciones alternativas en representaciones algebraicas y numéricas. \\\hline
-Mediación y Andamiaje & Provisión de apoyos estructurados con retirada progresiva \cite{sawyer2008optimizing}. & Guías de modelación con variación paramétrica y preguntas generadoras. \\\hline
-Evaluación Formativa & Uso dialógico del error como fuente de aprendizaje y reorientación. & Rúbricas analíticas con devolución descriptiva y opción de segunda versión. \\\hline
-Transferencia Comunitaria & Articulación con problemas del entorno y la Nueva Escuela Mexicana \cite{sep2024fase6}. & Proyectos de estimación de costos, consumo hídrico o calibración instrumental. \\\hline
+1. Identificación del problema & Reconocer que la enseñanza centrada en despejes abstractos provoca respuestas numéricas correctas pero carentes de significado físico, dimensional y contextual. & Análisis de 20--25 producciones diagnósticas previas, registro de errores frecuentes de unidades y diario de clase inicial. \\\hline
+2. Planificación & Rediseñar la secuencia de función lineal mediante tres sesiones basadas en calibración e interpretación de datos simulados o experimentales, incorporando tabla--gráfica--ecuación y preguntas escritas obligatorias de interpretación \citep{sawyer2008optimizing}. & Secuencia didáctica escrita, guía de preguntas generadoras y matriz de evaluación formativa compartida desde el inicio. \\\hline
+3. Acción & Implementar trabajo en binas y equipos pequeños; antes de ejecutar cálculos algebraicos, cada equipo anticipa el comportamiento esperado y valida las unidades de la pendiente e intersección; puesta en común dialógica sin anticipar la respuesta docente. & Registro cronológico de implementación, fotografías o copias anonimizadas de hojas de trabajo en equipo. \\\hline
+4. Observación & Documentar sistemáticamente cómo argumentan los estudiantes sus modelos, dónde persisten confusiones entre relación proporcional y afín, y qué apoyos desbloquean la explicación conceptual \citep{eef2021feedback}. & Diario de campo docente, lista de cotejo de argumentación escrita y muestras comparadas antes/después de la intervención. \\\hline
+5. Reflexión & Analizar si las modificaciones ampliaron la capacidad del grupo para justificar unidades, dominio válido y decisiones con el modelo, identificando ajustes necesarios en los andamiajes para el ciclo posterior \citep{restrepo2004investigacion}. & Matriz comparativa de hallazgos, síntesis de obstáculos persistentes y rediseño documentado de la secuencia. \\\hline
 \end{longtable}}
 
-\section{Transferencia profesional y aplicación práctica}
-En mi práctica docente profesional en bachillerato técnico e ingeniería, la aplicación de estos principios demanda superar la didáctica tradicional centrada exclusivamente en la pizarra. En el contexto laboral e industrial, los egresados enfrentan desafíos abiertos que requieren juicio crítico, trabajo en equipo y precisión matemática. 
+\section{Transferencia profesional y fundamento metodológico de la innovación}
+La aplicación de este ciclo en el contexto laboral y formativo de nivel medio superior y universitario transforma la planeación en una hipótesis viva sujeta a verificación ética y empírica. En lugar de adoptar modas didácticas pasajeras, la investigación-acción provee una ruta disciplinada para validar qué estrategias ayudan efectivamente a jóvenes técnicos e ingenieros a pensar matemáticamente \citep{eef2017mathematics}.
 
-Por consiguiente, incorporar situaciones donde los estudiantes argumenten sus decisiones estadísticas o algebraicas fortalece directamente su perfil de egreso. El impacto profesional de esta mirada formativa se manifiesta en la capacidad del alumnado para transferir métodos matemáticos a escenarios reales de mantenimiento, automatización o gestión comunitaria.
+\clearpage
+\section{Conclusiones: la investigación-acción como base de la innovación}
+En conclusión, considero que la investigación-acción educativa constituye el fundamento metodológico indispensable de toda propuesta seria de innovación educativa. Innovar no equivale a introducir cambios vistosos sin seguimiento, sino a modificar intencionalmente las prácticas de enseñanza a partir de problemas diagnosticados con evidencia real, someter dichas modificaciones a observación honesta en el aula y reconstruir el saber pedagógico mediante reflexión crítica compartida \citep{restrepo2004investigacion}.
 
-\section{Conclusiones y síntesis argumentativa}
-En conclusión, el análisis sistemático de los fundamentos del aprendizaje en esta cohorte SD26 confirma que la calidad educativa no es una variable abstracta, sino el resultado de decisiones pedagógicas intencionales, fundamentadas y éticamente comprometidas. Por tanto, el fortalecimiento de la docencia en matemáticas requiere consolidar secuencias didácticas donde convivan el rigor conceptual, el acompañamiento cercano y la participación activa de cada estudiante en su propio proceso de aprendizaje.
+Por tanto, al integrar el análisis conceptual de las cinco preguntas con un diseño operativo aplicable a la comprensión de modelos lineales, esta actividad consolida el puente metodológico entre la reflexión identitaria de bloques previos y las propuestas de innovación para el aprendizaje profundo que se formularán en el Bloque III.
 
-\needspace{5\baselineskip}\section*{Referencias}
-{\setstretch{1.15}\setlength{\parskip}{6pt}
-\par\hangindent=1.27cm\hangafter=1 Delors, J., et al. (1996). \textit{La educación encierra un tesoro}. UNESCO/Santillana.
-\par\hangindent=1.27cm\hangafter=1 Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. En \textit{Innovating to learn, learning to innovate} (pp. 45--65). OECD.
-\par\hangindent=1.27cm\hangafter=1 Scott, C. L. (2015). \textit{El futuro del aprendizaje: ¿Qué tipo de aprendizaje se necesita en el siglo XXI?} UNESCO.
-\par\hangindent=1.27cm\hangafter=1 Secretaría de Educación Pública. (2024). \textit{Plan de Estudio para la educación preescolar, primaria y secundaria. Fase 6}. SEP.
-\par\hangindent=1.27cm\hangafter=1 UNESCO. (2015). \textit{Replantear la educación: ¿Hacia un bien común mundial?} Ediciones UNESCO.
-}
+\clearpage
+\begin{thebibliography}{99}
+\bibitem[Boström y Palm(2023)]{bostrom2023formative} Boström, E., y Palm, T. (2023). Formative assessment practice in mathematics: Teachers' perceptions of prerequisite conditions. \textit{Frontiers in Education}, 8, Artículo 1101192.
+\bibitem[Collin y Quigley(2021)]{eef2021feedback} Collin, J., y Quigley, A. (2021). \textit{Teacher feedback to improve pupil learning}. Education Endowment Foundation.
+\bibitem[Henderson et~al.(2017)]{eef2017mathematics} Henderson, P., Hodgen, J., Foster, C., y Kuchemann, D. (2017). \textit{Improving mathematics in Key Stages 2 and 3}. Education Endowment Foundation.
+\bibitem[Medina Rivilla y Salvador Mata(2009)]{medina2009didactica} Medina Rivilla, A., y Salvador Mata, F. (2009). \textit{Didáctica general} (2.ª ed.). Pearson Educación.
+\bibitem[Pimienta Prieto(2012)]{pimienta2012metodologia} Pimienta Prieto, J. H. (2012). \textit{Metodología constructivista: Guía para la planeación docente} (3.ª ed.). Pearson Educación.
+\bibitem[Quiroga Aguilar y Lara Órdenes(2022)]{quiroga2022aprendizaje} Quiroga Aguilar, L., y Lara Órdenes, E. (2022). El aprendizaje profundo como herramienta para cambio en la visión de aprendizaje de una cultura escolar. \textit{Revista Educación las Américas}, 12(1). \url{https://doi.org/10.35811/rea.v12i1.201}
+\bibitem[Restrepo Gómez(2004)]{restrepo2004investigacion} Restrepo Gómez, B. (2004). La investigación-acción educativa y la construcción de saber pedagógico. \textit{Educación y Educadores}, (7), 45--55.
+\bibitem[Sawyer(2008)]{sawyer2008optimizing} Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. OECD Publishing.
+\bibitem[Star et~al.(2015)]{star2015algebra} Star, J. R., Caronongan, P., Foegen, A., Furgeson, J., Keating, B., Larson, M. R., Lyskawa, J., McCallum, W. G., Porath, J., y Zbiek, R. M. (2015). \textit{Teaching strategies for improving algebra knowledge in middle and high school students}. Institute of Education Sciences.
+\bibitem[UNESCO(2015)]{unesco2015replantear} UNESCO. (2015). \textit{Replantear la educación: ¿Hacia un bien común mundial?} Ediciones UNESCO.
+\end{thebibliography}
 
 \end{document}

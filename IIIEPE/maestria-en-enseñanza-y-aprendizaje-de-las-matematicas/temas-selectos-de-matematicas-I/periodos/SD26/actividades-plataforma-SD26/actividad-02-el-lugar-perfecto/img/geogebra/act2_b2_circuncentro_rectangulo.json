@@ -1,0 +1,125 @@
+{
+  "id": "act2_b2_circuncentro_rectangulo",
+  "title": "Actividad 2b: Circuncentro en triángulo rectángulo",
+  "commands": [
+    {
+      "cmd": "A = (-3, 4)",
+      "ok": true
+    },
+    {
+      "cmd": "B = (-3, -2)",
+      "ok": true
+    },
+    {
+      "cmd": "C = (5, -2)",
+      "ok": true
+    },
+    {
+      "cmd": "tri = Polygon(A, B, C)",
+      "ok": true
+    },
+    {
+      "cmd": "angB = Angle(C, B, A)",
+      "ok": true
+    },
+    {
+      "cmd": "ma = PerpendicularBisector(B, C)",
+      "ok": true
+    },
+    {
+      "cmd": "mb = PerpendicularBisector(A, C)",
+      "ok": true
+    },
+    {
+      "cmd": "mc = PerpendicularBisector(A, B)",
+      "ok": true
+    },
+    {
+      "cmd": "O = Intersect(ma, mb)",
+      "ok": true
+    },
+    {
+      "cmd": "c_circ = Circle(O, A)",
+      "ok": true
+    },
+    {
+      "cmd": "T1 = Text(\"Triángulo rectángulo: O queda EN EL PUNTO MEDIO de la hipotenusa AC\", (-5.0, 6.8))",
+      "ok": true
+    }
+  ],
+  "objects": {
+    "A": {
+      "type": "point",
+      "val_str": "A = (-3, 4)",
+      "def_str": "(-3, 4)"
+    },
+    "B": {
+      "type": "point",
+      "val_str": "B = (-3, -2)",
+      "def_str": "(-3, -2)"
+    },
+    "C": {
+      "type": "point",
+      "val_str": "C = (5, -2)",
+      "def_str": "(5, -2)"
+    },
+    "tri": {
+      "type": "triangle",
+      "val_str": "tri = 24",
+      "def_str": "Polígono A, B, C"
+    },
+    "c": {
+      "type": "segment",
+      "val_str": "c = 6",
+      "def_str": "Segmento [A, B]"
+    },
+    "a": {
+      "type": "segment",
+      "val_str": "a = 8",
+      "def_str": "Segmento [B, C]"
+    },
+    "b": {
+      "type": "segment",
+      "val_str": "b = 10",
+      "def_str": "Segmento [C, A]"
+    },
+    "angB": {
+      "type": "angle",
+      "val_str": "angB = 90°",
+      "def_str": "Ángulo entre C, B, A"
+    },
+    "ma": {
+      "type": "line",
+      "val_str": "ma: x = 1",
+      "def_str": "Mediatriz de BC"
+    },
+    "mb": {
+      "type": "line",
+      "val_str": "mb: -4x + 3y = -1",
+      "def_str": "Mediatriz de AC"
+    },
+    "mc": {
+      "type": "line",
+      "val_str": "mc: y = 1",
+      "def_str": "Mediatriz de AB"
+    },
+    "O": {
+      "type": "point",
+      "val_str": "O = (1, 1)",
+      "def_str": "Intersección de ma, mb"
+    },
+    "c_circ": {
+      "type": "circle",
+      "val_str": "c_circ: (x - 1)² + (y - 1)² = 25",
+      "def_str": "Circunferencia que pasa por A con centro O"
+    },
+    "T1": {
+      "type": "text",
+      "val_str": "Triángulo rectángulo: O queda EN EL PUNTO MEDIO de la hipotenusa AC",
+      "def_str": "Texto(\"Triángulo rectángulo: O queda EN EL PUNTO MEDIO de la hipotenusa AC\", (-5, 6.8))"
+    }
+  },
+  "out_png": "C:\\Users\\Sysx\\Documents\\AulaTeX-Academico\\IIIEPE\\maestria-en-enseñanza-y-aprendizaje-de-las-matematicas\\temas-selectos-de-matematicas-I\\periodos\\SD26\\actividades-plataforma-SD26\\actividad-02-el-lugar-perfecto\\img\\geogebra\\act2_b2_circuncentro_rectangulo.png",
+  "out_ui_png": null,
+  "out_ggb": null
+}

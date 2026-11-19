@@ -1,0 +1,134 @@
+{
+  "id": "act2_c3_incentro_obtusangulo",
+  "title": "Actividad 2c: Bisectrices e incentro I en triángulo obtusángulo",
+  "commands": [
+    {
+      "cmd": "A = (-4, 0)",
+      "ok": true
+    },
+    {
+      "cmd": "B = (5, 0)",
+      "ok": true
+    },
+    {
+      "cmd": "C = (0, -2)",
+      "ok": true
+    },
+    {
+      "cmd": "tri = Polygon(A, B, C)",
+      "ok": true
+    },
+    {
+      "cmd": "bA = AngleBisector(B, A, C)",
+      "ok": true
+    },
+    {
+      "cmd": "bB = AngleBisector(A, B, C)",
+      "ok": true
+    },
+    {
+      "cmd": "bC = AngleBisector(A, C, B)",
+      "ok": true
+    },
+    {
+      "cmd": "I = Intersect(bA, bB)",
+      "ok": true
+    },
+    {
+      "cmd": "pAB = PerpendicularLine(I, Line(A, B))",
+      "ok": true
+    },
+    {
+      "cmd": "T = Intersect(pAB, Line(A, B))",
+      "ok": true
+    },
+    {
+      "cmd": "c_ins = Circle(I, T)",
+      "ok": true
+    },
+    {
+      "cmd": "L1 = Text(\"Obtusángulo: Incentro I SIGUE EN EL INTERIOR\", (-5.5, 3.3))",
+      "ok": true
+    }
+  ],
+  "objects": {
+    "A": {
+      "type": "point",
+      "val_str": "A = (-4, 0)",
+      "def_str": "(-4, 0)"
+    },
+    "B": {
+      "type": "point",
+      "val_str": "B = (5, 0)",
+      "def_str": "(5, 0)"
+    },
+    "C": {
+      "type": "point",
+      "val_str": "C = (0, -2)",
+      "def_str": "(0, -2)"
+    },
+    "tri": {
+      "type": "triangle",
+      "val_str": "tri = 9",
+      "def_str": "Polígono A, B, C"
+    },
+    "c": {
+      "type": "segment",
+      "val_str": "c = 9",
+      "def_str": "Segmento [A, B]"
+    },
+    "a": {
+      "type": "segment",
+      "val_str": "a = 5.39",
+      "def_str": "Segmento [B, C]"
+    },
+    "b": {
+      "type": "segment",
+      "val_str": "b = 4.47",
+      "def_str": "Segmento [C, A]"
+    },
+    "bA": {
+      "type": "line",
+      "val_str": "bA: 0.23x + 0.97y = -0.92",
+      "def_str": "Bisectriz de B, A, C"
+    },
+    "bB": {
+      "type": "line",
+      "val_str": "bB: 0.19x - 0.98y = 0.95",
+      "def_str": "Bisectriz de A, B, C"
+    },
+    "bC": {
+      "type": "line",
+      "val_str": "bC: -1x + 0.04y = -0.08",
+      "def_str": "Bisectriz de A, C, B"
+    },
+    "I": {
+      "type": "point",
+      "val_str": "I = (0.04, -0.95)",
+      "def_str": "Intersección de bA, bB"
+    },
+    "pAB": {
+      "type": "line",
+      "val_str": "pAB: x = 0.04",
+      "def_str": "Recta que pasa por I perpendicular a Recta(A, B)"
+    },
+    "T": {
+      "type": "point",
+      "val_str": "T = (0.04, 0)",
+      "def_str": "Intersección de pAB, Recta(A, B)"
+    },
+    "c_ins": {
+      "type": "circle",
+      "val_str": "c_ins: (x - 0.04)² + (y + 0.95)² = 0.91",
+      "def_str": "Circunferencia que pasa por T con centro I"
+    },
+    "L1": {
+      "type": "text",
+      "val_str": "Obtusángulo: Incentro I SIGUE EN EL INTERIOR",
+      "def_str": "Texto(\"Obtusángulo: Incentro I SIGUE EN EL INTERIOR\", (-5.5, 3.3))"
+    }
+  },
+  "out_png": "C:\\Users\\Sysx\\Documents\\AulaTeX-Academico\\IIIEPE\\maestria-en-enseñanza-y-aprendizaje-de-las-matematicas\\temas-selectos-de-matematicas-I\\periodos\\SD26\\actividades-plataforma-SD26\\actividad-02-el-lugar-perfecto\\img\\geogebra\\act2_c3_incentro_obtusangulo.png",
+  "out_ui_png": null,
+  "out_ggb": null
+}

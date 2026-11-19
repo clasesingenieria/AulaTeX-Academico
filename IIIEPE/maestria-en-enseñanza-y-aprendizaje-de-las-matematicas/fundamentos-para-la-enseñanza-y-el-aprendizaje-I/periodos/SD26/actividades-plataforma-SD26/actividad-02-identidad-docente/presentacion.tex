@@ -1,66 +1,260 @@
-\documentclass[spanish,letterpaper,oneside]{article}
-
-\def\documenttitle {¿Cómo soy como maestro?: Silueta y Reflexión de Identidad Docente}
-\def\documentsubtitle {Presentación Ejecutiva · Cohorte SD26}
-\def\documentsubject {Actividad 2 · Síntesis Visual}
-\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
-\def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
-\def\coursecode {MAEM-SD26}
-
-\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación}
-\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
-\def\universitydepartment {Fundamentos para la enseñanza y el aprendizaje I}
-\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
-\def\universitydepartmentimagecfg {height=1.75cm}
-\def\universitylocation {Monterrey, Nuevo León}
-\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
-\def\studentid {00874}
-\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
-\def\programperiod {2do periodo, septiembre--diciembre de 2026 (SD26)}
-\def\programmodality {Modalidad presencial}
-\def\programshort {MAEM}
-
-\def\authortable {
-  \begin{tabular}{ll}
-    \textbf{Alumno:} & \studentfullname \\
-    Matrícula: & \studentid \\
-    Unidad: & \coursename \\
-    Periodo: & \programperiod
-  \end{tabular}
-}
-
-\input{template}
-
+\documentclass[aspectratio=169,spanish,xcolor=table]{beamer}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+\fi
+\usepackage[spanish,es-tabla,es-noshorthands]{babel}
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
-\usepackage{tikz,longtable,array}
-\usetikzlibrary{arrows.meta,positioning}
+\usepackage{tikz,pgfplots,array,booktabs,ragged2e}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes.geometric,fit}
+
 \definecolor{iiiepeNavy}{HTML}{163B5C}
 \definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
 \definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
 
-\begin{document}\templatePortrait\templatePagecfg\templateFinalcfg\setstretch{1.25}
+\usetheme{default}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{normal text}{fg=iiiepeInk,bg=white}
+\setbeamercolor{structure}{fg=iiiepeNavy}
+\setbeamercolor{frametitle}{fg=white,bg=iiiepeNavy}
+\setbeamercolor{block title}{fg=white,bg=iiiepeBlue}
+\setbeamercolor{block body}{fg=iiiepeInk,bg=iiiepePale}
+\setbeamercolor{item}{fg=iiiepeOrange}
 
-\section*{Síntesis Ejecutiva · Actividad 2}
-\textbf{¿Cómo soy como maestro?: Silueta y Reflexión de Identidad Docente}
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.95cm,dp=0.22cm,leftskip=0.45cm,rightskip=0.45cm]{frametitle}%
+    \usebeamerfont{frametitle}\insertframetitle%
+    \hfill\includegraphics[height=0.58cm]{img/iiiepe/logo-iiiepe-blanco.png}%
+  \end{beamercolorbox}%
+}
 
-\subsection*{1. Diagnóstico y Planteamiento Central}
-La presente exposición aborda la articulación de los marcos pedagógicos contemporáneos en el aula de matemáticas:
-\begin{itemize}
-  \item Eje temático: Construcción reflexiva de la identidad pedagógica mediante una silueta estructurada (fortalezas, áreas de oportunidad, necesidades formativas)..
-  \item Planteamiento central: La enseñanza matemática trasciende el adiestramiento mecánico cuando incorpora la indagación y la justificación argumentada \cite{delors1996educacion,scott2015futuro}.
-\end{itemize}
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.78\paperwidth,ht=0.5cm,dp=0.18cm,leftskip=0.45cm]{frametitle}%
+      \scriptsize\color{white}M. de la Cruz Muñoz · MAEM · Matrícula 00874 · SD26 · Actividad 2 · Sesión 2%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.22\paperwidth,ht=0.5cm,dp=0.18cm,rightskip=0.45cm]{frametitle}%
+      \hfill\scriptsize\color{white}\insertframenumber{} / \inserttotalframenumber%
+    \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
 
-\subsection*{2. Dimensiones y Artefacto de Aplicación}
-{\small\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|p{0.35\linewidth}|p{0.6\linewidth}|}\hline
-\rowcolor{iiiepePale} \textbf{Dimensión} & \textbf{Acción Didáctica en el Aula} \\\hline
-Fundamentación Teórica & Vinculación conceptual con las ciencias del aprendizaje \cite{sawyer2008optimizing}. \\\hline
-Mediación Matemática & Diseño de tareas abiertas con representaciones múltiples. \\\hline
-Impacto Profesional & Transferencia reflexiva al contexto laboral y comunitario. \\\hline
-\end{longtable}}
+\newcommand{\Pill}[2]{%
+  \tikz[baseline=(x.base)]{\node[rounded corners=3pt,fill=#1!14,draw=#1!75!black,thick,inner xsep=6pt,inner ysep=4pt,align=center] (x) {\scriptsize\bfseries #2};}%
+}
 
-\subsection*{3. Conclusión y Veredicto Pedagógico}
-En conclusión, la práctica docente se consolida al articular rigor disciplinar y enfoque humanista. Por tanto, esta propuesta formativa promueve la autonomía y equidad educativa en los estudiantes.
+\title{¿Cómo Soy Como Maestro? Silueta Docente}
+\subtitle{Actividad 2 · Sesión 2 · Módulo 50158}
+\author{Mtro. Martín Jonathan de la Cruz Muñoz · Matrícula 00874}
+\institute{IIIEPE · Maestría en Aprendizaje y Enseñanza de las Matemáticas · Grupo A}
+\date{19 de noviembre de 2026}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[iiiepeNavy] (current page.north west) rectangle ([xshift=10.3cm]current page.south west);
+    \fill[iiiepeBlue] ([xshift=10.3cm]current page.north west) rectangle (current page.south east);
+    \fill[iiiepeOrange] ([xshift=0.8cm,yshift=-6.45cm]current page.north west) rectangle ([xshift=9.3cm,yshift=-6.53cm]current page.north west);
+    \node[anchor=north west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=-1.15cm]current page.north west) {%
+      {\color{iiiepeAqua!45!white}\small\bfseries MAESTRÍA EN APRENDIZAJE Y ENSEÑANZA DE LAS MATEMÁTICAS · SD26\par}%
+      \vspace{0.35cm}
+      {\color{white}\Large\bfseries \inserttitle\par}%
+      \vspace{0.25cm}
+      {\color{white!90}\normalsize \insertsubtitle\par}%
+    };
+    \node[anchor=south west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=0.75cm]current page.south west) {%
+      {\color{white}\normalsize\bfseries Mtro. Martín Jonathan de la Cruz Muñoz\par}%
+      {\color{white!85}\scriptsize Matrícula 00874 · martin.delacruz@campus.iiiepe.edu.mx\par}%
+      {\color{iiiepeAqua!35!white}\scriptsize Monterrey, Nuevo León · 19 de noviembre de 2026\par}%
+    };
+    \node[anchor=center,text width=5.0cm,align=center] at ([xshift=13.15cm,yshift=-4.5cm]current page.north west) {%
+      \includegraphics[width=3.6cm]{img/iiiepe/logo-iiiepe-blanco.png}\par\vspace{0.45cm}%
+      {\color{white}\large\bfseries IIIEPE\par}%
+      \vspace{0.1cm}%
+      {\color{white!85}\scriptsize Fundamentos para la enseñanza\\y el aprendizaje I\par}%
+    };
+  \end{tikzpicture}
+\end{frame}
+\begin{frame}{Propósito de la Sesión 2: ¿Cómo Soy Como Maestro?}
+  \begin{block}{Tesis de identidad docente}
+    La docencia matemática madura articula la precisión técnica heredada de la ingeniería con la sensibilidad humanista, el diálogo respetuoso y la mediación equitativa \textbf{(Medina Rivilla y Salvador Mata, 2009; UNESCO, 2015)}.
+  \end{block}
+  \vspace{0.3cm}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+      \textbf{\color{iiiepeNavy}Contexto de práctica:}
+      \begin{itemize}\small
+        \item Preparatoria técnica (CONALEP y CECyTE: mantenimiento y mecatrónica).
+        \item Docencia en ingeniería (Mecánica, Sistemas e Industrial).
+      \end{itemize}
+    \column{0.48\textwidth}
+      \textbf{\color{iiiepeBlue}Ejes del ejercicio reflexivo:}
+      \begin{itemize}\small
+        \item Cinco preguntas de autoindagación docente.
+        \item Silueta docente: centro, lado izquierdo y lado derecho.
+        \item Compromisos situados de mejora continua.
+      \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Cinco Preguntas de Reflexión Inicial (1--3)}
+  \begin{itemize}\small
+    \item \textbf{\color{iiiepeNavy}1. ¿Cómo describes tu forma de enseñar?} En transición desde el orden procedimental ingenieril hacia una mediación dialógica centrada en comprender por qué funciona un modelo.
+    \vspace{0.2cm}
+    \item \textbf{\color{iiiepeBlue}2. ¿Qué estrategias utilizas con mayor frecuencia?} Situaciones problema de taller, verificación dimensional, contraste tabla--gráfica--álgebra y discusión en equipos \textbf{(Pimienta Prieto, 2012)}.
+    \vspace{0.2cm}
+    \item \textbf{\color{iiiepeAqua!75!black}3. Principales fortalezas:} Dominio aplicado en contextos industriales, diseño visual estructurado y trato respetuoso hacia cada estudiante.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Cinco Preguntas de Reflexión Inicial (4--5)}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+      \begin{block}{4. Aspectos por mejorar}
+        \begin{itemize}\scriptsize
+          \item Esperar más tiempo antes de resolver la dificultad en el pizarrón para favorecer la autonomía estudiantil.
+          \item Incorporar evaluación formativa continua con criterios claros desde el inicio.
+          \item Escalonar andamiajes ante trayectorias matemáticas heterogéneas \textbf{(Sawyer, 2008)}.
+        \end{itemize}
+      \end{block}
+    \column{0.48\textwidth}
+      \begin{block}{5. Toma de decisiones en clase}
+        \begin{itemize}\scriptsize
+          \item Pasar de intuición apresurada («repetir otro ejercicio») a diagnóstico conceptual del error.
+          \item Usar evidencias breves de desempeño antes de cerrar un tema \textbf{(Collin y Quigley, 2021)}.
+          \item Ajustar explicaciones según preguntas reales del grupo.
+        \end{itemize}
+      \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Silueta Docente: Esquema Integrador}
+  \centering
+  \begin{tikzpicture}[font=\tiny, scale=0.80, transform shape]
+    \draw[fill=iiiepePale,draw=iiiepeNavy,very thick] (0,2.55) circle (0.55cm);
+    \node[align=center,font=\tiny\bfseries,iiiepeNavy] at (0,2.55) {RIGOR\\Y ÉTICA};
+    \draw[fill=iiiepeBlue!10,draw=iiiepeNavy,very thick,rounded corners=8pt]
+      (-0.25,2.0) -- (0.25,2.0) -- (0.95,1.72) -- (0.85,0.45) -- (0.65,0.45) -- (0.60,1.35)
+      -- (0.55,-1.25) -- (0.12,-1.25) -- (0.04,-0.08) -- (-0.04,-0.08) -- (-0.12,-1.25) -- (-0.55,-1.25)
+      -- (-0.60,1.35) -- (-0.65,0.45) -- (-0.85,0.45) -- (-0.95,1.72) -- cycle;
+    \node[draw=iiiepeNavy,fill=white,rounded corners=2pt,text width=1.65cm,align=center,inner sep=3pt] at (0,1.25)
+      {\textbf{CENTRO}\\Rigor · Diálogo · Dignidad};
+
+    \node[draw=iiiepeNavy,fill=iiiepePale,rounded corners=3pt,text width=5.0cm,align=left,inner sep=5pt,anchor=north east] (l1) at (-1.35,2.9)
+      {\textbf{\color{iiiepeNavy}IZQUIERDO · Fortalezas situadas:}\\
+       Modelación en taller (calibración, costos) y análisis dimensional con respeto a las preguntas del grupo.};
+    \node[draw=iiiepeOrange!90!black,fill=iiiepeWarm,rounded corners=3pt,text width=5.0cm,align=left,inner sep=5pt,anchor=north east] (l2) at (-1.35,0.6)
+      {\textbf{\color{iiiepeOrange!85!black}IZQUIERDO · Áreas de oportunidad:}\\
+       Resolver demasiado pronto por presión de tiempo; fortalecer retroalimentación formativa continua.};
+
+    \node[draw=iiiepeBlue,fill=iiiepePale,rounded corners=3pt,text width=5.0cm,align=left,inner sep=5pt,anchor=north west] (r1) at (1.35,2.9)
+      {\textbf{\color{iiiepeBlue}DERECHO · Necesidades de formación:}\\
+       Andamiaje para aprendizaje profundo, evaluación formativa e investigación-acción docente.};
+    \node[draw=iiiepeAqua!80!black,fill=iiiepeMint,rounded corners=3pt,text width=5.0cm,align=left,inner sep=5pt,anchor=north west] (r2) at (1.35,0.6)
+      {\textbf{\color{iiiepeAqua!75!black}DERECHO · Bibliografía por explorar:}\\
+       Sawyer (2008), Meirieu (2020), Restrepo Gómez (2004), Bronfenbrenner y Morris (2006).};
+
+    \draw[->,thick,iiiepeNavy] (l1.east) -- (-0.75,1.65);
+    \draw[->,thick,iiiepeOrange!90!black] (l2.east) -- (-0.58,-0.25);
+    \draw[->,thick,iiiepeBlue] (0.75,1.65) -- (r1.west);
+    \draw[->,thick,iiiepeAqua!80!black] (0.58,-0.25) -- (r2.west);
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Centro de la Silueta: Quién Soy Como Docente}
+  \begin{block}{Síntesis de identidad profesional}
+    «Docente de perfil técnico y de ingeniería en tránsito hacia una práctica humanista que concibe el rigor matemático como herramienta de comprensión compartida y equidad.»
+  \end{block}
+  \vspace{0.35cm}
+  \centering
+  \Pill{iiiepeNavy}{Rigor conceptual} \hspace{0.3cm}
+  \Pill{iiiepeBlue}{Diálogo horizontal} \hspace{0.3cm}
+  \Pill{iiiepeAqua!75!black}{Dignidad e inclusión}
+  \vspace{0.35cm}
+  \begin{itemize}\small
+    \item Respeto profundo por el proceso intelectual de jóvenes de bachillerato técnico y adultos en ingeniería.
+    \item Convicción de que el error es información didáctica valiosa y no motivo de exclusión.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Lado Izquierdo: Fortalezas y Áreas de Oportunidad Situadas}
+  \scriptsize\renewcommand{\arraystretch}{1.35}
+  \begin{tabular}{p{3.0cm}p{5.0cm}p{5.0cm}}
+    \toprule
+    \rowcolor{iiiepePale} \textbf{Eje} & \textbf{Situación real de aula} & \textbf{Lectura pedagógica} \\
+    \midrule
+    Fortaleza: Vinculación técnica & Lectura de gráficas y modelos lineales con sensores reales o tarifas de mantenimiento. & Otorga significado tangible a pendientes e intersecciones. \\
+    Fortaleza: Escucha respetuosa & Análisis colectivo de errores dimensionales en pizarrón sin ridiculizar. & Disminuye ansiedad y habilita participación. \\
+    Oportunidad: Cesión de control & Intervenir anticipadamente en el despeje por premura del horario escolar. & Limita la construcción autónoma de argumentos \textbf{(Sawyer, 2008)}. \\
+    Oportunidad: Seguimiento continuo & Concentrar evaluación en exámenes de cierre de unidad. & Demanda evidencias diagnósticas frecuentes \textbf{(Boström y Palm, 2023)}. \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Lado Derecho: Necesidades de Formación y Bibliografía}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+      \begin{block}{Necesidades prioritarias}
+        \begin{itemize}\scriptsize
+          \item \textbf{Andamiaje sin suplantación:} Aprender a formular preguntas detonadoras que mantengan el reto cognitivo.
+          \item \textbf{Evaluación para aprender:} Incorporar devoluciones formativas antes de calificar \textbf{(Collin y Quigley, 2021)}.
+          \item \textbf{Indagación situada:} Sistematizar diarios y producciones estudiantiles como evidencia docente.
+        \end{itemize}
+      \end{block}
+    \column{0.48\textwidth}
+      \begin{block}{Autores que orientan mi ruta}
+        \begin{itemize}\scriptsize
+          \item \textbf{Sawyer (2008):} Ciencias del aprendizaje profundo.
+          \item \textbf{Meirieu (2020):} Sentido colectivo y democrático del aula.
+          \item \textbf{Restrepo Gómez (2004):} Investigación-acción pedagógica.
+          \item \textbf{Bronfenbrenner y Morris (2006):} Contextos y procesos proximales.
+        \end{itemize}
+      \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Compromisos Concretos en la Práctica Matemática}
+  \begin{itemize}\normalsize
+    \item \textbf{Regla de espera dialógica:} Reservar tiempo real para que equipos formulen conjeturas antes de validar procedimientos en el pizarrón.
+    \item \textbf{Criterios transparentes:} Socializar metas de argumentación matemática desde el inicio de cada secuencia.
+    \item \textbf{Andamiaje escalonado:} Ofrecer representaciones concretas y preguntas guía a quienes llegan con rezago operativo sin rebajar la meta conceptual.
+    \item \textbf{Registro reflexivo:} Documentar obstáculos frecuentes de clase para investigar mi propia enseñanza.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusiones de la Sesión 2}
+  \begin{itemize}\normalsize
+    \item La reflexión crítica revela que nuestras creencias implícitas gobiernan las decisiones rápidas dentro del aula.
+    \item Mi fortaleza en el dominio técnico e ingenieril se potencia cuando se integra con escucha activa, retroalimentación descriptiva y equidad.
+    \item La silueta docente funciona como línea base evaluable para contrastar avances al cierre de la cohorte SD26.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Referencias Principales (APA 7)}
+  \scriptsize\setlength{\parskip}{5pt}
+  \begin{itemize}
+    \item Boström, E., y Palm, T. (2023). Formative assessment practice in mathematics. \textit{Frontiers in Education}, 8, 1101192.
+    \item Bronfenbrenner, U., y Morris, P. A. (2006). The bioecological model of human development. En \textit{Handbook of child psychology} (pp. 793--828). Wiley.
+    \item Collin, J., y Quigley, A. (2021). \textit{Teacher feedback to improve pupil learning}. Education Endowment Foundation.
+    \item Medina Rivilla, A., y Salvador Mata, F. (2009). \textit{Didáctica general} (2.ª ed.). Pearson.
+    \item Meirieu, P. (2020). ``La escuela después''... ¿Con la pedagogía de antes? \textit{MCEP}.
+    \item Restrepo Gómez, B. (2004). La investigación-acción educativa y la construcción de saber pedagógico. \textit{Educación y Educadores}, (7), 45--55.
+    \item Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. OECD.
+  \end{itemize}
+\end{frame}
 
 \end{document}

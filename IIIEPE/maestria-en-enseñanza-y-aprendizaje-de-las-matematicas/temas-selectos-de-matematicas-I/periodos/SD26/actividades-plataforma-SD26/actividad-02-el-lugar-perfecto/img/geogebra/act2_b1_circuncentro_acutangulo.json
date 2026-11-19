@@ -1,0 +1,116 @@
+{
+  "id": "act2_b1_circuncentro_acutangulo",
+  "title": "Actividad 2b: Circuncentro en triángulo acutángulo",
+  "commands": [
+    {
+      "cmd": "A = (1, 6)",
+      "ok": true
+    },
+    {
+      "cmd": "B = (-3, -2)",
+      "ok": true
+    },
+    {
+      "cmd": "C = (6, 1)",
+      "ok": true
+    },
+    {
+      "cmd": "tri = Polygon(A, B, C)",
+      "ok": true
+    },
+    {
+      "cmd": "ma = PerpendicularBisector(B, C)",
+      "ok": true
+    },
+    {
+      "cmd": "mb = PerpendicularBisector(A, C)",
+      "ok": true
+    },
+    {
+      "cmd": "mc = PerpendicularBisector(A, B)",
+      "ok": true
+    },
+    {
+      "cmd": "O = Intersect(ma, mb)",
+      "ok": true
+    },
+    {
+      "cmd": "c_circ = Circle(O, A)",
+      "ok": true
+    },
+    {
+      "cmd": "T1 = Text(\"Triángulo acutángulo: O queda EN EL INTERIOR\", (-5.0, 6.8))",
+      "ok": true
+    }
+  ],
+  "objects": {
+    "A": {
+      "type": "point",
+      "val_str": "A = (1, 6)",
+      "def_str": "(1, 6)"
+    },
+    "B": {
+      "type": "point",
+      "val_str": "B = (-3, -2)",
+      "def_str": "(-3, -2)"
+    },
+    "C": {
+      "type": "point",
+      "val_str": "C = (6, 1)",
+      "def_str": "(6, 1)"
+    },
+    "tri": {
+      "type": "triangle",
+      "val_str": "tri = 30",
+      "def_str": "Polígono A, B, C"
+    },
+    "c": {
+      "type": "segment",
+      "val_str": "c = 8.94",
+      "def_str": "Segmento [A, B]"
+    },
+    "a": {
+      "type": "segment",
+      "val_str": "a = 9.49",
+      "def_str": "Segmento [B, C]"
+    },
+    "b": {
+      "type": "segment",
+      "val_str": "b = 7.07",
+      "def_str": "Segmento [C, A]"
+    },
+    "ma": {
+      "type": "line",
+      "val_str": "ma: -3x - y = -4",
+      "def_str": "Mediatriz de BC"
+    },
+    "mb": {
+      "type": "line",
+      "val_str": "mb: -x + y = 0",
+      "def_str": "Mediatriz de AC"
+    },
+    "mc": {
+      "type": "line",
+      "val_str": "mc: x + 2y = 3",
+      "def_str": "Mediatriz de AB"
+    },
+    "O": {
+      "type": "point",
+      "val_str": "O = (1, 1)",
+      "def_str": "Intersección de ma, mb"
+    },
+    "c_circ": {
+      "type": "circle",
+      "val_str": "c_circ: (x - 1)² + (y - 1)² = 25",
+      "def_str": "Circunferencia que pasa por A con centro O"
+    },
+    "T1": {
+      "type": "text",
+      "val_str": "Triángulo acutángulo: O queda EN EL INTERIOR",
+      "def_str": "Texto(\"Triángulo acutángulo: O queda EN EL INTERIOR\", (-5, 6.8))"
+    }
+  },
+  "out_png": "C:\\Users\\Sysx\\Documents\\AulaTeX-Academico\\IIIEPE\\maestria-en-enseñanza-y-aprendizaje-de-las-matematicas\\temas-selectos-de-matematicas-I\\periodos\\SD26\\actividades-plataforma-SD26\\actividad-02-el-lugar-perfecto\\img\\geogebra\\act2_b1_circuncentro_acutangulo.png",
+  "out_ui_png": null,
+  "out_ggb": null
+}

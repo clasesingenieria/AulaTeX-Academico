@@ -1,66 +1,233 @@
-\documentclass[spanish,letterpaper,oneside]{article}
-
-\def\documenttitle {Dimensiones del Aprendizaje en el Siglo XXI: Infografía y Análisis Comparativo}
-\def\documentsubtitle {Presentación Ejecutiva · Cohorte SD26}
-\def\documentsubject {Actividad 3 · Síntesis Visual}
-\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
-\def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
-\def\coursecode {MAEM-SD26}
-
-\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación}
-\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
-\def\universitydepartment {Fundamentos para la enseñanza y el aprendizaje I}
-\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
-\def\universitydepartmentimagecfg {height=1.75cm}
-\def\universitylocation {Monterrey, Nuevo León}
-\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
-\def\studentid {00874}
-\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
-\def\programperiod {2do periodo, septiembre--diciembre de 2026 (SD26)}
-\def\programmodality {Modalidad presencial}
-\def\programshort {MAEM}
-
-\def\authortable {
-  \begin{tabular}{ll}
-    \textbf{Alumno:} & \studentfullname \\
-    Matrícula: & \studentid \\
-    Unidad: & \coursename \\
-    Periodo: & \programperiod
-  \end{tabular}
-}
-
-\input{template}
-
+\documentclass[aspectratio=169,spanish,xcolor=table]{beamer}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+\fi
+\usepackage[spanish,es-tabla,es-noshorthands]{babel}
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
-\usepackage{tikz,longtable,array}
-\usetikzlibrary{arrows.meta,positioning}
+\usepackage{tikz,pgfplots,array,booktabs,ragged2e}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes.geometric,fit}
+
 \definecolor{iiiepeNavy}{HTML}{163B5C}
 \definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
 \definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
 
-\begin{document}\templatePortrait\templatePagecfg\templateFinalcfg\setstretch{1.25}
+\usetheme{default}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{normal text}{fg=iiiepeInk,bg=white}
+\setbeamercolor{structure}{fg=iiiepeNavy}
+\setbeamercolor{frametitle}{fg=white,bg=iiiepeNavy}
+\setbeamercolor{block title}{fg=white,bg=iiiepeBlue}
+\setbeamercolor{block body}{fg=iiiepeInk,bg=iiiepePale}
+\setbeamercolor{item}{fg=iiiepeOrange}
 
-\section*{Síntesis Ejecutiva · Actividad 3}
-\textbf{Dimensiones del Aprendizaje en el Siglo XXI: Infografía y Análisis Comparativo}
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.95cm,dp=0.22cm,leftskip=0.45cm,rightskip=0.45cm]{frametitle}%
+    \usebeamerfont{frametitle}\insertframetitle%
+    \hfill\includegraphics[height=0.58cm]{img/iiiepe/logo-iiiepe-blanco.png}%
+  \end{beamercolorbox}%
+}
 
-\subsection*{1. Diagnóstico y Planteamiento Central}
-La presente exposición aborda la articulación de los marcos pedagógicos contemporáneos en el aula de matemáticas:
-\begin{itemize}
-  \item Eje temático: Articulación de los cuatro pilares del aprendizaje (conocer, hacer, ser y convivir) con la práctica matemática..
-  \item Planteamiento central: La enseñanza matemática trasciende el adiestramiento mecánico cuando incorpora la indagación y la justificación argumentada \cite{delors1996educacion,scott2015futuro}.
-\end{itemize}
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.78\paperwidth,ht=0.5cm,dp=0.18cm,leftskip=0.45cm]{frametitle}%
+      \scriptsize\color{white}M. de la Cruz Muñoz · MAEM · Matrícula 00874 · SD26 · Actividad 3 · Infografía%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.22\paperwidth,ht=0.5cm,dp=0.18cm,rightskip=0.45cm]{frametitle}%
+      \hfill\scriptsize\color{white}\insertframenumber{} / \inserttotalframenumber%
+    \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
 
-\subsection*{2. Dimensiones y Artefacto de Aplicación}
-{\small\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|p{0.35\linewidth}|p{0.6\linewidth}|}\hline
-\rowcolor{iiiepePale} \textbf{Dimensión} & \textbf{Acción Didáctica en el Aula} \\\hline
-Fundamentación Teórica & Vinculación conceptual con las ciencias del aprendizaje \cite{sawyer2008optimizing}. \\\hline
-Mediación Matemática & Diseño de tareas abiertas con representaciones múltiples. \\\hline
-Impacto Profesional & Transferencia reflexiva al contexto laboral y comunitario. \\\hline
-\end{longtable}}
+\newcommand{\Pill}[2]{%
+  \tikz[baseline=(x.base)]{\node[rounded corners=3pt,fill=#1!14,draw=#1!75!black,thick,inner xsep=6pt,inner ysep=4pt,align=center] (x) {\scriptsize\bfseries #2};}%
+}
 
-\subsection*{3. Conclusión y Veredicto Pedagógico}
-En conclusión, la práctica docente se consolida al articular rigor disciplinar y enfoque humanista. Por tanto, esta propuesta formativa promueve la autonomía y equidad educativa en los estudiantes.
+\title{Repensar la Escuela: Aprendizaje Profundo}
+\subtitle{Actividad 3 · Infografía y Análisis (Módulo 51440)}
+\author{Mtro. Martín Jonathan de la Cruz Muñoz · Matrícula 00874}
+\institute{IIIEPE · Maestría en Aprendizaje y Enseñanza de las Matemáticas · Grupo A}
+\date{19 de noviembre de 2026}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[iiiepeNavy] (current page.north west) rectangle ([xshift=10.3cm]current page.south west);
+    \fill[iiiepeBlue] ([xshift=10.3cm]current page.north west) rectangle (current page.south east);
+    \fill[iiiepeOrange] ([xshift=0.8cm,yshift=-6.45cm]current page.north west) rectangle ([xshift=9.3cm,yshift=-6.53cm]current page.north west);
+    \node[anchor=north west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=-1.15cm]current page.north west) {%
+      {\color{iiiepeAqua!45!white}\small\bfseries MAESTRÍA EN APRENDIZAJE Y ENSEÑANZA DE LAS MATEMÁTICAS · SD26\par}%
+      \vspace{0.35cm}
+      {\color{white}\Large\bfseries \inserttitle\par}%
+      \vspace{0.25cm}
+      {\color{white!90}\normalsize \insertsubtitle\par}%
+    };
+    \node[anchor=south west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=0.75cm]current page.south west) {%
+      {\color{white}\normalsize\bfseries Mtro. Martín Jonathan de la Cruz Muñoz\par}%
+      {\color{white!85}\scriptsize Matrícula 00874 · martin.delacruz@campus.iiiepe.edu.mx\par}%
+      {\color{iiiepeAqua!35!white}\scriptsize Monterrey, Nuevo León · 19 de noviembre de 2026\par}%
+    };
+    \node[anchor=center,text width=5.0cm,align=center] at ([xshift=13.15cm,yshift=-4.5cm]current page.north west) {%
+      \includegraphics[width=3.6cm]{img/iiiepe/logo-iiiepe-blanco.png}\par\vspace{0.45cm}%
+      {\color{white}\large\bfseries IIIEPE\par}%
+      \vspace{0.1cm}%
+      {\color{white!85}\scriptsize Fundamentos para la enseñanza\\y el aprendizaje I\par}%
+    };
+  \end{tikzpicture}
+\end{frame}
+\begin{frame}{Repensar la Escuela: Marco Integrador}
+  \begin{block}{Tesis convergente (Meirieu, 2020; Sawyer, 2008)}
+    La escuela solo supera la reproducción desigual y mecánica cuando transforma el aula en una comunidad de indagación guiada hacia el aprendizaje profundo, donde la tecnología sirve a la mediación pedagógica y no la sustituye.
+  \end{block}
+  \vspace{0.35cm}
+  \centering
+  \Pill{iiiepeNavy}{Diagnóstico crítico} \hspace{0.2cm}
+  \Pill{iiiepeBlue}{Cambio de paradigma} \hspace{0.2cm}
+  \Pill{iiiepeAqua!75!black}{5 Principios cognitivos} \hspace{0.2cm}
+  \Pill{iiiepeOrange!85!black}{Equidad y comunidad}
+\end{frame}
+
+\begin{frame}{Diagnóstico Compartido: Meirieu vs Sawyer}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+      \begin{block}{Philippe Meirieu (2020)}
+        \begin{itemize}\scriptsize
+          \item Critica la brecha entre el discurso pedagógico renovador y el regreso acrítico a la rutina.
+          \item La llamada «normalidad» escolar reproducía desigualdades educativas de origen.
+          \item Alertar contra la fragmentación del aprendizaje en consumo individual ante pantallas.
+        \end{itemize}
+      \end{block}
+    \column{0.48\textwidth}
+      \begin{block}{R. Keith Sawyer (2008)}
+        \begin{itemize}\scriptsize
+          \item La escuela estándar mantiene una estructura heredada de la producción industrial en serie.
+          \item Prioriza hechos memorísticos, procedimientos aislados y medición descontextualizada.
+          \item Es incapaz de formar pensamiento conceptual transferible para la sociedad del conocimiento.
+        \end{itemize}
+      \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Cambio de Paradigma Educativo}
+  \scriptsize\renewcommand{\arraystretch}{1.4}
+  \begin{tabular}{p{2.6cm}p{5.2cm}p{5.2cm}}
+    \toprule
+    \rowcolor{iiiepePale} \textbf{Dimensión} & \textbf{Modelo tradicional (era industrial)} & \textbf{Nuevo enfoque (aprendizaje profundo)} \\
+    \midrule
+    Conocimiento & Datos fragmentados y algoritmos por repetición. & Red conceptual articulada con sentido y transferencia. \\
+    Estudiante & Receptor obediente en trabajo aislado. & Sujeto activo que indaga, conjetura, colabora y reflexiona. \\
+    Mediación docente & Transmisor de respuestas únicas en el pizarrón. & Diseñador experto de problemas auténticos y andamiajes. \\
+    Evaluación & Prueba puntual de recuerdo memorístico. & Evidencias auténticas de argumentación y comprensión. \\
+    Equidad & Trato homogéneo que oculta desigualdades previas. & Derecho efectivo mediante apoyos accesibles diferenciados. \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Aprender Juntos: Lo Común + Lo Singular}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+      \begin{block}{Yo + Nosotros (Meirieu, 2020)}
+        \scriptsize La escuela existe para hacer sociedad. No basta con acumular aprendizajes individuales: cada estudiante necesita construir su voz singular dentro de normas, preguntas y saberes compartidos colectivamente.
+      \end{block}
+    \column{0.48\textwidth}
+      \begin{block}{Conocimiento distribuido (Sawyer, 2008)}
+        \scriptsize Las ciencias del aprendizaje demuestran que defender hipótesis ante pares, contrastar representaciones y distribuir roles cognitivos estabiliza la comprensión matemática a largo plazo.
+      \end{block}
+  \end{columns}
+  \vspace{0.35cm}
+  \centering
+  \Pill{iiiepeNavy}{Lo común: lenguaje y rigor} \hspace{0.4cm} $\Longleftrightarrow$ \hspace{0.4cm} \Pill{iiiepeOrange!85!black}{Lo singular: ritmo y voz propia}
+\end{frame}
+
+\begin{frame}{Cinco Condiciones del Aprendizaje Profundo (Sawyer, 2008)}
+  \centering
+  \begin{tikzpicture}[
+    c/.style={draw=iiiepeBlue,fill=iiiepePale,rounded corners=4pt,text width=2.4cm,minimum height=2.2cm,align=center,font=\scriptsize},
+    arr/.style={->,thick,iiiepeNavy,>=Latex}
+  ]
+    \node[c] (c1) {\textbf{1. Saberes previos}\\Partir de concepciones reales.};
+    \node[c,right=0.35cm of c1] (c2) {\textbf{2. Problemas auténticos}\\Retos con significado real.};
+    \node[c,right=0.35cm of c2] (c3) {\textbf{3. Andamiaje}\\Apoyo graduado que se retira.};
+    \node[c,right=0.35cm of c3] (c4) {\textbf{4. Metacognición}\\Verbalizar el porqué y el error.};
+    \node[c,right=0.35cm of c4] (c5) {\textbf{5. Transferencia}\\Aplicar en contextos inéditos.};
+    \draw[arr] (c1) -- (c2);
+    \draw[arr] (c2) -- (c3);
+    \draw[arr] (c3) -- (c4);
+    \draw[arr] (c4) -- (c5);
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Rol Docente, Tecnología y Equidad}
+  \begin{itemize}\normalsize
+    \item \textbf{\color{iiiepeNavy}Docente insustituible:} Ningún tutorial automático reemplaza la escucha ética ni el acompañamiento experto ante la duda genuina \textbf{(Meirieu, 2020)}.
+    \item \textbf{\color{iiiepeBlue}Tensión tecnológica:} La herramienta digital solo aporta valor si amplía la exploración gráfica, la modelación o el diálogo; de lo contrario, automatiza la pasividad.
+    \item \textbf{\color{iiiepeAqua!75!black}Equidad efectiva:} Garantizar el derecho a aprender exige andamiajes diversificados y altas expectativas para todo el grupo.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Evaluación Auténtica en Matemáticas}
+  \begin{block}{De medir recuerdo a evidenciar comprensión}
+    Sustituir reactivos aislados por tareas donde el alumnado explique el significado de parámetros, contraste modelos alternativos y justifique límites físicos o contextuales de sus resultados.
+  \end{block}
+  \vspace{0.3cm}
+  \begin{itemize}\small
+    \item Integrar listas de valoración transparentes enfocadas en argumento, representación y validez.
+    \item Permitir segunda oportunidad tras retroalimentación descriptiva centrada en conceptos.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Transferencia al Aula Técnica e Ingeniería}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+      \textbf{\color{iiiepeOrange!85!black}Práctica habitual por superar:}
+      \begin{itemize}\scriptsize
+        \item Exposición única en el pizarrón de fórmulas de derivación, sistemas o funciones.
+        \item Listas homogéneas de 30 ejercicios repetitivos.
+        \item Calificación basada solo en resultado numérico final.
+      \end{itemize}
+    \column{0.48\textwidth}
+      \textbf{\color{iiiepeNavy}Propuesta transformadora:}
+      \begin{itemize}\scriptsize
+        \item Problemas técnicos auténticos (calibración, costos, tolerancias).
+        \item Trabajo colaborativo con puesta en común obligatoria.
+        \item Justificación escrita de supuestos, unidades y alcance.
+      \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Conclusiones de la Actividad 3}
+  \begin{itemize}\normalsize
+    \item Meirieu y Sawyer coinciden en que el cambio real pasa por transformar el vínculo pedagógico, no solo los instrumentos de clase.
+    \item El aprendizaje profundo es simultáneamente una exigencia cognitiva (comprender y transferir) y un compromiso ético-democrático (no excluir a nadie).
+    \item En matemáticas aplicadas, repensar la escuela implica convertir cada sesión en un laboratorio dialógico de argumentación y sentido.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Referencias y Créditos}
+  \scriptsize\setlength{\parskip}{6pt}
+  \begin{itemize}
+    \item Henderson, P., et al. (2017). \textit{Improving mathematics in Key Stages 2 and 3}. EEF.
+    \item Meirieu, P. (2020). ``La escuela después''... ¿Con la pedagogía de antes? \textit{MCEP}.
+    \item Pimienta Prieto, J. H. (2008). \textit{Evaluación de los aprendizajes}. Pearson.
+    \item Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. En \textit{Innovating to learn, learning to innovate} (pp. 45--65). OECD.
+    \item UNESCO. (2015). \textit{Replantear la educación: ¿Hacia un bien común mundial?} UNESCO.
+  \end{itemize}
+  \vspace{0.3cm}
+  \textbf{Créditos:} Mtro. Martín Jonathan de la Cruz Muñoz · Matrícula 00874 · MAEM IIIEPE · SD26.
+\end{frame}
 
 \end{document}

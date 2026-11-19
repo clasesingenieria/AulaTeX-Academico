@@ -1,66 +1,216 @@
-\documentclass[spanish,letterpaper,oneside]{article}
-
-\def\documenttitle {El Aprendizaje Profundo y las Ciencias del Aprendizaje en Matemáticas}
-\def\documentsubtitle {Presentación Ejecutiva · Cohorte SD26}
-\def\documentsubject {Actividad 5 · Síntesis Visual}
-\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
-\def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
-\def\coursecode {MAEM-SD26}
-
-\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación}
-\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
-\def\universitydepartment {Fundamentos para la enseñanza y el aprendizaje I}
-\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
-\def\universitydepartmentimagecfg {height=1.75cm}
-\def\universitylocation {Monterrey, Nuevo León}
-\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
-\def\studentid {00874}
-\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
-\def\programperiod {2do periodo, septiembre--diciembre de 2026 (SD26)}
-\def\programmodality {Modalidad presencial}
-\def\programshort {MAEM}
-
-\def\authortable {
-  \begin{tabular}{ll}
-    \textbf{Alumno:} & \studentfullname \\
-    Matrícula: & \studentid \\
-    Unidad: & \coursename \\
-    Periodo: & \programperiod
-  \end{tabular}
-}
-
-\input{template}
-
+\documentclass[aspectratio=169,spanish,xcolor=table]{beamer}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+\fi
+\usepackage[spanish,es-tabla,es-noshorthands]{babel}
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
-\usepackage{tikz,longtable,array}
-\usetikzlibrary{arrows.meta,positioning}
+\usepackage{tikz,pgfplots,array,booktabs,ragged2e}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes.geometric,fit}
+
 \definecolor{iiiepeNavy}{HTML}{163B5C}
 \definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
 \definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
 
-\begin{document}\templatePortrait\templatePagecfg\templateFinalcfg\setstretch{1.25}
+\usetheme{default}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{normal text}{fg=iiiepeInk,bg=white}
+\setbeamercolor{structure}{fg=iiiepeNavy}
+\setbeamercolor{frametitle}{fg=white,bg=iiiepeNavy}
+\setbeamercolor{block title}{fg=white,bg=iiiepeBlue}
+\setbeamercolor{block body}{fg=iiiepeInk,bg=iiiepePale}
+\setbeamercolor{item}{fg=iiiepeOrange}
 
-\section*{Síntesis Ejecutiva · Actividad 5}
-\textbf{El Aprendizaje Profundo y las Ciencias del Aprendizaje en Matemáticas}
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.95cm,dp=0.22cm,leftskip=0.45cm,rightskip=0.45cm]{frametitle}%
+    \usebeamerfont{frametitle}\insertframetitle%
+    \hfill\includegraphics[height=0.58cm]{img/iiiepe/logo-iiiepe-blanco.png}%
+  \end{beamercolorbox}%
+}
 
-\subsection*{1. Diagnóstico y Planteamiento Central}
-La presente exposición aborda la articulación de los marcos pedagógicos contemporáneos en el aula de matemáticas:
-\begin{itemize}
-  \item Eje temático: Fundamentación conceptual del aprendizaje profundo frente al aprendizaje superficial o memorístico, integrando la perspectiva de Sawyer (2008)..
-  \item Planteamiento central: La enseñanza matemática trasciende el adiestramiento mecánico cuando incorpora la indagación y la justificación argumentada \cite{delors1996educacion,scott2015futuro}.
-\end{itemize}
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.78\paperwidth,ht=0.5cm,dp=0.18cm,leftskip=0.45cm]{frametitle}%
+      \scriptsize\color{white}M. de la Cruz Muñoz · MAEM · Matrícula 00874 · SD26 · Actividad 5 · Aprendizaje Profundo%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.22\paperwidth,ht=0.5cm,dp=0.18cm,rightskip=0.45cm]{frametitle}%
+      \hfill\scriptsize\color{white}\insertframenumber{} / \inserttotalframenumber%
+    \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
 
-\subsection*{2. Dimensiones y Artefacto de Aplicación}
-{\small\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|p{0.35\linewidth}|p{0.6\linewidth}|}\hline
-\rowcolor{iiiepePale} \textbf{Dimensión} & \textbf{Acción Didáctica en el Aula} \\\hline
-Fundamentación Teórica & Vinculación conceptual con las ciencias del aprendizaje \cite{sawyer2008optimizing}. \\\hline
-Mediación Matemática & Diseño de tareas abiertas con representaciones múltiples. \\\hline
-Impacto Profesional & Transferencia reflexiva al contexto laboral y comunitario. \\\hline
-\end{longtable}}
+\newcommand{\Pill}[2]{%
+  \tikz[baseline=(x.base)]{\node[rounded corners=3pt,fill=#1!14,draw=#1!75!black,thick,inner xsep=6pt,inner ysep=4pt,align=center] (x) {\scriptsize\bfseries #2};}%
+}
 
-\subsection*{3. Conclusión y Veredicto Pedagógico}
-En conclusión, la práctica docente se consolida al articular rigor disciplinar y enfoque humanista. Por tanto, esta propuesta formativa promueve la autonomía y equidad educativa en los estudiantes.
+\title{Aprendizaje Profundo y Cultura Escolar}
+\subtitle{Actividad 5 · Bloque III · Módulo 51707}
+\author{Mtro. Martín Jonathan de la Cruz Muñoz · Matrícula 00874}
+\institute{IIIEPE · Maestría en Aprendizaje y Enseñanza de las Matemáticas · Grupo A}
+\date{19 de noviembre de 2026}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[iiiepeNavy] (current page.north west) rectangle ([xshift=10.3cm]current page.south west);
+    \fill[iiiepeBlue] ([xshift=10.3cm]current page.north west) rectangle (current page.south east);
+    \fill[iiiepeOrange] ([xshift=0.8cm,yshift=-6.45cm]current page.north west) rectangle ([xshift=9.3cm,yshift=-6.53cm]current page.north west);
+    \node[anchor=north west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=-1.15cm]current page.north west) {%
+      {\color{iiiepeAqua!45!white}\small\bfseries MAESTRÍA EN APRENDIZAJE Y ENSEÑANZA DE LAS MATEMÁTICAS · SD26\par}%
+      \vspace{0.35cm}
+      {\color{white}\Large\bfseries \inserttitle\par}%
+      \vspace{0.25cm}
+      {\color{white!90}\normalsize \insertsubtitle\par}%
+    };
+    \node[anchor=south west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=0.75cm]current page.south west) {%
+      {\color{white}\normalsize\bfseries Mtro. Martín Jonathan de la Cruz Muñoz\par}%
+      {\color{white!85}\scriptsize Matrícula 00874 · martin.delacruz@campus.iiiepe.edu.mx\par}%
+      {\color{iiiepeAqua!35!white}\scriptsize Monterrey, Nuevo León · 19 de noviembre de 2026\par}%
+    };
+    \node[anchor=center,text width=5.0cm,align=center] at ([xshift=13.15cm,yshift=-4.5cm]current page.north west) {%
+      \includegraphics[width=3.6cm]{img/iiiepe/logo-iiiepe-blanco.png}\par\vspace{0.45cm}%
+      {\color{white}\large\bfseries IIIEPE\par}%
+      \vspace{0.1cm}%
+      {\color{white!85}\scriptsize Fundamentos para la enseñanza\\y el aprendizaje I\par}%
+    };
+  \end{tikzpicture}
+\end{frame}
+\begin{frame}{Aprendizaje Profundo y Cultura Escolar (Bloque III)}
+  \begin{block}{Tesis de Quiroga Aguilar y Lara Órdenes (2022)}
+    Superar la enseñanza transmisiva en matemáticas exige transformar no solo las actividades de clase, sino las relaciones entre docente y estudiantado y las creencias que sostienen la cultura escolar.
+  \end{block}
+  \vspace{0.3cm}
+  \centering
+  \Pill{iiiepeNavy}{Superficial vs Profundo} \hspace{0.2cm}
+  \Pill{iiiepeBlue}{3 Dimensiones} \hspace{0.2cm}
+  \Pill{iiiepeAqua!75!black}{Algoritmo vs Sentido} \hspace{0.2cm}
+  \Pill{iiiepeOrange!85!black}{Nuevas Pedagogías}
+\end{frame}
+
+\begin{frame}{1. Aprendizaje Superficial vs Aprendizaje Profundo}
+  \scriptsize\renewcommand{\arraystretch}{1.4}
+  \begin{tabular}{p{2.4cm}p{5.3cm}p{5.3cm}}
+    \toprule
+    \rowcolor{iiiepePale} \textbf{Criterio} & \textbf{Aprendizaje superficial (Marton y Säljö, 1976)} & \textbf{Aprendizaje profundo (Sawyer, 2008; Quiroga y Lara, 2022)} \\
+    \midrule
+    Propósito & Memorizar definiciones o pasos para cumplir el requisito. & Comprender conceptos, explicar causas y transferir. \\
+    Organización & Ideas sueltas sin conexión entre representaciones. & Red articulada entre tabla, gráfica, símbolo y fenómeno. \\
+    Papel ante el reto & Dependencia de ejemplos idénticos mostrados en clase. & Exploración crítica y ajuste autónomo de estrategias. \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{2. Enseñanza Tradicional de las Matemáticas}
+  \begin{block}{Rasgos que inducen aprendizaje superficial}
+    \begin{itemize}\small
+      \item Exponer reglas y despejes antes de problematizar su sentido físico o lógico.
+      \item Saturar con ejercicios mecánicos idénticos que premian velocidad sin comprensión.
+      \item Aislar álgebra, geometría y datos de situaciones reales del entorno.
+      \item Evaluar exclusivamente el resultado numérico final sin exigir argumentación.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{3. ¿Por Qué el Algoritmo No Basta?}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+      \begin{block}{Fluidez procedimental (insuficiente)}
+        $$0.5x + 2 = 0.2x + 3.8 \implies x = 6$$
+        \scriptsize El alumno ejecuta correctamente reglas de despeje lineal sin analizar variables, unidades ni dominio físico.
+      \end{block}
+    \column{0.48\textwidth}
+      \begin{block}{Comprensión profunda (necesaria)}
+        \scriptsize Interpretar $y_1=0.5x+2$ frente a $y_2=0.2x+3.8$:
+        \begin{itemize}\tiny
+          \item Reconocer ordenadas al origen ($2$ y $3.8$) y distinguir función afín de proporcional $y=kx$.
+          \item Justificar en qué intervalo conviene un sensor o costo frente al otro antes y después de $x=6$.
+        \end{itemize}
+      \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{4. Triada de Dimensiones del Aprendizaje Profundo}
+  \centering
+  \begin{tikzpicture}[font=\scriptsize, >=Latex, scale=0.86, transform shape]
+    \node[draw=iiiepeNavy,fill=iiiepePale,thick,circle,minimum size=2.0cm,align=center] (c) at (0,0) {\textbf{Aprendizaje\\Matemático}};
+    \node[draw=iiiepeNavy,fill=white,thick,rounded corners=4pt,text width=5.0cm,align=center] (a) at (0,2.35) {\textbf{\color{iiiepeNavy}Cognitiva:} Pensamiento crítico, comprensión relacional y transferencia.};
+    \node[draw=iiiepeBlue,fill=white,thick,rounded corners=4pt,text width=4.8cm,align=center] (b) at (-4.3,-1.7) {\textbf{\color{iiiepeBlue}Interpersonal:} Colaboración, escucha y argumentación matemática entre pares.};
+    \node[draw=iiiepeAqua!80!black,fill=iiiepeMint,thick,rounded corners=4pt,text width=4.8cm,align=center] (d) at (4.3,-1.7) {\textbf{\color{iiiepeAqua!75!black}Intrapersonal:} Autorregulación, autoeficacia y mentalidad de crecimiento.};
+    \draw[<->,very thick,iiiepeNavy] (a) -- (b);
+    \draw[<->,very thick,iiiepeAqua!80!black] (a) -- (d);
+    \draw[<->,very thick,iiiepeOrange!85!black] (b) -- (d);
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{5. Transformación de Roles y Tres Planos de Cambio}
+  \begin{columns}[T]
+    \column{0.50\textwidth}
+      \begin{block}{Transición relacional (Fullan y Langworthy, 2014)}
+        \begin{itemize}\scriptsize
+          \item \textbf{Control docente} $\rightarrow$ \textbf{Asociación} $\rightarrow$ \textbf{Autonomía}.
+          \item El profesorado pasa de transmisor único a activador y diseñador de experiencias auténticas.
+        \end{itemize}
+      \end{block}
+    \column{0.46\textwidth}
+      \begin{block}{Tres planos en cultura escolar}
+        \begin{itemize}\scriptsize
+          \item \textbf{Recursos:} Tareas abiertas auténticas.
+          \item \textbf{Didáctica:} Andamiaje y colaboración.
+          \item \textbf{Creencias:} Qué entendemos por aprender y evaluar matemáticas.
+        \end{itemize}
+      \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Evaluación Formativa y Experto Adaptativo}
+  \begin{itemize}\normalsize
+    \item Evaluar en profundidad requiere evidencias de proceso, devolución descriptiva y criterios claros antes de la tarea \textbf{(Collin y Quigley, 2021; Boström y Palm, 2023)}.
+    \item El docente actúa como \textbf{experto adaptativo}: observa qué obstáculos persisten, cuestiona sus propias rutinas e indaga entre colegas.
+    \item La colaboración escolar cobra fuerza cuando es específica, deliberada y orientada al aprendizaje real del alumnado.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Transferencia en Bachillerato Técnico e Ingeniería}
+  \begin{itemize}\normalsize
+    \item Sustituir listas mecánicas por casos situados de calibración, costos y tolerancias en taller.
+    \item Exigir defensa oral o escrita de unidades, tasas de cambio y dominio físico de validez.
+    \item Integrar reflexión metacognitiva individual tras el trabajo colaborativo en equipos.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusiones de la Actividad 5}
+  \begin{itemize}\normalsize
+    \item El dominio algorítmico aislado no equivale a comprensión profunda ni transferencia matemática.
+    \item Solo al integrar lo cognitivo, lo interpersonal y lo intrapersonal cambia la experiencia del aula.
+    \item La cultura escolar se transforma cuando se revisan colectivamente las creencias sobre la enseñanza, preparando el diseño de innovación de la Actividad 6.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Referencias Principales (APA 7)}
+  \scriptsize\setlength{\parskip}{5pt}
+  \begin{itemize}
+    \item Boström, E., y Palm, T. (2023). Formative assessment practice in mathematics. \textit{Frontiers in Education}, 8, 1101192.
+    \item Collin, J., y Quigley, A. (2021). \textit{Teacher feedback to improve pupil learning}. EEF.
+    \item Fullan, M., y Langworthy, M. (2014). \textit{A rich seam: How new pedagogies find deep learning}. Pearson.
+    \item Marton, F., y Säljö, R. (1976). On qualitative differences in learning. \textit{Br. J. Educ. Psychol.}, 46(1), 4--11.
+    \item Quiroga Aguilar, L., y Lara Órdenes, E. (2022). El aprendizaje profundo como herramienta para cambio en la visión de aprendizaje de una cultura escolar. \textit{REA}, 12(1).
+    \item Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. OECD.
+    \item Schunk, D. H. (2012). \textit{Teorías del aprendizaje} (6.ª ed.). Pearson.
+  \end{itemize}
+\end{frame}
 
 \end{document}

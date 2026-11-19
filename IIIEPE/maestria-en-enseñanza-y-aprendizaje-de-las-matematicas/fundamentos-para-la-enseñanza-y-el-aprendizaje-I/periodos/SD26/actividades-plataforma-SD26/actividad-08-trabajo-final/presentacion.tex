@@ -1,66 +1,284 @@
-\documentclass[spanish,letterpaper,oneside]{article}
-
-\def\documenttitle {Trabajo Final Integrador: Propuesta de Intervención Pedagógica Transformadora}
-\def\documentsubtitle {Presentación Ejecutiva · Cohorte SD26}
-\def\documentsubject {Actividad 8 · Síntesis Visual}
-\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
-\def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
-\def\coursecode {MAEM-SD26}
-
-\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación}
-\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
-\def\universitydepartment {Fundamentos para la enseñanza y el aprendizaje I}
-\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
-\def\universitydepartmentimagecfg {height=1.75cm}
-\def\universitylocation {Monterrey, Nuevo León}
-\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
-\def\studentid {00874}
-\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
-\def\programperiod {2do periodo, septiembre--diciembre de 2026 (SD26)}
-\def\programmodality {Modalidad presencial}
-\def\programshort {MAEM}
-
-\def\authortable {
-  \begin{tabular}{ll}
-    \textbf{Alumno:} & \studentfullname \\
-    Matrícula: & \studentid \\
-    Unidad: & \coursename \\
-    Periodo: & \programperiod
-  \end{tabular}
-}
-
-\input{template}
-
+\documentclass[aspectratio=169,spanish,xcolor=table]{beamer}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+\fi
+\usepackage[spanish,es-tabla,es-noshorthands]{babel}
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
-\usepackage{tikz,longtable,array}
-\usetikzlibrary{arrows.meta,positioning}
+\usepackage{tikz,pgfplots,array,booktabs,ragged2e}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes.geometric,fit}
+
 \definecolor{iiiepeNavy}{HTML}{163B5C}
 \definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
 \definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
 
-\begin{document}\templatePortrait\templatePagecfg\templateFinalcfg\setstretch{1.25}
+\usetheme{default}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{normal text}{fg=iiiepeInk,bg=white}
+\setbeamercolor{structure}{fg=iiiepeNavy}
+\setbeamercolor{frametitle}{fg=white,bg=iiiepeNavy}
+\setbeamercolor{block title}{fg=white,bg=iiiepeBlue}
+\setbeamercolor{block body}{fg=iiiepeInk,bg=iiiepePale}
+\setbeamercolor{item}{fg=iiiepeOrange}
 
-\section*{Síntesis Ejecutiva · Actividad 8}
-\textbf{Trabajo Final Integrador: Propuesta de Intervención Pedagógica Transformadora}
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.95cm,dp=0.22cm,leftskip=0.45cm,rightskip=0.45cm]{frametitle}%
+    \usebeamerfont{frametitle}\insertframetitle%
+    \hfill\includegraphics[height=0.58cm]{img/iiiepe/logo-iiiepe-blanco.png}%
+  \end{beamercolorbox}%
+}
 
-\subsection*{1. Diagnóstico y Planteamiento Central}
-La presente exposición aborda la articulación de los marcos pedagógicos contemporáneos en el aula de matemáticas:
-\begin{itemize}
-  \item Eje temático: Integración global de fundamentos epistemológicos, identidad docente, aprendizaje profundo y modelo bioecológico en una secuencia didáctica..
-  \item Planteamiento central: La enseñanza matemática trasciende el adiestramiento mecánico cuando incorpora la indagación y la justificación argumentada \cite{delors1996educacion,scott2015futuro}.
-\end{itemize}
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.78\paperwidth,ht=0.5cm,dp=0.18cm,leftskip=0.45cm]{frametitle}%
+      \scriptsize\color{white}M. de la Cruz Muñoz · MAEM · Matrícula 00874 · SD26 · Actividad 8 · Trabajo Final%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.22\paperwidth,ht=0.5cm,dp=0.18cm,rightskip=0.45cm]{frametitle}%
+      \hfill\scriptsize\color{white}\insertframenumber{} / \inserttotalframenumber%
+    \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
 
-\subsection*{2. Dimensiones y Artefacto de Aplicación}
-{\small\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|p{0.35\linewidth}|p{0.6\linewidth}|}\hline
-\rowcolor{iiiepePale} \textbf{Dimensión} & \textbf{Acción Didáctica en el Aula} \\\hline
-Fundamentación Teórica & Vinculación conceptual con las ciencias del aprendizaje \cite{sawyer2008optimizing}. \\\hline
-Mediación Matemática & Diseño de tareas abiertas con representaciones múltiples. \\\hline
-Impacto Profesional & Transferencia reflexiva al contexto laboral y comunitario. \\\hline
-\end{longtable}}
+\newcommand{\Pill}[2]{%
+  \tikz[baseline=(x.base)]{\node[rounded corners=3pt,fill=#1!14,draw=#1!75!black,thick,inner xsep=6pt,inner ysep=4pt,align=center] (x) {\scriptsize\bfseries #2};}%
+}
 
-\subsection*{3. Conclusión y Veredicto Pedagógico}
-En conclusión, la práctica docente se consolida al articular rigor disciplinar y enfoque humanista. Por tanto, esta propuesta formativa promueve la autonomía y equidad educativa en los estudiantes.
+\title{Calibrar para Decidir: Modelación y Contexto}
+\subtitle{Trabajo Final Integrador · Actividad 8 · Módulos 50172 y 50175}
+\author{Mtro. Martín Jonathan de la Cruz Muñoz · Matrícula 00874}
+\institute{IIIEPE · Maestría en Aprendizaje y Enseñanza de las Matemáticas · Grupo A}
+\date{19 de noviembre de 2026}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[iiiepeNavy] (current page.north west) rectangle ([xshift=10.3cm]current page.south west);
+    \fill[iiiepeBlue] ([xshift=10.3cm]current page.north west) rectangle (current page.south east);
+    \fill[iiiepeOrange] ([xshift=0.8cm,yshift=-6.45cm]current page.north west) rectangle ([xshift=9.3cm,yshift=-6.53cm]current page.north west);
+    \node[anchor=north west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=-1.15cm]current page.north west) {%
+      {\color{iiiepeAqua!45!white}\small\bfseries MAESTRÍA EN APRENDIZAJE Y ENSEÑANZA DE LAS MATEMÁTICAS · SD26\par}%
+      \vspace{0.35cm}
+      {\color{white}\Large\bfseries \inserttitle\par}%
+      \vspace{0.25cm}
+      {\color{white!90}\normalsize \insertsubtitle\par}%
+    };
+    \node[anchor=south west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=0.75cm]current page.south west) {%
+      {\color{white}\normalsize\bfseries Mtro. Martín Jonathan de la Cruz Muñoz\par}%
+      {\color{white!85}\scriptsize Matrícula 00874 · martin.delacruz@campus.iiiepe.edu.mx\par}%
+      {\color{iiiepeAqua!35!white}\scriptsize Monterrey, Nuevo León · 19 de noviembre de 2026\par}%
+    };
+    \node[anchor=center,text width=5.0cm,align=center] at ([xshift=13.15cm,yshift=-4.5cm]current page.north west) {%
+      \includegraphics[width=3.6cm]{img/iiiepe/logo-iiiepe-blanco.png}\par\vspace{0.45cm}%
+      {\color{white}\large\bfseries IIIEPE\par}%
+      \vspace{0.1cm}%
+      {\color{white!85}\scriptsize Fundamentos para la enseñanza\\y el aprendizaje I\par}%
+    };
+  \end{tikzpicture}
+\end{frame}
+\begin{frame}{2. Descripción General del Proyecto (Por Realizar)}
+  \begin{columns}[T]
+    \column{0.52\textwidth}
+      \begin{block}{¿En qué consiste?}
+        Secuencia didáctica de indagación cuantitativa donde estudiantes analizan lecturas de calibración frente a una referencia patrón, ajustan un modelo lineal, evalúan sesgos y dictaminan la confiabilidad de un instrumento.
+      \end{block}
+    \column{0.44\textwidth}
+      \begin{itemize}\scriptsize
+        \item \textbf{Nivel:} Preparatoria técnica en mantenimiento y mecatrónica (adaptable a ingeniería).
+        \item \textbf{Propósito:} Justificar modelos lineales e interpretar límites de medición.
+        \item \textbf{Contenidos:} Proporcionalidad vs función afín, pendiente, error, unidades y estadística básica.
+      \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{3. Problemática o Necesidad Educativa}
+  \begin{block}{Hipótesis situada por verificar en diagnóstico inicial}
+    Ejecutar mecánicamente algoritmos de despeje o pendiente suele ocultar dificultades profundas para interpretar magnitudes físicas, sesgos iniciales y rangos válidos de operación.
+  \end{block}
+  \vspace{0.25cm}
+  \begin{itemize}\small
+    \item Pregunta detonadora: \textbf{\color{iiiepeNavy}¿cuándo podemos confiar en una lectura para decidir?}
+    \item Relevancia: las matemáticas habilitan lectura crítica ante instrumentos reales en taller, hogar e ingeniería.
+    \item La presencia real de la dificultad en el grupo se contrastará con diagnóstico inicial sin suponerla demostrada.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{4. Contenidos Matemáticos Articulados}
+  \centering
+  \Pill{iiiepeNavy}{Proporcionalidad vs Afín ($y=kx$ vs $y=mx+b$)} \hspace{0.25cm}
+  \Pill{iiiepeBlue}{Tabla · Gráfica · Ecuación} \\[0.35cm]
+  \Pill{iiiepeAqua!75!black}{Error absoluto, relativo y tolerancias} \hspace{0.25cm}
+  \Pill{iiiepeOrange!85!black}{Tendencia central y dispersión}
+  \vspace{0.35cm}
+  \begin{block}{Sentido conceptual}
+    Cada representación aporta una pieza irreemplazable: la tabla detecta variaciones constantes; la gráfica muestra tendencias y bandas de tolerancia; el álgebra generaliza y corrige el sesgo.
+  \end{block}
+\end{frame}
+
+\begin{frame}{4b. Campo Formativo: Saberes y Pensamiento Científico}
+  \begin{itemize}\small
+    \item \textbf{\color{iiiepeNavy}Resolución de problemas:} Definir variables patrón/lectura y seleccionar procedimientos pertinentes.
+    \item \textbf{\color{iiiepeBlue}Pensamiento lógico y matemático:} Analizar diferencias $y-x$ y cocientes $y/x$ para identificar desviación.
+    \item \textbf{\color{iiiepeAqua!75!black}Razonamiento y argumentación:} Justificar supuestos y explicar límites físicos por escrito.
+    \item \textbf{\color{iiiepeOrange!85!black}Modelación y vida cotidiana:} Trasladar criterios metrológicos a medidores domésticos, de salud o industria \textbf{(SEP, 2022, 2024)}.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{5. Metodología Sociocrítica de la NEM: Indagación STEAM}
+  \begin{block}{Justificación metodológica}
+    El \textbf{Aprendizaje Basado en Indagación (enfoque STEAM)} exige formular predicciones, someterlas a prueba con datos, construir un modelo matemático explicativo y socializar hallazgos argumentados.
+  \end{block}
+  \vspace{0.25cm}
+  \begin{itemize}\scriptsize
+    \item \textbf{Ciencia:} Naturaleza física de la medición e incertidumbre.
+    \item \textbf{Tecnología:} Captura digital y cálculo tabular como apoyo al juicio crítico (nunca reemplazo).
+    \item \textbf{Ingeniería y Matemáticas:} Tolerancias funcionales, modelación lineal y toma de decisiones.
+    \item \textbf{Artes:} Visualización clara de gráficas para comunicar hallazgos técnicos.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{6. Principales Actividades y Secuencia Didáctica}
+  \scriptsize\renewcommand{\arraystretch}{1.3}
+  \begin{tabular}{p{2.3cm}p{5.8cm}p{4.8cm}}
+    \toprule
+    \rowcolor{iiiepePale} \textbf{Fase} & \textbf{Actividad estudiantil} & \textbf{Evidencia formativa} \\
+    \midrule
+    Planteamiento & Pregunta generadora y diagnóstico inicial. & Predicción individual por escrito. \\
+    Indagación & Búsqueda sobre calibración, sesgo y tolerancia. & Ficha conceptual metrológica. \\
+    Análisis datos & Registro tabular de $x$, $y$, $y-x$ y $y/x$. & Tabla revisada entre pares. \\
+    Modelación & Gráfica frente a $y=x$ y ecuación lineal. & Modelo justificado y dominio. \\
+    Socialización & Dictamen técnico, plenaria y corrección. & Versión final y autoevaluación. \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{6b. Ejemplo Matemático Didáctico Simulado ($y = 1.05x + 0.2$)}
+  \begin{columns}[T]
+    \column{0.46\textwidth}
+      \scriptsize\renewcommand{\arraystretch}{1.3}
+      \begin{tabular}{c|c|c|c}
+        \toprule
+        \rowcolor{iiiepePale} $x$ & $y$ & $y-x$ & $y/x$ \\
+        \midrule
+        0 & 0.20 & $+0.20$ & --- \\
+        2 & 2.30 & $+0.30$ & 1.150 \\
+        4 & 4.40 & $+0.40$ & 1.100 \\
+        6 & 6.50 & $+0.50$ & 1.083 \\
+        8 & 8.60 & $+0.60$ & 1.075 \\
+        10 & 10.70 & $+0.70$ & 1.070 \\
+        \bottomrule
+      \end{tabular}
+      \vspace{0.2cm}
+      \tiny \textit{Nota: Datos estrictamente didácticos simulados.}
+    \column{0.52\textwidth}
+      \centering
+      \begin{tikzpicture}[scale=0.68]
+        \begin{axis}[xlabel=$x$,ylabel=$y$,xmin=0,xmax=10.5,ymin=0,ymax=11.5,grid=major,legend pos=north west,legend style={font=\tiny}]
+          \addplot[iiiepeNavy,dashed,thick,domain=0:10] {x};
+          \addlegendentry{Ideal $y=x$}
+          \addplot[iiiepeOrange!90!black,very thick,mark=*] coordinates {(0,0.2)(2,2.3)(4,4.4)(6,6.5)(8,8.6)(10,10.7)};
+          \addlegendentry{Simulado $y=1.05x+0.2$}
+        \end{axis}
+      \end{tikzpicture}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{7a. Perspectiva Bioecológica: Microsistema y Mesosistema}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+      \begin{block}{Microsistema (Procesos proximales)}
+        \scriptsize Interacciones cara a cara entre docente, equipo de compañeros, taller y entorno familiar inmediato; clima respetuoso donde preguntar es seguro.
+      \end{block}
+    \column{0.48\textwidth}
+      \begin{block}{Mesosistema (Conexión de entornos)}
+        \scriptsize Vínculo real entre matemáticas, prácticas de mecatrónica/mantenimiento y situaciones cotidianas del hogar, evitando saber compartimentado.
+      \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{7b. Perspectiva Bioecológica: Exosistema, Macrosistema y Cronosistema}
+  \begin{itemize}\small
+    \item \textbf{\color{iiiepeNavy}Exosistema:} Disponibilidad de instrumentos, tiempos escolares y turnos laborales; decisión explícita de usar hojas impresas y sets accesibles sin barrera tecnológica.
+    \item \textbf{\color{iiiepeBlue}Macrosistema:} Expectativas culturales sobre matemáticas y tecnología, sesgos de exclusión y orientaciones inclusivas de la NEM.
+    \item \textbf{\color{iiiepeAqua!75!black}Cronosistema:} Contraste de avances desde la predicción inicial hasta la versión corregida final \textbf{(Bronfenbrenner y Morris, 2006; Tong y An, 2023)}.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Evaluación Formativa del Proyecto}
+  \scriptsize\renewcommand{\arraystretch}{1.38}
+  \begin{tabular}{p{2.4cm}p{5.2cm}p{5.2cm}}
+    \toprule
+    \rowcolor{iiiepePale} \textbf{Criterio} & \textbf{Evidencia observable} & \textbf{Retroalimentación orientadora} \\
+    \midrule
+    Modelación & Variables definidas, tabla y ecuación lineal. & Contrastar ordenada inicial cuando $x=0$. \\
+    Interpretación & Análisis de $y-x$ y rango de tolerancia. & Señalar cuándo la desviación supera límite aceptable. \\
+    Comunicación & Dictamen técnico en una cuartilla. & Pedir vinculación explícita de unidades y supuestos. \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{8. Impacto Esperado (Proyecto por Implementar)}
+  \begin{itemize}\normalsize
+    \item Distinguir relaciones proporcionales frente a funciones lineales afines en lecturas de medición reales.
+    \item Comunicar decisiones técnicas fundamentadas con gráficas, tolerancias y supuestos explícitos.
+    \item Fortalecer la colaboración respetuosa y la revisión crítica de errores.
+    \item \textit{Nota ética:} Los resultados empíricos quedan pendientes de recolección durante la implementación futura.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{9. Reflexión Final sobre las Cuatro Preguntas}
+  \begin{itemize}\scriptsize
+    \item \textbf{Concepción de aprendizaje:} Construcción activa, situada y dialógica, no ejercitación mecánica aislada.
+    \item \textbf{Aporte de metodologías sociocríticas NEM:} Articula problema técnico/social auténtico, indagación científica y rigor modelador.
+    \item \textbf{Aporte bioecológico:} Garantiza procesos proximales inclusivos cuidando accesibilidad material y diálogo entre entornos.
+    \item \textbf{Formación integral:} Integra el rigor metrológico de mi trayectoria ingenieril con sensibilidad humanista hacia la persona.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Autoevaluación Oficial (20 Ítems) y Reflexión Personal}
+  \begin{columns}[T]
+    \column{0.46\textwidth}
+      \begin{block}{Instrumento Módulo 50175}
+        \scriptsize
+        \begin{itemize}
+          \item Verificación íntegra de los \textbf{20 criterios} marcados en \textbf{Sí} dentro del informe escrito.
+          \item Incluye portada completa, 10 secciones oficiales, ejemplo simulado y >= 3 citas APA 7.
+        \end{itemize}
+      \end{block}
+    \column{0.50\textwidth}
+      \begin{block}{Síntesis de reflexión personal}
+        \scriptsize
+        \textbf{Mejor logrado:} Integrar identidad ingenieril con aprendizaje profundo y enfoque bioecológico sin inventar evidencia empírica.\\[0.15cm]
+        \textbf{Por mejorar al aplicar:} Ajustar tiempos de indagación en equipos heterogéneos con base en diagnóstico inicial real.
+      \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{10. Referencias Principales (APA 7)}
+  \scriptsize\setlength{\parskip}{5pt}
+  \begin{itemize}
+    \item Bronfenbrenner, U. (1987). \textit{La ecología del desarrollo humano}. Paidós.
+    \item Bronfenbrenner, U., y Morris, P. A. (2006). The bioecological model of human development. En \textit{Handbook of child psychology} (pp. 793--828). Wiley.
+    \item CONALEP. (2025). \textit{Perfil de egreso: Profesional Técnico-Bachiller en Mecatrónica}. Secretaría Académica.
+    \item Quiroga Aguilar, L., y Lara Órdenes, E. (2022). El aprendizaje profundo como herramienta para cambio en la visión de aprendizaje de una cultura escolar. \textit{REA}, 12(1).
+    \item Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. OECD.
+    \item SEP. (2022). \textit{Plan de Estudio para la educación preescolar, primaria y secundaria}. SEP.
+    \item SEP. (2024). \textit{Programa sintético de la Fase 6}. SEP.
+    \item Tong, X., y An, X. (2023). Review of empirical studies applying Bronfenbrenner's bioecological theory. \textit{Frontiers in Psychology}, 14, 1233925.
+  \end{itemize}
+\end{frame}
 
 \end{document}

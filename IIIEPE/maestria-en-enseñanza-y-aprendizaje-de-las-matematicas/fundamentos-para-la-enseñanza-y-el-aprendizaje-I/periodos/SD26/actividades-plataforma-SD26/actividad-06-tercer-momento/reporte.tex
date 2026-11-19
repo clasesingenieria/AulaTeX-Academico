@@ -1,8 +1,8 @@
 \documentclass[spanish,letterpaper,oneside]{article}
 
-\def\documenttitle {Tercer Momento: Evaluación Auténtica y la Nueva Escuela Mexicana}
+\def\documenttitle {Del Diagnóstico Práctico a una Propuesta de Innovación Matemática}
 \def\documentsubtitle {Fundamentos para la enseñanza y el aprendizaje I · Cohorte SD26}
-\def\documentsubject {Actividad 6 · Tercer Momento}
+\def\documentsubject {Actividad 6 · Tres Momentos Bloque III (Módulo 51809)}
 \def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
 \def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
 \def\coursecode {MAEM-SD26}
@@ -29,7 +29,7 @@
     Programa: & \programshort \\
     Periodo: & \programperiod \\
     & \\
-    \multicolumn{2}{l}{Fecha de realización: 14 de noviembre de 2026} \\
+    \multicolumn{2}{l}{Fecha de realización: 19 de noviembre de 2026} \\
     \multicolumn{2}{l}{\universitylocation}
   \end{tabular}
 }
@@ -42,8 +42,10 @@
 \usepackage{longtable}
 \usepackage{pdflscape}
 \usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 \usepackage[most]{tcolorbox}
-\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,shapes.geometric}
 
 \definecolor{iiiepeNavy}{HTML}{163B5C}
 \definecolor{iiiepeBlue}{HTML}{1F6F9F}
@@ -52,8 +54,16 @@
 \definecolor{iiiepePaper}{HTML}{F6F8F7}
 \definecolor{iiiepeInk}{HTML}{1E2A32}
 \definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
 \def\portraittitlecolor {iiiepeNavy}
 \setcitestyle{authoryear,open={(},close={)}}
+\makeatletter
+\renewcommand{\@biblabel}[1]{}
+\makeatother
+\setlength{\bibhang}{1.27cm}
+\setlength{\bibsep}{6pt}
+\AtBeginDocument{\renewcommand{\refname}{Referencias}}
 
 \newcommand{\insertcoverwatermark}{%
   \AddToShipoutPictureBG*{%
@@ -66,63 +76,114 @@
 }
 
 \setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
-\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 6}\setstretch{1.3}\raggedbottom
-
+\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 6 · Tercer Momento}\setstretch{1.3}\raggedbottom
 \section{Introducción y postura central}
-El estudio de los fundamentos para la enseñanza y el aprendizaje en el marco de la cohorte SD26 exige examinar críticamente las relaciones entre los marcos teóricos contemporáneos y la realidad del aula de matemáticas. La postura central de este reporte plantea la tesis de que la transformación de la docencia técnica y matemática no se logra mediante la adopción acrítica de consignas procedimentales, sino a través de un análisis propio y sistemático de las mediaciones didácticas orientadas a la comprensión profunda y la justicia social \cite{delors1996educacion,unesco2015replantear}.
+La transición hacia una enseñanza matemática significativa demanda articular el marco conceptual del aprendizaje profundo con un diagnóstico honesto de la propia práctica y una propuesta concreta de innovación didáctica. Siguiendo la \textit{Guía instruccional del Bloque III} (módulo \texttt{51809}), este informe desarrolla de manera integrada los tres momentos formativos solicitados. Mi postura es que las dificultades matemáticas más persistentes en educación media superior técnica e ingeniería no surgen de una incapacidad intrínseca del estudiante, sino del predominio de prácticas didácticas fragmentadas que separan el cálculo simbólico de la modelación, la colaboración entre pares y la reflexión metacognitiva \citep{quiroga2022aprendizaje,sawyer2008optimizing}.
 
-Esta actividad, vinculada formalmente al módulo institucional \texttt{51809}, analiza de forma aplicada: \textit{Transición entre paradigmas evaluativos tradicionales y la evaluación formativa y comunitaria de la NEM.}. Desde esta perspectiva, se abordan las dimensiones epistemológicas del aprendizaje sin soslayar los condicionamientos contextuales de la comunidad educativa.
+Considero necesario fundamentar cada decisión de cambio en evidencias reales de enseñanza (producciones de cuadernos, guías resueltas y registros evaluativos) sin responsabilizar unilateralmente al alumnado. Por ello, tras presentar la síntesis analítica de \citet{quiroga2022aprendizaje} (Primer momento) y el cuadro diagnóstico de seis dimensiones (Segundo momento), se expone el diseño completo de una propuesta de innovación \textbf{por realizar} (Tercer momento) orientada a transformar el abordaje de funciones lineales y variación afín en bachillerato técnico e ingeniería \citep{rivas2017innovaciones,conalep2025mecatronica}.
 
-\section{Desarrollo temático y fundamentación conceptual}
-Para comprender el impacto formativo de esta intervención, es indispensable contrastar los modelos teóricos con las evidencias de desempeño observadas en la práctica cotidiana \cite{scott2015futuro}. A partir de un análisis propio de las secuencias de aprendizaje, esto implica que el aprendizaje significativo no puede reducirse a la repetición algorítmica.
+\section{Primer momento: análisis y reflexión de la lectura base}
+A partir de la lectura analítica de \citet{quiroga2022aprendizaje} y la síntesis visual del módulo, el examen de cinco ejes articuladores permite esclarecer el sentido pedagógico de innovar:
+\begin{enumerate}
+  \item \textbf{Diferencias entre aprendizaje superficial y profundo:} Recuperando a \citet{marton1976qualitative}, el enfoque superficial busca reproducir fórmulas o definiciones para cumplir la consigna inmediata, generando saberes inertes; en cambio, el aprendizaje profundo conecta conceptos previos con nuevos significados, argumenta con evidencia y transfiere estrategias hacia problemas reales \citep{sawyer2008optimizing}.
+  \item \textbf{Dimensiones cognitiva, interpersonal e intrapersonal:} La comprensión matemática duradera requiere activar simultáneamente procesos cognitivos de análisis y modelación, interacciones interpersonales de debate y comunicación clara en equipo, así como disposiciones intrapersonales de autorregulación, perseverancia y mentalidad de crecimiento \citep{quiroga2022aprendizaje,schunk2012teorias}.
+  \item \textbf{Transformación en los roles docente y estudiantil:} Retomando a \citet{fullan2014rich}, las nuevas pedagogías desplazan el control unidireccional docente hacia relaciones de \textit{asociación} donde profesores y estudiantes colaboran como co-aprendices, pasando gradualmente hacia la autonomía estudiantil guiada.
+  \item \textbf{Características de las nuevas pedagogías:} Priorizan tareas auténticas vinculadas al entorno, creación y experimentación de conocimiento en lugar de recepción pasiva, uso intencionado de tecnología para ampliar la indagación y prácticas de liderazgo pedagógico orientadas por metas compartidas \citep{rivas2017innovaciones}.
+  \item \textbf{Creencias pedagógicas y cultura escolar:} Cambiar actividades en superficie no transforma el aula si permanecen intactas las creencias sobre qué define una buena clase de matemáticas o un «buen alumno». La cultura escolar solo evoluciona cuando se interviene conjuntamente sobre recursos, didáctica y significados pedagógicos compartidos \citep{quiroga2022aprendizaje}.
+\end{enumerate}
 
-\begin{center}
-\begin{tikzpicture}[font=\small,node distance=1.8cm,>=Latex]
-  \node[draw=iiiepeNavy,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center] (a) {\textbf{Dimensión Epistémica}\\Comprensión y modelación conceptual};
-  \node[draw=iiiepeBlue,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center,right=of a] (b) {\textbf{Mediación Docente}\\Secuencias de indagación y andamiaje};
-  \node[draw=iiiepeAqua,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center,below=of a] (c) {\textbf{Interacción Dialógica}\\Retroalimentación y coevaluación};
-  \node[draw=iiiepeOrange,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center,below=of b] (d) {\textbf{Transferencia Real}\\Resolución situada en la comunidad};
-  
-  \draw[->,thick,iiiepeNavy] (a) -- node[above,font=\scriptsize] {orienta} (b);
-  \draw[->,thick,iiiepeBlue] (b) -- node[right,font=\scriptsize] {promueve} (d);
-  \draw[->,thick,iiiepeAqua] (c) -- node[left,font=\scriptsize] {sustenta} (a);
-  \draw[->,thick,iiiepeOrange] (d) -- node[below,font=\scriptsize] {evidencia} (c);
-\end{tikzpicture}
-\end{center}
+\section{Segundo momento: análisis diagnóstico de la propia práctica de enseñanza}
+El análisis propio se sitúa en una problemática recurrente observada en grupos de cuarto semestre de bachillerato técnico (mantenimiento industrial y mecatrónica) y primer ingreso de ingeniería al abordar \textbf{modelación con funciones lineales y comparación entre variación afín y proporcionalidad}: al revisar cuadernos de clase, guías de ejercicios y listas de cotejo de evaluación parcial, se advierte que el estudiantado ejecuta despejes correctos cuando recibe ecuaciones preestablecidas, pero fracasa al formular el modelo desde una gráfica experimental o al interpretar qué significan pendiente, ordenada al origen, unidades físicas y dominio de validez \citep{star2015algebra}. Evitando atribuir este hallazgo únicamente a carencias del estudiantado, el cuadro siguiente examina las seis dimensiones críticas del diagnóstico docente:
 
-La literatura especializada en ciencias del aprendizaje \cite{sawyer2008optimizing} subraya que los estudiantes construyen comprensiones duraderas cuando tienen oportunidades explícitas de verbalizar, contrastar y reformular sus hipótesis iniciales. En la enseñanza de las matemáticas, este principio desarticula el mito de la capacidad fija y promueve una cultura de aula equitativa y dialógica.
-
-\section{Matriz de análisis y artefacto metodológico}
-La tabla siguiente sistematiza los componentes centrales de la actividad, contrastando los requerimientos pedagógicos con los criterios de evaluación formativa:
-
-{\small\setstretch{1.15}\renewcommand{\arraystretch}{1.3}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.28\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.38\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.34\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
-\rowcolor{iiiepePale} \textbf{Componente Clave} & \textbf{Fundamentación Teórica} & \textbf{Aplicación en el Aula de Matemáticas} \\\hline
+{\small\setstretch{1.15}\renewcommand{\arraystretch}{1.35}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.20\linewidth}|>{\raggedright\arraybackslash}p{0.25\linewidth}|>{\raggedright\arraybackslash}p{0.49\linewidth}|}\hline
+\rowcolor{iiiepePale} \textbf{Aspecto diagnóstico} & \textbf{Pregunta orientadora} & \textbf{Análisis situado con evidencias concretas} \\\hline
 \endfirsthead
 \hline
-\rowcolor{iiiepePale} \textbf{Componente Clave} & \textbf{Fundamentación Teórica} & \textbf{Aplicación en el Aula de Matemáticas} \\\hline
+\rowcolor{iiiepePale} \textbf{Aspecto diagnóstico} & \textbf{Pregunta orientadora} & \textbf{Análisis situado con evidencias concretas} \\\hline
 \endhead
-Diagnóstico y Saberes Previos & Reconocimiento de esquemas cognitivos y barreras de aprendizaje \cite{scott2015futuro}. & Análisis de concepciones alternativas en representaciones algebraicas y numéricas. \\\hline
-Mediación y Andamiaje & Provisión de apoyos estructurados con retirada progresiva \cite{sawyer2008optimizing}. & Guías de modelación con variación paramétrica y preguntas generadoras. \\\hline
-Evaluación Formativa & Uso dialógico del error como fuente de aprendizaje y reorientación. & Rúbricas analíticas con devolución descriptiva y opción de segunda versión. \\\hline
-Transferencia Comunitaria & Articulación con problemas del entorno y la Nueva Escuela Mexicana \cite{sep2024fase6}. & Proyectos de estimación de costos, consumo hídrico o calibración instrumental. \\\hline
+1. Problemática identificada & ¿Qué dificultades presentan los alumnos al aprender matemáticas? & En 18 de aproximadamente 25 cuadernos revisados de secuencias previas sobre rectas, los estudiantes obtienen $m$ y $b$ por sustitución en fórmula, pero no explican su significado físico (e.g., tasa de variación frente a valor inicial ni intervalo real de operación) ni identifican si $y=kx$ difiere de $y=mx+b$. \\\hline
+2. Práctica de enseñanza actual & ¿Cómo abordo la enseñanza de ese contenido matemático? & Inicio frecuentemente definiendo $y=mx+b$ en el pizarrón, resuelvo dos casos tipo con pasos cerrados y asigno guías individuales de práctica operativa antes de abordar aplicaciones técnicas. \\\hline
+3. Concepciones pedagógicas & ¿Qué ideas sobre enseñar y aprender matemáticas orientan mi práctica? & Subyace la creencia heredada de la formación ingenieril de que dominar primero el mecanismo algebraico habilita después la aplicación contextual, subestimando que el sentido físico construye el concepto algebraico. \\\hline
+4. Características del aprendizaje & ¿Qué evidencias muestran un aprendizaje superficial o profundo? & Superficial: repetición correcta del algoritmo en hojas con formato fijo pero bloqueo cuando cambia el nombre de la variable o se solicita interpretación escrita. Profundo incipiente: preguntas espontáneas de taller cuando conectan pendiente con sensibilidad de un sensor real. \\\hline
+5. Causas posibles & ¿Qué decisiones didácticas podrían estar contribuyendo a la problemática? & Privilegiar ejercicios sin contexto en los primeros bloques, resolver dudas demasiado rápido en el pizarrón por presión del horario y ponderar casi únicamente resultados numéricos en las evaluaciones escritas \citep{eef2017mathematics}. \\\hline
+6. Necesidad de transformación & ¿Qué tendría que modificar en mi práctica para favorecer el aprendizaje profundo? & Invertir la secuencia: partir de un reto técnico auténtico con datos, organizar colaboración deliberada con roles de argumentación, implementar andamiaje gradual y evaluar mediante matrices formativas que valoren explicación y transferencia \citep{eef2021feedback}. \\\hline
 \end{longtable}}
 
-\section{Transferencia profesional y aplicación práctica}
-En mi práctica docente profesional en bachillerato técnico e ingeniería, la aplicación de estos principios demanda superar la didáctica tradicional centrada exclusivamente en la pizarra. En el contexto laboral e industrial, los egresados enfrentan desafíos abiertos que requieren juicio crítico, trabajo en equipo y precisión matemática. 
+\section{Tercer momento: propuesta de innovación didáctica (por realizar)}
+Con base en el diagnóstico previo y el marco de \citet{quiroga2022aprendizaje} y \citet{rivas2017innovaciones}, diseño la siguiente propuesta de innovación pedagógica —formulada como \textbf{intervención por realizar}— en el marco del desarrollo profesional en la MAEM:
 
-Por consiguiente, incorporar situaciones donde los estudiantes argumenten sus decisiones estadísticas o algebraicas fortalece directamente su perfil de egreso. El impacto profesional de esta mirada formativa se manifiesta en la capacidad del alumnado para transferir métodos matemáticos a escenarios reales de mantenimiento, automatización o gestión comunitaria.
+\begin{tcolorbox}[colback=iiiepePale,colframe=iiiepeNavy,title=\textbf{Ficha técnica de la innovación · «Calibrar y comparar para decidir» (por realizar)},breakable]
+\begin{enumerate}
+  \item \textbf{Contenido matemático (tema y nivel):} Modelación lineal ($y = mx + b$), distinción frente a proporcionalidad directa ($y = kx$), interpretación de tasa de cambio, ordenada al origen, punto de equilibrio e intervalo de validez, en cuarto semestre de bachillerato técnico en mecatrónica y mantenimiento (adaptable a cálculo inicial de ingeniería) \citep{sep2023pensamiento,conalep2025mecatronica}.
+  \item \textbf{Problemática atendida:} Manipulación algebraica mecánica desconectada del significado físico, dimensional y argumentativo de los parámetros lineales.
+  \item \textbf{Propósito de aprendizaje:} Lograr que el estudiantado construya, contraste y justifique modelos lineales desde tablas de datos experimentales o simulados, articulando representaciones numérica, gráfica y algebraica para sustentar decisiones técnicas con evidencia.
+  \item \textbf{Situación o desafío matemático:} Dos dispositivos de monitoreo térmico de banco ($S_1$ calibrado sin sesgo con razón $1.00$ y $S_2$ con lectura simulada $y = 1.05x + 0.2$ respecto a patrón $x$) y dos tarifas de mantenimiento preventivo ($C_A(h) = 250 + 80h$ y $C_B(h) = 100 + 110h$) presentan comportamientos distintos. Con datos didácticos simulados suministrados en hoja de taller, cada equipo debe responder: \textit{¿en qué rango de operación resulta confiable $S_2$, qué error introduce asumir proporcionalidad directa y a partir de qué duración conviene cambiar de esquema de servicio?} Deben predecir antes de calcular, validar unidades y defender su dictamen por escrito.
+  \item \textbf{Estrategias de enseñanza:} Secuencia de tres sesiones basada en asociación docente--estudiante \citep{fullan2014rich}: (a) apertura con predicción individual sin fórmula para activar saberes previos; (b) exploración en equipos de tres con roles rotativos (\textit{modelador gráfico}, \textit{verificador dimensional} y \textit{portavoz argumentativo}); (c) retirada gradual de guías de preguntas hacia autonomía progresiva; y (d) debate plenario estructurado sobre errores productivos y límites del modelo.
+  \item \textbf{Integración de las dimensiones del aprendizaje profundo:}
+    \begin{itemize}
+      \item \textit{Cognitiva:} Contraste entre tabla de diferencias finitas, pendiente gráfica y ecuación simbólica; verificación de límites físicos.
+      \item \textit{Interpersonal:} Negociación de hipótesis entre pares, coevaluación respetuosa entre equipos y construcción de consenso argumentado.
+      \item \textit{Intrapersonal:} Diario breve de metacognición tras cada sesión («qué supuse al inicio, qué evidencia me hizo corregir el modelo y qué aprendí del error») para fomentar mentalidad de crecimiento \citep{schunk2012teorias}.
+    \end{itemize}
+  \item \textbf{Evaluación formativa (evidencias e indicadores):} Recolección continua de cuatro evidencias: predicción diagnóstica inicial, hoja de análisis tabular--gráfico por equipo, dictamen escrito justificado y reflexión metacognitiva individual revisada tras retroalimentación descriptiva \citep{bostrom2023formative}.
+\end{enumerate}
+\end{tcolorbox}
 
+La Figura~\ref{fig:act6-secuencia} ilustra el flujo metodológico propuesto y el cuadro siguiente define los indicadores formativos de avance:
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[font=\scriptsize, >=Latex, scale=0.92, transform shape]
+  \node[draw=iiiepeNavy,fill=iiiepePale,thick,rounded corners=4pt,text width=2.8cm,minimum height=2.0cm,align=center] (f1) at (0,0) {\textbf{Sesión 1}\\Predicción inicial y análisis tabular\\(\textit{Saberes previos})};
+  \node[draw=iiiepeBlue,fill=iiiepePale,thick,rounded corners=4pt,text width=2.8cm,minimum height=2.0cm,align=center] (f2) at (3.65,0) {\textbf{Sesión 2}\\Modelación gráfica y algebraica en tríos\\(\textit{Cognitivo + Social})};
+  \node[draw=iiiepeAqua!80!black,fill=iiiepeMint,thick,rounded corners=4pt,text width=2.8cm,minimum height=2.0cm,align=center] (f3) at (7.3,0) {\textbf{Sesión 3}\\Debate de validez y retroalimentación\\(\textit{Evaluación formativa})};
+  \node[draw=iiiepeOrange!90!black,fill=iiiepeWarm,thick,rounded corners=4pt,text width=2.8cm,minimum height=2.0cm,align=center] (f4) at (10.95,0) {\textbf{Cierre}\\Segunda versión y diario metacognitivo\\(\textit{Intrapersonal})};
+
+  \draw[->,very thick,iiiepeNavy] (f1) -- (f2);
+  \draw[->,very thick,iiiepeBlue] (f2) -- (f3);
+  \draw[->,very thick,iiiepeAqua!80!black] (f3) -- (f4);
+\end{tikzpicture}
+\caption{Secuencia didáctica de innovación en tres sesiones articulando las dimensiones del aprendizaje profundo.}
+\label{fig:act6-secuencia}
+\end{figure}
+
+{\small\setstretch{1.15}\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.22\linewidth}|>{\raggedright\arraybackslash}p{0.34\linewidth}|>{\raggedright\arraybackslash}p{0.38\linewidth}|}\hline
+\rowcolor{iiiepePale} \textbf{Dimensión evaluada} & \textbf{Evidencia observable} & \textbf{Indicador formativo de avance} \\\hline
+\endfirsthead
+\hline
+\rowcolor{iiiepePale} \textbf{Dimensión evaluada} & \textbf{Evidencia observable} & \textbf{Indicador formativo de avance} \\\hline
+\endhead
+Comprensión conceptual y modelación & Hojas de registro tabular--gráfico y ecuación justificada. & Distingue relación proporcional vs afín e interpreta pendiente y ordenada al origen con unidades físicas correctas. \\\hline
+Argumentación y transferencia & Dictamen técnico escrito comparando intervalos y umbrales. & Justifica decisiones bajo condiciones cambiantes señalando al menos un límite físico o supuesto del modelo. \\\hline
+Colaboración e intrapersonalidad & Observación de roles en equipo y diario de corrección tras devolución. & Recupera argumentos de compañeros, reconoce obstáculos iniciales y mejora explícitamente su segunda entrega \citep{eef2021feedback}. \\\hline
+\end{longtable}}
+
+\section{Transferencia profesional e impacto esperado en la práctica docente}
+Esta propuesta impacta directamente la coherencia entre formación técnica e ingeniería y enseñanza comprensiva de las matemáticas. Dado que se plantea como proyecto por implementar y sistematizar mediante ciclos de investigación-acción \citep{restrepo2004investigacion}, sus evidencias futuras permitirán verificar empíricamente en qué medida el desplazamiento desde la ejercitación mecánica hacia la indagación colaborativa fortalece la autonomía y la argumentación crítica en el plantel.
+
+\clearpage
 \section{Conclusiones y síntesis argumentativa}
-En conclusión, el análisis sistemático de los fundamentos del aprendizaje en esta cohorte SD26 confirma que la calidad educativa no es una variable abstracta, sino el resultado de decisiones pedagógicas intencionales, fundamentadas y éticamente comprometidas. Por tanto, el fortalecimiento de la docencia en matemáticas requiere consolidar secuencias didácticas donde convivan el rigor conceptual, el acompañamiento cercano y la participación activa de cada estudiante en su propio proceso de aprendizaje.
+En conclusión, el desarrollo integrado de los tres momentos del Bloque III confirma que transformar la enseñanza de las matemáticas exige mirar primero hacia nuestras propias decisiones y creencias antes de diagnosticar carencias en los estudiantes. El análisis crítico de \citet{quiroga2022aprendizaje} aporta la brújula conceptual necesaria para articular pensamiento profundo, asociación interpersonal y cultura escolar colaborativa.
 
-\needspace{5\baselineskip}\section*{Referencias}
-{\setstretch{1.15}\setlength{\parskip}{6pt}
-\par\hangindent=1.27cm\hangafter=1 Delors, J., et al. (1996). \textit{La educación encierra un tesoro}. UNESCO/Santillana.
-\par\hangindent=1.27cm\hangafter=1 Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. En \textit{Innovating to learn, learning to innovate} (pp. 45--65). OECD.
-\par\hangindent=1.27cm\hangafter=1 Scott, C. L. (2015). \textit{El futuro del aprendizaje: ¿Qué tipo de aprendizaje se necesita en el siglo XXI?} UNESCO.
-\par\hangindent=1.27cm\hangafter=1 Secretaría de Educación Pública. (2024). \textit{Plan de Estudio para la educación preescolar, primaria y secundaria. Fase 6}. SEP.
-\par\hangindent=1.27cm\hangafter=1 UNESCO. (2015). \textit{Replantear la educación: ¿Hacia un bien común mundial?} Ediciones UNESCO.
-}
+Por tanto, el diseño de innovación presentado traduce dichos principios en una secuencia operativa realista, éticamente responsable y verificable mediante evaluación formativa continua, manteniendo coherencia plena con el tránsito docente humanista que consolido en la maestría.
+
+\clearpage
+\begin{thebibliography}{99}
+\bibitem[Boström y Palm(2023)]{bostrom2023formative} Boström, E., y Palm, T. (2023). Formative assessment practice in mathematics: Teachers' perceptions of prerequisite conditions. \textit{Frontiers in Education}, 8, Artículo 1101192.
+\bibitem[Collin y Quigley(2021)]{eef2021feedback} Collin, J., y Quigley, A. (2021). \textit{Teacher feedback to improve pupil learning}. Education Endowment Foundation.
+\bibitem[CONALEP(2025)]{conalep2025mecatronica} Colegio Nacional de Educación Profesional Técnica. (2025). \textit{Perfil de egreso: Profesional Técnico-Bachiller en Mecatrónica. Modelo Académico 2025}. Secretaría Académica.
+\bibitem[Fullan y Langworthy(2014)]{fullan2014rich} Fullan, M., y Langworthy, M. (2014). \textit{A rich seam: How new pedagogies find deep learning}. Pearson.
+\bibitem[Henderson et~al.(2017)]{eef2017mathematics} Henderson, P., Hodgen, J., Foster, C., y Kuchemann, D. (2017). \textit{Improving mathematics in Key Stages 2 and 3}. Education Endowment Foundation.
+\bibitem[Marton y Säljö(1976)]{marton1976qualitative} Marton, F., y Säljö, R. (1976). On qualitative differences in learning: I. Outcome and process. \textit{British Journal of Educational Psychology}, 46(1), 4--11.
+\bibitem[Quiroga Aguilar y Lara Órdenes(2022)]{quiroga2022aprendizaje} Quiroga Aguilar, L., y Lara Órdenes, E. (2022). El aprendizaje profundo como herramienta para cambio en la visión de aprendizaje de una cultura escolar. \textit{Revista Educación las Américas}, 12(1). \url{https://doi.org/10.35811/rea.v12i1.201}
+\bibitem[Restrepo Gómez(2004)]{restrepo2004investigacion} Restrepo Gómez, B. (2004). La investigación-acción educativa y la construcción de saber pedagógico. \textit{Educación y Educadores}, (7), 45--55.
+\bibitem[Rivas et~al.(2017)]{rivas2017innovaciones} Rivas, A., André, F., y Delgado, L. E. (Eds.). (2017). \textit{50 innovaciones educativas para escuelas}. CIPPEC / Santillana.
+\bibitem[Sawyer(2008)]{sawyer2008optimizing} Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. OECD Publishing.
+\bibitem[Schunk(2012)]{schunk2012teorias} Schunk, D. H. (2012). \textit{Teorías del aprendizaje: Una perspectiva educativa} (6.ª ed.). Pearson Educación.
+\bibitem[SEP(2023)]{sep2023pensamiento} Secretaría de Educación Pública. (2023). \textit{Programa de estudios del recurso sociocognitivo Pensamiento Matemático I}. Subsecretaría de Educación Media Superior.
+\bibitem[Star et~al.(2015)]{star2015algebra} Star, J. R., Caronongan, P., Foegen, A., Furgeson, J., Keating, B., Larson, M. R., Lyskawa, J., McCallum, W. G., Porath, J., y Zbiek, R. M. (2015). \textit{Teaching strategies for improving algebra knowledge}. IES.
+\end{thebibliography}
 
 \end{document}

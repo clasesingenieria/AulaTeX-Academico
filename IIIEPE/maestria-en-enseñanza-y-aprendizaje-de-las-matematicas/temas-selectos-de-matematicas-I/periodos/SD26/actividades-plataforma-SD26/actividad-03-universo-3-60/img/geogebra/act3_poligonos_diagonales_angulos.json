@@ -1,0 +1,648 @@
+{
+  "id": "act3_poligonos_diagonales_angulos",
+  "title": "Actividad 3: Triangulación por diagonales y ángulo central en polígonos regulares",
+  "commands": [
+    {
+      "cmd": "O_C4 = (-4.5, 3.0)",
+      "ok": true
+    },
+    {
+      "cmd": "circ_C4 = Circle(O_C4, 1.9)",
+      "ok": true
+    },
+    {
+      "cmd": "P_C4_0 = (-4.5, 4.9)",
+      "ok": true
+    },
+    {
+      "cmd": "P_C4_1 = (-6.4, 3.0)",
+      "ok": true
+    },
+    {
+      "cmd": "P_C4_2 = (-4.5, 1.1)",
+      "ok": true
+    },
+    {
+      "cmd": "P_C4_3 = (-2.6, 3.0)",
+      "ok": true
+    },
+    {
+      "cmd": "poly_C4 = Polygon(P_C4_0, P_C4_1, P_C4_2, P_C4_3)",
+      "ok": true
+    },
+    {
+      "cmd": "d_C4_2 = Segment(P_C4_0, P_C4_2)",
+      "ok": true
+    },
+    {
+      "cmd": "r1_C4 = Segment(O_C4, P_C4_0)",
+      "ok": true
+    },
+    {
+      "cmd": "r2_C4 = Segment(O_C4, P_C4_1)",
+      "ok": true
+    },
+    {
+      "cmd": "lbl_C4 = Text(\"Cuadrado (n=4 | 2 triángulos | 360°)\", (-7.1, 0.5))",
+      "ok": true
+    },
+    {
+      "cmd": "O_C5 = (4.5, 3.0)",
+      "ok": true
+    },
+    {
+      "cmd": "circ_C5 = Circle(O_C5, 1.9)",
+      "ok": true
+    },
+    {
+      "cmd": "P_C5_0 = (4.5, 4.9)",
+      "ok": true
+    },
+    {
+      "cmd": "P_C5_1 = (2.693, 3.5871)",
+      "ok": true
+    },
+    {
+      "cmd": "P_C5_2 = (3.3832, 1.4629)",
+      "ok": true
+    },
+    {
+      "cmd": "P_C5_3 = (5.6168, 1.4629)",
+      "ok": true
+    },
+    {
+      "cmd": "P_C5_4 = (6.307, 3.5871)",
+      "ok": true
+    },
+    {
+      "cmd": "poly_C5 = Polygon(P_C5_0, P_C5_1, P_C5_2, P_C5_3, P_C5_4)",
+      "ok": true
+    },
+    {
+      "cmd": "d_C5_2 = Segment(P_C5_0, P_C5_2)",
+      "ok": true
+    },
+    {
+      "cmd": "d_C5_3 = Segment(P_C5_0, P_C5_3)",
+      "ok": true
+    },
+    {
+      "cmd": "r1_C5 = Segment(O_C5, P_C5_0)",
+      "ok": true
+    },
+    {
+      "cmd": "r2_C5 = Segment(O_C5, P_C5_1)",
+      "ok": true
+    },
+    {
+      "cmd": "lbl_C5 = Text(\"Pentágono (n=5 | 3 triángulos | 540°)\", (1.9, 0.5))",
+      "ok": true
+    },
+    {
+      "cmd": "O_C6 = (-4.5, -2.6)",
+      "ok": true
+    },
+    {
+      "cmd": "circ_C6 = Circle(O_C6, 1.9)",
+      "ok": true
+    },
+    {
+      "cmd": "P_C6_0 = (-4.5, -0.7)",
+      "ok": true
+    },
+    {
+      "cmd": "P_C6_1 = (-6.1454, -1.65)",
+      "ok": true
+    },
+    {
+      "cmd": "P_C6_2 = (-6.1454, -3.55)",
+      "ok": true
+    },
+    {
+      "cmd": "P_C6_3 = (-4.5, -4.5)",
+      "ok": true
+    },
+    {
+      "cmd": "P_C6_4 = (-2.8546, -3.55)",
+      "ok": true
+    },
+    {
+      "cmd": "P_C6_5 = (-2.8546, -1.65)",
+      "ok": true
+    },
+    {
+      "cmd": "poly_C6 = Polygon(P_C6_0, P_C6_1, P_C6_2, P_C6_3, P_C6_4, P_C6_5)",
+      "ok": true
+    },
+    {
+      "cmd": "d_C6_2 = Segment(P_C6_0, P_C6_2)",
+      "ok": true
+    },
+    {
+      "cmd": "d_C6_3 = Segment(P_C6_0, P_C6_3)",
+      "ok": true
+    },
+    {
+      "cmd": "d_C6_4 = Segment(P_C6_0, P_C6_4)",
+      "ok": true
+    },
+    {
+      "cmd": "r1_C6 = Segment(O_C6, P_C6_0)",
+      "ok": true
+    },
+    {
+      "cmd": "r2_C6 = Segment(O_C6, P_C6_1)",
+      "ok": true
+    },
+    {
+      "cmd": "lbl_C6 = Text(\"Hexágono (n=6 | 4 triángulos | 720°)\", (-7.1, -5.1))",
+      "ok": true
+    },
+    {
+      "cmd": "O_C8 = (4.5, -2.6)",
+      "ok": true
+    },
+    {
+      "cmd": "circ_C8 = Circle(O_C8, 1.9)",
+      "ok": true
+    },
+    {
+      "cmd": "P_C8_0 = (4.5, -0.7)",
+      "ok": true
+    },
+    {
+      "cmd": "P_C8_1 = (3.1565, -1.2565)",
+      "ok": true
+    },
+    {
+      "cmd": "P_C8_2 = (2.6, -2.6)",
+      "ok": true
+    },
+    {
+      "cmd": "P_C8_3 = (3.1565, -3.9435)",
+      "ok": true
+    },
+    {
+      "cmd": "P_C8_4 = (4.5, -4.5)",
+      "ok": true
+    },
+    {
+      "cmd": "P_C8_5 = (5.8435, -3.9435)",
+      "ok": true
+    },
+    {
+      "cmd": "P_C8_6 = (6.4, -2.6)",
+      "ok": true
+    },
+    {
+      "cmd": "P_C8_7 = (5.8435, -1.2565)",
+      "ok": true
+    },
+    {
+      "cmd": "poly_C8 = Polygon(P_C8_0, P_C8_1, P_C8_2, P_C8_3, P_C8_4, P_C8_5, P_C8_6, P_C8_7)",
+      "ok": true
+    },
+    {
+      "cmd": "d_C8_2 = Segment(P_C8_0, P_C8_2)",
+      "ok": true
+    },
+    {
+      "cmd": "d_C8_3 = Segment(P_C8_0, P_C8_3)",
+      "ok": true
+    },
+    {
+      "cmd": "d_C8_4 = Segment(P_C8_0, P_C8_4)",
+      "ok": true
+    },
+    {
+      "cmd": "d_C8_5 = Segment(P_C8_0, P_C8_5)",
+      "ok": true
+    },
+    {
+      "cmd": "d_C8_6 = Segment(P_C8_0, P_C8_6)",
+      "ok": true
+    },
+    {
+      "cmd": "r1_C8 = Segment(O_C8, P_C8_0)",
+      "ok": true
+    },
+    {
+      "cmd": "r2_C8 = Segment(O_C8, P_C8_1)",
+      "ok": true
+    },
+    {
+      "cmd": "lbl_C8 = Text(\"Octágono (n=8 | 6 triángulos | 1080°)\", (1.9, -5.1))",
+      "ok": true
+    }
+  ],
+  "objects": {
+    "O_C4": {
+      "type": "point",
+      "val_str": "O_C4 = (-4.5, 3)",
+      "def_str": "(-4.5, 3)"
+    },
+    "circ_C4": {
+      "type": "circle",
+      "val_str": "circ_C4: (x + 4.5)² + (y - 3)² = 3.61",
+      "def_str": "Circunferencia con centro O_C4 y radio 1.9"
+    },
+    "P_C4_0": {
+      "type": "point",
+      "val_str": "P_C4_0 = (-4.5, 4.9)",
+      "def_str": "(-4.5, 4.9)"
+    },
+    "P_C4_1": {
+      "type": "point",
+      "val_str": "P_C4_1 = (-6.4, 3)",
+      "def_str": "(-6.4, 3)"
+    },
+    "P_C4_2": {
+      "type": "point",
+      "val_str": "P_C4_2 = (-4.5, 1.1)",
+      "def_str": "(-4.5, 1.1)"
+    },
+    "P_C4_3": {
+      "type": "point",
+      "val_str": "P_C4_3 = (-2.6, 3)",
+      "def_str": "(-2.6, 3)"
+    },
+    "poly_C4": {
+      "type": "quadrilateral",
+      "val_str": "poly_C4 = 7.22",
+      "def_str": "Polígono P_C4_0, P_C4_1, P_C4_2, P_C4_3"
+    },
+    "p_c4_0": {
+      "type": "segment",
+      "val_str": "p_c4_0 = 2.69",
+      "def_str": "Segmento [P_C4_0, P_C4_1]"
+    },
+    "p_c4_1": {
+      "type": "segment",
+      "val_str": "p_c4_1 = 2.69",
+      "def_str": "Segmento [P_C4_1, P_C4_2]"
+    },
+    "p_c4_2": {
+      "type": "segment",
+      "val_str": "p_c4_2 = 2.69",
+      "def_str": "Segmento [P_C4_2, P_C4_3]"
+    },
+    "p_c4_3": {
+      "type": "segment",
+      "val_str": "p_c4_3 = 2.69",
+      "def_str": "Segmento [P_C4_3, P_C4_0]"
+    },
+    "d_C4_2": {
+      "type": "segment",
+      "val_str": "d_C4_2 = 3.8",
+      "def_str": "Segmento [P_C4_0, P_C4_2]"
+    },
+    "r1_C4": {
+      "type": "segment",
+      "val_str": "r1_C4 = 1.9",
+      "def_str": "Segmento [O_C4, P_C4_0]"
+    },
+    "r2_C4": {
+      "type": "segment",
+      "val_str": "r2_C4 = 1.9",
+      "def_str": "Segmento [O_C4, P_C4_1]"
+    },
+    "lbl_C4": {
+      "type": "text",
+      "val_str": "Cuadrado (n=4 | 2 triángulos | 360°)",
+      "def_str": "Texto(\"Cuadrado (n=4 | 2 triángulos | 360°)\", (-7.1, 0.5))"
+    },
+    "O_C5": {
+      "type": "point",
+      "val_str": "O_C5 = (4.5, 3)",
+      "def_str": "(4.5, 3)"
+    },
+    "circ_C5": {
+      "type": "circle",
+      "val_str": "circ_C5: (x - 4.5)² + (y - 3)² = 3.61",
+      "def_str": "Circunferencia con centro O_C5 y radio 1.9"
+    },
+    "P_C5_0": {
+      "type": "point",
+      "val_str": "P_C5_0 = (4.5, 4.9)",
+      "def_str": "(4.5, 4.9)"
+    },
+    "P_C5_1": {
+      "type": "point",
+      "val_str": "P_C5_1 = (2.69, 3.59)",
+      "def_str": "(2.69, 3.59)"
+    },
+    "P_C5_2": {
+      "type": "point",
+      "val_str": "P_C5_2 = (3.38, 1.46)",
+      "def_str": "(3.38, 1.46)"
+    },
+    "P_C5_3": {
+      "type": "point",
+      "val_str": "P_C5_3 = (5.62, 1.46)",
+      "def_str": "(5.62, 1.46)"
+    },
+    "P_C5_4": {
+      "type": "point",
+      "val_str": "P_C5_4 = (6.31, 3.59)",
+      "def_str": "(6.31, 3.59)"
+    },
+    "poly_C5": {
+      "type": "pentagon",
+      "val_str": "poly_C5 = 8.58",
+      "def_str": "Polígono P_C5_0, P_C5_1, P_C5_2, P_C5_3, P_C5_4"
+    },
+    "p_c5_0": {
+      "type": "segment",
+      "val_str": "p_c5_0 = 2.23",
+      "def_str": "Segmento [P_C5_0, P_C5_1]"
+    },
+    "p_c5_1": {
+      "type": "segment",
+      "val_str": "p_c5_1 = 2.23",
+      "def_str": "Segmento [P_C5_1, P_C5_2]"
+    },
+    "p_c5_2": {
+      "type": "segment",
+      "val_str": "p_c5_2 = 2.23",
+      "def_str": "Segmento [P_C5_2, P_C5_3]"
+    },
+    "p_c5_3": {
+      "type": "segment",
+      "val_str": "p_c5_3 = 2.23",
+      "def_str": "Segmento [P_C5_3, P_C5_4]"
+    },
+    "p_c5_4": {
+      "type": "segment",
+      "val_str": "p_c5_4 = 2.23",
+      "def_str": "Segmento [P_C5_4, P_C5_0]"
+    },
+    "d_C5_2": {
+      "type": "segment",
+      "val_str": "d_C5_2 = 3.61",
+      "def_str": "Segmento [P_C5_0, P_C5_2]"
+    },
+    "d_C5_3": {
+      "type": "segment",
+      "val_str": "d_C5_3 = 3.61",
+      "def_str": "Segmento [P_C5_0, P_C5_3]"
+    },
+    "r1_C5": {
+      "type": "segment",
+      "val_str": "r1_C5 = 1.9",
+      "def_str": "Segmento [O_C5, P_C5_0]"
+    },
+    "r2_C5": {
+      "type": "segment",
+      "val_str": "r2_C5 = 1.9",
+      "def_str": "Segmento [O_C5, P_C5_1]"
+    },
+    "lbl_C5": {
+      "type": "text",
+      "val_str": "Pentágono (n=5 | 3 triángulos | 540°)",
+      "def_str": "Texto(\"Pentágono (n=5 | 3 triángulos | 540°)\", (1.9, 0.5))"
+    },
+    "O_C6": {
+      "type": "point",
+      "val_str": "O_C6 = (-4.5, -2.6)",
+      "def_str": "(-4.5, -2.6)"
+    },
+    "circ_C6": {
+      "type": "circle",
+      "val_str": "circ_C6: (x + 4.5)² + (y + 2.6)² = 3.61",
+      "def_str": "Circunferencia con centro O_C6 y radio 1.9"
+    },
+    "P_C6_0": {
+      "type": "point",
+      "val_str": "P_C6_0 = (-4.5, -0.7)",
+      "def_str": "(-4.5, -0.7)"
+    },
+    "P_C6_1": {
+      "type": "point",
+      "val_str": "P_C6_1 = (-6.15, -1.65)",
+      "def_str": "(-6.15, -1.65)"
+    },
+    "P_C6_2": {
+      "type": "point",
+      "val_str": "P_C6_2 = (-6.15, -3.55)",
+      "def_str": "(-6.15, -3.55)"
+    },
+    "P_C6_3": {
+      "type": "point",
+      "val_str": "P_C6_3 = (-4.5, -4.5)",
+      "def_str": "(-4.5, -4.5)"
+    },
+    "P_C6_4": {
+      "type": "point",
+      "val_str": "P_C6_4 = (-2.85, -3.55)",
+      "def_str": "(-2.85, -3.55)"
+    },
+    "P_C6_5": {
+      "type": "point",
+      "val_str": "P_C6_5 = (-2.85, -1.65)",
+      "def_str": "(-2.85, -1.65)"
+    },
+    "poly_C6": {
+      "type": "hexagon",
+      "val_str": "poly_C6 = 9.38",
+      "def_str": "Polígono P_C6_0, P_C6_1, P_C6_2, P_C6_3, P_C6_4, P_C6_5"
+    },
+    "p_c6_0": {
+      "type": "segment",
+      "val_str": "p_c6_0 = 1.9",
+      "def_str": "Segmento [P_C6_0, P_C6_1]"
+    },
+    "p_c6_1": {
+      "type": "segment",
+      "val_str": "p_c6_1 = 1.9",
+      "def_str": "Segmento [P_C6_1, P_C6_2]"
+    },
+    "p_c6_2": {
+      "type": "segment",
+      "val_str": "p_c6_2 = 1.9",
+      "def_str": "Segmento [P_C6_2, P_C6_3]"
+    },
+    "p_c6_3": {
+      "type": "segment",
+      "val_str": "p_c6_3 = 1.9",
+      "def_str": "Segmento [P_C6_3, P_C6_4]"
+    },
+    "p_c6_4": {
+      "type": "segment",
+      "val_str": "p_c6_4 = 1.9",
+      "def_str": "Segmento [P_C6_4, P_C6_5]"
+    },
+    "p_c6_5": {
+      "type": "segment",
+      "val_str": "p_c6_5 = 1.9",
+      "def_str": "Segmento [P_C6_5, P_C6_0]"
+    },
+    "d_C6_2": {
+      "type": "segment",
+      "val_str": "d_C6_2 = 3.29",
+      "def_str": "Segmento [P_C6_0, P_C6_2]"
+    },
+    "d_C6_3": {
+      "type": "segment",
+      "val_str": "d_C6_3 = 3.8",
+      "def_str": "Segmento [P_C6_0, P_C6_3]"
+    },
+    "d_C6_4": {
+      "type": "segment",
+      "val_str": "d_C6_4 = 3.29",
+      "def_str": "Segmento [P_C6_0, P_C6_4]"
+    },
+    "r1_C6": {
+      "type": "segment",
+      "val_str": "r1_C6 = 1.9",
+      "def_str": "Segmento [O_C6, P_C6_0]"
+    },
+    "r2_C6": {
+      "type": "segment",
+      "val_str": "r2_C6 = 1.9",
+      "def_str": "Segmento [O_C6, P_C6_1]"
+    },
+    "lbl_C6": {
+      "type": "text",
+      "val_str": "Hexágono (n=6 | 4 triángulos | 720°)",
+      "def_str": "Texto(\"Hexágono (n=6 | 4 triángulos | 720°)\", (-7.1, -5.1))"
+    },
+    "O_C8": {
+      "type": "point",
+      "val_str": "O_C8 = (4.5, -2.6)",
+      "def_str": "(4.5, -2.6)"
+    },
+    "circ_C8": {
+      "type": "circle",
+      "val_str": "circ_C8: (x - 4.5)² + (y + 2.6)² = 3.61",
+      "def_str": "Circunferencia con centro O_C8 y radio 1.9"
+    },
+    "P_C8_0": {
+      "type": "point",
+      "val_str": "P_C8_0 = (4.5, -0.7)",
+      "def_str": "(4.5, -0.7)"
+    },
+    "P_C8_1": {
+      "type": "point",
+      "val_str": "P_C8_1 = (3.16, -1.26)",
+      "def_str": "(3.16, -1.26)"
+    },
+    "P_C8_2": {
+      "type": "point",
+      "val_str": "P_C8_2 = (2.6, -2.6)",
+      "def_str": "(2.6, -2.6)"
+    },
+    "P_C8_3": {
+      "type": "point",
+      "val_str": "P_C8_3 = (3.16, -3.94)",
+      "def_str": "(3.16, -3.94)"
+    },
+    "P_C8_4": {
+      "type": "point",
+      "val_str": "P_C8_4 = (4.5, -4.5)",
+      "def_str": "(4.5, -4.5)"
+    },
+    "P_C8_5": {
+      "type": "point",
+      "val_str": "P_C8_5 = (5.84, -3.94)",
+      "def_str": "(5.84, -3.94)"
+    },
+    "P_C8_6": {
+      "type": "point",
+      "val_str": "P_C8_6 = (6.4, -2.6)",
+      "def_str": "(6.4, -2.6)"
+    },
+    "P_C8_7": {
+      "type": "point",
+      "val_str": "P_C8_7 = (5.84, -1.26)",
+      "def_str": "(5.84, -1.26)"
+    },
+    "poly_C8": {
+      "type": "polygon",
+      "val_str": "poly_C8 = 10.21",
+      "def_str": "Polígono P_C8_0, P_C8_1, P_C8_2, P_C8_3, P_C8_4, P_C8_5, P_C8_6, P_C8_7"
+    },
+    "p_c8_0": {
+      "type": "segment",
+      "val_str": "p_c8_0 = 1.45",
+      "def_str": "Segmento [P_C8_0, P_C8_1]"
+    },
+    "p_c8_1": {
+      "type": "segment",
+      "val_str": "p_c8_1 = 1.45",
+      "def_str": "Segmento [P_C8_1, P_C8_2]"
+    },
+    "p_c8_2": {
+      "type": "segment",
+      "val_str": "p_c8_2 = 1.45",
+      "def_str": "Segmento [P_C8_2, P_C8_3]"
+    },
+    "p_c8_3": {
+      "type": "segment",
+      "val_str": "p_c8_3 = 1.45",
+      "def_str": "Segmento [P_C8_3, P_C8_4]"
+    },
+    "p_c8_4": {
+      "type": "segment",
+      "val_str": "p_c8_4 = 1.45",
+      "def_str": "Segmento [P_C8_4, P_C8_5]"
+    },
+    "p_c8_5": {
+      "type": "segment",
+      "val_str": "p_c8_5 = 1.45",
+      "def_str": "Segmento [P_C8_5, P_C8_6]"
+    },
+    "p_c8_6": {
+      "type": "segment",
+      "val_str": "p_c8_6 = 1.45",
+      "def_str": "Segmento [P_C8_6, P_C8_7]"
+    },
+    "p_c8_7": {
+      "type": "segment",
+      "val_str": "p_c8_7 = 1.45",
+      "def_str": "Segmento [P_C8_7, P_C8_0]"
+    },
+    "d_C8_2": {
+      "type": "segment",
+      "val_str": "d_C8_2 = 2.69",
+      "def_str": "Segmento [P_C8_0, P_C8_2]"
+    },
+    "d_C8_3": {
+      "type": "segment",
+      "val_str": "d_C8_3 = 3.51",
+      "def_str": "Segmento [P_C8_0, P_C8_3]"
+    },
+    "d_C8_4": {
+      "type": "segment",
+      "val_str": "d_C8_4 = 3.8",
+      "def_str": "Segmento [P_C8_0, P_C8_4]"
+    },
+    "d_C8_5": {
+      "type": "segment",
+      "val_str": "d_C8_5 = 3.51",
+      "def_str": "Segmento [P_C8_0, P_C8_5]"
+    },
+    "d_C8_6": {
+      "type": "segment",
+      "val_str": "d_C8_6 = 2.69",
+      "def_str": "Segmento [P_C8_0, P_C8_6]"
+    },
+    "r1_C8": {
+      "type": "segment",
+      "val_str": "r1_C8 = 1.9",
+      "def_str": "Segmento [O_C8, P_C8_0]"
+    },
+    "r2_C8": {
+      "type": "segment",
+      "val_str": "r2_C8 = 1.9",
+      "def_str": "Segmento [O_C8, P_C8_1]"
+    },
+    "lbl_C8": {
+      "type": "text",
+      "val_str": "Octágono (n=8 | 6 triángulos | 1080°)",
+      "def_str": "Texto(\"Octágono (n=8 | 6 triángulos | 1080°)\", (1.9, -5.1))"
+    }
+  },
+  "out_png": "C:\\Users\\Sysx\\Documents\\AulaTeX-Academico\\IIIEPE\\maestria-en-enseñanza-y-aprendizaje-de-las-matematicas\\temas-selectos-de-matematicas-I\\periodos\\SD26\\actividades-plataforma-SD26\\actividad-03-universo-3-60\\img\\geogebra\\act3_poligonos_diagonales_angulos.png",
+  "out_ui_png": null,
+  "out_ggb": null
+}

@@ -1,0 +1,110 @@
+{
+  "id": "act6_proporcionalidad_hidraulica",
+  "title": "Trabajo Final: Gráfica GeoGebra de F₂ = k·F₁ con k = (d₂/d₁)² = 4",
+  "commands": [
+    {
+      "cmd": "f(x) = If(x >= 0, 4 * x)",
+      "ok": true
+    },
+    {
+      "cmd": "g(x) = If(x >= 0, 2 * x)",
+      "ok": true
+    },
+    {
+      "cmd": "P0 = (0, 0)",
+      "ok": true
+    },
+    {
+      "cmd": "P1 = (100, 400)",
+      "ok": true
+    },
+    {
+      "cmd": "P2 = (200, 800)",
+      "ok": true
+    },
+    {
+      "cmd": "P_reto = (250, 1000)",
+      "ok": true
+    },
+    {
+      "cmd": "P_err = (250, 500)",
+      "ok": true
+    },
+    {
+      "cmd": "segErr = Segment(P_err, P_reto)",
+      "ok": true
+    },
+    {
+      "cmd": "T1 = Text(\"Modelo correcto: F₂ = k·F₁ = 4·F₁  (k = (d₂/d₁)² = 2² = 4)\", (20, 1240))",
+      "ok": true
+    },
+    {
+      "cmd": "T2 = Text(\"Reto: F₁ = 250 N → F₂ = 1000 N\", (145, 1065))",
+      "ok": true
+    },
+    {
+      "cmd": "T3 = Text(\"Error lineal frecuente: F₂ = 2·F₁ → 500 N (-50%)\", (165, 360))",
+      "ok": true
+    }
+  ],
+  "objects": {
+    "f": {
+      "type": "function",
+      "val_str": "f(x) = Si(x ≥ 0, 4x)",
+      "def_str": ""
+    },
+    "g": {
+      "type": "function",
+      "val_str": "g(x) = Si(x ≥ 0, 2x)",
+      "def_str": ""
+    },
+    "P0": {
+      "type": "point",
+      "val_str": "P0 = (0, 0)",
+      "def_str": "(0, 0)"
+    },
+    "P1": {
+      "type": "point",
+      "val_str": "P1 = (100, 400)",
+      "def_str": "(100, 400)"
+    },
+    "P2": {
+      "type": "point",
+      "val_str": "P2 = (200, 800)",
+      "def_str": "(200, 800)"
+    },
+    "P_reto": {
+      "type": "point",
+      "val_str": "P_reto = (250, 1000)",
+      "def_str": "(250, 1000)"
+    },
+    "P_err": {
+      "type": "point",
+      "val_str": "P_err = (250, 500)",
+      "def_str": "(250, 500)"
+    },
+    "segErr": {
+      "type": "segment",
+      "val_str": "segErr = 500",
+      "def_str": "Segmento [P_err, P_reto]"
+    },
+    "T1": {
+      "type": "text",
+      "val_str": "Modelo correcto: F₂ = k·F₁ = 4·F₁  (k = (d₂/d₁)² = 2² = 4)",
+      "def_str": "Texto(\"Modelo correcto: F₂ = k·F₁ = 4·F₁  (k = (d₂/d₁)² = 2² = 4)\", (20, 1240))"
+    },
+    "T2": {
+      "type": "text",
+      "val_str": "Reto: F₁ = 250 N → F₂ = 1000 N",
+      "def_str": "Texto(\"Reto: F₁ = 250 N → F₂ = 1000 N\", (145, 1065))"
+    },
+    "T3": {
+      "type": "text",
+      "val_str": "Error lineal frecuente: F₂ = 2·F₁ → 500 N (-50%)",
+      "def_str": "Texto(\"Error lineal frecuente: F₂ = 2·F₁ → 500 N (-50%)\", (165, 360))"
+    }
+  },
+  "out_png": "C:\\Users\\Sysx\\Documents\\AulaTeX-Academico\\IIIEPE\\maestria-en-enseñanza-y-aprendizaje-de-las-matematicas\\temas-selectos-de-matematicas-I\\periodos\\SD26\\actividades-plataforma-SD26\\actividad-06-trabajo-final\\img\\geogebra\\act6_proporcionalidad_hidraulica.png",
+  "out_ui_png": "C:\\Users\\Sysx\\Documents\\AulaTeX-Academico\\IIIEPE\\maestria-en-enseñanza-y-aprendizaje-de-las-matematicas\\temas-selectos-de-matematicas-I\\periodos\\SD26\\actividades-plataforma-SD26\\actividad-06-trabajo-final\\img\\geogebra\\act6_proporcionalidad_hidraulica_ui.png",
+  "out_ggb": "C:\\Users\\Sysx\\Documents\\AulaTeX-Academico\\IIIEPE\\maestria-en-enseñanza-y-aprendizaje-de-las-matematicas\\temas-selectos-de-matematicas-I\\periodos\\SD26\\actividades-plataforma-SD26\\actividad-06-trabajo-final\\img\\geogebra\\act6_proporcionalidad_hidraulica.ggb"
+}

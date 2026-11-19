@@ -1,8 +1,8 @@
 \documentclass[spanish,letterpaper,oneside]{article}
 
-\def\documenttitle {El Modelo Bioecológico de Bronfenbrenner y sus Implicaciones Educativas}
+\def\documenttitle {El Modelo Bioecológico en la Enseñanza de las Matemáticas}
 \def\documentsubtitle {Fundamentos para la enseñanza y el aprendizaje I · Cohorte SD26}
-\def\documentsubject {Actividad 7 · Modelo Bioecologico}
+\def\documentsubject {Actividad 7 · Bloque III (Módulo 51813)}
 \def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
 \def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
 \def\coursecode {MAEM-SD26}
@@ -29,7 +29,7 @@
     Programa: & \programshort \\
     Periodo: & \programperiod \\
     & \\
-    \multicolumn{2}{l}{Fecha de realización: 14 de noviembre de 2026} \\
+    \multicolumn{2}{l}{Fecha de realización: 19 de noviembre de 2026} \\
     \multicolumn{2}{l}{\universitylocation}
   \end{tabular}
 }
@@ -42,8 +42,10 @@
 \usepackage{longtable}
 \usepackage{pdflscape}
 \usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 \usepackage[most]{tcolorbox}
-\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,shapes.geometric}
 
 \definecolor{iiiepeNavy}{HTML}{163B5C}
 \definecolor{iiiepeBlue}{HTML}{1F6F9F}
@@ -52,8 +54,16 @@
 \definecolor{iiiepePaper}{HTML}{F6F8F7}
 \definecolor{iiiepeInk}{HTML}{1E2A32}
 \definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
 \def\portraittitlecolor {iiiepeNavy}
 \setcitestyle{authoryear,open={(},close={)}}
+\makeatletter
+\renewcommand{\@biblabel}[1]{}
+\makeatother
+\setlength{\bibhang}{1.27cm}
+\setlength{\bibsep}{6pt}
+\AtBeginDocument{\renewcommand{\refname}{Referencias}}
 
 \newcommand{\insertcoverwatermark}{%
   \AddToShipoutPictureBG*{%
@@ -66,63 +76,101 @@
 }
 
 \setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
-\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 7}\setstretch{1.3}\raggedbottom
-
+\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 7 · Modelo Bioecológico}\setstretch{1.3}\raggedbottom
 \section{Introducción y postura central}
-El estudio de los fundamentos para la enseñanza y el aprendizaje en el marco de la cohorte SD26 exige examinar críticamente las relaciones entre los marcos teóricos contemporáneos y la realidad del aula de matemáticas. La postura central de este reporte plantea la tesis de que la transformación de la docencia técnica y matemática no se logra mediante la adopción acrítica de consignas procedimentales, sino a través de un análisis propio y sistemático de las mediaciones didácticas orientadas a la comprensión profunda y la justicia social \cite{delors1996educacion,unesco2015replantear}.
+Comprender por qué un grupo aprende o se distancia de las matemáticas exige mirar más allá del desempeño individual instantáneo frente al cuaderno. A partir de la lectura analítica de \citet{bronfenbrenner2006bioecologico}, complementada con su obra seminal sobre ecología del desarrollo humano \citep{bronfenbrenner1987ecologia} y la revisión empírica contemporánea de \citet{tong2023bioecological}, sostengo la tesis de que el desarrollo y el aprendizaje matemático emergen de interacciones recíprocas, sostenidas y progresivamente complejas entre la persona activa y los contextos ecológicos imbricados en el tiempo (modelo PPCT: Proceso--Persona--Contexto--Tiempo).
 
-Esta actividad, vinculada formalmente al módulo institucional \texttt{51813}, analiza de forma aplicada: \textit{Análisis de microsistema, mesosistema, exosistema, macrosistema y cronosistema en la trayectoria escolar del estudiante de matemáticas.}. Desde esta perspectiva, se abordan las dimensiones epistemológicas del aprendizaje sin soslayar los condicionamientos contextuales de la comunidad educativa.
+Mi postura es que reducir el aprendizaje a méritos individuales aislados o supuestos talentos fijos oculta las condiciones estructurales y relacionales que habilitan o bloquean el potencial estudiantil. En esta Actividad 7 (módulo \texttt{51813}), respondo de manera fundamentada a las seis preguntas planteadas en la guía del curso, relacionando explícitamente el concepto de \textit{procesos proximales} y los cuatro sistemas contextuales (más el cronosistema) con situaciones auténticas de mi práctica en bachillerato técnico e ingeniería, ilustradas mediante un diagrama bioecológico concéntrico y una matriz contextual.
 
-\section{Desarrollo temático y fundamentación conceptual}
-Para comprender el impacto formativo de esta intervención, es indispensable contrastar los modelos teóricos con las evidencias de desempeño observadas en la práctica cotidiana \cite{scott2015futuro}. A partir de un análisis propio de las secuencias de aprendizaje, esto implica que el aprendizaje significativo no puede reducirse a la repetición algorítmica.
+\section{Respuestas argumentadas a las seis preguntas rectoras}
 
-\begin{center}
-\begin{tikzpicture}[font=\small,node distance=1.8cm,>=Latex]
-  \node[draw=iiiepeNavy,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center] (a) {\textbf{Dimensión Epistémica}\\Comprensión y modelación conceptual};
-  \node[draw=iiiepeBlue,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center,right=of a] (b) {\textbf{Mediación Docente}\\Secuencias de indagación y andamiaje};
-  \node[draw=iiiepeAqua,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center,below=of a] (c) {\textbf{Interacción Dialógica}\\Retroalimentación y coevaluación};
-  \node[draw=iiiepeOrange,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center,below=of b] (d) {\textbf{Transferencia Real}\\Resolución situada en la comunidad};
-  
-  \draw[->,thick,iiiepeNavy] (a) -- node[above,font=\scriptsize] {orienta} (b);
-  \draw[->,thick,iiiepeBlue] (b) -- node[right,font=\scriptsize] {promueve} (d);
-  \draw[->,thick,iiiepeAqua] (c) -- node[left,font=\scriptsize] {sustenta} (a);
-  \draw[->,thick,iiiepeOrange] (d) -- node[below,font=\scriptsize] {evidencia} (c);
+\subsection*{1. ¿Cómo explica el Modelo Bioecológico la influencia de las interacciones persona--contexto en el aprendizaje?}
+\citet{bronfenbrenner2006bioecologico} superan las miradas ambientales pasivas formulando el modelo PPCT, integrado por cuatro pilares sinérgicos:
+\begin{itemize}
+  \item \textbf{Proceso (procesos proximales):} Son las interacciones recíprocas, sostenidas y de complejidad creciente que operan entre el organismo humano biopsicológico en evolución y las personas, objetos y símbolos de su entorno inmediato; constituyen el motor primario del desarrollo \citep{bronfenbrenner2006bioecologico}.
+  \item \textbf{Persona:} Aporta características propias que moldean y responden al ambiente, diferenciadas en disposiciones \textit{generadoras} (curiosidad, perseverancia) o \textit{disruptivas} (impulsividad, retraimiento), \textit{recursos} (saberes previos, habilidades, salud) y \textit{demandas} (atributos que invitan o desalientan respuestas del entorno) \citep{bronfenbrenner2006bioecologico}.
+  \item \textbf{Contexto:} Conjunto anidado de sistemas ambientales (micro, meso, exo y macrosistema) dentro de los cuales ocurren tanto propiedades objetivas como la experiencia subjetiva y fenomenológica (\textit{experiencing}) del sujeto.
+  \item \textbf{Tiempo (cronosistema):} Atraviesa microtiempo (continuidad durante episodios inmediatos), mesotiempo (periodicidad a lo largo de días o semanas) y macrotiempo (transformaciones históricas y generacionales).
+\end{itemize}
+Por consiguiente, el aprendizaje no brota de un vacío interior ni se impone mecánicamente desde afuera: ocurre en la interfaz viva entre características personales en cambio y procesos proximales sostenidos en el tiempo \citep{tong2023bioecological}.
+
+\subsection*{2. ¿Cómo cuestiona este modelo la idea de que el aprendizaje depende exclusivamente de capacidades o esfuerzo individuales?}
+De acuerdo con el análisis de Bronfenbrenner y Ceci recuperado por \citet{bronfenbrenner2006bioecologico}, las potencialidades genéticas o cognitivas no se actualizan en abstracto: requieren procesos proximales frecuentes, estables y enriquecidos para transformarse en competencias reales. Cuando estudiantes con igual capacidad enfrentan entornos con carencias materiales, inestabilidad laboral familiar o dinámicas escolares punitivas, sus potenciales permanecen sin actualizarse no por falta de inteligencia ni de voluntad moral, sino por ausencia de condiciones proximales habilitantes. En consecuencia, explicar el rezago matemático únicamente por «falta de esfuerzo o capacidad individual» constituye un error teórico y una injusticia pedagógica \citep{unesco2015replantear}.
+
+\subsection*{3. ¿Por qué es importante que los docentes comprendan la vinculación multicontextual del aprendizaje?}
+Comprender que cada estudiante trae consigo experiencias simultáneas del hogar, el transporte, la jornada laboral, el grupo de pares y la cultura digital impide interpretar el silencio, el cansancio o la ansiedad matemática como simples actitudes de desinterés \citep{tong2023bioecological}. Asimismo, permite a la academia docente identificar qué barreras externas superan el aula (horarios incompatibles, falta de equipo de cómputo doméstico) y diseñar respuestas institucionales solidarias, materiales accesibles y climas de confianza dentro de la escuela \citep{meirieu2020escuela}.
+
+\subsection*{4. Desde su experiencia educativa, ¿qué importancia otorga al conocimiento del contexto familiar, escolar y social?}
+En mi labor docente tanto en bachillerato técnico (CONALEP y CECyTE) como en cursos universitarios de ingeniería, conocer el contexto real del alumnado ha resultado decisivo para evitar planeaciones desconectadas. Por ejemplo, muchos jóvenes técnicos ayudan en ingresos familiares, recorren trayectos prolongados en transporte público o disponen únicamente del teléfono celular para consultar materiales; mientras varios estudiantes de ingeniería combinan turnos industriales con estudios nocturnos. Tener presentes estas condiciones orienta decisiones concretas: diseñar guías de cálculo accesibles sin software costoso obligatorio, aprovechar situaciones laborales reales como contexto matemático significativo y organizar tiempos de clase donde el trabajo colaborativo y las dudas esenciales se resuelvan dentro del aula \citep{conalep2025mecatronica}.
+
+\subsection*{5. ¿Qué características de las interacciones docente--estudiante favorecen o limitan el aprendizaje desde los procesos proximales?}
+Según la \textbf{Proposición I} de \citet{bronfenbrenner2006bioecologico}, para que una interacción en clase funcione como proceso proximal genuino en matemáticas debe cumplir cinco atributos: (a) exigir actividad cognitiva del estudiante (no mera escucha pasiva); (b) ocurrir con regularidad sostenida durante semanas; (c) incrementar gradualmente su nivel de complejidad (evitando repetir mecánicamente idénticos despejes todo el semestre); (d) sostener reciprocidad bidireccional donde el docente escuche y responda a las ideas reales del grupo \citep{eef2021feedback}; y (e) implicar interacción activa no solo con personas, sino también con objetos y símbolos matemáticos (instrumentos, tablas, gráficas y modelos). Por oposición, interacciones esporádicas, punitivas, monológicas o estancadas en ejercicios rutinarios limitan severamente el desarrollo matemático.
+
+\subsection*{6. ¿Qué factores del microsistema, mesosistema, exosistema y macrosistema identifica en su contexto educativo?}
+La Figura~\ref{fig:act7-bioecologico} esquematiza la articulación concéntrica de los sistemas en mi entorno docente, y el cuadro posterior detalla sus factores específicos e implicaciones didácticas.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[font=\scriptsize, scale=0.88, transform shape]
+  % Elipses concentricas limpias de afuera hacia adentro
+  \draw[draw=iiiepeNavy,fill=iiiepePale,thick] (0,0) ellipse (7.3cm and 4.35cm);
+  \draw[draw=iiiepeBlue,fill=white,thick] (0,0) ellipse (5.7cm and 3.40cm);
+  \draw[draw=iiiepeAqua!80!black,fill=iiiepeMint,thick] (0,0) ellipse (4.1cm and 2.45cm);
+  \draw[draw=iiiepeOrange!90!black,fill=iiiepeWarm,thick] (0,0) ellipse (2.5cm and 1.48cm);
+  \node[draw=iiiepeNavy,fill=iiiepeNavy,text=white,rounded corners=3pt,text width=2.9cm,align=center,inner sep=4pt] at (0,0)
+    {\textbf{PERSONA Y PROCESOS\\PROXIMALES}\\Estudiante activo · Símbolos matemáticos · Diálogo};
+
+  % Etiquetas posicionadas en bandas limpias superior e inferior sin traslapes
+  \node[fill=iiiepeWarm,rounded corners=2pt,font=\scriptsize\bfseries,iiiepeOrange!85!black] at (0,1.12)
+    {Microsistema: Aula, taller, familia, pares};
+  \node[fill=iiiepeMint,rounded corners=2pt,font=\scriptsize\bfseries,iiiepeAqua!75!black] at (0,2.08)
+    {Mesosistema: Vínculo escuela--hogar--taller--academia};
+  \node[fill=white,rounded corners=2pt,font=\scriptsize\bfseries,iiiepeBlue] at (0,3.02)
+    {Exosistema: Horarios, equipamiento, normativas, empleo familiar};
+  \node[fill=iiiepePale,rounded corners=2pt,font=\scriptsize\bfseries,iiiepeNavy] at (0,3.92)
+    {Macrosistema: Cultura matemática, políticas NEM/MCCEMS, desigualdad};
+
+  \node[fill=iiiepeNavy!8,draw=iiiepeNavy,rounded corners=3pt,text width=12.8cm,align=center,inner sep=4pt] at (0,-5.05)
+    {\textbf{\color{iiiepeNavy}Cronosistema (Tiempo):} Evolución microtemporal (durante la sesión), mesotemporal (a lo largo del periodo SD26) y macrotemporal (cambios tecnológicos y curriculares históricos) \citep{bronfenbrenner2006bioecologico}.};
 \end{tikzpicture}
-\end{center}
+\caption{Representación bioecológica de los sistemas contextuales y procesos proximales en la educación matemática técnica.}
+\label{fig:act7-bioecologico}
+\end{figure}
 
-La literatura especializada en ciencias del aprendizaje \cite{sawyer2008optimizing} subraya que los estudiantes construyen comprensiones duraderas cuando tienen oportunidades explícitas de verbalizar, contrastar y reformular sus hipótesis iniciales. En la enseñanza de las matemáticas, este principio desarticula el mito de la capacidad fija y promueve una cultura de aula equitativa y dialógica.
-
-\section{Matriz de análisis y artefacto metodológico}
-La tabla siguiente sistematiza los componentes centrales de la actividad, contrastando los requerimientos pedagógicos con los criterios de evaluación formativa:
-
-{\small\setstretch{1.15}\renewcommand{\arraystretch}{1.3}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.28\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.38\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.34\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
-\rowcolor{iiiepePale} \textbf{Componente Clave} & \textbf{Fundamentación Teórica} & \textbf{Aplicación en el Aula de Matemáticas} \\\hline
+{\small\setstretch{1.15}\renewcommand{\arraystretch}{1.32}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.18\linewidth}|>{\raggedright\arraybackslash}p{0.41\linewidth}|>{\raggedright\arraybackslash}p{0.35\linewidth}|}\hline
+\rowcolor{iiiepePale} \textbf{Sistema ecológico} & \textbf{Factores concretos en mi contexto educativo} & \textbf{Influencia observada en el aprendizaje} \\\hline
 \endfirsthead
 \hline
-\rowcolor{iiiepePale} \textbf{Componente Clave} & \textbf{Fundamentación Teórica} & \textbf{Aplicación en el Aula de Matemáticas} \\\hline
+\rowcolor{iiiepePale} \textbf{Sistema ecológico} & \textbf{Factores concretos en mi contexto educativo} & \textbf{Influencia observada en el aprendizaje} \\\hline
 \endhead
-Diagnóstico y Saberes Previos & Reconocimiento de esquemas cognitivos y barreras de aprendizaje \cite{scott2015futuro}. & Análisis de concepciones alternativas en representaciones algebraicas y numéricas. \\\hline
-Mediación y Andamiaje & Provisión de apoyos estructurados con retirada progresiva \cite{sawyer2008optimizing}. & Guías de modelación con variación paramétrica y preguntas generadoras. \\\hline
-Evaluación Formativa & Uso dialógico del error como fuente de aprendizaje y reorientación. & Rúbricas analíticas con devolución descriptiva y opción de segunda versión. \\\hline
-Transferencia Comunitaria & Articulación con problemas del entorno y la Nueva Escuela Mexicana \cite{sep2024fase6}. & Proyectos de estimación de costos, consumo hídrico o calibración instrumental. \\\hline
+Microsistema & Interacción directa docente--estudiante, clima del taller de mecatrónica, pares en equipo, condiciones de estudio en el hogar y relación inmediata con padres o empleadores. & Define la calidad emocional y cognitiva de los procesos proximales cotidianos y la disposición para preguntar sin temor \citep{bronfenbrenner1987ecologia}. \\\hline
+Mesosistema & Articulación entre asignaturas de matemáticas y módulos técnicos de taller; comunicación entre escuela, familia y tutorías académicas. & Cuando taller y matemáticas dialogan entre sí, el alumnado percibe coherencia y transfiere conceptos entre entornos \citep{sep2023pensamiento}. \\\hline
+Exosistema & Disponibilidad presupuestal de instrumentos y laboratorios, calendarios administrativos, normativas institucionales de evaluación y turnos laborales de padres o estudiantes. & Condiciona tiempo real de descanso, acceso a recursos manipulativos y estabilidad para sostener tareas prolongadas \citep{tong2023bioecological}. \\\hline
+Macrosistema & Creencias culturales («las matemáticas son para unos pocos»), sesgos de género en áreas técnicas, marco curricular nacional (NEM/MCCEMS) y desigualdad socioeconómica regional. & Modela expectativas sobre quién puede cursar ingeniería o áreas científicas y el valor atribuido al aprendizaje comprensivo \citep{unesco2015replantear}. \\\hline
+Cronosistema & Acumulación de rezagos escolares previos, transición secundaria--preparatoria--universidad y rápida automatización industrial contemporánea. & Exige revisar trayectorias temporales completas en lugar de juzgar desempeños puntuales descontextualizados \citep{bronfenbrenner2006bioecologico}. \\\hline
 \end{longtable}}
 
-\section{Transferencia profesional y aplicación práctica}
-En mi práctica docente profesional en bachillerato técnico e ingeniería, la aplicación de estos principios demanda superar la didáctica tradicional centrada exclusivamente en la pizarra. En el contexto laboral e industrial, los egresados enfrentan desafíos abiertos que requieren juicio crítico, trabajo en equipo y precisión matemática. 
+\section{Transferencia profesional e implicaciones de diseño docente}
+La lectura bioecológica transforma directamente mi toma de decisiones curriculares en bachillerato técnico e ingeniería. Esto implica concebir cada secuencia matemática como una intervención ecológica intencional: fortalecer el microsistema cuidando reciprocidad y complejidad progresiva; tejer el mesosistema conectando problemas matemáticos con prácticas reales de taller; mitigar barreras del exosistema ofreciendo materiales impresos claros y trabajo colaborativo en horario escolar; y desafiar en el macrosistema los estereotipos excluyentes sobre las capacidades matemáticas \citep{eef2017mathematics}.
 
-Por consiguiente, incorporar situaciones donde los estudiantes argumenten sus decisiones estadísticas o algebraicas fortalece directamente su perfil de egreso. El impacto profesional de esta mirada formativa se manifiesta en la capacidad del alumnado para transferir métodos matemáticos a escenarios reales de mantenimiento, automatización o gestión comunitaria.
-
+\clearpage
 \section{Conclusiones y síntesis argumentativa}
-En conclusión, el análisis sistemático de los fundamentos del aprendizaje en esta cohorte SD26 confirma que la calidad educativa no es una variable abstracta, sino el resultado de decisiones pedagógicas intencionales, fundamentadas y éticamente comprometidas. Por tanto, el fortalecimiento de la docencia en matemáticas requiere consolidar secuencias didácticas donde convivan el rigor conceptual, el acompañamiento cercano y la participación activa de cada estudiante en su propio proceso de aprendizaje.
+En conclusión, el Modelo Bioecológico de \citet{bronfenbrenner2006bioecologico} demuestra que aprender matemáticas jamás ocurre en el vacío de una mente aislada, sino en redes vivas de interacción situadas histórica y materialmente. La crítica al determinismo individual abre paso a una pedagogía más rigurosa y más justa, porque desplaza la mirada desde la descalificación hacia la calidad de los procesos proximales que logramos construir en la escuela.
 
-\needspace{5\baselineskip}\section*{Referencias}
-{\setstretch{1.15}\setlength{\parskip}{6pt}
-\par\hangindent=1.27cm\hangafter=1 Delors, J., et al. (1996). \textit{La educación encierra un tesoro}. UNESCO/Santillana.
-\par\hangindent=1.27cm\hangafter=1 Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. En \textit{Innovating to learn, learning to innovate} (pp. 45--65). OECD.
-\par\hangindent=1.27cm\hangafter=1 Scott, C. L. (2015). \textit{El futuro del aprendizaje: ¿Qué tipo de aprendizaje se necesita en el siglo XXI?} UNESCO.
-\par\hangindent=1.27cm\hangafter=1 Secretaría de Educación Pública. (2024). \textit{Plan de Estudio para la educación preescolar, primaria y secundaria. Fase 6}. SEP.
-\par\hangindent=1.27cm\hangafter=1 UNESCO. (2015). \textit{Replantear la educación: ¿Hacia un bien común mundial?} Ediciones UNESCO.
-}
+Por tanto, asumir esta perspectiva en el cierre de la cohorte SD26 fundamenta directamente el diseño integrador del trabajo final, vinculando contexto bioecológico, metodologías sociocríticas y modelación matemática al servicio de la equidad educativa.
+
+\clearpage
+\begin{thebibliography}{99}
+\bibitem[Bronfenbrenner(1987)]{bronfenbrenner1987ecologia} Bronfenbrenner, U. (1987). \textit{La ecología del desarrollo humano}. Paidós.
+\bibitem[Bronfenbrenner y Morris(2006)]{bronfenbrenner2006bioecologico} Bronfenbrenner, U., y Morris, P. A. (2006). The bioecological model of human development. En R. M. Lerner (Ed.), \textit{Handbook of child psychology: Vol. 1. Theoretical models of human development} (6.ª ed., pp. 793--828). John Wiley \& Sons.
+\bibitem[Collin y Quigley(2021)]{eef2021feedback} Collin, J., y Quigley, A. (2021). \textit{Teacher feedback to improve pupil learning}. Education Endowment Foundation.
+\bibitem[CONALEP(2025)]{conalep2025mecatronica} Colegio Nacional de Educación Profesional Técnica. (2025). \textit{Perfil de egreso: Profesional Técnico-Bachiller en Mecatrónica. Modelo Académico 2025}. Secretaría Académica.
+\bibitem[Henderson et~al.(2017)]{eef2017mathematics} Henderson, P., Hodgen, J., Foster, C., y Kuchemann, D. (2017). \textit{Improving mathematics in Key Stages 2 and 3}. Education Endowment Foundation.
+\bibitem[Meirieu(2020)]{meirieu2020escuela} Meirieu, P. (2020, 18 de abril). ``La escuela después''... ¿Con la pedagogía de antes? \textit{MCEP}.
+\bibitem[SEP(2023)]{sep2023pensamiento} Secretaría de Educación Pública. (2023). \textit{Programa de estudios del recurso sociocognitivo Pensamiento Matemático I}. Subsecretaría de Educación Media Superior.
+\bibitem[Tong y An(2023)]{tong2023bioecological} Tong, X., y An, X. (2023). A review of empirical studies applying Bronfenbrenner's bioecological theory. \textit{Frontiers in Psychology}, 14, Artículo 1233925. \url{https://doi.org/10.3389/fpsyg.2023.1233925}
+\bibitem[UNESCO(2015)]{unesco2015replantear} UNESCO. (2015). \textit{Replantear la educación: ¿Hacia un bien común mundial?} Ediciones UNESCO.
+\end{thebibliography}
 
 \end{document}

@@ -1,8 +1,8 @@
 \documentclass[spanish,letterpaper,oneside]{article}
 
-\def\documenttitle {Trabajo Final Integrador: Propuesta de Intervención Pedagógica Transformadora}
+\def\documenttitle {Calibrar para Decidir: Proyecto Integrador de Modelación Matemática}
 \def\documentsubtitle {Fundamentos para la enseñanza y el aprendizaje I · Cohorte SD26}
-\def\documentsubject {Actividad 8 · Trabajo Final}
+\def\documentsubject {Actividad 8 · Trabajo Final Integrador (Módulos 50172 y 50175)}
 \def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
 \def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
 \def\coursecode {MAEM-SD26}
@@ -29,7 +29,7 @@
     Programa: & \programshort \\
     Periodo: & \programperiod \\
     & \\
-    \multicolumn{2}{l}{Fecha de realización: 14 de noviembre de 2026} \\
+    \multicolumn{2}{l}{Fecha de realización: 19 de noviembre de 2026} \\
     \multicolumn{2}{l}{\universitylocation}
   \end{tabular}
 }
@@ -42,8 +42,10 @@
 \usepackage{longtable}
 \usepackage{pdflscape}
 \usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 \usepackage[most]{tcolorbox}
-\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,shapes.geometric}
 
 \definecolor{iiiepeNavy}{HTML}{163B5C}
 \definecolor{iiiepeBlue}{HTML}{1F6F9F}
@@ -52,8 +54,16 @@
 \definecolor{iiiepePaper}{HTML}{F6F8F7}
 \definecolor{iiiepeInk}{HTML}{1E2A32}
 \definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
 \def\portraittitlecolor {iiiepeNavy}
 \setcitestyle{authoryear,open={(},close={)}}
+\makeatletter
+\renewcommand{\@biblabel}[1]{}
+\makeatother
+\setlength{\bibhang}{1.27cm}
+\setlength{\bibsep}{6pt}
+\AtBeginDocument{\renewcommand{\refname}{Referencias}}
 
 \newcommand{\insertcoverwatermark}{%
   \AddToShipoutPictureBG*{%
@@ -66,63 +76,179 @@
 }
 
 \setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
-\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 8}\setstretch{1.3}\raggedbottom
+\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 8 · Trabajo Final}\setstretch{1.3}\raggedbottom
+\section{1. Portada y planteamiento integrador del proyecto}
+El presente informe consolida la \textbf{Actividad integradora final} del módulo \texttt{50172} mediante el diseño completo de un \textbf{proyecto educativo por realizar}: \textit{«Calibrar para decidir: modelación matemática, aprendizaje profundo y uso responsable de sistemas de medición en la formación técnica»}. Mi postura es que la enseñanza de las matemáticas en bachillerato técnico e ingeniería alcanza pleno sentido formativo cuando articula el campo \textit{Saberes y Pensamiento Científico} \citep{sep2022plan,sep2024fase6}, una metodología sociocrítica de \textit{Aprendizaje Basado en Indagación (STEAM)} y la comprensión contextual del \textit{Modelo Bioecológico} \citep{bronfenbrenner2006bioecologico}.
 
-\section{Introducción y postura central}
-El estudio de los fundamentos para la enseñanza y el aprendizaje en el marco de la cohorte SD26 exige examinar críticamente las relaciones entre los marcos teóricos contemporáneos y la realidad del aula de matemáticas. La postura central de este reporte plantea la tesis de que la transformación de la docencia técnica y matemática no se logra mediante la adopción acrítica de consignas procedimentales, sino a través de un análisis propio y sistemático de las mediaciones didácticas orientadas a la comprensión profunda y la justicia social \cite{delors1996educacion,unesco2015replantear}.
+Considero indispensable señalar de forma explícita y honesta que este proyecto corresponde a una \textbf{propuesta didáctica por realizar} y que los datos numéricos de calibración presentados ($y = 1.05x + 0.2$) tienen carácter \textbf{estrictamente didáctico y simulado}; en ningún caso se reportan resultados empíricos previos ni mediciones atribuidas falsamente a un grupo escolar. Se desarrollan sistemáticamente los diez apartados oficiales establecidos en la consigna \texttt{50173} y se incorpora íntegramente el \textit{Instrumento de autoevaluación} de veinte afirmaciones y dos preguntas de reflexión personal del módulo \texttt{50175}.
 
-Esta actividad, vinculada formalmente al módulo institucional \texttt{50172}, analiza de forma aplicada: \textit{Integración global de fundamentos epistemológicos, identidad docente, aprendizaje profundo y modelo bioecológico en una secuencia didáctica.}. Desde esta perspectiva, se abordan las dimensiones epistemológicas del aprendizaje sin soslayar los condicionamientos contextuales de la comunidad educativa.
+\section{2. Descripción general del proyecto}
+\begin{itemize}
+  \item \textbf{¿En qué consiste el proyecto?} En el diseño de una secuencia didáctica de indagación cuantitativa donde equipos de estudiantes analizan mediciones reales o simuladas de un instrumento de taller (termómetro digital, báscula o galga de banco) frente a lecturas patrón, ajustan el modelo matemático que describe el comportamiento del sensor, evalúan su error sistemático y dictaminan cuándo resulta confiable tomar una decisión técnica a partir de dichas lecturas.
+  \item \textbf{¿A qué nivel educativo está dirigido?} A estudiantes de educación media superior tecnológica en las especialidades de mantenimiento industrial y mecatrónica (CONALEP y CECyTE, cuartos a sextos semestres), siendo directamente adaptable a primeros semestres universitarios de Ingeniería Mecánica, de Sistemas e Industrial \citep{conalep2025mecatronica}.
+  \item \textbf{¿Cuál es su propósito?} Formar en el estudiantado la capacidad de construir, contrastar y justificar modelos lineales con sentido físico y estadístico, integrando interpretación crítica de datos, trabajo colaborativo equitativo y toma de decisiones responsables.
+  \item \textbf{¿Qué contenidos matemáticos desarrolla?} Proporcionalidad directa frente a relaciones lineales afines ($y = kx$ frente a $y = mx + b$), tasa de cambio y sesgo inicial, representaciones tabular, gráfica y algebraica, error absoluto y relativo, medidas de tendencia central y dispersión básica, análisis dimensional y validez de dominio \citep{sep2023pensamiento,star2015algebra}.
+\end{itemize}
 
-\section{Desarrollo temático y fundamentación conceptual}
-Para comprender el impacto formativo de esta intervención, es indispensable contrastar los modelos teóricos con las evidencias de desempeño observadas en la práctica cotidiana \cite{scott2015futuro}. A partir de un análisis propio de las secuencias de aprendizaje, esto implica que el aprendizaje significativo no puede reducirse a la repetición algorítmica.
+\section{3. Problemática o necesidad educativa que atiende}
+En talleres técnicos y asignaturas introductorias de ingeniería se observa con frecuencia que el alumnado ejecuta mecánicamente operaciones algebraicas —despejar incógnitas o aplicar la fórmula de la pendiente— sin cuestionar qué magnitud física miden los símbolos ni si un instrumento ofrece lecturas confiables antes de ajustar una máquina o reportar un diagnóstico. Esta brecha evidencia una enseñanza matemática fragmentada centrada en cálculo aislado \citep{sawyer2008optimizing}.
 
-\begin{center}
-\begin{tikzpicture}[font=\small,node distance=1.8cm,>=Latex]
-  \node[draw=iiiepeNavy,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center] (a) {\textbf{Dimensión Epistémica}\\Comprensión y modelación conceptual};
-  \node[draw=iiiepeBlue,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center,right=of a] (b) {\textbf{Mediación Docente}\\Secuencias de indagación y andamiaje};
-  \node[draw=iiiepeAqua,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center,below=of a] (c) {\textbf{Interacción Dialógica}\\Retroalimentación y coevaluación};
-  \node[draw=iiiepeOrange,fill=iiiepePale,thick,rounded corners=3pt,text width=3.8cm,align=center,below=of b] (d) {\textbf{Transferencia Real}\\Resolución situada en la comunidad};
-  
-  \draw[->,thick,iiiepeNavy] (a) -- node[above,font=\scriptsize] {orienta} (b);
-  \draw[->,thick,iiiepeBlue] (b) -- node[right,font=\scriptsize] {promueve} (d);
-  \draw[->,thick,iiiepeAqua] (c) -- node[left,font=\scriptsize] {sustenta} (a);
-  \draw[->,thick,iiiepeOrange] (d) -- node[below,font=\scriptsize] {evidencia} (c);
+Abordar esta situación mediante el aprendizaje de las matemáticas resulta prioritario porque distinguir una variación proporcional limpia de una lectura con desviación inicial ($y = 1.05x + 0.2$), cuantificar márgenes de error y justificar un criterio de aceptación exige razonamiento algebraico, gráfico y estadístico en un escenario cotidiano del perfil técnico y ciudadano; sin embargo, la existencia real de esta dificultad en cada nuevo grupo deberá contrastarse primero mediante diagnóstico inicial antes de darla por supuesta.
+
+\section{4. Campo formativo: Saberes y Pensamiento Científico (Matemáticas)}
+En congruencia con el Plan de Estudio y los Programas Sintéticos \citep{sep2022plan,sep2024fase6}, el proyecto fortalece cinco ejes del pensamiento científico y matemático:
+\begin{enumerate}
+  \item \textbf{Resolución de problemas:} El grupo define variables relevantes (referencia $x$ y lectura $y$), formula conjeturas sobre la confiabilidad del instrumento y selecciona herramientas algebraicas o estadísticas pertinentes.
+  \item \textbf{Pensamiento lógico y matemático:} Analiza invariantes y desviaciones (diferencias $y - x$ y cocientes $y/x$) para determinar si existe proporcionalidad o componente afín constante.
+  \item \textbf{Razonamiento y argumentación:} Exige justificar por escrito los supuestos del modelo empleado, identificar fuentes posibles de error sistemático frente a ruido aleatorio y rebatir con evidencia afirmaciones infundadas \citep{eef2017mathematics}.
+  \item \textbf{Modelación y representación matemática:} Conecta dinámicamente tablas de lecturas, gráficas cartesianas con banda de tolerancia y expresión simbólica (como ilustra la Figura~\ref{fig:act8-calibracion}).
+  \item \textbf{Uso de las matemáticas en la vida cotidiana:} Traslada el análisis de confiabilidad instrumental a decisiones domésticas, de salud o de consumo responsable (básculas, medidores eléctricos, termómetros clínicos), vinculando rigor técnico y criterio ciudadano.
+\end{enumerate}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=11.8cm, height=6.4cm,
+  xlabel={Referencia patrón simulada $x$ (unidades de ensayo)},
+  ylabel={Lectura observada $y$},
+  xmin=0, xmax=10.5, ymin=0, ymax=11.5,
+  grid=major, grid style={iiiepePale!95!gray},
+  legend pos=north west,
+  legend style={font=\scriptsize,draw=iiiepeNavy,fill=white},
+  label style={font=\scriptsize}, tick label style={font=\scriptsize}
+]
+  \addplot[iiiepeNavy,dashed,thick,domain=0:10] {x};
+  \addlegendentry{Referencia ideal: $y = x$}
+  \addplot[iiiepeOrange!90!black,very thick,mark=*,mark options={fill=iiiepeOrange}] coordinates {
+    (0,0.20) (2,2.30) (4,4.40) (6,6.50) (8,8.60) (10,10.70)
+  };
+  \addlegendentry{Ejemplo didáctico simulado: $y = 1.05x + 0.2$}
+  \node[anchor=west,font=\scriptsize,fill=white,draw=iiiepeBlue,rounded corners=2pt,inner sep=3pt] at (axis cs:5.2,2.4)
+    {Desviación: $y - x = 0.05x + 0.2$ (crece con $x$)};
+\end{axis}
 \end{tikzpicture}
-\end{center}
+\caption{Ejemplo didáctico simulado de calibración: contraste entre proporcionalidad ideal ($y=x$) y modelo afín ($y=1.05x+0.2$).}
+\label{fig:act8-calibracion}
+\end{figure}
 
-La literatura especializada en ciencias del aprendizaje \cite{sawyer2008optimizing} subraya que los estudiantes construyen comprensiones duraderas cuando tienen oportunidades explícitas de verbalizar, contrastar y reformular sus hipótesis iniciales. En la enseñanza de las matemáticas, este principio desarticula el mito de la capacidad fija y promueve una cultura de aula equitativa y dialógica.
-
-\section{Matriz de análisis y artefacto metodológico}
-La tabla siguiente sistematiza los componentes centrales de la actividad, contrastando los requerimientos pedagógicos con los criterios de evaluación formativa:
-
-{\small\setstretch{1.15}\renewcommand{\arraystretch}{1.3}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.28\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.38\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.34\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
-\rowcolor{iiiepePale} \textbf{Componente Clave} & \textbf{Fundamentación Teórica} & \textbf{Aplicación en el Aula de Matemáticas} \\\hline
+{\small\setstretch{1.15}\renewcommand{\arraystretch}{1.28}
+\begin{longtable}{|c|c|c|c|p{0.44\linewidth}|}\hline
+\rowcolor{iiiepePale} \textbf{Patrón $x$} & \textbf{Lectura $y$} & \textbf{Error $y-x$} & \textbf{Razón $y/x$} & \textbf{Interpretación matemática didáctica} \\\hline
 \endfirsthead
 \hline
-\rowcolor{iiiepePale} \textbf{Componente Clave} & \textbf{Fundamentación Teórica} & \textbf{Aplicación en el Aula de Matemáticas} \\\hline
+\rowcolor{iiiepePale} \textbf{Patrón $x$} & \textbf{Lectura $y$} & \textbf{Error $y-x$} & \textbf{Razón $y/x$} & \textbf{Interpretación matemática didáctica} \\\hline
 \endhead
-Diagnóstico y Saberes Previos & Reconocimiento de esquemas cognitivos y barreras de aprendizaje \cite{scott2015futuro}. & Análisis de concepciones alternativas en representaciones algebraicas y numéricas. \\\hline
-Mediación y Andamiaje & Provisión de apoyos estructurados con retirada progresiva \cite{sawyer2008optimizing}. & Guías de modelación con variación paramétrica y preguntas generadoras. \\\hline
-Evaluación Formativa & Uso dialógico del error como fuente de aprendizaje y reorientación. & Rúbricas analíticas con devolución descriptiva y opción de segunda versión. \\\hline
-Transferencia Comunitaria & Articulación con problemas del entorno y la Nueva Escuela Mexicana \cite{sep2024fase6}. & Proyectos de estimación de costos, consumo hídrico o calibración instrumental. \\\hline
+0 & 0.20 & $+0.20$ & --- & Revela sesgo inicial (ordenada al origen $b=0.2 \neq 0$). \\\hline
+2 & 2.30 & $+0.30$ & 1.150 & Descarta proporcionalidad pura al variar la razón $y/x$. \\\hline
+4 & 4.40 & $+0.40$ & 1.100 & Incremento constante de $2.10$ por cada $\Delta x = 2 \Rightarrow m=1.05$. \\\hline
+6 & 6.50 & $+0.50$ & 1.083 & El error absoluto crece linealmente con la magnitud medida. \\\hline
+8 & 8.60 & $+0.60$ & 1.075 & Supera una tolerancia hipotética de $\pm 0.50$; requiere corrección. \\\hline
+10 & 10.70 & $+0.70$ & 1.070 & Sustenta el dictamen técnico de recalibración o restricción de rango. \\\hline
 \end{longtable}}
 
-\section{Transferencia profesional y aplicación práctica}
-En mi práctica docente profesional en bachillerato técnico e ingeniería, la aplicación de estos principios demanda superar la didáctica tradicional centrada exclusivamente en la pizarra. En el contexto laboral e industrial, los egresados enfrentan desafíos abiertos que requieren juicio crítico, trabajo en equipo y precisión matemática. 
+\section{5. Metodología sociocrítica de la Nueva Escuela Mexicana}
+El proyecto adopta el \textbf{Aprendizaje Basado en Indagación bajo enfoque STEAM} como metodología sociocrítica de la NEM \citep{sep2022plan}. Esta elección se justifica porque la pregunta central —\textit{¿cuándo podemos confiar en una medición para tomar una decisión técnica responsable?}— demanda formular hipótesis previas, diseñar una prueba controlada, recolectar y organizar evidencia numérica, modelar matemáticamente las relaciones observadas y comunicar conclusiones verificables \citep{quiroga2022aprendizaje}. Asimismo, cada campo aporta una función genuina: la ciencia fundamenta la magnitud física y las fuentes de error; la tecnología organiza la captura digital o tabular sin reemplazar el juicio analítico; la ingeniería define tolerancias funcionales; las artes visuales optimizan la lectura crítica de gráficas; y las matemáticas estructuran la argumentación lógica \citep{rivas2017innovaciones}.
 
-Por consiguiente, incorporar situaciones donde los estudiantes argumenten sus decisiones estadísticas o algebraicas fortalece directamente su perfil de egreso. El impacto profesional de esta mirada formativa se manifiesta en la capacidad del alumnado para transferir métodos matemáticos a escenarios reales de mantenimiento, automatización o gestión comunitaria.
+\section{6. Descripción de las principales actividades del proyecto}
+{\small\setstretch{1.15}\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.18\linewidth}|>{\raggedright\arraybackslash}p{0.46\linewidth}|>{\raggedright\arraybackslash}p{0.30\linewidth}|}\hline
+\rowcolor{iiiepePale} \textbf{Fase del proyecto} & \textbf{Acciones principales de los estudiantes} & \textbf{Evidencia formativa} \\\hline
+\endfirsthead
+\hline
+\rowcolor{iiiepePale} \textbf{Fase del proyecto} & \textbf{Acciones principales de los estudiantes} & \textbf{Evidencia formativa} \\\hline
+\endhead
+1. Planteamiento del problema & Analizan un caso real de falla por lectura mal interpretada; registran su predicción individual inicial sobre la confiabilidad del sensor. & Nota diagnóstica de predicción previa. \\\hline
+2. Investigación & Indagan el significado de calibración, sesgo de cero, error de escala y tolerancia permisible en contextos de taller o hogar. & Síntesis conceptual de términos metrológicos. \\\hline
+3. Recolección y análisis de datos & Trabajan con lecturas reales de banco (o el conjunto simulado) organizando tablas de $x$, $y$, $y-x$ y cociente $y/x$. & Hoja de registro tabular verificada por pares. \\\hline
+4. Resolución matemática & Trazan gráficas comparativas frente a $y=x$, calculan pendiente e intercepto e interpretan los límites de validez del modelo. & Desarrollo algebraico y gráfico anotado. \\\hline
+5. Elaboración de productos & Redactan una ficha técnica de decisión indicando rango confiable, ecuación de corrección y advertencias de uso. & Dictamen técnico en una cuartilla con gráfica. \\\hline
+6. Socialización de resultados & Exponen y defienden en plenaria su dictamen ante cuestionamientos de otros equipos sobre supuestos y márgenes de error. & Coevaluación oral argumentada. \\\hline
+7. Evaluación formativa & Reciben retroalimentación descriptiva centrada en conceptos y entregan una versión revisada junto con reflexión metacognitiva \citep{eef2021feedback}. & Versión mejorada y matriz formativa. \\\hline
+\end{longtable}}
 
-\section{Conclusiones y síntesis argumentativa}
-En conclusión, el análisis sistemático de los fundamentos del aprendizaje en esta cohorte SD26 confirma que la calidad educativa no es una variable abstracta, sino el resultado de decisiones pedagógicas intencionales, fundamentadas y éticamente comprometidas. Por tanto, el fortalecimiento de la docencia en matemáticas requiere consolidar secuencias didácticas donde convivan el rigor conceptual, el acompañamiento cercano y la participación activa de cada estudiante en su propio proceso de aprendizaje.
+\section{7. Relación con la perspectiva ecológica de Urie Bronfenbrenner}
+De acuerdo con \citet{bronfenbrenner2006bioecologico}, \citet{bronfenbrenner1987ecologia} y \citet{tong2023bioecological}, el desarrollo de aprendizajes durante el proyecto depende de las condiciones ecológicas que envuelven los procesos proximales:
+\begin{itemize}
+  \item \textbf{Microsistema:} Interacciones directas entre docente, pares en equipo, equipo de taller y apoyo familiar; un clima respetuoso frente a dudas iniciales permite probar hipótesis sin ansiedad.
+  \item \textbf{Mesosistema:} Articulación coherente entre la clase de matemáticas, los módulos técnicos de mantenimiento/mecatrónica y situaciones familiares de medición cotidiana.
+  \item \textbf{Exosistema:} Disponibilidad institucional de instrumentos de medición, tiempo de clase frente a jornadas laborales de los estudiantes y acceso a calculadoras o software; el proyecto contempla hojas impresas y sets de datos replicables para evitar exclusión tecnológica.
+  \item \textbf{Macrosistema:} Creencias sociales sobre quién «sirve para las matemáticas», cultura técnica orientada al cumplimiento rápido sin reflexión y políticas curriculares de la NEM \citep{unesco2015replantear}.
+  \item \textbf{Cronosistema:} Evolución de las explicaciones desde la predicción diagnóstica inicial hasta el dictamen final revisado y su transferencia a unidades posteriores del semestre.
+\end{itemize}
 
-\needspace{5\baselineskip}\section*{Referencias}
-{\setstretch{1.15}\setlength{\parskip}{6pt}
-\par\hangindent=1.27cm\hangafter=1 Delors, J., et al. (1996). \textit{La educación encierra un tesoro}. UNESCO/Santillana.
-\par\hangindent=1.27cm\hangafter=1 Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. En \textit{Innovating to learn, learning to innovate} (pp. 45--65). OECD.
-\par\hangindent=1.27cm\hangafter=1 Scott, C. L. (2015). \textit{El futuro del aprendizaje: ¿Qué tipo de aprendizaje se necesita en el siglo XXI?} UNESCO.
-\par\hangindent=1.27cm\hangafter=1 Secretaría de Educación Pública. (2024). \textit{Plan de Estudio para la educación preescolar, primaria y secundaria. Fase 6}. SEP.
-\par\hangindent=1.27cm\hangafter=1 UNESCO. (2015). \textit{Replantear la educación: ¿Hacia un bien común mundial?} Ediciones UNESCO.
-}
+\section{8. Impacto esperado del proyecto}
+Como proyecto por realizar, se espera promover cinco aprendizajes matemáticos observables tras su implementación: (a) distinguir con claridad relaciones proporcionales frente a funciones lineales afines en problemas auténticos; (b) interpretar pendiente, intercepto y error con sentido físico y dimensional; (c) fortalecer el trabajo colaborativo con roles alternos de argumentación; (d) consolidar pensamiento crítico frente a cifras aparentemente exactas pero sin respaldo contextual; y (e) comunicar decisiones técnicas claras sustentadas con evidencia gráfica y escrita \citep{bostrom2023formative}.
+
+\section{9. Reflexión final (cuatro preguntas orientadoras)}
+\begin{enumerate}
+  \item \textbf{¿Qué concepción del aprendizaje de las matemáticas se observa en el proyecto?} Se concibe aprender matemáticas como un proceso activo, relacional y acompañado de indagación y diálogo, nunca como simple repetición individual de despejes descontextualizados \citep{sawyer2008optimizing}.
+  \item \textbf{¿Cómo contribuyen las metodologías sociocríticas de la NEM al desarrollo del pensamiento matemático?} La indagación STEAM conecta una necesidad técnica real con rigor modelador y participación comunitaria, obligando a transformar fórmulas en argumentos útiles para decidir responsablemente \citep{sep2022plan}.
+  \item \textbf{¿Qué aportaciones de la perspectiva ecológica de Bronfenbrenner se identifican en el proyecto?} Reconoce que los procesos proximales solo prosperan si se atienden accesibilidad material (exosistema), diálogo entre asignaturas (mesosistema) y trato digno libre de etiquetas deterministas en el aula (microsistema y macrosistema), orientando decisiones concretas de equidad sin suponer causalidades sin evidencia futura \citep{bronfenbrenner2006bioecologico}.
+  \item \textbf{¿Qué beneficios aporta este tipo de proyectos a la formación integral del estudiante?} Integra mi base industrial de rigor metrológico y claridad estructural con una mirada pedagógica humanista que valora a cada estudiante en su contexto real, fortaleciendo autonomía intelectual, ética técnica y ciudadanía crítica.
+\end{enumerate}
+
+\section*{Instrumento de autoevaluación y reflexión personal (Módulo 50175)}
+En cumplimiento puntual del instrumento de autoevaluación oficial de veinte afirmaciones y las dos preguntas finales de reflexión personal del curso \texttt{50175}, se consigna la verificación completa del proyecto integrado:
+
+{\scriptsize\setstretch{1.12}\renewcommand{\arraystretch}{1.22}
+\begin{longtable}{|c|>{\raggedright\arraybackslash}p{0.62\linewidth}|c|c|c|}\hline
+\rowcolor{iiiepePale} \textbf{\#} & \textbf{Afirmación del instrumento oficial (Módulo 50175)} & \textbf{Sí} & \textbf{En proceso} & \textbf{No} \\\hline
+\endfirsthead
+\hline
+\rowcolor{iiiepePale} \textbf{\#} & \textbf{Afirmación del instrumento oficial (Módulo 50175)} & \textbf{Sí} & \textbf{En proceso} & \textbf{No} \\\hline
+\endhead
+1 & Elaboré una portada con el título del proyecto, mi nombre, la asignatura y la fecha. & X & & \\\hline
+2 & Expliqué con claridad en qué consiste mi proyecto. & X & & \\\hline
+3 & Mencioné el nivel educativo al que está dirigido. & X & & \\\hline
+4 & Describí el propósito del proyecto. & X & & \\\hline
+5 & Identifiqué los contenidos matemáticos que desarrolla. & X & & \\\hline
+6 & Describí la problemática o necesidad que atiende mi proyecto. & X & & \\\hline
+7 & Justifiqué por qué esta problemática es relevante. & X & & \\\hline
+8 & Expliqué por qué es importante abordarla mediante el aprendizaje de las matemáticas. & X & & \\\hline
+9 & Expliqué cómo mi proyecto desarrolla la resolución de problemas. & X & & \\\hline
+10 & Expliqué cómo favorece el pensamiento lógico y matemático. & X & & \\\hline
+11 & Expliqué cómo promueve el razonamiento y la argumentación. & X & & \\\hline
+12 & Expliqué cómo favorece la modelación y representación matemática. & X & & \\\hline
+13 & Relacioné las matemáticas con situaciones de la vida cotidiana. & X & & \\\hline
+14 & Identifiqué la metodología utilizada y justifiqué mi elección. & X & & \\\hline
+15 & Expliqué cómo esta metodología favorece el aprendizaje de las matemáticas. & X & & \\\hline
+16 & Describí las actividades principales del proyecto. & X & & \\\hline
+17 & Expliqué la relación del proyecto con los sistemas de Bronfenbrenner. & X & & \\\hline
+18 & Expliqué los aprendizajes matemáticos esperados y su impacto. & X & & \\\hline
+19 & Respondí de manera crítica las preguntas de reflexión final. & X & & \\\hline
+20 & Incluí al menos tres referencias en formato APA 7. & X & & \\\hline
+\end{longtable}}
+
+\begin{tcolorbox}[colback=iiiepeMint,colframe=iiiepeAqua!80!black,title=\textbf{Reflexión personal del Instrumento de Autoevaluación},breakable]
+\textbf{¿Qué fue lo que mejor logré en esta actividad?} Logré articular orgánicamente mi trayectoria técnica de ingeniería con los marcos pedagógicos trabajados a lo largo de la cohorte SD26 (ciencias del aprendizaje, aprendizaje profundo, investigación-acción y modelo bioecológico) dentro de un proyecto realista de modelación matemática de calibración, diferenciando con honestidad un diseño por implementar y datos didácticos simulados frente a evidencia empírica futura.
+
+\medskip
+\textbf{¿Qué aspecto necesito mejorar antes de entregar mi trabajo?} Verificar al implementarse en grupos reales la calibración de tiempos destinados al trabajo colaborativo en equipos heterogéneos y recoger sistemáticamente los resultados del diagnóstico inicial para ajustar la complejidad de las guías escritas según los contextos particulares de cada grupo \citep{restrepo2004investigacion}.
+\end{tcolorbox}
+
+\clearpage
+\section*{10. Transferencia profesional y conclusiones}
+En el contexto laboral de bachillerato técnico e ingeniería, el proyecto integrado aquí diseñado consolida la transferencia coherente de toda la unidad de aprendizaje hacia una docencia humanista, contextualizada y disciplinariamente rigurosa. En conclusión, responder a los desafíos de la enseñanza matemática exige diseñar tareas con sentido real, propiciar procesos proximales equitativos y someter cada intervención a verificación reflexiva continua. Por tanto, las diez secciones desarrolladas y la autoevaluación verificada dejan la propuesta completamente preparada para su revisión institucional y futura aplicación en aula.
+
+\clearpage
+\begin{thebibliography}{99}
+\bibitem[Boström y Palm(2023)]{bostrom2023formative} Boström, E., y Palm, T. (2023). Formative assessment practice in mathematics: Teachers' perceptions of prerequisite conditions. \textit{Frontiers in Education}, 8, Artículo 1101192.
+\bibitem[Bronfenbrenner(1987)]{bronfenbrenner1987ecologia} Bronfenbrenner, U. (1987). \textit{La ecología del desarrollo humano}. Paidós.
+\bibitem[Bronfenbrenner y Morris(2006)]{bronfenbrenner2006bioecologico} Bronfenbrenner, U., y Morris, P. A. (2006). The bioecological model of human development. En R. M. Lerner (Ed.), \textit{Handbook of child psychology: Vol. 1. Theoretical models of human development} (6.ª ed., pp. 793--828). John Wiley \& Sons.
+\bibitem[Collin y Quigley(2021)]{eef2021feedback} Collin, J., y Quigley, A. (2021). \textit{Teacher feedback to improve pupil learning}. Education Endowment Foundation.
+\bibitem[CONALEP(2025)]{conalep2025mecatronica} Colegio Nacional de Educación Profesional Técnica. (2025). \textit{Perfil de egreso: Profesional Técnico-Bachiller en Mecatrónica. Modelo Académico 2025}. Secretaría Académica.
+\bibitem[Henderson et~al.(2017)]{eef2017mathematics} Henderson, P., Hodgen, J., Foster, C., y Kuchemann, D. (2017). \textit{Improving mathematics in Key Stages 2 and 3}. Education Endowment Foundation.
+\bibitem[Quiroga Aguilar y Lara Órdenes(2022)]{quiroga2022aprendizaje} Quiroga Aguilar, L., y Lara Órdenes, E. (2022). El aprendizaje profundo como herramienta para cambio en la visión de aprendizaje de una cultura escolar. \textit{Revista Educación las Américas}, 12(1).
+\bibitem[Restrepo Gómez(2004)]{restrepo2004investigacion} Restrepo Gómez, B. (2004). La investigación-acción educativa y la construcción de saber pedagógico. \textit{Educación y Educadores}, (7), 45--55.
+\bibitem[Rivas et~al.(2017)]{rivas2017innovaciones} Rivas, A., André, F., y Delgado, L. E. (Eds.). (2017). \textit{50 innovaciones educativas para escuelas}. CIPPEC / Santillana.
+\bibitem[Sawyer(2008)]{sawyer2008optimizing} Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. OECD Publishing.
+\bibitem[SEP(2022)]{sep2022plan} Secretaría de Educación Pública. (2022). \textit{Plan de Estudio para la educación preescolar, primaria y secundaria}. SEP.
+\bibitem[SEP(2023)]{sep2023pensamiento} Secretaría de Educación Pública. (2023). \textit{Programa de estudios del recurso sociocognitivo Pensamiento Matemático I}. Subsecretaría de Educación Media Superior.
+\bibitem[SEP(2024)]{sep2024fase6} Secretaría de Educación Pública. (2024). \textit{Programa de estudio para la educación secundaria: Programa sintético de la Fase 6}. SEP.
+\bibitem[Star et~al.(2015)]{star2015algebra} Star, J. R., Caronongan, P., Foegen, A., Furgeson, J., Keating, B., Larson, M. R., Lyskawa, J., McCallum, W. G., Porath, J., y Zbiek, R. M. (2015). \textit{Teaching strategies for improving algebra knowledge}. IES.
+\bibitem[Tong y An(2023)]{tong2023bioecological} Tong, X., y An, X. (2023). A review of empirical studies applying Bronfenbrenner's bioecological theory. \textit{Frontiers in Psychology}, 14, Artículo 1233925.
+\bibitem[UNESCO(2015)]{unesco2015replantear} UNESCO. (2015). \textit{Replantear la educación: ¿Hacia un bien común mundial?} Ediciones UNESCO.
+\end{thebibliography}
 
 \end{document}

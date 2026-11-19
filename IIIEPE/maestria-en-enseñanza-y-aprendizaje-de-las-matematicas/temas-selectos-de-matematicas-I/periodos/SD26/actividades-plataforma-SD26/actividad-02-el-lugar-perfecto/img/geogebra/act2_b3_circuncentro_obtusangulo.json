@@ -1,0 +1,125 @@
+{
+  "id": "act2_b3_circuncentro_obtusangulo",
+  "title": "Actividad 2b: Circuncentro en triángulo obtusángulo",
+  "commands": [
+    {
+      "cmd": "A = (-4, 0)",
+      "ok": true
+    },
+    {
+      "cmd": "B = (5, 0)",
+      "ok": true
+    },
+    {
+      "cmd": "C = (0, -1.5)",
+      "ok": true
+    },
+    {
+      "cmd": "tri = Polygon(A, B, C)",
+      "ok": true
+    },
+    {
+      "cmd": "angC = Angle(A, C, B)",
+      "ok": true
+    },
+    {
+      "cmd": "ma = PerpendicularBisector(B, C)",
+      "ok": true
+    },
+    {
+      "cmd": "mb = PerpendicularBisector(A, C)",
+      "ok": true
+    },
+    {
+      "cmd": "mc = PerpendicularBisector(A, B)",
+      "ok": true
+    },
+    {
+      "cmd": "O = Intersect(ma, mb)",
+      "ok": true
+    },
+    {
+      "cmd": "c_circ = Circle(O, A)",
+      "ok": true
+    },
+    {
+      "cmd": "T1 = Text(\"Triángulo obtusángulo: O queda EN EL EXTERIOR\", (-6.0, 7.2))",
+      "ok": true
+    }
+  ],
+  "objects": {
+    "A": {
+      "type": "point",
+      "val_str": "A = (-4, 0)",
+      "def_str": "(-4, 0)"
+    },
+    "B": {
+      "type": "point",
+      "val_str": "B = (5, 0)",
+      "def_str": "(5, 0)"
+    },
+    "C": {
+      "type": "point",
+      "val_str": "C = (0, -1.5)",
+      "def_str": "(0, -1.5)"
+    },
+    "tri": {
+      "type": "triangle",
+      "val_str": "tri = 6.75",
+      "def_str": "Polígono A, B, C"
+    },
+    "c": {
+      "type": "segment",
+      "val_str": "c = 9",
+      "def_str": "Segmento [A, B]"
+    },
+    "a": {
+      "type": "segment",
+      "val_str": "a = 5.22",
+      "def_str": "Segmento [B, C]"
+    },
+    "b": {
+      "type": "segment",
+      "val_str": "b = 4.27",
+      "def_str": "Segmento [C, A]"
+    },
+    "angC": {
+      "type": "angle",
+      "val_str": "angC = 217.26°",
+      "def_str": "Ángulo entre A, C, B"
+    },
+    "ma": {
+      "type": "line",
+      "val_str": "ma: 5x + 1.5y = 11.38",
+      "def_str": "Mediatriz de BC"
+    },
+    "mb": {
+      "type": "line",
+      "val_str": "mb: -4x + 1.5y = 6.88",
+      "def_str": "Mediatriz de AC"
+    },
+    "mc": {
+      "type": "line",
+      "val_str": "mc: x = 0.5",
+      "def_str": "Mediatriz de AB"
+    },
+    "O": {
+      "type": "point",
+      "val_str": "O = (0.5, 5.92)",
+      "def_str": "Intersección de ma, mb"
+    },
+    "c_circ": {
+      "type": "circle",
+      "val_str": "c_circ: (x - 0.5)² + (y - 5.92)² = 55.26",
+      "def_str": "Circunferencia que pasa por A con centro O"
+    },
+    "T1": {
+      "type": "text",
+      "val_str": "Triángulo obtusángulo: O queda EN EL EXTERIOR",
+      "def_str": "Texto(\"Triángulo obtusángulo: O queda EN EL EXTERIOR\", (-6, 7.2))"
+    }
+  },
+  "out_png": "C:\\Users\\Sysx\\Documents\\AulaTeX-Academico\\IIIEPE\\maestria-en-enseñanza-y-aprendizaje-de-las-matematicas\\temas-selectos-de-matematicas-I\\periodos\\SD26\\actividades-plataforma-SD26\\actividad-02-el-lugar-perfecto\\img\\geogebra\\act2_b3_circuncentro_obtusangulo.png",
+  "out_ui_png": null,
+  "out_ggb": null
+}

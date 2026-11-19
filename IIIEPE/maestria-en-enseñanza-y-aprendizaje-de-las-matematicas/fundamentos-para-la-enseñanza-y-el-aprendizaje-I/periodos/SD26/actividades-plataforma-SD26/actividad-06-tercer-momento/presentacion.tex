@@ -1,66 +1,238 @@
-\documentclass[spanish,letterpaper,oneside]{article}
-
-\def\documenttitle {Tercer Momento: Evaluación Auténtica y la Nueva Escuela Mexicana}
-\def\documentsubtitle {Presentación Ejecutiva · Cohorte SD26}
-\def\documentsubject {Actividad 6 · Síntesis Visual}
-\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
-\def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
-\def\coursecode {MAEM-SD26}
-
-\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación}
-\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
-\def\universitydepartment {Fundamentos para la enseñanza y el aprendizaje I}
-\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
-\def\universitydepartmentimagecfg {height=1.75cm}
-\def\universitylocation {Monterrey, Nuevo León}
-\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
-\def\studentid {00874}
-\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
-\def\programperiod {2do periodo, septiembre--diciembre de 2026 (SD26)}
-\def\programmodality {Modalidad presencial}
-\def\programshort {MAEM}
-
-\def\authortable {
-  \begin{tabular}{ll}
-    \textbf{Alumno:} & \studentfullname \\
-    Matrícula: & \studentid \\
-    Unidad: & \coursename \\
-    Periodo: & \programperiod
-  \end{tabular}
-}
-
-\input{template}
-
+\documentclass[aspectratio=169,spanish,xcolor=table]{beamer}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+\fi
+\usepackage[spanish,es-tabla,es-noshorthands]{babel}
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
-\usepackage{tikz,longtable,array}
-\usetikzlibrary{arrows.meta,positioning}
+\usepackage{tikz,pgfplots,array,booktabs,ragged2e}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes.geometric,fit}
+
 \definecolor{iiiepeNavy}{HTML}{163B5C}
 \definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
 \definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
 
-\begin{document}\templatePortrait\templatePagecfg\templateFinalcfg\setstretch{1.25}
+\usetheme{default}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{normal text}{fg=iiiepeInk,bg=white}
+\setbeamercolor{structure}{fg=iiiepeNavy}
+\setbeamercolor{frametitle}{fg=white,bg=iiiepeNavy}
+\setbeamercolor{block title}{fg=white,bg=iiiepeBlue}
+\setbeamercolor{block body}{fg=iiiepeInk,bg=iiiepePale}
+\setbeamercolor{item}{fg=iiiepeOrange}
 
-\section*{Síntesis Ejecutiva · Actividad 6}
-\textbf{Tercer Momento: Evaluación Auténtica y la Nueva Escuela Mexicana}
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.95cm,dp=0.22cm,leftskip=0.45cm,rightskip=0.45cm]{frametitle}%
+    \usebeamerfont{frametitle}\insertframetitle%
+    \hfill\includegraphics[height=0.58cm]{img/iiiepe/logo-iiiepe-blanco.png}%
+  \end{beamercolorbox}%
+}
 
-\subsection*{1. Diagnóstico y Planteamiento Central}
-La presente exposición aborda la articulación de los marcos pedagógicos contemporáneos en el aula de matemáticas:
-\begin{itemize}
-  \item Eje temático: Transición entre paradigmas evaluativos tradicionales y la evaluación formativa y comunitaria de la NEM..
-  \item Planteamiento central: La enseñanza matemática trasciende el adiestramiento mecánico cuando incorpora la indagación y la justificación argumentada \cite{delors1996educacion,scott2015futuro}.
-\end{itemize}
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.78\paperwidth,ht=0.5cm,dp=0.18cm,leftskip=0.45cm]{frametitle}%
+      \scriptsize\color{white}M. de la Cruz Muñoz · MAEM · Matrícula 00874 · SD26 · Actividad 6 · Tercer Momento%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.22\paperwidth,ht=0.5cm,dp=0.18cm,rightskip=0.45cm]{frametitle}%
+      \hfill\scriptsize\color{white}\insertframenumber{} / \inserttotalframenumber%
+    \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
 
-\subsection*{2. Dimensiones y Artefacto de Aplicación}
-{\small\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|p{0.35\linewidth}|p{0.6\linewidth}|}\hline
-\rowcolor{iiiepePale} \textbf{Dimensión} & \textbf{Acción Didáctica en el Aula} \\\hline
-Fundamentación Teórica & Vinculación conceptual con las ciencias del aprendizaje \cite{sawyer2008optimizing}. \\\hline
-Mediación Matemática & Diseño de tareas abiertas con representaciones múltiples. \\\hline
-Impacto Profesional & Transferencia reflexiva al contexto laboral y comunitario. \\\hline
-\end{longtable}}
+\newcommand{\Pill}[2]{%
+  \tikz[baseline=(x.base)]{\node[rounded corners=3pt,fill=#1!14,draw=#1!75!black,thick,inner xsep=6pt,inner ysep=4pt,align=center] (x) {\scriptsize\bfseries #2};}%
+}
 
-\subsection*{3. Conclusión y Veredicto Pedagógico}
-En conclusión, la práctica docente se consolida al articular rigor disciplinar y enfoque humanista. Por tanto, esta propuesta formativa promueve la autonomía y equidad educativa en los estudiantes.
+\title{Tres Momentos: Diagnóstico e Innovación Matemática}
+\subtitle{Actividad 6 · Bloque III · Módulo 51809}
+\author{Mtro. Martín Jonathan de la Cruz Muñoz · Matrícula 00874}
+\institute{IIIEPE · Maestría en Aprendizaje y Enseñanza de las Matemáticas · Grupo A}
+\date{19 de noviembre de 2026}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[iiiepeNavy] (current page.north west) rectangle ([xshift=10.3cm]current page.south west);
+    \fill[iiiepeBlue] ([xshift=10.3cm]current page.north west) rectangle (current page.south east);
+    \fill[iiiepeOrange] ([xshift=0.8cm,yshift=-6.45cm]current page.north west) rectangle ([xshift=9.3cm,yshift=-6.53cm]current page.north west);
+    \node[anchor=north west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=-1.15cm]current page.north west) {%
+      {\color{iiiepeAqua!45!white}\small\bfseries MAESTRÍA EN APRENDIZAJE Y ENSEÑANZA DE LAS MATEMÁTICAS · SD26\par}%
+      \vspace{0.35cm}
+      {\color{white}\Large\bfseries \inserttitle\par}%
+      \vspace{0.25cm}
+      {\color{white!90}\normalsize \insertsubtitle\par}%
+    };
+    \node[anchor=south west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=0.75cm]current page.south west) {%
+      {\color{white}\normalsize\bfseries Mtro. Martín Jonathan de la Cruz Muñoz\par}%
+      {\color{white!85}\scriptsize Matrícula 00874 · martin.delacruz@campus.iiiepe.edu.mx\par}%
+      {\color{iiiepeAqua!35!white}\scriptsize Monterrey, Nuevo León · 19 de noviembre de 2026\par}%
+    };
+    \node[anchor=center,text width=5.0cm,align=center] at ([xshift=13.15cm,yshift=-4.5cm]current page.north west) {%
+      \includegraphics[width=3.6cm]{img/iiiepe/logo-iiiepe-blanco.png}\par\vspace{0.45cm}%
+      {\color{white}\large\bfseries IIIEPE\par}%
+      \vspace{0.1cm}%
+      {\color{white!85}\scriptsize Fundamentos para la enseñanza\\y el aprendizaje I\par}%
+    };
+  \end{tikzpicture}
+\end{frame}
+\begin{frame}{Ruta del Bloque III: Tres Momentos Integrados}
+  \centering
+  \Pill{iiiepeNavy}{1. Síntesis crítica (Quiroga y Lara, 2022)} \hspace{0.2cm}
+  \Pill{iiiepeBlue}{2. Diagnóstico en 6 aspectos} \hspace{0.2cm}
+  \Pill{iiiepeOrange!85!black}{3. Innovación en 7 componentes}
+  \vspace{0.45cm}
+  \begin{block}{Tesis del ejercicio (Módulo 51809)}
+    Superar la mecanización algebraica sin sentido físico exige revisar nuestras decisiones didácticas antes de culpar al estudiantado y diseñar retos matemáticos orientados al aprendizaje profundo \textbf{(propuesta por realizar)}.
+  \end{block}
+\end{frame}
+
+\begin{frame}{Primer Momento: Cinco Ejes de Quiroga Aguilar y Lara Órdenes (2022)}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+      \begin{itemize}\scriptsize
+        \item \textbf{1. Superficial vs Profundo:} Reproducción pasiva frente a comprensión y transferencia \textbf{(Marton y Säljö, 1976)}.
+        \item \textbf{2. Tres dimensiones:} Integración de cognitivo, interpersonal e intrapersonal.
+        \item \textbf{3. Cambio de roles:} Del control docente hacia asociación y autonomía \textbf{(Fullan y Langworthy, 2014)}.
+      \end{itemize}
+    \column{0.48\textwidth}
+      \begin{itemize}\scriptsize
+        \item \textbf{4. Nuevas pedagogías:} Problemas auténticos del entorno, co-construcción y liderazgo pedagógico \textbf{(Rivas et al., 2017)}.
+        \item \textbf{5. Creencias y cultura escolar:} No basta renovar recursos o actividades; hay que transformar creencias compartidas sobre qué significa aprender matemáticas.
+      \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Segundo Momento: Diagnóstico Situado (Aspectos 1--3)}
+  \scriptsize\renewcommand{\arraystretch}{1.35}
+  \begin{tabular}{p{2.7cm}p{10.3cm}}
+    \toprule
+    \rowcolor{iiiepePale} \textbf{Aspecto} & \textbf{Hallazgo observado en evidencias de aula} \\
+    \midrule
+    1. Problemática & Revisión de cuadernos muestra cálculo automático de $m$ y despejes sin explicar significado físico, unidades ni validez en modelos lineales. \\
+    2. Práctica actual & Tendencia a iniciar con fórmula cerrada en pizarrón, ejemplos guiados paso a paso y ejercitación individual aislada. \\
+    3. Concepciones & Supuesto implícito de que dominar el algoritmo previo precede a la interpretación física del problema. \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Segundo Momento: Diagnóstico Situado (Aspectos 4--6)}
+  \scriptsize\renewcommand{\arraystretch}{1.35}
+  \begin{tabular}{p{2.7cm}p{10.3cm}}
+    \toprule
+    \rowcolor{iiiepePale} \textbf{Aspecto} & \textbf{Hallazgo y reflexión crítica sin culpar solo al alumnado} \\
+    \midrule
+    4. Aprendizaje & Evidencias de enfoque superficial ante cambios de notación; interés profundo incipiente cuando se conectan gráficas con sensores de taller. \\
+    5. Causas posibles & Exceso de tareas repetitivas descontextualizadas, prisa por cerrar el tema y evaluación centrada en resultado numérico final. \\
+    6. Necesidad de cambio & Invertir el diseño: partir de desafío auténtico, habilitar trabajo colaborativo argumentado y evaluar con devolución formativa continua. \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Tercer Momento: Propuesta «Calibrar y Comparar para Decidir»}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+      \begin{block}{Elementos 1--3 (Contenido, Problema, Propósito)}
+        \begin{itemize}\scriptsize
+          \item \textbf{Contenido:} Modelación lineal ($y=mx+b$ vs $y=kx$), pendiente, sesgo inicial e intervalo de validez en bachillerato técnico (4.º sem.).
+          \item \textbf{Problemática:} Algoritmia sin sentido dimensional.
+          \item \textbf{Propósito:} Articular tabla, gráfica y ecuación para justificar decisiones técnicas.
+        \end{itemize}
+      \end{block}
+    \column{0.48\textwidth}
+      \begin{block}{Elemento 4: Desafío Matemático Simulado}
+        \scriptsize Dos sensores de banco ($S_1$ patrón vs $S_2$: $y=1.05x+0.2$) y dos esquemas de costo ($C_A=250+80h$, $C_B=100+110h$):
+        \begin{itemize}\tiny
+          \item ¿Qué error introduce suponer proporcionalidad directa?
+          \item ¿Desde qué umbral conviene cambiar de opción?
+          \item Justificar por escrito predicción, unidades y límites.
+        \end{itemize}
+      \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Elemento 5: Estrategias de Enseñanza (Propuesta por Realizar)}
+  \centering
+  \begin{tikzpicture}[font=\scriptsize, >=Latex, scale=0.85, transform shape]
+    \node[draw=iiiepeNavy,fill=iiiepePale,thick,rounded corners=3pt,text width=2.7cm,minimum height=1.7cm,align=center] (a) {\textbf{Sesión 1}\\Predicción individual y tablas reales};
+    \node[draw=iiiepeBlue,fill=iiiepePale,thick,rounded corners=3pt,text width=2.7cm,minimum height=1.7cm,align=center,right=0.45cm of a] (b) {\textbf{Sesión 2}\\Tríos rotativos (gráfica, unidades, vocero)};
+    \node[draw=iiiepeAqua!80!black,fill=iiiepeMint,thick,rounded corners=3pt,text width=2.7cm,minimum height=1.7cm,align=center,right=0.45cm of b] (c) {\textbf{Sesión 3}\\Plenaria dialógica y crítica de errores};
+    \node[draw=iiiepeOrange!90!black,fill=iiiepeWarm,thick,rounded corners=3pt,text width=2.7cm,minimum height=1.7cm,align=center,right=0.45cm of c] (d) {\textbf{Cierre}\\Segunda versión + metacognición};
+    \draw[->,very thick,iiiepeNavy] (a) -- (b);
+    \draw[->,very thick,iiiepeBlue] (b) -- (c);
+    \draw[->,very thick,iiiepeAqua!80!black] (c) -- (d);
+  \end{tikzpicture}
+  \vspace{0.35cm}
+  \begin{itemize}\scriptsize
+    \item Participación activa desde conjeturas previas antes de despejar símbolos \textbf{(Sawyer, 2008)}.
+    \item Retirada progresiva del andamiaje docente para consolidar autonomía estudiantil.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Elemento 6: Integración de las Tres Dimensiones}
+  \begin{itemize}\normalsize
+    \item \textbf{\color{iiiepeNavy}Cognitiva:} Traducción bidireccional tabla--gráfica--símbolo, interpretación física de pendiente y sesgo, verificación de dominio válido.
+    \item \textbf{\color{iiiepeBlue}Interpersonal:} Negociación respetuosa en roles rotativos y defensa argumentada entre equipos durante la plenaria.
+    \item \textbf{\color{iiiepeAqua!75!black}Intrapersonal:} Diario breve de revisión sobre supuestos iniciales corregidos, cultivando mentalidad de crecimiento frente al error.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Elemento 7: Evaluación Formativa e Indicadores}
+  \scriptsize\renewcommand{\arraystretch}{1.38}
+  \begin{tabular}{p{2.6cm}p{4.8cm}p{5.5cm}}
+    \toprule
+    \rowcolor{iiiepePale} \textbf{Eje} & \textbf{Evidencia recogida} & \textbf{Indicador de avance} \\
+    \midrule
+    Modelación & Registro tabular--gráfico y modelo lineal. & Diferencia variación proporcional vs afín con unidades correctas. \\
+    Argumentación & Dictamen técnico comparando rangos. & Justifica decisiones señalando supuestos y límites físicos. \\
+    Metacognición & Segunda versión tras devolución oral/escrita. & Corrige errores conceptuales identificando la causa del cambio. \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Viabilidad e Impacto Esperado en el Plantel}
+  \begin{block}{Carácter de la propuesta: diseño por implementar}
+    \small No se reportan calificaciones ficticias ni resultados observados aún; la secuencia queda lista para ejecutarse bajo seguimiento de investigación-acción en grupos de CONALEP, CECyTE o ingeniería inicial \textbf{(Restrepo Gómez, 2004)}.
+  \end{block}
+  \vspace{0.3cm}
+  \begin{itemize}\small
+    \item Fortalece el tránsito desde una organización puramente técnica hacia el diálogo humanista y comprensivo.
+    \item Promueve equidad al ofrecer roles claros y devoluciones formativas antes de evaluar sumativamente.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusiones de la Actividad 6}
+  \begin{itemize}\normalsize
+    \item La innovación didáctica surge de problematizar con evidencia nuestra propia enseñanza, no de culpar al alumno.
+    \item Integrar las tres dimensiones del aprendizaje profundo transforma funciones lineales en herramientas reales de decisión.
+    \item Las evidencias y criterios formativos definidos permiten evaluar rigor y equidad al llevar el diseño al aula.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Referencias Principales (APA 7)}
+  \scriptsize\setlength{\parskip}{5pt}
+  \begin{itemize}
+    \item Boström, E., y Palm, T. (2023). Formative assessment practice in mathematics. \textit{Frontiers in Education}, 8, 1101192.
+    \item Collin, J., y Quigley, A. (2021). \textit{Teacher feedback to improve pupil learning}. EEF.
+    \item Fullan, M., y Langworthy, M. (2014). \textit{A rich seam: How new pedagogies find deep learning}. Pearson.
+    \item Quiroga Aguilar, L., y Lara Órdenes, E. (2022). El aprendizaje profundo como herramienta para cambio en la visión de aprendizaje de una cultura escolar. \textit{REA}, 12(1).
+    \item Restrepo Gómez, B. (2004). La investigación-acción educativa y la construcción de saber pedagógico. \textit{Educación y Educadores}, (7), 45--55.
+    \item Rivas, A., André, F., y Delgado, L. E. (2017). \textit{50 innovaciones educativas para escuelas}. CIPPEC / Santillana.
+    \item Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. OECD.
+  \end{itemize}
+\end{frame}
 
 \end{document}
