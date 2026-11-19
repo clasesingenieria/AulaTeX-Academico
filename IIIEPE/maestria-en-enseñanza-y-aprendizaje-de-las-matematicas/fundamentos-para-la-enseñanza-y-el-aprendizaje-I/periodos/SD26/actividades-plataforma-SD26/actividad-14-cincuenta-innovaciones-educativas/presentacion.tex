@@ -1,0 +1,151 @@
+\documentclass[aspectratio=169,spanish,xcolor=table]{beamer}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+\fi
+\usepackage[spanish,es-tabla,es-noshorthands]{babel}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{tikz,pgfplots,array,booktabs,ragged2e}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes.geometric,fit}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
+
+\usetheme{default}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{normal text}{fg=iiiepeInk,bg=white}
+\setbeamercolor{structure}{fg=iiiepeNavy}
+\setbeamercolor{frametitle}{fg=white,bg=iiiepeNavy}
+\setbeamercolor{block title}{fg=white,bg=iiiepeBlue}
+\setbeamercolor{block body}{fg=iiiepeInk,bg=iiiepePale}
+\setbeamercolor{item}{fg=iiiepeOrange}
+
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.95cm,dp=0.22cm,leftskip=0.45cm,rightskip=0.45cm]{frametitle}%
+    \begin{minipage}[c]{13.2cm}\usebeamerfont{frametitle}\large\bfseries\insertframetitle\end{minipage}%
+    \hfill\begin{minipage}[c]{1.6cm}\raggedleft\includegraphics[height=0.56cm]{img/iiiepe/logo-iiiepe-blanco.png}\end{minipage}%
+  \end{beamercolorbox}%
+}
+
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.78\paperwidth,ht=0.5cm,dp=0.18cm,leftskip=0.45cm]{frametitle}%
+      \scriptsize\color{white}M. de la Cruz Muñoz · MAEM · Matrícula 00874 · SD26 · Actividad 14 · 50 Innovaciones%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.22\paperwidth,ht=0.5cm,dp=0.18cm,rightskip=0.45cm]{frametitle}%
+      \hfill\scriptsize\color{white}\insertframenumber{} / \inserttotalframenumber%
+    \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
+
+\newcommand{\Pill}[2]{%
+  \tikz[baseline=(x.base)]{\node[rounded corners=3pt,fill=#1!14,draw=#1!75!black,thick,inner xsep=6pt,inner ysep=4pt,align=center] (x) {\scriptsize\bfseries #2};}%
+}
+
+\title{50 Innovaciones Educativas para Escuelas (Rivas et al., 2017)}
+\subtitle{Actividad 14 · Recurso Oficial 51784 · Transferencia a Matemáticas}
+\author{Mtro. Martín Jonathan de la Cruz Muñoz · Matrícula 00874}
+\institute{IIIEPE · Maestría en Aprendizaje y Enseñanza de las Matemáticas · Grupo A}
+\date{19 de noviembre de 2026}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[iiiepeNavy] (current page.north west) rectangle ([xshift=10.3cm]current page.south west);
+    \fill[iiiepeBlue] ([xshift=10.3cm]current page.north west) rectangle (current page.south east);
+    \fill[iiiepeOrange] ([xshift=0.8cm,yshift=-6.45cm]current page.north west) rectangle ([xshift=9.3cm,yshift=-6.53cm]current page.north west);
+    \node[anchor=north west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=-1.15cm]current page.north west) {%
+      {\color{iiiepeAqua!45!white}\small\bfseries MAESTRÍA EN APRENDIZAJE Y ENSEÑANZA DE LAS MATEMÁTICAS · SD26\par}%
+      \vspace{0.35cm}
+      {\color{white}\Large\bfseries \inserttitle\par}%
+      \vspace{0.25cm}
+      {\color{white!90}\normalsize \insertsubtitle\par}%
+    };
+    \node[anchor=south west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=0.75cm]current page.south west) {%
+      {\color{white}\normalsize\bfseries Mtro. Martín Jonathan de la Cruz Muñoz\par}%
+      {\color{white!85}\scriptsize Matrícula 00874 · martin.delacruz@campus.iiiepe.edu.mx\par}%
+      {\color{iiiepeAqua!35!white}\scriptsize Monterrey, Nuevo León · 19 de noviembre de 2026\par}%
+    };
+    \node[anchor=center,text width=5.0cm,align=center] at ([xshift=13.15cm,yshift=-4.5cm]current page.north west) {%
+      \includegraphics[width=3.6cm]{img/iiiepe/logo-iiiepe-blanco.png}\par\vspace{0.45cm}%
+      {\color{white}\large\bfseries IIIEPE\par}%
+      \vspace{0.1cm}%
+      {\color{white!85}\scriptsize Fundamentos para la enseñanza\\y el aprendizaje I\par}%
+    };
+  \end{tikzpicture}
+\end{frame}
+\begin{frame}{¿Qué Define a una «Innovación Decisiva»? (Rivas et al., 2017)}
+  \begin{block}{Compendio CIPPEC / Santillana (Recurso Oficial 51784)}
+    Frente a discursos catastrofistas o modas costosas, recopila 50 experiencias reales, sustentadas en evidencia e implementables en escuelas públicas con bajo costo agregado.
+  \end{block}
+  \vspace{0.25cm}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+      \begin{block}{Criterios clave}
+        \begin{itemize}\scriptsize
+          \item Ruptura con la repetición alienante.
+          \item Vínculo apasionante para comprender.
+          \item Articulación institucional practicable.
+        \end{itemize}
+      \end{block}
+    \column{0.48\textwidth}
+      \begin{block}{Bases teóricas y consejo}
+        \begin{itemize}\scriptsize
+          \item Freire (diálogo), Dewey (pragmatismo) y Perkins (comprensión).
+          \item Casos CIPPEC (1--15) + Expertos (Aguerrondo, Anijovich, Furman, Libedinsky, Maggio, Vota).
+        \end{itemize}
+      \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Cinco Innovaciones Decisivas Transferibles a Matemáticas}
+  \renewcommand{\arraystretch}{1.25}
+  \scriptsize
+  \begin{tabular}{p{3.6cm}p{4.6cm}p{5.2cm}}
+    \toprule
+    \textbf{Innovación (Rivas et al., 2017)} & \textbf{Protocolo núcleo} & \textbf{Aplicación en Matemáticas} \\
+    \midrule
+    4. Instrucción entre pares (Mazur) & Pregunta conceptual + votación; si acierto es $30$--$70\%$, debate entre pares y revotación. & Distinguir variación proporcional vs. afín explicando errores entre compañeros. \\
+    7. Escuela que aprende (\textit{Lesson Study}) & Equipo docente diseña, observa en vivo y mejora una clase difícil. & Academia de matemáticas optimizando transición aritmética--álgebra. \\
+    29. Pensamiento visible (Furman) & Rutinas «¿Qué te hace decir eso?» y «Solía pensar / Ahora pienso». & Sustentar lectura gráfica de pendientes y límites físicos con evidencia. \\
+    39. Matrices formativas (Libedinsky) & Criterios transparentes previos al trabajo para coevaluación. & Desagregar cálculo, representación múltiple y argumentación escrita. \\
+    41. \textit{Maker spaces} (Maggio) & Prototipado tangible, medición real y aprendizaje por iteración. & Vincular taller mecatrónico CONALEP/CECyTE con ajuste de modelos lineales. \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Protocolo Piloto Propuesto (Por Realizar)}
+  \begin{enumerate}\normalsize
+    \item \textbf{Acuerdo en academia:} Seleccionar un concepto crítico (modelación lineal de calibración).
+    \item \textbf{Tres reactivos conceptuales cortos:} Enfocados en significado gráfico/físico antes de despejes largos.
+    \item \textbf{Ciclo Peer Instruction + Pensamiento Visible:} Votación $\rightarrow$ debate guiado 3 min $\rightarrow$ segunda votación \textbf{(Mazur, 1997; Ritchhart et al., 2014)}.
+    \item \textbf{Cierre metacognitivo:} Registro «Solía pensar / Ahora pienso» para retroalimentar el ciclo siguiente.
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Conclusiones y Referencias (APA 7)}
+  \begin{itemize}\small
+    \item La innovación viable nace de principios pedagógicos claros adaptados al contexto de cada plantel público.
+    \item Articular CIPPEC (2017) con Quiroga y Lara (2022) fortalece un aula matemática colaborativa e inclusiva.
+  \end{itemize}
+  \vspace{0.3cm}
+  \scriptsize
+  \textbf{Referencias:} Collin, J., y Quigley, A. (2021). \textit{EEF}; Mazur, E. (1997). \textit{Peer instruction}; Quiroga Aguilar, L., y Lara Órdenes, E. (2022). \textit{REA}; Ritchhart, R., et al. (2014). \textit{Paidós}; Rivas, A., André, F., y Delgado, L. E. (2017). \textit{50 innovaciones educativas para escuelas}. CIPPEC / Santillana.
+\end{frame}
+
+\end{document}

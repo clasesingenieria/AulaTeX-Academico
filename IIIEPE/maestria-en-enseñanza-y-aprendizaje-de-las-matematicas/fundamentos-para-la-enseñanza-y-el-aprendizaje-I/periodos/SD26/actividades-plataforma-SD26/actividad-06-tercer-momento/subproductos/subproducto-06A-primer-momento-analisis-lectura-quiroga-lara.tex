@@ -1,0 +1,126 @@
+\documentclass[spanish,letterpaper,oneside]{article}
+
+\def\documenttitle {Primer Momento: Análisis del Aprendizaje Profundo (Quiroga y Lara, 2022)}
+\def\documentsubtitle {Fundamentos para la enseñanza y el aprendizaje I · Subproducto 6A (Bloque III)}
+\def\documentsubject {Subproducto Independiente 6A · Primer Momento (Guía 51705 / 51782)}
+\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
+\def\coursecode {MAEM-SD26}
+
+\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León}
+\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
+\def\universitydepartment {Fundamentos para la enseñanza y el aprendizaje I}
+\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
+\def\universitydepartmentimagecfg {height=1.75cm}
+\def\universitylocation {Monterrey, Nuevo León}
+\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\studentid {00874}
+\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
+\def\programperiod {2do periodo, septiembre--diciembre de 2026 (SD26)}
+\def\programmodality {Modalidad presencial}
+\def\programshort {MAEM}
+
+\def\authortable {
+  \begin{tabular}{ll}
+    \textbf{Alumno:} & \studentfullname \\
+    Matrícula: & \studentid \\
+    Correo institucional: & \studentemail \\
+    Unidad: & \coursename \\
+    Programa: & \programshort \\
+    Periodo: & \programperiod \\
+    & \\
+    \multicolumn{2}{l}{Fecha de realización: 19 de noviembre de 2026} \\
+    \multicolumn{2}{l}{\universitylocation}
+  \end{tabular}
+}
+
+\input{template}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage[most]{tcolorbox}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,shapes.geometric}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
+\def\portraittitlecolor {iiiepeNavy}
+\setcitestyle{authoryear,open={(},close={)}}
+\makeatletter
+\renewcommand{\@biblabel}[1]{}
+\makeatother
+\setlength{\bibhang}{1.27cm}
+\setlength{\bibsep}{6pt}
+\AtBeginDocument{\renewcommand{\refname}{Referencias}}
+
+\newcommand{\insertcoverwatermark}{%
+  \AddToShipoutPictureBG*{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[opacity=0.04,inner sep=0pt] at (current page.center) {%
+        \includegraphics[width=0.65\paperwidth]{img/iiiepe/marca-iiiepe.png}%
+      };
+    \end{tikzpicture}%
+  }%
+}
+
+\setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
+\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Subproducto 6A · Primer Momento}\setstretch{1.3}\raggedbottom
+\section{Primer momento: análisis teórico de la lectura base}
+En congruencia con la guía metodológica del Bloque III (módulo \texttt{51705} / \texttt{51782}), este documento autónomo desarrolla el \textbf{Primer momento} formativo centrado en la investigación de \citet{quiroga2022aprendizaje}, \textit{El aprendizaje profundo como herramienta para cambio en la visión de aprendizaje de una cultura escolar}.
+
+Mi postura es que transformar las clases de matemáticas en bachillerato técnico e ingeniería resulta inviable si se modifican únicamente formatos externos sin revisar la concepción profunda del aprendizaje, los vínculos de poder en el aula y las creencias docentes sobre la cultura escolar \citep{quiroga2022aprendizaje,sawyer2008optimizing}.
+
+\section{Cinco ejes críticos analizados}
+A partir de la revisión sistemática de \citet{quiroga2022aprendizaje} en diálogo con la tradición cognitiva y de nuevas pedagogías \citep{marton1976qualitative,fullan2014rich}, desgloso los cinco pilares conceptuales solicitados:
+
+\begin{enumerate}
+  \item \textbf{Diferencias entre aprendizaje superficial y profundo:} Recuperando la distinción seminal de \citet{marton1976qualitative}, el aprendizaje superficial busca memorizar reglas, pasos y definiciones de manera fragmentada para acreditar una evaluación puntual, produciendo saberes rígidos e intransferibles. En contraste, el aprendizaje profundo integra conocimiento previo con nuevas ideas, exige comprender razones subyacentes y habilita aplicar modelos matemáticos frente a situaciones nuevas \citep{sawyer2008optimizing}.
+  \item \textbf{Integración de las dimensiones cognitiva, interpersonal e intrapersonal:} Para \citet{quiroga2022aprendizaje}, la comprensión duradera excede el plano meramente intelectual. Exige articular procesos \textit{cognitivos} (modelación, análisis, solución de problemas), capacidades \textit{interpersonales} (comunicación argumentada, escucha cooperativa y negociación) y disposiciones \textit{intrapersonales} (metacognición, perseverancia ante el bloqueo y mentalidad de crecimiento) \citep{schunk2012teorias}.
+  \item \textbf{Transformación en los roles docente y estudiantil:} Retomando el marco de \citet{fullan2014rich}, el profesorado abandona el papel de emisor único para actuar como diseñador de ambientes retadores, investigador de obstáculos estudiantiles y co-aprendiz que construye relaciones de asociación auténtica. Paralelamente, el alumnado asume protagonismo en formular preguntas, validar pruebas y responsabilizarse colectivamente de los acuerdos de equipo.
+  \item \textbf{Características de las nuevas pedagogías y culturas escolares:} Se caracterizan por problemas del mundo real en lugar de ejercicios artificiales, uso reflexivo de tecnología para potenciar indagación en vez de sustituir pensamiento, asociaciones explícitas docente--estudiante y liderazgo orientado por metas comunes \citep{rivas2017innovaciones}.
+  \item \textbf{Creencias pedagógicas como núcleo del cambio cultural:} Toda innovación fracasa si persisten creencias implícitas según las cuales «enseñar bien significa cubrir muchos ejercicios idénticos en silencio» o «quien no trae base algebraica fracasa inevitablemente». Por consiguiente, modificar la cultura escolar exige cuestionar primero las creencias que organizan nuestra práctica cotidiana \citep{quiroga2022aprendizaje}.
+\end{enumerate}
+
+Además, el cuadro siguiente sintetiza cómo estos cinco ejes interpelan directamente nuestras prácticas de enseñanza matemática en nivel medio superior técnico y superior:
+
+{\small\setstretch{1.15}\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.24\linewidth}|>{\raggedright\arraybackslash}p{0.35\linewidth}|>{\raggedright\arraybackslash}p{0.35\linewidth}|}\hline
+\rowcolor{iiiepePale} \textbf{Eje analítico} & \textbf{Inercia escolar habitual} & \textbf{Horizonte del aprendizaje profundo} \\\hline
+\endfirsthead
+\hline
+\rowcolor{iiiepePale} \textbf{Eje analítico} & \textbf{Inercia escolar habitual} & \textbf{Horizonte del aprendizaje profundo} \\\hline
+\endhead
+Naturaleza del saber & Procedimientos aislados por capítulo. & Red de conceptos transferibles en contexto \citep{sawyer2008optimizing}. \\\hline
+Dimensiones activadas & Foco exclusivo en ejecución cognitiva individual. & Integración cognitiva, interpersonal e intrapersonal \citep{quiroga2022aprendizaje}. \\\hline
+Relación pedagógica & Transmisión y obediencia directiva. & Asociación docente--estudiante y autonomía guiada \citep{fullan2014rich}. \\\hline
+Sentido de evaluación & Calificación sumativa final sin retorno. & Devolución formativa y reflexión metacognitiva \citep{eef2021feedback}. \\\hline
+\end{longtable}}
+
+\clearpage
+\section{Conclusiones}
+En conclusión, considero que el análisis teórico desarrollado en este Primer momento aporta la claridad conceptual indispensable antes de diagnosticar la propia práctica y diseñar innovaciones concretas. Por tanto, sostengo que asumir el aprendizaje profundo como transformación cultural nos protege de aplicar estrategias aisladas sin cambiar el sentido ético y cognitivo de la clase de matemáticas.
+
+\clearpage
+\begin{thebibliography}{99}
+\bibitem[Collin y Quigley(2021)]{eef2021feedback} Collin, J., y Quigley, A. (2021). \textit{Teacher feedback to improve pupil learning}. Education Endowment Foundation.
+\bibitem[Fullan y Langworthy(2014)]{fullan2014rich} Fullan, M., y Langworthy, M. (2014). \textit{A rich seam: How new pedagogies find deep learning}. Pearson.
+\bibitem[Marton y Säljö(1976)]{marton1976qualitative} Marton, F., y Säljö, R. (1976). On qualitative differences in learning: I. Outcome and process. \textit{British Journal of Educational Psychology}, 46(1), 4--11.
+\bibitem[Quiroga Aguilar y Lara Órdenes(2022)]{quiroga2022aprendizaje} Quiroga Aguilar, L., y Lara Órdenes, E. (2022). El aprendizaje profundo como herramienta para cambio en la visión de aprendizaje de una cultura escolar. \textit{Revista Educación las Américas}, 12(1).
+\bibitem[Rivas et~al.(2017)]{rivas2017innovaciones} Rivas, A., André, F., y Delgado, L. E. (Eds.). (2017). \textit{50 innovaciones educativas para escuelas}. CIPPEC / Santillana.
+\bibitem[Sawyer(2008)]{sawyer2008optimizing} Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. OECD Publishing.
+\bibitem[Schunk(2012)]{schunk2012teorias} Schunk, D. H. (2012). \textit{Teorías del aprendizaje} (6.ª ed.). Pearson.
+\end{thebibliography}
+
+\end{document}

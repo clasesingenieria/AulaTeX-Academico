@@ -1,0 +1,174 @@
+\documentclass[spanish,letterpaper,oneside]{article}
+
+\def\documenttitle {Siete Habilidades Básicas de Supervivencia en la Clase de Matemáticas}
+\def\documentsubtitle {Fundamentos para la enseñanza y el aprendizaje I · Cohorte SD26}
+\def\documentsubject {Actividad 11 · Sesión 4 Moodle Curso 1048 (Tony Wagner · Módulo 47637)}
+\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
+\def\coursecode {MAEM-SD26}
+
+\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León}
+\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
+\def\universitydepartment {Fundamentos para la enseñanza y el aprendizaje I}
+\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
+\def\universitydepartmentimagecfg {height=1.75cm}
+\def\universitylocation {Monterrey, Nuevo León}
+\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\studentid {00874}
+\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
+\def\programperiod {2do periodo, septiembre--diciembre de 2026 (SD26)}
+\def\programmodality {Modalidad presencial}
+\def\programshort {MAEM}
+
+\def\authortable {
+  \begin{tabular}{ll}
+    \textbf{Alumno:} & \studentfullname \\
+    Matrícula: & \studentid \\
+    Correo institucional: & \studentemail \\
+    Unidad: & \coursename \\
+    Programa: & \programshort \\
+    Periodo: & \programperiod \\
+    & \\
+    \multicolumn{2}{l}{Fecha de realización: 19 de noviembre de 2026} \\
+    \multicolumn{2}{l}{\universitylocation}
+  \end{tabular}
+}
+
+\input{template}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage[most]{tcolorbox}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,shapes.geometric}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
+\def\portraittitlecolor {iiiepeNavy}
+\setcitestyle{authoryear,open={(},close={)}}
+\makeatletter
+\renewcommand{\@biblabel}[1]{}
+\makeatother
+\setlength{\bibhang}{1.27cm}
+\setlength{\bibsep}{6pt}
+\AtBeginDocument{\renewcommand{\refname}{Referencias}}
+
+\newcommand{\insertcoverwatermark}{%
+  \AddToShipoutPictureBG*{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[opacity=0.04,inner sep=0pt] at (current page.center) {%
+        \includegraphics[width=0.65\paperwidth]{img/iiiepe/marca-iiiepe.png}%
+      };
+    \end{tikzpicture}%
+  }%
+}
+
+\setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
+\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 11 · Siete Habilidades}\setstretch{1.3}\raggedbottom
+\section{Habilidades de supervivencia y postura docente en matemáticas}
+En el ensayo \textit{Las siete habilidades de supervivencia para la profesión, el colegio y la ciudadanía}, \citet{wagner2010survival} sintetiza entrevistas extensas con líderes industriales, científicos y ciudadanos del siglo XXI para responder qué capacidades resultan imprescindibles en una economía donde cualquier tarea rutinaria puede automatizarse. Destaca que incluso ingenieros de áreas altamente técnicas no buscan egresados que solo repitan procedimientos memorizados, sino personas capaces de formular buenas preguntas, pensar críticamente, colaborar a través de redes y adaptarse ante escenarios cambiantes.
+
+Mi postura es que promover estas siete habilidades en la clase de Matemáticas dentro de mi trayectoria en CONALEP, CECyTE e ingeniería no exige sustituir el contenido matemático por discursos genéricos, sino transformar los problemas cerrados en situaciones auténticas de modelación, argumentación y verificación conjunta. Por consiguiente, este trabajo organiza primero un mapa mental radial de las siete habilidades y posteriormente fundamenta cómo impulsar cada una dentro del aprendizaje matemático.
+
+\section{Mapa mental: siete habilidades básicas en matemáticas}
+La Figura~\ref{fig:act11-mapa-mental} representa de manera radial la convergencia de las siete habilidades de supervivencia propuestas por \citet{wagner2010survival} alrededor del núcleo formativo de modelar, razonar y decidir con rigor matemático.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[font=\scriptsize, >=Latex]
+  % Nodo central
+  \node[draw=iiiepeNavy,fill=iiiepeNavy,text=white,very thick,rounded corners=6pt,text width=3.4cm,minimum height=1.55cm,align=center,inner sep=6pt] (center) at (0,0)
+    {\textbf{\small 7 HABILIDADES DE SUPERVIVENCIA}\\Pensar, modelar y decidir en Matemáticas};
+
+  % 7 nodos radiales bien espaciados sin traslape
+  \node[draw=iiiepeBlue,fill=iiiepePale,thick,rounded corners=4pt,text width=3.9cm,align=center,inner sep=5pt] (h1) at (-4.8,3.2)
+    {\textbf{\color{iiiepeBlue}1. Pensamiento crítico y solución de problemas}\\Formular preguntas, revisar supuestos y validar modelos.};
+
+  \node[draw=iiiepeAqua!80!black,fill=iiiepeMint,thick,rounded corners=4pt,text width=3.9cm,align=center,inner sep=5pt] (h2) at (4.8,3.2)
+    {\textbf{\color{iiiepeAqua!75!black}2. Colaboración en redes y liderazgo por influencia}\\Roles rotativos, escucha y acuerdos técnicos.};
+
+  \node[draw=iiiepeOrange!90!black,fill=iiiepeWarm,thick,rounded corners=4pt,text width=3.8cm,align=center,inner sep=5pt] (h3) at (5.3,0.4)
+    {\textbf{\color{iiiepeOrange!85!black}3. Agilidad y adaptabilidad}\\Reajustar parámetros ante cambios de escala o sesgo.};
+
+  \node[draw=iiiepeNavy,fill=iiiepePaper,thick,rounded corners=4pt,text width=3.8cm,align=center,inner sep=5pt] (h4) at (4.8,-2.7)
+    {\textbf{\color{iiiepeNavy}4. Iniciativa y espíritu emprendedor}\\Proponer mejoras viables y comprobar su impacto.};
+
+  \node[draw=iiiepeBlue,fill=iiiepePale,thick,rounded corners=4pt,text width=4.0cm,align=center,inner sep=5pt] (h5) at (0,-4.05)
+    {\textbf{\color{iiiepeBlue}5. Comunicación oral y escrita eficaz}\\Justificar ecuaciones, tablas y gráficas con unidades.};
+
+  \node[draw=iiiepeAqua!80!black,fill=iiiepeMint,thick,rounded corners=4pt,text width=3.8cm,align=center,inner sep=5pt] (h6) at (-4.8,-2.7)
+    {\textbf{\color{iiiepeAqua!75!black}6. Acceso y análisis de la información}\\Contrastar fuentes, unidades y límites de validez.};
+
+  \node[draw=iiiepeOrange!90!black,fill=iiiepeWarm,thick,rounded corners=4pt,text width=3.8cm,align=center,inner sep=5pt] (h7) at (-5.3,0.4)
+    {\textbf{\color{iiiepeOrange!85!black}7. Curiosidad e imaginación}\\Explorar rutas algebraicas, gráficas y numéricas alternas.};
+
+  \draw[->,very thick,iiiepeBlue] (center) -- (h1);
+  \draw[->,very thick,iiiepeAqua!80!black] (center) -- (h2);
+  \draw[->,very thick,iiiepeOrange!85!black] (center) -- (h3);
+  \draw[->,very thick,iiiepeNavy] (center) -- (h4);
+  \draw[->,very thick,iiiepeBlue] (center) -- (h5);
+  \draw[->,very thick,iiiepeAqua!80!black] (center) -- (h6);
+  \draw[->,very thick,iiiepeOrange!85!black] (center) -- (h7);
+\end{tikzpicture}
+\caption{Mapa mental de las siete habilidades de supervivencia de Tony Wagner articuladas con la enseñanza matemática.}
+\label{fig:act11-mapa-mental}
+\end{figure}
+
+\section{Cómo promover las siete habilidades en la clase de Matemáticas}
+En respuesta fundamentada a la pregunta orientadora de la Sesión 4 —\textit{¿cómo promueves el desarrollo de las habilidades de supervivencia con tus estudiantes en la clase de Matemáticas?}—, detallo las decisiones didácticas que implemento o propongo consolidar en bachillerato técnico e ingeniería:
+
+\begin{enumerate}
+  \item \textbf{Pensamiento crítico y resolución de problemas:} Ante un conjunto de datos experimentales o simulados de calibración, solicito determinar si existe proporcionalidad directa o relación lineal con sesgo inicial, exigiendo justificar los supuestos mediante tabla, gráfica y ecuación antes de aceptar un número aislado \citep{wagner2010survival,star2015algebra}.
+  \item \textbf{Colaboración en redes y liderazgo por influencia:} Organizo equipos pequeños con roles rotativos (medición/lectura de datos, modelación gráfica, verificación dimensional y portavocía). El liderazgo no se mide por monopolizar la calculadora, sino por formular preguntas útiles y lograr que todos los integrantes expliquen las decisiones del equipo \citep{sawyer2008optimizing}.
+  \item \textbf{Agilidad y adaptabilidad:} Introduzco deliberadamente una perturbación en el problema —por ejemplo, un cambio de unidades o un desplazamiento de origen en el sensor— para observar cómo el estudiantado detecta qué supuesto cambió y reconstruye el modelo sin alterar artificialmente los datos.
+  \item \textbf{Iniciativa y espíritu emprendedor:} Reto a los equipos a diseñar una mejora de bajo costo en un protocolo de verificación o comparación de tarifas técnicas, evaluando factibilidad material, rigor numérico y riesgos esperados \citep{scott2015futuro2}.
+  \item \textbf{Comunicación oral y escrita eficaz:} Cada actividad culmina con un dictamen breve estructurado (planteamiento, procedimiento, representación visual y conclusión acotada en unidades físicas) expuesto oralmente ante pares que formulan observaciones respetuosas \citep{eef2021feedback}.
+  \item \textbf{Acceso a la información y análisis crítico:} Contrasto especificaciones técnicas, artículos escolares y fuentes digitales informales para enseñar a verificar fecha, autoría, unidades y rango de validez antes de emplear una fórmula encontrada en red.
+  \item \textbf{Curiosidad e imaginación:} Fomento resolver un mismo fenómeno mediante al menos dos vías (razón incremental tabular frente a intersección gráfica o algebraica), premiando intelectualmente la formulación de preguntas pertinentes sobre casos límite \citep{wagner2010survival}.
+\end{enumerate}
+
+\section{Diseño matemático integrador (por realizar)}
+Para ilustrar cómo coexisten las siete habilidades dentro de un solo objeto disciplinar, propongo analizar en una práctica didáctica simulada la curva térmica de calentamiento de una cámara técnica modelada por $T(t) = 20 + 3t$ (donde $t \ge 0$ se mide en minutos y $T$ en grados Celsius dentro de un intervalo controlado de $0$ a $15\text{ min}$). A los ocho minutos $T(8) = 44\,^\circ\text{C}$, mientras que alcanzar $50\,^\circ\text{C}$ conduce a $20 + 3t = 50 \Rightarrow t = 10\text{ min}$. El cuadro siguiente muestra las evidencias evaluables ligadas al diseño:
+
+{\small\setstretch{1.15}\renewcommand{\arraystretch}{1.32}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.27\linewidth}|>{\raggedright\arraybackslash}p{0.67\linewidth}|}\hline
+\rowcolor{iiiepePale} \textbf{Indicador de habilidad} & \textbf{Evidencia observable solicitada en clase de Matemáticas} \\\hline
+\endfirsthead
+\hline
+\rowcolor{iiiepePale} \textbf{Indicador de habilidad} & \textbf{Evidencia observable solicitada en clase de Matemáticas} \\\hline
+\endhead
+Pensamiento crítico y análisis & Explica el significado físico de la pendiente $3\,^\circ\text{C/min}$ y la temperatura inicial $20\,^\circ\text{C}$, señalando por qué el crecimiento lineal no puede extrapolarse indefinidamente. \\\hline
+Adaptabilidad e imaginación & Reformula el tiempo objetivo ante un cambio de tasa ($2.4\,^\circ\text{C/min}$) comparando ruta algebraica y solución gráfica. \\\hline
+Comunicación y fuentes & Redacta conclusión precisa en unidades correctas sin exceder el dominio experimental $[0, 15]\text{ min}$. \\\hline
+Colaboración e iniciativa & Registra su contribución específica en el equipo y una corrección derivada de la retroalimentación entre pares \citep{eef2021feedback}. \\\hline
+\end{longtable}}
+
+\clearpage
+\section{Conclusiones}
+En conclusión, considero que las siete habilidades de supervivencia sistematizadas por \citet{wagner2010survival} muestran que el rigor matemático y las capacidades humanas transversales no compiten entre sí, sino que se fortalecen mutuamente. Sostengo que un aprendizaje algebraico memorizado sin criterio crítico resulta frágil frente a la automatización industrial contemporánea; en cambio, una matemática basada en preguntas buenas, argumentación colaborativa y verificación responsable prepara al estudiantado técnica y ciudadanamente \citep{sep2022plan,scott2015futuro2}.
+
+Por ello, daría prioridad en mi práctica dentro de CONALEP, CECyTE e ingeniería a diseñar tareas matemáticas breves pero intelectualmente ricas donde explicar, adaptar, verificar y colaborar formen parte explícita de la evaluación formativa continua.
+
+\clearpage
+\begin{thebibliography}{99}
+\bibitem[Collin y Quigley(2021)]{eef2021feedback} Collin, J., y Quigley, A. (2021). \textit{Teacher feedback to improve pupil learning}. Education Endowment Foundation.
+\bibitem[Sawyer(2008)]{sawyer2008optimizing} Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. En OECD, \textit{Innovating to learn, learning to innovate} (pp. 45--65). OECD Publishing.
+\bibitem[Scott(2015)]{scott2015futuro2} Scott, C. L. (2015). \textit{El futuro del aprendizaje 2: ¿Qué tipo de aprendizaje se necesita en el siglo XXI?} UNESCO.
+\bibitem[SEP(2022)]{sep2022plan} Secretaría de Educación Pública. (2022). \textit{Plan de Estudio para la educación preescolar, primaria y secundaria}. SEP.
+\bibitem[Star et~al.(2015)]{star2015algebra} Star, J. R., Caronongan, P., Foegen, A., Furgeson, J., Keating, B., Larson, M. R., Lyskawa, J., McCallum, W. G., Porath, J., y Zbiek, R. M. (2015). \textit{Teaching strategies for improving algebra knowledge in middle and high school students}. IES.
+\bibitem[Wagner(2010)]{wagner2010survival} Wagner, T. (2010). \textit{The global achievement gap: Why even our best schools don't teach the new survival skills our children need---and what we can do about it}. Basic Books.
+\end{thebibliography}
+
+\end{document}

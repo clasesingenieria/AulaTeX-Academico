@@ -1,0 +1,142 @@
+\documentclass[aspectratio=169,spanish,xcolor=table]{beamer}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+\fi
+\usepackage[spanish,es-tabla,es-noshorthands]{babel}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{tikz,pgfplots,array,booktabs,ragged2e}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes.geometric,fit}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
+
+\usetheme{default}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{normal text}{fg=iiiepeInk,bg=white}
+\setbeamercolor{structure}{fg=iiiepeNavy}
+\setbeamercolor{frametitle}{fg=white,bg=iiiepeNavy}
+\setbeamercolor{block title}{fg=white,bg=iiiepeBlue}
+\setbeamercolor{block body}{fg=iiiepeInk,bg=iiiepePale}
+\setbeamercolor{item}{fg=iiiepeOrange}
+
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.95cm,dp=0.22cm,leftskip=0.45cm,rightskip=0.45cm]{frametitle}%
+    \begin{minipage}[c]{13.2cm}\usebeamerfont{frametitle}\large\bfseries\insertframetitle\end{minipage}%
+    \hfill\begin{minipage}[c]{1.6cm}\raggedleft\includegraphics[height=0.56cm]{img/iiiepe/logo-iiiepe-blanco.png}\end{minipage}%
+  \end{beamercolorbox}%
+}
+
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.78\paperwidth,ht=0.5cm,dp=0.18cm,leftskip=0.45cm]{frametitle}%
+      \scriptsize\color{white}M. de la Cruz Muñoz · MAEM · Matrícula 00874 · SD26 · Actividad 10 · Scott (2015b)%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.22\paperwidth,ht=0.5cm,dp=0.18cm,rightskip=0.45cm]{frametitle}%
+      \hfill\scriptsize\color{white}\insertframenumber{} / \inserttotalframenumber%
+    \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
+
+\newcommand{\Pill}[2]{%
+  \tikz[baseline=(x.base)]{\node[rounded corners=3pt,fill=#1!14,draw=#1!75!black,thick,inner xsep=6pt,inner ysep=4pt,align=center] (x) {\scriptsize\bfseries #2};}%
+}
+
+\title{Tipos de Aprendizaje en las Sociedades del Siglo XXI}
+\subtitle{Actividad 10 · Complemento Bloque I (Cynthia Luna Scott, 2015b)}
+\author{Mtro. Martín Jonathan de la Cruz Muñoz · Matrícula 00874}
+\institute{IIIEPE · Maestría en Aprendizaje y Enseñanza de las Matemáticas · Grupo A}
+\date{19 de noviembre de 2026}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[iiiepeNavy] (current page.north west) rectangle ([xshift=10.3cm]current page.south west);
+    \fill[iiiepeBlue] ([xshift=10.3cm]current page.north west) rectangle (current page.south east);
+    \fill[iiiepeOrange] ([xshift=0.8cm,yshift=-6.45cm]current page.north west) rectangle ([xshift=9.3cm,yshift=-6.53cm]current page.north west);
+    \node[anchor=north west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=-1.15cm]current page.north west) {%
+      {\color{iiiepeAqua!45!white}\small\bfseries MAESTRÍA EN APRENDIZAJE Y ENSEÑANZA DE LAS MATEMÁTICAS · SD26\par}%
+      \vspace{0.35cm}
+      {\color{white}\Large\bfseries \inserttitle\par}%
+      \vspace{0.25cm}
+      {\color{white!90}\normalsize \insertsubtitle\par}%
+    };
+    \node[anchor=south west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=0.75cm]current page.south west) {%
+      {\color{white}\normalsize\bfseries Mtro. Martín Jonathan de la Cruz Muñoz\par}%
+      {\color{white!85}\scriptsize Matrícula 00874 · martin.delacruz@campus.iiiepe.edu.mx\par}%
+      {\color{iiiepeAqua!35!white}\scriptsize Monterrey, Nuevo León · 19 de noviembre de 2026\par}%
+    };
+    \node[anchor=center,text width=5.0cm,align=center] at ([xshift=13.15cm,yshift=-4.5cm]current page.north west) {%
+      \includegraphics[width=3.6cm]{img/iiiepe/logo-iiiepe-blanco.png}\par\vspace{0.45cm}%
+      {\color{white}\large\bfseries IIIEPE\par}%
+      \vspace{0.1cm}%
+      {\color{white!85}\scriptsize Fundamentos para la enseñanza\\y el aprendizaje I\par}%
+    };
+  \end{tikzpicture}
+\end{frame}
+\begin{frame}{De las Razones del Cambio al «Qué Aprender» (Scott, 2015b)}
+  \begin{block}{Tesis del Informe 2 · UNESCO}
+    Si el primer texto analiza por qué debe transformarse la escuela, \textbf{Scott (2015b)} define los tipos de aprendizaje y competencias transversales indispensables para el siglo XXI.
+  \end{block}
+  \vspace{0.25cm}
+  \begin{itemize}\normalsize
+    \item Recupera los cuatro pilares de \textbf{Delors et al. (1996)} como arquitectura integral.
+    \item Integra pensamiento crítico, creatividad, comunicación, colaboración y metacognición.
+    \item Rechaza reducir el aprendizaje técnico a automatismos sin sentido ético ni ciudadano.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Los Cuatro Pilares Aplicados a Matemáticas}
+  \renewcommand{\arraystretch}{1.28}
+  \scriptsize
+  \begin{tabular}{p{2.9cm}p{5.2cm}p{5.3cm}}
+    \toprule
+    \textbf{Pilar (Delors / Scott)} & \textbf{Competencias clave} & \textbf{Traducción en clase de Matemáticas} \\
+    \midrule
+    Aprender a conocer & Pensamiento crítico, indagación y manejo de información. & Distinguir variación lineal afín vs. proporcional mediante análisis de razones. \\
+    Aprender a hacer & Resolución creativa, modelación y uso reflexivo TIC. & Graficar y simular tolerancias verificando cálculos y unidades físicas. \\
+    Aprender a ser & Autorregulación, metacognición y responsabilidad ética. & Diarios breves sobre obstáculos propios y corrección tras retroalimentación. \\
+    Aprender a vivir juntos & Comunicación asertiva, colaboración y ciudadanía. & Debate argumentado en equipos con roles rotativos y escucha respetuosa. \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Metacognición y Aprender a Aprender en Matemáticas Técnicas}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+      \begin{block}{Obstáculo habitual}
+        El alumno memoriza pasos mecánicos sin identificar por qué eligió una estrategia o cuándo falla un modelo lineal.
+      \end{block}
+    \column{0.48\textwidth}
+      \begin{block}{Intervención propuesta (por realizar)}
+        Caso de demanda eléctrica $P(n) = 120 + 45n$: predecir límite del circuito, justificar en equipo y redactar nota metacognitiva sobre errores corregidos.
+      \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Conclusiones y Referencias (APA 7)}
+  \begin{itemize}\small
+    \item Los cuatro pilares constituyen una unidad inseparable en bachillerato técnico e ingeniería.
+    \item Articular rigor cuantitativo y autorregulación prepara para aprender durante toda la vida.
+  \end{itemize}
+  \vspace{0.3cm}
+  \scriptsize
+  \textbf{Referencias principales:} Delors, J., et al. (1996). \textit{La educación encierra un tesoro}. UNESCO; Sawyer, R. K. (2008). \textit{Optimizing learning}. OECD; Scott, C. L. (2015). \textit{El futuro del aprendizaje 2: ¿Qué tipo de aprendizaje se necesita en el siglo XXI?} UNESCO; UNESCO (2015). \textit{Replantear la educación}.
+\end{frame}
+
+\end{document}

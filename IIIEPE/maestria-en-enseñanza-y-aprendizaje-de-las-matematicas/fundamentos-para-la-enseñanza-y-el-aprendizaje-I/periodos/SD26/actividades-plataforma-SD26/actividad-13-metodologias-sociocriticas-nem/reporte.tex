@@ -1,0 +1,165 @@
+\documentclass[spanish,letterpaper,oneside]{article}
+
+\def\documenttitle {Cuadro Comparativo: Metodologías Sociocríticas de la NEM}
+\def\documentsubtitle {Fundamentos para la enseñanza y el aprendizaje I · Cohorte SD26}
+\def\documentsubject {Actividad 13 · Bloque II (SEP 2022b · Módulos 47639 / 49058)}
+\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
+\def\coursecode {MAEM-SD26}
+
+\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León}
+\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
+\def\universitydepartment {Fundamentos para la enseñanza y el aprendizaje I}
+\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
+\def\universitydepartmentimagecfg {height=1.75cm}
+\def\universitylocation {Monterrey, Nuevo León}
+\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\studentid {00874}
+\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
+\def\programperiod {2do periodo, septiembre--diciembre de 2026 (SD26)}
+\def\programmodality {Modalidad presencial}
+\def\programshort {MAEM}
+
+\def\authortable {
+  \begin{tabular}{ll}
+    \textbf{Alumno:} & \studentfullname \\
+    Matrícula: & \studentid \\
+    Correo institucional: & \studentemail \\
+    Unidad: & \coursename \\
+    Programa: & \programshort \\
+    Periodo: & \programperiod \\
+    & \\
+    \multicolumn{2}{l}{Fecha de realización: 19 de noviembre de 2026} \\
+    \multicolumn{2}{l}{\universitylocation}
+  \end{tabular}
+}
+
+\input{template}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage[most]{tcolorbox}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,shapes.geometric}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
+\def\portraittitlecolor {iiiepeNavy}
+\setcitestyle{authoryear,open={(},close={)}}
+\makeatletter
+\renewcommand{\@biblabel}[1]{}
+\makeatother
+\setlength{\bibhang}{1.27cm}
+\setlength{\bibsep}{6pt}
+\AtBeginDocument{\renewcommand{\refname}{Referencias}}
+
+\newcommand{\insertcoverwatermark}{%
+  \AddToShipoutPictureBG*{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[opacity=0.04,inner sep=0pt] at (current page.center) {%
+        \includegraphics[width=0.65\paperwidth]{img/iiiepe/marca-iiiepe.png}%
+      };
+    \end{tikzpicture}%
+  }%
+}
+
+\setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
+\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 13 · Metodologías NEM}\setstretch{1.3}\raggedbottom
+\section{Criterios pedagógicos para elegir metodologías en la NEM}
+Las orientaciones emitidas por la Secretaría de Educación Pública en \textit{Sugerencias metodológicas para el desarrollo de los proyectos educativos} \citep{sep2022sugerencias} subrayan explícitamente que las metodologías sociocríticas constituyen posibilidades didácticas flexibles y no recetarios rígidos que restrinjan la autonomía profesional del profesorado. Cada metodología responde a preguntas formativas distintas y articula saberes disciplinares con problemáticas reales dentro de los campos formativos \citep{sep2022plan}.
+
+Es fundamental evitar ambigüedades conceptuales al planificar proyectos en matemáticas: por ello, en todo este documento se distinguen explícitamente el \textit{Aprendizaje Basado en Proyectos Comunitarios} (ABPC) y el \textit{Aprendizaje Basado en Problemas} (ABP), evitando abreviar ambos bajo la misma sigla. Mi postura es que seleccionar una metodología sociocrítica pertinente depende del objeto matemático a enseñar, del grado de vinculación comunitaria buscado y del tipo de evidencia argumentativa que el estudiantado necesita construir en CONALEP, CECyTE o ingeniería.
+
+\section{Cuadro comparativo de cuatro entradas y matriz de roles}
+A partir de la revisión directa del insumo oficial \citep{sep2022sugerencias}, el cuadro siguiente organiza las cuatro entradas solicitadas —\textbf{cómo se trabaja, fases principales, palabras clave y aplicación matemática}— para comparar sistemáticamente sus rasgos distintivos:
+
+{\small\setstretch{1.12}\renewcommand{\arraystretch}{1.28}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.18\linewidth}|>{\raggedright\arraybackslash}p{0.28\linewidth}|>{\raggedright\arraybackslash}p{0.22\linewidth}|>{\raggedright\arraybackslash}p{0.26\linewidth}|}\hline
+\rowcolor{iiiepePale} \textbf{Metodología NEM} & \textbf{Cómo se trabaja y fases} & \textbf{Palabras clave} & \textbf{Aplicación en Matemáticas} \\\hline
+\endfirsthead
+\hline
+\rowcolor{iiiepePale} \textbf{Metodología NEM} & \textbf{Cómo se trabaja y fases} & \textbf{Palabras clave} & \textbf{Aplicación en Matemáticas} \\\hline
+\endhead
+1. Aprendizaje Basado en Proyectos Comunitarios (ABPC) & Parte de experiencias y problemas del entorno cercano mediante tres fases continuas (planeación, acción e intervención) integradas en once momentos de diálogo y producción comunicable \citep{sep2022sugerencias}. & Comunidad, reconstrucción de significados, intervención, expresión plural, comunicación. & Diseño de presupuesto y análisis estadístico descriptivo para optimizar consumo eléctrico o recolección escolar en el plantel. \\\hline
+2. Aprendizaje Basado en Indagación (enfoque STEAM) & Articula cinco fases cíclicas: saberes previos, indagación guiada experimental, organización de hallazgos, elaboración de respuestas/modelos y reflexión metacognitiva \citep{sep2022sugerencias}. & Pregunta científica, hipótesis, modelación, experimentación, evidencia, metacognición. & Proyecto de calibración de sensores de taller contrastando variación proporcional $y=kx$ frente a función afín $y=mx+b$ \citep{sep2023pensamiento}. \\\hline
+3. Aprendizaje Basado en Problemas (ABP) & Presenta un conflicto complejo abierto y transita seis momentos: presentamos, recolectamos, formulamos el problema, organizamos la experiencia, vivimos la experiencia y valoramos los resultados. & Problematización, saberes previos, búsqueda de fuentes, conflicto cognitivo, solución argumentada. & Comparación de tarifas o tiempos de mantenimiento preventivo ($C_A(h)$ vs. $C_B(h)$) para justificar decisiones bajo restricciones reales \citep{star2015algebra}. \\\hline
+4. Aprendizaje Servicio (AS) & Integra formación académica con una respuesta solidaria concreta en cinco etapas: punto de partida, lo que sé y quiero saber, organicemos actividades, creatividad en marcha y compartimos y evaluamos \citep{sep2022sugerencias}. & Reciprocidad, solidaridad, necesidad real, servicio activo, protagonismo juvenil, reflexión. & Asesoría matemática entre pares o elaboración de infografías de lectura crítica de recibos de energía para familias de la comunidad. \\\hline
+\end{longtable}}
+
+Complementariamente, la matriz siguiente especifica las responsabilidades concretas del docente y del estudiantado en cada una de las cuatro metodologías sociocríticas de la NEM:
+
+{\small\setstretch{1.15}\renewcommand{\arraystretch}{1.3}}
+{\small\setstretch{1.15}\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.22\linewidth}|>{\raggedright\arraybackslash}p{0.35\linewidth}|>{\raggedright\arraybackslash}p{0.37\linewidth}|}\hline
+\rowcolor{iiiepePale} \textbf{Metodología} & \textbf{Papel del docente} & \textbf{Papel del estudiante} \\\hline
+\endfirsthead
+\hline
+\rowcolor{iiiepePale} \textbf{Metodología} & \textbf{Papel del docente} & \textbf{Papel del estudiante} \\\hline
+\endhead
+Proyectos Comunitarios & Orienta la delimitación de situaciones del entorno, acompaña acuerdos de planeación y media el diálogo con destinatarios. & Explora problemáticas locales, negocia metas, elabora producciones colectivas y evalúa su pertinencia comunicativa. \\\hline
+Indagación STEAM & Formula preguntas investigables, cuida condiciones seguras de medición y proporciona andamiajes para interpretar datos. & Predice comportamientos, recolecta registros, construye gráficas y ecuaciones, valida modelos y documenta límites físicos. \\\hline
+Aprendizaje Basado en Problemas & Diseña escenarios dilemáticos sin solución trivial, estimula la consulta de fuentes confiables y exige justificación lógica. & Identifica qué sabe y qué ignora, analiza restricciones, compara rutas alternativas y sustenta su dictamen ante pares \citep{sawyer2008optimizing}. \\\hline
+Aprendizaje Servicio & Vincula metas matemáticas con una necesidad social legítima evitando derivas asistencialistas y acompañando la reflexión ética. & Escucha activamente a destinatarios, ejecuta una acción solidaria útil y argumenta qué aprendió matemática y ciudadanamente. \\\hline
+\end{longtable}}
+
+\section{Árbol de decisión metodológica para la enseñanza de las matemáticas}
+En el contexto de educación media superior tecnológica e ingeniería, considero necesario disponer de un criterio claro para no imponer una sola metodología a todos los contenidos. La Figura~\ref{fig:act13-decision} sintetiza cómo articular el problema de partida con la elección metodológica pertinente:
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[font=\scriptsize, >=Latex]
+  \node[draw=iiiepeNavy,fill=iiiepeNavy,text=white,rounded corners=5pt,text width=4.8cm,align=center,inner sep=6pt] (root) at (0,3.2)
+    {\textbf{¿Cuál es la naturaleza principal del problema matemático y formativo?}};
+
+  \node[draw=iiiepeBlue,fill=iiiepePale,thick,rounded corners=4pt,text width=3.1cm,align=center,inner sep=5pt] (m1) at (-5.4,0.4)
+    {\textbf{\color{iiiepeBlue}ABPC}\\Transformación cultural o gestión colectiva del entorno escolar.};
+
+  \node[draw=iiiepeAqua!80!black,fill=iiiepeMint,thick,rounded corners=4pt,text width=3.1cm,align=center,inner sep=5pt] (m2) at (-1.8,0.4)
+    {\textbf{\color{iiiepeAqua!75!black}Indagación STEAM}\\Fenómeno físico medible, modelación lineal y laboratorio.};
+
+  \node[draw=iiiepeOrange!90!black,fill=iiiepeWarm,thick,rounded corners=4pt,text width=3.1cm,align=center,inner sep=5pt] (m3) at (1.8,0.4)
+    {\textbf{\color{iiiepeOrange!85!black}ABP}\\Dilema de decisión bajo restricciones, optimización o costo.};
+
+  \node[draw=iiiepeNavy,fill=iiiepePaper,thick,rounded corners=4pt,text width=3.1cm,align=center,inner sep=5pt] (m4) at (5.4,0.4)
+    {\textbf{\color{iiiepeNavy}Aprendizaje Servicio}\\Necesidad comunitaria atendida con reciprocidad solidaria.};
+
+  \draw[->,thick,iiiepeBlue] (root.south) -| (m1.north);
+  \draw[->,thick,iiiepeAqua!80!black] (root.south) -| (m2.north);
+  \draw[->,thick,iiiepeOrange!85!black] (root.south) -| (m3.north);
+  \draw[->,thick,iiiepeNavy] (root.south) -| (m4.north);
+\end{tikzpicture}
+\caption{Criterio de elección entre las cuatro metodologías sociocríticas de la NEM en matemáticas.}
+\label{fig:act13-decision}
+\end{figure}
+
+Además, en mi práctica docente advierto que la Indagación STEAM resulta especialmente fecunda para articular matemáticas con mecatrónica y mantenimiento (como en la secuencia sobre calibración lineal), mientras el ABP fortalece la toma de decisiones económicas y logísticas en ingeniería, y el Aprendizaje Servicio abre horizontes de solidaridad entre semestres superiores y estudiantes de nuevo ingreso \citep{sep2022sugerencias,eef2021feedback}.
+
+\clearpage
+\section{Conclusiones}
+En conclusión, considero que estudiar comparativamente las cuatro sugerencias metodológicas de la Nueva Escuela Mexicana demuestra que innovar en matemáticas no consiste en aplicar recetas mecánicas ni etiquetas administrativas, sino en elegir conscientemente la estructura sociocrítica más congruente con el fenómeno, los saberes previos y el impacto formativo deseado.
+
+Por tanto, sostengo que diferenciar con rigor el ABPC, el enfoque STEAM, el ABP y el Aprendizaje Servicio dota al docente de un repertorio sólido para convertir el aula matemática en un espacio participativo, conceptualmente profundo y comprometido con su comunidad \citep{sep2022plan,sep2023pensamiento}.
+
+\clearpage
+\begin{thebibliography}{99}
+\bibitem[Collin y Quigley(2021)]{eef2021feedback} Collin, J., y Quigley, A. (2021). \textit{Teacher feedback to improve pupil learning}. Education Endowment Foundation.
+\bibitem[Sawyer(2008)]{sawyer2008optimizing} Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. En OECD, \textit{Innovating to learn, learning to innovate} (pp. 45--65). OECD Publishing.
+\bibitem[SEP(2022a)]{sep2022plan} Secretaría de Educación Pública. (2022). \textit{Plan de Estudio para la educación preescolar, primaria y secundaria}. SEP.
+\bibitem[SEP(2022b)]{sep2022sugerencias} Secretaría de Educación Pública. (2022). Sugerencias metodológicas para el desarrollo de los proyectos educativos. En \textit{Avance del contenido para el libro del docente. Primer grado} (pp. 23--24, 64--82). SEP.
+\bibitem[SEP(2023)]{sep2023pensamiento} Secretaría de Educación Pública. (2023). \textit{Programa de estudios del recurso sociocognitivo Pensamiento Matemático I}. Subsecretaría de Educación Media Superior, SEP.
+\bibitem[Star et~al.(2015)]{star2015algebra} Star, J. R., Caronongan, P., Foegen, A., Furgeson, J., Keating, B., Larson, M. R., Lyskawa, J., McCallum, W. G., Porath, J., y Zbiek, R. M. (2015). \textit{Teaching strategies for improving algebra knowledge in middle and high school students}. IES.
+\end{thebibliography}
+
+\end{document}

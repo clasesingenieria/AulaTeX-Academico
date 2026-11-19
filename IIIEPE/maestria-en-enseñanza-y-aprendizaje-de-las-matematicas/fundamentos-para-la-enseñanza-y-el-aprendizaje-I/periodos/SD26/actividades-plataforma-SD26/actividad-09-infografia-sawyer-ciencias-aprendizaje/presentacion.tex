@@ -1,0 +1,199 @@
+\documentclass[aspectratio=169,spanish,xcolor=table]{beamer}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+\fi
+\usepackage[spanish,es-tabla,es-noshorthands]{babel}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{tikz,pgfplots,array,booktabs,ragged2e}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes.geometric,fit}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
+
+\usetheme{default}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{normal text}{fg=iiiepeInk,bg=white}
+\setbeamercolor{structure}{fg=iiiepeNavy}
+\setbeamercolor{frametitle}{fg=white,bg=iiiepeNavy}
+\setbeamercolor{block title}{fg=white,bg=iiiepeBlue}
+\setbeamercolor{block body}{fg=iiiepeInk,bg=iiiepePale}
+\setbeamercolor{item}{fg=iiiepeOrange}
+
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.95cm,dp=0.22cm,leftskip=0.45cm,rightskip=0.45cm]{frametitle}%
+    \begin{minipage}[c]{13.2cm}\usebeamerfont{frametitle}\large\bfseries\insertframetitle\end{minipage}%
+    \hfill\begin{minipage}[c]{1.6cm}\raggedleft\includegraphics[height=0.56cm]{img/iiiepe/logo-iiiepe-blanco.png}\end{minipage}%
+  \end{beamercolorbox}%
+}
+
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.78\paperwidth,ht=0.5cm,dp=0.18cm,leftskip=0.45cm]{frametitle}%
+      \scriptsize\color{white}M. de la Cruz Muñoz · MAEM · Matrícula 00874 · SD26 · Actividad 9 · Infografía Sawyer%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.22\paperwidth,ht=0.5cm,dp=0.18cm,rightskip=0.45cm]{frametitle}%
+      \hfill\scriptsize\color{white}\insertframenumber{} / \inserttotalframenumber%
+    \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
+
+\newcommand{\Pill}[2]{%
+  \tikz[baseline=(x.base)]{\node[rounded corners=3pt,fill=#1!14,draw=#1!75!black,thick,inner xsep=6pt,inner ysep=4pt,align=center] (x) {\scriptsize\bfseries #2};}%
+}
+
+\title{Ciencias del Aprendizaje: Infografía y Análisis de R. Keith Sawyer (2008)}
+\subtitle{Actividad 9 · Sesión 3b · Complemento Infográfico (Módulo 51440 / 51436)}
+\author{Mtro. Martín Jonathan de la Cruz Muñoz · Matrícula 00874}
+\institute{IIIEPE · Maestría en Aprendizaje y Enseñanza de las Matemáticas · Grupo A}
+\date{19 de noviembre de 2026}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[iiiepeNavy] (current page.north west) rectangle ([xshift=10.3cm]current page.south west);
+    \fill[iiiepeBlue] ([xshift=10.3cm]current page.north west) rectangle (current page.south east);
+    \fill[iiiepeOrange] ([xshift=0.8cm,yshift=-6.45cm]current page.north west) rectangle ([xshift=9.3cm,yshift=-6.53cm]current page.north west);
+    \node[anchor=north west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=-1.15cm]current page.north west) {%
+      {\color{iiiepeAqua!45!white}\small\bfseries MAESTRÍA EN APRENDIZAJE Y ENSEÑANZA DE LAS MATEMÁTICAS · SD26\par}%
+      \vspace{0.35cm}
+      {\color{white}\Large\bfseries \inserttitle\par}%
+      \vspace{0.25cm}
+      {\color{white!90}\normalsize \insertsubtitle\par}%
+    };
+    \node[anchor=south west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=0.75cm]current page.south west) {%
+      {\color{white}\normalsize\bfseries Mtro. Martín Jonathan de la Cruz Muñoz\par}%
+      {\color{white!85}\scriptsize Matrícula 00874 · martin.delacruz@campus.iiiepe.edu.mx\par}%
+      {\color{iiiepeAqua!35!white}\scriptsize Monterrey, Nuevo León · 19 de noviembre de 2026\par}%
+    };
+    \node[anchor=center,text width=5.0cm,align=center] at ([xshift=13.15cm,yshift=-4.5cm]current page.north west) {%
+      \includegraphics[width=3.6cm]{img/iiiepe/logo-iiiepe-blanco.png}\par\vspace{0.45cm}%
+      {\color{white}\large\bfseries IIIEPE\par}%
+      \vspace{0.1cm}%
+      {\color{white!85}\scriptsize Fundamentos para la enseñanza\\y el aprendizaje I\par}%
+    };
+  \end{tikzpicture}
+\end{frame}
+\begin{frame}{Propósito: Superar el Instruccionismo con Ciencias del Aprendizaje}
+  \begin{block}{Pregunta orientadora · R. Keith Sawyer (2008)}
+    ¿Por qué las escuelas heredadas de la era industrial resultan insuficientes para formar analistas simbólicos y profesionales capaces de modelar, decidir e innovar?
+  \end{block}
+  \vspace{0.25cm}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+      \begin{block}{Modelo estándar (Instruccionismo)}
+        \begin{itemize}\scriptsize
+          \item Conocimiento reducido a hechos aislados y rutinas.
+          \item Secuencia rígida definida por adultos expertos.
+          \item Evaluación sumativa centrada en memoria superficial.
+        \end{itemize}
+      \end{block}
+    \column{0.48\textwidth}
+      \begin{block}{Economía del conocimiento y aula profunda}
+        \begin{itemize}\scriptsize
+          \item Integración conceptual transferible a situaciones nuevas.
+          \item Prácticas auténticas ancladas a disciplinas reales.
+          \item Trabajo colaborativo con herramientas y diálogo experto.
+        \end{itemize}
+      \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Mapa Infográfico de los Cinco Pilares de Sawyer (2008)}
+  \centering
+  \begin{tikzpicture}[scale=0.82, transform shape, font=\scriptsize, >=Latex]
+    \node[draw=iiiepeNavy,fill=iiiepeNavy,text=white,rounded corners=4pt,text width=4.2cm,align=center,inner sep=5pt] (c) at (0,0) {\textbf{Ciencias del Aprendizaje}\\(Sawyer, 2008 · OECD/CERI)};
+    \node[draw=iiiepeBlue,fill=iiiepePale,rounded corners=4pt,text width=3.9cm,align=left,inner sep=5pt] (n1) at (-4.8,2.1) {\textbf{1. Comprensión profunda}\\Conectar hechos y procedimientos en redes conceptuales transferibles.};
+    \node[draw=iiiepeAqua!80!black,fill=iiiepeMint,rounded corners=4pt,text width=3.9cm,align=left,inner sep=5pt] (n2) at (4.8,2.1) {\textbf{2. Saberes previos activos}\\Visibilizar y reestructurar ideas y matemáticas ingenuas.};
+    \node[draw=iiiepeOrange!90!black,fill=iiiepeWarm,rounded corners=4pt,text width=3.9cm,align=left,inner sep=5pt] (n3) at (-4.8,-2.1) {\textbf{3. Articulación y metacognición}\\Externalizar razonamientos y regular el espacio del problema.};
+    \node[draw=iiiepeNavy,fill=iiiepePale,rounded corners=4pt,text width=3.9cm,align=left,inner sep=5pt] (n4) at (4.8,-2.1) {\textbf{4. Andamiaje y evaluación}\\Pistas graduadas que se retiran; evaluación para comprender.};
+    \draw[->,very thick,iiiepeNavy] (c) -- (n1);
+    \draw[->,very thick,iiiepeBlue] (c) -- (n2);
+    \draw[->,very thick,iiiepeOrange!85!black] (c) -- (n3);
+    \draw[->,very thick,iiiepeAqua!80!black] (c) -- (n4);
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Hallazgos Clave I: Comprensión Profunda y Saberes Previos}
+  \begin{itemize}\normalsize
+    \item \textbf{Base cognitiva del experto:} Poseer esquemas ricos y heurísticas adaptables ante situaciones cambiantes \textbf{(Sawyer, 2008)}.
+    \item \textbf{Espacio del problema:} Antes de operar símbolos, comprender el contexto físico, las restricciones y el estado meta.
+    \item \textbf{«Matemáticas ingenuas»:} El alumnado no entra como página en blanco; trae modelos intuitivos que la tarea debe hacer visibles.
+    \item \textbf{Implicación en CONALEP/CECyTE:} Contrastar $y=kx$ frente a $y=mx+b$ antes de imponer fórmulas mecánicas.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Hallazgos Clave II: Articulación, Metacognición y Andamiaje}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+      \begin{block}{Externalizar el pensamiento}
+        \begin{itemize}\small
+          \item Pensar en voz alta y justificar pasos consolida conceptos.
+          \item La metacognición permite monitorear si la estrategia avanza hacia la meta.
+          \item Articulación y comprensión forman un ciclo continuo.
+        \end{itemize}
+      \end{block}
+    \column{0.48\textwidth}
+      \begin{block}{Andamiaje efectivo (\textit{Scaffolding})}
+        \begin{itemize}\small
+          \item Apoyo temporal mediante pistas, tablas o contraejemplos.
+          \item Hacer el ejercicio por el alumno anula el aprendizaje.
+          \item Se agrega, ajusta y retira progresivamente conforme emerge autonomía.
+        \end{itemize}
+      \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Principios para Diseñar Ambientes de Aprendizaje}
+  \renewcommand{\arraystretch}{1.28}
+  \scriptsize
+  \begin{tabular}{p{3.4cm}p{5.2cm}p{4.8cm}}
+    \toprule
+    \textbf{Principio (Sawyer, 2008)} & \textbf{Contraste con modelo estándar} & \textbf{Aplicación en Matemáticas} \\
+    \midrule
+    Personalización & Todos ejecutan la misma guía al mismo ritmo. & Rutas escalonadas según diagnóstico previo. \\
+    Fuentes diversas & Docente y libro único como autoridad absoluta. & Hojas de taller, sensores, simulaciones y textos. \\
+    Conocimiento distribuido & Trabajo aislado individual sin consulta. & Equipos con roles de modelación y revisión. \\
+    Currículo profundo (TIMSS) & Cobertura saturada y fragmentada por unidades. & Pocas familias de modelos con alta transferencia. \\
+    Evaluación auténtica & Exámenes cerrados de memoria procedimental. & Dictámenes escritos y corrección formativa. \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Transferencia Situada y Conclusiones}
+  \begin{block}{Complementariedad con Philippe Meirieu (2020)}
+    Meirieu aporta la finalidad ética y democrática de «hacer escuela y bien común»; Sawyer proporciona la ingeniería cognitiva y de ambientes que vuelve viable la comprensión profunda para todos.
+  \end{block}
+  \vspace{0.25cm}
+  \begin{itemize}\normalsize
+    \item Priorizar coherencia conceptual sobre acumulación fragmentada de fórmulas.
+    \item Convertir la sala de matemáticas técnicas en taller de conjetura, prueba dimensional y argumentación.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Referencias (APA 7)}
+  \scriptsize\setlength{\parskip}{5pt}
+  \begin{itemize}
+    \item Collin, J., y Quigley, A. (2021). \textit{Teacher feedback to improve pupil learning}. Education Endowment Foundation.
+    \item Meirieu, P. (2020). ``La escuela después''... ¿Con la pedagogía de antes? \textit{MCEP}.
+    \item Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. En \textit{Innovating to learn, learning to innovate} (pp. 45--65). OECD Publishing.
+    \item Star, J. R., et al. (2015). \textit{Teaching strategies for improving algebra knowledge in middle and high school students}. IES.
+  \end{itemize}
+\end{frame}
+
+\end{document}

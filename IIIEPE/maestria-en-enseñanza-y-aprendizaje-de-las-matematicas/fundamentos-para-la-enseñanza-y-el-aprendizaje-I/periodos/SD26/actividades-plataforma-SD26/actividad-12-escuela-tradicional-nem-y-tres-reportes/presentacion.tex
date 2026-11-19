@@ -1,0 +1,147 @@
+\documentclass[aspectratio=169,spanish,xcolor=table]{beamer}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+\fi
+\usepackage[spanish,es-tabla,es-noshorthands]{babel}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{tikz,pgfplots,array,booktabs,ragged2e}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes.geometric,fit}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
+
+\usetheme{default}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{normal text}{fg=iiiepeInk,bg=white}
+\setbeamercolor{structure}{fg=iiiepeNavy}
+\setbeamercolor{frametitle}{fg=white,bg=iiiepeNavy}
+\setbeamercolor{block title}{fg=white,bg=iiiepeBlue}
+\setbeamercolor{block body}{fg=iiiepeInk,bg=iiiepePale}
+\setbeamercolor{item}{fg=iiiepeOrange}
+
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.95cm,dp=0.22cm,leftskip=0.45cm,rightskip=0.45cm]{frametitle}%
+    \begin{minipage}[c]{13.2cm}\usebeamerfont{frametitle}\large\bfseries\insertframetitle\end{minipage}%
+    \hfill\begin{minipage}[c]{1.6cm}\raggedleft\includegraphics[height=0.56cm]{img/iiiepe/logo-iiiepe-blanco.png}\end{minipage}%
+  \end{beamercolorbox}%
+}
+
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.78\paperwidth,ht=0.5cm,dp=0.18cm,leftskip=0.45cm]{frametitle}%
+      \scriptsize\color{white}M. de la Cruz Muñoz · MAEM · Matrícula 00874 · SD26 · Actividad 12 · Sesión 5%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.22\paperwidth,ht=0.5cm,dp=0.18cm,rightskip=0.45cm]{frametitle}%
+      \hfill\scriptsize\color{white}\insertframenumber{} / \inserttotalframenumber%
+    \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
+
+\newcommand{\Pill}[2]{%
+  \tikz[baseline=(x.base)]{\node[rounded corners=3pt,fill=#1!14,draw=#1!75!black,thick,inner xsep=6pt,inner ysep=4pt,align=center] (x) {\scriptsize\bfseries #2};}%
+}
+
+\title{Escuela Tradicional vs. NEM y Tres Reportes de Lectura}
+\subtitle{Actividad 12 · Sesión 5 (Meirieu 2020 · Sawyer 2008 · Martínez Rizo 2026)}
+\author{Mtro. Martín Jonathan de la Cruz Muñoz · Matrícula 00874}
+\institute{IIIEPE · Maestría en Aprendizaje y Enseñanza de las Matemáticas · Grupo A}
+\date{19 de noviembre de 2026}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[iiiepeNavy] (current page.north west) rectangle ([xshift=10.3cm]current page.south west);
+    \fill[iiiepeBlue] ([xshift=10.3cm]current page.north west) rectangle (current page.south east);
+    \fill[iiiepeOrange] ([xshift=0.8cm,yshift=-6.45cm]current page.north west) rectangle ([xshift=9.3cm,yshift=-6.53cm]current page.north west);
+    \node[anchor=north west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=-1.15cm]current page.north west) {%
+      {\color{iiiepeAqua!45!white}\small\bfseries MAESTRÍA EN APRENDIZAJE Y ENSEÑANZA DE LAS MATEMÁTICAS · SD26\par}%
+      \vspace{0.35cm}
+      {\color{white}\Large\bfseries \inserttitle\par}%
+      \vspace{0.25cm}
+      {\color{white!90}\normalsize \insertsubtitle\par}%
+    };
+    \node[anchor=south west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=0.75cm]current page.south west) {%
+      {\color{white}\normalsize\bfseries Mtro. Martín Jonathan de la Cruz Muñoz\par}%
+      {\color{white!85}\scriptsize Matrícula 00874 · martin.delacruz@campus.iiiepe.edu.mx\par}%
+      {\color{iiiepeAqua!35!white}\scriptsize Monterrey, Nuevo León · 19 de noviembre de 2026\par}%
+    };
+    \node[anchor=center,text width=5.0cm,align=center] at ([xshift=13.15cm,yshift=-4.5cm]current page.north west) {%
+      \includegraphics[width=3.6cm]{img/iiiepe/logo-iiiepe-blanco.png}\par\vspace{0.45cm}%
+      {\color{white}\large\bfseries IIIEPE\par}%
+      \vspace{0.1cm}%
+      {\color{white!85}\scriptsize Fundamentos para la enseñanza\\y el aprendizaje I\par}%
+    };
+  \end{tikzpicture}
+\end{frame}
+\begin{frame}{Contraste Estructural: Escuela Tradicional vs. NEM}
+  \renewcommand{\arraystretch}{1.25}
+  \scriptsize
+  \begin{tabular}{p{2.6cm}p{5.2cm}p{5.5cm}}
+    \toprule
+    \textbf{Dimensión} & \textbf{Escuela tradicional (Scallon, 2004)} & \textbf{Nueva Escuela Mexicana (SEP, 2022)} \\
+    \midrule
+    Finalidad & Reproducción memorística de hechos. & Formación humanista, crítica y comunitaria. \\
+    Currículo & Asignaturas aisladas fragmentadas. & Campos formativos y programa analítico. \\
+    Problemas & Ejercicios cerrados artificiales. & Situaciones auténticas con múltiples fuentes. \\
+    Evaluación & Prueba puntual unidimensional. & Proceso formativo, retroalimentación y diálogo. \\
+    Error y equidad & Sanción individual del rezago. & Diagnóstico y apoyos para derecho común. \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Tres Escalas Complementarias de Mejora Educativa}
+  \begin{columns}[T]
+    \column{0.31\textwidth}
+      \begin{block}{1. Philippe Meirieu (2020)}
+        \scriptsize\textbf{Escala institucional:}\\
+        Construir aula común (\textit{yo + nosotros}), superar taylorismo y ofrecer «algo más» frente al conductismo digital.
+      \end{block}
+    \column{0.31\textwidth}
+      \begin{block}{2. Keith Sawyer (2008)}
+        \scriptsize\textbf{Escala de aula y cognición:}\\
+        Aprendizaje profundo, saberes previos, articulación, metacognición y andamiaje progresivo.
+      \end{block}
+    \column{0.31\textwidth}
+      \begin{block}{3. Martínez Rizo (2026)}
+        \scriptsize\textbf{Escala sistémica (PISA 2025):}\\
+        Lectura histórica ($409\to 395\to 388$ en matemáticas), cobertura y sistema nacional propio de evaluación.
+      \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{De la Ecuación Rutinaria al Análisis Formativo en Matemáticas}
+  \begin{block}{Ejemplo comparado: $0.5x + 2 = 0.2x + 3.8 \quad\text{y}\quad C_A(x)=30+8x \text{ vs. } C_B(x)=12x$}
+    \begin{itemize}\normalsize
+      \item \textbf{Tradicional:} Despejar $x=6$ o $x=7.5$ sin significado físico ni verificación.
+      \item \textbf{Comprensivo (NEM + Sawyer + Meirieu):} Justificar equivalencia algebraica, vincular tabla--gráfica--ecuación, dar andamiaje con ejes guía y devolver errores como hipótesis revisables.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Conclusiones y Referencias (APA 7)}
+  \begin{itemize}\small
+    \item La mejora educativa requiere alinear propósito público (Meirieu), diseño cognitivo (Sawyer) y evidencia contextualizada (Martínez Rizo).
+    \item La NEM aporta un marco integrador cuando evita reducir el proyecto o la evaluación a mero cumplimiento formal.
+  \end{itemize}
+  \vspace{0.3cm}
+  \scriptsize
+  \textbf{Referencias:} Martínez Rizo, F. (2026). Resultados de PISA 2025. \textit{Nexos}; Meirieu, P. (2020). \textit{MCEP}; Sawyer, R. K. (2008). \textit{OECD}; Scallon, G. (2004); SEP (2022). \textit{Plan de Estudio}.
+\end{frame}
+
+\end{document}

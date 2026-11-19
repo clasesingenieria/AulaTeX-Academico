@@ -1,0 +1,161 @@
+\documentclass[spanish,letterpaper,oneside]{article}
+
+\def\documenttitle {50 Innovaciones Educativas para Escuelas: Análisis y Transferencia Matemática}
+\def\documentsubtitle {Fundamentos para la enseñanza y el aprendizaje I · Cohorte SD26}
+\def\documentsubject {Actividad 14 · Sesión 7b (Rivas, André y Delgado, 2017 · Recurso 51784)}
+\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
+\def\coursecode {MAEM-SD26}
+
+\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León}
+\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
+\def\universitydepartment {Fundamentos para la enseñanza y el aprendizaje I}
+\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
+\def\universitydepartmentimagecfg {height=1.75cm}
+\def\universitylocation {Monterrey, Nuevo León}
+\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\studentid {00874}
+\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
+\def\programperiod {2do periodo, septiembre--diciembre de 2026 (SD26)}
+\def\programmodality {Modalidad presencial}
+\def\programshort {MAEM}
+
+\def\authortable {
+  \begin{tabular}{ll}
+    \textbf{Alumno:} & \studentfullname \\
+    Matrícula: & \studentid \\
+    Correo institucional: & \studentemail \\
+    Unidad: & \coursename \\
+    Programa: & \programshort \\
+    Periodo: & \programperiod \\
+    & \\
+    \multicolumn{2}{l}{Fecha de realización: 19 de noviembre de 2026} \\
+    \multicolumn{2}{l}{\universitylocation}
+  \end{tabular}
+}
+
+\input{template}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage[most]{tcolorbox}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,shapes.geometric}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
+\def\portraittitlecolor {iiiepeNavy}
+\setcitestyle{authoryear,open={(},close={)}}
+\makeatletter
+\renewcommand{\@biblabel}[1]{}
+\makeatother
+\setlength{\bibhang}{1.27cm}
+\setlength{\bibsep}{6pt}
+\AtBeginDocument{\renewcommand{\refname}{Referencias}}
+
+\newcommand{\insertcoverwatermark}{%
+  \AddToShipoutPictureBG*{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[opacity=0.04,inner sep=0pt] at (current page.center) {%
+        \includegraphics[width=0.65\paperwidth]{img/iiiepe/marca-iiiepe.png}%
+      };
+    \end{tikzpicture}%
+  }%
+}
+
+\setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
+\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 14 · 50 Innovaciones}\setstretch{1.3}\raggedbottom
+\section{Introducción y criterios de innovación decisiva}
+El libro \textit{50 innovaciones educativas para escuelas}, compilado por \citet{rivas2017innovaciones} desde el Laboratorio de Innovación y Justicia Educativa de CIPPEC junto con un consejo integrado por Inés Aguerrondo, Rebeca Anijovich, Melina Furman, Marta Libedinsky, Mariana Maggio y Alfredo Vota, ofrece un catálogo riguroso de experiencias implementables sin costos prohibitivos en escuelas públicas. Frente al desgaste de reformas puramente declarativas, los autores acuñan el concepto de \textit{innovaciones decisivas}: prácticas reales sustentadas en evidencia, orientadas al aprendizaje dialógico, el pragmatismo democrático y la educación para la comprensión, capaces de movilizar el deseo de aprender \citep{rivas2017innovaciones,quiroga2022aprendizaje}.
+
+Mi postura es que innovar en la enseñanza matemática de nivel medio superior técnico e ingeniería no equivale a introducir modas tecnológicas efímeras ni recetas descontextualizadas, sino a adaptar protocolos probados —como la instrucción entre pares, las rutinas de pensamiento visible y el estudio colaborativo de clases— respetando principios pedagógicos sólidos. Por ello, examino aquí los criterios estructurales de la obra, selecciono cinco innovaciones de alto potencial matemático y diseño una ruta piloto institucional \textbf{por realizar}.
+
+\section{Taxonomía de las 50 innovaciones y criterios de selección}
+La selección de experiencias compiladas por \citet{rivas2017innovaciones} parte de seis criterios explícitos: (1) ruptura real respecto a la enseñanza expositiva y alienante, (2) construcción de vínculos apasionantes orientados a comprensión y metacognición, (3) alcance institucional más allá del aislamiento individual, (4) sustento en investigación empírica o saber especializado validado, (5) viabilidad real contrastada en escuelas existentes y (6) adaptabilidad practicable en contextos públicos con recursos acotados. Asimismo, el libro compara su enfoque con el de buenos recetarios y festivales cinematográficos: requiere orientaciones operativas concretas, siempre vivificadas por docentes capaces de adaptarlas críticamente a su comunidad \citep{rivas2017innovaciones}.
+
+La Figura~\ref{fig:act14-mapa} organiza cinco innovaciones seleccionadas del volumen de \citet{rivas2017innovaciones} según su función primordial dentro de la enseñanza matemática:
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[font=\scriptsize, >=Latex]
+  \node[draw=iiiepeNavy,fill=iiiepeNavy,text=white,rounded corners=5pt,text width=4.2cm,minimum height=1.45cm,align=center,inner sep=6pt] (c) at (0,0)
+    {\textbf{\small PORTAFOLIO MATEMÁTICO}\\5 Innovaciones Decisivas\\(Rivas et al., 2017)};
+
+  \node[draw=iiiepeBlue,fill=iiiepePale,thick,rounded corners=4pt,text width=4.6cm,align=left,inner sep=5pt] (i1) at (-4.9,2.45)
+    {\textbf{\color{iiiepeBlue}Inn. 4 · Instrucción entre pares (Mazur)}\\Preguntas conceptuales con votación dividida ($30\%$--$70\%$) y debate entre compañeros \citep{mazur1997peer}.};
+
+  \node[draw=iiiepeAqua!80!black,fill=iiiepeMint,thick,rounded corners=4pt,text width=4.6cm,align=left,inner sep=5pt] (i2) at (4.9,2.45)
+    {\textbf{\color{iiiepeAqua!75!black}Inn. 7 · La escuela que aprende (CIPPEC)}\\Estudio colaborativo de clases (\textit{lesson study}) para superar el aislamiento docente.};
+
+  \node[draw=iiiepeOrange!90!black,fill=iiiepeWarm,thick,rounded corners=4pt,text width=4.6cm,align=left,inner sep=5pt] (i3) at (-4.9,-2.45)
+    {\textbf{\color{iiiepeOrange!85!black}Inn. 29 · Pensamiento visible (Furman)}\\Rutinas «¿Qué te hace decir eso?» y «Solía pensar--ahora pienso» \citep{ritchhart2014hacer}.};
+
+  \node[draw=iiiepeNavy,fill=iiiepePaper,thick,rounded corners=4pt,text width=4.6cm,align=left,inner sep=5pt] (i4) at (4.9,-2.45)
+    {\textbf{\color{iiiepeNavy}Inn. 39 y 41 · Valoración formativa y Makers}\\Matrices transparentes (Libedinsky) y talleres \textit{maker} de prototipado y modelación (Maggio).};
+
+  \draw[->,very thick,iiiepeBlue] (c) -- (i1);
+  \draw[->,very thick,iiiepeAqua!80!black] (c) -- (i2);
+  \draw[->,very thick,iiiepeOrange!85!black] (c) -- (i3);
+  \draw[->,very thick,iiiepeNavy] (c) -- (i4);
+\end{tikzpicture}
+\caption{Selección articulada de innovaciones decisivas de Rivas et al. (2017) transferibles al aula matemática.}
+\label{fig:act14-mapa}
+\end{figure}
+
+\section{Análisis y transferencia matemática de cinco innovaciones específicas}
+El cuadro comparativo siguiente sistematiza la estructura operativa de cinco experiencias reales contenidas en \citet{rivas2017innovaciones} —indicando autoría dentro del compilado y número de ficha— junto con su adaptación concreta para CONALEP, CECyTE e ingeniería:
+
+{\small\setstretch{1.12}\renewcommand{\arraystretch}{1.28}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.21\linewidth}|>{\raggedright\arraybackslash}p{0.35\linewidth}|>{\raggedright\arraybackslash}p{0.38\linewidth}|}\hline
+\rowcolor{iiiepePale} \textbf{Innovación en Rivas et al. (2017)} & \textbf{Mecanismo central documentado} & \textbf{Transferencia propuesta en Matemáticas} \\\hline
+\endfirsthead
+\hline
+\rowcolor{iiiepePale} \textbf{Innovación en Rivas et al. (2017)} & \textbf{Mecanismo central documentado} & \textbf{Transferencia propuesta en Matemáticas} \\\hline
+\endhead
+Inn. 4. \textit{Con un poco de ayuda de mis amigos: instrucción entre pares} (Equipo CIPPEC, pp. 25--26) & Creada por \citet{mazur1997peer}: pregunta conceptual con votación individual; si el acierto queda entre $30\%$ y $70\%$, los alumnos debaten sus razones con pares antes de volver a votar. & Preguntar al grupo por qué $y = 1.05x + 0.2$ deja de ser proporcional; aprovechar que quienes acaban de comprender explican el obstáculo con lenguaje cercano a sus pares. \\\hline
+Inn. 7. \textit{La escuela que aprende: estudiar la clase} (Equipo CIPPEC, pp. 31--32) & Grupos docentes (\textit{jugyou kenkyuu}) que eligen un tema difícil, diseñan una clase en equipo, la observan en vivo y la refinan colectivamente. & Academia de matemáticas trabajando conjuntamente el tránsito de aritmética a modelación algebraica lineal en primer semestre de bachillerato técnico. \\\hline
+Inn. 29. \textit{Pensamiento visible: rutinas para enseñar a pensar} (Melina Furman, pp. 72--74) & Rutinas estructuradas de \citet{ritchhart2014hacer}: «¿Qué te hace decir eso?», «Ver--Pensar--Preguntar» y «Solía pensar--Ahora pienso». & Exigir en el análisis de gráficas de sensores o costos qué evidencia numérica sostiene la conjetura y registrar cómo cambió la idea previa tras verificarla. \\\hline
+Inn. 39. \textit{Evaluación por matrices analíticas compartidas} (Marta Libedinsky, pp. 97--98) & Criterios de desempeño graduados, transparentes y discutidos desde el arranque para guiar la mejora formativa y la coevaluación \citep{eef2021feedback}. & Valorar por separado comprensión conceptual de pendiente/ordenada, coherencia entre representaciones y argumentación escrita del dictamen técnico. \\\hline
+Inn. 41. \textit{Maker spaces en la escuela: aprender haciendo} (Mariana Maggio, pp. 102--103) & Talleres de fabricación y resolución práctica que conectan diseño físico, medición, error iterativo y creación colaborativa. & Aprovechar laboratorios de mecatrónica y mantenimiento en CONALEP/CECyTE para medir desplazamientos reales, ajustar rectas y discutir tolerancias físicas \citep{conalep2025mecatronica}. \\\hline
+\end{longtable}}
+
+\section{Protocolo piloto institucional: Instrucción entre pares y Estudio de clases (por realizar)}
+Al cruzar la propuesta final de \citet{rivas2017innovaciones} (\textit{Leer, compartir, innovar}, pp. 151--152) con ciclos de investigación-acción educativa \citep{restrepo2004investigacion}, diseño una ruta piloto \textbf{por realizar} aplicable en la academia de matemáticas de educación media superior técnica o ingeniería:
+\begin{enumerate}
+  \item \textbf{Lectura cruzada en academia:} Compartir brevemente los protocolos de la Innovación 4 (Instrucción entre pares) y la Innovación 29 (Pensamiento visible) acordando un solo tema crítico de aprendizaje, como la distinción entre variación proporcional y variación afín.
+  \item \textbf{Diseño de tres preguntas conceptuales:} Redactar ítems breves de opción múltiple enfocados no en despejes largos sino en interpretación gráfica y significado físico de pendiente y ordenada al origen \citep{sawyer2008optimizing}.
+  \item \textbf{Aplicación en aula con regla de votación:} Si el porcentaje de respuestas válidas iniciales cae entre $30\%$ y $70\%$, habilitar tres minutos de argumentación en tríos usando la rutina \textit{«¿Qué te hace decir eso?»} seguida de segunda votación y síntesis plenaria \citep{mazur1997peer,ritchhart2014hacer}.
+  \item \textbf{Documentación formativa:} Recoger tarjetas breves de cierre (\textit{«Solía pensar / Ahora pienso»}) para evaluar colectivamente en academia qué bloqueos conceptuales persistieron y qué ajustes introducir en la segunda iteración.
+\end{enumerate}
+
+\clearpage
+\section{Conclusiones}
+En conclusión, considero que \textit{50 innovaciones educativas para escuelas} \citep{rivas2017innovaciones} ofrece un puente realista entre la teoría pedagógica contemporánea y la viabilidad institucional cotidiana de las escuelas públicas mexicanas. Frente a discursos pesimistas o soluciones comerciales onerosas, demostrar que protocolos como la instrucción entre pares, las rutinas de pensamiento visible y el estudio de clases operan con alta eficacia pedagógica y bajo costo fortalece nuestra autonomía docente.
+
+Por tanto, sostengo que adaptar selectivamente estas innovaciones decisivas hacia el rigor disciplinar de las matemáticas —resguardando siempre evidencias empíricas de aprendizaje y respeto irrestricto a la dignidad de cada estudiante— constituye una vía concreta y honesta para consolidar el aprendizaje profundo en nuestra práctica profesional \citep{quiroga2022aprendizaje}.
+
+\clearpage
+\begin{thebibliography}{99}
+\bibitem[Collin y Quigley(2021)]{eef2021feedback} Collin, J., y Quigley, A. (2021). \textit{Teacher feedback to improve pupil learning}. Education Endowment Foundation.
+\bibitem[CONALEP(2025)]{conalep2025mecatronica} Colegio Nacional de Educación Profesional Técnica. (2025). \textit{Perfil de egreso: Profesional Técnico-Bachiller en Mecatrónica. Modelo Académico 2025}. Secretaría Académica, CONALEP.
+\bibitem[Mazur(1997)]{mazur1997peer} Mazur, E. (1997). \textit{Peer instruction: A user's manual}. Prentice Hall.
+\bibitem[Quiroga Aguilar y Lara Órdenes(2022)]{quiroga2022aprendizaje} Quiroga Aguilar, L., y Lara Órdenes, E. (2022). El aprendizaje profundo como herramienta para cambio en la visión de aprendizaje de una cultura escolar. \textit{Revista Educación las Américas}, 12(1). \url{https://doi.org/10.35811/rea.v12i1.201}
+\bibitem[Restrepo Gómez(2004)]{restrepo2004investigacion} Restrepo Gómez, B. (2004). La investigación-acción educativa y la construcción de saber pedagógico. \textit{Educación y Educadores}, (7), 45--55.
+\bibitem[Ritchhart et~al.(2014)]{ritchhart2014hacer} Ritchhart, R., Church, M., y Morrison, K. (2014). \textit{Hacer visible el pensamiento: Cómo promover el compromiso, la comprensión y la autonomía de los estudiantes}. Paidós.
+\bibitem[Rivas et~al.(2017)]{rivas2017innovaciones} Rivas, A., André, F., y Delgado, L. E. (Eds.). (2017). \textit{50 innovaciones educativas para escuelas}. CIPPEC / Santillana.
+\bibitem[Sawyer(2008)]{sawyer2008optimizing} Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. En OECD, \textit{Innovating to learn, learning to innovate} (pp. 45--65). OECD Publishing.
+\end{thebibliography}
+
+\end{document}

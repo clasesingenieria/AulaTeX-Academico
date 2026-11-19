@@ -1,0 +1,149 @@
+\documentclass[aspectratio=169,spanish,xcolor=table]{beamer}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+\fi
+\usepackage[spanish,es-tabla,es-noshorthands]{babel}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{tikz,pgfplots,array,booktabs,ragged2e}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes.geometric,fit}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
+
+\usetheme{default}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{normal text}{fg=iiiepeInk,bg=white}
+\setbeamercolor{structure}{fg=iiiepeNavy}
+\setbeamercolor{frametitle}{fg=white,bg=iiiepeNavy}
+\setbeamercolor{block title}{fg=white,bg=iiiepeBlue}
+\setbeamercolor{block body}{fg=iiiepeInk,bg=iiiepePale}
+\setbeamercolor{item}{fg=iiiepeOrange}
+
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.95cm,dp=0.22cm,leftskip=0.45cm,rightskip=0.45cm]{frametitle}%
+    \begin{minipage}[c]{13.2cm}\usebeamerfont{frametitle}\large\bfseries\insertframetitle\end{minipage}%
+    \hfill\begin{minipage}[c]{1.6cm}\raggedleft\includegraphics[height=0.56cm]{img/iiiepe/logo-iiiepe-blanco.png}\end{minipage}%
+  \end{beamercolorbox}%
+}
+
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.78\paperwidth,ht=0.5cm,dp=0.18cm,leftskip=0.45cm]{frametitle}%
+      \scriptsize\color{white}M. de la Cruz Muñoz · MAEM · Matrícula 00874 · SD26 · Actividad 13 · Metodologías NEM%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.22\paperwidth,ht=0.5cm,dp=0.18cm,rightskip=0.45cm]{frametitle}%
+      \hfill\scriptsize\color{white}\insertframenumber{} / \inserttotalframenumber%
+    \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
+
+\newcommand{\Pill}[2]{%
+  \tikz[baseline=(x.base)]{\node[rounded corners=3pt,fill=#1!14,draw=#1!75!black,thick,inner xsep=6pt,inner ysep=4pt,align=center] (x) {\scriptsize\bfseries #2};}%
+}
+
+\title{Metodologías Sociocríticas de la Nueva Escuela Mexicana}
+\subtitle{Actividad 13 · Bloque II · Cuadro Comparativo de Cuatro Entradas}
+\author{Mtro. Martín Jonathan de la Cruz Muñoz · Matrícula 00874}
+\institute{IIIEPE · Maestría en Aprendizaje y Enseñanza de las Matemáticas · Grupo A}
+\date{19 de noviembre de 2026}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[iiiepeNavy] (current page.north west) rectangle ([xshift=10.3cm]current page.south west);
+    \fill[iiiepeBlue] ([xshift=10.3cm]current page.north west) rectangle (current page.south east);
+    \fill[iiiepeOrange] ([xshift=0.8cm,yshift=-6.45cm]current page.north west) rectangle ([xshift=9.3cm,yshift=-6.53cm]current page.north west);
+    \node[anchor=north west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=-1.15cm]current page.north west) {%
+      {\color{iiiepeAqua!45!white}\small\bfseries MAESTRÍA EN APRENDIZAJE Y ENSEÑANZA DE LAS MATEMÁTICAS · SD26\par}%
+      \vspace{0.35cm}
+      {\color{white}\Large\bfseries \inserttitle\par}%
+      \vspace{0.25cm}
+      {\color{white!90}\normalsize \insertsubtitle\par}%
+    };
+    \node[anchor=south west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=0.75cm]current page.south west) {%
+      {\color{white}\normalsize\bfseries Mtro. Martín Jonathan de la Cruz Muñoz\par}%
+      {\color{white!85}\scriptsize Matrícula 00874 · martin.delacruz@campus.iiiepe.edu.mx\par}%
+      {\color{iiiepeAqua!35!white}\scriptsize Monterrey, Nuevo León · 19 de noviembre de 2026\par}%
+    };
+    \node[anchor=center,text width=5.0cm,align=center] at ([xshift=13.15cm,yshift=-4.5cm]current page.north west) {%
+      \includegraphics[width=3.6cm]{img/iiiepe/logo-iiiepe-blanco.png}\par\vspace{0.45cm}%
+      {\color{white}\large\bfseries IIIEPE\par}%
+      \vspace{0.1cm}%
+      {\color{white!85}\scriptsize Fundamentos para la enseñanza\\y el aprendizaje I\par}%
+    };
+  \end{tikzpicture}
+\end{frame}
+\begin{frame}{Sentido No Instrumentalista de las Metodologías NEM}
+  \begin{block}{Premisa de la SEP (2022b)}
+    Las cuatro sugerencias metodológicas representan alternativas flexibles para problematizar la realidad; \textbf{no constituyen un recetario rígido} ni sustituyen el juicio profesional docente.
+  \end{block}
+  \vspace{0.25cm}
+  \begin{itemize}\normalsize
+    \item Evitar ambigüedad: distinguir explícitamente \textbf{Proyectos Comunitarios (ABPC)} de \textbf{Aprendizaje Basado en Problemas (ABP)}.
+    \item Elegir la metodología según el problema matemático, la comunidad y la evidencia formativa esperada.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Cuadro Comparativo de Cuatro Entradas}
+  \renewcommand{\arraystretch}{1.24}
+  \scriptsize
+  \begin{tabular}{p{2.5cm}p{4.3cm}p{3.0cm}p{3.8cm}}
+    \toprule
+    \textbf{Metodología} & \textbf{Fases / Cómo se trabaja} & \textbf{Palabras clave} & \textbf{Uso en Matemáticas} \\
+    \midrule
+    Proyectos Comunitarios (ABPC) & 3 fases (planeación, acción, intervención) en 11 momentos desde el entorno cercano. & Comunidad, diálogo, contexto, producción. & Presupuestos y estadística de recursos del plantel. \\
+    Indagación (STEAM) & 5 fases: saberes, indagación, análisis, modelos y metacognición. & Pregunta, hipótesis, evidencia, modelación. & Calibración lineal de sensores ($y=mx+b$ vs. $y=kx$). \\
+    Aprendizaje Basado en Problemas (ABP) & 6 momentos del conflicto abierto a la valoración sustentada. & Problematización, fuentes, decisión, argumento. & Elección óptima entre tarifas de mantenimiento. \\
+    Aprendizaje Servicio (AS) & 5 etapas uniendo aprendizaje curricular y servicio solidario. & Reciprocidad, servicio, necesidad, reflexión. & Tutorías entre pares y lectura crítica ciudadana. \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Roles del Docente y del Estudiantado}
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+      \begin{block}{Papel del docente mediador}
+        \begin{itemize}\scriptsize
+          \item Delimitar problemas retadores pero accesibles.
+          \item Ofrecer andamiajes y resguardar criterios disciplinares.
+          \item Acompañar procesos formativos y devoluciones.
+        \end{itemize}
+      \end{block}
+    \column{0.48\textwidth}
+      \begin{block}{Papel del estudiante protagonista}
+        \begin{itemize}\scriptsize
+          \item Formular hipótesis e investigar datos y fuentes.
+          \item Contrastar estrategias en equipo y justificar con evidencia.
+          \item Corregir su comprensión tras retroalimentación.
+        \end{itemize}
+      \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Conclusiones y Referencias (APA 7)}
+  \begin{itemize}\small
+    \item La selección metodológica debe responder a la naturaleza del conocimiento matemático y del problema formativo.
+    \item STEAM y ABP potencian la modelación en bachillerato técnico; ABPC y AS fortalecen el sentido comunitario.
+  \end{itemize}
+  \vspace{0.3cm}
+  \scriptsize
+  \textbf{Referencias:} Collin, J., y Quigley, A. (2021). \textit{EEF}; Sawyer, R. K. (2008). \textit{OECD}; SEP (2022a). \textit{Plan de Estudio}; SEP (2022b). \textit{Sugerencias metodológicas para el desarrollo de los proyectos educativos}; SEP (2023). \textit{Pensamiento Matemático I}.
+\end{frame}
+
+\end{document}

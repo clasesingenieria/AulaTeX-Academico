@@ -1,0 +1,154 @@
+\documentclass[spanish,letterpaper,oneside]{article}
+
+\def\documenttitle {Tipos de Aprendizaje en las Sociedades del Siglo XXI}
+\def\documentsubtitle {Fundamentos para la enseñanza y el aprendizaje I · Cohorte SD26}
+\def\documentsubject {Actividad 10 · Bloque I Tema 4 (Complemento Cynthia Luna Scott, 2015b)}
+\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
+\def\coursecode {MAEM-SD26}
+
+\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León}
+\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
+\def\universitydepartment {Fundamentos para la enseñanza y el aprendizaje I}
+\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
+\def\universitydepartmentimagecfg {height=1.75cm}
+\def\universitylocation {Monterrey, Nuevo León}
+\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\studentid {00874}
+\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
+\def\programperiod {2do periodo, septiembre--diciembre de 2026 (SD26)}
+\def\programmodality {Modalidad presencial}
+\def\programshort {MAEM}
+
+\def\authortable {
+  \begin{tabular}{ll}
+    \textbf{Alumno:} & \studentfullname \\
+    Matrícula: & \studentid \\
+    Correo institucional: & \studentemail \\
+    Unidad: & \coursename \\
+    Programa: & \programshort \\
+    Periodo: & \programperiod \\
+    & \\
+    \multicolumn{2}{l}{Fecha de realización: 19 de noviembre de 2026} \\
+    \multicolumn{2}{l}{\universitylocation}
+  \end{tabular}
+}
+
+\input{template}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage[most]{tcolorbox}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,shapes.geometric}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
+\def\portraittitlecolor {iiiepeNavy}
+\setcitestyle{authoryear,open={(},close={)}}
+\makeatletter
+\renewcommand{\@biblabel}[1]{}
+\makeatother
+\setlength{\bibhang}{1.27cm}
+\setlength{\bibsep}{6pt}
+\AtBeginDocument{\renewcommand{\refname}{Referencias}}
+
+\newcommand{\insertcoverwatermark}{%
+  \AddToShipoutPictureBG*{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[opacity=0.04,inner sep=0pt] at (current page.center) {%
+        \includegraphics[width=0.65\paperwidth]{img/iiiepe/marca-iiiepe.png}%
+      };
+    \end{tikzpicture}%
+  }%
+}
+
+\setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
+\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 10 · Aprendizaje Siglo XXI}\setstretch{1.3}\raggedbottom
+\section{Introducción y postura central}
+El segundo informe de \citet{scott2015futuro2}, \textit{El futuro del aprendizaje 2: ¿Qué tipo de aprendizaje se necesita en el siglo XXI?}, traslada el análisis desde las razones estructurales del cambio educativo hacia la definición precisa de las competencias y modalidades de aprendizaje que demanda nuestra época. Mientras las rutinas mecánicas pueden ser automatizadas o estandarizadas, la ciudadanía democrática y el trabajo técnico calificado exigen sujetos capaces de aprender permanentemente, colaborar en redes plurales, comunicar argumentos fundamentados y resolver problemas inéditos con criterio ético \citep{delors1996educacion,unesco2015replantear}.
+
+Mi postura es que clasificar competencias genéricas como «habilidades blandas» separadas de las disciplinas empobrece la enseñanza matemática; por el contrario, los tipos de aprendizaje descritos por \citet{scott2015futuro2} solo cobran vigencia formativa cuando se articulan con la modelación, la deducción lógica y el análisis cuantitativo en entornos reales. Además, desde mi práctica docente en CONALEP, CECyTE e ingeniería, sostengo que reorganizar los cuatro pilares educativos en secuencias didácticas claras permite vincular la precisión instrumental con el desarrollo humano integral.
+
+\section{Articulación de los cuatro pilares y competencias del siglo XXI}
+Recuperando el marco clásico de la Comisión Internacional sobre la Educación para el Siglo XXI \citep{delors1996educacion}, \citet{scott2015futuro2} organiza las finalidades educativas contemporáneas en cuatro pilares interdependientes, enriquecidos con capacidades cognitivas de orden superior y competencias socioemocionales y metacognitivas. La Figura~\ref{fig:act10-pilares} esquematiza su convergencia dentro de la enseñanza matemática.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[font=\scriptsize, >=Latex]
+  \node[draw=iiiepeNavy,fill=iiiepeNavy,text=white,rounded corners=5pt,text width=4.0cm,minimum height=1.55cm,align=center,inner sep=6pt] (center) at (0,0)
+    {\textbf{\small APRENDIZAJES DEL SIGLO XXI}\\Competencia matemática, metacognición y ciudadanía};
+
+  \node[draw=iiiepeBlue,fill=iiiepePale,thick,rounded corners=4pt,text width=5.1cm,align=left,inner sep=6pt] (p1) at (-4.3,2.55)
+    {\textbf{\color{iiiepeBlue}1. Aprender a conocer}\\Comprensión relacional, indagación científica, lectura crítica de datos y hábitos de aprendizaje continuo \citep{scott2015futuro2}.};
+
+  \node[draw=iiiepeAqua!80!black,fill=iiiepeMint,thick,rounded corners=4pt,text width=5.1cm,align=left,inner sep=6pt] (p2) at (4.3,2.55)
+    {\textbf{\color{iiiepeAqua!75!black}2. Aprender a hacer}\\Modelación de sistemas, transferencia entre contextos, manejo ético de instrumentos y trabajo en equipo \citep{conalep2025mecatronica}.};
+
+  \node[draw=iiiepeOrange!90!black,fill=iiiepeWarm,thick,rounded corners=4pt,text width=5.1cm,align=left,inner sep=6pt] (p3) at (-4.3,-2.55)
+    {\textbf{\color{iiiepeOrange!85!black}3. Aprender a ser}\\Autonomía intelectual, perseverancia ante el bloqueo, reflexión metacognitiva y responsabilidad ética \citep{schunk2012teorias}.};
+
+  \node[draw=iiiepeNavy,fill=iiiepePaper,thick,rounded corners=4pt,text width=5.1cm,align=left,inner sep=6pt] (p4) at (4.3,-2.55)
+    {\textbf{\color{iiiepeNavy}4. Aprender a vivir juntos}\\Escucha respetuosa de argumentos divergentes, colaboración intercultural y bien común escolar \citep{unesco2015replantear}.};
+
+  \draw[->,very thick,iiiepeBlue] (p1.south east) -- (center.north west);
+  \draw[->,very thick,iiiepeAqua!80!black] (p2.south west) -- (center.north east);
+  \draw[->,very thick,iiiepeOrange!85!black] (p3.north east) -- (center.south west);
+  \draw[->,very thick,iiiepeNavy] (p4.north west) -- (center.south east);
+\end{tikzpicture}
+\caption{Integración de los cuatro pilares de Delors y Cynthia Luna Scott (2015b) en la formación matemática.}
+\label{fig:act10-pilares}
+\end{figure}
+
+El cuadro siguiente desglosa los tipos de aprendizaje identificados en \citet{scott2015futuro2} y precisa su traducción metodológica para el trabajo cotidiano en matemáticas técnicas e ingeniería:
+
+{\small\setstretch{1.15}\renewcommand{\arraystretch}{1.32}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.21\linewidth}|>{\raggedright\arraybackslash}p{0.35\linewidth}|>{\raggedright\arraybackslash}p{0.38\linewidth}|}\hline
+\rowcolor{iiiepePale} \textbf{Pilar y competencias} & \textbf{Alcance en Scott (2015b)} & \textbf{Concreción en aula de Matemáticas} \\\hline
+\endfirsthead
+\hline
+\rowcolor{iiiepePale} \textbf{Pilar y competencias} & \textbf{Alcance en Scott (2015b)} & \textbf{Concreción en aula de Matemáticas} \\\hline
+\endhead
+Aprender a conocer (pensamiento crítico y resolución compleja) & Dominio de conceptos fundamentales articulado con estrategias heurísticas para evaluar evidencias e información plural. & Distinguir cuándo una relación empírica sigue proporcionalidad directa o función afín verificando razones incrementales y unidades \citep{sawyer2008optimizing}. \\\hline
+Aprender a hacer (creatividad, innovación y alfabetización digital) & Capacidad para diseñar prototipos, usar tecnología productiva y adaptar procedimientos ante condiciones variables. & Programar hojas de cálculo para simular tolerancias de medición contrastando siempre la salida gráfica contra el cálculo manual. \\\hline
+Aprender a ser (metacognición, autonomía y autorregulación) & Aprender a aprender, regular la atención, gestionar la frustración ante problemas difíciles y ejercer juicio ético. & Incorporar bitácoras de corrección de errores donde cada alumno explique qué supuesto falló antes de corregir su ecuación \citep{eef2021feedback}. \\\hline
+Aprender a vivir juntos (colaboración, comunicación y ciudadanía) & Cooperación respetuosa, negociación de perspectivas y compromiso con problemas reales de la comunidad. & Organizar mesas de revisión entre pares donde equipos defienden decisiones técnicas frente a restricciones reales de costo y seguridad \citep{sep2023pensamiento}. \\\hline
+\end{longtable}}
+
+\section{Aplicación reflexiva a la práctica docente en matemáticas}
+Al reflexionar sobre cómo aplicar estos tipos de aprendizaje en mi práctica, reconozco que tradicionalmente los cursos técnicos concentran la atención en el pilar del \textit{aprender a hacer} reducido a ejecución procedimental. Sin embargo, formar técnicos e ingenieros para entornos cambiantes exige que el hacer esté iluminado por el conocer profundo, regulado por la autoconciencia metacognitiva del ser y validado éticamente en el diálogo del vivir juntos \citep{scott2015futuro2,pimienta2012estrategias}.
+
+Para ejemplificar esta integración mediante un diseño \textbf{por realizar}, considérese una situación sobre control estadístico y variación de consumo energético en un taller escolar: dado un equipo cuya demanda basal de vacío es $P_0 = 120\text{ W}$ y su consumo adicional por pieza procesada es $45\text{ W/pieza}$, los estudiantes modelan $P(n) = 120 + 45n$, evalúan la viabilidad eléctrica del circuito alimentador ante $n = 25$ piezas ($P(25) = 1245\text{ W}$) y debaten en equipo alternativas para reducir pérdidas sin sacrificar calidad. De esta manera, el cálculo algebraico sirve al criterio técnico, a la reflexión metacognitiva sobre hipótesis límite y a la responsabilidad compartida \citep{sep2023pensamiento}. No obstante su pertinencia teórica, esta propuesta requiere verificación futura con evidencias reales de aula para calibrar ritmos y andamiajes diferenciados.
+
+\clearpage
+\section{Conclusiones}
+En conclusión, el análisis de \citet{scott2015futuro2} ratifica que la educación del siglo XXI no demanda abandonar los conocimientos disciplinares sólidos, sino transformarlos en instrumentos vivos de pensamiento crítico, cooperación e innovación responsable. Considero que articular los cuatro pilares de \citet{delors1996educacion} con problemas matemáticos auténticos evita tanto el reduccionismo algorítmico como la retórica vacía de competencias descontextualizadas.
+
+En consecuencia, mi postura profesional como docente en formación de la MAEM asume el compromiso de planear experiencias donde comprender, modelar, autorregular el propio aprendizaje y colaborar respetuosamente operen como dimensiones inseparables de una misma justicia educativa \citep{unesco2015replantear}.
+
+\clearpage
+\begin{thebibliography}{99}
+\bibitem[Collin y Quigley(2021)]{eef2021feedback} Collin, J., y Quigley, A. (2021). \textit{Teacher feedback to improve pupil learning}. Education Endowment Foundation.
+\bibitem[CONALEP(2025)]{conalep2025mecatronica} Colegio Nacional de Educación Profesional Técnica. (2025). \textit{Perfil de egreso: Profesional Técnico-Bachiller en Mecatrónica. Modelo Académico 2025}. Secretaría Académica, CONALEP.
+\bibitem[Delors et~al.(1996)]{delors1996educacion} Delors, J., Al Mufti, I., Amagi, I., Carneiro, R., Chung, F., Geremek, B., Gorham, W., Kornhauser, A., Manley, M., Padrón Quero, M., Savané, M.-A., Singh, K., Stavenhagen, R., Suhr, M. W., y Nanzhao, Z. (1996). \textit{La educación encierra un tesoro: Informe a la UNESCO de la Comisión Internacional sobre la Educación para el Siglo XXI}. Santillana/UNESCO.
+\bibitem[Pimienta Prieto(2012)]{pimienta2012estrategias} Pimienta Prieto, J. H. (2012). \textit{Estrategias de enseñanza-aprendizaje: Docencia universitaria basada en competencias}. Pearson Educación.
+\bibitem[Sawyer(2008)]{sawyer2008optimizing} Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. En OECD, \textit{Innovating to learn, learning to innovate} (pp. 45--65). OECD Publishing.
+\bibitem[Schunk(2012)]{schunk2012teorias} Schunk, D. H. (2012). \textit{Teorías del aprendizaje: Una perspectiva educativa} (6.ª ed.). Pearson Educación.
+\bibitem[Scott(2015)]{scott2015futuro2} Scott, C. L. (2015). \textit{El futuro del aprendizaje 2: ¿Qué tipo de aprendizaje se necesita en el siglo XXI?} (Investigación y prospectiva en educación: contribuciones temáticas, núm. 14). UNESCO.
+\bibitem[SEP(2023)]{sep2023pensamiento} Secretaría de Educación Pública. (2023). \textit{Programa de estudios del recurso sociocognitivo Pensamiento Matemático I}. Subsecretaría de Educación Media Superior, SEP.
+\bibitem[UNESCO(2015)]{unesco2015replantear} UNESCO. (2015). \textit{Replantear la educación: ¿Hacia un bien común mundial?} Ediciones UNESCO.
+\end{thebibliography}
+
+\end{document}

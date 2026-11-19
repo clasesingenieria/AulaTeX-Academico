@@ -1,0 +1,145 @@
+\documentclass[spanish,letterpaper,oneside]{article}
+
+\def\documenttitle {Tercer Momento: Propuesta de Innovación Matemática «Calibrar y Comparar»}
+\def\documentsubtitle {Fundamentos para la enseñanza y el aprendizaje I · Subproducto 6C (Bloque III)}
+\def\documentsubject {Subproducto Independiente 6C · Tercer Momento (Guía 51705 / 51809)}
+\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
+\def\coursecode {MAEM-SD26}
+
+\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León}
+\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
+\def\universitydepartment {Fundamentos para la enseñanza y el aprendizaje I}
+\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
+\def\universitydepartmentimagecfg {height=1.75cm}
+\def\universitylocation {Monterrey, Nuevo León}
+\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\studentid {00874}
+\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
+\def\programperiod {2do periodo, septiembre--diciembre de 2026 (SD26)}
+\def\programmodality {Modalidad presencial}
+\def\programshort {MAEM}
+
+\def\authortable {
+  \begin{tabular}{ll}
+    \textbf{Alumno:} & \studentfullname \\
+    Matrícula: & \studentid \\
+    Correo institucional: & \studentemail \\
+    Unidad: & \coursename \\
+    Programa: & \programshort \\
+    Periodo: & \programperiod \\
+    & \\
+    \multicolumn{2}{l}{Fecha de realización: 19 de noviembre de 2026} \\
+    \multicolumn{2}{l}{\universitylocation}
+  \end{tabular}
+}
+
+\input{template}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage[most]{tcolorbox}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,shapes.geometric}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
+\def\portraittitlecolor {iiiepeNavy}
+\setcitestyle{authoryear,open={(},close={)}}
+\makeatletter
+\renewcommand{\@biblabel}[1]{}
+\makeatother
+\setlength{\bibhang}{1.27cm}
+\setlength{\bibsep}{6pt}
+\AtBeginDocument{\renewcommand{\refname}{Referencias}}
+
+\newcommand{\insertcoverwatermark}{%
+  \AddToShipoutPictureBG*{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[opacity=0.04,inner sep=0pt] at (current page.center) {%
+        \includegraphics[width=0.65\paperwidth]{img/iiiepe/marca-iiiepe.png}%
+      };
+    \end{tikzpicture}%
+  }%
+}
+
+\setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
+\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Subproducto 6C · Tercer Momento}\setstretch{1.3}\raggedbottom
+\section{Tercer momento: diseño de propuesta de innovación pedagógica}
+Con sustento en el análisis teórico del aprendizaje profundo \citep{quiroga2022aprendizaje} y el diagnóstico propio de enseñanza, presento de forma independiente el \textbf{Tercer momento} de la \textit{Guía instruccional del Bloque III} (módulo \texttt{51705} / \texttt{51809}): una propuesta de innovación didáctica \textbf{por realizar} denominada \textit{«Calibrar y comparar para decidir»}.
+
+Mi postura es que transformar el aula técnica e ingenieril requiere una intervención viable, honesta —diferenciando explícitamente un diseño proyectado y datos didácticos simulados de resultados reales futuros— y estructurada alrededor de las dimensiones cognitiva, interpersonal e intrapersonal del estudiantado \citep{fullan2014rich,rivas2017innovaciones}.
+
+\section{Los siete elementos de la propuesta de innovación (por realizar)}
+\begin{tcolorbox}[colback=iiiepePale,colframe=iiiepeNavy,title=\textbf{Ficha técnica integral · «Calibrar y comparar para decidir» (por realizar)},breakable]
+\begin{enumerate}
+  \item \textbf{Contenido matemático:} Modelación lineal ($y = mx + b$), contraste con proporcionalidad directa ($y = kx$), tasa de cambio, ordenada al origen, punto de equilibrio e intervalo físico de validez en cuarto semestre de bachillerato técnico en mecatrónica/mantenimiento e ingeniería inicial \citep{sep2023pensamiento,conalep2025mecatronica}.
+  \item \textbf{Problemática atendida:} Desconexión entre manipulación simbólica automática e interpretación física, dimensional y argumentativa de modelos lineales.
+  \item \textbf{Propósito de aprendizaje:} Lograr que el estudiantado formule, compare y defienda modelos lineales desde tablas simuladas o experimentales, integrando representaciones numérica, gráfica y algebraica.
+  \item \textbf{Situación o desafío matemático:} Dos sensores térmicos ($S_1$ calibrado $y=x$ y $S_2$ simulado $y=1.05x+0.2$) y dos esquemas tarifarios de servicio técnico ($C_A(h)=250+80h$ y $C_B(h)=100+110h$) generan decisiones distintas según el rango de operación. Los equipos predicen sin fórmula inicial, determinan el punto de cruce ($h=5\text{ h}$), discuten el error de suponer proporcionalidad directa y redactan un dictamen justificado con datos didácticos simulados.
+  \item \textbf{Estrategias de enseñanza:} Asociación docente--estudiante en tres sesiones: predicción individual inicial, modelación colaborativa en tríos con roles rotativos (\textit{modelador gráfico}, \textit{verificador dimensional}, \textit{portavoz}), andamiaje decreciente y debate plenario \citep{fullan2014rich,sawyer2008optimizing}.
+  \item \textbf{Dimensiones del aprendizaje profundo:} \textit{Cognitiva} (contraste tabla--gráfica--ecuación y límites físicos), \textit{Interpersonal} (consenso argumentado y coevaluación entre pares) e \textit{Intrapersonal} (diario de metacognición tras cada sesión para cultivar mentalidad de crecimiento) \citep{schunk2012teorias}.
+  \item \textbf{Evaluación formativa:} Recolección continua de predicción inicial, hoja de análisis por equipo, dictamen técnico y segunda versión revisada tras devolución descriptiva \citep{bostrom2023formative,eef2021feedback}.
+\end{enumerate}
+\end{tcolorbox}
+
+La Figura~\ref{fig:sub06c-seq} detalla la secuencia didáctica de tres sesiones e indicadores formativos:
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[font=\scriptsize, >=Latex, scale=0.92, transform shape]
+  \node[draw=iiiepeNavy,fill=iiiepePale,thick,rounded corners=4pt,text width=2.8cm,minimum height=1.95cm,align=center] (f1) at (0,0) {\textbf{Sesión 1}\\Predicción inicial y análisis tabular\\(\textit{Saberes previos})};
+  \node[draw=iiiepeBlue,fill=iiiepePale,thick,rounded corners=4pt,text width=2.8cm,minimum height=1.95cm,align=center] (f2) at (3.65,0) {\textbf{Sesión 2}\\Modelación gráfica y algebraica en tríos\\(\textit{Cognitivo + Social})};
+  \node[draw=iiiepeAqua!80!black,fill=iiiepeMint,thick,rounded corners=4pt,text width=2.8cm,minimum height=1.95cm,align=center] (f3) at (7.3,0) {\textbf{Sesión 3}\\Debate de validez y retroalimentación\\(\textit{Evaluación formativa})};
+  \node[draw=iiiepeOrange!90!black,fill=iiiepeWarm,thick,rounded corners=4pt,text width=2.8cm,minimum height=1.95cm,align=center] (f4) at (10.95,0) {\textbf{Cierre}\\Segunda versión y diario metacognitivo\\(\textit{Intrapersonal})};
+
+  \draw[->,very thick,iiiepeNavy] (f1) -- (f2);
+  \draw[->,very thick,iiiepeBlue] (f2) -- (f3);
+  \draw[->,very thick,iiiepeAqua!80!black] (f3) -- (f4);
+\end{tikzpicture}
+\caption{Secuencia didáctica por realizar en tres sesiones de innovación matemática.}
+\label{fig:sub06c-seq}
+\end{figure}
+
+{\small\setstretch{1.15}\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.22\linewidth}|>{\raggedright\arraybackslash}p{0.34\linewidth}|>{\raggedright\arraybackslash}p{0.38\linewidth}|}\hline
+\rowcolor{iiiepePale} \textbf{Dimensión} & \textbf{Evidencia observable} & \textbf{Indicador formativo de avance} \\\hline
+\endfirsthead
+\hline
+\rowcolor{iiiepePale} \textbf{Dimensión} & \textbf{Evidencia observable} & \textbf{Indicador formativo de avance} \\\hline
+\endhead
+Comprensión conceptual & Registros tabular--gráfico y ecuación justificada. & Distingue proporcional vs. afín e interpreta pendiente y ordenada en unidades correctas. \\\hline
+Argumentación y uso & Dictamen escrito comparando rangos de validez. & Justifica decisiones señalando supuestos físicos y límites del modelo. \\\hline
+Colaboración y mejora & Diario de corrección tras devolución descriptiva. & Integra observaciones de pares y corrige explícitamente errores previos \citep{eef2021feedback}. \\\hline
+\end{longtable}}
+
+\clearpage
+\section{Conclusiones}
+En conclusión, considero que esta propuesta operativa de innovación transforma los hallazgos de \citet{quiroga2022aprendizaje} y \citet{rivas2017innovaciones} en un protocolo realista, verificable mediante ciclos de investigación-acción y respetuoso de la heterogeneidad estudiantil. En consecuencia, sostengo su pertinencia para su futura aplicación e indagación empírica en el aula tecnológica y universitaria.
+
+\clearpage
+\begin{thebibliography}{99}
+\bibitem[Boström y Palm(2023)]{bostrom2023formative} Boström, E., y Palm, T. (2023). Formative assessment practice in mathematics. \textit{Frontiers in Education}, 8, Artículo 1101192.
+\bibitem[Collin y Quigley(2021)]{eef2021feedback} Collin, J., y Quigley, A. (2021). \textit{Teacher feedback to improve pupil learning}. Education Endowment Foundation.
+\bibitem[CONALEP(2025)]{conalep2025mecatronica} Colegio Nacional de Educación Profesional Técnica. (2025). \textit{Perfil de egreso en Mecatrónica. Modelo Académico 2025}. CONALEP.
+\bibitem[Fullan y Langworthy(2014)]{fullan2014rich} Fullan, M., y Langworthy, M. (2014). \textit{A rich seam: How new pedagogies find deep learning}. Pearson.
+\bibitem[Quiroga Aguilar y Lara Órdenes(2022)]{quiroga2022aprendizaje} Quiroga Aguilar, L., y Lara Órdenes, E. (2022). El aprendizaje profundo como herramienta para cambio en la visión de aprendizaje. \textit{Revista Educación las Américas}, 12(1).
+\bibitem[Rivas et~al.(2017)]{rivas2017innovaciones} Rivas, A., André, F., y Delgado, L. E. (Eds.). (2017). \textit{50 innovaciones educativas para escuelas}. CIPPEC / Santillana.
+\bibitem[Sawyer(2008)]{sawyer2008optimizing} Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. OECD Publishing.
+\bibitem[Schunk(2012)]{schunk2012teorias} Schunk, D. H. (2012). \textit{Teorías del aprendizaje} (6.ª ed.). Pearson.
+\bibitem[SEP(2023)]{sep2023pensamiento} Secretaría de Educación Pública. (2023). \textit{Programa de estudios del recurso sociocognitivo Pensamiento Matemático I}. SEP.
+\end{thebibliography}
+
+\end{document}

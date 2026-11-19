@@ -1,0 +1,122 @@
+\documentclass[spanish,letterpaper,oneside]{article}
+
+\def\documenttitle {Cuatro Ideas Relevantes y Comentario Crítico de Cynthia Luna Scott (2015)}
+\def\documentsubtitle {Fundamentos para la enseñanza y el aprendizaje I · Subproducto 1B (Módulo 50157)}
+\def\documentsubject {Subproducto Independiente 1B · Lectura El Futuro del Aprendizaje 1}
+\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
+\def\coursecode {MAEM-SD26}
+
+\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León}
+\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
+\def\universitydepartment {Fundamentos para la enseñanza y el aprendizaje I}
+\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
+\def\universitydepartmentimagecfg {height=1.75cm}
+\def\universitylocation {Monterrey, Nuevo León}
+\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\studentid {00874}
+\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
+\def\programperiod {2do periodo, septiembre--diciembre de 2026 (SD26)}
+\def\programmodality {Modalidad presencial}
+\def\programshort {MAEM}
+
+\def\authortable {
+  \begin{tabular}{ll}
+    \textbf{Alumno:} & \studentfullname \\
+    Matrícula: & \studentid \\
+    Correo institucional: & \studentemail \\
+    Unidad: & \coursename \\
+    Programa: & \programshort \\
+    Periodo: & \programperiod \\
+    & \\
+    \multicolumn{2}{l}{Fecha de realización: 19 de noviembre de 2026} \\
+    \multicolumn{2}{l}{\universitylocation}
+  \end{tabular}
+}
+
+\input{template}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage[most]{tcolorbox}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,shapes.geometric}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
+\def\portraittitlecolor {iiiepeNavy}
+\setcitestyle{authoryear,open={(},close={)}}
+\makeatletter
+\renewcommand{\@biblabel}[1]{}
+\makeatother
+\setlength{\bibhang}{1.27cm}
+\setlength{\bibsep}{6pt}
+\AtBeginDocument{\renewcommand{\refname}{Referencias}}
+
+\newcommand{\insertcoverwatermark}{%
+  \AddToShipoutPictureBG*{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[opacity=0.04,inner sep=0pt] at (current page.center) {%
+        \includegraphics[width=0.65\paperwidth]{img/iiiepe/marca-iiiepe.png}%
+      };
+    \end{tikzpicture}%
+  }%
+}
+
+\setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
+\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Subproducto 1B · Cuatro Ideas Scott}\setstretch{1.3}\raggedbottom
+\section{Contexto de lectura y postura central}
+A partir de la lectura directa del documento \textit{El futuro del aprendizaje 1: ¿Por qué deben cambiar el contenido y los métodos de aprendizaje en el siglo XXI?} de \citet{scott2015futuro} y conforme al formato oficial de trabajo del módulo \texttt{50157}, presento en documento autónomo las cuatro ideas relevantes seleccionadas junto con su comentario analítico situado en la enseñanza de las matemáticas en bachillerato técnico e ingeniería.
+
+Mi postura es que la transformación educativa descrita por \citet{scott2015futuro} no se resuelve con modernización superficial ni equipamiento tecnológico aislado, sino revisando simultáneamente qué aprenden los jóvenes, cómo se organizan las interacciones en el aula y bajo qué criterios humanistas se construye ciudadanía crítica \citep{unesco2015replantear}.
+
+\section{Cuatro ideas relevantes y comentarios analíticos (Scott, 2015)}
+
+\begin{tcolorbox}[colback=iiiepePale,colframe=iiiepeNavy,title=\textbf{Idea 1 · No basta «corregir el sistema»: transformar contenido, pedagogía y evaluación},breakable]
+\textbf{Idea seleccionada de \citet{scott2015futuro}:} Las orientaciones escolares heredadas privilegian el recuerdo memorístico de contenidos estáticos y exámenes estandarizados incompatibles con la sociedad del conocimiento. Recuperando a Prensky, Saavedra y Opfer, \citet{scott2015futuro} advierte que «modernizar» superficialmente fracasa si no se transforman currículo, método y evaluación para cultivar pensamiento complejo, creatividad y resolución de problemas auténticos.\\[4pt]
+\textbf{Comentario analítico:} En grupos de CONALEP, CECyTE e ingeniería resulta común encontrar estudiantes que resuelven despejes mecánicos cuando la instrucción es explícita, pero no deciden qué magnitud modela una tolerancia de taller o un costo operativo. Por tanto, el modelo transmisivo produce fluidez aparente sin comprensión relacional \citep{sawyer2008optimizing}; urge sustituir listas repetitivas por problemas que exijan modelar, validar unidades y argumentar en equipo.
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=iiiepeMint,colframe=iiiepeAqua!80!black,title=\textbf{Idea 2 · Nuevo aprendiz conectado, Pedagogía 2.0 y ciudadanía digital crítica},breakable]
+\textbf{Idea seleccionada de \citet{scott2015futuro}:} El estudiantado habita múltiples pantallas y redes esperando participación activa y autonomía; cuando la escuela ignora esa realidad aumenta la apatía y el abandono. No obstante, \citet{scott2015futuro} aclara que la Pedagogía 2.0 y los dispositivos digitales no mejoran automáticamente el aprendizaje si carecen de intencionalidad pedagógica orientadora.\\[4pt]
+\textbf{Comentario analítico:} Considero erróneo equiparar agilidad con aplicaciones móviles con alfabetización matemática. Si un estudiante grafica ecuaciones en software sin interpretar la pendiente como razón de cambio o el rango físico real, la herramienta acelera el error conceptual. En consecuencia, mi mediación docente debe enseñar a auditar toda salida digital mediante cálculo de contraste, análisis dimensional y justificación escrita \citep{sep2023pensamiento}.
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=iiiepeWarm,colframe=iiiepeOrange!90!black,title=\textbf{Idea 3 · Brecha escuela--trabajo, aprendizaje permanente y visión humanista},breakable]
+\textbf{Idea seleccionada de \citet{scott2015futuro}:} La automatización desplaza labores rutinarias e incrementa la demanda de juicio experto y adaptabilidad ante problemas inéditos. Retomando los informes Faure, \citet{delors1996educacion} y Redecker, \citet{scott2015futuro} defiende estrechar el puente entre escuela y trabajo junto con una visión humanista integral \citep{unesco2015replantear}.\\[4pt]
+\textbf{Comentario analítico:} En plantas industriales y laboratorios técnicos nadie entrega al egresado una ecuación ya despejada; los desafíos aparecen como fallas reales, variaciones térmicas o restricciones de presupuesto \citep{conalep2025mecatronica}. Sin embargo, reducir las matemáticas a entrenamiento laboral estrecho tampoco basta: la formación humanista habilita criterio ético, solidaridad y capacidad para seguir aprendiendo toda la vida.
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=iiiepePale,colframe=iiiepeBlue,title=\textbf{Idea 4 · Ecosistemas de aprendizaje interconectados y estudiante productor},breakable]
+\textbf{Idea seleccionada de \citet{scott2015futuro}:} Frente al aislamiento del salón de clases, la educación contemporánea necesita articular cinco entornos (escuela, hogar, trabajo, comunidad y espacios digitales) dentro de ecosistemas abiertos donde el alumnado pase de consumidor pasivo a creador de conocimiento situado.\\[4pt]
+\textbf{Comentario analítico:} En nuestros planteles tecnológicos, conectar el aula de matemáticas con mediciones del taller mecánico, costos domésticos de energía y discusión colaborativa en equipo vuelve significativo el conocimiento abstracto \citep{star2015algebra}. Además, esta apertura solo resulta equitativa cuando provee andamiajes accesibles a quienes parten con menor capital cultural previo.
+\end{tcolorbox}
+
+\clearpage
+\section{Conclusiones}
+En conclusión, sostengo que las cuatro ideas seleccionadas de \citet{scott2015futuro} convergen en un mandato claro para la enseñanza matemática: alinear tareas auténticas, uso crítico de tecnologías, rigor profesional y cuidado humanista del derecho a aprender. Por ello, considero que este marco orienta decisivamente mi transición en la maestría hacia secuencias comprensivas evaluables con evidencias reales de razonamiento.
+
+\clearpage
+\begin{thebibliography}{99}
+\bibitem[CONALEP(2025)]{conalep2025mecatronica} Colegio Nacional de Educación Profesional Técnica. (2025). \textit{Perfil de egreso: Profesional Técnico-Bachiller en Mecatrónica. Modelo Académico 2025}. CONALEP.
+\bibitem[Delors et~al.(1996)]{delors1996educacion} Delors, J., et al. (1996). \textit{La educación encierra un tesoro}. Santillana/UNESCO.
+\bibitem[Sawyer(2008)]{sawyer2008optimizing} Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. En OECD, \textit{Innovating to learn, learning to innovate} (pp. 45--65). OECD Publishing.
+\bibitem[Scott(2015)]{scott2015futuro} Scott, C. L. (2015). \textit{El futuro del aprendizaje 1: ¿Por qué deben cambiar el contenido y los métodos de aprendizaje en el siglo XXI?} UNESCO.
+\bibitem[SEP(2023)]{sep2023pensamiento} Secretaría de Educación Pública. (2023). \textit{Programa de estudios del recurso sociocognitivo Pensamiento Matemático I}. SEP.
+\bibitem[Star et~al.(2015)]{star2015algebra} Star, J. R., et al. (2015). \textit{Teaching strategies for improving algebra knowledge}. IES.
+\bibitem[UNESCO(2015)]{unesco2015replantear} UNESCO. (2015). \textit{Replantear la educación: ¿Hacia un bien común mundial?} UNESCO.
+\end{thebibliography}
+
+\end{document}

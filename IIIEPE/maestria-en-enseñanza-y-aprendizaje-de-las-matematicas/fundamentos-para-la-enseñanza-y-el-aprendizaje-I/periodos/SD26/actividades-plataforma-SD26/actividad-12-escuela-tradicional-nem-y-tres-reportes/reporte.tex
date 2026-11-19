@@ -1,0 +1,148 @@
+\documentclass[spanish,letterpaper,oneside]{article}
+
+\def\documenttitle {Escuela Tradicional vs. NEM y Tres Reportes Críticos de Lectura}
+\def\documentsubtitle {Fundamentos para la enseñanza y el aprendizaje I · Cohorte SD26}
+\def\documentsubject {Actividad 12 · Sesión 5 (Cuadro Comparativo y Tres Reportes de Lectura)}
+\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\coursename {Fundamentos para la enseñanza y el aprendizaje I}
+\def\coursecode {MAEM-SD26}
+
+\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León}
+\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
+\def\universitydepartment {Fundamentos para la enseñanza y el aprendizaje I}
+\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
+\def\universitydepartmentimagecfg {height=1.75cm}
+\def\universitylocation {Monterrey, Nuevo León}
+\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\studentid {00874}
+\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
+\def\programperiod {2do periodo, septiembre--diciembre de 2026 (SD26)}
+\def\programmodality {Modalidad presencial}
+\def\programshort {MAEM}
+
+\def\authortable {
+  \begin{tabular}{ll}
+    \textbf{Alumno:} & \studentfullname \\
+    Matrícula: & \studentid \\
+    Correo institucional: & \studentemail \\
+    Unidad: & \coursename \\
+    Programa: & \programshort \\
+    Periodo: & \programperiod \\
+    & \\
+    \multicolumn{2}{l}{Fecha de realización: 19 de noviembre de 2026} \\
+    \multicolumn{2}{l}{\universitylocation}
+  \end{tabular}
+}
+
+\input{template}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage[most]{tcolorbox}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,shapes.geometric}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
+\def\portraittitlecolor {iiiepeNavy}
+\setcitestyle{authoryear,open={(},close={)}}
+\makeatletter
+\renewcommand{\@biblabel}[1]{}
+\makeatother
+\setlength{\bibhang}{1.27cm}
+\setlength{\bibsep}{6pt}
+\AtBeginDocument{\renewcommand{\refname}{Referencias}}
+
+\newcommand{\insertcoverwatermark}{%
+  \AddToShipoutPictureBG*{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[opacity=0.04,inner sep=0pt] at (current page.center) {%
+        \includegraphics[width=0.65\paperwidth]{img/iiiepe/marca-iiiepe.png}%
+      };
+    \end{tikzpicture}%
+  }%
+}
+
+\setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
+\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 12 · Tradicional vs NEM}\setstretch{1.3}\raggedbottom
+\section{Introducción y postura central}
+La mejora sistemática de la enseñanza matemática exige articular tres niveles de reflexión que suelen abordarse por separado: el modelo de evaluación y convivencia escolar que opone la tradición transmisiva a la Nueva Escuela Mexicana (NEM), la finalidad democrática de la escuela planteada por \citet{meirieu2020escuela}, las condiciones cognitivas del aprendizaje profundo analizadas por \citet{sawyer2008optimizing} y la lectura contextualizada de evaluaciones internacionales desarrollada por \citet{martinezRizo2026pisa} sobre PISA 2025.
+
+Mi postura es que transformar las prácticas docentes en bachillerato técnico e ingeniería demanda coherencia entre propósitos institucionales, diseño de tareas y criterios evaluativos. En contraste con las reformas superficiales que cambian nomenclaturas sin alterar el trabajo cotidiano en clase, sostengo que la integración de estos cuatro ejes permite sustituir el ejercicio repetitivo aislado por situaciones problemáticas accesibles, colaborativas y rigurosas \citep{scallon2004evaluation,sep2022plan}. Por ello, este informe presenta primero el cuadro comparativo entre escuela tradicional y Nueva Escuela Mexicana y enseguida desarrolla tres reportes de lectura en cajas independientes junto con su transferencia matemática comparada.
+
+\section{Cuadro comparativo: Escuela Tradicional vs. Nueva Escuela Mexicana}
+El análisis contrastado entre las prácticas tradicionales y las nuevas orientaciones evaluativas descritas por \citet{scallon2004evaluation}, enriquecido con los principios humanistas y comunitarios de \citet{sep2022plan}, no pretende caricaturizar a ningún profesorado, sino identificar tendencias estructurales en ocho dimensiones clave:
+
+{\small\setstretch{1.15}\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.19\linewidth}|>{\raggedright\arraybackslash}p{0.37\linewidth}|>{\raggedright\arraybackslash}p{0.38\linewidth}|}\hline
+\rowcolor{iiiepePale} \textbf{Criterio de análisis} & \textbf{Escuela tradicional (tendencia transmisiva)} & \textbf{Enfoque de la Nueva Escuela Mexicana (NEM)} \\\hline
+\endfirsthead
+\hline
+\rowcolor{iiiepePale} \textbf{Criterio de análisis} & \textbf{Escuela tradicional (tendencia transmisiva)} & \textbf{Enfoque de la Nueva Escuela Mexicana (NEM)} \\\hline
+\endhead
+1. Finalidad educativa & Transmisión uniforme y dominio memorístico de contenidos disciplinares estáticos. & Formación humanista integral, pensamiento crítico y transformación solidaria de la comunidad \citep{sep2022plan}. \\\hline
+2. Organización curricular & Asignaturas compartimentadas con secuencias cerradas de temas desvinculados. & Integración en campos formativos, ejes articuladores y codiseño en programa analítico situado. \\\hline
+3. Naturaleza de los problemas & Situaciones artificiales o cerradas con ruta única conocida de antemano \citep{scallon2004evaluation}. & Problemas auténticos abiertos que admiten acceso a fuentes diversas y contrastación de estrategias. \\\hline
+4. Evaluación del aprendizaje & Énfasis unidimensional en producto final, prueba estandarizada y calificación punitiva. & Apreciación multidimensional, formativa y procesual orientada a retroalimentar decisiones \citep{scallon2004evaluation}. \\\hline
+5. Concepción del error & Sanción inmediata como falta de estudio o incapacidad individual del alumno. & Indicador diagnóstico de estructuras conceptuales previas para intervenir con apoyo específico. \\\hline
+6. Rol docente & Emisor experto que explica reglas, controla la disciplina y verifica respuestas únicas. & Mediador profesional con autonomía curricular que diseña andamiajes y dialoga con el grupo. \\\hline
+7. Rol estudiantil & Receptor silencioso y reproductor individual de procedimientos estandarizados. & Sujeto activo que investiga, modela, argumenta con pares y reflexiona sobre su proceso. \\\hline
+8. Vínculo comunitario y equidad & Homogeneización de ritmos que expulsa a quien no trae prerrequisitos previos. & Inclusión situada que reconoce condiciones contextuales reales sin renunciar al derecho común a aprender \citep{meirieu2020escuela}. \\\hline
+\end{longtable}}
+
+\section{Tres reportes de lectura independientes}
+En articulación directa con el contraste paradigmático anterior, presento en cajas autónomas la síntesis analítica de las tres lecturas fundamentales sobre institución escolar, ciencias del aprendizaje y evaluación sistémica:
+
+\begin{tcolorbox}[colback=iiiepePale,colframe=iiiepeNavy,title=\textbf{Reporte de lectura 1 · Philippe Meirieu (2020): «La escuela después»... ¿con la pedagogía de antes?},breakable]
+\textbf{Ficha de referencia:} \citet{meirieu2020escuela}, \textit{Movimiento Cooperativo de Escuela Popular (MCEP de Madrid)}.\\
+\textbf{Problema central y tesis:} Las crisis educativas exhiben la brecha entre discursos innovadores y rutinas excluyentes; retornar acríticamente al «antes» equivale a un «regreso a lo anormal». La escuela debe constituirse como institución pública donde cada estudiante aprende a decir «yo» dentro de un «nosotros» solidario mediante conocimientos «infinitamente compartibles» \citep{meirieu2020escuela}.\\[4pt]
+\textbf{Núcleos argumentativos:} (a) Rechaza el conductismo digital y la ilusión de que las plataformas individuales sustituyen el encuentro pedagógico; (b) exige dejar de convertir autonomía y motivación en prerrequisitos de entrada para asumirlos como metas educativas; (c) frente al bloqueo discente, demanda ofrecer «algo más» cara a cara en vez de «más de lo mismo»; y (d) propone transitar de una lógica competitiva («mundo de tiendas») hacia un «mundo de tesoros» cooperativo.
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=iiiepeMint,colframe=iiiepeAqua!80!black,title=\textbf{Reporte de lectura 2 · R. Keith Sawyer (2008): Mejorando el aprendizaje (Ciencias del Aprendizaje)},breakable]
+\textbf{Ficha de referencia:} \citet{sawyer2008optimizing}, cap. 2 de \textit{Innovating to Learn, Learning to Innovate} (OECD/CERI, pp. 45--65).\\
+\textbf{Problema central y tesis:} El instruccionismo diseñado para la economía industrial resulta obsoleto frente a una sociedad del conocimiento. Solo ambientes de aprendizaje basados en evidencia cognitiva producen comprensión profunda y transferible \citep{sawyer2008optimizing}.\\[4pt]
+\textbf{Núcleos argumentativos:} (a) Las concepciones previas y «matemáticas ingenuas» orientan cómo interpreta el estudiante las tareas; (b) la comprensión profunda organiza hechos alrededor de ideas centrales conectadas con prácticas profesionales reales; (c) externalizar y articular ideas habilita la metacognición; (d) el andamiaje se ajusta y retira progresivamente; y (e) los currículos saturados (lección TIMSS) rinden menos que secuencias coherentes con evaluación auténtica.
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=iiiepeWarm,colframe=iiiepeOrange!90!black,title=\textbf{Reporte de lectura 3 · Felipe Martínez Rizo (2026): Lectura contextualizada de PISA 2025},breakable]
+\textbf{Ficha de referencia:} \citet{martinezRizo2026pisa}, publicado en \textit{Distancia por tiempos / Nexos}, 9 de septiembre de 2026.\\
+\textbf{Problema central y tesis:} Interpretar PISA mediante rankings simplistas o juicios alarmistas oculta trayectorias históricas, ampliación de cobertura y determinantes socioeconómicos. Es grave el rezago observado, pero su diagnóstico exige rigor comparativo e institucionalidad evaluativa nacional propia \citep{martinezRizo2026pisa}.\\[4pt]
+\textbf{Núcleos argumentativos:} (a) Según las cifras examinadas por \citet{martinezRizo2026pisa}, México registra un descenso continuo entre 2018, 2022 y 2025 en lectura ($420 \rightarrow 415 \rightarrow 408$) y matemáticas ($409 \rightarrow 395 \rightarrow 388$), mientras ciencias muestra recuperación parcial tras 2022 ($419 \rightarrow 410 \rightarrow 414$); (b) comparar a México con países latinoamericanos similares informa mejor que rankings globales abstractos; (c) las variaciones de cobertura modifican la composición muestral; y (d) una evaluación externa no reemplaza un sistema nacional independiente que analice prácticas de aula y condiciones sociales.
+\end{tcolorbox}
+
+\section{Síntesis comparada y transferencia matemática en dos niveles}
+Para evidenciar cómo la articulación entre \citet{scallon2004evaluation}, \citet{meirieu2020escuela}, \citet{sawyer2008optimizing} y \citet{martinezRizo2026pisa} modifica una actividad matemática concreta, compárese el tratamiento de la ecuación lineal $0.5x + 2 = 0.2x + 3.8$: bajo la tradición mecánica, el alumno despeja $0.3x = 1.8 \Rightarrow x = 6$ sin saber qué representa esa igualdad. Desde una práctica comprensiva y formativa, el grupo interpreta la expresión como la comparación de dos planes de suministro técnico ($C_1(x)=0.5x+2$ y $C_2(x)=0.2x+3.8$), explica oralmente por qué se conserva la equivalencia al restar $0.2x$ en ambos miembros, verifica $C_1(6)=C_2(6)=5$ y corrige su argumento tras una devolución descriptiva de sus pares \citep{star2015algebra,eef2021feedback}.
+
+Además, en el diseño comparado por tarifas ($C_A(x) = 30 + 8x$ frente a $C_B(x) = 12x$, cuyo cruce ocurre en $x = 7.5$), el equipo conecta tabla, gráfica y expresión algebraica con derecho efectivo a participar gracias a andamiajes escalonados (ejes predibujados para quien los requiere sin bajar la meta conceptual común). En consecuencia, el profesorado interpreta los errores no como sentencia PISA ni clasificación escolar, sino como punto de partida técnico y humano para enseñar mejor.
+
+\clearpage
+\section{Conclusiones}
+En conclusión, considero que contraponer la escuela tradicional con la Nueva Escuela Mexicana y dialogar simultáneamente con \citet{meirieu2020escuela}, \citet{sawyer2008optimizing} y \citet{martinezRizo2026pisa} evita dos errores opuestos: caer en innovaciones instrumentales sin horizonte de justicia, o proclamar grandes ideales humanistas sin diseño cognitivo ni evidencia evaluativa sólida.
+
+Mi postura sostiene que mejorar la enseñanza de las matemáticas en nivel medio superior técnico e ingeniería requiere convertir la clase en una comunidad de indagación exigente e inclusiva, donde las evaluaciones informen apoyos oportunos y cada estudiante comprenda por qué decide, modela y justifica con fundamento.
+
+\clearpage
+\begin{thebibliography}{99}
+\bibitem[Collin y Quigley(2021)]{eef2021feedback} Collin, J., y Quigley, A. (2021). \textit{Teacher feedback to improve pupil learning}. Education Endowment Foundation.
+\bibitem[Martínez Rizo(2026)]{martinezRizo2026pisa} Martínez Rizo, F. (2026, 9 de septiembre). Resultados de PISA 2025. \textit{Distancia por tiempos}. \url{https://educacion.nexos.com.mx/resultados-de-pisa-2025/}
+\bibitem[Meirieu(2020)]{meirieu2020escuela} Meirieu, P. (2020, 18 de abril). ``La escuela después''... ¿Con la pedagogía de antes? \textit{Movimiento Cooperativo de Escuela Popular}. \url{https://www.mcep.es/la-escuela-despues-con-la-pedagogia-de-antes-philippe-meirieu/}
+\bibitem[Sawyer(2008)]{sawyer2008optimizing} Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. En OECD, \textit{Innovating to learn, learning to innovate} (pp. 45--65). OECD Publishing.
+\bibitem[Scallon(2004)]{scallon2004evaluation} Scallon, G. (2004). \textit{L'évaluation des apprentissages dans une approche par compétences}. Éditions du Renouveau Pédagogique.
+\bibitem[SEP(2022)]{sep2022plan} Secretaría de Educación Pública. (2022). \textit{Plan de Estudio para la educación preescolar, primaria y secundaria}. SEP.
+\bibitem[Star et~al.(2015)]{star2015algebra} Star, J. R., Caronongan, P., Foegen, A., Furgeson, J., Keating, B., Larson, M. R., Lyskawa, J., McCallum, W. G., Porath, J., y Zbiek, R. M. (2015). \textit{Teaching strategies for improving algebra knowledge in middle and high school students}. IES.
+\end{thebibliography}
+
+\end{document}

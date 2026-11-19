@@ -1,0 +1,150 @@
+\documentclass[aspectratio=169,spanish,xcolor=table]{beamer}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+\fi
+\usepackage[spanish,es-tabla,es-noshorthands]{babel}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{tikz,pgfplots,array,booktabs,ragged2e}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes.geometric,fit}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeMint}{HTML}{E7F6F4}
+\definecolor{iiiepeWarm}{HTML}{FFF3E6}
+
+\usetheme{default}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{normal text}{fg=iiiepeInk,bg=white}
+\setbeamercolor{structure}{fg=iiiepeNavy}
+\setbeamercolor{frametitle}{fg=white,bg=iiiepeNavy}
+\setbeamercolor{block title}{fg=white,bg=iiiepeBlue}
+\setbeamercolor{block body}{fg=iiiepeInk,bg=iiiepePale}
+\setbeamercolor{item}{fg=iiiepeOrange}
+
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.95cm,dp=0.22cm,leftskip=0.45cm,rightskip=0.45cm]{frametitle}%
+    \begin{minipage}[c]{13.2cm}\usebeamerfont{frametitle}\large\bfseries\insertframetitle\end{minipage}%
+    \hfill\begin{minipage}[c]{1.6cm}\raggedleft\includegraphics[height=0.56cm]{img/iiiepe/logo-iiiepe-blanco.png}\end{minipage}%
+  \end{beamercolorbox}%
+}
+
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.78\paperwidth,ht=0.5cm,dp=0.18cm,leftskip=0.45cm]{frametitle}%
+      \scriptsize\color{white}M. de la Cruz Muñoz · MAEM · Matrícula 00874 · SD26 · Actividad 11 · Siete Habilidades%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.22\paperwidth,ht=0.5cm,dp=0.18cm,rightskip=0.45cm]{frametitle}%
+      \hfill\scriptsize\color{white}\insertframenumber{} / \inserttotalframenumber%
+    \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
+
+\newcommand{\Pill}[2]{%
+  \tikz[baseline=(x.base)]{\node[rounded corners=3pt,fill=#1!14,draw=#1!75!black,thick,inner xsep=6pt,inner ysep=4pt,align=center] (x) {\scriptsize\bfseries #2};}%
+}
+
+\title{Siete Habilidades Básicas en la Clase de Matemáticas}
+\subtitle{Actividad 11 · Sesión 4 (Tony Wagner · Módulo 47637)}
+\author{Mtro. Martín Jonathan de la Cruz Muñoz · Matrícula 00874}
+\institute{IIIEPE · Maestría en Aprendizaje y Enseñanza de las Matemáticas · Grupo A}
+\date{19 de noviembre de 2026}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[iiiepeNavy] (current page.north west) rectangle ([xshift=10.3cm]current page.south west);
+    \fill[iiiepeBlue] ([xshift=10.3cm]current page.north west) rectangle (current page.south east);
+    \fill[iiiepeOrange] ([xshift=0.8cm,yshift=-6.45cm]current page.north west) rectangle ([xshift=9.3cm,yshift=-6.53cm]current page.north west);
+    \node[anchor=north west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=-1.15cm]current page.north west) {%
+      {\color{iiiepeAqua!45!white}\small\bfseries MAESTRÍA EN APRENDIZAJE Y ENSEÑANZA DE LAS MATEMÁTICAS · SD26\par}%
+      \vspace{0.35cm}
+      {\color{white}\Large\bfseries \inserttitle\par}%
+      \vspace{0.25cm}
+      {\color{white!90}\normalsize \insertsubtitle\par}%
+    };
+    \node[anchor=south west,text width=8.7cm,align=left] at ([xshift=0.8cm,yshift=0.75cm]current page.south west) {%
+      {\color{white}\normalsize\bfseries Mtro. Martín Jonathan de la Cruz Muñoz\par}%
+      {\color{white!85}\scriptsize Matrícula 00874 · martin.delacruz@campus.iiiepe.edu.mx\par}%
+      {\color{iiiepeAqua!35!white}\scriptsize Monterrey, Nuevo León · 19 de noviembre de 2026\par}%
+    };
+    \node[anchor=center,text width=5.0cm,align=center] at ([xshift=13.15cm,yshift=-4.5cm]current page.north west) {%
+      \includegraphics[width=3.6cm]{img/iiiepe/logo-iiiepe-blanco.png}\par\vspace{0.45cm}%
+      {\color{white}\large\bfseries IIIEPE\par}%
+      \vspace{0.1cm}%
+      {\color{white!85}\scriptsize Fundamentos para la enseñanza\\y el aprendizaje I\par}%
+    };
+  \end{tikzpicture}
+\end{frame}
+\begin{frame}{Tony Wagner: ¿Qué Exige la Nueva Economía y Ciudadanía?}
+  \begin{block}{Pregunta detonadora de Sesión 4}
+    ¿Cómo promueves el desarrollo de las siete habilidades de supervivencia con tus estudiantes en la clase de Matemáticas?
+  \end{block}
+  \vspace{0.25cm}
+  \begin{itemize}\normalsize
+    \item \textbf{Hallazgo de Wagner:} Incluso en industrias de alta ingeniería, lo decisivo no es repetir algoritmos ya conocidos, sino \textit{saber formular buenas preguntas}.
+    \item Las mismas 7 habilidades sostienen la empleabilidad técnica y la participación democrática informada.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Mapa Mental de las Siete Habilidades en Matemáticas}
+  \centering
+  \begin{tikzpicture}[scale=0.80, transform shape, font=\scriptsize, >=Latex]
+    \node[draw=iiiepeNavy,fill=iiiepeNavy,text=white,rounded corners=5pt,text width=3.3cm,align=center,inner sep=5pt] (c) at (0,0) {\textbf{Pensar y decidir\\en Matemáticas}};
+    \node[draw=iiiepeBlue,fill=iiiepePale,rounded corners=4pt,text width=3.5cm,align=center] (a) at (-4.6,2.3) {\textbf{1. Pensamiento crítico}\\Validar supuestos y modelos};
+    \node[draw=iiiepeAqua!80!black,fill=iiiepeMint,rounded corners=4pt,text width=3.5cm,align=center] (b) at (4.6,2.3) {\textbf{2. Colaboración y liderazgo}\\Roles rotativos e influencia};
+    \node[draw=iiiepeOrange!90!black,fill=iiiepeWarm,rounded corners=4pt,text width=3.5cm,align=center] (d) at (5.0,0.0) {\textbf{3. Agilidad y adaptabilidad}\\Reajustar ante sesgo o escala};
+    \node[draw=iiiepeNavy,fill=iiiepePaper,rounded corners=4pt,text width=3.5cm,align=center] (e) at (4.6,-2.3) {\textbf{4. Iniciativa}\\Proponer mejoras viables};
+    \node[draw=iiiepeBlue,fill=iiiepePale,rounded corners=4pt,text width=3.7cm,align=center] (f) at (0,-3.0) {\textbf{5. Comunicación eficaz}\\Justificar en unidades físicas};
+    \node[draw=iiiepeAqua!80!black,fill=iiiepeMint,rounded corners=4pt,text width=3.5cm,align=center] (g) at (-4.6,-2.3) {\textbf{6. Análisis de información}\\Verificar fuentes y validez};
+    \node[draw=iiiepeOrange!90!black,fill=iiiepeWarm,rounded corners=4pt,text width=3.5cm,align=center] (h) at (-5.0,0.0) {\textbf{7. Curiosidad e imaginación}\\Contrastar rutas múltiples};
+    \foreach \n in {a,b,d,e,f,g,h}\draw[->,thick,iiiepeNavy] (c)--(\n);
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Estrategias Concretas y Modelo Térmico Ilustrativo}
+  \begin{columns}[T]
+    \column{0.52\textwidth}
+      \begin{block}{Caso didáctico: $T(t) = 20 + 3t$ ($t\in[0,15]\text{ min}$)}
+        \begin{itemize}\scriptsize
+          \item $T(8)=44\,^\circ\text{C}$; meta $50\,^\circ\text{C}\Rightarrow t=10\text{ min}$.
+          \item \textbf{Crítica:} ¿Puede crecer linealmente para siempre?
+          \item \textbf{Adaptabilidad:} Cambio de pendiente a $2.4\,^\circ\text{C/min}$.
+          \item \textbf{Comunicación:} Conclusión acotada al intervalo real.
+        \end{itemize}
+      \end{block}
+    \column{0.44\textwidth}
+      \begin{block}{Evaluación formativa}
+        \begin{itemize}\scriptsize
+          \item Coherencia tabla--gráfica--ecuación.
+          \item Verificación de unidades y fuentes.
+          \item Corrección documentada tras devolución entre pares \textbf{(Collin y Quigley, 2021)}.
+        \end{itemize}
+      \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Conclusiones y Referencias (APA 7)}
+  \begin{itemize}\small
+    \item Las siete habilidades de Wagner no desplazan al contenido matemático: exigen enseñarlo con preguntas reales, discusión y prueba.
+    \item El entregable se complementa con formato editable en Word (\texttt{reporte-siete-habilidades.docx}).
+  \end{itemize}
+  \vspace{0.3cm}
+  \scriptsize
+  \textbf{Referencias:} Collin, J., y Quigley, A. (2021). \textit{Teacher feedback to improve pupil learning}. EEF; Sawyer, R. K. (2008). \textit{Optimizing learning}. OECD; Wagner, T. (2010). \textit{The global achievement gap}. Basic Books.
+\end{frame}
+
+\end{document}
