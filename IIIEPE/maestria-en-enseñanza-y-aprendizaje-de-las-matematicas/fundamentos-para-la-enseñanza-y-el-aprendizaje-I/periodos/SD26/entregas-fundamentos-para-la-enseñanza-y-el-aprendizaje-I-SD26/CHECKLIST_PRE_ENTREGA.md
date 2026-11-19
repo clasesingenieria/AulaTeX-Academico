@@ -6,7 +6,7 @@
 - **Periodo Académico:** SD26
 - **Estudiante:** Mtro. Martín Jonathan de la Cruz Muñoz (Matrícula: 00874)
 - **Docente Titular:** Mtro. Oscar Zertuche Santos
-- **Fecha de sincronización:** 2026-11-19 19:10:45 UTC
+- **Fecha de sincronización:** 2026-11-19 19:37:20 UTC
 
 ## Invariantes Editoriales Verificados
 
@@ -21,22 +21,22 @@
 
 | Actividad | Tipo | Archivo Entregable | Tamaño (KB) | SHA-256 (12 pref) |
 | :--- | :--- | :--- | :--- | :--- |
-| `actividad-01-recursos-sesion-1` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-01-recursos-sesion-1_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 192.5 KB | `ba887c54a898...` |
-| `actividad-01-recursos-sesion-1` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-01-recursos-sesion-1_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 163.7 KB | `6a7d0ba0f8c4...` |
-| `actividad-02-identidad-docente` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-02-identidad-docente_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 148.5 KB | `9d0f048e89c3...` |
-| `actividad-02-identidad-docente` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-02-identidad-docente_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 131.4 KB | `9f5802576ba7...` |
-| `actividad-03-rubrica-infografia` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-03-rubrica-infografia_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 210.3 KB | `c33097bbf22a...` |
-| `actividad-03-rubrica-infografia` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-03-rubrica-infografia_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 137.1 KB | `7065136138a5...` |
-| `actividad-04-investigacion-accion` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-04-investigacion-accion_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 185.4 KB | `c8f846a46bf6...` |
-| `actividad-04-investigacion-accion` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-04-investigacion-accion_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 145.6 KB | `53fe4f13a0df...` |
-| `actividad-05-aprendizaje-profundo` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-05-aprendizaje-profundo_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 186.4 KB | `6d23e598b926...` |
-| `actividad-05-aprendizaje-profundo` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-05-aprendizaje-profundo_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 192.5 KB | `282a1d0020ac...` |
-| `actividad-06-tercer-momento` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-06-tercer-momento_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 222.1 KB | `2d2cc1e27acf...` |
-| `actividad-06-tercer-momento` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-06-tercer-momento_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 156.2 KB | `926c1224fbd0...` |
-| `actividad-07-modelo-bioecologico` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-07-modelo-bioecologico_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 141.5 KB | `356bb1d719a5...` |
-| `actividad-07-modelo-bioecologico` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-07-modelo-bioecologico_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 136.4 KB | `16876237bf21...` |
-| `actividad-08-trabajo-final` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-08-trabajo-final_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 236.9 KB | `f48b3b71ac4f...` |
-| `actividad-08-trabajo-final` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-08-trabajo-final_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 200.8 KB | `bf926d4cd69d...` |
+| `actividad-01-recursos-sesion-1` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-01-recursos-sesion-1_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 195.2 KB | `ce08e040b7fa...` |
+| `actividad-01-recursos-sesion-1` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-01-recursos-sesion-1_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 163.7 KB | `4df10574c073...` |
+| `actividad-02-identidad-docente` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-02-identidad-docente_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 150.1 KB | `14dd978981e1...` |
+| `actividad-02-identidad-docente` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-02-identidad-docente_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 131.4 KB | `91d39a4d62ea...` |
+| `actividad-03-rubrica-infografia` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-03-rubrica-infografia_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 213.6 KB | `6b3b8bd7fc24...` |
+| `actividad-03-rubrica-infografia` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-03-rubrica-infografia_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 145.3 KB | `41b024e8d15b...` |
+| `actividad-04-investigacion-accion` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-04-investigacion-accion_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 185.4 KB | `c55c878d7d1a...` |
+| `actividad-04-investigacion-accion` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-04-investigacion-accion_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 145.6 KB | `d1d142d8b997...` |
+| `actividad-05-aprendizaje-profundo` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-05-aprendizaje-profundo_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 186.4 KB | `0acf25a39a03...` |
+| `actividad-05-aprendizaje-profundo` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-05-aprendizaje-profundo_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 192.5 KB | `88b4b819c2fc...` |
+| `actividad-06-tercer-momento` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-06-tercer-momento_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 222.1 KB | `63b7458335d5...` |
+| `actividad-06-tercer-momento` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-06-tercer-momento_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 156.2 KB | `dcd2cc450d2f...` |
+| `actividad-07-modelo-bioecologico` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-07-modelo-bioecologico_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 141.9 KB | `5a57b0a57b7d...` |
+| `actividad-07-modelo-bioecologico` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-07-modelo-bioecologico_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 136.4 KB | `3c7fe8ace699...` |
+| `actividad-08-trabajo-final` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-08-trabajo-final_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 236.9 KB | `43bd68631510...` |
+| `actividad-08-trabajo-final` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-08-trabajo-final_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 200.8 KB | `4ba2dc4a160d...` |
 | `actividad-08-trabajo-final` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-08-trabajo-final_Martin-Jonathan-de-la-Cruz-Munoz.pptx` | 313.6 KB | `96a65c11315a...` |
 
 > [!IMPORTANT]
