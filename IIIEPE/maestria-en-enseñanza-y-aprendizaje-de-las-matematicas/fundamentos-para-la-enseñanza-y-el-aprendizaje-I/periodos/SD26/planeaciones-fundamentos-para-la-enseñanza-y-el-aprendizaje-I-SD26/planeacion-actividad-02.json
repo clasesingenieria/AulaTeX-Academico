@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0.0",
-  "plan_id": "pca-iiiepe-fundamentos-sd26-act-02",
-  "revision": 1,
+  "plan_id": "pca-iiiepe-fundamentos-para-la-ensenanza-y-el-aprendizaje-i-sd26-act-02",
+  "revision": 2,
   "identity": {
     "institution": "IIIEPE",
     "program": "Maestría en Enseñanza y Aprendizaje de las Matemáticas",
-    "subject_id": "fundamentos-para-la-enseñanza-y-el-aprendizaje-I",
+    "subject_id": "fundamentos-para-la-ensenanza-y-el-aprendizaje-i",
     "subject_title": "Fundamentos para la Enseñanza y el Aprendizaje I",
     "offering_id": "IIIEPE-1048-SD26",
     "period": "SD26",
@@ -13,113 +13,426 @@
   },
   "sources": [
     {
-      "id": "src-moodle-assign-50158",
+      "id": "src-consigna-verificada",
       "kind": "platform",
       "authority": "instructional",
-      "title": "Actividad de la sesión: ¿Cómo soy como maestro?",
+      "title": "Consigna oficial verificada Moodle ID 50158 - ¿Cómo soy como maestro?: Silueta y Reflexión de Identidad Docente",
       "url": "https://evaposgrados.iiiepe.edu.mx/aula/mod/assign/view.php?id=50158",
-      "path": "periodos/SD26/actividades-plataforma-SD26/actividad-02-identidad-docente/consigna-verificada.md",
-      "captured_at": "2026-11-14T10:44:49.199873+00:00"
+      "path": "actividades-plataforma-SD26/actividad-02-identidad-docente/consigna-verificada.md",
+      "sha256": "6677f4086c11c08846d55463994ca2de4c256b9076d2602b5840aa6a361c3d50",
+      "captured_at": "2026-11-19",
+      "media_type": "text/markdown"
+    },
+    {
+      "id": "src-recurso-50158-1",
+      "kind": "platform",
+      "authority": "scholarly",
+      "title": "instrucciones-sesion-2-moodle.md",
+      "url": "https://evaposgrados.iiiepe.edu.mx/aula/mod/assign/view.php?id=50158",
+      "path": "actividades-plataforma-SD26/actividad-02-identidad-docente/recursos-plataforma/50158/instrucciones-sesion-2-moodle.md",
+      "sha256": "9dcb7fc163d0c6a7719373bbf3f47071e014d4348fee1ee2fa270aa1c5a2011a",
+      "captured_at": "2026-11-19",
+      "media_type": "text/markdown"
     }
   ],
   "curriculum": {
-    "purpose": "Construcción reflexiva de la identidad pedagógica mediante una silueta estructurada (fortalezas, áreas de oportunidad, necesidades formativas).",
+    "purpose": "Promover una reflexión crítica sobre la práctica profesional docente en matemáticas mediante la construcción de una silueta que integre definición identitaria, fortalezas, áreas de oportunidad y necesidades formativas.",
     "competencies": [
       {
-        "id": "comp-02-1",
-        "name": "Reflexión Crítica y Transformación Docente"
+        "id": "comp-1",
+        "text": "Evalúa reflexivamente sus decisiones de enseñanza, fortalezas técnicas y áreas de oportunidad didáctica en el aula de matemáticas."
       },
       {
-        "id": "comp-02-2",
-        "name": "Modelación y Mediación Didáctica en Matemáticas"
+        "id": "comp-2",
+        "text": "Formula un itinerario de formación continua sustentado en bibliografía pedagógica pertinente."
       }
     ],
     "outcomes": [
       {
-        "id": "out-02-1",
-        "name": "Articula marcos pedagógicos contemporáneos con su práctica docente."
+        "id": "out-1",
+        "text": "Construye una silueta docente estructurada y responde las cinco preguntas guía de reflexión sobre la identidad profesional."
       }
     ],
     "topics": [
       {
-        "id": "top-02-1",
-        "name": "¿Cómo soy como maestro?: Silueta y Reflexión de Identidad Docente",
-        "order": 2
+        "id": "top-1",
+        "text": "Identidad profesional y creencias del docente de matemáticas",
+        "children": []
+      },
+      {
+        "id": "top-2",
+        "text": "Fortalezas, áreas de oportunidad y necesidades de formación",
+        "children": []
       }
     ]
   },
   "activities": [
     {
-      "id": "act-sd26-02",
-      "number": 2,
+      "id": "actividad-02-identidad-docente",
       "title": "¿Cómo soy como maestro?: Silueta y Reflexión de Identidad Docente",
-      "kind": "formative",
-      "description": "Construcción reflexiva de la identidad pedagógica mediante una silueta estructurada (fortalezas, áreas de oportunidad, necesidades formativas).",
-      "estimated_minutes": 180,
-      "target_product": "Diagrama de silueta docente TikZ y análisis de decisiones en el aula.",
-      "topics": [
-        "top-02-1"
+      "role": "assessment",
+      "platform": {
+        "name": "EVA Posgrados IIIEPE (Moodle)",
+        "course_id": "1048",
+        "module_ids": [
+          "50158"
+        ]
+      },
+      "unit_id": "Sesion-2",
+      "weeks": [
+        2
       ],
-      "rubric": {
+      "outcome_ids": [
+        "out-1"
+      ],
+      "topic_ids": [
+        "top-1",
+        "top-2"
+      ],
+      "cognitive": {
+        "taxonomy": "Bloom",
+        "level": "evaluacion",
+        "verb": "Evaluar",
+        "object": "la identidad docente propia, decisiones didácticas, fortalezas y necesidades formativas",
+        "conditions": "mediante silueta gráfica TikZ y reflexión situada en la docencia en CONALEP, CECyTE e ingenierías",
+        "observable_evidence": "Reporte con silueta docente sin superposiciones, respuestas a 5 preguntas guía y plan formativo",
+        "justification": "Permite pasar de la descripción de rutinas al examen crítico de las decisiones en aula."
+      },
+      "instruction": "Responder las cinco preguntas de reflexión inicial y construir la silueta docente (centro: autodefinición; lado izquierdo: fortalezas y áreas de oportunidad en situaciones reales; lado derecho: necesidades formativas y bibliografía justificada).",
+      "requirements": [
+        {
+          "id": "req-1",
+          "text": "Responder con fundamento las cinco preguntas de reflexión inicial de la Sesión 2."
+        },
+        {
+          "id": "req-2",
+          "text": "Construir silueta docente vectorial en TikZ con centro, lado izquierdo y lado derecho sin solapamientos."
+        },
+        {
+          "id": "req-3",
+          "text": "Justificar necesidades formativas con bibliografía pedagógica verificada en formato APA 7."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q-1",
+          "context": "Práctica docente",
+          "text": "¿Cómo describes tu forma de enseñar y qué estrategias utilizas con mayor frecuencia?",
+          "requirement_ids": [
+            "req-1"
+          ]
+        },
+        {
+          "id": "q-2",
+          "context": "Autoexamen",
+          "text": "¿Cuáles son tus principales fortalezas, qué aspectos te gustaría mejorar y cómo tomas decisiones en clase?",
+          "requirement_ids": [
+            "req-1"
+          ]
+        }
+      ],
+      "sequence": [
+        {
+          "id": "step-1",
+          "order": 1,
+          "phase": "preparation",
+          "action": "Lectura analítica de fuentes oficiales recopiladas en recursos-plataforma y extracción de criterios de evaluación.",
+          "inputs": [
+            "consigna-verificada.md",
+            "instrucciones-sesion-2-moodle.md"
+          ],
+          "output": "Matriz conceptual y esquema de cumplimiento de consigna",
+          "completion_check": "Totalidad de preguntas, apartados y criterios de rúbrica mapeados",
+          "requirement_ids": [
+            "req-1",
+            "req-2",
+            "req-3"
+          ],
+          "depends_on": []
+        },
+        {
+          "id": "step-2",
+          "order": 2,
+          "phase": "construction",
+          "action": "Redacción académica en LaTeX con diagramas TikZ, cuadros analíticos, transferencia a matemáticas y aparato crítico APA 7.",
+          "inputs": [
+            "Matriz conceptual",
+            "template.tex",
+            "referencias-sd26.bib"
+          ],
+          "output": "periodos/SD26/actividades-plataforma-SD26/actividad-02-identidad-docente/reporte.tex y presentacion.tex",
+          "completion_check": "Textos completos con voz docente situada y cero citas sin resolver",
+          "requirement_ids": [
+            "req-1",
+            "req-2",
+            "req-3"
+          ],
+          "depends_on": [
+            "step-1"
+          ]
+        },
+        {
+          "id": "step-3",
+          "order": 3,
+          "phase": "review",
+          "action": "Compilación reproducible vía latexmk, auditoría editorial EMS >= 90 y empaquetado con hashes SHA-256.",
+          "inputs": [
+            "reporte.tex",
+            "presentacion.tex"
+          ],
+          "output": "reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-02-identidad-docente_Martin-Jonathan-de-la-Cruz-Munoz.pdf",
+          "completion_check": "Compilación rc=0, EMS >= 90 y manifiesto SHA-256 actualizado en espera de autorización humana",
+          "requirement_ids": [
+            "req-1",
+            "req-2",
+            "req-3"
+          ],
+          "depends_on": [
+            "step-2"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "id": "res-consigna",
+          "source_id": "src-consigna-verificada",
+          "purpose": "Consigna oficial y parámetros verificados en Moodle",
+          "required": true,
+          "access": "local",
+          "rights": "IIIEPE"
+        },
+        {
+          "id": "res-1",
+          "source_id": "src-recurso-50158-1",
+          "purpose": "Material oficial recopilado de Moodle módulo 50158",
+          "required": true,
+          "access": "local",
+          "rights": "IIIEPE"
+        }
+      ],
+      "assessment": {
+        "kind": "summative",
+        "scale_total": 100.0,
+        "weight": 100.0,
+        "weight_unit": "pts",
         "criteria": [
           {
             "id": "crit-1",
-            "name": "Rigor conceptual y fundamentación teórica",
-            "weight": 40.0,
-            "descriptors": {
-              "excelente": "Demuestra comprensión profunda y citas APA pertinentes."
-            }
+            "text": "Silueta docente completa (centro, fortalezas/áreas de oportunidad a la izquierda, necesidades/bibliografía a la derecha)",
+            "points": 40.0,
+            "descriptors": [
+              {
+                "level": "Excelente",
+                "description": "Diagrama nítido y análisis situado sin enumeraciones superficiales.",
+                "points": 40.0
+              }
+            ],
+            "requirement_ids": [
+              "req-2"
+            ]
           },
           {
             "id": "crit-2",
-            "name": "Artefacto visual y estructura metodológica",
-            "weight": 30.0,
-            "descriptors": {
-              "excelente": "Presenta tablas o diagramas TikZ bien organizados."
-            }
+            "text": "Profundidad reflexiva en las cinco preguntas y justificación bibliográfica",
+            "points": 40.0,
+            "descriptors": [
+              {
+                "level": "Excelente",
+                "description": "Explica decisiones didácticas reales y fundamenta lecturas requeridas.",
+                "points": 40.0
+              }
+            ],
+            "requirement_ids": [
+              "req-1",
+              "req-3"
+            ]
           },
           {
             "id": "crit-3",
-            "name": "Transferencia y reflexión crítica profesional",
-            "weight": 30.0,
-            "descriptors": {
-              "excelente": "Argumenta el impacto directo en el aula de matemáticas."
-            }
+            "text": "Calidad editorial, coherencia y aparato crítico APA 7",
+            "points": 20.0,
+            "descriptors": [
+              {
+                "level": "Excelente",
+                "description": "Redacción académica sobria, primera persona rigurosa y formato IIIEPE.",
+                "points": 20.0
+              }
+            ],
+            "requirement_ids": [
+              "req-3"
+            ]
           }
+        ],
+        "editorial_checks": [
+          "Puntaje EMS >= 90 (banda MAESTRO)",
+          "Citas autor-año resueltas sin signos ??",
+          "Referencias APA 7ma edición verificables",
+          "Diagramas TikZ y tablas sin desbordamientos",
+          "Compilación reproducible con rc=0"
         ]
+      },
+      "products": [
+        {
+          "id": "prod-reporte-act-02",
+          "kind": "reporte_academico",
+          "recipient": "Plataforma EVA Posgrados IIIEPE (Curso 1048)",
+          "editable_format": "application/x-tex",
+          "submission_format": "application/pdf",
+          "structure": [
+            "Portada institucional",
+            "Reflexión inicial (5 preguntas)",
+            "Silueta docente TikZ",
+            "Fortalezas y áreas de oportunidad",
+            "Necesidades de formación",
+            "Conclusiones",
+            "Referencias APA 7"
+          ],
+          "length": "5 a 7 páginas",
+          "filename_pattern": "reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-02-identidad-docente_Martin-Jonathan-de-la-Cruz-Munoz.pdf",
+          "accessibility": "PDF estructurado de alto contraste con tipografía vectorial",
+          "requirement_ids": [
+            "req-1",
+            "req-2",
+            "req-3"
+          ],
+          "paths": {
+            "editable": "periodos/SD26/actividades-plataforma-SD26/actividad-02-identidad-docente/reporte.tex",
+            "delivery": "periodos/SD26/entregas-fundamentos-para-la-enseñanza-y-el-aprendizaje-I-SD26/reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-02-identidad-docente_Martin-Jonathan-de-la-Cruz-Munoz.pdf"
+          }
+        },
+        {
+          "id": "prod-presentacion-act-02",
+          "kind": "presentacion_beamer",
+          "recipient": "Plataforma EVA Posgrados IIIEPE (Curso 1048)",
+          "editable_format": "application/x-tex",
+          "submission_format": "application/pdf",
+          "structure": [
+            "Portada institucional IIIEPE",
+            "Propósito y problemática",
+            "Desarrollo analítico",
+            "Artefactos visuales",
+            "Conclusiones y referencias"
+          ],
+          "length": "10 a 12 diapositivas",
+          "filename_pattern": "presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-02-identidad-docente_Martin-Jonathan-de-la-Cruz-Munoz.pdf",
+          "accessibility": "Beamer 16:10 institucional IIIEPE",
+          "requirement_ids": [
+            "req-1",
+            "req-2"
+          ],
+          "paths": {
+            "editable": "periodos/SD26/actividades-plataforma-SD26/actividad-02-identidad-docente/presentacion.tex",
+            "delivery": "periodos/SD26/entregas-fundamentos-para-la-enseñanza-y-el-aprendizaje-I-SD26/presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-02-identidad-docente_Martin-Jonathan-de-la-Cruz-Munoz.pdf"
+          }
+        }
+      ],
+      "calendar": {
+        "opens_at": "2026-04-18T08:00:00-06:00",
+        "expected_at": "2026-06-12T23:59:00-06:00",
+        "due_at": "2026-06-12T23:59:00-06:00",
+        "closes_at": "2026-06-12T23:59:00-06:00",
+        "timezone": "America/Monterrey",
+        "literal": "12 de junio de 2026, 23:59"
+      },
+      "policies": {
+        "ai": "Declaración transparente de apoyo organizativo y revisión crítica integral por el autor.",
+        "integrity": "Fidelidad estricta a lecturas oficiales del curso; sin datos ni resultados de aula inventados.",
+        "collaboration": "Individual",
+        "citation": "APA 7ma edición",
+        "attempts": 1,
+        "late_submission": "Sujeto a consideración del docente titular en EVA Posgrados IIIEPE",
+        "accessibility": "PDF vectorial estructurado y presentación Beamer/PowerPoint de alto contraste",
+        "privacy": "Resguardo estricto de credenciales (bóveda cifrada) y matrícula 00874",
+        "exceptions": []
+      },
+      "dependencies": [
+        "actividad-01"
+      ],
+      "alignment": [
+        {
+          "outcome_id": "out-1",
+          "requirement_ids": [
+            "req-1",
+            "req-2",
+            "req-3"
+          ],
+          "step_ids": [
+            "step-1",
+            "step-2",
+            "step-3"
+          ],
+          "product_ids": [
+            "prod-reporte-act-02",
+            "prod-presentacion-act-02"
+          ],
+          "criterion_ids": [
+            "crit-1",
+            "crit-2",
+            "crit-3"
+          ]
+        }
+      ],
+      "bindings": {
+        "extractor_directory": "periodos/SD26/actividades-plataforma-SD26/actividad-02-identidad-docente/recursos-plataforma",
+        "notes_directory": "referencias-fundamentos-para-la-enseñanza-y-el-aprendizaje-I",
+        "research_directory": "referencias"
       }
     }
   ],
   "field_status": [
     {
-      "field": "identity",
-      "status": "verified"
+      "path": "/identity/offering_id",
+      "state": "confirmed",
+      "reason": null,
+      "evidence": [
+        {
+          "source_id": "src-consigna-verificada",
+          "locator": "Moodle course_id=1048",
+          "quoted_text": "PFM01 Fundamentos para la enseñanza y el aprendizaje. (Ago-Nov 2026 Grupo A) - mod/assign 50158"
+        }
+      ],
+      "alternatives": []
     },
     {
-      "field": "activities",
-      "status": "verified"
+      "path": "/activities/0/instruction",
+      "state": "confirmed",
+      "reason": null,
+      "evidence": [
+        {
+          "source_id": "src-consigna-verificada",
+          "locator": "Instrucciones oficiales extraídas de EVA IIIEPE",
+          "quoted_text": "Responder las cinco preguntas de reflexión inicial y construir la silueta docente (centro: autodefinición; lado izquierdo: fortalezas y áreas de oportunidad en situaciones reales; lado derecho: necesidades formativas y b"
+        }
+      ],
+      "alternatives": []
     }
   ],
   "review": {
     "state": "needs_review",
-    "notes": "Planeación generada bajo gobernanza SD26. Moodle ID: 50158. Aprobación humana pendiente."
+    "reviewed_at": "2026-11-19",
+    "reviewer_role": "agente-planeador-aulatex",
+    "critical_gaps": [],
+    "semantic_validation": "passed"
   },
   "artifact_contract": {
     "version": "1.1",
     "paths_relative_to_subject": {
-      "plans": "periodos/SD26/planeaciones-fundamentos-para-la-ensenanza-y-el-aprendizaje-i-SD26",
-      "deliverables": "periodos/SD26/entregas-fundamentos-para-la-enseñanza-y-el-aprendizaje-I-SD26"
+      "plans": "periodos/SD26/planeaciones-fundamentos-para-la-enseñanza-y-el-aprendizaje-I-SD26",
+      "references": "referencias-fundamentos-para-la-enseñanza-y-el-aprendizaje-I",
+      "deliveries": "periodos/SD26/entregas-fundamentos-para-la-enseñanza-y-el-aprendizaje-I-SD26"
     },
     "deliverables_directory": "periodos/SD26/entregas-fundamentos-para-la-enseñanza-y-el-aprendizaje-I-SD26",
     "source_directory": "periodos/SD26/actividades-plataforma-SD26/actividad-02-identidad-docente"
   },
   "extensions": {
     "period_code": "SD26",
+    "moodle_course_id": 1048,
     "moodle_module_id": 50158,
-    "student": {
-      "name": "Mtro. Martín Jonathan de la Cruz Muñoz",
-      "id": "00874",
-      "email": "martin.delacruz@campus.iiiepe.edu.mx"
-    }
+    "codigo_referencia": "IIIEPE-1048-SD26-ACT02",
+    "fase_curricular": "Sesión 2 · Cohorte Ago-Nov 2026 Grupo A",
+    "docente": "Docente titular MAEM (Grupo A)",
+    "estudiante": "Mtro. Martín Jonathan de la Cruz Muñoz",
+    "matricula": "00874",
+    "generador": "step1_and_2_consignas_and_plans (PCA v1.0.0)"
   }
 }
