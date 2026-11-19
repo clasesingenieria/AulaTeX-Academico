@@ -1,0 +1,187 @@
+% Motor visual editorial para infografías en LaTeX/TikZ (Cohorte SD26 · IIIEPE MAEM)
+\definecolor{infNavy}{HTML}{1A4F7A}
+\definecolor{infBlueLight}{HTML}{DCEBF7}
+\definecolor{infBlueCard}{HTML}{EDF5FC}
+\definecolor{infBlueAccent}{HTML}{2775B3}
+
+\definecolor{infGreen}{HTML}{1E6B43}
+\definecolor{infGreenLight}{HTML}{DCF2E4}
+\definecolor{infGreenCard}{HTML}{EEF9F2}
+\definecolor{infGreenAccent}{HTML}{2A935B}
+
+\definecolor{infOrange}{HTML}{C45522}
+\definecolor{infOrangeLight}{HTML}{FDE6D8}
+\definecolor{infOrangeCard}{HTML}{FEF3EB}
+\definecolor{infOrangeAccent}{HTML}{DE6A31}
+
+\definecolor{infInk}{HTML}{1E2932}
+\definecolor{infPaper}{HTML}{F8FAFC}
+\definecolor{infBorder}{HTML}{C9D6E2}
+
+\tikzset{
+  pics/inf_target/.style={code={
+    \draw (0,0) circle (.78);
+    \draw (0,0) circle (.46);
+    \fill (0,0) circle (.16);
+    \draw[line width=1.4pt] (.42,.42) -- (.95,.95);
+    \draw (.62,.95) -- (.95,.95) -- (.95,.62);
+  }},
+  pics/inf_doc/.style={code={
+    \draw[rounded corners=1.2pt] (-.65,-.85) rectangle (.65,.85);
+    \draw (-.38,.42) -- (.38,.42);
+    \draw (-.38,.08) -- (.38,.08);
+    \draw (-.38,-.26) -- (.38,-.26);
+    \draw (-.38,-.58) -- (.12,-.58);
+  }},
+  pics/inf_key/.style={code={
+    \draw (-.38,.12) circle (.38);
+    \draw[line width=1.6pt] (0,.12) -- (.92,.12);
+    \draw[line width=1.5pt] (.58,.12) -- (.58,-.28);
+    \draw[line width=1.5pt] (.85,.12) -- (.85,-.20);
+  }},
+  pics/inf_bulb/.style={code={
+    \draw (-.32,-.28) .. controls (-.58,-.05) and (-.62,.45) .. (0,.65)
+      .. controls (.62,.45) and (.58,-.05) .. (.32,-.28) -- cycle;
+    \draw (-.26,-.48) -- (.26,-.48);
+    \draw (-.20,-.70) -- (.20,-.70);
+    \draw (0,.82) -- (0,1.02) (.68,.55) -- (.84,.68) (-.68,.55) -- (-.84,.68);
+  }},
+  pics/inf_gear/.style={code={
+    \draw (0,0) circle (.46);
+    \draw (0,0) circle (.18);
+    \foreach \a in {0,45,...,315}{
+      \draw[line width=2.2pt] (\a:.46) -- (\a:.76);
+    }
+  }},
+  pics/inf_personas/.style={code={
+    \draw (0,.48) circle (.24);
+    \draw (-.64,.25) circle (.19) (.64,.25) circle (.19);
+    \draw (-.42,-.72) -- (-.42,-.18) .. controls (-.42,.18) and (.42,.18) .. (.42,-.18) -- (.42,-.72);
+    \draw (-.95,-.66) -- (-.95,-.24) .. controls (-.95,.02) and (-.56,.02) .. (-.48,-.22);
+    \draw (.48,-.22) .. controls (.56,.02) and (.95,.02) .. (.95,-.24) -- (.95,-.66);
+  }},
+  pics/inf_autonomia/.style={code={
+    \draw[dashed] (0,0) circle (.88);
+    \draw (0,.42) circle (.24);
+    \draw (-.38,-.58) -- (-.38,-.15) .. controls (-.38,.18) and (.38,.18) .. (.38,-.15) -- (.38,-.58);
+  }},
+  pics/inf_alerta/.style={code={
+    \draw[rounded corners=1.5pt] (0,.85) -- (-.92,-.72) -- (.92,-.72) -- cycle;
+    \draw[line width=1.6pt] (0,.30) -- (0,-.22);
+    \fill (0,-.48) circle (.09);
+  }},
+  pics/inf_balanza/.style={code={
+    \draw (0,-.75) -- (0,.72);
+    \draw (-.50,-.75) -- (.50,-.75);
+    \draw (-.75,.48) -- (.75,.48);
+    \draw (-.75,.48) -- (-.95,-.05) -- (-.55,-.05) -- cycle;
+    \draw (.75,.48) -- (.55,-.05) -- (.95,-.05) -- cycle;
+  }},
+  pics/inf_cerebro/.style={code={
+    \draw (-.1,.62) .. controls (-.72,.68) and (-.95,.15) .. (-.68,-.28)
+      .. controls (-.82,-.65) and (-.28,-.75) .. (0,-.52);
+    \draw (.1,.62) .. controls (.72,.68) and (.95,.15) .. (.68,-.28)
+      .. controls (.82,-.65) and (.28,-.75) .. (0,-.52);
+    \draw (0,.65) -- (0,-.52);
+    \draw (-.45,.18) -- (-.15,.05) (.45,.18) -- (.15,.05) (-.42,-.22) -- (-.12,-.18);
+  }},
+  pics/inf_construccion/.style={code={
+    \draw (0,0) circle (.45);
+    \draw (0,0) circle (.16);
+    \foreach \a in {0,60,...,300}{
+      \draw[line width=2pt] (\a:.45) -- (\a:.74);
+    }
+    \draw (.62,.62) circle (.22);
+  }},
+  pics/inf_dialogo/.style={code={
+    \draw[rounded corners=2pt] (-.92,.78) -- (.48,.78) -- (.48,-.04)
+      -- (-.32,-.04) -- (-.68,-.40) -- (-.68,-.04) -- (-.92,-.04) -- cycle;
+    \draw[rounded corners=1.5pt] (.15,-.18) -- (.92,-.18) -- (.92,-.76)
+      -- (.68,-.76) -- (.68,-.98) -- (.38,-.76) -- (.15,-.76) -- cycle;
+    \draw (-.64,.48) -- (.22,.48) (-.64,.22) -- (.06,.22);
+  }},
+  pics/inf_grafica/.style={code={
+    \draw (-.88,.85) -- (-.88,-.75) -- (.92,-.75);
+    \fill (-.62,-.75) rectangle (-.32,-.10);
+    \fill (-.15,-.75) rectangle (.15,.25);
+    \fill (.32,-.75) rectangle (.62,.68);
+  }},
+  pics/inf_lupa/.style={code={
+    \draw (-.18,.22) circle (.54);
+    \draw[line width=1.8pt] (.22,-.18) -- (.88,-.84);
+    \draw (-.48,.28) .. controls (-.44,.50) and (-.26,.58) .. (-.06,.56);
+  }},
+  pics/inf_escuela/.style={code={
+    \draw (-.85,-.75) rectangle (.85,.25);
+    \draw (-1.0,.25) -- (0,.92) -- (1.0,.25);
+    \draw (-.20,-.75) rectangle (.20,-.10);
+    \draw (-.64,-.08) rectangle (-.38,.12);
+    \draw (.38,-.08) rectangle (.64,.12);
+    \draw (0,.52) circle (.12);
+  }},
+  pics/inf_andamio/.style={code={
+    \draw (-.82,-.75) -- (-.82,.75) (.82,-.75) -- (.82,.75);
+    \draw (-.82,-.30) -- (.82,-.30) (-.82,.22) -- (.82,.22) (-.82,.72) -- (.82,.72);
+    \draw (-.82,-.30) -- (.82,.22) (.82,-.30) -- (-.82,.22);
+    \fill[draw=none] (0,.84) circle (.10);
+  }},
+  pics/inf_libro/.style={code={
+    \draw (0,-.68) -- (0,.58);
+    \draw (0,.58) .. controls (-.34,.85) and (-.68,.85) .. (-.96,.64)
+      -- (-.96,-.58) .. controls (-.58,-.42) and (-.26,-.45) .. (0,-.68);
+    \draw (0,.58) .. controls (.34,.85) and (.68,.85) .. (.96,.64)
+      -- (.96,-.58) .. controls (.58,-.42) and (.26,-.45) .. (0,-.68);
+    \draw (-.72,.28) -- (-.24,.14) (-.72,-.04) -- (-.24,-.18);
+    \draw (.24,.14) -- (.72,.28) (.24,-.18) -- (.72,-.04);
+  }}
+}
+
+\newcommand{\InfIcon}[3][0.30]{%
+  \begin{tikzpicture}[x=#1cm,y=#1cm,baseline=-0.12cm]
+    \path[use as bounding box] (-1.05,-1.05) rectangle (1.05,1.05);
+    \pic[draw=#3,fill=#3,line width=1.15pt,line cap=round,line join=round] {inf_#2};
+  \end{tikzpicture}%
+}
+
+\newcommand{\InfIconOutline}[3][0.30]{%
+  \begin{tikzpicture}[x=#1cm,y=#1cm,baseline=-0.12cm]
+    \path[use as bounding box] (-1.05,-1.05) rectangle (1.05,1.05);
+    \pic[draw=#3,line width=1.15pt,line cap=round,line join=round] {inf_#2};
+  \end{tikzpicture}%
+}
+
+\newcommand{\InfPillBar}[5]{%
+  % #1=x, #2=y, #3=colorDark, #4=colorLight, #5=iconName, macro uses text via helper? Wait: pass #6=Title
+}
+
+% Medallón + Píldora horizontal de sección (ancho 7.75cm dentro de columna 8.15cm)
+\newcommand{\InfSectionBar}[6]{%
+  % (#1,#2)=origen izq, #3=accentColor, #4=lightColor, #5=icon, #6=Title
+  \fill[#4,rounded corners=7pt] ({#1+0.25},{#2-0.46}) rectangle ({#1+7.75},{#2-0.02});
+  \node[anchor=west,font=\fontsize{8.1}{9.5}\selectfont\bfseries\color{#3}] at ({#1+0.78},{#2-0.24}) {#6};
+  \filldraw[fill=#3,draw=white,line width=1.4pt] ({#1+0.34},{#2-0.24}) circle (0.28cm);
+  \node[inner sep=0pt] at ({#1+0.34},{#2-0.24}) {\InfIconOutline[0.18]{#5}{white}};
+}
+
+% Mini-tarjeta cuadrada de concepto clave (ancho 1.83cm x alto 2.18cm)
+\newcommand{\InfConceptCard}[6]{%
+  % #1=x, #2=y_top, #3=accentColor, #4=cardBg, #5=icon, #6=Title\\desc
+  \draw[fill=#4,draw=#3!35!white,line width=0.6pt,rounded corners=4pt] ({#1},{#2-2.18}) rectangle ({#1+1.83},{#2});
+  \node[inner sep=0pt] at ({#1+0.915},{#2-0.52}) {\InfIconOutline[0.32]{#5}{#3}};
+  \node[anchor=north,text width=1.68cm,align=center,font=\fontsize{5.6}{6.8}\selectfont\color{infInk},inner sep=1pt] at ({#1+0.915},{#2-0.96}) {#6};
+}
+
+% Viñeta con círculo de color (Tesis / Aportes principales)
+\newcommand{\InfBullet}[4]{%
+  % #1=x, #2=y_top, #3=accentColor, #4=texto
+  \fill[#3] ({#1+0.12},{#2-0.14}) circle (0.065cm);
+  \node[anchor=north west,text width=7.35cm,align=left,font=\fontsize{6.3}{7.6}\selectfont\color{infInk},inner sep=0pt] at ({#1+0.28},{#2}) {#4};
+}
+
+% Viñeta con círculo Check ✓ (Implicaciones para la práctica)
+\newcommand{\InfCheck}[4]{%
+  % #1=x, #2=y_top, #3=accentColor, #4=texto
+  \fill[#3] ({#1+0.14},{#2-0.15}) circle (0.125cm);
+  \draw[white,line width=0.95pt,line cap=round,line join=round] ({#1+0.075},{#2-0.16}) -- ({#1+0.125},{#2-0.21}) -- ({#1+0.215},{#2-0.095});
+  \node[anchor=north west,text width=7.28cm,align=left,font=\fontsize{6.3}{7.6}\selectfont\color{infInk},inner sep=0pt] at ({#1+0.34},{#2}) {#4};
+}

@@ -43,7 +43,7 @@
   \leavevmode%
   \hbox{%
     \begin{beamercolorbox}[wd=.78\paperwidth,ht=0.5cm,dp=0.18cm,leftskip=0.45cm]{frametitle}%
-      \scriptsize\color{white}M. de la Cruz Muñoz · MAEM · Matrícula 00874 · SD26 · Actividad 3 · Meirieu (2020)%
+      \scriptsize\color{white}M. de la Cruz Muñoz · MAEM · Matrícula 00874 · SD26 · Actividad 3 · Infografía%
     \end{beamercolorbox}%
     \begin{beamercolorbox}[wd=.22\paperwidth,ht=0.5cm,dp=0.18cm,rightskip=0.45cm]{frametitle}%
       \hfill\scriptsize\color{white}\insertframenumber{} / \inserttotalframenumber%
@@ -56,12 +56,13 @@
   \tikz[baseline=(x.base)]{\node[rounded corners=3pt,fill=#1!14,draw=#1!75!black,thick,inner xsep=6pt,inner ysep=4pt,align=center] (x) {\scriptsize\bfseries #2};}%
 }
 
-\title{Philippe Meirieu (2020): Infografía y Análisis}
-\subtitle{Actividad 3 · «La Escuela Después»... ¿Con la Pedagogía de Antes?}
+\title{Infografía Crítica: Philippe Meirieu (2020) y Tres Miradas de Sesión 3}
+\subtitle{Actividad 3 · Módulo 51440 · LaTeX/TikZ}
 \author{Mtro. Martín Jonathan de la Cruz Muñoz · Matrícula 00874}
 \institute{IIIEPE · Maestría en Aprendizaje y Enseñanza de las Matemáticas · Grupo A}
 \date{19 de noviembre de 2026}
 
+\input{infografia_components}
 \begin{document}
 
 \begin{frame}[plain]
@@ -89,134 +90,59 @@
     };
   \end{tikzpicture}
 \end{frame}
-\begin{frame}{Philippe Meirieu (2020): Punto de Partida Crítico}
-  \begin{block}{Tesis central: «¿Por qué no hacemos lo que decimos que haremos?»}
-    Frente al abismo histórico entre discursos generosos y rutinas escolares reales, el «regreso a la normalidad» corre el riesgo de convertirse en un \textbf{«regreso a lo anormal»} si reaviva la competencia egoísta y la desigualdad \textbf{(Meirieu, 2020)}.
-  \end{block}
-  \vspace{0.35cm}
+\begin{frame}[plain]
   \centering
-  \Pill{iiiepeNavy}{Brecha discurso--práctica} \hspace{0.2cm}
-  \Pill{iiiepeBlue}{Yo + Nosotros} \hspace{0.2cm}
-  \Pill{iiiepeAqua!75!black}{Crítica tecnocrática} \hspace{0.2cm}
-  \Pill{iiiepeOrange!85!black}{Derecho efectivo}
+  \resizebox{0.97\textwidth}{!}{\input{lamina_meirieu_mono}}
 \end{frame}
 
-\begin{frame}{«Enseñar la Clase»: Decir «Yo» y Hacer «Nosotros»}
+\begin{frame}[plain]
+  \centering
+  \resizebox{0.97\textwidth}{!}{\input{lamina_tres_autores}}
+\end{frame}
+
+\begin{frame}{Núcleos Críticos de Philippe Meirieu (2020)}
   \begin{columns}[T]
     \column{0.48\textwidth}
-      \begin{block}{Hacer el aula para hacer escuela}
+      \begin{block}{1. Hacer el aula y saber compartible}
         \begin{itemize}\scriptsize
-          \item Espacio-tiempo colectivo ritualizado donde la palabra exige \textbf{precisión, exactitud y verdad}.
-          \item El colectivo no es yuxtaposición de individuos ni el bien común es suma de intereses privados.
-          \item Articular lo común que nos une y lo singular de cada historia.
+          \item Articular lo singular («yo») dentro de un colectivo («nosotros»).
+          \item Ofrecer conocimientos «infinitamente compartibles» (Fichte).
+          \item Superar el regreso acrítico a «lo anormal».
         \end{itemize}
       \end{block}
     \column{0.48\textwidth}
-      \begin{block}{Institución pública, no servicio privado}
+      \begin{block}{2. Derecho efectivo vs. prerrequisitos}
         \begin{itemize}\scriptsize
-          \item Rompe el encierro doméstico permitiendo acceder a la \textbf{alteridad}.
-          \item Ofrece conocimientos \textbf{«infinitamente compartibles» (Fichte)}.
-          \item Cada estudiante aprende a aportar tanto como recibe del grupo.
+          \item Motivación y autonomía son metas, no filtros excluyentes.
+          \item Ofrecer «algo más» cara a cara en vez de «más de lo mismo».
+          \item Abrir un «mundo de tesoros» cooperativo.
         \end{itemize}
       \end{block}
   \end{columns}
 \end{frame}
 
-\begin{frame}{Crítica a la Ilusión Tecnocrática y Conductismo Digital}
-  \begin{itemize}\normalsize
-    \item \textbf{\color{iiiepeNavy}Consumo solitario vs colectivo:} Riesgo de alumnos aislados frente a pantallas consumiendo software comercial en mutua indiferencia.
-    \item \textbf{\color{iiiepeBlue}Neoconductismo digital:} Prescripciones tecnocráticas y «cultura de resultados en cifras» que reducen al docente a intérprete u obstáculo prescindible.
-    \item \textbf{\color{iiiepeAqua!75!black}Apuesta cooperativa:} Establecer pedagogías cooperativas e institucionales donde cada estudiante \textbf{«ocupe su lugar»} sin acaparar ni ser expulsado \textbf{(Meirieu, 2020)}.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{De la Igualdad de Oportunidades al Derecho Efectivo}
-  \begin{columns}[T]
-    \column{0.48\textwidth}
-      \begin{block}{Trampa de objetivos como prerrequisitos}
-        \scriptsize Exigir motivación, autonomía y esfuerzo como condiciones previas reserva el aula a los «ya educados». \textbf{Hay que dejar de seleccionar sobre lo que no forma}.
-      \end{block}
-    \column{0.48\textwidth}
-      \begin{block}{Síndrome de Barbiana (1967)}
-        \scriptsize «Un hospital que se ocupa de los sanos y se deshace de los enfermos». Es urgente entrenar antes de seleccionar y \textbf{«dar mejor»} a quienes menos tienen.
-      \end{block}
-  \end{columns}
-  \vspace{0.35cm}
-  \centering
-  \Pill{iiiepeOrange!85!black}{No repetir «más de lo mismo»} \hspace{0.4cm} $\Longrightarrow$ \hspace{0.4cm} \Pill{iiiepeNavy}{Ofrecer un rodeo: «algo más» cara a cara}
-\end{frame}
-
-\begin{frame}{El Rodeo Pedagógico: «Algo Más» vs «Más de lo Mismo»}
-  \begin{block}{¿Por qué el encuentro presencial es insustituible?}
-    Ante un estudiante bloqueado en matemáticas, aumentar la presión con más fichas iguales es contraproducente. La experticia docente en vivo capta dónde surgió la resistencia para proponer un rodeo distinto \textbf{(Meirieu, 2020)}.
-  \end{block}
-  \vspace{0.3cm}
-  \begin{itemize}\small
-    \item Alejarse de la visión \textbf{tayloriana} del trabajo escolar centrada únicamente en ejecutar entregas mecánicas.
-    \item Cultivar la relación de «investigador» con la cultura, el placer de aprender y la alegría de comprender.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Contraste: «Pedagogía de Antes» vs Escuela Cooperativa}
-  \scriptsize\renewcommand{\arraystretch}{1.4}
-  \begin{tabular}{p{2.6cm}p{5.2cm}p{5.2cm}}
+\begin{frame}{Articulación con Keith Sawyer (2008) y Felipe Martínez Rizo (2026)}
+  \renewcommand{\arraystretch}{1.28}
+  \scriptsize
+  \begin{tabular}{p{3.0cm}p{5.0cm}p{5.4cm}}
     \toprule
-    \rowcolor{iiiepePale} \textbf{Eje} & \textbf{«Pedagogía de antes»} & \textbf{Enfoque propuesto por Meirieu} \\
+    \textbf{Autor y escala} & \textbf{Problema central} & \textbf{Traducción en Matemáticas técnicas} \\
     \midrule
-    Institución & Servicio para demandas individuales aisladas. & Construcción compartida de lo común y alteridad. \\
-    Requisitos & Motivación y autonomía exigidas de entrada. & Objetivos construidos con apoyo y andamiaje docente. \\
-    Ante el bloqueo & Repetición mecánica («más de lo mismo»). & Rodeo didáctico y escucha presencial («algo más»). \\
-    Tecnología & Sustituto conductista de la clase dialogada. & Medio cuestionado al servicio de cooperar. \\
-    Horizonte & Competencia entre «ganadores» en un mercado. & Ayuda mutua, ecología sustantiva y bien común. \\
+    Philippe Meirieu (2020) · Institución & Brecha discurso--práctica y selección injusta. & Comunidades de argumentación con apoyos reales en CONALEP/CECyTE. \\
+    Keith Sawyer (2008) · Aula cognitiva & Instruccionismo superficial de fábrica. & Andamiaje, saberes previos («matemáticas ingenuas») y transferencia. \\
+    Martínez Rizo (2026) · Sistema (PISA) & Rankings sin contexto histórico ni social. & Diagnóstico local de comprensión frente a entrenamiento mecánico. \\
     \bottomrule
   \end{tabular}
 \end{frame}
 
-\begin{frame}{Inversión Radical: Del Mundo de Tiendas al de Tesoros}
-  \centering
-  \begin{tikzpicture}[
-    every node/.style={thick,rounded corners=4pt,text width=5.3cm,align=left,inner sep=7pt,font=\scriptsize},
-    arr/.style={->,very thick,>=Latex,iiiepeOrange}
-  ]
-    \node[draw=iiiepeOrange!90!black,fill=iiiepeWarm] (t1) at (0,0) {\textbf{\color{iiiepeOrange!85!black}Sociedad mercantil («Mundo de tiendas»)}\\Capricho consumista, fascinación mediática resignada y competencia mortal entre individuos.};
-    \node[draw=iiiepeNavy,fill=iiiepePale] (t2) at (6.8,0) {\textbf{\color{iiiepeNavy}Escuela emancipadora («Mundo de tesoros»)}\\Curiosidad, ayuda mutua, ecología profunda y cuestionamiento crítico donde \textit{nada se juega definitivamente}.};
-    \draw[arr] (t1) -- (t2);
-  \end{tikzpicture}
-  \vspace{0.4cm}
-  \begin{block}{Consecuencia formativa}
-    \small Comprender que nuestras decisiones económicas y tecnológicas no son fatalidades inexorables, sino opciones humanas transformables colectivamente.
-  \end{block}
-\end{frame}
-
-\begin{frame}{Implicaciones para la Enseñanza de las Matemáticas}
-  \begin{itemize}\normalsize
-    \item \textbf{De fichas taylorianas a problemas compartibles:} Explorar modelos reales de taller (calibración, costos, gráficas) en grupos cooperativos.
-    \item \textbf{Apoyo antes que exclusión:} Usar preguntas diagnósticas y rodeos concretos cuando surja dificultad con fracciones, razones o despejes.
-    \item \textbf{Tecnología dialogada:} Contrastar gráficas digitales con argumentación verbal presencial donde todos «ocupen su lugar».
+\begin{frame}{Conclusiones y Referencias (APA 7)}
+  \begin{itemize}\small
+    \item La infografía vectorial en LaTeX/TikZ sintetiza la cohesión entre propósito público (Meirieu), cognición profunda (Sawyer) y evidencia evaluativa (Martínez Rizo).
+    \item En matemáticas, el rigor disciplinar solo se democratiza acompañando las dificultades con rodeos didácticos pertinentes.
   \end{itemize}
-\end{frame}
-
-\begin{frame}{Conclusiones sobre Philippe Meirieu (2020)}
-  \begin{itemize}\normalsize
-    \item La escuela después no puede limitarse a digitalizar la pedagogía selectiva de antes.
-    \item Enseñar matemáticas con justicia requiere transformar objetivos en metas acompañadas y nunca en filtros previos.
-    \item Articular rigor conceptual, ayuda mutua y conocimientos infinitamente compartibles convierte el aula en motor democrático.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Referencias y Créditos}
-  \scriptsize\setlength{\parskip}{5pt}
-  \begin{itemize}
-    \item CONALEP. (2025). \textit{Perfil de egreso: Profesional Técnico-Bachiller en Mecatrónica}. Secretaría Académica.
-    \item Delors, J., et al. (1996). \textit{La educación encierra un tesoro}. Santillana/UNESCO.
-    \item Henderson, P., et al. (2017). \textit{Improving mathematics in Key Stages 2 and 3}. EEF.
-    \item Meirieu, P. (2020). ``La escuela después''... ¿Con la pedagogía de antes? \textit{MCEP de Madrid}.
-    \item Pimienta Prieto, J. H. (2008). \textit{Evaluación de los aprendizajes}. Pearson.
-    \item Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. OECD.
-    \item UNESCO. (2015). \textit{Replantear la educación: ¿Hacia un bien común mundial?} UNESCO.
-  \end{itemize}
-  \vspace{0.2cm}
-  \textbf{Créditos:} Mtro. Martín Jonathan de la Cruz Muñoz · Matrícula 00874 · MAEM IIIEPE · SD26.
+  \vspace{0.3cm}
+  \scriptsize
+  \textbf{Referencias:} Martínez Rizo, F. (2026). \textit{Resultados de PISA 2025}. Nexos; Meirieu, P. (2020). \textit{MCEP}; Sawyer, R. K. (2008). \textit{Optimizing learning}. OECD; UNESCO (2015). \textit{Replantear la educación}.
 \end{frame}
 
 \end{document}
