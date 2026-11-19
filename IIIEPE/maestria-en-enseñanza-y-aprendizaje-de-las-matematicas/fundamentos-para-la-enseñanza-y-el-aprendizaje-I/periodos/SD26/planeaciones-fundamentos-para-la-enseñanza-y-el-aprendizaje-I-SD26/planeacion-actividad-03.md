@@ -1,4 +1,4 @@
-# Planeación Académica: Repensar la Escuela: Infografía y Síntesis Comparada Meirieu–Sawyer
+# Planeación Académica: Infografía Philippe Meirieu (2020): La Escuela Después... ¿Con la Pedagogía de Antes?
 
 **Unidad de Aprendizaje:** Fundamentos para la Enseñanza y el Aprendizaje I (`IIIEPE-1048-SD26-ACT03`)
 **Programa Educativo:** Maestría en Enseñanza y Aprendizaje de las Matemáticas
@@ -28,16 +28,16 @@
 
 ## 2. Instrucción y Consigna Formativa
 
-Leer reflexivamente a Keith Sawyer (2008) y Philippe Meirieu (2020), crear una infografía con título, cuerpo visual, fuentes y créditos que refleje las conexiones entre ambos autores, y fundamentar su transferencia a matemáticas.
+A partir de Philippe Meirieu (2020), La escuela después... ¿con la pedagogía de antes?, crear una infografía con título, cuerpo visual, fuentes y créditos que refleje las conexiones entre sus conceptos clave, y fundamentar su transferencia a matemáticas.
 
 ### Requisitos Contractuales
 - **req-1:** Incluir todos los elementos de la infografía: título, cuerpo visual equilibrado, fuentes y créditos.
-- **req-2:** Recoger todos los conceptos clave de Sawyer (2008) y Meirieu (2020): diagnóstico, cambio de paradigma, yo+nosotros, 5 condiciones, rol docente, tecnología y evaluación.
+- **req-2:** Recoger los conceptos clave de Meirieu (2020): brecha discurso-práctica, yo+nosotros, crítica tecnocrática, objetivos vs prerrequisitos, algo más vs más de lo mismo, derecho efectivo y mundo de tesoros.
 - **req-3:** Mantener armonía visual cromática (paleta IIIEPE), tipografía legible y análisis aplicado a matemáticas.
 
 ### Preguntas Guía de Investigación
-- **[Convergencia Meirieu–Sawyer] **¿Cómo convergen la crítica a la escuela transmisiva de Sawyer y la construcción de lo común de Meirieu?
-- **[Tensión tecnológica] **¿Por qué la tecnología digital es un medio pedagógico subordinado y no un sustituto de la relación docente?
+- **[Dialéctica común-singular en Meirieu] **¿Qué significa decir yo y hacer nosotros en la enseñanza de las matemáticas sin transformar objetivos en prerrequisitos?
+- **[Tecnología y rodeo pedagógico] **¿Por qué la pedagogía cooperativa cara a cara exige ofrecer algo más en vez de más de lo mismo o mero consumo individual de pantallas?
 
 ---
 
@@ -47,7 +47,7 @@ Leer reflexivamente a Keith Sawyer (2008) y Philippe Meirieu (2020), crear una i
 - **Denominación:** infografia_y_reporte
 - **Formato editable:** `application/x-tex` -> `periodos/SD26/actividades-plataforma-SD26/actividad-03-rubrica-infografia/reporte.tex`
 - **Formato de entrega:** `application/pdf` -> `periodos/SD26/entregas-fundamentos-para-la-enseñanza-y-el-aprendizaje-I-SD26/reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-03-rubrica-infografia_Martin-Jonathan-de-la-Cruz-Munoz.pdf`
-- **Extensión presupuestada:** 6 páginas (incluye infografía a página completa)
+- **Extensión presupuestada:** 7 páginas (incluye infografía a página completa)
 - **Patrón de nomenclatura:** `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-03-rubrica-infografia_Martin-Jonathan-de-la-Cruz-Munoz.pdf`
 ### Producto: `prod-presentacion-act-03`
 - **Denominación:** presentacion_beamer
@@ -63,7 +63,7 @@ Leer reflexivamente a Keith Sawyer (2008) y Philippe Meirieu (2020), crear una i
 - **Ponderación total:** 100.0 pts
 - **crit-1:** Organización de contenido infográfico (título, cuerpo, fuentes y créditos equilibrados) (25.0 pts)
 - **crit-2:** Distribución de la información, paleta cromática y tipografía (25.0 pts)
-- **crit-3:** Contenido de conceptos e ideas clave de Sawyer (2008) y Meirieu (2020) (25.0 pts)
+- **crit-3:** Contenido de conceptos e ideas clave de Philippe Meirieu (2020) (25.0 pts)
 - **crit-4:** Alineación documental, transferencia a matemáticas y referencias APA 7 (25.0 pts)
 - **Comprobaciones editoriales obligatorias:** Puntaje EMS >= 90 (banda MAESTRO), Citas autor-año resueltas sin signos ??, Referencias APA 7ma edición verificables, Diagramas TikZ y tablas sin desbordamientos, Compilación reproducible con rc=0.
 
