@@ -6,7 +6,7 @@
 - **Periodo Académico:** SD26
 - **Estudiante:** Mtro. Martín Jonathan de la Cruz Muñoz (Matrícula: 00874)
 - **Docente Titular:** Mtro. Oscar Zertuche Santos
-- **Fecha de sincronización:** 2026-11-19 19:37:20 UTC
+- **Fecha de sincronización:** 2026-11-19 20:14:13 UTC
 
 ## Invariantes Editoriales Verificados
 
@@ -17,7 +17,7 @@
 - [x] Documentos complementarios (presentaciones y fichas) sincronizados en carpeta formal de entrega.
 - [ ] **Aprobación humana explícita previa a cualquier envío a Moodle (Compuerta Fail-Closed Activa).**
 
-## Manifiesto de Archivos Sincronizados (17 productos)
+## Manifiesto de Archivos Sincronizados (30 productos)
 
 | Actividad | Tipo | Archivo Entregable | Tamaño (KB) | SHA-256 (12 pref) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -38,6 +38,19 @@
 | `actividad-08-trabajo-final` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-08-trabajo-final_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 236.9 KB | `43bd68631510...` |
 | `actividad-08-trabajo-final` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-08-trabajo-final_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 200.8 KB | `4ba2dc4a160d...` |
 | `actividad-08-trabajo-final` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-08-trabajo-final_Martin-Jonathan-de-la-Cruz-Munoz.pptx` | 313.6 KB | `96a65c11315a...` |
+| `actividad-09-infografia-sawyer-ciencias-aprendizaje` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-09-infografia-sawyer-ciencias-aprendizaje_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 232.3 KB | `8cf4b584760c...` |
+| `actividad-09-infografia-sawyer-ciencias-aprendizaje` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-09-infografia-sawyer-ciencias-aprendizaje_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 132.3 KB | `e4282a95cdd0...` |
+| `actividad-10-tipos-aprendizaje-siglo-xxi` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-10-tipos-aprendizaje-siglo-xxi_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 156.2 KB | `ba5bb343cb2e...` |
+| `actividad-10-tipos-aprendizaje-siglo-xxi` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-10-tipos-aprendizaje-siglo-xxi_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 125.5 KB | `9aa23c884316...` |
+| `actividad-11-siete-habilidades-basicas` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-11-siete-habilidades-basicas_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 166.2 KB | `35518ca04914...` |
+| `actividad-11-siete-habilidades-basicas` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-11-siete-habilidades-basicas_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 201.7 KB | `28f47a33be8b...` |
+| `actividad-11-siete-habilidades-basicas` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-11-siete-habilidades-basicas_Martin-Jonathan-de-la-Cruz-Munoz.docx` | 4.4 KB | `8f23121fa540...` |
+| `actividad-12-escuela-tradicional-nem-y-tres-reportes` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-12-escuela-tradicional-nem-y-tres-reportes_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 171.6 KB | `d14ade7432d1...` |
+| `actividad-12-escuela-tradicional-nem-y-tres-reportes` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-12-escuela-tradicional-nem-y-tres-reportes_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 155.0 KB | `09cdf43fc671...` |
+| `actividad-13-metodologias-sociocriticas-nem` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-13-metodologias-sociocriticas-nem_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 140.2 KB | `39d23dbac06b...` |
+| `actividad-13-metodologias-sociocriticas-nem` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-13-metodologias-sociocriticas-nem_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 125.4 KB | `d928e8621864...` |
+| `actividad-14-cincuenta-innovaciones-educativas` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-14-cincuenta-innovaciones-educativas_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 189.8 KB | `e7faa79e64bc...` |
+| `actividad-14-cincuenta-innovaciones-educativas` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-14-cincuenta-innovaciones-educativas_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 134.9 KB | `c38e4d346422...` |
 
 > [!IMPORTANT]
 > Esta carpeta contiene los productos listos para revisión y entrega. El agente de navegación y entrega opera en modo fail-closed y NO subirá ningún archivo a Moodle sin autorización expresa y directa del usuario.
