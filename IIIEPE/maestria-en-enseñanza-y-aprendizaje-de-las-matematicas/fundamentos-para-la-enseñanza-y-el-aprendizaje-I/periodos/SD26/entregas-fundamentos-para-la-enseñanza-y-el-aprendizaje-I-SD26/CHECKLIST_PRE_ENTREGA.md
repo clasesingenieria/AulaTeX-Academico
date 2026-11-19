@@ -1,26 +1,43 @@
-# Checklist Pre-Entrega · Fundamentos para la Enseñanza y el Aprendizaje I (SD26)
+# Checklist de Verificación Pre-Entrega - Fundamentos para la Enseñanza y el Aprendizaje I (SD26)
 
-**Institución:** Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación (IIIEPE)  
-**Periodo:** Septiembre - Diciembre 2026 (SD26) · **Curso Moodle:** `pfm01-an2026-a` (ID `1048`)  
-**Estudiante:** Mtro. Martín Jonathan de la Cruz Muñoz (Matrícula: `00874`)  
-**Fecha de Generación:** 2026-11-14 10:47:28 UTC  
-**Salvaguarda Fail-Closed:** Retención activa. Se requiere autorización explícita antes del envío a Moodle.  
+- **Institución:** IIIEPE (Posgrados en Educación)
+- **Carrera:** Maestría en Enseñanza y Aprendizaje de las Matemáticas
+- **Asignatura:** Fundamentos para la Enseñanza y el Aprendizaje I (Course ID: 1048)
+- **Periodo Académico:** SD26
+- **Estudiante:** Mtro. Martín Jonathan de la Cruz Muñoz (Matrícula: 00874)
+- **Docente Titular:** Mtro. Oscar Zertuche Santos
+- **Fecha de sincronización:** 2026-11-19 19:10:45 UTC
 
----
+## Invariantes Editoriales Verificados
 
-## Inventario de Entregables Certificados (-SD26)
+- [x] Tipografía académica LaTeX normalizada y compilación con rc=0.
+- [x] Fuentes y aparato crítico APA 7ma edición alineados con consignas verificadas.
+- [x] Sin fugas de credenciales, contraseñas o tokens en archivos entregables.
+- [x] Integridad de hashes SHA-256 sellada en `delivery_manifest.json`.
+- [x] Documentos complementarios (presentaciones y fichas) sincronizados en carpeta formal de entrega.
+- [ ] **Aprobación humana explícita previa a cualquier envío a Moodle (Compuerta Fail-Closed Activa).**
 
-| Act | Título / Tema | Moodle ID | Reporte PDF (-SD26) | Presentación PDF (-SD26) | SHA-256 (Reporte) | EMS | Estatus |
-| :-: | :--- | :-: | :--- | :--- | :--- | :-: | :---: |
-| **1** | El Futuro del Aprendizaje y Transfo | `50157` | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-01-recursos-sesion-1_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-01-recursos-sesion-1_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | `e8d2aa88e33c...` | 100.0 | 🔵 `entregable_generado` |
-| **2** | ¿Cómo soy como maestro?: Silueta y  | `50158` | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-02-identidad-docente_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-02-identidad-docente_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | `9489cf8c67af...` | 100.0 | 🔵 `entregable_generado` |
-| **3** | Dimensiones del Aprendizaje en el S | `51440` | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-03-rubrica-infografia_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-03-rubrica-infografia_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | `976f2b6f2ffb...` | 100.0 | 🔵 `entregable_generado` |
-| **4** | La Investigación-Acción como Estrat | `51676` | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-04-investigacion-accion_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-04-investigacion-accion_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | `391c4c914642...` | 100.0 | 🔵 `entregable_generado` |
-| **5** | El Aprendizaje Profundo y las Cienc | `51707` | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-05-aprendizaje-profundo_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-05-aprendizaje-profundo_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | `ec082947d30b...` | 100.0 | 🔵 `entregable_generado` |
-| **6** | Tercer Momento: Evaluación Auténtic | `51809` | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-06-tercer-momento_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-06-tercer-momento_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | `ea8f32e77b03...` | 100.0 | 🔵 `entregable_generado` |
-| **7** | El Modelo Bioecológico de Bronfenbr | `51813` | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-07-modelo-bioecologico_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-07-modelo-bioecologico_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | `6b5bbe9a9ef4...` | 100.0 | 🔵 `entregable_generado` |
-| **8** | Trabajo Final Integrador: Propuesta | `50172` | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-08-trabajo-final_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-08-trabajo-final_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | `c8cc19995ccc...` | 100.0 | 🔵 `entregable_generado` |
+## Manifiesto de Archivos Sincronizados (17 productos)
 
----
-*Total de archivos sincronizados: 16 entregables sellados con SHA-256.*  
-*Gobernanza: Matriz de Nomenclatura Progresiva aplicada exitosamente.*
+| Actividad | Tipo | Archivo Entregable | Tamaño (KB) | SHA-256 (12 pref) |
+| :--- | :--- | :--- | :--- | :--- |
+| `actividad-01-recursos-sesion-1` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-01-recursos-sesion-1_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 192.5 KB | `ba887c54a898...` |
+| `actividad-01-recursos-sesion-1` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-01-recursos-sesion-1_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 163.7 KB | `6a7d0ba0f8c4...` |
+| `actividad-02-identidad-docente` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-02-identidad-docente_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 148.5 KB | `9d0f048e89c3...` |
+| `actividad-02-identidad-docente` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-02-identidad-docente_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 131.4 KB | `9f5802576ba7...` |
+| `actividad-03-rubrica-infografia` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-03-rubrica-infografia_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 210.3 KB | `c33097bbf22a...` |
+| `actividad-03-rubrica-infografia` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-03-rubrica-infografia_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 137.1 KB | `7065136138a5...` |
+| `actividad-04-investigacion-accion` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-04-investigacion-accion_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 185.4 KB | `c8f846a46bf6...` |
+| `actividad-04-investigacion-accion` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-04-investigacion-accion_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 145.6 KB | `53fe4f13a0df...` |
+| `actividad-05-aprendizaje-profundo` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-05-aprendizaje-profundo_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 186.4 KB | `6d23e598b926...` |
+| `actividad-05-aprendizaje-profundo` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-05-aprendizaje-profundo_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 192.5 KB | `282a1d0020ac...` |
+| `actividad-06-tercer-momento` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-06-tercer-momento_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 222.1 KB | `2d2cc1e27acf...` |
+| `actividad-06-tercer-momento` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-06-tercer-momento_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 156.2 KB | `926c1224fbd0...` |
+| `actividad-07-modelo-bioecologico` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-07-modelo-bioecologico_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 141.5 KB | `356bb1d719a5...` |
+| `actividad-07-modelo-bioecologico` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-07-modelo-bioecologico_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 136.4 KB | `16876237bf21...` |
+| `actividad-08-trabajo-final` | reporte | `reporte-fundamentos-ensenanza-aprendizaje-i-SD26-act-08-trabajo-final_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 236.9 KB | `f48b3b71ac4f...` |
+| `actividad-08-trabajo-final` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-08-trabajo-final_Martin-Jonathan-de-la-Cruz-Munoz.pdf` | 200.8 KB | `bf926d4cd69d...` |
+| `actividad-08-trabajo-final` | presentacion | `presentacion-fundamentos-ensenanza-aprendizaje-i-SD26-act-08-trabajo-final_Martin-Jonathan-de-la-Cruz-Munoz.pptx` | 313.6 KB | `96a65c11315a...` |
+
+> [!IMPORTANT]
+> Esta carpeta contiene los productos listos para revisión y entrega. El agente de navegación y entrega opera en modo fail-closed y NO subirá ningún archivo a Moodle sin autorización expresa y directa del usuario.

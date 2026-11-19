@@ -113,39 +113,39 @@ La Figura~\ref{fig:act2-silueta} representa de manera integrada los tres ejes so
   % Torso y brazos estilizados contenidos dentro de x in [-1.15, 1.15]
   \draw[fill=iiiepeBlue!10,draw=iiiepeNavy,very thick,rounded corners=10pt]
     (-0.32,2.42) -- (0.32,2.42) -- (1.12,2.10) -- (1.02,0.55) -- (0.78,0.55) -- (0.72,1.65)
-    -- (0.66,-1.65) -- (0.14,-1.65) -- (0.06,-0.10) -- (-0.06,-0.10) -- (-0.14,-1.65) -- (-0.66,-1.65)
+    -- (0.66,-1.95) -- (0.14,-1.95) -- (0.06,-0.25) -- (-0.06,-0.25) -- (-0.14,-1.95) -- (-0.66,-1.95)
     -- (-0.72,1.65) -- (-0.78,0.55) -- (-1.02,0.55) -- (-1.12,2.10) -- cycle;
 
-  % Etiquetas centrales dentro del torso (sin tocar cajas laterales ni encimarse)
-  \node[draw=iiiepeNavy,fill=white,rounded corners=3pt,thick,text width=1.95cm,align=center,inner sep=3pt] (c1) at (0,1.76)
-    {\textbf{\color{iiiepeNavy}CENTRO IDENTITARIO}\\Identidad técnica y humanista};
-  \node[draw=iiiepeAqua!80!black,fill=iiiepeMint,rounded corners=3pt,thick,text width=1.85cm,align=center,inner sep=3pt] (c2) at (0,0.32)
+  % Etiquetas centrales posicionadas relativamente (cero traslape)
+  \node[draw=iiiepeNavy,fill=white,rounded corners=3pt,thick,text width=1.95cm,align=center,inner sep=3pt,anchor=north] (c1) at (0,2.28)
+    {\textbf{\color{iiiepeNavy}CENTRO}\\Identidad técnica y humanista};
+  \node[draw=iiiepeAqua!80!black,fill=iiiepeMint,rounded corners=3pt,thick,text width=1.85cm,align=center,inner sep=3pt,below=0.22cm of c1] (c2)
     {\textbf{\color{iiiepeNavy}RASGOS CLAVE}\\Rigor · Diálogo\\Dignidad · Equidad};
 
-  % Columna izquierda: x <= -1.65 (completamente fuera de x = -1.12)
-  \node[draw=iiiepeNavy,fill=iiiepePale,rounded corners=4pt,thick,text width=5.65cm,align=left,inner sep=6pt,anchor=north east] (l1) at (-1.65,3.75) {%
+  % Columna izquierda: x <= -1.65 y posicionamiento vertical relativo
+  \node[draw=iiiepeNavy,fill=iiiepePale,rounded corners=4pt,thick,text width=5.65cm,align=left,inner sep=6pt,anchor=north east] (l1) at (-1.65,3.85) {%
     \textbf{\color{iiiepeNavy}\small LADO IZQUIERDO: FORTALEZAS SITUADAS}\\[2pt]
     \textbf{1. Modelación técnica aplicada (CONALEP/CECyTE):} Al estudiar relaciones lineales con sensores o costos de mantenimiento, traduzco fenómenos físicos en modelos matemáticos verificables.\\[2pt]
     \textbf{2. Claridad estructural (Ingeniería):} Organizo problemas complejos en etapas de análisis dimensional, hipótesis y comprobación crítica.\\[2pt]
     \textbf{3. Trato digno e inclusivo:} Genero confianza en el pizarrón validando las preguntas genuinas sin ridiculizar bloqueos previos.
   };
 
-  \node[draw=iiiepeOrange!90!black,fill=iiiepeWarm,rounded corners=4pt,thick,text width=5.65cm,align=left,inner sep=6pt,anchor=north east] (l2) at (-1.65,-0.05) {%
+  \node[draw=iiiepeOrange!90!black,fill=iiiepeWarm,rounded corners=4pt,thick,text width=5.65cm,align=left,inner sep=6pt,below=0.28cm of l1.south west,anchor=north west] (l2) {%
     \textbf{\color{iiiepeOrange!85!black}\small ÁREAS DE OPORTUNIDAD EN EL AULA}\\[2pt]
     \textbf{1. Prisa por cerrar el algoritmo:} Ante falta de tiempo de bloque, he terminado mostrando el despeje antes de que los equipos conjeturen su estrategia.\\[2pt]
     \textbf{2. Evaluación formativa sistemática:} Paso con facilidad de ejercicios guiados a exámenes escritos sin matrices previas de argumentación.\\[2pt]
     \textbf{3. Heterogeneidad matemática:} Requiero andamiajes escalonados para alumnos que ingresan con fragilidad aritmética y algebraica.
   };
 
-  % Columna derecha: x >= +1.65 (completamente fuera de x = +1.12)
-  \node[draw=iiiepeBlue,fill=iiiepePale,rounded corners=4pt,thick,text width=5.65cm,align=left,inner sep=6pt,anchor=north west] (r1) at (1.65,3.75) {%
+  % Columna derecha: x >= +1.65 y posicionamiento vertical relativo
+  \node[draw=iiiepeBlue,fill=iiiepePale,rounded corners=4pt,thick,text width=5.65cm,align=left,inner sep=6pt,anchor=north west] (r1) at (1.65,3.85) {%
     \textbf{\color{iiiepeBlue}\small LADO DERECHO: NECESIDADES DE FORMACIÓN}\\[2pt]
     \textbf{1. Didáctica para el aprendizaje profundo:} Diseñar secuencias basadas en indagación y andamiaje progresivo \citep{sawyer2008optimizing}.\\[2pt]
     \textbf{2. Retroalimentación que haga pensar:} Dominar devoluciones descriptivas y criterios compartidos \citep{eef2021feedback}.\\[2pt]
     \textbf{3. Investigación-acción e inclusión:} Documentar evidencia de clase para adaptar la enseñanza a contextos sociofamiliares diversos \citep{restrepo2004investigacion,bronfenbrenner2006bioecologico}.
   };
 
-  \node[draw=iiiepeAqua!80!black,fill=iiiepeMint,rounded corners=4pt,thick,text width=5.65cm,align=left,inner sep=6pt,anchor=north west] (r2) at (1.65,-0.05) {%
+  \node[draw=iiiepeAqua!80!black,fill=iiiepeMint,rounded corners=4pt,thick,text width=5.65cm,align=left,inner sep=6pt,below=0.28cm of r1.south west,anchor=north west] (r2) {%
     \textbf{\color{iiiepeAqua!75!black}\small BIBLIOGRAFÍA PRIORITARIA JUSTIFICADA}\\[2pt]
     \textbf{· \citeauthor{sawyer2008optimizing} (2008):} Comprender principios de ciencias del aprendizaje frente a la transmisión.\\[2pt]
     \textbf{· \citeauthor{meirieu2020escuela} (2020):} Reconstruir el sentido democrático, colectivo y emancipador del aula.\\[2pt]
@@ -155,9 +155,9 @@ La Figura~\ref{fig:act2-silueta} representa de manera integrada los tres ejes so
 
   % Conectores limpios sin cruzar el texto
   \draw[->,thick,iiiepeNavy] (l1.east) -- (-0.95,1.95);
-  \draw[->,thick,iiiepeOrange!90!black] (l2.east) -- (-0.75,-0.55);
+  \draw[->,thick,iiiepeOrange!90!black] (l2.east) -- (-0.68,-0.80);
   \draw[->,thick,iiiepeBlue] (1.05,1.95) -- (r1.west);
-  \draw[->,thick,iiiepeAqua!80!black] (0.75,-0.55) -- (r2.west);
+  \draw[->,thick,iiiepeAqua!80!black] (0.68,-0.80) -- (r2.west);
 \end{tikzpicture}
 \caption{Silueta docente: articulación entre identidad profesional, análisis situado de la práctica y ruta de formación.}
 \label{fig:act2-silueta}
