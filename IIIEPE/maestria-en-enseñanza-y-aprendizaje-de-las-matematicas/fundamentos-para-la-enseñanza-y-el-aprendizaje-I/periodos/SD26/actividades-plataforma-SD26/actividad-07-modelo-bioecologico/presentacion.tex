@@ -34,8 +34,8 @@
 \setbeamertemplate{frametitle}{%
   \nointerlineskip%
   \begin{beamercolorbox}[wd=\paperwidth,ht=0.95cm,dp=0.22cm,leftskip=0.45cm,rightskip=0.45cm]{frametitle}%
-    \usebeamerfont{frametitle}\insertframetitle%
-    \hfill\includegraphics[height=0.58cm]{img/iiiepe/logo-iiiepe-blanco.png}%
+    \begin{minipage}[c]{13.2cm}\usebeamerfont{frametitle}\large\bfseries\insertframetitle\end{minipage}%
+    \hfill\begin{minipage}[c]{1.6cm}\raggedleft\includegraphics[height=0.56cm]{img/iiiepe/logo-iiiepe-blanco.png}\end{minipage}%
   \end{beamercolorbox}%
 }
 
@@ -152,17 +152,17 @@
 
 \begin{frame}{6. Sistemas Contextuales Concéntricos}
   \centering
-  \begin{tikzpicture}[font=\tiny, scale=0.80, transform shape]
-    \draw[draw=iiiepeNavy,fill=iiiepePale,thick] (0,0) ellipse (6.5cm and 3.6cm);
-    \draw[draw=iiiepeBlue,fill=white,thick] (0,0) ellipse (5.1cm and 2.8cm);
-    \draw[draw=iiiepeAqua!80!black,fill=iiiepeMint,thick] (0,0) ellipse (3.7cm and 2.0cm);
-    \draw[draw=iiiepeOrange!90!black,fill=iiiepeWarm,thick] (0,0) ellipse (2.3cm and 1.25cm);
-    \node[fill=iiiepeNavy,text=white,rounded corners=2pt,align=center,inner sep=3pt] at (0,0)
+  \begin{tikzpicture}[font=\tiny, scale=0.76, transform shape]
+    \draw[draw=iiiepeNavy,fill=iiiepePale,thick] (0,0) ellipse (6.8cm and 4.1cm);
+    \draw[draw=iiiepeBlue,fill=white,thick] (0,0) ellipse (5.3cm and 3.2cm);
+    \draw[draw=iiiepeAqua!80!black,fill=iiiepeMint,thick] (0,0) ellipse (3.8cm and 2.3cm);
+    \draw[draw=iiiepeOrange!90!black,fill=iiiepeWarm,thick] (0,0) ellipse (2.3cm and 1.4cm);
+    \node[fill=iiiepeNavy,text=white,rounded corners=2pt,text width=2.8cm,align=center,inner sep=3pt] at (0,-0.25)
       {\textbf{PROCESOS PROXIMALES}\\Persona $\leftrightarrow$ Símbolos y Pares};
-    \node[iiiepeOrange!85!black,font=\tiny\bfseries] at (0,0.92) {Microsistema: Aula, taller, hogar};
-    \node[iiiepeAqua!75!black,font=\tiny\bfseries] at (0,1.68) {Mesosistema: Relación escuela--hogar--taller};
-    \node[iiiepeBlue,font=\tiny\bfseries] at (0,2.45) {Exosistema: Horarios, presupuesto, empleo};
-    \node[iiiepeNavy,font=\tiny\bfseries] at (0,3.22) {Macrosistema: Cultura matemática, NEM, equidad};
+    \node[fill=iiiepeOrange!90!black,text=white,rounded corners=2pt,font=\tiny\bfseries,inner sep=2pt] at (0,1.05) {Microsistema: Aula, taller, hogar};
+    \node[fill=iiiepeAqua!80!black,text=white,rounded corners=2pt,font=\tiny\bfseries,inner sep=2pt] at (0,1.92) {Mesosistema: Relación escuela--hogar--taller};
+    \node[fill=iiiepeBlue,text=white,rounded corners=2pt,font=\tiny\bfseries,inner sep=2pt] at (0,2.80) {Exosistema: Horarios, presupuesto, empleo};
+    \node[fill=iiiepeNavy,text=white,rounded corners=2pt,font=\tiny\bfseries,inner sep=2pt] at (0,3.68) {Macrosistema: Cultura matemática, NEM, equidad};
   \end{tikzpicture}
 \end{frame}
 

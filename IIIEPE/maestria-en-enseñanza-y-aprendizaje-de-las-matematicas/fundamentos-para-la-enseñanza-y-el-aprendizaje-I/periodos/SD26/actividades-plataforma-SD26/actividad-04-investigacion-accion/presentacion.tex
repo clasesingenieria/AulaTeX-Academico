@@ -34,8 +34,8 @@
 \setbeamertemplate{frametitle}{%
   \nointerlineskip%
   \begin{beamercolorbox}[wd=\paperwidth,ht=0.95cm,dp=0.22cm,leftskip=0.45cm,rightskip=0.45cm]{frametitle}%
-    \usebeamerfont{frametitle}\insertframetitle%
-    \hfill\includegraphics[height=0.58cm]{img/iiiepe/logo-iiiepe-blanco.png}%
+    \begin{minipage}[c]{13.2cm}\usebeamerfont{frametitle}\large\bfseries\insertframetitle\end{minipage}%
+    \hfill\begin{minipage}[c]{1.6cm}\raggedleft\includegraphics[height=0.56cm]{img/iiiepe/logo-iiiepe-blanco.png}\end{minipage}%
   \end{beamercolorbox}%
 }
 
@@ -138,7 +138,7 @@
 \begin{frame}{Espiral Helicoidal de la Investigación-Acción}
   \centering
   \begin{tikzpicture}[font=\scriptsize, >=Latex, scale=0.88, transform shape]
-    \node[draw=iiiepeNavy,fill=iiiepePale,thick,circle,minimum size=2.1cm,align=center] (c) at (0,0) {\textbf{Saber\\Pedagógico}};
+    \node[draw=iiiepeNavy,fill=iiiepePale,thick,circle,minimum size=2.1cm,text width=1.8cm,align=center,font=\scriptsize\bfseries,text=iiiepeNavy] (c) at (0,0) {Saber\\Pedagógico};
     \node[draw=iiiepeNavy,fill=white,thick,rounded corners=3pt,text width=3.4cm,align=center] (a) at (0,2.5) {\textbf{1. Identificación}\\Deconstruir con evidencias};
     \node[draw=iiiepeBlue,fill=white,thick,rounded corners=3pt,text width=3.4cm,align=center] (b) at (4.3,0.9) {\textbf{2. Planificación}\\Diseñar intervención};
     \node[draw=iiiepeAqua!80!black,fill=iiiepeMint,thick,rounded corners=3pt,text width=3.4cm,align=center] (d) at (2.8,-2.1) {\textbf{3. Acción}\\Aplicar en el grupo};

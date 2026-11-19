@@ -34,8 +34,8 @@
 \setbeamertemplate{frametitle}{%
   \nointerlineskip%
   \begin{beamercolorbox}[wd=\paperwidth,ht=0.95cm,dp=0.22cm,leftskip=0.45cm,rightskip=0.45cm]{frametitle}%
-    \usebeamerfont{frametitle}\insertframetitle%
-    \hfill\includegraphics[height=0.58cm]{img/iiiepe/logo-iiiepe-blanco.png}%
+    \begin{minipage}[c]{13.2cm}\usebeamerfont{frametitle}\large\bfseries\insertframetitle\end{minipage}%
+    \hfill\begin{minipage}[c]{1.6cm}\raggedleft\includegraphics[height=0.56cm]{img/iiiepe/logo-iiiepe-blanco.png}\end{minipage}%
   \end{beamercolorbox}%
 }
 
@@ -146,7 +146,7 @@
 \begin{frame}{4. Triada de Dimensiones del Aprendizaje Profundo}
   \centering
   \begin{tikzpicture}[font=\scriptsize, >=Latex, scale=0.86, transform shape]
-    \node[draw=iiiepeNavy,fill=iiiepePale,thick,circle,minimum size=2.0cm,align=center] (c) at (0,0) {\textbf{Aprendizaje\\Matemático}};
+    \node[draw=iiiepeNavy,fill=iiiepePale,thick,circle,minimum size=2.0cm,text width=1.8cm,align=center,font=\scriptsize\bfseries,text=iiiepeNavy] (c) at (0,0) {Aprendizaje\\Matemático};
     \node[draw=iiiepeNavy,fill=white,thick,rounded corners=4pt,text width=5.0cm,align=center] (a) at (0,2.35) {\textbf{\color{iiiepeNavy}Cognitiva:} Pensamiento crítico, comprensión relacional y transferencia.};
     \node[draw=iiiepeBlue,fill=white,thick,rounded corners=4pt,text width=4.8cm,align=center] (b) at (-4.3,-1.7) {\textbf{\color{iiiepeBlue}Interpersonal:} Colaboración, escucha y argumentación matemática entre pares.};
     \node[draw=iiiepeAqua!80!black,fill=iiiepeMint,thick,rounded corners=4pt,text width=4.8cm,align=center] (d) at (4.3,-1.7) {\textbf{\color{iiiepeAqua!75!black}Intrapersonal:} Autorregulación, autoeficacia y mentalidad de crecimiento.};

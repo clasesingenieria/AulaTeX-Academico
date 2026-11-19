@@ -88,45 +88,49 @@ En esta Actividad 3 (módulo \texttt{51440}), presento primero la infografía so
 \section*{Infografía · Repensar la escuela: del modelo tradicional al aprendizaje profundo}
 \vspace{-4pt}
 \begin{center}
+\resizebox{0.97\linewidth}{!}{%
 \begin{tikzpicture}[font=\scriptsize, >=Latex]
-  % Marco principal apaisado: ancho total 22.8 cm, alto total 14.5 cm
-  \fill[iiiepePaper] (-11.4,-7.1) rectangle (11.4,7.1);
-  \draw[iiiepeNavy,very thick,rounded corners=6pt] (-11.4,-7.1) rectangle (11.4,7.1);
+  % Marco principal apaisado: ancho total 22.8 cm, alto total 14.3 cm
+  \fill[iiiepePaper] (-11.4,-7.05) rectangle (11.4,7.25);
+  \draw[iiiepeNavy,very thick,rounded corners=6pt] (-11.4,-7.05) rectangle (11.4,7.25);
 
   % Encabezado (Titulo)
-  \fill[iiiepeNavy,rounded corners=5pt] (-11.3,5.55) rectangle (11.3,7.0);
-  \node[anchor=west,text width=17.5cm,align=left] at (-11.0,6.28) {%
+  \fill[iiiepeNavy,rounded corners=5pt] (-11.3,5.48) rectangle (11.3,7.15);
+  \node[anchor=west,text width=17.4cm,align=left] at (-11.0,6.32) {%
     {\color{iiiepeAqua!45!white}\scriptsize\bfseries INFOGRAFÍA ACADÉMICA · FUNDAMENTOS PARA LA ENSEÑANZA Y EL APRENDIZAJE I (SD26)\par}%
-    {\color{white}\large\bfseries REPENSAR LA ESCUELA: DEL MODELO TRADICIONAL AL APRENDIZAJE PROFUNDO\par}%
-    {\color{white!85}\scriptsize Diálogo crítico entre Philippe Meirieu (2020) y R. Keith Sawyer (2008): hacia una docencia comprensiva y equitativa en matemáticas\par}
+    \vspace{2pt}%
+    {\color{white}\normalsize\bfseries REPENSAR LA ESCUELA: DEL MODELO TRADICIONAL AL APRENDIZAJE PROFUNDO\par}%
+    \vspace{2pt}%
+    {\color{white!85}\scriptsize Diálogo crítico entre Philippe Meirieu (2020) y R. Keith Sawyer (2008): hacia una docencia comprensiva y equitativa\par}
   };
-  \node[anchor=east] at (10.95,6.28) {\includegraphics[height=1.1cm]{img/iiiepe/logo-iiiepe-blanco.png}};
+  \node[anchor=east] at (10.95,6.32) {\includegraphics[height=1.05cm]{img/iiiepe/logo-iiiepe-blanco.png}};
 
   % BLOQUE 1: Diagnostico compartido (izquierda superior)
-  \node[draw=iiiepeNavy,fill=white,thick,rounded corners=4pt,text width=6.9cm,minimum height=4.45cm,anchor=north west,inner sep=6pt,align=left] (b1) at (-11.05,5.3) {%
+  \node[draw=iiiepeNavy,fill=white,thick,rounded corners=4pt,text width=6.55cm,minimum height=4.35cm,anchor=north west,inner sep=5pt,align=left,font=\fontsize{6.8}{8.3}\selectfont] (b1) at (-11.05,5.25) {%
     {\colorbox{iiiepeNavy}{\color{white}\bfseries\ 1. DIAGNÓSTICO COMPARTIDO DE LA ESCUELA \ }}\\[4pt]
     \textbf{\color{iiiepeNavy}Philippe Meirieu (2020):} Denuncia la \textbf{brecha entre discurso y práctica}: las desigualdades escolares se naturalizan cuando se vuelve acríticamente a la «normalidad» transmisiva. La escuela pierde su sentido si reduce la educación a instrucción doméstica fragmentada o consumo individual de pantallas.\\[4pt]
     \textbf{\color{iiiepeBlue}R. Keith Sawyer (2008):} Muestra que el modelo escolar heredado de la era industrial se diseñó para transmitir hechos estandarizados, memorizar procedimientos y medir recuerdo aislado; dicho esquema resulta incompatible con la sociedad del conocimiento y bloquea la comprensión real.
   };
 
   % BLOQUE 2: Cambio de paradigma (centro superior)
-  \node[draw=iiiepeBlue,fill=white,thick,rounded corners=4pt,text width=7.2cm,minimum height=4.45cm,anchor=north,inner sep=6pt,align=left] (b2) at (0.0,5.3) {%
+  \node[draw=iiiepeBlue,fill=white,thick,rounded corners=4pt,text width=6.85cm,minimum height=4.35cm,anchor=north,inner sep=5pt,align=left,font=\fontsize{6.6}{8.1}\selectfont] (b2) at (0.0,5.25) {%
     {\colorbox{iiiepeBlue}{\color{white}\bfseries\ 2. CAMBIO DE PARADIGMA EDUCATIVO \ }}\\[4pt]
-    \begin{tabular}{p{3.2cm}|p{3.35cm}}
+    \setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+    \begin{tabular}{p{2.95cm}|p{3.25cm}}
       \textbf{\color{iiiepeOrange!85!black}Modelo tradicional} & \textbf{\color{iiiepeNavy}Aprendizaje profundo} \\
       \hline
       Saber como datos aislados y algoritmos sin sentido & Conocimiento conceptual conectado y transferible \\
       \hline
-      Estudiante receptor pasivo y evaluación punitiva & Agente que explica, conjetura y reflexiona con evidencias \\
+      Estudiante receptor pasivo y evaluación punitiva & Agente que explica, conjetura y reflexiona con evidencia \\
       \hline
       Uniformidad mecánica y competencia individual & Inclusión efectiva, andamiaje y colaboración auténtica \\
       \hline
-      Tecnología como simple reemplazo de pizarrón & Mediación pedagógica con propósito intelectual claro \\
+      Tecnología como simple reemplazo de pizarrón & Mediación pedagógica con propósito intelectual \\
     \end{tabular}
   };
 
   % BLOQUE 3: Cinco condiciones de las ciencias del aprendizaje (derecha superior)
-  \node[draw=iiiepeAqua!80!black,fill=iiiepeMint,thick,rounded corners=4pt,text width=6.9cm,minimum height=4.45cm,anchor=north east,inner sep=6pt,align=left] (b3) at (11.05,5.3) {%
+  \node[draw=iiiepeAqua!80!black,fill=iiiepeMint,thick,rounded corners=4pt,text width=6.55cm,minimum height=4.35cm,anchor=north east,inner sep=5pt,align=left,font=\fontsize{6.8}{8.3}\selectfont] (b3) at (11.05,5.25) {%
     {\colorbox{iiiepeAqua!80!black}{\color{white}\bfseries\ 3. CINCO PRINCIPIOS DE SAWYER (2008) \ }}\\[4pt]
     \textbf{1. Conocimientos previos:} Toda enseñanza sólida parte de las ideas iniciales y concepciones alternativas del grupo.\\[2pt]
     \textbf{2. Problemas auténticos:} El razonamiento emerge ante situaciones significativas y no frente a copias mecánicas.\\[2pt]
@@ -136,14 +140,14 @@ En esta Actividad 3 (módulo \texttt{51440}), presento primero la infografía so
   };
 
   % BLOQUE 4: Aprender juntos (izquierda inferior)
-  \node[draw=iiiepeOrange!90!black,fill=iiiepeWarm,thick,rounded corners=4pt,text width=10.6cm,minimum height=4.2cm,anchor=south west,inner sep=6pt,align=left] (b4) at (-11.05,-5.85) {%
+  \node[draw=iiiepeOrange!90!black,fill=iiiepeWarm,thick,rounded corners=4pt,text width=10.55cm,minimum height=4.05cm,anchor=south west,inner sep=6pt,align=left,font=\fontsize{7.0}{8.5}\selectfont] (b4) at (-11.05,-5.82) {%
     {\colorbox{iiiepeOrange!85!black}{\color{white}\bfseries\ 4. APRENDER JUNTOS: YO + NOSOTROS Y CONOCIMIENTO DISTRIBUIDO \ }}\\[4pt]
     \textbf{\color{iiiepeNavy}Lo común y lo singular (Meirieu):} La escuela existe para hacer sociedad; su núcleo no es sumar aprendizajes aislados, sino equilibrar el desarrollo singular de cada alumno con la construcción de reglas, argumentos y bienes comunes (\textit{yo + nosotros}).\\[4pt]
-    \textbf{\color{iiiepeBlue}Colaboración auténtica (Sawyer):} Las investigaciones cognitivas confirman que argumentar hipótesis entre pares, confrontar representaciones distintas y distribuir responsabilidades intelectuales produce comprensiones más estables que el estudio solitario. En el aula de matemáticas, justificar ante otros transforma la fórmula en razonamiento compartido.
+    \textbf{\color{iiiepeBlue}Colaboración auténtica (Sawyer):} Las investigaciones cognitivas confirman que argumentar hipótesis entre pares, confrontar representaciones distintas y distribuir responsabilidades intelectuales produce comprensiones más estables que el estudio solitario. En matemáticas, justificar ante otros transforma la fórmula en razonamiento compartido.
   };
 
   % BLOQUE 5: Rol docente, tecnologia, equidad y evaluacion (derecha inferior)
-  \node[draw=iiiepeNavy,fill=iiiepePale,thick,rounded corners=4pt,text width=10.6cm,minimum height=4.2cm,anchor=south east,inner sep=6pt,align=left] (b5) at (11.05,-5.85) {%
+  \node[draw=iiiepeNavy,fill=iiiepePale,thick,rounded corners=4pt,text width=10.55cm,minimum height=4.05cm,anchor=south east,inner sep=6pt,align=left,font=\fontsize{7.0}{8.5}\selectfont] (b5) at (11.05,-5.82) {%
     {\colorbox{iiiepeNavy}{\color{white}\bfseries\ 5. DOCENTE INSUSTITUIBLE, EQUIDAD, TECNOLOGÍA Y EVALUACIÓN \ }}\\[4pt]
     \textbf{· Mediación humana irreemplazable:} Ninguna plataforma sustituye el vínculo pedagógico ni la lectura ética del aula (Meirieu). La tecnología es un medio subordinado al proyecto didáctico, nunca su reemplazo.\\[3pt]
     \textbf{· Equidad como derecho efectivo:} No basta con ofrecer acceso formal; se requieren andamiajes diferenciados para que quienes parten en desventaja alcancen comprensión profunda.\\[3pt]
@@ -158,15 +162,16 @@ En esta Actividad 3 (módulo \texttt{51440}), presento primero la infografía so
   \draw[<->,very thick,iiiepeNavy] (b4.east) -- (b5.west);
 
   % Pie con Fuentes y Creditos
-  \fill[iiiepeNavy,rounded corners=4pt] (-11.3,-7.0) rectangle (11.3,-6.05);
-  \node[anchor=west,text width=14.0cm,align=left,font=\tiny\color{white}] at (-11.0,-6.52) {%
+  \fill[iiiepeNavy,rounded corners=4pt] (-11.3,-6.95) rectangle (11.3,-6.02);
+  \node[anchor=west,text width=14.0cm,align=left,font=\tiny\color{white}] at (-11.0,-6.48) {%
     \textbf{FUENTES (APA 7):} Meirieu, P. (2020). ``La escuela después''... ¿con la pedagogía de antes? \textit{MCEP}. · Sawyer, R. K. (2008). Optimizing learning: Implications of learning sciences research. En \textit{Innovating to learn, learning to innovate} (pp. 45--65). OECD. · Síntesis del curso PFM01 IIIEPE.
   };
-  \node[anchor=east,text width=7.5cm,align=right,font=\tiny\color{white}] at (11.0,-6.52) {%
+  \node[anchor=east,text width=7.5cm,align=right,font=\tiny\color{white}] at (11.0,-6.48) {%
     \textbf{CRÉDITOS:} Mtro. Martín Jonathan de la Cruz Muñoz (Matrícula 00874)\\
     MAEM · IIIEPE · Cohorte SD26 · 19 de noviembre de 2026
   };
-\end{tikzpicture}
+\end{tikzpicture}%
+}
 \end{center}
 \end{landscape}
 \clearpage
@@ -178,12 +183,12 @@ La elaboración de la infografía anterior evidencia que \citet{meirieu2020escue
 Desde mi criterio como docente de matemáticas en educación media superior técnica y nivel superior en ingeniería, la convergencia más fértil entre ambos autores aparece en tres puntos críticos:
 \begin{enumerate}
   \item \textbf{Tensión tecnológica y mediación pedagógica:} Tanto en la experiencia reciente de educación mediada por pantallas como en la incorporación de simuladores matemáticos, suele confundirse modernización operativa con innovación pedagógica. Sin embargo, como advierte \citet{meirieu2020escuela}, las herramientas digitales amplifican el aislamiento si cada estudiante interactúa solo frente a un tutorial que premia el acierto rápido. Solo bajo el diseño de problemas auténticos y andamiaje dialogado \citep{sawyer2008optimizing}, la tecnología apoya la visualización gráfica o el contraste experimental de hipótesis.
-  \item \textbf{El aula como colectivo frente al individualismo:} En preparatoria técnica e ingeniería, fragmentar a los grupos en listas individuales de ejercicios fomenta la competencia memorística. Recuperar la dialéctica entre lo común y lo singular (\textit{yo + nosotros}) implica diseñar espacios donde un equipo de mantenimiento o de análisis numérico confronte distintas estrategias para modelar un fenómeno, descubriendo en el diálogo por qué un procedimiento es más general o menos propenso a errores que otro \citep{eef2017mathematics}.
-  \item \textbf{De la igualdad formal al derecho efectivo de aprender:} El análisis propio muestra que tratar por igual a estudiantes con puntos de partida desiguales perpetúa el rezago en matemáticas. Garantizar el aprendizaje profundo requiere andamiajes accesibles, criterios explícitos de argumentación y evaluación formativa centrada en evidencias comprensivas en lugar de castigar la duda inicial \citep{pimienta2008evaluacion,unesco2015replantear}.
+  \item \textbf{El aula como colectivo frente al individualismo:} En preparatoria técnica e ingeniería, fragmentar a los grupos en listas individuales de ejercicios fomenta la competencia memorística. Es decir, cuando cada alumno trabaja aislado pierde la riqueza argumentativa; por ello, recuperar la dialéctica entre lo común y lo singular (\textit{yo + nosotros}) implica diseñar espacios donde un equipo de mantenimiento o de análisis numérico confronte distintas estrategias para modelar un fenómeno, descubriendo en el diálogo por qué un procedimiento es más general o menos propenso a errores que otro \citep{eef2017mathematics}.
+  \item \textbf{De la igualdad formal al derecho efectivo de aprender:} El análisis propio muestra que tratar por igual a estudiantes con puntos de partida desiguales perpetúa el rezago en matemáticas. Además, la evaluación punitiva oculta necesidades reales de aprendizaje; no obstante, garantizar el aprendizaje profundo requiere andamiajes accesibles, criterios explícitos de argumentación y evaluación formativa centrada en evidencias comprensivas en lugar de castigar la duda inicial \citep{pimienta2008evaluacion,unesco2015replantear}.
 \end{enumerate}
 
 \section{Transferencia a la práctica profesional y aula de matemáticas}
-En el contexto laboral y docente de las matemáticas aplicadas, esta síntesis orienta una reorganización precisa de las secuencias didácticas. Al trabajar contenidos como razones de cambio, sistemas lineales o estadística descriptiva en bachillerato técnico e ingeniería, el enfoque tradicional presenta primero la fórmula, luego dos ejemplos resueltos en el pizarrón y finalmente veinte ejercicios repetitivos. En contraste, aplicar los cinco principios de \citet{sawyer2008optimizing} junto con la visión comunitaria de \citet{meirieu2020escuela} conlleva: (a) activar saberes previos mediante una situación física cercana; (b) trabajar en equipos pequeños con roles de argumentación compartidos; (c) ofrecer guías de andamiaje graduado que orienten la validación dimensional sin dar la respuesta; y (d) concluir con una puesta en común donde se exija justificar verbalmente y por escrito la validez del modelo frente a los datos.
+En el contexto laboral y docente de las matemáticas aplicadas, esta síntesis orienta una reorganización precisa de las secuencias didácticas. Al trabajar contenidos como razones de cambio, sistemas lineales o estadística descriptiva en bachillerato técnico e ingeniería, el enfoque tradicional presenta primero la fórmula, luego dos ejemplos resueltos en el pizarrón y finalmente veinte ejercicios repetitivos. En consecuencia, aplicar los cinco principios de \citet{sawyer2008optimizing} junto con la visión comunitaria de \citet{meirieu2020escuela} conlleva: (a) activar saberes previos mediante una situación física cercana; (b) trabajar en equipos pequeños con roles de argumentación compartidos; (c) ofrecer guías de andamiaje graduado que orienten la validación dimensional sin dar la respuesta; y (d) concluir con una puesta en común donde se exija justificar verbalmente y por escrito la validez del modelo frente a los datos.
 
 \clearpage
 \section{Conclusiones y síntesis argumentativa}
