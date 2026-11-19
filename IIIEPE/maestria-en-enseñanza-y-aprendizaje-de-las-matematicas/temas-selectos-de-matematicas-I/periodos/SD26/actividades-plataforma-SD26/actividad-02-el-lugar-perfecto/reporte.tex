@@ -1,0 +1,167 @@
+\documentclass[spanish,letterpaper,oneside]{article}
+
+\def\documenttitle {El lugar perfecto}
+\def\documentsubtitle {Temas selectos de matemáticas I · Cohorte SD26}
+\def\documentsubject {Actividad 2 (Sesión 9) · Mediatrices, Bisectrices, Circuncentro e Incentro en GeoGebra}
+\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\coursename {Temas selectos de matemáticas I}
+\def\coursecode {PFM02}
+
+\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León}
+\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
+\def\universitydepartment {Temas selectos de matemáticas I}
+\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
+\def\universitydepartmentimagecfg {height=1.75cm}
+\def\universitylocation {Monterrey, Nuevo León}
+\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\studentid {00874}
+\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
+\def\programperiod {2do periodo, agosto--noviembre de 2026 (SD26)}
+\def\programmodality {Modalidad presencial y en línea}
+\def\programshort {MAEM}
+
+\def\authortable {
+  \begin{tabular}{ll}
+    \textbf{Alumno:} & \studentfullname \\
+    Matrícula: & \studentid \\
+    Correo institucional: & \studentemail \\
+    Unidad: & \coursename \\
+    Programa: & \programshort \\
+    Periodo: & \programperiod \\
+    & \\
+    \multicolumn{2}{l}{Fecha de realización: 17 de octubre de 2026} \\
+    \multicolumn{2}{l}{\universitylocation}
+  \end{tabular}
+}
+
+\input{template}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{amsmath,amssymb,booktabs,array,longtable,pdflscape,tikz,tabularx,colortbl,pgfplots,enumitem,needspace}
+\usepackage[most]{tcolorbox}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+\pgfplotsset{compat=1.18}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\definecolor{iiiepePale}{HTML}{EEF5F8}
+\def\portraittitlecolor {iiiepeNavy}
+\setcitestyle{authoryear,open={(},close={)}}
+
+\newcommand{\insertcoverwatermark}{%
+  \AddToShipoutPictureBG*{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[opacity=.06,inner sep=0pt] at (current page.center)
+      {\includegraphics[width=.58\paperwidth]{img/iiiepe/logo-puntos.png}};
+    \end{tikzpicture}%
+  }%
+}
+
+\newtcolorbox{propuestabox}[1][]{%
+  enhanced,breakable,
+  colback=iiiepePaper,colframe=iiiepeAqua!80!iiiepeNavy,
+  boxrule=1pt,leftrule=4pt,arc=2pt,
+  left=8pt,right=8pt,top=6pt,bottom=6pt,
+  before skip=6pt,after skip=10pt,
+  fonttitle=\bfseries\color{white},coltitle=white,
+  colbacktitle=iiiepeNavy,
+  attach boxed title to top left={xshift=8pt,yshift=-2pt},
+  boxed title style={colback=iiiepeNavy,colframe=iiiepeNavy,arc=1pt},
+  title={Propuesta didáctica},#1}
+
+\setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
+\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 2}\setstretch{1.25}\raggedbottom
+
+\section{Retos presenciales de equidistancia (regla y compás)}
+La Sesión 9 del Bloque II aborda los lugares geométricos de equidistancia a partir de tres situaciones escolares contextualizadas:
+\begin{enumerate}
+  \item \textbf{Reto 1 (¿Dónde colocarías el bebedero?):} Colocar un bebedero equidistante de dos salones puntuales $A$ y $B$. Al buscar un segundo punto y comprobar distancias, el alumnado descubre que existen \textbf{infinitos puntos posibles}, todos situados sobre la \textbf{mediatriz} del segmento $\overline{AB}$ (la recta perpendicular a $\overline{AB}$ por su punto medio). Con regla y compás se traza abriendo el compás más de la mitad de $AB$ y cortando arcos desde $A$ y $B$.
+  \item \textbf{Reto 2 (¿Habrá otro lugar posible entre dos caminos?):} Ubicar un árbol equidistante de dos caminos rectilíneos concurrentes (Camino 1 y Camino 2). Con compás se trazan arcos desde puntos simétricos sobre ambos lados y se determina la \textbf{bisectriz} del ángulo formado por los caminos: todo punto $P$ sobre la bisectriz verifica congruencia de triángulos rectángulos por criterio ALA/hipotenusa-ángulo y mantiene idéntica distancia perpendicular a ambos caminos.
+  \item \textbf{Reto 3 (Equidistancia a tres salones $A$, $B$ y $C$):} Al unir los tres salones no colineales formando $\triangle ABC$, basta construir las mediatrices de dos lados (por ejemplo $\overline{BC}$ y $\overline{AC}$). Si $O$ pertenece a ambas, cumple $OB = OC$ y $OA = OC$, luego por transitividad $OA = OB$, garantizando que $O$ pertenece también a la tercera mediatriz. Este punto único de concurrencia es el \textbf{circuncentro ($O$)}, centro de la circunferencia circunscrita a $\triangle ABC$.
+\end{enumerate}
+
+\section{Guía de trabajo ejecutada en GeoGebra Classic}
+
+\subsection{Actividad a. Punto equidistante de tres vértices (Circuncentro $O$)}
+Se construyó en GeoGebra Classic el triángulo escaleno acutángulo con vértices $A=(1,6)$, $B=(-3,-2)$ y $C=(6,1)$, sus tres mediatrices ($m_a, m_b, m_c$), el punto de intersección $O=(1,1)$ y los segmentos $OA, OB, OC$. Las mediciones certifican exactamente $OA = OB = OC = 5.00\text{ u}$ (radio de la circunferencia circunscrita).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.84\linewidth]{img/geogebra/act2_a_mediatrices_equidistancia.png}
+\caption{Actividad a (GeoGebra): Mediatrices, circuncentro $O=(1,1)$ y comprobación métrica $OA=OB=OC=5\text{ u}$.}
+\end{figure}
+
+\textbf{Respuestas a las preguntas de reflexión (Actividad a):} Las distancias $OA$, $OB$ y $OC$ son \textbf{iguales} ($5.00\text{ u}$ en la construcción). En consecuencia, el punto $O$ tiene la característica fundamental de \textbf{equidistar de los tres vértices del triángulo}, lo que permite trazar una circunferencia con centro en $O$ que pasa exactamente por $A$, $B$ y $C$.
+
+\subsection{Actividad b. Ubicación de $O$ según el tipo de triángulo}
+Se manipuló el triángulo en GeoGebra para inspeccionar los tres casos angulares:
+\begin{itemize}
+  \item \textbf{Triángulo acutángulo} ($A=(1,6), B=(-3,-2), C=(6,1)$): el circuncentro $O$ queda \textbf{en el interior} del triángulo.
+  \item \textbf{Triángulo rectángulo} ($A=(-3,4), B=(-3,-2), C=(5,-2)$, ángulo recto en $B=90^\circ$): el circuncentro $O=(1,1)$ queda \textbf{sobre el punto medio de la hipotenusa $\overline{AC}$} (consecuencia directa del Teorema de Tales).
+  \item \textbf{Triángulo obtusángulo} ($A=(-4,0), B=(5,0), C=(0,-1.5)$): el circuncentro $O$ queda \textbf{en el exterior} del triángulo, frente al ángulo obtuso.
+\end{itemize}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.32\linewidth]{img/geogebra/act2_b1_circuncentro_acutangulo.png}\hfill
+\includegraphics[width=0.32\linewidth]{img/geogebra/act2_b2_circuncentro_rectangulo.png}\hfill
+\includegraphics[width=0.32\linewidth]{img/geogebra/act2_b3_circuncentro_obtusangulo.png}
+\caption{Actividad b (GeoGebra): Posición del circuncentro $O$ en triángulo acutángulo (interior), rectángulo (punto medio de la hipotenusa) y obtusángulo (exterior).}
+\end{figure}
+
+\textbf{Respuesta a la pregunta de reflexión (Actividad b):} La ubicación de $O$ depende del mayor ángulo interior del triángulo: si los tres ángulos son agudos, $O$ permanece en el interior; cuando un ángulo alcanza $90^\circ$, las mediatrices de los catetos cortan exactamente en el punto medio de la hipotenusa; si un ángulo supera $90^\circ$, las mediatrices convergen fuera del triángulo. En contextos escolares reales (como ubicar un bebedero), un circuncentro exterior advertiría que el punto óptimo geométrico queda fuera del patio triangular delimitado.
+
+\subsection{Actividad c. Exploración de bisectrices interiores e Incentro $I$}
+Ocultando las mediatrices y trazando las tres bisectrices interiores ($b_A, b_B, b_C$), se identificó su punto de concurrencia $I$ (\textbf{incentro}) junto con la circunferencia inscrita tangente a los tres lados en los tres tipos de triángulos.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.32\linewidth]{img/geogebra/act2_c1_incentro_acutangulo.png}\hfill
+\includegraphics[width=0.32\linewidth]{img/geogebra/act2_c2_incentro_rectangulo.png}\hfill
+\includegraphics[width=0.32\linewidth]{img/geogebra/act2_c3_incentro_obtusangulo.png}
+\caption{Actividad c (GeoGebra): Bisectrices interiores e incentro $I$ (siempre interior) en acutángulo, rectángulo y obtusángulo.}
+\end{figure}
+
+\textbf{Respuesta a la pregunta de reflexión (Actividad c):} Al modificar los vértices en cualquier forma triangular, el punto $I$ \textbf{permanece siempre en el interior del triángulo}. La característica invariante que conserva es su \textbf{equidistancia perpendicular a los tres lados} del triángulo (el radio de la circunferencia inscrita), porque cada bisectriz es el lugar geométrico de los puntos equidistantes a dos lados adyacentes.
+
+\subsection{Actividad d. Comparación simultánea de Circuncentro $O$ e Incentro $I$}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.80\linewidth]{img/geogebra/act2_d_comparacion_circuncentro_incentro.png}
+\caption{Actividad d (GeoGebra): Contraste simultáneo de mediatrices ($O$, exterior en obtusángulo) y bisectrices ($I$, interior).}
+\end{figure}
+
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.22}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.20\linewidth}|>{\raggedright\arraybackslash}p{0.38\linewidth}|>{\raggedright\arraybackslash}p{0.38\linewidth}|}\hline
+\rowcolor{iiiepePale} \textbf{Tipo de triángulo} & \textbf{Ubicación de $O$ (Circuncentro)} & \textbf{Ubicación de $I$ (Incentro)} \\\hline
+\endfirsthead\hline
+\rowcolor{iiiepePale} \textbf{Tipo de triángulo} & \textbf{Ubicación de $O$ (Circuncentro)} & \textbf{Ubicación de $I$ (Incentro)} \\\hline
+\endhead
+Acutángulo & En el interior del triángulo. & En el interior del triángulo. \\\hline
+Rectángulo & En el punto medio de la hipotenusa. & En el interior del triángulo. \\\hline
+Obtusángulo & En el exterior del triángulo (opuesto al ángulo obtuso). & En el interior del triángulo. \\\hline
+\end{longtable}}
+
+\textbf{Diferencias clave entre $O$ e $I$ (Actividad d):} El circuncentro $O$ resulta de intersectar \textbf{mediatrices} de los lados (sin pasar necesariamente por los vértices), equidista de los \textbf{tres vértices} y puede ubicarse dentro, en el borde o fuera del triángulo; el incentro $I$ resulta de intersectar \textbf{bisectrices} de los ángulos interiores, equidista de los \textbf{tres lados} y siempre permanece en el interior. Solo coinciden en el triángulo equilátero.
+
+\section{Reflexión pedagógica para el aula de secundaria}
+\begin{itemize}
+  \item \textbf{Dificultades al construir mediatrices y bisectrices:} Confundir mediatriz con mediana (trazar hacia el vértice opuesto en lugar de perpendicularmente), elegir una abertura del compás menor o igual a $AB/2$ impidiendo el cruce de arcos, y perder precisión en el manejo del compás sobre papel.
+  \item \textbf{Ideas previas necesarias:} Concepto de distancia como menor longitud (perpendicular de punto a recta), punto medio de un segmento, ángulo y congruencia de triángulos rectángulos.
+  \item \textbf{Momento de formalización:} Conviene institucionalizar los nombres \textit{circuncentro} e \textit{incentro} \textbf{después} de la fase de exploración manipulativa y dinámica en GeoGebra (diapositiva 24), cuando los alumnos ya descubrieron la propiedad de equidistancia y necesitan nombrar un significado ya comprendido.
+  \item \textbf{Materiales alternativos:} Doblado de papel (papiroflexia geométrica sobre papel albanene), cuerdas tensadas en el patio, geoplanos circulares y GeoGebra clásico o en dispositivos móviles.
+\end{itemize}
+
+\needspace{5\baselineskip}\section*{Referencias}
+{\setstretch{1.15}\setlength{\parskip}{6pt}
+\par\hangindent=1.27cm\hangafter=1 Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León. (2026). \textit{Sesión 9: El lugar perfecto. Presentación interactiva, Guión 2 y rúbrica de evaluación}. EVA Posgrados IIIEPE.
+\par\hangindent=1.27cm\hangafter=1 Secretaría de Educación Pública. (2024). \textit{Programa de estudio para la educación secundaria: Programa sintético de la Fase 6}. SEP.
+}
+
+\end{document}

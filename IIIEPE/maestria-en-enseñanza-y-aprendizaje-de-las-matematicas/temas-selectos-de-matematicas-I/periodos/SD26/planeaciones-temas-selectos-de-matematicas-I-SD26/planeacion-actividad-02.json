@@ -1,0 +1,443 @@
+{
+  "schema_version": "1.0.0",
+  "plan_id": "pca-iiiepe-temas-selectos-matematicas-i-sd26-act-02",
+  "revision": 1,
+  "identity": {
+    "institution": "IIIEPE",
+    "program": "Maestría en Enseñanza y Aprendizaje de las Matemáticas",
+    "subject_id": "temas-selectos-de-matematicas-i",
+    "subject_title": "Temas Selectos de Matemáticas I",
+    "offering_id": "IIIEPE-1049-SD26",
+    "period": "SD26",
+    "modality": "in_person"
+  },
+  "sources": [
+    {
+      "id": "src-consigna-verificada",
+      "kind": "platform",
+      "authority": "instructional",
+      "title": "Consigna oficial verificada Curso 1049 - El lugar perfecto",
+      "url": "https://evaposgrados.iiiepe.edu.mx/aula/mod/assign/view.php?id=51565",
+      "path": "periodos/SD26/actividades-plataforma-SD26/actividad-02-el-lugar-perfecto/consigna-verificada.md",
+      "sha256": "4c21faee41dae71ed6b3c32a60e7b1611e0eb9704a5f3ed39c9b5e3cc44b2fbd",
+      "captured_at": "2026-11-19",
+      "media_type": "text/markdown"
+    },
+    {
+      "id": "src-recurso-1",
+      "kind": "docx",
+      "authority": "instructional",
+      "title": "GuiÃ³n 2_Nombre_Apellido.docx",
+      "url": "https://evaposgrados.iiiepe.edu.mx/aula/course/view.php?id=1049",
+      "path": "SD26/actividades-plataforma-SD26/actividad-02-el-lugar-perfecto/recursos-plataforma/51564/GuiÃ³n 2_Nombre_Apellido.docx",
+      "sha256": "168ec2ad07c72094186fd91673d2ff7e507f27dd3f1980d7840cac3f9fcb4404",
+      "captured_at": "2026-11-19",
+      "media_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    },
+    {
+      "id": "src-recurso-2",
+      "kind": "pdf",
+      "authority": "instructional",
+      "title": "RÃºbrica GuiÃ³n 2.pdf",
+      "url": "https://evaposgrados.iiiepe.edu.mx/aula/course/view.php?id=1049",
+      "path": "SD26/actividades-plataforma-SD26/actividad-02-el-lugar-perfecto/recursos-plataforma/51564/RÃºbrica GuiÃ³n 2.pdf",
+      "sha256": "93c24bbfdbd03a7fc38cae69d37c468fdedd71427572731c921108b2bb068ce4",
+      "captured_at": "2026-11-19",
+      "media_type": "application/pdf"
+    }
+  ],
+  "curriculum": {
+    "purpose": "Explorar lugares geométricos de equidistancia mediante construcciones con regla, compás y GeoGebra Classic, formalizando mediatrices, bisectrices, circuncentro (O) e incentro (I).",
+    "competencies": [
+      {
+        "id": "comp-1",
+        "text": "Construye e interpreta mediatrices, bisectrices, circuncentro e incentro en GeoGebra Classic verificando invariantes métricas."
+      },
+      {
+        "id": "comp-2",
+        "text": "Analiza la transición entre exploración empírica y formalización geométrica para el aula de secundaria."
+      }
+    ],
+    "outcomes": [
+      {
+        "id": "out-1",
+        "text": "Completa las actividades a, b, c y d de la Guía GeoGebra con capturas verificables, tabla comparativa O vs. I y reflexión pedagógica."
+      }
+    ],
+    "topics": [
+      {
+        "id": "top-1",
+        "text": "Mediatriz y circuncentro (equidistancia a vértices)",
+        "children": []
+      },
+      {
+        "id": "top-2",
+        "text": "Bisectriz e incentro (equidistancia a lados del triángulo)",
+        "children": []
+      }
+    ]
+  },
+  "activities": [
+    {
+      "id": "actividad-02-el-lugar-perfecto",
+      "title": "El lugar perfecto",
+      "role": "assessment",
+      "platform": {
+        "name": "EVA Posgrados IIIEPE (Moodle)",
+        "course_id": "1049",
+        "module_ids": [
+          "51565"
+        ]
+      },
+      "unit_id": "Sesion-9",
+      "weeks": [
+        9
+      ],
+      "outcome_ids": [
+        "out-1"
+      ],
+      "topic_ids": [
+        "top-1",
+        "top-2"
+      ],
+      "cognitive": {
+        "taxonomy": "Bloom",
+        "level": "analisis",
+        "verb": "Analizar",
+        "object": "las propiedades invariantes y la ubicación relativa del circuncentro (O) y del incentro (I)",
+        "conditions": "mediante construcciones automatizadas en GeoGebra Classic sobre triángulos acutángulos, rectángulos y obtusángulos",
+        "observable_evidence": "Guión 2 Word con 8 capturas GeoGebra, reporte LaTeX, presentación Beamer y ficha del estudiante",
+        "justification": "Vincula la visualización dinámica en GeoGebra con la justificación deductiva de equidistancia."
+      },
+      "instruction": "Resolver los tres retos de equidistancia y ejecutar las actividades a, b, c y d en GeoGebra Classic, anexando capturas, tabla comparativa y reflexiones docentes.",
+      "requirements": [
+        {
+          "id": "req-1",
+          "text": "Construir en GeoGebra mediatrices y circuncentro O midiendo OA=OB=OC y explorando triángulos acutángulo, rectángulo y obtusángulo."
+        },
+        {
+          "id": "req-2",
+          "text": "Construir bisectrices interiores e incentro I en los tres tipos de triángulos y completar la tabla comparativa O vs. I."
+        },
+        {
+          "id": "req-3",
+          "text": "Responder todas las preguntas de reflexión matemática y didáctica en Guión 2 (.docx) y reporte LaTeX."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q-1",
+          "context": "Actividad b y c",
+          "text": "¿Por qué el circuncentro O puede ubicarse dentro, sobre la hipotenusa o fuera del triángulo, mientras el incentro I es siempre interior?",
+          "requirement_ids": [
+            "req-1"
+          ]
+        },
+        {
+          "id": "q-2",
+          "context": "Reflexión docente",
+          "text": "¿En qué momento didáctico conviene formalizar los términos circuncentro e incentro tras la exploración?",
+          "requirement_ids": [
+            "req-1"
+          ]
+        }
+      ],
+      "sequence": [
+        {
+          "id": "step-1",
+          "order": 1,
+          "phase": "preparation",
+          "action": "Extracción y lectura analítica de consigna, presentación interactiva y anexos oficiales.",
+          "inputs": [
+            "consigna-verificada.md",
+            "recursos-plataforma"
+          ],
+          "output": "Matriz de resolución y evidencia visual",
+          "completion_check": "Todos los retos, tablas y criterios de rúbrica cubiertos",
+          "requirement_ids": [
+            "req-1",
+            "req-2",
+            "req-3"
+          ],
+          "depends_on": []
+        },
+        {
+          "id": "step-2",
+          "order": 2,
+          "phase": "construction",
+          "action": "Desarrollo matemático, automatización GeoGebra (si aplica), guion Word y maquetación LaTeX.",
+          "inputs": [
+            "Matriz de resolución",
+            "template.tex"
+          ],
+          "output": "periodos/SD26/actividades-plataforma-SD26/actividad-02-el-lugar-perfecto/reporte.tex",
+          "completion_check": "Documentos completos con aparato crítico APA 7",
+          "requirement_ids": [
+            "req-1",
+            "req-2",
+            "req-3"
+          ],
+          "depends_on": [
+            "step-1"
+          ]
+        },
+        {
+          "id": "step-3",
+          "order": 3,
+          "phase": "review",
+          "action": "Compilación vía aulatex_latexmk y empaquetado SD26 con hashes SHA-256.",
+          "inputs": [
+            "reporte.tex",
+            "presentacion.tex",
+            "ficha-estudiante.tex"
+          ],
+          "output": "reporte-temas-selectos-matematicas-i-SD26-act-02-el-lugar-perfecto_Martin-Jonathan-de-la-Cruz-Munoz.pdf",
+          "completion_check": "Compilación rc=0 y manifiesto SHA-256 generado",
+          "requirement_ids": [
+            "req-1",
+            "req-2",
+            "req-3"
+          ],
+          "depends_on": [
+            "step-2"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "id": "res-consigna",
+          "source_id": "src-consigna-verificada",
+          "purpose": "Consigna oficial verificada y criterios de rúbrica SD26",
+          "required": true,
+          "access": "local",
+          "rights": "IIIEPE"
+        },
+        {
+          "id": "res-1",
+          "source_id": "src-recurso-1",
+          "purpose": "Material oficial recopilado de Moodle curso 1049 (GuiÃ³n 2_Nombre_Apellido.docx)",
+          "required": true,
+          "access": "local",
+          "rights": "IIIEPE"
+        },
+        {
+          "id": "res-2",
+          "source_id": "src-recurso-2",
+          "purpose": "Material oficial recopilado de Moodle curso 1049 (RÃºbrica GuiÃ³n 2.pdf)",
+          "required": true,
+          "access": "local",
+          "rights": "IIIEPE"
+        }
+      ],
+      "assessment": {
+        "kind": "summative",
+        "scale_total": 100.0,
+        "weight": 100.0,
+        "weight_unit": "pts",
+        "criteria": [
+          {
+            "id": "crit-1",
+            "text": "Construcciones geométricas presenciales y exploración completa en GeoGebra Classic",
+            "points": 40.0,
+            "descriptors": [
+              {
+                "level": "Excelente",
+                "description": "Construcciones geométricas presenciales y exploración completa en GeoGebra Classic",
+                "points": 40.0
+              }
+            ],
+            "requirement_ids": [
+              "req-1",
+              "req-2",
+              "req-3"
+            ]
+          },
+          {
+            "id": "crit-2",
+            "text": "Comprobación métrica, tabla comparativa O vs. I y respuestas geométricas precisas",
+            "points": 35.0,
+            "descriptors": [
+              {
+                "level": "Excelente",
+                "description": "Comprobación métrica, tabla comparativa O vs. I y respuestas geométricas precisas",
+                "points": 35.0
+              }
+            ],
+            "requirement_ids": [
+              "req-1",
+              "req-2",
+              "req-3"
+            ]
+          },
+          {
+            "id": "crit-3",
+            "text": "Reflexión pedagógica situada sobre dificultades y materiales en secundaria",
+            "points": 25.0,
+            "descriptors": [
+              {
+                "level": "Excelente",
+                "description": "Reflexión pedagógica situada sobre dificultades y materiales en secundaria",
+                "points": 25.0
+              }
+            ],
+            "requirement_ids": [
+              "req-1",
+              "req-2",
+              "req-3"
+            ]
+          }
+        ],
+        "editorial_checks": [
+          "Sin citas rotas ni marcadores pendientes",
+          "Rigor matemático comprobado y figuras vectoriales/GeoGebra legibles",
+          "Compilación LaTeX reproducible con rc=0"
+        ]
+      },
+      "products": [
+        {
+          "id": "prod-reporte-act-02",
+          "kind": "reporte_academico",
+          "recipient": "Plataforma EVA Posgrados IIIEPE (Curso 1049)",
+          "editable_format": "application/x-tex",
+          "submission_format": "application/pdf",
+          "structure": [
+            "Portada",
+            "Resolución de retos",
+            "Evidencias",
+            "Reflexión",
+            "Referencias"
+          ],
+          "length": "6 a 12 páginas",
+          "filename_pattern": "reporte-temas-selectos-matematicas-i-SD26-act-02-el-lugar-perfecto_Martin-Jonathan-de-la-Cruz-Munoz.pdf",
+          "accessibility": "PDF estructurado de alto contraste",
+          "requirement_ids": [
+            "req-1",
+            "req-2",
+            "req-3"
+          ],
+          "paths": {
+            "editable": "periodos/SD26/actividades-plataforma-SD26/actividad-02-el-lugar-perfecto/reporte.tex",
+            "delivery": "periodos/SD26/entregas-temas-selectos-de-matematicas-I-SD26/reporte-temas-selectos-matematicas-i-SD26-act-02-el-lugar-perfecto_Martin-Jonathan-de-la-Cruz-Munoz.pdf"
+          }
+        },
+        {
+          "id": "prod-presentacion-act-02",
+          "kind": "presentacion_beamer",
+          "recipient": "Plataforma EVA Posgrados IIIEPE (Curso 1049)",
+          "editable_format": "application/x-tex",
+          "submission_format": "application/pdf",
+          "structure": [
+            "Portada",
+            "Desarrollo",
+            "Evidencias visuales",
+            "Conclusiones"
+          ],
+          "length": "4 a 6 diapositivas",
+          "filename_pattern": "presentacion-temas-selectos-matematicas-i-SD26-act-02-el-lugar-perfecto_Martin-Jonathan-de-la-Cruz-Munoz.pdf",
+          "accessibility": "Beamer 16:10 institucional IIIEPE",
+          "requirement_ids": [
+            "req-1",
+            "req-2",
+            "req-3"
+          ],
+          "paths": {
+            "editable": "periodos/SD26/actividades-plataforma-SD26/actividad-02-el-lugar-perfecto/presentacion.tex",
+            "delivery": "periodos/SD26/entregas-temas-selectos-de-matematicas-I-SD26/presentacion-temas-selectos-matematicas-i-SD26-act-02-el-lugar-perfecto_Martin-Jonathan-de-la-Cruz-Munoz.pdf"
+          }
+        }
+      ],
+      "calendar": {
+        "opens_at": "2026-10-17T00:00:00-06:00",
+        "expected_at": "2026-10-23T23:59:00-06:00",
+        "due_at": "2026-10-23T23:59:00-06:00",
+        "closes_at": "2026-10-23T23:59:00-06:00",
+        "timezone": "America/Monterrey",
+        "literal": "23 de octubre de 2026, 23:59"
+      },
+      "policies": {
+        "ai": "Apoyo organizativo y automatización GeoGebra/LaTeX validados críticamente por el autor.",
+        "integrity": "Fidelidad estricta a las presentaciones, guiones y lecturas oficiales del curso 1049.",
+        "collaboration": "Equipo 4 (Actividad 1) / Binas e individual (Actividades 2–6)",
+        "citation": "APA 7ma edición",
+        "attempts": 1,
+        "late_submission": "Sujeto a consideración docente en EVA Posgrados IIIEPE",
+        "accessibility": "PDF vectorial + Word editable",
+        "privacy": "Resguardo estricto de credenciales y matrícula 00874",
+        "exceptions": []
+      },
+      "dependencies": [],
+      "alignment": [
+        {
+          "outcome_id": "out-1",
+          "requirement_ids": [
+            "req-1",
+            "req-2",
+            "req-3"
+          ],
+          "step_ids": [
+            "step-1",
+            "step-2",
+            "step-3"
+          ],
+          "product_ids": [
+            "prod-reporte-act-02",
+            "prod-presentacion-act-02"
+          ],
+          "criterion_ids": [
+            "crit-1",
+            "crit-2",
+            "crit-3"
+          ]
+        }
+      ],
+      "bindings": {
+        "extractor_directory": "periodos/SD26/actividades-plataforma-SD26/actividad-02-el-lugar-perfecto/recursos-plataforma",
+        "notes_directory": "referencias-temas-selectos-de-matematicas-I",
+        "research_directory": "referencias-temas-selectos-de-matematicas-I"
+      }
+    }
+  ],
+  "field_status": [
+    {
+      "path": "/identity/offering_id",
+      "state": "confirmed",
+      "reason": null,
+      "evidence": [
+        {
+          "source_id": "src-consigna-verificada",
+          "locator": "Moodle course_id=1049",
+          "quoted_text": "PFM02 Temas selectos de matemáticas 1. (Ago-Nov 2026 Grupo A) - El lugar perfecto"
+        }
+      ],
+      "alternatives": []
+    }
+  ],
+  "review": {
+    "state": "needs_review",
+    "reviewed_at": "2026-11-19",
+    "reviewer_role": "agente-planeador-aulatex",
+    "critical_gaps": [],
+    "semantic_validation": "passed"
+  },
+  "artifact_contract": {
+    "version": "1.1",
+    "paths_relative_to_subject": {
+      "plans": "periodos/SD26/planeaciones-temas-selectos-de-matematicas-I-SD26",
+      "references": "referencias-temas-selectos-de-matematicas-I",
+      "deliveries": "periodos/SD26/entregas-temas-selectos-de-matematicas-I-SD26"
+    },
+    "deliverables_directory": "periodos/SD26/entregas-temas-selectos-de-matematicas-I-SD26",
+    "source_directory": "periodos/SD26/actividades-plataforma-SD26/actividad-02-el-lugar-perfecto"
+  },
+  "extensions": {
+    "period_code": "SD26",
+    "moodle_course_id": 1049,
+    "moodle_module_id": 51565,
+    "codigo_referencia": "IIIEPE-1049-SD26-ACT02",
+    "fase_curricular": "Bloque II · Sesión 9 (17 de octubre de 2026)",
+    "docente": "Docente titular MAEM (Grupo A)",
+    "estudiante": "Mtro. Martín Jonathan de la Cruz Muñoz",
+    "matricula": "00874",
+    "generador": "construir_actividades_sd26_temas_selectos (PCA v1.0.0)"
+  }
+}

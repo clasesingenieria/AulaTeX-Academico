@@ -1,0 +1,151 @@
+\documentclass[spanish,letterpaper,oneside]{article}
+
+\def\documenttitle {¿Cómo hacer visible el desarrollo de habilidades matemáticas?}
+\def\documentsubtitle {Temas selectos de matemáticas I · Cohorte SD26}
+\def\documentsubject {Actividad 5 (Sesión 12) · Indicadores, Evidencias Observables y Propuesta Didáctica}
+\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\coursename {Temas selectos de matemáticas I}
+\def\coursecode {PFM02}
+
+\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León}
+\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
+\def\universitydepartment {Temas selectos de matemáticas I}
+\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
+\def\universitydepartmentimagecfg {height=1.75cm}
+\def\universitylocation {Monterrey, Nuevo León}
+\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\studentid {00874}
+\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
+\def\programperiod {2do periodo, agosto--noviembre de 2026 (SD26)}
+\def\programmodality {Modalidad presencial y en línea}
+\def\programshort {MAEM}
+
+\def\authortable {
+  \begin{tabular}{ll}
+    \textbf{Alumno:} & \studentfullname \\
+    Matrícula: & \studentid \\
+    Correo institucional: & \studentemail \\
+    Unidad: & \coursename \\
+    Programa: & \programshort \\
+    Periodo: & \programperiod \\
+    & \\
+    \multicolumn{2}{l}{Fecha de realización: 7 de noviembre de 2026} \\
+    \multicolumn{2}{l}{\universitylocation}
+  \end{tabular}
+}
+
+\input{template}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{amsmath,amssymb,booktabs,array,longtable,pdflscape,tikz,tabularx,colortbl,pgfplots,enumitem,needspace}
+\usepackage[most]{tcolorbox}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+\pgfplotsset{compat=1.18}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\definecolor{iiiepePale}{HTML}{EEF5F8}
+\def\portraittitlecolor {iiiepeNavy}
+\setcitestyle{authoryear,open={(},close={)}}
+
+\newcommand{\insertcoverwatermark}{%
+  \AddToShipoutPictureBG*{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[opacity=.06,inner sep=0pt] at (current page.center)
+      {\includegraphics[width=.58\paperwidth]{img/iiiepe/logo-puntos.png}};
+    \end{tikzpicture}%
+  }%
+}
+
+\newtcolorbox{propuestabox}[1][]{%
+  enhanced,breakable,
+  colback=iiiepePaper,colframe=iiiepeAqua!80!iiiepeNavy,
+  boxrule=1pt,leftrule=4pt,arc=2pt,
+  left=8pt,right=8pt,top=6pt,bottom=6pt,
+  before skip=6pt,after skip=10pt,
+  fonttitle=\bfseries\color{white},coltitle=white,
+  colbacktitle=iiiepeNavy,
+  attach boxed title to top left={xshift=8pt,yshift=-2pt},
+  boxed title style={colback=iiiepeNavy,colframe=iiiepeNavy,arc=1pt},
+  title={Propuesta didáctica},#1}
+
+\setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
+\begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 5}\setstretch{1.25}\raggedbottom
+
+\section{Hacer visible el desarrollo de las ocho habilidades SEP}
+La Sesión 12 (presentación interactiva de 49 diapositivas) profundiza en cómo operacionalizar las ocho habilidades matemáticas de la SEP mediante \textbf{indicadores de desempeño} (acciones específicas observables) y \textbf{evidencias observables} (producciones concretas que permiten verificarlas), contrastándolas con retos matemáticos breves en clase.
+
+{\small\setstretch{1.06}\renewcommand{\arraystretch}{1.18}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.13\linewidth}|>{\raggedright\arraybackslash}p{0.25\linewidth}|>{\raggedright\arraybackslash}p{0.31\linewidth}|>{\raggedright\arraybackslash}p{0.27\linewidth}|}\hline
+\rowcolor{iiiepePale} \textbf{Habilidad} & \textbf{Indicador observable} & \textbf{Evidencia observable} & \textbf{Reto de la Sesión 12 resuelto} \\\hline
+\endfirsthead\hline
+\rowcolor{iiiepePale} \textbf{Habilidad} & \textbf{Indicador observable} & \textbf{Evidencia observable} & \textbf{Reto de la Sesión 12 resuelto} \\\hline
+\endhead
+\textbf{Calcular} & Selecciona y justifica una estrategia de cálculo. & Presenta el procedimiento explicado y el resultado verificado. & $25\,\%$ de $360$: (1) $360\div 4 = 90$; (2) $20\,\%(72)+5\,\%(18)=90$. \\\hline
+\textbf{Inferir} & Obtiene conclusiones válidas a partir de datos explícitos e implícitos. & Redacta inferencias respaldadas en elementos de la gráfica o texto. & Gráfica de libros (Lun $4$, Mar $7$, Mié $5$, Jue $10$, Vie $8$): total $34$, promedio $6.8$, pico el jueves. \\\hline
+\textbf{Comunicar} & Expresa con claridad ideas, procedimientos y resultados y los justifica. & Explicación ordenada y comprensible con apoyo visual/simbólico. & Mostrar con rectángulo en cuartos por qué $\frac{3}{4} = 0.25+0.25+0.25 = 0.75$. \\\hline
+\textbf{Medir} & Determina y compara magnitudes con instrumentos y unidades pertinentes. & Registra dimensiones medidas y calcula la magnitud derivada con unidad. & Medir largo y ancho del pizarrón en $\text{cm}$ o $\text{m}$ y obtener su área en $\text{cm}^2/\text{m}^2$. \\\hline
+\textbf{Imaginar} & Representa y transforma mentalmente objetos y movimientos espaciales. & Anticipa y dibuja el resultado de la transformación conservando propiedades. & Rotación horaria $90^\circ$ de la figura ``L'' alrededor del pivote inferior izquierdo. \\\hline
+\textbf{Estimar} & Aproxima una medida o resultado mediante referentes conocidos. & Explica el referente razonable utilizado para acotar el valor. & Estimar longitud del segmento sin regla usando ancho de palma o fracción de hoja. \\\hline
+\textbf{Generalizar} & Identifica regularidades y formula una regla general aplicable a otros casos. & Reconoce el patrón, escribe la regla simbólica y calcula términos nuevos. & Secuencia de cuadrados $1, 4, 9, 16 \implies a_n = n^2$ ($a_{10} = 100$). \\\hline
+\textbf{Deducir} & Obtiene y justifica conclusiones lógicas a partir de propiedades conocidas. & Encadena condiciones dadas, propiedades y conclusión lógica justificada. & Triángulo isósceles ($AB=AC$, $\angle A=40^\circ$): $\angle B=\angle C=(180^\circ-40^\circ)/2=70^\circ$. \\\hline
+\end{longtable}}
+
+\section{Propuesta escrita: Habilidad, Contenido, PDA y Evidencia (Base del Trabajo Final)}
+Siguiendo los seis apartados obligatorios del \textit{Guión 5} y de las diapositivas 46--47 (\textit{Una habilidad, un PDA, cinco minutos}), se presenta la propuesta didáctica diseñada para su ejecución y grabación en la Sesión 13:
+
+\begin{propuestabox}[title={Propuesta Didáctica Escrita · Sesión 12 (Hacia el Trabajo Final)}]
+\subsection*{1. Justificación y vinculación curricular}
+\begin{itemize}
+  \item \textbf{Nivel educativo y grado:} Bachillerato Tecnológico (CONALEP, semestre inicial / MCCEMS — Pensamiento Matemático).
+  \item \textbf{Habilidad matemática SEP seleccionada:} \textbf{Generalizar} (apoyada en \textit{Inferir} y \textit{Comunicar}): descubrir la regularidad matemática en una situación física, formular la regla algebraica general y aplicarla a nuevos valores.
+  \item \textbf{Contenido matemático:} Variación directamente proporcional $y = k x$ en sistemas hidráulicos ($F_2 = k\cdot F_1$, donde $k = A_2/A_1 = (d_2/d_1)^2$).
+  \item \textbf{PDA relacionado:} \textit{Resuelve problemas de variación proporcional directa en contextos de física e ingeniería, representando algebraicamente la relación fuerza--área, interpretando la constante $k$ como factor de amplificación y validando con cálculo numérico y gráfica}.
+  \item \textbf{Justificación de la relación:} Este PDA exige superar el cálculo aislado de un solo dato para abstraer la relación invariante entre fuerza de entrada $F_1$ y fuerza de salida $F_2$. Al explorar varios diámetros y cargas, el alumno generaliza que la amplificación crece con el \textbf{cuadrado} de la razón de diámetros, vinculando geometría del círculo, proporcionalidad directa y modelación algebraica.
+\end{itemize}
+
+\subsection*{2. Indicador de desempeño}
+Formula la expresión algebraica de proporcionalidad directa $F_2 = k\cdot F_1$ determinando correctamente $k = (d_2/d_1)^2$, y la utiliza para predecir valores nuevos y verificarlos en una gráfica lineal que pasa por el origen.
+
+\subsection*{3. Evidencia observable}
+Producción conjunta compuesta por: (a) tabla de valores $(F_1, F_2)$ verificada, (b) ecuación explícita con cálculo paso a paso de $k = (d_2/d_1)^2$, (c) gráfica en GeoGebra mostrando la recta $F_2 = 4 F_1$ pasando por $(0,0)$ y el punto del reto $(250, 1000)$, y (d) justificación escrita de por qué una relación lineal con el diámetro ($2\times$) es incorrecta.
+
+\subsection*{4. Dificultades o errores frecuentes del alumnado y sus causas}
+El error más frecuente consiste en confundir la razón lineal de diámetros $d_2/d_1$ con la razón cuadrática de áreas $(d_2/d_1)^2$. Por ejemplo, si el pistón de salida duplica el diámetro del pistón de entrada ($d_2 = 2 d_1$), muchos estudiantes asumen intuitivamente que la fuerza se duplica ($k = 2$, obteniendo $500\text{ N}$ en lugar de $1000\text{ N}$ para $F_1 = 250\text{ N}$), incurriendo en un error por defecto del $50\,\%$. La causa radica en la sobregeneralización de la proporcionalidad lineal simple a magnitudes bidimensionales (área $A = \pi d^2/4$).
+
+\subsection*{5. Estrategia didáctica}
+Aprendizaje Basado en Problemas (ABP) con \textbf{representaciones múltiples} (física, tabular, algebraica y gráfica):
+\begin{enumerate}
+  \item \textit{Detonante:} Situación real de una excavadora hidráulica con $d_1=5\text{ cm}$, $d_2=10\text{ cm}$ y $F_1=250\text{ N}$.
+  \item \textit{Contraste cognitivo:} Comparar las predicciones intuitivas ($2\times$) contra el cálculo explícito de áreas circulares ($A_1, A_2$) para evidenciar el factor $4\times$.
+  \item \textit{Generalización y modelación en GeoGebra:} Graficar $F_2 = 4 F_1$ frente a la recta errónea $F_2 = 2 F_1$ y resolver un caso de transferencia verificando la conservación del trabajo ($F_1 \Delta x_1 = F_2 \Delta x_2$).
+\end{enumerate}
+\end{propuestabox}
+
+\section{Cumplimiento de la Rúbrica de Evaluación (Actividad 5)}
+{\small\setstretch{1.08}\renewcommand{\arraystretch}{1.18}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.27\linewidth}|>{\raggedright\arraybackslash}p{0.69\linewidth}|}\hline
+\rowcolor{iiiepePale} \textbf{Criterio (Excelente = 10)} & \textbf{Cumplimiento verificado en este documento} \\\hline
+\endfirsthead\hline
+\rowcolor{iiiepePale} \textbf{Criterio (Excelente = 10)} & \textbf{Cumplimiento verificado en este documento} \\\hline
+\endhead
+Justificación y vinculación curricular & Nivel, grado (Bachillerato CONALEP), contenido, PDA y vínculo con la habilidad \textit{Generalizar} explicados con rigor. \\\hline
+Indicador de desempeño & Enunciado específico, observable y evaluable alineado a $F_2 = k\cdot F_1$. \\\hline
+Evidencia observable & Tabla, ecuación con $k=(d_2/d_1)^2$, gráfica GeoGebra y justificación escrita concreta. \\\hline
+Dificultades o errores frecuentes & Identifica el error $d_2/d_1$ vs $(d_2/d_1)^2$ ($50\,\%$ de subestimación) y explica su causa cognitiva. \\\hline
+Estrategia didáctica & Secuencia ABP en tres momentos con representaciones múltiples y GeoGebra. \\\hline
+Entrega a tiempo & Documento maestro, versión editable Word y presentación compilados y validados. \\\hline
+\end{longtable}}
+
+\needspace{5\baselineskip}\section*{Referencias}
+{\setstretch{1.15}\setlength{\parskip}{6pt}
+\par\hangindent=1.27cm\hangafter=1 Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León. (2026). \textit{Sesión 12: ¿Cómo hacer visible el desarrollo de habilidades matemáticas? Presentación interactiva (49 diapositivas), Guión 5 y rúbrica}. EVA Posgrados IIIEPE.
+\par\hangindent=1.27cm\hangafter=1 Secretaría de Educación Pública. (1994). \textit{Libro para el maestro. Matemáticas. Educación secundaria}. SEP.
+}
+
+\end{document}

@@ -1,0 +1,56 @@
+\documentclass[spanish,letterpaper,oneside]{article}
+
+\def\documenttitle {Trabajo Final: Una habilidad, un PDA, cinco minutos · Ficha de trabajo}
+\def\documentsubtitle {Temas selectos de matemáticas I · Cohorte SD26}
+\def\documentsubject {Actividad 6 · Material para estudiantes}
+\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\coursename {Temas selectos de matemáticas I}
+\def\coursecode {PFM02}
+\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León}
+\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
+\def\universitydepartment {Temas selectos de matemáticas I}
+\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
+\def\universitydepartmentimagecfg {height=1.75cm}
+\def\universitylocation {Monterrey, Nuevo León}
+\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\studentid {00874}
+\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
+\def\programperiod {2do periodo, agosto--noviembre de 2026 (SD26)}
+\def\programmodality {Modalidad presencial y en línea}
+\def\programshort {MAEM}
+
+\def\authortable {
+  \begin{tabular}{ll}
+    \textbf{Docente:} & \studentfullname \\
+    Matrícula: & \studentid \\
+    Unidad: & \coursename \\
+    Periodo: & \programperiod \\
+    \multicolumn{2}{l}{Fecha: 14 de noviembre de 2026}
+  \end{tabular}
+}
+
+\input{template}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{amsmath,amssymb,array,longtable,tikz,tabularx,colortbl,enumitem}
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepePale}{HTML}{EEF5F8}
+\def\portraittitlecolor {iiiepeNavy}
+
+\setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
+\begin{document}\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Ficha Act. 6}\setstretch{1.2}\raggedbottom
+
+\section*{Reto del Trabajo Final: Sistema hidráulico proporcional}
+Nombre: \rule{8cm}{.2pt}\hfill Fecha: \rule{2.5cm}{.2pt}
+
+Un brazo hidráulico cuenta con un émbolo de entrada de diámetro $d_1 = 5\text{ cm}$ y un émbolo de salida de diámetro $d_2 = 10\text{ cm}$. Al aplicar una fuerza $F_1 = 250\text{ N}$ desplazando el émbolo menor $\Delta x_1 = 20\text{ cm}$:
+\begin{enumerate}
+  \item Calcula el factor cuadrático de amplificación $k = (d_2/d_1)^2$ y deduce $F_2 = k\cdot F_1$.
+  \item Determina el desplazamiento resultante $\Delta x_2$ por conservación de trabajo $F_1\Delta x_1 = F_2\Delta x_2$.
+  \item Completa una tabla para $F_1 \in \{0, 100, 200, 250\}\text{ N}$ y explica por qué suponer $F_2 = 2 F_1$ es erróneo.
+\end{enumerate}
+\vspace{3.5cm}
+
+\end{document}

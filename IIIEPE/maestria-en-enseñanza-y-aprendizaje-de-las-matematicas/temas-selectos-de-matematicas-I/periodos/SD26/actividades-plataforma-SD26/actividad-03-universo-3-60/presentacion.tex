@@ -1,0 +1,128 @@
+\pdfminorversion=7
+\documentclass[spanish,aspectratio=1610,xcolor={dvipsnames,table}]{beamer}
+\geometry{paperwidth=19.2cm,paperheight=12cm}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{lmodern,amsmath,amssymb,booktabs,array,graphicx,ragged2e,tikz,hyperref}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+
+\newcommand{\studentname}{Mtro. Martín Jonathan de la Cruz Muñoz}
+\newcommand{\studentshort}{M. de la Cruz Munoz}
+\newcommand{\studentid}{00874}
+\newcommand{\studentemail}{martin.delacruz@campus.iiiepe.edu.mx}
+\newcommand{\programname}{Maestría en Enseñanza y Aprendizaje de las Matemáticas}
+\newcommand{\programshort}{MAEM}
+\newcommand{\coursecode}{PFM02}
+\newcommand{\coursename}{Temas selectos de matemáticas I}
+\newcommand{\courseperiod}{Ago--Nov 2026 (SD26)}
+\newcommand{\institutionname}{IIIEPE}
+\newcommand{\iiiepelogo}{img/iiiepe/logo-iiiepe-blanco.png}
+\newcommand{\iiiepemark}{img/iiiepe/marca-iiiepe.png}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+
+\mode<presentation>{
+  \usetheme{default}
+  \usefonttheme{professionalfonts}
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{blocks}[rounded][shadow=false]
+}
+\hypersetup{colorlinks=true,urlcolor=iiiepeBlue,linkcolor=iiiepeNavy}
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{normal text}{fg=iiiepeInk,bg=white}
+\setbeamercolor{structure}{fg=iiiepeBlue}
+\setbeamercolor{frametitle}{fg=white,bg=iiiepeNavy}
+\setbeamercolor{title}{fg=white,bg=iiiepeNavy}
+\setbeamercolor{block title}{fg=white,bg=iiiepeBlue}
+\setbeamercolor{block body}{fg=iiiepeInk,bg=iiiepePaper}
+\setbeamercolor{block title alerted}{fg=white,bg=iiiepeOrange}
+\setbeamercolor{block body alerted}{fg=iiiepeInk,bg=iiiepeOrange!10}
+\setbeamerfont{title}{size=\Large,series=\bfseries}
+\setbeamerfont{frametitle}{size=\fontsize{13}{17}\selectfont,series=\bfseries}
+\setbeamerfont{block title}{series=\bfseries}
+\setbeamertemplate{itemize item}{\textcolor{iiiepeAqua}{$\blacktriangleright$}}
+
+\newcommand{\localLogo}[1]{\IfFileExists{#1}{\includegraphics[height=0.55cm]{#1}}{\textbf{\institutionname}}}
+\setbeamertemplate{frametitle}{
+  \nointerlineskip
+  \begin{beamercolorbox}[wd=\textwidth,ht=1.0cm,dp=0.2cm,leftskip=0.35cm,rightskip=0.25cm]{frametitle}
+    \begin{minipage}[c]{0.72\textwidth}\insertframetitle\end{minipage}\hfill\raisebox{-0.08cm}{\localLogo{\iiiepelogo}}
+  \end{beamercolorbox}
+  \vspace{-0.04cm}{\color{iiiepeOrange}\rule{\textwidth}{1.3pt}}
+}
+\setbeamertemplate{footline}{
+  \leavevmode\hbox{%
+    \begin{beamercolorbox}[wd=.34\paperwidth,ht=2.7ex,dp=1ex,leftskip=1em]{author in head/foot}\color{white}\studentshort\end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.42\paperwidth,ht=2.7ex,dp=1ex,center]{title in head/foot}\color{white}\programshort\ -- \coursecode\ (SD26)\end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.24\paperwidth,ht=2.7ex,dp=1ex,rightskip=1em plus 1fil]{date in head/foot}\color{white}Matrícula \studentid\hfill\insertframenumber/\inserttotalframenumber\end{beamercolorbox}%
+  }
+}
+\setbeamercolor{author in head/foot}{bg=iiiepeNavy}
+\setbeamercolor{title in head/foot}{bg=iiiepeBlue}
+\setbeamercolor{date in head/foot}{bg=iiiepeNavy}
+
+\title{Universo 3-60}
+\subtitle{Actividad 3 (Sesión 10) · Polígonos Inscritos, Ángulos Centrales e Inscritos}
+\author{\studentname\ (Matrícula \studentid)}
+\institute{\institutionname\ · \programname}
+\date{24 de octubre de 2026}
+
+\begin{document}
+\begin{frame}[plain]
+  \centering
+  \vspace{0.5cm}
+  \IfFileExists{\iiiepemark}{\includegraphics[height=1.6cm]{\iiiepemark}}{}
+  \vspace{0.35cm}
+  \begin{beamercolorbox}[sep=10pt,center,rounded=true,wd=0.88\textwidth]{title}
+    {\Large\bfseries Universo 3-60}\\[6pt]
+    {\small\color{iiiepePaper} Actividad 3 (Sesión 10) · Polígonos Inscritos, Ángulos Centrales e Inscritos}
+  \end{beamercolorbox}
+  \vspace{0.45cm}
+  {\normalsize\bfseries \studentname}\\
+  {\small Matrícula \studentid\ · \coursename\ (\coursecode) · \courseperiod}\\
+  {\footnotesize 24 de octubre de 2026}
+\end{frame}
+
+\begin{frame}{Triangulación de Polígonos y Ángulo Central}
+  \begin{columns}[T]
+    \column{0.52\textwidth}
+      \includegraphics[width=\linewidth]{img/geogebra/act3_poligonos_diagonales_angulos.png}
+    \column{0.45\textwidth}
+      \begin{block}{Regularidades descubiertas}
+        \begin{itemize}
+          \item Diagonales desde un vértice: $n - 3$.
+          \item Triángulos formados: $n - 2$.
+          \item Suma interior: $(n-2)\cdot 180^\circ$.
+          \item Ángulo central (polígono regular): $\frac{360^\circ}{n}$.
+          \item Ejemplo ($n=20$): $S = 3240^\circ$, $\theta_c = 18^\circ$, $\theta_i = 162^\circ$.
+        \end{itemize}
+      \end{block}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Teorema del Ángulo Central e Inscrito en GeoGebra}
+  \begin{columns}[T]
+    \column{0.32\textwidth}
+      \includegraphics[width=\linewidth]{img/geogebra/act3_angulo_central_inscrito_1.png}
+      {\scriptsize Caso 1: $120^\circ$ y $60^\circ$.}
+    \column{0.32\textwidth}
+      \includegraphics[width=\linewidth]{img/geogebra/act3_angulo_central_inscrito_2.png}
+      {\scriptsize Caso 2: $C$ móvil, sigue $60^\circ$.}
+    \column{0.32\textwidth}
+      \includegraphics[width=\linewidth]{img/geogebra/act3_angulo_central_inscrito_3.png}
+      {\scriptsize Caso 3: $140^\circ$ y $70^\circ$.}
+  \end{columns}
+  \vspace{0.2cm}
+  \begin{block}{Invariante demostrada}
+    Para cualquier arco $\widehat{AB}$: $\displaystyle \angle ACB = \frac{1}{2}\angle AOB$ (demostrable dividiendo en triángulos isósceles $OAC$ y $OBC$ de radios iguales).
+  \end{block}
+\end{frame}
+
+\end{document}

@@ -1,0 +1,424 @@
+{
+  "schema_version": "1.0.0",
+  "plan_id": "pca-iiiepe-temas-selectos-matematicas-i-sd26-act-06",
+  "revision": 1,
+  "identity": {
+    "institution": "IIIEPE",
+    "program": "Maestría en Enseñanza y Aprendizaje de las Matemáticas",
+    "subject_id": "temas-selectos-de-matematicas-i",
+    "subject_title": "Temas Selectos de Matemáticas I",
+    "offering_id": "IIIEPE-1049-SD26",
+    "period": "SD26",
+    "modality": "in_person"
+  },
+  "sources": [
+    {
+      "id": "src-consigna-verificada",
+      "kind": "platform",
+      "authority": "instructional",
+      "title": "Consigna oficial verificada Curso 1049 - Trabajo Final: Una habilidad, un PDA, cinco minutos",
+      "url": "https://evaposgrados.iiiepe.edu.mx/aula/mod/assign/view.php?id=51758",
+      "path": "periodos/SD26/actividades-plataforma-SD26/actividad-06-trabajo-final/consigna-verificada.md",
+      "sha256": "447130ad9c6ed04c5eca134c6a42321a617dc811b5e98ad288cac870189b3286",
+      "captured_at": "2026-11-19",
+      "media_type": "text/markdown"
+    },
+    {
+      "id": "src-recurso-1",
+      "kind": "pdf",
+      "authority": "instructional",
+      "title": "GuiÃ³n Trabajo Final.pdf",
+      "url": "https://evaposgrados.iiiepe.edu.mx/aula/course/view.php?id=1049",
+      "path": "SD26/actividades-plataforma-SD26/actividad-06-trabajo-final/recursos-plataforma/51758/GuiÃ³n Trabajo Final.pdf",
+      "sha256": "465ac765689eab1c59e776a1b5043d75e0ce64fe06298dbdffe96f038e47b028",
+      "captured_at": "2026-11-19",
+      "media_type": "application/pdf"
+    }
+  ],
+  "curriculum": {
+    "purpose": "Integrar la propuesta didáctica de la Sesión 12 en un video didáctico de 4 a 5 minutos ('Una habilidad, un PDA, cinco minutos') respaldado por modelación gráfica en GeoGebra y Beamer 16:9.",
+    "competencies": [
+      {
+        "id": "comp-1",
+        "text": "Comunica y justifica con rigor matemático la variación proporcional directa en sistemas hidráulicos (F2 = k·F1, k=(d2/d1)²)."
+      },
+      {
+        "id": "comp-2",
+        "text": "Produce recursos audiovisuales educativos dosificados cognitivamente alineados con indicadores observables y remediación de errores."
+      }
+    ],
+    "outcomes": [
+      {
+        "id": "out-1",
+        "text": "Consolida el paquete completo del Trabajo Final (video MP4 4:09 min, subtítulos SRT, audio WAV, Beamer 16:9, gráfica GeoGebra y reporte documental) cumpliendo los 9 criterios de la rúbrica."
+      }
+    ],
+    "topics": [
+      {
+        "id": "top-1",
+        "text": "Modelación de proporcionalidad directa en sistemas hidráulicos (y = kx, Principio de Pascal)",
+        "children": []
+      },
+      {
+        "id": "top-2",
+        "text": "Diseño de video didáctico dosificado (StepDeckStudio + GeoGebra)",
+        "children": []
+      }
+    ]
+  },
+  "activities": [
+    {
+      "id": "actividad-06-trabajo-final",
+      "title": "Trabajo Final: Una habilidad, un PDA, cinco minutos",
+      "role": "assessment",
+      "platform": {
+        "name": "EVA Posgrados IIIEPE (Moodle)",
+        "course_id": "1049",
+        "module_ids": [
+          "51758"
+        ]
+      },
+      "unit_id": "Sesion-13",
+      "weeks": [
+        13
+      ],
+      "outcome_ids": [
+        "out-1"
+      ],
+      "topic_ids": [
+        "top-1",
+        "top-2"
+      ],
+      "cognitive": {
+        "taxonomy": "Bloom",
+        "level": "creacion",
+        "verb": "Producir",
+        "object": "un video didáctico de 4 a 5 minutos y su documentación técnico-pedagógica",
+        "conditions": "integrando los 6 elementos obligatorios del guion, visualización en GeoGebra y los 9 criterios de la rúbrica (36 puntos)",
+        "observable_evidence": "Video MP4 (249 s), subtítulos SRT, presentación Beamer 16:9, gráfica GeoGebra y reporte documental SD26",
+        "justification": "Demuestra la síntesis integral de dominio disciplinar, didáctica de habilidades y mediación tecnológica."
+      },
+      "instruction": "Retomar la propuesta de Sesión 12 y producir un video didáctico de 4 a 5 minutos con presentación, explicación matemática, dificultad frecuente, estrategia, reto e indicador/evidencia, acompañado de documentación completa.",
+      "requirements": [
+        {
+          "id": "req-1",
+          "text": "Integrar los 6 elementos obligatorios del guion con rigor matemático (F2 = k·F1, k=(d2/d1)²) y gráfico GeoGebra."
+        },
+        {
+          "id": "req-2",
+          "text": "Cumplir la duración de 4 a 5 minutos (4:09 min / 249 s) y verificar reproducción pública sin permisos bloqueantes."
+        },
+        {
+          "id": "req-3",
+          "text": "Documentar el cumplimiento de los 9 criterios (36/36 pts) de la rúbrica en reporte LaTeX y manifiesto SHA-256."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q-1",
+          "context": "Explicación y error",
+          "text": "¿Por qué duplicar el diámetro del pistón de salida cuadruplica la fuerza (k=4) y no la duplica (k=2)?",
+          "requirement_ids": [
+            "req-1"
+          ]
+        },
+        {
+          "id": "q-2",
+          "context": "Evaluación",
+          "text": "¿Qué evidencia tangible producida por el estudiante demuestra que modeló correctamente y=kx en el reto hidráulico?",
+          "requirement_ids": [
+            "req-1"
+          ]
+        }
+      ],
+      "sequence": [
+        {
+          "id": "step-1",
+          "order": 1,
+          "phase": "preparation",
+          "action": "Extracción y lectura analítica de consigna, presentación interactiva y anexos oficiales.",
+          "inputs": [
+            "consigna-verificada.md",
+            "recursos-plataforma"
+          ],
+          "output": "Matriz de resolución y evidencia visual",
+          "completion_check": "Todos los retos, tablas y criterios de rúbrica cubiertos",
+          "requirement_ids": [
+            "req-1",
+            "req-2",
+            "req-3"
+          ],
+          "depends_on": []
+        },
+        {
+          "id": "step-2",
+          "order": 2,
+          "phase": "construction",
+          "action": "Desarrollo matemático, automatización GeoGebra (si aplica), guion Word y maquetación LaTeX.",
+          "inputs": [
+            "Matriz de resolución",
+            "template.tex"
+          ],
+          "output": "periodos/SD26/actividades-plataforma-SD26/actividad-06-trabajo-final/reporte.tex",
+          "completion_check": "Documentos completos con aparato crítico APA 7",
+          "requirement_ids": [
+            "req-1",
+            "req-2",
+            "req-3"
+          ],
+          "depends_on": [
+            "step-1"
+          ]
+        },
+        {
+          "id": "step-3",
+          "order": 3,
+          "phase": "review",
+          "action": "Compilación vía aulatex_latexmk y empaquetado SD26 con hashes SHA-256.",
+          "inputs": [
+            "reporte.tex",
+            "presentacion.tex",
+            "ficha-estudiante.tex"
+          ],
+          "output": "reporte-temas-selectos-matematicas-i-SD26-act-06-trabajo-final_Martin-Jonathan-de-la-Cruz-Munoz.pdf",
+          "completion_check": "Compilación rc=0 y manifiesto SHA-256 generado",
+          "requirement_ids": [
+            "req-1",
+            "req-2",
+            "req-3"
+          ],
+          "depends_on": [
+            "step-2"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "id": "res-consigna",
+          "source_id": "src-consigna-verificada",
+          "purpose": "Consigna oficial verificada y criterios de rúbrica SD26",
+          "required": true,
+          "access": "local",
+          "rights": "IIIEPE"
+        },
+        {
+          "id": "res-1",
+          "source_id": "src-recurso-1",
+          "purpose": "Material oficial recopilado de Moodle curso 1049 (GuiÃ³n Trabajo Final.pdf)",
+          "required": true,
+          "access": "local",
+          "rights": "IIIEPE"
+        }
+      ],
+      "assessment": {
+        "kind": "summative",
+        "scale_total": 100.0,
+        "weight": 100.0,
+        "weight_unit": "pts",
+        "criteria": [
+          {
+            "id": "crit-1",
+            "text": "Vinculación habilidad-contenido-PDA, rigor matemático y atención a dificultades frecuentes",
+            "points": 40.0,
+            "descriptors": [
+              {
+                "level": "Excelente",
+                "description": "Vinculación habilidad-contenido-PDA, rigor matemático y atención a dificultades frecuentes",
+                "points": 40.0
+              }
+            ],
+            "requirement_ids": [
+              "req-1",
+              "req-2",
+              "req-3"
+            ]
+          },
+          {
+            "id": "crit-2",
+            "text": "Estrategia didáctica, reto matemático desafiante e indicador/evidencia observable",
+            "points": 35.0,
+            "descriptors": [
+              {
+                "level": "Excelente",
+                "description": "Estrategia didáctica, reto matemático desafiante e indicador/evidencia observable",
+                "points": 35.0
+              }
+            ],
+            "requirement_ids": [
+              "req-1",
+              "req-2",
+              "req-3"
+            ]
+          },
+          {
+            "id": "crit-3",
+            "text": "Creatividad, calidad audiovisual (Beamer + GeoGebra + audio/SRT) y duración exacta (4:09 min)",
+            "points": 25.0,
+            "descriptors": [
+              {
+                "level": "Excelente",
+                "description": "Creatividad, calidad audiovisual (Beamer + GeoGebra + audio/SRT) y duración exacta (4:09 min)",
+                "points": 25.0
+              }
+            ],
+            "requirement_ids": [
+              "req-1",
+              "req-2",
+              "req-3"
+            ]
+          }
+        ],
+        "editorial_checks": [
+          "Sin citas rotas ni marcadores pendientes",
+          "Rigor matemático comprobado y figuras vectoriales/GeoGebra legibles",
+          "Compilación LaTeX reproducible con rc=0"
+        ]
+      },
+      "products": [
+        {
+          "id": "prod-reporte-act-06",
+          "kind": "reporte_academico",
+          "recipient": "Plataforma EVA Posgrados IIIEPE (Curso 1049)",
+          "editable_format": "application/x-tex",
+          "submission_format": "application/pdf",
+          "structure": [
+            "Portada",
+            "Resolución de retos",
+            "Evidencias",
+            "Reflexión",
+            "Referencias"
+          ],
+          "length": "6 a 12 páginas",
+          "filename_pattern": "reporte-temas-selectos-matematicas-i-SD26-act-06-trabajo-final_Martin-Jonathan-de-la-Cruz-Munoz.pdf",
+          "accessibility": "PDF estructurado de alto contraste",
+          "requirement_ids": [
+            "req-1",
+            "req-2",
+            "req-3"
+          ],
+          "paths": {
+            "editable": "periodos/SD26/actividades-plataforma-SD26/actividad-06-trabajo-final/reporte.tex",
+            "delivery": "periodos/SD26/entregas-temas-selectos-de-matematicas-I-SD26/reporte-temas-selectos-matematicas-i-SD26-act-06-trabajo-final_Martin-Jonathan-de-la-Cruz-Munoz.pdf"
+          }
+        },
+        {
+          "id": "prod-presentacion-act-06",
+          "kind": "presentacion_beamer",
+          "recipient": "Plataforma EVA Posgrados IIIEPE (Curso 1049)",
+          "editable_format": "application/x-tex",
+          "submission_format": "application/pdf",
+          "structure": [
+            "Portada",
+            "Desarrollo",
+            "Evidencias visuales",
+            "Conclusiones"
+          ],
+          "length": "4 a 6 diapositivas",
+          "filename_pattern": "presentacion-temas-selectos-matematicas-i-SD26-act-06-trabajo-final_Martin-Jonathan-de-la-Cruz-Munoz.pdf",
+          "accessibility": "Beamer 16:10 institucional IIIEPE",
+          "requirement_ids": [
+            "req-1",
+            "req-2",
+            "req-3"
+          ],
+          "paths": {
+            "editable": "periodos/SD26/actividades-plataforma-SD26/actividad-06-trabajo-final/presentacion.tex",
+            "delivery": "periodos/SD26/entregas-temas-selectos-de-matematicas-I-SD26/presentacion-temas-selectos-matematicas-i-SD26-act-06-trabajo-final_Martin-Jonathan-de-la-Cruz-Munoz.pdf"
+          }
+        }
+      ],
+      "calendar": {
+        "opens_at": "2026-11-07T00:00:00-06:00",
+        "expected_at": "2026-11-13T23:59:00-06:00",
+        "due_at": "2026-11-13T23:59:00-06:00",
+        "closes_at": "2026-11-13T23:59:00-06:00",
+        "timezone": "America/Monterrey",
+        "literal": "13 de noviembre de 2026, 23:59"
+      },
+      "policies": {
+        "ai": "Apoyo organizativo y automatización GeoGebra/LaTeX validados críticamente por el autor.",
+        "integrity": "Fidelidad estricta a las presentaciones, guiones y lecturas oficiales del curso 1049.",
+        "collaboration": "Equipo 4 (Actividad 1) / Binas e individual (Actividades 2–6)",
+        "citation": "APA 7ma edición",
+        "attempts": 1,
+        "late_submission": "Sujeto a consideración docente en EVA Posgrados IIIEPE",
+        "accessibility": "PDF vectorial + Word editable",
+        "privacy": "Resguardo estricto de credenciales y matrícula 00874",
+        "exceptions": []
+      },
+      "dependencies": [],
+      "alignment": [
+        {
+          "outcome_id": "out-1",
+          "requirement_ids": [
+            "req-1",
+            "req-2",
+            "req-3"
+          ],
+          "step_ids": [
+            "step-1",
+            "step-2",
+            "step-3"
+          ],
+          "product_ids": [
+            "prod-reporte-act-06",
+            "prod-presentacion-act-06"
+          ],
+          "criterion_ids": [
+            "crit-1",
+            "crit-2",
+            "crit-3"
+          ]
+        }
+      ],
+      "bindings": {
+        "extractor_directory": "periodos/SD26/actividades-plataforma-SD26/actividad-06-trabajo-final/recursos-plataforma",
+        "notes_directory": "referencias-temas-selectos-de-matematicas-I",
+        "research_directory": "referencias-temas-selectos-de-matematicas-I"
+      }
+    }
+  ],
+  "field_status": [
+    {
+      "path": "/identity/offering_id",
+      "state": "confirmed",
+      "reason": null,
+      "evidence": [
+        {
+          "source_id": "src-consigna-verificada",
+          "locator": "Moodle course_id=1049",
+          "quoted_text": "PFM02 Temas selectos de matemáticas 1. (Ago-Nov 2026 Grupo A) - Trabajo Final: Una habilidad, un PDA, cinco minutos"
+        }
+      ],
+      "alternatives": []
+    }
+  ],
+  "review": {
+    "state": "needs_review",
+    "reviewed_at": "2026-11-19",
+    "reviewer_role": "agente-planeador-aulatex",
+    "critical_gaps": [],
+    "semantic_validation": "passed"
+  },
+  "artifact_contract": {
+    "version": "1.1",
+    "paths_relative_to_subject": {
+      "plans": "periodos/SD26/planeaciones-temas-selectos-de-matematicas-I-SD26",
+      "references": "referencias-temas-selectos-de-matematicas-I",
+      "deliveries": "periodos/SD26/entregas-temas-selectos-de-matematicas-I-SD26"
+    },
+    "deliverables_directory": "periodos/SD26/entregas-temas-selectos-de-matematicas-I-SD26",
+    "source_directory": "periodos/SD26/actividades-plataforma-SD26/actividad-06-trabajo-final"
+  },
+  "extensions": {
+    "period_code": "SD26",
+    "moodle_course_id": 1049,
+    "moodle_module_id": 51758,
+    "codigo_referencia": "IIIEPE-1049-SD26-ACT06",
+    "fase_curricular": "Bloque III · Sesión 13 (Noviembre de 2026)",
+    "docente": "Docente titular MAEM (Grupo A)",
+    "estudiante": "Mtro. Martín Jonathan de la Cruz Muñoz",
+    "matricula": "00874",
+    "generador": "construir_actividades_sd26_temas_selectos (PCA v1.0.0)"
+  }
+}

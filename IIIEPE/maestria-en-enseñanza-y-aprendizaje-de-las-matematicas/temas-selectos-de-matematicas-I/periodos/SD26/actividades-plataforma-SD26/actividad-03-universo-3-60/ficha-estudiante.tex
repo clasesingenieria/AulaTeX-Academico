@@ -1,0 +1,65 @@
+\documentclass[spanish,letterpaper,oneside]{article}
+
+\def\documenttitle {Universo 3-60 · Ficha de trabajo}
+\def\documentsubtitle {Temas selectos de matemáticas I · Cohorte SD26}
+\def\documentsubject {Actividad 3 · Material para estudiantes}
+\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\coursename {Temas selectos de matemáticas I}
+\def\coursecode {PFM02}
+\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León}
+\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
+\def\universitydepartment {Temas selectos de matemáticas I}
+\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
+\def\universitydepartmentimagecfg {height=1.75cm}
+\def\universitylocation {Monterrey, Nuevo León}
+\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\studentid {00874}
+\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
+\def\programperiod {2do periodo, agosto--noviembre de 2026 (SD26)}
+\def\programmodality {Modalidad presencial y en línea}
+\def\programshort {MAEM}
+
+\def\authortable {
+  \begin{tabular}{ll}
+    \textbf{Docente:} & \studentfullname \\
+    Matrícula: & \studentid \\
+    Unidad: & \coursename \\
+    Periodo: & \programperiod \\
+    \multicolumn{2}{l}{Fecha: 24 de octubre de 2026}
+  \end{tabular}
+}
+
+\input{template}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{amsmath,amssymb,array,longtable,tikz,tabularx,colortbl,enumitem}
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepePale}{HTML}{EEF5F8}
+\def\portraittitlecolor {iiiepeNavy}
+
+\setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
+\begin{document}\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Ficha Act. 3}\setstretch{1.2}\raggedbottom
+
+\section*{Triangulación de polígonos y ángulos en la circunferencia}
+Nombre: \rule{8cm}{.2pt}\hfill Fecha: \rule{2.5cm}{.2pt}
+
+\subsection*{1. Regla general de suma de ángulos interiores}
+Completa la tabla trazando las diagonales desde un solo vértice y deduce la expresión para $n$ lados:
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|}\hline
+\textbf{Polígono} & \textbf{Lados ($n$)} & \textbf{Triángulos} & \textbf{Suma interior} \\\hline
+Hexágono & $6$ & & \\[0.45cm]\hline
+Octágono & $8$ & & \\[0.45cm]\hline
+Decágono & $10$ & & \\[0.45cm]\hline
+Icoságono & $20$ & & \\[0.45cm]\hline
+\end{tabular}
+\end{center}
+
+\subsection*{2. Descubrimiento en GeoGebra}
+Construye un ángulo central $\angle AOB$ y un ángulo inscrito $\angle ACB$ sobre el mismo arco. Mueve $C$ sin pasar por $A$ ni $B$ y registra qué relación exacta cumplen sus medidas. Justifica con un esquema usando triángulos isósceles de radio $r$.
+\vspace{2.2cm}
+
+\end{document}
