@@ -24,6 +24,8 @@
 \usepackage{float}
 \usepackage{fancyhdr}
 \usepackage{titlesec}
+\usepackage{pdflscape}
+\usepackage{amssymb} % Para símbolos como \Box
 \usepackage[authoryear,round]{natbib}
 \usepackage[colorlinks=true,linkcolor=blue!70!black,citecolor=blue!70!black,urlcolor=blue!70!black]{hyperref}
 
@@ -325,11 +327,55 @@ La fundamentación teórica se vertebró en seis ejes complementarios:
 
 \subsection{Marco contextual: definiciones operativas}
 
-\pendiente{Insertar aquí la Tabla 2 de definiciones operativas: Corrupción, Soborno, Peculado, Conflicto de interés, Captura del Estado, Subrogación de servicios, Encuadre mediático.}
+\begin{table}[H]
+\centering
+\caption{Definición operativa de palabras clave de la investigación}
+\label{tab:definiciones}
+\small
+\begin{tabular}{@{}p{3.5cm}p{10cm}@{}}
+\toprule
+\textbf{Concepto clave} & \textbf{Definición operativa} \\
+\midrule
+Corrupción & Abuso de un poder o cargo encomendado ---público o privado--- para obtener un beneficio indebido en perjuicio del interés general y las normas establecidas (Transparencia Internacional, 2026; INEGI, 2016). \\
+\addlinespace
+Soborno o cohecho & Ofrecer, dar, solicitar o aceptar dinero, bienes o favores para que una autoridad ejecute u omita actos propios de sus funciones (UNODC, 2003, s.\,f.). \\
+\addlinespace
+Peculado o desvío & Apropiación o uso de fondos, bienes o recursos públicos para fines privados o distintos a los autorizados presupuestalmente. \\
+\addlinespace
+Conflicto de interés & Situación en la que el juicio o desempeño imparcial de un servidor público se ve comprometido por intereses personales, familiares o de negocios \citep{lomnitz2000}. \\
+\addlinespace
+Captura del Estado & Proceso mediante el cual redes lícitas o criminales infiltran, cooptan y subordinan instituciones estatales clave para operar bajo impunidad \citep{merino2024,vazquezvalencia2019}. \\
+\addlinespace
+Subrogación de servicios & Delegación de la prestación de un servicio público estatal a operadores privados mediante concesiones sujetas a vigilancia del Estado \citep{leal2010,sernadelagarza2010}. \\
+\addlinespace
+Encuadre mediático (framing) & Selección y énfasis de determinados atributos o símbolos de un hecho público en medios y redes sociales, moldeando la percepción de causalidad y urgencia \citep{solamorales2019}. \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \subsection{Diagnóstico empírico: Indicadores oficiales}
 
-\pendiente{Insertar aquí la Tabla 3 con indicadores IPC 2025, ENCIG 2025, costo económico, satisfacción servicios.}
+\begin{table}[H]
+\centering
+\caption{Indicadores oficiales de percepción, prevalencia y costo de la corrupción en México (2012--2026)}
+\label{tab:indicadores}
+\small
+\begin{tabular}{@{}p{2.8cm}p{2.5cm}p{3.5cm}p{4cm}@{}}
+\toprule
+\textbf{Indicador} & \textbf{Fuente / Edición} & \textbf{Resultado en México} & \textbf{Contexto longitudinal (2012--2026)} \\
+\midrule
+Índice de Percepción de la Corrupción (IPC) & Transparencia Internacional (IPC 2025, publ. feb. 2026) & 27 / 100 puntos (lugar 141 de 182 países) & Descenso de 7 pts. frente a los 34 pts. del cierre de 2012; último lugar OCDE; debajo del promedio de América (42 pts.). \\
+\addlinespace
+Percepción de frecuencia & INEGI --- ENCIG 2025 (publ. mayo 2026) & 84.1\,\% de la población adulta urbana & Considera frecuentes o muy frecuentes los actos de corrupción; brechas estatales de 89\,\% (Michoacán, BC, CDMX) a 67\,\% (Querétaro). \\
+\addlinespace
+Prevalencia en trámites & INEGI --- ENCIG 2025 & 15.6\,\% (15,642 por cada 100 mil hab.) & Usuarios que enfrentaron corrupción en trámites; solo 21.7\,\% de interacciones fueron digitales. \\
+\addlinespace
+Costo económico directo & INEGI --- ENCIG 2025 & \$17,707.4 millones de pesos anuales & Equivalente a \$3,865 pesos promedio por víctima; nivel real más alto en una década \citep{imco2026}. \\
+\addlinespace
+Satisfacción y confianza & INEGI --- ENCIG 2025 & 47.2\,\% satisfacción servicios; 23.9\,\% partidos & IMSS con 43.3\,\% y transporte público con 36.9\,\%, frente a 75.9\,\% de confianza en universidades públicas. \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \clearpage
 
@@ -345,7 +391,33 @@ Los episodios emblemáticos de corrupción registrados durante el sexenio de Fel
 
 Se estableció expresamente que la evidencia recopilada a partir de tres casos intencionales permite valorar la congruencia empírico-documental con la hipótesis de trabajo y generar hallazgos analíticamente transferibles, sin pretender una comprobación definitiva ni generalización estadística hacia toda la Administración Pública Federal 2006--2012.
 
-\pendiente{Insertar Tabla 4 de operacionalización de categorías, variables e indicadores.}
+\begin{table}[H]
+\centering
+\caption{Operacionalización de categorías, variables e indicadores documentales}
+\label{tab:operacionalizacion}
+\small
+\begin{tabular}{@{}p{3.5cm}p{5cm}p{5cm}@{}}
+\toprule
+\textbf{Componente analítico} & \textbf{Categorías / factores examinados} & \textbf{Indicadores empíricos verificados} \\
+\midrule
+\multirow{3}{3.5cm}{Condiciones institucionales (factores asociados)} & 
+1. Concentración discrecional de poder sin contrapesos. \newline
+2. Debilidad en preinversión y fiscalización de obra. \newline
+3. Desregulación y conflicto de interés en servicios subrogados. & 
+Expansión en SSP sin procesamiento interno; auditorías técnicas ASF; crecimiento de guarderías subrogadas vs. directas en IMSS y vínculos documentados. \\
+\addlinespace
+\multirow{3}{3.5cm}{Efectos documentados (resultados observables)} & 
+1. Captura institucional y macrocriminalidad. \newline
+2. Daño patrimonial y pasivos fiscales transexenales. \newline
+3. Vulneración de DD.\,HH. y deterioro de confianza. & 
+Sentencias penales y civiles (EE.\,UU. y México); montos desviados, sobrecostos y deuda; víctimas; trayectoria del IPC y tasas ENCIG 2025. \\
+\addlinespace
+Variable de contraste (encuadre mediático) & 
+Diferencia entre atención mediática (framing) y daño verificable a la población. & 
+Contraste entre titulares virales no acreditados o reduccionistas y verificaciones oficiales (COFEPRIS, ASF, reportes operativos). \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \clearpage
 
@@ -382,25 +454,85 @@ Debido al muestreo no probabilístico intencional (n = 3 casos documentales), NO
 \section{Caso 1: Captura Institucional y Macrocriminalidad}
 \subsection{Genaro García Luna}
 
-\pendiente{Desarrollar análisis completo del caso García Luna: ascenso 1989--2006, colusión con Cártel de Sinaloa desde 2006, expansión PF de 5k a 35k efectivos, sentencia exp. 19-CR-576 en Nueva York, sobornos, red offshore Weinberg, contratos >727 MDD + 528 mdp, condenas penales >38 años (oct 2024) y civiles ~2500 MDD (may 2025) + >578 MDD (nov 2026), postura descargo Calderón.}
+El expediente de Genaro García Luna, titular de la Secretaría de Seguridad Pública (SSP) durante todo el sexenio 2006--2012, documentó la transición hacia la corrupción sistémica y la captura de funciones estatales estratégicas \citep{astorga2015,flores2009,garay2012,merino2024,vazquezvalencia2019}. Su ascenso se consolidó desde 1989 en el CISEN, la Policía Federal Preventiva (1999) y la AFI (2001--2006), año desde el cual la justicia federal estadounidense acreditó el inicio de su colusión con el Cártel de Sinaloa \citep{castillog2023,pastrana2024}.
+
+Al frente de la SSP (2006--2012), la Policía Federal creció de 5,000 a más de 35,000 efectivos bajo una concentración discrecional sin contrapesos horizontales \citep{astorga2015,lopezayllon2009}. En el expediente 19-CR-576 (S-1) (BMC) en Nueva York se acreditó la recepción de decenas de millones de dólares en sobornos del Cártel de Sinaloa a cambio de facilitar el tráfico de más de un millón de kilogramos de cocaína, filtrar inteligencia y golpear rivales; su colaborador cercano Luis Cárdenas Palomino fue detenido en México en 2021 por tortura y señalado en las indagatorias estadounidenses \citep{doj2024garcialuna,insightcrime2023}.
+
+En paralelo, entre 2009 y 2018 articuló junto con la familia Weinberg una red societaria offshore en Panamá e Israel (Nunvav Inc., Nunvav Technologies, Nice Systems Ltd. y GLAC) que obtuvo 30 contratos públicos por más de 727 millones de dólares y 528 millones de pesos \citep{mcci2023,castilloj2026}. Sentenciado a más de 38 años de prisión en octubre de 2024, recibió condenas civiles en Florida a favor de México por aproximadamente 2,500 millones de dólares junto con su esposa (mayo de 2025) y por más de 578 millones de dólares contra el entramado empresarial (noviembre de 2026) \citep{uif2025,uif2026,guillen2025}.
+
+En cumplimiento del balance probatorio, se registró la postura de descargo del expresidente Felipe Calderón, quien declaró no haber contado con «evidencia verificable» de tales ilícitos durante su gobierno \citep{infobae2024}.
 
 \clearpage
 
 \section{Caso 2: Mala Planeación y Pasivos en Megainfraestructura}
 \subsection{Refinería Bicentenario}
 
-\pendiente{Desarrollar análisis completo del caso Refinería Bicentenario: anuncio 18-mar-2008 con inversión >9000 MDD, competencia entre estados con donación 700 ha, deuda Hidalgo ~1500 mdp liquidada sep-2025, gasto Pemex >9000 mdp en ing básica + barda >500 mdp sin consolidar esquema financiero, cancelación dic-2014, auditorías ASF 0353 y 533-DE, erogación 195.5 mdp en 2020, postura descargo Calderón feb-2025, Tabla 5 de expedientes comparables: Estela de Luz, CPS, sobornos FCPA, Odebrecht/Oceanografía.}
+El 18 de marzo de 2008, el Ejecutivo federal anunció la construcción de la Refinería Bicentenario con una inversión proyectada superior a 9,000 millones de dólares, abriendo un concurso entre entidades cuyo criterio decisivo se concentró en la donación estatal de un predio de 700 hectáreas con infraestructura básica de acceso \citep{asf2015,asf2016,montoya2014}. Para ganar la sede en Tula, Hidalgo contrajo deuda cercana a 1,500 millones de pesos (1,050 mdp para tierras y 450 mdp para accesos), pasivo que el gobierno estatal terminó de liquidar con Banorte hasta el 18 de septiembre de 2025 \citep{periodicohidalgo2025}.
+
+Simultáneamente, entre 2009 y 2012, Pemex ejerció más de 9,000 millones de pesos (más de 620 millones de dólares) en ingeniería básica, nivelación y una barda perimetral con costo superior a 500 millones de pesos, sin consolidar el esquema financiero definitivo ni iniciar la construcción de las plantas industriales de proceso \citep{asf2015,asf2016,raziel2021}. Cancelada en diciembre de 2014 por falta de rentabilidad \citep{montoya2014}, la ASF documentó observaciones técnicas en las Auditorías 0353 (DE-226) y 533-DE, mientras Pemex aún erogó 195.5 millones de pesos vinculados al predio en 2020.
+
+Como postura de descargo, Felipe Calderón afirmó en febrero de 2025 que su administración cumplió la fase inicial y atribuyó la cancelación a su sucesor \citep{elfinanciero2025}.
+
+\subsection{Panorama comparado de otros expedientes del sexenio}
+
+\begin{table}[H]
+\centering
+\caption{Panorama comparado de otros expedientes de obra y contratación del sexenio (2006--2012)}
+\label{tab:expedientes}
+\small
+\begin{tabular}{@{}p{2.5cm}p{4cm}p{6.5cm}@{}}
+\toprule
+\textbf{Expediente (2006--2012)} & \textbf{Tipología / mecanismo} & \textbf{Evidencia oficial y magnitud documentada} \\
+\midrule
+Estela de Luz & Sobreprecios y pagos improcedentes en obra pública. & ASF (2013): sobrecosto de 192\,\% (de \textasciitilde393--398 mdp a >1,104--1,146 mdp), 15 meses de retraso y 399.2 mdp improcedentes en acero \citep{asf2013,obrasexpansion2013}. \\
+\addlinespace
+Contratos penitenciarios (CPS) & APP opacas con pagos rígidos a 20--22 años. & Ocho CEFERESOS desde 2010; la ASF observó falta de fundamento legal claro y pagos independientes de la ocupación \citep{documenta2022,badillo2021}. \\
+\addlinespace
+Sobornos FCPA (ABB/CFE y BizJet) & Cohecho transnacional sancionado en EE.\,UU. & Multas de 58.8 MDD (ABB/CFE) y 11.8 MDD (BizJet) por sobornos a mandos de Policía Federal y flota presidencial, con nueva culpabilidad en octubre de 2026 \citep{doj2013bizjet,doj2026bizjet,rodriguez2011}. \\
+\addlinespace
+Pemex: Odebrecht y Oceanografía & Continuidad transexenal y tráfico de influencias. & Contratos en Minatitlán y Etileno XXI y 54 contratos con Oceanografía entre 2002 y 2012 judicializados en sexenios posteriores \citep{fundar2022,guerrero2018}. \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \clearpage
 
 \section{Caso 3: Desregulación, Conflicto de Interés y Derechos Humanos}
 \subsection{Guardería ABC y Mediatización}
 
-\pendiente{Desarrollar análisis completo del caso Guardería ABC: incendio 5-jun-2009 con 49 fallecidos y >100 lesionados, expansión guarderías subrogadas 757 a 1374 (+81.5\%) vs 142 directas, concesión con vínculos familiares y políticos, nave inflamable + 14 de 40 empleados + dictamen riesgo ignorado jul-2005, resoluciones SCJN ``desorden generalizado'' art 213 LSS, CIDH informe 185/20, imprescriptibilidad penal 19-jun-2026.}
+El incendio de la Guardería ABC en Hermosillo, Sonora, el 5 de junio de 2009 ---con un saldo de 49 niñas y niños fallecidos y más de 100 lesionados graves--- evidenció las consecuencias de la subrogación desregulada con conflicto de interés \citep{roseackerman1999,rezzoagli2021,sernadelagarza2010}. Entre 2000 y 2009, las guarderías subrogadas del IMSS aumentaron de 757 a 1,374 (+81.5\,\%), mientras las de operación directa permanecieron congeladas en 142 \citep{leal2010}.
 
-\subsubsection{Casos de contraste contemporáneo: Veracruz y Dos Bocas}
+La concesión se asignó a socios con vínculos familiares y políticos con altos funcionarios estatales y federales \citep{osorno2010}, operando en una nave industrial con techumbre inflamable, 14 de 40 empleados reglamentarios y un dictamen de riesgo ignorado desde julio de 2005 \citep{cndh2009}. La SCJN acreditó un «desorden generalizado» al margen del artículo 213 de la Ley del Seguro Social \citep{scjn2010,scjn2025,zaldivar2010}, la CIDH admitió el caso mediante el Informe 185/20 \citep{cidh2020} y, el 19 de junio de 2026, el Pleno de la SCJN declaró imprescriptible la acción penal en el caso Guardería ABC \citep{nunez2026}.
 
-\pendiente{Desarrollar contraste Veracruz: titular viral agua destilada sin evidencia COFEPRIS vs saqueo real (46984 VIH caducas, 16.8 t fármacos, 2933 mdp obra, >3617 mdp fantasma, 276.6 mdp factureras). Contraste Dos Bocas: >21000 MDD (~2.6x previstos 8000 MDD), caída 141 kbd jun-2026, distorsión framing. Tabla 6 de ejes nacionales por alcance poblacional.}
+\subsection{Casos de contraste contemporáneo: daño real frente a encuadre mediático}
+
+En el contraste de Veracruz, aunque la COFEPRIS no halló evidencia sanitaria de agua destilada suministrada a niños con cáncer \citep{cofepris2017}, el titular viral eclipsó el saqueo real documentado: 46,984 pruebas rápidas de VIH caducas, 16.8 toneladas de fármacos caducos, 2,933 mdp desviados en obra hospitalaria (12 hospitales abandonados), más de 3,617 mdp en empresas fantasma y 276.6 mdp en factureras \citep{connectas,animalpolitico,santiago2025,angel2025}.
+
+En el contraste energético, la Refinería Olmeca (Dos Bocas) superó 21,000 MDD (\textasciitilde2.6 veces los 8,000 MDD previstos) y cayó a 141 mil barriles diarios en junio de 2026 tras incidentes operativos \citep{alegria2026,martinezescamilla2026,celaya2026}, mostrando cómo los eslóganes partidistas desplazan la rendición de cuentas técnica.
+
+Para contextualizar la magnitud relativa de estos hallazgos dentro del panorama nacional, la Tabla~\ref{tab:ejes} sintetiza los cinco grandes ejes de corrupción con mayor número de afectados en México; en ella, las menciones a Segalmex y La Estafa Maestra operan únicamente como referentes contextuales nacionales de alcance poblacional y no forman parte de la muestra nuclear del periodo 2006--2012.
+
+\begin{table}[H]
+\centering
+\caption{Ejes de corrupción en México jerarquizados por alcance poblacional y derechos vulnerados}
+\label{tab:ejes}
+\small
+\begin{tabular}{@{}p{3.5cm}p{4cm}p{5.5cm}@{}}
+\toprule
+\textbf{Eje de corrupción} & \textbf{Casos / referentes emblemáticos} & \textbf{Magnitud verificable del daño} \\
+\midrule
+Captura de seguridad y macrocriminalidad & Genaro García Luna (SSP, 2006--2012) y colusión local. & Millones de habitantes afectados; condena penal >38 años (2024) y civiles \textasciitilde2,500 MDD (2025) y >578 MDD (2026). \\
+\addlinespace
+Desfalco a programas sociales (referentes contextuales) & Segalmex (2019--2024) y La Estafa Maestra (2012--2018). & Segalmex >15,000--15,300 mdp; La Estafa Maestra >7,000 mdp \citep{perez2024,mccitablero}. \\
+\addlinespace
+Desvíos y deterioro del sector salud & Saqueo hospitalario (Veracruz) y transferencias federales. & Millones de usuarios afectados; ASF nov. 2026: 285.8 mdp por aclarar y 553.3 mdp reintegrados \citep{ramos2026}; IMSS 43.3\,\% satisfacción \citep{inegi2026}. \\
+\addlinespace
+Desregulación con conflicto de interés letal & Subrogación irregular en Guardería ABC (2009). & 49 menores fallecidos y >100 lesionados graves; imprescriptibilidad penal decretada en junio de 2026 \citep{nunez2026}. \\
+\addlinespace
+Corrupción cotidiana («mordida») & ENCIG 2025 (INEGI, publ. mayo 2026). & Impuesto regresivo: 15.6\,\% prevalencia y \$17,707.4 mdp anuales (\$3,865 promedio por víctima). \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \clearpage
 
@@ -449,13 +581,63 @@ En última instancia, observar la corrupción con la cabeza fría obliga a mirar
 
 \section{Ficha de Registro Jurídico-Institucional y Hemerográfico}
 
-\pendiente{Insertar tabla de Apéndice A con formato de ficha: Código, Caso, Periodo, Dependencias, Tipología, Fuentes primarias, Respaldo académico, Posturas descargo, Categorías.}
+\begin{table}[H]
+\centering
+\caption{Formato de Ficha de Registro Jurídico-Institucional y Hemerográfico (Apéndice A)}
+\label{tab:ficha}
+\small
+\begin{tabular}{@{}p{4cm}p{10cm}@{}}
+\toprule
+\textbf{Campo de registro} & \textbf{Descripción operativa / criterio de llenado} \\
+\midrule
+Código de ficha y fecha & Ej.: F-01 / Fecha de consulta y última verificación (DD/MM/AAAA). \\
+\addlinespace
+Caso y clasificación muestral & Nombre del caso $|$ [$\Box$] Caso principal (2006--2012) [$\Box$] Caso de contraste contemporáneo (framing). \\
+\addlinespace
+Periodo de hechos y seguimiento & Años de origen (ej. 2006--2012) y corte de resoluciones judiciales/fiscales (hasta nov. 2026). \\
+\addlinespace
+Dependencias y actores & Instituciones federales/estatales, contratistas, operadores privados y autoridades jurisdiccionales. \\
+\addlinespace
+Tipología de irregularidad & [$\Box$] Cohecho [$\Box$] Peculado [$\Box$] Captura estatal [$\Box$] Conflicto de interés [$\Box$] Mala planeación [$\Box$] Negligencia regulatoria. \\
+\addlinespace
+Fuentes primarias oficiales & Sentencias judiciales (expediente y corte), auditorías ASF (clave), recomendaciones CNDH/CIDH. \\
+\addlinespace
+Respaldo académico y verificación & Libros arbitrados, artículos científicos y periodismo de verificación. \\
+\addlinespace
+Posturas de descargo y continuidad & Declaraciones oficiales de defensa y vínculos del esquema con administraciones previas o posteriores. \\
+\addlinespace
+Categorías codificadas y trazabilidad & Códigos temáticos asignados, estatus procesal y vínculo entre evidencia CUAL y datos cuan. \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \clearpage
 
 \section{Matriz Comparativa por Caso}
 
-\pendiente{Insertar tabla de Apéndice B con matriz: Caso/Tipo, Dimensión analítica, Mecanismo CUAL, Indicadores cuan, Fuentes APA7.}
+\begin{landscape}
+\begin{table}[H]
+\centering
+\caption{Matriz Comparativa de Variables, Dimensiones e Indicadores por Caso (Apéndice B)}
+\label{tab:matriz}
+\tiny
+\begin{tabular}{@{}p{2cm}p{2.5cm}p{3.5cm}p{4cm}p{6.5cm}@{}}
+\toprule
+\textbf{Caso y tipo} & \textbf{Dimensión analítica / factor asociado} & \textbf{Mecanismo institucional (CUAL)} & \textbf{Indicadores cuantitativos (cuan)} & \textbf{Fuentes trianguladas (APA 7)} \\
+\midrule
+Caso 1 (Principal) \newline Genaro García Luna & Concentración de mando, presupuesto e inteligencia en SSP sin contrapesos. & Captura estatal y macrocriminalidad: cohecho con Cártel de Sinaloa + red offshore Weinberg. & PF: 5,000 a >35,000; 30 contratos (>727 MDD y 528 mdp); prisión >38 años (2024); civiles \textasciitilde2,500 MDD (2025) y >578 MDD (2026). & DOJ (2024, exp. 19-CR-576); UIF (2024, 2025, 2026); Astorga (2015); Vázquez Valencia (2019); Infobae (2024). \\
+\addlinespace
+Caso 2 (Principal) \newline Refinería Bicentenario & Anuncio político prematuro, preinversión débil y sin candados transexenales. & Opacidad y mala planeación en megainfraestructura con transferencia de pasivos. & Proyección >9,000 MDD; gasto Pemex >9,000 mdp; barda >500 mdp; deuda Hidalgo \textasciitilde1,500 mdp liquidada sep. 2025; 195.5 mdp en 2020. & ASF (2015, 2016); Cancino (2020); Sandoval Ballesteros (2024); El Financiero (2025). \\
+\addlinespace
+Caso 3 (Principal) \newline Guardería ABC & Desregulación de estancias IMSS, conflicto de interés y omisión de inspecciones. & Subrogación desregulada con dilución de la responsabilidad administrativa estatal. & Subrogadas: 757 a 1,374 (+81.5\,\%) vs. 142 directas; 14 de 40 empleados; 49 fallecidos y >100 lesionados graves. & CNDH (2009); SCJN (2009, 2010, 2025); Núñez Esquer (2026); CIDH (2020); Serna de la Garza (2010); Osorno (2010). \\
+\addlinespace
+Contraste 1 \newline Sector Salud Veracruz & Saqueo presupuestal y empresas fantasma; encuadre viral impreciso. & Contraste entre rumor mediático («agua destilada») y desvío hospitalario acreditado. & 0 evidencia agua destilada (COFEPRIS); 46,984 pruebas VIH y 16.8 t fármacos caducos; 2,933 mdp obra; >3,617 mdp fantasma. & Secretaría de Salud / COFEPRIS (2017); Connectas (s.\,f.); Animal Político (s.\,f.); Santiago y Morales (2025); Ángel (2025); Sola-Morales y Zurbano-Berenguer (2019). \\
+\addlinespace
+Contraste 2 \newline Refinería Olmeca / Dos Bocas & Sobrecostos en megainfraestructura y polarización en eslóganes partidistas. & Contraste entre consigna viral («no refina») y desempeño técnico-financiero real. & Costo: 8,000 a >21,000 MDD (\textasciitilde2.6x); producción 212--263 mil bd (fin 2025) con caída a 141 mil bd (jun. 2026). & Alegría (2026); Martínez Escamilla (2026); El Universal / Celaya (2026); Cancino (2020); Reyes Heroles (2003). \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{landscape}
 
 \clearpage
 
