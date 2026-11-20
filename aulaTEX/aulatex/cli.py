@@ -571,6 +571,9 @@ def build_parser() -> argparse.ArgumentParser:
     itesca_entrega.set_defaults(dry_run=True)
     itesca_entrega.add_argument("--output", default="", help="Directorio de comprobantes.")
     itesca_entrega.add_argument("--json", action="store_true", help="Emitir salida en JSON.")
+    itesca_entrega.add_argument("--quiz-automation-authorized", action="store_true", help="Autorización explícita para resolver cuestionarios.")
+    itesca_entrega.add_argument("--quiz-answers-file", default="", help="Ruta al archivo JSON con respuestas preparadas.")
+    itesca_entrega.add_argument("--quiz-time-limit-minutes", type=int, default=60, help="Límite de tiempo para el intento (minutos).")
 
     uas_pending = sub.add_parser("uas-pending", aliases=["monitor-uas"], help="Auditar y realizar entregas pendientes en UAS orquestadas por aulatex.")
     uas_pending.add_argument("--subject", default="derecho-mercantil", help="Slug de la materia UAS (o 'all'/'todas').")
@@ -2214,6 +2217,9 @@ def main(argv: list[str] | None = None) -> None:
             finalize=bool(getattr(args, "finalize", False)),
             dry_run=bool(getattr(args, "dry_run", True)),
             output_dir=getattr(args, "output", ""),
+            quiz_automation_authorized=bool(getattr(args, "quiz_automation_authorized", False)),
+            quiz_answers_file=getattr(args, "quiz_answers_file", ""),
+            quiz_time_limit_minutes=getattr(args, "quiz_time_limit_minutes", 60),
         )
         res = agent.submit(req)
         print(json.dumps({
