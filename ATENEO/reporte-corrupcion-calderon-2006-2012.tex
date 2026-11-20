@@ -1,0 +1,462 @@
+% AulaTeX Académico - Investigación ATENEO
+% Corrupción en México durante el sexenio de Felipe Calderón (2006–2012)
+% Compilar con: pdflatex + bibtex + pdflatex + pdflatex
+
+\documentclass[12pt,letterpaper,oneside]{article}
+
+% ═══════════════════════════════════════════════════════════════════════════
+% PREÁMBULO Y CONFIGURACIÓN DOCUMENTAL
+% ═══════════════════════════════════════════════════════════════════════════
+
+\usepackage[margin=2.5cm,top=3cm,bottom=3cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla,es-nodecimaldot]{babel}
+\usepackage{mathptmx}  % Times New Roman para body
+\usepackage{helvet}    % Arial/Helvetica para títulos
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage[authoryear,round]{natbib}
+\usepackage[colorlinks=true,linkcolor=blue!70!black,citecolor=blue!70!black,urlcolor=blue!70!black]{hyperref}
+
+% Configuración de espaciado
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.65em}
+\onehalfspacing
+
+% Configuración de secciones
+\titleformat{\section}{\normalfont\sffamily\Large\bfseries\color{blue!70!black}}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\sffamily\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\sffamily\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+% Estilo de página
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\footnotesize\textit{Corrupción México 2006–2012}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Comandos útiles
+\newcommand{\pendiente}[1]{\textcolor{red}{[\textbf{PENDIENTE:} #1]}}
+\newcommand{\siglas}[1]{\textsc{#1}}
+
+% Configuración bibliográfica APA 7
+\bibliographystyle{apalike}
+\setcitestyle{authoryear,round,citesep={;},aysep={,},yysep={,}}
+
+% ═══════════════════════════════════════════════════════════════════════════
+% INFORMACIÓN DEL DOCUMENTO
+% ═══════════════════════════════════════════════════════════════════════════
+
+\title{%
+  {\Large\sffamily\textbf{INSTITUTO ATENEO DE COLIMA}}\\[0.3cm]
+  {\normalsize INCORPORADO A LA UNIVERSIDAD DE COLIMA}\\[1.2cm]
+  {\LARGE\sffamily\bfseries Corrupción en México durante el sexenio de Felipe Calderón (2006–2012)}\\[0.5cm]
+  {\large Análisis estructural, financiero y de derechos humanos a partir de los casos Genaro García Luna, Refinería Bicentenario y Guardería ABC}
+}
+
+\author{%
+  \textbf{Alumnos:}\\
+  Ulysses Emiliano González de la Cruz\\
+  Ian Alexander Miramonges Vázquez\\[1cm]
+  \textbf{Maestra:}\\
+  María Elena Luna Angulo\\[0.5cm]
+  \textbf{Materia:}\\
+  Metodología de la Investigación
+}
+
+\date{Noviembre de 2026}
+
+% ═══════════════════════════════════════════════════════════════════════════
+% INICIO DEL DOCUMENTO
+% ═══════════════════════════════════════════════════════════════════════════
+
+\begin{document}
+
+% ───────────────────────────────────────────────────────────────────────────
+% PORTADA
+% ───────────────────────────────────────────────────────────────────────────
+
+\begin{titlepage}
+  \centering
+  \vspace*{1cm}
+  
+  % Logo institucional (si existe, descomentar y ajustar ruta)
+  % \includegraphics[width=0.3\textwidth]{img/logo-ateneo-colima.pdf}\\[1.5cm]
+  
+  {\Large\sffamily\textbf{INSTITUTO ATENEO DE COLIMA}}\\[0.3cm]
+  {\normalsize INCORPORADO A LA UNIVERSIDAD DE COLIMA}\\[1.8cm]
+  
+  {\color{blue!70!black}\rule{0.85\linewidth}{1.5pt}}\\[0.6cm]
+  
+  {\Huge\sffamily\bfseries Corrupción en México durante el sexenio de Felipe Calderón (2006–2012)}\\[0.8cm]
+  
+  {\Large Análisis estructural, financiero y de derechos humanos a partir de los casos Genaro García Luna, Refinería Bicentenario y Guardería ABC}\\[0.6cm]
+  
+  {\color{blue!70!black}\rule{0.70\linewidth}{1.2pt}}\\[2cm]
+  
+  \begin{tabular}{rl}
+    \textbf{Materia:} & METODOLOGÍA DE LA INVESTIGACIÓN \\[0.3cm]
+    \textbf{Alumnos:} & Ulysses Emiliano González de la Cruz \\
+                      & Ian Alexander Miramonges Vázquez \\[0.3cm]
+    \textbf{Maestra:} & María Elena Luna Angulo \\[0.3cm]
+    \textbf{Fecha:} & Noviembre de 2026
+  \end{tabular}
+  
+  \vfill
+  
+  {\small Colima, México}
+  
+\end{titlepage}
+
+% ───────────────────────────────────────────────────────────────────────────
+% ELEMENTOS PRELIMINARES
+% ───────────────────────────────────────────────────────────────────────────
+
+\tableofcontents
+\clearpage
+
+\listoftables
+\clearpage
+
+\listoffigures
+\clearpage
+
+% ───────────────────────────────────────────────────────────────────────────
+% MAPEO DE LA INVESTIGACIÓN
+% ───────────────────────────────────────────────────────────────────────────
+
+\section*{Mapeo de la Investigación}
+\addcontentsline{toc}{section}{Mapeo de la Investigación}
+
+\subsection*{Tema y Subtema}
+
+\textbf{Tema:} La corrupción en México.
+
+\textbf{Subtema:} Los efectos de la corrupción en México durante el sexenio de Felipe Calderón (2006--2012).
+
+\subsection*{Objetivo}
+
+Analizar los mecanismos causales y los efectos institucionales, financieros y en materia de derechos humanos derivados de la corrupción en México durante el sexenio de Felipe Calderón (2006--2012), mediante un estudio documental de casos múltiples (Genaro García Luna, Refinería Bicentenario y Guardería ABC) y su contraste con el encuadre mediático contemporáneo.
+
+\subsection*{Preguntas de Investigación}
+
+\textbf{Preguntas exploratorias iniciales (conservadas conforme a la plantilla institucional):}
+
+\begin{itemize}
+  \item ¿Qué es la corrupción?
+  \item ¿La corrupción es buena o es mala?
+  \item ¿Se puede evitar la corrupción?
+  \item ¿Cuál es el nivel de corrupción en México?
+\end{itemize}
+
+\textbf{Pregunta central de investigación (formulación científica delimitada):}
+
+¿De qué manera los esquemas de corrupción gestados durante el sexenio de Felipe Calderón (2006--2012) impactaron la integridad institucional, las finanzas públicas y los derechos humanos en México, a partir de los casos de Genaro García Luna, la Refinería Bicentenario y la Guardería ABC?
+
+\subsection*{Subtemas Específicos}
+
+\begin{enumerate}
+  \item Captura institucional del aparato de seguridad pública y redes de macrocriminalidad: el caso Genaro García Luna.
+  \item Mala planeación, sobrecostos y pasivos fiscales en megainfraestructura y contrataciones públicas: el caso de la Refinería Bicentenario en Tula, Hidalgo (y expedientes comparables del sexenio).
+  \item Desregulación, subrogación de servicios públicos y conflicto de interés: el caso de la Guardería ABC y su contraste contemporáneo con el encuadre mediático (framing).
+\end{enumerate}
+
+\subsection*{Palabras Clave}
+
+Corrupción sistémica; Captura del Estado; Rendición de cuentas; Megainfraestructura; Subrogación de servicios públicos; Derechos humanos; Diseño mixto DIAC; Encuadre mediático (framing).
+
+\clearpage
+
+% ───────────────────────────────────────────────────────────────────────────
+% RESUMEN Y PALABRAS CLAVE
+% ───────────────────────────────────────────────────────────────────────────
+
+\section*{Resumen}
+\addcontentsline{toc}{section}{Resumen}
+
+En la presente investigación se analizaron los mecanismos causales y los efectos institucionales, financieros y en materia de derechos humanos derivados de la corrupción en México durante el sexenio de Felipe Calderón (2006--2012), con seguimiento judicial y fiscal hasta noviembre de 2026. El estudio se estructuró bajo un enfoque mixto con Diseño Anidado Concurrente de Modelo Dominante (DIAC: CUAL + cuan), no experimental, retrospectivo y de estudio de casos múltiples.
+
+La muestra no probabilística intencional comprendió tres casos principales ---Genaro García Luna, Refinería Bicentenario y Guardería ABC---, complementados con dos casos de contraste contemporáneo (Veracruz y Refinería Olmeca/Dos Bocas) para examinar el encuadre mediático. La vertiente cualitativa trianguló resoluciones judiciales, auditorías de la Auditoría Superior de la Federación y doctrina académica mexicana e internacional, mientras que la vertiente cuantitativa anidada sistematizó indicadores descriptivos oficiales del IPC 2025, la ENCIG 2025 y pasivos auditados.
+
+Los hallazgos documentaron captura institucional y desvío contractual en seguridad pública, endeudamiento y gasto improductivo sin candados transexenales en megainfraestructura, y dilución regulatoria con conflicto de interés y consecuencias letales en servicios subrogados. Se concluyó que los tres casos aportaron evidencia documental congruente con la hipótesis de trabajo, con alcance analíticamente transferible mas no estadísticamente generalizable a toda la Administración Pública Federal.
+
+\textbf{Palabras clave:} Corrupción sistémica; captura del Estado; sexenio 2006--2012; rendición de cuentas; megainfraestructura; subrogación; derechos humanos; diseño mixto DIAC; encuadre mediático.
+
+\clearpage
+
+% ═══════════════════════════════════════════════════════════════════════════
+% CUERPO PRINCIPAL DEL REPORTE
+% ═══════════════════════════════════════════════════════════════════════════
+
+\section{Introducción}
+
+Con frecuencia, la historia de la corrupción en México suele narrarse al revés: la atención pública se concentra en el escándalo pasajero, la consigna viral o el enfrentamiento partidista, mientras rara vez se analiza con la cabeza fría el proceso institucional que permitió llegar a ese desenlace y el costo humano que recayó sobre la población. Así como detrás de los resultados visibles existen siempre planes, omisiones o rutinas acumuladas, el propósito de este reporte no consistió en repartir culpas por simpatía política ni en reproducir el ruido mediático, sino en examinar ---mediante evidencia oficial, auditorías y resoluciones judiciales--- qué falló estructuralmente en tres episodios decisivos y de qué manera sus secuelas comprometen lo más valioso para una sociedad: la vida, la salud, la seguridad y el patrimonio colectivo.
+
+Desde la perspectiva científica, la corrupción constituye un fenómeno multidimensional que trasciende el plano estrictamente moral o penal para consolidarse como un problema estructural con repercusiones directas sobre el erario, la calidad de los servicios públicos, la vigencia de los derechos humanos y la legitimidad democrática \citep{inegi2016,monsivais2020,reyesheroles2003}. Su persistencia a través de distintas administraciones revela la consolidación de una corrupción sistémica y estructural, en la que las reglas formales son capturadas por redes de poder lícitas e ilícitas y la impunidad se institucionaliza \citep{casar2024,merino2024,sandoval2024}.
+
+En este estudio se delimitó como periodo nuclear el sexenio de Felipe Calderón Hinojosa (2006--2012), administración que concluyó con una calificación de 34 sobre 100 puntos para México en el Índice de Percepción de la Corrupción (IPC) de Transparencia Internacional. Durante esa etapa se gestaron expedientes de alto impacto cuyas consecuencias jurídicas, financieras y sociales se extendieron hasta noviembre de 2026, según se documentó en informes de la Auditoría Superior de la Federación (\siglas{asf}), sentencias de la Suprema Corte de Justicia de la Nación (\siglas{scjn}), recomendaciones de la Comisión Nacional de los Derechos Humanos (\siglas{cndh}), informes de la Comisión Interamericana de Derechos Humanos (\siglas{cidh}) y procesos penales y civiles sustanciados en tribunales de Estados Unidos.
+
+El informe se organizó conforme a los estándares metodológicos de Hernández Sampieri, Fernández Collado y Baptista Lucio (2014), integrando justificación, planteamiento, marco teórico fortalecido con doctrina mexicana, diseño mixto DIAC, análisis de los tres casos principales y dos de contraste contemporáneo, discusión de rigor y limitaciones, conclusiones, referencias en APA 7.ª edición y apéndices instrumentales.
+
+\clearpage
+
+\section{Justificación}
+
+\subsection{Relevancia social}
+
+La corrupción vulnera de manera directa o indirecta derechos económicos, sociales y culturales ---entre ellos la vida, la salud, la seguridad y el acceso equitativo a bienes públicos---, afectando de forma desproporcionada a los sectores vulnerables \citep{cidh2019,cndh2019,rios2021}. De acuerdo con la Encuesta Nacional de Calidad e Impacto Gubernamental (ENCIG) 2025 del INEGI, publicada en mayo de 2026, 84.1\,\% de la población adulta urbana percibió que los actos de corrupción son frecuentes o muy frecuentes, mientras que los pagos indebidos en trámites extrajeron 17\,707.4 millones de pesos anuales ---3\,865 pesos promedio por víctima---, el costo real más alto en una década \citep{inegi2026,imco2026}.
+
+\subsection{Relevancia académica}
+
+El estudio integró aportes clásicos e internacionales ---Nye (1967), Rose-Ackerman (1999, 2004), Garay Salamanca y Salcedo-Albarán (2012), Cancino y el BID (2020), Dávid-Barrett y Fazekas (2020) y Rezzoagli et al. (2021)--- con la tradición académica mexicana encabezada por Casar y Cejudo (2024), Merino (2024), López Ayllón y Merino (2009), Peschard (2017), Arellano Gault (2012, 2020), Lomnitz (2000), Zaid (2019), Sandoval Ballesteros (2009, 2024), Serna de la Garza (2010), Vázquez Valencia (2019), Astorga (2007, 2015), Flores Pérez (2009) y Reyes Heroles (2003).
+
+\subsection{Relevancia práctica}
+
+El obstáculo central para contener la corrupción en México no es la carencia de leyes, sino la brecha de implementación entre la norma jurídica y su cumplimiento efectivo \citep{casar2024,lopezayllon2009,peschard2017}. Los hallazgos aportaron criterios concretos para fortalecer la fiscalización autónoma, la digitalización integral de trámites, los candados transexenales en obra pública y la supervisión independiente de servicios subrogados.
+
+\subsection{Utilidad metodológica}
+
+El estudio aportó un procedimiento replicable mediante un Diseño Anidado Concurrente de Modelo Dominante (DIAC: CUAL + cuan) aplicado a casos múltiples \citep{hernandez2014}, instrumentado con una Ficha de Registro Jurídico-Institucional y Hemerográfico (Apéndice A) y una Matriz Comparativa por Caso (Apéndice B) que triangularon auditorías, sentencias judiciales, estadísticas oficiales y análisis de encuadre mediático (framing).
+
+\subsection{Viabilidad del estudio}
+
+La investigación resultó plenamente viable por el acceso público y verificable a fuentes oficiales (\siglas{asf}, \siglas{scjn}, \siglas{cndh}, \siglas{cidh}, UIF, DOJ, INEGI y Transparencia Internacional) y doctrina arbitrada, sin requerir financiamiento externo ni trabajo de campo en zonas de riesgo.
+
+\clearpage
+
+% ───────────────────────────────────────────────────────────────────────────
+% PLANTEAMIENTO DEL PROBLEMA
+% ───────────────────────────────────────────────────────────────────────────
+
+\section{Planteamiento del Problema}
+
+Pese a contar con el artículo 113 constitucional, el Sistema Nacional Anticorrupción (SNA), la Ley General de Responsabilidades Administrativas (LGRA) y tratados vinculantes de la ONU, la OEA y la OCDE, México se mantuvo en niveles críticos de corrupción. En el IPC 2025 (Transparencia Internacional, 2026), el país obtuvo 27 de 100 puntos (posición 141 de 182), último lugar de la OCDE y siete puntos por debajo de los 34 puntos del cierre de 2012.
+
+Durante el sexenio 2006--2012, la debilidad de los contrapesos horizontales y verticales posibilitó esquemas de alto impacto en tres ámbitos: la captura del aparato de seguridad pública y desvío contractual (Genaro García Luna), los pasivos y mala planeación en megainfraestructura (Refinería Bicentenario en Tula) y la subrogación desregulada con conflicto de interés y consecuencias letales (Guardería ABC). A ello se sumó la distorsión del encuadre mediático (framing), que suele simplificar fenómenos estructurales en consignas virales.
+
+\subsection{Evaluación de las deficiencias en el conocimiento del problema}
+
+Conforme a Hernández Sampieri et al. (2014), se identificó una brecha en la literatura: las resoluciones judiciales, las auditorías de la ASF y los análisis de encuadre mediático suelen estudiarse en compartimentos separados. Este trabajo cubrió dicha deficiencia articulando las tres vertientes e incorporando las resoluciones emitidas hasta noviembre de 2026.
+
+\subsection{Consecuencias éticas de la investigación}
+
+Se aplicaron tres principios éticos estrictos: uso exclusivo de fuentes públicas oficiales verificables; respeto irrestricto a las víctimas y sus familias evitando cualquier forma de revictimización; y balance probatorio objetivo incorporando las posturas de descargo de los actores públicos señalados y la continuidad transexenal de los esquemas.
+
+\clearpage
+
+% ───────────────────────────────────────────────────────────────────────────
+% PREGUNTAS Y OBJETIVOS
+% ───────────────────────────────────────────────────────────────────────────
+
+\section{Preguntas de Investigación}
+
+\textbf{Pregunta central:}
+
+¿De qué manera los esquemas de corrupción gestados durante el sexenio de Felipe Calderón (2006--2012) impactaron la integridad institucional, las finanzas públicas y los derechos humanos en México, a partir de los casos de Genaro García Luna, la Refinería Bicentenario y la Guardería ABC?
+
+\textbf{Preguntas específicas:}
+
+\begin{enumerate}
+  \item ¿De qué manera las distintas tipologías de corrupción ---desde prácticas incidentales hasta esquemas sistémicos y de captura estatal--- incidieron de forma verificable sobre el erario público, la legitimidad institucional y el ejercicio de los derechos humanos en México?
+  
+  \item ¿Cuál fue el nivel y la evolución empírica de la corrupción en México desde el cierre del sexenio 2006--2012 hasta las mediciones más recientes (IPC 2025 y ENCIG 2025)?
+  
+  \item ¿Qué condiciones institucionales y mecanismos estructurales posibilitaron la captura del aparato de seguridad en el caso Genaro García Luna, los pasivos financieros en la Refinería Bicentenario y el desorden regulatorio con conflicto de interés en la Guardería ABC?
+  
+  \item ¿En qué medida difiere la magnitud verificable del daño ocasionado a la población y a sus derechos humanos respecto del tratamiento que reciben determinados escándalos bajo el encuadre mediático (framing), al contrastar los casos del periodo 2006--2012 con episodios contemporáneos como Veracruz y Dos Bocas?
+  
+  \item ¿Qué controles institucionales, mecanismos de rendición de cuentas y rediseños de incentivos sugiere la evidencia documental y teórica para reducir la brecha entre la normatividad anticorrupción y su aplicación efectiva en México?
+\end{enumerate}
+
+\clearpage
+
+\section{Objetivos}
+
+\subsection{Objetivo General}
+
+Analizar los mecanismos causales y los efectos estructurales ---institucionales, financieros y en materia de derechos humanos--- de la corrupción en México durante el sexenio de Felipe Calderón (2006--2012), mediante un estudio documental de casos múltiples centrado en Genaro García Luna, la Refinería Bicentenario y la Guardería ABC, contrastando su impacto verificable con el tratamiento mediático del fenómeno.
+
+\subsection{Objetivos Específicos}
+
+\begin{enumerate}
+  \item Sistematizar los fundamentos conceptuales y teóricos sobre la corrupción, sus tipologías jurídicas y sus efectos verificables sobre el erario, la legitimidad democrática y los derechos humanos, integrando doctrina internacional y mexicana.
+  
+  \item Describir el nivel, el costo económico y la trayectoria empírica de la corrupción en México a partir de indicadores secundarios oficiales (IPC y ENCIG), situando el cierre de 2012 en perspectiva longitudinal hasta 2026.
+  
+  \item Examinar el origen, los mecanismos de operación, las fallas de control y las resoluciones judiciales o de fiscalización de los tres casos emblemáticos del periodo 2006--2012, junto con expedientes comparables del mismo sexenio.
+  
+  \item Contrastar el alcance real de las afectaciones a derechos humanos frente a la distorsión producida por el encuadre mediático (framing) mediante dos casos de contraste contemporáneo (Veracruz y Dos Bocas), derivando metainferencias sobre el fortalecimiento de la rendición de cuentas.
+\end{enumerate}
+
+\clearpage
+
+% ───────────────────────────────────────────────────────────────────────────
+% MARCO TEÓRICO
+% ───────────────────────────────────────────────────────────────────────────
+
+\section{Marco Teórico}
+
+\subsection{Fundamentación teórica (autores y contribuciones)}
+
+La fundamentación teórica se vertebró en seis ejes complementarios:
+
+\begin{enumerate}
+  \item \textbf{Enfoque político-institucional, económico-relacional y tipificación internacional:} Nye (1967), Rose-Ackerman (1999, 2004), UNODC (2003), Klitgaard (1988).
+  
+  \item \textbf{Corrupción sistémica, Estado capturado y rendición de cuentas en México:} Casar y Cejudo (2024), Merino (2024), López Ayllón y Merino (2009), Peschard (2017).
+  
+  \item \textbf{Raíces organizacionales, históricas y concentración del poder:} Arellano Gault (2012, 2020), Lomnitz (2000), Zaid (2019).
+  
+  \item \textbf{Corrupción estructural, megainfraestructura, desigualdad y subrogación:} Sandoval Ballesteros (2009, 2024), Ríos (2021), Cancino (2020), Dávid-Barrett y Fazekas (2020), Rezzoagli et al. (2021), Serna de la Garza (2010).
+  
+  \item \textbf{Macrocriminalidad y seguridad pública 2006--2012:} Vázquez Valencia (2019), Garay Salamanca y Salcedo-Albarán (2012), Astorga (2007, 2015), Flores Pérez (2009), Osorno (2010).
+  
+  \item \textbf{Derechos humanos, medición empírica, legitimidad y encuadre mediático:} CIDH (2019), CNDH (2019), Reyes Heroles (2003), Monsiváis-Carrillo (2020), Sola-Morales y Zurbano-Berenguer (2019), Mungiu-Pippidi (2015), OCDE (2017).
+\end{enumerate}
+
+\subsection{Marco contextual: definiciones operativas}
+
+\pendiente{Insertar aquí la Tabla 2 de definiciones operativas: Corrupción, Soborno, Peculado, Conflicto de interés, Captura del Estado, Subrogación de servicios, Encuadre mediático.}
+
+\subsection{Diagnóstico empírico: Indicadores oficiales}
+
+\pendiente{Insertar aquí la Tabla 3 con indicadores IPC 2025, ENCIG 2025, costo económico, satisfacción servicios.}
+
+\clearpage
+
+% ───────────────────────────────────────────────────────────────────────────
+% HIPÓTESIS Y METODOLOGÍA
+% ───────────────────────────────────────────────────────────────────────────
+
+\section{Hipótesis}
+
+\textbf{Hipótesis de trabajo u orientadora (Hi):}
+
+Los episodios emblemáticos de corrupción registrados durante el sexenio de Felipe Calderón (2006--2012) no respondieron a fallas administrativas aisladas, sino a condiciones estructurales de concentración discrecional de poder sin contrapesos, planeación presupuestal deficiente en obra pública y desregulación de servicios subrogados con conflicto de interés, lo cual se asoció con efectos prolongados sobre la integridad institucional, el erario público y los derechos humanos ---observables en los casos Genaro García Luna, Refinería Bicentenario y Guardería ABC---, cuya magnitud verificable difiere con frecuencia de la jerarquía asignada por el encuadre mediático.
+
+Se estableció expresamente que la evidencia recopilada a partir de tres casos intencionales permite valorar la congruencia empírico-documental con la hipótesis de trabajo y generar hallazgos analíticamente transferibles, sin pretender una comprobación definitiva ni generalización estadística hacia toda la Administración Pública Federal 2006--2012.
+
+\pendiente{Insertar Tabla 4 de operacionalización de categorías, variables e indicadores.}
+
+\clearpage
+
+\section{Marco Metodológico}
+
+\subsection{Enfoque y diseño de investigación (DIAC: CUAL + cuan)}
+
+La investigación se desarrolló bajo un enfoque mixto formalizado como Diseño Anidado Concurrente de Modelo Dominante (DIAC: CUAL + cuan), no experimental, retrospectivo y de estudio de casos múltiples \citep{hernandez2014}. La rama dominante cualitativa-documental (CUAL) reconstruyó procesos institucionales y cadenas probatorias mediante sentencias, auditorías y doctrina, mientras la rama anidada cuantitativa (cuan) sistematizó indicadores descriptivos secundarios oficiales (IPC, ENCIG, montos auditados y víctimas), cruzándose ambos niveles para producir metainferencias.
+
+\subsection{Elección y justificación del tipo de investigación}
+
+El estudio tuvo un alcance documental, descriptivo y analítico-explicativo, bajo un diseño no experimental, retrospectivo y de estudio de casos múltiples (hechos consumados entre 2006 y 2012 con seguimiento judicial y fiscal hasta noviembre de 2026).
+
+\subsection{Identificación de la población / universo y delimitación temporal}
+
+El universo documental principal abarcó los expedientes de presunta corrupción, irregularidades graves y contrataciones auditadas o judicializadas de la Administración Pública Federal 2006--2012 (con seguimiento hasta noviembre de 2026). Para evitar desviaciones del recorte temporal, se delimitó que Veracruz y Refinería Olmeca (Dos Bocas) en el Tema 3.3 operaron estrictamente como casos de contraste contemporáneo sobre encuadre mediático (framing).
+
+\subsection{Tipo y procedimiento para muestras}
+
+Se aplicó un muestreo no probabilístico intencional por criterio teórico. La muestra principal comprendió tres casos (n = 3: Genaro García Luna, Refinería Bicentenario y Guardería ABC) seleccionados por diversidad tipológica, máximo rigor probatorio oficial y magnitud de impacto, complementados con dos casos de contraste contemporáneo (Veracruz y Dos Bocas).
+
+\subsection{Técnicas de recolección y análisis}
+
+Se empleó el análisis documental estructurado con triangulación de fuentes, instrumentado mediante la Ficha de Registro Jurídico-Institucional y Hemerográfico (Apéndice A) y la Matriz Comparativa por Caso (Apéndice B).
+
+Debido al muestreo no probabilístico intencional (n = 3 casos documentales), NO se aplicó estadística inferencial paramétrica ni no paramétrica para estimar parámetros poblacionales. El análisis combinó: (a) estadística descriptiva para los indicadores secundarios oficiales y montos auditados, y (b) análisis cualitativo categorial, triangulación de fuentes e inferencia analítica comparada para construir metainferencias transferibles.
+
+\clearpage
+
+% ═══════════════════════════════════════════════════════════════════════════
+% ANÁLISIS DE CASOS PRINCIPALES
+% ═══════════════════════════════════════════════════════════════════════════
+
+\section{Caso 1: Captura Institucional y Macrocriminalidad}
+\subsection{Genaro García Luna}
+
+\pendiente{Desarrollar análisis completo del caso García Luna: ascenso 1989--2006, colusión con Cártel de Sinaloa desde 2006, expansión PF de 5k a 35k efectivos, sentencia exp. 19-CR-576 en Nueva York, sobornos, red offshore Weinberg, contratos >727 MDD + 528 mdp, condenas penales >38 años (oct 2024) y civiles ~2500 MDD (may 2025) + >578 MDD (nov 2026), postura descargo Calderón.}
+
+\clearpage
+
+\section{Caso 2: Mala Planeación y Pasivos en Megainfraestructura}
+\subsection{Refinería Bicentenario}
+
+\pendiente{Desarrollar análisis completo del caso Refinería Bicentenario: anuncio 18-mar-2008 con inversión >9000 MDD, competencia entre estados con donación 700 ha, deuda Hidalgo ~1500 mdp liquidada sep-2025, gasto Pemex >9000 mdp en ing básica + barda >500 mdp sin consolidar esquema financiero, cancelación dic-2014, auditorías ASF 0353 y 533-DE, erogación 195.5 mdp en 2020, postura descargo Calderón feb-2025, Tabla 5 de expedientes comparables: Estela de Luz, CPS, sobornos FCPA, Odebrecht/Oceanografía.}
+
+\clearpage
+
+\section{Caso 3: Desregulación, Conflicto de Interés y Derechos Humanos}
+\subsection{Guardería ABC y Mediatización}
+
+\pendiente{Desarrollar análisis completo del caso Guardería ABC: incendio 5-jun-2009 con 49 fallecidos y >100 lesionados, expansión guarderías subrogadas 757 a 1374 (+81.5\%) vs 142 directas, concesión con vínculos familiares y políticos, nave inflamable + 14 de 40 empleados + dictamen riesgo ignorado jul-2005, resoluciones SCJN ``desorden generalizado'' art 213 LSS, CIDH informe 185/20, imprescriptibilidad penal 19-jun-2026.}
+
+\subsubsection{Casos de contraste contemporáneo: Veracruz y Dos Bocas}
+
+\pendiente{Desarrollar contraste Veracruz: titular viral agua destilada sin evidencia COFEPRIS vs saqueo real (46984 VIH caducas, 16.8 t fármacos, 2933 mdp obra, >3617 mdp fantasma, 276.6 mdp factureras). Contraste Dos Bocas: >21000 MDD (~2.6x previstos 8000 MDD), caída 141 kbd jun-2026, distorsión framing. Tabla 6 de ejes nacionales por alcance poblacional.}
+
+\clearpage
+
+% ═══════════════════════════════════════════════════════════════════════════
+% CONCLUSIONES Y REFERENCIAS
+% ═══════════════════════════════════════════════════════════════════════════
+
+\section{Conclusiones}
+
+\subsection{Discusión, criterios de rigor y limitaciones}
+
+La integración concurrente entre la evidencia documental dominante (CUAL) y las series estadísticas secundarias anidadas (cuan) generó metainferencias congruentes con la doctrina institucional. Se aseguraron los cuatro criterios de rigor: credibilidad (triangulación judicial-auditorías-academia), dependencia (trazabilidad expedientes), confirmabilidad (posturas descargo y continuidad transexenal) y transferencia analítica (sin generalización estadística).
+
+Se reconocieron tres limitaciones: dependencia de archivos públicos secundarios, procesos judiciales aún en ejecución en noviembre de 2026 y muestra intencional (n = 3).
+
+\subsection{Síntesis conclusiva}
+
+Los tres casos principales aportaron evidencia documental congruente con la hipótesis de trabajo, con alcance analíticamente transferible y no estadísticamente generalizable a toda la Administración Pública Federal 2006--2012. Los hallazgos confirmaron:
+
+\begin{enumerate}
+  \item Efectos acumulativos sobre erario, legitimidad democrática y derechos humanos.
+  \item Deterioro longitudinal en el IPC (34 a 27 puntos) y repunte del costo cotidiano en la ENCIG 2025 (17\,707.4 mdp).
+  \item Mecanismos estructurales convergentes en seguridad, megainfraestructura y subrogación.
+  \item Divergencia entre framing mediático y daño acreditado.
+  \item Necesidad de autonomía fiscalizadora, digitalización integral de trámites (hoy en 21.7\,\%), candados transexenales y vigilancia independiente.
+\end{enumerate}
+
+En última instancia, observar la corrupción con la cabeza fría obliga a mirar más allá de las cifras presupuestales y los discursos coyunturales. Así como ningún proyecto duradero prospera cuando se improvisa y se abandonan los planes rigurosos, ningún país logra superar la impunidad si tolera que las reglas se doblen según conveniencias de grupo. Detrás de cada expediente documentado en estas páginas permaneció una lección difícil pero insoslayable: cuando se debilita la integridad de las instituciones, lo que realmente queda expuesto son la vida, la salud, la seguridad y el porvenir de las familias mexicanas.
+
+\clearpage
+
+% ───────────────────────────────────────────────────────────────────────────
+% REFERENCIAS BIBLIOGRÁFICAS
+% ───────────────────────────────────────────────────────────────────────────
+
+\nocite{*}
+\bibliography{referencias-corrupcion-calderon}
+
+\clearpage
+
+% ───────────────────────────────────────────────────────────────────────────
+% APÉNDICES
+% ───────────────────────────────────────────────────────────────────────────
+
+\appendix
+
+\section{Ficha de Registro Jurídico-Institucional y Hemerográfico}
+
+\pendiente{Insertar tabla de Apéndice A con formato de ficha: Código, Caso, Periodo, Dependencias, Tipología, Fuentes primarias, Respaldo académico, Posturas descargo, Categorías.}
+
+\clearpage
+
+\section{Matriz Comparativa por Caso}
+
+\pendiente{Insertar tabla de Apéndice B con matriz: Caso/Tipo, Dimensión analítica, Mecanismo CUAL, Indicadores cuan, Fuentes APA7.}
+
+\clearpage
+
+\end{document}
