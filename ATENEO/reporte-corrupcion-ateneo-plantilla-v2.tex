@@ -1,0 +1,417 @@
+% ╔══════════════════════════════════════════════════════════════════════════════╗
+% ║     PLANTILLA INSTITUCIONAL - INSTITUTO ATENEO DE COLIMA                      ║
+% ║     Investigación Documental: Corrupción en México (2006-2012)                ║
+% ║     Metodología: DIAC (Diseño Anidado Concurrente) - CUAL + cuan             ║
+% ╚══════════════════════════════════════════════════════════════════════════════╝
+
+\documentclass[12pt,letterpaper,oneside,openany]{book}
+
+% ═══════════════════════════════════════════════════════════════════════════════
+% CONFIGURACIÓN DE MÁRGENES Y GEOMETRÍA
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\usepackage[margin=2.5cm,top=3.5cm,bottom=3.5cm,headheight=3cm,headsep=1.5cm]{geometry}
+
+% ═══════════════════════════════════════════════════════════════════════════════
+% ENCODING, IDIOMA Y TIPOGRAFÍA
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla,es-nodecimaldot]{babel}
+
+% Tipografía profesional: Times New Roman para cuerpo, Helvetica para títulos
+\usepackage{mathptmx}       % Times New Roman para el cuerpo
+\usepackage{helvet}         % Helvetica para títulos
+\renewcommand{\familydefault}{\sfdefault}  % Sans-serif por defecto para uniformidad institucional
+
+% ═══════════════════════════════════════════════════════════════════════════════
+% PAQUETES ESENCIALES
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{fancybox}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{pdflscape}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{watermark}                    % Marca de agua
+\usepackage[authoryear,round]{natbib}     % Bibliografía APA
+\usepackage[colorlinks=true,linkcolor=ateneo-blue!70!black,citecolor=ateneo-blue!70!black,urlcolor=ateneo-blue!70!black]{hyperref}
+
+% ═══════════════════════════════════════════════════════════════════════════════
+% COLORES INSTITUCIONALES - INSTITUTO ATENEO DE COLIMA
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\definecolor{ateneo-purple}{HTML}{A6266C}  % Púrpura institucional (logo)
+\definecolor{ateneo-blue}{HTML}{2E5090}    % Azul académico
+\definecolor{ateneo-gray}{HTML}{4A4A4A}    % Gris corporativo
+\definecolor{ateneo-light}{HTML}{F5F5F5}   % Fondo claro
+\definecolor{documental}{HTML}{D35400}     % Naranja para identificación "ESTUDIO DOCUMENTAL"
+
+% ═══════════════════════════════════════════════════════════════════════════════
+% ESPACIADO Y FORMATO DE PÁRRAFOS
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.72em}
+\onehalfspacing
+
+% ═══════════════════════════════════════════════════════════════════════════════
+% FORMATO DE SECCIONES Y SUBSECCIONES
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\titleformat{\chapter}[block]
+  {\normalfont\sffamily\Large\bfseries\color{ateneo-purple}}
+  {\thechapter.}{0.5em}{}
+
+\titleformat{\section}[block]
+  {\normalfont\sffamily\large\bfseries\color{ateneo-blue}}
+  {\thesection.}{0.5em}{}[\titlerule]
+
+\titleformat{\subsection}[block]
+  {\normalfont\sffamily\normalsize\bfseries}
+  {\thesubsection.}{0.5em}{}
+
+\titleformat{\subsubsection}[runin]
+  {\normalfont\sffamily\small\itshape}
+  {\thesubsubsection.}{0.5em}{}
+
+% ═══════════════════════════════════════════════════════════════════════════════
+% ENCABEZADOS Y PIES DE PÁGINA (FANCYHDR)
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=0.8cm]{img/image1.png}}
+\fancyhead[C]{\small\textbf{Instituto Ateneo de Colima}\\Investigación Documental}
+\fancyhead[R]{\textit{Corrupción 2006–2012}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Estilos especiales para portada
+\fancypagestyle{portada}{
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+% ═══════════════════════════════════════════════════════════════════════════════
+% MARCA DE AGUA (WATERMARK) - "ESTUDIO DOCUMENTAL"
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\ThisULCornerWallPaper{0.15}{img/image1.png}  % Logo en esquina superior derecha, 15% tamaño
+
+% Marca de agua textual en primer plano
+\usepackage{tikz}
+\usetikzlibrary{shapes.misc}
+\AddToShipoutPicture{
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[
+      text=documental!10,
+      font=\fontsize{72}{72}\bfseries\sffamily,
+      rotate=45,
+      opacity=0.1
+    ] at (current page.center) {DOCUMENTAL};
+  \end{tikzpicture}
+}
+
+% ═══════════════════════════════════════════════════════════════════════════════
+% COMANDO PERSONALIZADO PARA NOTA METODOLÓGICA
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\newcommand{\nota}[1]{%
+  \begin{fcolorbox{ateneo-blue}{ateneo-light}
+    {\small\textbf{Nota metodológica:} #1}
+  \end{fcolorbox}
+}
+
+\newcommand{\pendiente}[1]{\textcolor{red}{[\textbf{PENDIENTE:} #1]}}
+
+\newcommand{\siglas}[1]{\textsc{#1}}
+
+% ═══════════════════════════════════════════════════════════════════════════════
+% BIBLIOGRAFÍA EN ESTILO APA 7
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\bibliographystyle{apalike}
+\setcitestyle{authoryear,round,citesep={;},aysep={,},yysep={,}}
+
+% ═══════════════════════════════════════════════════════════════════════════════
+% METADATOS DEL DOCUMENTO
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\title{%
+  {\Large\sffamily\bfseries INSTITUTO ATENEO DE COLIMA}\\[0.3cm]
+  {\small INCORPORADO A LA UNIVERSIDAD DE COLIMA}\\[1.5cm]
+  {\Huge\sffamily\bfseries Corrupción en México durante el sexenio de Felipe Calderón}\\
+  {\LARGE\sffamily (2006–2012)}\\[0.5cm]
+  {\large Análisis estructural, financiero y de derechos humanos}\\
+  {\normalsize a partir de los casos Genaro García Luna, Refinería Bicentenario y Guardería ABC}
+}
+
+\author{%
+  \textbf{Alumnos:}\\
+  Ulysses Emiliano González de la Cruz\\
+  Ian Alexander Miramonges Vázquez\\[1cm]
+  \textbf{Maestra:}\\
+  María Elena Luna Angulo\\[0.5cm]
+  \textbf{Materia:}\\
+  Metodología de la Investigación
+}
+
+\date{Noviembre de 2026}
+
+% ═══════════════════════════════════════════════════════════════════════════════
+% DOCUMENTO PRINCIPAL
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\begin{document}
+
+% ───────────────────────────────────────────────────────────────────────────────
+% PORTADA INSTITUCIONAL
+% ───────────────────────────────────────────────────────────────────────────────
+
+\thispagestyle{portada}
+\begin{center}
+  \vspace*{1.5cm}
+  
+  % Logo institucional
+  \includegraphics[height=3cm]{img/image1.png}\\[1.5cm]
+  
+  {\Large\sffamily\bfseries INSTITUTO ATENEO DE COLIMA}\\[0.3cm]
+  {\normalsize INCORPORADO A LA UNIVERSIDAD DE COLIMA}\\[2cm]
+  
+  % Línea decorativa
+  {\color{ateneo-purple}\rule{0.8\textwidth}{2pt}}\\[0.8cm]
+  
+  {\Huge\sffamily\bfseries Corrupción en México durante el sexenio\\de Felipe Calderón (2006–2012)}\\[0.8cm]
+  
+  {\large\sffamily Análisis estructural, financiero y de derechos humanos\\
+  a partir de los casos Genaro García Luna, Refinería Bicentenario y Guardería ABC}\\[0.8cm]
+  
+  % Línea decorativa
+  {\color{ateneo-purple}\rule{0.6\textwidth}{1.5pt}}\\[2.5cm]
+  
+  % Información académica
+  \begin{tabular}{rl}
+    \textbf{Materia:} & METODOLOGÍA DE LA INVESTIGACIÓN \\[0.3cm]
+    \textbf{Alumnos:} & Ulysses Emiliano González de la Cruz \\
+                      & Ian Alexander Miramonges Vázquez \\[0.3cm]
+    \textbf{Maestra:} & María Elena Luna Angulo \\[0.3cm]
+    \textbf{Tipo de estudio:} & \textcolor{documental}{\textbf{INVESTIGACIÓN DOCUMENTAL}} \\
+                              & \textit{Diseño Anidado Concurrente (DIAC: CUAL + cuan)} \\[0.3cm]
+    \textbf{Fecha:} & Noviembre de 2026
+  \end{tabular}
+  
+  \vfill
+  
+  {\small Colima, México}
+  
+\end{center}
+
+\clearpage
+
+% ───────────────────────────────────────────────────────────────────────────────
+% NOTA METODOLÓGICA EN PORTADA INTERIOR
+% ───────────────────────────────────────────────────────────────────────────────
+
+\thispagestyle{fancy}
+
+\begin{center}
+  {\Large\sffamily\bfseries Declaración metodológica}
+\end{center}
+
+\vspace{1cm}
+
+\nota{%
+  Este documento constituye un \textbf{estudio documental} de casos múltiples 
+  conforme a los estándares de Hernández Sampieri, Fernández Collado y Baptista 
+  Lucio (2014). La investigación se estructuró bajo un \textbf{Diseño Anidado 
+  Concurrente de Modelo Dominante (DIAC: CUAL + cuan)} que articula evidencia 
+  cualitativa documental triangulada (resoluciones judiciales, auditorías oficiales 
+  y doctrina académica) con indicadores cuantitativos secundarios descriptivos 
+  (IPC 2025, ENCIG 2025, montos auditados). Los hallazgos ofrecen alcance 
+  \textbf{analíticamente transferible} pero no estadísticamente generalizable 
+  a la Administración Pública Federal 2006–2012.
+}
+
+\vspace{2cm}
+
+\begin{center}
+  {\sffamily\bfseries ÍNDICE DE CONTENIDOS}
+\end{center}
+
+\tableofcontents
+
+\clearpage
+
+% ───────────────────────────────────────────────────────────────────────────────
+% LISTAS DE TABLAS Y FIGURAS
+% ───────────────────────────────────────────────────────────────────────────────
+
+\listoftables
+\clearpage
+
+\listoffigures
+\clearpage
+
+% ═══════════════════════════════════════════════════════════════════════════════
+% CONTENIDO PRINCIPAL (CAPÍTULOS)
+% ═══════════════════════════════════════════════════════════════════════════════
+
+% Capítulo 1: Resumen y palabras clave
+\chapter*{Resumen ejecutivo y palabras clave}
+\addcontentsline{toc}{chapter}{Resumen ejecutivo y palabras clave}
+
+En la presente investigación se analizaron los mecanismos causales y los efectos 
+institucionales, financieros y en materia de derechos humanos derivados de la 
+corrupción en México durante el sexenio de Felipe Calderón (2006–2012), con 
+seguimiento judicial y fiscal hasta noviembre de 2026. El estudio se estructuró 
+bajo un \textbf{Diseño Anidado Concurrente de Modelo Dominante (DIAC: CUAL + cuan)}, 
+no experimental, retrospectivo y de estudio de casos múltiples.
+
+La muestra no probabilística intencional comprendió tres casos principales 
+---Genaro García Luna, Refinería Bicentenario y Guardería ABC---, complementados 
+con dos casos de contraste contemporáneo (Veracruz y Refinería Olmeca/Dos Bocas) 
+para examinar el encuadre mediático. La vertiente cualitativa trianguló resoluciones 
+judiciales, auditorías de la Auditoría Superior de la Federación y doctrina académica 
+mexicana e internacional, mientras que la vertiente cuantitativa anidada sistematizó 
+indicadores descriptivos oficiales del IPC 2025, la ENCIG 2025 y pasivos auditados.
+
+Los hallazgos documentaron captura institucional y desvío contractual en seguridad 
+pública, endeudamiento y gasto improductivo sin candados transexenales en 
+megainfraestructura, y dilución regulatoria con conflicto de interés y consecuencias 
+letales en servicios subrogados. Se concluyó que los tres casos aportaron evidencia 
+documental congruente con la hipótesis de trabajo, con alcance analíticamente 
+transferible mas no estadísticamente generalizable a toda la Administración Pública Federal.
+
+\vspace{1cm}
+
+{\sffamily\bfseries Palabras clave:} Corrupción sistémica; captura del Estado; 
+sexenio 2006–2012; rendición de cuentas; megainfraestructura; subrogación; 
+derechos humanos; diseño mixto DIAC; encuadre mediático (framing).
+
+\clearpage
+
+% Capítulo 2: Introducción
+\chapter{Introducción}
+
+\input{capitulos/01_introduccion}
+
+\clearpage
+
+% Capítulo 3: Justificación
+\chapter{Justificación de la investigación}
+
+\input{capitulos/02_justificacion}
+
+\clearpage
+
+% Capítulo 4: Planteamiento
+\chapter{Planteamiento del problema}
+
+\input{capitulos/03_planteamiento}
+
+\clearpage
+
+% Capítulo 5: Preguntas y objetivos
+\chapter{Preguntas de investigación y objetivos}
+
+\input{capitulos/04_preguntas_objetivos}
+
+\clearpage
+
+% Capítulo 6: Marco teórico
+\chapter{Marco teórico}
+
+\input{capitulos/05_marco_teorico}
+
+\clearpage
+
+% Capítulo 7: Hipótesis
+\chapter{Hipótesis y operacionalización}
+
+\input{capitulos/06_hipotesis}
+
+\clearpage
+
+% Capítulo 8: Metodología
+\chapter{Marco metodológico}
+
+\input{capitulos/07_metodologia}
+
+\clearpage
+
+% Capítulo 9: Caso 1
+\chapter{Captura institucional y macrocriminalidad: Genaro García Luna}
+
+\input{capitulos/08_caso1_garcia_luna}
+
+\clearpage
+
+% Capítulo 10: Caso 2
+\chapter{Megainfraestructura: Refinería Bicentenario}
+
+\input{capitulos/09_caso2_refineria}
+
+\clearpage
+
+% Capítulo 11: Caso 3
+\chapter{Desregulación y derechos humanos: Guardería ABC}
+
+\input{capitulos/10_caso3_guarderia_abc}
+
+\clearpage
+
+% Capítulo 12: Conclusiones
+\chapter{Conclusiones}
+
+\input{capitulos/11_conclusiones}
+
+\clearpage
+
+% ═══════════════════════════════════════════════════════════════════════════════
+% REFERENCIAS BIBLIOGRÁFICAS
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\nocite{*}
+\bibliographystyle{apalike}
+\bibliography{referencias-corrupcion-calderon}
+
+\clearpage
+
+% ═══════════════════════════════════════════════════════════════════════════════
+% APÉNDICES
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\appendix
+
+\chapter{Ficha de Registro Jurídico-Institucional y Hemerográfico}
+
+\input{apendices/01_ficha_registro}
+
+\clearpage
+
+\chapter{Matriz Comparativa de Variables, Dimensiones e Indicadores}
+
+\input{apendices/02_matriz_comparativa}
+
+\clearpage
+
+\end{document}
+
+% ═══════════════════════════════════════════════════════════════════════════════
+% FIN DEL DOCUMENTO
+% ═══════════════════════════════════════════════════════════════════════════════
