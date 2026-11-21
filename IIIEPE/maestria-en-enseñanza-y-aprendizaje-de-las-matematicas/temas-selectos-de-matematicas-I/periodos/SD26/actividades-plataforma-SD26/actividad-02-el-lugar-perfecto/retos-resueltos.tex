@@ -1,0 +1,182 @@
+\documentclass[spanish,letterpaper,landscape]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[margin=1.15cm,top=1.0cm,bottom=1.2cm]{geometry}
+\usepackage{amsmath,amssymb,array,tabularx,colortbl,tikz,fancyhdr}
+\usetikzlibrary{arrows.meta,calc,babel}
+\usepackage{xcolor}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\arrayrulecolor{iiiepeNavy!70}
+\setlength{\arrayrulewidth}{0.7pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\scriptsize IIIEPE · MAEM · PFM02 · SD26}
+\fancyfoot[C]{\scriptsize\thepage}
+\fancyfoot[R]{\scriptsize Actividad 2 (Sesión 9) · Retos presenciales resueltos}
+
+\begin{document}
+\color{iiiepeInk}
+
+% ==================== PÁGINA 1: RETO 1 (DOS SALONES A Y B) ====================
+\noindent
+\begin{tabularx}{\textwidth}{@{} >{\raggedright\arraybackslash}p{0.34\textwidth} >{\centering\arraybackslash}X >{\raggedleft\arraybackslash}p{0.28\textwidth} @{}}
+\footnotesize \textbf{Maestría en Aprendizaje y Enseñanza de las Matemáticas} &
+\footnotesize \textbf{UA: Temas Selectos de Matemáticas I} &
+\footnotesize \textbf{Bloque II. Enseñar desde el desafío} \\
+\footnotesize Sesión 9. El lugar perfecto &
+\footnotesize Alumno: Martín Jonathan de la Cruz Muñoz (00874) &
+\footnotesize \textbf{Actividad 2 · Reto 1}
+\end{tabularx}
+
+\vspace{4pt}
+\begin{center}
+  {\normalsize\bfseries Reto 1. Dos salones, $A$ y $B$, necesitan un bebedero que esté a la misma distancia de ambos.}
+\end{center}
+\vspace{2pt}
+{\small Observa los puntos $A$ y $B$; sin utilizar ningún recurso, propón dos ubicaciones posibles. Después utiliza regla y compás para identificar todos los lugares que cumplen la condición y compruébalo mediante mediciones.}
+
+\vspace{6pt}
+\renewcommand{\arraystretch}{1.25}
+\noindent\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{0.71\textwidth}|>{\raggedright\arraybackslash}X|}
+\hline
+\rowcolor{iiiepePale} \textbf{\small CONSTRUCCIÓN} & \multicolumn{1}{c|}{\textbf{\small Posibles dudas}} \\\hline
+\begin{minipage}[c]{0.96\linewidth}
+  \centering\vspace{4pt}
+  \begin{tikzpicture}[scale=1.0]
+    \coordinate (A) at (1.5,2.2);
+    \coordinate (B) at (9.5,5.0);
+    \coordinate (M) at ($(A)!0.5!(B)$); % (5.5, 3.6)
+    % Dirección AB: (8, 2.8), unitario = (0.9439, 0.3303); normal = (-0.3303, 0.9439)
+    % Puntos sobre la mediatriz (con t = +-2.8 y cortes de arcos r=5.2 -> dist from M = sqrt(5.2^2 - 4.238^2) = 3.01)
+    \coordinate (P1) at ($(M) + 2.95*(-0.3303,0.9439)$);
+    \coordinate (P2) at ($(M) - 2.95*(-0.3303,0.9439)$);
+    \coordinate (Mtop) at ($(M) + 3.55*(-0.3303,0.9439)$);
+    \coordinate (Mbot) at ($(M) - 3.35*(-0.3303,0.9439)$);
+
+    % Cuadrícula sutil de apoyo
+    \draw[iiiepePale!90!gray,step=0.5,thin] (-0.2,0) grid (11.2,7.2);
+
+    % Arcos de compas desde A y B
+    \draw[iiiepeAqua!85!black,thick,dashed] (A) ++(-25:5.17) arc (-25:65:5.17);
+    \draw[iiiepeAqua!85!black,thick,dashed] (B) ++(155:5.17) arc (155:245:5.17);
+
+    % Segmento AB
+    \draw[iiiepeNavy,thick] (A) -- (B);
+
+    % Mediatriz completa (infinitos puntos)
+    \draw[iiiepeOrange,very thick] (Mbot) -- (Mtop) node[above right,font=\scriptsize\bfseries,iiiepeOrange] {Mediatriz ($\overline{PA}=\overline{PB}$)};
+
+    % Angulo recto en M
+    \draw[iiiepeNavy] ($(M) + 0.25*(0.9439,0.3303)$) -- ($(M) + 0.25*(0.9439,0.3303) + 0.25*(-0.3303,0.9439)$) -- ($(M) + 0.25*(-0.3303,0.9439)$);
+
+    % Distancias de comprobación hacia P1
+    \draw[iiiepeBlue,thick,dotted] (A) -- (P1) node[midway,above left,font=\scriptsize] {$PA = 5.2\text{ u}$};
+    \draw[iiiepeBlue,thick,dotted] (B) -- (P1) node[midway,above right,font=\scriptsize] {$PB = 5.2\text{ u}$};
+
+    % Dos ubicaciones posibles marcadas (M y P2)
+    \fill[iiiepeNavy] (A) circle (3.2pt) node[below left,font=\small\bfseries] {$A$};
+    \fill[iiiepeNavy] (B) circle (3.2pt) node[above right,font=\small\bfseries] {$B$};
+    \fill[iiiepeOrange] (M) circle (3pt) node[below right,font=\scriptsize\bfseries] {$M$ (propuesta 1)};
+    \fill[iiiepeAqua!80!black] (P1) circle (2.8pt) node[right,font=\scriptsize\bfseries] {$P_1$ (corte arcos)};
+    \fill[iiiepeAqua!80!black] (P2) circle (2.8pt) node[below right,font=\scriptsize\bfseries] {$P_2$ (propuesta 2)};
+  \end{tikzpicture}\vspace{4pt}
+\end{minipage} &
+\small
+\begin{itemize}\leftskip=-10pt
+  \item \textbf{¿Solo existe un punto?} Al estimar inicialmente suele pensarse únicamente en el punto medio $M$; al buscar otro punto se descubre que hay \textbf{infinitos}.
+  \item \textbf{Abertura del compás:} Si el radio elegido es menor o igual a $\frac{1}{2}AB$, los arcos desde $A$ y $B$ no se intersectan.
+  \item \textbf{Error al medir:} Confundir distancia diagonal real ($PA=PB$) con distancia horizontal al borde de la hoja.
+\end{itemize} \\\hline
+\rowcolor{iiiepePale} \multicolumn{2}{|c|}{\textbf{\small Conclusiones}} \\\hline
+\multicolumn{2}{|p{0.97\textwidth}|}{\small Existen \textbf{infinitas ubicaciones posibles} para el bebedero equidistante de $A$ y $B$: todas se encuentran sobre la \textbf{mediatriz} del segmento $\overline{AB}$ (la recta perpendicular a $\overline{AB}$ que pasa por su punto medio $M$). Con regla y compás se construye trazando arcos de radio igual (mayor que $AB/2$) con centro en $A$ y en $B$ y uniendo sus intersecciones $P_1$ y $P_2$; para todo punto $P$ sobre esa recta se cumple $PA = PB$.} \\\hline
+\end{tabularx}
+
+% ==================== PÁGINA 2: RETO 3 (UN BEBEDERO, 3 SALONES A, B, C) ====================
+\newpage
+\noindent
+\begin{tabularx}{\textwidth}{@{} >{\raggedright\arraybackslash}p{0.34\textwidth} >{\centering\arraybackslash}X >{\raggedleft\arraybackslash}p{0.28\textwidth} @{}}
+\footnotesize \textbf{Maestría en Aprendizaje y Enseñanza de las Matemáticas} &
+\footnotesize \textbf{UA: Temas Selectos de Matemáticas I} &
+\footnotesize \textbf{Bloque II. Enseñar desde el desafío} \\
+\footnotesize Sesión 9. El lugar perfecto &
+\footnotesize Alumno: Martín Jonathan de la Cruz Muñoz (00874) &
+\footnotesize \textbf{Actividad 2 · Reto 3}
+\end{tabularx}
+
+\vspace{4pt}
+\begin{center}
+  {\normalsize\bfseries Reto 3. Un bebedero, 3 salones}
+\end{center}
+\vspace{2pt}
+{\small Observa los puntos $A$, $B$ y $C$ que representan los tres salones y, sin utilizar ningún instrumento, propón una ubicación para el bebedero que esté a la misma distancia de los tres. Después, utiliza regla y compás para encontrar el punto que cumple esta condición y comprueba tu resultado mediante mediciones.}
+
+\vspace{6pt}
+\noindent\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{0.71\textwidth}|>{\raggedright\arraybackslash}X|}
+\hline
+\rowcolor{iiiepePale} \textbf{\small CONSTRUCCIÓN} & \multicolumn{1}{c|}{\textbf{\small Posibles dudas}} \\\hline
+\begin{minipage}[c]{0.96\linewidth}
+  \centering\vspace{4pt}
+  \begin{tikzpicture}[scale=0.95]
+    % A=(1.6,4.6), B=(9.0,5.2), C=(3.6,0.8) -> Circuncentro exacto aproximado:
+    % Wait: use clean integer circumcircle points around O=(5.2, 3.3), R=3.2 ->
+    % A=(5.2-3.2*0.866, 3.3+3.2*0.5) = (2.43, 4.90)
+    % B=(5.2+3.2*0.95, 3.3+3.2*0.312) = (8.24, 4.30)
+    % C=(5.2-3.2*0.45, 3.3-3.2*0.893) = (3.76, 0.44)
+    \coordinate (O) at (5.2,3.3);
+    \coordinate (A) at (2.43,4.90);
+    \coordinate (B) at (8.24,4.30);
+    \coordinate (C) at (3.76,0.44);
+    \coordinate (Mab) at ($(A)!0.5!(B)$);
+    \coordinate (Mac) at ($(A)!0.5!(C)$);
+    \coordinate (Mbc) at ($(B)!0.5!(C)$);
+
+    \draw[iiiepePale!90!gray,step=0.5,thin] (-0.2,-0.3) grid (10.6,7.0);
+
+    % Circunferencia circunscrita R=3.2
+    \draw[iiiepeAqua!85!black,thick,dashed] (O) circle (3.2);
+
+    % Triangulo ABC
+    \draw[iiiepeNavy,thick] (A) -- (B) -- (C) -- cycle;
+
+    % Mediatrices pasando por O y puntos medios (prolongadas)
+    \draw[iiiepeOrange,thick] ($(O)!-0.8!(Mab)$) -- ($(Mab)!-0.9!(O)$) node[above,font=\tiny\bfseries] {$m_{AB}$};
+    \draw[iiiepeOrange,thick] ($(O)!-0.9!(Mac)$) -- ($(Mac)!-0.9!(O)$) node[left,font=\tiny\bfseries] {$m_{AC}$};
+    \draw[iiiepeBlue!80!black,thick,densely dashed] ($(O)!-0.8!(Mbc)$) -- ($(Mbc)!-0.8!(O)$) node[below right,font=\tiny\bfseries] {$m_{BC}$};
+
+    % Radios OA = OB = OC = R
+    \draw[iiiepeNavy,dotted,thick] (O) -- (A);
+    \draw[iiiepeNavy,dotted,thick] (O) -- (B);
+    \draw[iiiepeNavy,dotted,thick] (O) -- (C);
+
+    \fill[iiiepeNavy] (A) circle (3.2pt) node[above left,font=\small\bfseries] {$A$};
+    \fill[iiiepeNavy] (B) circle (3.2pt) node[above right,font=\small\bfseries] {$B$};
+    \fill[iiiepeNavy] (C) circle (3.2pt) node[below left,font=\small\bfseries] {$C$};
+    \fill[iiiepeOrange] (O) circle (3.5pt) node[above right,font=\scriptsize\bfseries,fill=white,inner sep=1pt] {$O$ (Circuncentro)};
+    \node[font=\tiny,iiiepeNavy,fill=white,inner sep=1pt] at (5.35,2.05) {$OA=OB=OC=R$};
+  \end{tikzpicture}\vspace{4pt}
+\end{minipage} &
+\small
+\begin{itemize}\leftskip=-10pt
+  \item \textbf{¿Bastan dos mediatrices?} Sí: si $O$ pertenece a $m_{AB}$ ($OA=OB$) y a $m_{AC}$ ($OA=OC$), por transitividad $OB=OC$, luego $m_{BC}$ pasa necesariamente por $O$.
+  \item \textbf{¿Siempre queda dentro?} No: en triángulos obtusángulos $O$ queda \textbf{fuera} del triángulo; en rectángulos, sobre la hipotenusa.
+  \item \textbf{Caso límite:} Si $A, B, C$ son colineales las mediatrices son paralelas y no hay solución.
+\end{itemize} \\\hline
+\rowcolor{iiiepePale} \multicolumn{2}{|c|}{\textbf{\small Conclusiones}} \\\hline
+\multicolumn{2}{|p{0.97\textwidth}|}{\small A diferencia de dos salones (donde hay infinitas ubicaciones), para tres salones no colineales $A$, $B$ y $C$ existe una \textbf{única ubicación equidistante}: el \textbf{circuncentro $O$}, punto donde concurren las tres mediatrices de $\triangle ABC$. Es además el centro de la circunferencia circunscrita que pasa por $A$, $B$ y $C$, lo que verifica métricamente que $OA = OB = OC = R$.} \\\hline
+\end{tabularx}
+
+\end{document}

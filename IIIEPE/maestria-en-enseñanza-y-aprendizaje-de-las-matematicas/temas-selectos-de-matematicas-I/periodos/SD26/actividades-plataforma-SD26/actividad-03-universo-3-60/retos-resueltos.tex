@@ -1,0 +1,286 @@
+\documentclass[spanish,letterpaper,landscape]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[margin=1.15cm,top=0.95cm,bottom=1.2cm]{geometry}
+\usepackage{amsmath,amssymb,array,tabularx,colortbl,tikz,fancyhdr}
+\usetikzlibrary{arrows.meta,calc,babel}
+\usepackage{xcolor}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePale}{HTML}{EEF5F8}
+\definecolor{pPurple}{HTML}{7B2D8E}
+\definecolor{pLilac}{HTML}{F5EBF8}
+\definecolor{pTint}{HTML}{DCAEE8}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\arrayrulecolor{pPurple!80!black}
+\setlength{\arrayrulewidth}{0.7pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\scriptsize IIIEPE · MAEM · PFM02 · SD26}
+\fancyfoot[C]{\scriptsize\thepage}
+\fancyfoot[R]{\scriptsize Actividad 3 (Sesión 10) · Retos presenciales resueltos}
+
+\begin{document}
+\color{iiiepeInk}
+
+% ==================== PÁGINA 1: RETO 1 (ÁNGULOS INTERNOS TRIÁNGULO) ====================
+\noindent
+\begin{tabularx}{\textwidth}{@{} >{\raggedright\arraybackslash}p{0.34\textwidth} >{\centering\arraybackslash}X >{\raggedleft\arraybackslash}p{0.28\textwidth} @{}}
+\footnotesize \textbf{Maestría en Aprendizaje y Enseñanza de las Matemáticas} &
+\footnotesize \textbf{UA: Temas Selectos de Matemáticas I} &
+\footnotesize \textbf{Bloque II. Enseñar desde el desafío} \\
+\footnotesize Sesión 10. Universo 3-60 &
+\footnotesize Alumno: Martín Jonathan de la Cruz Muñoz (00874) &
+\footnotesize \textbf{Actividad 3 · Reto 1}
+\end{tabularx}
+
+\vspace{4pt}
+\begin{center}
+  {\normalsize\bfseries Reto 1. Justificación y demostración · Ángulos internos de un triángulo}
+\end{center}
+\vspace{6pt}
+\renewcommand{\arraystretch}{1.28}
+
+\noindent\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{0.52\textwidth}|>{\raggedright\arraybackslash}X|}
+\hline
+\rowcolor{pLilac} \multicolumn{1}{|c|}{\textbf{\small Justificación (manipulativa y visual)}} & \multicolumn{1}{c|}{\textbf{\small Demostración (deductiva formal)}} \\\hline
+\begin{minipage}[t]{\linewidth}
+  \vspace{4pt}
+  Al construir un triángulo cualquiera con ángulos interiores $\alpha, \beta, \gamma$, recortar sus tres esquinas (sectores angulares) y hacer coincidir sus vértices alrededor de un punto sobre una línea recta, los tres ángulos se acoplan formando exactamente un \textbf{ángulo llano} ($180^\circ$), sin traslapes ni huecos.\par\medskip
+  \centering
+  \begin{tikzpicture}[scale=0.92]
+    % Triangulo original con esquinas coloreadas
+    \coordinate (A) at (0.3,0.4);
+    \coordinate (B) at (4.4,0.4);
+    \coordinate (C) at (2.8,2.7);
+    \fill[iiiepePale] (A) -- (B) -- (C) -- cycle;
+    \fill[pPurple!35] (A) -- ($(A)+(0.7,0)$) arc (0:42.5:0.7) -- cycle;
+    \fill[iiiepeAqua!45] (B) -- ($(B)+(-0.7,0)$) arc (180:125:0.7) -- cycle;
+    \fill[iiiepeOrange!45] (C) -- ($(C)+(222.5:0.7)$) arc (222.5:305:0.7) -- cycle;
+    \draw[very thick,iiiepeNavy] (A) -- (B) -- (C) -- cycle;
+    \node[font=\scriptsize\bfseries] at (1.15,0.68) {$\alpha$};
+    \node[font=\scriptsize\bfseries] at (3.75,0.68) {$\beta$};
+    \node[font=\scriptsize\bfseries] at (2.75,2.05) {$\gamma$};
+    \node[font=\scriptsize] at (2.35,-0.05) {Triángulo $\triangle ABC$};
+
+    % Flecha a linea llana
+    \draw[-{Stealth[length=2mm]},very thick,pPurple] (4.8,1.5) -- (5.9,1.5);
+
+    % Sectores reunidos en punto V=(8.5,0.7) sobre linea base
+    \begin{scope}[xshift=8.5cm,yshift=0.7cm]
+      \fill[pPurple!35] (0,0) -- (180:1.2) arc (180:137.5:1.2) -- cycle;
+      \fill[iiiepeOrange!45] (0,0) -- (137.5:1.2) arc (137.5:55:1.2) -- cycle;
+      \fill[iiiepeAqua!45] (0,0) -- (55:1.2) arc (55:0:1.2) -- cycle;
+      \draw[very thick,iiiepeNavy] (-1.9,0) -- (1.9,0);
+      \draw[thick,iiiepeNavy] (0,0) -- (137.5:1.2) (0,0) -- (55:1.2);
+      \draw[pPurple,thick] (0:1.2) arc (0:180:1.2);
+      \node[font=\scriptsize\bfseries] at (158:0.78) {$\alpha$};
+      \node[font=\scriptsize\bfseries] at (96:0.78) {$\gamma$};
+      \node[font=\scriptsize\bfseries] at (28:0.78) {$\beta$};
+      \node[font=\scriptsize\bfseries,pPurple] at (0,-0.45) {$\alpha + \gamma + \beta = 180^\circ$ (ángulo llano)};
+    \end{scope}
+  \end{tikzpicture}
+  \par\medskip
+  \small Esta comprobación funciona para triángulos acutángulos, rectángulos y obtusángulos, evidenciando una propiedad geométrica constante.
+  \vspace{8pt}
+\end{minipage} &
+\begin{minipage}[t]{\linewidth}
+  \vspace{4pt}
+  \textbf{Teorema:} En todo triángulo $\triangle ABC$, $\alpha + \beta + \gamma = 180^\circ$.\par\smallskip
+  \textbf{Construcción:} Por el vértice $C$ trácese la recta $\ell$ paralela al lado opuesto $\overline{AB}$ ($\ell \parallel \overline{AB}$).\par\medskip
+  \centering
+  \begin{tikzpicture}[scale=0.90]
+    \coordinate (A) at (0.3,0.3);
+    \coordinate (B) at (4.6,0.3);
+    \coordinate (C) at (2.8,2.6);
+    \draw[very thick,iiiepeNavy] (A) -- (B) -- (C) -- cycle;
+    \draw[very thick,pPurple] (-0.1,2.6) -- (5.2,2.6) node[right,font=\scriptsize\bfseries] {$\ell \parallel \overline{AB}$};
+    \fill[pPurple!35] (C) -- ($(C)+(-0.65,0)$) arc (180:222.5:0.65) -- cycle;
+    \fill[iiiepeAqua!45] (C) -- ($(C)+(0.65,0)$) arc (0:-52:0.65) -- cycle;
+    \fill[iiiepeOrange!40] (C) -- ($(C)+(222.5:0.65)$) arc (222.5:308:0.65) -- cycle;
+    \node[font=\scriptsize\bfseries] at (1.1,0.55) {$\alpha$};
+    \node[font=\scriptsize\bfseries] at (4.0,0.55) {$\beta$};
+    \node[font=\scriptsize\bfseries] at (2.78,2.05) {$\gamma$};
+    \node[font=\scriptsize\bfseries,pPurple] at (2.0,2.42) {$\alpha'$};
+    \node[font=\scriptsize\bfseries,iiiepeAqua!70!black] at (3.5,2.42) {$\beta'$};
+    \node[below,font=\scriptsize] at (A) {$A$};
+    \node[below,font=\scriptsize] at (B) {$B$};
+    \node[above,font=\scriptsize] at (C) {$C$};
+  \end{tikzpicture}
+  \par\smallskip
+  \begin{enumerate}\leftskip=-12pt\setlength{\itemsep}{2pt}
+    \item Como $\ell \parallel \overline{AB}$ y $\overline{AC}$ es secante, los ángulos alternos internos son congruentes: $\alpha' = \alpha$.
+    \item Como $\ell \parallel \overline{AB}$ y $\overline{BC}$ es secante, $\beta' = \beta$.
+    \item En el vértice $C$ sobre $\ell$, los tres ángulos son adyacentes y suplementarios: $\alpha' + \gamma + \beta' = 180^\circ$.
+    \item Sustituyendo: $\mathbf{\alpha + \beta + \gamma = 180^\circ}$. \hfill$\blacksquare$
+  \end{enumerate}
+  \vspace{6pt}
+\end{minipage} \\\hline
+\end{tabularx}
+
+% ==================== PÁGINA 2: DOS CIRCUNFERENCIAS PÚRPURAS INSCRITAS ====================
+\newpage
+\noindent
+\begin{tabularx}{\textwidth}{@{} >{\raggedright\arraybackslash}p{0.34\textwidth} >{\centering\arraybackslash}X >{\raggedleft\arraybackslash}p{0.28\textwidth} @{}}
+\footnotesize \textbf{Maestría en Aprendizaje y Enseñanza de las Matemáticas} &
+\footnotesize \textbf{UA: Temas Selectos de Matemáticas I} &
+\footnotesize \textbf{Bloque II. Enseñar desde el desafío} \\
+\footnotesize Sesión 10. Universo 3-60 &
+\footnotesize Alumno: Martín Jonathan de la Cruz Muñoz (00874) &
+\footnotesize \textbf{Actividad 3 · Construcción en circunferencias}
+\end{tabularx}
+
+\vspace{6pt}
+\begin{center}
+  {\normalsize\bfseries Inscripción mediante división del ángulo completo ($360^\circ / n$): Hexágono y Octágono regular}
+\end{center}
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+  \centering
+  \begin{tikzpicture}[scale=1.0]
+    \draw[pPurple,ultra thick] (0,0) circle (3.5cm);
+    \fill[iiiepeInk] (0,0) circle (2.2pt) node[below left,font=\scriptsize\bfseries] {$O$};
+    % Hexagono n=6
+    \foreach \k in {0,1,...,5} {
+      \coordinate (H\k) at ({\k*60}:3.5cm);
+      \draw[pPurple!55,dashed] (0,0) -- (H\k);
+      \fill[iiiepeNavy] (H\k) circle (2.4pt);
+    }
+    \draw[very thick,iiiepeNavy] (H0) -- (H1) -- (H2) -- (H3) -- (H4) -- (H5) -- cycle;
+    \fill[pLilac] (0,0) -- (0:1.05cm) arc (0:60:1.05cm) -- cycle;
+    \draw[pPurple,thick] (0:1.05cm) arc (0:60:1.05cm);
+    \node[font=\scriptsize\bfseries,pPurple] at (30:1.45cm) {$\theta_c=60^\circ$};
+    \node[font=\scriptsize,iiiepeNavy,above] at (90:3.6cm) {$n=6$ lados · lado $=r$};
+    \node[font=\scriptsize\bfseries,iiiepeNavy] at (0,-4.15) {Hexágono regular: $\theta_c = \frac{360^\circ}{6} = 60^\circ,\ \theta_i = 120^\circ$};
+  \end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+  \centering
+  \begin{tikzpicture}[scale=1.0]
+    \draw[pPurple,ultra thick] (0,0) circle (3.5cm);
+    \fill[iiiepeInk] (0,0) circle (2.2pt) node[below left,font=\scriptsize\bfseries] {$O$};
+    % Octagono n=8
+    \foreach \k in {0,1,...,7} {
+      \coordinate (G\k) at ({\k*45}:3.5cm);
+      \draw[pPurple!55,dashed] (0,0) -- (G\k);
+      \fill[iiiepeNavy] (G\k) circle (2.4pt);
+    }
+    \draw[very thick,iiiepeNavy] (G0) -- (G1) -- (G2) -- (G3) -- (G4) -- (G5) -- (G6) -- (G7) -- cycle;
+    \fill[pLilac] (0,0) -- (0:1.25cm) arc (0:45:1.25cm) -- cycle;
+    \draw[pPurple,thick] (0:1.25cm) arc (0:45:1.25cm);
+    \node[font=\scriptsize\bfseries,pPurple] at (22.5:1.68cm) {$\theta_c=45^\circ$};
+    \node[font=\scriptsize,iiiepeNavy,above] at (90:3.6cm) {$n=8$ lados · bisectrices de $90^\circ$};
+    \node[font=\scriptsize\bfseries,iiiepeNavy] at (0,-4.15) {Octágono regular: $\theta_c = \frac{360^\circ}{8} = 45^\circ,\ \theta_i = 135^\circ$};
+  \end{tikzpicture}
+\end{minipage}
+
+% ==================== PÁGINA 3: RETO 3 (FICHA DE 3 POLÍGONOS INSCRITOS) ====================
+\newpage
+\noindent
+\begin{tabularx}{\textwidth}{@{} >{\raggedright\arraybackslash}p{0.34\textwidth} >{\centering\arraybackslash}X >{\raggedleft\arraybackslash}p{0.28\textwidth} @{}}
+\footnotesize \textbf{Maestría en Aprendizaje y Enseñanza de las Matemáticas} &
+\footnotesize \textbf{UA: Temas Selectos de Matemáticas I} &
+\footnotesize \textbf{Bloque II. Enseñar desde el desafío} \\
+\footnotesize Sesión 10. Universo 3-60 &
+\footnotesize Alumno: Martín Jonathan de la Cruz Muñoz (00874) &
+\footnotesize \textbf{Actividad 3 · Reto 3 (Ejemplos)}
+\end{tabularx}
+
+\vspace{4pt}
+\begin{center}
+  {\normalsize\bfseries Reto 3. Polígonos inscritos}
+\end{center}
+\vspace{4pt}
+\renewcommand{\arraystretch}{1.35}
+
+\noindent\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
+\hline
+\rowcolor{pLilac} \textbf{\small Polígono: Hexágono regular} & \textbf{\small Polígono: Octágono regular} & \textbf{\small Polígono: Dodecágono regular} \\\hline
+\begin{minipage}[c]{\linewidth}\centering\vspace{8pt}
+  \begin{tikzpicture}[scale=0.72]
+    \draw[pPurple,thick] (0,0) circle (2.7cm);
+    \fill (0,0) circle (2pt);
+    \foreach \k in {0,...,5} \draw[pPurple!50,dashed] (0,0) -- ({\k*60}:2.7cm);
+    \draw[very thick,iiiepeNavy] (0:2.7cm) \foreach \k in {1,...,5} { -- ({\k*60}:2.7cm) } -- cycle;
+    \node[font=\scriptsize\bfseries,pPurple] at (30:1.25cm) {$60^\circ$};
+  \end{tikzpicture}\vspace{8pt}
+\end{minipage} &
+\begin{minipage}[c]{\linewidth}\centering\vspace{8pt}
+  \begin{tikzpicture}[scale=0.72]
+    \draw[pPurple,thick] (0,0) circle (2.7cm);
+    \fill (0,0) circle (2pt);
+    \foreach \k in {0,...,7} \draw[pPurple!50,dashed] (0,0) -- ({\k*45}:2.7cm);
+    \draw[very thick,iiiepeNavy] (0:2.7cm) \foreach \k in {1,...,7} { -- ({\k*45}:2.7cm) } -- cycle;
+    \node[font=\scriptsize\bfseries,pPurple] at (22.5:1.35cm) {$45^\circ$};
+  \end{tikzpicture}\vspace{8pt}
+\end{minipage} &
+\begin{minipage}[c]{\linewidth}\centering\vspace{8pt}
+  \begin{tikzpicture}[scale=0.72]
+    \draw[pPurple,thick] (0,0) circle (2.7cm);
+    \fill (0,0) circle (2pt);
+    \foreach \k in {0,...,11} \draw[pPurple!50,dashed] (0,0) -- ({\k*30}:2.7cm);
+    \draw[very thick,iiiepeNavy] (0:2.7cm) \foreach \k in {1,...,11} { -- ({\k*30}:2.7cm) } -- cycle;
+    \node[font=\scriptsize\bfseries,pPurple] at (15:1.5cm) {$30^\circ$};
+  \end{tikzpicture}\vspace{8pt}
+\end{minipage} \\\hline
+\textbf{\small Número de lados:} $6$ & \textbf{\small Número de lados:} $8$ & \textbf{\small Número de lados:} $12$ \\\hline
+\textbf{\small Ángulo central:} $360^\circ / 6 = \mathbf{60^\circ}$ & \textbf{\small Ángulo central:} $360^\circ / 8 = \mathbf{45^\circ}$ & \textbf{\small Ángulo central:} $360^\circ / 12 = \mathbf{30^\circ}$ \\\hline
+\textbf{\small Suma de ángulos interiores:} $(6-2)\cdot 180^\circ = \mathbf{720^\circ}$ & \textbf{\small Suma de ángulos interiores:} $(8-2)\cdot 180^\circ = \mathbf{1080^\circ}$ & \textbf{\small Suma de ángulos interiores:} $(12-2)\cdot 180^\circ = \mathbf{1800^\circ}$ \\\hline
+\textbf{\small 1 ángulo interior:} $720^\circ / 6 = \mathbf{120^\circ}$ & \textbf{\small 1 ángulo interior:} $1080^\circ / 8 = \mathbf{135^\circ}$ & \textbf{\small 1 ángulo interior:} $1800^\circ / 12 = \mathbf{150^\circ}$ \\\hline
+\end{tabularx}
+
+% ==================== PÁGINA 4: RETO 3 (TABLA DE 9 POLÍGONOS PÚRPURA) ====================
+\newpage
+\noindent
+\begin{tabularx}{\textwidth}{@{} >{\raggedright\arraybackslash}p{0.34\textwidth} >{\centering\arraybackslash}X >{\raggedleft\arraybackslash}p{0.28\textwidth} @{}}
+\footnotesize \textbf{Maestría en Aprendizaje y Enseñanza de las Matemáticas} &
+\footnotesize \textbf{UA: Temas Selectos de Matemáticas I} &
+\footnotesize \textbf{Bloque II. Enseñar desde el desafío} \\
+\footnotesize Sesión 10. Universo 3-60 &
+\footnotesize Alumno: Martín Jonathan de la Cruz Muñoz (00874) &
+\footnotesize \textbf{Actividad 3 · Reto 3 (Tabla completa)}
+\end{tabularx}
+
+\vspace{4pt}
+\begin{center}
+  {\normalsize\bfseries Reto 3. Polígonos inscritos}
+\end{center}
+\vspace{4pt}
+\renewcommand{\arraystretch}{1.28}
+
+\noindent\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{0.23\textwidth}|>{\centering\arraybackslash}p{0.17\textwidth}|>{\centering\arraybackslash}p{0.19\textwidth}|>{\centering\arraybackslash}p{0.21\textwidth}|>{\centering\arraybackslash}X|}
+\hline
+\rowcolor{pPurple}
+\color{white}\textbf{Polígono} &
+\color{white}\textbf{Número de lados} &
+\color{white}\textbf{Ángulo central} &
+\color{white}\textbf{Suma ángulos interiores} &
+\color{white}\textbf{1 ángulo interior} \\\hline
+\rowcolor{pLilac} \textbf{Hexágono} & $6$ & $60^\circ$ & $720^\circ$ & $120^\circ$ \\\hline
+\textbf{Octágono} & $8$ & $45^\circ$ & $1080^\circ$ & $135^\circ$ \\\hline
+\rowcolor{pLilac} \textbf{Eneágono} & $9$ & $40^\circ$ & $1260^\circ$ & $140^\circ$ \\\hline
+\textbf{Decágono} & $10$ & $36^\circ$ & $1440^\circ$ & $144^\circ$ \\\hline
+\rowcolor{pLilac} \textbf{Dodecágono} & $12$ & $30^\circ$ & $1800^\circ$ & $150^\circ$ \\\hline
+\textbf{Pentadecágono} & $15$ & $24^\circ$ & $2340^\circ$ & $156^\circ$ \\\hline
+\rowcolor{pLilac} \textbf{Octadecágono} & $18$ & $20^\circ$ & $2880^\circ$ & $160^\circ$ \\\hline
+\textbf{Icoságono} & $20$ & $18^\circ$ & $3240^\circ$ & $162^\circ$ \\\hline
+\rowcolor{pLilac} \textbf{Icositetrágono} & $24$ & $15^\circ$ & $3960^\circ$ & $165^\circ$ \\\hline
+\end{tabularx}
+
+\vspace{8pt}
+{\small\colorbox{pLilac}{\parbox{\dimexpr\textwidth-2\fboxsep\relax}{\textbf{Fórmulas generales deducidas:} Para un polígono regular de $n$ lados inscrito en una circunferencia, $\theta_c = \dfrac{360^\circ}{n}$, $S_{\text{int}} = (n - 2)\cdot 180^\circ$ y $\theta_i = \dfrac{(n - 2)\cdot 180^\circ}{n} = 180^\circ - \theta_c$ (note que $\theta_c + \theta_i = 180^\circ$ en todos los renglones).}}}
+
+\end{document}

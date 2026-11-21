@@ -1,0 +1,171 @@
+\documentclass[spanish,letterpaper,landscape]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[margin=1.1cm,top=0.95cm,bottom=1.2cm]{geometry}
+\usepackage{amsmath,amssymb,array,tabularx,colortbl,tikz,fancyhdr}
+\usetikzlibrary{arrows.meta,babel}
+\usepackage{xcolor}
+
+\definecolor{gDark}{HTML}{3B6E28}
+\definecolor{gMid}{HTML}{82B366}
+\definecolor{gLight}{HTML}{F3F9EF}
+\definecolor{gInk}{HTML}{1B2817}
+\definecolor{gBorder}{HTML}{3D4F38}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\arrayrulecolor{gBorder}
+\setlength{\arrayrulewidth}{0.7pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\scriptsize IIIEPE · MAEM · PFM02 · SD26}
+\fancyfoot[C]{\scriptsize\thepage}
+\fancyfoot[R]{\scriptsize Actividad 5 (Sesión 12) · Habilidades matemáticas SEP}
+
+\begin{document}
+\color{gInk}
+
+% ==================== PÁGINA 1: GUION DE LA HABILIDAD ====================
+\noindent
+\begin{tabularx}{\textwidth}{@{} >{\raggedright\arraybackslash}p{0.34\textwidth} >{\centering\arraybackslash}X >{\raggedleft\arraybackslash}p{0.28\textwidth} @{}}
+\footnotesize \textbf{Maestría en Aprendizaje y Enseñanza de las Matemáticas} &
+\footnotesize \textbf{UA: Temas Selectos de Matemáticas I} &
+\footnotesize \textbf{Bloque III · Enseñar desde el desafío} \\
+\footnotesize Sesión 12. ¿Cómo hacer visible el desarrollo de habilidades matemáticas? &
+&
+\footnotesize \textbf{Actividad 5 · Guion de la Habilidad}
+\end{tabularx}
+
+\vspace{6pt}
+\renewcommand{\arraystretch}{1.28}
+
+% Banda 1: Integrantes del equipo
+\noindent\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{0.17\textwidth}|>{\raggedright\arraybackslash}X|}
+\hline
+\textbf{\small Integrantes del equipo} & \small Mtro. Martín Jonathan de la Cruz Muñoz (Matrícula 00874) \hfill \textit{\footnotesize Bachillerato Tecnológico CONALEP · SD26} \\\hline
+\end{tabularx}
+
+\vspace{-0.7pt}
+% Banda 2: HABILIDAD | NIVEL | GRADO | CONTENIDO | PDA
+\noindent\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash\columncolor{gMid}\color{gInk}}p{0.10\textwidth}|>{\raggedright\arraybackslash}p{0.14\textwidth}|>{\raggedright\arraybackslash}p{0.12\textwidth}|>{\centering\arraybackslash}p{0.08\textwidth}|>{\raggedright\arraybackslash}p{0.22\textwidth}|>{\raggedright\arraybackslash}X|}
+\hline
+& \cellcolor{gMid!65} & \cellcolor{gMid}\textbf{\small NIVEL} & \cellcolor{gMid}\textbf{\small GRADO} & \cellcolor{gMid}\textbf{\small CONTENIDO} & \cellcolor{gMid}\textbf{\small PDA} \\\cline{3-6}
+\textbf{\small HABILIDAD} &
+\small \textbf{Generalizar}\par\smallskip{\scriptsize (en sinergia con \textit{Inferir} y \textit{Comunicar}; una de las 8 habilidades matemáticas SEP)} &
+\small Educación Media Superior (Bachillerato Tecnológico CONALEP) &
+\small 1.er semestre (MCCEMS) &
+\small Principio de Pascal y variación directamente proporcional en sistemas hidráulicos ($F_2 = k\cdot F_1$, con $k = \frac{A_2}{A_1} = \left(\frac{d_2}{d_1}\right)^2$). &
+\small Resuelve problemas de variación proporcional directa en física e ingeniería, representando fuerza--área con tablas, expresión algebraica y gráfica lineal en GeoGebra, e interpretando $k$ como factor de amplificación. \\\hline
+\end{tabularx}
+
+\vspace{-0.7pt}
+% Banda 3: Justificación | Indicador | Evidencia observable
+\noindent\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{0.34\textwidth}|>{\raggedright\arraybackslash}p{0.32\textwidth}|>{\raggedright\arraybackslash}X|}
+\hline
+\rowcolor{gMid} \multicolumn{1}{|c|}{\textbf{\small Justificación}} & \multicolumn{1}{c|}{\textbf{\small Indicador}} & \multicolumn{1}{c|}{\textbf{\small Evidencia observable}} \\\hline
+\small Este PDA exige superar el cálculo mecánico de un dato aislado para abstraer la relación invariante entre fuerza de entrada $F_1$ y fuerza de salida $F_2$. Al experimentar con jeringas de distintos diámetros, el alumnado generaliza que la amplificación crece con el \textbf{cuadrado} de la razón de diámetros ($k = (d_2/d_1)^2$), vinculando geometría del círculo, proporcionalidad directa y modelación algebraica. &
+\small Formula la expresión algebraica de proporcionalidad directa $F_2 = k\cdot F_1$ determinando correctamente $k = (d_2/d_1)^2$, calcula el desplazamiento inverso $\Delta x_2 = \Delta x_1 / k$ y predice valores nuevos en una gráfica lineal que pasa por el origen $(0,0)$. &
+\small Producción conjunta integrada por: (a) tabla experimental $(F_1, F_2)$ verificada en el prototipo de jeringas; (b) desarrollo explícito de $P = F_1/A_1$ y $k = (d_2/d_1)^2$; (c) gráfica en GeoGebra Classic de $F_2 = 4F_1$ en $(8\text{ N}, 32\text{ N})$ frente al error lineal $(8\text{ N}, 16\text{ N})$; y (d) respuesta argumentada al inciso de extensión con $d_2 = 6.0\text{ cm}$ ($k' = 16$). \\\hline
+\end{tabularx}
+
+\vspace{-0.7pt}
+% Banda 4: Dificultades o errores más frecuentes | Estrategia didáctica
+\noindent\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{0.46\textwidth}|>{\raggedright\arraybackslash}X|}
+\hline
+\rowcolor{gMid} \multicolumn{1}{|c|}{\textbf{\small Dificultades o errores más frecuentes}} & \multicolumn{1}{c|}{\textbf{\small Estrategia didáctica}} \\\hline
+\small Confundir la razón lineal de diámetros ($k = d_2/d_1 = 2$) con la razón cuadrática de áreas ($k = (d_2/d_1)^2 = 4$) al sobregeneralizar la proporcionalidad lineal simple a magnitudes bidimensionales ($A = \pi d^2/4$). En el prototipo con $d_1 = 1.5\text{ cm}$, $d_2 = 3.0\text{ cm}$ y $F_1 = 8\text{ N}$, esto induce a predecir $16\text{ N}$ en lugar de $32\text{ N}$ (subestimación de $-16\text{ N}$, es decir, 50\,\% de error). Se remedia mostrando la cancelación explícita de $\pi/4$ y contrastando ambas rectas en GeoGebra. &
+\small Secuencia ABP articulada con la resolución de problemas SEP, las fases de Pólya y técnicas UnADM: \textbf{Proyectos colaborativos (\#96)} y \textbf{Heurística de Bruner (\#69)} manipulando jeringas hidráulicas ($1.5\text{ cm}$ y $3.0\text{ cm}$); \textbf{Autoexplicación (\#16)} para confrontar el error lineal; \textbf{Simulación interactiva (\#99)} en GeoGebra Classic; y \textbf{Estudio intercalado (\#40)} en el reto de cuatro incisos hasta la generalización con $d_2 = 6.0\text{ cm}$ ($k'=16$). \\\hline
+\end{tabularx}
+
+% ==================== PÁGINA 2: SOLUCIÓN AL RETO (7+1 HABILIDADES) ====================
+\newpage
+\noindent
+\begin{tabularx}{\textwidth}{@{} >{\raggedright\arraybackslash}p{0.40\textwidth} >{\centering\arraybackslash}X >{\raggedleft\arraybackslash}p{0.26\textwidth} @{}}
+\footnotesize \textbf{Maestría en Aprendizaje y Enseñanza de las Matemáticas} &
+\footnotesize \textbf{UA: Temas Selectos de Matemáticas I} &
+\footnotesize \textbf{Bloque III · Enseñar desde el desafío} \\
+\footnotesize Sesión 12. ¿Cómo hacer visible el desarrollo de habilidades matemáticas? &
+&
+\footnotesize \textbf{Actividad 5 · Solución a los retos}
+\end{tabularx}
+
+\vspace{4pt}
+\renewcommand{\arraystretch}{1.14}
+
+\noindent\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash\columncolor{gMid}\color{gInk}}p{0.125\textwidth}|>{\raggedright\arraybackslash}X|}
+\hline
+\rowcolor{gDark} \color{white}\textbf{\small Habilidad} & \multicolumn{1}{c|}{\color{white}\textbf{\small Solución al reto}} \\\hline
+
+\textbf{Calcular} &
+\small \textbf{Reto:} \textit{Calcular mentalmente el 25\,\% de 360 de dos maneras.} \textbf{Solución:} \textbf{(1) Como cuarta parte:} $25\,\text{\symbol{37}} = \frac{1}{4}$, por tanto $360 \div 4 = 90$. \textbf{(2) Por descomposición $20\,\text{\symbol{37}} + 5\,\text{\symbol{37}}$:} $10\,\text{\symbol{37}}\text{ de }360 = 36 \implies 20\,\text{\symbol{37}} = 72$ y $5\,\text{\symbol{37}} = 18$; luego $72 + 18 = 90$. Resultado verificado: \textbf{90}. \\\hline
+
+\textbf{Inferir} &
+\small \textbf{Reto:} \textit{Conclusiones sobre libros leídos en la semana (gráfica: Lun $4$, Mar $7$, Mié $5$, Jue $10$, Vie $8$).} \textbf{Solución:} Total semanal $= 34$ libros; promedio $= 6.8$/día. Inferencias justificadas: (1) el jueves tuvo el pico de lectura ($10$ libros); (2) el lunes fue el día de menor lectura ($4$ libros); (3) hacia el cierre de la semana aumentó la lectura respecto al inicio (el viernes se leyeron $8$ libros, el doble que el lunes). \\\hline
+
+\textbf{Medir} &
+\small \textbf{Reto:} \textit{Medir y determinar el área del pizarrón del salón.} \textbf{Solución:} Se miden base y altura con cinta métrica o metro en unidades coherentes ($\text{cm}$ o $\text{m}$). Para un pizarrón escolar estándar con base $b = 240\text{ cm} = 2.40\text{ m}$ y altura $h = 120\text{ cm} = 1.20\text{ m}$, el área es $A = b \times h = 240 \times 120 = 28\,800\text{ cm}^2 = 2.88\text{ m}^2$. \\\hline
+
+\textbf{Imaginar} &
+\small
+\begin{minipage}[c]{0.55\linewidth}
+  \textbf{Reto:} \textit{Anticipar y dibujar cómo queda la figura en «L» tras rotarla $90^\circ$ en sentido horario alrededor del pivote $\bullet$.} \textbf{Solución:} El brazo vertical de $3$ cuadros gira hacia la derecha horizontalmente y el brazo horizontal de $3$ cuadros gira hacia abajo verticalmente; el pivote $\bullet$ queda en la esquina exterior superior izquierda de la «$\Gamma$» resultante.
+\end{minipage}\hfill
+\begin{minipage}[c]{0.42\linewidth}
+  \centering
+  \begin{tikzpicture}[scale=0.31]
+    % Cuadricula inicial (0..4, 0..4)
+    \draw[step=1,gMid!70,thin] (0,0) grid (5,5);
+    \fill[gMid!85] (1,1) rectangle (2,4);
+    \fill[gMid!85] (2,1) rectangle (4,2);
+    \draw[very thick,gDark] (1,1) -- (1,4) -- (2,4) -- (2,2) -- (4,2) -- (4,1) -- cycle;
+    \fill[gInk] (1,1) circle (0.18);
+    \node[font=\tiny\bfseries,above] at (2.5,5.0) {Inicial};
+    % Flecha rotacion
+    \draw[-{Stealth[length=1.4mm]},thick,gDark] (5.4,2.7) to[bend left=25] node[above,font=\tiny\bfseries] {$90^\circ$ hor.} (7.1,2.7);
+    % Cuadricula resultante shifted +7.5
+    \begin{scope}[xshift=7.5cm]
+      \draw[step=1,gMid!70,thin] (0,0) grid (5,5);
+      \fill[gMid!85] (1,2) rectangle (4,3);
+      \fill[gMid!85] (1,0) rectangle (2,2);
+      \draw[very thick,gDark] (1,0) -- (1,3) -- (4,3) -- (4,2) -- (2,2) -- (2,0) -- cycle;
+      \fill[gInk] (1,3) circle (0.18);
+      \node[font=\tiny\bfseries,above] at (2.5,5.0) {Resultante};
+    \end{scope}
+  \end{tikzpicture}
+\end{minipage} \\\hline
+
+\textbf{Estimar} &
+\small \textbf{Reto:} \textit{Estimar sin regla la longitud del segmento impreso y explicar el referente.} \textbf{Solución:} Tomando referentes conocidos (ancho del dedo índice $\approx 1.5\text{ cm}$, palma de mano $\approx 8.5\text{ cm}$ o mitad del ancho de hoja carta $21.6/2 = 10.8\text{ cm}$), el segmento abarca aprox. $1.3$ palmas ($\approx 11\text{--}12\text{ cm}$), acotando el valor razonablemente antes de medir. \\\hline
+
+\textbf{Generalizar} &
+\small
+\begin{minipage}[c]{0.64\linewidth}
+  \textbf{Reto:} \textit{Regla general de la secuencia con $1, 4, 9, 16$ cuadros.} \textbf{Solución:} Cada figura $n$ forma un arreglo cuadrado de $n \times n$ unidades (y suma de los primeros $n$ impares $1+3+\dots+(2n-1)$). Regla general: $\mathbf{a_n = n^2}$ (ejemplo: $a_{10} = 10^2 = 100$ cuadros).
+\end{minipage}\hfill
+\begin{minipage}[c]{0.33\linewidth}
+  \centering
+  \begin{tikzpicture}[scale=0.19]
+    \filldraw[fill=gMid!80,draw=gDark] (0,0) rectangle (1,1);
+    \node[font=\tiny] at (0.5,-0.9) {$1$};
+    \foreach \x in {0,1}\foreach \y in {0,1} \filldraw[fill=gMid!80,draw=gDark] (2.5+\x,\y) rectangle (3.5+\x,\y+1);
+    \node[font=\tiny] at (3.5,-0.9) {$4$};
+    \foreach \x in {0,1,2}\foreach \y in {0,1,2} \filldraw[fill=gMid!80,draw=gDark] (6+\x,\y) rectangle (7+\x,\y+1);
+    \node[font=\tiny] at (7.5,-0.9) {$9$};
+    \foreach \x in {0,1,2,3}\foreach \y in {0,1,2,3} \filldraw[fill=gMid!80,draw=gDark] (10.5+\x,\y) rectangle (11.5+\x,\y+1);
+    \node[font=\tiny] at (12.5,-0.9) {$16$};
+  \end{tikzpicture}
+\end{minipage} \\\hline
+
+\textbf{Deducir} &
+\small \textbf{Reto:} \textit{En $\triangle ABC$, $AB = AC$ y $\angle A = 40^\circ$; ¿es cierto que $\angle B = \angle C = 70^\circ$?} \textbf{Solución:} \textbf{Verdadera.} (1) Por $AB = AC$, $\triangle ABC$ es isósceles $\implies \angle B = \angle C$; (2) la suma de ángulos internos es $180^\circ$; (3) $\angle B + \angle C = 180^\circ - 40^\circ = 140^\circ$; (4) como son iguales, $\angle B = \angle C = \frac{140^\circ}{2} = 70^\circ$. \\\hline
+\end{tabularx}
+
+\vspace{4pt}
+{\footnotesize\colorbox{gLight}{\parbox{\dimexpr\textwidth-2\fboxsep\relax}{\textbf{Nota complementaria · 8.ª habilidad SEP (Comunicar, diapositiva 24 de Sesión 12):} Dividir una barra unitaria en 4 cuartos iguales ($0.25$ cada parte) explica visual y simbólicamente por qué $\frac{3}{4} = 0.25 + 0.25 + 0.25 = 0.75$.}}}
+
+\end{document}
