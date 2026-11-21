@@ -86,7 +86,7 @@ La Sesión 12 (presentación interactiva de 49 diapositivas) profundiza en cómo
 \endfirsthead\hline
 \rowcolor{iiiepePale} \textbf{Habilidad} & \textbf{Indicador observable} & \textbf{Evidencia observable} & \textbf{Reto de la Sesión 12 resuelto} \\\hline
 \endhead
-\textbf{Calcular} & Selecciona y justifica una estrategia de cálculo. & Presenta el procedimiento explicado y el resultado verificado. & 25\,\% de $360$: (1) $360\div 4 = 90$; (2) 20\,\% ($72$) $+$ 5\,\% ($18$) $= 90$. \\\hline
+\textbf{Calcular} & Selecciona y justifica una estrategia de cálculo. & Presenta el procedimiento explicado y el resultado verificado. & 25\,\% de $360$: (1) $360/4 = 90$; (2) 20\,\% ($72$) $+$ 5\,\% ($18$) $= 90$. \\\hline
 \textbf{Inferir} & Obtiene conclusiones válidas a partir de datos explícitos e implícitos. & Redacta inferencias respaldadas en elementos de la gráfica o texto. & Gráfica de libros (Lun $4$, Mar $7$, Mié $5$, Jue $10$, Vie $8$): total $34$, promedio $6.8$, pico el jueves. \\\hline
 \textbf{Comunicar} & Expresa con claridad ideas, procedimientos y resultados y los justifica. & Explicación ordenada y comprensible con apoyo visual/simbólico. & Mostrar con rectángulo en cuartos por qué $\frac{3}{4} = 0.25+0.25+0.25 = 0.75$. \\\hline
 \textbf{Medir} & Determina y compara magnitudes con instrumentos y unidades pertinentes. & Registra dimensiones medidas y calcula la magnitud derivada con unidad. & Pizarrón escolar ($b=240\text{ cm}$, $h=120\text{ cm}$): $A = 28\,800\text{ cm}^2 = 2.88\text{ m}^2$. \\\hline
@@ -129,7 +129,7 @@ La Figura~\ref{fig:act5-retos-grid} reproduce mediante esquemas vectoriales la r
     \node[below,font=\tiny\bfseries] at (0.715+4*0.82,0.75) {J};
     \node[above,font=\tiny\bfseries] at (0.715+4*0.82,0.75+10*0.19) {10};
     \draw[dashed,red!70!black,thick] (0.7,0.75+6.8*0.19) -- (5.1,0.75+6.8*0.19);
-    \node[right,red!70!black] at (4.15,2.28) {$\bar{x}=6.8$};
+    \node[left,red!70!black] at (2.8,2.28) {$\bar{x}=6.8$};
   \end{scope}
 
   % Panel 3: Comunicar
@@ -191,7 +191,7 @@ La Figura~\ref{fig:act5-retos-grid} reproduce mediante esquemas vectoriales la r
   \begin{scope}[xshift=12.2cm,yshift=0cm]
     \draw[fill=iiiepePaper,draw=iiiepeNavy!50,rounded corners=2pt] (0,0) rectangle (5.6,3.8);
     \node[font=\scriptsize\bfseries,iiiepeNavy] at (2.8,3.4) {7. Generalizar ($a_n = n^2$)};
-    \begin{scope}[xshift=0.4cm,yshift=0.95cm,scale=0.33]
+    \begin{scope}[xshift=0.4cm,yshift=1.18cm,scale=0.32]
       \filldraw[fill=iiiepeOrange!70,draw=iiiepeNavy] (0,0) rectangle (1,1);
       \node[below] at (0.5,0) {$1$};
       \filldraw[fill=iiiepeAqua!35,draw=iiiepeNavy] (2,0) rectangle (3,1);
@@ -204,21 +204,21 @@ La Figura~\ref{fig:act5-retos-grid} reproduce mediante esquemas vectoriales la r
       \foreach \x/\y in {3/0,3/1,3/2,3/3,0/3,1/3,2/3} \filldraw[fill=iiiepeOrange!70,draw=iiiepeNavy] (9+\x,\y) rectangle (10+\x,\y+1);
       \node[below] at (11,0) {$16$};
     \end{scope}
-    \node[iiiepeNavy,font=\tiny\bfseries] at (2.8,0.35) {Suma de impares: $a_{10}=100$};
+    \node[iiiepeNavy,font=\tiny\bfseries] at (2.8,0.24) {Suma de impares: $a_{10}=100$};
   \end{scope}
 
   % Panel 8: Deducir
   \begin{scope}[xshift=18.3cm,yshift=0cm]
     \draw[fill=iiiepePaper,draw=iiiepeNavy!50,rounded corners=2pt] (0,0) rectangle (5.6,3.8);
     \node[font=\scriptsize\bfseries,iiiepeNavy] at (2.8,3.4) {8. Deducir ($\triangle$ isósceles)};
-    \coordinate (B8) at (1.3,0.9); \coordinate (C8) at (4.3,0.9); \coordinate (A8) at (2.8,2.75);
+    \coordinate (B8) at (1.3,0.9); \coordinate (C8) at (4.3,0.9); \coordinate (A8) at (2.8,2.30);
     \fill[iiiepeAqua!15] (A8)--(B8)--(C8)--cycle;
     \draw[thick,iiiepeNavy] (A8)--(B8)--(C8)--cycle;
-    \draw[iiiepeOrange,thick] (1.92,1.86)--(2.18,1.72) (3.68,1.86)--(3.42,1.72);
-    \node[above,font=\tiny\bfseries] at (A8) {$A=40^\circ$};
+    \draw[iiiepeOrange,thick] (1.92,1.64)--(2.18,1.50) (3.68,1.64)--(3.42,1.50);
+    \node[above=1pt,font=\tiny\bfseries] at (A8) {$A=40^\circ$};
     \node[left,font=\tiny\bfseries,iiiepeNavy] at (B8) {$70^\circ$};
     \node[right,font=\tiny\bfseries,iiiepeNavy] at (C8) {$70^\circ$};
-    \node[iiiepeInk] at (2.8,0.35) {$AB=AC\implies \angle B=\angle C$};
+    \node[iiiepeInk] at (2.8,0.32) {$AB=AC\implies \angle B=\angle C$};
   \end{scope}
 \end{tikzpicture}
 \caption{Validación visual y geométrica de los ocho retos de habilidades matemáticas SEP resueltos en la Sesión 12.}
@@ -256,11 +256,12 @@ Secuencia ABP articulada con la resolución de problemas de la SEP, las fases de
 \end{enumerate}
 \end{propuestabox}
 
-\begin{figure}[htbp]
+\begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.78\linewidth]{img/geogebra/act6_video_32N.png}
+\includegraphics[width=0.68\linewidth]{img/geogebra/act6_video_32N.png}
 \caption{Validación en GeoGebra Classic de la propuesta didáctica: recta proporcional real $F_2 = 4F_1$ en $(8\text{ N}, 32\text{ N})$ frente al error lineal intuitivo $F_2 = 2F_1$ en $(8\text{ N}, 16\text{ N})$.}
 \end{figure}
+\clearpage
 
 \section{Cumplimiento de la Rúbrica de Evaluación (Actividad 5)}
 {\small\setstretch{1.08}\renewcommand{\arraystretch}{1.18}

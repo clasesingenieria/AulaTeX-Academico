@@ -110,13 +110,13 @@ A(a) = a(12 - a) = 12a - a^2 = 36 - (a - 6)^2 \le 36\text{ m}^2.
 Como $(a - 6)^2 \ge 0$ para todo $a \in \mathbb{R}$, el máximo absoluto único se alcanza cuando $a - 6 = 0$, es decir, $a = 6\text{ m}$ y $l = 6\text{ m}$ ($A_{\max} = 36\text{ m}^2$). De modo equivalente, por la desigualdad entre la media geométrica y la media aritmética ($\sqrt{l\cdot a} \le \frac{l+a}{2} = 6$), resulta $l\cdot a \le 36$, con igualdad si y solo si $l = a = 6\text{ m}$. Conviene subrayar que en el dominio real existen infinitos rectángulos posibles con $P = 24\text{ m}$, mientras que en enteros positivos hay $6$ diseños geométricos distintos.
 
 \begin{center}
-\begin{tikzpicture}[scale=0.65,font=\small]
+\begin{tikzpicture}[scale=0.63,font=\small]
   \draw[fill=iiiepeBlue!15,draw=iiiepeNavy,thick] (0,0) rectangle (5.5,0.5);
   \node[below] at (2.75,0) {$11\times 1$: $A=11\text{ m}^2$};
   \draw[fill=iiiepeAqua!20,draw=iiiepeNavy,thick] (6.8,0) rectangle (10.8,2.0);
   \node[below] at (8.8,0) {$8\times 4$: $A=32\text{ m}^2$};
-  \draw[fill=iiiepeOrange!25,draw=iiiepeNavy,very thick] (12.2,0) rectangle (15.2,3.0);
-  \node[below] at (13.7,0) {\textbf{$6\times 6$: $A_{\max}=36\text{ m}^2$}};
+  \draw[fill=iiiepeOrange!25,draw=iiiepeNavy,very thick] (12.9,0) rectangle (15.9,3.0);
+  \node[below] at (14.4,0) {\textbf{$6\times 6$: $A_{\max}=36\text{ m}^2$}};
 \end{tikzpicture}
 \end{center}
 
@@ -214,7 +214,7 @@ $9$ & $6$ & $24\text{ m}$ & $54\text{ m}^2$ & No \\\hline
       ylabel={\scriptsize Área $A(a)$ ($\text{m}^2$)},
       xmin=1, xmax=11, ymin=20, ymax=82,
       xtick={2,4,5,6,7,8,10},
-      ytick={30,50,64,70,72},
+      ytick={30,50,64,72},
       tick label style={font=\tiny},
       grid=both, grid style={iiiepePale!80!gray,thin},
       axis lines=left,
@@ -222,13 +222,13 @@ $9$ & $6$ & $24\text{ m}$ & $54\text{ m}^2$ & No \\\hline
     ]
       \addplot[domain=1:11,samples=65,iiiepeBlue,very thick] {24*x - 2*x^2};
       \addplot[domain=1:11,dashed,iiiepeNavy,thick] {70};
-      \node[right,font=\tiny\bfseries,iiiepeNavy] at (axis cs:7.6,74) {Umbral $A=70\text{ m}^2$};
+      \node[right,font=\tiny\bfseries,iiiepeNavy] at (axis cs:7.6,73) {Umbral $A=70\text{ m}^2$};
       \addplot[only marks,mark=*,mark size=2.3pt,iiiepeAqua!80!black] coordinates {(5,70) (7,70)};
       \addplot[only marks,mark=*,mark size=2.8pt,iiiepeOrange] coordinates {(6,72)};
       \addplot[only marks,mark=square*,mark size=2.3pt,red!75!black] coordinates {(8,64)};
-      \node[above,font=\tiny\bfseries,iiiepeOrange!85!black] at (axis cs:6,73.5) {$(6,72)$ máx.};
-      \node[below left,font=\tiny,iiiepeAqua!70!black] at (axis cs:5,68) {$(5,70)$};
-      \node[below right,font=\tiny,iiiepeAqua!70!black] at (axis cs:7,68) {$(7,70)$};
+      \node[above,font=\tiny\bfseries,iiiepeOrange!85!black] at (axis cs:6,74.5) {$(6,72)$ máx.};
+      \node[left,font=\tiny,iiiepeAqua!70!black] at (axis cs:4.85,68.5) {$(5,70)$};
+      \node[right,font=\tiny,iiiepeAqua!70!black] at (axis cs:7.15,68.5) {$(7,70)$};
       \node[below left,font=\tiny,red!75!black] at (axis cs:8,62) {$(8,64)$ no};
     \end{axis}
   \end{tikzpicture}
