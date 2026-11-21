@@ -2,7 +2,7 @@
 
 ## ✅ Estado Final del Proyecto
 
-**Documento PDF Generado:** `reporte-corrupcion-ateneo-plantilla-v2.pdf`  
+**Documento PDF Generado:** `reporte-ateneo.pdf`  
 **Páginas:** 56  
 **Tamaño:** 341 KB  
 **Estado:** ✅ Compilado exitosamente  
@@ -11,7 +11,7 @@
 
 ```
 C:/Users/Sysx/Documents/AulaTeX-Academico/ATENEO/
-├── reporte-corrupcion-ateneo-plantilla-v2.tex    ← Documento principal
+├── reporte-ateneo.tex    ← Documento principal
 ├── referencias-corrupcion-calderon.bib            ← 100 referencias BibTeX
 ├── img/
 │   ├── image1.png                                 ← Logo Ateneo (marca de agua)
@@ -33,7 +33,7 @@ C:/Users/Sysx/Documents/AulaTeX-Academico/ATENEO/
 ├── apendices/
 │   ├── 01_ficha_registro.tex                      ← Instrumento documental
 │   └── 02_matriz_comparativa.tex                  ← Matriz de análisis
-└── reporte-corrupcion-ateneo-plantilla-v2.pdf     ✅ Documento final (56 págs)
+└── reporte-ateneo.pdf     ✅ Documento final (56 págs)
 ```
 
 ## 🎯 Logros del Proyecto
@@ -207,13 +207,13 @@ natbib (authoryear), hyperref
 ## 📖 Instrucciones de Uso
 
 ### Para Revisión
-1. Abrir `reporte-corrupcion-ateneo-plantilla-v2.pdf`
+1. Abrir `reporte-ateneo.pdf`
 2. Verificar índices automáticos (ToC, LoT, LoF)
 3. Revisar hipervínculos (todos activos)
 4. Confirmar bibliografía (págs. 45-54)
 
 ### Para Edición
-1. Abrir `reporte-corrupcion-ateneo-plantilla-v2.tex` en editor LaTeX
+1. Abrir `reporte-ateneo.tex` en editor LaTeX
 2. Modificar contenido en archivos `capitulos/*.tex` o `apendices/*.tex`
 3. Recompilar con workflow de 4 pasadas
 4. Verificar PDF generado
@@ -224,13 +224,13 @@ natbib (authoryear), hyperref
 rm -f *.aux *.bbl *.blg *.log *.out *.toc *.lof *.lot
 
 # Compilación completa (4 pasadas)
-pdflatex -interaction=nonstopmode reporte-corrupcion-ateneo-plantilla-v2.tex
+pdflatex -interaction=nonstopmode reporte-ateneo.tex
 bibtex reporte-corrupcion-ateneo-plantilla-v2
-pdflatex -interaction=nonstopmode reporte-corrupcion-ateneo-plantilla-v2.tex
-pdflatex -interaction=nonstopmode reporte-corrupcion-ateneo-plantilla-v2.tex
+pdflatex -interaction=nonstopmode reporte-ateneo.tex
+pdflatex -interaction=nonstopmode reporte-ateneo.tex
 
 # Verificar resultado
-pdfinfo reporte-corrupcion-ateneo-plantilla-v2.pdf
+pdfinfo reporte-ateneo.pdf
 ```
 
 ## 🎉 Conclusión
