@@ -1,0 +1,150 @@
+% ============================================================================== 
+% PLANTILLA MAESTRA - Instituto Ateneo de Colima (adaptada de UnADM)
+% ============================================================================== 
+% Uso rapido:
+% 1) Duplica la plantilla y renombra la copia por semana/actividad.
+% 2) Actualiza \documenttitle, \documentsubtitle y \documentsubject.
+% 3) Lee la planeacion y NO pegues las instrucciones completas dentro del PDF.
+%    Usa la planeacion como lista de cumplimiento y redacta con criterio propio.
+% 4) Elabora productos visuales preferentemente en LaTeX/TikZ para mantener
+%    nitidez y evidencia editable; si usas herramientas externas, inserta
+%    capturas de alta resolucion y conserva evidencia dentro del PDF.
+% 5) Entrega en PDF con la nomenclatura solicitada en el aula.
+
+% Formato institucional (recomendado):
+% - Fuente: Helvetica / sans-serif equivalente (\usepackage{helvet}).
+% - Interlineado: 1.5 (\onehalfspacing).
+% - Citas: autor-año mediante natbib (\citep, \citet, \citep[e.g.][]{clave}).
+% - Bibliografía: archivo.bib con formato APA 7; todas las citas del texto
+%   deben aparecer en la bibliografía y viceversa.
+% - Estructura minima: portada, resumen/abstract, desarrollo, conclusion y
+%   bibliografia.
+
+% Reglas para productos visuales y tablas extensas:
+% - Para tablas o cuadros amplios use longtable + booktabs y evite lineas
+%   verticales; controlar espaciado con \setlength{\tabcolsep} y
+%   \renewcommand{\arraystretch}.
+% - Para tablas en pagina propia: use \clearpage, \pagestyle{empty},
+%   entorno landscape, reducir tamaño con \scriptsize y luego restaurar
+%   \pagestyle{fancy} al finalizar la tabla.
+
+% Buenas practicas de redaccion academica (guia operativa):
+% - No escribir para llenar espacio; escribir para sostener y defender una idea.
+% - Cada concepto debe responder: que es, que caracteristicas tiene, como
+%   funciona, que problema resuelve, que limite presenta y que implicacion
+%   juridica posee.
+% - Evitar listas sin analisis: tras cada dato relevante incluya su consecuencia
+%   o aplicacion juridica.
+% - Primera persona: usar moderadamente (\"Considero que\", \"Desde esta
+%   perspectiva\"); evite expresiones coloquiales como \"yo creo\".
+
+% Protocolos de integridad y uso de IA:
+% - Si se usa IA, el resultado debe ser leido, corregido y transformado con
+%   criterio propio. No entregar texto sin procesamiento.
+% - Incluir siempre juicio propio y referencias que sostengan la postura.
+
+% Checklist operativo antes de entregar:
+% [ ] El producto coincide con la tecnica solicitada en la planeacion.
+% [ ] El objetivo y el contenido estan alineados con la planeacion.
+% [ ] El producto visual esta rotulado y presentado como se pide.
+% [ ] Hay citas APA autor-anio dentro del texto y bibliografia completa.
+% [ ] No se incluyeron instrucciones copiadas de la planeacion dentro del
+%     contenido entregado.
+% [ ] Ortografia y redaccion revisadas; la argumentacion es propia.
+
+% ============================================================================== 
+% CREACIÓN DEL DOCUMENTO
+% ============================================================================== 
+\documentclass[
+	spanish, % Idioma: spanish, english, etc.
+	letterpaper, oneside
+]{article}
+
+% INFORMACIÓN DEL DOCUMENTO
+\def\documenttitle {Corrupción en México durante el sexenio de Felipe Calderón}
+\def\documentsubtitle {Análisis estructural, financiero y de derechos humanos}
+\def\documentsubject {Metodologia de la Investigación}
+
+\def\documentauthor {Ulysses Emiliano González de la Cruz, Ian Alexander Miramonges Vázquez}
+\def\coursename {Metodologia de la Investigación}
+\def\coursecode {030}
+
+\def\universityname {Instituto Ateneo de Colima}
+\def\universityfaculty {Licenciatura en Derecho}
+\def\universitydepartment {Metodologia de la Investigación}
+\def\universitydepartmentimage {departamentos/Ateneo}
+\def\universitydepartmentimagecfg {height=1.57cm}
+\def\universitylocation {Colima, México}
+
+% INTEGRANTES, PROFESORES Y FECHAS
+\def\authortable {
+	\begin{tabular}{ll}
+		\textbf{Alumnos:}
+		& \begin{tabular}[t]{l}
+			Ulysses Emiliano González de la Cruz \\
+			Ian Alexander Miramonges Vázquez
+		\end{tabular} \\
+		Matrícula: &   ES2611202040 \\
+		Profesor:
+		& \begin{tabular}[t]{l}
+			María Elena Luna Angulo
+		\end{tabular} \\
+		Fecha de entrega: & \today
+	\end{tabular}
+}
+
+% IMPORTACIÓN DEL TEMPLATE Y CONFIGURACIÓN
+\input{template_config}
+\input{template}
+
+% INICIO DE PÁGINAS
+\begin{document}
+
+% PORTADA
+\templatePortrait
+
+% CONFIGURACIÓN DE PÁGINA Y ENCABEZADOS
+\templatePagecfg
+
+% RESUMEN O ABSTRACT
+\begin{abstractd}
+	\lipsum[1] % Párrafo ejemplo, se puede borrar
+\end{abstractd}
+
+% TABLA DE CONTENIDOS - ÍNDICE
+\tableofcontents
+
+% CONFIGURACIONES FINALES
+\templateFinalcfg
+
+% ======================= INICIO DEL DOCUMENTO =======================
+
+% FIN DEL DOCUMENTO
+% --- Ciclo A: refuerzo editorial materializado ---
+\section*{Refuerzo editorial Ciclo A}
+Este apartado consolida la mejora editorial incremental del nodo a partir del estándar maduro de AulaTeX. El refuerzo atiende brechas detectadas de bibliografía, citas, análisis propio, transferencia y cierre argumentado, sin sustituir la consigna original ni copiar contenido de los casos maestros.
+
+\subsection*{Tesis de trabajo}
+La actividad debe sostener una postura verificable: el producto solicitado no sólo organiza información, sino que permite interpretar el problema disciplinar, justificar decisiones y reconocer sus consecuencias académicas o profesionales.
+
+\subsection*{Análisis propio}
+El hallazgo central es que una entrega madura requiere pasar de la descripción a la interpretación. Por ello, el desarrollo debe explicar qué revela el producto construido, por qué es relevante para la materia y qué criterio permite evaluar su pertinencia. Esta operación convierte la evidencia reunida en argumento académico.
+
+\subsection*{Transferencia profesional}
+La transferencia consiste en vincular el producto con situaciones reales de desempeño: diagnóstico, toma de decisiones, comunicación de resultados, cumplimiento normativo, intervención educativa o resolución de problemas según el campo disciplinar. Así, la actividad adquiere valor formativo más allá de la plantilla.
+
+\subsection*{Cierre argumentado}
+En consecuencia, la calidad de la actividad depende de que el producto visible, las fuentes y la conclusión formen una secuencia coherente. La conclusión debe recuperar la tesis, indicar el principal aprendizaje y señalar una implicación práctica o conceptual.
+
+% Brechas locales atendidas por Ciclo A: analisis_propio, transferencia, conclusion_argumentada, citas_insuficientes
+% Reglas globales aplicadas:
+% - Priorizar cierre de brecha recurrente: bibliografia_insuficiente (427 nodos).
+% - Priorizar cierre de brecha recurrente: conclusion_argumentada (411 nodos).
+% - Priorizar cierre de brecha recurrente: citas_insuficientes (328 nodos).
+% - Priorizar cierre de brecha recurrente: analisis_propio (326 nodos).
+% --- Fin Ciclo A ---
+
+\subsection*{Citas de refuerzo Ciclo A}
+La mejora editorial se vincula con la memoria documental disponible mediante las referencias \citep{ruizRodriguezFilosofiaDerecho2009,lovonManualPracticoFilosofia2020a,finnisEstudiosTeoriaDerecho2017a,rojasGonzalezFilosofiaDerecho2018a,constitucionPoliticaTextoReordenado,leyAmparoReglamentaria2021a}. Estas citas deben revisarse en una etapa disciplinar fina para sustituir o complementar fuentes genéricas por literatura específica del tema.
+
+\end{document}

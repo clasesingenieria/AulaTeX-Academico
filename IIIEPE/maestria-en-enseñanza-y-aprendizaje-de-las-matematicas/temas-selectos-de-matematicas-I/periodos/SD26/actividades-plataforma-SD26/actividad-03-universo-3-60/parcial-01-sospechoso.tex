@@ -63,8 +63,8 @@
 1. Entre dos números decimales distintos siempre es posible encontrar otro número decimal. &
 \textbf{\large\color{okGreen}X} &
 &
-\textbf{Verdadera (propiedad de densidad).} Si $a < b$ son dos decimales distintos, su punto medio $m = \frac{a+b}{2}$ cumple $a < m < b$ y sigue siendo decimal exacto (como $2$ divide a $10$, dividir entre $2$ a lo sumo añade una cifra decimal más). Además, se pueden generar infinitos entre $a$ y $b$.\par\smallskip
-\textit{Ejemplo:} Entre $1.4$ y $1.5$ está $m = \frac{1.4+1.5}{2} = 1.45$ ($1.4 < 1.45 < 1.5$); entre $1.45$ y $1.46$ está $1.455$. \\\hline
+\textbf{Verdadera (propiedad de densidad).} Si $a < b$ son dos decimales, su punto medio $m = \frac{a+b}{2}$ cumple $a < m < b$ y sigue siendo decimal finito cuando $a,b$ son finitos (como $2 \mid 10$, dividir entre $2$ añade a lo sumo una cifra decimal). Si alguno es periódico, basta truncar el mayor tras la primera cifra donde difieren para obtener un decimal exacto entre ambos.\par\smallskip
+\textit{Ejemplo:} Entre $1.4$ y $1.5$ está $m = \frac{1.4+1.5}{2} = 1.45$ ($1.4 < 1.45 < 1.5$); entre $0.\overline{3}$ y $0.34$ está $0.335$. \\\hline
 
 2. Si a dos fracciones positivas les sumamos la misma fracción positiva, la diferencia entre sus valores aumenta. &
 &
@@ -79,8 +79,8 @@ La distancia entre los valores permanece \textbf{constante}; no aumenta ni dismi
 3. Si sumamos el mismo número a ambos lados de una ecuación, las soluciones de la ecuación no cambian. &
 \textbf{\large\color{okGreen}X} &
 &
-\textbf{Verdadera (propiedad uniforme aditiva de la igualdad).} Para todo $c \in \mathbb{R}$, las ecuaciones $f(x) = g(x)$ y $f(x) + c = g(x) + c$ son \textbf{equivalentes} ($f(x)=g(x) \iff f(x)+c=g(x)+c$), pues la operación es reversible sumando el inverso aditivo $-c$. Por tanto, el conjunto solución no se altera.\par\smallskip
-\textit{Ejemplo:} En $2x - 5 = 7$, la única solución es $x = 6$. Al sumar $+5$ a ambos lados se obtiene $2x = 12$, cuya única solución continúa siendo $x = 6$. \\\hline
+\textbf{Verdadera (propiedad uniforme aditiva de la igualdad).} Para todo $c \in \mathbb{R}$, sumar una constante preserva el dominio de definición y vuelve equivalentes a $f(x) = g(x)$ y $f(x) + c = g(x) + c$ ($f(x)=g(x) \iff f(x)+c=g(x)+c$), pues la operación es reversible sumando $-c$ sin introducir raíces extrañas.\par\smallskip
+\textit{Ejemplo:} En $2x - 5 = 7$, la única solución es $x = 6$. Al sumar $+5$ se obtiene $2x = 12$, cuya solución sigue siendo $x = 6$. \\\hline
 
 4. Si un punto se encuentra sobre la mediatriz de un segmento, entonces necesariamente está dentro del segmento. &
 &
@@ -125,15 +125,15 @@ La distancia entre los valores permanece \textbf{constante}; no aumenta ni dismi
   \begin{tikzpicture}[scale=0.68]
     \draw[fill=iiiepePale!60,draw=iiiepeBlue!50,rounded corners=3pt] (-0.2,-0.65) rectangle (6.2,2.75);
     \node[font=\scriptsize\bfseries,iiiepeNavy] at (3.0,2.45) {Afirm. 2 (Falsa): Traslación};
-    \draw[thick,iiiepeNavy] (0.4,1.15) -- (5.6,1.15);
-    \fill[iiiepeNavy] (1.1,1.15) circle (2.5pt) node[below=2pt,font=\tiny] {$1/4$};
-    \fill[iiiepeNavy] (2.9,1.15) circle (2.5pt) node[below=2pt,font=\tiny] {$3/4$};
-    \fill[errRed] (4.7,1.15) circle (2.5pt) node[below=2pt,font=\tiny\bfseries] {$5/4$};
-    \draw[iiiepeBlue,thick,<->] (1.1,1.92) -- (2.9,1.92) node[midway,above,font=\tiny\bfseries] {$\Delta=\frac{1}{2}$};
-    \draw[errRed,thick,<->] (2.9,0.42) -- (4.7,0.42) node[midway,below,font=\tiny\bfseries] {$\Delta'=\frac{1}{2}$};
-    \draw[-{Latex[length=1.2mm]},dashed,iiiepeBlue] (1.1,1.22) to[bend left=18] node[above=-1pt,font=\tiny] {$+1/2$} (2.9,1.22);
-    \draw[-{Latex[length=1.2mm]},dashed,errRed] (2.9,1.22) to[bend left=18] node[above=-1pt,font=\tiny] {$+1/2$} (4.7,1.22);
-    \node[font=\tiny,iiiepeInk] at (3.0,-0.36) {Diferencia invariante: $p-q$};
+    \draw[thick,iiiepeNavy] (0.4,1.02) -- (5.6,1.02);
+    \fill[iiiepeNavy] (1.1,1.02) circle (2.5pt) node[below=2pt,font=\tiny] {$1/4$};
+    \fill[iiiepeNavy] (2.9,1.02) circle (2.5pt) node[below=2pt,font=\tiny] {$3/4$};
+    \fill[errRed] (4.7,1.02) circle (2.5pt) node[below=2pt,font=\tiny\bfseries] {$5/4$};
+    \draw[iiiepeBlue,thick,<->] (1.1,1.76) -- (2.9,1.76) node[midway,above=1pt,font=\tiny\bfseries] {$\Delta=\frac{1}{2}$};
+    \draw[errRed,thick,<->] (2.9,0.36) -- (4.7,0.36) node[midway,below=1pt,font=\tiny\bfseries] {$\Delta'=\frac{1}{2}$};
+    \draw[-{Latex[length=1.2mm]},dashed,iiiepeBlue] (1.1,1.08) to[bend left=14] node[above=-1pt,font=\tiny] {$+1/2$} (2.9,1.08);
+    \draw[-{Latex[length=1.2mm]},dashed,errRed] (2.9,1.08) to[bend left=14] node[above=-1pt,font=\tiny] {$+1/2$} (4.7,1.08);
+    \node[font=\tiny,iiiepeInk] at (3.0,-0.38) {Diferencia invariante: $p-q$};
   \end{tikzpicture}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.315\textwidth}

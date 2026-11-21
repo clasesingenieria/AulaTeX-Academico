@@ -40,7 +40,7 @@
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage{amsmath,amssymb,booktabs,array,longtable,pdflscape,tikz,tabularx,colortbl,pgfplots,enumitem,needspace}
 \usepackage[most]{tcolorbox}
-\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,babel}
 \pgfplotsset{compat=1.18}
 
 \definecolor{iiiepeNavy}{HTML}{163B5C}
@@ -78,25 +78,29 @@
 \begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 6}\setstretch{1.25}\raggedbottom
 
 \section{Síntesis del Trabajo Final y vinculación curricular}
-El Trabajo Final de \textit{Temas Selectos de Matemáticas I} consiste en producir un \textbf{video didáctico de entre 4 y 5 minutos} retomando y profundizando la propuesta de la Sesión 12. En esta entrega se desarrolla el tema de \textbf{variación directamente proporcional en sistemas hidráulicos} ($F_2 = k\cdot F_1$), articulando las ocho habilidades matemáticas de la SEP (\textit{calcular, inferir, comunicar, medir, imaginar, estimar, generalizar y deducir}) con énfasis explícito en \textbf{Generalizar} (en sinergia con \textit{Inferir} y \textit{Comunicar}) y el Proceso de Desarrollo de Aprendizaje (PDA) correspondiente al Bachillerato Tecnológico CONALEP.
+El Trabajo Final de \textit{Temas Selectos de Matemáticas I} plantea la producción de un video didáctico de entre cuatro y cinco minutos para retomar y profundizar la propuesta de la Sesión 12 \citep{iiiepe2026_s13}. En esta entrega se desarrolla la \textbf{variación directamente proporcional en sistemas hidráulicos} ($F_2 = k\cdot F_1$), articulando las ocho habilidades matemáticas de la SEP \citep{sep1994} con énfasis explícito en \textbf{Generalizar} (en sinergia con \textit{Inferir} y \textit{Comunicar}) y el Proceso de Desarrollo de Aprendizaje (PDA) correspondiente al Bachillerato Tecnológico CONALEP dentro del Marco Curricular Común \citep{sep2023_mccems}.
 
 \begin{enumerate}
   \item \textbf{Habilidad matemática SEP:} \textit{Generalizar} (en sinergia con \textit{Inferir} y \textit{Comunicar}): descubrir regularidades en datos experimentales y geométricos para formular la regla algebraica general $y = k x$, interpretando $k$ como ventaja mecánica y extrapolando el modelo a nuevas condiciones.
-  \item \textbf{Contenido disciplinar:} Principio de Pascal y variación proporcional directa en prensas y actuadores hidráulicos:
+  \item \textbf{Contenido disciplinar:} Principio de Pascal en fluido incompresible confinado, en equilibrio hidrostático cuasiestático y sin pérdidas por fricción, junto con la variación proporcional directa en prensas y actuadores hidráulicos:
   \[
     P_1 = P_2 \implies \frac{F_1}{A_1} = \frac{F_2}{A_2} \implies F_2 = \left(\frac{A_2}{A_1}\right) F_1 = \left(\frac{d_2}{d_1}\right)^2 F_1 = k\cdot F_1.
   \]
-  \item \textbf{PDA SEP:} Articula \textit{Saberes y Pensamiento Científico} con \textit{Pensamiento Matemático}: el estudiante resuelve problemas de variación proporcional directa en contextos de física e ingeniería, representando la relación fuerza--área mediante tablas, expresión algebraica y gráfica lineal en GeoGebra, e interpretando $k$ como factor de amplificación.
+  \item \textbf{PDA SEP:} Articula \textit{Saberes y Pensamiento Científico} con \textit{Pensamiento Matemático} \citep{sep2023_mccems}: el estudiante resuelve problemas de variación proporcional directa en contextos de física e ingeniería, representando la relación fuerza--área mediante tablas, expresión algebraica y gráfica lineal en GeoGebra, e interpretando $k$ como factor de amplificación.
 \end{enumerate}
 
 \section{Explicación matemática, dificultad frecuente, estrategia y reto}
-Al comparar dos jeringas o pistones cilíndricos con diámetros $d_1 = 1.5\text{ cm}$ y $d_2 = 3.0\text{ cm}$, la razón lineal de diámetros es $d_2/d_1 = 2$, pero el área transversal circular ($A = \pi d^2/4$) crece con el cuadrado del diámetro:
+Al comparar dos jeringas o pistones cilíndricos con diámetros $d_1 = 1.5\text{ cm}$ y $d_2 = 3.0\text{ cm}$, la razón lineal de diámetros es $d_2/d_1 = 2$; sin embargo, dado que el área transversal circular ($A = \pi d^2/4$) depende cuadráticamente del diámetro, el factor de amplificación resulta:
 \[
   k = \frac{A_2}{A_1} = \left(\frac{d_2}{d_1}\right)^2 = \left(\frac{3.0}{1.5}\right)^2 = 2^2 = 4.
 \]
-Para el pistón de entrada de área $A_1 = \pi (1.5\text{ cm})^2 / 4 \approx 1.767\text{ cm}^2$ sometido a una fuerza aplicada $F_1 = 8\text{ N}$, la presión confinada resulta $P = F_1/A_1 \approx 4.53\text{ N/cm}^2$, por lo que la fuerza de salida alcanza $F_2 = 4(8\text{ N}) = 32\text{ N}$. Dependiendo del diseño, si $k > 1$ hay amplificación de fuerza, si $k = 1$ la transmisión es directa y si $k < 1$ se reduce fuerza ganando recorrido. Por conservación del volumen de fluido y del trabajo mecánico ideal ($F_1\Delta x_1 = F_2\Delta x_2$), si el émbolo menor recorre $\Delta x_1 = 4\text{ cm}$, el émbolo mayor se desplaza $\Delta x_2 = \Delta x_1 / k = 4/4 = 1\text{ cm}$.
+Para el pistón de entrada de área $A_1 = \pi (1.5\text{ cm})^2 / 4 \approx 1.767\text{ cm}^2$ sometido a una fuerza aplicada $F_1 = 8\text{ N}$, la presión confinada resulta $P = F_1/A_1 \approx 4.53\text{ N/cm}^2$ ($45\,270\text{ Pa}$), por lo que la fuerza de salida alcanza $F_2 = 4(8\text{ N}) = 32\text{ N}$. Es decir, dependiendo del diseño, si $k > 1$ hay amplificación de fuerza, si $k = 1$ la transmisión es directa y, en cambio, si $k < 1$ se reduce fuerza ganando recorrido. Por conservación del volumen de fluido ($A_1\Delta x_1 = A_2\Delta x_2$) y del trabajo mecánico ideal, se verifica:
+\[
+  W_1 = F_1\,\Delta x_1 = (8\text{ N})(0.04\text{ m}) = 0.32\text{ J}, \qquad W_2 = F_2\,\Delta x_2 = (32\text{ N})(0.01\text{ m}) = 0.32\text{ J},
+\]
+por lo que, cuando el émbolo menor recorre $\Delta x_1 = 4\text{ cm}$, el émbolo mayor se desplaza $\Delta x_2 = \Delta x_1 / k = 4/4 = 1\text{ cm}$.
 
-\textbf{Dificultad frecuente del alumnado y remediación:} El error habitual consiste en usar directamente la razón lineal de diámetros ($k = d_2/d_1 = 2$) sin elevar al cuadrado, obteniendo erróneamente $F_2 = 2(8\text{ N}) = 16\text{ N}$ en lugar de $32\text{ N}$, lo que representa una subestimación de $-16\text{ N}$ ($50\,\text{\symbol{37}}$ de error). Para remediar esta confusión, en el video se deriva explícitamente el área circular mostrando cómo $\pi/4$ se cancela en el cociente, se visualiza geométricamente que duplicar el diámetro cuadruplica el área y se contrastan las rectas real ($F_2 = 4F_1$) y errónea ($F_2 = 2F_1$) en GeoGebra Classic:
+\textbf{Dificultad frecuente del alumnado y remediación:} El error habitual consiste en usar directamente la razón lineal de diámetros ($k = d_2/d_1 = 2$) sin elevar al cuadrado, obteniendo erróneamente $F_2 = 2(8\text{ N}) = 16\text{ N}$ en lugar de $32\text{ N}$, lo que representa una subestimación de $-16\text{ N}$ ($50\,\text{\symbol{37}}$ de error). Este obstáculo cognitivo surge al no coordinar el registro numérico con el geométrico \citep{duval2006}; por ello, en el video se deriva explícitamente el área circular mostrando cómo $\pi/4$ se cancela en el cociente y se contrastan las rectas real ($F_2 = 4F_1$) y errónea ($F_2 = 2F_1$) en GeoGebra Classic:
 
 \begin{figure}[htbp]
 \centering
@@ -104,7 +108,7 @@ Para el pistón de entrada de área $A_1 = \pi (1.5\text{ cm})^2 / 4 \approx 1.7
 \caption{Modelación en GeoGebra Classic: modelo real $F_2 = 4 F_1$ pasando por $(8\text{ N}, 32\text{ N})$, error lineal $F_2 = 2 F_1$ en $(8\text{ N}, 16\text{ N})$ con subestimación de $-16\text{ N}$ ($-50\,\text{\symbol{37}}$) y extensión cuadrática $F_2 = 16 F_1$ para $d_2 = 6.0\text{ cm}$.}
 \end{figure}
 
-\textbf{Estrategia didáctica para la enseñanza y el aprendizaje:} La secuencia articula la resolución de problemas de la SEP y las fases de Pólya con técnicas de las \textit{Cien Técnicas Didácticas} de la UnADM orientadas al desempeño activo del estudiante:
+\textbf{Estrategia didáctica para la enseñanza y el aprendizaje:} La secuencia articula la resolución de problemas y las fases heurísticas de \citet{polya1945} con estrategias de las \textit{Cien Técnicas Didácticas} \citep{unadm_tecnicas} orientadas al desempeño activo del estudiante:
 \begin{itemize}
   \item \textbf{Proyectos colaborativos (UnADM \#96) y Heurística de Bruner (UnADM \#69):} Construcción y exploración empírica del brazo hidráulico con dos jeringas ($d_1 = 1.5\text{ cm}$, $d_2 = 3.0\text{ cm}$) conectadas por manguera con fluido, registrando fuerzas y recorridos en tabla experimental.
   \item \textbf{Autoexplicación (UnADM \#16):} Contrastación argumentada entre la predicción intuitiva lineal ($k = 2 \Rightarrow 16\text{ N}$) y la razón cuadrática del área ($k = 4 \Rightarrow 32\text{ N}$) para verbalizar por qué duplicar el diámetro cuadruplica la fuerza.
