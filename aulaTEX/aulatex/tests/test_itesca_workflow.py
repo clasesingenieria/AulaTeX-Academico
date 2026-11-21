@@ -325,6 +325,104 @@ class TestLandscapeCompositionAndGeometry(unittest.TestCase):
                     f"Elemento requerido '{req_phrase}' ausente en {pdf.name}",
                 )
 
+    def test_seminario_i_deliverables_docx_feedback_compliance(self) -> None:
+        import re
+        import unicodedata
+        import zipfile
+        from docx import Document
+        from lxml import etree
+        from aulaTEX.aulatex.realizar_actividad import _audit_docx_deliverable
+
+        entregas = self.sem_root / "entregas-seminario-i"
+        style_agent = EstiloEscribirAgent(self.ws)
+        forbidden = [
+            r"descriptivo-explicativ[oa]",
+            r"\bdeterminan\b",
+            r"muestreo\s+censal",
+            r"fue\s+validada",
+            r"CVC\s+de\s+0\.91",
+            r"CVC\s*=\s*0\.91",
+            r"CVC\s*\(0\.91\)",
+            r"Kappa\s+de\s+0\.84",
+            r"Kappa\s*\(0\.84\)",
+            r"93\.3\s*%",
+            r"cumple\s+con\s+la\s+ley",
+            r"certifica\s+cumplimiento",
+            r"se\s+han\s+aplicado",
+            r"se\s+implementaron",
+            r"cursos3\.e-itesca\.edu\.mx",
+        ]
+        required_common = [
+            "documental, descriptivo y propositivo",
+            "delimitación del alcance causal",
+            "universo documental y muestra",
+            "42",
+            "18",
+            "muestreo intencional no probabilístico",
+            "anexo b",
+            "meta",
+            "objetivo específico",
+            "cobertura",
+            "trazabilidad",
+            "cierre",
+            "delimitación del alcance del estudio",
+            "se aplicarán",
+            "doc-int-01",
+            "aes-256",
+            "anexo c",
+            "anexo a",
+            "anexo d",
+        ]
+
+        targets = [
+            ("Tarea15_DeLaCruzMunoz.docx", []),
+            ("Tarea16_DeLaCruzMunoz.docx", ["cronograma de actividades"]),
+            ("Tarea17_DeLaCruzMunoz.docx", ["cronograma de actividades", "entrega final y exposición del anteproyecto"]),
+            (
+                "DeLaCruzMunoz_MartinJonathan_Anteproyecto_SeminarioI.docx",
+                ["cronograma de actividades", "entrega final y exposición del anteproyecto"],
+            ),
+        ]
+        for fname, extra in targets:
+            fpath = entregas / fname
+            self.assertTrue(fpath.is_file(), f"Falta entregable Word: {fpath}")
+            self.assertGreater(fpath.stat().st_size, 1_000_000, f"Tamaño inesperado en {fname}")
+
+            audit = _audit_docx_deliverable(fpath, style_agent, self.ws.repo_root)
+            self.assertTrue(audit["passed"], f"Fallo de auditoría de estilo en {fname}: {audit}")
+            self.assertGreaterEqual(audit["style_evaluation"]["score"], 88.0)
+
+            doc = Document(str(fpath))
+            chunks = [p.text for p in doc.paragraphs]
+            for tbl in doc.tables:
+                for row in tbl.rows:
+                    for cell in row.cells:
+                        chunks.append(cell.text)
+            norm_text = re.sub(r"\s+", " ", unicodedata.normalize("NFC", " ".join(chunks)))
+            lower_text = norm_text.lower()
+
+            self.assertNotIn("¡Error! Marcador no definido.", norm_text, f"Marcador TOC roto en {fname}")
+            for pat in forbidden:
+                self.assertIsNone(
+                    re.search(pat, norm_text, flags=re.IGNORECASE),
+                    f"Patrón prohibido '{pat}' encontrado en {fname}",
+                )
+            for req_phrase in required_common + extra:
+                self.assertIn(req_phrase, lower_text, f"Elemento requerido '{req_phrase}' ausente en {fname}")
+
+        pptx_path = entregas / "Presentacion_Tarea17_DeLaCruzMunoz.pptx"
+        self.assertTrue(pptx_path.is_file(), f"Falta presentación oficial PPTX: {pptx_path}")
+        with zipfile.ZipFile(pptx_path) as z:
+            pres_xml = etree.fromstring(z.read("ppt/presentation.xml"))
+            sld_ids = pres_xml.findall(".//{http://schemas.openxmlformats.org/presentationml/2006/main}sldId")
+            self.assertEqual(len(sld_ids), 12, "La presentación oficial debe contener exactamente 12 diapositivas")
+            for name in z.namelist():
+                if name.startswith("ppt/slides/slide") and name.endswith(".xml"):
+                    raw_xml = z.read(name).decode("utf-8", errors="ignore")
+                    self.assertNotIn("8C52FF", raw_xml, f"Texto morado residual en {name}")
+                    self.assertNotIn("Lorem ipsum", raw_xml, f"Placeholder residual en {name}")
+                    self.assertNotIn("NOTA: En esta presentación", raw_xml, f"Diapositiva de nota residual en {name}")
+
 
 class TestMcpLexAgentIntegration(unittest.TestCase):
     """Verifica que todos los agentes editoriales y subagentes estén conectados con el MCP LEX."""
