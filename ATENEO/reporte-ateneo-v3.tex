@@ -1,0 +1,71 @@
+% ╔══════════════════════════════════════════════════════════════════════════════╗
+% ║ PLANTILLA MAESTRA - Colegio Ateneo de Colima (adaptada de UnADM)              ║
+% ╚══════════════════════════════════════════════════════════════════════════════╝
+
+% CREACIÓN DEL DOCUMENTO
+\documentclass[
+	spanish, % Idioma: spanish, english, etc.
+	letterpaper, % Tamaño de papel: letterpaper, a4paper, etc.
+	oneside % Tipo de documento: oneside, twoside, etc.
+]{article}
+
+% INFORMACIÓN DEL DOCUMENTO
+\def\documenttitle {Corrupción en México durante el sexenio de Felipe Calderón}
+\def\documentsubtitle {Análisis estructural, financiero y jurídico}
+\def\documentsubject {Metodologia de la Investigación}
+\def\documentauthor {Ulysses Emiliano González de la Cruz, Ian Alexander Miramonges Vázquez}
+\def\coursename {Metodologia de la Investigación}
+\def\coursecode {030}
+\def\universityname {Universidad de Colima}
+\def\universityfaculty {Colegio Ateneo de Colima}
+\def\universitydepartment {Metodologia de la Investigación}
+\def\universitylocation {Colima, México}
+
+% CONFIGURACIÓN DEL DOCUMENTO
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=1.5cm]{img/image2.png}}
+\fancyhead[R]{\small\textbf{\documenttitle}}
+\fancyfoot[C]{\thepage}
+
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage[spanish]{babel}
+
+\usepackage{natbib}
+\bibliographystyle{apalike}
+
+\usepackage{hyperref}
+
+% INICIO DEL DOCUMENTO
+\begin{document}
+
+% PORTADA
+\begin{titlepage}
+    \begin{center}
+        \vspace*{2cm}
+        \includegraphics[height=2.5cm]{img/image2.png}\\[1cm]
+        {\huge\textbf{\documenttitle}}\\[0.5cm]
+        {\Large\documentsubtitle}\\[1cm]
+        {\large\documentsubject}\\[2cm]
+        \documentauthor\\[2cm]
+        {\large\universitylocation, \today}
+    \end{center}
+\end{titlepage}
+
+% RESUMEN
+\begin{abstract}
+    Texto de ejemplo, reemplazar con resumen real
+\end{abstract}
+
+% TABLA DE CONTENIDOS
+\tableofcontents
+
+% FIN DEL DOCUMENTO
+\end{document}
