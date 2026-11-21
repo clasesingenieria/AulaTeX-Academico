@@ -37,6 +37,7 @@
 }
 
 \input{template}
+\let\div\divisionsymbol
 
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
@@ -45,7 +46,7 @@
 \usepackage{pdflscape}
 \usepackage{tikz}
 \usepackage[most]{tcolorbox}
-\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,babel}
 
 \definecolor{iiiepeNavy}{HTML}{163B5C}
 \definecolor{iiiepeBlue}{HTML}{1F6F9F}
@@ -107,23 +108,43 @@ Un problema técnico previsible es que la base se desplace y altere el ángulo. 
 La ficha exige mediciones físicas. La siguiente tabla es un \textbf{ejemplo simulado para explicar el procedimiento}; se distingue de las mediciones y pruebas reales disponibles, cuya referencia en este reporte es cualitativa. Las masas numéricas permiten graficar una variable cuantitativa; ``ligero, medio y pesado'' por sí solos no permiten verificar $md=k$.
 
 
-{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.25\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.25\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.25\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.25\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
-\rowcolor{iiiepePale} \textbf{Masa (g)} & \textbf{Tiro 1 (cm)} & \textbf{Tiro 2 (cm)} & \textbf{Promedio (cm)} \\\hline
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.28}
+\begin{longtable}{|>{\centering\arraybackslash}p{\dimexpr0.15\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\centering\arraybackslash}p{\dimexpr0.16\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\centering\arraybackslash}p{\dimexpr0.16\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.28\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.25\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+\rowcolor{iiiepePale} \textbf{Masa $m$ (g)} & \textbf{Tiro 1 ($d_1$)} & \textbf{Tiro 2 ($d_2$)} & \textbf{Promedio $\bar{d}=\frac{d_1+d_2}{2}$} & \textbf{Producto $k=m\cdot\bar{d}$} \\\hline
 \endfirsthead
 \hline
-\rowcolor{iiiepePale} \textbf{Masa (g)} & \textbf{Tiro 1 (cm)} & \textbf{Tiro 2 (cm)} & \textbf{Promedio (cm)} \\\hline
+\rowcolor{iiiepePale} \textbf{Masa $m$ (g)} & \textbf{Tiro 1 ($d_1$)} & \textbf{Tiro 2 ($d_2$)} & \textbf{Promedio $\bar{d}=\frac{d_1+d_2}{2}$} & \textbf{Producto $k=m\cdot\bar{d}$} \\\hline
 \endhead
-2 & 118 & 122 & 120 \\\hline
-4 & 58 & 62 & 60 \\\hline
-6 & 38 & 42 & 40 \\\hline
+2 & 118 cm & 122 cm & $\frac{118+122}{2} = \mathbf{120\text{ cm}}$ & $2\times 120 = \mathbf{240\text{ g}\cdot\text{cm}}$ \\\hline
+4 & 58 cm & 62 cm & $\frac{58+62}{2} = \mathbf{60\text{ cm}}$ & $4\times 60 = \mathbf{240\text{ g}\cdot\text{cm}}$ \\\hline
+6 & 38 cm & 42 cm & $\frac{38+42}{2} = \mathbf{40\text{ cm}}$ & $6\times 40 = \mathbf{240\text{ g}\cdot\text{cm}}$ \\\hline
 \end{longtable}}
 
 
 En estos datos construidos, $md=240$ g·cm y $d=240/m$ cm. La constante no es una fuerza: sus unidades son masa por distancia. Bajo un modelo ideal de energía elástica $E$, $v^2=2E/m$ y $R=v^2\sin(2\theta)/g$; así $R=(2E\sin(2\theta)/g)/m$. El ajuste experimental debe comprobarse y no imponerse a los datos.
-\begin{center}\begin{tikzpicture}\begin{axis}[width=10cm,height=6cm,xlabel={Masa (g)},ylabel={Alcance (cm)},xmin=1.5,xmax=7,ymin=0,ymax=150,grid=major]
+\begin{center}\begin{tikzpicture}\begin{axis}[width=10cm,height=5.6cm,xlabel={Masa (g)},ylabel={Alcance (cm)},xmin=1.5,xmax=7,ymin=0,ymax=150,grid=major]
 \addplot[iiiepeBlue,domain=2:6,samples=70]{240/x};\addplot[only marks,iiiepeOrange] coordinates {(2,120)(4,60)(6,40)};
 \end{axis}\end{tikzpicture}\end{center}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.82,font=\scriptsize]
+  \draw[fill=iiiepePaper,draw=iiiepeBlue!45,rounded corners=3pt] (-0.3,-0.6) rectangle (7.2,3.4);
+  \node[font=\scriptsize\bfseries,iiiepeNavy] at (3.45,3.05) {Directa ($d = v\cdot t$, cociente constante)};
+  \draw[-{Stealth[length=1.4mm]},thick] (0.5,0.3) -- (6.4,0.3) node[right,font=\tiny] {$t$};
+  \draw[-{Stealth[length=1.4mm]},thick] (0.5,0.3) -- (0.5,2.6) node[above,font=\tiny] {$d$};
+  \draw[very thick,iiiepeAqua!80!black] (0.5,0.3) -- (5.9,2.4);
+  \fill[iiiepeNavy] (0.5,0.3) circle (2pt) (2.3,1.0) circle (2pt) (4.1,1.7) circle (2pt) (5.9,2.4) circle (2pt);
+  \node[font=\tiny] at (3.6,-0.25) {Recta desde $(0,0)$: $\frac{d}{t} = v = \text{cte.}$};
+
+  \draw[fill=iiiepePaper,draw=iiiepeBlue!45,rounded corners=3pt] (7.8,-0.6) rectangle (15.5,3.4);
+  \node[font=\scriptsize\bfseries,iiiepeNavy] at (11.65,3.05) {Inversa ($m\cdot d = 240$, producto constante)};
+  \draw[-{Stealth[length=1.4mm]},thick] (8.6,0.3) -- (14.8,0.3) node[right,font=\tiny] {$m$};
+  \draw[-{Stealth[length=1.4mm]},thick] (8.6,0.3) -- (8.6,2.6) node[above,font=\tiny] {$d$};
+  \draw[very thick,iiiepeBlue,domain=9.3:14.5,samples=50] plot (\x,{0.3 + 1.5/(\x-8.6)});
+  \fill[iiiepeOrange] (9.5,1.97) circle (2.2pt) (11.0,0.925) circle (2.2pt) (13.0,0.641) circle (2.2pt);
+  \node[font=\tiny] at (11.8,-0.25) {Hipérbola: $m\cdot d = 240\text{ g}\cdot\text{cm}$};
+\end{tikzpicture}
+\end{center}
 Para una masa de 10 kg no extrapolaría una catapulta escolar. El modelo numérico daría $240/10000=0.024$ cm, pero está fuera del intervalo observado y de la capacidad del dispositivo. Obtener una cifra no demuestra validez física.
 \subsection*{Problemas de aplicación}
 El camión recorre $60(4)=240$ km. Para completar el mismo recorrido en 3 horas, $v=240/3=80$ km/h, dentro del modelo de velocidad constante. Para el trabajo divisible y rendimiento individual constante, $4(45)=180$ persona-minutos; seis cadetes tardarían $180/6=30$ minutos. La coordinación y tareas indivisibles pueden modificar el resultado real.

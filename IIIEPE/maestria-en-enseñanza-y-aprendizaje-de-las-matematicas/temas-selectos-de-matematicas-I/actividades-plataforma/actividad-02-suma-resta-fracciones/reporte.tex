@@ -37,6 +37,7 @@
 }
 
 \input{template}
+\let\div\divisionsymbol
 
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
@@ -45,7 +46,7 @@
 \usepackage{pdflscape}
 \usepackage{tikz}
 \usepackage[most]{tcolorbox}
-\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,babel}
 
 \definecolor{iiiepeNavy}{HTML}{163B5C}
 \definecolor{iiiepeBlue}{HTML}{1F6F9F}
@@ -106,38 +107,66 @@ El denominador expresa la unidad fraccionaria. Por eso $1/2+1/3$ no es $2/5$: pr
 \subsection*{Conversión de fracciones impropias y mixtas} Para $a/b$, se divide $a=qb+r$, con $0\le r<b$; entonces $a/b=q+r/b$. Para $n+a/b$, se calcula $(nb+a)/b$. Los incisos se presentan en las tablas siguientes.\subsection*{Simplificación}
 
 
-{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.32}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.28\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.72\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endfirsthead
 \hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endhead
-$\frac{4}{20}$ & $\frac{1}{5}$ \\\hline
-$\frac{6}{24}$ & $\frac{1}{4}$ \\\hline
-$\frac{12}{30}$ & $\frac{2}{5}$ \\\hline
-$\frac{9}{27}$ & $\frac{1}{3}$ \\\hline
-$\frac{24}{32}$ & $\frac{3}{4}$ \\\hline
-$\frac{15}{25}$ & $\frac{3}{5}$ \\\hline
+$\frac{4}{20}$ & $\operatorname{mcd}(4,20)=4 \implies \dfrac{4\div 4}{20\div 4}=\mathbf{\dfrac{1}{5}}$ \\\hline
+$\frac{6}{24}$ & $\operatorname{mcd}(6,24)=6 \implies \dfrac{6\div 6}{24\div 6}=\mathbf{\dfrac{1}{4}}$ \\\hline
+$\frac{12}{30}$ & $\operatorname{mcd}(12,30)=6 \implies \dfrac{12\div 6}{30\div 6}=\mathbf{\dfrac{2}{5}}$ \\\hline
+$\frac{9}{27}$ & $\operatorname{mcd}(9,27)=9 \implies \dfrac{9\div 9}{27\div 9}=\mathbf{\dfrac{1}{3}}$ \\\hline
+$\frac{24}{32}$ & $\operatorname{mcd}(24,32)=8 \implies \dfrac{24\div 8}{32\div 8}=\mathbf{\dfrac{3}{4}}$ \\\hline
+$\frac{15}{25}$ & $\operatorname{mcd}(15,25)=5 \implies \dfrac{15\div 5}{25\div 5}=\mathbf{\dfrac{3}{5}}$ \\\hline
 \end{longtable}}
 
 \subsection*{Impropias a mixtas}
 
 
-{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.32}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.28\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.72\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endfirsthead
 \hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endhead
-$\frac{5}{4}$ & $1\frac{1}{4}$ \\\hline
-$\frac{8}{3}$ & $2\frac{2}{3}$ \\\hline
-$\frac{7}{4}$ & $1\frac{3}{4}$ \\\hline
-$\frac{50}{3}$ & $16\frac{2}{3}$ \\\hline
-$\frac{11}{2}$ & $5\frac{1}{2}$ \\\hline
-$\frac{4}{3}$ & $1\frac{1}{3}$ \\\hline
+$\frac{5}{4}$ & $5 = 1(4)+1 \implies 1+\dfrac{1}{4}=\mathbf{1\dfrac{1}{4}}$ \\\hline
+$\frac{8}{3}$ & $8 = 2(3)+2 \implies 2+\dfrac{2}{3}=\mathbf{2\dfrac{2}{3}}$ \\\hline
+$\frac{7}{4}$ & $7 = 1(4)+3 \implies 1+\dfrac{3}{4}=\mathbf{1\dfrac{3}{4}}$ \\\hline
+$\frac{50}{3}$ & $50 = 16(3)+2 \implies 16+\dfrac{2}{3}=\mathbf{16\dfrac{2}{3}}$ \\\hline
+$\frac{11}{2}$ & $11 = 5(2)+1 \implies 5+\dfrac{1}{2}=\mathbf{5\dfrac{1}{2}}$ \\\hline
+$\frac{4}{3}$ & $4 = 1(3)+1 \implies 1+\dfrac{1}{3}=\mathbf{1\dfrac{1}{3}}$ \\\hline
 \end{longtable}}
+
+\begin{center}
+\begin{tikzpicture}[x=0.95cm,y=0.85cm,font=\scriptsize]
+  \draw[fill=iiiepePaper,draw=iiiepeBlue!45,rounded corners=3pt] (-0.4,-1.0) rectangle (12.2,1.85);
+  \node[font=\scriptsize\bfseries,iiiepeNavy] at (5.9,1.5) {Modelo de áreas para conversión impropia a mixta: $\frac{8}{3} = \frac{3}{3}+\frac{3}{3}+\frac{2}{3} = 2\frac{2}{3}$};
+  % Entero 1 (0..3)
+  \foreach \i in {0,1,2} {
+    \fill[iiiepeBlue!45] (\i*0.95+0.4,0.2) rectangle (\i*0.95+1.35,0.9);
+    \draw[iiiepeNavy] (\i*0.95+0.4,0.2) rectangle (\i*0.95+1.35,0.9);
+  }
+  \node[below,font=\tiny\bfseries] at (1.825,0.18) {$1$ entero ($3/3$)};
+  % Entero 2 (4..7)
+  \foreach \i in {0,1,2} {
+    \fill[iiiepeBlue!45] (\i*0.95+4.1,0.2) rectangle (\i*0.95+5.05,0.9);
+    \draw[iiiepeNavy] (\i*0.95+4.1,0.2) rectangle (\i*0.95+5.05,0.9);
+  }
+  \node[below,font=\tiny\bfseries] at (5.525,0.18) {$1$ entero ($3/3$)};
+  % Residuo 2/3 (8..11)
+  \foreach \i in {0,1} {
+    \fill[iiiepeAqua!60] (\i*0.95+7.8,0.2) rectangle (\i*0.95+8.75,0.9);
+    \draw[iiiepeNavy] (\i*0.95+7.8,0.2) rectangle (\i*0.95+8.75,0.9);
+  }
+  \fill[white] (9.7,0.2) rectangle (10.65,0.9);
+  \draw[iiiepeNavy] (9.7,0.2) rectangle (10.65,0.9);
+  \node[below,font=\tiny\bfseries,iiiepeAqua!70!black] at (9.225,0.18) {residuo $\frac{2}{3}$};
+  \node[font=\tiny\bfseries,iiiepeOrange!90!black] at (5.9,-0.65) {Total sombreado: $8$ tercios $= 2\text{ enteros} + \frac{2}{3} = 2\frac{2}{3}$};
+\end{tikzpicture}
+\end{center}
 
 \subsection*{Mixtas a impropias}
 
@@ -204,8 +233,23 @@ $\frac74+\frac3{20}$ & $\frac{35}{20}+\frac3{20}=\frac{19}{10}$ \\\hline
 $\frac23+\frac17$ & $\frac{14}{21}+\frac3{21}=\frac{17}{21}$ \\\hline
 $\frac49-\frac13$ & $\frac49-\frac39=\frac19$ \\\hline
 $\frac7{15}-\frac25$ & $\frac7{15}-\frac6{15}=\frac1{15}$ \\\hline
-$\frac53-\frac4{27}$ & $\frac{45}{27}-\frac4{27}=\frac{41}{27}$ \\\hline
+$\frac{5}{3}-\frac{4}{27}$ & $\frac{45}{27}-\frac{4}{27}=\frac{41}{27}$ \\\hline
 \end{longtable}}
+
+\begin{center}
+\begin{tikzpicture}[x=4.8cm,y=0.9cm,font=\scriptsize]
+  \draw[fill=iiiepePaper,draw=iiiepeBlue!45,rounded corners=3pt] (-0.15,-1.1) rectangle (2.15,2.1);
+  \node[font=\scriptsize\bfseries,iiiepeNavy] at (1.0,1.8) {Saltos sobre la recta numérica: $\frac{3}{4} + \frac{1}{2} = \frac{3}{4} + \frac{2}{4} = \frac{5}{4} = 1\frac{1}{4}$};
+  \draw[-{Stealth[length=1.6mm]},thick,iiiepeNavy] (0,0) -- (2.0,0);
+  \foreach \k/\lbl in {0/0, 0.25/\frac{1}{4}, 0.5/\frac{2}{4}, 0.75/\frac{3}{4}, 1.0/1, 1.25/\frac{5}{4}, 1.5/1\frac{1}{2}, 1.75/1\frac{3}{4}} {
+    \draw[iiiepeNavy] (\k,-0.1) -- (\k,0.1) node[below=4pt,font=\tiny] {$\lbl$};
+  }
+  \draw[-{Stealth[length=1.4mm]},thick,iiiepeBlue] (0,0.45) to[bend left=22] node[above,font=\tiny\bfseries] {$+\frac{3}{4}$} (0.75,0.45);
+  \draw[-{Stealth[length=1.4mm]},thick,iiiepeAqua!80!black] (0.75,0.45) to[bend left=24] node[above,font=\tiny\bfseries] {$+\frac{1}{2}=\frac{2}{4}$} (1.25,0.45);
+  \fill[iiiepeOrange] (1.25,0) circle (2.6pt);
+  \draw[-{Stealth[length=1.3mm]},dashed,iiiepeOrange] (0,-0.65) -- (1.75,-0.65) node[midway,below,font=\tiny\bfseries] {Ejemplo adicional: $1\frac{1}{2} + \frac{1}{4} = 1\frac{3}{4}$};
+\end{tikzpicture}
+\end{center}
 
 \section{Situaciones contextualizadas}
 

@@ -37,6 +37,7 @@
 }
 
 \input{template}
+\let\div\divisionsymbol
 
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
@@ -45,7 +46,7 @@
 \usepackage{pdflscape}
 \usepackage{tikz}
 \usepackage[most]{tcolorbox}
-\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,babel}
 
 \definecolor{iiiepeNavy}{HTML}{163B5C}
 \definecolor{iiiepeBlue}{HTML}{1F6F9F}
@@ -109,39 +110,59 @@ Dividir por $c/d$ equivale a multiplicar por $d/c$ porque su producto es 1. Se i
 \subsection*{Multiplicaciones}
 
 
-{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.35}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.32\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.68\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endfirsthead
 \hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endhead
-$\frac{3}{4}\times \frac{5}{9}$ & $\frac{5}{12}$ \\\hline
-$\frac{4}{9}\times \frac{12}{7}$ & $\frac{16}{21}$ \\\hline
-$\frac{23}{25}\times \frac{6}{5}$ & $\frac{138}{125}$ \\\hline
-$7\times \frac{3}{11}$ & $\frac{21}{11}$ \\\hline
-$\frac{17}{5}\times \frac{8}{7}$ & $\frac{136}{35}$ \\\hline
-$\frac34\frac25\frac69$ & $\frac{36}{180}=\frac15$ \\\hline
+$\frac{3}{4}\times \frac{5}{9}$ & $\dfrac{3\times 5}{4\times 9}=\dfrac{15}{36}=\dfrac{15\div 3}{36\div 3}=\mathbf{\dfrac{5}{12}}$ \\\hline
+$\frac{4}{9}\times \frac{12}{7}$ & $\dfrac{4\times 12}{9\times 7}=\dfrac{48}{63}=\dfrac{48\div 3}{63\div 3}=\mathbf{\dfrac{16}{21}}$ \\\hline
+$\frac{23}{25}\times \frac{6}{5}$ & $\dfrac{23\times 6}{25\times 5}=\mathbf{\dfrac{138}{125}}=1\dfrac{13}{125}$ \\\hline
+$7\times \frac{3}{11}$ & $\dfrac{7}{1}\times\dfrac{3}{11}=\dfrac{7\times 3}{1\times 11}=\mathbf{\dfrac{21}{11}}=1\dfrac{10}{11}$ \\\hline
+$\frac{17}{5}\times \frac{8}{7}$ & $\dfrac{17\times 8}{5\times 7}=\mathbf{\dfrac{136}{35}}=3\dfrac{31}{35}$ \\\hline
+$\frac34\frac25\frac69$ & $\dfrac{3\times 2\times 6}{4\times 5\times 9}=\dfrac{36}{180}=\dfrac{36\div 36}{180\div 36}=\mathbf{\dfrac{1}{5}}$ \\\hline
 \end{longtable}}
 
 \subsection*{Divisiones}
 
 
-{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.35}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.32\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.68\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endfirsthead
 \hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endhead
-$\frac{7}{8}\div \frac{1}{6}$ & $\frac{7}{8}\times 6=\frac{21}{4}$ \\\hline
-$\frac{5}{7}\div \frac{1}{3}$ & $\frac{5}{7}\times 3=\frac{15}{7}$ \\\hline
-$\frac{2}{7}\div \frac{6}{7}$ & $\frac{2}{7}\times \frac{7}{6}=\frac{1}{3}$ \\\hline
-$\frac{9}{7}\div \frac{21}{8}$ & $\frac{9}{7}\times \frac{8}{21}=\frac{24}{49}$ \\\hline
-$\frac{5}{6}\div \frac{2}{3}$ & $\frac{5}{6}\times \frac{3}{2}=\frac{5}{4}$ \\\hline
-$\frac{3}{4}\div \frac{2}{5}$ & $\frac{3}{4}\times \frac{5}{2}=\frac{15}{8}$ \\\hline
-$\frac{8}{9}\div \frac{3}{2}$ & $\frac{8}{9}\times \frac{2}{3}=\frac{16}{27}$ \\\hline
+$\frac{7}{8}\div \frac{1}{6}$ & $\dfrac{7}{8}\times \dfrac{6}{1}=\dfrac{42}{8}=\dfrac{42\div 2}{8\div 2}=\mathbf{\dfrac{21}{4}}=5\dfrac{1}{4}$ \\\hline
+$\frac{5}{7}\div \frac{1}{3}$ & $\dfrac{5}{7}\times \dfrac{3}{1}=\mathbf{\dfrac{15}{7}}=2\dfrac{1}{7}$ \\\hline
+$\frac{2}{7}\div \frac{6}{7}$ & $\dfrac{2}{7}\times \dfrac{7}{6}=\dfrac{14}{42}=\dfrac{14\div 14}{42\div 14}=\mathbf{\dfrac{1}{3}}$ \\\hline
+$\frac{9}{7}\div \frac{21}{8}$ & $\dfrac{9}{7}\times \dfrac{8}{21}=\dfrac{72}{147}=\dfrac{72\div 3}{147\div 3}=\mathbf{\dfrac{24}{49}}$ \\\hline
+$\frac{5}{6}\div \frac{2}{3}$ & $\dfrac{5}{6}\times \dfrac{3}{2}=\dfrac{15}{12}=\dfrac{15\div 3}{12\div 3}=\mathbf{\dfrac{5}{4}}=1\dfrac{1}{4}$ \\\hline
+$\frac{3}{4}\div \frac{2}{5}$ & $\dfrac{3}{4}\times \dfrac{5}{2}=\mathbf{\dfrac{15}{8}}=1\dfrac{7}{8}$ \\\hline
+$\frac{8}{9}\div \frac{3}{2}$ & $\dfrac{8}{9}\times \dfrac{2}{3}=\mathbf{\dfrac{16}{27}}$ \\\hline
 \end{longtable}}
+
+\begin{center}
+\begin{tikzpicture}[x=0.72cm,y=0.75cm,font=\scriptsize]
+  \draw[fill=iiiepePaper,draw=iiiepeBlue!45,rounded corners=3pt] (-0.5,-1.1) rectangle (16.5,2.35);
+  \node[font=\scriptsize\bfseries,iiiepeNavy] at (8.0,2.0) {Modelo de barras para división como medición: $1\frac{1}{2}\div \frac{1}{10}=\frac{15}{10}\div \frac{1}{10}=15\text{ bolsas}$};
+  \foreach \k in {0,...,9} {
+    \fill[iiiepeBlue!35] (\k*0.95+0.6,0.65) rectangle (\k*0.95+1.55,1.35);
+    \draw[iiiepeNavy] (\k*0.95+0.6,0.65) rectangle (\k*0.95+1.55,1.35);
+  }
+  \foreach \k in {10,...,14} {
+    \fill[iiiepeAqua!45] (\k*0.95+0.6,0.65) rectangle (\k*0.95+1.55,1.35);
+    \draw[iiiepeNavy] (\k*0.95+0.6,0.65) rectangle (\k*0.95+1.55,1.35);
+  }
+  \draw[very thick,iiiepeNavy] (0.6,0.65) rectangle (10.1,1.35);
+  \draw[very thick,iiiepeNavy] (10.1,0.65) rectangle (14.85,1.35);
+  \draw[<->,iiiepeNavy,thick] (0.6,0.32) -- (10.1,0.32) node[midway,below,font=\tiny\bfseries] {$1\text{ unidad} = 10/10$ ($10$ bolsas)};
+  \draw[<->,iiiepeAqua!70!black,thick] (10.1,0.32) -- (14.85,0.32) node[midway,below,font=\tiny\bfseries] {$1/2 = 5/10$ ($5$ bolsas)};
+  \node[font=\tiny\bfseries,iiiepeOrange!90!black] at (8.0,-0.65) {Total de porciones de $\frac{1}{10}$ contenidas en $\frac{3}{2}$: $10 + 5 = 15$ bolsas};
+\end{tikzpicture}
+\end{center}
 
 \subsection*{Situaciones contextualizadas}
 
@@ -157,7 +178,7 @@ $\frac{8}{9}\div \frac{3}{2}$ & $\frac{8}{9}\times \frac{2}{3}=\frac{16}{27}$ \\
 2a & $3(12)(3/4)=27$ litros de jugo. \\\hline
 2b & La mitad de $3/4$ m$^2$ es $(1/2)(3/4)=3/8$ m$^2$. \\\hline
 3 & Deuda $=(3/4)(132)=99$ pesos; pago $=(2/3)(99)=66$; saldo $99-66=33$ pesos. \\\hline
-4 & $4\frac34\div1/4=(19/4)(4)=19$ varillas, sin considerar pérdidas de corte. \\\hline
+4 & $4\dfrac{3}{4}\div\dfrac{1}{4} = \dfrac{19}{4}\times\dfrac{4}{1} = \dfrac{76}{4} = \mathbf{19}$ varillas, sin considerar pérdidas de corte. \\\hline
 \end{longtable}}
 
 
@@ -175,7 +196,7 @@ $\frac{8}{9}\div \frac{3}{2}$ & $\frac{8}{9}\times \frac{2}{3}=\frac{16}{27}$ \\
 8 & $(32\frac15)/(1\frac25)=(161/5)/(7/5)=23$ botellas completas. \\\hline
 9 & $(11\frac14)/(3/4)=(45/4)(4/3)=15$ vasos. \\\hline
 10 & $(3/4)(4\frac23)=(3/4)(14/3)=7/2=42/12$ kg; opción a. \\\hline
-11 & $1\frac12\div1/10=(3/2)(10)=15$ bolsas. \\\hline
+11 & $1\dfrac{1}{2}\div\dfrac{1}{10} = \dfrac{3}{2}\times\dfrac{10}{1} = \dfrac{30}{2} = \mathbf{15}$ bolsas. \\\hline
 \end{longtable}}
 
 \section{Sesión 03 B · Números negativos}
@@ -183,162 +204,209 @@ El simétrico de $a$ es $-a$ y su suma es cero. El valor absoluto $|a|$ mide dis
 \subsection*{Simétricos}
 
 
-{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.30\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.70\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endfirsthead
 \hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endhead
-$9$ & $-(9)=-9$ \\\hline
-$-6$ & $-(-6)=6$ \\\hline
-$13$ & $-(13)=-13$ \\\hline
-$1/8$ & $-(1/8)=-1/8$ \\\hline
-$-5/4$ & $-(-5/4)=5/4$ \\\hline
-$0$ & $-(0)=0$ \\\hline
-$0.25$ & $-(0.25)=-1/4$ \\\hline
-$-12.5$ & $-(-12.5)=25/2$ \\\hline
+$9$ & $-(9)=\mathbf{-9}\quad [\text{pues }9+(-9)=0]$ \\\hline
+$-6$ & $-(-6)=\mathbf{6}\quad [\text{pues }-6+6=0]$ \\\hline
+$13$ & $-(13)=\mathbf{-13}\quad [\text{pues }13+(-13)=0]$ \\\hline
+$1/8$ & $-(1/8)=\mathbf{-\dfrac{1}{8}}\quad [\text{pues }\frac{1}{8}+(-\frac{1}{8})=0]$ \\\hline
+$-5/4$ & $-(-5/4)=\mathbf{\dfrac{5}{4}}\quad [\text{pues }-\frac{5}{4}+\frac{5}{4}=0]$ \\\hline
+$0$ & $-(0)=\mathbf{0}\quad [\text{elemento neutro: }0+0=0]$ \\\hline
+$0.25$ & $-(0.25)=-\dfrac{25}{100}=\mathbf{-\dfrac{1}{4}}$ \\\hline
+$-12.5$ & $-(-12.5)=+12.5=\dfrac{125}{10}=\mathbf{\dfrac{25}{2}}$ \\\hline
 \end{longtable}}
 
 \subsection*{Valores absolutos}
 
 
-{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.30\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.70\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endfirsthead
 \hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endhead
-$|8|$ & $8$ \\\hline
-$|-3.5|$ & $7/2$ \\\hline
-$|3/4|$ & $3/4$ \\\hline
-$|-7/8|$ & $7/8$ \\\hline
-$|0|$ & $0$ \\\hline
-$|530|$ & $530$ \\\hline
-$|-76|$ & $76$ \\\hline
-$|10-17|$ & $7$ \\\hline
+$|8|$ & $+8=\mathbf{8}\quad (\text{distancia de }8\text{ al }0\text{ en la recta})$ \\\hline
+$|-3.5|$ & $-(-3.5)=3.5=\dfrac{35}{10}=\mathbf{\dfrac{7}{2}}$ \\\hline
+$|3/4|$ & $+3/4=\mathbf{\dfrac{3}{4}}\quad (\text{ya es positivo})$ \\\hline
+$|-7/8|$ & $-(-7/8)=\mathbf{\dfrac{7}{8}}\quad (\text{distancia de }-7/8\text{ al }0)$ \\\hline
+$|0|$ & $\mathbf{0}\quad (\text{distancia nula al origen})$ \\\hline
+$|530|$ & $+530=\mathbf{530}\quad (\text{ya es positivo})$ \\\hline
+$|-76|$ & $-(-76)=\mathbf{76}\quad (\text{opuesto del negativo})$ \\\hline
+$|10-17|$ & $|-7|=-(-7)=\mathbf{7}\quad (\text{primero se resuelve }10-17=-7)$ \\\hline
 \end{longtable}}
+
+\begin{center}
+\begin{tikzpicture}[x=0.80cm,y=0.80cm,font=\scriptsize]
+  \draw[fill=iiiepePaper,draw=iiiepeBlue!45,rounded corners=3pt] (-7.5,-1.55) rectangle (7.5,1.85);
+  \node[font=\scriptsize\bfseries,iiiepeNavy] at (0,1.5) {Simétricos opuestos respecto al origen y valor absoluto como distancia al cero};
+  \draw[<->,very thick,iiiepeNavy] (-7.1,0) -- (7.1,0);
+  \foreach \x in {-6,-5,...,6} \draw[iiiepeNavy] (\x,-0.12) -- (\x,0.12) node[below=4pt,font=\tiny] {$\x$};
+  \fill[iiiepeNavy] (0,0) circle (2.8pt);
+  \fill[iiiepeOrange] (-6,0) circle (2.6pt) (6,0) circle (2.6pt);
+  \fill[iiiepeAqua!80!black] (-3.5,0) circle (2.6pt) (3.5,0) circle (2.6pt);
+  \draw[dashed,iiiepeOrange,thick] (-6,0) to[bend left=22] node[above,font=\tiny\bfseries] {Simétricos: $(-6)+6=0$} (6,0);
+  \draw[<->,iiiepeAqua!80!black,thick] (-3.5,-0.82) -- (0,-0.82) node[midway,below,font=\tiny\bfseries] {$|-3.5| = 3.5 = \frac{7}{2}$};
+  \draw[<->,iiiepeAqua!80!black,thick] (0,-0.82) -- (3.5,-0.82) node[midway,below,font=\tiny\bfseries] {$|3.5| = 3.5$};
+\end{tikzpicture}
+\end{center}
 
 \subsection*{Sumas y restas}
 
 
-{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.28}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.30\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.70\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endfirsthead
 \hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endhead
-$7+6+4$ & $17$ \\\hline
-$-9-12-1$ & $-22$ \\\hline
-$17-5-8$ & $4$ \\\hline
-$3-7+2$ & $-2$ \\\hline
-$-9-1+3$ & $-7$ \\\hline
-$-12+11-7$ & $-8$ \\\hline
-$8-11+4$ & $1$ \\\hline
-$3-5+6-1$ & $3$ \\\hline
+$7+6+4$ & $(7+6)+4 = 13+4 = \mathbf{17}$ \\\hline
+$-9-12-1$ & $-(9+12+1) = -(21+1) = \mathbf{-22}$ \\\hline
+$17-5-8$ & $17-(5+8) = 17-13 = \mathbf{4}$ \\\hline
+$3-7+2$ & $(3+2)-7 = 5-7 = -(7-5) = \mathbf{-2}$ \\\hline
+$-9-1+3$ & $3-(9+1) = 3-10 = -(10-3) = \mathbf{-7}$ \\\hline
+$-12+11-7$ & $11-(12+7) = 11-19 = -(19-11) = \mathbf{-8}$ \\\hline
+$8-11+4$ & $(8+4)-11 = 12-11 = \mathbf{1}$ \\\hline
+$3-5+6-1$ & $(3+6)-(5+1) = 9-6 = \mathbf{3}$ \\\hline
 \end{longtable}}
 
 
 
-{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.28}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.30\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.70\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endfirsthead
 \hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endhead
-$10-11-8-2$ & $-11$ \\\hline
-$-3+3-2+10$ & $8$ \\\hline
-$11+10+8$ & $29$ \\\hline
-$-5-8-4$ & $-17$ \\\hline
-$30-19-6$ & $5$ \\\hline
-$4-13+6$ & $-3$ \\\hline
-$-7-8+5$ & $-10$ \\\hline
-$-5+9-1$ & $3$ \\\hline
+$10-11-8-2$ & $10-(11+8+2) = 10-21 = -(21-10) = \mathbf{-11}$ \\\hline
+$-3+3-2+10$ & $(-3+3)+(10-2) = 0+8 = \mathbf{8}$ \\\hline
+$11+10+8$ & $(11+10)+8 = 21+8 = \mathbf{29}$ \\\hline
+$-5-8-4$ & $-(5+8+4) = -(13+4) = \mathbf{-17}$ \\\hline
+$30-19-6$ & $30-(19+6) = 30-25 = \mathbf{5}$ \\\hline
+$4-13+6$ & $(4+6)-13 = 10-13 = -(13-10) = \mathbf{-3}$ \\\hline
+$-7-8+5$ & $5-(7+8) = 5-15 = -(15-5) = \mathbf{-10}$ \\\hline
+$-5+9-1$ & $9-(5+1) = 9-6 = \mathbf{3}$ \\\hline
 \end{longtable}}
 
 
 
-{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.28}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.30\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.70\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endfirsthead
 \hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endhead
-$-12-10-9$ & $-31$ \\\hline
-$2-3-8+5$ & $-4$ \\\hline
-$-4+5+5-6$ & $0$ \\\hline
-$9+7+6-13$ & $9$ \\\hline
+$-12-10-9$ & $-(12+10+9) = -(22+9) = \mathbf{-31}$ \\\hline
+$2-3-8+5$ & $(2+5)-(3+8) = 7-11 = -(11-7) = \mathbf{-4}$ \\\hline
+$-4+5+5-6$ & $(5+5)-(4+6) = 10-10 = \mathbf{0}$ \\\hline
+$9+7+6-13$ & $(9+7+6)-13 = 22-13 = \mathbf{9}$ \\\hline
 \end{longtable}}
 
 \subsection*{Productos con signo}
 
 
-{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.28}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.32\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.68\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endfirsthead
 \hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endhead
-$8\cdot(-9)$ & $-72$ \\\hline
-$(-12)\cdot(-4)$ & $48$ \\\hline
-$18\cdot3$ & $54$ \\\hline
-$(-6)\cdot13$ & $-78$ \\\hline
-$(-25)\cdot(-3)$ & $75$ \\\hline
-$(-3)\cdot6\cdot(-5)$ & $90$ \\\hline
-$(-10)\cdot(-10)\cdot(-4)$ & $-400$ \\\hline
-$7\cdot2\cdot(-5)$ & $-70$ \\\hline
+$8\cdot(-9)$ & $(+)(-)=- \implies -(8\times 9) = \mathbf{-72}$ \\\hline
+$(-12)\cdot(-4)$ & $(-)(-)=+ \implies +(12\times 4) = \mathbf{48}$ \\\hline
+$18\cdot3$ & $(+)(+)=+ \implies +(18\times 3) = \mathbf{54}$ \\\hline
+$(-6)\cdot13$ & $(-)(+)=- \implies -(6\times 13) = \mathbf{-78}$ \\\hline
+$(-25)\cdot(-3)$ & $(-)(-)=+ \implies +(25\times 3) = \mathbf{75}$ \\\hline
+$(-3)\cdot6\cdot(-5)$ & $[(-3)\cdot 6]\cdot(-5) = (-18)\cdot(-5) = +(18\times 5) = \mathbf{90}$ \\\hline
+$(-10)\cdot(-10)\cdot(-4)$ & $[(-10)\cdot(-10)]\cdot(-4) = (100)\cdot(-4) = \mathbf{-400}$ \\\hline
+$7\cdot2\cdot(-5)$ & $(7\cdot 2)\cdot(-5) = 14\cdot(-5) = -(14\times 5) = \mathbf{-70}$ \\\hline
 \end{longtable}}
 
 
 
-{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.28}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.32\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.68\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endfirsthead
 \hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endhead
-$(-2)\cdot8\cdot3\cdot(-6)$ & $288$ \\\hline
-$(-5)\cdot(-1)\cdot(-1)\cdot10$ & $-50$ \\\hline
+$(-2)\cdot8\cdot3\cdot(-6)$ & $[(-2)\cdot 8]\cdot[3\cdot(-6)] = (-16)\cdot(-18) = +(16\times 18) = \mathbf{288}$ \\\hline
+$(-5)\cdot(-1)\cdot(-1)\cdot10$ & $[(-5)\cdot(-1)]\cdot[(-1)\cdot 10] = 5\cdot(-10) = \mathbf{-50}$ \\\hline
 \end{longtable}}
 
 \subsection*{Cocientes con signo}
 
 
-{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.32}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.28\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.72\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endfirsthead
 \hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endhead
-$(-24)\div(-3)$ & $8$ \\\hline
-$(-32)\div(2)$ & $-16$ \\\hline
-$(63)\div(-9)$ & $-7$ \\\hline
-$(-57)\div(-3)$ & $19$ \\\hline
-$(150)\div(-6)$ & $-25$ \\\hline
-$(182)\div(-13)$ & $-14$ \\\hline
-$(-91)\div(-13)$ & $7$ \\\hline
-$(-154)\div(7)$ & $-22$ \\\hline
+$(-24)\div(-3)$ & $\dfrac{-24}{-3} = +(24\div 3) = \mathbf{8}\quad [\text{pues }(-3)(8)=-24]$ \\\hline
+$(-32)\div(2)$ & $\dfrac{-32}{2} = -(32\div 2) = \mathbf{-16}\quad [\text{pues }(2)(-16)=-32]$ \\\hline
+$(63)\div(-9)$ & $\dfrac{63}{-9} = -(63\div 9) = \mathbf{-7}\quad [\text{pues }(-9)(-7)=63]$ \\\hline
+$(-57)\div(-3)$ & $\dfrac{-57}{-3} = +(57\div 3) = \mathbf{19}\quad [\text{pues }(-3)(19)=-57]$ \\\hline
+$(150)\div(-6)$ & $\dfrac{150}{-6} = -(150\div 6) = \mathbf{-25}\quad [\text{pues }(-6)(-25)=150]$ \\\hline
+$(182)\div(-13)$ & $\dfrac{182}{-13} = -(182\div 13) = \mathbf{-14}\quad [\text{pues }(-13)(-14)=182]$ \\\hline
+$(-91)\div(-13)$ & $\dfrac{-91}{-13} = +(91\div 13) = \mathbf{7}\quad [\text{pues }(-13)(7)=-91]$ \\\hline
+$(-154)\div(7)$ & $\dfrac{-154}{7} = -(154\div 7) = \mathbf{-22}\quad [\text{pues }(7)(-22)=-154]$ \\\hline
 \end{longtable}}
 
 
 
-{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.32}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.28\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.72\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endfirsthead
 \hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endhead
-$(90)\div(-5)$ & $-18$ \\\hline
-$(165)\div(-11)$ & $-15$ \\\hline
+$(90)\div(-5)$ & $\dfrac{90}{-5} = -(90\div 5) = \mathbf{-18}\quad [\text{pues }(-5)(-18)=90]$ \\\hline
+$(165)\div(-11)$ & $\dfrac{165}{-11} = -(165\div 11) = \mathbf{-15}\quad [\text{pues }(-11)(-15)=165]$ \\\hline
 \end{longtable}}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.82,font=\scriptsize]
+  % Panel izquierdo: Desplazamientos 3 - 7 + 2 = -2
+  \draw[fill=iiiepePaper,draw=iiiepeBlue!45,rounded corners=3pt] (-0.3,-1.35) rectangle (8.7,2.45);
+  \node[font=\scriptsize\bfseries,iiiepeNavy] at (4.2,2.15) {(a) Desplazamientos en la recta: $3 - 7 + 2 = -2$};
+  \draw[<->,thick,iiiepeNavy] (0.2,0.0) -- (8.2,0.0);
+  \foreach \k/\lbl in {1/-5, 2/-4, 3/-3, 4/-2, 5/-1, 6/0, 7/1, 8/2, 9/3} {
+    \draw[iiiepeNavy] ({\k*0.75-0.15},-0.1) -- ({\k*0.75-0.15},0.1) node[below=4pt,font=\tiny] {$\lbl$};
+  }
+  % origen 0 en x = 6*0.75 - 0.15 = 4.35; cada unidad = 0.75
+  \fill[iiiepeNavy] (4.35,0) circle (2.2pt);
+  \draw[-{Stealth[length=1.4mm]},thick,iiiepeBlue] (4.35,1.25) -- (6.60,1.25) node[midway,above,font=\tiny\bfseries] {$+3$};
+  \draw[dotted,gray] (4.35,0) -- (4.35,1.25) (6.60,0) -- (6.60,1.25);
+  \draw[-{Stealth[length=1.4mm]},thick,iiiepeOrange] (6.60,0.80) -- (1.35,0.80) node[midway,above,font=\tiny\bfseries] {$-7$};
+  \draw[dotted,gray] (1.35,0) -- (1.35,0.80);
+  \draw[-{Stealth[length=1.4mm]},thick,iiiepeAqua!80!black] (1.35,0.35) -- (2.85,0.35) node[midway,above,font=\tiny\bfseries] {$+2$};
+  \fill[red!75!black] (2.85,0) circle (2.8pt);
+  \node[font=\tiny\bfseries,red!75!black] at (4.2,-0.95) {Posición final: $3 - 7 + 2 = -2$};
+
+  % Panel derecho: Ley de signos en productos y cocientes
+  \draw[fill=iiiepePaper,draw=iiiepeBlue!45,rounded corners=3pt] (9.1,-1.35) rectangle (16.2,2.45);
+  \node[font=\scriptsize\bfseries,iiiepeNavy] at (12.65,2.15) {(b) Ley de signos en $\times$ y $\div$};
+  \node[align=left,font=\tiny,iiiepeInk] at (12.65,0.55) {
+    $\bullet\;\; (+a)\div(+b)=+\dfrac{a}{b},\quad \mathbf{(-a)\div(-b)=+\dfrac{a}{b}}$\\[4pt]
+    $\bullet\;\; (+a)\div(-b)=-\dfrac{a}{b},\quad (-a)\div(+b)=-\dfrac{a}{b}$\\[6pt]
+    \textbf{Inverso del cociente:}\\
+    $\dfrac{p}{q}=c \iff p = q\cdot c$\\[4pt]
+    Ej.: $\dfrac{-24}{-3}=8$ porque $(-3)(8)=-24$
+  };
+\end{tikzpicture}
+\end{center}
 
 \subsection*{Situaciones con signos}
 
@@ -376,6 +444,32 @@ $(165)\div(-11)$ & $-15$ \\\hline
 14 & Una hora tiene seis intervalos de 10 min: $6(-35)=-210$ m respecto al punto inicial. \\\hline
 15 & $-945/7=-135$ pesos diarios en promedio; la magnitud de la pérdida media es 135 pesos. \\\hline
 \end{longtable}}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.82,font=\scriptsize]
+  % Escala vertical izquierda: Problema del buzo (Caso 10)
+  \draw[fill=iiiepePaper,draw=iiiepeBlue!45,rounded corners=3pt] (-0.4,-3.8) rectangle (7.2,1.1);
+  \node[font=\scriptsize\bfseries,iiiepeNavy] at (3.4,0.75) {(a) Trayectoria vertical del buzo (Caso 10)};
+  \draw[-{Stealth[length=1.4mm]},thick,iiiepeNavy] (1.3,0.3) -- (1.3,-3.5);
+  \draw[iiiepeAqua!80!black,thick] (0.6,0) -- (6.8,0) node[midway,above,font=\tiny\bfseries] {Superficie ($0\text{ m}$)};
+  \fill[iiiepeBlue] (1.3,-2.1) circle (2.5pt) node[left=3pt,font=\tiny] {$-26\text{ m}$};
+  \fill[iiiepeAqua!70!black] (1.3,-0.65) circle (2.5pt) node[left=3pt,font=\tiny] {$-8\text{ m}$};
+  \fill[red!75!black] (1.3,-2.5) circle (2.6pt) node[left=3pt,font=\tiny\bfseries] {$-30\text{ m}$};
+  \draw[-{Stealth[length=1.3mm]},thick,iiiepeAqua!70!black] (2.4,-2.1) -- (2.4,-0.65) node[midway,right,font=\tiny\bfseries] {$+18\text{ m}$};
+  \draw[-{Stealth[length=1.3mm]},thick,iiiepeOrange] (4.3,-0.65) -- (4.3,-2.5) node[midway,right,font=\tiny\bfseries] {$-22\text{ m}$};
+  \node[font=\tiny\bfseries,iiiepeNavy] at (4.1,-3.25) {Posición final: $-26+18-22=-30\text{ m}$};
+
+  % Escala vertical derecha: Distancia cumbre - mina (Caso 5)
+  \draw[fill=iiiepePaper,draw=iiiepeBlue!45,rounded corners=3pt] (7.8,-3.8) rectangle (16.0,1.1);
+  \node[font=\scriptsize\bfseries,iiiepeNavy] at (11.9,0.75) {(b) Altitud máxima vs. profundidad (Caso 5)};
+  \draw[<->,thick,iiiepeNavy] (10.0,0.2) -- (10.0,-3.1);
+  \draw[iiiepeAqua!80!black,thick] (8.5,-1.9) -- (15.5,-1.9);
+  \node[above left,font=\tiny,iiiepeInk] at (15.5,-1.9) {Nivel del mar ($0\text{ m}$)};
+  \fill[iiiepeBlue] (10.0,0.0) circle (2.6pt) node[left=3pt,font=\tiny\bfseries] {$+3795\text{ m}$};
+  \fill[red!75!black] (10.0,-2.85) circle (2.6pt) node[left=3pt,font=\tiny\bfseries] {$-792\text{ m}$};
+  \draw[<->,iiiepeOrange,thick] (11.2,0.0) -- (11.2,-2.85) node[midway,right,font=\tiny\bfseries] {$d = |3795-(-792)| = 4587\text{ m}$};
+\end{tikzpicture}
+\end{center}
 
 \section{Procedimientos que justifican las respuestas}
 \subsection{Operar cantidades mixtas}

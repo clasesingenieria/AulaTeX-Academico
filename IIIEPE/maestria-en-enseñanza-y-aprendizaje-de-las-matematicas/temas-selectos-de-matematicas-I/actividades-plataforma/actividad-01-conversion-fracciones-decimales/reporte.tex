@@ -37,6 +37,7 @@
 }
 
 \input{template}
+\let\div\divisionsymbol
 
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
@@ -45,7 +46,7 @@
 \usepackage{pdflscape}
 \usepackage{tikz}
 \usepackage[most]{tcolorbox}
-\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,babel}
 
 \definecolor{iiiepeNavy}{HTML}{163B5C}
 \definecolor{iiiepeBlue}{HTML}{1F6F9F}
@@ -161,42 +162,63 @@ $\frac{5}{100}$ & $5\div 100=0.05$ \\\hline
 \subsection*{Fracciones propias}
 
 
-{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.32}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.28\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.72\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endfirsthead
 \hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endhead
-$\frac{3}{4}$ & $3\div 4=0.75$ \\\hline
-$\frac{4}{5}$ & $4\div 5=0.8$ \\\hline
-$\frac{1}{8}$ & $1\div 8=0.125$ \\\hline
-$\frac{3}{10}$ & $3\div 10=0.3$ \\\hline
-$\frac{5}{16}$ & $5\div 16=0.3125$ \\\hline
-$\frac{4}{8}$ & $4\div 8=0.5$ \\\hline
-$\frac{4}{25}$ & $4\div 25=0.16$ \\\hline
-$\frac{18}{50}$ & $18\div 50=0.36$ \\\hline
+$\frac{3}{4}$ & $3\div 4 = \dfrac{3\times 25}{4\times 25} = \dfrac{75}{100} = \mathbf{0.75}$ \\\hline
+$\frac{4}{5}$ & $4\div 5 = \dfrac{4\times 2}{5\times 2} = \dfrac{8}{10} = \mathbf{0.8}$ \\\hline
+$\frac{1}{8}$ & $1\div 8 = \dfrac{1\times 125}{8\times 125} = \dfrac{125}{1000} = \mathbf{0.125}$ \\\hline
+$\frac{3}{10}$ & $3\div 10 = \mathbf{0.3}\quad (\text{tres décimos})$ \\\hline
+$\frac{5}{16}$ & $5\div 16 = \dfrac{5\times 625}{16\times 625} = \dfrac{3125}{10000} = \mathbf{0.3125}$ \\\hline
+$\frac{4}{8}$ & $4\div 8 = \dfrac{4\div 4}{8\div 4} = \dfrac{1}{2} = \mathbf{0.5}$ \\\hline
+$\frac{4}{25}$ & $4\div 25 = \dfrac{4\times 4}{25\times 4} = \dfrac{16}{100} = \mathbf{0.16}$ \\\hline
+$\frac{18}{50}$ & $18\div 50 = \dfrac{18\times 2}{50\times 2} = \dfrac{36}{100} = \mathbf{0.36}$ \\\hline
 \end{longtable}}
 
 \subsection*{Fracciones impropias}
 
 
-{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.32}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.28\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.72\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endfirsthead
 \hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endhead
-$\frac{6}{4}$ & $6\div 4=1.5$ \\\hline
-$\frac{8}{5}$ & $8\div 5=1.6$ \\\hline
-$\frac{13}{8}$ & $13\div 8=1.625$ \\\hline
-$\frac{10}{4}$ & $10\div 4=2.5$ \\\hline
-$\frac{21}{6}$ & $21\div 6=3.5$ \\\hline
-$\frac{17}{4}$ & $17\div 4=4.25$ \\\hline
-$\frac{23}{20}$ & $23\div 20=1.15$ \\\hline
-$\frac{34}{5}$ & $34\div 5=6.8$ \\\hline
+$\frac{6}{4}$ & $6\div 4 = 1+\dfrac{2}{4} = 1+\dfrac{1}{2} = \mathbf{1.5}$ \\\hline
+$\frac{8}{5}$ & $8\div 5 = 1+\dfrac{3}{5} = 1+\dfrac{6}{10} = \mathbf{1.6}$ \\\hline
+$\frac{13}{8}$ & $13\div 8 = 1+\dfrac{5}{8} = 1+\dfrac{625}{1000} = \mathbf{1.625}$ \\\hline
+$\frac{10}{4}$ & $10\div 4 = 2+\dfrac{2}{4} = 2+0.5 = \mathbf{2.5}$ \\\hline
+$\frac{21}{6}$ & $21\div 6 = 3+\dfrac{3}{6} = 3+\dfrac{1}{2} = \mathbf{3.5}$ \\\hline
+$\frac{17}{4}$ & $17\div 4 = 4+\dfrac{1}{4} = 4+\dfrac{25}{100} = \mathbf{4.25}$ \\\hline
+$\frac{23}{20}$ & $23\div 20 = 1+\dfrac{3}{20} = 1+\dfrac{15}{100} = \mathbf{1.15}$ \\\hline
+$\frac{34}{5}$ & $34\div 5 = 6+\dfrac{4}{5} = 6+\dfrac{8}{10} = \mathbf{6.8}$ \\\hline
 \end{longtable}}
+
+\begin{center}
+\begin{tikzpicture}[x=4.8cm,y=0.9cm,font=\scriptsize]
+  \draw[fill=iiiepePaper,draw=iiiepeBlue!45,rounded corners=3pt] (-0.15,-1.25) rectangle (2.65,1.85);
+  \node[font=\scriptsize\bfseries,iiiepeNavy] at (1.25,1.52) {Equivalencia fraccionaria y decimal sobre la recta numérica $[0, 2.5]$};
+  \draw[-{Stealth[length=1.6mm]},thick,iiiepeNavy] (0,0) -- (2.55,0);
+  \foreach \x in {0,0.5,1,1.5,2,2.5} \draw[iiiepeNavy,thick] (\x,-0.12) -- (\x,0.12) node[below=4pt,font=\tiny] {$\x$};
+  \fill[iiiepeAqua!80!black] (0.125,0) circle (2.2pt) node[above=10pt,font=\tiny\bfseries] {$\frac{1}{8}=0.125$};
+  \draw[iiiepeAqua!80!black,thin] (0.125,0) -- (0.125,0.42);
+  \fill[iiiepeOrange] (0.333,0) circle (2.2pt);
+  \node[above=18pt,font=\tiny\bfseries,iiiepeOrange!85!black] at (0.37,0) {$\frac{1}{3}=0.\overline{3}$};
+  \draw[iiiepeOrange,thin] (0.333,0) -- (0.333,0.72);
+  \fill[iiiepeBlue] (0.75,0) circle (2.2pt) node[above=10pt,font=\tiny\bfseries] {$\frac{3}{4}=0.75$};
+  \draw[iiiepeBlue,thin] (0.75,0) -- (0.75,0.42);
+  \fill[iiiepeNavy] (1.5,0) circle (2.2pt) node[above=10pt,font=\tiny\bfseries] {$\frac{6}{4}=1.5$};
+  \draw[iiiepeNavy,thin] (1.5,0) -- (1.5,0.42);
+  \fill[red!75!black] (2.167,0) circle (2.2pt) node[above=10pt,font=\tiny\bfseries] {$\frac{13}{6}=2.1\overline{6}$};
+  \draw[red!75!black,thin] (2.167,0) -- (2.167,0.42);
+  \node[font=\tiny,iiiepeInk] at (1.25,-0.92) {Fracciones propias en $(0,1)$; impropias y mixtas en $[1,\infty)$ con ubicación exacta común.};
+\end{tikzpicture}
+\end{center}
 
 \subsection*{Números mixtos}
 
@@ -221,21 +243,21 @@ $4+\frac{10}{8}$ & $4+1.25=5.25$ \\\hline
 Los incisos $2\frac85$ y $4\frac{10}{8}$ se interpretan como sumas, aunque su parte fraccionaria sea impropia. Sus formas mixtas convencionales son $3\frac35$ y $5\frac14$, respectivamente.\subsection*{Decimales periódicos}
 
 
-{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.32}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.28\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.72\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endfirsthead
 \hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endhead
-$\frac13$ & $0.\overline3$ \\\hline
-$\frac79$ & $0.\overline7$ \\\hline
-$2+\frac7{11}$ & $2.\overline{63}$ \\\hline
-$\frac{13}6$ & $2.1\overline6$ \\\hline
-$5+\frac4{15}$ & $5.2\overline6$ \\\hline
-$\frac{20}{11}$ & $1.\overline{81}$ \\\hline
-$\frac6{27}$ & $\frac29=0.\overline2$ \\\hline
-$\frac{22}{90}$ & $\frac{11}{45}=0.2\overline4$ \\\hline
+$\frac13$ & $1\div 3 = 0.333\ldots = \mathbf{0.\overline{3}}\quad (\text{residuo constante }r=1)$ \\\hline
+$\frac79$ & $7\div 9 = 0.777\ldots = \mathbf{0.\overline{7}}\quad (\text{residuo constante }r=7)$ \\\hline
+$2+\frac7{11}$ & $2+(7\div 11) = 2+0.6363\ldots = \mathbf{2.\overline{63}}$ \\\hline
+$\frac{13}6$ & $13\div 6 = 2+\dfrac{1}{6} = 2+0.1666\ldots = \mathbf{2.1\overline{6}}$ \\\hline
+$5+\frac4{15}$ & $5+(4\div 15) = 5+0.2666\ldots = \mathbf{5.2\overline{6}}$ \\\hline
+$\frac{20}{11}$ & $20\div 11 = 1+\dfrac{9}{11} = 1+0.8181\ldots = \mathbf{1.\overline{81}}$ \\\hline
+$\frac6{27}$ & $\dfrac{6\div 3}{27\div 3} = \dfrac{2}{9} = 2\div 9 = \mathbf{0.\overline{2}}$ \\\hline
+$\frac{22}{90}$ & $\dfrac{22\div 2}{90\div 2} = \dfrac{11}{45} = 11\div 45 = \mathbf{0.2\overline{4}}$ \\\hline
 \end{longtable}}
 
 \subsection*{Decimales finitos a fracción}
@@ -243,21 +265,21 @@ Se escribe el decimal sobre $10^n$, donde $n$ es el número de cifras decimales,
 \subsection*{Resultados exactos}
 
 
-{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.28\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.72\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endfirsthead
 \hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endhead
-$1.6$ & $\frac{16}{10}=\frac{8}{5}$ \\\hline
-$0.525$ & $\frac{525}{1000}=\frac{21}{40}$ \\\hline
-$0.025$ & $\frac{25}{1000}=\frac{1}{40}$ \\\hline
-$0.75$ & $\frac{75}{100}=\frac{3}{4}$ \\\hline
-$34.5$ & $\frac{345}{10}=\frac{69}{2}$ \\\hline
-$1.5$ & $\frac{15}{10}=\frac{3}{2}$ \\\hline
-$0.17$ & $\frac{17}{100}=\frac{17}{100}$ \\\hline
-$2.05$ & $\frac{205}{100}=\frac{41}{20}$ \\\hline
+$1.6$ & $\dfrac{16}{10}=\dfrac{16\div 2}{10\div 2}=\mathbf{\dfrac{8}{5}}$ \\\hline
+$0.525$ & $\dfrac{525}{1000}=\dfrac{525\div 25}{1000\div 25}=\mathbf{\dfrac{21}{40}}$ \\\hline
+$0.025$ & $\dfrac{25}{1000}=\dfrac{25\div 25}{1000\div 25}=\mathbf{\dfrac{1}{40}}$ \\\hline
+$0.75$ & $\dfrac{75}{100}=\dfrac{75\div 25}{100\div 25}=\mathbf{\dfrac{3}{4}}$ \\\hline
+$34.5$ & $\dfrac{345}{10}=\dfrac{345\div 5}{10\div 5}=\mathbf{\dfrac{69}{2}}$ \\\hline
+$1.5$ & $\dfrac{15}{10}=\dfrac{15\div 5}{10\div 5}=\mathbf{\dfrac{3}{2}}$ \\\hline
+$0.17$ & $\dfrac{17}{100}=\mathbf{\dfrac{17}{100}}\quad (\operatorname{mcd}(17,100)=1)$ \\\hline
+$2.05$ & $\dfrac{205}{100}=\dfrac{205\div 5}{100\div 5}=\mathbf{\dfrac{41}{20}}$ \\\hline
 \end{longtable}}
 
 \subsection*{Decimales periódicos a fracción}
@@ -265,24 +287,48 @@ Si hay $m$ cifras no periódicas y $n$ cifras de período, se multiplican dos co
 \subsection*{Eliminación del período}
 
 
-{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.5\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.28\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.72\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endfirsthead
 \hline
 \rowcolor{iiiepePale} \textbf{Expresión} & \textbf{Procedimiento y resultado} \\\hline
 \endhead
-$0.\overline{18}$ & $\frac{18}{99}=\frac2{11}$ \\\hline
-$0.\overline7$ & $\frac79$ \\\hline
-$2.1\overline6$ & $\frac{216-21}{90}=\frac{13}6$ \\\hline
-$0.5\overline3$ & $\frac{53-5}{90}=\frac8{15}$ \\\hline
-$0.82\overline1$ & $\frac{821-82}{900}=\frac{739}{900}$ \\\hline
-$1.4\overline{67}$ & $\frac{1467-14}{990}=\frac{1453}{990}$ \\\hline
-$0.\overline{009}$ & $\frac9{999}=\frac1{111}$ \\\hline
-$5.8\overline{72}$ & $\frac{5872-58}{990}=\frac{323}{55}$ \\\hline
+$0.\overline{18}$ & $99x = 18 \implies x = \dfrac{18}{99} = \dfrac{18\div 9}{99\div 9} = \mathbf{\dfrac{2}{11}}$ \\\hline
+$0.\overline7$ & $10x - x = 7 \implies 9x = 7 \implies \mathbf{\dfrac{7}{9}}$ \\\hline
+$2.1\overline6$ & $100x - 10x = 216 - 21 = 195 \implies \dfrac{195}{90} = \mathbf{\dfrac{13}{6}}$ \\\hline
+$0.5\overline3$ & $100x - 10x = 53 - 5 = 48 \implies \dfrac{48}{90} = \mathbf{\dfrac{8}{15}}$ \\\hline
+$0.82\overline1$ & $1000x - 100x = 821 - 82 = 739 \implies \mathbf{\dfrac{739}{900}}$ \\\hline
+$1.4\overline{67}$ & $1000x - 10x = 1467 - 14 = 1453 \implies \mathbf{\dfrac{1453}{990}}$ \\\hline
+$0.\overline{009}$ & $1000x - x = 9 \implies \dfrac{9}{999} = \mathbf{\dfrac{1}{111}}$ \\\hline
+$5.8\overline{72}$ & $1000x - 10x = 5872 - 58 = 5814 \implies \dfrac{5814}{990} = \mathbf{\dfrac{323}{55}}$ \\\hline
 \end{longtable}}
 
-Por ejemplo, si $x=2.1\overline6$, entonces $100x=216.\overline6$ y $10x=21.\overline6$. Al restar, $90x=195$ y $x=13/6$.\section{Situaciones contextualizadas}
+Por ejemplo, si $x=2.1\overline6$, entonces $100x=216.\overline6$ y $10x=21.\overline6$. Al restar, $90x=195$ y $x=13/6$.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.82,font=\scriptsize]
+  \draw[fill=iiiepePaper,draw=iiiepeBlue!45,rounded corners=3pt] (-0.3,-1.25) rectangle (8.3,2.35);
+  \node[font=\scriptsize\bfseries,iiiepeNavy] at (4.0,2.0) {(a) División posicional: $\frac{11}{16}=0.6875$};
+  \node[align=left,font=\tiny,iiiepeInk] at (4.0,0.45) {
+    $11.0 \div 16 \implies 110 = 16(6) + \mathbf{14}$ (décimos: $0.6$)\\
+    $140 = 16(8) + \mathbf{12}$ (centésimos: $+0.08$)\\
+    $120 = 16(7) + \mathbf{8}$ (milésimos: $+0.007$)\\
+    $80 = 16(5) + \mathbf{0}$ (diezmilésimos: $+0.0005$)
+  };
+  \node[font=\tiny\bfseries,iiiepeAqua!70!black] at (4.0,-0.88) {Exacto: $0.6875 = \frac{6875}{10000} = \frac{11}{16}$};
+
+  \draw[fill=iiiepePaper,draw=iiiepeBlue!45,rounded corners=3pt] (8.7,-1.25) rectangle (16.2,2.35);
+  \node[font=\scriptsize\bfseries,iiiepeNavy] at (12.45,2.0) {(b) Eliminación algebraica del período};
+  \node[align=left,font=\tiny,iiiepeInk] at (12.45,0.45) {
+    Sea $x = 0.\overline{18} = 0.181818\ldots$\\
+    $100x = 18.181818\ldots$\\
+    $\underline{-\quad x = \phantom{1}0.181818\ldots}$\\
+    $\phantom{1}99x = 18 \implies x = \frac{18}{99} = \frac{2}{11}$
+  };
+  \node[font=\tiny\bfseries,iiiepeOrange!85!black] at (12.45,-0.88) {Cancelación exacta sin truncamiento};
+\end{tikzpicture}
+\end{center}\section{Situaciones contextualizadas}
 
 {\small\setstretch{1.1}\renewcommand{\arraystretch}{1.25}
 \begin{longtable}{|>{\raggedright\arraybackslash}p{\dimexpr0.22\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|>{\raggedright\arraybackslash}p{\dimexpr0.78\linewidth-2\tabcolsep-2\arrayrulewidth\relax}|}\hline
