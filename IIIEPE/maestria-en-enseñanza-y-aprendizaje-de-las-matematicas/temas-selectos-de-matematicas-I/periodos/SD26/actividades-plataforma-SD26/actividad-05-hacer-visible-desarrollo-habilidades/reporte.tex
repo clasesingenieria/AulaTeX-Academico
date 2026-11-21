@@ -78,7 +78,7 @@
 \begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 5}\setstretch{1.25}\raggedbottom
 
 \section{Hacer visible el desarrollo de las ocho habilidades SEP}
-La Sesión 12 (presentación interactiva de 49 diapositivas) profundiza en cómo operacionalizar las ocho habilidades matemáticas de la SEP mediante \textbf{indicadores de desempeño} (acciones específicas observables) y \textbf{evidencias observables} (producciones concretas que permiten verificarlas), contrastándolas con retos matemáticos breves en clase.
+La Sesión 12 (presentación interactiva de 49 diapositivas) profundiza en cómo operacionalizar las ocho habilidades matemáticas de la SEP \citep{sep1994,iiiepe2026_s12} mediante \textbf{indicadores de desempeño} (acciones específicas observables) y \textbf{evidencias observables} (producciones concretas que permiten verificarlas), contrastándolas con retos matemáticos breves en clase \citep{polya1945,alsina2023}. Además, dicha operacionalización orienta las estrategias de \citet{unadm_tecnicas} hacia desempeños verificables.
 
 {\small\setstretch{1.06}\renewcommand{\arraystretch}{1.18}
 \begin{longtable}{|>{\raggedright\arraybackslash}p{0.13\linewidth}|>{\raggedright\arraybackslash}p{0.25\linewidth}|>{\raggedright\arraybackslash}p{0.31\linewidth}|>{\raggedright\arraybackslash}p{0.27\linewidth}|}\hline
@@ -92,7 +92,7 @@ La Sesión 12 (presentación interactiva de 49 diapositivas) profundiza en cómo
 \textbf{Medir} & Determina y compara magnitudes con instrumentos y unidades pertinentes. & Registra dimensiones medidas y calcula la magnitud derivada con unidad. & Pizarrón escolar ($b=240\text{ cm}$, $h=120\text{ cm}$): $A = 28\,800\text{ cm}^2 = 2.88\text{ m}^2$. \\\hline
 \textbf{Imaginar} & Representa y transforma mentalmente objetos y movimientos espaciales. & Anticipa y dibuja el resultado de la transformación conservando propiedades. & Rotación horaria $90^\circ$ de la ``L'' ($3\times 3$): forma ``$\Gamma$'' con el pivote arriba a la izquierda. \\\hline
 \textbf{Estimar} & Aproxima una medida o resultado mediante referentes conocidos. & Explica el referente razonable utilizado para acotar el valor. & Segmento impreso $\approx 1.3$ palmas ($\approx 11\text{--}12\text{ cm}$) usando ancho de palma/hoja carta. \\\hline
-\textbf{Generalizar} & Identifica regularidades y formula una regla general aplicable a otros casos. & Reconoce el patrón, escribe la regla simbólica y calcula términos nuevos. & Secuencia de cuadrados $1, 4, 9, 16 \implies a_n = n^2$ ($a_{10} = 100$). \\\hline
+\textbf{Generalizar} & Identifica regularidades y formula una regla general aplicable a otros casos. & Reconoce el patrón, escribe la regla simbólica y calcula términos nuevos. & Secuencia de cuadrados $1, 4, 9, 16 \implies a_n = n^2$, verificando que $\sum_{j=1}^n (2j-1)=n^2$ ($a_{10} = 100$). \\\hline
 \textbf{Deducir} & Obtiene y justifica conclusiones lógicas a partir de propiedades conocidas. & Encadena condiciones dadas, propiedades y conclusión lógica justificada. & Triángulo isósceles ($AB=AC$, $\angle A=40^\circ$): $\angle B=\angle C=(180^\circ-40^\circ)/2=70^\circ$. \\\hline
 \end{longtable}}
 
@@ -129,7 +129,7 @@ La Figura~\ref{fig:act5-retos-grid} reproduce mediante esquemas vectoriales la r
     \node[below,font=\tiny\bfseries] at (0.715+4*0.82,0.75) {J};
     \node[above,font=\tiny\bfseries] at (0.715+4*0.82,0.75+10*0.19) {10};
     \draw[dashed,red!70!black,thick] (0.7,0.75+6.8*0.19) -- (5.1,0.75+6.8*0.19);
-    \node[left,red!70!black] at (2.8,2.28) {$\bar{x}=6.8$};
+    \node[fill=iiiepePaper,inner sep=1pt,above,red!70!black] at (1.15,2.45) {$\bar{x}=6.8$};
   \end{scope}
 
   % Panel 3: Comunicar
@@ -252,7 +252,7 @@ Secuencia ABP articulada con la resolución de problemas de la SEP, las fases de
 \begin{enumerate}
   \item \textit{Detonante experimental (Proyectos colaborativos, UnADM \#96 y Heurística de Bruner, UnADM \#69):} Situación real de una excavadora hidráulica construida con jeringas ($d_1 = 1.5\text{ cm}$, $d_2 = 3.0\text{ cm}$, $F_1 = 8\text{ N}$, $\Delta x_1 = 4\text{ cm}$).
   \item \textit{Contraste cognitivo (Autoexplicación, UnADM \#16):} Confrontar las predicciones intuitivas ($k = 2 \Rightarrow 16\text{ N}$) contra el cálculo explícito de áreas circulares para justificar $k = 4 \Rightarrow 32\text{ N}$.
-  \item \textit{Generalización y modelación tecnológica (Simulación interactiva, UnADM \#99 y Estudio intercalado, UnADM \#40):} Contrastar $F_2 = 4 F_1$ frente a $F_2 = 2 F_1$ en GeoGebra Classic, verificar $\Delta x_2 = \Delta x_1/k = 1\text{ cm}$ y resolver el reto extendido a $d_2 = 6.0\text{ cm}$ ($k' = 16$).
+  \item \textit{Generalización y modelación tecnológica (Simulación interactiva, UnADM \#99 y Estudio intercalado, UnADM \#40):} Contrastar $F_2 = 4 F_1$ frente a $F_2 = 2 F_1$ en GeoGebra Classic, verificar la conservación hidrostática de trabajo mecánico $W = F_1\,\Delta x_1 = (8\text{ N})(0.04\text{ m}) = 0.32\text{ J} = F_2\,\Delta x_2$ con $\Delta x_2 = \Delta x_1/k = 1\text{ cm}$ (fluido incompresible sin pérdidas) y resolver el reto extendido a $d_2 = 6.0\text{ cm}$ ($k' = 16$).
 \end{enumerate}
 \end{propuestabox}
 
@@ -263,26 +263,31 @@ Secuencia ABP articulada con la resolución de problemas de la SEP, las fases de
 \end{figure}
 \clearpage
 
-\section{Cumplimiento de la Rúbrica de Evaluación (Actividad 5)}
+\section{Matriz de consistencia curricular y didáctica}
 {\small\setstretch{1.08}\renewcommand{\arraystretch}{1.18}
 \begin{longtable}{|>{\raggedright\arraybackslash}p{0.27\linewidth}|>{\raggedright\arraybackslash}p{0.69\linewidth}|}\hline
-\rowcolor{iiiepePale} \textbf{Criterio de la Rúbrica} & \textbf{Cumplimiento verificado en este documento} \\\hline
+\rowcolor{iiiepePale} \textbf{Criterio de evaluación} & \textbf{Evidencia verificada en este documento} \\\hline
 \endfirsthead\hline
-\rowcolor{iiiepePale} \textbf{Criterio de la Rúbrica} & \textbf{Cumplimiento verificado en este documento} \\\hline
+\rowcolor{iiiepePale} \textbf{Criterio de evaluación} & \textbf{Evidencia verificada en este documento} \\\hline
 \endhead
-Justificación y vinculación curricular & Nivel, grado (Bachillerato CONALEP), contenido, PDA y vínculo con la habilidad \textit{Generalizar} explicados con rigor. \\\hline
+Justificación y vinculación curricular & Nivel, grado (Bachillerato CONALEP), contenido, PDA y vínculo con la habilidad \textit{Generalizar} explicados con rigor \citep{sep1994,iiiepe2026_s12}. \\\hline
 Indicador de desempeño & Enunciado específico, observable y evaluable alineado a $F_2 = k\cdot F_1$ y $\Delta x_2 = \Delta x_1/k$. \\\hline
 Evidencia observable & Tabla, ecuación con $k=(d_2/d_1)^2$, gráfica GeoGebra $(8,32)$ vs $(8,16)$ y respuesta escrita al inciso (d). \\\hline
 Dificultades o errores frecuentes & Identifica el error $d_2/d_1$ vs $(d_2/d_1)^2$ ($16\text{ N}$ vs $32\text{ N}$, $50\,\text{\symbol{37}}$ de subestimación) y explica cómo remediarlo. \\\hline
-Estrategia didáctica & Secuencia ABP, fases de Pólya y técnicas UnADM (\#96, \#69, \#16, \#99, \#40) con representaciones múltiples y GeoGebra. \\\hline
+Estrategia didáctica & Secuencia ABP, fases de \citet{polya1945} y estrategias \citep{unadm_tecnicas} (\#96, \#69, \#16, \#99, \#40) con representaciones múltiples y GeoGebra. \\\hline
 Entrega a tiempo & Documento maestro, versión editable Word y presentación compilados y validados. \\\hline
 \end{longtable}}
 
-\needspace{5\baselineskip}\section*{Referencias}
-{\setstretch{1.15}\setlength{\parskip}{6pt}
-\par\hangindent=1.27cm\hangafter=1 Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León. (2026). \textit{Sesión 12: ¿Cómo hacer visible el desarrollo de habilidades matemáticas? Presentación interactiva (49 diapositivas), Guión 5 y rúbrica}. EVA Posgrados IIIEPE.
-\par\hangindent=1.27cm\hangafter=1 Secretaría de Educación Pública. (1994). \textit{Libro para el maestro. Matemáticas. Educación secundaria}. SEP.
-\par\hangindent=1.27cm\hangafter=1 Universidad Abierta y a Distancia de México. (s.f.). \textit{Cien técnicas didácticas para la enseñanza y el aprendizaje en entornos educativos}. UnADM.
-}
+\clearpage
+\section{Conclusiones y transferencia profesional}
+La operacionalización sistemática de las ocho habilidades matemáticas de la SEP \citep{sep1994} junto con sus indicadores, evidencias y retos resueltos confirma nuestra tesis didáctica central: hacer visible el desarrollo cognitivo en matemáticas exige precisar qué actuación observable verifica cada habilidad en acción \citep{alsina2023}. En términos de análisis propio, se advierte que el tránsito desde el conteo de patrones discretos ($a_n = \sum_{j=1}^n (2j-1) = n^2$) hasta la modelación continua de una prensa hidráulica ($k = (d_2/d_1)^2$) enfrenta un mismo obstáculo conceptual: la tendencia intuitiva a extrapolar relaciones lineales sobre magnitudes cuadráticas bidimensionales.
+
+En consecuencia, el hallazgo fundamental de esta secuencia reside en que el diseño anticipatorio del Guión de la Habilidad (definir primero dificultad probable e indicador antes de redactar la estrategia) orienta la intervención docente hacia el conflicto cognitivo guiado \citep{polya1945}; por tanto, el error $-50\,\text{\symbol{37}}$ ($16\text{ N}$ frente a $32\text{ N}$) se convierte en detonante de aprendizaje reflexivo y no en mera sanción numérica. Además, esta estructura facilita una aplicación directa y verificable en el ejercicio profesional dentro del bachillerato tecnológico y la educación media superior, ampliando su impacto formativo mediante las estrategias activas de \citet{unadm_tecnicas}. Sin embargo, su éxito requiere acompañar cada evidencia experimental con justificación algebraica explícita.
+
+Desde una perspectiva analítica propia, considero que articular indicadores precisos, esquemas visuales por habilidad y comprobación física en laboratorio eleva el rigor evaluativo en el aula, lo cual me lleva a sostener que documentar anticipadamente las dificultades del alumnado transforma la práctica profesional docente.\footnote{En la elaboración de este trabajo se utilizaron herramientas de inteligencia artificial como apoyo para la organización estructural y revisión de estilo del texto, conforme a los lineamientos de integridad y ética académica institucional. El análisis conceptual, la verificación de fuentes primarias y la postura sostenida son de autoría del estudiante.}
+
+\clearpage
+\renewcommand{\refname}{Referencias}
+\bibliography{referencias}
 
 \end{document}

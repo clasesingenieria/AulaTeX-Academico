@@ -78,11 +78,11 @@
 \begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 2}\setstretch{1.25}\raggedbottom
 
 \section{Retos presenciales de equidistancia (regla y compás)}
-La Sesión 9 del Bloque II aborda los lugares geométricos de equidistancia a partir de tres situaciones escolares contextualizadas:
+La Sesión 9 del Bloque II aborda los lugares geométricos de equidistancia a partir de tres situaciones escolares contextualizadas \citep{iiiepe2026_s9,sep2024_fase6}:
 \begin{enumerate}
-  \item \textbf{Reto 1 (¿Dónde colocarías el bebedero?):} Colocar un bebedero equidistante de dos salones puntuales $A$ y $B$. Al buscar un segundo punto y comprobar distancias, el alumnado descubre que existen \textbf{infinitos puntos posibles}, todos situados sobre la \textbf{mediatriz} del segmento $\overline{AB}$ (la recta perpendicular a $\overline{AB}$ por su punto medio). Con regla y compás se traza abriendo el compás más de la mitad de $AB$ y cortando arcos desde $A$ y $B$. \textit{Posibles dudas atendidas:} superar la idea de que solo el punto medio $M$ funciona, elegir abertura $> AB/2$ para asegurar el cruce de arcos y medir distancia directa al punto.
-  \item \textbf{Reto 2 (¿Habrá otro lugar posible entre dos caminos?):} Ubicar un árbol equidistante de dos caminos rectilíneos concurrentes (Camino 1 y Camino 2). Con compás se trazan arcos desde puntos simétricos sobre ambos lados y se determina la \textbf{bisectriz} del ángulo formado por los caminos: todo punto $P$ sobre la bisectriz verifica congruencia de triángulos rectángulos por criterio ALA/hipotenusa-ángulo y mantiene idéntica distancia perpendicular a ambos caminos.
-  \item \textbf{Reto 3 (Equidistancia a tres salones $A$, $B$ y $C$):} Al unir los tres salones no colineales formando $\triangle ABC$, basta construir las mediatrices de dos lados (por ejemplo $\overline{BC}$ y $\overline{AC}$). Si $O$ pertenece a ambas, cumple $OB = OC$ y $OA = OC$, luego por transitividad $OA = OB$, garantizando que $O$ pertenece también a la tercera mediatriz. Este punto único de concurrencia es el \textbf{circuncentro ($O$)}, centro de la circunferencia circunscrita a $\triangle ABC$. \textit{Posibles dudas atendidas:} verificar que dos mediatrices bastan (la tercera es comprobación), distinguir caso colineal (sin solución) y caso obtusángulo ($O$ exterior).
+  \item \textbf{Reto 1 (¿Dónde colocarías el bebedero?):} Colocar un bebedero equidistante de dos salones puntuales $A$ y $B$. Al buscar un segundo punto y comprobar distancias, el alumnado descubre que existen \textbf{infinitos puntos posibles}, caracterizados por la doble implicación $\overline{PA}=\overline{PB} \iff P \in m_{AB}$, donde $m_{AB}$ es la \textbf{mediatriz} del segmento $\overline{AB}$ \citep{euclides_elementos}. La suficiencia sigue por criterio LAL ($\triangle PMA \cong \triangle PMB$) y la necesidad por criterio LLL ($PA=PB$, $MA=MB$, $PM$ común $\implies \angle PMA = \angle PMB = 90^\circ$). \textit{Posibles dudas atendidas:} superar la creencia de que solo el punto medio $M$ funciona, elegir abertura del compás $> AB/2$ y medir distancia directa al punto.
+  \item \textbf{Reto 2 (¿Habrá otro lugar posible entre dos caminos?):} Ubicar un árbol equidistante de dos caminos rectilíneos concurrentes (Camino 1 y Camino 2). Con compás se trazan arcos desde puntos simétricos sobre ambos lados y se determina la \textbf{bisectriz interior} del ángulo formado: dado que la distancia de un punto a una recta se mide perpendicularmente, todo punto $P$ sobre ella satisface $\triangle OHP \cong \triangle OKP$ (criterio AAL/hipotenusa-ángulo) e iguala las distancias perpendiculares ($PH = PK$). Además, conviene distinguir que la bisectriz del ángulo suplementario exterior también cumple equidistancia respecto a las rectas prolongadas y resulta perpendicular a la bisectriz interior.
+  \item \textbf{Reto 3 (Equidistancia a tres salones $A$, $B$ y $C$):} Al unir los tres salones no colineales formando $\triangle ABC$, basta construir las mediatrices de dos lados (por ejemplo $\overline{BC}$ y $\overline{AC}$). Si $O$ pertenece a ambas, cumple $OB = OC$ y $OA = OC$; por tanto, por transitividad $OA = OB$, garantizando que $O$ pertenece también a la tercera mediatriz. Este punto único de concurrencia es el \textbf{circuncentro ($O$)}, centro de la circunferencia circunscrita a $\triangle ABC$. \textit{Posibles dudas atendidas:} verificar que dos mediatrices bastan (la tercera es comprobación), distinguir el caso colineal degenerado (mediatrices paralelas sin solución) y el caso obtusángulo ($O$ exterior).
 \end{enumerate}
 
 \begin{figure}[htbp]
@@ -91,7 +91,7 @@ La Sesión 9 del Bloque II aborda los lugares geométricos de equidistancia a pa
   % Panel 1: Mediatriz (Reto 1)
   \begin{scope}[xshift=0cm]
     \draw[fill=iiiepePaper,draw=iiiepeNavy!50,rounded corners=2pt] (-0.2,-0.5) rectangle (6.2,4.3);
-    \node[font=\scriptsize\bfseries,iiiepeNavy] at (3.0,3.95) {Reto 1: Mediatriz ($PA=PB$)};
+    \node[font=\tiny\bfseries,iiiepeNavy] at (3.0,3.95) {Reto 1: Mediatriz ($PA=PB$)};
     \coordinate (A1) at (0.8,1.2);
     \coordinate (B1) at (5.2,2.6);
     \coordinate (M1) at ($(A1)!0.5!(B1)$);
@@ -111,7 +111,7 @@ La Sesión 9 del Bloque II aborda los lugares geométricos de equidistancia a pa
   % Panel 2: Bisectriz (Reto 2)
   \begin{scope}[xshift=7.1cm]
     \draw[fill=iiiepePaper,draw=iiiepeNavy!50,rounded corners=2pt] (-0.2,-0.5) rectangle (6.2,4.3);
-    \node[font=\scriptsize\bfseries,iiiepeNavy] at (3.0,3.95) {Reto 2: Bisectriz ($PH=PK$)};
+    \node[font=\tiny\bfseries,iiiepeNavy] at (3.0,3.95) {Reto 2: Bisectriz ($PH=PK$)};
     \coordinate (O2) at (0.7,0.65);
     \coordinate (P2t) at ($(O2)+(22:3.8)$);
     \coordinate (H2) at ($(O2)+(0:{3.8*cos(22)})$);
@@ -132,7 +132,7 @@ La Sesión 9 del Bloque II aborda los lugares geométricos de equidistancia a pa
   % Panel 3: Circuncentro (Reto 3)
   \begin{scope}[xshift=14.2cm]
     \draw[fill=iiiepePaper,draw=iiiepeNavy!50,rounded corners=2pt] (-0.2,-0.5) rectangle (6.6,4.3);
-    \node[font=\scriptsize\bfseries,iiiepeNavy] at (3.2,3.95) {Reto 3: Circuncentro ($R$ común)};
+    \node[font=\tiny\bfseries,iiiepeNavy] at (3.2,3.95) {Reto 3: Circuncentro ($R$ común)};
     \coordinate (O3) at (3.2,1.85);
     \coordinate (A3) at ($(O3)+(145:1.45)$);
     \coordinate (B3) at ($(O3)+(20:1.45)$);
@@ -220,15 +220,21 @@ Obtusángulo & En el exterior del triángulo (opuesto al ángulo obtuso). & En e
 \section{Reflexión pedagógica para el aula de secundaria}
 \begin{itemize}
   \item \textbf{Dificultades al construir mediatrices y bisectrices:} Confundir mediatriz con mediana (trazar hacia el vértice opuesto en lugar de perpendicularmente), elegir una abertura del compás menor o igual a $AB/2$ impidiendo el cruce de arcos, y perder precisión en el manejo del compás sobre papel.
-  \item \textbf{Ideas previas necesarias:} Concepto de distancia como menor longitud (perpendicular de punto a recta), punto medio de un segmento, ángulo y congruencia de triángulos rectángulos.
-  \item \textbf{Momento de formalización:} Conviene institucionalizar los nombres \textit{circuncentro} e \textit{incentro} \textbf{después} de la fase de exploración manipulativa y dinámica en GeoGebra (diapositiva 24), cuando los alumnos ya descubrieron la propiedad de equidistancia y necesitan nombrar un significado ya comprendido.
+  \item \textbf{Ideas previas necesarias:} Concepto de distancia como menor longitud (perpendicular de punto a recta), punto medio de un segmento, ángulo y congruencia de triángulos rectángulos \citep{euclides_elementos}.
+  \item \textbf{Momento de formalización:} Conviene institucionalizar los nombres \textit{circuncentro} e \textit{incentro} \textbf{después} de la fase de exploración manipulativa y dinámica en GeoGebra \citep{hohenwarter2009}, cuando los alumnos ya descubrieron la propiedad de equidistancia y necesitan nombrar un significado comprendido \citep{duval2006}.
   \item \textbf{Materiales alternativos:} Doblado de papel (papiroflexia geométrica sobre papel albanene), cuerdas tensadas en el patio, geoplanos circulares y GeoGebra clásico o en dispositivos móviles.
 \end{itemize}
 
-\needspace{5\baselineskip}\section*{Referencias}
-{\setstretch{1.15}\setlength{\parskip}{6pt}
-\par\hangindent=1.27cm\hangafter=1 Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León. (2026). \textit{Sesión 9: El lugar perfecto. Presentación interactiva, Guión 2 y rúbrica de evaluación}. EVA Posgrados IIIEPE.
-\par\hangindent=1.27cm\hangafter=1 Secretaría de Educación Pública. (2024). \textit{Programa de estudio para la educación secundaria: Programa sintético de la Fase 6}. SEP.
-}
+\clearpage
+\section{Conclusiones y transferencia profesional}
+La exploración conjunta de los lugares geométricos con regla, compás y GeoGebra Classic confirma nuestra tesis didáctica medular \citep{iiiepe2026_s9,hohenwarter2009}: el circuncentro $O$ y el incentro $I$ dejan de ser definiciones memorísticas cuando surgen de problemas auténticos de equidistancia respecto a vértices puntuales o a rectas concurrentes. En términos de análisis propio, se advierte que el invariante crítico radica en distinguir qué elemento permanece constante; es decir, mientras $O$ depende del ángulo máximo interior y puede emigrar fuera del triángulo en casos obtusángulos, $I$ permanece siempre interior por definición de distancia perpendicular a los tres lados \citep{duval2006}.
+
+En consecuencia, el hallazgo pedagógico más relevante consiste en diferenciar claramente las condiciones de existencia (caso colineal degenerado frente a triángulos no degenerados) antes de introducir nomenclatura técnica. Sin embargo, para lograr una aplicación efectiva en el ejercicio profesional docente dentro de la educación secundaria \citep{sep2024_fase6}, resulta indispensable exigir demostraciones por congruencia junto al arrastre dinámico en GeoGebra, consolidando así el impacto formativo entre la percepción visual y la prueba lógica. Además, este enfoque metodológico facilita la transferencia a problemas reales de diseño espacial y localización.
+
+Desde una perspectiva analítica propia, considero que secuenciar primero el trazo manual de arcos y posteriormente la verificación dinámica digital fortalece la comprensión estructural de la geometría euclidiana, lo cual me lleva a sostener que la tecnología educativa potencia el razonamiento únicamente cuando acompaña la argumentación deductiva en la práctica profesional.\footnote{En la elaboración de este trabajo se utilizaron herramientas de inteligencia artificial como apoyo para la organización estructural y revisión de estilo del texto, conforme a los lineamientos de integridad y ética académica institucional. El análisis conceptual, la verificación de fuentes primarias y la postura sostenida son de autoría del estudiante.}
+
+\clearpage
+\renewcommand{\refname}{Referencias}
+\bibliography{referencias}
 
 \end{document}
