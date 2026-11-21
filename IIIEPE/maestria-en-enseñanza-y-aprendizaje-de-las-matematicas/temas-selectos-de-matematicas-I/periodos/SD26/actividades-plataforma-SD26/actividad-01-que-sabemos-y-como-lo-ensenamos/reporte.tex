@@ -87,8 +87,7 @@ El aprendizaje de las magnitudes geométricas de perímetro y área requiere sup
 
 \textbf{Exploración tabular (dimensiones enteras positivas):} Dado el perímetro $P = 2(l + a) = 24\text{ m}$, el semiperímetro queda fijo en $l + a = 12\text{ m}$. Tomando $l \ge a \ge 1$ en metros enteros existen exactamente \textbf{6 diseños rectangulares no congruentes} (u 11 pares ordenados $(l,a)$ si se distingue orientación), resumidos en la tabla siguiente:
 
-\needspace{11\baselineskip}
-{\small\setstretch{1.08}\renewcommand{\arraystretch}{1.15}
+{\footnotesize\setstretch{1.05}\renewcommand{\arraystretch}{1.12}
 \noindent\begin{tabularx}{\textwidth}{|c|c|c|c|>{\raggedright\arraybackslash}X|}\hline
 \rowcolor{iiiepePale} \textbf{Largo $l$ (m)} & \textbf{Ancho $a$ (m)} & \textbf{Perímetro $P=2(l+a)$} & \textbf{Área $A=l\cdot a$} & \textbf{Observación geométrica} \\\hline
 $11$ & $1$ & $24\text{ m}$ & $11\text{ m}^2$ & Rectángulo muy alargado (área mínima entera) \\\hline
@@ -164,7 +163,6 @@ Comprobando: $A = 8\text{ m} \times 6\text{ m} = 48\text{ m}^2$ y $P = 2(8 + 6) 
 
 \textbf{Exploración exhaustiva en $\mathbb{Z}^+$:} Sustituyendo $l = 24 - 2a$ para $a \in \{1,\dots,11\}$:
 
-\needspace{17\baselineskip}
 {\footnotesize\setstretch{1.05}\renewcommand{\arraystretch}{1.12}
 \noindent\begin{tabularx}{\textwidth}{|c|c|c|c|>{\raggedright\arraybackslash}X|}\hline
 \rowcolor{iiiepePale} \textbf{Ancho $a$ (m)} & \textbf{Largo $l=24-2a$} & \textbf{Cerca $2a+l$} & \textbf{Área $A=a\cdot l$} & \textbf{Cumple $A\ge 70\text{ m}^2$} \\\hline
@@ -184,7 +182,7 @@ $11$ & $2\text{ m}$ & $24\text{ m}$ & $22\text{ m}^2$ & No ($22 < 70$) \\\hline
 
 \textbf{Demostración algebraica y argumento geométrico de reflexión:} La función cuadrática de superficie es $A(a) = a(24 - 2a) = 24a - 2a^2 = 72 - 2(a - 6)^2 \le 72\text{ m}^2$ (con $A''(a)=-4<0$). Sin embargo, resulta aún más esclarecedor un argumento geométrico de simetría: si reflejamos el rectángulo respecto a la pared existente, se forma un rectángulo completo de dimensiones $(2a)\times l$ cuyo perímetro total de malla duplicado es $2(2a + l) = 48\text{ m}$. Dado que el área máxima de todo rectángulo de perímetro $48\text{ m}$ corresponde al cuadrado de lado $12\text{ m}$ ($144\text{ m}^2$), la mitad original adosada a la pared alcanza su óptimo exactamente cuando $2a = l = 12\text{ m}$, es decir, $a = 6\text{ m}$, $l = 12\text{ m}$ y $A_{\max} = 72\text{ m}^2$. En cambio, el llamado ``jardín imposible'' admite exactamente tres soluciones enteras válidas: $(5\text{ m}\times 14\text{ m})$, $(6\text{ m}\times 12\text{ m})$ y $(7\text{ m}\times 10\text{ m})$.
 
-\begin{figure}[htbp]
+\begin{figure}[!hb]
 \centering
 \begin{minipage}[c]{0.47\linewidth}
   \centering
@@ -227,9 +225,9 @@ $11$ & $2\text{ m}$ & $24\text{ m}$ & $22\text{ m}^2$ & No ($22 < 70$) \\\hline
       \addplot[only marks,mark=*,mark size=2.8pt,iiiepeOrange] coordinates {(6,72)};
       \addplot[only marks,mark=square*,mark size=2.3pt,red!75!black] coordinates {(8,64)};
       \node[above,font=\tiny\bfseries,iiiepeOrange!85!black] at (axis cs:6,74.5) {$(6,72)$ máx.};
-      \node[left,font=\tiny,iiiepeAqua!70!black] at (axis cs:4.85,68.5) {$(5,70)$};
-      \node[right,font=\tiny,iiiepeAqua!70!black] at (axis cs:7.15,68.5) {$(7,70)$};
-      \node[below left,font=\tiny,red!75!black] at (axis cs:8,62) {$(8,64)$ no};
+      \node[below,yshift=-1.5pt,fill=white,inner sep=1pt,font=\tiny,iiiepeAqua!70!black] at (axis cs:5,69.2) {$(5,70)$};
+      \node[below,yshift=-1.5pt,fill=white,inner sep=1pt,font=\tiny,iiiepeAqua!70!black] at (axis cs:7,69.2) {$(7,70)$};
+      \node[right,xshift=2pt,fill=white,inner sep=1pt,font=\tiny,red!75!black] at (axis cs:8,63.5) {$(8,64)$ no};
     \end{axis}
   \end{tikzpicture}
 \end{minipage}
