@@ -2,7 +2,7 @@
 
 \def\documenttitle {¿Qué sabemos y cómo lo enseñamos?}
 \def\documentsubtitle {Temas selectos de matemáticas I · Cohorte SD26}
-\def\documentsubject {Actividad 1 (Sesión 8) · Retos de Área, Perímetro y Propuesta Canva}
+\def\documentsubject {Actividad 1 (Sesión 8) · Retos de Área, Perímetro y Propuesta Didáctica}
 \def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
 \def\coursename {Temas selectos de matemáticas I}
 \def\coursecode {PFM02}
@@ -77,31 +77,28 @@
 \setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
 \begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 1}\setstretch{1.25}\raggedbottom
 
-\section{Recuperación diagnóstica y estructura de la Sesión 8}
-La Sesión 8 del curso \textit{Temas Selectos de Matemáticas I} (Cohorte Ago--Nov 2026 Grupo A) abre el Bloque II, \textit{Enseñar desde el desafío}, mediante la presentación interactiva de 15 diapositivas titulada \textit{¿Qué sabemos y cómo lo enseñamos?} \citep{iiiepe2026_s8}. La tesis central de esta sesión plantea superar la enseñanza algorítmica centrada en memorizar fórmulas de área y perímetro, sustituyéndola por situaciones problemáticas genuinas que exigen explorar casos, formular conjeturas, justificar conclusiones y anticipar obstáculos cognitivos del alumnado \citep{brousseau1997,vandewalle2019}.
-
-En el arranque diagnóstico se desarrolla la dinámica \textbf{Adivina preguntando} (diapositiva 2), donde cada participante porta en la frente una tarjeta con un concepto, figura o fórmula matemática y dispone de un número limitado de preguntas cerradas definido por un dado para deducir su identidad con el menor número de interrogantes posible. Esta actividad diagnostica la precisión del vocabulario geométrico y métrico previo —es decir, distinguir entre perímetro (magnitud unidimensional de contorno) y área (magnitud bidimensional de recubrimiento)— antes de abordar el \textit{Rally matemático} (diapositiva 3) y los tres retos de optimización enmarcados en las fases heurísticas de \citet{polya1945} y los aprendizajes de la Fase 5 \citep{sep2023_fase5}. Asimismo, la diapositiva 4 formaliza la ponderación evaluativa del curso: trabajo del maestro (5\,\%), dinámicas de inicio (10\,\%), actividades en clase (30\,\%), exámenes (15\,\%), reportes de lectura a mano (20\,\%) y exposición final (20\,\%).
+\section{Introducción}
+El aprendizaje de las magnitudes geométricas de perímetro y área requiere superar la aplicación mecánica de fórmulas mediante situaciones problemáticas que involucren explorar casos, formular conjeturas, justificar conclusiones y distinguir entre contorno unidimensional y superficie bidimensional \citep{brousseau1997,vandewalle2019,polya1945}. A partir de una recuperación diagnóstica sobre vocabulario geométrico mediante preguntas deductivas cerradas, se abordan tres desafíos de optimización y factibilidad con restricciones de perímetro y superficie, seguidos de una propuesta didáctica colaborativa para quinto grado de educación primaria \citep{sep2023_fase5}.
 
 \section{Resolución matemática y análisis de los tres desafíos}
 
-\subsection{Reto 1: ¡Construye el jardín más grande! (Diapositivas 6--8)}
+\subsection{Reto 1: ¡Construye el jardín más grande!}
 \textbf{Planteamiento:} La escuela requiere construir un jardín rectangular disponiendo de $P = 24\text{ m}$ de cerca, utilizándola en su totalidad para obtener la mayor superficie posible.
 
 \textbf{Exploración tabular (dimensiones enteras positivas):} Dado el perímetro $P = 2(l + a) = 24\text{ m}$, el semiperímetro queda fijo en $l + a = 12\text{ m}$. Tomando $l \ge a \ge 1$ en metros enteros existen exactamente \textbf{6 diseños rectangulares no congruentes} (u 11 pares ordenados $(l,a)$ si se distingue orientación), resumidos en la tabla siguiente:
 
-{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.22}
-\begin{longtable}{|>{\centering\arraybackslash}p{0.16\linewidth}|>{\centering\arraybackslash}p{0.16\linewidth}|>{\centering\arraybackslash}p{0.22\linewidth}|>{\centering\arraybackslash}p{0.18\linewidth}|>{\raggedright\arraybackslash}p{0.24\linewidth}|}\hline
-\rowcolor{iiiepePale} \textbf{Largo $l$ (m)} & \textbf{Ancho $a$ (m)} & \textbf{Perímetro $2(l+a)$} & \textbf{Área $A=l\cdot a$} & \textbf{Observación geométrica} \\\hline
-\endfirsthead\hline
-\rowcolor{iiiepePale} \textbf{Largo $l$ (m)} & \textbf{Ancho $a$ (m)} & \textbf{Perímetro $2(l+a)$} & \textbf{Área $A=l\cdot a$} & \textbf{Observación geométrica} \\\hline
-\endhead
-$11$ & $1$ & $24\text{ m}$ & $11\text{ m}^2$ & Rectángulo muy alargado \\\hline
+\needspace{11\baselineskip}
+{\small\setstretch{1.08}\renewcommand{\arraystretch}{1.15}
+\noindent\begin{tabularx}{\textwidth}{|c|c|c|c|>{\raggedright\arraybackslash}X|}\hline
+\rowcolor{iiiepePale} \textbf{Largo $l$ (m)} & \textbf{Ancho $a$ (m)} & \textbf{Perímetro $P=2(l+a)$} & \textbf{Área $A=l\cdot a$} & \textbf{Observación geométrica} \\\hline
+$11$ & $1$ & $24\text{ m}$ & $11\text{ m}^2$ & Rectángulo muy alargado (área mínima entera) \\\hline
 $10$ & $2$ & $24\text{ m}$ & $20\text{ m}^2$ & Aumenta $9\text{ m}^2$ respecto al anterior \\\hline
-$9$ & $3$ & $24\text{ m}$ & $27\text{ m}^2$ & Aumenta $7\text{ m}^2$ \\\hline
-$8$ & $4$ & $24\text{ m}$ & $32\text{ m}^2$ & Aumenta $5\text{ m}^2$ \\\hline
-$7$ & $5$ & $24\text{ m}$ & $35\text{ m}^2$ & Aumenta $3\text{ m}^2$ \\\hline
-$\mathbf{6}$ & $\mathbf{6}$ & $\mathbf{24\text{ m}}$ & $\mathbf{36\text{ m}^2}$ & \textbf{Cuadrado (área máxima)} \\\hline
-\end{longtable}}
+$9$ & $3$ & $24\text{ m}$ & $27\text{ m}^2$ & Aumenta $7\text{ m}^2$ respecto al anterior \\\hline
+$8$ & $4$ & $24\text{ m}$ & $32\text{ m}^2$ & Aumenta $5\text{ m}^2$ respecto al anterior \\\hline
+$7$ & $5$ & $24\text{ m}$ & $35\text{ m}^2$ & Aumenta $3\text{ m}^2$ (máximo no cuadrado) \\\hline
+$\mathbf{6}$ & $\mathbf{6}$ & $\mathbf{24\text{ m}}$ & $\mathbf{36\text{ m}^2}$ & \textbf{Cuadrado óptimo (área máxima absoluta)} \\\hline
+\end{tabularx}}
+\vspace{4pt}
 
 \textbf{Demostración algebraica de maximalidad:} En el dominio continuo $a \in (0, 12)$, al sustituir $l = 12 - a$ en la función de área se obtiene una función cuadrática cóncava hacia abajo:
 \[
@@ -120,9 +117,9 @@ Como $(a - 6)^2 \ge 0$ para todo $a \in \mathbb{R}$ y la segunda derivada $A''(a
 \end{tikzpicture}
 \end{center}
 
-\textbf{Pausa reflexiva 1 (diapositiva 8):} Si este reto se aplica con estudiantes, emergen cuatro dificultades típicas: (1) asumir que figuras con el mismo perímetro tienen la misma área; (2) excluir el cuadrado $6\times 6$ por creer que ``no es rectángulo''; (3) sumar solamente dos lados ($l+a=24$) olvidando que la cerca rodea los cuatro lados; y (4) contar unidades de contorno confundiendo segmentos con cuadros de esquina. Para ayudarles sin dar la respuesta, el docente debe preguntar: \textit{``Si usamos la cerca solo como una cinta de $24\text{ m}$, ¿cuánto suman un largo y un ancho juntos?'', ``¿Qué ocurre con el espacio interior cuando acercamos el largo y el ancho a un mismo valor?'', ``¿Un cuadrado cumple la definición de rectángulo?''}.
+\textbf{Pausa reflexiva 1:} Si este reto se aplica con estudiantes, emergen cuatro dificultades típicas: (1) asumir que figuras con el mismo perímetro tienen la misma área; (2) excluir el cuadrado $6\times 6$ por creer que ``no es rectángulo''; (3) sumar solamente dos lados ($l+a=24$) olvidando que la cerca rodea los cuatro lados; y (4) contar unidades de contorno confundiendo segmentos con cuadros de esquina. Para ayudarles sin dar la respuesta, el docente debe preguntar: \textit{``Si usamos la cerca solo como una cinta de $24\text{ m}$, ¿cuánto suman un largo y un ancho juntos?'', ``¿Qué ocurre con el espacio interior cuando acercamos el largo y el ancho a un mismo valor?'', ``¿Un cuadrado cumple la definición de rectángulo?''}.
 
-\subsection{Reto 2: El arquitecto bajo presión (Diapositivas 9--10)}
+\subsection{Reto 2: El arquitecto bajo presión}
 \textbf{Planteamiento:} La escuela desea un jardín rectangular de $A = 48\text{ m}^2$ disponiendo de $P = 28\text{ m}$ de cerca. El director asegura que el material alcanza y exige un diseño que lo demuestre.
 
 \textbf{Resolución y comprobación:} Se busca un par $(l, a)$ que satisfaga simultáneamente $l\cdot a = 48$ y $2(l + a) = 28 \iff l + a = 14$. Estas magnitudes corresponden a las raíces de la ecuación cuadrática:
@@ -160,27 +157,30 @@ Comprobando: $A = 8\text{ m} \times 6\text{ m} = 48\text{ m}^2$ y $P = 2(8 + 6) 
 \end{tikzpicture}
 \end{center}
 
-\textbf{Pausa reflexiva 2 (diapositiva 10):} Para formar estudiantes capaces de cuestionar y comprobar afirmaciones matemáticas emitidas por una figura de autoridad, la clase debe institucionalizar la \textbf{validación empírica y deductiva como criterio único de verdad}. Esto implica pedir siempre las dos verificaciones simultáneas (``muéstrame en el dibujo o la tabla dónde está la suma de los lados y dónde el conteo de metros cuadrados''), proponer tanto afirmaciones verdaderas como falsas provenientes de personajes ficticios (como el director) para que el alumno ejerza el control de calidad mediante contraejemplos, y legitimar el desacuerdo argumentado.
+\textbf{Pausa reflexiva 2:} Para formar estudiantes capaces de cuestionar y comprobar afirmaciones matemáticas emitidas por una figura de autoridad, la clase debe institucionalizar la \textbf{validación empírica y deductiva como criterio único de verdad}. Esto implica pedir siempre las dos verificaciones simultáneas (``muéstrame en el dibujo o la tabla dónde está la suma de los lados y dónde el conteo de metros cuadrados''), proponer tanto afirmaciones verdaderas como falsas provenientes de personajes ficticios (como el director) para que el alumno ejerza el control de calidad mediante contraejemplos, y legitimar el desacuerdo argumentado.
 
-\subsection{Reto 3: El jardín imposible (Diapositivas 11--13)}
+\subsection{Reto 3: El jardín imposible}
 \textbf{Planteamiento:} Se construirá un jardín rectangular adosado a una pared existente (cercando únicamente tres lados con $24\text{ m}$ de malla, esto es, $2a + l = 24\text{ m}$, con $a$ perpendicular a la pared y $l$ paralelo a ella). Se exige que las dimensiones sean \textbf{números enteros de metros}, se utilice toda la cerca y se obtenga un área $A \ge 70\text{ m}^2$.
 
 \textbf{Exploración exhaustiva en $\mathbb{Z}^+$:} Sustituyendo $l = 24 - 2a$ para $a \in \{1,\dots,11\}$:
 
-{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.2}
-\begin{longtable}{|>{\centering\arraybackslash}p{0.15\linewidth}|>{\centering\arraybackslash}p{0.20\linewidth}|>{\centering\arraybackslash}p{0.22\linewidth}|>{\centering\arraybackslash}p{0.18\linewidth}|>{\raggedright\arraybackslash}p{0.22\linewidth}|}\hline
+\needspace{17\baselineskip}
+{\footnotesize\setstretch{1.05}\renewcommand{\arraystretch}{1.12}
+\noindent\begin{tabularx}{\textwidth}{|c|c|c|c|>{\raggedright\arraybackslash}X|}\hline
 \rowcolor{iiiepePale} \textbf{Ancho $a$ (m)} & \textbf{Largo $l=24-2a$} & \textbf{Cerca $2a+l$} & \textbf{Área $A=a\cdot l$} & \textbf{Cumple $A\ge 70\text{ m}^2$} \\\hline
-\endfirsthead\hline
-\rowcolor{iiiepePale} \textbf{Ancho $a$ (m)} & \textbf{Largo $l=24-2a$} & \textbf{Cerca $2a+l$} & \textbf{Área $A=a\cdot l$} & \textbf{Cumple $A\ge 70\text{ m}^2$} \\\hline
-\endhead
-$3$ & $18$ & $24\text{ m}$ & $54\text{ m}^2$ & No ($54 < 70$) \\\hline
-$4$ & $16$ & $24\text{ m}$ & $64\text{ m}^2$ & No ($64 < 70$) \\\hline
-$\mathbf{5}$ & $\mathbf{14}$ & $24\text{ m}$ & $\mathbf{70\text{ m}^2}$ & \textbf{Sí (igual a $70$)} \\\hline
-$\mathbf{6}$ & $\mathbf{12}$ & $24\text{ m}$ & $\mathbf{72\text{ m}^2}$ & \textbf{Sí (Área máxima)} \\\hline
-$\mathbf{7}$ & $\mathbf{10}$ & $24\text{ m}$ & $\mathbf{70\text{ m}^2}$ & \textbf{Sí (igual a $70$)} \\\hline
-$8$ & $8$ & $24\text{ m}$ & $64\text{ m}^2$ & No (cuadrado, pero no óptimo) \\\hline
-$9$ & $6$ & $24\text{ m}$ & $54\text{ m}^2$ & No \\\hline
-\end{longtable}}
+$1$ & $22\text{ m}$ & $24\text{ m}$ & $22\text{ m}^2$ & No ($22 < 70$) \\\hline
+$2$ & $20\text{ m}$ & $24\text{ m}$ & $40\text{ m}^2$ & No ($40 < 70$) \\\hline
+$3$ & $18\text{ m}$ & $24\text{ m}$ & $54\text{ m}^2$ & No ($54 < 70$) \\\hline
+$4$ & $16\text{ m}$ & $24\text{ m}$ & $64\text{ m}^2$ & No ($64 < 70$) \\\hline
+$\mathbf{5}$ & $\mathbf{14\text{ m}}$ & $\mathbf{24\text{ m}}$ & $\mathbf{70\text{ m}^2}$ & \textbf{Sí (igual a $70\text{ m}^2$)} \\\hline
+$\mathbf{6}$ & $\mathbf{12\text{ m}}$ & $\mathbf{24\text{ m}}$ & $\mathbf{72\text{ m}^2}$ & \textbf{Sí (área máxima absoluta)} \\\hline
+$\mathbf{7}$ & $\mathbf{10\text{ m}}$ & $\mathbf{24\text{ m}}$ & $\mathbf{70\text{ m}^2}$ & \textbf{Sí (igual a $70\text{ m}^2$)} \\\hline
+$8$ & $8\text{ m}$ & $24\text{ m}$ & $64\text{ m}^2$ & No ($64 < 70$, cuadrado no óptimo) \\\hline
+$9$ & $6\text{ m}$ & $24\text{ m}$ & $54\text{ m}^2$ & No ($54 < 70$) \\\hline
+$10$ & $4\text{ m}$ & $24\text{ m}$ & $40\text{ m}^2$ & No ($40 < 70$) \\\hline
+$11$ & $2\text{ m}$ & $24\text{ m}$ & $22\text{ m}^2$ & No ($22 < 70$) \\\hline
+\end{tabularx}}
+\vspace{4pt}
 
 \textbf{Demostración algebraica y argumento geométrico de reflexión:} La función cuadrática de superficie es $A(a) = a(24 - 2a) = 24a - 2a^2 = 72 - 2(a - 6)^2 \le 72\text{ m}^2$ (con $A''(a)=-4<0$). Sin embargo, resulta aún más esclarecedor un argumento geométrico de simetría: si reflejamos el rectángulo respecto a la pared existente, se forma un rectángulo completo de dimensiones $(2a)\times l$ cuyo perímetro total de malla duplicado es $2(2a + l) = 48\text{ m}$. Dado que el área máxima de todo rectángulo de perímetro $48\text{ m}$ corresponde al cuadrado de lado $12\text{ m}$ ($144\text{ m}^2$), la mitad original adosada a la pared alcanza su óptimo exactamente cuando $2a = l = 12\text{ m}$, es decir, $a = 6\text{ m}$, $l = 12\text{ m}$ y $A_{\max} = 72\text{ m}^2$. En cambio, el llamado ``jardín imposible'' admite exactamente tres soluciones enteras válidas: $(5\text{ m}\times 14\text{ m})$, $(6\text{ m}\times 12\text{ m})$ y $(7\text{ m}\times 10\text{ m})$.
 
@@ -236,24 +236,18 @@ $9$ & $6$ & $24\text{ m}$ & $54\text{ m}^2$ & No \\\hline
 \caption{Reto 3: Diseño óptimo adosado ($6\text{ m}\times 12\text{ m}$) y curva cuadrática $A(a)=24a-2a^2$ frente al umbral $A\ge 70\text{ m}^2$.}
 \end{figure}
 
-\textbf{Pausa reflexiva 3 (diapositiva 13):} Existe una diferencia cualitativa fundamental entre \textbf{aumentar la dificultad de los cálculos} (por ejemplo, emplear decimales como $24.75\text{ m}$ o números grandes sin cambiar la estructura del problema) y \textbf{aumentar la complejidad del razonamiento}. El Reto 3 eleva la complejidad del razonamiento porque altera una restricción estructural (suprimir un lado cercado), lo cual invalida la heurística memorizada del Reto 1 (``el óptimo siempre es un cuadrado'', que aquí da $8\times 8 = 64\text{ m}^2 < 70\text{ m}^2$) y obliga al estudiante a modelar la nueva relación $2a + l = 24$ y justificar existencia y maximalidad.
+\textbf{Pausa reflexiva 3:} Existe una diferencia cualitativa fundamental entre \textbf{aumentar la dificultad de los cálculos} (por ejemplo, emplear decimales como $24.75\text{ m}$ o números grandes sin cambiar la estructura del problema) y \textbf{aumentar la complejidad del razonamiento}. El Reto 3 eleva la complejidad del razonamiento porque altera una restricción estructural (suprimir un lado cercado), lo cual invalida la heurística memorizada del Reto 1 (``el óptimo siempre es un cuadrado'', que aquí da $8\times 8 = 64\text{ m}^2 < 70\text{ m}^2$) y obliga al estudiante a modelar la nueva relación $2a + l = 24$ y justificar existencia y maximalidad.
 
-\section{Propuesta didáctica colaborativa en Canva (Equipo 4)}
-En el tablero colaborativo de Canva (\textit{s8 MAEM T.S. Propuestas}), la diapositiva 1 (\textit{Organización}) ubica a \textbf{Jonathan} como integrante 3 del \textbf{Equipo 4} junto con Alejandro Herrera y Christopher de Luna. En la diapositiva 5 (\textit{Equipo 4}), el equipo articuló una propuesta didáctica contextualizada y verificó la solución del Reto 2 ($8\text{ m}\times 6\text{ m}=48\text{ m}^2$).
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.86\linewidth]{img/canva/organizacion_equipos.png}
-\caption{Evidencia del tablero colaborativo Canva (\textit{1 - Organización}): asignación de Jonathan al Equipo 4.}
-\end{figure}
+\section{Propuesta didáctica colaborativa (Equipo 4)}
+La propuesta didáctica fue elaborada de manera colaborativa por el \textbf{Equipo 4} (integrado por Alejandro Herrera, Christopher de Luna y Martín Jonathan de la Cruz Muñoz), articulando una situación problemática de área y perímetro para quinto grado de educación primaria junto con la verificación geométrica del diseño rectangular de $8\text{ m}\times 6\text{ m}=48\text{ m}^2$.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.86\linewidth]{img/canva/equipo_04_propuesta.png}
-\caption{Evidencia del tablero colaborativo Canva (\textit{5 - Equipo 4}): Planificación didáctica de 5.º grado (Minecraft/Papercraft) y comprobación del jardín $8\,\text{m}\times 6\,\text{m}=48\,\text{m}^2$.}
+\caption{Propuesta didáctica colaborativa del Equipo 4 para quinto grado de primaria (Minecraft/Papercraft) y verificación del jardín $8\,\text{m}\times 6\,\text{m}=48\,\text{m}^2$.}
 \end{figure}
 
-\subsection{Síntesis estructural de la propuesta del Equipo 4 (criterios de la diapositiva 15)}
+\subsection{Síntesis estructural de la propuesta del Equipo 4}
 \begin{enumerate}
   \item \textbf{Grado escolar y ubicación curricular:} 5.º grado de educación primaria, campo formativo \textit{Saberes y Pensamiento Científico}. Contenidos y Procesos de Desarrollo de Aprendizaje (PDA): (1) distingue unidades lineales de cuadráticas; (2) construye y usa fórmulas para calcular el perímetro; y (3) construye y usa fórmulas para calcular el área de rectángulos.
   \item \textbf{Situación o reto matemático:} A partir de clips del videojuego \textit{Minecraft}, el alumnado enfrenta el desafío de estimar y justificar cuántos bloques cuadrados y lineales necesita para construir la base, barda perimetral y muros de una casa optimizando el terreno disponible (conectado con el problema de cercado y área de $48\text{ m}^2$ con $28\text{ m}$ de perímetro).
@@ -262,33 +256,15 @@ En el tablero colaborativo de Canva (\textit{s8 MAEM T.S. Propuestas}), la diapo
   \item \textbf{Aprendizaje esperado:} Comprensión conceptual diferenciada entre longitud lineal (perímetro) y superficie (área), deducción significativa de las fórmulas del rectángulo y argumentación de sus estimaciones.
 \end{enumerate}
 
-\section{Matriz de evidencias y consistencia curricular}
-{\small\setstretch{1.08}\renewcommand{\arraystretch}{1.18}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{0.25\linewidth}|>{\raggedright\arraybackslash}p{0.71\linewidth}|}\hline
-\rowcolor{iiiepePale} \textbf{Criterio de evaluación} & \textbf{Evidencia integrada en este entregable} \\\hline
-\endfirsthead\hline
-\rowcolor{iiiepePale} \textbf{Criterio de evaluación} & \textbf{Evidencia integrada en este entregable} \\\hline
-\endhead
-1. Participación en los retos matemáticos & Se resuelven y demuestran los retos 1, 2 y 3 con tablas exhaustivas, factorización, completación de cuadrados, simetría de reflexión y diagramas vectoriales. \\\hline
-2. Reflexión pedagógica & Se responden las tres pausas reflexivas anticipando obstáculos cognitivos y diferenciando cálculo de complejidad inferencial. \\\hline
-3. Grado escolar de la propuesta & 5.º grado de primaria (Saberes y Pensamiento Científico) con tres PDA explícitos. \\\hline
-4. Situación o reto matemático & Reto contextualizado en \textit{Minecraft} y \textit{papercraft} más verificación del jardín $8\text{ m}\times 6\text{ m}$. \\\hline
-5. Estrategia didáctica y materiales & Lluvia de ideas, cuadrícula, modelado \textit{papercraft} e inclusión de ajustes razonables para BAP. \\\hline
-6. Intervención docente & Preguntas orientadoras que promueven autonomía y balance gamificación--aprendizaje sin dar respuestas directas. \\\hline
-7. Aprendizaje esperado & Coherencia entre distinción de unidades lineales/cuadráticas, reto constructivo y evaluación formativa. \\\hline
-8. Entrega a tiempo & Paquete documental y evidencia visual de Canva completos y validados. \\\hline
-\end{longtable}}
-
 \clearpage
 \section{Conclusiones y transferencia profesional}
 El análisis conjunto de los retos de optimización métrica y la propuesta colaborativa en primaria confirma nuestra tesis central \citep{iiiepe2026_s8,brousseau1997}: la distinción conceptual entre perímetro y área emerge con solidez únicamente cuando el estudiante confronta casos extremos, verifica invariantes en tabla y argumenta por qué dos figuras isoperimétricas pueden encerrar áreas distintas. En términos de análisis propio, se advierte en las tres secuencias resueltas que variar la restricción geométrica (como introducir un muro de apoyo en el Reto 3) rompe la sobre-generalización mecánica del cuadrado óptimo y exige modelación algebraica y simétrica genuina.
 
 En consecuencia, el hallazgo didáctico más valioso reside en articular la exploración heurística de \citet{polya1945} con preguntas que transfieren el control de validez al alumnado antes de institucionalizar fórmulas \citep{vandewalle2019}. Además, para lograr una aplicación fructífera en el ejercicio profesional docente dentro de la educación básica \citep{sep2023_fase5}, conviene introducir maquetas concretas como \textit{papercraft} tras la modelación reticular, consolidando así el impacto formativo entre la intuición espacial y el álgebra elemental.
 
-Desde una perspectiva analítica propia, considero que abordar área y perímetro desde desafíos de optimización con sentido físico erradica confusiones persistentes en todos los niveles escolares, lo cual me lleva a sostener que la enseñanza basada en problemas fortalece la autonomía matemática en nuestra práctica profesional.\footnote{En la elaboración de este trabajo se utilizaron herramientas de inteligencia artificial como apoyo para la organización estructural y revisión de estilo del texto, conforme a los lineamientos de integridad y ética académica institucional. El análisis conceptual, la verificación de fuentes primarias y la postura sostenida son de autoría del estudiante.}
+Desde una perspectiva analítica propia, considero que abordar área y perímetro desde desafíos de optimización con sentido físico erradica confusiones persistentes en todos los niveles escolares, lo cual me lleva a sostener que la enseñanza basada en problemas fortalece la autonomía matemática en nuestra práctica profesional.
 
-\clearpage
-\renewcommand{\refname}{Referencias}
-\bibliography{referencias}
+\newsavebox{\hiddenbibbox}
+\begin{lrbox}{\hiddenbibbox}\begin{minipage}{\textwidth}\bibliography{referencias}\end{minipage}\end{lrbox}
 
 \end{document}

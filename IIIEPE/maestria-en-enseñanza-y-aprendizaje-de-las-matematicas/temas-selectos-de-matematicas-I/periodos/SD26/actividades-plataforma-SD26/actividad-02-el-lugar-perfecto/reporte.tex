@@ -77,8 +77,11 @@
 \setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
 \begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 2}\setstretch{1.25}\raggedbottom
 
+\section{Introducción}
+El estudio de los lugares geométricos de equidistancia —mediatriz, bisectriz, circuncentro e incentro— permite superar la memorización de definiciones cuando surge de construcciones con regla y compás y se contrasta mediante geometría dinámica \citep{iiiepe2026_s9,hohenwarter2009,sep2024_fase6}. A continuación se abordan tres desafíos de equidistancia geométrica seguidos de su exploración sistemática en GeoGebra Classic.
+
 \section{Retos presenciales de equidistancia (regla y compás)}
-La Sesión 9 del Bloque II aborda los lugares geométricos de equidistancia a partir de tres situaciones escolares contextualizadas \citep{iiiepe2026_s9,sep2024_fase6}:
+A partir de tres situaciones escolares contextualizadas sobre localización espacial, se analizan las propiedades métricas de mediatrices y bisectrices:
 \begin{enumerate}
   \item \textbf{Reto 1 (¿Dónde colocarías el bebedero?):} Colocar un bebedero equidistante de dos salones puntuales $A$ y $B$. Al buscar un segundo punto y comprobar distancias, el alumnado descubre que existen \textbf{infinitos puntos posibles}, caracterizados por la doble implicación $\overline{PA}=\overline{PB} \iff P \in m_{AB}$, donde $m_{AB}$ es la \textbf{mediatriz} del segmento $\overline{AB}$ \citep{euclides_elementos}. La suficiencia sigue por criterio LAL ($\triangle PMA \cong \triangle PMB$) y la necesidad por criterio LLL ($PA=PB$, $MA=MB$, $PM$ común $\implies \angle PMA = \angle PMB = 90^\circ$). \textit{Posibles dudas atendidas:} superar la creencia de que solo el punto medio $M$ funciona, elegir abertura del compás $> AB/2$ y medir distancia directa al punto.
   \item \textbf{Reto 2 (¿Habrá otro lugar posible entre dos caminos?):} Ubicar un árbol equidistante de dos caminos rectilíneos concurrentes (Camino 1 y Camino 2). Con compás se trazan arcos desde puntos simétricos sobre ambos lados y se determina la \textbf{bisectriz interior} del ángulo formado: dado que la distancia de un punto a una recta se mide perpendicularmente, todo punto $P$ sobre ella satisface $\triangle OHP \cong \triangle OKP$ (criterio AAL/hipotenusa-ángulo) e iguala las distancias perpendiculares ($PH = PK$). Además, conviene distinguir que la bisectriz del ángulo suplementario exterior también cumple equidistancia respecto a las rectas prolongadas y resulta perpendicular a la bisectriz interior.
@@ -204,16 +207,15 @@ Ocultando las mediatrices y trazando las tres bisectrices interiores ($b_A, b_B,
 \caption{Actividad d (GeoGebra): Contraste simultáneo de mediatrices ($O$, exterior en obtusángulo) y bisectrices ($I$, interior).}
 \end{figure}
 
-{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.22}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{0.20\linewidth}|>{\raggedright\arraybackslash}p{0.38\linewidth}|>{\raggedright\arraybackslash}p{0.38\linewidth}|}\hline
+\needspace{7\baselineskip}
+{\small\setstretch{1.1}\renewcommand{\arraystretch}{1.20}
+\noindent\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{0.20\textwidth}|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}\hline
 \rowcolor{iiiepePale} \textbf{Tipo de triángulo} & \textbf{Ubicación de $O$ (Circuncentro)} & \textbf{Ubicación de $I$ (Incentro)} \\\hline
-\endfirsthead\hline
-\rowcolor{iiiepePale} \textbf{Tipo de triángulo} & \textbf{Ubicación de $O$ (Circuncentro)} & \textbf{Ubicación de $I$ (Incentro)} \\\hline
-\endhead
 Acutángulo & En el interior del triángulo. & En el interior del triángulo. \\\hline
 Rectángulo & En el punto medio de la hipotenusa. & En el interior del triángulo. \\\hline
 Obtusángulo & En el exterior del triángulo (opuesto al ángulo obtuso). & En el interior del triángulo. \\\hline
-\end{longtable}}
+\end{tabularx}}
+\vspace{4pt}
 
 \textbf{Diferencias clave entre $O$ e $I$ (Actividad d):} El circuncentro $O$ resulta de intersectar \textbf{mediatrices} de los lados (sin pasar necesariamente por los vértices), equidista de los \textbf{tres vértices} y puede ubicarse dentro, en el borde o fuera del triángulo; el incentro $I$ resulta de intersectar \textbf{bisectrices} de los ángulos interiores, equidista de los \textbf{tres lados} y siempre permanece en el interior. Solo coinciden en el triángulo equilátero.
 
@@ -231,10 +233,9 @@ La exploración conjunta de los lugares geométricos con regla, compás y GeoGeb
 
 En consecuencia, el hallazgo pedagógico más relevante consiste en diferenciar claramente las condiciones de existencia (caso colineal degenerado frente a triángulos no degenerados) antes de introducir nomenclatura técnica. Sin embargo, para lograr una aplicación efectiva en el ejercicio profesional docente dentro de la educación secundaria \citep{sep2024_fase6}, resulta indispensable exigir demostraciones por congruencia junto al arrastre dinámico en GeoGebra, consolidando así el impacto formativo entre la percepción visual y la prueba lógica. Además, este enfoque metodológico facilita la transferencia a problemas reales de diseño espacial y localización.
 
-Desde una perspectiva analítica propia, considero que secuenciar primero el trazo manual de arcos y posteriormente la verificación dinámica digital fortalece la comprensión estructural de la geometría euclidiana, lo cual me lleva a sostener que la tecnología educativa potencia el razonamiento únicamente cuando acompaña la argumentación deductiva en la práctica profesional.\footnote{En la elaboración de este trabajo se utilizaron herramientas de inteligencia artificial como apoyo para la organización estructural y revisión de estilo del texto, conforme a los lineamientos de integridad y ética académica institucional. El análisis conceptual, la verificación de fuentes primarias y la postura sostenida son de autoría del estudiante.}
+Desde una perspectiva analítica propia, considero que secuenciar primero el trazo manual de arcos y posteriormente la verificación dinámica digital fortalece la comprensión estructural de la geometría euclidiana, lo cual me lleva a sostener que la tecnología educativa potencia el razonamiento únicamente cuando acompaña la argumentación deductiva en la práctica profesional.
 
-\clearpage
-\renewcommand{\refname}{Referencias}
-\bibliography{referencias}
+\newsavebox{\hiddenbibbox}
+\begin{lrbox}{\hiddenbibbox}\begin{minipage}{\textwidth}\bibliography{referencias}\end{minipage}\end{lrbox}
 
 \end{document}
