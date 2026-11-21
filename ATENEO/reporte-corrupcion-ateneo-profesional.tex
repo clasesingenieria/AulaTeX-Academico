@@ -58,6 +58,10 @@
 \definecolor{ateneo-gray}{HTML}{4A4A4A}      % Gris corporativo (texto)
 \definecolor{ateneo-light}{HTML}{F8F9FA}     % Fondo claro (notas)
 \definecolor{ateneo-bg}{HTML}{FFFFFF}        % Blanco puro (fondo)
+% Colores del objetivo visual
+\definecolor{ateneo-bordo}{HTML}{7B1D44}     % Borgoña líneas y etiquetas
+\definecolor{ateneo-gold}{HTML}{B8860B}      % Dorado fecha
+\definecolor{ateneo-boxbg}{HTML}{F0F0F0}     % Fondo gris recuadro título
 
 % ═══════════════════════════════════════════════════════════════════════════════
 % ESPACIADO Y FORMATO DE PÁRRAFOS (DISEÑO PROFESIONAL)
@@ -194,43 +198,70 @@
 % ───────────────────────────────────────────────────────────────────────────────
 
 \thispagestyle{portada}
-\begin{center}
-  \vspace*{1cm}
-  
-  % Logo institucional
-  \includegraphics[height=2.5cm]{img/image1.png}\\[1.5cm]
-  
-  {\sffamily\bfseries\color{ateneo-primary}INSTITUTO ATENEO DE COLIMA}\\[0.2cm]
-  {\small INCORPORADO A LA UNIVERSIDAD DE COLIMA}\\[2cm]
-  
-  % Línea decorativa sutil
-  {\color{ateneo-light!50}\rule{0.6\textwidth}{0.5pt}}\\[0.5cm]
-  
-  {\Huge\bfseries\color{ateneo-secondary}Corrupción en México durante el sexenio}\\
-  {\Huge\bfseries\color{ateneo-secondary}de Felipe Calderón (2006--2012)}\\[0.8cm]
-  
-  {\large Análisis estructural, financiero y de derechos humanos}\\
-  {\normalsize a partir de los casos Genaro García Luna, Refinería Bicentenario y Guardería ABC}\\[1.5cm]
-  
-  % Línea decorativa sutil
-  {\color{ateneo-light!50}\rule{0.4\textwidth}{0.5pt}}\\[2cm]
-  
-  % Información académica
-  \begin{tabular}{rl}
-    \textbf{Materia:} & \sffamily Metodología de la Investigación \\[0.3cm]
-    \textbf{Alumnos:} & \sffamily Ulysses Emiliano González de la Cruz \\
-                      & \sffamily Ian Alexander Miramonges Vázquez \\[0.3cm]
-    \textbf{Maestra:} & \sffamily María Elena Luna Angulo \\[0.3cm]
-    \textbf{Fecha:} & \sffamily \today
-  \end{tabular}
-  
-  \vfill
-  
-  {\footnotesize Colima, México}
-  
-\end{center}
+\begin{titlepage}
+\centering
+\vspace*{1.8cm}
 
-\clearpage
+% ── FILA DE LOGOS ──────────────────────────────────────────────────────────
+\begin{minipage}[c]{0.35\textwidth}
+  \centering
+  \includegraphics[height=2.6cm]{img/image1.png}
+\end{minipage}
+\hspace{1.5cm}
+\begin{minipage}[c]{0.35\textwidth}
+  \centering
+  \includegraphics[height=2.6cm]{img/image2.png}
+\end{minipage}
+
+\vspace{1.4cm}
+
+% ── LÍNEA BORGOÑA SUPERIOR ─────────────────────────────────────────────────
+{\color{ateneo-bordo}\rule{0.80\textwidth}{0.6pt}}
+
+\vspace{0.5cm}
+
+% ── NOMBRE INSTITUCIONAL ───────────────────────────────────────────────────
+{\sffamily\bfseries\large\color{ateneo-bordo}INSTITUTO ATENEO DE COLIMA}\\[0.25cm]
+{\sffamily\bfseries\large\color{ateneo-bordo}INCORPORADO A LA UNIVERSIDAD DE COLIMA}
+
+\vspace{0.5cm}
+
+% ── LÍNEA BORGOÑA INFERIOR ─────────────────────────────────────────────────
+{\color{ateneo-bordo}\rule{0.80\textwidth}{0.6pt}}
+
+\vspace{0.7cm}
+
+% ── RECUADRO DEL TÍTULO ────────────────────────────────────────────────────
+\fcolorbox{ateneo-bordo}{ateneo-boxbg}{%
+  \parbox{0.76\textwidth}{%
+    \vspace{0.5cm}
+    \centering
+    {\sffamily\bfseries\large\MakeUppercase{Corrupción en México durante el sexenio\\
+    de Felipe Calderón (2006--2012)}}\\[0.4cm]
+    {\itshape\small Análisis estructural, financiero y de derechos humanos a partir de los casos Genaro\\
+    García Luna, Refinería Bicentenario y Guardería ABC}
+    \vspace{0.5cm}
+  }%
+}
+
+\vspace{1.4cm}
+
+% ── DATOS ACADÉMICOS ───────────────────────────────────────────────────────
+{\sffamily\bfseries\color{ateneo-bordo}Materia:}\\[0.15cm]
+{\sffamily\MakeUppercase{Metodología de la Investigación}}\\[0.7cm]
+
+{\sffamily\bfseries\color{ateneo-bordo}Alumnos:}\\[0.15cm]
+{\sffamily Ulysses Emiliano González de la Cruz}\\[0.1cm]
+{\sffamily Ian Alexander Miramonges Vázquez}\\[0.7cm]
+
+{\sffamily\bfseries\color{ateneo-bordo}Maestra:}\\[0.15cm]
+{\sffamily María Elena Luna Angulo}\\[0.9cm]
+
+% ── FECHA ──────────────────────────────────────────────────────────────────
+{\sffamily\bfseries\color{ateneo-gold}Noviembre de 2026}
+
+\vfill
+\end{titlepage}
 
 % ───────────────────────────────────────────────────────────────────────────────
 % DECLARACIÓN METODOLÓGICA

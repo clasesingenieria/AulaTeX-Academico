@@ -1,0 +1,276 @@
+\documentclass[spanish,letterpaper,oneside]{article}
+
+\def\documenttitle {Antología de Evidencias Académicas}
+\def\documentsubtitle {Temas selectos de matemáticas I · Cohorte SD26}
+\def\documentsubject {Bloques I y II · Actividades, Retos Matemáticos y Evaluaciones}
+\def\documentauthor {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\coursename {Temas selectos de matemáticas I}
+\def\coursecode {PFM02}
+
+\def\universityname {Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León}
+\def\universityfaculty {Maestría en Aprendizaje y Enseñanza de las Matemáticas}
+\def\universitydepartment {Temas selectos de matemáticas I}
+\def\universitydepartmentimage {img/iiiepe/marca-iiiepe.png}
+\def\universitydepartmentimagecfg {height=1.75cm}
+\def\universitylocation {Monterrey, Nuevo León}
+\def\studentfullname {Mtro. Martín Jonathan de la Cruz Muñoz}
+\def\studentid {00874}
+\def\studentemail {martin.delacruz@campus.iiiepe.edu.mx}
+\def\programperiod {Ago--Nov 2026 (SD26)}
+\def\programmodality {Modalidad presencial y en línea}
+\def\programshort {MAEM}
+
+\def\authortable {
+  \begin{tabular}{ll}
+    \textbf{Alumno:} & \studentfullname \\
+    Matrícula: & \studentid \\
+    Correo institucional: & \studentemail \\
+    Docente titular: & Mtra. Denis Concepción Escobedo Martínez \\
+    Unidad: & \coursename \\
+    Programa: & \programshort \\
+    Periodo: & \programperiod \\
+    & \\
+    \multicolumn{2}{l}{Fecha de integración: 21 de noviembre de 2026} \\
+    \multicolumn{2}{l}{\universitylocation}
+  \end{tabular}
+}
+
+\input{template}
+\let\div\divisionsymbol
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{amsmath,amssymb,array,tabularx,colortbl,enumitem,tikz,pdfpages}
+\usetikzlibrary{arrows.meta,positioning,calc,babel}
+
+\definecolor{iiiepeNavy}{HTML}{163B5C}
+\definecolor{iiiepeBlue}{HTML}{1F6F9F}
+\definecolor{iiiepeAqua}{HTML}{20B7A8}
+\definecolor{iiiepeOrange}{HTML}{F28C28}
+\definecolor{iiiepePaper}{HTML}{F6F8F7}
+\definecolor{iiiepeInk}{HTML}{1E2A32}
+\definecolor{iiiepePale}{HTML}{EEF5F8}
+\def\portraittitlecolor {iiiepeNavy}
+\setcitestyle{authoryear,open={(},close={)}}
+
+\newcommand{\insertcoverwatermark}{%
+  \AddToShipoutPictureBG*{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[opacity=.09,inner sep=0pt] at (current page.center)
+      {\includegraphics[width=.58\paperwidth]{img/iiiepe/logo-puntos.png}};
+    \end{tikzpicture}%
+  }%
+}
+
+% ==================== MACROS DE PAGINACIÓN NATURAL CONTINUA ====================
+\newcommand{\antologiaBloqueIPortada}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[white] ($(current page.south east)+(-82pt,8pt)$) rectangle ($(current page.south east)+(-44pt,19pt)$);
+    \node[anchor=base east,font=\scriptsize,text=iiiepeInk] at ($(current page.south east)+(-46.8pt,11.1pt)$) {Pág. \thepage};
+  \end{tikzpicture}%
+}
+
+\newcommand{\antologiaReportePage}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[white] ($(current page.north east)+(-100pt,-44pt)$) rectangle ($(current page.north east)+(-69pt,-59.5pt)$);
+    \node[anchor=base east,font=\small,text=black] at ($(current page.north east)+(-72pt,-55.83pt)$) {\thepage};
+    \fill[white] ($(current page.south)+(-18pt,43pt)$) rectangle ($(current page.south)+(18pt,54.5pt)$);
+    \node[anchor=base,font=\scriptsize,text=black] at ($(current page.south)+(0pt,46.65pt)$) {\thepage};
+  \end{tikzpicture}%
+}
+
+\newcommand{\antologiaLandscapePage}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[white] ($(current page.south)+(-18pt,1pt)$) rectangle ($(current page.south)+(18pt,11.5pt)$);
+    \node[anchor=base,font=\scriptsize,text=iiiepeInk] at ($(current page.south)+(0pt,4.0pt)$) {\thepage};
+  \end{tikzpicture}%
+}
+
+\newcommand{\antologiaParcialPage}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[white] ($(current page.south)+(-18pt,8pt)$) rectangle ($(current page.south)+(18pt,19pt)$);
+    \node[anchor=base,font=\scriptsize,text=iiiepeInk] at ($(current page.south)+(0pt,11.1pt)$) {\thepage};
+  \end{tikzpicture}%
+}
+
+\setlength{\parskip}{5pt}\setlength{\parindent}{0pt}
+
+\begin{document}
+
+% ==================== PÁGINA 1: PORTADA CANÓNICA IIIEPE ====================
+\pdfbookmark[1]{Portada · Antología de Evidencias Académicas}{portada}
+\insertcoverwatermark
+\templatePortrait
+
+% === Propósito y organización de esta Antología (comentado en portada) ===
+% Este volumen reúne de forma secuencial la totalidad de las producciones
+% académicas de Temas Selectos de Matemáticas I (PFM02):
+% - Parte I (págs. 3--43): Portafolio del Bloque I (Sesiones 1--5).
+% - Parte II (págs. 44--106): Bloque II Enseñar desde el desafío (Sesiones 8--13),
+%   integrando retos resueltos, evaluación parcial, guion de habilidad y trabajo final.
+
+% ==================== PÁGINA 2: ÍNDICE GENERAL DE LA ANTOLOGÍA ====================
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{2}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}
+\fancyfoot[C]{\scriptsize\thepage}
+\fancyfoot[R]{\scriptsize Antología General}
+\pdfbookmark[1]{Índice General de la Antología}{indice}
+
+\begin{center}
+  {\Large\bfseries\color{iiiepeNavy} Índice General de la Antología}\\[3pt]
+  {\small\color{iiiepeInk} Unidad de Aprendizaje: Temas selectos de matemáticas I (PFM02 · Bloques I y II · SD26)}
+\end{center}
+\vspace{4pt}
+
+{\scriptsize\setstretch{1.08}\renewcommand{\arraystretch}{1.18}
+\noindent\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{0.23\textwidth}|>{\raggedright\arraybackslash}X|>{\centering\arraybackslash}p{0.08\textwidth}|>{\centering\arraybackslash}p{0.09\textwidth}|}
+\hline
+\rowcolor{iiiepeNavy}
+\color{white}\textbf{Sección / Actividad} &
+\color{white}\textbf{Contenido matemático y didáctico} &
+\color{white}\textbf{Ext.} &
+\color{white}\textbf{Págs.} \\\hline
+Preliminares & Portada institucional e Índice General de la Antología & 2 pp. & \textbf{1--2} \\\hline
+\rowcolor{iiiepeAqua!20}
+\multicolumn{4}{|l|}{\textbf{\color{iiiepeNavy} PARTE I · BLOQUE I: PENSAMIENTO ARITMÉTICO, PROPORCIONAL Y ALGEBRAICO (SESIONES 1--5)}} \\\hline
+Portada Bloque I & Presentación e índice específico del Portafolio de Evidencias del Bloque I & 1 p. & 3 \\\hline
+\rowcolor{iiiepePale}
+Bloque I · Actividad 1 & Conversión de fracciones a decimales y viceversa: densidad, algoritmos de conversión y secuencias didácticas & 10 pp. & 4--13 \\\hline
+Bloque I · Actividad 2 & Suma y resta con fracciones: equivalencia, denominador común, recta numérica y problemas contextualizados & 7 pp. & 14--20 \\\hline
+\rowcolor{iiiepePale}
+Bloque I · Actividad 3 & Multiplicación, división y números con signo: modelos geométricos, simétricos, valor absoluto y reglas de signo & 11 pp. & 21--31 \\\hline
+Bloque I · Actividad 4 & Proporcionalidad directa e inversa en un lanzador: análisis tabular, constante $k$ y variación funcional & 6 pp. & 32--37 \\\hline
+\rowcolor{iiiepePale}
+Bloque I · Actividad 5 & Ecuaciones lineales y propiedades de la igualdad: balanza, operaciones inversas y modelación algebraica & 6 pp. & 38--43 \\\hline
+\rowcolor{iiiepeAqua!20}
+\multicolumn{4}{|l|}{\textbf{\color{iiiepeNavy} PARTE II · BLOQUE II: ENSEÑAR DESDE EL DESAFÍO (SESIONES 8--13, RETOS Y EVALUACIÓN PARCIAL)}} \\\hline
+Portadilla Bloque II & Presentación de la segunda parte y síntesis de contenidos de las Sesiones 8 a 13 & 1 p. & \textbf{44} \\\hline
+\rowcolor{iiiepePale}
+Bloque II · Actividad 1 & \textit{¿Qué sabemos y cómo lo enseñamos?} · Retos 1, 2 y 3 (perímetro, área y optimización de $72\text{ m}^2$) y propuesta colaborativa & 10 pp. & 45--54 \\\hline
+Bloque II · Actividad 2 (Retos) & \textit{El lugar perfecto} · Retos de construcción con regla y compás: mediatriz, bisectriz y circuncentro (Sesión 9) & 3 pp. & \textbf{55--57} \\\hline
+\rowcolor{iiiepePale}
+Bloque II · Actividad 2 (Reporte) & \textit{El lugar perfecto} · Demostraciones por congruencia, lugares geométricos y exploración en GeoGebra Classic & 8 pp. & 58--65 \\\hline
+Bloque II · Actividad 3 (Retos) & \textit{Universo 3-60} · Retos sobre suma angular en el triángulo ($180^\circ$), inscripción de polígonos regulares y tabla angular (Sesión 10) & 4 pp. & \textbf{66--69} \\\hline
+\rowcolor{iiiepePale}
+Bloque II · Actividad 3 (Reporte) & \textit{Universo 3-60} · Triangulación de polígonos, demostración por tres casos de Euclides (ángulo inscrito) y GeoGebra & 9 pp. & 70--78 \\\hline
+Evaluación Parcial 1 & \textit{Parcial 1. Sospechoso, muy sospechoso} · Argumentación deductiva, ejemplos y contraejemplos sobre cinco proposiciones & 2 pp. & \textbf{79--80} \\\hline
+\rowcolor{iiiepePale}
+Bloque II · Actividad 4 & \textit{Construyendo aprendizaje a través de habilidades} · Análisis comparativo y convergencia metodológica (SEP y Alsina) & 7 pp. & 81--87 \\\hline
+Bloque II · Actividad 5 (Ficha y Retos) & \textit{¿Cómo hacer visible el desarrollo de habilidades matemáticas?} · Guion de la habilidad (\textit{Generalizar}, pág. 88) y retos por habilidad (pág. 89) & 2 pp. & \textbf{88--89} \\\hline
+\rowcolor{iiiepePale}
+Bloque II · Actividad 5 (Reporte) & \textit{¿Cómo hacer visible el desarrollo de habilidades matemáticas?} · Operacionalización de las ocho habilidades SEP y prensa hidráulica ($32\text{ N}$) & 9 pp. & 90--98 \\\hline
+Bloque II · Actividad 6 (Trabajo Final) & \textit{Una habilidad, un PDA, cinco minutos} · Principio de Pascal ($8\text{ N}\to 32\text{ N}$, $45\,271\text{ Pa}$, $W=0.32\text{ J}$) y secuencia audiovisual & 8 pp. & 99--106 \\\hline
+\end{tabularx}
+}
+
+% ==================== PARTE I: PORTAFOLIO DEL BLOQUE I (PÁGS. 3-43) ====================
+\clearpage
+\includepdf[pages=1,fitpaper=true,pagecommand={\thispagestyle{empty}\pdfbookmark[1]{PARTE I · Bloque I (Sesiones 1--5)}{parte1}\pdfbookmark[2]{Portada Bloque I}{b1_portada}\antologiaBloqueIPortada}]{../portafolio-bloque-I/portada-indice-bloque-I.pdf}
+
+\includepdf[pages=1,fitpaper=true,pagecommand={\thispagestyle{empty}\pdfbookmark[2]{Bloque I · Act. 1: Fracciones y decimales}{b1_act1}}]{../../../../actividades-plataforma/actividad-01-conversion-fracciones-decimales/reporte.pdf}
+\includepdf[pages=2-,fitpaper=true,pagecommand={\thispagestyle{empty}\antologiaReportePage}]{../../../../actividades-plataforma/actividad-01-conversion-fracciones-decimales/reporte.pdf}
+
+\includepdf[pages=1,fitpaper=true,pagecommand={\thispagestyle{empty}\pdfbookmark[2]{Bloque I · Act. 2: Suma y resta de fracciones}{b1_act2}}]{../../../../actividades-plataforma/actividad-02-suma-resta-fracciones/reporte.pdf}
+\includepdf[pages=2-,fitpaper=true,pagecommand={\thispagestyle{empty}\antologiaReportePage}]{../../../../actividades-plataforma/actividad-02-suma-resta-fracciones/reporte.pdf}
+
+\includepdf[pages=1,fitpaper=true,pagecommand={\thispagestyle{empty}\pdfbookmark[2]{Bloque I · Act. 3: Multiplicación, división y signos}{b1_act3}}]{../../../../actividades-plataforma/actividad-03-multiplicacion-division-y-signos/reporte.pdf}
+\includepdf[pages=2-,fitpaper=true,pagecommand={\thispagestyle{empty}\antologiaReportePage}]{../../../../actividades-plataforma/actividad-03-multiplicacion-division-y-signos/reporte.pdf}
+
+\includepdf[pages=1,fitpaper=true,pagecommand={\thispagestyle{empty}\pdfbookmark[2]{Bloque I · Act. 4: Proporcionalidad}{b1_act4}}]{../../../../actividades-plataforma/actividad-04-proporcionalidad/reporte.pdf}
+\includepdf[pages=2-,fitpaper=true,pagecommand={\thispagestyle{empty}\antologiaReportePage}]{../../../../actividades-plataforma/actividad-04-proporcionalidad/reporte.pdf}
+
+\includepdf[pages=1,fitpaper=true,pagecommand={\thispagestyle{empty}\pdfbookmark[2]{Bloque I · Act. 5: Ecuaciones lineales}{b1_act5}}]{../../../../actividades-plataforma/actividad-05-ecuaciones-lineales/reporte.pdf}
+\includepdf[pages=2-,fitpaper=true,pagecommand={\thispagestyle{empty}\antologiaReportePage}]{../../../../actividades-plataforma/actividad-05-ecuaciones-lineales/reporte.pdf}
+
+% ==================== PÁGINA 44: PORTADILLA PARTE II (BLOQUE II) ====================
+\clearpage
+\thispagestyle{fancy}
+\pdfbookmark[1]{PARTE II · Bloque II: Enseñar desde el desafío (Sesiones 8--13)}{parte2}
+\pdfbookmark[2]{Portadilla Bloque II}{b2_sep}
+
+\vspace*{0.1cm}
+\begin{center}
+  \colorbox{iiiepeNavy}{%
+    \parbox{0.92\textwidth}{%
+      \centering\vspace{11pt}
+      {\large\bfseries\color{iiiepeAqua} PARTE II · BLOQUE II}\\[4pt]
+      {\Huge\bfseries\color{white} Enseñar desde el desafío}\\[5pt]
+      {\small\color{iiiepePale} Sesiones 8 a 13 · Reportes Académicos, Retos Matemáticos,\\[2pt] Guion de Habilidad, Evaluación Parcial 1 y Trabajo Final}
+      \vspace{11pt}
+    }%
+  }
+\end{center}
+
+\vspace{0.35cm}
+{\footnotesize\setstretch{1.1}\renewcommand{\arraystretch}{1.15}
+\noindent\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{0.27\textwidth}|>{\raggedright\arraybackslash}X|>{\centering\arraybackslash}p{0.13\textwidth}|}
+\hline
+\rowcolor{iiiepeNavy}
+\color{white}\textbf{Componente en Parte II} &
+\color{white}\textbf{Contenido de la sección} &
+\color{white}\textbf{Páginas} \\\hline
+\rowcolor{iiiepePale}
+Actividad 1 (Sesión 8) & Reporte analítico y Retos 1, 2 y 3 (perímetro, área y optimización $72\text{ m}^2$) & 45--54 \\\hline
+Actividad 2 (Sesión 9) & Retos presenciales de mediatriz, bisectriz y circuncentro (págs. 55--57) + Reporte (págs. 58--65) & 55--65 \\\hline
+\rowcolor{iiiepePale}
+Actividad 3 (Sesión 10) & Retos de ángulo interior ($180^\circ$) y polígonos inscritos (págs. 66--69) + Reporte (págs. 70--78) & 66--78 \\\hline
+Evaluación Parcial 1 & \textit{Parcial 1. Sospechoso, muy sospechoso}: cinco proposiciones con demostración y contraejemplos & 79--80 \\\hline
+\rowcolor{iiiepePale}
+Actividad 4 (Sesión 11) & Reporte \textit{Construyendo aprendizaje a través de habilidades} (SEP y Alsina) & 81--87 \\\hline
+Actividad 5 (Sesión 12) & Guion de la habilidad \textit{Generalizar} (pág. 88) y retos por habilidad (pág. 89) + Reporte (págs. 90--98) & 88--98 \\\hline
+\rowcolor{iiiepePale}
+Actividad 6 (Sesión 13) & Trabajo Final: \textit{Una habilidad, un PDA, cinco minutos} ($32\text{ N}$ y $45\,271\text{ Pa}$) & 99--106 \\\hline
+\end{tabularx}
+}
+
+\vspace{0.32cm}
+\noindent\colorbox{iiiepePale}{%
+  \parbox{\dimexpr\textwidth-2\fboxsep\relax}{%
+    \footnotesize\textbf{Ubicación directa de retos y evaluaciones del Bloque II:}
+    \begin{itemize}\setlength{\itemsep}{1pt}\setlength{\topsep}{2pt}
+      \item \textbf{Págs. 46--49:} Retos de optimización y área rectangular de la Actividad 1.
+      \item \textbf{Págs. 55--57:} Retos de lugares geométricos (mediatriz, bisectriz y circuncentro) de la Actividad 2.
+      \item \textbf{Págs. 66--69:} Retos de suma angular y polígonos inscritos de la Actividad 3.
+      \item \textbf{Págs. 79--80:} Evaluación Parcial 1 resuelta con justificación formal.
+      \item \textbf{Págs. 88--89:} Guion didáctico de habilidad (\textit{Generalizar}) y retos de la Sesión 12.
+    \end{itemize}
+  }%
+}
+
+% ==================== PARTE II: ACTIVIDADES, RETOS Y PARCIAL 1 (PÁGS. 45-106) ====================
+\includepdf[pages=1,fitpaper=true,pagecommand={\thispagestyle{empty}\pdfbookmark[2]{Bloque II · Act. 1: ¿Qué sabemos y cómo lo enseñamos?}{b2_act1}}]{../actividad-01-que-sabemos-y-como-lo-ensenamos/reporte.pdf}
+\includepdf[pages=2-,fitpaper=true,pagecommand={\thispagestyle{empty}\antologiaReportePage}]{../actividad-01-que-sabemos-y-como-lo-ensenamos/reporte.pdf}
+
+\includepdf[pages=1,fitpaper=true,pagecommand={\thispagestyle{empty}\pdfbookmark[2]{Bloque II · Act. 2 (Retos): El lugar perfecto}{b2_act2_retos}\antologiaLandscapePage}]{../actividad-02-el-lugar-perfecto/retos-resueltos.pdf}
+\includepdf[pages=2-,fitpaper=true,pagecommand={\thispagestyle{empty}\antologiaLandscapePage}]{../actividad-02-el-lugar-perfecto/retos-resueltos.pdf}
+
+\includepdf[pages=1,fitpaper=true,pagecommand={\thispagestyle{empty}\pdfbookmark[2]{Bloque II · Act. 2 (Reporte): El lugar perfecto}{b2_act2_rep}}]{../actividad-02-el-lugar-perfecto/reporte.pdf}
+\includepdf[pages=2-,fitpaper=true,pagecommand={\thispagestyle{empty}\antologiaReportePage}]{../actividad-02-el-lugar-perfecto/reporte.pdf}
+
+\includepdf[pages=1,fitpaper=true,pagecommand={\thispagestyle{empty}\pdfbookmark[2]{Bloque II · Act. 3 (Retos): Universo 3-60}{b2_act3_retos}\antologiaLandscapePage}]{../actividad-03-universo-3-60/retos-resueltos.pdf}
+\includepdf[pages=2-,fitpaper=true,pagecommand={\thispagestyle{empty}\antologiaLandscapePage}]{../actividad-03-universo-3-60/retos-resueltos.pdf}
+
+\includepdf[pages=1,fitpaper=true,pagecommand={\thispagestyle{empty}\pdfbookmark[2]{Bloque II · Act. 3 (Reporte): Universo 3-60}{b2_act3_rep}}]{../actividad-03-universo-3-60/reporte.pdf}
+\includepdf[pages=2-,fitpaper=true,pagecommand={\thispagestyle{empty}\antologiaReportePage}]{../actividad-03-universo-3-60/reporte.pdf}
+
+\includepdf[pages=1,fitpaper=true,pagecommand={\thispagestyle{empty}\pdfbookmark[2]{Evaluación Parcial 1: Sospechoso, muy sospechoso}{b2_parcial1}\antologiaParcialPage}]{../actividad-03-universo-3-60/parcial-01-sospechoso.pdf}
+\includepdf[pages=2-,fitpaper=true,pagecommand={\thispagestyle{empty}\antologiaParcialPage}]{../actividad-03-universo-3-60/parcial-01-sospechoso.pdf}
+
+\includepdf[pages=1,fitpaper=true,pagecommand={\thispagestyle{empty}\pdfbookmark[2]{Bloque II · Act. 4: Construyendo aprendizaje a través de habilidades}{b2_act4}}]{../actividad-04-construyendo-aprendizaje-habilidades/reporte.pdf}
+\includepdf[pages=2-,fitpaper=true,pagecommand={\thispagestyle{empty}\antologiaReportePage}]{../actividad-04-construyendo-aprendizaje-habilidades/reporte.pdf}
+
+\includepdf[pages=1,fitpaper=true,pagecommand={\thispagestyle{empty}\pdfbookmark[2]{Bloque II · Act. 5 (Ficha y Retos): Sesión 12}{b2_act5_hojas}\antologiaLandscapePage}]{../actividad-05-hacer-visible-desarrollo-habilidades/hojas-resueltas-habilidad-y-retos.pdf}
+\includepdf[pages=2-,fitpaper=true,pagecommand={\thispagestyle{empty}\antologiaLandscapePage}]{../actividad-05-hacer-visible-desarrollo-habilidades/hojas-resueltas-habilidad-y-retos.pdf}
+
+\includepdf[pages=1,fitpaper=true,pagecommand={\thispagestyle{empty}\pdfbookmark[2]{Bloque II · Act. 5 (Reporte): Hacer visible el desarrollo de habilidades}{b2_act5_rep}}]{../actividad-05-hacer-visible-desarrollo-habilidades/reporte.pdf}
+\includepdf[pages=2-,fitpaper=true,pagecommand={\thispagestyle{empty}\antologiaReportePage}]{../actividad-05-hacer-visible-desarrollo-habilidades/reporte.pdf}
+
+\includepdf[pages=1,fitpaper=true,pagecommand={\thispagestyle{empty}\pdfbookmark[2]{Bloque II · Act. 6 (Trabajo Final): Una habilidad, un PDA, cinco minutos}{b2_act6}}]{../actividad-06-trabajo-final/reporte.pdf}
+\includepdf[pages=2-,fitpaper=true,pagecommand={\thispagestyle{empty}\antologiaReportePage}]{../actividad-06-trabajo-final/reporte.pdf}
+
+\end{document}
