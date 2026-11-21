@@ -251,7 +251,13 @@ Siguiendo el procedimiento de la diapositiva 32 y el Guión 3, se construyó una
   \[
     \angle ACB = \frac{1}{2}\,\angle AOB.
   \]
-  \textbf{Justificación matemática (demostración):} Trazando el diámetro auxiliar que pasa por $C$ y $O$ (cortando a la circunferencia en $D$), los triángulos $\triangle OAC$ y $\triangle OBC$ son isósceles porque $OA = OC = OB = r$. Si $\angle OCA = \alpha$, entonces $\angle OAC = \alpha$ y el ángulo exterior $\angle AOD = 2\alpha$. Análogamente, si $\angle OCB = \beta$, entonces $\angle OBC = \beta$ y $\angle BOD = 2\beta$. Sumando (o restando según la posición de $O$ respecto a los lados del ángulo inscrito), $\angle AOB = 2(\alpha + \beta) = 2\angle ACB$.
+  \textbf{Justificación matemática (demostración exhaustiva por casos de Euclides):} Trazando el diámetro auxiliar $CD$ que pasa por el vértice $C$ y el centro $O$ (cortando a la circunferencia en $D$), los triángulos $\triangle OAC$ y $\triangle OBC$ son isósceles porque $OA = OC = OB = r$. Existen exactamente tres configuraciones geométricas posibles respecto al centro $O$:
+  \begin{itemize}
+    \item \textbf{Caso I ($O$ sobre uno de los lados, por ejemplo $D = B$):} en $\triangle OAC$, $\angle OCA = \angle OAC = \alpha$; por el teorema del ángulo exterior, $\angle AOB = \angle AOD = 2\alpha = 2\angle ACB$.
+    \item \textbf{Caso II ($O$ en el interior del ángulo $\angle ACB$):} el diámetro $CD$ divide al ángulo inscrito en $\angle ACB = \alpha + \beta$, donde $\alpha = \angle ACD = \angle OAC$ y $\beta = \angle BCD = \angle OBC$; por ángulo exterior, $\angle AOD = 2\alpha$ y $\angle BOD = 2\beta$, luego $\angle AOB = \angle AOD + \angle BOD = 2(\alpha + \beta) = 2\angle ACB$.
+    \item \textbf{Caso III ($O$ en el exterior del ángulo $\angle ACB$, con ambos rayos al mismo lado de $CD$ y $\beta = \angle BCD > \alpha = \angle ACD$):} el diámetro auxiliar deja $\angle ACB = \beta - \alpha$; dado que $\angle BOD = 2\beta$ y $\angle AOD = 2\alpha$, resulta $\angle AOB = \angle BOD - \angle AOD = 2(\beta - \alpha) = 2\angle ACB$.
+  \end{itemize}
+  En consecuencia, en las tres configuraciones la razón invariante es $\angle ACB = \frac{1}{2}\,\angle AOB$; es decir, cuando el arco es una semicircunferencia ($\angle AOB = 180^\circ$), todo ángulo inscrito mide $90^\circ$ (teorema de Tales) \citep{euclides_elementos}.
 \end{enumerate}
 
 \begin{figure}[htbp]
@@ -300,14 +306,20 @@ Siguiendo el procedimiento de la diapositiva 32 y el Guión 3, se construyó una
 
 \section{Reflexión pedagógica}
 \begin{itemize}
-  \item \textbf{Habilidades matemáticas desarrolladas:} Al construir polígonos, triangularlos e investigar ángulos en la circunferencia, el estudiante pone en juego la \textbf{visualización espacial}, la \textbf{medición}, la \textbf{inducción y generalización} de patrones numéricos ($(n-2)\cdot 180^\circ$ y $360^\circ/n$), la \textbf{comunicación} simbólica y la \textbf{deducción} mediante pruebas de invariancia.
-  \item \textbf{Ventajas y limitaciones de GeoGebra en el aula:} Entre sus ventajas destacan la retroalimentación inmediata al arrastrar vértices, la posibilidad de verificar docenas de casos en segundos para distinguir propiedades invariantes de rasgos accidentales y la limpieza gráfica. Entre sus limitaciones figuran el riesgo de que el estudiante acepte la medición empírica como si sustituyera a la demostración deductiva, la brecha de equipamiento o conectividad en aulas públicas y la necesidad de mediar con preguntas para evitar el ensayo-error irreflexivo.
+  \item \textbf{Habilidades matemáticas desarrolladas:} Al construir polígonos, triangularlos e investigar ángulos en la circunferencia, el estudiante pone en juego la \textbf{visualización espacial}, la \textbf{medición}, la \textbf{inducción y generalización} de patrones numéricos ($(n-2)\cdot 180^\circ$ y $360^\circ/n$), la \textbf{comunicación} simbólica y la \textbf{deducción} mediante pruebas de invariancia \citep{vandewalle2019,sep2024_fase6}.
+  \item \textbf{Ventajas y limitaciones de GeoGebra en el aula:} Entre sus ventajas destacan la retroalimentación inmediata al arrastrar vértices, la posibilidad de verificar docenas de casos en segundos para distinguir propiedades invariantes de rasgos accidentales y la limpieza gráfica. Sin embargo, entre sus limitaciones figuran el riesgo de que el estudiante acepte la medición empírica como si sustituyera a la demostración deductiva, la brecha de equipamiento o conectividad en aulas públicas y la necesidad de mediar con preguntas para evitar el ensayo-error irreflexivo \citep{duval2006}.
 \end{itemize}
 
-\needspace{5\baselineskip}\section*{Referencias}
-{\setstretch{1.15}\setlength{\parskip}{6pt}
-\par\hangindent=1.27cm\hangafter=1 Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León. (2026). \textit{Sesión 10: Universo 3-60. Presentación interactiva, Guión 3 y rúbrica de evaluación}. EVA Posgrados IIIEPE.
-\par\hangindent=1.27cm\hangafter=1 Secretaría de Educación Pública. (2024). \textit{Programa de estudio para la educación secundaria: Programa sintético de la Fase 6}. SEP.
-}
+\clearpage
+\section{Conclusiones y transferencia profesional}
+La secuencia de exploración geométrica desarrollada en los tres ámbitos del universo $3\text{--}60$ confirma nuestra tesis didáctica medular \citep{iiiepe2026_s10,euclides_elementos}: las fórmulas para la suma de ángulos interiores $(n-2)\cdot 180^\circ$, el ángulo central $360^\circ/n$ y la razón del ángulo inscrito $\angle ACB = \frac{1}{2}\angle AOB$ cobran significado duradero cuando emergen de la triangulación exhaustiva y del contraste entre casos geométricos. En términos de análisis propio, se advierte que el invariante conceptual que unifica estos resultados es la conservación de la suma angular del triángulo y el ángulo llano; es decir, el tránsito desde la comprobación empírica mediante doblado de papel o arrastre dinámico hacia la demostración deductiva por casos convierte un dato aislado en estructura geométrica generalizable \citep{duval2006,vandewalle2019}.
+
+En consecuencia, el hallazgo pedagógico más relevante consiste en articular la manipulación física, la construcción dinámica y la argumentación escrita antes de institucionalizar el simbolismo algebraico. No obstante, para lograr una aplicación efectiva en el ejercicio profesional docente dentro de la educación secundaria \citep{sep2024_fase6}, resulta necesario diseñar actividades donde el alumno contraste polígonos convexos y no convexos y justifique por qué la división desde un vértice agota los tres casos posibles, evitando que acepte mediciones aproximadas como demostraciones. Además, este tratamiento secuencial facilita la transferencia directa hacia problemas de diseño estructural, orientación espacial y análisis de trayectorias circulares.
+
+Desde una perspectiva analítica propia, considero que exigir la justificación deductiva después de la experimentación visual transforma el uso de recursos digitales en un puente genuino hacia el rigor matemático; por ello, esto me lleva a sostener que integrar el trazado geométrico de Euclides con la exploración dinámica fortalece el criterio didáctico en la práctica profesional docente.\footnote{En la elaboración de este trabajo se utilizaron herramientas de inteligencia artificial como apoyo para la organización estructural y revisión de estilo del texto, conforme a los lineamientos de integridad y ética académica institucional. El análisis conceptual, la verificación de fuentes primarias y la postura sostenida son de autoría del estudiante.}
+
+\clearpage
+\renewcommand{\refname}{Referencias}
+\bibliography{referencias}
 
 \end{document}
