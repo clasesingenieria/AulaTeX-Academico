@@ -1,0 +1,99 @@
+% ╔══════════════════════════════════════════════════════════════════════════════╗
+% ║    PLANTILLA BÁSICA - Instituto Ateneo de Colima                                ║
+% ╚══════════════════════════════════════════════════════════════════════════════╝
+
+% ═══════════════════════════════════════════════════════════════════════════════
+% CONFIGURACIÓN DE DOCUMENTO
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\usepackage{geometry}
+\geometry{margin=1in}
+
+% ═══════════════════════════════════════════════════════════════════════════════
+% CONFIGURACIÓN DE ENCABEZADOS Y PIE DE PÁGINA
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=0.8cm]{img/image1.png}}
+\fancyhead[R]{\small\textbf{\documenttitle}}
+\fancyfoot[C]{\thepage}
+
+% ═══════════════════════════════════════════════════════════════════════════════
+% CONFIGURACIÓN DE COLORES INSTITUCIONALES
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\usepackage{xcolor}
+\definecolor{ateneo-purple}{HTML}{A6266C}
+\definecolor{ateneo-blue}{HTML}{2E5090}
+
+% ═══════════════════════════════════════════════════════════════════════════════
+% CONFIGURACIÓN DE TIPOGRAFÍA
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{setspace}
+\onehalfspacing
+
+% ═══════════════════════════════════════════════════════════════════════════════
+% CONFIGURACIÓN DE BIBLIOGRAFÍA
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\usepackage[authoryear,round]{natbib}
+\bibliographystyle{apalike}
+
+% ═══════════════════════════════════════════════════════════════════════════════
+% CONFIGURACIÓN DE TABLA DE CONTENIDOS
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\usepackage{tocbibind}
+\setcounter{tocdepth}{2}
+
+% ═══════════════════════════════════════════════════════════════════════════════
+% CONFIGURACIÓN DE LOGO Y COLORES INSTITUCIONALES
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\newcommand{\ateneologo}{\includegraphics[height=1.5cm]{img/image1.png}}
+
+% ═══════════════════════════════════════════════════════════════════════════════
+% CONFIGURACIÓN DE PORTADA
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\newcommand{\templatePortrait}{
+  \begin{titlepage}
+    \begin{center}
+      \vspace*{2cm}
+      \ateneologo\\[1cm]
+      {\huge\textbf{\documenttitle}}\\[0.5cm]
+      {\Large\documentsubtitle}\\[1cm]
+      {\large\documentsubject}\\[2cm]
+      \authortable\\[2cm]
+      {\large\universitylocation, \today}
+    
+    \end{center}
+  \end{titlepage}
+}
+
+% ═══════════════════════════════════════════════════════════════════════════════
+% CONFIGURACIÓN DE PÁGINAS Y ENCABEZADOS
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\newcommand{\templatePagecfg}{
+  \pagestyle{fancy}
+  \fancyhf{}
+  \fancyhead[L]{\ateneologo}
+  \fancyhead[R]{\small\textbf{\documenttitle}}
+  \fancyfoot[C]{\thepage}
+}
+
+% ═══════════════════════════════════════════════════════════════════════════════
+% CONFIGURACIÓN FINAL
+% ═══════════════════════════════════════════════════════════════════════════════
+
+\newcommand{\templateFinalcfg}{
+  \clearpage
+  \tableofcontents
+  \clearpage
+}

@@ -78,55 +78,68 @@
 \begin{document}\insertcoverwatermark\templatePortrait\templatePagecfg\templateFinalcfg\fancyfoot{}\fancyfoot[L]{\scriptsize IIIEPE · MAEM · SD26}\fancyfoot[C]{\scriptsize\thepage}\fancyfoot[R]{\scriptsize Actividad 6}\setstretch{1.25}\raggedbottom
 
 \section{Síntesis del Trabajo Final y vinculación curricular}
-El Trabajo Final de \textit{Temas Selectos de Matemáticas I} (\texttt{mod/assign/view.php?id=51758}) consiste en producir un \textbf{video didáctico de entre 4 y 5 minutos} retomando la propuesta de la Sesión 12. En esta entrega se desarrolla el tema de \textbf{variación directamente proporcional en sistemas hidráulicos} ($F_2 = k\cdot F_1$), articulando la habilidad matemática SEP \textbf{Generalizar} (en sinergia con \textit{Modelar}) y el Proceso de Desarrollo de Aprendizaje del MCCEMS para Bachillerato Tecnológico CONALEP.
+El Trabajo Final de \textit{Temas Selectos de Matemáticas I} consiste en producir un \textbf{video didáctico de entre 4 y 5 minutos} retomando y profundizando la propuesta de la Sesión 12. En esta entrega se desarrolla el tema de \textbf{variación directamente proporcional en sistemas hidráulicos} ($F_2 = k\cdot F_1$), articulando las ocho habilidades matemáticas de la SEP (\textit{calcular, inferir, comunicar, medir, imaginar, estimar, generalizar y deducir}) con énfasis explícito en \textbf{Generalizar} (en sinergia con \textit{Inferir} y \textit{Comunicar}) y el Proceso de Desarrollo de Aprendizaje (PDA) correspondiente al Bachillerato Tecnológico CONALEP.
 
 \begin{enumerate}
-  \item \textbf{Habilidad matemática SEP:} \textit{Generalizar}: identificar regularidades en tablas y relaciones geométricas para formular una regla algebraica general ($y = kx$) aplicable a nuevas condiciones.
-  \item \textbf{Contenido disciplinar:} Principio de Pascal en prensas y actuadores hidráulicos:
+  \item \textbf{Habilidad matemática SEP:} \textit{Generalizar} (en sinergia con \textit{Inferir} y \textit{Comunicar}): descubrir regularidades en datos experimentales y geométricos para formular la regla algebraica general $y = k x$, interpretando $k$ como ventaja mecánica y extrapolando el modelo a nuevas condiciones.
+  \item \textbf{Contenido disciplinar:} Principio de Pascal y variación proporcional directa en prensas y actuadores hidráulicos:
   \[
     P_1 = P_2 \implies \frac{F_1}{A_1} = \frac{F_2}{A_2} \implies F_2 = \left(\frac{A_2}{A_1}\right) F_1 = \left(\frac{d_2}{d_1}\right)^2 F_1 = k\cdot F_1.
   \]
-  \item \textbf{PDA seleccionado:} Resolver problemas de variación proporcional directa en contextos de física e ingeniería, representando algebraicamente la relación fuerza--área, interpretando $k$ como factor de amplificación y validando con cálculo numérico y gráfica.
+  \item \textbf{PDA SEP:} Articula \textit{Saberes y Pensamiento Científico} con \textit{Pensamiento Matemático}: el estudiante resuelve problemas de variación proporcional directa en contextos de física e ingeniería, representando la relación fuerza--área mediante tablas, expresión algebraica y gráfica lineal en GeoGebra, e interpretando $k$ como factor de amplificación.
 \end{enumerate}
 
-\section{Explicación matemática, dificultad frecuente y reto en GeoGebra}
-Al comparar dos pistones cilíndricos con diámetros $d_1 = 5\text{ cm}$ y $d_2 = 10\text{ cm}$, la razón lineal de diámetros es $d_2/d_1 = 2$, pero el área transversal crece con el cuadrado del diámetro: $k = (d_2/d_1)^2 = 2^2 = 4$. Para una fuerza aplicada $F_1 = 250\text{ N}$, la fuerza de salida resulta $F_2 = 4(250\text{ N}) = 1000\text{ N}$. Asimismo, por conservación del trabajo mecánico ideal ($F_1\Delta x_1 = F_2\Delta x_2$), si el pistón menor recorre $\Delta x_1 = 20\text{ cm}$, el pistón mayor se desplaza $\Delta x_2 = \Delta x_1 / k = 20/4 = 5\text{ cm}$.
+\section{Explicación matemática, dificultad frecuente, estrategia y reto}
+Al comparar dos jeringas o pistones cilíndricos con diámetros $d_1 = 1.5\text{ cm}$ y $d_2 = 3.0\text{ cm}$, la razón lineal de diámetros es $d_2/d_1 = 2$, pero el área transversal circular ($A = \pi d^2/4$) crece con el cuadrado del diámetro:
+\[
+  k = \frac{A_2}{A_1} = \left(\frac{d_2}{d_1}\right)^2 = \left(\frac{3.0}{1.5}\right)^2 = 2^2 = 4.
+\]
+Para el pistón de entrada de área $A_1 = \pi (1.5\text{ cm})^2 / 4 \approx 1.767\text{ cm}^2$ sometido a una fuerza aplicada $F_1 = 8\text{ N}$, la presión confinada resulta $P = F_1/A_1 \approx 4.53\text{ N/cm}^2$, por lo que la fuerza de salida alcanza $F_2 = 4(8\text{ N}) = 32\text{ N}$. Dependiendo del diseño, si $k > 1$ hay amplificación de fuerza, si $k = 1$ la transmisión es directa y si $k < 1$ se reduce fuerza ganando recorrido. Por conservación del volumen de fluido y del trabajo mecánico ideal ($F_1\Delta x_1 = F_2\Delta x_2$), si el émbolo menor recorre $\Delta x_1 = 4\text{ cm}$, el émbolo mayor se desplaza $\Delta x_2 = \Delta x_1 / k = 4/4 = 1\text{ cm}$.
 
-\textbf{Dificultad frecuente del alumnado y remediación:} El error habitual es suponer que duplicar el diámetro duplica la fuerza ($F_2 = 2 F_1 = 500\text{ N}$), subestimando el efecto real en un 50\,\%. En el video y la secuencia ABP se remedia comparando gráficamente ambas rectas en GeoGebra Classic:
+\textbf{Dificultad frecuente del alumnado y remediación:} El error habitual consiste en usar directamente la razón lineal de diámetros ($k = d_2/d_1 = 2$) sin elevar al cuadrado, obteniendo erróneamente $F_2 = 2(8\text{ N}) = 16\text{ N}$ en lugar de $32\text{ N}$, lo que representa una subestimación de $-16\text{ N}$ ($50\,\text{\symbol{37}}$ de error). Para remediar esta confusión, en el video se deriva explícitamente el área circular mostrando cómo $\pi/4$ se cancela en el cociente, se visualiza geométricamente que duplicar el diámetro cuadruplica el área y se contrastan las rectas real ($F_2 = 4F_1$) y errónea ($F_2 = 2F_1$) en GeoGebra Classic:
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.86\linewidth]{img/geogebra/act6_proporcionalidad_hidraulica.png}
-\caption{Modelación automatizada en GeoGebra Classic: recta de variación real $F_2 = 4 F_1$ frente al error lineal frecuente $F_2 = 2 F_1$ en $F_1 = 250\text{ N}$.}
+\includegraphics[width=0.86\linewidth]{img/geogebra/act6_video_32N.png}
+\caption{Modelación en GeoGebra Classic: modelo real $F_2 = 4 F_1$ pasando por $(8\text{ N}, 32\text{ N})$, error lineal $F_2 = 2 F_1$ en $(8\text{ N}, 16\text{ N})$ con subestimación de $-16\text{ N}$ ($-50\,\text{\symbol{37}}$) y extensión cuadrática $F_2 = 16 F_1$ para $d_2 = 6.0\text{ cm}$.}
 \end{figure}
 
-\textbf{Reto matemático planteado en el video:} \textit{``En el brazo hidráulico de una excavadora, el pistón de entrada tiene $d_1 = 5\text{ cm}$ y recibe $F_1 = 250\text{ N}$ con recorrido $\Delta x_1 = 20\text{ cm}$. Si el pistón de salida tiene $d_2 = 10\text{ cm}$, calcula $P$, $F_2$, $\Delta x_2$ y determina qué ocurre con $k$ si se vuelve a duplicar $d_2$ hasta $20\text{ cm}$ ($k = 4^2 = 16$, $F_2 = 4000\text{ N}$)''.}
-
-\textbf{Indicador y evidencia observable:} El alumno escribe $F_2 = k\cdot F_1$ con $k=(d_2/d_1)^2$ correcto y calcula $\Delta x_2$; su desempeño se verifica mediante tabla de valores, gráfica en GeoGebra y respuesta argumentada.
-
-\section{Arquitectura audiovisual y cumplimiento de los 9 criterios de la rúbrica}
-El producto audiovisual fue generado mediante el flujo \textit{StepDeckStudio} (\texttt{video\_studio\_*}) integrando una presentación Beamer 16:9 de 9 marcos (17 beats dosificados con pausa cognitiva activa), narración en español mexicano (\textit{Polly Andres Neural}), subtítulos sincronizados SRT y audio maestro de $48\text{ kHz}$:
+\textbf{Estrategia didáctica para la enseñanza y el aprendizaje:} La secuencia articula la resolución de problemas de la SEP y las fases de Pólya con técnicas de las \textit{Cien Técnicas Didácticas} de la UnADM orientadas al desempeño activo del estudiante:
 \begin{itemize}
-  \item \textbf{Video MP4:} \texttt{video-temas-selectos-matematicas-i-act-06-trabajo-final\_Martin-Jonathan-de-la-Cruz-Munoz.mp4} ($1280\times 720$, $24\text{ fps}$, duración exacta \textbf{4:09 min / 249.08 s}, dentro del intervalo exigido de 4:00 a 5:00 min, \textit{drift} $0.0\text{ ms}$).
-  \item \textbf{Enlace público en Google Drive:} \url{https://drive.google.com/file/d/1a3kK9A5Xd51zEtZfRxqYNq3p14CsCB-w/view?usp=sharing}
-  \item \textbf{Subtítulos y audio:} Archivo \texttt{.srt} sincronizado y audio \texttt{.wav} de respaldo.
+  \item \textbf{Proyectos colaborativos (técnica UnADM \#96) y Heurística de Bruner (técnica UnADM \#69):} Construcción y exploración empírica del brazo hidráulico con dos jeringas ($d_1 = 1.5\text{ cm}$, $d_2 = 3.0\text{ cm}$) conectadas por manguera con fluido, registrando fuerzas y recorridos en tabla experimental.
+  \item \textbf{Autoexplicación (técnica UnADM \#16):} Contrastación argumentada entre la predicción intuitiva lineal ($k = 2 \Rightarrow 16\text{ N}$) y la razón cuadrática del área ($k = 4 \Rightarrow 32\text{ N}$) para verbalizar por qué duplicar el diámetro cuadruplica la fuerza.
+  \item \textbf{Simulación interactiva (técnica UnADM \#99):} Verificación de la pendiente $k$ y la conservación $F_1 \Delta x_1 = F_2 \Delta x_2$ en GeoGebra Classic, observando en tiempo real el efecto de variar $d_2$.
+  \item \textbf{Estudio intercalado (técnica UnADM \#40):} Aplicación graduada en el reto matemático de cuatro incisos combinando cálculo numérico, análisis inverso del desplazamiento y generalización algebraica.
+\end{itemize}
+
+\textbf{Reto matemático planteado en el video:} \textit{``En un brazo excavador construido con jeringas hidráulicas ($d_1 = 1.5\text{ cm}$, $d_2 = 3.0\text{ cm}$, $F_1 = 8\text{ N}$ y recorrido $\Delta x_1 = 4\text{ cm}$), (a) calcula la presión $P$ en el fluido y (b) la fuerza real $F_2$ aplicando Heurística de Bruner (\#69) y Autoexplicación (\#16); (c) determina el desplazamiento $\Delta x_2$ del émbolo receptor; y (d) ejercita la habilidad SEP de Generalizar deduciendo qué sucede con $k$ y la pendiente si el diámetro receptor se duplica hasta $d_2 = 6.0\text{ cm}$ ($k' = (6/1.5)^2 = 16$, $F_2 = 16 F_1 = 128\text{ N}$)''.} El video incluye una pausa cognitiva de $15\text{ s}$ (\texttt{03:40--03:55}) para que el estudiante resuelva los incisos antes de la comprobación paso a paso ($P \approx 4.53\text{ N/cm}^2$, $F_2 = 32\text{ N}$, $\Delta x_2 = 1\text{ cm}$ y $k'=16$).
+
+\textbf{Indicador y evidencia observable:} El alumno formula la ecuación $F_2 = k\cdot F_1$ con $k = (d_2/d_1)^2$ correcto y calcula $\Delta x_2 = \Delta x_1 / k$; su desempeño se constata mediante (1) tabla de valores, (2) gráfica con pendiente en GeoGebra Classic y (3) respuesta escrita argumentada al inciso (d).
+
+\section{Recursos audiovisuales y alineación con los 9 criterios de la rúbrica}
+El producto audiovisual integra diagramación animada de ecuaciones y gráficas de GeoGebra Classic, narración didáctica clara en español, audio maestro de $48\text{ kHz}$ y subtítulos sincronizados en formato externo \texttt{.srt} sin incrustar sobre la imagen, garantizando la lectura limpia de expresiones y gráficas:
+\begin{itemize}
+  \item \textbf{Video MP4 (versión limpia sin subtítulos incrustados):} \texttt{video-alternativo-visual-sin-subtitulos-temas-selectos-matematicas-i-SD26-act-06-trabajo-final\_Martin-Jonathan-de-la-Cruz-Munoz.mp4} ($1280\times 720$, $24\text{ fps}$, duración exacta \textbf{4:46 min / 286.71 s}, dentro del intervalo oficial de 4:00 a 5:00 min).
+  \item \textbf{Enlace público del video en Google Drive:} \url{https://drive.google.com/file/d/1ymyhV10cpDZcRXstzPY6XJKAvsH4Z8TJ/view?usp=sharing}
+  \item \textbf{Enlace público de subtítulos sincronizados (\texttt{.srt}, 33 líneas) en Google Drive:} \url{https://drive.google.com/file/d/1jCVriFoGUnHOuNbjm8x-xL6qCkxLQWcc/view?usp=sharing}
+  \item \textbf{Documentación complementaria:} Guion editable en Word (\texttt{Guion Trabajo Final}), presentación visual 16:10 y reporte técnico alineado a la propuesta de la Sesión 12.
 \end{itemize}
 
 {\small\setstretch{1.06}\renewcommand{\arraystretch}{1.18}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{0.28\linewidth}|>{\centering\arraybackslash}p{0.12\linewidth}|>{\raggedright\arraybackslash}p{0.56\linewidth}|}\hline
-\rowcolor{iiiepePale} \textbf{Criterio de la Rúbrica} & \textbf{Puntaje} & \textbf{Evidencia en el Video y Documentación} \\\hline
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.27\linewidth}|>{\centering\arraybackslash}p{0.16\linewidth}|>{\raggedright\arraybackslash}p{0.53\linewidth}|}\hline
+\rowcolor{iiiepePale} \textbf{Criterio de la Rúbrica} & \textbf{Bloque y tiempo} & \textbf{Evidencia en el Video y Documentación} \\\hline
 \endfirsthead\hline
-\rowcolor{iiiepePale} \textbf{Criterio de la Rúbrica} & \textbf{Puntaje} & \textbf{Evidencia en el Video y Documentación} \\\hline
+\rowcolor{iiiepePale} \textbf{Criterio de la Rúbrica} & \textbf{Bloque y tiempo} & \textbf{Evidencia en el Video y Documentación} \\\hline
 \endhead
-1. Vinculación habilidad, contenido y PDA & $4/4$ & Bloque 1 (0:08--0:58): presenta los tres elementos y su articulación. \\\hline
-2. Explicación matemática & $4/4$ & Bloque 2 (0:58--2:06): derivación del Principio de Pascal y conservación. \\\hline
-3. Dificultades frecuentes & $4/4$ & Bloque 3 (2:06--2:33): contraste $d_2/d_1$ vs $(d_2/d_1)^2$ (50\,\% de error). \\\hline
-4. Estrategia didáctica y recursos & $4/4$ & Bloque 4 (2:33--2:46): ABP con tabla, ecuación y GeoGebra. \\\hline
-5. Reto matemático & $4/4$ & Bloque 5 (2:46--3:44): reto contextualizado de excavadora con pausa activa. \\\hline
-6. Indicador y evidencia observable & $4/4$ & Bloque 6 (3:44--3:55): indicador de cálculo de $k$ y evidencia gráfica/escrita. \\\hline
-7. Creatividad e innovación & $4/4$ & Beamer 16:9 institucional, pausa activa dosificada y GeoGebra. \\\hline
-8. Calidad y organización audiovisual & $4/4$ & Video HD $1280\times 720$, audio $48\text{ kHz}$ y subtítulos SRT sincronizados. \\\hline
-9. Duración y tiempo & $4/4$ & \textbf{4:09 min} ($249.08\text{ s}$), cumpliendo el rango oficial $4:00$--$5:00\text{ min}$. \\\hline
+1. Vinculación habilidad, contenido y PDA & Bloque 1 (0:22--1:14) & Expone las 8 habilidades SEP, centra la habilidad \textit{Generalizar} (con \textit{Inferir} y \textit{Comunicar}), el contenido $F_2=k\cdot F_1$ y el PDA completo. \\\hline
+2. Explicación matemática & Bloque 2 (1:14--2:22) & Derivación del Principio de Pascal, cociente de áreas $(d_2/d_1)^2$, regímenes de $k$ y conservación $\Delta x_2=\Delta x_1/k$. \\\hline
+3. Dificultades frecuentes & Bloque 3 (2:22--2:48) & Contraste numérico y gráfico entre error lineal ($k=2 \Rightarrow 16\text{ N}$) y real ($k=4 \Rightarrow 32\text{ N}$, $-50\,\text{\symbol{37}}$) con cancelación de $\pi/4$. \\\hline
+4. Estrategia didáctica y recursos & Bloque 4 (2:49--3:12) & Articula SEP y Pólya con técnicas UnADM: Proyectos colaborativos (\#96), Heurística de Bruner (\#69), Autoexplicación (\#16) y Simulación en GeoGebra (\#99). \\\hline
+5. Reto matemático & Bloque 5 (3:13--4:20) & Reto de excavadora hidráulica con Estudio intercalado (\#40), pausa activa (3:40--3:55) y comprobación de los 4 incisos hasta $d_2=6\text{ cm}$ ($k'=16$). \\\hline
+6. Indicador y evidencia observable & Bloque 6 (4:20--4:32) & Indicador de formulación algebraica/desplazamiento y evidencia en tabla, gráfica GeoGebra y respuesta escrita del inciso (d). \\\hline
+7. Creatividad e innovación & Todo el video (0:00--4:46) & Esquemas animados en corte hidráulico, pausa cognitiva cronometrada, gráfica comparativa en GeoGebra y prototipo experimental. \\\hline
+8. Calidad y organización audiovisual & Todo el video (0:00--4:46) & Video HD $1280\times 720$ limpio sin texto obstruido, audio maestro $48\text{ kHz}$ y archivo externo \texttt{.srt} sincronizado. \\\hline
+9. Duración y tiempo & Cierre (4:32--4:46) & \textbf{4:46 min} ($286.71\text{ s}$), equilibrio temporal entre los 6 bloques dentro del rango oficial de $4:00$ a $5:00\text{ min}$. \\\hline
 \end{longtable}}
 
 \needspace{5\baselineskip}\section*{Referencias}
@@ -134,6 +147,7 @@ El producto audiovisual fue generado mediante el flujo \textit{StepDeckStudio} (
 \par\hangindent=1.27cm\hangafter=1 Instituto de Investigación, Innovación y Estudios de Posgrado para la Educación del Estado de Nuevo León. (2026). \textit{Actividad 6. Trabajo Final: Una habilidad, un PDA, cinco minutos (Guión y rúbrica oficial)}. EVA Posgrados IIIEPE.
 \par\hangindent=1.27cm\hangafter=1 Secretaría de Educación Pública. (1994). \textit{Libro para el maestro. Matemáticas. Educación secundaria}. SEP.
 \par\hangindent=1.27cm\hangafter=1 Secretaría de Educación Pública. (2023). \textit{Marco Curricular Común de la Educación Media Superior (MCCEMS): Pensamiento Matemático}. SEP.
+\par\hangindent=1.27cm\hangafter=1 Universidad Abierta y a Distancia de México. (s.f.). \textit{Cien técnicas didácticas para la enseñanza y el aprendizaje en entornos educativos}. UnADM.
 }
 
 \end{document}

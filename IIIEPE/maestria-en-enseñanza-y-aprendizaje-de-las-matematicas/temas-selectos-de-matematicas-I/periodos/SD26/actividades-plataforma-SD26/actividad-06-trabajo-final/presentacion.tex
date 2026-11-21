@@ -91,31 +91,45 @@
 \end{frame}
 
 \begin{frame}{Trabajo Final: Una Habilidad, un PDA, Cinco Minutos}
-  \begin{block}{Estructura Curricular (Sesión 12 $\rightarrow$ Sesión 13)}
-    \begin{itemize}
-      \item \textbf{Habilidad SEP:} Generalizar relaciones funcionales en sistemas físicos.
+  \begin{block}{Estructura Curricular (Sesión 12 $\rightarrow$ Sesión 13 · CONALEP)}
+    \begin{itemize}\setlength{\itemsep}{2pt}
+      \item \textbf{Habilidad SEP:} De las 8 habilidades SEP, foco en \textbf{Generalizar} (con \textit{Inferir} y \textit{Comunicar}).
       \item \textbf{Contenido:} Variación proporcional directa $F_2 = k\cdot F_1$ con $k = (d_2/d_1)^2$.
-      \item \textbf{PDA:} Modela e interpreta $k$ en sistemas hidráulicos validando con tabla y gráfica.
+      \item \textbf{PDA:} Resuelve problemas fuerza--área en física e ingeniería con tabla, ecuación y gráfica en GeoGebra.
     \end{itemize}
   \end{block}
-  \vspace{0.15cm}
-  \begin{block}{Producto Audiovisual Generado (StepDeckStudio)}
-    Video de \textbf{4:09 min} ($249.08\text{ s}$, $1280\times 720$, $24\text{ fps}$), voz neural española, subtítulos \texttt{.srt} y cumplimiento \textbf{36/36 pts} en la rúbrica de 9 criterios.\\[3pt]
-    {\footnotesize\textbf{Google Drive:} \url{https://drive.google.com/file/d/1a3kK9A5Xd51zEtZfRxqYNq3p14CsCB-w/view?usp=sharing}}
+  \vspace{0.1cm}
+  \begin{block}{Producto Audiovisual y Enlaces Públicos (Versión Limpia sin Subtítulos Incrustados)}
+    \small Video HD (\textbf{4:46 min} / $286.71\text{ s}$, $1280\times 720$, $24\text{ fps}$, audio $48\text{ kHz}$) y archivo externo \texttt{.srt} (33 líneas):\\[3pt]
+    {\footnotesize\textbf{Video MP4 (Drive):} \url{https://drive.google.com/file/d/1ymyhV10cpDZcRXstzPY6XJKAvsH4Z8TJ/view?usp=sharing}}\\[2pt]
+    {\footnotesize\textbf{Subtítulos SRT (Drive):} \url{https://drive.google.com/file/d/1jCVriFoGUnHOuNbjm8x-xL6qCkxLQWcc/view?usp=sharing}}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Estrategia Didáctica para el Alumno (SEP + Pólya + Técnicas UnADM)}
+  \begin{block}{Integración metodológica: del prototipo físico a la generalización}
+    \begin{itemize}\setlength{\itemsep}{4pt}
+      \item \textbf{Proyectos colaborativos (UnADM \#96) y Heurística de Bruner (UnADM \#69):} Manipulación y experimentación con jeringas hidráulicas ($d_1=1.5\text{ cm}$, $d_2=3.0\text{ cm}$) y tabla de datos.
+      \item \textbf{Autoexplicación (UnADM \#16):} Choque cognitivo para contrastar la intuición lineal ($k=2$) contra el factor cuadrático del área ($k=4$).
+      \item \textbf{Simulación interactiva (UnADM \#99):} Contrastación gráfica de $F_2=4F_1$ frente a $F_2=2F_1$ en GeoGebra Classic.
+      \item \textbf{Estudio intercalado (UnADM \#40):} Reto de cuatro incisos (presión, fuerza real, desplazamiento inverso y generalización a $d_2=6.0\text{ cm}$) con pausa activa (\texttt{03:40--03:55}).
+    \end{itemize}
   \end{block}
 \end{frame}
 
 \begin{frame}{Validación en GeoGebra: Modelo Real vs. Error Frecuente}
   \begin{columns}[T]
-    \column{0.58\textwidth}
-      \includegraphics[width=\linewidth]{img/geogebra/act6_proporcionalidad_hidraulica.png}
-    \column{0.39\textwidth}
-      \begin{block}{Reto de la excavadora}
-        Con $d_1=5\text{ cm}$, $d_2=10\text{ cm}$ y $F_1=250\text{ N}$:
-        \begin{itemize}
-          \item $k = (10/5)^2 = 4 \implies F_2 = 1000\text{ N}$.
-          \item Error lineal ($k=2$): $500\text{ N}$ (-50\,\%).
-          \item Desplazamiento: $\Delta x_2 = 20/4 = 5\text{ cm}$.
+    \column{0.57\textwidth}
+      \includegraphics[width=\linewidth]{img/geogebra/act6_video_32N.png}
+    \column{0.40\textwidth}
+      \begin{block}{Reto de la excavadora (jeringas)}
+        Con $d_1=1.5\text{ cm}$, $d_2=3.0\text{ cm}$, $F_1=8\text{ N}$ y $\Delta x_1=4\text{ cm}$:
+        \begin{itemize}\setlength{\itemsep}{3pt}
+          \item $P \approx 4.53\text{ N/cm}^2$ ($A_1 \approx 1.767\text{ cm}^2$).
+          \item Real ($k=4$): $F_2 = 32\text{ N}$.
+          \item Error ($k=2$): $16\text{ N}$ ($-50\,\text{\symbol{37}}$).
+          \item Desplazamiento: $\Delta x_2 = 4/4 = 1\text{ cm}$.
+          \item Inciso (d) $d_2=6\text{ cm}$: $k'=16$ ($4\times$ pendiente).
         \end{itemize}
       \end{block}
   \end{columns}
