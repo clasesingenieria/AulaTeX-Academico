@@ -40,7 +40,7 @@
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage{amsmath,amssymb,booktabs,array,longtable,pdflscape,tikz,tabularx,colortbl,pgfplots,enumitem,needspace}
 \usepackage[most]{tcolorbox}
-\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,babel}
 \pgfplotsset{compat=1.18}
 
 \definecolor{iiiepeNavy}{HTML}{163B5C}
@@ -82,8 +82,110 @@
 \subsection{Suma de ángulos interiores de un triángulo (Diapositiva 10)}
 Al recortar las tres esquinas (ángulos interiores $\alpha, \beta, \gamma$) de cualquier triángulo y reunir sus vértices sobre un punto común de apoyo, los tres sectores forman invariablemente un \textbf{ángulo llano} ($180^\circ$). Este hallazgo manipulativo coincide con el teorema euclidiano de paralelas: trazando por un vértice la paralela al lado opuesto, los ángulos alternos internos reproducen $\alpha$ y $\beta$ adyacentes a $\gamma$, verificando $\alpha + \beta + \gamma = 180^\circ$.
 
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=0.68,font=\tiny]
+  % Izquierda: justificacion manipulativa (recorte de esquinas = 180)
+  \begin{scope}[xshift=0cm]
+    \draw[fill=iiiepePaper,draw=iiiepeNavy!45,rounded corners=2pt] (-0.3,-0.6) rectangle (9.0,3.3);
+    \node[font=\scriptsize\bfseries,iiiepeNavy] at (4.35,2.98) {Justificación manipulativa (recorte de vértices)};
+    \coordinate (A) at (0.2,0.3); \coordinate (B) at (3.6,0.3); \coordinate (C) at (2.3,2.2);
+    \fill[iiiepePale] (A)--(B)--(C)--cycle;
+    \fill[iiiepeOrange!40] (A) -- ($(A)+(0:0.55)$) arc (0:42:0.55) -- cycle;
+    \fill[iiiepeAqua!45] (B) -- ($(B)+(180:0.55)$) arc (180:124:0.55) -- cycle;
+    \fill[iiiepeBlue!35] (C) -- ($(C)+(222:0.55)$) arc (222:304:0.55) -- cycle;
+    \draw[very thick,iiiepeNavy] (A)--(B)--(C)--cycle;
+    \node at (0.95,0.52) {$\alpha$}; \node at (3.05,0.52) {$\beta$}; \node at (2.25,1.68) {$\gamma$};
+    \draw[-{Latex[length=1.4mm]},thick,iiiepeOrange] (3.95,1.25) -- (4.85,1.25);
+    \begin{scope}[xshift=6.85cm,yshift=0.55cm]
+      \fill[iiiepeOrange!40] (0,0) -- (180:0.95) arc (180:138:0.95) -- cycle;
+      \fill[iiiepeBlue!35] (0,0) -- (138:0.95) arc (138:56:0.95) -- cycle;
+      \fill[iiiepeAqua!45] (0,0) -- (56:0.95) arc (56:0:0.95) -- cycle;
+      \draw[very thick,iiiepeNavy] (-1.55,0) -- (1.55,0);
+      \draw[iiiepeNavy] (0,0)--(138:0.95) (0,0)--(56:0.95) (0:0.95) arc (0:180:0.95);
+      \node at (158:0.62) {$\alpha$}; \node at (96:0.62) {$\gamma$}; \node at (28:0.62) {$\beta$};
+      \node[font=\tiny\bfseries,iiiepeNavy] at (0,-0.38) {$\alpha+\gamma+\beta=180^\circ$};
+    \end{scope}
+  \end{scope}
+
+  % Derecha: demostracion deductiva por paralela l || AB
+  \begin{scope}[xshift=9.6cm]
+    \draw[fill=iiiepePaper,draw=iiiepeNavy!45,rounded corners=2pt] (-0.3,-0.6) rectangle (7.4,3.3);
+    \node[font=\scriptsize\bfseries,iiiepeNavy] at (3.55,2.98) {Demostración deductiva ($\ell \parallel \overline{AB}$)};
+    \coordinate (A2) at (0.6,0.2); \coordinate (B2) at (5.6,0.2); \coordinate (C2) at (3.4,2.2);
+    \fill[iiiepePale] (A2)--(B2)--(C2)--cycle;
+    \fill[iiiepeOrange!40] (A2) -- ($(A2)+(0:0.55)$) arc (0:35.5:0.55) -- cycle;
+    \fill[iiiepeAqua!45] (B2) -- ($(B2)+(180:0.55)$) arc (180:137.7:0.55) -- cycle;
+    \fill[iiiepeOrange!40] (C2) -- ($(C2)+(180:0.55)$) arc (180:215.5:0.55) -- cycle;
+    \fill[iiiepeAqua!45] (C2) -- ($(C2)+(0:0.55)$) arc (0:-42.3:0.55) -- cycle;
+    \draw[very thick,iiiepeNavy] (A2)--(B2)--(C2)--cycle;
+    \draw[very thick,iiiepeOrange] (0.2,2.2) -- (6.2,2.2) node[right,font=\tiny\bfseries] {$\ell\parallel\overline{AB}$};
+    \node at (1.35,0.42) {$\alpha$}; \node at (4.85,0.42) {$\beta$};
+    \node at (3.35,1.72) {$\gamma$};
+    \node[iiiepeOrange!85!black] at (2.55,2.04) {$\alpha'$};
+    \node[iiiepeAqua!70!black] at (4.15,2.04) {$\beta'$};
+    \node[font=\tiny\bfseries,iiiepeNavy] at (3.55,-0.25) {Alternos internos: $\alpha'=\alpha,\ \beta'=\beta$};
+  \end{scope}
+\end{tikzpicture}
+\caption{Reto 1 (Sesión 10): Validación manipulativa del ángulo llano y demostración deductiva por rectas paralelas.}
+\end{figure}
+
 \subsection{Triangulación por diagonales desde un vértice (Diapositiva 14)}
 Trazando las diagonales posibles desde un único vértice en un polígono convexo de $n$ lados se obtienen exactamente $n - 3$ diagonales que particionan el interior en $n - 2$ triángulos disjuntos. Como cada triángulo suma $180^\circ$, la suma de ángulos interiores es $S_{\text{int}}(n) = (n - 2)\cdot 180^\circ$.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=0.68,font=\tiny]
+  % n=4 (1 diagonal, 2 tri)
+  \begin{scope}[xshift=0cm]
+    \foreach \k in {1,...,4} \coordinate (Q\k) at ({90+(\k-1)*90}:1.35);
+    \fill[iiiepePale] (Q1)--(Q2)--(Q3)--cycle;
+    \fill[iiiepeAqua!18] (Q1)--(Q3)--(Q4)--cycle;
+    \draw[thick,iiiepeNavy] (Q1)--(Q2)--(Q3)--(Q4)--cycle;
+    \draw[iiiepeOrange,very thick,dashed] (Q1)--(Q3);
+    \fill[iiiepeOrange] (Q1) circle (2.2pt) node[above] {$V_1$};
+    \node[font=\tiny\bfseries,iiiepeNavy] at (0,-1.75) {$n=4$: $1$ diag., $\mathbf{2}\,\triangle$};
+  \end{scope}
+  % n=5 (2 diagonales, 3 tri)
+  \begin{scope}[xshift=3.8cm]
+    \foreach \k in {1,...,5} \coordinate (P\k) at ({90+(\k-1)*72}:1.35);
+    \fill[iiiepePale] (P1)--(P2)--(P3)--cycle;
+    \fill[iiiepeAqua!18] (P1)--(P3)--(P4)--cycle;
+    \fill[iiiepePale] (P1)--(P4)--(P5)--cycle;
+    \draw[thick,iiiepeNavy] (P1)--(P2)--(P3)--(P4)--(P5)--cycle;
+    \draw[iiiepeOrange,very thick,dashed] (P1)--(P3) (P1)--(P4);
+    \fill[iiiepeOrange] (P1) circle (2.2pt) node[above] {$V_1$};
+    \node[font=\tiny\bfseries,iiiepeNavy] at (0,-1.75) {$n=5$: $2$ diag., $\mathbf{3}\,\triangle$};
+  \end{scope}
+  % n=6 (3 diagonales, 4 tri)
+  \begin{scope}[xshift=7.6cm]
+    \foreach \k in {1,...,6} \coordinate (H\k) at ({90+(\k-1)*60}:1.35);
+    \fill[iiiepePale] (H1)--(H2)--(H3)--cycle;
+    \fill[iiiepeAqua!18] (H1)--(H3)--(H4)--cycle;
+    \fill[iiiepePale] (H1)--(H4)--(H5)--cycle;
+    \fill[iiiepeAqua!18] (H1)--(H5)--(H6)--cycle;
+    \draw[thick,iiiepeNavy] (H1)--(H2)--(H3)--(H4)--(H5)--(H6)--cycle;
+    \draw[iiiepeOrange,very thick,dashed] (H1)--(H3) (H1)--(H4) (H1)--(H5);
+    \fill[iiiepeOrange] (H1) circle (2.2pt) node[above] {$V_1$};
+    \node[font=\tiny\bfseries,iiiepeNavy] at (0,-1.75) {$n=6$: $3$ diag., $\mathbf{4}\,\triangle$};
+  \end{scope}
+  % n=8 (5 diagonales, 6 tri)
+  \begin{scope}[xshift=11.4cm]
+    \foreach \k in {1,...,8} \coordinate (O\k) at ({90+(\k-1)*45}:1.35);
+    \fill[iiiepePale] (O1)--(O2)--(O3)--cycle;
+    \fill[iiiepeAqua!18] (O1)--(O3)--(O4)--cycle;
+    \fill[iiiepePale] (O1)--(O4)--(O5)--cycle;
+    \fill[iiiepeAqua!18] (O1)--(O5)--(O6)--cycle;
+    \fill[iiiepePale] (O1)--(O6)--(O7)--cycle;
+    \fill[iiiepeAqua!18] (O1)--(O7)--(O8)--cycle;
+    \draw[thick,iiiepeNavy] (O1)--(O2)--(O3)--(O4)--(O5)--(O6)--(O7)--(O8)--cycle;
+    \draw[iiiepeOrange,very thick,dashed] (O1)--(O3) (O1)--(O4) (O1)--(O5) (O1)--(O6) (O1)--(O7);
+    \fill[iiiepeOrange] (O1) circle (2.2pt) node[above] {$V_1$};
+    \node[font=\tiny\bfseries,iiiepeNavy] at (0,-1.75) {$n=8$: $5$ diag., $\mathbf{6}\,\triangle$};
+  \end{scope}
+\end{tikzpicture}
+\caption{Triangulación desde un vértice $V_1$: $n-3$ diagonales particionan cualquier polígono convexo en $n-2$ triángulos ($S_{\text{int}}=(n-2)\cdot 180^\circ$).}
+\end{figure}
 
 {\small\setstretch{1.08}\renewcommand{\arraystretch}{1.18}
 \begin{longtable}{|>{\raggedright\arraybackslash}p{0.25\linewidth}|>{\centering\arraybackslash}p{0.20\linewidth}|>{\centering\arraybackslash}p{0.23\linewidth}|>{\centering\arraybackslash}p{0.28\linewidth}|}\hline
@@ -151,6 +253,50 @@ Siguiendo el procedimiento de la diapositiva 32 y el Guión 3, se construyó una
   \]
   \textbf{Justificación matemática (demostración):} Trazando el diámetro auxiliar que pasa por $C$ y $O$ (cortando a la circunferencia en $D$), los triángulos $\triangle OAC$ y $\triangle OBC$ son isósceles porque $OA = OC = OB = r$. Si $\angle OCA = \alpha$, entonces $\angle OAC = \alpha$ y el ángulo exterior $\angle AOD = 2\alpha$. Análogamente, si $\angle OCB = \beta$, entonces $\angle OBC = \beta$ y $\angle BOD = 2\beta$. Sumando (o restando según la posición de $O$ respecto a los lados del ángulo inscrito), $\angle AOB = 2(\alpha + \beta) = 2\angle ACB$.
 \end{enumerate}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=0.85,font=\scriptsize]
+  \coordinate (O) at (0,0);
+  \coordinate (C) at (-115:2.35);
+  \coordinate (D) at (65:2.35);
+  \coordinate (A) at (125:2.35);
+  \coordinate (B) at (25:2.35);
+
+  \draw[very thick,iiiepeNavy] (O) circle (2.35);
+  \fill[iiiepeOrange!25] (O) -- (65:0.85) arc (65:125:0.85) -- cycle;
+  \fill[iiiepeAqua!25] (O) -- (25:0.85) arc (25:65:0.85) -- cycle;
+  \draw[iiiepeOrange,thick] (O) ++(65:0.85) arc (65:125:0.85);
+  \draw[iiiepeAqua!80!black,thick] (O) ++(25:0.85) arc (25:65:0.85);
+
+  \fill[iiiepeOrange!35] (C) -- ($(C)+(65:0.72)$) arc (65:95:0.72) -- cycle;
+  \fill[iiiepeAqua!35] (C) -- ($(C)+(45:0.72)$) arc (45:65:0.72) -- cycle;
+
+  \draw[dashed,iiiepeBlue,thick] (C) -- (D);
+  \draw[very thick,iiiepeOrange] (O) -- (A) (O) -- (B);
+  \draw[very thick,iiiepeNavy] (C) -- (A) (C) -- (B);
+
+  \fill[iiiepeNavy] (O) circle (2.2pt) node[below right] {$O$};
+  \fill[iiiepeNavy] (A) circle (2.2pt) node[above left] {$A$};
+  \fill[iiiepeNavy] (B) circle (2.2pt) node[right] {$B$};
+  \fill[iiiepeNavy] (C) circle (2.2pt) node[below left] {$C$};
+  \fill[iiiepeBlue] (D) circle (2.0pt) node[above right] {$D$};
+
+  \node[font=\tiny\bfseries,iiiepeOrange!85!black] at (96:1.15) {$2\alpha$};
+  \node[font=\tiny\bfseries,iiiepeAqua!70!black] at (45:1.15) {$2\beta$};
+  \node[font=\tiny\bfseries,iiiepeOrange!85!black] at ($(C)+(80:0.95)$) {$\alpha$};
+  \node[font=\tiny\bfseries,iiiepeAqua!70!black] at ($(C)+(54:0.98)$) {$\beta$};
+  \node[font=\tiny\bfseries,iiiepeNavy] at (106:1.95) {$\alpha$};
+  \node[font=\tiny\bfseries,iiiepeNavy] at (36:1.90) {$\beta$};
+  \node[align=left,font=\scriptsize,iiiepeInk,right] at (3.0,0.2)
+    {\textbf{Prueba deductiva:}\\
+     1. $OA=OC=OB=r$ ($\triangle$ isósceles).\\
+     2. $\angle AOD = 2\alpha$ (ángulo exterior $\triangle OAC$).\\
+     3. $\angle BOD = 2\beta$ (ángulo exterior $\triangle OBC$).\\
+     4. $\angle AOB = 2\alpha + 2\beta = 2(\alpha+\beta) = 2\angle ACB$.};
+\end{tikzpicture}
+\caption{Demostración geométrica del teorema del ángulo inscrito ($\angle ACB = \frac{1}{2}\angle AOB$) mediante diámetro auxiliar $\overline{CD}$.}
+\end{figure}
 
 \section{Reflexión pedagógica}
 \begin{itemize}

@@ -94,40 +94,82 @@
 \footnotesize \textbf{Actividad 5 · Solución a los retos}
 \end{tabularx}
 
-\vspace{4pt}
-\renewcommand{\arraystretch}{1.14}
+\vspace{3pt}
+\renewcommand{\arraystretch}{1.08}
 
-\noindent\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash\columncolor{gMid}\color{gInk}}p{0.125\textwidth}|>{\raggedright\arraybackslash}X|}
+\noindent\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash\columncolor{gMid}\color{gInk}}p{0.115\textwidth}|>{\raggedright\arraybackslash}X|}
 \hline
-\rowcolor{gDark} \color{white}\textbf{\small Habilidad} & \multicolumn{1}{c|}{\color{white}\textbf{\small Solución al reto}} \\\hline
+\rowcolor{gDark} \color{white}\textbf{\small Habilidad} & \multicolumn{1}{c|}{\color{white}\textbf{\small Solución al reto (desarrollo analítico y esquema de validación)}} \\\hline
 
 \textbf{Calcular} &
-\small \textbf{Reto:} \textit{Calcular mentalmente el 25\,\% de 360 de dos maneras.} \textbf{Solución:} \textbf{(1) Como cuarta parte:} $25\,\text{\symbol{37}} = \frac{1}{4}$, por tanto $360 \div 4 = 90$. \textbf{(2) Por descomposición $20\,\text{\symbol{37}} + 5\,\text{\symbol{37}}$:} $10\,\text{\symbol{37}}\text{ de }360 = 36 \implies 20\,\text{\symbol{37}} = 72$ y $5\,\text{\symbol{37}} = 18$; luego $72 + 18 = 90$. Resultado verificado: \textbf{90}. \\\hline
+\small
+\begin{minipage}[c]{0.67\linewidth}
+  \textbf{Reto:} \textit{Calcular mentalmente el 25\,\% de 360 de dos maneras.} \textbf{Solución:} \textbf{(1) Cuarta parte:} $25\,\text{\symbol{37}} = \frac{1}{4} \implies 360 \div 4 = 90$. \textbf{(2) Descomposición:} $10\,\text{\symbol{37}}=36 \implies 20\,\text{\symbol{37}}+5\,\text{\symbol{37}} = 72+18 = 90$. Resultado: \textbf{90}.
+\end{minipage}\hfill
+\begin{minipage}[c]{0.31\linewidth}
+  \centering
+  \begin{tikzpicture}[scale=0.35]
+    \fill[gMid!85] (0,0.4) rectangle (2.2,1.3);
+    \fill[gLight] (2.2,0.4) rectangle (8.8,1.3);
+    \draw[thick,gDark] (0,0.4) rectangle (8.8,1.3);
+    \foreach \x in {2.2,4.4,6.6} \draw[gDark] (\x,0.4) -- (\x,1.3);
+    \foreach \x in {1.1,3.3,5.5,7.7} \node[font=\tiny\bfseries] at (\x,0.85) {$90$};
+    \node[above,font=\tiny\bfseries,gDark] at (1.1,1.32) {$25\,\text{\symbol{37}} = \mathbf{90}$};
+    \draw[<->,gBorder] (0,0.12) -- (8.8,0.12) node[midway,below,font=\tiny] {$360\ (100\,\text{\symbol{37}})$};
+  \end{tikzpicture}
+\end{minipage} \\\hline
 
 \textbf{Inferir} &
-\small \textbf{Reto:} \textit{Conclusiones sobre libros leídos en la semana (gráfica: Lun $4$, Mar $7$, Mié $5$, Jue $10$, Vie $8$).} \textbf{Solución:} Total semanal $= 34$ libros; promedio $= 6.8$/día. Inferencias justificadas: (1) el jueves tuvo el pico de lectura ($10$ libros); (2) el lunes fue el día de menor lectura ($4$ libros); (3) hacia el cierre de la semana aumentó la lectura respecto al inicio (el viernes se leyeron $8$ libros, el doble que el lunes). \\\hline
+\small
+\begin{minipage}[c]{0.64\linewidth}
+  \textbf{Reto:} \textit{Conclusiones sobre libros leídos (Lun $4$, Mar $7$, Mié $5$, Jue $10$, Vie $8$).} \textbf{Solución:} Total $= 34$; media $\bar{x} = 6.8$/día. El jueves fue el pico ($10$), el lunes el mínimo ($4$) y el viernes duplicó al lunes ($8$ vs. $4$).
+\end{minipage}\hfill
+\begin{minipage}[c]{0.34\linewidth}
+  \centering
+  \begin{tikzpicture}[xscale=0.52,yscale=0.12]
+    \draw[gBorder] (0.3,0) -- (6.1,0) (0.3,0) -- (0.3,11.2);
+    \foreach \x/\h/\lbl in {1/4/L, 2/7/M, 3/5/Mi, 5/8/V} {
+      \fill[gMid!75,draw=gDark] (\x-0.32,0) rectangle (\x+0.32,\h);
+      \node[below,font=\tiny] at (\x,0) {\lbl};
+      \node[above,font=\tiny] at (\x,\h) {\h};
+    }
+    \fill[gDark!85,draw=gInk] (4-0.32,0) rectangle (4+0.32,10);
+    \node[below,font=\tiny\bfseries] at (4,0) {J};
+    \node[above,font=\tiny\bfseries,gDark] at (4,10) {10};
+    \draw[dashed,red!70!black,thick] (0.3,6.8) -- (6.0,6.8) node[right,font=\tiny\bfseries] {$\bar{x}=6.8$};
+  \end{tikzpicture}
+\end{minipage} \\\hline
 
 \textbf{Medir} &
-\small \textbf{Reto:} \textit{Medir y determinar el área del pizarrón del salón.} \textbf{Solución:} Se miden base y altura con cinta métrica o metro en unidades coherentes ($\text{cm}$ o $\text{m}$). Para un pizarrón escolar estándar con base $b = 240\text{ cm} = 2.40\text{ m}$ y altura $h = 120\text{ cm} = 1.20\text{ m}$, el área es $A = b \times h = 240 \times 120 = 28\,800\text{ cm}^2 = 2.88\text{ m}^2$. \\\hline
+\small
+\begin{minipage}[c]{0.67\linewidth}
+  \textbf{Reto:} \textit{Medir y determinar el área del pizarrón del salón.} \textbf{Solución:} Con cinta métrica en unidades homogéneas ($b = 240\text{ cm} = 2.40\text{ m}$, $h = 120\text{ cm} = 1.20\text{ m}$), resulta $A = b\times h = 28\,800\text{ cm}^2 = \mathbf{2.88\text{ m}^2}$.
+\end{minipage}\hfill
+\begin{minipage}[c]{0.31\linewidth}
+  \centering
+  \begin{tikzpicture}[scale=0.38]
+    \fill[gLight,draw=gDark,very thick] (0,0.4) rectangle (4.8,2.4);
+    \node[font=\tiny\bfseries,gDark] at (2.4,1.4) {$A = 2.88\text{ m}^2$};
+    \draw[<->,gBorder] (0,0.08) -- (4.8,0.08) node[midway,below,font=\tiny] {$b=2.40\text{ m}$};
+    \draw[<->,gBorder] (-0.45,0.4) -- (-0.45,2.4) node[midway,left,font=\tiny] {$1.20\text{ m}$};
+  \end{tikzpicture}
+\end{minipage} \\\hline
 
 \textbf{Imaginar} &
 \small
 \begin{minipage}[c]{0.55\linewidth}
-  \textbf{Reto:} \textit{Anticipar y dibujar cómo queda la figura en «L» tras rotarla $90^\circ$ en sentido horario alrededor del pivote $\bullet$.} \textbf{Solución:} El brazo vertical de $3$ cuadros gira hacia la derecha horizontalmente y el brazo horizontal de $3$ cuadros gira hacia abajo verticalmente; el pivote $\bullet$ queda en la esquina exterior superior izquierda de la «$\Gamma$» resultante.
+  \textbf{Reto:} \textit{Anticipar y dibujar la figura en «L» rotada $90^\circ$ horaria alrededor del pivote $\bullet$.} \textbf{Solución:} El brazo vertical ($3$ u) pasa a horizontal superior y el horizontal pasa a vertical descendente; $\bullet$ queda arriba a la izquierda de «$\Gamma$».
 \end{minipage}\hfill
 \begin{minipage}[c]{0.42\linewidth}
   \centering
-  \begin{tikzpicture}[scale=0.31]
-    % Cuadricula inicial (0..4, 0..4)
+  \begin{tikzpicture}[scale=0.26]
     \draw[step=1,gMid!70,thin] (0,0) grid (5,5);
     \fill[gMid!85] (1,1) rectangle (2,4);
     \fill[gMid!85] (2,1) rectangle (4,2);
     \draw[very thick,gDark] (1,1) -- (1,4) -- (2,4) -- (2,2) -- (4,2) -- (4,1) -- cycle;
     \fill[gInk] (1,1) circle (0.18);
     \node[font=\tiny\bfseries,above] at (2.5,5.0) {Inicial};
-    % Flecha rotacion
-    \draw[-{Stealth[length=1.4mm]},thick,gDark] (5.4,2.7) to[bend left=25] node[above,font=\tiny\bfseries] {$90^\circ$ hor.} (7.1,2.7);
-    % Cuadricula resultante shifted +7.5
+    \draw[-{Stealth[length=1.4mm]},thick,gDark] (5.3,2.7) to[bend left=25] node[above,font=\tiny\bfseries] {$90^\circ$ hor.} (7.2,2.7);
     \begin{scope}[xshift=7.5cm]
       \draw[step=1,gMid!70,thin] (0,0) grid (5,5);
       \fill[gMid!85] (1,2) rectangle (4,3);
@@ -140,32 +182,79 @@
 \end{minipage} \\\hline
 
 \textbf{Estimar} &
-\small \textbf{Reto:} \textit{Estimar sin regla la longitud del segmento impreso y explicar el referente.} \textbf{Solución:} Tomando referentes conocidos (ancho del dedo índice $\approx 1.5\text{ cm}$, palma de mano $\approx 8.5\text{ cm}$ o mitad del ancho de hoja carta $21.6/2 = 10.8\text{ cm}$), el segmento abarca aprox. $1.3$ palmas ($\approx 11\text{--}12\text{ cm}$), acotando el valor razonablemente antes de medir. \\\hline
+\small
+\begin{minipage}[c]{0.64\linewidth}
+  \textbf{Reto:} \textit{Estimar sin regla la longitud del segmento impreso y justificar el referente.} \textbf{Solución:} Tomando la palma ($\approx 8.5\text{ cm}$) y el ancho de dos dedos ($\approx 3.0\text{ cm}$), se acota en $\approx \mathbf{11\text{--}12\text{ cm}}$ ($1.3\text{ palmas}$, aprox. mitad vertical carta).
+\end{minipage}\hfill
+\begin{minipage}[c]{0.34\linewidth}
+  \centering
+  \begin{tikzpicture}[scale=0.42]
+    \draw[ultra thick,gDark] (0,0.9) -- (6.5,0.9);
+    \fill[gDark] (0,0.9) circle (2.2pt) (6.5,0.9) circle (2.2pt);
+    \draw[gMid!95,thick,<->] (0,0.35) -- (4.8,0.35) node[midway,below,font=\tiny] {1 palma ($\approx 8.5\text{ cm}$)};
+    \draw[gBorder,thick,<->] (4.8,0.35) -- (6.5,0.35) node[midway,below,font=\tiny] {$\approx 3$};
+    \node[above,font=\tiny\bfseries,gDark] at (3.25,0.95) {Estimación: $\approx 11.5\text{ cm}$};
+  \end{tikzpicture}
+\end{minipage} \\\hline
 
 \textbf{Generalizar} &
 \small
-\begin{minipage}[c]{0.64\linewidth}
-  \textbf{Reto:} \textit{Regla general de la secuencia con $1, 4, 9, 16$ cuadros.} \textbf{Solución:} Cada figura $n$ forma un arreglo cuadrado de $n \times n$ unidades (y suma de los primeros $n$ impares $1+3+\dots+(2n-1)$). Regla general: $\mathbf{a_n = n^2}$ (ejemplo: $a_{10} = 10^2 = 100$ cuadros).
+\begin{minipage}[c]{0.63\linewidth}
+  \textbf{Reto:} \textit{Regla general para $1, 4, 9, 16$ cuadros.} \textbf{Solución:} En cada paso $n$ se agrega un gnomon impar $(2n-1)$, formando un cuadrado $n\times n$. Regla general: $\mathbf{a_n = n^2}$ ($a_{10} = 100$ cuadros).
 \end{minipage}\hfill
-\begin{minipage}[c]{0.33\linewidth}
+\begin{minipage}[c]{0.35\linewidth}
   \centering
   \begin{tikzpicture}[scale=0.19]
-    \filldraw[fill=gMid!80,draw=gDark] (0,0) rectangle (1,1);
+    \filldraw[fill=gDark!75,draw=gInk] (0,0) rectangle (1,1);
     \node[font=\tiny] at (0.5,-0.9) {$1$};
-    \foreach \x in {0,1}\foreach \y in {0,1} \filldraw[fill=gMid!80,draw=gDark] (2.5+\x,\y) rectangle (3.5+\x,\y+1);
-    \node[font=\tiny] at (3.5,-0.9) {$4$};
-    \foreach \x in {0,1,2}\foreach \y in {0,1,2} \filldraw[fill=gMid!80,draw=gDark] (6+\x,\y) rectangle (7+\x,\y+1);
-    \node[font=\tiny] at (7.5,-0.9) {$9$};
-    \foreach \x in {0,1,2,3}\foreach \y in {0,1,2,3} \filldraw[fill=gMid!80,draw=gDark] (10.5+\x,\y) rectangle (11.5+\x,\y+1);
-    \node[font=\tiny] at (12.5,-0.9) {$16$};
+    \filldraw[fill=gMid!65,draw=gDark] (2.5,0) rectangle (3.5,1);
+    \foreach \x/\y in {1/0,0/1,1/1} \filldraw[fill=gDark!75,draw=gInk] (2.5+\x,\y) rectangle (3.5+\x,\y+1);
+    \node[font=\tiny] at (3.5,-0.9) {$4\,(+3)$};
+    \foreach \x in {0,1}\foreach \y in {0,1} \filldraw[fill=gMid!65,draw=gDark] (6.2+\x,\y) rectangle (7.2+\x,\y+1);
+    \foreach \x/\y in {2/0,2/1,2/2,0/2,1/2} \filldraw[fill=gDark!75,draw=gInk] (6.2+\x,\y) rectangle (7.2+\x,\y+1);
+    \node[font=\tiny] at (7.7,-0.9) {$9\,(+5)$};
+    \foreach \x in {0,1,2}\foreach \y in {0,1,2} \filldraw[fill=gMid!65,draw=gDark] (11.0+\x,\y) rectangle (12.0+\x,\y+1);
+    \foreach \x/\y in {3/0,3/1,3/2,3/3,0/3,1/3,2/3} \filldraw[fill=gDark!75,draw=gInk] (11.0+\x,\y) rectangle (12.0+\x,\y+1);
+    \node[font=\tiny] at (13.0,-0.9) {$16\,(+7)$};
   \end{tikzpicture}
 \end{minipage} \\\hline
 
 \textbf{Deducir} &
-\small \textbf{Reto:} \textit{En $\triangle ABC$, $AB = AC$ y $\angle A = 40^\circ$; ¿es cierto que $\angle B = \angle C = 70^\circ$?} \textbf{Solución:} \textbf{Verdadera.} (1) Por $AB = AC$, $\triangle ABC$ es isósceles $\implies \angle B = \angle C$; (2) la suma de ángulos internos es $180^\circ$; (3) $\angle B + \angle C = 180^\circ - 40^\circ = 140^\circ$; (4) como son iguales, $\angle B = \angle C = \frac{140^\circ}{2} = 70^\circ$. \\\hline
+\small
+\begin{minipage}[c]{0.67\linewidth}
+  \textbf{Reto:} \textit{En $\triangle ABC$, $AB=AC$ y $\angle A=40^\circ$; ¿cierto $\angle B=\angle C=70^\circ$?} \textbf{Solución:} \textbf{Verdadera.} Isósceles $\implies \angle B=\angle C$; $\angle B+\angle C = 180^\circ-40^\circ = 140^\circ \implies \angle B=\angle C = \mathbf{70^\circ}$.
+\end{minipage}\hfill
+\begin{minipage}[c]{0.31\linewidth}
+  \centering
+  \begin{tikzpicture}[scale=0.38]
+    \coordinate (B) at (0,0); \coordinate (C) at (2.8,0); \coordinate (A) at (1.4,2.3);
+    \fill[gLight] (A)--(B)--(C)--cycle;
+    \draw[very thick,gDark] (A)--(B)--(C)--cycle;
+    % Marcas de igualdad en AB y AC
+    \draw[thick,gDark] (0.58,1.15) -- (0.84,1.02);
+    \draw[thick,gDark] (2.22,1.15) -- (1.96,1.02);
+    \node[above,font=\tiny\bfseries] at (A) {$A=40^\circ$};
+    \node[left,font=\tiny\bfseries,gDark] at (B) {$70^\circ$};
+    \node[right,font=\tiny\bfseries,gDark] at (C) {$70^\circ$};
+  \end{tikzpicture}
+\end{minipage} \\\hline
 \end{tabularx}
 
-\vspace{4pt}
-{\footnotesize\colorbox{gLight}{\parbox{\dimexpr\textwidth-2\fboxsep\relax}{\textbf{Nota complementaria · 8.ª habilidad SEP (Comunicar, diapositiva 24 de Sesión 12):} Dividir una barra unitaria en 4 cuartos iguales ($0.25$ cada parte) explica visual y simbólicamente por qué $\frac{3}{4} = 0.25 + 0.25 + 0.25 = 0.75$.}}}
+\vspace{3pt}
+{\footnotesize\colorbox{gLight}{\parbox{\dimexpr\textwidth-2\fboxsep\relax}{%
+\begin{minipage}[c]{0.72\linewidth}
+  \textbf{Nota complementaria · 8.ª habilidad SEP (Comunicar, diapositiva 24 de Sesión 12):} Dividir una barra unitaria en 4 cuartos iguales ($0.25$ cada parte) explica visual y simbólicamente por qué $\frac{3}{4} = 0.25 + 0.25 + 0.25 = 0.75$.
+\end{minipage}\hfill
+\begin{minipage}[c]{0.26\linewidth}
+  \centering
+  \begin{tikzpicture}[scale=0.36]
+    \fill[gMid!85] (0,0) rectangle (4.5,0.8);
+    \fill[white] (4.5,0) rectangle (6.0,0.8);
+    \draw[thick,gDark] (0,0) rectangle (6.0,0.8);
+    \foreach \x in {1.5,3.0,4.5} \draw[gDark] (\x,0)--(\x,0.8);
+    \foreach \x in {0.75,2.25,3.75} \node[font=\tiny\bfseries] at (\x,0.4) {$0.25$};
+    \node[right,font=\tiny\bfseries,gDark] at (6.05,0.4) {$=\frac{3}{4}=0.75$};
+  \end{tikzpicture}
+\end{minipage}}}}
 
 \end{document}

@@ -95,13 +95,68 @@ La distancia entre los valores permanece \textbf{constante}; no aumenta ni dismi
 \textit{Ejemplo:} En el primer cuadrante, $P=(4,4)$ sobre la bisectriz $y=x$ dista exactamente $4\text{ u}$ tanto del eje $x$ como del eje $y$. \\\hline
 \end{tabularx}
 
-\vspace{8pt}
+\vspace{6pt}
+{\scriptsize\textbf{Validación visual y geométrica de las cinco afirmaciones:}}
+
+\vspace{4pt}
+\noindent
+\begin{minipage}[t]{0.315\textwidth}
+  \centering
+  \begin{tikzpicture}[scale=0.68]
+    \draw[fill=iiiepePale!60,draw=iiiepeBlue!50,rounded corners=3pt] (-0.2,-0.5) rectangle (6.2,2.75);
+    \node[font=\scriptsize\bfseries,iiiepeNavy] at (3.0,2.45) {Afirm. 1 (Cierta): Densidad};
+    \draw[-{Latex[length=1.4mm]},thick,iiiepeNavy] (0.2,1.5) -- (5.8,1.5);
+    \foreach \x/\lbl in {0.8/$1.4$, 3.0/$1.45$, 5.2/$1.5$} {
+      \draw[iiiepeNavy,thick] (\x,1.35) -- (\x,1.65);
+      \node[above,font=\tiny\bfseries] at (\x,1.65) {\lbl};
+    }
+    \fill[okGreen] (3.0,1.5) circle (3pt);
+    % Zoom inferior [1.45, 1.46] -> 1.455
+    \draw[iiiepeBlue,dotted] (3.0,1.4) -- (1.1,0.55) (3.9,1.4) -- (4.9,0.55);
+    \draw[thick,iiiepeBlue] (1.1,0.4) -- (4.9,0.4);
+    \fill[okGreen] (3.0,0.4) circle (3pt) node[below=2pt,font=\tiny\bfseries,okGreen] {$1.455$};
+    \node[left,font=\tiny] at (1.1,0.4) {$1.45$};
+    \node[right,font=\tiny] at (4.9,0.4) {$1.46$};
+    \node[font=\tiny,iiiepeInk] at (3.0,-0.25) {$m=\frac{a+b}{2}$ siempre existe};
+  \end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.315\textwidth}
+  \centering
+  \begin{tikzpicture}[scale=0.68]
+    \draw[fill=iiiepePale!60,draw=iiiepeBlue!50,rounded corners=3pt] (-0.2,-0.5) rectangle (6.2,2.75);
+    \node[font=\scriptsize\bfseries,iiiepeNavy] at (3.0,2.45) {Afirm. 2 (Falsa): Traslación};
+    \draw[thick,iiiepeNavy] (0.4,1.35) -- (5.6,1.35);
+    % 1/4=1.1, 3/4=2.9, 5/4=4.7 (1/2 = 1.8)
+    \fill[iiiepeNavy] (1.1,1.35) circle (2.5pt) node[below=2pt,font=\tiny] {$1/4$};
+    \fill[iiiepeNavy] (2.9,1.35) circle (2.5pt) node[below=2pt,font=\tiny] {$3/4$};
+    \fill[errRed] (4.7,1.35) circle (2.5pt) node[below=2pt,font=\tiny\bfseries] {$5/4$};
+    \draw[iiiepeBlue,thick,<->] (1.1,1.72) -- (2.9,1.72) node[midway,above,font=\tiny\bfseries] {$\Delta=\frac{1}{2}$};
+    \draw[errRed,thick,<->] (2.9,0.45) -- (4.7,0.45) node[midway,below,font=\tiny\bfseries] {$\Delta'=\frac{1}{2}$};
+    \draw[-{Latex[length=1.2mm]},dashed,iiiepeBlue] (1.1,1.35) to[bend left=22] node[above,font=\tiny] {$+1/2$} (2.9,1.35);
+    \draw[-{Latex[length=1.2mm]},dashed,errRed] (2.9,1.35) to[bend left=22] node[above,font=\tiny] {$+1/2$} (4.7,1.35);
+    \node[font=\tiny,iiiepeInk] at (3.0,-0.28) {Diferencia invariante: $p-q$};
+  \end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.315\textwidth}
+  \centering
+  \begin{tikzpicture}[scale=0.68]
+    \draw[fill=iiiepePale!60,draw=iiiepeBlue!50,rounded corners=3pt] (-0.2,-0.5) rectangle (6.2,2.75);
+    \node[font=\scriptsize\bfseries,iiiepeNavy] at (3.0,2.45) {Afirm. 3 (Cierta): Equivalencia};
+    \node[draw=iiiepeNavy,fill=white,rounded corners=2pt,font=\tiny\bfseries,inner sep=3pt] (eq1) at (3.0,1.72) {$2x - 5 = 7\quad (S=\{6\})$};
+    \node[draw=okGreen,fill=white,rounded corners=2pt,font=\tiny\bfseries,inner sep=3pt] (eq2) at (3.0,0.45) {$2x = 12\quad (S=\{6\})$};
+    \draw[-{Latex[length=1.4mm]},thick,okGreen] (2.3,1.38) -- (2.3,0.78) node[midway,left,font=\tiny\bfseries] {$+5$};
+    \draw[-{Latex[length=1.4mm]},thick,iiiepeBlue] (3.7,0.78) -- (3.7,1.38) node[midway,right,font=\tiny\bfseries] {$-5$};
+    \node[font=\tiny,iiiepeInk] at (3.0,-0.25) {Operación reversible ($\iff$)};
+  \end{tikzpicture}
+\end{minipage}
+
+\vspace{6pt}
 \noindent
 \begin{minipage}[t]{0.48\textwidth}
   \centering
-  \begin{tikzpicture}[scale=0.82]
+  \begin{tikzpicture}[scale=0.80]
     \draw[fill=iiiepePale!60,draw=iiiepeBlue!50,rounded corners=3pt] (-0.6,-0.75) rectangle (5.6,3.75);
-    \node[font=\scriptsize\bfseries,iiiepeNavy] at (2.5,3.45) {Contraejemplo Afirmación 4 ($P \notin \overline{AB}$)};
+    \node[font=\scriptsize\bfseries,iiiepeNavy] at (2.5,3.45) {Afirm. 4 (Falsa): Contraejemplo ($P \notin \overline{AB}$)};
     % Segmento AB
     \draw[very thick,iiiepeNavy] (0.5,0.4) -- (4.5,0.4);
     \draw[iiiepeAqua!80!black,thick,dashed] (2.5,-0.45) -- (2.5,3.05);
@@ -115,32 +170,39 @@ La distancia entre los valores permanece \textbf{constante}; no aumenta ni dismi
     \fill[errRed] (2.5,2.6) circle (2.6pt) node[above right,font=\scriptsize\bfseries] {$P(2,3) \notin \overline{AB}$};
     \node[font=\tiny,errRed,rotate=48] at (1.3,1.65) {$\sqrt{13}$};
     \node[font=\tiny,errRed,rotate=-48] at (3.7,1.65) {$\sqrt{13}$};
-    \node[font=\tiny,iiiepeAqua!70!black,fill=iiiepePale!60,inner sep=1pt] at (3.35,0.85) {Mediatriz $x=2$};
+    \node[font=\tiny,iiiepeAqua!70!black,fill=iiiepePale!60,inner sep=1pt] at (3.45,0.85) {Mediatriz $x=2$};
   \end{tikzpicture}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.48\textwidth}
   \centering
-  \begin{tikzpicture}[scale=0.82]
+  \begin{tikzpicture}[scale=0.80]
     \draw[fill=iiiepePale!60,draw=iiiepeBlue!50,rounded corners=3pt] (-0.5,-0.75) rectangle (5.7,3.75);
-    \node[font=\scriptsize\bfseries,iiiepeNavy] at (2.6,3.45) {Demostración Afirmación 5 ($PH = PK$)};
+    \node[font=\scriptsize\bfseries,iiiepeNavy] at (2.6,3.45) {Afirm. 5 (Cierta): Demostración ($PH = PK$)};
     \coordinate (O) at (0.3,0.2);
     \coordinate (A) at (4.9,0.2);
-    \coordinate (B) at (3.1,2.82);
-    \coordinate (P) at (3.7,1.54);
-    \coordinate (H) at (3.7,0.2);
-    \coordinate (K) at (2.78,2.52);
+    \coordinate (B) at ($(O)+(44:4.6)$);
+    \coordinate (P) at ($(O)+(22:3.6)$);
+    \coordinate (H) at ($(O)+(0:{3.6*cos(22)})$);
+    \coordinate (K) at ($(O)+(44:{3.6*cos(22)})$);
     \draw[-{Latex[length=2mm]},very thick,iiiepeNavy] (O) -- (A) node[below,font=\scriptsize] {$A$};
-    \draw[-{Latex[length=2mm]},very thick,iiiepeNavy] (O) -- (B) node[below right,font=\scriptsize] {$B$};
-    \draw[-{Latex[length=2mm]},thick,iiiepeAqua!80!black,dashed] (O) -- (4.55,1.88);
-    \node[font=\tiny\bfseries,iiiepeAqua!70!black] at (4.85,1.72) {Bisectriz};
+    \draw[-{Latex[length=2mm]},very thick,iiiepeNavy] (O) -- (B) node[above left,font=\scriptsize] {$B$};
+    \draw[-{Latex[length=2mm]},thick,iiiepeAqua!80!black,dashed] (O) -- ($(O)+(22:4.7)$);
+    \node[font=\tiny\bfseries,iiiepeAqua!70!black] at (4.95,1.95) {Bisectriz};
+    % Arcos de angulos iguales en O
+    \draw[iiiepeBlue,thick] (O) ++(0:0.85) arc (0:22:0.85);
+    \draw[iiiepeBlue,thick] (O) ++(22:1.05) arc (22:44:1.05);
+    \node[font=\tiny\bfseries,iiiepeBlue] at ($(O)+(11:1.30)$) {$\theta$};
+    \node[font=\tiny\bfseries,iiiepeBlue] at ($(O)+(33:1.45)$) {$\theta$};
+    % Perpendiculares exactas PH y PK + ambos angulos rectos
     \draw[okGreen,very thick] (P) -- (H);
     \draw[okGreen,very thick] (P) -- (K);
-    \draw (H) rectangle +(-0.22,0.22);
+    \draw[iiiepeNavy] (H) ++(-0.22,0) -- ++(0,0.22) -- ++(0.22,0);
+    \draw[iiiepeNavy] (K) ++(224:0.22) -- ++(-46:0.22) -- ++(44:0.22);
     \fill[iiiepeNavy] (O) circle (2pt) node[below left,font=\scriptsize] {$O$};
     \fill[okGreen] (P) circle (2.5pt) node[above right,font=\scriptsize\bfseries] {$P$};
     \fill[iiiepeNavy] (H) circle (2pt) node[below,font=\scriptsize] {$H$};
     \fill[iiiepeNavy] (K) circle (2pt) node[above left,font=\scriptsize] {$K$};
-    \node[font=\tiny\bfseries,okGreen,right] at (3.73,0.85) {$PH=PK$};
+    \node[font=\tiny\bfseries,okGreen,right] at (3.68,0.88) {$PH=PK$};
     \node[font=\tiny,iiiepeInk] at (2.8,-0.38) {$\triangle OHP \cong \triangle OKP$ (criterio AAL)};
   \end{tikzpicture}
 \end{minipage}

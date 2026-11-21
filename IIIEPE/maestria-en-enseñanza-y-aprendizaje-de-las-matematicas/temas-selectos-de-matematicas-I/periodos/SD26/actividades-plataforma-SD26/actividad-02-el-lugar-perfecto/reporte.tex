@@ -40,7 +40,7 @@
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage{amsmath,amssymb,booktabs,array,longtable,pdflscape,tikz,tabularx,colortbl,pgfplots,enumitem,needspace}
 \usepackage[most]{tcolorbox}
-\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,babel}
 \pgfplotsset{compat=1.18}
 
 \definecolor{iiiepeNavy}{HTML}{163B5C}
@@ -84,6 +84,74 @@ La Sesión 9 del Bloque II aborda los lugares geométricos de equidistancia a pa
   \item \textbf{Reto 2 (¿Habrá otro lugar posible entre dos caminos?):} Ubicar un árbol equidistante de dos caminos rectilíneos concurrentes (Camino 1 y Camino 2). Con compás se trazan arcos desde puntos simétricos sobre ambos lados y se determina la \textbf{bisectriz} del ángulo formado por los caminos: todo punto $P$ sobre la bisectriz verifica congruencia de triángulos rectángulos por criterio ALA/hipotenusa-ángulo y mantiene idéntica distancia perpendicular a ambos caminos.
   \item \textbf{Reto 3 (Equidistancia a tres salones $A$, $B$ y $C$):} Al unir los tres salones no colineales formando $\triangle ABC$, basta construir las mediatrices de dos lados (por ejemplo $\overline{BC}$ y $\overline{AC}$). Si $O$ pertenece a ambas, cumple $OB = OC$ y $OA = OC$, luego por transitividad $OA = OB$, garantizando que $O$ pertenece también a la tercera mediatriz. Este punto único de concurrencia es el \textbf{circuncentro ($O$)}, centro de la circunferencia circunscrita a $\triangle ABC$. \textit{Posibles dudas atendidas:} verificar que dos mediatrices bastan (la tercera es comprobación), distinguir caso colineal (sin solución) y caso obtusángulo ($O$ exterior).
 \end{enumerate}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=0.62,font=\tiny]
+  % Panel 1: Mediatriz (Reto 1)
+  \begin{scope}[xshift=0cm]
+    \draw[fill=iiiepePaper,draw=iiiepeNavy!50,rounded corners=2pt] (-0.2,-0.5) rectangle (6.2,4.3);
+    \node[font=\scriptsize\bfseries,iiiepeNavy] at (3.0,3.95) {Reto 1: Mediatriz ($PA=PB$)};
+    \coordinate (A1) at (0.8,1.2);
+    \coordinate (B1) at (5.2,2.6);
+    \coordinate (M1) at ($(A1)!0.5!(B1)$);
+    \coordinate (P1a) at ($(M1)+1.5*(-0.303,0.953)$);
+    \coordinate (P1b) at ($(M1)-1.5*(-0.303,0.953)$);
+    \draw[iiiepeAqua!80!black,dashed] (A1) ++(-18:2.76) arc (-18:55:2.76);
+    \draw[iiiepeAqua!80!black,dashed] (B1) ++(162:2.76) arc (162:235:2.76);
+    \draw[iiiepeNavy,thick] (A1) -- (B1);
+    \draw[iiiepeOrange,very thick] ($(M1)-1.75*(-0.303,0.953)$) -- ($(M1)+1.75*(-0.303,0.953)$);
+    \draw[iiiepeBlue,dotted,thick] (A1) -- (P1a) (B1) -- (P1a);
+    \fill[iiiepeNavy] (A1) circle (2.2pt) node[below] {$A$};
+    \fill[iiiepeNavy] (B1) circle (2.2pt) node[right] {$B$};
+    \fill[iiiepeOrange] (M1) circle (2pt) node[below right] {$M$};
+    \fill[iiiepeAqua!80!black] (P1a) circle (2pt) node[right] {$P_1$};
+    \node[iiiepeInk] at (3.0,-0.22) {Infinitos puntos equidistantes};
+  \end{scope}
+
+  % Panel 2: Bisectriz (Reto 2)
+  \begin{scope}[xshift=7.0cm]
+    \draw[fill=iiiepePaper,draw=iiiepeNavy!50,rounded corners=2pt] (-0.2,-0.5) rectangle (6.2,4.3);
+    \node[font=\scriptsize\bfseries,iiiepeNavy] at (3.0,3.95) {Reto 2: Bisectriz ($PH=PK$)};
+    \coordinate (O2) at (0.6,0.7);
+    \coordinate (P2t) at ($(O2)+(24:4.2)$);
+    \coordinate (H2) at ($(O2)+(0:{4.2*cos(24)})$);
+    \coordinate (K2) at ($(O2)+(48:{4.2*cos(24)})$);
+    \draw[-{Latex[length=1.4mm]},iiiepeNavy,thick] (O2) -- ++(0:5.1);
+    \draw[-{Latex[length=1.4mm]},iiiepeNavy,thick] (O2) -- ++(48:4.4);
+    \draw[-{Latex[length=1.4mm]},iiiepeOrange,very thick] (O2) -- ++(24:5.1);
+    \draw[iiiepeBlue,dotted,thick] (P2t) -- (H2) (P2t) -- (K2);
+    \draw[iiiepeNavy] (H2) ++(-0.18,0) -- ++(0,0.18) -- ++(0.18,0);
+    \draw[iiiepeNavy] (K2) ++(228:0.18) -- ++(-42:0.18) -- ++(48:0.18);
+    \fill[iiiepeNavy] (O2) circle (2.2pt) node[below] {$O$};
+    \fill[iiiepeOrange] (P2t) circle (2.2pt) node[right] {$P$};
+    \fill[iiiepeBlue] (H2) circle (1.8pt) node[below] {$H$};
+    \fill[iiiepeBlue] (K2) circle (1.8pt) node[above left] {$K$};
+    \node[iiiepeInk] at (3.0,-0.22) {$\triangle OHP\cong\triangle OKP$ (AAL)};
+  \end{scope}
+
+  % Panel 3: Circuncentro (Reto 3)
+  \begin{scope}[xshift=14.0cm]
+    \draw[fill=iiiepePaper,draw=iiiepeNavy!50,rounded corners=2pt] (-0.2,-0.5) rectangle (6.2,4.3);
+    \node[font=\scriptsize\bfseries,iiiepeNavy] at (3.0,3.95) {Reto 3: Circuncentro ($OA=OB=OC$)};
+    \coordinate (O3) at (3.0,1.9);
+    \coordinate (A3) at ($(O3)+(145:1.55)$);
+    \coordinate (B3) at ($(O3)+(20:1.55)$);
+    \coordinate (C3) at ($(O3)+(-105:1.55)$);
+    \draw[iiiepeAqua!80!black,dashed,thick] (O3) circle (1.55);
+    \draw[iiiepeNavy,thick] (A3) -- (B3) -- (C3) -- cycle;
+    \draw[iiiepeOrange,thick] ($(O3)!-0.7!($(A3)!0.5!(B3)$)$) -- ($($(A3)!0.5!(B3)$)!-0.7!(O3)$);
+    \draw[iiiepeOrange,thick] ($(O3)!-0.7!($(A3)!0.5!(C3)$)$) -- ($($(A3)!0.5!(C3)$)!-0.7!(O3)$);
+    \draw[iiiepeBlue,dotted,thick] (O3) -- (A3) (O3) -- (B3) (O3) -- (C3);
+    \fill[iiiepeNavy] (A3) circle (2pt) node[above left] {$A$};
+    \fill[iiiepeNavy] (B3) circle (2pt) node[right] {$B$};
+    \fill[iiiepeNavy] (C3) circle (2pt) node[below] {$C$};
+    \fill[iiiepeOrange] (O3) circle (2.4pt) node[above right] {$O$};
+    \node[iiiepeInk] at (3.0,-0.22) {Solución única: circunferencia circunscrita};
+  \end{scope}
+\end{tikzpicture}
+\caption{Esquemas geométricos de validación para los tres retos presenciales de la Sesión 9 (mediatriz, bisectriz y circuncentro).}
+\end{figure}
 
 \section{Guía de trabajo ejecutada en GeoGebra Classic}
 

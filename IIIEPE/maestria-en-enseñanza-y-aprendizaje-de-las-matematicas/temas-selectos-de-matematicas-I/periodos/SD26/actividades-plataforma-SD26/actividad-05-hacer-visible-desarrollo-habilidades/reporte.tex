@@ -40,7 +40,7 @@
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage{amsmath,amssymb,booktabs,array,longtable,pdflscape,tikz,tabularx,colortbl,pgfplots,enumitem,needspace}
 \usepackage[most]{tcolorbox}
-\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,babel}
 \pgfplotsset{compat=1.18}
 
 \definecolor{iiiepeNavy}{HTML}{163B5C}
@@ -96,6 +96,135 @@ La Sesión 12 (presentación interactiva de 49 diapositivas) profundiza en cómo
 \textbf{Deducir} & Obtiene y justifica conclusiones lógicas a partir de propiedades conocidas. & Encadena condiciones dadas, propiedades y conclusión lógica justificada. & Triángulo isósceles ($AB=AC$, $\angle A=40^\circ$): $\angle B=\angle C=(180^\circ-40^\circ)/2=70^\circ$. \\\hline
 \end{longtable}}
 
+\subsection{Validación visual y geométrica de los retos de la Sesión 12}
+La Figura~\ref{fig:act5-retos-grid} reproduce mediante esquemas vectoriales la resolución de los ocho retos de las habilidades matemáticas de la SEP correspondientes a las hojas presenciales de la Sesión 12.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=0.58,font=\tiny]
+  % Fila 1: 4 paneles (x = 0, 6.2, 12.4, 18.6 -> width 5.6 each, total ~24.2 * 0.58 = 14.0 cm!)
+  % Panel 1: Calcular
+  \begin{scope}[xshift=0cm,yshift=4.6cm]
+    \draw[fill=iiiepePaper,draw=iiiepeNavy!50,rounded corners=2pt] (0,0) rectangle (5.6,3.8);
+    \node[font=\scriptsize\bfseries,iiiepeNavy] at (2.8,3.4) {1. Calcular (25\,\% de 360)};
+    \fill[iiiepeAqua!40] (0.6,1.6) rectangle (1.7,2.4);
+    \fill[white] (1.7,1.6) rectangle (5.0,2.4);
+    \draw[thick,iiiepeNavy] (0.6,1.6) rectangle (5.0,2.4);
+    \foreach \x in {1.7,2.8,3.9} \draw[iiiepeNavy] (\x,1.6)--(\x,2.4);
+    \foreach \x in {1.15,2.25,3.35,4.45} \node[font=\tiny\bfseries] at (\x,2.0) {$90$};
+    \node[iiiepeInk] at (2.8,0.85) {$\frac{1}{4}(360)=90$ y $72+18=90$};
+  \end{scope}
+
+  % Panel 2: Inferir
+  \begin{scope}[xshift=6.1cm,yshift=4.6cm]
+    \draw[fill=iiiepePaper,draw=iiiepeNavy!50,rounded corners=2pt] (0,0) rectangle (5.6,3.8);
+    \node[font=\scriptsize\bfseries,iiiepeNavy] at (2.8,3.4) {2. Inferir (Lectura semanal)};
+    \draw[iiiepeNavy] (0.7,0.75) -- (5.1,0.75) (0.7,0.75) -- (0.7,2.95);
+    \foreach \i/\h/\lbl in {1/4/L, 2/7/M, 3/5/Mi, 5/8/V} {
+      \fill[iiiepeBlue!55,draw=iiiepeNavy] (0.45+\i*0.82,0.75) rectangle (0.98+\i*0.82,0.75+\h*0.19);
+      \node[below] at (0.715+\i*0.82,0.75) {\lbl};
+      \node[above] at (0.715+\i*0.82,0.75+\h*0.19) {\h};
+    }
+    \fill[iiiepeOrange!85,draw=iiiepeNavy] (0.45+4*0.82,0.75) rectangle (0.98+4*0.82,0.75+10*0.19);
+    \node[below,font=\tiny\bfseries] at (0.715+4*0.82,0.75) {J};
+    \node[above,font=\tiny\bfseries] at (0.715+4*0.82,0.75+10*0.19) {10};
+    \draw[dashed,red!70!black,thick] (0.7,0.75+6.8*0.19) -- (5.1,0.75+6.8*0.19);
+    \node[right,red!70!black] at (4.15,2.28) {$\bar{x}=6.8$};
+  \end{scope}
+
+  % Panel 3: Comunicar
+  \begin{scope}[xshift=12.2cm,yshift=4.6cm]
+    \draw[fill=iiiepePaper,draw=iiiepeNavy!50,rounded corners=2pt] (0,0) rectangle (5.6,3.8);
+    \node[font=\scriptsize\bfseries,iiiepeNavy] at (2.8,3.4) {3. Comunicar ($3/4 = 0.75$)};
+    \fill[iiiepeAqua!45] (0.6,1.6) rectangle (3.9,2.4);
+    \fill[white] (3.9,1.6) rectangle (5.0,2.4);
+    \draw[thick,iiiepeNavy] (0.6,1.6) rectangle (5.0,2.4);
+    \foreach \x in {1.7,2.8,3.9} \draw[iiiepeNavy] (\x,1.6)--(\x,2.4);
+    \foreach \x in {1.15,2.25,3.35} \node[font=\tiny\bfseries] at (\x,2.0) {$0.25$};
+    \node[font=\tiny,gray] at (4.45,2.0) {$0.25$};
+    \node[iiiepeNavy,font=\tiny\bfseries] at (2.8,0.85) {$0.25+0.25+0.25=0.75$};
+  \end{scope}
+
+  % Panel 4: Medir
+  \begin{scope}[xshift=18.3cm,yshift=4.6cm]
+    \draw[fill=iiiepePaper,draw=iiiepeNavy!50,rounded corners=2pt] (0,0) rectangle (5.6,3.8);
+    \node[font=\scriptsize\bfseries,iiiepeNavy] at (2.8,3.4) {4. Medir (Pizarrón)};
+    \fill[iiiepeAqua!15,draw=iiiepeNavy,thick] (1.2,1.15) rectangle (4.8,2.75);
+    \node[font=\tiny\bfseries,iiiepeNavy] at (3.0,1.95) {$A = 2.88\text{ m}^2$};
+    \draw[<->,iiiepeOrange] (1.2,0.82) -- (4.8,0.82) node[midway,below,iiiepeInk] {$b=2.40\text{ m}$};
+    \draw[<->,iiiepeOrange] (0.85,1.15) -- (0.85,2.75) node[midway,left,iiiepeInk] {$1.20$};
+  \end{scope}
+
+  % Fila 2: 4 paneles (y = 0..3.8)
+  % Panel 5: Imaginar
+  \begin{scope}[xshift=0cm,yshift=0cm]
+    \draw[fill=iiiepePaper,draw=iiiepeNavy!50,rounded corners=2pt] (0,0) rectangle (5.6,3.8);
+    \node[font=\scriptsize\bfseries,iiiepeNavy] at (2.8,3.4) {5. Imaginar (Rot. $90^\circ$ hor.)};
+    \begin{scope}[xshift=0.45cm,yshift=0.7cm,scale=0.42]
+      \draw[step=1,iiiepeBlue!35,thin] (0,0) grid (4,4);
+      \fill[iiiepeBlue!45] (1,1) rectangle (2,4) (2,1) rectangle (4,2);
+      \draw[thick,iiiepeNavy] (1,1)--(1,4)--(2,4)--(2,2)--(4,2)--(4,1)--cycle;
+      \fill[iiiepeOrange] (1,1) circle (0.22);
+    \end{scope}
+    \draw[-{Stealth[length=1.3mm]},thick,iiiepeOrange] (2.35,1.65) -- (3.15,1.65);
+    \begin{scope}[xshift=3.4cm,yshift=0.7cm,scale=0.42]
+      \draw[step=1,iiiepeBlue!35,thin] (0,0) grid (4,4);
+      \fill[iiiepeAqua!45] (1,2) rectangle (4,3) (1,0) rectangle (2,2);
+      \draw[thick,iiiepeNavy] (1,0)--(1,3)--(4,3)--(4,2)--(2,2)--(2,0)--cycle;
+      \fill[iiiepeOrange] (1,3) circle (0.22);
+    \end{scope}
+    \node[iiiepeInk] at (2.8,0.28) {«L» con pivote $\to$ «$\Gamma$»};
+  \end{scope}
+
+  % Panel 6: Estimar
+  \begin{scope}[xshift=6.1cm,yshift=0cm]
+    \draw[fill=iiiepePaper,draw=iiiepeNavy!50,rounded corners=2pt] (0,0) rectangle (5.6,3.8);
+    \node[font=\scriptsize\bfseries,iiiepeNavy] at (2.8,3.4) {6. Estimar (Referente palma)};
+    \draw[ultra thick,iiiepeNavy] (0.6,2.1) -- (5.0,2.1);
+    \fill[iiiepeNavy] (0.6,2.1) circle (2.2pt) (5.0,2.1) circle (2.2pt);
+    \draw[<->,iiiepeAqua!80!black,thick] (0.6,1.45) -- (3.8,1.45) node[midway,below,iiiepeInk] {1 palma ($\approx 8.5\text{ cm}$)};
+    \draw[<->,iiiepeOrange,thick] (3.8,1.45) -- (5.0,1.45) node[midway,below,iiiepeInk] {$\approx 3$};
+    \node[iiiepeNavy,font=\tiny\bfseries] at (2.8,0.5) {Cota: $\approx 11\text{--}12\text{ cm}$};
+  \end{scope}
+
+  % Panel 7: Generalizar
+  \begin{scope}[xshift=12.2cm,yshift=0cm]
+    \draw[fill=iiiepePaper,draw=iiiepeNavy!50,rounded corners=2pt] (0,0) rectangle (5.6,3.8);
+    \node[font=\scriptsize\bfseries,iiiepeNavy] at (2.8,3.4) {7. Generalizar ($a_n = n^2$)};
+    \begin{scope}[xshift=0.4cm,yshift=0.95cm,scale=0.33]
+      \filldraw[fill=iiiepeOrange!70,draw=iiiepeNavy] (0,0) rectangle (1,1);
+      \node[below] at (0.5,0) {$1$};
+      \filldraw[fill=iiiepeAqua!35,draw=iiiepeNavy] (2,0) rectangle (3,1);
+      \foreach \x/\y in {1/0,0/1,1/1} \filldraw[fill=iiiepeOrange!70,draw=iiiepeNavy] (2+\x,\y) rectangle (3+\x,\y+1);
+      \node[below] at (3,0) {$4$};
+      \foreach \x in {0,1}\foreach \y in {0,1} \filldraw[fill=iiiepeAqua!35,draw=iiiepeNavy] (5+\x,\y) rectangle (6+\x,\y+1);
+      \foreach \x/\y in {2/0,2/1,2/2,0/2,1/2} \filldraw[fill=iiiepeOrange!70,draw=iiiepeNavy] (5+\x,\y) rectangle (6+\x,\y+1);
+      \node[below] at (6.5,0) {$9$};
+      \foreach \x in {0,1,2}\foreach \y in {0,1,2} \filldraw[fill=iiiepeAqua!35,draw=iiiepeNavy] (9+\x,\y) rectangle (10+\x,\y+1);
+      \foreach \x/\y in {3/0,3/1,3/2,3/3,0/3,1/3,2/3} \filldraw[fill=iiiepeOrange!70,draw=iiiepeNavy] (9+\x,\y) rectangle (10+\x,\y+1);
+      \node[below] at (11,0) {$16$};
+    \end{scope}
+    \node[iiiepeNavy,font=\tiny\bfseries] at (2.8,0.35) {Suma de impares: $a_{10}=100$};
+  \end{scope}
+
+  % Panel 8: Deducir
+  \begin{scope}[xshift=18.3cm,yshift=0cm]
+    \draw[fill=iiiepePaper,draw=iiiepeNavy!50,rounded corners=2pt] (0,0) rectangle (5.6,3.8);
+    \node[font=\scriptsize\bfseries,iiiepeNavy] at (2.8,3.4) {8. Deducir ($\triangle$ isósceles)};
+    \coordinate (B8) at (1.3,0.9); \coordinate (C8) at (4.3,0.9); \coordinate (A8) at (2.8,2.75);
+    \fill[iiiepeAqua!15] (A8)--(B8)--(C8)--cycle;
+    \draw[thick,iiiepeNavy] (A8)--(B8)--(C8)--cycle;
+    \draw[iiiepeOrange,thick] (1.92,1.86)--(2.18,1.72) (3.68,1.86)--(3.42,1.72);
+    \node[above,font=\tiny\bfseries] at (A8) {$A=40^\circ$};
+    \node[left,font=\tiny\bfseries,iiiepeNavy] at (B8) {$70^\circ$};
+    \node[right,font=\tiny\bfseries,iiiepeNavy] at (C8) {$70^\circ$};
+    \node[iiiepeInk] at (2.8,0.35) {$AB=AC\implies \angle B=\angle C$};
+  \end{scope}
+\end{tikzpicture}
+\caption{Validación visual y geométrica de los ocho retos de habilidades matemáticas SEP resueltos en la Sesión 12.}
+\label{fig:act5-retos-grid}
+\end{figure}
+
 \section{Propuesta escrita: Habilidad, Contenido, PDA y Evidencia (Base del Trabajo Final)}
 Siguiendo los seis apartados obligatorios del \textit{Guión 5} y de las diapositivas 46--47 (\textit{Una habilidad, un PDA, cinco minutos}), se presenta la propuesta didáctica diseñada para su ejecución y grabación en la Sesión 13:
 
@@ -126,6 +255,12 @@ Secuencia ABP articulada con la resolución de problemas de la SEP, las fases de
   \item \textit{Generalización y modelación tecnológica (Simulación interactiva, UnADM \#99 y Estudio intercalado, UnADM \#40):} Contrastar $F_2 = 4 F_1$ frente a $F_2 = 2 F_1$ en GeoGebra Classic, verificar $\Delta x_2 = \Delta x_1/k = 1\text{ cm}$ y resolver el reto extendido a $d_2 = 6.0\text{ cm}$ ($k' = 16$).
 \end{enumerate}
 \end{propuestabox}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.78\linewidth]{img/geogebra/act6_video_32N.png}
+\caption{Validación en GeoGebra Classic de la propuesta didáctica: recta proporcional real $F_2 = 4F_1$ en $(8\text{ N}, 32\text{ N})$ frente al error lineal intuitivo $F_2 = 2F_1$ en $(8\text{ N}, 16\text{ N})$.}
+\end{figure}
 
 \section{Cumplimiento de la Rúbrica de Evaluación (Actividad 5)}
 {\small\setstretch{1.08}\renewcommand{\arraystretch}{1.18}

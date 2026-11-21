@@ -56,23 +56,22 @@
 \rowcolor{iiiepePale} \textbf{\small CONSTRUCCIÓN} & \multicolumn{1}{c|}{\textbf{\small Posibles dudas}} \\\hline
 \begin{minipage}[c]{0.96\linewidth}
   \centering\vspace{4pt}
-  \begin{tikzpicture}[scale=1.0]
+  \begin{tikzpicture}[scale=0.95]
     \coordinate (A) at (1.5,2.2);
     \coordinate (B) at (9.5,5.0);
-    \coordinate (M) at ($(A)!0.5!(B)$); % (5.5, 3.6)
-    % Dirección AB: (8, 2.8), unitario = (0.9439, 0.3303); normal = (-0.3303, 0.9439)
-    % Puntos sobre la mediatriz (con t = +-2.8 y cortes de arcos r=5.2 -> dist from M = sqrt(5.2^2 - 4.238^2) = 3.01)
-    \coordinate (P1) at ($(M) + 2.95*(-0.3303,0.9439)$);
-    \coordinate (P2) at ($(M) - 2.95*(-0.3303,0.9439)$);
-    \coordinate (Mtop) at ($(M) + 3.55*(-0.3303,0.9439)$);
-    \coordinate (Mbot) at ($(M) - 3.35*(-0.3303,0.9439)$);
+    \coordinate (M) at ($(A)!0.5!(B)$); % (5.5, 3.6); AB = 8.48 u, AM = MB = 4.24 u
+    % Normal exacta: (-0.33035, 0.94386), t = +-3.00 -> r = sqrt(4.2379^2 + 3.00^2) = 5.19 u
+    \coordinate (P1) at ($(M) + 3.00*(-0.33035,0.94386)$);
+    \coordinate (P2) at ($(M) - 3.00*(-0.33035,0.94386)$);
+    \coordinate (Mtop) at ($(M) + 3.55*(-0.33035,0.94386)$);
+    \coordinate (Mbot) at ($(M) - 3.45*(-0.33035,0.94386)$);
 
     % Cuadrícula sutil de apoyo
-    \draw[iiiepePale!90!gray,step=0.5,thin] (-0.2,0) grid (11.2,7.2);
+    \draw[iiiepePale!90!gray,step=0.5,thin] (-0.2,-0.1) grid (11.2,7.1);
 
-    % Arcos de compas desde A y B
-    \draw[iiiepeAqua!85!black,thick,dashed] (A) ++(-25:5.17) arc (-25:65:5.17);
-    \draw[iiiepeAqua!85!black,thick,dashed] (B) ++(155:5.17) arc (155:245:5.17);
+    % Arcos de compas desde A y B con radio r = 5.19 u > AB/2
+    \draw[iiiepeAqua!85!black,thick,dashed] (A) ++(-25:5.19) arc (-25:63:5.19);
+    \draw[iiiepeAqua!85!black,thick,dashed] (B) ++(155:5.19) arc (155:245:5.19);
 
     % Segmento AB
     \draw[iiiepeNavy,thick] (A) -- (B);
@@ -81,18 +80,20 @@
     \draw[iiiepeOrange,very thick] (Mbot) -- (Mtop) node[above right,font=\scriptsize\bfseries,iiiepeOrange] {Mediatriz ($\overline{PA}=\overline{PB}$)};
 
     % Angulo recto en M
-    \draw[iiiepeNavy] ($(M) + 0.25*(0.9439,0.3303)$) -- ($(M) + 0.25*(0.9439,0.3303) + 0.25*(-0.3303,0.9439)$) -- ($(M) + 0.25*(-0.3303,0.9439)$);
+    \draw[iiiepeNavy] ($(M) + 0.24*(0.94386,0.33035)$) -- ($(M) + 0.24*(0.94386,0.33035) + 0.24*(-0.33035,0.94386)$) -- ($(M) + 0.24*(-0.33035,0.94386)$);
 
-    % Distancias de comprobación hacia P1
-    \draw[iiiepeBlue,thick,dotted] (A) -- (P1) node[midway,above left,font=\scriptsize] {$PA = 5.2\text{ u}$};
-    \draw[iiiepeBlue,thick,dotted] (B) -- (P1) node[midway,above right,font=\scriptsize] {$PB = 5.2\text{ u}$};
+    % Distancias de comprobación hacia P1 y mitades en M
+    \draw[iiiepeBlue,thick,dotted] (A) -- (P1) node[midway,above left,font=\scriptsize] {$P_1A = 5.19\text{ u}$};
+    \draw[iiiepeBlue,thick,dotted] (B) -- (P1) node[midway,above right,font=\scriptsize] {$P_1B = 5.19\text{ u}$};
+    \node[font=\tiny,iiiepeNavy,rotate=19.3] at ($(A)!0.5!(M) + (0,-0.22)$) {$4.24\text{ u}$};
+    \node[font=\tiny,iiiepeNavy,rotate=19.3] at ($(M)!0.5!(B) + (0,-0.22)$) {$4.24\text{ u}$};
 
-    % Dos ubicaciones posibles marcadas (M y P2)
+    % Puntos clave
     \fill[iiiepeNavy] (A) circle (3.2pt) node[below left,font=\small\bfseries] {$A$};
     \fill[iiiepeNavy] (B) circle (3.2pt) node[above right,font=\small\bfseries] {$B$};
-    \fill[iiiepeOrange] (M) circle (3pt) node[below right,font=\scriptsize\bfseries] {$M$ (propuesta 1)};
+    \fill[iiiepeOrange] (M) circle (3pt) node[below right,font=\scriptsize\bfseries,fill=white,inner sep=1pt] {$M$ (prop. 1)};
     \fill[iiiepeAqua!80!black] (P1) circle (2.8pt) node[right,font=\scriptsize\bfseries] {$P_1$ (corte arcos)};
-    \fill[iiiepeAqua!80!black] (P2) circle (2.8pt) node[below right,font=\scriptsize\bfseries] {$P_2$ (propuesta 2)};
+    \fill[iiiepeAqua!80!black] (P2) circle (2.8pt) node[below right,font=\scriptsize\bfseries,fill=white,inner sep=1pt] {$P_2$ (prop. 2)};
   \end{tikzpicture}\vspace{4pt}
 \end{minipage} &
 \small
@@ -102,10 +103,90 @@
   \item \textbf{Error al medir:} Confundir distancia diagonal real ($PA=PB$) con distancia horizontal al borde de la hoja.
 \end{itemize} \\\hline
 \rowcolor{iiiepePale} \multicolumn{2}{|c|}{\textbf{\small Conclusiones}} \\\hline
-\multicolumn{2}{|p{0.97\textwidth}|}{\small Existen \textbf{infinitas ubicaciones posibles} para el bebedero equidistante de $A$ y $B$: todas se encuentran sobre la \textbf{mediatriz} del segmento $\overline{AB}$ (la recta perpendicular a $\overline{AB}$ que pasa por su punto medio $M$). Con regla y compás se construye trazando arcos de radio igual (mayor que $AB/2$) con centro en $A$ y en $B$ y uniendo sus intersecciones $P_1$ y $P_2$; para todo punto $P$ sobre esa recta se cumple $PA = PB$.} \\\hline
+\multicolumn{2}{|p{0.97\textwidth}|}{\small Existen \textbf{infinitas ubicaciones posibles} para el bebedero equidistante de $A$ y $B$: todas se encuentran sobre la \textbf{mediatriz} de $\overline{AB}$. \textbf{Justificación (criterio LAL):} Para todo $P$ en la mediatriz con pie perpendicular $M$, $MA=MB$, $\angle PMA=\angle PMB=90^\circ$ y $PM$ es común, luego $\triangle PMA \cong \triangle PMB \implies PA = PB$ ($5.19\text{ u}$ en $P_1$). \textit{Validación GeoGebra:} \texttt{act2\_a\_mediatrices\_equidistancia.ggb}.} \\\hline
 \end{tabularx}
 
-% ==================== PÁGINA 2: RETO 3 (UN BEBEDERO, 3 SALONES A, B, C) ====================
+% ==================== PÁGINA 2: RETO 2 (UN ÁRBOL EQUIDISTANTE DE DOS CAMINOS - BISECTRIZ) ====================
+\newpage
+\noindent
+\begin{tabularx}{\textwidth}{@{} >{\raggedright\arraybackslash}p{0.34\textwidth} >{\centering\arraybackslash}X >{\raggedleft\arraybackslash}p{0.28\textwidth} @{}}
+\footnotesize \textbf{Maestría en Aprendizaje y Enseñanza de las Matemáticas} &
+\footnotesize \textbf{UA: Temas Selectos de Matemáticas I} &
+\footnotesize \textbf{Bloque II. Enseñar desde el desafío} \\
+\footnotesize Sesión 9. El lugar perfecto &
+\footnotesize Alumno: Martín Jonathan de la Cruz Muñoz (00874) &
+\footnotesize \textbf{Actividad 2 · Reto 2}
+\end{tabularx}
+
+\vspace{4pt}
+\begin{center}
+  {\normalsize\bfseries Reto 2. Un árbol equidistante de dos caminos concurrentes}
+\end{center}
+\vspace{2pt}
+{\small Observa los dos caminos rectilíneos que convergen en $O$. Sin utilizar instrumentos, propón ubicaciones equidistantes de ambos caminos; después traza con regla y compás todos los lugares que cumplen la condición y comprueba sus distancias perpendiculares.}
+
+\vspace{6pt}
+\noindent\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{0.71\textwidth}|>{\raggedright\arraybackslash}X|}
+\hline
+\rowcolor{iiiepePale} \textbf{\small CONSTRUCCIÓN} & \multicolumn{1}{c|}{\textbf{\small Posibles dudas}} \\\hline
+\begin{minipage}[c]{0.96\linewidth}
+  \centering\vspace{4pt}
+  \begin{tikzpicture}[scale=0.88]
+    \coordinate (O) at (1.0,1.1);
+    \coordinate (C1) at ($(O)+(0:8.2)$);
+    \coordinate (C2) at ($(O)+(46:7.6)$);
+    \coordinate (D1) at ($(O)+(0:3.2)$);
+    \coordinate (D2) at ($(O)+(46:3.2)$);
+    \coordinate (Q) at ($(O)+(23:5.451)$);
+    \coordinate (P) at ($(O)+(23:6.6)$);
+    \coordinate (Bend) at ($(O)+(23:8.2)$);
+    \coordinate (H) at ($(O)+(0:{6.6*cos(23)})$);
+    \coordinate (K) at ($(O)+(46:{6.6*cos(23)})$);
+
+    \draw[iiiepePale!90!gray,step=0.5,thin] (-0.2,-0.1) grid (10.2,6.9);
+
+    % Primer arco r1=3.2 desde O y arcos iguales r2=2.8 desde D1 y D2
+    \draw[iiiepeAqua!85!black,thick,dashed] (O) ++(-6:3.2) arc (-6:54:3.2);
+    \draw[iiiepeAqua!85!black,thick,dashed] (D1) ++(32:2.8) arc (32:68:2.8);
+    \draw[iiiepeAqua!85!black,thick,dashed] (D2) ++(-20:2.8) arc (-20:16:2.8);
+
+    % Dos caminos y bisectriz
+    \draw[-{Latex[length=2mm]},very thick,iiiepeNavy] (O) -- (C1) node[below left,font=\scriptsize\bfseries] {Camino 1};
+    \draw[-{Latex[length=2mm]},very thick,iiiepeNavy] (O) -- (C2) node[above left,font=\scriptsize\bfseries] {Camino 2};
+    \draw[-{Latex[length=2mm]},very thick,iiiepeOrange] (O) -- (Bend) node[right,font=\scriptsize\bfseries,iiiepeOrange] {Bisectriz ($PH=PK$)};
+
+    % Angulos iguales 23 / 23 en O
+    \draw[iiiepeOrange,thick] (O) ++(0:1.25) arc (0:23:1.25);
+    \draw[iiiepeOrange,thick] (O) ++(23:1.45) arc (23:46:1.45);
+    \node[font=\tiny\bfseries,iiiepeOrange] at ($(O)+(11.5:1.68)$) {$23^\circ$};
+    \node[font=\tiny\bfseries,iiiepeOrange] at ($(O)+(34.5:1.82)$) {$23^\circ$};
+
+    % Distancias perpendiculares PH y PK (= 2.58 u) + angulos rectos exactos en H y K
+    \draw[iiiepeBlue,thick,dotted] (P) -- (H) node[midway,right,font=\scriptsize] {$PH=2.58\text{ u}$};
+    \draw[iiiepeBlue,thick,dotted] (P) -- (K) node[midway,above right,font=\scriptsize] {$PK=2.58\text{ u}$};
+    \draw[iiiepeNavy] (H) ++(-0.22,0) -- ++(0,0.22) -- ++(0.22,0);
+    \draw[iiiepeNavy] (K) ++(226:0.22) -- ++(-44:0.22) -- ++(46:0.22);
+
+    \fill[iiiepeNavy] (O) circle (3pt) node[below left,font=\small\bfseries] {$O$};
+    \fill[iiiepeNavy] (D1) circle (2.4pt) node[below,font=\scriptsize] {$D_1$};
+    \fill[iiiepeNavy] (D2) circle (2.4pt) node[above left,font=\scriptsize] {$D_2$};
+    \fill[iiiepeAqua!80!black] (Q) circle (2.6pt) node[above left,font=\scriptsize\bfseries,fill=white,inner sep=1pt] {$Q$};
+    \fill[iiiepeOrange] (P) circle (3.1pt) node[right,font=\scriptsize\bfseries,fill=white,inner sep=1pt] {$P$ (árbol)};
+    \fill[iiiepeBlue] (H) circle (2.3pt) node[below,font=\scriptsize] {$H$};
+    \fill[iiiepeBlue] (K) circle (2.3pt) node[above left,font=\scriptsize] {$K$};
+  \end{tikzpicture}\vspace{4pt}
+\end{minipage} &
+\small
+\begin{itemize}\leftskip=-10pt
+  \item \textbf{¿Cómo se mide la distancia a un camino?} Debe medirse siempre de forma \textbf{perpendicular} ($90^\circ$) al camino, nunca siguiendo una diagonal arbitraria.
+  \item \textbf{¿Por qué no basta un arco?} Se requiere el arco inicial desde $O$ para fijar $OD_1=OD_2$ y luego arcos de igual abertura desde $D_1$ y $D_2$.
+  \item \textbf{¿Cuántos lugares hay?} Infinitos puntos sobre toda la \textbf{bisectriz} del ángulo $\angle D_1OD_2$.
+\end{itemize} \\\hline
+\rowcolor{iiiepePale} \multicolumn{2}{|c|}{\textbf{\small Conclusiones}} \\\hline
+\multicolumn{2}{|p{0.97\textwidth}|}{\small El lugar geométrico equidistante de dos caminos concurrentes es la \textbf{bisectriz} del ángulo formado entre ellos. \textbf{Demostración (criterio AAL):} Para todo $P$ en la bisectriz con pies perpendiculares $H$ y $K$, $\triangle OHP$ y $\triangle OKP$ comparten la hipotenusa $OP$, tienen $\angle HOP=\angle KOP=23^\circ$ y $\angle OHP=\angle OKP=90^\circ$; luego $\triangle OHP \cong \triangle OKP \implies PH = PK$ ($2.58\text{ u}$). \textit{Validación GeoGebra:} \texttt{act2\_d\_comparacion\_circuncentro\_incentro.ggb}.} \\\hline
+\end{tabularx}
+
+% ==================== PÁGINA 3: RETO 3 (UN BEBEDERO, 3 SALONES A, B, C) ====================
 \newpage
 \noindent
 \begin{tabularx}{\textwidth}{@{} >{\raggedright\arraybackslash}p{0.34\textwidth} >{\centering\arraybackslash}X >{\raggedleft\arraybackslash}p{0.28\textwidth} @{}}
@@ -130,12 +211,7 @@
 \rowcolor{iiiepePale} \textbf{\small CONSTRUCCIÓN} & \multicolumn{1}{c|}{\textbf{\small Posibles dudas}} \\\hline
 \begin{minipage}[c]{0.96\linewidth}
   \centering\vspace{4pt}
-  \begin{tikzpicture}[scale=0.95]
-    % A=(1.6,4.6), B=(9.0,5.2), C=(3.6,0.8) -> Circuncentro exacto aproximado:
-    % Wait: use clean integer circumcircle points around O=(5.2, 3.3), R=3.2 ->
-    % A=(5.2-3.2*0.866, 3.3+3.2*0.5) = (2.43, 4.90)
-    % B=(5.2+3.2*0.95, 3.3+3.2*0.312) = (8.24, 4.30)
-    % C=(5.2-3.2*0.45, 3.3-3.2*0.893) = (3.76, 0.44)
+  \begin{tikzpicture}[scale=0.92]
     \coordinate (O) at (5.2,3.3);
     \coordinate (A) at (2.43,4.90);
     \coordinate (B) at (8.24,4.30);
@@ -146,7 +222,7 @@
 
     \draw[iiiepePale!90!gray,step=0.5,thin] (-0.2,-0.3) grid (10.6,7.0);
 
-    % Circunferencia circunscrita R=3.2
+    % Circunferencia circunscrita R=3.20 u
     \draw[iiiepeAqua!85!black,thick,dashed] (O) circle (3.2);
 
     % Triangulo ABC
@@ -157,7 +233,15 @@
     \draw[iiiepeOrange,thick] ($(O)!-0.9!(Mac)$) -- ($(Mac)!-0.9!(O)$) node[left,font=\tiny\bfseries] {$m_{AC}$};
     \draw[iiiepeBlue!80!black,thick,densely dashed] ($(O)!-0.8!(Mbc)$) -- ($(Mbc)!-0.8!(O)$) node[below right,font=\tiny\bfseries] {$m_{BC}$};
 
-    % Radios OA = OB = OC = R
+    % Marcadores exactos de angulo recto en Mab, Mac, Mbc
+    \coordinate (rAB1) at ($(Mab)!0.20cm!(B)$); \coordinate (rAB2) at ($(Mab)!0.20cm!(O)$);
+    \draw[iiiepeNavy] (rAB1) -- ($(rAB1)+(rAB2)-(Mab)$) -- (rAB2);
+    \coordinate (rAC1) at ($(Mac)!0.20cm!(A)$); \coordinate (rAC2) at ($(Mac)!0.20cm!(O)$);
+    \draw[iiiepeNavy] (rAC1) -- ($(rAC1)+(rAC2)-(Mac)$) -- (rAC2);
+    \coordinate (rBC1) at ($(Mbc)!0.20cm!(B)$); \coordinate (rBC2) at ($(Mbc)!0.20cm!(O)$);
+    \draw[iiiepeNavy] (rBC1) -- ($(rBC1)+(rBC2)-(Mbc)$) -- (rBC2);
+
+    % Radios OA = OB = OC = R = 3.20 u
     \draw[iiiepeNavy,dotted,thick] (O) -- (A);
     \draw[iiiepeNavy,dotted,thick] (O) -- (B);
     \draw[iiiepeNavy,dotted,thick] (O) -- (C);
@@ -166,7 +250,7 @@
     \fill[iiiepeNavy] (B) circle (3.2pt) node[above right,font=\small\bfseries] {$B$};
     \fill[iiiepeNavy] (C) circle (3.2pt) node[below left,font=\small\bfseries] {$C$};
     \fill[iiiepeOrange] (O) circle (3.5pt) node[above right,font=\scriptsize\bfseries,fill=white,inner sep=1pt] {$O$ (Circuncentro)};
-    \node[font=\tiny,iiiepeNavy,fill=white,inner sep=1pt] at (5.35,2.05) {$OA=OB=OC=R$};
+    \node[font=\tiny\bfseries,iiiepeNavy,fill=white,inner sep=1.5pt] at (5.35,2.05) {$OA=OB=OC=3.20\text{ u}$};
   \end{tikzpicture}\vspace{4pt}
 \end{minipage} &
 \small
@@ -176,7 +260,7 @@
   \item \textbf{Caso límite:} Si $A, B, C$ son colineales las mediatrices son paralelas y no hay solución.
 \end{itemize} \\\hline
 \rowcolor{iiiepePale} \multicolumn{2}{|c|}{\textbf{\small Conclusiones}} \\\hline
-\multicolumn{2}{|p{0.97\textwidth}|}{\small A diferencia de dos salones (donde hay infinitas ubicaciones), para tres salones no colineales $A$, $B$ y $C$ existe una \textbf{única ubicación equidistante}: el \textbf{circuncentro $O$}, punto donde concurren las tres mediatrices de $\triangle ABC$. Es además el centro de la circunferencia circunscrita que pasa por $A$, $B$ y $C$, lo que verifica métricamente que $OA = OB = OC = R$.} \\\hline
+\multicolumn{2}{|p{0.97\textwidth}|}{\small Para tres salones no colineales $A$, $B$ y $C$ existe una \textbf{única ubicación equidistante}: el \textbf{circuncentro $O$}, intersección de las mediatrices de $\triangle ABC$ y centro de su circunferencia circunscrita ($OA = OB = OC = R = 3.20\text{ u}$). \textit{Validación dinámica en GeoGebra:} \texttt{act2\_a\_mediatrices\_equidistancia.ggb} confirma $OA=OB=OC=5.00\text{ u}$ y variaciones en acutángulo, rectángulo y obtusángulo.} \\\hline
 \end{tabularx}
 
 \end{document}

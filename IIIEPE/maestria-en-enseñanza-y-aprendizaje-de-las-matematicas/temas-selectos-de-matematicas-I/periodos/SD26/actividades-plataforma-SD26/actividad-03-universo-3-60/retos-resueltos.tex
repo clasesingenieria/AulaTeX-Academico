@@ -104,11 +104,15 @@
     \coordinate (A) at (0.3,0.3);
     \coordinate (B) at (4.6,0.3);
     \coordinate (C) at (2.8,2.6);
+    % Sectores alternos en A (0 a 42.5) y B (180 a 122) concordantes con el lado izquierdo
+    \fill[iiiepePale] (A) -- (B) -- (C) -- cycle;
+    \fill[pPurple!35] (A) -- ($(A)+(0:0.65)$) arc (0:42.5:0.65) -- cycle;
+    \fill[iiiepeAqua!45] (B) -- ($(B)+(180:0.65)$) arc (180:122:0.65) -- cycle;
     \draw[very thick,iiiepeNavy] (A) -- (B) -- (C) -- cycle;
     \draw[very thick,pPurple] (-0.1,2.6) -- (5.2,2.6) node[right,font=\scriptsize\bfseries] {$\ell \parallel \overline{AB}$};
     \fill[pPurple!35] (C) -- ($(C)+(-0.65,0)$) arc (180:222.5:0.65) -- cycle;
-    \fill[iiiepeAqua!45] (C) -- ($(C)+(0.65,0)$) arc (0:-52:0.65) -- cycle;
-    \fill[iiiepeOrange!40] (C) -- ($(C)+(222.5:0.65)$) arc (222.5:308:0.65) -- cycle;
+    \fill[iiiepeAqua!45] (C) -- ($(C)+(0.65,0)$) arc (0:-58:0.65) -- cycle;
+    \fill[iiiepeOrange!40] (C) -- ($(C)+(222.5:0.65)$) arc (222.5:302:0.65) -- cycle;
     \node[font=\scriptsize\bfseries] at (1.1,0.55) {$\alpha$};
     \node[font=\scriptsize\bfseries] at (4.0,0.55) {$\beta$};
     \node[font=\scriptsize\bfseries] at (2.78,2.05) {$\gamma$};
@@ -162,9 +166,13 @@
     \draw[very thick,iiiepeNavy] (H0) -- (H1) -- (H2) -- (H3) -- (H4) -- (H5) -- cycle;
     \fill[pLilac] (0,0) -- (0:1.05cm) arc (0:60:1.05cm) -- cycle;
     \draw[pPurple,thick] (0:1.05cm) arc (0:60:1.05cm);
-    \node[font=\scriptsize\bfseries,pPurple] at (30:1.45cm) {$\theta_c=60^\circ$};
+    \node[font=\scriptsize\bfseries,pPurple] at (30:1.48cm) {$\theta_c=60^\circ$};
+    % Angulo interior theta_i = 120 en H2 (120 grados: lados hacia H1=60 y H3=180 -> direcciones -60 y 300? Wait: from H2=(120:3.5) to H1=(60:3.5) is direction 0 deg! From H2 to H3=(180:3.5) is direction 240 deg!)
+    \fill[iiiepeAqua!25] (H2) -- ($(H2)+(0:0.75cm)$) arc (0:-120:0.75cm) -- cycle;
+    \draw[iiiepeNavy,thick] (H2) ++(0:0.75cm) arc (0:-120:0.75cm);
+    \node[font=\tiny\bfseries,iiiepeNavy] at ($(H2)+(-60:1.05cm)$) {$\theta_i=120^\circ$};
     \node[font=\scriptsize,iiiepeNavy,above] at (90:3.6cm) {$n=6$ lados · lado $=r$};
-    \node[font=\scriptsize\bfseries,iiiepeNavy] at (0,-4.15) {Hexágono regular: $\theta_c = \frac{360^\circ}{6} = 60^\circ,\ \theta_i = 120^\circ$};
+    \node[font=\scriptsize\bfseries,iiiepeNavy] at (0,-4.15) {Hexágono: $\theta_c = \frac{360^\circ}{6} = 60^\circ,\ \theta_i = 120^\circ\ (\theta_c+\theta_i=180^\circ)$};
   \end{tikzpicture}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.48\textwidth}
@@ -181,9 +189,13 @@
     \draw[very thick,iiiepeNavy] (G0) -- (G1) -- (G2) -- (G3) -- (G4) -- (G5) -- (G6) -- (G7) -- cycle;
     \fill[pLilac] (0,0) -- (0:1.25cm) arc (0:45:1.25cm) -- cycle;
     \draw[pPurple,thick] (0:1.25cm) arc (0:45:1.25cm);
-    \node[font=\scriptsize\bfseries,pPurple] at (22.5:1.68cm) {$\theta_c=45^\circ$};
+    \node[font=\scriptsize\bfseries,pPurple] at (22.5:1.72cm) {$\theta_c=45^\circ$};
+    % Angulo interior theta_i = 135 en G3 (135 grados: G3->G2 is -22.5 deg, G3->G4 is -157.5 deg)
+    \fill[iiiepeAqua!25] (G3) -- ($(G3)+(22.5:0.75cm)$) arc (22.5:-112.5:0.75cm) -- cycle;
+    \draw[iiiepeNavy,thick] (G3) ++(22.5:0.75cm) arc (22.5:-112.5:0.75cm);
+    \node[font=\tiny\bfseries,iiiepeNavy] at ($(G3)+(-45:1.08cm)$) {$\theta_i=135^\circ$};
     \node[font=\scriptsize,iiiepeNavy,above] at (90:3.6cm) {$n=8$ lados · bisectrices de $90^\circ$};
-    \node[font=\scriptsize\bfseries,iiiepeNavy] at (0,-4.15) {Octágono regular: $\theta_c = \frac{360^\circ}{8} = 45^\circ,\ \theta_i = 135^\circ$};
+    \node[font=\scriptsize\bfseries,iiiepeNavy] at (0,-4.15) {Octágono: $\theta_c = \frac{360^\circ}{8} = 45^\circ,\ \theta_i = 135^\circ\ (\theta_c+\theta_i=180^\circ)$};
   \end{tikzpicture}
 \end{minipage}
 
@@ -281,6 +293,6 @@
 \end{tabularx}
 
 \vspace{8pt}
-{\small\colorbox{pLilac}{\parbox{\dimexpr\textwidth-2\fboxsep\relax}{\textbf{Fórmulas generales deducidas:} Para un polígono regular de $n$ lados inscrito en una circunferencia, $\theta_c = \dfrac{360^\circ}{n}$, $S_{\text{int}} = (n - 2)\cdot 180^\circ$ y $\theta_i = \dfrac{(n - 2)\cdot 180^\circ}{n} = 180^\circ - \theta_c$ (note que $\theta_c + \theta_i = 180^\circ$ en todos los renglones).}}}
+{\small\colorbox{pLilac}{\parbox{\dimexpr\textwidth-2\fboxsep\relax}{\textbf{Fórmulas generales deducidas y validación dinámica:} Para un polígono regular de $n$ lados inscrito en una circunferencia, $\theta_c = \dfrac{360^\circ}{n}$, $S_{\text{int}} = (n - 2)\cdot 180^\circ$ y $\theta_i = \dfrac{(n - 2)\cdot 180^\circ}{n} = 180^\circ - \theta_c$ ($\theta_c + \theta_i = 180^\circ$ en todos los renglones). Validado en GeoGebra Classic mediante \texttt{act3\_angulo\_central\_inscrito\_1.ggb}.}}}
 
 \end{document}
