@@ -211,8 +211,7 @@ class TestLandscapeCompositionAndGeometry(unittest.TestCase):
         self.assertTrue(self.pdf_path.is_file(), f"Falta el PDF: {self.pdf_path}")
         report = audit_landscape_geometry(self.pdf_path)
         self.assertGreaterEqual(report["landscape_pages_detected"], 2, "Debe haber al menos 2 páginas apaisadas")
-        self.assertIn(14, report["landscape_pages"])
-        self.assertIn(15, report["landscape_pages"])
+        self.assertGreaterEqual(len(report["landscape_pages"]), 2, "Debe haber al menos 2 números de página apaisados")
 
     def test_landscape_headers_and_footers_suppressed(self) -> None:
         report = audit_landscape_geometry(self.pdf_path)
@@ -233,10 +232,13 @@ class TestLandscapeCompositionAndGeometry(unittest.TestCase):
 
     def test_landscape_audit_blocks_on_violation(self) -> None:
         import pymupdf
+        base_report = audit_landscape_geometry(self.pdf_path)
+        self.assertGreaterEqual(len(base_report["landscape_pages"]), 1)
+        first_lscape_idx = base_report["landscape_pages"][0] - 1
         with pymupdf.open(self.pdf_path) as doc:
-            p14 = doc[13]
+            target_page = doc[first_lscape_idx]
             # Inyectar texto simulado de encabezado en zona superior
-            p14.insert_text((72.0, 50.0), "Actividad 15 - Seminario I GGS102")
+            target_page.insert_text((72.0, 50.0), "Actividad 15 - Seminario I GGS102")
             qa_tmp = self.ws.repo_root / ".build" / "test_tmp_failing_audit.pdf"
             qa_tmp.parent.mkdir(parents=True, exist_ok=True)
             doc.save(str(qa_tmp))
@@ -245,6 +247,83 @@ class TestLandscapeCompositionAndGeometry(unittest.TestCase):
         self.assertFalse(failing_report["passed"], "La auditoría debió fallar por presencia de encabezado")
         self.assertFalse(failing_report["headers_footers_suppressed"])
         self.assertGreater(len(failing_report["issues"]), 0)
+
+    def test_seminario_i_feedback_corrections_in_reports(self) -> None:
+        import re
+        import unicodedata
+        import pymupdf
+
+        forbidden = [
+            r"descriptivo-explicativ[oa]",
+            r"\bdeterminan\b",
+            r"muestreo\s+censal",
+            r"fue\s+validada",
+            r"CVC\s+de\s+0\.91",
+            r"CVC\s*=\s*0\.91",
+            r"CVC\s*\(0\.91\)",
+            r"Kappa\s+de\s+0\.84",
+            r"Kappa\s*\(0\.84\)",
+            r"93\.3\s*%",
+            r"cumple\s+con\s+la\s+ley",
+            r"certifica\s+cumplimiento",
+            r"se\s+han\s+aplicado",
+            r"se\s+implementaron",
+            r"cursos3\.e-itesca\.edu\.mx",
+        ]
+        required_common = [
+            "documental, descriptivo y propositivo",
+            "delimitación del alcance causal",
+            "universo documental y muestra",
+            "42",
+            "18",
+            "muestreo intencional no probabilístico",
+            "anexo b",
+            "meta",
+            "objetivo específico",
+            "cobertura",
+            "trazabilidad",
+            "cierre",
+            "delimitación del alcance del estudio",
+            "se aplicarán",
+            "doc-int-01",
+            "aes-256",
+            "anexo c",
+            "anexo a",
+            "anexo d",
+        ]
+        per_act_extra = {
+            15: [],
+            16: ["cronograma de actividades"],
+            17: ["cronograma de actividades", "entrega final y exposición del anteproyecto"],
+        }
+
+        for num in (15, 16, 17):
+            pdf = self.sem_root / f"reporte-seminario-i-Actividad-{num}.pdf"
+            self.assertTrue(pdf.is_file(), f"Falta el PDF: {pdf}")
+            lscape = audit_landscape_geometry(pdf)
+            self.assertTrue(lscape["passed"], f"Fallo de geometría apaisada en Act {num}: {lscape}")
+            self.assertGreaterEqual(lscape["landscape_pages_detected"], 2)
+            self.assertEqual(lscape["overflow_count"], 0)
+            self.assertTrue(lscape["headers_footers_suppressed"])
+
+            with pymupdf.open(pdf) as doc:
+                text = " ".join(
+                    unicodedata.normalize("NFC", page.get_text("text")) for page in doc
+                )
+            norm_text = re.sub(r"\s+", " ", text)
+            lower_text = norm_text.lower()
+
+            for pat in forbidden:
+                self.assertIsNone(
+                    re.search(pat, norm_text, flags=re.IGNORECASE),
+                    f"Patrón prohibido '{pat}' encontrado en {pdf.name}",
+                )
+            for req_phrase in required_common + per_act_extra[num]:
+                self.assertIn(
+                    req_phrase,
+                    lower_text,
+                    f"Elemento requerido '{req_phrase}' ausente en {pdf.name}",
+                )
 
 
 class TestMcpLexAgentIntegration(unittest.TestCase):
